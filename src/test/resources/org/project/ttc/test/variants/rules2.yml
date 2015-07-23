@@ -1,0 +1,18 @@
+# Spaces in rule name before :
+# source compound
+# no target defined
+# several special chars in expression
+My rule 1 :
+  source: N [compound]
+  rule: s[0] == t[1].stem && s[1][0] != t[0]
+
+# rule defined on several lines
+
+# compound option with spaces inside
+# occ pattern have space before and after ,
+My rule 2:
+  source: N [ compound   ]
+  target:     N  ,  A     N        
+  rule: >
+    s[0] == t[1].stem 
+    && s[1][0] != t[0]

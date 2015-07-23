@@ -1,0 +1,86 @@
+{
+	metadata: {
+		name: "Toto va à la plage",
+		corpus-id: "Toto va à la montagne",
+		lang: "en"
+	},
+	input_sources: {
+		"1": "The file 1",
+		"2": "The file 2"
+	},
+	words: [
+		{
+			lemma:"word1",
+			stem:"stem1"
+		},
+		{
+			lemma:"word2",
+			stem:"stem2",
+			components: [
+				{lemma:"wor",begin:0, end:3}, 
+				{lemma:"d3", begin:3, end:5}
+			]
+		}
+	],
+	terms: [
+		{
+			key: "term1",
+			id: 1,
+			freq: 6,
+			spec: 3.4,
+			words: [
+				{lemma: "word1", syn: "N"},
+				{lemma: "word2", syn: "A"}
+			],
+			rule: "The rule",
+			occurrences: [
+				{begin:1, end:3, text:"occ 1", file: 1},
+				{begin:10, end:14, text:"occ 1", file: 2}
+			],
+			context: {
+				total_cooccs: 30,
+				cooccs: [
+					{co_term: "term2", cnt: 18, assoc_rate: 1.2},
+					{co_term: "term3", cnt: 12, assoc_rate: 6.5}
+				]
+			}
+			
+		},
+		{
+			key: "term2",
+			id: 2,
+			words: [
+				{lemma: "word1", syn: "N"}
+			],
+			context: {
+				total_cooccs: 13,
+				cooccs: [
+					{co_term: "term1", cnt: 11, assoc_rate: 3.2},
+					{co_term: "term3", cnt: 2, assoc_rate: 4.1}
+				]
+			}
+		},
+		{
+			key: "term3",
+			id: 3,
+			words: [
+				{lemma: "word2", syn: "A"}
+			],
+			context: {
+				total_cooccs: 60,
+				cooccs: [
+					{co_term: "term1", cnt: 10, assoc_rate: 3.2},
+					{co_term: "term2", cnt: 30, assoc_rate: 45.2},
+					{co_term: "term3", cnt: 20, assoc_rate: 4.1}
+				]
+			}
+		}
+	],
+	syntactic_variants: [
+		{base: "term2", variant: "term1", rule: "n-na"},
+		{base: "term3", variant: "term1", rule: "a-na"}
+	],
+	graphical_variants: [
+			{term1: "term1", term2: "term2"}
+	]
+}

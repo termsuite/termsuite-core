@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mapping>
+  <map key="à" value="a" />
+  <map key="â" value="a" />
+  <map key="ä" value="a" />
+  <map key="ç" value="c" />
+  <map key="é" value="e" />
+  <map key="è" value="e" />
+  <map key="ê" value="e" />
+  <map key="ë" value="e" />
+  <map key="î" value="i" />
+  <map key="ï" value="i" />
+  <map key="ô" value="o" />
+  <map key="ö" value="o" />
+  <map key="ù" value="u" />
+  <map key="û" value="u" />
+  <map key="ü" value="u" />
+</mapping>

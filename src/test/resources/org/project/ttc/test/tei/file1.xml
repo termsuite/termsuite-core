@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<converted-article xmlns:ce="http://www.elsevier.com/xml/common/dtd" xmlns:sb="http://www.elsevier.com/xml/common/struct-bib/dtd" version="4.5.2" docsubtype="fla">
+  <item-info>
+    <jid>JFOE</jid>
+    <aid>2141</aid>
+    <ce:pii>S0260-8774(99)00085-0</ce:pii>
+    <ce:doi>10.1016/S0260-8774(99)00085-0</ce:doi>
+    <ce:copyright type="full-transfer" year="1999">Elsevier Science Ltd</ce:copyright>
+  </item-info>
+  <ce:floats>
+    <ce:figure id="FIG1">
+      <ce:label>Fig. 1</ce:label>
+      <ce:caption>
+        <ce:simple-para>Evolution du pH des saumures acides des deux types de piments (GPR et GPJ) en fonction du temps.</ce:simple-para>
+      </ce:caption>
+      <ce:link locator="gr1"/>
+    </ce:figure>
+    <ce:figure id="FIG2">
+      <ce:label>Fig. 2</ce:label>
+      <ce:caption>
+        <ce:simple-para>Evolution des teneurs en vitamine C dans la saumure acide des deux types de piments (GPR et GPJ) en fonction du temps.</ce:simple-para>
+      </ce:caption>
+      <ce:link locator="gr2"/>
+    </ce:figure>
+  </ce:floats>
+  <head>
+    <ce:title>Etude comparee de quelques constituants chimiques de deux types de piment (<ce:italic>Capsicum annuum</ce:italic> L.) pendant la conservation dans une saumure acide</ce:title>
+    <ce:author-group>
+      <ce:author>
+        <ce:given-name>Clergé</ce:given-name>
+        <ce:surname>Tchiegang</ce:surname>
+        <ce:cross-ref refid="AFF1">
+          <ce:sup>a</ce:sup>
+        </ce:cross-ref>
+        <ce:cross-ref refid="CORR1">*</ce:cross-ref>
+      </ce:author>
+    </ce:author-group>
+    <ce:date-received day="13" month="11" year="1998"/>
+    <ce:date-accepted day="6" month="4" year="1999"/>
+    <ce:abstract xml:lang="fr">
+      <ce:section-title>Résumé</ce:section-title>
+      <ce:abstract-sec>
+        <ce:simple-para>La conservation de deux types ou variétés piments (<ce:italic>Capsicum annuum</ce:italic> L.) dans une saumure acide à pH 2,71 a été effectuée. Quelques constituants chimiques au cours des essais sont mesurés.</ce:simple-para>
+      </ce:abstract-sec>
+    </ce:abstract>
+    <ce:abstract>
+      <ce:section-title>Abstract</ce:section-title>
+      <ce:abstract-sec>
+        <ce:simple-para>The preservation of two types or varieties of pepper is carried out in acid pickle at pH 2.71. Some chemical compositions have been determined.</ce:simple-para>
+      </ce:abstract-sec>
+    </ce:abstract>
+    <ce:keywords class="keyword">
+      <ce:section-title>Keywords</ce:section-title>
+      <ce:keyword>
+        <ce:text>Preservation</ce:text>
+      </ce:keyword>
+    </ce:keywords>
+    <ce:keywords class="keyword" xml:lang="fr">
+      <ce:section-title>Mots-clé</ce:section-title>
+      <ce:keyword>
+        <ce:text>Saumure acide</ce:text>
+      </ce:keyword>
+      <ce:keyword>
+        <ce:text>Conservation</ce:text>
+      </ce:keyword>
+    </ce:keywords>
+  </head>
+  <body>
+    <ce:sections>
+      <ce:section>
+        <ce:label>1</ce:label>
+        <ce:section-title>Introduction</ce:section-title>
+        <ce:para>Le piment (<ce:italic>Capsicum</ce:italic> sp), appartient à la famille des Solanaceaes. Le piment (<ce:italic>Capsicum</ce:italic> sp) est une plante très répandue dans les régions tropicales et subtropicales dont les fruits comme tant d'autres épices sont utilisés directement dans l'alimentation humaine ou indirectement après transformation.</ce:para>
+        <ce:para>Les botanistes lui reconnaissent environ 100 espèces actuellement regroupées en deux espèces principales: <ce:italic>Capsicum annuum</ce:italic> L. et <ce:italic>Capsicum frutescens</ce:italic> L. caractérisées par l’existence de nombreuses variétés se distinguant par leurs formes, leur couleur et leur pouvoir piquant <ce:cross-ref refid="BIB12">(Purseglove, 1968)</ce:cross-ref>.</ce:para>
+      </ce:section>
+      <ce:section>
+        <ce:label>2</ce:label>
+        <ce:section-title>Materiel et methodes</ce:section-title>
+        <ce:section>
+          <ce:label>2.1</ce:label>
+          <ce:section-title>Matériel biologique</ce:section-title>
+          <ce:para>La présente étude porte sur deux types ou variétés de piments (<ce:italic>Capsicum annuum</ce:italic> L.) à savoir, la variété rouge et la variété jaune. Les échantillons ayant servi à la réalisation de l’étude sont achetés sur le marché de Mfoundi (Yaoundé - Cameroun). Les fruits proviennent de la même parcelle et sont récoltés le même jour.</ce:para>
+        </ce:section>
+      </ce:section>
+   </ce:sections>
+ </body>
+</converted-article>

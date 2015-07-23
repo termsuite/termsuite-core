@@ -1,0 +1,189 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'maven'
+apply plugin: 'signing'
+
+group = 'fr.univnantes.lina'
+archivesBaseName = 'termsuite-core'
+version = '2.0'
+
+project.ext.description = 'A Java UIMA-based toolbox for multilingual and efficient terminology extraction an multilingual term alignment'
+project.ext.organization = 'LINA CNRS UMR 6241 - Université de Nantes'
+project.ext.name = 'TermSuite'
+project.ext.url = 'https://logiciels.lina.univ-nantes.fr/redmine/projects/termsuite'
+project.ext.license = 'Apache 2'
+project.ext.licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+
+///////////////////////////////////////////////////////////////// CONFIGURATION
+
+
+ext.jcasFile = 'resources/eu/project/ttc/types/TermSuiteTypeSystem.xml'
+apply from: "./jcasgen.gradle"
+
+clean.doLast {
+    project.delete (fileTree(dir: 'src/main/java/dictanova'))
+    println 'Cleaning typesystem generated sources.'
+}
+
+////////////////////////////////////////////////////////////////// DEPENDENCIES
+
+task javadocJar(type: Jar) {
+	classifier = 'javadoc'
+	from javadoc
+}
+
+task sourcesJar(type: Jar) {
+	classifier = 'sources'
+	from sourceSets.main.allSource
+}
+
+artifacts {
+	archives javadocJar, sourcesJar
+}
+
+/*
+signing {
+	sign configurations.archives
+}
+*/
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+}
+
+uploadArchives {
+	repositories {
+	  mavenDeployer {
+		//beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+
+		repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
+		  authentication(userName: ossrhUsername, password: ossrhPassword)
+		}
+
+		snapshotRepository(url: "https://oss.sonatype.org/content/repositories/snapshots/") {
+		  authentication(userName: ossrhUsername, password: ossrhPassword)
+		}
+
+		pom.project {
+		  name project.ext.name
+		  packaging 'jar'
+		  // optionally artifactId can be defined here
+		  description project.ext.description
+		  url project.ext.url
+
+		  scm {
+			  connection 'scm:git:git@github.com:termsuite/termsuite-core.git'
+			  developerConnection 'scm:git:git@github.com:termsuite/termsuite-core.git'
+			  url 'git@github.com:termsuite/termsuite-core.git'
+		  }
+
+		  licenses {
+			  license {
+				  name 'The Apache License, Version 2.0'
+				  url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+			  }
+		  }
+
+		  developers {
+			  developer {
+				  id developerId
+				  name developerName
+				  email developerEmail
+			  }
+		  }
+		}
+	  }
+	}
+}
+
+
+dependencies {
+	// Test
+	testCompile "junit:junit:4.12"
+	testCompile "eu.codearte.catch-exception:catch-exception:1.4.+"
+	testCompile "org.assertj:assertj-core:2.0.+"
+	testCompile "org.mockito:mockito-all:1.10.+"
+	testCompile "com.fasterxml.jackson.core:jackson-databind:2.5.+"
+
+	// Configure logging at runtime
+	compile "ch.qos.logback:logback-classic:1.1.+"
+
+
+	// UIMA
+	compile 'org.apache.uima:uimaj-core:2.6.+'
+	compile "org.apache.uima:uimafit-core:2.1.+"
+	compile "org.apache.uima:uimaj-tools:2.6.+" // jcasgen
+
+	// Apache Common
+	compile "org.apache.commons:commons-lang3:3.+"
+	compile "commons-cli:commons-cli:1.2"
+	compile "commons-io:commons-io:1.3.+"
+
+	// Mate Tagger
+	compile "com.googlecode.mate-tools:anna:3.5"
+	
+	// Groovy
+	compile "org.codehaus.groovy:groovy:2.4.+"
+
+	// Guava
+	compile "com.google.guava:guava:18.+"
+	
+	// Snake YAML
+	compile "org.yaml:snakeyaml:1.15"
+	
+	// Jackson (json)
+	compile "com.fasterxml.jackson.core:jackson-core:2.5.+"
+
+	// UIMA Components
+	compile 'fr.univnantes.lina:uima-tree-tagger-wrapper:1.+'
+	compile 'fr.univnantes.lina:uima-tokenizer:1.+'
+	compile 'fr.univnantes.lina:uima-filter:1.+'
+	compile 'fr.univnantes.lina:uima-mapper:1.+'
+	compile 'fr.univnantes.lina:uima-chinese-segmenter:1.+'
+	compile 'fr.univnantes.lina:uima-tokens-regex:1.+'
+	compile 'fr.univnantes.lina:uima-profiler:1.+'
+	compile 'fr.univnantes.lina:uima-stemmer:1.+'
+}
+
+////////////////////////////////////////////////////////////// SPECIFIC TASKS
+
+jar {
+	// make it fat
+    dependsOn configurations.runtime
+	from( configurations.runtime.collect { it.isDirectory() ? it : zipTree(it) } ) {
+		 exclude "META-INF/*"
+    }
+
+    // cannot exclude META-INF for groovy to work fine
+	from( configurations.runtime.findAll{it.getAbsolutePath().contains("org.codehaus.groovy")}.collect { it.isDirectory() ? it : zipTree(it) } ) {
+		include "META-INF/*"
+	}
+
+	// exclude some languages from jar to save disk space
+	exclude("eu/project/ttc/latvian")
+	exclude("eu/project/ttc/chinese")
+	exclude("eu/project/ttc/danish")
+
+	// tune manifest
+    manifest {
+        attributes(
+			"Implementation-Title": project.ext.name,
+			"Implementation-Version": version,
+            "Built-By": System.getProperty('user.name'),
+            "Built-Date": new Date(),
+            "Built-JDK": System.getProperty('java.version'),
+			"Main-Class": "eu.project.ttc.tools.TermSuite")
+    }
+}
+
+clean.doLast {
+    project.delete (fileTree(dir: 'sources/eu/project/ttc/types'))
+    project.delete (fileTree(dir: 'sources/org')) // org.apache.uima.examples
+    println 'Cleaning typesystem generated sources.'
+}

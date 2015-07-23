@@ -1,0 +1,2 @@
+classpath*:eu/project/ttc/types/TermSuiteTypeSystem.xml
+classpath*:org/apache/uima/examples/SourceDocumentInformation.xml

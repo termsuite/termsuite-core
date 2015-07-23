@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typePriorities xmlns="http://uima.apache.org/resourceSpecifier">
+  <name>TermSuite Type Priorities</name>
+  <description/>
+  <version>1.0</version>
+  <vendor/>
+  <priorityList>
+    <type>eu.project.ttc.types.MultiWordTermOccAnnotation</type>
+    <type>eu.project.ttc.types.SingleWordTermOccAnnotation</type>
+    <type>eu.project.ttc.types.TermOccAnnotation</type>
+    <type>eu.project.ttc.types.WordAnnotation</type>
+    <type>eu.project.ttc.types.TermComponentAnnotation</type>
+  </priorityList>
+</typePriorities>

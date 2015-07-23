@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test xmlns:ce="http://www.elsevier.com/xml/common/dtd">
+	<ce:simple-para>Manger de la purée1</ce:simple-para>
+	
+	<ce:simple-para>Manger <ce:cross-ref>invisible</ce:cross-ref> de la purée2</ce:simple-para>
+	<ce:simple-para>Manger <ce:italic>de la</ce:italic> purée3</ce:simple-para>
+	<ce:toto>
+		Ce texte ne se voit pas, mais
+		<ce:simple-para>Manger <ce:cross-ref>Tout ceci ne se voit pas <ce:simple-para> et ça non plus </ce:simple-para>...</ce:cross-ref> de la purée4</ce:simple-para>
+	</ce:toto>
+</test>

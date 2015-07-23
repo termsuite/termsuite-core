@@ -1,0 +1,3 @@
+# yaml should no be an array. Should be a key value
+- tata
+- toto

@@ -1,0 +1,5 @@
+# Got integer instead of string 
+"My rule 1":
+  source: 3
+  target: A A N, A N N, A R N
+  rule: "The rule expr"

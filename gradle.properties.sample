@@ -1,0 +1,5 @@
+ossrhUsername=toto
+ossrhPassword=thePasswd
+developerId=id
+developerName=theName
+developerEmail=theMail

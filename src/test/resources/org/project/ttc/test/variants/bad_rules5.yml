@@ -1,0 +1,4 @@
+# Rule is an array instead of linkedHashMap
+"My rule 1": 
+  - tata
+  - titi

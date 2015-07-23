@@ -1,0 +1,4 @@
+"My rule 1":
+  source: N, A
+  target: A A N, A N N, A R N
+  rule: "The rule expr"

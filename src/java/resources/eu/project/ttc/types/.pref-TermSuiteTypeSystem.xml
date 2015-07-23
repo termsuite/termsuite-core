@@ -1,0 +1,14 @@
+#
+#Tue Oct 07 12:19:28 CEST 2014
+uima.tcas.Annotation.style=color\=-870700;layer\=0;strategy\=BACKGROUND;
+eu.project.ttc.types.TranslationCandidateAnnotation.style=color\=-2166090;layer\=0;strategy\=BACKGROUND;
+eu.project.ttc.types.SingleWordTermOccAnnotation.style=color\=-857991;layer\=0;strategy\=BACKGROUND;
+eu.project.ttc.types.TranslationAnnotation.style=color\=-863050;layer\=0;strategy\=BACKGROUND;
+eu.project.ttc.types.MultiWordTermOccAnnotation.style=color\=-4147470;layer\=5;strategy\=BACKGROUND;
+eu.project.ttc.types.FormAnnotation.style=color\=-870730;layer\=0;strategy\=BACKGROUND;
+eu.project.ttc.types.TermComponentAnnotation.style=color\=-1526030;layer\=0;strategy\=BACKGROUND;
+eu.project.ttc.types.WordAnnotation.style=color\=-870700;layer\=0;strategy\=BACKGROUND;
+uima.tcas.DocumentAnnotation.style=color\=-856650;layer\=0;strategy\=BACKGROUND;
+org.apache.uima.examples.SourceDocumentInformation.style=color\=-4787490;layer\=0;strategy\=BACKGROUND;
+eu.project.ttc.types.TermOccAnnotation.style=color\=-4787530;layer\=0;strategy\=BACKGROUND;
+eu.project.ttc.types.TempType.style=color\=-4795150;layer\=0;strategy\=BACKGROUND;

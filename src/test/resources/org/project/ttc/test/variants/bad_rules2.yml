@@ -1,0 +1,5 @@
+# Several compounds on the same line
+"My rule 1":
+  source: N, A [compound]  [compound]
+  target: A A N, A N N, A R N
+  rule: "The rule expr"
