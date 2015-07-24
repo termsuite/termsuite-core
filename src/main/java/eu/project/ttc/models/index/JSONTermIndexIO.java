@@ -264,6 +264,7 @@ public class JSONTermIndexIO {
 									 */
 									totalCooccs = jp.nextIntValue(-1);
 								else if (CO_OCCURRENCES.equals(fieldname)) {
+									jp.nextToken();
 									while ((tok = jp.nextToken()) != JsonToken.END_ARRAY) {
 										TempVecEntry entry = new TempVecEntry();
 										while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
