@@ -141,7 +141,7 @@ public class TermUtils {
 	 * @return
 	 */
 	public static int getGeneralFrequency(Lang l, Term t) {
-		String resName = new TermSuiteResourceHelper(l.getCode()).getGeneralLanguageFrequencies().toString().replaceFirst("file:", "");
+		String resName = new TermSuiteResourceHelper(l).getGeneralLanguageFrequencies().toString().replaceFirst("file:", "");
 		GeneralLanguageResource generalLanguage = new GeneralLanguageResource();
 		try {
 			generalLanguage.load(TermUtils.class.getClassLoader().getResourceAsStream(resName));

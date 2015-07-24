@@ -110,6 +110,7 @@ import eu.project.ttc.tools.indexer.IndexerBinding;
 import eu.project.ttc.tools.indexer.IndexerBinding.FilterRules;
 import eu.project.ttc.types.WordAnnotation;
 import eu.project.ttc.utils.OccurrenceBuffer;
+import eu.project.ttc.utils.TermSuiteUtils;
 import fr.free.rocheteau.jerome.engines.Stemmer;
 import fr.univnantes.lina.uima.ChineseSegmenterResourceHelper;
 import fr.univnantes.lina.uima.engines.ChineseSegmenter;
@@ -186,7 +187,7 @@ public class TermSuitePipeline {
 
 	private TermSuitePipeline(String lang) {
 		this.lang = Lang.forName(lang);
-		this.resFactory = new TermSuiteResourceHelper(lang);
+		this.resFactory = new TermSuiteResourceHelper(this.lang);
 		this.aggregateBuilder = new AggregateBuilder();
 	}
 
@@ -327,6 +328,12 @@ public class TermSuitePipeline {
 			throw new TermSuitePipelineException(e);
 		}
 	}
+	
+	public TermSuitePipeline setResourcePath(String resourcePath) {
+		TermSuiteUtils.addToClasspath(resourcePath);
+		return this;
+	}
+
 
 	public TermSuitePipeline setContextAssocRateMeasure(String contextAssocRateMeasure) {
 		this.contextAssocRateMeasure = contextAssocRateMeasure;
@@ -352,12 +359,15 @@ public class TermSuitePipeline {
 					Lexer.class, 
 					Lexer.PARAM_TYPE, "eu.project.ttc.types.WordAnnotation"
 				);
-			ExternalResourceFactory.createDependencyAndBind(
-					ae,
-					SegmentBank.KEY_SEGMENT_BANK, 
+			
+			ExternalResourceDescription	segmentBank = ExternalResourceFactory.createExternalResourceDescription(
 					SegmentBankResource.class, 
 					resFactory.getSegmentBank().toString());
-	
+
+					
+			ExternalResourceFactory.bindResource(ae, SegmentBank.KEY_SEGMENT_BANK, segmentBank);
+
+
 			return aggregateAndReturn(ae);
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);

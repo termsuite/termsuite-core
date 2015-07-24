@@ -21,14 +21,23 @@
  *******************************************************************************/
 package eu.project.ttc.utils;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.lang.reflect.Method;
+import java.net.URI;
+import java.net.URL;
+import java.net.URLClassLoader;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.zip.ZipInputStream;
 
 import org.apache.commons.lang.mutable.MutableInt;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ComparisonChain;
@@ -39,6 +48,7 @@ import eu.project.ttc.types.TermOccAnnotation;
 import eu.project.ttc.types.WordAnnotation;
 
 public class TermSuiteUtils {
+	private static final Logger LOGGER = LoggerFactory.getLogger(TermSuiteUtils.class);
 	public static final IndexingKey<String, String> KEY_ONE_FIRST_LETTERS = getNFirstLetterIndexingKey(1);
 	public static final IndexingKey<String, String> KEY_TWO_FIRST_LETTERS = getNFirstLetterIndexingKey(2);
 	public static final IndexingKey<String, String> KEY_THREE_FIRST_LETTERS = getNFirstLetterIndexingKey(3);
@@ -96,5 +106,47 @@ public class TermSuiteUtils {
 
 	public static String getTermGroupingKey(TermOccAnnotation annotation) {
 		return annotation.getRuleId() + ": " + annotation.getLemma();
+	}
+	
+	
+	/**
+	 * 
+	 */
+	public static void listClasspath() {
+	  ClassLoader cl = ClassLoader.getSystemClassLoader();
+	  
+      URL[] urls = ((URLClassLoader)cl).getURLs();
+
+      for(URL url: urls){
+      	System.out.println(url.getFile());
+      }
+	}
+	
+	/**
+	 * Adds a path (jar or directory) to classpath of default Class loader
+	 * @param path
+	 */
+	public static void addToClasspath(String path) {
+		try {
+		    File f = new File(path);
+		    Preconditions.checkArgument(f.exists(), "No such file: %s", path);
+		    if(f.isFile()) {
+		    	ZipInputStream zipInputStream = new ZipInputStream(new FileInputStream(f));
+		    	boolean isZipped = zipInputStream.getNextEntry() != null;
+		    	Preconditions.checkArgument(isZipped, "No such file: %s", path);
+		    	zipInputStream.close();
+		    } else
+		    	Preconditions.checkArgument(f.isDirectory(), "Should be a directory or a jar : %s", f.getAbsolutePath());
+		    URI u = f.toURI();
+		    URLClassLoader urlClassLoader = (URLClassLoader) ClassLoader.getSystemClassLoader();
+		    Class<URLClassLoader> urlClass = URLClassLoader.class;
+		    Method method;
+			method = urlClass.getDeclaredMethod("addURL", new Class[]{URL.class});
+			method.setAccessible(true);
+			LOGGER.info("Adding {} to system class loader");
+			method.invoke(urlClassLoader, new Object[]{u.toURL()});
+		} catch (Exception e) {
+			throw new RuntimeException("Could not add "+path+" to classpath", e);
+		}
 	}
 }
