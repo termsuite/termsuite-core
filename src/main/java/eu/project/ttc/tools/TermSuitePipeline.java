@@ -121,12 +121,9 @@ import fr.univnantes.lina.uima.tkregex.ae.RegexListResource;
 import fr.univnantes.lina.uima.tkregex.ae.TokenRegexAE;
 
 /*
- * TODO Migrate Berkely storage to TermIndex
  * TODO Integrates frozen expressions
- * TODO Add license notice
  * TODO integrate Sonar runner
- * TODO Add Javadoc to all methods and used AE
- * TODO Add pipeline TestCases for each collection type and for different pipeline configs
+ * TODO Add functional pipeline TestCases for each collection type and for different pipeline configs
  */
 
 
