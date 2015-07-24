@@ -13,17 +13,18 @@ project.ext.name = 'TermSuite'
 project.ext.url = 'https://logiciels.lina.univ-nantes.fr/redmine/projects/termsuite'
 project.ext.license = 'Apache 2'
 project.ext.licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+project.ext.jcasFile = 'src/main/resources/eu/project/ttc/types/TermSuiteTypeSystem.xml'
 
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
 
+
+
 ///////////////////////////////////////////////////////////////// CONFIGURATION
 
 
-ext.jcasFile = 'resources/eu/project/ttc/types/TermSuiteTypeSystem.xml'
-apply from: "./jcasgen.gradle"
 
 clean.doLast {
     project.delete (fileTree(dir: 'src/main/java/dictanova'))
@@ -102,6 +103,9 @@ uploadArchives {
 	}
 }
 
+configurations {
+	prepare.extendsFrom(compile)
+}
 
 dependencies {
 	// Test
@@ -149,6 +153,9 @@ dependencies {
 	compile 'fr.univnantes.lina:uima-tokens-regex:1.+'
 	compile 'fr.univnantes.lina:uima-profiler:1.+'
 	compile 'fr.univnantes.lina:uima-stemmer:1.+'
+	
+	// JCas type generation
+	prepare "org.apache.uima:uimaj-tools:2.4.0"
 }
 
 ////////////////////////////////////////////////////////////// SPECIFIC TASKS
@@ -187,3 +194,31 @@ clean.doLast {
     project.delete (fileTree(dir: 'sources/org')) // org.apache.uima.examples
     println 'Cleaning typesystem generated sources.'
 }
+
+
+//////////////////////////////////////////////////////////////////
+// JCASGEN
+// Author: Damien Raude-Morvan
+//
+// Generate UIMA type system
+//////////////////////////////////////////////////////////////////
+
+task jcasgen(type: JavaExec) {
+	description = 'Generate UIMA TS classes'
+	ext.srcFile = file("$projectDir/$project.jcasFile")
+	ext.outputDir = file("$projectDir/src/main/java") 
+	inputs.file srcFile
+	outputs.dir outputDir
+	classpath configurations.prepare
+	// This ensures availability of type system imports
+	// however, assumes that files are in desc subfolder
+	systemProperty 'uima.datapath', "$projectDir/desc"
+	main = 'org.apache.uima.tools.jcasgen.Jg'
+	args = ['-jcasgeninput', srcFile, '-jcasgenoutput', outputDir]
+}
+
+// forces jcasgen before java compiles
+classes.dependsOn jcasgen
+
+// UIMA type system is needed for Java compile
+compileJava.source jcasgen.outputs, sourceSets.main.java
