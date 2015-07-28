@@ -1,24 +1,30 @@
 # Welcome to TermSuite
 
-TermSuite is a Java UIMA-based toolbox for multilingual and efficient terminology extraction an multilingual term alignment.
+TermSuite is a Java UIMA-based toolbox for multilingual and efficient terminology extraction and multilingual term alignment.
 
 # Features
 
-* Terminology extraction
-* Efficient multiword term detection
-* Term syntactic variants detection
-* Term graphic variants detection
-* Term semantic variants detection (to come)
-* Term morphology extraction
-* Term morphosyntactic variants detection
-* Term multilingual alignment
+* Word tokenization,
+* POS Tagging (3rd party: with TreeTagger or Mate),
+* Lemmatization (3rd party: with TreeTagger or Mate),
+* Stemming (Snowball),
+* Terminology extraction,
+* Efficient multiword term detection,
+* Term syntactic variants detection,
+* Term graphic variants detection,
+* Term semantic variants detection (to come),
+* Term morphology extraction,
+* Term morphosyntactic variants detection,
+* Term specificity (Weirdness Ratio) computing and other term measures: WR log, Z-score, term frequency, etc,
+* Term alignment (distributional and compositional, multilingual and monolingual),
+* Terminology export in multiple formats: `json`, `tsv`, `tbx`.
 
-# Supported languages
+# Supported languages and TermSuite resources
 
-You need a TermSuite resource pack (a jar file) to be able to use TermSuite.
+You need a TermSuite resource pack (a jar file or a directory containing resource files) to be able to use TermSuite.
 
-| Language | Qualitity of resource pack (and other comments)|
-|----------|:-------------:|
+| Language | Quality of resource pack (and other comments)|
+|----------|-------------|
 | french |  Excellent |
 | english |  Excellent |
 | russian |  Excellent (TreeTagger is slow) |
@@ -27,6 +33,8 @@ You need a TermSuite resource pack (a jar file) to be able to use TermSuite.
 | danish |  Poor |
 | chinese |  Poor |
 | latvian |  Good, but no POS tagger supported natively |
+
+See [here](https://github.com/termsuite/termsuite-resources) for details and instructions about using resource pack in TermSuite.
 
 # Prerequesites
 
