@@ -21,6 +21,7 @@
  *******************************************************************************/
 package eu.project.ttc.tools;
 
+import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
@@ -36,11 +37,12 @@ import eu.project.ttc.engines.desc.Lang;
 public class TermSuiteResourceHelper {
 	
 	private Lang lang;
-	private String resourcePath = "file:";
+	private String resourcePath;
 	
 	public TermSuiteResourceHelper(Lang lang) {
 		super();
 		this.lang = lang;
+		this.resourcePath = "file:" + lang.getCode() + File.separator;
 //		this.resourcePath = Paths.get("file:eu", "project","ttc","resources", this.lang.getName());
 	}
 
