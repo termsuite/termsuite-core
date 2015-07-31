@@ -112,7 +112,9 @@ public class TermOccurrence implements Comparable<TermOccurrence> {
 	 * @throws IOException 
 	 */
 	public String getTextualContext(int contextSize) throws IOException {
-		String text = CharStreams.toString(new FileReader(sourceDocument.getUrl().replaceFirst("file:", "")));
+		FileReader r = new FileReader(sourceDocument.getUrl().replaceFirst("file:", ""));
+		String text = CharStreams.toString(r);
+		r.close();
 		int begin = Math.max(this.begin - contextSize, 0);
 		int end = Math.min(this.end + contextSize, text.length());
 		return TermUtils.collapseText(text.substring(begin, end));
