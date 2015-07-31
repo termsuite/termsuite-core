@@ -36,9 +36,13 @@ You need a TermSuite resource pack (a jar file or a directory containing resourc
 
 See [here](https://github.com/termsuite/termsuite-resources) for details and instructions about using resource pack in TermSuite.
 
-# Prerequesites
+# Requirements
 
-* [Java](https://www.java.com/fr/download/) (> 1.7),
+1. Install [Java](https://www.java.com/fr/download/) (at least 1.7)
+2. Install a POS Tagger and prepare it for TermSuite. (See [this guide](InstallingPOSTagger))
+3. Prepare your document corpus into a valid [TermSuite collection](TermSuiteCollection).
+
+*  (> 1.7),
 * A POS Tagger ([TreeTagger](http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/) advised, but [Mate](https://code.google.com/p/mate-tools/) is supported too),
 * A TermSuite resource pack.
 
@@ -130,40 +134,6 @@ TermSuite also comes with a command line interface.
 ```
 See the full [command line API documentation]().
 
-# TermSuite Graphical Interface
-
-(to come)
-
-# Corpora (Collections)
-
-In order to use TermSuite for terminology extraction and other NLP pipeplines, you need to provide a corpus path (method `TermSuitePipeline.setCollection(...)`). TermSuite currently supports two types of corpus: `tei` and `txt`.
-
-A valid TermSuite corpus is a directory having the following directory structure :
- * first level : the corpus's root directory (the corpus name),
- * second level : the language-specific directory (full language name, with first letter capitalized),
- * third level : the collection type (currently `tei` or `txt`).
- * fourth level : the corpus's documents (the files), each having the right extension (`tei` or `txt`).
-
-Example with the corpus `MyCorpus`:
-
-```
-MyCorpus/
-  French/
-    txt/
-      file1.txt
-      file2.txt
-      file3.txt
-  German/
-    txt/
-    file1.txt
-    file2.txt
-  English/
-    tei/
-      file1.tei
-      file2.tei
-      file3.tei
-      file4.tei
-```
 
 # Documentation
 
