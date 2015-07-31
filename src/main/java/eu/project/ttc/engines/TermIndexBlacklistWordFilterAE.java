@@ -30,9 +30,10 @@ import org.apache.uima.jcas.JCas;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import uima.sandbox.filter.resources.FilterResource;
+
 import com.google.common.collect.Sets;
 
-import uima.sandbox.filter.resources.FilterResource;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.resources.TermIndexResource;

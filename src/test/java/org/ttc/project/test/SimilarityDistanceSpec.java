@@ -9,9 +9,7 @@ import org.ttc.project.Fixtures;
 import eu.project.ttc.metrics.Cosine;
 import eu.project.ttc.metrics.Jaccard;
 import eu.project.ttc.models.ContextVector;
-import eu.project.ttc.models.Document;
 import eu.project.ttc.models.Term;
-import eu.project.ttc.models.TermOccurrence;
 
 public class SimilarityDistanceSpec {
 

@@ -39,6 +39,7 @@ import com.google.common.collect.Sets;
 
 import eu.project.ttc.models.SyntacticVariation;
 import eu.project.ttc.models.Term;
+import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.resources.TermIndexResource;
 import fr.univnantes.lina.UIMAProfiler;
 
