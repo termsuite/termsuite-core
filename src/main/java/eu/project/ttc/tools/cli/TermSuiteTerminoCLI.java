@@ -58,7 +58,7 @@ public class TermSuiteTerminoCLI {
 		
 
 	/** Short usage description of the CLI */
-	private static final String USAGE = "java [-DconfigFile=<file>] -Xms1g -Xmx2g -cp ttc-term-suite-x.x.jar eu.project.ttc.tools.cli.TermSuiteTerminoCLI";
+	private static final String USAGE = "java [-DconfigFile=<file>] -Xms1g -Xmx2g -cp termsuite-core-x.x.jar eu.project.ttc.tools.cli.TermSuiteTerminoCLI";
 
 	/// Parameter names
 	/** Name of the example limit parament */
@@ -72,29 +72,24 @@ public class TermSuiteTerminoCLI {
 	/** Name of the example limit parament */
 	private static final String EXAMPLE_LIMIT = "nb-examples";
 
-	/** Name of the regex rules file parameter */
-	private static final String REGEX_FILE_PATH = "spotting-rules";
-
-	/** Name of the groovy variant rules file parameter */
-	private static final String SYNTACTIC_VARIANT_RULES = "syntactic-variant-rules";
-
 	/** Name of the corpus parameter */
 	private static final String PATH_TO_CORPUS = "corpus-home";
 
-	/** Name of the corpus parameter */
-	private static final String CORPUS_FORMAT = "corpus-format";
+	/** Name of the resource path parameter */
+	private static final String PATH_TO_RESOURCE_PACK = "resource-pack";
+
 	
-	/** Name of the parameter that must be set to the output directory */
-	public static final String P_OUTPUT_DIR = "output-directory";
+	/** Name of the corpus format parameter */
+	private static final String CORPUS_FORMAT = "corpus-format";
 	
 	/** Name of the parameter that must be set to the tt dir */
 	public static final String P_TAGGER_HOME_DIRECTORY = "tagger-home";
 	
 	/** Name of the parameter that must be set to disable graphical variants */
-	private static final String GRAPHICAL_SIMILARITY = "graphical-similarity";
+	private static final String GRAPHICAL_SIMILARITY = "graphical-similarity-th";
     
 	/** Name of the paramter that shows tree tagger tags**/
-	private static final String SHOW_TREE_TAGGER_TAGS = "tt-tags";
+	private static final String SHOW_TAGGER_TAGS = "tags";
 
 	/** Compost configuration parameters **/
 	private static final String COMPOST_COEFF = "compost-coeff";
@@ -124,9 +119,9 @@ public class TermSuiteTerminoCLI {
 	/*
 	 * Cleaning arguments
 	 */
-	private static final String CLEAN_THRESHOLD = "th";
-	private static final String CLEAN_TOP_N = "top-n";
-	private static final String CLEAN_PROPERTY = "filter";
+	private static final String CLEAN_THRESHOLD = "filter-th";
+	private static final String CLEAN_TOP_N = "filter-top-n";
+	private static final String CLEAN_PROPERTY = "filter-property";
 
 	
 	// the tsv file path argument
@@ -144,15 +139,13 @@ public class TermSuiteTerminoCLI {
 	// tagger argument
 	private static Tagger tagger = Tagger.TreeTagger;
 
+    private static String resourcePack = null;
     private static String corpusPath = null;
     private static Lang language = null;
     private static String encoding = "UTF-8";
 //    private static String pipelineCRInputDirectory = null;
     private static String taggerHome = "";
-    private static Optional<String> regexFile = Optional.absent();
-    private static Optional<String> yamlVariantFile = Optional.absent();
     private static String inlineText = null;
-	private static boolean showTreeTaggerTags = false;
 	private static int exampleLimit = 10;
 	private static TermSuiteCollection corpusType = TermSuiteCollection.TXT;
 	private static float graphicalSimilarityThreshold = 0.9f;
@@ -243,7 +236,9 @@ public class TermSuiteTerminoCLI {
 				} else {
 					pipeline.setCollection(corpusType, corpusPath, encoding);
 				}
-				
+
+				// resource
+				pipeline.setResourcePath(resourcePack);
 				
 				// tokenizer
 				pipeline.wordTokenizer();
@@ -264,8 +259,6 @@ public class TermSuiteTerminoCLI {
 				pipeline.stemmer();
 				
 				// regex spotter
-				if(regexFile.isPresent())
-					pipeline.setSyntacticRegexesFilePath(regexFile.get());
 				pipeline.regexSpotter();
 				
 				// specificity computer
@@ -286,8 +279,6 @@ public class TermSuiteTerminoCLI {
 				pipeline.compostSplitter();
 				
 				// syntactic variant gathering
-				if(yamlVariantFile.isPresent())
-					pipeline.setYamlVariantRulesFilePath(yamlVariantFile.get());
 				pipeline.syntacticVariantGatherer();
 
 				// graphical variant gathering
@@ -373,7 +364,7 @@ public class TermSuiteTerminoCLI {
 				false));
 
 		options.addOption(TermSuiteCLIUtils.createOption(
-				"t", 
+				null, 
 				TEXT, 
 				true, 
 				"The text to analyze", 
@@ -383,7 +374,7 @@ public class TermSuiteTerminoCLI {
 				null, 
 				COMPOST_MAX_COMPONENT_NUM, 
 				true, 
-				"The maximum number of component that a compound can have", 
+				"The maximum number of components that a compound can have", 
 				false));
 		options.addOption(TermSuiteCLIUtils.createOption(
 				null, 
@@ -431,27 +422,13 @@ public class TermSuiteTerminoCLI {
 		
 		
 		options.addOption(TermSuiteCLIUtils.createOption(
-				"ex", 
+				null, 
 				EXAMPLE_LIMIT, 
 				true, 
 				"The number of examples to display for each profiling hit", 
 				false));
 		
 		
-		options.addOption(TermSuiteCLIUtils.createOption(
-				"r", 
-				REGEX_FILE_PATH, 
-				true, 
-				"Path to the term spotter regex rules file", 
-				false));
-
-		options.addOption(TermSuiteCLIUtils.createOption(
-				"g", 
-				SYNTACTIC_VARIANT_RULES, 
-				true, 
-				"Path to the syntactic variant groovy rules file", 
-				false));
-
 		options.addOption(TermSuiteCLIUtils.createOption(
 				null, 
 				CORPUS_FORMAT, 
@@ -460,10 +437,16 @@ public class TermSuiteTerminoCLI {
 				false));
 		
 		options.addOption(TermSuiteCLIUtils.createOption(
-				"corpus", 
+				"c", 
 				PATH_TO_CORPUS, 
 				true, 
 				"Path to the corpus", 
+				false));
+		options.addOption(TermSuiteCLIUtils.createOption(
+				"r", 
+				PATH_TO_RESOURCE_PACK, 
+				true, 
+				"Path to the TermSuite resource pack", 
 				false));
 		options.addOption(TermSuiteCLIUtils.createOption(
 				"l", 
@@ -472,7 +455,7 @@ public class TermSuiteTerminoCLI {
 				"language of the input files: fr/en/etc.", 
 				true));
 		options.addOption(TermSuiteCLIUtils.createOption(
-				"enc", 
+				null, 
 				TermSuiteCLIUtils.P_ENCODING, 
 				true, 
 				"encoding of the input files", 
@@ -492,7 +475,7 @@ public class TermSuiteTerminoCLI {
 				false));
 		options.addOption(TermSuiteCLIUtils.createOption(
 				null, 
-				SHOW_TREE_TAGGER_TAGS, 
+				SHOW_TAGGER_TAGS, 
 				false, 
 				"Show tree tagger tags", 
 				false));
@@ -552,6 +535,7 @@ public class TermSuiteTerminoCLI {
 		if(inlineText == null && corpusPath == null)
 			TermSuiteCLIUtils.exitWithErrorMessage("Either the argument --" + TEXT + " or --" + PATH_TO_CORPUS + " must be set.");
 		
+		resourcePack = line.getOptionValue(PATH_TO_RESOURCE_PACK);
 		
 		
 		language = Lang.forName(line.getOptionValue(TermSuiteCLIUtils.P_LANGUAGE));
@@ -574,15 +558,11 @@ public class TermSuiteTerminoCLI {
 //		pipelineCRInputDirectory = TermSuiteCLIUtils.getCorpusLanguagePath(corpusPath, language, corpusType.name().toLowerCase());
 		
 
-		regexFile = TermSuiteCLIUtils.readFileOption(line, REGEX_FILE_PATH);
-		yamlVariantFile = TermSuiteCLIUtils.readFileOption(line, SYNTACTIC_VARIANT_RULES);
-		
 		if(line.hasOption(GRAPHICAL_SIMILARITY))
 			graphicalSimilarityThreshold = Float.parseFloat(line.getOptionValue(GRAPHICAL_SIMILARITY));
 			
 		
 		exampleLimit = Integer.parseInt(line.getOptionValue(EXAMPLE_LIMIT, "5"));
-		showTreeTaggerTags = line.hasOption(SHOW_TREE_TAGGER_TAGS);
 		
 		if(line.hasOption(COMPOST_MIN_COMPONENT_SIZE))
 			compostMinComponentSize = Optional.of(Integer.parseInt(line.getOptionValue(COMPOST_MIN_COMPONENT_SIZE)));
