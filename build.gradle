@@ -62,8 +62,11 @@ artifacts {
 	archives javadocJar, sourcesJar
 }
 
-signing {
-	sign configurations.archives
+if(hasProperty("signing.keyId")) {
+	// activate signing of artifacts, only if signing is configured properly
+	signing {
+		sign configurations.archives
+	}
 }
 
 repositories {
