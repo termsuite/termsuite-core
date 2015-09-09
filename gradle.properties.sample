@@ -3,3 +3,6 @@ ossrhPassword=thePasswd
 developerId=id
 developerName=theName
 developerEmail=theMail
+signing.keyId=YourKeyId
+signing.password=YourPublicKeyPassword
+signing.secretKeyRingFile=PathToYourKeyRingFile

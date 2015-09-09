@@ -2,8 +2,9 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'maven'
 apply plugin: 'signing'
+apply plugin: 'maven-publish'
 
-group = 'fr.univnantes.lina'
+group = 'fr.univ-nantes.julestar'
 archivesBaseName = 'termsuite-core'
 version = '2.0'
 
@@ -43,64 +44,92 @@ task sourcesJar(type: Jar) {
 	from sourceSets.main.allSource
 }
 
+
+/*
+ * Deactivate Java 8 doclint if Java version is 8
+ * See : blog.joda.org/2014/02/turning-off-doclint-in-jdk-8-javadoc.html
+ */
+if (JavaVersion.current().isJava8Compatible()) {
+	allprojects {
+	  tasks.withType(Javadoc) {
+		options.addStringOption('Xdoclint:none', '-quiet')
+	  }
+	}
+  }
+
+
 artifacts {
 	archives javadocJar, sourcesJar
 }
 
-/*
 signing {
 	sign configurations.archives
 }
-*/
 
 repositories {
 	mavenLocal()
 	mavenCentral()
 }
 
-uploadArchives {
-	repositories {
-	  mavenDeployer {
-		//beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+publishing {
+	publications {
+		maven(MavenPublication) {
+			groupId group
+			artifactId archivesBaseName
+			version version
 
-		repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
-		  authentication(userName: ossrhUsername, password: ossrhPassword)
+			from components.java
 		}
-
-		snapshotRepository(url: "https://oss.sonatype.org/content/repositories/snapshots/") {
-		  authentication(userName: ossrhUsername, password: ossrhPassword)
-		}
-
-		pom.project {
-		  name project.ext.name
-		  packaging 'jar'
-		  // optionally artifactId can be defined here
-		  description project.ext.description
-		  url project.ext.url
-
-		  scm {
-			  connection 'scm:git:git@github.com:termsuite/termsuite-core.git'
-			  developerConnection 'scm:git:git@github.com:termsuite/termsuite-core.git'
-			  url 'git@github.com:termsuite/termsuite-core.git'
-		  }
-
-		  licenses {
-			  license {
-				  name 'The Apache License, Version 2.0'
-				  url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-			  }
-		  }
-
-		  developers {
-			  developer {
-				  id developerId
-				  name developerName
-				  email developerEmail
-			  }
-		  }
-		}
-	  }
 	}
+}
+
+if(hasProperty("ossrhUsername")) {
+  uploadArchives {
+  	repositories {
+  	  mavenDeployer {
+    		beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+
+      		repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
+      		  authentication(userName: ossrhUsername, password: ossrhPassword)
+      		}
+      		snapshotRepository(url: "https://oss.sonatype.org/content/repositories/snapshots/") {
+      		  authentication(userName: ossrhUsername, password: ossrhPassword)
+      		}
+
+      		pom.project {
+      		  name project.ext.name
+      		  packaging 'jar'
+      		  // optionally artifactId can be defined here
+      		  description project.ext.description
+      		  url project.ext.url
+
+      		  scm {
+      			  connection 'scm:git:git@github.com:termsuite/termsuite-core.git'
+      			  developerConnection 'scm:git:git@github.com:termsuite/termsuite-core.git'
+      			  url 'git@github.com:termsuite/termsuite-core.git'
+      		  }
+
+      		  licenses {
+      			  license {
+      				  name 'The Apache License, Version 2.0'
+      				  url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+      			  }
+      		  }
+
+      		  developers {
+      			  developer {
+      				  id developerId
+      				  name developerName
+      				  email developerEmail
+      			  }
+      		  }
+      		}
+	     }
+  	}
+  }
+} else {
+  def msg = "Publishing to maven central (task uploadArchives) is not possible since no gradle property file is found (use \"\$ cp gradle.properties.sample gradle.properties\")"
+  logger.warn(msg)
 }
 
 configurations {
@@ -131,29 +160,29 @@ dependencies {
 
 	// Mate Tagger
 	compile "com.googlecode.mate-tools:anna:3.5"
-	
+
 	// Groovy
 	compile "org.codehaus.groovy:groovy:2.4.+"
 
 	// Guava
 	compile "com.google.guava:guava:18.+"
-	
+
 	// Snake YAML
 	compile "org.yaml:snakeyaml:1.15"
-	
+
 	// Jackson (json)
 	compile "com.fasterxml.jackson.core:jackson-core:2.5.+"
 
 	// UIMA Components
-	compile 'fr.univnantes.lina:uima-tree-tagger-wrapper:1.+'
-	compile 'fr.univnantes.lina:uima-tokenizer:1.+'
-	compile 'fr.univnantes.lina:uima-filter:1.+'
-	compile 'fr.univnantes.lina:uima-mapper:1.+'
-	compile 'fr.univnantes.lina:uima-chinese-segmenter:1.+'
-	compile 'fr.univnantes.lina:uima-tokens-regex:1.+'
-	compile 'fr.univnantes.lina:uima-profiler:1.+'
-	compile 'fr.univnantes.lina:uima-stemmer:1.+'
-	
+	compile 'fr.univ-nantes.julestar:uima-tree-tagger-wrapper:1.+'
+	compile 'fr.univ-nantes.julestar:uima-tokenizer:1.+'
+	compile 'fr.univ-nantes.julestar:uima-filter:1.+'
+	compile 'fr.univ-nantes.julestar:uima-mapper:1.+'
+	compile 'fr.univ-nantes.julestar:uima-chinese-segmenter:1.+'
+	compile 'fr.univ-nantes.julestar:uima-tokens-regex:1.+'
+	compile 'fr.univ-nantes.julestar:uima-profiler:1.+'
+	compile 'fr.univ-nantes.julestar:uima-stemmer:1.+'
+
 	// JCas type generation
 	prepare "org.apache.uima:uimaj-tools:2.4.0"
 }
@@ -206,7 +235,7 @@ clean.doLast {
 task jcasgen(type: JavaExec) {
 	description = 'Generate UIMA TS classes'
 	ext.srcFile = file("$projectDir/$project.jcasFile")
-	ext.outputDir = file("$projectDir/src/main/java") 
+	ext.outputDir = file("$projectDir/src/main/java")
 	inputs.file srcFile
 	outputs.dir outputDir
 	classpath configurations.prepare
