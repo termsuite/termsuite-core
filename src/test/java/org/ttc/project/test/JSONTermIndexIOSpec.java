@@ -243,7 +243,14 @@ public class JSONTermIndexIOSpec {
 		// test words
 		List<?> wordList = (List<?>)map.get("words");
 		assertThat(wordList).hasSize(3).extracting("lemma").containsOnly("word1", "word2", "word3");
-		LinkedHashMap<?,?> w3 = (LinkedHashMap<?, ?>)wordList.get(2);
+		
+		
+		LinkedHashMap<?,?> w3 = null;
+		for(Object wl:wordList) {
+			if(((LinkedHashMap<?, ?>)wl).get("lemma").equals("word3"))
+				w3 = (LinkedHashMap<?,?>)wl;
+		}
+		
 		assertEquals("word3", w3.get("lemma"));
 		assertEquals("stem3", w3.get("stem"));
 		assertEquals("NATIVE", w3.get("compound_type"));
