@@ -18,7 +18,6 @@
  */
 package eu.project.ttc.engines;
 
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.ListIterator;
@@ -36,9 +35,7 @@ import org.slf4j.LoggerFactory;
 import com.google.common.base.Joiner;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.ComparisonChain;
-import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Lists;
-import com.google.common.collect.Multimap;
 
 import eu.project.ttc.engines.variant.VariantRule;
 import eu.project.ttc.models.Term;
@@ -175,12 +172,31 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 	private void applyGatheringRules(Term source, Term target) {
 		VariantRule matchingRule = yamlVariantRules.getMatchingRule(source,target);
 		if (matchingRule != null) {
-			source.addSyntacticVariant(target, matchingRule.getName());
-			List<Term> pair = Lists.newArrayList(source,target);
-			Collections.sort(pair, mwTermComparator);
-			this.stats.put(matchingRule.getName(), pair);
-			UIMAProfiler.getProfiler("Gathering stats").hit(matchingRule.getName(), source.getPilot() + " || " + target.getPilot());
+			applyMatchingRule(matchingRule, source, target);
 		}
+	}
+
+	private void applyMatchingRule(VariantRule matchingRule, Term source, Term target) {
+		// Finds the most frequent of both terms
+		checkFrequency(source);
+		checkFrequency(target);
+		if(baseTargetComparator.compare(source, target) > 0) {
+			// swaps terms, sets the most frequent  and shortest as the source
+			Term aux = source;
+			source = target;
+			target = aux;
+		}
+		
+		source.addSyntacticVariant(target, matchingRule.getName());
+//		List<Term> pair = Lists.newArrayList(source,target);
+//		Collections.sort(pair, mwTermComparator);
+//		this.stats.put(matchingRule.getName(), pair);
+		UIMAProfiler.getProfiler("Gathering stats").hit(matchingRule.getName(), source.getPilot() + " || " + target.getPilot());
+	}
+
+	private void checkFrequency(Term term) {
+		if(term.getFrequency() == 0)
+			LOGGER.warn("Frequency of term {} must be greater than 0 before running SyntactticTermGatherer AE", term.getGroupingKey());
 	}
 
 	@Override
@@ -188,13 +204,23 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 		// nothing to do at cas level
 	}
 	
-	private Multimap<String, List<Term>> stats = HashMultimap.create() ;
-	private static Comparator<Term> mwTermComparator = new Comparator<Term>() {
+//	private Multimap<String, List<Term>> stats = HashMultimap.create() ;
+//	private static Comparator<Term> mwTermComparator = new Comparator<Term>() {
+//		public int compare(Term a, Term b) {
+//		     return ComparisonChain.start()
+//		         .compare(a.getGroupingKey(), b.getGroupingKey())
+//		         .result();
+//		   }
+//	};
+	
+	private static Comparator<Term> baseTargetComparator = new Comparator<Term>() {
 		public int compare(Term a, Term b) {
 		     return ComparisonChain.start()
-		         .compare(a.getGroupingKey(), b.getGroupingKey())
+		         .compare(b.getFrequency(), a.getFrequency())
+		         .compare(a.getWords().size(), b.getWords().size())
 		         .result();
 		   }
 	};
+
 	
 }
