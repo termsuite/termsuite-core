@@ -732,6 +732,7 @@ public class TermSuitePipeline {
 			Serializable postProcStrategy = this.postProcessingStrategy.isPresent() ? this.postProcessingStrategy.get() : lang.getRegexPostProcessingStrategy();
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					RegexSpotter.class,
+					TokenRegexAE.PARAM_ALLOW_OVERLAPPING_OCCURRENCES, true,
 					RegexSpotter.POST_PROCESSING_STRATEGY, postProcStrategy,
 					RegexSpotter.KEEP_OCCURRENCES_IN_TERM_INDEX, this.spotWithOccurrences
 				);
