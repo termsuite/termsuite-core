@@ -349,10 +349,19 @@ public class MemoryTermIndex implements TermIndex {
 		for(Term v:t.getGraphicalVariants()) 
 			v.removeGraphicalVariant(t);
 		
-		// remove from context vectors
-		for(Term o:termsById.values()) {
-			if(o.isContextVectorComputed())
-				o.getContextVector().removeCoTerm(t);
+		/*
+		 * Removes from context vectors.
+		 * 
+		 * We assumes that if this term has a context vector 
+		 * then all others terms may have this term as co-term,
+		 * thus they must be checked from removal.
+		 * 
+		 */
+		if(t.isContextVectorComputed()) {
+			for(Term o:termsById.values()) {
+				if(o.isContextVectorComputed())
+					o.getContextVector().removeCoTerm(t);
+			}
 		}
 
 	}
