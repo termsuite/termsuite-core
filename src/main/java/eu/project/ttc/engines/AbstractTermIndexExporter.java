@@ -22,6 +22,8 @@
 package eu.project.ttc.engines;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.TreeSet;
@@ -91,6 +93,8 @@ public abstract class AbstractTermIndexExporter extends JCasAnnotator_ImplBase {
 	/** The destination file **/
 	protected File toFile;
 	
+	protected FileWriter writer;
+
 	@Override
 	public void initialize(UimaContext context)
 			throws ResourceInitializationException {
@@ -98,6 +102,12 @@ public abstract class AbstractTermIndexExporter extends JCasAnnotator_ImplBase {
 		this.toFile = new File(this.toFilePath);
 		Preconditions.checkNotNull(this.toFile.getAbsoluteFile().getParentFile(), String.format("Invalid path %s.", this.toFilePath));
 		Preconditions.checkState(this.toFile.getAbsoluteFile().getParentFile().canWrite(), String.format("Cannot write to directory %s.", this.toFile.getAbsoluteFile().getParentFile().getPath()));
+		try {
+			this.writer = new FileWriter(toFile, false);
+		} catch (IOException e) {
+			LOGGER.error("Could not initialize write to file {}", toFile.getAbsolutePath());
+			throw new ResourceInitializationException(e);
+		}
 		initFilteringAndSorting();
 	}
 	
@@ -168,5 +178,17 @@ public abstract class AbstractTermIndexExporter extends JCasAnnotator_ImplBase {
         default:
             throw new IllegalArgumentException("Unknown filtering rule " + filterRule);
 		}
+	}
+	
+	@Override
+	public void destroy() {
+		super.destroy();
+		try {
+			writer.flush();
+			writer.close();
+		} catch (IOException e) {
+			LOGGER.error("Could not close writer to file.", e);
+		}
+
 	}
 }

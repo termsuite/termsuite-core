@@ -151,6 +151,31 @@ public class TermOccurrenceUtils {
 		};
 	}
 
+	
+	/**
+	 * Removes from an occurrence set all occurrences that overlap
+	 * at least one occurrence in a reference occurrence set.
+	 * 
+	 * @param referenceSet
+	 * 			the reference set, not modified by this method
+	 * @param occurrenceSet
+	 * 			the occurrence set to analyze, will be modified by this method
+	 */
+	public static void removeOverlaps(Collection<TermOccurrence> referenceSet, Collection<TermOccurrence> occurrenceSet) {
+		Iterator<TermOccurrence> it = occurrenceSet.iterator();
+		while(it.hasNext()) {
+			TermOccurrence occ = it.next();
+			for(TermOccurrence refOcc:referenceSet) {
+				if(occ.getSourceDocument().equals(refOcc.getSourceDocument())
+						&& areOffsetsOverlapping(occ, refOcc)) {
+					it.remove();
+					break;
+				}
+			}
+		}
+	}
+
+		
 	/**
 	 * True if an occurrence set contains any element overlapping 
 	 * with the param occurrence.

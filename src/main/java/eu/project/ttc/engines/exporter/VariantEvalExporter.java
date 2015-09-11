@@ -21,17 +21,14 @@
  *******************************************************************************/
 package eu.project.ttc.engines.exporter;
 
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
 import java.util.TreeSet;
 
-import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.jcas.JCas;
-import org.apache.uima.resource.ResourceInitializationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -69,11 +66,6 @@ public class VariantEvalExporter extends AbstractTermIndexExporter {
 	@ConfigurationParameter(name = NB_VARIANTS_PER_TERM, mandatory = false, defaultValue = "100000")
 	private int nbVariantsPerTerm;
 
-	
-	
-	private FileWriter writer;
-
-
 	private void printTermOccurrences(Term term) throws IOException {
 		List<TermOccurrence> occurrences = Lists.newArrayList(term.getOccurrences());
 		Collections.shuffle(occurrences);
@@ -93,18 +85,6 @@ public class VariantEvalExporter extends AbstractTermIndexExporter {
 		writer.write("\n");
 	}
 
-
-	@Override
-	public void initialize(UimaContext context)
-			throws ResourceInitializationException {
-		super.initialize(context);
-		try {
-			this.writer = new FileWriter(toFile, false);
-		} catch (IOException e) {
-			LOGGER.error("Could not initialize write to file {}", toFile.getAbsolutePath());
-			throw new ResourceInitializationException(e);
-		}
-	}
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
 	}
@@ -134,8 +114,6 @@ public class VariantEvalExporter extends AbstractTermIndexExporter {
 					break;
 			}
 
-			writer.flush();
-			writer.close();
 		} catch (IOException e) {
 			LOGGER.error("An error occurred during export.");
 			throw new AnalysisEngineProcessException(e);

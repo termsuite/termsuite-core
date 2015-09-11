@@ -39,15 +39,6 @@ import org.apache.uima.resource.ExternalResourceDescription;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import uima.sandbox.filter.resources.DefaultFilterResource;
-import uima.sandbox.filter.resources.FilterResource;
-import uima.sandbox.lexer.engines.Lexer;
-import uima.sandbox.lexer.resources.SegmentBank;
-import uima.sandbox.lexer.resources.SegmentBankResource;
-import uima.sandbox.mapper.engines.Mapper;
-import uima.sandbox.mapper.resources.Mapping;
-import uima.sandbox.mapper.resources.MappingResource;
-
 import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
@@ -77,6 +68,7 @@ import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.engines.desc.TermSuiteCollection;
 import eu.project.ttc.engines.desc.TermSuitePipelineException;
 import eu.project.ttc.engines.exporter.EvalExporter;
+import eu.project.ttc.engines.exporter.ExportVariationRuleExamples;
 import eu.project.ttc.engines.exporter.JsonExporter;
 import eu.project.ttc.engines.exporter.SpotterTSVWriter;
 import eu.project.ttc.engines.exporter.TBXExporter;
@@ -119,6 +111,14 @@ import fr.univnantes.lina.uima.models.ChineseSegmentResource;
 import fr.univnantes.lina.uima.models.TreeTaggerParameter;
 import fr.univnantes.lina.uima.tkregex.ae.RegexListResource;
 import fr.univnantes.lina.uima.tkregex.ae.TokenRegexAE;
+import uima.sandbox.filter.resources.DefaultFilterResource;
+import uima.sandbox.filter.resources.FilterResource;
+import uima.sandbox.lexer.engines.Lexer;
+import uima.sandbox.lexer.resources.SegmentBank;
+import uima.sandbox.lexer.resources.SegmentBankResource;
+import uima.sandbox.mapper.engines.Mapper;
+import uima.sandbox.mapper.resources.Mapping;
+import uima.sandbox.mapper.resources.MappingResource;
 
 /*
  * TODO Integrates frozen expressions
@@ -350,6 +350,7 @@ public class TermSuitePipeline {
 		}
 	}
 	
+
 	public TermSuitePipeline wordTokenizer() {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
@@ -471,7 +472,27 @@ public class TermSuitePipeline {
 			throw new TermSuitePipelineException(e);
 		}
 	}
-		
+	
+	/**
+	 * 
+	 * Exports examples of matching pairs for each variation rule.
+	 * 
+	 * @param toFilePath
+	 * 				the file path where to write the examples for each variation rules
+	 * @return the pipeline
+	 */
+	public TermSuitePipeline exportVariationRuleExamples(String toFilePath) {
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					ExportVariationRuleExamples.class, ExportVariationRuleExamples.TO_FILE_PATH, toFilePath);
+			ExternalResourceFactory.bindResource(ae, resTermIndex());
+			ExternalResourceFactory.bindResource(ae, resSyntacticVariantRules());
+			return aggregateAndReturn(ae);
+		} catch (Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
+	}
+	
 	public TermSuitePipeline tbxExporter(String toFilePath) {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
@@ -978,6 +999,19 @@ public class TermSuitePipeline {
 		return termIndexResourceDesc;
 		
 	}
+	
+	private ExternalResourceDescription syntacticVariantRules;
+	private ExternalResourceDescription resSyntacticVariantRules() {
+		if(syntacticVariantRules == null) {
+			syntacticVariantRules = ExternalResourceFactory.createExternalResourceDescription(
+					YamlVariantRules.class, 
+					this.yamlVariantRulesFilePath.isPresent() ?  this.yamlVariantRulesFilePath.get() : resFactory.getYamlVariantRules().toString()
+				);
+		}
+		return syntacticVariantRules;
+
+	}
+
 
 	/**
 	 * Returns the term index produced (or last modified) by this pipeline.
@@ -1228,11 +1262,8 @@ public class TermSuitePipeline {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					SyntacticTermGatherer.class
 				);
-			ExternalResourceFactory.createDependencyAndBind(
-					ae,
-					SyntacticTermGatherer.YAML_VARIANT_RULES, 
-					YamlVariantRules.class, 
-					this.yamlVariantRulesFilePath.isPresent() ?  this.yamlVariantRulesFilePath.get() : resFactory.getYamlVariantRules().toString());
+			
+			ExternalResourceFactory.bindResource(ae, resSyntacticVariantRules());
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 			return aggregateAndReturn(ae);
 		} catch(Exception e) {
@@ -1240,6 +1271,7 @@ public class TermSuitePipeline {
 		}
 	}
 	
+
 	public TermSuitePipeline setExportFilteringRule(String exportFilteringRule) {
 		this.exportFilteringRule = exportFilteringRule;
 		return this;
