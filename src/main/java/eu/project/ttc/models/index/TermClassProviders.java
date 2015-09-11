@@ -33,8 +33,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 
 import eu.project.ttc.models.Component;
 import eu.project.ttc.models.LemmaStemHolder;
@@ -51,6 +51,8 @@ public class TermClassProviders {
 	public static final String KEY_WORD_COUPLE_LEMMA_STEM = "word-lemma-stem";
 	public static final String KEY_WORD_LEMMA_LOWER_CASE = "word-lemma-lower-case";
 	public static final String KEY_3RD_FIRST_LETTERS = "3rd-first-letters";
+	public static final String KEY_TERM_NOCLASS = "no-class";
+	
 	private static final char JOIN_CHAR = ':';
 	
 
@@ -88,7 +90,14 @@ public class TermClassProviders {
 			return ImmutableList.of(term.getLemma().toLowerCase());
 		};
 	};
-	
+
+	public static final TermClassProvider TERM_NOCLASS_PROVIDER = new AbstractTermClassProvider(KEY_TERM_NOCLASS) {
+		private String value = "noclass";
+		public java.util.Collection<String> getClasses(Term term) {
+			return ImmutableList.of(value);
+		};
+	};
+
 	public static final TermClassProvider WORD_LEMMA_PROVIDER = new AbstractTermClassProvider(KEY_WORD_LEMMA) {
 		@Override
 		public Collection<String> getClasses(Term term) {
@@ -116,6 +125,7 @@ public class TermClassProviders {
 
 		@Override
 		public Collection<String> getClasses(Term term) {
+			boolean addEmptyLemmaStem = false;
 			List<String> lemmas = Lists.newArrayListWithCapacity(term.getWords().size());
 			
 			Map<String, String> stems = new HashMap<String, String>();
@@ -198,12 +208,14 @@ public class TermClassProviders {
 		}
 	};
 	
-	
-	public static final Map<String, TermClassProvider> classProviders = ImmutableMap.of(
-			KEY_TERM_LEMMA_LOWER_CASE, TERM_LEMMA_LOWER_CASE_PROVIDER,
-			KEY_WORD_LEMMA_LOWER_CASE, WORD_LEMMA_LOWER_CASE,
-			KEY_WORD_LEMMA, WORD_LEMMA_PROVIDER,
-			KEY_WORD_COUPLE_LEMMA_STEM, WORD_LEMMA_STEM_PROVIDER,
-			KEY_WORD_COUPLE_LEMMA_LEMMA, WORD_LEMMA_LEMMA_PROVIDER
-		);
+	public static final Map<String, TermClassProvider> classProviders = Maps.newHashMap();
+
+	static {
+		classProviders.put(KEY_TERM_NOCLASS, TERM_NOCLASS_PROVIDER);
+		classProviders.put(KEY_TERM_LEMMA_LOWER_CASE, TERM_LEMMA_LOWER_CASE_PROVIDER);
+		classProviders.put(KEY_WORD_LEMMA_LOWER_CASE, WORD_LEMMA_LOWER_CASE);
+		classProviders.put(KEY_WORD_LEMMA, WORD_LEMMA_PROVIDER);
+		classProviders.put(KEY_WORD_COUPLE_LEMMA_STEM, WORD_LEMMA_STEM_PROVIDER);
+		classProviders.put(KEY_WORD_COUPLE_LEMMA_LEMMA, WORD_LEMMA_LEMMA_PROVIDER);
+	}
 }
