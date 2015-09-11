@@ -64,7 +64,7 @@ public class CharacterFootprintTermFilter  implements SharedResourceObject, Occu
 		}
 		if(nbBadWords > 1)
 			return false;
-		if(totalChars <= totalWords*3)
+		if(totalChars <= totalWords*3 && totalWords > 1)
 			return false;
 		int badCharRate = 100*badChars.intValue()/totalChars;
 		if(badCharRate >= BAD_CHAR_RATE_THRESHOLD)
