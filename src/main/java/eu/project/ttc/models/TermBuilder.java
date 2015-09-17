@@ -36,7 +36,10 @@ public class TermBuilder {
 	private List<TermWord> termWords = Lists.newArrayList();
 	private List<TermOccurrence> termOccurrences = Lists.newArrayList();
 	private Optional<Integer> frequency = Optional.absent();
-	private Optional<Float> specificity = Optional.absent();
+	private Optional<Float> wr = Optional.absent();
+	private Optional<Float> wrLog = Optional.absent();
+	private Optional<Float> wrLogZScore = Optional.absent();
+
 	private Optional<ContextVector> contextVector = Optional.absent();
 	
 	public TermBuilder() {
@@ -59,8 +62,13 @@ public class TermBuilder {
 	public Term create() {
 		Preconditions.checkNotNull(groupingKey);
 		Term term = new Term(id.get(), groupingKey, termWords, spottingRule);
-		if(specificity.isPresent())
-			term.setWR(specificity.get());
+		if(wr.isPresent())
+			term.setWR(wr.get());
+		if(wrLog.isPresent())
+			term.setWRLog(wrLog.get());
+		if(wrLogZScore.isPresent())
+			term.setWRLogZScore(wrLogZScore.get());
+
 		if(contextVector.isPresent())
 			term.setContextVector(contextVector.get());
 
@@ -108,8 +116,18 @@ public class TermBuilder {
 		return this;
 	}
 
-	public TermBuilder setSpecificity(float spec) {
-		this.specificity = Optional.of(spec);
+	public TermBuilder setWRLog(float wrLog) {
+		this.wrLog = Optional.of(wrLog);
+		return this;
+	}
+
+	public TermBuilder setWRLogZScore(float wrLogZScore) {
+		this.wrLogZScore = Optional.of(wrLogZScore);
+		return this;
+	}
+
+	public TermBuilder setWR(float wr) {
+		this.wr = Optional.of(wr);
 		return this;
 	}
 

@@ -183,6 +183,8 @@ public class JSONTermIndexIOSpec {
 		Term t3 = termIndex.getTermByGroupingKey("term3");
 		assertThat(t1.getId()).isEqualTo(1);
 		assertThat(t1.getWR()).isEqualTo(3.4f);
+		assertThat(t1.getWRLog()).isEqualTo(11f);
+		assertThat(t1.getWRLogZScore()).isEqualTo(22f);
 		assertThat(t1.getFrequency()).isEqualTo(6);
 		assertThat(t1.getGraphicalVariants()).containsOnly(t2);
 		assertThat(t1.getSyntacticVariants()).hasSize(0);

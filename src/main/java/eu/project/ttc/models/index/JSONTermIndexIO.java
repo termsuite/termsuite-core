@@ -38,6 +38,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 
+import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.Component;
 import eu.project.ttc.models.CompoundType;
@@ -81,7 +82,6 @@ public class JSONTermIndexIO {
 	private static final String GROUPING_KEY = "key";
 	private static final String SYN = "syn";
 	private static final String FREQUENCY = "freq";
-	private static final String SPECIFICITY = "spec";
 	private static final String SPOTTING_RULE = "rule";
 	private static final String SYNTACTIC_VARIANTS = "syntactic_variants";
 	private static final String GRAPHICAL_VARIANTS = "graphical_variants";
@@ -100,6 +100,9 @@ public class JSONTermIndexIO {
 	private static final String ASSOC_RATE = "assoc_rate";
 	private static final String CO_TERM = "co_term";
 	private static final String TOTAL_COOCCURRENCES = "total_cooccs";
+	private static String WR_FIELD = TermProperty.WR.getShortName();
+	private static String WR_LOG_FIELD = TermProperty.WR_LOG.getShortName();
+	private static String WR_LOG_ZSCORE_FIELD = TermProperty.WR_LOG_Z_SCORE.getShortName();
 
 	/**
 	 * Loads the json-serialized term index into the param {@link TermIndex} object.
@@ -206,81 +209,89 @@ public class JSONTermIndexIO {
 						else if (ID.equals(fieldname))  {
 							currentTermId = jp.nextIntValue(-2);
 							builder.setId(currentTermId);
-						} else if (FREQUENCY.equals(fieldname)) 
+						} else if (FREQUENCY.equals(fieldname)) {
 							builder.setFrequency(jp.nextIntValue(-1));
-						else if (SPECIFICITY.equals(fieldname)) {
-							jp.nextToken();
-							builder.setSpecificity(jp.getFloatValue());
-						} else if (WORDS.equals(fieldname)) {
-							while ((tok = jp.nextToken()) != JsonToken.END_ARRAY) {
-								wordLemma = null;
-								syntacticLabel = null;
-								while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
-									fieldname = jp.getCurrentName();
-									if (LEMMA.equals(fieldname)) 
-										wordLemma = jp.nextTextValue();
-									else if (SYN.equals(fieldname)) 
-										syntacticLabel = jp.nextTextValue();
-								}
-								Preconditions.checkArgument(wordLemma != null, MSG_EXPECT_PROP_FOR_TERM_WORD, LEMMA);
-								Preconditions.checkArgument(syntacticLabel != null, MSG_EXPECT_PROP_FOR_TERM_WORD, SYN);
-								builder.addWord(termIndex.getWord(wordLemma), syntacticLabel);
-							}// end words
-							
-						} else if (OCCURRENCES.equals(fieldname)) {
-							while ((tok = jp.nextToken()) != JsonToken.END_ARRAY) {
-								begin = -1;
-								end = -1;
-								fileSource = -1;
-								text = null;
-								while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
-									fieldname = jp.getCurrentName();
-									if (BEGIN.equals(fieldname)) 
-										begin = jp.nextIntValue(-1);
-									else if (TEXT.equals(fieldname)) 
-										text = jp.nextTextValue();
-									else if (END.equals(fieldname)) 
-										end = jp.nextIntValue(-1);
-									else if (FILE.equals(fieldname)) {
-										fileSource = jp.nextIntValue(-1);
+						} else {
+							if (WR_FIELD.equals(fieldname)) {
+								jp.nextToken();
+								builder.setWR(jp.getFloatValue());
+							} else if (WR_LOG_FIELD.equals(fieldname)) {
+								jp.nextToken();
+								builder.setWRLog(jp.getFloatValue());
+							} else if (WR_LOG_ZSCORE_FIELD.equals(fieldname)) {
+								jp.nextToken();
+								builder.setWRLogZScore(jp.getFloatValue());
+							} else if (WORDS.equals(fieldname)) {
+								while ((tok = jp.nextToken()) != JsonToken.END_ARRAY) {
+									wordLemma = null;
+									syntacticLabel = null;
+									while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
+										fieldname = jp.getCurrentName();
+										if (LEMMA.equals(fieldname)) 
+											wordLemma = jp.nextTextValue();
+										else if (SYN.equals(fieldname)) 
+											syntacticLabel = jp.nextTextValue();
 									}
-								}
-								Preconditions.checkArgument(begin != -1, MSG_EXPECT_PROP_FOR_OCCURRENCE, BEGIN);
-								Preconditions.checkArgument(end != -1, MSG_EXPECT_PROP_FOR_OCCURRENCE, END);
-								Preconditions.checkArgument(fileSource != -1, MSG_EXPECT_PROP_FOR_OCCURRENCE, FILE);
-								Preconditions.checkNotNull(inputSources.get(fileSource), "No file source with id: %s", fileSource);
-								Preconditions.checkNotNull(text, MSG_EXPECT_PROP_FOR_OCCURRENCE, TEXT);
-								builder.addOccurrence(begin, end, termIndex.getDocument(inputSources.get(fileSource)), text);
-							} 
-						// end occurrences
-						} else if (CONTEXT.equals(fieldname)) {
-							int totalCooccs = 0;
-							while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
-								fieldname = jp.getCurrentName();
-								if (TOTAL_COOCCURRENCES.equals(fieldname)) 
-									/*
-									 * value never used since the total will 
-									 * be reincremented in the contextVector
-									 */
-									totalCooccs = jp.nextIntValue(-1);
-								else if (CO_OCCURRENCES.equals(fieldname)) {
-									jp.nextToken();
-									while ((tok = jp.nextToken()) != JsonToken.END_ARRAY) {
-										TempVecEntry entry = new TempVecEntry();
-										while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
-											fieldname = jp.getCurrentName();
-											if (NB_COCCS.equals(fieldname)) 
-												entry.setNbCooccs(jp.nextIntValue(-1));
-											else if (ASSOC_RATE.equals(fieldname)) {
-												jp.nextToken();
-												entry.setAssocRate(jp.getFloatValue());
-											} else if (CO_TERM.equals(fieldname)) 
-												entry.setTermGroupingKey(jp.nextTextValue());
-											else if (FILE.equals(fieldname)) {
-												fileSource = jp.nextIntValue(-1);
-											}
+									Preconditions.checkArgument(wordLemma != null, MSG_EXPECT_PROP_FOR_TERM_WORD, LEMMA);
+									Preconditions.checkArgument(syntacticLabel != null, MSG_EXPECT_PROP_FOR_TERM_WORD, SYN);
+									builder.addWord(termIndex.getWord(wordLemma), syntacticLabel);
+								}// end words
+								
+							} else if (OCCURRENCES.equals(fieldname)) {
+								while ((tok = jp.nextToken()) != JsonToken.END_ARRAY) {
+									begin = -1;
+									end = -1;
+									fileSource = -1;
+									text = null;
+									while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
+										fieldname = jp.getCurrentName();
+										if (BEGIN.equals(fieldname)) 
+											begin = jp.nextIntValue(-1);
+										else if (TEXT.equals(fieldname)) 
+											text = jp.nextTextValue();
+										else if (END.equals(fieldname)) 
+											end = jp.nextIntValue(-1);
+										else if (FILE.equals(fieldname)) {
+											fileSource = jp.nextIntValue(-1);
 										}
-										currentContextVector.add(entry);
+									}
+									Preconditions.checkArgument(begin != -1, MSG_EXPECT_PROP_FOR_OCCURRENCE, BEGIN);
+									Preconditions.checkArgument(end != -1, MSG_EXPECT_PROP_FOR_OCCURRENCE, END);
+									Preconditions.checkArgument(fileSource != -1, MSG_EXPECT_PROP_FOR_OCCURRENCE, FILE);
+									Preconditions.checkNotNull(inputSources.get(fileSource), "No file source with id: %s", fileSource);
+									Preconditions.checkNotNull(text, MSG_EXPECT_PROP_FOR_OCCURRENCE, TEXT);
+									builder.addOccurrence(begin, end, termIndex.getDocument(inputSources.get(fileSource)), text);
+								} 
+							// end occurrences
+							} else if (CONTEXT.equals(fieldname)) {
+								int totalCooccs = 0;
+								while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
+									fieldname = jp.getCurrentName();
+									if (TOTAL_COOCCURRENCES.equals(fieldname)) 
+										/*
+										 * value never used since the total will 
+										 * be reincremented in the contextVector
+										 */
+										totalCooccs = jp.nextIntValue(-1);
+									else if (CO_OCCURRENCES.equals(fieldname)) {
+										jp.nextToken();
+										while ((tok = jp.nextToken()) != JsonToken.END_ARRAY) {
+											TempVecEntry entry = new TempVecEntry();
+											while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
+												fieldname = jp.getCurrentName();
+												if (NB_COCCS.equals(fieldname)) 
+													entry.setNbCooccs(jp.nextIntValue(-1));
+												else if (ASSOC_RATE.equals(fieldname)) {
+													jp.nextToken();
+													entry.setAssocRate(jp.getFloatValue());
+												} else if (CO_TERM.equals(fieldname)) 
+													entry.setTermGroupingKey(jp.nextTextValue());
+												else if (FILE.equals(fieldname)) {
+													fileSource = jp.nextIntValue(-1);
+												}
+											}
+											currentContextVector.add(entry);
+										}
 									}
 								}
 							}
@@ -471,8 +482,12 @@ public class JSONTermIndexIO {
 			
 			jg.writeFieldName(FREQUENCY);
 			jg.writeNumber(t.getFrequency());
-			jg.writeFieldName(SPECIFICITY);
+			jg.writeFieldName(WR_FIELD);
 			jg.writeNumber(t.getWR());
+			jg.writeFieldName(WR_LOG_FIELD);
+			jg.writeNumber(t.getWRLog());
+			jg.writeFieldName(WR_LOG_ZSCORE_FIELD);
+			jg.writeNumber(t.getWRLogZScore());
 			jg.writeFieldName(SPOTTING_RULE);
 			jg.writeString(t.getSpottingRule());
 			
