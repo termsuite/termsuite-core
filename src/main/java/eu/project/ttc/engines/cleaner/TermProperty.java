@@ -39,18 +39,18 @@ import eu.project.ttc.models.Term;
  *
  */
 public enum TermProperty {
-	DOCUMENT_FREQUENCY("documentFrequency"),
-	WR("wr"),
-	WR_LOG("wrLog"),
-	WR_LOG_Z_SCORE("wrLogZScore"),
-	FREQUENCY("frequency"),
-	PILOT("pilot"),
-	LEMMA("lemma"),
-	GROUPING_KEY("groupingKey"),
-	PATTERN("pattern"),
-	SPOTTING_RULE("spottingRule"),
-	TERM_CLASS_HEAD("termClassHead"),
-	TERM_CLASS_FREQUENCY("termClassFrequency")
+	DOCUMENT_FREQUENCY("documentFrequency", "dfreq"),
+	WR("wr", "wr"),
+	WR_LOG("wrLog", "wrlog"),
+	WR_LOG_Z_SCORE("wrLogZScore", "zscore"),
+	FREQUENCY("frequency", "f"),
+	PILOT("pilot", "pilot"),
+	LEMMA("lemma", "lemma"),
+	GROUPING_KEY("groupingKey", "gkey"),
+	PATTERN("pattern", "p"),
+	SPOTTING_RULE("spottingRule", "rule"),
+	TERM_CLASS_HEAD("termClassHead", "cls"),
+	TERM_CLASS_FREQUENCY("termClassFrequency", "clsfreq")
 	;
 	
 	private static Map<String, TermProperty> byNames = Maps.newHashMap();
@@ -66,8 +66,11 @@ public enum TermProperty {
 	}
 	
 	private String propertyName;
-	private TermProperty(String propertyName) {
+	private String propertyShortName;
+
+	private TermProperty(String propertyName, String propertyShortName) {
 		this.propertyName = propertyName;
+		this.propertyShortName = propertyShortName;
 	}
 	
 	public String getPropertyName() {
@@ -147,5 +150,9 @@ public enum TermProperty {
 						Joiner.on(',').join(TermProperty.values())
 				)
 		);
+	}
+
+	public String getShortName() {
+		return propertyShortName;
 	}
 }
