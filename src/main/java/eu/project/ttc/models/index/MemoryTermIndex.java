@@ -78,6 +78,20 @@ public class MemoryTermIndex implements TermIndex {
 	private Set<TermClass> termClasses = Sets.newHashSet();
 
 	private Multimap<String, Term> singleWordTermsByLemma = HashMultimap.create();
+	
+	public void inspect() {
+		System.out.format("singleWordTermsByLemma: %d\n", singleWordTermsByLemma.size());
+		System.out.format("termsById: %d\n", termsById.size());
+		System.out.format("termsByGroupingKey: %d\n", termsByGroupingKey.size());
+		System.out.format("wordIndex: %d\n", wordIndex.size());
+		System.out.format("documents: %d\n", documents.size());
+		System.out.format("termClasses: %d\n", termClasses.size());
+		System.out.format("customIndexes: %d\n", customIndexes.size());
+		for(Document d:documents.values()) {
+			d.inspect("\t");
+		}
+			
+	}
 
 	private String name;
 	private Lang lang;
@@ -348,6 +362,10 @@ public class MemoryTermIndex implements TermIndex {
 
 		for(Term v:t.getGraphicalVariants()) 
 			v.removeGraphicalVariant(t);
+		
+		if(t.isSingleWord()) {
+			singleWordTermsByLemma.remove(t.getLemma(), t);
+		}
 		
 		/*
 		 * Removes from context vectors.
