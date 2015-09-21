@@ -21,11 +21,17 @@
  *******************************************************************************/
 package eu.project.ttc.engines;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Writer;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.lang.mutable.MutableInt;
+import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.FSIterator;
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
@@ -33,10 +39,13 @@ import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.fit.descriptor.ExternalResource;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
+import org.apache.uima.resource.ResourceInitializationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Functions;
+import com.google.common.base.Preconditions;
+import com.google.common.base.Stopwatch;
 import com.google.common.collect.ImmutableSortedMap;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Ordering;
@@ -45,6 +54,8 @@ import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermOccurrence;
 import eu.project.ttc.resources.TermIndexResource;
+import eu.project.ttc.types.WordAnnotation;
+import eu.project.ttc.utils.JCasUtils;
 import fr.univnantes.lina.UIMAProfiler;
 
 /**
@@ -59,16 +70,49 @@ public class CasStatCounter extends JCasAnnotator_ImplBase {
 	private Map<String, MutableInt> counters = Maps.newHashMap();
 	
 	public static final String STAT_NAME = "StatName";
-	@ConfigurationParameter(name=STAT_NAME, mandatory=true)
+	@ConfigurationParameter(name=STAT_NAME, mandatory=false)
 	private String statName;
 
+	public static final String DOCUMENT_PERIOD = "DocumentPeriod";
+	@ConfigurationParameter(name=DOCUMENT_PERIOD, mandatory=false, defaultValue = "-1")
+	private int docPeriod;
+	private boolean periodicStatEnabled = false;
+	private int docIt;
+	private long cumulatedFileSize;
+	
+	public static final String TO_TRACE_FILE = "ToTraceFile";
+	@ConfigurationParameter(name=TO_TRACE_FILE, mandatory=false)
+	private String traceFileName;
+	private Writer fileWriter;
+
+	private static final String TSV_LINE_FORMAT="%d\t%d\t%d\t%d\t%d\n";
+	
 	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
 	private TermIndexResource termIndexResource;
 
+	private Stopwatch sw;
+	@Override
+	public void initialize(UimaContext context) throws ResourceInitializationException {
+		super.initialize(context);
+		this.sw = Stopwatch.createStarted();
+		if(traceFileName != null) {
+			File file = new File(traceFileName);
+			try {
+				this.fileWriter = new FileWriter(file);
+			} catch (IOException e) {
+				LOGGER.error("Could not create a writer to file {}", traceFileName);
+				throw new ResourceInitializationException(e);
+			}
+			this.periodicStatEnabled = docPeriod > 0;
+			LOGGER.info("Tracing time performance to file {}", file.getAbsolutePath());
+		}
+	}
 	
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
 		UIMAProfiler.getProfiler("AnalysisEngine").start(this, "process");
+		this.docIt++;
+		this.cumulatedFileSize += JCasUtils.getSourceDocumentAnnotation(aJCas).get().getDocumentSize();
 		FSIterator<Annotation> it =  aJCas.getAnnotationIndex().iterator();
 		Annotation a;
 		MutableInt i;
@@ -80,12 +124,41 @@ public class CasStatCounter extends JCasAnnotator_ImplBase {
 			else
 				i.increment();
 		}
+		if(periodicStatEnabled && this.docIt % this.docPeriod == 0)
+			try {
+				traceToFile();
+			} catch (IOException e) {
+				throw new AnalysisEngineProcessException(e);
+			}
 		UIMAProfiler.getProfiler("AnalysisEngine").stop(this, "process");
 	}
 	
+	private void traceToFile() throws IOException {
+		String line = String.format(TSV_LINE_FORMAT,
+			this.sw.elapsed(TimeUnit.MILLISECONDS),
+			this.docIt,
+			this.cumulatedFileSize,
+			this.termIndexResource.getTermIndex().getTerms().size(),
+			this.counters.get(WordAnnotation.class.getSimpleName()).intValue()
+		);
+		LOGGER.debug(line);
+		this.fileWriter.write(line);
+		this.fileWriter.flush();
+	}
+
+	@Override
+	protected void finalize() throws Throwable {
+		this.fileWriter.close();
+		super.finalize();
+	}
 	@Override
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
+		if(statName != null)
+			logStats();
+	}
+
+	private void logStats() {
 		Ordering<String> a = Ordering.natural().reverse().onResultOf(Functions.forMap(counters)).compound(Ordering.natural());
 		Map<String, MutableInt> map = ImmutableSortedMap.copyOf(counters, a);
 		

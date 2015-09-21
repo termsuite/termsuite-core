@@ -174,6 +174,7 @@ public abstract class AbstractTermSuiteCollectionReader extends CollectionReader
 			String text = getDocumentText(file.getAbsolutePath(), this.mEncoding);
 			cas.setDocumentLanguage(mLanguage.getCode());
 			cas.setDocumentText(preparator.prepare(text));
+			sdi.setDocumentSize((int)file.length());
 			sdi.setBegin(0);
 			sdi.setEnd(text.length());
 			sdi.setOffsetInSource(0);

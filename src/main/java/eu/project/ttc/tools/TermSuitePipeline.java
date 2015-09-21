@@ -1392,6 +1392,39 @@ public class TermSuitePipeline {
 			throw new TermSuitePipelineException(e);
 		}
 	}
+	
+	/**
+	 * 
+	 * Exports time progress to TSV file.
+	 * 
+	 * Columns are :
+	 * <ul>
+	 * <li>elapsed time from initialization in milliseconds</li>
+	 * <li>number of docs processed</li>
+	 * <li>cumulated size of data processed</li>
+	 * <li>number of terms in term index</li>
+	 * <li>number of {@link WordAnnotation} processed</li>
+	 * </ul>
+	 * 
+	 * 
+	 * @param toFile
+	 * @return
+	 */
+	public TermSuitePipeline traceTimePerf(String toFile)  {
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					CasStatCounter.class,
+					CasStatCounter.DOCUMENT_PERIOD, 1,
+					CasStatCounter.TO_TRACE_FILE, toFile
+				);
+			ExternalResourceFactory.bindResource(ae, resTermIndex());
+	
+			return aggregateAndReturn(ae);
+		} catch(Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
+	}
+
 
 	/**
 	 * 
