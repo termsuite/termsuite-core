@@ -130,7 +130,7 @@ public class TermUtils {
 			i++;
 			if(i>topN)
 				break;
-			System.out.format("\t%-12s: %.3f\n", e.getCoTerm().getLemma(), e.getNbCooccs());
+			System.out.format("\t%-12s: %d\n", e.getCoTerm().getLemma(), e.getNbCooccs());
 		}
 	}
 	
