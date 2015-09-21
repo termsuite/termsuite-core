@@ -509,7 +509,7 @@ public class JSONTermIndexIO {
 				jg.writeEndArray();
 			}
 			
-			if(withContexts & t.isContextVectorComputed()) {
+			if(withContexts && t.isContextVectorComputed()) {
 				jg.writeFieldName(CONTEXT);
 				jg.writeStartObject();
 				
