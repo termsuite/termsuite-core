@@ -227,4 +227,8 @@ public class Document {
 	public String toString() {
 		return String.format("%s", url);
 	}
+
+	public void inspect(String string) {
+		System.out.format("%s%s\t_occurrences: %s\n", string, url,  _occurrences.size());
+	}
 }

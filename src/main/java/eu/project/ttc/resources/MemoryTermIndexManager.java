@@ -23,11 +23,13 @@ package eu.project.ttc.resources;
 
 import java.util.Map;
 
+import org.apache.uima.jcas.JCas;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Objects;
 import com.google.common.base.Preconditions;
+import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
 
 import eu.project.ttc.models.TermIndex;
@@ -71,5 +73,9 @@ public class MemoryTermIndexManager {
 
 	public boolean containsTermIndex(String indexName) {
 		return this.indexes.containsKey(indexName);
+	}
+
+	public Map<String, TermIndex> getTermIndexes() {
+		return ImmutableMap.copyOf(indexes);
 	}
 }
