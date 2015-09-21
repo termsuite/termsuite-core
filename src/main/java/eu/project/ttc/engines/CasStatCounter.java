@@ -43,6 +43,7 @@ import com.google.common.collect.Ordering;
 
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.TermOccurrence;
 import eu.project.ttc.resources.TermIndexResource;
 import fr.univnantes.lina.UIMAProfiler;
 
@@ -96,18 +97,23 @@ public class CasStatCounter extends JCasAnnotator_ImplBase {
 		int nbSyntacticVariants = 0;
 		int nbGraphicalVariants = 0;
 		int nbOccurrences = 0;
+		int nbPrimaryOccOccurrences = 0;
 		TermIndex tIndex = termIndexResource.getTermIndex();
 		for(Term t:tIndex.getTerms()) {
 			nbSyntacticVariants+=t.getSyntacticVariants().size();
 			nbGraphicalVariants+=t.getGraphicalVariants().size();
 			nbOccurrences+=t.getOccurrences().size();
+			for(TermOccurrence o:t.getOccurrences()) {
+				if(o.isPrimaryOccurrence())
+					nbPrimaryOccOccurrences++;
+			}
 		}
 		// graphical variants are bidirectional
 		nbGraphicalVariants/=2;
 		
 		LOGGER.info("[{}] Nb terms:    {} [sw: {}, mw: {}]", statName, tIndex.getTerms().size(), tIndex.singleWordTermCount(),tIndex.multiWordTermCount());
 		LOGGER.info("[{}] Nb words:    {} [compounds: {}]", statName, tIndex.getWords().size(), tIndex.compoundWordCount());
-		LOGGER.info("[{}] Nb occurrences: {}", statName, nbOccurrences);
+		LOGGER.info("[{}] Nb occurrences: {} [primary: {}]", statName, nbOccurrences, nbPrimaryOccOccurrences);
 		LOGGER.info("[{}] Nb variants: {} [syn: {}, graph: {}]", statName, nbSyntacticVariants + nbGraphicalVariants, nbSyntacticVariants, nbGraphicalVariants);
 	}
 }
