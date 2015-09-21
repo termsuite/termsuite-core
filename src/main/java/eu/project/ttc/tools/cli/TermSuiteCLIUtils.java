@@ -46,7 +46,6 @@ import com.google.common.base.Preconditions;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.ImmutableList;
 
-import eu.project.ttc.tools.commons.TermSuiteVersion;
 
 /**
  * This class consists of static methods used by the CLI.
@@ -56,9 +55,6 @@ import eu.project.ttc.tools.commons.TermSuiteVersion;
 public final class TermSuiteCLIUtils {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermSuiteCLIUtils.class);
 	
-
-//	/** Preferences directory for the current user */
-	public static final String USER_HOME = TermSuiteVersion.CFG_ROOT + File.separator;
 
 	/** Path to the aligner engine */
 	private static final String ALIGNER_ENGINE = "eu/project/ttc/all/engines/aligner/Aligner.xml";
@@ -127,29 +123,6 @@ public final class TermSuiteCLIUtils {
 		}
 	}
 
-	/**
-	 * Reads a list of {@link Properties} from the specified
-	 * <code>fileName</code> in the user preferences folder.
-	 * 
-	 * @param fileName
-	 *            The name of the file to read
-	 * @return The properties read, or <code>null</code> if the file cannot be
-	 *         read.
-	 */
-	public static Properties readFromUserHome(String fileName) {
-		File preFile = new File(USER_HOME, fileName);
-		FileInputStream input = null;
-		try {
-			input = new FileInputStream(preFile);
-			Properties props = new Properties();
-			props.load(input);
-			return props;
-		} catch (IOException e) {
-			return null;
-		} finally {
-			closeQuietly(input);
-		}
-	}
 	
 	/**
 	 * Reads a list of {@link Properties} from the specified
@@ -175,26 +148,6 @@ public final class TermSuiteCLIUtils {
 		}
 	}
 
-	/**
-	 * Saves the specified <code>properties</code> to the user preferences
-	 * folder.
-	 * 
-	 * @param fileName
-	 *            The output file name
-	 * @param properties
-	 *            The properties
-	 * @throws IOException
-	 */
-	public static void saveToUserHome(String fileName, Properties properties)
-			throws IOException {
-		FileOutputStream out = null;
-		try {
-			out = new FileOutputStream(new File(USER_HOME, fileName));
-			properties.store(out, null);
-		} finally {
-			closeQuietly(out);
-		}
-	}
 
 	/**
 	 * Creates a mandatory {@link Option} using the specified arguments.
@@ -333,7 +286,6 @@ public final class TermSuiteCLIUtils {
 		System.err.println(e.getMessage());
 		// automatically generate the help statement
 		HelpFormatter formatter = new HelpFormatter();
-		formatter.setOptionComparator(new ShortOptionsFirstComparator());
 		PrintWriter pw = new PrintWriter(System.err);
 		formatter.printUsage(pw, cmdLine.length() + 7, cmdLine, options);
 		pw.flush();

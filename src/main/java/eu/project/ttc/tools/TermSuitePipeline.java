@@ -61,6 +61,7 @@ import eu.project.ttc.engines.TermIndexBlacklistWordFilterAE;
 import eu.project.ttc.engines.TermSpecificityComputer;
 import eu.project.ttc.engines.TreeTaggerLemmaFixer;
 import eu.project.ttc.engines.cleaner.AbstractTermIndexCleaner;
+import eu.project.ttc.engines.cleaner.FilterRules;
 import eu.project.ttc.engines.cleaner.TermIndexThresholdCleaner;
 import eu.project.ttc.engines.cleaner.TermIndexTopNCleaner;
 import eu.project.ttc.engines.cleaner.TermProperty;
@@ -98,8 +99,6 @@ import eu.project.ttc.resources.ReferenceTermList;
 import eu.project.ttc.resources.SimpleWordSet;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.resources.YamlVariantRules;
-import eu.project.ttc.tools.indexer.IndexerBinding;
-import eu.project.ttc.tools.indexer.IndexerBinding.FilterRules;
 import eu.project.ttc.types.WordAnnotation;
 import eu.project.ttc.utils.OccurrenceBuffer;
 import eu.project.ttc.utils.TermSuiteUtils;
@@ -155,7 +154,7 @@ public class TermSuitePipeline {
 	private int compostMinComponentSize = 3;
 	private int compostMaxComponentNum = 3;
 	private Object compostSegmentSimilarityThreshold = 0.7f;
-	private String exportFilteringRule = IndexerBinding.FilterRules.SpecificityThreshold.name();
+	private String exportFilteringRule = FilterRules.SpecificityThreshold.name();
 	private float exportFilteringThreshold = 0;
 	
 	private Optional<? extends TermIndex> termIndex = Optional.absent();
@@ -574,7 +573,7 @@ public class TermSuitePipeline {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					VariantEvalExporter.class, 
-					VariantEvalExporter.FILTERING_RULE, FilterRules.SpecificityThreshold,
+					VariantEvalExporter.FILTERING_RULE, eu.project.ttc.engines.cleaner.FilterRules.SpecificityThreshold,
 					VariantEvalExporter.FILTERING_THRESHOLD, 1.0f,
 					VariantEvalExporter.TO_FILE_PATH, toFilePath,
 					VariantEvalExporter.TOP_N, topN,

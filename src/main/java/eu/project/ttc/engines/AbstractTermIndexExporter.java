@@ -41,10 +41,10 @@ import org.slf4j.LoggerFactory;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Sets;
 
+import eu.project.ttc.engines.cleaner.FilterRules;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.resources.TermIndexResource;
-import eu.project.ttc.tools.indexer.IndexerBinding;
 import eu.project.ttc.tools.utils.TermPredicate;
 import eu.project.ttc.tools.utils.TermPredicates;
 import fr.univnantes.lina.UIMAProfiler;
@@ -148,7 +148,7 @@ public abstract class AbstractTermIndexExporter extends JCasAnnotator_ImplBase {
 	private void initFilteringAndSorting() {
 
         // Add the filtering rule
-        IndexerBinding.FilterRules rule = IndexerBinding.FilterRules.valueOf(filterRule);
+        FilterRules rule = FilterRules.valueOf(filterRule);
 		switch (rule) {
         case None:
             outputComparator = TermPredicates.DESCENDING_SPECIFICITY_ORDER;
