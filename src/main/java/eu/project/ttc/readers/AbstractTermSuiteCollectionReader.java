@@ -129,7 +129,9 @@ public abstract class AbstractTermSuiteCollectionReader extends CollectionReader
 				this.totalFileByteSize += files[i].length();
 			}
 		}
-		Collections.sort(this.mFiles, SizeFileComparator.SIZE_REVERSE);
+		Collections.shuffle(this.mFiles);
+//		Collections.sort(this.mFiles, SizeFileComparator.SIZE_REVERSE);
+
 		logger.info("Initializing collection reader on input dir {} (enc: {}, lang: {}, type: {})", 
 				inputDirPath, 
 				this.mEncoding,
