@@ -23,25 +23,17 @@ package eu.project.ttc.engines.desc;
 
 import java.util.Locale;
 
-import eu.project.ttc.engines.spotter.ChineseSpotter;
-import eu.project.ttc.engines.spotter.DanishSpotter;
-import eu.project.ttc.engines.spotter.EnglishSpotter;
-import eu.project.ttc.engines.spotter.FrenchSpotter;
-import eu.project.ttc.engines.spotter.GermanSpotter;
-import eu.project.ttc.engines.spotter.LatvianSpotter;
-import eu.project.ttc.engines.spotter.RussianSpotter;
-import eu.project.ttc.engines.spotter.SpanishSpotter;
 import eu.project.ttc.utils.OccurrenceBuffer;
 
 public enum Lang {
-	FR("french", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, FrenchSpotter.class, 0.5f, 0.1f, 0.1f, 0.3f, 0.7f, 3),
-	EN("english", Locale.ENGLISH, OccurrenceBuffer.NO_CLEANING, EnglishSpotter.class, 0.7f, 0.1f, 0.1f, 0.1f, 0.85f, 3),
-	ES("spanish", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, SpanishSpotter.class, 0.5f, 0.1f, 0.1f, 0.3f, 1f, 3),
-	DE("german", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING, GermanSpotter.class, 0.5f, 0.3f, 0.1f, 0.1f, 0.85f, 4),
-	ZH("chinese", Locale.CHINESE, OccurrenceBuffer.NO_CLEANING, ChineseSpotter.class, 0.5f, 0.1f, 0.1f, 0.3f, 0.7f, 2),
-	LV("latvian", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING, LatvianSpotter.class,0.5f, 0.1f, 0.1f, 0.3f, 0.8f, 3),
-	RU("russian", Locale.JAPAN, OccurrenceBuffer.NO_CLEANING, RussianSpotter.class,0.3f, 0.1f, 0.4f, 0.2f, 0.7f, 3),
-	DA("danish", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING, DanishSpotter.class,0.5f, 0.1f, 0.1f, 0.3f, 0.8f, 3);
+	FR("french", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.1f, 0.1f, 0.3f, 0.7f, 3),
+	EN("english", Locale.ENGLISH, OccurrenceBuffer.NO_CLEANING, 0.7f, 0.1f, 0.1f, 0.1f, 0.85f, 3),
+	ES("spanish", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.1f, 0.1f, 0.3f, 1f, 3),
+	DE("german", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.3f, 0.1f, 0.1f, 0.85f, 4),
+	ZH("chinese", Locale.CHINESE, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.1f, 0.1f, 0.3f, 0.7f, 2),
+	LV("latvian", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5f, 0.1f, 0.1f, 0.3f, 0.8f, 3),
+	RU("russian", Locale.JAPAN, OccurrenceBuffer.NO_CLEANING,0.3f, 0.1f, 0.4f, 0.2f, 0.7f, 3),
+	DA("danish", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5f, 0.1f, 0.1f, 0.3f, 0.8f, 3);
 	
 	private final float compostAlpha;
 	private final float compostBeta;
@@ -52,9 +44,8 @@ public enum Lang {
 	private final Locale locale;
 	private final String longLang;
 	private final String regexPostProcessingStrategy;
-	private final Class<? extends SpotterBuilder> spotterBuilder;
 
-    private Lang(String longLang, Locale locale, String regexPostProcessingStrategy, Class<? extends SpotterBuilder> spotterBuilder,
+    private Lang(String longLang, Locale locale, String regexPostProcessingStrategy, 
     		float compostAlpha,
     		float compostBeta,
     		float compostGamma,
@@ -65,7 +56,6 @@ public enum Lang {
     	this.locale = locale;
         this.longLang = longLang;
         this.regexPostProcessingStrategy = regexPostProcessingStrategy;
-        this.spotterBuilder = spotterBuilder;
         this.compostAlpha = compostAlpha;
         this.compostBeta = compostBeta;
         this.compostGamma = compostGamma;
@@ -116,10 +106,6 @@ public enum Lang {
 		throw new LanguageException(lang);
 	}
 	
-	public Class<? extends SpotterBuilder> getSpotterBuilder() {
-		return spotterBuilder;
-	}
-
 	public Locale getLocale() {
 		return locale;
 	}
