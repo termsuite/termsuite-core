@@ -25,6 +25,8 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
+import eu.project.ttc.utils.TermSuiteConstants;
+
 /**
  * 
  * Parses tei input files into a String where offsets are the same, but all tags replaced 
@@ -39,7 +41,7 @@ public class TeiToTxtSaxHandler extends DefaultHandler {
 			"float-anchor", "hsp" };
 
 	/* tags that be read */
-	private static final String[] TXT_TAGS = new String[] { "title",
+	private static final String[] TXT_TAGS = new String[] { "p", "title",
 			"section-title", "section-para", "simple-para", "note-para",
 			"para", "textref" };
 	
@@ -76,10 +78,12 @@ public class TeiToTxtSaxHandler extends DefaultHandler {
 			throws SAXException {
 		checkCharacters(ch);
 		if (inText() && !inDroppedTag()) {
-			for(;i<start;i++)
-				sb.append(ch[i] == NEW_LINE ? NEW_LINE : WHITESPACE);
-			for(;i<start+length;i++) 
-				sb.append(ch[i]);
+			sb.append(new String(ch, start, length).trim());
+			sb.append(TermSuiteConstants.LINE_BREAK);
+//			for(;i<start;i++)
+//				sb.append(ch[i] == NEW_LINE ? NEW_LINE : WHITESPACE);
+//			for(;i<start+length;i++) 
+//				sb.append(ch[i]);
 		}
 	}
 
