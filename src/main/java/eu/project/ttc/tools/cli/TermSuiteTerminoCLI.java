@@ -241,28 +241,25 @@ public class TermSuiteTerminoCLI {
 				pipeline.setResourcePath(resourcePack);
 				
 				// tokenizer
-				pipeline.wordTokenizer();
+				pipeline.aeWordTokenizer();
 				
 				// tagger
 				if(tagger == Tagger.TreeTagger) 
 					pipeline.setTreeTaggerHome(taggerHome)
-						.treeTagger()
-						.treeTaggerLemmaFixer()
-						.ttNormalizer();
+						.aeTreeTagger();
 				else if(tagger == Tagger.Mate) 
 					pipeline.setMateModelPath(taggerHome)
-						.mateTaggerLemmatizer()
-						.mateNormalizer();
+						.aeMateTaggerLemmatizer();
 				
 				
 				// stemmer
-				pipeline.stemmer();
+				pipeline.aeStemmer();
 				
 				// regex spotter
-				pipeline.regexSpotter();
+				pipeline.aeRegexSpotter();
 				
 				// specificity computer
-				pipeline.specificityComputer();
+				pipeline.aeSpecificityComputer();
 				
 				
 				// compost (morphology)
@@ -276,32 +273,32 @@ public class TermSuiteTerminoCLI {
 					pipeline.setCompostScoreThreshold(compostScoreThreshold.get());
 				if(compostSimilarityThreshold.isPresent()) 
 					pipeline.setCompostSegmentSimilarityThreshold(compostSimilarityThreshold.get());
-				pipeline.compostSplitter();
+				pipeline.aeCompostSplitter();
 				
 				// syntactic variant gathering
-				pipeline.syntacticVariantGatherer();
+				pipeline.aeSyntacticVariantGatherer();
 
 				// graphical variant gathering
 				pipeline.setGraphicalVariantSimilarityThreshold(graphicalSimilarityThreshold);
-				pipeline.graphicalVariantGatherer();
+				pipeline.aeGraphicalVariantGatherer();
 				
 				// stats
-				pipeline.casStatCounter("at end of pipeline");
+				pipeline.haeCasStatCounter("at end of pipeline");
 
 				// cleaning
 				if(cleaningThreshold.isPresent()) 
-					pipeline.thresholdCleaner(cleaningProperty.get(), cleaningThreshold.get());
+					pipeline.aeThresholdCleaner(cleaningProperty.get(), cleaningThreshold.get());
 				else if(cleaningTopN.isPresent()) 
-					pipeline.topNCleaner(cleaningProperty.get(), cleaningTopN.get());
+					pipeline.aeTopNCleaner(cleaningProperty.get(), cleaningTopN.get());
 				
 				
 				// Export
 				if(tsvFile.isPresent()) 
-					pipeline.tsvExporter(tsvFile.get());
+					pipeline.haeTsvExporter(tsvFile.get());
 				if(tbxFile.isPresent()) 
-					pipeline.tbxExporter(tbxFile.get());
+					pipeline.haeTbxExporter(tbxFile.get());
 				if(jsonFile.isPresent()) 
-					pipeline.jsonExporter(jsonFile.get());
+					pipeline.haeJsonExporter(jsonFile.get());
 
 				// run the pipeline
 				final String termIndexName = "ScriptTermIndex_" + System.currentTimeMillis();

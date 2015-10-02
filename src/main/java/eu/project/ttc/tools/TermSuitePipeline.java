@@ -350,7 +350,7 @@ public class TermSuitePipeline {
 	}
 	
 
-	public TermSuitePipeline wordTokenizer() {
+	public TermSuitePipeline aeWordTokenizer() {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					Lexer.class, 
@@ -377,7 +377,7 @@ public class TermSuitePipeline {
 		return this;
 	}
 
-	public TermSuitePipeline treeTagger() {
+	public TermSuitePipeline aeTreeTagger() {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					TreeTaggerWrapper.class, 
@@ -393,7 +393,7 @@ public class TermSuitePipeline {
 					TreeTaggerParameter.KEY_TT_PARAMETER, 
 					TreeTaggerParameter.class, 
 					resFactory.getTTParameter().toString());
-			return aggregateAndReturn(ae);
+			return aggregateAndReturn(ae).ttLemmaFixer().ttNormalizer();
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
@@ -406,7 +406,7 @@ public class TermSuitePipeline {
 		return this;
 	}
 	
-	public TermSuitePipeline mateTaggerLemmatizer()  {
+	public TermSuitePipeline aeMateTaggerLemmatizer()  {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					MateLemmatizerTagger.class
@@ -430,7 +430,9 @@ public class TermSuitePipeline {
 					MateTaggerModel.class, 
 					taggerModel);
 	
-			return aggregateAndReturn(ae);
+			return aggregateAndReturn(ae)
+					.mateLemmaFixer()
+					.mateNormalizer();
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
@@ -439,7 +441,7 @@ public class TermSuitePipeline {
 	/**
 	 * Defines the term properties that appear in tsv export file
 	 * 
-	 * @see #tsvExporter(String)
+	 * @see #haeTsvExporter(String)
 	 * @param properties
 	 * @return
 	 */
@@ -455,7 +457,7 @@ public class TermSuitePipeline {
 	 * @param toFilePath
 	 * @return
 	 */
-	public TermSuitePipeline tsvExporter(String toFilePath) {
+	public TermSuitePipeline haeTsvExporter(String toFilePath) {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					TSVExporter.class, 
@@ -480,7 +482,7 @@ public class TermSuitePipeline {
 	 * 				the file path where to write the examples for each variation rules
 	 * @return the pipeline
 	 */
-	public TermSuitePipeline exportVariationRuleExamples(String toFilePath) {
+	public TermSuitePipeline haeExportVariationRuleExamples(String toFilePath) {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					ExportVariationRuleExamples.class, ExportVariationRuleExamples.TO_FILE_PATH, toFilePath);
@@ -492,7 +494,7 @@ public class TermSuitePipeline {
 		}
 	}
 	
-	public TermSuitePipeline tbxExporter(String toFilePath) {
+	public TermSuitePipeline haeTbxExporter(String toFilePath) {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					TBXExporter.class, 
@@ -509,7 +511,7 @@ public class TermSuitePipeline {
 		}
 	}
 
-	public TermSuitePipeline evalExporter(String toFilePath, boolean withVariants) {
+	public TermSuitePipeline haeEvalExporter(String toFilePath, boolean withVariants) {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					EvalExporter.class, 
@@ -538,7 +540,7 @@ public class TermSuitePipeline {
 	}
 
 	
-	public TermSuitePipeline jsonExporter(String toFilePath)  {
+	public TermSuitePipeline haeJsonExporter(String toFilePath)  {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					JsonExporter.class, 
@@ -569,7 +571,7 @@ public class TermSuitePipeline {
 	 * 			The maximum number of variants to eval for each term
 	 * @return
 	 */
-	public TermSuitePipeline variantEvalExporter(String toFilePath, int topN, int maxVariantsPerTerm)  {
+	public TermSuitePipeline haeVariantEvalExporter(String toFilePath, int topN, int maxVariantsPerTerm)  {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					VariantEvalExporter.class, 
@@ -660,11 +662,11 @@ public class TermSuitePipeline {
 				resFactory.getGenderMapping(tagger).toString());
 	}
 
-	public TermSuitePipeline mateNormalizer()  {
+	private TermSuitePipeline mateNormalizer()  {
 		return normalizer("mate");
 	}
 
-	public TermSuitePipeline ttNormalizer()  {
+	private TermSuitePipeline ttNormalizer()  {
 		return normalizer("tt");
 	}
 
@@ -678,7 +680,7 @@ public class TermSuitePipeline {
 		return caseNormalizer(tagger);
 	}
 	
-	public TermSuitePipeline stemmer()  {
+	public TermSuitePipeline aeStemmer()  {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					Stemmer.class,
@@ -694,7 +696,7 @@ public class TermSuitePipeline {
 	}
 	
 
-	public TermSuitePipeline treeTaggerLemmaFixer()  {
+	private TermSuitePipeline ttLemmaFixer()  {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					TreeTaggerLemmaFixer.class,
@@ -707,7 +709,7 @@ public class TermSuitePipeline {
 		}
 	}
 	
-	public TermSuitePipeline mateLemmaFixer()  {
+	private TermSuitePipeline mateLemmaFixer()  {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					MateLemmaFixer.class,
@@ -720,13 +722,14 @@ public class TermSuitePipeline {
 		}
 	}
 
+		
 	/**
 	 * The single-word and multi-word term spotter AE
 	 * base on UIMA Tokens Regex.
 	 * 
 	 * @return
 	 */
-	public TermSuitePipeline regexSpotter()  {
+	public TermSuitePipeline aeRegexSpotter()  {
 		try {
 			Serializable postProcStrategy = this.postProcessingStrategy.isPresent() ? this.postProcessingStrategy.get() : lang.getRegexPostProcessingStrategy();
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
@@ -783,10 +786,10 @@ public class TermSuitePipeline {
 	 * compound dictionary resource
 	 * 
 	 * @deprecated 
-	 * 		Use {@link #compostSplitter()} instead
+	 * 		Use {@link #aeCompostSplitter()} instead
 	 * @return
 	 */
-	public TermSuitePipeline compoundSplitter()  {
+	public TermSuitePipeline aeCompoundSplitter()  {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					CompoundSplitter.class
@@ -811,11 +814,11 @@ public class TermSuitePipeline {
 	 * neo-classical dictionary resource
 	 * 
 	 * @deprecated 
-	 * 		Use {@link #compostSplitter()} instead
+	 * 		Use {@link #aeCompostSplitter()} instead
 	 * @return
 	 */
-	public TermSuitePipeline neoClassicalSplitter()  {
-		return affixCompoundSplitter(true, resFactory.getRootBank().toString());
+	public TermSuitePipeline aeNeoClassicalSplitter()  {
+		return aeAffixCompoundSplitter(true, resFactory.getRootBank().toString());
 	}
 	
 	/**
@@ -823,14 +826,14 @@ public class TermSuitePipeline {
 	 * prefix dictionary resource
 	 * 
 	 * @deprecated 
-	 * 		Use {@link #compostSplitter()} instead
+	 * 		Use {@link #aeCompostSplitter()} instead
 	 * @return
 	 */
-	public TermSuitePipeline prefixSplitter()  {
-		return affixCompoundSplitter(false, resFactory.getPrefixBank().toString());
+	public TermSuitePipeline aePrefixSplitter()  {
+		return aeAffixCompoundSplitter(false, resFactory.getPrefixBank().toString());
 	}
 
-	private TermSuitePipeline affixCompoundSplitter(boolean neoClassical,
+	private TermSuitePipeline aeAffixCompoundSplitter(boolean neoClassical,
 			String bankResource)  {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
@@ -859,7 +862,7 @@ public class TermSuitePipeline {
 	 * @see TermIndexBlacklistWordFilterAE
 	 * @return
 	 */
-	public TermSuitePipeline stopWordsFilter()  {
+	public TermSuitePipeline aeStopWordsFilter()  {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					TermIndexBlacklistWordFilterAE.class
@@ -890,7 +893,7 @@ public class TermSuitePipeline {
 	 * @param toDirectoryPath
 	 * @return
 	 */
-	public TermSuitePipeline xmiCasExporter(String toDirectoryPath)  {
+	public TermSuitePipeline haeXmiCasExporter(String toDirectoryPath)  {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					XmiCasExporter.class,
@@ -912,7 +915,7 @@ public class TermSuitePipeline {
 	 * @param toDirectoryPath
 	 * @return
 	 */
-	public TermSuitePipeline spotterTSVWriter(String toDirectoryPath)  {
+	public TermSuitePipeline haeSpotterTSVWriter(String toDirectoryPath)  {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					SpotterTSVWriter.class,
@@ -924,27 +927,6 @@ public class TermSuitePipeline {
 		}
 	}
 
-	
-	/**
-	 * Fill the <code>stem</code> property of all {@link WordAnnotation} 
-	 * with the snowball stem.
-	 * 
-	 * @see Stemmer
-	 * @return
-	 */
-	public TermSuitePipeline snowballStemmer()  {
-		try {
-			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					Stemmer.class
-				);
-			
-			
-			return aggregateAndReturn(ae);
-		} catch(Exception e) {
-			throw new TermSuitePipelineException(e);
-		}
-	}
-	
 
 	/**
 	 * Tokenizer for chinese collections.
@@ -952,7 +934,7 @@ public class TermSuitePipeline {
 	 * 
 	 * @return
 	 */
-	public TermSuitePipeline chineseTokenizer()  {
+	public TermSuitePipeline aeChineseTokenizer()  {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					ChineseSegmenter.class,
@@ -1064,7 +1046,7 @@ public class TermSuitePipeline {
 	 * @see TermProperty
 	 * @return
 	 */
-	public TermSuitePipeline specificityComputer()  {
+	public TermSuitePipeline aeSpecificityComputer()  {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					TermSpecificityComputer.class
@@ -1105,7 +1087,7 @@ public class TermSuitePipeline {
 	 * @param allTerms
 	 * @return
 	 */
-	public TermSuitePipeline contextualizer(int scope, boolean allTerms) {
+	public TermSuitePipeline aeContextualizer(int scope, boolean allTerms) {
 		AnalysisEngineDescription ae;
 		try {
 			ae = AnalysisEngineFactory.createEngineDescription(
@@ -1126,7 +1108,7 @@ public class TermSuitePipeline {
 	}
 	
 	
-	public TermSuitePipeline thresholdCleaner(TermProperty property, float threshold, boolean keepVariants, boolean isPeriodic, int cleaningPeriod, int termIndexSizeTrigger) {
+	public TermSuitePipeline aeThresholdCleaner(TermProperty property, float threshold, boolean keepVariants, boolean isPeriodic, int cleaningPeriod, int termIndexSizeTrigger) {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 				TermIndexThresholdCleaner.class,
@@ -1144,7 +1126,7 @@ public class TermSuitePipeline {
 		}
 	}
 	
-	public TermSuitePipeline primaryOccurrenceDetector(int detectionStrategy) {
+	public TermSuitePipeline aePrimaryOccurrenceDetector(int detectionStrategy) {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					PrimaryOccurrenceDetector.class,
@@ -1177,21 +1159,21 @@ public class TermSuitePipeline {
 	 * @param cleaningPeriod
 	 * @return
 	 */
-	public TermSuitePipeline thresholdCleanerPeriodic(TermProperty property, float threshold, int cleaningPeriod)   {
-		return thresholdCleaner(property, threshold, false, true, cleaningPeriod, 0);
+	public TermSuitePipeline aeThresholdCleanerPeriodic(TermProperty property, float threshold, int cleaningPeriod)   {
+		return aeThresholdCleaner(property, threshold, false, true, cleaningPeriod, 0);
 	}
 
-	public TermSuitePipeline thresholdCleanerSizeTrigger(TermProperty property, float threshold, int termIndexSizeTrigger)   {
-		return thresholdCleaner(property, threshold, false, false, 0, termIndexSizeTrigger);
+	public TermSuitePipeline aeThresholdCleanerSizeTrigger(TermProperty property, float threshold, int termIndexSizeTrigger)   {
+		return aeThresholdCleaner(property, threshold, false, false, 0, termIndexSizeTrigger);
 	}
 
 	
-	public TermSuitePipeline thresholdCleaner(TermProperty property, float threshold) {
-		return thresholdCleaner(property, threshold, false, false, 0, 0);
+	public TermSuitePipeline aeThresholdCleaner(TermProperty property, float threshold) {
+		return aeThresholdCleaner(property, threshold, false, false, 0, 0);
 	}
 
-	public TermSuitePipeline topNCleaner(TermProperty property, int n)  {
-		return topNCleanerPeriodic(property, n, false, 0);
+	public TermSuitePipeline aeTopNCleaner(TermProperty property, int n)  {
+		return aeTopNCleanerPeriodic(property, n, false, 0);
 	}
 	
 	/**
@@ -1202,7 +1184,7 @@ public class TermSuitePipeline {
 	 * @param cleaningPeriod
 	 * @return
 	 */
-	public TermSuitePipeline topNCleanerPeriodic(TermProperty property, int n, boolean isPeriodic, int cleaningPeriod)  {
+	public TermSuitePipeline aeTopNCleanerPeriodic(TermProperty property, int n, boolean isPeriodic, int cleaningPeriod)  {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					TermIndexTopNCleaner.class,
@@ -1222,7 +1204,7 @@ public class TermSuitePipeline {
 		return this;
 	}
 	
-	public TermSuitePipeline graphicalVariantGatherer()   {
+	public TermSuitePipeline aeGraphicalVariantGatherer()   {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					GraphicalVariantGatherer.class,
@@ -1241,7 +1223,7 @@ public class TermSuitePipeline {
 	 * 
 	 * @return
 	 */
-	public TermSuitePipeline urlFilter()   {
+	public TermSuitePipeline aeUrlFilter()   {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					StringRegexFilter.class
@@ -1257,7 +1239,7 @@ public class TermSuitePipeline {
 	 * 
 	 * @return
 	 */
-	public TermSuitePipeline syntacticVariantGatherer()   {
+	public TermSuitePipeline aeSyntacticVariantGatherer()   {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					SyntacticTermGatherer.class
@@ -1289,7 +1271,7 @@ public class TermSuitePipeline {
 		this.syntacticRegexesFilePath = Optional.of(syntacticRegexesFilePath);
 		return this;
 	}
-	public TermSuitePipeline logOverlappingRules() {
+	public TermSuitePipeline haeLogOverlappingRules() {
 		this.logOverlappingRules = Optional.of(true);
 		return this;
 	}
@@ -1333,7 +1315,7 @@ public class TermSuitePipeline {
 		return this;
 	}
 	
-	public TermSuitePipeline compostSplitter()  {
+	public TermSuitePipeline aeCompostSplitter()  {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					CompostAE.class,
@@ -1379,7 +1361,7 @@ public class TermSuitePipeline {
 		}
 	}
 
-	public TermSuitePipeline casStatCounter(String statName)  {
+	public TermSuitePipeline haeCasStatCounter(String statName)  {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					CasStatCounter.class,
@@ -1410,7 +1392,7 @@ public class TermSuitePipeline {
 	 * @param toFile
 	 * @return
 	 */
-	public TermSuitePipeline traceTimePerf(String toFile)  {
+	public TermSuitePipeline haeTraceTimePerf(String toFile)  {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					CasStatCounter.class,
@@ -1435,7 +1417,7 @@ public class TermSuitePipeline {
 	 * 			as the head of the class.
 	 * @return
 	 */
-	public TermSuitePipeline termClassifier(TermProperty sortingProperty)  {
+	public TermSuitePipeline aeTermClassifier(TermProperty sortingProperty)  {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					TermClassifier.class,
@@ -1466,7 +1448,7 @@ public class TermSuitePipeline {
 	 * 			true if variants of the reference termino should be kept during the eval
 	 * @return
 	 */
-	public TermSuitePipeline eval(String refFileURI, String outputFile, String customLogHeader, String rFile, String evalTraceName, boolean rtlWithVariants)  {
+	public TermSuitePipeline haeEval(String refFileURI, String outputFile, String customLogHeader, String rFile, String evalTraceName, boolean rtlWithVariants)  {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 				EvalEngine.class,
@@ -1502,7 +1484,7 @@ public class TermSuitePipeline {
 	/**
 	 * Sets the post processing strategy for {@link RegexSpotter} analysis engine
 	 * 
-	 * @see #regexSpotter()
+	 * @see #aeRegexSpotter()
 	 * @see OccurrenceBuffer#NO_CLEANING
 	 * @see OccurrenceBuffer#KEEP_PREFIXES
 	 * @see OccurrenceBuffer#KEEP_SUFFIXES

@@ -86,26 +86,24 @@ TermSuitePipeline pipeline = TermSuitePipeline.create("en")
       TermSuiteCollection.TXT,
       "/path/to/corpus",
       "UTF-8")
-  .wordTokenizer()
+  .aeWordTokenizer()
   .setTreeTaggerHome("/path/to/treetagger")
-  .treeTagger()
-  .treeTaggerLemmaFixer()
-  .ttNormalizer()
-  .urlFilter()
-  .stemmer()
-  .regexSpotter()
-  .specificityComputer()
-  .compostSplitter() // morphological analysis
-  .syntacticVariantGatherer()
-  .graphicalVariantGatherer()
-  .termClassifier(TermProperty.FREQUENCY)
+  .aeTreeTagger()
+  .aeUrlFilter()
+  .aeStemmer()
+  .aeRegexSpotter()
+  .aeSpecificityComputer()
+  .aeCompostSplitter() // morphological analysis
+  .aeSyntacticVariantGatherer()
+  .aeGraphicalVariantGatherer()
+  .aeTermClassifier(TermProperty.FREQUENCY)
   .setTsvExportProperties(
       TermProperty.PILOT,
       TermProperty.FREQUENCY,
       TermProperty.WR
     )
-  .tsvExporter("terminology.tsv")
-  .jsonExporter("terminology.json")
+  .haeTsvExporter("terminology.tsv")
+  .haeJsonExporter("terminology.json")
   .run();
 
 // Retrieve the terminology (i.e. the term index)
