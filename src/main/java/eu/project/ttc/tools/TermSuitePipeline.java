@@ -68,6 +68,7 @@ import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.engines.desc.TermSuiteCollection;
 import eu.project.ttc.engines.desc.TermSuitePipelineException;
+import eu.project.ttc.engines.exporter.CompoundExporter;
 import eu.project.ttc.engines.exporter.EvalExporter;
 import eu.project.ttc.engines.exporter.ExportVariationRuleExamples;
 import eu.project.ttc.engines.exporter.JsonExporter;
@@ -494,6 +495,27 @@ public class TermSuitePipeline {
 		}
 	}
 	
+	/**
+	 * 
+	 * Exports all compound words of the terminology to given file path.
+	 * 
+	 * @param toFilePath
+	 * @return
+	 */
+	public TermSuitePipeline haeCompoundExporter(String toFilePath) {
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					CompoundExporter.class, 
+					CompoundExporter.TO_FILE_PATH, 
+					toFilePath);
+			ExternalResourceFactory.bindResource(ae, resTermIndex());
+			return aggregateAndReturn(ae);
+		} catch (Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
+	}
+
+		
 	public TermSuitePipeline haeTbxExporter(String toFilePath) {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
