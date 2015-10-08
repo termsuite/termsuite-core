@@ -51,6 +51,7 @@ import com.google.common.collect.Sets;
 
 import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.models.Term;
+import eu.project.ttc.models.VariationPath;
 import eu.project.ttc.resources.EvalTrace;
 import eu.project.ttc.resources.EvalTrace.RecPoint;
 import eu.project.ttc.resources.ReferenceTermList;
@@ -156,9 +157,9 @@ public class EvalEngine  extends JCasAnnotator_ImplBase {
 	private void writeToLogFile() {
 		if(outputLogFile != null) {
 			try {
-				int numVariants = 0;
+				int numVariationPaths = 0;
 				for(Term lcTerm:termIndexResource.getTermIndex().getTerms())
-					numVariants += lcTerm.getVariants(10, rFreqComparator).size();
+					numVariationPaths += lcTerm.getVariationPaths(10).size();
 				PrintStream stream = new PrintStream(outputLogFile);
 				stream.println(HORIZONTAL_RULE);
 				if(!customLogHeaderString.isEmpty())
@@ -168,7 +169,7 @@ public class EvalEngine  extends JCasAnnotator_ImplBase {
 				
 				stream.format("RTL Mode: %s\n", getModeString());
 				stream.format("LC term index: %s\n", termIndexResource.getTermIndex().getName());
-				stream.format("Num. LC terms: %d\tIncl. variants: %d\n", termIndexResource.getTermIndex().getTerms().size(), numVariants);
+				stream.format("Num. LC terms: %d\tIncl. variants: %d\n", termIndexResource.getTermIndex().getTerms().size(), numVariationPaths);
 				
 				for(int i:new int[]{10,100,1000}) {
 					RecPoint p = evalTrace.getAtRank(i);
@@ -336,7 +337,9 @@ public class EvalEngine  extends JCasAnnotator_ImplBase {
 			
 		Set<Term> lc = Sets.newHashSet();
 		lc.add(lcTerm);
-		lc.addAll(lcTerm.getVariants(10, rFreqComparator));
+		for(VariationPath path:lcTerm.getVariationPaths(10))
+			if(!path.isCycle())
+					lc.add(path.getVariant());
 		
 		
 		if(LOGGER.isTraceEnabled()) {

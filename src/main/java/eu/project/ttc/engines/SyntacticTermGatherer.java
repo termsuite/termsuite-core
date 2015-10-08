@@ -39,6 +39,7 @@ import com.google.common.collect.Lists;
 
 import eu.project.ttc.engines.variant.VariantRule;
 import eu.project.ttc.models.Term;
+import eu.project.ttc.models.VariationType;
 import eu.project.ttc.models.index.CustomTermIndex;
 import eu.project.ttc.models.index.IndexStats;
 import eu.project.ttc.models.index.TermClassProviders;
@@ -49,6 +50,8 @@ import fr.univnantes.lina.UIMAProfiler;
 public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(SyntacticTermGatherer.class);
 	
+	private static final String M_PREFIX = "M";
+
 	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
 	private TermIndexResource termIndexResource;
 	
@@ -187,7 +190,10 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 			target = aux;
 		}
 		
-		source.addSyntacticVariant(target, matchingRule.getName());
+		source.addTermVariation(
+				target, 
+				matchingRule.getName().startsWith(M_PREFIX) ? VariationType.MORPHOLOGICAL : VariationType.SYNTACTICAL,
+				matchingRule.getName());
 //		List<Term> pair = Lists.newArrayList(source,target);
 //		Collections.sort(pair, mwTermComparator);
 //		this.stats.put(matchingRule.getName(), pair);

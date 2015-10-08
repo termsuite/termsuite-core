@@ -43,6 +43,7 @@ import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermClass;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.VariationPath;
 import eu.project.ttc.resources.TermIndexResource;
 import fr.univnantes.lina.UIMAProfiler;
 
@@ -103,12 +104,12 @@ public class TermClassifier  extends JCasAnnotator_ImplBase {
 			else {
 				Set<Term> classTerms = Sets.newHashSet();
 				classTerms.add(t);
-				for(Term v:t.getVariants(10, rFreqComparator)) {
-					if(added.contains(v))
+				for(VariationPath path:t.getVariationPaths(10)) {
+					if(added.contains(path.getVariant()))
 						continue;
 					else {
-						added.add(v);
-						classTerms.add(v);
+						added.add(path.getVariant());
+						classTerms.add(path.getVariant());
 					}
 				}
 				termIndex.classifyTerms(t, classTerms);

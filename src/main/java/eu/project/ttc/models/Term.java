@@ -21,10 +21,9 @@
  *******************************************************************************/
 package eu.project.ttc.models;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -38,6 +37,7 @@ import com.google.common.collect.Iterators;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
+import eu.project.ttc.utils.IteratorUtils;
 import eu.project.ttc.utils.TermSuiteConstants;
 import eu.project.ttc.utils.TermSuiteUtils;
 
@@ -47,10 +47,9 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 	private static final String NO_OCCURRENCE = "[No occurrence]";
 	private List<TermOccurrence> occurrences = Lists.newArrayList();
 	private Set<Document> documents = Sets.newHashSet();
-	private Set<SyntacticVariation> syntacticVariants = Sets.newHashSet();
-	private Set<SyntacticVariation> syntacticBases = Sets.newHashSet();
-	private Set<Term> graphicalVariants = Sets.newHashSet();
-	private Set<Term> semanticVariants = Sets.newHashSet();
+
+	private Set<TermVariation> variations = Sets.newHashSet();
+	private Set<TermVariation> bases = Sets.newHashSet();
 	
 	/*
 	 * The identifier and display string of this term
@@ -146,14 +145,6 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 		return wrLogZScore;
 	}
 	
-	public Collection<SyntacticVariation> getSyntacticVariants() {
-		return Collections.unmodifiableCollection(syntacticVariants);
-	}
-
-	public Collection<SyntacticVariation> getSyntacticBases() {
-		return Collections.unmodifiableCollection(syntacticBases);
-	}
-
 	public Set<TermOccurrence> getAllOccurrences() {
 		return getAllOccurrences(1);
 	}
@@ -169,12 +160,8 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 		Set<TermOccurrence> occSet = Sets.newTreeSet();
 		occSet.addAll(occurrences);
 		if(depth > 0) {
-			for(SyntacticVariation t:syntacticVariants)
-				occSet.addAll(t.getTarget().getAllOccurrences(depth-1));
-			for(Term t:semanticVariants)
-				occSet.addAll(t.getAllOccurrences(depth-1));
-			for(Term t:graphicalVariants)
-				occSet.addAll(t.getAllOccurrences(depth-1));
+			for(TermVariation t:variations)
+				occSet.addAll(t.getVariant().getAllOccurrences(depth-1));
 		}
 		return occSet;
 	}
@@ -192,10 +179,6 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 
 	public boolean isEmpty() {
 		return occurrences.isEmpty();
-	}
-
-	public boolean isSyntacticBaseTerm() {
-		return this.syntacticBases.isEmpty();
 	}
 
 	/**
@@ -263,21 +246,6 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 	
 	@Override
 	public String toString() {
-//		ToStringHelper stringHelper = Objects.toStringHelper(this)
-//				.addValue(this.groupingKey)
-//				.add("f", this.occurrences.size())
-//				.add("s", (int)this.specificity)
-//				.add("gra.", graphicalVariants.size())
-//				.add("syn.", syntacticVariants.size())
-//				.add("synBases", syntacticBases.size());
-//		for(TermWord w:termWords) {
-//			List<String> compoundsStr = Lists.newArrayList();
-//			if(w.getWord().isCompound())
-//				compoundsStr.add(w.getWord().getCompoundType().getShortName() + ":" + Joiner.on('|').join(w.getWord().getComponents()));
-//			if(!compoundsStr.isEmpty())
-//				stringHelper.add("compounds", Joiner.on(' ').join(compoundsStr));
-//		}
-//		return stringHelper.toString();
 		return this.groupingKey;
 	}
 	
@@ -289,16 +257,30 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 		return termWords.size() > 1;
 	}
 
-	public void addGraphicalVariant(Term term) {
-		this.graphicalVariants.add(term);
-		term.graphicalVariants.add(this);
+	/**
+	 * Builds a {@link TermVariation} object and add it to {@link #variations} and
+	 * variant{@link #bases}.
+	 * 
+	 * @param variant
+	 * @param type
+	 * @param info
+	 */
+	public void addTermVariation(Term variant, VariationType type, Object info) {
+		TermVariation variation = new TermVariation(type, this, variant, info);
+		this.variations.add(variation);
+		variant.bases.add(variation);
+	}
+	
+	/**
+	 * Removes the param variation from this{@link #variations} and
+	 * from variant's {@link #bases}.
+	 * @param variation
+	 */
+	public void removeTermVariation(TermVariation variation) {
+		this.variations.remove(variation);
+		variation.getVariant().bases.remove(variation);
 	}
 
-	public Collection<Term> getGraphicalVariants() {
-		return Collections.unmodifiableCollection(graphicalVariants);
-	}
-	
-	
 	/**
 	 * Turns the term into a list {@link LemmaStemHolder} where each word of the term 
 	 * is given as itself if not compound, or as a list of its components if compound.
@@ -374,12 +356,6 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 		return this.groovyTerm;
 	}
 	
-	public void addSyntacticVariant(Term target, String variationRule) {
-		SyntacticVariation variation = new SyntacticVariation(this, target, variationRule);
-		this.syntacticVariants.add(variation);
-		target.syntacticBases.add(variation);
-	}
-	
 	public int getId() {
 		return id;
 	}
@@ -390,7 +366,7 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 	}
 	
 	public boolean isVariant() {
-		return !syntacticBases.isEmpty();
+		return !bases.isEmpty();
 	}
 	
 	public Set<String> getForms() {
@@ -401,17 +377,6 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 		return counters.keySet();
 	}
 	
-	public void removeSyntacticVariant(SyntacticVariation sv) {
-		this.syntacticVariants.remove(sv);
-	}
-	
-	public void removeSyntacticBase(SyntacticVariation sv) {
-		this.syntacticBases.remove(sv);
-	}
-	
-	public void removeGraphicalVariant(Term t) {
-		this.graphicalVariants.remove(t);
-	}
 	public String getPilot() {
 		Iterator<String> it = getForms().iterator();
 		if(it.hasNext())
@@ -436,46 +401,30 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 		return builder.toString();
 	}
 	
-	
-	
-	/**
-	 * 
-	 * Get all variants of this term at depth-3 level.
-	 * 
-	 * @param depth
-	 * 			the depth level of variant gathering
-	 * @param graphicalVariantDirectionalComp
-	 * 			The term comparator such that compare(t1,t2) <= 0 when t2 can be considered as 
-	 * 			a variant of t1. E.g., supposing that graphicalVariantDirectionalComp is the 
-	 * 			reverse frequency comparator, t1.freq = 5, t2.freq = 150. t2 will not be returned
-	 * 			in the variant set.
-	 * @return
-	 * 		the gathered variants
-	 */
-	public Set<Term> getVariants(int depth, Comparator<Term> graphicalVariantDirectionalComp) {
-		HashSet<Term> variants = new HashSet<Term>();
-		accumulateVariants(variants, graphicalVariantDirectionalComp, this, depth);
-		variants.remove(this);
-		return variants;
+	public List<VariationPath> getVariationPaths(int depth) {
+		ArrayList<VariationPath> accu = Lists.newArrayList();
+		accumulateVariations(
+				this,
+				new ArrayList<TermVariation>(),
+				depth,
+				accu
+				);
+		return accu;
 	}
-	
-	private void accumulateVariants(Set<Term> variants, Comparator<Term> graphicalVariantDirectionalComp, Term baseTerm, int depth) {
-		if(!variants.contains(this)) {
-			variants.add(this);
-			if(depth>0) {
-				for(SyntacticVariation sv:getSyntacticVariants())
-					if(graphicalVariantDirectionalComp.compare(baseTerm, sv.getTarget()) <= 0)
-						// Accumulate variants iff gv is not more interesting (i.e. more frequent nor more specific)
-						sv.getTarget().accumulateVariants(variants, graphicalVariantDirectionalComp, baseTerm, depth - 1);
-				for(Term gv:getGraphicalVariants()) {
-					if(graphicalVariantDirectionalComp.compare(baseTerm, gv) <= 0)
-						// Accumulate variants iff gv is not more interesting (i.e. more frequent nor more specific)
-						gv.accumulateVariants(variants, graphicalVariantDirectionalComp, baseTerm, depth - 1);
-				}
-			}
+
+	private void accumulateVariations(Term baseTerm, List<TermVariation> currentPath, int depth, List<VariationPath> accu) {
+		if(depth == 0 
+				|| currentPath.size() == depth 
+				|| (!currentPath.isEmpty() && this.equals(baseTerm)) // cycle prevention
+			)
+			return;
+			
+		for(TermVariation tv:this.variations) {
+			currentPath.add(tv);
+			accu.add(new VariationPath(currentPath));
+			tv.getVariant().accumulateVariations(baseTerm, currentPath, depth-1, accu);
 		}
 	}
-	
 	
 	/**
 	 * 
@@ -584,4 +533,53 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 	public double getWRLog() {
 		return wrLog;
 	}
+	
+	public Set<TermVariation> getVariations() {
+		return Collections.unmodifiableSet(variations);
+	}
+
+	public Set<TermVariation> getBases() {
+		return Collections.unmodifiableSet(bases);
+	}
+
+
+	private Iterator<TermVariation> getTermVariationsIterator(final Iterable<TermVariation> iterable, final VariationType... variantTypes) {
+		return new AbstractIterator<TermVariation>() {
+			private Iterator<TermVariation> it = iterable.iterator();
+			private TermVariation current = null;
+			private Set<VariationType> types = Sets.newHashSet(variantTypes);
+
+			
+			@Override
+			protected TermVariation computeNext() {
+				while(it.hasNext()) {
+					this.current = it.next();
+					if(this.types.contains(this.current.getVariationType()))
+						return this.current;
+				}
+				return endOfData();
+			}
+		};
+	}
+	
+	/**
+	 * Get all variations of given {@link VariationType}s
+	 * 
+	 * @param variantTypes
+	 * @return
+	 */
+	public Iterable<TermVariation> getVariations(final VariationType... variantTypes) {
+		return IteratorUtils.toIterable(getTermVariationsIterator(this.variations, variantTypes));
+	}
+	
+	/**
+	 * Get all bases of given {@link VariationType}s
+	 * 
+	 * @param variantTypes
+	 * @return
+	 */
+	public Iterable<TermVariation> getBases(final VariationType... variantTypes) {
+		return IteratorUtils.toIterable(getTermVariationsIterator(this.bases, variantTypes));
+	}
+
 }

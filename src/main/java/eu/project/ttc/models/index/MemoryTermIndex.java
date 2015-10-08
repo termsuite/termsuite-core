@@ -42,12 +42,12 @@ import com.google.common.collect.Sets;
 
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.Document;
-import eu.project.ttc.models.SyntacticVariation;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermBuilder;
 import eu.project.ttc.models.TermClass;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermOccurrence;
+import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.models.TermWord;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.types.TermOccAnnotation;
@@ -354,14 +354,8 @@ public class MemoryTermIndex implements TermIndex {
 			customIndex.removeTerm(t);
 		
 		// remove from variants
-		for(SyntacticVariation sv:t.getSyntacticVariants()) 
-			sv.getTarget().removeSyntacticBase(sv);
-		
-		for(SyntacticVariation sv:t.getSyntacticBases()) 
-			sv.getSource().removeSyntacticVariant(sv);
-
-		for(Term v:t.getGraphicalVariants()) 
-			v.removeGraphicalVariant(t);
+		for(TermVariation v:t.getVariations()) 
+			t.removeTermVariation(v);
 		
 		if(t.isSingleWord()) {
 			singleWordTermsByLemma.remove(t.getLemma(), t);

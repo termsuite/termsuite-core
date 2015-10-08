@@ -44,15 +44,16 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Functions;
-import com.google.common.base.Preconditions;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.ImmutableSortedMap;
+import com.google.common.collect.Iterables;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Ordering;
 
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermOccurrence;
+import eu.project.ttc.models.VariationType;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.types.WordAnnotation;
 import eu.project.ttc.utils.JCasUtils;
@@ -168,13 +169,15 @@ public class CasStatCounter extends JCasAnnotator_ImplBase {
 			LOGGER.info("[{}] {}: {} ", statName, mostFrequentAnno.getKey(), mostFrequentAnno.getValue().intValue());
 		}
 		int nbSyntacticVariants = 0;
+		int nbMorphologicalVariants = 0;
 		int nbGraphicalVariants = 0;
 		int nbOccurrences = 0;
 		int nbPrimaryOccOccurrences = 0;
 		TermIndex tIndex = termIndexResource.getTermIndex();
 		for(Term t:tIndex.getTerms()) {
-			nbSyntacticVariants+=t.getSyntacticVariants().size();
-			nbGraphicalVariants+=t.getGraphicalVariants().size();
+			nbMorphologicalVariants+=Iterables.size(t.getVariations(VariationType.MORPHOLOGICAL));
+			nbSyntacticVariants+=Iterables.size(t.getVariations(VariationType.SYNTACTICAL));
+			nbGraphicalVariants+=Iterables.size(t.getVariations(VariationType.GRAPHICAL));
 			nbOccurrences+=t.getOccurrences().size();
 			for(TermOccurrence o:t.getOccurrences()) {
 				if(o.isPrimaryOccurrence())
@@ -187,6 +190,10 @@ public class CasStatCounter extends JCasAnnotator_ImplBase {
 		LOGGER.info("[{}] Nb terms:    {} [sw: {}, mw: {}]", statName, tIndex.getTerms().size(), tIndex.singleWordTermCount(),tIndex.multiWordTermCount());
 		LOGGER.info("[{}] Nb words:    {} [compounds: {}]", statName, tIndex.getWords().size(), tIndex.compoundWordCount());
 		LOGGER.info("[{}] Nb occurrences: {} [primary: {}]", statName, nbOccurrences, nbPrimaryOccOccurrences);
-		LOGGER.info("[{}] Nb variants: {} [syn: {}, graph: {}]", statName, nbSyntacticVariants + nbGraphicalVariants, nbSyntacticVariants, nbGraphicalVariants);
+		LOGGER.info("[{}] Nb variants: {} [morph: {}, syn: {}, graph: {}]", statName, 
+				nbMorphologicalVariants + nbSyntacticVariants + nbGraphicalVariants, 
+				nbMorphologicalVariants, 
+				nbSyntacticVariants, 
+				nbGraphicalVariants);
 	}
 }

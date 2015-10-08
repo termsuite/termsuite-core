@@ -42,6 +42,7 @@ import eu.project.ttc.metrics.DiacriticInsensitiveLevenshtein;
 import eu.project.ttc.metrics.EditDistance;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.VariationType;
 import eu.project.ttc.models.index.CustomTermIndex;
 import eu.project.ttc.models.index.TermClassProviders;
 import eu.project.ttc.resources.TermIndexResource;
@@ -137,6 +138,7 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 		Term t1, t2;
 		int i, j;
 		int gatheredCnt = 0;
+		double dist = 0d;
 		for(String key:customIndex.keySet()) {
 			terms = customIndex.getTerms(key);
 			logger.trace("Graphical gathering over term class {} of size: {}", key, terms.size());
@@ -145,9 +147,10 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 				for(j=i+1; j<terms.size();j++) {
 					nbComparisons++;
 					t2 = terms.get(j);
-					if(distance.computeNormalized(t1.getLemma(), t2.getLemma()) >= this.threshold) {
+					dist = distance.computeNormalized(t1.getLemma(), t2.getLemma());
+					if(dist >= this.threshold) {
 						gatheredCnt++;
-						t1.addGraphicalVariant(t2);
+						t1.addTermVariation(t2, VariationType.GRAPHICAL, dist);
 						if(UIMAProfiler.isActivated())
 							UIMAProfiler.getProfiler("GraphicalGatherer").hit(
 									"graphical variants", 

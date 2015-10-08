@@ -44,9 +44,9 @@ import com.google.common.collect.Sets;
 
 import eu.project.ttc.engines.AbstractTermIndexExporter;
 import eu.project.ttc.engines.cleaner.TermProperty;
-import eu.project.ttc.models.SyntacticVariation;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.tools.utils.IndexerTSVBuilder;
 
 /**
@@ -99,13 +99,9 @@ public class TSVExporter extends AbstractTermIndexExporter {
 				if(ignore.contains(t))
 					continue;
 				tsv.startTerm(t);
-				for(SyntacticVariation v:t.getSyntacticVariants()) {
-					tsv.addVariant(v.getTarget());
-					ignore.add(v.getTarget());
-				}
-				for(Term v:t.getGraphicalVariants()) {
-					tsv.addVariant(v);
-					ignore.add(v);
+				for(TermVariation v:t.getVariations()) {
+					tsv.addVariant(v.getVariant());
+					ignore.add(v.getVariant());
 				}
 				tsv.endTerm();
 			}

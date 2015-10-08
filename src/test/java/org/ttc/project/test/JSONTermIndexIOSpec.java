@@ -31,6 +31,7 @@ import eu.project.ttc.models.ContextVector;
 import eu.project.ttc.models.Document;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.VariationType;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.models.WordBuilder;
 import eu.project.ttc.models.index.JSONTermIndexIO;
@@ -83,8 +84,8 @@ public class JSONTermIndexIOSpec {
 				.addOccurrence(10, 12, doc1, "coveredText 2")
 				.addOccurrence(14, 20, doc2, "coveredText 2")
 				.createAndAddToIndex();
-		term1.addSyntacticVariant(term2, "variationRule1");
-		term1.addGraphicalVariant(term2);
+		term1.addTermVariation(term2, VariationType.SYNTACTICAL, "variationRule1");
+		term1.addTermVariation(term2, VariationType.GRAPHICAL, 0.956d);
 		
 		// generate context vectors
 		ContextVector v = new ContextVector(term1);
@@ -99,7 +100,7 @@ public class JSONTermIndexIOSpec {
 	
 	@Test
 	public void testSaveLoadReturnWithNoVariant() throws IOException {
-		term1.removeSyntacticVariant(term1.getSyntacticVariants().iterator().next());
+		term1.removeTermVariation(term1.getVariations(VariationType.SYNTACTICAL).iterator().next());
 		StringWriter writer = new StringWriter();
 		JSONTermIndexIO.save(writer, termIndex, true, true);
 		String string = writer.toString();
@@ -120,14 +121,12 @@ public class JSONTermIndexIOSpec {
 		for(Term t:termIndex.getTerms()) {
 			Term t2 = termIndex2.getTermByGroupingKey(t.getGroupingKey());
 			assertThat(t2.getOccurrences()).hasSameElementsAs(t.getOccurrences());
-			assertThat(t2.getSyntacticVariants()).hasSameElementsAs(t.getSyntacticVariants());
-			assertThat(t2.getGraphicalVariants()).hasSameElementsAs(t.getGraphicalVariants());
-			assertThat(t2.getSyntacticBases()).hasSameElementsAs(t.getSyntacticBases());
+			assertThat(t2.getVariations()).hasSameElementsAs(t.getVariations());
+			assertThat(t2.getBases()).hasSameElementsAs(t.getBases());
 			assertThat(t2.getForms()).hasSameElementsAs(t.getForms());
 			assertThat(t2.getFrequency()).isEqualTo(t.getFrequency());
 			assertThat(t2.getWR()).isEqualTo(t.getWR());
 			assertThat(t2.getSpottingRule()).isEqualTo(t.getSpottingRule());
-			assertThat(t2.getGraphicalVariants()).hasSameElementsAs(t.getGraphicalVariants());
 			assertThat(t2.getPattern()).isEqualTo(t.getPattern());
 			assertThat(t2.getWords()).isEqualTo(t.getWords());
 			if(t2.getGroupingKey().equals("Term1")) {
@@ -186,10 +185,12 @@ public class JSONTermIndexIOSpec {
 		assertThat(t1.getWRLog()).isEqualTo(11f);
 		assertThat(t1.getWRLogZScore()).isEqualTo(22f);
 		assertThat(t1.getFrequency()).isEqualTo(6);
-		assertThat(t1.getGraphicalVariants()).containsOnly(t2);
-		assertThat(t1.getSyntacticVariants()).hasSize(0);
-		assertThat(t1.getSyntacticBases()).hasSize(2);
-		assertThat(t1.getSyntacticBases()).extracting("source").containsOnly(t2, t3);	
+		assertThat(t1.getVariations(VariationType.GRAPHICAL)).extracting("variant").containsOnly(t2);
+		assertThat(t1.getVariations(VariationType.SYNTACTICAL)).hasSize(0);
+		assertThat(t1.getBases())
+			.hasSize(2)
+			.extracting("base")
+			.containsOnly(t2, t3);	
 		
 		
 		// test words
@@ -234,7 +235,7 @@ public class JSONTermIndexIOSpec {
 //		System.out.println(writer.toString());
 		Map<String,Object> map = mapper.readValue(writer.toString(), 
 			    new TypeReference<HashMap<String,Object>>(){});
-		assertThat(map.keySet()).hasSize(6).containsOnly("metadata", "words", "terms", "syntactic_variants", "graphical_variants", "input_sources");
+		assertThat(map.keySet()).hasSize(5).containsOnly("metadata", "words", "terms", "variations", "input_sources");
 		
 		// test input sources
 		@SuppressWarnings("unchecked")
@@ -288,19 +289,19 @@ public class JSONTermIndexIOSpec {
 
 		
 		// test syntactic variants
-		List<?> variantList = (List<?>)map.get("syntactic_variants");
-		assertThat(variantList).hasSize(1);
+		List<?> variantList = (List<?>)map.get("variations");
+		assertThat(variantList).hasSize(2);
 		LinkedHashMap<?,?> firstVariant = (LinkedHashMap<?,?>)variantList.get(0);
 		assertEquals("Term1", firstVariant.get("base"));
 		assertEquals("Term2", firstVariant.get("variant"));
-		assertEquals("variationRule1", firstVariant.get("rule"));
+		assertEquals("variationRule1", firstVariant.get("info"));
+		assertEquals("syn", firstVariant.get("type"));
 
-		// test graphical variants
-		List<?> graphicalVariantList = (List<?>)map.get("graphical_variants");
-		assertThat(graphicalVariantList).hasSize(1);
-		firstVariant = (LinkedHashMap<?,?>)graphicalVariantList.get(0);
-		assertEquals("Term1", firstVariant.get("term2"));
-		assertEquals("Term2", firstVariant.get("term1"));
+		firstVariant = (LinkedHashMap<?,?>)variantList.get(1);
+		assertEquals("Term1", firstVariant.get("base"));
+		assertEquals("Term2", firstVariant.get("variant"));
+		assertEquals("0.956", firstVariant.get("info"));
+		assertEquals("graph", firstVariant.get("type"));
 		
 	}
 }

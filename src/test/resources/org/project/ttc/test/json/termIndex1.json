@@ -78,11 +78,9 @@
 			}
 		}
 	],
-	syntactic_variants: [
-		{base: "term2", variant: "term1", rule: "n-na"},
-		{base: "term3", variant: "term1", rule: "a-na"}
-	],
-	graphical_variants: [
-			{term1: "term1", term2: "term2"}
+	variations: [
+		{base: "term2", variant: "term1", info: "n-na", type: "syn"},
+		{base: "term3", variant: "term1", info: "a-na", type: "syn"},
+		{base: "term1", variant: "term2", info: "0.914", type: "graph"}
 	]
 }

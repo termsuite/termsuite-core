@@ -37,9 +37,9 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.collect.Sets;
 
-import eu.project.ttc.models.SyntacticVariation;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.resources.TermIndexResource;
 import fr.univnantes.lina.UIMAProfiler;
 
@@ -131,9 +131,8 @@ public abstract class AbstractTermIndexCleaner extends JCasAnnotator_ImplBase {
 				current = it.next();
 				// checks that this is no variant of a kept term
 				currentBases = Sets.newHashSet();
-				for(SyntacticVariation sv:current.getSyntacticBases()) 
-					currentBases.add(sv.getSource());
-				currentBases.addAll(current.getGraphicalVariants());
+				for(TermVariation v:current.getBases()) 
+					currentBases.add(v.getBase());
 
 				for(Term v:currentBases) {	
 					if(kept.contains(v)) {

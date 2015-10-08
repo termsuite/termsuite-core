@@ -15,6 +15,7 @@ import org.ttc.project.TestUtil;
 import eu.project.ttc.engines.TermClassifier;
 import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.models.Term;
+import eu.project.ttc.models.VariationType;
 import eu.project.ttc.models.index.MemoryTermIndex;
 
 public class TermClassifierSpec {
@@ -60,8 +61,8 @@ public class TermClassifierSpec {
 	public void testClassify() throws AnalysisEngineProcessException {
 		assertThat(this.termIndex.getTerms()).hasSize(5).contains(term1, term2, term3, term4, term5);
 
-		term5.addSyntacticVariant(term3, "NA-NAPN");
-		term3.addSyntacticVariant(term4, "NA-NAPN2");
+		term5.addTermVariation(term3, VariationType.SYNTACTICAL, "NA-NAPN");
+		term3.addTermVariation(term4, VariationType.SYNTACTICAL, "NA-NAPN2");
 		ae.collectionProcessComplete();
 		assertThat(this.termIndex.getTerms()).hasSize(5).contains(term1, term2, term5);
 		assertThat(this.termIndex.getTermClasses()).hasSize(3).extracting("head").contains(term1, term2, term5);

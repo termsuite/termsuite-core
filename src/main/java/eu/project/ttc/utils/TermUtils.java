@@ -36,14 +36,18 @@ import com.google.common.collect.Sets;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.engines.desc.TermSuiteResourceException;
 import eu.project.ttc.models.ContextVector;
-import eu.project.ttc.models.SyntacticVariation;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.resources.GeneralLanguageResource;
 import eu.project.ttc.tools.TermSuiteResourceHelper;
 
 public class TermUtils {
 	
+
+	/**
+	 * Most frequent first
+	 */
 	public static Comparator<Term> frequencyComparator = new Comparator<Term>() {
 		@Override
 		public int compare(Term o1, Term o2) {
@@ -53,6 +57,9 @@ public class TermUtils {
 		}
 	};
 	
+	/**
+	 * Most specific first (based on WeirdnessRation: Term#getWR())
+	 */
 	public static Comparator<Term> specificityComparator = new Comparator<Term>() {
 		@Override
 		public int compare(Term o1, Term o2) {
@@ -73,10 +80,10 @@ public class TermUtils {
 					|| (watchExpression.isPresent() && watchExpression.get().matcher(term.getGroupingKey()).find())
 					) {
 				stream.println(term);
-				for(Term t:term.getGraphicalVariants()) 
-					stream.format("\tgraphical: %s\n" , t.getGroupingKey());
-				for(SyntacticVariation variation:term.getSyntacticVariants()) 
-					stream.format("\tsyntactic: %s\n" , variation.getTarget().getGroupingKey());
+//				for(Term t:term.getGraphicalVariants()) 
+//					stream.format("\tgraphical: %s\n" , t.getGroupingKey());
+				for(TermVariation variation:term.getVariations()) 
+					stream.format("\tsyntactic: %s\n" , variation.getVariant().getGroupingKey());
 			}
 		}
 	}

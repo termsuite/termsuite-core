@@ -16,9 +16,10 @@ import com.google.common.collect.Multimap;
 
 import eu.project.ttc.engines.AbstractTermIndexExporter;
 import eu.project.ttc.engines.variant.VariantRule;
-import eu.project.ttc.models.SyntacticVariation;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermOccurrence;
+import eu.project.ttc.models.TermVariation;
+import eu.project.ttc.models.VariationType;
 import eu.project.ttc.resources.YamlVariantRules;
 import eu.project.ttc.utils.TermOccurrenceUtils;
 
@@ -52,8 +53,8 @@ public class ExportVariationRuleExamples extends AbstractTermIndexExporter {
 		final Multimap<String, TermPair> pairs = HashMultimap.create();
 		
 		for(Term t:acceptedTerms) {
-			for(SyntacticVariation sv:t.getSyntacticVariants())
-				pairs.put(sv.getVariationRule(), new TermPair(t, sv.getTarget()));
+			for(TermVariation v:t.getVariations(VariationType.MORPHOLOGICAL, VariationType.SYNTACTICAL))
+				pairs.put(v.getInfo().toString(), new TermPair(t, v.getVariant()));
 		}
 		
 

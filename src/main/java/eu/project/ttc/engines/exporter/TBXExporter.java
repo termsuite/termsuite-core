@@ -57,10 +57,10 @@ import com.google.common.collect.Lists;
 
 import eu.project.ttc.engines.AbstractTermIndexExporter;
 import eu.project.ttc.models.CompoundType;
-import eu.project.ttc.models.SyntacticVariation;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermOccurrence;
+import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.utils.TermSuiteUtils;
 
 /**
@@ -115,8 +115,8 @@ public class TBXExporter extends AbstractTermIndexExporter {
 		try {
 			for(Term t: acceptedTerms) {
 	            addTermEntry(t, false);
-				for(SyntacticVariation v:t.getSyntacticVariants())
-	                addTermEntry(v.getTarget(), true);
+				for(TermVariation v:t.getVariations())
+	                addTermEntry(v.getVariant(), true);
 			}
 			exportTBXDocument();
 		} catch (TransformerException | IOException e) {
@@ -240,12 +240,12 @@ public class TBXExporter extends AbstractTermIndexExporter {
 		langSet.setAttribute("xml:lang", this.lang);
 		termEntry.appendChild(langSet);
 
-		for (SyntacticVariation variation : term.getSyntacticBases()) 
-			this.addTermBase(langSet, variation.getSource().getGroupingKey(), null);
+		for (TermVariation variation : term.getBases()) 
+			this.addTermBase(langSet, variation.getBase().getGroupingKey(), null);
 
-		for (SyntacticVariation variation : term.getSyntacticVariants()) {
-			this.addTermVariant(langSet, String.format("langset-%d", variation.getTarget().getId()),
-					variation.getTarget().getGroupingKey());
+		for (TermVariation variation : term.getVariations()) {
+			this.addTermVariant(langSet, String.format("langset-%d", variation.getVariant().getId()),
+					variation.getVariant().getGroupingKey());
 		}
 		Set<TermOccurrence> allOccurrences = allOccurrencesCaches.getUnchecked(term);
 		this.addDescrip(langSet, langSet, "nbOccurrences", allOccurrences.size());

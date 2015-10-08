@@ -19,6 +19,7 @@ import eu.project.ttc.models.OccurrenceType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermClass;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.VariationType;
 import eu.project.ttc.models.index.TermClassProvider;
 import eu.project.ttc.models.index.TermClassProviders;
 
@@ -167,65 +168,63 @@ public class TermSpec {
 	}
 
 	@Test
-	public void testAddSyntacticVariant() {
-		assertThat(this.term5.getSyntacticVariants()).hasSize(0);
-		assertThat(this.term5.getSyntacticBases()).hasSize(0);
-		assertThat(this.term3.getSyntacticVariants()).hasSize(0);
-		assertThat(this.term3.getSyntacticBases()).hasSize(0);
-		assertThat(this.term4.getSyntacticVariants()).hasSize(0);
-		assertThat(this.term4.getSyntacticBases()).hasSize(0);
+	public void testAddTermVariation() {
+		assertThat(this.term5.getVariations()).hasSize(0);
+		assertThat(this.term5.getBases()).hasSize(0);
+		assertThat(this.term3.getVariations()).hasSize(0);
+		assertThat(this.term3.getBases()).hasSize(0);
+		assertThat(this.term4.getVariations()).hasSize(0);
+		assertThat(this.term4.getBases()).hasSize(0);
 		
-		term5.addSyntacticVariant(term3, "Tata");
-		assertThat(this.term5.getSyntacticVariants()).hasSize(1);
-		assertThat(this.term5.getSyntacticBases()).hasSize(0);
-		assertThat(this.term3.getSyntacticVariants()).hasSize(0);
-		assertThat(this.term3.getSyntacticBases()).hasSize(1);
-		assertThat(this.term3.getSyntacticBases()).extracting("variationRule").containsExactly("Tata");
+		term5.addTermVariation(term3, VariationType.SYNTACTICAL, "Tata");
+		assertThat(this.term5.getVariations()).hasSize(1);
+		assertThat(this.term5.getBases()).hasSize(0);
+		assertThat(this.term3.getVariations()).hasSize(0);
+		assertThat(this.term3.getBases()).hasSize(1);
+		assertThat(this.term3.getBases()).extracting("info").containsExactly("Tata");
 		
-		term5.addSyntacticVariant(term4, "Tata");
-		assertThat(this.term5.getSyntacticVariants()).hasSize(2);
-		assertThat(this.term5.getSyntacticBases()).hasSize(0);
-		assertThat(this.term3.getSyntacticVariants()).hasSize(0);
-		assertThat(this.term3.getSyntacticBases()).hasSize(1);
-		assertThat(this.term4.getSyntacticVariants()).hasSize(0);
-		assertThat(this.term4.getSyntacticBases()).hasSize(1);
-		assertThat(this.term5.getSyntacticVariants()).extracting("variationRule").containsExactly("Tata","Tata");
+		term5.addTermVariation(term4, VariationType.SYNTACTICAL, "Tata");
+		assertThat(this.term5.getVariations()).hasSize(2);
+		assertThat(this.term5.getBases()).hasSize(0);
+		assertThat(this.term3.getVariations()).hasSize(0);
+		assertThat(this.term3.getBases()).hasSize(1);
+		assertThat(this.term4.getVariations()).hasSize(0);
+		assertThat(this.term4.getBases()).hasSize(1);
+		assertThat(this.term5.getVariations()).extracting("info").containsExactly("Tata","Tata");
 		
-		term5.addSyntacticVariant(term3, "Tata");
-		assertThat(this.term5.getSyntacticVariants()).hasSize(2);
-		assertThat(this.term5.getSyntacticBases()).hasSize(0);
-		assertThat(this.term3.getSyntacticVariants()).hasSize(0);
-		assertThat(this.term3.getSyntacticBases()).hasSize(1);
-		assertThat(this.term4.getSyntacticVariants()).hasSize(0);
-		assertThat(this.term4.getSyntacticBases()).hasSize(1);
-		assertThat(this.term5.getSyntacticVariants()).extracting("variationRule").containsExactly("Tata","Tata");
+		term5.addTermVariation(term3, VariationType.SYNTACTICAL, "Tata");
+		assertThat(this.term5.getVariations()).hasSize(2);
+		assertThat(this.term5.getBases()).hasSize(0);
+		assertThat(this.term3.getVariations()).hasSize(0);
+		assertThat(this.term3.getBases()).hasSize(1);
+		assertThat(this.term4.getVariations()).hasSize(0);
+		assertThat(this.term4.getBases()).hasSize(1);
+		assertThat(this.term5.getVariations()).extracting("info").containsExactly("Tata","Tata");
 		
 	}
 	
 	@Test
-	public void testGetVariants() {
-		Comparator<Term> comp = TermProperty.FREQUENCY.getComparator(true);
-		assertThat(term5.getVariants(0, comp)).isEmpty();
+	public void getVariationPaths() {
+		assertThat(term5.getVariationPaths(0)).isEmpty();
 
-		term5.addSyntacticVariant(term3, "Tata");
-		assertThat(term5.getVariants(0, comp)).isEmpty();
-		assertThat(term5.getVariants(1, comp)).containsExactly(term3);
-		assertThat(term5.getVariants(10, comp)).containsExactly(term3);
+		term5.addTermVariation(term3, VariationType.SYNTACTICAL, "Tata");
+		assertThat(term5.getVariationPaths(0)).isEmpty();
+		assertThat(term5.getVariationPaths(1)).hasSize(1).extracting("variant").contains(term3);
+		assertThat(term5.getVariationPaths(10)).hasSize(1).extracting("variant").contains(term3);
 		
-		term3.addSyntacticVariant(term4, "Toto");
-		assertThat(term5.getVariants(0, comp)).isEmpty();
-		assertThat(term5.getVariants(1, comp)).hasSize(1).contains(term3);
-		assertThat(term5.getVariants(2, comp)).hasSize(2).contains(term3, term4);
-		assertThat(term5.getVariants(10, comp)).hasSize(2).contains(term3, term4);
+		term3.addTermVariation(term4, VariationType.SYNTACTICAL, "Toto");
+		assertThat(term5.getVariationPaths(0)).isEmpty();
+		assertThat(term5.getVariationPaths(1)).hasSize(1).extracting("variant").contains(term3);
+		assertThat(term5.getVariationPaths(2)).hasSize(2).extracting("variant").contains(term3, term4);
+		assertThat(term5.getVariationPaths(10)).hasSize(2).extracting("variant").contains(term3, term4);
 		
+		term4.addTermVariation(term5, VariationType.SYNTACTICAL, "Toto");
+		assertThat(term5.getVariationPaths(0)).isEmpty();
+		assertThat(term5.getVariationPaths(1)).hasSize(1).extracting("variant").contains(term3);
+		assertThat(term5.getVariationPaths(2)).hasSize(2).extracting("variant").contains(term3, term4);
+		assertThat(term5.getVariationPaths(3)).hasSize(3).extracting("variant").contains(term3, term4, term5);
 		// handles cycles
-		term5.addSyntacticVariant(term5, "Toto");
-		assertThat(term5.getVariants(0, comp)).isEmpty();
-		assertThat(term5.getVariants(1, comp)).hasSize(1).contains(term3);
-		assertThat(term5.getVariants(2, comp)).hasSize(2).contains(term3, term4);
-		assertThat(term5.getVariants(3, comp)).hasSize(2).contains(term3, term4);
-		assertThat(term5.getVariants(10, comp)).hasSize(2).contains(term3, term4);
-		
+		assertThat(term5.getVariationPaths(10)).hasSize(3).extracting("variant").contains(term3, term4, term5);
 	}
 	
 	@Test

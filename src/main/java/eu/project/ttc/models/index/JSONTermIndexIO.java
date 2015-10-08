@@ -44,12 +44,13 @@ import eu.project.ttc.models.Component;
 import eu.project.ttc.models.CompoundType;
 import eu.project.ttc.models.ContextVector;
 import eu.project.ttc.models.Document;
-import eu.project.ttc.models.SyntacticVariation;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermBuilder;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermOccurrence;
+import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.models.TermWord;
+import eu.project.ttc.models.VariationType;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.models.WordBuilder;
 
@@ -57,11 +58,10 @@ public class JSONTermIndexIO {
 	/*
 	 * Error messages for parsing
 	 */
-	private static final String MSG_EXPECT_PROP_FOR_SYN_VAR = "Expecting %s property for syntactic variation";
-	private static final String MSG_TERM_DOES_NOT_EXIST = "Error in syntactic variation. Term %s is not present in the dump file. Make sure that terms are defined prior to variants.";
+	private static final String MSG_EXPECT_PROP_FOR_VAR = "Expecting %s property for term variation";
+	private static final String MSG_TERM_DOES_NOT_EXIST = "Error in term variation. Term %s is not present in the dump file. Make sure that terms are defined prior to variants.";
 	private static final String MSG_EXPECT_PROP_FOR_OCCURRENCE = "Expecting %s property for occurrence";
 	private static final String MSG_EXPECT_PROP_FOR_TERM_WORD = "Expecting %s property for term word";
-	private static final String MSG_EXPECT_PROP_FOR_GRAPHICAL_VAR = "Expecting %s property for graphical variation";
 
 	/*
 	 * Json properties
@@ -83,17 +83,16 @@ public class JSONTermIndexIO {
 	private static final String SYN = "syn";
 	private static final String FREQUENCY = "freq";
 	private static final String SPOTTING_RULE = "rule";
-	private static final String SYNTACTIC_VARIANTS = "syntactic_variants";
-	private static final String GRAPHICAL_VARIANTS = "graphical_variants";
+	private static final String TERM_VARIATIONS = "variations";
+	private static final String VARIANT_TYPE = "type";
+	private static final String INFO = "info";
 	private static final String BASE = "base";
 	private static final String VARIANT = "variant";
-	private static final String RULE = "rule";
+//	private static final String RULE = "rule";
 	private static final String FILE = "file";
 	private static final String OCCURRENCES = "occurrences";
 	private static final String TEXT = "text";
 	private static final String INPUT_SOURCES = "input_sources";
-	private static final String TERM1 = "term1";
-	private static final String TERM2 = "term2";
 	private static final String CONTEXT = "context";
 	private static final String CO_OCCURRENCES = "cooccs";
 	private static final String NB_COCCS = "cnt";
@@ -130,7 +129,9 @@ public class JSONTermIndexIO {
 		String text;
 		String base;
 		String variant;
-		String rule;
+//		String rule;
+		String infoToken;
+		String variantType;
 		Map<Integer, String> inputSources = Maps.newTreeMap();
 		
 		
@@ -315,50 +316,37 @@ public class JSONTermIndexIO {
 						throw new IllegalArgumentException("Bad format for input source key: " + id);
 					}
 				}
-			} else if (SYNTACTIC_VARIANTS.equals(fieldname)) {
+			} else if (TERM_VARIATIONS.equals(fieldname)) {
 				jp.nextToken();
 				while ((tok = jp.nextToken()) != JsonToken.END_ARRAY) {
 					base = null;
 					variant = null;
-					rule = null;
+					infoToken = null;
+					variantType = null;
 					while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
 						fieldname = jp.getCurrentName();
 						if (BASE.equals(fieldname)) 
 							base = jp.nextTextValue();
 						else if (VARIANT.equals(fieldname)) 
 							variant = jp.nextTextValue();
-						else if (RULE.equals(fieldname)) 
-							rule = jp.nextTextValue();
+						else if (VARIANT_TYPE.equals(fieldname)) 
+							variantType = jp.nextTextValue();
+						else if (INFO.equals(fieldname)) 
+							infoToken = jp.nextTextValue();
 					} // end syntactic variant object
-					Preconditions.checkNotNull(base, MSG_EXPECT_PROP_FOR_SYN_VAR, BASE);
-					Preconditions.checkNotNull(variant, MSG_EXPECT_PROP_FOR_SYN_VAR, VARIANT);
-					Preconditions.checkNotNull(rule, MSG_EXPECT_PROP_FOR_SYN_VAR, RULE);
+					Preconditions.checkNotNull(base, MSG_EXPECT_PROP_FOR_VAR, BASE);
+					Preconditions.checkNotNull(variant, MSG_EXPECT_PROP_FOR_VAR, VARIANT);
+					Preconditions.checkNotNull(infoToken, MSG_EXPECT_PROP_FOR_VAR, INFO);
 					b = termIndex.getTermByGroupingKey(base);
 					Preconditions.checkNotNull(b, MSG_TERM_DOES_NOT_EXIST, base);
 					v = termIndex.getTermByGroupingKey(variant);
 					Preconditions.checkNotNull(v, MSG_TERM_DOES_NOT_EXIST, variant);
 					
-					b.addSyntacticVariant(v, rule);
-				} // end syntactic variations array
-			} else if (GRAPHICAL_VARIANTS.equals(fieldname)) {
-				jp.nextToken();
-				while ((tok = jp.nextToken()) != JsonToken.END_ARRAY) {
-					base = null;
-					variant = null;
-					while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
-						fieldname = jp.getCurrentName();
-						if (TERM1.equals(fieldname)) 
-							base = jp.nextTextValue();
-						else if (TERM2.equals(fieldname)) 
-							variant = jp.nextTextValue();
-					} // end syntactic variant object
-					Preconditions.checkNotNull(base, MSG_EXPECT_PROP_FOR_GRAPHICAL_VAR, TERM1);
-					Preconditions.checkNotNull(variant, MSG_EXPECT_PROP_FOR_GRAPHICAL_VAR, TERM2);
-					b = termIndex.getTermByGroupingKey(base);
-					Preconditions.checkNotNull(b, MSG_TERM_DOES_NOT_EXIST, base);
-					v = termIndex.getTermByGroupingKey(variant);
-					Preconditions.checkNotNull(v, MSG_TERM_DOES_NOT_EXIST, variant);
-					b.addGraphicalVariant(v);
+					VariationType vType = VariationType.fromShortName(variantType);
+					b.addTermVariation(
+							v, 
+							vType, 
+							vType == VariationType.GRAPHICAL ? Double.parseDouble(infoToken) : infoToken);
 				} // end syntactic variations array
 			}
 		}
@@ -453,15 +441,12 @@ public class JSONTermIndexIO {
 		}
 		jg.writeEndArray();
 		
-		Set<SyntacticVariation> variationRules = Sets.newHashSet();
-		Set<TermPair> graphicalVariants = Sets.newHashSet();
+		Set<TermVariation> termVariations = Sets.newHashSet();
 		
 		jg.writeFieldName(TERMS);
 		jg.writeStartArray();
 		for(Term t:termIndex.getTerms()) {
-			variationRules.addAll(t.getSyntacticVariants());
-			for(Term v:t.getGraphicalVariants()) 
-				graphicalVariants.add(new TermPair(t, v));
+			termVariations.addAll(t.getVariations());
 			
 			jg.writeStartObject();
 			jg.writeFieldName(ID);
@@ -538,33 +523,21 @@ public class JSONTermIndexIO {
 		jg.writeEndArray();
 		
 		/* Variants */
-		jg.writeFieldName(SYNTACTIC_VARIANTS);
+		jg.writeFieldName(TERM_VARIATIONS);
 		jg.writeStartArray();
-		for(SyntacticVariation v:variationRules) {
+		for(TermVariation v:termVariations) {
 			jg.writeStartObject();
 			jg.writeFieldName(BASE);
-			jg.writeString(v.getSource().getGroupingKey());
+			jg.writeString(v.getBase().getGroupingKey());
 			jg.writeFieldName(VARIANT);
-			jg.writeString(v.getTarget().getGroupingKey());
-			jg.writeFieldName(RULE);
-			jg.writeString(v.getVariationRule());
+			jg.writeString(v.getVariant().getGroupingKey());
+			jg.writeFieldName(VARIANT_TYPE);
+			jg.writeString(v.getVariationType().getShortName());
+			jg.writeFieldName(INFO);
+			jg.writeString(v.getInfo().toString());
 			jg.writeEndObject();
 		}
 		jg.writeEndArray();
-		
-		/* Graphical Variants */
-		jg.writeFieldName(GRAPHICAL_VARIANTS);
-		jg.writeStartArray();
-		for(TermPair pair:graphicalVariants) {
-			jg.writeStartObject();
-			jg.writeFieldName(TERM1);
-			jg.writeString(pair.getTerm1().getGroupingKey());
-			jg.writeFieldName(TERM2);
-			jg.writeString(pair.getTerm2().getGroupingKey());
-			jg.writeEndObject();
-		}
-		jg.writeEndArray();
-		
 		
 		jg.writeEndObject();
 		jg.close();

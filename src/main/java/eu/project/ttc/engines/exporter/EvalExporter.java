@@ -33,9 +33,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import eu.project.ttc.engines.AbstractTermIndexExporter;
-import eu.project.ttc.models.SyntacticVariation;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.TermVariation;
 
 /**
  * Exports a {@link TermIndex} in the tsv evaluation format.
@@ -69,8 +69,8 @@ public class EvalExporter extends AbstractTermIndexExporter {
 		try {
 			for(Term t: acceptedTerms) {
 				if(this.withVariants) {
-					for (SyntacticVariation v : t.getSyntacticVariants())
-							writer.write(v.getTarget().getGroupingKey() + "#");
+					for (TermVariation v : t.getVariations())
+							writer.write(v.getVariant().getGroupingKey() + "#");
 				}
 				writer.write(t.getGroupingKey());
 				writer.write("\t");
