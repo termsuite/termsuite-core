@@ -346,6 +346,7 @@ public class MemoryTermIndex implements TermIndex {
 
 	@Override
 	public void removeTerm(Term t) {
+		
 		termsByGroupingKey.remove(t.getGroupingKey());
 		termsById.remove(t.getId());
 		
@@ -354,12 +355,21 @@ public class MemoryTermIndex implements TermIndex {
 			customIndex.removeTerm(t);
 		
 		// remove from variants
+		Set<TermVariation> toRem = Sets.newHashSet();
 		for(TermVariation v:t.getVariations()) 
+			toRem.add(v);
+		for(TermVariation v:toRem)
 			t.removeTermVariation(v);
 		
-		if(t.isSingleWord()) {
+		// remove from variants
+		toRem = Sets.newHashSet();
+		for(TermVariation v:t.getBases()) 
+			toRem.add(v);
+		for(TermVariation v:toRem)
+			v.getBase().removeTermVariation(v);
+		
+		if(t.isSingleWord()) 
 			singleWordTermsByLemma.remove(t.getLemma(), t);
-		}
 		
 		/*
 		 * Removes from context vectors.
