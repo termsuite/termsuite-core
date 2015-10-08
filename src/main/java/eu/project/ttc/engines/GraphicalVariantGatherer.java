@@ -164,7 +164,7 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 		logger.debug("Graphical gathering {} terms gathered / {} pairs compared", gatheredCnt, nbComparisons);
 		
 		// free memory taken by the index
-		termIndex.dropCustomIndex(TermClassProviders.KEY_3RD_FIRST_LETTERS);
+		termIndex.dropCustomIndex(indexName);
 		
 		progressLoggerTimer.cancel();
 		
