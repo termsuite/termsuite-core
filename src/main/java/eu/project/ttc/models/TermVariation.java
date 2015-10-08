@@ -40,7 +40,7 @@ public class TermVariation {
 	
 	@Override
 	public int hashCode() {
-		return Objects.hashCode(this.base, this.variant, this.info);
+		return Objects.hashCode(this.base, this.variant, this.variationType, this.info);
 	}
 	
 	public String getLabel() {
