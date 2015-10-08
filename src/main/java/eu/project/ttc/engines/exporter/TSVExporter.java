@@ -27,6 +27,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.nio.charset.Charset;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
@@ -39,6 +41,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Splitter;
+import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
@@ -50,7 +53,7 @@ import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.tools.utils.IndexerTSVBuilder;
 
 /**
- * Exports a {@link TermIndex} in TSV format
+ * Exports a {@link TermIndex} in TSV format.
  * 
  * @author Damien Cram
  *
@@ -99,7 +102,17 @@ public class TSVExporter extends AbstractTermIndexExporter {
 				if(ignore.contains(t))
 					continue;
 				tsv.startTerm(t);
-				for(TermVariation v:t.getVariations()) {
+				List<TermVariation> variations = Lists.newArrayList(t.getVariations());
+				Collections.sort(variations, new Comparator<TermVariation>() {
+					@Override
+					public int compare(TermVariation o1, TermVariation o2) {
+						return ComparisonChain.start()
+								.compare(o1.getVariationType().getOrder(), o2.getVariationType().getOrder())
+								.compare(o2.getVariant().getWR(),o1.getVariant().getWR())
+								.result();
+					}
+				});
+				for(TermVariation v:variations) {
 					tsv.addVariant(v.getVariant());
 					ignore.add(v.getVariant());
 				}

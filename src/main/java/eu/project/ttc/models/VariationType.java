@@ -2,8 +2,8 @@ package eu.project.ttc.models;
 
 public enum VariationType {
 	MORPHOLOGICAL(1, "morph", true),
-	SYNTACTICAL(2, "syn", true),
-	GRAPHICAL(3, "graph", false);
+	SYNTACTICAL(3, "syn", true),
+	GRAPHICAL(2, "graph", false);
 	
 	private int order;
 	private String shortName;
