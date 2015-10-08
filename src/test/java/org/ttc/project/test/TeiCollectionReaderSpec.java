@@ -14,6 +14,7 @@ public class TeiCollectionReaderSpec extends TestCase {
 	
 	@Test
 	public void testParseFile() throws Exception {
+		fail("TEI broken.");
 		String teiStr2 = TestUtil.getTeiTxt(xml2);
 		String txtStr2 = TestUtil.readFile(txt2);
 		assertTrue(teiStr2.indexOf("purée1") != -1);
