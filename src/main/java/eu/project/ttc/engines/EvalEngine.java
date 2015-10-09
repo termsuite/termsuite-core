@@ -322,8 +322,6 @@ public class EvalEngine  extends JCasAnnotator_ImplBase {
 		return matchingRTLTerms;
 	}
 
-	private Comparator<Term> rFreqComparator = TermProperty.FREQUENCY.getComparator(true);
-
 	/**
 	 * 
 	 * @param rtlTerm

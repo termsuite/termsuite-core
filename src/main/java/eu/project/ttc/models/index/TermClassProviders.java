@@ -125,7 +125,6 @@ public class TermClassProviders {
 
 		@Override
 		public Collection<String> getClasses(Term term) {
-			boolean addEmptyLemmaStem = false;
 			List<String> lemmas = Lists.newArrayListWithCapacity(term.getWords().size());
 			
 			Map<String, String> stems = new HashMap<String, String>();

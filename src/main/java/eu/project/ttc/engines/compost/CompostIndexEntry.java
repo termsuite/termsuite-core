@@ -21,7 +21,7 @@
  *******************************************************************************/
 package eu.project.ttc.engines.compost;
 
-import com.google.common.base.Objects;
+import com.google.common.base.MoreObjects;
 
 public class CompostIndexEntry {
 	private String text;
@@ -67,7 +67,7 @@ public class CompostIndexEntry {
 	
 	@Override
 	public String toString() {
-		return Objects.toStringHelper(this)
+		return MoreObjects.toStringHelper(this)
 				.add("text", this.text)
 				.addValue(this.inDico)
 				.addValue(this.inCorpus)

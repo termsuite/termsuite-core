@@ -24,8 +24,6 @@ package eu.project.ttc.resources;
 import org.apache.uima.resource.DataResource;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.resource.SharedResourceObject;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import fr.univnantes.lina.UIMAProfiler;
 
@@ -41,7 +39,6 @@ import fr.univnantes.lina.UIMAProfiler;
  *
  */
 public abstract class MateModel<T> implements SharedResourceObject {
-	private static final Logger LOGGER = LoggerFactory.getLogger(MateModel.class);
 	public ThreadLocal<T> mateEngine = new ThreadLocal<T>();
 	
 	@Override

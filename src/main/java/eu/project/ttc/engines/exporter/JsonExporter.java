@@ -64,7 +64,9 @@ public class JsonExporter extends AbstractTermIndexExporter {
 		UIMAProfiler.getProfiler("AnalysisEngine").start(this, "process");
 		try {
 			LOGGER.info("Exporting {} terms to JSON file {}", this.termIndexResource.getTermIndex().getTerms().size(), this.toFilePath);
-			JSONTermIndexIO.save(new FileWriter(toFile), this.termIndexResource.getTermIndex(), this.withOccurrences, this.withContexts);
+			FileWriter writer2 = new FileWriter(toFile);
+			JSONTermIndexIO.save(writer2, this.termIndexResource.getTermIndex(), this.withOccurrences, this.withContexts);
+			writer2.close();
 		} catch (IOException e) {
 			LOGGER.error("Could not export to file due to IOException: {}", e.getMessage());
 		}

@@ -30,14 +30,13 @@ import org.apache.uima.jcas.JCas;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import uima.sandbox.filter.resources.FilterResource;
-
 import com.google.common.collect.Sets;
 
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.resources.TermIndexResource;
 import fr.univnantes.lina.UIMAProfiler;
+import uima.sandbox.filter.resources.FilterResource;
 
 /**
  * An AE that filters {@link TermIndex} based on a word black list. Each term having a word

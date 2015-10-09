@@ -50,7 +50,7 @@ public class YamlVariantRules implements SharedResourceObject {
 	@Override
 	public void load(DataResource aData) throws ResourceInitializationException {
 		this.groovyAdapter = new GroovyAdapter();
-		InputStream inputStream;
+		InputStream inputStream = null;
 		try {
 			inputStream = aData.getInputStream();
 			StringWriter writer = new StringWriter();
@@ -65,6 +65,8 @@ public class YamlVariantRules implements SharedResourceObject {
 		} catch (IOException e) {
 			LOGGER.error("Could not load the yaml variant rules resource dur to IOException");
 			throw new ResourceInitializationException(e);
+		} finally {
+			IOUtils.closeQuietly(inputStream);
 		}
 	}
 	

@@ -21,10 +21,6 @@
  *******************************************************************************/
 package eu.project.ttc.resources;
 
-import fr.univnantes.lina.UIMAProfiler;
-import groovy.lang.GroovyClassLoader;
-import groovy.lang.GroovyObject;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
@@ -38,6 +34,10 @@ import org.apache.uima.resource.SharedResourceObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import fr.univnantes.lina.UIMAProfiler;
+import groovy.lang.GroovyClassLoader;
+import groovy.lang.GroovyObject;
+
 public class GroovyVariantRules implements SharedResourceObject {
 	private static final Logger LOGGER = LoggerFactory.getLogger(GroovyVariantRules.class);
 
@@ -45,13 +45,20 @@ public class GroovyVariantRules implements SharedResourceObject {
 
 	@Override
 	public void load(DataResource aData) throws ResourceInitializationException {
-		InputStream inputStream;
+		InputStream inputStream = null;
 		try {
 			inputStream = aData.getInputStream();
 			loadResource(inputStream);
 		} catch (IOException e) {
 			LOGGER.error("Could not load the groovy variant rules resource");
 			throw new ResourceInitializationException(e);
+		} finally {
+			if(inputStream != null)
+				try {
+					inputStream.close();
+				} catch (IOException e) {
+					throw new ResourceInitializationException(e);
+				}
 		}
 	}
 

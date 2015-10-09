@@ -4,8 +4,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;
 import static org.junit.Assert.fail;
 
-import java.util.Comparator;
-
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -14,7 +12,6 @@ import org.ttc.project.Fixtures;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 
-import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.models.OccurrenceType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermClass;

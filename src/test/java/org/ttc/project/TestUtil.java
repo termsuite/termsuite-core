@@ -14,6 +14,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
+import org.apache.commons.io.IOUtils;
 import org.apache.uima.analysis_component.AnalysisComponent;
 import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.fit.factory.AnalysisEngineFactory;
@@ -59,7 +60,13 @@ public class TestUtil {
 		return readFile(new InputStreamReader(getIS(string), Charset.forName("UTF-8")));
 	}
 	public static String readFile(File file) throws FileNotFoundException {
-		return readFile(new FileReader(file));
+		FileReader reader = null;
+		try {
+			reader = new FileReader(file);
+			return readFile(reader);
+		} finally {
+			IOUtils.closeQuietly(reader);
+		}
 	}
 		
 	public static String readFile(Reader reader) {

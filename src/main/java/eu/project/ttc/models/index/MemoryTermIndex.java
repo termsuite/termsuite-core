@@ -31,7 +31,7 @@ import java.util.Set;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.google.common.base.Objects;
+import com.google.common.base.MoreObjects;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.AbstractIterator;
 import com.google.common.collect.HashMultimap;
@@ -461,7 +461,7 @@ public class MemoryTermIndex implements TermIndex {
 
 	@Override
 	public String toString() {
-		return Objects.toStringHelper(this).addValue(name)
+		return MoreObjects.toStringHelper(this).addValue(name)
 				.add("terms", this.termsById.size())
 				.add("corpus size", this.corpusWordCount)
 				.toString();

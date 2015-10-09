@@ -46,7 +46,7 @@ public class TeiToTxtSaxHandler extends DefaultHandler {
 			"para", "textref" };
 	
 	private static final char WHITESPACE = ' ';
-	private static final char NEW_LINE = '\n';
+//	private static final char NEW_LINE = '\n';
 
 	private StringBuffer sb = new StringBuffer();
 

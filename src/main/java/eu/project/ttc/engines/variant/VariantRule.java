@@ -21,12 +21,6 @@
  *******************************************************************************/
 package eu.project.ttc.engines.variant;
 
-import eu.project.ttc.models.GroovyAdapter;
-import eu.project.ttc.models.GroovyTerm;
-import eu.project.ttc.models.Term;
-import groovy.lang.GroovyClassLoader;
-import groovy.lang.GroovyObject;
-
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -35,6 +29,12 @@ import org.slf4j.LoggerFactory;
 import com.google.common.base.Objects;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
+
+import eu.project.ttc.models.GroovyAdapter;
+import eu.project.ttc.models.GroovyTerm;
+import eu.project.ttc.models.Term;
+import groovy.lang.GroovyClassLoader;
+import groovy.lang.GroovyObject;
 
 /**
  * 

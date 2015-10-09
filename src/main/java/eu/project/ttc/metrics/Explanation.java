@@ -105,18 +105,18 @@ public class Explanation {
 			this.entries.add(new ExplanationFeature(coTerm, value));
 	}
 	 
-	private static Explanation emptyExplanation = null;
+	private static Explanation emptyExplanation;
 	
+	static {
+		emptyExplanation = new Explanation(1);
+		emptyExplanation.isActivated  = false;
+	}
 	/**
 	 * An empty explanation.
 	 * 
 	 * @return
 	 */
 	public static Explanation emptyExplanation() {
-		if(emptyExplanation == null) {
-			emptyExplanation = new Explanation(1);
-			emptyExplanation.isActivated  = false;
-		}
 		return emptyExplanation;
 	}
 	

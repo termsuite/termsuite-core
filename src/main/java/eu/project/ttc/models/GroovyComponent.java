@@ -21,6 +21,7 @@
  *******************************************************************************/
 package eu.project.ttc.models;
 
+import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 
 public class GroovyComponent {
@@ -54,7 +55,7 @@ public class GroovyComponent {
 	
 	@Override
 	public String toString() {
-		return Objects.toStringHelper(this)
+		return MoreObjects.toStringHelper(this)
 				.add("lemma", this.lemma)
 				.toString()
 				;

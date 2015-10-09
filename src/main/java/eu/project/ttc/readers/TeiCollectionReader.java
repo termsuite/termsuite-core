@@ -36,8 +36,8 @@ import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 
 public class TeiCollectionReader extends AbstractTermSuiteCollectionReader {
-	private static String MATH_ML_URI = "http://www.w3.org/1998/Math/MathML";
-	private static String MATH_ML_PREFIX = "mml";
+//	private static String MATH_ML_URI = "http://www.w3.org/1998/Math/MathML";
+//	private static String MATH_ML_PREFIX = "mml";
 	
 	private static final Logger logger = LoggerFactory.getLogger(TeiCollectionReader.class);
 

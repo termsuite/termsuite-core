@@ -21,7 +21,7 @@
  *******************************************************************************/
 package eu.project.ttc.engines.compost;
 
-import com.google.common.base.Objects;
+import com.google.common.base.MoreObjects;
 
 public  class Segment implements Comparable<Segment> {
 	private int begin;
@@ -70,7 +70,7 @@ public  class Segment implements Comparable<Segment> {
 
 	@Override
 	public String toString() {
-		return Objects.toStringHelper(this)
+		return MoreObjects.toStringHelper(this)
 				.add("substring", _substring)
 				.add("lemma", lemma)
 				.toString();

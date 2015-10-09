@@ -28,6 +28,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.apache.commons.io.IOUtils;
+
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParseException;
@@ -265,6 +267,7 @@ public class JSONTermIndexIO {
 								} 
 							// end occurrences
 							} else if (CONTEXT.equals(fieldname)) {
+								@SuppressWarnings("unused")
 								int totalCooccs = 0;
 								while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
 									fieldname = jp.getCurrentName();
@@ -313,8 +316,9 @@ public class JSONTermIndexIO {
 					try {
 						inputSources.put(Integer.parseInt(id),jp.nextTextValue());
 					} catch(NumberFormatException e) {
+						IOUtils.closeQuietly(jp);
 						throw new IllegalArgumentException("Bad format for input source key: " + id);
-					}
+					} 
 				}
 			} else if (TERM_VARIATIONS.equals(fieldname)) {
 				jp.nextToken();

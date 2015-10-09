@@ -34,8 +34,6 @@ import org.apache.uima.jcas.cas.StringArray;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import uima.sandbox.filter.resources.FilterResource;
-
 import com.google.common.base.Optional;
 
 import eu.project.ttc.resources.OccurrenceFilter;
@@ -49,6 +47,7 @@ import eu.project.ttc.utils.TermUtils;
 import fr.univnantes.lina.uima.tkregex.LabelledAnnotation;
 import fr.univnantes.lina.uima.tkregex.RegexOccurrence;
 import fr.univnantes.lina.uima.tkregex.ae.TokenRegexAE;
+import uima.sandbox.filter.resources.FilterResource;
 
 
 /**

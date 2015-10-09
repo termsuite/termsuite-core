@@ -88,6 +88,7 @@ public class CompostInflectionRules implements SharedResourceObject {
 				throw new ResourceInitializationException(e);
 			} finally {
 				IOUtils.closeQuietly(scanner);
+				IOUtils.closeQuietly(inputStream);
 			}
 		} catch (IOException e) {
 			throw new ResourceInitializationException(e);

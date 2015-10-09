@@ -35,6 +35,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.zip.ZipInputStream;
 
+import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.mutable.MutableInt;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -126,7 +127,9 @@ public class TermSuiteUtils {
 	 * Adds a path (jar or directory) to classpath of default Class loader
 	 * @param path
 	 */
+	@SuppressWarnings("resource")
 	public static void addToClasspath(String path) {
+		URLClassLoader urlClassLoader = null;
 		try {
 		    File f = new File(path);
 		    Preconditions.checkArgument(f.exists(), "No such file: %s", path);
@@ -138,7 +141,7 @@ public class TermSuiteUtils {
 		    } else
 		    	Preconditions.checkArgument(f.isDirectory(), "Should be a directory or a jar : %s", f.getAbsolutePath());
 		    URI u = f.toURI();
-		    URLClassLoader urlClassLoader = (URLClassLoader) ClassLoader.getSystemClassLoader();
+		    urlClassLoader = (URLClassLoader) ClassLoader.getSystemClassLoader();
 		    Class<URLClassLoader> urlClass = URLClassLoader.class;
 		    Method method;
 			method = urlClass.getDeclaredMethod("addURL", new Class[]{URL.class});

@@ -270,7 +270,7 @@ public class JSONTermIndexIOSpec {
 				tuple(10, 12, Integer.parseInt(sources.inverse().get("source2")), "coveredText 3"),
 				tuple(20, 30, Integer.parseInt(sources.inverse().get("source3")), "coveredText 4")
 				);
-		final Map<String,?> t1Ctxt = (Map<String,?>)t1.get("context");
+		final Map<?,?> t1Ctxt = (Map<?,?>)t1.get("context");
 		assertEquals(21, t1Ctxt.get("total_cooccs"));
 		assertThat((List<?>)t1Ctxt.get("cooccs"))
 			.hasSize(1)

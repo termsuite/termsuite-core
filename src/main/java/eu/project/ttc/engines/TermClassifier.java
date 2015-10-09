@@ -122,7 +122,4 @@ public class TermClassifier  extends JCasAnnotator_ImplBase {
 				termIndex.getTerms().size());
 		UIMAProfiler.getProfiler("AnalysisEngine").stop(this, "process");
 	}
-	
-
-	private Comparator<Term> rFreqComparator = TermProperty.FREQUENCY.getComparator(true);
 }

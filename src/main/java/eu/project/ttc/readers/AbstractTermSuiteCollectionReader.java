@@ -30,7 +30,6 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import org.apache.commons.io.comparator.SizeFileComparator;
 import org.apache.uima.cas.CAS;
 import org.apache.uima.cas.CASException;
 import org.apache.uima.collection.CollectionException;
@@ -122,7 +121,8 @@ public abstract class AbstractTermSuiteCollectionReader extends CollectionReader
 
 		// get list of files (not subdirectories) in the specified directory
 		this.mFiles = new LinkedList<File>();
-		File[] files = directory.listFiles(getFileFilter());
+		FilenameFilter fileFilter = getFileFilter();
+		File[] files = directory.listFiles(fileFilter);
 		for (int i = 0; i < files.length; i++) {
 			if (!files[i].isDirectory()) {
 				this.mFiles.add(files[i]);

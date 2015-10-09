@@ -99,15 +99,9 @@ public class CharacterFootprintTermFilter  implements SharedResourceObject, Occu
 	@Override
 	public void load(DataResource aData) throws ResourceInitializationException {
 		LOGGER.debug("Loading resource character footprint resource at: " + aData.getUri());
-		InputStream inputStream;
+		InputStream inputStream = null;
 		try {
-			try {
-				inputStream = aData.getInputStream();
-			} catch(Exception e) {
-				LOGGER.warn("PB loading "+aData.getUri()+". Continuing with the TrueFilter (always accept terms)");
-				this.allowedChars = null;
-				return;
-			}
+			inputStream = aData.getInputStream();
 			List<Character> chars = new LinkedList<Character>();
 			BufferedReader br = new BufferedReader(new InputStreamReader(inputStream, Charset.forName("UTF-8")));
 			int c;
@@ -118,10 +112,22 @@ public class CharacterFootprintTermFilter  implements SharedResourceObject, Occu
 			this.allowedChars = new char[chars.size()];
 			for(int i=0; i< chars.size(); i++) 
 				this.allowedChars[i] = chars.get(i);
+			br.close();
 		} catch (IOException e) {
 			LOGGER.error("Could not load resource character footprint resource due to an exception.");
 			LOGGER.warn("Continuing with the TrueFilter (always accept terms)");
 			this.allowedChars = null;
+		} catch(Exception e) {
+			LOGGER.warn("PB loading "+aData.getUri()+". Continuing with the TrueFilter (always accept terms)");
+			this.allowedChars = null;
+			return;
+		} finally {
+			if(inputStream != null)
+				try {
+					inputStream.close();
+				} catch (IOException e) {
+					LOGGER.error("Could not close input stream.");
+				}
 		}
 	}
 }

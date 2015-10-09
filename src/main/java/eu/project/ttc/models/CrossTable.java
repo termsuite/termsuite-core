@@ -20,11 +20,9 @@ package eu.project.ttc.models;
 
 import java.util.Iterator;
 import java.util.Map;
-import java.util.Set;
 
 import org.apache.commons.lang3.mutable.MutableDouble;
 
-import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Maps;
 
 import eu.project.ttc.metrics.AssociationRate;
@@ -53,7 +51,7 @@ public class CrossTable {
     private Map<Term, MutableDouble> aPlusB;
     private Map<Term, MutableDouble> aPlusC;
     private int totalCoOccurrences;
-    private int totalFrequency;
+//    private int totalFrequency;
     
     /**
      * 
@@ -81,12 +79,12 @@ public class CrossTable {
         this.aPlusB = Maps.newHashMap();
         this.aPlusC = Maps.newHashMap();
         this.totalCoOccurrences = 0;
-        this.totalFrequency = 0;
+//        this.totalFrequency = 0;
         
         Term term;
         for (Iterator<Term> it1 = this.termIndex.getTerms().iterator(); it1.hasNext() ;) {
             term = it1.next();
-            this.totalFrequency++;
+//            this.totalFrequency++;
         	ContextVector context = term.getContextVector();
             for (ContextVector.Entry entry : context.getEntries()) {
             	this.totalCoOccurrences += entry.getNbCooccs();
@@ -152,16 +150,10 @@ public class CrossTable {
     	
     	
     	final double value = rate.getValue(a, b, c, d);
-//    	if(dbgSource.contains(x.getGroupingKey()) && dbgTarget.contains(y.getGroupingKey())) {
-//    		System.out.format("%-15s%-15s%10d%10d%10d%12d%10.2f\n", x, y, a, b, c, d, value);
-//    	}
     	
 		return value;
     }
 
-    private Set<String> dbgSource = ImmutableSet.of("n: vent", "n: éolienne", "n: système", "n: production", "n: énergie", "a: éolien", "n: axe");
-    private Set<String> dbgTarget = ImmutableSet.of("n: biomasse", "n: éolienne", "n: vent", "n: production", "n: énergie", "a: éolien", "n: axe", "n: horizontal");
-    
 	private int lastA;
     private int lastB;
     private int lastC;

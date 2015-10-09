@@ -1,9 +1,9 @@
 package org.ttc.project.test;
 
-import junit.framework.TestCase;
-
 import org.junit.Test;
 import org.ttc.project.TestUtil;
+
+import junit.framework.TestCase;
 
 public class TeiCollectionReaderSpec extends TestCase {
 	private static final String xml1 = "org/project/ttc/test/tei/file1.xml";

@@ -28,6 +28,7 @@ import java.util.Queue;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.Lists;
@@ -237,7 +238,7 @@ public class BilingualAligner {
 		
 		@Override
 		public String toString() {
-			return Objects.toStringHelper(this)
+			return MoreObjects.toStringHelper(this)
 					.addValue(this.term.getGroupingKey())
 					.add("s",String.format("%.2f", this.score))
 					.toString();

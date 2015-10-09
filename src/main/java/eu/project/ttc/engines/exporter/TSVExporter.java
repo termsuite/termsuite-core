@@ -33,6 +33,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
+import org.apache.commons.io.IOUtils;
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
@@ -76,17 +77,19 @@ public class TSVExporter extends AbstractTermIndexExporter {
 	public void initialize(UimaContext context)
 			throws ResourceInitializationException {
 		super.initialize(context);
-		
+		OutputStreamWriter streamWriter = null;
 		try {
 			List<TermProperty> properties = Lists.newArrayList();
 			for(String propertyName:Splitter.on(",").splitToList(termPropertyList))
 				properties.add(TermProperty.forName(propertyName));
+			streamWriter = new OutputStreamWriter(
+				new FileOutputStream(new File(toFilePath)),
+				Charset.forName("UTF-8").newEncoder());
 			tsv = new IndexerTSVBuilder(
-					new OutputStreamWriter(
-						new FileOutputStream(new File(toFilePath)),
-						Charset.forName("UTF-8").newEncoder()),
+					streamWriter,
 					properties
 					);
+			IOUtils.closeQuietly(streamWriter);
 		} catch (FileNotFoundException e) {
 			LOGGER.error("Could not open a writer to file {}", this.toFilePath);
 			throw new ResourceInitializationException(e);

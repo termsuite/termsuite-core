@@ -137,7 +137,7 @@ public class ReferenceTermList implements SharedResourceObject {
 
 	@Override
 	public void load(DataResource data) throws ResourceInitializationException {
-		InputStream inputStream;
+		InputStream inputStream = null;
 		try {
 			this.path = data.getUri().toString();
 			LOGGER.debug("Loading reference term list at {}", this.path);
@@ -190,6 +190,8 @@ public class ReferenceTermList implements SharedResourceObject {
 		} catch (IOException e) {
 			LOGGER.error("Could not load file {}", data.getUrl());
 			throw new ResourceInitializationException(e);
+		} finally {
+			IOUtils.closeQuietly(inputStream);
 		}
 	}
 	

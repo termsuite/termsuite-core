@@ -21,10 +21,6 @@
  *******************************************************************************/
 package eu.project.ttc.engines;
 
-import is2.data.SentenceData09;
-import is2.lemmatizer.Lemmatizer;
-import is2.tag.Tagger;
-
 import java.util.List;
 
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
@@ -40,6 +36,9 @@ import eu.project.ttc.resources.MateLemmatizerModel;
 import eu.project.ttc.resources.MateTaggerModel;
 import eu.project.ttc.types.WordAnnotation;
 import fr.univnantes.lina.UIMAProfiler;
+import is2.data.SentenceData09;
+import is2.lemmatizer.Lemmatizer;
+import is2.tag.Tagger;
 
 /**
  * Post-process the lemma found by TreeTagger

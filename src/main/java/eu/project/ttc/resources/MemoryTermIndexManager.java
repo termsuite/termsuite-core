@@ -23,11 +23,10 @@ package eu.project.ttc.resources;
 
 import java.util.Map;
 
-import org.apache.uima.jcas.JCas;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.google.common.base.Objects;
+import com.google.common.base.MoreObjects;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
@@ -64,7 +63,7 @@ public class MemoryTermIndexManager {
 	
 	@Override
 	public String toString() {
-		return Objects.toStringHelper(this).add("indexes", this.indexes.keySet()).toString();
+		return MoreObjects.toStringHelper(this).add("indexes", this.indexes.keySet()).toString();
 	}
 
 	public void clear() {

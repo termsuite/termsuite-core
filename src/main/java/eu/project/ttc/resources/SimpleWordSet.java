@@ -45,7 +45,7 @@ public class SimpleWordSet implements SharedResourceObject {
 	private Set<String> elements;
 	
 	public void load(DataResource data) throws ResourceInitializationException {
-		InputStream inputStream;
+		InputStream inputStream = null;
 		this.elements = Sets.newHashSet();
 		try {
 			inputStream = data.getInputStream();
@@ -68,6 +68,8 @@ public class SimpleWordSet implements SharedResourceObject {
 		} catch (IOException e) {
 			LOGGER.error("Could not load file {}",data.getUrl());
 			throw new ResourceInitializationException(e);
+		} finally {
+			IOUtils.closeQuietly(inputStream);
 		}
 	}
 

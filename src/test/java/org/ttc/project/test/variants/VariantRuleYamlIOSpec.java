@@ -1,7 +1,6 @@
 package org.ttc.project.test.variants;
 
 import static com.googlecode.catchexception.CatchException.caughtException;
-import static com.googlecode.catchexception.apis.BDDCatchException.then;
 import static com.googlecode.catchexception.apis.BDDCatchException.when;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -9,6 +8,7 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
+import org.assertj.core.api.BDDAssertions;
 import org.junit.Test;
 import org.ttc.project.TestUtil;
 
@@ -114,7 +114,7 @@ public class VariantRuleYamlIOSpec {
 		VariantRuleYamlIO yamlIO = VariantRuleYamlIO.fromYaml(TestUtil.readFile(badRules1Path));
 		when(yamlIO).getVariantRules();
 		// then: we expect an IndexOutOfBoundsException
-		then(caughtException())
+		BDDAssertions.then(caughtException())
 		        .isInstanceOf(type)
 		        .hasMessageContaining(description)
 		        .hasNoCause();

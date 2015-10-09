@@ -20,7 +20,6 @@ package eu.project.ttc.tools.cli;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -38,13 +37,13 @@ import org.apache.commons.cli.ParseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import ch.qos.logback.classic.Level;
-import ch.qos.logback.classic.LoggerContext;
-
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.ImmutableList;
+
+import ch.qos.logback.classic.Level;
+import ch.qos.logback.classic.LoggerContext;
 
 
 /**
@@ -55,10 +54,6 @@ import com.google.common.collect.ImmutableList;
 public final class TermSuiteCLIUtils {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermSuiteCLIUtils.class);
 	
-
-	/** Path to the aligner engine */
-	private static final String ALIGNER_ENGINE = "eu/project/ttc/all/engines/aligner/Aligner.xml";
-
 	/** Name of the parameter that must be set to the input directory */
 	public static final String P_INPUT_DIR = "directory";
 	
@@ -133,6 +128,7 @@ public final class TermSuiteCLIUtils {
 	 * @return The properties read, or <code>null</code> if the file cannot be
 	 *         read.
 	 */
+	@SuppressWarnings("resource")
 	public static Properties readPropertiesFileName(String fileName) {
 		File preFile = new File(fileName);
 		FileInputStream input = null;
