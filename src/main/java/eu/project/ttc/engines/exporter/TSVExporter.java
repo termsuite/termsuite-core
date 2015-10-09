@@ -72,12 +72,12 @@ public class TSVExporter extends AbstractTermIndexExporter {
 
 	/* the tsv index */
 	private IndexerTSVBuilder tsv;
+	private OutputStreamWriter streamWriter = null;
 	
 	@Override
 	public void initialize(UimaContext context)
 			throws ResourceInitializationException {
 		super.initialize(context);
-		OutputStreamWriter streamWriter = null;
 		try {
 			List<TermProperty> properties = Lists.newArrayList();
 			for(String propertyName:Splitter.on(",").splitToList(termPropertyList))
@@ -89,7 +89,6 @@ public class TSVExporter extends AbstractTermIndexExporter {
 					streamWriter,
 					properties
 					);
-			IOUtils.closeQuietly(streamWriter);
 		} catch (FileNotFoundException e) {
 			LOGGER.error("Could not open a writer to file {}", this.toFilePath);
 			throw new ResourceInitializationException(e);
@@ -126,5 +125,12 @@ public class TSVExporter extends AbstractTermIndexExporter {
 			LOGGER.error("Could not write terms to TSV file {}", this.toFilePath);
 			throw new AnalysisEngineProcessException(e);
 		}
+	}
+	
+	
+	@Override
+	public void destroy() {
+		super.destroy();
+		IOUtils.closeQuietly(streamWriter);
 	}
 }
