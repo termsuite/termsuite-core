@@ -8,14 +8,14 @@ import java.util.Set;
 import java.util.TreeSet;
 
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
-import org.assertj.core.util.Lists;
-import org.assertj.core.util.Maps;
-import org.assertj.core.util.Sets;
 
 import com.google.common.base.Joiner;
 import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.HashMultimap;
+import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 import com.google.common.collect.Multimap;
+import com.google.common.collect.Sets;
 
 import eu.project.ttc.engines.AbstractTermIndexExporter;
 import eu.project.ttc.models.Component;

@@ -2,7 +2,7 @@ package eu.project.ttc.models;
 
 import java.util.Map;
 
-import org.assertj.core.util.Maps;
+import com.google.common.collect.Maps;
 
 public class GroovyAdapter {
 
