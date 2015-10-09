@@ -407,7 +407,6 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 
 	private void accumulateVariations(Term baseTerm, List<TermVariation> currentPath, int depth, List<VariationPath> accu) {
 		if(depth == 0 
-				|| currentPath.size() == depth 
 				|| (!currentPath.isEmpty() && this.equals(baseTerm)) // cycle prevention
 			)
 			return;
