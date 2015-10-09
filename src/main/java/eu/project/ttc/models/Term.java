@@ -349,13 +349,6 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 		return isSingleWord() && firstWord().getWord().isCompound();
 	}
 	
-	private GroovyTerm groovyTerm;
-	public GroovyTerm asGroovyTerm() {
-		if(this.groovyTerm == null)
-			this. groovyTerm = new GroovyTerm(this);
-		return this.groovyTerm;
-	}
-	
 	public int getId() {
 		return id;
 	}

@@ -21,6 +21,7 @@
  *******************************************************************************/
 package eu.project.ttc.engines.variant;
 
+import eu.project.ttc.models.GroovyAdapter;
 import eu.project.ttc.models.GroovyTerm;
 import eu.project.ttc.models.Term;
 import groovy.lang.GroovyClassLoader;
@@ -53,10 +54,15 @@ public class VariantRule {
 	private List<String> sourcePatterns = Lists.newArrayList();
 	private List<String> targetPatterns = Lists.newArrayList();
 	private GroovyObject groovyRule;
+	private GroovyAdapter groovyAdapter;
 	
 	public VariantRule(String name) {
 		super();
 		this.name = name;
+	}
+	
+	public void setGroovyAdapter(GroovyAdapter groovyAdapter) {
+		this.groovyAdapter = groovyAdapter;
 	}
 	
 	void setGroovyRule(String groovyExpression) {
@@ -97,8 +103,8 @@ public class VariantRule {
 
 	public boolean matchExpression(Term source, Term target) {
 		try {
-			GroovyTerm s = source.asGroovyTerm();
-			GroovyTerm t = target.asGroovyTerm();
+			GroovyTerm s = groovyAdapter.asGroovyTerm(source);
+			GroovyTerm t = groovyAdapter.asGroovyTerm(target);
 			return (boolean) this.groovyRule.invokeMethod(
 				GROOVY_MATCH_METHOD_NAME, 
 				new Object[] { s, t });

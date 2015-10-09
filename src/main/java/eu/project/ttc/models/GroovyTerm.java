@@ -23,6 +23,7 @@ package eu.project.ttc.models;
 
 import java.util.List;
 
+import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
@@ -36,7 +37,7 @@ public class GroovyTerm {
 	public String stem;
 	public List<GroovyWord> words;
 	
-	public GroovyTerm(Term term) {
+	public GroovyTerm(Term term, GroovyAdapter adapter) {
 		this.compound = term.isCompound();
 		this.isSingleWord = term.isSingleWord();
 		this.neoclassical = term.isCompound() && term.firstWord().getWord().getCompoundType() == CompoundType.NEOCLASSICAL;
@@ -46,7 +47,7 @@ public class GroovyTerm {
 		List<GroovyWord> aux = Lists.newArrayListWithCapacity(term.getWords().size());
 		
 		for(TermWord w:term.getWords()) 
-			aux.add(w.asGroovyWord());
+			aux.add(adapter.asGroovyWord(w));
 		this.words = ImmutableList.copyOf(aux);
 	}
 
@@ -56,7 +57,7 @@ public class GroovyTerm {
 	
 	@Override
 	public String toString() {
-		return Objects.toStringHelper(this)
+		return MoreObjects.toStringHelper(this)
 				.add("pattern", this.pattern)
 				.add("lemma", this.lemma)
 				.toString()

@@ -9,6 +9,7 @@ import org.ttc.project.Fixtures;
 
 import eu.project.ttc.engines.variant.VariantRule;
 import eu.project.ttc.engines.variant.VariantRuleBuilder;
+import eu.project.ttc.models.GroovyAdapter;
 import eu.project.ttc.models.Term;
 import groovy.util.ResourceException;
 import groovy.util.ScriptException;
@@ -36,6 +37,7 @@ public class VariantRuleSpec {
 					.addSourcePattern("blah blah")
 					.addTargetPattern("blah veor iv")
 					.rule(expression)
+					.setGroovyAdapter(new GroovyAdapter())
 					.create();
 	}
 	

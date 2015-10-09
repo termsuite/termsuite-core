@@ -37,15 +37,19 @@ import com.google.common.collect.ImmutableList;
 
 import eu.project.ttc.engines.variant.VariantRule;
 import eu.project.ttc.engines.variant.VariantRuleYamlIO;
+import eu.project.ttc.models.GroovyAdapter;
 import eu.project.ttc.models.Term;
 
 public class YamlVariantRules implements SharedResourceObject {
 	private static final Logger LOGGER = LoggerFactory.getLogger(YamlVariantRules.class);
 
 	private List<VariantRule> variantRules;
+	private GroovyAdapter groovyAdapter;
+
 
 	@Override
 	public void load(DataResource aData) throws ResourceInitializationException {
+		this.groovyAdapter = new GroovyAdapter();
 		InputStream inputStream;
 		try {
 			inputStream = aData.getInputStream();
@@ -53,6 +57,11 @@ public class YamlVariantRules implements SharedResourceObject {
 			IOUtils.copy(inputStream, writer);
 			VariantRuleYamlIO yamlIO = VariantRuleYamlIO.fromYaml(writer.toString());
 			this.variantRules = ImmutableList.copyOf(yamlIO.getVariantRules());
+			
+			// set the adapter
+			for(VariantRule rule:this.variantRules)
+				rule.setGroovyAdapter(this.groovyAdapter);
+			
 		} catch (IOException e) {
 			LOGGER.error("Could not load the yaml variant rules resource dur to IOException");
 			throw new ResourceInitializationException(e);
@@ -79,4 +88,7 @@ public class YamlVariantRules implements SharedResourceObject {
 		return null;
 	}
 	
+	public void clearAdapterCache() {
+		this.groovyAdapter.clear();
+	}
 }

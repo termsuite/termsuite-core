@@ -23,7 +23,7 @@ package eu.project.ttc.models;
 
 import java.util.List;
 
-import com.google.common.base.Objects;
+import com.google.common.base.MoreObjects;
 import com.google.common.collect.ImmutableList;
 
 import eu.project.ttc.utils.StringUtils;
@@ -64,7 +64,7 @@ public class Word extends LemmaStemHolder {
 	
 	@Override
 	public String toString() {
-		return Objects.toStringHelper(this)
+		return MoreObjects.toStringHelper(this)
 				.add("lemma", this.lemma)
 				.add("isCompound", this.isCompound())
 				.toString();

@@ -54,12 +54,6 @@ public class TermWord {
 		return word;
 	}
 	
-	private GroovyWord  groovyWord;
-	public GroovyWord asGroovyWord() {
-		if(this.groovyWord == null)
-			this.groovyWord = new GroovyWord(this);
-		return groovyWord;
-	}
 
 	@Override
 	public String toString() {

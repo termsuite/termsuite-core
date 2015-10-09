@@ -194,9 +194,6 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 				target, 
 				matchingRule.getName().startsWith(M_PREFIX) ? VariationType.MORPHOLOGICAL : VariationType.SYNTACTICAL,
 				matchingRule.getName());
-//		List<Term> pair = Lists.newArrayList(source,target);
-//		Collections.sort(pair, mwTermComparator);
-//		this.stats.put(matchingRule.getName(), pair);
 		UIMAProfiler.getProfiler("Gathering stats").hit(matchingRule.getName(), source.getPilot() + " || " + target.getPilot());
 	}
 
@@ -210,14 +207,6 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 		// nothing to do at cas level
 	}
 	
-//	private Multimap<String, List<Term>> stats = HashMultimap.create() ;
-//	private static Comparator<Term> mwTermComparator = new Comparator<Term>() {
-//		public int compare(Term a, Term b) {
-//		     return ComparisonChain.start()
-//		         .compare(a.getGroupingKey(), b.getGroupingKey())
-//		         .result();
-//		   }
-//	};
 	
 	private static Comparator<Term> baseTargetComparator = new Comparator<Term>() {
 		public int compare(Term a, Term b) {
@@ -227,6 +216,5 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 		         .result();
 		   }
 	};
-
 	
 }

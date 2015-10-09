@@ -24,6 +24,7 @@ package eu.project.ttc.models;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 import com.google.common.collect.ImmutableList;
 
@@ -35,7 +36,7 @@ public class GroovyWord {
 	public String syntacticLabel;
 	public List<GroovyComponent> components;
 	
-	public GroovyWord(TermWord w) {
+	public GroovyWord(TermWord w, GroovyAdapter groovyAdapter) {
 		this.compound = w.getWord().isCompound();
 		this.neoclassical = w.getWord().isCompound() && w.getWord().getCompoundType() == CompoundType.NEOCLASSICAL;
 		this.lemma = w.getWord().getLemma();
@@ -43,7 +44,7 @@ public class GroovyWord {
 		this.syntacticLabel = w.getSyntacticLabel();
 		List<GroovyComponent> aux= new ArrayList<GroovyComponent>(w.getWord().getComponents().size());
 		for(Component c:w.getWord().getComponents()) 
-			aux.add(c.asGroovyComponent());
+			aux.add(groovyAdapter.asGroovyComponent(c));
 		this.components = ImmutableList.copyOf(aux);
 	}
 
@@ -69,7 +70,7 @@ public class GroovyWord {
 	
 	@Override
 	public String toString() {
-		return Objects.toStringHelper(this)
+		return MoreObjects.toStringHelper(this)
 				.add("lemma", this.lemma)
 				.toString()
 				;

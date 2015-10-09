@@ -68,14 +68,8 @@ public class Component extends LemmaStemHolder implements Comparable<Component> 
 	
 	@Override
 	public String toString() {
-		return Objects.toStringHelper(this.lemma).toString();
+		return this.lemma;
 	}
 
-	private GroovyComponent groovyComponent;
-	public GroovyComponent asGroovyComponent() {
-		if(this.groovyComponent == null) 
-			this.groovyComponent = new GroovyComponent(this);
-		return this.groovyComponent;
-	}
 
 }

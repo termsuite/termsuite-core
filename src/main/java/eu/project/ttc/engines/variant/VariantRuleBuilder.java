@@ -21,6 +21,7 @@
  *******************************************************************************/
 package eu.project.ttc.engines.variant;
 
+import eu.project.ttc.models.GroovyAdapter;
 
 public class VariantRuleBuilder {
 	private VariantRule variantRule;
@@ -59,5 +60,10 @@ public class VariantRuleBuilder {
 
 	public VariantRule create() {
 		return variantRule;
+	}
+
+	public VariantRuleBuilder setGroovyAdapter(GroovyAdapter groovyAdapter) {
+		this.variantRule.setGroovyAdapter(groovyAdapter);
+		return this;
 	}
 }
