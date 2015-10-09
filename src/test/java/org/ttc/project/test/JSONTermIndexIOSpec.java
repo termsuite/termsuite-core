@@ -290,18 +290,11 @@ public class JSONTermIndexIOSpec {
 		
 		// test syntactic variants
 		List<?> variantList = (List<?>)map.get("variations");
-		assertThat(variantList).hasSize(2);
-		LinkedHashMap<?,?> firstVariant = (LinkedHashMap<?,?>)variantList.get(0);
-		assertEquals("Term1", firstVariant.get("base"));
-		assertEquals("Term2", firstVariant.get("variant"));
-		assertEquals("variationRule1", firstVariant.get("info"));
-		assertEquals("syn", firstVariant.get("type"));
-
-		firstVariant = (LinkedHashMap<?,?>)variantList.get(1);
-		assertEquals("Term1", firstVariant.get("base"));
-		assertEquals("Term2", firstVariant.get("variant"));
-		assertEquals("0.956", firstVariant.get("info"));
-		assertEquals("graph", firstVariant.get("type"));
-		
+		assertThat(variantList).hasSize(2)
+			.extracting("base", "variant", "info", "type")
+			.contains(
+					tuple("Term1", "Term2", "variationRule1", "syn"),
+					tuple("Term1", "Term2", "0.956", "graph")
+				);
 	}
 }
