@@ -22,6 +22,7 @@
 package eu.project.ttc.utils;
 
 import java.io.PrintStream;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -38,6 +39,7 @@ import eu.project.ttc.engines.desc.TermSuiteResourceException;
 import eu.project.ttc.models.ContextVector;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.TermOccurrence;
 import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.resources.GeneralLanguageResource;
 import eu.project.ttc.tools.TermSuiteResourceHelper;
@@ -140,7 +142,27 @@ public class TermUtils {
 			System.out.format("\t%-12s: %d\n", e.getCoTerm().getLemma(), e.getNbCooccs());
 		}
 	}
-	
+
+	/**
+	 * Returns the strictness of t1 based on t2, i.e. the ratio of appearance
+	 * in an occurrence that do not overlap with t2. 
+	 * 
+	 * @param t1
+	 * 			the term to analyze
+	 * @param t2
+	 * 			the base term
+	 * @return
+	 * 			fstrict(t1) / f(t1)
+	 */
+	public static double getStrictness(Term t1, Term t2) {
+		Collection<TermOccurrence> occ1 = Lists.newArrayList(t1.getOccurrences());
+		TermOccurrenceUtils.removeOverlaps(t2.getOccurrences(), occ1);
+		double t1Strict = occ1.size();
+		double t1F = t1.getFrequency();
+		return t1Strict / t1F;
+	}
+
+		
 	/**
 	 * 
 	 * @param l

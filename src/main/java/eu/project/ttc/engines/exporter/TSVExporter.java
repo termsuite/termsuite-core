@@ -52,6 +52,7 @@ import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.tools.utils.IndexerTSVBuilder;
+import eu.project.ttc.utils.TermUtils;
 
 /**
  * Exports a {@link TermIndex} in TSV format.
@@ -100,7 +101,7 @@ public class TSVExporter extends AbstractTermIndexExporter {
 		LOGGER.info("Exporting {} terms to TSV file {}", acceptedTerms.size(), this.toFilePath);
 		try {
 			Set<Term> ignore = Sets.newHashSet();
-			for(Term t:acceptedTerms) {
+			for(final Term t:acceptedTerms) {
 				if(ignore.contains(t))
 					continue;
 				tsv.startTerm(t);
@@ -108,14 +109,17 @@ public class TSVExporter extends AbstractTermIndexExporter {
 				Collections.sort(variations, new Comparator<TermVariation>() {
 					@Override
 					public int compare(TermVariation o1, TermVariation o2) {
+						double strictness2 = TermUtils.getStrictness(o2.getVariant(), t);
+						double strictness1 = TermUtils.getStrictness(o1.getVariant(), t);
 						return ComparisonChain.start()
-								.compare(o1.getVariationType().getOrder(), o2.getVariationType().getOrder())
+								.compare(strictness2, strictness1)
+//								.compare(o1.getVariationType().getOrder(), o2.getVariationType().getOrder())
 								.compare(o2.getVariant().getWR(),o1.getVariant().getWR())
 								.result();
 					}
 				});
 				for(TermVariation v:variations) {
-					tsv.addVariant(v.getVariant());
+					tsv.addVariant(v.getVariant(), TermUtils.getStrictness(v.getVariant(), t));
 					ignore.add(v.getVariant());
 				}
 				tsv.endTerm();
