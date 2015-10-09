@@ -104,8 +104,8 @@ public class TermSuiteUtils {
 		return coveredText.replaceAll(TermSuiteConstants.WHITESPACE_PATTERN_STRING, TermSuiteConstants.WHITESPACE_STRING).trim();
 	}
 
-	public static String getTermGroupingKey(TermOccAnnotation annotation) {
-		return annotation.getRuleId() + ": " + annotation.getLemma();
+	public static String getGroupingKey(TermOccAnnotation annotation) {
+		return annotation.getSpottingRuleName() + ": " + annotation.getTermKey();
 	}
 	
 	

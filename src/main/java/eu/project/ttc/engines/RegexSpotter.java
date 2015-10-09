@@ -43,6 +43,7 @@ import eu.project.ttc.types.TermOccAnnotation;
 import eu.project.ttc.types.WordAnnotation;
 import eu.project.ttc.utils.JCasUtils;
 import eu.project.ttc.utils.OccurrenceBuffer;
+import eu.project.ttc.utils.TermSuiteUtils;
 import eu.project.ttc.utils.TermUtils;
 import fr.univnantes.lina.uima.tkregex.LabelledAnnotation;
 import fr.univnantes.lina.uima.tkregex.RegexOccurrence;
@@ -169,7 +170,6 @@ public class RegexSpotter extends TokenRegexAE {
 						occurrence.getBegin(),
 						occurrence.getEnd());
 		
-		annotation.setCategory(occurrence.getRule().getName());
 		
 		StringArray patternFeature = new StringArray(jCas, occurrence.size());
 		FSArray innerWords = new FSArray(jCas, occurrence.size());
@@ -191,10 +191,12 @@ public class RegexSpotter extends TokenRegexAE {
 			innerWords.set(i, wordAnno);
 			i++;
 		}
+		
 		annotation.setWords(innerWords);
-		annotation.setLemma(termLemma.toString());
 		annotation.setPattern(patternFeature);
-		annotation.setRuleId(occurrence.getRule().getName());
+		annotation.setSpottingRuleName(occurrence.getRule().getName());
+		annotation.setTermKey(TermSuiteUtils.getGroupingKey(annotation));
+
 		//		annotation.addToIndexes();
 		this.termIndexResource.getTermIndex().addTermOccurrence(annotation, occurrence, currentFileURI, keepOccurrencesInTermIndex);
 		addedOccurrences++;

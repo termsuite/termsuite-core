@@ -154,23 +154,6 @@ public class JCasUtils {
 	
 
 	
-	public static void firstN(JCas jcas, int typeId, int n) {
-		FSIterator<Annotation> it = jcas.getAnnotationIndex(typeId).iterator();
-		int cnt = 0;
-		while (it.hasNext()) {
-			cnt += 1;
-			Annotation annotation = (Annotation) it.next();
-			if (annotation instanceof TermOccAnnotation) {
-				TermOccAnnotation ta = (TermOccAnnotation) annotation;
-				System.out.println("Annotation n°"+cnt+": " + annotation.getType().getShortName() + " - ["+annotation.getBegin()+","+annotation.getEnd()+"] " + ta.getCategory() +"\n\t"+ annotation.getCoveredText());
-			} else
-				System.out.println("Annotation n°"+cnt+": " + annotation.getType().getShortName() + " - ["+annotation.getBegin()+","+annotation.getEnd()+"] " + annotation.getCoveredText());
-			if(cnt > n) 
-				break;
-		}
-		
-	}
-	
 	public static String arrayToString(StringArray stringArray) {
 		return Joiner.on(' ').join(stringArray.toArray());
 	}

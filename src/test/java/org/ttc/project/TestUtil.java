@@ -52,7 +52,6 @@ public class TestUtil {
 				cas.getCasType(TermOccAnnotation.type),
 				begin,
 				end);
-		anno.setLemma(lemma);
 		anno.addToIndexes();
 	}
 

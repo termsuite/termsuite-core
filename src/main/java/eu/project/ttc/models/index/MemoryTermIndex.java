@@ -159,7 +159,7 @@ public class MemoryTermIndex implements TermIndex {
 
 	@Override
 	public Term addTermOccurrence(TermOccAnnotation annotation, RegexOccurrence occurrence, String fileUrl, boolean keepOccurrence) {
-		String termGroupingKey = TermSuiteUtils.getTermGroupingKey(annotation);
+		String termGroupingKey = TermSuiteUtils.getGroupingKey(annotation);
 		Term term = this.termsByGroupingKey.get(termGroupingKey);
 		if(term == null) {
 			TermBuilder builder = this.newTerm(termGroupingKey);

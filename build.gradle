@@ -1,19 +1,8 @@
-buildscript {
-	repositories {
-		jcenter()
-	}
-	dependencies {
-		classpath "com.dictanova.jcasgen.gradle:gradle-jcasgen-plugin:0.2"
-	}
-}
-  
-
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'maven'
 apply plugin: 'signing'
 apply plugin: 'maven-publish'
-apply plugin: "com.dictanova.jcasgen"
 
 group = 'fr.univ-nantes.julestar'
 archivesBaseName = 'termsuite-core'
@@ -25,7 +14,7 @@ project.ext.name = 'TermSuite'
 project.ext.url = 'https://github.com/termsuite/termsuite-core'
 project.ext.license = 'Apache 2'
 project.ext.licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-project.ext.jcasFile = 'src/main/resources/eu/project/ttc/types/TermSuiteTypeSystem.xml'
+project.ext.jcasFile = 'src/main/resources/TermSuite_TS.xml'
 
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
@@ -199,7 +188,7 @@ dependencies {
 	compile 'fr.univ-nantes.julestar:uima-stemmer:1.0'
 
 	// JCas type generation
-	prepare "org.apache.uima:uimaj-tools:2.4.0"
+	prepare "org.apache.uima:uimaj-tools:2.8.1"
 }
 
 ////////////////////////////////////////////////////////////// SPECIFIC TASKS
@@ -211,7 +200,7 @@ jar {
 		 exclude "META-INF/*"
     }
 
-    // cannot exclude META-INF for groovy to work fine
+    // cannot exclude META-INF for groovy to run
 	from( configurations.runtime.findAll{it.getAbsolutePath().contains("org.codehaus.groovy")}.collect { it.isDirectory() ? it : zipTree(it) } ) {
 		include "META-INF/*"
 	}
