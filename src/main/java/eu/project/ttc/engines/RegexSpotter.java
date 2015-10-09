@@ -198,7 +198,10 @@ public class RegexSpotter extends TokenRegexAE {
 		annotation.setTermKey(TermSuiteUtils.getGroupingKey(annotation));
 
 		//		annotation.addToIndexes();
-		this.termIndexResource.getTermIndex().addTermOccurrence(annotation, occurrence, currentFileURI, keepOccurrencesInTermIndex);
+		this.termIndexResource.getTermIndex().addTermOccurrence(
+				annotation, 
+				currentFileURI, 
+				keepOccurrencesInTermIndex);
 		addedOccurrences++;
 	}
 	

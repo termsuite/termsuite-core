@@ -36,6 +36,7 @@ import java.util.Map.Entry;
 import java.util.zip.ZipInputStream;
 
 import org.apache.commons.lang.mutable.MutableInt;
+import org.apache.uima.cas.FeatureStructure;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -105,7 +106,10 @@ public class TermSuiteUtils {
 	}
 
 	public static String getGroupingKey(TermOccAnnotation annotation) {
-		return annotation.getSpottingRuleName() + ": " + annotation.getTermKey();
+		StringBuilder sb = new StringBuilder();
+		for(FeatureStructure fs:annotation.getWords().toArray())
+			sb.append(((WordAnnotation)fs).getLemma());
+		return annotation.getSpottingRuleName() + ": " + sb.toString();
 	}
 	
 	

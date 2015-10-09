@@ -21,6 +21,7 @@
  *******************************************************************************/
 package eu.project.ttc.engines;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -35,6 +36,7 @@ import org.apache.uima.resource.ResourceInitializationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.collect.ImmutableList;
 import com.google.common.math.IntMath;
 
 import eu.project.ttc.engines.desc.Lang;
@@ -42,9 +44,11 @@ import eu.project.ttc.metrics.DiacriticInsensitiveLevenshtein;
 import eu.project.ttc.metrics.EditDistance;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.TermWord;
 import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.index.AbstractTermValueProvider;
 import eu.project.ttc.models.index.CustomTermIndex;
-import eu.project.ttc.models.index.TermClassProviders;
+import eu.project.ttc.models.index.TermValueProvider;
 import eu.project.ttc.resources.TermIndexResource;
 import fr.univnantes.lina.UIMAProfiler;
 
@@ -83,6 +87,35 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 	
 	private int totalComparisons = 0;
 	private int nbComparisons = 0;
+	
+	private static final char JOIN_CHAR = ':';
+
+	private TermValueProvider nFirstLettersProvider = new AbstractTermValueProvider("") {
+		@Override
+		public Collection<String> getClasses(Term term) {
+			if(term.getWords().size() == 1)
+				// do not gather sw term with that method
+				return ImmutableList.of();
+			StringBuilder builder = new StringBuilder();
+			String normalizedStem;
+			int i = 0;
+			for(TermWord tw:term.getWords()) {
+				if(i>0) {
+					builder.append(JOIN_CHAR);
+				}
+				normalizedStem = tw.getWord().getNormalizedStem();
+				if(normalizedStem.length() > n)
+					builder.append(normalizedStem.substring(0, n).toLowerCase(language.getLocale()));
+				else
+					builder.append(normalizedStem.toLowerCase(language.getLocale()));
+				i++;
+			}
+			if(builder.length() >= n)
+				return ImmutableList.of(builder.toString());
+			else
+				return ImmutableList.of();
+		}
+	};
 
 	
 	@Override
@@ -106,7 +139,7 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 		final TermIndex termIndex = this.termIndexResource.getTermIndex();
 		CustomTermIndex customIndex = termIndex.createCustomIndex(
 				indexName,
-				TermClassProviders.getNFirstLettersNormalizedClassProvider(n, language.getLocale()));
+				nFirstLettersProvider);
 		
 		// clean singleton classes
 		logger.debug("Cleaning singleton keys");

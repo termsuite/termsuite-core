@@ -38,8 +38,9 @@ import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermClass;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.VariationType;
-import eu.project.ttc.models.index.TermClassProvider;
-import eu.project.ttc.models.index.TermClassProviders;
+import eu.project.ttc.models.index.TermIndexes;
+import eu.project.ttc.models.index.TermValueProvider;
+import eu.project.ttc.models.index.TermValueProviders;
 
 public class TermSpec {
 
@@ -83,7 +84,7 @@ public class TermSpec {
 	
 	@Test
 	public void testGetLemmaStemKeys() {
-		TermClassProvider provider = TermClassProviders.classProviders.get(TermClassProviders.KEY_WORD_COUPLE_LEMMA_STEM);
+		TermValueProvider provider = TermValueProviders.get(TermIndexes.WORD_COUPLE_LEMMA_STEM);
 		Assert.assertEquals(
 				ImmutableList.of("energie+eol"),
 				provider.getClasses(term1));
@@ -247,7 +248,7 @@ public class TermSpec {
 	
 	@Test
 	public void testGetLemmaKeys() {
-		TermClassProvider provider = TermClassProviders.classProviders.get(TermClassProviders.KEY_WORD_LEMMA);
+		TermValueProvider provider = TermValueProviders.get(TermIndexes.WORD_LEMMA);
 		Assert.assertEquals(
 				ImmutableList.of("énergie", "éolien"),
 				provider.getClasses(term1));

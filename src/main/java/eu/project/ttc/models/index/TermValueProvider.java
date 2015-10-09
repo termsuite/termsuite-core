@@ -23,20 +23,17 @@ package eu.project.ttc.models.index;
 
 import java.util.Collection;
 
-import com.google.common.collect.ImmutableList;
-
 import eu.project.ttc.models.Term;
 
-public abstract class TermSingleClassProvider extends AbstractTermClassProvider {
-	
-	TermSingleClassProvider(String name) {
-		super(name);
-	}
-
-	@Override
-	public Collection<String> getClasses(Term term) {
-		return ImmutableList.of(getClass(term));
-	}
-
-	public abstract String getClass(Term term);
+/**
+ * 
+ * The root class of any object that can get values
+ * from a term.
+ * 
+ * @author Damien Cram
+ *
+ */
+public interface TermValueProvider {
+	public String getName();
+	public Collection<String> getClasses(Term term);
 }

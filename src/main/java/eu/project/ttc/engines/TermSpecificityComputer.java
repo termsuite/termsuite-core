@@ -46,7 +46,6 @@ public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 	private GeneralLanguage generalLanguage;
 	
 	private int nbWordAnnotations = 0;
-	private int nbDocumentCount = 0;
 	
 	private double wrLogStandardDeviation = 0d;
 	private double wrLogAverage = 0d;
@@ -58,7 +57,6 @@ public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 			it.next();
 			this.nbWordAnnotations++;
 		}
-		this.nbDocumentCount++;
 	}
 	
 	@Override
@@ -66,9 +64,14 @@ public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 			throws AnalysisEngineProcessException {
 		LOGGER.info("Computing specificities");
 		final TermIndex termIndex = this.termIndexResource.getTermIndex();
-		termIndex.setCorpusWordCount(this.nbWordAnnotations);
-		termIndex.setDocumentCount(this.nbDocumentCount);
 		
+		/*
+		 * Ugly trick to access nbWordAnnotations from outside (only 
+		 * for the GeneralLanguage resource generation) without
+		 * modifying TermIndex data model.
+		 */
+		System.getProperties().setProperty("termsuite.nbWordAnnotations", Integer.toString(nbWordAnnotations));
+
 		computeWR(termIndex);
 		computeStandardDeviation(termIndex);
 		computeWRLogZScore(termIndex);
@@ -132,7 +135,6 @@ public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 				
 			}
 		}
-		termIndex.setMaxWR((float)maxWR);
 	}
 
 }

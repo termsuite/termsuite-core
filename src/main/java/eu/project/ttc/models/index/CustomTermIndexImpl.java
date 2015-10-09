@@ -41,11 +41,11 @@ public class CustomTermIndexImpl implements CustomTermIndex {
 	
 	private ListMultimap<String, Term> index;
 
-	private TermClassProvider classProvider;
+	private TermValueProvider valueProvider;
 	
-	CustomTermIndexImpl(TermClassProvider classProvider) {
+	CustomTermIndexImpl(TermValueProvider valueProvider) {
 		super();
-		this.classProvider = classProvider;
+		this.valueProvider = valueProvider;
 		this.index = ArrayListMultimap.create();
 	}
 
@@ -61,8 +61,13 @@ public class CustomTermIndexImpl implements CustomTermIndex {
 
 	@Override
 	public void indexTerm(Term term) {
-		for(String cls:classProvider.getClasses(term))
-			this.index.put(cls, term);
+		Collection<String> classes = valueProvider.getClasses(term);
+		if(classes != null) {
+			for(String cls:classes) {
+				if(cls!= null)			
+					this.index.put(cls, term);
+			}
+		}
 	}
 
 	@Override
@@ -80,7 +85,7 @@ public class CustomTermIndexImpl implements CustomTermIndex {
 
 	@Override
 	public void removeTerm(Term t) {
-		for(String k:classProvider.getClasses(t))
+		for(String k:valueProvider.getClasses(t))
 			this.index.remove(k, t);
 	}
 
@@ -94,7 +99,7 @@ public class CustomTermIndexImpl implements CustomTermIndex {
 		for(String rem:toRemove) {
 			LOGGER.warn("Removing key {} from custom index {} because its size {} is bigger than the threshhold {}",
 					rem,
-					this.classProvider.getName(),
+					this.valueProvider.getName(),
 					this.index.get(rem).size(),
 					threshholdSize);
 			index.removeAll(rem);

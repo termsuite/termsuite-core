@@ -26,7 +26,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Locale;
 import java.util.Map;
 
 import org.slf4j.Logger;
@@ -42,63 +41,32 @@ import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermWord;
 import eu.project.ttc.utils.TermSuiteConstants;
 
-public class TermClassProviders {
-	private static final Logger LOGGER = LoggerFactory.getLogger(TermClassProviders.class);
-	public static final String KEY_TERM_LEMMA = "term-lemma";
-	public static final String KEY_TERM_LEMMA_LOWER_CASE = "term-lemma-lower-case";
-	public static final String KEY_WORD_LEMMA = "word-lemma";
-	public static final String KEY_WORD_COUPLE_LEMMA_LEMMA = "word-lemma-lemma";
-	public static final String KEY_WORD_COUPLE_LEMMA_STEM = "word-lemma-stem";
-	public static final String KEY_WORD_LEMMA_LOWER_CASE = "word-lemma-lower-case";
-	public static final String KEY_3RD_FIRST_LETTERS = "3rd-first-letters";
-	public static final String KEY_TERM_NOCLASS = "no-class";
+public class TermValueProviders {
+	private static final Logger LOGGER = LoggerFactory.getLogger(TermValueProviders.class);
 	
-	private static final char JOIN_CHAR = ':';
-	
+	public static final TermValueProvider TERM_SINGLE_WORD_LEMMA_PROVIDER = new AbstractTermValueProvider(TermIndexes.SINGLE_WORD_LEMMA) {
+		@Override
+		public Collection<String> getClasses(Term term) {
+			if(term.isSingleWord())
+				return Lists.newArrayList(term.getWords().get(0).getWord().getLemma());
+			return null;
+		}
+	};
 
-	public static TermClassProvider getNFirstLettersNormalizedClassProvider(final int n, final Locale locale) {
-		return new AbstractTermClassProvider(KEY_3RD_FIRST_LETTERS) {
-			@Override
-			public Collection<String> getClasses(Term term) {
-				if(term.getWords().size() == 1)
-					// do not gather sw term with that method
-					return ImmutableList.of();
-				StringBuilder builder = new StringBuilder();
-				String normalizedStem;
-				int i = 0;
-				for(TermWord tw:term.getWords()) {
-					if(i>0) {
-						builder.append(JOIN_CHAR);
-					}
-					normalizedStem = tw.getWord().getNormalizedStem();
-					if(normalizedStem.length() > n)
-						builder.append(normalizedStem.substring(0, n).toLowerCase(locale));
-					else
-						builder.append(normalizedStem.toLowerCase(locale));
-					i++;
-				}
-				if(builder.length() >= n)
-					return ImmutableList.of(builder.toString());
-				else
-					return ImmutableList.of();
-			}
-		};
-	}
-
-	public static final TermClassProvider TERM_LEMMA_LOWER_CASE_PROVIDER = new AbstractTermClassProvider(KEY_TERM_LEMMA_LOWER_CASE) {
+	public static final TermValueProvider TERM_LEMMA_LOWER_CASE_PROVIDER = new AbstractTermValueProvider(TermIndexes.LEMMA_LOWER_CASE) {
 		public java.util.Collection<String> getClasses(Term term) {
 			return ImmutableList.of(term.getLemma().toLowerCase());
 		};
 	};
 
-	public static final TermClassProvider TERM_NOCLASS_PROVIDER = new AbstractTermClassProvider(KEY_TERM_NOCLASS) {
+	public static final TermValueProvider TERM_NOCLASS_PROVIDER = new AbstractTermValueProvider(TermIndexes.TERM_NOCLASS) {
 		private String value = "noclass";
 		public java.util.Collection<String> getClasses(Term term) {
 			return ImmutableList.of(value);
 		};
 	};
 
-	public static final TermClassProvider WORD_LEMMA_PROVIDER = new AbstractTermClassProvider(KEY_WORD_LEMMA) {
+	public static final TermValueProvider WORD_LEMMA_PROVIDER = new AbstractTermValueProvider(TermIndexes.WORD_LEMMA) {
 		@Override
 		public Collection<String> getClasses(Term term) {
 			List<String> lemmas = Lists.newArrayListWithCapacity(term.getWords().size());
@@ -121,7 +89,7 @@ public class TermClassProviders {
 	};
 
 	
-	public static final TermClassProvider WORD_LEMMA_STEM_PROVIDER = new AbstractTermClassProvider(KEY_WORD_COUPLE_LEMMA_STEM) {
+	public static final TermValueProvider WORD_LEMMA_STEM_PROVIDER = new AbstractTermValueProvider(TermIndexes.WORD_COUPLE_LEMMA_STEM) {
 
 		@Override
 		public Collection<String> getClasses(Term term) {
@@ -159,8 +127,7 @@ public class TermClassProviders {
 	};
 	protected static final String NO_LEMMA_SET = "__no_lemma_set__";
 		
-	
-	public static final TermClassProvider WORD_LEMMA_LEMMA_PROVIDER = new AbstractTermClassProvider(KEY_WORD_COUPLE_LEMMA_LEMMA) {
+	public static final TermValueProvider WORD_LEMMA_LEMMA_PROVIDER = new AbstractTermValueProvider(TermIndexes.WORD_COUPLE_LEMMA_LEMMA) {
 
 		@Override
 		public Collection<String> getClasses(Term term) {
@@ -200,21 +167,26 @@ public class TermClassProviders {
 		}
 	};
 	
-	public static final TermSingleClassProvider WORD_LEMMA_LOWER_CASE = new TermSingleClassProvider(KEY_WORD_LEMMA_LOWER_CASE) {
+	public static final TermSingleValueProvider WORD_LEMMA_LOWER_CASE = new TermSingleValueProvider(TermIndexes.WORD_LEMMA_LOWER_CASE) {
 		@Override
 		public String getClass(Term term) {
 			return Character.toString(Character.toLowerCase(term.getGroupingKey().charAt(0)));
 		}
 	};
 	
-	public static final Map<String, TermClassProvider> classProviders = Maps.newHashMap();
+	private static final Map<String, TermValueProvider> valueProviders = Maps.newHashMap();
 
 	static {
-		classProviders.put(KEY_TERM_NOCLASS, TERM_NOCLASS_PROVIDER);
-		classProviders.put(KEY_TERM_LEMMA_LOWER_CASE, TERM_LEMMA_LOWER_CASE_PROVIDER);
-		classProviders.put(KEY_WORD_LEMMA_LOWER_CASE, WORD_LEMMA_LOWER_CASE);
-		classProviders.put(KEY_WORD_LEMMA, WORD_LEMMA_PROVIDER);
-		classProviders.put(KEY_WORD_COUPLE_LEMMA_STEM, WORD_LEMMA_STEM_PROVIDER);
-		classProviders.put(KEY_WORD_COUPLE_LEMMA_LEMMA, WORD_LEMMA_LEMMA_PROVIDER);
+		valueProviders.put(TermIndexes.SINGLE_WORD_LEMMA, TERM_SINGLE_WORD_LEMMA_PROVIDER);
+		valueProviders.put(TermIndexes.TERM_NOCLASS, TERM_NOCLASS_PROVIDER);
+		valueProviders.put(TermIndexes.LEMMA_LOWER_CASE, TERM_LEMMA_LOWER_CASE_PROVIDER);
+		valueProviders.put(TermIndexes.WORD_LEMMA_LOWER_CASE, WORD_LEMMA_LOWER_CASE);
+		valueProviders.put(TermIndexes.WORD_LEMMA, WORD_LEMMA_PROVIDER);
+		valueProviders.put(TermIndexes.WORD_COUPLE_LEMMA_STEM, WORD_LEMMA_STEM_PROVIDER);
+		valueProviders.put(TermIndexes.WORD_COUPLE_LEMMA_LEMMA, WORD_LEMMA_LEMMA_PROVIDER);
+	}
+
+	public static TermValueProvider get(String key) {
+		return valueProviders.get(key);
 	}
 }

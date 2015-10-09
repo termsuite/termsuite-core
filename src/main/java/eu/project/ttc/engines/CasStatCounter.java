@@ -47,6 +47,7 @@ import com.google.common.base.Functions;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.ImmutableSortedMap;
 import com.google.common.collect.Iterables;
+import com.google.common.collect.Iterators;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Ordering;
 
@@ -187,9 +188,16 @@ public class CasStatCounter extends JCasAnnotator_ImplBase {
 		// graphical variants are bidirectional
 		nbGraphicalVariants/=2;
 		
-		LOGGER.info("[{}] Nb terms:    {} [sw: {}, mw: {}]", statName, tIndex.getTerms().size(), tIndex.singleWordTermCount(),tIndex.multiWordTermCount());
-		LOGGER.info("[{}] Nb words:    {} [compounds: {}]", statName, tIndex.getWords().size(), tIndex.compoundWordCount());
-		LOGGER.info("[{}] Nb occurrences: {} [primary: {}]", statName, nbOccurrences, nbPrimaryOccOccurrences);
+		LOGGER.info("[{}] Nb terms:    {} [sw: {}, mw: {}]", statName, 
+				tIndex.getTerms().size(), 
+				Iterators.size(tIndex.singleWordTermIterator()),
+				Iterators.size(tIndex.multiWordTermIterator()));
+		LOGGER.info("[{}] Nb words:    {} [compounds: {}]", statName, 
+				tIndex.getWords().size(), 
+				Iterators.size(tIndex.compoundWordTermIterator()));
+		LOGGER.info("[{}] Nb occurrences: {} [primary: {}]", statName, 
+				nbOccurrences, 
+				nbPrimaryOccOccurrences);
 		LOGGER.info("[{}] Nb variants: {} [morph: {}, syn: {}, graph: {}]", statName, 
 				nbMorphologicalVariants + nbSyntacticVariants + nbGraphicalVariants, 
 				nbMorphologicalVariants, 

@@ -29,6 +29,14 @@ import eu.project.ttc.models.Term;
 public interface CustomTermIndex {
 	public Collection<String> keySet();
 	public List<Term> getTerms(String key);
+	
+	/**
+	 * Adds the param term to internal index. Ignores it
+	 * if it is null.
+	 * 
+	 * @param term
+	 * 			The term to add to index.
+	 */
 	public void indexTerm(Term term);
 	public void cleanSingletonKeys();
 	public int size();

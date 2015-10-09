@@ -42,7 +42,7 @@ import eu.project.ttc.models.ContextVector;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.index.CustomTermIndex;
-import eu.project.ttc.models.index.TermClassProviders;
+import eu.project.ttc.models.index.TermValueProviders;
 import eu.project.ttc.resources.BilingualDictionary;
 import eu.project.ttc.utils.AlignerUtils;
 import eu.project.ttc.utils.IteratorUtils;
@@ -72,7 +72,7 @@ public class BilingualAligner {
 		this.dico = dico;
 		this.targetTermino = targetTermino;
 		this.distance = distance;
-		this.targetTerminoLemmaIndex = targetTermino.createCustomIndex("by_lemma", TermClassProviders.TERM_LEMMA_LOWER_CASE_PROVIDER);
+		this.targetTerminoLemmaIndex = targetTermino.createCustomIndex("by_lemma", TermValueProviders.TERM_LEMMA_LOWER_CASE_PROVIDER);
 	}
 	
 	/**

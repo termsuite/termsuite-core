@@ -42,7 +42,8 @@ import eu.project.ttc.models.Term;
 import eu.project.ttc.models.VariationType;
 import eu.project.ttc.models.index.CustomTermIndex;
 import eu.project.ttc.models.index.IndexStats;
-import eu.project.ttc.models.index.TermClassProviders;
+import eu.project.ttc.models.index.TermIndexes;
+import eu.project.ttc.models.index.TermValueProviders;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.resources.YamlVariantRules;
 import fr.univnantes.lina.UIMAProfiler;
@@ -73,8 +74,8 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 		 *  morphological gathering based on single-word (with [compound] tag in yaml).
 		 *  TODO : understanding why
 		 */
-		gather(TermClassProviders.KEY_WORD_COUPLE_LEMMA_LEMMA);
-		gather(TermClassProviders.KEY_WORD_COUPLE_LEMMA_STEM);
+		gather(TermIndexes.WORD_COUPLE_LEMMA_LEMMA);
+		gather(TermIndexes.WORD_COUPLE_LEMMA_STEM);
 		UIMAProfiler.getProfiler("AnalysisEngine").stop(this, "process");
 	}
 	
@@ -89,7 +90,7 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 		// create the index
 		CustomTermIndex customIndex = this.termIndexResource.getTermIndex().createCustomIndex(
 				gatheringKey,
-				TermClassProviders.classProviders.get(gatheringKey));
+				TermValueProviders.get(gatheringKey));
 		LOGGER.debug("Rule-based gathering over {} classes", customIndex.size());
 
 		// clean singleton classes

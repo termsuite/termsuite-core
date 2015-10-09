@@ -33,6 +33,8 @@ import org.apache.uima.resource.ResourceInitializationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.collect.Iterators;
+
 import eu.project.ttc.metrics.AssociationRate;
 import eu.project.ttc.metrics.LogLikelihood;
 import eu.project.ttc.metrics.MutualInformation;
@@ -131,7 +133,7 @@ public class Contextualizer extends JCasAnnotator_ImplBase {
 		LOGGER.debug("1 - Create occurrence index");
 		termIndex.createOccurrenceIndex();
 		
-		int total = allTerms ?   termIndex.getTerms().size() : termIndex.singleWordTermCount();
+		int total = allTerms ?   termIndex.getTerms().size() : Iterators.size(termIndex.singleWordTermIterator());
 		// 2- Generate context vectors
 		LOGGER.debug("2 - Create context vectors. allTerms: {} (number of contexts to compute: {})", 
 				allTerms,

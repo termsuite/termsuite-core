@@ -34,10 +34,8 @@ import org.slf4j.LoggerFactory;
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.AbstractIterator;
-import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Iterables;
 import com.google.common.collect.Maps;
-import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
 
 import eu.project.ttc.engines.desc.Lang;
@@ -52,9 +50,7 @@ import eu.project.ttc.models.TermWord;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.types.TermOccAnnotation;
 import eu.project.ttc.types.WordAnnotation;
-import eu.project.ttc.utils.IteratorUtils;
 import eu.project.ttc.utils.TermSuiteUtils;
-import fr.univnantes.lina.uima.tkregex.RegexOccurrence;
 
 /**
  * The in-memory implementation of a {@link TermIndex}.
@@ -64,6 +60,7 @@ import fr.univnantes.lina.uima.tkregex.RegexOccurrence;
  */
 public class MemoryTermIndex implements TermIndex {
 	private static final Logger LOGGER = LoggerFactory.getLogger(MemoryTermIndex.class);
+	private static final String MSG_NO_SUCH_PROVIDER = "No such value provider: %s";
 	
 	/*
 	 * The root index of terms. Variants must not be referenced at 
@@ -76,11 +73,8 @@ public class MemoryTermIndex implements TermIndex {
 	private Map<String, Word> wordIndex = Maps.newHashMap();
 	private Map<String, Document> documents = Maps.newHashMap();
 	private Set<TermClass> termClasses = Sets.newHashSet();
-
-	private Multimap<String, Term> singleWordTermsByLemma = HashMultimap.create();
 	
 	public void inspect() {
-		System.out.format("singleWordTermsByLemma: %d\n", singleWordTermsByLemma.size());
 		System.out.format("termsById: %d\n", termsById.size());
 		System.out.format("termsByGroupingKey: %d\n", termsByGroupingKey.size());
 		System.out.format("wordIndex: %d\n", wordIndex.size());
@@ -90,19 +84,13 @@ public class MemoryTermIndex implements TermIndex {
 		for(Document d:documents.values()) {
 			d.inspect("\t");
 		}
-			
 	}
 
 	private String name;
 	private Lang lang;
 	private String corpusId;
 	
-	private float maxSpecificity = 0;
-	
 	private int currentId = 0;
-	
-	private int corpusWordCount = -1;
-	private int corpusDocumentCount = -1;
 	
 	public MemoryTermIndex(String name, Lang lang) {
 		this.lang = lang;
@@ -118,8 +106,8 @@ public class MemoryTermIndex implements TermIndex {
 
 		this.termsByGroupingKey.put(term.getGroupingKey(), term);
 		this.termsById.put(term.getId(), term);
-		if(term.isSingleWord())
-			this.singleWordTermsByLemma.put(term.firstWord().getWord().getLemma(), term);
+		for(CustomTermIndex termIndex:this.customIndexes.values())
+			termIndex.indexTerm(term);
 		for(TermWord tw:term.getWords())
 			privateAddWord(tw.getWord(), false);
 	}
@@ -158,7 +146,7 @@ public class MemoryTermIndex implements TermIndex {
 
 
 	@Override
-	public Term addTermOccurrence(TermOccAnnotation annotation, RegexOccurrence occurrence, String fileUrl, boolean keepOccurrence) {
+	public Term addTermOccurrence(TermOccAnnotation annotation, String fileUrl, boolean keepOccurrence) {
 		String termGroupingKey = TermSuiteUtils.getGroupingKey(annotation);
 		Term term = this.termsByGroupingKey.get(termGroupingKey);
 		if(term == null) {
@@ -168,10 +156,10 @@ public class MemoryTermIndex implements TermIndex {
 				Word w = this.addWord(wa);
 				builder.addWord(
 						w, 
-						occurrence.getLabelledAnnotations().get(i).getLabel() 
+						annotation.getPattern(i) 
 					);
 			}
-			builder.setSpottingRule(occurrence.getRule().getName());
+			builder.setSpottingRule(annotation.getSpottingRuleName());
 			term = builder.createAndAddToIndex();
 		}
 		term.addOccurrence(
@@ -247,31 +235,6 @@ public class MemoryTermIndex implements TermIndex {
 	}
 
 	@Override
-	public float getMaxSpecificity() {
-		return maxSpecificity;
-	}
-
-	@Override
-	public void setMaxWR(float maxSpecificity) {
-		this.maxSpecificity = maxSpecificity;
-	}
-
-	@Override
-	public int singleWordTermCount() {
-		return IteratorUtils.count(singleWordTermIterator());
-	}
-
-	@Override
-	public int multiWordTermCount() {
-		return IteratorUtils.count(multiWordTermIterator());
-	}
-
-	@Override
-	public int compoundWordCount() {
-		return IteratorUtils.count(compoundWordTermIterator());
-	}
-
-	@Override
 	public int newId() {
 		while(this.termsById.containsKey(currentId))
 			this.currentId++;
@@ -285,16 +248,23 @@ public class MemoryTermIndex implements TermIndex {
 
 	@Override
 	public CustomTermIndex getCustomIndex(String indexName) {
+		if(this.customIndexes.get(indexName) == null) {
+			TermValueProvider valueProvider = TermValueProviders.get(indexName);
+			createCustomIndex(indexName, valueProvider);
+		}
 		return this.customIndexes.get(indexName);
 	}
 
 	@Override
 	public CustomTermIndex createCustomIndex(String indexName,
-			TermClassProvider termClassProvider) {
+			TermValueProvider valueProvider) {
 		Preconditions.checkArgument(
 				!this.customIndexes.containsKey(indexName),
 				String.format("Custom term index %s already exists.", indexName));
-		CustomTermIndexImpl customIndex = new CustomTermIndexImpl(termClassProvider);
+		Preconditions.checkArgument(valueProvider != null, 
+				MSG_NO_SUCH_PROVIDER,
+				indexName);
+		CustomTermIndexImpl customIndex = new CustomTermIndexImpl(valueProvider);
 		this.customIndexes.put(indexName, customIndex);
 
 		LOGGER.debug("Indexing {} terms to index {}", this.getTerms().size(), indexName);
@@ -306,11 +276,6 @@ public class MemoryTermIndex implements TermIndex {
 	@Override
 	public void dropCustomIndex(String indexName) {
 		this.customIndexes.remove(indexName);
-	}
-
-	@Override
-	public Collection<Term> getSingleWordTermByLemma(String lemma) {
-		return singleWordTermsByLemma.get(lemma);
 	}
 
 	@Override
@@ -368,9 +333,6 @@ public class MemoryTermIndex implements TermIndex {
 		for(TermVariation v:toRem)
 			v.getBase().removeTermVariation(v);
 		
-		if(t.isSingleWord()) 
-			singleWordTermsByLemma.remove(t.getLemma(), t);
-		
 		/*
 		 * Removes from context vectors.
 		 * 
@@ -415,29 +377,6 @@ public class MemoryTermIndex implements TermIndex {
 	}
 
 	@Override
-	public void setCorpusWordCount(int nbWordAnnotations) {
-		this.corpusWordCount = nbWordAnnotations;
-	}
-	
-	@Override
-	public int getCorpusWordCount() {
-		return corpusWordCount;
-	}
-
-	@Override
-	public void setDocumentCount(int nbDocumentCount) {
-		this.corpusDocumentCount = nbDocumentCount;
-	}
-
-	@Override
-	public int getDocumentCount() {
-		if(this.corpusDocumentCount == -1)
-			return this.getDocuments().size();
-		else
-			return this.corpusDocumentCount;
-	}
-
-	@Override
 	public void createOccurrenceIndex() {
 		for(Term t:this.getTerms()) {
 			for(TermOccurrence o:t.getOccurrences()) {
@@ -463,7 +402,6 @@ public class MemoryTermIndex implements TermIndex {
 	public String toString() {
 		return MoreObjects.toStringHelper(this).addValue(name)
 				.add("terms", this.termsById.size())
-				.add("corpus size", this.corpusWordCount)
 				.toString();
 	}
 	

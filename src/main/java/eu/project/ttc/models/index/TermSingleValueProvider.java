@@ -21,17 +21,22 @@
  *******************************************************************************/
 package eu.project.ttc.models.index;
 
-public abstract class AbstractTermClassProvider implements TermClassProvider {
-	
-	private String name;
+import java.util.Collection;
 
-	AbstractTermClassProvider(String name) {
-		super();
-		this.name = name;
+import com.google.common.collect.ImmutableList;
+
+import eu.project.ttc.models.Term;
+
+public abstract class TermSingleValueProvider extends AbstractTermValueProvider {
+	
+	TermSingleValueProvider(String name) {
+		super(name);
 	}
 
 	@Override
-	public String getName() {
-		return name;
+	public Collection<String> getClasses(Term term) {
+		return ImmutableList.of(getClass(term));
 	}
+
+	public abstract String getClass(Term term);
 }

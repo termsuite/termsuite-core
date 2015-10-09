@@ -30,6 +30,8 @@ import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.models.ContextVector;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.index.CustomTermIndex;
+import eu.project.ttc.models.index.TermIndexes;
 import eu.project.ttc.resources.BilingualDictionary;
 
 public class AlignerUtils {
@@ -66,10 +68,12 @@ public class AlignerUtils {
 	public static ContextVector translateVector(ContextVector sourceVector, 
 			BilingualDictionary dictionary, int translationStrategy, TermIndex targetTermino) {
 		ContextVector targetVector = new ContextVector();
+		CustomTermIndex swtLemmaIndex = targetTermino.getCustomIndex(TermIndexes.SINGLE_WORD_LEMMA);
+		
 		for(ContextVector.Entry entry:sourceVector.getEntries()) {
 			Set<Term> translations = Sets.newHashSet();
 			for(String targetLemma:dictionary.getTranslations(entry.getCoTerm().getLemma())) {
-				Collection<Term> translatedTerms = targetTermino.getSingleWordTermByLemma(targetLemma);
+				Collection<Term> translatedTerms = swtLemmaIndex.getTerms(targetLemma);
 				if(!translatedTerms.isEmpty()) 
 					translations.add(translatedTerms.iterator().next());
 			}

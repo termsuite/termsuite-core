@@ -21,12 +21,17 @@
  *******************************************************************************/
 package eu.project.ttc.models.index;
 
-import java.util.Collection;
+public abstract class AbstractTermValueProvider implements TermValueProvider {
+	
+	private String name;
 
-import eu.project.ttc.models.Term;
+	public AbstractTermValueProvider(String name) {
+		super();
+		this.name = name;
+	}
 
-
-public interface TermClassProvider {
-	public String getName();
-	public Collection<String> getClasses(Term term);
+	@Override
+	public String getName() {
+		return name;
+	}
 }

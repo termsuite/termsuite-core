@@ -21,17 +21,21 @@
  *******************************************************************************/
 package eu.project.ttc.models;
 
+import java.io.File;
 import java.util.Collection;
 import java.util.Iterator;
 
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.index.CustomTermIndex;
-import eu.project.ttc.models.index.TermClassProvider;
+import eu.project.ttc.models.index.TermValueProvider;
 import eu.project.ttc.types.TermOccAnnotation;
-import fr.univnantes.lina.uima.tkregex.RegexOccurrence;
 
 public interface TermIndex {
 
+	
+	/*
+	 * Attributes
+	 */
 	
 	/**
 	 * The term index id name
@@ -44,22 +48,21 @@ public interface TermIndex {
 	 * @return
 	 */
 	public Lang getLang();
-
+	public void setCorpusId(String corpusID);
+	public String getCorpusId();
+	
 	
 	/*
 	 * Terms
-	 */
-	public void addTerm(Term term);
-	public Collection<Term> getTerms();
-	/**
-	 * 
-	 * @param base
-	 * @return
 	 */
 	public Term getTermByGroupingKey(String groupingKey);
 	public Term getTermById(int termId);
 	public TermBuilder newTerm(String termId);
 	public void removeTerm(Term t);
+	public void addTerm(Term term);
+	public Collection<Term> getTerms();
+	public Collection<TermClass> getTermClasses();
+	public void classifyTerms(Term classHead, Iterable<Term> classTerms);
 
 	/*
 	 * Words
@@ -67,31 +70,44 @@ public interface TermIndex {
 	public void addWord(Word word);
 	public Collection<Word> getWords();
 	public void cleanOrphanWords();
-	/**
-	 * Get all single word terms that have the given lemma.
-	 * 
-	 * There is generally at most one SW term by lemma, except in a few case where
-	 * lemma are the same but syntactic labels are diffrente 
-	 * (e.g. "v: couvent" & "a: couvent")
-	 * 
-	 * 
-	 * @param lemma
-	 * @return
+	public Word getWord(String lemma);
+
+	/*
+	 * Documents
 	 */
-	public Collection<Term> getSingleWordTermByLemma(String lemma);
+	/**
+	 * Returns the document identified by this url or 
+	 * creates a new one.
+	 * 
+	 * @param url
+	 * 			A url accessible by {@link File}'s constructor.
+	 * @return
+	 * 			The created document
+	 */
+	public Document getDocument(String url);
+	public Collection<Document> getDocuments();
+	
+	
+//	/**
+//	 * Get all single word terms that have the given lemma.
+//	 * 
+//	 * There is generally at most one SW term by lemma, except in a few case where
+//	 * lemma are the same but syntactic labels are diffrente 
+//	 * (e.g. "v: couvent" & "a: couvent")
+//	 * 
+//	 * 
+//	 * @param lemma
+//	 * @return
+//	 */
+//	public Collection<Term> getSingleWordTermByLemma(String lemma);
 
 	/*
 	 * Term classes
 	 */
-	public Collection<TermClass> getTermClasses();
-	public void classifyTerms(Term classHead, Iterable<Term> classTerms);
 	
 	
-	//TODO remove these
-	public Term addTermOccurrence(TermOccAnnotation annotation, RegexOccurrence occurrence, String FileUri, boolean keepOccurrenceInTermIndex);
-	public Word getWord(String lemma);
+
 	
-	//TODO remove these
 	public Iterator<Term> singleWordTermIterator();
 	public Iterator<Term> multiWordTermIterator();
 	public Iterator<Term> compoundWordTermIterator();
@@ -100,12 +116,14 @@ public interface TermIndex {
 	 * Custom indexes
 	 */
 	public CustomTermIndex getCustomIndex(String indexName);
-	public CustomTermIndex createCustomIndex(String indexName, TermClassProvider termClassProvider);
+	public CustomTermIndex createCustomIndex(String indexName, TermValueProvider termClassProvider);
 	public void dropCustomIndex(String indexName);
 
 	/*
-	 * Occurrence index
+	 * Occurrences
 	 */
+	//TODO remove these
+	public Term addTermOccurrence(TermOccAnnotation annotation, String FileUri, boolean keepOccurrenceInTermIndex);
 	public void createOccurrenceIndex();
 	public void clearOccurrenceIndex();
 
@@ -119,31 +137,20 @@ public interface TermIndex {
 	/*
 	 * Specificity
 	 */
-	public float getMaxSpecificity();
-	public void setMaxWR(float maxSpecificity);
+//	public float getMaxSpecificity();
+//	public void setMaxWR(float maxSpecificity);
 
-	public int singleWordTermCount();
-	public int multiWordTermCount();
-	public int compoundWordCount();
 
-	/*
-	 * Documents
-	 */
-	public Document getDocument(String url);
-	public Collection<Document> getDocuments();
 
 
 	/*
 	 * corpus word and document counts
 	 */
-	public int getCorpusWordCount();
-	public void setCorpusWordCount(int nbWordAnnotations);
+//	public void setCorpusWordCount(int nbWordAnnotations);
+//
+//	public void setDocumentCount(int nbDocumentCount);
 
-	public void setDocumentCount(int nbDocumentCount);
-	public int getDocumentCount();
 
-	public void setCorpusId(String corpusID);
-	public String getCorpusId();
 
 
 }
