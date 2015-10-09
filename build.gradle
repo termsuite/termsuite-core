@@ -1,8 +1,19 @@
+buildscript {
+	repositories {
+		jcenter()
+	}
+	dependencies {
+		classpath "com.dictanova.jcasgen.gradle:gradle-jcasgen-plugin:0.2"
+	}
+}
+  
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'maven'
 apply plugin: 'signing'
 apply plugin: 'maven-publish'
+apply plugin: "com.dictanova.jcasgen"
 
 group = 'fr.univ-nantes.julestar'
 archivesBaseName = 'termsuite-core'
