@@ -22,6 +22,17 @@ targetCompatibility = 1.7
 
 
 
+
+///////////////////////////////////////////////////////////////// CONFIGURATION
+javadoc{
+	options {
+		failOnError = false
+		encoding "UTF-8"
+		docEncoding "UTF-8"
+		charSet "UTF-8"
+	}
+}
+
 ////////////////////////////////////////////////////////////////// DEPENDENCIES
 
 task javadocJar(type: Jar) {
