@@ -25,11 +25,8 @@ targetCompatibility = 1.7
 
 ///////////////////////////////////////////////////////////////// CONFIGURATION
 
-
-
-clean.doLast {
-    project.delete (fileTree(dir: 'src/main/java/dictanova'))
-    println 'Cleaning typesystem generated sources.'
+tasks.withType(JavaCompile) {
+	options.encoding = 'UTF-8'
 }
 
 ////////////////////////////////////////////////////////////////// DEPENDENCIES
