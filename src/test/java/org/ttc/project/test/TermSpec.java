@@ -68,9 +68,9 @@ public class TermSpec {
 	public void initContexts() {
 		TermIndex termIndex = Fixtures.termIndexWithOccurrences();
 		termIndex.createOccurrenceIndex();
-		termWithContext1 = termIndex.getTermByGroupingKey("term1");
-		termWithContext2 = termIndex.getTermByGroupingKey("term2");
-		termWithContext3 = termIndex.getTermByGroupingKey("term3");
+		termWithContext1 = termIndex.getTermByGroupingKey("n: énergie");
+		termWithContext2 = termIndex.getTermByGroupingKey("a: éolien");
+		termWithContext3 = termIndex.getTermByGroupingKey("n: accès");
 		
 	}
 	
@@ -107,17 +107,17 @@ public class TermSpec {
 		assertThat(termWithContext1.getContextVector().getEntries())
 			.hasSize(2)
 			.extracting("coTerm.groupingKey", "nbCooccs", "assocRate")
-			.contains(tuple("term2", 1, 0d), tuple("term3", 3, 0d));
+			.contains(tuple("a: éolien", 1, 0d), tuple("n: accès", 3, 0d));
 
 		assertThat(termWithContext2.getContextVector().getEntries())
 			.hasSize(2)
 			.extracting("coTerm.groupingKey", "nbCooccs", "assocRate")
-			.contains(tuple("term1", 1, 0d), tuple("term3", 1, 0d));
+			.contains(tuple("n: énergie", 1, 0d), tuple("n: accès", 1, 0d));
 
 		assertThat(termWithContext3.getContextVector().getEntries())
 			.hasSize(2)
 			.extracting("coTerm.groupingKey", "nbCooccs", "assocRate")
-			.contains(tuple("term1", 3, 0d), tuple("term2", 1, 0d));
+			.contains(tuple("n: énergie", 3, 0d), tuple("a: éolien", 1, 0d));
 	}
 
 	@Test
@@ -131,17 +131,17 @@ public class TermSpec {
 		assertThat(termWithContext1.getContextVector().getEntries())
 			.hasSize(2)
 			.extracting("coTerm.groupingKey", "nbCooccs", "assocRate")
-			.contains(tuple("term2", 2, 0d), tuple("term3", 6, 0d));
+			.contains(tuple("a: éolien", 2, 0d), tuple("n: accès", 6, 0d));
 	
 		assertThat(termWithContext2.getContextVector().getEntries())
 			.hasSize(2)
 			.extracting("coTerm.groupingKey", "nbCooccs", "assocRate")
-			.contains(tuple("term1", 2, 0d), tuple("term3", 2, 0d));
+			.contains(tuple("n: énergie", 2, 0d), tuple("n: accès", 2, 0d));
 	
 		assertThat(termWithContext3.getContextVector().getEntries())
 			.hasSize(2)
 			.extracting("coTerm.groupingKey", "nbCooccs", "assocRate")
-			.contains(tuple("term1", 6, 0d), tuple("term2", 2, 0d));
+			.contains(tuple("n: énergie", 6, 0d), tuple("a: éolien", 2, 0d));
 	}
 
 
@@ -173,17 +173,17 @@ public class TermSpec {
 		assertThat(termWithContext1.getContextVector().getEntries())
 			.hasSize(1)
 			.extracting("coTerm.groupingKey", "nbCooccs", "assocRate")
-			.contains(tuple("term2", 8, 0d));
+			.contains(tuple("a: éolien", 8, 0d));
 	
 		assertThat(termWithContext2.getContextVector().getEntries())
 			.hasSize(1)
 			.extracting("coTerm.groupingKey", "nbCooccs", "assocRate")
-			.contains(tuple("term1", 2, 0d));
+			.contains(tuple("n: énergie", 2, 0d));
 	
 		assertThat(termWithContext3.getContextVector().getEntries())
 			.hasSize(1)
 			.extracting("coTerm.groupingKey", "nbCooccs", "assocRate")
-			.contains(tuple("term1", 6, 0d));
+			.contains(tuple("n: énergie", 6, 0d));
 	}
 
 	@Test

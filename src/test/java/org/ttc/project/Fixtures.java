@@ -25,6 +25,7 @@ import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.Document;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermBuilder;
+import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.models.WordBuilder;
 import eu.project.ttc.models.index.MemoryTermIndex;
@@ -32,7 +33,7 @@ import eu.project.ttc.models.index.MemoryTermIndex;
 public class Fixtures {
 
 	/**
-	 * énergie:noun
+	 * énergie
 	 */
 	public static Word word1() {
 		Word w = WordBuilder.start()
@@ -43,7 +44,7 @@ public class Fixtures {
 	}
 
 	/**
-	 * éolien:adjective
+	 * éolien
 	 */
 	public static Word word2() {
 		Word w = WordBuilder.start()
@@ -54,7 +55,7 @@ public class Fixtures {
 	}
 
 	/**
-	 * accès:noun
+	 * accès
 	 */
 	public static Word word3() {
 		Word w = WordBuilder.start()
@@ -65,7 +66,7 @@ public class Fixtures {
 	}
 
 	/**
-	 * radioélectrique:adjective (compound)
+	 * radioélectrique (compound)
 	 */
 	public static Word word4() {
 		Word w = WordBuilder.start()
@@ -78,7 +79,7 @@ public class Fixtures {
 	}
 
 	/**
-	 * de:preposition
+	 * de
 	 */
 	public static Word word5() {
 		Word w = WordBuilder.start()
@@ -89,7 +90,7 @@ public class Fixtures {
 	}
 
 	/**
-	 * éolien:adjective
+	 * recouvrement
 	 */
 	public static Word word6() {
 		Word w = WordBuilder.start()
@@ -101,11 +102,11 @@ public class Fixtures {
 
 
 	/**
-	 * totale:adjective
+	 * total
 	 */
 	public static Word word7() {
 		Word w = WordBuilder.start()
-				.setLemma("totale")
+				.setLemma("total")
 				.setStem("total")
 				.create();
 		return w;
@@ -113,74 +114,160 @@ public class Fixtures {
 
 	
 	/**
-	 * énergie éolien
+	 * na: énergie éolien
 	 * @return
 	 */
-	public static Term term1() {
-		return new TermBuilder()
+	public static Term term1(TermIndex termIndex) {
+		return TermBuilder.start(termIndex)
 					.setId(1)
-					.setGroupingKey("énergie éolien")
+					.setGroupingKey("na: énergie éolien")
 					.addWord(word1(), "N")
 					.addWord(word2(), "A")
-					.create();
+					.createAndAddToIndex();
 	}
 	
 	/**
-	 * radioélectrique
+	 * a: radioélectrique
 	 * @return
 	 */
-	public static Term term2() {
-		return new TermBuilder()
+	public static Term term2(TermIndex termIndex) {
+		return TermBuilder.start(termIndex)
 					.setId(2)
-					.setGroupingKey("radioélectrique")
+					.setGroupingKey("a: radioélectrique")
 					.addWord(word4(), "A")
-					.create();
+					.createAndAddToIndex();
 	}
 	
 	/**
-	 * accès radioélectrique de recouvrement
+	 * napn: accès radioélectrique de recouvrement
 	 * @return
 	 */
-	public static Term term3() {
-		return new TermBuilder()
+	public static Term term3(TermIndex termIndex) {
+		return TermBuilder.start(termIndex)
 				.setId(3)
-				.setGroupingKey("accès radioélectrique de recouvrement")
+				.setGroupingKey("napn: accès radioélectrique de recouvrement")
 				.addWord(word3(), "N")
 				.addWord(word4(), "A")
 				.addWord(word5(), "P")
 				.addWord(word6(), "N")
-				.create();
+				.createAndAddToIndex();
 	}
 
 	/**
-	 * accès radioélectrique de recouvrement
+	 * napna: accès radioélectrique de recouvrement total
 	 * @return
 	 */
-	public static Term term4() {
-		return new TermBuilder()
+	public static Term term4(TermIndex termIndex) {
+		return TermBuilder.start(termIndex)
 				.setId(4)
-				.setGroupingKey("accès radioélectrique de recouvrement total")
+				.setGroupingKey("napna: accès radioélectrique de recouvrement total")
 				.addWord(word3(), "N")
 				.addWord(word4(), "A")
 				.addWord(word5(), "P")
 				.addWord(word6(), "N")
 				.addWord(word7(), "A")
-				.create();
+				.createAndAddToIndex();
 	}
 	
 
 	/**
-	 * accès radioélectrique de recouvrement
+	 * na: accès radioélectrique
 	 * @return
 	 */
-	public static Term term5() {
-		return new TermBuilder()
+	public static Term term5(TermIndex termIndex) {
+		return TermBuilder.start(termIndex)
 				.setId(5)
-				.setGroupingKey("accès radioélectrique")
+				.setGroupingKey("na: accès radioélectrique")
 				.addWord(word3(), "N")
 				.addWord(word4(), "A")
-				.create();
+				.createAndAddToIndex();
 	}
+
+
+	/**
+	 * a: total
+	 * @return
+	 */
+	public static Term term7(TermIndex termIndex) {
+		return TermBuilder.start(termIndex)
+				.setId(7)
+				.setGroupingKey("a: total")
+				.addWord(word7(), "A")
+				.createAndAddToIndex();
+	}
+	
+	/**
+	 * n: accès
+	 * @return
+	 */
+	public static Term term8(TermIndex termIndex) {
+		return TermBuilder.start(termIndex)
+				.setId(8)
+				.setGroupingKey("n: accès")
+				.addWord(word3(), "N")
+				.createAndAddToIndex();
+	}
+	
+	/**
+	 * n: recouvrement
+	 * @return
+	 */
+	public static Term term9(TermIndex termIndex) {
+		return TermBuilder.start(termIndex)
+				.setId(9)
+				.setGroupingKey("n: recouvrement")
+				.addWord(word6(), "N")
+				.createAndAddToIndex();
+	}
+
+	/**
+	 * n: énergie
+	 * @return
+	 */
+	public static Term term10(TermIndex termIndex) {
+		return TermBuilder.start(termIndex)
+				.setId(10)
+				.setGroupingKey("n: énergie")
+				.addWord(word1(), "N")
+				.createAndAddToIndex();
+	}
+
+	/**
+	 * a: éolien
+	 * @return
+	 */
+	public static Term term11(TermIndex termIndex) {
+		return TermBuilder.start(termIndex)
+				.setId(11)
+				.setGroupingKey("a: éolien")
+				.addWord(word2(), "A")
+				.createAndAddToIndex();
+	}
+
+	/**
+	 * na: recouvrement total
+	 * @return
+	 */
+	public static Term term12(TermIndex termIndex) {
+		return TermBuilder.start(termIndex)
+				.setId(12)
+				.setGroupingKey("na: recouvrement total")
+				.addWord(word6(), "N")
+				.addWord(word7(), "A")
+				.createAndAddToIndex();
+	}
+
+	public static Term term1() {return term1(emptyTermIndex());}
+	public static Term term2() {return term2(emptyTermIndex());}
+	public static Term term3() {return term3(emptyTermIndex());}
+	public static Term term4() {return term4(emptyTermIndex());}
+	public static Term term5() {return term5(emptyTermIndex());}
+	public static Term term7() {return term7(emptyTermIndex());}
+	public static Term term8() {return term8(emptyTermIndex());}
+	public static Term term9() {return term9(emptyTermIndex());}
+	public static Term term10() {return term10(emptyTermIndex());}
+	public static Term term11() {return term11(emptyTermIndex());}
+	public static Term term12() {return term12(emptyTermIndex());}
 	
 	/**
 	 * @return
@@ -196,19 +283,18 @@ public class Fixtures {
 		return new Document("url2");
 	}
 	
-	
+	public static MemoryTermIndex emptyTermIndex() {
+		return new MemoryTermIndex("EmptyTermIndex", Lang.EN);
+	}
+
+		
 	public static MemoryTermIndex termIndex() {
 		MemoryTermIndex memoryTermIndex = new MemoryTermIndex("TermIndex", Lang.EN);
-		Term term1 = term1();
-		memoryTermIndex.addTerm(term1);
-		Term term2 = term2();
-		memoryTermIndex.addTerm(term2);
-		Term term3 = term3();
-		memoryTermIndex.addTerm(term3);
-		Term term4 = term4();
-		memoryTermIndex.addTerm(term4);
-		Term term5 = term5();
-		memoryTermIndex.addTerm(term5);
+//		term1(memoryTermIndex);
+//		term2(memoryTermIndex);
+//		term3(memoryTermIndex);
+//		term4(memoryTermIndex);
+//		term5(memoryTermIndex);
 		return memoryTermIndex;
 	}
 	
@@ -217,24 +303,24 @@ public class Fixtures {
 		final Document doc = document1();
 		
 		
-		new TermBuilder(memoryTermIndex)
-			.setGroupingKey("term1")
+		TermBuilder.start(memoryTermIndex)
+			.setGroupingKey("n: énergie")
 			.addWord(Fixtures.word1(), "N")
 			.addOccurrence(0, 10, doc, "blabla")
 			.addOccurrence(31, 40, doc, "blabla")
 			.addOccurrence(61, 70, doc, "blabla")
 			.createAndAddToIndex();
 		
-		new TermBuilder(memoryTermIndex)
-			.setGroupingKey("term2")
+		TermBuilder.start(memoryTermIndex)
+			.setGroupingKey("a: éolien")
 			.addWord(Fixtures.word2(), "A")
 			.addOccurrence(11, 20, doc, "blabla")
 			.createAndAddToIndex();
 		
 		
 		
-		new TermBuilder(memoryTermIndex)
-			.setGroupingKey("term3")
+		TermBuilder.start(memoryTermIndex)
+			.setGroupingKey("n: accès")
 			.addWord(Fixtures.word3(), "N")
 			.addOccurrence(21, 30, doc, "blabla")
 			.addOccurrence(41, 50, doc, "blabla")

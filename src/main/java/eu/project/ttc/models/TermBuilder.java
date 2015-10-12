@@ -23,11 +23,17 @@ package eu.project.ttc.models;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 
+import eu.project.ttc.utils.TermSuiteUtils;
+
 public class TermBuilder {
+	private static final Logger LOGGER  = LoggerFactory.getLogger(TermBuilder.class);
 	
 	private TermIndex termIndex;
 	private String groupingKey;
@@ -42,10 +48,10 @@ public class TermBuilder {
 
 	private Optional<ContextVector> contextVector = Optional.absent();
 	
-	public TermBuilder() {
+	private TermBuilder() {
 	}
 	
-	public TermBuilder(TermIndex termIndex) {
+	private TermBuilder(TermIndex termIndex) {
 		Preconditions.checkNotNull(termIndex);
 		this.termIndex = termIndex;
 	}
@@ -60,8 +66,13 @@ public class TermBuilder {
 	}
 	
 	public Term create() {
-		Preconditions.checkNotNull(groupingKey);
-		Term term = new Term(id.get(), groupingKey, termWords, spottingRule);
+		String gKey = TermSuiteUtils.getGroupingKey(this.termWords);
+		if(this.groupingKey != null && !groupingKey.equals(gKey)) {
+			LOGGER.warn("Given grouping key ({}) does not match expected grouping key: {}",
+					this.groupingKey,
+					gKey);
+		}
+		Term term = new Term(id.get(), gKey, termWords, spottingRule);
 		if(wr.isPresent())
 			term.setWR(wr.get());
 		if(wrLog.isPresent())
@@ -138,5 +149,12 @@ public class TermBuilder {
 
 	public void setContextVector(ContextVector vector) {
 		this.contextVector  = Optional.of(vector);
+	}
+	public static TermBuilder start(TermIndex termIndex) {
+		return new TermBuilder(termIndex);
+	}
+
+	public static TermBuilder start() {
+		return new TermBuilder();
 	}
 }

@@ -41,11 +41,15 @@ import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermOccurrence;
 import eu.project.ttc.models.TermVariation;
+import eu.project.ttc.models.TermWord;
 import eu.project.ttc.resources.GeneralLanguageResource;
 import eu.project.ttc.tools.TermSuiteResourceHelper;
 
 public class TermUtils {
-	
+
+	private static final String MSG_NOT_AN_EXTENSION = "Term '%s' is no extension of term '%s'";
+	private static final String MSG_NOT_AN_AFFIX = "Term '%s' is contained into term '%s', but not an affix.";
+
 
 	/**
 	 * Most frequent first
@@ -161,8 +165,142 @@ public class TermUtils {
 		double t1F = t1.getFrequency();
 		return t1Strict / t1F;
 	}
+	
+	
+	/**
+	 * 
+	 * Finds in a {@link TermIndex} the biggest extension affix term of a term depending 
+	 * on a base term.
+	 * 
+	 * For example, the term "offshore wind turbine" is an extension of 
+	 * "wind turbine". The extension affix is the term "offshore".
+	 * 
+	 * @param termIndex
+	 * 			The term index that both terms belong to.
+	 * @param extension
+	 * 			The extension term
+	 * @param base
+	 * 			The base term
+	 * @return
+	 * 		the extension affix found in <code>termIndex</code>, <code>null</code> if none
+	 * 		has been found.
+	 * @throws IllegalArgumentException if <code>extension</code> id not an 
+	 * 			extension of the term <code>base</code>.
+	 */
+	public static Term getExtensionAffix(TermIndex termIndex, Term extension, Term base) {
+		int index = TermUtils.getPosition(base, extension);
+		if(index == -1)
+			throw new IllegalStateException(String.format(MSG_NOT_AN_EXTENSION, 
+					extension,
+					base)
+				);
 
+		/*
+		 *  true if prefix, false if suffix
+		 */
+		boolean isPrefix = false;
+		if(index == 0)
+			isPrefix = true;
+		else if(index + base.getWords().size() == extension.getWords().size())
+			isPrefix = false; // suffix
+		else {
+			throw new IllegalStateException(String.format(MSG_NOT_AN_AFFIX, 
+					extension,
+					base)
+				);
+		}
 		
+		if(isPrefix) 
+			return findBiggestSuffix(
+					termIndex, 
+					extension.getWords().subList(index + base.getWords().size(), extension.getWords().size())
+				);
+		else
+			return findBiggestPrefix(
+					termIndex, 
+					extension.getWords().subList(0, index)
+				);
+	}
+
+	/**
+	 * Finds in a {@link TermIndex} the biggest prefix of a sequence of
+	 * {@link TermWord}s that exists as a term.
+	 * 
+	 * @param termIndex
+	 * 			the term index
+	 * @param words
+	 * 			the initial sequence of {@link TermWord}s
+	 * @return
+	 * 			A {@link Term} found in <code>termIndex</code> that makes the
+	 * 			biggest possible prefix sequence for <code>words</code>.
+	 */
+	public static Term findBiggestPrefix(TermIndex termIndex, List<TermWord> words) {
+		Term t;
+		String gKey;
+		for(int i = words.size(); i > 0 ; i--) {
+			gKey = TermSuiteUtils.getGroupingKey(words.subList(0, i));
+			t = termIndex.getTermByGroupingKey(gKey);
+			if(t!=null)
+				return t;
+		}
+		return null;
+	}
+	
+
+	/**
+	 * Finds in a {@link TermIndex} the biggest suffix of a sequence of
+	 * {@link TermWord}s that exists as a term.
+	 * 
+	 * @param termIndex
+	 * 			the term index
+	 * @param words
+	 * 			the initial sequence of {@link TermWord}s
+	 * @return
+	 * 			A {@link Term} found in <code>termIndex</code> that makes the
+	 * 			biggest possible suffix sequence for <code>words</code>.
+
+	 */
+	public static Term findBiggestSuffix(TermIndex termIndex, List<TermWord> words) {
+		Term t;
+		String gKey;
+		for(int i = 0; i < words.size() ; i++) {
+			gKey = TermSuiteUtils.getGroupingKey(words.subList(i, words.size()));
+			t = termIndex.getTermByGroupingKey(gKey);
+			if(t!=null)
+				return t;
+		}
+		return null;
+	}
+	
+	/**
+	 * Finds the index of occurrence of a term's sub-term.
+	 * 
+	 * 
+	 * @param subTerm
+	 * 			the inner term, must be included in <code>term</code>
+	 * @param term
+	 * 			the container term.
+	 * @return
+	 * 			the starting index of <code>subTerm</code> in <code>term</code>. -1 otherwise.
+	 */
+	public static int getPosition(Term subTerm, Term term) {
+		int startingIndex = -1;
+		int j = 0;
+		for(int i=0; i<term.getWords().size(); i++) {
+			if(term.getWords().get(i).equals(subTerm.getWords().get(j))) {
+				j++;
+				if(startingIndex == -1) 
+					startingIndex = i;
+			} else {
+				startingIndex = -1;
+				j = 0;
+			}
+			if(j == subTerm.getWords().size())
+				return startingIndex;
+		}
+		return -1;
+	}
+
 	/**
 	 * 
 	 * @param l
@@ -179,5 +317,8 @@ public class TermUtils {
 			throw new TermSuiteResourceException("Could not read resource " + resName, e);
 		}
 	}
+	
+	
+
 
 }

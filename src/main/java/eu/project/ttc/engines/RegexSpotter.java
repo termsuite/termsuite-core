@@ -43,6 +43,7 @@ import eu.project.ttc.types.TermOccAnnotation;
 import eu.project.ttc.types.WordAnnotation;
 import eu.project.ttc.utils.JCasUtils;
 import eu.project.ttc.utils.OccurrenceBuffer;
+import eu.project.ttc.utils.TermSuiteConstants;
 import eu.project.ttc.utils.TermSuiteUtils;
 import eu.project.ttc.utils.TermUtils;
 import fr.univnantes.lina.uima.tkregex.LabelledAnnotation;
@@ -180,7 +181,7 @@ public class RegexSpotter extends TokenRegexAE {
 			WordAnnotation word = (WordAnnotation) la.getAnnotation();
 			termLemma.append(word.getLemma());
 			if(i<occurrence.size()-1)
-				termLemma.append(' ');
+				termLemma.append(TermSuiteConstants.WHITESPACE);
 			WordAnnotation wordAnno = (WordAnnotation) la.getAnnotation();
 			if(wordAnno.getRegexLabel() != null) {
 				if(!wordAnno.getRegexLabel().equals(la.getLabel())) {

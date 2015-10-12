@@ -150,7 +150,7 @@ public class MemoryTermIndex implements TermIndex {
 		String termGroupingKey = TermSuiteUtils.getGroupingKey(annotation);
 		Term term = this.termsByGroupingKey.get(termGroupingKey);
 		if(term == null) {
-			TermBuilder builder = this.newTerm(termGroupingKey);
+			TermBuilder builder = TermBuilder.start(this);
 			for (int i = 0; i < annotation.getWords().size(); i++) {
 				WordAnnotation wa = annotation.getWords(i);
 				Word w = this.addWord(wa);
@@ -241,10 +241,10 @@ public class MemoryTermIndex implements TermIndex {
 		return this.currentId;
 	}
 	
-	@Override
-	public TermBuilder newTerm(String termId) {
-		return new TermBuilder(this).setGroupingKey(termId);
-	}
+//	@Override
+//	public TermBuilder newTerm(String termId) {
+//		return new TermBuilder(this).setGroupingKey(termId);
+//	}
 
 	@Override
 	public CustomTermIndex getCustomIndex(String indexName) {

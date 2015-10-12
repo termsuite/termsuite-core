@@ -50,7 +50,7 @@ public class TermClassSpec {
 		
 		final Document doc = Fixtures.document1();
 		
-		term1 = new TermBuilder(termIndex)
+		term1 = TermBuilder.start(termIndex)
 			.setGroupingKey("term1")
 			.addWord(Fixtures.word1(), "N")
 			.addOccurrence(0, 10, doc, "t1")
@@ -58,7 +58,7 @@ public class TermClassSpec {
 			.addOccurrence(61, 70, doc, "t1") // included in t3
 			.createAndAddToIndex();
 		
-		term2 = new TermBuilder(termIndex)
+		term2 = TermBuilder.start(termIndex)
 			.setGroupingKey("term2")
 			.addWord(Fixtures.word2(), "A")
 			.addOccurrence(9, 15, doc, "t2") // overlaps with term1
@@ -67,7 +67,7 @@ public class TermClassSpec {
 		
 		
 		
-		term3 = new TermBuilder(termIndex)
+		term3 = TermBuilder.start(termIndex)
 			.setGroupingKey("term3")
 			.addWord(Fixtures.word3(), "N")
 			.addOccurrence(12, 18, doc, "t3") // overlaps with t2, but taken anyway

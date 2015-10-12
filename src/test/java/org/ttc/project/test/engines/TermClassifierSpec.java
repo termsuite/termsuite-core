@@ -56,11 +56,11 @@ public class TermClassifierSpec {
 	@Before
 	public void set() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException, ResourceInitializationException {
 		this.termIndex = Fixtures.termIndex();
-		this.term1 = this.termIndex.getTermByGroupingKey(Fixtures.term1().getGroupingKey());
-		this.term2 = this.termIndex.getTermByGroupingKey(Fixtures.term2().getGroupingKey());
-		this.term3 = this.termIndex.getTermByGroupingKey(Fixtures.term3().getGroupingKey());
-		this.term4 = this.termIndex.getTermByGroupingKey(Fixtures.term4().getGroupingKey());
-		this.term5 = this.termIndex.getTermByGroupingKey(Fixtures.term5().getGroupingKey());
+		this.term1 = Fixtures.term1(termIndex);
+		this.term2 = Fixtures.term2(termIndex);
+		this.term3 = Fixtures.term3(termIndex);
+		this.term4 = Fixtures.term4(termIndex);
+		this.term5 = Fixtures.term5(termIndex);
 
 		this.term1.setFrequency(5);
 		this.term2.setFrequency(4);

@@ -49,9 +49,9 @@ public class CrossTableSpec {
 		this.termIndex = Fixtures.termIndexWithOccurrences();
 		this.termIndex.createOccurrenceIndex();
 		
-		t1 = this.termIndex.getTermByGroupingKey("term1");
-		t2 = this.termIndex.getTermByGroupingKey("term2");
-		t3 = this.termIndex.getTermByGroupingKey("term3");
+		t1 = this.termIndex.getTermByGroupingKey("n: énergie");
+		t2 = this.termIndex.getTermByGroupingKey("a: éolien");
+		t3 = this.termIndex.getTermByGroupingKey("n: accès");
 		
 		// T1 T2 T3 T1 T3 T3 T1
 		t1.computeContextVector(OccurrenceType.SINGLE_WORD, 1, 1, false);

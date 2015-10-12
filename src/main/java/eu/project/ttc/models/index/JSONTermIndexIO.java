@@ -200,7 +200,7 @@ public class JSONTermIndexIO {
 			} else if (TERMS.equals(fieldname)) {
 				jp.nextToken();
 				while ((tok = jp.nextToken()) != JsonToken.END_ARRAY) { 
-					TermBuilder builder = new TermBuilder(termIndex);
+					TermBuilder builder = TermBuilder.start(termIndex);
 					List<TempVecEntry> currentContextVector = Lists.newArrayList();
 					int currentTermId = -1;
 					while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {

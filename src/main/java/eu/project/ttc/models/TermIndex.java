@@ -57,7 +57,7 @@ public interface TermIndex {
 	 */
 	public Term getTermByGroupingKey(String groupingKey);
 	public Term getTermById(int termId);
-	public TermBuilder newTerm(String termId);
+//	public TermBuilder newTerm(String termId);
 	public void removeTerm(Term t);
 	public void addTerm(Term term);
 	public Collection<Term> getTerms();

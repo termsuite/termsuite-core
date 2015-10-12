@@ -27,6 +27,7 @@ import java.lang.reflect.Method;
 import java.net.URI;
 import java.net.URL;
 import java.net.URLClassLoader;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedHashMap;
@@ -36,20 +37,22 @@ import java.util.Map.Entry;
 import java.util.zip.ZipInputStream;
 
 import org.apache.commons.lang.mutable.MutableInt;
-import org.apache.uima.cas.FeatureStructure;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.base.Joiner;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
+import eu.project.ttc.models.TermWord;
 import eu.project.ttc.types.TermOccAnnotation;
 import eu.project.ttc.types.WordAnnotation;
 
 public class TermSuiteUtils {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermSuiteUtils.class);
+	private static final String GROUPING_KEY_FORMAT = "%s: %s";
 	public static final IndexingKey<String, String> KEY_ONE_FIRST_LETTERS = getNFirstLetterIndexingKey(1);
 	public static final IndexingKey<String, String> KEY_TWO_FIRST_LETTERS = getNFirstLetterIndexingKey(2);
 	public static final IndexingKey<String, String> KEY_THREE_FIRST_LETTERS = getNFirstLetterIndexingKey(3);
@@ -106,11 +109,31 @@ public class TermSuiteUtils {
 	}
 
 	public static String getGroupingKey(TermOccAnnotation annotation) {
-		StringBuilder sb = new StringBuilder();
-		for(FeatureStructure fs:annotation.getWords().toArray())
-			sb.append(((WordAnnotation)fs).getLemma());
-		return annotation.getSpottingRuleName() + ": " + sb.toString();
+		StringBuilder patternSb = new StringBuilder();
+		List<String> lemmas = Lists.newArrayListWithExpectedSize(annotation.getWords().size());
+		for(int i=0; i< annotation.getWords().size(); i++) {
+			patternSb.append(annotation.getPattern(i).toLowerCase());
+			lemmas.add(annotation.getWords(i).getLemma());
+		}
+		return toGroupingKey(patternSb, lemmas);
 	}
+
+	private static String toGroupingKey(StringBuilder patternSb, List<String> lemmas) {
+		return String.format(GROUPING_KEY_FORMAT, 
+				patternSb.toString(), 
+				Joiner.on(TermSuiteConstants.WHITESPACE).join(lemmas));
+	}
+	
+	public static String getGroupingKey(Collection<TermWord> words) {
+		StringBuilder patternSb = new StringBuilder();
+		List<String> lemmas = Lists.newArrayListWithExpectedSize(words.size());
+		for(TermWord tw:words) {
+			patternSb.append(tw.getSyntacticLabel().toLowerCase());
+			lemmas.add(tw.getWord().getLemma());
+		}
+		return toGroupingKey(patternSb, lemmas);
+	}
+
 	
 	
 	/**
