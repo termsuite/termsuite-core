@@ -99,38 +99,38 @@ public class TermUtilsSpec {
 	public void testGetExtensionAffix() {
 		assertEquals(
 				eolien, 
-				TermUtils.getExtensionAffix(termIndex, energie_eolien, energie)
+				TermUtils.getExtensionAffix(termIndex, energie, energie_eolien)
 				);
 		
 		assertEquals(
 				energie, 
-				TermUtils.getExtensionAffix(termIndex, energie_eolien, eolien)
+				TermUtils.getExtensionAffix(termIndex, eolien, energie_eolien)
 				);
 
 		
 		assertEquals(
 				acces,
-				TermUtils.getExtensionAffix(termIndex, acces_radioelectrique, radioelectrique)
+				TermUtils.getExtensionAffix(termIndex, radioelectrique, acces_radioelectrique)
 				);
 
 		assertEquals(
 				radioelectrique,
-				TermUtils.getExtensionAffix(termIndex, acces_radioelectrique, acces)
+				TermUtils.getExtensionAffix(termIndex, acces, acces_radioelectrique)
 				);
 
 		assertEquals(
 				acces_radioelectrique,
-				TermUtils.getExtensionAffix(termIndex, acces_radioelectrique_de_recouvrement, recouvrement)
+				TermUtils.getExtensionAffix(termIndex, recouvrement, acces_radioelectrique_de_recouvrement)
 				);
 
 		assertEquals(
 				recouvrement,
-				TermUtils.getExtensionAffix(termIndex, acces_radioelectrique_de_recouvrement, acces_radioelectrique)
+				TermUtils.getExtensionAffix(termIndex, acces_radioelectrique, acces_radioelectrique_de_recouvrement)
 				);
 
 		assertEquals(
 				recouvrement_total,
-				TermUtils.getExtensionAffix(termIndex, acces_radioelectrique_de_recouvrement_total, acces_radioelectrique)
+				TermUtils.getExtensionAffix(termIndex, acces_radioelectrique, acces_radioelectrique_de_recouvrement_total)
 				);
 		
 		for(Term t:allTerms)

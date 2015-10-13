@@ -69,8 +69,8 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 		appendTerm(term, "T");
 	}
 
-	public void addVariant(Term variant, double strictness) throws IOException {
-		appendTerm(variant, String.format("V[%d]", Math.round(100*strictness)));
+	public void addVariant(Term variant, String label) throws IOException {
+		appendTerm(variant, String.format("V[%s]", label));
 	}
 
 	public void endTerm() {

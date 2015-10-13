@@ -177,17 +177,17 @@ public class TermUtils {
 	 * 
 	 * @param termIndex
 	 * 			The term index that both terms belong to.
-	 * @param extension
-	 * 			The extension term
 	 * @param base
 	 * 			The base term
+	 * @param extension
+	 * 			The extension term
 	 * @return
 	 * 		the extension affix found in <code>termIndex</code>, <code>null</code> if none
 	 * 		has been found.
 	 * @throws IllegalArgumentException if <code>extension</code> id not an 
 	 * 			extension of the term <code>base</code>.
 	 */
-	public static Term getExtensionAffix(TermIndex termIndex, Term extension, Term base) {
+	public static Term getExtensionAffix(TermIndex termIndex, Term base, Term extension) {
 		int index = TermUtils.getPosition(base, extension);
 		if(index == -1)
 			throw new IllegalStateException(String.format(MSG_NOT_AN_EXTENSION, 
@@ -317,8 +317,9 @@ public class TermUtils {
 			throw new TermSuiteResourceException("Could not read resource " + resName, e);
 		}
 	}
-	
-	
 
+	public static double getExtensionGain(Term extension, Term extensionAffix) {
+		return ((double)extension.getFrequency())/extensionAffix.getFrequency();
+	}
 
 }

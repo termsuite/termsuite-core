@@ -28,7 +28,6 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.nio.charset.Charset;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
@@ -42,7 +41,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Splitter;
-import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
@@ -62,6 +60,9 @@ import eu.project.ttc.utils.TermUtils;
  */
 public class TSVExporter extends AbstractTermIndexExporter {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TSVExporter.class);
+	
+	private static final double THRESHOLD_EXTENSION_GAIN = 0.333333d;
+
 	
 	public static final String TERM_PROPERTIES = "TermProperties";
 	@ConfigurationParameter(name=TERM_PROPERTIES, mandatory=false, defaultValue="pilot,specificity")
@@ -105,21 +106,43 @@ public class TSVExporter extends AbstractTermIndexExporter {
 				if(ignore.contains(t))
 					continue;
 				tsv.startTerm(t);
-				List<TermVariation> variations = Lists.newArrayList(t.getVariations());
-				Collections.sort(variations, new Comparator<TermVariation>() {
-					@Override
-					public int compare(TermVariation o1, TermVariation o2) {
-						double strictness2 = TermUtils.getStrictness(o2.getVariant(), t);
-						double strictness1 = TermUtils.getStrictness(o1.getVariant(), t);
-						return ComparisonChain.start()
-								.compare(strictness2, strictness1)
-//								.compare(o1.getVariationType().getOrder(), o2.getVariationType().getOrder())
-								.compare(o2.getVariant().getWR(),o1.getVariant().getWR())
-								.result();
+				List<ScoredVariation> variations = Lists.newArrayListWithExpectedSize(t.getVariations().size());
+				for(TermVariation tv:t.getVariations()) {
+					double strictness = TermUtils.getStrictness(tv.getVariant(), t);
+					double extensionGain = THRESHOLD_EXTENSION_GAIN;
+					double extensionSpec = 0d;
+
+					if(strictness < 1d) {
+						// probably an extension
+						Term extensionAffix = null;
+						try {
+							extensionAffix = TermUtils.getExtensionAffix(
+									termIndexResource.getTermIndex(),
+									tv.getBase(),
+									tv.getVariant()
+								);
+							if(extensionAffix == null) 
+								LOGGER.warn("Found no affix in TermIndex for extension term {} and base term {}", tv.getVariant(), tv.getBase());
+							else {
+								extensionGain = TermUtils.getExtensionGain(
+										tv.getVariant(), 
+										extensionAffix);
+								extensionSpec = extensionAffix.getWRLogZScore();
+							}
+						} catch(IllegalStateException e) {
+							// do nothing
+							LOGGER.warn(e.getMessage());
+						}
 					}
-				});
-				for(TermVariation v:variations) {
-					tsv.addVariant(v.getVariant(), TermUtils.getStrictness(v.getVariant(), t));
+					variations.add(new ScoredVariation(
+							tv, 
+							strictness, 
+							extensionGain,
+							extensionSpec));
+				}
+				Collections.sort(variations);
+				for(ScoredVariation v:variations) {
+					tsv.addVariant(v.getVariant(), v.getLabel());
 					ignore.add(v.getVariant());
 				}
 				tsv.endTerm();
