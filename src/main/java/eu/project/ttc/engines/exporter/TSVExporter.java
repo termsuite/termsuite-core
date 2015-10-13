@@ -101,18 +101,35 @@ public class TSVExporter extends AbstractTermIndexExporter {
 	protected void processAcceptedTerms(TreeSet<Term> acceptedTerms) throws AnalysisEngineProcessException {
 		LOGGER.info("Exporting {} terms to TSV file {}", acceptedTerms.size(), this.toFilePath);
 		try {
+			double maxWRlog = 0d;
+
+			for(Term t:termIndexResource.getTermIndex().getTerms()) {
+				if(t.getWRLog() > maxWRlog)
+					maxWRlog = t.getWRLog();
+			}
+					
+					
 			Set<Term> ignore = Sets.newHashSet();
 			for(final Term t:acceptedTerms) {
 				if(ignore.contains(t))
 					continue;
 				tsv.startTerm(t);
 				List<ScoredVariation> variations = Lists.newArrayListWithExpectedSize(t.getVariations().size());
+				
+				// get max variation frequency
+				
+				int maxFrequency = 0;
+				for(TermVariation tv:t.getVariations())
+					if(tv.getVariant().getFrequency() > maxFrequency)
+						maxFrequency = tv.getVariant().getFrequency();
+				
 				for(TermVariation tv:t.getVariations()) {
-					double strictness = TermUtils.getStrictness(tv.getVariant(), t);
-					double extensionGain = THRESHOLD_EXTENSION_GAIN;
+					double strictness = 100*TermUtils.getStrictness(tv.getVariant(), t);
+					double extensionGain = 100*THRESHOLD_EXTENSION_GAIN;
 					double extensionSpec = 0d;
+					double frequencyScore = 100*((double)tv.getVariant().getFrequency())/maxFrequency;
 
-					if(strictness < 1d) {
+					if(strictness < 100d) {
 						// probably an extension
 						Term extensionAffix = null;
 						try {
@@ -121,13 +138,13 @@ public class TSVExporter extends AbstractTermIndexExporter {
 									tv.getBase(),
 									tv.getVariant()
 								);
-							if(extensionAffix == null) 
-								LOGGER.warn("Found no affix in TermIndex for extension term {} and base term {}", tv.getVariant(), tv.getBase());
-							else {
-								extensionGain = TermUtils.getExtensionGain(
+							if(extensionAffix == null) {
+//								LOGGER.warn("Found no affix in TermIndex for extension term {} and base term {}", tv.getVariant(), tv.getBase());
+							} else {
+								extensionGain = 100*TermUtils.getExtensionGain(
 										tv.getVariant(), 
 										extensionAffix);
-								extensionSpec = extensionAffix.getWRLogZScore();
+								extensionSpec = 100*(extensionAffix.getWRLog() / maxWRlog);
 							}
 						} catch(IllegalStateException e) {
 							// do nothing
@@ -138,7 +155,8 @@ public class TSVExporter extends AbstractTermIndexExporter {
 							tv, 
 							strictness, 
 							extensionGain,
-							extensionSpec));
+							extensionSpec,
+							frequencyScore));
 				}
 				Collections.sort(variations);
 				for(ScoredVariation v:variations) {
