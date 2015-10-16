@@ -21,7 +21,6 @@
  *******************************************************************************/
 package eu.project.ttc.engines;
 
-import java.math.BigDecimal;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
@@ -43,7 +42,6 @@ import com.google.common.cache.LoadingCache;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
-import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.compost.CompostIndexEntry;
 import eu.project.ttc.engines.compost.Segment;
 import eu.project.ttc.engines.compost.SegmentScoreEntry;
@@ -57,12 +55,12 @@ import eu.project.ttc.models.Word;
 import eu.project.ttc.models.WordBuilder;
 import eu.project.ttc.models.index.CustomTermIndex;
 import eu.project.ttc.models.index.TermIndexes;
+import eu.project.ttc.models.index.TermMeasure;
 import eu.project.ttc.resources.CompostIndex;
 import eu.project.ttc.resources.CompostInflectionRules;
 import eu.project.ttc.resources.SimpleWordSet;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.utils.IndexingKey;
-import eu.project.ttc.utils.TermIndexUtils;
 import eu.project.ttc.utils.TermSuiteUtils;
 import fr.univnantes.lina.UIMAProfiler;
 
@@ -133,7 +131,9 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 	private static IndexingKey<String, String> similarityIndexingKey = TermSuiteUtils.KEY_THREE_FIRST_LETTERS;
 	
 	private CustomTermIndex swtLemmaIndex;
-	
+
+	private TermMeasure wrMeasure;
+
 	private LoadingCache<String, SegmentScoreEntry> segmentScoreEntries = CacheBuilder.newBuilder()
 				.maximumSize(100000)
 				.recordStats()
@@ -154,8 +154,9 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 		UIMAProfiler.getProfiler("AnalysisEngine").start(this, "process");
 		LOGGER.info("Starting morphology analysis");
 		LOGGER.debug(this.toString());
-		buildCompostIndex();
+		wrMeasure = termIndexResource.getTermIndex().getWRMeasure();
 		swtLemmaIndex = termIndexResource.getTermIndex().getCustomIndex(TermIndexes.SINGLE_WORD_LEMMA);
+		buildCompostIndex();
 
 		for(Word word:this.termIndexResource.getTermIndex().getWords()) {
 			Map<Segmentation, Double> scores = computeScores(word.getLemma());
@@ -306,11 +307,11 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 		Collection<Term> corpusTerm = swtLemmaIndex.getTerms(segment);
 		float wr = 0f;
 		for(Iterator<Term> it = corpusTerm.iterator(); it.hasNext();)
-			wr+=it.next().getWR();
+			wr+=wrMeasure.getValue(it.next());
 		
 		float dataCorpus;
 		if(closestEntry.isInCorpus() && !corpusTerm.isEmpty()) {
-			dataCorpus = wr / getMaxWR();
+			dataCorpus = wr / (float)wrMeasure.getMax();
 			inCorpus = 1;
 		} else {
 			dataCorpus = 0;
@@ -329,15 +330,6 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 		return new SegmentScoreEntry(segment, score, closestEntry);
 	}
 	
-	private float maxWR = 0;
-	private float getMaxWR() {
-		if(maxWR == 0) {
-			double maxDouble = TermIndexUtils.getMax(termIndexResource.getTermIndex(), TermProperty.WR);
-			maxWR = new BigDecimal(maxDouble).floatValue();
-		}
-		return maxWR;
-	}
-
 	@Override
 	public String toString() {
 		return MoreObjects.toStringHelper(this)

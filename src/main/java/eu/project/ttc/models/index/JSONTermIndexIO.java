@@ -40,7 +40,6 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 
-import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.Component;
 import eu.project.ttc.models.CompoundType;
@@ -101,9 +100,13 @@ public class JSONTermIndexIO {
 	private static final String ASSOC_RATE = "assoc_rate";
 	private static final String CO_TERM = "co_term";
 	private static final String TOTAL_COOCCURRENCES = "total_cooccs";
-	private static String WR_FIELD = TermProperty.WR.getShortName();
-	private static String WR_LOG_FIELD = TermProperty.WR_LOG.getShortName();
-	private static String WR_LOG_ZSCORE_FIELD = TermProperty.WR_LOG_Z_SCORE.getShortName();
+	
+	private static final String FREQ_NORM = "f_norm";
+	private static final String GENERAL_FREQ_NORM = "gf_norm";
+	
+//	private static String WR_FIELD = TermProperty.WR.getShortName();
+//	private static String WR_LOG_FIELD = TermProperty.WR_LOG.getShortName();
+//	private static String WR_LOG_ZSCORE_FIELD = TermProperty.WR_LOG_Z_SCORE.getShortName();
 
 	/**
 	 * Loads the json-serialized term index into the param {@link TermIndex} object.
@@ -215,15 +218,12 @@ public class JSONTermIndexIO {
 						} else if (FREQUENCY.equals(fieldname)) {
 							builder.setFrequency(jp.nextIntValue(-1));
 						} else {
-							if (WR_FIELD.equals(fieldname)) {
+							if (FREQ_NORM.equals(fieldname)) {
 								jp.nextToken();
-								builder.setWR(jp.getFloatValue());
-							} else if (WR_LOG_FIELD.equals(fieldname)) {
+								builder.setFrequencyNorm((double)jp.getFloatValue());
+							} else if (GENERAL_FREQ_NORM.equals(fieldname))  {
 								jp.nextToken();
-								builder.setWRLog(jp.getFloatValue());
-							} else if (WR_LOG_ZSCORE_FIELD.equals(fieldname)) {
-								jp.nextToken();
-								builder.setWRLogZScore(jp.getFloatValue());
+								builder.setGeneralFrequencyNorm((double)jp.getFloatValue());
 							} else if (WORDS.equals(fieldname)) {
 								while ((tok = jp.nextToken()) != JsonToken.END_ARRAY) {
 									wordLemma = null;
@@ -471,12 +471,10 @@ public class JSONTermIndexIO {
 			
 			jg.writeFieldName(FREQUENCY);
 			jg.writeNumber(t.getFrequency());
-			jg.writeFieldName(WR_FIELD);
-			jg.writeNumber(t.getWR());
-			jg.writeFieldName(WR_LOG_FIELD);
-			jg.writeNumber(t.getWRLog());
-			jg.writeFieldName(WR_LOG_ZSCORE_FIELD);
-			jg.writeNumber(t.getWRLogZScore());
+			jg.writeFieldName(FREQ_NORM);
+			jg.writeNumber(t.getFrequencyNorm());
+			jg.writeFieldName(GENERAL_FREQ_NORM);
+			jg.writeNumber(t.getGeneralFrequencyNorm());
 			jg.writeFieldName(SPOTTING_RULE);
 			jg.writeString(t.getSpottingRule());
 			

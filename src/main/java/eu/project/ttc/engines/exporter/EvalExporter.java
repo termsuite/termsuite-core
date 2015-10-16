@@ -74,7 +74,7 @@ public class EvalExporter extends AbstractTermIndexExporter {
 				}
 				writer.write(t.getGroupingKey());
 				writer.write("\t");
-				writer.write(Double.toString(t.getWR()));
+				writer.write(Double.toString(termIndexResource.getTermIndex().getWRMeasure().getValue(t)));
 				writer.write("\n");
 			}
 			writer.flush();

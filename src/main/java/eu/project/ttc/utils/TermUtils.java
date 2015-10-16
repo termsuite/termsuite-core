@@ -42,6 +42,7 @@ import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermOccurrence;
 import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.models.TermWord;
+import eu.project.ttc.models.index.TermMeasure;
 import eu.project.ttc.resources.GeneralLanguageResource;
 import eu.project.ttc.tools.TermSuiteResourceHelper;
 
@@ -62,18 +63,18 @@ public class TermUtils {
 					.result();
 		}
 	};
-	
-	/**
-	 * Most specific first (based on WeirdnessRation: Term#getWR())
-	 */
-	public static Comparator<Term> specificityComparator = new Comparator<Term>() {
-		@Override
-		public int compare(Term o1, Term o2) {
-			return ComparisonChain.start()
-					.compare(o2.getWR(), o1.getWR())
-					.result();
-		}
-	};
+//	
+//	/**
+//	 * Most specific first (based on WeirdnessRation: Term#getWR())
+//	 */
+//	public static Comparator<Term> specificityComparator = new Comparator<Term>() {
+//		@Override
+//		public int compare(Term o1, Term o2) {
+//			return ComparisonChain.start()
+//					.compare(o2.getWR(), o1.getWR())
+//					.result();
+//		}
+//	};
 	
 	public static void showIndex(TermIndex index, PrintStream stream) {
 		Optional<Pattern> watchExpression = Optional.absent();
@@ -94,9 +95,9 @@ public class TermUtils {
 		}
 	}
 
-	public static void showTopNTermsBy(TermIndex index, PrintStream out, int n) {
+	public static void showTopNTermsBy(TermIndex index, TermMeasure measure, PrintStream out, int n) {
 		List<Term> terms = Lists.newArrayList(index.getTerms());
-		Collections.sort(terms, specificityComparator);
+		Collections.sort(terms, measure.getTermComparator(true));
 		int i = 0;
 		for(Term t:terms) {
 			out.println(t);

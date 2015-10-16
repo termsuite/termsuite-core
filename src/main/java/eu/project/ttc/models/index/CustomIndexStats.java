@@ -24,12 +24,12 @@ package eu.project.ttc.models.index;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.TreeMultimap;
 
-public class IndexStats {
+public class CustomIndexStats {
 	private Multimap<Integer,String> sizeCounters;
 	private CustomTermIndex customIndex;
 	private int biggestSize = 0;
 
-	public IndexStats(CustomTermIndex customIndex) {
+	public CustomIndexStats(CustomTermIndex customIndex) {
 		super();
 		this.customIndex = customIndex;
 		compute();

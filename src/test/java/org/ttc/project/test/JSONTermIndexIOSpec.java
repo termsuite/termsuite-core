@@ -22,6 +22,7 @@
 package org.ttc.project.test;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.offset;
 import static org.assertj.core.api.Assertions.tuple;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -147,7 +148,8 @@ public class JSONTermIndexIOSpec {
 			assertThat(t2.getBases()).hasSameElementsAs(t.getBases());
 			assertThat(t2.getForms()).hasSameElementsAs(t.getForms());
 			assertThat(t2.getFrequency()).isEqualTo(t.getFrequency());
-			assertThat(t2.getWR()).isEqualTo(t.getWR());
+			assertThat(t2.getFrequencyNorm()).isEqualTo(t.getFrequencyNorm());
+			assertThat(t2.getGeneralFrequencyNorm()).isEqualTo(t.getGeneralFrequencyNorm());
 			assertThat(t2.getSpottingRule()).isEqualTo(t.getSpottingRule());
 			assertThat(t2.getPattern()).isEqualTo(t.getPattern());
 			assertThat(t2.getWords()).isEqualTo(t.getWords());
@@ -203,9 +205,8 @@ public class JSONTermIndexIOSpec {
 		Term t2 = termIndex.getTermByGroupingKey("n: word1");
 		Term t3 = termIndex.getTermByGroupingKey("a: word2");
 		assertThat(t1.getId()).isEqualTo(1);
-		assertThat(t1.getWR()).isEqualTo(3.4f);
-		assertThat(t1.getWRLog()).isEqualTo(11f);
-		assertThat(t1.getWRLogZScore()).isEqualTo(22f);
+		assertThat(t1.getFrequencyNorm()).isCloseTo(0.123d, offset(0.000001d));
+		assertThat(t1.getGeneralFrequencyNorm()).isCloseTo(0.025d, offset(0.000001d));
 		assertThat(t1.getFrequency()).isEqualTo(6);
 		assertThat(t1.getVariations(VariationType.GRAPHICAL)).extracting("variant").containsOnly(t2);
 		assertThat(t1.getVariations(VariationType.SYNTACTICAL)).hasSize(0);

@@ -35,6 +35,7 @@ import com.google.common.collect.Sets;
 
 import eu.project.ttc.models.Document;
 import eu.project.ttc.models.TermOccurrence;
+import eu.project.ttc.models.index.TermMeasure;
 
 /**
  * A utililty class for {@link TermOccurrence} objects and collections.
@@ -44,18 +45,6 @@ import eu.project.ttc.models.TermOccurrence;
  */
 public class TermOccurrenceUtils {
 	
-	public static Comparator<TermOccurrence> specificityComparator = new Comparator<TermOccurrence>() {
-		@Override
-		public int compare(TermOccurrence o1, TermOccurrence o2) {
-			return ComparisonChain.start()
-					.compare(o2.getTerm().getWR(), o1.getTerm().getWR())
-					.compare(o1.getSourceDocument().getUrl(), o2.getSourceDocument().getUrl())
-					.compare(o1.getBegin(), o2.getBegin())
-					.compare(o2.getEnd(), o1.getEnd())
-					.result();
-		}
-	};
-
 
 	public static Comparator<TermOccurrence> uimaNaturalOrder = new Comparator<TermOccurrence>() {
 		@Override
@@ -68,8 +57,6 @@ public class TermOccurrenceUtils {
 		}
 	};
 
-	
-	public static final int STRATEGY_MOST_SPECIFIC_FIRST = 1;
 	
 	/**
 	 * Given a strategy, detects all primary occurrences in a collection 
@@ -84,41 +71,23 @@ public class TermOccurrenceUtils {
 	 * overlap.
 	 * 
 	 * 
-	 * @see TermOccurrenceUtils#STRATEGY_MOST_SPECIFIC_FIRST
-	 * @see TermOccurrenceUtils#markPrimaryOccurrenceMostSpecificFirst(Collection)
+	 * @see TermOccurrenceUtils#markPrimaryOccurrenceBiggestMeasureFirst(Collection)
 	 * @see TermOccurrence#isPrimaryOccurrence()
 	 * @param occs
 	 * 			the occurrence collection
-	 * @param strategy
-	 * 			the strategy for detecting primary occurrences 
-	 * @throw {@link IllegalArgumentException} if unknown strategy
+	 * @param measure
+	 * 			the measure for detecting primary occurrences 
 	 * 			
 	 */
-	public static void markPrimaryOccurrence(Collection<TermOccurrence> occs, int strategy) {
-		switch (strategy) {
-		case STRATEGY_MOST_SPECIFIC_FIRST:
-			markPrimaryOccurrenceMostSpecificFirst(occs);
-			break;
-		default:
-			throw new IllegalArgumentException("Unkown strategy: " + strategy);
-		}
-	}
-
-	/**
-	 * Detects all primary occurrences in an occurrence set 
-	 * with the "most-specific" first strategy.
-	 * 
-	 * @param occs
-	 */
-	public static void markPrimaryOccurrenceMostSpecificFirst(
-			Collection<TermOccurrence> occs) {
+	public static void markPrimaryOccurrence(
+			Collection<TermOccurrence> occs, TermMeasure measure) {
 		
 		
 		for(Iterator<List<TermOccurrence>> it = occurrenceChunkIterator(occs);it.hasNext();) {
 			List<TermOccurrence> chunk = it.next();
 			Set<TermOccurrence> primaryOccs = Sets.newHashSet();
 			
-			Collections.sort(chunk, specificityComparator);
+			Collections.sort(chunk, measure.getOccurrenceComparator(true));
 			for(TermOccurrence o:chunk) {
 				o.setPrimaryOccurrence(!hasOverlappingOffsets(o, primaryOccs));
 				if(o.isPrimaryOccurrence())

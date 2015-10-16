@@ -28,6 +28,7 @@ import java.util.TreeSet;
 import com.google.common.collect.ComparisonChain;
 
 import eu.project.ttc.models.Term;
+import eu.project.ttc.models.index.TermMeasure;
 
 /**
  * Consists exclusively of terms that operate or create {@link TermPredicate}s.
@@ -68,20 +69,20 @@ public class TermPredicates {
 	}
 
 	/**
-	 * Returns a {@link TermPredicate} the accepts terms whose specificity is
+	 * Returns a {@link TermPredicate} the accepts terms whose measure is
 	 * bigger than the specified <code>threshold</code>.
 	 * 
 	 * @param threshold
-	 *            The specificity threshold
+	 *            The measure threshold
 	 * @return The term predicate
 	 */
-	public static TermPredicate createSpecificityPredicate(
-			final double threshold) {
+	public static TermPredicate createMeasurePredicate(
+			final double threshold, final TermMeasure termMeasure) {
 		return new TermPredicate() {
 
 			@Override
 			public boolean accept(Term term) {
-				return term.getWR() >= threshold;
+				return termMeasure.getValue(term) >= threshold;
 			}
 		};
 	}
@@ -172,16 +173,15 @@ public class TermPredicates {
 	}
 
 	/**
-	 * Returns a {@link TermPredicate} that accepts terms in sorted specificity
+	 * Returns a {@link TermPredicate} that accepts terms in sorted measure
 	 * order up to the specified <code>cutoffRank</code>.
 	 * 
 	 * @param cutoffRank
 	 *            The rank cutoff
 	 * @return The term predicate object
 	 */
-	public static TermPredicate createTopNBySpecificityPredicate(int cutoffRank) {
-		return createSortedTermPredicate(cutoffRank,
-				DESCENDING_SPECIFICITY_ORDER);
+	public static TermPredicate createTopNByTermMeasurePredicate(int cutoffRank, TermMeasure termMeasure) {
+		return createSortedTermPredicate(cutoffRank, termMeasure.getTermComparator(true));
 	}
 
 	/**
@@ -285,20 +285,20 @@ public class TermPredicates {
 		}
 	};
 
-	/**
-	 * A comparator that imposes a descending specificity order on
-	 * {@link Term}s.
-	 */
-	public static final Comparator<Term> DESCENDING_SPECIFICITY_ORDER = new Comparator<Term>() {
-
-		@Override
-		public int compare(Term o1, Term o2) {
-			return ComparisonChain.start()
-					.compare(o2.getWR(), o1.getWR())
-					.compare(o1.getGroupingKey(), o2.getGroupingKey())
-					.result();
-		}
-	};
+//	/**
+//	 * A comparator that imposes a descending specificity order on
+//	 * {@link Term}s.
+//	 */
+//	public static final Comparator<Term> DESCENDING_SPECIFICITY_ORDER = new Comparator<Term>() {
+//
+//		@Override
+//		public int compare(Term o1, Term o2) {
+//			return ComparisonChain.start()
+//					.compare(o2.getWR(), o1.getWR())
+//					.compare(o1.getGroupingKey(), o2.getGroupingKey())
+//					.result();
+//		}
+//	};
 	
 	
 	/**

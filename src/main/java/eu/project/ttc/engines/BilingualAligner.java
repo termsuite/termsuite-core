@@ -114,7 +114,7 @@ public class BilingualAligner {
 		 */
 		for(String candidateLemma:dico.getTranslations(sourceTerm.getLemma())) {
 			for(Term candidateTerm:targetTerminoLemmaIndex.getTerms(candidateLemma)) {
-				dicoCandidates.add(new TranslationCandidate(candidateTerm, candidateTerm.getWR()));
+				dicoCandidates.add(new TranslationCandidate(candidateTerm, targetTermino.getWRMeasure().getValue(candidateTerm)));
 			}
 		}
 		normalizeCandidateScores(dicoCandidates);

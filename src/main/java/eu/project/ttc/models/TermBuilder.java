@@ -42,9 +42,8 @@ public class TermBuilder {
 	private List<TermWord> termWords = Lists.newArrayList();
 	private List<TermOccurrence> termOccurrences = Lists.newArrayList();
 	private Optional<Integer> frequency = Optional.absent();
-	private Optional<Float> wr = Optional.absent();
-	private Optional<Float> wrLog = Optional.absent();
-	private Optional<Float> wrLogZScore = Optional.absent();
+	private Optional<Double> generalFrequencyNorm = Optional.absent();
+	private Optional<Double> frequencyNorm = Optional.absent();
 
 	private Optional<ContextVector> contextVector = Optional.absent();
 	
@@ -73,12 +72,10 @@ public class TermBuilder {
 					gKey);
 		}
 		Term term = new Term(id.get(), gKey, termWords, spottingRule);
-		if(wr.isPresent())
-			term.setWR(wr.get());
-		if(wrLog.isPresent())
-			term.setWRLog(wrLog.get());
-		if(wrLogZScore.isPresent())
-			term.setWRLogZScore(wrLogZScore.get());
+		if(generalFrequencyNorm.isPresent())
+			term.setGeneralFrequencyNorm(generalFrequencyNorm.get());
+		if(frequencyNorm.isPresent())
+			term.setFrequencyNorm(frequencyNorm.get());
 
 		if(contextVector.isPresent())
 			term.setContextVector(contextVector.get());
@@ -127,18 +124,13 @@ public class TermBuilder {
 		return this;
 	}
 
-	public TermBuilder setWRLog(float wrLog) {
-		this.wrLog = Optional.of(wrLog);
+	public TermBuilder setFrequencyNorm(double frequencyNorm) {
+		this.frequencyNorm = Optional.of(frequencyNorm);
 		return this;
 	}
 
-	public TermBuilder setWRLogZScore(float wrLogZScore) {
-		this.wrLogZScore = Optional.of(wrLogZScore);
-		return this;
-	}
-
-	public TermBuilder setWR(float wr) {
-		this.wr = Optional.of(wr);
+	public TermBuilder setGeneralFrequencyNorm(double generalFrequencyNorm) {
+		this.generalFrequencyNorm = Optional.of(generalFrequencyNorm);
 		return this;
 	}
 

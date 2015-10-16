@@ -61,20 +61,24 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 	 */
 	private int id;
 	
+	private double normalizedTermFrequency;
+	
+	private double normalizedGeneralTermFrequency;
+	
 	/*
 	 * The weirdness ratio of this term
 	 */
-	private float wr;
+//	private float wr;
 	
 	/*
 	 * The logarithm of weirdness ratio of this term
 	 */
-	private double wrLog;
+//	private double wrLog;
 
 	/*
 	 * The z-score of wrLog
 	 */
-	private double wrLogZScore;
+//	private double wrLogZScore;
 
 	/*
 	 * The frequency of this term
@@ -121,52 +125,31 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 		this.frequency = frequency;
 	}
 	
-	public float getWR() {
-		return wr;
-	}
+//	public double getWR() {
+//		return getNormalizedTermFrequency() / getNormalizedGeneralTermFrequency();
+//	}
 	
 	public void setPattern(String pattern) {
 		this.pattern = pattern;
 	}
 	
-	public void setWR(float wr) {
-		this.wr = wr;
-	}
+//	public void setWR(float wr) {
+//		
+//		this.wr = wr;
+//	}
+//	
+//	public void setWRLog(double wrLog) {
+//		this.wrLog = wrLog;
+//	}
+//	
+//	public void setWRLogZScore(double wrLogZScore) {
+//		this.wrLogZScore = wrLogZScore;
+//	}
 	
-	public void setWRLog(double wrLog) {
-		this.wrLog = wrLog;
-	}
+//	public double getWRLogZScore() {
+//		return wrLogZScore;
+//	}
 	
-	public void setWRLogZScore(double wrLogZScore) {
-		this.wrLogZScore = wrLogZScore;
-	}
-	
-	public double getWRLogZScore() {
-		return wrLogZScore;
-	}
-	
-	public Set<TermOccurrence> getAllOccurrences() {
-		return getAllOccurrences(1);
-	}
-	
-	/**
-	 * Return all occurrences of this term and of its syntactic and graphical variants at depth 2.
-	 * 
-	 * 
-	 * @param depth
-	 * @return
-	 */
-	public Set<TermOccurrence> getAllOccurrences(int depth) {
-		Set<TermOccurrence> occSet = Sets.newTreeSet();
-		occSet.addAll(occurrences);
-		if(depth > 0) {
-			for(TermVariation t:variations)
-				occSet.addAll(t.getVariant().getAllOccurrences(depth-1));
-		}
-		return occSet;
-	}
-
-
 	public Collection<TermOccurrence> getOccurrences() {
 		return Collections.unmodifiableCollection(occurrences);
 	}
@@ -522,9 +505,9 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 	public TermClass getTermClass() {
 		return termClass;
 	}
-	public double getWRLog() {
-		return wrLog;
-	}
+//	public double getWRLog() {
+//		return Math.log10(1 + getWR());
+//	}
 	
 	public Set<TermVariation> getVariations() {
 		return Collections.unmodifiableSet(variations);
@@ -572,6 +555,22 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 	 */
 	public Iterable<TermVariation> getBases(final VariationType... variantTypes) {
 		return IteratorUtils.toIterable(getTermVariationsIterator(this.bases, variantTypes));
+	}
+	
+	public void setFrequencyNorm(double normalizedTermFrequency) {
+		this.normalizedTermFrequency = normalizedTermFrequency;
+		
+	}
+	public void setGeneralFrequencyNorm(double normalizedGeneralTermFrequency) {
+		this.normalizedGeneralTermFrequency = normalizedGeneralTermFrequency;
+	}
+	
+	public double getGeneralFrequencyNorm() {
+		return normalizedGeneralTermFrequency;
+	}
+	
+	public double getFrequencyNorm() {
+		return normalizedTermFrequency;
 	}
 
 }

@@ -151,7 +151,7 @@ public abstract class AbstractTermIndexExporter extends JCasAnnotator_ImplBase {
         FilterRules rule = FilterRules.valueOf(filterRule);
 		switch (rule) {
         case None:
-            outputComparator = TermPredicates.DESCENDING_SPECIFICITY_ORDER;
+            outputComparator = termIndexResource.getTermIndex().getWRMeasure().getTermComparator(true);
             acceptPredicate = TermPredicates.TRIVIAL_ACCEPTOR;
             return;
 
@@ -161,8 +161,8 @@ public abstract class AbstractTermIndexExporter extends JCasAnnotator_ImplBase {
             return;
 
         case SpecificityThreshold:
-            outputComparator = TermPredicates.DESCENDING_SPECIFICITY_ORDER;
-            acceptPredicate = TermPredicates.createSpecificityPredicate(filteringThreshold);
+            outputComparator = termIndexResource.getTermIndex().getWRMeasure().getTermComparator(true);
+            acceptPredicate = TermPredicates.createMeasurePredicate(filteringThreshold, termIndexResource.getTermIndex().getWRMeasure());
             return;
 
         case TopNByOccurrence:
@@ -171,8 +171,8 @@ public abstract class AbstractTermIndexExporter extends JCasAnnotator_ImplBase {
             return;
 
         case TopNBySpecificity:
-            outputComparator = TermPredicates.DESCENDING_SPECIFICITY_ORDER;
-            acceptPredicate = TermPredicates.createTopNBySpecificityPredicate((int)Math.floor(filteringThreshold));
+            outputComparator = termIndexResource.getTermIndex().getWRMeasure().getTermComparator(true);
+            acceptPredicate = TermPredicates.createTopNByTermMeasurePredicate((int)Math.floor(filteringThreshold), termIndexResource.getTermIndex().getWRMeasure());
             return;
 
         default:

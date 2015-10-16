@@ -61,7 +61,10 @@ import eu.project.ttc.utils.TermSuiteUtils;
 public class MemoryTermIndex implements TermIndex {
 	private static final Logger LOGGER = LoggerFactory.getLogger(MemoryTermIndex.class);
 	private static final String MSG_NO_SUCH_PROVIDER = "No such value provider: %s";
-	
+	private static final String MEASURE_WR = "wr";
+	private static final String MEASURE_WRLOG = "wrLog";
+	private static final String MEASURE_FREQUENCY = "frequency";
+
 	/*
 	 * The root index of terms. Variants must not be referenced at 
 	 * this level of index. They me be indexed from their base-term
@@ -70,6 +73,7 @@ public class MemoryTermIndex implements TermIndex {
 	private Map<Integer, Term> termsById = Maps.newHashMap();
 	private Map<String, Term> termsByGroupingKey = Maps.newHashMap();
 	private Map<String, CustomTermIndex> customIndexes = Maps.newHashMap();
+	private Map<String, TermMeasure> termMeasures = Maps.newHashMap();
 	private Map<String, Word> wordIndex = Maps.newHashMap();
 	private Map<String, Document> documents = Maps.newHashMap();
 	private Set<TermClass> termClasses = Sets.newHashSet();
@@ -91,10 +95,14 @@ public class MemoryTermIndex implements TermIndex {
 	private String corpusId;
 	
 	private int currentId = 0;
+	private int nbWordAnnotations = 0;
 	
 	public MemoryTermIndex(String name, Lang lang) {
 		this.lang = lang;
 		this.name = name;
+		this.termMeasures.put(MEASURE_WR, new WRMeasure(this));
+		this.termMeasures.put(MEASURE_WRLOG, new WRLogMeasure(this));
+		this.termMeasures.put(MEASURE_FREQUENCY, new FrequencyMeasure(this));
 	}
 
 	@Override
@@ -110,8 +118,10 @@ public class MemoryTermIndex implements TermIndex {
 			termIndex.indexTerm(term);
 		for(TermWord tw:term.getWords())
 			privateAddWord(tw.getWord(), false);
+		invalidateMeasures();
 	}
-	
+
+
 	@Override
 	public void addWord(Word word) {
 		privateAddWord(word, true);
@@ -171,6 +181,7 @@ public class MemoryTermIndex implements TermIndex {
 				annotation.getEnd()),
 			keepOccurrence
 		);
+		invalidateMeasures();
 		return term;
 	}
 
@@ -348,6 +359,7 @@ public class MemoryTermIndex implements TermIndex {
 			}
 		}
 
+		invalidateMeasures();
 	}
 
 	@Override
@@ -432,5 +444,35 @@ public class MemoryTermIndex implements TermIndex {
 		this.termClasses.add(termClass);
 		for(Term t2:termClass)
 			t2.setTermClass(termClass);
+	}
+
+	private void invalidateMeasures() {
+		for(TermMeasure m:this.termMeasures.values())
+			m.invalidate();
+	}
+
+	@Override
+	public void setWordAnnotationsNum(int nbWordAnnotations) {
+		this.nbWordAnnotations = nbWordAnnotations;
+	}
+
+	@Override
+	public int getWordAnnotationsNum() {
+		return this.nbWordAnnotations;
+	}
+
+	@Override
+	public TermMeasure getWRMeasure() {
+		return this.termMeasures.get(MEASURE_WR);
+	}
+
+	@Override
+	public TermMeasure getWRLogMeasure() {
+		return this.termMeasures.get(MEASURE_WRLOG);
+	}
+
+	@Override
+	public TermMeasure getFrequencyMeasure() {
+		return this.termMeasures.get(MEASURE_FREQUENCY);
 	}
 }

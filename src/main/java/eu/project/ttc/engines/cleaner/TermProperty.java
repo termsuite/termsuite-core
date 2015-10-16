@@ -29,6 +29,7 @@ import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.Maps;
 
 import eu.project.ttc.models.Term;
+import eu.project.ttc.models.TermIndex;
 
 /**
  * 
@@ -39,18 +40,18 @@ import eu.project.ttc.models.Term;
  *
  */
 public enum TermProperty {
-	DOCUMENT_FREQUENCY("documentFrequency", "dfreq"),
-	WR("wr", "wr"),
-	WR_LOG("wrLog", "wrlog"),
-	WR_LOG_Z_SCORE("wrLogZScore", "zscore"),
-	FREQUENCY("frequency", "f"),
-	PILOT("pilot", "pilot"),
-	LEMMA("lemma", "lemma"),
-	GROUPING_KEY("groupingKey", "gkey"),
-	PATTERN("pattern", "p"),
-	SPOTTING_RULE("spottingRule", "rule"),
-	TERM_CLASS_HEAD("termClassHead", "cls"),
-	TERM_CLASS_FREQUENCY("termClassFrequency", "clsfreq")
+	DOCUMENT_FREQUENCY("documentFrequency", "dfreq", false),
+	WR("wr", "wr", true),
+	WR_LOG("wrLog", "wrlog", true),
+	WR_LOG_Z_SCORE("wrLogZScore", "zscore", true),
+	FREQUENCY("frequency", "f", false),
+	PILOT("pilot", "pilot", false),
+	LEMMA("lemma", "lemma", false),
+	GROUPING_KEY("groupingKey", "gkey", false),
+	PATTERN("pattern", "p", false),
+	SPOTTING_RULE("spottingRule", "rule", false),
+	TERM_CLASS_HEAD("termClassHead", "cls", false),
+	TERM_CLASS_FREQUENCY("termClassFrequency", "clsfreq", false)
 	;
 	
 	private static Map<String, TermProperty> byNames = Maps.newHashMap();
@@ -67,12 +68,18 @@ public enum TermProperty {
 	
 	private String propertyName;
 	private String propertyShortName;
+	private boolean measure;
 
-	private TermProperty(String propertyName, String propertyShortName) {
+	private TermProperty(String propertyName, String propertyShortName, boolean isMeasure) {
 		this.propertyName = propertyName;
 		this.propertyShortName = propertyShortName;
+		this.measure = isMeasure;
 	}
 	
+	public boolean isMeasure() {
+		return this.measure;
+	}
+
 	public String getPropertyName() {
 		return propertyName;
 	}
@@ -92,12 +99,6 @@ public enum TermProperty {
 		
 	public double getDoubleValue(Term t) {
 		switch(this) {
-		case WR:
-			return t.getWR();
-		case WR_LOG:
-			return t.getWRLog();
-		case WR_LOG_Z_SCORE:
-			return t.getWRLogZScore();
 		case DOCUMENT_FREQUENCY:
 			return t.getDocumentFrequency();
 		case FREQUENCY:
@@ -105,17 +106,32 @@ public enum TermProperty {
 		case TERM_CLASS_FREQUENCY:
 			return t.getTermClass().getFrequency();
 		default:
+			if(measure)
+				throw new IllegalStateException("No double value for property: " + this);
+				
 			throw new UnsupportedOperationException("No double value for property: " + this);
 		}
 	}
+	
+	public Comparable<?> getValue(TermIndex termIndex, Term t) {
+		switch(this) {
+		case WR:
+			return termIndex.getWRMeasure().getValue(t);
+		case WR_LOG:
+			return termIndex.getWRLogMeasure().getValue(t);
+		case WR_LOG_Z_SCORE:
+			return termIndex.getWRLogMeasure().getZScore(t);
+		default:
+			return getValue(t);
+		}
+	}
+
 	public Comparable<?> getValue(Term t) {
 		switch(this) {
 		case WR:
-			return t.getWR();
 		case WR_LOG:
-			return t.getWRLog();
 		case WR_LOG_Z_SCORE:
-			return t.getWRLogZScore();
+			throw new IllegalStateException("This property is a termIndex measure. Should use #getValue(TermIndex termIndex, Term t) instead.");
 		case DOCUMENT_FREQUENCY:
 			return t.getDocumentFrequency();
 		case FREQUENCY:

@@ -36,6 +36,7 @@ import com.google.common.collect.Lists;
 import eu.project.ttc.models.Document;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermOccurrence;
+import eu.project.ttc.models.index.TermMeasure;
 import eu.project.ttc.utils.TermOccurrenceUtils;
 
 public class TermOccurrenceUtilsSpec {
@@ -53,9 +54,9 @@ public class TermOccurrenceUtilsSpec {
 		final Term term1 = Fixtures.term1();
 		final Term term2 = Fixtures.term2();
 		final Term term3 = Fixtures.term3();
-		term1.setWR(10);
-		term2.setWR(20);
-		term3.setWR(30);
+		term1.setFrequencyNorm(0.1);
+		term2.setFrequencyNorm(0.2);
+		term3.setFrequencyNorm(0.3);
 		o1 = new TermOccurrence(term1, "blabla1", document1, 10, 20);
 		o2 = new TermOccurrence(term2, "blabla2", document1, 20, 30);
 		o3 = new TermOccurrence(term1, "blabla3", document1, 10, 40);
@@ -144,7 +145,12 @@ public class TermOccurrenceUtilsSpec {
 	@Test
 	public void testMarkPrimaryOccurrenceMostSpecificFirst1() {
 		List<TermOccurrence> newArrayList = Lists.newArrayList(o1, o2, o3, o4, o5);
-		TermOccurrenceUtils.markPrimaryOccurrenceMostSpecificFirst(newArrayList);
+		TermOccurrenceUtils.markPrimaryOccurrence(newArrayList, new TermMeasure(null) {
+			@Override
+			public double getValue(Term term) {
+				return term.getFrequencyNorm();
+			}
+		});
 		assertTrue(o1.isPrimaryOccurrence());
 		assertTrue(o2.isPrimaryOccurrence());
 		assertFalse(o3.isPrimaryOccurrence());
@@ -154,7 +160,12 @@ public class TermOccurrenceUtilsSpec {
 	@Test
 	public void testMarkPrimaryOccurrenceMostSpecificFirst2() {
 		List<TermOccurrence> newArrayList = Lists.newArrayList(o1, o2, o3, o5);
-		TermOccurrenceUtils.markPrimaryOccurrenceMostSpecificFirst(newArrayList);
+		TermOccurrenceUtils.markPrimaryOccurrence(newArrayList, new TermMeasure(null) {
+			@Override
+			public double getValue(Term term) {
+				return term.getFrequencyNorm();
+			}
+		});
 		assertTrue(o1.isPrimaryOccurrence());
 		assertTrue(o2.isPrimaryOccurrence());
 		assertFalse(o3.isPrimaryOccurrence());

@@ -26,12 +26,12 @@ import java.util.Set;
 
 import com.google.common.collect.Sets;
 
-import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.models.ContextVector;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.index.CustomTermIndex;
 import eu.project.ttc.models.index.TermIndexes;
+import eu.project.ttc.models.index.TermMeasure;
 import eu.project.ttc.resources.BilingualDictionary;
 
 public class AlignerUtils {
@@ -82,10 +82,10 @@ public class AlignerUtils {
 				fillTargetVectorSProrata(targetVector, entry, translations);
 				break;
 			case TRANSLATION_STRATEGY_MOST_FREQUENT:
-				fillTargetVectorSMostFrequent(targetVector, entry, translations);
+				fillTargetVectorSMost(targetVector, entry, translations, targetTermino.getFrequencyMeasure());
 				break;
 			case TRANSLATION_STRATEGY_MOST_SPECIFIC:
-				fillTargetVectorSMostSpecificity(targetVector, entry, translations);
+				fillTargetVectorSMost(targetVector, entry, translations, targetTermino.getWRMeasure());
 				break;
 			case TRANSLATION_STRATEGY_EQUI_REPARTITION:
 				fillTargetVectorSEquiRepartition(targetVector, entry, translations);
@@ -173,29 +173,15 @@ public class AlignerUtils {
 	 * @param candidateTranslations
 	 * 			the candidate translations of the <code>sourceTermEntry</code> given by the
 	 * 			bilingual dictionary.
+	 * @param termMeasure 
 	 * 
 	 */
-	private static void fillTargetVectorSMostFrequent(ContextVector translatedVector,
-			ContextVector.Entry sourceTermEntry, Set<Term> candidateTranslations) {
+	private static void fillTargetVectorSMost(ContextVector translatedVector,
+			ContextVector.Entry sourceTermEntry, Set<Term> candidateTranslations, TermMeasure termMeasure) {
 		fillTargetVectorWithMostProperty(translatedVector, sourceTermEntry,
-				candidateTranslations, TermProperty.FREQUENCY);
+				candidateTranslations, termMeasure);
 	}
 	
-	/**
-	 * 
-	 * Same as {@link #fillTargetVectorSMostFrequent(ContextVector, eu.project.ttc.models.ContextVector.Entry, Set)}
-	 * but applies on specificity property.
-	 * 
-	 * @see #fillTargetVectorSMostFrequent(ContextVector, eu.project.ttc.models.ContextVector.Entry, Set)
-	 * @param translatedVector
-	 * @param sourceTermEntry
-	 * @param candidateTranslations
-	 */
-	private static void fillTargetVectorSMostSpecificity(ContextVector translatedVector,
-			ContextVector.Entry sourceTermEntry, Set<Term> candidateTranslations) {
-		fillTargetVectorWithMostProperty(translatedVector, sourceTermEntry,
-				candidateTranslations, TermProperty.WR);
-	}
 	
 	/**
 	 * 
@@ -230,12 +216,12 @@ public class AlignerUtils {
 	private static void fillTargetVectorWithMostProperty(
 			ContextVector translatedVector,
 			ContextVector.Entry sourceTermEntry,
-			Set<Term> candidateTranslations, final TermProperty frequency) {
+			Set<Term> candidateTranslations, final TermMeasure measure) {
 		Term mostFrequent = null;
 		double maxValue = -1d;
 		
 		for(Term t:candidateTranslations) {
-			if(frequency.getDoubleValue(t)>maxValue) {
+			if(measure.getValue(t)>maxValue) {
 				maxValue = t.getFrequency();
 				mostFrequent = t;
 			}

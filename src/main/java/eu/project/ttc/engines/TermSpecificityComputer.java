@@ -31,7 +31,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import eu.project.ttc.models.Term;
-import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.resources.GeneralLanguage;
 import eu.project.ttc.resources.TermIndexResource;
 
@@ -47,9 +46,6 @@ public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 	
 	private int nbWordAnnotations = 0;
 	
-	private double wrLogStandardDeviation = 0d;
-	private double wrLogAverage = 0d;
-	
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
 		FSIterator<Annotation> it =  aJCas.getAnnotationIndex().iterator();
@@ -63,44 +59,11 @@ public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
 		LOGGER.info("Computing specificities");
-		final TermIndex termIndex = this.termIndexResource.getTermIndex();
 		
-		/*
-		 * Ugly trick to access nbWordAnnotations from outside (only 
-		 * for the GeneralLanguage resource generation) without
-		 * modifying TermIndex data model.
-		 */
-		System.getProperties().setProperty("termsuite.nbWordAnnotations", Integer.toString(nbWordAnnotations));
-
-		computeWR(termIndex);
-		computeStandardDeviation(termIndex);
-		computeWRLogZScore(termIndex);
-	}
-
-	private void computeWRLogZScore(TermIndex termIndex) {
-		for(Term term:termIndex.getTerms())
-			term.setWRLogZScore((term.getWRLog() - wrLogAverage)/wrLogStandardDeviation);
-	}
-
-	private void computeStandardDeviation(TermIndex termIndex) {
-		double sum = 0d;
-		for(Term term:termIndex.getTerms()) 
-			sum += term.getWRLog();
+		termIndexResource.getTermIndex().setWordAnnotationsNum(this.nbWordAnnotations);
 		
-		int size = termIndex.getTerms().size();
-		wrLogAverage = sum / size;
-		LOGGER.debug("wrLog average is {}", wrLogAverage);
 		
-		double sigmaSquare = 0;
-		for(Term term:termIndex.getTerms()) 
-			sigmaSquare+=Math.pow(term.getWRLog() - wrLogAverage, 2);
-		
-		wrLogStandardDeviation = Math.sqrt(1.0/size * sigmaSquare);
-		LOGGER.debug("wrLog stadard deviation is {}", wrLogStandardDeviation);
-	}
-
-	private void computeWR(final TermIndex termIndex) {
-		double maxWR = 0.0;
+		//		double maxWR = 0.0;
 		if(generalLanguage.isCumulatedFrequencyMode()) {
 			// process specificity for old versions of GeneralLanguage resources that do not have __NB_CORPUS_WORDS__ key
 			
@@ -108,15 +71,18 @@ public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 			for(Term term:termIndexResource.getTermIndex().getTerms()) 
 				totalCount+=term.getFrequency();
 			for(Term term:termIndexResource.getTermIndex().getTerms()) {
-				double frequency = ((float)term.getFrequency()) / totalCount;
+				double frequency = (1000 * (float)term.getFrequency()) / totalCount;
 //				double frequency = ((float)term.getAllOccurrences(2).size()) / totalCount;
 				double generalFrequency = generalLanguage.getNormalizedFrequency(term.getLemma());
 				if (generalFrequency != 0.0) {
-					double wr = frequency / generalFrequency;
-					term.setWR((float)wr);
-					term.setWRLog(Math.log10(1 + wr));
-					if(wr>maxWR)
-						maxWR = wr;
+//					double wr = frequency / generalFrequency;
+					term.setFrequencyNorm(frequency);
+					term.setGeneralFrequencyNorm(generalFrequency);
+
+//					term.setWR((float)wr);
+//					term.setWRLog(Math.log10(1 + wr));
+//					if(wr>maxWR)
+//						maxWR = wr;
 				} else 
 					LOGGER.warn("GeneralFrequency resource returned 0.0 for the term " + term.getGroupingKey() + ". Ignoring this term.");
 			}
@@ -126,12 +92,11 @@ public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 				float normalizedGeneralTermFrequency = generalTermFrequency/generalLanguage.getNbCorpusWords();
 				float termFrequency = term.getFrequency();
 //				float termFrequency = term.getAllOccurrences(2).size();
-				float normalizedTermFrequency = termFrequency/this.nbWordAnnotations;
-				
-				term.setWR(normalizedTermFrequency/normalizedGeneralTermFrequency);
-				term.setWRLog(Math.log10(1 + normalizedTermFrequency/normalizedGeneralTermFrequency));
-				if(term.getWR()>maxWR)
-					maxWR = term.getWR();
+				float normalizedTermFrequency = (1000 * termFrequency)/this.nbWordAnnotations;
+				term.setFrequencyNorm(normalizedTermFrequency);
+				term.setGeneralFrequencyNorm( normalizedGeneralTermFrequency);
+//				term.setWR(normalizedTermFrequency/normalizedGeneralTermFrequency);
+//				term.setWRLog(Math.log10(1 + normalizedTermFrequency/normalizedGeneralTermFrequency));
 				
 			}
 		}

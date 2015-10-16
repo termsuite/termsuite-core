@@ -23,7 +23,6 @@ package eu.project.ttc.engines;
 
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
-import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.fit.descriptor.ExternalResource;
 import org.apache.uima.jcas.JCas;
 import org.slf4j.Logger;
@@ -37,10 +36,6 @@ import fr.univnantes.lina.UIMAProfiler;
 
 public class PrimaryOccurrenceDetector extends JCasAnnotator_ImplBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(PrimaryOccurrenceDetector.class);
-
-	public static final String DETECTION_STRATEGY = "DetectionStrategy";
-	@ConfigurationParameter(name=DETECTION_STRATEGY, mandatory=true)
-	private int detectionStrategy;
 	
 	@ExternalResource(key = TermIndexResource.TERM_INDEX, mandatory = true)
 	private TermIndexResource termIndexResource;
@@ -51,9 +46,8 @@ public class PrimaryOccurrenceDetector extends JCasAnnotator_ImplBase {
 	
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
 		UIMAProfiler.getProfiler("AnalysisEngine").start(this, "process");
-		LOGGER.info("Detecting primary occurrence in TermIndex {} with strategy {}", 
-				termIndexResource.getTermIndex().getName(),
-				detectionStrategy);
+		LOGGER.info("Detecting primary occurrence in TermIndex {}", 
+				termIndexResource.getTermIndex().getName());
 		
 		TermIndex termIndex = this.termIndexResource.getTermIndex();
 		
@@ -71,7 +65,7 @@ public class PrimaryOccurrenceDetector extends JCasAnnotator_ImplBase {
 			LOGGER.debug("    detecting primary occurrences for in doc {}", doc.getUrl());
 			TermOccurrenceUtils.markPrimaryOccurrence(
 					doc.getOccurrences(), 
-					detectionStrategy);
+					termIndex.getWRMeasure());
 		}
 
 		/*

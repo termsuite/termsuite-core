@@ -27,9 +27,8 @@
 			key: "na: word1 word2",
 			id: 1,
 			freq: 6,
-			wr: 3.4,
-			wrlog: 11,
-			zscore: 22,
+			f_norm: 0.123,
+			gf_norm: 0.025,
 			words: [
 				{lemma: "word1", syn: "N"},
 				{lemma: "word2", syn: "A"}

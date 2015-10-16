@@ -49,6 +49,7 @@ import eu.project.ttc.engines.CompostAE;
 import eu.project.ttc.engines.CompoundSplitter;
 import eu.project.ttc.engines.Contextualizer;
 import eu.project.ttc.engines.EvalEngine;
+import eu.project.ttc.engines.FlatScorifier;
 import eu.project.ttc.engines.GraphicalVariantGatherer;
 import eu.project.ttc.engines.MateLemmaFixer;
 import eu.project.ttc.engines.MateLemmatizerTagger;
@@ -97,6 +98,7 @@ import eu.project.ttc.resources.MateLemmatizerModel;
 import eu.project.ttc.resources.MateTaggerModel;
 import eu.project.ttc.resources.MemoryTermIndexManager;
 import eu.project.ttc.resources.ReferenceTermList;
+import eu.project.ttc.resources.ScoredModel;
 import eu.project.ttc.resources.SimpleWordSet;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.resources.YamlVariantRules;
@@ -462,13 +464,25 @@ public class TermSuitePipeline {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					TSVExporter.class, 
-					TSVExporter.FILTERING_RULE, exportFilteringRule,
-					TSVExporter.FILTERING_THRESHOLD, exportFilteringThreshold,
 					TSVExporter.TO_FILE_PATH, toFilePath,
 					TSVExporter.TERM_PROPERTIES, this.tsvExportProperties
 				);
-			ExternalResourceFactory.bindResource(ae, resTermIndex());
+			ExternalResourceFactory.bindResource(ae, resScoredModel());
 	
+			return aggregateAndReturn(ae);
+		} catch (Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
+	}
+	
+	public TermSuitePipeline haeScorifier() {
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					FlatScorifier.class
+				);
+			ExternalResourceFactory.bindResource(ae, ScoredModel.SCORED_MODEL, resScoredModel());
+			ExternalResourceFactory.bindResource(ae, TermIndexResource.TERM_INDEX, resTermIndex());
+
 			return aggregateAndReturn(ae);
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
@@ -983,9 +997,18 @@ public class TermSuitePipeline {
 		}
 	}
 
+	private ExternalResourceDescription scoredModelDesc;
+	public ExternalResourceDescription  resScoredModel() {
+		if(scoredModelDesc == null) {
+			scoredModelDesc = ExternalResourceFactory.createExternalResourceDescription(
+					ScoredModel.class, 
+					"");
+		}
+		return scoredModelDesc;
+	}
 	
 	private ExternalResourceDescription termIndexResourceDesc;
-	private ExternalResourceDescription resTermIndex() {
+	public ExternalResourceDescription resTermIndex() {
 		if(termIndexResourceDesc == null) {
 			if(!termIndex.isPresent())
 				emptyTermIndex(UUID.randomUUID().toString());
@@ -1151,8 +1174,7 @@ public class TermSuitePipeline {
 	public TermSuitePipeline aePrimaryOccurrenceDetector(int detectionStrategy) {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					PrimaryOccurrenceDetector.class,
-					PrimaryOccurrenceDetector.DETECTION_STRATEGY, detectionStrategy
+					PrimaryOccurrenceDetector.class
 			);
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());

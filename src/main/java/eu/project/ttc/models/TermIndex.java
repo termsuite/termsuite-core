@@ -27,6 +27,7 @@ import java.util.Iterator;
 
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.index.CustomTermIndex;
+import eu.project.ttc.models.index.TermMeasure;
 import eu.project.ttc.models.index.TermValueProvider;
 import eu.project.ttc.types.TermOccAnnotation;
 
@@ -120,6 +121,14 @@ public interface TermIndex {
 	public void dropCustomIndex(String indexName);
 
 	/*
+	 * Term measures
+	 */
+	public TermMeasure getWRMeasure();
+	public TermMeasure getWRLogMeasure();
+	public TermMeasure getFrequencyMeasure();
+	
+	
+	/*
 	 * Occurrences
 	 */
 	//TODO remove these
@@ -132,7 +141,9 @@ public interface TermIndex {
 	 * Id generator
 	 */
 	public int newId();
-	
+
+	public void setWordAnnotationsNum(int nbWordAnnotations);
+	public int getWordAnnotationsNum();
 	
 	/*
 	 * Specificity

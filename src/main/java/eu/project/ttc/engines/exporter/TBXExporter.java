@@ -24,10 +24,10 @@ package eu.project.ttc.engines.exporter;
 import java.io.IOException;
 import java.math.RoundingMode;
 import java.text.NumberFormat;
+import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
-import java.util.Set;
 import java.util.TreeSet;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -193,13 +193,13 @@ public class TBXExporter extends AbstractTermIndexExporter {
 		transformer.transform(source, result);
 	}
     
-    private LoadingCache<Term, Set<TermOccurrence>> allOccurrencesCaches = CacheBuilder.newBuilder()
+    private LoadingCache<Term, Collection<TermOccurrence>> allOccurrencesCaches = CacheBuilder.newBuilder()
 			.maximumSize(100)
 			.build(
-	           new CacheLoader<Term, Set<TermOccurrence>>() {
+	           new CacheLoader<Term, Collection<TermOccurrence>>() {
 	        	   @Override
-	        	public Set<TermOccurrence> load(Term term) throws Exception {
-	        		return term.getAllOccurrences();
+	        	public Collection<TermOccurrence> load(Term term) throws Exception {
+	        		return term.getOccurrences();
 	        	}
            });
 
@@ -209,7 +209,7 @@ public class TBXExporter extends AbstractTermIndexExporter {
 	           new CacheLoader<Term, LinkedHashMap<String, Integer>>() {
 	        	   @Override
 	        	public LinkedHashMap<String, Integer> load(Term term) throws Exception {
-	        		   Set<TermOccurrence> allOccurrences = allOccurrencesCaches.getUnchecked(term);
+	        		   Collection<TermOccurrence> allOccurrences = allOccurrencesCaches.getUnchecked(term);
 	        		   List<String> forms = Lists.newArrayListWithCapacity(allOccurrences.size());
 	        		   for(TermOccurrence o:allOccurrences)
 	        			   forms.add(TermSuiteUtils.trimInside(o.getCoveredText()));
@@ -247,7 +247,7 @@ public class TBXExporter extends AbstractTermIndexExporter {
 			this.addTermVariant(langSet, String.format("langset-%d", variation.getVariant().getId()),
 					variation.getVariant().getGroupingKey());
 		}
-		Set<TermOccurrence> allOccurrences = allOccurrencesCaches.getUnchecked(term);
+		Collection<TermOccurrence> allOccurrences = allOccurrencesCaches.getUnchecked(term);
 		this.addDescrip(langSet, langSet, "nbOccurrences", allOccurrences.size());
 
 		Element tig = document.createElement("tig");
@@ -270,7 +270,7 @@ public class TBXExporter extends AbstractTermIndexExporter {
 		this.addNote(langSet, tig, "termComplexity",
 				this.getComplexity(term));
 		this.addDescrip(langSet, tig, "termSpecificity",
-				NUMBER_FORMATTER.format(term.getWR()));
+				NUMBER_FORMATTER.format(termIndexResource.getTermIndex().getWRMeasure().getValue(term)));
 		this.addDescrip(langSet, tig, "nbOccurrences",
 				term.getFrequency());
 		this.addDescrip(langSet, tig, "relativeFrequency",
@@ -278,7 +278,7 @@ public class TBXExporter extends AbstractTermIndexExporter {
 		addDescrip(langSet, tig, "formList",
 					buildFormListJSON(term, formCounters.size()));
 		 this.addDescrip(langSet, tig, "domainSpecificity",
-				 term.getWR());
+				 termIndexResource.getTermIndex().getWRMeasure().getValue(term));
 	}
 	
 	private void addDescrip(Element lang, Element element,

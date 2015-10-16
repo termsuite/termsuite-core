@@ -27,30 +27,28 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.nio.charset.Charset;
-import java.util.Collections;
 import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
+import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
+import org.apache.uima.fit.descriptor.ExternalResource;
+import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
-import com.google.common.collect.Sets;
 
-import eu.project.ttc.engines.AbstractTermIndexExporter;
 import eu.project.ttc.engines.cleaner.TermProperty;
-import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.TermVariation;
+import eu.project.ttc.models.scored.ScoredTerm;
+import eu.project.ttc.models.scored.ScoredVariation;
+import eu.project.ttc.resources.ScoredModel;
 import eu.project.ttc.tools.utils.IndexerTSVBuilder;
-import eu.project.ttc.utils.TermUtils;
 
 /**
  * Exports a {@link TermIndex} in TSV format.
@@ -58,15 +56,19 @@ import eu.project.ttc.utils.TermUtils;
  * @author Damien Cram
  *
  */
-public class TSVExporter extends AbstractTermIndexExporter {
+public class TSVExporter extends JCasAnnotator_ImplBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TSVExporter.class);
 	
-	private static final double THRESHOLD_EXTENSION_GAIN = 0.333333d;
-
+	@ExternalResource(key=ScoredModel.SCORED_MODEL, mandatory=true)
+	protected ScoredModel scoredModel;
 	
 	public static final String TERM_PROPERTIES = "TermProperties";
 	@ConfigurationParameter(name=TERM_PROPERTIES, mandatory=false, defaultValue="pilot,specificity")
 	private String termPropertyList;
+	
+	public static final String TO_FILE_PATH = "TsvFilePath";
+	@ConfigurationParameter(name=TO_FILE_PATH, mandatory=true)
+	protected String toFilePath;
 	
 	/*
 	 * Internal fields
@@ -80,6 +82,7 @@ public class TSVExporter extends AbstractTermIndexExporter {
 	public void initialize(UimaContext context)
 			throws ResourceInitializationException {
 		super.initialize(context);
+		
 		try {
 			List<TermProperty> properties = Lists.newArrayList();
 			for(String propertyName:Splitter.on(",").splitToList(termPropertyList))
@@ -98,80 +101,27 @@ public class TSVExporter extends AbstractTermIndexExporter {
 	}
 
 	@Override
-	protected void processAcceptedTerms(TreeSet<Term> acceptedTerms) throws AnalysisEngineProcessException {
-		LOGGER.info("Exporting {} terms to TSV file {}", acceptedTerms.size(), this.toFilePath);
+	public void process(JCas aJCas) throws AnalysisEngineProcessException {
+		
+	}
+	
+	@Override
+	public void collectionProcessComplete() throws AnalysisEngineProcessException {
+		LOGGER.info("Exporting {} terms to TSV file {}", scoredModel.getTerms().size(), this.toFilePath);
 		try {
-			double maxWRlog = 0d;
-
-			for(Term t:termIndexResource.getTermIndex().getTerms()) {
-				if(t.getWRLog() > maxWRlog)
-					maxWRlog = t.getWRLog();
-			}
-					
-					
-			Set<Term> ignore = Sets.newHashSet();
-			for(final Term t:acceptedTerms) {
-				if(ignore.contains(t))
-					continue;
-				tsv.startTerm(t);
-				List<ScoredVariation> variations = Lists.newArrayListWithExpectedSize(t.getVariations().size());
-				
-				// get max variation frequency
-				
-				int maxFrequency = 0;
-				for(TermVariation tv:t.getVariations())
-					if(tv.getVariant().getFrequency() > maxFrequency)
-						maxFrequency = tv.getVariant().getFrequency();
-				
-				for(TermVariation tv:t.getVariations()) {
-					double strictness = 100*TermUtils.getStrictness(tv.getVariant(), t);
-					double extensionGain = 100*THRESHOLD_EXTENSION_GAIN;
-					double extensionSpec = 0d;
-					double frequencyScore = 100*((double)tv.getVariant().getFrequency())/maxFrequency;
-
-					if(strictness < 100d) {
-						// probably an extension
-						Term extensionAffix = null;
-						try {
-							extensionAffix = TermUtils.getExtensionAffix(
-									termIndexResource.getTermIndex(),
-									tv.getBase(),
-									tv.getVariant()
-								);
-							if(extensionAffix == null) {
-//								LOGGER.warn("Found no affix in TermIndex for extension term {} and base term {}", tv.getVariant(), tv.getBase());
-							} else {
-								extensionGain = 100*TermUtils.getExtensionGain(
-										tv.getVariant(), 
-										extensionAffix);
-								extensionSpec = 100*(extensionAffix.getWRLog() / maxWRlog);
-							}
-						} catch(IllegalStateException e) {
-							// do nothing
-							LOGGER.warn(e.getMessage());
-						}
-					}
-					variations.add(new ScoredVariation(
-							tv, 
-							strictness, 
-							extensionGain,
-							extensionSpec,
-							frequencyScore));
-				}
-				Collections.sort(variations);
-				for(ScoredVariation v:variations) {
-					tsv.addVariant(v.getVariant(), v.getLabel());
-					ignore.add(v.getVariant());
+			for(ScoredTerm t:scoredModel.getTerms()) {
+				tsv.startTerm(t.getTerm());
+				for(ScoredVariation sv:t.getVariations()) {
+					tsv.addVariant(sv.getVariant().getTerm(), sv.getLabel());
 				}
 				tsv.endTerm();
 			}
 			tsv.close();
-		} catch(IOException e) {
-			LOGGER.error("Could not write terms to TSV file {}", this.toFilePath);
+		} catch (IOException e) {
+			LOGGER.error("Problem occurred while writing terms to tsv file.");
 			throw new AnalysisEngineProcessException(e);
 		}
 	}
-	
 	
 	@Override
 	public void destroy() {

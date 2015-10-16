@@ -40,8 +40,8 @@ import com.google.common.collect.Lists;
 import eu.project.ttc.engines.variant.VariantRule;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.index.CustomIndexStats;
 import eu.project.ttc.models.index.CustomTermIndex;
-import eu.project.ttc.models.index.IndexStats;
 import eu.project.ttc.models.index.TermIndexes;
 import eu.project.ttc.models.index.TermValueProviders;
 import eu.project.ttc.resources.TermIndexResource;
@@ -100,7 +100,7 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 		// clean biggest classes
 		customIndex.dropBiggerEntries(WARNING_CRITICAL_SIZE, true);
 		
-		IndexStats stats = new IndexStats(customIndex);
+		CustomIndexStats stats = new CustomIndexStats(customIndex);
 
 		
 		// Display class sizes
