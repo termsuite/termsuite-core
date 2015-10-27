@@ -1,4 +1,7 @@
+[![Build Status](https://travis-ci.org/termsuite/termsuite-core.svg?branch=master)](https://travis-ci.org/termsuite/termsuite-core)
+
 # Welcome to TermSuite
+
 
 TermSuite is a Java UIMA-based toolbox for multilingual and efficient terminology extraction and multilingual term alignment.
 
