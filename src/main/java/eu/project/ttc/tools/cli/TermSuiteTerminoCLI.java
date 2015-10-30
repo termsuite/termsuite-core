@@ -18,9 +18,13 @@
  */
 package eu.project.ttc.tools.cli;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
+import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.regex.Pattern;
 
@@ -197,6 +201,10 @@ public class TermSuiteTerminoCLI {
      * @throws UnsupportedEncodingException 
 	 */
 	public static void main(String[] args) throws UnsupportedEncodingException {
+		File logDir = new File("logs");
+		if(!logDir.exists()) 
+			logDir.mkdir();
+		TermSuiteCLIUtils.logToFile(Paths.get("logs", "termsuite-" + new SimpleDateFormat("yyyyMMdd-HHmmss").format(new Date()) +".log").toAbsolutePath().toString());
 		Stopwatch sw = Stopwatch.createStarted();
 		try {
 			

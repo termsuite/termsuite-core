@@ -25,8 +25,11 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Properties;
 
 import org.apache.commons.cli.CommandLine;
@@ -41,9 +44,14 @@ import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.ImmutableList;
+import com.sun.org.apache.bcel.internal.generic.NEW;
 
 import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.LoggerContext;
+import ch.qos.logback.classic.encoder.PatternLayoutEncoder;
+import ch.qos.logback.classic.spi.ILoggingEvent;
+import ch.qos.logback.core.FileAppender;
+
 
 
 /**
@@ -322,6 +330,25 @@ public final class TermSuiteCLIUtils {
 	public static void stopChrono() {
 		stopwatch.stop();
 		LOGGER.info("CLI stopped after " + stopwatch.toString());
+	}
+
+	public static void logToFile(String path) {
+		PatternLayoutEncoder ple = new PatternLayoutEncoder();
+
+		ple.setPattern("%date %level [%thread] %logger{10} [%file:%line] %msg%n");
+		ple.setContext((LoggerContext) LoggerFactory.getILoggerFactory());
+		ple.start();
+		FileAppender<ILoggingEvent> fa = new FileAppender<ILoggingEvent>();
+		fa.setName("FileLogger");
+		fa.setFile(path);
+		fa.setEncoder(ple);
+//		fa.setThreshold(ch.qos.logback.classic.Level.DEBUG);
+		fa.setAppend(true);
+		fa.start();
+		
+		// add appender to any Logger (here is root)
+		ch.qos.logback.classic.Logger rootLogger = (ch.qos.logback.classic.Logger)LoggerFactory.getLogger(Logger.ROOT_LOGGER_NAME);
+		rootLogger.addAppender(fa);
 	}
 
 	public static void disableLogging() {
