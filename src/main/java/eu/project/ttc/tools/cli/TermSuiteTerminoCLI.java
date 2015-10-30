@@ -204,8 +204,10 @@ public class TermSuiteTerminoCLI {
 		File logDir = new File("logs");
 		if(!logDir.exists()) 
 			logDir.mkdir();
-		TermSuiteCLIUtils.logToFile(Paths.get("logs", "termsuite-" + new SimpleDateFormat("yyyyMMdd-HHmmss").format(new Date()) +".log").toAbsolutePath().toString());
+		String logPath = Paths.get("logs", "termsuite-" + new SimpleDateFormat("yyyyMMdd-HHmmss").format(new Date()) +".log").toAbsolutePath().toString();
+		TermSuiteCLIUtils.logToFile(logPath);
 		Stopwatch sw = Stopwatch.createStarted();
+		LOGGER.info("Logging to {}", logPath);
 		try {
 			
 			// usage
