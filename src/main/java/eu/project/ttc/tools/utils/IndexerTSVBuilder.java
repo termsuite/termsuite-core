@@ -26,6 +26,7 @@ import com.google.common.collect.Lists;
 
 import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.models.Term;
+import eu.project.ttc.models.TermIndex;
 
 /**
  * Incrementally creates an indexer output TSV file.
@@ -58,30 +59,30 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 	 * @return The new id
 	 * @throws IOException
 	 */
-	public Integer addTerm(Term term) throws IOException {
-		startTerm(term);
+	public Integer addTerm(TermIndex termIndex, Term term) throws IOException {
+		startTerm(termIndex, term);
 		endTerm();
 		return termCount;
 	}
 
 	private static final String SPEC_FORMAT = "%.2f";
-	public void startTerm(Term term) throws IOException {
-		appendTerm(term, "T");
+	public void startTerm(TermIndex termIndex, Term term) throws IOException {
+		appendTerm(termIndex, term, "T");
 	}
 
-	public void addVariant(Term variant, String label) throws IOException {
-		appendTerm(variant, String.format("V[%s]", label));
+	public void addVariant(TermIndex termIndex,Term variant, String label) throws IOException {
+		appendTerm(termIndex, variant, String.format("V[%s]", label));
 	}
 
 	public void endTerm() {
 		termCount++;
 	}
 	
-	private void appendTerm(Term t, String termType) throws IOException {
+	private void appendTerm(TermIndex termIndex, Term t, String termType) throws IOException {
 		List<String> line = Lists.newArrayList();
 		line.add(termType);
 		for(TermProperty p:properties) {
-			Comparable<?> value = p.getValue(t);
+			Comparable<?> value = p.getValue(termIndex, t);
 			if (value instanceof Integer || value instanceof Long)
 				line.add(value.toString());
 			else if(value instanceof Double || value instanceof Float) {

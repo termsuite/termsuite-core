@@ -110,9 +110,12 @@ public class TSVExporter extends JCasAnnotator_ImplBase {
 		LOGGER.info("Exporting {} terms to TSV file {}", scoredModel.getTerms().size(), this.toFilePath);
 		try {
 			for(ScoredTerm t:scoredModel.getTerms()) {
-				tsv.startTerm(t.getTerm());
+				tsv.startTerm(scoredModel.getTermIndex(), t.getTerm());
 				for(ScoredVariation sv:t.getVariations()) {
-					tsv.addVariant(sv.getVariant().getTerm(), sv.getLabel());
+					tsv.addVariant(
+							scoredModel.getTermIndex(), 
+							sv.getVariant().getTerm(), 
+							sv.getLabel());
 				}
 				tsv.endTerm();
 			}

@@ -293,8 +293,16 @@ public class TermSuiteTerminoCLI {
 				
 				
 				// Export
-				if(tsvFile.isPresent()) 
+				if(tsvFile.isPresent())  {
+					pipeline.haeScorifier();
+					pipeline.setTsvExportProperties(
+						TermProperty.PILOT,
+						TermProperty.FREQUENCY,
+						TermProperty.WR_LOG
+					);
 					pipeline.haeTsvExporter(tsvFile.get());
+
+				}
 				if(tbxFile.isPresent()) 
 					pipeline.haeTbxExporter(tbxFile.get());
 				if(jsonFile.isPresent()) 
