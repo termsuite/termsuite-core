@@ -132,7 +132,7 @@ if(hasProperty("ossrhUsername")) {
   	}
   }
 } else {
-  def msg = "Publishing to maven central (task uploadArchives) is not possible since no gradle property file is found (use \"\$ cp gradle.properties.sample gradle.properties\")"
+  def msg = "Publishing to maven central (task uploadArchives) is not possible since no gradle property file is found (use \"\$ cp gradle.properties.sample gradle.properties\" and edit gradle.properties)"
   logger.warn(msg)
 }
 
