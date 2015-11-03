@@ -6,7 +6,7 @@ apply plugin: 'maven-publish'
 
 group = 'fr.univ-nantes.termsuite'
 archivesBaseName = 'termsuite-core'
-version = '2.0'
+version = '2.0-SNAPSHOT'
 
 project.ext.description = 'A Java UIMA-based toolbox for multilingual and efficient terminology extraction an multilingual term alignment'
 project.ext.organization = 'LINA CNRS UMR 6241 - Université de Nantes'
