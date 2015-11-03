@@ -34,6 +34,7 @@ import org.apache.commons.cli.ParseException;
 import org.apache.commons.cli.PosixParser;
 import org.apache.uima.fit.factory.JCasFactory;
 import org.apache.uima.jcas.JCas;
+import org.assertj.core.util.Lists;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -130,6 +131,8 @@ public class TermSuiteTerminoCLI {
 	
 	// the tsv file path argument
 	private static final String TSV = "tsv";
+	private static final String TSV_PROPERTIES = "tsv-properties";
+
 
 	// the json file path argument
 	private static final String JSON = "json";
@@ -166,6 +169,8 @@ public class TermSuiteTerminoCLI {
 	 * Export params
 	 */
 	private static Optional<String> tsvFile = Optional.absent();
+	private static Optional<TermProperty[]> tsvProperties = Optional.absent();
+	
 	private static Optional<String> jsonFile = Optional.absent();
 	private static Optional<String> tbxFile = Optional.absent();
 	
@@ -305,18 +310,23 @@ public class TermSuiteTerminoCLI {
 				// Export
 				if(tsvFile.isPresent())  {
 					pipeline.haeScorifier();
-					pipeline.setTsvExportProperties(
-						TermProperty.PILOT,
-						TermProperty.FREQUENCY,
-						TermProperty.WR_LOG
-					);
+					if(tsvProperties.isPresent()) {
+						pipeline.setTsvExportProperties(tsvProperties.get());
+					} else 
+						pipeline.setTsvExportProperties(
+							TermProperty.PILOT,
+							TermProperty.FREQUENCY
+						);
 					pipeline.haeTsvExporter(tsvFile.get());
 
 				}
 				if(tbxFile.isPresent()) 
 					pipeline.haeTbxExporter(tbxFile.get());
-				if(jsonFile.isPresent()) 
+				if(jsonFile.isPresent())  {					
+					pipeline.setExportJsonWithContext(false);
+					pipeline.setExportJsonWithOccurrences(true);
 					pipeline.haeJsonExporter(jsonFile.get());
+				}
 
 				// run the pipeline
 				final String termIndexName = "ScriptTermIndex_" + System.currentTimeMillis();
@@ -524,7 +534,12 @@ public class TermSuiteTerminoCLI {
 				TSV, 
 				true,
 				"The tsv file path where to export the term index");
-		
+		options.addOption(
+				null, 
+				TSV_PROPERTIES, 
+				true,
+				"comma-separated list of term properties to export as a column in TSV file");
+
 		options.addOption(
 				null, 
 				TBX, 
@@ -624,6 +639,14 @@ public class TermSuiteTerminoCLI {
 
 		if(line.hasOption(TSV))
 			tsvFile = Optional.of(line.getOptionValue(TSV));
+		if(line.hasOption(TSV_PROPERTIES)) {
+			List<TermProperty> list = Lists.newArrayList();
+			for(String pName:Splitter.on(",").split(line.getOptionValue(TSV_PROPERTIES))) {
+				list.add(TermProperty.forName(pName));
+			}
+			TermProperty[] ary = new TermProperty[list.size()];
+			tsvProperties = Optional.of(list.toArray(ary));
+		}
 		if(line.hasOption(TBX))
 			tbxFile = Optional.of(line.getOptionValue(TBX));
 		if(line.hasOption(JSON))
