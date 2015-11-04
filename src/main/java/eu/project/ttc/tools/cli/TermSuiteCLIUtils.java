@@ -25,11 +25,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.PrintWriter;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Locale;
 import java.util.Properties;
 
 import org.apache.commons.cli.CommandLine;
@@ -44,7 +41,6 @@ import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.ImmutableList;
-import com.sun.org.apache.bcel.internal.generic.NEW;
 
 import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.LoggerContext;
@@ -341,6 +337,7 @@ public final class TermSuiteCLIUtils {
 		FileAppender<ILoggingEvent> fa = new FileAppender<ILoggingEvent>();
 		fa.setName("FileLogger");
 		fa.setFile(path);
+		fa.setContext((LoggerContext) LoggerFactory.getILoggerFactory());
 		fa.setEncoder(ple);
 //		fa.setThreshold(ch.qos.logback.classic.Level.DEBUG);
 		fa.setAppend(true);
