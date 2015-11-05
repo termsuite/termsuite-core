@@ -85,6 +85,8 @@ public class CrossTable {
         for (Iterator<Term> it1 = this.termIndex.getTerms().iterator(); it1.hasNext() ;) {
             term = it1.next();
 //            this.totalFrequency++;
+            if(!term.isContextVectorComputed())
+            	continue;
         	ContextVector context = term.getContextVector();
             for (ContextVector.Entry entry : context.getEntries()) {
             	this.totalCoOccurrences += entry.getNbCooccs();
