@@ -97,6 +97,21 @@ public enum TermProperty {
 		return ComparisonChain.start().compare(getValue(o1), getValue(o2)).result();
 	}
 		
+
+	public double getDoubleValue(TermIndex termIndex, Term t) {
+		switch(this) {
+		case WR:
+			return (double)termIndex.getWRMeasure().getValue(t);
+		case WR_LOG:
+			return (double)termIndex.getWRLogMeasure().getValue(t);
+		case WR_LOG_Z_SCORE:
+			return (double)termIndex.getWRLogMeasure().getZScore(t);
+		default:
+			return getDoubleValue(t);
+		}
+
+	}
+	
 	public double getDoubleValue(Term t) {
 		switch(this) {
 		case DOCUMENT_FREQUENCY:

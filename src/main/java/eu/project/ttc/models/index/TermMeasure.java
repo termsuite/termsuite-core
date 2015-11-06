@@ -2,6 +2,8 @@ package eu.project.ttc.models.index;
 
 import java.util.Comparator;
 
+import com.google.common.base.Optional;
+import com.google.common.base.Preconditions;
 import com.google.common.collect.ComparisonChain;
 
 import eu.project.ttc.models.Term;
@@ -10,21 +12,17 @@ import eu.project.ttc.models.TermOccurrence;
 
 public abstract class TermMeasure {
 	
+	private static final String MSG_NOT_COMPUTED = "This term measure must be computed first.";
+	
 	private TermIndex termIndex;
-	private boolean dirty = true;
+	private boolean computed = false;
 	
 	public TermMeasure(TermIndex termIndex) {
 		super();
 		this.termIndex = termIndex;
-		invalidate();
 	}
 
-	public void invalidate() {
-		this.dirty = true;
-		standardDev = Double.NaN;
-	}
-
-	private int num = 0;
+	private Optional<Integer> totalSpottedTerms = Optional.absent();
 	private double sum = 0d;
 	private double min = Double.MAX_VALUE;
 	private double max = Double.MIN_VALUE;
@@ -33,62 +31,81 @@ public abstract class TermMeasure {
 	
 	public abstract double getValue(Term term);
 
-	private void compute() {
+	private void checkComputed() {
+		Preconditions.checkState(computed, MSG_NOT_COMPUTED);
+	}
+	public void compute() {
+		Preconditions.checkState(termIndex.getTerms().size() > 0, "Cannot compute a measure ono an empty TermIndex");
 		this.sum = 0d;
-		this.num = 0;
+		int num = 0;
 		for(Term t:termIndex.getTerms()) {
+			num++;
 			if(getValue(t) < this.min)
 				this.min = getValue(t);
 			if(getValue(t) > this.max)
 				this.max = getValue(t);
 			this.sum += getValue(t);
 		}
-		this.avg = this.sum / this.num;
-		this.dirty = false;
+		
+		/*
+		 * WARNING!
+		 * 
+		 * If totalSpottedTerms is not set, we set it as num, but
+		 * aggregated measure will be impacted and no normalization
+		 * will actually work. Normalization should always be operated 
+		 * over the same spotting rules, without prior filtering.
+		 */
+		if(!totalSpottedTerms.isPresent())
+			totalSpottedTerms = Optional.of(num);
+		
+		this.avg = this.sum / this.totalSpottedTerms.get();
+		
+		// compute standard deviation
+		double sigmaSquare = 0;
+		for(Term term:termIndex.getTerms()) 
+			sigmaSquare+=Math.pow(getValue(term) - this.avg, 2);
+		this.standardDev = Math.sqrt(1.0/this.totalSpottedTerms.get() * sigmaSquare);
+		this.computed = true;
 	}
 	
 	public double getStandardDeviation() {
-		if(this.standardDev == Double.NaN) {
-			double sigmaSquare = 0;
-			for(Term term:termIndex.getTerms()) 
-				sigmaSquare+=Math.pow(getValue(term) - getAvg(), 2);
-			standardDev = Math.sqrt(1.0/getNum() * sigmaSquare);
-		} 
+		checkComputed();
 		return this.standardDev;
 	}
 	
 	public double getZScore(Term t) {
+		checkComputed();
 		return (getValue(t) - getAvg())/getStandardDeviation();
 	}
 	
 	public double getMin() {
-		if(dirty)
-			compute();
+		checkComputed();
 		return min;
 	}
 
 	public double getMax() {
-		if(dirty)
-			compute();
+		checkComputed();
 		return max;
 	}
 
 	public double getAvg() {
-		if(dirty)
-			compute();
+		checkComputed();
 		return avg;
 	}
 
 	public double getSum() {
-		if(dirty)
-			compute();
+		checkComputed();
 		return sum;
 	}
 	
-	public int getNum() {
-		if(dirty)
-			compute();
-		return num;
+	public int getTotalSpottedTerms() {
+		return totalSpottedTerms.get();
+	}
+	
+	public void setTotalSpottedTerms(int totalSpottedTerms) {
+		Preconditions.checkArgument(totalSpottedTerms > 0, "Requires totalSpottedTerms > 0");
+
+		this.totalSpottedTerms = Optional.of(totalSpottedTerms);
 	}
 	
 	public Comparator<Term> getTermComparator(final boolean reverse) {

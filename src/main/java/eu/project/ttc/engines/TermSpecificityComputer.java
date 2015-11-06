@@ -31,8 +31,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import eu.project.ttc.models.Term;
+import eu.project.ttc.models.index.TermMeasure;
 import eu.project.ttc.resources.GeneralLanguage;
 import eu.project.ttc.resources.TermIndexResource;
+import fr.univnantes.lina.UIMAProfiler;
 
 public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermSpecificityComputer.class);
@@ -58,8 +60,23 @@ public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 	@Override
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
-		LOGGER.info("Computing specificities");
+		UIMAProfiler.getProfiler("AnalysisEngine").start(this, "process");
+		LOGGER.info("Computing specificities and measures");
 		
+		computeSpecifities();
+		computeMeasures();
+		
+		UIMAProfiler.getProfiler("AnalysisEngine").stop(this, "process");
+		
+
+	}
+
+	private void computeMeasures() {
+		for(TermMeasure measure:termIndexResource.getTermIndex().getMeasures())
+			measure.compute();
+	}
+
+	private void computeSpecifities() {
 		termIndexResource.getTermIndex().setWordAnnotationsNum(this.nbWordAnnotations);
 		
 		
@@ -89,7 +106,7 @@ public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 		} else {
 			for(Term term:termIndexResource.getTermIndex().getTerms()) {
 				float generalTermFrequency = (float)generalLanguage.getFrequency(term.getLemma(), term.getPattern());
-				float normalizedGeneralTermFrequency = generalTermFrequency/generalLanguage.getNbCorpusWords();
+				float normalizedGeneralTermFrequency = 1000*generalTermFrequency/generalLanguage.getNbCorpusWords();
 				float termFrequency = term.getFrequency();
 //				float termFrequency = term.getAllOccurrences(2).size();
 				float normalizedTermFrequency = (1000 * termFrequency)/this.nbWordAnnotations;

@@ -126,7 +126,8 @@ public interface TermIndex {
 	public TermMeasure getWRMeasure();
 	public TermMeasure getWRLogMeasure();
 	public TermMeasure getFrequencyMeasure();
-	
+	public Iterable<TermMeasure> getMeasures();
+
 	
 	/*
 	 * Occurrences
@@ -144,24 +145,6 @@ public interface TermIndex {
 
 	public void setWordAnnotationsNum(int nbWordAnnotations);
 	public int getWordAnnotationsNum();
+
 	
-	/*
-	 * Specificity
-	 */
-//	public float getMaxSpecificity();
-//	public void setMaxWR(float maxSpecificity);
-
-
-
-
-	/*
-	 * corpus word and document counts
-	 */
-//	public void setCorpusWordCount(int nbWordAnnotations);
-//
-//	public void setDocumentCount(int nbDocumentCount);
-
-
-
-
 }

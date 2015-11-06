@@ -118,7 +118,6 @@ public class MemoryTermIndex implements TermIndex {
 			termIndex.indexTerm(term);
 		for(TermWord tw:term.getWords())
 			privateAddWord(tw.getWord(), false);
-		invalidateMeasures();
 	}
 
 
@@ -181,7 +180,6 @@ public class MemoryTermIndex implements TermIndex {
 				annotation.getEnd()),
 			keepOccurrence
 		);
-		invalidateMeasures();
 		return term;
 	}
 
@@ -358,8 +356,6 @@ public class MemoryTermIndex implements TermIndex {
 					o.getContextVector().removeCoTerm(t);
 			}
 		}
-
-		invalidateMeasures();
 	}
 
 	@Override
@@ -446,11 +442,6 @@ public class MemoryTermIndex implements TermIndex {
 			t2.setTermClass(termClass);
 	}
 
-	private void invalidateMeasures() {
-		for(TermMeasure m:this.termMeasures.values())
-			m.invalidate();
-	}
-
 	@Override
 	public void setWordAnnotationsNum(int nbWordAnnotations) {
 		this.nbWordAnnotations = nbWordAnnotations;
@@ -474,5 +465,10 @@ public class MemoryTermIndex implements TermIndex {
 	@Override
 	public TermMeasure getFrequencyMeasure() {
 		return this.termMeasures.get(MEASURE_FREQUENCY);
+	}
+
+	@Override
+	public Iterable<TermMeasure> getMeasures() {
+		return this.termMeasures.values();
 	}
 }

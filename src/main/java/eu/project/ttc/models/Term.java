@@ -559,16 +559,28 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 	
 	public void setFrequencyNorm(double normalizedTermFrequency) {
 		this.normalizedTermFrequency = normalizedTermFrequency;
-		
 	}
+	
 	public void setGeneralFrequencyNorm(double normalizedGeneralTermFrequency) {
 		this.normalizedGeneralTermFrequency = normalizedGeneralTermFrequency;
 	}
 	
+	/**
+	 * The average number of occurrences of this term in the 
+	 * general language corpus for each slice of 1000 words.
+	 * 
+	 * @return
+	 */
 	public double getGeneralFrequencyNorm() {
 		return normalizedGeneralTermFrequency;
 	}
 	
+	/**
+	 * The average number of occurrences of this term in the 
+	 * corpus for each slice of 1000 words.
+	 * 
+	 * @return
+	 */
 	public double getFrequencyNorm() {
 		return normalizedTermFrequency;
 	}

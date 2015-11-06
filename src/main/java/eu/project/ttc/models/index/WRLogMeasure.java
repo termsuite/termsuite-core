@@ -11,6 +11,6 @@ public class WRLogMeasure extends TermMeasure {
 
 	@Override
 	public double getValue(Term term) {
-		return Math.log(1 + term.getFrequencyNorm() / term.getGeneralFrequencyNorm());
+		return Math.log10(1 + term.getFrequencyNorm() / term.getGeneralFrequencyNorm());
 	}
 }
