@@ -1279,7 +1279,7 @@ public class TermSuitePipeline {
 	}
 	
 	/**
-	 * Gathers terms syntactically.
+	 * Gathers terms according to their syntactic structures.
 	 * 
 	 * @return
 	 */
