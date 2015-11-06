@@ -206,11 +206,6 @@ jar {
 		include "META-INF/*"
 	}
 
-	// exclude some languages from jar to save disk space
-	exclude("eu/project/ttc/latvian")
-	exclude("eu/project/ttc/chinese")
-	exclude("eu/project/ttc/danish")
-
 	// tune manifest
     manifest {
         attributes(
