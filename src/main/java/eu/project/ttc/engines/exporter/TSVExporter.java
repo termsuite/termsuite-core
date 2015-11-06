@@ -70,6 +70,15 @@ public class TSVExporter extends JCasAnnotator_ImplBase {
 	@ConfigurationParameter(name=TO_FILE_PATH, mandatory=true)
 	protected String toFilePath;
 	
+	public static final String SHOW_HEADERS = "ShowHeaders";
+	@ConfigurationParameter(name=SHOW_HEADERS, mandatory=false, defaultValue="true")
+	private boolean showHeaders;
+
+	public static final String SHOW_VARIANT_SCORES = "ShowVariantScores";
+	@ConfigurationParameter(name=SHOW_VARIANT_SCORES, mandatory=false, defaultValue="false")
+	private boolean showVariantScores;
+
+	
 	/*
 	 * Internal fields
 	 */
@@ -77,6 +86,7 @@ public class TSVExporter extends JCasAnnotator_ImplBase {
 	/* the tsv index */
 	private IndexerTSVBuilder tsv;
 	private OutputStreamWriter streamWriter = null;
+
 	
 	@Override
 	public void initialize(UimaContext context)
@@ -92,7 +102,8 @@ public class TSVExporter extends JCasAnnotator_ImplBase {
 				Charset.forName("UTF-8").newEncoder());
 			tsv = new IndexerTSVBuilder(
 					streamWriter,
-					properties
+					properties,
+					showVariantScores
 					);
 		} catch (FileNotFoundException e) {
 			LOGGER.error("Could not open a writer to file {}", this.toFilePath);
@@ -109,6 +120,9 @@ public class TSVExporter extends JCasAnnotator_ImplBase {
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
 		LOGGER.info("Exporting {} terms to TSV file {}", scoredModel.getTerms().size(), this.toFilePath);
 		try {
+			if(showHeaders)
+				tsv.writeHeaders();
+				
 			for(ScoredTerm t:scoredModel.getTerms()) {
 				tsv.startTerm(scoredModel.getTermIndex(), t.getTerm());
 				for(ScoredVariation sv:t.getVariations()) {

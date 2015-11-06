@@ -175,7 +175,8 @@ public class TermSuitePipeline {
 	 * TSVExporter options
 	 */
 	private String tsvExportProperties = "groupingKey,wr";
-	
+	private boolean tsvWithVariantScores = false;
+	private boolean tsvWithHeaders = true;
 	
 	private Optional<Boolean> logOverlappingRules = Optional.absent();
 	private Optional<Float> graphicalVariantSimilarityThreshold = Optional.absent();
@@ -465,7 +466,9 @@ public class TermSuitePipeline {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					TSVExporter.class, 
 					TSVExporter.TO_FILE_PATH, toFilePath,
-					TSVExporter.TERM_PROPERTIES, this.tsvExportProperties
+					TSVExporter.TERM_PROPERTIES, this.tsvExportProperties,
+					TSVExporter.SHOW_HEADERS, tsvWithHeaders,
+					TSVExporter.SHOW_VARIANT_SCORES, tsvWithVariantScores
 				);
 			ExternalResourceFactory.bindResource(ae, resScoredModel());
 	
@@ -1541,6 +1544,34 @@ public class TermSuitePipeline {
 		
 		this.postProcessingStrategy = Optional.of(postProcessingStrategy);
 		
+		return this;
+	}
+	
+	/**
+	 * Configures tsvExporter to (not) show headers on the 
+	 * first line.
+	 * 
+	 * @param tsvWithHeaders
+	 * 			the flag
+	 * @return
+	 * 		this pipeline builder
+	 */
+	public TermSuitePipeline setTsvExportWithHeaders(boolean tsvWithHeaders) {
+		this.tsvWithHeaders = tsvWithHeaders;
+		return this;
+	}
+	
+	/**
+	 * Configures tsvExporter to (not) show variant scores with the
+	 * "V" label
+	 * 
+	 * @param tsvWithVariantScores
+	 * 			the flag
+	 * @return
+	 * 		this pipeline builder
+	 */
+	public TermSuitePipeline setTsvExportWithVariantScores(boolean tsvWithVariantScores) {
+		this.tsvWithVariantScores = tsvWithVariantScores;
 		return this;
 	}
 }

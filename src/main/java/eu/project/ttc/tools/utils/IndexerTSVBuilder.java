@@ -22,6 +22,7 @@ import java.io.IOException;
 import java.io.Writer;
 import java.util.List;
 
+import com.google.common.base.Joiner;
 import com.google.common.collect.Lists;
 
 import eu.project.ttc.engines.cleaner.TermProperty;
@@ -40,15 +41,17 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 
 	private List<TermProperty> properties;
 	
+	private boolean showVariantScores;
 	/**
 	 * Initializes a new instance using the specified output
 	 * 
 	 * @param out
 	 *            The output writer.
 	 */
-	public IndexerTSVBuilder(Writer out, List<TermProperty> properties) {
+	public IndexerTSVBuilder(Writer out, List<TermProperty> properties, boolean showVariantScores) {
 		super(out);
 		this.properties = properties;
+		this.showVariantScores = showVariantScores;
 	}
 
 	
@@ -71,7 +74,10 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 	}
 
 	public void addVariant(TermIndex termIndex,Term variant, String label) throws IOException {
-		appendTerm(termIndex, variant, String.format("V[%s]", label));
+		if(showVariantScores)
+			appendTerm(termIndex, variant, String.format("V[%s]", label));
+		else
+			appendTerm(termIndex, variant, "V");
 	}
 
 	public void endTerm() {
@@ -91,5 +97,16 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 				line.add(value.toString());
 		}
 		append(Integer.toString(termCount), line.toArray(new String[line.size()]));
+	}
+
+
+	public void writeHeaders() throws IOException {
+		List<String> headers = Lists.newArrayList();
+		headers.add("baseId");
+		headers.add("type");
+		for(TermProperty p:properties)
+			headers.add(p.getShortName());
+		write(Joiner.on("\t").join(headers));
+		write("\n");
 	}
 }

@@ -132,6 +132,7 @@ public class TermSuiteTerminoCLI {
 	// the tsv file path argument
 	private static final String TSV = "tsv";
 	private static final String TSV_PROPERTIES = "tsv-properties";
+	private static final String TSV_VARIANT_SCORES = "tsv-show-variant-scores";
 
 
 	// the json file path argument
@@ -170,6 +171,7 @@ public class TermSuiteTerminoCLI {
 	 */
 	private static Optional<String> tsvFile = Optional.absent();
 	private static Optional<TermProperty[]> tsvProperties = Optional.absent();
+	private static boolean tsvShowVariantScores = false;
 	
 	private static Optional<String> jsonFile = Optional.absent();
 	private static Optional<String> tbxFile = Optional.absent();
@@ -272,6 +274,12 @@ public class TermSuiteTerminoCLI {
 				
 				// regex spotter
 				pipeline.aeRegexSpotter();
+
+				// cleaning
+				if(cleaningThreshold.isPresent()) 
+					pipeline.aeThresholdCleaner(cleaningProperty.get(), cleaningThreshold.get());
+				else if(cleaningTopN.isPresent()) 
+					pipeline.aeTopNCleaner(cleaningProperty.get(), cleaningTopN.get());
 				
 				// specificity computer
 				pipeline.aeSpecificityComputer();
@@ -300,11 +308,6 @@ public class TermSuiteTerminoCLI {
 				// stats
 				pipeline.haeCasStatCounter("at end of pipeline");
 
-				// cleaning
-				if(cleaningThreshold.isPresent()) 
-					pipeline.aeThresholdCleaner(cleaningProperty.get(), cleaningThreshold.get());
-				else if(cleaningTopN.isPresent()) 
-					pipeline.aeTopNCleaner(cleaningProperty.get(), cleaningTopN.get());
 				
 				
 				// Export
@@ -312,6 +315,7 @@ public class TermSuiteTerminoCLI {
 					pipeline.haeScorifier();
 					if(tsvProperties.isPresent()) {
 						pipeline.setTsvExportProperties(tsvProperties.get());
+						pipeline.setTsvExportWithVariantScores(tsvShowVariantScores);
 					} else 
 						pipeline.setTsvExportProperties(
 							TermProperty.PILOT,
@@ -539,6 +543,11 @@ public class TermSuiteTerminoCLI {
 				TSV_PROPERTIES, 
 				true,
 				"comma-separated list of term properties to export as a column in TSV file");
+		options.addOption(
+				null, 
+				TSV_VARIANT_SCORES, 
+				false,
+				"shows variant scores next to the \"V\" label");
 
 		options.addOption(
 				null, 
@@ -647,6 +656,9 @@ public class TermSuiteTerminoCLI {
 			TermProperty[] ary = new TermProperty[list.size()];
 			tsvProperties = Optional.of(list.toArray(ary));
 		}
+		if(line.hasOption(TSV_VARIANT_SCORES))
+			tsvShowVariantScores = true;
+
 		if(line.hasOption(TBX))
 			tbxFile = Optional.of(line.getOptionValue(TBX));
 		if(line.hasOption(JSON))
