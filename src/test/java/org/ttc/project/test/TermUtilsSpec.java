@@ -21,6 +21,8 @@
  *******************************************************************************/
 package org.ttc.project.test;
 
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.when;
 
@@ -95,6 +97,74 @@ public class TermUtilsSpec {
 		assertEquals("la vie , est belle", TermUtils.collapseText(" \n  la    vie  , est   belle "));
 	}
 	
+	@Test
+	public void testIsIncludedIn() {
+		assertTrue(TermUtils.isIncludedIn(energie_eolien, energie_eolien));
+		assertTrue(TermUtils.isIncludedIn(eolien, energie_eolien));
+		assertTrue(TermUtils.isIncludedIn(energie, energie_eolien));
+		
+		assertTrue(TermUtils.isIncludedIn(acces, acces_radioelectrique_de_recouvrement_total));
+		assertTrue(TermUtils.isIncludedIn(acces_radioelectrique, acces_radioelectrique_de_recouvrement_total));
+		assertTrue(TermUtils.isIncludedIn(acces_radioelectrique_de_recouvrement, acces_radioelectrique_de_recouvrement_total));
+		assertTrue(TermUtils.isIncludedIn(radioelectrique, acces_radioelectrique_de_recouvrement_total));
+		assertTrue(TermUtils.isIncludedIn(recouvrement, acces_radioelectrique_de_recouvrement_total));
+		assertTrue(TermUtils.isIncludedIn(recouvrement_total, acces_radioelectrique_de_recouvrement_total));
+		assertTrue(TermUtils.isIncludedIn(total, acces_radioelectrique_de_recouvrement_total));
+		assertTrue(TermUtils.isIncludedIn(acces_radioelectrique_de_recouvrement_total, acces_radioelectrique_de_recouvrement_total));
+
+		assertFalse(TermUtils.isIncludedIn(total, acces_radioelectrique_de_recouvrement));
+		assertTrue(TermUtils.isIncludedIn(recouvrement, acces_radioelectrique_de_recouvrement));
+		assertTrue(TermUtils.isIncludedIn(radioelectrique, acces_radioelectrique_de_recouvrement));
+
+		assertFalse(TermUtils.isIncludedIn(acces_radioelectrique_de_recouvrement_total, acces_radioelectrique_de_recouvrement));
+		assertFalse(TermUtils.isIncludedIn(acces_radioelectrique_de_recouvrement_total, radioelectrique));
+		assertFalse(TermUtils.isIncludedIn(acces_radioelectrique_de_recouvrement_total, recouvrement));
+		
+	}
+
+	@Test
+	public void testIsPrefixOf() {
+		assertTrue(TermUtils.isPrefixOf(energie_eolien, energie_eolien));
+		assertFalse(TermUtils.isPrefixOf(eolien, energie_eolien));
+		assertTrue(TermUtils.isPrefixOf(energie, energie_eolien));
+		
+		assertTrue(TermUtils.isPrefixOf(acces, acces_radioelectrique_de_recouvrement_total));
+		assertTrue(TermUtils.isPrefixOf(acces_radioelectrique, acces_radioelectrique_de_recouvrement_total));
+		assertTrue(TermUtils.isPrefixOf(acces_radioelectrique_de_recouvrement, acces_radioelectrique_de_recouvrement_total));
+		assertFalse(TermUtils.isPrefixOf(radioelectrique, acces_radioelectrique_de_recouvrement_total));
+		assertFalse(TermUtils.isPrefixOf(recouvrement, acces_radioelectrique_de_recouvrement_total));
+		assertFalse(TermUtils.isPrefixOf(recouvrement_total, acces_radioelectrique_de_recouvrement_total));
+		assertFalse(TermUtils.isPrefixOf(total, acces_radioelectrique_de_recouvrement_total));
+		assertTrue(TermUtils.isPrefixOf(acces_radioelectrique_de_recouvrement_total, acces_radioelectrique_de_recouvrement_total));
+
+		assertFalse(TermUtils.isPrefixOf(total, acces_radioelectrique_de_recouvrement));
+		assertFalse(TermUtils.isPrefixOf(recouvrement, acces_radioelectrique_de_recouvrement));
+		assertFalse(TermUtils.isPrefixOf(radioelectrique, acces_radioelectrique_de_recouvrement));
+
+	}
+	
+	@Test
+	public void testIsSuffixOf() {
+		assertTrue(TermUtils.isSuffixOf(energie_eolien, energie_eolien));
+		assertTrue(TermUtils.isSuffixOf(eolien, energie_eolien));
+		assertFalse(TermUtils.isSuffixOf(energie, energie_eolien));
+		
+		assertFalse(TermUtils.isSuffixOf(acces, acces_radioelectrique_de_recouvrement_total));
+		assertFalse(TermUtils.isSuffixOf(acces_radioelectrique, acces_radioelectrique_de_recouvrement_total));
+		assertFalse(TermUtils.isSuffixOf(acces_radioelectrique_de_recouvrement, acces_radioelectrique_de_recouvrement_total));
+		assertFalse(TermUtils.isSuffixOf(radioelectrique, acces_radioelectrique_de_recouvrement_total));
+		assertFalse(TermUtils.isSuffixOf(recouvrement, acces_radioelectrique_de_recouvrement_total));
+		assertTrue(TermUtils.isSuffixOf(recouvrement_total, acces_radioelectrique_de_recouvrement_total));
+		assertTrue(TermUtils.isSuffixOf(total, acces_radioelectrique_de_recouvrement_total));
+		assertTrue(TermUtils.isSuffixOf(acces_radioelectrique_de_recouvrement_total, acces_radioelectrique_de_recouvrement_total));
+
+		assertFalse(TermUtils.isSuffixOf(total, acces_radioelectrique_de_recouvrement));
+		assertTrue(TermUtils.isSuffixOf(recouvrement, acces_radioelectrique_de_recouvrement));
+		assertFalse(TermUtils.isSuffixOf(radioelectrique, acces_radioelectrique_de_recouvrement));
+
+	}
+
+		
 	@Test
 	public void testGetExtensionAffix() {
 		assertEquals(

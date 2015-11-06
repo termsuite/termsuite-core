@@ -196,5 +196,18 @@ public class TermOccurrenceUtils {
 			return !(b.getBegin() <= a.getEnd() && b.getEnd() <= a.getBegin());
 			
 	}
+	
+	/**
+	 * Returns true if two occurrences are in the same 
+	 * document and their offsets overlap.
+	 * 
+	 * @param a
+	 * @param b
+	 * @return
+	 */
+	public static boolean areOverlapping(TermOccurrence a, TermOccurrence b) {
+		return a.getSourceDocument().equals(b.getSourceDocument()) && areOffsetsOverlapping(a, b); 
+	}
+
 
 }

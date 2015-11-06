@@ -27,8 +27,10 @@ public class ScoredTerm extends ScoredTermOrVariant {
 	
 	/**
 	 * 
+	 * The ratio of this term appearance without any of its variants
+	 * 
 	 * @return
-	 * 		The ratio of this term appearance without any of its variants
+	 * 		The ratio of this term appearance without any of its variants.
 	 */
 	public double getIndependanceScore() {
 		return 1d;

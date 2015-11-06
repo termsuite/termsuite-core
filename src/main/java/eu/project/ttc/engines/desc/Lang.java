@@ -26,14 +26,14 @@ import java.util.Locale;
 import eu.project.ttc.utils.OccurrenceBuffer;
 
 public enum Lang {
-	FR("french", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.1f, 0.1f, 0.3f, 0.7f, 3),
-	EN("english", Locale.ENGLISH, OccurrenceBuffer.NO_CLEANING, 0.7f, 0.1f, 0.1f, 0.1f, 0.85f, 3),
-	ES("spanish", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.1f, 0.1f, 0.3f, 1f, 3),
-	DE("german", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.3f, 0.1f, 0.1f, 0.85f, 4),
-	ZH("chinese", Locale.CHINESE, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.1f, 0.1f, 0.3f, 0.7f, 2),
-	LV("latvian", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5f, 0.1f, 0.1f, 0.3f, 0.8f, 3),
-	RU("russian", Locale.JAPAN, OccurrenceBuffer.NO_CLEANING,0.3f, 0.1f, 0.4f, 0.2f, 0.7f, 3),
-	DA("danish", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5f, 0.1f, 0.1f, 0.3f, 0.8f, 3);
+	FR("french", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.1f, 0.1f, 0.3f, 0.7f, 3, 0.5, 0.1,0.1, 0.25),
+	EN("english", Locale.ENGLISH, OccurrenceBuffer.NO_CLEANING, 0.7f, 0.1f, 0.1f, 0.1f, 0.85f, 3, 0.5, 0.1,0.1, 0.25),
+	ES("spanish", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.1f, 0.1f, 0.3f, 1f, 3, 0.5, 0.1,0.1, 0.25),
+	DE("german", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.3f, 0.1f, 0.1f, 0.85f, 4, 0.5, 0.1,0.1, 0.25),
+	ZH("chinese", Locale.CHINESE, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.1f, 0.1f, 0.3f, 0.7f, 2, 0.5, 0.1,0.1, 0.25),
+	LV("latvian", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5f, 0.1f, 0.1f, 0.3f, 0.8f, 3, 0.5, 0.1,0.1, 0.25),
+	RU("russian", Locale.JAPAN, OccurrenceBuffer.NO_CLEANING,0.3f, 0.1f, 0.4f, 0.2f, 0.7f, 3, 0.5, 0.1,0.1, 0.25),
+	DA("danish", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5f, 0.1f, 0.1f, 0.3f, 0.8f, 3, 0.5, 0.1,0.1, 0.25);
 	
 	private final float compostAlpha;
 	private final float compostBeta;
@@ -44,6 +44,11 @@ public enum Lang {
 	private final Locale locale;
 	private final String longLang;
 	private final String regexPostProcessingStrategy;
+	private double variantIndependenceScoreThreshold;
+	private double variantExtGainThreshold;
+	private double variantExtSpecThreshold;
+	private double variantScoreThreshold;
+
 
     private Lang(String longLang, Locale locale, String regexPostProcessingStrategy, 
     		float compostAlpha,
@@ -51,7 +56,11 @@ public enum Lang {
     		float compostGamma,
     		float compostDelta,
     		float compostThreshold,
-    		int compostMaxComponentNumber
+    		int compostMaxComponentNumber,
+    		double variantIndependenceScoreThreshold,
+    		double variantExtGainThreshold,
+    		double variantExtSpecThreshold,
+    		double variantScoreThreshold
     		) {
     	this.locale = locale;
         this.longLang = longLang;
@@ -62,6 +71,10 @@ public enum Lang {
         this.compostDelta = compostDelta;
         this.compostThreshold = compostThreshold;
         this.compostMaxComponentNumber = compostMaxComponentNumber;
+        this.variantExtGainThreshold = variantExtGainThreshold;
+        this.variantExtSpecThreshold = variantExtSpecThreshold;
+        this.variantIndependenceScoreThreshold = variantIndependenceScoreThreshold;
+        this.variantScoreThreshold = variantScoreThreshold;
     }
     
     public String getName() {
@@ -130,5 +143,19 @@ public enum Lang {
 	
 	public float getCompostThreshold() {
 		return compostThreshold;
+	}
+	
+	public double getVariantExtGainThreshold() {
+		return variantExtGainThreshold;
+	}
+	public double getVariantExtSpecThreshold() {
+		return variantExtSpecThreshold;
+	}
+	public double getVariantIndependenceScoreThreshold() {
+		return variantIndependenceScoreThreshold;
+	}
+	
+	public double getVariantScoreThreshold() {
+		return variantScoreThreshold;
 	}
 }

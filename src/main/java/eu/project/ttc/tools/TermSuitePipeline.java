@@ -478,10 +478,21 @@ public class TermSuitePipeline {
 		}
 	}
 	
+	/**
+	 * 
+	 * Compute variant scores recursively.
+	 * 
+	 * @return the pipeline
+	 */
 	public TermSuitePipeline haeScorifier() {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					FlatScorifier.class
+					FlatScorifier.class,
+					FlatScorifier.VARIATION_TH, (float)lang.getVariantScoreThreshold(),
+					FlatScorifier.INDEPENDANCE_TH, (float)lang.getVariantIndependenceScoreThreshold(),
+					FlatScorifier.EXTENSION_SPEC_TH, (float)lang.getVariantExtSpecThreshold(),
+					FlatScorifier.EXTENSION_GAIN_TH, (float)lang.getVariantExtGainThreshold()
+					
 				);
 			ExternalResourceFactory.bindResource(ae, ScoredModel.SCORED_MODEL, resScoredModel());
 			ExternalResourceFactory.bindResource(ae, TermIndexResource.TERM_INDEX, resTermIndex());

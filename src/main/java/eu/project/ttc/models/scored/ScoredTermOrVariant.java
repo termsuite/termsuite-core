@@ -34,7 +34,7 @@ public abstract class ScoredTermOrVariant {
 			Iterator<TermOccurrence> it = occurrences.iterator();
 			while(it.hasNext()) {
 				currentSo = it.next();
-				if(TermOccurrenceUtils.areOffsetsOverlapping(so, currentSo)) {
+				if(TermOccurrenceUtils.areOverlapping(so, currentSo)) {
 					it.remove();
 					cnt++;
 				}

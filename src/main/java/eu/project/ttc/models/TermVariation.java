@@ -23,6 +23,8 @@ package eu.project.ttc.models;
 
 import com.google.common.base.Objects;
 
+import eu.project.ttc.utils.TermUtils;
+
 public class TermVariation {
 	private VariationType variationType;
 	private Term base;
@@ -30,12 +32,19 @@ public class TermVariation {
 	private Object info;
 	private String _label;
 	
+	private boolean includedIn;
+	private boolean prefixOf;
+	private boolean suffixOf;
+	
 	public TermVariation(VariationType variationType, Term base, Term variant, Object info) {
 		super();
 		this.variationType = variationType;
 		this.base = base;
 		this.variant = variant;
 		this.info = info;
+		this.includedIn = TermUtils.isIncludedIn(base, variant);
+		this.prefixOf = TermUtils.isPrefixOf(base, variant);
+		this.suffixOf = TermUtils.isSuffixOf(base, variant);
 	}
 	
 	public VariationType getVariationType() {
@@ -80,5 +89,15 @@ public class TermVariation {
 			return false;
 	}
 	
+	public boolean isIncludedIn() {
+		return includedIn;
+	}
 	
+	public boolean isSuffixOf() {
+		return suffixOf;
+	}
+	
+	public boolean isPrefixOf() {
+		return prefixOf;
+	}
 }

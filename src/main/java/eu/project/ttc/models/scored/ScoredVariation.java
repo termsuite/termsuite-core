@@ -1,6 +1,7 @@
 package eu.project.ttc.models.scored;
 
 import com.google.common.base.Objects;
+import com.google.common.primitives.Doubles;
 
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermVariation;
@@ -28,6 +29,10 @@ public class ScoredVariation extends ScoredTermOrVariant {
 		this.variation = tv;
 	}
 	
+	public TermVariation getTermVariation() {
+		return variation;
+	}
+
 	public ScoredTerm getExtensionAffix() {
 		if(!extensionAffixSet) {
 			try {
@@ -60,12 +65,13 @@ public class ScoredVariation extends ScoredTermOrVariant {
 
 
 	public String getLabel() {
-		return String.format("S:%2.0f,E:%2.0f(G:%2.0f/WR:%2.0f),F:%2.0f,V:%2.0f",
+		return String.format("S:%2.0f,E:%2.0f(G:%2.0f/WR:%2.0f),F:%2.0f,I:%2.0f,V:%2.0f",
 				100*getStrictnessScore(),
 				100*getExtensionScore(),
 				100*getExtensionGainScore(),
 				100*getExtensionSpecScore(),
 				100*getFrequencyScore(),
+				100*getIndependanceScore(),
 				100*getVariationScore()
 			).trim();
 //		return String.format("%2.0f",
@@ -78,6 +84,17 @@ public class ScoredVariation extends ScoredTermOrVariant {
 	 * **************************************
 	 */
 	
+	public double getIndependanceScore() {
+		int affixInclusion = 0;
+		for(ScoredVariation sv:getBase().getVariations()) {
+			if(sv == this)
+				continue;
+			if(TermUtils.isIncludedIn(getTerm(), sv.getTerm()))
+				affixInclusion += sv.getFrequency();
+		}
+		return 1 - Doubles.min(1d,((double)affixInclusion)/getFrequency());
+	}
+
 	public double getStrictnessScore() {
 		return TermUtils.getStrictness(variation.getVariant(), getBase().getTerm());
 	}
@@ -125,4 +142,5 @@ public class ScoredVariation extends ScoredTermOrVariant {
 		} else
 			return false;
 	}
+	
 }

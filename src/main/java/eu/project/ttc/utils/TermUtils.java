@@ -273,8 +273,21 @@ public class TermUtils {
 		return null;
 	}
 	
+	public static boolean isIncludedIn(Term term, Term inTerm) {
+		return getPosition(term, inTerm) != -1;
+	}
+
+	public static boolean isPrefixOf(Term term, Term ofTerm) {
+		return getPosition(term, ofTerm) == 0;		
+	}
+
+	public static boolean isSuffixOf(Term term, Term ofTerm) {
+		return getPosition(term, ofTerm) + term.getWords().size() == ofTerm.getWords().size();				
+	}
+
+	
 	/**
-	 * Finds the index of occurrence of a term's sub-term.
+	 * Finds the index of appearance of a term's sub-term.
 	 * 
 	 * 
 	 * @param subTerm
