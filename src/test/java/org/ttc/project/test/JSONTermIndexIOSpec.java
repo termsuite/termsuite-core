@@ -79,6 +79,8 @@ public class JSONTermIndexIOSpec {
 	public void initTermIndex() {
 		termIndex = new MemoryTermIndex("Titi va voir Toto", Lang.FR);
 		termIndex.setCorpusId("ccid");
+		termIndex.setWordAnnotationsNum(222);
+		termIndex.setSpottedTermsNum(111);
 		doc1 = termIndex.getDocument("source1");
 		doc2 = termIndex.getDocument("source2");
 		doc3 = termIndex.getDocument("source3");
@@ -139,6 +141,8 @@ public class JSONTermIndexIOSpec {
 		String string = writer.toString();
 		TermIndex termIndex2 = JSONTermIndexIO.load(new StringReader(string), true);
 		
+		assertEquals(111, termIndex2.getSpottedTermsNum());
+		assertEquals(222, termIndex2.getWordAnnotationsNum());
 		assertThat(termIndex2.getTerms()).hasSameElementsAs(termIndex.getTerms());
 		assertThat(termIndex2.getWords()).hasSameElementsAs(termIndex.getWords());
 		for(Term t:termIndex.getTerms()) {
@@ -193,6 +197,8 @@ public class JSONTermIndexIOSpec {
 		assertEquals("Toto va à la plage", termIndex.getName());
 		assertEquals("Toto va à la montagne", termIndex.getCorpusId());
 		assertEquals(Lang.EN, termIndex.getLang());
+		assertEquals(123, termIndex.getWordAnnotationsNum());
+		assertEquals(456, termIndex.getSpottedTermsNum());
 		
 		// test terms
 		assertThat(termIndex.getTerms()).hasSize(3)
@@ -259,6 +265,11 @@ public class JSONTermIndexIOSpec {
 		Map<String,Object> map = mapper.readValue(writer.toString(), 
 			    new TypeReference<HashMap<String,Object>>(){});
 		assertThat(map.keySet()).hasSize(5).containsOnly("metadata", "words", "terms", "variations", "input_sources");
+		
+
+		// test metadata
+		Map<String,String> metadata = (LinkedHashMap<String,String>)map.get("metadata");
+		assertThat(metadata).containsOnlyKeys("name", "corpus-id", "wordsNum", "spottedTermsNum", "lang");
 		
 		// test input sources
 		@SuppressWarnings("unchecked")

@@ -103,6 +103,8 @@ public class JSONTermIndexIO {
 	
 	private static final String FREQ_NORM = "f_norm";
 	private static final String GENERAL_FREQ_NORM = "gf_norm";
+	private static final String NB_WORD_ANNOTATIONS = "wordsNum";
+	private static final String NB_SPOTTED_TERMS = "spottedTermsNum";
 	
 //	private static String WR_FIELD = TermProperty.WR.getShortName();
 //	private static String WR_LOG_FIELD = TermProperty.WR_LOG.getShortName();
@@ -129,6 +131,8 @@ public class JSONTermIndexIO {
 		String syntacticLabel = null;
 		int begin = -1;
 		int end = -1;
+		int nbWordAnnos = -1;
+		int nbSpottedTerms = -1;
 		Term b;
 		Term v;
 		String text;
@@ -162,6 +166,10 @@ public class JSONTermIndexIO {
 						lang = Lang.forName(jp.nextTextValue());
 					} else if (NAME.equals(fieldname)) {
 						termIndexName = jp.nextTextValue();
+					} else if (NB_WORD_ANNOTATIONS.equals(fieldname)) {
+						nbWordAnnos = jp.nextIntValue(-1);
+					} else if (NB_SPOTTED_TERMS.equals(fieldname)) {
+						nbSpottedTerms = jp.nextIntValue(-1);
 					} else if (CORPUS_ID.equals(fieldname)) {
 						corpusID = jp.nextTextValue();
 					}
@@ -171,6 +179,11 @@ public class JSONTermIndexIO {
 				termIndex = new MemoryTermIndex(termIndexName, lang);
 				if(corpusID != null)
 					termIndex.setCorpusId(corpusID);
+				if(nbWordAnnos != -1)
+					termIndex.setWordAnnotationsNum(nbWordAnnos);
+				if(nbSpottedTerms != -1)
+					termIndex.setSpottedTermsNum(nbSpottedTerms);
+
 			} else if (WORDS.equals(fieldname)) {
 				jp.nextToken();
 				while ((tok = jp.nextToken()) != JsonToken.END_ARRAY) {
@@ -400,6 +413,11 @@ public class JSONTermIndexIO {
 			jg.writeString(termIndex.getCorpusId());
 		}
 		
+		jg.writeFieldName(NB_WORD_ANNOTATIONS);
+		jg.writeNumber(termIndex.getWordAnnotationsNum());
+		jg.writeFieldName(NB_SPOTTED_TERMS);
+		jg.writeNumber(termIndex.getSpottedTermsNum());
+
 		jg.writeEndObject();
 		
 		jg.writeFieldName(INPUT_SOURCES);

@@ -2,6 +2,8 @@
 	metadata: {
 		name: "Toto va à la plage",
 		corpus-id: "Toto va à la montagne",
+		wordsNum: 123,
+		spottedTermsNum: 456,
 		lang: "en"
 	},
 	input_sources: {

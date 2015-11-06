@@ -2,7 +2,6 @@ package eu.project.ttc.models.index;
 
 import java.util.Comparator;
 
-import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ComparisonChain;
 
@@ -22,7 +21,7 @@ public abstract class TermMeasure {
 		this.termIndex = termIndex;
 	}
 
-	private Optional<Integer> totalSpottedTerms = Optional.absent();
+	private int totalSpottedTerms = 0;
 	private double sum = 0d;
 	private double min = Double.MAX_VALUE;
 	private double max = Double.MIN_VALUE;
@@ -55,16 +54,18 @@ public abstract class TermMeasure {
 		 * will actually work. Normalization should always be operated 
 		 * over the same spotting rules, without prior filtering.
 		 */
-		if(!totalSpottedTerms.isPresent())
-			totalSpottedTerms = Optional.of(num);
+		if(termIndex.getSpottedTermsNum() > 0)
+			totalSpottedTerms = termIndex.getSpottedTermsNum();
+		else 
+			totalSpottedTerms = num;
 		
-		this.avg = this.sum / this.totalSpottedTerms.get();
+		this.avg = this.sum / this.totalSpottedTerms;
 		
 		// compute standard deviation
 		double sigmaSquare = 0;
 		for(Term term:termIndex.getTerms()) 
 			sigmaSquare+=Math.pow(getValue(term) - this.avg, 2);
-		this.standardDev = Math.sqrt(1.0/this.totalSpottedTerms.get() * sigmaSquare);
+		this.standardDev = Math.sqrt(1.0/this.totalSpottedTerms * sigmaSquare);
 		this.computed = true;
 	}
 	
@@ -99,13 +100,7 @@ public abstract class TermMeasure {
 	}
 	
 	public int getTotalSpottedTerms() {
-		return totalSpottedTerms.get();
-	}
-	
-	public void setTotalSpottedTerms(int totalSpottedTerms) {
-		Preconditions.checkArgument(totalSpottedTerms > 0, "Requires totalSpottedTerms > 0");
-
-		this.totalSpottedTerms = Optional.of(totalSpottedTerms);
+		return totalSpottedTerms;
 	}
 	
 	public Comparator<Term> getTermComparator(final boolean reverse) {

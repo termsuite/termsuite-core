@@ -146,5 +146,17 @@ public interface TermIndex {
 	public void setWordAnnotationsNum(int nbWordAnnotations);
 	public int getWordAnnotationsNum();
 
+	/**
+	 * 
+	 * The number of terms added to this TermIndex by invoking
+	 * {@link TermIndex#addTermOccurrence(TermOccAnnotation, String, boolean)}
+	 * 
+	 * @return
+	 * 		The number of spotted terms, 0 if none has been added through
+	 * 		the method {@link #addTermOccurrence(TermOccAnnotation, String, boolean)}
+	 */
+	public int getSpottedTermsNum();
+	public void setSpottedTermsNum(int nbSpottedTerms);
+
 	
 }

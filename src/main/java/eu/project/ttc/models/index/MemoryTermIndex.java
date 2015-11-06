@@ -96,6 +96,7 @@ public class MemoryTermIndex implements TermIndex {
 	
 	private int currentId = 0;
 	private int nbWordAnnotations = 0;
+	private int nbSpottedTerms = 0;
 	
 	public MemoryTermIndex(String name, Lang lang) {
 		this.lang = lang;
@@ -156,6 +157,7 @@ public class MemoryTermIndex implements TermIndex {
 
 	@Override
 	public Term addTermOccurrence(TermOccAnnotation annotation, String fileUrl, boolean keepOccurrence) {
+		this.nbSpottedTerms++;
 		String termGroupingKey = TermSuiteUtils.getGroupingKey(annotation);
 		Term term = this.termsByGroupingKey.get(termGroupingKey);
 		if(term == null) {
@@ -470,5 +472,15 @@ public class MemoryTermIndex implements TermIndex {
 	@Override
 	public Iterable<TermMeasure> getMeasures() {
 		return this.termMeasures.values();
+	}
+	
+	@Override
+	public int getSpottedTermsNum() {
+		return nbSpottedTerms;
+	}
+	
+	@Override
+	public void setSpottedTermsNum(int spottedTermsNum) {
+		this.nbSpottedTerms = spottedTermsNum;
 	}
 }
