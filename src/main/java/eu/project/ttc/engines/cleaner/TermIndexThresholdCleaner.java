@@ -39,7 +39,7 @@ public class TermIndexThresholdCleaner extends AbstractTermIndexCleaner {
 	private float threshold;
 	
 	protected boolean acceptTerm(Term term) {
-		return property.getDoubleValue(term) >= this.threshold;
+		return property.getDoubleValue(termIndexResource.getTermIndex(), term) >= this.threshold;
 	}
 
 	@Override
