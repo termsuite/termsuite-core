@@ -34,6 +34,7 @@ import org.apache.commons.lang.mutable.MutableInt;
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.FSIterator;
+import org.apache.uima.examples.SourceDocumentInformation;
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.fit.descriptor.ExternalResource;
@@ -44,6 +45,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Functions;
+import com.google.common.base.Optional;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.ImmutableSortedMap;
 import com.google.common.collect.Iterables;
@@ -114,7 +116,9 @@ public class CasStatCounter extends JCasAnnotator_ImplBase {
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
 		UIMAProfiler.getProfiler("AnalysisEngine").start(this, "process");
 		this.docIt++;
-		this.cumulatedFileSize += JCasUtils.getSourceDocumentAnnotation(aJCas).get().getDocumentSize();
+		Optional<SourceDocumentInformation> sourceDocumentAnnotation = JCasUtils.getSourceDocumentAnnotation(aJCas);
+		if(sourceDocumentAnnotation.isPresent())
+			this.cumulatedFileSize += sourceDocumentAnnotation.get().getDocumentSize();
 		FSIterator<Annotation> it =  aJCas.getAnnotationIndex().iterator();
 		Annotation a;
 		MutableInt i;
