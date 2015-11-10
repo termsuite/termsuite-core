@@ -119,7 +119,7 @@ public abstract class AbstractTermIndexCleaner extends JCasAnnotator_ImplBase {
 		UIMAProfiler.getProfiler("AnalysisEngine").stop(this, "process");
 	}
 
-	private void clean() {
+	protected void clean() {
 		HashSet<Term> kept = Sets.newHashSet();
 		HashSet<Term> rem = Sets.newHashSet();
 		doCleaningPartition(kept, rem);

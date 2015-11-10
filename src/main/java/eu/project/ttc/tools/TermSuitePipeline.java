@@ -63,6 +63,7 @@ import eu.project.ttc.engines.TermSpecificityComputer;
 import eu.project.ttc.engines.TreeTaggerLemmaFixer;
 import eu.project.ttc.engines.cleaner.AbstractTermIndexCleaner;
 import eu.project.ttc.engines.cleaner.FilterRules;
+import eu.project.ttc.engines.cleaner.MaxSizeThresholdCleaner;
 import eu.project.ttc.engines.cleaner.TermIndexThresholdCleaner;
 import eu.project.ttc.engines.cleaner.TermIndexTopNCleaner;
 import eu.project.ttc.engines.cleaner.TermProperty;
@@ -1166,6 +1167,21 @@ public class TermSuitePipeline {
 		}
 	}
 	
+	public TermSuitePipeline aeMaxSizeThresholdCleaner(TermProperty property, int maxSize) {
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+				MaxSizeThresholdCleaner.class,
+				AbstractTermIndexCleaner.CLEANING_PROPERTY, property,	
+				MaxSizeThresholdCleaner.MAX_SIZE, maxSize
+			);
+			ExternalResourceFactory.bindResource(ae, resTermIndex());
+			return aggregateAndReturn(ae);
+		} catch(Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
+		
+	}
+
 	
 	public TermSuitePipeline aeThresholdCleaner(TermProperty property, float threshold, boolean keepVariants, boolean isPeriodic, int cleaningPeriod, int termIndexSizeTrigger) {
 		try {
