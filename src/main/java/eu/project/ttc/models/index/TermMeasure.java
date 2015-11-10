@@ -128,4 +128,15 @@ public abstract class TermMeasure {
 			}
 		};
 	}
+	
+	@Override
+	public String toString() {
+		return String.format("avg: %.2f - sigma: %.2f [min: %.2f, max: %.2f, num: %d]", 
+				(float)getAvg(), 
+				(float)getStandardDeviation(),
+				(float)getMin(),
+				(float)getMax(),
+				getTotalSpottedTerms()
+				);
+	}
 }
