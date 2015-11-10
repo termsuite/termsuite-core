@@ -151,16 +151,24 @@ public abstract class AbstractTermSuiteCollectionReader extends CollectionReader
 		if(mCurrentIndex == 0) {
 			logger.info("Reading collection {} ({} documents)", inputDirPath, mFiles.size());
 			progressLoggerTimer.schedule(new TimerTask() {
+				private long lastSize = 0;
+				private long lastTop = System.currentTimeMillis();
+				
 				@Override
 				public void run() {
-					AbstractTermSuiteCollectionReader.logger.info("{}% - {} processed out of {} - Processing file {} (doc. {} out of {})", 
+					long top = System.currentTimeMillis();
+					long size = currentFileByteSize;
+					AbstractTermSuiteCollectionReader.logger.info("{}% - {} processed out of {} ({} Mb/s) - Processing file {} (doc. {} out of {})", 
 							String.format("%.2f", ((float)currentFileByteSize*100)/totalFileByteSize),
 							eu.project.ttc.utils.FileUtils.humanReadableByteCount(currentFileByteSize, true),
 							eu.project.ttc.utils.FileUtils.humanReadableByteCount(totalFileByteSize, true),
+							String.format("%.2f", 0.001*((float)size-lastSize)/((float)Math.max(1, top-lastTop))),
 							mFiles.get(mCurrentIndex).getName(),
 							mCurrentIndex,
 							mFiles.size()
 							);
+					size = lastSize;
+					top = lastTop;
 				}
 			}, 5000l, 5000l);
 		}
