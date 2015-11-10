@@ -30,7 +30,8 @@ import eu.project.ttc.models.TermIndex;
 
 
 /**
- * Removes terms from the {@link TermIndex} according to certain predicates.
+ * Removes terms from the {@link TermIndex} according to 
+ * a custom property threshhold.
  */
 public class TermIndexThresholdCleaner extends AbstractTermIndexCleaner {
 
