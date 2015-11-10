@@ -275,14 +275,15 @@ public class TermSuiteTerminoCLI {
 				// regex spotter
 				pipeline.aeRegexSpotter();
 
+				// specificity computer
+				pipeline.aeSpecificityComputer();
+
 				// cleaning
 				if(cleaningThreshold.isPresent()) 
 					pipeline.aeThresholdCleaner(cleaningProperty.get(), cleaningThreshold.get());
 				else if(cleaningTopN.isPresent()) 
 					pipeline.aeTopNCleaner(cleaningProperty.get(), cleaningTopN.get());
 				
-				// specificity computer
-				pipeline.aeSpecificityComputer();
 				
 				
 				// compost (morphology)
