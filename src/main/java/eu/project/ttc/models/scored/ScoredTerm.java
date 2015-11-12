@@ -1,13 +1,19 @@
 package eu.project.ttc.models.scored;
 
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
 import com.google.common.base.Objects;
 import com.google.common.collect.Lists;
+import com.google.common.primitives.Doubles;
 
 import eu.project.ttc.models.Term;
+import eu.project.ttc.models.TermOccurrence;
+import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.resources.ScoredModel;
+import eu.project.ttc.utils.TermOccurrenceUtils;
+import eu.project.ttc.utils.TermUtils;
 
 public class ScoredTerm extends ScoredTermOrVariant {
 
@@ -25,6 +31,9 @@ public class ScoredTerm extends ScoredTermOrVariant {
 		return Collections.unmodifiableList(this.variations);
 	}
 	
+	private double independance = -1;
+
+	
 	/**
 	 * 
 	 * The ratio of this term appearance without any of its variants
@@ -33,7 +42,14 @@ public class ScoredTerm extends ScoredTermOrVariant {
 	 * 		The ratio of this term appearance without any of its variants.
 	 */
 	public double getIndependanceScore() {
-		return 1d;
+		if(independance == -1) {
+			Collection<TermOccurrence> occs = Lists.newLinkedList(getTerm().getOccurrences());
+			for(TermVariation tv:getTerm().getVariations()) {
+				TermOccurrenceUtils.removeOverlaps(tv.getVariant().getOccurrences(), occs);
+			}
+			independance = ((double)occs.size())/this.getTerm().getFrequency();
+		}
+		return independance;
 	}
 	
 	private int maxFrequency = Integer.MIN_VALUE;
@@ -76,4 +92,8 @@ public class ScoredTerm extends ScoredTermOrVariant {
 		return maxExtensionAffixWRLog;
 
 	}
+	
+	
+
+
 }

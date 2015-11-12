@@ -4,6 +4,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
@@ -15,11 +16,14 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.Lists;
+import com.google.common.collect.Sets;
 
+import eu.project.ttc.models.Term;
 import eu.project.ttc.models.scored.ScoredTerm;
 import eu.project.ttc.models.scored.ScoredVariation;
 import eu.project.ttc.resources.ScoredModel;
 import eu.project.ttc.resources.TermIndexResource;
+import eu.project.ttc.utils.StringUtils;
 import fr.univnantes.lina.UIMAProfiler;
 
 public class FlatScorifier extends JCasAnnotator_ImplBase {
@@ -46,6 +50,8 @@ public class FlatScorifier extends JCasAnnotator_ImplBase {
 	public static final String VARIATION_TH = "VariationTh";
 	@ConfigurationParameter(name=VARIATION_TH, mandatory=false, defaultValue="0")
 	private double variationScoreTh;
+
+	private double orthographicScoreTh = 0.55;
 
 	private static Comparator<ScoredTerm> wrComparator = new Comparator<ScoredTerm>() {
 		@Override
@@ -76,10 +82,18 @@ public class FlatScorifier extends JCasAnnotator_ImplBase {
 		UIMAProfiler.getProfiler("AnalysisEngine").start(this, "process");
 		LOGGER.info("Start flat scorifier");
 
+		// Filter terms with bad orthgraph
+		Set<Term> rem = Sets.newHashSet();
+		for(Term t:termIndexResource.getTermIndex().getTerms())
+			if(StringUtils.getOrthographicScore(t.getLemma()) < 0.55)
+				rem.add(t);
+		for(Term t:rem)
+			termIndexResource.getTermIndex().removeTerm(t);
+		
 		this.scoredModel.importTermIndex(termIndexResource.getTermIndex());
 		
 		this.scoredModel.sort(wrComparator);
-		
+
 		int sizeBefore = 0;
 		int sizeAfter = 0;
 		for(ScoredTerm t:this.scoredModel.getTerms()) {
@@ -89,7 +103,7 @@ public class FlatScorifier extends JCasAnnotator_ImplBase {
 			sv.addAll(t.getVariations());
 //			decrementAndPropagate(sv);
 			sizeBefore += sv.size();
-			filter(sv);
+			filterVariations(sv);
 			sizeAfter += sv.size();
 			Collections.sort(sv, variationScoreComparator);
 			t.setVariations(sv);
@@ -100,7 +114,7 @@ public class FlatScorifier extends JCasAnnotator_ImplBase {
 		UIMAProfiler.getProfiler("AnalysisEngine").stop(this, "process");
 	}
 
-	private void filter(List<ScoredVariation>  inputTerms) {
+	private void filterVariations(List<ScoredVariation>  inputTerms) {
 		Iterator<ScoredVariation> it = inputTerms.iterator();
 		ScoredVariation v;
 		while(it.hasNext()) {
