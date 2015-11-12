@@ -127,7 +127,6 @@ public class TermSuiteTerminoCLI {
 	private static final String CLEAN_THRESHOLD = "filter-th";
 	private static final String CLEAN_TOP_N = "filter-top-n";
 	private static final String CLEAN_PROPERTY = "filter-property";
-	private static final String CLEAN_KEEP_VARIANTS = "keep-variants";
 	
 	// the tsv file path argument
 	private static final String TSV = "tsv";
@@ -164,7 +163,6 @@ public class TermSuiteTerminoCLI {
 	private static Optional<Float> cleaningThreshold = Optional.of(2f);
 	private static Optional<Integer> cleaningTopN = Optional.absent();
 	private static Optional<TermProperty> cleaningProperty = Optional.of(TermProperty.WR_LOG);
-	private static boolean keepVariantsWhileCleaning = true;
 
 	/*
 	 * Export params
@@ -281,14 +279,11 @@ public class TermSuiteTerminoCLI {
 				// specificity computer
 				pipeline.aeSpecificityComputer();
 
-				// cleaning
 				if(cleaningThreshold.isPresent()) {
 					pipeline.aeThresholdCleaner(
-							cleaningProperty.get(), cleaningThreshold.get(), keepVariantsWhileCleaning, false, 0, 0);
+							cleaningProperty.get(), cleaningThreshold.get());
 				} else if(cleaningTopN.isPresent()) 
 					pipeline.aeTopNCleaner(cleaningProperty.get(), cleaningTopN.get());
-				
-				
 				
 				// compost (morphology)
 				if(compostAlpha.isPresent()) 
@@ -310,6 +305,7 @@ public class TermSuiteTerminoCLI {
 				pipeline.setGraphicalVariantSimilarityThreshold(graphicalSimilarityThreshold);
 				pipeline.aeGraphicalVariantGatherer();
 				
+
 				// stats
 				pipeline.haeCasStatCounter("at end of pipeline");
 
@@ -525,12 +521,7 @@ public class TermSuiteTerminoCLI {
 				CLEAN_PROPERTY, 
 				true,
 				"The name of the term property used for cleaning filtering  the term index");
-		options.addOption(
-				null, 
-				CLEAN_KEEP_VARIANTS, 
-				false,
-				"Do not filter variants. Keep them in the term index.");
-
+		
 		options.addOption(
 				null, 
 				CLEAN_THRESHOLD, 
@@ -656,9 +647,8 @@ public class TermSuiteTerminoCLI {
 
 		if(line.hasOption(CLEAN_PROPERTY)) {
 			cleaningProperty = Optional.of(TermProperty.forName(line.getOptionValue(CLEAN_PROPERTY)));
-			keepVariantsWhileCleaning = line.hasOption(CLEAN_KEEP_VARIANTS);
 		}
-
+		
 		if(line.hasOption(TSV))
 			tsvFile = Optional.of(line.getOptionValue(TSV));
 		if(line.hasOption(TSV_PROPERTIES)) {
@@ -679,7 +669,5 @@ public class TermSuiteTerminoCLI {
 		
 		if(line.hasOption(MATE))
 			tagger =  Tagger.Mate;
-
 	}
-
 }
