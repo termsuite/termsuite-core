@@ -43,6 +43,7 @@ import org.ttc.project.test.variants.VariantRuleYamlIOSpec;
 	ContextVectorSpec.class,
 	TermOccurrenceUtilsSpec.class,
 	TermClassSpec.class,
+	StringUtilsSpec.class,
 //	TeiCollectionReaderSpec.class,
 	CrossTableSpec.class
 	})

@@ -25,6 +25,8 @@ import java.io.File;
 import java.text.Normalizer;
 import java.text.Normalizer.Form;
 import java.util.Comparator;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class StringUtils {
 	public static Comparator<String> alphanumComparator = new AlphanumComparator();
@@ -138,4 +140,79 @@ public class StringUtils {
 		return withoutAccent;
 	}
 	
+	private static final String SPECIAL_CHARACTERS = "()[]{}\"'~:/*=+#±¶©·´`“”‘’«»•._";
+	
+
+	public static int nbSpecialCharacters(String string) {
+		int nb = 0;
+		for(char c:string.toCharArray())
+			if(SPECIAL_CHARACTERS.indexOf(c) != -1)
+				nb++;
+		return nb;
+		
+	}
+	
+	public static boolean hasSpecialCharacters(String string) {
+		for(char c:string.toCharArray())
+			if(SPECIAL_CHARACTERS.indexOf(c) != -1)
+				return true;
+		return false;
+	}
+
+	public static boolean hasDigits(String string) {
+		for(char c:string.toCharArray())
+			if(Character.isDigit(c))
+				return true;
+		return false;
+	}
+	
+	private static final Pattern DIGIT = Pattern.compile("(\\d+)");
+
+	public static int nbDigitSequences(String string) {
+		Matcher matcher = DIGIT.matcher(string);
+		int count = 0;
+		while (matcher.find())
+		    count++;
+		return count;
+	}
+
+	public static double getOrthographicScore(String str) {
+		double score;
+		switch (str.length()) {
+		case 1:
+			score = 0.15;
+			break;
+		case 2:
+			score = 0.45;
+			break;
+		case 3:
+			score = 0.70;
+			break;
+		case 4:
+			score = 0.95;
+			break;
+		default:
+			score = 1;
+		}
+		if(StringUtils.nbDigitSequences(str) == 1 
+				&& StringUtils.nbDigits(str) == 1
+				&& (Character.isDigit(str.charAt(0)) 
+						|| Character.isDigit(str.charAt(str.length()-1)))) {
+			// if starts with a digit or end with a digit, apply a small malus
+			score = 0.85*score;
+		} else
+			// else, apply full digit malus
+			score = score / (Math.pow(1.8, StringUtils.nbDigitSequences(str)));
+		score = score / Math.pow(2, StringUtils.nbSpecialCharacters(str));
+		return score;
+	}
+
+	public static int nbDigits(String str) {
+		int cnt = 0;
+		for(char c:str.toCharArray())
+			if(Character.isDigit(c))
+				cnt++;
+		return cnt;
+	}
+
 }

@@ -5,7 +5,9 @@ import com.google.common.primitives.Doubles;
 
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermVariation;
+import eu.project.ttc.models.TermWord;
 import eu.project.ttc.resources.ScoredModel;
+import eu.project.ttc.utils.StringUtils;
 import eu.project.ttc.utils.TermUtils;
 
 public class ScoredVariation extends ScoredTermOrVariant {
@@ -65,11 +67,12 @@ public class ScoredVariation extends ScoredTermOrVariant {
 
 
 	public String getLabel() {
-		return String.format("S:%2.0f,E:%2.0f(G:%2.0f/WR:%2.0f),F:%2.0f,I:%2.0f,V:%2.0f",
+		return String.format("S:%2.0f,E:%2.0f(G:%2.0f/WR:%2.0f/O:%2.0f),F:%2.0f,I:%2.0f,V:%2.0f",
 				100*getStrictnessScore(),
 				100*getExtensionScore(),
 				100*getExtensionGainScore(),
 				100*getExtensionSpecScore(),
+				100*getExtensionOrthographicScore(),
 				100*getFrequencyScore(),
 				100*getIndependanceScore(),
 				100*getVariationScore()
@@ -99,6 +102,19 @@ public class ScoredVariation extends ScoredTermOrVariant {
 		return TermUtils.getStrictness(variation.getVariant(), getBase().getTerm());
 	}
 
+	
+
+	public double getExtensionOrthographicScore() {
+		if(getExtensionAffix() == null)
+			return 0;
+		else {
+			double score = 1d;
+			for(TermWord tw:getExtensionAffix().getTerm().getWords())
+				score = score * StringUtils.getOrthographicScore(tw.getWord().getLemma());
+			return score;
+		}
+	}
+
 	public double getExtensionGainScore() {
 		if(getExtensionAffix() == null || getExtensionAffix().getFrequency() == 0)
 			return THRESHOLD_EXTENSION_GAIN;
@@ -116,7 +132,7 @@ public class ScoredVariation extends ScoredTermOrVariant {
 	public double getExtensionScore() {
 		double root = 2d;
 		double w = 3d; // gain weight
-		return Math.pow((w*Math.pow(getExtensionGainScore(), root) + Math.pow(getExtensionSpecScore(), root))/(1+w),1d/root);
+		return getExtensionOrthographicScore() * Math.pow((w*Math.pow(getExtensionGainScore(), root) + Math.pow(getExtensionSpecScore(), root))/(1+w),1d/root);
 //		return Math.pow((Math.pow(getExtensionSpec(), root) + Math.pow(getExtensionGain(), root))/2,1d/root);
 	}
 
@@ -126,11 +142,10 @@ public class ScoredVariation extends ScoredTermOrVariant {
 
 
 	public double getVariationScore() {
-		if(getStrictnessScore() == 1d) {
-			return 0.9 + 0.1*getFrequencyScore();
-		} else {
-			return 0.75*getExtensionScore() + 0.25*getFrequencyScore();
-		}
+		double score = getStrictnessScore() == 1d ?
+				0.9 + 0.1*getFrequencyScore() :
+					0.75*getExtensionScore() + 0.25*getFrequencyScore();
+		return score;
 	}
 	
 	@Override

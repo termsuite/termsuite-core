@@ -11,6 +11,7 @@ import com.google.common.collect.Lists;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermOccurrence;
 import eu.project.ttc.resources.ScoredModel;
+import eu.project.ttc.utils.StringUtils;
 import eu.project.ttc.utils.TermOccurrenceUtils;
 
 public abstract class ScoredTermOrVariant {
@@ -79,6 +80,10 @@ public abstract class ScoredTermOrVariant {
 	@Override
 	public String toString() {
 		return MoreObjects.toStringHelper(this.getClass()).add("term", this.term).toString();
+	}
+	
+	public double getOrthographicScore() {
+		return StringUtils.getOrthographicScore(getTerm().getLemma());
 	}
 	
 }
