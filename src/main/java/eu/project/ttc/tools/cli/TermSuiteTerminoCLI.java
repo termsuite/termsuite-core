@@ -316,7 +316,7 @@ public class TermSuiteTerminoCLI {
 					pipeline.haeScorifier();
 					if(tsvProperties.isPresent()) {
 						pipeline.setTsvExportProperties(tsvProperties.get());
-						pipeline.setTsvExportWithVariantScores(tsvShowVariantScores);
+						pipeline.setTsvShowScores(tsvShowVariantScores);
 					} else 
 						pipeline.setTsvExportProperties(
 							TermProperty.PILOT,

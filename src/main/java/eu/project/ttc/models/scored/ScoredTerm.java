@@ -44,6 +44,10 @@ public class ScoredTerm extends ScoredTermOrVariant {
 			for(TermVariation tv:getTerm().getVariations()) {
 				TermOccurrenceUtils.removeOverlaps(tv.getVariant().getOccurrences(), occs);
 			}
+			for(Term ext:getTerm().getExtensions()) {
+				TermOccurrenceUtils.removeOverlaps(ext.getOccurrences(), occs);
+			}
+
 			independance = ((double)occs.size())/this.getTerm().getFrequency();
 		}
 		return independance;

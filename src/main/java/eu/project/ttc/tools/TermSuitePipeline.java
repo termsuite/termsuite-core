@@ -49,6 +49,7 @@ import eu.project.ttc.engines.CompostAE;
 import eu.project.ttc.engines.CompoundSplitter;
 import eu.project.ttc.engines.Contextualizer;
 import eu.project.ttc.engines.EvalEngine;
+import eu.project.ttc.engines.ExtensionDetecter;
 import eu.project.ttc.engines.FlatScorifier;
 import eu.project.ttc.engines.GraphicalVariantGatherer;
 import eu.project.ttc.engines.MateLemmaFixer;
@@ -1327,6 +1328,25 @@ public class TermSuitePipeline {
 		}
 	}
 	
+	
+	/**
+	 * Detects all inclusion/extension relation between terms that have size >= 2.
+	 * 
+	 * @return
+	 */
+	public TermSuitePipeline aeExtensionDetector()   {
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					ExtensionDetecter.class
+				);
+			
+			ExternalResourceFactory.bindResource(ae, resTermIndex());
+			return aggregateAndReturn(ae);
+		} catch(Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
+	}
+
 
 	public TermSuitePipeline setExportFilteringRule(String exportFilteringRule) {
 		this.exportFilteringRule = exportFilteringRule;
@@ -1583,7 +1603,7 @@ public class TermSuitePipeline {
 	 * @return
 	 * 		this pipeline builder
 	 */
-	public TermSuitePipeline setTsvExportWithHeaders(boolean tsvWithHeaders) {
+	public TermSuitePipeline setTsvShowHeaders(boolean tsvWithHeaders) {
 		this.tsvWithHeaders = tsvWithHeaders;
 		return this;
 	}
@@ -1597,7 +1617,7 @@ public class TermSuitePipeline {
 	 * @return
 	 * 		this pipeline builder
 	 */
-	public TermSuitePipeline setTsvExportWithVariantScores(boolean tsvWithVariantScores) {
+	public TermSuitePipeline setTsvShowScores(boolean tsvWithVariantScores) {
 		this.tsvWithVariantScores = tsvWithVariantScores;
 		return this;
 	}
