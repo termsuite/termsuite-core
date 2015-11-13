@@ -41,17 +41,17 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 
 	private List<TermProperty> properties;
 	
-	private boolean showVariantScores;
+	private boolean showScores;
 	/**
 	 * Initializes a new instance using the specified output
 	 * 
 	 * @param out
 	 *            The output writer.
 	 */
-	public IndexerTSVBuilder(Writer out, List<TermProperty> properties, boolean showVariantScores) {
+	public IndexerTSVBuilder(Writer out, List<TermProperty> properties, boolean showScores) {
 		super(out);
 		this.properties = properties;
-		this.showVariantScores = showVariantScores;
+		this.showScores = showScores;
 	}
 
 	
@@ -62,22 +62,32 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 	 * @return The new id
 	 * @throws IOException
 	 */
-	public Integer addTerm(TermIndex termIndex, Term term) throws IOException {
-		startTerm(termIndex, term);
+	public Integer addTerm(TermIndex termIndex, Term term, String label) throws IOException {
+		startTerm(termIndex, term, label);
 		endTerm();
 		return termCount;
 	}
 
 	private static final String SPEC_FORMAT = "%.2f";
-	public void startTerm(TermIndex termIndex, Term term) throws IOException {
-		appendTerm(termIndex, term, "T");
+	private static final String T_LABEL_FORMAT = "T[%s]";
+	private static final String T_LABEL = "T";
+	private static final String V_LABEL_FORMAT = "V[%s]";
+	private static final String V_LABEL = "V";
+	
+	public void startTerm(TermIndex termIndex, Term term, String label) throws IOException {
+		if(showScores) {
+			appendTerm(termIndex, term, String.format(T_LABEL_FORMAT,label));
+		} else {
+			appendTerm(termIndex, term, T_LABEL);
+		}
 	}
 
 	public void addVariant(TermIndex termIndex,Term variant, String label) throws IOException {
-		if(showVariantScores)
-			appendTerm(termIndex, variant, String.format("V[%s]", label));
-		else
-			appendTerm(termIndex, variant, "V");
+		if(showScores) {
+			appendTerm(termIndex, variant, String.format(V_LABEL_FORMAT, label));
+		} else {
+			appendTerm(termIndex, variant, V_LABEL);
+		}
 	}
 
 	public void endTerm() {
@@ -109,4 +119,6 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 		write(Joiner.on("\t").join(headers));
 		write("\n");
 	}
+
+
 }

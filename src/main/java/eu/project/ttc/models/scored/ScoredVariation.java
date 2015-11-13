@@ -19,13 +19,6 @@ public class ScoredVariation extends ScoredTermOrVariant {
 	private ScoredTerm extensionAffix;
 	private boolean extensionAffixSet = false;
 
-	
-//	public double strictnessScore = Double.MIN_VALUE;
-//	public double extensionGain = Double.MIN_VALUE;
-//	public double extensionSpec = Double.MIN_VALUE;
-//	public double frequencyScore;
-	
-	
 	public ScoredVariation(ScoredModel scoredModel, TermVariation tv) {
 		super(scoredModel, tv.getVariant());
 		this.variation = tv;
@@ -65,16 +58,16 @@ public class ScoredVariation extends ScoredTermOrVariant {
 		return this.scoredModel.getAdapter(this.variation.getBase());
 	}
 
-
+	private static final String LABEL_FORMAT = "S:%2.0f,E:%2.0f(G:%2.0f/WR:%2.0f/O:%2.0f),F:%2.0f,I:%2.0f,V:%2.0f";
 	public String getLabel() {
-		return String.format("S:%2.0f,E:%2.0f(G:%2.0f/WR:%2.0f/O:%2.0f),F:%2.0f,I:%2.0f,V:%2.0f",
+		return String.format(LABEL_FORMAT,
 				100*getStrictnessScore(),
 				100*getExtensionScore(),
 				100*getExtensionGainScore(),
 				100*getExtensionSpecScore(),
 				100*getExtensionOrthographicScore(),
 				100*getFrequencyScore(),
-				100*getIndependanceScore(),
+				100*getVariantIndependanceScore(),
 				100*getVariationScore()
 			).trim();
 //		return String.format("%2.0f",
@@ -87,7 +80,7 @@ public class ScoredVariation extends ScoredTermOrVariant {
 	 * **************************************
 	 */
 	
-	public double getIndependanceScore() {
+	public double getVariantIndependanceScore() {
 		int affixInclusion = 0;
 		for(ScoredVariation sv:getBase().getVariations()) {
 			if(sv == this)

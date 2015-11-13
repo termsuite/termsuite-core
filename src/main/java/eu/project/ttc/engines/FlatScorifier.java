@@ -18,7 +18,6 @@ import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
-import eu.project.ttc.models.Term;
 import eu.project.ttc.models.scored.ScoredTerm;
 import eu.project.ttc.models.scored.ScoredVariation;
 import eu.project.ttc.resources.ScoredModel;
@@ -43,16 +42,23 @@ public class FlatScorifier extends JCasAnnotator_ImplBase {
 	@ConfigurationParameter(name=EXTENSION_GAIN_TH, mandatory=false, defaultValue="0")
 	private double extensionGainTh;
 
-	public static final String INDEPENDANCE_TH = "IndependanceTh";
-	@ConfigurationParameter(name=INDEPENDANCE_TH, mandatory=false, defaultValue="0")
-	private double independanceTh;
+	public static final String VARIANT_INDEPENDANCE_TH = "VariantIndependanceTh";
+	@ConfigurationParameter(name=VARIANT_INDEPENDANCE_TH, mandatory=false, defaultValue="0")
+	private double variantIndependanceTh;
 
 	public static final String VARIATION_TH = "VariationTh";
 	@ConfigurationParameter(name=VARIATION_TH, mandatory=false, defaultValue="0")
 	private double variationScoreTh;
 
-	private double orthographicScoreTh = 0.55;
+	public static final String ORTHOGRAPHIC_SCORE_TH = "OrthographicScoreTh";
+	@ConfigurationParameter(name=ORTHOGRAPHIC_SCORE_TH, mandatory=false, defaultValue="0.55")
+	private double orthographicScoreTh;
+	
+	public static final String TERM_INDEPENDANCE_TH = "TermIndependanceTh";
+	@ConfigurationParameter(name=TERM_INDEPENDANCE_TH, mandatory=false, defaultValue="0.10")
+	private double termIndependanceTh;
 
+	
 	private static Comparator<ScoredTerm> wrComparator = new Comparator<ScoredTerm>() {
 		@Override
 		public int compare(ScoredTerm o1, ScoredTerm o2) {
@@ -83,17 +89,16 @@ public class FlatScorifier extends JCasAnnotator_ImplBase {
 		LOGGER.info("Start flat scorifier");
 
 		// Filter terms with bad orthgraph
-		Set<Term> rem = Sets.newHashSet();
-		for(Term t:termIndexResource.getTermIndex().getTerms())
-			if(StringUtils.getOrthographicScore(t.getLemma()) < 0.55)
-				rem.add(t);
-		for(Term t:rem)
-			termIndexResource.getTermIndex().removeTerm(t);
-		
-		this.scoredModel.importTermIndex(termIndexResource.getTermIndex());
-		
-		this.scoredModel.sort(wrComparator);
+		doScoredModel();
 
+		UIMAProfiler.getProfiler("AnalysisEngine").stop(this, "process");
+	}
+
+	private void doScoredModel() {
+		this.scoredModel.importTermIndex(termIndexResource.getTermIndex());
+		this.scoredModel.sort(wrComparator);
+		filterTerms();
+		
 		int sizeBefore = 0;
 		int sizeAfter = 0;
 		for(ScoredTerm t:this.scoredModel.getTerms()) {
@@ -111,7 +116,17 @@ public class FlatScorifier extends JCasAnnotator_ImplBase {
 		
 		LOGGER.info("Filtered {} variants out of {}", sizeBefore - sizeAfter, sizeBefore);
 		this.scoredModel.sort(wrComparator);
-		UIMAProfiler.getProfiler("AnalysisEngine").stop(this, "process");
+	}
+
+	private void filterTerms() {
+		Set<ScoredTerm> rem = Sets.newHashSet();
+		for(ScoredTerm st:scoredModel.getTerms()) {
+			if(StringUtils.getOrthographicScore(st.getTerm().getLemma()) < this.orthographicScoreTh)
+				rem.add(st);
+			else if(st.getTermIndependanceScore() < this.termIndependanceTh)
+				rem.add(st);
+		}
+		this.scoredModel.removeTerms(rem);
 	}
 
 	private void filterVariations(List<ScoredVariation>  inputTerms) {
@@ -121,7 +136,7 @@ public class FlatScorifier extends JCasAnnotator_ImplBase {
 			v = it.next();
 			if(v.getExtensionGainScore() < extensionGainTh
 				|| v.getExtensionSpecScore() < extensionSpecTh
-				|| v.getIndependanceScore() < independanceTh
+				|| v.getVariantIndependanceScore() < variantIndependanceTh
 				|| v.getVariationScore() < variationScoreTh
 				) {
 				it.remove();
@@ -129,29 +144,4 @@ public class FlatScorifier extends JCasAnnotator_ImplBase {
 		}
 		
 	}
-
-	
-	private static  <T extends ScoredVariation> void decrementAndPropagate(List<T>  inputTerms) {
-		boolean hasRemoved, mustSort;
-		T firstVariant, otherVariant;
-		for(int i = 0; i<inputTerms.size(); i++) {
-			firstVariant = inputTerms.get(i);
-			mustSort = false;
-			System.out.println("------------------------");
-			System.out.println(firstVariant);
-			int aaa = 1;
-			for(int j=i+1; j<inputTerms.size(); j++) {
-				otherVariant = inputTerms.get(j);
-				System.out.println("\t"+otherVariant);
-				hasRemoved = 0 < otherVariant.removeOverlappingOccurrences(firstVariant.getOccurrences());
-				if(hasRemoved) {
-					System.out.format("  * %s overlapped with %s\n", otherVariant, firstVariant);
-				}
-				mustSort |= hasRemoved;
-			}
-			if(mustSort)
-				Collections.sort(inputTerms, variationScoreComparator);
-		}
-	}
-
 }

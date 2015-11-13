@@ -74,9 +74,9 @@ public class TSVExporter extends JCasAnnotator_ImplBase {
 	@ConfigurationParameter(name=SHOW_HEADERS, mandatory=false, defaultValue="true")
 	private boolean showHeaders;
 
-	public static final String SHOW_VARIANT_SCORES = "ShowVariantScores";
-	@ConfigurationParameter(name=SHOW_VARIANT_SCORES, mandatory=false, defaultValue="false")
-	private boolean showVariantScores;
+	public static final String SHOW_SCORES = "ShowScores";
+	@ConfigurationParameter(name=SHOW_SCORES, mandatory=false, defaultValue="false")
+	private boolean showScores;
 
 	
 	/*
@@ -103,7 +103,7 @@ public class TSVExporter extends JCasAnnotator_ImplBase {
 			tsv = new IndexerTSVBuilder(
 					streamWriter,
 					properties,
-					showVariantScores
+					showScores
 					);
 		} catch (FileNotFoundException e) {
 			LOGGER.error("Could not open a writer to file {}", this.toFilePath);
@@ -123,9 +123,9 @@ public class TSVExporter extends JCasAnnotator_ImplBase {
 			if(showHeaders)
 				tsv.writeHeaders();
 				
-			for(ScoredTerm t:scoredModel.getTerms()) {
-				tsv.startTerm(scoredModel.getTermIndex(), t.getTerm());
-				for(ScoredVariation sv:t.getVariations()) {
+			for(ScoredTerm st:scoredModel.getTerms()) {
+				tsv.startTerm(scoredModel.getTermIndex(), st.getTerm(), st.getLabel());
+				for(ScoredVariation sv:st.getVariations()) {
 					tsv.addVariant(
 							scoredModel.getTermIndex(), 
 							sv.getVariant().getTerm(), 

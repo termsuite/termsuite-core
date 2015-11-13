@@ -469,7 +469,7 @@ public class TermSuitePipeline {
 					TSVExporter.TO_FILE_PATH, toFilePath,
 					TSVExporter.TERM_PROPERTIES, this.tsvExportProperties,
 					TSVExporter.SHOW_HEADERS, tsvWithHeaders,
-					TSVExporter.SHOW_VARIANT_SCORES, tsvWithVariantScores
+					TSVExporter.SHOW_SCORES, tsvWithVariantScores
 				);
 			ExternalResourceFactory.bindResource(ae, resScoredModel());
 	
@@ -490,7 +490,7 @@ public class TermSuitePipeline {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					FlatScorifier.class,
 					FlatScorifier.VARIATION_TH, (float)lang.getVariantScoreThreshold(),
-					FlatScorifier.INDEPENDANCE_TH, (float)lang.getVariantIndependenceScoreThreshold(),
+					FlatScorifier.VARIANT_INDEPENDANCE_TH, (float)lang.getVariantIndependenceScoreThreshold(),
 					FlatScorifier.EXTENSION_SPEC_TH, (float)lang.getVariantExtSpecThreshold(),
 					FlatScorifier.EXTENSION_GAIN_TH, (float)lang.getVariantExtGainThreshold()
 					
