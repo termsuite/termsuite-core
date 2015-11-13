@@ -83,5 +83,7 @@ public class ScoredModel implements SharedResourceObject {
 				}
 			}
 		}
+		for(ScoredTerm st:rem)
+			adapters.remove(st.getTerm());
 	}
 }

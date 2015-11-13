@@ -97,7 +97,10 @@ public class FlatScorifier extends JCasAnnotator_ImplBase {
 	private void doScoredModel() {
 		this.scoredModel.importTermIndex(termIndexResource.getTermIndex());
 		this.scoredModel.sort(wrComparator);
+		
+		int size = this.scoredModel.getTerms().size();
 		filterTerms();
+		LOGGER.info("Filtered {} terms out of {}", this.scoredModel.getTerms().size() - size, size);
 		
 		int sizeBefore = 0;
 		int sizeAfter = 0;
@@ -106,7 +109,6 @@ public class FlatScorifier extends JCasAnnotator_ImplBase {
 				continue;
 			List<ScoredVariation> sv = Lists.newArrayListWithExpectedSize(t.getVariations().size());
 			sv.addAll(t.getVariations());
-//			decrementAndPropagate(sv);
 			sizeBefore += sv.size();
 			filterVariations(sv);
 			sizeAfter += sv.size();
@@ -134,12 +136,15 @@ public class FlatScorifier extends JCasAnnotator_ImplBase {
 		ScoredVariation v;
 		while(it.hasNext()) {
 			v = it.next();
-			if(v.getExtensionGainScore() < extensionGainTh
-				|| v.getExtensionSpecScore() < extensionSpecTh
-				|| v.getVariantIndependanceScore() < variantIndependanceTh
-				|| v.getVariationScore() < variationScoreTh
-				) {
+			if(v.getVariantIndependanceScore() < variantIndependanceTh
+					|| v.getVariationScore() < variationScoreTh
+					) {
 				it.remove();
+			}
+			else if(v.getExtensionAffix() != null) {
+				if(v.getExtensionGainScore() < extensionGainTh
+						|| v.getExtensionSpecScore() < extensionSpecTh)
+					it.remove();
 			}
 		}
 		
