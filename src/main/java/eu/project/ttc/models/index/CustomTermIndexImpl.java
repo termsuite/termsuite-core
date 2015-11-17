@@ -106,4 +106,35 @@ public class CustomTermIndexImpl implements CustomTermIndex {
 		}
 	}
 
+	@Override
+	public void cleanEntriesByMaxSize(int maxSize) {
+		String msg = "Index entry {} had too many elements. Applied th={} filter. Before -> after filtering: {} -> {}";
+		int th;
+		Iterator<Term> it;
+		Term t;
+		int initialSize;
+		for(String key:index.keySet()) {
+			th = 1;
+			initialSize = index.get(key).size();
+			while (index.get(key).size() > maxSize) {
+				th++;
+				it = index.get(key).iterator();
+				while(it.hasNext()) {
+					t = it.next();
+					if(t.getFrequency()<th)
+						it.remove();
+				}
+			}
+			if(th>1) {
+				LOGGER.warn(msg,
+						key,
+						th,
+						initialSize,
+						index.get(key).size()
+						);
+			}
+		}
+		
+	}
+
 }

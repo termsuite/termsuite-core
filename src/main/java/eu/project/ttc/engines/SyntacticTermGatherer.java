@@ -82,7 +82,7 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 	private int totalComparisons = 0;
 	private int nbComparisons = 0;
 
-	private static final int WARNING_CRITICAL_SIZE = 10000;
+	private static final int WARNING_CRITICAL_SIZE = 2500;
 	
 	private void gather(final String gatheringKey) {
 		LOGGER.debug("Rule-based gathering over the pregathering key {}", gatheringKey);
@@ -98,7 +98,9 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 		customIndex.cleanSingletonKeys();
 
 		// clean biggest classes
-		customIndex.dropBiggerEntries(WARNING_CRITICAL_SIZE, true);
+		customIndex.cleanEntriesByMaxSize(WARNING_CRITICAL_SIZE);
+
+//		customIndex.dropBiggerEntries(WARNING_CRITICAL_SIZE, true);
 		
 		CustomIndexStats stats = new CustomIndexStats(customIndex);
 

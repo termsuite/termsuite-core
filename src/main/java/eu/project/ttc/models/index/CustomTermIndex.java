@@ -42,5 +42,14 @@ public interface CustomTermIndex {
 	public int size();
 	public void removeTerm(Term t);
 	
+	/**
+	 * For each entry of this index, increase the frequency threshhold and 
+	 * remove all terms under the frequency threshold until there are
+	 * less than <code>maxSize</code> terms left in the enrty.
+	 * 
+	 * @param maxSize
+	 */
+	public void cleanEntriesByMaxSize(int maxSize);
+	
 	public void dropBiggerEntries(int threshholdSize, boolean logWarning);
 }
