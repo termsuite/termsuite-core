@@ -100,7 +100,7 @@ public class FlatScorifier extends JCasAnnotator_ImplBase {
 		
 		int size = this.scoredModel.getTerms().size();
 		filterTerms();
-		LOGGER.info("Filtered {} terms out of {}", this.scoredModel.getTerms().size() - size, size);
+		LOGGER.info("Filtered {} terms out of {}", size - this.scoredModel.getTerms().size(), size);
 		
 		int sizeBefore = 0;
 		int sizeAfter = 0;
