@@ -127,11 +127,12 @@ public class TermSuiteTerminoCLI {
 	private static final String CLEAN_THRESHOLD = "filter-th";
 	private static final String CLEAN_TOP_N = "filter-top-n";
 	private static final String CLEAN_PROPERTY = "filter-property";
+	private static final String CLEAN_FILTER_VARIANTS = "filter-variants";
 	
 	// the tsv file path argument
 	private static final String TSV = "tsv";
 	private static final String TSV_PROPERTIES = "tsv-properties";
-	private static final String TSV_VARIANT_SCORES = "tsv-show-variant-scores";
+	private static final String TSV_VARIANT_SCORES = "tsv-show-scores";
 
 
 	// the json file path argument
@@ -163,7 +164,8 @@ public class TermSuiteTerminoCLI {
 	private static Optional<Float> cleaningThreshold = Optional.of(2f);
 	private static Optional<Integer> cleaningTopN = Optional.absent();
 	private static Optional<TermProperty> cleaningProperty = Optional.of(TermProperty.WR_LOG);
-
+	private static boolean keepVariantsWhileCleaning = true;
+	
 	/*
 	 * Export params
 	 */
@@ -279,12 +281,7 @@ public class TermSuiteTerminoCLI {
 				// specificity computer
 				pipeline.aeSpecificityComputer();
 
-				if(cleaningThreshold.isPresent()) {
-					pipeline.aeThresholdCleaner(
-							cleaningProperty.get(), cleaningThreshold.get());
-				} else if(cleaningTopN.isPresent()) 
-					pipeline.aeTopNCleaner(cleaningProperty.get(), cleaningTopN.get());
-				
+					
 				// compost (morphology)
 				if(compostAlpha.isPresent()) 
 					pipeline.setCompostCoeffs(compostAlpha.get(), compostBeta.get(), compostGamma.get(), compostDelta.get());
@@ -305,6 +302,15 @@ public class TermSuiteTerminoCLI {
 				pipeline.setGraphicalVariantSimilarityThreshold(graphicalSimilarityThreshold);
 				pipeline.aeGraphicalVariantGatherer();
 				
+				// filtering
+				if(cleaningThreshold.isPresent()) {
+					pipeline.setKeepVariantsWhileCleaning(keepVariantsWhileCleaning);
+					pipeline.aeThresholdCleaner(
+							cleaningProperty.get(), cleaningThreshold.get());
+				} else if(cleaningTopN.isPresent()) {
+					pipeline.setKeepVariantsWhileCleaning(keepVariantsWhileCleaning);
+					pipeline.aeTopNCleaner(cleaningProperty.get(), cleaningTopN.get());
+				}
 
 				// stats
 				pipeline.haeCasStatCounter("at end of pipeline");
@@ -521,6 +527,11 @@ public class TermSuiteTerminoCLI {
 				CLEAN_PROPERTY, 
 				true,
 				"The name of the term property used for cleaning filtering  the term index");
+		options.addOption(
+				null, 
+				CLEAN_FILTER_VARIANTS, 
+				false,
+				"Also filter variants with terms.");
 		
 		options.addOption(
 				null, 
@@ -649,6 +660,9 @@ public class TermSuiteTerminoCLI {
 			cleaningProperty = Optional.of(TermProperty.forName(line.getOptionValue(CLEAN_PROPERTY)));
 		}
 		
+		if(line.hasOption(CLEAN_FILTER_VARIANTS))
+			keepVariantsWhileCleaning = false;
+
 		if(line.hasOption(TSV))
 			tsvFile = Optional.of(line.getOptionValue(TSV));
 		if(line.hasOption(TSV_PROPERTIES)) {

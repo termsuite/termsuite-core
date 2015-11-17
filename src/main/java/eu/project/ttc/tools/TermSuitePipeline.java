@@ -167,6 +167,11 @@ public class TermSuitePipeline {
 	private String contextAssocRateMeasure = LogLikelihood.class.getName();
 
 	/*
+	 * Cleaner properties
+	 */
+	private boolean keepVariantsWhileCleaning = false;
+	
+	/*
 	 * Contextualizer options
 	 */
 	private OccurrenceType contextualizeCoTermsType = OccurrenceType.SINGLE_WORD;
@@ -1184,13 +1189,13 @@ public class TermSuitePipeline {
 	}
 
 	
-	public TermSuitePipeline aeThresholdCleaner(TermProperty property, float threshold, boolean keepVariants, boolean isPeriodic, int cleaningPeriod, int termIndexSizeTrigger) {
+	public TermSuitePipeline aeThresholdCleaner(TermProperty property, float threshold, boolean isPeriodic, int cleaningPeriod, int termIndexSizeTrigger) {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 				TermIndexThresholdCleaner.class,
 				AbstractTermIndexCleaner.CLEANING_PROPERTY, property,
 				AbstractTermIndexCleaner.NUM_TERMS_CLEANING_TRIGGER, termIndexSizeTrigger,
-				AbstractTermIndexCleaner.KEEP_VARIANTS, keepVariants,
+				AbstractTermIndexCleaner.KEEP_VARIANTS, this.keepVariantsWhileCleaning,
 				TermIndexThresholdCleaner.THRESHOLD, threshold
 			);
 			setPeriodic(isPeriodic, cleaningPeriod, ae);
@@ -1235,16 +1240,21 @@ public class TermSuitePipeline {
 	 * @return
 	 */
 	public TermSuitePipeline aeThresholdCleanerPeriodic(TermProperty property, float threshold, int cleaningPeriod)   {
-		return aeThresholdCleaner(property, threshold, false, true, cleaningPeriod, 0);
+		return aeThresholdCleaner(property, threshold, true, cleaningPeriod, 0);
 	}
 
 	public TermSuitePipeline aeThresholdCleanerSizeTrigger(TermProperty property, float threshold, int termIndexSizeTrigger)   {
-		return aeThresholdCleaner(property, threshold, false, false, 0, termIndexSizeTrigger);
+		return aeThresholdCleaner(property, threshold, false, 0, termIndexSizeTrigger);
 	}
 
 	
+	public TermSuitePipeline setKeepVariantsWhileCleaning(boolean keepVariantsWhileCleaning) {
+		this.keepVariantsWhileCleaning = keepVariantsWhileCleaning;
+		return this;
+	}
+	
 	public TermSuitePipeline aeThresholdCleaner(TermProperty property, float threshold) {
-		return aeThresholdCleaner(property, threshold, false, false, 0, 0);
+		return aeThresholdCleaner(property, threshold, false, 0, 0);
 	}
 
 	public TermSuitePipeline aeTopNCleaner(TermProperty property, int n)  {
