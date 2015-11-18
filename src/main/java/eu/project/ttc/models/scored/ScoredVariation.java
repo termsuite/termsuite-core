@@ -30,16 +30,17 @@ public class ScoredVariation extends ScoredTermOrVariant {
 
 	public ScoredTerm getExtensionAffix() {
 		if(!extensionAffixSet) {
+			Term rawTerm = null;
 			try {
-				Term rawTerm = TermUtils.getExtensionAffix(
+				rawTerm = TermUtils.getExtensionAffix(
 						scoredModel.getTermIndex(),
 						getBase().getTerm(), 
 						getVariant().getTerm());
-				this.extensionAffix = scoredModel.getAdapter(rawTerm);
-			} catch(IllegalStateException e) {
-				// not an extension
-				this.extensionAffix = null;
+			} catch (IllegalStateException e) {
+				rawTerm = null;
 			}
+			
+			this.extensionAffix = rawTerm == null ? null : scoredModel.getAdapter(rawTerm);
 			extensionAffixSet = true;
 //			System.out.format("Ext affix for term (%s,%s) is %s\n", 
 //					getBase().getTerm(),

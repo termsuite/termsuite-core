@@ -30,15 +30,14 @@ public class ScoredModel implements SharedResourceObject {
 	
 	@Override
 	public void load(DataResource aData) throws ResourceInitializationException {
+		adapters = Maps.newHashMap();
 	}
 	
 	public void importTermIndex(TermIndex termIndex) {
-		adapters = Maps.newHashMap();
 		this.terms = Lists.newLinkedList();
 		for(Term t:termIndex.getTerms()) {
 			List<ScoredVariation> scoredVariations  = Lists.newArrayListWithExpectedSize(t.getVariations().size());
-			ScoredTerm st = new ScoredTerm(this, t);
-			adapters.put(t, st);
+			ScoredTerm st = getAdapter(t);
 			for(TermVariation tv:t.getVariations()) {
 				ScoredVariation stv = new ScoredVariation(this, tv);
 				scoredVariations.add(stv);
@@ -58,10 +57,9 @@ public class ScoredModel implements SharedResourceObject {
 	}
 
 	public ScoredTerm getAdapter(Term t) {
-		if(adapters.containsKey(t))
-			return adapters.get(t);
-		else
-			throw new IllegalStateException("No such adapter for term: " + t);
+		if(!adapters.containsKey(t))
+			adapters.put(t, new ScoredTerm(this,  t));
+		return adapters.get(t);
 	}
 
 	public TermIndex getTermIndex() {
