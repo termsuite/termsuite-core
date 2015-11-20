@@ -43,7 +43,9 @@ import com.google.common.collect.Lists;
 import eu.project.ttc.engines.BilingualAligner;
 import eu.project.ttc.engines.BilingualAligner.TranslationCandidate;
 import eu.project.ttc.metrics.Cosine;
+import eu.project.ttc.metrics.Jaccard;
 import eu.project.ttc.metrics.LogLikelihood;
+import eu.project.ttc.metrics.SimilarityDistance;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.index.JSONTermIndexIO;
@@ -68,6 +70,12 @@ public class TermSuiteAlignerCLI {
 	private static final String SOURCE_TERMINO = "source-termino";
 	private static final String TARGET_TERMINO = "target-termino";
 	private static final String DICTIONARY = "dictionary";
+	private static final String DISTANCE = "distance";
+	private static final String SHOW_EXPLANATION = "show-explanation";
+
+	// Parameter options
+	private static final String DISTANCE_COSINE = "cosine";
+	private static final String DISTANCE_JACCARD = "jaccard";
 
 	
 	// values
@@ -77,9 +85,8 @@ public class TermSuiteAlignerCLI {
 	private static String dicoPath;
 	private static int n = 10;
 	private static List<String> terms = Lists.newArrayList();
-	
-	private static final Cosine DISTANCE = new Cosine();
-	private static final String ASSOC_RATE = LogLikelihood.class.getName();
+	private static SimilarityDistance distance = new Cosine();
+	private static boolean showExplanation = false;
 
 	
 	/**
@@ -118,7 +125,7 @@ public class TermSuiteAlignerCLI {
 				BilingualAligner aligner = TermSuiteAlignerBuilder.start()
 						.setTargetTerminology(targetTermino.get())
 						.setDicoPath(dicoPath)
-						.setDistance(DISTANCE)
+						.setDistance(distance)
 						.create();
 
 				for(String term:terms) {
@@ -129,11 +136,18 @@ public class TermSuiteAlignerCLI {
 								line.getOptionValue(SOURCE_TERMINO));
 					} else {
 						if(terms.size() > 1) {
-							System.out.println("---------");
-							System.out.println("TERM: " + sourceTerm);
+							System.out.println("---");
+							System.out.println(sourceTerm);
+							System.out.println("-");
 						}
 						for(TranslationCandidate candidate:aligner.align(sourceTerm, n, 1)) {
-							System.out.format("%s\t%.3f\n",
+							if(showExplanation)
+								System.out.format("%s\t%.3f\t%s\n",
+										candidate.getTerm(),
+										candidate.getScore(),
+										candidate.getExplanation().getTopNFeatures());
+							else
+								System.out.format("%s\t%.3f\n",
 									candidate.getTerm(),
 									candidate.getScore());
 						}
@@ -209,6 +223,20 @@ public class TermSuiteAlignerCLI {
 				true, 
 				"The number of translation candidates to show in the output", 
 				false));
+		
+		options.addOption(TermSuiteCLIUtils.createOption(
+				null, 
+				DISTANCE, 
+				true, 
+				"Similarity measure to compute the distance between two vectors ["+DISTANCE_COSINE+","+DISTANCE_JACCARD+"]", 
+				false));
+
+		options.addOption(TermSuiteCLIUtils.createOption(
+				null, 
+				SHOW_EXPLANATION, 
+				false, 
+				"Shows for each aligned term the most influencial co-terms", 
+				false));
 
 		return options;
 	}
@@ -229,6 +257,20 @@ public class TermSuiteAlignerCLI {
 			for(String term:FileUtils.readLines(file, "UTF-8"))
 				terms.add(Splitter.on("\t").splitToList(term).get(0).trim());
 		}
+		if(line.hasOption(N))
+			n = Integer.parseInt(line.getOptionValue(N));
+		if(line.hasOption(DISTANCE)) {
+			if(line.getOptionValue(DISTANCE).equals(DISTANCE_COSINE))
+				distance = new Cosine();
+			else if(line.getOptionValue(DISTANCE).equals(DISTANCE_JACCARD))
+				distance = new Jaccard();
+			else 
+				TermSuiteCLIUtils.exitWithErrorMessage(String.format("Unknown distance: %s. Allowed values: %s;%s",
+						line.getOptionValue(DISTANCE),
+						DISTANCE_COSINE,
+						DISTANCE_JACCARD));
+			
+		}
 		LOGGER.info("loading source termino {}",line.getOptionValue(SOURCE_TERMINO));
 		sourceTermino = Optional.of(
 				JSONTermIndexIO.load(new FileReader(line.getOptionValue(SOURCE_TERMINO)), true)
@@ -238,9 +280,8 @@ public class TermSuiteAlignerCLI {
 				JSONTermIndexIO.load(new FileReader(line.getOptionValue(TARGET_TERMINO)), true)
 			);
 		dicoPath = line.getOptionValue(DICTIONARY);
-		if(line.hasOption(N))
-			n = Integer.parseInt(line.getOptionValue(N));
-		
+
+		showExplanation = line.hasOption(SHOW_EXPLANATION);
 	}
 
 }

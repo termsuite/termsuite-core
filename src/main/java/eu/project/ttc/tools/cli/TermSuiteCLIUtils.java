@@ -267,6 +267,7 @@ public final class TermSuiteCLIUtils {
 	 */
 	public static void exitWithErrorMessage(String aMessage) {
 		LOGGER.error(aMessage);
+		System.err.println(aMessage);
 		System.exit(1);
 	}
 
