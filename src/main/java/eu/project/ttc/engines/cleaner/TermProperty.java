@@ -41,6 +41,8 @@ import eu.project.ttc.models.TermIndex;
  */
 public enum TermProperty {
 	DOCUMENT_FREQUENCY("documentFrequency", "dfreq", false),
+	FREQUENCY_NORM("frequencyNorm", "fnorm", false),
+	GENERAL_FREQUENCY_NORM("generalFrequencyNorm", "generalFnorm", false),
 	WR("wr", "wr", true),
 	WR_LOG("wrLog", "wrlog", true),
 	WR_LOG_Z_SCORE("wrLogZScore", "zscore", true),
@@ -118,6 +120,10 @@ public enum TermProperty {
 			return t.getDocumentFrequency();
 		case FREQUENCY:
 			return t.getFrequency();
+		case GENERAL_FREQUENCY_NORM:
+			return t.getGeneralFrequencyNorm();
+		case FREQUENCY_NORM:
+			return t.getFrequencyNorm();
 		case TERM_CLASS_FREQUENCY:
 			return t.getTermClass().getFrequency();
 		default:
@@ -153,6 +159,10 @@ public enum TermProperty {
 			return t.getFrequency();
 		case LEMMA:
 			return t.getLemma();
+		case GENERAL_FREQUENCY_NORM:
+			return t.getGeneralFrequencyNorm();
+		case FREQUENCY_NORM:
+			return t.getFrequencyNorm();
 		case GROUPING_KEY:
 			return t.getGroupingKey();
 		case PILOT:
