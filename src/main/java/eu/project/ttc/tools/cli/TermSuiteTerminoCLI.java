@@ -278,6 +278,9 @@ public class TermSuiteTerminoCLI {
 				// regex spotter
 				pipeline.aeRegexSpotter();
 
+				// filter stop words
+				pipeline.aeStopWordsFilter();
+
 				// specificity computer
 				pipeline.aeSpecificityComputer();
 
