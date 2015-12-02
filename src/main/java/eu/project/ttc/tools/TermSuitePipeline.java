@@ -26,6 +26,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.UUID;
 
+import eu.project.ttc.engines.*;
+import eu.project.ttc.engines.exporter.*;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.collection.CollectionReader;
 import org.apache.uima.collection.CollectionReaderDescription;
@@ -43,25 +45,6 @@ import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 
-import eu.project.ttc.engines.AffixCompoundSplitter;
-import eu.project.ttc.engines.CasStatCounter;
-import eu.project.ttc.engines.CompostAE;
-import eu.project.ttc.engines.CompoundSplitter;
-import eu.project.ttc.engines.Contextualizer;
-import eu.project.ttc.engines.EvalEngine;
-import eu.project.ttc.engines.ExtensionDetecter;
-import eu.project.ttc.engines.FlatScorifier;
-import eu.project.ttc.engines.GraphicalVariantGatherer;
-import eu.project.ttc.engines.MateLemmaFixer;
-import eu.project.ttc.engines.MateLemmatizerTagger;
-import eu.project.ttc.engines.PrimaryOccurrenceDetector;
-import eu.project.ttc.engines.RegexSpotter;
-import eu.project.ttc.engines.StringRegexFilter;
-import eu.project.ttc.engines.SyntacticTermGatherer;
-import eu.project.ttc.engines.TermClassifier;
-import eu.project.ttc.engines.TermIndexBlacklistWordFilterAE;
-import eu.project.ttc.engines.TermSpecificityComputer;
-import eu.project.ttc.engines.TreeTaggerLemmaFixer;
 import eu.project.ttc.engines.cleaner.AbstractTermIndexCleaner;
 import eu.project.ttc.engines.cleaner.FilterRules;
 import eu.project.ttc.engines.cleaner.MaxSizeThresholdCleaner;
@@ -71,15 +54,6 @@ import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.engines.desc.TermSuiteCollection;
 import eu.project.ttc.engines.desc.TermSuitePipelineException;
-import eu.project.ttc.engines.exporter.CompoundExporter;
-import eu.project.ttc.engines.exporter.EvalExporter;
-import eu.project.ttc.engines.exporter.ExportVariationRuleExamples;
-import eu.project.ttc.engines.exporter.JsonExporter;
-import eu.project.ttc.engines.exporter.SpotterTSVWriter;
-import eu.project.ttc.engines.exporter.TBXExporter;
-import eu.project.ttc.engines.exporter.TSVExporter;
-import eu.project.ttc.engines.exporter.VariantEvalExporter;
-import eu.project.ttc.engines.exporter.XmiCasExporter;
 import eu.project.ttc.metrics.LogLikelihood;
 import eu.project.ttc.models.OccurrenceType;
 import eu.project.ttc.models.TermIndex;
@@ -956,8 +930,6 @@ public class TermSuitePipeline {
 					XmiCasExporter.class,
 					XmiCasExporter.OUTPUT_DIRECTORY, toDirectoryPath
 				);
-			
-			
 			return aggregateAndReturn(ae);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
@@ -983,7 +955,6 @@ public class TermSuitePipeline {
 			throw new TermSuitePipelineException(e);
 		}
 	}
-
 
 	/**
 	 * Tokenizer for chinese collections.
@@ -1630,5 +1601,18 @@ public class TermSuitePipeline {
 	public TermSuitePipeline setTsvShowScores(boolean tsvWithVariantScores) {
 		this.tsvWithVariantScores = tsvWithVariantScores;
 		return this;
+	}
+
+	public TermSuitePipeline haeJsonCasExporter(String toDirectoryPath ) {
+
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					JsonCasExporter.class,
+					JsonCasExporter.OUTPUT_DIRECTORY, toDirectoryPath
+			);
+			return aggregateAndReturn(ae);
+		} catch(Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
 	}
 }
