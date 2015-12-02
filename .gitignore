@@ -21,15 +21,23 @@ hs_err_pid*
 gradle.properties
 build/
 artifacts/
+/gradlew.bat
+/gradlew
+/gradle
 
 # Eclipse
 .classpath
 .project
 .settings/
+/src/main/java/eu/.idea
 
+# Idea
+/.idea
+/termsuite-core.iml
 
 #JCasgen generated files
 src/main/java/eu/project/ttc/types/*.java
 src/main/java/org/apache/uima/examples/*.java
 *.tsv
 *.json
+*.tbx
