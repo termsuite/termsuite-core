@@ -15,6 +15,8 @@ import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.apache.uima.resource.ResourceInitializationException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -24,18 +26,17 @@ import java.io.IOException;
  */
 
 public class JsonCasExporter extends JCasAnnotator_ImplBase {
+    private static final Logger LOGGER = LoggerFactory.getLogger(JsonCasExporter.class);
+
 
     public static final String OUTPUT_DIRECTORY = "OutputDirectory";
     @ConfigurationParameter(name = OUTPUT_DIRECTORY, mandatory=true)
     protected String toDirectoryPath;
 
-    protected File directoryFile;
-
 
     @Override
     public void initialize(UimaContext context) throws ResourceInitializationException {
         super.initialize(context);
-        this.directoryFile = new File(this.toDirectoryPath);
     }
     protected String getExportFilePath(JCas cas) {
         AnnotationIndex<Annotation> index = cas.getAnnotationIndex(SourceDocumentInformation.type);
@@ -73,6 +74,7 @@ public class JsonCasExporter extends JCasAnnotator_ImplBase {
         String name = this.getExportFilePath(aJCas);
         try {
             FileWriter writer = new FileWriter(this.toDirectoryPath+name);
+            LOGGER.debug("Writing " + this.toDirectoryPath+name);
             JsonGenerator jg = jsonFactory.createGenerator(writer);
             jg.useDefaultPrettyPrinter();
             jg.writeStartObject();
@@ -95,6 +97,8 @@ public class JsonCasExporter extends JCasAnnotator_ImplBase {
             jg.flush();
             writer.close();
         } catch (IOException e) {
+            LOGGER.warn("Failure while serializing " + name + "\nCaused by"
+                    + e.getClass().getCanonicalName() + ":" + e.getMessage());
             e.printStackTrace();
         }
     }
