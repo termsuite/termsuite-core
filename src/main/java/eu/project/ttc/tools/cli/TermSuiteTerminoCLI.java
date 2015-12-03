@@ -141,6 +141,9 @@ public class TermSuiteTerminoCLI {
 	// the tbx file path argument
 	private static final String TBX = "tbx";
 
+	// the jsonCAS file path argument
+	private static final String JSCASFILE = "jsonCasFile";
+
 	// the argument whether to activate the profiling
 	private static final String PROFILE = "profile";
 
@@ -175,6 +178,8 @@ public class TermSuiteTerminoCLI {
 	
 	private static Optional<String> jsonFile = Optional.absent();
 	private static Optional<String> tbxFile = Optional.absent();
+
+	private static Optional<String> jsonCasFile = Optional.absent();
 	
 
 	/*
@@ -277,6 +282,12 @@ public class TermSuiteTerminoCLI {
 				
 				// regex spotter
 				pipeline.aeRegexSpotter();
+
+				//export Json CAS spotter
+				if(jsonCasFile.isPresent())
+					pipeline.haeJsonCasExporter(jsonCasFile.get());
+				// filter stop words
+				pipeline.aeStopWordsFilter();
 
 				// specificity computer
 				pipeline.aeSpecificityComputer();
@@ -573,7 +584,15 @@ public class TermSuiteTerminoCLI {
 				true,
 				"The json file path where to export the term index");
 
-		
+		options.addOption(
+				null,
+				JSCASFILE,
+				true,
+				"The directory path where to export the TreeTagger token of each files give in entry of TermSuite in " +
+						"Json Format");
+
+
+
 		return options;
 	}
 
@@ -680,6 +699,9 @@ public class TermSuiteTerminoCLI {
 			tbxFile = Optional.of(line.getOptionValue(TBX));
 		if(line.hasOption(JSON))
 			jsonFile = Optional.of(line.getOptionValue(JSON));
+
+		if(line.hasOption(JSCASFILE))
+			jsonCasFile = Optional.of(line.getOptionValue(JSCASFILE));
 		
 		if(line.hasOption(MATE))
 			tagger =  Tagger.Mate;

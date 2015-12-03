@@ -80,6 +80,7 @@ import eu.project.ttc.engines.exporter.TBXExporter;
 import eu.project.ttc.engines.exporter.TSVExporter;
 import eu.project.ttc.engines.exporter.VariantEvalExporter;
 import eu.project.ttc.engines.exporter.XmiCasExporter;
+import eu.project.ttc.engines.exporter.JsonCasExporter;
 import eu.project.ttc.metrics.LogLikelihood;
 import eu.project.ttc.models.OccurrenceType;
 import eu.project.ttc.models.TermIndex;
@@ -956,8 +957,6 @@ public class TermSuitePipeline {
 					XmiCasExporter.class,
 					XmiCasExporter.OUTPUT_DIRECTORY, toDirectoryPath
 				);
-			
-			
 			return aggregateAndReturn(ae);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
@@ -983,7 +982,6 @@ public class TermSuitePipeline {
 			throw new TermSuitePipelineException(e);
 		}
 	}
-
 
 	/**
 	 * Tokenizer for chinese collections.
@@ -1630,5 +1628,18 @@ public class TermSuitePipeline {
 	public TermSuitePipeline setTsvShowScores(boolean tsvWithVariantScores) {
 		this.tsvWithVariantScores = tsvWithVariantScores;
 		return this;
+	}
+
+	public TermSuitePipeline haeJsonCasExporter(String toDirectoryPath ) {
+
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					JsonCasExporter.class,
+					JsonCasExporter.OUTPUT_DIRECTORY, toDirectoryPath
+			);
+			return aggregateAndReturn(ae);
+		} catch(Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
 	}
 }
