@@ -95,7 +95,7 @@ public class TermClassifier  extends JCasAnnotator_ImplBase {
 		
 		
 		List<Term> terms = Lists.newArrayList(termIndex.getTerms());
-		Collections.sort(terms, classifyingProperty.getComparator(true));
+		Collections.sort(terms, classifyingProperty.getComparator(termIndex, true));
 		Set<Term> added = Sets.newHashSetWithExpectedSize(terms.size());
 		
 		for(Term t:terms) {
