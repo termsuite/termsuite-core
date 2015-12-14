@@ -54,6 +54,7 @@ import eu.project.ttc.engines.FlatScorifier;
 import eu.project.ttc.engines.GraphicalVariantGatherer;
 import eu.project.ttc.engines.MateLemmaFixer;
 import eu.project.ttc.engines.MateLemmatizerTagger;
+import eu.project.ttc.engines.PipelineObserver;
 import eu.project.ttc.engines.PrimaryOccurrenceDetector;
 import eu.project.ttc.engines.RegexSpotter;
 import eu.project.ttc.engines.StringRegexFilter;
@@ -100,15 +101,18 @@ import eu.project.ttc.resources.GeneralLanguageResource;
 import eu.project.ttc.resources.MateLemmatizerModel;
 import eu.project.ttc.resources.MateTaggerModel;
 import eu.project.ttc.resources.MemoryTermIndexManager;
+import eu.project.ttc.resources.ObserverResource;
 import eu.project.ttc.resources.ReferenceTermList;
 import eu.project.ttc.resources.ScoredModel;
 import eu.project.ttc.resources.SimpleWordSet;
 import eu.project.ttc.resources.TermIndexResource;
+import eu.project.ttc.resources.TermSuitePipelineObserver;
 import eu.project.ttc.resources.YamlVariantRules;
 import eu.project.ttc.types.WordAnnotation;
 import eu.project.ttc.utils.OccurrenceBuffer;
 import eu.project.ttc.utils.TermSuiteUtils;
 import fr.free.rocheteau.jerome.engines.Stemmer;
+import fr.univnantes.lina.ProfilerResource;
 import fr.univnantes.lina.uima.ChineseSegmenterResourceHelper;
 import fr.univnantes.lina.uima.engines.ChineseSegmenter;
 import fr.univnantes.lina.uima.engines.TreeTaggerWrapper;
@@ -141,6 +145,8 @@ import uima.sandbox.mapper.resources.MappingResource;
  */
 public class TermSuitePipeline {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermSuitePipeline.class);
+	private String pipelineObserverName;
+	private boolean allowObserving = false;
 	private AggregateBuilder aggregateBuilder;
 	private TermSuiteResourceHelper resFactory;
 	private Optional<String> mateModelsPath = Optional.absent();
@@ -197,6 +203,8 @@ public class TermSuitePipeline {
 		this.lang = Lang.forName(lang);
 		this.resFactory = new TermSuiteResourceHelper(this.lang);
 		this.aggregateBuilder = new AggregateBuilder();
+		this.pipelineObserverName = PipelineObserver.class.getSimpleName() + "-" + Thread.currentThread().getId() + "-" + System.currentTimeMillis();
+
 	}
 
 	public static TermSuitePipeline create(String lang) {
@@ -232,6 +240,21 @@ public class TermSuitePipeline {
 	}
 	
 	
+	/**
+	 * Registers a pipeline listener.
+	 * 
+	 * @param pipelineListener
+	 * @return
+	 */
+	public TermSuitePipeline addPipelineListener(PipelineListener pipelineListener) {
+		TermSuiteResourceManager manager = TermSuiteResourceManager.getInstance();
+		if(!manager.contains(pipelineObserverName))
+			manager.register(pipelineObserverName, new TermSuitePipelineObserver(2,1));
+		((TermSuitePipelineObserver)manager.get(pipelineObserverName)).registerListener(pipelineListener);
+		this.allowObserving = true;
+		return this;
+	}
+
 	
 	/**
 	 * Runs the pipeline with {@link SimplePipeline} without requiring a {@link CollectionReader}
@@ -375,6 +398,7 @@ public class TermSuitePipeline {
 
 					
 			ExternalResourceFactory.bindResource(ae, SegmentBank.KEY_SEGMENT_BANK, segmentBank);
+			ExternalResourceFactory.bindResource(ae, resProfiler());
 
 
 			return aggregateAndReturn(ae);
@@ -385,10 +409,36 @@ public class TermSuitePipeline {
 	}
 
 	private TermSuitePipeline aggregateAndReturn(AnalysisEngineDescription ae) {
+		return aggregateAndReturn(ae, null, 0);
+	}
+
+	private TermSuitePipeline aggregateAndReturn(AnalysisEngineDescription ae, String msgCC, int ccWeight) {
+		if(allowObserving) {
+			String message = msgCC != null ? msgCC : ae.getImplementationName();
+			AnalysisEngineDescription aeObserver = aeObserver(message, ccWeight);
+			this.aggregateBuilder.add(aeObserver);
+		}
 		this.aggregateBuilder.add(ae);
 		return this;
 	}
 
+
+	private AnalysisEngineDescription aeObserver(String msgCC, int ccWeight) {
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					PipelineObserver.class, 
+					PipelineObserver.MSG_COLLECTION_COMPLETE, msgCC,
+					PipelineObserver.WEIGHT_COLLECTION_COMPLETE, ccWeight
+				);
+			
+			ExternalResourceFactory.bindResource(ae, resObserver());
+
+			return ae;
+		} catch (Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
+		
+	}
 	public TermSuitePipeline aeTreeTagger() {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
@@ -400,11 +450,13 @@ public class TermSuitePipeline {
 					TreeTaggerWrapper.PARAM_TT_HOME_DIRECTORY, this.treeTaggerPath.get()
 				);
 			
+			ExternalResourceFactory.bindResource(ae, resProfiler());
 			ExternalResourceFactory.createDependencyAndBind(
 					ae,
 					TreeTaggerParameter.KEY_TT_PARAMETER, 
 					TreeTaggerParameter.class, 
 					resFactory.getTTParameter().toString());
+
 			return aggregateAndReturn(ae).ttLemmaFixer().ttNormalizer();
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
@@ -442,6 +494,8 @@ public class TermSuitePipeline {
 					MateTaggerModel.class, 
 					taggerModel);
 	
+			ExternalResourceFactory.bindResource(ae, resProfiler());
+
 			return aggregateAndReturn(ae)
 					.mateLemmaFixer()
 					.mateNormalizer();
@@ -479,8 +533,11 @@ public class TermSuitePipeline {
 					TSVExporter.SHOW_SCORES, tsvWithVariantScores
 				);
 			ExternalResourceFactory.bindResource(ae, resScoredModel());
-	
-			return aggregateAndReturn(ae);
+			ExternalResourceFactory.bindResource(ae, resProfiler());
+
+			haeScorifier();
+			
+			return aggregateAndReturn(ae, "Exporting the terminology to " + toFilePath, 1);
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
@@ -492,7 +549,7 @@ public class TermSuitePipeline {
 	 * 
 	 * @return the pipeline
 	 */
-	public TermSuitePipeline haeScorifier() {
+	private TermSuitePipeline haeScorifier() {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					FlatScorifier.class,
@@ -504,8 +561,9 @@ public class TermSuitePipeline {
 				);
 			ExternalResourceFactory.bindResource(ae, ScoredModel.SCORED_MODEL, resScoredModel());
 			ExternalResourceFactory.bindResource(ae, TermIndexResource.TERM_INDEX, resTermIndex());
+			ExternalResourceFactory.bindResource(ae, resProfiler());
 
-			return aggregateAndReturn(ae);
+			return aggregateAndReturn(ae, "Computing terms and variants' scores", 1);
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
@@ -525,6 +583,8 @@ public class TermSuitePipeline {
 					ExportVariationRuleExamples.class, ExportVariationRuleExamples.TO_FILE_PATH, toFilePath);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 			ExternalResourceFactory.bindResource(ae, resSyntacticVariantRules());
+			ExternalResourceFactory.bindResource(ae, resProfiler());
+
 			return aggregateAndReturn(ae);
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
@@ -545,6 +605,8 @@ public class TermSuitePipeline {
 					CompoundExporter.TO_FILE_PATH, 
 					toFilePath);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
+			ExternalResourceFactory.bindResource(ae, resProfiler());
+
 			return aggregateAndReturn(ae);
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
@@ -562,8 +624,9 @@ public class TermSuitePipeline {
 					TBXExporter.LANGUAGE, this.lang
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-	
-			return aggregateAndReturn(ae);
+			ExternalResourceFactory.bindResource(ae, resProfiler());
+
+			return aggregateAndReturn(ae, "Exporting the terminology to " + toFilePath, 1);
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
@@ -580,7 +643,8 @@ public class TermSuitePipeline {
 					
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-	
+			ExternalResourceFactory.bindResource(ae, resProfiler());
+
 			return aggregateAndReturn(ae);
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
@@ -607,8 +671,9 @@ public class TermSuitePipeline {
 					JsonExporter.WITH_CONTEXTS, exportJsonWithContext
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-	
-			return aggregateAndReturn(ae);
+			ExternalResourceFactory.bindResource(ae, resProfiler());
+
+			return aggregateAndReturn(ae, "Exporting the terminology to " + toFilePath, 1);
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
@@ -641,7 +706,8 @@ public class TermSuitePipeline {
 				);
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-	
+			ExternalResourceFactory.bindResource(ae, resProfiler());
+
 			return aggregateAndReturn(ae);
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
@@ -668,7 +734,8 @@ public class TermSuitePipeline {
 					Mapping.KEY_MAPPING, 
 					MappingResource.class, 
 					mappingFile);
-	
+			ExternalResourceFactory.bindResource(ae, resProfiler());
+
 			return aggregateAndReturn(ae);
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
@@ -746,7 +813,8 @@ public class TermSuitePipeline {
 					Stemmer.PARAM_LANGUAGE, lang,
 					Stemmer.PARAM_UPDATE, true
 				);
-			
+			ExternalResourceFactory.bindResource(ae, resProfiler());
+
 			return aggregateAndReturn(ae);
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
@@ -761,6 +829,8 @@ public class TermSuitePipeline {
 					TreeTaggerLemmaFixer.LANGUAGE, lang.getCode()
 				);
 			
+			ExternalResourceFactory.bindResource(ae, resProfiler());
+
 			return aggregateAndReturn(ae);
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
@@ -773,7 +843,8 @@ public class TermSuitePipeline {
 					MateLemmaFixer.class,
 					MateLemmaFixer.LANGUAGE, lang.getCode()
 				);
-			
+			ExternalResourceFactory.bindResource(ae, resProfiler());
+
 			return aggregateAndReturn(ae);
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
@@ -826,7 +897,8 @@ public class TermSuitePipeline {
 					resFactory.getAllowedChars().toString());
 	
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			
+			ExternalResourceFactory.bindResource(ae, resProfiler());
+
 			ExternalResourceFactory.createDependencyAndBind(
 					ae,
 					RegexSpotter.STOP_WORD_FILTER, 
@@ -860,7 +932,8 @@ public class TermSuitePipeline {
 				);
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			
+			ExternalResourceFactory.bindResource(ae, resProfiler());
+
 			return aggregateAndReturn(ae);
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
@@ -934,7 +1007,8 @@ public class TermSuitePipeline {
 				);
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			
+			ExternalResourceFactory.bindResource(ae, resProfiler());
+
 			return aggregateAndReturn(ae);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
@@ -977,7 +1051,9 @@ public class TermSuitePipeline {
 					SpotterTSVWriter.class,
 					XmiCasExporter.OUTPUT_DIRECTORY, toDirectoryPath
 				);
-			return aggregateAndReturn(ae);
+			ExternalResourceFactory.bindResource(ae, resProfiler());
+
+			return aggregateAndReturn(ae, "Exporting annotations in TSV to " + toDirectoryPath, 1);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
@@ -1010,6 +1086,8 @@ public class TermSuitePipeline {
 					ChineseSegmenter.CHINESE_NUMBER_SEGMENTS, 
 					ChineseSegmentResource.class, 
 					ChineseSegmenterResourceHelper.getNumberSegments());
+			ExternalResourceFactory.bindResource(ae, resProfiler());
+
 			return aggregateAndReturn(ae);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
@@ -1044,6 +1122,26 @@ public class TermSuitePipeline {
 		}
 		return termIndexResourceDesc;
 		
+	}
+	
+	private ExternalResourceDescription pipelineObserverResource;
+	private ExternalResourceDescription resObserver() {
+		if(pipelineObserverResource == null) {
+			pipelineObserverResource = ExternalResourceFactory.createExternalResourceDescription(
+					ObserverResource.class, this.pipelineObserverName);
+		}
+		return pipelineObserverResource;
+
+	}
+	
+	private ExternalResourceDescription uimaProfiler;
+	private ExternalResourceDescription resProfiler() {
+		if(uimaProfiler == null) {
+			uimaProfiler = ExternalResourceFactory.createExternalResourceDescription(
+					ProfilerResource.class, "");
+		}
+		return uimaProfiler;
+
 	}
 	
 	private ExternalResourceDescription syntacticVariantRules;
@@ -1117,6 +1215,8 @@ public class TermSuitePipeline {
 				);
 			ExternalResourceFactory.bindResource(ae, resGeneralLanguage());
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
+			ExternalResourceFactory.bindResource(ae, resProfiler());
+
 			return aggregateAndReturn(ae);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
@@ -1165,7 +1265,9 @@ public class TermSuitePipeline {
 					Contextualizer.MINIMUM_COOCC_FREQUENCY_THRESHOLD, contextualizeWithCoOccurrenceFrequencyThreshhold
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			return aggregateAndReturn(ae);
+			ExternalResourceFactory.bindResource(ae, resProfiler());
+
+			return aggregateAndReturn(ae, "Build context vectors", 1);
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
@@ -1179,6 +1281,8 @@ public class TermSuitePipeline {
 				MaxSizeThresholdCleaner.MAX_SIZE, maxSize
 			);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
+			ExternalResourceFactory.bindResource(ae, resProfiler());
+
 			return aggregateAndReturn(ae);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
@@ -1199,6 +1303,8 @@ public class TermSuitePipeline {
 			setPeriodic(isPeriodic, cleaningPeriod, ae);
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
+			ExternalResourceFactory.bindResource(ae, resProfiler());
+
 			return aggregateAndReturn(ae);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
@@ -1212,7 +1318,10 @@ public class TermSuitePipeline {
 			);
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			return aggregateAndReturn(ae);
+			ExternalResourceFactory.bindResource(ae, resProfiler());
+
+			
+			return aggregateAndReturn(ae, "Detecting primary occurrences", 1);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
@@ -1276,6 +1385,8 @@ public class TermSuitePipeline {
 					);
 			setPeriodic(isPeriodic, cleaningPeriod, ae);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
+			ExternalResourceFactory.bindResource(ae, resProfiler());
+
 			return aggregateAndReturn(ae);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
@@ -1295,7 +1406,9 @@ public class TermSuitePipeline {
 					GraphicalVariantGatherer.SIMILARITY_THRESHOLD, graphicalVariantSimilarityThreshold.isPresent() ? graphicalVariantSimilarityThreshold.get() : 0.9f
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			return aggregateAndReturn(ae);
+			ExternalResourceFactory.bindResource(ae, resProfiler());
+
+			return aggregateAndReturn(ae, "Computing graphical variants", 1);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
@@ -1311,6 +1424,8 @@ public class TermSuitePipeline {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					StringRegexFilter.class
 				);
+			ExternalResourceFactory.bindResource(ae, resProfiler());
+
 			return aggregateAndReturn(ae);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
@@ -1330,7 +1445,9 @@ public class TermSuitePipeline {
 			
 			ExternalResourceFactory.bindResource(ae, resSyntacticVariantRules());
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			return aggregateAndReturn(ae);
+			ExternalResourceFactory.bindResource(ae, resProfiler());
+
+			return aggregateAndReturn(ae, "Syntactic variant gathering", 1);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
@@ -1349,7 +1466,9 @@ public class TermSuitePipeline {
 				);
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			return aggregateAndReturn(ae);
+			ExternalResourceFactory.bindResource(ae, resProfiler());
+
+			return aggregateAndReturn(ae, "Detecting term extensions", 1);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
@@ -1457,7 +1576,9 @@ public class TermSuitePipeline {
 					CompostAE.NEOCLASSICAL_PREFIXES, 
 					SimpleWordSet.class, 
 					resFactory.getNeoclassicalPrefixes().toString());
-			return aggregateAndReturn(ae);
+			ExternalResourceFactory.bindResource(ae, resProfiler());
+
+			return aggregateAndReturn(ae, "Morphosyntactic analysis", 1);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
@@ -1470,7 +1591,8 @@ public class TermSuitePipeline {
 					CasStatCounter.STAT_NAME, statName
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-	
+			ExternalResourceFactory.bindResource(ae, resProfiler());
+
 			return aggregateAndReturn(ae);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
@@ -1502,7 +1624,8 @@ public class TermSuitePipeline {
 					CasStatCounter.TO_TRACE_FILE, toFile
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-	
+			ExternalResourceFactory.bindResource(ae, resProfiler());
+
 			return aggregateAndReturn(ae);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
@@ -1527,6 +1650,8 @@ public class TermSuitePipeline {
 					
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
+			ExternalResourceFactory.bindResource(ae, resProfiler());
+
 			return aggregateAndReturn(ae);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
@@ -1572,6 +1697,8 @@ public class TermSuitePipeline {
 					EvalEngine.REFERENCE_LIST, 
 					ReferenceTermList.class, 
 					"file:" + refFileURI);
+			ExternalResourceFactory.bindResource(ae, resProfiler());
+
 			return aggregateAndReturn(ae);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);

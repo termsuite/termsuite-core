@@ -25,7 +25,6 @@ import java.util.Collection;
 import java.util.Iterator;
 
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
-import org.apache.uima.examples.SourceDocumentInformation;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.fit.descriptor.ExternalResource;
 import org.apache.uima.jcas.JCas;
@@ -39,6 +38,7 @@ import com.google.common.base.Optional;
 import eu.project.ttc.resources.OccurrenceFilter;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.resources.TrueFilter;
+import eu.project.ttc.types.SourceDocumentInformation;
 import eu.project.ttc.types.TermOccAnnotation;
 import eu.project.ttc.types.WordAnnotation;
 import eu.project.ttc.utils.JCasUtils;

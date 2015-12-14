@@ -330,7 +330,6 @@ public class TermSuiteTerminoCLI {
 				
 				// Export
 				if(tsvFile.isPresent())  {
-					pipeline.haeScorifier();
 					if(tsvProperties.isPresent()) {
 						pipeline.setTsvExportProperties(tsvProperties.get());
 						pipeline.setTsvShowScores(tsvShowVariantScores);
