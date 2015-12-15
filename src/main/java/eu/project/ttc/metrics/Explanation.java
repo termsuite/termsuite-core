@@ -50,7 +50,7 @@ import eu.project.ttc.models.Term;
  * @author Damien Cram
  *
  */
-public class Explanation {
+public class Explanation implements IExplanation {
 	public class ExplanationFeature implements Comparable<ExplanationFeature>{
 		private Term coTerm;
 		private double value;
@@ -122,6 +122,11 @@ public class Explanation {
 	
 	@Override
 	public String toString() {
+		return getText();
+	}
+
+	@Override
+	public String getText() {
 		return String.format("{%s}",Joiner.on(",").join(getTopNFeatures()));
 	}
 }

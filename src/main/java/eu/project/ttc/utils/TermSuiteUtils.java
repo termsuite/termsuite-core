@@ -124,6 +124,10 @@ public class TermSuiteUtils {
 				Joiner.on(TermSuiteConstants.WHITESPACE).join(lemmas));
 	}
 	
+
+	public static String getGroupingKey(TermWord... words) {
+		return getGroupingKey(Lists.newArrayList(words));
+	}
 	public static String getGroupingKey(Collection<TermWord> words) {
 		StringBuilder patternSb = new StringBuilder();
 		List<String> lemmas = Lists.newArrayListWithExpectedSize(words.size());

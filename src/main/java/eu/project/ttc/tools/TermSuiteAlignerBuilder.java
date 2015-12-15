@@ -40,7 +40,7 @@ import eu.project.ttc.resources.BilingualDictionary;
 public class TermSuiteAlignerBuilder {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermSuiteAlignerBuilder.class);
 	
-//	private Optional<TermIndex> sourceTerminology = Optional.absent();
+	private Optional<TermIndex> sourceTerminology = Optional.absent();
 	private Optional<TermIndex> targetTerminology = Optional.absent();
 	private Optional<String> dicoPath = Optional.absent();
 	private Optional<? extends SimilarityDistance> distance = Optional.of(new Cosine());
@@ -69,17 +69,10 @@ public class TermSuiteAlignerBuilder {
 //		return this;
 //	}
 
-//	/**
-//	 * 
-//	 * @deprecated not used currently
-//	 * @param sourceTerminology
-//	 * @return
-//	 */
-//	@Deprecated
-//	public TermSuiteAlignerBuilder setSourceTerminology(TermIndex sourceTerminology) {
-//		this.sourceTerminology = Optional.of(sourceTerminology);
-//		return this;
-//	}
+	public TermSuiteAlignerBuilder setSourceTerminology(TermIndex sourceTerminology) {
+		this.sourceTerminology = Optional.of(sourceTerminology);
+		return this;
+	}
 	
 	public TermSuiteAlignerBuilder setDistance(SimilarityDistance distance) {
 		this.distance = Optional.of(distance);
@@ -110,7 +103,7 @@ public class TermSuiteAlignerBuilder {
 		try {
 			BilingualDictionary dico;
 			dico = BilingualDictionary.load(dicoPath.get());
-			return new BilingualAligner(dico, targetTerminology.get(), distance.get());
+			return new BilingualAligner(dico, sourceTerminology.get(), targetTerminology.get(), distance.get());
 		} catch (IOException e) {
 			LOGGER.error("Could not create BilingualSWAligner due to io exception: %s", e.getMessage(), e);
 			throw new RuntimeException(e);

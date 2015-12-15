@@ -43,6 +43,7 @@ import com.google.common.collect.Lists;
 import eu.project.ttc.engines.BilingualAligner;
 import eu.project.ttc.engines.BilingualAligner.TranslationCandidate;
 import eu.project.ttc.metrics.Cosine;
+import eu.project.ttc.metrics.Explanation;
 import eu.project.ttc.metrics.Jaccard;
 import eu.project.ttc.metrics.LogLikelihood;
 import eu.project.ttc.metrics.SimilarityDistance;
@@ -140,12 +141,12 @@ public class TermSuiteAlignerCLI {
 							System.out.println(sourceTerm);
 							System.out.println("-");
 						}
-						for(TranslationCandidate candidate:aligner.align(sourceTerm, n, 1)) {
+						for(TranslationCandidate candidate:aligner.alignDistributional(sourceTerm, n, 1)) {
 							if(showExplanation)
 								System.out.format("%s\t%.3f\t%s\n",
 										candidate.getTerm(),
 										candidate.getScore(),
-										candidate.getExplanation().getTopNFeatures());
+										((Explanation)candidate.getExplanation()).getTopNFeatures());
 							else
 								System.out.format("%s\t%.3f\n",
 									candidate.getTerm(),
