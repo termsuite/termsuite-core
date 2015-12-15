@@ -23,6 +23,8 @@ package eu.project.ttc.models;
 
 import com.google.common.base.Objects;
 
+import eu.project.ttc.utils.TermSuiteUtils;
+
 public class TermWord {
 	private Word word;
 	private String syntacticlabel;
@@ -58,5 +60,9 @@ public class TermWord {
 	@Override
 	public String toString() {
 		return syntacticlabel + ":" + word.getLemma();
+	}
+
+	public String toGroupingKey() {
+		return TermSuiteUtils.getGroupingKey(this);
 	}
 }

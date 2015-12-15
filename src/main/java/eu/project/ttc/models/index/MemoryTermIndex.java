@@ -61,6 +61,8 @@ import eu.project.ttc.utils.TermSuiteUtils;
 public class MemoryTermIndex implements TermIndex {
 	private static final Logger LOGGER = LoggerFactory.getLogger(MemoryTermIndex.class);
 	private static final String MSG_NO_SUCH_PROVIDER = "No such value provider: %s";
+	public static final String MSG_NO_SUCH_TERM = "No such term in term index: %s";
+
 	private static final String MEASURE_WR = "wr";
 	private static final String MEASURE_WRLOG = "wrLog";
 	private static final String MEASURE_FREQUENCY = "frequency";
@@ -269,9 +271,9 @@ public class MemoryTermIndex implements TermIndex {
 	@Override
 	public CustomTermIndex createCustomIndex(String indexName,
 			TermValueProvider valueProvider) {
-		Preconditions.checkArgument(
-				!this.customIndexes.containsKey(indexName),
-				String.format("Custom term index %s already exists.", indexName));
+//		Preconditions.checkArgument(
+//				!this.customIndexes.containsKey(indexName),
+//				String.format("Custom term index %s already exists.", indexName));
 		Preconditions.checkArgument(valueProvider != null, 
 				MSG_NO_SUCH_PROVIDER,
 				indexName);
@@ -296,6 +298,7 @@ public class MemoryTermIndex implements TermIndex {
 
 	@Override
 	public Term getTermByGroupingKey(String groupingKey) {
+//		Preconditions.checkArgument(this.termsByGroupingKey.containsKey(groupingKey),MSG_NO_SUCH_TERM, groupingKey);
 		return this.termsByGroupingKey.get(groupingKey);
 	}
 	

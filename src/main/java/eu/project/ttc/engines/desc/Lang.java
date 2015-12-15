@@ -22,6 +22,7 @@
 package eu.project.ttc.engines.desc;
 
 import java.util.Locale;
+import java.util.NoSuchElementException;
 
 import eu.project.ttc.utils.OccurrenceBuffer;
 
@@ -158,4 +159,12 @@ public enum Lang {
 	public double getVariantScoreThreshold() {
 		return variantScoreThreshold;
 	}
+	
+	public static Lang fromCode(String code) {
+		for(Lang l:values())
+			if(l.getCode().equals(code))
+				return l;
+		throw new NoSuchElementException(code);
+	}
+
 }
