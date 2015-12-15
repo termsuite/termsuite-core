@@ -179,14 +179,14 @@ dependencies {
 	compile "com.fasterxml.jackson.core:jackson-core:2.5.4"
 
 	// UIMA Components
-	compile 'fr.univ-nantes.julestar:uima-tree-tagger-wrapper:1.0'
-	compile 'fr.univ-nantes.julestar:uima-tokenizer:1.0'
-	compile 'fr.univ-nantes.julestar:uima-filter:1.0'
-	compile 'fr.univ-nantes.julestar:uima-mapper:1.0'
-	compile 'fr.univ-nantes.julestar:uima-chinese-segmenter:1.0'
-	compile 'fr.univ-nantes.julestar:uima-tokens-regex:1.1'
-	compile 'fr.univ-nantes.julestar:uima-profiler:1.0'
-	compile 'fr.univ-nantes.julestar:uima-stemmer:1.0'
+	compile 'fr.univ-nantes.julestar:uima-tree-tagger-wrapper:1.1'
+	compile 'fr.univ-nantes.julestar:uima-tokenizer:1.1'
+	compile 'fr.univ-nantes.julestar:uima-filter:1.1'
+	compile 'fr.univ-nantes.julestar:uima-mapper:1.1'
+	compile 'fr.univ-nantes.julestar:uima-chinese-segmenter:1.1'
+	compile 'fr.univ-nantes.julestar:uima-tokens-regex:1.2'
+	compile 'fr.univ-nantes.julestar:uima-profiler:1.1'
+	compile 'fr.univ-nantes.julestar:uima-stemmer:1.1'
 
 	// JCas type generation
 	prepare "org.apache.uima:uimaj-tools:2.8.1"
