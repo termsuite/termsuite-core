@@ -30,6 +30,7 @@ import java.util.Queue;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.base.Joiner;
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 import com.google.common.base.Preconditions;
@@ -49,11 +50,12 @@ import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.index.CustomTermIndex;
 import eu.project.ttc.models.index.TermMeasure;
-import eu.project.ttc.models.index.TermValueProvider;
 import eu.project.ttc.models.index.TermValueProviders;
 import eu.project.ttc.resources.BilingualDictionary;
 import eu.project.ttc.utils.AlignerUtils;
 import eu.project.ttc.utils.IteratorUtils;
+import eu.project.ttc.utils.TermSuiteConstants;
+import eu.project.ttc.utils.TermUtils;
  
  
 /** 
@@ -68,6 +70,8 @@ public class BilingualAligner {
 	private static final Logger LOGGER = LoggerFactory.getLogger(BilingualAligner.class);
 	private static final String MSG_NO_CONTEXT_VECTOR = "No context vector computed for term {} in target terminology";
 	private static final String MSG_TERM_NOT_NULL = "Source term must not be null";
+	private static final String MSG_REQUIRES_SIZE_2_LEMMAS = "The term %s must have exactly two single-word terms (single-word terms: %s)";
+
 
 	private BilingualDictionary dico;
 	private TermIndex sourceTermino;
@@ -199,7 +203,8 @@ public class BilingualAligner {
 	
 	public List<TranslationCandidate> alignCompositionalSize2(Term sourceTerm, int nbCandidates, int minCandidateFrequency) {
 		checkNotNull(sourceTerm);
-		checkSize2(sourceTerm);
+		List<Term> swtTerms = asSize2swtColl(sourceTermino, sourceTerm);
+		checkSize2(sourceTerm, swtTerms);
 		Collection<TranslationCandidate> candidates = Lists.newArrayList();
 		
 		Term swt1 = sourceTermino.getTermByGroupingKey(sourceTerm.getWords().get(0).toGroupingKey());
@@ -213,6 +218,14 @@ public class BilingualAligner {
 		
 		candidates = combineCandidates(dicoCandidates1, dicoCandidates2);
 		return sortTruncateNormalize(nbCandidates, candidates);
+	}
+
+	private void checkSize2(Term sourceTerm, List<Term> swtTerms) {
+		if(swtTerms.size() != 2)
+			throw new IllegalArgumentException(String.format(MSG_REQUIRES_SIZE_2_LEMMAS, 
+				sourceTerm, 
+				Joiner.on(TermSuiteConstants.COMMA).join(swtTerms)
+				));
 	}
 
 	/**
@@ -244,23 +257,25 @@ public class BilingualAligner {
 		Preconditions.checkNotNull(sourceTerm, MSG_TERM_NOT_NULL);
 	}
 
-	private void checkSize2(Term sourceTerm) {
-		TermValueProvider lemmaLemmaProvider = TermValueProviders.WORD_LEMMA_LEMMA_PROVIDER;
-		Preconditions.checkArgument(lemmaLemmaProvider.getClasses(sourceTerm).size() == 1,
-				"Term %s must have exactly lemmas", sourceTerm);
+	private List<Term> asSize2swtColl(TermIndex termIndex, Term term) {
+		List<Term> coll = TermUtils.getSingleWordTerms(termIndex, term, true);
+		int sizeComp = coll.size();
+		if(sizeComp == 2)
+			return coll;
+		else
+			return TermUtils.getSingleWordTerms(termIndex, term, false);
 	}
 		
 	
-	public List<TranslationCandidate> alignSemiDistributionalSize2(Term sourceTerm, int nbCandidates, int minCandidateFrequency) {
+	public List<TranslationCandidate> alignSemiDistributionalSize2Syntagmatic(Term sourceTerm, int nbCandidates, int minCandidateFrequency) {
 		checkNotNull(sourceTerm);
-		checkSize2(sourceTerm);
+		List<Term> swtTerms = asSize2swtColl(sourceTermino, sourceTerm);
+		checkSize2(sourceTerm, swtTerms);
+
 		List<TranslationCandidate> candidates = Lists.newArrayList();
 		
-		Term swt1 = sourceTermino.getTermByGroupingKey(sourceTerm.getWords().get(0).toGroupingKey());
-		Term swt2 = sourceTermino.getTermByGroupingKey(sourceTerm.getWords().get(1).toGroupingKey());
-		
-		if(swt1 == null || swt2 == null)
-			return candidates;
+		Term swt1 = swtTerms.get(0);
+		Term swt2 = swtTerms.get(1);
 		
 		Collection<? extends TranslationCandidate> t1 = semiDistributional(swt1, swt2);
 		candidates.addAll(t1);
@@ -269,8 +284,6 @@ public class BilingualAligner {
 
 		return sortTruncateNormalize(nbCandidates, candidates);
 	}
-
-
 
 	private Collection<? extends TranslationCandidate> semiDistributional(Term dicoTerm, Term vectorTerm) {
 		List<TranslationCandidate> candidates = Lists.newArrayList();

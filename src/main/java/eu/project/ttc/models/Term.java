@@ -266,14 +266,32 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 		this.variations.remove(variation);
 		variation.getVariant().bases.remove(variation);
 	}
+	
+	/**
+	 * 
+	 * Alias for {@link #asComponentIterator(<code>true</code>)}.
+	 * 
+	 * @return
+	 */
+	public Iterator<LemmaStemHolder> asComponentIterator() {
+		return asComponentIterator(true);
+	}
+
 
 	/**
 	 * Turns the term into a list {@link LemmaStemHolder} where each word of the term 
 	 * is given as itself if not compound, or as a list of its components if compound.
 	 * 
+	 * @param compoundLevel
+	 * 			set to <code>true</code> if this method should iterate over
+	 * 			components when words are compound, set it to <code>false</code>
+	 * 			if this method should iterate over plain words even though
+	 * 			they are compounds.
+	 * 
 	 * @return
+	 * 		The list of words and/or (depending on <code>compoundLevel</code>) compounds.
 	 */
-	public Iterator<LemmaStemHolder> asComponentIterator() {
+	public Iterator<LemmaStemHolder> asComponentIterator(final boolean compoundLevel) {
 		return new AbstractIterator<LemmaStemHolder>() {
 			private final Iterator<TermWord> it = Term.this.termWords.iterator();
 			private Iterator<Component> currentWordIt;
@@ -284,7 +302,7 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 					return currentWordIt.next();
 				} else if(it.hasNext()) {
 					TermWord w = it.next();
-					if(w.getWord().isCompound()) {
+					if(compoundLevel && w.getWord().isCompound()) {
 						this.currentWordIt = w.getWord().getComponents().iterator();
 						return this.currentWordIt.next();
 					} else {
