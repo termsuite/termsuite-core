@@ -34,15 +34,36 @@ import org.apache.uima.resource.SharedResourceObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.collect.HashMultimap;
 import com.google.common.collect.ImmutableSet;
+import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
 
 import eu.project.ttc.utils.TermSuiteConstants;
 
+/**
+ * 
+ * A simple list of words (one per line), but also provides
+ * a dictionary API if ","-separated strings are associated (translations)
+ * with the word after a tab.
+ * 
+ * For example, allowed lines cane be:
+ * 
+ * word1 # a simple entry, with no word associated
+ * word2 # another word with comment after "#" char
+ * the expression1 # still considered as one simple entry since not tab-separation
+ * word3	word4 # word4 is considered the associated word for entry word3
+ * word6	word7, word8 # word7 and word8 are considered as associated words for entry word6
+ * 
+ * @author Damien Cram
+ *
+ */
 public class SimpleWordSet implements SharedResourceObject {
 	private static final Logger LOGGER = LoggerFactory.getLogger(SimpleWordSet.class);
 
 	private Set<String> elements;
+	
+	private Multimap<String, String> translations = HashMultimap.create();
 	
 	public void load(DataResource data) throws ResourceInitializationException {
 		InputStream inputStream = null;
@@ -51,12 +72,24 @@ public class SimpleWordSet implements SharedResourceObject {
 			inputStream = data.getInputStream();
 			Scanner scanner = null;
 			try {
+				String word, line;
+				String[] str, wordTranslations;
 				scanner = new Scanner(inputStream);
 				scanner.useDelimiter(TermSuiteConstants.LINE_BREAK);
 				while (scanner.hasNext()) {
-					String line = scanner.next().split(TermSuiteConstants.DIESE)[0].trim();
-					if(!line.isEmpty())
-						this.elements.add(line);
+					line = scanner.next().split(TermSuiteConstants.DIESE)[0].trim();
+					str = line.split(TermSuiteConstants.TAB);
+					word = str[0];
+					if(str.length > 0)
+						this.elements.add(word);
+					if(str.length > 1) {
+						// Set the second line as the translation
+						wordTranslations = str[1].split(TermSuiteConstants.COMMA);
+						for(String translation:wordTranslations) {
+							translations.put(word, translation);
+						}
+					}
+						
 				}
 				this.elements = ImmutableSet.copyOf(this.elements);
 			} catch (Exception e) {
@@ -79,6 +112,10 @@ public class SimpleWordSet implements SharedResourceObject {
 
 	public boolean containsAll(Collection<?> c) {
 		return elements.containsAll(c);
+	}
+
+	public Collection<String> getTranslations(String wordEntry) {
+		return translations.get(wordEntry);
 	}
 
 	public Set<String> getElements() {

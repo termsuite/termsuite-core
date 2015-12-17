@@ -139,4 +139,8 @@ public abstract class TermMeasure {
 				getTotalSpottedTerms()
 				);
 	}
+
+	public boolean isComputed() {
+		return this.computed;
+	}
 }
