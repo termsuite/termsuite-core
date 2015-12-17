@@ -25,6 +25,7 @@ import java.io.PrintStream;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
@@ -37,12 +38,16 @@ import com.google.common.collect.Sets;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.engines.desc.TermSuiteResourceException;
 import eu.project.ttc.models.ContextVector;
+import eu.project.ttc.models.LemmaStemHolder;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermOccurrence;
 import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.models.TermWord;
+import eu.project.ttc.models.index.CustomTermIndex;
+import eu.project.ttc.models.index.TermIndexes;
 import eu.project.ttc.models.index.TermMeasure;
+import eu.project.ttc.models.index.TermValueProviders;
 import eu.project.ttc.resources.GeneralLanguageResource;
 import eu.project.ttc.tools.TermSuiteResourceHelper;
 
@@ -116,6 +121,41 @@ public class TermUtils {
 		for(Term term:terms) 
 			out.println(term);
 	}
+	
+	/**
+	 * 
+	 * Finds in an input term all single-word terms it is made off. 
+	 * If the input term has compounds, this method will iterate 
+	 * over each compound and try to find a matching swt for each compound.
+	 * 
+	 * This method creates an index on TermIndex based on key
+	 * {@link TermIndexes#SINGLE_WORD_LEMMA}.
+	 * 
+	 * @param termIndex
+	 * 			The {@link TermIndex} in which single word terms must be found.
+	 * @param term
+	 * 			The input term.
+	 * @param compoundLevel
+	 * 			The compoundLevel param passed to {@link Term#asComponentIterator(boolean)}.
+	 * @return
+	 * 			The list of single word terms.
+	 * 
+	 * @see Term#asComponentIterator(boolean)
+	 */
+	public static List<Term> getSingleWordTerms(TermIndex termIndex, Term term, boolean compoundLevel) {
+		CustomTermIndex index = termIndex.createCustomIndex("swt_by_lemma", TermValueProviders.get(TermIndexes.SINGLE_WORD_LEMMA));
+		List<Term> terms = Lists.newArrayList();
+		Iterator<LemmaStemHolder> it = term.asComponentIterator(compoundLevel);
+		LemmaStemHolder lemmaStemHolder;
+		while (it.hasNext()) {
+			lemmaStemHolder = (LemmaStemHolder) it.next();
+			List<Term> swtTerms = index.getTerms(lemmaStemHolder.getLemma());
+			if(swtTerms.size() > 0)
+				terms.add(swtTerms.get(0));
+		}
+		return terms;
+	}
+
 
 	public static String collapseText(String coveredText) {
 		char[] charArray = coveredText.toCharArray();
