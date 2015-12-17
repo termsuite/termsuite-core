@@ -23,15 +23,18 @@ package eu.project.ttc.engines.compost;
 
 
 public class SegmentScoreEntry {
-	public static final SegmentScoreEntry SCORE_ZERO = new SegmentScoreEntry(null, 0, null);
+	public static final SegmentScoreEntry SCORE_ZERO = new SegmentScoreEntry(null, null, 0, null);
 	
 	private String segmentString;
+	private String lemma;
 	private float score;
 	private CompostIndexEntry dicoEntry;
-	public SegmentScoreEntry(String segmentString, float score,
+	
+	public SegmentScoreEntry(String segmentString, String lemma, float score,
 			CompostIndexEntry dicoEntry) {
 		this.segmentString = segmentString;
 		this.score = score;
+		this.lemma = lemma;
 		this.dicoEntry = dicoEntry;
 	}
 	public String getSegmentString() {
@@ -42,6 +45,9 @@ public class SegmentScoreEntry {
 	}
 	public CompostIndexEntry getDicoEntry() {
 		return dicoEntry;
+	}
+	public String getLemma() {
+		return lemma;
 	}
 	@Override
 	public int hashCode() {

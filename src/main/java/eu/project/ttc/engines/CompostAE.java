@@ -42,6 +42,7 @@ import com.google.common.cache.LoadingCache;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
+import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.compost.CompostIndexEntry;
 import eu.project.ttc.engines.compost.Segment;
 import eu.project.ttc.engines.compost.SegmentScoreEntry;
@@ -144,6 +145,17 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 		             }
 		           });
 
+	private LoadingCache<String, String> segmentLemmaCache = CacheBuilder.newBuilder()
+			.maximumSize(100000)
+			.recordStats()
+	       .build(
+	           new CacheLoader<String, String>() {
+	             public String load(String segment) { // no checked exception
+	               return findSegmentLemma(segment);
+	             }
+	           });
+
+	
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
 	}
@@ -174,10 +186,11 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 				WordBuilder builder = new WordBuilder(word);
 				
 				for(Segment seg:bestSegmentation.getSegments()) {
+					String lemma = segmentLemmaCache.getUnchecked(seg.getLemma());
 					builder.addComponent(
 							seg.getBegin(), 
 							seg.getEnd(), 
-							seg.getLemma()
+							lemma
 							);
 					if(seg.isNeoclassical())
 						builder.setCompoundType(CompoundType.NEOCLASSICAL);
@@ -242,7 +255,9 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 					getBestInflectedScoreEntry(s, this.inflectionRules):
 						getBestInflectedScoreEntry(s, this.transformationRules);
 			sum+=scoreEntry.getScore();
-			s.setLemma(scoreEntry.getDicoEntry() == null ? s.getSubstring() : scoreEntry.getDicoEntry().getText());
+			s.setLemma(scoreEntry.getDicoEntry() == null ? 
+					s.getSubstring() : 
+						scoreEntry.getDicoEntry().getText());
 			index++;
 		}
 		return sum / segmentation.size();
@@ -327,9 +342,33 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 					inCorpus,
 					dataCorpus);
 		}
-		return new SegmentScoreEntry(segment, score, closestEntry);
+		return new SegmentScoreEntry(segment, findSegmentLemma(segment), score, closestEntry);
 	}
 	
+	/*
+	 * Finds the best lemma for a segment
+	 */
+	private String findSegmentLemma(String segment) {
+		Collection<String> candidates = this.neoclassicalPrefixes.getTranslations(segment);
+		if(candidates.isEmpty())
+			return segment;
+		else {
+			TermMeasure wrLog = termIndexResource.getTermIndex().getWRLogMeasure();
+			TermProperty property = wrLog.isComputed() ? TermProperty.WR_LOG : TermProperty.FREQUENCY;
+			String bestLemma = segment;
+			double bestValue = 0d;
+			for(String candidateLemma:candidates) {
+				for(Term t:swtLemmaIndex.getTerms(candidateLemma)) {
+					if(property.getDoubleValue(termIndexResource.getTermIndex(), t) > bestValue) {
+						bestValue = property.getDoubleValue(termIndexResource.getTermIndex(), t);
+						bestLemma = t.getLemma();
+					}
+				}
+			}
+			return bestLemma;
+		}
+	}
+
 	@Override
 	public String toString() {
 		return MoreObjects.toStringHelper(this)
