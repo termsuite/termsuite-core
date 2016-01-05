@@ -36,12 +36,12 @@ import eu.project.ttc.types.WordAnnotation;
  * 
  * @author Sebastián Peña Saldarriaga
  */
-public class SpotterTSVWriter extends XmiCasExporter {
+public class SpotterTSVWriter extends CasExporter {
 
 	@Override
 	public void process(JCas cas) throws AnalysisEngineProcessException {
 	    
-		String name = getExportFilePath(cas);
+		String name = getExportFilePath(cas, "tsv");
 		if (name == null) {
 			this.getContext().getLogger()
 					.log(Level.WARNING, "Skiping CAS Serialization");
@@ -53,7 +53,7 @@ public class SpotterTSVWriter extends XmiCasExporter {
 					new FileOutputStream(file), "utf-8");
 			try {
 				this.getContext().getLogger()
-						.log(Level.INFO, "Writing " + file.getAbsolutePath());
+						.log(Level.FINE, "Writing " + file.getAbsolutePath());
 				AnnotationIndex<Annotation> index = cas
 						.getAnnotationIndex(WordAnnotation.type);
 				WordAnnotation word;
@@ -71,9 +71,4 @@ public class SpotterTSVWriter extends XmiCasExporter {
 		}
 	}
 
-	@Override
-	protected String getExportFilePath(JCas cas) {
-		String name = super.getExportFilePath(cas);
-		return name == null ? null : name.replace(".xmi", ".tsv");
-	}
 }
