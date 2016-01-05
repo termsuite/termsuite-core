@@ -1031,6 +1031,8 @@ public class TermSuitePipeline {
 					XmiCasExporter.class,
 					XmiCasExporter.OUTPUT_DIRECTORY, toDirectoryPath
 				);
+			ExternalResourceFactory.bindResource(ae, resProfiler());
+
 			return aggregateAndReturn(ae);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
@@ -1764,6 +1766,7 @@ public class TermSuitePipeline {
 					JsonCasExporter.class,
 					JsonCasExporter.OUTPUT_DIRECTORY, toDirectoryPath
 			);
+			ExternalResourceFactory.bindResource(ae, resProfiler());
 			return aggregateAndReturn(ae);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
