@@ -19,13 +19,9 @@
 package eu.project.ttc.engines.exporter;
 
 import java.io.File;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
 
 import org.apache.uima.UimaContext;
-import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.FSIterator;
-import org.apache.uima.cas.impl.XmiCasSerializer;
 import org.apache.uima.cas.text.AnnotationIndex;
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
@@ -33,17 +29,13 @@ import org.apache.uima.fit.descriptor.ExternalResource;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.apache.uima.resource.ResourceInitializationException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.xml.sax.SAXParseException;
 
 import com.google.common.base.Preconditions;
 
 import eu.project.ttc.types.SourceDocumentInformation;
 import fr.univnantes.lina.ProfilerResource;
 
-public class XmiCasExporter extends JCasAnnotator_ImplBase {
-	private static final Logger LOGGER = LoggerFactory.getLogger(XmiCasExporter.class);
+public abstract class CasExporter extends JCasAnnotator_ImplBase {
 	
 	@ExternalResource(key=ProfilerResource.PROFILER, mandatory=true)
 	protected ProfilerResource profiler;
@@ -66,7 +58,7 @@ public class XmiCasExporter extends JCasAnnotator_ImplBase {
 		Preconditions.checkState(this.directoryFile.canWrite(), String.format("Cannot write to directory %s.", this.directoryPath));
 	}
 	
-	protected String getExportFilePath(JCas cas) {
+	protected String getExportFilePath(JCas cas, String extension) {
 		AnnotationIndex<Annotation> index = cas.getAnnotationIndex(SourceDocumentInformation.type);
 		FSIterator<Annotation> iterator = index.iterator();
 		if (iterator.hasNext()) {
@@ -75,38 +67,13 @@ public class XmiCasExporter extends JCasAnnotator_ImplBase {
 			String name = file.getName();
 			int i = name.lastIndexOf('.');
 			if (i == -1) {
-				return name + ".xmi";
+				return name + "." + extension;
 			} else {
-				return name.substring(0, i) + ".xmi";
+				return name.substring(0, i) + "." + extension;
 			}
 		} else {
 			return null;
 		}
-	}
-	
-	@Override
-	public void process(JCas cas) throws AnalysisEngineProcessException { 
-		profiler.getProfiler("AnalysisEngine").start(this, "process");
-		try {
-			String name = this.getExportFilePath(cas);
-			if (name == null) { 
-				LOGGER.warn("Skiping CAS Serialization, because no SourceDocumentInformation was found.");
-			} else {
-				File file = new File(this.directoryFile, name);
-				OutputStream stream = new FileOutputStream(file);
-				try {
-					LOGGER.debug("Writing " + file.getAbsolutePath());
-					XmiCasSerializer.serialize(cas.getCas(), cas.getTypeSystem(), stream);
-				} catch (SAXParseException e) {
-					LOGGER.warn("Failure while serializing " + file + "\nCaused by " + e.getClass().getCanonicalName() + ": " + e.getMessage());
-				} finally {
-					stream.close();
-				}
-			}
-		} catch (Exception e) {
-			throw new AnalysisEngineProcessException(e);
-		}
-		profiler.getProfiler("AnalysisEngine").stop(this, "process");
 	}
 	
 }
