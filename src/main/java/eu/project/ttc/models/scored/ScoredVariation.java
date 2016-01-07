@@ -6,7 +6,6 @@ import com.google.common.primitives.Doubles;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.models.TermWord;
-import eu.project.ttc.resources.ScoredModel;
 import eu.project.ttc.utils.StringUtils;
 import eu.project.ttc.utils.TermUtils;
 

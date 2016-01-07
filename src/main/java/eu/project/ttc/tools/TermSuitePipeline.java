@@ -50,7 +50,6 @@ import eu.project.ttc.engines.CompoundSplitter;
 import eu.project.ttc.engines.Contextualizer;
 import eu.project.ttc.engines.EvalEngine;
 import eu.project.ttc.engines.ExtensionDetecter;
-import eu.project.ttc.engines.FlatScorifier;
 import eu.project.ttc.engines.GraphicalVariantGatherer;
 import eu.project.ttc.engines.MateLemmaFixer;
 import eu.project.ttc.engines.MateLemmatizerTagger;
@@ -75,13 +74,13 @@ import eu.project.ttc.engines.desc.TermSuitePipelineException;
 import eu.project.ttc.engines.exporter.CompoundExporter;
 import eu.project.ttc.engines.exporter.EvalExporter;
 import eu.project.ttc.engines.exporter.ExportVariationRuleExamples;
+import eu.project.ttc.engines.exporter.JsonCasExporter;
 import eu.project.ttc.engines.exporter.JsonExporter;
 import eu.project.ttc.engines.exporter.SpotterTSVWriter;
 import eu.project.ttc.engines.exporter.TBXExporter;
 import eu.project.ttc.engines.exporter.TSVExporter;
 import eu.project.ttc.engines.exporter.VariantEvalExporter;
 import eu.project.ttc.engines.exporter.XmiCasExporter;
-import eu.project.ttc.engines.exporter.JsonCasExporter;
 import eu.project.ttc.metrics.LogLikelihood;
 import eu.project.ttc.models.OccurrenceType;
 import eu.project.ttc.models.TermIndex;
@@ -103,7 +102,6 @@ import eu.project.ttc.resources.MateTaggerModel;
 import eu.project.ttc.resources.MemoryTermIndexManager;
 import eu.project.ttc.resources.ObserverResource;
 import eu.project.ttc.resources.ReferenceTermList;
-import eu.project.ttc.resources.ScoredModel;
 import eu.project.ttc.resources.SimpleWordSet;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.resources.TermSuitePipelineObserver;
@@ -532,38 +530,11 @@ public class TermSuitePipeline {
 					TSVExporter.SHOW_HEADERS, tsvWithHeaders,
 					TSVExporter.SHOW_SCORES, tsvWithVariantScores
 				);
-			ExternalResourceFactory.bindResource(ae, resScoredModel());
 			ExternalResourceFactory.bindResource(ae, resProfiler());
+			ExternalResourceFactory.bindResource(ae, resTermIndex());
 
-			haeScorifier();
-			
+
 			return aggregateAndReturn(ae, "Exporting the terminology to " + toFilePath, 1);
-		} catch (Exception e) {
-			throw new TermSuitePipelineException(e);
-		}
-	}
-	
-	/**
-	 * 
-	 * Compute variant scores recursively.
-	 * 
-	 * @return the pipeline
-	 */
-	private TermSuitePipeline haeScorifier() {
-		try {
-			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					FlatScorifier.class,
-					FlatScorifier.VARIATION_TH, (float)lang.getVariantScoreThreshold(),
-					FlatScorifier.VARIANT_INDEPENDANCE_TH, (float)lang.getVariantIndependenceScoreThreshold(),
-					FlatScorifier.EXTENSION_SPEC_TH, (float)lang.getVariantExtSpecThreshold(),
-					FlatScorifier.EXTENSION_GAIN_TH, (float)lang.getVariantExtGainThreshold()
-					
-				);
-			ExternalResourceFactory.bindResource(ae, ScoredModel.SCORED_MODEL, resScoredModel());
-			ExternalResourceFactory.bindResource(ae, TermIndexResource.TERM_INDEX, resTermIndex());
-			ExternalResourceFactory.bindResource(ae, resProfiler());
-
-			return aggregateAndReturn(ae, "Computing terms and variants' scores", 1);
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
@@ -1096,16 +1067,6 @@ public class TermSuitePipeline {
 		}
 	}
 
-	private ExternalResourceDescription scoredModelDesc;
-	public ExternalResourceDescription  resScoredModel() {
-		if(scoredModelDesc == null) {
-			scoredModelDesc = ExternalResourceFactory.createExternalResourceDescription(
-					ScoredModel.class, 
-					"");
-		}
-		return scoredModelDesc;
-	}
-	
 	private ExternalResourceDescription termIndexResourceDesc;
 	public ExternalResourceDescription resTermIndex() {
 		if(termIndexResourceDesc == null) {

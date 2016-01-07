@@ -45,7 +45,6 @@ import eu.project.ttc.engines.BilingualAligner.TranslationCandidate;
 import eu.project.ttc.metrics.Cosine;
 import eu.project.ttc.metrics.Explanation;
 import eu.project.ttc.metrics.Jaccard;
-import eu.project.ttc.metrics.LogLikelihood;
 import eu.project.ttc.metrics.SimilarityDistance;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;

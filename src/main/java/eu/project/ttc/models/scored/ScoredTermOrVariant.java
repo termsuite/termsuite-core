@@ -10,7 +10,6 @@ import com.google.common.collect.Lists;
 
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermOccurrence;
-import eu.project.ttc.resources.ScoredModel;
 import eu.project.ttc.utils.StringUtils;
 import eu.project.ttc.utils.TermOccurrenceUtils;
 
