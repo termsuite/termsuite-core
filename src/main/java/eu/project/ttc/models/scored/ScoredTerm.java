@@ -9,7 +9,6 @@ import com.google.common.collect.Lists;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermOccurrence;
 import eu.project.ttc.models.TermVariation;
-import eu.project.ttc.resources.ScoredModel;
 import eu.project.ttc.utils.TermOccurrenceUtils;
 
 public class ScoredTerm extends ScoredTermOrVariant {

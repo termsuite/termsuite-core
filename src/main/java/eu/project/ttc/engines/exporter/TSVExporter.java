@@ -45,9 +45,11 @@ import com.google.common.collect.Lists;
 
 import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.scored.ScoredModel;
 import eu.project.ttc.models.scored.ScoredTerm;
 import eu.project.ttc.models.scored.ScoredVariation;
-import eu.project.ttc.resources.ScoredModel;
+import eu.project.ttc.resources.TermIndexResource;
+import eu.project.ttc.termino.engines.Scorifier;
 import eu.project.ttc.tools.utils.IndexerTSVBuilder;
 
 /**
@@ -59,9 +61,9 @@ import eu.project.ttc.tools.utils.IndexerTSVBuilder;
 public class TSVExporter extends JCasAnnotator_ImplBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TSVExporter.class);
 	
-	@ExternalResource(key=ScoredModel.SCORED_MODEL, mandatory=true)
-	protected ScoredModel scoredModel;
-	
+	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
+	private TermIndexResource termIndexResource;
+
 	public static final String TERM_PROPERTIES = "TermProperties";
 	@ConfigurationParameter(name=TERM_PROPERTIES, mandatory=false, defaultValue="pilot,specificity")
 	private String termPropertyList;
@@ -118,6 +120,8 @@ public class TSVExporter extends JCasAnnotator_ImplBase {
 	
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
+		TermIndex termIndex = termIndexResource.getTermIndex();
+		ScoredModel scoredModel = new Scorifier(termIndex.getLang().getScorifierConfig()).scorify(termIndex);
 		LOGGER.info("Exporting {} terms to TSV file {}", scoredModel.getTerms().size(), this.toFilePath);
 		try {
 			if(showHeaders)

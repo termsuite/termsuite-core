@@ -1,4 +1,4 @@
-package eu.project.ttc.resources;
+package eu.project.ttc.models.scored;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -8,30 +8,18 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.uima.resource.DataResource;
-import org.apache.uima.resource.ResourceInitializationException;
-import org.apache.uima.resource.SharedResourceObject;
-
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermVariation;
-import eu.project.ttc.models.scored.ScoredTerm;
-import eu.project.ttc.models.scored.ScoredVariation;
 
-public class ScoredModel implements SharedResourceObject {
-	public static final String SCORED_MODEL = "ScoredModel";
+public class ScoredModel {
 	
 	private List<ScoredTerm> terms;
-	private Map<Term, ScoredTerm> adapters;
+	private Map<Term, ScoredTerm> adapters = Maps.newHashMap();
 	private TermIndex termIndex;
-	
-	@Override
-	public void load(DataResource aData) throws ResourceInitializationException {
-		adapters = Maps.newHashMap();
-	}
 	
 	public void importTermIndex(TermIndex termIndex) {
 		this.terms = Lists.newLinkedList();

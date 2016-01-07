@@ -21,27 +21,13 @@
  *******************************************************************************/
 package org.ttc.project.test;
 
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.when;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mockito;
-import org.ttc.project.Fixtures;
 
-import com.google.common.collect.Lists;
-
-import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.TermWord;
-import eu.project.ttc.models.Word;
 import eu.project.ttc.utils.StringUtils;
-import eu.project.ttc.utils.TermUtils;
 
 public class StringUtilsSpec {
 	
