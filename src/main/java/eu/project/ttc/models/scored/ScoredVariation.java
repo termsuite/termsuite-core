@@ -143,7 +143,7 @@ public class ScoredVariation extends ScoredTermOrVariant {
 	
 	@Override
 	public boolean equals(Object obj) {
-		if (obj instanceof ScoredTerm) {
+		if (obj instanceof ScoredVariation) {
 			ScoredVariation sv = (ScoredVariation) obj;
 			return Objects.equal(this.getTerm(), sv.getTerm())
 					&& Objects.equal(this.getVariant(),sv.getVariant());
