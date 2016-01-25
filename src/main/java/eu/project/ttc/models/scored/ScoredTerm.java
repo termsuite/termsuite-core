@@ -13,6 +13,16 @@ import eu.project.ttc.utils.TermOccurrenceUtils;
 
 public class ScoredTerm extends ScoredTermOrVariant {
 
+	private int rank;
+	
+	public int getRank() {
+		return rank;
+	}
+	
+	public void setRank(int rank) {
+		this.rank = rank;
+	}
+	
 	private List<ScoredVariation> variations;
 	
 	public ScoredTerm(ScoredModel scoredModel, Term t) {
