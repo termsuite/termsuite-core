@@ -213,6 +213,8 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 		LOGGER.debug("segment score hit rate: " + segmentScoreEntries.stats().hitRate());
 		LOGGER.debug("segment score eviction count: " + segmentScoreEntries.stats().evictionCount());
 		termIndexResource.getTermIndex().dropCustomIndex(TermIndexes.SINGLE_WORD_LEMMA);
+		segmentScoreEntries.invalidateAll();
+		segmentLemmaCache.invalidateAll();
 		UIMAProfiler.getProfiler("AnalysisEngine").stop(this, "process");
 	}
 	
