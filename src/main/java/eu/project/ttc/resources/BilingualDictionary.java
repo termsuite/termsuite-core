@@ -55,7 +55,7 @@ public class BilingualDictionary {
 			st = new StringTokenizer(line, TermSuiteConstants.TAB);
 			String source = st.nextToken();
 			String target = st.nextToken();
-			dico.targetTerms.put(source, target);
+			dico.targetTerms.put(source.toLowerCase(), target.toLowerCase());
 		}
 		br.close();
 		
@@ -63,6 +63,6 @@ public class BilingualDictionary {
 	}
 
 	public Collection<String> getTranslations(String source) {
-		return this.targetTerms.get(source);
+		return this.targetTerms.get(source.toLowerCase());
 	}
 }
