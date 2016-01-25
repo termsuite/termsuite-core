@@ -84,5 +84,21 @@ public abstract class ScoredTermOrVariant {
 	public double getOrthographicScore() {
 		return StringUtils.getOrthographicScore(getTerm().getLemma());
 	}
-	
+
+	public boolean isScoredTerm() {
+		return this instanceof ScoredTerm;
+	}
+
+	public ScoredTerm asScoredTerm() {
+		return (ScoredTerm)this;
+	}
+
+	public boolean isScoredVariation() {
+		return this instanceof ScoredVariation;
+	}
+
+	public ScoredVariation asScoredVariation() {
+		return (ScoredVariation)this;
+	}
+
 }
