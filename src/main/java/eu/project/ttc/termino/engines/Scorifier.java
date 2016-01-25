@@ -62,6 +62,12 @@ public class Scorifier {
 		// Filter terms with bad orthgraph
 		doScoredModel(termIndex);
 
+		// rank score model
+		int rank = 0;
+		for(ScoredTerm t:scoredModel.getTerms()) {
+			rank ++;
+			t.setRank(rank);
+		}
 		return scoredModel;
 		
 	}
