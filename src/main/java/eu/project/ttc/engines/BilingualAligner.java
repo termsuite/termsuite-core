@@ -207,8 +207,8 @@ public class BilingualAligner {
 		checkSize2(sourceTerm, swtTerms);
 		Collection<TranslationCandidate> candidates = Lists.newArrayList();
 		
-		Term swt1 = sourceTermino.getTermByGroupingKey(sourceTerm.getWords().get(0).toGroupingKey());
-		Term swt2 = sourceTermino.getTermByGroupingKey(sourceTerm.getWords().get(1).toGroupingKey());
+		Term swt1 = sourceTermino.getTermByGroupingKey(swtTerms.get(0).getGroupingKey());
+		Term swt2 = sourceTermino.getTermByGroupingKey(swtTerms.get(1).getGroupingKey());
 		
 		if(swt1 == null || swt2 == null)
 			return Lists.newArrayList();
