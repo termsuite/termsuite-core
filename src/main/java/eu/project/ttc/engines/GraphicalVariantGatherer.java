@@ -49,6 +49,8 @@ import eu.project.ttc.models.VariationType;
 import eu.project.ttc.models.index.AbstractTermValueProvider;
 import eu.project.ttc.models.index.CustomTermIndex;
 import eu.project.ttc.models.index.TermValueProvider;
+import eu.project.ttc.resources.ObserverResource;
+import eu.project.ttc.resources.ObserverResource.SubTaskObserver;
 import eu.project.ttc.resources.TermIndexResource;
 import fr.univnantes.lina.UIMAProfiler;
 
@@ -62,8 +64,12 @@ import fr.univnantes.lina.UIMAProfiler;
  */
 public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 	private static final Logger logger = LoggerFactory.getLogger(GraphicalVariantGatherer.class);
-	
-	
+	public static final String TASK_NAME = "Computing graphical variants";
+	private static final int OBSERVER_STEP = 10000;
+	private static final char JOIN_CHAR = ':';
+
+	@ExternalResource(key=ObserverResource.OBSERVER, mandatory=true)
+	protected ObserverResource observerResource;
 	
 	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
 	private TermIndexResource termIndexResource;
@@ -88,7 +94,6 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 	private int totalComparisons = 0;
 	private int nbComparisons = 0;
 	
-	private static final char JOIN_CHAR = ':';
 
 	private TermValueProvider nFirstLettersProvider = new AbstractTermValueProvider("") {
 		@Override
@@ -133,6 +138,7 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 			throws AnalysisEngineProcessException {
 		UIMAProfiler.getProfiler("AnalysisEngine").start(this, "process");
 		logger.info("Start graphical term gathering");
+		SubTaskObserver taskObserver = observerResource.getTaskObserver(TASK_NAME);
 		
 		// create the index
 		String indexName = String.format("_%d_first_letters_", n);
@@ -150,6 +156,8 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 		// get the total number of comparisons
 		for(String key:customIndex.keySet()) 
 			totalComparisons+= IntMath.binomial(customIndex.getTerms(key).size(), 2);
+
+		taskObserver.setTotalTaskWork(totalComparisons);
 
 		logger.debug("Number of distance edition pairs to compute: {}", totalComparisons);
 		
@@ -179,6 +187,8 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 				t1 = terms.get(i);
 				for(j=i+1; j<terms.size();j++) {
 					nbComparisons++;
+					if(nbComparisons % OBSERVER_STEP == 0)
+						taskObserver.work(OBSERVER_STEP);
 					t2 = terms.get(j);
 					dist = distance.computeNormalized(t1.getLemma(), t2.getLemma());
 					if(dist >= this.threshold) {
