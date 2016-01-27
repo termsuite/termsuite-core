@@ -26,7 +26,6 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 
 import eu.project.ttc.types.WordAnnotation;
-import fr.univnantes.lina.UIMAProfiler;
 
 /**
  * Tagger for Latvian
@@ -38,7 +37,6 @@ public class LatvianTildeTagger extends JCasAnnotator_ImplBase {
 	
 	@Override
 	public void process(JCas cas) throws AnalysisEngineProcessException {
-		UIMAProfiler.getProfiler("AnalysisEngine").start(this, "process");
 		try {
 			AnnotationIndex<Annotation> index = cas.getAnnotationIndex(WordAnnotation.type);
 			FSIterator<Annotation> iterator = index.iterator();
@@ -50,7 +48,6 @@ public class LatvianTildeTagger extends JCasAnnotator_ImplBase {
 		} catch (Exception e) {
 			throw new AnalysisEngineProcessException(e);
 		}
-		UIMAProfiler.getProfiler("AnalysisEngine").stop(this, "process");
 	}
 
 	private void setCategory(WordAnnotation annotation, String tag) {

@@ -37,7 +37,6 @@ import org.slf4j.LoggerFactory;
 import com.google.common.collect.Lists;
 
 import eu.project.ttc.types.WordAnnotation;
-import fr.univnantes.lina.UIMAProfiler;
 
 public class StringRegexFilter extends JCasAnnotator_ImplBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(StringRegexFilter.class);
@@ -57,7 +56,6 @@ public class StringRegexFilter extends JCasAnnotator_ImplBase {
 	}
 	@Override
 	public void process(JCas cas) throws AnalysisEngineProcessException {
-		UIMAProfiler.getProfiler("AnalysisEngine").start(this, "process");
 		List<WordAnnotation> rem = Lists.newArrayList();
 		FSIterator<Annotation> it = cas.getAnnotationIndex(WordAnnotation.type).iterator();
 		WordAnnotation word;
@@ -72,8 +70,6 @@ public class StringRegexFilter extends JCasAnnotator_ImplBase {
 		
 		for(WordAnnotation wa:rem)
 			wa.removeFromIndexes(cas);
-		
-		UIMAProfiler.getProfiler("AnalysisEngine").stop(this, "process");
 	}
 
 	@Override

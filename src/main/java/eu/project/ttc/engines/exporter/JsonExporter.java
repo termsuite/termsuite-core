@@ -35,7 +35,6 @@ import eu.project.ttc.engines.AbstractTermIndexExporter;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.index.JSONTermIndexIO;
-import fr.univnantes.lina.UIMAProfiler;
 
 /**
  * Exports a {@link TermIndex} in the tsv evaluation format.
@@ -61,7 +60,6 @@ public class JsonExporter extends AbstractTermIndexExporter {
 	}
 	
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
-		UIMAProfiler.getProfiler("AnalysisEngine").start(this, "process");
 		try {
 			LOGGER.info("Exporting {} terms to JSON file {}", this.termIndexResource.getTermIndex().getTerms().size(), this.toFilePath);
 			FileWriter writer2 = new FileWriter(toFile);
@@ -70,7 +68,6 @@ public class JsonExporter extends AbstractTermIndexExporter {
 		} catch (IOException e) {
 			LOGGER.error("Could not export to file due to IOException: {}", e.getMessage());
 		}
-		UIMAProfiler.getProfiler("AnalysisEngine").stop(this, "process");
 	}
 	
 	@Override

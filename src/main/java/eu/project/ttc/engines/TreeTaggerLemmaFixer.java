@@ -33,7 +33,6 @@ import org.apache.uima.resource.ResourceInitializationException;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.types.WordAnnotation;
 import eu.project.ttc.utils.TermSuiteConstants;
-import fr.univnantes.lina.UIMAProfiler;
 
 /**
  * Post-process the lemma found by TreeTagger
@@ -58,7 +57,6 @@ public class TreeTaggerLemmaFixer extends JCasAnnotator_ImplBase {
 	
 	@Override
 	public void process(JCas jCas) throws AnalysisEngineProcessException {
-		UIMAProfiler.getProfiler("AnalysisEngine").start(this, "process");
 		FSIterator<Annotation> it = jCas.getAnnotationIndex(WordAnnotation.type).iterator();
 		WordAnnotation word;
 		while(it.hasNext()) {
@@ -70,6 +68,5 @@ public class TreeTaggerLemmaFixer extends JCasAnnotator_ImplBase {
 			else  
 				word.setLemma(word.getLemma().toLowerCase());
 		}
-		UIMAProfiler.getProfiler("AnalysisEngine").stop(this, "process");
 	}
 }

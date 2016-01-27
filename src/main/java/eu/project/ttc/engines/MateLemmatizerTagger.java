@@ -35,7 +35,6 @@ import com.google.common.collect.Lists;
 import eu.project.ttc.resources.MateLemmatizerModel;
 import eu.project.ttc.resources.MateTaggerModel;
 import eu.project.ttc.types.WordAnnotation;
-import fr.univnantes.lina.UIMAProfiler;
 import is2.data.SentenceData09;
 import is2.lemmatizer.Lemmatizer;
 import is2.tag.Tagger;
@@ -58,9 +57,6 @@ public class MateLemmatizerTagger extends JCasAnnotator_ImplBase {
 	
 	@Override
 	public void process(JCas jcas) throws AnalysisEngineProcessException {
-		UIMAProfiler.getProfiler("AnalysisEngine").start(this, "process");
-
-		
 		Lemmatizer mateLemmatizer = mateLemmatizerModel.getEngine();
 		Tagger mateTagger = mateTaggerModel.getEngine();
 
@@ -100,7 +96,5 @@ public class MateLemmatizerTagger extends JCasAnnotator_ImplBase {
 			wordAnnotation.setTag(mateSentence.ppos[j]);
 			wordAnnotation.setLemma(mateSentence.plemmas[j]);
 		}
-		
-		UIMAProfiler.getProfiler("AnalysisEngine").stop(this, "process");
 	}
 }

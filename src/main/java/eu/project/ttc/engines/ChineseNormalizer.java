@@ -26,13 +26,11 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 
 import eu.project.ttc.types.WordAnnotation;
-import fr.univnantes.lina.UIMAProfiler;
 
 public class ChineseNormalizer extends JCasAnnotator_ImplBase {
 
 	@Override
 	public void process(JCas cas) throws AnalysisEngineProcessException {
-		UIMAProfiler.getProfiler("AnalysisEngine").start(this, "process");
 		
 		try {
 			AnnotationIndex<Annotation> index = cas.getAnnotationIndex(WordAnnotation.type);
@@ -46,7 +44,6 @@ public class ChineseNormalizer extends JCasAnnotator_ImplBase {
 		} catch (Exception e) {
 			throw new AnalysisEngineProcessException(e);
 		}
-		UIMAProfiler.getProfiler("AnalysisEngine").stop(this, "process");
 	}
 
 }

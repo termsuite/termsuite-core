@@ -41,7 +41,6 @@ import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.resources.TermIndexResource;
-import fr.univnantes.lina.UIMAProfiler;
 
 /**
  * 
@@ -90,7 +89,6 @@ public abstract class AbstractTermIndexCleaner extends JCasAnnotator_ImplBase {
 	
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
-		UIMAProfiler.getProfiler("AnalysisEngine").start(this, "process");
 		casNum++;
 		if(
 				(periodicCasClean && this.casNum % this.cleaningPeriod == 0) // Term Index must be cleaned every cleaningPeriod
@@ -107,16 +105,13 @@ public abstract class AbstractTermIndexCleaner extends JCasAnnotator_ImplBase {
 					afterSize
 				);
 		}
-		UIMAProfiler.getProfiler("AnalysisEngine").stop(this, "process");
 	}
 	
 	@Override
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
-		UIMAProfiler.getProfiler("AnalysisEngine").start(this, "process");
 		logger.info("Cleaning TermIndex {} on property {}", termIndexResource.getTermIndex().getName(), this.property);
 		clean();
-		UIMAProfiler.getProfiler("AnalysisEngine").stop(this, "process");
 	}
 
 	protected void clean() {

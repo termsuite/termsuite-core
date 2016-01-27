@@ -45,10 +45,9 @@ import eu.project.ttc.models.index.CustomIndexStats;
 import eu.project.ttc.models.index.CustomTermIndex;
 import eu.project.ttc.models.index.TermIndexes;
 import eu.project.ttc.resources.ObserverResource;
+import eu.project.ttc.resources.ObserverResource.SubTaskObserver;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.resources.YamlVariantRules;
-import eu.project.ttc.resources.ObserverResource.SubTaskObserver;
-import fr.univnantes.lina.UIMAProfiler;
 
 public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(SyntacticTermGatherer.class);
@@ -72,12 +71,8 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 	@Override
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
-		UIMAProfiler.getProfiler("AnalysisEngine").start(this, "process");
 		LOGGER.info("Start syntactic term gathering");
 		taskObserver = observerResource.getTaskObserver(TASK_NAME);
-		
-		for(VariantRule rule:this.yamlVariantRules.getVariantRules())
-			UIMAProfiler.getProfiler("Gathering stats").initHit(rule.getName());
 		
 		/*
 		 *  Do not deactivate gathering on key_lemma_lemma, otherwise we loose
@@ -121,8 +116,6 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 		// gather
 		for(String key:gatheringKeys)
 			gather(key);
-
-		UIMAProfiler.getProfiler("AnalysisEngine").stop(this, "process");
 	}
 	
 	private BigInteger totalComparisons = BigInteger.valueOf(0);
@@ -211,7 +204,6 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 				target, 
 				matchingRule.getName().startsWith(M_PREFIX) ? VariationType.MORPHOLOGICAL : VariationType.SYNTACTICAL,
 				matchingRule.getName());
-		UIMAProfiler.getProfiler("Gathering stats").hit(matchingRule.getName(), source.getPilot() + " || " + target.getPilot());
 	}
 
 	private void checkFrequency(Term term) {

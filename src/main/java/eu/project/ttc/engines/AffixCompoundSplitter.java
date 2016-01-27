@@ -35,7 +35,6 @@ import eu.project.ttc.models.Word;
 import eu.project.ttc.models.WordBuilder;
 import eu.project.ttc.resources.Bank;
 import eu.project.ttc.resources.TermIndexResource;
-import fr.univnantes.lina.UIMAProfiler;
 
 public class AffixCompoundSplitter extends JCasAnnotator_ImplBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(AffixCompoundSplitter.class);
@@ -54,7 +53,6 @@ public class AffixCompoundSplitter extends JCasAnnotator_ImplBase {
 	@Override
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
-		UIMAProfiler.getProfiler("AnalysisEngine").start(this, "process");
 		LOGGER.info("Detecting "+ (this.isNeoClassical?"neoclassical":"prefix") +" compounds");				
 		Iterator<Term> it = this.termIndexResource.getTermIndex().singleWordTermIterator();
 		while (it.hasNext()) {
@@ -64,7 +62,6 @@ public class AffixCompoundSplitter extends JCasAnnotator_ImplBase {
 			this.findPrefix(word, 0, this.bank.getPrefixTree());
 			this.findSuffix(word, word.getLemma().length()-1,this.bank.getSuffixTree());
 		}
-		UIMAProfiler.getProfiler("AnalysisEngine").stop(this, "process");
 	}
 	
 	@Override

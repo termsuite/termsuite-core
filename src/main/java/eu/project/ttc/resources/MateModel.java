@@ -25,8 +25,6 @@ import org.apache.uima.resource.DataResource;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.resource.SharedResourceObject;
 
-import fr.univnantes.lina.UIMAProfiler;
-
 /**
  * 
  * A thread-safe mate engine. 
@@ -43,14 +41,10 @@ public abstract class MateModel<T> implements SharedResourceObject {
 	
 	@Override
 	public void load(DataResource aData) throws ResourceInitializationException {
-		UIMAProfiler.getProfiler("ResourceLoad").start(this, "load");
-
 		String url = aData.getUri().toString().replaceFirst("file:", "");
 		if(mateEngine.get() == null) {
 			mateEngine.set(instanciate(url));
 		}
-		
-		UIMAProfiler.getProfiler("ResourceLoad").stop(this, "load");
 	}
 	
 	protected abstract T instanciate(String url);

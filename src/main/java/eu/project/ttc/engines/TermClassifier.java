@@ -45,7 +45,6 @@ import eu.project.ttc.models.TermClass;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.VariationPath;
 import eu.project.ttc.resources.TermIndexResource;
-import fr.univnantes.lina.UIMAProfiler;
 
 /**
  * 
@@ -87,7 +86,6 @@ public class TermClassifier  extends JCasAnnotator_ImplBase {
 	@Override
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
-		UIMAProfiler.getProfiler("AnalysisEngine").start(this, "process");
 		TermIndex termIndex = this.termIndexResource.getTermIndex();
 		LOGGER.info("Classifying term index {} on property {}", 
 				termIndex.getName(), 
@@ -120,6 +118,5 @@ public class TermClassifier  extends JCasAnnotator_ImplBase {
 		LOGGER.info("Number of term classes: {} (nbTerms: {})",
 				termIndex.getTermClasses().size(),
 				termIndex.getTerms().size());
-		UIMAProfiler.getProfiler("AnalysisEngine").stop(this, "process");
 	}
 }

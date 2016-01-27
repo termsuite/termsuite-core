@@ -58,7 +58,6 @@ import eu.project.ttc.resources.ReferenceTermList;
 import eu.project.ttc.resources.ReferenceTermList.RTLTerm;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.utils.FileUtils;
-import fr.univnantes.lina.UIMAProfiler;
 
 /**
  * 
@@ -117,15 +116,12 @@ public class EvalEngine  extends JCasAnnotator_ImplBase {
 	@Override
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
-		UIMAProfiler.getProfiler("AnalysisEngine").start(this, "process");
-		
 		// init the eval trace with the ref list size, otherwise the recall cannot be computed
 		this.evalTrace.setRtlSize(rtl.getTerms().size());
 
 		evaluate();
 		writeToLogFile();
 		writeToRFile();
-		UIMAProfiler.getProfiler("AnalysisEngine").stop(this, "process");
 	}
 
 	private void writeToRFile() {

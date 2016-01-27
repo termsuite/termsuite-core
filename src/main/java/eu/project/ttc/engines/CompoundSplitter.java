@@ -33,7 +33,6 @@ import eu.project.ttc.models.WordBuilder;
 import eu.project.ttc.resources.Dictionary;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.utils.TermSuiteConstants;
-import fr.univnantes.lina.UIMAProfiler;
 
 public class CompoundSplitter extends JCasAnnotator_ImplBase {
 
@@ -47,7 +46,6 @@ public class CompoundSplitter extends JCasAnnotator_ImplBase {
 	@Override
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
-		UIMAProfiler.getProfiler("AnalysisEngine").start(this, "process");
 		this.getContext().getLogger().log(Level.INFO, "Detecting compounds");
 		Iterator<Term> it = this.termIndexResource.getTermIndex().singleWordTermIterator();
 		while (it.hasNext()) {
@@ -63,7 +61,6 @@ public class CompoundSplitter extends JCasAnnotator_ImplBase {
 					.create();
 			}
 		}
-		UIMAProfiler.getProfiler("AnalysisEngine").stop(this, "process");
 	}
 	
 	@Override

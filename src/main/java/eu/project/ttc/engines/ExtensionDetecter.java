@@ -15,7 +15,6 @@ import eu.project.ttc.models.index.TermIndexes;
 import eu.project.ttc.models.index.TermValueProviders;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.utils.TermUtils;
-import fr.univnantes.lina.UIMAProfiler;
 
 public class ExtensionDetecter extends JCasAnnotator_ImplBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(ExtensionDetecter.class);
@@ -31,7 +30,6 @@ public class ExtensionDetecter extends JCasAnnotator_ImplBase {
 	
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
-		UIMAProfiler.getProfiler("AnalysisEngine").start(this, "process");
 		LOGGER.info("Starting extension detection");
 		
 		String gatheringKey = TermIndexes.WORD_COUPLE_LEMMA_LEMMA;
@@ -65,9 +63,6 @@ public class ExtensionDetecter extends JCasAnnotator_ImplBase {
 		
 		//finalize
 		this.termIndexResource.getTermIndex().dropCustomIndex(gatheringKey);
-		
-		
-		UIMAProfiler.getProfiler("AnalysisEngine").stop(this, "process");
 	}
 
 }

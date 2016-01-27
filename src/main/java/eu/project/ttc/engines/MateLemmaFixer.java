@@ -32,7 +32,6 @@ import org.apache.uima.resource.ResourceInitializationException;
 
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.types.WordAnnotation;
-import fr.univnantes.lina.UIMAProfiler;
 
 /**
  * Post-process the lemma found by Mate.
@@ -55,7 +54,6 @@ public class MateLemmaFixer extends JCasAnnotator_ImplBase {
 	}
 	@Override
 	public void process(JCas jCas) throws AnalysisEngineProcessException {
-		UIMAProfiler.getProfiler("AnalysisEngine").start(this, "process");
 		FSIterator<Annotation> it = jCas.getAnnotationIndex(WordAnnotation.type).iterator();
 		WordAnnotation word;
 		while(it.hasNext()) {
@@ -71,6 +69,5 @@ public class MateLemmaFixer extends JCasAnnotator_ImplBase {
 				}
 			}
 		}
-		UIMAProfiler.getProfiler("AnalysisEngine").stop(this, "process");
 	}
 }

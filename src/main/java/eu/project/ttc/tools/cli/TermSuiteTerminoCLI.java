@@ -51,7 +51,6 @@ import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.resources.MemoryTermIndexManager;
 import eu.project.ttc.tools.TermSuitePipeline;
 import eu.project.ttc.utils.TermUtils;
-import fr.univnantes.lina.UIMAProfiler;
 
 /**
  * Command line interface for the Terminology extraction (Spotter+Indexer) engines.
@@ -60,7 +59,6 @@ import fr.univnantes.lina.UIMAProfiler;
  */
 public class TermSuiteTerminoCLI {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermSuiteTerminoCLI.class);
-		
 
 	/** Short usage description of the CLI */
 	private static final String USAGE = "java [-DconfigFile=<file>] -Xms1g -Xmx2g -cp termsuite-core-x.x.jar eu.project.ttc.tools.cli.TermSuiteTerminoCLI";
@@ -72,10 +70,6 @@ public class TermSuiteTerminoCLI {
 
 	/** Name of the watch parameter */
 	private static final String WATCH = "watch";
-
-	/// Parameter names
-	/** Name of the example limit parament */
-	private static final String EXAMPLE_LIMIT = "nb-examples";
 
 	/** Name of the corpus parameter */
 	private static final String PATH_TO_CORPUS = "corpus-home";
@@ -144,9 +138,6 @@ public class TermSuiteTerminoCLI {
 	// the jsonCAS file path argument
 	private static final String JSCASFILE = "jsonCasFile";
 
-	// the argument whether to activate the profiling
-	private static final String PROFILE = "profile";
-
 	// tagger argument
 	private static Tagger tagger = Tagger.TreeTagger;
 
@@ -157,7 +148,6 @@ public class TermSuiteTerminoCLI {
 //    private static String pipelineCRInputDirectory = null;
     private static String taggerHome = "";
     private static String inlineText = null;
-	private static int exampleLimit = 10;
 	private static TermSuiteCollection corpusType = TermSuiteCollection.TXT;
 	private static float graphicalSimilarityThreshold = 0.9f;
 	
@@ -199,12 +189,6 @@ public class TermSuiteTerminoCLI {
 	 */
 	private static Optional<Pattern> watch = Optional.absent();
 
-	/*
-	 * Profiling parameter
-	 */
-	private static boolean profilingOn = false;
-	
-	
 	/**
 	 * Application entry point
 	 * 
@@ -244,11 +228,6 @@ public class TermSuiteTerminoCLI {
 				else
 					TermSuiteCLIUtils.setGlobalLogLevel("info");
 
-				
-				if(profilingOn) {
-					UIMAProfiler.setActivated(true);
-					UIMAProfiler.setExampleLimit(exampleLimit);
-				}
 				TermSuiteCLIUtils.logCommandLineOptions(line);
 				
 				TermSuitePipeline pipeline = TermSuitePipeline.create(language.getCode());
@@ -357,7 +336,6 @@ public class TermSuiteTerminoCLI {
 	            	cas.setDocumentText(inlineText);
 	            	cas.setDocumentLanguage(language.getCode());
 	            	pipeline.run(cas);
-	            	UIMAProfiler.displayAll(new PrintStream(System.err, true, "UTF-8"));
 	            	System.err.flush();
 	            	System.out.println("Term index: ");
 					TermIndex index = MemoryTermIndexManager.getInstance().getIndex(termIndexName);
@@ -365,10 +343,6 @@ public class TermSuiteTerminoCLI {
 	            } else {
 	            	LOGGER.info("Running TermSuite pipeline in corpus mode");
 	            	pipeline.run();
-	            	if(profilingOn) {
-		            	UIMAProfiler.setLatexFormat(false);
-		            	UIMAProfiler.displayAll(new PrintStream(System.err, true, "UTF-8"));
-	            	}
 	            	if(watch.isPresent()) 
 	            		TermUtils.showIndex(
 	            				MemoryTermIndexManager.getInstance().getIndex(termIndexName), 
@@ -399,14 +373,6 @@ public class TermSuiteTerminoCLI {
 				MATE, 
 				false, 
 				"Use Mate tagger instead of TreeTagger.", 
-				false));
-
-		
-		options.addOption(TermSuiteCLIUtils.createOption(
-				null, 
-				PROFILE, 
-				false, 
-				"Allows profiling", 
 				false));
 
 		options.addOption(TermSuiteCLIUtils.createOption(
@@ -464,14 +430,6 @@ public class TermSuiteTerminoCLI {
 				TRACE, 
 				false, 
 				"very fine grained logging", 
-				false));
-		
-		
-		options.addOption(TermSuiteCLIUtils.createOption(
-				null, 
-				EXAMPLE_LIMIT, 
-				true, 
-				"The number of examples to display for each profiling hit", 
 				false));
 		
 		
@@ -612,9 +570,6 @@ public class TermSuiteTerminoCLI {
 		encoding = line.getOptionValue(TermSuiteCLIUtils.P_ENCODING, "UTF-8");
 		
 		taggerHome = line.getOptionValue(P_TAGGER_HOME_DIRECTORY);
-		
-		if(line.hasOption(PROFILE))
-			profilingOn = true;
 			
 		if(line.hasOption(CORPUS_FORMAT)) {
 			if(line.getOptionValue(CORPUS_FORMAT).equals(TermSuiteCollection.TEI.name())) {
@@ -630,9 +585,6 @@ public class TermSuiteTerminoCLI {
 		if(line.hasOption(GRAPHICAL_SIMILARITY))
 			graphicalSimilarityThreshold = Float.parseFloat(line.getOptionValue(GRAPHICAL_SIMILARITY));
 			
-		
-		exampleLimit = Integer.parseInt(line.getOptionValue(EXAMPLE_LIMIT, "5"));
-		
 		if(line.hasOption(COMPOST_MIN_COMPONENT_SIZE))
 			compostMinComponentSize = Optional.of(Integer.parseInt(line.getOptionValue(COMPOST_MIN_COMPONENT_SIZE)));
 

@@ -60,7 +60,6 @@ import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.types.SourceDocumentInformation;
 import eu.project.ttc.types.WordAnnotation;
 import eu.project.ttc.utils.JCasUtils;
-import fr.univnantes.lina.UIMAProfiler;
 
 /**
  * Compiles and logs CAS stats.
@@ -114,7 +113,6 @@ public class CasStatCounter extends JCasAnnotator_ImplBase {
 	
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
-		UIMAProfiler.getProfiler("AnalysisEngine").start(this, "process");
 		this.docIt++;
 		Optional<SourceDocumentInformation> sourceDocumentAnnotation = JCasUtils.getSourceDocumentAnnotation(aJCas);
 		if(sourceDocumentAnnotation.isPresent())
@@ -136,7 +134,6 @@ public class CasStatCounter extends JCasAnnotator_ImplBase {
 			} catch (IOException e) {
 				throw new AnalysisEngineProcessException(e);
 			}
-		UIMAProfiler.getProfiler("AnalysisEngine").stop(this, "process");
 	}
 	
 	private void traceToFile() throws IOException {

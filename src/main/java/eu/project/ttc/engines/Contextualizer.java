@@ -46,7 +46,6 @@ import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermOccurrence;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.utils.IteratorUtils;
-import fr.univnantes.lina.UIMAProfiler;
 
 /**
  * An AE that index {@link TermOccurrence}s within {@link Document}s so as
@@ -119,7 +118,6 @@ public class Contextualizer extends JCasAnnotator_ImplBase {
 	@Override
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
-		UIMAProfiler.getProfiler("AnalysisEngine").start(this, "process");
 		LOGGER.info("Contextualizing");
 
 		// 0- drop all context vectors
@@ -162,8 +160,6 @@ public class Contextualizer extends JCasAnnotator_ImplBase {
 		// 4- Clean occurrence indexes in source documents
 		LOGGER.debug("4 - Clear occurrence index");
 		termIndex.clearOccurrenceIndex();
-		
-		UIMAProfiler.getProfiler("AnalysisEngine").stop(this, "process");
 	}
 
 	private Iterator<Term> getTermIterator() {
