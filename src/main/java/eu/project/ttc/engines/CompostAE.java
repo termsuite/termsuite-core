@@ -59,14 +59,25 @@ import eu.project.ttc.models.index.TermIndexes;
 import eu.project.ttc.models.index.TermMeasure;
 import eu.project.ttc.resources.CompostIndex;
 import eu.project.ttc.resources.CompostInflectionRules;
+import eu.project.ttc.resources.ObserverResource;
+import eu.project.ttc.resources.ObserverResource.SubTaskObserver;
 import eu.project.ttc.resources.SimpleWordSet;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.utils.IndexingKey;
 import eu.project.ttc.utils.TermSuiteUtils;
+import fr.univnantes.lina.ProfilerResource;
 import fr.univnantes.lina.UIMAProfiler;
 
 public class CompostAE extends JCasAnnotator_ImplBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(CompostAE.class);
+
+	public static final String TASK_NAME = "Morphosyntactic analysis";
+
+	@ExternalResource(key=ProfilerResource.PROFILER, mandatory=false)
+	private ProfilerResource profilerResource;
+
+	@ExternalResource(key=ObserverResource.OBSERVER, mandatory=true)
+	protected ObserverResource observerResource;
 
 	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
 	private TermIndexResource termIndexResource;
@@ -164,13 +175,22 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
 		UIMAProfiler.getProfiler("AnalysisEngine").start(this, "process");
+		
+		SubTaskObserver observer = observerResource.getTaskObserver(TASK_NAME);
+		observer.setTotalTaskWork(termIndexResource.getTermIndex().getWords().size());
 		LOGGER.info("Starting morphology analysis");
 		LOGGER.debug(this.toString());
 		wrMeasure = termIndexResource.getTermIndex().getWRMeasure();
 		swtLemmaIndex = termIndexResource.getTermIndex().getCustomIndex(TermIndexes.SINGLE_WORD_LEMMA);
 		buildCompostIndex();
 
+		int cnt = 0;
+		int observingStep = 100;
 		for(Word word:this.termIndexResource.getTermIndex().getWords()) {
+			cnt++;
+			if(cnt%observingStep == 0) {
+				observer.work(observingStep);
+			}
 			Map<Segmentation, Double> scores = computeScores(word.getLemma());
 			if(scores.size() > 0) {
 				float bestScore = 0;

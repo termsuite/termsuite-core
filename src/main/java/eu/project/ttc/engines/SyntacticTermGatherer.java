@@ -18,6 +18,7 @@
  */
 package eu.project.ttc.engines;
 
+import java.math.BigInteger;
 import java.util.Comparator;
 import java.util.List;
 import java.util.ListIterator;
@@ -43,15 +44,21 @@ import eu.project.ttc.models.VariationType;
 import eu.project.ttc.models.index.CustomIndexStats;
 import eu.project.ttc.models.index.CustomTermIndex;
 import eu.project.ttc.models.index.TermIndexes;
-import eu.project.ttc.models.index.TermValueProviders;
+import eu.project.ttc.resources.ObserverResource;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.resources.YamlVariantRules;
+import eu.project.ttc.resources.ObserverResource.SubTaskObserver;
 import fr.univnantes.lina.UIMAProfiler;
 
 public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(SyntacticTermGatherer.class);
-	
+	public static final String TASK_NAME = "Syntactic variant gathering";
+	private static final int OBSERVING_STEP = 1000;
+
 	private static final String M_PREFIX = "M";
+
+	@ExternalResource(key=ObserverResource.OBSERVER, mandatory=true)
+	protected ObserverResource observerResource;
 
 	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
 	private TermIndexResource termIndexResource;
@@ -60,11 +67,14 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 	@ExternalResource(key = YAML_VARIANT_RULES, mandatory = true)
 	private YamlVariantRules yamlVariantRules;
 
+	
+	private SubTaskObserver taskObserver;
 	@Override
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
 		UIMAProfiler.getProfiler("AnalysisEngine").start(this, "process");
 		LOGGER.info("Start syntactic term gathering");
+		taskObserver = observerResource.getTaskObserver(TASK_NAME);
 		
 		for(VariantRule rule:this.yamlVariantRules.getVariantRules())
 			UIMAProfiler.getProfiler("Gathering stats").initHit(rule.getName());
@@ -74,12 +84,48 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 		 *  morphological gathering based on single-word (with [compound] tag in yaml).
 		 *  TODO : understanding why
 		 */
-		gather(TermIndexes.WORD_COUPLE_LEMMA_LEMMA);
-		gather(TermIndexes.WORD_COUPLE_LEMMA_STEM);
+		String[] gatheringKeys = new String[]{
+				TermIndexes.WORD_COUPLE_LEMMA_LEMMA,
+				TermIndexes.WORD_COUPLE_LEMMA_STEM};
+
+		// prepare observer and indexes
+		for(String key:gatheringKeys) {
+			CustomTermIndex customIndex = this.termIndexResource.getTermIndex().getCustomIndex(key);
+			customIndex.cleanSingletonKeys();
+			// clean biggest classes
+			customIndex.cleanEntriesByMaxSize(WARNING_CRITICAL_SIZE);
+
+			CustomIndexStats stats = new CustomIndexStats(customIndex);
+
+			
+			// Display class sizes
+			Stopwatch sw1 = Stopwatch.createStarted();
+			int k = 0;
+			LOGGER.info("Biggest class is {}, size: {}", stats.getBiggestClass(), stats.getBiggestSize());
+			
+			
+			int size;
+			for(Integer i:stats.getSizeCounters().keySet()) {
+				k ++;
+				size = stats.getSizeCounters().get(i).size();
+				totalComparisons = totalComparisons.add(BigInteger.valueOf(size * i*(i-1)));
+			}
+			LOGGER.info("Number of term pairs to test: " + totalComparisons);
+			sw1.stop();
+			LOGGER.debug("Time to get the comparisons number: " + sw1.elapsed(TimeUnit.MILLISECONDS));
+			LOGGER.debug("Number of classes: " + k);
+			taskObserver.setTotalTaskWork(totalComparisons.longValue());
+		}
+
+
+		// gather
+		for(String key:gatheringKeys)
+			gather(key);
+
 		UIMAProfiler.getProfiler("AnalysisEngine").stop(this, "process");
 	}
 	
-	private int totalComparisons = 0;
+	private BigInteger totalComparisons = BigInteger.valueOf(0);
 	private int nbComparisons = 0;
 
 	private static final int WARNING_CRITICAL_SIZE = 2500;
@@ -88,44 +134,10 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 		LOGGER.debug("Rule-based gathering over the pregathering key {}", gatheringKey);
 
 		// create the index
-		CustomTermIndex customIndex = this.termIndexResource.getTermIndex().createCustomIndex(
-				gatheringKey,
-				TermValueProviders.get(gatheringKey));
+		CustomTermIndex customIndex = this.termIndexResource.getTermIndex().getCustomIndex(gatheringKey);
 		LOGGER.debug("Rule-based gathering over {} classes", customIndex.size());
 
-		// clean singleton classes
-		LOGGER.debug("Cleaning singleton keys");
-		customIndex.cleanSingletonKeys();
 
-		// clean biggest classes
-		customIndex.cleanEntriesByMaxSize(WARNING_CRITICAL_SIZE);
-
-//		customIndex.dropBiggerEntries(WARNING_CRITICAL_SIZE, true);
-		
-		CustomIndexStats stats = new CustomIndexStats(customIndex);
-
-		
-		// Display class sizes
-		Stopwatch sw1 = Stopwatch.createStarted();
-		Stopwatch sw2 = Stopwatch.createUnstarted();
-		int k = 0;
-		LOGGER.info("Biggest class is {}, size: {}", stats.getBiggestClass(), stats.getBiggestSize());
-		
-		
-		int size;
-		for(Integer i:stats.getSizeCounters().keySet()) {
-			k ++;
-			size = stats.getSizeCounters().get(i).size();
-			sw2.start();
-			LOGGER.trace("Number of classes of size " + i + ": " + size);
-			sw2.stop();
-			totalComparisons += size * i*(i-1);
-		}
-		LOGGER.info("Number of term pairs to test: " + totalComparisons);
-		sw1.stop();
-		LOGGER.debug("Time to get the comparisons number: " + sw1.elapsed(TimeUnit.MILLISECONDS));
-		LOGGER.debug("Time to get class sizes: " + sw2.elapsed(TimeUnit.MILLISECONDS));
-		LOGGER.debug("Number of classes: " + k);
 		
 		// Log the progress every 5 seconds
 		Timer progressLoggerTimer = new Timer("Syn. Variant Gathering Timer");
@@ -134,7 +146,7 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 			public void run() {
 				SyntacticTermGatherer.LOGGER.info("progress for key {}: ({}%)",
 						gatheringKey,
-						String.format("%.2f", ((float)nbComparisons*100)/totalComparisons)
+						String.format("%.2f", ((float)nbComparisons*100)/totalComparisons.longValue())
 						);
 			}
 		}, 5000l, 5000l);
@@ -165,6 +177,8 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 					target=targetIt.next();
 					applyGatheringRules(source, target);
 					applyGatheringRules(target, source);
+					if(nbComparisons % OBSERVING_STEP == 0) 
+						taskObserver.work(OBSERVING_STEP);
 				}
 					
 			}
