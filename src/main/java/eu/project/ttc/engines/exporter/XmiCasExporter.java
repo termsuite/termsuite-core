@@ -29,7 +29,6 @@ import org.apache.uima.cas.impl.XmiCasSerializer;
 import org.apache.uima.cas.text.AnnotationIndex;
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
-import org.apache.uima.fit.descriptor.ExternalResource;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.apache.uima.resource.ResourceInitializationException;
@@ -40,13 +39,9 @@ import org.xml.sax.SAXParseException;
 import com.google.common.base.Preconditions;
 
 import eu.project.ttc.types.SourceDocumentInformation;
-import fr.univnantes.lina.ProfilerResource;
 
 public class XmiCasExporter extends JCasAnnotator_ImplBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(XmiCasExporter.class);
-	
-	@ExternalResource(key=ProfilerResource.PROFILER, mandatory=true)
-	protected ProfilerResource profiler;
 	
 	public static final String OUTPUT_DIRECTORY = "OutputDirectory";
 	@ConfigurationParameter(name = OUTPUT_DIRECTORY, mandatory=true)
@@ -86,7 +81,6 @@ public class XmiCasExporter extends JCasAnnotator_ImplBase {
 	
 	@Override
 	public void process(JCas cas) throws AnalysisEngineProcessException { 
-		profiler.getProfiler("AnalysisEngine").start(this, "process");
 		try {
 			String name = this.getExportFilePath(cas);
 			if (name == null) { 
@@ -106,7 +100,6 @@ public class XmiCasExporter extends JCasAnnotator_ImplBase {
 		} catch (Exception e) {
 			throw new AnalysisEngineProcessException(e);
 		}
-		profiler.getProfiler("AnalysisEngine").stop(this, "process");
 	}
 	
 }

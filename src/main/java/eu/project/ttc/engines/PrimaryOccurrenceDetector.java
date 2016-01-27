@@ -32,7 +32,6 @@ import eu.project.ttc.models.Document;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.utils.TermOccurrenceUtils;
-import fr.univnantes.lina.UIMAProfiler;
 
 public class PrimaryOccurrenceDetector extends JCasAnnotator_ImplBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(PrimaryOccurrenceDetector.class);
@@ -45,7 +44,6 @@ public class PrimaryOccurrenceDetector extends JCasAnnotator_ImplBase {
 	};
 	
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
-		UIMAProfiler.getProfiler("AnalysisEngine").start(this, "process");
 		LOGGER.info("Detecting primary occurrence in TermIndex {}", 
 				termIndexResource.getTermIndex().getName());
 		
@@ -73,7 +71,5 @@ public class PrimaryOccurrenceDetector extends JCasAnnotator_ImplBase {
 		 */
 		LOGGER.debug("3 - clear occurrence index");
 		termIndex.clearOccurrenceIndex();
-
-		UIMAProfiler.getProfiler("AnalysisEngine").stop(this, "process");
 	};
 }

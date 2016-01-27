@@ -110,7 +110,6 @@ import eu.project.ttc.types.WordAnnotation;
 import eu.project.ttc.utils.OccurrenceBuffer;
 import eu.project.ttc.utils.TermSuiteUtils;
 import fr.free.rocheteau.jerome.engines.Stemmer;
-import fr.univnantes.lina.ProfilerResource;
 import fr.univnantes.lina.uima.ChineseSegmenterResourceHelper;
 import fr.univnantes.lina.uima.engines.ChineseSegmenter;
 import fr.univnantes.lina.uima.engines.TreeTaggerWrapper;
@@ -396,8 +395,6 @@ public class TermSuitePipeline {
 
 					
 			ExternalResourceFactory.bindResource(ae, SegmentBank.KEY_SEGMENT_BANK, segmentBank);
-			ExternalResourceFactory.bindResource(ae, resProfiler());
-
 
 			return aggregateAndReturn(ae, "Word tokenizer", 0);
 		} catch (Exception e) {
@@ -453,7 +450,6 @@ public class TermSuitePipeline {
 					TreeTaggerWrapper.PARAM_TT_HOME_DIRECTORY, this.treeTaggerPath.get()
 				);
 			
-			ExternalResourceFactory.bindResource(ae, resProfiler());
 			ExternalResourceFactory.createDependencyAndBind(
 					ae,
 					TreeTaggerParameter.KEY_TT_PARAMETER, 
@@ -497,8 +493,6 @@ public class TermSuitePipeline {
 					MateTaggerModel.class, 
 					taggerModel);
 	
-			ExternalResourceFactory.bindResource(ae, resProfiler());
-
 			return aggregateAndReturn(ae, "POS Tagging (Mate)", 0)
 					.mateLemmaFixer()
 					.mateNormalizer();
@@ -535,7 +529,6 @@ public class TermSuitePipeline {
 					TSVExporter.SHOW_HEADERS, tsvWithHeaders,
 					TSVExporter.SHOW_SCORES, tsvWithVariantScores
 				);
-			ExternalResourceFactory.bindResource(ae, resProfiler());
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 
 
@@ -559,7 +552,6 @@ public class TermSuitePipeline {
 					ExportVariationRuleExamples.class, ExportVariationRuleExamples.TO_FILE_PATH, toFilePath);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 			ExternalResourceFactory.bindResource(ae, resSyntacticVariantRules());
-			ExternalResourceFactory.bindResource(ae, resProfiler());
 
 			return aggregateAndReturn(ae, "Exporting variation rules examples", 0);
 		} catch (Exception e) {
@@ -581,7 +573,6 @@ public class TermSuitePipeline {
 					CompoundExporter.TO_FILE_PATH, 
 					toFilePath);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			ExternalResourceFactory.bindResource(ae, resProfiler());
 
 			return aggregateAndReturn(ae, "Exporting compounds", 0);
 		} catch (Exception e) {
@@ -600,7 +591,6 @@ public class TermSuitePipeline {
 					TBXExporter.LANGUAGE, this.lang
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			ExternalResourceFactory.bindResource(ae, resProfiler());
 
 			return aggregateAndReturn(ae, "Exporting the terminology to " + toFilePath, 1);
 		} catch (Exception e) {
@@ -619,7 +609,6 @@ public class TermSuitePipeline {
 					
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			ExternalResourceFactory.bindResource(ae, resProfiler());
 
 			return aggregateAndReturn(ae, "Exporting evaluation files", 0);
 		} catch (Exception e) {
@@ -647,7 +636,6 @@ public class TermSuitePipeline {
 					JsonExporter.WITH_CONTEXTS, exportJsonWithContext
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			ExternalResourceFactory.bindResource(ae, resProfiler());
 
 			return aggregateAndReturn(ae, "Exporting the terminology to " + toFilePath, 1);
 		} catch (Exception e) {
@@ -682,7 +670,6 @@ public class TermSuitePipeline {
 				);
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			ExternalResourceFactory.bindResource(ae, resProfiler());
 
 			return aggregateAndReturn(ae, "Exporting variant evaluation files", 0);
 		} catch (Exception e) {
@@ -710,8 +697,6 @@ public class TermSuitePipeline {
 					Mapping.KEY_MAPPING, 
 					MappingResource.class, 
 					mappingFile);
-			ExternalResourceFactory.bindResource(ae, resProfiler());
-
 			return aggregateAndReturn(ae, "Normalizing " + mappingFile, 0);
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
@@ -789,7 +774,6 @@ public class TermSuitePipeline {
 					Stemmer.PARAM_LANGUAGE, lang,
 					Stemmer.PARAM_UPDATE, true
 				);
-			ExternalResourceFactory.bindResource(ae, resProfiler());
 
 			return aggregateAndReturn(ae, "Stemming", 0);
 		} catch (Exception e) {
@@ -805,7 +789,6 @@ public class TermSuitePipeline {
 					TreeTaggerLemmaFixer.LANGUAGE, lang.getCode()
 				);
 			
-			ExternalResourceFactory.bindResource(ae, resProfiler());
 
 			return aggregateAndReturn(ae, "Fixing lemmas", 0);
 		} catch (Exception e) {
@@ -819,7 +802,6 @@ public class TermSuitePipeline {
 					MateLemmaFixer.class,
 					MateLemmaFixer.LANGUAGE, lang.getCode()
 				);
-			ExternalResourceFactory.bindResource(ae, resProfiler());
 
 			return aggregateAndReturn(ae, "Fixing lemmas", 0);
 		} catch (Exception e) {
@@ -873,7 +855,6 @@ public class TermSuitePipeline {
 					resFactory.getAllowedChars().toString());
 	
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			ExternalResourceFactory.bindResource(ae, resProfiler());
 
 			ExternalResourceFactory.createDependencyAndBind(
 					ae,
@@ -908,7 +889,6 @@ public class TermSuitePipeline {
 				);
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			ExternalResourceFactory.bindResource(ae, resProfiler());
 
 			return aggregateAndReturn(ae, "Splitting compounds", 0);
 		} catch (Exception e) {
@@ -983,7 +963,6 @@ public class TermSuitePipeline {
 				);
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			ExternalResourceFactory.bindResource(ae, resProfiler());
 
 			return aggregateAndReturn(ae, "Filtering stop words", 0);
 		} catch(Exception e) {
@@ -1007,7 +986,6 @@ public class TermSuitePipeline {
 					XmiCasExporter.class,
 					XmiCasExporter.OUTPUT_DIRECTORY, toDirectoryPath
 				);
-			ExternalResourceFactory.bindResource(ae, resProfiler());
 
 			return aggregateAndReturn(ae, "Exporting XMI Cas files", 0);
 		} catch(Exception e) {
@@ -1029,7 +1007,6 @@ public class TermSuitePipeline {
 					SpotterTSVWriter.class,
 					XmiCasExporter.OUTPUT_DIRECTORY, toDirectoryPath
 				);
-			ExternalResourceFactory.bindResource(ae, resProfiler());
 
 			return aggregateAndReturn(ae, "Exporting annotations in TSV to " + toDirectoryPath, 0);
 		} catch(Exception e) {
@@ -1064,7 +1041,6 @@ public class TermSuitePipeline {
 					ChineseSegmenter.CHINESE_NUMBER_SEGMENTS, 
 					ChineseSegmentResource.class, 
 					ChineseSegmenterResourceHelper.getNumberSegments());
-			ExternalResourceFactory.bindResource(ae, resProfiler());
 
 			return aggregateAndReturn(ae, "Word tokenizing", 0);
 		} catch(Exception e) {
@@ -1099,16 +1075,6 @@ public class TermSuitePipeline {
 					ObserverResource.class, this.pipelineObserverName);
 		}
 		return pipelineObserverResource;
-
-	}
-	
-	private ExternalResourceDescription uimaProfiler;
-	private ExternalResourceDescription resProfiler() {
-		if(uimaProfiler == null) {
-			uimaProfiler = ExternalResourceFactory.createExternalResourceDescription(
-					ProfilerResource.class, "");
-		}
-		return uimaProfiler;
 
 	}
 	
@@ -1183,7 +1149,6 @@ public class TermSuitePipeline {
 				);
 			ExternalResourceFactory.bindResource(ae, resGeneralLanguage());
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			ExternalResourceFactory.bindResource(ae, resProfiler());
 
 			return aggregateAndReturn(ae, "Computing term specificities", 0);
 		} catch(Exception e) {
@@ -1233,7 +1198,6 @@ public class TermSuitePipeline {
 					Contextualizer.MINIMUM_COOCC_FREQUENCY_THRESHOLD, contextualizeWithCoOccurrenceFrequencyThreshhold
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			ExternalResourceFactory.bindResource(ae, resProfiler());
 
 			return aggregateAndReturn(ae, "Build context vectors", 1);
 		} catch (Exception e) {
@@ -1249,7 +1213,6 @@ public class TermSuitePipeline {
 				MaxSizeThresholdCleaner.MAX_SIZE, maxSize
 			);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			ExternalResourceFactory.bindResource(ae, resProfiler());
 
 			return aggregateAndReturn(ae, "Cleaning TermIndex on property "+property.toString().toLowerCase()+" with maxSize=" + maxSize, 0);
 		} catch(Exception e) {
@@ -1271,7 +1234,6 @@ public class TermSuitePipeline {
 			setPeriodic(isPeriodic, cleaningPeriod, ae);
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			ExternalResourceFactory.bindResource(ae, resProfiler());
 
 			return aggregateAndReturn(ae, "Cleaning", 0);
 		} catch(Exception e) {
@@ -1286,7 +1248,6 @@ public class TermSuitePipeline {
 			);
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			ExternalResourceFactory.bindResource(ae, resProfiler());
 
 			
 			return aggregateAndReturn(ae, "Detecting primary occurrences", 0);
@@ -1353,7 +1314,6 @@ public class TermSuitePipeline {
 					);
 			setPeriodic(isPeriodic, cleaningPeriod, ae);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			ExternalResourceFactory.bindResource(ae, resProfiler());
 
 			return aggregateAndReturn(ae, "Cleaning TermIndex. Keepings only top " + n + " terms on property " + property.toString().toLowerCase(), 0);
 		} catch(Exception e) {
@@ -1374,7 +1334,6 @@ public class TermSuitePipeline {
 					GraphicalVariantGatherer.SIMILARITY_THRESHOLD, graphicalVariantSimilarityThreshold.isPresent() ? graphicalVariantSimilarityThreshold.get() : 0.9f
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			ExternalResourceFactory.bindResource(ae, resProfiler());
 			ExternalResourceFactory.bindResource(ae, resObserver());
 
 			return aggregateAndReturn(ae, GraphicalVariantGatherer.TASK_NAME, 1);
@@ -1393,7 +1352,6 @@ public class TermSuitePipeline {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					StringRegexFilter.class
 				);
-			ExternalResourceFactory.bindResource(ae, resProfiler());
 
 			return aggregateAndReturn(ae, "Filtering URLs", 0);
 		} catch(Exception e) {
@@ -1414,7 +1372,6 @@ public class TermSuitePipeline {
 			
 			ExternalResourceFactory.bindResource(ae, resSyntacticVariantRules());
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			ExternalResourceFactory.bindResource(ae, resProfiler());
 			ExternalResourceFactory.bindResource(ae, resObserver());
 
 			return aggregateAndReturn(ae, SyntacticTermGatherer.TASK_NAME, 1);
@@ -1436,7 +1393,6 @@ public class TermSuitePipeline {
 				);
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			ExternalResourceFactory.bindResource(ae, resProfiler());
 
 			return aggregateAndReturn(ae, "Detecting term extensions", 1);
 		} catch(Exception e) {
@@ -1546,7 +1502,6 @@ public class TermSuitePipeline {
 					CompostAE.NEOCLASSICAL_PREFIXES, 
 					SimpleWordSet.class, 
 					resFactory.getNeoclassicalPrefixes().toString());
-			ExternalResourceFactory.bindResource(ae, resProfiler());
 
 			return aggregateAndReturn(ae, CompostAE.TASK_NAME, 2);
 		} catch(Exception e) {
@@ -1562,7 +1517,6 @@ public class TermSuitePipeline {
 					CasStatCounter.STAT_NAME, statName
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			ExternalResourceFactory.bindResource(ae, resProfiler());
 
 			return aggregateAndReturn(ae, "Counting stats ["+statName+"]", 0);
 		} catch(Exception e) {
@@ -1595,7 +1549,6 @@ public class TermSuitePipeline {
 					CasStatCounter.TO_TRACE_FILE, toFile
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			ExternalResourceFactory.bindResource(ae, resProfiler());
 
 			return aggregateAndReturn(ae, "Exporting time performances to file " + toFile, 0);
 		} catch(Exception e) {
@@ -1621,7 +1574,6 @@ public class TermSuitePipeline {
 					
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			ExternalResourceFactory.bindResource(ae, resProfiler());
 
 			return aggregateAndReturn(ae, "Classifying ters on property " + sortingProperty.toString().toLowerCase(), 0);
 		} catch(Exception e) {
@@ -1668,7 +1620,6 @@ public class TermSuitePipeline {
 					EvalEngine.REFERENCE_LIST, 
 					ReferenceTermList.class, 
 					"file:" + refFileURI);
-			ExternalResourceFactory.bindResource(ae, resProfiler());
 
 			return aggregateAndReturn(ae, "Evaluating " + evalTraceName, 0);
 		} catch(Exception e) {
@@ -1735,7 +1686,6 @@ public class TermSuitePipeline {
 					JsonCasExporter.class,
 					JsonCasExporter.OUTPUT_DIRECTORY, toDirectoryPath
 			);
-			ExternalResourceFactory.bindResource(ae, resProfiler());
 			return aggregateAndReturn(ae, "Exporting CAS to JSON files", 0);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);

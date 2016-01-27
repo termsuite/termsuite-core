@@ -34,7 +34,6 @@ import eu.project.ttc.models.Term;
 import eu.project.ttc.models.index.TermMeasure;
 import eu.project.ttc.resources.GeneralLanguage;
 import eu.project.ttc.resources.TermIndexResource;
-import fr.univnantes.lina.UIMAProfiler;
 
 public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermSpecificityComputer.class);
@@ -60,15 +59,10 @@ public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 	@Override
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
-		UIMAProfiler.getProfiler("AnalysisEngine").start(this, "process");
 		LOGGER.info("Computing specificities and measures");
 		
 		computeSpecifities();
 		computeMeasures();
-		
-		UIMAProfiler.getProfiler("AnalysisEngine").stop(this, "process");
-		
-
 	}
 
 	private void computeMeasures() {

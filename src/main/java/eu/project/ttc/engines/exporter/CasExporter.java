@@ -25,7 +25,6 @@ import org.apache.uima.cas.FSIterator;
 import org.apache.uima.cas.text.AnnotationIndex;
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
-import org.apache.uima.fit.descriptor.ExternalResource;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.apache.uima.resource.ResourceInitializationException;
@@ -33,12 +32,8 @@ import org.apache.uima.resource.ResourceInitializationException;
 import com.google.common.base.Preconditions;
 
 import eu.project.ttc.types.SourceDocumentInformation;
-import fr.univnantes.lina.ProfilerResource;
 
 public abstract class CasExporter extends JCasAnnotator_ImplBase {
-	
-	@ExternalResource(key=ProfilerResource.PROFILER, mandatory=true)
-	protected ProfilerResource profiler;
 	
 	public static final String OUTPUT_DIRECTORY = "OutputDirectory";
 	@ConfigurationParameter(name = OUTPUT_DIRECTORY, mandatory=true)

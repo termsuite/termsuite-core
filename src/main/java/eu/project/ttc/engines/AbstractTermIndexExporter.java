@@ -47,7 +47,6 @@ import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.tools.utils.TermPredicate;
 import eu.project.ttc.tools.utils.TermPredicates;
-import fr.univnantes.lina.UIMAProfiler;
 
 /**
  * Exports a {@link TermIndex} in TSV format
@@ -125,7 +124,6 @@ public abstract class AbstractTermIndexExporter extends JCasAnnotator_ImplBase {
 				this.filterRule,
 				filteringThreshold
 				);
-		UIMAProfiler.getProfiler("AnalysisEngine").start(this, "process");
 		Term term;
 		Iterator<Term> it = this.termIndexResource.getTermIndex().getTerms().iterator();
 		TreeSet<Term> acceptedTerms = Sets.newTreeSet(outputComparator);
@@ -135,7 +133,6 @@ public abstract class AbstractTermIndexExporter extends JCasAnnotator_ImplBase {
 				acceptedTerms.add(term);
 		}
 		processAcceptedTerms(acceptedTerms);
-		UIMAProfiler.getProfiler("AnalysisEngine").stop(this, "process");
 	}
 	
 	

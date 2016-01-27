@@ -65,16 +65,11 @@ import eu.project.ttc.resources.SimpleWordSet;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.utils.IndexingKey;
 import eu.project.ttc.utils.TermSuiteUtils;
-import fr.univnantes.lina.ProfilerResource;
-import fr.univnantes.lina.UIMAProfiler;
 
 public class CompostAE extends JCasAnnotator_ImplBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(CompostAE.class);
 
 	public static final String TASK_NAME = "Morphosyntactic analysis";
-
-	@ExternalResource(key=ProfilerResource.PROFILER, mandatory=false)
-	private ProfilerResource profilerResource;
 
 	@ExternalResource(key=ObserverResource.OBSERVER, mandatory=true)
 	protected ObserverResource observerResource;
@@ -174,8 +169,6 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 	@Override
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
-		UIMAProfiler.getProfiler("AnalysisEngine").start(this, "process");
-		
 		SubTaskObserver observer = observerResource.getTaskObserver(TASK_NAME);
 		observer.setTotalTaskWork(termIndexResource.getTermIndex().getWords().size());
 		LOGGER.info("Starting morphology analysis");
@@ -235,7 +228,6 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 		termIndexResource.getTermIndex().dropCustomIndex(TermIndexes.SINGLE_WORD_LEMMA);
 		segmentScoreEntries.invalidateAll();
 		segmentLemmaCache.invalidateAll();
-		UIMAProfiler.getProfiler("AnalysisEngine").stop(this, "process");
 	}
 	
 	private void buildCompostIndex() {

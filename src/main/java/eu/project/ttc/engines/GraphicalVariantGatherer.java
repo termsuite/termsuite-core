@@ -52,7 +52,6 @@ import eu.project.ttc.models.index.TermValueProvider;
 import eu.project.ttc.resources.ObserverResource;
 import eu.project.ttc.resources.ObserverResource.SubTaskObserver;
 import eu.project.ttc.resources.TermIndexResource;
-import fr.univnantes.lina.UIMAProfiler;
 
 /**
  * 
@@ -136,7 +135,6 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 	@Override
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
-		UIMAProfiler.getProfiler("AnalysisEngine").start(this, "process");
 		logger.info("Start graphical term gathering");
 		SubTaskObserver taskObserver = observerResource.getTaskObserver(TASK_NAME);
 		
@@ -194,10 +192,6 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 					if(dist >= this.threshold) {
 						gatheredCnt++;
 						t1.addTermVariation(t2, VariationType.GRAPHICAL, dist);
-						if(UIMAProfiler.isActivated())
-							UIMAProfiler.getProfiler("GraphicalGatherer").hit(
-									"graphical variants", 
-									String.format("%s || %s", t1.getGroupingKey(), t2.getGroupingKey()));
 					}
 				}
 			}
@@ -210,7 +204,5 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 		termIndex.dropCustomIndex(indexName);
 		
 		progressLoggerTimer.cancel();
-		
-		UIMAProfiler.getProfiler("AnalysisEngine").stop(this, "process");
 	}
 }

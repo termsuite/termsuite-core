@@ -35,7 +35,6 @@ import com.google.common.collect.Sets;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.resources.TermIndexResource;
-import fr.univnantes.lina.UIMAProfiler;
 import uima.sandbox.filter.resources.FilterResource;
 
 /**
@@ -66,7 +65,6 @@ public class TermIndexBlacklistWordFilterAE extends JCasAnnotator_ImplBase{
 	@Override
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
-		UIMAProfiler.getProfiler("AnalysisEngine").start(this, "process");
 		logger.info("Starting word filtering");
 		
 		Set<String> filters = filter.getFilters();
@@ -88,8 +86,6 @@ public class TermIndexBlacklistWordFilterAE extends JCasAnnotator_ImplBase{
 			logger.trace(remTermMsg, t);
 			this.termIndexResource.getTermIndex().removeTerm(t);
 		}
-		
-		UIMAProfiler.getProfiler("AnalysisEngine").stop(this, "process");
 	};
 	
 }

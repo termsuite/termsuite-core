@@ -25,7 +25,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
 import java.util.Map;
-import java.util.Set;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.uima.resource.DataResource;
@@ -34,7 +33,6 @@ import org.apache.uima.resource.SharedResourceObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import fr.univnantes.lina.UIMAProfiler;
 import groovy.lang.GroovyClassLoader;
 import groovy.lang.GroovyObject;
 
@@ -139,8 +137,6 @@ public class GroovyVariantRules implements SharedResourceObject {
 	public void initProfilingWithZeroCount() {
 		try {
 			Object invokeMethod = this.script.invokeMethod("getRuleNames", new Object[] { });
-			for(Object name:(Set<?>) invokeMethod) 
-				UIMAProfiler.getProfiler("Gathering stats").initHit((String) name);
 		} catch(Exception e) {
 			e.printStackTrace();
 		}

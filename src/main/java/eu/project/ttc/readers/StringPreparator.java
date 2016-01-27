@@ -24,8 +24,6 @@ package eu.project.ttc.readers;
 import java.util.HashMap;
 import java.util.Map;
 
-import fr.univnantes.lina.UIMAProfiler;
-
 public class StringPreparator {
 	
 	private int replacements = 0;
@@ -51,18 +49,15 @@ public class StringPreparator {
 	 * @return
 	 */
 	public String prepare(String input) {
-		UIMAProfiler.getProfiler("StringPreparator").start(this, "prepare");
 		StringBuffer sb = new StringBuffer();
 		for (int i = 0; i < input.length(); i++){
 		    char c = input.charAt(i);        
 		    if(map.get(c) != null) {
 		    	replacements++;
-		    	UIMAProfiler.getProfiler("StringPreparator").hit("replace");
 		    	sb.append(map.get(c));
 		    } else
 		    	sb.append(c);
 		}
-		UIMAProfiler.getProfiler("StringPreparator").stop(this, "prepare");
 		return sb.toString();
 	}
 	
