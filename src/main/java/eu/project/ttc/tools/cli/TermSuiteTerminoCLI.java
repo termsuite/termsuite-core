@@ -149,9 +149,6 @@ public class TermSuiteTerminoCLI {
 	// the jsonCAS file path argument
 	private static final String JSCASFILE = "jsonCasFile";
 
-	// the jsonCAS file path argument
-	private static final String JSCASFILE = "jsonCasFile";
-
 	// tagger argument
 	private static Tagger tagger = Tagger.TreeTagger;
 

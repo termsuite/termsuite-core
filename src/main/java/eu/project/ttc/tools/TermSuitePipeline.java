@@ -408,16 +408,16 @@ public class TermSuitePipeline {
 //	}
 
 	private TermSuitePipeline aggregateAndReturn(AnalysisEngineDescription ae, String taskName, int ccWeight) {
-		if(allowObserving) {
-			Preconditions.checkNotNull(taskName);
-			AnalysisEngineDescription aeObserver = aeObserver(taskName, ccWeight, PipelineObserver.TASK_STARTED);
-			this.aggregateBuilder.add(aeObserver);
-		}
+		Preconditions.checkNotNull(taskName);
+
+		// Add the pre-task observer
+		this.aggregateBuilder.add(aeObserver(taskName, ccWeight, PipelineObserver.TASK_STARTED));
+		
+		// Add the ae itself
 		this.aggregateBuilder.add(ae);
-		if(allowObserving) {
-			AnalysisEngineDescription aeObserver = aeObserver(taskName, ccWeight, PipelineObserver.TASK_ENDED);
-			this.aggregateBuilder.add(aeObserver);
-		}
+		
+		// Add the post-task observer
+		this.aggregateBuilder.add(aeObserver(taskName, ccWeight, PipelineObserver.TASK_ENDED));
 		return this;
 	}
 
