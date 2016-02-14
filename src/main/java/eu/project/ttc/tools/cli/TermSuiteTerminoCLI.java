@@ -47,6 +47,7 @@ import com.google.common.collect.Lists;
 import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.engines.desc.TermSuiteCollection;
+import eu.project.ttc.models.OccurrenceType;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.resources.MemoryTermIndexManager;
 import eu.project.ttc.tools.TermSuitePipeline;
@@ -120,6 +121,16 @@ public class TermSuiteTerminoCLI {
 	private static final String TRACE = "trace";
 	private static final String NO_LOGGING = "no-logging";
 	
+	/*
+	 * Contextualizer
+	 */
+	private static final String CONTEXTUALIZE = "contextualize";
+	private static final String CONTEXTUALIZE_ALL_TERMS = "contextualize-all-terms";
+	private static final String CONTEXT_SCOPE = "context-scope";
+	private static final String ALLOW_MWT_IN_CONTEXTS = "allow-mwts-in-contexts";
+
+	
+
 	
 	/*
 	 * Cleaning arguments
@@ -157,7 +168,16 @@ public class TermSuiteTerminoCLI {
 	private static int exampleLimit = 10;
 	private static TermSuiteCollection corpusType = TermSuiteCollection.TXT;
 	private static float graphicalSimilarityThreshold = 0.9f;
-	
+
+	/*
+	 * contetxualizer
+	 */
+	private static boolean contextualize = false;
+	private static boolean contextualizeAllTerms = false;
+	private static boolean allowMWTInContexts = false;
+	private static int contextScope = 3;
+
+
 	/*
 	 * Cleaning parameters
 	 */
@@ -315,6 +335,14 @@ public class TermSuiteTerminoCLI {
 					pipeline.aeTopNCleaner(cleaningProperty.get(), cleaningTopN.get());
 				}
 
+				// contextualize
+				if(contextualize) {
+					pipeline
+						.setContextualizeCoTermsType(allowMWTInContexts ? OccurrenceType.ALL : OccurrenceType.SINGLE_WORD)
+						.aeContextualizer(contextScope, contextualizeAllTerms);
+					
+				}
+				
 				// stats
 				pipeline.haeCasStatCounter("at end of pipeline");
 
@@ -337,7 +365,7 @@ public class TermSuiteTerminoCLI {
 				if(tbxFile.isPresent()) 
 					pipeline.haeTbxExporter(tbxFile.get());
 				if(jsonFile.isPresent())  {					
-					pipeline.setExportJsonWithContext(false);
+					pipeline.setExportJsonWithContext(contextualize);
 					pipeline.setExportJsonWithOccurrences(true);
 					pipeline.haeJsonExporter(jsonFile.get());
 				}
@@ -459,6 +487,32 @@ public class TermSuiteTerminoCLI {
 				"very fine grained logging", 
 				false));
 		
+
+		options.addOption(TermSuiteCLIUtils.createOption(
+				null, 
+				CONTEXTUALIZE, 
+				false, 
+				"Enable the contextualizer. Compute a context vector for each SWT term.", 
+				false));
+		options.addOption(TermSuiteCLIUtils.createOption(
+				null, 
+				CONTEXTUALIZE_ALL_TERMS, 
+				false, 
+				"Compute a context vector for MWTs too.", 
+				false));
+		options.addOption(TermSuiteCLIUtils.createOption(
+				null, 
+				ALLOW_MWT_IN_CONTEXTS, 
+				false, 
+				"Allow to set MWTs as cooccurrences in context vectors.", 
+				false));
+		options.addOption(TermSuiteCLIUtils.createOption(
+				null, 
+				CONTEXT_SCOPE, 
+				true, 
+				"The window size for term contexts capture", 
+				false));
+
 		
 		options.addOption(TermSuiteCLIUtils.createOption(
 				null, 
@@ -651,8 +705,18 @@ public class TermSuiteTerminoCLI {
 							)
 					);
 		}
-
-			
+		
+		
+		/*
+		 * Contextualizer
+		 */
+		contextualize = line.hasOption(CONTEXTUALIZE);
+		allowMWTInContexts = line.hasOption(ALLOW_MWT_IN_CONTEXTS);
+		contextualizeAllTerms = line.hasOption(CONTEXTUALIZE_ALL_TERMS);
+		if(line.hasOption(CONTEXT_SCOPE)) {
+			contextScope = Integer.parseInt(line.getOptionValue(CONTEXT_SCOPE));
+		}
+		
 		if(line.hasOption(CLEAN_THRESHOLD))
 			cleaningThreshold = Optional.of(Float.parseFloat(line.getOptionValue(CLEAN_THRESHOLD)));
 
