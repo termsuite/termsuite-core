@@ -170,7 +170,7 @@ public class TermSuiteTerminoCLI {
 	private static Optional<String> tbxFile = Optional.absent();
 
 	private static Optional<String> jsonCasFile = Optional.absent();
-	
+
 
 	/*
 	 *  compost params
@@ -653,7 +653,7 @@ public class TermSuiteTerminoCLI {
 
 		if(line.hasOption(JSCASFILE))
 			jsonCasFile = Optional.of(line.getOptionValue(JSCASFILE));
-		
+
 		if(line.hasOption(MATE))
 			tagger =  Tagger.Mate;
 	}

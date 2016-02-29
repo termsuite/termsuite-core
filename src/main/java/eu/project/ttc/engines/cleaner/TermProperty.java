@@ -94,6 +94,28 @@ public enum TermProperty {
 			}
 		};
 	}
+	
+	public Comparator<Term> getComparator(final TermIndex termIndex, final boolean reverse) {
+		return new Comparator<Term>() {
+			@Override
+			public int compare(Term o1, Term o2) {
+				return reverse ? TermProperty.this.compare(termIndex, o2, o1) : TermProperty.this.compare(termIndex, o1, o2) ;
+			}
+		};
+	}
+
+	/**
+	 * The "compare" method that can apply on property measures.
+	 * 
+	 * @param termIndex
+	 * @param o1
+	 * @param o2
+	 * @return
+	 */
+	public int compare(TermIndex termIndex, Term o1, Term o2) {
+		return ComparisonChain.start().compare(getValue(termIndex, o1), getValue(termIndex, o2)).result();
+	}
+
 
 	public int compare(Term o1, Term o2) {
 		return ComparisonChain.start().compare(getValue(o1), getValue(o2)).result();

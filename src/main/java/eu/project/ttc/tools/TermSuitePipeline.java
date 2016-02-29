@@ -447,6 +447,7 @@ public class TermSuitePipeline {
 					TreeTaggerWrapper.PARAM_TAG_FEATURE, "tag",
 					TreeTaggerWrapper.PARAM_LEMMA_FEATURE, "lemma",
 					TreeTaggerWrapper.PARAM_UPDATE_ANNOTATION_FEATURES, true,
+					TreeTaggerWrapper.PARAM_TT_CMD_ARGUMENTS, new String[]{"-lemma","-token","-no-unknown","-quiet"},
 					TreeTaggerWrapper.PARAM_TT_HOME_DIRECTORY, this.treeTaggerPath.get()
 				);
 			
@@ -461,6 +462,30 @@ public class TermSuitePipeline {
 			throw new TermSuitePipelineException(e);
 		}
 	}
+
+	public TermSuitePipeline aeTreeTaggerArgsCustom(String[] argsTreeTagger) {
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					TreeTaggerWrapper.class,
+					TreeTaggerWrapper.PARAM_ANNOTATION_TYPE, "eu.project.ttc.types.WordAnnotation",
+					TreeTaggerWrapper.PARAM_TAG_FEATURE, "tag",
+					TreeTaggerWrapper.PARAM_LEMMA_FEATURE, "lemma",
+					TreeTaggerWrapper.PARAM_UPDATE_ANNOTATION_FEATURES, true,
+					TreeTaggerWrapper.PARAM_TT_CMD_ARGUMENTS, argsTreeTagger,
+					TreeTaggerWrapper.PARAM_TT_HOME_DIRECTORY, this.treeTaggerPath.get()
+			);
+
+			ExternalResourceFactory.createDependencyAndBind(
+					ae,
+					TreeTaggerParameter.KEY_TT_PARAMETER,
+					TreeTaggerParameter.class,
+					resFactory.getTTParameter().toString());
+			return aggregateAndReturn(ae).ttLemmaFixer().ttNormalizer();
+		} catch (Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
+	}
+
 	
 	public TermSuitePipeline setMateModelPath(String path) {
 		this.mateModelsPath = Optional.of(path);

@@ -47,8 +47,8 @@ public class TermClassifierSpec {
 	private Term term3;
 	private Term term4;
 	private Term term5;
-	Comparator<Term> reverseComp = TermProperty.FREQUENCY.getComparator(true);
-	Comparator<Term> comp = TermProperty.FREQUENCY.getComparator(false);
+	Comparator<Term> reverseComp;
+	Comparator<Term> comp ;
 	
 	private AnalysisEngine ae;
 	
@@ -56,6 +56,8 @@ public class TermClassifierSpec {
 	@Before
 	public void set() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException, ResourceInitializationException {
 		this.termIndex = Fixtures.termIndex();
+		comp = TermProperty.FREQUENCY.getComparator(termIndex, false);
+		reverseComp = TermProperty.FREQUENCY.getComparator(termIndex, true);
 		this.term1 = Fixtures.term1(termIndex);
 		this.term2 = Fixtures.term2(termIndex);
 		this.term3 = Fixtures.term3(termIndex);
