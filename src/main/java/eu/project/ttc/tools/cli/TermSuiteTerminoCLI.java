@@ -98,11 +98,13 @@ public class TermSuiteTerminoCLI {
 	private static final String COMPOST_SIMILARITY_THRESHOLD = "compost-similarity-threshold";
 	private static final String COMPOST_SCORE_THRESHOLD = "compost-score-threshold";
 
+	/** deactivate the occurrences saving in memory while indexing **/
+	private static final String NO_OCCURRENCE = "no-occurrence";
+
+	
 	/** Mate tagger parameter **/
 	private static final String MATE = "mate";
 
-	
-	
 	/*
 	 * With Mate
 	 */
@@ -133,6 +135,12 @@ public class TermSuiteTerminoCLI {
 	private static final String CLEAN_TOP_N = "filter-top-n";
 	private static final String CLEAN_PROPERTY = "filter-property";
 	private static final String CLEAN_FILTER_VARIANTS = "filter-variants";
+	
+	/*
+	 * Max size filtering
+	 */
+	private static final String PERIODIC_FILTER_PROPERTY = "periodic-filter-property";
+	private static final String PERIODIC_FILTER_MAX_SIZE = "periodic-filter-max-size";
 	
 	// the tsv file path argument
 	private static final String TSV = "tsv";
@@ -178,6 +186,20 @@ public class TermSuiteTerminoCLI {
 	private static Optional<Integer> cleaningTopN = Optional.absent();
 	private static Optional<TermProperty> cleaningProperty = Optional.of(TermProperty.WR_LOG);
 	private static boolean keepVariantsWhileCleaning = true;
+	
+	/*
+	 * Max size periodic filtering
+	 */
+	private static Optional<TermProperty> periodicFilteringProperty = Optional.absent();
+	private static int maxSizeFilteringMaxSize = 20000;
+	
+	
+	/*
+	 * Spotter params
+	 */
+	private static boolean spotWithOccurrences = true;
+	
+	
 	
 	/*
 	 * Export params
@@ -273,13 +295,14 @@ public class TermSuiteTerminoCLI {
 						.aeMateTaggerLemmatizer();
 				
 
-				// Filter urls
+				// Filter urlsFilter
 				pipeline.aeUrlFilter();
 
 				// stemmer
 				pipeline.aeStemmer();
 				
 				// regex spotter
+				pipeline.setSpotWithOccurrences(spotWithOccurrences);
 				pipeline.aeRegexSpotter();
 
 				//export Json CAS spotter
@@ -322,6 +345,9 @@ public class TermSuiteTerminoCLI {
 					pipeline.aeTopNCleaner(cleaningProperty.get(), cleaningTopN.get());
 				}
 
+				if(periodicFilteringProperty.isPresent())
+					pipeline.aeMaxSizeThresholdCleaner(periodicFilteringProperty.get(), maxSizeFilteringMaxSize);
+				
 				// contextualize
 				if(contextualize) {
 					pipeline
@@ -395,6 +421,28 @@ public class TermSuiteTerminoCLI {
 
 	private static Options declareOptions() {
 		Options options = new Options();
+		
+		options.addOption(TermSuiteCLIUtils.createOption(
+				null, 
+				NO_OCCURRENCE, 
+				false, 
+				"Deactivate the occurrence store in memory (recommended for big corpus).", 
+				false));
+
+		options.addOption(TermSuiteCLIUtils.createOption(
+				null, 
+				PERIODIC_FILTER_PROPERTY, 
+				true, 
+				"Activate a periodic cleaning of the on-going terminology by a given property.", 
+				false));
+
+		options.addOption(TermSuiteCLIUtils.createOption(
+				null, 
+				PERIODIC_FILTER_MAX_SIZE, 
+				true, 
+				"The maximum allowed size of the on-going terminology in memory.", 
+				false));
+
 		
 		options.addOption(TermSuiteCLIUtils.createOption(
 				null, 
@@ -608,6 +656,10 @@ public class TermSuiteTerminoCLI {
 	}
 
 	public static void readArguments(CommandLine line) throws IOException {
+		
+		if(line.hasOption(NO_OCCURRENCE))
+			spotWithOccurrences = false;
+			
 		inlineText = line.getOptionValue(TEXT);
 		if(inlineText == null)
 			inlineText = TermSuiteCLIUtils.readIn(encoding);
@@ -697,6 +749,13 @@ public class TermSuiteTerminoCLI {
 		if(line.hasOption(CLEAN_FILTER_VARIANTS))
 			keepVariantsWhileCleaning = false;
 
+		if(line.hasOption(PERIODIC_FILTER_PROPERTY)) {
+			periodicFilteringProperty = Optional.of(TermProperty.forName(line.getOptionValue(PERIODIC_FILTER_PROPERTY)));
+			if(line.hasOption(PERIODIC_FILTER_MAX_SIZE))
+				maxSizeFilteringMaxSize = Integer.parseInt(line.getOptionValue(PERIODIC_FILTER_MAX_SIZE).trim()); 
+		}
+
+		
 		if(line.hasOption(TSV))
 			tsvFile = Optional.of(line.getOptionValue(TSV));
 		if(line.hasOption(TSV_PROPERTIES)) {
