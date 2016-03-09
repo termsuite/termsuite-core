@@ -201,7 +201,7 @@ public class TermSuitePipeline {
 		this.resFactory = new TermSuiteResourceHelper(this.lang);
 		this.aggregateBuilder = new AggregateBuilder();
 		this.pipelineObserverName = PipelineObserver.class.getSimpleName() + "-" + Thread.currentThread().getId() + "-" + System.currentTimeMillis();
-
+		TermSuiteResourceManager.getInstance().register(pipelineObserverName, new TermSuitePipelineObserver(2,1));
 	}
 
 	public static TermSuitePipeline create(String lang) {
@@ -245,8 +245,6 @@ public class TermSuitePipeline {
 	 */
 	public TermSuitePipeline addPipelineListener(PipelineListener pipelineListener) {
 		TermSuiteResourceManager manager = TermSuiteResourceManager.getInstance();
-		if(!manager.contains(pipelineObserverName))
-			manager.register(pipelineObserverName, new TermSuitePipelineObserver(2,1));
 		((TermSuitePipelineObserver)manager.get(pipelineObserverName)).registerListener(pipelineListener);
 		this.allowObserving = true;
 		return this;
