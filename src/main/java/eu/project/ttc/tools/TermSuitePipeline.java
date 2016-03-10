@@ -22,6 +22,7 @@
 package eu.project.ttc.tools;
 
 import java.io.Serializable;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.UUID;
@@ -196,18 +197,39 @@ public class TermSuitePipeline {
 	
 //	private int variantDepth = 3;
 
-	private TermSuitePipeline(String lang) {
+	private TermSuitePipeline(String lang, String urlPrefix) {
 		this.lang = Lang.forName(lang);
-		this.resFactory = new TermSuiteResourceHelper(this.lang);
+		if(urlPrefix == null)
+			this.resFactory = new TermSuiteResourceHelper(this.lang);
+		else
+			this.resFactory = new TermSuiteResourceHelper(this.lang, urlPrefix);	
 		this.aggregateBuilder = new AggregateBuilder();
 		this.pipelineObserverName = PipelineObserver.class.getSimpleName() + "-" + Thread.currentThread().getId() + "-" + System.currentTimeMillis();
 		TermSuiteResourceManager.getInstance().register(pipelineObserverName, new TermSuitePipelineObserver(2,1));
 	}
 
 	public static TermSuitePipeline create(String lang) {
-		return new TermSuitePipeline(lang);
+		return new TermSuitePipeline(lang, null);
 	}
 	
+	/**
+	 * 
+	 * Starts a chaining {@link TermSuitePipeline} builder and overrides the default 
+	 * {@link URL} prefix (file:). 
+	 * 
+	 * @param lang
+	 * 			The 
+	 * @param urlPrefix
+	 * 			The {@link URL} prefix to use for accessing TermSuite resources
+	 * @return
+	 * 			The chaining builder.
+	 * 
+	 * @see TermSuiteResourceHelper#TermSuiteResourceHelper(Lang, String)
+	 */
+	public static TermSuitePipeline create(String lang, String urlPrefix) {
+		return new TermSuitePipeline(lang, urlPrefix);
+	}
+
 	public static TermSuitePipeline create(TermIndex termIndex) {
 		Preconditions.checkNotNull(termIndex.getName(), "The term index must have a name before it can be used in TermSuitePipeline");
 	
@@ -236,7 +258,7 @@ public class TermSuitePipeline {
 		return this;
 	}
 	
-	
+		
 	/**
 	 * Registers a pipeline listener.
 	 * 

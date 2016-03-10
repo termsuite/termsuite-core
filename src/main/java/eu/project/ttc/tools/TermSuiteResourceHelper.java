@@ -39,15 +39,20 @@ public class TermSuiteResourceHelper {
 	private Lang lang;
 	private String resourcePath;
 	
-	public TermSuiteResourceHelper(Lang lang) {
+	public TermSuiteResourceHelper(Lang lang, String urlPrefix) {
 		super();
+		
+		/*
+		 * To access resources in a jar:
+		 * jar:file:/home/user/a/b/c/foo.jar!/com/example/stuff/config.txt
+		 */
+		
 		this.lang = lang;
-		this.resourcePath = "file:" + lang.getCode() + File.separator;
-//		this.resourcePath = Paths.get("file:eu", "project","ttc","resources", this.lang.getName());
+		this.resourcePath = urlPrefix + lang.getCode() + File.separator;
 	}
 
-	public TermSuiteResourceHelper(Lang lang, String resourcePath) {
-		this(lang);
+	public TermSuiteResourceHelper(Lang lang) {
+		this(lang, "file:");
 	}
 	
 
@@ -100,7 +105,8 @@ public class TermSuiteResourceHelper {
 	}
 	
 	public Path getMWRegexes() {
-		return Paths.get(resourcePath + this.lang.getName() +"-multi-word-rule-system.regex");
+		Path path = Paths.get(resourcePath + this.lang.getName() +"-multi-word-rule-system.regex");
+		return path;
 	}
 
 	public Path getStopWords() {
