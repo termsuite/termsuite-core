@@ -171,6 +171,9 @@ dependencies {
 
 	// Guava
 	compile "com.google.guava:guava:18.0"
+	
+	// Map DB
+	compile "org.mapdb:mapdb:1.0.9"
 
 	// Snake YAML
 	compile "org.yaml:snakeyaml:1.15"
