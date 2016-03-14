@@ -59,6 +59,7 @@ import eu.project.ttc.models.Word;
 import eu.project.ttc.models.WordBuilder;
 import eu.project.ttc.models.index.JSONTermIndexIO;
 import eu.project.ttc.models.index.MemoryTermIndex;
+import eu.project.ttc.models.occstore.MemoryOccurrenceStore;
 
 public class JSONTermIndexIOSpec {
 	private static final String jsonFile1 = "org/project/ttc/test/json/termIndex1.json";
@@ -77,7 +78,7 @@ public class JSONTermIndexIOSpec {
 	
 	@Before
 	public void initTermIndex() {
-		termIndex = new MemoryTermIndex("Titi va voir Toto", Lang.FR);
+		termIndex = new MemoryTermIndex("Titi va voir Toto", Lang.FR, new MemoryOccurrenceStore());
 		termIndex.setCorpusId("ccid");
 		termIndex.setWordAnnotationsNum(222);
 		termIndex.setSpottedTermsNum(111);

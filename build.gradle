@@ -73,6 +73,11 @@ if(hasProperty("signing.keyId")) {
 repositories {
 	mavenLocal()
 	mavenCentral()
+	
+	// The Oracle Maven repo for BerkeleyDB
+//	maven {
+//		url "http://download.oracle.com/maven"
+//	}
 }
 
 publishing {
@@ -173,8 +178,11 @@ dependencies {
 	compile "com.google.guava:guava:18.0"
 	
 	// Map DB
-	compile "org.mapdb:mapdb:1.0.9"
+	compile 'org.mapdb:mapdb:2.0-beta13'
 
+	// Berkeley DB
+//	compile "com.sleepycat:je:6.4.25"
+	
 	// Snake YAML
 	compile "org.yaml:snakeyaml:1.15"
 

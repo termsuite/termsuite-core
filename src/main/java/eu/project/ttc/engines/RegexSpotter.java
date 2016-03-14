@@ -209,10 +209,13 @@ public class RegexSpotter extends TokenRegexAE {
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
 		LOGGER.info("Number of spotted term occurrences added to term index: {}", addedOccurrences);
+		this.termIndexResource.getTermIndex().getOccurrenceStore().makeIndex();
 	}
 	@Override
 	protected void afterRuleProcessing(JCas jCas) {
 		flushOccurrenceBuffer(jCas);
+		this.termIndexResource.getTermIndex().getOccurrenceStore().flush();
+
 	}
 
 }

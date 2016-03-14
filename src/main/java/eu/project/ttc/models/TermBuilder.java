@@ -36,6 +36,8 @@ public class TermBuilder {
 	private static final Logger LOGGER  = LoggerFactory.getLogger(TermBuilder.class);
 	
 	private TermIndex termIndex;
+	private OccurrenceStore occurrenceStore;
+	
 	private String groupingKey;
 	private String spottingRule;
 	private Optional<Integer> id = Optional.absent();
@@ -71,7 +73,7 @@ public class TermBuilder {
 					this.groupingKey,
 					gKey);
 		}
-		Term term = new Term(id.get(), gKey, termWords, spottingRule);
+		Term term = new Term(termIndex.getOccurrenceStore(), id.get(), gKey, termWords, spottingRule);
 		if(generalFrequencyNorm.isPresent())
 			term.setGeneralFrequencyNorm(generalFrequencyNorm.get());
 		if(frequencyNorm.isPresent())

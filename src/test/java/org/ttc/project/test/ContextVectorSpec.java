@@ -40,7 +40,7 @@ public class ContextVectorSpec {
 	@Before
 	public void setTerms() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
 		this.vector = new ContextVector(Fixtures.term1());
-		this.doc = new Document("doc1");
+		this.doc = new Document(1, "doc1");
 		this.vector.addCooccurrence(new TermOccurrence(Fixtures.term1(), "text1", doc, 10, 15));
 		this.vector.addCooccurrence(new TermOccurrence(Fixtures.term3(), "text2", doc, 30, 45));
 		this.vector.addCooccurrence(new TermOccurrence(Fixtures.term2(), "text2", doc, 50, 65));

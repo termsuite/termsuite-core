@@ -30,6 +30,7 @@ import com.google.common.collect.Maps;
 
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.utils.TermUtils;
 
 /**
  * 
@@ -164,6 +165,11 @@ public enum TermProperty {
 			return termIndex.getWRLogMeasure().getValue(t);
 		case WR_LOG_Z_SCORE:
 			return termIndex.getWRLogMeasure().getZScore(t);
+		case PILOT:
+			/*
+			 * Not optimal at all. Use TermFormGetter
+			 */
+			return TermUtils.formGetter(termIndex, true).getPilot(t);
 		default:
 			return getValue(t);
 		}
@@ -174,7 +180,8 @@ public enum TermProperty {
 		case WR:
 		case WR_LOG:
 		case WR_LOG_Z_SCORE:
-			throw new IllegalStateException("This property is a termIndex measure. Should use #getValue(TermIndex termIndex, Term t) instead.");
+		case PILOT:
+			throw new IllegalStateException("Should use #getValue(TermIndex termIndex, Term t) instead.");
 		case DOCUMENT_FREQUENCY:
 			return t.getDocumentFrequency();
 		case FREQUENCY:
@@ -187,8 +194,6 @@ public enum TermProperty {
 			return t.getFrequencyNorm();
 		case GROUPING_KEY:
 			return t.getGroupingKey();
-		case PILOT:
-			return t.getPilot();
 		case PATTERN:
 			return t.getPattern();
 		case SPOTTING_RULE:

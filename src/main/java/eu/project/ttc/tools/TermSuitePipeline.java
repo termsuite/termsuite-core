@@ -83,9 +83,12 @@ import eu.project.ttc.engines.exporter.TSVExporter;
 import eu.project.ttc.engines.exporter.VariantEvalExporter;
 import eu.project.ttc.engines.exporter.XmiCasExporter;
 import eu.project.ttc.metrics.LogLikelihood;
+import eu.project.ttc.models.OccurrenceStore;
 import eu.project.ttc.models.OccurrenceType;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.index.MemoryTermIndex;
+import eu.project.ttc.models.occstore.FileOccurrenceStore;
+import eu.project.ttc.models.occstore.MemoryOccurrenceStore;
 import eu.project.ttc.readers.AbstractToTxtSaxHandler;
 import eu.project.ttc.readers.EmptyCollectionReader;
 import eu.project.ttc.readers.GenericXMLToTxtCollectionReader;
@@ -143,6 +146,9 @@ import uima.sandbox.mapper.resources.MappingResource;
  */
 public class TermSuitePipeline {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermSuitePipeline.class);
+	
+	public static enum OccurrenceStoreMode{MEMORY, FILE, NONE}
+
 	private String pipelineObserverName;
 	private boolean allowObserving = false;
 	private AggregateBuilder aggregateBuilder;
@@ -167,10 +173,18 @@ public class TermSuitePipeline {
 	private String exportFilteringRule = FilterRules.SpecificityThreshold.name();
 	private float exportFilteringThreshold = 0;
 	
+	
+	private OccurrenceStore occurrenceStore = new MemoryOccurrenceStore();
+	
 	private Optional<? extends TermIndex> termIndex = Optional.absent();
-	private boolean spotWithOccurrences = true;
+//	private boolean spotWithOccurrences = true;
 	private String contextAssocRateMeasure = LogLikelihood.class.getName();
 
+	
+
+	private OccurrenceStoreMode occurrenceStoringMode = OccurrenceStoreMode.MEMORY;
+
+	
 	/*
 	 * Cleaner properties
 	 */
@@ -843,7 +857,7 @@ public class TermSuitePipeline {
 					RegexSpotter.class,
 					TokenRegexAE.PARAM_ALLOW_OVERLAPPING_OCCURRENCES, true,
 					RegexSpotter.POST_PROCESSING_STRATEGY, postProcStrategy,
-					RegexSpotter.KEEP_OCCURRENCES_IN_TERM_INDEX, this.spotWithOccurrences
+					RegexSpotter.KEEP_OCCURRENCES_IN_TERM_INDEX, this.occurrenceStoringMode != OccurrenceStoreMode.NONE
 				);
 			
 			if(enableSyntacticLabels)
@@ -1139,7 +1153,7 @@ public class TermSuitePipeline {
 	 * 			this {@link TermSuitePipeline} object
 	 */
 	public TermSuitePipeline emptyTermIndex(String name) {
-		this.termIndex = Optional.of(new MemoryTermIndex(name, this.lang));
+		this.termIndex = Optional.of(new MemoryTermIndex(name, this.lang, this.occurrenceStore));
 		return this;
 	}
 
@@ -1647,8 +1661,34 @@ public class TermSuitePipeline {
 		}
 	}
 
-	public TermSuitePipeline setSpotWithOccurrences(boolean b) {
-		this.spotWithOccurrences  = b;
+	/**
+	 * Stores all occurrences in a file. This option may be 
+	 * mandatory for large corpora.
+	 * 
+	 * @param fileURL
+	 * 			The url to the file where to store the occurrences
+	 * @return
+	 * 			this builder
+	 */
+	public TermSuitePipeline setFileOccurrenceStore(String fileURL) {
+		this.occurrenceStoringMode = OccurrenceStoreMode.FILE;
+		this.occurrenceStore = new FileOccurrenceStore(fileURL);
+		return this;
+	}
+
+	
+	/**
+	 * Use TermSuitePipeline#setOccurrenceStoreMode instead.
+	 * 
+	 * @param activate
+	 * @return this pipeline builder
+	 * 
+	 */
+	public TermSuitePipeline setSpotWithOccurrences(boolean activate) {
+		if(!activate)
+			this.occurrenceStoringMode = OccurrenceStoreMode.NONE;
+		else if(activate && this.occurrenceStoringMode == OccurrenceStoreMode.NONE)
+			this.occurrenceStoringMode = OccurrenceStoreMode.MEMORY;
 		return this;
 	}
 

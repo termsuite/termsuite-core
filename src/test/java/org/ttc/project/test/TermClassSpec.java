@@ -36,6 +36,7 @@ import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermBuilder;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.index.MemoryTermIndex;
+import eu.project.ttc.models.occstore.MemoryOccurrenceStore;
 
 public class TermClassSpec {
 
@@ -46,7 +47,7 @@ public class TermClassSpec {
 
 	@Before
 	public void setTerms() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
-		termIndex = new MemoryTermIndex("TermIndexWithOccurrences", Lang.EN);
+		termIndex = new MemoryTermIndex("TermIndexWithOccurrences", Lang.EN, new MemoryOccurrenceStore());
 		
 		final Document doc = Fixtures.document1();
 		

@@ -52,6 +52,11 @@ public interface TermIndex {
 	public void setCorpusId(String corpusID);
 	public String getCorpusId();
 	
+	/**
+	 * The occurrence store 
+	 */
+	public OccurrenceStore getOccurrenceStore();
+
 	
 	/*
 	 * Terms

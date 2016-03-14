@@ -40,6 +40,7 @@ import com.google.common.collect.Sets;
 
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.Document;
+import eu.project.ttc.models.OccurrenceStore;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermBuilder;
 import eu.project.ttc.models.TermClass;
@@ -66,6 +67,11 @@ public class MemoryTermIndex implements TermIndex {
 	private static final String MEASURE_WR = "wr";
 	private static final String MEASURE_WRLOG = "wrLog";
 	private static final String MEASURE_FREQUENCY = "frequency";
+
+	/**
+	 * The occurrence store 
+	 */
+	private OccurrenceStore occurrenceStore;
 
 	/*
 	 * The root index of terms. Variants must not be referenced at 
@@ -96,18 +102,20 @@ public class MemoryTermIndex implements TermIndex {
 	private Lang lang;
 	private String corpusId;
 	
+	private int currentDocumentId = 0;
 	private int currentId = 0;
 	private int nbWordAnnotations = 0;
 	private int nbSpottedTerms = 0;
 	
-	public MemoryTermIndex(String name, Lang lang) {
+	public MemoryTermIndex(String name, Lang lang, OccurrenceStore occurrenceStore) {
 		this.lang = lang;
 		this.name = name;
+		this.occurrenceStore = occurrenceStore;
 		this.termMeasures.put(MEASURE_WR, new WRMeasure(this));
 		this.termMeasures.put(MEASURE_WRLOG, new WRLogMeasure(this));
 		this.termMeasures.put(MEASURE_FREQUENCY, new FrequencyMeasure(this));
 	}
-
+	
 	@Override
 	public void addTerm(Term term) {
 		Preconditions.checkArgument(
@@ -378,7 +386,7 @@ public class MemoryTermIndex implements TermIndex {
 	public Document getDocument(String url) {
 		Document document = documents.get(url);
 		if(document == null) {
-			document = new Document(url);
+			document = new Document(currentDocumentId++, url);
 			documents.put(url, document);
 		}
 		return document;
@@ -485,5 +493,10 @@ public class MemoryTermIndex implements TermIndex {
 	@Override
 	public void setSpottedTermsNum(int spottedTermsNum) {
 		this.nbSpottedTerms = spottedTermsNum;
+	}
+	
+	@Override
+	public OccurrenceStore getOccurrenceStore() {
+		return this.occurrenceStore;
 	}
 }

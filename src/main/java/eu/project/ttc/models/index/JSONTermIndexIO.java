@@ -24,6 +24,7 @@ package eu.project.ttc.models.index;
 import java.io.IOException;
 import java.io.Reader;
 import java.io.Writer;
+import java.net.URL;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -45,6 +46,7 @@ import eu.project.ttc.models.Component;
 import eu.project.ttc.models.CompoundType;
 import eu.project.ttc.models.ContextVector;
 import eu.project.ttc.models.Document;
+import eu.project.ttc.models.OccurrenceStore;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermBuilder;
 import eu.project.ttc.models.TermIndex;
@@ -54,6 +56,7 @@ import eu.project.ttc.models.TermWord;
 import eu.project.ttc.models.VariationType;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.models.WordBuilder;
+import eu.project.ttc.models.occstore.MemoryOccurrenceStore;
 
 public class JSONTermIndexIO {
 	/*
@@ -64,6 +67,12 @@ public class JSONTermIndexIO {
 	private static final String MSG_EXPECT_PROP_FOR_OCCURRENCE = "Expecting %s property for occurrence";
 	private static final String MSG_EXPECT_PROP_FOR_TERM_WORD = "Expecting %s property for term word";
 
+	/*
+	 * Occurrence storing options
+	 */
+	private static final String OCCURRENCE_STORAGE_EMBEDDED = "embedded";
+	private static final String OCCURRENCE_STORAGE_FILESTORE = "store";
+	
 	/*
 	 * Json properties
 	 */
@@ -100,6 +109,8 @@ public class JSONTermIndexIO {
 	private static final String ASSOC_RATE = "assoc_rate";
 	private static final String CO_TERM = "co_term";
 	private static final String TOTAL_COOCCURRENCES = "total_cooccs";
+	private static final String OCCURRENCE_STORAGE = "occurrence_storage";
+	private static final String OCCURRENCE_STORE_URL = "occurrence_store_path";
 	
 	private static final String FREQ_NORM = "f_norm";
 	private static final String GENERAL_FREQ_NORM = "gf_norm";
@@ -160,6 +171,9 @@ public class JSONTermIndexIO {
 				String termIndexName = null;
 				Lang lang = null;
 				String corpusID = null;
+				String occurrenceStorage = null;
+				String occurrenceStorePath = null;
+
 				while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
 					fieldname = jp.getCurrentName();
 					if (LANG.equals(fieldname)) {
@@ -172,11 +186,23 @@ public class JSONTermIndexIO {
 						nbSpottedTerms = jp.nextIntValue(-1);
 					} else if (CORPUS_ID.equals(fieldname)) {
 						corpusID = jp.nextTextValue();
+					} else if (OCCURRENCE_STORAGE.equals(fieldname)) {
+						occurrenceStorage = jp.nextTextValue();
+					} else if (OCCURRENCE_STORE_URL.equals(fieldname)) {
+						occurrenceStorePath = jp.nextTextValue();
 					}
 				}
 				Preconditions.checkState(lang != null, "The property meta.lang must be defined");
 				Preconditions.checkState(termIndexName != null, "The property meta.name must be defined");
-				termIndex = new MemoryTermIndex(termIndexName, lang);
+				
+				OccurrenceStore occurrenceStore = new MemoryOccurrenceStore();
+				if(occurrenceStorage!= null && occurrenceStorage.equals(OCCURRENCE_STORAGE_FILESTORE)){
+					Preconditions.checkNotNull(occurrenceStorePath, "Field %s missing", OCCURRENCE_STORE_URL);
+					URL storeURL = new URL(occurrenceStorePath);
+					throw new IllegalStateException("Not yet implemented");
+				}
+				
+				termIndex = new MemoryTermIndex(termIndexName, lang, occurrenceStore);
 				if(corpusID != null)
 					termIndex.setCorpusId(corpusID);
 				if(nbWordAnnos != -1)

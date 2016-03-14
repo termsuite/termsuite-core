@@ -40,12 +40,14 @@ import com.google.common.collect.Sets;
 import eu.project.ttc.utils.IteratorUtils;
 import eu.project.ttc.utils.TermSuiteConstants;
 import eu.project.ttc.utils.TermSuiteUtils;
+import eu.project.ttc.utils.TermUtils;
 
 
 public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 	
 	private static final String NO_OCCURRENCE = "[No occurrence]";
-	private List<TermOccurrence> occurrences = Lists.newArrayList();
+//	private List<TermOccurrence> occurrences = Lists.newArrayList();
+	private OccurrenceStore occurrenceStore;
 	private Set<Document> documents = Sets.newHashSet();
 
 	private Set<TermVariation> variations = Sets.newHashSet();
@@ -114,11 +116,12 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 	 */
 	private TermClass termClass;
 	
-	Term(int id) {
+	Term(OccurrenceStore occurrenceStore, int id) {
+		this.occurrenceStore = occurrenceStore;
 		this.id = id;
 	}
-	Term(int id, String termId, List<TermWord> termWords, String spottingRule) {
-		this(id);
+	Term(OccurrenceStore occurrenceStore, int id, String termId, List<TermWord> termWords, String spottingRule) {
+		this(occurrenceStore, id);
 		this.groupingKey = termId;
 		this.spottingRule = spottingRule;
 		this.termWords = termWords;
@@ -136,25 +139,8 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 		this.pattern = pattern;
 	}
 	
-//	public void setWR(float wr) {
-//		
-//		this.wr = wr;
-//	}
-//	
-//	public void setWRLog(double wrLog) {
-//		this.wrLog = wrLog;
-//	}
-//	
-//	public void setWRLogZScore(double wrLogZScore) {
-//		this.wrLogZScore = wrLogZScore;
-//	}
-	
-//	public double getWRLogZScore() {
-//		return wrLogZScore;
-//	}
-	
 	public Collection<TermOccurrence> getOccurrences() {
-		return Collections.unmodifiableCollection(occurrences);
+		return Collections.unmodifiableCollection(occurrenceStore.getOccurrences(this));
 	}
 	
 	@Override
@@ -163,9 +149,9 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 	}
 
 
-	public boolean isEmpty() {
-		return occurrences.isEmpty();
-	}
+//	public boolean isEmpty() {
+//		return occurrences.isEmpty();
+//	}
 
 	/**
 	 * Increments the frequency, updates the inner list of source documents of this term
@@ -184,7 +170,7 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 		this.frequency++;
 		this.documents.add(e.getSourceDocument());
 		if(keepOccurrence)
-			occurrences.add(e);
+			occurrenceStore.addOccurrence(this,e);
 	}
 
 	
@@ -199,8 +185,8 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 		this.addOccurrence(e, true);
 	}
 
-	public boolean addAll(Collection<TermOccurrence> c) {
-		return occurrences.addAll(c);
+	public void addAll(Collection<TermOccurrence> c) {
+		occurrenceStore.addAllOccurrences(this, c);
 	}
 	
 	
@@ -333,18 +319,18 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 		return frequency;
 	}
 	
-	public void removeOccurrence(String file, int begin, int end) {
-		// TODO Operation requires a linked list and is still too long. HashMap ?
-		Iterator<TermOccurrence> it = this.occurrences.iterator();
-		while(it.hasNext()) {
-			TermOccurrence occ = it.next();
-			if(occ.getBegin() == begin && occ.getEnd() == end && file.equals(occ.getSourceDocument().getUrl())) {
-				it.remove();
-				break;
-			}
-		}
-		this.frequency --;
-	}
+//	public void removeOccurrence(String file, int begin, int end) {
+//		// TODO Operation requires a linked list and is still too long. HashMap ?
+//		Iterator<TermOccurrence> it = this.occurrenceStore.occurrenceIterator(this);
+//		while(it.hasNext()) {
+//			TermOccurrence occ = it.next();
+//			if(occ.getBegin() == begin && occ.getEnd() == end && file.equals(occ.getSourceDocument().getUrl())) {
+//				it.remove();
+//				break;
+//			}
+//		}
+//		this.frequency --;
+//	}
 	
 	public TermWord firstWord() {
 		return this.termWords.get(0);
@@ -366,6 +352,11 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 		return !bases.isEmpty();
 	}
 	
+	/**
+	 * Use {@link TermUtils#formGetter(TermIndex, boolean)} instead.
+	 * @return
+	 */
+	@Deprecated
 	public Set<String> getForms() {
 		List<String> forms = Lists.newArrayList();
 		for(TermOccurrence o:getOccurrences())
@@ -374,6 +365,12 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 		return counters.keySet();
 	}
 	
+	/**
+	 * Use {@link TermUtils#formGetter(TermIndex, boolean)} instead.
+	 * 
+	 * @return
+	 */
+	@Deprecated
 	public String getPilot() {
 		Iterator<String> it = getForms().iterator();
 		if(it.hasNext())
@@ -487,7 +484,7 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 	
 	public Iterator<Iterator<TermOccurrence>> contextIterator(final OccurrenceType coTermsType, final int contextSize) {
 		return new AbstractIterator<Iterator<TermOccurrence>>() {
-			private Iterator<TermOccurrence> it = Term.this.occurrences.iterator();
+			private Iterator<TermOccurrence> it = Term.this.occurrenceStore.occurrenceIterator(Term.this);
 			
 			
 			@Override

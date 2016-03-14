@@ -68,18 +68,10 @@ public class TermUtils {
 					.result();
 		}
 	};
-//	
-//	/**
-//	 * Most specific first (based on WeirdnessRation: Term#getWR())
-//	 */
-//	public static Comparator<Term> specificityComparator = new Comparator<Term>() {
-//		@Override
-//		public int compare(Term o1, Term o2) {
-//			return ComparisonChain.start()
-//					.compare(o2.getWR(), o1.getWR())
-//					.result();
-//		}
-//	};
+	
+	public static TermFormGetter formGetter(TermIndex termIndex, boolean downcaseForms) {
+		return new TermFormGetter(termIndex, downcaseForms);
+	}
 	
 	public static void showIndex(TermIndex index, PrintStream stream) {
 		Optional<Pattern> watchExpression = Optional.absent();

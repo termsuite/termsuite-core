@@ -43,6 +43,8 @@ public class Document {
 	 */
 	private String url;
 	
+	private int id;
+	
 	/**
 	 * The ordered LinkedList of occurrences.
 	 */
@@ -53,7 +55,7 @@ public class Document {
 	 */
 	private boolean occurrencesDirty = true;
 
-	public Document(String url) {
+	public Document(int id, String url) {
 		super();
 		this.url = url;
 	}
@@ -230,5 +232,9 @@ public class Document {
 
 	public void inspect(String string) {
 		System.out.format("%s%s\t_occurrences: %s\n", string, url,  _occurrences.size());
+	}
+
+	public Integer getId() {
+		return id;
 	}
 }

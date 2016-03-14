@@ -29,6 +29,7 @@ import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.models.WordBuilder;
 import eu.project.ttc.models.index.MemoryTermIndex;
+import eu.project.ttc.models.occstore.MemoryOccurrenceStore;
 
 public class Fixtures {
 
@@ -273,23 +274,23 @@ public class Fixtures {
 	 * @return
 	 */
 	public static Document document1() {
-		return new Document("url1");
+		return new Document(101, "url1");
 	}
 	
 	/**
 	 * @return
 	 */
 	public static Document document2() {
-		return new Document("url2");
+		return new Document(102, "url2");
 	}
 	
 	public static MemoryTermIndex emptyTermIndex() {
-		return new MemoryTermIndex("EmptyTermIndex", Lang.EN);
+		return new MemoryTermIndex("EmptyTermIndex", Lang.EN, new MemoryOccurrenceStore());
 	}
 
 		
 	public static MemoryTermIndex termIndex() {
-		MemoryTermIndex memoryTermIndex = new MemoryTermIndex("TermIndex", Lang.EN);
+		MemoryTermIndex memoryTermIndex = new MemoryTermIndex("TermIndex", Lang.EN, new MemoryOccurrenceStore());
 //		term1(memoryTermIndex);
 //		term2(memoryTermIndex);
 //		term3(memoryTermIndex);
@@ -299,7 +300,7 @@ public class Fixtures {
 	}
 	
 	public static MemoryTermIndex termIndexWithOccurrences() {
-		MemoryTermIndex memoryTermIndex = new MemoryTermIndex("TermIndexWithOccurrences", Lang.EN);
+		MemoryTermIndex memoryTermIndex = new MemoryTermIndex("TermIndexWithOccurrences", Lang.EN, new MemoryOccurrenceStore());
 		final Document doc = document1();
 		
 		
