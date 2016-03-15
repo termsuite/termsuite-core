@@ -27,4 +27,10 @@ public interface OccurrenceStore {
 	 * 		the URL, <code>null</code> if this store is of type {@link Type#MEMORY}
 	 */
 	public String getUrl();
+	
+	/**
+	 * Removes all occurrences of the term
+	 * @param t
+	 */
+	public void removeTerm(Term t);
 }

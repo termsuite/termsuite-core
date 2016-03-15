@@ -59,4 +59,9 @@ public class MemoryOccurrenceStore implements OccurrenceStore {
 	public void makeIndex() {
 		// nothing to do
 	}
+
+	@Override
+	public void removeTerm(Term t) {
+		map.removeAll(t.getId());
+	}
 }

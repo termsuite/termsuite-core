@@ -337,6 +337,8 @@ public class MemoryTermIndex implements TermIndex {
 		termsByGroupingKey.remove(t.getGroupingKey());
 		termsById.remove(t.getId());
 		
+		occurrenceStore.removeTerm(t);
+		
 		// remove from custom indexes
 		for(CustomTermIndex customIndex:customIndexes.values())
 			customIndex.removeTerm(t);

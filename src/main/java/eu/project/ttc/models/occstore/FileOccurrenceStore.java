@@ -150,4 +150,9 @@ public class FileOccurrenceStore implements OccurrenceStore {
 		this.state = State.INDEXED;
 		LOGGER.info("Occurrence store indexed");
 	}
+
+	@Override
+	public void removeTerm(Term t) {
+		occurrenceMap.remove(t.getId());
+	}
 }
