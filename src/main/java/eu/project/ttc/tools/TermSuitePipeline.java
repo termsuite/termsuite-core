@@ -266,6 +266,7 @@ public class TermSuitePipeline {
 		else {
 			try {
 				SimplePipeline.runPipeline(this.crDescription, createDescription());
+				terminates();
 			} catch (Exception e) {
 				throw new TermSuitePipelineException(e);
 			}
@@ -274,6 +275,12 @@ public class TermSuitePipeline {
 	}
 	
 		
+	private void terminates() {
+		if(termIndex.get().getOccurrenceStore() instanceof MongoDBOccurrenceStore) 
+			((MongoDBOccurrenceStore)termIndex.get().getOccurrenceStore()).close();
+			
+	}
+
 	/**
 	 * Registers a pipeline listener.
 	 * 
@@ -296,6 +303,7 @@ public class TermSuitePipeline {
 	public TermSuitePipeline run(JCas cas) {
 		try {
 			SimplePipeline.runPipeline(cas, createDescription());
+			terminates();
 			return this;
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
