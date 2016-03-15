@@ -57,6 +57,7 @@ public class Document {
 
 	public Document(int id, String url) {
 		super();
+		this.id = id;
 		this.url = url;
 	}
 	

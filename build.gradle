@@ -182,7 +182,9 @@ dependencies {
 
 	// Berkeley DB
 //	compile "com.sleepycat:je:6.4.25"
-	
+
+	compile "org.mongodb:mongo-java-driver:3.2.2"
+			
 	// Snake YAML
 	compile "org.yaml:snakeyaml:1.15"
 

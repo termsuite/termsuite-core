@@ -89,6 +89,7 @@ import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.index.MemoryTermIndex;
 import eu.project.ttc.models.occstore.FileOccurrenceStore;
 import eu.project.ttc.models.occstore.MemoryOccurrenceStore;
+import eu.project.ttc.models.occstore.MongoDBOccurrenceStore;
 import eu.project.ttc.readers.AbstractToTxtSaxHandler;
 import eu.project.ttc.readers.EmptyCollectionReader;
 import eu.project.ttc.readers.GenericXMLToTxtCollectionReader;
@@ -147,7 +148,7 @@ import uima.sandbox.mapper.resources.MappingResource;
 public class TermSuitePipeline {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermSuitePipeline.class);
 	
-	public static enum OccurrenceStoreMode{MEMORY, FILE, NONE}
+	public static enum OccurrenceStoreMode{MEMORY, FILE, MONGODB, NONE}
 
 	private String pipelineObserverName;
 	private boolean allowObserving = false;
@@ -1673,6 +1674,24 @@ public class TermSuitePipeline {
 	public TermSuitePipeline setFileOccurrenceStore(String fileURL) {
 		this.occurrenceStoringMode = OccurrenceStoreMode.FILE;
 		this.occurrenceStore = new FileOccurrenceStore(fileURL);
+		return this;
+	}
+
+	
+	/**
+	 * 
+	 * Stores occurrences to MongoDB
+	 * 
+	 * @param mongoDBUrl
+	 * 			the mongo db connection uri
+	 * @param dbName
+	 * 			the db name in mongo
+	 * @return
+	 * 			this builder
+	 */
+	public TermSuitePipeline setMongoDBOccurrenceStore(String mongoDBUrl, String dbName) {
+		this.occurrenceStoringMode = OccurrenceStoreMode.MONGODB;
+		this.occurrenceStore = new MongoDBOccurrenceStore(mongoDBUrl, dbName);
 		return this;
 	}
 
