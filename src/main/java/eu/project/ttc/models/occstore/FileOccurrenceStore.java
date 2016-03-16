@@ -21,6 +21,7 @@ import eu.project.ttc.models.Document;
 import eu.project.ttc.models.OccurrenceStore;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermOccurrence;
+import eu.project.ttc.models.TermSelector;
 
 public class FileOccurrenceStore implements OccurrenceStore {
 	private static final Logger LOGGER = LoggerFactory.getLogger(FileOccurrenceStore.class);
@@ -154,5 +155,10 @@ public class FileOccurrenceStore implements OccurrenceStore {
 	@Override
 	public void removeTerm(Term t) {
 		occurrenceMap.remove(t.getId());
+	}
+
+	@Override
+	public void deleteMany(TermSelector selector) {
+		throw new UnsupportedOperationException("not supported");
 	}
 }

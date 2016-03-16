@@ -21,28 +21,37 @@
  *******************************************************************************/
 package eu.project.ttc.engines.cleaner;
 
-import java.util.Set;
-
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
+import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
+import org.apache.uima.fit.descriptor.ExternalResource;
 import org.apache.uima.jcas.JCas;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import eu.project.ttc.models.FrequencyUnderThreshholdSelector;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.resources.TermIndexResource;
 
 
 /**
  * Removes terms from the {@link TermIndex}.
  */
-public class MaxSizeThresholdCleaner extends AbstractTermIndexCleaner {
+public class MaxSizeThresholdCleaner extends JCasAnnotator_ImplBase {
 	private static final Logger logger = LoggerFactory.getLogger(MaxSizeThresholdCleaner.class);
+
+	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
+	protected TermIndexResource termIndexResource;
 
 	public static final String MAX_SIZE="MaxSize";
 	@ConfigurationParameter(name=MAX_SIZE, mandatory=true)
 	private int maxSize;
 	
+	public static final String CLEANING_PROPERTY="CleaningProperty";
+	@ConfigurationParameter(name=CLEANING_PROPERTY, mandatory=true)
+	protected TermProperty property;
+
 	private static final Float REMOVAL_RATIO_THRESHHOLD = 0.6f;
 	private int currentFrequencyThreshhold = 2;
 	
@@ -52,7 +61,6 @@ public class MaxSizeThresholdCleaner extends AbstractTermIndexCleaner {
 
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
-		super.process(aJCas);
 		
 		int sizeBefore = termIndexResource.getTermIndex().getTerms().size();
 		if(termIndexResource.getTermIndex().getTerms().size() >= maxSize) {
@@ -61,7 +69,9 @@ public class MaxSizeThresholdCleaner extends AbstractTermIndexCleaner {
 					sizeBefore,
 					maxSize, 
 					currentFrequencyThreshhold);
-			clean();
+			
+			termIndexResource.getTermIndex().deleteMany(new FrequencyUnderThreshholdSelector(currentFrequencyThreshhold));
+
 			int sizeAfter = termIndexResource.getTermIndex().getTerms().size();
 			float removalRatio = ((float)(sizeBefore - sizeAfter))/sizeBefore;
 			logger.info(
@@ -84,17 +94,6 @@ public class MaxSizeThresholdCleaner extends AbstractTermIndexCleaner {
 						);
 				this.currentFrequencyThreshhold++;
 			}
-		}
-	}
-	
-	@Override
-	protected void doCleaningPartition(Set<Term> keptTerms,
-			Set<Term> removedTerms) {
-		for(Term t:termIndexResource.getTermIndex().getTerms()) {
-			if(acceptTerm(t))
-				keptTerms.add(t);
-			else
-				removedTerms.add(t);
 		}
 	}
 }

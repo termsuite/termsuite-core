@@ -9,6 +9,7 @@ import com.google.common.collect.Multimap;
 import eu.project.ttc.models.OccurrenceStore;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermOccurrence;
+import eu.project.ttc.models.TermSelector;
 
 public class MemoryOccurrenceStore implements OccurrenceStore {
 
@@ -63,5 +64,17 @@ public class MemoryOccurrenceStore implements OccurrenceStore {
 	@Override
 	public void removeTerm(Term t) {
 		map.removeAll(t.getId());
+	}
+
+	@Override
+	public void deleteMany(TermSelector selector) {
+		Term t;
+		for(Iterator<Term> it = map.keySet().iterator(); it.hasNext();) {
+			t = it.next();
+			if(selector.select(t))
+				it.remove();
+		}
+			
+		
 	}
 }

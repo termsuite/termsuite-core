@@ -167,8 +167,8 @@ public abstract class AbstractTermSuiteCollectionReader extends CollectionReader
 							mCurrentIndex,
 							mFiles.size()
 							);
-					size = lastSize;
-					top = lastTop;
+					lastSize = size;
+					lastTop = top;
 				}
 			}, 5000l, 5000l);
 		}

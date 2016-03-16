@@ -33,4 +33,6 @@ public interface OccurrenceStore {
 	 * @param t
 	 */
 	public void removeTerm(Term t);
+	
+	public void deleteMany(TermSelector selector);
 }

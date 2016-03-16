@@ -24,10 +24,12 @@ package eu.project.ttc.models.index;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.assertj.core.util.Lists;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -46,6 +48,7 @@ import eu.project.ttc.models.TermBuilder;
 import eu.project.ttc.models.TermClass;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermOccurrence;
+import eu.project.ttc.models.TermSelector;
 import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.models.TermWord;
 import eu.project.ttc.models.Word;
@@ -334,10 +337,14 @@ public class MemoryTermIndex implements TermIndex {
 	@Override
 	public void removeTerm(Term t) {
 		
+		removeTermOnly(t);
+		occurrenceStore.removeTerm(t);
+	}
+
+	private void removeTermOnly(Term t) {
 		termsByGroupingKey.remove(t.getGroupingKey());
 		termsById.remove(t.getId());
 		
-		occurrenceStore.removeTerm(t);
 		
 		// remove from custom indexes
 		for(CustomTermIndex customIndex:customIndexes.values())
@@ -500,5 +507,18 @@ public class MemoryTermIndex implements TermIndex {
 	@Override
 	public OccurrenceStore getOccurrenceStore() {
 		return this.occurrenceStore;
+	}
+
+	@Override
+	public void deleteMany(TermSelector selector) {
+		List<Term> rem = Lists.newArrayList();
+		for(Term t:termsById.values()) {
+			if(selector.select(t))
+				rem.add(t);
+		}
+		for(Term t:rem)
+			removeTermOnly(t);
+		occurrenceStore.deleteMany(selector);
+		
 	}
 }

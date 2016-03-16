@@ -134,6 +134,9 @@ public interface TermIndex {
 	public Iterable<TermMeasure> getMeasures();
 
 	
+	public void deleteMany(TermSelector selector);
+
+	
 	/*
 	 * Occurrences
 	 */

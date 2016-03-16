@@ -47,6 +47,19 @@ public class BlockingThreadPoolExecutor extends ThreadPoolExecutor {
 			throw e;
 		}
 	}
+	
+	/**
+	 * Waits for all queued thread to execute.
+	 */
+	public void sync() {
+		while(!getQueue().isEmpty() || getActiveCount() > 0) {
+			try {
+				Thread.sleep(5l);
+			} catch (InterruptedException e) {
+				throw new RuntimeException(e);
+			}
+		}
+	}
 
 	@Override
 	protected void afterExecute(Runnable r, Throwable t) {

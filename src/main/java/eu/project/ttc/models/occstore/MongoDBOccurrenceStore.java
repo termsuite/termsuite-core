@@ -1,25 +1,25 @@
 package eu.project.ttc.models.occstore;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.Executor;
-import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.lang.mutable.MutableInt;
 import org.assertj.core.util.Maps;
+import org.assertj.core.util.Sets;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Preconditions;
+import com.google.common.base.Stopwatch;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
-import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Lists;
-import com.google.common.collect.Multimap;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import com.mongodb.WriteConcern;
@@ -27,16 +27,17 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.BulkWriteOptions;
 import com.mongodb.client.model.Filters;
-import com.mongodb.client.model.IndexOptions;
 import com.mongodb.client.model.UpdateOneModel;
 import com.mongodb.client.model.UpdateOptions;
 import com.mongodb.client.model.Updates;
 import com.mongodb.client.model.WriteModel;
 
 import eu.project.ttc.models.Document;
+import eu.project.ttc.models.FrequencyUnderThreshholdSelector;
 import eu.project.ttc.models.OccurrenceStore;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermOccurrence;
+import eu.project.ttc.models.TermSelector;
 
 public class MongoDBOccurrenceStore implements OccurrenceStore {
 	private static final Logger LOGGER = LoggerFactory.getLogger(MongoDBOccurrenceStore.class);
@@ -50,13 +51,13 @@ public class MongoDBOccurrenceStore implements OccurrenceStore {
 	 */
 	public class MyMonitorThread implements Runnable
 	{
-	    private ThreadPoolExecutor executor;
+	    private BlockingThreadPoolExecutor executor;
 
 	    private int seconds;
 
 	    private boolean run=true;
 
-	    public MyMonitorThread(ThreadPoolExecutor executor, int delay)
+	    public MyMonitorThread(BlockingThreadPoolExecutor executor, int delay)
 	    {
 	        this.executor = executor;
 	        this.seconds=delay;
@@ -70,7 +71,7 @@ public class MongoDBOccurrenceStore implements OccurrenceStore {
 	    public void run()
 	    {
 	        while(run){
-	                display();
+	                log();
 	                try {
 	                    Thread.sleep(seconds*1000);
 	                } catch (InterruptedException e) {
@@ -80,8 +81,8 @@ public class MongoDBOccurrenceStore implements OccurrenceStore {
 
 	    }
 
-		public void display() {
-			System.out.println(
+		public void log() {
+			LOGGER.info(
 			    String.format("[ThreadPoolExecutor monitor] [%d/%d] Active: %d, Queued: %d, Completed: %d, Task: %d, isShutdown: %s, isTerminated: %s",
 			        this.executor.getPoolSize(),
 			        this.executor.getCorePoolSize(),
@@ -95,12 +96,14 @@ public class MongoDBOccurrenceStore implements OccurrenceStore {
 	}
 	
 	
-	private static final String TERM_ID = "tid";
+//	private static final String TERM_ID = "tid";
 
-	private static final String DOC_ID = "doc";
+	
+	private static final String _ID = "_id";
+	private static final String DOC_ID = "did";
 
-	private static final String BEGIN = "b";
-	private static final String END = "e";
+	private static final String BEGIN = "ob";
+	private static final String END = "oe";
 
 	private static final String OCCURRENCES = "occurrences";
 
@@ -109,17 +112,22 @@ public class MongoDBOccurrenceStore implements OccurrenceStore {
 	protected static final String COVERED_TEXT = "t";
 
 	private static final String FREQUENCY = "f";
+	private static final String TERM_ID = "tid";
 
 	private String uri;
 
 	private State state;
 	
 	private MongoCollection<org.bson.Document> termCollection;
+	private MongoCollection<org.bson.Document> occurrenceCollection;
 	private MongoCollection<org.bson.Document> documentUrlCollection;
+	
+	
 	private Map<Integer, String> documentsUrls;
-	private Multimap<Term, TermOccurrence> termsBuffer;
+	private List<TermOccurrence> occurrencesBuffer;
+	private Map<Term, MutableInt> termsBuffer;
 
-	private ThreadPoolExecutor executor;
+	private BlockingThreadPoolExecutor executor;
 	private MyMonitorThread monitor;
 	
 	public MongoDBOccurrenceStore(String dbName) {
@@ -138,10 +146,10 @@ public class MongoDBOccurrenceStore implements OccurrenceStore {
 	public MongoDBOccurrenceStore(String mongoDbUri, String dbName, State state) {
 		super();
 		
-		int blockingBound = 500; // the size of the blocking queue.
-		int maximumPoolSize = 50; // the max number of threads to execute
+		int blockingBound = 15; // the size of the blocking queue.
+		int maximumPoolSize = 10; // the max number of threads to execute
 		executor = new BlockingThreadPoolExecutor(
-				5, 
+				0, 
 				maximumPoolSize, 
 				1, TimeUnit.SECONDS, 
 				blockingBound);
@@ -159,32 +167,24 @@ public class MongoDBOccurrenceStore implements OccurrenceStore {
 		MongoClientURI connectionString = new MongoClientURI(mongoDbUri);
 		mongoClient = new MongoClient(connectionString);
 		MongoDatabase db = mongoClient.getDatabase( dbName )
-										.withWriteConcern(WriteConcern.JOURNALED);
+										.withWriteConcern(WriteConcern.ACKNOWLEDGED);
+		db.runCommand(new org.bson.Document("profile", 1));
 
 		if(state == State.COLLECTING) {
 			db.drop();
 		}
 		
 		termCollection = db.getCollection("terms");
+		occurrenceCollection = db.getCollection("occurrences");
 		documentUrlCollection = db.getCollection("documents");
 
-		
-		documentUrlCollection.createIndex(
-				new org.bson.Document(DOC_ID, 1), 
-				new IndexOptions().unique(true));
-		termCollection.createIndex(
-				new org.bson.Document(TERM_ID, 1), 
-				new IndexOptions().unique(true));
-		termCollection.createIndex(
-				new org.bson.Document(FREQUENCY, -1), 
-				new IndexOptions().sparse(true));
-		
 		resetBuffers();
 	}
 
 	private void resetBuffers() {
-		this.termsBuffer = HashMultimap.create();
+		this.termsBuffer = Maps.newHashMap();
 		this.documentsUrls = Maps.newHashMap();
+		this.occurrencesBuffer = Lists.newArrayList();
 	}
 	
 
@@ -200,10 +200,11 @@ public class MongoDBOccurrenceStore implements OccurrenceStore {
 
 	private LoadingCache<Integer, Document> documentCache = CacheBuilder.newBuilder()
 			.concurrencyLevel(1)
+			.maximumSize(10000)
 			.build(new CacheLoader<Integer, Document>() {
 				@Override
 				public Document load(Integer documentId) throws Exception {
-					org.bson.Document bsonDoc = documentUrlCollection.find(Filters.eq(DOC_ID,documentId)).first();
+					org.bson.Document bsonDoc = documentUrlCollection.find(Filters.eq(_ID,documentId)).first();
 					return new Document(documentId, bsonDoc.getString(DOC_URL));
 				}
 			});
@@ -212,21 +213,17 @@ public class MongoDBOccurrenceStore implements OccurrenceStore {
 			.maximumSize(1000)
 			.build(new CacheLoader<Term, List<TermOccurrence>>() {
 				@Override
-				public List<TermOccurrence> load(Term key) throws Exception {
-					@SuppressWarnings("unchecked")
-					ArrayList<org.bson.Document> list = (ArrayList<org.bson.Document>)termCollection.find(Filters.eq(TERM_ID,key.getId())).first().get(OCCURRENCES);
-					List<TermOccurrence> occurrences = Lists.newArrayListWithCapacity(list.size());
-					org.bson.Document bsonOccurrence = null;
-					for(Object value:list) {
-						bsonOccurrence = (org.bson.Document)value;
+				public List<TermOccurrence> load(Term term) throws Exception {
+					List<TermOccurrence> occurrences = Lists.newArrayList();
+					for(org.bson.Document occDoc:occurrenceCollection.find(Filters.eq(TERM_ID,term.getId()))) {
 						occurrences.add(new TermOccurrence(
-								key, 
-								bsonOccurrence.getString(COVERED_TEXT), 
-								documentCache.getUnchecked(bsonOccurrence.getInteger(DOC_ID)), 
-								bsonOccurrence.getInteger(BEGIN),
-								bsonOccurrence.getInteger(END)
-
-							));
+								term, 
+								occDoc.getString(COVERED_TEXT), 
+								documentCache.getUnchecked(occDoc.getInteger(DOC_ID)), 
+								occDoc.getInteger(BEGIN),
+								occDoc.getInteger(END)
+								));
+						
 					}
 					return occurrences;
 				}
@@ -245,7 +242,12 @@ public class MongoDBOccurrenceStore implements OccurrenceStore {
 		checkState(State.COLLECTING);
 
 		documentsUrls.put(e.getSourceDocument().getId(), e.getSourceDocument().getUrl());
-		termsBuffer.put(term, e);
+		MutableInt mutableInt = termsBuffer.get(term);
+		if(mutableInt == null)
+			termsBuffer.put(term, new MutableInt(1));
+		else
+			mutableInt.increment();
+		occurrencesBuffer.add(e);
 	}
 
 	@Override
@@ -267,11 +269,32 @@ public class MongoDBOccurrenceStore implements OccurrenceStore {
 	
 	@Override
 	public void flush() {
+
+		// bulk write occurrences
+		final List<org.bson.Document> occDocuments = Lists.newArrayListWithCapacity(occurrencesBuffer.size());
+		for(TermOccurrence o:this.occurrencesBuffer) {
+			
+			occDocuments.add(new org.bson.Document()
+					.append(TERM_ID, o.getTerm().getId())
+					.append(DOC_ID, o.getSourceDocument().getId())
+					.append(BEGIN, o.getBegin())
+					.append(END, o.getEnd())
+					.append(COVERED_TEXT, o.getCoveredText())
+				);
+		}
+		if(!occurrencesBuffer.isEmpty())
+			executor.execute(new Runnable(){
+					public void run() {
+						occurrenceCollection.insertMany(occDocuments);
+				}
+			});
+
 		
+		// bulk write documents
 		final List<WriteModel<org.bson.Document>> documentUrlsOps = Lists.newArrayListWithCapacity(documentsUrls.size());
 		for(Map.Entry<Integer, String> e:this.documentsUrls.entrySet()) {
 			UpdateOneModel<org.bson.Document> w = new UpdateOneModel<org.bson.Document>(
-					Filters.eq(DOC_ID, e.getKey()),
+					Filters.eq(_ID, e.getKey()),
 					Updates.set(DOC_URL, e.getValue()),
 					new UpdateOptions().upsert(true));
 			documentUrlsOps.add(w);
@@ -285,24 +308,15 @@ public class MongoDBOccurrenceStore implements OccurrenceStore {
 			});
 		
 		
-		final List<WriteModel<org.bson.Document>> termsOps = Lists.newArrayList();
-		
+		// bulk write terms
+		final List<WriteModel<org.bson.Document>> termsOps = Lists.newArrayList();		
 		for(Term t:termsBuffer.keySet()) {
-			List<org.bson.Document> list = Lists.newArrayListWithCapacity(termsBuffer.get(t).size());
-			for(TermOccurrence e:termsBuffer.get(t)) {
-				list.add(new org.bson.Document()
-						.append(DOC_ID, e.getSourceDocument().getId())
-						.append(BEGIN, e.getBegin())
-						.append(END, e.getEnd())
-						.append(COVERED_TEXT, e.getCoveredText()));
-			}
 			UpdateOneModel<org.bson.Document> w = new UpdateOneModel<org.bson.Document>(
-					Filters.eq(TERM_ID, t.getId()), 
-					Updates.combine(Updates.inc(FREQUENCY, list.size()),Updates.pushEach(OCCURRENCES, list)),
+					Filters.eq(_ID, t.getId()), 
+					Updates.inc(FREQUENCY, termsBuffer.get(t).intValue()),
 					new UpdateOptions().upsert(true));
 			termsOps.add(w);
 		}
-		
 		if(!termsOps.isEmpty())
 			executor.execute(new Runnable(){
 				public void run() {
@@ -322,15 +336,18 @@ public class MongoDBOccurrenceStore implements OccurrenceStore {
 
 	@Override
 	public void makeIndex() {
+		LOGGER.info("Indexing the occurrence store");
 		this.state = State.INDEXING;
 		flush();
-		LOGGER.info("Shutting down the executor");
-//		executor.shutdown();
-		LOGGER.info("Waiting for the executor to terminate");
-		while(executor.getActiveCount() > 0) {
-			// Waiting for all taks to terminate
-		}
-		LOGGER.info("Executor terminated");
+		sync();
+		LOGGER.debug("Removing orphan occurrences");
+		Set<Integer> tids = Sets.newHashSet();
+		for(org.bson.Document term:termCollection.find()) 
+			tids.add(term.getInteger(_ID));
+		occurrenceCollection.deleteMany(Filters.nin(TERM_ID, tids));
+		LOGGER.debug("creating index occurrences.{}", TERM_ID);
+		occurrenceCollection.createIndex(new org.bson.Document().append(TERM_ID, 1));
+		LOGGER.debug("Created");
 		monitor.shutdown();
 		this.state = State.INDEXED;
 	}
@@ -339,14 +356,42 @@ public class MongoDBOccurrenceStore implements OccurrenceStore {
 	public void removeTerm(final Term t) {
 		executor.execute(new Runnable(){
 			public void run() {
-				termCollection.deleteOne(new org.bson.Document(TERM_ID, t.getId()));
+				termCollection.deleteOne(new org.bson.Document(_ID, t.getId()));
+				occurrenceCollection.deleteMany(Filters.eq(_ID, t.getId()));
 			}
 		});
 	}
 	
 	public void close() {
+		sync();
 		monitor.shutdown();
 		mongoClient.close();
 		executor.shutdown();
+	}
+
+	@Override
+	public void deleteMany(TermSelector selector) {
+		if (selector instanceof FrequencyUnderThreshholdSelector) {
+			FrequencyUnderThreshholdSelector selector2 = (FrequencyUnderThreshholdSelector) selector;
+			sync();
+			Stopwatch sw = Stopwatch.createStarted();
+			termCollection.deleteMany(Filters.lt(FREQUENCY, selector2.getThreshhold()));
+			LOGGER.debug("Terms deleted in MongoDB in {}ms", sw.elapsed(TimeUnit.MILLISECONDS));
+			
+		}
+	}
+
+	private void sync() {
+		LOGGER.info("Synchronizing with executor and mongoDB server");
+		monitor.log();
+		LOGGER.debug("Waiting for executor to finished queued tasks");
+		Stopwatch sw = Stopwatch.createStarted();
+		executor.sync();
+		LOGGER.debug("Executor synchronized in {}ms", sw.elapsed(TimeUnit.MILLISECONDS));
+		monitor.log();
+		sw = Stopwatch.createStarted();
+		LOGGER.debug("Synchronizing with MongoDB server");
+		mongoClient.fsync(false);
+		LOGGER.debug("MongoDB synchronized in {}ms", sw.elapsed(TimeUnit.MILLISECONDS));
 	}
 }
