@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.Iterator;
 
 public interface OccurrenceStore {
-	public static enum Type {MEMORY, FILE, MONGODB}
+	public static enum Type {MEMORY, MONGODB}
 	public static enum State{COLLECTING,INDEXING,INDEXED}
 
 	public Iterator<TermOccurrence> occurrenceIterator(Term term);
@@ -35,4 +35,5 @@ public interface OccurrenceStore {
 	public void removeTerm(Term t);
 	
 	public void deleteMany(TermSelector selector);
+	void close();
 }

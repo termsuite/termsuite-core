@@ -105,8 +105,6 @@ public class MongoDBOccurrenceStore implements OccurrenceStore {
 	private static final String BEGIN = "ob";
 	private static final String END = "oe";
 
-	private static final String OCCURRENCES = "occurrences";
-
 	private static final String DOC_URL = "url";
 
 	protected static final String COVERED_TEXT = "t";
@@ -114,7 +112,7 @@ public class MongoDBOccurrenceStore implements OccurrenceStore {
 	private static final String FREQUENCY = "f";
 	private static final String TERM_ID = "tid";
 
-	private String uri;
+	private MongoClientURI mongoDBUri;
 
 	private State state;
 	
@@ -130,22 +128,43 @@ public class MongoDBOccurrenceStore implements OccurrenceStore {
 	private BlockingThreadPoolExecutor executor;
 	private MyMonitorThread monitor;
 	
-	public MongoDBOccurrenceStore(String dbName) {
-		this(dbName, State.COLLECTING);
-	}
-	
-	public MongoDBOccurrenceStore(String dbName, State state) {
-		this("mongodb://localhost:27017", dbName, state);
+	public MongoDBOccurrenceStore(String dbURI) {
+		this(dbURI, State.COLLECTING);
 	}
 	
 
-	public MongoDBOccurrenceStore(String mongoDBUrl, String dbName) {
-		this(mongoDBUrl, dbName, State.COLLECTING);
-	}
-	
-	public MongoDBOccurrenceStore(String mongoDbUri, String dbName, State state) {
+	public MongoDBOccurrenceStore(String mongoDbUri, State state) {
 		super();
 		
+		Preconditions.checkNotNull(mongoDbUri, "MongoDB dadabase's URI must not be null");
+		Preconditions.checkState(
+				state != State.INDEXING, 
+				"Invalid occ store state for constructor. Only " + State.COLLECTING + " and " + State.INDEXED + " allowed"
+				);
+
+		this.mongoDBUri = getMongoDBUri(mongoDbUri);
+		this.state = state;
+		
+		initThreadExecutor();
+		
+		MongoClientURI connectionString = new MongoClientURI(mongoDbUri);
+		this.mongoClient = new MongoClient(connectionString);
+		MongoDatabase db = mongoClient.getDatabase(this.mongoDBUri.getDatabase())
+										.withWriteConcern(WriteConcern.ACKNOWLEDGED);
+		db.runCommand(new org.bson.Document("profile", 1));
+
+		if(state == State.COLLECTING)
+			db.drop();
+		
+		this.termCollection = db.getCollection("terms");
+		this.occurrenceCollection = db.getCollection("occurrences");
+		this.documentUrlCollection = db.getCollection("documents");
+
+		resetBuffers();
+	}
+
+
+	private void initThreadExecutor() {
 		int blockingBound = 15; // the size of the blocking queue.
 		int maximumPoolSize = 10; // the max number of threads to execute
 		executor = new BlockingThreadPoolExecutor(
@@ -156,30 +175,16 @@ public class MongoDBOccurrenceStore implements OccurrenceStore {
 				
 		monitor = new MyMonitorThread(executor, 5);
 		new Thread(monitor).start();
-		
-		Preconditions.checkState(
-				state != State.INDEXING, 
-				"Invalid occ store state for constructor. Only " + State.COLLECTING + " and " + State.INDEXED + " allowed"
-				);
-		this.state = state;
-		this.uri =  mongoDbUri;
-		
-		MongoClientURI connectionString = new MongoClientURI(mongoDbUri);
-		mongoClient = new MongoClient(connectionString);
-		MongoDatabase db = mongoClient.getDatabase( dbName )
-										.withWriteConcern(WriteConcern.ACKNOWLEDGED);
-		db.runCommand(new org.bson.Document("profile", 1));
-
-		if(state == State.COLLECTING) {
-			db.drop();
-		}
-		
-		termCollection = db.getCollection("terms");
-		occurrenceCollection = db.getCollection("occurrences");
-		documentUrlCollection = db.getCollection("documents");
-
-		resetBuffers();
 	}
+
+	private MongoClientURI getMongoDBUri(String mongoDbUri) {
+		if(mongoDbUri.startsWith("mongodb://"))
+			return new MongoClientURI(mongoDbUri);
+		else
+			// mongoDbUri is a db name
+			return new MongoClientURI("mongodb://localhost:27017/" + mongoDbUri);
+	}
+
 
 	private void resetBuffers() {
 		this.termsBuffer = Maps.newHashMap();
@@ -263,7 +268,7 @@ public class MongoDBOccurrenceStore implements OccurrenceStore {
 
 	@Override
 	public String getUrl() {
-		return uri;
+		return mongoDBUri.getURI();
 	}
 
 	
@@ -362,6 +367,7 @@ public class MongoDBOccurrenceStore implements OccurrenceStore {
 		});
 	}
 	
+	@Override
 	public void close() {
 		sync();
 		monitor.shutdown();

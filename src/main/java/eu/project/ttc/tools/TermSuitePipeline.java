@@ -87,7 +87,6 @@ import eu.project.ttc.models.OccurrenceStore;
 import eu.project.ttc.models.OccurrenceType;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.index.MemoryTermIndex;
-import eu.project.ttc.models.occstore.FileOccurrenceStore;
 import eu.project.ttc.models.occstore.MemoryOccurrenceStore;
 import eu.project.ttc.models.occstore.MongoDBOccurrenceStore;
 import eu.project.ttc.readers.AbstractToTxtSaxHandler;
@@ -148,10 +147,9 @@ import uima.sandbox.mapper.resources.MappingResource;
 public class TermSuitePipeline {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermSuitePipeline.class);
 	
-	public static enum OccurrenceStoreMode{MEMORY, FILE, MONGODB, NONE}
-
 	private String pipelineObserverName;
 	private boolean allowObserving = false;
+	private boolean spotWithOccurrences = true;
 	private AggregateBuilder aggregateBuilder;
 	private TermSuiteResourceHelper resFactory;
 	private Optional<String> mateModelsPath = Optional.absent();
@@ -159,7 +157,8 @@ public class TermSuitePipeline {
 	private Optional<String> syntacticRegexesFilePath = Optional.absent();
 	private Optional<String> yamlVariantRulesFilePath = Optional.absent();
 	private boolean enableSyntacticLabels = false;
-	private boolean exportJsonWithOccurrences = false;
+	private boolean linkMongoStore = false;
+	private boolean exportJsonWithOccurrences = true;
 	private boolean exportJsonWithContext = false;
 	private Lang lang;
 	private CollectionReaderDescription crDescription;
@@ -180,10 +179,6 @@ public class TermSuitePipeline {
 	private Optional<? extends TermIndex> termIndex = Optional.absent();
 //	private boolean spotWithOccurrences = true;
 	private String contextAssocRateMeasure = LogLikelihood.class.getName();
-
-	
-
-	private OccurrenceStoreMode occurrenceStoringMode = OccurrenceStoreMode.MEMORY;
 
 	
 	/*
@@ -685,7 +680,8 @@ public class TermSuitePipeline {
 					JsonExporter.class, 
 					JsonExporter.TO_FILE_PATH, toFilePath,
 					JsonExporter.WITH_OCCURRENCE, exportJsonWithOccurrences,
-					JsonExporter.WITH_CONTEXTS, exportJsonWithContext
+					JsonExporter.WITH_CONTEXTS, exportJsonWithContext,
+					JsonExporter.LINKED_MONGO_STORE, this.linkMongoStore
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 
@@ -877,7 +873,7 @@ public class TermSuitePipeline {
 					RegexSpotter.class,
 					TokenRegexAE.PARAM_ALLOW_OVERLAPPING_OCCURRENCES, true,
 					RegexSpotter.POST_PROCESSING_STRATEGY, postProcStrategy,
-					RegexSpotter.KEEP_OCCURRENCES_IN_TERM_INDEX, this.occurrenceStoringMode != OccurrenceStoreMode.NONE
+					RegexSpotter.KEEP_OCCURRENCES_IN_TERM_INDEX, spotWithOccurrences
 				);
 			
 			if(enableSyntacticLabels)
@@ -1700,37 +1696,18 @@ public class TermSuitePipeline {
 			throw new TermSuitePipelineException(e);
 		}
 	}
-
-	/**
-	 * Stores all occurrences in a file. This option may be 
-	 * mandatory for large corpora.
-	 * 
-	 * @param fileURL
-	 * 			The url to the file where to store the occurrences
-	 * @return
-	 * 		This chaining {@link TermSuitePipeline} builder object
-	 */
-	public TermSuitePipeline setFileOccurrenceStore(String fileURL) {
-		this.occurrenceStoringMode = OccurrenceStoreMode.FILE;
-		this.occurrenceStore = new FileOccurrenceStore(fileURL);
-		return this;
-	}
-
 	
 	/**
 	 * 
 	 * Stores occurrences to MongoDB
 	 * 
-	 * @param mongoDBUrl
+	 * @param mongoDBUri
 	 * 			the mongo db connection uri
-	 * @param dbName
-	 * 			the db name in mongo
 	 * @return
 	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
-	public TermSuitePipeline setMongoDBOccurrenceStore(String mongoDBUrl, String dbName) {
-		this.occurrenceStoringMode = OccurrenceStoreMode.MONGODB;
-		this.occurrenceStore = new MongoDBOccurrenceStore(mongoDBUrl, dbName);
+	public TermSuitePipeline setMongoDBOccurrenceStore(String mongoDBUri) {
+		this.occurrenceStore = new MongoDBOccurrenceStore(mongoDBUri);
 		return this;
 	}
 
@@ -1744,10 +1721,7 @@ public class TermSuitePipeline {
 	 * 
 	 */
 	public TermSuitePipeline setSpotWithOccurrences(boolean activate) {
-		if(!activate)
-			this.occurrenceStoringMode = OccurrenceStoreMode.NONE;
-		else if(activate && this.occurrenceStoringMode == OccurrenceStoreMode.NONE)
-			this.occurrenceStoringMode = OccurrenceStoreMode.MEMORY;
+		this.spotWithOccurrences = activate;
 		return this;
 	}
 
@@ -1810,5 +1784,21 @@ public class TermSuitePipeline {
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
+	}
+
+	/**
+	 * 
+	 * Configures the {@link JsonExporter} to not embed the occurrences 
+	 * in the json file, but to link the mongodb occurrence store instead.
+	 * 
+	 * 
+	 * 
+	 * @see #haeJsonExporter(String) 
+	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
+	 */
+	public TermSuitePipeline linkMongoStore() {
+		this.linkMongoStore = true;
+		return this;
 	}
 }

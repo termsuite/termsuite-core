@@ -77,4 +77,9 @@ public class MemoryOccurrenceStore implements OccurrenceStore {
 			
 		
 	}
+
+	@Override
+	public void close() {
+		// do nothing
+	}
 }
