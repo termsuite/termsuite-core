@@ -59,6 +59,8 @@ import eu.project.ttc.models.Word;
 import eu.project.ttc.models.WordBuilder;
 import eu.project.ttc.models.index.JSONTermIndexIO;
 import eu.project.ttc.models.index.MemoryTermIndex;
+import eu.project.ttc.models.index.io.LoadOptions;
+import eu.project.ttc.models.index.io.SaveOptions;
 import eu.project.ttc.models.occstore.MemoryOccurrenceStore;
 
 public class JSONTermIndexIOSpec {
@@ -128,9 +130,9 @@ public class JSONTermIndexIOSpec {
 	public void testSaveLoadReturnWithNoVariant() throws IOException {
 		term1.removeTermVariation(term1.getVariations(VariationType.SYNTACTICAL).iterator().next());
 		StringWriter writer = new StringWriter();
-		JSONTermIndexIO.save(writer, termIndex, true, true);
+		JSONTermIndexIO.save(writer, termIndex, new SaveOptions().withContexts(true).withOccurrences(true));
 		String string = writer.toString();
-		JSONTermIndexIO.load(new StringReader(string), true);
+		JSONTermIndexIO.load(new StringReader(string), new LoadOptions().withOccurrences(true));
 	}
 
 
@@ -138,9 +140,9 @@ public class JSONTermIndexIOSpec {
 	@Test
 	public void testSaveLoadReturn() throws IOException {
 		StringWriter writer = new StringWriter();
-		JSONTermIndexIO.save(writer, termIndex, true, true);
+		JSONTermIndexIO.save(writer, termIndex, new SaveOptions().withContexts(true).withOccurrences(true));
 		String string = writer.toString();
-		TermIndex termIndex2 = JSONTermIndexIO.load(new StringReader(string), true);
+		TermIndex termIndex2 = JSONTermIndexIO.load(new StringReader(string), new LoadOptions().withOccurrences(true));
 		
 		assertEquals(111, termIndex2.getSpottedTermsNum());
 		assertEquals(222, termIndex2.getWordAnnotationsNum());
@@ -182,7 +184,7 @@ public class JSONTermIndexIOSpec {
 	@Test
 	public void testExportTermIndexToJsonWithoutOccurrences() throws IOException {
 		StringWriter writer = new StringWriter();
-		JSONTermIndexIO.save(writer, termIndex, false, true);
+		JSONTermIndexIO.save(writer, termIndex, new SaveOptions().withContexts(true).withOccurrences(false));
 		ObjectMapper mapper = new ObjectMapper();
 		Map<String,Object> map = mapper.readValue(writer.toString(), 
 			    new TypeReference<HashMap<String,Object>>(){});
@@ -193,7 +195,7 @@ public class JSONTermIndexIOSpec {
 
 	@Test
 	public void testLoadJsonTermIndex() throws IOException {
-		TermIndex termIndex = JSONTermIndexIO.load(new StringReader(json1), true);
+		TermIndex termIndex = JSONTermIndexIO.load(new StringReader(json1), new LoadOptions().withOccurrences(true));
 		
 		assertEquals("Toto va à la plage", termIndex.getName());
 		assertEquals("Toto va à la montagne", termIndex.getCorpusId());
@@ -260,7 +262,7 @@ public class JSONTermIndexIOSpec {
 	@Test
 	public void testExportTermIndexToJsonWithOccurrencesAndContext() throws IOException {
 		StringWriter writer = new StringWriter();
-		JSONTermIndexIO.save(writer, termIndex, true, true);
+		JSONTermIndexIO.save(writer, termIndex, new SaveOptions().withContexts(true).withOccurrences(true));
 		ObjectMapper mapper = new ObjectMapper();
 //		System.out.println(writer.toString());
 		Map<String,Object> map = mapper.readValue(writer.toString(), 
@@ -270,9 +272,9 @@ public class JSONTermIndexIOSpec {
 
 		// test metadata
 		Map<String,String> metadata = (LinkedHashMap<String,String>)map.get("metadata");
-		assertThat(metadata).containsOnlyKeys("name", "corpus-id", "wordsNum", "spottedTermsNum", "lang");
+		assertThat(metadata).containsOnlyKeys("name", "corpus-id", "wordsNum", "spottedTermsNum", "lang", "occurrence_storage");
 		
-		// test input sources
+		// test input sources1
 		@SuppressWarnings("unchecked")
 		Map<String,String> inputSources = (LinkedHashMap<String,String>)map.get("input_sources");
 		assertThat(inputSources).containsOnlyKeys("1", "2", "3");

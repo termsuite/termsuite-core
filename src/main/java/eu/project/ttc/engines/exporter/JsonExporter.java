@@ -25,16 +25,22 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.TreeSet;
 
+import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.jcas.JCas;
+import org.apache.uima.resource.ResourceInitializationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.base.Preconditions;
+
 import eu.project.ttc.engines.AbstractTermIndexExporter;
+import eu.project.ttc.models.OccurrenceStore;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.index.JSONTermIndexIO;
+import eu.project.ttc.models.index.io.SaveOptions;
 
 /**
  * Exports a {@link TermIndex} in the tsv evaluation format.
@@ -55,6 +61,26 @@ public class JsonExporter extends AbstractTermIndexExporter {
 	@ConfigurationParameter(name=WITH_CONTEXTS, mandatory=false, defaultValue="false")
 	private boolean withContexts;
 	
+	public static final String LINKED_MONGO_STORE = "LinkedMongoStore";
+	@ConfigurationParameter(name=LINKED_MONGO_STORE, mandatory=false, defaultValue="false")
+	private boolean linkedMongoStore;
+	
+	private OccurrenceStore occurrenceStore;
+
+	@Override
+	public void initialize(UimaContext context) throws ResourceInitializationException {
+		super.initialize(context);
+		occurrenceStore = termIndexResource.getTermIndex().getOccurrenceStore();
+		if(linkedMongoStore) {
+			Preconditions.checkArgument(
+					occurrenceStore.getStoreType() == OccurrenceStore.Type.MONGODB,
+					"Bad configuration for JSON Exporter %s is true but occurrence store type is %s.",
+					LINKED_MONGO_STORE,
+					occurrenceStore.getStoreType()
+					);
+		}
+	}
+	
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
 	}
@@ -63,7 +89,12 @@ public class JsonExporter extends AbstractTermIndexExporter {
 		try {
 			LOGGER.info("Exporting {} terms to JSON file {}", this.termIndexResource.getTermIndex().getTerms().size(), this.toFilePath);
 			FileWriter writer2 = new FileWriter(toFile);
-			JSONTermIndexIO.save(writer2, this.termIndexResource.getTermIndex(), this.withOccurrences, this.withContexts);
+			SaveOptions saveOptions = new SaveOptions();
+			saveOptions.withOccurrences(withOccurrences);
+			saveOptions.withContexts(withContexts);
+			if(linkedMongoStore)
+				saveOptions.mongoDBOccStoreURI(occurrenceStore.getUrl());
+			JSONTermIndexIO.save(writer2, this.termIndexResource.getTermIndex(), saveOptions);
 			writer2.close();
 		} catch (IOException e) {
 			LOGGER.error("Could not export to file due to IOException: {}", e.getMessage());

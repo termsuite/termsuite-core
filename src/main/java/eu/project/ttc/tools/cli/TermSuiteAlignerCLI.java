@@ -49,6 +49,7 @@ import eu.project.ttc.metrics.SimilarityDistance;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.index.JSONTermIndexIO;
+import eu.project.ttc.models.index.io.LoadOptions;
 import eu.project.ttc.tools.TermSuiteAlignerBuilder;
 
 /**
@@ -272,12 +273,13 @@ public class TermSuiteAlignerCLI {
 			
 		}
 		LOGGER.info("loading source termino {}",line.getOptionValue(SOURCE_TERMINO));
+		LoadOptions loadOptions = new LoadOptions().withContexts(true);
 		sourceTermino = Optional.of(
-				JSONTermIndexIO.load(new FileReader(line.getOptionValue(SOURCE_TERMINO)), true)
+				JSONTermIndexIO.load(new FileReader(line.getOptionValue(SOURCE_TERMINO)), loadOptions)
 			);
 		LOGGER.info("loading target termino {}",line.getOptionValue(TARGET_TERMINO));
 		targetTermino = Optional.of(
-				JSONTermIndexIO.load(new FileReader(line.getOptionValue(TARGET_TERMINO)), true)
+				JSONTermIndexIO.load(new FileReader(line.getOptionValue(TARGET_TERMINO)), loadOptions)
 			);
 		dicoPath = line.getOptionValue(DICTIONARY);
 

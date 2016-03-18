@@ -24,7 +24,6 @@ package eu.project.ttc.models.index;
 import java.io.IOException;
 import java.io.Reader;
 import java.io.Writer;
-import java.net.URL;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -56,7 +55,11 @@ import eu.project.ttc.models.TermWord;
 import eu.project.ttc.models.VariationType;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.models.WordBuilder;
+import eu.project.ttc.models.index.io.IOOptions;
+import eu.project.ttc.models.index.io.LoadOptions;
+import eu.project.ttc.models.index.io.SaveOptions;
 import eu.project.ttc.models.occstore.MemoryOccurrenceStore;
+import eu.project.ttc.models.occstore.MongoDBOccurrenceStore;
 
 public class JSONTermIndexIO {
 	/*
@@ -71,7 +74,7 @@ public class JSONTermIndexIO {
 	 * Occurrence storing options
 	 */
 	private static final String OCCURRENCE_STORAGE_EMBEDDED = "embedded";
-	private static final String OCCURRENCE_STORAGE_FILESTORE = "store";
+	private static final String OCCURRENCE_STORAGE_MONGODB = "MongoDB";
 	
 	/*
 	 * Json properties
@@ -110,60 +113,25 @@ public class JSONTermIndexIO {
 	private static final String CO_TERM = "co_term";
 	private static final String TOTAL_COOCCURRENCES = "total_cooccs";
 	private static final String OCCURRENCE_STORAGE = "occurrence_storage";
-	private static final String OCCURRENCE_STORE_URL = "occurrence_store_path";
-	
+	private static final String OCCURRENCE_MONGODB_STORE_URI = "occurrence_store_mongodb_uri";
+
 	private static final String FREQ_NORM = "f_norm";
 	private static final String GENERAL_FREQ_NORM = "gf_norm";
 	private static final String NB_WORD_ANNOTATIONS = "wordsNum";
 	private static final String NB_SPOTTED_TERMS = "spottedTermsNum";
 	
-//	private static String WR_FIELD = TermProperty.WR.getShortName();
-//	private static String WR_LOG_FIELD = TermProperty.WR_LOG.getShortName();
-//	private static String WR_LOG_ZSCORE_FIELD = TermProperty.WR_LOG_Z_SCORE.getShortName();
-
-	
-	/**
-	 * Loads only the metadata of the TermIndex.
-	 * 
-	 * Calls {@link #load(Reader, boolean, boolean)} with params <code>false</code>, <code>true</code>.
-	 * 
-	 * @param reader
-	 * @return
-	 * @throws JsonParseException
-	 * @throws IOException
-	 */
-	public static TermIndex readMetadata(Reader reader) throws JsonParseException, IOException {
-		return load(reader, false, true);
-	}
-
-	/**
-	 * Loads the json-serialized term index into the param {@link TermIndex} object.
-	 * 
-	 * Calls {@link #load(Reader, boolean, boolean)} with param <code>metadataOnly=false</code>
-	 * 
-	 * @param reader
-	 * @param withContext
-	 * @return
-	 * @throws JsonParseException
-	 * @throws IOException
-	 */
-	public static TermIndex load(Reader reader, boolean withContext) throws JsonParseException, IOException {
-		return load(reader, withContext, false);
-	}
 	
 	/**
 	 * Loads the json-serialized term index into the param {@link TermIndex} object.
 	 * 
 	 * @param reader
-	 * @param withContext
-	 * 			loads contexts if true
-	 * @param metadataOnly
-	 * 			read only the metadata
+	 * @param options
+	 * 			The deserialization {@link IOOptions}.
 	 * @return
 	 * @throws JsonParseException
 	 * @throws IOException
 	 */
-	public static TermIndex load(Reader reader, boolean withContext, boolean metadataOnly) throws JsonParseException, IOException {
+	public static TermIndex load(Reader reader, LoadOptions options) throws JsonParseException, IOException {
 		TermIndex termIndex = null;
 		JsonFactory jsonFactory = new JsonFactory(); 
 		JsonParser jp = jsonFactory.createParser(reader); // or Stream, Reader
@@ -192,11 +160,12 @@ public class JSONTermIndexIO {
 		Map<Integer, List<TempVecEntry>> contextVectors = Maps.newHashMap();
 		
 		
+		OccurrenceStore occurrenceStore = null;
 		
 		// useful var for debug
 		@SuppressWarnings("unused")
 		JsonToken tok;
-		
+
 		while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
 			 
 			fieldname = jp.getCurrentName();
@@ -206,7 +175,7 @@ public class JSONTermIndexIO {
 				Lang lang = null;
 				String corpusID = null;
 				String occurrenceStorage = null;
-				String occurrenceStorePath = null;
+				String occurrenceStoreURI = null;
 
 				while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
 					fieldname = jp.getCurrentName();
@@ -222,19 +191,18 @@ public class JSONTermIndexIO {
 						corpusID = jp.nextTextValue();
 					} else if (OCCURRENCE_STORAGE.equals(fieldname)) {
 						occurrenceStorage = jp.nextTextValue();
-					} else if (OCCURRENCE_STORE_URL.equals(fieldname)) {
-						occurrenceStorePath = jp.nextTextValue();
+					} else if (OCCURRENCE_MONGODB_STORE_URI.equals(fieldname)) {
+						occurrenceStoreURI = jp.nextTextValue();
 					}
 				}
 				Preconditions.checkState(lang != null, "The property meta.lang must be defined");
 				Preconditions.checkState(termIndexName != null, "The property meta.name must be defined");
 				
-				OccurrenceStore occurrenceStore = new MemoryOccurrenceStore();
-				if(occurrenceStorage!= null && occurrenceStorage.equals(OCCURRENCE_STORAGE_FILESTORE)){
-					Preconditions.checkNotNull(occurrenceStorePath, "Field %s missing", OCCURRENCE_STORE_URL);
-					URL storeURL = new URL(occurrenceStorePath);
-					throw new IllegalStateException("Not yet implemented");
-				}
+				if(occurrenceStorage != null && occurrenceStorage.equals(OCCURRENCE_STORAGE_MONGODB)) {
+					Preconditions.checkNotNull(occurrenceStoreURI, "Missing attribute " + OCCURRENCE_MONGODB_STORE_URI);
+					occurrenceStore = new MongoDBOccurrenceStore(occurrenceStoreURI, OccurrenceStore.State.INDEXED);
+				} else
+					occurrenceStore = new MemoryOccurrenceStore();
 				
 				termIndex = new MemoryTermIndex(termIndexName, lang, occurrenceStore);
 				if(corpusID != null)
@@ -244,7 +212,7 @@ public class JSONTermIndexIO {
 				if(nbSpottedTerms != -1)
 					termIndex.setSpottedTermsNum(nbSpottedTerms);
 				
-				if(metadataOnly)
+				if(options.metadataOnly())
 					return termIndex;
 
 			} else if (WORDS.equals(fieldname)) {
@@ -343,7 +311,8 @@ public class JSONTermIndexIO {
 										Preconditions.checkArgument(fileSource != -1, MSG_EXPECT_PROP_FOR_OCCURRENCE, FILE);
 										Preconditions.checkNotNull(inputSources.get(fileSource), "No file source with id: %s", fileSource);
 										Preconditions.checkNotNull(text, MSG_EXPECT_PROP_FOR_OCCURRENCE, TEXT);
-										builder.addOccurrence(begin, end, termIndex.getDocument(inputSources.get(fileSource)), text);
+										if(occurrenceStore.getStoreType() == OccurrenceStore.Type.MEMORY)
+											builder.addOccurrence(begin, end, termIndex.getDocument(inputSources.get(fileSource)), text);
 									} 
 								}
 							// end occurrences
@@ -385,7 +354,7 @@ public class JSONTermIndexIO {
 
 					} // end term object
 					builder.createAndAddToIndex();
-					if(withContext)
+					if(options.withContexts())
 						contextVectors.put(currentTermId, currentContextVector);
 
 				}// end array of terms
@@ -437,7 +406,7 @@ public class JSONTermIndexIO {
 		}
 		jp.close();
 		
-		if(withContext) {
+		if(options.withContexts()) {
 			/*
 			 *  map term ids with terms in context vectors and
 			 *  set context vectors
@@ -462,7 +431,7 @@ public class JSONTermIndexIO {
 		return termIndex;
 	}
 
-	public static void save(Writer writer, TermIndex termIndex, boolean withOccurrences, boolean withContexts) throws IOException {
+	public static void save(Writer writer, TermIndex termIndex, SaveOptions options) throws IOException {
 		JsonFactory jsonFactory = new JsonFactory(); // or, for data binding, org.codehaus.jackson.mapper.MappingJsonFactory 
 //		jsonFactory.configure(f, state)
 		JsonGenerator jg = jsonFactory.createGenerator(writer); // or Stream, Reader
@@ -481,6 +450,16 @@ public class JSONTermIndexIO {
 			jg.writeString(termIndex.getCorpusId());
 		}
 		
+		jg.writeFieldName(OCCURRENCE_STORAGE);
+		if(options.isMongoDBOccStore()) {
+			jg.writeString(OCCURRENCE_STORAGE_MONGODB);
+			jg.writeFieldName(OCCURRENCE_MONGODB_STORE_URI);
+			jg.writeString(options.getMongoDBOccStore());
+		} else if(options.occurrencesEmbedded())
+			jg.writeString(OCCURRENCE_STORAGE_EMBEDDED);
+		else
+			throw new IllegalStateException("Unknown storage mode");
+
 		jg.writeFieldName(NB_WORD_ANNOTATIONS);
 		jg.writeNumber(termIndex.getWordAnnotationsNum());
 		jg.writeFieldName(NB_SPOTTED_TERMS);
@@ -564,7 +543,7 @@ public class JSONTermIndexIO {
 			jg.writeFieldName(SPOTTING_RULE);
 			jg.writeString(t.getSpottingRule());
 			
-			if(withOccurrences) {
+			if(options.withOccurrences() && options.occurrencesEmbedded()) {
 				jg.writeFieldName(OCCURRENCES);
 				jg.writeStartArray();
 				for(TermOccurrence termOcc:t.getOccurrences()) {
@@ -582,7 +561,7 @@ public class JSONTermIndexIO {
 				jg.writeEndArray();
 			}
 			
-			if(withContexts && t.isContextVectorComputed()) {
+			if(options.withContexts() && t.isContextVectorComputed()) {
 				jg.writeFieldName(CONTEXT);
 				jg.writeStartObject();
 				
