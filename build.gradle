@@ -176,12 +176,6 @@ dependencies {
 	// Guava
 	compile "com.google.guava:guava:18.0"
 	
-	// Map DB
-	compile 'org.mapdb:mapdb:2.0-beta13'
-
-	// Berkeley DB
-//	compile "com.sleepycat:je:6.4.25"
-
 	compile "org.mongodb:mongo-java-driver:3.2.2"
 			
 	// Snake YAML
