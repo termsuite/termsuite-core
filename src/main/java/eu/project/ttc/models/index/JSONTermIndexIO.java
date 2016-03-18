@@ -317,30 +317,35 @@ public class JSONTermIndexIO {
 								}// end words
 								
 							} else if (OCCURRENCES.equals(fieldname)) {
-								while ((tok = jp.nextToken()) != JsonToken.END_ARRAY) {
-									begin = -1;
-									end = -1;
-									fileSource = -1;
-									text = null;
-									while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
-										fieldname = jp.getCurrentName();
-										if (BEGIN.equals(fieldname)) 
-											begin = jp.nextIntValue(-1);
-										else if (TEXT.equals(fieldname)) 
-											text = jp.nextTextValue();
-										else if (END.equals(fieldname)) 
-											end = jp.nextIntValue(-1);
-										else if (FILE.equals(fieldname)) {
-											fileSource = jp.nextIntValue(-1);
+								tok = jp.nextToken();
+								if(tok == JsonToken.START_ARRAY) {
+									
+									while ((tok = jp.nextToken()) != JsonToken.END_ARRAY) {
+										begin = -1;
+										end = -1;
+										fileSource = -1;
+										text = null;
+										while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
+											fieldname = jp.getCurrentName();
+											if (BEGIN.equals(fieldname)) 
+												begin = jp.nextIntValue(-1);
+											else if (TEXT.equals(fieldname)) 
+												text = jp.nextTextValue();
+											else if (END.equals(fieldname)) 
+												end = jp.nextIntValue(-1);
+											else if (FILE.equals(fieldname)) {
+												fileSource = jp.nextIntValue(-1);
+											}
 										}
-									}
-									Preconditions.checkArgument(begin != -1, MSG_EXPECT_PROP_FOR_OCCURRENCE, BEGIN);
-									Preconditions.checkArgument(end != -1, MSG_EXPECT_PROP_FOR_OCCURRENCE, END);
-									Preconditions.checkArgument(fileSource != -1, MSG_EXPECT_PROP_FOR_OCCURRENCE, FILE);
-									Preconditions.checkNotNull(inputSources.get(fileSource), "No file source with id: %s", fileSource);
-									Preconditions.checkNotNull(text, MSG_EXPECT_PROP_FOR_OCCURRENCE, TEXT);
-									builder.addOccurrence(begin, end, termIndex.getDocument(inputSources.get(fileSource)), text);
-								} 
+										
+										Preconditions.checkArgument(begin != -1, MSG_EXPECT_PROP_FOR_OCCURRENCE, BEGIN);
+										Preconditions.checkArgument(end != -1, MSG_EXPECT_PROP_FOR_OCCURRENCE, END);
+										Preconditions.checkArgument(fileSource != -1, MSG_EXPECT_PROP_FOR_OCCURRENCE, FILE);
+										Preconditions.checkNotNull(inputSources.get(fileSource), "No file source with id: %s", fileSource);
+										Preconditions.checkNotNull(text, MSG_EXPECT_PROP_FOR_OCCURRENCE, TEXT);
+										builder.addOccurrence(begin, end, termIndex.getDocument(inputSources.get(fileSource)), text);
+									} 
+								}
 							// end occurrences
 							} else if (CONTEXT.equals(fieldname)) {
 								@SuppressWarnings("unused")
