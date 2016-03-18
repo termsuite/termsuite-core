@@ -121,15 +121,49 @@ public class JSONTermIndexIO {
 //	private static String WR_LOG_FIELD = TermProperty.WR_LOG.getShortName();
 //	private static String WR_LOG_ZSCORE_FIELD = TermProperty.WR_LOG_Z_SCORE.getShortName();
 
+	
 	/**
-	 * Loads the json-serialized term index into the param {@link TermIndex} object.
+	 * Loads only the metadata of the TermIndex.
+	 * 
+	 * Calls {@link #load(Reader, false, true)}
 	 * 
 	 * @param reader
 	 * @return
 	 * @throws JsonParseException
 	 * @throws IOException
 	 */
+	public static TermIndex readMetadata(Reader reader) throws JsonParseException, IOException {
+		return load(reader, false, true);
+	}
+
+	/**
+	 * Loads the json-serialized term index into the param {@link TermIndex} object.
+	 * 
+	 * Calls {@link #load(Reader, boolean, false)}
+	 * 
+	 * @param reader
+	 * @param withContext
+	 * @return
+	 * @throws JsonParseException
+	 * @throws IOException
+	 */
 	public static TermIndex load(Reader reader, boolean withContext) throws JsonParseException, IOException {
+		return load(reader, withContext, false);
+	}
+	
+	/**
+	 * Loads the json-serialized term index into the param {@link TermIndex} object.
+	 * 
+	 * @param reader
+	 * @param withContext
+	 * 			loads contexts if true
+	 * @param metadataOnly
+	 * 			read only the metadata
+	 * @return
+	 * @throws JsonParseException
+	 * @throws IOException
+	 */
+	public static TermIndex load(Reader reader, boolean withContext, boolean metadataOnly) throws JsonParseException, IOException {
 		TermIndex termIndex = null;
 		JsonFactory jsonFactory = new JsonFactory(); 
 		JsonParser jp = jsonFactory.createParser(reader); // or Stream, Reader
@@ -209,6 +243,9 @@ public class JSONTermIndexIO {
 					termIndex.setWordAnnotationsNum(nbWordAnnos);
 				if(nbSpottedTerms != -1)
 					termIndex.setSpottedTermsNum(nbSpottedTerms);
+				
+				if(metadataOnly)
+					return termIndex;
 
 			} else if (WORDS.equals(fieldname)) {
 				jp.nextToken();
