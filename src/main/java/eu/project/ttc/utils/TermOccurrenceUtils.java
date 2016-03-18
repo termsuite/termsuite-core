@@ -71,7 +71,7 @@ public class TermOccurrenceUtils {
 	 * overlap.
 	 * 
 	 * 
-	 * @see TermOccurrenceUtils#markPrimaryOccurrenceBiggestMeasureFirst(Collection)
+	 * @see TermOccurrenceUtils#markPrimaryOccurrence(Collection, TermMeasure)
 	 * @see TermOccurrence#isPrimaryOccurrence()
 	 * @param occs
 	 * 			the occurrence collection

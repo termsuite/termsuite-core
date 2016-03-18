@@ -240,7 +240,7 @@ public class EvalTrace implements SharedResourceObject {
 
 	/**
 	 * Creates a clone of this trace with only points that are 
-	 * meant to be displayed on a chart (these points are {@link EvalEngine.CHART_AXIS_POINTS})
+	 * meant to be displayed on a chart (these points are {@link EvalEngine#CHART_AXIS_POINTS})
 	 * 
 	 * @return
 	 */

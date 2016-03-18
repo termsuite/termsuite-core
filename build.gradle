@@ -21,10 +21,9 @@ targetCompatibility = 1.7
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
 
-
-
 ///////////////////////////////////////////////////////////////// CONFIGURATION
 javadoc{
+	exclude '**/eu/project/ttc/types/**'
 	options {
 		failOnError = false
 		encoding "UTF-8"

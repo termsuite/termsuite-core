@@ -164,7 +164,6 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 	 * 			set this param to true if you need the occurrence to be stored within the object
 	 * 
 	 * @see #getOccurrences()
-	 * @see #removeOccurrence(String, int, int)
 	 */
 	public void addOccurrence(TermOccurrence e, boolean keepOccurrence) {
 		this.frequency++;
@@ -255,7 +254,7 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 	
 	/**
 	 * 
-	 * Alias for {@link #asComponentIterator(<code>true</code>)}.
+	 * Calls {@link #asComponentIterator(boolean)} with param <code>true</code>.
 	 * 
 	 * @return
 	 */
@@ -455,12 +454,12 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 	 * 
 	 * Regenerate the single-word contextVector of this term and returns it.
 	 * 
-	 * @see #computeContextVector(int, boolean, boolean)
 	 * @param coTermsType
 	 * @param contextSize
 	 * @param cooccFrequencyThreshhold
 	 * @param useTermClasses
 	 * @return
+	 * 		The computed {@link ContextVector} object
 	 */
 	public ContextVector computeContextVector(OccurrenceType coTermsType, int contextSize, 
 			int cooccFrequencyThreshhold, boolean useTermClasses) {

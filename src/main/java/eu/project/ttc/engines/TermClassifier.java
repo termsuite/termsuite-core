@@ -55,7 +55,7 @@ import eu.project.ttc.resources.TermIndexResource;
  * {@link TermClass} object. The unique representative
  * 
  * @see TermClass
- * @see Term#getVariants(int, Comparator)
+ * @see Term#getVariations(eu.project.ttc.models.VariationType...)
  * @author Damien Cram
  *
  */

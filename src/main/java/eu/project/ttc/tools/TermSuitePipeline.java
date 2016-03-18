@@ -286,6 +286,7 @@ public class TermSuitePipeline {
 	 * 
 	 * @param pipelineListener
 	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline addPipelineListener(PipelineListener pipelineListener) {
 		TermSuiteResourceManager manager = TermSuiteResourceManager.getInstance();
@@ -299,6 +300,8 @@ public class TermSuitePipeline {
 	 * Runs the pipeline with {@link SimplePipeline} without requiring a {@link CollectionReader}
 	 * to be defined.
 	 * @param cas the {@link JCas} on which the pipeline operates.
+	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline run(JCas cas) {
 		try {
@@ -330,6 +333,7 @@ public class TermSuitePipeline {
 	 * @param collectionPath
 	 * @param collectionEncoding
 	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline setCollection(TermSuiteCollection termSuiteCollection, String collectionPath, String collectionEncoding) {
 		Preconditions.checkNotNull(termSuiteCollection);
@@ -382,6 +386,7 @@ public class TermSuitePipeline {
 	 * @param droppedTags
 	 * @param txtTags
 	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline setCollection(TermSuiteCollection termSuiteCollection, String collectionPath, String collectionEncoding, String droppedTags, String txtTags)  {
 		try {
@@ -550,6 +555,7 @@ public class TermSuitePipeline {
 	 * @see #haeTsvExporter(String)
 	 * @param properties
 	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline setTsvExportProperties(TermProperty... properties) {
 		this.tsvExportProperties = Joiner.on(",").join(properties);
@@ -562,6 +568,7 @@ public class TermSuitePipeline {
 	 * @see #setTsvExportProperties(TermProperty...)
 	 * @param toFilePath
 	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline haeTsvExporter(String toFilePath) {
 		try {
@@ -587,7 +594,8 @@ public class TermSuitePipeline {
 	 * 
 	 * @param toFilePath
 	 * 				the file path where to write the examples for each variation rules
-	 * @return the pipeline
+	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline haeExportVariationRuleExamples(String toFilePath) {
 		try {
@@ -608,6 +616,7 @@ public class TermSuitePipeline {
 	 * 
 	 * @param toFilePath
 	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline haeCompoundExporter(String toFilePath) {
 		try {
@@ -700,6 +709,7 @@ public class TermSuitePipeline {
 	 * @param maxVariantsPerTerm
 	 * 			The maximum number of variants to eval for each term
 	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline haeVariantEvalExporter(String toFilePath, int topN, int maxVariantsPerTerm)  {
 		try {
@@ -858,6 +868,7 @@ public class TermSuitePipeline {
 	 * base on UIMA Tokens Regex.
 	 * 
 	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline aeRegexSpotter()  {
 		try {
@@ -918,6 +929,7 @@ public class TermSuitePipeline {
 	 * @deprecated 
 	 * 		Use {@link #aeCompostSplitter()} instead
 	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline aeCompoundSplitter()  {
 		try {
@@ -946,6 +958,7 @@ public class TermSuitePipeline {
 	 * @deprecated 
 	 * 		Use {@link #aeCompostSplitter()} instead
 	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline aeNeoClassicalSplitter()  {
 		return aeAffixCompoundSplitter(true, resFactory.getRootBank().toString());
@@ -958,6 +971,7 @@ public class TermSuitePipeline {
 	 * @deprecated 
 	 * 		Use {@link #aeCompostSplitter()} instead
 	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline aePrefixSplitter()  {
 		return aeAffixCompoundSplitter(false, resFactory.getPrefixBank().toString());
@@ -991,6 +1005,7 @@ public class TermSuitePipeline {
 	 * 
 	 * @see TermIndexBlacklistWordFilterAE
 	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline aeStopWordsFilter()  {
 		try {
@@ -1022,6 +1037,7 @@ public class TermSuitePipeline {
 	 * 
 	 * @param toDirectoryPath
 	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline haeXmiCasExporter(String toDirectoryPath)  {
 		try {
@@ -1043,6 +1059,7 @@ public class TermSuitePipeline {
 	 * @see SpotterTSVWriter
 	 * @param toDirectoryPath
 	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline haeSpotterTSVWriter(String toDirectoryPath)  {
 		try {
@@ -1062,6 +1079,7 @@ public class TermSuitePipeline {
 	 * @see ChineseSegmenter
 	 * 
 	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline aeChineseTokenizer()  {
 		try {
@@ -1137,6 +1155,7 @@ public class TermSuitePipeline {
 	/**
 	 * Returns the term index produced (or last modified) by this pipeline.
 	 * @return
+	 * 		The term index processed by this pipeline
 	 */
 	public TermIndex getTermIndex() {
 		return this.termIndex.get();
@@ -1146,6 +1165,8 @@ public class TermSuitePipeline {
 	 * Sets the term index on which this pipeline will run.
 	 * 
 	 * @param termIndex
+	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline setTermIndex(TermIndex termIndex) {
 		this.termIndex = Optional.of(termIndex);
@@ -1159,7 +1180,7 @@ public class TermSuitePipeline {
 	 * @param name
 	 * 			the name of the new term index
 	 * @return
-	 * 			this {@link TermSuitePipeline} object
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline emptyTermIndex(String name) {
 		this.termIndex = Optional.of(new MemoryTermIndex(name, this.lang, this.occurrenceStore));
@@ -1184,6 +1205,7 @@ public class TermSuitePipeline {
 	 * @see TermSpecificityComputer
 	 * @see TermProperty
 	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline aeSpecificityComputer()  {
 		try {
@@ -1226,6 +1248,7 @@ public class TermSuitePipeline {
 	 * @param scope
 	 * @param allTerms
 	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline aeContextualizer(int scope, boolean allTerms) {
 		AnalysisEngineDescription ae;
@@ -1317,6 +1340,7 @@ public class TermSuitePipeline {
 	 * @param threshold
 	 * @param cleaningPeriod
 	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline aeThresholdCleanerPeriodic(TermProperty property, float threshold, int cleaningPeriod)   {
 		return aeThresholdCleaner(property, threshold, true, cleaningPeriod, 0);
@@ -1347,6 +1371,7 @@ public class TermSuitePipeline {
 	 * @param isPeriodic
 	 * @param cleaningPeriod
 	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline aeTopNCleanerPeriodic(TermProperty property, int n, boolean isPeriodic, int cleaningPeriod)  {
 		try {
@@ -1389,6 +1414,7 @@ public class TermSuitePipeline {
 	 * Filters out URLs from CAS.
 	 * 
 	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline aeUrlFilter()   {
 		try {
@@ -1406,6 +1432,7 @@ public class TermSuitePipeline {
 	 * Gathers terms according to their syntactic structures.
 	 * 
 	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline aeSyntacticVariantGatherer()   {
 		try {
@@ -1428,6 +1455,7 @@ public class TermSuitePipeline {
 	 * Detects all inclusion/extension relation between terms that have size >= 2.
 	 * 
 	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline aeExtensionDetector()   {
 		try {
@@ -1583,6 +1611,7 @@ public class TermSuitePipeline {
 	 * 
 	 * @param toFile
 	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline haeTraceTimePerf(String toFile)  {
 		try {
@@ -1608,6 +1637,7 @@ public class TermSuitePipeline {
 	 * 			The first term of a class appearing given this order will be considered 
 	 * 			as the head of the class.
 	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline aeTermClassifier(TermProperty sortingProperty)  {
 		try {
@@ -1640,6 +1670,7 @@ public class TermSuitePipeline {
 	 * @param rtlWithVariants
 	 * 			true if variants of the reference termino should be kept during the eval
 	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline haeEval(String refFileURI, String outputFile, String customLogHeader, String rFile, String evalTraceName, boolean rtlWithVariants)  {
 		try {
@@ -1677,7 +1708,7 @@ public class TermSuitePipeline {
 	 * @param fileURL
 	 * 			The url to the file where to store the occurrences
 	 * @return
-	 * 			this builder
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline setFileOccurrenceStore(String fileURL) {
 		this.occurrenceStoringMode = OccurrenceStoreMode.FILE;
@@ -1695,7 +1726,7 @@ public class TermSuitePipeline {
 	 * @param dbName
 	 * 			the db name in mongo
 	 * @return
-	 * 			this builder
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline setMongoDBOccurrenceStore(String mongoDBUrl, String dbName) {
 		this.occurrenceStoringMode = OccurrenceStoreMode.MONGODB;
@@ -1708,7 +1739,8 @@ public class TermSuitePipeline {
 	 * Use TermSuitePipeline#setOccurrenceStoreMode instead.
 	 * 
 	 * @param activate
-	 * @return this pipeline builder
+	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 * 
 	 */
 	public TermSuitePipeline setSpotWithOccurrences(boolean activate) {
@@ -1729,6 +1761,7 @@ public class TermSuitePipeline {
 	 * 
 	 * @param postProcessingStrategy
 	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline setPostProcessingStrategy(
 			String postProcessingStrategy) {
@@ -1745,7 +1778,7 @@ public class TermSuitePipeline {
 	 * @param tsvWithHeaders
 	 * 			the flag
 	 * @return
-	 * 		this pipeline builder
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline setTsvShowHeaders(boolean tsvWithHeaders) {
 		this.tsvWithHeaders = tsvWithHeaders;
@@ -1759,8 +1792,8 @@ public class TermSuitePipeline {
 	 * @param tsvWithVariantScores
 	 * 			the flag
 	 * @return
-	 * 		this pipeline builder
-	 */
+	 * 		This chaining {@link TermSuitePipeline} builder object
+		 */
 	public TermSuitePipeline setTsvShowScores(boolean tsvWithVariantScores) {
 		this.tsvWithVariantScores = tsvWithVariantScores;
 		return this;

@@ -67,7 +67,7 @@ public class ContextVector {
 	 * Construct a context vector with a back reference to its owner term.
 	 * The parent term is useful for normalization.
 	 * 
-	 * @see ContextVector#toAssocRateVector(CrossTable, AssociationRate)
+	 * @see ContextVector#toAssocRateVector(CrossTable, AssociationRate, boolean)
 	 * @param term
 	 * 			the owner term
 	 * @param useTermClasses
@@ -85,7 +85,7 @@ public class ContextVector {
 	 * Construct a context vector with a back reference to its owner term.
 	 * The parent term is useful for normalization.
 	 * 
-	 * @see ContextVector#toAssocRateVector(CrossTable, AssociationRate)
+	 * @see ContextVector#toAssocRateVector(CrossTable, AssociationRate, boolean)
 	 * @param term
 	 * 			the owner term
 	 */

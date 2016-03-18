@@ -33,11 +33,6 @@ import eu.project.ttc.metrics.AssociationRate;
  * the association rate of two terms, i.e. their amount of co-occurrency
  * in the corpus.
  * 
- * @see CrossTable#getLastA();
- * @see CrossTable#getLastB();
- * @see CrossTable#getLastC();
- * @see CrossTable#getLastD();
- * 
  * @author Damien Cram
  *
  */

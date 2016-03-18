@@ -125,7 +125,7 @@ public class JSONTermIndexIO {
 	/**
 	 * Loads only the metadata of the TermIndex.
 	 * 
-	 * Calls {@link #load(Reader, false, true)}
+	 * Calls {@link #load(Reader, boolean, boolean)} with params <code>false</code>, <code>true</code>.
 	 * 
 	 * @param reader
 	 * @return
@@ -139,7 +139,7 @@ public class JSONTermIndexIO {
 	/**
 	 * Loads the json-serialized term index into the param {@link TermIndex} object.
 	 * 
-	 * Calls {@link #load(Reader, boolean, false)}
+	 * Calls {@link #load(Reader, boolean, boolean)} with param <code>metadataOnly=false</code>
 	 * 
 	 * @param reader
 	 * @param withContext
