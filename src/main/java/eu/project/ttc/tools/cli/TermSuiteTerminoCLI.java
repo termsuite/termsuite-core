@@ -101,6 +101,16 @@ public class TermSuiteTerminoCLI {
 	/** deactivate the occurrences saving in memory while indexing **/
 	private static final String NO_OCCURRENCE = "no-occurrence";
 
+	/** MongoDB parameters **/
+	private static final String MONGODB_STORE = "mongodb-store";
+	private static final String MONGODB_SOFT_LINK = "json-mongodb-soft-link";
+
+	/*
+	 * The mongo db options
+	 */
+	private static Optional<String> mongoStoreDBURL = Optional.absent();
+	private static boolean mongoStoreSoftLinked = false;
+
 	
 	/** Mate tagger parameter **/
 	private static final String MATE = "mate";
@@ -283,6 +293,10 @@ public class TermSuiteTerminoCLI {
 				// resource
 				pipeline.setResourcePath(resourcePack);
 				
+				// mongodb
+				if(mongoStoreDBURL.isPresent())
+					pipeline.setMongoDBOccurrenceStore(mongoStoreDBURL.get());
+				
 				// tokenizer
 				pipeline.aeWordTokenizer();
 				
@@ -379,6 +393,8 @@ public class TermSuiteTerminoCLI {
 				if(jsonFile.isPresent())  {					
 					pipeline.setExportJsonWithContext(contextualize);
 					pipeline.setExportJsonWithOccurrences(true);
+					if(mongoStoreSoftLinked)
+						pipeline.linkMongoStore();
 					pipeline.haeJsonExporter(jsonFile.get());
 				}
 
@@ -650,6 +666,17 @@ public class TermSuiteTerminoCLI {
 				"The directory path where to export the TreeTagger token of each files give in entry of TermSuite in " +
 						"Json Format");
 
+		options.addOption(
+				null,
+				MONGODB_STORE,
+				true,
+				"The mongo db url of the database where to store the occurrences");
+
+		options.addOption(
+				null, 
+				MONGODB_SOFT_LINK, 
+				false,
+				"shows variant scores next to the \"V\" label");
 
 
 		return options;
@@ -657,6 +684,7 @@ public class TermSuiteTerminoCLI {
 
 	public static void readArguments(CommandLine line) throws IOException {
 		
+
 		if(line.hasOption(NO_OCCURRENCE))
 			spotWithOccurrences = false;
 			
@@ -779,5 +807,14 @@ public class TermSuiteTerminoCLI {
 		
 		if(line.hasOption(MATE))
 			tagger =  Tagger.Mate;
+		
+		if(line.hasOption(MONGODB_STORE))
+			mongoStoreDBURL = Optional.of(line.getOptionValue(MONGODB_STORE));
+		
+		if(line.hasOption(MONGODB_SOFT_LINK)) {
+			Preconditions.checkArgument(line.hasOption(MONGODB_STORE), "The option %s requires the option %s", MONGODB_SOFT_LINK, MONGODB_STORE);
+			mongoStoreSoftLinked = true;
+		}
+
 	}
 }
