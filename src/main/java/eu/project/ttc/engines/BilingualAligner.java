@@ -71,6 +71,7 @@ public class BilingualAligner {
 	private static final String MSG_NO_CONTEXT_VECTOR = "No context vector computed for term {} in target terminology";
 	private static final String MSG_TERM_NOT_NULL = "Source term must not be null";
 	private static final String MSG_REQUIRES_SIZE_2_LEMMAS = "The term %s must have exactly two single-word terms (single-word terms: %s)";
+	private static final String MSG_SEVERAL_VECTORS_NOT_COMPUTED = "Several terms have no context vectors in target terminology (nb terms with vector: {}, nb terms without vector: {})";
 
 
 	private BilingualDictionary dico;
@@ -145,15 +146,23 @@ public class BilingualAligner {
 				AlignerUtils.TRANSLATION_STRATEGY_MOST_SPECIFIC,
 				targetTermino);
 		ExplainedValue v;
+		int nbVectorsNotComputed = 0;
+		int nbVectorsComputed = 0;
 		for(Term targetTerm:IteratorUtils.toIterable(targetTermino.singleWordTermIterator())) {
 			if(targetTerm.getFrequency() < minCandidateFrequency)
 				continue;
-			if(!targetTerm.isContextVectorComputed()) 
-				LOGGER.warn(MSG_NO_CONTEXT_VECTOR, targetTerm);
-			else {
+			if(!targetTerm.isContextVectorComputed())  {
+				if(nbVectorsNotComputed == 0)
+					LOGGER.warn(MSG_NO_CONTEXT_VECTOR, targetTerm);
+				nbVectorsNotComputed++;	
+			} else {
+				nbVectorsComputed++;
 				v = distance.getExplainedValue(translatedSourceVector, targetTerm.getContextVector());
 				alignedCandidateQueue.add(new TranslationCandidate(targetTerm, v.getValue(), v.getExplanation()));
 			}
+		}
+		if(nbVectorsNotComputed > 0) {
+			LOGGER.warn(MSG_SEVERAL_VECTORS_NOT_COMPUTED, nbVectorsComputed, nbVectorsNotComputed);	
 		}
 		
 		// sort alignedCandidates
