@@ -285,10 +285,10 @@ public class TermSuitePipeline {
 		return new TermSuitePipeline(lang, urlPrefix);
 	}
 
-	public static TermSuitePipeline create(TermIndex termIndex) {
+	public static TermSuitePipeline create(TermIndex termIndex, String urlPrefix) {
 		Preconditions.checkNotNull(termIndex.getName(), "The term index must have a name before it can be used in TermSuitePipeline");
 	
-		TermSuitePipeline pipeline = create(termIndex.getLang().getCode());
+		TermSuitePipeline pipeline = create(termIndex.getLang().getCode(), urlPrefix);
 		pipeline.emptyCollection();
 		pipeline.setTermIndex(termIndex);
 		
