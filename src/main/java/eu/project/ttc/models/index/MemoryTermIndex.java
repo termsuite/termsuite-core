@@ -29,6 +29,9 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.apache.uima.cas.FSIterator;
+import org.apache.uima.jcas.JCas;
+import org.apache.uima.jcas.tcas.Annotation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -52,8 +55,10 @@ import eu.project.ttc.models.TermSelector;
 import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.models.TermWord;
 import eu.project.ttc.models.Word;
+import eu.project.ttc.types.SourceDocumentInformation;
 import eu.project.ttc.types.TermOccAnnotation;
 import eu.project.ttc.types.WordAnnotation;
+import eu.project.ttc.utils.JCasUtils;
 import eu.project.ttc.utils.TermSuiteUtils;
 
 /**
@@ -88,18 +93,6 @@ public class MemoryTermIndex implements TermIndex {
 	private Map<String, Word> wordIndex = Maps.newHashMap();
 	private Map<String, Document> documents = Maps.newHashMap();
 	private Set<TermClass> termClasses = Sets.newHashSet();
-	
-	public void inspect() {
-		System.out.format("termsById: %d\n", termsById.size());
-		System.out.format("termsByGroupingKey: %d\n", termsByGroupingKey.size());
-		System.out.format("wordIndex: %d\n", wordIndex.size());
-		System.out.format("documents: %d\n", documents.size());
-		System.out.format("termClasses: %d\n", termClasses.size());
-		System.out.format("customIndexes: %d\n", customIndexes.size());
-		for(Document d:documents.values()) {
-			d.inspect("\t");
-		}
-	}
 
 	private String name;
 	private Lang lang;
@@ -520,5 +513,20 @@ public class MemoryTermIndex implements TermIndex {
 			removeTermOnly(t);
 		occurrenceStore.deleteMany(selector);
 		
+	}
+
+	@Override
+	public void importCas(JCas cas, boolean keepOccurrence) {
+		SourceDocumentInformation sdi = JCasUtils.getSourceDocumentAnnotation(cas).get();
+		FSIterator<Annotation> iterator = cas.getAnnotationIndex().iterator();
+		while(iterator.hasNext()) {
+			Annotation anno = iterator.next();
+			if(anno instanceof WordAnnotation) {
+				this.nbWordAnnotations++;
+			}
+			else if(anno instanceof TermOccAnnotation) {
+				addTermOccurrence((TermOccAnnotation)anno, sdi.getUri(), keepOccurrence);
+			} 
+		}
 	}
 }

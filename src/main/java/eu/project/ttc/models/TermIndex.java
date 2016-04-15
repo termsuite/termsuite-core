@@ -25,6 +25,8 @@ import java.io.File;
 import java.util.Collection;
 import java.util.Iterator;
 
+import org.apache.uima.jcas.JCas;
+
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.index.CustomTermIndex;
 import eu.project.ttc.models.index.TermMeasure;
@@ -141,9 +143,12 @@ public interface TermIndex {
 	 * Occurrences
 	 */
 	//TODO remove these
+	@Deprecated // Should use import JCas (important for the inner nbWordAnnotation)
 	public Term addTermOccurrence(TermOccAnnotation annotation, String FileUri, boolean keepOccurrenceInTermIndex);
 	public void createOccurrenceIndex();
 	public void clearOccurrenceIndex();
+
+	public void importCas(JCas cas, boolean keepOccurrenceInTermIndex);
 
 	
 	/*
