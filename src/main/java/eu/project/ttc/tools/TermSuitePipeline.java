@@ -44,6 +44,7 @@ import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 
+import eu.project.ttc.consumers.StreamingCasConsumer;
 import eu.project.ttc.engines.AffixCompoundSplitter;
 import eu.project.ttc.engines.CasStatCounter;
 import eu.project.ttc.engines.CompostAE;
@@ -205,6 +206,8 @@ public class TermSuitePipeline {
 	private Optional<Float> graphicalVariantSimilarityThreshold = Optional.absent();
 
 	private Optional<String> postProcessingStrategy = Optional.absent();
+
+	private Optional<String> casConsumerName = Optional.absent();
 	
 //	private int variantDepth = 3;
 
@@ -258,13 +261,24 @@ public class TermSuitePipeline {
 	 */
 	public TermSuitePipeline run() {
 		checkCR();
+		runPipeline();
+		return this;
+	}
+
+	private void runPipeline() {
 		try {
+			if(casConsumerName.isPresent()) {
+				AnalysisEngineDescription consumerAE = AnalysisEngineFactory.createEngineDescription(
+					StreamingCasConsumer.class, 
+					StreamingCasConsumer.PARAM_CONSUMER_NAME, casConsumerName.get()
+				);
+				this.aggregateBuilder.add(consumerAE);
+			}
 			SimplePipeline.runPipeline(this.crDescription, createDescription());
 			terminates();
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
-		return this;
 	}
 	
 	public Thread runInNewThread() {
@@ -272,12 +286,7 @@ public class TermSuitePipeline {
 		Thread t = new Thread() {
 			@Override
 			public void run() {
-				try {
-					SimplePipeline.runPipeline(TermSuitePipeline.this.crDescription, createDescription());
-					terminates();
-				} catch (Exception e) {
-					throw new TermSuitePipelineException(e);
-				}
+				runPipeline();
 			}
 		};
 		t.start();
@@ -420,7 +429,7 @@ public class TermSuitePipeline {
 		}
 	}
 	
-	public TermSuitePipeline setStreamingCollection(String queueName) {
+	public TermSuitePipeline setStreamingCollection(String queueName, String consumerName) {
 		try {
 			this.crDescription = CollectionReaderFactory.createReaderDescription(
 					StreamingCollectionReader.class,
@@ -428,6 +437,7 @@ public class TermSuitePipeline {
 					StreamingCollectionReader.PARAM_NAME, queueName,
 					StreamingCollectionReader.PARAM_QUEUE_NAME, queueName
 					);
+			this.casConsumerName = Optional.of(consumerName);
 			return this;
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
