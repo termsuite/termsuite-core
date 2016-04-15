@@ -27,8 +27,8 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.security.SecureRandom;
-import java.util.Queue;
 import java.util.UUID;
+import java.util.concurrent.BlockingQueue;
 
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.collection.CollectionReader;
@@ -325,7 +325,7 @@ public class TermSuitePipeline {
 			String casConsumerName = "pipeline-"+id+"-consumer";
 			ConsumerRegistry.getInstance().registerConsumer(casConsumerName, consumer);
 			String queueName = "pipeline-"+id+"-queue";
-			final Queue<CollectionDocument> q = QueueRegistry.getInstance().registerQueue(queueName, 10);
+			final BlockingQueue<CollectionDocument> q = QueueRegistry.getInstance().registerQueue(queueName, 10);
 			
 			/*
 			 * 1- Creates the streaming collection reader desc
@@ -362,8 +362,12 @@ public class TermSuitePipeline {
 			 */
 			documentProvider = new DocumentProvider() {
 				@Override
-				public void next(CollectionDocument doc) {
-					q.add(doc);
+				public void provide(CollectionDocument doc) {
+					try {
+						q.put(doc);
+					} catch (InterruptedException e) {
+						LOGGER.warn("Interrupted while there were more documents waiting.");
+					}
 				}
 			};
 			return documentProvider;
