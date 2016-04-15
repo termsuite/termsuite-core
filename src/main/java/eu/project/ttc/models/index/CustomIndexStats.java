@@ -21,6 +21,8 @@
  *******************************************************************************/
 package eu.project.ttc.models.index;
 
+import java.util.Iterator;
+
 import com.google.common.collect.Multimap;
 import com.google.common.collect.TreeMultimap;
 
@@ -55,6 +57,10 @@ public class CustomIndexStats {
 	}
 	
 	public String getBiggestClass() {
-		return sizeCounters.get(getBiggestSize()).iterator().next();
+		Iterator<String> iterator = sizeCounters.get(getBiggestSize()).iterator();
+		if(iterator.hasNext())
+			return iterator.next();
+		else
+			return null;
 	}
 }
