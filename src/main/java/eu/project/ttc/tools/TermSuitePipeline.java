@@ -167,7 +167,6 @@ public class TermSuitePipeline {
 	private Lang lang;
 	private CollectionReaderDescription crDescription;
 	private String pipelineObserverName;
-	private boolean allowObserving = false;
 	private AggregateBuilder aggregateBuilder;
 	private TermSuiteResourceHelper resFactory;
 	
@@ -399,7 +398,6 @@ public class TermSuitePipeline {
 	public TermSuitePipeline addPipelineListener(PipelineListener pipelineListener) {
 		TermSuiteResourceManager manager = TermSuiteResourceManager.getInstance();
 		((TermSuitePipelineObserver)manager.get(pipelineObserverName)).registerListener(pipelineListener);
-		this.allowObserving = true;
 		return this;
 	}
 
