@@ -22,9 +22,12 @@
 package eu.project.ttc.tools;
 
 import java.io.Serializable;
+import java.math.BigInteger;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.security.SecureRandom;
+import java.util.Queue;
 import java.util.UUID;
 
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
@@ -44,7 +47,6 @@ import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 
-import eu.project.ttc.consumers.StreamingCasConsumer;
 import eu.project.ttc.engines.AffixCompoundSplitter;
 import eu.project.ttc.engines.CasStatCounter;
 import eu.project.ttc.engines.CompostAE;
@@ -91,8 +93,10 @@ import eu.project.ttc.models.index.MemoryTermIndex;
 import eu.project.ttc.models.occstore.MemoryOccurrenceStore;
 import eu.project.ttc.models.occstore.MongoDBOccurrenceStore;
 import eu.project.ttc.readers.AbstractToTxtSaxHandler;
+import eu.project.ttc.readers.CollectionDocument;
 import eu.project.ttc.readers.EmptyCollectionReader;
 import eu.project.ttc.readers.GenericXMLToTxtCollectionReader;
+import eu.project.ttc.readers.QueueRegistry;
 import eu.project.ttc.readers.StreamingCollectionReader;
 import eu.project.ttc.readers.StringCollectionReader;
 import eu.project.ttc.readers.TeiCollectionReader;
@@ -112,6 +116,10 @@ import eu.project.ttc.resources.SimpleWordSet;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.resources.TermSuitePipelineObserver;
 import eu.project.ttc.resources.YamlVariantRules;
+import eu.project.ttc.stream.CasConsumer;
+import eu.project.ttc.stream.ConsumerRegistry;
+import eu.project.ttc.stream.DocumentProvider;
+import eu.project.ttc.stream.StreamingCasConsumer;
 import eu.project.ttc.types.WordAnnotation;
 import eu.project.ttc.utils.OccurrenceBuffer;
 import eu.project.ttc.utils.TermSuiteUtils;
@@ -147,23 +155,58 @@ import uima.sandbox.mapper.resources.MappingResource;
  *
  */
 public class TermSuitePipeline {
+
+	/* The Logger */
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermSuitePipeline.class);
 	
-	private String pipelineObserverName;
-	private boolean allowObserving = false;
-	private boolean spotWithOccurrences = true;
-	private AggregateBuilder aggregateBuilder;
-	private TermSuiteResourceHelper resFactory;
-	private Optional<String> mateModelsPath = Optional.absent();
-	private Optional<String> treeTaggerPath = Optional.absent();
-	private Optional<String> syntacticRegexesFilePath = Optional.absent();
-	private Optional<String> yamlVariantRulesFilePath = Optional.absent();
-	private boolean enableSyntacticLabels = false;
-	private boolean linkMongoStore = false;
-	private boolean exportJsonWithOccurrences = true;
-	private boolean exportJsonWithContext = false;
+	/* ******************************
+	 * MAIN PIPELINE PARAMETERS
+	 */
+	private OccurrenceStore occurrenceStore = new MemoryOccurrenceStore();
+	private Optional<? extends TermIndex> termIndex = Optional.absent();
 	private Lang lang;
 	private CollectionReaderDescription crDescription;
+	private String pipelineObserverName;
+	private boolean allowObserving = false;
+	private AggregateBuilder aggregateBuilder;
+	private TermSuiteResourceHelper resFactory;
+	
+	/*
+	 * POS Tagger parameters
+	 */
+	private Optional<String> mateModelsPath = Optional.absent();
+	private Optional<String> treeTaggerPath = Optional.absent();
+
+	
+	
+
+	/*
+	 * Regex Spotter params
+	 */
+	private boolean addSpottedAnnoToTermIndex = true;
+	private boolean spotWithOccurrences = true;
+	private Optional<Boolean> logOverlappingRules = Optional.absent();
+	private Optional<String> postProcessingStrategy = Optional.absent();
+	private boolean enableSyntacticLabels = false;
+	@Deprecated
+	private Optional<String> syntacticRegexesFilePath = Optional.absent();
+
+	/*
+	 * Contextualizer options
+	 */
+	private OccurrenceType contextualizeCoTermsType = OccurrenceType.SINGLE_WORD;
+	private boolean contextualizeWithTermClasses = false;
+	private int contextualizeWithCoOccurrenceFrequencyThreshhold = 1;
+	private String contextAssocRateMeasure = LogLikelihood.class.getName();
+
+	/*
+	 * Cleaner properties
+	 */
+	private boolean keepVariantsWhileCleaning = false;
+	
+	/*
+	 * Compost Params
+	 */
 	private float alpha = 0.5f;
 	private float beta = 0.1f;
 	private float gamma = 0.1f;
@@ -172,45 +215,42 @@ public class TermSuitePipeline {
 	private int compostMinComponentSize = 3;
 	private int compostMaxComponentNum = 3;
 	private Object compostSegmentSimilarityThreshold = 0.7f;
+
+	/*
+	 * Syntactic Variant Gatherer parameters
+	 */
+	@Deprecated
+	private Optional<String> yamlVariantRulesFilePath = Optional.absent();
+
+	/*
+	 * Graphical Variant Gatherer parameters
+	 */
+	private Optional<Float> graphicalVariantSimilarityThreshold = Optional.absent();
+	
+	/*
+	 * Export Parameters
+	 */
 	private String exportFilteringRule = FilterRules.SpecificityThreshold.name();
 	private float exportFilteringThreshold = 0;
-	
-	
-	private OccurrenceStore occurrenceStore = new MemoryOccurrenceStore();
-	
-	private Optional<? extends TermIndex> termIndex = Optional.absent();
-//	private boolean spotWithOccurrences = true;
-	private String contextAssocRateMeasure = LogLikelihood.class.getName();
-
-	
-	/*
-	 * Cleaner properties
-	 */
-	private boolean keepVariantsWhileCleaning = false;
-	
-	/*
-	 * Contextualizer options
-	 */
-	private OccurrenceType contextualizeCoTermsType = OccurrenceType.SINGLE_WORD;
-	private boolean contextualizeWithTermClasses = false;
-	private int contextualizeWithCoOccurrenceFrequencyThreshhold = 1;
-	
-	/*
-	 * TSVExporter options
-	 */
+	/* JSON */
+	private boolean exportJsonWithOccurrences = true;
+	private boolean exportJsonWithContext = false;
+	private boolean linkMongoStore = false;
+	/* TSV */
 	private String tsvExportProperties = "groupingKey,wr";
 	private boolean tsvWithVariantScores = false;
 	private boolean tsvWithHeaders = true;
 	
-	private Optional<Boolean> logOverlappingRules = Optional.absent();
-	private Optional<Float> graphicalVariantSimilarityThreshold = Optional.absent();
+	/*
+	 * Streaming parameters
+	 */
+	private Thread streamThread = null;
+	private DocumentProvider documentProvider;
 
-	private Optional<String> postProcessingStrategy = Optional.absent();
 
-	private Optional<String> casConsumerName = Optional.absent();
-	
-//	private int variantDepth = 3;
-
+	/* *******************
+	 * CONSTRUCTORS
+	 */
 	private TermSuitePipeline(String lang, String urlPrefix) {
 		this.lang = Lang.forName(lang);
 		if(urlPrefix == null)
@@ -222,6 +262,7 @@ public class TermSuitePipeline {
 		TermSuiteResourceManager.getInstance().register(pipelineObserverName, new TermSuitePipelineObserver(2,1));
 	}
 
+	
 	public static TermSuitePipeline create(String lang) {
 		return new TermSuitePipeline(lang, null);
 	}
@@ -254,6 +295,10 @@ public class TermSuitePipeline {
 		return pipeline;
 	}
 	
+	/* *******************************
+	 * RUNNERS
+	 */
+	
 	/**
 	 * Runs the pipeline with {@link SimplePipeline} on the {@link CollectionReader} that must have been defined.
 	 * 
@@ -267,13 +312,6 @@ public class TermSuitePipeline {
 
 	private void runPipeline() {
 		try {
-			if(casConsumerName.isPresent()) {
-				AnalysisEngineDescription consumerAE = AnalysisEngineFactory.createEngineDescription(
-					StreamingCasConsumer.class, 
-					StreamingCasConsumer.PARAM_CONSUMER_NAME, casConsumerName.get()
-				);
-				this.aggregateBuilder.add(consumerAE);
-			}
 			SimplePipeline.runPipeline(this.crDescription, createDescription());
 			terminates();
 		} catch (Exception e) {
@@ -281,18 +319,63 @@ public class TermSuitePipeline {
 		}
 	}
 	
-	public Thread runInNewThread() {
-		checkCR();
-		Thread t = new Thread() {
-			@Override
-			public void run() {
-				runPipeline();
-			}
-		};
-		t.start();
-		return t;
+	public DocumentProvider stream(CasConsumer consumer) {
+		try {
+			String id = new BigInteger(130, new SecureRandom()).toString(8);
+			String casConsumerName = "pipeline-"+id+"-consumer";
+			ConsumerRegistry.getInstance().registerConsumer(casConsumerName, consumer);
+			String queueName = "pipeline-"+id+"-queue";
+			final Queue<CollectionDocument> q = QueueRegistry.getInstance().registerQueue(queueName, 10);
+			
+			/*
+			 * 1- Creates the streaming collection reader desc
+			 */
+			this.crDescription = CollectionReaderFactory.createReaderDescription(
+					StreamingCollectionReader.class,
+					StreamingCollectionReader.PARAM_LANGUAGE, this.lang.getCode(),
+					StreamingCollectionReader.PARAM_NAME, queueName,
+					StreamingCollectionReader.PARAM_QUEUE_NAME, queueName
+					);
+			
+			/*
+			 * 2- Aggregate the consumer AE
+			 */
+			AnalysisEngineDescription consumerAE = AnalysisEngineFactory.createEngineDescription(
+					StreamingCasConsumer.class, 
+					StreamingCasConsumer.PARAM_CONSUMER_NAME, casConsumerName
+				);
+			this.aggregateBuilder.add(consumerAE);
+			
+			/*
+			 * 3- Starts the pipeline in a separate Thread 
+			 */
+			this.streamThread = new Thread() {
+				@Override
+				public void run() {
+					runPipeline();
+				}
+			};
+			this.streamThread.start();
+			
+			/*
+			 * 4- Bind user inputs to the queue
+			 */
+			documentProvider = new DocumentProvider() {
+				@Override
+				public void next(CollectionDocument doc) {
+					q.add(doc);
+				}
+			};
+			return documentProvider;
+		} catch (Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
 	}
 
+	public Thread getStreamThread() {
+		return streamThread;
+	}
+	
 	private void checkCR() {
 		if(crDescription == null)
 			throw new TermSuitePipelineException("No collection reader has been declared on this pipeline.");
@@ -429,21 +512,6 @@ public class TermSuitePipeline {
 		}
 	}
 	
-	public TermSuitePipeline setStreamingCollection(String queueName, String consumerName) {
-		try {
-			this.crDescription = CollectionReaderFactory.createReaderDescription(
-					StreamingCollectionReader.class,
-					StreamingCollectionReader.PARAM_LANGUAGE, this.lang.getCode(),
-					StreamingCollectionReader.PARAM_NAME, queueName,
-					StreamingCollectionReader.PARAM_QUEUE_NAME, queueName
-					);
-			this.casConsumerName = Optional.of(consumerName);
-			return this;
-		} catch (Exception e) {
-			throw new TermSuitePipelineException(e);
-		}
-	}
-
 	public TermSuitePipeline setResourcePath(String resourcePath) {
 		TermSuiteUtils.addToClasspath(resourcePath);
 		return this;
@@ -917,6 +985,7 @@ public class TermSuitePipeline {
 					RegexSpotter.class,
 					TokenRegexAE.PARAM_ALLOW_OVERLAPPING_OCCURRENCES, true,
 					RegexSpotter.POST_PROCESSING_STRATEGY, postProcStrategy,
+					RegexSpotter.PARAM_ADD_TO_TERM_INDEX, this.addSpottedAnnoToTermIndex,
 					RegexSpotter.KEEP_OCCURRENCES_IN_TERM_INDEX, spotWithOccurrences
 				);
 			
@@ -948,7 +1017,8 @@ public class TermSuitePipeline {
 					CharacterFootprintTermFilter.class, 
 					resFactory.getAllowedChars().toString());
 	
-			ExternalResourceFactory.bindResource(ae, resTermIndex());
+			if(this.addSpottedAnnoToTermIndex)
+				ExternalResourceFactory.bindResource(ae, resTermIndex());
 
 			ExternalResourceFactory.createDependencyAndBind(
 					ae,
@@ -1525,10 +1595,18 @@ public class TermSuitePipeline {
 		this.treeTaggerPath = Optional.of(treeTaggerPath);
 		return this;
 	}
+
+	/**
+	 * @deprecated Overrides ressources directly
+	 * @param syntacticRegexesFilePath
+	 * @return
+	 */
+	@Deprecated
 	public TermSuitePipeline setSyntacticRegexesFilePath(String syntacticRegexesFilePath) {
 		this.syntacticRegexesFilePath = Optional.of(syntacticRegexesFilePath);
 		return this;
 	}
+	
 	public TermSuitePipeline haeLogOverlappingRules() {
 		this.logOverlappingRules = Optional.of(true);
 		return this;
@@ -1538,6 +1616,12 @@ public class TermSuitePipeline {
 		return this;
 	}
 	
+	/**
+	 * Overrides ressources directly
+	 * @param yamlVariantRulesFilePath
+	 * @return
+	 */
+	@Deprecated
 	public TermSuitePipeline setYamlVariantRulesFilePath(String yamlVariantRulesFilePath) {
 		this.yamlVariantRulesFilePath = Optional.of(yamlVariantRulesFilePath);
 		return this;

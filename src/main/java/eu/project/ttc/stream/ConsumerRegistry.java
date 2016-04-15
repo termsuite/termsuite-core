@@ -1,10 +1,9 @@
-package eu.project.ttc.consumers;
+package eu.project.ttc.stream;
 
 import java.util.Map;
 
-import org.assertj.core.util.Maps;
-
 import com.google.common.base.Preconditions;
+import com.google.common.collect.Maps;
 
 import eu.project.ttc.readers.StreamingCollectionReader;
 
@@ -39,7 +38,7 @@ public class ConsumerRegistry {
 		return instance;
 	}
 	
-	private Map<String, CasConsumer> registry = Maps.newConcurrentHashMap();
+	private Map<String, CasConsumer> registry = Maps.newConcurrentMap();
 	
 	public CasConsumer getConsumer(String consumerName) {
 		Preconditions.checkArgument(registry.containsKey(consumerName), "Queue %s does not exist", consumerName);

@@ -1,4 +1,4 @@
-package eu.project.ttc.consumers;
+package eu.project.ttc.stream;
 
 import eu.project.ttc.models.TermSuiteCas;
 

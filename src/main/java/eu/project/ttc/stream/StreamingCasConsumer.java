@@ -19,7 +19,7 @@
  * under the License.
  *
  *******************************************************************************/
-package eu.project.ttc.consumers;
+package eu.project.ttc.stream;
 
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;

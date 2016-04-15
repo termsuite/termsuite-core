@@ -8,7 +8,7 @@ package eu.project.ttc.readers;
  * @see StreamingCollectionReader
  *
  */
-public interface CollectionDoc {
+public interface CollectionDocument {
 
 	/**
 	 * The unique identifier of the document.

@@ -81,8 +81,8 @@ public class RegexSpotter extends TokenRegexAE {
 	@ConfigurationParameter(name = KEEP_OCCURRENCES_IN_TERM_INDEX, mandatory = false, defaultValue = "true")
 	private boolean keepOccurrencesInTermIndex;
 
-	public static final String ADD_TO_TERM_INDEX = "AddToTermIndex";
-	@ConfigurationParameter(name = ADD_TO_TERM_INDEX, mandatory = false, defaultValue = "true")
+	public static final String PARAM_ADD_TO_TERM_INDEX = "AddToTermIndex";
+	@ConfigurationParameter(name = PARAM_ADD_TO_TERM_INDEX, mandatory = false, defaultValue = "true")
 	private boolean addToTermIndex;
 
 	
@@ -226,8 +226,10 @@ public class RegexSpotter extends TokenRegexAE {
 	@Override
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
-		LOGGER.info("Number of spotted term occurrences added to term index: {}", addedOccurrences);
-		this.termIndexResource.getTermIndex().getOccurrenceStore().makeIndex();
+		if(addToTermIndex) {
+			LOGGER.info("Number of spotted term occurrences added to term index: {}", addedOccurrences);
+			this.termIndexResource.getTermIndex().getOccurrenceStore().makeIndex();
+		}
 	}
 	@Override
 	protected void afterRuleProcessing(JCas jCas) {

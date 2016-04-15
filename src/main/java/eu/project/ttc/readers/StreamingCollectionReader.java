@@ -36,9 +36,9 @@ public class StreamingCollectionReader extends CollectionReader_ImplBase {
 	@ConfigurationParameter(name = PARAM_QUEUE_NAME, mandatory=false, defaultValue = DEFAULT_QUEUE_NAME)
 	private String queueName;
 
-	private BlockingQueue<CollectionDoc> queue;
+	private BlockingQueue<CollectionDocument> queue;
 	
-	private CollectionDoc currentDoc;
+	private CollectionDocument currentDoc;
 	
 	@Override
 	public void initialize() throws ResourceInitializationException {
