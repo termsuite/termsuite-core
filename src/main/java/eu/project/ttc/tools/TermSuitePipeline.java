@@ -383,7 +383,7 @@ public class TermSuitePipeline {
 
 		
 	private void terminates() {
-		if(termIndex.get().getOccurrenceStore() instanceof MongoDBOccurrenceStore) 
+		if(termIndex.isPresent() && termIndex.get().getOccurrenceStore() instanceof MongoDBOccurrenceStore) 
 			((MongoDBOccurrenceStore)termIndex.get().getOccurrenceStore()).close();
 			
 	}
