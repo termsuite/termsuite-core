@@ -1852,6 +1852,22 @@ public class TermSuitePipeline {
 		this.spotWithOccurrences = activate;
 		return this;
 	}
+	
+	/**
+	 * Configures {@link RegexSpotter}. If <code>true</code>, 
+	 * adds all spotted occurrences to the {@link TermIndex}.
+	 * 
+	 * @see #aeRegexSpotter()
+	 * 
+	 * @param addToTermIndex
+	 * 			the value of the parameter
+	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
+	 */
+	public TermSuitePipeline setAddSpottedAnnoToTermIndex(boolean addToTermIndex) {
+		this.addSpottedAnnoToTermIndex = addToTermIndex;
+		return this;
+	}
 
 	/**
 	 * Sets the post processing strategy for {@link RegexSpotter} analysis engine
