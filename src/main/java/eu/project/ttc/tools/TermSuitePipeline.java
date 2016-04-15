@@ -184,6 +184,7 @@ public class TermSuitePipeline {
 	 * Regex Spotter params
 	 */
 	private boolean addSpottedAnnoToTermIndex = true;
+	@Deprecated
 	private boolean spotWithOccurrences = true;
 	private Optional<Boolean> logOverlappingRules = Optional.absent();
 	private Optional<String> postProcessingStrategy = Optional.absent();
@@ -1841,13 +1842,14 @@ public class TermSuitePipeline {
 
 	
 	/**
-	 * Use TermSuitePipeline#setOccurrenceStoreMode instead.
+	 * @deprecated Use TermSuitePipeline#setOccurrenceStoreMode instead.
 	 * 
 	 * @param activate
 	 * @return
 	 * 		This chaining {@link TermSuitePipeline} builder object
 	 * 
 	 */
+	@Deprecated
 	public TermSuitePipeline setSpotWithOccurrences(boolean activate) {
 		this.spotWithOccurrences = activate;
 		return this;
