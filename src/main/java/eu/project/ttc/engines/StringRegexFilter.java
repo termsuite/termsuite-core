@@ -75,6 +75,6 @@ public class StringRegexFilter extends JCasAnnotator_ImplBase {
 	@Override
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
-		LOGGER.info("Number of terms filtered: {}", this.totalFiltered);
+		LOGGER.debug("Number of word annotations filtered: {}", this.totalFiltered);
 	}
 }
