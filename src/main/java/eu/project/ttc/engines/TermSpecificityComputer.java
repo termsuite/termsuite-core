@@ -31,6 +31,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import eu.project.ttc.models.Term;
+import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.index.TermMeasure;
 import eu.project.ttc.resources.GeneralLanguage;
 import eu.project.ttc.resources.TermIndexResource;
@@ -45,14 +46,13 @@ public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 	@ExternalResource(key=GENERAL_LANGUAGE_FREQUENCIES, mandatory=true)
 	private GeneralLanguage generalLanguage;
 	
-	private int nbWordAnnotations = 0;
-	
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
 		FSIterator<Annotation> it =  aJCas.getAnnotationIndex().iterator();
 		while(it.hasNext()) {
 			it.next();
-			this.nbWordAnnotations++;
+			TermIndex termIndex = this.termIndexResource.getTermIndex();
+			termIndex.setWordAnnotationsNum(termIndex.getWordAnnotationsNum() + 1);
 		}
 	}
 	
@@ -71,17 +71,16 @@ public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 	}
 
 	private void computeSpecifities() {
-		termIndexResource.getTermIndex().setWordAnnotationsNum(this.nbWordAnnotations);
-		
+		TermIndex termIndex = termIndexResource.getTermIndex();
 		
 		//		double maxWR = 0.0;
 		if(generalLanguage.isCumulatedFrequencyMode()) {
 			// process specificity for old versions of GeneralLanguage resources that do not have __NB_CORPUS_WORDS__ key
 			
 			int totalCount = 0;
-			for(Term term:termIndexResource.getTermIndex().getTerms()) 
+			for(Term term:termIndex.getTerms()) 
 				totalCount+=term.getFrequency();
-			for(Term term:termIndexResource.getTermIndex().getTerms()) {
+			for(Term term:termIndex.getTerms()) {
 				double frequency = (1000 * (float)term.getFrequency()) / totalCount;
 //				double frequency = ((float)term.getAllOccurrences(2).size()) / totalCount;
 				double generalFrequency = generalLanguage.getNormalizedFrequency(term.getLemma());
@@ -98,12 +97,12 @@ public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 					LOGGER.warn("GeneralFrequency resource returned 0.0 for the term " + term.getGroupingKey() + ". Ignoring this term.");
 			}
 		} else {
-			for(Term term:termIndexResource.getTermIndex().getTerms()) {
+			for(Term term:termIndex.getTerms()) {
 				float generalTermFrequency = (float)generalLanguage.getFrequency(term.getLemma(), term.getPattern());
 				float normalizedGeneralTermFrequency = 1000*generalTermFrequency/generalLanguage.getNbCorpusWords();
 				float termFrequency = term.getFrequency();
 //				float termFrequency = term.getAllOccurrences(2).size();
-				float normalizedTermFrequency = (1000 * termFrequency)/this.nbWordAnnotations;
+				float normalizedTermFrequency = (1000 * termFrequency)/termIndex.getWordAnnotationsNum();
 				term.setFrequencyNorm(normalizedTermFrequency);
 				term.setGeneralFrequencyNorm( normalizedGeneralTermFrequency);
 //				term.setWR(normalizedTermFrequency/normalizedGeneralTermFrequency);
