@@ -92,6 +92,7 @@ import eu.project.ttc.models.occstore.MongoDBOccurrenceStore;
 import eu.project.ttc.readers.AbstractToTxtSaxHandler;
 import eu.project.ttc.readers.EmptyCollectionReader;
 import eu.project.ttc.readers.GenericXMLToTxtCollectionReader;
+import eu.project.ttc.readers.StreamingCollectionReader;
 import eu.project.ttc.readers.StringCollectionReader;
 import eu.project.ttc.readers.TeiCollectionReader;
 import eu.project.ttc.readers.TxtCollectionReader;
@@ -256,19 +257,38 @@ public class TermSuitePipeline {
 	 * @throws TermSuitePipelineException if no {@link CollectionReader} has been declared on this pipeline
 	 */
 	public TermSuitePipeline run() {
-		if(crDescription == null)
-			throw new TermSuitePipelineException("No collection reader has been declared on this pipeline.");
-		else {
-			try {
-				SimplePipeline.runPipeline(this.crDescription, createDescription());
-				terminates();
-			} catch (Exception e) {
-				throw new TermSuitePipelineException(e);
-			}
+		checkCR();
+		try {
+			SimplePipeline.runPipeline(this.crDescription, createDescription());
+			terminates();
+		} catch (Exception e) {
+			throw new TermSuitePipelineException(e);
 		}
 		return this;
 	}
 	
+	public Thread runInNewThread() {
+		checkCR();
+		Thread t = new Thread() {
+			@Override
+			public void run() {
+				try {
+					SimplePipeline.runPipeline(TermSuitePipeline.this.crDescription, createDescription());
+					terminates();
+				} catch (Exception e) {
+					throw new TermSuitePipelineException(e);
+				}
+			}
+		};
+		t.start();
+		return t;
+	}
+
+	private void checkCR() {
+		if(crDescription == null)
+			throw new TermSuitePipelineException("No collection reader has been declared on this pipeline.");
+	}
+
 		
 	private void terminates() {
 		if(termIndex.get().getOccurrenceStore() instanceof MongoDBOccurrenceStore) 
@@ -400,6 +420,20 @@ public class TermSuitePipeline {
 		}
 	}
 	
+	public TermSuitePipeline setStreamingCollection(String queueName) {
+		try {
+			this.crDescription = CollectionReaderFactory.createReaderDescription(
+					StreamingCollectionReader.class,
+					StreamingCollectionReader.PARAM_LANGUAGE, this.lang.getCode(),
+					StreamingCollectionReader.PARAM_NAME, queueName,
+					StreamingCollectionReader.PARAM_QUEUE_NAME, queueName
+					);
+			return this;
+		} catch (Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
+	}
+
 	public TermSuitePipeline setResourcePath(String resourcePath) {
 		TermSuiteUtils.addToClasspath(resourcePath);
 		return this;
@@ -1801,4 +1835,5 @@ public class TermSuitePipeline {
 		this.linkMongoStore = true;
 		return this;
 	}
+
 }

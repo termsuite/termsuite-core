@@ -24,16 +24,19 @@ package eu.project.ttc.engines;
 import java.util.Collection;
 import java.util.Iterator;
 
+import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.fit.descriptor.ExternalResource;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.FSArray;
 import org.apache.uima.jcas.cas.StringArray;
+import org.apache.uima.resource.ResourceInitializationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Optional;
+import com.google.common.base.Preconditions;
 
 import eu.project.ttc.resources.OccurrenceFilter;
 import eu.project.ttc.resources.TermIndexResource;
@@ -78,7 +81,11 @@ public class RegexSpotter extends TokenRegexAE {
 	@ConfigurationParameter(name = KEEP_OCCURRENCES_IN_TERM_INDEX, mandatory = false, defaultValue = "true")
 	private boolean keepOccurrencesInTermIndex;
 
+	public static final String ADD_TO_TERM_INDEX = "AddToTermIndex";
+	@ConfigurationParameter(name = ADD_TO_TERM_INDEX, mandatory = false, defaultValue = "true")
+	private boolean addToTermIndex;
 
+	
 	public static final String CHARACTER_FOOTPRINT_TERM_FILTER = "CharacterFootprintTermFilter";
 	@ExternalResource(key =CHARACTER_FOOTPRINT_TERM_FILTER, mandatory = false)
 	private OccurrenceFilter termFilter = TrueFilter.INSTANCE;
@@ -89,10 +96,20 @@ public class RegexSpotter extends TokenRegexAE {
 	private FilterResource stopWordFilter;
 	
 	
-	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
+	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=false)
 	private TermIndexResource termIndexResource;
 	
 	private String currentFileURI;
+	
+	@Override
+	public void initialize(UimaContext context) throws ResourceInitializationException {
+		super.initialize(context);
+		
+		Preconditions.checkState(
+				!(addToTermIndex && termIndexResource == null),
+				"{} is configured to store terms in TermIndex but no TermIndex was passed",
+				this.getClass().getName());
+	}
 	
 	@Override
 	protected void beforeRuleProcessing(JCas jCas) {
@@ -198,7 +215,8 @@ public class RegexSpotter extends TokenRegexAE {
 		annotation.setSpottingRuleName(occurrence.getRule().getName());
 		annotation.setTermKey(TermSuiteUtils.getGroupingKey(annotation));
 		annotation.addToIndexes();
-		this.termIndexResource.getTermIndex().addTermOccurrence(
+		if(addToTermIndex)
+			this.termIndexResource.getTermIndex().addTermOccurrence(
 				annotation, 
 				currentFileURI, 
 				keepOccurrencesInTermIndex);
@@ -214,7 +232,8 @@ public class RegexSpotter extends TokenRegexAE {
 	@Override
 	protected void afterRuleProcessing(JCas jCas) {
 		flushOccurrenceBuffer(jCas);
-		this.termIndexResource.getTermIndex().getOccurrenceStore().flush();
+		if(addToTermIndex)
+			this.termIndexResource.getTermIndex().getOccurrenceStore().flush();
 
 	}
 
