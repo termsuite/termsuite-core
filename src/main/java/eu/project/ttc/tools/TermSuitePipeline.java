@@ -119,6 +119,7 @@ import eu.project.ttc.resources.YamlVariantRules;
 import eu.project.ttc.stream.CasConsumer;
 import eu.project.ttc.stream.ConsumerRegistry;
 import eu.project.ttc.stream.DocumentProvider;
+import eu.project.ttc.stream.DocumentStream;
 import eu.project.ttc.stream.StreamingCasConsumer;
 import eu.project.ttc.types.WordAnnotation;
 import eu.project.ttc.utils.OccurrenceBuffer;
@@ -319,7 +320,7 @@ public class TermSuitePipeline {
 		}
 	}
 	
-	public DocumentProvider stream(CasConsumer consumer) {
+	public DocumentStream stream(CasConsumer consumer) {
 		try {
 			String id = new BigInteger(130, new SecureRandom()).toString(8);
 			String casConsumerName = "pipeline-"+id+"-consumer";
@@ -370,7 +371,7 @@ public class TermSuitePipeline {
 					}
 				}
 			};
-			return documentProvider;
+			return new DocumentStream(streamThread, documentProvider, consumer, queueName);
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
 		}

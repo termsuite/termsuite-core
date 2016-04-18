@@ -36,7 +36,7 @@ public class StreamingCollectionReader extends CollectionReader_ImplBase {
 	@ConfigurationParameter(name = PARAM_QUEUE_NAME, mandatory=false, defaultValue = DEFAULT_QUEUE_NAME)
 	private String queueName;
 
-	private BlockingQueue<CollectionDocument> queue;
+	private BlockingQueue<CollectionDocument> documentQueue;
 	
 	private CollectionDocument currentDoc;
 	
@@ -45,7 +45,7 @@ public class StreamingCollectionReader extends CollectionReader_ImplBase {
 		this.queueName = (String) getConfigParameterValue(PARAM_QUEUE_NAME);
 		this.mLanguage = Lang.forName((String) getConfigParameterValue(PARAM_LANGUAGE));
 		this.streamName = (String) getConfigParameterValue(PARAM_NAME);
-		queue = QueueRegistry.getInstance().getQueue(queueName);
+		documentQueue = QueueRegistry.getInstance().getQueue(queueName);
 		this.mCurrentIndex = 0;
 		this.cumulatedLength = 0;
 	}
@@ -93,10 +93,13 @@ public class StreamingCollectionReader extends CollectionReader_ImplBase {
 	@Override
 	public boolean hasNext() throws IOException, CollectionException {
 		try {
-			if(queue.isEmpty())
+			if(documentQueue.isEmpty())
 				logger.info("Waiting for a new document.");
-			currentDoc = queue.take();
-			return true;
+			currentDoc = documentQueue.take();
+			if(currentDoc == CollectionDocument.LAST_DOCUMENT)
+				return false;
+			else
+				return true;
 		} catch (InterruptedException e) {
 			logger.info("Stream {} interrupted", this.streamName);
 			return false;
