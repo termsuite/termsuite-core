@@ -129,7 +129,7 @@ public class TermOccurrence implements Comparable<TermOccurrence> {
 		return getForm();
 	}
 	
-	void setTerm(Term term2) {
+	public void setTerm(Term term2) {
 		this.term = term2;
 	}
 	

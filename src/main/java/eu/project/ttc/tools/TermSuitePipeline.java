@@ -57,6 +57,7 @@ import eu.project.ttc.engines.ExtensionDetecter;
 import eu.project.ttc.engines.GraphicalVariantGatherer;
 import eu.project.ttc.engines.MateLemmaFixer;
 import eu.project.ttc.engines.MateLemmatizerTagger;
+import eu.project.ttc.engines.Merger;
 import eu.project.ttc.engines.PipelineObserver;
 import eu.project.ttc.engines.PrimaryOccurrenceDetector;
 import eu.project.ttc.engines.RegexSpotter;
@@ -1591,6 +1592,7 @@ public class TermSuitePipeline {
 	 * 
 	 * 
 	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline aeScorer()   {
 		try {
@@ -1606,6 +1608,30 @@ public class TermSuitePipeline {
 			throw new TermSuitePipelineException(e);
 		}
 	}
+
+	/**
+	 *  Merges the variants (only those who are extensions of the base term) 
+	 *  of a terms by graphical variation.
+	 *  
+	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
+	 */
+	public TermSuitePipeline aeMerger()   {
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					Merger.class,
+					Merger.SIMILARITY_THRESHOLD, 0.9f
+				);
+			
+			ExternalResourceFactory.bindResource(ae, resTermIndex());
+			ExternalResourceFactory.bindResource(ae, resObserver());
+
+			return aggregateAndReturn(ae, Merger.TASK_NAME, 1);
+		} catch(Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
+	}
+
 
 	
 	public TermSuitePipeline setExportFilteringRule(String exportFilteringRule) {
