@@ -97,6 +97,7 @@ public class JSONTermIndexIOSpec {
 				.setCompoundType(CompoundType.NATIVE)
 				.create();
 		term1 = TermBuilder.start(termIndex)
+			.setRank(1)
 			.addWord(word1, "L1")
 			.addWord(word2, "L2")
 			.addOccurrence(10, 12, doc2, "coveredText 3")
@@ -104,6 +105,7 @@ public class JSONTermIndexIOSpec {
 			.setSpottingRule("spotRule1")
 			.createAndAddToIndex();
 		term2 = TermBuilder.start(termIndex)
+				.setRank(2)
 				.addWord(word1, "L1")
 				.addWord(word2, "L2")
 				.addWord(word3, "L3")
@@ -160,6 +162,7 @@ public class JSONTermIndexIOSpec {
 			assertThat(t2.getSpottingRule()).isEqualTo(t.getSpottingRule());
 			assertThat(t2.getPattern()).isEqualTo(t.getPattern());
 			assertThat(t2.getWords()).isEqualTo(t.getWords());
+			assertThat(t2.getRank()).isEqualTo(t.getRank());
 			if(t2.getId() == term1.getId()) {
 				assertTrue(t.isContextVectorComputed());
 				assertTrue(t2.isContextVectorComputed());
@@ -202,6 +205,13 @@ public class JSONTermIndexIOSpec {
 		assertEquals(Lang.EN, termIndex.getLang());
 		assertEquals(123, termIndex.getWordAnnotationsNum());
 		assertEquals(456, termIndex.getSpottedTermsNum());
+
+		// test term rank
+		assertThat(termIndex.getTerms()).hasSize(3)
+		.extracting("rank")
+		.containsOnly(1, 2, 3)
+		;
+
 		
 		// test terms
 		assertThat(termIndex.getTerms()).hasSize(3)
@@ -302,6 +312,7 @@ public class JSONTermIndexIOSpec {
 		List<?> termList = (List<?>)map.get("terms");
 		assertThat(termList).hasSize(2).extracting("id").containsOnly(term1.getId(), term2.getId());
 		LinkedHashMap<?,?> t1 = (LinkedHashMap<?,?>)termList.get(0);
+		assertThat(t1.get("rank")).isEqualTo(1);
 		assertThat((List<?>)t1.get("words")).extracting("lemma", "syn").containsOnly(tuple("word1", "L1"), tuple("word2", "L2"));
 		assertThat((List<?>)t1.get("occurrences")).hasSize(2).extracting("begin", "end", "file", "text").containsOnly(
 				tuple(10, 12, Integer.parseInt(sources.inverse().get("source2")), "coveredText 3"),

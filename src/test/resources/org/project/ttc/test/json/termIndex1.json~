@@ -68,7 +68,6 @@
 		{
 			key: "a: word2",
 			id: 3,
-			rank: 3,
 			words: [
 				{lemma: "word2", syn: "A"}
 			],

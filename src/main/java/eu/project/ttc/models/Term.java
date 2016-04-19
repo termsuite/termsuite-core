@@ -67,6 +67,12 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 	 */
 	private int id;
 	
+	/*
+	 * The term rank
+	 */
+	private int rank;
+
+	
 	private double normalizedTermFrequency;
 	
 	private double normalizedGeneralTermFrequency;
@@ -643,5 +649,12 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 	public void setBases(SortedSet<TermVariation> bases) {
 		this.bases = Sets.newTreeSet(bases);
 	}
-
+	
+	public int getRank() {
+		return rank;
+	}
+	
+	public void setRank(int rank) {
+		this.rank = rank;
+	}
 }

@@ -41,20 +41,21 @@ import eu.project.ttc.utils.TermUtils;
  *
  */
 public enum TermProperty {
-	DOCUMENT_FREQUENCY("documentFrequency", "dfreq", false),
-	FREQUENCY_NORM("frequencyNorm", "fnorm", false),
-	GENERAL_FREQUENCY_NORM("generalFrequencyNorm", "generalFnorm", false),
-	WR("wr", "wr", true),
-	WR_LOG("wrLog", "wrlog", true),
-	WR_LOG_Z_SCORE("wrLogZScore", "zscore", true),
-	FREQUENCY("frequency", "f", false),
-	PILOT("pilot", "pilot", false),
-	LEMMA("lemma", "lemma", false),
-	GROUPING_KEY("groupingKey", "gkey", false),
-	PATTERN("pattern", "p", false),
-	SPOTTING_RULE("spottingRule", "rule", false),
-	TERM_CLASS_HEAD("termClassHead", "cls", false),
-	TERM_CLASS_FREQUENCY("termClassFrequency", "clsfreq", false)
+	RANK("rank", "#", false, Integer.class),
+	DOCUMENT_FREQUENCY("documentFrequency", "dfreq", false, Integer.class),
+	FREQUENCY_NORM("frequencyNorm", "fnorm", false, Double.class),
+	GENERAL_FREQUENCY_NORM("generalFrequencyNorm", "generalFnorm", false, Double.class),
+	WR("wr", "wr", true, Double.class),
+	WR_LOG("wrLog", "wrlog", true, Double.class),
+	WR_LOG_Z_SCORE("wrLogZScore", "zscore", true, Double.class),
+	FREQUENCY("frequency", "f", false, Integer.class),
+	PILOT("pilot", "pilot", false, String.class),
+	LEMMA("lemma", "lemma", false, String.class),
+	GROUPING_KEY("groupingKey", "gkey", false, String.class),
+	PATTERN("pattern", "p", false, String.class),
+	SPOTTING_RULE("spottingRule", "rule", false, String.class),
+	TERM_CLASS_HEAD("termClassHead", "cls", false, Term.class),
+	TERM_CLASS_FREQUENCY("termClassFrequency", "clsfreq", false, Integer.class)
 	;
 	
 	private static Map<String, TermProperty> byNames = Maps.newHashMap();
@@ -71,13 +72,28 @@ public enum TermProperty {
 	
 	private String propertyName;
 	private String propertyShortName;
+	private Class<?> range;
 	private boolean measure;
 
-	private TermProperty(String propertyName, String propertyShortName, boolean isMeasure) {
+	private TermProperty(String propertyName, String propertyShortName, boolean isMeasure, Class<?> range) {
 		this.propertyName = propertyName;
 		this.propertyShortName = propertyShortName;
 		this.measure = isMeasure;
+		this.range = range;
 	}
+	
+	public Class<?> getRange() {
+		return range;
+	}
+	
+	public boolean isDecimalNumber() {
+		return getRange().equals(Double.class) || getRange().equals(Float.class);
+	}
+	
+	public boolean isNumber() {
+		return Number.class.isAssignableFrom(getRange());
+	}
+
 	
 	public boolean isMeasure() {
 		return this.measure;
@@ -184,6 +200,8 @@ public enum TermProperty {
 			throw new IllegalStateException("Should use #getValue(TermIndex termIndex, Term t) instead.");
 		case DOCUMENT_FREQUENCY:
 			return t.getDocumentFrequency();
+		case RANK:
+			return t.getRank();
 		case FREQUENCY:
 			return t.getFrequency();
 		case LEMMA:

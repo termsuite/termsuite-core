@@ -122,7 +122,7 @@ public class TSVExporter extends JCasAnnotator_ImplBase {
 		TermIndex termIndex = termIndexResource.getTermIndex();
 		LOGGER.info("Exporting {} terms to TSV file {}", termIndex.getTerms().size(), this.toFilePath);
 		List<Term> sortedTerms = Lists.newArrayList(termIndex.getTerms());
-		Collections.sort(sortedTerms, TermProperty.WR_LOG.getComparator(termIndex, true));
+		Collections.sort(sortedTerms, TermProperty.RANK.getComparator(termIndex, false));
 		try {
 			if(showHeaders)
 				tsv.writeHeaders();
@@ -135,7 +135,6 @@ public class TSVExporter extends JCasAnnotator_ImplBase {
 							tv.getVariant(), 
 							String.format("%.2f", tv.getScore()));
 				}
-				tsv.endTerm();
 			}
 			tsv.close();
 		} catch (IOException e) {

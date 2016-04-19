@@ -40,6 +40,7 @@ public class TermBuilder {
 	
 	private String groupingKey;
 	private String spottingRule;
+	private int rank = -1;
 	private Optional<Integer> id = Optional.absent();
 	private List<TermWord> termWords = Lists.newArrayList();
 	private List<TermOccurrence> termOccurrences = Lists.newArrayList();
@@ -79,6 +80,8 @@ public class TermBuilder {
 		if(frequencyNorm.isPresent())
 			term.setFrequencyNorm(frequencyNorm.get());
 
+		term.setRank(rank);
+		
 		if(contextVector.isPresent())
 			term.setContextVector(contextVector.get());
 
@@ -150,5 +153,11 @@ public class TermBuilder {
 
 	public static TermBuilder start() {
 		return new TermBuilder();
+	}
+
+	public TermBuilder setRank(int rank) {
+		this.rank = rank;
+		return this;
+		
 	}
 }

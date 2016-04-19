@@ -102,6 +102,7 @@ public class JSONTermIndexIO {
 	private static final String BASE = "base";
 	private static final String VARIANT = "variant";
 	private static final String VARIANT_SCORE = "vscore";
+	private static final String RANK = "rank";
 
 //	private static final String RULE = "rule";
 	private static final String FILE = "file";
@@ -263,6 +264,8 @@ public class JSONTermIndexIO {
 						else if (ID.equals(fieldname))  {
 							currentTermId = jp.nextIntValue(-2);
 							builder.setId(currentTermId);
+						} else if (RANK.equals(fieldname)) {
+							builder.setRank(jp.nextIntValue(-1));
 						} else if (FREQUENCY.equals(fieldname)) {
 							builder.setFrequency(jp.nextIntValue(-1));
 						} else {
@@ -532,6 +535,8 @@ public class JSONTermIndexIO {
 			jg.writeStartObject();
 			jg.writeFieldName(ID);
 			jg.writeNumber(t.getId());
+			jg.writeFieldName(RANK);
+			jg.writeNumber(t.getRank());
 			jg.writeFieldName(GROUPING_KEY);
 			jg.writeString(t.getGroupingKey());
 			jg.writeFieldName(WORDS);

@@ -87,6 +87,7 @@ public class MemoryTermIndex implements TermIndex {
 	 * instead. 
 	 */
 	private Map<Integer, Term> termsById = Maps.newHashMap();
+	private List<Term> rankedTerms = Lists.newArrayList();
 	private Map<String, Term> termsByGroupingKey = Maps.newHashMap();
 	private Map<String, CustomTermIndex> customIndexes = Maps.newHashMap();
 	private Map<String, TermMeasure> termMeasures = Maps.newHashMap();

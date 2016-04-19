@@ -60,6 +60,7 @@ import eu.project.ttc.engines.MateLemmatizerTagger;
 import eu.project.ttc.engines.Merger;
 import eu.project.ttc.engines.PipelineObserver;
 import eu.project.ttc.engines.PrimaryOccurrenceDetector;
+import eu.project.ttc.engines.Ranker;
 import eu.project.ttc.engines.RegexSpotter;
 import eu.project.ttc.engines.ScorerAE;
 import eu.project.ttc.engines.StringRegexFilter;
@@ -90,6 +91,7 @@ import eu.project.ttc.engines.exporter.XmiCasExporter;
 import eu.project.ttc.metrics.LogLikelihood;
 import eu.project.ttc.models.OccurrenceStore;
 import eu.project.ttc.models.OccurrenceType;
+import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.index.MemoryTermIndex;
 import eu.project.ttc.models.occstore.MemoryOccurrenceStore;
@@ -1632,7 +1634,33 @@ public class TermSuitePipeline {
 		}
 	}
 
+	
+	/**
+	 * 
+	 * Sets the {@link Term#setRank(int)} of all terms of the {@link TermIndex}
+	 * given a {@link TermProperty}.
+	 * 
+	 * @param property
+	 * @param desc
+	 * @return
+	 */
+	public TermSuitePipeline aeRanker(TermProperty property, boolean desc)   {
+		Preconditions.checkArgument(property != TermProperty.RANK, "Cannot rank on property %s", TermProperty.RANK);
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					Ranker.class,
+					Ranker.RANKING_PROPERTY, property,	
+					Ranker.DESC, desc
+				);
+				ExternalResourceFactory.bindResource(ae, resTermIndex());
+				ExternalResourceFactory.bindResource(ae, resObserver());
 
+
+			return aggregateAndReturn(ae, Ranker.TASK_NAME, 1);
+		} catch(Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
+	}
 	
 	public TermSuitePipeline setExportFilteringRule(String exportFilteringRule) {
 		this.exportFilteringRule = exportFilteringRule;

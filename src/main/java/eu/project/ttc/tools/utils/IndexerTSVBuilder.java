@@ -36,9 +36,6 @@ import eu.project.ttc.models.TermIndex;
  */
 public class IndexerTSVBuilder extends AbstractTSVBuilder {
 
-	/** Number of terms */
-	private int termCount = 1;
-
 	private List<TermProperty> properties;
 	
 	private boolean showScores;
@@ -62,10 +59,8 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 	 * @return The new id
 	 * @throws IOException
 	 */
-	public Integer addTerm(TermIndex termIndex, Term term, String label) throws IOException {
+	public void addTerm(TermIndex termIndex, Term term, String label) throws IOException {
 		startTerm(termIndex, term, label);
-		endTerm();
-		return termCount;
 	}
 
 	private static final String SPEC_FORMAT = "%.2f";
@@ -74,7 +69,10 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 	private static final String V_LABEL_FORMAT = "V[%s]";
 	private static final String V_LABEL = "V";
 	
+	private Term currentTerm = null;
+	
 	public void startTerm(TermIndex termIndex, Term term, String label) throws IOException {
+		this.currentTerm = term;
 		if(showScores) {
 			appendTerm(termIndex, term, String.format(T_LABEL_FORMAT,label));
 		} else {
@@ -90,10 +88,6 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 		}
 	}
 
-	public void endTerm() {
-		termCount++;
-	}
-	
 	private void appendTerm(TermIndex termIndex, Term t, String termType) throws IOException {
 		List<String> line = Lists.newArrayList();
 		line.add(termType);
@@ -106,13 +100,13 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 			} else
 				line.add(value.toString());
 		}
-		append(Integer.toString(termCount), line.toArray(new String[line.size()]));
+		append(Integer.toString(currentTerm.getRank()), line.toArray(new String[line.size()]));
 	}
 
 
 	public void writeHeaders() throws IOException {
 		List<String> headers = Lists.newArrayList();
-		headers.add("baseId");
+		headers.add("#");
 		headers.add("type");
 		for(TermProperty p:properties)
 			headers.add(p.getShortName());
