@@ -22,15 +22,17 @@
 package eu.project.ttc.models;
 
 import com.google.common.base.Objects;
+import com.google.common.collect.ComparisonChain;
 
 import eu.project.ttc.utils.TermUtils;
 
-public class TermVariation {
+public class TermVariation implements Comparable<TermVariation> {
 	private VariationType variationType;
 	private Term base;
 	private Term variant;
 	private Object info;
 	private String _label;
+	private double score;
 	
 	private boolean includedIn;
 	private boolean prefixOf;
@@ -82,8 +84,10 @@ public class TermVariation {
 	public boolean equals(Object obj) {
 		if (obj instanceof TermVariation) {
 			TermVariation v = (TermVariation) obj;
-			return Objects.equal(this.base, v.base)
+			return Objects.equal(this.score, v.score)
+					&& Objects.equal(this.base, v.base)
 					&& Objects.equal(this.variant, v.variant)
+					&& Objects.equal(this.variationType, v.variationType)
 					&& Objects.equal(this.info, v.info);
 		} else 
 			return false;
@@ -99,5 +103,31 @@ public class TermVariation {
 	
 	public boolean isPrefixOf() {
 		return prefixOf;
+	}
+	
+	public void setScore(double score) {
+		this.score = score;
+	}
+	
+	public double getScore() {
+		return score;
+	}
+	
+	@Override
+	public int compareTo(TermVariation tv) {
+		return ComparisonChain.start()
+				// sort by score desc
+				.compare(tv.score, this.score)
+				// then by non inclusion first
+				.compare(this.includedIn ? 1 : 0, tv.includedIn ? 1 : 0)
+				// then by length asc
+				.compare(this.variant.getWords().size(), tv.variant.getWords().size())
+				// then by term id
+				.compare(this.variant.getGroupingKey(), tv.variant.getGroupingKey())
+				// makes it consistent with equals
+				.compare(this.base.getGroupingKey(), tv.base.getGroupingKey())
+				.compare(this.variationType, tv.variationType)
+				.result();
+				
 	}
 }

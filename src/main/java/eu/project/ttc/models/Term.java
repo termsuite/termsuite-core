@@ -28,6 +28,7 @@ import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Set;
+import java.util.SortedSet;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
@@ -50,8 +51,8 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 	private OccurrenceStore occurrenceStore;
 	private Set<Document> documents = Sets.newHashSet();
 
-	private Set<TermVariation> variations = Sets.newHashSet();
-	private Set<TermVariation> bases = Sets.newHashSet();
+	private Set<TermVariation> variations = Sets.newTreeSet();
+	private Set<TermVariation> bases = Sets.newTreeSet();
 	
 	private Set<Term> extensions = Sets.newHashSet();
 	private Set<Term> extensionBases = Sets.newHashSet();
@@ -236,12 +237,22 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 	 * @param type
 	 * @param info
 	 */
-	public void addTermVariation(Term variant, VariationType type, Object info) {
-		TermVariation variation = new TermVariation(type, this, variant, info);
-		this.variations.add(variation);
-		variant.bases.add(variation);
+	public TermVariation addTermVariation(Term variant, VariationType type, Object info) {
+		TermVariation tv = new TermVariation(type, this, variant, info);
+		addTermVariation(tv);
+		return tv;
 	}
-	
+
+	/**
+	 *
+	 * Adds the {@link TermVariation} object to {@link #variations} and variant{@link #bases}.
+	 * @param termVariation
+	 */
+	public void addTermVariation(TermVariation termVariation) {
+		this.variations.add(termVariation);
+		termVariation.getVariant().bases.add(termVariation);
+	}
+
 	/**
 	 * Removes the param variation from this{@link #variations} and
 	 * from variant's {@link #bases}.
@@ -614,4 +625,23 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 	public Set<Term> getExtensionBases() {
 		return Collections.unmodifiableSet(this.extensionBases);
 	}
+	
+	/**
+	 * Do not use this, this will disappear on version 3.0.
+	 * @param variations
+	 */
+	@Deprecated
+	public void setVariations(SortedSet<TermVariation> variations) {
+		this.variations = Sets.newTreeSet(variations);
+	}
+	
+	/**
+	 * Do not use this, this will disappear on version 3.0.
+	 * @param variations
+	 */
+	@Deprecated
+	public void setBases(SortedSet<TermVariation> bases) {
+		this.bases = Sets.newTreeSet(bases);
+	}
+
 }

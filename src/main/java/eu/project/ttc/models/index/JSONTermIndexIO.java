@@ -101,6 +101,8 @@ public class JSONTermIndexIO {
 	private static final String INFO = "info";
 	private static final String BASE = "base";
 	private static final String VARIANT = "variant";
+	private static final String VARIANT_SCORE = "vscore";
+
 //	private static final String RULE = "rule";
 	private static final String FILE = "file";
 	private static final String OCCURRENCES = "occurrences";
@@ -154,6 +156,8 @@ public class JSONTermIndexIO {
 //		String rule;
 		String infoToken;
 		String variantType;
+		double variantScore;
+
 		Map<Integer, String> inputSources = Maps.newTreeMap();
 		
 		
@@ -377,6 +381,7 @@ public class JSONTermIndexIO {
 					variant = null;
 					infoToken = null;
 					variantType = null;
+					variantScore = 0;
 					while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
 						fieldname = jp.getCurrentName();
 						if (BASE.equals(fieldname)) 
@@ -385,7 +390,10 @@ public class JSONTermIndexIO {
 							variant = jp.nextTextValue();
 						else if (VARIANT_TYPE.equals(fieldname)) 
 							variantType = jp.nextTextValue();
-						else if (INFO.equals(fieldname)) 
+						else if (VARIANT_SCORE.equals(fieldname)) {
+							jp.nextToken();
+							variantScore = jp.getDoubleValue();
+						} else if (INFO.equals(fieldname)) 
 							infoToken = jp.nextTextValue();
 					} // end syntactic variant object
 					Preconditions.checkNotNull(base, MSG_EXPECT_PROP_FOR_VAR, BASE);
@@ -397,10 +405,14 @@ public class JSONTermIndexIO {
 					Preconditions.checkNotNull(v, MSG_TERM_DOES_NOT_EXIST, variant);
 					
 					VariationType vType = VariationType.fromShortName(variantType);
-					b.addTermVariation(
-							v, 
+					
+					TermVariation tv = new TermVariation(
 							vType, 
+							b, 
+							v, 
 							vType == VariationType.GRAPHICAL ? Double.parseDouble(infoToken) : infoToken);
+					tv.setScore(variantScore);
+					b.addTermVariation(tv);
 				} // end syntactic variations array
 			}
 		}
@@ -602,6 +614,8 @@ public class JSONTermIndexIO {
 			jg.writeString(v.getVariationType().getShortName());
 			jg.writeFieldName(INFO);
 			jg.writeString(v.getInfo().toString());
+			jg.writeFieldName(VARIANT_SCORE);
+			jg.writeNumber(v.getScore());
 			jg.writeEndObject();
 		}
 		jg.writeEndArray();

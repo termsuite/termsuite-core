@@ -60,6 +60,7 @@ import eu.project.ttc.engines.MateLemmatizerTagger;
 import eu.project.ttc.engines.PipelineObserver;
 import eu.project.ttc.engines.PrimaryOccurrenceDetector;
 import eu.project.ttc.engines.RegexSpotter;
+import eu.project.ttc.engines.ScorerAE;
 import eu.project.ttc.engines.StringRegexFilter;
 import eu.project.ttc.engines.SyntacticTermGatherer;
 import eu.project.ttc.engines.TermClassifier;
@@ -1585,7 +1586,28 @@ public class TermSuitePipeline {
 		}
 	}
 
+	/**
+	 * Transforms the {@link TermIndex} into a flat one-n scored model.
+	 * 
+	 * 
+	 * @return
+	 */
+	public TermSuitePipeline aeScorer()   {
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					ScorerAE.class					
+				);
+			
+			ExternalResourceFactory.bindResource(ae, resTermIndex());
+			ExternalResourceFactory.bindResource(ae, resObserver());
 
+			return aggregateAndReturn(ae, ScorerAE.TASK_NAME, 1);
+		} catch(Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
+	}
+
+	
 	public TermSuitePipeline setExportFilteringRule(String exportFilteringRule) {
 		this.exportFilteringRule = exportFilteringRule;
 		return this;

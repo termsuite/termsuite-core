@@ -25,14 +25,14 @@ import eu.project.ttc.utils.StringUtils;
  * @author Damien Cram
  *
  */
-public class Scorifier {
-	private static final Logger LOGGER = LoggerFactory.getLogger(Scorifier.class);
+public class TermVariationScorer {
+	private static final Logger LOGGER = LoggerFactory.getLogger(TermVariationScorer.class);
 
 	private ScoredModel scoredModel;
 
-	private ScorifierConfig config;
+	private VariantScorerConfig config;
 	
-	public Scorifier(ScorifierConfig config) {
+	public TermVariationScorer(VariantScorerConfig config) {
 		super();
 		this.config = config;
 	}
@@ -56,8 +56,8 @@ public class Scorifier {
 		}
 	};
 	
-	public ScoredModel scorify(TermIndex termIndex) {
-		LOGGER.info("Scorifying term index {}", termIndex.getName());
+	public ScoredModel score(TermIndex termIndex) {
+		LOGGER.info("Scorying term index {}", termIndex.getName());
 
 		// Filter terms with bad orthgraph
 		doScoredModel(termIndex);

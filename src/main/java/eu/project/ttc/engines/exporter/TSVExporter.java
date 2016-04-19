@@ -27,6 +27,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.nio.charset.Charset;
+import java.util.Collections;
 import java.util.List;
 
 import org.apache.commons.io.IOUtils;
@@ -44,12 +45,10 @@ import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 
 import eu.project.ttc.engines.cleaner.TermProperty;
+import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.scored.ScoredModel;
-import eu.project.ttc.models.scored.ScoredTerm;
-import eu.project.ttc.models.scored.ScoredVariation;
+import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.resources.TermIndexResource;
-import eu.project.ttc.termino.engines.Scorifier;
 import eu.project.ttc.tools.utils.IndexerTSVBuilder;
 
 /**
@@ -121,19 +120,20 @@ public class TSVExporter extends JCasAnnotator_ImplBase {
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
 		TermIndex termIndex = termIndexResource.getTermIndex();
-		ScoredModel scoredModel = new Scorifier(termIndex.getLang().getScorifierConfig()).scorify(termIndex);
-		LOGGER.info("Exporting {} terms to TSV file {}", scoredModel.getTerms().size(), this.toFilePath);
+		LOGGER.info("Exporting {} terms to TSV file {}", termIndex.getTerms().size(), this.toFilePath);
+		List<Term> sortedTerms = Lists.newArrayList(termIndex.getTerms());
+		Collections.sort(sortedTerms, TermProperty.WR_LOG.getComparator(termIndex, true));
 		try {
 			if(showHeaders)
 				tsv.writeHeaders();
 				
-			for(ScoredTerm st:scoredModel.getTerms()) {
-				tsv.startTerm(scoredModel.getTermIndex(), st.getTerm(), st.getLabel());
-				for(ScoredVariation sv:st.getVariations()) {
+			for(Term t:sortedTerms) {
+				tsv.startTerm(termIndex, t, "");
+				for(TermVariation tv:t.getVariations()) {
 					tsv.addVariant(
-							scoredModel.getTermIndex(), 
-							sv.getVariant().getTerm(), 
-							sv.getLabel());
+							termIndex, 
+							tv.getVariant(), 
+							String.format("%.2f", tv.getScore()));
 				}
 				tsv.endTerm();
 			}
