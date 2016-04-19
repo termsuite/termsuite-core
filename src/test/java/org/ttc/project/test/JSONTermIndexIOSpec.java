@@ -103,6 +103,7 @@ public class JSONTermIndexIOSpec {
 			.addOccurrence(10, 12, doc2, "coveredText 3")
 			.addOccurrence(20, 30, doc3, "coveredText 4")
 			.setSpottingRule("spotRule1")
+			.setSpecificity(1.1)
 			.createAndAddToIndex();
 		term2 = TermBuilder.start(termIndex)
 				.setRank(2)
@@ -113,6 +114,7 @@ public class JSONTermIndexIOSpec {
 				.addOccurrence(0, 2, doc2, "coveredText 1")
 				.addOccurrence(10, 12, doc1, "coveredText 2")
 				.addOccurrence(14, 20, doc2, "coveredText 2")
+				.setSpecificity(2.2)
 				.createAndAddToIndex();
 		term1.addTermVariation(term2, VariationType.SYNTACTICAL, "variationRule1");
 		term1.addTermVariation(term2, VariationType.GRAPHICAL, 0.956d);
@@ -157,6 +159,7 @@ public class JSONTermIndexIOSpec {
 			assertThat(t2.getBases()).hasSameElementsAs(t.getBases());
 			assertThat(t2.getForms()).hasSameElementsAs(t.getForms());
 			assertThat(t2.getFrequency()).isEqualTo(t.getFrequency());
+			assertThat(t2.getSpecificity()).isEqualTo(t.getSpecificity());
 			assertThat(t2.getFrequencyNorm()).isEqualTo(t.getFrequencyNorm());
 			assertThat(t2.getGeneralFrequencyNorm()).isEqualTo(t.getGeneralFrequencyNorm());
 			assertThat(t2.getSpottingRule()).isEqualTo(t.getSpottingRule());
@@ -224,6 +227,7 @@ public class JSONTermIndexIOSpec {
 		Term t2 = termIndex.getTermByGroupingKey("n: word1");
 		Term t3 = termIndex.getTermByGroupingKey("a: word2");
 		assertThat(t1.getId()).isEqualTo(1);
+		assertThat(t1.getSpecificity()).isCloseTo(0.321d, offset(0.000001d));
 		assertThat(t1.getFrequencyNorm()).isCloseTo(0.123d, offset(0.000001d));
 		assertThat(t1.getGeneralFrequencyNorm()).isCloseTo(0.025d, offset(0.000001d));
 		assertThat(t1.getFrequency()).isEqualTo(6);
@@ -313,6 +317,7 @@ public class JSONTermIndexIOSpec {
 		assertThat(termList).hasSize(2).extracting("id").containsOnly(term1.getId(), term2.getId());
 		LinkedHashMap<?,?> t1 = (LinkedHashMap<?,?>)termList.get(0);
 		assertThat(t1.get("rank")).isEqualTo(1);
+		assertThat(t1.get("spec")).isEqualTo(1.1);
 		assertThat((List<?>)t1.get("words")).extracting("lemma", "syn").containsOnly(tuple("word1", "L1"), tuple("word2", "L2"));
 		assertThat((List<?>)t1.get("occurrences")).hasSize(2).extracting("begin", "end", "file", "text").containsOnly(
 				tuple(10, 12, Integer.parseInt(sources.inverse().get("source2")), "coveredText 3"),

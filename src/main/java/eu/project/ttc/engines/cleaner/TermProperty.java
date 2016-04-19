@@ -45,6 +45,7 @@ public enum TermProperty {
 	DOCUMENT_FREQUENCY("documentFrequency", "dfreq", false, Integer.class),
 	FREQUENCY_NORM("frequencyNorm", "fnorm", false, Double.class),
 	GENERAL_FREQUENCY_NORM("generalFrequencyNorm", "generalFnorm", false, Double.class),
+	SPECIFICITY("specificity", "sp", true, Double.class),
 	WR("wr", "wr", true, Double.class),
 	WR_LOG("wrLog", "wrlog", true, Double.class),
 	WR_LOG_Z_SCORE("wrLogZScore", "zscore", true, Double.class),

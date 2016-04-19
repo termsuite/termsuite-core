@@ -31,6 +31,7 @@
 			rank: 1,
 			freq: 6,
 			f_norm: 0.123,
+			spec: 0.321,			
 			gf_norm: 0.025,
 			words: [
 				{lemma: "word1", syn: "N"},
@@ -54,6 +55,7 @@
 			key: "n: word1",
 			id: 2,
 			rank: 2,
+			spec: 0.111,			
 			words: [
 				{lemma: "word1", syn: "N"}
 			],
@@ -69,6 +71,7 @@
 			key: "a: word2",
 			id: 3,
 			rank: 3,
+			spec: 0.222,						
 			words: [
 				{lemma: "word2", syn: "A"}
 			],

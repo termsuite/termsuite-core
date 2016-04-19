@@ -80,7 +80,7 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 	/*
 	 * The weirdness ratio of this term
 	 */
-//	private float wr;
+	private double specificity;
 	
 	/*
 	 * The logarithm of weirdness ratio of this term
@@ -657,4 +657,13 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 	public void setRank(int rank) {
 		this.rank = rank;
 	}
+	
+	public double getSpecificity() {
+		return specificity;
+	}
+	
+	public void setSpecificity(double specificity) {
+		this.specificity = specificity;
+	}
+	
 }

@@ -103,6 +103,7 @@ public class JSONTermIndexIO {
 	private static final String VARIANT = "variant";
 	private static final String VARIANT_SCORE = "vscore";
 	private static final String RANK = "rank";
+	private static final String SPECIFICITY = "spec";
 
 //	private static final String RULE = "rule";
 	private static final String FILE = "file";
@@ -272,6 +273,9 @@ public class JSONTermIndexIO {
 							if (FREQ_NORM.equals(fieldname)) {
 								jp.nextToken();
 								builder.setFrequencyNorm((double)jp.getFloatValue());
+							} else if (SPECIFICITY.equals(fieldname))  {
+								jp.nextToken();
+								builder.setSpecificity((double)jp.getDoubleValue());
 							} else if (GENERAL_FREQ_NORM.equals(fieldname))  {
 								jp.nextToken();
 								builder.setGeneralFrequencyNorm((double)jp.getFloatValue());
@@ -557,6 +561,8 @@ public class JSONTermIndexIO {
 			jg.writeNumber(t.getFrequencyNorm());
 			jg.writeFieldName(GENERAL_FREQ_NORM);
 			jg.writeNumber(t.getGeneralFrequencyNorm());
+			jg.writeFieldName(SPECIFICITY);
+			jg.writeNumber(t.getSpecificity());
 			jg.writeFieldName(SPOTTING_RULE);
 			jg.writeString(t.getSpottingRule());
 			
