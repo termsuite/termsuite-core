@@ -88,7 +88,7 @@ public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 //					double wr = frequency / generalFrequency;
 					term.setFrequencyNorm(frequency);
 					term.setGeneralFrequencyNorm(generalFrequency);
-
+					term.setSpecificity(Math.log10(1 + frequency/generalFrequency));
 //					term.setWR((float)wr);
 //					term.setWRLog(Math.log10(1 + wr));
 //					if(wr>maxWR)
@@ -106,7 +106,7 @@ public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 				term.setFrequencyNorm(normalizedTermFrequency);
 				term.setGeneralFrequencyNorm( normalizedGeneralTermFrequency);
 //				term.setWR(normalizedTermFrequency/normalizedGeneralTermFrequency);
-//				term.setWRLog(Math.log10(1 + normalizedTermFrequency/normalizedGeneralTermFrequency));
+				term.setSpecificity(Math.log10(1 + normalizedTermFrequency/normalizedGeneralTermFrequency));
 				
 			}
 		}

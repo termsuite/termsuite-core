@@ -203,6 +203,8 @@ public enum TermProperty {
 			return t.getDocumentFrequency();
 		case RANK:
 			return t.getRank();
+		case SPECIFICITY:
+			return t.getSpecificity();
 		case FREQUENCY:
 			return t.getFrequency();
 		case LEMMA:
