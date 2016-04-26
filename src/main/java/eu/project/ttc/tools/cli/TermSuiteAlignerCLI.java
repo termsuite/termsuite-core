@@ -124,6 +124,7 @@ public class TermSuiteAlignerCLI {
 				TermSuiteCLIUtils.logCommandLineOptions(line);
 				
 				BilingualAligner aligner = TermSuiteAlignerBuilder.start()
+						.setSourceTerminology(sourceTermino.get())
 						.setTargetTerminology(targetTermino.get())
 						.setDicoPath(dicoPath)
 						.setDistance(distance)
