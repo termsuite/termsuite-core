@@ -48,7 +48,12 @@ public class TermSuiteResourceHelper {
 		 */
 		
 		this.lang = lang;
-		this.resourcePath = urlPrefix + lang.getCode() + File.separator;
+		
+		/*
+		 * Separator must be "/" since resources are always 
+		 * loaded from url by UIMA.
+		 */
+		this.resourcePath = urlPrefix + lang.getCode() + "/";
 	}
 
 	public TermSuiteResourceHelper(Lang lang) {
