@@ -872,60 +872,60 @@ public class TermSuitePipeline {
 		}
 	}
 
-	private TermSuitePipeline caseNormalizer(String tagger)  {
+	private TermSuitePipeline caseNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"eu.project.ttc.types.WordAnnotation:case", 
 				resFactory.getCaseMapping(tagger).toString());
 	}
 
-	private TermSuitePipeline categoryNormalizer(String tagger)  {
+	private TermSuitePipeline categoryNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"eu.project.ttc.types.WordAnnotation:category", 
 				resFactory.getCategoryMapping(tagger).toString());
 	}
 
-	private TermSuitePipeline tenseNormalizer(String tagger)  {
+	private TermSuitePipeline tenseNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"eu.project.ttc.types.WordAnnotation:tense", 
 				resFactory.getTenseMapping(tagger).toString());
 	}
 
-	private TermSuitePipeline subCategoryNormalizer(String tagger)  {
+	private TermSuitePipeline subCategoryNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"eu.project.ttc.types.WordAnnotation:subCategory", 
 				resFactory.getSubcategoryMapping(tagger).toString());
 	}
 
 	
-	private TermSuitePipeline moodNormalizer(String tagger)  {
+	private TermSuitePipeline moodNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"eu.project.ttc.types.WordAnnotation:mood", 
 				resFactory.getMoodMapping(tagger).toString());
 	}
 
 	
-	private TermSuitePipeline numberNormalizer(String tagger)  {
+	private TermSuitePipeline numberNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"eu.project.ttc.types.WordAnnotation:number", 
 				resFactory.getNumberMapping(tagger).toString());
 	}
 
 	
-	private TermSuitePipeline genderNormalizer(String tagger)  {
+	private TermSuitePipeline genderNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"eu.project.ttc.types.WordAnnotation:gender", 
 				resFactory.getGenderMapping(tagger).toString());
 	}
 
 	private TermSuitePipeline mateNormalizer()  {
-		return normalizer("mate");
+		return normalizer(Tagger.MATE);
 	}
 
 	private TermSuitePipeline ttNormalizer()  {
-		return normalizer("tt");
+		return normalizer(Tagger.TREE_TAGGER);
 	}
 
-	private TermSuitePipeline normalizer(String tagger)  {
+	private TermSuitePipeline normalizer(Tagger tagger)  {
 		categoryNormalizer(tagger);
 		subCategoryNormalizer(tagger);
 		moodNormalizer(tagger);

@@ -21,7 +21,6 @@
  *******************************************************************************/
 package eu.project.ttc.tools;
 
-import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
@@ -29,7 +28,7 @@ import eu.project.ttc.engines.desc.Lang;
 
 
 /**
- * A helper class that build language-dependent term suite resource paths.
+ * A helper class that builds language-dependent term suite resource paths.
  * 
  * @author Damien Cram
  *
@@ -61,108 +60,109 @@ public class TermSuiteResourceHelper {
 	}
 	
 
+	public Path getTaggerResource(TermSuiteResource tsResource, Tagger tagger) {
+		return Paths.get(resourcePath + tsResource.getTaggerPath(lang, tagger));
+	}
+	public Path getResource(TermSuiteResource tsResource) {
+		return Paths.get(resourcePath + tsResource.getPath(lang));
+	}
+	
 	public Path getTTParameter() {
-		return Paths.get(resourcePath + this.lang.getName() + "-treetagger.xml");
+		return getResource(TermSuiteResource.TREETAGGER_CONFIG);
 	}
 
 	public Path getAllowedChars() {
-		return Paths.get(resourcePath + this.lang.getName() +"-allowed-chars.txt");
+		return getResource(TermSuiteResource.ALLOWED_CHARS);
 	}
 
 	public Path getSegmentBank() {
-		return Paths.get(resourcePath + this.lang.getName() +"-segment-bank.xml");
+		return getResource(TermSuiteResource.SEGMENT_BANK);
 	}
 	
-	private Path getMapping(String tagger, String mappingType) {
-		return Paths.get(resourcePath + this.lang.getName() +"-"+tagger+"-"+mappingType+"-mapping.xml");
-	}
-	
-	public Path getCaseMapping(String tagger) {
-		return getMapping(tagger, "case");
+	public Path getCaseMapping(Tagger tagger) {
+		return getTaggerResource(TermSuiteResource.TAGGER_CASE_MAPPING, tagger);
 	}
 
-	public Path getMoodMapping(String tagger) {
-		return getMapping(tagger, "mood");
+	public Path getMoodMapping(Tagger tagger) {
+		return getTaggerResource(TermSuiteResource.TAGGER_MOOD_MAPPING, tagger);
 	}
 	
-	public Path getCategoryMapping(String tagger) {
-		return getMapping(tagger, "category");
+	public Path getCategoryMapping(Tagger tagger) {
+		return getTaggerResource(TermSuiteResource.TAGGER_CATEGORY_MAPPING, tagger);
 	}
 	
-	public Path getNumberMapping(String tagger) {
-		return getMapping(tagger, "number");
+	public Path getNumberMapping(Tagger tagger) {
+		return getTaggerResource(TermSuiteResource.TAGGER_NUMBER_MAPPING, tagger);
 	}
 	
-	public Path getSubcategoryMapping(String tagger) {
-		return getMapping(tagger, "subcategory");
+	public Path getSubcategoryMapping(Tagger tagger) {
+		return getTaggerResource(TermSuiteResource.TAGGER_SUBCATEGORY_MAPPING, tagger);
 	}
 	
-	public Path getTenseMapping(String tagger) {
-		return getMapping(tagger, "tense");
+	public Path getTenseMapping(Tagger tagger) {
+		return getTaggerResource(TermSuiteResource.TAGGER_TENSE_MAPPING, tagger);
 	}
 
-	public Path getGenderMapping(String tagger) {
-		return getMapping(tagger, "gender");
+	public Path getGenderMapping(Tagger tagger) {
+		return getTaggerResource(TermSuiteResource.TAGGER_GENDER_MAPPING, tagger);
 	}
 
 	public Path getFrozenExpressionList() {
-		return Paths.get(resourcePath + this.lang.getName() +"-frozen-expressions.list");
+		return getResource(TermSuiteResource.FROZEN_EXPRESSIONS);
 	}
 	
 	public Path getMWRegexes() {
-		Path path = Paths.get(resourcePath + this.lang.getName() +"-multi-word-rule-system.regex");
-		return path;
+		return getResource(TermSuiteResource.MWT_RULES);
 	}
 
 	public Path getStopWords() {
-		return Paths.get(resourcePath + this.lang.getName() +"-stop-word-filter.xml");
+		return getResource(TermSuiteResource.STOP_WORDS_FILTER);
 	}
 
-	public Path getGroovyVariantRules() {
-		return Paths.get(resourcePath + this.lang.getName() +"-variants.groovy");
-	}
-	
 	public Path getYamlVariantRules() {
-		return Paths.get(resourcePath + this.lang.getName() +"-variants.yaml");
+		return getResource(TermSuiteResource.VARIANTS);
 	}
-	
+
+	@Deprecated
 	public boolean resourceExists(String resourceURI) {
 		return resourceURI != null && ClassLoader.getSystemClassLoader().getResourceAsStream(resourceURI) != null;
 	}
+	
 
 	public Path getGeneralLanguageFrequencies() {
-		return Paths.get(resourcePath + "GeneralLanguage." + this.lang.getNameUC());
+		return getResource(TermSuiteResource.GENERAL_LANGUAGE);
 	}
 	public Path getPrefixBank() {
-		return Paths.get(resourcePath + "Prefix." + this.lang.getNameUC());
+		return getResource(TermSuiteResource.PREFIX_BANK);
 	}
 	public Path getRootBank() {
-		return Paths.get(resourcePath + "RootBank." + this.lang.getNameUC());
+		return getResource(TermSuiteResource.ROOT_BANK);
 	}
 
+	@Deprecated
 	public Path getEmptyDictionary() {
 		return Paths.get("file:eu","project","ttc","resources","all","empty-dictionary.txt");
 	}
 
 	public Path getNeoclassicalPrefixes() {
-		return Paths.get(resourcePath + this.lang.getName() +"-neoclassical-prefixes.txt");
+		return getResource(TermSuiteResource.NEOCLASSICAL_PREFIXES);		
 	}
 
 	public Path getLanguageDico() {
-		return Paths.get(resourcePath + this.lang.getName() +"-dico.txt");
+		return getResource(TermSuiteResource.DICO);
 	}
 
 
 	public Path getCompostStopList() {
-		return Paths.get(resourcePath + this.lang.getName() +"-compost-stop-list.txt");
+		return getResource(TermSuiteResource.COMPOST_STOP_LIST);
 	}
 
 	public Path getCompostInflectionRules() {
-		return Paths.get(resourcePath + this.lang.getName() +"-compost-inflection-rules.txt");
+		return getResource(TermSuiteResource.COMPOST_INFLECTION_RULES);
 	}
 	
 	public Path getCompostTransformationRules() {
-		return Paths.get(resourcePath + this.lang.getName() +"-compost-transformation-rules.txt");
+		return getResource(TermSuiteResource.COMPOST_TRANSFORMATION_RULES);
 	}
 	
 	public String getMateLemmatizerModelFileName() {
