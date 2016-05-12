@@ -265,9 +265,16 @@ public class TermSuitePipeline {
 		this.aggregateBuilder = new AggregateBuilder();
 		this.pipelineObserverName = PipelineObserver.class.getSimpleName() + "-" + Thread.currentThread().getId() + "-" + System.currentTimeMillis();
 		TermSuiteResourceManager.getInstance().register(pipelineObserverName, new TermSuitePipelineObserver(2,1));
+		
+		initUIMALogging();
 	}
 
 	
+	private void initUIMALogging() {
+		System.setProperty("org.apache.uima.logger.class", UIMASlf4jWrapperLogger.class.getName());
+	}
+
+
 	public static TermSuitePipeline create(String lang) {
 		return new TermSuitePipeline(lang, null);
 	}
