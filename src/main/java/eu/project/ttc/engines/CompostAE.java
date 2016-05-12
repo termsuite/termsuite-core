@@ -213,11 +213,11 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 				builder.create();
 
 				// log the word composition
-				if(LOGGER.isDebugEnabled()) {
+				if(LOGGER.isTraceEnabled()) {
 					List<String> componentStrings = Lists.newArrayList();
 					for(Component component:word.getComponents())
 						componentStrings.add(component.toString());
-					LOGGER.debug("{} [{}]", word.getLemma(), Joiner.on(' ').join(componentStrings));
+					LOGGER.trace("{} [{}]", word.getLemma(), Joiner.on(' ').join(componentStrings));
 				}
 			}
 		}
