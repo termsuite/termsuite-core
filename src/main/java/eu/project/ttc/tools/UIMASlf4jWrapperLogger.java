@@ -71,7 +71,7 @@ public class UIMASlf4jWrapperLogger implements org.apache.uima.util.Logger {
 		case org.apache.uima.util.Level.FINEST_INT:
 			this.slf4jLogger.trace(msg);
 		default: // for all other cases return Level.ALL
-			this.slf4jLogger.debug(msg);
+			this.slf4jLogger.trace(msg);
 		}
 	}
 
@@ -95,7 +95,7 @@ public class UIMASlf4jWrapperLogger implements org.apache.uima.util.Logger {
 		case org.apache.uima.util.Level.FINEST_INT:
 			this.slf4jLogger.trace(msg, param1);
 		default: // for all other cases return Level.ALL
-			this.slf4jLogger.debug(msg, param1);
+			this.slf4jLogger.trace(msg, param1);
 		}
 	}
 
@@ -119,7 +119,7 @@ public class UIMASlf4jWrapperLogger implements org.apache.uima.util.Logger {
 		case org.apache.uima.util.Level.FINEST_INT:
 			this.slf4jLogger.trace(msg, params);
 		default: // for all other cases return Level.ALL
-			this.slf4jLogger.debug(msg, params);
+			this.slf4jLogger.trace(msg, params);
 		}
 	}
 
@@ -143,13 +143,13 @@ public class UIMASlf4jWrapperLogger implements org.apache.uima.util.Logger {
 		case org.apache.uima.util.Level.FINEST_INT:
 			this.slf4jLogger.trace(msg, throwable);
 		default: // for all other cases return Level.ALL
-			this.slf4jLogger.debug(msg, throwable);
+			this.slf4jLogger.trace(msg, throwable);
 		}
 	}
 
 	@Override
 	public void logrb(Level level, String sourceClass, String sourceMethod, String bundleName, String msgKey) {
-		log(level, String.format("[sourceClass: %s, sourceMethod: %s, bundleName: %s] %s", sourceClass, sourceMethod,
+		log(level, String.format("[sourceMethod: %s] %s", sourceClass, sourceMethod,
 				bundleName, msgKey));
 	}
 
