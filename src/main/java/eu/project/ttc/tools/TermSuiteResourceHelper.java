@@ -21,9 +21,6 @@
  *******************************************************************************/
 package eu.project.ttc.tools;
 
-import java.nio.file.Path;
-import java.nio.file.Paths;
-
 import eu.project.ttc.engines.desc.Lang;
 
 
@@ -36,7 +33,7 @@ import eu.project.ttc.engines.desc.Lang;
 public class TermSuiteResourceHelper {
 	
 	private Lang lang;
-	private String resourcePath;
+	private String resourceUrl;
 	
 	public TermSuiteResourceHelper(Lang lang, String urlPrefix) {
 		super();
@@ -52,7 +49,7 @@ public class TermSuiteResourceHelper {
 		 * Separator must be "/" since resources are always 
 		 * loaded from url by UIMA.
 		 */
-		this.resourcePath = urlPrefix + lang.getCode() + "/";
+		this.resourceUrl = urlPrefix + lang.getCode() + "/";
 	}
 
 	public TermSuiteResourceHelper(Lang lang) {
@@ -60,66 +57,66 @@ public class TermSuiteResourceHelper {
 	}
 	
 
-	public Path getTaggerResource(TermSuiteResource tsResource, Tagger tagger) {
-		return Paths.get(resourcePath + tsResource.getTaggerPath(lang, tagger));
+	public String getTaggerResource(TermSuiteResource tsResource, Tagger tagger) {
+		return resourceUrl + tsResource.getTaggerPath(lang, tagger);
 	}
-	public Path getResource(TermSuiteResource tsResource) {
-		return Paths.get(resourcePath + tsResource.getPath(lang));
+	public String getResource(TermSuiteResource tsResource) {
+		return resourceUrl + tsResource.getPath(lang);
 	}
 	
-	public Path getTTParameter() {
+	public String getTTParameter() {
 		return getResource(TermSuiteResource.TREETAGGER_CONFIG);
 	}
 
-	public Path getAllowedChars() {
+	public String getAllowedChars() {
 		return getResource(TermSuiteResource.ALLOWED_CHARS);
 	}
 
-	public Path getSegmentBank() {
+	public String getSegmentBank() {
 		return getResource(TermSuiteResource.SEGMENT_BANK);
 	}
 	
-	public Path getCaseMapping(Tagger tagger) {
+	public String getCaseMapping(Tagger tagger) {
 		return getTaggerResource(TermSuiteResource.TAGGER_CASE_MAPPING, tagger);
 	}
 
-	public Path getMoodMapping(Tagger tagger) {
+	public String getMoodMapping(Tagger tagger) {
 		return getTaggerResource(TermSuiteResource.TAGGER_MOOD_MAPPING, tagger);
 	}
 	
-	public Path getCategoryMapping(Tagger tagger) {
+	public String getCategoryMapping(Tagger tagger) {
 		return getTaggerResource(TermSuiteResource.TAGGER_CATEGORY_MAPPING, tagger);
 	}
 	
-	public Path getNumberMapping(Tagger tagger) {
+	public String getNumberMapping(Tagger tagger) {
 		return getTaggerResource(TermSuiteResource.TAGGER_NUMBER_MAPPING, tagger);
 	}
 	
-	public Path getSubcategoryMapping(Tagger tagger) {
+	public String getSubcategoryMapping(Tagger tagger) {
 		return getTaggerResource(TermSuiteResource.TAGGER_SUBCATEGORY_MAPPING, tagger);
 	}
 	
-	public Path getTenseMapping(Tagger tagger) {
+	public String getTenseMapping(Tagger tagger) {
 		return getTaggerResource(TermSuiteResource.TAGGER_TENSE_MAPPING, tagger);
 	}
 
-	public Path getGenderMapping(Tagger tagger) {
+	public String getGenderMapping(Tagger tagger) {
 		return getTaggerResource(TermSuiteResource.TAGGER_GENDER_MAPPING, tagger);
 	}
 
-	public Path getFrozenExpressionList() {
+	public String getFrozenExpressionList() {
 		return getResource(TermSuiteResource.FROZEN_EXPRESSIONS);
 	}
 	
-	public Path getMWRegexes() {
+	public String getMWRegexes() {
 		return getResource(TermSuiteResource.MWT_RULES);
 	}
 
-	public Path getStopWords() {
+	public String getStopWords() {
 		return getResource(TermSuiteResource.STOP_WORDS_FILTER);
 	}
 
-	public Path getYamlVariantRules() {
+	public String getYamlVariantRules() {
 		return getResource(TermSuiteResource.VARIANTS);
 	}
 
@@ -129,39 +126,39 @@ public class TermSuiteResourceHelper {
 	}
 	
 
-	public Path getGeneralLanguageFrequencies() {
+	public String getGeneralLanguageFrequencies() {
 		return getResource(TermSuiteResource.GENERAL_LANGUAGE);
 	}
-	public Path getPrefixBank() {
+	public String getPrefixBank() {
 		return getResource(TermSuiteResource.PREFIX_BANK);
 	}
-	public Path getRootBank() {
+	public String getRootBank() {
 		return getResource(TermSuiteResource.ROOT_BANK);
 	}
 
 	@Deprecated
-	public Path getEmptyDictionary() {
-		return Paths.get("file:eu","project","ttc","resources","all","empty-dictionary.txt");
+	public String getEmptyDictionary() {
+		return "file:eu/project/ttc/resources/all/empty-dictionary.txt";
 	}
 
-	public Path getNeoclassicalPrefixes() {
+	public String getNeoclassicalPrefixes() {
 		return getResource(TermSuiteResource.NEOCLASSICAL_PREFIXES);		
 	}
 
-	public Path getLanguageDico() {
+	public String getLanguageDico() {
 		return getResource(TermSuiteResource.DICO);
 	}
 
 
-	public Path getCompostStopList() {
+	public String getCompostStopList() {
 		return getResource(TermSuiteResource.COMPOST_STOP_LIST);
 	}
 
-	public Path getCompostInflectionRules() {
+	public String getCompostInflectionRules() {
 		return getResource(TermSuiteResource.COMPOST_INFLECTION_RULES);
 	}
 	
-	public Path getCompostTransformationRules() {
+	public String getCompostTransformationRules() {
 		return getResource(TermSuiteResource.COMPOST_TRANSFORMATION_RULES);
 	}
 	
