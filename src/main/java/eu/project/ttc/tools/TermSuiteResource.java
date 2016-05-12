@@ -91,4 +91,22 @@ public enum TermSuiteResource {
 	} 
 	
 	
+	public static final TermSuiteResource forFileName(Lang l, String fileName) {
+		for(TermSuiteResource r:values()) {
+			switch(r.patternType) {
+			case TAGGER:
+				for(Tagger t:Tagger.values()) {
+					if(r.getTaggerPath(l, t).equals(fileName))
+						return r;
+				}
+				continue;
+			default:
+				if(r.getPath(l).equals(fileName))
+					return r;
+			}
+		}
+		return null;
+	}
+	
+	
 }
