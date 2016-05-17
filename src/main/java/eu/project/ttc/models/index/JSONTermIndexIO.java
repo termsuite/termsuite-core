@@ -423,19 +423,28 @@ public class JSONTermIndexIO {
 					Preconditions.checkNotNull(variant, MSG_EXPECT_PROP_FOR_VAR, VARIANT);
 					Preconditions.checkNotNull(infoToken, MSG_EXPECT_PROP_FOR_VAR, INFO);
 					b = termIndex.getTermByGroupingKey(base);
-					Preconditions.checkNotNull(b, MSG_TERM_DOES_NOT_EXIST, base);
 					v = termIndex.getTermByGroupingKey(variant);
-					Preconditions.checkNotNull(v, MSG_TERM_DOES_NOT_EXIST, variant);
+					if(b != null && v != null) {
+						
+						VariationType vType = VariationType.fromShortName(variantType);
+						
+						TermVariation tv = new TermVariation(
+								vType, 
+								b, 
+								v, 
+								vType == VariationType.GRAPHICAL ? Double.parseDouble(infoToken) : infoToken);
+						tv.setScore(variantScore);
+						b.addTermVariation(tv);
+					} else {
+						if(b==null)
+							LOGGER.warn("Could not build variant because term \"{}\" was not found.", base);
+						if(v==null)
+							LOGGER.warn("Could not build variant because term \"{}\" was not found.", variant);
+					}
+						
+//					Preconditions.checkNotNull(b, MSG_TERM_DOES_NOT_EXIST, base);
+//					Preconditions.checkNotNull(v, MSG_TERM_DOES_NOT_EXIST, variant);
 					
-					VariationType vType = VariationType.fromShortName(variantType);
-					
-					TermVariation tv = new TermVariation(
-							vType, 
-							b, 
-							v, 
-							vType == VariationType.GRAPHICAL ? Double.parseDouble(infoToken) : infoToken);
-					tv.setScore(variantScore);
-					b.addTermVariation(tv);
 				} // end syntactic variations array
 			}
 		}
