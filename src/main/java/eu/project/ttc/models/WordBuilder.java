@@ -80,4 +80,8 @@ public class WordBuilder {
 	public static WordBuilder start() {
 		return new WordBuilder();
 	}
+
+	public String getLemma() {
+		return this.lemma;
+	}
 }

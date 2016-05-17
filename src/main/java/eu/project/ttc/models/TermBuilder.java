@@ -169,4 +169,8 @@ public class TermBuilder {
 		this.specificity = Optional.of(specificity);
 		return this;
 	}
+
+	public String getGroupingKey() {
+		return this.groupingKey;
+	}
 }

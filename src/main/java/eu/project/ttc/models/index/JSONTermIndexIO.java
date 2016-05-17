@@ -29,6 +29,8 @@ import java.util.Map;
 import java.util.Set;
 
 import org.apache.commons.io.IOUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonGenerator;
@@ -62,6 +64,9 @@ import eu.project.ttc.models.occstore.MemoryOccurrenceStore;
 import eu.project.ttc.models.occstore.MongoDBOccurrenceStore;
 
 public class JSONTermIndexIO {
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(JSONTermIndexIO.class);
+	
 	/*
 	 * Error messages for parsing
 	 */
@@ -248,7 +253,12 @@ public class JSONTermIndexIO {
 							}
 						}
 					}
-					termIndex.addWord(wordBuilder.create());
+					try {
+						termIndex.addWord(wordBuilder.create());
+					} catch(Exception e) {
+						LOGGER.error("Could not add word "+wordBuilder.getLemma()+" to term index",e);
+						LOGGER.warn("Error ignored, trying ton continue the loading of TermIndex");
+					}
 				}
 			} else if (TERMS.equals(fieldname)) {
 				jp.nextToken();
@@ -364,7 +374,13 @@ public class JSONTermIndexIO {
 							 
 
 					} // end term object
-					builder.createAndAddToIndex();
+					try {
+						builder.createAndAddToIndex();
+					} catch(Exception e) {
+						LOGGER.error("Could not add term "+builder.getGroupingKey()+" to term index",e);
+						LOGGER.warn("Error ignored, trying ton continue the loading of TermIndex");
+					}
+
 					if(options.withContexts())
 						contextVectors.put(currentTermId, currentContextVector);
 
