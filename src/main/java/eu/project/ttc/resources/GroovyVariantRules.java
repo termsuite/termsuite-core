@@ -23,6 +23,8 @@ package eu.project.ttc.resources;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
 import java.io.StringWriter;
 import java.util.Map;
 
@@ -36,6 +38,7 @@ import org.slf4j.LoggerFactory;
 import groovy.lang.GroovyClassLoader;
 import groovy.lang.GroovyObject;
 
+@Deprecated
 public class GroovyVariantRules implements SharedResourceObject {
 	private static final Logger LOGGER = LoggerFactory.getLogger(GroovyVariantRules.class);
 
@@ -65,10 +68,13 @@ public class GroovyVariantRules implements SharedResourceObject {
 		ClassLoader parent = getClass().getClassLoader();
 		GroovyClassLoader groovyClassLoader = new GroovyClassLoader(
 				parent);
+		StringWriter writer = null;
+		InputStreamReader reader = null;
 		try {
 			String scriptString = getScriptHeader();
-			StringWriter writer = new StringWriter();
-			IOUtils.copy(inputStream, writer);
+			writer = new StringWriter();
+			reader = new InputStreamReader(inputStream, "UTF-8");
+			IOUtils.copy(reader, writer);
 			scriptString += "\n" + writer.toString();
 			scriptString += "\n" + getScriptFooter();
 			Class<?> groovyClass = groovyClassLoader.parseClass(scriptString);
@@ -81,6 +87,8 @@ public class GroovyVariantRules implements SharedResourceObject {
 			LOGGER.error("Could not load the groovy variant rules resource");
 			throw new ResourceInitializationException(e);
 		} finally {
+			IOUtils.closeQuietly(reader);
+			IOUtils.closeQuietly(writer);
 			try {
 				groovyClassLoader.close();
 			} catch (IOException e) {

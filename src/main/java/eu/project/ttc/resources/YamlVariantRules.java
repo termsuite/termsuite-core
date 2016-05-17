@@ -23,7 +23,9 @@ package eu.project.ttc.resources;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.StringWriter;
+import java.nio.charset.Charset;
 import java.util.List;
 
 import org.apache.commons.io.IOUtils;
@@ -51,10 +53,13 @@ public class YamlVariantRules implements SharedResourceObject {
 	public void load(DataResource aData) throws ResourceInitializationException {
 		this.groovyAdapter = new GroovyAdapter();
 		InputStream inputStream = null;
+		InputStreamReader reader = null;
+		StringWriter writer = null;
 		try {
 			inputStream = aData.getInputStream();
-			StringWriter writer = new StringWriter();
-			IOUtils.copy(inputStream, writer);
+			writer = new StringWriter();
+			reader = new InputStreamReader(inputStream, Charset.forName("UTF-8"));
+			IOUtils.copy(reader, writer);
 			VariantRuleYamlIO yamlIO = VariantRuleYamlIO.fromYaml(writer.toString());
 			this.variantRules = ImmutableList.copyOf(yamlIO.getVariantRules());
 			
@@ -67,6 +72,8 @@ public class YamlVariantRules implements SharedResourceObject {
 			throw new ResourceInitializationException(e);
 		} finally {
 			IOUtils.closeQuietly(inputStream);
+			IOUtils.closeQuietly(reader);
+			IOUtils.closeQuietly(writer);
 		}
 	}
 	

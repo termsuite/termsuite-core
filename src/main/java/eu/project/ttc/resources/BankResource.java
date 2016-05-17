@@ -145,7 +145,7 @@ public class BankResource implements Bank {
 	}
 
 	private void doLoad(InputStream inputStream) throws IOException {
-		Scanner scanner = new Scanner(inputStream);
+		Scanner scanner = new Scanner(inputStream, "UTF-8");
 		scanner.useDelimiter(System.getProperty("line.separator"));
 		while (scanner.hasNext()) {
 			String line = scanner.next();

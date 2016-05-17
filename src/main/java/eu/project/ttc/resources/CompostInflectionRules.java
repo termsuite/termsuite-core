@@ -71,7 +71,7 @@ public class CompostInflectionRules implements SharedResourceObject {
 			inputStream = data.getInputStream();
 			Scanner scanner = null;
 			try {
-				scanner = new Scanner(inputStream);
+				scanner = new Scanner(inputStream, "UTF-8");
 				scanner.useDelimiter(TermSuiteConstants.LINE_BREAK);
 				while (scanner.hasNext()) {
 					String rawLine = scanner.next();

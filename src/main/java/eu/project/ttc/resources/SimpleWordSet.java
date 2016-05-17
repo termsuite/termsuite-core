@@ -74,7 +74,7 @@ public class SimpleWordSet implements SharedResourceObject {
 			try {
 				String word, line;
 				String[] str, wordTranslations;
-				scanner = new Scanner(inputStream);
+				scanner = new Scanner(inputStream, "UTF-8");
 				scanner.useDelimiter(TermSuiteConstants.LINE_BREAK);
 				while (scanner.hasNext()) {
 					line = scanner.next().split(TermSuiteConstants.DIESE)[0].trim();

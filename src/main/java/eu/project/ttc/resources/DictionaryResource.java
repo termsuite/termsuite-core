@@ -97,7 +97,7 @@ public class DictionaryResource implements Dictionary {
         Scanner scanner = null;
         try {
             Set<Entry<String, String>> entries = new HashSet<Entry<String, String>>();
-            scanner = new Scanner(inputStream);
+            scanner = new Scanner(inputStream, "UTF-8");
             scanner.useDelimiter("\\r?\\n");
             while (scanner.hasNext()) {
                 String line = scanner.next();

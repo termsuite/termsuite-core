@@ -106,7 +106,7 @@ public class GeneralLanguageResource implements GeneralLanguage {
 		words = Sets.newHashSet();
 		Scanner scanner = null;
 		try {
-			scanner = new Scanner(inputStream);
+			scanner = new Scanner(inputStream, "UTF-8");
 			scanner.useDelimiter("\n");
 			int index = 0;
 			while (scanner.hasNext()) {
