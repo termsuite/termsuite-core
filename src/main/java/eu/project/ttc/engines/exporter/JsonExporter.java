@@ -21,8 +21,10 @@
  *******************************************************************************/
 package eu.project.ttc.engines.exporter;
 
-import java.io.FileWriter;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
 import java.util.TreeSet;
 
 import org.apache.uima.UimaContext;
@@ -88,13 +90,16 @@ public class JsonExporter extends AbstractTermIndexExporter {
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
 		try {
 			LOGGER.info("Exporting {} terms to JSON file {}", this.termIndexResource.getTermIndex().getTerms().size(), this.toFilePath);
-			FileWriter writer2 = new FileWriter(toFile);
+			FileOutputStream fos = new FileOutputStream(toFile);
+			Writer writer2 = new OutputStreamWriter(fos, "UTF-8");
 			SaveOptions saveOptions = new SaveOptions();
 			saveOptions.withOccurrences(withOccurrences);
 			saveOptions.withContexts(withContexts);
 			if(linkedMongoStore)
 				saveOptions.mongoDBOccStoreURI(occurrenceStore.getUrl());
 			JSONTermIndexIO.save(writer2, this.termIndexResource.getTermIndex(), saveOptions);
+			fos.flush();
+			fos.close();
 			writer2.close();
 		} catch (IOException e) {
 			LOGGER.error("Could not export to file due to IOException: {}", e.getMessage());
