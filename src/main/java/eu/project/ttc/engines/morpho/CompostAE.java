@@ -65,7 +65,7 @@ import eu.project.ttc.utils.TermSuiteUtils;
 public class CompostAE extends JCasAnnotator_ImplBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(CompostAE.class);
 
-	public static final String TASK_NAME = "Morphosyntactic analysis";
+	public static final String TASK_NAME = "Morphosyntactic analysis (native and neoclassical)";
 
 	@ExternalResource(key=ObserverResource.OBSERVER, mandatory=true)
 	protected ObserverResource observerResource;

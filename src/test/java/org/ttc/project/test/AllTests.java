@@ -24,8 +24,11 @@ package org.ttc.project.test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.ttc.project.test.engines.TermClassifierSpec;
+import org.ttc.project.test.resources.PrefixTreeSpec;
 import org.ttc.project.test.variants.VariantRuleSpec;
 import org.ttc.project.test.variants.VariantRuleYamlIOSpec;
+
+import eu.project.ttc.resources.PrefixTree;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
@@ -44,6 +47,7 @@ import org.ttc.project.test.variants.VariantRuleYamlIOSpec;
 	TermOccurrenceUtilsSpec.class,
 	TermClassSpec.class,
 	StringUtilsSpec.class,
+	PrefixTreeSpec.class,
 //	TeiCollectionReaderSpec.class,
 	CrossTableSpec.class
 	})

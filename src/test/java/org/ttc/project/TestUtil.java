@@ -77,7 +77,11 @@ public class TestUtil {
 	}
 
 	public static String readFile(String string) {
-		return readFile(new InputStreamReader(getIS(string), Charset.forName("UTF-8")));
+		return readFile(fileReader(string));
+	}
+
+	private static InputStreamReader fileReader(String string) {
+		return new InputStreamReader(getInputStream(string), Charset.forName("UTF-8"));
 	}
 	public static String readFile(File file) throws FileNotFoundException {
 		FileReader reader = null;
@@ -112,7 +116,7 @@ public class TestUtil {
 		}
 	}
 
-	public static InputStream getIS(String file) {
+	public static InputStream getInputStream(String file) {
 		InputStream is = TestUtil.class.getClassLoader().getResourceAsStream(file);
 		return is;
 	}
@@ -131,7 +135,7 @@ public class TestUtil {
 		XMLReader xmlReader = saxParser.getXMLReader();
 		TeiToTxtSaxHandler handler = new TeiToTxtSaxHandler();
 		xmlReader.setContentHandler(handler);
-		xmlReader.parse(new InputSource(TestUtil.getIS(filename)));
+		xmlReader.parse(new InputSource(TestUtil.getInputStream(filename)));
 		String text = handler.getText();
 		return text;
 	}

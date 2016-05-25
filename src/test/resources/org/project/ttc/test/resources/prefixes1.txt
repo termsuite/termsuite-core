@@ -1,0 +1,8 @@
+# Should be ignored
+   a    
+b-
+-
+gfbfd-
+anti
+
+       # Should be ignored
