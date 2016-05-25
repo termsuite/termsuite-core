@@ -370,6 +370,10 @@ public class TermSuiteTerminoCLI {
 					
 				}
 				
+				pipeline.aeExtensionDetector()
+					.aeScorer()
+					.aeRanker(TermProperty.SPECIFICITY, true);
+				
 				// stats
 				pipeline.haeCasStatCounter("at end of pipeline");
 
