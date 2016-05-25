@@ -19,7 +19,7 @@
  * under the License.
  *
  *******************************************************************************/
-package eu.project.ttc.engines.compost;
+package eu.project.ttc.engines.morpho;
 
 public class CompostDicoEntry {
 	private String text;

@@ -49,7 +49,6 @@ import com.google.common.base.Preconditions;
 
 import eu.project.ttc.engines.AffixCompoundSplitter;
 import eu.project.ttc.engines.CasStatCounter;
-import eu.project.ttc.engines.CompostAE;
 import eu.project.ttc.engines.CompoundSplitter;
 import eu.project.ttc.engines.Contextualizer;
 import eu.project.ttc.engines.EvalEngine;
@@ -88,6 +87,7 @@ import eu.project.ttc.engines.exporter.TBXExporter;
 import eu.project.ttc.engines.exporter.TSVExporter;
 import eu.project.ttc.engines.exporter.VariantEvalExporter;
 import eu.project.ttc.engines.exporter.XmiCasExporter;
+import eu.project.ttc.engines.morpho.CompostAE;
 import eu.project.ttc.metrics.LogLikelihood;
 import eu.project.ttc.models.OccurrenceStore;
 import eu.project.ttc.models.OccurrenceType;

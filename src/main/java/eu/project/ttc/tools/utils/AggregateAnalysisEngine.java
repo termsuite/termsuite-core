@@ -49,7 +49,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.xml.sax.SAXException;
 
-import eu.project.ttc.engines.CompostAE;
+import eu.project.ttc.engines.morpho.CompostAE;
 
 public abstract class AggregateAnalysisEngine {
 	private static final Logger LOGGER = LoggerFactory.getLogger(CompostAE.class);

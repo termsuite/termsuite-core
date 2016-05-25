@@ -29,7 +29,7 @@ import org.junit.Test;
 import com.google.common.base.Joiner;
 import com.google.common.collect.Lists;
 
-import eu.project.ttc.engines.compost.Segmentation;
+import eu.project.ttc.engines.morpho.Segmentation;
 
 public class SegmentationSpec {
 	private static String toStringList(List<Segmentation> segmentations) {

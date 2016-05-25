@@ -19,42 +19,68 @@
  * under the License.
  *
  *******************************************************************************/
-package eu.project.ttc.engines.compost;
+package eu.project.ttc.engines.morpho;
 
+import com.google.common.base.MoreObjects;
 
-public class SegmentScoreEntry {
-	public static final SegmentScoreEntry SCORE_ZERO = new SegmentScoreEntry(null, null, 0, null);
+public  class Segment implements Comparable<Segment> {
+	private int begin;
+	private int end;
 	
-	private String segmentString;
+	/* cached substring of the parent compound */
+	private String _substring;
 	private String lemma;
-	private float score;
-	private CompostIndexEntry dicoEntry;
+	private boolean neoclassical;
 	
-	public SegmentScoreEntry(String segmentString, String lemma, float score,
-			CompostIndexEntry dicoEntry) {
-		this.segmentString = segmentString;
-		this.score = score;
-		this.lemma = lemma;
-		this.dicoEntry = dicoEntry;
+	@Override
+	public int compareTo(Segment o) {
+		return Integer.compare(begin, o.begin);
 	}
-	public String getSegmentString() {
-		return segmentString;
+
+	Segment(int begin, int end, String string) {
+		super();
+		this.begin = begin;
+		this.end = end;
+		this._substring = string.substring(begin, end);
 	}
-	public float getScore() {
-		return score;
+
+	public int getBegin() {
+		return begin;
 	}
-	public CompostIndexEntry getDicoEntry() {
-		return dicoEntry;
+
+	public int getEnd() {
+		return end;
 	}
+	
+	public String getSubstring() {
+		return _substring;
+	}
+	
+	public void setSubstring(String substring) {
+		this._substring = substring;
+	}
+
+	public boolean isNeoclassical() {
+		return neoclassical;
+	}
+
+	public void setNeoclassical(boolean neoclassical) {
+		this.neoclassical = neoclassical;
+	}
+
+	@Override
+	public String toString() {
+		return MoreObjects.toStringHelper(this)
+				.add("substring", _substring)
+				.add("lemma", lemma)
+				.toString();
+	}
+
 	public String getLemma() {
 		return lemma;
 	}
-	@Override
-	public int hashCode() {
-		return segmentString.hashCode();
-	}
-	@Override
-	public String toString() {
-		return segmentString;
+	
+	public void setLemma(String lemma) {
+		this.lemma = lemma;
 	}
 }

@@ -28,7 +28,7 @@ import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Multimap;
 
-import eu.project.ttc.engines.compost.CompostIndexEntry;
+import eu.project.ttc.engines.morpho.CompostIndexEntry;
 import eu.project.ttc.utils.IndexingKey;
 
 public class CompostIndex {

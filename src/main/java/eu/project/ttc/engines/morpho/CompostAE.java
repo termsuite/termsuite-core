@@ -19,7 +19,7 @@
  * under the License.
  *
  *******************************************************************************/
-package eu.project.ttc.engines;
+package eu.project.ttc.engines.morpho;
 
 import java.util.Collection;
 import java.util.Iterator;
@@ -43,10 +43,6 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
 import eu.project.ttc.engines.cleaner.TermProperty;
-import eu.project.ttc.engines.compost.CompostIndexEntry;
-import eu.project.ttc.engines.compost.Segment;
-import eu.project.ttc.engines.compost.SegmentScoreEntry;
-import eu.project.ttc.engines.compost.Segmentation;
 import eu.project.ttc.metrics.EditDistance;
 import eu.project.ttc.metrics.Levenshtein;
 import eu.project.ttc.models.Component;
