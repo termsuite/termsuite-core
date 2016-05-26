@@ -67,6 +67,13 @@ public class TreeTaggerLemmaFixer extends JCasAnnotator_ImplBase {
 				word.setLemma(word.getCoveredText().toLowerCase(language.getLocale()));
 			else  
 				word.setLemma(word.getLemma().toLowerCase());
+			
+			fixPlural();
 		}
+	}
+
+	private void fixPlural() {
+		// Fix TreeTagger plural
+		
 	}
 }

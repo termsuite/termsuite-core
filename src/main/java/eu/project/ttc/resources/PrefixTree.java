@@ -23,6 +23,8 @@ import eu.project.ttc.utils.TermSuiteConstants;
 public class PrefixTree implements SharedResourceObject {
 	private static final Logger LOGGER = LoggerFactory.getLogger(PrefixTree.class);
 
+	public static final String PREFIX_TREE = "PrefixTree";
+
 	private Node rootNode = new Node(Node.ROOT_CHAR);
 	
 	private static class Node {

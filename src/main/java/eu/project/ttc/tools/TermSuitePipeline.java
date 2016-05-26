@@ -88,6 +88,7 @@ import eu.project.ttc.engines.exporter.TSVExporter;
 import eu.project.ttc.engines.exporter.VariantEvalExporter;
 import eu.project.ttc.engines.exporter.XmiCasExporter;
 import eu.project.ttc.engines.morpho.CompostAE;
+import eu.project.ttc.engines.morpho.PrefixSplitter;
 import eu.project.ttc.metrics.LogLikelihood;
 import eu.project.ttc.models.OccurrenceStore;
 import eu.project.ttc.models.OccurrenceType;
@@ -115,6 +116,7 @@ import eu.project.ttc.resources.MateLemmatizerModel;
 import eu.project.ttc.resources.MateTaggerModel;
 import eu.project.ttc.resources.MemoryTermIndexManager;
 import eu.project.ttc.resources.ObserverResource;
+import eu.project.ttc.resources.PrefixTree;
 import eu.project.ttc.resources.ReferenceTermList;
 import eu.project.ttc.resources.SimpleWordSet;
 import eu.project.ttc.resources.TermIndexResource;
@@ -1093,13 +1095,28 @@ public class TermSuitePipeline {
 	 * Naive morphological analysis of prefix compounds based on a 
 	 * prefix dictionary resource
 	 * 
-	 * @deprecated 
-	 * 		Use {@link #aeCompostSplitter()} instead
 	 * @return
 	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline aePrefixSplitter()  {
-		return aeAffixCompoundSplitter(false, resFactory.getPrefixBank().toString());
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					PrefixSplitter.class
+				);
+			ExternalResourceFactory.createDependencyAndBind(
+					ae,
+					PrefixTree.PREFIX_TREE, 
+					PrefixTree.class,
+					resFactory.getPrefixBank()
+				);
+			
+			ExternalResourceFactory.bindResource(ae, resTermIndex());
+			
+			return aggregateAndReturn(ae, "Splitting prefixes", 0);
+		} catch(Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
+
 	}
 
 	private TermSuitePipeline aeAffixCompoundSplitter(boolean neoClassical,
