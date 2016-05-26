@@ -106,6 +106,7 @@ import eu.project.ttc.readers.StreamingCollectionReader;
 import eu.project.ttc.readers.StringCollectionReader;
 import eu.project.ttc.readers.TeiCollectionReader;
 import eu.project.ttc.readers.TxtCollectionReader;
+import eu.project.ttc.readers.XmiCollectionReader;
 import eu.project.ttc.resources.BankResource;
 import eu.project.ttc.resources.CharacterFootprintTermFilter;
 import eu.project.ttc.resources.CompostInflectionRules;
@@ -481,6 +482,15 @@ public class TermSuitePipeline {
 						TxtCollectionReader.PARAM_COLLECTION_TYPE, termSuiteCollection,
 						TxtCollectionReader.PARAM_ENCODING, collectionEncoding,
 						TxtCollectionReader.PARAM_LANGUAGE, this.lang.getCode()
+						);
+				break;
+			case XMI:
+				this.crDescription = CollectionReaderFactory.createReaderDescription(
+						XmiCollectionReader.class,
+						XmiCollectionReader.PARAM_INPUTDIR, collectionPath,
+						XmiCollectionReader.PARAM_COLLECTION_TYPE, termSuiteCollection,
+						XmiCollectionReader.PARAM_ENCODING, collectionEncoding,
+						XmiCollectionReader.PARAM_LANGUAGE, this.lang.getCode()
 						);
 				break;
 			case EMPTY:
