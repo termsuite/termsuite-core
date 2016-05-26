@@ -41,7 +41,7 @@ public class TeiToTxtSaxHandler extends DefaultHandler {
 			"float-anchor", "hsp" };
 
 	/* tags that be read */
-	private static final String[] TXT_TAGS = new String[] { "p", "title",
+	private static final String[] TXT_TAGS = new String[] { "p", "q", "ab", "head", "title",
 			"section-title", "section-para", "simple-para", "note-para",
 			"para", "textref" };
 	
