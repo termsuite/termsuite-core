@@ -169,4 +169,8 @@ public class TermSuiteResourceHelper {
 	public String getMateTaggerModelFileName() {
 		return "mate-pos-"+lang.getCode()+".model";
 	}
+
+	public String getFixedExpressionRegexes() {
+		return getResource(TermSuiteResource.FIXED_EXPRESSION_REGEXES);
+	}
 }

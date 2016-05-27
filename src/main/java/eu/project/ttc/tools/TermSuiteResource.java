@@ -33,7 +33,8 @@ public enum TermSuiteResource {
 	SEGMENT_BANK(PatternType.BEGIN, "-segment-bank.xml", "", ""),
 	STOP_WORDS_FILTER(PatternType.BEGIN, "-stop-word-filter.xml", "", ""),
 	TREETAGGER_CONFIG(PatternType.BEGIN, "-treetagger.xml", "", ""),
-	VARIANTS(PatternType.BEGIN, "-variants.yaml", "", "");
+	VARIANTS(PatternType.BEGIN, "-variants.yaml", "", ""), 
+	FIXED_EXPRESSION_REGEXES(PatternType.BEGIN, "-fixed-expressions.txt", "", "");
 	
 	public static enum PatternType {END, TAGGER, BEGIN}
 	

@@ -53,6 +53,7 @@ import eu.project.ttc.engines.CompoundSplitter;
 import eu.project.ttc.engines.Contextualizer;
 import eu.project.ttc.engines.EvalEngine;
 import eu.project.ttc.engines.ExtensionDetecter;
+import eu.project.ttc.engines.FixedExpressionSpotter;
 import eu.project.ttc.engines.GraphicalVariantGatherer;
 import eu.project.ttc.engines.MateLemmaFixer;
 import eu.project.ttc.engines.MateLemmatizerTagger;
@@ -112,6 +113,7 @@ import eu.project.ttc.resources.CharacterFootprintTermFilter;
 import eu.project.ttc.resources.CompostInflectionRules;
 import eu.project.ttc.resources.DictionaryResource;
 import eu.project.ttc.resources.EvalTrace;
+import eu.project.ttc.resources.FixedExpressionResource;
 import eu.project.ttc.resources.GeneralLanguageResource;
 import eu.project.ttc.resources.MateLemmatizerModel;
 import eu.project.ttc.resources.MateTaggerModel;
@@ -128,6 +130,7 @@ import eu.project.ttc.stream.ConsumerRegistry;
 import eu.project.ttc.stream.DocumentProvider;
 import eu.project.ttc.stream.DocumentStream;
 import eu.project.ttc.stream.StreamingCasConsumer;
+import eu.project.ttc.types.FixedExpression;
 import eu.project.ttc.types.WordAnnotation;
 import eu.project.ttc.utils.OccurrenceBuffer;
 import eu.project.ttc.utils.TermSuiteUtils;
@@ -997,7 +1000,33 @@ public class TermSuitePipeline {
 		}
 	}
 
-		
+	/**
+	 * Spots fixed expressions.
+	 * 
+	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
+	 */
+	public TermSuitePipeline aeFixedExpressionSpotter()  {
+		/*
+		 * TODO Check if resource is present for that current language.
+		 */
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					FixedExpressionSpotter.class
+				);
+			
+			ExternalResourceFactory.createDependencyAndBind(
+					ae,
+					FixedExpressionResource.FIXED_EXPRESSION_RESOURCE, 
+					FixedExpressionResource.class, 
+					resFactory.getFixedExpressionRegexes().toString());
+
+			return aggregateAndReturn(ae, "Spotting fixed expressions", 0);
+		} catch (Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
+	}
+	
 	/**
 	 * The single-word and multi-word term spotter AE
 	 * base on UIMA Tokens Regex.
