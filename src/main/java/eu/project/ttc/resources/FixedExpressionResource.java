@@ -23,12 +23,15 @@ package eu.project.ttc.resources;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Collections;
 import java.util.Scanner;
+import java.util.Set;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.uima.resource.DataResource;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.resource.SharedResourceObject;
+import org.assertj.core.util.Sets;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -44,6 +47,8 @@ public class FixedExpressionResource implements SharedResourceObject {
 
 	public static final String FIXED_EXPRESSION_RESOURCE = "FixedExpressionResource";
 
+	private Set<String> fixedExpressionLemmas = Sets.newHashSet();
+	
 	public void load(DataResource data) throws ResourceInitializationException {
 		InputStream inputStream = null;
 		try {
@@ -59,11 +64,7 @@ public class FixedExpressionResource implements SharedResourceObject {
 					str = line.split(TermSuiteConstants.TAB);
 					fixedExpression = str[0];
 					
-					/*
-					 * 
-					 * TODO Add the fixed expression to the storing structure.
-					 * 
-					 */
+					fixedExpressionLemmas.add(fixedExpression);
 				}
 			} catch (Exception e) {
 				throw new ResourceInitializationException(e);
@@ -78,4 +79,13 @@ public class FixedExpressionResource implements SharedResourceObject {
 		}
 	}
 	
+	
+	public Set<String> getFixedExpressionLemmas() {
+		return Collections.unmodifiableSet(fixedExpressionLemmas);
+	}
+
+
+	public boolean containsLemma(String lemma) {
+		return fixedExpressionLemmas.contains(lemma.toLowerCase());
+	}
 }

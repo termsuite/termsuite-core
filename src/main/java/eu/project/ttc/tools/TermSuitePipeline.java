@@ -54,6 +54,7 @@ import eu.project.ttc.engines.Contextualizer;
 import eu.project.ttc.engines.EvalEngine;
 import eu.project.ttc.engines.ExtensionDetecter;
 import eu.project.ttc.engines.FixedExpressionSpotter;
+import eu.project.ttc.engines.FixedExpressionTermMarker;
 import eu.project.ttc.engines.GraphicalVariantGatherer;
 import eu.project.ttc.engines.MateLemmaFixer;
 import eu.project.ttc.engines.MateLemmatizerTagger;
@@ -1001,7 +1002,39 @@ public class TermSuitePipeline {
 	}
 
 	/**
-	 * Spots fixed expressions.
+	 * Iterates over the {@link TermIndex} and mark terms as
+	 * "fixed expressions" when their lemmas are found in the 
+	 * {@link FixedExpressionResource}.
+	 * 
+	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
+	 */
+	public TermSuitePipeline aeFixedExpressionTermMarker()  {
+		/*
+		 * TODO Check if resource is present for that current language.
+		 */
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					FixedExpressionTermMarker.class
+				);
+			
+			ExternalResourceFactory.createDependencyAndBind(
+					ae,
+					FixedExpressionResource.FIXED_EXPRESSION_RESOURCE, 
+					FixedExpressionResource.class, 
+					resFactory.getFixedExpressionRegexes().toString());
+
+			ExternalResourceFactory.bindResource(ae, resTermIndex());
+
+			return aggregateAndReturn(ae, "Marking fixed expression terms", 0);
+		} catch (Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
+	}
+	
+	/**
+	 * Spots fixed expressions in the CAS an creates {@link FixedExpression}
+	 * annotation whenever one is found.
 	 * 
 	 * @return
 	 * 		This chaining {@link TermSuitePipeline} builder object
@@ -1012,7 +1045,8 @@ public class TermSuitePipeline {
 		 */
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					FixedExpressionSpotter.class
+					FixedExpressionSpotter.class,
+					FixedExpressionSpotter.FIXED_EXPRESSION_MAX_SIZE, 5
 				);
 			
 			ExternalResourceFactory.createDependencyAndBind(

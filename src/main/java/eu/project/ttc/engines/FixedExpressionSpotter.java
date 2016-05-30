@@ -21,17 +21,25 @@
  *******************************************************************************/
 package eu.project.ttc.engines;
 
+import java.util.Deque;
+import java.util.LinkedList;
+
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.FSIterator;
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
+import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.fit.descriptor.ExternalResource;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.collect.Lists;
+
 import eu.project.ttc.resources.FixedExpressionResource;
+import eu.project.ttc.types.FixedExpression;
 import eu.project.ttc.types.WordAnnotation;
+import eu.project.ttc.utils.JCasUtils;
 
 
 /**
@@ -47,19 +55,88 @@ public class FixedExpressionSpotter extends JCasAnnotator_ImplBase {
 	@ExternalResource(key=FixedExpressionResource.FIXED_EXPRESSION_RESOURCE, mandatory=true)
 	protected FixedExpressionResource fixedExpressionResource;
 
+
+	public static final String FIXED_EXPRESSION_MAX_SIZE = "FixedExpressionMaxSize";
+	@ConfigurationParameter(name=FIXED_EXPRESSION_MAX_SIZE, mandatory=false, defaultValue="5")
+	private int maxFixedExpressionSize;
+
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
-		
 		FSIterator<Annotation> it = aJCas.getAnnotationIndex(WordAnnotation.type).iterator();
+
+		// stats
+		int cnt = 0;
+		
+		// Buffer of last n annotations
+		Deque<WordAnnotation> lastNAnnos = new LinkedList<WordAnnotation>();
 		
 		while (it.hasNext()) {
-			WordAnnotation annotation = (WordAnnotation) it.next();
+			WordAnnotation wa = (WordAnnotation) it.next();
+			
 			/*
-			 * 
-			 * TODO try to find a fixed expression with a suffix tree and add it to Cas
-			 * 
+			 * Update the buffer with the current anno.
 			 */
+			lastNAnnos.addLast(wa);
+			if(lastNAnnos.size() > maxFixedExpressionSize)
+				lastNAnnos.removeFirst();
+			
+			/*
+			 * Iterate over the buffer in the reverse order to build
+			 * candidate fixed expressions.
+			 */
+			LinkedList<WordAnnotation> candidateFE = Lists.newLinkedList(lastNAnnos);
+			
+			while(candidateFE.size() >= 2) {// needs at least size >= 2 to be a fixed expression
+				
+				
+				/*
+				 * Builds the lemma for the current candidate fixed expression
+				 */
+				StringBuffer candidateFELemmaBuilder = new StringBuffer();
+				boolean first = true;
+				for(WordAnnotation a:candidateFE) {
+					if(!first)
+						candidateFELemmaBuilder.append(' ');					
+					candidateFELemmaBuilder.append(a.getLemma());
+					first = false;
+				}
+				String candidateFeLemma = candidateFELemmaBuilder.toString();
+				
+				/*
+				 * Tests if the current candidate fixed expression can be found 
+				 * in the resource.
+				 * 
+				 */
+				if(fixedExpressionResource.containsLemma(candidateFeLemma)) {
+					cnt++;
+					if(LOGGER.isTraceEnabled())
+						LOGGER.trace("New fixed expression spotted: {} ({}: [{},{}])",
+								candidateFeLemma,
+								JCasUtils.getSourceDocumentAnnotation(aJCas).get().getUri(),
+								candidateFE.getFirst().getBegin(),
+								candidateFE.getLast().getEnd());
+					
+					FixedExpression fe = (FixedExpression)aJCas.getCas().createAnnotation(
+							aJCas.getCasType(FixedExpression.type), 
+							candidateFE.getFirst().getBegin(),
+							candidateFE.getLast().getEnd());
+					fe.addToIndexes();
+				}
+
+				/*
+				 * Loops again without the left-most word
+				 */
+				candidateFE.removeFirst();
+			}
 		}
 		
+		LOGGER.debug("{} fixed expressions found in {}",
+				cnt,
+				JCasUtils.getSourceDocumentAnnotation(aJCas).get().getUri());
+	}
+	
+	
+	@Override
+	public void collectionProcessComplete() throws AnalysisEngineProcessException {
 	}
 }
