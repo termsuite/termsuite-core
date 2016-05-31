@@ -21,6 +21,16 @@
  *******************************************************************************/
 package eu.project.ttc.utils;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.util.List;
+
+import org.assertj.core.util.Lists;
+
 import com.google.common.base.Splitter;
 import com.google.common.collect.Iterables;
 
@@ -36,5 +46,20 @@ public class FileUtils {
 	    int exp = (int) (Math.log(bytes) / Math.log(unit));
 	    String pre = (si ? "kMGTPE" : "KMGTPE").charAt(exp-1) + (si ? "" : "i");
 	    return String.format("%.1f %sB", bytes / Math.pow(unit, exp), pre);
+	}
+
+	public static List<String> getUncommentedLines(File file, Charset forName) throws IOException {
+		try {
+			List<String> ids = Lists.newArrayList();
+			try(BufferedReader br = new BufferedReader(new FileReader(file))) {
+				for(String line; (line = br.readLine()) != null; ) {
+					if(!line.trim().startsWith("#") && !line.trim().isEmpty())
+						ids.add(line.trim());
+				}
+			}
+			return ids;			
+		} catch(FileNotFoundException e) {
+			throw new IOException(e);
+		}
 	}
 }
