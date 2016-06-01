@@ -321,8 +321,9 @@ public final class TermSuiteCLIUtils {
 	
 	
 	private static Stopwatch stopwatch;
-	public static void startChrono() {
+	public static Stopwatch startChrono() {
 		stopwatch = Stopwatch.createStarted();
+		return stopwatch;
 	}
 	public static void stopChrono() {
 		stopwatch.stop();
