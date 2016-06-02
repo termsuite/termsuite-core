@@ -8,10 +8,8 @@ import eu.project.ttc.types.WordAnnotation;
 import eu.project.ttc.types.TermOccAnnotation;
 import org.apache.uima.cas.*;
 import org.apache.uima.jcas.JCas;
-import org.apache.uima.jcas.cas.FSArray;
 import org.apache.uima.jcas.cas.StringArray;
 import org.apache.uima.jcas.tcas.Annotation;
-import org.assertj.core.util.Strings;
 
 import java.io.*;
 
@@ -23,20 +21,11 @@ import static eu.project.ttc.readers.JsonCasConstants.*;
 public class TermSuiteJsonCasSerializer {
 
     public static void serialize(Writer writer, JCas jCas) throws IOException {
-    /*
-     *  Cette méthode est appelée par le framework UIMA
-     *  pour chaque document  de ta collection (corpus).
-     *
-     *  Tu peux générer ton fichier compagnon dans cette méthode.
-     *  (Je te donne l'astuce pour retrouver le nom et le chemin du fichier
-     *  de ton corpus correspondant au CAS passé en paramètre de cette
-     *  méthode plus tard)
-     */
+
         JsonFactory jsonFactory = new JsonFactory();
         JsonGenerator jg = jsonFactory.createGenerator(writer);
         jg.useDefaultPrettyPrinter();
         jg.writeStartObject();
-
         jg.writeFieldName(F_SDI);
         writeSDI(jg, jCas);
         jg.writeFieldName(F_WORD_ANNOTATIONS);
@@ -50,6 +39,7 @@ public class TermSuiteJsonCasSerializer {
 
     private static void writeSDI(JsonGenerator jg, JCas jCas) throws IOException {
         SourceDocumentInformation sdi =  (SourceDocumentInformation)jCas.getAnnotationIndex(SourceDocumentInformation.type).iterator().next();
+        jg.writeStartObject();
         writeStringField(jg,F_URI,sdi.getUri());
         writeIntField(jg,F_OFFSET_IN_SOURCE,sdi.getOffsetInSource());
         writeIntField(jg,F_DOCUMENT_INDEX,sdi.getDocumentIndex());
@@ -59,6 +49,7 @@ public class TermSuiteJsonCasSerializer {
         writeLongField(jg,F_CORPUS_SIZE,sdi.getCorpusSize());
         writeBooleanField(jg,F_LAST_SEGMENT,sdi.getLastSegment());
         writeOffsets(jg, sdi);
+        jg.writeEndObject();
     }
     private static void writeWordAnnotations(JsonGenerator jg, JCas jCas) throws IOException {
         jg.writeStartArray();
@@ -94,7 +85,7 @@ public class TermSuiteJsonCasSerializer {
 
     private static void writeTermOccAnnotations(JsonGenerator jg, JCas jCas) throws IOException {
         jg.writeStartArray();
-        FSIterator<Annotation> it = jCas.getAnnotationIndex(WordAnnotation.type).iterator();
+        FSIterator<Annotation> it = jCas.getAnnotationIndex(TermOccAnnotation.type).iterator();
         while(it.hasNext()) {
              TermOccAnnotation oa = (TermOccAnnotation) it.next();
             jg.writeStartObject();
