@@ -2,9 +2,15 @@ package eu.project.ttc.readers;
 
 import com.fasterxml.jackson.core.*;
 import eu.project.ttc.types.SourceDocumentInformation;
+import eu.project.ttc.types.TermOccAnnotation;
 import eu.project.ttc.types.WordAnnotation;
 import org.apache.uima.cas.CAS;
 import org.apache.uima.cas.CASException;
+import org.apache.uima.cas.FeatureStructure;
+import org.apache.uima.jcas.JCas;
+import org.apache.uima.jcas.cas.FSArray;
+import org.apache.uima.jcas.cas.StringArray;
+import org.apache.uima.jcas.cas.StringArray_Type;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -21,18 +27,17 @@ public class TermSuiteJsonCasDeserializer {
             JsonFactory factory = new JsonFactory();
             JsonParser parser = factory.createParser(inputStream);
             JsonToken token;
-            JsonStreamContext ancestor;
-            JsonStreamContext parent;
 
             SourceDocumentInformation sdi = (SourceDocumentInformation) cas.createAnnotation(cas.getJCas().getCasType(SourceDocumentInformation.type), 0, 0);
             WordAnnotation wa = (WordAnnotation) cas.createAnnotation(cas.getJCas().getCasType(WordAnnotation.type), 0, 0);
+            TermOccAnnotation toa = (TermOccAnnotation) cas.createAnnotation(cas.getJCas().getCasType(TermOccAnnotation.type), 0, 0);
             boolean inSdi = false;
             boolean inWa = false;
+            boolean inToa = false;
 
             while ((token=parser.nextToken()) != null)
             {
                 try{
-                    parent = parser.getParsingContext().getParent();
 
                     if (inSdi){
 
@@ -52,6 +57,16 @@ public class TermSuiteJsonCasDeserializer {
                         FillWordAnnotations(parser, token, wa);
                     }
 
+                    else if (inToa){
+                        if (token == JsonToken.END_ARRAY)
+                            inToa = false;
+                        else if (token == JsonToken.END_OBJECT) {
+                            toa.addToIndexes();
+                            toa = (TermOccAnnotation) cas.createAnnotation(cas.getJCas().getCasType(TermOccAnnotation.type), 0, 0);
+                        }
+                        FillTermOccAnnotations(parser, token, toa, cas);
+                    }
+
                     else if ("sdi".equals(parser.getParsingContext().getCurrentName())) {
                         inSdi = true;
                     }
@@ -61,7 +76,7 @@ public class TermSuiteJsonCasDeserializer {
                     }
 
                     else if ("term_occ_annotations".equals(parser.getParsingContext().getCurrentName())) {
-                        break;
+                        inToa = true;
                     }
                 }
                 catch (java.lang.NullPointerException e) {
@@ -164,6 +179,35 @@ public class TermSuiteJsonCasDeserializer {
                     break;
                 case F_END :
                     sdi.setEnd(parser.nextIntValue(0));
+                    break;
+            }
+        }
+    }
+
+    private static void FillTermOccAnnotations(JsonParser parser , JsonToken token, TermOccAnnotation toa, CAS cas) throws IOException, CASException {
+        if (token.equals(JsonToken.FIELD_NAME)){
+            switch (parser.getCurrentName()){
+                case F_PATTERN :
+                    String[] patternTable = parser.nextTextValue().split(" ");
+                    StringArray stringArray = new StringArray(cas.getJCas(), patternTable.length);
+
+                    for (int i = 0; i < patternTable.length; i++){
+                        stringArray.set(i,patternTable[i]);
+                    }
+                    toa.setPattern(stringArray);
+                    break;
+
+                case F_SPOTTING_RULE_NAME :
+                    toa.setSpottingRuleName(parser.nextTextValue());
+                    break;
+                case F_TERM_KEY :
+                    toa.setTermKey(parser.nextTextValue());
+                    break;
+                case F_BEGIN :
+                    toa.setBegin(parser.nextIntValue(0));
+                    break;
+                case F_END :
+                    toa.setEnd(parser.nextIntValue(0));
                     break;
             }
         }
