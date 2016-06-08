@@ -160,7 +160,6 @@ dependencies {
 	compile 'org.apache.uima:uimaj-core:2.6.0'
 	compile "org.apache.uima:uimafit-core:2.1.0"
 
-	compile "org.apache.uima:uimaj-tools:2.6.0" // jcasgen
 
 	// Apache Common
 	compile "org.apache.commons:commons-lang3:3.4"
