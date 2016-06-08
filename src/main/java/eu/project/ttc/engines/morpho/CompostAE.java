@@ -62,6 +62,9 @@ import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.utils.IndexingKey;
 import eu.project.ttc.utils.TermSuiteUtils;
 
+/*
+ * TODO Apply exceptions for derivational suffixes like -aire, -age, etc.
+ */
 public class CompostAE extends JCasAnnotator_ImplBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(CompostAE.class);
 

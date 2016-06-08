@@ -49,7 +49,7 @@ import eu.project.ttc.models.index.TermIndexes;
 import eu.project.ttc.models.index.TermMeasure;
 import eu.project.ttc.models.index.TermValueProviders;
 import eu.project.ttc.resources.GeneralLanguageResource;
-import eu.project.ttc.tools.TermSuiteResourceHelper;
+import eu.project.ttc.tools.TermSuiteResource;
 
 public class TermUtils {
 
@@ -354,7 +354,7 @@ public class TermUtils {
 	 * @return
 	 */
 	public static int getGeneralFrequency(Lang l, Term t) {
-		String resName = new TermSuiteResourceHelper(l).getGeneralLanguageFrequencies().toString().replaceFirst("file:", "");
+		String resName = TermSuiteResource.GENERAL_LANGUAGE.getPath(l);
 		GeneralLanguageResource generalLanguage = new GeneralLanguageResource();
 		try {
 			generalLanguage.load(TermUtils.class.getClassLoader().getResourceAsStream(resName));

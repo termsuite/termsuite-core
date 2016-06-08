@@ -47,9 +47,7 @@ import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 
-import eu.project.ttc.engines.AffixCompoundSplitter;
 import eu.project.ttc.engines.CasStatCounter;
-import eu.project.ttc.engines.CompoundSplitter;
 import eu.project.ttc.engines.Contextualizer;
 import eu.project.ttc.engines.EvalEngine;
 import eu.project.ttc.engines.ExtensionDetecter;
@@ -107,10 +105,8 @@ import eu.project.ttc.readers.StringCollectionReader;
 import eu.project.ttc.readers.TeiCollectionReader;
 import eu.project.ttc.readers.TxtCollectionReader;
 import eu.project.ttc.readers.XmiCollectionReader;
-import eu.project.ttc.resources.BankResource;
 import eu.project.ttc.resources.CharacterFootprintTermFilter;
 import eu.project.ttc.resources.CompostInflectionRules;
-import eu.project.ttc.resources.DictionaryResource;
 import eu.project.ttc.resources.EvalTrace;
 import eu.project.ttc.resources.GeneralLanguageResource;
 import eu.project.ttc.resources.MateLemmatizerModel;
@@ -176,7 +172,6 @@ public class TermSuitePipeline {
 	private CollectionReaderDescription crDescription;
 	private String pipelineObserverName;
 	private AggregateBuilder aggregateBuilder;
-	private TermSuiteResourceHelper resFactory;
 	
 	/*
 	 * POS Tagger parameters
@@ -191,13 +186,10 @@ public class TermSuitePipeline {
 	 * Regex Spotter params
 	 */
 	private boolean addSpottedAnnoToTermIndex = true;
-	@Deprecated
 	private boolean spotWithOccurrences = true;
 	private Optional<Boolean> logOverlappingRules = Optional.absent();
 	private Optional<String> postProcessingStrategy = Optional.absent();
 	private boolean enableSyntacticLabels = false;
-	@Deprecated
-	private Optional<String> syntacticRegexesFilePath = Optional.absent();
 
 	/*
 	 * Contextualizer options
@@ -223,12 +215,6 @@ public class TermSuitePipeline {
 	private int compostMinComponentSize = 3;
 	private int compostMaxComponentNum = 3;
 	private Object compostSegmentSimilarityThreshold = 0.7f;
-
-	/*
-	 * Syntactic Variant Gatherer parameters
-	 */
-	@Deprecated
-	private Optional<String> yamlVariantRulesFilePath = Optional.absent();
 
 	/*
 	 * Graphical Variant Gatherer parameters
@@ -261,10 +247,6 @@ public class TermSuitePipeline {
 	 */
 	private TermSuitePipeline(String lang, String urlPrefix) {
 		this.lang = Lang.forName(lang);
-		if(urlPrefix == null)
-			this.resFactory = new TermSuiteResourceHelper(this.lang);
-		else
-			this.resFactory = new TermSuiteResourceHelper(this.lang, urlPrefix);	
 		this.aggregateBuilder = new AggregateBuilder();
 		this.pipelineObserverName = PipelineObserver.class.getSimpleName() + "-" + Thread.currentThread().getId() + "-" + System.currentTimeMillis();
 		TermSuiteResourceManager.getInstance().register(pipelineObserverName, new TermSuitePipelineObserver(2,1));
@@ -573,7 +555,7 @@ public class TermSuitePipeline {
 			
 			ExternalResourceDescription	segmentBank = ExternalResourceFactory.createExternalResourceDescription(
 					SegmentBankResource.class, 
-					resFactory.getSegmentBank().toString());
+					TermSuiteResource.SEGMENT_BANK.getFileUrl(lang));
 
 					
 			ExternalResourceFactory.bindResource(ae, SegmentBank.KEY_SEGMENT_BANK, segmentBank);
@@ -636,7 +618,7 @@ public class TermSuitePipeline {
 					ae,
 					TreeTaggerParameter.KEY_TT_PARAMETER, 
 					TreeTaggerParameter.class, 
-					resFactory.getTTParameter().toString());
+					TermSuiteResource.TREETAGGER_CONFIG.getFileUrl(lang, Tagger.TREE_TAGGER));
 
 			return aggregateAndReturn(ae, "POS Tagging (TreeTagger)", 0).ttLemmaFixer().ttNormalizer();
 		} catch (Exception e) {
@@ -658,9 +640,8 @@ public class TermSuitePipeline {
 				);
 			
 			Preconditions.checkState(mateModelsPath.isPresent(), "The path to mate models must be explicitely given. See method #setMateModelPath");
-	
-			String lemmatizerModel = Paths.get(mateModelsPath.get(), resFactory.getMateLemmatizerModelFileName()).toString();
-			String taggerModel = Paths.get(mateModelsPath.get(), resFactory.getMateTaggerModelFileName()).toString();
+			String lemmatizerModel = Paths.get(mateModelsPath.get(), "mate-lemma-"+lang.getCode()+".model").toString();
+			String taggerModel = Paths.get(mateModelsPath.get(), "mate-pos-"+lang.getCode()+".model").toString();
 			Preconditions.checkArgument(Files.exists(Paths.get(lemmatizerModel)), "Lemmatizer model does not exist: %s", lemmatizerModel);
 			Preconditions.checkArgument(Files.exists(Paths.get(taggerModel)), "Tagger model does not exist: %s", taggerModel);
 	
@@ -894,46 +875,46 @@ public class TermSuitePipeline {
 	private TermSuitePipeline caseNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"eu.project.ttc.types.WordAnnotation:case", 
-				resFactory.getCaseMapping(tagger).toString());
+				TermSuiteResource.TAGGER_CASE_MAPPING.getFileUrl(lang, tagger));
 	}
 
 	private TermSuitePipeline categoryNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"eu.project.ttc.types.WordAnnotation:category", 
-				resFactory.getCategoryMapping(tagger).toString());
+				TermSuiteResource.TAGGER_CATEGORY_MAPPING.getFileUrl(lang, Tagger.TREE_TAGGER));
 	}
 
 	private TermSuitePipeline tenseNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"eu.project.ttc.types.WordAnnotation:tense", 
-				resFactory.getTenseMapping(tagger).toString());
+				TermSuiteResource.TAGGER_TENSE_MAPPING.getFileUrl(lang, Tagger.TREE_TAGGER));
 	}
 
 	private TermSuitePipeline subCategoryNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"eu.project.ttc.types.WordAnnotation:subCategory", 
-				resFactory.getSubcategoryMapping(tagger).toString());
+				TermSuiteResource.TAGGER_SUBCATEGORY_MAPPING.getFileUrl(lang, Tagger.TREE_TAGGER));
 	}
 
 	
 	private TermSuitePipeline moodNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"eu.project.ttc.types.WordAnnotation:mood", 
-				resFactory.getMoodMapping(tagger).toString());
+				TermSuiteResource.TAGGER_MOOD_MAPPING.getFileUrl(lang, Tagger.TREE_TAGGER));
 	}
 
 	
 	private TermSuitePipeline numberNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"eu.project.ttc.types.WordAnnotation:number", 
-				resFactory.getNumberMapping(tagger).toString());
+				TermSuiteResource.TAGGER_NUMBER_MAPPING.getFileUrl(lang, Tagger.TREE_TAGGER));
 	}
 
 	
 	private TermSuitePipeline genderNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"eu.project.ttc.types.WordAnnotation:gender", 
-				resFactory.getGenderMapping(tagger).toString());
+				TermSuiteResource.TAGGER_GENDER_MAPPING.getFileUrl(lang, Tagger.TREE_TAGGER));
 	}
 
 	private TermSuitePipeline mateNormalizer()  {
@@ -1027,22 +1008,17 @@ public class TermSuitePipeline {
 						RegexSpotter.LOG_OVERLAPPING_RULES, logOverlappingRules.get());
 			
 				
-			if(!this.syntacticRegexesFilePath.isPresent() && resFactory.resourceExists(resFactory.getMWRegexes().toString())) {
-				LOGGER.warn("File " + resFactory.getMWRegexes() + " does not exist.");
-				throw new TermSuitePipelineException("Regex Spotter is not supported for language " + this.lang + ". Please provide a .regex file.");
-			}
-			
 			ExternalResourceFactory.createDependencyAndBind(
 					ae,
 					RegexListResource.KEY_TOKEN_REGEX_RULES, 
 					RegexListResource.class, 
-					this.syntacticRegexesFilePath.isPresent() ?  this.syntacticRegexesFilePath.get() : resFactory.getMWRegexes().toString());
+					TermSuiteResource.MWT_RULES.getFileUrl(lang));
 	
 			ExternalResourceFactory.createDependencyAndBind(
 					ae,
 					RegexSpotter.CHARACTER_FOOTPRINT_TERM_FILTER, 
 					CharacterFootprintTermFilter.class, 
-					resFactory.getAllowedChars().toString());
+					TermSuiteResource.ALLOWED_CHARS.getFileUrl(lang));
 	
 			if(this.addSpottedAnnoToTermIndex)
 				ExternalResourceFactory.bindResource(ae, resTermIndex());
@@ -1051,7 +1027,7 @@ public class TermSuitePipeline {
 					ae,
 					RegexSpotter.STOP_WORD_FILTER, 
 					DefaultFilterResource.class, 
-					resFactory.getStopWords().toString());
+					TermSuiteResource.STOP_WORDS_FILTER.getFileUrl(lang));
 			
 			return aggregateAndReturn(ae, "Spotting terms", 0);
 		} catch (Exception e) {
@@ -1059,47 +1035,6 @@ public class TermSuitePipeline {
 		}
 	}
 	
-	/**
-	 * Naive morphological analysis of compounds based on a 
-	 * compound dictionary resource
-	 * 
-	 * @deprecated 
-	 * 		Use {@link #aeCompostSplitter()} instead
-	 * @return
-	 * 		This chaining {@link TermSuitePipeline} builder object
-	 */
-	public TermSuitePipeline aeCompoundSplitter()  {
-		try {
-			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					CompoundSplitter.class
-				);
-			ExternalResourceFactory.createDependencyAndBind(
-					ae,
-					CompoundSplitter.DICTIONARY, 
-					DictionaryResource.class, 
-					resFactory.getEmptyDictionary().toString()
-				);
-			
-			ExternalResourceFactory.bindResource(ae, resTermIndex());
-
-			return aggregateAndReturn(ae, "Splitting compounds", 0);
-		} catch (Exception e) {
-			throw new TermSuitePipelineException(e);
-		}
-	}
-	
-	/**
-	 * Naive morphological analysis of neo-classical compounds based on a 
-	 * neo-classical dictionary resource
-	 * 
-	 * @deprecated 
-	 * 		Use {@link #aeCompostSplitter()} instead
-	 * @return
-	 * 		This chaining {@link TermSuitePipeline} builder object
-	 */
-	public TermSuitePipeline aeNeoClassicalSplitter()  {
-		return aeAffixCompoundSplitter(true, resFactory.getRootBank().toString());
-	}
 	
 	/**
 	 * Naive morphological analysis of prefix compounds based on a 
@@ -1117,7 +1052,7 @@ public class TermSuitePipeline {
 					ae,
 					PrefixTree.PREFIX_TREE, 
 					PrefixTree.class,
-					resFactory.getPrefixBank()
+					TermSuiteResource.PREFIX_BANK.getFileUrl(lang)
 				);
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
@@ -1129,28 +1064,6 @@ public class TermSuitePipeline {
 
 	}
 
-	private TermSuitePipeline aeAffixCompoundSplitter(boolean neoClassical,
-			String bankResource)  {
-		try {
-			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					AffixCompoundSplitter.class,
-					AffixCompoundSplitter.IS_NEO_CLASSICAL, neoClassical
-				);
-			ExternalResourceFactory.createDependencyAndBind(
-					ae,
-					AffixCompoundSplitter.BANK, 
-					BankResource.class, 
-					bankResource
-					);
-			
-			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			
-			return aggregateAndReturn(ae, "Splitting prefixes", 0);
-		} catch(Exception e) {
-			throw new TermSuitePipelineException(e);
-		}
-	}
-	
 	/**
 	 * Removes from the term index any term having a 
 	 * stop word at its boundaries.
@@ -1169,7 +1082,7 @@ public class TermSuitePipeline {
 					ae,
 					FilterResource.KEY_FILTERS, 
 					DefaultFilterResource.class, 
-					resFactory.getStopWords().toString()
+					TermSuiteResource.STOP_WORDS_FILTER.getFileUrl(lang)
 				);
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
@@ -1296,7 +1209,7 @@ public class TermSuitePipeline {
 		if(syntacticVariantRules == null) {
 			syntacticVariantRules = ExternalResourceFactory.createExternalResourceDescription(
 					YamlVariantRules.class, 
-					this.yamlVariantRulesFilePath.isPresent() ?  this.yamlVariantRulesFilePath.get() : resFactory.getYamlVariantRules().toString()
+					TermSuiteResource.VARIANTS.getFileUrl(lang)
 				);
 		}
 		return syntacticVariantRules;
@@ -1346,7 +1259,7 @@ public class TermSuitePipeline {
 		if(generalLanguageResourceDesc == null)
 			generalLanguageResourceDesc = ExternalResourceFactory.createExternalResourceDescription(
 					GeneralLanguageResource.class, 
-					resFactory.getGeneralLanguageFrequencies().toString());
+					TermSuiteResource.GENERAL_LANGUAGE.getFileUrl(lang));
 		return generalLanguageResourceDesc;
 	}
 	
@@ -1710,34 +1623,12 @@ public class TermSuitePipeline {
 		return this;
 	}
 
-	/**
-	 * @deprecated Overrides ressources directly
-	 * @param syntacticRegexesFilePath
-	 * @return
-	 */
-	@Deprecated
-	public TermSuitePipeline setSyntacticRegexesFilePath(String syntacticRegexesFilePath) {
-		this.syntacticRegexesFilePath = Optional.of(syntacticRegexesFilePath);
-		return this;
-	}
-	
 	public TermSuitePipeline haeLogOverlappingRules() {
 		this.logOverlappingRules = Optional.of(true);
 		return this;
 	}
 	public TermSuitePipeline enableSyntacticLabels() {
 		this.enableSyntacticLabels = true;
-		return this;
-	}
-	
-	/**
-	 * Overrides ressources directly
-	 * @param yamlVariantRulesFilePath
-	 * @return
-	 */
-	@Deprecated
-	public TermSuitePipeline setYamlVariantRulesFilePath(String yamlVariantRulesFilePath) {
-		this.yamlVariantRulesFilePath = Optional.of(yamlVariantRulesFilePath);
 		return this;
 	}
 	
@@ -1790,27 +1681,27 @@ public class TermSuitePipeline {
 					ae,
 					CompostAE.LANGUAGE_DICO, 
 					SimpleWordSet.class, 
-					resFactory.getLanguageDico().toString());
+					TermSuiteResource.DICO.getFileUrl(lang));
 			ExternalResourceFactory.createDependencyAndBind(
 					ae,
 					CompostAE.INFLECTION_RULES, 
 					CompostInflectionRules.class, 
-					resFactory.getCompostInflectionRules().toString());
+					TermSuiteResource.COMPOST_INFLECTION_RULES.getFileUrl(lang));
 			ExternalResourceFactory.createDependencyAndBind(
 					ae,
 					CompostAE.TRANSFORMATION_RULES, 
 					CompostInflectionRules.class, 
-					resFactory.getCompostTransformationRules().toString());
+					TermSuiteResource.COMPOST_TRANSFORMATION_RULES.getFileUrl(lang));
 			ExternalResourceFactory.createDependencyAndBind(
 					ae,
 					CompostAE.STOP_LIST, 
 					SimpleWordSet.class, 
-					resFactory.getCompostStopList().toString());
+					TermSuiteResource.COMPOST_STOP_LIST.getFileUrl(lang));
 			ExternalResourceFactory.createDependencyAndBind(
 					ae,
 					CompostAE.NEOCLASSICAL_PREFIXES, 
 					SimpleWordSet.class, 
-					resFactory.getNeoclassicalPrefixes().toString());
+					TermSuiteResource.NEOCLASSICAL_PREFIXES.getFileUrl(lang));
 
 			return aggregateAndReturn(ae, CompostAE.TASK_NAME, 2);
 		} catch(Exception e) {

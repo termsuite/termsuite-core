@@ -1,16 +1,22 @@
 package eu.project.ttc.tools;
 
 public enum Tagger {
-	MATE("mate"),
-	TREE_TAGGER("tt");
+	MATE("mate", "mate"),
+	TREE_TAGGER("tree-tagger", "tt");
 	
-	private String resourceShortName;
+	private String shortName;
+	private String name;
 
-	private Tagger(String resourceShortName) {
-		this.resourceShortName = resourceShortName;
+	private Tagger(String name, String shortName) {
+		this.shortName = shortName;
+		this.name = name;
 	}
 	
-	public String getResourceShortName() {
-		return resourceShortName;
+	public String getShortName() {
+		return shortName;
+	}
+	
+	public String getName() {
+		return name;
 	}
 }
