@@ -24,6 +24,7 @@ package org.ttc.project.test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.ttc.project.test.engines.TermClassifierSpec;
+import org.ttc.project.test.io.SegmentationParserSpec;
 import org.ttc.project.test.resources.PrefixTreeSpec;
 import org.ttc.project.test.variants.VariantRuleSpec;
 import org.ttc.project.test.variants.VariantRuleYamlIOSpec;
@@ -48,6 +49,7 @@ import eu.project.ttc.resources.PrefixTree;
 	TermClassSpec.class,
 	StringUtilsSpec.class,
 	PrefixTreeSpec.class,
+	SegmentationParserSpec.class,
 //	TeiCollectionReaderSpec.class,
 	CrossTableSpec.class
 	})

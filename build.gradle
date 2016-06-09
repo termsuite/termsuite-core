@@ -149,7 +149,7 @@ dependencies {
 	testCompile "junit:junit:4.12"
 	testCompile "eu.codearte.catch-exception:catch-exception:1.4.4"
 	testCompile "org.assertj:assertj-core:2.0.0"
-	testCompile "org.mockito:mockito-all:1.10.19"
+	testCompile "org.mockito:mockito-core:1.10.19"
 	testCompile "com.fasterxml.jackson.core:jackson-databind:2.6.1"
 
 	// Configure logging at runtime
@@ -191,7 +191,8 @@ dependencies {
 	compile 'fr.univ-nantes.julestar:uima-chinese-segmenter:1.1'
 	compile 'fr.univ-nantes.julestar:uima-tokens-regex:1.2'
 	compile 'fr.univ-nantes.julestar:uima-stemmer:1.1'
-
+	compile 'fr.univ-nantes.julestar:uima-toolbox:1.0'
+	
 	// JCas type generation
 	prepare "org.apache.uima:uimaj-tools:2.8.1"
 }

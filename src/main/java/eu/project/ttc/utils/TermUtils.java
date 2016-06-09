@@ -103,6 +103,7 @@ public class TermUtils {
 		}
 	}
 
+	
 	public static void showCompounds(TermIndex index, PrintStream out, int threshhold) {
 		List<Term> terms = Lists.newArrayList();
 		for(Term term:index.getTerms()) {

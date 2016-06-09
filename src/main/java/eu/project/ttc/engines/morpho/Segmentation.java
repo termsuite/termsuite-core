@@ -36,6 +36,11 @@ public class Segmentation {
 	private List<CuttingPoint> cuttingPoints;
 	private List<Segment> segments;
 	
+	public Segmentation(String word, Segment... segments) {
+		this.string = word;
+		this.segments = Lists.newArrayList(segments);
+	}
+
 	private Segmentation(String word, List<CuttingPoint> cuttingPoints) {
 		super();
 		this.string = word;
@@ -43,10 +48,10 @@ public class Segmentation {
 		this.segments = Lists.newArrayListWithCapacity(cuttingPoints.size()+1);
 		int lastBegin = 0;
 		for(CuttingPoint cp:this.cuttingPoints) {
-			this.segments.add(new Segment(lastBegin, cp.getIndex(), this.string));
+			this.segments.add(Segment.createFromParentString(lastBegin, cp.getIndex(), this.string));
 			lastBegin = cp.getIndex() + cp.getOffset();
 		}
-		this.segments.add(new Segment(lastBegin, this.string.length(), this.string));
+		this.segments.add(Segment.createFromParentString(lastBegin, this.string.length(), this.string));
 	}
 
 	public List<Segment> getSegments() {
@@ -62,7 +67,7 @@ public class Segmentation {
 	}
 	
 	public int size() {
-		return cuttingPoints.size() +1;
+		return this.segments.size();
 	}
 
 	public static List<Segmentation> getSegmentations(String str, int nbMaxComponents, int minComponentSize) {
@@ -122,5 +127,9 @@ public class Segmentation {
 			}
 			return l;
 		}
+	}
+	
+	public String getString() {
+		return string;
 	}
 }
