@@ -2,6 +2,7 @@ package eu.project.ttc.engines.morpho;
 
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
+import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.fit.descriptor.ExternalResource;
 import org.apache.uima.jcas.JCas;
 import org.slf4j.Logger;
@@ -24,6 +25,9 @@ public class PrefixSplitter extends JCasAnnotator_ImplBase {
 	@ExternalResource(key=PrefixTree.PREFIX_TREE, mandatory=true)
 	private PrefixTree prefixTree;
 
+	public static final String CHECK_IF_MORPHO_EXTENSION_IS_IN_CORPUS = "CheckIfMorphoExtensionInCorpus";
+	@ConfigurationParameter(name=CHECK_IF_MORPHO_EXTENSION_IS_IN_CORPUS, mandatory=false, defaultValue = "true")
+	private boolean checkIfMorphoExtensionInCorpus;
 	
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
@@ -35,12 +39,21 @@ public class PrefixSplitter extends JCasAnnotator_ImplBase {
 		LOGGER.info("Starting {}", TASK_NAME);
 		
 		int nb = 0;
+		String prefixExtension, lemma, pref;
 		for(Word word:termIndexResource.getTermIndex().getWords()) {
-			String lemma = word.getLemma();
-			String pref = prefixTree.getPrefix(lemma);
+			lemma = word.getLemma();
+			pref = prefixTree.getPrefix(lemma);
 			if(pref != null && pref.length() < lemma.length()) {
+				prefixExtension = lemma.substring(pref.length(),lemma.length());
 				if(LOGGER.isTraceEnabled())
 					LOGGER.trace("Found prefix: {} for word {}", pref, lemma);
+				if(checkIfMorphoExtensionInCorpus) {
+					if(termIndexResource.getTermIndex().getWord(prefixExtension) == null) {
+						if(LOGGER.isTraceEnabled())
+							LOGGER.trace("Prefix extension: {} for word {} is not found in corpus. Aborting composition for this word.", prefixExtension, lemma);
+						continue;
+					}
+				}
 				nb++;
 				WordBuilder builder = new WordBuilder(word);
 				builder.addComponent(
@@ -50,7 +63,7 @@ public class PrefixSplitter extends JCasAnnotator_ImplBase {
 				builder.addComponent(
 						pref.length(), 
 						lemma.length(), 
-						lemma.substring(pref.length(),lemma.length()));
+						prefixExtension);
 				builder.setCompoundType(CompoundType.PREFIX);
 				builder.create();
 			}
