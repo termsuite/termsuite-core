@@ -52,6 +52,7 @@ import eu.project.ttc.engines.Contextualizer;
 import eu.project.ttc.engines.EvalEngine;
 import eu.project.ttc.engines.ExtensionDetecter;
 import eu.project.ttc.engines.GraphicalVariantGatherer;
+import eu.project.ttc.engines.ManualMorphoSetter;
 import eu.project.ttc.engines.MateLemmaFixer;
 import eu.project.ttc.engines.MateLemmatizerTagger;
 import eu.project.ttc.engines.Merger;
@@ -109,6 +110,7 @@ import eu.project.ttc.resources.CharacterFootprintTermFilter;
 import eu.project.ttc.resources.CompostInflectionRules;
 import eu.project.ttc.resources.EvalTrace;
 import eu.project.ttc.resources.GeneralLanguageResource;
+import eu.project.ttc.resources.ManualMorphologyResource;
 import eu.project.ttc.resources.MateLemmatizerModel;
 import eu.project.ttc.resources.MateTaggerModel;
 import eu.project.ttc.resources.MemoryTermIndexManager;
@@ -1057,7 +1059,29 @@ public class TermSuitePipeline {
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 			
-			return aggregateAndReturn(ae, "Splitting prefixes", 0);
+			return aggregateAndReturn(ae, "Splitting prefixes", 0)
+					.aeManualMorphoSetter();
+		} catch(Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
+
+	}
+
+	private TermSuitePipeline aeManualMorphoSetter()  {
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					ManualMorphoSetter.class
+				);
+			ExternalResourceFactory.createDependencyAndBind(
+					ae,
+					ManualMorphoSetter.MANUAL_MORPHOLOGY_LIST, 
+					ManualMorphologyResource.class,
+					TermSuiteResource.MANUAL_MORPHOLOGY.getFileUrl(lang)
+				);
+			
+			ExternalResourceFactory.bindResource(ae, resTermIndex());
+			
+			return aggregateAndReturn(ae, "Setting manual morphology", 0);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
 		}

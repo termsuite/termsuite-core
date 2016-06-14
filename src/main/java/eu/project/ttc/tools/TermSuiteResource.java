@@ -14,6 +14,7 @@ import eu.project.ttc.engines.desc.Lang;
 public enum TermSuiteResource {
 	GENERAL_LANGUAGE("[LANG_SHORT]/[LANG]-general-language.txt", "", ""),
 	PREFIX_BANK("[LANG_SHORT]/morphology/[LANG]-prefix-bank.txt", "", ""),
+	MANUAL_MORPHOLOGY("[LANG_SHORT]/morphology/[LANG]-manual-composition.txt", "", ""),
 	ROOT_BANK("[LANG_SHORT]/morphology/[LANG]-root-bank.txt", "", ""),
 	ALLOWED_CHARS("[LANG_SHORT]/[LANG]-allowed-chars.txt", "", ""),
 	COMPOST_INFLECTION_RULES("[LANG_SHORT]/morphology/[LANG]-compost-inflection-rules.txt", "", ""),
