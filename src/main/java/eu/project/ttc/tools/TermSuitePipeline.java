@@ -27,9 +27,11 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.security.SecureRandom;
+import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.BlockingQueue;
 
+import org.apache.commons.lang.mutable.MutableInt;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.collection.CollectionReader;
 import org.apache.uima.collection.CollectionReaderDescription;
@@ -40,6 +42,8 @@ import org.apache.uima.fit.factory.ExternalResourceFactory;
 import org.apache.uima.fit.pipeline.SimplePipeline;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ExternalResourceDescription;
+import org.assertj.core.util.Maps;
+import org.codehaus.groovy.runtime.metaclass.NewMetaMethod;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -579,6 +583,14 @@ public class TermSuitePipeline {
 //		return aggregateAndReturn(ae, null, 0);
 //	}
 
+	private Map<String, MutableInt> taskNumbers = Maps.newHashMap();
+	private String getNumberedTaskName(String taskName) {
+		if(!taskNumbers.containsKey(taskName))
+			taskNumbers.put(taskName, new MutableInt(0));
+		taskNumbers.get(taskName).increment();
+		return String.format("%s-%d", taskName, taskNumbers.get(taskName).intValue());
+	}
+	
 	private TermSuitePipeline aggregateAndReturn(AnalysisEngineDescription ae, String taskName, int ccWeight) {
 		Preconditions.checkNotNull(taskName);
 
@@ -706,7 +718,7 @@ public class TermSuitePipeline {
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 
 
-			return aggregateAndReturn(ae, "Exporting the terminology to " + toFilePath, 1);
+			return aggregateAndReturn(ae, getNumberedTaskName("Exporting the terminology to " + toFilePath), 1);
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
@@ -768,7 +780,7 @@ public class TermSuitePipeline {
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 
-			return aggregateAndReturn(ae, "Exporting the terminology to " + toFilePath, 1);
+			return aggregateAndReturn(ae, getNumberedTaskName("Exporting the terminology to " + toFilePath), 1);
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
@@ -814,7 +826,7 @@ public class TermSuitePipeline {
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 
-			return aggregateAndReturn(ae, "Exporting the terminology to " + toFilePath, 1);
+			return aggregateAndReturn(ae, getNumberedTaskName("Exporting the terminology to " + toFilePath), 1);
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
@@ -1448,7 +1460,7 @@ public class TermSuitePipeline {
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 
-			return aggregateAndReturn(ae, "Cleaning", 0);
+			return aggregateAndReturn(ae, getNumberedTaskName("Cleaning"), 0);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
@@ -1822,7 +1834,7 @@ public class TermSuitePipeline {
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 
-			return aggregateAndReturn(ae, "Counting stats ["+statName+"]", 0);
+			return aggregateAndReturn(ae, getNumberedTaskName("Counting stats ["+statName+"]"), 0);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
@@ -2034,7 +2046,7 @@ public class TermSuitePipeline {
 					JsonCasExporter.class,
 					JsonCasExporter.OUTPUT_DIRECTORY, toDirectoryPath
 			);
-			return aggregateAndReturn(ae, "Exporting CAS to JSON files", 0);
+			return aggregateAndReturn(ae, getNumberedTaskName("Exporting CAS to JSON files"), 0);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
