@@ -82,6 +82,7 @@ import eu.project.ttc.engines.exporter.ExportVariationRuleExamples;
 import eu.project.ttc.engines.exporter.JsonCasExporter;
 import eu.project.ttc.engines.exporter.JsonExporter;
 import eu.project.ttc.engines.exporter.SpotterTSVWriter;
+import eu.project.ttc.engines.exporter.SuffixDerivationExporter;
 import eu.project.ttc.engines.exporter.TBXExporter;
 import eu.project.ttc.engines.exporter.TSVExporter;
 import eu.project.ttc.engines.exporter.VariantEvalExporter;
@@ -751,6 +752,19 @@ public class TermSuitePipeline {
 		}
 	}
 
+	public TermSuitePipeline haeSuffixDerivateExporter(String toFilePath) {
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					SuffixDerivationExporter.class, 
+					SuffixDerivationExporter.TO_FILE_PATH, 
+					toFilePath);
+			ExternalResourceFactory.bindResource(ae, resTermIndex());
+
+			return aggregateAndReturn(ae, "Exporting suffix derivations", 0);
+		} catch (Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
+	}
 		
 	public TermSuitePipeline haeTbxExporter(String toFilePath) {
 		try {
