@@ -67,6 +67,7 @@ import eu.project.ttc.engines.StringRegexFilter;
 import eu.project.ttc.engines.SyntacticTermGatherer;
 import eu.project.ttc.engines.TermClassifier;
 import eu.project.ttc.engines.TermIndexBlacklistWordFilterAE;
+import eu.project.ttc.engines.TermOccAnnotationImporter;
 import eu.project.ttc.engines.TermSpecificityComputer;
 import eu.project.ttc.engines.TreeTaggerLemmaFixer;
 import eu.project.ttc.engines.cleaner.AbstractTermIndexCleaner;
@@ -125,6 +126,7 @@ import eu.project.ttc.stream.ConsumerRegistry;
 import eu.project.ttc.stream.DocumentProvider;
 import eu.project.ttc.stream.DocumentStream;
 import eu.project.ttc.stream.StreamingCasConsumer;
+import eu.project.ttc.types.TermOccAnnotation;
 import eu.project.ttc.types.WordAnnotation;
 import eu.project.ttc.utils.OccurrenceBuffer;
 import eu.project.ttc.utils.TermSuiteUtils;
@@ -999,9 +1001,7 @@ public class TermSuitePipeline {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					RegexSpotter.class,
 					TokenRegexAE.PARAM_ALLOW_OVERLAPPING_OCCURRENCES, true,
-					RegexSpotter.POST_PROCESSING_STRATEGY, postProcStrategy,
-					RegexSpotter.PARAM_ADD_TO_TERM_INDEX, this.addSpottedAnnoToTermIndex,
-					RegexSpotter.KEEP_OCCURRENCES_IN_TERM_INDEX, spotWithOccurrences
+					RegexSpotter.POST_PROCESSING_STRATEGY, postProcStrategy
 				);
 			
 			if(enableSyntacticLabels)
@@ -1041,11 +1041,33 @@ public class TermSuitePipeline {
 					DefaultFilterResource.class, 
 					resFactory.getStopWords().toString());
 			
-			return aggregateAndReturn(ae, "Spotting terms", 0);
+			return aggregateAndReturn(ae, "Spotting terms", 0).aeTermOccAnnotationImporter();
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
 	}
+	
+	
+	/**
+	 * An AE thats imports all {@link TermOccAnnotation} in CAS to a {@link TermIndex}.
+	 * 
+	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
+	 */
+	public TermSuitePipeline aeTermOccAnnotationImporter()  {
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					TermOccAnnotationImporter.class,
+					TermOccAnnotationImporter.KEEP_OCCURRENCES_IN_TERM_INDEX, spotWithOccurrences
+				);
+			ExternalResourceFactory.bindResource(ae, resTermIndex());
+
+			return aggregateAndReturn(ae, "TermOccAnnotation importer", 0);
+		} catch (Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
+	}
+
 	
 	/**
 	 * Naive morphological analysis of compounds based on a 
