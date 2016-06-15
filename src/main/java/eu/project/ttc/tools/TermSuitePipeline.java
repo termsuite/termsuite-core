@@ -87,6 +87,7 @@ import eu.project.ttc.engines.exporter.TSVExporter;
 import eu.project.ttc.engines.exporter.VariantEvalExporter;
 import eu.project.ttc.engines.exporter.XmiCasExporter;
 import eu.project.ttc.engines.morpho.CompostAE;
+import eu.project.ttc.engines.morpho.SuffixDerivationDetecter;
 import eu.project.ttc.engines.morpho.PrefixSplitter;
 import eu.project.ttc.metrics.LogLikelihood;
 import eu.project.ttc.models.OccurrenceStore;
@@ -118,6 +119,7 @@ import eu.project.ttc.resources.ObserverResource;
 import eu.project.ttc.resources.PrefixTree;
 import eu.project.ttc.resources.ReferenceTermList;
 import eu.project.ttc.resources.SimpleWordSet;
+import eu.project.ttc.resources.SuffixDerivationList;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.resources.TermSuitePipelineObserver;
 import eu.project.ttc.resources.YamlVariantRules;
@@ -1064,8 +1066,29 @@ public class TermSuitePipeline {
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
+	}
+	
+	public TermSuitePipeline aeSuffixDerivationDetector()  {
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					SuffixDerivationDetecter.class
+				);
+			ExternalResourceFactory.createDependencyAndBind(
+					ae,
+					SuffixDerivationList.SUFFIX_DERIVATIONS, 
+					SuffixDerivationList.class,
+					TermSuiteResource.SUFFIX_DERIVATIONS.getFileUrl(lang)
+				);
+			
+			ExternalResourceFactory.bindResource(ae, resTermIndex());
+			
+			return aggregateAndReturn(ae, "Detecting suffix derivations prefixes", 0);
+		} catch(Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
 
 	}
+
 
 	private TermSuitePipeline aeManualMorphoSetter()  {
 		try {

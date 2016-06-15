@@ -1,0 +1,13 @@
+-ièreté	-ier
+-ure	-
+-ure	-er
+-erie	-er
+
+-erie	-e
+-ion	-
+
+# Should be ignored since duplicate 
+-erie	-er
+
+# Just for tests (a suffix that is a suffix of another suffix)
+-ie	-a
