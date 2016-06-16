@@ -1,8 +1,17 @@
 package eu.project.ttc.tools;
 
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
+
+import org.apache.uima.resource.RelativePathResolver;
+import org.apache.uima.resource.impl.RelativePathResolver_impl;
+
 import com.google.common.base.Preconditions;
 
 import eu.project.ttc.engines.desc.Lang;
+import eu.project.ttc.engines.desc.TermSuiteResourceException;
 
 /**
  * 
@@ -37,6 +46,8 @@ public enum TermSuiteResource {
 	TREETAGGER_CONFIG("[LANG_SHORT]/tagging/[TAGGER]/[LANG]-treetagger.xml", "", ""),
 	VARIANTS("[LANG_SHORT]/[LANG]-variants.yaml", "", "");
 	
+	private static final String MSG_ERR_RESOURCE_NOT_FOUND = "Resource %s does not exist for resource %s (resolved URL is %s)";
+	private static final String BAD_RESOURCE_URL = "Bad resource URL for resource %s: %s ";
 	
 	private String pathPattern;
 	private String title;
@@ -71,18 +82,59 @@ public enum TermSuiteResource {
 		return String.format("%s:%s", protocol, getPath(lang));
 	}
 
+	private String checkFileUrl(String urlSpec) {
+		URI uri;
+		try {
+			uri = new URI(urlSpec);
+			URL url = uri.toURL();
+			URL absoluteURL = getResolver().resolveRelativePath(url);
+			if (absoluteURL == null)
+				throw new TermSuiteResourceException(String.format(
+					MSG_ERR_RESOURCE_NOT_FOUND, 
+					urlSpec, this, absoluteURL));
+		} catch (URISyntaxException|MalformedURLException e) {
+			throw new TermSuiteResourceException(String.format(
+					BAD_RESOURCE_URL, 
+					urlSpec, this),e);
+		}
+		return urlSpec;
+	}
+	
+	public boolean exists(Lang lang) {
+		return exists(getFileUrl(lang));
+	}
+
+	private boolean exists(String fileUrl) {
+		try {
+			checkFileUrl(fileUrl);
+			return true;
+		} catch(Exception e) {
+			return false;
+		}
+	}
+
+	public boolean exists(Lang lang, Tagger tagger) {
+		return exists(getFileUrl(lang, tagger));
+	}
+	
+	private static RelativePathResolver resolver = null;
+	private static RelativePathResolver getResolver() {
+		if(resolver == null)
+			resolver = new RelativePathResolver_impl(TermSuiteResource.class.getClassLoader()); 
+		return resolver;
+	}
+
 	public String getUrl(String protocol, Lang lang, Tagger tagger) {
 		return String.format("%s:%s", protocol, getPath(lang, tagger));
 	}
 
 	public String getFileUrl(Lang lang) {
-		return getUrl("file", lang);
+		return checkFileUrl(getUrl("file", lang));
 	}
 
 	public String getFileUrl(Lang lang, Tagger tagger) {
-		return getUrl("file", lang, tagger);
+		return checkFileUrl(getUrl("file", lang, tagger));
 	}
-
 	
 	public String getPath(Lang lang) {
 		return getPath(lang, null);
