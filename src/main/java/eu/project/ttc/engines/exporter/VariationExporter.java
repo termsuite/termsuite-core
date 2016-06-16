@@ -22,12 +22,18 @@
 package eu.project.ttc.engines.exporter;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
+import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
+import org.apache.uima.fit.descriptor.ConfigurationParameter;
+import org.apache.uima.resource.ResourceInitializationException;
 
+import com.google.common.base.Splitter;
 import com.google.common.collect.HashMultimap;
+import com.google.common.collect.Lists;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
 
@@ -36,22 +42,39 @@ import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.models.VariationType;
+import eu.project.ttc.utils.TermSuiteConstants;
 
-public class SuffixDerivationExporter extends AbstractTermIndexExporter {
+public class VariationExporter extends AbstractTermIndexExporter {
 
-	private static final String TERM_LINE_FORMAT = "%-35s %d%n";
-	private static final String DERIVATE_LINE_FORMAT = "  -> %-30s %d%n";
+	private static final String SOURCE_LINE_FORMAT = "%-30s f=%-3d";
+	private static final String EMPTY_LINE_FORMAT = "%-36s";
 
+	private static final String TARGET_LINE_FORMAT = " %-15s %-30s f=%d %s %n";
+
+	public static final String VARIATION_TYPES = "VariationTypes";
+	@ConfigurationParameter(name = VARIATION_TYPES, mandatory=true)
+	private String variationTypeStrings;
+	protected List<VariationType> variationTypes;
+
+	@Override
+	public void initialize(UimaContext context) throws ResourceInitializationException {
+		super.initialize(context);
+		List<String> strings = Splitter.on(TermSuiteConstants.COMMA).splitToList(variationTypeStrings);
+		variationTypes = Lists.newArrayList();
+		for(String vType:strings) 
+			variationTypes.add(VariationType.valueOf(vType));
+	}
+	
 	@Override
 	protected void processAcceptedTerms(TreeSet<Term> acceptedTerms) throws AnalysisEngineProcessException {
 		
 		try {
-			Multimap<Term,Term> derivates = HashMultimap.create();
+			Multimap<Term,TermVariation> acceptedVariations = HashMultimap.create();
 			for(Term t:acceptedTerms) {
 				if(t.isSingleWord()) {
 					for(TermVariation v:t.getVariations()) {
-						if(v.getVariationType() == VariationType.DERIVATIONAL) {
-							derivates.put(t, v.getVariant());
+						if(this.variationTypes.contains(v.getVariationType())) {
+							acceptedVariations.put(t, v);
 						}
 					}
  				}
@@ -60,17 +83,25 @@ public class SuffixDerivationExporter extends AbstractTermIndexExporter {
 			Set<Term> sortedTerms = new TreeSet<Term>(TermProperty.SPECIFICITY.getComparator(
 					this.termIndexResource.getTermIndex(), 
 					true));
-			sortedTerms.addAll(derivates.keySet());
+			sortedTerms.addAll(acceptedVariations.keySet());
 			
 			for(Term t:sortedTerms) {
-				Set<Term> devs = Sets.newHashSet(derivates.get(t));
-				writer.write(String.format(TERM_LINE_FORMAT, 
-					t.getGroupingKey(),
-					t.getFrequency()));
-				for(Term d:devs) {
-					writer.write(String.format(DERIVATE_LINE_FORMAT, 
-							d.getGroupingKey(),
-							d.getFrequency()));
+				Set<TermVariation> variations = Sets.newHashSet(acceptedVariations.get(t));
+				boolean first = true;
+				for(TermVariation tv:variations) {
+					if(first)
+						writer.write(String.format(SOURCE_LINE_FORMAT, 
+							t.getGroupingKey(),
+							t.getFrequency()));
+					else
+						writer.write(String.format(EMPTY_LINE_FORMAT, ""));
+					writer.write(String.format(TARGET_LINE_FORMAT,
+							tv.getVariationType(),
+							tv.getVariant().getGroupingKey(),
+							tv.getVariant().getFrequency(),
+							tv.getInfo()
+							));
+					first = false;
 				}
 			}
 		} catch (IOException e) {
