@@ -26,6 +26,7 @@ public enum VariationType {
 	SYNTACTICAL(3, "syn", true),
 	GRAPHICAL(2, "graph", false),
 	DERIVATIONAL(4, "deriv", true),
+	IS_PREFIX_OF(5, "pref", true),
 	;
 	
 	private int order;

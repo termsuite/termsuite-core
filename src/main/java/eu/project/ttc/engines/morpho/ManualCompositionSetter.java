@@ -1,4 +1,4 @@
-package eu.project.ttc.engines;
+package eu.project.ttc.engines.morpho;
 
 import java.util.List;
 
@@ -9,18 +9,17 @@ import org.apache.uima.jcas.JCas;
 
 import com.google.common.collect.ImmutableList;
 
-import eu.project.ttc.engines.morpho.Segmentation;
 import eu.project.ttc.models.Component;
 import eu.project.ttc.models.Word;
-import eu.project.ttc.resources.ManualMorphologyResource;
+import eu.project.ttc.resources.ManualSegmentationResource;
 import eu.project.ttc.resources.TermIndexResource;
 
-public class ManualMorphoSetter extends JCasAnnotator_ImplBase {
+public class ManualCompositionSetter extends JCasAnnotator_ImplBase {
 //	private static final Logger LOGGER = LoggerFactory.getLogger(ManualCompositionSetter.class);
 	
 	public static final String MANUAL_MORPHOLOGY_LIST = "ManualCompositionList";
 	@ExternalResource(key=MANUAL_MORPHOLOGY_LIST, mandatory=true)
-	private ManualMorphologyResource manualCompositions;
+	private ManualSegmentationResource manualCompositions;
 
 	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
 	private TermIndexResource termIndexResource;

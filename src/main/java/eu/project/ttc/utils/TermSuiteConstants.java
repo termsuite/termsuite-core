@@ -62,4 +62,5 @@ public class TermSuiteConstants {
 			TermSuiteConstants.R, 
 			TermSuiteConstants.A);
 	public static final String COMMA = ",";
+	public static final Object EMPTY_STRING = "";
 }

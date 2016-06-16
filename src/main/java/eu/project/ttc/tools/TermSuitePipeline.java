@@ -52,7 +52,6 @@ import eu.project.ttc.engines.Contextualizer;
 import eu.project.ttc.engines.EvalEngine;
 import eu.project.ttc.engines.ExtensionDetecter;
 import eu.project.ttc.engines.GraphicalVariantGatherer;
-import eu.project.ttc.engines.ManualMorphoSetter;
 import eu.project.ttc.engines.MateLemmaFixer;
 import eu.project.ttc.engines.MateLemmatizerTagger;
 import eu.project.ttc.engines.Merger;
@@ -82,12 +81,13 @@ import eu.project.ttc.engines.exporter.ExportVariationRuleExamples;
 import eu.project.ttc.engines.exporter.JsonCasExporter;
 import eu.project.ttc.engines.exporter.JsonExporter;
 import eu.project.ttc.engines.exporter.SpotterTSVWriter;
-import eu.project.ttc.engines.exporter.SuffixDerivationExporter;
+import eu.project.ttc.engines.exporter.VariationExporter;
 import eu.project.ttc.engines.exporter.TBXExporter;
 import eu.project.ttc.engines.exporter.TSVExporter;
 import eu.project.ttc.engines.exporter.VariantEvalExporter;
 import eu.project.ttc.engines.exporter.XmiCasExporter;
 import eu.project.ttc.engines.morpho.CompostAE;
+import eu.project.ttc.engines.morpho.ManualCompositionSetter;
 import eu.project.ttc.engines.morpho.SuffixDerivationDetecter;
 import eu.project.ttc.engines.morpho.PrefixSplitter;
 import eu.project.ttc.metrics.LogLikelihood;
@@ -95,6 +95,7 @@ import eu.project.ttc.models.OccurrenceStore;
 import eu.project.ttc.models.OccurrenceType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.VariationType;
 import eu.project.ttc.models.index.MemoryTermIndex;
 import eu.project.ttc.models.occstore.MemoryOccurrenceStore;
 import eu.project.ttc.models.occstore.MongoDBOccurrenceStore;
@@ -112,7 +113,7 @@ import eu.project.ttc.resources.CharacterFootprintTermFilter;
 import eu.project.ttc.resources.CompostInflectionRules;
 import eu.project.ttc.resources.EvalTrace;
 import eu.project.ttc.resources.GeneralLanguageResource;
-import eu.project.ttc.resources.ManualMorphologyResource;
+import eu.project.ttc.resources.ManualSegmentationResource;
 import eu.project.ttc.resources.MateLemmatizerModel;
 import eu.project.ttc.resources.MateTaggerModel;
 import eu.project.ttc.resources.MemoryTermIndexManager;
@@ -752,15 +753,18 @@ public class TermSuitePipeline {
 		}
 	}
 
-	public TermSuitePipeline haeSuffixDerivateExporter(String toFilePath) {
+	public TermSuitePipeline haeVariationExporter(String toFilePath, VariationType... vTypes) {
 		try {
+			String typeStrings = Joiner.on(",").join(vTypes);
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					SuffixDerivationExporter.class, 
-					SuffixDerivationExporter.TO_FILE_PATH, 
-					toFilePath);
+					VariationExporter.class, 
+					VariationExporter.TO_FILE_PATH, toFilePath,
+					VariationExporter.VARIATION_TYPES, typeStrings 
+					);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 
-			return aggregateAndReturn(ae, "Exporting suffix derivations", 0);
+			String taskName = "Exporting variations " + typeStrings + " to file " + toFilePath;
+			return aggregateAndReturn(ae, taskName, 0);
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
@@ -1107,12 +1111,12 @@ public class TermSuitePipeline {
 	private TermSuitePipeline aeManualMorphoSetter()  {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					ManualMorphoSetter.class
+					ManualCompositionSetter.class
 				);
 			ExternalResourceFactory.createDependencyAndBind(
 					ae,
-					ManualMorphoSetter.MANUAL_MORPHOLOGY_LIST, 
-					ManualMorphologyResource.class,
+					ManualCompositionSetter.MANUAL_MORPHOLOGY_LIST, 
+					ManualSegmentationResource.class,
 					TermSuiteResource.MANUAL_MORPHOLOGY.getFileUrl(lang)
 				);
 			

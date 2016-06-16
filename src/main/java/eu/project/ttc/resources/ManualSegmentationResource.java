@@ -11,8 +11,8 @@ import eu.project.ttc.engines.morpho.Segmentation;
 import eu.project.ttc.io.SegmentationParser;
 import fr.univnantes.julestar.uima.resources.MapResource;
 
-public class ManualMorphologyResource extends MapResource {
-	private static final Logger LOGGER = LoggerFactory.getLogger(ManualMorphologyResource.class);
+public class ManualSegmentationResource extends MapResource {
+	private static final Logger LOGGER = LoggerFactory.getLogger(ManualSegmentationResource.class);
 
 	private Map<String, Segmentation> segmentations = Maps.newHashMap();
 	
