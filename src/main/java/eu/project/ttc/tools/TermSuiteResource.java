@@ -24,7 +24,7 @@ public enum TermSuiteResource {
 	GENERAL_LANGUAGE("[LANG_SHORT]/[LANG]-general-language.txt", "", ""),
 	PREFIX_BANK("[LANG_SHORT]/morphology/[LANG]-prefix-bank.txt", "", ""),
 	PREFIX_EXCEPTIONS("[LANG_SHORT]/morphology/[LANG]-prefix-exceptions.txt", "", ""),
-	MANUAL_MORPHOLOGY("[LANG_SHORT]/morphology/[LANG]-manual-composition.txt", "", ""),
+	MANUAL_COMPOSITIONS("[LANG_SHORT]/morphology/[LANG]-manual-composition.txt", "", ""),
 	ROOT_BANK("[LANG_SHORT]/morphology/[LANG]-root-bank.txt", "", ""),
 	ALLOWED_CHARS("[LANG_SHORT]/[LANG]-allowed-chars.txt", "", ""),
 	SUFFIX_DERIVATIONS("[LANG_SHORT]/morphology/[LANG]-suffix-derivations.txt", "", ""),

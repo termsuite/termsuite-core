@@ -17,8 +17,8 @@ import eu.project.ttc.resources.TermIndexResource;
 public class ManualCompositionSetter extends JCasAnnotator_ImplBase {
 //	private static final Logger LOGGER = LoggerFactory.getLogger(ManualCompositionSetter.class);
 	
-	public static final String MANUAL_MORPHOLOGY_LIST = "ManualCompositionList";
-	@ExternalResource(key=MANUAL_MORPHOLOGY_LIST, mandatory=true)
+	public static final String MANUAL_COMPOSITION_LIST = "ManualCompositionList";
+	@ExternalResource(key=MANUAL_COMPOSITION_LIST, mandatory=true)
 	private ManualSegmentationResource manualCompositions;
 
 	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
