@@ -88,6 +88,7 @@ import eu.project.ttc.engines.exporter.VariantEvalExporter;
 import eu.project.ttc.engines.exporter.XmiCasExporter;
 import eu.project.ttc.engines.morpho.CompostAE;
 import eu.project.ttc.engines.morpho.ManualCompositionSetter;
+import eu.project.ttc.engines.morpho.ManualPrefixSetter;
 import eu.project.ttc.engines.morpho.SuffixDerivationDetecter;
 import eu.project.ttc.engines.morpho.PrefixSplitter;
 import eu.project.ttc.metrics.LogLikelihood;
@@ -1080,7 +1081,7 @@ public class TermSuitePipeline {
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 			
 			return aggregateAndReturn(ae, "Splitting prefixes", 0)
-					.aeManualMorphoSetter();
+					.aePrefixExceptionsSetter();
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
@@ -1108,27 +1109,50 @@ public class TermSuitePipeline {
 	}
 
 
-	private TermSuitePipeline aeManualMorphoSetter()  {
+	private TermSuitePipeline aeManualCompositionSetter()  {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					ManualCompositionSetter.class
 				);
+			
 			ExternalResourceFactory.createDependencyAndBind(
 					ae,
-					ManualCompositionSetter.MANUAL_MORPHOLOGY_LIST, 
+					ManualCompositionSetter.MANUAL_COMPOSITION_LIST, 
 					ManualSegmentationResource.class,
-					TermSuiteResource.MANUAL_MORPHOLOGY.getFileUrl(lang)
+					TermSuiteResource.MANUAL_COMPOSITIONS.getFileUrl(lang)
 				);
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 			
-			return aggregateAndReturn(ae, "Setting manual morphology", 0);
+			return aggregateAndReturn(ae, "Setting manual composition", 0);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
 
 	}
 
+	private TermSuitePipeline aePrefixExceptionsSetter()  {
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					ManualPrefixSetter.class
+				);
+			ExternalResourceFactory.createDependencyAndBind(
+					ae,
+					ManualPrefixSetter.PREFIX_EXCEPTIONS, 
+					ManualSegmentationResource.class,
+					TermSuiteResource.PREFIX_EXCEPTIONS.getFileUrl(lang)
+				);
+			
+			ExternalResourceFactory.bindResource(ae, resTermIndex());
+			
+			return aggregateAndReturn(ae, "Setting prefix exceptions", 0);
+		} catch(Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
+
+	}
+
+	
 	/**
 	 * Removes from the term index any term having a 
 	 * stop word at its boundaries.
@@ -1768,7 +1792,8 @@ public class TermSuitePipeline {
 					SimpleWordSet.class, 
 					TermSuiteResource.NEOCLASSICAL_PREFIXES.getFileUrl(lang));
 
-			return aggregateAndReturn(ae, CompostAE.TASK_NAME, 2);
+			return aeManualCompositionSetter()
+					.aggregateAndReturn(ae, CompostAE.TASK_NAME, 2);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
