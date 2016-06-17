@@ -7,6 +7,8 @@ import java.io.IOException;
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.FSIterator;
+import org.apache.uima.cas.Feature;
+import org.apache.uima.cas.FeatureStructure;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.apache.uima.resource.ResourceInitializationException;
@@ -25,6 +27,10 @@ import eu.project.ttc.types.WordAnnotation;
 public class JsonCasExporter extends CasExporter {
     private static final Logger LOGGER = LoggerFactory.getLogger(JsonCasExporter.class);
 
+
+    public static final String[] STRING_FEATURES = {"lemma", "tag", };
+    public static final String[] INT_FEATURES = {"begin", "end"};
+    public static final String[] DOUBLE_FEATURES = {};
 
 
     @Override
@@ -63,7 +69,14 @@ public class JsonCasExporter extends CasExporter {
                 if (a instanceof WordAnnotation) {
                     jg.writeStartObject();
                     WordAnnotation wordAnno = (WordAnnotation) a;
-                    jg.writeStringField("pos",wordAnno.getTag());
+                    for(Feature feat:wordAnno.getType().getFeatures()) {
+                        FeatureStructure featureValue = wordAnno.getFeatureValue(feat);
+                        if(featureValue != null) {
+                            jg.writeFieldName(feat.getName());
+                            jg.writeObject(featureValue);
+                        }
+                    }
+                    jg.writeStringField("tag",wordAnno.getTag());
                     jg.writeStringField("lemma",wordAnno.getLemma());
                     jg.writeNumberField("begin",wordAnno.getBegin());
                     jg.writeNumberField("end",wordAnno.getEnd());
