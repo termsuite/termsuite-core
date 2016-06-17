@@ -27,7 +27,7 @@ public enum TermSuiteResource {
 	MANUAL_COMPOSITIONS("[LANG_SHORT]/morphology/[LANG]-manual-composition.txt", "", ""),
 	ROOT_BANK("[LANG_SHORT]/morphology/[LANG]-root-bank.txt", "", ""),
 	ALLOWED_CHARS("[LANG_SHORT]/[LANG]-allowed-chars.txt", "", ""),
-	SUFFIX_DERIVATIONS("[LANG_SHORT]/morphology/[LANG]-suffix-derivations.txt", "", ""),
+	SUFFIX_DERIVATIONS("[LANG_SHORT]/morphology/[LANG]-suffix-derivation-bank.txt", "", ""),
 	COMPOST_INFLECTION_RULES("[LANG_SHORT]/morphology/[LANG]-compost-inflection-rules.txt", "", ""),
 	COMPOST_STOP_LIST("[LANG_SHORT]/morphology/[LANG]-compost-stop-list.txt", "", ""),
 	COMPOST_TRANSFORMATION_RULES("[LANG_SHORT]/morphology/[LANG]-compost-transformation-rules.txt", "", ""),

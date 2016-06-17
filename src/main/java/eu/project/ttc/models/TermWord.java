@@ -29,6 +29,10 @@ public class TermWord {
 	private Word word;
 	private String syntacticlabel;
 	
+	TermWord() {
+		super();
+	}
+		
 	TermWord(Word word, String label) {
 		super();
 		this.word = word;
@@ -64,5 +68,12 @@ public class TermWord {
 
 	public String toGroupingKey() {
 		return TermSuiteUtils.getGroupingKey(this);
+	}
+
+	public static TermWord create(String lemma, String label) {
+		TermWord tw = new TermWord();
+		tw.word = new Word(lemma, lemma);
+		tw.syntacticlabel = label;
+		return tw;
 	}
 }

@@ -10,6 +10,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
+import eu.project.ttc.models.TermWord;
 import eu.project.ttc.resources.SuffixDerivation;
 
 public class SuffixDerivationTestCase {
@@ -18,28 +19,43 @@ public class SuffixDerivationTestCase {
 	
 	@Before
 	public void setUp() {
-		suffixDerivation = new SuffixDerivation("ièreté", "ier");
+		suffixDerivation = new SuffixDerivation("N", "A", "ièreté", "ier");
 	}
 	
 	@Rule
 	public ExpectedException thrown = ExpectedException.none();
-	
+
 	@Test
-	public void testShouldRaiseErrorSinceIfCannotDerivate() {
+	public void testGetType() {
+		assertEquals("N A", suffixDerivation.getType());
+	}
+
+	@Test
+	public void testShouldRaiseErrorSinceIfCannotDerivateOnLemma() {
 		thrown.expect(IllegalArgumentException.class);
 		thrown.expectMessage(StringContains.containsString("Cannot operate the derivation"));
-		suffixDerivation.derivate("tata");
+		suffixDerivation.derivate(TermWord.create("tata", "N"));
+	}
+
+	@Test
+	public void testShouldRaiseErrorSinceIfCannotDerivateOnLabel() {
+		thrown.expect(IllegalArgumentException.class);
+		thrown.expectMessage(StringContains.containsString("Cannot operate the derivation"));
+		suffixDerivation.derivate(TermWord.create("grossièreté", "A"));
 	}
 
 	@Test
 	public void testDerivate() {
-		assertEquals("grossier", suffixDerivation.derivate("grossièreté"));
+		assertEquals(
+				TermWord.create("grossier", "A"), 
+				suffixDerivation.derivate(TermWord.create("grossièreté", "N")));
 	}
 
 	@Test
 	public void testCanDerivate() {
-		assertFalse(suffixDerivation.canDerivate("tata"));
-		assertTrue(suffixDerivation.canDerivate("grossièreté"));
+		assertFalse(suffixDerivation.canDerivate(TermWord.create("tata", "A")));
+		assertFalse(suffixDerivation.canDerivate(TermWord.create("grossièreté", "A")));
+		assertTrue(suffixDerivation.canDerivate(TermWord.create("grossièreté", "N")));
 	}
 
 

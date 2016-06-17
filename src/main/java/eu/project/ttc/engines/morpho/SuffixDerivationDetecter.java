@@ -11,8 +11,8 @@ import org.slf4j.LoggerFactory;
 
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.TermWord;
 import eu.project.ttc.models.VariationType;
-import eu.project.ttc.models.Word;
 import eu.project.ttc.models.index.CustomTermIndex;
 import eu.project.ttc.models.index.TermValueProviders;
 import eu.project.ttc.resources.SuffixDerivation;
@@ -44,28 +44,20 @@ public class SuffixDerivationDetecter extends JCasAnnotator_ImplBase {
 				LEMMA_INDEX, 
 				TermValueProviders.TERM_LEMMA_LOWER_CASE_PROVIDER);
 		
-		
-		
-		
 		int nbDerivations = 0, nbSwt = 0;
-		String derivate, lemma;
-		Word word;
+		TermWord termWord, derivateTermWord;
 		for(Term swt:termIndex.getTerms()) {
 			if(!swt.isSingleWord())
 				continue;
 			nbSwt++;
-			word = swt.getWords().get(0).getWord();
-			lemma = word.getLemma();
-			List<SuffixDerivation> derivations = suffixDerivationList.getSuffixDerivations(lemma);
+			termWord = swt.getWords().get(0);
+			List<SuffixDerivation> derivations = suffixDerivationList.getSuffixDerivations(termWord);
 			for(SuffixDerivation suffixDerivation:derivations) {
-				if(suffixDerivation.canDerivate(lemma)) {
-					derivate = suffixDerivation.derivate(lemma);
-					Word derivateWord = termIndex.getWord(derivate);
-					if(derivateWord == null) 
-						continue;
-					else {
-						List<Term> derivateTerms = lemmaIndex.getTerms(derivateWord.getLemma());
-						for(Term derivateTerm:derivateTerms) {
+				if(suffixDerivation.canDerivate(termWord)) {
+					derivateTermWord = suffixDerivation.derivate(termWord);
+					List<Term> derivateTerms = lemmaIndex.getTerms(derivateTermWord.getWord().getLemma());
+					for(Term derivateTerm:derivateTerms) {
+						if(derivateTerm.getWords().get(0).equals(derivateTermWord)) {
 							nbDerivations++;
 							if(LOGGER.isTraceEnabled())
 								LOGGER.trace("Found suffix derivation: {} for word {}", derivateTerm, swt);
