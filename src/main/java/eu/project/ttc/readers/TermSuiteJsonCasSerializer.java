@@ -87,12 +87,12 @@ public class TermSuiteJsonCasSerializer {
         jg.writeStartArray();
         FSIterator<Annotation> it = jCas.getAnnotationIndex(TermOccAnnotation.type).iterator();
         while(it.hasNext()) {
-             TermOccAnnotation oa = (TermOccAnnotation) it.next();
+             TermOccAnnotation toa = (TermOccAnnotation) it.next();
             jg.writeStartObject();
-            writeStringFSArrayField(jg,F_PATTERN, oa.getPattern());
-            writeStringField(jg,F_SPOTTING_RULE_NAME, oa.getSpottingRuleName());
-            writeStringField(jg,F_TERM_KEY, oa.getTermKey());
-            writeOffsets(jg, oa);
+            writeStringFSArrayField(jg,F_PATTERN, toa.getPattern());
+            writeStringField(jg,F_SPOTTING_RULE_NAME, toa.getSpottingRuleName());
+            writeStringField(jg,F_TERM_KEY, toa.getTermKey());
+            writeOffsets(jg, toa);
             jg.writeEndObject();
         }
         jg.writeEndArray();
