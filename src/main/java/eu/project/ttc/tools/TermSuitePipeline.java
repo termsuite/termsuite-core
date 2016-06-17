@@ -32,6 +32,7 @@ import java.util.UUID;
 import java.util.concurrent.BlockingQueue;
 
 import org.apache.commons.lang.mutable.MutableInt;
+import eu.project.ttc.engines.exporter.*;
 import eu.project.ttc.readers.*;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.collection.CollectionReader;
@@ -94,6 +95,8 @@ import eu.project.ttc.engines.exporter.TBXExporter;
 import eu.project.ttc.engines.exporter.TSVExporter;
 import eu.project.ttc.engines.exporter.VariantEvalExporter;
 import eu.project.ttc.engines.exporter.XmiCasExporter;
+import eu.project.ttc.engines.morpho.CompostAE;
+import eu.project.ttc.engines.morpho.PrefixSplitter;
 import eu.project.ttc.metrics.LogLikelihood;
 import eu.project.ttc.models.OccurrenceStore;
 import eu.project.ttc.models.OccurrenceType;
@@ -1222,6 +1225,25 @@ public class TermSuitePipeline {
 		}
 	}
 
+	/**
+	 * Exports all CAS as JSON files to a given directory.
+	 *
+	 * @param toDirectoryPath
+	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
+	 */
+	public TermSuitePipeline haeTermsuiteJsonCasExporter(String toDirectoryPath)  {
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					TermsuiteJsonCasExporter.class,
+					TermsuiteJsonCasExporter.OUTPUT_DIRECTORY, toDirectoryPath
+			);
+
+			return aggregateAndReturn(ae, "Exporting Json Cas files", 0);
+		} catch(Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
+	}
 
 	/**
 	 * Export all CAS in TSV format to a given directory.
