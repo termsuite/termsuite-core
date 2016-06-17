@@ -32,6 +32,7 @@ import java.util.UUID;
 import java.util.concurrent.BlockingQueue;
 
 import org.apache.commons.lang.mutable.MutableInt;
+import eu.project.ttc.readers.*;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.collection.CollectionReader;
 import org.apache.uima.collection.CollectionReaderDescription;
@@ -101,15 +102,6 @@ import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.index.MemoryTermIndex;
 import eu.project.ttc.models.occstore.MemoryOccurrenceStore;
 import eu.project.ttc.models.occstore.MongoDBOccurrenceStore;
-import eu.project.ttc.readers.AbstractToTxtSaxHandler;
-import eu.project.ttc.readers.CollectionDocument;
-import eu.project.ttc.readers.EmptyCollectionReader;
-import eu.project.ttc.readers.GenericXMLToTxtCollectionReader;
-import eu.project.ttc.readers.QueueRegistry;
-import eu.project.ttc.readers.StreamingCollectionReader;
-import eu.project.ttc.readers.StringCollectionReader;
-import eu.project.ttc.readers.TeiCollectionReader;
-import eu.project.ttc.readers.TxtCollectionReader;
 import eu.project.ttc.resources.BankResource;
 import eu.project.ttc.resources.CharacterFootprintTermFilter;
 import eu.project.ttc.resources.CompostInflectionRules;
@@ -487,6 +479,25 @@ public class TermSuitePipeline {
 						TxtCollectionReader.PARAM_LANGUAGE, this.lang.getCode()
 						);
 				break;
+			case XMI:
+				this.crDescription = CollectionReaderFactory.createReaderDescription(
+						XmiCollectionReader.class,
+						XmiCollectionReader.PARAM_INPUTDIR, collectionPath,
+						XmiCollectionReader.PARAM_COLLECTION_TYPE, termSuiteCollection,
+						XmiCollectionReader.PARAM_ENCODING, collectionEncoding,
+						XmiCollectionReader.PARAM_LANGUAGE, this.lang.getCode()
+						);
+				break;
+
+				case JSON:
+					this.crDescription = CollectionReaderFactory.createReaderDescription(
+							JsonCollectionReader.class,
+							JsonCollectionReader.PARAM_INPUTDIR, collectionPath,
+							JsonCollectionReader.PARAM_COLLECTION_TYPE, termSuiteCollection,
+							JsonCollectionReader.PARAM_ENCODING, collectionEncoding,
+							JsonCollectionReader.PARAM_LANGUAGE, this.lang.getCode()
+					);
+					break;
 			case EMPTY:
 				this.crDescription = CollectionReaderFactory.createReaderDescription(
 						EmptyCollectionReader.class
