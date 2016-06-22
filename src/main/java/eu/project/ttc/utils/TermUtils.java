@@ -369,4 +369,11 @@ public class TermUtils {
 		return ((double)extension.getFrequency())/extensionAffix.getFrequency();
 	}
 
+	private static final String GROUPING_KEY_FORMAT = "%s: %s";
+	public static String toGroupingKey(TermWord termWord) {
+		return String.format(GROUPING_KEY_FORMAT, 
+				termWord.getSyntacticLabel().toLowerCase(), 
+				termWord.getWord().getLemma());
+	}
+
 }

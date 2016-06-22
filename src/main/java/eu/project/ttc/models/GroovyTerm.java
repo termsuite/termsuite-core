@@ -28,6 +28,9 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 
 public class GroovyTerm {
+	
+	private Term term;
+
 	public boolean neoclassical;
 	public boolean compound;
 	public boolean isSingleWord;
@@ -37,6 +40,8 @@ public class GroovyTerm {
 	public List<GroovyWord> words;
 	
 	public GroovyTerm(Term term, GroovyAdapter adapter) {
+		this.term = term;
+		
 		this.compound = term.isCompound();
 		this.isSingleWord = term.isSingleWord();
 		this.neoclassical = term.isCompound() && term.firstWord().getWord().getCompoundType() == CompoundType.NEOCLASSICAL;
@@ -61,5 +66,9 @@ public class GroovyTerm {
 				.add("lemma", this.lemma)
 				.toString()
 				;
+	}
+
+	public Term getTerm() {
+		return this.term;
 	}
 }

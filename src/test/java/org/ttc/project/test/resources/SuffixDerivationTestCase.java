@@ -34,28 +34,28 @@ public class SuffixDerivationTestCase {
 	public void testShouldRaiseErrorSinceIfCannotDerivateOnLemma() {
 		thrown.expect(IllegalArgumentException.class);
 		thrown.expectMessage(StringContains.containsString("Cannot operate the derivation"));
-		suffixDerivation.derivate(TermWord.create("tata", "N"));
+		suffixDerivation.getBaseForm(TermWord.create("tata", "N"));
 	}
 
 	@Test
 	public void testShouldRaiseErrorSinceIfCannotDerivateOnLabel() {
 		thrown.expect(IllegalArgumentException.class);
 		thrown.expectMessage(StringContains.containsString("Cannot operate the derivation"));
-		suffixDerivation.derivate(TermWord.create("grossièreté", "A"));
+		suffixDerivation.getBaseForm(TermWord.create("grossièreté", "A"));
 	}
 
 	@Test
 	public void testDerivate() {
 		assertEquals(
 				TermWord.create("grossier", "A"), 
-				suffixDerivation.derivate(TermWord.create("grossièreté", "N")));
+				suffixDerivation.getBaseForm(TermWord.create("grossièreté", "N")));
 	}
 
 	@Test
 	public void testCanDerivate() {
-		assertFalse(suffixDerivation.canDerivate(TermWord.create("tata", "A")));
-		assertFalse(suffixDerivation.canDerivate(TermWord.create("grossièreté", "A")));
-		assertTrue(suffixDerivation.canDerivate(TermWord.create("grossièreté", "N")));
+		assertFalse(suffixDerivation.isKnownDerivate(TermWord.create("tata", "A")));
+		assertFalse(suffixDerivation.isKnownDerivate(TermWord.create("grossièreté", "A")));
+		assertTrue(suffixDerivation.isKnownDerivate(TermWord.create("grossièreté", "N")));
 	}
 
 

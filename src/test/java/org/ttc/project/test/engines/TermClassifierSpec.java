@@ -76,7 +76,6 @@ public class TermClassifierSpec {
 				TermClassifier.class, 
 				TermClassifier.CLASSIFYING_PROPERTY, TermProperty.FREQUENCY
 			);
-
 	}
 	
 	

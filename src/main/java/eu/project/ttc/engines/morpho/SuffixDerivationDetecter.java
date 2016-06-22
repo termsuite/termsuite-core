@@ -45,23 +45,23 @@ public class SuffixDerivationDetecter extends JCasAnnotator_ImplBase {
 				TermValueProviders.TERM_LEMMA_LOWER_CASE_PROVIDER);
 		
 		int nbDerivations = 0, nbSwt = 0;
-		TermWord termWord, derivateTermWord;
+		TermWord candidateDerivateTermWord, baseTermWord;
 		for(Term swt:termIndex.getTerms()) {
 			if(!swt.isSingleWord())
 				continue;
 			nbSwt++;
-			termWord = swt.getWords().get(0);
-			List<SuffixDerivation> derivations = suffixDerivationList.getSuffixDerivations(termWord);
+			candidateDerivateTermWord = swt.getWords().get(0);
+			List<SuffixDerivation> derivations = suffixDerivationList.getDerivationsFromDerivateForm(candidateDerivateTermWord);
 			for(SuffixDerivation suffixDerivation:derivations) {
-				if(suffixDerivation.canDerivate(termWord)) {
-					derivateTermWord = suffixDerivation.derivate(termWord);
-					List<Term> derivateTerms = lemmaIndex.getTerms(derivateTermWord.getWord().getLemma());
-					for(Term derivateTerm:derivateTerms) {
-						if(derivateTerm.getWords().get(0).equals(derivateTermWord)) {
+				if(suffixDerivation.isKnownDerivate(candidateDerivateTermWord)) {
+					baseTermWord = suffixDerivation.getBaseForm(candidateDerivateTermWord);
+					List<Term> baseTerms = lemmaIndex.getTerms(baseTermWord.getWord().getLemma());
+					for(Term baseTerm:baseTerms) {
+						if(baseTerm.getWords().get(0).equals(baseTermWord)) {
 							nbDerivations++;
 							if(LOGGER.isTraceEnabled())
-								LOGGER.trace("Found suffix derivation: {} for word {}", derivateTerm, swt);
-							swt.addTermVariation(derivateTerm, VariationType.DERIVATIONAL, suffixDerivation.getType());
+								LOGGER.trace("Found derivation base: {} for derivate word {}", baseTerm, swt);
+							baseTerm.addTermVariation(swt, VariationType.DERIVES_INTO, suffixDerivation.getType());
 						}
 					}
 				}

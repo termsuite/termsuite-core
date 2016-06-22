@@ -72,19 +72,25 @@ public class SuffixDerivationList extends TabResource {
 				lineNum,
 				pattern.size(),
 				line);
-		String fromLabel = pattern.get(0).trim();
-		String toLabel = pattern.get(1).trim();
+		String derivateFormLabel = pattern.get(0).trim();
+		String baseFormLabel = pattern.get(1).trim();
 		
 		
-		String fromSuffix = values[1];
-		String toSuffix = values[2];
+		String derivateFormSuffix = values[1];
+		String baseFormSuffix = values[2];
 		
-		Preconditions.checkArgument(fromSuffix.startsWith(HYPHEN), ERR_SHOULD_START_WITH_HYPHEN, fromSuffix, lineNum);
-		Preconditions.checkArgument(toSuffix.startsWith(HYPHEN), ERR_SHOULD_START_WITH_HYPHEN, toSuffix, lineNum);
-		String actualFromSuffix = fromSuffix.substring(1);
-		String actualToSuffix = toSuffix.substring(1);
-		SuffixDerivation suffixDerivation = new SuffixDerivation(fromLabel, toLabel, actualFromSuffix, actualToSuffix);
-		SuffixDerivationEntry suffixDerivationEntry = new SuffixDerivationEntry(actualFromSuffix, fromLabel);
+		Preconditions.checkArgument(derivateFormSuffix.startsWith(HYPHEN), ERR_SHOULD_START_WITH_HYPHEN, derivateFormSuffix, lineNum);
+		Preconditions.checkArgument(baseFormSuffix.startsWith(HYPHEN), ERR_SHOULD_START_WITH_HYPHEN, baseFormSuffix, lineNum);
+		String actualDerivateFormSuffix = derivateFormSuffix.substring(1);
+		String actualToSuffix = baseFormSuffix.substring(1);
+		SuffixDerivation suffixDerivation = new SuffixDerivation(
+				derivateFormLabel, 
+				baseFormLabel, 
+				actualDerivateFormSuffix, 
+				actualToSuffix);
+		SuffixDerivationEntry suffixDerivationEntry = new SuffixDerivationEntry(
+				actualDerivateFormSuffix, 
+				derivateFormLabel);
 		if(derivations.containsKey(suffixDerivationEntry)) {
 			derivations.get(suffixDerivationEntry).add(suffixDerivation);
 		} else {
@@ -95,17 +101,17 @@ public class SuffixDerivationList extends TabResource {
 	}
 	
 	
-	public List<SuffixDerivation> getSuffixDerivations(String plainWordLemma, String label) {
-		return getSuffixDerivations(TermWord.create(plainWordLemma, label));
+	public List<SuffixDerivation> getDerivationsFromDerivateForm(String candidateDerivateLemma, String label) {
+		return getDerivationsFromDerivateForm(TermWord.create(candidateDerivateLemma, label));
 	}
 	
-	public List<SuffixDerivation> getSuffixDerivations(TermWord termWord) {
+	public List<SuffixDerivation> getDerivationsFromDerivateForm(TermWord candidateDerivateTermWord) {
 		List<SuffixDerivation> list = Lists.newArrayListWithExpectedSize(2);
 		String suffix;
 		Collection<SuffixDerivation> suffixDerivations;
-		for(int i=0; i<termWord.getWord().getLemma().length(); i++) {
-			suffix = termWord.getWord().getLemma().substring(i);
-			SuffixDerivationEntry entry = new SuffixDerivationEntry(suffix, termWord.getSyntacticLabel());
+		for(int i=0; i<candidateDerivateTermWord.getWord().getLemma().length(); i++) {
+			suffix = candidateDerivateTermWord.getWord().getLemma().substring(i);
+			SuffixDerivationEntry entry = new SuffixDerivationEntry(suffix, candidateDerivateTermWord.getSyntacticLabel());
 			suffixDerivations = derivations.get(entry);
 			if(suffixDerivations != null)
 				list.addAll(suffixDerivations);

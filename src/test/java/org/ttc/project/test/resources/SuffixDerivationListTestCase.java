@@ -49,17 +49,17 @@ public class SuffixDerivationListTestCase {
 
 	@Test
 	public void testGetSuffixDerivationsEmpty() {
-		assertThat(suffixDerivations1.getSuffixDerivations("tata", "N")).hasSize(0);
+		assertThat(suffixDerivations1.getDerivationsFromDerivateForm("tata", "N")).hasSize(0);
 	}
 
 	@Test
 	public void testGetSuffixDerivationsSize1() {
-		assertThat(suffixDerivations1.getSuffixDerivations("grossièreté", "N"))
+		assertThat(suffixDerivations1.getDerivationsFromDerivateForm("grossièreté", "N"))
 			.hasSize(1)
 			.extracting(derivExtractor)
 			.contains(tuple("N", "A", "ièreté", "ier"));
 
-		assertThat(suffixDerivations1.getSuffixDerivations("amuserie", "N"))
+		assertThat(suffixDerivations1.getDerivationsFromDerivateForm("amuserie", "N"))
 			.hasSize(4)
 			.extracting(derivExtractor)
 			.contains(
@@ -69,7 +69,7 @@ public class SuffixDerivationListTestCase {
 					tuple("N", "N", "erie", "er")
 					);
 
-		assertThat(suffixDerivations1.getSuffixDerivations("encablure", "N"))
+		assertThat(suffixDerivations1.getDerivationsFromDerivateForm("encablure", "N"))
 			.hasSize(2)
 			.extracting(derivExtractor)
 			.contains(
@@ -84,8 +84,8 @@ public class SuffixDerivationListTestCase {
 			return tuple(
 					input.getFromPattern(),
 					input.getToPattern(),
-					input.getFromSuffix(),
-					input.getToSuffix()
+					input.getDerivateSuffix(),
+					input.getRegularSuffix()
 					);
 		}
 	};

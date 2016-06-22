@@ -11,60 +11,60 @@ public class SuffixDerivation {
 	private static String TYPE_FORMAT = "%s %s";
 	private static final String MSG_CANNOT_APPLY_DERIVATION = "Cannot operate the derivation %s on string %s";
 
-	private String fromPattern;
-	private String toPattern;
-	private String fromSuffix;
-	private String toSuffix;
+	private String derivateFormPattern;
+	private String regularFormPattern;
+	private String derivateFormSuffix;
+	private String regularFormSuffix;
 	private String type;
 
 	
-	public SuffixDerivation(String fromPattern, String toPattern, String fromSuffix, String toSuffix) {
+	public SuffixDerivation(String derivateFormPattern, String regularFormPattern, String derivateFormSuffix, String regularFormSuffix) {
 		super();
-		Preconditions.checkNotNull(fromSuffix);
-		Preconditions.checkNotNull(toSuffix);
-		this.fromSuffix = fromSuffix;
-		this.toSuffix = toSuffix;
-		this.fromPattern = fromPattern;
-		this.toPattern = toPattern;
-		this.type = String.format(TYPE_FORMAT, fromPattern, toPattern);
+		Preconditions.checkNotNull(derivateFormSuffix);
+		Preconditions.checkNotNull(regularFormSuffix);
+		this.derivateFormSuffix = derivateFormSuffix;
+		this.regularFormSuffix = regularFormSuffix;
+		this.derivateFormPattern = derivateFormPattern;
+		this.regularFormPattern = regularFormPattern;
+		this.type = String.format(TYPE_FORMAT, regularFormPattern, derivateFormPattern);
 	}
 	
 	public String getFromPattern() {
-		return fromPattern;
+		return derivateFormPattern;
 	}
 	
 	public String getToPattern() {
-		return toPattern;
+		return regularFormPattern;
 	}
 	
-	public String getFromSuffix() {
-		return fromSuffix;
+	public String getDerivateSuffix() {
+		return derivateFormSuffix;
 	}
 	
-	public String getToSuffix() {
-		return toSuffix;
+	public String getRegularSuffix() {
+		return regularFormSuffix;
 	}
 	
-	public TermWord derivate(TermWord from) {
-		Preconditions.checkArgument(canDerivate(from),
+	public TermWord getBaseForm(TermWord derivateForm) {
+		Preconditions.checkArgument(isKnownDerivate(derivateForm),
 				MSG_CANNOT_APPLY_DERIVATION,
 				this,
-				from);
+				derivateForm);
 		return TermWord.create(
-				StringUtils.replaceLast(from.getWord().getLemma(), fromSuffix, toSuffix),
-				this.toPattern);
+				StringUtils.replaceLast(derivateForm.getWord().getLemma(), derivateFormSuffix, regularFormSuffix),
+				this.regularFormPattern);
 	}
 
-	public boolean canDerivate(TermWord from) {
-		return from.getSyntacticLabel().equals(fromPattern)
-				&& from.getWord().getLemma().endsWith(fromSuffix);
+	public boolean isKnownDerivate(TermWord candidateDerivateTermWord) {
+		return candidateDerivateTermWord.getSyntacticLabel().equals(derivateFormPattern)
+				&& candidateDerivateTermWord.getWord().getLemma().endsWith(derivateFormSuffix);
 	}
 	
 	@Override
 	public String toString() {
 		return MoreObjects.toStringHelper(this)
-				.add("from", fromPattern + ":"+fromSuffix)
-				.add("to", toPattern + ":"+toSuffix)
+				.add("from", derivateFormPattern + ":"+derivateFormSuffix)
+				.add("to", regularFormPattern + ":"+regularFormSuffix)
 				.toString();
 	}
 	
@@ -72,17 +72,17 @@ public class SuffixDerivation {
 	public boolean equals(Object obj) {
 		if (obj instanceof SuffixDerivation) {
 			SuffixDerivation sd = (SuffixDerivation) obj;
-			return fromSuffix.equals(sd.fromSuffix)
-					&& toSuffix.equals(sd.toSuffix)
-					&& fromPattern.equals(sd.fromPattern)
-					&& toPattern.equals(sd.toPattern);
+			return derivateFormSuffix.equals(sd.derivateFormSuffix)
+					&& regularFormSuffix.equals(sd.regularFormSuffix)
+					&& derivateFormPattern.equals(sd.derivateFormPattern)
+					&& regularFormPattern.equals(sd.regularFormPattern);
 		} else
 			return false;
 	}
 	
 	@Override
 	public int hashCode() {
-		return Objects.hashCode(this.fromSuffix, this.toSuffix, this.fromPattern, this.toPattern);
+		return Objects.hashCode(this.derivateFormSuffix, this.regularFormSuffix, this.derivateFormPattern, this.regularFormPattern);
 	}
 
 	public Object getType() {

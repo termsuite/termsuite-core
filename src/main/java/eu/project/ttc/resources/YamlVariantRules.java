@@ -36,11 +36,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.Lists;
 
 import eu.project.ttc.engines.variant.VariantRule;
+import eu.project.ttc.engines.variant.VariantRuleIndex;
 import eu.project.ttc.engines.variant.VariantRuleYamlIO;
 import eu.project.ttc.models.GroovyAdapter;
 import eu.project.ttc.models.Term;
+import eu.project.ttc.models.TermIndex;
 
 public class YamlVariantRules implements SharedResourceObject {
 	private static final Logger LOGGER = LoggerFactory.getLogger(YamlVariantRules.class);
@@ -81,8 +84,17 @@ public class YamlVariantRules implements SharedResourceObject {
 		return variantRules;
 	}
 	
-	public VariantRule getMatchingRule(Term source, Term target) {
-		for(VariantRule rule:variantRules) {
+	public List<VariantRule> getVariantRules(VariantRuleIndex variantRuleIndex) {
+		List<VariantRule> rules = Lists.newArrayList();
+		for(VariantRule rule:getVariantRules())
+			if(rule.getIndex() == variantRuleIndex)
+				rules.add(rule);
+		return rules;
+	}
+
+	
+	public VariantRule getMatchingRule(VariantRuleIndex variantRuleIndex, Term source, Term target) {
+		for(VariantRule rule:getVariantRules(variantRuleIndex)) {
 			if(rule.isSourceCompound() && !source.isCompound())
 				continue;
 			if(rule.isTargetCompound() && !target.isCompound())
@@ -99,5 +111,10 @@ public class YamlVariantRules implements SharedResourceObject {
 	
 	public void clearAdapterCache() {
 		this.groovyAdapter.clear();
+	}
+
+	public void initialize(TermIndex termIndex) {
+		for(VariantRule variantRule:this.variantRules)
+			variantRule.initialize(termIndex);
 	}
 }

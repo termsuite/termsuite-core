@@ -31,6 +31,7 @@ import org.ttc.project.Fixtures;
 
 import eu.project.ttc.engines.variant.VariantRule;
 import eu.project.ttc.engines.variant.VariantRuleBuilder;
+import eu.project.ttc.engines.variant.VariantRuleIndex;
 import eu.project.ttc.models.GroovyAdapter;
 import eu.project.ttc.models.Term;
 import groovy.util.ResourceException;
@@ -70,6 +71,25 @@ public class VariantRuleSpec {
 		Assert.assertFalse(getVariantRule("s[0].lemma == t[1].lemma").matchExpression(term1, term3));
 		Assert.assertFalse(getVariantRule("s[0].lemma == t[1].lemma").matchExpression(term1, term2));
 	}
+	
+	@Test
+	public void testInitIndex() {
+		VariantRule rulePrefix = VariantRuleBuilder.start("withPrefixPredicate")
+			.rule("s[0]==t[0] && prefix(t[1],s[1])")
+			.create();
+		Assert.assertEquals(VariantRuleIndex.PREFIX, rulePrefix.getIndex());
+		
+		VariantRule ruleDefault = VariantRuleBuilder.start("withNoSpecialPredicate")
+				.rule("s[0]==t[0]")
+				.create();
+		Assert.assertEquals(VariantRuleIndex.DEFAULT, ruleDefault.getIndex());
+			
+		VariantRule ruleDeriv = VariantRuleBuilder.start("withDerivatePredicate")
+				.rule("s[0]==t[0] && deriv(\"A N\",t[1],s[1])")
+				.create();
+		Assert.assertEquals(VariantRuleIndex.DERIVATION, ruleDeriv.getIndex());
+	}
+	
 	
 	@Test
 	public void testEqualsLemmaIfNoPropertyGiven() {

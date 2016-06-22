@@ -148,5 +148,5 @@ public class VariantRuleYamlIO {
 			fromYaml();
 		return variantRules;
 	}
-	
+
 }

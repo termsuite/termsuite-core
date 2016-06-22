@@ -49,7 +49,7 @@ public class VariationExporter extends AbstractTermIndexExporter {
 	private static final String SOURCE_LINE_FORMAT = "%-30s f=%-3d";
 	private static final String EMPTY_LINE_FORMAT = "%-36s";
 
-	private static final String TARGET_LINE_FORMAT = " %-15s %-30s f=%d %s %n";
+	private static final String TARGET_LINE_FORMAT = " %-25s %-30s f=%d %n";
 
 	public static final String VARIATION_TYPES = "VariationTypes";
 	@ConfigurationParameter(name = VARIATION_TYPES, mandatory=true)
@@ -71,13 +71,11 @@ public class VariationExporter extends AbstractTermIndexExporter {
 		try {
 			Multimap<Term,TermVariation> acceptedVariations = HashMultimap.create();
 			for(Term t:acceptedTerms) {
-				if(t.isSingleWord()) {
-					for(TermVariation v:t.getVariations()) {
-						if(this.variationTypes.contains(v.getVariationType())) {
-							acceptedVariations.put(t, v);
-						}
+				for(TermVariation v:t.getVariations()) {
+					if(this.variationTypes.contains(v.getVariationType())) {
+						acceptedVariations.put(t, v);
 					}
- 				}
+				}
 			}
 			
 			Set<Term> sortedTerms = new TreeSet<Term>(TermProperty.SPECIFICITY.getComparator(
@@ -96,10 +94,9 @@ public class VariationExporter extends AbstractTermIndexExporter {
 					else
 						writer.write(String.format(EMPTY_LINE_FORMAT, ""));
 					writer.write(String.format(TARGET_LINE_FORMAT,
-							tv.getVariationType(),
+							tv.getVariationType() + " ["+tv.getInfo()+"]",
 							tv.getVariant().getGroupingKey(),
-							tv.getVariant().getFrequency(),
-							tv.getInfo()
+							tv.getVariant().getFrequency()
 							));
 					first = false;
 				}
