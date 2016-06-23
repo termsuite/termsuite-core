@@ -32,9 +32,15 @@ public class TermSuiteJsonCasSerializer {
         writeWordAnnotations(jg, jCas);
         jg.writeFieldName(F_TERM_OCC_ANNOTATIONS);
         writeTermOccAnnotations(jg, jCas);
+        writeCoveredText(jg, jCas);
         jg.writeEndObject();
         jg.flush();
         writer.close();
+    }
+
+    private static void writeCoveredText(JsonGenerator jg, JCas jCas) throws IOException {
+        String text = jCas.getDocumentText();
+        writeStringField(jg,F_TEXT,text);
     }
 
     private static void writeSDI(JsonGenerator jg, JCas jCas) throws IOException {

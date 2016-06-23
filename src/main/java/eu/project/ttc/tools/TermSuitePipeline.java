@@ -44,7 +44,7 @@ import org.apache.uima.fit.factory.ExternalResourceFactory;
 import org.apache.uima.fit.pipeline.SimplePipeline;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ExternalResourceDescription;
-import org.assertj.core.util.Maps;
+import com.google.common.collect.Maps;
 import org.codehaus.groovy.runtime.metaclass.NewMetaMethod;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -95,8 +95,6 @@ import eu.project.ttc.engines.exporter.TBXExporter;
 import eu.project.ttc.engines.exporter.TSVExporter;
 import eu.project.ttc.engines.exporter.VariantEvalExporter;
 import eu.project.ttc.engines.exporter.XmiCasExporter;
-import eu.project.ttc.engines.morpho.CompostAE;
-import eu.project.ttc.engines.morpho.PrefixSplitter;
 import eu.project.ttc.metrics.LogLikelihood;
 import eu.project.ttc.models.OccurrenceStore;
 import eu.project.ttc.models.OccurrenceType;
@@ -115,7 +113,6 @@ import eu.project.ttc.readers.StringCollectionReader;
 import eu.project.ttc.readers.JsonCollectionReader;
 import eu.project.ttc.readers.TeiCollectionReader;
 import eu.project.ttc.readers.TxtCollectionReader;
-import eu.project.ttc.readers.XmiCollectionReader;
 import eu.project.ttc.resources.BankResource;
 import eu.project.ttc.resources.CharacterFootprintTermFilter;
 import eu.project.ttc.resources.CompostInflectionRules;
@@ -491,15 +488,6 @@ public class TermSuitePipeline {
 						TxtCollectionReader.PARAM_COLLECTION_TYPE, termSuiteCollection,
 						TxtCollectionReader.PARAM_ENCODING, collectionEncoding,
 						TxtCollectionReader.PARAM_LANGUAGE, this.lang.getCode()
-						);
-				break;
-			case XMI:
-				this.crDescription = CollectionReaderFactory.createReaderDescription(
-						XmiCollectionReader.class,
-						XmiCollectionReader.PARAM_INPUTDIR, collectionPath,
-						XmiCollectionReader.PARAM_COLLECTION_TYPE, termSuiteCollection,
-						XmiCollectionReader.PARAM_ENCODING, collectionEncoding,
-						XmiCollectionReader.PARAM_LANGUAGE, this.lang.getCode()
 						);
 				break;
 

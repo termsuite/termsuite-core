@@ -34,6 +34,7 @@ public class TermSuiteJsonCasDeserializer {
             boolean inSdi = false;
             boolean inWa = false;
             boolean inToa = false;
+            boolean inCoveredText = false;
 
             while ((token=parser.nextToken()) != null)
             {
@@ -41,15 +42,18 @@ public class TermSuiteJsonCasDeserializer {
 
                     if (inSdi){
 
-                        if (token == JsonToken.END_OBJECT)
+                        if (token == JsonToken.END_OBJECT) {
                             inSdi = false;
-                        else
+                        }
+                        else {
                             FillSdi(parser,token,sdi);
+                        }
                     }
 
                     else if (inWa){
-                        if (token == JsonToken.END_ARRAY)
+                        if (token == JsonToken.END_ARRAY) {
                             inWa = false;
+                        }
                         else if (token == JsonToken.END_OBJECT) {
                             wa.addToIndexes();
                             wa = (WordAnnotation) cas.createAnnotation(cas.getJCas().getCasType(WordAnnotation.type), 0, 0);
@@ -58,13 +62,21 @@ public class TermSuiteJsonCasDeserializer {
                     }
 
                     else if (inToa){
-                        if (token == JsonToken.END_ARRAY)
+                        if (token == JsonToken.END_ARRAY) {
                             inToa = false;
+                        }
                         else if (token == JsonToken.END_OBJECT) {
                             toa.addToIndexes();
                             toa = (TermOccAnnotation) cas.createAnnotation(cas.getJCas().getCasType(TermOccAnnotation.type), 0, 0);
                         }
                         FillTermOccAnnotations(parser, token, toa, cas);
+                    }
+
+                    else if (inCoveredText){
+                        if (token == JsonToken.VALUE_STRING) {
+                            String text = parser.getText();
+                            cas.setDocumentText(text);
+                        }
                     }
 
                     else if ("sdi".equals(parser.getParsingContext().getCurrentName())) {
@@ -77,6 +89,9 @@ public class TermSuiteJsonCasDeserializer {
 
                     else if ("term_occ_annotations".equals(parser.getParsingContext().getCurrentName())) {
                         inToa = true;
+                    }
+                    else if ("covered_text".equals(parser.getParsingContext().getCurrentName())) {
+                        inCoveredText = true;
                     }
                 }
                 catch (java.lang.NullPointerException e) {
