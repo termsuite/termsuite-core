@@ -22,7 +22,9 @@
 package eu.project.ttc.engines.variant;
 
 import java.util.List;
+import java.util.regex.Pattern;
 
+import org.codehaus.groovy.runtime.InvokerInvocationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -33,6 +35,7 @@ import com.google.common.collect.Lists;
 import eu.project.ttc.models.GroovyAdapter;
 import eu.project.ttc.models.GroovyTerm;
 import eu.project.ttc.models.Term;
+import eu.project.ttc.models.TermIndex;
 import groovy.lang.GroovyClassLoader;
 import groovy.lang.GroovyObject;
 
@@ -45,35 +48,78 @@ import groovy.lang.GroovyObject;
  */
 public class VariantRule {
 	private static final Logger LOGGER = LoggerFactory.getLogger(VariantRule.class);
+	private static final Pattern USE_DERIV = Pattern.compile("deriv\\s*\\(");
+	private static final Pattern USE_PREFIX = Pattern.compile("prefix\\s*\\(");
 	private static final String GROOVY_MATCH_METHOD_NAME = "match";
+	private static final String GROOVY_SET_HELPER_METHOD_NAME = "setHelper";
+	private static int CLASS_NUM = 0;
 
 	private String name;
 	private String expression;
+	private VariantRuleIndex index = VariantRuleIndex.DEFAULT;
+
 	private boolean sourceCompound = false;
 	private boolean targetCompound = false;
 	private List<String> sourcePatterns = Lists.newArrayList();
 	private List<String> targetPatterns = Lists.newArrayList();
 	private GroovyObject groovyRule;
 	private GroovyAdapter groovyAdapter;
-	
+	private VariantHelper helper;
+
 	public VariantRule(String name) {
 		super();
 		this.name = name;
 	}
 	
+		
+	
 	public void setGroovyAdapter(GroovyAdapter groovyAdapter) {
 		this.groovyAdapter = groovyAdapter;
 	}
 	
+	public void initialize(TermIndex termIndex) {
+		this.helper.setTermIndex(termIndex);
+	}
+	
 	void setGroovyRule(String groovyExpression) {
 		this.expression = groovyExpression;
+		initIndex();
+		
 		try {
-			String script = String.format("def Boolean %s(s, t) { %s }", GROOVY_MATCH_METHOD_NAME, groovyExpression);
+			this.helper = new VariantHelper();
+			String script = String.format(""
+					+ "class GroovyVariantRule%s {\n"
+					+ "def helper;\n"
+					+ "def setHelper(h) {this.helper = h;}\n"
+					+ "def prefix(s,t){return this.helper.isPrefixOf(s,t);}\n"
+					+ "def deriv(p,s,t){return this.helper.derivesInto(p,s,t);}\n"
+					+ "def Boolean match(s, t) { %s }\n"
+					+ "}", 
+					newRuleClassName(this.name),
+					groovyExpression);
 			Class<?> groovyClass = getGroovyClassLoader().parseClass(script, name);
 			this.groovyRule = (GroovyObject) groovyClass.newInstance();
+			this.groovyRule.invokeMethod(
+					GROOVY_SET_HELPER_METHOD_NAME, 
+					new Object[] { helper });
 		} catch (InstantiationException | IllegalAccessException e) {
 			throw new IllegalStateException("Could not load groovy expression as groovy object: " + groovyExpression, e);
 		}
+	}
+
+	public VariantRuleIndex getIndex() {
+		return index;
+	}
+	
+	private void initIndex() {
+		if(USE_DERIV.matcher(this.expression).find())
+			this.index = VariantRuleIndex.DERIVATION;
+		if(USE_PREFIX.matcher(this.expression).find())
+			this.index = VariantRuleIndex.PREFIX;
+	}
+
+	private static String newRuleClassName(String ruleName) {
+		return CLASS_NUM++ + ruleName.replaceAll("-", "_").replaceAll("[^a-zA-Z]+", "");
 	}
 	
 	private static GroovyClassLoader groovyClassLoader;
@@ -110,6 +156,9 @@ public class VariantRule {
 				new Object[] { s, t });
 		} catch(IndexOutOfBoundsException e) {
 			return false;
+		} catch(InvokerInvocationException e) {
+			LOGGER.error("An error occurred in groovy variant rule", e);
+			throw new RuntimeException(e);
 		} catch(Exception e) {
 			LOGGER.warn("The variant rule {} throwed an exception: {}", this.name, e.getClass());
 			return false;

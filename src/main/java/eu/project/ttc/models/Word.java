@@ -30,7 +30,7 @@ import eu.project.ttc.utils.StringUtils;
 
 public class Word extends LemmaStemHolder {
 	
-	private CompoundType compoundType;
+	private CompoundType compoundType = CompoundType.UNSET;
 	
 	private String stem;
 
@@ -42,7 +42,7 @@ public class Word extends LemmaStemHolder {
 	}
 
 	public boolean isCompound() {
-		return components.size() > 1;
+		return compoundType != CompoundType.UNSET && this.components.size() > 1;
 	}
 
 	public String getStem() {

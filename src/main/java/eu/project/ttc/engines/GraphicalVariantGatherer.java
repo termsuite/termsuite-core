@@ -96,7 +96,7 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 
 	private TermValueProvider nFirstLettersProvider = new AbstractTermValueProvider("") {
 		@Override
-		public Collection<String> getClasses(Term term) {
+		public Collection<String> getClasses(TermIndex termIndex, Term term) {
 			if(term.getWords().size() == 1)
 				// do not gather sw term with that method
 				return ImmutableList.of();

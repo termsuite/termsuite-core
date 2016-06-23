@@ -29,9 +29,9 @@ import org.apache.uima.jcas.JCas;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import eu.project.ttc.models.FrequencyUnderThreshholdSelector;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.index.selectors.FrequencyUnderThreshholdSelector;
 import eu.project.ttc.resources.TermIndexResource;
 
 

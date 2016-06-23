@@ -1,0 +1,18 @@
+# géothermie hydraulique || géothermie hydraulique solaire
+"S-Ed-NA-A":
+  source: N A
+  target: N A A
+  rule: s[0]==t[0] && s[1]==t[1]
+
+
+# phase du stator | phase statorique
+"S-R2D-NPN":
+  source: N P N
+  target: N A
+  rule: s[0]==t[0] && deriv("N A", s[2], t[1])
+
+# machine synchrone - machine asynchrone
+"NA-NprefA":
+  source: N A
+  target: N A
+  rule: s[0]==t[0] && prefix(t[1],s[1])

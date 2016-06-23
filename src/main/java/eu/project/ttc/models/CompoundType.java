@@ -22,7 +22,7 @@
 package eu.project.ttc.models;
 
 public enum CompoundType {
-	PREFIX("pre"), SUFFIX("suf"), NATIVE("nat"), NEOCLASSICAL("neo");
+	NATIVE("nat"), NEOCLASSICAL("neo"), UNSET("unset");
 	private String shortName;
 	private CompoundType(String shortName) {
 		this.shortName = shortName;

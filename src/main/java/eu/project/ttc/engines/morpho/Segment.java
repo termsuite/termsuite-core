@@ -37,11 +37,10 @@ public  class Segment implements Comparable<Segment> {
 		return Integer.compare(begin, o.begin);
 	}
 
-	Segment(int begin, int end, String string) {
+	public Segment(int begin, int end) {
 		super();
 		this.begin = begin;
 		this.end = end;
-		this._substring = string.substring(begin, end);
 	}
 
 	public int getBegin() {
@@ -82,5 +81,11 @@ public  class Segment implements Comparable<Segment> {
 	
 	public void setLemma(String lemma) {
 		this.lemma = lemma;
+	}
+
+	public static Segment createFromParentString(int begin, int end, String string) {
+		Segment segment = new Segment(begin, end);
+		segment._substring = string.substring(begin, end);
+		return segment;
 	}
 }

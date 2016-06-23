@@ -38,4 +38,8 @@ public class TermSuiteResourceManager {
 	public boolean contains(String resourceName) {
 		return this.resources.containsKey(resourceName);
 	}
+
+	public void clear() {
+		this.resources.clear();
+	}
 }

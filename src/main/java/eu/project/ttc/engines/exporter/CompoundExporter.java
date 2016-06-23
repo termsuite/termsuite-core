@@ -45,7 +45,7 @@ import eu.project.ttc.models.Word;
 
 public class CompoundExporter extends AbstractTermIndexExporter {
 
-	private static final String LINE_FORMAT = "%-30s %-35s %d\n";
+	private static final String LINE_FORMAT = "%-30s %-10s %-35s %d\n";
 
 	@Override
 	protected void processAcceptedTerms(TreeSet<Term> acceptedTerms) throws AnalysisEngineProcessException {
@@ -86,6 +86,7 @@ public class CompoundExporter extends AbstractTermIndexExporter {
 					compLemmas.add(c.getLemma());
 				writer.write(String.format(LINE_FORMAT, 
 					w.getLemma(),
+					w.getCompoundType(),
 					Joiner.on('|').join(compLemmas),
 					frequencies.get(w)
 				));

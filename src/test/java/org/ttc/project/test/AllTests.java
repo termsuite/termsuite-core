@@ -23,22 +23,26 @@ package org.ttc.project.test;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
+import org.ttc.project.test.engines.SyntacticTermGathererSpec;
 import org.ttc.project.test.engines.TermClassifierSpec;
+import org.ttc.project.test.io.SegmentationParserSpec;
 import org.ttc.project.test.resources.PrefixTreeSpec;
+import org.ttc.project.test.resources.SuffixDerivationListSpec;
+import org.ttc.project.test.resources.SuffixDerivationSpec;
+import org.ttc.project.test.selectors.HasSingleWordSelectorSpec;
+import org.ttc.project.test.selectors.TermClassProvidersSpec;
 import org.ttc.project.test.variants.VariantRuleSpec;
 import org.ttc.project.test.variants.VariantRuleYamlIOSpec;
-
-import eu.project.ttc.resources.PrefixTree;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
 	VariantRuleSpec.class, 
-	VariantRuleYamlIOSpec.class, 
+	VariantRuleYamlIOSpec.class,
+	SyntacticTermGathererSpec.class,
 	TermSpec.class, 
 	SegmentationSpec.class, 
 	DocumentSpec.class, 
 	TermUtilsSpec.class,
-	TermClassifierSpec.class,
 	TermClassifierSpec.class,
 	OccurrenceBufferSpec.class,
 	SimilarityDistanceSpec.class,
@@ -48,7 +52,11 @@ import eu.project.ttc.resources.PrefixTree;
 	TermClassSpec.class,
 	StringUtilsSpec.class,
 	PrefixTreeSpec.class,
-//	TeiCollectionReaderSpec.class,
+	SegmentationParserSpec.class,
+	SuffixDerivationListSpec.class,
+	SuffixDerivationSpec.class,
+	TermClassProvidersSpec.class,
+	HasSingleWordSelectorSpec.class,
 	CrossTableSpec.class
 	})
 public class AllTests {

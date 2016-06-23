@@ -26,6 +26,7 @@ import java.util.Collection;
 import com.google.common.collect.ImmutableList;
 
 import eu.project.ttc.models.Term;
+import eu.project.ttc.models.TermIndex;
 
 public abstract class TermSingleValueProvider extends AbstractTermValueProvider {
 	
@@ -34,9 +35,9 @@ public abstract class TermSingleValueProvider extends AbstractTermValueProvider 
 	}
 
 	@Override
-	public Collection<String> getClasses(Term term) {
-		return ImmutableList.of(getClass(term));
+	public Collection<String> getClasses(TermIndex termIndex, Term term) {
+		return ImmutableList.of(getClass(termIndex, term));
 	}
 
-	public abstract String getClass(Term term);
+	public abstract String getClass(TermIndex termIndex, Term term);
 }

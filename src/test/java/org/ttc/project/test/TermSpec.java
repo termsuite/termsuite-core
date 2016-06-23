@@ -64,9 +64,11 @@ public class TermSpec {
 	private Term termWithContext2;
 	private Term termWithContext3;
 	
+	private TermIndex termIndex;
+	
 	@Before
 	public void initContexts() {
-		TermIndex termIndex = Fixtures.termIndexWithOccurrences();
+		termIndex = Fixtures.termIndexWithOccurrences();
 		termIndex.createOccurrenceIndex();
 		termWithContext1 = termIndex.getTermByGroupingKey("n: énergie");
 		termWithContext2 = termIndex.getTermByGroupingKey("a: éolien");
@@ -87,13 +89,13 @@ public class TermSpec {
 		TermValueProvider provider = TermValueProviders.get(TermIndexes.WORD_COUPLE_LEMMA_STEM);
 		Assert.assertEquals(
 				ImmutableList.of("energie+eol"),
-				provider.getClasses(term1));
+				provider.getClasses(termIndex, term1));
 		Assert.assertEquals(
 				ImmutableList.of(),
-				provider.getClasses(term2));
+				provider.getClasses(termIndex, term2));
 		Assert.assertEquals(
 				ImmutableList.of("acces+radioelectriq", "acces+recouvr", "radioelectrique+recouvr"), 
-				provider.getClasses(term3));
+				provider.getClasses(termIndex, term3));
 	}
 
 	@Test
@@ -251,12 +253,12 @@ public class TermSpec {
 		TermValueProvider provider = TermValueProviders.get(TermIndexes.WORD_LEMMA);
 		Assert.assertEquals(
 				ImmutableList.of("énergie", "éolien"),
-				provider.getClasses(term1));
+				provider.getClasses(termIndex, term1));
 		Assert.assertEquals(
 				ImmutableList.of("radio","électrique"),
-				provider.getClasses(term2));
+				provider.getClasses(termIndex, term2));
 		Assert.assertEquals(
 				ImmutableList.of("accès", "radio", "électrique", "de", "recouvrement"), 
-				provider.getClasses(term3));
+				provider.getClasses(termIndex, term3));
 	}
 }

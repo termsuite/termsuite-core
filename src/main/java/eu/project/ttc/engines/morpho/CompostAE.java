@@ -62,6 +62,9 @@ import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.utils.IndexingKey;
 import eu.project.ttc.utils.TermSuiteUtils;
 
+/*
+ * TODO Apply exceptions for derivational suffixes like -aire, -age, etc.
+ */
 public class CompostAE extends JCasAnnotator_ImplBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(CompostAE.class);
 
@@ -180,6 +183,14 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 			if(cnt%observingStep == 0) {
 				observer.work(observingStep);
 			}
+			
+			/*
+			 * Do not do native morphology splitting 
+			 * if a composition already exists.
+			 */
+			if(word.isCompound())
+				continue;
+			
 			Map<Segmentation, Double> scores = computeScores(word.getLemma());
 			if(scores.size() > 0) {
 				float bestScore = 0;

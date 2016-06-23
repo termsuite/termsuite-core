@@ -49,7 +49,7 @@ import eu.project.ttc.models.index.TermIndexes;
 import eu.project.ttc.models.index.TermMeasure;
 import eu.project.ttc.models.index.TermValueProviders;
 import eu.project.ttc.resources.GeneralLanguageResource;
-import eu.project.ttc.tools.TermSuiteResourceHelper;
+import eu.project.ttc.tools.TermSuiteResource;
 
 public class TermUtils {
 
@@ -103,6 +103,7 @@ public class TermUtils {
 		}
 	}
 
+	
 	public static void showCompounds(TermIndex index, PrintStream out, int threshhold) {
 		List<Term> terms = Lists.newArrayList();
 		for(Term term:index.getTerms()) {
@@ -354,7 +355,7 @@ public class TermUtils {
 	 * @return
 	 */
 	public static int getGeneralFrequency(Lang l, Term t) {
-		String resName = new TermSuiteResourceHelper(l).getGeneralLanguageFrequencies().toString().replaceFirst("file:", "");
+		String resName = TermSuiteResource.GENERAL_LANGUAGE.getPath(l);
 		GeneralLanguageResource generalLanguage = new GeneralLanguageResource();
 		try {
 			generalLanguage.load(TermUtils.class.getClassLoader().getResourceAsStream(resName));
@@ -366,6 +367,13 @@ public class TermUtils {
 
 	public static double getExtensionGain(Term extension, Term extensionAffix) {
 		return ((double)extension.getFrequency())/extensionAffix.getFrequency();
+	}
+
+	private static final String GROUPING_KEY_FORMAT = "%s: %s";
+	public static String toGroupingKey(TermWord termWord) {
+		return String.format(GROUPING_KEY_FORMAT, 
+				termWord.getSyntacticLabel().toLowerCase(), 
+				termWord.getWord().getLemma());
 	}
 
 }

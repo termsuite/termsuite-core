@@ -34,9 +34,9 @@ import eu.project.ttc.utils.TermSuiteUtils;
 
 public class TermBuilder {
 	private static final Logger LOGGER  = LoggerFactory.getLogger(TermBuilder.class);
+	private static int CURRENT_TERM_ID = 0;
 	
 	private TermIndex termIndex;
-	private OccurrenceStore occurrenceStore;
 	
 	private String groupingKey;
 	private String spottingRule;
@@ -50,6 +50,7 @@ public class TermBuilder {
 	private Optional<Double> specificity = Optional.absent();
 
 	private Optional<ContextVector> contextVector = Optional.absent();
+
 	
 	private TermBuilder() {
 	}
@@ -75,6 +76,10 @@ public class TermBuilder {
 					this.groupingKey,
 					gKey);
 		}
+		
+		if(!id.isPresent())
+			id = Optional.of(CURRENT_TERM_ID++);
+		
 		Term term = new Term(termIndex.getOccurrenceStore(), id.get(), gKey, termWords, spottingRule);
 		if(generalFrequencyNorm.isPresent())
 			term.setGeneralFrequencyNorm(generalFrequencyNorm.get());
@@ -172,5 +177,12 @@ public class TermBuilder {
 
 	public String getGroupingKey() {
 		return this.groupingKey;
+	}
+
+	public void addWord(String lemma, String stem, String label) {
+		Word word;
+		if((word = this.termIndex.getWord(lemma)) == null) 
+			word = WordBuilder.start().setLemma(lemma).setStem(stem).create();
+		this.termWords.add(new TermWord(word, label));
 	}
 }

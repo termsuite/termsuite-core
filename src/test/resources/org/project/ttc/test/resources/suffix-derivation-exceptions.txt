@@ -1,0 +1,7 @@
+paysage	pays
+
+#Exception_suffixe_rel_É
+fermé	ferme
+fermeture	ferme
+
+

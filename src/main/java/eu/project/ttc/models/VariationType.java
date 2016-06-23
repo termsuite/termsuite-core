@@ -24,7 +24,10 @@ package eu.project.ttc.models;
 public enum VariationType {
 	MORPHOLOGICAL(1, "morph", true),
 	SYNTACTICAL(3, "syn", true),
-	GRAPHICAL(2, "graph", false);
+	GRAPHICAL(2, "graph", false),
+	DERIVES_INTO(4, "deriv", true),
+	IS_PREFIX_OF(5, "pref", true),
+	;
 	
 	private int order;
 	private String shortName;

@@ -51,10 +51,10 @@ import eu.project.ttc.models.TermBuilder;
 import eu.project.ttc.models.TermClass;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermOccurrence;
-import eu.project.ttc.models.TermSelector;
 import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.models.TermWord;
 import eu.project.ttc.models.Word;
+import eu.project.ttc.models.index.selectors.TermSelector;
 import eu.project.ttc.types.SourceDocumentInformation;
 import eu.project.ttc.types.TermOccAnnotation;
 import eu.project.ttc.types.WordAnnotation;
@@ -123,7 +123,7 @@ public class MemoryTermIndex implements TermIndex {
 		this.termsByGroupingKey.put(term.getGroupingKey(), term);
 		this.termsById.put(term.getId(), term);
 		for(CustomTermIndex termIndex:this.customIndexes.values())
-			termIndex.indexTerm(term);
+			termIndex.indexTerm(this, term);
 		for(TermWord tw:term.getWords())
 			privateAddWord(tw.getWord(), false);
 	}
@@ -267,7 +267,7 @@ public class MemoryTermIndex implements TermIndex {
 	@Override
 	public CustomTermIndex getCustomIndex(String indexName) {
 		if(this.customIndexes.get(indexName) == null) {
-			TermValueProvider valueProvider = TermValueProviders.get(indexName);
+			TermValueProvider valueProvider = TermValueProviders.get(indexName, this);
 			createCustomIndex(indexName, valueProvider);
 		}
 		return this.customIndexes.get(indexName);
@@ -287,7 +287,7 @@ public class MemoryTermIndex implements TermIndex {
 
 		LOGGER.debug("Indexing {} terms to index {}", this.getTerms().size(), indexName);
 		for(Term t:this.getTerms()) 
-			customIndex.indexTerm(t);
+			customIndex.indexTerm(this, t);
 		return customIndex;
 	}
 
@@ -342,7 +342,7 @@ public class MemoryTermIndex implements TermIndex {
 		
 		// remove from custom indexes
 		for(CustomTermIndex customIndex:customIndexes.values())
-			customIndex.removeTerm(t);
+			customIndex.removeTerm(this, t);
 		
 		// remove from variants
 		Set<TermVariation> toRem = Sets.newHashSet();

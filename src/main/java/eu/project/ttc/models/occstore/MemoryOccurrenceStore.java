@@ -9,7 +9,7 @@ import com.google.common.collect.Multimap;
 import eu.project.ttc.models.OccurrenceStore;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermOccurrence;
-import eu.project.ttc.models.TermSelector;
+import eu.project.ttc.models.index.selectors.TermSelector;
 
 public class MemoryOccurrenceStore implements OccurrenceStore {
 

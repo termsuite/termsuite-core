@@ -1,0 +1,15 @@
+N A	-ièreté	-ier
+N A	-ure	-
+N A	-ure	-er
+N A	-erie	-er
+# Should be ignored since duplicate 
+N A	-erie	-er
+
+N A	-erie	-e
+N A	-ion	-
+
+# Should be a different derivation since labels are not the same. 
+N N	-erie	-er
+
+# Just for tests (a suffix that is a suffix of another suffix)
+N N	-ie	-a
