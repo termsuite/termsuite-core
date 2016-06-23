@@ -176,6 +176,12 @@ public abstract class AbstractTermSuiteCollectionReader extends CollectionReader
 		this.currentFileByteSize += file.length();
 		
 		logger.debug("Reading file ("+this.mCurrentIndex+"/"+this.mFiles.size()+") " + file.getAbsolutePath());
+		fillCas(cas, file);
+		if(!hasNext())
+			this.lastFileRead();
+	}
+
+	protected void fillCas(CAS cas, File file) throws IOException, CollectionException {
 		String uri = file.toURI().toString();
 		SourceDocumentInformation sdi;
 		try {
@@ -198,8 +204,6 @@ public abstract class AbstractTermSuiteCollectionReader extends CollectionReader
 		} catch (CASException e) {
 			throw new CollectionException(e);
 		}
-		if(!hasNext())
-			this.lastFileRead();
 	}
 
 	@Override
