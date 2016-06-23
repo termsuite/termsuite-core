@@ -30,14 +30,12 @@ public class HasSingleWordVariationSelector extends AbstractTermSelector {
 	@Override
 	public boolean select(TermIndex termIndex, Term term) {
 		Term swt;
-		for (Term t : termIndex.getTerms()) {
-			for (TermWord termWord : t.getWords()) {
-				swt = termIndex.getTermByGroupingKey(TermUtils.toGroupingKey(termWord));
-				if (swt != null) {
-					if(swt.getBases(this.variationType).iterator().hasNext()
-						|| swt.getVariations(this.variationType).iterator().hasNext())
-						return true;
-				}
+		for (TermWord termWord : term.getWords()) {
+			swt = termIndex.getTermByGroupingKey(TermUtils.toGroupingKey(termWord));
+			if (swt != null) {
+				if(swt.getBases(this.variationType).iterator().hasNext()
+					|| swt.getVariations(this.variationType).iterator().hasNext())
+					return true;
 			}
 		}
 		return false;
