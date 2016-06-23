@@ -1,19 +1,25 @@
 package org.ttc.project;
 
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.assertj.core.util.Lists;
+
 import com.google.common.base.Preconditions;
 
+import eu.project.ttc.models.Component;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermBuilder;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.Word;
 
 public class TermFactory {
 	private TermIndex termIndex;
-	private static final Pattern TERM_WORD_PATTERN = Pattern.compile("(\\w+)\\:(\\w+)(?:\\|(\\w+))");
-
+	private static final Pattern TERM_WORD_PATTERN = Pattern.compile("(\\w+)\\:(\\S+)(?:\\|(\\S+))");
+	private static final Pattern COMPONENT_PATTERN = Pattern.compile("(\\S+)\\|(\\S+)");
+	
 	public TermFactory(TermIndex termIndex) {
 		super();
 		this.termIndex = termIndex;
@@ -50,6 +56,27 @@ public class TermFactory {
 					this.termIndex.getTermByGroupingKey(t.getGroupingKey()) != null,
 					"Term %s does not exists in term index",
 					t.getGroupingKey());
+	}
+
+	public void wordComposition(String wordLemma, String... componentSpecs) {
+		Word word = this.termIndex.getWord(wordLemma);
+		Preconditions.checkArgument(
+				word != null,
+				"No such word: %s", wordLemma);
+		
+		List<Component> components = Lists.newArrayList();
+		
+		for(String componentSpec:componentSpecs) {
+			Matcher matcher = COMPONENT_PATTERN.matcher(componentSpec);
+			Preconditions.checkArgument(matcher.find(), "Bad component word spec: %s", componentSpec);
+			String substring = matcher.group(1);
+			String lemma = matcher.group(2);
+			int start = wordLemma.indexOf(lemma);
+			Component component = new Component(lemma, start, start + substring.length());
+			components.add(component);
+		}
+		
+		word.setComposition(components);
 	}
 	
 }

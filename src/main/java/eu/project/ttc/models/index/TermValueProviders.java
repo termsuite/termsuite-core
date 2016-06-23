@@ -45,9 +45,12 @@ import eu.project.ttc.models.VariationType;
 import eu.project.ttc.models.index.selectors.HasSingleWordVariationSelector;
 import eu.project.ttc.models.index.selectors.TermSelector;
 import eu.project.ttc.utils.TermSuiteConstants;
+import eu.project.ttc.utils.TermUtils;
 
 public class TermValueProviders {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermValueProviders.class);
+	
+	private static final Collection<String> EMPTY_COLLECTION = Lists.newArrayList();
 	
 	public static final TermValueProvider TERM_SINGLE_WORD_LEMMA_PROVIDER = new AbstractTermValueProvider(TermIndexes.SINGLE_WORD_LEMMA) {
 		
@@ -55,7 +58,7 @@ public class TermValueProviders {
 		public Collection<String> getClasses(TermIndex termIndex, Term term) {
 			if(term.isSingleWord())
 				return Lists.newArrayList(term.getWords().get(0).getWord().getLemma());
-			return null;
+			return EMPTY_COLLECTION;
 		}
 	};
 
@@ -93,6 +96,20 @@ public class TermValueProviders {
 			return lemmas;
 		}
 	};
+	
+	
+	public static final TermValueProvider WORD_LEMMA_IF_SWT_PROVIDER = new AbstractTermValueProvider(TermIndexes.WORD_LEMMA_IF_SWT) {
+		@Override
+		public Collection<String> getClasses(TermIndex termIndex, Term term) {
+			List<String> lemmas = Lists.newArrayListWithCapacity(term.getWords().size());
+			for(TermWord tw:term.getWords()) {
+				if(termIndex.getTermByGroupingKey(TermUtils.toGroupingKey(tw)) != null) 
+					lemmas.add(tw.getWord().getLemma());
+			}
+			return lemmas;
+		}
+	};
+
 
 	
 	public static final TermValueProvider WORD_LEMMA_STEM_PROVIDER = new AbstractTermValueProvider(TermIndexes.WORD_COUPLE_LEMMA_STEM) {
@@ -173,20 +190,14 @@ public class TermValueProviders {
 		}
 	};
 	
-	public static final TermSingleValueProvider WORD_LEMMA_LOWER_CASE = new TermSingleValueProvider(TermIndexes.WORD_LEMMA_LOWER_CASE) {
-		@Override
-		public String getClass(TermIndex termIndex, Term term) {
-			return Character.toString(Character.toLowerCase(term.getGroupingKey().charAt(0)));
-		}
-	};
-	
 	private static final Map<String, TermValueProvider> valueProviders = Maps.newHashMap();
+
 
 	static {
 		valueProviders.put(TermIndexes.SINGLE_WORD_LEMMA, TERM_SINGLE_WORD_LEMMA_PROVIDER);
 		valueProviders.put(TermIndexes.TERM_NOCLASS, TERM_NOCLASS_PROVIDER);
 		valueProviders.put(TermIndexes.LEMMA_LOWER_CASE, TERM_LEMMA_LOWER_CASE_PROVIDER);
-		valueProviders.put(TermIndexes.WORD_LEMMA_LOWER_CASE, WORD_LEMMA_LOWER_CASE);
+//		valueProviders.put(TermIndexes.WORD_LEMMA_LOWER_CASE, WORD_LEMMA_LOWER_CASE);
 		valueProviders.put(TermIndexes.WORD_LEMMA, WORD_LEMMA_PROVIDER);
 		valueProviders.put(TermIndexes.WORD_COUPLE_LEMMA_STEM, WORD_LEMMA_STEM_PROVIDER);
 		valueProviders.put(TermIndexes.WORD_COUPLE_LEMMA_LEMMA, WORD_LEMMA_LEMMA_PROVIDER);
