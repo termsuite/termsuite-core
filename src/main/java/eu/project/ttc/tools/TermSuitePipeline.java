@@ -32,8 +32,7 @@ import java.util.UUID;
 import java.util.concurrent.BlockingQueue;
 
 import org.apache.commons.lang.mutable.MutableInt;
-import eu.project.ttc.engines.exporter.*;
-import eu.project.ttc.readers.*;
+import eu.project.ttc.engines.exporter.TermsuiteJsonCasExporter;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.collection.CollectionReader;
 import org.apache.uima.collection.CollectionReaderDescription;
