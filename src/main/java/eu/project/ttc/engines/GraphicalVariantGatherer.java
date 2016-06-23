@@ -36,6 +36,7 @@ import org.apache.uima.resource.ResourceInitializationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 import com.google.common.math.IntMath;
 
@@ -67,7 +68,7 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 	private static final int OBSERVER_STEP = 10000;
 	private static final char JOIN_CHAR = ':';
 
-	@ExternalResource(key=ObserverResource.OBSERVER, mandatory=true)
+	@ExternalResource(key=ObserverResource.OBSERVER, mandatory=false)
 	protected ObserverResource observerResource;
 	
 	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
@@ -127,16 +128,20 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 			throws ResourceInitializationException {
 		super.initialize(context);
 		this.language = Lang.forName(lang);
+		if(observerResource != null)
+			taskObserver = Optional.of(observerResource.getTaskObserver(TASK_NAME));
 	}
 	
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {}
 	
+	private Optional<SubTaskObserver> taskObserver = Optional.absent();
+	
 	@Override
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
 		logger.info("Start graphical term gathering");
-		SubTaskObserver taskObserver = observerResource.getTaskObserver(TASK_NAME);
+		
 		
 		// create the index
 		String indexName = String.format("_%d_first_letters_", n);
@@ -155,7 +160,8 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 		for(String key:customIndex.keySet()) 
 			totalComparisons+= IntMath.binomial(customIndex.getTerms(key).size(), 2);
 
-		taskObserver.setTotalTaskWork(totalComparisons);
+		if(taskObserver.isPresent())
+			taskObserver.get().setTotalTaskWork(totalComparisons);
 
 		logger.debug("Number of distance edition pairs to compute: {}", totalComparisons);
 		
@@ -185,8 +191,8 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 				t1 = terms.get(i);
 				for(j=i+1; j<terms.size();j++) {
 					nbComparisons++;
-					if(nbComparisons % OBSERVER_STEP == 0)
-						taskObserver.work(OBSERVER_STEP);
+					if(nbComparisons % OBSERVER_STEP == 0 && taskObserver.isPresent())
+						taskObserver.get().work(OBSERVER_STEP);
 					t2 = terms.get(j);
 					dist = distance.computeNormalized(t1.getLemma(), t2.getLemma());
 					if(dist >= this.threshold) {
