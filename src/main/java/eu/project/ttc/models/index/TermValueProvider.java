@@ -24,6 +24,7 @@ package eu.project.ttc.models.index;
 import java.util.Collection;
 
 import eu.project.ttc.models.Term;
+import eu.project.ttc.models.TermIndex;
 
 /**
  * 
@@ -35,5 +36,5 @@ import eu.project.ttc.models.Term;
  */
 public interface TermValueProvider {
 	public String getName();
-	public Collection<String> getClasses(Term term);
+	public Collection<String> getClasses(TermIndex termIndex, Term term);
 }

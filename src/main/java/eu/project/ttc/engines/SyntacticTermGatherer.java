@@ -42,7 +42,7 @@ import com.google.common.collect.Lists;
 import eu.project.ttc.engines.variant.VariantRule;
 import eu.project.ttc.engines.variant.VariantRuleIndex;
 import eu.project.ttc.models.Term;
-import eu.project.ttc.models.TermWord;
+import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.VariationType;
 import eu.project.ttc.models.index.CustomIndexStats;
 import eu.project.ttc.models.index.CustomTermIndex;
@@ -51,14 +51,14 @@ import eu.project.ttc.resources.ObserverResource;
 import eu.project.ttc.resources.ObserverResource.SubTaskObserver;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.resources.YamlVariantRules;
-import eu.project.ttc.utils.TermUtils;
 
 public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(SyntacticTermGatherer.class);
 	public static final String TASK_NAME = "Syntactic variant gathering";
 	private static final int OBSERVING_STEP = 1000;
-
+	private static final int WARNING_CRITICAL_SIZE = 2500;
 	private static final String M_PREFIX = "M";
+
 
 	@ExternalResource(key=ObserverResource.OBSERVER, mandatory=false)
 	protected ObserverResource observerResource;
@@ -70,8 +70,34 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 	@ExternalResource(key = YAML_VARIANT_RULES, mandatory = true)
 	private YamlVariantRules yamlVariantRules;
 
+
+	private BigInteger totalComparisons = BigInteger.valueOf(0);
+	private int nbComparisons = 0;
 	private Optional<SubTaskObserver> taskObserver = Optional.absent();
 
+	static class RunConfig {
+		String indexName;
+		VariantRuleIndex variantRuleIndex;
+		RunConfig(String indexName, VariantRuleIndex variantRuleIndex) {
+			super();
+			this.indexName = indexName;
+			this.variantRuleIndex = variantRuleIndex;
+		}
+	}
+	
+	
+	/*
+	 *  Do not deactivate gathering on key_lemma_lemma, otherwise we loose
+	 *  morphological gathering based on single-word (with [compound] tag in yaml).
+	 *  TODO : understanding why
+	 */
+	private static final RunConfig[] RUN_CONFIGS = new RunConfig[] {
+			new RunConfig(TermIndexes.WORD_COUPLE_LEMMA_LEMMA, VariantRuleIndex.DEFAULT),
+			new RunConfig(TermIndexes.WORD_COUPLE_LEMMA_STEM, VariantRuleIndex.DEFAULT),
+			new RunConfig(TermIndexes.TERM_HAS_PREFIX_LEMMA, VariantRuleIndex.PREFIX),
+			new RunConfig(TermIndexes.TERM_HAS_DERIVATES_LEMMA, VariantRuleIndex.DERIVATION)
+	};
+	
 	@Override
 	public void initialize(UimaContext context) throws ResourceInitializationException {
 		super.initialize(context);
@@ -84,21 +110,15 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
 		LOGGER.info("Start syntactic term gathering");
+		TermIndex termIndex = this.termIndexResource.getTermIndex();
 		
 		/*
-		 *  Do not deactivate gathering on key_lemma_lemma, otherwise we loose
-		 *  morphological gathering based on single-word (with [compound] tag in yaml).
-		 *  TODO : understanding why
+		 * Prepare observer and indexes
 		 */
-		String[] gatheringKeys = new String[] {
-				TermIndexes.WORD_COUPLE_LEMMA_LEMMA,
-				TermIndexes.WORD_COUPLE_LEMMA_STEM
-			};
-
-		// prepare observer and indexes
-		for(String key:gatheringKeys) {
-			CustomTermIndex customIndex = this.termIndexResource.getTermIndex().getCustomIndex(key);
+		for(RunConfig runConfig:RUN_CONFIGS) {
+			CustomTermIndex customIndex = termIndex.getCustomIndex(runConfig.indexName);
 			customIndex.cleanSingletonKeys();
+			
 			// clean biggest classes
 			customIndex.cleanEntriesByMaxSize(WARNING_CRITICAL_SIZE);
 
@@ -127,74 +147,14 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 
 
 		LOGGER.debug("Gathering with default variant rule indexing (source and target patterns)");
-		for(String key:gatheringKeys)
-			gatherDefault(key);
-		
-		LOGGER.debug("Gathering with derivation variant rule indexing (source and target patterns)");
-		gatherManualClass(VariantRuleIndex.DERIVATION, selectTerms(VariationType.DERIVES_INTO));
-		
-		LOGGER.debug("Gathering with prefix variant rule indexing (source and target patterns)");
-		gatherManualClass(VariantRuleIndex.PREFIX, selectTerms(VariationType.IS_PREFIX_OF));
+		for(RunConfig runConfig:RUN_CONFIGS) {
+			gather(runConfig.indexName, runConfig.variantRuleIndex);
+			termIndex.dropCustomIndex(runConfig.indexName);
+		}
 		
 	}
 	
-	/**
-	 * Returns the swt associated with the TermWord
-	 * if and only if it has at least one connection of given
-	 * {@link VariationType}.
-	 * 
-	 * Returns null otherwise.
-	 * 
-	 * @param tw
-	 * @param variantType
-	 * @return
-	 */
-	private Term toSpecialSWTTerm(TermWord tw, VariationType variantType) {
-		String sourceGroupingKey = TermUtils.toGroupingKey(tw);
-		Term sourceTerm = this.termIndexResource.getTermIndex().getTermByGroupingKey(sourceGroupingKey);
-		if(sourceTerm != null) {
-			if(sourceTerm.getVariations(variantType).iterator().hasNext()
-					|| sourceTerm.getBases(variantType).iterator().hasNext())
-				return sourceTerm;
-		}
-		return null;
-	}
-	
-	private List<Term> selectTerms(VariationType variantType) {
-		Term swt;
-		List<Term> terms = Lists.newArrayList();
-		for (Term t : termIndexResource.getTermIndex().getTerms()) {
-			for (TermWord termWord : t.getWords()) {
-				swt = toSpecialSWTTerm(termWord, variantType);
-				if (swt != null) {
-					terms.add(t);
-					break;
-				}
-			}
-		}
-		return terms;
-	}
-	
-	
-	private void gatherManualClass(VariantRuleIndex variantRuleIndex, List<Term> terms) {
-		Term source;
-		Term target;
-		for(ListIterator<Term> sourceIt=terms.listIterator(); sourceIt.hasNext();) {
-			source=sourceIt.next();
-			for(ListIterator<Term> targetIt=terms.listIterator(sourceIt.nextIndex()); targetIt.hasNext();) {
-				target=targetIt.next();
-				applyGatheringRules(variantRuleIndex, source, target);
-				applyGatheringRules(variantRuleIndex, target, source);
-			}
-		}
-	}
-
-	private BigInteger totalComparisons = BigInteger.valueOf(0);
-	private int nbComparisons = 0;
-
-	private static final int WARNING_CRITICAL_SIZE = 2500;
-	
-	private void gatherDefault(final String gatheringKey) {
+	private void gather(final String gatheringKey, VariantRuleIndex variantRuleIndex) {
 		LOGGER.debug("Rule-based gathering over the pregathering key {}", gatheringKey);
 
 		// create the index
@@ -202,7 +162,6 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 		LOGGER.debug("Rule-based gathering over {} classes", customIndex.size());
 
 
-		
 		// Log the progress every 5 seconds
 		Timer progressLoggerTimer = new Timer("Syn. Variant Gathering Timer");
 		progressLoggerTimer.schedule(new TimerTask() {
@@ -238,8 +197,8 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 				for(ListIterator<Term> targetIt=list.listIterator(sourceIt.nextIndex()); targetIt.hasNext();) {
 					nbComparisons+=2;
 					target=targetIt.next();
-					applyGatheringRules(VariantRuleIndex.DEFAULT, source, target);
-					applyGatheringRules(VariantRuleIndex.DEFAULT, target, source);
+					applyGatheringRules(variantRuleIndex, source, target);
+					applyGatheringRules(variantRuleIndex, target, source);
 					if(nbComparisons % OBSERVING_STEP == 0) 
 						if(taskObserver.isPresent())
 							taskObserver.get().work(OBSERVING_STEP);
@@ -249,7 +208,6 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 		}
 		
 		//finalize
-		this.termIndexResource.getTermIndex().dropCustomIndex(gatheringKey);
 		progressLoggerTimer.cancel();
 	}
 

@@ -3,6 +3,8 @@ package eu.project.ttc.models;
 import java.util.Collection;
 import java.util.Iterator;
 
+import eu.project.ttc.models.index.selectors.TermSelector;
+
 public interface OccurrenceStore {
 	public static enum Type {MEMORY, MONGODB}
 	public static enum State{COLLECTING,INDEXING,INDEXED}

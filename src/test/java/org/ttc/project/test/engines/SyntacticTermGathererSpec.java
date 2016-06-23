@@ -24,7 +24,7 @@ import eu.project.ttc.resources.MemoryTermIndexManager;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.resources.YamlVariantRules;
 
-public class SyntacticVariantGathererSpec {
+public class SyntacticTermGathererSpec {
 	private MemoryTermIndex termIndex;
 	private Term machine_synchrone;
 	private Term machine_asynchrone;

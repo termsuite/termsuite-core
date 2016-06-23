@@ -33,11 +33,11 @@ import com.mongodb.client.model.Updates;
 import com.mongodb.client.model.WriteModel;
 
 import eu.project.ttc.models.Document;
-import eu.project.ttc.models.FrequencyUnderThreshholdSelector;
 import eu.project.ttc.models.OccurrenceStore;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermOccurrence;
-import eu.project.ttc.models.TermSelector;
+import eu.project.ttc.models.index.selectors.FrequencyUnderThreshholdSelector;
+import eu.project.ttc.models.index.selectors.TermSelector;
 
 public class MongoDBOccurrenceStore implements OccurrenceStore {
 	private static final Logger LOGGER = LoggerFactory.getLogger(MongoDBOccurrenceStore.class);

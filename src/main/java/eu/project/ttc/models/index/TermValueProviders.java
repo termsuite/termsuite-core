@@ -31,6 +31,7 @@ import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
@@ -38,15 +39,20 @@ import com.google.common.collect.Maps;
 import eu.project.ttc.models.Component;
 import eu.project.ttc.models.LemmaStemHolder;
 import eu.project.ttc.models.Term;
+import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermWord;
+import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.index.selectors.HasSingleWordVariationSelector;
+import eu.project.ttc.models.index.selectors.TermSelector;
 import eu.project.ttc.utils.TermSuiteConstants;
 
 public class TermValueProviders {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermValueProviders.class);
 	
 	public static final TermValueProvider TERM_SINGLE_WORD_LEMMA_PROVIDER = new AbstractTermValueProvider(TermIndexes.SINGLE_WORD_LEMMA) {
+		
 		@Override
-		public Collection<String> getClasses(Term term) {
+		public Collection<String> getClasses(TermIndex termIndex, Term term) {
 			if(term.isSingleWord())
 				return Lists.newArrayList(term.getWords().get(0).getWord().getLemma());
 			return null;
@@ -54,21 +60,21 @@ public class TermValueProviders {
 	};
 
 	public static final TermValueProvider TERM_LEMMA_LOWER_CASE_PROVIDER = new AbstractTermValueProvider(TermIndexes.LEMMA_LOWER_CASE) {
-		public java.util.Collection<String> getClasses(Term term) {
+		public java.util.Collection<String> getClasses(TermIndex termIndex, Term term) {
 			return ImmutableList.of(term.getLemma().toLowerCase());
 		};
 	};
 
 	public static final TermValueProvider TERM_NOCLASS_PROVIDER = new AbstractTermValueProvider(TermIndexes.TERM_NOCLASS) {
 		private String value = "noclass";
-		public java.util.Collection<String> getClasses(Term term) {
+		public java.util.Collection<String> getClasses(TermIndex termIndex, Term term) {
 			return ImmutableList.of(value);
 		};
 	};
 
 	public static final TermValueProvider WORD_LEMMA_PROVIDER = new AbstractTermValueProvider(TermIndexes.WORD_LEMMA) {
 		@Override
-		public Collection<String> getClasses(Term term) {
+		public Collection<String> getClasses(TermIndex termIndex, Term term) {
 			List<String> lemmas = Lists.newArrayListWithCapacity(term.getWords().size());
 			Iterator<LemmaStemHolder> it = term.asComponentIterator();
 			LemmaStemHolder c;
@@ -92,7 +98,7 @@ public class TermValueProviders {
 	public static final TermValueProvider WORD_LEMMA_STEM_PROVIDER = new AbstractTermValueProvider(TermIndexes.WORD_COUPLE_LEMMA_STEM) {
 
 		@Override
-		public Collection<String> getClasses(Term term) {
+		public Collection<String> getClasses(TermIndex termIndex, Term term) {
 			List<String> lemmas = Lists.newArrayListWithCapacity(term.getWords().size());
 			
 			Map<String, String> stems = new HashMap<String, String>();
@@ -130,7 +136,7 @@ public class TermValueProviders {
 	public static final TermValueProvider WORD_LEMMA_LEMMA_PROVIDER = new AbstractTermValueProvider(TermIndexes.WORD_COUPLE_LEMMA_LEMMA) {
 
 		@Override
-		public Collection<String> getClasses(Term term) {
+		public Collection<String> getClasses(TermIndex termIndex, Term term) {
 			List<String> lemmas = Lists.newArrayListWithCapacity(term.getWords().size());
 			for(TermWord w:term.getWords()) {
 				if (w.getWord().getLemma() == null || w.getWord().getLemma().isEmpty()) {
@@ -169,7 +175,7 @@ public class TermValueProviders {
 	
 	public static final TermSingleValueProvider WORD_LEMMA_LOWER_CASE = new TermSingleValueProvider(TermIndexes.WORD_LEMMA_LOWER_CASE) {
 		@Override
-		public String getClass(Term term) {
+		public String getClass(TermIndex termIndex, Term term) {
 			return Character.toString(Character.toLowerCase(term.getGroupingKey().charAt(0)));
 		}
 	};
@@ -188,5 +194,57 @@ public class TermValueProviders {
 
 	public static TermValueProvider get(String key) {
 		return valueProviders.get(key);
+	}
+
+	/*
+	 * TODO Bad design, unify model with all indexes even though
+	 * 		that do not need TermIndex
+	 */
+	public static TermValueProvider get(String indexName, TermIndex termIndex) {
+		switch(indexName) {
+		case TermIndexes.TERM_HAS_PREFIX_LEMMA:
+			return new SelectorTermValueProvider(
+						TermIndexes.WORD_LEMMA,
+						new HasSingleWordVariationSelector(VariationType.IS_PREFIX_OF), 
+						termIndex
+					);
+		case TermIndexes.TERM_HAS_DERIVATES_LEMMA:
+			return new SelectorTermValueProvider(
+						TermIndexes.WORD_LEMMA,
+						new HasSingleWordVariationSelector(VariationType.DERIVES_INTO), 
+						termIndex
+					);
+		default:
+			return get(indexName);
+		}
+	}
+	
+	
+	static class SelectorTermValueProvider extends AbstractTermValueProvider {
+		private static final String ERR_MSG_NO_SUCH_VALUE_PROVIDER = "No such TermValueProvider: %s";
+
+		TermSelector selector;
+		TermValueProvider termValueProvider;
+		TermIndex termIndex;
+		
+		public SelectorTermValueProvider(String name, TermSelector selector, TermIndex termIndex) {
+			super(name);
+			this.termValueProvider = TermValueProviders.get(this.getName());
+			Preconditions.checkNotNull(
+					this.termValueProvider,
+					ERR_MSG_NO_SUCH_VALUE_PROVIDER,
+					this.getName());
+			this.selector = selector;
+			this.termIndex = termIndex;
+		}
+
+		@SuppressWarnings("unchecked")
+		@Override
+		public Collection<String> getClasses(TermIndex termIndex, Term term) {
+			if(selector.select(termIndex, term)) {
+				return termValueProvider.getClasses(termIndex, term);
+			} else 
+				return Collections.EMPTY_SET;
+		}
 	}
 }

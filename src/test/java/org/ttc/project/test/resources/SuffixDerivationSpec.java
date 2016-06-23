@@ -13,7 +13,7 @@ import org.junit.rules.ExpectedException;
 import eu.project.ttc.models.TermWord;
 import eu.project.ttc.resources.SuffixDerivation;
 
-public class SuffixDerivationTestCase {
+public class SuffixDerivationSpec {
 	
 	SuffixDerivation suffixDerivation;
 	
@@ -27,7 +27,7 @@ public class SuffixDerivationTestCase {
 
 	@Test
 	public void testGetType() {
-		assertEquals("N A", suffixDerivation.getType());
+		assertEquals("A N", suffixDerivation.getType());
 	}
 
 	@Test

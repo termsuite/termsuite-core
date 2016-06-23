@@ -22,7 +22,7 @@ import eu.project.ttc.resources.SuffixDerivation;
 import eu.project.ttc.resources.SuffixDerivationList;
 import eu.project.ttc.resources.SuffixDerivationList.SuffixDerivationEntry;
 
-public class SuffixDerivationListTestCase {
+public class SuffixDerivationListSpec {
 	private static final String SUFFIX_DERIVATIONS1 = "org/project/ttc/test/resources/derivational-suffixes1.txt";
 	private static final String SUFFIX_DERIVATIONS_ERR1 = "org/project/ttc/test/resources/derivational-suffixes-err-2-columns.txt";
 	private static final String SUFFIX_DERIVATIONS_ERR2 = "org/project/ttc/test/resources/derivational-suffixes-err-pattern-size-3.txt";

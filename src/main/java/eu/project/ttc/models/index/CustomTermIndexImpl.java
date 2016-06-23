@@ -34,6 +34,7 @@ import com.google.common.collect.ListMultimap;
 import com.google.common.collect.Sets;
 
 import eu.project.ttc.models.Term;
+import eu.project.ttc.models.TermIndex;
 
 public class CustomTermIndexImpl implements CustomTermIndex {
 	
@@ -60,8 +61,8 @@ public class CustomTermIndexImpl implements CustomTermIndex {
 	}
 
 	@Override
-	public void indexTerm(Term term) {
-		Collection<String> classes = valueProvider.getClasses(term);
+	public void indexTerm(TermIndex termIndex, Term term) {
+		Collection<String> classes = valueProvider.getClasses(termIndex, term);
 		if(classes != null) {
 			for(String cls:classes) {
 				if(cls!= null)			
@@ -84,8 +85,8 @@ public class CustomTermIndexImpl implements CustomTermIndex {
 	}
 
 	@Override
-	public void removeTerm(Term t) {
-		for(String k:valueProvider.getClasses(t))
+	public void removeTerm(TermIndex termIndex, Term t) {
+		for(String k:valueProvider.getClasses(termIndex, t))
 			this.index.remove(k, t);
 	}
 
