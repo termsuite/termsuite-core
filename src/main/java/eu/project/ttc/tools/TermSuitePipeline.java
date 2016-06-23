@@ -81,16 +81,17 @@ import eu.project.ttc.engines.exporter.ExportVariationRuleExamples;
 import eu.project.ttc.engines.exporter.JsonCasExporter;
 import eu.project.ttc.engines.exporter.JsonExporter;
 import eu.project.ttc.engines.exporter.SpotterTSVWriter;
-import eu.project.ttc.engines.exporter.VariationExporter;
 import eu.project.ttc.engines.exporter.TBXExporter;
 import eu.project.ttc.engines.exporter.TSVExporter;
 import eu.project.ttc.engines.exporter.VariantEvalExporter;
+import eu.project.ttc.engines.exporter.VariationExporter;
 import eu.project.ttc.engines.exporter.XmiCasExporter;
 import eu.project.ttc.engines.morpho.CompostAE;
 import eu.project.ttc.engines.morpho.ManualCompositionSetter;
 import eu.project.ttc.engines.morpho.ManualPrefixSetter;
-import eu.project.ttc.engines.morpho.SuffixDerivationDetecter;
 import eu.project.ttc.engines.morpho.PrefixSplitter;
+import eu.project.ttc.engines.morpho.SuffixDerivationDetecter;
+import eu.project.ttc.engines.morpho.SuffixDerivationExceptionSetter;
 import eu.project.ttc.metrics.LogLikelihood;
 import eu.project.ttc.models.OccurrenceStore;
 import eu.project.ttc.models.OccurrenceType;
@@ -135,6 +136,7 @@ import eu.project.ttc.types.WordAnnotation;
 import eu.project.ttc.utils.OccurrenceBuffer;
 import eu.project.ttc.utils.TermSuiteUtils;
 import fr.free.rocheteau.jerome.engines.Stemmer;
+import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
 import fr.univnantes.lina.uima.ChineseSegmenterResourceHelper;
 import fr.univnantes.lina.uima.engines.ChineseSegmenter;
 import fr.univnantes.lina.uima.engines.TreeTaggerWrapper;
@@ -1101,13 +1103,35 @@ public class TermSuitePipeline {
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 			
-			return aggregateAndReturn(ae, "Detecting suffix derivations prefixes", 0);
+			return aggregateAndReturn(ae, "Detecting suffix derivations prefixes", 0)
+						.aeSuffixDerivationException();
+		} catch(Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
+	}
+
+	private TermSuitePipeline aeSuffixDerivationException()  {
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					SuffixDerivationExceptionSetter.class
+				);
+			ExternalResourceFactory.createDependencyAndBind(
+					ae,
+					SuffixDerivationExceptionSetter.SUFFIX_DERIVATION_EXCEPTION, 
+					MultimapFlatResource.class,
+					TermSuiteResource.SUFFIX_DERIVATION_EXCEPTIONS.getFileUrl(lang)
+				);
+			
+			ExternalResourceFactory.bindResource(ae, resTermIndex());
+			
+			return aggregateAndReturn(ae, "Setting suffix derivation exceptions", 0);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
 
 	}
 
+	
 
 	private TermSuitePipeline aeManualCompositionSetter()  {
 		try {

@@ -28,6 +28,7 @@ public enum TermSuiteResource {
 	ROOT_BANK("[LANG_SHORT]/morphology/[LANG]-root-bank.txt", "", ""),
 	ALLOWED_CHARS("[LANG_SHORT]/[LANG]-allowed-chars.txt", "", ""),
 	SUFFIX_DERIVATIONS("[LANG_SHORT]/morphology/[LANG]-suffix-derivation-bank.txt", "", ""),
+	SUFFIX_DERIVATION_EXCEPTIONS("[LANG_SHORT]/morphology/[LANG]-suffix-derivation-exceptions.txt", "", ""),
 	COMPOST_INFLECTION_RULES("[LANG_SHORT]/morphology/[LANG]-compost-inflection-rules.txt", "", ""),
 	COMPOST_STOP_LIST("[LANG_SHORT]/morphology/[LANG]-compost-stop-list.txt", "", ""),
 	COMPOST_TRANSFORMATION_RULES("[LANG_SHORT]/morphology/[LANG]-compost-transformation-rules.txt", "", ""),
@@ -45,7 +46,8 @@ public enum TermSuiteResource {
 	SEGMENT_BANK("[LANG_SHORT]/[LANG]-segment-bank.xml", "", ""),
 	STOP_WORDS_FILTER("[LANG_SHORT]/[LANG]-stop-word-filter.xml", "", ""),
 	TREETAGGER_CONFIG("[LANG_SHORT]/tagging/[TAGGER]/[LANG]-treetagger.xml", "", ""),
-	VARIANTS("[LANG_SHORT]/[LANG]-variants.yaml", "", "");
+	VARIANTS("[LANG_SHORT]/[LANG]-variants.yaml", "", ""), 
+	;
 	
 	private static final String MSG_ERR_RESOURCE_NOT_FOUND = "Resource %s does not exist for resource %s (resolved URL is %s)";
 	private static final String BAD_RESOURCE_URL = "Bad resource URL for resource %s: %s ";
