@@ -97,9 +97,9 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 	private TermValueProvider nFirstLettersProvider = new AbstractTermValueProvider("") {
 		@Override
 		public Collection<String> getClasses(TermIndex termIndex, Term term) {
-			if(term.getWords().size() == 1)
-				// do not gather sw term with that method
-				return ImmutableList.of();
+//			if(term.getWords().size() == 1)
+//				// do not gather sw term with that method
+//				return ImmutableList.of();
 			StringBuilder builder = new StringBuilder();
 			String normalizedStem;
 			int i = 0;
@@ -197,7 +197,10 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 					dist = distance.computeNormalized(t1.getLemma(), t2.getLemma());
 					if(dist >= this.threshold) {
 						gatheredCnt++;
-						t1.addTermVariation(t2, VariationType.GRAPHICAL, dist);
+						if(t1.getLemma().compareTo(t2.getLemma()) <= 0)
+							t1.addTermVariation(t2, VariationType.GRAPHICAL, dist);
+						else
+							t2.addTermVariation(t1, VariationType.GRAPHICAL, dist);
 					}
 				}
 			}
