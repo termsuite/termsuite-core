@@ -1308,7 +1308,7 @@ public class TermSuitePipeline {
 	}
 	
 	private ExternalResourceDescription pipelineObserverResource;
-	private ExternalResourceDescription resObserver() {
+	public ExternalResourceDescription resObserver() {
 		if(pipelineObserverResource == null) {
 			pipelineObserverResource = ExternalResourceFactory.createExternalResourceDescription(
 					ObserverResource.class, this.pipelineObserverName);
@@ -1318,7 +1318,7 @@ public class TermSuitePipeline {
 	}
 	
 	private ExternalResourceDescription syntacticVariantRules;
-	private ExternalResourceDescription resSyntacticVariantRules() {
+	public ExternalResourceDescription resSyntacticVariantRules() {
 		if(syntacticVariantRules == null) {
 			syntacticVariantRules = ExternalResourceFactory.createExternalResourceDescription(
 					YamlVariantRules.class, 
@@ -2064,6 +2064,28 @@ public class TermSuitePipeline {
 	public TermSuitePipeline linkMongoStore() {
 		this.linkMongoStore = true;
 		return this;
+	}
+	
+
+	/**
+	 * 
+	 * Aggregates an AE to the TS pipeline.
+	 * 
+	 * @param ae
+	 * 			the ae description of the added pipeline.
+	 * @param taskName
+	 * 			a user-readable name for the AE task (intended to 
+	 * 			be displayed in progress views)
+	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
+	 * 			
+	 */
+	public TermSuitePipeline customAE(AnalysisEngineDescription ae, String taskName) {
+		try {
+			return aggregateAndReturn(ae, taskName, 0);
+		} catch(Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
 	}
 
 }
