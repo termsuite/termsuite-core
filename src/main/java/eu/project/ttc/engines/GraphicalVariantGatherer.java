@@ -82,8 +82,7 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 	@ConfigurationParameter(name=SIMILARITY_THRESHOLD, mandatory=true)
 	private float threshold;
 	
-
-	private EditDistance distance = new DiacriticInsensitiveLevenshtein();
+	private EditDistance distance;
 	private Lang language;
 
 	/*
@@ -128,6 +127,7 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 			throws ResourceInitializationException {
 		super.initialize(context);
 		this.language = Lang.forName(lang);
+		distance = new DiacriticInsensitiveLevenshtein(this.language.getLocale());
 		if(observerResource != null)
 			taskObserver = Optional.of(observerResource.getTaskObserver(TASK_NAME));
 	}
