@@ -36,6 +36,18 @@ public class DiacriticInsensitiveLevenshtein extends AbstractEditDistance{
 	/** Similarity threshold under which the distance is not computed anymore */
 	private double failThreshold = -1;
 
+
+	/** Locale sensitive string comparator */
+	private Collator strCollator;
+	
+
+	public DiacriticInsensitiveLevenshtein(Locale locale) {
+		super();
+		// Might be modified depending on the language
+		strCollator = Collator.getInstance(locale);
+		strCollator.setStrength(Collator.PRIMARY);
+	}
+
 	/**
 	 * Normalizes the specified <code>distance</code> by
 	 * <code>max(|str|, |rst|)</code>. For historical reasons this method
@@ -89,14 +101,7 @@ public class DiacriticInsensitiveLevenshtein extends AbstractEditDistance{
 		return dp[str.length()][rst.length()];
 	}
 
-	/** Locale sensitive string comparator */
-	private static final Collator StrCollator;
 
-	static {
-		// Might be modified depending on the language
-		StrCollator = Collator.getInstance(Locale.getDefault());
-		StrCollator.setStrength(Collator.PRIMARY);
-	}
 
 	/**
 	 * Determines whether <code>char1</code> and <code>char2</code> are equals
@@ -109,9 +114,14 @@ public class DiacriticInsensitiveLevenshtein extends AbstractEditDistance{
 	 * @return <code>true</code> if <code>char1</code> and <code>char2</code>
 	 *         are equals, or <code>false</code> otherwise.
 	 */
-	public static boolean diacriticInsensitiveEquals(char char1, char char2) {
-		return StrCollator.equals(Character.toString(char1),
-				Character.toString(char2));
+	public boolean diacriticInsensitiveEquals(char char1, char char2) {
+		return strCollator.equals(
+				toComparableStr(char1),
+						toComparableStr(char2));
+	}
+
+	private String toComparableStr(char char1) {
+		return Character.toString(char1);
 	}
 
 	@Override

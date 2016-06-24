@@ -23,6 +23,7 @@ package org.ttc.project.test;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
+import org.ttc.project.test.engines.GraphicalVariantGathererSpec;
 import org.ttc.project.test.engines.SyntacticTermGathererSpec;
 import org.ttc.project.test.engines.TermClassifierSpec;
 import org.ttc.project.test.io.SegmentationParserSpec;
@@ -33,6 +34,8 @@ import org.ttc.project.test.selectors.HasSingleWordSelectorSpec;
 import org.ttc.project.test.selectors.TermClassProvidersSpec;
 import org.ttc.project.test.variants.VariantRuleSpec;
 import org.ttc.project.test.variants.VariantRuleYamlIOSpec;
+
+import eu.project.ttc.metrics.test.DiacriticInsensitiveLevenshteinSpec;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
@@ -57,6 +60,8 @@ import org.ttc.project.test.variants.VariantRuleYamlIOSpec;
 	SuffixDerivationSpec.class,
 	TermClassProvidersSpec.class,
 	HasSingleWordSelectorSpec.class,
+	DiacriticInsensitiveLevenshteinSpec.class,
+	GraphicalVariantGathererSpec.class,
 	CrossTableSpec.class
 	})
 public class AllTests {

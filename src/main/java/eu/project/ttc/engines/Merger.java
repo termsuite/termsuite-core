@@ -1,6 +1,7 @@
 package eu.project.ttc.engines;
 
 import java.util.List;
+import java.util.Locale;
 
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
@@ -41,7 +42,7 @@ public class Merger extends JCasAnnotator_ImplBase {
 	private float threshold;
 	
 
-	private EditDistance distance = new DiacriticInsensitiveLevenshtein();
+	private EditDistance distance = new DiacriticInsensitiveLevenshtein(Locale.getDefault());
 
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
