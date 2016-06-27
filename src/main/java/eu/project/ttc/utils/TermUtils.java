@@ -25,7 +25,6 @@ import java.io.PrintStream;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
@@ -37,17 +36,17 @@ import com.google.common.collect.Sets;
 
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.engines.desc.TermSuiteResourceException;
+import eu.project.ttc.engines.morpho.CompoundUtils;
+import eu.project.ttc.models.Component;
 import eu.project.ttc.models.ContextVector;
-import eu.project.ttc.models.LemmaStemHolder;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermOccurrence;
 import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.models.TermWord;
-import eu.project.ttc.models.index.CustomTermIndex;
+import eu.project.ttc.models.Word;
 import eu.project.ttc.models.index.TermIndexes;
 import eu.project.ttc.models.index.TermMeasure;
-import eu.project.ttc.models.index.TermValueProviders;
 import eu.project.ttc.resources.GeneralLanguageResource;
 import eu.project.ttc.tools.TermSuiteResource;
 
@@ -103,7 +102,6 @@ public class TermUtils {
 		}
 	}
 
-	
 	public static void showCompounds(TermIndex index, PrintStream out, int threshhold) {
 		List<Term> terms = Lists.newArrayList();
 		for(Term term:index.getTerms()) {
@@ -136,16 +134,13 @@ public class TermUtils {
 	 * @see Term#asComponentIterator(boolean)
 	 */
 	public static List<Term> getSingleWordTerms(TermIndex termIndex, Term term, boolean compoundLevel) {
-		CustomTermIndex index = termIndex.createCustomIndex(TermIndexes.SINGLE_WORD_LEMMA, TermValueProviders.get(TermIndexes.SINGLE_WORD_LEMMA));
 		List<Term> terms = Lists.newArrayList();
-		Iterator<LemmaStemHolder> it = term.asComponentIterator(compoundLevel);
-		LemmaStemHolder lemmaStemHolder;
-		while (it.hasNext()) {
-			lemmaStemHolder = (LemmaStemHolder) it.next();
-			List<Term> swtTerms = index.getTerms(lemmaStemHolder.getLemma());
-			if(swtTerms.size() > 0)
-				terms.add(swtTerms.get(0));
+		for(TermWord tw:term.getWords()) {
+			Term swt = termIndex.getTermByGroupingKey(toGroupingKey(tw));
+			if(swt != null)
+				terms.add(swt);
 		}
+		
 		return terms;
 	}
 
@@ -376,4 +371,27 @@ public class TermUtils {
 				termWord.getWord().getLemma());
 	}
 
+	
+	/**
+	 * 
+	 * Transforms a term into a list of component sets.
+	 * 
+	 * This
+	 * 
+	 * 
+	 * 
+	 * @param term
+	 * @return
+	 */
+	public static List<Set<Component>> toComponentSets(Iterable<Word> words) {
+		List<Set<Component>> sets = Lists.newArrayList();
+		for(Word w:words) {
+			if(w.isCompound())
+				sets.add(Sets.newHashSet(CompoundUtils.allSizeComponents(w)));
+			else {
+				sets.add(Sets.newHashSet(new Component(w.getLemma(), 0, w.getLemma().length())));
+			}
+		}
+		return sets;
+	}
 }

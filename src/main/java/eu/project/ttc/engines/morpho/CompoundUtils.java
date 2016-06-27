@@ -11,6 +11,8 @@ import com.google.common.collect.Sets;
 import eu.project.ttc.models.Component;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.models.index.TermValueProviders;
+import eu.project.ttc.utils.Pair;
+import eu.project.ttc.utils.TermSuiteConstants;
 
 /**
  * 
@@ -23,7 +25,7 @@ import eu.project.ttc.models.index.TermValueProviders;
 public class CompoundUtils {
 
 	private static final String ERR_MSG_CANNOT_MERGE_AN_EMPTY_SET = "Cannot merge an empty set of component";
-	private static final String ERR_MSG_COMPONENTS_ARE_NOT_CONSECUTIVE = "Cannot merge two components if they are not consecutive. Got [%s,%s] followed by [%s,%s].";
+	private static final String ERR_MSG_COMPONENTS_OVERLAP = "Cannot merge two components if they overlap. Got [%s,%s] followed by [%s,%s].";
 	private static final String ERR_MSG_COMPONENT_OFFSET_ARE_TOO_BIG = "Component %s does not belong to word %s (length=%s), because offsets [%s,%s] are too big.";
 	private static final String ERR_WMSG_WORD_LEMMA_NULL = "Word lemma needs to not be null";
 	
@@ -100,11 +102,13 @@ public class CompoundUtils {
 		while (it.hasNext()) {
 			Component cur = it.next();
 			Preconditions.checkArgument(
-					cur.getBegin() == lastComponent.getEnd(),
-					ERR_MSG_COMPONENTS_ARE_NOT_CONSECUTIVE,
+					cur.getBegin() >= lastComponent.getEnd(),
+					ERR_MSG_COMPONENTS_OVERLAP,
 					lastComponent.getBegin(), lastComponent.getEnd(),
 					cur.getBegin(), cur.getEnd()
 				);
+			
+			
 			Preconditions.checkArgument(
 					cur.getEnd() <= word.getLemma().length(),
 					ERR_MSG_COMPONENT_OFFSET_ARE_TOO_BIG,
@@ -112,6 +116,13 @@ public class CompoundUtils {
 					cur.getBegin(),cur.getEnd()
 					);
 			lemmaBuilder.append(word.getLemma().substring(lastComponent.getBegin(), lastComponent.getEnd()));
+			
+			if(lastComponent.getEnd() < cur.getBegin())
+				/*
+				 * Fills the gap with the lemma substring
+				 */
+				lemmaBuilder.append(word.getLemma().substring(lastComponent.getEnd(), cur.getBegin()));
+			
 			lastComponent = cur;
 		}
 		lemmaBuilder.append(lastComponent.getLemma());
@@ -133,20 +144,32 @@ public class CompoundUtils {
 	 * @return
 	 * 			the exhaustive list of pairs.
 	 */
-	public static List<ComponentPair> innerComponentPairs(Word word) {
-		Set<ComponentPair> pairs = Sets.newHashSet();
+	public static List<Pair<Component>> innerComponentPairs(Word word) {
+		Set<Pair<Component>> pairs = Sets.newHashSet();
 		List<Component> components = allSizeComponents(word);
 		Component c1,c2;
-		ComponentPair pair;
+		Pair<Component> pair;
 		for(int i=0; i<components.size(); i++) {
 			c1 = components.get(i);
 			for(int j=i+1; j<components.size(); j++) {
 				c2 = components.get(j);
-				pair = new ComponentPair(c1, c2);
-				if(!pair.overlaps()) 
+				pair = new Pair<Component>(c1, c2);
+				if(pair.getElement1().getEnd() <= pair.getElement2().getBegin())
+					// no overlap
 					pairs.add(pair);
 			}
 		}
 		return Lists.newArrayList(pairs);
 	}
+	
+	public static String toIndexString(Pair<Component> pair) {
+		boolean ordered = pair.getElement1().getLemma().compareTo(pair.getElement2().getLemma()) <= 0;
+		StringBuilder sb = new StringBuilder();
+		sb.append(ordered ? pair.getElement1().getLemma() : pair.getElement2().getLemma());
+		sb.append(TermSuiteConstants.PLUS);
+		sb.append(ordered ? pair.getElement2().getLemma() : pair.getElement1().getLemma());
+		return sb.toString();
+		
+	}
+
 }

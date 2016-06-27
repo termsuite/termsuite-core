@@ -9,6 +9,7 @@ import org.assertj.core.util.Lists;
 import com.google.common.base.Preconditions;
 
 import eu.project.ttc.models.Component;
+import eu.project.ttc.models.CompoundType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermBuilder;
 import eu.project.ttc.models.TermIndex;
@@ -58,7 +59,7 @@ public class TermFactory {
 					t.getGroupingKey());
 	}
 
-	public void wordComposition(String wordLemma, String... componentSpecs) {
+	public void wordComposition(CompoundType type, String wordLemma, String... componentSpecs) {
 		Word word = this.termIndex.getWord(wordLemma);
 		Preconditions.checkArgument(
 				word != null,
@@ -71,12 +72,12 @@ public class TermFactory {
 			Preconditions.checkArgument(matcher.find(), "Bad component word spec: %s", componentSpec);
 			String substring = matcher.group(1);
 			String lemma = matcher.group(2);
-			int start = wordLemma.indexOf(lemma);
+			int start = wordLemma.indexOf(substring);
 			Component component = new Component(lemma, start, start + substring.length());
 			components.add(component);
 		}
 		
-		word.setComposition(components);
+		word.setComposition(type, components);
 	}
 	
 }

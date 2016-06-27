@@ -128,16 +128,33 @@ public class CompoundUtilsSpec {
 			  	.hasMessage("Cannot merge an empty set of component");
 		}
 	}
-
+	
 	@Test
 	public void testMergeWithNonConsecutiveComponents() {
+		Word w = WordBuilder.start()
+				.setLemma("homme-grenouille")
+				.addComponent(0, 5, "homme")
+				.addComponent(6, 16, "grenouille")
+				.create();
+
+		Component merged = CompoundUtils.merge(w, w.getComponents());
+		assertThat(merged.getBegin()).isEqualTo(0);
+		assertThat(merged.getEnd()).isEqualTo(16);
+		assertThat(merged.getLemma()).isEqualTo("homme-grenouille");
+
+		
+	}
+
+
+	@Test
+	public void testMergeWithOverlappingComponents() {
 		try {
-			CompoundUtils.merge(w_abcdefgh, ImmutableList.of(ab, ef));
+			CompoundUtils.merge(w_abcdefgh, ImmutableList.of(ab, new Component("titi", 1, 3)));
 			fail("Should have thrown Exception");
 		} catch(Exception e) {
 			  assertThat(e)
 			  	.isInstanceOf(IllegalArgumentException.class)
-			  	.hasMessage("Cannot merge two components if they are not consecutive. Got [0,2] followed by [4,6].");
+			  	.hasMessage("Cannot merge two components if they overlap. Got [0,2] followed by [1,3].");
 		}
 	}
 
@@ -207,11 +224,11 @@ public class CompoundUtilsSpec {
 			.hasSize(0);
 		assertThat(CompoundUtils.innerComponentPairs(w_abcd))
 			.hasSize(1)
-			.extracting("component1.lemma", "component2.lemma")
+			.extracting("element1.lemma", "element2.lemma")
 			.contains(tuple("aa","cc"));
 		assertThat(CompoundUtils.innerComponentPairs(w_abcdef))
 			.hasSize(5)
-			.extracting("component1.lemma", "component2.lemma")
+			.extracting("element1.lemma", "element2.lemma")
 			.contains(
 					tuple("aa","cc"),
 					tuple("aa","ee"),
@@ -221,7 +238,7 @@ public class CompoundUtilsSpec {
 				);
 		assertThat(CompoundUtils.innerComponentPairs(w_abcdefgh))
 			.hasSize(15)
-			.extracting("component1.lemma", "component2.lemma")
+			.extracting("element1.lemma", "element2.lemma")
 			.contains(
 					tuple("aa","cc"),
 					tuple("aa","ee"),

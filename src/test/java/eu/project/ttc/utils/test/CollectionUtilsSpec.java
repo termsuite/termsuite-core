@@ -1,6 +1,7 @@
 package eu.project.ttc.utils.test;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.tuple;
 
 import java.util.List;
 import java.util.Set;
@@ -14,7 +15,6 @@ import eu.project.ttc.utils.CollectionUtils;
 
 public class CollectionUtilsSpec {
 
-	@SuppressWarnings("unchecked")
 	@Test
 	public void testCombineAndProduct() {
 		List<? extends Set<String>> sets = ImmutableList.of(
@@ -25,18 +25,19 @@ public class CollectionUtilsSpec {
 		
 		assertThat(CollectionUtils.combineAndProduct(sets))
 			.hasSize(11)
+			.extracting("element1", "element2")
 			.contains(
-					ImmutableList.of("a", "d"),
-					ImmutableList.of("b", "d"),
-					ImmutableList.of("c", "d"),
-					ImmutableList.of("a", "e"),
-					ImmutableList.of("b", "e"),
-					ImmutableList.of("c", "e"),
-					ImmutableList.of("a", "f"),
-					ImmutableList.of("b", "f"),
-					ImmutableList.of("c", "f"),
-					ImmutableList.of("d", "e"),
-					ImmutableList.of("d", "f")
+					tuple("a", "d"),
+					tuple("b", "d"),
+					tuple("c", "d"),
+					tuple("a", "e"),
+					tuple("b", "e"),
+					tuple("c", "e"),
+					tuple("a", "f"),
+					tuple("b", "f"),
+					tuple("c", "f"),
+					tuple("d", "e"),
+					tuple("d", "f")
 				);
 	}
 }

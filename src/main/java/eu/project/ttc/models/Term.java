@@ -275,9 +275,9 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 	 * 
 	 * @return
 	 */
-	public Iterator<LemmaStemHolder> asComponentIterator() {
-		return asComponentIterator(true);
-	}
+//	public Iterator<LemmaStemHolder> asComponentIterator() {
+//		return asComponentIterator(true);
+//	}
 
 
 	/**
@@ -293,29 +293,29 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 	 * @return
 	 * 		The list of words and/or (depending on <code>compoundLevel</code>) compounds.
 	 */
-	public Iterator<LemmaStemHolder> asComponentIterator(final boolean compoundLevel) {
-		return new AbstractIterator<LemmaStemHolder>() {
-			private final Iterator<TermWord> it = Term.this.termWords.iterator();
-			private Iterator<Component> currentWordIt;
-			
-			@Override
-			protected LemmaStemHolder computeNext() {
-				if(currentWordIt != null && currentWordIt.hasNext()) {
-					return currentWordIt.next();
-				} else if(it.hasNext()) {
-					TermWord w = it.next();
-					if(compoundLevel && w.getWord().isCompound()) {
-						this.currentWordIt = w.getWord().getComponents().iterator();
-						return this.currentWordIt.next();
-					} else {
-						currentWordIt = null;
-						return w.getWord();
-					}
-				} else 
-					return endOfData();
-			}
-		};
-	}
+//	public Iterator<LemmaStemHolder> asComponentIterator(final boolean compoundLevel) {
+//		return new AbstractIterator<LemmaStemHolder>() {
+//			private final Iterator<TermWord> it = Term.this.termWords.iterator();
+//			private Iterator<Component> currentWordIt;
+//			
+//			@Override
+//			protected LemmaStemHolder computeNext() {
+//				if(currentWordIt != null && currentWordIt.hasNext()) {
+//					return currentWordIt.next();
+//				} else if(it.hasNext()) {
+//					TermWord w = it.next();
+//					if(compoundLevel && w.getWord().isCompound()) {
+//						this.currentWordIt = w.getWord().getComponents().iterator();
+//						return this.currentWordIt.next();
+//					} else {
+//						currentWordIt = null;
+//						return w.getWord();
+//					}
+//				} else 
+//					return endOfData();
+//			}
+//		};
+//	}
 	
 	public String getPattern() {
 		if(pattern == null) {

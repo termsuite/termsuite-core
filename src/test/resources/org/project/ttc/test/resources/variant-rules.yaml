@@ -16,3 +16,10 @@
   source: N A
   target: N A
   rule: s[0]==t[0] && prefix(t[1],s[1])
+
+
+# hormonosensibilité - sensibilité aux hormones; portance-angle - angle de portance
+"M-PI-EN-P":
+  source: N [compound]
+  target: N P N
+  rule: s[0][0]==t[2] && s[0][1]==t[0]

@@ -30,12 +30,12 @@ public class CollectionUtils {
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
-	public static <T> Set<List<T>> combineAndProduct(List<? extends Set<? extends T>> sets) {
-		Set<List<T>> results = Sets.newHashSet();
+	public static <T extends Comparable<? super T>> Set<Pair<T>> combineAndProduct(List<? extends Set<? extends T>> sets) {
+		Set<Pair<T>> results = Sets.newHashSet();
 		for(int i = 0; i< sets.size(); i++) {
 			for(int j = i+1; j< sets.size(); j++)
-				results.addAll(
-						Sets.cartesianProduct(sets.get(i), sets.get(j)));
+				for(List<T> l:Sets.cartesianProduct(sets.get(i), sets.get(j)))
+					results.add(new Pair<T>(l.get(0), l.get(1)));
 		}
 		return results;
 	}

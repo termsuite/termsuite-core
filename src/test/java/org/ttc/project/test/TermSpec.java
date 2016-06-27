@@ -251,14 +251,17 @@ public class TermSpec {
 	@Test
 	public void testGetLemmaKeys() {
 		TermValueProvider provider = TermValueProviders.get(TermIndexes.WORD_LEMMA);
-		Assert.assertEquals(
-				ImmutableList.of("énergie", "éolien"),
-				provider.getClasses(termIndex, term1));
-		Assert.assertEquals(
-				ImmutableList.of("radio","électrique"),
-				provider.getClasses(termIndex, term2));
-		Assert.assertEquals(
-				ImmutableList.of("accès", "radio", "électrique", "de", "recouvrement"), 
-				provider.getClasses(termIndex, term3));
+		
+		assertThat(provider.getClasses(termIndex, term1))
+			.hasSize(2)
+			.contains("énergie", "éolien");
+		
+		assertThat(provider.getClasses(termIndex, term2))
+			.hasSize(1)
+			.contains("radioélectrique");
+	
+		assertThat(provider.getClasses(termIndex, term3))
+			.hasSize(4)
+			.contains("accès", "radioélectrique", "de", "recouvrement");
 	}
 }

@@ -17,6 +17,7 @@ import org.ttc.project.Fixtures;
 import org.ttc.project.TermFactory;
 
 import eu.project.ttc.engines.SyntacticTermGatherer;
+import eu.project.ttc.models.CompoundType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.VariationType;
 import eu.project.ttc.models.index.MemoryTermIndex;
@@ -36,6 +37,8 @@ public class SyntacticTermGathererSpec {
 	private Term phase_du_stator;
 	private Term geothermie_hydraulique_solaire;
 	private Term geothermie_hydraulique;
+	private Term hormonosensibilite;
+	private Term sensible_aux_hormones;
 	
 	private AnalysisEngine ae;
 	
@@ -64,6 +67,10 @@ public class SyntacticTermGathererSpec {
 		this.geothermie_hydraulique = termFactory.create(
 				"N:geothermie|géotherm", "A:hydraulique|hydraulic");
 
+		this.hormonosensibilite = termFactory.create(
+				"N:hormonosensibilité|hormonosensibilit");
+		this.sensible_aux_hormones = termFactory.create("N:sensibilité|sensibilité", "P:à|à", "N:hormone|hormone");
+		termFactory.wordComposition(CompoundType.NATIVE, "hormonosensibilité", "hormono|hormone", "sensibilité|sensibilité");
 		
 		termFactory.addPrefix(this.asynchrone, this.synchrone);
 		termFactory.addDerivesInto("N A", this.stator, this.statorique);
@@ -124,6 +131,15 @@ public class SyntacticTermGathererSpec {
 			.hasSize(0);
 	}
 
+	@Test
+	public void testProcessCompoundRules() throws AnalysisEngineProcessException{
+		assertThat(this.hormonosensibilite.getVariations())
+			.hasSize(1)
+			.extracting("variationType", "info", "variant")
+			.contains(tuple(VariationType.MORPHOLOGICAL, "M-PI-EN-P", this.sensible_aux_hormones));
+	}
+
+	
 	@Test
 	public void testProcessDerivation() throws AnalysisEngineProcessException{
 		assertThat(this.phase_du_stator.getVariations())
