@@ -10,7 +10,16 @@ import com.google.common.collect.Sets;
 
 import eu.project.ttc.models.Component;
 import eu.project.ttc.models.Word;
+import eu.project.ttc.models.index.TermValueProviders;
 
+/**
+ * 
+ * A set of helper methods for compound words and for iteration
+ * over word components (see {@link TermValueProviders}).
+ * 
+ * @author Damien Cram
+ *
+ */
 public class CompoundUtils {
 
 	private static final String ERR_MSG_CANNOT_MERGE_AN_EMPTY_SET = "Cannot merge an empty set of component";
@@ -34,7 +43,7 @@ public class CompoundUtils {
 	 * @return
 	 * 			the list of all possible component lemmas
 	 */
-	public static Set<Component> allSizeComponents(Word word) {
+	public static List<Component> allSizeComponents(Word word) {
 		Set<Component> components = Sets.newHashSet();
 		for(int nbComponents=word.getComponents().size();
 				nbComponents > 0 ;
@@ -51,7 +60,7 @@ public class CompoundUtils {
 				components.add(merge(word, toMerge));
 			}
 		}
-		return components;
+		return Lists.newArrayList(components);
 	}
 
 	/**
@@ -109,4 +118,35 @@ public class CompoundUtils {
 		return new Component(lemmaBuilder.toString(), begin, lastComponent.getEnd());
 	}
 
+	
+	/**
+	 * 
+	 * Produces the set of all pairs of non-overlapping components
+	 * for a given word.
+	 * 
+	 * E.g. ab|cd|ef returns:
+	 * 		ab+cd, ab+ef, cd+ef, ab+cdef, abcd+ef
+	 * 			
+	 * 
+	 * @param word
+	 * 			the compound word
+	 * @return
+	 * 			the exhaustive list of pairs.
+	 */
+	public static List<ComponentPair> innerComponentPairs(Word word) {
+		Set<ComponentPair> pairs = Sets.newHashSet();
+		List<Component> components = allSizeComponents(word);
+		Component c1,c2;
+		ComponentPair pair;
+		for(int i=0; i<components.size(); i++) {
+			c1 = components.get(i);
+			for(int j=i+1; j<components.size(); j++) {
+				c2 = components.get(j);
+				pair = new ComponentPair(c1, c2);
+				if(!pair.overlaps()) 
+					pairs.add(pair);
+			}
+		}
+		return Lists.newArrayList(pairs);
+	}
 }

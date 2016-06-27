@@ -20,6 +20,7 @@ public class CompoundUtilsSpec {
 
 	Word w_ab;
 	Word w_abcd;
+	Word w_abcdef;
 	Word w_abcdefgh;
 	Component ab, cd, ef, gh;
 	
@@ -46,7 +47,14 @@ public class CompoundUtilsSpec {
 				.addComponent(0, 2, "aa")
 				.addComponent(2, 4, "cc")
 				.create();
-		
+
+		w_abcdef = WordBuilder.start()
+				.setLemma("abcdee")
+				.addComponent(0, 2, "aa")
+				.addComponent(2, 4, "cc")
+				.addComponent(4, 6, "ee")
+				.create();
+
 	}
 	
 	@Test
@@ -192,4 +200,45 @@ public class CompoundUtilsSpec {
 				tuple(0,8,"abcdefgg")
 				);
 	}
+	
+	@Test
+	public void testInnerComponentPairs() {
+		assertThat(CompoundUtils.innerComponentPairs(w_ab))
+			.hasSize(0);
+		assertThat(CompoundUtils.innerComponentPairs(w_abcd))
+			.hasSize(1)
+			.extracting("component1.lemma", "component2.lemma")
+			.contains(tuple("aa","cc"));
+		assertThat(CompoundUtils.innerComponentPairs(w_abcdef))
+			.hasSize(5)
+			.extracting("component1.lemma", "component2.lemma")
+			.contains(
+					tuple("aa","cc"),
+					tuple("aa","ee"),
+					tuple("cc","ee"),
+					tuple("aa","cdee"),
+					tuple("abcc","ee")
+				);
+		assertThat(CompoundUtils.innerComponentPairs(w_abcdefgh))
+			.hasSize(15)
+			.extracting("component1.lemma", "component2.lemma")
+			.contains(
+					tuple("aa","cc"),
+					tuple("aa","ee"),
+					tuple("aa","gg"),
+					tuple("aa","cdee"),
+					tuple("aa","efgg"),
+					tuple("aa","cdefgg"),
+					tuple("abcc","ee"),
+					tuple("abcc","gg"),
+					tuple("abcc","efgg"),
+					tuple("abcdee","gg"),
+					tuple("cc","ee"),
+					tuple("cc","gg"),
+					tuple("cc","efgg"),
+					tuple("cdee","gg"),
+					tuple("ee","gg")
+				);
+	}
+
 }
