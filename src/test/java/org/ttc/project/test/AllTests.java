@@ -36,6 +36,7 @@ import org.ttc.project.test.variants.VariantRuleSpec;
 import org.ttc.project.test.variants.VariantRuleYamlIOSpec;
 
 import eu.project.ttc.metrics.test.DiacriticInsensitiveLevenshteinSpec;
+import eu.project.ttc.utils.test.CollectionUtilsSpec;
 import eu.project.ttc.utils.test.CompoundUtilsSpec;
 
 @RunWith(Suite.class)
@@ -64,6 +65,7 @@ import eu.project.ttc.utils.test.CompoundUtilsSpec;
 	HasSingleWordSelectorSpec.class,
 	DiacriticInsensitiveLevenshteinSpec.class,
 	GraphicalVariantGathererSpec.class,
+	CollectionUtilsSpec.class,
 	CrossTableSpec.class
 	})
 public class AllTests {
