@@ -113,49 +113,6 @@ public class Fixtures {
 		return w;
 	}
 
-	/**
-	 * le
-	 */
-	public static Word word8() {
-		Word w = WordBuilder.start()
-				.setLemma("le")
-				.setStem("le")
-				.create();
-		return w;
-	}
-
-	/**
-	 * mange
-	 */
-	public static Word word9() {
-		Word w = WordBuilder.start()
-				.setLemma("manger")
-				.setStem("mang")
-				.create();
-		return w;
-	}
-
-	/**
-	 * une
-	 */
-	public static Word word10() {
-		Word w = WordBuilder.start()
-				.setLemma("une")
-				.setStem("une")
-				.create();
-		return w;
-	}
-
-	/**
-	 * pizza
-	 */
-	public static Word word11() {
-		Word w = WordBuilder.start()
-				.setLemma("pizza")
-				.setStem("pizza")
-				.create();
-		return w;
-	}
 
 	/**
 	 * na: énergie éolien
@@ -301,15 +258,6 @@ public class Fixtures {
 				.createAndAddToIndex();
 	}
 
-	public static Term term13(TermIndex termIndex) {
-		return TermBuilder.start(termIndex)
-				.setId(13)
-				.setGroupingKey("n: pizza")
-				.addWord(word11(), "N")
-				.createAndAddToIndex();
-	}
-
-
 	public static Term term1() {return term1(emptyTermIndex());}
 	public static Term term2() {return term2(emptyTermIndex());}
 	public static Term term3() {return term3(emptyTermIndex());}
@@ -321,7 +269,6 @@ public class Fixtures {
 	public static Term term10() {return term10(emptyTermIndex());}
 	public static Term term11() {return term11(emptyTermIndex());}
 	public static Term term12() {return term12(emptyTermIndex());}
-	public static Term term13() {return term13(emptyTermIndex());}
 	
 	/**
 	 * @return

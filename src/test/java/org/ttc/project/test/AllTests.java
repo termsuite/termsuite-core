@@ -45,7 +45,7 @@ import org.ttc.project.test.variants.VariantRuleYamlIOSpec;
 	TermClassSpec.class,
 	StringUtilsSpec.class,
 //	TeiCollectionReaderSpec.class,
-	CrossTableSpec.class
+	CrossTableSpec.class, TermsuiteJsonCas.class
 	})
 public class AllTests {
 

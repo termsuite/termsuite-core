@@ -164,10 +164,10 @@ public class TermSuiteJsonCasDeserializer {
                     wa.setDegree(parser.nextTextValue());
                     break;
                 case F_FORMATION :
-                    wa.setDegree(parser.nextTextValue());
+                    wa.setFormation(parser.nextTextValue());
                     break;
                 case F_LABELS :
-                    wa.setDegree(parser.nextTextValue());
+                    wa.setLabels(parser.nextTextValue());
                     break;
                 case F_BEGIN :
                     wa.setBegin(parser.nextIntValue(0));
