@@ -36,10 +36,12 @@ import org.ttc.project.test.variants.VariantRuleSpec;
 import org.ttc.project.test.variants.VariantRuleYamlIOSpec;
 
 import eu.project.ttc.metrics.test.DiacriticInsensitiveLevenshteinSpec;
+import eu.project.ttc.utils.test.CompoundUtilsSpec;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
 	VariantRuleSpec.class, 
+	CompoundUtilsSpec.class,
 	VariantRuleYamlIOSpec.class,
 	SyntacticTermGathererSpec.class,
 	TermSpec.class, 
