@@ -1,0 +1,197 @@
+A national laboratory of the U.S. Department of Energy Office of Energy Efficiency & Renewable Energy
+
+National Renewable Energy Laboratory
+Innovation for Our Energy Future
+
+Overview of Offshore Wind Technology
+Preprint
+C.P. Butterfield, W. Musial, and J. Jonkman
+To be presented at the Chinese Renewable Energy Industry Association WindPower Shanghai Conference Shanghai, China October 31 - November 3, 2007
+
+Conference Paper
+NREL/CP-500-42252 October 2007
+
+NREL is operated by Midwest Research Institute ● Battelle
+
+Contract No. DE-AC36-99-GO10337
+
+NOTICE The submitted manuscript has been offered by an employee of the Midwest Research Institute (MRI), a contractor of the US Government under Contract No. DE-AC36-99GO10337. Accordingly, the US Government and MRI retain a nonexclusive royalty-free license to publish or reproduce the published form of this contribution, or allow others to do so, for US Government purposes. This report was prepared as an account of work sponsored by an agency of the United States government. Neither the United States government nor any agency thereof, nor any of their employees, makes any warranty, express or implied, or assumes any legal liability or responsibility for the accuracy, completeness, or usefulness of any information, apparatus, product, or process disclosed, or represents that its use would not infringe privately owned rights. Reference herein to any specific commercial product, process, or service by trade name, trademark, manufacturer, or otherwise does not necessarily constitute or imply its endorsement, recommendation, or favoring by the United States government or any agency thereof. The views and opinions of authors expressed herein do not necessarily state or reflect those of the United States government or any agency thereof. Available electronically at http://www.osti.gov/bridge Available for a processing fee to U.S. Department of Energy and its contractors, in paper, from: U.S. Department of Energy Office of Scientific and Technical Information P.O. Box 62 Oak Ridge, TN 37831-0062 phone: 865.576.8401 fax: 865.576.5728 email: mailto:reports@adonis.osti.gov Available for sale to the public, in paper, from: U.S. Department of Commerce National Technical Information Service 5285 Port Royal Road Springfield, VA 22161 phone: 800.553.6847 fax: 703.605.6900 email: orders@ntis.fedworld.gov online ordering: http://www.ntis.gov/ordering.htm
+
+Printed on paper containing at least 50% wastepaper, including 20% postconsumer waste
+
+Overview of Offshore Wind Technology
+C. P. (Sandy) Butterfield, W. Musial and J. Jonkman National Renewable Energy Laboratory Golden, Colorado USA +1 303 384 6902 (Phone) +1 303 384 6901 (FAX) Sandy_Butterfield@NREL.Gov
+
+Abstract
+Over the past 10 years, offshore wind energy has become a major focus of European wind energy research and deployment. Although current technology has been based mainly on land-based wind turbine designs, more turbines are being designed specifically for offshore applications. New standards have been developed to address the unique design environment imposed by loading from both turbulent wind acting on the blades, rotor nacelle assembly (RNA), and ocean wave forces acting on the support structure. The rapid growth of offshore wind applications has presented new challenges to wind turbine engineers. Technology unique to offshore oil and gas industry must be joined with the design technology for wind turbines. This paper is a short overview of some of the challenges facing the growth of offshore wind technology.
+
+Keywords: Wind turbine, offshore, floating, hydrodynamic behavior
+
+Introduction
+Offshore wind turbines are not a new idea. Heronemus [1] proposed them more than 30 years ago. His idea was a floating concept that would produce hydrogen that would feed a pipeline to shore. Since then, although offshore technologies are still in their infancy, land-based wind turbines have gown in number, size and improved economics. Today the cost of land-based wind energy rivals that of most fossil fuels and is likely to be less expensive than new "clean" coal. This success story can be credited to three advancements, 1) dramatic reductions in turbine costs, 2) improved reliability and 3) economies of manufacturing scale. The first two advancements were a result of improvements in design techniques and design tools. Engineers learned through exhaustive testing that the analytical tools they used for earlier machines were not adequate for predicting fatigue loads and extreme loads-the loads that drive the designs. Inaccurate predictions lead to premature failures. This realization led to extensive research in U.S. and European laboratories. Aerodynamics research was performed. Aeroelastic dynamics models were developed. Finally, standards were developed. All of this work evolved into a more mature design process that is currently implied in a suite of International Electrotechnical Commission (IEC) standards [2]. It took 15 years for the teams of engineers that developed these different standards to reach a consensus on difficult topics such as a standard set of design external conditions and extreme environment conditions, critical design load cases, methods to arrive at acceptable extreme loads and fatigue loads, testing methods to verify their analyses and certification methods that would ensure consistent quality. The result was a far more reliable and economical fleet of turbines. It also created a basis for educating the next generation of wind energy engineers. However, very little of this type of research was done for offshore development until Europeans began experimental projects in the shallow waters surrounding Denmark [3]. The third advancement was due to consistent national policy that created a positive economic environment, mainly for Denmark and Germany. Offshore meteorological and ocean (met/ocean) environmental conditions add to the engineering challenge. In addition to turbulence loading exciting dynamically active structures, there are powerful ocean waves that randomly excite the same structure. This is significantly different than the relatively static structures for offshore oil and gas operations. Although these structures can be flexible, none of them have dynamically active rotors introducing nonlinear loads to the load spectrum. Adding another stochastic load to the design effort requires nonlinear time series analyses using coupled aeroelastic/hydrodynamics analyses. Hydrodynamic analyses require modeling the physics of both waves and the structure's dynamic response to them. Aeroelastic analyses require time variant aerodynamic loading interacting with a dynamic structure. Both can be extremely complicated, but rarely are they combined into a coupled analysis. This presents an entirely new challenge.
+
+1
+
+These challenges will limit maturity and innovation in offshore wind energy until adequate research is devoted to it developing and validating design tools. Over the past 10 years [3] projects have been deployed in waters less than 20 m in depth using existing structural dynamic codes adapted from offshore oil and gas technology and the wind industry (decoupled). All have been fixed bottom support structures, making the dynamic analyses easier, mainly because they can be treated separately. The reason offshore deployment has happened in Europe and not places like the United States is the economic stimulants favorable to wind energy in Europe. Governments have provided long-term commitments to supporting renewable energy. Also, land-based wind resources are not as great as offshore resources, and high population density discourages large-scale wind farm developments like those common in the western and Midwestern United States. Finally, the waters surrounding many northern European countries are shallow enough to make relatively inexpensive support structures possible. This picture changes for U.S. waters. While the United States has plentiful offshore wind resources, shallow water depths are not as plentiful as they are in Europe. Water depths for sites more than 5 km offshore are more likely to exceed 20 m, forcing developers to consider alternative support structures. These are likely to become more expensive [4], The following report gives a short overview of some of the technical challenges and possible future challenges.
+
+Current Technology
+As wind turbine technology has scaled up to meet demand, the cost of energy (COE) has dropped. The reason for this is partly that the cost of maintenance and infrastructure favors fewer machines per total wind farm capacity and partly because the cost of shipping individual turbine components to various site locations has not been prohibitively expensive. Also, turbine costs per rating have not dramatically increased with size as shown by Malcolm et, al [5]. This last point runs counter to engineering physics. Physical principles would suggest that turbine costs would increase as the third power of the rotor diameter, yet power only scales with the square of the diameter. This suggests that as turbine diameter increases, the amount of material (and hence cost) would out pace power (and hence energy) available. In other words, physical principles would suggest that turbines should get more expensive with increasing rotor diameter. This is explained by Manwell [6] and others in wind energy text books. However, engineers have been able to keep the cost per rating nearly constant for wind turbines through continued technology improvement and innovation. This trend continued until components such as the blades and tower base sections became so large that they could no longer be easily shipped over normal roadways. Figure 1 shows this trend for commercial machines such as Vestas (V80, V90) and Siemens turbines compared to strict scaling without technology innovation as shown by Malcolm [5] in the WindPACT studies. The commercial turbines have been able to actually reduce their specific RNA mass with increasing diameter by applying technology innovations with each new turbine model. However, as turbine diameters exceeded 1.5 to 2.0 MW ratings, the shipping costs began to sharply rise. This fact supports offshore applications for larger machines because of the relatively low cost of transportation over waterways that have virtually no restrictions on component size. But the dramatic increase in installation costs for offshore applications has driven overall costs up. When you add the increase in operations and maintenance cost at sea, offshore wind WindPact Baselines energy looses its low transportation WindPact Task#5 Final RNA Mass / Swept Area cost advantage. NREL Baseline 5MW
+40.0 35.0 Mass/swept area (kg/m^2) 30.0 25.0 20.0 15.0 10.0 5.0
+
+While the wind industry will agree that the cost of offshore wind energy is higher than land-based, many argue that offshore wind energy is still cost competitive with land-based fossil fuel generation when environmental impacts are added into the cost equation. Furthermore, industry expects technology improvements to pave the way for the same kind of cost reductions that have made land-based
+
+GPRA 2005 - 2025 Estimates RePower 5MW
+
+Offshore Turbines
+
+Enercon 6MW V120 4.5MW MultiBrid 5MW GE 3.6MW V80 V90 Siemens
+
+Path to 3.5 cents/kwh, DOE onshore goal
+40 60 80 100 120 140 Diameter (m)
+
+0.0
+
+Figure 1: Impact of Maturing Technology and Innovation on Specific Rotor Nacelle Mass with Increasing Rotor Diameter
+
+2
+
+wind energy a viable alternative. For this reason, efforts to evolve offshore wind turbine technologies continue. Today there are several 5-MW wind turbine prototypes and one commercially available. These are shown inside the circle of Figure 1. Most of these turbines were designed using land-based standards such as IEC 61400-1 [2] plus draft versions of IEC 61400-3 [2] for offshore turbines. But this standard has not been approved through national vote at this time and it does not cover floating turbines. In addition to international standards, turbines have been designed using GL [7] and DNV [8] guidelines.
+
+Design Tools and Methods
+The complexity of the task to develop accurate modeling tools will increase with the degree of flexibility and coupling of the turbine and platform. Usually this results in greater dynamic responses to wave and wind loading. Predicting wave loads and dynamic behavior for a stable fixed bottom platform is a challenge, but it has been done, as shown by Passon [10]. However, these codes must be validated just as the land-based codes were validated using test data and code-to-code comparisons. The IEA [11] is currently engaged in an exercise to verify the dominant analytical codes today. Passon [12] describes this valuable task of comparing predicted loads and motions by most of the top analytical experts in Europe and the United States. The coupled dynamics of floating support structures are even more difficult. Jonkman [9] and Hansen [14] have shown how this can be done by joining proven wind turbine aeroelastic codes with hydrodynamic modules. Platforms such as tension leg platforms will require new analytical tools but are likely to be less difficult to design than platforms that are more susceptible to wave loading. Platforms, such as barge concepts, that have a large part of their structure near the free surface will have larger pitch, roll, and heave forces. A barge is likely to violate simple Morison's Equations assumption, which will be more complex to model and validate. Spar concepts will have smaller tower top motions relative to the barge but may still be subject to nonlinear wave forces requiring more advanced tools.
+
+Support Structures
+Figure 2 illustrates a variety of offshore support structures that are in use or under consideration. The first is a gravity foundation which, as the name implies, relies on gravity to secure it to the bottom. These work well in very shallow water where the seabed can be prepared using surface vessels and the foundation can be cast in concrete and floated to the site for placement. The second is by far the most popular. It is a "monopile" and has been used in waters around Denmark and the United Kingdom. The third is a tripod. This could be used in water with depths of more than 20 m. It capitalizes on offshore oil and gas experience. A jacket structure, which is more common to oil and gas truss structures, was used in the Beatrice project [15] in 45 m •Figure 2: Investigated support structure concepts water depths off the coast of Scotland. The fourth within the IEA Wind Annex 23 - OC3 project [4] example is a floating support structure. The IEA Offshore Code Comparison Collaborative (OC3) [11] project will compare predictions from various hydroelastic codes for all of these types of support structures.
+
+Future Offshore Technology
+Offshore wind technology will continue to evolve. For land-based machines, the most obvious evolution over the past two decades has been rotor diameter scaling. Now, with industry developing machines with 100-m diameter rotors, the scaling race is slowing for land-based wind turbines, but for offshore turbines, the scaling evolution is likely to continue. There are several 5-MW and even 10-MW turbines in development or on the drawing boards, but only one is being offered for commercial sale. Companies have experienced the difficulty of reliable offshore operation and are wary of deploying turbines before they have proven reliable performance. On the other hand, many recognize there is a very large market for offshore turbines, particularly an economic floating turbine for deep water applications. Butterfield et al [16] outline the importance of floating turbines as
+
+3
+
+well as the technical challenges. As turbines are designed specifically for the offshore application many innovations are likely to be tested. The following are a few of the most likely.
+
+Light-Weight Turbines
+Offshore wind turbines are dramatically affected by weight. Weight aloft tends to cascade down the support structure, increasing the cost all the way to the foundation. Both static and dynamic loads are increased. Light-weight rotors will be more flexible and shed dynamic loads, which will reduce the required support structure. More expensive materials might be used in an effort to control flexibility while reducing weight. For example, it might pay to use more carbon in the blades if it reduces material cost elsewhere in the structure. It might also pay to make the blades dramatically more flexible to shed load. The challenge with this design strategy is deflection control. The blades must clear the tower.
+
+Downwind Rotors
+With upwind rotors blade deflection is limited by the tower clearance. IEC standards limit the allowable minimum clearance under extreme loading conditions. This has resulted in turbines with up-tilt in the rotornacelle axis, forward coned blades and even forward curved blades. All these configuration choices lead to increasing the loads in the blades and the nacelle. Blades are no longer load limited. They are deflection limited. Almost three decades ago downwind turbines were common for the obvious load relieving advantages. Wind thrust loads tend to deflect blades downwind, away from the tower. In other words, the average tower clearance would increase rather than decrease with increasing thrust loads, as they do with all modern upwind turbines. The reason designers moved away from downwind turbines is that local residents were annoyed by the low frequency noise caused by blades passing through the tower shadow. In northern Europe this is a critical issue. However, much has been learned over the years about noise and how to mitigate it. Tower shadow noise has not been a major research topic, because the northern European industry chose to avoid it by designing upwind rotors. Now, that choice is limiting the flexibility of the blades. However, most offshore turbines will be placed far enough away from dwellings that it is not likely to matter if turbines make more noise. Furthermore, research of tower shadow physics is likely to lead to solutions to mitigate tower shadow noise.
+
+Two blades
+Two-bladed turbines were dropped by the European market for aesthetic reasons. However, it is possible that cost advantages of one less blade will bring designers back to this idea. In the late 70s and early 80s, there were several commercial two-bladed designs. Many were technically viable but needed more development to resolve engineering problems. Some researchers have suggested that offshore turbines would benefit from the lighter weight of two-bladed concepts [17].
+
+Floating Support Structures
+The vision for large-scale offshore floating wind turbines was introduced by Professor William E. Heronemus at the University of Massachusetts in 1972 [1], but it was not until the mid 1990's, after the commercial wind industry was well established, that the topic was taken up again by the mainstream research community. Current fixed-bottom technology has seen limited deployment to water depths of 20 m. As the technology advances into deeper water, floating wind turbine platforms may be the most economical means for deploying offshore wind turbines at some sites. Worldwide, the offshore wind resource has been shown to be extremely abundant, with the U.S. energy potential ranked second only to China [4].
+
+Strategy for Economic Floating Wind Turbines
+Floating platforms for wind turbines must be optimized to achieve the lowest life cycle cost of the entire system. Unlike land-based installations, the cost of offshore wind is not dominated by turbine costs, but by multiple balance-of-station (BOS) and operating expense (OPEX) factors. When floating wind turbines are introduced, a large focus must be placed on limiting foundation costs, but at the same time intelligent systemengineering decisions must be made to ensure that platform costs do not drive up the cost of other critical cost elements. More optimistically, floating platforms introduce a new design paradigm that may offer unique opportunities to reduce the weight and cost of companion systems.
+
+4
+
+Floating Platform Classification
+As mentioned earlier, floating platform configurations may vary widely. Typically, the overall architecture of a floating platform will be determined by a first-order static stability analysis, although there are many other critical factors that will determine the size and character of the final design. However, once the platform topology has been established, a crude economic feasibility analysis becomes possible. Therefore, to focus the discussion, a classification system was developed that divides all platforms into three general categories based on the physical principle or strategy that is used to achieve static stability: 1) Ballast: Platforms that achieve stability by using ballast weights hung below a central buoyancy tank that creates a righting moment and high inertial resistance to pitch and roll and usually enough draft to offset heave motion. Spar-buoys like the one shown in Figure 3 apply this strategy to achieve stability [4]. 2) Mooring Lines: Platforms that achieve stability through the use of mooring line tension. The tension leg platform (TLP), like the one shown in the center of Figure 3, relies on mooring line tension for righting stability [4]. 3) Buoyancy: Platforms that achieve stability through the use of distributed buoyancy, taking advantage of weighted water plane area for righting moment [4]. This is the principle used in a barge shown in Figure 3.
+
+Unique Offshore Challenges
+The challenges that all offshore turbines will face are: • • • • • Installation cost Reliability Operations and maintenance at sea Remote monitoring and diagnostics Validation of extreme loads
+
+The challenges for floating systems add the following to this list: • • • • • Static and dynamic stability Load prediction code validation Large motion and acceleration tolerant turbine design Light-weight turbine design Low-cost mooring systems & anchors
+
+Conclusions
+Offshore turbines present a new set of engineering and economic challenges. Although the engineering challenges are surmountable using established offshore oil and gas technology, innovation will be needed to meet the economic challenges to offshore wind technologies and to achieve economically viable, reliable operation for at least 20 years. For floating systems, these challenges are even more unique and demanding. Research, testing and standards will all play an important role.
+
+Acknowledgements
+The authors wish to thank the U.S. Department of Energy for their continued support of this work.
+
+References:
+1. 2. Heronemus, W. E. "Pollution-Free Energy From Offshore Winds", 8th Annual Conference and Exposition Marine Technology Society, Washington D.C., September 11-13, 1972. IEC 61400-1 & 61400-3 Draft Standards: http://www.iec.ch/
+
+5
+
+3. 4. 5. 6. 7. 8. 9.
+
+Offshore Information Web site: http://www.offshorewindenergy.org/ Musial, W.D.; Butterfield, C.P. "Future for Offshore Wind Energy in the United States" NREL/CP-50036313 - Energy Ocean Proceedings, Palm Beach, FL, June 2004. Malcolm, D. J.; Hansen, A. C. (2006). WindPACT Turbine Rotor Design Study: June 2000--June 2002 (Revised). 84 pp.; NREL Report No. SR-500-32495. Manwell, J., et al, "Wind Power Explained - Theory, Design and Application" Published by Wiley. GL Offshore Design Standard: http://www.gl-group.com/brochurepdf/0E504.pdf DNV Offshore Design Standard: http://www.dnv.com/publications/oilgas_news/oilgasnews-32006/NewDNVstandardsforwindturbinedesign.asp. Jonkman, J. M.; Sclavounos, P. D. (2006). Development and Verification of Fully Coupled aero-elastic and Hydrodynamic Models for Offshore Wind Turbines. 24pp.; NREL Report No. CP-500-39066.
+
+10. Passon, P.; (2005) "State-of-the-art and Development Needs of Simulation Codes for Offshore Wind Turbines. Copenhagen Offshore Wind Energy Conference, Copenhagen, DK. 2005. 11. IEA Wind Annex 23 - OC3 Web Site: http://www.ieawind.org/Annex%20XXIII/Subtask2.html. 12. Passon, P.; Kuhn, M.; Butterfield, S.; Jonkman, J.; Camp, T.; Larsen, T. J. (2007). OC3 -- Benchmark Exercise of Aero-Elastic Offshore Wind Turbine Codes: Preprint. 15 pp.; NREL Report No. CP-500-41930. 13. Jonkman, J. M.; Buhl, M. L. Jr. (2007). Development and Verification of a Fully Coupled Simulator for Offshore Wind Turbines: Preprint. 28 pp.; NREL Report No. CP-500-40979 14. Jonkman, J. M.; Buhl, M. L., Jr. (2007). Loads Analysis of a Floating Offshore Wind Turbine Using Fully Coupled Simulation: Preprint. 35 pp.; NREL Report No. CP-500-41714. 15. Hansen, T. et al, "Importance of Control Strategies on Fatigue Life of Floating Wind Turbines" OMAE 2007 Conference paper, OMAE2007-29277. 16. Beatrice Project with Repower: http://www.beatricewind.co.uk/home/default.asp. 17. Butterfield, C. et al, "Engineering Challenges for Floating Offshore Wind Turbines" Copenhagen Offshore Wind Conference, 2005. 18. Studie narr haalbaarheid van en randvoorwaarden voor drijvende offshore windturbines. ECN, MARIN, Lagerwey the Windmaster, TNO, TUD, MSC, Dec. 2002. 19. Musial, W.D.; Butterfield, C.P.; Boone, A. "Feasibility of Floating Platform Systems for Wind Turbines", NREL/CP-500-34874.
+
+6
+
+REPORT DOCUMENTATION PAGE
+
+Form Approved OMB No. 0704-0188
+
+The public reporting burden for this collection of information is estimated to average 1 hour per response, including the time for reviewing instructions, searching existing data sources, gathering and maintaining the data needed, and completing and reviewing the collection of information. Send comments regarding this burden estimate or any other aspect of this collection of information, including suggestions for reducing the burden, to Department of Defense, Executive Services and Communications Directorate (0704-0188). Respondents should be aware that notwithstanding any other provision of law, no person shall be subject to any penalty for failing to comply with a collection of information if it does not display a currently valid OMB control number.
+
+PLEASE DO NOT RETURN YOUR FORM TO THE ABOVE ORGANIZATION. 1. REPORT DATE (DD-MM-YYYY) 2. REPORT TYPE
+
+3.
+
+DATES COVERED (From - To)
+
+October 2007
+4. TITLE AND SUBTITLE
+
+Conference paper
+5a. CONTRACT NUMBER
+
+Overview of Offshore Wind Technology: Preprint
+
+DE-AC36-99-GO10337
+5b. GRANT NUMBER
+
+5c. PROGRAM ELEMENT NUMBER
+
+6.
+
+AUTHOR(S)
+
+5d. PROJECT NUMBER
+
+C.P. Butterfield, W. Musial, and J. Jonkman
+
+NREL/CP-500-42242
+5e. TASK NUMBER
+
+WER7.5302
+5f. WORK UNIT NUMBER
+
+7.
+
+PERFORMING ORGANIZATION NAME(S) AND ADDRESS(ES)
+
+8.
+
+National Renewable Energy Laboratory 1617 Cole Blvd. Golden, CO 80401-3393
+9. SPONSORING/MONITORING AGENCY NAME(S) AND ADDRESS(ES)
+
+PERFORMING ORGANIZATION REPORT NUMBER
+
+NREL/CP-500-42252
+
+10. SPONSOR/MONITOR'S ACRONYM(S)
+
+NREL
+11. SPONSORING/MONITORING AGENCY REPORT NUMBER 12. DISTRIBUTION AVAILABILITY STATEMENT
+
+National Technical Information Service U.S. Department of Commerce 5285 Port Royal Road Springfield, VA 22161
+13. SUPPLEMENTARY NOTES 14. ABSTRACT (Maximum 200 Words)
+
+This paper provides a short overview of some of the challenges facing the growth of offshore wind energy technology.
+
+15. SUBJECT TERMS
+
+wind turbine; offshore; floating; hydrodynamic behavior
+16. SECURITY CLASSIFICATION OF:
+a. REPORT b. ABSTRACT c. THIS PAGE 17. LIMITATION 18. NUMBER OF ABSTRACT OF PAGES 19a. NAME OF RESPONSIBLE PERSON
+
+Unclassified
+
+Unclassified
+
+Unclassified
+
+UL
+
+19b. TELEPHONE NUMBER (Include area code) Standard Form 298 (Rev. 8/98)
+Prescribed by ANSI Std. Z39.18
+
+F1147-E(09/2007)
+

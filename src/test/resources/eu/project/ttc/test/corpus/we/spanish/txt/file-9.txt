@@ -1,0 +1,62 @@
+LA VERITAT
+(www.amics21.com)
+
+Breve introducción a las turbinas eólicas Darrieus
+por Manuel Franquesa Voneschen1
+Aerogenerador Darrieus Estos aerogeneradores de eje vertical son máquinas bastante sofisticadas, por lo que aquí sólo haremos una breve presentación de las mismas. Su velocidad específica es λd = 5 ... 7. El rotor Darrieus está construido con alas de perfil simétrico de alto rendimiento, por ejemplo el perfil NACA 0012, cuya forma y polar se representa en la Fig. 2. Generalmente tienen de dos a tres palas, que pueden ser verticales, inclinadas o “dobladas” en forma de semicírculo o de parábola (Fig. 1). Estos rotores generalmente sólo se utilizan para aerogeneradores conectados a la red eléctrica, ya que no pueden arrancar por sí mismos. Para nuestros lectores que deseen profundizar un poco en la aerodinámica de este rotor, hemos añadido dos figuras: la Fig. 3 representa las fuerzas aerodinámicas que actúan sobre un elemento de pala en una posición cualquiera (ángulo de rotación φ), mientras que la Fig. 4 muestra el comportamiento de los tres vectores de las velocidades v’, u’ y c que atacan a las palas durante una rotación completa alrededor del eje vertical, siendo v’ = u’ = velocidad del viento a la altura del rotor eólico velocidad relativa del aire respecto del elemento de pala (velocidad tangencial del elemento de pala, perpendicular al radio del rotor)
+
+Autor del libro “Kleine Windräder : Berechnung u. Konstruktion” - Wiesbaden ; Berlin : Bauverlag, 1989. ISBN 3-7625-2700-8: Para este artículo: © Manuel Franquesa Voneschen 2010. El autor puede ser contactado vía Facebook.
+
+1
+
+c = velocidad absoluta del elemento de pala (resultante de los vectores v’ y u’ Entre la velocidad c, la velocidad del viento v', el ángulo de rotación φ) y la velocidad específica del rotor λ existe la siguiente relación: c = v' · [(λ + cos φ)2 + (sin φ)2]1/2 [1]
+
+Perfil simétrico
+
+Generador conectado a la red
+
+Fig. 1 Diferentes tipos de aerogeneradores Darrieus
+
+Fig. 2 Forma y polar del perfil NACA 0012
+
+viento
+
+Fig. 3 Fuerzas aerodinámicas que actúan sobre un elemento de pala de un rotor Darrieus (NB: A es perpendicular y W paralelo al vector c)
+
+El ángulo de incidencia o ataque del perfil α varía durante la rotación de las palas. En cada punto (ángulo φ), la fuerza tangencial que actúa sobre las palas es la resultante KT de las proyecciones sobre la tangente de los vectores de la fuerza de sustentación (A) y de la fuerza de resistencia (W): KT = A·sinα – W·cosα = [ca·sinα – cw·cosα] · ½ · ρ · f · c2 siendo ca = coeficiente de sustentación del perfil simétrico elegido cw = coeficiente de resistencia del perfil simétrico elegido (por ejemplo el de la Fig. 2) ρ = densidad media del aire (aprox. 1,25 kg/m³) f = superficie de la pala [m2] NB: Para obtener KT en newtons [N], la velocidad c debe introducirse en [m/s] Entre el ángulo de incidencia α , el ángulo de rotación φ y la velocidad específica del rotor λ existe la siguiente relación: α = arctan [sin φ / (λ + cos φ)] [3] [N] [2]
+
+En los puntos 1 y 3 (Fig. 4), α es igual a cero, por lo que aquí las palas no tienen fuerza de sustentación, es decir, no producen energía. Nota: Cuando un rotor Darrieus trabaja conectado a la red, la velocidad u’ es una constante, ya que el generador gira sincrónicamente con la frecuencia fija de la red (en Europa 50 Hz).
+
+Viento
+
+Pala
+
+Fig. 4 Comportamiento de las velocidades v’, u ’ y c que atacan las palas de un rotor Darrieus durante una rotación completa alrededor del eje vertical. La Fig. 5 muestra la variación del ángulo de incidencia α del perfil en función del ángulo de rotación φ del rotor, siendo α positivo para 0º < φ <180º y negativo para 180º < φ < 360º. Sin embargo, aunque el ángulo de incidencia sea negativo, sobre la pala seguirá actuando una fuerza de tracción tangencial positiva, es decir, para 180º < φ < 360º el rotor seguirá produciendo energía. Las figuras 6 y 7 representan los coeficientes de sustentación y de resistencia, respectivamente, de un perfil simétrico tipo NACA.
+
+φ
+Fig. 5 Ángulo de ataque o incidencia α del perfil en función del ángulo de rotación φ del rotor [Fuente: "Flow Modelling in a Darrieus Turbine for Moderate Reynoldsnumber – C. Ploestenu, D. Tarziu et T. Maitre"]
+
+ca
+
+αº
+Fig. 6 Coeficiente de sustentación ca en función del ángulo de incidencia α de un perfil simétrico NACA [Fuente: "Flow Modelling in a Darrieus Turbine for Moderate Reynoldsnumber – C. Ploestenu, D. Tarziu et T. Maitre"]
+
+cw
+
+αº
+Fig. 7 Coeficientes de resistencia cw en función del ángulo de incidencia α de un perfil simétrico NACA [Fuente: "Flow Modelling in a Darrieus Turbine for Moderate Reynoldsnumber – C. Ploestenu, D. Tarziu et T. Maitre"] La potencia de una turbina Darrieus Si en la ecuación [2], para la velocidad c introducimos el valor suministrado por la ecuación [1], obtendremos KT = ½ · ρ · f · v2 · [ca·sinα – cw·cosα] · [(λ + cos φ)2 + (sin φ)2] (f = superficie de la pala) Para una determinada velocidad del viento v, el producto ½ · ρ · f · v2 es una constante k, de modo que podemos escribir f(KT) = k · f(λ,ca,cw,α,φ) Con la ayuda de las figuras 5, 6 y 7, ahora podemos calcular teóricamente la función f(λ,ca,cw,α,φ) = [ca·sinα – cw·cosα] · [(λ + cos φ)2 + (sin φ)2] Nosotros lo hemos intentado, y hemos obtenido la curva f(KT) = f(φ) representada en la Fig. 8. [4]
+
+Fig. 8
+
+Por consiguiente, el par de giro, y con él la potencia, del rotor Darrieus oscilarán de modo parecido. La Fig. 9 muestra el coeficiente de par de giro cm de una turbina Darrieus de 3 palas Con este coeficiente se puede calcular el par de giro de la turbina Darrieus de palas verticales (Fig. 1 a la izquierda): M = ¼ · cm · ρ · H · D2 · v2 y la potencia desarrollada por la misma: P = [(2 · π · n) / 60] · M donde v = velocidad del viento [m/s] D = diámetro de la turbina Darrieus (de palas verticales) [m] H = altura de la turbina Darrieus ( = longitud de las palas) [m] n = número de revoluciones de la turbina Darrieus [r.p.m.] (NB: En un aerogenerador Darrieus conectado a la red, n es constante) [W] [Nm]
+
+cm
+
+Pala 1 Pala 2 Pala 3 TOTAL
+
+φ
+
+Fig. 9 Coeficiente de par de giro cm de una turbina Darrieus de 3 palas durante una revolución [Fuente: Lain & Osorio: Simulation of a straight-bladed Darrieus-type cross flow turbine]
+
+Conclusión: La potencia de una turbina Darrieus oscila del modo representado en la Fig. 9. Para determinados ángulos de giro φ la potencia es negativa. Para un aerogenerador Darrieus conectado a la red, esto significa que por momentos el rotor absorbe energía de la red, es decir, el generador sincrónico conectado al mismo a través de un engranaje durante estos momentos trabaja como motor. Para terminar, decir que el estudio de la aerodinámica de una turbina Darrieus es bastante fascinante. Para profundizar más en la teoría general de las turbinas eólicas, ver también www.amics21.com/laveritat/introduccion_teoria_turbinas_eolicas.pdf En la página Web www.amics21/laveritat.htm también encontrará -entre muchas otras cosas- sendos manuales para construir un generador Savonius con las dos mitades de un viejo barril de petróleo de 200 litros o un aerogenerador de eje vertical con un alternador de automóvil.
+

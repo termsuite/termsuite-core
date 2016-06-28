@@ -1,0 +1,83 @@
+Por Conrado Moreno Figueredo *
+
+
+El rendimiento energético de un parque eólico también depende
+
+del espaciamiento o distancia de un aerogenerador a otro ,
+
+para no provocar pérdidas aerodinámicas .
+
+
+Los primeros aerogeneradores , de pequeño tamaño en sus inicios , cedieron paso a otros de mayor tamaño y potencia , hasta llegar a máquinas de varios megawatt . Evidentemente , el almacenamiento de la energía constituyó , desde los inicios de la generación a gran escala , el principal obstáculo para los aerogeneradores aislados , por lo que la generación conectada a la red eléctrica ha logrado una mayor diversificación y se ha impuesto .
+
+
+La generación conectada a la red eléctrica se puede realizar de dos formas :
+1 . Con un aerogenerador individual . En este caso , un usuario de la red eléctrica instala un aerogenerador en su propiedad . El objetivo principal es satisfacer su demanda , y en segundo lugar , cuando se produce electricidad en exceso con respecto a las necesidades del propietario , éste vende la energía a la red eléctrica , por lo que se instalan metrocontadores que miden en ambos sentidos . Esta forma de producción de electricidad con energía eólica ha sido muy empleada en Dinamarca , estimulada por leyes establecidas al respecto , lo que ha permitido el alto desarrollo de esta fuente energética en ese país . No obstante , como norma esta solución no excede la potencia de 1 MW ( Fig . 1 ) .
+
+Fig . 1 . Esquema de un aerogenerador
+
+individual conectado a la red .
+2 . Cuando el objetivo alcanza varios megawatt ya no se trata de usuarios independientes , sino de empresas productoras de electricidad que se conectan a la red eléctrica mediante transformadores o subestaciones de transformadores que alimentan líneas de media o alta tensión . Como las turbinas eólicas tienen una potencia limitada ( hasta 5 - 6 MW en el 2006 ) , se recurrió a la agrupación de aerogeneradores , conocida como parque eólico o granja eólica , que en esencia se trata de cierto número de aerogeneradores con una determinada distribución , interconectados entre sí y conectados a la vez a subestaciones transformadoras que se conectan a la red ( Fig . 2 ) . Dicho de otra forma , un parque eólico conectado a la red se configura mediante la instalación integrada de un conjunto de varios aerogeneradores , interconectados eléctricamente mediante redes eléctricas propias , compartiendo una misma infraestructura de accesos y control . La conexión a la red eléctrica de distribución se realiza mediante la correspondiente transformación de tensión , en dependencia de la capacidad técnica de las redes existentes y de la propia instalación .
+
+Fig . 2 . Esquema de un parque eólico constituido
+
+por varios aerogeneradores conectados a la red .
+Al determinar la configuración de un parque eólico , es decir , la distribución de los aerogeneradores sobre el terreno , deben tenerse en cuenta tanto los aspectos puramente del viento , como velocidades medias , direcciones predominantes , rafagosidad y vientos extremos , así como los aspectos correspondientes al terreno disponible : la disposición característica de las máquinas y la distancia entre ellas , además de las características de los propios aerogeneradores , como el tamaño y el tipo y la altura de las torres .
+
+
+En la figura 3 se muestra la configuración típica cuando los aerogeneradores se disponen sobre una elevación . Los círculos indican los aerogeneradores , en tanto que las flechas señalan la dirección del viento dominante .
+
+Fig . 3 . Parque eólico dispuesto en
+
+una sola fila sobre una elevación .
+Cuando el terreno es llano y hay una dirección de viento dominante bien definida , los aerogeneradores se suelen disponer en filas alineadas ( Fig . 4 ) .
+
+Fig . 4 . Configuración del parque
+
+eólico en filas alineadas .
+Cuando el terreno es llano , pero el viento presenta frecuentes cambios de dirección , los aerogeneradores se suelen disponer al tresbolillo ( así se denomina cuando un grupo de objetos se dispone en filas paralelas , de modo que los de cada fila correspondan al medio de los de la fila inmediata ) ( Fig . 5 ) .
+
+Fig . 5 . Configuración del parque
+
+eólico al tresbolillo .
+En las figuras 6 y 7 se muestran configuraciones típicas de parques eólicos sobre terrenos que presentan colinas .
+
+Fig . 6 . Configuración del parque eólico
+
+sobre colinas no alineadas .
+
+Fig . 7 . Configuración del parque eólico
+
+sobre colinas alineadas .
+Como se puede observar , existe un espaciamiento o distancia de un aerogenerador
+
+a otro , tanto de frente al viento o transversal , como en la dirección del viento . Estos espaciamientos configuran la geometría del parque y determinan las pérdidas aerodinámicas del parque , o pérdidas por su configuración .
+
+
+En estas pérdidas influye lo que se denomina la sombra que un aerogenerador provoca sobre el aerogenerador que le sigue , por lo que debe mantenerse una distancia mínima entre uno y otro . Esto lo provoca la conocida estela aerodinámica . Una turbina que se encuentre detrás de otra podrá extraer menos energía por ser la velocidad menor debido
+
+a la estela que se forma , o dicho de otra manera , por la sombra aerodinámica de una turbina sobre otra . Lo expuesto ocurre en los parques eólicos donde la interferencia de una turbina sobre otra trae como resultado una disminución de la energía extraída .
+
+A este fenómeno se le conoce como pérdidas aerodinámicas del parque ( Fig . 8 ) .
+
+Fig . 8 . La distribución de los aerogeneradores en un
+
+parque eólico influye en su rendimiento energético .
+Un espaciamiento muy cercano de las turbinas permite instalar más turbinas en el sitio , pero reducirá la energía promedio captada por cada turbina en el parque eólico .
+
+Las pérdidas aerodinámicas pueden reducirse optimizando la geometría del parque eólico . Diferentes distribuciones de tamaños de turbinas , la forma general , el tamaño de la distribución y el espaciamiento dentro del parque eólico influyen sobre los efectos de la estela , que reduce la captación de energía .
+
+
+En resumen , cuando existe un viento con una dirección predominante , en general se recomienda una distribución en filas alineadas , con separación transversal ( perpendicular a la del viento dominante ) entre turbinas de tres a cinco veces el diámetro del rotor , y de cinco a nueve veces el diámetro del rotor en dirección del viento dominante . Cuando el viento tiene frecuentes cambios de dirección con respecto a la velocidad predominante , los aerogeneradores se colocan al tresbolillo .
+
+
+El cálculo de las pérdidas aerodinámicas del parque necesita del conocimiento de la ubicación y características de las turbinas en el parque y del régimen de viento , además de poseer un modelo de las estelas de las turbinas , para determinar el efecto de las turbinas corriente arriba sobre las turbinas corriente abajo .
+* Doctor en Ciencias Técnicas . Especialista en energía eólica
+
+del Centro de Estudio de Tecnologías Energéticas Renovables ( CETER ) .
+
+Miembro de la Junta Directiva de CUBASOLAR .
+
+tel . : ( 537 ) 2663637 .
+
+e - mail :

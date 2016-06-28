@@ -1,0 +1,886 @@
+MECH 4010 Design Project
+
+Vertical Axis Wind Turbine
+
+Group 2 Jon DeCoste Denise McKay Brian Robinson Shaun Whitehead Stephen Wright
+
+Supervisors Dr. Murat Koksal Dr. Larry Hughes Client Department of Mechanical Engineering Dalhousie University December 5, 2005
+
+EXECUTIVE SUMMARY
+With the recent surge in fossil fuels prices, demands for cleaner energy sources, and government funding incentives, wind turbines have become a viable technology for power generation. Currently, horizontal axis wind turbines (HAWT) dominate the wind energy market due to their large size and high power generation characteristics. However, vertical axis wind turbines (VAWT) are capable of producing a lot of power, and offer many advantages. The mechanical power generation equipment can be located at ground level, which makes for easy maintenance. Also, VAWT are omni-directional, meaning they do not need to be pointed in the direction of the wind to produce power. Finally, there is potential for large power generation with VAWT because their size can be increased greatly. However, there are also downfalls to the VAWT. Firstly, boundary layer affects from the ground influence the air stream incident on the VAWT, which in some cases leads to inconsistent wind patterns. Secondly, VAWT are not self-starting; currently, an outside power source is required to start turbine rotation until a certain rotational speed is reached.
+
+The main objective of this project is to design and build a self-starting vertical axis wind turbine. This report outlines the first term efforts in the design of our full-scale VAWT, which is to be built early in the second term.
+
+The self-starting issues surrounding VAWT will be tackled by the use of alternative blade profiles and pitching mechanisms. A model that carries out turbine theory calculations was created to aid in the design of the full-scale turbine. The model inputs include NACA 0012 airfoil lift and drag coefficients, angles of attack and relative wind speeds as determined from a MATLAB program, and user inputs such as wind speed, tip speed ratio, overall blade and turbine dimensions, and power required. The model outputs forces and torques produced over a wide range of TSR. The model also uses various angles of attack to determine performance results when pitching is used. Analysis results indicated that passive pitching is an affecting way to boost the turbines ability to selfstart. However, the NACA 0012 profile was unable to achieve self-starting status, as it
+
+ii
+
+does not have large lift coefficients at low Reynolds numbers. It was concluded that a profile with large lift at low speeds used along with passive pitching could achieve selfstarting status. As a result, three blade profiles will be tested and compared over the holiday break in the wind tunnel facility at Dalhousie University. Results from prototype testing in the wind tunnel will reveal the blade profile that offers the best performance for self-starting.
+
+The full-scale VAWT will be approximately 10ft tall, with a blade height of 5ft, and a diameter of 8ft. Three blades will be CNC machined from aluminum stock. The full-scale model will be built early next term to allow for adequate testing time.
+
+To date the group has received $1000 from Richard Rachals, $600 from our Client, the Mechanical Engineering Department, and $864 left over from the previous year wind turbine design project. The primary expense of this project is the costs associated with CNC machining the three aluminum blades. Other expenses include bearings, a generation unit, and materials. To cut down on costs, equipment from previous year design projects will be used where applicable.
+
+iii
+
+Table of Contents
+Executive Summary ............................................................................................................ii List of Tables...................................................................................................................... vi List of Figures ...................................................................................................................vii Glossary..............................................................................................................................ix 1.0 Introduction ............................................................................................................. 1 1.1 Horizontal versus Vertical Axis Wind Turbines ................................................. 1 1.2 How Wind Energy is Harnessed ......................................................................... 3 1.3 How Turbines Work............................................................................................ 3 1.4 Turbine size as a function of power required. ..................................................... 5 1.5 Turbine Solidity as a Function of TSR ............................................................... 8 1.6 Chosen Sizing and Discussion ............................................................................ 9 2.0 Project Objective ................................................................................................... 11 3.0 Design Requirements ............................................................................................ 12 3.1 General Requirements ....................................................................................... 12 3.2 Costs and Usage ................................................................................................ 12 3.3 Timing and Intellectual Property....................................................................... 12 4.0 Design Process - Engineering Analysis Model .................................................... 13 4.1 Model Inputs ..................................................................................................... 13 4.2 Model Calculations ........................................................................................... 15 4.3 Model Outputs................................................................................................... 18 4.3.1 Number of Blades...................................................................................... 18 4.3.2 Active Pitching.......................................................................................... 23 4.3.3 Passive Pitching......................................................................................... 27 4.4 Analysis Conclusions ........................................................................................ 27 5.0 Design.................................................................................................................... 29 5.1 Base ................................................................................................................... 31 5.1.1 Steel Base .................................................................................................. 31 5.1.2 Plywood Base Extension........................................................................... 31 5.2.3 Steel Connecting Bracket .......................................................................... 31 5.2 Shaft .................................................................................................................. 32 5.3 Bearings............................................................................................................. 33 5.4 Center Mounts ................................................................................................... 34 5.5 Radial Connecting Arms ................................................................................... 35 5.6 Airfoils .............................................................................................................. 35 5.7 Blade Connecting Assembly ............................................................................. 35 5.8 Pitching Device ................................................................................................. 36 5.8.1 Linear Spring / Slotted Bracket Pitch System........................................... 36 5.8.2 Pitch Control Bracket to Manipulate the Pitch Angle............................... 38 7.0 Cost Analysis......................................................................................................... 43 8.0 Conclusions ........................................................................................................... 45 References ......................................................................................................................... 47 Appendix A - NACA 0012 Lift and Drag Coefficients .................................................... 49 Appendix B - Model Results (Numerical) For Pitch Angles at Various TSR.................. 56 Appendix C - MATLAB Programming Code for Analysis Model .................................. 64
+
+iv
+
+Appendix D - Solid Edge Drawings ................................................................................. 66 Appendix E - Gantt Chart................................................................................................. 76
+
+v
+
+LIST OF TABLES
+Table 1.0 Table 1.1 Table 4.0 Table 4.1 Table 7.0 Table 7.1 Typical Cp values for various wind turbines. Turbine sizing dimensions chosen for full-scale VAWT. Sizing spreadsheet for model inputs. Optimal pitch angles about the 360º turbine revolution for a TSR of 0.75. Funding to date. Preliminary budget Page No 8 10 14 25 43 44
+
+vi
+
+LIST OF FIGURES
+Figure 1.0 Figure 1.1 Figure 1.2 Figure 1.3 Figure 1.4 Figure 4.0 Figure 4.1 Figure 4.2 Figure 4.3 Figure 4.4 Figure 4.5 Figure 4.6 Figure 4.7 Figure 4.8 Figure 4.9 Figure 5.0 Figure 5.1 Figure 5.2 Figure 5.3 Figure 5.4 Title GE Wind Energy's 3.6 Megawatt HAWT. An H-Darrius rotor VAWT Force vectors for a HAWT. Effects of angle of attack on lift Rotor solidity as a function of TSR Torque producing forces for 2 and 3-bladed turbines at a TSR=0.25, and a pitch angle of 90º. Torque producing forces for 2 and 3-bladed turbines at a TSR=1.0, and a pitch angle of 90º. Torque producing forces for 2 and 3-bladed turbines at a TSR=2.0, and a pitch angle of 90º. Torque producing forces for 2 and 3-bladed turbines at a TSR=3.0, and a pitch angle of 90º. Torque producing forces for 2 and 3-bladed turbines at a TSR of 0.25, and a pitch angle of 107º. Torque producing forces for 2 and 3-bladed turbines at a TSR of 1.0, and a pitch angle of 107º. Torque producing forces for 2 and 3-bladed turbines at a TSR of 2.0, and a pitch angle of 107º. Torque producing forces for 2 and 3-bladed turbines at a TSR of 3.0, and a pitch angle of 80º. F1 fluctuation patterns for pitch angles of 95º, 105º and 107º at a TSR of 0.75 Optimal pitch angles about the 360º turbine revolution for a TSR of 0.75. Full-scale VAWT assembly. Existing turbine base structure from previous year design projects. Existing shaft from previous year design project. Bearings from previous year design project. Assembly drawing for blade attachments Page No 2 2 4 5 9 19 20 20 21 21 22 22 23 24 26 30 32 33 34 36
+
+vii
+
+Figure 5.5 Figure 5.6 Figure 6.0 Figure 6.1 Figure 6.2 Figure 6.3
+
+Title Linear spring pitch design Slotted bracket for pitch design. 3-Blade H-type VAWT prototype for Dalhousie wind tunnel Dalhousie University wind tunnel facility. Existing prototype support arms. NACA 0012 wooden profile before sanding and painting.
+
+Page No 37 38 40 41 41 42
+
+viii
+
+GLOSSARY
+Angle of Attack Blade Pitch Cut-In Angle between chord of airfoil and apparent (relative) wind. Angle between blade chord and blade direction of travel. The rotational speed at which an alternator or generator starts pushing electricity hard enough (has a high enough voltage) to make electricity flow in a circuit. A Vertical Axis Wind Turbine design from the 1920s and 1930s by F.M. Darrieus, a French wind turbine designer. In a wind generator, the force exerted on an object by moving air. Also refers to a type of wind generator or anemometer design that uses cups instead of a blade or airfoil. A Vertical Axis Wind Turbine design with straight blades (usually vertical blades). Horizontal Axis Wind Turbine A "normal" wind turbine design, in which the shaft is parallel to the ground, and the blades are perpendicular to the ground. The edge of a blade that faces toward the direction of rotation. Away from the direction from which the wind blows. The force exerted by moving air on asymmetrically-shaped wind generator blades at right angles to the direction of relative movement. Ideally, wind generator blades should produce high Lift and low Drag. Something physical or electrical that absorbs energy. A wind generator that is connected to a battery bank is loaded. A disconnected wind generator is NOT loaded, so the blades are free to spin at very high speed without absorbing any energy from the wind, and it is in danger of destruction from overspeeding. The blade and hub assembly of a wind generator. The rotating part in the center of a wind generator or motor that transfers power. The wind speed at which a wind turbine rotor starts to rotate. It does not -- necessarily produce any power until it reaches cut-in speed. The edge of a blade that faces away from the direction of rotation. Tip Speed Ratio - Ratio of blade speed to undisturbed wind speed. That which occurs naturally. Vertical Axis Wind Turbine
+
+Darrieus Drag
+
+H-Rotor HAWT Horizontal Axis Wind Turbine Leading Edge Leeward Lift
+
+Load
+
+Rotor Shaft Start-Up
+
+Trailing Edge TSR Undisturbed Wind VAWT
+
+ix
+
+Variable Pitch Vertical Axis Wind Turbine Windward Yaw
+
+A type of wind turbine rotor where the attack angle of the blades can be adjusted either automatically or manually. A wind generator design where the rotating shaft is perpendicular to the ground and the cups or blades rotate parallel to the ground. Toward the direction from which the wind blows. Rotation parallel to the ground. A wind generator yaws to face winds coming from different directions.
+
+x
+
+1.0
+
+INTRODUCTION
+
+With the recent surge in fossil fuels prices, demands for cleaner energy sources, and government funding incentives, wind turbines are becoming a more viable technology for electrical power generation. Fortunately there is an abundance of wind energy to be harnessed. Currently, horizontal axis wind turbines (HAWT) dominate commercially over vertical axis wind turbines (VAWT). However, VAWT do have some advantages over HAWT.
+
+1.1 Horizontal versus Vertical Axis Wind Turbines
+The HAWT is the most common turbine configuration. The propellers and turbine mechanisms are mounted high above the ground on a huge pedestal. It is a matter of taste as to whether they enhance the landscape. However, there is no denying that the height at which their mechanisms are located is a disadvantage when servicing is required. Also, they require a mechanical yaw system to orient them such that their horizontal axis is perpendicular to and facing the wind. As potential power generation is related to the swept area (diameter) of the rotor, more power requires a larger diameter. The blades experience large thrust and torque forces, so size is limited by blade strength. Figure 1.0 shows GE Wind Energy's 3.6 Megawatt HAWT. Larger wind turbines are more efficient and cost effective.
+
+1
+
+Figure 1.0. GE Wind Energy's 3.6 Megawatt HAWT. [ref,1]
+
+A VAWT does not need to be oriented into the wind and the power transition mechanisms can be mounted at ground level for easy access. Figure 1.1 shows a picture of an H-Darrius Rotor VAWT.
+
+Figure 1.1. An H-Darrius rotor VAWT. [ref,2]
+
+2
+
+The perceived disadvantage of the VAWT is that they are not self-starting. However, it could be argued that the HAWT is also not self-starting since it requires a yaw mechanism for orientation. Currently, VAWT are usually rotated automatically until they reach the ratio between blade speed and undisturbed wind speed (Tip Speed Ratio or TSR) that produces a torque large enough to do useful work. Through the use of drag devices and/or variable pitch blade designs, it is hoped that a VAWT will be able to reach the required TSR without the use of a starter.
+
+1.2 How Wind Energy is Harnessed
+Turbines relying on drag, such as the anemometer and Savonius models, cannot spin faster than the wind blows and are thus limited to a TSR of less than 1. Other turbines, such as the Darrieus, rely on lift to produce a positive torque. Lift type wind turbines can experience TSR as high as 6. This is possible because the natural wind is vector summed with the wind opposing the forward velocity of the airfoil. This combined velocity is known as the relative wind.
+
+1.3 How Turbines Work
+The wind imposes two driving forces on the blades of a turbine; lift and drag. A force is produced when the wind on the leeward side of the airfoil must travel a greater distance than that on the windward side. The wind traveling on the windward side must travel at a greater speed than the wind traveling along the leeward side. This difference in velocity creates a pressure differential. On the leeward side, a low-pressure area is created, pulling the airfoil in that direction. This is known as the Bernoulli's Principle. Lift and drag are the components of this force vector perpendicular to and parallel to the apparent or relative wind, respectively. By increasing the angle of attack, as shown in figure 1.2, the distance that the leeward air travels is increased. This increases the velocity of the leeward air and subsequently the lift. The Bernoulli Principle is illustrated in figure 1.3.
+
+3
+
+Figure 1.2. Force vectors for a HAWT. [ref,9]
+
+4
+
+Figure 1.3. Effects of angle of attack on lift. [ref,4]
+
+Lift and drag forces can be broken down into components that are perpendicular (thrust) and parallel (torque) to their path of travel at any instant. The torque is available to do useful work, while the thrust is the force that must be supported by the turbine's structure.
+
+1.4 Turbine size as a function of power required.
+The power of the wind is proportional to air density, area of the segment of wind being considered, and the natural wind speed. The relationships between the above variables are provided in equation [1] below [ref, 10].
+
+5
+
+Pw = ½ ρAu3 where Pw: power of the wind (W) ρ: air density (kg/m3) A: area of a segment of the wind being considered (m2) u: undisturbed wind speed (m/s)
+
+[1]
+
+At standard temperature and pressure (STP = 273K and 101.3 KPa), equation [1] reduces to: Pw = 0.647Au3 [2]
+
+A turbine cannot extract 100% of the winds energy because some of the winds energy is used in pressure changes occurring across the turbine blades. This pressure change causes a decrease in velocity and therefore usable energy. The mechanical power that can be obtained from the wind with an ideal turbine is given as: Pm = ½ ρ(16/27 Au3) where Pm: mechanical power (W) In equation [3], the area, A, is referred to as the swept area of a turbine. For a VAWT, this area depends on both the turbine diameter and turbine blade length. For an H-type VAWT the equation for swept area is:
+
+[3]
+
+As = Dt lb where As: swept area (m2) Dt: diameter of the turbine (m) lb: length of the turbine Blades (m)
+
+[4]
+
+6
+
+The constant 16/27 = 0.593 from equation [3] is referred to as the Betz coefficient. The Betz coefficient tells us that 59.3% of the power in the wind can be extracted in the case of an ideal turbine. However, an ideal turbine is a theoretical case. Turbine efficiencies in the range of 35-40% are very good, and this is the case for most large-scale turbines. It should also be noted that the pressure drop across the turbine blades is very small, around 0.02% of the ambient air pressure.
+
+Equation [3] can be re-written as
+
+Pm = Cp Pw where Cp: coefficient of performance.
+
+[5]
+
+The coefficient of performance depends on wind speed, rotational speed of the turbine and blade parameters such as pitch angle and angle of attack. The pitch angle for a HAWT is the angle between the blades motion and the chord line of the blade, whereas for a VAWT the pitch angle is between the line perpendicular to the blades motion and the chord line of the blade. The angle of attack is the angle between the relative wind velocity and the centerline of the blade. For fixed pitch turbines, these angles do not change and the Cp is directly related to the TSR. See table 1 for typical Cp values for various types of wind turbines.
+
+7
+
+Table 1.0. Typical Cp values for various wind turbines. [ref,3]
+Wind System Multibladed farm water pump Sailwing water pump Darrieus water pump Savonius windcharger Small prop-type windcharger (up to 2kW) Medium prop-type windcharger (2 to 10 kW) Large prop-type wind generator (over 10 kW) Darrieus wind generator Efficiency, % simple Construction 10 10 15 10 20 20 ---15 Optimum Design 30 25 30 20 30 30 30 to 45 35
+
+Example Calculation 1.0: If we take the average wind speed to be 6 m/s (5-7 m/s for Halifax), and consider a turbine 2.5m in diameter and 1.5m high, the power of the wind is, Pw = 0.647(2.5m)(1.5m)(6m/s)3 = 524 (W) However, we know from the Betz coefficient that Pw cannot be obtained. Using a Cp = 0.1 (10% efficiency) and the value of Pw (524 W) calculated above, we can see that for a 2.5m x 1.5m turbine in 6 m/s wind at STP, the mechanical power realized is: Pm = 0.1(524W) = 52.4 W These equations can also be used to calculate the frontal area required from the output power required, wind speed, and the efficiency estimate. Then, the linear dimensions needed to support that frontal area are calculated. Generally, for both the eggbeater Darrieus and the straight-blade design, the height roughly equals the diameter.
+
+1.5 Turbine Solidity as a Function of TSR
+The operating tip-speed ratio (TSR) for a Darrieus rotor lies between 4 and 6. This design TSR then determines the solidity, gear ratios, generator speeds, and structural design of the rotor. Using this TSR and the graph in figure 1.4, a value of the solidity is selected. As with the prop-type rotor, the solidity allows for the calculation of blade area. Solidity times the rotor frontal area gives the total blade area. Dividing the total blade area by the number of blades (usually 2 or 3) gives the individual blade area. The individual blade area divided by the rotor height gives the chord length [ref,3].
+
+8
+
+Figure 1.4. Rotor solidity as a function of TSR. [ref,3]
+
+1.6 Chosen Sizing and Discussion
+The dimensions for the VAWT being built for this project are given in Table 1.1. The diameter (2.56 m) is larger than the height (1.5m) to provide a longer chord length for the same solidity. This design selection provides an increased Reynolds number for the flow over the blades, and subsequently, increases the lift. Also, given the large thrust forces involved, a shorter airfoil length will be less likely to undergo bend.
+
+9
+
+Table 1.1. Turbine sizing dimensions chosen for full-scale VAWT. Inputs Undisturbed Wind Speed 6 m/s Density of air 1.204 kg/m3 Viscosity of air 1.81E-05 Ns/m2 TSR 4 Solidity 0.15 Number of Airfoils 3 Blade Height 1.50 m Power required 50 watts Estimated Coefficient of 0.1 Performance Outputs Required swept area Diameter Chord Length Estimated weight/blade RPM Reynolds Number m2 m m Kg
+
+3.85 2.56 0.13 7.67 179 204625
+
+10
+
+2.0
+
+PROJECT OBJECTIVE
+
+The objective of this project is to design and build a self-staring vertical axis wind turbine that is capable of producing power in real world situations. The design of the turbine will include exploration of various self-starting options, as well as construction of both model and full-scale turbines. The full-scale turbine will be designed such that it can be connected to a generator and a torque transducer to measure the output power, torque and rotational speed of the turbine. The design will also allow for data collection regarding the effects of blade pitch angles. With these applications, it is hoped that Dalhousie University's Department of Mechanical Engineering will conduct future research involving vertical axis wind turbines.
+
+11
+
+3.0
+
+DESIGN REQUIREMENTS
+
+The design requirements for this project have been agreed upon with Dr. Murat Koksal and the mechanical engineering department. These objectives were submitted earlier in the term in a design requirements memo, and are summarized below.
+
+3.1 General Requirements
+The VAWT will be an self-starting H-Type It will self-start using wind power only It will have blade dimensions of 1.5m (4.9') high by 2.5m (8.1') diameter It will be made of lightweight components like aluminum It will be designed to connect to an electrical generator to measure power output It will be rated to produce 50W at average Nova Scotia wind speeds (5-7 m/s)
+
+3.2 Costs and Usage
+The budget for the project is $4000-$5000 Turbine will be able to perform in outdoor, NS environment Life expectancy of 5 years with proper maintenance All mechanical components will be located at ground level The system will be easy to assemble
+
+3.3 Timing and Intellectual Property
+Exploration of various options for self-starter designs, testing of self-starter design ideas with mock up models in the wind tunnel, and design of the wind turbine will be completed in the Fall term Building and testing of the full-scale prototype will be completed in the winter term The finished product and intellectual property will belong to our client, Mechanical Engineering Department, Dalhousie University
+
+12
+
+4.0
+
+DESIGN PROCESS - ENGINEERING ANALYSIS MODEL
+
+Self-starting is the major obstacle to be overcome for successful design of a VAWT. It has been suggested [ref,5] that pitching the turbine blades such that the pitch angle is not 90 degrees allows for self-starting. To understand the physics surrounding pitching, an in depth engineering analysis was carried out for a common airfoil profile, NACA 0012. Performance data and characteristics for the symmetric NACA 0012 airfoil are available for analysis as the airfoil is commonly used in various applications. The next series of paragraphs explain the steps involved in the engineering analysis of the NACA 0012 airfoil with various pitching arrangements.
+
+4.1 Model Inputs
+A model was assembled so that various inputs were used to influence and generate desired outputs that described the turbines performance. The Model is Excel based, with a MATLAB program for calculating additional information. The design team created the model to produce desired outputs from available inputs, and to avoid conducting repetitions and lengthy calculations by hand.
+
+Model inputs were primarily controlled by a sizing spreadsheet as shown in table 4.0. The key inputs of the sizing spreadsheet include TSR, and solidity, as solidity has effects on the chord length and blade height of the airfoil. The wind speed was kept constant throughout the engineering analysis at the average wind speed value for Nova Scotia of 6m/s.
+
+13
+
+Table 4.0. Sizing spreadsheet for model inputs. Inputs Undisturbed Wind Speed 6 m/s Density of air 1.204 kg/m3 Viscosity of air 1.81E-05 Ns/m2 TSR 4 Solidity 0.15 Number of Airfoils 3 Blade Height 1.50 m Power required 50 watts Estimated Coefficient of 0.1 Performance
+
+Another model input was the NACA 0012 airfoil lift and drag coefficients, [ref,6]. These coefficients were supplied for various Reynolds numbers, and were input into the model as a lookup table. NACA 0012 lift and drag coefficients are supplied in Appendix A.
+
+The primary objective of the engineering analysis model was to understand the effects of blade pitching. Therefore, pitch angles were another required input for the model. It is known that during high rotational speeds, the most efficient operation of the turbine occurs when the pitch angle is zero, or stated another way; the angle of attack is 90 º. As a result, blade pitching is only necessary during start up when large torques are needed. A range of pitch angles was chosen for the model analysis to determine how different angles affected performance. The range was input into the model as angles of attack that would be added to a pitch angle of 90º, and included angles of attack of -10, -5, -2, 0, 2, 5, 10, 12, 15, and 17. These 10 angles of attack resulted in pitch angles ranging from 80º to 107º. The reason for not choosing larger or smaller pitch angles was that eventually the blade would have to return to 90º. Angles further from the range chosen would involve a large angle change and would likely induce turbulent flow over the airfoil.
+
+14
+
+4.2 Model Calculations
+After the inputs are specified, the next step of the analysis involves calculations. The first calculation was to determine the Reynolds number associated with the flow over the airfoils. The equation for Reynolds number is given below as
+
+Re = where Re: Reynolds number W: wind speed (m/s) TSR: tip speed ratio
+
+W × TSR × ρ air × cl
+
+υair
+
+[6]
+
+ρair: density of air (kg/m3)
+cl: chord length (m)
+
+ν air: viscosity of air (Ns/m2)
+Because the turbine is spinning about a central shaft, the wind speed that the blades experience is not equal to the ambient wind speed. The angle of attack of the turbine blades is continuously changing throughout the blades' 360º revolution. As a result, the magnitude of the relative wind speed changes throughout rotation, and is the parameter used to calculate the Reynolds number as given in equation [6]. Because the relative wind speed changes for each degree of the 360º revolution, and also changes for different values of TSR, it would be monotonous to carry out the calculations for relative wind speed by hand. To avoid iterative calculations, a MATLAB program was written to automatically calculate the angles of attack and the relative wind speeds for a specified TSR throughout the revolution of 0º to 360º. The MATLAB program was only able to output angles of attach and relative wind speeds for one TSR; therefore, the program had to be run numerous times to obtain angles of attack and relative wind speeds for TSR ranging from 0.25 through to 7. The MATLAB output file was converted to an Excel file
+
+15
+
+and added to the analysis model. The MATLAB code for the mentioned programs is provided in Appendix C.
+
+The model used the relative wind speed as specified by MATLAB to calculate the Reynolds number as given by equation [6]. After the Reynolds number is calculated, the lift and drag coefficients can be obtained from the NACA 0012 coefficients look up tables. However, lift and drag coefficients are dependant on the Reynolds number and the angle of attack. To calculate the angle of attack, the angle specified from the MATLAB program is added to the desired blade pitching angle of attack, as specified in the model inputs. Because there are ten angles of attack being considered for the pitching analysis, it is necessary to carry out all calculations for ten scenarios. Once the actual angle of attack is determined, the model uses the Reynolds number along with the angle to lookup the appropriate lift and drag coefficients. When the lift and drag coefficients are determined, the lift and drag forces can be calculated using the following equations, respectively.
+
+Fl =
+
+1 ρ airW 2 × cl × bl × Cl 2 1 Fd = ρ airW 2 × cl × bl × Cd 2
+
+[7, 8]
+
+where Fl: lift force (N) Fd: drag force (N) bl: blade length (m) Cl: lift coefficient Cd: drag coefficient The lift and drag forces were then resolved into components parallel and perpendicular to the blades' path of rotation. The following four equations were used to resolve the lift and drag forces into parallel and perpendicular components.
+
+16
+
+ 90π   α actual π Fl ,hlep = Fl cos  −  180   180  90π   α actual π Fl ,circ = Fl sin  −  180   180 Fd ,hurt
+
+     
+
+π α = Fd cos actual   180 
+
+[9, 10, 11, 12]
+
+π α Fd ,circ = Fd sin  actual   180 
+where
+Fl ,help : Force in direction of travel (N) Fl ,circ : Force contributing to centrifugal force (N) Fd ,hurt : Force opposing motion of blade travel (N) Fd ,circ : Force contributing to centrifugal force (N)
+
+α actual : Angle of attack with added pitching (rad)
+Finally, parallel forces are added, and perpendicular forces are added to obtain expressions for F1 and F2, as given by equations [8] and [9].
+
+F1 = Fl ,help − Fd , hurt F2 = Fl ,circ + Fd ,circ
+
+[13, 14]
+
+where F1: forces contributing to torque (N) F2: centrifugal forces (N) The resulting forces, F1 and F2, are the forces experienced by a turbine with one blade rotating about a central axis. To obtain the forces experienced by a turbine with 2 blades, the forces are split at 180º and doubled. For example, the forces experienced by the first
+
+17
+
+blade at 90º are the same forces to be experienced by the 2nd blade at 270º. This was also done for a 3-blade turbine; however, the forces were split at 120º, and added three times.
+
+As mentioned previously, there are ten angles of attack considered for this analysis. As a result, the above analysis was carried out for each angle to be considered, and also for TSR ranging from 0.25 to 7. This range of TSR coverage provided a complete picture of how pitching effects turbine performance from start up to high rotational speeds.
+
+4.3 Model Outputs
+The major results from the engineering analysis Model are stated below. Graphs are used to illustrate key points.
+
+4.3.1 Number of Blades
+Before choosing a final VAWT design, it was necessary to determine the number of blades the turbine would have. For a 2-blade turbine, there are times when both blades are in a position such that the wind does not encourage rotation. This is known as the stall position. For a 3-blade turbine, the stall condition is eliminated. This is a conceptual reasoning; however, the analysis model was used to test this conceptual reasoning. The original analysis in the model determined the overall forces for a one-bladed turbine. These forces were easily manipulated to represent overall forces for a 2 and 3-blade turbine. The results showed that the 2-blade turbine generally produces a smaller average F1 than the 3-bladed design. For a 90º pitch angle, there are TSR ranges where the 2blade design produces larger F1 than the 3-blade; however, because the blades can be pitched at this low TSR range, and pitched blades produce a more favorable F1 result, it is noted that the 3-blade design is still superior to the 2-blade design. As a result, the 3blade design was chosen for the full scale VAWT design. Figures 4.0 through 4.3 illustrate the torque producing forces, F1, experienced by 2 and 3-bladed turbines for TSR of 0.25, 1, 2 and 3. The pitch angle for figures 4.0 through 4.3 is kept constant at 90º so that the only variable among the figures is the TSR. Figures 4.4 though 4.7 illustrate the
+
+18
+
+F1 forces experience by 2 and 3-blade designs at TSR of 0.25, 1, 2, and 3 as well; however, figures 4.4 through 4.7 are taken at pitch angles other than 90º. It is noted that at TSR below 3, the optimal pitch angle (the pitch angle producing the largest F1), is 107º, while at TSR higher than 3 have optimal pitch angles closer to 90º.
+
+Torque Producing Forces for 2 and 3 blade Turbines TSR=0.25, Pitch Angle = 90 degrees
+1.00 Torque Producing Force, F1 (N) 0.80 0.60 0.40 0.20 0.00 0 -0.20 -0.40 Position of Revolution (degrees) 30 60 90 120 150 180 210 240 270 300 330 360
+
+2-blade
+
+3-blade
+
+Linear (3-blade)
+
+Linear (2-blade)
+
+Figure 4.0. Torque producing forces for 2 and 3-bladed turbines at a TSR=0.25, and a pitch angle of 90º.
+
+19
+
+Torque Producing Forces for 2 and 3 blade Turbines TSR=1.0, Pitch Angle = 90 degrees
+0.80
+
+Torque Producing Force, F1 (N)
+
+0.60 0.40 0.20 0.00 -0.20 -0.40 -0.60 -0.80 -1.00 0 30 60 90 120 150 180 210 240 270 300 330 360
+
+Position of Revolution (degrees)
+
+2-blade
+
+3-blade
+
+Linear (3-blade)
+
+Linear (2-blade)
+
+Figure 4.1. Torque producing forces for 2 and 3-bladed turbines at a TSR=1.0, and a pitch angle of 90º.
+Torque Producing Forces for 2 and 3 blade Turbines TSR=2.0, Pitch Angle = 90 degrees
+
+3.00
+Torque Producing Force, F1 (N)
+
+2.00 1.00 0.00 -1.00 -2.00 -3.00 -4.00
+Position of Revolution (degrees)
+
+0
+
+30
+
+60
+
+90 120 150 180 210 240 270 300 330 360
+
+2-blade
+
+3-blade
+
+Linear (3-blade)
+
+Linear (2-blade)
+
+Figure 4.2. Torque producing forces for 2 and 3-bladed turbines at a TSR=2.0, and a pitch angle of 90º.
+
+20
+
+Torque Producing Forces for 2 and 3 blade Turbines TSR=3.0, Pitch Angle = 90 degrees 5.00 4.00 3.00 2.00 1.00 0.00 -1.00 0 -2.00 -3.00 -4.00 -5.00
+
+Torque Producing Force, F1 (N)
+
+30
+
+60
+
+90 120 150 180 210 240 270 300 330 360
+
+Position of Revolution (degrees) 2-blade 3-blade Linear (3-blade) Linear (2-blade)
+
+Figure 4.3. Torque producing forces for 2 and 3-bladed turbines at a TSR=3.0, and a pitch angle of 90º.
+Torque Producing Forces for 2 and 3 blade Turbines TSR=0.25, Pitch Angle = 107 degrees
+
+1.20
+
+Torque Producing Force, F1 (N)
+
+1.00 0.80 0.60 0.40 0.20 0.00 -0.20 -0.40 -0.60 0 30 60 90 120 150 180 210 240 270 300 330 360
+
+Position of Revolution (degrees)
+2-blade 3-blade Linear (3-blade) Linear (2-blade)
+
+Figure 4.4. Torque producing forces for 2 and 3-bladed turbines at a TSR of 0.25, and a pitch angle of 107º.
+
+21
+
+Torque Producing Forces for 2 and 3 blade Turbines TSR=1.0, Pitch Angle = 107 degrees
+2.00
+
+Torque Producing Force, F1 (N)
+
+1.50 1.00 0.50 0.00 0 -0.50 -1.00 -1.50 30 60 90 120 150 180 210 240 270 300 330 360
+
+Position of Revolution (degrees)
+2-blade 3-blade Linear (3-blade) Linear (2-blade)
+
+Figure 4.5. Torque producing forces for 2 and 3-bladed turbines at a TSR of 1.0, and a pitch angle of 107º.
+Torque Producing Forces for 2 and 3 blade Turbines TSR=2.0, Pitch Angle = 107 degrees
+2.50
+
+Torque Producing Force, F1 (N)
+
+2.00 1.50 1.00 0.50 0.00 -0.50 0 -1.00 -1.50 -2.00 -2.50 -3.00 30 60 90 120 150 180 210 240 270 300 330 360
+
+Position of Revolution (degrees)
+2-blade 3-blade Linear (3-blade) Linear (2-blade)
+
+Figure 4.6. Torque producing forces for 2 and 3-bladed turbines at a TSR of 2.0, and a pitch angle of 107º.
+
+22
+
+Torque Producing Forces for 2 and 3 blade Turbines TSR=3.0, Pitch Angle = 80 degrees
+12.00
+
+Torque Producing Force, F1 (N)
+
+10.00 8.00 6.00 4.00 2.00 0.00 0 30 60 90 120 150 180 210 240 270 300 330 360
+
+Position of Revolution (degrees)
+2-blade 3-blade Linear (3-blade) Linear (2-blade)
+
+Figure 4.7. Torque producing forces for 2 and 3-bladed turbines at a TSR of 3.0, and a pitch angle of 80º.
+
+4.3.2 Active Pitching
+Active pitching involves the use of a mechanism or actuator to pitch the blades at various instances about the blades 360˚ revolution such that the maximum F1 is obtained throughout the entire revolution. As mentioned previously, the angle of attack continuously changes throughout the 360º revolution of the blades around the turbine shaft. As a result, the optimal pitch angle continuously changes. In some instances, the optimal angle of attack changes in as little as 10º of blade revolution. Note that the optimal angle of attack is defined as the angle of attack that gives the largest F1. Physically changing the pitch angles every 5º or 10º of revolution is not physically possible, especially at high rotational speeds. Also, the optimal angles of attack sometimes vary between as low as 85º to as high as 105º in 5º of revolution. This is highly impractical, not only in the physical sense, but also because it would disturb the
+
+23
+
+flow over the airfoil, causing turbulent flow and therefore not generating a continuous or steady lift force. Figure 4.8 shows F1 fluctuations about the 360º revolution for 5 different pitch angles at a TSR of 0.75. It is clear from figure 4.8 that when certain pitch angles are at a low F1 value, other pitch angles achieve high F1. Table 4.1 shows the pitch angles that produce the maximum F1 for every 5º of revolution. It can be seen from table 4.1 that the pitch angle varies very frequently, which would relate to a constantly moving blade.
+
+F1 Fluctuations for pitch angles of 95, 105 and 107 Degrees TSR=0.75
+2.50 2.00 Torque Producing Force, F1 (N) 1.50 1.00 0.50 0.00 0 -0.50 -1.00 Position of Revolution (degrees) 30 60 90 120 150 180 210 240 270 300 330 360
+
+95 deg
+
+105 deg
+
+107 deg
+
+Figure 4.8. F1 fluctuation patterns for pitch angles of 95º, 105º and 107º at a TSR of 0.75.
+
+24
+
+Table 4.1. Optimal pitch angles about the 360º turbine revolution for a TSR of 0.75.
+Turbine Pitch F1 (N) Position Angle (degrees) (degrees) 0 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150 155 160 165 170 175 95 92 90 88 85 105 107 107 105 105 107 107 105 107 105 105 107 107 105 105 85 88 90 92 95 92 90 88 85 105 107 107 105 105 107 107 1.31 1.09 0.90 1.12 1.37 1.14 0.81 0.88 1.04 1.05 1.04 2.17 2.27 2.17 1.09 1.05 0.85 0.88 0.94 1.14 1.37 1.12 0.90 1.09 1.31 1.09 0.90 1.12 1.37 1.14 0.81 0.88 1.04 1.05 1.04 2.17 Pitch Turbine F1 (N) Angle Position (degrees) (degrees) 180 185 190 195 200 205 210 215 220 225 230 235 240 245 250 255 260 265 270 275 280 285 290 295 300 305 310 315 320 325 330 335 340 345 350 355 360 105 107 105 105 107 107 105 105 85 88 90 92 95 92 90 88 85 105 107 107 105 105 107 107 105 107 105 105 107 107 105 105 85 88 90 92 95 2.27 2.17 1.09 1.05 0.85 0.88 0.94 1.14 1.37 1.12 0.90 1.09 1.31 1.09 0.90 1.12 1.37 1.14 0.81 0.88 1.04 1.05 1.04 2.17 2.27 2.17 1.09 1.05 0.85 0.88 0.94 1.14 1.37 1.12 0.90 1.09 1.31
+
+It is possible; however, to choose two pitch angles such that one angle is optimal while the other is not, and vice-versa. If this can be done, and if the two pitch angles are within a close range to each other, it could be practical to vary the pitch angle between these two angles during the blades' revolution. Figure 4.9 shows the average F1 for all ten pitch
+
+25
+
+angle inputs, at a TSR of 0.75. Pitch angles of 107º and 105º achieve the largest average F1 values throughout their 360º revolution, as shown in figure 4.9. As a result, it would be practical to vary the pitch angle from 105º to 107º degrees to maximize turbine performance.
+
+Average F1 for 10 Pitch Angles TSR=0.75
+1.00
+
+Torque Producing Force, F1 (N)
+
+0.80 0.60 0.40 0.20 0.00 0 -0.20 -0.40 30 60 90 120 150 180 210 240 270 300 330 360
+
+Position of Revolution (degrees) 80deg 95 deg 85 deg 100 deg 88 deg 102 deg 90 deg 105 deg 92 deg 107 deg
+
+Figure 4.9. Average F1 for pitch angles of 80º through 107º for a TSR of 0.75. To achieve this varying pitch, a mechanical device such as an actuator would be required. As our design requirements specify that a self-starting turbine with no external power sources will be fabricated, the outside power source needed to run the actuators would violate the design requirements. As a result of the active pitching analysis, it is concluded that continuously varying the pitching angle is, in many cases, not a practical solution to achieve self-starting.
+
+26
+
+4.3.3 Passive Pitching
+The idea of passive pitching is that an initial pitch angle other than 90º is set with a spring, and when the turbine reaches a certain rotational speed, the forces from the blade pull on the spring, extending it such that the blades achieve a pitch angle of 90º, again, to achieve maximum performance. Results from the analysis model were used to determine what pitch angle would be optimal before the turbine reached a desired speed where the blades could return to 90º. From the analysis, it was determined that a pitch angle of 107 degrees provides the largest average torques over the range of TSR from 0.25 to 2.25. A printout of the model results for various pitch angles from a TSR range of 0.25, to 7 are provided numerically in Appendix B. These tables present the overall performance of difference pitch angles at difference TSR, and they clearly show that the pitch angle of 107º is optimal for TSR below 2.25. The NACA 0012, however, experiences very low torques around a TSR of 2, which represents the 'deadband' phenomenon. Although the torques produced in this TSR range are positive, they are only slightly positive. After a TSR of 2.25, the maximum average torque is obtained with pitch angles close to 88-90 degrees. Again, these results are shown in the tables in Appendix B.
+
+4.4 Analysis Conclusions
+As a result of the engineering analysis carried out for the NACA 0012 airfoil at various pitch angles, it was shown that the 'deadband' phenomenon could be overcome, but only slightly. To overcome the 'deadband' with a level on confidence, torques in the TSR range of 0.75 to 2.75 must be increased to values further above zero. To achieve this, an airfoil with high lift coefficients at low Reynolds numbers is needed. It has been suggested that both the NACA 4415 [ref,7] and the NACA 0018 [ref,8] experience these characteristics. The NACA 0018, another symmetric airfoil, has a fatter profile than the NACA 0012, while the NACA 4415 is a cambered airfoil, meaning that the airfoil has a curved shape rather than a symmetric one. Cambered blades are also thought to experience better performance on small-scale turbines because the backwash from the blades is aimed in the direction of successive blade travel. The team was unable to find
+
+27
+
+evidence to prove that the NACA 0018 and 4415 experience larger lift coefficients than the NACA 0012 at low Reynolds numbers. However, data was found for the NACA 0018 and 4415 for high Reynolds numbers, and the trends in lift coefficients showed larger values than the NACA 0012 experiences at the same high Reynolds number. Although it is thought that these lift coefficient trends may continue into lower Reynolds numbers, it is not known for certain. As the mentioned airfoils are usually used in applications with fast wind speeds, the area of VAWT self-starting is fairly new so there is not a lot of information available for low speed applications such as this. To determine which profile has the best performance at low speeds, prototype testing will be carried out with the three profiles as a means to compare performance data. Results from the prototype testing will be used to determine which profile will be used for the full-scale model VAWT.
+
+28
+
+5.0
+
+DESIGN
+
+The components of the full-scale VAWT are listed below, in order of installation. See figure 5.0 for the location of each component on the turbine assembly.
+
+5.1 5.2 5.3 5.4 5.5 5.6 5.7 5.8
+
+Base Shaft Bearings Center Mounts Radial Connecting Arms Airfoils Blade Connecting Assembly Pitching Device
+
+29
+
+Blade Connecting Assembly and Pitching Device
+
+Center Mount
+
+Radial Connecting Arms Airfoils
+
+Base
+
+Shaft
+
+Bearings
+
+Figure 5.0. Full-scale VAWT assembly.
+
+30
+
+5.1 Base
+The base from previous year design projects will be reused for our project. The existing steel base will be modified with a steel connecting bracket and plywood base extension. The base components are discussed below.
+
+5.1.1 Steel Base
+We plan to use the base from previous years design projects, with a few modifications. The base is steel and stands approximately 3 feet high and weighs roughly 70 lbs, as shown in figure 5.1. On its own the base will not support the torque and moments produced from our wind turbine, so a base extension and a connecting bracket will be required. A CAD drawing of the steel base is shown in Appendix D.
+
+5.1.2 Plywood Base Extension
+To modify the base, we are going to purchase 4 sheets of 4' x 8' x ¾" plywood to construct a base extension that will give us a larger footprint on which to place weights. A CAD drawing is provided in Appendix D. For our purposes, we have determined that sandbags will be the optimal blend between weight, cost effectiveness, and transportability. The plywood sheets will be oriented with 2 sheets side-by-side, with 2 other sheets on top at 90 degrees rotation to the bottom 2 sheets. reinforced 8' x 8' base. This creates a
+
+5.2.3 Steel Connecting Bracket
+To connect the 4 sheets of plywood to the steel base we will use a bottom bracket made of 1/8" x 2 ½ " steel, as shown in Appendix D. This bottom bracket will be bolted from the bottom up through the sheets of plywood and up through the steel base. This 36" x 36" structure will provide quick assembly and disassembly of the turbine base structure. The bottom bracket will require 4 simple corner welds and flat head bolts welded in position that will encourage quick assembly.
+
+31
+
+Figure 5.1. Existing turbine base structure from previous year design projects.
+
+5.2 Shaft
+The shaft from existing design projects will be used for our project. To minimize weight, the 69 ½", 1 ½"diameter section of the shaft will be milled down to 1 3/8" to make the shaft uniform and to reduce weight. The existing shaft can be seen in figure 5.2, and a CAD drawing of the shaft, showing the section to be milled, is provide in Appendix D.
+
+32
+
+Figure 5.2. Existing shaft from previous year design project.
+
+5.3 Bearings
+Minimizing required start-up torque is essential for the wind turbine to self-start and thus, the success of our project. Without proper bearings our wind turbine will either not operate properly, or ruin the bearings that were used improperly, which could result in unsafe operating conditions. The bearings that were used in previous years wind turbine design projects, shown in figure 5.3, are inferior units that are not salvageable. Bearings can be very expensive, and for our particular setup we will require 2 roller bearings that are going to primarily centralize the shaft, and a turntable bearing to take the majority of the weight. This combination will provide the least amount of friction, while maximizing bearing life and maintaining safe operating conditions.
+
+33
+
+Figure 5.3. Bearings from previous year design project.
+
+5.4 Center Mounts
+In order to connect the radial arms and the turbine blades to the center shaft, there needs to be a strong connection that will withstand the centrifugal and inertial forces caused by the rotation of the wind turbine. The center shaft mount, machined from aluminum, will slide over the end of the shaft and will be fastened with setscrews, enabling quick assembly and disassembly. The three radial arms will be bolted into the center mount via female clamps at 120 degree angles of separation. This will be a one-piece unit, designed using finite element analysis, to minimize weight and to reduce the possibility of failure. A CAD drawing of the center mounts is provided in Appendix D.
+
+34
+
+5.5 Radial Connecting Arms
+Aluminum will be used for the six radial connecting arms to maintain a lightweight assembly with minimal inertial, moment, and centrifugal forces. The connecting arms provide a means to mount the blades to the center mounts and thus the center shaft. There will be two 3/8" bolts connecting each arm to the center mounts, while a pivoting device allows the blade to pitch on the opposite end. The arms will be purchased as ½" x 1 ½ " and may need to be cut to the appropriate 4' lengths. The arm edges will be rounded to reduce drag. A CAD drawing of the radial arms is provided in Appendix D.
+
+5.6 Airfoils
+Selecting appropriate airfoils for our 3-bladed vertical axis wind turbine is one of the most important design decisions. Different profiles provide various advantages and disadvantages that must be considered. Wind tunnel prototype testing results will provide information that will be used to choose the optimal blade profile for a self-starting application. Once a profile is selected, 3 blades will be CNC machined from aluminum flat-bar into an accurate representation of the selected airfoil. The estimated weight of each aluminum airfoil is 22 lbs. The top and bottom of each blade will be a 1" x 5" x 1" deep rectangular section to allow for easier connections to the radial arms and passive pitching system. A CAD drawing of the airfoils is provided in Appendix D.
+
+5.7 Blade Connecting Assembly
+The blade connecting assembly will be used to connect the blades to the radial arms. The current design is to drill a 3/8" hole through the radial arm, and also into the blade to a depth of 3". A steel dowel will be used for the connection. A washer and bushing will be located between the connecting arm and the top of the blade, and a set screw cap will
+
+35
+
+secure the blade to the radial connecting arm. assembly is provided in figure 5.4.
+
+A drawing of the blade connection
+
+Figure 5.4. Assembly drawing for blade attachments.
+
+5.8 Pitching Device
+Pitching the turbine blades is thought to improve turbine performance characteristics. The following pitch design has been discussed; however, our chosen blade pitching design will be determined in early January.
+
+5.8.1 Linear Spring / Slotted Bracket Pitch System
+For this design, a linear spring will be connected to the radial arm. It will initially be in compression when the turbine is at rest, pulling the pointed end of the airfoil towards the center of the turbine. As the turbine begins to rotate, the centrifugal forces will apply tension to the spring, and the blade will gradually be let out. This design will be used in 36
+
+conjunction with a slotted bracket to ensure that the blade pitches between the desired pitch angles. Figure 5.5 shows the linear spring pitching design, while figure 5.6 shows the slotted bracket. The first diagram in figure 5.5 shows the start-up blade orientation, set at the optimal pitch angle of 107˚. As the TSR increases, the centrifugal forces increase. When the TSR reaches 3, the centrifugal force will be enough such that the force causes the spring to extend until the pitch angle is 90˚. Also incorporated into the linear spring pitch design will be a stop mechanism such that the blade is not able to rotate to a pitch angle smaller than 90˚. This stop will be designed such that the forces on the blade while it is in the 90˚ position will not be held by the spring. The stopping device will also be used to withstand the centrifugal forces for this condition.
+
+Figure 5.5. Linear spring pitch design.
+
+37
+
+Slotted Bracket
+
+Figure 5.6. Slotted bracket for pitch design.
+
+5.8.2 Pitch Control Bracket to Manipulate the Pitch Angle
+For this design, three pitching control brackets will be machined from aluminum as seen in figure 14. These brackets will be bolted to the top radial arms and will have a series of holes drilled to correspond to different pitching angles. The blade will have a pin in the top to align with the bracket holes. The slotted bracket is shown in figure 5.6.
+
+38
+
+6.0
+
+STATUS
+
+Testing will be the major factor that determines the blade profile for the full-scale turbine. Currently, there are plans to test three different blade profiles that were selected based on high Reynolds number performance characteristics. The three blade profiles are
+
+NACA 0012 NACA 0018 NACA 4415
+
+The existing three blade H-type VAWT set-up from last years Wind Turbine Tester design project will be used for testing, as it has already been designed for use with the University's wind tunnel and torque transducer. The existing 3-blade H-type VAWT prototype can be seen in figure 6.0, and the wind tunnel is shown in figure 6.1. Due to the three blade profiles, modifications to existing support arms shown in figure 6.2 will be required. Alterations will involve removal of the rounded end portion of the supports, and the existing holes may have to be drilled again. The group plans to contact Stewart Carr to perform this work. The test blades will be made from clear pine, using a table saw to cut out a rough profile for each blade shape. Albert Murphy has volunteered to do this work. The profiles will then be sanded by hand and painted with oil based paint to obtain a smooth profile. Figure 6.3 shows the NACA 0012 wooden blade profile before sanding and painting. Each set of blades will be manufactured from one piece of pine, then cut to their appropriate 1' lengths, in an effort to make each set of blades as uniform as possible. The blades will be bolted to the supports and a series of nuts will be used to position them radially and vary the pitch angle.
+
+39
+
+Figure 6.0. 3-Blade H-type VAWT prototype for Dalhousie wind tunnel.
+
+40
+
+Figure 6.1. Dalhousie University wind tunnel facility.
+
+Figure 6.2. Existing prototype support arms.
+
+41
+
+Figure 6.3. Pictures of the prototype NACA 0012 wooden profile before sanding and painting. Prototype testing will begin when Christmas exams are completed. The current plan is to test each set of blades at low wind speeds (up to ~6 m/s) and measure torque, rotational speed, acceleration time, and maximum tip speed ratio for each set of blades. Also, results using different pitch angles will be obtained for each set of blades.
+
+Once the results of the tests are known, the blade profile with the best results will be chosen for use in the full-scale version of the turbine.
+
+42
+
+7.0
+
+COST ANALYSIS
+
+A preliminary budget of $4000-$5000 has been set. The main costs include the aluminum stock ($1000), bearings ($300), plywood ($310) and CNC machining time ($2000). Other minor items, such as setscrews, bolts, nuts, and washer hope to be obtained at a low cost. In addition, the aluminum stock and plywood hope to be obtained at lower costs through the department. A detailed budget can be seen in table 7.1.
+
+Currently, the team has $2464 of funds available, and these come from three sources. First, $864 has been donated from a previous wind turbine project. Second, the mechanical engineering department has donated $600. Finally, $1000 has been donated by Richard Rachals, a retired engineer who lives in Lunenburg, N.S. However, the money from the previous design project and the department has to spend on the CNC machining of the aluminum airfoils. A summary of donations can be seen in table 7.0.
+
+Other sources of funding have also been undertaken. Currently, wind energy companies and organizations, private businesses, and government have been contacted with regard to funding the project. Table 7.0. Funding to date. Who Previous Design Project Mechanical Dept. Richard Rachals 1 Must be spent on CNC machining
+
+Amount $8641 $6001 $1000
+
+43
+
+Table7.1. Preliminary budget
+
+Materials (Known Parts) Quantity Use 3 Aluminum stock to manufacture the airfoils 6 Aluminum stock to manufacture the radial arms 3" x 6" x 1' T-6061 1 Aluminum stock to Aluminum manufacture the center mount 1/8" x 6" x 2' T-6061 1 Aluminum stock to Aluminum manufacture the connecting brackets 4' x 8' x ¾' Thick Plywood 4 Used for the base ¼" x 2 ½" x 6' Hot Rolled A2 Used for base steel 36 Steel connecting bracket 3/8" X 2' HR CQ Steel Round 1 Dowel for blade assembly connection Linear Springs 3 Used in the pitching device Bearings 3 Used for shaft support and alignment Item 1" x 6" x 6' T-6061 Aluminum ½ " x 1 ½ " x 4' T-6061 Aluminum
+Sand TBD To weigh down the base
+
+Cost (CND) $6102
+$1502 $1502 $302
+
+$310 $402 $52 $15 $300 - Subject to Change $ 5/bag
+
+Materials (To Be Determined) Set Screws - Various Sizes 6 Connecting center mount to the shaft Rod 3 Used in the passive pitch device Nuts, Blots, Washers Connections
+
+TBD TBD TBD
+
+Machining 3 Aluminum Machining Time To machine parts 3 Welding Time To weld parts CNC Machining (At Dal) Time To machine the blades $20004 2 Source www.metalsdepot.com 3 Manual machining time provided by the technicians at no cost 4 Partially paid for by the department and previous years design project contributions
+
+44
+
+8.0
+
+CONCLUSIONS
+
+The first part of the design process, which included research, brainstorming, engineering analysis, and turbine design selection was completed during the fall term. The initial research and analysis portion of the project provided its share of complications; however, once completed it provided valuable information about the final design. To date, the major components of the turbine have been settled on, in particular, full-scale aluminum blades have been chosen, and will be machined in the CNC lab at Dalhousie. There are still some final design options that must be finalized, and these decisions will be made before turbine construction begins in early January.
+
+Testing will be a major part of the design selection, as blade profile selection will occur over the Christmas break based on prototype testing results. The test results should provide insight as to which blade profile provides the most torque and shows the most significant effects due to blade pitching. In addition to prototype testing, finite element analysis will be performed on each blade profile in an effort to confirm the wind tunnel results. The blade connectors and pitching system designs will also be finalized, and a spring selection for the passive pitching system will be made. A device used to couple the torque transducer and generator to the shaft will be designed as well. This will occur in conjunction with the selection of a generator, and design of a device that would couple the generator to the turbine after it reaches a certain rotational speed. The last item to be decided on is a brake mechanism that must be incorporated into the design for safety reasons. These items will be decided on before issuing of the second build report in January.
+
+Construction of the full-scale turbine will begin during the first week of the winter term, with the goal of finishing the final product by the end of February. This will allow for a month of testing and data analysis, as well as provide time for making any design alterations that are needed. A project timeline for the second term can be seen in the Gantt chart in Appendix E. Based on current progress, the group is confident that the final product will meet all the requirements set out in the fall term.
+
+45
+
+Finally, the group will like to thank Dr. Murat Koksal and Dr. Larry Hughes for their ongoing guidance, as well as the Mechanical Engineering Department technicians for their help with prototype testing. Thanks are also extended to Richard Rachals and the Mechanical Engineering Department for their donations to the project.
+
+46
+
+REFERENCES
+1. U.S. Department of Energy. "Wind and Hydropower Technologies Program". Retrieved from http://eereweb.ee.doe.gov/windandhydro/wind_how.html in
+
+November, 2005.
+
+2. Wikipedia Encyclopedia. Retrieved from http://en.wikipedia.org/wiki/Image:HDarrieus-Rotor.png.jpg on November 28, 2005.
+
+3. Chang, Professor L..(2005) "Advanced Topics in Environmental Engineering Wind Power," Ch 4. University of New Brunswick. Retrieved from http://www.ece.unb.ca/powereng/courses/EE6693/index.html in October, 2005.
+
+4. EarthLink (2005). "See How it Flies - A new spin on the perceptions, procedures, and principles of flight." Retrieved from
+
+http://www.av8n.com/how/htm/airfoils.html in November 2005.
+
+5. Kirke, Brian Kinloch, 1998. "Evaluation of Self-Starting Vertical Axis Wind Turbines for Stand-Alone Applications". Griffith University, Australia. Retrieved from http://www4.gu.edu.au:8080/adt-root/public/adt-QGU20050916.120408/ on November 1, 2005.
+
+6. Sheldahl, Robert E., Klimas, Paul C., 1981. "Aerodynamic Characteristics of Seven Symmetrical Airfoil Sections Through 180-Degree Angle of Attack for Use in Aerodynamic Analysis of Vertical Axis Wind Turbines", Sandia National Laboratories, Albuquerque, NM., USA.
+
+7. Reuss, R.L., Hoffmann, M.J., Gregorek, G.M., December 1995. 'Effects of Surface Roughness and Vortex Generators on the NACA 4415 Airfoil, The Ohio
+
+47
+
+State
+
+University,
+
+Columbus,
+
+Ohio,
+
+USA.
+
+Retrieved
+
+from
+
+http://wind.nrel.gov/OSU_data/reports/7x10/N4415_7x10.pdf on November 3, 2005.
+
+8. Pawsey, N.C.K., 2002. "Development and Evaluation of Passive Variable-Pitch Vertical Axis Wind Turbines", School of Mechanical and Manufacturing Engineering, The University of South Wales, Australia.
+
+9. Gipe, Paul, 2004. "Wind Power," Chelsea Green Publishing Company, Page 97
+
+10. Johnson, Dr. Gary L. (November 21, 2001) "Wind Turbine Power - Ch 4. Wind Turbine Power, Energy and Torque." Retrieved from
+
+http://www.eece.ksu.edu/~gjohnson/wind4.pdf in October 2005.
+
+48
+
+APPENDIX A - NACA 0012 LIFT AND DRAG COEFFICIENTS
+The following tables list the lift and drag coefficients for the NACA 0012 airfoil at Reynolds numbers varying from 10,000 to 5,000,000. [ref,6]
+Re # 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 10000 alpha 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 30 35 40 45 50 55 60 65 70 75 80 85 90 95 Cl 0 0.083 0.1534 0.2009 0.2003 0.0328 -0.1413 -0.1142 -0.0703 -0.0215 0.0311 0.0848 0.1387 0.1928 0.2468 0.3008 0.3548 0.4079 0.4606 0.5121 0.5838 0.6161 0.6687 0.7216 0.7744 0.8276 0.881 0.9345 0.915 1.02 1.075 1.085 1.04 0.965 0.875 0.765 0.65 0.515 0.37 0.22 0.07 -0.07 Cd 0.0337 0.0338 0.0343 0.0351 0.0359 0.0351 0.046 0.058 0.072 0.086 0.101 0.117 0.134 0.152 0.171 0.19 0.21 0.231 0.252 0.274 0.297 0.32 0.344 0.369 0.394 0.42 0.446 0.473 0.57 0.745 0.92 1.075 1.215 1.345 1.47 1.575 1.665 1.735 1.78 1.8 1.8 1.78 # 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 Re 20000 alpha 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 30 35 40 45 50 55 60 65 70 75 80 85 90 95 Cl 0 0.1057 0.2072 0.3032 0.3929 0.4781 -0.0298 -0.1089 -0.0699 -0.0198 0.032 0.0856 0.1894 0.1934 0.2474 0.3014 0.3554 0.4089 0.462 0.5147 0.5663 0.6184 0.6709 0.7238 0.7765 0.8297 0.8831 0.9365 0.915 1.02 1.075 1.085 1.04 0.965 0.875 0.765 0.65 0.515 0.37 0.22 0.07 -0.07 Cd 0.0245 0.0247 0.0251 0.0259 0.027 0.0282 0.046 0.058 0.072 0.086 0.101 0.117 0.134 0.152 0.171 0.191 0.21 0.23 0.252 0.274 0.297 0.32 0.344 0.369 0.394 0.42 0.446 0.473 0.57 0.745 0.92 1.075 1.215 1.345 1.47 1.575 1.665 1.735 1.78 1.8 1.8 1.78
+
+49
+
+43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59
+
+100 105 110 115 120 125 130 135 140 145 150 155 160 165 170 175 180
+
+-0.22 -0.37 -0.51 -0.625 -0.735 -0.84 -0.91 -0.945 -0.945 -0.91 -0.85 -0.74 -0.66 -0.675 -0.85 -0.69 0
+
+1.75 1.7 1.635 1.555 1.465 1.35 1.225 1.085 0.925 0.755 0.575 0.42 0.32 0.23 0.14 0.055 0.025
+
+43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59
+
+100 105 110 115 120 125 130 135 140 145 150 155 160 165 170 175 180
+
+-0.22 -0.37 -0.51 -0.625 -0.735 -0.84 -0.91 -0.945 -0.945 -0.91 -0.85 -0.74 -0.66 -0.675 -0.85 -0.69 0
+
+1.75 1.7 1.635 1.555 1.465 1.35 1.225 1.085 0.925 0.755 0.575 0.42 0.32 0.23 0.14 0.055 0.025
+
+Re # 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28
+
+40000 alpha 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 Cl 0 0.11 0.22 0.3376 0.4464 0.5276 0.6115 -0.0212 -0.0615 -0.016 0.0344 0.0869 0.1406 0.1945 0.2484 0.3024 0.3563 0.4107 0.4644 0.5178 0.5708 0.6232 0.6755 0.7283 0.7809 0.834 0.8873 0.9407 Cd 0.0175 0.0177 0.0181 0.0189 0.0199 0.0218 0.0232 0.058 0.072 0.086 0.101 0.117 0.134 0.152 0.171 0.19 0.21 0.231 0.252 0.274 0.297 0.32 0.344 0.369 0.394 0.42 0.445 0.473 # 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28
+
+Re
+
+80000 alpha 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 Cl 0 0.11 0.22 0.33 0.44 0.55 0.6384 0.7227 0.693 -0.001 0.0413 0.0911 0.143 0.1966 0.2504 0.3043 0.3582 0.4139 0.4689 0.5232 0.577 0.6305 0.6839 0.7373 0.7902 0.8432 0.8963 0.9496 Cd 0.0133 0.0134 0.0138 0.0145 0.0155 0.017 0.0189 0.0204 0.0222 0.06 0.06 0.117 0.134 0.152 0.171 0.19 0.21 0.231 0.252 0.274 0.297 0.32 0.344 0.369 0.394 0.42 0.446 0.473
+
+50
+
+29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59
+
+30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150 155 160 165 170 175 180
+
+0.915 1.02 1.075 1.085 1.04 0.965 0.875 0.765 0.65 0.515 0.37 0.22 0.07 -0.07 -0.22 -0.37 -0.51 -0.625 -0.735 -0.84 -0.91 -0.945 -0.945 -0.91 -0.85 -0.74 -0.66 -0.675 -0.85 -0.69 0
+
+0.57 0.745 0.92 1.075 1.215 1.345 1.47 1.575 1.665 1.735 1.78 1.8 1.8 1.78 1.75 1.7 1.635 1.555 1.465 1.35 1.225 1.085 0.925 0.755 0.575 0.42 0.32 0.23 0.14 0.055 0.025
+
+29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59
+
+30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150 155 160 165 170 175 180
+
+0.915 1.02 1.075 1.085 1.04 0.965 0.875 0.765 0.65 0.515 0.37 0.22 0.07 -0.07 -0.22 -0.37 -0.51 -0.625 -0.735 -0.84 -0.91 -0.945 -0.945 -0.91 -0.85 -0.74 -0.66 -0.975 -0.85 -0.69 0
+
+0.57 0.745 0.92 1.075 1.215 1.345 1.47 1.575 1.665 1.735 1.78 1.8 1.8 1.78 1.75 1.7 1.635 1.555 1.465 1.35 1.225 1.085 0.925 0.755 0.575 0.42 0.32 0.23 0.14 0.055 0.025
+
+Re 160000 # 1 2 3 4 5 6 7 8 9 10 11 12 13 14 alpha 0 1 2 3 4 5 6 7 8 9 10 11 12 13 Cl 0 0.11 0.22 0.33 0.44 0.55 0.66 0.746 0.8274 0.8527 0.1325 0.195 0.1533 0.203 Cd 0.0103 0.0104 0.0108 0.0114 0.0124 0.014 0.0152 0.017 0.0185 0.0203 0.0188 0.076 0.0134 0.152 # 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+
+Re 360000 alpha 0 1 2 3 4 5 6 7 8 9 10 11 12 13 Cl 0 0.11 0.22 0.33 0.44 0.55 0.66 0.77 0.8542 0.9352 0.9811 0.9132 0.4832 0.2759 Cd 0.0079 0.008 0.0084 0.0089 0.0098 0.0113 0.0125 0.0135 0.0153 0.0167 0.0184 0.0204 0.0217 0.0222
+
+51
+
+15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59
+
+14 15 16 17 18 19 20 21 22 23 24 25 26 27 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150 155 160 165 170 175 180
+
+0.2546 0.3082 0.362 0.42 0.4768 0.5322 0.587 0.6414 0.6956 0.7497 0.8034 0.8572 0.9109 0.9646 0.915 1.02 1.075 1.085 1.04 0.965 0.875 0.765 0.65 0.515 0.37 0.22 0.07 -0.07 -0.22 -0.37 -0.51 -0.625 -0.735 -0.84 -0.91 -0.945 -0.945 -0.91 -0.85 -0.74 -0.66 -0.675 -0.85 -0.69 0
+
+0.171 0.19 0.21 0.231 0.252 0.274 0.297 0.32 0.344 0.369 0.394 0.42 0.446 0.473 0.57 0.745 0.92 1.075 1.215 1.345 1.47 1.575 1.665 1.735 1.78 1.8 1.8 1.78 1.75 1.7 1.635 1.555 1.465 1.35 1.225 1.085 0.925 0.755 0.575 0.42 0.32 0.23 0.14 0.055 0.025
+
+15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59
+
+14 15 16 17 18 19 20 21 22 23 24 25 26 27 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150 155 160 165 170 175 180
+
+0.2893 0.3306 0.3792 0.4455 0.5047 0.5591 0.612 0.6643 0.7179 0.7715 0.8246 0.878 0.9313 0.9846 0.915 1.02 1.075 1.085 1.04 0.965 0.875 0.765 0.65 0.515 0.37 0.22 0.07 -0.07 -0.22 -0.37 -0.51 -0.625 -0.735 -0.84 -0.91 -0.945 -0.945 -0.91 -0.85 -0.74 -0.66 -0.675 -0.85 -0.69 0
+
+0.106 0.19 0.21 0.231 0.252 0.274 0.297 0.32 0.344 0.369 0.394 0.42 0.446 0.473 0.57 0.745 0.92 1.075 1.215 1.345 1.47 1.575 1.665 1.735 1.78 1.8 1.8 1.78 1.75 1.7 1.635 1.555 1.465 1.35 1.225 1.085 0.925 0.755 0.575 0.42 0.32 0.23 0.14 0.055 0.025
+
+Re 700000 # alpha Cl Cd #
+
+Re 1000000 alpha Cl Cd
+
+52
+
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50
+
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135
+
+0 0.11 0.22 0.33 0.44 0.55 0.66 0.77 0.88 0.9598 1.0343 1.0749 1.039 0.8737 0.6284 0.4907 0.4696 0.5195 0.5584 0.6032 0.6474 0.6949 0.7446 0.7948 0.8462 0.8984 0.9506 1.0029 0.915 1.02 1.075 1.085 1.04 0.965 0.875 0.765 0.65 0.515 0.37 0.22 0.07 -0.07 -0.22 -0.37 -0.51 -0.625 -0.735 -0.84 -0.91 -0.945
+
+0.0067 0.0068 0.007 0.0075 0.0083 0.0097 0.0108 0.0118 0.0128 0.0144 0.0159 0.0175 0.0195 0.0216 0.0236 0.117 0.21 0.23 0.252 0.274 0.297 0.32 0.344 0.369 0.394 0.42 0.446 0.473 0.57 0.745 0.92 1.075 1.215 1.345 1.47 1.575 1.665 1.735 1.78 1.8 1.8 1.78 1.75 1.7 1.635 1.555 1.465 1.35 1.225 1.085
+
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50
+
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135
+
+0 0.11 0.22 0.33 0.44 0.55 0.66 0.77 0.88 0.9661 1.0512 1.1097 1.1212 1.0487 0.8846 0.7108 0.606 0.5906 0.603 0.6334 0.6716 0.7162 0.7613 0.8097 0.8589 0.9093 0.9618 1.0144 0.915 1.02 1.075 1.085 1.04 0.965 0.875 0.765 0.65 0.515 0.37 0.22 0.07 -0.07 -0.22 -0.37 -0.51 -0.625 -0.735 -0.84 -0.91 -0.945
+
+0.0065 0.0066 0.0068 0.0071 0.0078 0.0091 0.0101 0.011 0.0119 0.0134 0.0147 0.0162 0.018 0.02 0.0222 0.0245 0.128 0.231 0.252 0.274 0.297 0.32 0.344 0.369 0.394 0.42 0.446 0.473 0.57 0.745 0.92 1.075 1.215 1.345 1.47 1.575 1.665 1.735 1.78 1.8 1.8 1.78 1.75 1.7 1.635 1.555 1.465 1.35 1.225 1.085
+
+53
+
+51 52 53 54 55 56 57 58 59
+
+140 145 150 155 160 165 170 175 180
+
+-0.945 -0.91 -0.85 -0.74 -0.66 -0.675 -0.85 -0.69 0
+
+0.925 0.755 0.575 0.42 0.32 0.23 0.14 0.055 0.025
+
+51 52 53 54 55 56 57 58 59
+
+140 145 150 155 160 165 170 175 180
+
+-0.945 -0.91 -0.85 -0.74 -0.66 -0.675 -0.85 -0.69 0
+
+0.925 0.755 0.575 0.42 0.32 0.23 0.14 0.055 0.025
+
+Re 2000000 # 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 alpha 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 30 35 40 45 50 55 60 65 Cl 0 0.11 0.22 0.33 0.44 0.55 0.66 0.77 0.88 0.99 1.0727 1.1539 1.2072 1.2169 1.1614 1.0478 0.826 0.7826 0.7163 0.7091 0.7269 0.7595 0.7981 0.8429 0.8882 0.9352 0.9842 1.0355 0.915 1.02 1.075 1.085 1.04 0.965 0.875 0.765 Cd 0.0064 0.0064 0.0066 0.0069 0.0073 0.0081 0.009 0.0097 0.0105 0.0113 0.0128 0.014 0.0155 0.0172 0.0191 0.0213 0.0237 0.139 0.252 0.274 0.297 0.32 0.344 0.369 0.394 0.42 0.446 0.473 0.57 0.745 0.92 1.075 1.215 1.345 1.47 1.575 # 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36
+
+Re 5000000 alpha 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 30 35 40 45 50 55 60 65 Cl 0 0.11 0.22 0.33 0.44 0.55 0.66 0.77 0.88 0.99 1.1 1.1842 1.3673 1.3242 1.3423 1.3093 1.2195 1.0365 0.9054 0.8412 0.8233 0.8327 0.8563 0.8903 0.9295 0.9718 1.1093 1.068 0.915 1.02 1.075 1.088 1.04 0.965 0.875 0.765 Cd 0.0064 0.0064 0.0066 0.0068 0.0072 0.0076 0.0081 0.0086 0.0092 0.0098 0.0106 0.0118 0.013 0.0143 0.0159 0.0177 0.0198 0.0229 0.148 0.274 0.297 0.32 0.344 0.369 0.394 0.42 0.446 0.473 0.57 0.745 0.92 1.075 1.215 1.345 1.47 1.575
+
+54
+
+37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59
+
+70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150 155 160 165 170 175 180
+
+0.65 0.515 0.37 0.22 0.07 -0.07 -0.22 -0.37 -0.51 -0.625 -0.735 -0.84 -0.91 -0.945 -0.945 -0.91 -0.85 -0.74 -0.66 -0.675 -0.85 -0.69 0
+
+1.665 1.735 1.78 1.8 1.8 1.78 1.75 1.7 1.635 1.555 1.465 1.35 1.225 1.085 0.925 0.755 0.575 0.42 0.32 0.23 0.14 0.055 0.025
+
+37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59
+
+70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150 155 160 165 170 175 180
+
+0.65 0.515 0.37 0.22 0.07 -0.07 0.22 0.37 0.51 0.625 0.735 -0.84 -0.91 -0.945 -0.945 -0.91 -0.85 -0.74 -0.66 -0.675 -0.85 -0.69 0
+
+1.665 1.735 1.78 1.8 1.8 1.78 1.75 1.7 1.635 1.555 1.465 1.35 1.225 1.085 0.925 0.755 0.575 0.42 0.32 0.23 0.14 0.055 0.025
+
+55
+
+APPENDIX B - MODEL RESULTS (NUMERICAL) FOR PITCH ANGLES AT VARIOUS TSR
+The results from the Excel model are shown in the following tables. The tables provide F1, average F1, torques and average torques, along with other information. The results are shown for all pitch angles between 80˚ and 107˚ for selected TSR between 0.25 and 7.
+
+NACA 0012 summary Ref # 1 2 3 4 5 6 7 8 9 10 U TSR chord length blade length Blade Pitch Average F1 80 0.23 85 0.30 88 0.41 90 0.35 92 0.46 95 0.40 100 0.44 102 0.58 105 0.52 107 0.66 6 m/s 0.25 0.070 m 1.6 m Max F1 0.55 0.68 0.72 0.77 0.77 0.86 0.91 0.88 0.96 0.94 Min F1 -0.06 -0.07 0.24 0.06 0.09 0.11 0.11 0.32 0.09 0.33 Average Torque 0.18 0.24 0.33 0.28 0.37 0.32 0.35 0.46 0.41 0.53 Max Torque 0.44 0.55 0.58 0.62 0.62 0.69 0.73 0.70 0.77 0.75 Min Torque -0.04 -0.06 0.19 0.05 0.07 0.09 0.09 0.25 0.07 0.26
+
+NACA 0012 summary Ref # 1 2 3 4 5 6 7 8 9 10 U TSR chord length blade length Blade Pitch Average F1 80 -0.13 85 0.05 88 0.13 90 0.08 92 0.09 95 0.14 100 0.23 102 0.33 105 0.45 107 0.53 6 0.75 0.07 1.6 m/s m m Max F1 0.41 0.90 0.73 0.59 0.71 0.88 1.15 1.18 1.49 1.42 Min F1 -0.65 -0.64 -0.47 -0.46 -0.48 -0.28 -0.35 -0.40 -0.28 -0.36 Average Torque -0.11 0.04 0.10 0.06 0.07 0.12 0.19 0.26 0.36 0.43 Max Torque 0.33 0.72 0.59 0.47 0.57 0.71 0.92 0.95 1.19 1.14 Min Torque -0.52 -0.51 -0.38 -0.37 -0.38 -0.22 -0.28 -0.32 -0.22 -0.29
+
+56
+
+NACA 0012 summary Ref # 1 2 3 4 5 6 7 8 9 10 U TSR chord length blade length Blade Pitch 80 85 88 90 92 95 100 102 105 107 6 1 0.07 1.6 Average F1 -0.42 -0.32 -0.24 -0.30 0.01 -0.25 -0.13 0.40 0.11 0.73 m/s m m Max F1 0.29 0.35 0.50 0.37 0.89 0.44 0.65 1.29 0.88 1.62 Min F1 -1.22 -1.03 -0.88 -0.89 -0.55 -0.86 -0.84 -0.49 -0.79 -0.44 Average Torque -0.34 -0.26 -0.19 -0.24 0.01 -0.20 -0.11 0.32 0.08 0.59 Max Torque 0.23 0.28 0.40 0.30 0.71 0.35 0.52 1.04 0.70 1.30 Min Torque -0.98 -0.83 -0.71 -0.71 -0.44 -0.69 -0.67 -0.40 -0.63 -0.35
+
+NACA 0012 summary Ref # 1 2 3 4 5 6 7 8 9 10 U TSR chord length blade length Blade Pitch Average F1 80 -0.43 85 -0.41 88 -0.40 90 -0.47 92 -0.29 95 -0.42 100 -0.30 102 0.01 105 0.15 107 0.54 6 1.5 0.07 1.6 m/s m m Max F1 0.98 1.24 1.41 1.28 1.91 1.25 0.97 0.89 1.19 1.10 Min F1 -2.41 -2.09 -1.58 -1.60 -1.51 -1.50 -1.23 -0.91 -1.21 -0.64 Average Torque -0.35 -0.33 -0.32 -0.38 -0.23 -0.34 -0.24 0.01 0.12 0.43 Max Torque 0.78 0.99 1.13 1.03 1.53 1.00 0.78 0.72 0.96 0.88 Min Torque -1.93 -1.68 -1.27 -1.28 -1.21 -1.20 -0.99 -0.73 -0.97 -0.51
+
+57
+
+NACA 0012 summary Ref # 1 2 3 4 5 6 7 8 9 10 U TSR chord length blade length Blade Pitch 80 85 88 90 92 95 100 102 105 107 6 2 0.07 1.6 Average F1 -0.39 -0.62 -0.49 -0.38 -0.59 -0.29 -0.63 -0.51 0.06 0.18 m/s m m Max F1 3.67 0.75 1.62 2.56 2.20 3.30 1.67 1.12 2.02 1.66 Min F1 -1.78 -3.47 -3.33 -2.96 -2.43 -2.35 -1.56 -1.92 -2.16 -1.26 Average Torque -0.31 -0.50 -0.39 -0.31 -0.47 -0.23 -0.50 -0.41 0.05 0.14 Max Torque 2.94 0.60 1.30 2.05 1.76 2.65 1.34 0.90 1.62 1.33 Min Torque -1.43 -2.78 -2.67 -2.38 -1.95 -1.88 -1.25 -1.54 -1.73 -1.01
+
+NACA 0012 summary Ref # 1 2 3 4 5 6 7 8 9 10 U TSR chord length blade length Blade Pitch Average F1 80 -0.10 85 -0.90 88 -1.11 90 -0.87 92 -0.50 95 -0.52 100 -1.12 102 -0.85 105 -0.29 107 0.06 6 2.25 0.07 1.6 m/s m m Max F1 3.43 0.93 0.94 1.88 2.93 3.26 0.85 2.17 2.33 2.30 Min F1 -2.09 -2.74 -4.09 -3.85 -3.49 -2.43 -2.70 -2.03 -2.32 -1.26 Average Torque -0.08 -0.72 -0.89 -0.70 -0.40 -0.41 -0.90 -0.68 -0.23 0.04 Max Torque 2.75 0.74 0.76 1.50 2.35 2.61 0.68 1.74 1.86 1.84 Min Torque -1.68 -2.19 -3.27 -3.08 -2.80 -1.95 -2.16 -1.62 -1.86 -1.01
+
+58
+
+NACA 0012 summary Ref # 1 2 3 4 5 6 7 8 9 10 U TSR chord length blade length Blade Pitch 80 85 88 90 92 95 100 102 105 107 6 3 0.07 1.6 Average F1 3.42 0.02 -1.24 -1.78 -2.10 -1.91 -1.78 -2.42 -1.07 -0.83 m/s m m Max F1 8.03 7.25 1.35 3.06 1.40 3.30 2.52 0.20 2.28 1.62 Min F1 0.74 -3.54 -3.73 -6.33 -6.23 -6.14 -3.17 -4.62 -2.64 -3.84 Average Torque 2.74 0.02 -1.00 -1.42 -1.69 -1.53 -1.43 -1.94 -0.86 -0.67 Max Torque 6.43 5.81 1.08 2.45 1.12 2.64 2.02 0.16 1.82 1.30 Min Torque 0.59 -2.83 -2.99 -5.07 -4.99 -4.92 -2.54 -3.70 -2.11 -3.08
+
+NACA 0012 summary Ref # 1 2 3 4 5 6 7 8 9 10 U TSR chord length blade length Blade Pitch Average F1 80 3.32 85 1.93 88 -0.87 90 -0.58 92 -0.37 95 -0.74 100 -2.04 102 -2.07 105 -2.62 107 -1.15 6 3.5 0.07 1.6 m/s m m Max F1 10.08 6.74 4.76 3.31 5.85 3.85 7.60 5.65 0.55 3.20 Min F1 -0.12 -0.72 -5.23 -5.18 -8.44 -7.32 -5.71 -3.62 -5.54 -3.40 Average Torque 2.66 1.55 -0.70 -0.46 -0.29 -0.59 -1.63 -1.66 -2.10 -0.92 Max Torque 8.08 5.40 3.82 2.66 4.68 3.08 6.09 4.52 0.44 2.56 Min Torque -0.10 -0.58 -4.19 -4.15 -6.76 -5.87 -4.58 -2.90 -4.44 -2.73
+
+59
+
+NACA 0012 summary Ref # 1 2 3 4 5 6 7 8 9 10 U TSR chord length blade length Blade Pitch Average F1 80 3.37 85 5.78 88 5.73 90 3.27 92 1.33 95 -0.47 100 -3.24 102 -3.99 105 -1.91 107 -1.88 6 4 0.07 1.6 m/s m m Max F1 9.93 9.15 12.26 16.84 8.99 6.71 8.02 5.02 -1.50 2.42 Min F1 -0.71 4.62 -2.20 -6.93 -6.24 -8.65 -8.81 -6.59 -2.66 -6.71 Average Torque 2.70 4.63 4.59 2.62 1.07 -0.37 -2.59 -3.20 -1.53 -1.51 Max Torque 7.96 7.33 9.82 13.49 7.20 5.38 6.42 4.02 -1.20 1.94 Min Torque -0.57 3.70 -1.76 -5.55 -5.00 -6.93 -7.06 -5.28 -2.13 -5.37
+
+NACA 0012 summary Ref # 1 2 3 4 5 6 7 8 9 10 U TSR chord length blade length Blade Pitch Average F1 80 3.74 85 4.92 88 10.27 90 10.02 92 6.07 95 0.57 100 -4.63 102 -6.22 105 -4.52 107 -0.28 6 4.5 0.07 1.6 m/s m m Max F1 10.98 8.92 11.66 17.93 20.80 7.34 8.16 4.29 -4.25 0.21 Min F1 -0.85 3.09 0.35 0.99 -8.45 -6.10 -12.22 -9.67 -5.55 -1.96 Average Torque 2.99 3.94 8.23 8.03 4.87 0.46 -3.71 -4.98 -3.62 -0.23 Max Torque 8.80 7.15 9.34 14.36 16.66 5.88 6.54 3.44 -3.41 0.17 Min Torque -0.68 2.48 0.28 0.79 -6.77 -4.88 -9.79 -7.74 -4.44 -1.57
+
+60
+
+NACA 0012 summary Ref # 1 2 3 4 5 6 7 8 9 10 U TSR chord length blade length Blade Pitch Average F1 80 4.80 85 3.84 88 10.54 90 16.29 92 15.23 95 4.64 100 -6.30 102 -9.02 105 -7.45 107 -2.52 6 5 0.07 1.6 m/s m m Max F1 12.49 7.82 11.99 18.18 25.19 13.18 8.30 3.54 -6.95 -2.03 Min F1 -0.73 2.13 9.71 15.16 6.50 -6.19 -15.83 -13.19 -7.97 -3.57 Average Torque 3.85 3.08 8.44 13.05 12.20 3.72 -5.05 -7.22 -5.97 -2.02 Max Torque 10.01 6.26 9.60 14.57 20.18 10.56 6.65 2.83 -5.57 -1.63 Min Torque -0.58 1.71 7.78 12.14 5.21 -4.96 -12.68 -10.57 -6.39 -2.86
+
+NACA 0012 summary Ref # 1 2 3 4 5 6 7 8 9 10 U TSR chord length blade length Blade Pitch Average F1 80 6.65 85 2.93 88 9.87 90 17.50 92 20.79 95 10.08 100 -5.99 102 -11.25 105 -10.80 107 -5.22 6 5.5 0.07 1.6 m/s m m Max F1 14.62 7.17 11.44 18.83 27.74 20.60 8.12 2.30 -10.37 -4.73 Min F1 3.41 1.05 8.69 16.63 15.15 -3.62 -19.78 -17.08 -11.45 -6.50 Average Torque 5.33 2.35 7.91 14.02 16.66 8.08 -4.80 -9.02 -8.65 -4.18 Max Torque 11.71 5.74 9.16 15.09 22.23 16.50 6.50 1.84 -8.31 -3.79 Min Torque 2.73 0.84 6.96 13.32 12.13 -2.90 -15.84 -13.68 -9.17 -5.21
+
+61
+
+NACA 0012 summary Ref # 1 2 3 4 5 6 7 8 9 10 U TSR chord length blade length Blade Pitch Average F1 80 8.99 85 2.20 88 9.03 90 17.64 92 26.85 95 17.61 100 -5.55 102 -12.97 105 -14.53 107 -8.34 6 6 0.07 1.6 m/s m m Max F1 17.20 6.44 10.43 18.86 29.77 27.08 8.04 1.05 -13.97 -7.79 Min F1 5.71 0.55 8.19 16.78 24.31 5.87 -16.23 -21.50 -15.26 -9.79 Average Torque 7.20 1.76 7.23 14.13 21.51 14.11 -4.45 -10.39 -11.64 -6.68 Max Torque 13.78 5.16 8.36 15.11 23.85 21.69 6.44 0.84 -11.20 -6.24 Min Torque 4.57 0.44 6.56 13.44 19.47 4.71 -13.01 -17.23 -12.23 -7.84
+
+NACA 0012 summary Ref # 1 2 3 4 5 6 7 8 9 10 U TSR chord length blade length Blade Pitch Average F1 80 11.75 85 1.40 88 7.78 90 17.22 92 29.48 95 28.11 100 -5.56 102 -15.34 105 -18.61 107 -11.79 6 6.5 0.07 1.6 m/s m m Max F1 19.96 6.72 10.42 19.00 31.47 34.36 8.18 -0.19 -18.12 -11.33 Min F1 7.76 -0.36 6.94 16.20 27.43 12.39 -18.19 -26.26 -19.62 -13.44 Average Torque 9.41 1.12 6.23 13.79 23.61 22.52 -4.46 -12.29 -14.91 -9.45 Max Torque 15.99 5.38 8.34 15.22 25.21 27.52 6.55 -0.15 -14.52 -9.07 Min Torque 6.22 -0.29 5.56 12.98 21.97 9.93 -14.57 -21.04 -15.72 -10.77
+
+62
+
+NACA 0012 summary Ref # 1 2 3 4 5 6 7 8 9 10 U TSR chord length blade length Blade Pitch Average F1 80 15.01 85 0.89 88 6.92 90 17.07 92 30.92 95 35.86 100 -5.53 102 -18.84 105 -23.06 107 -15.58 6 7 0.07 1.6 m/s m m Max F1 23.82 6.02 8.72 17.65 32.42 48.95 7.42 -1.72 -22.39 -15.01 Min F1 11.63 -1.27 5.47 16.40 28.96 23.25 -17.80 -31.27 -23.94 -17.23 Average Torque 12.03 0.71 5.54 13.68 24.77 28.73 -4.43 -15.09 -18.47 -12.48 Max Torque 19.08 4.82 6.99 14.14 25.97 39.22 5.94 -1.38 -17.93 -12.03 Min Torque 9.31 -1.01 4.38 13.14 23.20 18.63 -14.26 -25.05 -19.18 -13.80
+
+63
+
+APPENDIX C - MATLAB PROGRAMMING CODE FOR ANALYSIS MODEL
+The following MATLAB codes were used to calculate the angles of attack (rad) and the magnitudes of the relative wind speeds (m/s), respectively. Code to Calculate Angle of Attack, Alpha (radians) outfile = fopen('angles.txt', 'r'); us = input('Enter the free stream velocity, U '); tsr = input('Enter the tip speed ratio, tsr '); n = 0; fprintf(outfile,'Alpha\n'); while n <= 360 theta = n*pi/180; U = [us, 0]; V = [tsr*us*cos(theta), tsr*us*sin(theta)]; W = [U(1,1)+V(1,1), U(1,2)+V(1,2)]; Vmag = sqrt(V(1,1)^2+V(1,2)^2); Wmag = sqrt(W(1,1)^2+W(1,2)^2); dp = dot(V,W); a = acos(dp/(Vmag*Wmag)); alpha = a*180/pi; fprintf(outfile,'% .2d\n', n,alpha); n = n+5; end
+
+64
+
+Code to Calculate Relative Wind Speed, W (m/s) outfile = fopen('W.txt', 'r'); us = input('Enter the free stream velocity, U '); tsr = input('Enter the tip speed ratio, tsr '); n = 0; fprintf(outfile,'Relative Wind Speed\n'); while n <= 360 theta = n*pi/180; U = [us, 0]; V = [tsr*us*cos(theta), tsr*us*sin(theta)]; W = [U(1,1)+V(1,1), U(1,2)+V(1,2)]; Vmag = sqrt(V(1,1)^2+V(1,2)^2); Wmag = sqrt(W(1,1)^2+W(1,2)^2); dp = dot(V,W); a = acos(dp/(Vmag*Wmag)); alpha = a*180/pi; fprintf(outfile,'% .2d\n', n,W); n = n+5; end
+
+65
+
+APPENDIX D - SOLID EDGE DRAWINGS
+
+66
+
+APPENDIX E - GANTT CHART
+
+76
+

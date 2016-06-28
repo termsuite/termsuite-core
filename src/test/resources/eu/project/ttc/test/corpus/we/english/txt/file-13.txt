@@ -1,0 +1,253 @@
+B-034 (O)
+
+The 2nd Joint International Conference on "Sustainable Energy and Environment (SEE 2006)" 21-23 November 2006, Bangkok, Thailand
+
+Optimal Pitch for Untwisted Blade Horizontal Axis Wind Turbine
+Chalothorn Thumthae and Tawit Chitsomboon*
+School of Mechanical Engineering, Institute of Engineering, Suranaree University of Technology, Nakorn Ratchasima, Thailand Abstract: This paper presents the numerical simulation of horizontal axis wind turbines with untwisted blade in steady state condition. The objective is for investigating the condition for the optimal pitch that produces the highest power output. The numerical solution is carried out by solving conservation equations for mass and momenta in three dimensions using the unstructured-grid finite volume methodology (Fluent code). The rotating reference frame technique was used wherein the blades are fixed in relation to the rotating frame. Local grid refinement technique was employed and grid-independent study was also performed. Computational results of the 12 degree pitch are compared with field experimental data of The National Renewable Laboratory (USA), for both inviscid and turbulent conditions. The computational results give good agreement with experimental results both for inviscid and viscous conditions if stall do not occur (at 80% span). However, if stall occurs (at 30% span), the results of both inviscid and viscous simulations are quite different from the experiment. For power output comparison; the k-epsilon case produces only +3.6% errors. The power outputs reach maximum at the 8.82 degree and 4.2 degree pitch at wind speed 10.5 m/s and 7.2 m/s respectively. Keywords: Wind Turbine, HAWT, Untwisted Blade, Optimal Pitch, Maximum Power
+
+1. INTRODUCTION
+Twisted blade for wind turbine has proved to be superior to the untwisted one due to its full utilization of blade area to produce lift. However, untwisted blade type is still useful for small and medium wind turbine because of its ease in manufacturing, hence cost. This research uses CFD to study the flow pass the horizontal axis wind turbines. The flow is quite complex because of the rotation of the turbine, coupled with turbulence and stall effects. The joint efforts undertaken by several European Union research labs and the United State's National Renewable Energy Laboratory (NREL) has documented and made available experimental field data for several different wind turbines [1]. Users and numerical analysts have ready access to this data, known as IEA Annex XIV, by either extracting it from the written report or by downloading the electronic data files from website http://www.ecn.nl/wind/other/IEA/index.en.html. The data that is used in comparison for validating the numerical solutions in this paper is the experiment of NREL Phase II Wind Turbine [2]. The Phase II configuration has a rotor that rotates at a constant 72 rpm and rated at 20 kW of electrical power. This fixed-pitch rotor has a diameter of 10.1 meters, untwisted blades, and constant chord of 0.458 meters. The rotor uses the NREL S809 airfoil through out the span with some modifications towards the root to blend with the hub spar. This configuration is shown in Fig.1. The rotor hub is fixed at a pre-cone of 3o and a fixed pitch of 12o. The blade section of S809 airfoil and pitch angle are shown in Fig.2
+
+Fig. 1 Geometric, dimension and test configuration of NREL Phase II wind turbine [2]
+
+Fig. 2 NREL S809 airfoil section
+
+2. METHODOLOGY
+2.1 Governing Equations Many methods in modeling the rotating wind turbine exist in both transient and steady state computations. The rotating wind turbine can be modeled with the moving grid method. It is more accurate for a transient study [3] such as in a vertical axis wind Corresponding author: tabon@sut.ac.th
+
+1
+
+B-034 (O)
+
+The 2nd Joint International Conference on "Sustainable Energy and Environment (SEE 2006)" 21-23 November 2006, Bangkok, Thailand
+
+The observer then sees the relative velocity, U r = U − (ω × r ) , where Ur is relative velocity, U is absolute velocity, ω is the angular velocity of the rotating frame, and r is the position vector in the rotating frame. The momentum equation in terms of relative velocity becomes,
+
+turbine [4]; it needs high computational time and large computer memory. The method of rotating reference frame [5, 6, 7] is easier to implement and it is appropriate for the steady state simulation. In this method, the blade is fixed while the reference axis is rotating.
+
+∂ρU r + ∇ ⋅ ( ρU rU r ) + 2 ρω × U r + ρω × (ω × r ) = ∇ ⋅ σ ∂t
+
+(1)
+
+where 2 ρω × U is the Coriolis force and ρω × (ω × r ) is centrifugal force. Equation (1) can be rewritten in from of absolute velocity that is more comfortable for applying boundary condition [8]. .
+
+∂ρU + ∇ ⋅ ( ρU r U ) + ρ (ω × U ) = ∇ ⋅ σ ∂t
+
+(2)
+
+where σ is stress tensor of Newtonion fluid. Apply the method of eddy viscosity for turbulence modeling, the σ can be written as :
+
+σ = − P +
+where
+
+ 
+
+2  µ eff ∇ ⋅ U  I + µ eff ∇U + (∇U ) T 3 
+
+[
+
+]
+
+(3)
+
+µ eff = µ + µ t ; µ
+, where
+
+is dynamic viscosity,
+
+µt
+
+is eddy viscosity that is calculated from the standard k-ε model [9],
+
+µ t = ρ c µ (k 2 / ε )
+
+cµ
+
+is the constant value of 0.09.
+
+k
+
+and ε are calculated from its transport equations [10].
+
+In this study, steady state, incompressible flow is assumed. The numerical solution is carried out by solving the conservation equations for mass and momenta in three dimensions using the unstructured-grid finite volume methodology (Fluent code). The sequential algorithm, Semi-Implicit Method for Pressure-Linked Equation (SIMPLE) [11], is used in solving all scalar variables. For the convective terms of momentum equations, the QUICK interpolating scheme [12] is applied. For turbulence equations, in order to prevent the unbounded problems often associated with the QUICK scheme [9], 1st order upwind scheme is applied. The computational conditions are as shown in Table 1. The computational grid is shown in Fig. 3. The solution is carried out for only one blade domain instead of the full three blades because of symmetry. Grid around the blade section is shown in Fig. 4. Hexahedral grid is used in the blade near field for higher accuracy of computation in the boundary layer; moreover, the hexahedral grid is more efficient for the local grid refinement. In this study y+ value is varied in the boundary layer to check for grid dependency. Table 1 Computational conditions density 0.976 kg/m3 operating pressure 80,592 Pa wind velocity 10.6 and 7.2 m/s rotational speed 72.0 RPM blade pitch 1,3,5,7 and 12 degree pressure correction interpolating scheme viscous model near wall treatment residual error SIMPLE QUICK (momentum) 1st order Upwind (turbulence) standard k − ε and inviscid standard wall function (Log- law) 5x10-5
+
+2.2 Experimental Data Correlation Experimental data was measured as power from generator. To compare with CFD, it is needed to be converted to mechanical power. According to the ANNEX XIV report, mechanical power can be calculated easily by:
+
+PGenerator = 0.78PMechanical
+
+(4)
+
+Duque N. P., et. al. [13] found that this equation is not perfectly correct. They proposed a new correlation from curve fitting,
+
+PGenerator = 0.9036 PMechanical − 0.847
+
+(5)
+
+Fig. 5 compares the generator power of the original and new the correlations. The new correlation is evidently better and is used in this research. The next comparison is pressure coefficient, which can be calculated as,
+
+2
+
+B-034 (O)
+
+The 2nd Joint International Conference on "Sustainable Energy and Environment (SEE 2006)" 21-23 November 2006, Bangkok, Thailand
+
+CP =
+
+( P − P∞ )
+2 0.5ρ ∞ [U ∞ + (ωr ) 2 ]
+
+(6)
+
+where P − P∞ is static pressure on blade and U ∞ is wind speed.
+
+Fig. 3 Domain of computational grid
+
+Fig. 4 Grid around blade section
+
+(a) Experimental power curves referenced to generator [13]
+
+(b) Corrected power curve [13]
+
+Fig. 5 Comparison of the correlation of wind turbine power
+
+3
+
+B-034 (O)
+
+The 2nd Joint International Conference on "Sustainable Energy and Environment (SEE 2006)" 21-23 November 2006, Bangkok, Thailand
+
+9 8
+
+y = -0.0006x - 0.0487x + 0.9995x + 3.0623
+
+3
+
+2
+
+Generator Power (kW) .
+
+7 6 5 4 3 CFD(k-e)@10.5 m/s 2 1 0 0 2 4 6 8 10 Pitch Angle (degree) 12 14 CFD(k-e)@7.2 m/s Experiment CFD(inviscid)
+
+y = 0.0012x - 0.0679x + 0.5066x + 2.6828
+
+3
+
+2
+
+Fig. 6 Computed generator powers compared to experimental results
+-1.5 -1 -0.5
+EXP k-e inviscid
+
+-5 -4
+EXP
+
+-3 -2
+Cp
+
+k-e inviscid
+
+Cp
+
+0
+
+-1
+0.5
+
+0
+1 0 1.5 0.2 0.4 0.6 0.8 1
+
+1 0 2 0.2 0.4
+x/c
+
+0.6
+
+0.8
+
+1
+
+x/c
+
+(a) 80% span Fig. 7 Comparison of pressure coefficients
+
+(b) 30% span
+
+(a) 80% span Fig. 8 Velocity fields of computed solutions
+
+(b) 30% span
+
+4
+
+B-034 (O)
+
+The 2nd Joint International Conference on "Sustainable Energy and Environment (SEE 2006)" 21-23 November 2006, Bangkok, Thailand
+
+3. RESULTS AND DISCUSSION
+3.1 CFD results The calculation started on the normal mesh, after that, the local grid refinement was performed in boundary layer region until grid independent solution was attained. The final y+ for grid independent solution was found to be about 250 and lower. The comparisons of generator power are shown in Fig.6. The CFD results show reasonably good agreements with experimental data. The solution with k- ε turbulence model underpredicted the experiment data by 3.6% and 24.8% at wind speed 10.5 m/s and 7.2 m/s, respectively. The rather large percentage error at low speed could be attributable to the uncertainty in the experimental correlation in this region, as can be seen from Fig. 5. The power output in this region is small, so any small absolute error due to correlation could make a large contribution to the percentage error. The Inviscid calculation, while generally appeared to be very reasonable, overpredicted the experiment; this is anticipated since inviscid flow lacks viscous drag. Fig. 7 shows the comparison of pressure coefficients. The numerical solutions, both inviscid and viscous cases, are quite close to experimental data at 80% span. At 30% span, however, both predicted results are not in good agreement with the experiment because of the effect of flow separation due to the high angle of attack. The velocity flow fields are shown in Fig.8, the flow is attached to the blade at 80% span, but is separated at 30% span. Fortunately, this pressure errors do not highly affect the power output because it occurs at inner blade span which contributes little to the total power output. With some confidence in the validity of CFD, the pitch is now varied to see its effect. The simulation with viscous effect is selected because of its higher accuracy. The predicted power at various blade pitch angles for both wind speed 10.5 m/s and 7.2 m/s are shown in Fig 6. Rough "eye-balling" estimate seems to give optimal pitches at 9 and 4 degrees for the wind speed 10.5 m/s and 7.2 m/s, respectively. The better method to estimate the optimum pitch angles is by using curve fitting. From the method of least square with polynomial degree 3 (equations shown in Fig.6), the optimum blade pitches are determined to be at 8.82 degree for wind speed 10.5 m/s and 4.2 degree for wind speed 7.2 m/s. 3.2 Correlation analysis for optimal pitch The computation has shown that the pitch, hence angle of attack, strongly affects turbine power output. The angle of attack can be calculated from the simple relation:
+
+α = arctan
+
+U∞  ωr
+
+  −θP 
+
+(8)
+
+where α is angle of attack , θ P is blade pitch angle and r is the local radius of blade. At the design point of untwisted blade, normally at 80% span, the angle of attacks corresponding to the optimal points are computed as 10.25o and 9.06o for wind speeds 10.5 m/s and 7.2 m/s, respectively. Experimental lift coefficient and lift to drag ratio versus angle of attacks are shown in Fig. 9. The value 10.25o and 9.06o is very close to the maximum lift in pre-stall region (about 9.5o). Moreover, the higher value of angle of attack for the higher speed case also correlates with the rightward shift trend of the curves for higher Reynolds number. Fig 9 (b) dictates that optimal lift to drag is nominally at 6 degree. Unlike aircraft wing which is often designed at the maximum lift to drag point, the wind turbine seems to be optimal at the maximum lift point. This is quite consistent with the blade element theory which indicates that power depends strongly on lift and relatively weakly on lift to drag ratio.
+
+1.2
+
+140 120 100 80 60 40 20 0 -5 0 5 10
+
+1
+
+Re 300,000 OSU Re 500,000 OSU Re 750,000 OSU Re 1,000,000 OSU Re 1,000,000 DUT
+
+Lift coefficient
+
+0.8
+
+0.6
+
+0.4
+
+0.2
+
+Re 300,000 OSU Re 500,000 OSU Re 750,000 OSU Re 1,000,000 OSU Re 1,000,000 DUT
+-5 0 5 10 15 20 25
+
+0
+
+Cl/Cd
+
+15
+
+20
+
+Angle of attack (degree)
+
+Angle of attack (degree)
+
+(a) Lift coefficient versus angle of attacks
+
+(b) Lift to Drag ratio versus angle of attacks
+
+Fig. 9 Wind tunnel test data of S809 airfoil [14]
+
+5
+
+B-034 (O)
+
+The 2nd Joint International Conference on "Sustainable Energy and Environment (SEE 2006)" 21-23 November 2006, Bangkok, Thailand
+
+4. CONCLUSION
+CFD is used to predict the optimal blade pitch angles that give maximum power for wind turbine. For wind speeds 10.5 m/s and 7.2 m/s, optimal pitches occur at 8.82 degree and 4.2 degree respectively. Both values, when examined at 80% span, correlate to the maximum lift point in pre-stall regions. This, perhaps, could be used as a design criterion for an untwisted blade horizontal axis wind turbine.
+
+5. ACKNOWLEDGMENTS
+This research is supported by the Royal Golden Jubilee PH.D Program of the Thailand Research Fund.
+
+6. REFERENCES
+[1] Scheper, J.G. et al. (February, 2002) Enhanced Field Rotor Aerodynamics Database, Final report of IEA AnnexXVIII: ECN-C-02-016, [2] Simms, D. A. et. al. (July, 1999) Unsteady Aerodynamics Experiment Phases II-IV Test Configurations and Available Data Campaigns, National Renewable Energy Laboratory, Colorado. [3] Sezer-Uzol, N. and Long, L. N. (2006) 3-D Time-Accurate CFD Simulations of Wind Turbine Rotor Flow Fields, AIAA Paper No.2006-0394 [4] Tangtonsakulwong , J. and Chitsomboon, T. (2006) Simulation of Flow over a 3-Blade Vertical Axis Wind Turbine, the 2nd Thailand National Energy Conference, Thailand. [5] Batchelor, G. K. 1967. An introduction to Fluid Dynamics, Cambridge University Press. [6] Hibbeler R. C. (2004) Engineering Mechanics: Dynamics 10th Eds., Pearson Prentice Hall, pp.358 [7] Meriam J.L. and Kraige L.G. (1998) Engineering Mechanics: Dynamics, 4th Eds., John Wiley & Son, pp.391 [8] Fluent 6.2 User Manual [9] Versteeg, K. H. and Malalasekera, W. (1995) An introduction to computational fluid dynamics the finite volume method, Longman Scientific & Technical. [10] Launder, B. E. and Spalding, D. B. (1972) Lectures in Mathematical Models of Turbulence, Academic Press. [11] Patankar, S. V. (1980) Numerical Heat Transfer and Fluid Flow, Hemisphere Publishing Corperation, [12] Leonard, B. P. and Mokhtari, S., (1990) ULTRA-SHARP Nonoscillatory Convection Schemes for High-Speed Steady Multidimensional Flow, NASA TM 1-2568 (ICOMP-90-12), NASA Lewis Research Center. [13] Duque, E P et. al. (2000) NUMERICAL PREDICTIONS OF WIND TURBINE POWER AND AERODYNAMIC LOADS FOR THE NREL PHASE II COMBINED EXPERIMENT ROTOR, AIAA Paper No. 2000-0038 [14] Jonkman, J. M. (December 2003) Modeling of the UAE Wind Turbine for Refinement of FAST_AD, NREL/TP-500-34755, National Renewable Energy Laboratory, Colorado.
+
+6
+

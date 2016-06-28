@@ -1,0 +1,1292 @@
+Compensación de Potencia Reactiva en Parques Eólicos
+
+-1-
+
+UNIVERSIDAD PONTIFICIA COMILLAS
+ESCUELA TÉCNICA SUPERIOR DE INGENIERÍA (ICAI)
+INGENIERO INDUSTRIAL
+
+ROYECTO FIN DE CARRERA PROYECTO FIN DE CARRERA
+
+COMPENSACIÓN DE POTENCIA REACTIVA EN PARQUES EÓLICOS
+
+AUTORA: Alezeia González García MADRID, junio 2005
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+-2-
+
+ÍNDICE
+Capítulo Página
+
+1.- INTRODUCCIÓN 1.1.- Motivación del proyecto......................................................................1 1.2.- Objetivos del proyecto........................................................................4 1.3.- Organización del documento..............................................................6 2.- GESTIÓN DE POTENCIA REACTIVA EN PARQUES EÓLICOS 2.1.Introducción........................................................................................8 2.2.- Regulación de generadores eólicos en el mercado eléctrico español...........................................................................................................11 2.3.- Modelo de la máquina asíncrona .....................................................17 2.4.- Flujo de cargas en sistemas de energía eléctrica.............................23 2.5.- Diseño de la herramienta..................................................................31 2.6.- Conclusiones.....................................................................................38 3.- RESULTADOS 3.1.- Introducción.......................................................................................39 3.2.- Descripción del parque eólico analizado...........................................41 3.3.- Estudio técnico..................................................................................46 3.4.- Estudio económico............................................................................69 4.- CONCLUSIONES 4.1.- Conclusiones del proyecto.....................................................................78 4.2.- Aportaciones del proyecto......................................................................79 4.3.- Sugerencias para posibles desarrollos..................................................80 5.- BIBLIOGRAFÍA ........................................................................................81 7.- ANEXOS ..................................................................................................82
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+-3-
+
+CAPÍTULO 1
+
+INTRODUCCIÓN
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+-4-
+
+1.1 Motivación del proyecto
+
+El sector eólico en España se encuentra en este momento en un estado de auge indiscutible. España tiene instalada una potencia de 8.000 MW en parques eólicos y produce una energía de 13.870 GWh anuales, lo que representa un 12% de la potencia total instalada y un 6% de la energía total producida. La evolución estimada por el Ministerio de Economía cifra la instalación de energía eólica en 13.000 MW para el año 2011, aunque es muy probable que esta cifra sea superada ampliamente [BARQ04]. La extensión de este tipo de energía hará que sea importante su incidencia en la red y más aún si se tiene en cuenta la aleatoriedad de la producción. Estas circunstancias hacen necesaria una normativa que regule su conexión a red. Los parques eólicos siempre han tenido que regular su funcionamiento supeditados a las disposiciones legales. Éste es el fundamento de diversos estudios sobre el control de potencia reactiva realizados a lo largo de la evolución de este tipo de energía. Esta normativa se endureció en marzo de 2004 por medio de un Real Decreto sobre Tarifas de Renovables y Cogeneración, imponiendo una serie de requisitos sobre la predicción y control de potencia reactiva a la generación eólica.
+
+Afortunadamente, la tecnología actual permite unas posibilidades de control que hacen viable cumplir los requisitos de la reglamentación existente. Los avanzados sistemas de control actuales facilitan el control de la tensión y del factor de potencia de los modernos parques eólicos. El estado de la tecnología relativa a los aerogeneradores permite que estos hagan algo más que
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+-5-
+
+producir energía, ya que es posible proporcionar el apoyo necesario a los sistemas de transporte y distribución de energía eléctrica.
+
+El motivo principal por el que se realizan estudios sobre control de potencia reactiva en los parques eólicos se debe a las características del
+
+funcionamiento de las máquinas que se emplean para la generación en las turbinas eólicas. Debido a su robustez y a la posibilidad de regulación de velocidad que ofrecen las máquinas asíncronas, en muchos de los parques se opta por ellas. Esta opción era la predominante hace unos años. Actualmente, se ha desarrollado la tecnología necesaria para contrarrestar los inconvenientes de la máquina asíncrona. La principal dificultad que impone el funcionamiento de las máquinas de inducción es la necesidad de una fuente que le aporte la potencia reactiva necesaria para su magnetización. Tampoco es despreciable la necesidad de usar una multiplicadora que aumente la velocidad del eje de la máquina respecto del eje de las aspas del aerogenerador. Esta multiplicadora se trata de un mecanismo mecánico que exige costes importantes de inversión y mantenimiento y le resta a la máquina fiabilidad y autonomía. A pesar de estos y otros inconvenientes, muchos de los parques tienen instaladas estas máquinas.
+
+Los primeros parques eólicos no disponían de sistemas eficaces de regulación de potencia reactiva, de modo que debía ser suministrada por algún generador síncrono cercano del sistema. Esta situación era sostenible, ya que el impacto sobre la red era despreciable. Actualmente los aerogeneradores de velocidad fija usan baterías de condensadores para regular su factor de potencia. Esta opción emplea una tecnología sencilla y robusta. Sin embargo, las baterías
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+-6-
+
+de condensadores conllevan transitorios de inserción en la red que en ocasiones ponen en peligro la estabilidad l sistema. Los modernos generadores de inducción de doble alimentación pueden regular la potencia reactiva y la tensión de la misma manera que los generadores síncronos. También es posible regular la tensión y la potencia reactiva en generadores de inducción de jaula de ardilla mediante compensadores estáticos basados en electrónica de potencia.
+
+El objetivo del proyecto son los parques eólicos que tienen ya instalado sistemas de regulación de potencia reactiva basados en baterías de condensadores y que quieren adaptarse a los requisitos de la nueva legislación. Por lo tanto, la motivación del proyecto es el cumplimiento de la nueva reglamentación y la posibilidad de mejorar la actividad de negocio de los parques eólicos optimizando su operación de acuerdo con las sanciones y retribuciones que impone la normativa.
+
+Este proyecto tiene, además de las económicas, motivaciones adicionales de carácter social y medioambiental: al buscar una mayor rentabilidad al negocio de los parques eólicos, se está incentivando el uso de una energía renovable de manera acorde al desarrollo tecnológico sostenible que tanto puede reportar al entorno social y ambiental.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+-7-
+
+1.2 Objetivos del proyecto
+
+Adquirir las nociones básicas del desarrollo de un estudio técnico, en las que se incluyen la gestión y el desarrollo del mismo.
+
+Familiarizarse con el entorno de programación de MATLAB® en el que se elaborará el modelo y el código necesario.
+
+Profundizar en el estudio sobre el funcionamiento de los parques eólicos y la legislación que lo regula, así como de las máquinas eléctricas que lo componen.
+
+Diseño de una estrategia de conexión de los condensadores que reduzca el número de operaciones y que permita la obtención de un perfil de tensiones adecuado en los nudos de generación.
+
+Desarrollo de un modelo y de una herramienta que defina unas reglas sencillas de operación de los condensadores del parque.
+
+Realizar el estudio de la gestión de la potencia reactiva de un parque en particular. El objetivo del estudio del parque eólico consiste en obtener unos datos que se puedan analizar para comprobar si el funcionamiento del parque es correcto o no y cómo la herramienta podría ser mejorada en el caso en que los resultados no fueran lo suficientemente satisfactorios.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+-8-
+
+Analizar si es posible la operación de un parque eólico que se ajuste al funcionamiento que optimice las bonificaciones que marca la nueva legislación a través de la instalación de nuevos equipos. Comprobar la viabilidad económica de esta opción.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+-9-
+
+1.3 Organización del documento
+
+En el capítulo 2, se analiza la gestión de la potencia reactiva en los parques eólicos y los factores que intervienen en la misma: En primer lugar, se expone en qué consiste la nueva legislación y las disposiciones legales que deben cumplir los parques eólicos con respecto al consumo de potencia reactiva y al factor de potencia en el nudo de enlace a la red. Se explican igualmente las motivaciones que existían para cambiarla. A continuación, se justifica la necesidad de gestionar la potencia reactiva en los parques eólicos a partir del funcionamiento de las máquinas que se emplean. Seguidamente, se describe brevemente el problema del flujo de cargas, su resolución y sus particularidades para el sistema que se contempla en este caso. Por último, el capítulo 2 se cierra con una descripción de la herramienta que se ha creado para la gestión de la potencia reactiva por medio de baterías de condensadores.
+
+En el capítulo 3 del documento, se incluye todo lo referente al estudio del parque. En primer lugar, se describe el parque eólico analizado, las diferencias que pueden existir con un parque real y las distorsiones que estas diferencias introducen sobre los resultados. A continuación se muestran y
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 10 -
+
+analizan los resultados obtenidos en cuanto a la operación de las baterías de condensadores y las necesidades extras del parque en cuanto a regulación. Se incluye también la discusión sobre la herramienta empleada, sus ventajas y sus carencias.
+
+Finalmente, en el capítulo 4, se exponen las conclusiones finales alcanzadas y las propuestas para futuros desarrollos.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 11 -
+
+CAPÍTULO 2
+
+GESTIÓN DE POTENCIA REACTIVA EN PARQUES EÓLICOS
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 12 -
+
+2.1 Introducción
+
+La potencia reactiva es la potencia que absorben las máquinas eléctricas y que, al contrario que la potencia activa, no es posible comprobar su efecto como transformación en una forma de energía tal como trabajo mecánico o calor. Aunque de la potencia reactiva no se pueda obtener un efecto mecánico útil, su presencia es necesaria para lograr el efecto de magnetización necesario para el funcionamiento de unas máquinas que sí tienen un efecto útil.
+
+En el caso de los transformadores, la potencia reactiva es la que se absorbe para producir la magnetización del hierro responsable del acoplamiento magnético entre los circuitos primario y secundario, característica esencial del funcionamiento de estas máquinas.
+
+En el caso de las máquinas eléctricas rotativas, la potencia reactiva es necesaria para crear las fuerzas magnéticas que permiten el movimiento de rotación.
+
+Las máquinas asíncronas consumen potencia reactiva funcionando como motor y como generador. Por este motivo no pueden funcionar de modo autónomo sino que necesitan una fuente de potencia reactiva. Esta fuente puede ser una máquina síncrona funcionando como compensador, una batería de condensadores o un compensador electrónico.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 13 -
+
+Tiene especial interés en este proyecto el papel de la potencia reactiva en el funcionamiento de las máquinas de inducción sin rotor accesible, es decir, de jaula de ardilla, cuyo empleo es típico en aerogeneradores. En este caso, la inducción en el rotor viene dada por el estator. Este efecto se modela con un esquema con grandes implicaciones con respecto a la potencia reactiva. El modelo equivalente de máquina asíncrona se desarrollará más adelante el la sección 2.3 del proyecto.
+
+La necesidad de gestionar la potencia reactiva en los parques eólicos obedece a las características de funcionamiento de los generadores asíncronos. Para definir la manera en que se gestiona la potencia reactiva en los parques eólicos hace falta acudir a las restricciones que se imponen a los mismos desde el gestor de la red de transporte. Estas restricciones se imponen por medio de unas disposiciones legales formuladas en el Real Decreto 436/2004, del 4 de marzo. Las disposiciones sobre potencia reactiva en las instalaciones a las que afecta este texto legal, entre las que se incluyen los parques eólicos, se definen en función del factor de potencia en el nudo de enlace a red. Para este factor de potencia se define un intervalo de funcionamiento en el que se debe situar. Para crear una motivación para el cumplimiento de la normativa, se imponen una serie de sanciones y retribuciones según se ajuste más o menos el factor de potencia al de referencia.
+
+Es interesante destacar la manera en que se realiza el estudio de las cargas en un parque eólico. Los sistemas de energía eléctrica se representan mediante un modelo en el que se incluyen:
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 14 -
+
+• • • • •
+
+los generadores, los transformadores, las cargas, las líneas, y los elementos de control de tensiones (reactancias, condensadores...)
+
+Empleando este modelo, se recurre al problema de flujo de cargas para obtener los flujos por las líneas, las tensiones en los nudos y el factor de potencia en el nudo de enlace a red. Con una herramienta informática adecuada en la que se puedan introducir unos datos del modelo y se puedan manejar los datos con una metodología, se obtendrán los resultados adecuados para la gestión de la potencia reactiva de un parque eólico.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 15 -
+
+2.2 Regulación de generadores eólicos en el mercado eléctrico español
+
+En este epígrafe se expone la legislación que regula la generación de energía eléctrica mediante generadores eólicos. La exposición se ceñirá a las disposiciones que marca el Real Decreto 436/2004 del 2 de Marzo (RD en adelante), ya que es de la aprobación de este documento de donde surgen las motivaciones del proyecto.
+
+El Real Decreto 436/2004 del 12 de Marzo, “Real Decreto por el que establece la metodología para la actuación y sistematización del régimen jurídico y económico de la actividad de producción de energía eléctrica en régimen especial”, se formula con un doble objetivo[R43604]:
+
+Fomentar el uso de fuentes de energía que procuren el desarrollo sostenible. Garantizar el suministro de una energía eléctrica de calidad mediante el incentivo de las instalaciones englobadas dentro del concepto de generación distribuida y de la imposición de restricciones técnicas a la cesión de energía a la red.
+
+Con todo esto, las pretensiones para 2010 son que un tercio de la producción se realice por tecnologías de alta eficiencia energética y renovables y que estas renovables signifiquen un 12% del total.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 16 -
+
+La legislación española hace una distinción de las instalaciones de generación de régimen especial frente a las de régimen normal. La generación en régimen especial se trata con cierta singularidad jurídica y económica mediante la percepción de primas, en términos reglamentarios, para cuya determinación se consideran ciertas características de la operación como: • • • • el nivel de tensión de entrega de energía a la red, la contribución a la mejora del medioambiente, el ahorro de energía primaria y la eficiencia energética, los costes de inversión en que se haya incurrido.
+
+El RD hace en el segundo artículo del primer capítulo una clasificación de las instalaciones de generación de energía eléctrica que se pueden acoger al RD. Entre ellas se encuentran los parques eólicos como instalaciones que emplean el viento como fuente de energía primaria para la generación de energía eléctrica.
+
+En el RD se dispone, para la generación eólica, además de los trámites administrativos, una serie de disposiciones técnicas. Estas disposiciones técnicas son sobre las que se hará énfasis en este estudio, ya que son las de mayor interés en este caso. No obstante, se expondrán los requisitos administrativos más interesantes.
+
+Las empresas generadoras en régimen especial tienen dos opciones. La primera opción consiste en vender su producción de energía eléctrica a la red por un precio regulado. La segunda es vender la electricidad libremente en el
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 17 -
+
+mercado a través del sistema de ofertas gestionado por el operador de mercado, del sistema de contratación bilateral o a plazo o de una combinación de todos ellos. En los dos casos, se añadirían las primas a las que se pudiera tener derecho. En el caso de participar en el mercado libre, se añadiría un incentivo por participación, además de otorgárseles el derecho a cobrar una retribución por garantía de potencia.
+
+Tanto las primas como los incentivos se definen como un porcentaje de la tarifa eléctrica media o de referencia regulada en el Real Decreto 1432/2002 del 27 de diciembre, y son función del grupo y subgrupo al que pertenezca la instalación, así como de su potencia instalada. La tarifa eléctrica media o de referencia para el año 2004, definida en el artículo 2 del Real Decreto 1432/2002, del 27 de diciembre, tiene un valor de 7.2072 cЄ/kWh [R14302]. Será este valor el que se considere a lo largo del estudio para la tarifa media de referencia.
+
+El porcentaje que se refiere a la tarifa regulada para las instalaciones de producción de energía eléctrica por generadores eólicos está comprendido entre el 80% y el 90% de la tarifa media de referencia.
+
+El complemento por energía reactiva viene definido en el artículo 26 del RD como un porcentaje de la tarifa eléctrica media en función de la categoría de la instalación y del periodo horario en que se realice la cesión. Los porcentajes vienen especificados en el Anexo V del RD, y se presenta en la tabla 1.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 18 -
+
+Tabla 1. Bonificaciones por potencia reactiva según el RD 436/2004
+
+Como se puede observar en la tabla 1, las disposiciones sobre energía reactiva vienen definidas por el factor de potencia en el nudo de enlace a la red, en función del horario en el que se ceda energía a la red. La explicación de esta dependencia está en que la red de transporte en sí misma genera energía reactiva debido a que la disposición de los cables en las líneas crea cierto efecto capacitivo. Cuando la red está muy cargada, este efecto capacitivo se hace prácticamente despreciable debido a que las cargas, en su mayoría de carácter inductivo, consumen una potencia reactiva mucho mayor. Si esta potencia reactiva necesaria en las cargas no se genera en ningún otro punto de la red, se pueden provocar problemas de subtensiones en los nudos próximos a los de consumo. Sin embargo, cuando la red está poco cargada, esta potencia reactiva que se genera en las líneas no se consume, por lo que se pueden crear problemas de sobretensiones en las zonas menos cargadas. Estos problemas de sobretensiones y subtensiones se solucionan con el control de tensiones de la red, el cual ordena la compensación de potencia reactiva necesaria a las
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 19 -
+
+centrales de generación que funcionan con alternadores. Sin embargo, a pesar de este control, si no se ponen restricciones de consumo y generación de potencia reactiva a las cargas y al resto de nudos de generación, los problemas de tensiones pueden ser demasiado habituales. La gran progresión de la instalación de pequeñas centrales generadoras y de generación con energías renovables aún en desarrollo, la imposición de restricciones sobre potencia reactiva está más que justificada, más aún si se mira más a largo plazo.
+
+Para hacer uso de la tabla 1, es importante detallar que, al estar definida con criterio generador, para calcular el factor de potencia se tomará la potencia reactiva demandada cuando se entrega potencia activa a la red.
+
+Otros detalles sobre el complemento de reactiva son que el factor de potencia se obtendrá a partir de la lectura del contador de la instalación, que deberá mantenerse cada cuarto de hora y que, al finalizar cada mes, se hará un cómputo del acumulado mensual del complemento de potencia reactiva.
+
+Una disposición singular para las instalaciones eólicas es que, al contrario de las de cogeneración, solar o biomasa, podrán ceder la totalidad de su producción de energía eléctrica.
+
+El RD dispone que las instalaciones de energía eólica con potencia eléctrica superior a 50MW están obligadas a negociar libremente en el mercado su producción. En el caso de estas instalaciones, este estudio resulta infructuoso, ya que tienen restricciones a la hora de acogerse a los derechos sobre el
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 20 -
+
+complemento por reactiva. Estas restricciones se refieren a las empresas que decidan vender la energía en el mercado, quienes pueden renunciar al complemento por reactiva y participar en el control de tensiones aplicando sus mecanismos de retribución.
+
+La legislación a la que se hace referencia también dispone que las instalaciones de régimen especial deberán contar con los equipos de medida de energía eléctrica necesarios que permitan su liquidación, facturación y control.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 21 -
+
+2.3 Modelo de la máquina asíncrona
+
+CAMPO MAGNÉTICO EN EL ENTREHIERRO DE UNA MÁQUINA ELÉCTRICA
+
+El campo magnético en el entrehierro de una máquina eléctrica es el responsable de la aparición de las fuerzas electromagnéticas que crean el par que hace girar a las máquinas eléctricas rotativas, por tanto, es el fundamento de su funcionamiento [FRAI03].
+
+El campo magnético en el entrehierro de una máquina eléctrica es el efecto combinado de los devanados inductor e inducido. El devanado inductor crea unas fuerzas electromotrices (fems) en el devanado inducido, donde aparecen unas corrientes cuando se cierra el circuito. Al circular las corrientes por el devanado inducido, se crea una fuerza magnetomotriz (fmm) de reacción de inducido que, al combinarse con la (fmm) del inductor, origina el campo magnético resultante en el entrehierro de la máquina.
+
+Con objeto de aprovechar toda la periferia tanto del estator como del rotor, las bobinas se distribuyen en ranuras, lo que mejora la calidad de la onda de fmm e inducción, que se traducirá en una fem inducida en las bobinas de carácter más senoidal. La fmm resultante es una onda escalonada con menos armónicos que los de una fmm producida por una bobina diametral.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 22 -
+
+Como consecuencia de la configuración de la máquina como un sistema de tres devanados en el estator y en el rotor desfasados en el espacio 120º eléctricos entre sí alimentados por un sistema de corrientes trifásicas equilibradas, desfasadas 120º en el tiempo entre ellas , cada devanado producirá una fmm pulsatoria o alternativa orientada en su eje respectivo. Según el teorema de Ferraris, la suma de estas ondas resulta una fmm cuya amplitud varía en el tiempo según una senoidal y distribuida senoidalmente en el entrehierro. El valor máximo de la resultante coincide con el eje del devanado que está llevando en ese momento la corriente máxima o de pico. Se dice entonces que se produce un campo magnético giratorio de amplitud constante que gira a velocidad constante. La velocidad de giro del fasor de fmm dependerá del número de polos de la máquina de la siguiente manera:
+
+ωm =
+donde: • • •
+
+ω
+p
+
+ω es la pulsación eléctrica de la alimentación ωm es la pulsación mecánica del rotor p es el número de polos de la máquina
+
+El resultado es que, a partir de tres campos magnéticos alternativos, se ha logrado, al combinarlos adecuadamente en el espacio y con corrientes apropiadas en el tiempo, un campo magnético giratorio de amplitud constante. El efecto es el equivalente al de un imán permanente que se mueve a la velocidad de sincronismo.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 23 -
+
+LA MÁQUINA ASÍNCRONA TRIFÁSICA
+
+La máquina asíncrona es un dispositivo de conversión electromecánica y, como tal, está formada por un estator y un rotor. Normalmente, el estator funciona como inductor, alimentado por una red trifásica. El rotor es el inducido y las corrientes que circulan por él parecen como consecuencia de la interacción con el flujo del estator. Dependiendo de la configuración del rotor, la máquina asíncrona puede ser de rotor devanado o de rotor en jaula de ardilla. En el primer caso, los arrollamientos del rotor se encuentran accesibles a través de unos anillos rozantes. El estator contiene un devanado trifásico distribuido alimentado por un sistema equilibrado de corrientes, con lo que se obtiene un flujo giratorio de amplitud constante distribuido senoidalmente por el entrehierro. El movimiento rotativo de la máquina se debe al par de rotación de la máquina, originado por el momento total de las fuerzas magnéticas entre inductor e inducido. El par de rotación obliga a girar al rotor siguiendo el movimiento del campo giratorio, de forma que, cuanto más se aproxima a la velocidad del campo, menor resulta la fem inducida en los conductores del rotor y menor, por tanto, el par electromagnético del rotor. Llevando este razonamiento al límite, si la máquina girase a la velocidad del campo, no existiría par interno. Con esto, se puede deducir que la velocidad de régimen de la máquina de inducción es asíncrona, es decir, algo menor que la del campo. Aunque la diferencia en régimen permanente no es grande, este aspecto es el fundamento del funcionamiento de la máquina asíncrona.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 24 -
+
+CIRCUITO EQUIVALENTE Se hará la exposición del circuito equivalente de la máquina de inducción a partir de su diagrama de potencias, el cual se muestra en la figura 1.
+
+Figura 1. Diagrama de potencias de la máquina asíncrona
+
+El diagrama de potencias está así definido según criterio motor.
+
+• •
+
+Pe es la potencia eléctrica que llega a las bornas de la máquina. Pcu1 y Pcu2 son las pérdidas eléctricas en el arrollamiento del estator y el rotor respectivamente.
+
+•
+
+Pfe son las pérdidas en el hierro de la máquina. Pmec son las pérdidas mecánicas producidas en el movimiento de la máquina.
+
+•
+
+Pm es la potencia mecánica transmitida en el eje.
+
+La potencia eléctrica de entrada a la máquina se representa por un dipolo de tensión de entrada U y corriente de entrada Is.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 25 -
+
+El circuito que representa el funcionamiento de máquina asíncrona se muestra a continuación en la figura 2.
+
+Figura 2. Circuito equivalente de la máquina asíncrona.
+
+Las pérdidas se modelan por resistencias por las que circula la corriente correspondiente. Así, Rs y Rr’ modelan las pérdidas en el estator y en el rotor respectivamente y Rm modela las pérdidas en el hierro.
+
+Además de las resistencias, el modelo incluye unas reactancias que se deducen de la característica inductiva del funcionamiento de la máquina.
+
+Las reactancias Xs y Xr’ representan la potencia reactiva absorbida por los arrollamientos de la máquina (en estator y en rotor). Xm modela la potencia reactiva absorbida por la máquina para la magnetización de su rotor.
+
+La corriente que circula por la rama de magnetización representada por Rfe y Xm coincide con la corriente de vacío de la máquina, ya que en estas circunstancias, la potencia transmitida al eje coincide con las pérdidas
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 26 -
+
+mecánicas, las cuales se consideran despreciables frente a la potencia mecánica transmitida por el eje a la carga en la mayor parte de las ocasiones.
+
+En este esquema se aprecia claramente la necesidad de proveer energía desde la red para la magnetización del rotor. Es destacable que esta energía se absorbe independientemente de que la máquina está funcionando como motor o como generador, ya que la potencia mecánica del rotor se transforma en potencia activa. Por este motivo, la potencia de salida al rotor se representa mediante una resistencia cuyo valor varía con la velocidad de la máquina.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 27 -
+
+2.4 Flujo de cargas
+
+El problema del flujo de cargas consiste en obtener las condiciones de operación en régimen permanente de un sistema de energía eléctrica [GOME02]. Más concretamente, dados los consumos en cada nudo y la potencia generada por los alternadores, se trata de encontrar las tensiones en los nudos y los flujos de potencia por las líneas y los transformadores.
+
+La herramienta del flujo de cargas es la más empleada en la explotación y planificación de los sistemas de potencia, bien como aplicación independiente o como subrutina de aplicaciones más complejas como estabilidad transitoria, colapso de tensiones o simuladores de entrenamiento.
+
+En la operación diaria, el flujo de cargas es la base del análisis de seguridad del sistema. Esta rutina se ejecuta periódicamente para identificar posibles problemas de sobrecargas o tensiones inaceptables. En la planificación, permite simular el estado en que se encontrarían los distintos escenarios que se están analizando ante una demanda estimada.
+
+El flujo de cargas consta básicamente de dos etapas: la primera y más decisiva consiste en obtener las tensiones complejas en todos los nudos eléctricos. Para este propósito no es posible utilizar las herramientas convencionales de análisis de circuitos lineales, porque las restricciones de contorno no se especifican en términos de impedancias (cargas) y fuentes de
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 28 -
+
+tensión (generadores) sino de potencias, lo cual conduce a un sistema no lineal de ecuaciones. La segunda etapa consiste simplemente en el cálculo de todas las magnitudes de interés, como los flujos de potencia activa y reactiva, pérdidas, etc., lo cual es inmediato.
+
+FORMULACIÓN DEL PROBLEMA El estado de una red eléctrica de n nudos queda determinado mediante las tensiones complejas en todos sus nudos. Las leyes de kirchoff y los modelos para cada componente de la red se condensan en las ecuaciones nodales que, en forma compleja, se escriben como:
+I i = ∑ YijU j
+j =1 n
+
+i=1,2,...n
+
+donde U es el vector de tensiones nodales, I el vector de intensidades netas inyectadas en los nudos e Y la matriz nxn de admitancias de nudos.
+
+Además, en cada nudo debe cumplirse que
+Si=SGi-SCi= UiIi*
+
+Siendo Si la potencia compleja inyectada en el nudo i, obtenida en el caso general como diferencia entre la potencia generada y consumida por la carga en dicho nudo. La ecuación anterior, aplicada a todos los nudos, puede escribirse como: S= diag(U)I* Donde S es el vector de potencias complejas nodales y diag(U) denota una matriz diagonal cuyos elementos son los del vector U.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 29 -
+
+Conocida la matriz de admitancias, las expresiones de la ley de Kirchoff y la de las potencias nodales constituyen un sistema de 2n ecuaciones complejas en términos de las 3n incógnitas complejas contenidas en S, U e I. En teoría, conociendo n de dichas incógnitas, podría resolverse el sistema no lineal resultante para obtener las 2n restantes. En la práctica, las intensidades complejas nodales nunca son conocidas o especificadas a priori en un sistema de potencia, por lo que se prefiere eliminarlas sustituyéndolas en la ecuación de las potencias complejas por su valor en la ecuación de Kirchoff. Esto conduce al sistema no lineal de n ecuaciones complejas siguientes: S= diag(U)[YU]* Descomponiendo la potencia compleja en su parte real e imaginaria, S=P+jQ, y utilizando coordenadas para los elementos de la matriz de admitancias, Y=G+jB, la ecuación anterior se convierte en: P+jQ=diag(U)[G+jB]U*
+Pi + jQi = U i ∑ Gij − jBij U * j
+j =i n
+
+[
+
+]
+
+∀i = 1,2,..., n
+
+Los métodos iterativos que se emplean no pueden trabajar con ecuaciones complejas como las anteriores porque la presencia de variables conjugadas impide llevar a cabo derivadas en forma compleja. Es preciso, por tanto, separar dichas ecuaciones en 2n ecuaciones reales. Habitualmente, las tensiones se expresan en coordenadas polares, U=V ejθ, lo que conduce a:
+Pi = Vi ∑ V j (Gij cosθ ij + Bij senθ ij )
+n j =1 n
+
+Qi = Vi ∑ V j (Gij senθ ij − Bij cosθ ij )
+j =1
+
+∀i = 1,2,..., n
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 30 -
+
+Con todo esto, se puede observar que en cada nudo se pueden formular dos ecuaciones con cuatro incógnitas, por lo que deben especificarse dos magnitudes por cada nudo para que el sistema anterior pueda resolverse. En función de las condiciones de contorno dispuestas, pueden distinguirse dos tipos principales de nudos:
+
+Nudos de consumo o nudos PQ: Nudos donde se conoce el consumo de
+esp esp potencia activa ( PCi ) y reactiva ( QCi ), siendo nula la potencia generada
+
+(PGi= QGi=0). Las restricciones impuestas son, por tanto,
+esp esp PCi =- PCi ; esp esp QCi =- QCi
+
+quedando como incógnitas las dos componentes de la tensión nodal respectiva. La gran mayoría de nudos de una red, sobre todo en niveles de menor tensión, son de este tipo.
+
+Nudos de generación o nudos PV: Nudos donde un generador regula la
+esp tensión a un valor especificado ( Vi esp ) e inyecta una potencia activa ( PGi )
+
+determinada
+
+previamente
+
+por
+
+consideraciones
+
+económicas.
+
+Las
+
+restricciones resultantes, que tienen en cuenta el posible consumo local, son:
+esp esp Pi esp = PGi − PCi ;
+
+Vi = Vi esp
+
+quedando Qi y θi como incógnitas. Un caso particular de nudo PV surge cuando se conecta un compensador de potencia reactiva (estático o
+esp rotativo) con capacidad para regular la tensión. En este caso PGi =0. La
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 31 -
+
+presencia de pequeños generadores sin regulador de tensión puede modelarse como nudos de consumo negativo.
+
+Si sólo se considerasen ambos tipos de nudos, todas las potencias activas inyectadas deberían especificarse de antemano, lo cual es imposible porque las pérdidas en la red, que también deben ser aportadas por los generadores, no se conocen hasta que se obtiene los flujos de potencia por cada elemento. Es decir, la potencia activa de al menos un generador no puede ser especificada y debe calcularse al final del proceso. Afortunadamente, esta incógnita adicional se compensa con el hecho de que, cuando se trabaja con fasores, uno de los ángulos de fase puede tomarse libremente como origen de fases. Por simplicidad de cálculo, se toma como origen de fases precisamente el nudo de generación cuya potencia se deja libre. Este nudo, que suele ser un generador importante con capacidad de regular frecuencia, o nudo de interconexión con el exterior, se denomina nudo de referencia, nudo oscilante o nudo slack.
+
+Sea nD el número de nudos de consumo. Entonces, el número de nudos de generación, sin contar el slack, será nG=n-nD-1. Sin pérdida de generalidad, supondremos que los nD primeros nudos son de consumo y que el nudo de referencia es el último. En base a la clasificación de nudos realizada anteriormente, las ecuaciones que intervienen en el problema de flujo de cargas son las siguientes:
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 32 -
+
+Pi esp = Vi ∑V j (Gij cos θ ij + Bij senθ ij )
+n j =1
+
+∀i = 1,2,..., nD + nG Qiesp = Vi ∑ V j (Gij senθ ij − Bij cos θ ij )
+n j =1
+
+∀i = 1,2,..., nD
+
+La solución de este problema consiste en encontrar los ángulos θi,
+i=1,2,...,nD+nG, y los módulos de las tensiones Vi, i=1,2,...,nD, que satisfacen las
+
+2nD+nG ecuaciones anteriores.
+
+Al fijar la tensión compleja del nudo slack y dejar libre su potencia, no intervienen sus dos ecuaciones. Estas ecuaciones servirán, una vez resuelto el flujo de cargas, para hallar la potencia compleja del nudo.
+
+Asimismo, las ecuaciones de potencia reactiva de los nudos PV que también se excluyen del sistema, permitirán calcular posteriormente la potencia reactiva que inyecta o absorbe cada generador para mantener su tensión al valor especificado. Se debe tener en cuenta que la capacidad de un generador para absorber y generar potencia reactiva es limitada, por lo que se debe comprobar que la solución no viola ninguno de estos límites.
+
+Dado que las ecuaciones resultantes son no lineales, se deben emplear métodos iterativos para su resolución. Para ello es necesario tomar unos valores iniciales del problema. La búsqueda de estos valores iniciales no es un problema
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 33 -
+
+trivial, pues de ellos depende que el problema converja hacia valores físicamente viables y que esta convergencia se dé más o menos rápido. Afortunadamente, las características del funcionamiento de una red facilita el trabajo, ya que se trabaja con una cotas de los valores de las tensiones en los nudos alrededor de su valor nominal y se conoce que los ángulos entre nudos adyacentes lo suficientemente próximos se mueven en márgenes estrechos. Por todo esto, el denominado perfil plano es casi siempre la mejor opción para iniciar el proceso iterativo. Dicho perfil consiste en hacer θi=0 y Vi=1 pu para los nudos de consumo. Si se ha efectuado previamente un flujo de cargas y los cambios en el estado del sistema han sido menores, puede iniciarse el proceso partiendo de la solución anterior. Esto es especialmente útil cundo se analiza el efecto de distintas perturbaciones partiendo del mismo caso base. La experiencia demuestra, sin embargo, que utilizar unos valores relativamente próximos a la solución pero arbitrarios suele dar peores resultados que el perfil plano.
+
+Una vez resuelto el sistema de ecuaciones planteado anteriormente, se puede calcular cualquier magnitud del sistema. Los flujos de potencia para un elemento conectado entre los nudos i y j se puede calcular como:
+
+Qij = ViV j (Gij senθ ij − Bij cos θ ij ) + BijVi 2
+
+Pij = ViV j (Gij cos θ ij + Bij senθ ij ) − GijVi 2
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 34 -
+
+Igualmente, también pueden calcularse las pérdidas en el sistema una vez hallada la potencia del nudo slack. Las pérdidas serán la suma de las potencias inyectadas (con signo cambiado si son consumidas) en cada nudo.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 35 -
+
+2.5 Diseño de la herramienta
+
+La herramienta desarrollada en este proyecto consiste en una serie de módulos de MATLAB® que van realizando las operaciones necesarias para obtener unas reglas sencillas de desconexión de los condensadores de los aerogeneradores y el valor de la batería del nudo de enlace a la red en el caso en que sea necesario.
+
+El motivo por el que se decidió emplear MATLAB® para el desarrollo de la herramienta consiste en la posibilidad que ofrece para generalizar el programa. Esto permitió desarrollar una herramienta útil para cualquier parque eólico que regule su potencia reactiva por medio de baterías de condensadores y que pretenda ajustarse a las disposiciones del RD.
+
+MODELO DEL PARQUE
+
+El programa requiere la inserción de los datos del modelo del parque. Para ello se ha creado un módulo en el que se introducen de forma matricial datos los siguientes datos: Valores de resistencias y reactancias de los generadores del parque. Valores de potencia y tensión nominal de los generadores. Definición de las bases para la operación en magnitudes unitarias.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 36 -
+
+Valores de los escalones de las baterías de condensadores. Pérdidas en el cobre, tensiones nominales, relación de transformación y conexión de cada uno de los modelos de transformadores del parque. Resistencias y reactancias del modelo de los transformadores. Resistencias y reactancias por unidad de longitud de los cables empleados para construir la red colectora del parque. Definición de la red colectora por medio de las ramas correspondientes en el modelo, los nudos entre los que se define cada rama, longitud y sección del cable y tensión base de la zona donde se encuentra cada rama. Definición de las ramas del modelo de los aerogeneradores, indicando los nudos entre los que se define la rama, la tensión base de la zona donde se encuentra y si la rama pertenece al modelo del estator o del rotor. Definición de las ramas del modelo de los transformadores, indicando los nudos entre los que se encuentra la rama y el tipo de transformador empleado de los definidos anteriormente. Definición de los nudos del modelo del parque, incluyendo su tipo (PV, PQ o slack), las potencias activa y reactiva inyectadas y consumidas, la tensión base de la zona donde se encuentran y la reactancia en paralelo si existe.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 37 -
+
+ESCENARIOS DE CARGA
+
+Los distintos escenarios de carga se definen mediante las potencias generadas por los aerogeneradores.
+
+Por defecto, se crean escenarios en los que todos los generadores tienen la misma carga de potencia activa. Estos escenarios se corresponden con la generación de todas las máquinas al 25%, al 50%, al 75% y al 100% de su potencia activa nominal.
+
+CONVERSIÓN DE DATOS
+
+Tras la inserción de los datos, se procede a su transformación para la obtención de las matrices de ramas y nudos necesarias para correr el algoritmo de flujo de cargas.
+
+La matriz de ramas así obtenida contiene los siguientes datos de todas las ramas del modelo: Nudos de origen y destino de las ramas. Parámetros del modelo de línea corta mediante una resistencia y una reactancia en serie. Se emplea este modelo para las líneas de la red colectora, para modelar los transformadores y para las ramas del modelo de los aerogeneradores. Columnas complementarias como la relación del transformador (si existe), su ángulo, las tomas de los transformadores, el flujo
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 38 -
+
+máximo de potencia por las líneas y otros parámetros necesarios para el flujo de cargas.
+
+La matriz de nudos contiene las columnas que incluyen datos sobre las siguientes características: El nombre y el tipo de nudos La potencia activa generada, las potencias activa y reactiva consumidas y la reactiva generada Las admitancias de los nudos que tienen admitancia en el modelo de la máquina asíncrona Las admitancias de los nudos con condensadores Las tensiones de los nudos en pu Los ángulos de los desfases de las zonas provocados por los transformadores desfasadores si los hubiera La zona en las que se encuentran los nudos Los límites de tensiones Las reactancias máximas y mínimas de cada nudo. Estos máximos de reactancias de nudo se han impuesto por defecto en el máximo correspondiente al máximo número de escalones de las baterías en los nudos donde las hay y en el propio valor de las reactancias del modelo de máquina asíncrona en régimen permanente en los nudos correspondientes.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 39 -
+
+ESTADOS DE LA RED
+
+Se introducen las disposiciones del RD. Estas disposiciones, en el documento, se definen mediante los factores de potencia máximo y mínimo en el nudo de enlace a la red según el estado en que se encuentre la red (punta, llano y valle).
+
+PRIORIDAD DE DESCONEXIÓN DE CONDENSADORES
+
+En esta rutina, se define el orden en el que deben ser desconectados los condensadores en el caso en que sea necesario para disminuir la potencia reactiva generada. Este orden está basado en minimizar el número de
+
+operaciones realizadas en los condensadores manteniendo un nivel aceptable de tensiones en todos los nudos. Las redes típicas de los parque eólicos son radiales, por lo que se debe tener cuidado con la desconexión de los condensadores, ya que los nudos de los extremos de la red pueden verse perjudicados por una reducción excesiva de sus tensiones. Por este motivo, se ha elaborado un algoritmo de asignación de prioridades. Las prioridades deben definirse por cercanía de los nudos al nudo de enlace a la red. Sin embargo, al tratarse la configuración habitual de un parque eólico de una red radial con varias ramas con cables de distintas impedancias unitarias, podría darse el caso de que el condensador más apropiado para ser desconectado no fuera el más próximo en longitud de cable. A causa de este detalle, la prioridad en esta rutina se basa un el criterio de mínima impedancia desde el nudo hasta el enlace a la red.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 40 -
+
+RUTINA PRINCIPAL
+
+El diagrama de flujo de la rutina principal se muestra en la figura 3.
+
+La rutina principal opera con los datos de la red, las matrices de nudos y ramas, las prioridades de desconexión y las disposiciones legales.
+
+Para cada estado de carga y cada estado de la red, corre un flujo de cargas que devuelve el valor del factor de potencia inicial. Se compara el valor inicial con el requerido. En el caso en que falte potencia reactiva, se calcula el valor de la batería de condensadores de alta que se necesita. En el caso en que sobre generación de energía reactiva, se procede a la desconexión sucesiva de escalones de reactiva de las baterías de los aerogeneradores y a la comprobación del factor de potencia resultante con el dispuesto.
+
+Las salidas en fichero son, para cada horario de la red y para cada nivel de generación: Los niveles de carga El estado inicial de los condensadores El factor de potencia inicial Un mensaje de aviso si no converge el flujo de cargas El factor de potencia final El estado final de los condensadores El valor de la batería de alta si ésta es necesaria
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 41 -
+
+- Datos del parque - Datos generación - Datos RD - Prioridad desconexión condensadores
+
+Construcción matrices NUDOS y RAMAS
+
+FdP FdC
+FdC
+
+Factor de Potencia Flujo de Cargas
+
+FdP
+
+¿Esta dentro de márgenes?
+
+Si
+
+Disposición condensadores FdP inicial FdP final
+
+No
+
+¿Sobran condensadores?
+
+No
+
+Cálculo batería de alta
+
+Disposición condensadores FdP inicial FdP final batería de alta
+
+Si
+
+Se quita el condensador más próximo
+
+Figura 3. Diagrama de flujo de la rutina principal.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 42 -
+
+2.6 Conclusiones
+
+Se han estudiado las necesidades de compensación de potencia reactiva de un parque eólico a partir de las características técnicas y del funcionamiento de las máquinas de inducción y a partir de los requisitos que marca la legislación concretada en el RD 436/2004.
+
+Se han analizado los requisitos que debía cumplir el modelo del parque eólico para que representara fielmente la realidad de su funcionamiento.
+
+Con todo esto, se ha creado una herramienta adecuada para crear el modelo del parque eólico y para adecuar su funcionamiento a los requisitos que marca la legislación mediante una correcta gestión de la potencia reactiva.
+
+Con la herramienta creada se obtienen unos resultados sobre la disposición adecuada de los condensadores y necesidades de instalación de equipos nuevos en cada franja horaria y para cada nivel de generación del parque que son analizados en el capítulo 3.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 43 -
+
+CAPÍTULO 3
+
+RESULTADOS
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 44 -
+
+3.1 Introducción
+
+En este tercer capítulo, se exponen los resultados del estudio de un parque eólico real. En él se incluye un descripción de la configuración y de los elementos del parque así como del modelo de cada uno de ellos.
+
+El fundamento de realizar este estudio está en comprobar el funcionamiento de la herramienta creada y la eficacia del algoritmo de conexión de condensadores diseñado.
+
+El estudio de viabilidad técnica analiza el cumplimiento de la legislación en cuanto a requisitos de factor de potencia en el nudo de enlace a la red para dos estrategias definidas. La primera estrategia consiste en lograr que el parque eólico adapte la operación de sus condensadores para evitar las sanciones que se imponen para un rango de factor de potencia determinado. La segunda estrategia consiste en adaptar la operación de los condensadores del parque para ajustar sus condiciones a la máxima bonificación posible. Para esta estrategia, se considerará la posibilidad de instalar nuevas baterías de condensadores en el caso en que no se puedan cumplir los requisitos por falta de inyección de potencia reactiva en el parque.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 45 -
+
+En el estudio de viabilidad económica, se analizará la rentabilidad de la adaptación del funcionamiento del parque para las distintas estrategias. También se estudiará la conveniencia de instalar nuevo equipo de compensación.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 46 -
+
+3.2 Descripción del parque eólico analizado
+
+Se llevó a cabo el estudio de potencia reactiva de un parque real con el fin de comprobar el correcto funcionamiento del algoritmo diseñado y de obtener e interpretar unos resultados sobre operación de baterías de condensadores y sobre niveles de tensiones.
+
+El parque eólico analizado consta de 31 aerogeneradores de 660 kW a 690 V distribuidos en dos ramas. La primera consta de 15 aerogeneradores alineados. La segunda rama consta de 16 aerogeneradores en tres ramas en árbol, una de 3, otra de 8 y otra de 5 aerogeneradores. La distribución de los aerogeneradores en el parque se muestra en la figura 4.
+
+Cada aerogenerador tiene aguas abajo un transformador 20 kV/0.69 V de 700kVA conectado en Dyn11. En el lado de 690 V, hay una batería de condensadores por cada aerogenerador de tres escalones de 60 kVar cada uno. Estas baterías son autorreguladas, es decir, cuentan con un control y un accionamiento que introducen más o menos escalones para ajustar a factor de potencia unitario el nudo donde están conectadas.
+
+En el parque hay instalada una subestación antes del nudo de enlace a la red. Esta subestación consta de un transformador 136kV/20kV de 45MVA. Además, existe una batería de compensación fija de 3 Mvar en el lado de 20 kV
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 47 -
+
+de la subestación pensada para ajustar el factor de potencia del nudo de enlace a la red a valor unitario cuando el parque está a plena carga.
+
+Figura 4. Distribución de los aerogeneradores en el parque.
+
+Para realizar el estudio del parque eólico anteriormente descrito, se debía realizar un modelo de todos sus elementos. El modelo del parque incluye un modelo de transformadores, de la red colectora, de los aerogeneradores y de las baterías de condensadores tal y como se explica a continuación.
+
+La red colectora del parque está formada por las líneas que recogen la potencia eléctrica desde los aerogeneradores hasta el nudo de alta, donde se vuelca en la red.
+
+Estas líneas están formadas por tres cables unipolares de aluminio HFA (apantallados individualmente sobre cada fase y armados con flejes de
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 48 -
+
+aluminio) VOLTALENE de 30 kV de Pirelli de las características eléctricas mostradas en las Tablas 2 y 3.
+
+Tabla 2. Reactancia de los cables.
+
+Tabla 3. Resistencia de los cables.
+
+Los conductores de la red conductora varían su sección nominal entre los valores de 150 mm2, 240 mm2 y 400 mm2.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 49 -
+
+Los valores empleados para el modelo R-X de las líneas, por lo tanto, serán los que figuran en las tablas anteriores teniendo en cuenta la longitud de las diferentes ramas.
+
+Los datos sobre los parámetros de los transformadores se muestran a continuación en la tabla 4.
+Sb(MVA) 45 0,7 Ub(alta)(KV) 136 24 Ub(baja)(KV) xcc (base trafo) 20 0,1317 0,69 0,055 Pcu(W) 210322 6314,15 desfase alta/baja 0 11
+
+Tabla 4.Parámetros de los transformadores.
+
+El parque tiene un transformador 136kV/20kV de 45MVA entre el nudo de enlace a red y la zona de 24 kV. La hoja técnica del transformador indica sus pérdidas en el cobre de 210322 W y una reactancia de cortocircuito en bases propias de 0.1317 pu.
+
+Además de transformador de alta, detrás de cada generador, entre las zonas de 690 V y 24 kV, existe un transformador 20 kV/0.69 V de 700kVA conectado en Dyn11. Su hoja técnica fija sus pérdidas en el cobre en 6314.15 W y una reactancia de cortocircuito en bases propias de 0.055 pu.
+
+Los transformadores se modelaron como una rama más, con una resistencia que modelara sus pérdidas en el cobre y una reactancia que representara la magnetización en el hierro y la potencia reactiva necesaria para crearla.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 50 -
+
+Los aerogeneradores se han modelado haciendo uso del circuito equivalente en T para régimen permanente que se muestra en la figura 2 del capítulo anterior que se vuelve a mostrar a continuación en la figura 5.
+
+Figura 5. Circuito equivalente de la máquina asíncrona.
+
+En el modelo empleado se sustituyó la resistencia variable que modela la generación de potencia activa por un nudo PQ donde se especifica la potencia activa que sale del eje del aerogenerador y se fija a cero la potencia reactiva. El resto de parámetros se muestran en la tabla 5.
+Generador Pn (kW) Rs Xs Rr Xr Re Xm
+
+660 0,00734 0,11778 0,01225 0,15349 189,51 4,709
+
+Tabla 5. Parámetros de los generadores.
+
+Las baterías de condensadores se modelaron como reactancias en paralelo en los nudos donde se conectan los condensadores. Estas reactancias variarán su valor según varían los escalones de las baterías en el desenganche para la compensación.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 51 -
+
+3.3 Estudio técnico
+
+Dados los requisitos de la nueva legislación sobre gestión de potencia reactiva, se decidió definir la operación de los condensadores necesaria para evitar las sanciones que se imponen por no ajustar el factor de potencia al margen especificado.
+
+Además de este estudio, se plantea también analizar las posibilidades del parque para ajustarse a las especificaciones normativas para una máxima bonificación por factor de potencia. Para ello, se define igualmente la operación de los condensadores para cada uno de los estados y se calcula el valor de la potencia reactiva que haría falta inyectar en la subestación en el lado de 20kV para cumplir con las especificaciones.
+
+La operación de los condensadores en cada caso está definida de manera que se pueda mantener un nivel admisible de tensiones en todos los nudos del parque sin tener las necesidad de ajustar cada factor de potencia de los nudos de los aerogeneradores a un valor unitario.
+
+Los escalones de generación en los aerogeneradores que se emplearon para definir los escenarios del análisis fueron del 25% de la potencia nominal en el eje. Asimismo, para reducir la extensión del estudio, no se realizó el análisis da cada una de las posibilidades de generación de cada aerogenerador, sino que
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 52 -
+
+se supuso una carga constante para todos los aerogeneradores en cada escenario analizado. Los escenarios así definidos son una combinación entre los distintos niveles de generación para todos los aerogeneradores (25%, 50%, 75% y 100%) y los horarios que distingue el RD (PUNTA, LLANO y VALLE). A continuación, de las tabla 6 a la 13, se muestran los resultados que se obtienen sobre la operación de los condensadores para cada uno de los estados y para cada estrategia. Las cuatro primeras tablas exponen los resultados para la estrategia de mínima sanción, mientras que las restantes muestran los de la estrategia de máxima bonificación. Se muestra la potencia reactiva a tensión nominal que se debe tener instalada en cada nudo donde existen condensadores. La primera fila corresponde al condensador de 20 kV y el resto a los de 690 V.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 53 -
+
+ESTRATEGIA DE MÍNIMA SANCIÓN P = 25%
+Nº nudo 1 11012 11022 11032 11042 11052 11062 11072 11082 11092 11102 11112 11122 11132 11142 11152 21012 21022 21032 22012 22022 22032 22042 22052 23012 23022 23032 24012 24022 24032 24042 24052 Qprevia (kVar) Punta 3000 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 3000 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 Qposterior (kVar) Llano 0 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210
+
+Valle 0 140 140 140 140 140 140 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210
+
+Tabla 6. Disposición de los condensadores para nivel de generación al 25% con la estrategia de mínima sanción.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 54 -
+
+P = 50%
+Nº nudo 1 11012 11022 11032 11042 11052 11062 11072 11082 11092 11102 11112 11122 11132 11142 11152 21012 21022 21032 22012 22022 22032 22042 22052 23012 23022 23032 24012 24022 24032 24042 24052 Qprevia (kVar) Punta 3000 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 3000 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 Qposterior (kVar) Llano 3000 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210
+
+Valle 0 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210
+
+Tabla 7. Disposición de los condensadores para nivel de generación al 50% con la estrategia de mínima sanción.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 55 -
+
+P = 75%
+Nº nudo 1 11012 11022 11032 11042 11052 11062 11072 11082 11092 11102 11112 11122 11132 11142 11152 21012 21022 21032 22012 22022 22032 22042 22052 23012 23022 23032 24012 24022 24032 24042 24052 Qprevia (kVar) Punta 3000 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 3000 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 Qposterior (kVar) Llano 3000 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210
+
+Valle 3000 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210
+
+Tabla 8. Disposición de los condensadores para nivel de generación al 75% con la estrategia de mínima sanción.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 56 -
+
+P = 100%
+Nº nudo 1 11012 11022 11032 11042 11052 11062 11072 11082 11092 11102 11112 11122 11132 11142 11152 21012 21022 21032 22012 22022 22032 22042 22052 23012 23022 23032 24012 24022 24032 24042 24052 Qprevia (kVar) Punta 3000 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 3000 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 Qposterior (kVar) Llano 3000 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210
+
+Valle 3000 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210
+
+Tabla 9. Disposición de los condensadores para nivel de generación al 100% con la estrategia de mínima sanción.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 57 -
+
+ESTRATEGIA DE MÁXIMA BONIFICACIÓN P = 25%
+Nº nudo 1 11012 11022 11032 11042 11052 11062 11072 11082 11092 11102 11112 11122 11132 11142 11152 21012 21022 21032 22012 22022 22032 22042 22052 23012 23022 23032 24012 24022 24032 24042 24052 Qprevia (kVar) Punta 3000 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 3000 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 Qposterior (kVar) Llano 0 140 140 140 140 140 140 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210
+
+Valle 0 70 70 70 70 70 70 70 70 70 140 140 140 140 140 140 70 70 140 70 70 140 140 140 140 140 140 140 140 140 140 140
+
+Tabla 10. Disposición de los condensadores para nivel de generación al 25% con la estrategia de máxima bonificación.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 58 -
+
+P = 50%
+Nº nudo 1 11012 11022 11032 11042 11052 11062 11072 11082 11092 11102 11112 11122 11132 11142 11152 21012 21022 21032 22012 22022 22032 22042 22052 23012 23022 23032 24012 24022 24032 24042 24052 Qprevia (kVar) Punta 3000 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 3780 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 Qposterior (kVar) Llano 0 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210
+
+Valle 0 70 70 70 70 70 70 70 70 140 140 140 140 140 140 140 70 70 140 70 70 140 140 140 140 140 140 140 140 140 140 140
+
+Tabla 11. Disposición de los condensadores para nivel de generación al 50% con la estrategia de máxima bonificación.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 59 -
+
+P = 75%
+Nº nudo 1 11012 11022 11032 11042 11052 11062 11072 11082 11092 11102 11112 11122 11132 11142 11152 21012 21022 21032 22012 22022 22032 22042 22052 23012 23022 23032 24012 24022 24032 24042 24052 Qprevia (kVar) Punta 3000 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 7200 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 Qposterior (kVar) Llano 3000 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210
+
+Valle 0 70 70 140 140 140 140 140 140 140 140 140 140 140 140 140 140 140 140 140 140 140 140 140 140 140 140 140 140 140 140 140
+
+Tabla 12. Disposición de los condensadores para nivel de generación al 75% con la estrategia de máxima bonificación.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 60 -
+
+P = 100%
+Nº nudo 1 11012 11022 11032 11042 11052 11062 11072 11082 11092 11102 11112 11122 11132 11142 11152 21012 21022 21032 22012 22022 22032 22042 22052 23012 23022 23032 24012 24022 24032 24042 24052 Qprevia (kVar) Punta 3000 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 11260 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 Qposterior (kVar) Llano 3000 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210 210
+
+Valle 0 140 140 140 140 140 140 140 140 140 210 210 210 210 210 210 140 140 140 140 140 140 140 210 210 210 210 210 210 210 210 210
+
+Tabla 13. Disposición de los condensadores para nivel de generación al 100% con la estrategia de máxima bonificación.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 61 -
+
+Para el funcionamiento del parque con la estrategia de máxima bonificación por ajuste del factor de potencia, en algunos escenarios de punta, se exige además la inyección de una potencia reactiva mayor que la disponible. La propuesta de este estudio es la instalación de un banco de condensadores en la subestación en el lado de 20 kV añadida a la de 3 Mvar ya existente. Los valores de estas baterías se indican a continuación en la tabla 14especificándose el escenario al que corresponderían.
+
+BATERIAS(Mvar) CARGA ESTADO RED
+
+0.78 50% PUNTA
+
+4.20 75% PUNTA
+
+8.26 100% PUNTA
+
+Tabla 14. Baterías de 20 kV.
+
+Con todo esto, se obtendrían los factores de potencia en el nudo de enlace a la red que requiere el cumplimiento de la legislación actual. En las tablas 15 y 16, se muestran los factores de potencia obtenidos antes y después del cambio de operación de los condensadores.
+
+Estrategia de mínima sanción:
+
+Factor de potencia Previo 25 50 75 100 25 50 75 100
+
+Posterior
+
+Punta 0.81 CAP 0.97 CAP 1.00 0.99 IND 0.81 CAP 0.97 CAP 1.00 0.99 IND
+
+Llano 0.81 CAP 0.97 CAP 1.00 0.99 IND 0.96 CAP 0.97 CAP 1.00 0.99 IND
+
+Valle 0.81 CAP 0.97 CAP 1.00 0.99 IND 0.98 CAP 1.00 1.00 0.99 IND
+
+Tabla 15. Factores de potencia para mínima sanción.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 62 -
+
+Estrategia de máxima retribución:
+
+Factor de potencia Previo 25 50 75 100 25 50 75 100
+
+Posterior
+
+Punta 0.81 CAP 0.97 CAP 1.00 0.99 IND 0.81 CAP 0.95 CAP 0.95 CAP 0.95 CAP
+
+Llano 0.81 CAP 0.97 CAP 1.00 0.99 IND 0.98 CAP 1.00 1.00 0.99 IND
+
+Valle 0.81 CAP 0.97 CAP 1.00 0.99 IND 0.95 IND 0.95 IND 0.95 IND 0.95 IND
+
+Tabla 16. Factores de potencia para mínima sanción.
+
+Si se compara con la tabla incluida en el RD, se puede observar la similitud de los valores obtenidos con los requeridos para cada estrategia. Se observa también que con la operación que se propone para obtener la mínima sanción, se puede llegar al punto de sanción nula, mientras que, con la instalación de nuevos equipos, se puede llegar operar siempre con la máxima retribución.
+
+Tabla 17. Bonificaciones por potencia reactiva según el RD 436/2004
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 63 -
+
+A continuación se hace un estudio complementario de tensiones para comprobar si la operación de los condensadores propuesta cumple su objetivo de impedir tensiones demasiado bajas en los nudos del final de las filas de aerogeneradores. En las tablas 18 y 19, se muestra el valor de las tensiones en cada nudo de generación para los distintos escenarios y estrategias.
+
+Estrategia de mínima sanción:
+
+ESTADOS
+NUDO 11014 11024 11034 11044 11054 11064 11074 11084 11094 11104 11114 11124 11134 11144 11154 21014 21024 21034 22014 22024 22034 22044 22054 23014 23024 23034 24014 24024 24034 24044 1.001 1.001 1.001 1.002 1.002 1.002 1.002 1.002 1.002 1.002 1.003 1.003 1.003 1.003 1.003 1.002 1.002 1.002 1.003 1.003 1.003 1.003 1.003 1.003 1.003 1.003 1.003 1.003 1.004 1.004 25% 0.997 0.998 0.998 0.998 0.998 0.998 0.999 0.999 0.999 0.999 0.999 0.999 0.999 0.999 0.999 0.999 0.999 0.999 0.999 0.999 0.999 0.999 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 0.991 0.991 0.991 0.991 0.991 0.991 0.997 0.997 0.997 0.997 0.998 0.998 0.998 0.998 0.998 0.997 0.997 0.997 0.998 0.998 0.998 0.998 0.998 0.999 0.999 0.999 0.999 0.999 0.999 0.999 1.030 1.031 1.031 1.031 1.031 1.032 1.032 1.032 1.032 1.033 1.033 1.033 1.033 1.034 1.034 1.032 1.032 1.032 1.032 1.033 1.033 1.033 1.034 1.034 1.034 1.034 1.034 1.034 1.034 1.034 50% 1.030 1.031 1.031 1.031 1.031 1.032 1.032 1.032 1.032 1.033 1.033 1.033 1.033 1.034 1.034 1.032 1.032 1.032 1.032 1.033 1.033 1.033 1.034 1.034 1.034 1.034 1.034 1.034 1.034 1.034 1.024 1.025 1.025 1.025 1.026 1.026 1.026 1.026 1.027 1.027 1.027 1.028 1.028 1.028 1.028 1.026 1.026 1.026 1.027 1.027 1.027 1.028 1.028 1.028 1.028 1.028 1.028 1.028 1.029 1.029 1.051 1.052 1.052 1.053 1.053 1.053 1.054 1.054 1.054 1.054 1.055 1.056 1.056 1.056 1.056 1.054 1.054 1.054 1.054 1.055 1.055 1.055 1.056 1.056 1.056 1.056 1.056 1.056 1.057 1.057 75% 1.051 1.052 1.052 1.053 1.053 1.053 1.054 1.054 1.054 1.054 1.055 1.056 1.056 1.056 1.056 1.054 1.054 1.054 1.054 1.055 1.055 1.055 1.056 1.056 1.056 1.056 1.056 1.056 1.057 1.057 1.051 1.052 1.052 1.053 1.053 1.053 1.054 1.054 1.054 1.054 1.055 1.056 1.056 1.056 1.056 1.054 1.054 1.054 1.054 1.055 1.055 1.055 1.056 1.056 1.056 1.056 1.056 1.056 1.057 1.057 1.065 1.066 1.066 1.067 1.067 1.067 1.068 1.068 1.069 1.069 1.070 1.070 1.071 1.071 1.071 1.068 1.068 1.068 1.068 1.069 1.070 1.070 1.070 1.071 1.071 1.071 1.071 1.071 1.071 1.072 100% 1.065 1.066 1.066 1.067 1.067 1.067 1.068 1.068 1.069 1.069 1.070 1.070 1.071 1.071 1.071 1.068 1.068 1.068 1.068 1.069 1.070 1.070 1.070 1.071 1.071 1.071 1.071 1.071 1.071 1.072 1.065 1.066 1.066 1.067 1.067 1.067 1.068 1.068 1.069 1.069 1.070 1.070 1.071 1.071 1.071 1.068 1.068 1.068 1.068 1.069 1.070 1.070 1.070 1.071 1.071 1.071 1.071 1.071 1.071 1.072 PUNTA LLANO VALLE PUNTA LLANO VALLE PUNTA LLANO VALLE PUNTA LLANO VALLE
+
+24054 1.004
+
+1.000 0.999 1.034
+
+1.034 1.029 1.057
+
+1.057 1.057 1.072
+
+1.072 1.072
+
+Tabla 18. Niveles de tensión en nudos de generación para todos los estados en estrategia de mínima sanción.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 64 -
+
+Estrategia de Máxima Retribución:
+
+ESTADOS
+NUDO 11014 11024 11034 11044 11054 11064 11074 11084 11094 11104 11114 11124 11134 11144 11154 21014 21024 21034 22014 22024 22034 22044 22054 23014 23024 23034 24014 24024 24034 24044 1.001 1.001 1.001 1.002 1.002 1.002 1.002 1.002 1.002 1.002 1.003 1.003 1.003 1.003 1.003 1.002 1.002 1.002 1.003 1.003 1.003 1.003 1.003 1.003 1.003 1.003 1.003 1.003 1.004 1.004 25% 0.991 0.991 0.991 0.991 0.991 0.991 0.997 0.997 0.997 0.997 0.998 0.998 0.998 0.998 0.998 0.997 0.997 0.997 0.998 0.998 0.998 0.998 0.998 0.999 0.999 0.999 0.999 0.999 0.999 0.999 0.977 0.977 0.977 0.977 0.977 0.978 0.978 0.978 0.978 0.984 0.984 0.984 0.984 0.984 0.984 0.978 0.978 0.983 0.978 0.978 0.984 0.984 0.984 0.984 0.984 0.984 0.984 0.984 0.984 0.984 1.032 1.032 1.032 1.033 1.033 1.033 1.033 1.034 1.034 1.034 1.035 1.035 1.035 1.035 1.035 1.033 1.034 1.034 1.034 1.034 1.035 1.035 1.035 1.035 1.035 1.035 1.035 1.036 1.036 1.036 50% 1.024 1.025 1.025 1.025 1.026 1.026 1.026 1.026 1.027 1.027 1.027 1.028 1.028 1.028 1.028 1.026 1.026 1.026 1.027 1.027 1.027 1.028 1.028 1.028 1.028 1.028 1.028 1.028 1.029 1.029 1.003 1.003 1.003 1.004 1.004 1.004 1.004 1.004 1.011 1.011 1.011 1.011 1.011 1.012 1.012 1.004 1.004 1.010 1.004 1.005 1.011 1.011 1.011 1.012 1.012 1.012 1.012 1.012 1.012 1.012 1.060 1.060 1.060 1.061 1.061 1.061 1.062 1.062 1.062 1.063 1.063 1.064 1.064 1.064 1.064 1.062 1.062 1.062 1.062 1.063 1.063 1.064 1.064 1.064 1.064 1.064 1.064 1.065 1.065 1.065 75% 1.051 1.052 1.052 1.053 1.053 1.053 1.054 1.054 1.054 1.054 1.055 1.056 1.056 1.056 1.056 1.054 1.054 1.054 1.054 1.055 1.055 1.055 1.056 1.056 1.056 1.056 1.056 1.056 1.057 1.057 1.024 1.025 1.032 1.032 1.032 1.033 1.033 1.033 1.033 1.034 1.034 1.035 1.035 1.035 1.035 1.033 1.033 1.033 1.033 1.034 1.034 1.034 1.035 1.035 1.035 1.035 1.035 1.035 1.035 1.035 1.082 1.083 1.083 1.083 1.084 1.084 1.085 1.085 1.085 1.086 1.087 1.087 1.087 1.087 1.087 1.084 1.085 1.085 1.085 1.086 1.086 1.087 1.087 1.087 1.088 1.088 1.088 1.088 1.088 1.088 100% 1.065 1.066 1.066 1.067 1.067 1.067 1.068 1.068 1.069 1.069 1.070 1.070 1.071 1.071 1.071 1.068 1.068 1.068 1.068 1.069 1.070 1.070 1.070 1.071 1.071 1.071 1.071 1.071 1.071 1.072 1.048 1.048 1.049 1.049 1.049 1.050 1.050 1.051 1.051 1.058 1.059 1.060 1.060 1.060 1.060 1.050 1.050 1.050 1.051 1.051 1.052 1.052 1.060 1.060 1.060 1.060 1.060 1.060 1.061 1.061 PUNTA LLANO VALLE PUNTA LLANO VALLE PUNTA LLANO VALLE PUNTA LLANO VALLE
+
+24054 1.004
+
+0.999 0.984 1.036
+
+1.029 1.012 1.065
+
+1.057 1.035 1.088
+
+1.072 1.061
+
+Tabla 19. Niveles de tensión en nudos de generación para todos los estados en estrategia de máxima retribución.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 65 -
+
+NUDO 11014 11024 11034 11044 11054 11064 11074 11084 11094 11104 11114 11124 11134 11144 11154 21014 21024 21034 22014 22024 22034 22044 22054 23014 23024 23034 24014 24024 24034 24044 24054
+
+ESTRATEGIA MÁXIMA BONIFICACIÓN MÁXIMO 1.082 1.083 1.083 1.083 1.084 1.084 1.085 1.085 1.085 1.086 1.087 1.087 1.087 1.087 1.087 1.084 1.085 1.085 1.085 1.086 1.086 1.087 1.087 1.087 1.088 1.088 1.088 1.088 1.088 1.088 1.088
+
+MÍNIMO 0.977 0.977 0.977 0.977 0.977 0.978 0.978 0.978 0.978 0.984 0.984 0.984 0.984 0.984 0.984 0.978 0.978 0.983 0.978 0.978 0.984 0.984 0.984 0.984 0.984 0.984 0.984 0.984 0.984 0.984 0.984
+
+Tabla 20. Niveles de tensión máxima y mínima en nudos de generación máxima retribución.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 66 -
+
+NUDO 11014 11024 11034 11044 11054 11064 11074 11084 11094 11104 11114 11124 11134 11144 11154 21014 21024 21034 22014 22024 22034 22044 22054 23014 23024 23034 24014 24024 24034 24044 24054
+
+ESTRATEGIA MÍNIMA SANCIÓN MÁXIMO 1.065 1.066 1.066 1.067 1.067 1.067 1.068 1.068 1.069 1.069 1.070 1.070 1.071 1.071 1.071 1.068 1.068 1.068 1.068 1.069 1.070 1.070 1.070 1.071 1.071 1.071 1.071 1.071 1.071 1.072 1.072
+
+MÍNIMO 0.991 0.991 0.991 0.991 0.991 0.991 0.997 0.997 0.997 0.997 0.998 0.998 0.998 0.998 0.998 0.997 0.997 0.997 0.998 0.998 0.998 0.998 0.998 0.999 0.999 0.999 0.999 0.999 0.999 0.999 0.999
+
+Tabla 21. Niveles de tensión máxima y mínima en nudos de generación mínima sanción.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 67 -
+
+ESTRATEGIA MÍNIMA SANCIÓN ESTADOS PUNTA 1.004 1.001 25% LLANO 1.000 0.997 VALLE 0.999 0.991 PUNTA 1.034 1.030 50% LLANO 1.034 1.030 VALLE 1.029 1.024 PUNTA 1.057 1.051 75% LLANO 1.057 1.051 VALLE 1.057 1.051 PUNTA 1.072 1.065 100% LLANO 1.072 1.065 VALLE 1.072 MÁXIMO 1.065 MÍNIMO
+
+Tabla 22. Máximas y mínimas tensiones para cada estado en mínima sanción.
+
+ESTRATEGIA MÁXIMA BONIFICACIÓN ESTADOS PUNTA 1.004 1.001 25% LLANO 0.999 0.991 VALLE 0.984 0.977 PUNTA 1.036 1.032 50% LLANO 1.029 1.024 VALLE 1.012 1.003 PUNTA 1.065 1.060 75% LLANO 1.057 1.051 VALLE 1.035 1.024 PUNTA 1.088 1.082 100% LLANO 1.072 1.065 VALLE 1.061 1.048
+
+MÁXIMO MÍNIMO
+
+Tabla 23. Máximas y mínimas tensiones para cada estado en máxima bonificación.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 68 -
+
+Se observa en las tablas 20, 21, 22 y 23 que los máximos valores de tensión rondan valores del 8% por encima de 1 pu, mientras que los mínimos no bajan del 4% por debajo de 1pu. Estos valores se pueden considerar admisibles en la tensión de 690 V para la que se genera en este parque eólico.
+
+Para comprobar el perfil de tensiones, se representa el de las dos ramas principales para los distintos estados de la Figura 6 a la 9.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 69 -
+
+Estrategia de máxima bonificación:
+
+Figura 6. Perfiles de tensiones en nudos de generación de la Rama 1.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 70 -
+
+Figura 7. Perfiles de tensiones en nudos de generación de la Rama 3.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 71 -
+
+Estrategia de mínima sanción:
+
+Figura 8. Perfiles de tensiones en nudos de generación de la Rama 1.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 72 -
+
+Figura 9. Perfiles de tensiones en nudos de generación de la Rama 3.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 73 -
+
+Se comprueba en las figuras 6, 7, 8 y 9 que, para las dos ramas de mayor longitud, el perfil de tensiones es lo suficientemente estable. Se producen pendientes mayores en los nudos donde existe una discontinuidad en la potencia reactiva inyectada, pero son pendientes lo suficientemente pequeñas para que no se produzcan problemas de operación en la red del parque eólico. Se ha comprobado únicamente el perfil de estas dos ramas porque, al ser las de mayor longitud, presumiblemente serán en las que mayor caída de tensión podría haber. Con todo esto, se puede concluir que se cumple con el objetivo marcado para el establecimiento de la prioridad de desenganche de las baterías de condensadores de baja tensión.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 74 -
+
+3.4 Estudio Económico
+A continuación se realiza el estudio económico donde se analiza la viabilidad de la instalación de la batería de condensadores en la subestación en el lado de 20 kV para los tres valores propuestos de 9 Mvar, 5 Mvar, 1 Mvar.
+
+Se ha supuesto que la operación actual fija un factor de potencia en el nudo de enlace a la red próximo a la unidad, ya que el dimensionamiento en cuanto a compensación de potencia reactiva es el adecuado para ello. Por lo tanto, no se considera el estudio económico de la estrategia de mínima sanción debido a que la bonificación es mínima y la sanción a la que se debería hacer frente en el caso de continuar con el funcionamiento actual del parque sería mínima o no existiría.
+
+El valor de la bonificación total depende del horario en que se produzca y de la carga de los generadores. Por lo tanto, se debe definir una matriz de incidencia para los distintos escenarios. Los horarios están estipulados en tres intervalos de ocho horas, por lo que se le podrá asignar la incidencia de 1/3 a cada uno. La incidencia de los estados de carga del parque para cada horario se puede obtener por medio del estudio de los históricos del parque. Dado que no se dispone de esta información, se supondrá que el nivel de carga no depende del horario, es decir, que no existe una relación entre la velocidad del viento y la hora del día. Se impondrán, por lo tanto unos valores razonables para la generación de un parque situado en una zona adecuada. Estos valores deben cumplir dos condiciones:
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 75 -
+
+∑ incidencia
+i
+
+i
+
+=1
+
+∑ incidencia ⋅ c arg a
+i i
+
+i
+
+= FU
+
+FU es el Factor de Utilización del parque eólico. Se define como el nivel de carga constante al que estaría el parque todo el año para generar la misma energía que la que genera realmente. Al carecer de información sobre este dato, en este caso se ha supuesto un factor de utilización de FU=0,4. El factor de utilización en España suele ser algo inferior para los proyectos que se llevan a cabo actualmente, pero se ha supuesto algo mayor porque, al tratarse de un parque instalado hace varios años, el emplazamiento será mejor que los considerados actualmente. Los valores de las incidencias se muestran en la Tabla 24.
+PUNTA LLANO VALLE INCIDENCIA 0,333 0,333 0,333 25% 0,55 0,183 0,183 0,183 50% 75% 100% 0,34 0,06 0,05 0,113 0,02 0,017 0,113 0,113 0,02 0,02 0,017 0,017
+
+Tabla 24. Niveles de incidencia.
+
+Se muestra a continuación la energía generada en kWh para cada estado de carga durante un año en la tabla 25.
+
+25% 50% 75% 100%
+
+kWh anuales 3682800 7365600 11048400 14731200
+
+Tabla 25. Energía anual generada a distintos niveles de generación.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 76 -
+
+Multiplicando estos valores por los de los factores de incidencia la energía generada en un año en cada uno de los estados definidos como muestra la tabla 26 (la última fila de tabla muestra la energía generada en cada uno de los estados de la red).
+
+25% 50% 75% 100%
+
+PUNTA LLANO VALLE INCIDENCIA 0,33333333 0,33333333 0,33333333 0,55 675180 675180 675180 0,34 834768 834768 834768 0,06 220968 220968 220968 0,05 245520 245520 245520 1976436 1976436 1976436
+
+2025540 2504304 662904 736560 5929308
+
+Tabla 26. Energía anual generada por estados.
+
+Las bonificaciones en punta y en valle dependen del factor de potencia alcanzado con la batería de condensadores propuesta.
+
+Si se consideran despreciables los gastos de mantenimiento que repercuten sobre el proyecto y se consideran unos costes de ingeniería, instalación y transporte de un 10% de los costes totales del proyecto, se puede obtener una aproximación buena para evaluar cada una de las posibilidades del proyecto. Además, en los casos en los que se propone la instalación de una batería en 20 kV, habría que instalar los equipos de medida y maniobra para actuar sobre la batería
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 77 -
+
+Sin baterías nuevas en 20 kV:
+
+Sin instalar ninguna de las baterías propuestas, operando los condensadores según el algoritmo ideado en este proyecto, se obtendrían bonificaciones par todos los estados de valle y llano. Para los estados de punta, sólo se obtendría bonificación para el 25% de carga, para el que se logra ajustar el factor de potencia al valor especificado para la máxima bonificación, y para el 50% de carga, para el que el factor de potencia sólo llega a alcanzar el valor para la mínima bonificación.
+
+Se calcula a continuación el ingreso extra por bonificaciones que se tendría operando correctamente las baterías de condensadores para ajustar el factor de potencia al establecido:
+
+0,072072 Є/kWh * (
+
+0,08 * 1.976.436 + 0,04 * 1.976.436 + 0,08 * 675.180 + 0,02 * 834.768 ) kWh = 22.189,68 Є
+
+valle llano punta al 25% punta al 50%
+
+Las baterías de baja tensión de las que dispone el parque son unas baterías autorregulables que incluyen un mando que ajusta el factor de potencia en el nudo al que están conectadas a la unidad. Para actuar sobre los condensadores con un criterio distinto, se debe hacer una inversión en un sistema de control que lo permita. El precio estimado para este cuadro de maniobra es de 9.000 Є.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 78 -
+
+Cuadro de maniobra PRECIO NETO...............................9.000 Є Otros costes fijos (ingeniería, transporte, etc) PRECIO NETO .............................1.000 Є TOTAL.........................................10.000 Є
+
+Incluso sin calcular la TIR, se comprueba la conveniencia de hacer la inversión en esta fase del proyecto, ya que los 10.000 Є de inversión en el equipo se amortizan en apenas 6 meses (8 meses si los valores arriba indicados son antes de impuestos).
+
+Con la batería de 9 Mvar:
+
+Con la batería de 9 Mvar se obtenía la bonificación máxima en todas las franjas horarias. Por lo tanto, la bonificación en punta y en valle será del 8% y en llano del 4% sobre el precio medio fijado en 7.2072 cЄ/kWh. La bonificación anual extra debida a la batería será la correspondiente a los escenarios de PUNTA al 50%, 75% y 25% y se calcula como:
+
+0,072072 Є/kWh * [ ( 0,08 - 0,02 ) * 834.768 + 0,08 * 220.968 + 0,08 * 245.520 )] kWh = 6.299,46 Є
+
+punta al 50% punta al 75% punta al 25%
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 79 -
+
+Los costes de inversión del proyecto son:
+
+1 Banco de condensadores de 9 MVAr de potencia para 3x20 Kv – 50 Hz, conexión doble estrella, según memoria descriptiva adjunta. PRECIO NETO ..................................37.731 Є Trafos de medida de tensión e intensidad PRECIO NETO.............................3.000 Є Relé SEPAM PRECIO NETO ..........................4.000 Є Cuadro de maniobra PRECIO NETO............................3.500 Є Otros costes fijos (ingeniería, transporte, etc) PRECIO NETO .............................4.500 Є TOTAL.........................................52.731 Є
+
+La inversión inicial de 52.731 Є, se amortiza a razón de 6.299,46 Є anuales en 8 años y 5 meses. Dada la volatilidad de la rentabilidad del proyecto, la cual depende de que se mantenga la legislación el tiempo necesario hasta que se empiece a rentabilizar la inversión, el riesgo que habría que asumir es considerable. La decisión de invertir o no dependerá del riesgo asumible del inversor.
+
+Con la batería de 5 Mvar:
+
+Con esta batería se logra obtener la máxima bonificación para todos los estados definidos en el estudio excepto para el de generación al 100% en horario
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 80 -
+
+PUNTA. Para este estado, se obtiene un factor de potencia de 0,97 capacitivo. Este factor de potencia implica una bonificación del 2%. La retribución total se calcula por lo tanto como:
+
+0,072072 Є/kWh * [ ( 0,08 - 0,02 ) * 834.768 + 0,08 * 220.968 + 0,02 * 245.520 )] kWh = 5.237,75 Є
+
+punta al 50% punta al 75% punta al 25%
+
+El presupuesto para el banco de condensadores es:
+
+1 Banco de condensadores de 5 MVAr de potencia para 3x20 Kv – 50 Hz, conexión doble estrella, con reactancias de inserción, según memoria descriptiva adjunta. PRECIO NETO ......................................25.357 Є Trafos de medida de tensión e intensidad PRECIO NETO.............................3.000 Є Relé SEPAM PRECIO NETO ..........................4.000 Є Cuadro de maniobra PRECIO NETO............................3.500 Є Otros costes fijos (ingeniería, transporte,etc) PRECIO NETO .............................3.500 Є TOTAL ........................................35.857 Є
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 81 -
+
+Los 35.857 Є se amortizan a razón de 5.237,75 Є anuales en 6 años y 10 meses. El riesgo asumido en este caso es menor que en el anterior. Existe la posibilidad de que se retiren las bonificaciones en un tiempo menor de 7 años, pero la probabilidad de que esto ocurra es menor que en el caso anterior.
+
+Con la batería de 1 Mvar:
+
+Con esta batería, se logra compensar el factor de potencia par la máxima bonificación únicamente para el estado de punta con una carga del 50%. El resto de los estados que quedaban sin compensar sin instalar nuevas baterías se quedan con unos valores de factor de potencia próximos a la unidad, por lo que no se recibiría ninguna bonificación para esos estados. La bonificación anual en este caso sería de:
+
+0,072072 Є/kWh * [ ( 0,08 - 0,02 ) * 834.768 ] = 3.609,80 Є
+
+El presupuesto para el banco de condensadores es:
+
+1 Banco de condensadores de 1 MVAr de potencia para 3x20 Kv – 50 Hz, conexión doble estrella, con reactancias de inserción, según memoria descriptiva adjunta. PRECIO NETO ......................................11.576 Є Trafos de medida de tensión e intensidad PRECIO NETO.............................3.000 Є Relé SEPAM PRECIO NETO ..........................4.000 Є
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 82 -
+
+Cuadro de maniobra PRECIO NETO............................3.500 Є Otros costes fijos (ingeniería, transporte, etc) PRECIO NETO .............................2.200 Є TOTAL .......................................24.276 Є
+
+La inversión inicial de 24.276 Є se amortiza a razón de 3.609,80 Є anuales en 6 años y 9 meses. El riesgo que hay que asumir en el caso de instalar la batería de 1Mvar, desde le punto de vista de que se retiren las bonificaciones, es prácticamente el mismo que en el caso de la batería de 5 Mvar .
+
+CONCLUSIÓN
+
+Tras la exposición de desembolsos y retornos que conlleva la instalación de alguna de las baterías de condensadores, en el caso en que se decida invertir y no se asuma el riesgo que supone la de 9 Mvar, lo más conveniente sería instalar la de 5 Mvar, ya que se amortiza en el mismo tiempo que la de 1 Mvar y la rentabilidad es mayor.
+
+En cualquier caso, se decida o no invertir en la instalación de baterías de condensadores, del estudio económico de la nueva operación de condensadores, se puede deducir su alta rentabilidad y la gran conveniencia de aplicarla.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 83 -
+
+CAPÍTULO 4
+
+CONCLUSIONES
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 84 -
+
+4.1. Conclusiones del proyecto
+
+En este proyecto se ha realizado un estudio sobre la compensación de potencia reactiva en los parques eólicos basado en el RD 436/2004.
+
+Se ha desarrollado una herramienta para el estudio de parques eólicos que generan con máquinas asíncronas y que el sistema de compensación que emplean está basado en baterías de condensadores.
+
+Se ha ideado una estrategia de conexión de condensadores que permite la adecuación del funcionamiento del parque a la nueva legislación minimizando el número de operaciones y procurando mantener un nivel aceptable de tensiones en los nudos del parque.
+
+Se ha realizado el estudio técnico de un parque real, con lo que se ha comprobado la eficacia de la estrategia de conexión de condensadores y el correcto funcionamiento de la herramienta. Además, se han obtenido los datos necesarios para comprobar la capacidad del parque a adaptarse a la nueva legislación.
+
+Por último, se ha comprobado la rentabilidad económica de la adecuación del funcionamiento del parque a los criterios de máxima bonificación por potencia reactiva que marca la legislación vigente.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 85 -
+
+4.2. Aportaciones del Proyecto
+
+Con todo esto, las aportaciones del proyecto son:
+
+El estudio de la posibilidad de adaptar el funcionamiento de un parque eólico a los requisitos sobre potencia reactiva del Real Decreto 436/2004 de la manera más conveniente técnica y económicamente.
+
+El estudio de la posibilidad de aumentar la rentabilidad de un parque eólico basado en las bonificaciones que permite la nueva legislación.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 86 -
+
+4.3. Sugerencias para posibles desarrollos
+
+Con los resultados derivados de este proyecto se pueden sugerir las siguientes líneas de trabajo:
+
+Desarrollo de un modelo del parque más detallado que incluya la operación de las tomas de los transformadores para estudiar la posibilidad de compensar sobretensiones o subtensiones que pudieran aparecer. Realización de un estudio más detallado para escenarios típicos de los parques modelados. Creación de herramientas que permitan el estudio de parques que empleen otros sistemas de compensación de potencia reactiva.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 87 -
+
+BIBLIOGRAFÍA
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 88 -
+
+Bibliografía
+
+[BARQ04] Barquín Gil, J.
+
+“Energía: Técnica, Economía y Sociedad”,
+
+Universidad Pontificia Comillas. 2004
+
+[GOME02] Gómez Expósito, A. “Análisis y operación de sistemas de energía eléctrica”, Mc Graw Hill. 2002
+
+[FRAI03] Fraile Mora, J. “Máquinas eléctricas”, Mc Graw Hill. 2003
+
+[R43604] Real Decreto 436/2004 publicado en el B.O.E. el 12 de marzo de 2004.
+
+[R14302] Real Decreto 1432/2002 publicado en el B.O.E. el 27 de diciembre de 2002.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 89 -
+
+ANEXOS
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 90 -
+
+ANEXO: Hojas técnicas de las baterías de condensadores
+Información Técnica Adicional
+
+El banco ofertado constituye un agrupamiento de condensadores, montados sobre estructuras metálicas y debidamente aislados de modo de obtener una potencia de 1 MVAr a la tensión de 3x20KV - 50Hz.
+
+1) Bastidor: consistente en estructura metálica construida con perfiles
+laminados y de chapa doblada de hierro normalizados totalmente soldados ó atornillados, zincados por inmersión en caliente (con un deposito mínimo de 650 g/m², según Norma ASTM 123) , de tamaños normalizados, que permiten la fijación e interconexión de los condensadores y sus respectivos accesorios de protección, elementos de interconexión y aislamiento para formar el circuito deseado (barras de cobre ó aluminio, cables desnudos, grapas, terminales de compresión, etc.).
+
+2) Condensadores: de potencia unitaria 166 kVAr diseñados para la tensión de
+fase 11547V-50Hz., BIL=150kV, modelo 115XWHA166 con un solo borne aislado. El condensador interiormente está constituido por un conjunto de capacitores elementales en serie y paralelo de modo de lograr la tensión y potencia deseadas, cada uno de ellos constituido por: dieléctrico de film de polipropileno del tipo hazy rugoso, de muy bajas pérdidas, impregnante es a base de bencil tolueno biodegradable libre de compuestos clorados y placas constituidas por folio de aluminio de 99.2% de pureza con márgenes dobladas, lo cual asegura un campo eléctrico controlado en los bordes. El condensador
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 91 -
+
+dispondrá de una resistencia interna de descarga para, una vez desconectado, reducir la tensión a 50V en cinco minutos. 2.1) El agrupamiento por fase de cada semibanco, es de un condensador de 166 KVAr. Cada fase se vincula a las otras mediante una conexión en estrella con neutro flotante. El banco en total está constituido por los dos semibancos mencionados conectados en estrella con neutro flotante. Estos dos semibancos estarán vinculados en sus neutros por medio de un transformador de corriente detector de desbalance.
+
+3) Fusibles externos: A los efectos de proteger cada condensador contra
+cortocircuitos, preservando al resto de las unidades buenas de esa misma fase, Información Técnica Adicional Memoria Técnica Descriptiva llevará adosado un sistema portafusible de expulsión, equipado con hilo fusible de velocidad K.
+
+4) Transformador de corriente de desequilibrio: Encargado de hacer pasar a
+través de su arrollamiento primario la corriente de desbalance, dando una señal en su secundario en el cual se conectará el relé de sobrecorriente Será del tipo encapsulado en resina cicloalifática apta para intemperie, de tensión nominal 36kV; prestación 10VA, con núcleo de medición n<=5; clase 0,5; relación aproximada30-15/5A (a confirmar por cálculo de desequilibrio). En tal condición la protección de máxima corriente de desbalance abrirá el interruptor desvinculando el banco. Asimismo, es posible medir mediante las protecciones, los valores de corriente de desequilibrio en forma permanente.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 92 -
+
+5) Reactores limitadores de la corriente de inserción: Destinados a garantizar
+la limitación de la corriente de inserción debida a la presencia del otro paso previamente conectado (que no lleva reactores), a valores no perjudiciales para el equipamiento de maniobra y para el propio banco teniendo en cuenta la potencia de cortocircuito del sistema. Los reactores serán monofásicos, aislados en aire, para instalación exterior. Estarán diseñados para soportar los esfuerzos electrodinámicos provocados por la corriente de cortocircuito e inserción y las tensiones de ensayo requeridas por la norma IEC 289.
+
+6) Cableado y barreado de interconexión, etc.:, de modo de lograr una
+conexión en doble estrella, la cual se obtiene aislando respecto de tierra los bastidores soporte de cada semibanco de condensadores, mediante aisladores soporte del tipo pedestal para intemperie de porcelana con herrajes de hierro zincado FAPA AS45 o similares. Las conexiones flexibles se efectuarán con dos conductores cableados de cobre desnudo soportados por grapas de doble vía, mas los respectivos aisladores soporte para lograr la separación y rigidez electrodinámica necesaria para soportar los elementos de conducción. La acometida y soporte de los fusibles, también se efectuará mediante aisladores soportes de tipo pedestal para intemperie del tipo AS45.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 93 -
+
+El banco ofertado constituye un agrupamiento de condensadores, montados sobre estructuras metálicas y debidamente aislados de modo de obtener una potencia de 5 MVAr a la tensión de 3x20KV - 50Hz.
+
+1) Bastidor: consistente en estructura metálica construida con perfiles
+laminados y de chapa doblada de hierro normalizados totalmente soldados ó atornillados, zincados por inmersión en caliente (con un deposito mínimo de 650 g/m², según Norma ASTM 123) , de tamaños normalizados, que permiten la fijación e interconexión de los condensadores y sus respectivos accesorios de protección, elementos de interconexión y aislamiento para formar el circuito deseado (barras de cobre ó aluminio, cables desnudos, grapas, terminales de compresión, etc.).
+
+2) Condensadores: de potencia unitaria 416 kVAr diseñados para la tensión de
+fase 11547V-50Hz., BIL=125kV, modelo 115XWHA416 con un solo borne aislado. El condensador interiormente está constituido por un conjunto de capacitores elementales en serie y paralelo de modo de lograr la tensión y potencia deseadas, cada uno de ellos constituido por: dieléctrico de film de polipropileno del tipo hazy rugoso, de muy bajas pérdidas, impregnante es a base de bencil tolueno biodegradable libre de compuestos clorados y placas constituidas por folio de aluminio de 99.2% de pureza con márgenes dobladas, lo cual asegura un campo eléctrico controlado en los bordes. El condensador dispondrá de una resistencia interna de descarga para, una vez desconectado, reducir la tensión a 50V en cinco minutos.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 94 -
+
+2.1) El agrupamiento por fase de cada semibanco, es de un condensador de 166 KVAr. Cada fase se vincula a las otras mediante una conexión en estrella con neutro flotante. El banco en total está constituido por los dos semibancos mencionados conectados en estrella con neutro flotante. Estos dos semibancos estarán vinculados en sus neutros por medio de un transformador de corriente detector de desbalance.
+
+3) Fusibles externos: A los efectos de proteger cada condensador contra
+cortocircuitos, preservando al resto de las unidades buenas de esa misma fase, llevará adosado un sistema portafusible de expulsión, equipado con hilo fusible de velocidad K.
+
+4) Transformador de corriente de desequilibrio: Encargado de hacer pasar a
+través de su arrollamiento primario la corriente de desbalance, dando una señal en su secundario en el cual se conectará el relé de sobrecorriente Será del tipo encapsulado en resina cicloalifática apta para intemperie, de tensión nominal 36kV; prestación 10VA, con núcleo de medición n<=5; clase 0,5; relación aproximada30-15/5A (a confirmar por cálculo de desequilibrio). En tal condición la protección de máxima corriente de desbalance abrirá el interruptor desvinculando el banco. Asimismo, es posible medir mediante las protecciones, los valores de corriente de desequilibrio en forma permanente.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 95 -
+
+5) Reactores limitadores de la corriente de inserción: Destinados a garantizar
+la limitación de la corriente de inserción debida a la presencia del otro paso previamente conectado (que no lleva reactores), a valores no perjudiciales para el equipamiento de maniobra y para el propio banco teniendo en cuenta la potencia de cortocircuito del sistema. Los reactores serán monofásicos, aislados en aire, para instalación exterior. Estarán diseñados para soportar los esfuerzos electrodinámicos provocados por la corriente de cortocircuito e inserción y las tensiones de ensayo requeridas por la norma IEC 289.
+
+6) Cableado y barreado de interconexión, etc.:, de modo de lograr una
+conexión en doble estrella, la cual se obtiene aislando respecto de tierra los bastidores soporte de cada semibanco de condensadores, mediante aisladores soporte del tipo pedestal para intemperie de porcelana con herrajes de hierro zincado FAPA AS45 o similares. Las conexiones flexibles se efectuarán con dos conductores cableados de cobre desnudo soportados por grapas de doble vía, mas los respectivos aisladores soporte para lograr la separación y rigidez electrodinámica necesaria para soportar los elementos de conducción. La acometida y soporte de los fusibles, también se efectuará mediante aisladores soportes de tipo pedestal para intemperie del tipo AS45.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 96 -
+
+El banco ofertado constituye un agrupamiento de condensadores, montados sobre estructuras metálicas y debidamente aislados de modo de obtener una potencia de 9 MVAr a la tensión de 3x20KV - 50Hz.
+
+1) Bastidor: consistente en estructura metálica construida con perfiles
+laminados y de chapa doblada de hierro normalizados totalmente soldados ó atornillados, zincados por inmersión en caliente (con un deposito mínimo de 650 g/m²) , de tamaños normalizados, que permiten la fijación e interconexión de los condensadores y sus respectivos accesorios de protección, elementos de interconexión y aislamiento para formar el circuito deseado (barras de cobre ó aluminio, cables desnudos, grapas, terminales de compresión, etc.).
+
+2) Capacitores: de potencia unitaria 375 kVAr diseñados para la tensión de
+fase 11540V-50Hz., BIL=125kV, modelo 115XWHA375 con un solo borne aislado. El condensador interiormente está constituido por un conjunto de condensadores elementales en serie y paralelo de modo de lograr la tensión y potencia deseadas, cada uno de ellos constituido por: dieléctrico de film de polipropileno del tipo hazy rugoso, de muy bajas pérdidas, impregnante es a base de bencil tolueno biodegradable libre de compuestos clorados y placas constituidas por folio de aluminio de 99.2% de pureza con márgenes dobladas, lo cual asegura un campo eléctrico controlado en los bordes. El condensador dispondrá de una resistencia interna de descarga para, una vez desconectado, reducir la tensión a 50V en cinco minutos.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 97 -
+
+2.1) El agrupamiento por fase de cada semibanco, es de un capacitor de 375 KVAr. Cada fase se vincula a las otras mediante una conexión en estrella con neutro flotante. El banco en total está constituido por los dos semibancos mencionados conectados en estrella con neutro flotante. Estos dos semibancos estarán vinculados en sus neutros por medio de un transformador de corriente detector de desbalance.
+
+3) Fusibles externos: A los efectos de proteger cada condensador contra
+cortocircuitos, preservando al resto de las unidades en buen estado de esa misma fase, llevará adosado un sistema portafusible de expulsión, equipado con hilo fusible de velocidad K.
+
+4) Transformador de corriente de desbalance: Encargado de hacer pasar a
+través de su arrollamiento primario la corriente de desbalance, dando una señal en su secundario en el cual se conectará el relé de sobrecorriente Será del tipo encapsulado en resina cicloalifática apta para intemperie, de tensión nominal 20kV; prestación 10VA, con núcleo de medición n<=5; clase 0,5; relación aproximada 30-15/5A (a confirmar por cálculo de desequilibrio).
+
+En tal condición la protección de máxima corriente de desbalance abrirá el interruptor desvinculando el banco.
+
+Asimismo, es posible medir mediante las protecciones, los valores de corriente de de en forma permanente.
+
+Compensación de Potencia Reactiva en Parques Eólicos
+
+- 98 -
+
+5) Cableado y barreado de interconexión, etc.:, de modo de lograr una
+conexión en doble estrella, la cual se obtiene aislando respecto de tierra los bastidores soporte de cada semibanco de condensadores, mediante aisladores soporte del tipo pedestal para intemperie de porcelana con herrajes de hierro zincado FAPA AS45 o similares. Las conexiones flexibles se efectuarán con dos conductores cableados de cobre desnudo soportados por grapas de doble vía, mas los respectivos aisladores soporte para lograr la separación y rigidez electrodinámica necesaria para soportar los elementos de conducción.
+
+La acometida y soporte de los fusibles, también se efectuará mediante aisladores soportes de tipo pedestal para intemperie del tipo AS45.
+

@@ -1,0 +1,799 @@
+Windenergie
+Grundlagenbericht__
+
+Auftrag Auftraggeber Auftragnehmer
+
+Grundlagen für Standortabklärung Windkraftanlagen im Kanton Luzern (Einzelanlagen, keine Windparks) Kanton Luzern, Umwelt und Energie (uwe) Planteam S AG; Bahnhofstrasse 19a, Postfach, 6203 Sempach-Station Tel. 041 469 44 44 Fax. 041 469 44 45 sempach@planteam.ch; www.planteam.ch SQS-Zertifikat ISO 9001:2000 seit 11. Juli 1999 Roger Michelon, dipl. Kulturingenieur ETH/SIA, Planer FSU/RegA Myriam Baumeler, dipl. Umweltnaturwissenschafterin ETH Hans Buser, Nateco Gelterkinden, Experte nationales Windenergiekonzept
+
+Qualitätssicherung Projektleitung Co-Projektleitung
+
+Erscheinungsdatum 22. Juni 2007
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 2 von 53
+
+Luzern, 1. Juni 2007 Windbericht - Vorwort Ausgangspunkt zum vorliegenden "Grundlagenbericht Windenergie" war das Konzept "Windenergie Schweiz" des Bundes aus dem Jahr 2004. Die schweizerische Studie ermittelte Grundlagen für die Standortwahl von Windparks und kam - wenig überraschend - zum Schluss, dass vorab im Jurabogen oder allenfalls im alpinen Raum geeignete Standorte mit gutem Potential für Windparks bestehen. Für den Kanton Luzern wurden keine geeigneten Standorte für Windparks ausgewiesen. Nachdem im Kanton Luzern - auf der Rengg ob Entlebuch - dank privater Initiative der Tatbeweis erbracht war, dass auch bei uns für einzelne Anlagen geeignete Standorte zur Nutzung der Windenergie vorhanden sind, wollten wir mit dem vorliegenden Grundlagenbericht die Eignung weiterer Standorte für Einzelanlagen evaluieren. Dabei handelte es sich nicht um die Prüfung konkreter, hängiger Projekte durch eine zuständige Bewilligungsbehörde, sondern um eine Grundlagenarbeit, mit der insbesondere auch Kriterien und Methoden für eine solche Eignungsprüfung erprobt und diskutiert werden sollten. Aus dieser Zielsetzung und Aufgabenstellung ergibt sich, was der vorliegende "Grundlagenbericht Windenergie" nicht ist: • • Er ist keine flächendeckende Standortbeurteilung für Windenergieanlagen im Kanton Luzern und stellt damit weder eine Positiv- noch eine Negativplanung dar. Er ist keine verbindliche Vorprüfung der untersuchten Standorte seitens der kantonalen Behörden und stellt damit kein Präjudiz für die Bewilligungsverfahren durch die zuständigen Behörden dar.
+
+Im Ergebnis kommen wir zum Schluss, dass es im Kanton Luzern durchaus ein erschliessbares Potential für die Windenergienutzung durch Einzelanlagen gibt. Das Potential kann aber nur ausgeschöpft werden, wenn in einer kantonalen Windenergiestrategie die Rahmenbedingungen für diese in unserer Gegend neuartige Energiegewinnungsform festgelegt werden. Eine gute Gelegenheit dafür bietet sich an mit der Totalrevision des kantonalen Richtplans in den kommenden zwei Jahren. Der Grundlagenbericht wurde durch Suisse Eole, die schweizerische Vereinigung zur Förderung der Windenergie, unterstützt. Wir danken ihr und allen Projektbeteiligten für die sehr gute Zusammenarbeit.
+
+Thomas Joller
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 3 von 53
+
+Zusammenfassung
+Trotz nationalem Windenergiekonzept (Konzept Windenergie Schweiz, 2004) fehlten bis anhin auf den Kanton Luzern zugeschnittene Grundlagen für die Beurteilung von Projektideen und/oder Baugesuchen von Einzelanlagen. Mit dem vorliegenden Grundlagenbericht soll daher eine Basis für Auskünfte bei Anfragen zu Standortmöglichkeiten geschaffen werden, sowie mögliche Standorte für die Realisierung von Windenergieanlagen im Kanton Luzern identifiziert werden. Ausgehend von den Grunddaten und Annahmen des Konzepts Windenergie Schweiz wurden unter Berücksichtigung verschiedener Ausschlusskriterien und Rahmenbedingungen, wie landschaftliche, geologische und kulturelle Schutzgebiete und -objekte, topographische und meteorologische Verhältnisse, konkrete Standorte geprüft und daraus Standortkriterien und Grundsätze für eine kantonale Standortstrategie Windenergie abgeleitet. Als wesentliche Grundvoraussetzung für die Eignung eines Standortes für die Windenergieproduktion wie auch die realisierbare Anlagengrösse erwies sich nebst guten Windverhältnissen (mind. 4.5 m/s) - welche fast ausschliesslich in den Regionen Entlebuch, Oberes Wiggertal-Luthertal gegeben waren - die strassenseitige Erschliessung. Sind diese zwei Bedingungen ausreichend, so stellen sich vor allem Fragen der Landschaftsästhetik (Einsehbarkeit und Lage), des Naturschutzes (Schutzgebiete, Kleinstrukturen, Vogel- und Fledermausschutz) sowie der Eigentümerinteressen und der gesellschaftlichen Akzeptanz. Weitere Detailabklärungen und die frühzeitige aktive Einbindung der Bevölkerung bei konkreten Realisierungsvorhaben sind absolut zentral. Zu einer allfälligen kantonalen Standortstrategie Windenergie würden auf jeden Fall eine konsistente Negativplanung mit verbindlichen Ausschlusskriterien, wie auch eine konkrete Positivplanung für allfällige Vorranggebiete gehören. Zentral dabei ist eine klare Haltung bezüglich einer Konzentration bzw. Dezentralisierung von Anlagen, der maximal realisierbaren Anzahl von Anlagen (kantonal / lokal) und der zulässigen Anlagentypen. Mit dem Aufzeigen von Grenzen und Grössenordnungen soll die Diskussion zu Windkraftanlagen im Kanton Luzern auf eine sachliche Basis gelegt werden. Der vorliegende Grundlagenbericht zeigt, dass im Kanton Luzern eine beschränkte Anzahl von potenziell geeigneten Standorten mit mittleren Windgeschwindigkeiten um 5 m/s vorhanden ist. An diesen Standorten kann erneuerbarer, umweltfreundlicher Strom zu Gestehungskosten produziert werden, die im Bereich von neuen Wasserkraftwerken liegen (15 - 25 Rp./kWh). Die im Rahmen der vorliegenden Arbeit ermittelten Standorte der 1. und 2. Priorität würden eine Stromproduktion in der Grössenordnung von 6 resp. 10 GWh ermöglichen. Die Realisierung der Standorte der 1. Priorität könnten 20 % des Ziels für das Jahr 2015 des Kantons für den Bereich erneuerbare Stromproduktion erfüllen.
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 4 von 53
+
+Inhaltsverzeichnis
+1 1.1 1.2 2 2.1 2.2 3 3.1 3.2 3.3 3.4 Ausgangslage Auftrag Projektorganisation Vorgehen Herleitung geeigneter Standorte für Einzelanlagen Prüfung geeigneter Standorte vor Ort Standortkriterien für Windenergieanlagen Ausschlusskriterien des Konzepts Windenergie Schweiz Windverhältnisse Erschliessung Strasse und Einspeisung ins Stromnetz Landschaftsschutz 3.4.1 Einsehbarkeit 3.4.2 Lage Naturschutz 3.5.1 Schutzgebiete 3.5.2 Kleinstrukturen 3.5.3 Vögel und Fledermäuse Akzeptanz Eignung der geprüften Standorte Fazit und weiteres Vorgehen Windenergiestrategie für den Kanton Luzern Umsetzung 6 6 6 7 7 9 10 10 10 11 11 11 12 13 13 13 14 15 16 17 17 17 19 20 21 22 53 54
+
+3.5
+
+3.6 4 5 5.1 5.2
+
+Anhang 1: Projektorganisation Anhang 2: Teilnehmende der Begehungen am 3.11.2006 und 24.11.2006 Anhang 3: Datengrundlagen Anhang 4: Besichtigte Standorte Anhang 5: Literatur Anhang 6: Glossar und Abkürzungen
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 5 von 53
+
+1
+
+Ausgangslage
+Trotz nationalem Windenergiekonzept (Konzept Windenergie Schweiz, 2004) fehlten bis anhin auf den Kanton Luzern zugeschnittene Grundlagen für die Beurteilung von Projektideen und/oder Baugesuchen von Einzelanlagen. Im Zusammenhang mit der Energiepolitik des Kantons Luzern (Planungsbericht Energie 2006), welche bis ins Jahr 2015 die Steigerung der Anteile von erneuerbaren Energien anstrebt, sowie der Ende Oktober 2005 mit grossem Medienecho installierten Windenergieanlage Feldmoos im UNESCO Biosphärenreservat Entlebuch – die erste dieser Grösse im Kanton Luzern - wurde eine spezifische kantonale Entscheidungsgrundlage, insbesondere aus raumplanerischer Sicht, immer wichtiger.
+
+1.1
+
+Auftrag
+Ziel des Grundlagenberichtes ist einerseits die Erarbeitung einer Basis für erste Auskünfte bei Anfragen zu Standortmöglichkeiten, andererseits die Identifikation von maximal 5 möglichen Standorten für die Realisierung von einzelnen Windenergieanlagen. Ausgehend von den Grunddaten und Annahmen des Konzepts Windenergie Schweiz wird unter Berücksichtigung verschiedener Ausschlusskriterien und Rahmenbedingungen (z.B. landschaftliche, geologische und kulturelle Schutzgebiete und –objekte, topographische und meteorologische Verhältnisse) der vorliegende kantonale Grundlagenbericht Windenergie abgeleitet.
+
+1.2
+
+Projektorganisation
+Die Dienststelle Umwelt und Energie (uwe), unter der Federführung von Rudolf Baumann-Hauser, beauftragte im Juli 2006 die Planteam S AG mit der Erarbeitung des Grundlagenberichts Windenergie. Das Projekt wurde von der Suisse Eole, vertreten durch Reto Rigassi, co-finanziert und durch den Beizug externer Experten (siehe Anhang 1) fachlich breit unterstützt.
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 6 von 53
+
+2
+
+Vorgehen
+Ausgehend vom Konzept Windenergie Schweiz wurde ein mehrstufiges Vorgehen gewählt, das ausgehend von den aktualisierten Windmodelldaten der Meteotest AG über die Prüfung relevanter Ausschlusskriterien und einem Augenschein vor Ort zu potenziellen Beststandorten führen soll, siehe Abbildung 1.
+
+Konzept Windenergie Schweiz
+
+Windmodelldaten Meteotest
+
+nur Standorte für Einzelanlagen mit 70 m Nabenhöhe und > 4.5 m/s
+
+Auch Standorte für Einzelanlagen mit 50 m Nabenhöhe
+
+Prüfstandorte
+
+Eignungsprüfung
+
+Erschliessungsgrad Verkehr/Montage und Elektrizität Raumplanerische Ausschlussgebiete Auch weniger sensible Gebiete miteinbeziehen auch exponiertere Lagen miteinbeziehen
+
+CKW- Netzpläne und LK 1 : 25’000 GiS-Daten Kanton Luzern: Nationale und Kantonale Schutzgebiete und Inventare LK 1 : 25‘000
+
+Exposition in der Landschaft
+
+Geeignete Standorte
+
+Priorisierung gemäss Windgeschwindigkeit
+
+Windmodelldaten Meteotest
+
+falls zu wenige Standorte max. 10 geeignete Standorte
+
+Begehung
+
+Beststandorte
+
+Abbildung 1
+
+Mehrstufiges Vorgehen bei der Identifikation potenzieller Standorte.
+
+2.1
+
+Herleitung geeigneter Standorte für Einzelanlagen
+Die von der Meteotest AG bezogenen Daten waren nach den Kriterien des Konzepts Windenergie Schweiz aufgearbeitet und bestanden für den gesamten Kanton flächendeckend aus 50 x 50 m grossen Zellen, sogenannte «Einzeller». Diese weisen gemäss statistischem Windmodell mittlere Windgeschwindigkeiten von mehr als 4.5 m/s auf einer Nabenhöhe von 70 m auf. Analog zum Konzept Windenergie Schweiz wurden ebenfalls nur Standorte für Anlagen mit 70 m Nabenhöhe weiterbearbeitet, wobei in der vorliegenden Arbeit nur Standorte für Einzelanlagen und nicht Windparks (Definition siehe Glossar Anhang 6) von Interesse waren. Auffallend war, dass sich die Einzeller, welche diese Voraussetzungen erfüllten, fast aus-
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 7 von 53
+
+Einzeller mit über 4.5m/s Wind auf 70m Nabenhöhe BLN-Gebiete Moorlandschaften Flachmoore Hoch- und Übergangsmoore Inventar Naturobjekte regionaler Bedeutung (INR) Landschaftsschutzgebiet Kantonaler Richtplan 98
+
+Abbildung 2 Einzellerstandorte aus dem Konzept Windenergie Schweiz und Landschaftsschutzgebiete.
+
+schliesslich in den Räumen Entlebuch und Oberes Wiggertal-Luthertal, konzentrierten, siehe Abbildung 2. In einem ersten Schritt wurden diejenigen Einzeller, welche in einem kantonalen Schutzgebiet lagen, aus den weiteren Betrachtungen ausgeschlossen - ausgenommen bei Gebieten mit lückigem Lebensraumverbund gemäss Lebensrauminventar des Kantons Luzern. Einzeller, welche in einem Gebiet aus dem Bundesinventar der Landschaften und Naturdenkmäler von nationaler Bedeutung (BLN) oder dem Bundesinventar der Moorlandschaften von besonderer Schönheit und nationaler Bedeutung liegen, waren im Ausgangsdatensatz gemäss Konzept Windenergie Schweiz gar nicht erst enthalten.
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 8 von 53
+
+Da das geologisch-geomorphologische Inventar des Kantons Luzern nicht als GISDatensatz verfügbar war, wurde dieses Kriterium erst bei der Begehung geeigneter Standorte durch kantonale Fachleute geprüft. Naturgefahren wurden nicht als Ausschlusskriterium, aber als wichtige Standortinformation bei der weiteren Prüfung berücksichtigt. In einem weiteren Schritt wurde als wichtiges Kriterium für die Installation einer Windkraftanlage die Distanz der Einzeller zur nächsten Trafostation der CKW (Centralschweizerische Kraftwerke AG) mittels Netzplänen abgeschätzt. Anhand von Landeskarten 1:25'000 wurde die Qualität der Verkehrserschliessung hinsichtlich Transport von Anlageteilen und Montagekran (Strassenklassierung) und die Exposition in der Landschaft (Gipfel oder Krete, Hanglage, ebenes Terrain oder Senke) der Einzeller grob beurteilt.
+
+2.2
+
+Prüfung geeigneter Standorte vor Ort
+Die nach dieser Eignungsprüfung verbliebenen Einzeller wurden nach ihren mittleren Windgeschwindigkeiten gemäss statistischem Windmodell priorisiert (≥ 4.5 m/s) und zu neun Standortclustern (maximal 300 m Distanz zwischen den Einzelstandorten) zusammengefasst, welche bei einem Augenschein vor Ort genauer beurteilt werden sollten (siehe Übersichtsplan und Standortblätter im Anhang 4). Die geeigneten Standorte wurden an zwei ganzen Tagen (3. November 2006 und 24. November 2006) vor Ort besichtigt, um vor allem die Exposition in der Landschaft, das Konfliktpotenzial mit verschiedenen Schutz- und Nutzungsansprüchen und die effektive strassenseitige Erschliessung abzuschätzen, aber auch um grundsätzliche Standortkriterien für Windenergieanlagen abzuleiten (siehe Kapitel 3). Zur möglichst breiten fachlichen Abstützung wurden weitere kantonale und externe Fachleute aus den Bereichen Natur- und Landschaftsschutz und Raumplanung zu den beiden Begehungen eingeladen (siehe Anhang 2). Direkt im Anschluss an die zweite Begehung am 24. November 2006 fand gleichentags eine Synthesesitzung mit allen Teilnehmenden statt, um das Resultat der beiden Begehungen sowie das weitere Vorgehen zu diskutieren.
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 9 von 53
+
+3
+
+Standortkriterien für Windenergieanlagen
+In Anlehnung an das Konzept Windenergie Schweiz sowie anhand der Standortbegehungen und den Diskussionen unter den Fachleuten und mittels einschlägigen Literaturrecherchen (siehe Anhang 5) konnten wichtige Kriterien für die Realisierung von Windenergieanlagen identifiziert werden, die in der Folge aufgeführt und kurz erläutert sind. Während Windverhältnisse und Erschliessung als grundlegende Voraussetzungen für die Eignung eines Standortes betrachtet werden können, ist aus Sicht des Natur- und Landschaftsschutzes, wie auch aus gesellschaftlichen Gründen jeweils eine sorgfältige Abwägung der verschiedenen Interessen und Kriterien unumgänglich. Wichtig zu erwähnen ist, dass die Diskussionen aufgrund der breiten fachlichen Vertretung durchaus auch kontrovers waren und es sich deshalb bei den folgenden Ausführungen nicht um eine konsolidierte Meinung aller Teilnehmenden der Begehungen handelt.
+
+3.1
+
+Ausschlusskriterien des Konzepts Windenergie Schweiz
+Die Auswahl der Standorte im Kanton Luzern stützt sich auf das Konzept Windenergie Schweiz und die dafür gemachten Modellrechnungen. Damit werden ausschliesslich Standort betrachtet, die nicht in einem Schutzgebiet gemäss den nationalen Inventaren des Bundes liegen (z.B. Moorschutz, BLN usw.).
+
+3.2
+
+Windverhältnisse
+Das Konzept Windenergie Schweiz enthält als Kriterium für das Windangebot eine mittlere Windgeschwindigkeit auf Nabenhöhe von 4.5 m/s 1 . Damit werden wirtschaftlich tragbare Stromgestehungskosten ermöglicht. Da es sich bei den Daten Meteotest AG um Modellrechnungen handelt, die die kleinräumigen Verhältnisse nicht in jedem Fall genau abbilden können, muss das effektive Windangebot jedenfalls im Rahmen eines genügend langen, umfangreichen Windmessverfahrens im Detail ermittelt werden. Um alle Jahreszeiten zu erfassen wird eine mindestens 1-jährige Messdauer empfohlen. Um «Ausreisser» zu erkennen, ist der Vergleich mit langjährigen statistischen Beobachtungen sinnvoll.
+
+1
+
+An der Mehrzahl der Standorte der bestehenden und geplanten Anlagen in der Schweiz beträgt die mittlere Windgeschwindigkeit in 50 m Höhe 4.7 - 5.5 m/s. Dies erlaubt eine Stromproduktion 900 1'200 kWh pro installiertem kW und Jahr.
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 10 von 53
+
+3.3
+
+Erschliessung Strasse und Einspeisung ins Stromnetz
+Die einzelnen Anlagenteile sind zu schwer, um sie mittels Helikoptern zu transportieren. Die strassenseitige Erschliessung ist darum für den Transport einer Anlage zum Installationsplatz und somit für die grundsätzliche Machbarkeit und Grösse einer Anlage entscheidend. Besonders für den Transport grösserer Anlagen sind schlecht ausgebaute und schmale Wege, enge Kurvenradien und steile Kuppenlagen sehr problematisch oder mit erheblichen Ausbaukosten verbunden. Neben der eigentlichen Anlage muss die Zufahrt auch dem notwendigen Montagekran genügen. Rein erschliessungstechnisch sind Anlagen mit Nabenhöhen ab 50 m in den Regionen Entlebuch und Luthertal an den untersuchten Standorten darum wahrscheinlich schwierig zu realisieren. Für kleinere Anlagen sind diese Anforderungen eher gegeben. Die Einspeisung ins Stromnetz hingegen stellte sich aufgrund des dichten CKWNetzes an den geprüften Standorten als grundsätzlich unproblematisch heraus. Für andere potenzielle Standorte ist die Strom-Erschliessung im Einzelfall zu prüfen.
+
+3.4
+
+Landschaftsschutz
+Windenergieanlagen führen zwangsläufig zu einer Beeinflussung des Landschaftsbildes der näheren Umgebung. Die in der Schweiz realisierten Windturbinen werden dank sorgfältiger Planung von der Bevölkerung durchwegs als sehr positiv empfunden. Die Anlagen auf dem Mont Crosin ziehen als beliebtes Ausflugsziel jährlich 40'000 Besucher an. Der folgende Abschnitt zeigt die wesentlichen Punkte auf, welche in Bezug auf den Landschaftsschutz bei der Planung neuer Projekte zu berücksichtigen sind. Ohne dieses vielschichtige Thema abschliessend behandeln zu können, sollen diese Punkte dazu beitragen, das positive Image der Windenergie im Kanton Luzern weiter zu wahren.
+
+3.4.1
+
+Einsehbarkeit Windenergieanlagen sind grundsätzlich so zu platzieren, dass sie möglichst wenig einsehbar sind. Die Einsehbarkeit wird zwar je nach Betrachter subjektiv beurteilt, trotzdem haben sich im Rahmen der Begehung folgende Grundsätze herauskristallisiert: - Für eine erste grobe und objektive Beurteilung der Einsehbarkeit ist eine GIS-Analyse anhand eines Höhenmodells oder eine einfache Fotomontage zu empfehlen. Damit können vor allem Bereiche identifiziert werden, von denen aus die geplanten Anlagen in voller Größe zu erkennen sind. - Obwohl Kreten und Gipfel sich aufgrund ihrer starken Windexposition grundsätzlich für die Produktion von Windenergie sehr gut eignen, sind sie auch meistens gut einsehbar und daher zu meiden. Sattellagen und kleine Plateaus hingegen
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 11 von 53
+
+sind häufig ebenfalls sehr windexponiert, Anlagen lassen sich dort aber so positionieren, dass sie weniger gut einsehbar sind. - Die Sichtbarkeit gegen den Horizont ist störender als eine Sichtbarkeit vor einem Hintergrund. Vor allem höhere Anlagen sollten daher möglichst in der Nähe hoch aufragender Elemente (z.B. Talflanken) stehen. - Idealerweise sollte der Mastfuss und ein grosser Teil des Mastes aus wesentlichen Betrachterpositionen wie Siedlungen, Erholungsgebiete, Points of interest etc. durch umliegende Landschaftselemente verdeckt sein. - Mit zunehmender Distanz verringert sich die visuelle Wirkung einer Anlage. Aus einer Distanz von ca. 10 km ist eine Anlage mit einer Nabenhöhe von 100 m beispielsweise kleiner als der Sonnen- und Monddurchmesser, was in der Regel nicht mehr als sehr dominant wahrgenommen wird. 3.4.2 Lage Aus Sicht des Landschaftsschutzes sind für die Eignung der räumlichen Lage einer Windkraftanlage nebst der Einsehbarkeit (siehe Kapitel 3.4.1) noch weitere Kriterien zu beachten: - Unberührte Landschaften und kleinstrukturierte Standorte (siehe Kapitel 3.5.2) sind grundsätzlich zu vermeiden. Anlagen sollen am ehesten in Gebieten erstellt werden, die bereits mit Infrastrukturen, Bauten und Anlagen visuell vorbelastet sind. - Einzelanlagen sollten wenn möglich nicht inmitten freier und gut einsehbarer Landschaftsräume errichtet werden, sondern idealerweise an deren Rand, wobei ein ausreichender Abstand (ca. 50 m) zu Waldrändern einzuhalten ist. - Identitätsstiftende Gebiete und Gebiete mit historischer Bedeutung sind - wie Natur- und Landschaftsschutzgebiete - als Standorte auszuschliessen. Für das Entlebuch liegt beispielsweise mit der so genannten Cognimap (siehe Abbildung 3) bereits eine kartographische Grundlage vor, die aufzeigt, welche Gebiete von der Bevölkerung als besonders sensibel und identitätsstiftend angesehen werden.
+Abbildung 3 Cognimap Entlebuch.
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 12 von 53
+
+3.5
+
+Naturschutz
+Aus Sicht des Naturschutzes sind nebst übergeordneten und rechtlich verbindlichen Schutzgebieten auch die Kleinstruktur der Landschaft (siehe Kapitel 3.5.2) und die Nutzung der Räume durch Fledermäuse und Vögel relevant.
+
+3.5.1
+
+Schutzgebiete Schutzgebiete, inklusive deren ökologisch und landschaftlich notwendigen Pufferzonen, sind für die Errichtung von Windenergieanlagen ungeeignet. Zudem schliessen die rechtlichen Bestimmungen zu den Schutzgebieten in vielen Fällen die Errichtung von Bauten und Anlagen grundsätzlich aus. Gemäss der Konferenz der Beauftragten für Natur- und Landschaftsschutz (KBNL) sind vor allem Gebiete, die durch folgende Inventare geschützt sind, als mögliche Standorte Windkraft nur bedingt oder nicht geeignet: - Bundesinventar der Landschaften und Naturdenkmäler von nationaler Bedeutung - Bundesinventar der Hoch- und Übergangsmoore von nationaler Bedeutung - Bundesinventar der Wasser- und Zugvogelreservate in internationaler und nationaler Bedeutung - Bundesinventar der Flachmoore von nationaler Bedeutung - Bundesinventar der Moorlandschaften von besonderer Schönheit und nationaler Bedeutung - Bundesinventar der Amphibienlaichgebiete von nationaler Bedeutung - Inventar der Trockenwiesen und –weiden der Schweiz - Inventar der schützenswerten Ortsbilder der Schweiz, ISOS - Inventare Flach-, Hoch- und Übergangsmoore und Moorlandschaften - Inventar der Naturobjekte regionaler Bedeutung INR - Landschaftsschutzgebiet gemäss Kantonalem Richtplan 1998 Gemäss Konzept Windenergie Schweiz ist bei nationalen und kantonalen Naturschutzgebieten ausreichender Abstand (i.d.R. ca. 200 m) einzuhalten, der im Einzelfall konkret abzuklären ist. Bei kommunalen Schutzgebieten kann dieser Abstand reduziert werden.
+
+3.5.2
+
+Kleinstrukturen Nach Ansicht der Begleitgruppe des nationalen Windenergiekonzeptes sollen Windkraftanlagen nicht in kleinstrukturierten Landschaften platziert werden. Dazu gehören Landschaften, die viele kleine Lebensräume wie Hecken, Waldränder, Magerwiesen, Fruchtgebiete, Hangmoore usw. auf kleinstem Raum aufweisen.
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 13 von 53
+
+3.5.3
+
+Vögel und Fledermäuse Die Frage, ob Windkraftanlagen entscheidende Auswirkungen auf Vögel und Fledermäuse haben, ist bei der konkreten Prüfung von Anlagestandorten mittels Fachgutachten zu beantworten. Im Ausland sind aufgrund längerer Erfahrung Studien vorhanden (z.B. Naturschutzbund Deutschland). In der Regel sind keine gravierenden Auswirkungen zu erwarten, spezielle Brut- und Durchzugsgebiete sind aber für Windenergieanlagen zu meiden.Gleichzeitig mit der Erarbeitung der vorliegenden Studie hat die Schweizerische Vogelwarte Sempach die untersuchten Standorte im Rahmen einer eigenen Grobstudie beurteilt. Sie hat dabei drei Kriterien einbezogen: Vorkommen der störungsempfindlichen Art Auerhuhn Vorkommen von Grossvögeln im Gebiet Kanalisierter (Tag-)Vogelzug
+
+Die detaillierten Erläuterungen dazu können dem separaten Bericht entnommen werden. Im Rahmen ihrer Beurteilung kommt die Vogelwarte zum Schluss, dass etwa die hälfte der Standorte unbedenklich sind. Bei der anderen Hälfte sollte bei der Konkretisierung allfälliger Projekte negative Auswirkungen auf die Vogelwelt berücksichtig und Projektoptimierungen angestrebt werden. Da bei den Standorten E2 und E3 aus ornithologischer Sicht erhebliche Auswirkungen zu erwarten sind, empfiehlt die Vogelwarte, diese Standorte auszuschliessen (Seite 5 Bericht Vogelwarte). Leider lag diese Beurteilung bei der Begehung noch nicht vor. Der Standort E3 wurde der 1. Priorität und E2 der 2. Priorität zugewiesen. Dies aufgrund der guten Lagevoraussetzungen. Diese beiden Standorte müssten darum je um eine Priorität zurückgestuft werden. Um die Ergebnisse in diesem Bericht nicht im Nachhinein korrigieren zu müssen, wird die ursprüngliche Priorisierung beibehalten. An den beiden Standorten werden aber jeweils auf die erheblichen Vorbehalte der Vogelwarte hingewiesen und verankert, dass bei einer konkreten Standortabklärung dort die ornithologischen Aspekte jedenfalls wesentliche Beurteilungsgrundlagen bilden müssen.
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 14 von 53
+
+3.6
+
+Akzeptanz
+Für die Akzeptanz von Windenergieanlagen durch die Bevölkerung sind Standorte zu vermeiden, die identitätsstiftende Gebiete und Gebiete mit historischer Bedeutung beeinträchtigen (siehe Kapitel 3.4.2). Nebst der räumlichen Anordnung sind dabei auch die Anzahl und Höhe von Anlagen entscheidend. Die Akzeptanz kann durch einen direkten Nutzen der Bevölkerung aus der Windenergieproduktion, sowie ein identitätsstiftendes Gesamtkonzept gefördert und somit allfällige Konfliktpotenziale gemildert werden. Nebst der lokalen Bevölkerung sind dabei auch Erholungssuchende miteinzubeziehen. Windenergieanlagen können durchaus auch als positives Symbol für eine nachhaltige Energiegewinnung gewertet werden. Eine frühzeitige Kommunikation und Einbindung der Bevölkerung in den Planungs- und Konfliktlösungsprozess sind für die Akzeptanz einer Anlage in jedem Fall essentiell.
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 15 von 53
+
+4
+
+Eignung der geprüften Standorte
+Die Begehung der ausgewählten Standorte für Windenergieanlagen mit 70 m Nabenhöhe ergab vier Standorte, die sich aufgrund einer ersten Einschätzung und Beurteilung gemäss den in Kapitel 3 genannten Kriterien für eine Windenergieanlage eignen würden. Vorbehalten sind detaillierte Abklärungen zu kommunalen Schutzgebieten, Vogel- und Fledermausschutz (insbesondere E3), sowie das Interesse der jeweiligen Landbesitzer und die Akzeptanz der Bevölkerung. Gestützt auf die Beurteilung der Windgeschwindigkeit, die Verträglichkeit mit Schutzgebieten und -anliegen, der Erschliessungsqualität und der Einsehbarkeit ergeben sich vier Best-Standorte. Sie befinden sich in folgenden betrachteten Gebieten: F1 Burgstalde / Geierbüel Gemeinde Wolhusen (644’931 / 210'749) E3 Bramegg (erheblicher Vorbehalt Vogelwarte) Gemeinde Entlebuch (650’871 / 208'179) C1 Fuchsschnellen Gemeinde Entlebuch (649'748 / 203'049) J3 Flüele Gemeinde Luthern (633'579 / 213'339)
+Abbildung 4 Vier Best-Standorte.
+
+J3 F1 E3
+
+-
+
+C1
+
+Bei den übrigen Standorten ist die Eignung fraglich oder unter den betrachteten Randbedingungen grundsätzlich ausgeschlossen. Die detaillierten Einschätzungen zu den besuchten Standorten sind der Beurteilungstabelle in Anhang 4 zu entnehmen. Nicht vergessen werden darf, dass diese Ergebnisse letztendlich auf modellierten mittleren Windgeschwindigkeiten beruhen und analog zum Konzept Windenergie Schweiz nur Standorte für Anlagen mit 70 m Nabenhöhe untersucht wurden, weshalb einige ebenfalls geeignete Standorte, die im statistischen Windmodell nicht abgebildet waren, eventuell nicht betrachtet wurden. Eine aussagekräftige Windmessung vor Ort und über eine längere Messperiode ist daher in jedem Fall notwendig. Eine Vorbelastung durch Infrastrukturen, Bauten und Anlagen als wichtiger landschaftlicher Aspekt für Standorte von Windenergieanlagen ist im Entlebuch / Luthertal nur in Einzelfällen gegeben. Da die Landschaft im betrachteten Perimeter grundsätzlich als sehr wertvoll und schützenwert gilt, ist die Planung und Realisierung von Windenergieanlagen in dieser Region besonders sorgfältig anzugehen. Die statistischen Windverhältnisse im Entlebuch / Luthertal gehören zu den besten im Kanton Luzern und sind vergleichbar mit den Verhältnissen an bereits realisierten Standorten in der Schweiz.
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 16 von 53
+
+5
+5.1
+
+Fazit und weiteres Vorgehen
+Windenergiestrategie für den Kanton Luzern
+Obwohl sich die statistischen Windgeschwindigkeiten im Kanton Luzern gesamtschweizerisch betrachtet im Mittelfeld bewegen und gemäss Energiestrategie des Kantons Luzern die Schwerpunkte auf Gebäudeerneuerung, Holz, Biogas, Kommunikation sowie Aus- und Weiterbildung gelegt werden, hat der vorliegende Grundlagenbericht doch gezeigt, dass sich gewisse Standorte im Kanton Luzern durchaus für die Produktion von Windenergie eignen würden. An diesen Standorten kann erneuerbarer, umweltfreundlicher Strom zu Gestehungskosten produziert werden, die im Bereich von neuen Wasserkraftwerken liegt (15 - 25 Rp./kWh). Die im Rahmen der vorliegenden Arbeit ermittelten Standorte der 1. und 2. Priorität würden eine Stromproduktion in der Grössenordnung von 6 resp. 10 GWh ermöglichen. Die Realisierung der Standorte der 1. Priorität könnten 20 % des Ziels für das Jahr 2015 des Kantons für den Bereich erneuerbare Stromproduktion erfüllen Eine konkrete Positivplanung für solche Vorranggebiete, wie auch eine konsistente Negativplanung mittels verbindlicher Ausschlusskriterien ist daher für eine kantonale Strategie betreffend Windenergie von grosser Bedeutung. Zentral ist vor allem auch eine klare Haltung bezüglich einer Konzentration bzw. Dezentralisierung von Anlagen, der maximal realisierbaren Anzahl von Anlagen (kantonal / lokal) und der zulässigen Anlagentypen. Mit dem Aufzeigen von Grenzen sollen Unsicherheiten minimiert werden werden.
+
+5.2
+
+Umsetzung
+Für die konkrete Umsetzung von Windanlageprojekten in der kommunalen Nutzungsplanung wird für Anlagen über 50 m Nabenhöhe das Instrument der Sonderbauzone empfohlen; einerseits um die öffentliche Mitwirkung zu gewährleisten, andererseits um Anzahl, Gestaltung, Anordnung und Typ verbindlich festzulegen. Alle Anlagen müssen bezüglich landschaftlicher Eingliederung gut geprüft und am gewählten Standort optimiert werden. Anlagen sollten grundsätzlich auch den räumlichen und topographischen Verhältnissen angepasst werden, wie z.B. kleinere, dezentrale Anlagen in Siedlungsnähe.
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 17 von 53
+
+Für Eigenbedarfs-Anlagen (bis max. 150 kW) soll ein vereinfachtes Bewilligungsverfahren möglich sein, da ein direkter Bezug zwischen Produktion und Verbrauch vorhanden ist. Unabhängig der Anlagengrösse soll für die Messphase kein Baubewilligungsverfahren erforderlich sein, jedoch ist das Messvorhaben der kantonalen Bewilligungs- und Koordinationszentrale (rawi) und der Gemeinde zu melden. Ebenfalls ist eine klare Kommunikation des Vorhabens bereits in der Messphase sehr wichtig. Fundierte Detailabklärungen und die frühzeitige aktive Einbindung der Bevölkerung bei konkreten Realisierungsvorhaben sind zentral.
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 18 von 53
+
+Anhang 1: Projektorganisation
+Auftraggeberin Umwelt und Energie (uwe) Kanton Luzern, Libellenrain 15, 6002 Luzern Rudolf Baumann-Hauser, dipl. Bauing. HTL / NDS Umweltwissenschaften Uni ZH, Fachleiter Energie Andrea Beck, dipl. Ing. Maschinenbau / Energietechnik, Projektleiterin Energie
+
+in Zusammenarbeit und Co-Finanzierung mit: Suisse Eole, c/o ENCO Energie-Consulting AG, Wattwerkstrasse 1, 4416 Bubendorf Reto Rigassi, Dipl. Elektroing. HTL / NDS Energie-Ing. HTL, Co-Geschäftsführer
+
+Auftragnehmerin und Projektleitung Planteam S AG, Bahnhofstrasse 19a, 6203 Sempach Station Roger Michelon, dipl. Kulturingenieur ETH, Planer FSU/RegA Myriam Baumeler, dipl. Umweltnaturwissenschafterin ETH
+
+Externe Beratung Nateco, Sissacherstr. 20, 4460 Gelterkinden Hans Buser, dipl. phil. II, Biologe, Geschäftsführer CKW AG, Hirschengraben 33, 6002 Luzern Armin Eberle, dipl. Ing. ETH, Leiter neue Energien Energieforum UNESCO Biosphäre Entlebuch, c/o bmp, 6011 Kriens Markus Portmann, dipl. Energieberater, Geschäftsführer Windpower AG, Marktmätteli, 6162 Entlebuch Roland Aregger, Geschäftsführer
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 19 von 53
+
+Anhang 2: Teilnehmende der Begehungen am 3.11.2006 und 24.11.2006
+Umwelt und Energie (uwe) Kanton Luzern, Libellenrain 15, 6002 Luzern Rudolf Baumann-Hauser, dipl. Bauing. HTL / NDS Umweltwissenschaften Uni ZH, Fachleiter Energie Andrea Beck, dipl. Ing. Maschinenbau / Energietechnik, Projektleiterin Energie Susanna Geissbühler, Natur und Landschaft (3.11.2006) Peter Kull, Natur und Landschaft (24.11.2006) Wirtschaft, Raumentwicklung und Geoinformation (rawi) Kanton Luzern Murbacherstrasse 21, 6002 Luzern Ruedi Imgrüth, Bewilligungs- und Koordinationszentrale (3.11.2006) Markus Mächler, Gebietsmanager Oberes Wiggertal-Luthertal (24.11.2006) Suisse Eole, c/o ENCO Energie-Consulting AG, Wattwerkstrasse 1, 4416 Bubendorf Reto Rigassi, Dipl. Elektroing. HTL / NDS Energie-Ing. HTL, Co-Geschäftsführer Nateco, Sissacherstr. 20, 4460 Gelterkinden Hans Buser, dipl. phil. II, Biologe, Geschäftsführer CKW AG, Hirschengraben 33, 6002 Luzern Armin Eberle, dipl. Ing. ETH, Leiter neue Energien Energieforum UNESCO Biosphäre Entlebuch, c/o bmp, 6011 Kriens Markus Portmann, dipl. Energieberater, Geschäftsführer Windpower AG, Marktmätteli, 6162 Entlebuch Roland Aregger, Geschäftsführer Stiftung Landschaftsschutz Schweiz, Schwarzenburgstrasse 11, 3007 Bern Christine Neff, dipl. Geografin, Wissenschaftliche Mitarbeiterin (3.11.2006) Raimund Rodewald, Dr. phil., Biologe, Geschäftsführer (24.11.2006) Planteam S AG, Bahnhofstrasse 19a, 6203 Sempach Station Roger Michelon, dipl. Kulturingenieur ETH, Planer FSU/RegA Myriam Baumeler, dipl. Umweltnaturwissenschafterin ETH
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 20 von 53
+
+Anhang 3: Datengrundlagen
+Windmodelldaten Meteotest Die Windgeschwindigkeiten wurden mit dem statistischen Windmodell von Meteotest berechnet. Das Windmodell basiert auf einer Interpolation von über 100 langjährigen und temporären Windmessungen in der Schweiz mit Korrektur der Höhe über Meer und des topografischen Einflusses von Kämmen, Geländemulden und der grossen Alpentäler. Die Genauigkeit liegt bei +/- 1 m/s. Das Konzept Windenergie Schweiz enthält als Kriterium für das Windangebot eine mittlere Windgeschwindigkeit auf Nabenhöhe von 4.5 m/s. Damit werden nicht nur wirtschaftlich tragbare Stromgestehungskosten ermöglicht, sondern auch - zusammen mit den weiteren Kriterien - eine Konzentration von Anlagen an geeigneten Standorten. GIS-Daten Kanton Luzern - Bundesinventar der Landschaften und Naturdenkmäler von nationaler Bedeutung BLN (01.01.1998) - Inventar der Flachmoore (01.01.2000) - Inventar der Hoch- und Übergangsmoore (01.01.2003) - Inventar der Moorlandschaften (01.01.2000) - Inventar der Naturobjekte regionaler Bedeutung INR (Feuchtgebiete, Trockenstandorte, besondere Lebensräume, Fliessgewässer etc.) (01.01.2002) - Landschaftsschutzgebiet gemäss kantonalem Richtplan 1998 (01.01.1998) - Naturgefahren (Rutschungen, Steinschlag und Murgänge) (01.01.1999) Netzplan der CKW (Centralschweizerische Kraftwerke AG) Landeskarte der Schweiz 1 : 25’000 - 1148 Sumiswald (Ausgabe 2003) - 1149 Wolhusen (Ausgabe 2003) - 1169 Schüpfheim (Ausgabe 2001) - 2522 Napf (Ausgabe 2004)
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 21 von 53
+
+Anhang 4: Besichtigte Standorte
+Übersichtsplan und -tabelle Standortblätter Beurteilungstabelle
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 22 von 53
+
+Übersicht über die geprüften Standorte
+
+J-H G F E
+
+D C
+
+A-B
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 23 von 53
+
+Übersicht über die geprüften Standorte
+Standort A1 A2 A3 B1 B2 C1 C2 C3 D E1 E2 E3 F1 F2 F3 G1 G2 H J1 J2 J3 CKW Trafostation ESM-Bock ESM-Rossgrat ESM-Bock / ESM-Ballenbach ESM-Milchschwand ESM-Ballenbach ENT-Fuchsschnellen / ENT-Entengraben ENT-Lutersami ENT-Lutersami / ENT-Lutersami-Neuhus DOP-Oberhüsern WER-Staldig ENT-Bramegg ENT-Alp / ENT-Hegen WOL-Burgstalden WOL-Aetzleschwand / WOL-Howart WOL-Aetzleschwand HEW-Wissbül HEW-Wissbül HEW-Schwarzhubel / LUT-Sonne LUT-Gernet LUT-Gernet / LUT-Wächsleren LUT-Flühlen Distanz Windmittel Koordinaten CKW m/s 300m 500m 800m 800m 800m 500m 300m 300m 500m 800m 300m 600m 300m 300m 500m 300m 500m 800m 200m 700m 600m 5.3 5.0 4.8 5.6 5.8 4.7 5.2 5.0 4.8 4.8 4.9 4.9 4.8 4.8 4.7 5.0 4.8 5.1 4.8 4.8 4.7 636719 / 197475 636445 / 198152 637527 / 197501 638895 / 199547 637891 / 198748 649748 / 203049 650870 / 205051 651063 / 204455 645920 / 205851 650478 / 209778 650145 / 207653 650871 / 208179 644931 / 210749 644931 / 210749 644931 / 210749 639649 / 211450 640362 / 212253 637199 / 211925 635128 / 212761 635048 / 213421 633579 / 213339 Aktuelle Parzellen-Nr. 1381 GB Escholzmatt 1560 GB Escholzmatt 1447 GB Escholzmatt 1118 / 1119 / 1120 GB Escholzmatt 1108 / 1112 GB Escholzmatt 1061 (1066) GB Entlebuch 970 GB Entlebuch 971 GB Entlebuch keine AV-Daten zur Verfügung 735 GB Entlebuch 807 / 805 (625) GB Entlebuch keine AV-Daten zur Verfügung keine AV-Daten zur Verfügung keine AV-Daten zur Verfügung 681 / 795 GB Hergiswil b.W. 570 / 574 / 676 / 132 GB Hergiswil b.W. 600 / 602 / 161 GB Hergiswil b.W. 507 / 526 / 429 GB Luthern keine AV-Daten zur Verfügung 456 / 464 / 461 GB Luthern
+
+* gemäss statistischem Windmodell Meteotest
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 24 von 53
+
+Standorte A - B (Escholzmatt)
+
+B1
+
+B2
+
+A2
+
+A1
+
+A3
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 25 von 53
+
+Standort A1-3 (Escholzmatt)
+
+A2
+
+A1
+
+A3
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 26 von 53
+
+A1
+
+A2
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 27 von 53
+
+Standort B1 und B2 (Escholzmatt)
+
+B1
+
+B2
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 28 von 53
+
+B1
+
+B2
+
+B2
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 29 von 53
+
+Standorte C - D (Entlebuch)
+
+D
+
+C2
+
+C3
+
+C1
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 30 von 53
+
+Standort C1-3 (Entlebuch)
+
+C2
+
+C3
+
+C3
+
+C1
+
+C1
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 31 von 53
+
+C1
+
+C2 (Hinteransicht)
+
+C3
+
+C2
+
+C3
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 32 von 53
+
+Standort D (Doppleschwand)
+
+D
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 33 von 53
+
+D
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 34 von 53
+
+Standorte E - F (Entlebuch/Werthenstein/Wolhusen)
+
+F1
+
+F2 F3 E1
+
+E3 E2
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 35 von 53
+
+Standort E1 (Werthenstein) und E2/3 (Entlebuch)
+
+E1
+
+E3
+
+E2
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 36 von 53
+
+Standort E1 (Werthenstein)
+
+E1
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 37 von 53
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 38 von 53
+
+Standort E2 und E3 (Entlebuch)
+
+E3
+
+E2
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 39 von 53
+
+E2
+
+E3
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 40 von 53
+
+Standort F1-3 (Wolhusen)
+
+F1
+
+F2
+
+F3
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 41 von 53
+
+F3
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 42 von 53
+
+Standort G (Hergiswil b.W.)
+
+G2
+
+G1
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 43 von 53
+
+Standort G1-2 (Hergiswil b.W.)
+
+G2
+
+G1
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 44 von 53
+
+G1
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 45 von 53
+
+H
+
+Standort H - J (Luthern)
+
+J3
+
+J2
+
+J1
+
+H
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 46 von 53
+
+Standort H (Hergiswil b.W.)
+
+Halternativ H
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 47 von 53
+
+H
+
+Halternativ
+
+Halternativ
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 48 von 53
+
+Standort J1-3 (Luthern)
+
+J3 J2
+
+J1
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 49 von 53
+
+J1
+
+J2
+
+J3
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 50 von 53
+
+Beurteilung der Standorte aufgrund der Begehungen am 3. und 24. November 2006
+landschaftliche Vorbelastung Krete, sehr exponiert Exposition / Einsehbarkeit mögliche Anlagengrösse Es müssten allenfalls 2 Varianten betrachtet werden, mit Kleinanlage und ohne Ausbau der Strasse. Bemerkungen
+
+Hinweis: Es handelt sich hier um gesammelte Aussagen und nicht um eine konsolidierte Meinung aller Teilnehmenden.
+
+Standort Erschliessung
+
+A1 Leitungsmasten
+
+für >300kW Ausbau nötig (von Escholzmatt), da lange Anfahrt und Kurven
+
+natürliche oder kulturelle Ausschlussgebiete Objekt im nationalen geomorphologischen Inventar (Drumlin) Kleinanlage
+
+Keine Kleinstrukturen
+
+A2 kaum besucht, da nicht erschlossen
+
+asphaltiert, aber schwierig von Trubschachen evtl. noch besser zugänglich
+
+bzgl. POI's, Weiler etc. unkritisch Wanderweg kleine Sattellage, von der Hauptstrasse nicht sichtbar
+
+sehr schlecht
+
+vermutlich viele Kleinstrukturen
+
+Kleinanlage
+
+A3 kaum besucht, da nicht erschlossen Kleinanlage
+
+vermutlich viele Kleinstrukturen
+
+B1 Krete, sehr exponiert
+
+praktisch unmöglich evtl. mittelfristig Ausbau von anderer Seite
+
+sehr schlecht
+
+B2 Hochebene wenig einsehbar
+
+Kleinstrukturen: Weide, Waldrand
+
+- sehr hohe Windgeschwindigkeiten - trotz schlechter Erschliessung evtl. machbar - Wittenschwändi (637 750 / 199 250) evtl. besser E7 Anknüpfungspunkt Anlage Feldmoos
+
+Kleinanlage
+
+sehr gut
+
+Grossanlage
+
+C1 stark exponierte Kuppe
+
+Leitungsmasten wenig feingliedrig, aber Schutzgebiet (Moor) relativ nahe und Feuchtgräben
+
+Transport auf Kuppe fraglich
+
+Keine Kleinstrukturen
+
+C2
+
+Kuppe muss unbedingt umgangen werden, Mulde dahinter wäre besser
+
+mittlere Anlage
+
+Transport auf Kuppe fraglich
+
+Grossanlage
+
+C3
+
+Kuppe wenn möglich umgehen, Mulde davor wäre stark exponierte Kuppe, aber geringere Einsehbarkeit vom Tal besser als 6G1 nicht sehr exponiert Senke bzw. flacher Hang
+
+D
+
+zwar asphaltiert, aber enge Kurven d.h. Ausbau nötig
+
+evtl. Kappelle/Wanderweg evtl. Vögel/Fledermäuse Wald sehr nahe keine Kleinstrukturen
+
+mittlere Anlage
+
+sehr gut
+
+mittlere Anlage Hochebene rundum und bis nach Luzern sichtbar Krete rundum und bis nach Luzern sichtbar
+
+E1
+
+kleinräumig heikler als E2 und E3 v.a. Hecken und Linde (Objektschutz/Fauna)
+
+E2
+
+relativ gut, aber noch besser von kleinräumig wenig problematisch Standort 10D3 her erheblicher Vorbehalt Vogelzug / Greifvögel
+
+mittlere Anlage Sichtbarkeit müsste von rundherum abgeklärt werden, auch vom Steinhuserberg; Fachgutachten Ornithologie zwingend erfoderlich; Sichtbarkeit ist wetterabhängig! E2 und E3 sind schwierig zu vergleichen
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 51 von 53
+
+Standort Erschliessung mittlere Anlage
+
+Exposition / Einsehbarkeit
+
+Bemerkungen
+
+relativ gut von Äbnet her Hochebene rundum und bis nach Luzern sichtbar Sichtbarkeit müsste von rundherum abgeklärt werden, auch vom Steinhuserberg; Fachgutachten Ornithologie zwingend erfoderlich E1 und E3 sind schwierig zu vergleichen von den 9C Standorten der geeignetste
+
+E3
+
+natürliche oder kulturelle landschaftliche Vorbelastung Ausschlussgebiete kleinräumig besser als E2 erheblicher Vorbehalt Vogelzug / Greifvögel mittlere Anlage
+
+F1 Stromleitung d.h. bereits ausgeräumte Landschaft Wanderweg und Sitzbank direkt sehr ungeeignet bzw. Tabu vor Ort! Sattellage = sehr exponiert, von überall im Horizont sehr ungeeignet bzw. Tabu
+
+letztes Teilstück im Wald sehr eng
+
+kleinräumig uninteressant kein Aussichts-/Verweilort
+
+bereits ausgeräumte Landschaft tiefster F-Standort und relativ eben, jedoch grosse offene Wiese
+
+enge Kurven
+
+mittlere Anlage
+
+F2
+
+Keine Kleinstrukturen, aber geomorphologisch wertvolle Landschaft
+
+enge Kurven relativ unberührt von technischer von Menzberg aus sehr Infrastruktur exponiert, auf Sichtachse zum Pilatus, durchsticht aber nicht den Horizont
+
+mittlere Anlage
+
+F3
+
+wertvolle Kleinstruktur (div. Lebensräume / baumgesäumter Weg)
+
+problematisch eher Kretenlage sehr nahe zu Enzifluh und Napf (1km), analog G2
+
+G1
+
+geomorphologisch wertvolle W ald und Intensivwiesen / Landschaft (Napf) und wichtiger kleinräumig uninteressant Erholungsraum jedoch typisches Relief und Kulturlandschaft!
+
+Vor allem Richtung Napf problematisch, müsste jedoch mittlere Anlage vom Napf aus betrachtet werden. Kleine Ebene nördlich wäre evtl. weniger problematisch. mittlere Anlage
+
+relativ gut sehr exponiert, aber wenige Siedlungen und nicht stark sichtbehindernd
+
+G2
+
+geomorphologisch wertvolle Landschaft (Napf) und wichtiger Erholungsraum
+
+mittelmässig Einsehbarkeit von Napf und Enzifluh unbedingt abzuklären
+
+H Sattel, rundum exponiert
+
+kurvenreich, aber < 100m Nabenhöhe machbar Kretenlage Von J2 auf Sichtachse zu Kapelle und Pilatus Nähe Napfgebiet (ca. 8km)!
+
+wenig kleinräumig strukturiert, aber nahe Hecke / Wald
+
+Anlage näher Richtung Luthern evtl. besser. Vor allem wenn die Energie für den Bedarf von Luthern (1MW) genutzt würde, wäre ein räumlicher Bezug vorhanden.
+
+mittlere Anlage
+
+relativ gut
+
+mittlere Anlage
+
+J1
+
+Keine Kleinstrukturen, aber grossräumig wertvolle Landschaft
+
+Sattel, rundum exponiert
+
+mittlere Anlage
+
+J2
+
+relativ gut, aber Feldweg müsste Keine Kleinstrukturen, aber ausgebaut werden Molassehöcker und andere geomorphologisch wertvolle evtl. von anderer Seite besser Objekte rundum
+
+relativ gut, aber kurvig
+
+J3
+
+nicht sehr heikel, aber auch nicht optimal
+
+rundum eingebettet d.h. kaschiert durch umliegende Hügel
+
+unproblematischster Standort der 2. Begehung südlich Waldzipfel platzieren noch besser
+
+mittlere Anlage
+
+= 1. Priorität d.h. sehr geeigneter Standort = 2. Priorität d.h. Eignung näher abzuklären = 3. Priorität d.h. problematischer Standort
+
+Grossanlage = ab 330kW m ittlere Anlage = 150 bis 330kW Kleinanlage = bis 150kW
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 52 von 53
+
+Anhang 5: Literatur
+ARE / BFE / BAFU (2004): Konzept Windenergie Schweiz, Bern Juli 2004. Horbaty, R. (2001): Windkraft und Landschaftsschutz: Positionen der Schweizerischen Vereinigung für Windenergie, Suisse Eole Hötker, H. / Thomsen, KM / Köster. H. (2004) Auswirkungen regenerativer Energiegewinnung auf die biologische Vielfalt am Beispiel der Vögel und der Fledermäuse – Fakten, Wissenslücken, Anforderungen an die Forschung, ornithologische Kriterien zum Ausbau von regenerativen Energiegewinnungsformen. Endbericht Dezember 2004. Bundesamt für Naturschutz NABU, Bonn / Deutschland. Kanton Luzern (1998): Kantonaler Richtplan. Kanton Luzern (2006) Planungsbericht des Regierungsrates an den Grossen Rat B151 über die Energiepolitik des Kantons Luzern vom 16. Juni 2006 (Planungsbericht Energie 2006: am 5.12.2006 vom Grossen Rat zustimmend zur Kenntnis genommen, mit Bemerkungen) Konferenz der Beauftragten für Natur- und Landschaftsschutz (KBNL): Windenergie, Auswirkungen auf den Vogelzug, http://www.kbnl.ch/site/d/planen/energie/dok_windenergie.htm Portmann, M. (2003): Konzept Windenergie in der UNESCO Biosphäre Entlebuch. Büro Markus Portmann, Kriens. Vogelwarte.ch (2006) Beurteilung von möglichen Windenergiestandorten im Kanton Luzern bezüglich ihrer Auswirkung auf Vögel Naturschutzbund Deutschland, NABU (2003): Auswirkungen regenerativer Energiegewinnung auf die biologische Vielfalt am Beispiel der Vögel und der Fledermäuse – Fakten, Wissenslücken, Anforderungen an die Forschung, ornithologische Kriterien zum Ausbau von regenerativen Energiegewinnungsformen
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 53 von 53
+
+Anhang 6: Glossar und Abkürzungen
+Einzeller Fläche, die gemäss Konzept Windenergie Schweiz für die Nutzung der Windenergie geeignet ist, nachdem alle einschränkenden Kriterien berücksichtigt wurden. Das Modell weist für Einzeller ein Areal von 50m x 50m aus. Anordnung von mehreren Windkraftanlagen in einem Standort Höhe des Masts einer Windkraftanlage, auf dem sich der Generator und die Achse des Rotors befindet Installation zur Nutzung der Windenergie, bestehend aus einem Mast, einem Rotor und einem Generator sowie den zugehörigen technischen Installationen Allein stehende Windkraftanlage Meter pro Sekunde, Masseinheit für Geschwindigkeit. 1 m/s entspricht 3.6 km/h. 10 km/h entsprechen 2.8 m/s. Für die Eignungsbewertung eines Standortes wird die mittlere jährliche Windgeschwindigkeit an der besten Stelle im Standort verwendet Geografisches Informationssystem: Computerprogramm zur Analyse von räumlichen Daten Gigawatt-Stunden, Kilowatt-Stunden: Masseinheit der (produzierten oder verbrauchten) Energie. 1 GWh entspricht 1 Mio. kWH Kilowatt, Megawatt, Gigawatt: Masseinheit der Leistung, bei Windkraftanlagen auch der Nennleistung. Eine Anlage mit 1MW Leistung produziert bei voller Last pro Stunde genau 1 MWh Energie. 1 GW entspricht 1'000 MW bzw. 1 Mio. kW.
+
+Windpark Nabenhöhe
+
+Windkraftanlage
+
+Einzelanlage m/s
+
+GIS
+
+GWh, kWh
+
+kW, MW, GW
+
+Kanton Luzern: Grundlagenbericht Windenergie
+
+Seite 54 von 53
+

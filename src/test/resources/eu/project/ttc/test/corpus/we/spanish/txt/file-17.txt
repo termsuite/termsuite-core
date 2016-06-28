@@ -1,0 +1,148 @@
+XIII ERIAC DÉCIMO TERCER ENCUENTRO REGIONAL IBEROAMERICANO DE CIGRÉ
+Puerto Iguazú Argentina
+
+24 al 28 de mayo de 2009
+
+XIII/PI-C1 -24
+
+Comité de Estudio C1 - Desarrollo de Sistemas y Economía
+
+CONTROLES AVANZADOS DE PARQUES Y TURBINAS EÓLICAS PARA SU INTEGRACIÓN A REDES ELÉCTRICAS
+
+S. ACHILLES* GE Energy Argentina
+
+N. W. MILLER GE Energy USA
+
+Resumen –La generación eólica presenta varias características diferentes respecto a su conexión con redes eléctricas en comparación con formas más tradicionales de generación. En particular, la integración de grandes parques eólicos conectados en áreas alejadas de los centros de carga y eléctricamente débiles presenta desafíos importantes. La tecnología de generación eólica ha evolucionado considerablemente en los pasados años y ha probado soluciones para estos desafíos con funcionalidades que contribuyen a la confiabilidad de los sistemas eléctricos. Estas funciones incluyen coordinación de controles de turbinas, convertidores electrónicos y controladores integrados de un parque completo. Esta publicación describe las posibilidades y mecanismos de parques eólicos modernos para controlar tensión y potencia reactiva. Mediciones de parques eólicos alejados de la red troncal que proveen control de tensión son presentadas. Opciones de control de potencia activa también son ilustradas. El comportamiento de generadores eólicos frente a fallas eléctricas en la red ha sido un tema de gran foco en la industria. Una descripción de dicho comportamiento para generadores modernos esta también incluida. Por otro lado, las características no convencionales de los generadores eólicos han requerido de nuevos modelos para el análisis de planificación que empresas del sector deben realizar para investigar el impacto de parques en la confiabilidad del sistema eléctrico. Esta publicación también describe el tipo de modelos requeridos para este análisis, experiencia de su uso en estudios eléctricos y la experiencia de verificación de los mismos. Palabras clave: Energía Eólica, Integración de Energía Eólica, Comportamiento frente a fallas, Control Coordinado de tensión, modelo dinámico de generador eólico. 1 INTRODUCCIÓN
+
+La generación eólica presenta varias características diferentes respecto a su conexión con redes eléctricas en comparación con formas más tradicionales de generación. Por otro lado, el nivel de potencia de parques eólicos modernos y niveles de penetración de generación eólica a requerido que los fabricantes de equipos de generación eólica mejoren su tecnología para ofrecer capacidades que contribuyen a mejorar la confiabilidad de las redes eléctricas a las que los equipos se conectan. Controles modernos de parques eólicos permiten realizar control de tensión y potencia reactiva utilizando y coordinando todos los generadores de un parque. Esta funcionalidad es presentada y demostrada con pruebas de campo en la sección 2. En algunos sistemas eléctricos también surgen necesidades de limitar o controlar la potencia activa en un parque eólico. Esto puede ser para limitar rampas de potencia abruptas, controlar los arranques y paradas de un parque o contribuir al control primario de frecuencia. En la sección 2 se presentan pruebas de campo que ejemplifican estas funciones.
+
+*sebastian.achilles@ge.com
+
+El comportamiento de generadores eólicos frente a fallas eléctricas en la red también tiene un efecto importante en la confiabilidad de sistemas eléctricos. Este aspecto es atendido al nivel de cada generadores dentro del parque. La sección 3 describe los niveles de tolerancia de las turbinas de GE. Finalmente, el análisis de confiabilidad de sistemas requiere de modelos de simulación que representen las características relevantes de los generadores eléctricos. La sección 4 describe la filosofía de modelado y las diferencias con modelos típicamente utilizados para generación más convencional. 2 CONTROLES DE POTENCIA ACTIVA Y REACTIVA EN PARQUES EOLICOS
+
+El control de parques eólicos WindCONTROLTM de GE opera el parque haciendo uso de la capacidad de cada turbina eólica de modificar en forma rápida e independiente su potencia activa y reactiva. Este sistema de control monitorea la red (tensión del sistema y frecuencia), recibe setpoints y otros comandos del operador de la red o del operador del parque, monitorea el estado de las turbinas en el parque y envía comandos a cada una de ellas. Esto es logrado con tres (3) lazos de control (en el mismo dispositivo): Control de potencia reactiva, tensión y factor de potencia. Este lazo regula la tensión del parque o el factor de potencia a un valor de referencia. Este lazo puede ser utilizado para controlar puntos de la red alejados del punto e conexión y también puede controlar elementos pasivos de compensación en el parque (capacitores o reactores paralelo). • Control de potencia activa. Regula o limita la potencia activa del parque de acuerdo a un valor de referencia provisto. El sistema puede ser configurado para modificar la referencia del lazo de control de potencia para efectuar regulación primaria de frecuencia. • Limitador de rampa de potencia activa. Regula o limita la derivada de la potencia activa durante condiciones de viento que puedan causar un incremento rápido de potencia del parque. El arranque y parada de turbinas están integrados dentro de estos controles. El control coordina la conexión o desconexión de turbinas a una cadencia determinada y regula simultáneamente la rampa de potencia activa. A continuación se muestran resultados de pruebas de campo de parques con turbinas de 1.5 MW. • 2.1 Control de Potencia Reactiva Para la integración de parques eólicos conectados en áreas alejadas de los centros de carga y eléctricamente débiles las estrategias tradicionales de control de tensión de parque eólicos no son aceptables. Históricamente, parques eólicos fueron operados con control de factor de potencia. Cuando la potencia nominal del parque es considerable en relación con la potencia de corto circuito disponible en el punto de conexión, este tipo de control resulta en calidades de tensión inaceptables (por ejemplo, por flicker). Grandes parques incluyen varias decenas de turbinas separadas por decenas de kilómetros de sistema colector de media tensión que deben ser coordinadas para suplir las necesidades de reactivo en el punto de conexión a la red. El WindCONTROLTM realiza un optimo control de tensión en el punto de interconexión usando la capacidad de cada una de las turbinas de GE de realizar un preciso y continuo control de potencia reactiva. Esto tiene dos efectos importantes. El primero es reducir el impacto de variaciones de potencia activa en las tensiones del sistema (flicker). El segundo efecto es que, debido al control continuo y rápido de tensión, se incrementa la rigidez de tensión del sistema, mejorando la estabilidad, reduciendo el riesgo de colapso de tensión y reduciendo los efectos de contingencias en el sistema. La Fig. 1 muestra la respuesta de un parque (108 generadores eólicos GE 1.5 MW conectados a una línea de 230kV) durante 60 minutos de velocidad de viento particularmente variable. Compensación de caída de tensión es utilizada en esta aplicación par estimar ( y controlar) la tensión en el punto de conexión que esta a 75 km de la subestación del parque. Las variables de la parte superior de la Fig. 1 son: Tensión de punto de conexión (azul) Tensión del Parque (rojo). Esta es la tensión del lado de alta del transformador de la subestación del parque. • Velocidad de viento promedio en el parque (naranja) Las variables de la parte superior de la Fig. 1 son: • • • Potencia generada (azul) en watts.
+2
+
+•
+
+Velocidad de viento promedio en el parque (naranja)
+Wind Plant Voltage Voltage at POI
+
+Wind Plant Power Output
+
+Fig. 1: Regulación de tensión en el punto de conexión Para cumplir con rangos de potencia reactiva requeridos en el punto de conexión, los parques presentan las siguientes características. Cada generador como los GE 1.5MW pueden proveer hasta 730 kVAr (potencia reactiva correspondiente a un factor de potencia de 0.9 de condiciones nominales) en terminales y en todo el espectro de potencia activa. Si bien este tipo de tecnología no requiere capacitores para compensar factor de potencia como en el caso de generadores a inducción, se pueden instalar adicionalmente capacitores o reactores shunt en el parque para ampliar el rango de potencia reactiva. El WindCONTROLTM coordina la conexión y desconexión de capacitares y/o reactores con la potencia reactiva de cada generador para proveer un rango continuo de regulación de potencia reactiva de todo el parque. Además, esta tecnología de generadores permite proveer compensación reactiva aún cuando las condiciones de viento no permiten generar potencia activa (velocidades de viento por debajo cut-in o por encima de cut out). De esta manera, un parque eólico puede proveer soporte de potencia reactiva en todas las condiciones de viento. 2.2 Control de Potencia Activa Los ensayos mostrados en esta sección fueron obtenidos en un parque de 40 turbinas de 1.5 MW. Estos ensayos fueron realizados durante el comisionamiento. En algunos tests presentados, solo 38 turbinas estaban disponibles. 2.2.1 Respuesta a Sobre-frecuencia
+
+La Fig. 2 muestra la potencia activa del parque durante una condición de sobrefrecuencia en la red. En este test, el controlador se ajustó con estatismo de 4% y una banda muerta de 20 mHz. Durante el test, el parque estaba produciendo la potencia disponible para la condición de viento. El nivel de salida era de 23MW inicialmente. Un software para test fue utilizado para modificar la frecuencia medida e inyectar la condición de sobrefrecuencia de 2% a 0.25Hz/sec (curva roja en la Fig. 2). Cuando la frecuencia aumenta, la potencia de salida (curva negra en la Fig. 2) aumenta a 2.4MW/sec. Después de 4.8 segundos, la frecuencia alcanza los 61.2 Hz y la potencia está alrededor del 50% de la potencia inicial. La señal de test retorna la frecuencia medida a su valor nominal y el parque recupera el nivel de potencia disponible. Los valores de estatismos son típicos y pueden ser ajustados de acuerdo a requerimientos específicos de cada aplicación.
+
+3
+
+2% Frequency Increase
+
+50% Power Reduction
+
+Fig. 2: Respuesta de potencia activa a una condición de sobre frecuencia 2.2.2 Subfrecuencia y Operación con Reserva Primaria.
+
+La condición de subfrecuencia fue simulada usando el mismo software de test y los resultados se presentan en la Fig. 3. Para poder aumentar la potencia del parque cuando se produce una condición de subfrecuencia, es necesario operar con reserva. A diferencia de las plantas convencionales, la potencia máxima disponible varía en función de la velocidad de viento. En esta prueba, la potencia de salida es un 90% de la potencia disponible, permitiendo un incremento de potencia de 10% con una desviación de frecuencia de 4%. El controlador del parque calcula la potencia disponible en forma continua en función de las turbinas técnicamente disponibles y condiciones de viento promedio. Durante las pruebas, el controlador regula la potencia del parque al 90% (12.4 MW) de esta potencia disponible mientras las desviaciones de frecuencia están dentro de +/- 0.02 Hz. Cuando la frecuencia disminuye, el controlador aumenta la potencia de acuerdo al estatismo solicitado. A 57.6 Hz (4% de subfrecuencia), el parque produce el 100% de la potencia disponible (13.8 MW). La potencia se mantiene a este nivel hasta que la velocidad de viento disminuya o la frecuencia se recupere. Cuando la frecuencia está fuera de la banda muerta, el lazo limitador de rampa de potencia activa es deshabilitado.
+10% Power Increase
+
+4% Frequency Reduction
+
+Fig. 3: Respuesta de potencia activa a una condición de subfrecuencia 2.2.3 Limitador de Rampa
+
+La Fig. 4 presenta la actuación del limitador de rampa. Inicialmente la potencia de salida del parque estaba limitada a 4MW. La limitación es entonces removida y el parque incrementa su potencia de salida con una rampa controlada de 5% por minuto (3MW/min o 50kW/sec). El limitador puede verificar simultáneamente dos valores de rampa medidos en promedios de dos períodos de tiempo diferentes. En este caso, un límite se ajustó a 3MW/min (50kW/sec) para rampas medidas sobre el promedio de un minuto y otro límite se ajustó a 2MW/min (33kW/sec) para rampas medidas sobre el promedio de diez minutos. El algoritmo permite maximizar la energía capturada respetando los límites de rampa de inyección impuestos a la red. El limitador no impone límites a las turbinas individuales mientras la potencia del parque no se
+4
+
+aproxime a la rampa especificada. El límite de 20MW/10min no actúa debido a que las condiciones de viento evitan que la potencia se incremente mas de 18MW. Los límites de rampa se pueden ajustar de acuerdo a los requerimientos de una red o aplicación específicos. Los límites de rampa no deben estar necesariamente activos continuamente, pueden ser activados en condiciones específicas según se requiera.
+Rampa Promedio de 1-Minuto
+
+Rampa Promedio 10-Minutos
+
+kW
+
+KW/sec
+
+Potencia Activa del Parque
+
+Fig. 4: Limitación de rampa 2.2.4 Respuesta Durante Arranque y Parada
+
+Arrancar y parar un gran parque eólico puede ser negativo para la confiabilidad del sistema. Salida de un parque completo en un breve lapso puede causar reducciones de frecuencia y problemas de balance de potencia. Por el contrario, un arranque rápido de todo el parque durante buenas condiciones de viento puede crear soberfrecuencias y problemas de balance de potencia. El sistema de control permite configurar el tiempo de arranque y parada. El operador puede enviar señal para iniciar una parada controlada del parque. Fig. 5 y Fig. 6 muestran las secuencias de arranque y parada de un parque con 38 turbinas disponibles y en operación que fue programado para desconectarse de la red en períodos de 5 minutos. En la Fig. 5 la curva verde es la potencia del parque y la curva roja es el número de turbinas en servicio.
+
+Turbines transitioning Offline
+
+Wind Plant Power Ramping to Zero in 5 Mins
+
+Fig. 5: Secuencia de parada de parque eólico (38 turbinas) La Fig. 6 muestra la secuencia de arranque. Las turbinas son arrancadas en intervalos de 20 segundos.
+
+5
+
+Wind Plant Power Ramping at less than 3MW/Min
+
+1 Minute Average Ramp Rate (kW/sec)
+
+Turbines transitioning Online
+
+Fig. 6: Secuencia de arranque de 38 turbinas 3 TOLERANCIA FRENTE A FALLAS DE RED El comportamiento de generadores eólicos frente a fallas eléctricas en la red ha sido un tema de gran foco en la industria. Históricamente, generadores eólicos con máquinas de inducción o primeras versiones de conceptos basados en electrónica de potencia eran diseñados para desconectarse del sistema frente a leves variaciones de tensión (debajo de 0.8 pu). Esto provocaba que aún fallas de poca severidad resultaran en la desconexión de parques eólicos y que fallas severas provocaran la desconexión de toda la generación eólica en un área incrementando el riesgo para el sistema. Debido al crecimiento del nivel de penetración y al tamaño de los parques, este comportamiento no es admisible. Muchas empresas de transmisión, distribución y operadores de sistema en el mundo requieren generación eólica que no se desconecte frente a fallas eléctricas del sistema. También existen requerimientos de comportamiento de potencia reactiva y activa durante y después de la falla. Turbinas modernas son diseñadas para cumplir con tales requerimientos. Turbinas de GE con Low Voltage Ride Through (LVRT) pueden soportar tensiones terminales de 15% de nominal por 700ms. Zero Voltage Ride Through tiene aún mayor tolerancia y soporta fallas sólidas. La Fig. 7 muestra los valores de tensión que pueden ser soportados en el punto de interconexión de un parque típico. LVRT y ZVRT son opciones de tolerancia para subtensión y HVRT (High Voltage Ride Through) es la tolerancia frente a sobretensiones.
+
+Fig. 7: Tolerancia a fallas y sobretensiones de un parque eólico
+
+6
+
+4
+
+MODELOS DE SIMULACIÓN
+
+Las características no convencionales de los generadores eólicos han requerido de nuevos modelos para el análisis de planificación que empresas del sector deben realizar para investigar el impacto de parques en la confiabilidad del sistema eléctrico. Un simple diagrama del sistema de generación eólico de GE con máquina asincrónica doblemente alimentada se presenta en la Fig. 8. La máquina eléctrica asociada a este sistema es una máquina de inducción de tecnología bastante convencional. Sin embargo, el sistema de excitación AC del rotor de esta máquina esta equipado con un conversor de electrónica de potencia. En el caso de las unidades GE 3.6MW el sistema es como se muestra en la figura. En el caso de las GE 1.5MW, el convertidor de electrónica de potencia y el estator están conectados al mismo nivel de tensión. El comportamiento de estos sistemas es muy diferente al de generadores convencionales sincrónicos o asincrónicos. El modelado estas unidades con modelos convencionales de máquinas sincrónicas o asincrónicas debería ser evitado. El comportamiento de frecuencia fundamental de estos sistemas es completamente dominado por el convertidor que alimenta el rotor de la máquina eléctrica. Aspectos de importancia en el modelado de máquinas convencionales como ángulo rotórico, tensión de excitación y sincronismo son de escasa importancia. En forma práctica, el comportamiento de estos sistemas es el de un inversor tipo voltage-source controlado por corriente. Como en otros sistemas de estas características ( STATCOM o BESS), el convertidor hace que el generador eólico se comporte como una tensión controlada detrás de una reactancia para obtener los valores deseados de corriente activa y reactiva en terminales. La velocidad de rotación de la máquina corresponde a la diferencia entre la frecuencia estatórica y rotórica. A potencia nominal, las GE 1.5MW operan típicamente al 120% de velocidad o 20% de resbalamiento. El control de la frecuencia de excitación rotórica permite controlar la velocidad en un rango de ±30%. Según la velocidad de giro, se divide la potencia que inyecta el generador entre los circuitos estatórico y rotórico. La variación de frecuencia rotórica y el reparto de potencia entre rotor y estator son regulados en forma rápida por el controlador. El ancho de banda de estos controles es menor a un ciclo y se considera instantáneo para propósitos de modelado dinámico de sistemas de transmisión completos. Un diagrama en bloques simplificado del modelo se presenta en la Fig. 9. En forma general, la estrategia de modelado incluye las características funcionales de los controles de turbina y generador, la turbina y el eje, y la transferencia de potencia al eje de la turbina dependiendo del ángulo de las palas, las condiciones de viento y la velocidad rotórica. Estos bloques interactúan con el resto del sistema a través de una interfase (llamado “Generator/Converter model” en la figura) basado en las observaciones de anchos de banda de los párrafos anteriores. Se incluyen también un modelo del controlador del parque (“Supervisory Control” en la figura) con las funciones descriptas en la sección 2 que apliquen según la aplicación. Referencias [4] y [5] incluyen detalles del modelado y su uso. Estas referencias también incluyen el modelado de los criterios de protección por tensión y frecuencia de estos equipos. Ensayos de validación de modelos es una actividad importante con creciente atención de la industria a nivel global, la referencia [6] elabora sobre este tema.
+P net Q net
+
+3 φ AC Windings
+
+fnet Pstator frotor Protor
+
+Collector System (e.g. 34.5kV bus)
+
+P rotor F rotor
+
+P conv F network
+
+Wind Turbine Wound-Rotor Induction Generator Converter
+
+Fig. 8: Mayores componentes de un generador eólico GE con máquina asincrónica doblemente alimentada
+
+7
+
+Qcmd Vterm
+P current & Flux Commands
+
+Vreg bus
+Supervisory Control
+
+Icomp Pgen , Q gen
+
+Electrical Control Model
+
+Over/under Voltage Trip Signal
+
+Generator/ Converter Model
+
+Trip Signal
+
+Power Order
+
+WTG
+Pelec
+
+Wind Farm
+
+Turbine & Turbine Control Model Wind Speed Wind Gust Model (User-written)
+
+Over/under Speed Trip Signal
+
+Fig. 9:: Diagrama en bloques general del modelo de un parque eólico con turbinas GE 5 CONCLUSION
+
+Los equipos de energía eólica han mejorado en el campo de la compatibilidad con sistemas eléctricos durante los últimos años. La variabilidad de la potencia eólica y la tendencia de los parques a estar ubicados nodos débiles y alejados hace que un control preciso de tensión y regulación de potencia sea crítico. Las opciones de control mostradas permiten mayor penetración de energía eólica en redes eléctricas asegurando una operación confiable, aún en sistemas con recursos de generación limitados o bajo nivel de corto circuito. El sistema WindCONTROLTM demuestra que parques eólicos pueden ser controlados para un comportamiento similar al de generación convencional Por otro lado, tecnología moderna de generadores eólicos presenta un nivel de tolerancia a fallas en sistemas eléctricos acorde con las necesidades de los operadores de redes y sistemas. Finalmente, fabricantes de equipos de generación han colaborado durante años con operadores de sistema para facilitar el análisis de sistemas eléctricos con generación eólica. Esto incluye la descripción de cómo se modelan e interpretan las interacciones de los generadores eólicos con el resto del sistema eléctrico. 6 REFERENCIAS
+
+[1] N. W. Miller., E. V. Larsen and J. M. MacDowell; “Advanced Control of Wind Turbine-Generators to Improve Power System Dynamic Performance,” IEEE International Conference on Harmonics and Quality of Power, September, 2004. [2] M. E. Cardinal and N. W. Miller, “Grid Friendly Wind Plant Controls: WindCONTROLTM – Field Test Results” , American Wind Energy Conference, Pittsburg, 2006. [3] N. W. Miller and K. Clark; “Hybrid Wind and Advanced Gas Turbine Farms: Firm Dispatchable Power for Weak Grids”, IEEE General Power Meeting, San Francisco 2005 [4] N. W. Miller, W. W. Price and J. J. Sanchez-Gasca,, “Modeling of GE Wind Turbine-Generators for Grid Studies” March 4, 2005. Published by GE Energy. Available by contacting GE Energy. [5] N. W. Miller, W. W. Price, J. J. Sanchez-Gasca and R. Delmerico.,“Dynamic Modeling of GE 1.5 and 3.6 MW Wind Turbine generators for Stability Simulations”, IEEE WTG Modeling Panel Session July 2003 [6] R.J. Piwko, N. W. Miller and J. M. MacDowell. “ Field Testing and Model Validation of Wind Plants”
+
+8
+

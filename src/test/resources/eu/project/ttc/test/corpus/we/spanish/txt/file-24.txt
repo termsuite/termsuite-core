@@ -1,0 +1,265 @@
+Diseño, cálculo, ens ayo y validación de un amortiguador  dinámico de vibraciones para turbinas eólicas
+Eduardo Azanza Ladrón(1), Jesús María Pintor Borobia(2)
+(1)
+
+Dpto. Ingeniería. Ingeniería de Turbinas Eólicas (Ingetur S.A.), Polígono Industrial   Barasoain, Parcela 2. 31395 Barasoain (Navarra)  Tno. 948 72 05 35, FAX. 948 72 05 46 – eazanza@ehn.es  (2) Dpto. Ing. Mecánica, Energética y de Materiales. Universidad Pública de Navarra,   Campus Arrosadia s/n. 31006 Pamplona (Navarra)
+ 
+
+Resumen  El trabajo presenta el diseño, cálculo, ensayo y validación de un amortiguador dinámico de  vibraciones, destinado a minimizar los efectos producidos por la primera resonancia en  torres de aerogeneradores, así como a introducir un importante amortiguamiento estructural  al sistema. Para su diseño, sintonización y cálculo resistente se han utilizado técnicas de  elementos finitos así como programas para el cálculo a fatiga de componentes. Además,  para poder conocer el  comportamiento de la estructura­amortiguador y validarlo, se ha  diseñado   y   construido   un   modelo   a   escala   del   dispositivo.   Posteriormente,   mediante  técnicas de análisis modal, se ha obtenido la respuesta del sistema con el amortiguador y sin  éste,   así   como   con   diferentes   variantes   constructivas   buscando   conseguir   un  comportamiento óptimo. A partir de estos resultados, se han obtenido conclusiones para el  diseño del componente real y se ha diseñado uno, comprobando analíticamente los efectos  beneficiosos que tiene sobre la estructura de la torre de aerogenerador. Palabras Clave: Amortiguador dinámico, vibraciones, fatiga, torre de aerogenerador
+
+Abstract  The present work introduces the design, calculation, testing and validation of a tuned mass  damper. The main aim is to minimize the effect of the first natural frequency on wind  turbine towers and add up structural damping to the construction. For the design, tuning  and structural calculation, FEM methods and specific fatigue software have been used and  developed.   Moreover,   in   order   to   acquire   deeper   knowledge   in   the   behaviour   of   the  damper­structure system a scaled model has been designed and built. Using modal testing,  the   response   of   the   system   has   been   measured   with   and   without   damper,   as   well   as  changing different parameters to establish its optimal performance. Taking into account the  experiments,   some   conclusions   have   been   derived   to   be   applied   on   the   real   system.  Furthermore   a   real   damper   has   been   designed   and   its   beneficial   effects   confirmed  theoretically. Keywords: Tuned mass damper, vibrations, fatigue, wind turbine tower.
+
+1. Introducción Todo sistema físico presenta, en función de su masa, rigidez y amortiguamiento, un  comportamiento   dinámico   característico   que   puede   definirse   por   sus   parámetros  modales:   modos,   frecuencias   naturales   de   vibración   y   amortiguamientos   modales.  También es bien sabido que, si un sistema es excitado con una acción externa variable  que actúa con una frecuencia característica cercana a una de sus frecuencias naturales,  la respuesta del sistema, la amplitud de las vibraciones resultantes, crecerá de forma  exponencial pudiendo llegar al colapso. Este fenómeno será tanto más plausible cuanto  menor sea el amortiguamiento que posea el sistema. En   este   sentido,   en   el   comportamiento   dinámico­estructural   de   las   torres   de  aerogeneradores,   el   efecto   de   la   posible   resonancia   a   la   primera   frecuencia   natural  resulta ser muy acusado, debido a su elevada esbeltez, la alta solicitación dinámica y el  bajo amortiguamiento que incorporan este tipo de estructuras. Al mismo tiempo, en la  actualidad la construcción de turbinas eólicas está derivando hacia máquinas de cada  vez mayor potencia y mayor altura de torre. Así, a modo de ejemplo, se encuentran ya  en fase de prototipo máquinas de 5 MW con más de 120 metros de altura de torre. Con  estos   condicionantes,   la   introducción   de   sistemas   auxiliares   de   amortiguación   y  reducción   de   cargas   dinámicas   se   hace   imprescindible   para   poder   continuar   con   el  desarrollo de la tecnología dentro del campo de la aerogeneración. 1.1. La problemática en el diseño de torres eólicas Tal y como se ha constatado, la problemática principal a la hora de acometer el diseño  de torres es el creciente aumento de potencia y altura de los aerogeneradores. Por otro  lado, hay que tomar en consideración el origen y la tipología de las acciones variables a  las que están sometidas estas torres, que darán lugar a fenómenos de colapso por fatiga  que hacen que su diseño desde el punto de vista de la durabilidad resulte crítico: 
+
+a. El viento: ráfagas, intensidad de turbulencia, vientos extremos, ...  b. Los fenómenos aerolásticos, como el desprendimiento de remolinos, galope, ...  Además, y como problemas asociados que conllevan a una menor resistencia a la fatiga  de la torre, se pueden citar:  a. La   utilización   de   aceros   de   mejor   calidad   que   permiten   soportar   mejor   las  acciones extremas, pero que no implican una mejoría en el comportamiento a  fatiga de las soldaduras; estando éste determinado por las curvas de fatiga del  Eurocódigo [1] e IIW [2].  b. El bajo nivel de amortiguamiento estructural. c. Su cada vez más elevada esbeltez. 1.2. Posibles soluciones En el contexto descrito, varias son las alternativas que se plantean a la hora de acometer  el rediseño de estas torres: a. Un incremento de los espesores de chapa; que, sin embargo, darán lugar a un  incremento proporcional del costo y peso de la estructura. b. El   desarrollo   de   contramedidas   de   carácter   aerodinámico;   que   sólo   serán  efectivas para efectos aerolásticos anteriormente citados. c. La utilización de un amortiguador dinámico de vibraciones; solución que resulta  efectiva   para   todo   tipo   de   acciones,   a   la   vez   que   permite   incrementar   el  amortiguamiento general de la estructura y puede eliminar gran parte de los  efectos de la primera frecuencia natural. Este   último   sistema,   ya   utilizado   en   el   campo   de   la   ingeniería   civil   en   edificios   y  chimeneas, por ejemplo, es la solución que se desarrolla en el presente trabajo para ser  empleada en el diseño de aerogeneradores.
+
+1.3. Concepto de amortiguador sintonizado de masa (ASM) Un  amortiguador sintonizado de masa (ASM), representado esquemáticamente en la  Figura 1, es un sistema constituido conceptualmente por una masa adicional (m), un  muelle (k) y un amortiguador (c) que se incorporan a la estructura principal (M) con el  objetivo de reducir la respuesta dinámica de la estructura a una determinada frecuencia  o en el estrecho entorno de la misma. 
+
+   
+
+m
+AMORTIGUADOR
+
+TORRE + GÓNDOLA + ROTOR
+
+Figura 1. Esquema de máquina y amortiguador dinámico
+
+Desde el punto de vista conceptual, el ASM se “sintoniza” a una frecuencia natural de la  estructura   principal,   de   tal   manera   que   cuando   esa   frecuencia   es   excitada,   es  básicamente él quien resuena, introduciendo amortiguamiento al sistema y disipando la  energía   en   vibración   de   forma   que   la   vibración   de   la   estructura   principal   a   dicha  frecuencia de sintonización se minimiza de forma muy importante (en le caso ideal sin  amortiguamiento se alcanzaría una antiresonancia a esa frecuencia). Las ecuaciones que  rigen el comportamiento de este sistema se pueden encontrar en [3].
+
+2. Análisis dinámico del aerogenerador El primer paso es conocer el comportamiento del sistema que se pretende amortiguar.  Para   ello,   se   estudió   dinámicamente   el   aerogenerador,   mediante   un   cálculo   de   sus  frecuencias naturales, un estudio de la respuesta armónica del sistema y una simulación 
+
+de su respuesta transitoria. Como caso de estudio se utilizó una turbina IT 60/1300 con  torre de 60 metros de altura y 1300 kW de potencia. 2.1. Frecuencias naturales del sistema Éstas se obtuvieron mediante la modelización virtual por elementos finitos de todo el  sistema. La Figura 2 muestra los cuatro primeros modos. De ellos, la vibración asociada  a la primera frecuencia natural (modo doble debido a la axisimetría de la torre) es la que  se pretende mitigar con el dispositivo, y a la que habrá que sintonizar el ASM [3].
+
+Modo 1 – 0.562 Hz
+
+Modo 1 – 0.565 Hz
+
+Modo 1 – 3.612 Hz
+
+Modo 1 – 4.124 Hz
+
+Figura 2. Modos y frecuencias naturales de la torre del aerogenerador
+
+2.2. Respuesta frente a carga transitoria Los aerogeneradores son máquinas expuestas a un amplio abanico de cargas variables.  De ahí que su respuesta frente a una carga transitoria sea determinante a la hora de  conocer su vida a fatiga. Para obtener las cargas del viento sobre la turbina, se utilizan  modelos   aerolásticos   de   simulación   dinámica   que   permiten   conocer  las   acciones   en  distintos puntos de la máquina. En el estudio, se empleó el empuje del viento (F x) en la  cabeza   de   la   torre   en   una   de   las   condiciones   de   operación   de   la   máquina;  introduciéndolo   posteriormente   en   el   modelo   virtual   de   elementos   finitos   para  determinar  las tensiones de la chapa (Figura 3). Conocido el espectro de tensiones, se  calculó la vida a fatiga de la chapa, para compararla posteriormente con la vida obtenida  en la torre una vez implementado el amortiguador.
+
+25 20 15
+
+Respuesta Transitoria ­ Tensiones Y ­ Nudo 173 
+Sy_node173_GI=1.5% FX [N] /1e4 Sy_node173_GI=0.5%
+
+Sy [MPa]
+
+10 5 0 ­5
+
+­10 ­15 ­20 0 5 10 15 20
+
+Tiempo [s]
+
+25
+
+30
+
+35
+
+40
+
+45
+
+50
+
+Figura 3. Carga externa (Fx) y tensiones normales de un nudo de la torre
+
+3. Modelo experimental a escala del ASM Se planteó un sistema de péndulo colocado la parte superior de la torre dentro de un  baño de aceite. La forma práctica de ejecución se muestra en la Figura 4. 
+TRAMO SUPERIOR Torre Péndulo
+
+Baño de aceite
+
+Bañera
+
+               Figura 4. Esquema de amortiguador dinámico planteado para la turbina
+
+El péndulo es la masa adicional y la bañera de aceite introduce el amortiguamiento  necesario. El muelle en este caso es la fuerza de gravedad que es la que hace retornar al  péndulo a su posición de equilibrio. La sintonización del dispositivo y la definición de  sus parámetros se llevó a cabo mediante la aplicación de las ecuaciones de [4] y la  utilización   de   modelos   de   elementos   finitos.   Sin   embargo,   la   influencia   que   este  dispositivo tiene sobre el sistema, la medición del amortiguamiento introducido, así  como el efecto de variar distintos parámetros del sistema, como nivel y tipo de aceite, la  masa del péndulo, etc., se realizó de forma experimental. Dado el tamaño y coste de una  máquina   real,   se   construyó   un   modelo   a   escala   para   comprobar   las   ecuaciones  analíticas,   ajustar   y   validar   los   modelos   de   elementos   finitos,   y   realizar   pruebas 
+
+cambiando diferentes parámetros como: masa del péndulo, longitud, cantidad y tipo de  aceite, etc. 3.1. Diseño del modelo a escala El modelo a escala se diseñó para tener una frecuencia natural baja (1.5 Hz.), ya que la  frecuencia del péndulo a sintonizar depende de su longitud. El modelo tiene una altura  de 2.2 m, un conjunto de masas de 160 kg., y dispone de una bañera de aceite en la que  se puede sumergir el péndulo como se muestra en la Figura 5. Asimismo, la altura y  masa de los péndulos, así como el nivel de aceite, se pueden regular para comprobar la  influencia de estos parámetros en el comportamiento del sistema.
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Figura 5. Modelo a escala para ensayos, modelo FEM, detalles de péndulo y masas
+
+3.2. Ensayo del modelo a escala Mediante técnicas de análisis modal experimental y aplicando excitación con impacto,  se obtuvieron  las funciones de respuesta en frecuencia (FRF) del sistema. Los ensayos  se realizaron con y sin la presencia del amortiguador, así como con diferentes valores  de: masa del péndulo, longitud del mismo, viscosidad y nivel del aceite empleado.  La  Tabla   1   muestra   un   resumen   de   los   ensayos   realizados   y   valores   obtenidos.   La  nomenclatura seguida al definir los ensayos es Bx_x_Px_xB_VGxx_xxL, donde:  Bx_x: Bloques o masas de fundición utilizados en el ensayo.
+
+   
+
+Px: Péndulo utilizado. xB: Número de bolas utilizadas en las cadenas del péndulo en el ensayo  (longitud de péndulo). VGxx: Tipo de aceite utilizado. xxL: Litros de aceite empleados.
+
+Por  ejemplo,  B4_5_P2_13B_VG32_1L  haría referencia a los bloques 4 y 5, con el  péndulo nº 2, 13 bolas, aceite ISO VG32 y 1  litro de aceite.
+Tabla 1. Resultados de los ensayos realizados en la maqueta con las diferentes variantes
+B4_B5 B4_B5_P2_13B B4_5_P2_13B_vg32_0_5L B4_5_P2_13B_vg32_1L B4_5_P2_13B_vg32_1_5L B4_5_P2_13B_vg32_2L B4_5_P2_13B_vg320_1L B4_5_P2_13B_vg320_1_5L B4_5_P2_13B_vg320_2L B4_5_P2_10B B4_5_P2_10B_vg32_1L B4_5_P2_10B_vg32_1_5L B4_5_P1_13B B4_5_P1_13B_vg32_1L 0.01369 0.00749 0.00357 0.00317 0.00379 0.00472 0.00342 0.00380 0.00450 0.00497 0.00391 0.00335 0.00630 0.00307
+VALOR RMS [g] 1er MODO  FLEXIÓN x [ %]
+
+1.501 1.303 1.310 1.516 1.452 1.460 1.383 1.424 1.437 1.339 1.360 1.335 1.285 1.304
+
+0.10% 0.31% 1.81% 10.71% 3.04% 1.96% 3.72% 2.73% 1.86% 0.83% 1.27% 2.16% 0.61% 6.46%
+
+1er MODO(BIS)  FLEXIÓN
+
+x [ %]
+
+2º MODO  FLEXIÓN
+
+x [ %]
+
+1.665 1.680
+
+0.37% 2.25%
+
+24.740 23.621 23.269 23.792 24.086 24.363 23.970 24.166 24.473
+
+0.06% 0.12% 0.29% 0.29% 0.59% 0.64% 0.29% 1.15% 1.06% 0.28% 0.29% 0.32% 0.15% 0.21%
+
+MODO  TORSIÓN
+
+x [ %]
+
+15.406 15.411 15.410
+
+0.03% 0.05% 0.05%
+
+15.395
+
+0.10%
+
+1.716 1.752 1.641 1.674 1.598
+
+0.52% 2.47% 4.88% 0.48% 12.32%
+
+23.517 23.464 23.363 23.759 24.275
+
+De todos los ensayos  que se realizaron, se pudo comprobar que existen situaciones  óptimas (B4_5_P2_13B_vg32_1L), en las que el amortiguamiento modal introducido  en el sistema aumenta de un 0.10%, sin péndulo, a un 10.71%, con él. La Figura 6  permite apreciar la importante diferencia en la respuesta en vibración en ambos casos.
+RESPUESTA EN CABEZA vs. TIEMPO
+0.04
+
+B4_5
+0.03
+
+B4_5_P2_13B_VG32_1L
+
+Aceleración [g]
+
+0.02
+
+0.01
+
+0.00
+
+­0.01
+
+­0.02
+
+­0.03
+
+­0.04
+
+0.0
+
+1.0
+
+2.0
+
+3.0
+
+4.0
+
+5.0
+
+6.0
+
+7.0
+
+8.0
+
+9.0
+
+10.0
+
+Tiempo [s]
+
+Figura 6. Respuesta del sistema ante impacto sin y con el ASM sintonizado de forma óptima
+
+De los ensayos realizados se obtuvieron las siguientes conclusiones parciales: a) La sintonización del amortiguador para obtener los mejores valores de respuesta  dinámica, tiene una importancia determinante.
+
+b) Se debe diseñar el sistema de forma flexible para que pueda ajustarse perfectamente  tanto el péndulo como los niveles de fluido utilizado. c) El   papel   que   juega   el   aceite   es   fundamental   en   el   óptimo   comportamiento   del  sistema.   Se   debe   prestar   una   atención   especial   a   los   parámetros   que   definen   el  amortiguador, así como al nivel y tipo de aceite utilizados. Completados los ensayos y verificada la bondad del sistema, se llevo a cabo una labor  de validación y ajuste del modelo virtual de elementos finitos en base a la necesaria  correlación con los resultados experimentales. De este modo, se tuvo la confianza para  diseñar el ASM real aplicando métodos análogos.
+
+4. Diseño final del amortiguador A partir de las ecuaciones y parámetros óptimos [4] y de las conclusiones obtenidas en  los ensayos para los modelos virtuales del modelo a escala, se diseñó el amortiguador  real. Resultó un péndulo de 5.150 kg (virola concéntrica de 2.5 m de altura, 2.2 m de  diámetro y espesor de 38 mm) y una longitud de oscilación (cable) de 1 m. La Tabla 2  muestra los parámetros de cálculo del ASM y la Figura 7 el aspecto del ASM diseñado.
+Tabla 2. Parámetros de cálculo para el ASM óptimo para la torre
+Masa modal del sistema principal Masa del amortiguador Relación de masas Frecuencia del sistema principal 1.00E+05 kg. 5.15E+03 kg. 5.15% 0.538 Hz. Relación amortiguamiento sist.ppal Relación de frecuencias óptimas Frecuencia óptima del amortiguador Relación amortiguamiento óptima ASM 0.50% 0.936 0.504 Hz. 13.81%
+
+Figura 7. Diseño final de amortiguador realizado con los parámetros óptimos de cálculo
+
+4.1. Comparación de vida a fatiga
+
+El diseño de ASM se implementó en el modelo de elementos finitos de la máquina y se  calculó la respuesta transitoria con y sin amortiguador. Con las series temporales de  tensiones (Figura 8) se calculó el daño a fatiga con un software desarrollado a tal efecto.
+Respuesta Transitoria ­ Tensiones Y ­ Nudo 173 
+20
+
+Sy_node173_GI=0.5% Tmd_Trans_g01_c_4_5_sy_n173
+
+15
+
+10
+
+Sy [MPa]
+
+5
+
+0
+
+­5
+
+­10
+
+­15
+
+­20
+
+0
+
+5
+
+10
+
+15
+
+20
+
+Tiempo [s]
+
+25
+
+30
+
+35
+
+40
+
+45
+
+50
+
+Figura 8. Tensiones de la chapa de la torre con (azul) y sin amortiguador (rojo)para un viento.  
+
+El  amortiguamiento  pasa   del  0.5%  al   14.6%,   lo  que  conlleva  una  reducción  de   las  tensiones de 2.18 veces e implica un incremento de la vida a fatiga en 48 veces. El  ahorro obtenido como consecuencia de la utilización del ASM en torre, se cifró en unos  19.000€ (alrededor de un 2.5% del coste total de toda la máquina).
+
+5. Conclusiones Se ha podido comprobar como el amortiguador limita la respuesta del sistema en la 1ª  frecuencia   natural   de   la   máquina   e   introduce   un   importante   amortiguamiento  estructural.   Como   consecuencia,   las   tensiones   de   fatiga   que   sufre   la   estructura   son  mucho menores que en la estructura original. Por ello, gracias a la optimización de los  espesores de acero, por la utilización del ASM, se obtiene  un ahorro del 2.5% del coste  total de la máquina. El  modelo virtual se validó experimentalmente con el modelo a escala. Además, se  comprobó experimentalmente los efectos beneficiosos del ASM y la importancia en su  diseño de la frecuencia de oscilación y masa del péndulo así como la cantidad de aceite.
+
+6. Agradecimientos A la “Fundación Fuentes Dutor”, por la concesión de su Beca para la financiación del  Proyecto,   al   Colegio   de   Ingenieros   Industriales   de   Navarra   y   al   Departamento   de  Ingeniería Mecánica, Energética y de Materiales de la Universidad Pública de Navarra.
+
+7. Referencias 1. Eurocodigo 3, “Proyecto de estructuras de acero. Parte 1­1:Reglas generales y   reglas para edificación”, (1996) 2. A. Hobbacher, “Fatigue design of welded joints and components” , International  Institute of Welding (IIW), (1996) 3. C. Petersen, “Stahlbau”, Vieweg, Wiesbaden (1993) 4. J.J. Connor, “Introduction to structural motion control”, Massachusets Institute of  Technology (MIT), (2000)
+

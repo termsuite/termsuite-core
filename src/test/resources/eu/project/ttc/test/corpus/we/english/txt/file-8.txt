@@ -1,0 +1,518 @@
+Energies 2010, 3, 1290-1302; doi:10.3390/en3061290
+OPEN ACCESS
+
+energies
+ISSN 1996-1073 www.mdpi.com/journal/energies Review
+
+Illustration of Modern Wind Turbine Ancillary Services
+Ioannis D. Margaris 1,*, Anca D. Hansen 2, Poul Sø rensen 2 and Nikolaos D. Hatziargyriou 1,3
+1
+
+2
+
+3
+
+National Technical University of Athens, School of Electrical and Computer Eng. Electric Energy Systems Lab, Iroon Polytechniou 9, 15780 Athens, Greece; E-Mail: nh@power.ece.ntua.gr RisøNational Laboratory for Sustainable Energy, Technical University of Denmark, Wind Energy Division, P.O. Box 49, DK-4000 Roskilde, Denmark; E-Mails: anca@risoe.dtu.dk (A.D.H.); posq@risoe.dtu.dk (P.S.) Public Power Corporation S.A. Athens, Greece
+
+* Author to whom correspondence should be addressed; E-Mail: imarg@power.ece.ntua.gr; Tel.: +30-210-7723836; Fax: +30-210-7723658. Received: 6 May 2010 / Accepted: 12 June 2010 / Published: 21 June 2010
+
+Abstract: Increasing levels of wind power penetration in modern power systems has set intensively high standards with respect to wind turbine technology during the last years. Security issues have become rather critical and operation of wind farms as conventional power plants is becoming a necessity as wind turbines replace conventional units on the production side. This article includes a review of the basic control issues regarding the capability of the Doubly Fed Induction Generator (DFIG) wind turbine configuration to fulfill the basic technical requirements set by the system operators and contribute to power system security. An overview of ancillary services provided by wind turbine technology nowadays is provided, i.e., fault ride-through capability, reactive power supply and frequency-active power control. Keywords: wind turbine; fault ride-through; power control; reactive power; frequency control
+
+1. Introduction A decade ago, most grid codes considered wind farms as small size dispersed generation and therefore did not require wind turbines to support the power system during transients following grid
+
+Energies 2010, 3
+
+1291
+
+disturbances. Wind turbines could be disconnected when abnormal grid voltage behavior was detected. The constantly increasing penetration of wind power in the power systems over the last years has posed serious concerns regarding the sudden loss of power during grid faults, which could be caused by wind turbines´disconnection, leading possibly to further severe frequency and/or voltage instability. These concerns have led to detailed review of national grid codes, which nowadays include a wide range of technical requirements that wind farms must fulfill [1]. The operational behavior of wind farms has to follow today the basic guidelines, which have been up to now traditionally only referred to conventional power stations. In this article the capability of the DFIG configuration to fulfill the main technical requirements, common to most national grid codes, will be presented. The following wind turbine ancillary services are addressed and discussed in the article [2-4]:  Capability to regulate their power production during normal operation-According to several national grid codes, wind farms must be able to regulate their power production to an imposed reference value, set remotely or locally [1]. The capability of the DFIG wind turbine to independently control active and reactive power and provide the corresponding service is assessed and emphasized in normal operation conditions by means of simulations. Fault ride through (FRT) capability-The ability of modern wind turbines to withstand low voltage conditions, which mostly appear during short circuit faults in the grid, stay connected during the fault and resume their pre-fault normal operation shortly after the fault clearance is essential. Advanced design of the wind turbine controller and/or development of new equipment in wind turbines are necessary to enable the wind turbine to fulfill this requirement, which is usually described in grid codes through definitions of the duration and the depth of a voltage drop at which the wind turbines are not allowed to disconnect. Voltage-reactive power control capability-In most grid codes wind farms are asked to support the voltage of the power system in normal operation, by providing or absorbing reactive power. The reactive power supply capability largely depends on the specific wind turbine technology. Variable speed wind turbine schemes, like the DFIG studied here, are nowadays able to provide additional reactive power through advanced control of their power electronics. Some particular grid codes, such as E-ON Netz and the Spanish one, require voltage support through reactive current injection during fault operation as well. The present paper reveals for instance how a DFIG wind turbine equipped with a co-ordinated voltage control system can enhance the grid support, even during abnormal voltage conditions. Frequency-active power control capability-A crucial aspect related to system stability is active power balance in the system. Frequency stability is often seriously threatened during events, i.e., sudden load change, tripping of a production unit due to protection reasons. As wind farms tend to substitute conventional units in the power system, they are often required to remain connected during frequency variations while in the future they should also contribute actively to the generation control of the system [5]. The wind turbines have to adjust their power output according to frequency deviations although the fluctuating nature of wind poses serious constraints regarding the availability of active power. This feature becomes vital for non interconnected power systems, like island systems, whose inertia is restricted and frequency variations often lead to severe load shedding.
+
+
+
+
+
+
+
+Energies 2010, 3 2. Technical Challenges, Improvements and Solutions
+
+1292
+
+The DFIG wind turbine configuration, which nowadays represents the mainstream configuration for large wind turbines [6], is illustrated in Figure 1. The main electrical components, as well as the mechanical parts and the controllers, have to be considered in the model in order to ensure a realistic response. As the model used in this study for the DFIG wind turbine configuration is described in detail in [7], only a brief summary is presented in the following. Figure 1. System configuration of a DFIG wind turbine.
+Aerodynamics WRIG Drive train-Gear Ps Transformer Grid
+
+Ptot Pr crowbar
+
+Control system Rotor side converter Grid side converter
+
+The DFIG system is essentially a wound rotor induction generator with slip rings, with the stator directly connected to the grid and with the rotor interfaced through a back-to-back partial-scale power converter [8]. The converter consists of two conventional voltage source converters (rotor-side converter RSC and grid-side converter GSC) and a DC-bus. A two-mass model is usually used to represent the drive train to illustrate the dynamic impact of wind turbines on the grid properly. A large mass for the wind turbine rotor and a small mass for the generator are thus connected by a flexible shaft characterized by stiffness and damping for the low-speed shaft. A simplified aerodynamic model, based on a two-dimensional aerodynamic torque coefficient Cq table [8], is typically sufficient for such studies. The control system consists of a pitch controller and an electrical control for the converters. The pitch control system is realized by a PI controller with antiwind-up, using a servomechanism model with limitation of both the pitch angle and its rate of change. As the pitch angle directly controls the generator speed to its reference signal, this control is able to prevent over-speeding both in normal operations and during grid faults, by limiting the mechanical power extracted from the wind and thus restoring the balance between electrical and mechanical power. 2.1. Power production regulation during normal operation The electrical control system, depicted in Figure 2, is essential for an effective behavior of a DFIG wind turbine during normal operation. Decoupled control of active and reactive power is applied through vector control techniques [8], allowing for changes in the active and reactive power in the range of milliseconds. The RSC controls mainly the active and reactive power delivered to the grid,
+
+Energies 2010, 3
+
+1293
+
+while the GSC ensures nominal voltage at the common DC-bus and a unity power factor operation of the converter. As illustrated in Figure 2 and described in detail in [9-11], the control of the converters is based on cascade control loops: a very fast inner current controller regulates the currents to the reference values that are specified by the outer slower power controller. The power controller implements the maximum power point (MPP) tracking strategy, which ensures power optimization at low wind speeds. Figure 2. Converter control and pitch control system of the DFIG wind turbine for normal operation.
+Rotor Side Converter Grid Side Converter
+
+IdRSC
+
+IqRSC md mq md
+
+IqGSC mq
+
+IdGSC
+
+PI
+First stage Current controller Qgrid Pgrid Second stage Power controller
+
+PI
+
+PI
+
+PI
+
+
+r
+IqrefGSC QGSC
++
+
+ r
+-
+
+K Kp  i s
+
+max
+
+ ref
+
+d dt
++-
+
+
+max
+
+max
+
+IdrefRSC
+
+IqrefRSC IdrefGSC Udc Qgridref
+
+ rref
+K PI
+
+
+
+1 Tservo
+
+1 s
+
+
+
+min
+
+d dt
+
+min
+
+
+
+min
+
+PI
+Pgridref
+
+PI
+
+PI
+
+PI
+
+Gain Scheduling
+U dcref
+Qref GSC
+
+Pr ef
+
+ gen
+Maximum Power Point Tracking
+
+Qref grid  0 Qref grid  0
+
+U dcref  co nst.
+
+Qref GSC  0
+
+Figure 3 illustrates the ability of the variable speed wind turbine with DFIG to regulate its power production to an imposed reference value. A simulation is thus performed, where the reference power is reduced from 2 MW to 1 MW between 100 and 250 seconds and stepped back up again to 2 MW. The active and reactive power response is given for turbulent wind with a mean wind speed close to the rated. Notice that independent of the fluctuations of the wind, the active power is following its reference very well. For the first 300 s the reactive power is controlled to zero, following the unity power factor strategy. Then the reactive power reference is set to 0.5 MVar. Figure 3 points out that the control strategy of the variable speed wind turbine model with DFIG is able to control active and reactive power independently to specific imposed values. This enhances the ability of modern wind farms to operate like conventional power plants. Decoupled active and reactive power control enhance the DFIG operation for several requirements of power control, which are being introduced to grid codes nowadays, e.g., balance control, stop control, absolute power limitation, delta limitation, fast down regulation and ramp limitation to support system security.
+
+Energies 2010, 3 Figure 3. Stochastic wind speed, active power and reactive power during normal operation with (red line) and without (blue line) imposed reference values.
+13 12.5
+
+1294
+
+Wind speed [m/s]
+
+12 11.5 11 10.5 10 0 100 200 300 Time [sec] 400 500 600
+
+2.5
+Pref,ext
+
+Qref,ext
+
+Active Power [MW]
+
+2
+
+1.5
+
+1
+
+0.5 0
+
+100
+
+200
+
+300 Time [sec]
+
+400
+
+500
+
+600
+
+1
+Reactive power [MVAr]
+
+Pref,ext
+
+Qref,ext
+
+0.5
+
+0
+
+-0.5 0
+
+100
+
+200
+
+300 Time [sec]
+
+400
+
+500
+
+600
+
+2.2. Fault ride-through (FRT) capability According to the fault ride-through requirements defined in most grid codes, wind turbines have to remain connected to the grid during voltage dips. The DFIG wind turbine configuration is sensitive to grid faults and requires special power converter protection, because high inrush stator and rotor currents can appear during grid faults. The protection of the converter against overcurrents, but also of the generator rotor and the dc-link against overvoltages, is ensured via the so-called crowbar. In principle, the crowbar is an external rotor impedance, coupled via the slip rings to the generator rotor. According to the strategy implemented in this survey, when the crowbar is triggered, the rotor side converter (RSC) is disabled and bypassed, and therefore the independent controllability of active and reactive power is lost. Since the grid side converter (GSC) is not directly connected to the generator windings, where the high transient currents occur, this converter is not blocked by the protection system during grid faults. When the crowbar is removed, the RSC is enabled again to control independently the active and reactive power.
+
+Energies 2010, 3
+
+1295
+
+In the case of a grid fault, the power reference is defined as the output of a damping controller [7,8]. When a fault is detected, the definition of the power reference is thus switched between the normal operation definition (i.e., MPP) and the fault operation definition (damping controller). Figure 4 depicts the control system applied for FRT as well as the voltage control, which will be described in the next section. Figure 4. Control system of the DFIG wind turbine for FRT and voltage control.
+DFIG
+
+Protection system activation
+
+Udc,link Ir
+
+Rotor side converter
+
+Grid side converter
+
+Ur Crowbar activation signal dq Pgrid and Qgrid control Active crowbar Qrefgrid Voltage control Ugrid Prefgrid Damping ωr,gen Urefdc,link Qrefgsc Reactive boost Udc,link dq
+
+DC voltage and Qgsc control
+
+Co-ordination
+
+It is worth noting that during grid faults, the pitch control system is not able to damp the torsional oscillations, because of several delay mechanisms in the pitch [8]. The pitch control damps the slow frequency variations in the generator speed, while the damping controller is able to damp the fast oscillations in the generator speed. The effect of the damping controller both on the electrical and the mechanical parts of the turbine for a voltage dip down to 20% from the rated voltage with 100 ms duration is illustrated in Figure 5. The sudden drop of the voltage leads to drop in the stator and rotor flux, which result in a decrease of the electromagnetic torque. The drive train acts as a torsion spring and gets untwisted during faults and consequently the mechanical torque drops too. However, the mechanical torque drops slower than the electromagnetic torque and therefore the generator starts to accelerate. The effect of the damping controller, which acts directly on the active power reference signal, is very crucial. This controller damps actively the torsional excitations in the drive train system following the grid fault. When no damping controller is used, both the oscillations in the mechanical torque and in the generator speed remain undamped and would cause severe mechanical stress in the drive train, possibly leading to disconnection of the wind turbine by the protection system. The comparison reveals the positive effect of the damping controller on the response of the wind turbine.
+
+Energies 2010, 3 Figure 5. Generator speed and mechanical torque during voltage dip with (red line) and without damping controller (blue line).
+Generator Speed [pu]
+1.15
+
+1296
+
+1.1
+
+1.05
+
+1 0
+6
+
+2
+
+4
+
+Time [sec]
+
+6
+
+8
+
+10
+
+12
+
+Mechanical Torque [Nm]
+
+1.2 1.1 1 0.9
+
+x 10
+
+0.8 0
+
+2
+
+4
+
+Time [sec]
+
+6
+
+8
+
+10
+
+12
+
+2.3. Enhanced reactive power support Wind farms are required to provide reactive power regulation like conventional power plants during power system voltage deviations. In the applied control strategy the RSC is the default reactive power source controlling the voltage at the Point of Common Coupling (PCC) during normal operation. At a fault instant, i.e., a short circuit in the grid, the GSC is supplementing reactive power during the blocking of the RSC, which occurs when the crowbar is triggered. In this case the GSC continues its operation as STATCOM. After the removal of the crowbar the RSC starts to operate and the GSC is controlled to unity power factor as in normal operation [12]. Figure 6 shows the results from a voltage dip at the terminals. The Short Circuit Ratio (SCR) calculated at the PCC is 1.9 and the R/X ratio in the PCC amounts to 0.14 [13]. At the fault instance, the crowbar is coupled in the DFIG´ rotor circuit. Figure 6 illustrates the s response for two different control strategies: with and without reactive power boosting of the grid side converter. In the first case, during crowbar coupling the GSC contributes to reactive power supply and improves the voltage level. The reference power of the reactive power boosting for the GSC is set to 1 p.u., i.e., its maximum possible. Since the voltage level is significantly reduced during the fault, the grid side converter's reactive power production capability is also reduced. Thus, the reference reactive power cannot be provided during the fault.
+
+Energies 2010, 3 Figure 6. Voltage at the Point of Common Coupling (PCC), GSC reactive power and reactive power reference (green line), total reactive power, active power when reactive power is provided (blue line) and not (red line) by the GSC - (1) fault instance, (2) fault clearance, (3) crowbar trigger off when GSC provides reactive power, (4) crowbar trigger off when GSC is reactive neutral
+1.4
+Voltage at PCC [pu]
+
+1297
+
+1.2 1 0.8 0.6 0.4 0.2 0
+
+1
+
+2
+
+3
+
+4
+
+0.5
+
+Time [sec]
+
+1
+
+1.5
+
+GSC reactive power [pu]
+
+1
+
+1
+
+2
+
+3
+
+4
+
+0.5
+
+0 0 0.5 1 1.5
+
+Time [sec]
+
+Total reactive power [pu]
+
+1.2 0.8
+
+1
+
+2
+
+3
+
+4
+
+0 -0.4
+
+0
+
+0.5
+
+Time [sec]
+
+1
+
+1.5
+
+1.5
+Active power [pu]
+
+1 1
+
+2
+
+3
+
+4
+
+0.5
+
+0
+
+0
+
+0.5
+
+Time [sec]
+
+1
+
+1.5
+
+After fault clearing, when the voltage at the converter terminals re-establishes, the GSC is able to provide even more reactive power to the grid. Due to the reactive power demand of the generator, when the fault is cleared, the voltage does not completely recover immediately. The generator operates
+
+Energies 2010, 3
+
+1298
+
+as a squirrel cage induction generator and has an increased magnetization demand during the voltage recovery. The generator absorbs reactive power from the grid, delaying the recovering process of the grid voltage. When the crowbar is removed and the rotor side converter is restarted, the voltage controller of the rotor side converter provides for reactive power supply re-establishing the voltage level. 2.4. Frequency-active power control Among the ancillary services that modern wind turbines have to provide, frequency control appears as an emerging need, especially in non-interconnected power systems with increasing wind power penetration. In such power systems, load shedding regularly occurs due to large frequency deviations. Although sufficient spinning reserve by conventional units is ensured to overcome frequency problems, increasing wind power penetration is often challenging system security for non-interconnected systems. Depending on their configuration wind turbines have a different response to frequency deviations. Figures 7 and 8 illustrate the results from a study for an island system, Rhodes, for the case scenario when total wind power production is 28.2 MW (34%) in total 83 MW of demand [14]. The loss of the largest conventional unit in the system (21 MW) is simulated-production loss equal to 25% of the total demand. A comparison between the inertia responses of three different wind turbine configurations is given in Figure 7 during medium wind speeds of 9-10 m/s. It is seen that the active stall induction generator (ASIG) wind turbines provide a significant dynamic response, while the response of the variable speed wind turbines-doubly fed induction generator and permanent magnet synchronous generator (PMSG)-is negligible. Figure 7. Change in active power production during a frequency drop for three wind turbine configurations.
+1 ASIG
+
+ΔP [pu]
+
+0.5
+
+DFIG
+
+0 PMSG -0.5 0 2 4
+
+Time [sec]
+
+6
+
+8
+
+10
+
+12
+
+As described in [15,16], the response of a DFIG wind turbine is very different than of ASIG wind turbines. Its inertial is mostly based on the applied control scheme acting on the converter connecting the rotor to the grid. Supplementary control attributes have been proposed in the literature in order to achieve active frequency control by variable speed wind turbines [17,18]. In this article two different frequency control methods are presented for the DFIG wind turbine configuration:   Inertia Control Droop Control
+
+Energies 2010, 3
+
+1299
+
+When inertia control is used, the inertial response of the DFIG is restored through an additional loop in the power reference block providing the active power reference signal to the Rotor Side Converter, (see Figure 8). The DFIG wind turbine is ordered to adjust its power output when subjected to frequency deviations, based on the measurement of the rate of change of the frequency. This defines the additional power reference signal, which is added to the normal power reference provided by the MPP tracking controller [14]. In droop control, the auxiliary input signal that defines the adjustment in the power production of the wind turbine is the actual error between the measured frequency of the system and the nominal frequency. This control method is similar to the primary frequency control applied to conventional generators. Figure 8. Frequency control scheme for the DFIG wind turbine configuration.
+Signals to Rotor Side Converter
+
+PI
+Pgrid
+
+PI
+
+Cascade Power controller
+
+cascade
+
+Pr ef
++
+
+Pgridref Pnormalref
+
+df dt
+(Rate of Change of System Frequency)
+
+K inertia
+Inertia controller
+
+Pauxref
+
+gen
+Maximum Power Tracking Po int
+
+f
+Pauxref
+
+K droop
+Droop controller
+
+Pauxref
+
++
+
+Aux input signal
+
+(Frequency Error)
+
+Frequency controller
+
+The system frequency for the different frequency control schemes implemented in wind farms equipped with DFIG wind turbines is shown. The initial frequency response during the first milliseconds after the frequency event is also illustrated for emphasis. Figure 9. Power system frequency and change in DFIG active power for largest unit loss-no auxiliary control (blue line), inertia control (red line), droop control (green line).
+
+System Frequency [Hz]
+
+51 50 49 48 0
+
+50 49.8 49.6 49.4 1 1.2 1.4 1.6
+
+Time [sec]
+
+5
+
+10
+
+Energies 2010, 3 Figure 9. Cont.
+1 0.5
+
+1300
+
+ΔP [pu]
+
+0 -0.5 -1 0
+
+2
+
+4
+
+Time [sec]
+
+6
+
+8
+
+10
+
+12
+
+Notice that when no auxiliary frequency control is applied, the frequency drops below 48.5 Hz, leading to load shedding which prevents further frequency drop. In the other two cases, where the frequency control is activated in the DFIG wind farms, the load shedding is totally avoided. The optimum frequency drop in terms of minimum frequency is achieved through droop control. The effect of auxiliary frequency control on the maximum rate of change of frequency is very crucial. As illustrated in Figure 9, the initial rate of change of frequency is very high. The inertia of the system in this case is low because the number of the conventional generators connected to the system is reduced. The rate of change of frequency is close to 5 Hz/sec (in absolute value) when no auxiliary control is applied. Inertia control manages to reduce the rate to 3.8 Hz/sec, while droop control does not affect this rate. Figure 9 illustrates also the change in the active power output of the wind farm during the frequency deviation for each one of the implemented methods. 3. Conclusions Increasing penetration levels of wind power demands constant development in the field of wind turbine technology. This article assesses and illustrates modeling issues for variable speed DFIG wind turbines regarding ancillary services provided to the grid, during both normal operation and transient events. The converter control is enhanced to provide with active and reactive power regulation capability. An active crowbar protection system is included in the protection system, ensuring safe operation of the wind turbine during severe voltage dips, which occur in the power system e.g. due to faults. Uninterrupted operation is ensured and DFIG wind turbines are able to support the grid immediately after the fault clearance, supplementing with reactive power. Possible oscillations which may occur during transient events can be damped through an additional damping controller. Voltage and reactive power control are possible when coordinated control is applied between the grid side converter and the rotor side converter. Thus, DFIG wind turbines contribute significantly to system stability in case of reactive power imbalances in the power system. Auxiliary frequency control makes it possible for such wind turbines to participate in the primary control service of the system during frequency events, e.g. sudden loss of production. Power electronic technology enables nowadays wind turbines to be active components of power systems and participate in the major services traditionally served by conventional power plants. This article assessed the main control functions which enable the DFIG wind turbine configuration to contribute to safe and secure operation of modern power systems.
+
+Energies 2010, 3 References 1.
+
+1301
+
+2.
+
+3.
+
+4.
+
+5.
+
+6. 7. 8. 9.
+
+10.
+
+11. 12. 13.
+
+14.
+
+15.
+
+Ciupuliga, A.R.; Gibescu, M.; Fulli, G.; Abbate, A.L.; Kling, W.L. Grid connection of large wind power plants: A European overview. In 8th International Workshop on Large-Scale Integration of Wind Power into Power Systems as well as on Transmission Networks for Offshore Wind Farms, Bremen, Germany, October 2009. Erlich, I.; Winter, I.; Dittrich, A. Advanced grid requirements for the integration of wind turbines into the German Transmission System. In Proceedings of Power Engineering Society General Meeting, Montreal, Canada, June 2006. Erlich, I.; Bachmann, U. Grid code requirements concerning connection and operation of wind turbines in Germany. In Proceedings of Power Engineering Society General Meeting, San Francisco, CA, USA, June 2005; Volume 2, pp. 1253-1257. EWEA Working Group on Grid Code Requirements. European Grid Code Requirements for Wind Power Generation 2009, Position Paper. Available online: http://www.ewea.org (accessed on 9 June 2010). Suwannarat, A.; Bak-Jensen, B.; Chen, Z.; Nielsen, H.; Hjerrild, J.; Sorensen, P.; Hansen, A.D. Power system operation with large scale wind power integration. In Proceedings of IEEE Powertech, Lausanne, Switzerland, July 2007; pp. 671-676. Hansen, A.D.; Hansen, L.H. Market penetration of different wind turbine concepts over the years. Presented at EWEC'07, Milan, Italy, May 2007. Hansen, A.D.; Sø rensen, P.; Iov, F.; Blaabjerg, F. Centralised power control of wind farm with doubly-fed induction generators. Renew. Energy 2006, 31, 935-951. Hansen, A.D.; Michalke, G. Fault ride-through capability of DFIG wind turbines. Renew. Energy 2007, 32, 1594-1610. Gail, G.; Hansen, A.D.; Hartkopf, T. Controller design and analysis of a variable speed wind turbine with doubly-fed induction generator. Presented at EWEC'06, Athens, Greece, February-March 2006. Hansen, M.H.; Hansen, A.D.; Larsen, T.J.; Øye, S.; Sø rensen P. Control design for a pitch-regulated variable speed wind turbine. Technical Report Number Risø -R-1500 (EN); Risø : Roskilde, Denmark, 2005; Volume 84. Hansen, A.D.; Michalke, G.; Sø rensen, P.; Lund, T.; Iov, F. Co-ordinated voltage control of DFIG wind turbines in uninterrupted operation during grid faults. Wind Energy 2007, 1, 51-68. Hansen, A.; Michalke, G. Voltage grid support of DFIG wind turbines during grid faults. Presented at EWEC'07, Milan, Italy, May 2007. Akhmatov, V.; Nielsen, A.H. Simulation model of the transmission grid for a large offshore wind farm, used in education and research at the Technical University of Denmark. Wind Eng. 2006, 3, 255-263. Margaris, I.D.; Hansen, A.D.; Sø rensen, P.; Hatziargyriou, N.D. The challenge of frequency control in autonomous power systems with increasing wind power penetration. IEEE Trans. Sustain. Energy 2010, in review. Lalor, G.; Mullane, A.; O'Malley, M.J. Frequency control and wind turbine technologies. IEEE Trans. Power Syst. 2005, 20, 4.
+
+Energies 2010, 3
+
+1302
+
+16. Morren, J.; Pierik, J.; de Haan, S.W.H. Inertial response of variable wind turbines. Electr. Power Syst. Res. 2006, 76, 980-987. 17. Ramtharan, G.; Ekanayake, J.B.; Jenkins, N. Frequency support from doubly fed induction generator wind turbines. IET Renew. Power Gener. 2007, 1, 3-9. 18. Holdsworth, L.; Ekanayake, J.B.; Jenkins, N. Power system frequency response from fixed speed and doubly fed induction generator-based wind turbine. Wind Energy 2004, 7, 21-35. © 2010 by the authors; licensee MDPI, Basel, Switzerland. This article is an Open Access article distributed under the terms and conditions of the Creative Commons Attribution license (http://creativecommons.org/licenses/by/3.0/).
+

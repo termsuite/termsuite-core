@@ -1,0 +1,1426 @@
+M A N U E L PRÉLIMINAIRE
+DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS
+Novembre 2000
+Ce manuel est destiné à l'ensemble des acteurs de la filière éolienne concernés par l'intégration des parcs éoliens dans leur environnement naturel et humain. Il a pour objectif de présenter et proposer des outils et méthodes susceptibles d'améliorer la qualité environnementale des futurs projets. L'étude d'impact sur l'environnement devient aujourd'hui une pièce maîtresse dans la procédure d'instruction des projets. Elle est à la fois un outil de protection de l'environnement, un outil d'information sur un projet et un outil d'aide à la décision. Soucieuse de répondre aux attentes des porteurs de projets dans ce domaine, l'ADEME a initié le présent manuel et a souhaité sa diffusion lors du Colloque National éolien à Narbonne (Décembre 2000). Ce document a été réalisé par Geokos Consultants associé à différents partenaires. Ce document constitue un avant-projet, à partir duquel un guide méthodologique d'étude d'impact pourra être élaboré en associant différents services ou organismes impliqués dans la problématique parcs éoliensenvironnement. L'ADEME remercie les porteurs de projet qui, par leur collaboration, ont contribué à la réalisation de ce premier travail. Elle invite les lecteurs à transmettre à son Département Energies Renouvelables toute suggestion susceptible de bonifier et enrichir le guide final.
+
+ADEME Département Energies Renouvelables 500 Route des Lucioles Sophia Antipolis 0 6 5 6 0 VA L B O N N E
+
+1
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS
+
+AUTEURS DU DOCUMENT
+
+Conception et textes
+
+Jean-Marc PAGES
+
+GEOKOS CONSULTANTS Immeuble Proxima Bat C 47 allée du Rouergue 31770 COLOMIERS
+
+Collaboration
+
+Paul NEAU
+
+ABIES Borde Haute 31290 GARDOUCH
+
+Conception graphique
+
+Eric SUPPARO
+
+ACT'IMAGE 6 Impasse Couzinet 31500 TOULOUSE
+
+Relecture
+
+Cyril HARRY, Mila GALIANO (ADEME), Patrick MICHEL (BCEOM), Sylvain ALBOUY (LPO), René GAMBA (Acoustique GAMBA).
+
+Photographies
+
+ABIES, ADEME, GEOKOS CONSULTANTS.
+
+Impression
+
+ESCOURBIAC
+
+Route de Lavaur BP 171 81304 GRAULHET Cedex
+
+Achevé d'imprimer en Février 2001 © ADEME Editions, 2001, ISBN 2-86817-583-X
+
+2
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS
+
+SOMMAIRE
+PA G E S
+Avant-propos....................................................................................................................... GÉNÉRALITÉS Fiche 1 Notions générales sur les parcs éoliens.............................................................. Le parc éolien.......................................................................................................... L'éolienne ............................................................................................................... Le gisement éolien .................................................................................................. L'intérêt de l'énergie éolienne ............................................................................ L'intérêt environnemental général de l'éolien .......................................................... L'intérêt pour la nation............................................................................................ L'intérêt pour les collectivités territoriales ................................................................ Le développement de l'éolien............................................................................. Quelques rappels de physique ................................................................................. L'éolien en France et le programme EOLE 2005....................................................... L'éolien dans le monde et en Europe....................................................................... L'évolution des technologies ................................................................................... 9 9 13 15 17 17 19 21 23 23 24 27 28 5
+
+Fiche 2
+
+Fiche 3
+
+RÉGLEMENTATION ET PROCÉDURES Fiche 4 Objectifs de l'étude d'impact et cadre réglementaire....................................... Qu'est ce qu'une étude d'impact ?.......................................................................... Les trois objectifs principaux de l'étude d'impact ..................................................... Le cadre réglementaire............................................................................................ La conduite de l'étude d'impact et les procédures d'autorisation ................... La conduite de l'étude d'impact .............................................................................. Les procédures d'autorisation d'un projet éolien...................................................... 31 31 32 33 38 38 39
+
+Fiche 5
+
+LES DIFFÉRENTS STADES DE L'ÉTUDE D'IMPACT Fiche 6 L'état initial; cadrage et recueil des données .................................................... La délimitation de l'aire d'étude .............................................................................. Le recueil des données environnementales .............................................................. L'état initial; interprétation et synthèse ............................................................ La cartographie ....................................................................................................... La traduction de données brutes en sensibilités ....................................................... La démarche environnementale au stade de l'état initial.......................................... La synthèse de l'état initial de l'environnement........................................................ L'analyse des effets sur l'environnement .......................................................... Quelques définitions préalables ............................................................................... La démarche d'évaluation des effets sur l'environnement ........................................ Quelques méthodes d'évaluation des impacts ......................................................... Le choix du projet ................................................................................................ Notion de parti et variante ...................................................................................... La cohérence entre les études d'environnement et les autres aspects du projet........ Le contenu du chapitre sur les raisons du choix du projet et sa place dans l'étude d'impact.. 44 44 48 52 52 55 56 57 58 58 60 62 64 64 65 68 70 70 72 73 73
+
+Fiche 7
+
+Fiche 8
+
+Fiche 9
+
+Fiche 10 Les mesures préventives, réductrices ou compensatoires ................................ Quelques définitions ............................................................................................... Le chiffrage des mesures ......................................................................................... Le contenu de ce chapitre, sa place dans l'étude d'impact....................................... L'intérêt du suivi environnemental...........................................................................
+
+3
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS SOMMAIRE PA G E S
+Fiche 11 Les effets sur la santé .......................................................................................... La réglementation ................................................................................................... Application aux projets éoliens ................................................................................ Le contenu du chapitre santé .................................................................................. Fiche 12 Les méthodes utilisées, les difficultés rencontrées et le résumé non technique .......... Le décret n°93-245 du 25 février 1993.................................................................... L'analyse des méthodes mentionnant les difficultés éventuelles ............................... Le résumé non technique ........................................................................................ LES THÈMES DE L'ÉTUDE D'IMPACT Fiche 13 Parcs éoliens et risques naturels ......................................................................... Dispositifs réglementaires et d'information préventive ............................................. Les risques climatiques ............................................................................................ Le risque incendies de forêt..................................................................................... Les autres risques naturels....................................................................................... Fiche 14 Parcs éoliens et milieux naturels......................................................................... L'analyse du milieu naturel au stade de l'état initial de l'environnement .................. L'analyse des impacts .............................................................................................. Les mesures de suppression, réduction ou compensation ........................................ Fiche 15 Parcs éoliens et avifaune ..................................................................................... Quelques notions sur l'écologie des oiseaux ............................................................ L'analyse de l'avifaune au stade de l'état initial........................................................ L'analyse des impacts .............................................................................................. Les mesures de suppression, réduction ou compensation ........................................ Fiche 16 Parcs éoliens et bruit............................................................................................ Rappel de quelques notions d'acoustique................................................................ Réglementation....................................................................................................... Le bruit des parcs éoliens ........................................................................................ Les mesures préventives ou réductrices.................................................................... Fiche 17 Parcs éoliens et urbanisme .................................................................................. Le Plan d'Occupation des Sols (POS) ........................................................................ Autres documents d'urbanisme............................................................................... La loi Littoral et la loi Montagne .............................................................................. Fiche 18 Parcs éoliens et servitudes techniques ............................................................... Les servitudes radioélectriques................................................................................. Les servitudes aéronautiques ................................................................................... Autres servitudes techniques ................................................................................... Fiche 19 Parcs éoliens et patrimoine culturel ................................................................... La protection des monuments historiques ............................................................... La protection des sites............................................................................................. Les autres principales protections réglementaires..................................................... Fiche 20 Parcs éoliens et paysage...................................................................................... Les caractéristiques paysagères d'un parc éolien...................................................... Le paysage au stade de l'état initial ......................................................................... Les impacts paysagers ............................................................................................. Les mesures en faveur du paysage........................................................................... BIBLIOGRAPHIE .................................................................................................................... ADRESSES, SITES INTERNET ................................................................................................ INDEX ............................................................................................................................... 88 88 91 94 95 96 96 103 104 105 105 107 110 112 114 114 117 118 120 121 121 124 125 127 127 129 131 133 133 134 136 139 139 144 146 149 151 153 155 75 75 78 81 83 83 84 86
+
+4
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS
+
+AVA N T - P R O P O S
+
+L'énergie éolienne est appelée dans les années à venir à connaître un développement important tant en France métropolitaine que sur les départements et territoires d'outre-mer. Même si cette énergie dite renouvelable présente de multiples atouts vis-à-vis de l'environnement, elle peut aussi apporter certaines modifications ou nuisances. Il est donc important de développer des parcs éoliens de qualité, intégrés dans leur environnement naturel et humain.
+
+La loi du 10 juillet 1976 relative à la protection de la nature, présente dans son article 2 un grand principe du droit de l'environnement : l'obligation de prendre en compte l'environnement à l'occasion de toute action ou décision publique ou privée risquant d'avoir des impacts sur celui-ci. Cet article 2 prévoit en conséquence la réalisation d'une étude d'impact préalable à la réalisation d'aménagement ou d'ouvrages pouvant porter atteinte à l'environnement. En définitive, l'étude d'impact répond à trois objectifs principaux : — concevoir un meilleur projet pour l'environnement, — éclairer l'autorité administrative chargée d'instruire le projet ou d'autoriser les travaux, — informer le public dans le cas où l'ouvrage est soumis à la procédure d'enquête publique.
+
+L'objectif de cet ouvrage est d'aider toutes les personnes intéressées et concernées par la problématique « parcs éoliens - environnement ». Ce guide s'adresse à plusieurs catégories d'acteurs : — les maîtres d'ouvrages intervenant dans la mise en oeuvre d'un parc éolien, — les services administratifs chargés d'instruire les projets, — les collectivités territoriales (régions, départements, communes), — les associations de protection de l'environnement, — les bureaux d'étude en charge des projets éoliens, — les commissaires enquêteurs chargés de mener les enquêtes publiques, — de manière générale, tout groupement de citoyens ou simple citoyen, qui souhaite trouver dans l'étude d'impact des réponses à ses interrogations.
+
+5
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Avant-propos
+
+Ce guide est conçu comme une aide à la réflexion sur la prise en compte de l'environnement dans les projets de parcs éoliens. Il met en valeur la complexité et la multiplicité des facteurs qui rentrent en jeu, des interactions entre les différentes composantes de l'environnement. Pour analyser ces multiples facteurs, ce guide propose des outils et des méthodes. Il contient également des informations concernant la législation environnementale. Pour faciliter sa lecture, le guide a été rédigé de façon concise avec de nombreux exemples, encadrés, illustrations et photos. Il explicite également certains termes importants souvent utilisés dans les études d'impact. Ce guide n'est pas un document destiné seulement aux initiés, il utilise un langage commun compréhensible par les différentes catégories d'acteurs impliqués dans les projets éoliens. Ce guide fournit également quelques points de repères qualitatifs et parfois quantitatifs sur les impacts potentiels des parc éoliens. Mais il n'a ni vocation à être un catalogue, ni vocation à être exhaustif. Il cherche avant tout à sensibiliser le lecteur à la globalité et la multiplicité des facteurs environnementaux pour permettre ensuite une réflexion spécifique à chaque étude d'impact. Ce guide, conçu comme un document pratique comprend aussi : — une bibliographie sélective pour le lecteur désireux d'approfondir certains sujets, — un index permettant de se repérer dans l'ouvrage, — des adresses et des sites internet en fin de document. Ce guide présente exclusivement les études d'impact de parcs éoliens terrestres. Le retour d'expérience de quelques centaines de projets en Europe permet d'identifier les principaux enjeux environnementaux, de présenter les méthodes d'analyse disponibles ou les outils utiles. Le retour d'expérience est encore faible pour les parcs éoliens en mer. Les prochaines années permettront certainement de proposer pour les parcs en mer des outils et des méthodes d'analyse comme nous pouvons le faire aujourd'hui pour les parc terrestres aujourd'hui.
+
+6
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Avant-Propos
+
+LES FICHES DU GUIDE
+Fiche 1 : Fiche 2 : Fiche 3 : Fiche 4 : Fiche 5 : Fiche 6 : Fiche 7 : Fiche 8 : Fiche 9 : Notions générales sur les parcs éoliens L'intérêt de l'éolien Le développement de l'éolien Objectifs de l'étude d'impact et cadre réglementaire La conduite de l'étude d'impact et les procédures d'autorisation L'état initial; cadrage et recueil des données L'état initial; interprétation et synthèse L'analyse des effets sur l'environnement Le choix du projet Les différents stades de l'étude d'impact Réglementation et procédure de l'étude d'impact Généralités sur les parcs éoliens
+
+Fiche 10 : Les mesures préventives, réductrices et compensatoires Fiche 11 : Fiche 12 : Les effets sur la santé Les méthodes utilisées et les difficultés rencontrées
+
+Fiche 13 : Parcs éoliens et risques naturels Fiche 14 : Parcs éoliens et milieux naturels Fiche 15 : Parcs éoliens et avifaune Fiche 16 : Parcs éoliens et bruit Fiche 17 : Parcs éoliens et urbanisme Thèmes de l'étude d'impact
+
+Fiche 18 : Parcs éoliens et servitudes techniques Fiche 19 : Parcs éoliens et patrimoine culturel Fiche 20 : Parcs éoliens et paysage
+
+REMARQUES IMPORTANTES POUR L'UTILISATION DES FICHES
+Ce guide fournit des notions de base présentant différents aspects de l'étude d'impact : aspects réglementaires, outils et méthodes utiles à l'identification des impacts, composantes de l'environnement, etc. Mais il n'a pas la prétention d'être exhaustif et surtout ne remplace pas le travail qui doit être réalisé pour chaque étude d'impact. En conséquence ces fiches ne peuvent pas être utilisées en l'état dans les dossiers d'étude d'impact. Chaque projet doit être étudié au cas par cas en prenant bien en compte toutes les spécificités locales.
+
+7
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Avant-propos
+
+Ce guide est présenté sous forme de fiches : — la lecture de ces fiches peut se faire de manière indépendante même si ces fiches se complètent globalement les unes les autres, — ces fiches sont perfectibles et pourront être réactualisées dans l'avenir, — des fiches pourront être ajoutées ultérieurement. Ces fiches peuvent se scinder en 4 groupes principaux : — les fiches de présentation générale des parcs éoliens, — les fiches traitant de la réglementation et la procédure d'étude d'impact, — les fiches présentant les démarches, outils, méthodes aux différents stades de l'étude, — les fiches thématiques des impacts d'un parc éolien sur l'environnement. Chaque fiche comprend trois parties principales : — une introduction dont l'objet est de présenter la fiche, de fournir quelques repères qualitatifs ou quantitatifs, de bien poser les problèmes se rapportant au sujet traité, — le texte avec les différentes illustrations permettant de développer de manière plus approfondie l'argumentaire, — un résumé de « ce qu'il faut retenir ». Rappelons qu'en fin d'ouvrage, le lecteur pourra utiliser la bibliographie, un index, ainsi que des adresses utiles ou sites internet.
+
+8
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS - FICHE 1
+
+NOTIONS GÉNÉRALES SUR LES PA R C É O L I E N S
+Cette fiche a pour objet de présenter quelques généralités sur les parcs éoliens. Elle s'adresse donc en priorité aux personnes non initiées à l'énergie éolienne. Elle fournit quelques repères qualitatifs et quantitatifs sur l'état de l'art en début d'année 2000. S'agissant d'un secteur d'activité en plein évolution, on peut penser que les technologies vont rapidement progresser dans les années à venir : dimensions des machines, puissance délivrée, taille des parcs, etc ... Sont successivement présentés dans cette fiche : — le parc éolien — l'éolienne — le gisement éolien
+
+Le parc éolien
+Un parc éolien est une installation de production d'électricité pour le réseau électrique national par l'exploitation de la force du vent. Il s'agit d'une production au fil du vent, analogue à la production au fil de l'eau des centrales hydrauliques. Il n'y a donc pas de stockage d'électricité. Un parc éolien est composé principalement : — d'un ensemble d'éoliennes, — d'une voie d'accès, — d'un réseau d'évacuation de l'électricité.
+
+L'ensemble d'éoliennes
+Sur le plan aérodynamique, les éoliennes d'un parc ne doivent pas se gêner mutuellement. Pour cela, il faut maintenir entre elles un écartement suffisant pour que l'écoulement de l'air, perturbé après le passage au travers d'une éolienne, soit à nouveau fluide au niveau de la seconde. La disposition tient compte de la direction des vents dominants. On rencontre principalement deux configurations : — la première correspond à un alignement d'éoliennes. Cet alignement est perpendiculaire à la direction des vents dominants. L'écartement entre deux éoliennes est alors égal à 2 ou 3 fois le diamètre du rotor des machines. L'espacement moyen entre
+
+9
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 1
+
+UN PEU DE VOCABULAIRE...
+• Les termes « ferme éolienne », « centrale éolienne », « parc éolien » sont synonymes. Ils ont cependant des connotations différentes : — le terme « ferme éolienne » est la traduction littérale de « wind farm ». Cette expression est intéressante car elle renvoie à la notion d'activité économique du secteur primaire comme l'agriculture. L'utilisation de l'énergie éolienne est en effet une récolte d'une ressource naturelle. Le terme de ferme éolienne évoque également une implantation rurale, ce qui est très souvent le cas. Cependant le terme « ferme » renvoie à une notion agricole inadaptée. — le terme « centrale éolienne » s'apparente aux centrales traditionnelles de production d'électricité (nucléaire, charbon, fioul, ...). — le terme « parc éolien » permet de distinguer, de marquer la différence par rapport aux centrales traditionnelles à combustibles fossiles. C'est le plus utilisé. On utilisera préférentiellement ce dernier terme. • Il n'existe pas une terminologie unique pour désigner une éolienne productrice d'électricité. On emploie ainsi indifféremment les termes « aérogénérateur », « éolienne » ou « turbine ».
+
+Pylône de mesure des vents
+
+Les composants d'un parc éolien
+Ensemble d'éoliennes
+
+Réseau électrique existant
+
+Local technique
+
+Liaison souterraine électrique Route d'accès
+
+10
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 1
+
+deux machines est ainsi compris aujourd'hui entre 100 et 200 m. Cette configuration est celle mise en place notamment lorsque la direction des vents dominants est marquée. — la seconde configuration correspond à un agencement des éoliennes en quinconce. Les éoliennes ne doivent pas se gêner quelle que soit la direction des vents dominants. L'écartement entre deux machines est alors plus important : 3, 4 ou 5 fois le diamètre du rotor des machines. Dans la pratique, d'autres considérations entrent en jeu dans l'agencement des éoliennes notamment les contraintes environnementales et foncières.
+
+Deux configurations principales pour les éoliennes
+vent dominant
+
+1° cas
+vent dominant marqué de 100 à 200 m emplacement d'une éolienne
+
+2° cas
+vent dominant non marqué
+
+de 200 à 300 m
+
+La voie d'accès
+Tout parc éolien doit être accessible par la route pour le transport des éléments des éoliennes et le passage des engins de levage. Les exigences techniques de cet accès concernent essentiellement sa largeur, son rayon de courbure et sa pente. Il pourra s'avérer nécessaire d'élargir ou de corriger la voie existante si ses caractéristiques sont insuffisantes. Parfois, il faut même créer une nouvelle voie d'accès.
+
+Le réseau d'évacuation de l'électricité
+L'électricité produite est évacuée sur le réseau électrique existant : — pour des puissances inférieures à 10 MW*, l'évacuation de l'énergie électrique est habituellement réalisée en 20 000 V. Mais la capacité de transit de la ligne est déterminante. Si elle est insuffisante, il est alors nécessaire de renforcer la ligne existante ou de réaliser une nouvelle liaison électrique. Dans tous les cas, l'injection sur le réseau doit rester proche des postes sources 63 000 / 20 000 V. Ces postes sources alimentés
+* W : watt; V : volt; MW : mégawatt (1 million de watts)
+
+11
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 1
+
+par les lignes haute tension permettent d'acheminer l'électricité localement auprès des consommateurs. Ils constituent localement les véritables fournisseurs de l'électricité. Dans un département rural, on peut compter une quinzaine de ces postes, — pour des puissances supérieures à 10 MW, cette injection se fait principalement sur le réseau 63 000 V. Le coût du raccordement électrique est à la charge du producteur autonome. Pour des raisons économiques, celui-ci identifiera dans la phase de faisabilité du projet les possibilités de raccordement au réseau électrique existant, et la localisation des postes sources. Il tiendra compte également des pertes en ligne. L'engagement est généralement pris par les constructeurs de parcs éoliens de réaliser les liaisons au réseau 20 000 V en souterrain, en suivant le plus souvent les chemins et routes existants. Parmi les autres constituants d'un parc éolien, on peut trouver : — un local technique, — un pylône de mesure du vent (implanté dès l'étude de faisabilité), — une aire de stockage de matériaux ou d'outils.
+
+12
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 1
+
+L'éolienne
+Constitution d'une éolienne
+Les principaux constituants d'une éolienne (à axe horizontal) sont de bas en haut : — des fondations pouvant dépasser 100 mètres cubes, — une tour, métallique le plus souvent, soit tubulaire soit treillis. A sa base, à l'intérieur on peut trouver le système de transformation électrique et une échelle pour accéder au sommet, — un rotor composé de l'ensemble des pales. Celles-ci sont habituellement au nombre de trois (système tripale). Parfois l'éolienne n'en comprend que deux (système bipale), — une nacelle abritant le coeur de l'éolienne, notamment la génératrice électrique, le multiplicateur, le système de frein ... Les éoliennes tripales sont les plus répandues. Plus coûteuses, les tripales sont néanmoins préférées car elles produisent un peu plus, font moins de bruit et sont considérées comme plus esthétiques. Il existe également des éoliennes à axe vertical, adaptées à tous les vents et ne nécessitant pas de dispositif d'orientation. Néanmoins celles-ci présentent un certain nombre d'inconvénients techniques; elles ne sont plus développées aujourd'hui.
+
+Dimensions et poids de 2 types d'éoliennes (660 kW et 1300 kW)
+660 kW
+Hauteur de la tour Diamètre du rotor Point culminant Poids d'une pale Poids du rotor (pales + moyeu) Poids de la nacelle (sans le rotor) Poids de la tour Poids total 40 m 47 m 63,5 m 2,5 t 8,5 t 20 t 28 t 57 t
+
+1 300 kW
+46 m 60 m 76 m 4,3 t 19 t 49 t 72 t 140 t
+
+13
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 1
+
+Fonctionnement d'une éolienne
+Le vent en exerçant une force sur les pales de l'éolienne les fait tourner. La rotation du rotor entraîne alors, avec l'aide ou non d'un multiplicateur, une génératrice électrique : il y a transfert de l'énergie cinétique du vent en énergie électrique. Un anémomètre et une girouette placés sur la nacelle commandent le fonctionnement de l'éolienne. La girouette va permettre d'orienter l'éolienne face au vent. Si le vent tourne, la nacelle et le rotor se positionneront pour être à nouveau face au vent. Dès lors que le vent se lève (environ 5 km/h), les pales sont mises en mouvement par la seule force du vent. Elle entraînent avec elles le multiplicateur et la génératrice électrique. Lorsque le vent est suffisant (environ 15 km/h), l'éolienne peut être couplée au réseau électrique. Le rotor tourne alors à environ un tour en deux secondes. Cette vitesse de rotation va rester constante tout au long de la période de production afin de produire un courant alternatif de fréquence constante. La génératrice délivre alors un courant électrique, dont l'intensité varie en fonction de la vitesse du vent. Ainsi, lorsque cette dernière croît, la portance s'exerçant sur le rotor s'accentue et la puissance délivrée par la génératrice augmente. Quand le vent atteint environ 50 km/h, l'éolienne fournit sa puissance maximale. Cette puissance est maintenue constante en jouant sur l'aérodynamisme des pales. L'anémomètre va intervenir en ce qui concerne les conditions extrêmes de vent. En effet, au-delà d'une certaine vitesse de vent, variable selon les modèles, l'éolienne va être « arrêtée ». Concrètement, à plus de 100 km/h environ, les pales sont mises en drapeau, c'est-à-dire parallèles à la direction du vent. Le rotor tourne alors lentement en roue libre et l'éolienne ne produit plus d'électricité. Ainsi, le fonctionnement des éoliennes est caractérisé par : — une vitesse de rotation des pales constante et lente (les modèles à « vitesse variable » possèdent une rotation des pales constante à 10 ou 20 % près) ; — une plage de « fonctionnement » (de rotation) des pales quasi-permanente : sur un site éolien, le pourcentage du temps où la vitesse du vent est comprise entre 5 et 90 km/h (celle déclenchant la rotation du rotor) dépasse 95 % (même si l'éolienne produit pendant moins de 70 % du temps) ; — une orientation de l'éolienne (nacelle et rotor) face au vent.
+
+Production d'une éolienne en fonction de la vitesse du vent
+v
+10 20
+
+i
+30
+
+t
+
+e
+
+s
+40
+
+s
+
+e
+50
+
+e
+
+n
+60
+
+k
+70
+
+m
+
+/
+80
+
+h
+90 100
+
+Pales de l'éolienne en mouvement Production de l'éolienne
+
+14
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 1
+
+Le gisement éolien
+La connaissance de la ressource en vent d'un site est particulièrement importante. En effet, d'après la formule de Betz, l'énergie récupérable par une éolienne est proportionnelle au cube de la vitesse du vent.
+
+LA FORMULE DE BETZ
+P : puissance récupérable par une éolienne (en W) S : surface balayée par les pales (en m2) V : vitesse du vent (en m/s) • Ainsi, on peut théoriquement récupérer 2,4 fois plus d'énergie sur un site dont la vitesse moyenne annuelle est de 8 m/s que sur un site à 6 m/s. • Mais dans la pratique des pertes interviennent : rotor, multiplicateur, génératrice, transformateur ... et dans l'exemple précédent on récupère pratiquement 1,8 fois plus d'énergie.
+
+P = 0,37 S V3
+
+La connaissance du gisement éolien est donc particulièrement importante. Des atlas éoliens régionaux ont été élaborés pour une partie du territoire français. Ils sont dressés à partir des données de vent enregistrées par Météo-France dans ses stations météorologiques, et d'informations topographiques et de couverture végétale. Un logiciel de calcul de la ressource en vent permet d'estimer la ressource locale en vent. Des mesures complémentaires de la ressource en vent, sur site, sont dans tous les cas nécessaires car ces atlas ne prennent pas en compte les phénomènes aérologiques locaux. Ceux-ci peuvent être négatifs si des vents turbulents sont générés par un relief accidenté, mais ils peuvent être positifs, si le vent est accéléré par un versant de pente douce tourné vers les vents dominants. Plus généralement, l'absence d'obstacles à la circulation des vents et l'organisation favorable du relief caractérisent les bons sites éoliens. Les zones littorales, les lignes de crêtes, les plateaux sont ainsi, en terme de ressources, des secteurs a priori favorables à l'implantation des parcs éoliens. La campagne de mesures permettra d'affiner la connaissance de la force et de la direction du vent sur le site éolien. En effet la notion de vitesse moyenne est incomplète, voire inadéquate. Un bon site éolien sera soumis à des vents constants plutôt qu'à une alternance de vents violents et de période de temps calme. Ainsi, la distribution des vitesses autour de la vitesse moyenne est importante. En effet, une éolienne ne produira pas s'il y a trop de vent : au-delà de 70 à 110 km/h, selon les modèles, elle s'arrêtera de produire pour des raisons de sécurité. Les vents trop forts ne sont donc pas utilisables, alors qu'ils font augmenter la vitesse moyenne sur un site.
+
+15
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 1
+
+Extrait de l'Atlas éolien du Languedoc Roussillon
+
+Vitesse du vent moins de 6 m/s 6 à 7 m/s 7 à 8 m/s 8 à 9 m/s plus de 9 m/s
+
+CE QU'IL FAUT RETENIR...
+s Un parc éolien est composé d'un ensemble d'éoliennes, mais aussi d'une voie d'accès et d'un réseau d'évacuation de l'électricité. L'étude d'impact devra prendre en compte les différentes composantes du parc. s Il existe différents types d'éoliennes : tour tubulaire ou tour treillis, axe vertical ou horizontal, bipale ou tripale ... Néanmoins les éoliennes tripales, avec une tour tubulaire sont les plus fréquentes. Les recherches technologiques ont permis de rendre ces dernières productives, esthétiques, avec des niveaux sonores faibles. s La ressource en vent est très importante pour la localisation d'un parc éolien. En effet, l'énergie produite est théoriquement proportionnelle au cube de la vitesse du vent.
+
+16
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS - FICHE 2
+
+L' I N T É R Ê T D E L' É N E R G I E É O L I E N N E
+La production d'électricité par énergie éolienne connaît actuellement une croissance importante en Europe. Cette croissance se justifie notamment par l'intérêt environnemental de l'éolien, par l'intérêt pour les collectivités territoriales et la nation. Cette fiche présente les atouts de l'éolien, à l'origine de son succès actuel. Certains bénéfices environnementaux sont davantage approfondis dans la fiche 11 qui traite des aspects sanitaires. Ces données environnementales générales peuvent être intégrées dans l'étude d'impact, même si celle-ci a davantage vocation à traiter de données d'environnement locales.
+
+L'intérêt environnemental général de l'éolien
+Une grande partie de l'énergie utilisée aujourd'hui dans le monde (plus de 80 %) provient de gisements de combustibles fossiles (charbon, pétrole, gaz) ou d'uranium. Ces gisements, ces stocks constitués au fil des âges et de l'évolution géologique sont évidemment en quantité limitée ; ils sont épuisables. Par opposition, l'énergie éolienne est une énergie renouvelable. Celle-ci employée comme énergie de substitution permet de lutter contre l'épuisement des ressources fossiles. En fait, ce n'est pas seulement le risque d'épuisement des combustibles fossiles, ni le souci de la sécurité d'approvisionnement, mais d'autres raisons plus environnementales qui expliquent l'essor de l'éolien : — la lutte accrue contre la pollution atmosphérique favorise des énergies telles que l'éolien, — les combustibles fossiles contribuent massivement au réchauffement progressif de la Terre (effet de serre) à cause du gaz carbonique rejeté par combustion dans l'atmosphère, — certes l'énergie nucléaire ne contribue pas à l'effet de serre, mais elle inspire certaines craintes liées à la sécurité des centrales et au sort des déchets nucléaires, — les polluants émis dans l'atmosphère peuvent ensuite engendrer des effets négatifs sur les écosystèmes, sur le patrimoine et sur l'homme. C'est par exemple le cas des pluies acides. L'énergie éolienne permet de limiter ces risques.
+
+17
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 2
+
+LA LUTTE CONTRE L'EFFET DE SERRE
+Le développement de l'énergie éolienne s'inscrit aujourd'hui dans les politiques de lutte contre l'effet de serre. Les conférences de Kyoto (1997) et Buenos Aires ont conclu sur la nécessité de limiter les rejets de gaz à effet de serre. Or c'est la combustion des combustibles fossiles (fioul et charbon notamment) qui est responsable de la majorité de la pollution atmosphérique et du réchauffement de notre planète.
+
+Dans ce cadre-là, l'Union Européenne s'est engagée à réduire les émissions de gaz carbonique à leur niveau de 1990. Les politiques danoises et allemandes de développement de l'énergie éolienne, en particulier, s'inscrivent dans cette démarche.
+
+De même, la France s'est engagée à ramener à l'échéance 2010, ses émissions de gaz à effet de serre à leur niveau de 1990. Concrètement, en janvier 2000, la Mission Interministérielle de l'Effet de Serre a proposé un programme de 3 000 MW éolien, à l'horizon 2010. Un tel programme est ambitieux puisqu'il suppose l'implantation d'environ 3 000 éoliennes en moins de 10 ans, soit une moyenne de 1 éolienne par jour ouvrable. Les conditions de lancement d'un tel programme qui prolongerait le programme Eole 2005 ne sont pas arrêtées. Dans tous les cas, il montre la volonté française de produire de façon très significative de l'électricité d'origine éolienne.
+
+PRINCIPALES POLLUTIONS GLOBALES OU LOCALES ÉVITÉES PAR L'ÉNERGIE ÉOLIENNE
+- émissions de gaz à effet de serre, - émissions de poussières et de fumées, d'odeurs, - production de suies et de cendres, - nuisances (accidents, pollutions) de trafic liées à l'approvisionnement des combustibles , - rejets dans le milieu aquatique, notamment des métaux lourds, - dégâts des pluies acides sur la faune et la flore, le patrimoine, l'homme , - stockage de déchets.
+
+18
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 2
+
+L'intérêt pour la nation
+Diversification et indépendance énergétique
+Le gaz et le pétrole des pays développés proviennent en partie de régions du monde politiquement instables. En contribuant à diminuer la dépendance énergétique auprès de ces derniers, les énergies renouvelables, dont l'éolien, permettent de prévenir légèrement
+
+La part de l'éolien et des énergies renouvelables dans la production d'électricité en France (en 1998)
+Proportion de l'éolien par rapport à l'ensemble des énergies renouvelables
+0,9 % autres
+
+Proportion des énergies renouvelables par rapport à l'ensemble des énergies
+10,6 % autres
+
+0,1 % éolien
+75,8 % nucléaire
+
+13,6 %
+
+énergies renouvelables
+
+99 % d'origine hydraulique
+
+les risques liés à l'approvisionnement et aux fluctuations des prix du gaz et du pétrole. De plus selon l' adage « de ne pas mettre tous ses oeufs dans le même panier » l'énergie éolienne permet de diversifier l'origine de nos sources énergétiques. A ce titre la France en Europe est nettement en retrait pas rapport à des pays comme l'Allemagne, le Danemark ou l'Espagne (cf. Fiche 3). Elle possède pourtant le deuxième gisement éolien d'Europe.
+
+Evolution de la puissance éolienne installée de 1995 à 1999
+(Systèmes solaires n°135-2000)
+
+14000 12000 Puissance installée (MW) 10000 8000 6000 4000 2000 0 1995 1996 1997 1998 1999 Monde Europe Allemagne Danemark Espagne Pays-Bas Grande-Bretagne France
+
+19
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 2
+
+Emploi
+La fabrication des éoliennes, l'exploitation des parcs et toutes les activités connexes contribuent au développement économique local et à la création d'emplois temporaires et permanents. • Fabrication des éoliennes Même si les constructeurs d'éoliennes sont essentiellement des sociétés étrangères (danoises, espagnoles ...), ces fabricants font travailler des sous-traitants disséminés dans toute l'Europe. Ainsi, des sociétés françaises spécialisées fournissent les génératrices, les pales, les freins ... De plus, lors de la construction d'un parc éolien, des parties sont fabriquées localement : tours, fondations, électricité ... • Exploitation des éoliennes La grande majorité des emplois liés à l'exploitation sont régionaux. Il s'agit d'emplois permanents, à la différence des emplois temporaires liés à la fabrication. Cependant ces emplois restent limités. • Emplois induits Il est plus délicat d'apprécier les emplois indirects ou induits. On estime que ces emplois induits sont quatre fois plus nombreux que les emplois directs. Ils sont liés à l'accompagnement de cette nouvelle activité : éducation, transport, restauration, hébergement, santé, loisirs ...
+
+Emplois dans la filière éolienne
+employés dans la filière éolienne
+
+30000 25000 20000 15000 10000 5000 0
+
+EOLE 2005
+
+EUROPE
+
+MONDE
+
+20
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 2
+
+En définitive l'énergie éolienne crée des emplois; en France on estime que l'installation de 500 MW à l'horizon 2005 pourrait générer environ 1000 emplois. A titre d'exemple, la filière éolienne au Danemark : — représente le quatrième poste d'exportation; elle est plus importante que la filière pêche — emploie plus de 10 000 personnes et a créé près de 5 000 emplois à l'extérieur du pays. On estime à plus de 20 000 personnes le nombre d'européens employés aujourd'hui dans la filière éolienne.
+
+L'intérêt pour les collectivités territoriales
+Les incidences locales de l'implantation d'un parc éolien concernent : — l'emploi généré lors de la construction et de l'exploitation du parc, — l'aménagement du territoire, — éventuellement le tourisme technologique. La procédure de calcul de la taxe professionnelle favorise le développement de l'énergie éolienne en France : — un parc éolien nécessite un investissement initial conséquent et un fonctionnement peu coûteux, ce qui entraîne une base imposable élevée, — le mode de calcul de la taxe et la notion de plafonnement font que la part payée par l'exploitant demeure raisonnable. Les parc éoliens peuvent être bénéfiques en terme d'aménagement du territoire. Ils concernent le plus souvent des zones rurales fragilisées. Ils peuvent être source de richesses locales et favoriser le développement économique des communes concernées. Les parcs éoliens peuvent induire un tourisme technologique. C'est actuellement le cas pour des communes comme Port la Nouvelle dans le département de l'Aude.
+
+21
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 2
+
+LA TAXE PROFESSIONNELLE
+Celle-ci est perçue par la commune, le département et la région. La taxe professionnelle est la retombée économique et financière la plus importante pour la (ou les) commune(s) concernée(s). Son montant est fonction de plusieurs paramètres : - le taux d'imposition local, - le niveau d'investissement, - le chiffre d'affaires (donc la production électrique dans le cas d'un parc éolien), etc. Le montant de la taxe professionnelle versée peut atteindre 70 000 F par an pour une éolienne de 700 kW.
+
+LE TOURISME TECHNOLOGIQUE
+Les aérogénérateurs sont les moulins à vent de notre siècle. Ils semblent intéresser les visiteurs pour deux raisons principales : - d'une part l'intérêt pour l'écologie, - d'autre part l'intérêt pour l'art des ingénieurs. La clientèle touristique potentielle est vaste : - estivants (notamment pour les parcs installés sur le littoral qui sont actuellement majoritaires), - scolaires (c'est la première clientèle des parcs en fonctionnement), - décideurs (les parcs éoliens représentent des vitrines technologiques), - curieux, randonneurs.
+
+CE QU'IL FAUT RETENIR...
+s A l'échelle de l'environnement global, l'énergie éolienne présente de multiples atouts : non utilisation de combustibles fossiles, non émission de polluants atmosphériques, peu de déchets, etc. s Pour la nation les énergies renouvelables, dont l'éolien, sont intéressantes pour diversifier nos sources d'énergie, accroître notre indépendance énergétique même de façon modeste. s Pour les collectivités territoriales les incidences économiques sont multiples : - sur l'emploi, - sur les finances locales, - sur l'aménagement du territoire, - sur le tourisme.
+
+22
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS - FICHE 3
+
+LE DÉVELOPPEMENT D E L' É O L I E N
+Les éoliennes sont les descendantes de nos anciens moulins à vent. Ceux-ci existent depuis la plus haute Antiquité, pour pomper l'eau ou moudre le grain. Depuis les années 70, des éoliennes d'un nouveau type sont apparues ; elles sont destinées à la production d'électricité. Cette fiche présentera successivement : — l'éolien en France avec notamment le programme EOLE 2005, — l'éolien en Europe, — l'évolution des technologies. En préambule, quelques définitions de physique seront rappelées. Elles présentent les notions de puissance et d'énergie, ainsi que les unités de mesure.
+
+Quelques rappels de physique
+• La puissance électrique se définit comme la valeur instantanée délivrée ou consommée. Elle correspond à l'énergie consommée ou produite par unité de temps. Elle s'exprime principalement en watts (W), en kilowatts (kW), en mégawatts (MW) ou gigawatts (GW) (cf. tableau). A titre d'exemple : — la puissance d'un lave-linge ou d'un lave-vaisselle est d'environ 2 000 W, — la puissance d'une éolienne installée actuellement est comprise entre 600 kW et 1 500 kW, — la puissance d'une tranche de centrale nucléaire est comprise entre 900 et 1 400 MW. • L'énergie se réfère à une période de temps pendant laquelle l'électricité est produite ou consommée. L'unité officielle de mesure de l'énergie est le Joule mais on utilise fréquemment en électricité le kilowattheure. C'est une production ou une consommation d'un kilowatt pendant une heure (c'est également la production ou la consommation de 2 kW pendant une demi-heure). A titre d'exemple : — la consommation d'un réfrigérateur est d'environ 500 kWh/an, — la production d'une éolienne de 500 kW est d'environ 1 à 1,6 GWh/an, — la production française d'électricité est d'environ 470 TWh/an.
+
+23
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 3
+
+LES ÉCHELLES DE GRANDEUR
+Kilo (k) : Méga (M) : Giga (G) : Tera (T) : 103 (millier) 106 (million) 109 (milliard) 1012
+
+On parlera ainsi indifféremment : - d'une éolienne de 1 000 kW ou d'1 MW - d'une tranche de centrale nucléaire de 1200 MW ou d'1,2 GW
+
+QUELQUES CHIFFRES
+— En France en 1997 l'origine de l'électricité est nucléaire à 78 %, hydraulique à 14 % et thermique à 8 %. L'électricité d'origine éolienne est inférieure à 1 ‰. — L'objectif du programme Eole 2005 est l'installation de parcs éoliens totalisant à l'échelle nationale 250 à 500 MW soit environ 500 éoliennes. — A titre de comparaison la puissance électrique de l'ensemble des centrales françaises, nucléaires et classiques, atteint près de 122 000 MW.
+
+NOTION DE PUISSANCE NOMINALE ET DE FACTEUR DE CHARGE
+— A la différence d'une centrale traditionnelle, la production électrique d'un parc éolien fluctue. Elle est comprise entre 0 et la puissance nominale du parc, c'est à dire sa puissance maximale. — A titre d'exemple le parc éolien de Port la Nouvelle a une puissance nominale de 2,2 MW (4 éoliennes de 500 kW et 1 éolienne de 200 kW) pour une production annuelle de l'ordre de 6 000 000 kWh. Cette énergie serait théoriquement produite par une centrale traditionnelle de puissance 685 kW fonctionnant 24 heures sur 24 toute l'année. — Le facteur de charge correspond au rapport entre l'énergie produite pendant une année et l'énergie produite par la machine si elle avait fonctionné en permanence à sa puissance nominale. Il est de 31 % pour l'exemple donné.
+
+L'éolien en France et le programme EOLE 2005
+Le programme EOLE 2005
+Le gouvernement français, par l'intermédiaire du Ministère de l'Industrie, a lancé en février 1996 un programme de développement de l'énergie éolienne baptisé Eole 2005. Son objectif est l'installation, à l'horizon 2005, de parc éoliens raccordés au réseau électrique pour une puissance cumulée comprise entre 250 et 500 MW.
+
+24
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 3
+
+Ce programme a une double finalité, énergétique et industrielle. Sur le plan énergétique, il s'agit de préparer la France à exploiter sa ressource éolienne, la seconde en Europe. A l'issue du programme, l'objectif est de rendre l'énergie éolienne compétitive sur les sites de bonne qualité et de diversifier la production électrique. Sur le plan industriel, il s'agit de contribuer au développement de l'industrie éolienne française afin de profiter de la forte croissance du secteur. Celle-ci est de 20 à 30 % par an ces cinq dernières années. La procédure est conduite par EDF, sous forme d'appels à propositions auprès de producteurs indépendants. Un comité de sélection des projets a été constitué avec des représentants d'EDF, des Ministères concernés (Industrie, Environnement et Recherche), de l'ADEME et des personnalités qualifiées. Le producteur indépendant est invité à proposer la réalisation d'un parc éolien sur un site donné. Son projet doit se conclure par une proposition de prix de vente de l'électricité. Il peut proposer autant de projets qu'il le souhaite. La sélection des projets s'opère selon le prix de vente proposé par le producteur indépendant, l'intérêt économique, industriel et technique du projet, le respect de l'environnement, l'avis des collectivités territoriales et l'implantation géographique. L'engagement d'EDF concerne l'achat pendant 25 années de l'électricité produite, dont les quinze premières années au tarif proposé par le producteur indépendant. Depuis son lancement plus d'une cinquantaine de projets ont été sélectionnés au cours de trois appels à proposition. Ils totalisent une puissance de 340 MW dont 82 % en métropole, 15 % en Corse et 3 % dans les DOM-TOM. Le prix moyen d'achat, par EDF, de l'électricité produite dans les projets sélectionnés lors du dernier appel à propositions a été de 31,2 centimes par kWh (0,047 euro par kWh).
+
+Objectif d'évolution de la filière éolienne en France
+MW
+3000 2500 2000 1500 1000 500 0
+
+Juin 2000 (Eole 2005 : 24 MW Horizon 2005 hors Eole 2005 : 17 MW) (250 à 500 MW) Horizon 2010 (3 000 MW)
+
+Hors Eole 2005
+Des projets éoliens peuvent être réalisés en dehors du programme Eole 2005. En effet, EDF possède une obligation d'achat de l'électricité produite au moyen de sources renouvelables. Ces conditions d'achat de l'électricité sont fixées par Décret ; elles sont indexées sur le prix de vente de l'électricité aux particuliers. Ces prix d'achat ne
+
+25
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 3
+
+Cartes des projets sélectionnés dans le cadre d'Eole 2005
+(source EDF - Mai 2000)
+
+26
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 3
+
+permettent une rentabilité économique que pour les sites les plus favorables.
+
+Eole 2005 demain
+Dans le cadre de la libéralisation du marché européen de l'électricité, une Commission de Régulation de l'Electricité (CRE) a été créée. Elle a un rôle similaire à celui du Conseil Supérieure de l'Audiovisuel ou de l'Autorité de Régulation des Télécommunications. Dorénavant, c'est cette CRE qui lancera les appels à proposition pour la production d'électricité d'origine éolienne. EDF pourrait dès lors, sous certaines conditions à préciser, devenir un proposant de parcs éoliens.
+
+L'éolien dans le monde et en Europe
+Evolution de la puissance éolienne installée dans le monde (en MW)
+(Systèmes solaires n°135-2000)
+14 000
+
+12 000
+
+• Début 2000 la puissance mondiale de l'éolien était de près de 13 500 MW soit, en terme d'énergie produite, l'équivalent d'environ 6 tranches de centrale nucléaire. L'utilisation de l'énergie éolienne à des fins de production d'électricité est née en Californie au début des années 80, consécutivement à la mise en place d'incitations fiscales. Depuis 3 ans, l'énergie éolienne a connu une croissance moyenne de 30 % par an (soit un taux de croissance supérieure à celui de l'informatique). • La capacité totale des parcs éoliens installés dans l'Union Européenne est de 9 990 MW fin avril 2000. La France possède moins de 1 % de la puissance installée alors qu'elle dispose du second gisement européen avec 13,5 % du potentiel.
+
+10 000
+
+Puissance en MW
+
+8 000
+
+6 000
+
+4 000
+
+Localisation de la puissance éolienne dans le monde en 1999
+(Systèmes solaires n°135-2000)
+
+2 000
+
+Reste du monde 1 Asie
+
+%
+
+0
+1981 1982 1983 1984 1985 1986 1987 1988 1989 1990 1991 1992 1993 1994 1995 1996 1997 1998 1999
+
+10 %
+Amérique du Nord
+
+20 %
+
+Les pays européens leader sont : · l'Allemagne avec près de 4 500 MW installés, · le Danemark avec près de 1 750 MW, · l'Espagne avec plus de 1 500 MW.
+
+Union Européenne 69 %
+
+Viennent ensuite les Pays-Bas (410 MW), la Grande-Bretagne (360 MW), la Suède (220 MW) et l'Italie (210 MW) pour les pays équipés de plus d'une centaine de mégawatts. L'énergie éolienne s'est développée en Allemagne essentiellement pour des raisons politiques et environnementales. Aujourd'hui un tiers des parcs éoliens installés dans le monde est situé en Allemagne. Les constructeurs allemands détiennent 15 % du marché mondial.
+
+27
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 3
+
+Puissance en MW
+
+Le Danemark est leader dans la construction des aérogénérateurs. Les industriels danois fabriquent chaque année environ la moitié des éoliennes à travers le monde. La filière éolienne danoise emploie près de 10 000 personnes. Le développement de l'éolien en Espagne est encore plus récent. On trouve 3 constructeurs espagnols parmi les 10 premiers constructeurs mondiaux. Ces 3 constructeurs détiennent 12 % du marché.
+
+Les cinq premiers pays au monde (en MW)
+(Systèmes solaires n°135-2000)
+1997 1998 1999
+
+5 000 4 000 3 000 2 000 1 000 0
+
+I a pa s-U nem La différence essentielle entre les trois pays Es lem tat a E Al D européens leader et des pays comme la GrandeBretagne ou la France réside dans les politiques d'achat de l'électricité d'origine éolienne. Dans les pays leader, les gouvernements ont mis en place des tarifs, semi-fixes et incitatifs, de rachat de l'électricité produite par les parcs Localisation de la puissance éolienne éoliens. Tandis que dans les deux autres dans l'Union Européenne en 1999 (Systèmes solaires n°135-2000) pays, le développement s'est appuyé sur des appels à propositions conduisant à la Allemagne 48 % Reste de l'UE 4 % sélection des projets les «moins-disants». Suede 2 % Italie 2 % Aujourd'hui le prix d'achat de l'électricité Royaume-Uni 4 % d'origine éolienne est voisin de 50 centimes Pays-Bas 5 % (0,076 euro) par kWh dans les pays leader contre 30 centimes (0,045 euro) en GrandeEspagne 16 % Bretagne et en France.
+
+e gn
+
+s ni
+
+k ar
+
+e gn
+
+e nd
+
+Danemark 19 %
+
+C'est dans ces pays d'achat incitatifs qu'une filière industrielle a pu se développer. Avec la garantie du marché, les industriels peuvent en effet innover.
+TOTAL 9182 MW
+
+Le développement quantitatif et qualitatif des éoliennes s'accompagne de la baisse de leur prix de revient. Avec un marché plus grand, les séries industrielles sont également plus importantes, ce qui permet un amortissement plus étalé des moyens de recherche et de fabrication.
+
+L'évolution des technologies
+Deux grandes tendances dans l'évolution récente des technologies des éoliennes se dégagent : — une homogénéisation avec l'éolienne à axe horizontal, tripale à tour tubulaire. Ce type d'éolienne devient le standard mondial ; — une augmentation régulière de la taille et la puissance des éoliennes. Cette augmentation de la taille des éoliennes est constante depuis de nombreuses années; elle devrait se poursuivre puisque des machines de 2,5 MW sont d'ores et déjà commercialisées. On notera que c'est le marché de l'éolien offshore qui impulse dorénavant cette augmentation de taille.
+
+28
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 3
+
+Des variantes techniques, relativement mineures, existent aujourd'hui dans l'éolienne standard. On distingue ainsi deux grandes familles, selon la conception des pales, celles à pas variable, et celles à décrochage aérodynamique. La conception de la génératrice électrique influe également : certains modèles ne possèdent pas de multiplicateur. A moyen terme, ces éoliennes tripales à tour tubulaire devraient demeurer le standard pour des raisons techniques et économiques. Tout d'abord il s'agit d'éoliennes performantes, s'appuyant sur un fort retour d'expériences et des améliorations progressives. Leur fiabilité est prouvée ; leur rendement également. Ensuite, les différentes usines ont été conçues pour la fabrication de ce type d'éoliennes. Il est à noter que si les principes de fonctionnement d'une éolienne sont relativement simples, leurs conditions de fonctionnement sont sévères. Les éoliennes doivent résister aux tempêtes (elles ne résistent pas aux ouragans, cf. fiche 11) Les progrès qui interviendront dans les années futures seront liés à la disponibilité de nouveaux matériaux, notamment pour les pales. Si les pales actuelles de 20 à 25 m de long sont en fibre de verre, la prochaine génération de pales devrait largement utiliser la fibre de carbone plus résistante, plus légère, mais plus coûteuse.
+
+Dimensions relatives
+Mètres
+300 Tour Eiffel
+
+250 Eoliennes expérimentales de type Behemoth/Vortec 3 MW 150 Eoliennes Domestiques aux U.S.A. Eoliennes de taille moyenne des années 1990 1,5 MW
+
+200
+
+100
+
+Pylône très haute tension
+
+50 10 kW 0
+
+500 kW 200-250 kW 100 kW
+
+Comparaison de la hauteur des éoliennes avec d'autres éléments du paysage
+Des évolutions significatives peuvent être attendues de la mise au point des modèles pour l'offshore : par exemple les éoliennes bipales pourraient réapparaître. De nouvelles familles d'éoliennes pourraient apparaître ou réapparaître dans les années à venir : — les éoliennes à axe vertical ; — les éoliennes avec concentration du flux (Vortec) ou « aérogénérateur à diffusion augmentée ».
+
+29
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 3
+
+Turbine Vortec de type V54, d'une puissance nominale de 3,3 MW
+
+CE QU'IL FAUT RETENIR...
+s En France, le programme Eole 2005 a pour objectif d'installer à l'horizon 2005 une puissance comprise entre 250 et 500 MW, soit environ 500 éoliennes. s Trois pays européens ont largement développé la filière éolienne : l'Allemagne, le Danemark et l'Espagne. La France possède moins de 1 % de la puissance installée alors qu'elle dispose du second gisement éolien. L'éolien connaît aujourd'hui une croissance très forte, de l'ordre de 30 %, qui dépasse même celle de l'informatique. s L'évolution des technologies explique en partie ce dynamisme. On assiste à une augmentation régulière de la taille et la puissance des éoliennes. L'éolienne tubulaire, tripale à axe horizontal se généralise.
+
+30
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS - FICHE 4
+
+OBJECTIFS DE L'ÉTUDE D'IMPACT ET CADRE RÉGLEMENTAIRE
+L'étude d'impact sur l'environnement (EIE) prévue par la loi sur la Protection de la nature et votée le 10 juillet 1976 par le Parlement est un instrument essentiel pour la protection de la nature et de l'environnement. Depuis le décret d'application de 1977, de multiples modifications sont apparues : contenu de l'étude d'impact, champ d'application, responsabilité, nouvelles législations ... L'étude d'impact constitue aujourd'hui bien souvent la pièce maîtresse que le Maître d'Ouvrage doit présenter préalablement à chaque projet. Cette fiche présente successivement : — la définition d'une étude d'impact, — ses objectifs, — le cadre réglementaire dans lequel elle s'insère.
+
+Qu'est ce qu'une étude d'impact ?
+L'étude d'impact est une identification et une analyse des effets positifs et négatifs d'un projet (ou d'un programme) sur l'environnement, le cadre de vie et la santé. L'étude d'impact intervient également à un moment privilégié ; elle constitue bien souvent la synthèse des études d'environnement réalisées aux différents stades d'élaboration du projet. L'étude d'impact permet donc au Maître d'Ouvrage, au même titre que les études techniques, les études économiques et les études financières d'améliorer son projet.
+
+Etudes techniques Etudes économiques et financières
+
+Projet envisagé
+
+Choix d'aménagement
+
+Etude d'impact
+
+31
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 4
+
+Les trois objectifs principaux de l'étude d'impact (EIE)
+L'étude d'impact est une analyse scientifique et technique permettant d'envisager les conséquences futures d'un projet d'aménagement sur l'environnement. L'étude d'impact doit être complète, précise et sérieuse. Les thèmes de l'environnement à prendre en compte sont « la faune et la flore, les sites et les paysages, le sol, l'eau, l'air, le climat, les milieux naturels et les équilibres biologiques, la protection des biens et du patrimoine culturel, la commodité du voisinage (bruit, vibrations, odeurs, émissions lumineuses), l'hygiène, la sécurité, la salubrité publique et la santé ». Elle est à la fois : - un instrument de protection de l'environnement, - un instrument d'information pour les services de l'Etat et pour le public, - un instrument d'aide à la décision pour le maître d'ouvrage du projet.
+
+Outil de protection
+L'objectif premier de l'étude d'impact est la protection de l'environnement. Protéger l'environnement ne se limite pas seulement à conserver les espaces et les espèces et à classer les territoires pour les soustraire aux activités humaines. Protéger l'environnement c'est également intégrer l'environnement dans les actions de planification et d'aménagement. C'est donc concevoir des projets respectueux de l'homme, des paysages et des milieux naturels. C'est concevoir des projets soucieux d'économiser l'espace et les ressources naturelles. Et c'est concevoir des projets limitant la pollution de l'eau, de l'air ou des sols.
+
+Outil d'information
+L'étude d'impact est un outil d'information pour les services de l'Etat, donneurs de l'autorisation administrative de fonctionnement. Dans ce cadre-là, elle est une des pièces officielles de la procédure de décision administrative et, de ce fait, elle est soumise au contrôle du juge administratif. L'étude d'impact est également un outil d'information du public, notamment à travers l'enquête publique. L'étude d'impact constitue alors la pièce maîtresse du dossier de demande d'autorisation.
+
+Outil d'aide à la décision
+L'étude d'impact, en tant qu'analyse scientifique et technique des contraintes environnementales, constitue une des études préalables que le maître d'ouvrage doit conduire. Les autres études que ce dernier doit mener concernent l'analyse de la ressource en vent, la faisabilité des raccordements routier et électrique, l'aptitude géotechnique des sols ...
+
+32
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 4
+
+L'étude d'impact constitue une synthèse des diverses expertises environnementales conduites sur le site : expertises botanique et faunistique, analyse acoustique, analyse paysagère, ... Conduite en parallèle des autres études, techniques et économiques, elle permet d'affiner le projet.
+
+Le cadre réglementaire
+La loi n° 76-629 du 10 juillet 1976 relative à la protection de la nature présente, dans son article 2, un grand principe du droit de l'environnement : l'obligation de prendre en compte l'environnement à l'occasion de toute action ou décision publique ou privée risquant de générer des impacts sur celui-ci. Ce même article prévoit la réalisation d'une
+
+CADRE LÉGISLATIF ET RÉGLEMENTAIRE DE L'ÉTUDE D'IMPACT SUR L'ENVIRONNEMENT
+- Directive du Conseil des Communautés Européennes du 27 juin 1985 n° 85/327/CEE concernant l'évaluation des incidences de certains projets publics et privés sur l'environnement (directive modifiée le 03 Mars 1997, qui porte dorénavant le n° 97/11/CE) - Loi n° 76-629 du 10 Juillet 1976 relative à la protection de la nature. - Loi n° 96-1236 du 30 décembre 1996 sur l'air et l'utilisation rationnelle de l'énergie (article 19 qui exige de prendre en compte les effets sur la santé). - Décret n° 77-1141 du 12 Octobre 1977 qui définit le cadre réglementaire de l'étude d'impact. - Décret n° 93-245 du 25 février 1993 portant modification du décret de 1977. - Circulaire du 27 septembre 1993 prise pour l'application du décret n° 93-245 du 25 février 1993 (Ministère de l'Environnement).
+
+étude d'impact préalable à l'engagement d'aménagements et d'ouvrages pouvant porter atteinte à l'environnement. Le champ d'application, le contenu des études d'impact ont été précisés et complétés depuis le premier décret d'application de 1977 : — mise en conformité avec la directive européenne de 1985, — ajout de nouveaux chapitres au dossier d'étude d'impact, — prise en compte des effets sur la santé.
+
+Quels sont les projets éoliens soumis à étude d'impact ?
+• Un parc éolien est soumis à étude d'impact dès lors que son coût est supérieur ou égal à 12 MF (1 829 388 euro). Ce coût prend en compte la totalité des dépenses prévues par l'aménagement, toutes taxes comprises. Il inclut également les acquisitions foncières. Lorsque la réalisation est fractionnée dans le temps ou dans l'espace, le coût prend en compte toutes les phases ou parties du programme.
+
+33
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 4
+
+Même si ce seuil financier de 12 MF (1 829 388 euro) n'était pas dépassé, un parc éolien pourrait être soumis à étude d'impact pour d'autres raisons : - s'il nécessite l'installation d'ouvrages de transport d'électricité de tension supérieure ou
+
+LA NOTICE D'IMPACT
+Version simplifiée de l'étude d'impact, la notice comprend théoriquement deux rubriques décrivant respectivement les incidences éventuelles du projet sur l'environnement et les conditions dans lesquelles l'opération projetée satisfait aux préoccupations d'environnement. Dans les faits, même si la notice ne requiert pas réglementairement le plan indiqué pour l'étude d'impact, il est fortement recommandé de s'en inspirer. Théoriquement, pour des parcs de moins de 12 MF la notice est exigée : — si des ouvrages électriques aériens de moins de 63 000 V sont construits, — si des défrichements de bois sont nécessaires. Dans les faits nous conseillons pour les petits projets de moins de 12 MF de réaliser systématiquement une notice d'impact. Même si celle-ci peut dans certains cas ne pas être exigée, elle demeure malgré tout : — un outil de communication et d'information auprès des services de l'Etat dans le cadre de la procédure de permis de construire, — un outil de protection de l'environnement par la prise en compte des contraintes existantes, — un outil d'aide à la décision pour le maître d'ouvrage.
+
+égale à 63 000 V, - s'il nécessite des défrichements portant sur une superficie d'au moins 25 ha. Dans la pratique c'est le seuil financier qui est généralement le facteur déterminant. Dès lors qu'un parc éolien dépasse les 1,3 à 1,5 MW il a toutes les chances d'être soumis à étude d'impact. • La notice d'impact est une étude d'impact simplifiée concernant les projets de moindre importance (et donc probablement d'impact moindre). Elle concerne les projets de moins de 12 MF.
+
+Quel est le contenu de l'étude d'impact ?
+Le décret du 12 octobre 1977 modifié mentionne que l'étude d'impact doit présenter successivement : « 1° Une analyse de l'état initial du site et de son environnement, portant notamment sur les richesses naturelles et les espaces naturels agricoles, forestiers, maritimes ou de loisirs, affectés par les aménagements ou ouvrages ; 2° Une analyse des effets directs et indirects, temporaires ou permanents du projet sur
+
+34
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 4
+
+l'environnement et la santé, et, en particulier sur la faune et la flore, les sites et les paysages, le sol, l'eau, l'air, le climat, les milieux naturels et les équilibres naturels et les équilibres biologiques, sur la protection des biens et du patrimoine culturel et, le cas échéant, sur la commodité du voisinage (bruit, vibrations, odeurs, émissions lumineuses) ou sur l'hygiène, la sécurité et la salubrité publique ; 3° Les raisons pour lesquelles, notamment du point de vue des préoccupations d'environnement, parmi les partis envisagés, le projet présenté a été retenu ; 4° Les mesures envisagées par le maître de l'ouvrage ou le pétitionnaire pour supprimer, réduire et, si possible, compenser les conséquences dommageables du projet sur l'environnement, ainsi que l'estimation des dépenses correspondantes ; 5° Une analyse des méthodes utilisées pour évaluer les effets du projet sur l'environnement mentionnant les difficultés éventuelles de nature technique ou scientifique rencontrées pour établir cette évaluation. Afin de faciliter la prise de connaissance par le public des informations contenues dans l'étude, celle-ci fera l'objet d'un résumé non technique. Lorsque la totalité des travaux prévus au programme est réalisée de manière simultanée, l'étude d'impact doit porter sur l'ensemble du programme. Lorsque la réalisation est échelonnée dans le temps, l'étude d'impact de chacune des phases de l'opération doit comporter une appréciation des impacts de l'ensemble du programme ». L'article 19 de la loi sur l'air de 1996 ajoute que toute étude d'impact doit désormais inclure une « étude des effets du projet sur la santé ».
+
+UN EXEMPLE DE PLAN D'ÉTUDE D'IMPACT*
+— Résumé non technique — Présentation du projet : - les composantes du projet - la procédure de construction - les aspects réglementaires de l'étude d'impact — L'état initial de l'environnement — Les raisons du choix du projet — Les effets sur l'environnement de la solution retenue — Les mesures réductrices ou compensatoires associées — Les effets sur la santé — Les méthodes utilisées et les difficultés rencontrées * Il n'y a pas un modèle unique de plan d'étude d'impact, d'autant plus que celle-ci s'adresse à un public large associant des personnes compétentes dans le domaine de l'éolien ou de l'environnement et des personnes non averties. Nous considérons que le rédacteur doit toujours être attentif à la lisibilité du document et la cohérence de la démarche.
+
+35
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 4
+
+Même si le décret présente l'ordonnancement des chapitres, certaines modifications peuvent être apportées dans l'ordre des chapitres : — il est souvent préférable de placer le résumé non technique au début, ou de façon bien démarquée, — il peut être opportun de traiter après l'analyse de l'état initial du site et de son environnement, la partie relative aux raisons du choix du projet. En effet cette disposition peut permettre dans certains cas de mieux percevoir la démarche de conception et de prise en compte de l'environnement, dans le projet, — l'analyse de la jurisprudence sur les études d'impact montre que tout formalisme excessif est à proscrire. Par contre le juge veillera à ce que l'étude d'impact contienne les éléments d'information prévus par les textes, et à ce que l'ordonnancement du dossier n'altère pas sa compréhension. De plus il est souvent utile dans l'étude d'impact de reprendre la justification technicoéconomique du projet, sa description, ainsi que la place de l'étude d'impact dans la procédure d'instruction du projet. Notons enfin le principe de proportionnalité : « Le contenu de l'étude d'impact doit être en relation avec l'importance des travaux et aménagements projetés et avec leurs incidences prévisibles sur l'environnement » A titre d'exemple : — un parc éolien de 20 éoliennes nécessitera une analyse plus fouillée qu'un parc de 3 ou 4 éoliennes de même puissance, — dans l'étude d'impact d'un parc, on s'attardera probablement davantage sur l'analyse paysagère que sur l'analyse de la qualité des cours d'eau environnants, — l'analyse du milieu naturel sera plus approfondie si l'on se situe d'après les inventaires existants dans un secteur sensible, . Plus généralement le volume de l'étude d'impact doit être en relation avec l'importance du projet et la sensibilité du milieu.
+
+Qui est responsable de l'étude d'impact ?
+L'étude d'impact est réalisée sous la responsabilité du maître d'ouvrage, du pétitionnaire ou du promoteur. Les coûts afférents à la réalisation de l'étude d'impact sont entièrement à sa charge. Le maître d'ouvrage n'est cependant pas tenu de faire l'étude d'impact luimême. En raison de son caractère technique, de la diversité des connaissances requises, il est même recommandé de faire appel à des bureaux d'études ou à des consultants extérieurs spécialisés dans ce type d'étude. Dans tous les cas, le document final doit indiquer la dénomination précise et complète du ou des auteurs de l'étude d'impact. Cette disposition vise à renforcer la crédibilité du dossier aux yeux du public et à assurer la transparence de la décision. Le contrôle de l'étude d'impact est effectué par les services instructeurs des administrations de l'Etat qui vérifient le contenu et la pertinence du dossier. Depuis 1977 ce sont des dizaines de milliers d'études d'impact qui ont été rédigées, sur
+
+36
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 4
+
+une grande variété d'aménagements, d'ouvrages ou de travaux. Certaines de ces études d'impact ont fait l'objet de recours. Une jurisprudence s'est ainsi constituée ; elle permet aussi d'éclairer les principales difficultés d'application des textes en vigueur. Il va de soi que le contentieux sur une étude d'impact peut considérablement ralentir la procédure d'instruction du projet ou même remettre en cause sa faisabilité. Le maître d'ouvrage aura donc tout intérêt à conduire cette étude avec sérieux tant sur le fond que sur la forme.
+
+LES BUREAUX D'ÉTUDES SPÉCIALISÉS EN ENVIRONNEMENT
+Chaque année plus de 6 000 études d'impact sont réalisées. Elles concernent une grande variété d'aménagements, d'ouvrages ou de travaux. En France il existe environ 600 bureaux d'études et consultants spécialisées en évaluation environnementale. Ces structures peuvent mener entièrement l'évaluation environnementale du début jusqu'à la fin, ou ne traiter que certaines composantes de l'environnement, ou ne traiter que certains types d'aménagements. Pour les parcs éoliens, il est souvent fait appel à des spécialistes du paysage, des nuisances sonores, des diagnostics floristiques ou faunistiques (notamment des ornithologues). Il est à noter qu'il n'y a pas d'habilitation obligatoire, au sens strict du terme, des bureaux d'études à réaliser des études d'impact. Néanmoins, le maître d'ouvrage aura tout intérêt à s'associer à des personnes compétentes.
+
+CE QU'IL FAUT RETENIR...
+s Une étude d'impact est à la fois un outil de protection de l'environnement, un outil d'information sur un projet et un outil d'aide à la décision. L'étude d'impact, nécessaire au même titre que les études techniques, économiques et financières doit permettre au maître d'ouvrage d'améliorer son projet. s Instaurée dans le cadre de la loi sur la protection de la nature en 1976, l'étude d'impact n'a cessé d'évoluer depuis plus de vingt ans. Son contenu a été progressivement affiné, complété ; elle devient aujourd'hui une pièce maîtresse dans la procédure d'instruction des projets. s Le maître d'ouvrage est responsable de l'étude d'impact mais il n'est pas tenu de la réaliser lui-même. Vu la technicité et la diversité des données à prendre en compte, il est bien souvent préférable qu'il s'associe à des bureaux d'études ou consultants compétents en la matière.
+
+37
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS - FICHE 5
+
+LA CONDUITE DE L'ÉTUDE D'IMPACT ET LES PROCÉDURES D'AUTORISATION
+Les études d'environnement à réaliser lors de la conception d'un projet, ne doivent pas être perçues comme une contrainte pour le maître d'ouvrage, mais au contraire comme la possibilité d'améliorer son projet. Les études d'environnement sont d'autant plus pertinentes qu'elles auront été menées en respectant un certain nombre de principes exposés dans la première partie de la fiche. L'étude d'impact s'inscrit généralement dans deux procédures : le permis de construire et l'enquête publique. L'insertion dans ces procédures sera présentée dans la deuxième partie de la fiche. La procédure liée au raccordement électrique ne sera pas développée dans la présente fiche. Il s'agit davantage de contraintes techniques et réglementaires présentées dans d'autres documents.
+
+La conduite de l'étude d'impact
+• L'analyse de l'environnement doit être engagée dans une démarche continue, progressive et sélective. — La continuité doit être assurée aux différentes étapes du programme des études et de manière générale à tous les stades du projet. La continuité est une condition nécessaire à la cohérence du projet. — Il est bien évident qu'il ne saurait être question dès la première phase d'étude d'analyser l'ensemble des données dans le moindre détail. La logique veut ainsi que le niveau de précision aille croissant au fur et à mesure des phases successives. — La sélectivité s'impose face à la complexité et au grand nombre de critères environnementaux. Autrement dit la priorité ne doit pas être d'atteindre l'exhaustivité mais plutôt de rechercher les enjeux les plus pertinents. Les trois notions précédentes appellent celle d'itération qui consiste à vérifier la pertinence des choix antérieurs. L'apparition d'un nouveau problème, l'approfondissement d'un aspect du projet ne remet-il pas en question ces choix ? • L'analyse de l'environnement doit être engagée le plus en amont possible, au stade des études préliminaires. De fortes contraintes environnementales peuvent remettre en cause la faisabilité même du projet ; il est donc indispensable de les identifier le plus tôt possible. C'est bien pour cette raison, que dans le cadre du programme Eole 2005, a été mis en place le prédiagnostic environnemental.
+
+38
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 5
+
+LE PRÉDIAGNOSTIC ENVIRONNEMENTAL ET RÉGLEMENTAIRE
+Une spécificité des parcs éoliens et de la procédure d'appels à propositions Eole 2005 est la prise en compte officielle des contraintes environnementales très en amont. Dès la première étape de sélection d'un projet de parc éolien, un prédiagnostic environnemental et réglementaire doit être fourni par le proposant. Cette approche constitue une originalité. Elle permet d'une part d'alerter le maître d'ouvrage sur les contraintes environnementales et réglementaires que son projet final devra respecter. Elle permet d'autre part au comité de sélection Eole 2005 de comparer la sensibilité des sites éoliens projetés et des impacts qu'ils sont susceptibles de subir. Cette approche représente une amélioration certaine par rapport à la procédure équivalente existante en Grande-Bretagne. En effet, la procédure britannique NFFO (Non Fossil Fuel Obligations) qui a servi de modèle à la procédure Eole 2005, ne prévoit pas de telles prises en compte préalables des contraintes environnementales. De ce fait de nombreux parcs éoliens sélectionnés dans la procédure NFFO n'obtiennent pas ensuite les autorisations administratives de fonctionnement. Le contenu d'un prédiagnostic est défini dans le cahier des charges de l'appel à propositions Eole 2005. Il se rapproche de celui d'une notice d'impact .
+
+La conduite de l'étude d'impact doit être menée en plusieurs séquences successives, le plus souvent interdépendantes, ou pouvant être, selon la nature et l'importance du projet, plus ou moins confondues. Cette conduite est schématisée dans le diagramme ci-après ; elle sera développée dans les fiches suivantes.
+
+Phase 1
+
+Cadrage de l'aire d'étude
+Phase 2
+
+Dialogue avec les partenaires institutionnels de l'environnement, les associations et la population
+
+Analyse de l'état initial de l'environnement
+Phase 3
+
+Etude de variantes de projets Choix d'une solution
+
+Phase 4 Optimisation du meilleur projet Proposition de mesures préventives, réductrices ou compensatoires Phase 5
+
+Suivi des effets du projet après réalisation
+39
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 5
+
+Les procédures d'autorisation d'un projet éolien
+D'après le décret de 1993 relatif aux études d'impact « lorsqu'un aménagement ou ouvrage assujetti à l'étude d'impact ou à la notice donne successivement lieu à plusieurs décisions d'autorisation ou d'approbation, un exemplaire de l'étude d'impact ou de la notice doit être joint à chacun des dossiers de demande concernant l'opération ».
+
+Le permis de construire
+Le permis de construire constitue bien souvent la principale autorisation à obtenir. Etant donné que les parcs éoliens sont des moyens de production d'électricité non destinés à l'auto-consommation, le permis est délivré au nom de l'Etat par le Préfet (articles R 42133 à R 421-36 du Code de l'Urbanisme). Le délai d'instruction du permis de construire est de 3 mois sauf cas particuliers. Le service instructeur du projet (aujourd'hui la Direction Départementale de l'Equipement) ne se contente pas d'un contrôle purement formel de l'étude d'impact, limité à la vérification de l'existence matérielle des différentes parties de l'étude. Son contrôle porte également sur le fond, sur la suffisance quantitative et qualitative de l'étude, sur l'exactitude des données, sur l'adéquation des analyses et des conclusions. Si le dossier s'avère incomplet, imprécis ou erroné, le service instructeur demande au pétitionnaire de le reprendre. Dans le cadre de la délivrance du permis de construire, l'organisme instructeur peut solliciter l'avis de la Commission Départementale des Sites.
+
+LA COMMISSION DÉPARTEMENTALE DES SITES
+La « commission départementale des sites, perspectives et paysages » est présidée par le Préfet. Elle comprend : — des représentants des services de l'Etat en charge des bâtiments de France, de l'équipement, de l'agriculture, du tourisme, des monuments historiques, — des élus locaux : deux Conseillers Généraux et deux Maires, — des personnes compétentes désignées par le Préfet dont au moins un architecte et deux représentants d'associations.
+
+40
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 5
+
+LE CONTENU DE LA DEMANDE DE PERMIS DE CONSTRUIRE
+L'article R 421-2 du Code de l'urbanisme a été modifié par le décret n° 94-408 du 18 mai 1994 pris en application de la loi Paysage. Le dossier joint à la demande de permis de construire comporte : 1° Le plan de situation du terrain, 2° Le plan de masse des constructions à édifier ou à modifier coté dans les trois dimensions, des travaux extérieurs à celles-ci et des plantations maintenues, supprimées ou créées, 3° Les plans des façades, 4° Une ou des vues en coupe précisant l'implantation de la construction par rapport au terrain naturel à la date du dépôt de la demande de permis de construire et indiquant le traitement des espaces extérieurs, 5° Deux documents photographiques au moins permettant de situer le terrain respectivement dans le paysage proche et lointain et d'apprécier la place qu'il y occupe. Les points et les angles des prises de vue seront reportés sur le plan de situation et le plan de masse, 6° Un document graphique au moins permettant d'apprécier l'insertion du projet de construction dans l'environnement, son impact visuel ainsi que le traitement des accès et des abords. Lorsque le projet comporte la plantation d'arbres de haute tige, les documents graphiques devront faire apparaître la situation à l'achèvement des travaux et la situation à long terme, 7° Une notice permettant d'apprécier l'impact visuel du projet. A cet effet, elle décrit le paysage et l'environnement existants et expose et justifie les dispositions prévues pour assurer l'insertion dans ce paysage de la construction, de ses accès et de ses abords, 8° L'étude d'impact, lorsqu'elle est exigée.
+
+Par rapport au contenu du décret, trois observations importantes peuvent être faites : — l'étude d'impact constitue une des pièces maîtresses de la demande de permis de construire d'un parc éolien. Elle parvient, par cette procédure, aux différents services de l'Etat, — pour les projets de moins de 12 MF la notice d'impact remplace l'étude d'impact, — dans la pratique, l'étude d'impact comprend une analyse paysagère du site et de l'insertion du projet dans l'environnement. Les pièces 5, 6 et 7 peuvent être intégrées dans cette analyse paysagère. L'étude d'impact inclut alors le volet paysager du permis de construire.
+
+L'enquête publique
+Qu'est ce qu'une enquête publique ? Le Ministère de l'Aménagement du Territoire et de l'Environnement évalue à près de 18 000 le nombre d'enquêtes publiques chaque année sur l'ensemble du territoire. Il existe de nombreux types d'enquêtes : — enquête parcellaire,
+
+41
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 5
+
+— enquête au titre de la loi sur l'eau, — enquête liée à la mise en place de servitudes, — enquêtes d'expropriation ; etc. Notre propos concerne ici les enquêtes qui relèvent de la loi BOUCHARDEAU de 1983 et qui concernent : — les documents d'urbanisme, — les aménagements, ouvrages ou travaux susceptibles d'affecter l'environnement. Les seules « enquêtes BOUCHARDEAU » représentent actuellement plus de 9000 enquêtes. Dans ce cadre, l'enquête publique est une procédure dont l'objet est d'informer le public et de recueillir préalablement à certaines décisions ou à certaines opérations, ses appréciations, suggestions et contre propositions, afin de permettre à l'autorité compétente de disposer de tous les éléments nécessaires à son information. Quel est le contexte réglementaire ? Le décret n° 85-453 du 23 avril 1985, pris en application de la loi BOUCHARDEAU définit 37 types d'aménagements, ouvrages ou travaux soumis à enquête publique. Des seuils techniques ou financiers sont aussi précisés. Les parcs éoliens ne sont pas inclus dans cette nomenclature, et ne sont donc pas soumis aujourd'hui à enquête publique. Néanmoins on peut considérer que la procédure d'enquête publique concerne directement les parcs éoliens pour deux raisons principales : - La Directive européenne n° 97/11/CE du 03 mars 1997 intègre dans son annexe II les installations destinées à l'exploitation de l'énergie éolienne pour la production d'énergie. Les projets visés à l'annexe II sont susceptibles d'être soumis à enquête publique, - L'implantation d'un parc éolien nécessite souvent la modification ou la révision du Plan d'Occupation des Sols de la commune concernée par le projet. Ces procédures incluent une enquête publique. Cette dernière porte exclusivement sur le projet éolien si l'implantation d'éolienne est la seule raison de la modification ou de la révision. Quel est le déroulement de l'enquête ? Dans le cas d'une enquête BOUCHARDEAU, le Commissaire Enquêteur est nommé par le Président du Tribunal Administratif. Celui-ci dispose de pouvoirs pour diriger et animer l'enquête publique : visite des lieux, demande d'information complémentaire sur le dossier d'enquête, organisation d'une réunion publique, prorogation de la durée de l'enquête. La mission du commissaire enquêteur se conclut par un rapport d'enquête destiné à l'autorité compétente, nourri de l'ensemble des observations formulées par le public. Il doit rédiger des conclusions motivées et claires en précisant s'il est favorable, ou défavorable, ou encore favorable au projet mais assorti de réserves ou de conditions, au
+
+42
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 5
+
+projet. Il s'agit d'un avis personnel : cet avis peut être différent de l'opinion majoritaire du public. L'administration peut passer outre l'avis défavorable du commissaire enquêteur. Mais alors, si le juge administratif est saisi d'une demande de sursis à exécution de la décision prise, il est tenu de faire droit à cette demande. La procédure d'enquête publique comprend plusieurs étapes marquées par des délais incompressibles. Le tableau suivant résume la procédure :
+
+E
+
+T
+
+A
+
+P
+
+E
+
+ECHÉANCIER PRÉVISIONNEL
+
+Saisine du Président Administratif en vue de la désignation d'un commissaire enquêteur Désignation d'un commissaire enquêteur Avis au public de la tenue d'une enquête publique : avis publié dans les journaux, et par voie d'affiches Ouverture, en Mairie, de l'enquête publique d'une durée minimale d'un mois (et d'une durée maximale de deux mois) Clôture de l'enquête publique Transmission à l'autorité compétente du dossier soumis à l'enquête, du rapport et des conclusions du commissaire enquêteur.
+
+Jour 1
+
+J 15 J 30 J 60 J 90
+
+CE QU'IL FAUT RETENIR...
+s L'analyse de l'environnement doit être engagée très en amont, au stade des études préliminaires. Cette analyse doit se faire dans une démarche continue, progressive, sélective et itérative. s Le permis de construire constitue bien souvent la principale autorisation à obtenir. L'étude d'impact est une pièce maîtresse de la demande de permis, et elle parvient par cette procédure aux différents services de l'Etat. s Même si l'enquête publique ne concerne pas à l'heure actuelle directement les parcs éoliens, on peut considérer que le contexte réglementaire risque d'évoluer. Les parcs éoliens sont soumis indirectement à une enquête publique lorsqu'il faut modifier ou réviser le POS.
+
+43
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS - FICHE 6
+
+L'ÉTAT INITIAL ; CADRAGE ET RECUEIL DE DONNÉES
+L'analyse de l'état du site constitue, d'après le décret de 1977 sur les études d'impact, le premier chapitre à réaliser. La pratique montre que ce chapitre essentiel peut être scindé en différentes séquences élémentaires : - le cadrage de l'aire d'étude, - le recueil des données environnementales, - l'interprétation de ces données, - la synthèse de ces données. Cette fiche traitera principalement des deux premières séquences. Cette analyse de l'état initial doit être menée très en amont dans le projet, en parallèle des premières études sur le gisement éolien, sur les possibilités de raccordement au réseau électrique et au réseau routier.
+
+La délimitation de l'aire d'étude
+Prise en compte des sites d'implantation
+site potentiel B
+
+site potentiel A
+
+L'aire d'étude doit intégrer les différents sites d'implantation d'éoliennes envisagés
+
+site potentiel C
+
+Prise en compte des impacts potentiels
+
+La notion d'aire d'étude
+L'aire d'étude doit intégrer la zone des impacts potentiels
+
+site éolien envisagé
+
+44
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 6
+
+L'aire d'étude correspond à deux notions principales : - elle comprend l'ensemble des sites d'implantation potentiels du projet. Dans un secteur géographique donné, le promoteur analyse 2 ou 3 sites capables d'accueillir un parc éolien. L'aire d'étude intègre ces 2 ou 3 sites, - elle correspond à la zone des impacts potentiels du projet. Bien souvent ce sont les impacts paysagers ou les impacts sur l'avifaune qui sont les plus éloignés et qui déterminent en conséquence les contours de cette aire d'étude. L'aire d'étude doit donc intégrer ces 2 notions. Les investigations à réaliser ne nécessiteront pas toujours le même niveau de précision dans les deux cas. A titre d'exemple, dans une recherche de site pour un parc éolien avec 3 possibilités A, B et C, les sites B et C peuvent être rapidement abandonnés car présentant des contraintes trop fortes : - le site B nécessite un raccordement électrique très contraignant qui remet en cause la faisabilité économique du projet, - le site C est localisé dans un site Natura 2000 et le parc éolien n'est pas compatible avec le maintien de l'intérêt de ce site. Dans ce cas, seul le site A mérite des études environnementales plus poussées. Dans la plupart des cas, il est judicieux pour un parc éolien d'envisager 2 aires d'études : - un périmètre rapproché qui correspond à la zone d'implantation envisagée du projet - un périmètre éloigné qui correspond à la zone des impacts potentiels du projet. L'analyse de l'état initial de l'environnement ne sera pas réalisée avec le même degré de finesse à l'intérieur de ces 2 périmètres ; elle sera bien sûr plus fouillée dans le premier.
+
+Le périmètre rapproché
+A l'intérieur de ce périmètre une analyse fine de l'environnement sera conduite. Elle déterminera les zones propres à l'implantation des éoliennes et celles qui ne le sont pas ou moins. Cette analyse comprendra notamment les mesures de bruit, les diagnostics floristiques et faunistiques, l'analyse des documents d'urbanisme. Pratiquement, la largeur de ce périmètre sera de quelques centaines de mètres. Plus généralement, les limites de ce périmètre rapproché incluent donc : - la zone d'implantation possible des éoliennes, - les abords immédiats de cette zone où des impacts directs pourront être ressentis (érosion, défrichement, bruits,  ...).
+
+Le périmètre éloigné
+Le périmètre éloigné correspond à la zone des impacts potentiels du projet. Dans la plupart des cas, ce sont les impacts paysagers qui sont ressentis les plus loin. Parfois, la
+
+45
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 6
+
+présence de grands rapaces peut aussi être importante pour définir ce périmètre éloigné. L'analyse environnementale à l'intérieur de ce périmètre éloigné portera principalement : - sur le paysage, - sur l'avifaune, - sur le raccordement électrique à créer, - sur la route d'accès ou les pistes à créer. Comment peut-on définir les limites de ce périmètre éloigné ? Celui-ci peut être précisé par les premiers résultats de l'analyse environnementale, notamment le diagnostic paysager : unités paysagères, fréquentation des paysages, sites remarquables, etc. Il peut être également défini à l'aide d'une méthode standardisée, simple, exposée ci-après.
+
+UNE MÉTHODE STANDARDISÉE POUR DÉFINIR LE PÉRIMÈTRE ÉLOIGNÉ
+L'impact paysager sera directement corrélé : - à la hauteur totale des éoliennes utilisées, - au nombre d'éoliennes. L'aire d'étude (périmètre éloigné) peut être définie par la formule suivante : R = (100 + E) x h R : rayon de l'aire d'étude E : nombre d'éoliennes h : Hauteur totale d'une éolienne (tour plus rotor) A titre d'exemple : - pour un parc éolien de 5 éoliennes de hauteur totale 63,5 m (660 kW) le rayon serait de 6,7 km, - pour un parc éolien de 20 éoliennes de même puissance le rayon serait de 7,6 km, - pour un parc éolien de 5 éoliennes de hauteur totale 76 m (1300 kW) le rayon de l'aire d'étude serait de 8 km. La pratique montre que de tels rayons d'étude sont pertinents. Au delà de ce périmètre les éoliennes peuvent demeurer visibles, mais de façon marginale : - elles ne sont visibles que lorsque les conditions météorologiques sont optimales ; absence de nuages, de brumes, de poussières, de convections thermiques, etc, - à cette distance un parc éolien n'occupe qu'une petite portion du champ visuel panoramique.
+
+46
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 6
+
+Vues du parc à 800 m et 1 200 m de distance
+
+1 200 m
+
+N
+
+800 m
+
+O
+vent à 225°
+
+E
+vent à 225°
+
+S
+
+vent à 225°
+
+vent à 225°
+
+vent à 300°
+
+vent à 225°
+
+47
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 6
+
+Exemple de périmètre éloigné
+
+A
+1 km
+
+1,1 %
+
+B
+
+Parc de 5 éoliennes de 660 kW (hauteur : 63,5 mètres) Eoliennes espacées de 120 mètres
+
+Le rayon du périmètre est de 6,7 km (R = 105 x 63,5 m) Le rayon a été appliqué à partir du centre du site éolien A titre d'exemple l'observateur A perçoit le parc sur environ 1,1 % d'une vision panoramique de 360°. L'observateur B perçoit le parc sur moins de 1 %.
+
+Le recueil des données environnementales
+Le recueil des données doit s'appuyer sur un certain nombre de moyens : - l'analyse bibliographique, - la consultation des services de l'Etat, - les investigations de terrain, - les enquêtes auprès de personnes ciblées. Avant d'analyser ces différents moyens, rappelons les thèmes d'étude d'un état initial de l'environnement.
+
+Les thèmes d'étude
+Le contenu de l'étude d'impact doit être en relation avec l'importance des travaux et aménagements projetés, et leurs incidences prévisibles. La liste des thèmes sera donc dépendante de l'importance du projet, du contexte environnemental dans lequel s'inscrit le projet. Néanmoins, même si certains thèmes seront plus ou moins affinés selon le
+
+48
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 6
+
+Thèmes
+
+Sous-thèmes
+Climatologie Géologie et géomorphologie Topographie Hydrologie et hydrogéologie Risques naturels Faune (avifaune) Flore Milieux naturels inventoriés Milieux naturels protégés
+
+Exemples de descripteurs
+(ceux-ci sont développés dans les fiches suivantes ) Ressource en vent, orages, pluviométrie, températures Unités géologiques, érosion Altitude, pentes, organisation du relief Zone inondable, captages d'eau potable, périmètres de protection Risques de mouvements de terrain, incendies, risques sismiques Avifaune nicheuse, avifaune hivernante, couloir de migration, Espèces floristiques remarquables ou protégées ZNIEFF (Zone naturelle d'Intérêt Ecologique Faunistique et Floristique) ZICO (Zone Importante pour la Conservation des Oiseaux) Parc national ou régional, réserve naturelle, arrêté de protection de biotope Habitat groupé, habitat isolé, démographie, activités Cultures annuelles, cultures pérennes, élevage SDAU, POS, cartes communales Servitudes radio-électriques, servitudes aéronautiques
+
+Milieu physique
+
+Milieu naturel
+
+Milieu humain
+
+Contexte socio-économique Agriculture Documents d'urbanisme Servitudes techniques
+
+Patrimoine et paysage
+
+Patrimoine préhistorique Patrimoine historique Patrimoine protégé Paysage
+
+Gisements archéologiques Châteaux, monuments Sites protégés (loi 1930), monuments protégés (loi 1919) Unités paysagères, fréquentation des paysages, panoramiques, point d'appel visuels.
+
+contexte, on peut scinder l'état initial de l'environnement en quatre thèmes majeurs : - le milieu physique, - le milieu naturel, - le milieu humain, - le patrimoine et le paysage.
+
+L'analyse bibliographique
+L'acquisition d'informations bibliographiques constitue bien souvent la première tâche pour la personne en charge des études d'environnement. Les outils de base sont d'abord les cartes géographiques générales : les cartes de l'Institut Géographique National (IGN) au 1/25 000, 1/50 000 et 1/100 000, la carte MICHELIN au 1/200 000. Ces documents de base sont ensuite complétés : — par des cartes thématiques Exemples : • cartes de la végétation du CNRS à l'échelle de 1/200 000, • cartes géologiques du BRGM au 1/50 000 et 1/80 000, • cartes aéronautiques de l'IGN au 1/500 000, • cartes régionales des ZNIEFF au 1/250 000. — par des photographies aériennes (couleur ou en noir et blanc) L'IGN assure une couverture du territoire national à une échelle proche du 1/25 000. — par des bases de données existantes. Ces bases de données sont le plus souvent thématiques (exemple : base de données du Ministère de la Culture recensant les Monuments Historiques).
+
+49
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 6
+
+ORGANISMES (non exhaustif)
+ANF : Agence Nationale des Fréquences Conservatoire du littoral et des rivages lacustres DAC : Direction de l'Aviation Civile DDASS : Direction Départementale des Affaires Sanitaires et Sociales DDAF : Direction Départementale de l'Agriculture et de la Forêt DDE : Direction Départementale de l'Equipement FFVL : Fédération Française de Vol Libre DRIRE : Direction Régionale à l'Industrie, la Recherche et l'Environnement DIREN : Direction Régionale de l'Environnement France Télécom INAO : Institut National des Appellation d'Origine LPO : Ligue pour la Protection des Oiseaux ONC : Office National de la Chasse ONF : Office National des Forêts PNR : Parc National Régional Préfecture RAM : Région Aérienne Militaire SDIS : Service Départemental d'Incendie et de Secours SDAP : Service Départemental de l'Architecture et du Patrimoine Service Régional de l'Archéologie Télédiffusion de France
+
+DONNÉES COLLECTÉES (non exhaustif)
+Servitudes radioélectriques, services concernés Propriétés, sites protégés par la loi Littoral Servitudes aéronautiques et radioélectriques Captages eau potable, périmètres Statistiques agricoles, zones irriguées Documents d'urbanisme, servitudes techniques Zones à parapente, à deltaplane Risques naturels, risques technologiques Milieux naturels inventoriés ou protégés, sites Servitudes radioélectriques Vignoble AOC Avifaune nicheuse, couloirs de migration Espèces cynégétiques, réserves de chasse Forêts soumises au régime forestier, réserves biologiques Charte du parc Activité ULM, risques naturels et technologiques Servitudes aéronautiques et radioélectriques Périmètres DFCI, secteurs sensibles aux incendies Monuments et sites protégés, patrimoine architectural Gisements archéologiques Servitudes radioélectriques
+
+La consultation des services de l'Etat
+La consultation des services de l'Etat et organismes associés renseigne sur les contraintes réglementaires, les servitudes existantes ... et plus généralement sur les caractéristiques et enjeux de l'aire d'étude. Cette consultation des services est à l'initiative du pétitionnaire. Elle n'a pas de caractère juridique obligatoire strict. En revanche elle participe à l'obligation de moyens du pétitionnaire et de son bureau d'études. Il est souvent préférable de réaliser cette consultation par écrit. Dans ce cas le courrier devra bien préciser la ou les localisations envisagées du projet, l'aire d'étude, les communes concernées, le type d'informations demandées. Il peut être utile, à travers cette consultation, de se faire préciser l'interlocuteur auprès du service. En effet, lors de l'évolution du projet, il est parfois utile de collecter des informations complémentaires auprès des services de l'Etat et organismes associés. Le tableau ci-dessus présente des organismes qu'il est souhaitable d'interroger lors de l'analyse de l'état initial. Ces organismes sont classés par ordre alphabétique. Evidemment, cette liste est à adapter aux spécificités du projet et au contexte géographique dans lequel il s'inscrit.
+
+50
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 6
+
+Les investigations de terrain Celles-ci permettent notamment : — de réaliser l'analyse paysagère, — de réaliser les diagnostics floristiques et faunistiques, — de visualiser les contraintes d'environnement de façon globale. Dans la planification du projet, et des études d'environnement associées, le promoteur doit respecter la saisonnalité de certaines données : — une expertise floristique, avec les espèces végétales protégées devra être effectuée entre avril et juillet, — l'avifaune nicheuse ne peut être étudiée qu'au printemps. Les migrations se déroulent au printemps et à l'automne, — l'analyse paysagère peut être différente selon la présence ou l'absence de végétation.
+
+Enquêtes complémentaires
+Des enquêtes sont nécessaires pour compléter et affiner la connaissance de l'état initial du site. La liste des personnes à interviewer dépendra de la démarche adoptée par le bureau d'études et du contexte environnemental et socio-culturel du projet. La liste suivante indique quelques interlocuteurs susceptibles d'être enquêtés : — le maire ou les conseillers municipaux des communes concernées, — le technicien agricole de la chambre d'agriculture, — les naturalistes locaux, — les agriculteurs, — l'office de tourisme — les commerçants, etc.
+
+CE QU'IL FAUT RETENIR...
+s L'aire d'étude doit à la fois tenir compte des différents sites potentiels d'implantation des éoliennes, et de la zone englobant les impacts potentiels du projet. s Il est bien souvent utile de définir à la fois un périmètre rapproché et un périmètre éloigné. Les investigations environnementales seront plus complètes à l'intérieur du périmètre rapproché. s Les 4 thèmes majeurs à prendre en compte dans l'état initial de l'environnement sont le milieu physique, le milieu naturel, le milieu humain, le patrimoine et paysage. s Le recueil des données s'effectue essentiellement à partir d'une analyse bibliographique, d'une consultation des services de l'Etat et organismes associés, de visites des terrains et d'enquêtes auprès d'interlocuteurs locaux.
+
+51
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS - FICHE 7
+
+L'ÉTAT INITIAL ; INTERPRÉTATION ET SYNTHÈSE
+L'analyse de l'état initial du site n'est pas un simple inventaire de données existantes. Une fois collectées, les données doivent être interprétées, hiérarchisées et synthétisées. Cette fiche présente la démarche de traduction des données brutes en sensibilités. Les cartes constituent le support de communication privilégié, sur lequel on peut localiser, hiérarchiser, synthétiser l'information à différentes échelles. En préalable, cette fiche fournit quelques points de repère concernant la cartographie.
+
+La cartographie
+Selon le principe qu'une illustration vaut mieux qu'un long commentaire, la mise en forme cartographique des données collectées est essentielle. A titre indicatif, les cartes thématiques suivantes peuvent être réalisées : — localisation • carte de localisation du projet • carte de l'aire d'étude — milieu physique • carte topographique • carte hydrographique • rose des vents — milieu biologique • carte des milieux naturels inventoriés • carte des milieux naturels protégés • carte de l'avifaune nicheuse et migratrice — milieu humain • carte de l'occupation de l'espace • carte du zonage des POS • carte des servitudes techniques — patrimoine et paysage • carte du patrimoine remarquable ou protégé • carte des unités paysagères • carte de la fréquentation des paysages De manière générale, le travail de cartographie sera adapté à la sensibilité du site. A titre d'exemple, dans un secteur important pour l'avifaune, il pourra être utile de réaliser 3 cartes : l'avifaune nicheuse, l'avifaune migratrice et l'avifaune hivernante. La lisibilité des cartes est essentielle. On cherchera sur chacune des cartes à limiter les informations fournies ; au-delà de 7-8 postes de légende, la carte devient vite illisible. De plus on adaptera l'échelle des cartes aux informations fournies.
+
+52
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 7
+
+LA CARTOGRAPHIE D'UN SITE ÉOLIEN EN AVEYRON
+(extrait de l'étude d'impact du Parc éolien de Fontanelles)
+
+Périmètre d'étude
+Implantation du projet Périmètre d'étude éloigné Chemin d'accès Raccordement au réseau électrique
+Nord
+
+2 kilomètres
+
+Périmètre éloigné
+Zone d'implantation des éoliennes Périmètre d'étude rapproché
+
+Utilisation d'un fonds IGN au 1/100 000 pour le périmètre éloigné et d'un fonds au 1/25 000 pour le périmètre rapproché
+
+Nord
+
+Périmètre rapproché
+
+500 mètres
+
+53
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 7
+Cartographie du paysage
+Implantation du projet Parc Naturel Régional des Grands Causses Parcours pittoresque Panoramique Voie de communication principale Sentier de grande randonnée Curiosité, site d'intérêt patrimonial
+2 kilomètres Nord
+
+Parc Naturel Régional des Grands Causses ZNIEFF Monument historique inscrit (1)
+
+Monument historique classé (2) Site ponctuel inscrit (1)
+(chateau, Tour de l'Eglise et leurs abords, chemin rural de Brusques à Cribas)
+
+Nord
+
+2 kilomètres
+
+LES 4 UNITÉS PAYSAGÈRES : A : Partie amont du Dourdou B : Partie aval du Dourdou C : Zones vallonnées de l'Ouest D : Plateau de Lacaune Points de vue sur le Merdelou Non visibilté sur le Merdelou
+2 kilomètres Nord
+
+1 : données 1993 et 1995 2 : Ancienne abbaye de Sylvanès à une dizaine de km de l'aire d'étude
+
+B C A
+Il vaut mieux faire plusieurs cartes avec peu d'informations qu'une seule carte avec toute l'information. La lisibilité est améliorée
+
+D
+Les cartes servant le plus souvent de support sont : • la carte topographique de l'IGN, à l'échelle du 1/25 000 (1 cm représente 250 m). Il s'agit de la série bleue ou « Top 25 » qui couvre le territoire national en 2 000 cartes. Celles-ci sont très complètes et fournissent de nombreuses informations sur la topographie, l'occupation de l'espace, le bâti, les infrastructures, les limites administratives, etc. Il faut néanmoins rester vigilant sur les dates de mise à jour de ces documents. Certaines modifications de l'espace peuvent ne pas être répertoriées (fréquence de révision variant entre 4 et 15 ans). Ce fond cartographique convient souvent bien pour l'étude du périmètre rapproché. • La carte topographique de l'IGN, à l'échelle 1/50 000 (1 cm représente 500 m). Il s'agit de la série orange d'IGN. Celle-ci est une ancienne série, encore disponible dans les agences IGN, mais elle n'est pas remise à jour. • La carte topographique de l'IGN, à l'échelle du 1/100 000 (1 cm représente 1 km). Il s'agit de la série verte ou « Top 100 ». La France est couverte en 74 cartes. Ces cartes sont
+
+54
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 7
+
+souvent adaptées à la présentation des périmètres éloignés de l'aire d'étude. Elles sont bien sûr moins précises que les précédentes mais contiennent une large gamme d'informations. • Dans la série des cartes Michelin, les cartes jaunes à l'échelle du 1/200 000 (1 cm pour 2 km) sont les plus intéressantes. Ce sont des cartes touristiques et routières. La France est couverte en une quarantaine de cartes. Les informations touristiques sont souvent plus complètes que les cartes correspondantes de l'IGN. Le domaine de la cartographie sur support informatique est en plein essor. Citons notamment : — la base de données cartographique de l'IGN (échelle 1/50 000), — la base de données CORINE LAND COVER à l'échelle 1/100 000, — la base de données Michelin pour certaines agglomérations ou régions. Néanmoins la base de données CORINE LAND COVER permet difficilement de travailler à des échelles plus précises que le 1/100 000 et la BD cartographique d'IGN a un coût bien souvent prohibitif. En définitive dans la plupart des cas, les fonds cartographiques utilisés seront : — le fond 1/25 000 IGN pour le périmètre rapproché, — le fond 1/100 000 IGN pour le périmètre éloigné, complété par des informations provenant par exemple des cartes Michelin au 1/200 000.
+
+La traduction de données brutes en sensibilités
+Les données brutes d'environnement, une fois collectées, doivent être traduites en niveaux de sensibilité. Pour cette analyse plusieurs aspects sont à prendre en compte : — un territoire peut présenter un enjeu environnemental fort qui se traduira par une sensibilité faible et vice versa. L'enjeu se définit de façon indépendante du projet tandis que la sensibilité est liée à la nature du projet. — certains impacts potentiels sont réductibles tandis que d'autres ne le sont pas. — la caractérisation de l'état initial de l'environnement doit prendre en compte la dynamique du territoire. En fait, la traduction de données brutes en sensibilités est une étape essentielle dans la procédure. Elle conditionne souvent l'évolution du projet, tant au niveau des choix techniques que des choix environnementaux. Le maître d'ouvrage devra s'associer avec une Bureau d'études ou un Consultant compétent en la matière. Il ne s'agit pas seulement de collecter toutes sortes de données en matière d'environnement, mais il faut savoir aussi les analyser, les interpréter dans une approche analytique et systémique.
+
+EXEMPLES DE DONNÉES BRUTES TRADUITES EN SENSIBILITÉ
+Exemples d'enjeux et de niveaux de sensibilité • L'enjeu peut être la présence de grands rapaces nicheurs. La sensibilité sera forte car les populations de ces rapaces sont en déclin et les risques de collision ne sont pas nuls. • L'enjeu peut-être la protection du saumon qui se traduit par un arrêté de protection de biotope sur la rivière. La sensibilité vis-àvis du projet est faible car le parc éolien n'affectera pas la population de saumon • La localisation des éoliennes devra tenir compte des zones d'habitat à proximité. En effet, les nuisances sonores engendrées à proximité des éoliennes sont des effets négatifs difficilement réductibles. La sensibilité de l'habitat proche sera forte. • A l'inverse la présence d'une station botanique dans le périmètre rapproché peut ne pas être très contraignante. Parfois celle-ci peut être évitée en phase travaux à condition de prendre des mesures adéquates. • Le zonage des POS nous renseigne sur les zones constructibles à terme (zone NA le plus souvent). Dans l'état initial de l'environnement, il ne faudra donc pas se contenter de signaler l'absence de bâti à proximité des éoliennes, mais voir aussi le devenir des terrains situés à proximité.
+
+Exemples d'effets réductibles ou non réductibles
+
+Exemples de zones en évolution (dynamique du territoire)
+
+55
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 7
+
+QU'EST-CE QUE L'APPROCHE SYSTÉMIQUE ?
+L'approche systémique s'est développée au cours des 40 dernières années suite à la confrontation de plusieurs disciplines dont la biologie, la théorie de l'information, la cybernétique et la théorie des systèmes. A la différence de l'approche analytique, l'approche systémique englobe la totalité des éléments du système étudié, ainsi que leurs interactions et leurs interdépendances. Dans sa définition la plus courante, un système est un « ensemble d'éléments en interaction » (J. de Rosnay) Quatre concepts fondamentaux apparaissent dans la notion de système : — l'interaction — la globalité — l'organisation — la complexité L'écologie, science qui étudie les rapports entre les êtres vivants et leur milieu, s'est largement inspirée de l'approche systémique, avec notamment la notion d'écosystème.
+
+La démarche environnementale au stade de l'état initial
+
+COLLECTE DES DONNÉES
+Légen de rivièr relief e route s
+
+Milieux naturels Activités humaines Paysage
+
+CARTOGRAPHIE DES ENJEUX
+Sensibilité milieux naturels Sensibilité milieu humain
+
+EVALUATION DES SENSIBILITÉS
+
+Sensibilité paysage
+
+Synthese
+
+SYNTHESE ET CARTOGRAPHIE DES SENSIBILITÉS LES PLUS FORTES
+
+56
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 7
+
+La synthèse de l'état initial de l'environnement
+Les données environnementales, traduites en sensibilité, peuvent ensuite être hiérarchisées en plusieurs niveaux : — sensibilité très forte, — sensibilité forte, — sensibilité moyenne, — sensibilité faible. A titre d'exemple, on retrouvera le plus souvent : — en sensibilité très forte : les zones d'habitat, les sites classés ou inscrits, les réserves naturelles, les parcs nationaux ... — en sensibilité forte : les parcs régionaux, les ZNIEFF de type 1, la proximité de monuments historiques ... — en sensibilité moyenne : les ZNIEFF de type II, certains panoramiques, les chemins de grande randonnée ... — en sensibilité faible : les zones agricoles, les périmètres éloignés de captage, les réserves de pêche ... Parfois, certaines informations peuvent paraître subjectives, notamment celles concernant l'analyse paysagère. Pour cette raison, les choix faits doivent toujours êtres explicités et la démarche environnementale doit être «transparente». La carte de synthèse permet ensuite de reprendre les informations principales, par exemple toutes les zones présentant un niveau de sensibilité fort à très fort. Pour améliorer sa lisibilité, il est toujours astucieux d'utiliser un graphisme adapté : — reprendre la symbolique des couleurs : vert pour le milieu naturel, noir ou rouge pour l'habitat ... — hiérarchiser les sensibilités en jouant sur l'épaisseur du trait ou de la trame, — utiliser des symboles facilement compréhensibles, — utiliser l'échelle la plus adaptée, etc.
+
+CE QU'IL FAUT RETENIR...
+s Les fonds topographiques les plus adaptés sont dans la plupart des cas le 1/25 000 de l'IGN pour le périmètre rapproché, le 1/100 000 pour le périmètre éloigné de l'aire d'étude. s La démarche, au stade de l'état initial de l'environnement, peut se décomposer en 4 étapes principales : • la collecte des données • la cartographie des enjeux • l'évaluation des sensibilités • la synthèse des sensibilités les plus fortes s L'étape la plus difficile est la traduction de données brutes en niveaux de sensibilité. Cette étape doit être menée dans une approche analytique et systémique. Elle nécessite un savoir-faire du bureau d'études.
+
+57
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS - FICHE 8
+
+L'ANALYSE DES EFFETS SUR L'ENVIRONNEMENT
+Cette fiche a essentiellement pour objectif de présenter quelques notions générales sur les impacts et d'expliciter la terminologie utilisée dans le décret de 1993 relatif aux études d'impact. Les principaux effets des parcs éoliens sur l'environnement seront davantage détaillés dans les fiches thématiques (de la fiche 13 à la fiche 20). De façon schématique, l'analyse des impacts s'effectue à deux étapes du projet : — au moment de la comparaison des variantes de projets, — au moment de l'optimisation du projet retenu. A la première étape il s'agit d'une évaluation grossière, à la seconde d'une analyse plus fine. La fiche présentera successivement : — la terminologie concernant l'analyse des impacts, — l'analyse aux différents stades d'avancement du projet, — quelques méthodes d'évaluation des impacts.
+
+Quelques définitions préalables
+• Les termes impact et effet sont souvent utilisés indifféremment pour présenter les conséquences du projet sur l'environnement. En fait, effets et impacts n'ont pas tout à fait le même sens : — on parlera d'effets quand on décrira une conséquence objective du projet sur l'environnement : exemple d'une éolienne qui émet un niveau sonore de X décibels à une distance donnée, — on parlera d'impacts quand on transposera la conséquence du projet sur une échelle de valeurs. Pour les émissions sonores, l'impact sera fort si des riverains se situent à proximité immédiate des éoliennes; il sera faible si les riverains sont éloignés. • Les effets directs sont les conséquences immédiates du projet. Les effets indirects sont les conséquences des effets directs du projet, ou résultant d'une action ou d'un aménagement rendu nécessaire par le projet. Les effets indirects peuvent concerner des territoires éloignés du projet ou apparaître dans un délai plus ou moins long. Leurs conséquences peuvent être parfois plus importantes que les effets directs. On parle aussi d'effets en chaîne lorsqu'il y a une série d'effets indirects. On peut aussi présenter les effets par rapport à leur délai d'apparition : — effets immédiats, — effets à court terme, — effets à moyen terme, — effets à long terme.
+
+58
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 8
+Exemple d'effet direct, indirect et d'effets en chaîne
+
+Défrichement nécessaire pour réaliser la piste d'accès au parc éolien
+
+Effet direct
+
+Apparition de phénomènes d'érosion aux abords de la piste
+
+Effet indirect 1
+Altération de la qualité des eaux de la rivière
+
+Effet indirect 2 E f f e t s e n c h a î n e
+
+• Les effets temporaires sont limités dans le temps tandis que les effets permanents ne peuvent disparaître. A titre d'exemple de nombreux effets en phase chantier (bruit, émission de poussières) sont temporaires. Les effets temporaires ne sont pas forcément moins dommageables pour l'environnement. Un dépôt temporaire de façon anarchique peut par exemple faire disparaître une station botanique d'intérêt régional ou national. • Les effets peuvent être réductibles, c'est à dire que par des dispositions appropriées l'effet sera limité dans le temps ou dans l'espace : nuisances phoniques limitées à certaines plages horaires, terrassements limités, balisage des éoliennes pour les aéronefs, etc. • L'étude doit prendre en compte les impacts négatifs mais également les impacts positifs. Citons à titre d'exemples les principales pollutions globales ou locales évitées : gaz à effet de serre, stockage de déchets, etc (cf. fiche 2). • Le décret de 1993, précise les thèmes sur lesquels les effets sont analysés : — la faune et la flore, les sites et les paysages, le sol, l'eau, l'air, le climat, les milieux naturels et les équilibres biologiques, la protection des biens et du patrimoine culturel. — la commodité du voisinage (bruits, vibrations, odeurs, émissions lumineuses), l'hygiène, la sécurité et la salubrité publique. L'étude d'impact doit comporter une analyse des risques d'accidents susceptibles
+
+59
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 8
+
+d'affecter la sécurité des riverains ou des équipements réalisés. Ceci s'entend au regard des risques naturels et technologiques pouvant affecter le projet, ou à l'inverse, que le projet peut provoquer. • Rappelons enfin que les effets du projet sur la santé doivent être analysés (loi sur l'air de 1996) et que l'analyse des impacts doit porter sur les différentes composantes du projet : site éolien , piste d'accès, raccordement électrique, etc.
+
+La démarche d'évaluation des effets sur l'environnement
+• Les principes de base de continuité, de progressivité, de sélectivité des études (cf fiche 5) s'appliquent pour l'analyse des effets sur l'environnement :
+
+Etude de variantes de projets
+A ce stade l'analyse comparative doit porter essentiellement sur les principales sensibilités environnementales. Bien que le retour d'expériences soit encore faible en France, on sait que les impacts principaux des projets éoliens sont : — les impacts paysagers, — les impacts sur l'avifaune et sur la flore, — les nuisances sonores, — les servitudes ou les contraintes de zonage du POS. L'objectif à ce stade, est de bien hiérarchiser les principaux impacts pour pouvoir comparer ensuite les différents projets proposés. Les méthodes de comparaison des variantes de projets sont présentées dans la fiche 9. Il s'agira par exemple de comparer plusieurs sites d'implantation des éoliennes.
+
+Optimisation du meilleur projet
+Alors que dans l'étape précédente, l'analyse était ciblée sur les principales sensibilités, elle devient maintenant plus exhaustive. L'approche peut rester qualitative pour les impacts faibles mais elle doit être quantitative pour certains impacts forts : Quelle sera la superficie d'emprise sur une zone naturelle intéressante ? Quels sont les niveaux de bruit engendrés par le parc éolien ? Quelle superficie doit-on défricher ? ... L'analyse devra bien prendre en compte les impacts réductibles et les impacts non réductibles. L'analyse devra bien séparer les effets en phase chantier (quelques mois) des effets en phase exploitation du parc. Cette analyse doit permettre d'optimiser le projet. L'écologue doit être un partenaire à part entière dans l'équipe en charge du projet. C'est la complémentarité des études techniques, des études économiques et des études environnementales qui permettra d'améliorer le projet. A cette étape il s'agira par exemple de comparer plusieurs types d'éoliennes ou de les positionner de façon précise sur le site présélectionné.
+
+60
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 8
+
+Quelques choix qui nécessitent le point de vue de l'écologue
+Pour un parc éolien de 8 MW (limite règlementaire), est-il préférable d'utiliser des éoliennes de 660 kW ou de 1 300 kW ? Solution 1 : 12 EOLIENNES DE 660 KW
+
+Solution 2 : 6 EOLIENNES DE 1 300 KW
+
+Pour un parc éolien de 12 éoliennes, quelle sera la meilleure disposition sur le terrain ? Solution 1
+
+Solution 2
+
+Solution 3
+
+couloir avifaune
+
+Thèmes d'analyse pour ces différentes questions :
+les emprises au sol
+
+Pour un parc éolien de 12 éoliennes en quinconce, quelle sera la meilleure piste d'accès ?
+
+l'impact paysager l'impact sur l'avifaune la piste d'accès
+
+Solution 1
+
+piste d'accès
+
+le raccordement électrique l'éloignement des riverains, etc.
+
+Solution 2
+
+61
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 8
+
+Quelques méthodes d'évaluation des impacts
+Il existe de nombreuses méthodes permettant la prévision ou la détermination de l'importance absolue et relative de chacun des effets ou des familles d'effets. Nous ne présentons ici que les plus usuelles pour les études d'impact de parcs éoliens.
+
+L'évaluation à dires d'expert
+L'expertise consiste à émettre une évaluation circonstanciée des effets d'un projet sur une composante précise de l'environnement. Elle peut s'appuyer sur des mesures physiques ou des observations biologiques. Le recours à l'expertise se fait surtout dans les domaines de l'environnement où les effets sont les moins faciles à quantifier. On l'utilisera par exemple pour les diagnostics floristiques ou faunistiques, pour les analyses paysagères.
+
+La prédiction des impacts par analogie
+Il s'agit du retour d'expérience de Bureaux d'études ou de Consultants ayant déjà travaillé sur des aménagements équivalents et possédant donc une compétence particulière pour ce type de projet. Au vu de l'expérience accumulée, on tente alors d'extrapoler à des cas similaires. Il faut bien sûr disposer d'un retour d'expériences suffisant pour pouvoir extrapoler de façon satisfaisante.
+
+L'ANALOGIE AVEC D'AUTRES AMÉNAGEMENTS
+L'analogie peut être faite avec le même type de projets sur d'autres sites, mais elle peut également être faite avec d'autres types d'aménagements. Elle permet de « relativiser » les impacts du projet. A titre d'exemple : - l'impact des éoliennes sur l'avifaune peut être comparé à l'impact des projets routiers ou des lignes électriques, - idem pour les emprises nécessaires à l'implantation du parc éolien.
+
+Les modèles numériques
+Ce sont des représentations mathématiques des systèmes étudiés, traitées ensuite à l'aide d'une calculatrice ou d'un ordinateur. A titre d'exemple un modèle numérique pourra être réalisé pour la propagation du bruit. En fait, les disciplines utilisant les modèles numériques sont nombreuses dans le domaine des sciences exactes (acoustique, ...). En revanche, les modèles numériques sont beaucoup plus difficiles à mettre en place dans le domaine de l'écologie.
+
+62
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 8
+
+Les Systèmes d'Information Géographique
+Les données cartographiques peuvent être intégrées dans un Système d'Information Géographique (SIG). Cet outil informatique se compose d'une base de données géographiques et d'une boite à outils qui permet à l'utilisateur : - de saisir l'information à partir de diverses sources, - de rassembler, d'organiser et de gérer cette information, - de la combiner, d'élaborer et de représenter des résultats sous diverses formes. Les SIG sont particulièrement intéressants pour les études d'impact car ils permettent à la fois de cumuler des données diverses, de prendre en compte la dynamique des milieux, d'aider à la comparaison de variantes. Ils nécessitent par contre une compétence supplémentaire du Bureau d'Etudes.
+
+CE QU'IL FAUT RETENIR...
+s L'analyse environnementale doit bien prendre en compte les effets directs et indirects, temporaires et permanents, réductibles et non réductibles. Elle doit aussi prendre en compte les impacts positifs et négatifs et les risques d'accidents. s Les impacts environnementaux sont à apprécier à la fois dans la comparaison de variantes, et dans le projet retenu. Cette analyse doit permettre d'optimiser le projet. s Il existe de nombreuses méthodes d'évaluation des impacts. Les plus usuelles pour l'étude des parcs éoliens sont : - l'évaluation à dires d'expert, - l'évaluation des impacts par analogie, - les modèles numériques, - les Systèmes d'Information Géographique.
+
+63
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS - FICHE 9
+
+LE CHOIX DU PROJET
+Le décret de 1993 mentionne que l'étude d'impact doit présenter « les raisons pour lesquelles, notamment du point de vue des préoccupations d'environnement, parmi les partis envisagés, le projet présenté a été retenu ». Cette fiche a pour objectif de montrer comment cette partie peut être abordée dans le cadre d'un projet éolien. Il s'agit en fait d'un chapitre clé de l'étude d'impact qui doit montrer l'articulation entre les études d'environnement et les autres aspects du projet : techniques, économiques et financiers. En définitive, cette fiche présentera successivement : — un peu de terminologie et notamment les notions de variante et de parti — la cohérence entre les études d'environnement et les études techniques, économiques, financières — la place et le contenu de ce chapitre sur les raisons du choix du projet
+
+Notion de parti et de variante
+• La jurisprudence a précisé la notion de « parti envisagé ». Cette notion correspond en fait à l'idée de projets alternatifs, suffisamment contrastés en termes techniques et économiques. Le tableau présente pour des aménagements autres que les parcs éoliens, des exemples de partis. Parti 1 Ligne électrique Route Aéroport
+Renforcement des lignes haute tension Aménagement sur place d'une route nationale Création d'une nouvelle piste sur aéroport existant
+
+Parti 2
+Création d'une ligne à très haute tension Construction d'une autoroute Report du trafic sur un autre aéroport
+
+Parti 3
+Installation d'une unité de cogénération Renforcement d'une liaison ferroviaire existante Création d'un nouvel aéroport
+
+Par analogie, on constate que pour les projets de parcs éoliens, il n'y a pas différents partis envisagés. A titre d'exemple, le promoteur n'envisage pas de comparer son parc éolien avec une unité de cogénération. En revanche, le promoteur envisagera des variantes de projets, notamment lorsqu'il comparera différents sites d'implantation. Une fois le site identifié, il analysera des variantes localisées pour optimiser son projet.
+
+64
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 9
+
+Les notions de parti, variante, variante localisée
+UN SEUL PARTI
+La création d'un parc éolien
+
+Différents sites d'implantation des éoliennes
+
+DES VARIANTES
+
+Différentes possibilités d'accès routier et de raccordement électrique du parc Différents types d'éoliennes
+
+DESVARIANTES LOCALISÉES
+
+Différentes possibilités d'organisation des éoliennes au sein du parc Différentes possibilités de chemins entre les éoliennes
+
+La cohérence entre les études d'environnement et les autres aspects du projet
+La finalité des études d'environnement n'est pas seulement d'obtenir un «passeport administratif» ; elle est avant tout d'améliorer le projet dans sa conception globale. Dès lors, quels sont les principes de base à respecter et les méthodes disponibles pour une véritable intégration de l'environnement dans le processus décisionnel du projet ?
+
+Les principes de base
+• Concevoir un parc éolien est un travail d'équipe, auquel l'environnementaliste doit être associé. Celui-ci doit pouvoir participer aux réunions importantes, aller sur le terrain avec l'équipe du projet, communiquer régulièrement les principales informations qu'il aura collecté. Au delà des rapports à réaliser et des autorisations administratives à obtenir, une sensibilisation réciproque doit s'opérer entre l'environnementaliste et les techniciens du projet. • Quelles que soient les méthodes utilisées d'évaluation ou de comparaison de variantes, il faudra toujours privilégier la transparence des choix ; c'est à dire bien montrer les priorités qui ont été données, bien expliciter toutes les étapes dans la démarche, bien montrer la cohérence du projet. • Même si une réunion publique n'a aujourd'hui rien d'obligatoire, celle-ci pourra souvent se révéler bénéfique à plusieurs titres : - elle peut apporter des informations nouvelles, non prises en compte dans le projet, - elle peut en conséquence permettre d'envisager de nouvelles variantes localisées qui amélioreront le projet, - elle participe à la transparence dans la démarche, en permettant au public de
+
+65
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 9
+
+comprendre la justification du projet et d'apprécier ses impacts potentiels. • La prise en compte de l'environnement le plus en amont possible dans l'élaboration du projet est un gage de réussite. A ce titre, le prédiagnostic environnemental et réglementaire, instauré dans le cadre du programme Eole 2005, a sensibilisé les porteurs du projet à cette démarche.
+
+Les méthodes pour intégrer les différentes études du projet
+• Premièrement l'impact du projet sur l'environnement peut être évalué selon un certain nombre de critères, par exemple : — l'impact sur le milieu physique, — l'impact sur le milieu naturel, — l'impact sur le milieu humain, — l'impact sur le patrimoine et le paysage. Un tableau d'analyse multicritère permet de comparer l'impact des différentes variantes au regard de ces 4 critères environnementaux (cf. illustration). • En deuxième étape la comparaison multicritère peut être plus globale et porter sur un ensemble de critères techniques, économiques, financiers et environnementaux du projet. A titre d'exemple, on pourra rappeler des critères tels que la disponibilité foncière, la qualité du gisement éolien, le coût du parc éolien à construire, la facilité du raccordement électrique, etc. Dans tous les cas l'analyse comparative doit être explicitée, d'autant plus que les critères de comparaison ne présentent pas toujours la même importance. A titre d'exemple, le gisement éolien peut être un critère déterminant, sachant que l'énergie produite est proportionnelle au cube de la vitesse moyenne du vent (cf. fiche 1). • En troisième étape, lorsque les choix importants ont été validés, on peut procéder de la même manière à des choix plus fins : implantation précise des éoliennes, localisation des zones de montages, zones à défricher, etc. L'apparition d'un nouveau problème, l'approfondissement d'un aspect du projet ne doit cependant pas remettre en cause les choix antérieurs. Dans ce dernier cas, il faut procéder par itérations pour vérifier la pertinence des choix faits aux étapes précédentes.
+
+66
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 9
+
+Exemple d'analyse comparative progressive de variantes et de variantes localisées
+Comparaison de variantes
+1° étape
+Analyse comparative des impacts de 3 variantes sur l'environnement
+
+Variante 1 Variante 2 Variante 3 Milieu Physique Milieu Naturel Milieu Humain Patrimoine et paysage peu contraignant ou très favorable
+
+2° étape
+
+Comparaison multicritère des 3 variantes moyennement contraignant ou favorable
+
+Variante 1 Variante 2 Variante 3 Disponibilité foncière Gisement éolien Piste d'accès Raccordement électrique Milieu Physique Milieu Naturel Milieu Humain Patrimoine et paysage
+
+très contraignant ou peu favorable
+
+Comparaison de variantes localisées
+3° étape
+Comparaison de variantes localisées, pour la variante retenue Par le même type d'analyse, la variante retenue (par exemple la variante 2 dans le cas précédent) peut être ensuite affinée par analyse comparative successive de variantes localisées : — utilisation du type d'éoliennes A ou B — éoliennes alignées sur 1 rang ou sur 2 rangs — piste centrale ou piste circulaire
+
+67
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 9
+
+LES AUTRES MÉTHODES DE COMPARAISON DES VARIANTES
+En fait nous ne présentons ici qu'une méthode de comparaison de variantes : l'analyse multicritère. Il existe en fait de nombreuses autres méthodes : - l'analyse des coûts avantages : les coûts et avantages d'un projet sont exprimés en termes monétaires. Les impacts, quoique de natures différentes, sont ramenés à une valeur monétaire. - l'analyse multicritère agrégée : une pondération est proposée selon l'importance de chaque critère. Cette pondération permet ensuite de donner une note globale pour l'ensemble des critères. - etc. Il convient de garder à l'esprit que l'objectivité de ces méthodes est bien souvent relative, puisque la décision du choix du projet est fonction des arbitrages, des pondérations, des coûts monétaires calculés. L'analyse multicritère présentée précédemment présente l'avantage d'être simple, d'être transparente, et de laisser une place au débat entre les différents acteurs du projet.
+
+Le contenu du chapitre sur les raisons du choix du projet et sa place dans l'étude d'impact.
+En définitive ce chapitre devra préciser, de façon chronologique, comment les choix ont été réalisés, et quelle a été la place des préoccupations environnementales. A titre d'exemple ce chapitre pourrait présenter les parties suivantes : — l'historique du projet, — les variantes analysées, — l'analyse comparative et le choix d'une variante, — les variantes localisées envisagées, — la comparaison de ces variantes localisées et le choix du meilleur projet. Ce chapitre doit expliquer « le pourquoi du projet et comment l'environnement a été pris en compte » : — Pourquoi ce site a t-il été retenu ? — Pourquoi le parc a t-il cette puissance électrique ? — Pourquoi utilise t-on ce type et cette taille d'éoliennes ? — Pourquoi implante t-on ce nombre d'éoliennes ? Par contre ce chapitre n'a pas vocation à montrer que les données d'environnement soient les données de base du projet. On conçoit aisément que le porteur de projet doit tenir compte de données techniques, telles que le gisement éolien, le raccordement électrique ou la disponibilité foncière. Ces informations conditionnent la faisabilité même du projet. Dans le même ordre d'idées, il ne sert à rien d'inventer au stade de l'étude d'impact des variantes qui n'ont pas été étudiées. Il est souvent utile dans ce chapitre de présenter un échéancier du projet.
+
+68
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 9
+
+HISTORIQUE DE LA VIE D'UN PROJET
+Mars 1997 Mai 1997 Septembre 1997 Septembre 1998 Réunion d'information avec les élus sur les possibilités d'exploitation de l'énergie éolienne Consultation des services de l'Etat quant à la sensibilité environnementale et aux contraintes réglementaires du site. Implantation d'un mât de mesures (40 m de hauteur) de la force et de la direction du vent. Conclusions favorables des différentes études de faisabilité (ressource en vent, contraintes environnementales, raccordement électrique, ...) Octobre 1998 Novembre 1998 Décembre 1998 Octobre 1999 Avis favorable du Conseil Municipal quant à l'implantation d'un parc éolien Achèvement du prédiagnostic environnemental et réglementaire ainsi que du dossier Eole 2005. Réunion publique d'information Le projet de parc éolien est retenu par Electricité de France dans le cadre du programme Eole 2005
+
+Ce chapitre trouve habituellement sa place après l'analyse des impacts du projet et avant les propositions des mesures réductrices ou compensatoires. Mais il semble souvent préférable de le faire apparaître après l'analyse de l'état initial. Cet ordre de présentation permet une meilleure lisibilité et facilite la compréhension de la cohérence du projet retenu.
+
+CE QU'IL FAUT RETENIR...
+s Dans le cadre d'un projet éolien, il y a le plus souvent un parti envisagé, des variantes et ensuite des « variantes localisées ». s L'environnement sera réellement pris en compte dans le projet : • s'il y a un travail d'équipe auquel est associé l'environnementaliste • si on associe le public ou les élus dans la conception du projet • si l'environnement est intégré dès le stade des études de faisabilité • si il y a une réelle volonté d'avoir une démarche transparente s L'analyse multicritère est une méthode simple de comparaison de variantes. D'autres méthodes existent, elles doivent être dans tous les cas bien explicitées. s Le chapitre sur les raisons du choix du projet doit expliquer « le pourquoi du projet et comment l'environnement a été pris en compte ».
+
+69
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS - FICHE 10
+
+LES MESURES PREVENTIVES, REDUCTRICES OU COMPENSATOIRES
+Le décret de 1977 mentionne que l'étude d'impact doit présenter « les mesures envisagées par le maître de l'ouvrage ou le pétitionnaire pour supprimer, réduire et si possible, compenser les conséquences dommageables du projet sur l'environnement, ainsi que l'estimation des dépenses correspondantes ». Cette fiche fournira quelques principes généraux pour traiter cette partie dans le cadre d'un projet éolien. Le suivi environnemental en phase chantier ou en phase exploitation n'est pas une obligation réglementaire. Il peut cependant présenter un grand intérêt dans le domaine de l'éolien. Cette fiche expliquera pourquoi. En définitive cette fiche présentera successivement : - quelques définitions sur les mesures préventives, réductrices ou compensatoires, - comment on peut chiffrer ces mesures, - le contenu de ce chapitre sur « les mesures préventives, réductrices, compensatoires » dans l'étude d'impact, - l'intérêt du suivi environnemental.
+
+Quelques définitions
+Il convient d'opérer une différenciation entre les différents types de mesures : • les mesures préventives ou les mesures visant à éviter une contrainte. Ces mesures sont prises durant les phases préliminaires du projet. Elles vont être prises soit au stade du choix du site éolien, soit au stade de la conception du projet. La panoplie de ces mesures préventives est très large : - éviter un site car celui-ci fait partie d'une zone importante pour la conservation des oiseaux, - éviter un site en raison de la proximité des riverains, - éviter un site proche d'un haut lieu architectural. • les mesures réductrices ou les mesures visant à atténuer l'impact. Ces mesures sont prises durant la conception du projet. La panoplie de ces mesures réductrices est aussi très large : - concevoir un accès et des aires d'assemblage qui minimisent l'impact sur une station botanique, - éloigner les éoliennes d'un secteur habité pour limiter les nuisances sonores, - disposer les éoliennes de façon à réduire la covisibilité d'un château médiéval . • Les mesures compensatoires. Dans certains domaines les mesures de réduction ne sont pas envisageables ou de portée jugée insuffisante. Les mesures compensatoires doivent en conséquence apporter une contrepartie aux conséquences dommageables du projet.
+
+70
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 10
+
+Citons à titre d'exemple : - compenser un impact paysager en participant à la restauration d'un site patrimonial de l'aire d'étude. - compenser un impact floristique en aidant à la protection d'une station botanique proche.
+
+LES DIFFÉRENTS TYPES DE MESURES COMPENSATOIRES
+Elles peuvent être très diverses dans leur nature, leur localisation ou leur objectif. On peut envisager : — des mesures techniques (opération de génie écologique) ou des mesures réglementaires (mise en protection d'un milieu). — des mesures à proximité ou éloignées d'un parc éolien. — des mesures ayant un rapport direct au projet, ou exceptionnellement ayant un rapport avec d'autres composantes de l'environnement.
+
+La démarche consiste à privilégier d'abord les mesures «pour éviter», puis les mesures «pour réduire» et enfin les mesures «pour compenser». Ces mesures apparaîtront chronologiquement dans l'élaboration du projet.
+
+PHASES DU PROJET
+Etudes préliminaires Choix de variantes
+
+TYPES DE MESURES
+
+EVITER ou SUPPRIMER
+RÉDUIRE
+
+Etudes de conception Choix de variantes localisées
+
+Etudes de détail Programmation du chantier
+COMPENSER
+
+71
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 10
+
+Le chiffrage des mesures
+Le chapitre présentant les mesures préventives, réductrices et compensatoires doit indiquer «l'estimation des dépenses correspondantes». Pour le législateur ces mesures doivent être suffisamment précises pour juger de leur faisabilité effective et engager la responsabilité de son promoteur.
+
+MESURES RÉDUCTRICES OU COMPENSATOIRES : LES OBLIGATIONS RÉGLEMENTAIRES
+Le décret de 1977 précise qu'il s'agit de « mesures envisagées » par le maître d'ouvrage ou le pétitionnaire. L'étude d'impact étant réalisée sous la responsabilité du maître d'ouvrage, les recommandations sont des engagements de ce maître d'ouvrage. De plus, l'étude d'impact s'inscrivant dans la procédure de permis de construire, l'autorisation de construire peut être assortie de prescriptions environnementales. Dans ce cas, si ces prescriptions reprennent tout ou partie des mesures réductrices ou compensatoires, les mesures envisagées deviennent des prescriptions réglementaires.
+
+Dans la pratique ces mesures sont parfois difficiles à chiffrer. Comment évaluer, par exemple, le surcoût engendré par le choix d'un site éolien évitant une zone importante pour la conservation des oiseaux, ou le surcoût engendré par des préconisations de chantier évitant les nuisances sonores à certaines heures de la journée ? En pratique l'estimation des dépenses peut être décomposée en plusieurs parties : - les mesures chiffrables. Il s'agit le plus souvent d'équipements techniques ou de travaux dont on peut aisément apprécier les dépenses. Citons, à titre d'exemple, un balisage pour des servitudes aéronautiques, des travaux de génie écologique, la restauration d'un site paysager. - les mesures estimées. Dans ce cas la précision des chiffres sera moindre. Citons la perte d'exploitation liée à l'utilisation d'éoliennes moins nuisantes mais moins performantes (pour minimiser, par exemple, des nuisances sonores). Cette perte d'exploitation pourra être chiffrée annuellement, ou sur la durée de vie du parc éolien. - les mesures non chiffrables. Il s'agira par exemple du choix d'un site éolien respectueux de l'environnement, du respect d'une station botanique ... Certaines mesures à «caractère environnemental» sont intégrées dans le projet et sont difficilement identifiables et donc chiffrables : utilisation de tours tubulaires, techniques de chantier particulière pour limiter les défrichements ...
+
+72
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 10
+
+Dans tous les cas, si ces mesures ne peuvent être chiffrées, elles doivent être présentées de façon explicite. Il est parfois intéressant, à titre de synthèse, de ramener le coût des mesures préventives, réductrices ou compensatoires au coût global du projet.
+
+Le contenu de ce chapitre, sa place dans l'étude d'impact
+Le maître d'ouvrage ne doit pas se contenter d'affirmations générales selon lesquelles il s'engage seulement à prendre les mesures nécessaires. Les mesures réductrices et compensatoires ne peuvent être simplement présentées comme des mesures de principe du type «remise en état du site» ou «reboisement d'une surface équivalente à la surface défrichée». Il faut aussi prévoir la localisation de la mesure, sa faisabilité, ses modalités et délais d'exécution et de suivi. En définitive, pour chaque mesure, le rédacteur de l'étude d'impact précise : - sa justification par rapport à l'effet dommageable concerné, - la nature technique des aménagements envisagés, - les éventuels impacts secondaires de cette mesure, - l'échéancier de mise en oeuvre, - l'estimation des dépenses correspondantes, - l'emplacement des terrains utilisés, - les difficultés éventuelles à résoudre, en cours d'exécution. Dans l'étude d'impact, ce chapitre se place après le chapitre sur les effets du projet sur l'environnement. Il en est le prolongement logique, puisque pour le législateur, malgré les principes de précaution, tout projet induit des impacts résiduels. Le maître d'ouvrage doit alors mettre en oeuvre, par rapport à ces impacts résiduels, des mesures réductrices ou compensatoires au titre de l'économie globale du projet.
+
+L'intérêt du suivi environnemental
+Le travail du bureau d'études d'impact s'arrête sur le plan administratif et réglementaire à la remise du rapport d'étude d'impact. La logique et l'efficacité voudraient que son intervention se poursuive ultérieurement, d'une part durant la phase chantier et d'autre part durant la phase d'exploitation. La prise en compte de l'environnement dans le projet doit se poursuivre au delà de la remise de l'étude d'impact. Si ce suivi n'est actuellement pas imposé par la réglementation, il est fortement recommandé pour plusieurs raisons : — il montre d'abord que le projet s'inscrit dans une démarche de progressivité et de continuité, vis-à-vis du respect de l'environnement, — il permet d'acquérir de l'expérience dans un domaine qui reste relativement nouveau aujourd'hui. Quel sera véritablement l'impact ornithologique des parcs éoliens ? Quel sera
+
+73
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 10
+
+le degré d'acceptation par les riverains ? Il est actuellement difficile de pouvoir répondre de façon précise à ce type de questions, — il permet de vérifier la pertinence des mesures correctives, et éventuellement corriger ou affiner certaines prescriptions. Les données d'environnement évoluent sans cesse, à ce titre l'environnementaliste pourra modifier certaines informations. Conformément au principe de proportionnalité, ce suivi est bien sûr à adapter à l'échelle du projet.
+
+LES DIFFÉRENTES PHASES D'UN SUIVI ENVIRONNEMENTAL
+Le suivi environnemental, qui n'est pas une mesure réductrice ou compensatoire, peut être décomposé en 3 phases principales : — à la phase consultation des entreprises, des clauses environnementales peuvent être intégrées dans les dossiers d'appels d'offres. Elles sont la traduction et la concrétisation des mesures évoquées dans l'étude d'impact. — à la phase chantier, l'environnementaliste suivra les actions réalisées pendant les travaux, contrôlera les exigences environnementales. Il pourra éventuellement modifier ou proposer de nouvelles actions en faveur de l'environnement. — à la phase exploitation, par exemple, sur les deux premières années, l'environnementaliste pourra suivre les thèmes environnementaux jugés à priori sensibles. Une fréquence de passage sera définie au préalable.
+
+CE QU'IL FAUT RETENIR...
+s La démarche consiste à privilégier d'abord les mesures pour éviter les impacts du projet, puis les mesures pour les réduire, et enfin les mesures pour les compenser. s Les différentes mesures envisagées doivent être chiffrées ; pour le législateur cette estimation permet de juger de la faisabilité effective de ces mesures. s Dans l'étude d'impact, les mesures sont précisées : localisation, coût, échéancier ... Elles ne doivent pas être énoncées seulement sous forme de principes. s Le suivi environnemental, non imposé par la réglementation, est fortement recommandé. Il s'inscrit dans une démarche de continuité vis à vis du respect de l'environnement.
+
+74
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS - FICHE 11
+
+LES EFFETS SUR LA SANTÉ
+D'après l'article 19 de la loi 96-1236 du 30 décembre 1996 sur l'air et l'utilisation rationnelle de l'énergie, tous les projets doivent faire l'objet, dans l'étude d'impact, d'une étude des effets sur la santé. Cette étude constitue un prolongement de l'analyse des effets du projet sur l'environnement qu'elle traduit en termes de risques sanitaires. Nos connaissances sur ce sujet sont encore aujourd'hui embryonnaires et bien souvent les effets directs et indirects sur la santé humaine ne peuvent être établis avec certitude. Nos propos se baseront donc essentiellement sur les premières méthodologies mises au point pour traiter ce chapitre, et non sur le retour d'expériences de projets éoliens. Cette fiche présente successivement : — la réglementation sur ce sujet ainsi que les circulaires ou recommandations élaborées suite à cette loi de 1996, — l'application aux projets éoliens, avec les effets positifs et négatifs de ce type d'aménagement, — le contenu du chapitre santé et la méthode de diagnostic.
+
+La réglementation
+La loi sur l'air et l'utilisation rationnelle de l'énergie (LAURE)
+L'article 19 de cette loi modifie l'article 2 de la loi du 10 juillet 1976 relative à la protection de la nature et apporte des compléments aux études d'impact des projets d'aménagement. En conséquence, le nouveau texte de l'article 2 de la loi du 10 juillet 1976 se présente désormais ainsi : "Le contenu de l'étude d'impact qui comprend au minimum une analyse de l'état initial du site et de son environnement, l'étude des modifications que le projet y engendrerait, l'étude de ses effets sur la santé et les mesures envisagées pour supprimer, réduire, et si possible compenser les conséquences dommageables pour l'environnement et la santé ..." Le contexte de l'article 19 et le caractère relativement innovant de la démarche qu'il implique soulèvent des interrogations quant au contenu de l'étude d'impact et au niveau d'exigence requis. C'est pour cette raison qu'une circulaire émanant du Ministère de l'Aménagement du Territoire et de l'Environnement (MATE) est parue le 17 février 1998.
+
+75
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 11
+
+LES ARTICLES 1, 2 ET 19 DE LA LOI DU 30 DÉCEMBRE 1996 SUR L'AIR ET L'UTILISATION RATIONNELLE DE L'ÉNERGIE
+Art. 1er.- L'Etat et ses établissements publics, les collectivités territoriales et leurs établissements publics ainsi que les personnes privées concourent, chacun dans le domaine de sa compétence et dans les limites de sa responsabilité, à une politique dont l'objectif est la mise en oeuvre du droit reconnu à chacun à respirer un air qui ne nuise pas à sa santé. Cette action d'intérêt général consiste à prévenir, à surveiller, à réduire ou à supprimer les pollutions atmosphériques, à préserver la qualité de l'air et, à ces fins, à économiser et à utiliser rationnellement l'énergie. Art. 2. - Constitue une pollution atmosphérique au sens de la présente loi l'introduction par l'homme, directement ou indirectement, dans l'atmosphère et les espaces clos, de substances ayant des conséquences préjudiciables de nature à mettre en danger la santé humaine, à nuire aux ressources biologiques et aux écosystèmes, à influer sur les changements climatiques, à détériorer les biens matériels, à provoquer des nuisances olfactives excessives. Art. 19. - Au septième alinéa de l'article 2 de la loi n° 76-629 du 10 juillet 1976 relative à la protection de la nature, après le mot : "engendrerait", sont insérés les mots : "l'étude de ses effets sur la santé", et après les mots : "dommageables pour l'environnement", sont ajoutés les mots : "et la santé ; en outre, pour les infrastructures de transport, l'étude d'impact comprend une analyse des coûts collectifs des pollutions et nuisances et des avantages induits pour la collectivité ainsi qu'une évaluation des consommations énergétiques résultant de l'exploitation du projet, notamment du fait des déplacements qu'elle entraîne ou permet d'éviter". Les dispositions du présent article s'appliquent aux demandes qui doivent être accompagnées d'une étude d'impact et qui sont déposées à compter du premier jour du septième mois suivant la publication de la présente loi.
+
+La circulaire du MATE du 17 février 1998
+Cette circulaire a donc pour objet de fournir des précisions sur les modalités d'application de la LAURE. Les points principaux sont les suivants : • Bien que la loi de 1996 ait pour objet premier la préservation de la qualité de l'air et une meilleure maîtrise de l'énergie, le champ des études complémentaires prévues à l'article 19 couvre, lui, un domaine plus vaste. S'agissant des effets sur la santé, il va de soi que l'étude doit porter sur l'ensemble des problèmes qu'un projet peut engendrer pour la santé humaine et non se limiter à la seule pollution de l'air. • Pour ce qui est du degré d'approfondissement de l'étude le principe de proportionnalité déjà évoqué dans la fiche 4 trouve ici tout son sens " le contenu de l'étude d'impact doit être en relation avec l'importance des travaux et aménagements projetés ". Toutefois, dans le domaine des effets d'un projet sur la santé, il faut également tenir compte des populations exposées. • Le niveau d'exigence requis dans la mise en oeuvre de l'article 19 dépend de 3 séries de critères : la nature du projet (type de projet, caractéristiques techniques ...), son
+
+76
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 11
+
+importance (dimensions, coûts ...) et sa localisation (milieu urbain ou rural, occupation de l'espace ...). Ces critères sont déterminants pour apprécier la pertinence et le degré d'approfondissement de tel ou tel aspect de l'étude. • L'évaluation des effets sur la santé doit tenir compte des limites de l'état actuel de la connaissance scientifique, technique ou des avancées méthodologiques. Dans les domaines où les effets ne sont pas établis avec suffisamment de certitude, l'étude ne pourra pas toujours aller au-delà de l'identification du problème et du risque potentiel sanitaire correspondant. • L'étude des effets sur la santé doit être articulée avec l'analyse des effets du projet sur l'environnement. L'étude des effets sur la santé constitue en réalité un prolongement du chapitre consacré aux effets du projet sur l'environnement qu'elle traduit en risques pour la santé humaine.
+
+Un exemple d'articulation entre environnement et santé : le bruit (cas général)
+Effet sur l'environnement Effet sur la santé
+
+Durée du bruit Fréquence Intensité...
+
+Troubles du sommeil Troubles cardio-vasculaires Troubles de l'audition...
+
+• Même si environnement et santé sont étroitement corrélés, il est préférable d'individualiser cette étude santé dans un chapitre bien spécifique. Ce chapitre santé aura le double avantage de répondre formellement aux exigences de la loi et de permettre au décideur et au public d'accéder plus aisément à ces éléments d'informations. En préambule, ce chapitre peut reprendre les principaux effets du projet sur l'environnement qui auront des répercussions sanitaires.
+
+LE GUIDE POUR L'ANALYSE DU VOLET SANITAIRE RÉALISÉ PAR L'INSTITUT DE VEILLE SANITAIRE
+En 1998, l'Institut de Veille Sanitaire a été saisi par la Direction Générale de la Santé pour élaborer un guide pour l'analyse du volet sanitaire des études d'impact. A cet égard l'Institut de Veille Sanitaire a constitué un groupe de travail rassemblant des experts en santé - environnement oeuvrant au sein d'institutions variées. Un document a été publié en Février 2000. Le principal objectif de ce guide est de fournir aux services de l'Etat, en charge de l'analyse des dossiers d'étude d'impact, les éléments nécessaires pour réaliser une lecture critique du volet sanitaire.
+
+77
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 11
+
+Application aux projets éoliens
+Les projets éoliens se situent dans une position paradoxale vis-à-vis de la loi sur l'air et l'utilisation rationnelle de l'énergie de 1996 et son article 19 : — d'un côté les raisons de développement de l'énergie éolienne résident, avant tout, dans ses effets positifs sur la qualité de l'air. En effet, la production d'électricité au moyen de l'énergie éolienne permet d'éviter l'utilisation de combustibles fossiles responsables de la majorité de la pollution atmosphérique de notre planète, — de l'autre côté les études d'impact de projet éoliens doivent comporter l'analyse des effets du projet sur la santé et les mesures envisagées pour supprimer ou réduire les conséquences dommageables du projet sur la santé. En fait la problématique «parcs éoliens - santé» se situe à deux niveaux de perception : — à l'échelle nationale, l'énergie éolienne présente principalement des effets positifs sur l'environnement et la santé, — à l'échelle locale, un parc éolien peut générer des effets négatifs. Le chapitre santé de l'étude d'impact doit présenter ces deux aspects.
+
+Effets positifs à l'échelle nationale
+L'intérêt environnemental général de l'éolien a été succinctement présenté à la fiche 2 : — pas de pollution de l'air (absence d'émissions de gaz à effet de serre, de poussières, de fumées, d'odeurs, de gaz favorisant les pluies acides), — pas de pollution des eaux (absence de rejets dans le milieu aquatique, de rejets de métaux lourds), — pas de pollution des sols (absence de production de suies, de cendres, de déchets), — pas ou peu d'effets indirects (absence par exemple de risques d'accidents ou de pollutions liées à l'approvisionnement des combustibles). Par le jeu des multiples interactions environnement - santé, cet intérêt environnemental se traduit par un bénéfice pour la santé humaine. Même si ces effets positifs sont plus facilement quantifiables à l'échelle nationale qu'à l'échelle locale, des ratios de rejets de gaz évités commencent à être établis. L'exemple ciaprès nous fournit une illustration pour le dioxyde de carbone, gaz à effet de serre.
+
+78
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 11
+
+LES REJETS DE GAZ CARBONIQUE ÉVITÉS PAR LA FOURNITURE D'ÉLECTRICITÉ D'ORIGINE ÉOLIENNE
+La température de notre planète résulte de l'équilibre entre le flux de rayonnement lui parvenant du soleil et le flux de rayonnement infrarouge renvoyé vers l'espace. La vapeur d'eau, le gaz carbonique, et d'autres gaz de l'atmosphère vont absorber ce rayonnement infrarouge, empêchant la terre de se refroidir. Sans ces gaz à effet de serre la température moyenne de la terre serait de - 18 ° C. Mais l'activité humaine augmente la concentration de ces gaz dans l'atmosphère. La concentration en CO2 a ainsi augmenté de 30 % depuis l'ère préindustrielle et celle de CH4 de 150 %. Il en résulte un réchauffement de notre planète : 0,3 ° à 0,6 ° C en un siècle, avec pour corollaire une montée du niveau des océans (10 à 25 cm). Si rien n'est fait, le prochain siècle devrait voir un réchauffement de 1 à 3,5 ° C et une montée des océans de 15 à 95 cm. L'étude des climats du passé, ou " paléoclimatologie " montre qu'une variation de quelques degrés seulement de la température moyenne de notre planète transforme profondément sa physionomie. Ainsi cette hausse des températures devrait provoquer des cycles de l'eau plus vigoureux, c'est-à-dire des sécheresses et des inondations plus sévères et une augmentation des précipitations. L'objectif des programmes de lutte contre l'effet de serre est de limiter les émissions concernées, notamment celles de principaux gaz à effet de serre retenus dans le protocole de Kyoto : - le gaz carbonique ou dioxyde de carbone CO2 - le méthane CH4 - le protoxyde d'azote N2O - les gaz fluorés, substituts des CFC : HFC, PFC, SF6 En prenant l'exemple du gaz carbonique, le tableau ci-après indique les ratios d'émissions de gaz par rapport au kWh produits (source : Mission Interministérielle de l'Effet de Serre). CO2 / kWh Centrale à charbon 950 g Centrale à fioul 800 g Centrale à gaz 470 g Centrale nucléaire 0 Centrale hydraulique 0 Sachant que les parcs éoliens viennent aujourd'hui principalement en substitution des centrales à combustibles fossiles, le gaz carbonique évité est de 820 g de CO2 / kWh (calculs réalisés en considérant que les centrales à charbon fournissent 6,5 % de la production électrique, les centrales à fioul 1,7 %, les centrales à gaz 2,4 %).
+
+Bilan du rayonnement solaire
+38 % 32 %
+diffusion
+
+rique tmosphé mite a Li
+
+t en em e nn lair yo o ra s
+
+6%
+réflexion
+
+S
+
+stre l terre o
+
+53 %
+absorbtion terrestre
+
+15 %
+absorbtion atmosphérique
+
+47 %
+
+79
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 11
+
+Ces données environnementales, qui commencent à être quantifiées, sont par contre difficilement traduisibles en risques sanitaires. C'est essentiellement à ce niveau que l'état actuel de notre connaissance reste très limité et que seules des études épidémiologiques permettront de comprendre les multiples interactions entre facteurs de l'environnement et risques sanitaires.
+
+Effets négatifs à l'échelle locale
+Les principaux effets négatifs, pouvant avoir des répercussions sanitaires à l'échelle locale sont a priori : — le bruit émis par les éoliennes, — les risques d'accidents pour les riverains, — les effets des champs électro-magnétiques des installations électriques. Le bruit La fiche 16 présente cette contrainte environnementale. Nous savons que le bruit peut générer des effets néfastes sur la santé humaine. Mais dans la très grande majorité des cas, les bruits engendrés par les parcs éoliens ne se traduisent pas en risques sanitaires : — les niveaux de bruit générés par les éoliennes ne sont en rien comparables à certaines infrastructures de transport par exemple, — les parcs éoliens évitent les zones d'habitat à proximité. Néanmoins l'étude d'impact devra aborder de façon précise cette question tant sur le plan environnemental, sanitaire et réglementaire. Les risques d'accidents (projection de pales, risques électriques, incendies ...) A l'heure actuelle même si le risque nul n'existe pas, aucun riverain ni visiteur de parc éolien n'a été tué ou blessé par des éoliennes, pour un parc mondial de plus de 30 000 machines, certaines fonctionnant depuis une vingtaine d'années. En revanche des accidents survenus au personnel* en charge de la construction des éoliennes ou de leur maintenance restent possibles. Les principaux dangers en la matière résultent des travaux en hauteur et de la présence d'électricité haute tension.
+
+QUELQUES CHIFFRES SUR LES ACCIDENTS DES ÉOLIENNES
+• Le taux d'accident de pales est d'environ un toutes les 300 années machines (année 1995). • La foudre est responsable de 6 % des arrêts d'éoliennes (année 1995). • Les éoliennes sont prévues pour résister à des vents d'environ 250 km/h pendant 5 s ou 180 km/h pendant 10 mn (elles supportent de fortes tempêtes mais pas des cyclones).
+* Cependant, d'après la circulaire du MATE de 1998, n'a pas à figurer dans le chapitre santé, avec le recensement des populations exposées, le personnel de l'exploitation ou de l'aménagement qui relève d'une autre législation (Code du travail)
+
+80
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 11
+
+Les dangers présentés par les éoliennes sont donc en général très faibles. C'est pourquoi aucun parc éolien n'est clos (tout comme aucune ligne électrique à très haute tension n'est close). Les effets des champs électro-magnétiques Des champs électriques et magnétiques sont présents : — au niveau des aérogénérateurs, — au niveau des câbles électriques permettant d'évacuer l'électricité produite. Les effets de ces champs électro-magnétiques sur la santé sont étudiés depuis plusieurs années par des organisations comme l'Institut National de la Santé et de la Recherche Médicale (INSERM), l'Organisation Mondiale pour la Santé (OMS), ou l'Académie Nationale de Médecine. Les liens de causalité entre la présence de ces champs et un risque sanitaire sont particulièrement difficiles à établir. Pour les parc éoliens, dans la très grande majorité des cas, le risque sanitaire est minime pour 3 raisons principales : — les raccordements électriques évitent les zones d'habitat, — les tensions actuellement utilisées pour les parcs terrestres ne dépassent pas pour l'instant les 63 000 V, — les raccordements en souterrains limitent fortement le champ magnétique.
+
+Le contenu du chapitre santé
+Ce chapitre traitant des risques sanitaires pourra être individualisé même s'il est fortement lié au chapitre des effets du projet sur l'environnement. Ce chapitre pourra distinguer : - les effets sanitaires positifs à l'échelle globale (rappel de notions principales), - les effets sanitaires négatifs à l'échelle locale. La démarche de l'étude d'impact relative aux effets locaux du projet sur la santé comprend 3 étapes : — la définition de l'aire d'étude, — les effets potentiels du projet sur la santé, — les mesures destinées à supprimer, réduire ou compenser les effets négatifs.
+
+La définition de l'aire d'étude
+Il est logique d'utiliser les périmètres rapprochés et éloignés de l'aire d'étude définis dans la fiche 6, étant donné que ce chapitre santé constitue un prolongement des effets du projet sur l'environnement. Le bruit, par exemple, évalué au sein du périmètre rapproché sera ensuite évalué en termes de risques sanitaires.
+
+81
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 11
+
+Les effets potentiels du projet sur la santé
+L'étude des effets du projet sur la santé doit identifier les populations exposées (nombre d'habitations, temps d'exposition, vulnérabilité ...). L'étude des effets sur la santé porte à la fois sur la phase chantier et la phase exploitation. Les conclusions de l'étude des effets sur la santé doivent indiquer la marge d'incertitude qui existe dans l'évaluation des risques.
+
+Les mesures envisagées pour limiter les effets du projet sur la santé
+Ces mesures n'ont trait qu'aux réels enjeux pour la santé et l'environnement. A titre d'exemple, il peut s'agir de modifier l'emplacement d'éoliennes pour minimiser le bruit, de modifier un raccordement électrique traversant une zone d'habitat.
+
+CE QU'IL FAUT RETENIR...
+s Le chapitre santé dans l'étude d'impact a été instauré par la loi de 1996 sur l'air et l'utilisation rationnelle de l'énergie (LAURE) et son article 19. La circulaire du Ministère de l'Aménagement du Territoire et de l'Environnement de 1998 précise les modalités d'application de cette loi. s De manière générale, les parcs éoliens ont des effets bénéfiques sur la santé à l'échelle nationale en évitant notamment les polluants atmosphériques. Ils peuvent éventuellement générer des effets négatifs à l'échelle locale. Ces deux aspects doivent être traités dans le chapitre santé. s La démarche d'évaluation de ces effets doit se caler sur la démarche environnementale avec notamment les 3 étapes : la définition de l'aire d'étude, l'analyse des effets potentiels sur la santé, les mesures envisagées pour limiter les risques sanitaires.
+
+82
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS - FICHE 12
+
+LES MÉTHODES UTILISÉES, LES DIFFICULTÉS RENCONTRÉES, ET LE RÉSUMÉ NON TECHNIQUE
+Le décret de 1993 relatif aux études d'impact a apporté d'importantes modifications au décret de 1977. Il modifie le champ d'application de la réglementation, renforce le processus d'étude et améliore la procédure. Parmi les différentes modifications, le contenu de l'étude d'impact est complété, à la fois pour faciliter la lecture du public et pour améliorer la fiabilité des données environnementales utilisées. Deux nouveaux chapitres sont notamment introduits : — un chapitre relatif à l'analyse des méthodes utilisées et des difficultés rencontrées pour évaluer les effets du projet, — un résumé non technique. Cette fiche fournit des repères pour élaborer ces nouveaux chapitres. Au préalable, un rappel est fait sur le contenu du décret de 1993.
+
+Le décret n° 93-245 du 25 février 1993
+Par ce décret, le contenu de l'étude d'impact est complété par : — «une analyse des méthodes utilisées pour évaluer les effets du projet sur l'environnement mentionnant les difficultés éventuelles de nature technique ou scientifique rencontrées pour établir cette évaluation». — «afin de faciliter la prise de connaissance par le public des informations contenues dans l'étude, celle-ci fera l'objet d'un résumé non technique». Le chapitre sur les méthodes et les difficultés rencontrées permet de préciser la fiabilité et la crédibilité de l'étude d'impact, notamment pour le public. Pour apprécier la qualité et l'objectivité de ce type d'étude, le public est en droit d'avoir des réponses à des questions du type : • Quelles investigations de terrain ont été réalisées et sur quelle durée ? • Quel est le degré de précision des appareils de mesure et des résultats ? • Dispose-t-on de données suffisantes pour apprécier l'impact ? Le résumé non technique doit permettre à un public non averti de comprendre le projet d'aménagement, ses objectifs, ses conséquences sur l'environnement. Il permet de présenter de façon synthétique les éléments essentiels ainsi que les conclusions de chacune des parties de l'étude d'impact.
+
+83
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 12
+
+LES AUTEURS DE L'ÉTUDE D'IMPACT
+L'article 1 du décret de 1993 précise également «dans tous les cas, la dénomination précise et complète du ou des auteurs de l'étude doit figurer sur le document final». En conséquence si le maître d'ouvrage a fait appel à des bureaux d'études ou à des consultants spécialisés en évaluation environnementale, le dossier d'étude d'impact doit indiquer les noms des auteurs et leurs coordonnées.
+
+L'analyse des méthodes mentionnant les difficultés éventuelles
+Bien que le texte de loi s'attache aux méthodes d'évaluation des effets du projet, il faut considérer que l'analyse porte, par extension, sur l'ensemble des méthodes utilisées dans le déroulement de l'étude d'impact : — l'analyse de l'état initial, — la comparaison des variantes, — l'analyse des effets du projet sur l'environnement, — la mise en place de mesures réductrices ou compensatoires.
+
+L'analyse des méthodes
+• Dans la recherche des données de base, on indiquera : — quelles recherches bibliographiques ont été faites et quelles bases de données ont été consultées, — quelles administrations, services parapublics, organismes, associations ont été consultés et comment s'est effectuée cette consultation. Les réponses écrites apportées pourront être jointes au dossier, — quels documents cartographiques ont été utilisés, quelles actualisations ont été réalisées à partir de photographies aériennes. • En ce qui concerne les investigations de terrain, le chapitre précisera notamment : — pour l'avifaune : quelle méthode de diagnostic a été utilisée (technique de points d'écoute, observations aléatoires, technique linéaire d'échantillonnage  ...), à quelle époque de l'année (printemps, migrations ...) et le type de résultats attendus (liste qualitative, données semi-quantitatives ...), — pour la végétation : quelle méthode d'observation a été employée, sur quelle durée et quelle période de l'année, — pour l'analyse de l'ambiance sonore : quel matériel de mesure a été employé, sur quelle durée et quelle période de l'année, quelles étaient les conditions météorologiques, comment les points de mesure ont été choisis, — pour l'analyse paysagère : quels critères d'analyse ont été retenus, à quelle période cette analyse a t'elle été réalisée, quelle est la hiérarchisation des critères.
+
+84
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 12
+
+Cette panoplie d'études spécifiques n'est pas exhaustive. Selon les spécificités du site éolien d'autres études de terrain nécessitant d'autres méthodes particulières peuvent être nécessaires : prospection archéologique, identification de l'habitat ...
+
+Sonomètre : instrument destiné à mesurer les niveaux sonores.
+
+• Au stade de la comparaison des variantes on précisera la méthode d'analyse adoptée : analyse multicritère non agrégée, analyse multicritère agrégée ... La présentation de la méthode utilisée permet de bien hiérarchiser les enjeux environnementaux et de présenter une démarche transparente. • Au stade des effets du projet sur l'environnement on pourra notamment préciser : — pour l'avifaune et la végétation : quelles sont les bases de l'analyse prédictive, s'il s'agit de retours d'expériences sur les sites équivalents, de dires d'experts, d'une analyse de données bibliographiques, — pour les simulations sonores : quel type de logiciel a t-on utilisé pour prédire les niveaux acoustiques engendrés, ou quelle formule mathématique a t-on employé, avec quelles conditions de mesure : période de l'année, météo, période de la journée, — pour l'analyse des impacts paysagers : quelle technique a t-on utilisé pour réaliser les photomontages, quels sont les fondements de l'analyse prédictive concernant le paysage.
+
+LES SIMULATIONS PAYSAGÈRES DE PARCS ÉOLIENS
+Le procédé le plus classique consiste à réaliser un photomontage du parc éolien à partir d'une photo du site vierge, en respectant bien sûr le type d'éolienne, sa taille, sa géométrie et son éloignement. Ce travail s'effectue à l'aide de logiciels performants spécifiques disponibles aujourd'hui sur le marché. Ces simulations visuelles informatiques reposent sur la " retouche d'image ". La méthode se déroule en 3 temps : - prise de vue sur site avec repérage précis de la position du photographe (sur carte IGN au 1/25000 ou à l'aide d'un GPS), - numérisation de la photo, - simulation avec saisie des coordonnées géographiques des éoliennes et du photographe. Le logiciel calcule les silhouettes des éoliennes et les superpose sur la photo numérisée.
+
+85
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 12
+
+Les difficultés rencontrées
+Le décret précise qu'il s'agit des difficultés éventuelles de nature scientifique ou technique. On citera, à titre d'exemples : — des lacunes dans la connaissance scientifique et technique sur un thème donné. Ainsi, le référentiel permettant de traduire des nuisances environnementales en risques sanitaires est bien souvent très limité (cf. fiche 11), — des simulations qui ne peuvent prendre en compte toute la complexité de la réalité du terrain. Ainsi les calculs de bruit ne peuvent permettre de tenir compte de tous les facteurs du milieu : réverbération du sol, absorption atmosphérique, absorption par la végétation, bruit ambiant qui varie avec la vitesse du vent, etc. Dans ces cas complexes il peut être utile de réaliser différentes simulations : cas le plus fréquent, cas le plus défavorable, cas le plus favorable, cas moyen, — le manque de retours d'expériences. Ainsi l'impact des éoliennes sur les populations d'oiseaux est parfois difficile à apprécier sur le territoire français. On possède certes des références sur d'autres parcs éoliens à travers le monde, mais sur des espèces et des sites biens particuliers. Transposer certaines informations collectées dans des milieux différentes nécessite beaucoup de prudence.
+
+Le résumé non technique
+Le résumé non technique reprend de façon synthétique les éléments essentiels de l'étude d'impact. Il est préférable qu'il soit facilement identifiable, avec par exemple : — une police de caractères ou un support papier légèrement différent du texte de l'étude, — une position en tête du dossier, — une présentation reprenant les différentes parties de l'étude d'impact avec les principales conclusions. Le résumé ne doit pas contenir de termes techniques, ou bien ceux-ci doivent être explicités en bas de page ou dans un glossaire. Tout en restant simple, celui-ci doit être cohérent et reprendre la logique développée dans l'étude d'impact avec ses différents chapitres réglementaires. Il est judicieux également de reprendre dans le résumé les cartes ou les illustrations qui synthétisent l'information. Le résumé respectera également la règle de proportionnalité. Sa longueur sera fonction de l'importance du projet, ou des sensibilités environnementales du site.
+
+86
+
+MANUEL PRÉLIMINAIRE DE L'ÉTUDE D'IMPACT DES PARCS ÉOLIENS Fiche 12
+
+CE QU'IL FAUT RETENIR...
+s Le décret de 1993 a apporté un certain nombre de compléments au dossier d'étude d'impact, afin d'améliorer sa fiabilité, sa crédibilité et sa lecture par un public non averti. s L'étude d'impact doit présenter un chapitre sur les méthodes utilisées et sur les difficultés éventuelles scientifiques ou techniques rencontrées dans le déroulement de l'évaluation environnementale. Ce chapitre doit présenter l'ensemble des services de l'Etat et organismes consultés au stade du recueil des données. s Le résumé non technique doit reprendre de façon synthétique les éléments essentiels de l'étude. Il est judicieux de le placer en tête du dossier et de lui donner une présentation facilement identifiable. Il doit de plus être cohérent, équilibré et reprendre les principales conclusions de tous les chapitres réglementaires de l'étude d'impact.
+
+87
+

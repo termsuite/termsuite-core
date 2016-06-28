@@ -1,0 +1,185 @@
+EVALUACIÓN Y CARACTERIZACION DE UN AEROGENERADOR DE 100W
+Autores: MSc Teodoro Sánchez, Ing. José E. Chiroque, Ing. Saúl Ramírez
+
+INTRODUCCIÓN
+El presente documento contiene los resultados del trabajo de investigación para mejorar el rendimiento de un aerogenerador de 100W desarrollado por ITDG previo a este trabajo de investigación. Este proyecto fue cofinanciado por el Consejo Nacional de Ciencia y Tecnología (CONCYTEC) y ejecutado por Intermediate Technology Development Group (ITDG) con el apoyo de la Universidad Nacional de Ingeniería (UNI). El objetivo fue mejorar las características técnicas del sistema de generación eólico, tanto en su rendimiento como en su confiabilidad. Los resultados obtenidos muestran una mejora importante en cuanto a la eficiencia del sistema, y también se ha comprobado la mejora de su confiabilidad del sistema mediante observaciones de campo y modificaciones que se incorporaron al diseño del equipo.
+
+El trabajo consistió en utilizar una máquina construida con la tecnología de ITDG, aerogenerador IT-PE-100, con la cual se procedió a realizar trabajos de campo con el sistema completo y realizar pruebas de laboratorio, específicamente del generador, sobre los resultados de estos ensayos se hicieron las modificaciones necesarias hasta tener un prototipo mejorado cuyas características se muestran en el presente trabajo. 
+
+1. ANÁLISIS DEL COMPORTAMIENTO DEL SISTEMA INICIAL
+La evaluación del sistema se realizó en campo, en condiciones de uso, para ello se utilizó una máquina instalada en el km 125 de la carretera Panamericana Norte (entre Lima y Huacho). Para lo cual fue necesario evaluar también las condiciones energéticas eólicas del lugar con el fin de conocer los parámetros característicos del viento, que son el de forma K y de escala C de la ecuación de Weibull, cuyos valores obtenidos con el método de la desviación estándar y los registros de viento por un periodo de 10 meses son: K=2 y C=5.338. Ver gráfico 1.
+
+
+
+
+
+
+
+
+
+
+
+Las características principales del sistema inicial de aerogeneración fueron: Un rotor tripala de 1.7m de diámetro, generador sincrónico trifásico con imanes permanentes de ferrita y diodos rectificadores. El comportamiento de trabajo se evaluó de acuerdo a normas internacionales para pruebas de estos equipos, con cargas de trabajo en condiciones reales.
+
+Los principales resultados de las evaluaciones del sistema son: El aerogenerador funciona en el rango de 4m/s a 15 m/s, para luego salir del viento si las velocidades son superiores, y la máxima eficiencia del sistema obtenida fue de aproximadamente 18%. Ver gráficos 2 y 3 sobre la potencia y eficiencia encontradas.
+
+Los valores de eficiencia se determinaron utilizando la ecuación [1]; estos resultados nos han llevado a realizar una evaluación por separado del generador y la turbina eólica, que nos permita conocer el comportamiento de cada componente, para hacer las mejoras correspondientes.
+
+    .				[1]
+Donde:
+ns	: Eficiencia del sistema
+V*I: Valores de voltaje y corriente obtenidos en campo (potencia en watts)
+?	:Densidad del lugar de influencia (emplazamiento), 1.22 kg/m3
+v	:Velocidad del viento m/s.
+D	:Diámetro del rotor (1.7 m)
+?g	:Eficiencia del generador eléctrico
+Cp	: Coeficiente de potencia de la turbina eólica
+
+2. ENSAYO DE LABORATORIO DEL GENERADOR DE IMANES PERMANENTES DE FERRITA (GIPF)
+Los ensayos de laboratorio permitieron obtener los parámetros característicos del generador, eficiencia, rango de trabajo, pérdidas, así como de conocer la constante de construcción de la máquina y el circuito equivalente. Las pruebas realizadas fueron: en vacío, corto circuito y con carga, para el ensayo se usó como máquina motriz un motor shunt.
+
+2.1. Prueba de vacío
+Para determinar las pérdidas mecánicas y pérdidas en el núcleo que están en función del flujo; el que a su vez es proporcional al voltaje en circuito abierto. Dichas pérdidas están representadas por la potencia mecánica que suministra la máquina motriz, ecuación [2], y quedan representadas en la gráfica 4.
+
+					[2]
+Donde:
+P = Potencia que recibe el generador, de la máquina motriz
+Pperd.= Pérdidas mecánicas, perdidas en el núcleo
+Pelé. = Pérdidas eléctricas del generador
+Pútil = Potencia útil que entrega el generador 
+
+También con los datos de la prueba de circuito abierto se obtiene la curva característica que representa la relación entre los componentes fundamentales para generar voltaje (flujo, velocidad de rotación). Y de las características de construcción de la máquina, expresada en la ecuación [3.] que remplazando valores de diseño tenemos la constante teórica de la máquina 0.020, ecuación [4].
+
+       		[3]
+De la ecuación [3] identificando términos (), despejamos KŽ
+						[4]
+Donde: 
+K = constante de la máquina
+Nc = Número de vueltas de las bobinas (100)
+B = Densidad de flujo en T (0.2T)
+Ac = Área de las espiras (0.0033m2)
+P = Número de pares de polos (8)
+? = flujo en Webers
+f = Frecuencia eléctrica en Hz
+n = Velocidad mecánica del campo magnético en rpm (igual a la velocidad del rotor para las máquinas sincrónicas)
+
+De la ecuación [3], se muestra que la obtención de voltaje de una fase está relacionada con el flujo magnético y éste a su vez depende de las características del imán permanente para este tipo de máquina, como de la frecuencia eléctrica, teniendo esta una relación directa con la velocidad de rotación del rotor del generador sincrónico.
+
+En la prueba el voltaje fue medido en la salida de los terminales, determinándose con los datos de voltaje y velocidad de rotación, del gráfico y la ecuación [5],que representa el voltaje real y permiten conocer la constante que representa la características constructivas del generador con imanes de ferrita.
+
+					[5]
+Donde: 
+V?= Voltaje real en los terminales del generador
+n = Velocidad de giro del rotor del generador en rpm
+
+En un conexión estrella , por lo tanto
+					[6]
+
+La ecuación [6], representa el voltaje interno real de una fase del generador, que contrastado con el de diseño es un valor menor, siendo entonces la constante K real igual a 0.013.
+
+2.2. Prueba de corto circuito
+Esta prueba nos da información de las reacciones magnéticas de la corriente de carga y las impedancias de dispersión. De esta prueba y con la de vacío tenemos la reactancia sincrónica, Xs, para una fase del generador, ecuación [7] y calculado por el voltaje de una fase a una determinada velocidad de rotación, entre la corriente obtenida en corto circuito con la misma velocidad (ver tabla 1). Conociendo Xs, tenemos el circuito equivalente de la máquina, y la expresión para calcular el voltaje V? real?, cuando fluye corriente por las bobinas del inducido, ecuación [8].
+
+Tabla 1: Valores de la reactancia sincrónicarpmIACV?EaXs94.004.002.121.230.31135.006.503.051.760.27177.008.204.002.310.28237.0010.805.363.100.29272.0012.206.153.550.29330.0014.407.464.310.30362.0015.308.184.730.31Promedio Xs0.29
+= 0.29						[7]
+             				[8]
+R = 0.35 ?, resistencia de una fase del generador
+
+
+
+
+
+
+
+
+
+2.3. Prueba con carga
+Permite evaluar el rango de trabajo y eficiencia de la máquina, los resultados han sido obtenidos teniendo en cuenta la ecuación [10]; realizamos el balance de energía del sistema de ensayo. En la ecuación [11], evaluamos las pérdidas por efecto Joule y en la ecuación [12] evaluamos las pérdidas mecánicas y del núcleo, para determinar la eficiencia del generador con la ecuación [13].
+
+La gráfica 6, muestra los resultados con carga, donde el mejor rango de trabajo es a partir de 100 W hasta 230 W con una eficiencia de 50% a 54%, y con un rango de velocidad de rotación de 400 a 900 rpm, parámetros que tienen una influencia directa en la performance del sistema de aerogeneración.
+
+				[10]
+					[11]
+Pperd = -3E-08*n3 + 0.0001*n2 + 0.0366*n	(del gráfico 4)	[12]
+				[13]
+
+3. EVALUACION DE LA EFICIENCIA DE LA TURBINA EÓLICA
+El coeficiente potencia Cp, es el parámetro indicador de la eficiencia del rotor, que mide el aprovechamiento y transformación de la velocidad del viento en energía mecánica, ecuación [14] 
+					[14]
+
+En la expresión anterior remplazamos valores con el cual determinamos que el rotor del aerogenerador presenta su mejor rendimiento con velocidades a partir de 5 m/s hasta 8.5 m/s, con un coeficiente de rendimiento de la turbina Cp, que está entre una rango de 0.30 hasta 0.36. Los valores encontrados, gráfico [7], estan cercanos al de diseño Cp=0.35 para una velocidad de viento de 6.5 m/s. y una rotación de 360 rpm. Esto nos indica que para mejorar la performance del sistema hay que hacer mejoras de la eficiencia del generador.
+
+4. MODIFICACIONES AL GENERADOR
+Los cambios introducidos en el generador para mejorar su eficiencia fueron: cambio de imanes permanentes de ferrita por neodimio, modificación de la geometría constructiva para reducir los entrehierros con lo que se modifica el circuito magnético que permite un mejor aprovechamiento de la densidad del flujo, variación del numero de espiras en las bobinas aumentando de 100 a 110, modificación de la forma de acople de las palas con el generador. Con estos cambios se construyó una máquina nueva, denominada generador de imanes permanentes de neodimio, a la que se sometió a pruebas de laboratorio y de campo.
+
+4.1. Generador con imanes permanentes de Neodimio (GIP-NdFeB)
+Las pruebas realizadas en laboratorio son las mismas que se realizaron al generador de imanes de ferrita, los resultados se muestran en los gráficos del 8 al 11, en los que se muestra una comparación de los resultados del generador con los dos tipos de imanes (ferrita y neodimio). Se puede apreciar que el generador con neodimio presenta mejores características de trabajo, en un rango de velocidades entre 250 a 450 rpm, con potencias entre 100 y 300 W y una eficiencia máxima del 66%.
+
+Las características del generador con imanes permanentes de neodimio son:
+- Constante de Construcción (K): 0.0338
+- Resistencia sincrónica (Xs): 0.51 ?
+- Resistencia de una fase (R): 0.4 ?
+- Rango de generación de potencia (P): 100 a 300 WEficiencia (?): 66%
+- Velocidad de giro del rotor: 200 a 450 rpm
+
+
+
+5. RESULTADOS Y CONCLUSIONES
+5.1. Resultados del sistema con las modificaciones
+Los cambios y modificaciones introducidas en el sistema aerogenerador, descritas en la parte 4, se muestran en los gráficos 12 y 13 de los que se puede dar lectura a lo siguiente:
+a) Mayor potencia eléctrica en el generador con imanes de neodimio, que permite una mejora importante en la eficiencia del sistema global, pasando de 18% a 26%.
+b) El sistema trabaja a bajas velocidades de giro del rotor, estando ahora en una rango de 250 a 450 rpm para valores de máxima eficiencia, respecto a los del sistema con generador de imanes de ferrita (400 a 900 rpm).
+c) El sistema genera potencia a bajas velocidades de viento. A partir de una velocidad de viento de 3.5 m/s se inicia la generación de potencia.
+d) Para la velocidad de diseño, velocidad de viento, se obtiene una potencia de 100 W a una velocidad de giro de 360 rpm.
+e) Se tiene las características finales de trabajo y performance del sistema, siendo el rango de mayor eficiencia para velocidades de viento entre 5 y 8 m/s.
+
+5.2. Conclusiones
+a) El mayor aprovechamiento de la velocidad del viento, está condicionado a la eficiencia de los dos principales componentes del sistema la turbina eólica y el generador. Los resultados finales obtenidos son producto de un análisis: teórico, de laboratorio y evaluaciones de campo de los componentes principales del sistema de aerogeneración.
+b) La evaluación y análisis conceptual de cada una de las partes del generador, rotor, estator, punto de operación de los imanes, circuito magnético, circuito eléctrico, geometría constructiva, acople máquina motriz y generador permitieron hacer las modificaciones al generador.
+c) Se ha logrado la caracterización final del sistema de aerogeneración:
+Rotor
+- Diámetro nominal de 1.70 m
+- Tres palas, perfil aerodinámico NACA 4412
+- Potencia nominal, 100 W
+- Velocidad nominal de viento, 6.5 m/s
+- Velocidad nominal del rotor, 360 rpm
+- Veocidad de salida 12 m/s
+Generador
+- Acople directo al rotor
+- Trifásico de imanes permanentes, Neodimio (NdFeB)
+- Ocho pares de polos, doble conexión en estrella
+- Potencia nominal, 330 W
+- Velocidad nominal, 360 r.p.m.
+- Eficiencia, 66%
+d) Se cuenta con las características técnicas de operación del generador de imanes (ferrítico y neodimio), así como las curvas de operación para el sistema completo de aerogeneración
+e) Los cambios y modificaciones en el sistema de generación eólica ha permitido un incremento en su eficiencia de 16% a 26%. 
+
+REFERENCIAS BIBLIOGRÁFICAS
+- Martin O.L Hansen; Aerodynamics Wind Turbines, Rotors, Loads and Structure.James& James Iglaterra-1995
+- R.Gasch, J Twele; Wind Power Plants:  Fundamentals, Design, Construction and Operation-James& James Iglaterra-1995
+- ITDG, Documentos internos; Small Wind Systems for Battery Charging-2000
+- Vahan Gevorgian, David A. Corbus,Stephen Drouilhet, Richard Holz, Modeling, Testing and Economic Analysis of a Wind-Electric Battery Charging Station
+- National Renewable Energy Laboratory-1998
+- E. Muljadi,C.P. Butterfield, Yih-Huei Wan, Paper Axial Flux, Modular, Permanent-Magnet Generator with a Toroidal
+- Winding for Wind Turbine-Applications
+- National Wind Technology Center,National Renewable Energy Laborator-1998
+- E. Muljadi and J. Green, paper.Cogging Torque Reduction in a Permanent Magnet Wind Turbine Generator, National Renewable Energy Laboratory-2002
+- Salomé Gonzáles Chávez; Aerogeneración: Una Fuente Energética Competitiva, Depósito Legal AS- 3233-98 ISBN 8492334533 - Quinta Edición.
+- Chester L. Dawes y Gusavo Gill, S.A; Tratado de Electricidad -  Tomo I, corriente continua, Barcelona.
+- ElectroPerú S .A, Asesoría de Energías no Convencionales; Bosques Eólicos Malabrigo 50MW, San Nicolás 35 MW. Factibilidad Técnico  Económico.
+- José M. de Juana Sardón, Adolfo De Francisco García, Jesús Fernández Gonzáles, Florentino Santos García, Miguel Ángel Herrero García, Manuel Macías Miranda; Energías Renovables para el Desarrollo 
+- Teodoro Sánchez Campos; Energía Eólica. Trabajo presentado en el curso seminario de Aerogeneración de Energía realizado en Río de Janeiro del 01 al 05 de setiembre de 1980.
+- Chester L. Dawes y Gutavo Gill, S.A; Tratado de Electricidad -  Tomo I y II, corriente continua, alterna. Barcelona.
+- Essentials of Magnet Design, Magnets Sales & Manufacturing Inc. http://www.magnetsales.com
+- Fitzgerald kingsley, Jr; Máquinas Eléctricas, Quinta Edición.Mc Graw Hill
+-  Tephen J. Chapman, Máquinas Eléctricas, Tercera Edición; S MC GraW Hill.
+- Universidad Nacional de Ingeniería  UNI; Guía de Laboratorio de Máquinas Eléctricas  II.
+- Norma Técnica Peruana, NTP-IEC-60034-2-2001; Método para la Determinación de las Pérdidas de Eficiencia de las; Máquinas Eléctricas Rotativas a partir de Ensayos (excepto para máquinas de vehículos).
+
+Mayores informes:
+ITDG
+Programa de Energía, Infraestructura y Servicios Básicos
+Av. Jorge Chávez 275, Miraflores - Lima
+Tel. +511 447 5127  /  446 7324  /  444 7055
+Fax +511 4466621
+www.itdg.org.pe

@@ -1,0 +1,463 @@
+ZUVERLÄSSIGE METHODEN ZUR NORMIERUNG UND BEWERTUNG
+VON ENERGIEERTRÄGEN VON WINDPARKS
+Wolfgang Winkler; Martin Strack; Annette Westerhellweg;
+
+Vortrag gehalten auf der 6. Deutschen Windenergie-Konferenz (DEWEK 2002)
+23. bis 24. Okt. 2002 in Wilhelmshaven
+
+Sitzung 13: Analyse & Verifizierung von Projekten
+ZUVERLÄSSIGE METHODEN ZUR NORMIERUNG UND BEWERTUNG
+VON ENERGIEERTRÄGEN VON WINDPARKS
+Wolfgang Winkler; Martin Strack; Annette Westerhellweg
+Deutsches Windenergie- Institut DEWI, Ebertstraße 96, D-26382 Wilhelmshaven
+Tel.: 04421-4808-0; FAX.: 04421-4808-43; email: w.winkler@dewi.de; http //www.dewi.de
+
+1 Zusammenfassung
+Energieerträge bestehender Windenergieanlagen werden in Deutschland im Allgemeinen mit Windindices normiert, um den langjährigen Durchschnittsertrag zu berechnen. Meist kommen dabei die Windindices der Ingenieurwerkstatt für Energietechnik IWET [1]
+zum Einsatz, die mit dem Monatsinfo und der Betreiberdatenbank sehr wichtige Informationen bereitstellen. In diesem Beitrag wird
+anhand von Beispielen und Vergleich mit anderen Daten ("geostrophische" Winddaten, Langzeitzeitreihen meteorologischer Stationen) der Frage nachgegangen, inwieweit die Windindices zur zuverlässigen Normierung auf ein langjähriges Niveau generell geeignet sind.
+
+Die so erhaltenen normierten Energieerträge werden u. a. zur
+Plausibilisierung von meteorologischen Eingangsdaten bei Ertragsberechnung verwendet [2]. Dies ist insbesondere dadurch
+begründet, dass in Deutschland Ertragsprognosen in der Regel
+mit Hilfe des Europäischen Windatlasverfahrens [3] und unter
+Verwendung standortferner Daten meteorologischer Messstationen durchgeführt werden. Inzwischen hat sich die Erkenntnis
+durchgesetzt, dass die dabei verwendeten meteorologischen Daten eine erhebliche Unsicherheit besitzen können, was deren
+Plausibilisierung durch den Vergleich mit tatsächlichen Energieerträgen erforderlich macht.
+Darüber hinaus werden mit Windindices normierte Energieerträge zur Betriebsüberwachung von bestehenden WEA bzw.
+Windparks eingesetzt. So kann erschlossen werden, wie die beobachteten WEA sich im Vergleich zu den Windverhältnissen der
+Region verhalten, um so durch Störungen bedingte Mindererträge festzustellen. Außerdem wird durch Normierung der Energieerträge ein Vergleich der vor Inbetriebnahme prognostizierten mit
+den tatsächlich angefallenen Energieerträgen möglich.
+Außerdem werden Windindices auch für die Extrapolation gemessener monatlicher oder jährlicher Winddaten auf lange Zeiträume verwendet.
+3 Windindices in Deutschland
+Neben den bereits erwähnten IWET-Indices (auch Keiler-/Häuserindex genannt) gibt auch das Internationale Wirtschaftsforum
+Regenerative Energien (IWR) Windindices [4] heraus. Generell
+werden in Deutschland die Windindices der IWET als Standard
+angesehen und dementsprechend hier hervorgehoben behandelt. Die IWET-Indices haben folgende wesentliche Eigenschaften:
+•
+•
+
+14
+
+Es gibt 25 regionale Indices.
+Die Indexwerte werden aus den WEA-Erträgen einer Region
+ermittelt.
+
+Das 100%-Niveau wurde festgelegt aus dem Vergleich mit
+benachbarten Windindices (ursprünglich durch Vergleich mit
+dem dänischem Windindex der 80er Jahre).
+
+Die IWET- als auch die IWR-Indices beziehen sich auf Monatsmittelwerte von Energieerträgen, lassen also keine detaillierte
+Analyse der Zeitreihen von Windgeschwindigkeit und Windrichtung im Rahmen eines "Measure-Correlate-Predict" Verfahrens
+(MCP) zu (siehe z.B.: [5]). Insofern stellen Windindices eine Vereinfachung dar.
+4 Eignung von Windindices zur Normierung
+Abbildung 1 zeigt den Verlauf des monatlichen Ertrages und des
+dazugehörigen regionalen Windindices sowie den resultierenden
+normierten Ertrag für eine Beispiel-WEA. Die normierten monatlichen Erträge schwanken nur geringfügig; die Normierung funktioniert in diesem Beispiel also recht gut.
+200
+
+Iwet-Index
+
+Windgeschwindigkeiten und damit die Erträge von WEA weisen
+ihrem zeitlichen Verlauf Schwankungen auf. Liegen Erträge über
+einen begrenzten Zeitraum vor, so kann deren Höhe vom langfristigen Mittel verschieden sein. Ein Windindex (oder Ertragsindex) normiert diese Erträge bezogen auf einen vorher definierten Langzeit-Mittelwert und ermöglicht somit die Berechnung des
+Langzeit-Mittelwertes des Ertrages.
+
+•
+
+Energieertrag [MWh]
+
+2 Einsatz von Windindices
+
+Erträge
+normierte Erträge
+IWET-Index
+
+160
+
+120
+
+80
+
+100 %
+
+40
+
+0
+Dez 00
+
+Mrz 01
+
+Jun 01
+
+Sep 01
+
+Dez 01
+
+Mrz 02
+
+Abb. 1: Beispiel für eine zutreffende Normierung von Erträgen
+durch den IWET-Windindex
+In vielen Fällen funktioniert die Normierung allerdings nicht so gut
+wie in Abbildung 1 dargestellt. Dies wird anhand der Abbildung 2
+deutlich. Die normierten Erträge dieser Beispiel-WEA schwanken
+erheblich um den Mittelwert; mehr noch, der Windindex führt hier
+zu einer Überkorrektur der Erträge. So lag der tatsächliche Ertrag
+im sehr windstarken Februar 2002 weit oberhalb des Mittels. Da
+der entsprechende Wert des IWET-Index für diesen Monat aber
+DEWEK 2002 Tagungsband
+
+Sitzung 13: Analyse & Verifizierung von Projekten
+noch höher liegt, folgt, dass der normierte Ertrag deutlich unter
+dem Durchschnitt läge. Das entgegengesetzte Verhalten ist im
+windschwachen Sommer 2001 zu beobachten.
+
+Erträge
+
+Energieertrag [MWh]
+
+normierte Erträge
+200
+
+Normierungsniveau
+
+Iwet-Index
+
+250
+
+110%
+
+IWET-Index
+norm. Erträge m. mod. Index
+
+150
+
+100 %
+
+100
+
+105%
+Standardunsicherheit
+(68%-Vertrauensbereich)
+
+100%
+95%
+
+95%-Vertrauensbereich
+
+90%
+0
+
+50
+
+5
+
+10
+15
+Anzahl Monate
+
+20
+
+25
+
+Abb. 3: Unsicherheit der modifizierten Normierung in Abhängigkeit des Zeitraums, für den Ertragsdaten zur Verfügung stehen
+
+0
+Dez 00
+
+Mrz 01
+
+Jun 01
+
+Sep 01
+
+Dez 01
+
+Mrz 02
+
+Abb. 2: Beispiel für eine weniger zutreffende Normierung von
+Erträgen durch den IWET-Windindex; verbesserte Normierung
+durch modifizierten IWET-Index
+Die Tendenz zur Überkorrektur durch den IWET-Index tritt in vielen Fällen auf und ist inzwischen branchenbekannt. Generell
+kann die Überkorrektur aus der Tatsache resultieren, dass der
+IWET-Index sich an der Energieflussichte (W/m²) und nicht an
+den Erträgen selber orientiert. Auftreten und Ausmaß der Überkorrektur ist abhängig von der Region, aber auch vom individuellen Standort, dem WEA-Typ und der Nabenhöhe. In erster
+Näherung lässt sich ein Zusammenhang der Überkorrektur zu
+den Volllaststunden herstellen.
+In vielen Fällen zeigt sich, dass diese Überkorrektur in erster Näherung als lineare Funktion des relativen Ertrages betrachtet
+werden kann. Dies ermöglicht, den Windindex dementsprechend
+standortspezifisch zu modifizieren. Der mit einem solcherart
+modifizierten Windindex normierte Ertrag ist auch in Abbildung 2
+dargestellt.
+
+Allerdings zeigt sich, dass es zu bestimmten Perioden zur Überschreitung der Standardabweichung kommen kann. Um das
+Beispiel wieder aufzugreifen: bei acht Monaten an Daten hätte
+eine Standardunsicherheit von ±3,5% erwartet werden können, in
+vorliegendem Falle lag die Abweichung mit +8 % aber deutlich
+darüber. Diese hohe Abweichung ist bedingt durch die extrem
+niedrigen Windindex-Werte im Jahr 2001. Extreme Windindexwerte sollten also sehr vorsichtig ausgewertet werden.
+5 Festlegung des langjährigen 100%-Niveaus
+Um herauszufinden, ob das gewählte 100%-Niveau der IWETWindindices zutreffend ist, wurden zwei Untersuchungen durchgeführt:
+-
+
+Tatsächlicher durchschnittlicher
+monatlicher Ertrag 04/01-11/01 (8
+Monate)
+
+73 %
+
+IWET-Index 04/01-11/01 (8 Monate)
+
+62 %
+
+Normierter durchschnittlicher
+monatlicher Ertrag 8 Monate
+
+118 %
+
+Normierter durchschnittlicher
+monatlicher Ertrag 6 Jahre
+
+100 %
+
+Differenz 8 Monate - 6 Jahre
+
+18 %
+
+Differenz 8 Monate - 6 Jahre nach
+Modifikation des IWET-Index
+
+8%
+
+Tab. 1: Normierungsbeispiel in Zahlenwerten
+In Tab. 1 wird das Beispiel aus Abbildung 2 in Zahlenwerten aufgegriffen. Es handelt sich um eine 500kW-WEA, die seit 01/1996
+in Betrieb ist. Dabei wird der normierte durchschnittliche Ertrag
+der sechs Jahre bis Ende 2001 mit 100 % angesetzt. Tatsächlich
+zur Verfügung stehen Ertragsdaten oft nur für wesentlich kürzere
+Zeiträume. Sofern daher beispielsweise nur die Daten von den
+acht Monaten April bis November 2001 verwendet werden, würde
+sich eine Überschätzung des langjährigen normierten Ertrages
+von 18 % ergeben. Nach Modifikation des IWET-Index ist die Abweichung geringer (8 %), aber noch vorhanden. Es besteht also
+in jedem Falle eine Restunsicherheit hinsichtlich der Normierung,
+auch wenn der Windindex modifiziert wird.
+DEWEK 2002 Tagungsband
+
+Die Unsicherheit wurde in Abbildung 3 für das erwähnte Beispiel
+berechnet, indem für jeweils alle möglichen, verschieden lange
+Zeiträume (1, 2, ..., 24 Monate) aus den sechs Jahren die normierten Erträge berechnet wurden. Erwartungsgemäß nimmt die
+Unsicherheit mit der Länge des betrachteten Zeitraums ab, für
+den Ertragsdaten zur Verfügung stehen.
+
+Erstellung eines "geostrophischen Windindexes" und
+Vergleich der Windindexwerte in Nordwestdeutschland mit
+langjährigen Zeitreihen der Windbedingungen des Deutschen
+Wetterdienstes.
+
+5.1 Erstellung eines "geostrophischen" Windindexes
+Die hier als "geostrophische" Winddaten bezeichneten Werte
+entstammen den Reanalyse-Daten (850mb-Niveau) von NCEP/
+NCAR [6]. Kurz gefasst sind dies Ergebnisse eines globalen Klimarechenmodells, in welches eine große Zahl an gefilterten und
+umgerechneten Daten eingegangen sind. Die Reanalyse-Daten
+umfassen verschiedene Parameter und werden weltweit in einem
+Gitter von 2,5° geographischer Länge und Breite sowie für verschiedene Höhen (angegeben als Druckniveaus) berechnet.
+Wir verwenden die Daten des 850-mbar-Niveaus, da diese in der
+Regel als unabhängig von lokalen Einflüssen und somit als repräsentativ für eine größere Gegend angesehen werden können.
+Aufgrund der großen Höhe werden diese Daten hier als "geostrophische" Winddaten bezeichnet. Erwartungs- und erfahrungsgemäß sind diese "geostrophischen" Winddaten in vielen Gegenden der Erde sehr konsistente Daten und somit -nicht nur in
+Deutschland- gut für einen Langzeitvergleich geeignet.
+Als Datenbasis wurde der Zeitraum 1/1982-12/2001 genutzt. Als
+100%-Niveau wurde somit das Mittel dieser 20 Jahre festgelegt.
+Es wurden Daten mit 12-stündiger Auflösung (1h und 13h, MET)
+umgerechnet zu Monatsmittelwerten verwendet.
+
+15
+
+Sitzung 13: Analyse & Verifizierung von Projekten
+lichen, unabhängigen Datenquelle nachvollzogen werden kann.
+Aufgrund der relativ langen, mutmaßlich konsistenten Datenbasis
+ist der geostrophische Windindex insbesondere hinsichtlich des
+100%-Niveaus interessant. Eine summarische Auswertung liefert
+folgende Erkenntnisse:
+Das durchschnittliche Niveau der Indices der 90er Jahre liegt für
+die geostrophischen Daten durchschnittlich bei 102 % und bei
+den IWET-Indices bei 100 %. Unter der Voraussetzung, dass die
+geostrophischen Indices in der Summe zutreffend sind, würden
+die IWET-Indices zu einer leichten Überschätzung des Windangebotes führen. Die 10-Jahres-Durchschnittswerte der 25 IWETIndices streuen dabei über einen Bereich von 97% - 105%, größeren Abweichungen von 100% treten aber nur im mittleren und
+südlichen Deutschland auf. Demgegenüber streuen die geostrophischen Windindices in Deutschland nur im Bereich von ± 1%.
+Aufschlussreich ist insbesondere ein Vergleich der ersten Hälfte
+der 90er Jahre mit der zweiten Hälfte der 90er Jahre: Demnach
+waren von 1990-1994 bessere Windbedingungen als von 19951999. Der Unterschied der Indexwerte der ersten Hälfte der 90er
+Jahre im Vergleich mit der zweiten Hälfte der 90er Jahre betrug
+für die geostrophischen Winddaten 0% - 10%, im Durchschnitt
+7 % und laut der IWET-Windindices 6% - 33%, im Durchschnitt
+15%.
+5.2 Vergleich der IWET-Indices im Bereich der Deutschen
+Bucht mit Daten meteorologischen Beobachtungen
+
+Abb. 4: Gitterpunkte für den geostrophischen Windindex in
+Deutschland
+
+300
+Ertrag, E40, NH 65m
+
+250
+
+Index, Gitterpunkt 50x7.5
+
+200
+150
+100
+50
+
+Jan 02
+
+Jul 01
+
+Jan 01
+
+Jul 00
+
+Jan 00
+
+Jul 99
+
+Jan 99
+
+Jul 98
+
+Jan 98
+
+Jul 97
+
+0
+
+Jan 97
+
+Ertrag relativ, geostr. Windindex [%]
+
+Deutschland wird durch 17 Gitterpunkte abdeckt, (siehe Abbildung 4). Um die Monatsmittel der Windgeschwindigkeiten auf die
+Erträge von WEA abzubilden, werden die Windgeschwindigkeiten mit einem empirischen Exponenten potenziert. Dies ermöglicht erfahrungsgemäß, einen realistischsten Zusammenhang
+zwischen Windgeschwindigkeiten und WEA-Erträgen zu bilden.
+Abbildung 5 zeigt den relativen Verlauf des Ertrages einer WEA
+in Rheinland-Pfalz und den des berechneten geostrophischen
+Windindices
+
+Abb. 5: Verlauf eines geostrophischen Windindex im Vergleich
+mit einer WEA der Region
+Es lässt sich eine gute Übereinstimmung der Werte erkennen. In
+der Regel korrelieren die geostrophischen Windindices aber
+etwas schlechter mit den Ertragsdaten von WEA als die IWETWindindices und werden deshalb vom DEWI nicht als Ersatz für
+die IWET-Indices verwendet. Eine individuelle Anpassung des
+geostrophischen Index an die jeweiligen WEA-Standorte würde
+die Korrelation allerdings deutlich verbessern. Dennoch liefert der
+zusätzliche Einsatz der geostrophischen Windindices zusätzliche
+Informationen, da das langfristige Windpotential mit einer zusätz16
+
+Um die Ergebnisse zu untermauern, wurden weitere Untersuchungen angestellt. Im Rahmen des BMU-F&E Vorhabens 9946101
+wurden Langzeitdaten des DWD im Bereich der Deutschen Bucht
+für Forschungszwecke ausgewertet. Wesentliche Fragestellung
+war dabei, inwieweit die IWET-Indices zur Vorhersage des Langfristpotentials für Offshore-Zwecke geeignet sind. Abbildung 6
+zeigt die Lage der Stationen.
+
+Abb. 6: Ausgewertete meteorologische Daten im Bereich der
+Deutschen Bucht
+Die Zeitreihen der Daten reichten zum Teil bis in die 1930er Jahre
+und sind somit potentiell gut geeignet, um die Frage zu beantworten, wie sich das Langzeitniveau des Windpotentials verhält. Die
+Daten weisen allerdings zum Teil erhebliche Lücken, Wechsel in
+der Beobachtungshäufigkeit, Inkonsistenzen und unplausible
+Werte auf. Eine vollständige Dokumentation über die verwendete Messtechnik, deren Wechsel und Veränderungen in der direkten Umgebung der Messstationen waren nicht erhältlich. Um
+dennoch sinnvolle Ergebnisse aus den Daten zu erhalten, wurden mutmaßlich inkonsistente, fehlerhafte oder mit vielen Fehldatensätzen belastete Datensätze bzw. Zeiträume ausgefiltert.
+
+DEWEK 2002 Tagungsband
+
+Sitzung 13: Analyse & Verifizierung von Projekten
+Nach der Filterung konnten nur noch die Datensätze von fünf
+Stationen verwendet werden, in denen auch die 90er Jahre enthalten waren. Um die meteorologischen Daten mit Erträgen vergleichbar zu machen, wurden die Windgeschwindigkeiten wiederum mit einem empirischen Exponenten potenziert. Das durchschnittliche Niveau der Indices der 90er Jahre liegt für die als
+konsistent erachteten meteorologischen Daten bei 100% - 102%,
+bei den geostrophischen Daten der Region Nordseeküste bei
+101.5% und bei den IWET-Indices bei 100%. Eventuell ließe sich
+für diese Region also wiederum eine leichte generelle Überschätzung des Windangenbotes durch die IWET-Indices annehmen.
+Ein Vergleich der ersten Hälfte der 90er Jahre im Vergleich mit
+der zweiten Hälfte der 90er Jahre zeigte wiederum, dass von
+1990-1994 bessere Windbedingungen als von 1995-1999 herrschten. Der Unterschied der Indexwerte der ersten Hälfte der
+90er Jahre im Vergleich mit der zweiten Hälfte der 90er Jahre
+betrug entsprechend der meteorologischen Daten der Region 5%
+- 10%, entsprechend der geostrophischen Winddaten der Region
+7%, und laut der IWET-Windindices 9% - 19%, im Durchschnitt
+14%.
+
+Werte Windindex
+
+100 %
+
+Region 17
+Region 20
+1996 1997 1998 1999 2000 2001
+
+Abb. 7: Vergleich der Windindex-Werte zweier benachbarter Regionen
+5.3 Fazit 100 %-Niveau
+Die hier gezeigten Daten legen nahe, dass das Niveau der IWETIndices der 90er Jahre insgesamt geringfügig zu hoch liegt (12%), als letztendlich gesichert kann diese Aussage aber nicht
+gelten. Hinzu kommen aber weitere Faktoren, die für eine Überbzw. Falschbewertung des Windangebotes sprechen:
+Die größeren Unterschiede bei den IWET-Indices als bei anderen
+Datensätzen im Vergleich der ersten Hälfte der 90er und der
+zweiten Hälfte der 90er Jahre sind zum Teil als Folge der oben
+beschriebenen Überkorrektur zu werten. Wahrscheinlich ist aber
+das Niveau der IWET-Indices seit Mitte der 90er zu niedrig. Erst
+seit dieser Zeit gibt es in den meisten Regionen überhaupt eine
+relevante Anzahl an WEA, zumal mit Anlagentypen, die den heute aufgestellten näher kommen. Endgültig belegen ließ sich diese
+These mit unseren Untersuchungen aber nicht, zumal nicht automatisch davon ausgegangen werden kann, dass die Ergebnisse
+laut dem geostrophischen Windindex oder den meteorologischen
+Daten zutreffend sind, da deren Konsistenz und Übertragbarkeit
+auf die Erträge der WEA bei der hier gezeigten Methodik begrenzt ist. Eine endgültige Klärung der Frage, wie hoch das langfristige Windpotential in jeder Region Deutschlands tatsächlich
+ist, wäre -wenn überhaupt- nur mit erheblichem Aufwand möglich.
+Dennoch halten wir es für wahrscheinlich, dass zumindest einige
+regionale Indices in den letzten Jahren zu niedrige Werte anzeigen. Dies wird anhand der Daten in Abbildung 7 deutlich. Es handelt sich hier um die Jahresdurchschnittwerte zweier benachbarter Windindex-Regionen im Bereich südliches Brandenburg,
+Thüringen und Sachsen. Demnach wäre inzwischen seit einigen
+Jahren das relative Windangebot der Region 17 um ca. zehn ProDEWEK 2002 Tagungsband
+
+zent schlechter als in der Region 20. Andersherum wäre demnach der langfristige normierte Ertrag einer WEA in Region 17 um
+zehn Prozent höher als wenn sie in Region 20 stünde. Insbesondere für den Grenzbereich zwischen den Regionen ist dies
+sehr unplausibel. Falsche -z.B. zu niedrige- Werte der Windindices führen zu einer falschen -z.B. zu einer zu hohen- Bewertung des langfristigen Windpotentials. Das DEWI führt aus den
+genannten Gründen bei Ertragsprognosen eine Umgewichtung
+der Windindices durch, bei der die letzten Jahre stärker gewichtet werden.
+6 Fazit
+Die tägliche Arbeit zeigt, dass die Betreiberdatenbank und die
+Windindices für Ertragsprognosen extrem wichtig und hilfreich
+sind. Die genauere Beschäftigung mit der Thematik zeigt, dass
+die Anwendung der Windindices nicht trivial und mit einer Restunsicherheit verbunden ist. Das Beispiel in Abschnitt 4, zeigt,
+dass eine unkritische Anwendung der IWET-Windindices leicht zu
+einer Fehleinschätzung hinsichtlich des langfristigen Energieertrags und somit des Windenergiepotentiales im zweistelligen Prozentbereich führen kann.
+So hat sich gezeigt, dass insbesondere die Extremwerte in den
+Windindices zu Fehlern führen können. Sofern nur kurze Zeiträume betrachtet werden, können hinsichtlich des langfristigen
+Windenergiepotentiales erheblichen Fehleinschätzungen resultieren. Die Normierung durch die IWET-Windindices kann oft verbessert werden durch individuelle Modifikation der Indices. Das
+100%-Niveau der IWET-Indices muss wahrscheinlich angepasst
+werden. Aufgrund der generellen Verwendung der Windindices in
+Deutschland stellen sich eventuelle Fehler als besonders tückisch dar: Wenn sowohl bei der Erstellung einer Prognose als
+auch bei der Kontrolle der Betriebsergebnisse der gleiche Windindex zugrundegelegt wird, bleiben etwaige Fehler in der Normierung des Windindexes unter Umständen über Jahre hinweg
+verborgen, während der Betreiber auf die sprichwörtlichen sieben
+fetten Jahre wartet. Die Fehler werden erst aufgedeckt, wenn es
+zu spät ist.
+Unsicherheiten hinsichtlich der Windindices können insbesondere dann verringert werden, wenn davon unabhängige Datenquellen und Berechnungsverfahren (MCP) verwendet werden.
+So können Indices aus "geostrophischen" Winddaten oder den
+Ertragsdaten benachbarter WEA errechnet werden oder langjährige Windmessungen herangezogen werden. Die Verwendung
+von höher auflösenden Daten als Monatswerten ermöglicht eine
+genauere Beachtung individueller Gegebenheiten. Die genannten Beispiele machen die Notwendigkeit deutlich windparkspezifischen Ertragsindices zu erstellen.
+7 Literatur
+[1] Monatsinfo, Keiler-Häuser, Ingenieur-Werkstatt Energietechnik, 24594 Rade.
+[2] Gerdes, Gerhard J.; Thomas Pahlke; Martin Strack; Annette
+Westerhellweg; Verifizierung von Energieertragsprognosen, Tagungsband der DEWEK 2000, Seite 18, 1999.
+[3] I. Troen, E.L. Petersen, European Wind Atlas, Risø National
+Laboratory, Denmark, 1989.
+[4] Internationales Wirtschaftsforum Regenerative Energien
+(IWR); IWR-Windertragsindex Küstengebiet, Westdeutsches Binnenland, Münster.
+[5] Volker Riedel, Martin Strack; Robust approximation of
+functional relationships between meteorological data:
+Alternative measure-correlate-predict algorithms, Poster
+bei der DEWEK 2002, Wilhelmshaven, 2002.
+[6] E. Kalnay, et. al.,: The NCEP/NCAR 40-Year Reanalysis
+Project, NCAR/NCEP, zugänglich unter
+wesley.wwb.noaa.gov/reanalysis.html.
+[7] DEWI; Weiterer Ausbau der Windenergienutzung im
+Hinblick auf den Klimaschutz -Teil 2; BMU-F&E Vorhaben
+9946101, Wilhelmshaven, 2002.
+17
+

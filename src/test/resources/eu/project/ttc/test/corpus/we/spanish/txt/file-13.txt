@@ -1,0 +1,394 @@
+CONTROL PARA MÁXIMO RENDIMINTO DE GENERADORES EÓLICOS DE VELOCIDAD VARIABLE, CON LIMITACIÓN DE VELOCIDAD Y POTENCIA. ROBERTO LEIDHOLD1 , GUILLERMO GARCÍA2 Y MARÍA INÉS VALLA3 (1 y 2) Grupo de Electrónica Aplicada (GEA), Universidad Nacional de Río Cuarto Ruta Nac. #36 Km. 601, X5804BYA Río Cuarto, Argentina g.garcia@ieee.org, rleidhold@ieee.org (3) Laboratorio de Electrónica Industrial, Control e Instrumentación (LEICI) Facultad de Ingeniería, Universidad Nacional de La Plata CC 91, 1900 La Plata, Argentina m.i.valla@ieee.org
+Resumen: En este trabajo se presenta una estrategia de control para generadores eólicos de velocidad variable. El principal objetivo de esta estrategia es maximizar la captación de energía eólica, por parte de la turbina, controlando la velocidad de la misma. Además, ésta estrategia provee limitación de potencia generada cuando no existe forma de consumirla, o supera la que puede convertir el generador, y limitación de velocidad para evitar daños del sistema mecánico. Mediante resultados de simulación se demuestra que la estrategia propuesta permite seguir el punto de operación de máximo rendimiento, y limitar la potencia y velocidad de acuerdo a los requerimientos establecidos. Abstract: A control strategy for variable-speed wind-turbine generators is presented. The main task to be performed by this strategy is to maximize the converted power by means of controlling the turbine speed. Additionally, power limitation is provided in case of low electrical loads or if the generated power reaches the generator power limit, and also angular speed limitation to avoid mechanical damages. Simulation results shows the proposed strategy ability to track the wind turbine optimum operation point and to bound the generated power and speed as required. Palabras clave: Energía Eólica, Turbinas Eólicas, Control y Conversión de Energía. Maximización de Rendimiento.
+
+1
+
+Introducción
+
+Existen principalmente dos grandes áreas de aplicación de la generación eólica: cogeneración en redes de potencia y micro-generación en sistemas aislados (Jayadev, 1995). En el primer caso se trata de generadores de potencias mayores a los 50 kW y aportan solo una porción del total de energía de la red eléctrica. En el segundo caso se trata de generadores de potencias entre 1 y 50 kW, que son la única fuente de energía eléctrica disponible en el lugar y se usa en sitios alejados de la red eléctrica. En ambos casos es muy importante el control y optimización de la potencia y la energía generada. Cuando el generador está conectado a una red eléctrica, lo más común es usar un generador de inducción cuya excitación es provista por la misma red, lo cual restringe la turbina a una velocidad casi constante. En este caso el control y optimización de potencia se realiza por medio del ángulo de incidencia de las palas (Abdin and Xu, 2000), lo cual requiere servomecanismos complejos. Sin embargo también se usan técnicas de velocidad variable, las cuales requieren de generadores de rotor bobinado o generadores conectados a la red por medio de conversores estáticos de frecuencia, los cuales
+1 2 3
+
+Actualmente realizando su doctorado en el LEICI, UNLP. Investigador del CONICET y Prof. de la Facultad de Ing., UNRC. Investigador del CONICET y Prof. de la Facultad de Ing., UNLP.
+
+pueden ser costosos para grandes potencias. Adicionalmente se han propuesto técnicas de control de potencia actuando sobre la velocidad de la turbina y el ángulo de incidencia de las palas simultáneamente (Muljadi and Butterfield, 2001). En sistemas aislados de la red eléctrica es fundamental la robustez y confiabilidad del sistema, por lo tanto no es recomendable usar mecanismos complejos que requieran mantenimiento como los de variación del ángulo de incidencia de las palas. En consecuencia, para estos sistemas son más usadas las técnica de velocidad variable, que no aumentan la complejidad del sistema. Esto se debe a que, independientemente del la técnica de control usada, en sistemas autónomos los convertidores estáticos son necesarios para proveer la excitación cuando se usan generadores de inducción. La técnica de velocidad variable se basa en el hecho que, para una determinada velocidad de viento, diferentes velocidades angulares de la turbina producen diferentes potencias generadas, y existe una velocidad óptima que produce la máxima potencia. Para encontrar la máxima potencia hay métodos de búsqueda dinámica del punto óptimo (Simoes et al 1997) y técnicas basadas en el modelo que pueden ser con medición de la velocidad del viento (Freris, 1990), usando estimadores de velocidad de viento (Thiringer and Linders 1993) o por imposición de la carga óptima que maximice la captación de energía (Miller et al 1997).
+
+3121
+
+Aparte de maximizar la energía captada por la turbina, también es deseable limitar la potencia y velocidad a los valores máximos admisibles por la turbina y el generador. En Miller et al 1997, se logra un buen seguimiento de la trayectoria de máximo rendimiendo y limitación de velocidad. Sin embargo los resultados presentados muestran que se logra limitar la potencia máxima con un ripple excesivo, el que puede ser perjudicial para el sistema. En este trabajo se presenta una estrategia de optimización para turbinas eólicas de velocidad variable. Esta estrategia está basada en la imposición de la carga óptima que maximice la captación de energía. Adicionalmente, esta estrategia limita la velocidad angular y la potencia, para velocidades de viento elevadas. La organización de este trabajo es la siguiente: En la primera sección se hace una breve introducción y revisión bibliográfica; en la segunda sección se presenta el modelo matemático de la turbina considerada; en la tercera sección se presenta el algoritmo propuesto para la maximización del rendimiento de la turbina y limitación de potencia y velocidad; en las cuarta sección se muestran resultados de simulación; y finalmente, en la quinta sección se presentan las conclusiones. 2 Modelo
+
+0.5 CP max 0.4 0.3
+Cp
+
+o
+
+0.2 0.1 0
+
+0
+
+2
+
+4
+
+6 λopt 8 λ
+
+10
+
+12
+
+Fig. 1 Coeficiente de potencia en función de
+
+λ.
+(5)
+
+Substituyendo (1) y (4) en (3), se obtiene,
+
+TT = 0.5 ρ π R 3 CT (λ ) v 2
+dónde
+
+CT (λ ) =
+
+C p (λ )
+
+En la Fig. 2 se muestra la función CT (λ ) calculada a partir de la función mostrada en la Fig. 1.
+0.08 CT opt 0.06
+C
+T
+
+λ
+
+(6)
+
+o
+
+1.1 Características de la turbina. El modelo de una turbina eólica se puede describir por la siguiente ecuación, que representa la potencia de la turbina (Freris, 1990),
+
+0.04
+
+pT = 0.5 ρ π R 2 C p (λ ) v3 (1) dónde ρ es la densidad el aire, R es el radio de la turbina, v es la velocidad el viento, y C p (λ ) es el
+coeficiente de potencia. El coeficiente de potencia es función de la relación entre la velocidad tangencial de la pala y la velocidad del viento, como se define a continuación,
+
+0.02
+
+0
+
+0
+
+2
+
+4
+
+6 λopt 8 λ
+
+10
+
+12
+
+Fig. 2 Coeficiente de par en función de
+
+λ.
+
+λ=
+donde
+
+ωT es la velocidad angular de la turbina. En la Fig. 1 se muestra la función CP (λ ) para la turbina
+considerada en este trabajo. El par producido por la turbina será, dónde (3) y,
+
+ωT R v
+
+(2)
+
+El sistema mecánico que comprende a la turbina, caja multiplicadora y generador se modela cómo,
+
+! ωT =
+
+′ TT − TG ′ JT + J G ω G = ωT n ′ TG = TG n ′ JG = JG n
+2
+
+(7) (8) (9) (10)
+
+TT =
+
+pT ωT
+
+Para eliminar la velocidad angular en la ecuación anterior, se puede despejar de (2) la velocidad angular de la turbina y expresarla en función de λ y la velocidad del viento, v ,
+
+TG es el par antagónico del generador, ω G es la velocidad del generador, n es la relación de la caja multiplicadora de velocidad, y J T y J G son los
+momentos de inercia de la turbina y el generador, respectivamente.
+
+ωT =
+
+λv R
+
+(4)
+
+3122
+
+1.2 Características del generador Cualquier generador que tenga una forma de controlar la potencia o par puede ser usado con una estrategia de este tipo. En este trabajo se considera el uso de una máquina de inducción conectada a un convertidor con control vectorial al cual se le puede comandar el par. Esta elección se basa en la robustez y bajo costo de la máquina, además de la disponibilidad comercial de convertidores para su control. En la Fig. 3 se muestra un esquema del sistema. En este esquema, se puede observar a la turbina eólica conectada mecánicamente a la máquina de inducción por medio de una caja multiplicadora de velocidad. La máquina de inducción está conectada al convertidor, quién le provee la excitación a la vez que convierte, en forma controlada, la energía de corriente alterna de la máquina en energía de corriente continua. La energía generada puede ser directamente consumida en forma de corriente continua, por medio de cargas conectadas al bus de corriente continua del inversor, en forma de corriente alterna por medio de un inversor, o puede ser almacenado en un banco de baterías.
+Batería CC↔CC Cargas AC CA←CC Bus CC IM n
+
+Luego, si se restringe la operación del generador de manera que,
+
+′ TG = TT opt (ωT )
+
+(15)
+
+Se logrará, en régimen estacionario, que la turbina converja al punto de operación de máximo rendimiento. En la Fig. 4 se observa la curva par-velocidad angular de la turbina para diferentes velocidades de viento, y la curva par-velocidad angular del generador. En ésta figura se puede observar cómo la velocidad de la turbina converge a su punto de máximo rendimiento cuando el generador mantiene la relación (15). Suponiendo que la velocidad real del viento es v1 , y la velocidad angular inicial es ω A , el par de la turbina es mayor que el del generador, por lo cuál ésta acelerará hasta que el par de ambos se igualen, lo que ocurre para ω B . Si por algún motivo, la velocidad angular es mayor que la de equilibrio, por ejemplo ω C , el par del generador es mayor que el de la turbina, produciendo una desaceleración del sistema, hasta que el par de ambos se iguale, lo que ocurrirá en ω B .
+
+Conversor + Control Vectorial TG*
+
+o
+
+v2
+TT, T’G
+
+o
+
+v
+ω ωB ωC ωD
+A
+
+1
+
+Fig. 3 Esquema del sistema de generación eólica.
+
+v <v
+1
+
+3
+
+Algoritmo Propuesto
+
+2
+
+Para determinar el par de la turbina en función de λ y la velocidad angular, se rescribirá la ecuación (2) despejando la velocidad del viento,
+
+ω
+Fig. 4 Relación par – velocidad angular del generador y de la turbina.
+
+v=
+
+Substituyendo (11) en (5) queda,
+
+ωT R λ
+
+(11)
+
+ω B , la velocidad del viento aumentara súbitamente hasta v2 , el par de
+Si estando el punto de equilibrio en la turbina será mayor que la del generador, produciendo una aceleración hasta la nueva velocidad de equilibrio ω D . Si se desea llevar el punto de operación a uno de menor potencia, se deberá incrementar el par del generador de manera que el punto de equilibrio se desplace a uno de menor velocidad (y menor rendimiento). Esto producirá como consecuencia un transitorio de mayor potencia generada, debido a la disminución de la energía cinética de la turbina. En la Fig. 5 se muestra el diagrama en bloques del algoritmo de control propuesto. En ella se observa que a partir de la velocidad del generador, afectada por la relación inversa de la caja, se obtiene la velocidad de la turbina. Con esta velocidad se
+
+TT = 0.5 ρ π R 5 CT (λ )
+
+Si desea conocer el par óptimo de la turbina se deberá sustituir en (12) a λ por λopt y a CT por
+
+ω λ
+
+2 T 2
+
+(12)
+
+CT opt =
+de lo que se obtendrá,
+
+CP max
+
+λopt
+2 ωT 2 λopt
+
+(13)
+
+TT opt (ωT ) = 0.5 ρ π R 5 CT opt
+
+(14)
+
+Que es la relación par -velocidad angular para la cual la turbina tiene la máxima eficiencia.
+
+3123
+
+calcula, usando la ecuación (14), la referencia par óptimo de la carga. Esta referencia, sumada a dos términos adicionales que se detallarán luego, es multiplicada por la relación inversa de la caja para obtener la referencia de par del generador,
+∗ TG .
+
+4
+
+Resultados de simulación
+
+ωG
+ω
+∗ G max
+
+1n
+
+ωT
+
+ec. (14)
+
+′ TG∗opt T
+∗ G
+
+La turbina considerada para la simulación, es la que dispone la Estación Electro-Eólica Experimental del Grupo de Electrónica Aplicada (GEA) en la UNRC. Los parámetros de la misma se muestran en la Tabla 1.
+Tabla 1 Parámetros de la turbina.
+
+ˆ pT
+∗ pT max
+
+Lag. Comp.
+
+1n
+
+R λopt CP max n JT JG
+
+2.5 m 7 0.45 4.86 10 kg m2 0.02 kg m2
+
+Lag Comp.
+
+Fig. 5 Diagrama en bloques del algoritmo de control.
+
+Como se mencionó anteriormente, la referencia de par del generador tiene dos términos adicionales para limitar la velocidad y la potencia generada. Para limitar la velocidad, se compara la velocidad real con la máxima aceptable
+∗ ω G max . Esta diferencia,
+
+acotada a valores positivos, es la entrada a un compensador en atraso. La salida del compensador es el primer término sumado a la referencia de par del generador. De la misma forma, para limitar la potencia, se ˆ compara la potencia de la turbina pT con la máxima aceptable
+∗ pT max . Esta diferencia, acotada a valores
+
+positivos, es la entrada a un compensador en atraso cuya salida es el segundo término sumado a la referencia de par del generador. La potencia de la turbina puede ser calculada de las ecuaciones (3) y (7) como se muestra a continuación,
+
+Potencia Nominal del Generador 5.5 kW Velocidad Nominal del Generador 1500 rpm La función del coeficiente de potencia CT (λ ) se muestra en la Fig. 2. La simulación se realiza considerando que se usa como generador una máquina de inducción conectada a un conversor con control vectorial sin sensor mecánico de velocidad (“sensorless”) comercial. Bajo ésta consideración, se asumirá que la referencia de par es la que efectivamente se aplica al eje de la máquina de inducción. La turbina y el generador son simulados usando las ecuaciones (5) a (8), y aplicando el estimador (18) a (19) y la estrategia de control cuyo diagrama de bloques se muestra en la Fig. 5. Los compensadores en atraso y el estimador fueron convertidos al tiempo discreto usando un tiempo de muestreo TS = 0.1 s . Las referencias de potencia máxima velocidad máxima
+∗ pG max se
+
+! ′ ′ TT = ωT ( J T + J G ) + TG∗
+
+(16)
+
+establece a 4 kW, mientras que la referencia de
+∗ ω G max se establece a 1100 rpm.
+
+pT = ωT TT (17) Donde la velocidad ωT es una variable medida y,
+asumiendo un controlador ideal de par, se usa la referencia de par
+
+′ ′ TG∗ en vez del par real TG .
+
+Para evitar el cálculo de la derivada de la velocidad se implementa un observador del par de la turbina como se propone a continuación,
+
+En la Fig. 6 se observa una muestra de velocidad del viento en función del tiempo relevado en la Estación Electro-Eólica Experimental del GEA-UNRC. Ésta muestra será el viento aplicado en la turbina durante la simulación.
+11 10
+v [m/s]
+
+! ˆ ωT =
+
+1 ˆ ′ ˆ TT − TG∗ + k1 (ωT − ωT ) (18) ′ JT + J G ! ˆ (19) ˆ TT = k2 (ωT − ωT )
+
+(
+
+)
+
+9 8 7 6 0 10 20 30
+
+ˆ ˆ Dónde ωT y TT son los valores estimados de la velocidad y el par de la turbina. Las constantes k1 y
+k2 son las ganancias del estimador.
+
+t [min]
+
+Fig. 6 Velocidad de viento en función del tiempo.
+
+3124
+
+En las Fig. 7 a Fig. 11 se muestran los resultados de simulación. En la Fig. 7 se observa la potencia generada que resulta acotada con un error mínimo a 4 kW cuando la velocidad del viento supera los 9.4 m/s. En la Fig. 8 se muestra la velocidad angular del generador, aquí se puede observar que queda acotado a la velocidad de 1100 rpm cuando la velocidad del viento supera los 8.5 m/s. En la Fig. 9 se muestra el par del generador comandado por la estrategia de control propuesto. Éste es el par necesario para seguir la trayectoria de máxima transferencia de potencia de la turbina, salvo cuando la velocidad o la potencia superan los límites establecidos. En la Fig. 10 se puede observar la relación entre la velocidad tangencial de la pala y la velocidad del viento λ , cuyo valor óptimo es siete. Este valor se ve disminuido en los momentos que se llega a uno de los límites impuestos y el algoritmo de control aumenta el par para disminuirlo y en consecuencia reducir el rendimiento.
+5 4
+p [kW]
+
+8 7 6 5 4
+λ
+
+0
+
+10
+
+t [min]
+
+20
+
+30
+
+Fig. 10 Relación entre la velocidad tangencial de la pala y la velocidad del viento.
+
+G
+
+3 2 1
+
+0
+
+10
+
+t [min]
+
+20
+
+30
+
+Finalmente, en la Fig. 11 se muestra la trayectoria de operación de la turbina en el plano potenciavelocidad angular, compuesta por tres secciones. Aquí se puede observar una sección en que la trayectoria de operación sigue una función cúbica correspondiente a la de máximo rendimiento de la turbina, mientras la velocidad del viento sea menor a 8.5 m/s. Vientos mayores, entre 8.5 y 9.4 m/s, llevan al sistema a una segunda sección de velocidad constante. Cuando el viento supera este límite, el sistema entra a la tercer sección de potencia constante. En la transición entre las secciones de velocidad constante y potencia constante, se observa una pequeña dispersión del punto de operación debido a los transitorios de potencia necesarios para reducir la velocidad de la turbina.
+5
+
+Fig. 7 Potencia generada en función del tiempo.
+1.2 1.1
+ωG [krpm]
+
+4
+
+11 10 9
+
+1
+
+p [kW]
+
+0.9 0.8
+
+G
+
+3
+
+8
+2
+0 10 t [min] 20 30
+
+v = 7 [m/s]
+1 0.6 0.8 ω [krpm]
+G
+
+Fig. 8 Velocidad angular de la turbina en función del tiempo.
+50 40
+TG [Nm]
+
+1
+
+1.2
+
+Fig. 11 Trayectoria de operación de la turbina (potencia vs. velocidad angular), parametrizada por la velocidad del viento.
+
+30 20 10
+
+0
+
+10
+
+t [min]
+
+20
+
+30
+
+El modelado, análisis y los resultados de simulación de la estrategia de control propuesta permitirán pasar a una etapa de validación experimental en la Estación Electro-Eólica Experimental del GEA-UNRC, cuyo generador eólico se muestra en la Fig. 12.
+
+Fig. 9 Par del generador en función del tiempo.
+
+3125
+
+Agradecimientos Los autores quieren reconocer el apoyo financiero y motivación de la Secretaría de Ciencia y Técnica de la UNRC, la Agencia Nacional de Promoción Científica y Tecnológica (ANPCyT), CONICET, y la empresa WEG. Referencias Bibliográficas Abdin, E.S. and Xu, W. (2000) Control design and dynamic performance analysis of a wind turbine-induction generator unit. IEEE Trans. on Energy Conversion. Vol. 15 No. 1, pp. 91 96. De Battista, H.; Mantz, R.J. and Christiansen, C.F. (2000) Dynamical sliding mode power control of wind driven induction generators. IEEE Trans. on Energy Conversion. Vol. 15, No. 4, pp. 451 -457. Freris, L.L. (1990). Wind Energy Conversion Systems, Prentice Hall, United Kigdom. Jayadev, J. (1995) Harnessing the wind IEEE Spectrum Vol. 32, No. 11, pp. 78 -83. Miller, A.; Muljadi, E. and Zinger, D.S. (1997) A variable speed wind turbine power control. IEEE Trans. on Energy Conversion. Vol. 12, No. 2, pp. 181 -186. Muljadi, E. and Butterfield, C.P. (2001) Pitchcontrolled variable-speed wind turbine generation. IEEE Trans. on Industry Applications. Vol. 37, No. 1, pp.240 -246. Simoes, M.G.; Bose, B.K. and Spiegel, R.J. (1997) Design and performance evaluation of a fuzzylogic-based variable-speed wind generation system. IEEE Trans. on Industry Applications. Vol. 33, No. 4 pp. 956 -965. Thiringer, T. and Linders, J. (1993) Control by variable rotor speed of a fixed-pitch wind turbine operating in a wide speed range. IEEE Trans. on Energy Conversion, Vol. 8 No. 3, pp. 520 -526.
+
+Fig. 12 Estación Electro-Eólica Experimental del Grupo de Electrónica Aplicada (GEA).
+
+5
+
+Conclusiones
+
+Se presentó una sencilla estrategia de control para generadores eólicos de velocidad variable que permite maximizar la potencia generada. Cuando el viento es de una velocidad tal que la velocidad angular o la potencia generada supera valores establecidos, la estrategia propuesta los limita. Considerando los parámetros de una turbina existente y datos de la velocidad de viento reales, se realizó la simulación para validar preliminarmente la estrategia. Esta mostró un buen desempeño tanto para mantener el punto de operación dentro del óptimo como para mantener los límites establecidos, lo cual permitirá pasar a una etapa experimental. Los resultados obtenidos, además permitirán establecer criterios para dimensionar el generador.
+
+3126
+

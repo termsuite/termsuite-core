@@ -1,0 +1,144 @@
+XIII ERIAC DÉCIMO TERCER ENCUENTRO REGIONAL IBEROAMERICANO DE CIGRÉ
+Puerto Iguazú Argentina
+
+24 al 28 de mayo de 2009
+
+XIII/PI-C1 -19
+
+Comité de Estudio C1 - Desarrollo de Sistemas y Economía
+
+ESTUDIOS ELÉCTRICOS PARA LA CONEXIÓN DE PLANTAS EÓLICAS AL SADI L. AROMATARIS* Universidad Nac Rio Cuarto Argentina M.GALETTO* Universidad Nac Rio Cuarto Argentina J. YNZUA Universidad Nac Rio Cuarto Argentina G.RODRIGUEZ Universidad Nac Rio Cuarto Argentina J. ALEMANY Universidad Nac Rio Cuarto Argentina F.MAGNAGO Universidad Nac Rio Cuarto Argentina
+
+Resumen – La crisis del petróleo y el cuidado del medio ambiente están impulsando el crecimiento de la generación de energía eléctrica por otros medios. La energía eólica es entre las no convencionales la de mayor crecimiento en el mundo. La República Argentina no es ajena a esos cambios ya que su generación eólica incipiente está en crecimiento. Existen parques eólicos en varias zonas del país pero aún no han sido conectados al sistema argentino de interconexión (SADI ). Una muestra de la importancia que la energía eólica está teniendo para la industria eléctrica es que la planta eólica más importante del país, que está en Comodoro Rivadavia, está siendo hoy conectada al sistema. Además hay varios proyectos que contemplan el crecimiento de la generación eléctrica por este medio y su posterior conexión al SADI. Uno de ellos contempla, además de la instalación de una planta convencional en Dolavón en la Provincia de Chubut, la conexión de 100 MW producidos por parques eólicos existentes y proyectados. En este trabajo se estudiará el impacto eléctrico, estático y dinámico, que producirá la concreción de este proyecto. Palabras clave: Energía Eólica. Modelo del Generador Eólico. Conexión de parques eólicos al SADI 1 INTRODUCCIÓN
+
+La necesidad de limitar la dependencia de los combustibles fósiles y cuidar el medio ambiente ha impulsado fuertemente el desarrollo de tecnologías que aprovechen las energías que nos brinda la naturaleza. La conversión de la energía eólica en energía eléctrica, está generando grandes inversiones en el desarrollo de técnicas para el aprovechamiento de la potencia de los vientos para abastecer y reemplazar una buena parte del suministro de la electricidad generada por otros medios. En el último Congreso Mundial sobre esta energía, el presidente de la Asociación Mundial de Energía Eólica aseguró que con un 25% de crecimiento anual, es la industria energética que más rápido se desarrolla en el mundo. El viento es aún caro en relación a otras fuentes de energía, en razón del costo importante de los molinos, equivalente a unos U$S 2 millones por megavatio. El costo de construcción de un parque eólico es el doble del de una central térmica con potencia similar, pero los costos de explotación son casi nulos y tienen la ventaja de no depender de la variación constante el precio del petróleo. La inversión es ventajosa ya que además de ser una fuente de energía renovable, es limpia y no contaminante y no se presenta la disyuntiva de que se está usando un combustible que puede servir de alimento a los habitantes del planeta tal como ocurre con los biocombustibles. En el mundo, la mayor potencia eólica instalada se encuentra en Alemania con una generación de 20.620 MW igualando casi a toda la energía eléctrica convencional generada en la Argentina. En el segundo lugar encontramos a España con 11.600 MW generando el 9% del total de su energía eléctrica. Posteriormente se
+*laromata@ing.unrc.edu.ar
+
+encuentra Estados Unidos que produce 11.570 MW. India ocupa el cuarto lugar con una capacidad 6.270 MW convirtiéndose en el líder asiático por encima de China (2600 Mw). Le sigue Dinamarca, que genera más del 20% de su electricidad mediante aerogeneradores, mayor porcentaje que cualquier otro país. En la Argentina, al igual que en la mayoría de los países de Latinoamérica, la energía eólica no genera la cantidad de energía necesaria para encontrar en ella una fuente de energía alternativa que pueda ayudar a superar la crisis energética que sufre nuestro país hoy en día. Pero de todas formas podemos encontrar en nuestro territorio numerosos parques para la explotación del recurso: Nuestro país es el cuarto en la lista de los países latinoamericanos productores de electricidad a través del viento. En primer puesto aparece Brasil con una capacidad de 256 MW. Le sigue México y luego Costa Rica. Detrás de la Argentina se ubican Colombia y Cuba. La República Argentina está favorecida por su situación geográfica de privilegio sobre la franja de vientos permanentes del oeste, ubicada debajo de paralelo 48°. La energía eólica en la República Argentina tiene aún un largo camino por recorrer. La diferencia entre el potencial eólico a lo largo del territorio del país comparado con el desarrollo es abismal. Nuestro país cuenta en la actualidad con parques eólicos que totalizan alrededor de 27,8 MW de potencia instalada, frente a un total de 24.033 MW de potencia total instalada a nivel país, contabilizando las distintas fuentes conectadas al SADI, generación térmica, hidroeléctrica, nuclear, etc. Esto implica que, la potencia eólica instalada en la República Argentina equivale sólo al 0,12 % de la potencia total instalada, contando con poco más de cuarenta aerogeneradores de gran potencia instalados en el territorio nacional. La provincia de Chubut, la jurisdicción con mayor cantidad de aerogeneradores instalados, cuenta con 27 máquinas emplazadas en dos ciudades cercanas (Comodoro Rivadavia y Rada Tilly); la provincia de Buenos Aires le sigue con 10 aerogeneradores instalados (Claromecó, Darregueira, Mayor Buratovich, Punta Alta y Tandil); Cutral Có, en la provincia de Neuquén, posee un aerogenerador; General Acha, en la provincia de La Pampa, cuenta con 2 aerogeneradores, mientras que Pico Truncado, en Santa Cruz, tiene instaladas otras 4 máquinas. En este momento empresas relacionadas con el sector energético están evaluando proyectos de generación eólica en nuestro país. A partir de los últimos meses del año 2008 la planta más importante, Parque Eólico Antonio Moran de Comodoro Rivadavia se ha conectado al SADI. Esto forma parte de un proyecto mayor que consiste en la instalación, en la provincia de Chubut, de un total de 360 MW de los cuales 260 serán generados por turbinas de gas natural mientras que los 100 MW restantes serán generados a través de energía eólica. La central térmica estará instalada en Dolavon y se vinculará al SADI a través de una nueva Estación Transformadora, seccionando la nueva línea de 500 kV que vincula las Estaciones Transformadoras Puerto Madryn 500 kV y Santa Cruz Norte 500 kV (PicoTruncado). En este trabajo se consideró (a modo de prueba) que la potencia eólica será entregada por tres parques eólicos que se conectarán: uno en Malaspina con 30 MW, otro en Salamanca con 53 MW y el último en Comodoro Rivadavia con 17 MW (actualmente conectado). Se estima que el proyecto estrá en marcha para el año 2011. [1], [2], [3]. En el presente trabajo se estudiará el impacto eléctrico que las nuevas plantas eólicas producirán sobre la red existente. 2 REQUISITOS PARA EL INGRESO DE UN PARQUE EÓLICO AL MERCADO ELÉCTRICO MAYORISTA
+
+La producción de energía de una turbina eólica y un parque eólico poseen diferencias fundamentales en sus características eléctricas. La potencia eléctrica producida por una turbina eólica está ligada estrechamente a las características del viento que impacta sobre sus hélices. La inercia del rotor modera las fluctuaciones temporales de corto plazo del viento (del orden de un segundo o menor). Las fluctuaciones del viento que superen ese tiempo deben ser reducidas por los sistemas de control de la máquina a fin de entregar una potencia de salida aceptable. El grado de eficiencia de este control dará la calidad de potencia disponible. Cuando se trata de de un parque eólico se observa que la potencia de salida presenta un perfil mucho más aplanado casi sin fluctuaciones. La calidad de esta potencia depende, además del sistema de control de las máquinas, de la extensión geográfica del parque y de la superficie del terreno. Mientras más extensa geográficamente sea la planta más uniforme será la potencia de salida ya que las oscilaciones locales del
+2
+
+viento en algunas máquinas serán compensadas por las máquinas no afectadas. Este efecto se incrementa cuando se trata de varias granjas conectadas a un mismo colector. Cuando la velocidad del viento adopta valores inferiores a 4 m/s o superiores a 25 m/s (valores aproximados que dependen de las características técnicas del generador eólico) y esos valores se sostienen en el tiempo (horas o días) ya no es posible producir potencia eólica de generación y la granja dejará de funcionar durante ese lapso. Este problema puede ser salvado a través de reserva rotante con generadores convencionales que se accionen en esos lapsos de tiempo. Salvando este problema, una granja eólica se puede comportar como una central convencional y debe ser capaz de [4],[5]: a) Garantizar un Diagrama P-Q mínimo en su punto de conexión. b) Controlar automáticamente la tensión en su punto de conexión, limitando fluctuaciones de tensión y asegurando calidad de regulación de tensión. c) Soportar fallas en la red y mantenerse conectada ante huecos de tensión que se ajusten a la curva mostrada en Figura 1 definida en el procedimiento técnico PT4.
+
+140 120 100 U% 80 60 40 20 0 0.01 0.1 0.12 Zona Admisible
+
+Curva límite tensión-tiempo
+
+0.9 1 10 T [seg] 100 1000 10000
+
+Figura 1: Límites tensión tiempo ante huecos de tensión d) Soportar excursiones transitorias de la frecuencia de acuerdo a la Figura 2.
+
+Curva límite frecuencia-tiempo 52.5 52.0 51.5 51.0 50.0 49.0 48.5 48.0 47.5 15 25 T [seg] 100 Zona Admisible
+
+Frec [Hz]
+
+Figura 2: Límites frecuencia tiempo
+3
+
+Estos requisitos se tendrán en cuenta cuando se realicen las simulaciones estáticas y dinámicas de los parques eólicos objeto del presente trabajo. 3 DESCRIPCIÓN DE LA RED
+
+La red fue modelada según base de datos de CAMMESA para un escenario de máxima potencia para el año 2011. Sobre esta base se seccionó la línea de 500 kV Puerto Madryn -Santa Cruz Norte, aproximadamente a 106 Km. de la E.T. Puerto Madryn y a 446 Km. de la E.T. Santa Cruz Norte. Sobre el seccionamiento se instalaron tres transformadores 500/11 kV, 2x150 MVA y 1x 80 MVA. Se instalaron 2 reactores de línea de 120 MVAr cada uno en la salida a Sta Cruz Norte. Se instaló también un reactor de línea de 80 MVAr en el extremo Pto. Madryn salida a Dolavon. En el extremo de baja tensión se instaló una planta de generación térmica de ciclo combinado con una capacidad instalada de 264 MW compuesta por dos turbinas de gas de 107 MW cada una y una turbina de vapor de 50 MW.
+
+Figura 3: Diagrama Unifilar de la zona en estudio Para la instalación de los parques eólicos se seccionó línea de 132 kV que une las barras de Ameghino con CT Patagonia en dos partes. En la primera sección, a 159 km de Ameghino, se generó la barra Malaspina de 132 kV donde, a través de un transformador, se conectó una granja de 30MW. A 65 km de la planta mencionada se generó otra barra de 132 kV denominada Salamanca, donde se conectó, vía otro transformador, otra granja eólica de 53 MW. Esta potencia eólica sumada a la potencia eólica instalada en
+4
+
+Comodoro Rivadavia, en la barra denominada Barrio San Martin, totalizan los 100 MW planteados en el proyecto. En la figura 3 se muestra un diagrama unifilar confeccionado con PSS/E versión 30, cuyos cálculos estáticos mostraron que la instalación de las nuevas plantas no produce inconvenientes de evacuación de las potencias de generación y mejoran el perfil de tensiones de la zona dado el incremento disponible de potencia reactiva. Las flechas en el dibujo indican las innovaciones respecto del sistema actual. 4 DESCRIPCIÓN DE LOS GENERADORES EÓLICOS
+
+Para realizar las simulaciones dinámicas se utilizó el programa anteriormente mencionado dado que la base de datos dinámicos del SADI generada por CAMMESA fue confeccionada bajo formato PSS. Este programa cuenta con un módulo adicional denominado PSSEWIND que presenta cuatro modelos dinámicos de generadores eólicos correspondientes a dos marcas comerciales conocidas. De los modelos presentados se eligió arbitrariamente el correspondiente a la máquina GE1.5MW 50 Hz de General Electric [6],[7]. Este es un generador asincrónico doblemente alimentado con capacidad de aportar o extraer potencia reactiva de la red. Su factor de potencia oscila desde 0.95 hasta -0.90. Algunas características técnicas se muestran en las Figura 4.
+
+Figura 4. Características técnicas del Generador GE 1.5 de General Electric
+
+Los parques eólicos en estudio están constituidos según se muestra en la Tabla I:
+TABLA I. DESCRIPCIÓN PARQUES EÓLICOS Nombre del parque Comodoro Rivadavia Malaspina Salamanca Nº Máquinas 12 20 12 %PotMax 97 98 95 Barra Controlada 101 215 301 Relé Frec si si si Relé Tensión si si si
+
+Todos los generadores eólicos son GE 1.5 y trabajan casi al 100% de su potencia nominal. El modelo utilizado concentra todas las máquinas del parque en una sola máquina equivalente. Cada parque y controla la tensión de su propia barra colectora. y posee relés de tensión y frecuencia que se ajustan a los límites impuestos en los apartados c y d del punto 2. 5 ANÁLISIS DINÁMICO
+
+Para el análisis dinámico se consideró un escenario de máxima demanda para el año 2011. Sobre las plantas eólicas se consideró una velocidad de viento de 12 m/s ya que aproximadamente a esa velocidad las máquinas entregan su potencia nominal y es cuando se producen las peores condiciones dinámicas [8]. A fin de evaluar la respuesta de los parques se consideraron las siguientes contingencias:
+5
+
+a)
+
+Falla trifásica y posterior salida de servicio a los 120 ms de producida la falla, de la línea de 132 kV que une las barras de CT Patagonia con Comodoro Rivadavia. Esta línea es la que transmite el flujo de potencia más grande (57 MW) de toda la zona de influencia de los parques eólicos. En la figuras 5, 6 y 7 se puede observar el comportamiento de la potencia activa y reactiva de generación, tensión terminal y de barra de 132 KV asociadas a los parques eólicos en estudio. Cada una de las plantas presenta un comportamiento dinámico adecuado y con todas sus variables dentro de límites ya que los relés de tensión y frecuencia no mostraron actividad. Por razones de espacio, solamente se amplía una de las figuras (en este caso la planta eólica Salamanca que es la de mayor potencia:) mientras que las curvas del resto de las plantas se muestran en menor tamaño.
+
+TENSION 132 KV [PU] TENSION TERMINAL[PU]
+
+POTENCIA ACTIVA [MW]
+
+POTENCIA REACTIVA [MVAR]
+
+Figura 5. Falla 3F LAT132 kV CTPatag-C.Rivad – Planta Eólica Salamanca
+
+TENSION 132 KV [PU]
+TENSION 132 KV[PU]
+
+POTENCIA ACTIVA [MW]
+
+TENSION TERMINAL[PU]
+
+TENSION TERMINAL[PU]
+
+POTENCIA ACTIVA [MW[
+
+POTENCIA REACTIVA [MVAR[
+POTENCIA REACTIVA [MVAR]
+
+Figura 6. Falla 3F LAT132 kV CTPatag-C.Rivad Planta eólica Comodoro b)
+
+Figura 7. Falla 3F LAT132 kV CTPatag-C.Rivad Planta eólica Malaspina
+
+Salida intempestiva de la central térmica Patagonia. La salida de servicio de esta planta significa una pérdida de potencia de 70 MW a la zona de influencia de los parques eólicos. En las figuras 8, 9 y 10 se puede observar el comportamiento de la potencia activa y reactiva de generación, tensión terminal y de barra de 132 KV asociadas a los parques eólicos en estudio. Cada una de las plantas presenta un comportamiento dinámico adecuado y con todas sus variables dentro de límites ya que los relés de tensión y frecuencia no mostraron actividad.
+6
+
+TENSION 132KV[PU] TENSION TERMINAL[PU]
+
+POTENCIA ACTIVA [MW]
+
+POTENCIA REACTIVA [MVAR]
+
+Figura 8. Salida intempestiva CTPatag – Planta Eólica Salamanca
+POTENCIA ACTIVA [MW] TENSION 132KV [PU]
+TENSION 132 KV [PU]
+
+TENSION TERMINAL[PU]
+
+TENSION TERMINAL [PU]
+
+POTENCIA REACTIVA [MVAR]
+
+POTENCIA ACTIVA [MW] POTENCIA REACTIVA [MVAR]
+
+Figura 9. Salida intempestiva CTPatag Planta eólica Malaspina c)
+
+Figura 10. Salida intempestiva CTPatag Planta eólica Comodoro
+
+Aplicación de una ráfaga de 150 km/h durante 2 s según la siguiente cronología: • a los 15 segundos sobre el parque de Comodoro Rivadavia. • a los 25 segundos sobre el parque de Malaspina. • a los 35 segundos sobre el parque de Salamanca. En las figuras 11 y 12 se puede observar el comportamiento de la potencia activa y tensión terminal de los parques eólicos en estudio. La potencia de las máquinas sufre una oscilación momentánea pero luego vuelve a sus valores normales mientras que la tensión terminal no es afectada por esta perturbación. Se debe destacar que la ráfaga no se dan simultáneamente con la misma intensidad en todas las máquinas del parque y por tanto los resultados de esta perturbación son totalmente conservativos. Se puede afirmar que cada una de las plantas soporta perfectamente una ráfaga como la descripta.
+7
+
+RAFAGA COMODORO
+
+RAFAGA MALASPINA
+
+RAFAGA SALAMANCA
+
+Figura 11. Ráfagas de 150 Km/h. Todas las plantas eólicas
+
+SIO TEN
+
+NE
+
+TA LAN SP ALE MIN T ER S
+
+S EÓ
+
+AS LI C
+
+P[MW] SALAMANCA
+
+P[MW] COMODORO P[MW] MALASPINA
+
+Figura 12. Comportamiento de Potencia Activa y Tensión frente a ráfagas 6 CONCLUSIONES
+
+El incremento de la generación de energía a través del viento es una empresa que viene creciendo y crecerá aun más en el futuro, en el mundo y en particular en la Argentina. Este incremento obligará a perfeccionar los modelos matemáticos de las máquinas de generación eólica dado que los estudios de simulación de conexión de las nuevas plantas a las redes existentes deberán ser cada vez más precisos. La simulación de la primera conexión de plantas eólicas al SADI, presentadas en este trabajo, mostró que es perfectamente factible su incorporación tanto desde un punto de vista estático como también por su impacto dinámico ante severas contingencias. Estos resultados alientan a que se incremente la conexión de nuevas plantas al sistema. 7 [1] [2] [3] [4] [5] [6] [7] [8] REFERENCIAS Resolución ENRE 0449/2008. Resolución 1064/2008 de la Secretaría de Energía de la Nación. Proyecto Ingentis. Emgasud. 2008 CAMMESA – Conceptos básicos sobre la inserción de la generación eólica en un Sistema Eléctrico de Potencia CAMMESA, foro tecnológico: energía eólica en la Argentina. Julio 2008 PSS™E Wind Modeling User Guide. Noviembre de 2006 General Electric. 1.5 MW wind turbine. 2008. Vladislav Akhmatov. “Analysis of Dynamic Behavior of Electric Power Systems with large amount of wind power”. Thesis. April 2003.
+8
+

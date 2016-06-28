@@ -1,0 +1,456 @@
+Marsland Press  
+
+ 
+
+Journal of American Science 2009;5(4):79‐90 
+
+ 
+
+Comparison of Theoretical and Experimental Power output of a Small 3-bladed Horizontal-axis Wind Turbine
+K.R. Ajao Department of Mechanical Engineering, University of Ilorin, Ilorin, Nigeria E-mail: ajaomech@unilorin.edu.ng & J.S.O. Adeniyi Formerly of the Department of Mechanical Engineering, University of Ilorin, Ilorin, Nigeria E-mail: adeniyijso@yahoo.com
+
+Abstract A small three-bladed horizontal axis wind turbine was parameterized, modelled, developed and tested for power performance. The turbine blades were fabricated from Mansonia Altissima wood with a rotor swept area of 3.65 sq. metres and a blade pitch angle of 70. The turbine was installed on the roof top of University of Ilorin, Faculty of Engineering Central Workshop Building at a hub height of 14.9 metres from the ground level while the turbine generator was sourced locally. The direct current (d.c.) power output of the test turbine measured at the battery bank terminal by a "Feigao" Power Analyzer. Installed at about 8.4m from the test turbine is a meteorological tower (MET) carrying an "APRS" anemometer with a data logger and measured the wind speed and direction over the test period. The cut-in wind speed, that is, the speed at which the wind turbine starts to produce power was determined to be 3.5 m/s. One minutes averages of wind speed and power output have been used to determine the power curve for the wind turbine in accordance with IEC(International Electrotechnical Commission) 61400-12-1 guideline for small wind turbines. Measured power increase consistently with increased wind speed and the power curve obtained compared fairly well with other standard power curves. [Journal of American Science 2009;5(4):79-90]. (ISSN: 1545-1003). Keywords: Pitch angle, hub height, meteorological tower, anemometer, power curve. water. Thus, there were the mills, driven by animal or man-power, in which the rotating shaft was vertical The precise date when man first used a machine to assist him in his daily work would be virtually impossible to determine. However, it seems clear that the earliest machines were based on the principle of rotation as a means of providing continuous motion for routine tasks such as grinding corn or pumping and driven by a long horizontal beam, fixed to it, and pulled or pushed around by the animal walking round in a circular path (Golding, 1976). Wind energy has been used for a long time. The first field of application was to propel boats along the river Nile around 5000B.C. By comparison wind
+
+1.
+
+Introduction
+
+  79
+http://www.americanscience.org                                              americansciencej@gmail.com 
+
+Marsland Press  
+
+ 
+
+Journal of American Science 2009;5(4):79‐90 
+
+ 
+turbines technology is a fairly recent invention. The first simple windmills were used in Persia as early as the 7 century for irrigation purposes and for milling grains. The aerodynamic research for wind turbines has contributed significantly to the success of modern way of harnessing wind energy. For most unsolved problems engineering rules have been developed and verified. All of these rules have limited applicability, and the need to replace these rules by physical understanding and modeling is increasing. Simplified analyses of horizontal-axis wind turbine flows aimed at overall aerodynamic performance prediction developed for modern rotor theories are available in literature. There have, however, been few thorough tests of the adequacy of such analyses by direct comparison with actual measurements over a wide range of configurations and conditions. The conversion of wind energy to useful energy involves two processes: the primary process of extracting kinetic energy at the rotor axis, and the secondary process of the conversion of such mechanical energy into useful electrical energy depicted in Figure 1.
+th
+
+is converted into heat as it is absorbed by land areas, bodies of water and the air over the Earth surface (Ajao et al., 2009). resulting wind has The air has mass, though its kinetic energy
+2
+
+density is low, and when this mass has velocity, the which is proportional to 1/2[mass x (velocity) ]. The mass of air passing in unit time is
+
+ρAV and the kinetic
+
+energy passing through the area in unit time (power available in the wind) is:
+
+Pw =
+
+1 1 ρAV .V 2 = ρAV 3 2 2
+
+( 1)
+
+ρ = Air density (approx.1.225 kg/m3 at sea level)
+V = Velocity of wind (m/s)
+A = Area through which the wind passes normally
+(m2). This is the total power available in the wind (approx.
+
+3.6 x 1012 kW ) obviously, only a fraction of this
+power can actually be extracted. The power extracted by a wind turbine can therefore be given as:
+
+1 P = k . ρAV 3 2 k = C p .N g .N b
+Cp
+
+( 2)
+
+= coefficient of performance or power
+
+coefficient (approx. 0.593)
+Figure 1: Conversion from wind power to electrical power in a wind turbine 
+
+N g = Generator efficiency
+
+N b = Gearbox/bearing efficiency
+1.1 Energy in the wind The torque generated by the wind turbine is: Wind is merely air in motion. It is produced by the uneven heating of the Earth's surface by energy from the Sun. Since the Earth's surface is made of different types of land and water, it absorbs the Sun's radiant energy at different rates. Much of this energy
+
+Ts =
+
+P
+
+ωs
+
+( 3)
+
+Ts = mechanical torque at the turbine side
+  80
+
+http://www.americanscience.org                                             
+
+americansciencej@gmail.com 
+
+Marsland Press  
+
+ 
+
+Journal of American Science 2009;5(4):79‐90 
+
+ 
+
+P = power output of the turbine
+
+most power (Jonkman, 2003). A nacelle typically resides atop the tower and contains the support structure for the rotor, the rotor shaft, a gearbox and the electric generator (alternator). The gearbox is used to transform the low-speed high-torque power of the rotor to high-speed, low-torque power that can run the electric generator. Rotor can be positioned upwind or downwind of the tower. Downwind rotor configurations can track the
+
+ωs
+
+= rotor's speed of the wind turbine
+
+The power coefficient C p is the percentage of power in the wind that can be converted into mechanical power and the ratio of the blade tip speed to the wind speed is referred to as the tip-speed ratio (TSR).
+
+TSR =
+
+ωsR
+V
+
+(4 )
+
+wind automatically as wind direction changes. However, the wind must flow around the tower to reach the rotor of a downwind turbine. This results in complex flow patterns and periodic fluctuations in aerodynamic loads, which have important dynamic effects on the turbine structure. Flow passing through the rotor plane is unobstructed by the tower for upwind rotor configurations. The hub structure connects the blades to the drive shaft. Hubs are generally characterized as either rigid or teetering. In rigid hub designs, the hub is rigidly attached to the drive shaft. In contrast teetered hubs are connected to the drive shaft by means of a teeter pin, a bearing that permits the rotor to rock into and out of the plane of rotation. Teetered hubs have the benefit that bending moments brought about by thrust forces acting on the blades are not transferred to the nacelle and tower structure. Consequently, the nacelle and tower structures of turbines with rigid hub must be designed more robustly than those with teetered hub. Small wind turbine need to be reliable, affordable and almost maintenance free. To meet these criteria, optimal turbine performance is sometimes sacrificed for simplicity in design and operation (Andrew, 2005). Thus, rather than using the generator as a motor to start and accelerate the rotor when the wind is strong enough to begin producing power, small
+
+R is radius of the wind turbine rotor.
+2. Small Wind Turbines
+
+All wind turbines can be characterized as either Horizontal Axis Wind Turbines (HAWT) or Vertical Axis Wind Turbines (VAWT). In HAWT, the rotor spins about an axis horizontal to the earth's surface. The rotor of a VAWT spins about an axis perpendicular to the Earth's surface. Vertical axis wind turbines are typically developed only for built environment. Changes in wind direction have fewer negative effects on this type of turbine because it does not need to be positioned into the wind direction. However, the overall efficiency of these turbines in producing electricity is lower than HAWT. VAWTs are categorized as Savonius or Darrieus types, according to the principle used to capture the wind flow. For the Savonius type, the wind pushes the blades, which implies that the rotation speed is always lower than the wind speed. Contrary to that, the shape of the rotor of the Darrieus type makes it possible for the rotor to spin faster than the wind speed. Rotors of HAWT are placed on towers to position them where the wind speed is fastest and exhibits
+
+  81
+http://www.americanscience.org                                              americansciencej@gmail.com 
+
+Marsland Press  
+
+ 
+
+Journal of American Science 2009;5(4):79‐90 
+
+ 
+wind turbines rely solely on the torque produced by the wind acting on the blades. Furthermore, small wind turbines are often located where the generated power is required, which is not necessarily where the wind resource is best. In low or unsteady wind conditions slow starting potentially reduces the total energy generated. Also, a stationary wind turbine fuels the perception of wind energy as an unreliable energy source. The main technical challenge in the design of a small wind turbine is to come up with a system configuration and control algorithm that maximizes wind energy production from the turbine and also provide favourable charging conditions for batteries. This task is complex because of the variability of the wind, which results in varying wind turbine power output. Ideally, the system configuration and its control should optimize the match between the wind turbine rotor and load, thereby allowing the maximum available power from the wind to be used, while at the same time charging the batteries with an optimum charge profile (Corbus et al., 1999). The generators of small turbines often cause a significant resistive torque that must be overcome aerodynamically before the blades will start turning. Furthermore, pitch control is rarely used on small wind turbine because of cost. Thus, it is not possible to adjust the turbine blade's angle of attack to the prevailing wind conditions. This problem is particularly acute during starting. A further major difference is that small turbines usually operate with varying shaft speed in an attempt to maintain maximum performance as the wind speed varies. Many large turbines run at constant speed as this allows the generator to maintain synchronicity with the utility grid. 2.1 Wind Turbine Blades
+Micro Midrange Mini 20-100 5.0 200 ≤1.2 1-5 1.5 2.5
+
+The IEC 61400-2 (International Electrotechnical Commission) defines a small turbine as having a swept area less than 200m2, which correspond to a power output of about 120kW. In addition, there is a further subdivision in that turbine of swept area less than 2m2 (about 1.2kW) do not need to have their tower included in the certification process (Introduction to Wind Turbine Technology: accessed at http:// www.wind.newcastle.edu.au/notes.html , on 12th February, 2007 ). Clausen & Wood (1999) have made a further subdivision as shown Table1.1. Table 1. Operating parameters of small wind turbines
+Category Power (kW) Turbine blade radius(m) Maximum rotor speed (rpm) 700 400 Permanent magnet (PM) Permanent magnet or induction Permanent magnet or induction Generator type(s)
+
+All forms of wind turbine are designed to extract power from a moving air stream. The blades have an airfoil cross-section and extract wind by a lift force caused by a pressure difference between blade sides. When air passes over an airfoil section; it travels faster over the top of the blade than it does below it. This makes the air pressure above the blade lower than it is below. Due to the unequal pressures the blade experiences a lifting force (BWEA). For maximum efficiency, the blades often incorporate twist and taper. The mechanical power produced by a rotor is purely a function of the blade geometry and the incident velocity. The design parameters that affect
+
+  82
+http://www.americanscience.org                                              americansciencej@gmail.com 
+
+Marsland Press  
+
+ 
+
+Journal of American Science 2009;5(4):79‐90 
+
+ 
+aerodynamic performance include blade pitch (angle of attack), taper, and twist distribution. For a given blade, its geometric shape is usually fixed, i.e. the aerodynamic shape, taper and twist distribution do not change. The torque produced by the rotor can be controlled in two ways: changing the geometry by varying the blade pitch angle, or by changing the rotor's rotational speed so that the rotor operates at the optimal blade tip speed ratio. In the beginning most wind turbine blades were adaptations of airfoil developed for aircraft and were optimized for wind turbine uses. In recent years development of improved airfoil sections for wind turbines has been on going. The prevailing tendency is to use NACA 63 (National Advisory Council on Aeronautics) and NREL S809 (National Renewable Energy Laboratory) (Ajao, 2008) airfoil cross-section that may have modifications in order to improve performance for special applications and wind conditions. 3. Aerodynamic theory of wind turbines Accurate models of the aerodynamic aspects of wind turbines are essential to successfully design and analyze wind energy systems. Wind turbine aerodynamic models are used to relate wind inflow 2.2 The Gearbox conditions to loads applied to the turbine (Jonkman, 2003). The true fluid flow passing around and through a wind turbine is governed by the Navier-Stokes equations. Unfortunately, these equations are so complex that analytical solutions have been found for only a few simple cases. The subsequent analysis develops the most common aerodynamic theory employed in the wind turbine design and analysis environment, the blade element and momentum theory (BEM). To aid the understanding of combined blade element and 2.3 Turbine generator momentum theory it is useful initially to consider the rotor as an actuator disc. Although this model is very The generator used in geared wind turbines are more or less standard off-the-shelf electrical machines, so The gearbox is required to speed up the slow rotational speed of the low speed shaft before connection to the generator. The speed of the blade is limited by efficiency and also by limitations in the mechanical properties of the turbine and supporting structure. The gearbox ratio depends on the number of poles and the type of generator. A direct driven generator 50Hz. (without gearbox) would require a generator with 600 poles to generate electricity at that major development steps were not necessary. There are different types of generators depending on their configuration and areas of application. The wind turbine generator converts mechanical energy to electrical energy. The efficiency of an electrical generator usually falls off rapidly below its rated output. The phenomenon of inducing a current by changing the magnetic field in a coil of wire is known as electromagnetic induction which underpins the design of most electric generators (Cotrell, 2002). With the important exception of electrostatic generators such as the Van de Graf machine, all important schemes for converting mechanical motion into electrical energy depends on Faraday's Law of electromagnetic induction .
+
+  83
+http://www.americanscience.org                                              americansciencej@gmail.com 
+
+Marsland Press  
+
+ 
+
+Journal of American Science 2009;5(4):79‐90 
+
+ 
+simple, it does provide valuable insight into the aerodynamics of the rotor (Bossanyi, 2001).
+
+3.1
+
+Actuator Disc Theory and the Betz limit
+
+In the one-dimensional Rankine-Froude actuator disc model, the rotor is represented by an 'actuator disc' through which the static pressure has a jump discontinuity (Jonkman, 2003). Consider a control volume fixed in space whose external boundary is the surface of a stream tube. The fluid passes through the rotor disc, a cross-section of the stream tube upwind of the rotor, and a cross-section of the stream tube downwind of the rotor as shown in Figure 2. The following assumptions are made in the actuator disc model: (1) Purely One-dimensional analysis (2) (3) Infinitely thin disc which offer no resistance to air passing through it. Wind is steady, homogenous and fixed in direction. (4) Air is incompressible, inviscid and irrotational. (5) Both the flow and the thrust are uniform across the disc. The flow is uniform at the upwind (station 0) and downwind (station 3) boundaries of the control volume. (6) The upwind and downwind boundaries are far enough removed from the rotor that the static pressure at these points is equal to the unobstructed ambient static pressure. The static pressure on the stream tube portion of the boundary is also equal to the unobstructed ambient static pressure. For a wind turbine rotor to act as an actuator disc, the rotor would have to be composed of an infinite number of very thin, dragless blades that rotate with a tip speed much higher than that of the incoming wind. Also, station 1 designated to be slightly upwind and station 2 slightly downwind of the rotor. Since air does not pass through the stream tube porting of the control volume boundary by definition of a stream tube, applying the conservation of mass (which asserts that the instantaneous rate of change of mass within a control volume must equal the net flux of mass out of the control volume) to the control volume gives:
+Figure 2. Control volume of actuator disc model (source: Jonkman, 2003)
+
+V0 A0 = V1 A1 = V2 A2 = V3 A 3
+
+(5)
+V1 is equal to V2 A1 equal A2
+
+Vi is the wind speed at station i and Ai is the crosssection area of station i. Since
+
+according to assumption (5) and since
+
+by necessity, the component of the wind speed and cross sectional area of the plane of the disc are designated without subscripts for the rest of this analysis (i.e.
+
+V = V1 = V2 and A = A1 = A2 ) .
+
+The thrust at the rotor disc, T, can be found by applying the conservation of linear momentum to the control volume in the axial direction. This results in:
+
+  84
+http://www.americanscience.org                                              americansciencej@gmail.com 
+
+Marsland Press  
+
+ 
+
+Journal of American Science 2009;5(4):79‐90 
+
+ 
+
+T = ρA0V02 − ρA3V32
+Substituting equation (3.1) into equation (3.2) gives
+
+(6)
+
+V = V0 (1 − a )
+Using equation (3.8)
+
+(14)
+(15)
+
+T = ρAV (V0 − V3 )
+
+(7 )
+
+V3 = V0 (1 − 2a )
+
+The velocity lost at the rotor plane, V0 − V is known as the induced velocity.
+
+ρ is the density of the air. The thrust at the rotor
+disc T is also the differential pressure between station 1 and 2 multiplied by the disc area.
+
+a increases from zero, the downwind flow speed steadily decreases until, a = ½, meaning that the
+rotor has completely stopped and the simple theory is no longer applicable. By substituting for V3 from equation (3.11), equation (3.7) can be re-written as:
+
+As
+
+T = (P1 − P2 )A
+
+(8)
+
+Since no work is done on either side of the turbine rotor, Bernoulli's equation can be applied to obtain the pressure incorporated into equation (3.4)
+
+P0 +
+and,
+
+1 1 ρV0 2 = P1 + ρV 2 2 2
+
+(9)
+(10)
+
+T=
+
+1 ρAV02 4a (1 − a ) 2
+
+(16)
+
+The power extracted from the wind by the rotor, P , is the product of the thrust, T , and the wind velocity at the rotor plane,
+
+1 1 2 P3 + ρV3 = P2 + ρV 2 2 2
+
+Pressure Po and P3 are identical by assumption (6) so pressure
+
+V ,from equation (3.10)
+
+P1 and P2 can be eliminated from
+
+P=
+
+1 ρAV03 4a(1 − a )2 2
+non-dimensional power
+
+(17 )
+coefficient C p
+
+equation (3.4) with the help of equations (3.5) and (3.6) to obtain,
+T = 1 ρA V 0 2 − V3 2 2
+
+The
+
+(
+
+)
+
+(11)
+
+representing the fraction of available power in the wind that is extracted by the turbine, is defined as:
+
+By equating equations (3.3) and (3.7), the velocity of the flow through the rotor disc is the average of the upwind and downwind velocities
+
+CP =
+
+P 1 ρAV03 2
+
+(18)
+
+V + V3 V= 0 2
+factor
+
+(12)
+
+Substituting equation (3.13) into equation (3.14) yields;
+
+An axial induction (sometimes called interference)
+
+C P = 4a(1 − a )
+
+2
+
+(19)
+
+a is defined as the fractional decrease in wind
+
+The dimensionless thrust coefficient CT is therefore given as,
+
+velocity between the freestream (upwind) and the rotor plane:
+
+V −V a= 0 V0
+or,
+
+(13)
+
+CT =
+
+T = 4a (1 − a ) 1 2 ρAV0 2
+
+(20)
+
+  85
+http://www.americanscience.org                                              americansciencej@gmail.com 
+
+Marsland Press  
+
+ 
+
+Journal of American Science 2009;5(4):79‐90 
+
+ 
+The maximum power coefficient C p occurs when the rated wind speed of 10 m/s and operating time
+
+a is 1/3.
+Substituting for
+
+of six (6) hours per day, gives a power output of
+
+a in equation (3.15) gives:
+
+about 590 Watts and 3.56 kW/hr of energy
+
+Cp =
+
+16 ≈ 0.593 27
+
+(21)
+CT has a maximum value of 1
+
+4.1 Weibull Distribution and Annual Energy Production (AEP) The expected annual energy production (AEP) for the model turbine can be estimated at rated wind speed and this will later be compared with that of the test wind turbine. The Visual Basic-modelling program is run at different wind speed and the expected power output is serves as input data to the WINMECH turbine performance model program. In the WINMECH program, shown in Figure 5, the wind speed probability is calculated as a Weibull curve defined by the average wind speed and a shape factor
+
+This is known as Betz limit. The thrust coefficient when
+
+a =½
+
+Therefore the maximum possible efficiency for an idealized wind turbine is roughly 59.3%.
+
+4.
+
+Model Turbine
+
+Capturing the characteristics and nuances of threedimensional flow separation in a stochastic inflow environment on a large piece of rotating machinery poses as significant a challenge as understanding the underlying fluid mechanics. A number of design codes have been used over the last decade to model the wind turbine's dynamic behaviour. They carry out design calculations or develop dynamic and steady state models for all components within a wind turbine. In a longer term, they can be used in a complete optimization of a wind turbine system including models for mechanical part (wind, drive train, stall and variable pitch control),model for generators (induction generator, synchronous generator, permanent magnet generator), and models for power converters, transformers, and the grid (Florin et al., 2004). The Visual Basic program was written because of its flexibility and ease of its accessibility in formulating the design to suit the desired objective. Standard shaft and gears equations in conjunction with wind energy equations were used to develop the Visual Basic program hereby referred to as WINMECH. The input parameters to the program and the output results at
+
+k . For each wind speed, instantaneous wind
+
+turbine power (W) is multiplied by the Weibull wind speed probability (f). This cross product (net W) is the contribution of wind speeds to average turbine power output. The sum of these contributions is the average power output of the turbine on a continuous 24 hours basis. Air density factor is the reduction from sea level performance.
+
+Figure 3. Model turbine annual energy output estimation using WINNMECH
+
+  86
+http://www.americanscience.org                                              americansciencej@gmail.com 
+
+Marsland Press  
+
+ 
+
+Journal of American Science 2009;5(4):79‐90 
+
+ 
+5. The Test Turbine
+
+The wind turbine under test is installed on the roof top of University of Ilorin, Faculty of Engineering Central Workshop at about 14.9m from the ground. Ilorin, Nigeria is on latitude 8.50N and the site average temperature and air density are 270C and 1.21kg/m3 respectively (Lasode, 2004). The test turbine shown in Figure 4, has a rotor diameter of 2.15m and a rated power of 110watts at 10m/s. It is a three-bladed, upwind variable speed, horizontal axis having blade pitch angle (angle of attack) of 70. It is permanent wind facing at 2850 of compass North. The turbine uses an automobile
+Figure 4. Test Turbine showing anemometers and Meteorological Tower (MET)
+
+alternator (generator) modified to higher rating to produce d.c. power output measured by a FEIGAO Power Analyzer .The output power is stored in two 12V d.c. batteries connected in parallel. Installed at about 8.4m from the test turbine is a meteorological tower (MET). This is more than three rotor diameters from the test turbine in the measurement sector as required by the IEC standard. The MET tower carries an APRS anemometer at hub height transmitting wind data to a data logger housed inside the Data Centre. The data logger supports Secure Digital (SDTM) card up to 128MB where all the wind data are logged and later transferred to a compatible personal computer (PC) for analysis. 6. Power Curves Analysis The amount of power that a wind turbine produces depends on the wind speed at the time. The power curve describes the relationship between the wind speed and the power that the turbine generates.
+Figure 5. Test turbine annual energy output determination using WINMECH
+
+6.1
+
+Measured (d.c.) Power
+
+Table 2 below shows the measured direct current (d.c.) power at site average air density (1.21 kg/m3) and normalized to the power at sea level air density
+
+  87
+http://www.americanscience.org                                              americansciencej@gmail.com 
+
+Marsland Press  
+
+ 
+
+Journal of American Science 2009;5(4):79‐90 
+
+ 
+(1.225 kg/m3). Normalization to sea level air density is done by multiplying measured power by the ratio of sea level air density to site average air density. Measured wind speed is also binned and normalized. The IEC standard requires at least three one-minute points per bin. This condition was met except for normalized wind speed of 18 m/s, 19 m/s and 20 m/s.
+Table 2. Direct current (d.c.) power at site average air density and normalized to sea level air density. Wind Speed (m/s) 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Normalized Wind Speed (m/s) 1.4 2.3 3.2 4.3 5.8 6.7 7.4 8.2 9.3 10.1 11.7 12.4 13.5 14.2 15.4 16.2 17.4 18.1 19.8 20.9 Measured Power (d.c.) at site average air density (W) 0 1.33 2.57 8.80 14.54 23.20 32.20 63.00 97.20 110.20 159.00 166.10 170.80 209.94 275.25 282.62 284.19 285.00 289.53 381.10 Power (d.c.) normalized to sea level air (W) 0 1.35 2.61 8.92 14.74 23.53 32.65 63.89 98.57 111.75 161.23 168.43 173.20 212.89 279.12 286.59 288.18 289.00 293.60 386.45
+Power (W) 450 400 350 300 250 200 150 100 50 0 0 5 10 15 Wind Speed (m/s) 20 25
+
+450 400 350 Measured Power (W) 300 250 200 150 100 50 0 0 5 10 15 Wind Speed (m/s) 20 25
+
+density
+
+Figure 6. Direct current (d.c.) Power Curve at site average air density, 1.21kg/m3
+
+Figure 7. Direct current (d.c.) Power Curve at sea level air density, 1.225kg/m3
+
+6.2
+
+Measured Versus Model Power Curve
+
+To determine the performance of the test turbine, measured power output i.e. the actual power produced by the turbine in operation is compared to the power of the modelled turbine. Figure 8 below shows the comparison of the modeled turbine and the test turbine power.
+
+The power curves for the measured d.c. power at site average air density and normalized to sea level air density are shown in Figure 6 and Figure 7.
+
+  88
+http://www.americanscience.org                                              americansciencej@gmail.com 
+
+Marsland Press  
+
+ 
+
+Journal of American Science 2009;5(4):79‐90 
+
+ 
+8.
+5000 4500 4000 3500 3000 Power (W) 2500 2000 1500 1000 500 0 0 -500 Wind Speed (m/s) 5 10 15 20 25 y = 0.0055x 4 - 0.312x 3 + 6.2522x 2 - 28.177x + 31.239 Test Turbine Model Turbine Poly. (Test Turbine) Poly. (Model Turbine) y = 0.0044x 4 + 0.4305x 3 + 1.9342x 2 - 8.1834x + 8.999
+
+References Ajao K.R, Mahamood M.R and Iyanda M.O (May, 2009). Interface for modeling the power output of a small wind turbine. Indian Journal of Science and Technology Vol.2 No 5
+
+1.
+
+2.
+
+Andrew K.W (September, 2005). Aspects of the Aerodynamics and Operation of a Small Horizontal Axis Wind Turbine. Ph.D. Thesis, Australia Department University of of Mechanical Newcastle, Engineering,
+
+Figure 8. Model vs. Measured power curve. 3. 7. Discussion The result of the wind speed measurements indicated that the daily average wind speed is lower than the cut-in wind speed and for most part of the day the wind turbine is idling. Normalization to sea level air density has no significant effect on the result. Measured power increases consistently with increased wind speed. The resulting power curve showed some discrepancies at certain wind speed but compared favourably with standard power curves. The curve fit of the test turbine and that of the model turbine indicated that the projected power output of the test turbine at the cut-out wind speed of 25m/s is approximately 507.8W. Using the WINMECH modeling program, the average output power of the test turbine is 80W and the annual energy output is 698kW.These results when compared to the average output power of 536W and annual energy output of 4698kWh of the model turbine yields a capacity factor of approximately fifteen percent (15%). 8. 7. 6. 5. 4.
+
+Bossanyi E (2001). Bladed for Windows Theory Manual, 282/BR/009 ISSUE: 010 Garrad Hassan and Partners Limited Bossanyi E (2001). Bladed for Windows Theory Manual, 282/BR/009 ISSUE: 010 Garrad Hassan and Partners Limited Clausen P.D and Wood D.H (1999). Research and Development issues for Small Wind Turbines. Renewable Energy 16, pp.922-927 Corbus D, Baring-Gould I, Drouilhet S, Gervorgian V, Jimenez T, Newcomb C and Flower L (1999). Small Wind Turbine Testing and Applications Development. NREL/CP-500-27067 Cotrell J (January, 2002). A preliminary Evaluation of a Multiple-Generator Drive train Configuration for Wind Turbines. NREL/CP-500-31178 Florin I, Anca D.H, Clemens J, Poul S and Frede B (March, 2004). Advanced Tools for Modelling, Design and Optimization of Wind Turbine System. Conference proceedings, Nordic wind power conference,
+
+  89
+http://www.americanscience.org                                              americansciencej@gmail.com 
+
+Marsland Press  
+
+ 
+
+Journal of American Science 2009;5(4):79‐90 
+
+ 
+Chamlers University of Technology, Finland March, pp. 1-12. 9. Golding E.W (1976). The generation of electricity by wind power. E&F.N SPON Ltd, London 10. Jonkman J.M (2003). AD. Modelling of the National Golden 12. UAE wind turbine for refinement of FASTNREL/TP-500-34755, Energy Laboratory, Renewable 11. Lasode O.A (2004). An Improved Solar Cabinet Dryer with Convective heat Transfer. Journal of Applied pp.32-39 www.wind.newcastle.edu.au/notes.html. Introduction to Wind Turbine Technology, Accessed on 12th February, 2007 Science,
+
+Engineering and Technology, Vol.4 No.2;
+
+Colorado, U.S.A
+
+ 
+
+  90
+http://www.americanscience.org                                              americansciencej@gmail.com 
+

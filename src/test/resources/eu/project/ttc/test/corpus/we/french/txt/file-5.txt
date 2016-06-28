@@ -1,0 +1,2625 @@
+ÉCOLE DE TECHNOLOGIE SUPÉRIEURE
+UNIVERSITÉ DU QUÉBEC
+MÉMOIRE PRÉSENTÉ À
+L'ÉCOLE DE TECHNOLOGIE SUPÉRIEURE
+COMME EXIGENCE PARTIELLE
+À L'OBTENTION DE LA
+MAÎTRISE EN GÉNIE MÉCANIQUE
+M.Ing.
+PAR
+Manal BENCHAGRA
+ANÉMOMÉTRIE À LA NACELLE EN PRÉSENCE DE SILLAGE D'ÉOLIENNES
+MONTRÉAL, LE 17 NOVEMBRE 2010
+© Tous droits réservés, Manal Benchagra, 2010
+CETTE THÈSE A ÉTÉ ÉVALUÉE
+PAR UN JURY COMPOSÉ DE :
+M. Christian Masson, directeur de mémoire
+Département de génie mécanique à l'École de technologie supérieure
+Monsieur Stéphane Hallé, président du jury
+Département de génie mécanique à l'École de technologie supérieure
+M. Monsieur Dariush Faghani, jury externe
+GL Garrad Hassan
+ELLE A FAIT L'OBJET D'UNE SOUTENANCE DEVANT JURY ET PUBLIC
+LE 30 AOÛT 2010
+À L'ÉCOLE DE TECHNOLOGIE SUPÉRIEURE
+REMERCIEMENTS
+J'aimerais tout d'abord remercier M. Christian Masson, professeur à l'École de technologie
+supérieure, de m'avoir accueillie dans son laboratoire et qui a su me donner un bon
+encadrement, de judicieux conseils ont permis au présent travail de voir le jour.
+Je tiens à remercier particulièrement mes parents et mes deux frères qui ont su me motiver à
+finir ce mémoire et qui ont su écouter mes angoisses.
+Finalement, je remercie mon mari pour son soutient moral, sa patience et d'avoir cru en moi.
+ANÉMOMÉTRIE À LA NACELLE EN PRÉSENCE DE SILLAGE D'ÉOLIENNES
+Manal BENCHAGRA
+RÉSUMÉ
+La vitesse du vent est le plus important paramètre pour déterminer la puissance d'une
+éolienne et son potentiel de production énergétique. Afin de certifier les performances des
+éoliennes, des normes ont été proposées par la Commission Électronique Internationale
+(IEC). Cependant, plusieurs aspects traités dans ces normes sont basées sur des hypothèses
+restrictives. Par exemple, l'utilisation d'une tour de référence, la seule méthode acceptée
+actuellement pour déterminer la vitesse non perturbée du vent par rapport à l'éolienne, peut
+s'appliquer seulement à une éolienne. L'utilisation de l'anémométrie à la nacelle permet de
+tester toutes les éoliennes d'une centrale. Cette technique repose sur la relation entre la
+vitesse du vent à la nacelle (Unac) et la vitesse du vent non perturbé (Uinf). Toutefois, cette
+technique reste encore très imprécise en sillage.
+Dans ce contexte, une étude numérique est effectuée afin d'établir des relations entre Uinf et
+Unac et à améliorer l'efficacité et la précision de l'anémométrie à la nacelle, particulièrement
+dans des conditions d'opération en sillages, et donc: (i) de proposer un nouveau modèle de
+simulation de l'écoulement autour d'une éolienne à axe horizontal opérant dans le sillage,
+(ii) d'évaluer l'impact de la rotation des pales sur la relation entre Uinf et Unac en présence de
+sillage, et (iii) de déterminer la position appropriée de l'anémomètre sur la nacelle.
+Pour valider les techniques de simulation numérique utilisées, l'étude est réalisée en
+collaboration avec le Centre de Recherche sur l'Énergie aux Pays-Bas (ECN) qui nous a
+fourni des données expérimentales recueillies sur le site afin de les comparer aux résultats
+des simulations numériques et établir ainsi des modèles de corrélation plus adéquats pour
+l'utilisation de l'anémométrie à la nacelle.
+En général, des résultats plus précis ont été obtenus avec le modèle proposé qu'avec une
+méthode numérique utilisant le modèle k-B standard avec des constantes modifiées. Ceci est
+principalement attribuable au terme de transfert d'énergie introduit dans l'équation du taux de
+dissipation. En outre, la méthode numérique s'est avérée être un outil utile pour déterminer la
+position appropriée des anémomètres sur une nacelle.
+Mots-clés : Énergie éolienne, modèle de turbulence, effets du sillage, anémométrie à la
+nacelle, méthodes numériques.
+ANÉMOMÉTRIE À LA NACELLE EN PRÉSENCE DE SILLAGE D'ÉOLIENNES
+Manal BENCHAGRA
+ABSTRACT
+Wind speed is the most important parameter to determine the wind power and potential
+energy production. To certify wind turbine's performances, standards were proposed by the
+International Electrotechnical Commission (IEC). However, several aspects addressed in
+these standards are based on inappropriate assumptions. For example, the use of a reference
+tower, the only method currently accepted for determining the speed of the undisturbed wind
+against the wind turbine, can be applied to all other machines is not applicable under
+conditions operating in wakes. This technique is based on the relationship between the
+nacelle's wind speed (Unac) and the unperturbed wind speed(Uinf).
+In this context, a numerical study is conducted to establish relationships Uinf C Unac and
+improve the efficiency and accuracy of the nacelle anemometry, especially in wakes
+operation conditions, and therefore (i) propose a new model for simulating the flow around a
+horizontal axis wind turbine, (ii) assess the impact of rotating blades on the relationships
+between Uinf and Unac, and (iii) determine the appropriate position of the anemometer on the
+nacelle.
+To validate the numerical simulation techniques used, the study is conducted in collaboration
+with the Energy Center of Research in the Netherlands (ECN) that we provided experimental
+data on the site to compare the results of numerical simulations and thereby establish patterns
+of correlation most appropriate for use in the nacelle anemometry.
+In general, more accurate results have been obtained with the proposed model compared to
+the numerical method used the k-B standard model with constants changed. These results are
+mainly attributable to the energy transfer term introduced in the dissipation rate equation. In
+addition, the numerical method has proven to be a useful tool for fixing the appropriate
+position of the anemometer on the nacelle.
+Keywords: Wind energy, turbulence model, wake effects, nacelle anemometry, numerical
+methods
+TABLE DES MATIÈRES
+Page
+CHAPITRE 1 INTRODUCTION ...........................................................................................1B
+1.1 Généralités sur l'énergie éolienne.....................................................................................1
+1.1.1 Différents types d'éoliennes ................................................................................2
+1.1.2 Les composantes d'une éolienne à axe horizontal...............................................3
+1.1.3 Principe de fonctionnement .................................................................................4
+1.2 Objectif de l'étude............................................................................................................5
+1.3 Structure du mémoire.......................................................................................................6
+CHAPITRE 2 REVUE DE LITTÉRATURE .......................................................................7
+2.1 La Commission Électrotechnique Internationale ............................................................7
+2.2 La norme IEC 61400-12-1................................................................................................8
+2.3 Le projet de norme IEC 61400-12-2.................................................................................8
+2.4 Performance des éoliennes................................................................................................9
+2.4.1 Courbe de puissance ............................................................................................9
+2.4.2 L'utilisation de l'anémométrie à la nacelle pour la vérification
+de la performance................................................................................................10
+2..4.2.1 Principe de la méthode........................................................................11
+2.4.2.2 L'emplacement recommandé de l'anémomètre ...................................12
+2.4.3 Le Concept du disque actuateur..........................................................................13
+2.4.3.1 Coefficient de puissance .....................................................................17
+2.4.3.2 Le coefficient de poussée.....................................................................17
+2.4.3.3 La limite de Betz..................................................................................19
+2.4.3.4 Correction de Glauert...........................................................................19
+CHAPITRE 3 DESCRIPTION DU PROJET.......................................................................21
+3.1 Localisation du projet ....................................................................................................21
+3.2 Description du parc éolien .............................................................................................22
+3.2.1 Les tours météorologiques ................................................................................24
+3.2.2 Description des données du parc éolien..............................................................25
+3.3 Description de l'éolienne Nordex N80 ..........................................................................26
+3.3.1 Propriétés de fonctionnement .............................................................................27
+3.3.2 Performance de la Nordex N80...........................................................................28
+CHAPITRE 4 MODÈLE MATHÉMATIQUE.....................................................................31
+4.1 BBBÉquations fondamentales.................................................................................................31
+4.1.1 Équations du mouvement....................................................................................31
+4.1.2 Équation de Navier-Stokes moyennées ..............................................................33
+4.1.3 Modèle de turbulence.........................................................................................34
+IV
+4.1.3.1 L'approche de Boussinesq ...................................................................34
+4.1.3.2 Modèle de k - B ....................................................................................36
+4.1.3.3 Modèle proposé par Chen and Kim.....................................................37
+4.1.4 Modèle axisymétrique.........................................................................................39
+4.2 Modélisation de l'éolienne .............................................................................................42
+4.2.1 Modélisation de la nacelle ..................................................................................42
+4.2.2 Modélisation du rotor..........................................................................................42
+4.2.3 La théorie de l'élément de pale ..........................................................................43
+4.3 Modifications aérodynamiques.......................................................................................48
+4.3.1 Perte au bout de pales ........................................................................................48
+4.3.2 Coefficient de traînée de la partie cylindrique....................................................49
+CHAPITRE 5 MÉTHODE NUMÉRIQUE ..........................................................................50
+5.1BBBBDescription générale de la méthode.................................................................................50
+5.2 Choix du maillage et domaine de calcul ........................................................................51
+5.3 Modélisation du rotor......................................................................................................54
+5.4 Conditions aux limites ....................................................................................................54
+CHAPITRE 6 RÉSULTATS ET DISCUSSIONS................................................................57B
+6.1BBBBÉolienne isolée..................................................................................................................57
+6.1.1 Corrélation UnacCUinf expérimentale ...............................................................59
+6.1.2 Influence du maillage.........................................................................................61
+6.1.3 Configuration ouverte et fermée .......................................................................62
+6.1.4 Configuration avec radiateur..............................................................................64
+6.1.4.1 Ajustement de la valeur de K avec le modèle k
+standard...............................................................................................64
+6.1.4.2 Ajustement de la valeur de K avec le modèle proposé ... ... ... .........66
+6.2 Nacelle opérant dans le sillage ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ...........68
+6.2.1 Corrélation UnacC Uinf expérimentale ...............................................................68
+6.2.2 Comparaison des résultats de simulation du modèle k-B standard
+avec ceux du modèle proposé pour K=25...........................................................70
+6.2.2.2 Influence de la distance entre les éoliennes ... ... ... ... ... ... ... ... ... ....74
+6.2.2.3 Influence de l'emplacement de l'anémomètre ... ... ... ... ... ... ... ........76
+6.2.2.4 L'anémométrie à la nacelle ... ... ... ... ... ... ... ... ... ... ... ... ... ... .........80
+CONCLUSION ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ...82
+RECOMMANDATIONS ......................................................................................................83
+ANNEXE I RÉSULTATS DES SIMULATIONS AVEC LE MODÈLE
+k-B STANDARD POUR K=25  ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ...84
+ANNEXE II FICHE TECHNIQUE DE LQ N80 (2.5MW) ... ... ... ... ... ... ... ... ... ...........88
+V
+ANNEXE III DESSIN TECHNIQUE DE LA N80 (2.5MW)  ....... ..... ..... ..... ..... ..... ....89
+ANNEXE IV DISPOSITION DES ANÉMOMÈTRES SUR LA NACELLE
+DE LA NORDEX N80 (2.5MW) ... ... ... ... .... ... ... ... ... ... ... ... .... ... ... ...90
+BIBLIOGRAPHIE ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ......91B
+LISTE DES FIGURES
+Page
+Figure 1.1 Éolienne à axes vertical (a) et à axe horizontal (b)...............................................2
+Figure 1.2 Les différents composants d'une éolienne moderne ... ... ... ... ... ... ... ... ... ... ....4
+Figure 2.1 Courbe de puissance idéale d'une éolienne à axe horizontale ... .......................10
+Figure 2.2 L'emplacement de l'anémomètre sur la nacelle: l'anémomètre doit
+être placé à l'intérieur de la zone hachurée.........................................................12
+Figure 2.3 L'écoulement autour d'un disque actuateur........................................................13
+Figure 2.4 Représentation de l'écoulement autour du disque actuateur...............................14
+Figure 2.5 Variation de CP et CT en fonction de du facteur d'induction a ...........................18
+Figure 2.6 Diagramme des vitesses......................................................................................20
+Figure 3.1 Parc éolien de Wieringermeer.............................................................................22
+Figure 3.2 L'aménagement de la station de Wieringermeer ................................................23
+Figure 3.3 Tour météorologique installée sur le site de Wieringermeer ..............................24
+Figure 3.4 Éolienne Nordex N80 .........................................................................................26
+Figure 3.5 Système de variation de l'angle d'attaque des pales...........................................27
+Figure 3.6 Courbe de puissance de la Nordex N80..............................................................28
+Figure 3.7 Vitesse de rotation du rotor en fonction de la vitesse infinie..............................29
+Figure 3.8 Courbe Cp de la Nordex N80..............................................................................29
+Figure 4.1 Domaine de calcul...............................................................................................38
+Figure 4.2 Description du disque actuateur..........................................................................43
+Figure 4.3 Représentation de l'élément de pale d'un rotor ..................................................44
+Figure 4.4 Profile aérodynamique d'une section de pale .....................................................46
+Figure 5.1 Voisinage immédiat de la paroi ..........................................................................52
+VII
+Figure 5.2 Topologie du maillage près de la nacelle.........................................................53
+Figure 6.1 Domaine de calcul...............................................................................................58
+Figure 6.2 Les données réelles et corrélation obtenue : rotor en arrêt ................................59
+Figure 6.3 Les données réelles et corrélation obtenue : rotor en marche............................60
+Figure 6.4 Comparaison des différents maillages ................................................................61
+Figure 6.5 Comparaison entre les résultats des simulations des configurations
+ouvert et fermé et les données expérimentales
+(a) sans rotor (b) avec rotor.................................................................................63
+Figure 6.6 L'écoulement autour de la nacelle pour un rotor en arrêt ..................................64
+Figure 6.7 Comparaison entre les résultats des simulations et les données
+expérimen- tales pour différentes valeurs de K:
+(a) sans rotor (b) avec rotor.................................................................................65
+Figure 6.8 Comparaison entre les résultats des simulations et les mesures
+expérimentales pour différentes valeurs de K : (a) rotor à l'arrêt
+(b) rotor en marche ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... .... ... ... ... ... ... ....67
+Figure 6.9 Résultats expérimentaux : éolienne en sillage, rotor en marche ... ... ... ... ... ...69
+Figure 6.10 Distribution de la vitesse dans le sillage de deux éoliennes à une
+distance de 2D en amont de chaque éolienne, K=25, Uinf=15m/s ... ... .............70
+Figure 6.11 (a) Distribution de la vitesse dans le sillage de deux éoliennes
+à la position de l'anémomètre pour chaque éolienne.
+(b) Agrandissement de la zone proche de l'anémomètre....................................71
+Figure 6.12 Comparaison des deux modéles avec les données expérimentales
+pour la nacelle amont ..........................................................................................72
+Figure 6.13 Comparaison des deux modéles avec les données expérimentales
+pour la nacelle aval ............................................................................................73
+Figure 6.14 Résultats des différentes simulations obtenues pour une éolienne
+opérant dans le sillage placée à 3,4 et 5D pour K=30........................................74
+Figure 6.15 Profil de la vitesse à la position axiale de l'anémomètre pour
+différents emplacements de l'éolienne aval, Uinf=15 m/s, K=25........................75
+VIII
+Figure 6.16 L'emplacement de l'anémomètre sur la nacelle par apport à la zone
+de recommandation de l'IEC ..............................................................................76
+Figure 6.17 Variation axiale de la vitesse à r=2.25m pour Uinf=15m/s................................78
+Figure 6.18 Variation radiale de la vitesse à x=10.1m pour Uinf=15m/s..............................79
+Figure 6.19 Comparaison des résultats obtenus aux différents emplacements de
+l'anémomètre ......................................................................................................79
+Figure 6.20 Comparaison entre les différentes corrélations...................................................80
+Figure 6.21 Comparaison entre les corrélations Urotor C Unac des deux éoliennes ...............81
+LISTE DES SYMBOLES
+a Facteur d'induction axiale
+a' Facteur d'induction de vitesse circonférentielle
+A Surface du volume de contrôle
+Arot Surface balayée par le rotor
+B Nombre de pale
+c Corde du profil aérodynamique
+Cl Coefficient aérodynamique de portance
+Cd Coefficient aérodynamique de traînée
+CP Coefficient de puissance
+CT Coefficient de poussée
+D Diamètre du rotor de l'éolienne
+fn Composante normale des forces surfaciques du rotor
+ft Composante tangentielle des forces surfaciques du rotor
+F Facteur correctif de Prandtl
+Ftip Facteur correctif pour le bout de pale
+Fhub Facteur correctif pour la section près du moyeu
+Fext Somme de toutes les forces instantanées agissant sur un volume de contrôle donné
+Fsur Force surfacique
+Fvol Force volumique
+Fmec Force engendrée par la présence du rotor de l'éolienne
+FL Force aérodynamique de portance
+FD Force aérodynamique de traînée
+FN Force normale
+FT Force tangentielle
+Hwt Hauteur du moyeu de l'éolienne
+k Énergie cinétique turbulente
+K = 0.4 Constante de von Karman
+LT Longueur caractéristique de turbulence
+ni Vecteur unitaire
+P Puissance
+r Rayon locale sur la pale
+R Rayon de la pale
+Rhub Distance entre l'axe de symétrie et la fin de partie cylindrique de la pale
+Re Nombre de Reynolds
+T Force de poussée du rotor
+U(z) Vitesse moyenne à une hauteur z
+Uinf Vitesse non-perturbée de l'écoulement
+Unac Vitesse de l'anémomètre à la nacelle
+u* Vitesse de friction
+u Composante de vitesse parallèle à la direction à l'étude
+ui Vitesse instantanée dans la direction i
+uj Vitesse instantanée dans la direction j
+X
+v Composante de vitesse horizontalement perpendiculaire à la direction à l'étude
+w Composante de vitesse verticalement perpendiculaire à la direction à l'étude
+V Volume de contrôle
+Vrel,1 Vitesse relative en amont de la pale
+Vrel,2 Vitesse relative en aval de la pale
+Vrot Vitesse de rotation locale en m/s
+VT Vitesse caractéristique de turbulence
+Z Hauteur à l'étude
+Z0 Hauteur de rugosité
+D Densité
+D0 Densité de référence, 1.225kg/m3
+D Angle d'inclinaison de l'écoulement
+E Vitesse de rotation en rad/s
+F Vitesse spécifique
+Fr Vitesse spécifique locale
+B Taux de dissipation de l'énergie turbulente
+Gij Tenseur de Reynolds
+Gw Cisaillement à la paroi
+H Viscosité dynamique
+HT Viscosité turbulente
+	ij Symbole de Kronecker
+ψ Propriété du fluide
+ψ Valeur moyenne
+ψ ' Valeur de fluctuation
+ψ Valeur instantanée
+E* (x, y, z) Perturbations d'une variable dues à la présence du rotor
+~ ( )
+0 ψ z Différence entre les valeurs de ψ à une hauteur z et h (hauteur moyeu)
+
+ Angle relatif
+K Angle d'attaque
+Dp,o Angle de calage
+DT Angle de vrille local
+L' Solidité locale de la pale
+CB1 Constantes du modèle k - B
+CB2 Constantes du modèle k - B
+CB3 Constantes du modèle k - B
+CH Constantes du modèle k - B
+
+p Chute de pression causée par le rotor
+∂t
+∂
+Dérivée partielle temporelle
+CHAPITRE 1
+INTRODUCTION
+1.1 Généralités sur l'énergie éolienne
+La demande mondiale d'éoliennes a connu une croissance rapide depuis une quinzaine
+d'années. En 2009 environ 157 000 MW étaient installés mondialement, dont 3319 MW au
+Canada et 659 MW au Québec [1].
+Toutefois, cette technologie ne date pas d'aujourd'hui. En effet, depuis l'Antiquité, les
+hommes ont exploité l'énergie du vent. Il y a plus de 5000 ans, les Égyptiens de l'Antiquité
+utilisaient des voiliers sur le Nil. Plus tard, des gens ont construit des moulins pour moudre le
+blé et d'autres céréales. Les premiers moulins à vent étaient connus en Perse (Iran). Ces
+premiers moulins à vent ressemblaient à de grandes roues à aubes. Des siècles plus tard, les
+habitants de la Hollande ont amélioré la conception de base du moulin. Ils lui ont donné des
+pales de type hélice, toujours réalisés avec des voiles [2].
+À la fin des années 1920, les Américains ont de petites éoliennes pour produire de
+l'électricité dans les zones rurales sans électricité. Lorsque ces lignes ont commencé à
+transporter l'électricité aux régions rurales dans les années 1930, les moulins à vent ont été de
+moins en moins utilisés, mais ils peuvent encore être vus sur certains ranchs de l'Ouest
+Américain.
+La crise du pétrole des années 1970 a changé l'image de l'énergie aux États Unis et dans le
+monde entier. Elle a créé un intérêt pour d'autres sources d'énergie, ouvrant la voie à
+l'émergence de l'éolienne pour produire de l'électricité. Au début des années 1980, l'énergie
+éolienne a vraiment décollé en Californie, en partie à cause des politiques gouvernementales
+qui encouragent les énergies renouvelables. Soutien de développement éolien et depuis elle
+2
+(a)
+s'est étendue à d'autres États, mais encore la Californie produit plus de deux fois plus
+d'énergie éolienne que tout autre États.
+Aujourd'hui, de nombreuses éoliennes sont en exploitation, des systèmes résidentiels aux
+grands parcs éoliens qui sont utilisés pour fournir une grande quantité d'électricité aux
+services publics [3].
+1.1.1 Différents types d'éoliennes
+D'une façon générale, il existe deux principaux types d'éoliennes : les éoliennes à axe
+horizontal et les éoliennes à axe vertical (figure 1). Les éoliennes à axe horizontal (plus
+fréquentes) doivent être dirigées directement vers le vent. Pour cette raison, elles sont dotées
+d'un système pour qu'elles soient constamment pointées vers le vent. Celles à axe vertical
+ont pour atout de ne pas dépendre de la direction du vent, mais nécessitent une plus grande
+surface au sol pour l'installation des haubans que les éoliennes à axe horizontal.
+Figure 1.1 (a) Éolienne à axes vertical et (b) à axe horizontal.
+Tiré du site internet : http://www.caueariege.org/energies-renouvelables/eolien.htm
+Dans ce qui suit nous allons nous intéresser seulement aux éoliennes à axe horizontal.
+(b)
+3
+1.1.2 Les composantes d'une éolienne à axe horizontal
+Les principales composantes d'un système d'énergie éolienne sont illustrées à la figure 1.2
+[1] :
+• un rotor bipale ou tripale, qui converti l'énergie du vent en énergie mécanique par
+l'entraînement de son arbre;
+• une tour sur laquelle est fixé le rotor et qui est assez haute pour exploiter les vents plus
+forts en altitude;
+• un multiplicateur qui relie le rotor à la génératrice;
+• un système qui commande le démarrage et l'arrêt de l'éolienne et surveille son
+fonctionnement;
+• une fondation solide qui assure la résistance de l'ensemble par grands vents et/ou dans
+des conditions de givrage.
+4
+Figure 1.2 Les différents composants d'une éolienne moderne.
+Tiré du site internet : http://www.retscreen.net/
+1.1.3 Principe de fonctionnement
+Les éoliennes modernes sont automatisées. Les forces aérodynamiques qui entrent en jeu
+dans leur fonctionnement sont les mêmes que celle qui sont créées par les ailes d'un avion.
+La plupart des éoliennes sont pourvues d'un anémomètre qui mesure continuellement la
+vitesse du vent. Lorsque celle-ci est assez élevée pour compenser la friction du rotor, les
+mécanismes de commande lui permettent de tourner et de produire ainsi une faible
+puissance. Cette vitesse, appelée vitesse de démarrage, est habituellement d'environ 4 m/s,
+soit la force d'une brise légère. La puissance produite croit rapidement au fur et mesure que
+la vitesse du vent augmente. Lorsque celle-ci atteint le niveau maximum admissible pour
+l'éolienne installée, les mécanismes de commande assurent la régulation à la puissance
+5
+nominale. La vitesse du vent à laquelle une machine commence à fournir sa puissance
+nominale est appelée vitesse nominale; en générale, elle est d'environ 15 m/s. Si la vitesse du
+vent continue à augmenter, le système de commande arrête le rotor pour éviter que l'éolienne
+soit endommagée. Cette vitesse de d'arrêt est généralement d'environ 25 m/s.
+1.2 Objectif de l'étude
+Le projet comporte trois objectifs distincts :
+D'abord, effectuer une étude numérique afin d'établir des relations reliant la vitesse du vent
+non perturbé (Uinf ) et la vitesse à la nacelle (Unac) et à améliorer l'efficacité et la précision de
+l'anémométrie à la nacelle, particulièrement dans des conditions d'opération en sillages d'une
+autre éolienne ou des pales,
+Ensuite, évaluer l'impact de la rotation des pales sur la relation UinfCUnac, et de déterminer la
+position appropriée de l'anémomètre sur la nacelle.
+Finalement, proposer un nouveau modèle de simulation de l'écoulement autour d'une
+éolienne à axe horizontal opérant dans le sillage et comparer ces simulations obtenues avec
+celles du modèle k-B standard. Le modèle numérique proposé sera validé à l'aide des
+résultats obtenus expérimentalement.
+6
+1.3 Structure du mémoire
+Le CHAPITRE 2 contient des informations sur les études en court qui a été fait dans le
+passé sur cette question. Également les principales références qui ont été utilisées dans ce
+projet sont décrites dans cette partie.
+La modélisation du disque actuateur, et la théorie de l'élément de pale sont aussi présentées
+dans ce chapitre.
+Le CHAPITRE 3 contient des informations sur le site qui fait l'objet de cette étude, ainsi
+qu'une description générale de l'éolienne Nordex N80 utilisée pour l'étude.
+La première étape de réalisation du projet est le développement d'un modèle numérique de
+calcul de l'écoulement d'air autour d'une éolienne. La théorie relative à ce modèle numérique
+est présentée au CHAPITRE 4.
+LE CHAPITRE 5 présente également une méthodologie développée pour simuler
+l'écoulement tout autour de la turbine, y compris la zone de sillage.
+La deuxième étape consiste à simuler numériquement l'écoulement d'air autour d'une
+éolienne isolée ainsi qu'une éolienne opérant dans le sillage d'une autre éolienne. Ce travail
+est décrit au CHAPITRE 6.
+La dernière étape du projet a pour but de présenter les résultats du modèle numérique puis
+de les confronter aux données expérimentales afin de valider le modèle numérique proposé.
+Ce travail de présentation, d'analyse et de validation des résultats du modèle numérique
+d'écoulement est présenté au CHAPITRE 6.
+Le mémoire se termine par une conclusion. Elle comprend les principaux résultats et
+d'importantes observations.
+CHAPITRE 2
+REVUE DE LITTÉRATURE
+L'énergie éolienne a connu une énorme croissance ces dernières années produisant une
+expansion mondiale du nombre d'installation d'éoliennes [4]. En conséquence, plusieurs
+études ont été effectuées pour comprendre, interpréter et améliorer le comportement
+aérodynamique des turbines faces aux paramètres perturbants la vitesse de vent capturé par la
+machine pour garantir le maximum de l'exploitation de l'énergie disponible sur un site.
+L'ensemble des intervenants de l'industrie éolienne (manufacturier, exploitant, chercheures),
+engagés dans la recherche et le développement des éoliennes, contribuent à la rédaction de
+normes telles que les normes de la Commission Internationale Électrotechnique (IEC) afin
+de standardiser les pratiques de l'industrie éolienne [5] [6]. Toutefois, plusieurs méthodes
+suggérées dans ces normes nécessitent du développement afin d'éclaircir certains aspects
+méconnus comme l'utilisation de l'anémométrie à la nacelle dans le sillage pour l'évaluation
+des performances d'une éolienne qui va être traitée dans cet ouvrage.
+2.1 La Commission Internationale Eletrotechnique
+La Commission Internationale Electrotechnique (IEC) est une organisation mondiale de
+normalisation composée de tous les comités électrotechniques nationaux. Son objectif est de
+promouvoir la coopération internationale sur toutes les questions de normalisation dans les
+domaines électriques et électroniques. À cette fin, et en plus d'autres activités, la IEC publie
+des Normes internationales, les spécifications techniques, rapports techniques et des Guides.
+Leur élaboration est confiée à des comités d'IEC. Tout Comité national intéressé par le sujet
+traité peut participer à ces travaux préparatoires. Les organisations internationales,
+gouvernementales et non gouvernementales en liaison avec l'IEC, notamment l'organisation
+8
+internationale de normalisation (ISO), participent également aux travaux selon des
+conditions fixées par accord entre les organisations. La série de normes 61400 produite par la
+commission internationale concerne la conception et l'évaluation des performances des
+éoliennes. Ces normes sont la référence utilisée dans le domaine éolien [7].
+2.2 La norme IEC 61400-12-1 [7]
+L'hypothèse de base de cette norme est de supposer que la puissance est une fonction de la
+vitesse de l'écoulement libre. La production énergétique annuelle est calculée à partir de la
+courbe de puissance mesurée et de la distribution de vent sur le site. La norme IEC 61400-12-
+1 est la plus reconnue par les institutions du domaine éolien. Elle est utilisée pour les turbines
+à axe horizontal dont la taille est suffisamment grande pour que l'anémomètre sur la nacelle
+n'affecte pas les performances de la turbine.
+2.3 Le projet de norme IEC 61400-12-2 [8]
+Contrairement à la norme IEC 61400-12-1, ce projet de norme utilise l'anémométrie à la
+nacelle pour le calcul de la vitesse de l'écoulement pour l'évaluation de la puissance de la
+turbine. Cependant ce projet de norme ne fait aucune recommandation sur l'évaluation des
+performances d'une éolienne opérant dans le sillage en utilisant la méthode de l'anémométrie
+à la nacelle.
+9
+2.4 Performance des éoliennes
+La performance d'une éolienne concerne l'estimation à long terme de la production d'énergie
+attendue sur un site donné. Les principaux facteurs qui influent sur la puissance produite par
+une éolienne sont (a) la force du vent qui prévaut sur le site et de sa disponibilité à la turbine
+(b) l'efficacité aérodynamique du rotor dans la conversion de la puissance disponible dans le
+vent. Par conséquent, l'évaluation de la performance d'une éolienne est plutôt un processus
+complexe. La vitesse et la direction du vent à un endroit varient considérablement le temps
+et l'espcae. Ainsi, la distribution de la force du vent a aussi une influence significative sur la
+performance de l'éolienne. En outre, le caractère opérationnel de la machine doit
+correspondre aux vitesses du vent dominant de garantir le maximum de l'exploitation de
+l'énergie disponible.
+2.4.1 Courbe de puissance
+L'un des principaux facteurs qui influent sur la performance d'une éolienne est son pouvoir
+de répondre à différentes vitesses de vent. Cela est généralement donné par la courbe de
+puissance de la turbine. Cette courbe est l'une des caractéristiques les plus significatives
+d'une éolienne. Mise en relation avec le potentiel éolien d'un site, elle joue un rôle essentiel
+dans la prévision de la production électrique des projets de parcs éoliens en projet. Par
+ailleurs, elle constitue un argument de vente important et doit être mesurée par un organisme
+indépendant selon des standards reconnus IEC 61400-12-1.
+La courbe de garantie fournie par le manufacturier prédit la production d'une éolienne en
+fonction de la vitesse du vent non perturbé.Cependant, la Commission Electrotechnique
+Internationale a établie le projet de norme IEC61400-12-2 qui recommande une technique
+appelée l'anémométrie à la nacelle utilisée pour l'évaluation des performances des éoliennes
+en utilisant la vitesse à la nacelle [8].
+10
+Figure2.1 Courbe de puissance idéale d'une éolienne à axe horizontale.
+La figure 2.1 montre la courbe de puissance typique d'une éolienne. La puissance nominale
+de la turbine est de 1 MW. On peut y observer la variation de vitesse dans un modèle plutôt
+habituel. Les caractéristiques importantes de la vitesse de la turbine sont la vitesse de
+démarrage (VD), la vitesse nominale (VN) et la vitesse d'arrêt (VA).
+La vitesse d'arrêt varie d'une turbine à l'autre, en fonction de ses caractéristiques. Toutefois,
+en général, la plupart des éoliennes commerciales ont une vitesse d'arrêt de l'ordre de 25 m/s.
+2.4.2 L'utilisation de l'anémométrie à la nacelle pour la vérification de la
+performance
+La collection de données précises de vitesse du vent est l'un des éléments plus
+problématiques dans les tests de performance de l'éolienne. L'IEC 61400-12-1 spécifie le
+placement de la tour météorologique entre deux et quatre diamètres de rotor en amont de la
+11
+turbine de référence [7]. Cependant, l'utilisation d'une tour météorologique face au vent peut
+être difficile à certains emplacements. Dans certains cas, le terrain complexe près de la
+turbine peut rendre le placement d'une tour face au vent impossible. En outre, l'achat et
+l'érection d'une tour météorologique peuvent être coûteux, en particulier lorsque la tour doit
+être aussi haute que le moyeu.
+En raison de ces soucis, les propriétaires des parcs éoliens et les fabricants de turbine ont
+montré un intérêt dans l'utilisation des anémomètres placés sur la nacelle pour la collection
+de données de vitesse du vent [9]. Le problème le plus significatif avec cette pratique est que
+l'écoulement de vent est perturbé par le rotor et la nacelle, ainsi les mesures de vitesse du
+vent rassemblées par un anémomètre placé à l'arrière de la nacelle ne représentent pas
+exactement des vitesses du vent non perturbé capturée par le rotor. Ce problème peut être
+évité si les mesures peuvent être ajustées ; cependant, afin d'effectuer un tel ajustement, des
+données doivent être rassemblées pour décrire le rapport entre les vitesses du vent non
+perturbé et l'anémomètre de nacelle. Une telle collecte de données impliquerait l'installation
+d'une tour météorologique face au vent, qu'on prévoit éviter en utilisant l'anémométrie à la
+nacelle.B
+2.4.2.1 Principe de la méthode
+La méthode de l'anémométrie à la nacelle repose sur l'hypothèse de base que si une relation
+peut être établie entre la vitesse de vent indiqué par l'anémomètre et celle du vent non
+perturbé, alors il est possible d'estimer la courbe de puissance de l'éolienne sans avoir
+recours à la tour de référence et sans passer par la procédure de calibration du site de l'IEC
+61400-12 -1 [7]. En pratique cela pourrait signifier la création d'un ratio entre la vitesse à la
+nacelle et la vitesse du vent non perturbé pour une éolienne de référence dans un parc éolien
+et en supposant que la relation est la même pour toutes les autres turbines.
+12
+2.4.2.2 L'emplacement recommandé de l'anémomètre
+Selon les recommandations de l'IEC, l'anémomètre doit être situé dans le plan de symétrie
+de la nacelle. Il doit être quelque part le long de la nacelle où les mouvements et les
+vibrations sont minimes (voir figure ci-dessous) [10].
+Figure 2.2 L'emplacement de l'anémomètre sur la nacelle:
+l'anémomètre doit être placé à l'intérieur de la zone hachurée.
+Tiré du document : IEC 61400-12-2 Verification of power
+Performance of individual wind turbine 2007
+La distance entre l'anémomètre et l'axe de la base de la pale ne devrait pas être inférieur à 2,5
+fois le diamètre de cette dernière. La circulation de l'air ci-dessous ou au-dessus en raison
+d'un le terrain incliné doivent être prises en compte puisque l'anémomètre peut être influencé
+par le sillage de la nacelle. Dans de telles situations, l'anémomètre doit être installé plus près
+de la pale. La position verticale de l'anémomètre doit être de sorte qu'il soit loin de la couche
+limite autour de la nacelle. L'anémomètre ne doit pas être placé dans le sillage dû à la
+transition brutale possible de la partie circulaire de la base de la pale à la partie profilée.
+13
+Il est recommandé que l'anémomètre soit monté à une position de 15º au-dessus d'une ligne
+inclinée en aval tangente à la partie supérieure de la nacelle ou du moyeu comme indiqué
+dans la Figure 2.2. Il est également recommandé que, afin d'éviter l'influence des tourbillons
+de la base, l'anémomètre soit monté en dehors d'une zone de ± 15º ayant son point de départ
+à la transition de la forme cylindrique de la base à la partie profilées des pales.
+2.4.3 Le concept du disque actuateur
+Le comportement d'un rotor d'éolienne dans un écoulement peut facilement être analysé en
+introduisant le principe du disque actuateur. L'idée de base du principe de disque actuateur
+est de remplacer le rotor réel par un disque de surface équivalente perméable où les forces
+des pales sont distribuées sur le disque circulaire. Les forces distribuées sur le disque
+actuateur modifient les vitesses locales à travers le disque et l'ensemble de l'écoulement
+autour du disque de rotor. Par conséquent, l'équilibre entre les forces appliquées et
+l'écoulement perturbé est régi par la loi de la conservation de masse et l'équilibre des
+quantités de mouvement qui, pour un rotor réel est donné par les équations de mouvement
+axial et tangentiel. La figure 2.3 montre un disque actuateur où les courants sont en
+expansion en raison de la réaction de la poussée [11].
+Figure 2.3 L'écoulement autour d'un disque actuateur.
+14
+Figure 2.4 Représentation de l'écoulement autour du disque actuateur.
+La théorie de Rankine-Froude [12] estime l'équilibre de la quantité de mouvement axiale,
+loin en amont et en aval du rotor pour un disque actuateur uniformément chargé sans
+rotation, où la poussée T et la puissance cinétique P en termes de vitesse de vent non perturbé
+Uinf (V0 dans le schéma) et la vitesse du sillage lointain u1 sont réduit à :
+( ) 0 1
+.
+T = m V - u , ( )
+2
+1 2
+1
+2
+0
+.
+P = m V - u (2.1)
+Ici, le débit massique à travers le disque est donné par
+.m
+=Du1A1, où A1 est la zone de sillage
+donné par la ligne de courant passant par le bord du disque et D est la densité. L'utilisation
+15
+de conservation de la masse à travers le disque donne uA = u1A1, et en combinant les
+relations au-dessus, la puissance extraite du champ d'écoulement par la poussée est égale à :
+P = (V + u )T = uT
+2
+1
+0 1 B ( )
+2
+1
+0 1 u = V + u (2.2)
+Montrant que la vitesse u au niveau du disque est la moyenne arithmétique de la vitesse du
+vent non perturbé Vo et celle dans le sillage u1. L'importance de ce résultat est visible à
+l'évaluation des forces aérodynamiques de la pale. Pour plus de commodité l'équation (2.1)
+est généralement présenté sous forme adimensionnelle en introduisant le facteur d'induction
+axial
+0
+1
+V
+a = - u et en utilisant la pression dynamique de l'écoulement non perturbé et de la
+zone du rotor. Ainsi, l'expression de la poussée et celle de la puissance deviennent :
+4 (1 )
+2
+1 2
+0 T V A a a rot = ρ - (2.3)
+3 2
+0 4 (1 )
+2
+P 1 V A a a rot = ρ - (2.4)
+L'Equation (I.5) est une des équations indispensables pour fermer le système d'équation
+discuté dans le chapitre IV est celle reliant la poussée T du rotor à la chute de pression :
+rot T = ΔpA (2.5)
+Pour obtenir la différence de pression 
+p, l'équation de Bernoulli est appliquée séparément
+aux sections en amont et en aval du rotor; les équations distinctes sont nécessaires car
+l'énergie totale est différente en amont et en aval. L'équation de Bernoulli stipule que, sous
+16
+des conditions stables, l'énergie totale dans l'écoulement reste constante et aucun travail n'est
+effectué sur ou par le fluide. Ainsi, pour une unité de volume d'air :
+constante
+2
+1 ρV 2 + p + ρgh = (2.6)
+En amont, nous avons donc :
+ρV + p + ρ gh = ρu2 + p + ρgh
+0 0 0
+2
+0 2
+1
+2
+1 (2.7)
+En supposant que l'écoulement soit incompressible ( ρ = ρ 0 ) et horizontale ( h = h 0 ),
+alors :
+V + p = u2 + p+
+0
+2
+0 2
+1
+2
+1 ρ ρ (2.8)
+De même, en aval,
+u + p = u2 + p-
+0
+2
+1 2
+1
+2
+1 ρ ρ (2.9)
+En soustrayant ces équations, on obtient :
+( )
+2
+1 2
+1
+2
+0 p+ - p- = ρ V - u (2.10)
+Equation (2.10) donne alors :
+( ) ( ) (1 )
+2
+1
+0 1 0
+2
+1
+2
+0 V u A V u A V a rot rot ρ - = - ρ - (2.11)
+17
+2.4.3.1 Coefficient de puissance
+La force de l'air devient, à partir de l'équation (2.10) :
+2 2 (1 )
+0 F A V a a rot = ρ - (2.12)
+Comme cette force est concentrée dans le disque actuateur, le taux de travail accompli par la
+force est Fu et, partant, la puissance d'extraction de l'air est donnée par :
+3 2
+0 P 2 A V a(1 a) rot = ρ - (2.13)
+Un coefficient de puissance est alors défini comme :
+V A
+C P p
+3
+0 2
+1 ρ
+= (2.14)
+Où le dénominateur représente la puissance disponible dans l'air, en l'absence du disque
+actuateur. Par conséquent :
+C 4a(1 a)2 p = - (2.15)
+2.4.3.2 Le coefficient de poussée
+La force de l'actionneur du disque causée par la chute de pression, donnée par l'équation
+(2.12), peut également être adimensionnelle pour donner un coefficient de poussée CT :
+18
+rot
+T
+V A
+C P
+2
+0 2
+1 ρ
+= (2.16)
+C 4a(1 a) T = - (2.17)
+Un problème se pose pour des valeurs de a N1/2 étant donné que la vitesse en aval, donné
+par u1 = (1-2a)V0, devient nul, voire négatif, dans ces conditions, la théorie dynamique, tel
+qu'elle est décrite, ne s'applique plus et une analyse empirique doit être réalisé (section
+2.3.3.3). La variation du coefficient de puissance avec un coefficient de poussée est montrée
+dans la Figure 2.5.
+Figure 2.5 Variation de CP et CT en fonction du
+Facteur d'induction a.
+19
+2.4.3.3 La limite de Betz
+La conversion optimale de l'énergie possible est facile à trouver à partir du gradient
+da
+dCP de
+l'Eq. (2.15). Le débit le plus élevé est obtenu pour une valeur de a= 1/3 pour un coefficient de
+poussée CT = 8/9. Le coefficient de puissance CP atteint la valeur maximale de 16/27 soit
+59,3% généralement appelé la limite de Betz faisant référence à l'aérodynamicien allemand
+Albert Betz. À ce jour, aucune éolienne n'a été capable de dépasser cette limite.
+2.4.3.4 Correction de Glauert
+Afin de corriger la valeur de CT pour des a >1/3, Glauert [13] a proposé une relation
+empirique :
+CD
+CE
+F
+- -
+-
+=
+(5 3 ))
+4
+4 (1 1
+4 (1 )
+a a a
+a a
+CT
+3
+1 3
+1
+>
+≤
+a
+a
+La correction de Glauert permet d'obtenir une évaluation plus réaliste des performances
+théoriques d'une éolienne en prenant en considération la rotation de l'éolienne dans le
+sillage. D'une façon similaire au facteur d'induction axiale a, on introduit la notion de
+facteur d'induction de vitesse circonférentielle a' (voir figure 2.6).
+(2.18)
+20
+Figure 2.6 Diagramme des vitesses.
+Le coefficient de puissance est obtenu à partir de ce triangle de vitesse en utilisant une
+nouvelle équation appelée limite de Glauert
+= G -
+λ
+λ λ
+λ 0
+3
+2 8 '(1 )
+p r r C a a d (2.19)
+Avec
+0 V
+λ = RΩ ,
+0 V
+r
+r
+λ = Ω ,
+0
+0
+V
+V u
+a
+-
+= et
+Ω
+=
+2
+a' ω (2.20)
+CHAPITRE 3
+DESCRIPTION DU PROJET
+Le parc éolien de Wieringermeer est un site de test unique pour les turbines à vent qui se
+compose de quatre turbines prototypes, cinq éoliennes Nordex N80 à des fins de recherche et
+trois grands mâts météorologiques : deux mâts de 108 m de hauteur et un mât à 100 m. Les
+mesures effectuées dans les turbines de recherche incluent les mesures de charge, la collecte
+de données SCADA (Supervisory Control And Data Acquisition) et des mesures
+météorologiques. La grande quantité de données est utilisée dans de nombreux projets de
+recherche.
+3.1 Localisation du projet
+Au printemps 2004, Nordex a installé cinq éoliennes N80 / 2.500kW pour l'institut de
+recherche Néerlandais ECN (Centre Néerlandais de Recherches Énergétiques) sur son
+nouveau parc proche de la municipalité de Wieringermeer. Le site est situé juste au sud du
+village Kreileroord, à environ 30 kilomètres de distance les principaux bureaux de l'ECN à
+Petten.
+Cette installation unique est la combinaison d'un parc éolien et de prototypes d'essai. Le parc
+éolien - composé de cinq éoliennes Nordex N80 - permet à ECN d'effectuer des recherches
+spécifiques et de programmes de développement des parcs éolien. Le site comprend
+également quatre emplacements prototypes. Ces sites permettent aux fabricants de tester,
+optimiser et certifier les prototypes en collaboration avec ECN. Le site dispose d'un climat
+favorable: la vitesse moyenne du vent à 100 m de hauteur est de 8,3 m/s.
+22
+3.2 Description du parc éolien
+Le parc éolien est composé de deux rangées de turbines. La première ligne est composée de
+quatre turbines prototype orienté à 95 º par rapport au nord et avec un espacement de 411 m.
+La deuxième ligne se compose de cinq turbines de types Nordex N80 destinées à la recherche
+orientée vers 95 º par rapport au nord et avec un espacement de 305 m (3.8 le diamètre de
+l'éolienne). La direction principale du vent est sud-ouest. Le terrain d'essai et ses environs
+sont caractérisés par un terrain plat (figure 9), constitué de zones essentiellement agricoles,
+avec des fermes isolées et des rangées d'arbres. Le lac IJsselmeer est situé à une distance de
+1-2 km à l'est du parc. Le petit village de Kreileroord est situé au nord du parc éolien. Les
+rangées de turbines prototype et les turbines de recherche sont séparées d'une de distance de
+1600m. Le tracé du parc éolien est indiqué sur la figure (3.2).
+Figure 3.1 Parc éolien de Wieringermeer.
+Tirée du site http://www.ecn.nl/
+23
+Figure 3.2 L'aménagement de la station de Wieringermeer.
+Tirée du site http://www.ecn.nl/
+24
+3.2.1 Les tours météorologiques
+Les tours météorologiques dans le site de Wieringermeer sont des tours en treillis avec une
+hauteur de 100 m ou 108 m. Les sections triangulaires dont la longueur des côtés de 1,6 m
+sont égales à tous les niveaux. Des bras pour soutenir les instruments de mesure sont
+installés à différents niveaux. Une bôme est pointée vers le nord: 0°, une seconde à l'est-sudest:
+120 ° et une troisième à l'ouest-sud-ouest: 240 °. Les bômes sont de 6,5 m de long ainsi,
+l'influence du mât sur la vitesse du vent et des mesures de la direction du vent est inférieure à
+1%. Les mesures météorologiques à proximité des turbines de recherche sont à 80 m (hauteur
+du moyeu), à 52m et 108m de hauteur. Les anémomètres soniques sont placés à trois
+hauteurs sur le mât et ils sont situés au Nord des bras afin de mesurer les conditions du
+sillage des turbines.
+Figure 3.3 Tour météorologique installée sur
+le site de Wieringermeer.
+25
+3.2.2 Description des données du parc éolien
+Les données sont recueillies sur le site de recherche de deux façons ; la première est celle
+que le réseau ECN mesure avec des unités locales d'acquisition de données (systèmes de
+DANTE) et la deuxième est avec le système SCADA du centre Nordex. Les mesures du
+réseau ECN de mesure comprendront les mesures de l'instrumentation dans les tours
+météorologiques et les mesures rapides de données SCADA ainsi que les mesures de la
+charge mécanique. Le système SCADA Nordex recueille toutes les données SCADA des
+cinq éoliennes toutes les dix minutes et stocke ces valeurs dans un ordinateur central. Ces
+mesures sont transférées à ECN sur une base quotidienne.
+Les données météorologiques consistent en des mesures de vitesse du vent, direction du vent,
+pression atmosphérique, température, précipitations et stabilité atmosphérique.
+Pour chaque campagne, les données sont stockées dans des fichiers binaires sur un ordinateur
+hôte à proximité de l'expérience. L'ordinateur hôte est connecté au même réseau que celui
+auquel sont reliés les systèmes de DANTE.
+Conformité des mesures
+La plupart des mesures sont effectuées conformément aux normes IEC et ses
+recommandations techniques. Les données mesurées sont toujours stockées dans la structure
+de base de données WDMS (Système de gestion des données de vent) et peuvent être livrés
+périodiquement dans n'importe quel format numérique demandé par le client. Les rapports
+périodiques sont fournis pour permettre un accès facile aux données et démontrer la validité
+des mesures.
+26
+3.3 Description de l'éolienne Nordex N80
+Les cinq turbines à l'essai sont des Nordex N80 d'une puissance nominale de 2500 kW. Les
+éoliennes sont à vitesse et pas variables. Le diamètre du rotor et la hauteur du moyeu sont
+de 80 m. Le rotor est composé de trois pales en fibre de verre renforcé de polyester. Les
+vitesses de rotation varient entre 10.8 et 18.9 rpm. La vitesse de rotation est ajustée pour que
+l'éolienne opère à un Cp maximale sur une grande plage de vitesse possible. Les éoliennes
+N80 fonctionnent lorsque la vitesse du vent à la hauteur du moyeu est comprise entre 4 m/s et
+25 m/s et elles atteignent la puissance nominale à 14 m/s.
+Figure 3.4 Éolienne Nordex N80.
+27
+Les pales sont équipées d'un système de protection contre la foudre, y compris un récepteur
+pour dévier la foudre sur le moyeu du rotor. Le générateur est une machine asynchrone à
+double alimentation. Le générateur est maintenu dans sa gamme de température optimale par
+un circuit de refroidissement à l'eau glycolée.
+3.3.1 Principes de fonctionnement
+La société Nordex AG est l'un des chefs de file mondiaux de la fabrication de gros
+aérogénérateurs. Ses produits sont destinés à 60 % à l'exportation. Nordex est un fournisseur
+dynamique sur les marchés mondiaux de l'énergie éolienne.
+Les éoliennes Nordex N80 possèdent un système de variation de l'angle de calage des pales
+(figure 3.5). Celui-ci permet au rotor de faire varier son efficacité aérodynamique. De cette
+façon, la courbe de puissance (figure 3.6) aura une allure se rapprochant de celle d'une
+éolienne à vitesse variable. Cependant, il est difficile d'obtenir un plateau à fort vent, étant
+donné qu'un certain laps de temps s'écoule avant que l'angle de calage des pales soit ajusté
+automatiquement.
+Figure 3.5 Système de variation de l'angle de calage des pales.
+28
+3.3.2 Performance de la Nordex N80
+La courbe de puissance et les vitesses de rotation associées à chaque vitesse de vent sont
+illustrées sur les figures 3.6 et 3.7 respectivement. La plage d'opération de l'éolienne est
+entre 4 et 25 m/s. Sa puissance nominale de 2500 kW est atteinte à partir de 15.96 m/s. la
+vitesse de rotation varie entre 7.2 et 12.6 m/s et demeure constante en dehors de cette plage
+soit 10.8 rpm pour les vitesses inférieures ou égales à 7.2 m/s et 18.9 rpm pour les vitesses
+supérieures ou égales à 12.6 m/s.
+0 5 10 15 20
+0
+500
+1000
+1500
+2000
+2500
+3000
+Vitesse infinie (m/s)
+Puissance (kW)
+Figure 3.6 Courbe de puissance de la Nordex N80.
+29
+0 2 4 6 8 10 12 14 16 18 20 22 24
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+Vitesse infinie (m/s)
+Vitesse de rotation (rpm)
+Figure 3.7 Vitesse de rotation du rotor en fonction de la vitesse infinie.
+0 5 10 15 20
+0
+0.05
+0.1
+0.15
+0.2
+0.25
+0.3
+0.35
+0.4
+0.45
+0.5
+Vitesse infinie (m/s)
+Cp
+Figure 3.8 Courbe Cp de la Nordex N80.
+30
+La figure 3.8 illustre la courbe du coefficient de puissance obtenue à partir de la fiche
+technique de la Nordex N80. Sur cette figure, le Cp maximal de 0.452 est atteint pour les
+vitesses de vents non perturbées entre 8 et 9,5 m/s
+CHAPITRE 4
+MODÈLE MATHÉMATIQUE
+L'écoulement autour de la nacelle et du rotor d'une éolienne est très complexe. Un modèle
+mathématique est donc proposé pour bien présenter cet écoulement. Dans un tel écoulement,
+les équations de Navier-Stokes seront utilisées à cet effet en posant des hypothèses
+simplificatrices pour faciliter la résolution du système d'équations de continuité et de
+quantité de mouvement utilisées pour la modélisation.
+4.1 Équations fondamentales
+4.1.1 Équations du mouvement
+Les équations de mouvement sont obtenues en appliquant les principes de conservation de la
+masse et de la quantité de mouvement à un volume de contrôle V à l'intérieur du fluide. On
+considère l'écoulement comme étant stationnaire et incompressible (vu la présence de faible
+vitesse dans la couche limite terrestre). Le vecteur de norme unitaire ni est orienté vers
+l'extérieur de V et perpendiculaire à la surface A.
+L'équation de conservation de la masse aussi appelée l'équation de continuité stipule que la
+masse du système est invariable dans le temps.
++ = 0
+∂
+∂ G G
+A
+i i
+V
+dV u n dA
+t
+ρ (4.1)
+Selon l'hypothèse d'incompressibilité considérée ci-haut, l'équation de continuité devient
+donc :
+32
+G = 0
+A
+i i u n dA (4.2)
+La deuxième loi de Newton dit que la variation de la quantité de mouvement d'un volume de
+contrôle est égale à la somme des forces qu'il subit.
+VC
+ext
+A
+i j i
+V
+i dV u u n dA F
+t
+u + =
+∂
+∂ G ρ Gρ
+(4.3)
+Ici, i u et j u représentent les composantes de la vitesse. Le terme VC
+ext F représente les forces
+surfaciques VC
+surf F telles que la force de pression et de friction et volumiques VC
+vol F exercées sur
+un volume de contrôle. Les forces surfaciques VC
+mec F exercées par les pales sur l'éolienne
+seront étudiées en profondeur en utilisant la théorie de l'élément de pale discutée dans la
+section [4.2.2].
+L'équation de la quantité de mouvement est donc réécrite comme suit :
+VC
+i mec
+A i
+j
+j
+i
+ij
+A
+i j i
+V
+i n dA F
+x
+u
+x
+dV u u n dA p u
+t
+u +
+H H	
+
+
+K KL
+
+N N
+Q
+P
+Q Q
+R
+S
+∂
+∂
++
+∂
++ = - + ∂
+∂
+∂ G ρ Gρ G δ μ
+(4.4)
+Pour connaître les caractéristiques de l'écoulement dans tout le domaine à chaque instant t, il
+faudra résoudre le système d'équations précédent. Pour ce faire, on doit connaître le terme
+VC
+mec F en plus des quatre variables indépendantes qui sont les trois composantes de la vitesse
+i u ainsi que la pression p. Toutefois, les temps de calcul pour résoudre un tel système
+instationnaire en 2-D demeureraient trop importants. Ce qui nous conduira à poser
+d'autres hypothèses pour simplifier la résolution du problème. Ensuite, on supposera que
+l'écoulement est axisymétrique au tour de la nacelle de l'éolienne par rapport à l'axe de
+rotation (voir 4.1.4).
+33
+Finalement, en remplaçant le rotor par le modèle du disque actuateur, un disque uniforme
+composé par un nombre infini de pales, permettra de considérer l'écoulement comme
+stationnaire. [14]
+4.1.2 Équation de Navier-Stokes moyennées
+Un écoulement turbulent est dit stationnaire si les quantités moyennes sont constantes dans le
+temps. Ce qui permettra son étude en utilisant la méthode de moyennage temporel des
+équations instantanées de Navier-Stokes (RANS).
+Cette méthode consiste à décomposer chaque valeur instantanée des différentes propriétés de
+l'écoulement en une composante moyenne ψ et une composante de fluctuationψ ' .
+'
+i i i ψ =ψ +ψ (4.5)
+En remplaçant les valeurs instantanées par celle moyennées dans les équations de Navier-
+Stokes (4.2) et (4.4) on obtient :
+G = 0
+A
+uinidA (4.6)
+VC
+i mec
+A i
+j
+j
+i
+ij
+A
+i j i
+A
+i j i n dA F
+x
+u
+x
+u u n dA u u n dA p u +
+H H	
+
+
+K KL
+
+N N
+Q
+P
+Q Q
+R
+S
+∂
++∂
+∂
+Gρ =-Gρ ' ' +G - δ +μ ∂
+(4.7)
+Cette nouvelle forme des équations de Navier-Stokes fait apparaître un nouveau
+terme, ' '
+ij i j τ = -ρ u u , appelé le tenseur de Reynolds qui évoque le caractère turbulent de
+l'écoulement. Cependant, ce terme vient introduire six inconnues supplémentaires appelées
+contraintes de Reynolds, dont trois sont normales et les trois autres agissent en cisaillement.
+34
+Il s'agit alors de fermer le problème en introduisant des équations supplémentaires qui seront
+déterminées dans la section suivante.
+4.1.3 Modèle de turbulence
+La technique de moyennage temporel de Reynolds permet de résoudre notre système d'une
+façon statistique et indépendante du temps. Toutefois, elle fait apparaître d'autres inconnues
+additionnelles. L'ajout d'un modèle de turbulence est donc essentiel pour fermer le système.
+Il existe différents modèles de turbulence, se distinguant par leur niveau de complexité. Le
+modèle de turbulence le plus utilisé dans les applications de l'ingénierie est le modèle à deux
+équations k-B. Il permet de prédire de nombreux écoulements avec une précision raisonnable.
+Aussi, certaines recherches sur le sillage produit par les éoliennes tel que celle effectuée par
+Crespo et al. [15] se basaient sur le modèle de turbulence k-B. Ce qui justifie le choix de ce
+modèle pour cette étude.
+4.1.3.1 L'approche de Boussinesq
+Cette approche repose sur l'hypothèse que la densité et la viscosité du fluide dépendent de la
+température. Lorsque la variation de température est assez petite, on suppose que la densité et
+la viscosité sont constantes. Dans cette approximation de Boussinesq, les contraintes de
+cisaillement turbulentes ont la même forme que celles des contraintes de cisaillement
+visqueuses.
+ij
+i
+j
+j
+i
+i j t k
+x
+u
+x
+ρ u u μ u ρδ
+3
+' ' - 2 N
+N
+Q
+P
+Q Q
+R
+S
+∂
+∂
++
+∂
+∂
+- = (4.8)
+35
+Où ' '
+2
+1
+i j k = u u et elle représente l'énergie cinétique turbulente
+L'équation de Navier-Stokes devient donc :
+( ) VC
+i mec
+A i
+j
+j
+i
+ij t
+A
+i j i
+A
+i j i n dA F
+x
+u
+x
+u u n dA u u n dA p u +
+H H	
+
+
+K KL
+
+N N
+Q
+P
+Q Q
+R
+S
+∂
++ ∂
+∂
+Gρ =-Gρ ' ' +G - *δ + μ +μ ∂
+(4.9)
+Où p p kρ
+3
+* = + 2 (4.10)
+Dans un modèle de turbulence on cherche l'expression de la viscosité turbulente t t μ = ρν . La
+dimension de t
+ν est m2/s. Une vitesse caractéristique multipliée par une longueur
+caractéristique donnera la même dimension, i.e.
+t ν
+α t t V L
+Différents modèles de turbulence sont utilisés pour déterminer ces deux grandeurs
+caractéristiques qui sont la vitesse et la longueur. Par exemples les modèles algébriques ou à
+zéro équation, n'utilisant pas des équations aux dérivées partielles pour le calcul des termes
+de transport turbulent, sont les plus simples des modèles de turbulence. Cependant, un des
+principaux inconvénients de ces modèles est lié au fait que la longueur de mélange, souvent
+utilisée pour le calcul de la viscosité tourbillonnaire, doit être trouvée pour chaque
+écoulement.
+Dans des modèles à une équation, une équation de transport est souvent résolue pour
+l'énergie cinétique turbulente. Comme les modèles algébriques, l'inconvénient principal de ce
+type de modèle est qu'il ne s'applique pas aux écoulements généraux puisqu'il n'est pas
+possible de trouver une expression générale pour une échelle de longueur algébrique.
+36
+Définis par Jones et Launder [16] comme étant un modèle complet, les modèles à deux
+équations sont les plus utilisés dans la pratique, plus particulièrement le modèle de
+turbulence dit k - B. Il consiste à calculer la viscosité turbulente à partir de l'énergie
+turbulente k et de la dissipation B.
+4.1.3.2 Modèle de k - B
+Dans ce modèle les équations d'énergie k et de dissipation B sont les deux équations de la
+turbulence qui vont aider à fermer notre système.
+Pour un volume de contrôle V délimité par une surface A, les équations du modèle k - B
+sont :
+Vt = k1/2
+(4.11)
+Et Lt =
+ε
+k 3 / 2 (4.12)
+On obtient l'expression finale de la viscosité turbulente à partir de l'énergie cinétique
+turbulente k, et de son taux de dissipationε .
+ε
+μ ρ μ
+k 2 C t =
+(4.13)
+Les deux grandeurs dont le calcul est nécessaire pour calculer la viscosité turbulente, à savoir
+k et B, sont obtenues à partir des équations de transport suivantes :
+G G( ) G ∂
+∂
+N NO
+P
+Q QR
+S
+= - + +
+A A
+i
+k i
+T
+V
+i i t n dA
+x
+ku n dA P dV k
+σ
+ρ ρε μ μ
+(4.14)
+37
+G G G ∂
+∂
+N NO
+P
+Q QR
+S
++ + N
+N
+O
+P
+Q Q
+R
+S
+= -
+A A
+i
+j
+T
+V
+i i t n dA
+x
+dV
+k
+P C
+k
+u n dA C ε
+σ
+μ
+ρε ε ρ ε μ
+ε
+ε ε
+2
+1 2
+(4.15)
+Avec
+i
+j
+i
+j
+j
+i
+T
+i
+j
+t i j x
+u
+x
+u
+x
+u
+x
+P u u u
+∂
+∂
+N N
+O
+P
+Q Q
+R
+S
+∂
++ ∂
+∂
+= ∂
+∂
+= -ρ ' ' ∂ μ
+(4.16)
+Où t P correspond à la production d'énergie cinétique turbulente due aux forces de
+cisaillement.
+Dans la version standard de ce modèle, les constantes utilisées dans la pratique sont celles
+proposées par Launder et Spalding en 1974 [17].
+Cμ= 0.09 CB1= 1.44 CB2= 1.92 Lk =1.0 LB =1.3 (4.17)
+Crespo et al. (1985) [15] ont proposé une modification du modèle k - B standard en se basant
+sur une étude expérimentale d'une couche limite atmosphérique neutre. Ils ont ainsi proposé
+les constantes suivantes du modèle de turbulence.
+Cμ= 0.0333 CB1= 1.176 CB2= 1.92 Lk =1.0 LB =1.3 (4.18)
+Ce sont les constantes du modèle de turbulence utilisées dans cette étude.
+4.1.3.3 Modèle proposé par Chen and Kim (1987)[18]
+Dans ce modèle de turbulence un terme supplémentaire a été ajouté à l'équation du transport
+approximative pour le taux de dissipation de l'énergie de turbulence dans le sillage.
+L'expression finale de l'équation de transport de B est la suivante :B
+38
+G G G G ∂
+∂
+N NO
+P
+Q QR
+S
++ ℘ + + N
+N
+O
+P
+Q Q
+R
+S
+= - +
+A ∩ A
+i
+j
+T
+V V V
+axi
+i i t n dA
+x
+S dV dV
+k
+P C
+k
+u n dA C
+NE
+ε
+σ
+μ
+ρε ε ρ ε μ
+ε
+ε ε ε ε
+2
+1 2
+(4.19)
+B
+SB
+axi est non nul dans le cas d'une approximation axisymétrique du modèle proposé. Le terme
+ε ℘ représente le taux de transfert d'énergie de la turbulence. Il est défini par [18].
+k
+P
+C t
+ρ ε ε
+2
+4 ℘ = (4.20)
+Le volume VNE est défini comme la région de la turbulence non équilibrée. Le choix de la
+dimension de cette région est critique. Afin d'obtenir des simulations précises de sillage, le
+VNE doit inclure le disque actuateur ses zones environnantes en amont et en aval [19]. Dans
+ce document, il est défini comme un volume d'environ 0.25D en amont et en aval de la
+turbine (voir Fig. 4.1).
+Figure 4.1 Domaine de calcul.
+La formulation actuelle permet au taux de dissipation de répondre au champ d'écoulement
+moyen plus rapidement de façon à contrôler le développement de l'énergie cinétique
+39
+turbulente plus efficacement. Les constantes du modèle proposé sont celles proposées par
+Crespo et al. pour les couches limites atmosphériques neutres.
+4.1.4 Modèle axisymétrique
+L'étude numérique du comportement d'un fluide autour d'une éolienne en opération reste un
+processus lourd et coûteux en temps de calcul. Afin de proposer une approche pratique pour
+la solution de ce problème, un modèle simplifié en condition axisymétrique a été adopté pour
+cette étude. En effet, la pertinence de cette formulation bidimensionnelle a été prouvée dans
+la prédiction des performances des éoliennes à axe horizontal [20] [21]. Ainsi, les effets du
+sol sont ignorés et l'écoulement entrant est uniforme et parallèle à l'axe de rotation de la
+turbine.
+Pour un rotor immergé dans une couche limite atmosphérique, on considère la fonction O de
+variables dépendantes exprimée comme suit :
+( ) (x, y, z) * (x, y, z) ~ z o
+φ φ =φ + (4.21)
+Avec ( ) ( ) ( ) ~
+0 0 z z h o
+φ φ =φ - (4.22)
+Où ( ) 0 φ z correspond aux propriétés dépendantes de la couche limite non perturbée et (h) o
+φ à
+la valeur de celles d'un écoulement non perturbé à la hauteur du moyeu h.
+φ * représente donc la somme de la perturbation de φ due à la présence du rotor avec la valeur
+de (z) o
+φ évaluée à la hauteur du moyeu.
+( , , ) ( , , ) ( ) * x y z x y z h rotor o φ =φ +φ (4.23)
+40
+Les variations des propriétés de l'écoulement non perturbé ~ ( )
+0 φ z sont supposées
+négligeables au voisinage du rotor par rapport aux variations des propriétésφ * (x, y, z) .
+*
+0
+φ~ <<φ (4.24)
+*
+0
+∇φ~ << ∇φ (4.25)
+Il faut noter que ces simplifications ne sont valide que si h/R >>1 où R est le rayon de
+l'éolienne.
+En utilisant ces simplifications et les soustractions des termes de l'écoulement non perturbé
+des équations de continuité, de la quantité de mouvement, et de k et B. On obtient :
+G =
+A
+ui nidA 0 *
+(4.26)
+G G G + + N
+N
+O
+P
+Q Q
+R
+S
+N N
+O
+P
+Q Q
+R
+S
+∂
++ ∂
+∂
+= - + + ∂
+A A
+i
+R
+i T
+R
+n
+A
+i
+i
+j
+j
+i
+i i i ij t
+R
+i
+n dA f f dA
+x
+u
+x
+u u n dA P* ( ) u (( ) ( ) )
+* *
+* * * ρ δ μ μ
+(4.27)
+G G( ) G ∂
+∂
+N NO
+P
+Q QR
+S
+= - + + +
+A A
+i
+k i
+t
+V
+i i t n dA
+x
+k u n dA P h dV k
+* *
+0
+* * * * ( )
+σ
+μ
+ρ ρε ρε μ
+(4.28)
+G G G (4.29) ∂
+∂
+N NO
+P
+Q QR
+S
++ + N N
+O
+P
+Q QR
+S
+= - +
+A A
+i
+j
+t
+V
+i i t n dA
+x
+dV
+k h
+C h
+k
+P C
+k
+u n dA C
+* *
+0
+2
+0
+* 2
+*2
+* 2
+*
+1
+* *
+( )
+( ) ε
+σ
+ρε ε ρ ε ρ ε μ μ
+ε
+ε ε ε
+41
+Avec
+i
+j
+i
+j
+j
+i
+t t x
+u
+x
+u
+x
+P u
+∂
+∂
+N N
+O
+P
+Q Q
+R
+S
+∂
++ ∂
+∂
+= ∂
+* * *
+* μ *
+(4.30)
+*
+*2
+*
+ε
+μ ρ μ
+C k t =
+(4.31)
+Les propriétés φ de l'écoulement loin en amont et en aval de l'éolienne sont celle de
+l'écoulement non perturbé 0
+φ , ainsi les propriétés * ,
+i u k* et B* sont égales aux u0(h), k0(h) et
+B0(h). On a donc :
+(4.32)
+D'où * (x, y, z) (h) o ψ =ψ (4.33)
+Dans le cas du modèle proposé, le terme source additionnel dans l'équation de transport de k
+et B est donné par :
+( ) 0 S axi H
+k = ρε (4.34)
+( )
+( )
+0
+0
+2 k H
+S axi C ε H
+ρ ε ε = (4.35)
+4.2 Modélisation de l'éolienne
+( , , ) ( , , ) ~ ( ) ( ) 0 0
+ψ x y z =ψ * x y z +ψ z =ψ z
+42
+Une éolienne se modélise principalement à partir de ses caractéristiques aérodynamiques. La
+forme de la nacelle et l'action des pales influencent grandement la lecture de l'anémomètre
+situé sur la nacelle. L'action des pales sur le fluide est modélisée en introduisant des forces
+externes moyennées dans le temps dans les équations de quantité de mouvement. Une
+formulation similaire à celle de la théorie de l'élément de pale sera donc utilisée pour évaluer
+ces forces externes.
+4.2.1 Modélisation de la nacelle
+Compte tenu de l'axisymétrie de l'étude, seulement la moitié supérieure de la nacelle est
+modélisée. La nacelle a été dessinée à l'aide du logiciel Gambit en se basant sur les schémas
+fournis par l'ECN. Dans Fluent, la nacelle à été considérée comme un mur de surface lisse.
+4.2.2 Modélisation du rotor
+Comme il a été déjà expliqué dans le chapitre II, le concept du disque actuateur consiste à
+modéliser le rotor comme une surface perméable définie par le secteur balayé par les pales,
+sur lequel une distribution des forces agit sur l'écoulement entrant à un taux défini par la
+période moyennée du travail mécanique extrait du fluide par le rotor. L'action du rotor peut
+être modélisée par une distribution des forces, par unité de surface, sur la face du disque
+actuateur AR [22]. Ces forces par unité de surface du disque actuateur seront appelées des
+forces surfaciques dans ce mémoire. Un cône circulaire est représenté par un rayon RcosP, où
+R est la longueur de la pale et P est l'angle de conicité des pales avec la verticale. La figure
+(4.2) montre un schéma d'un disque actuateur typique pour l'analyse des éoliennes à axe
+horizontal. Sur ce schéma l'angle de conicité de la pale a été exagéré pour la clarté (les angles
+typiques de conicité sont entre 0° et 10°). On suppose que le rotor n'a aucune action sur le
+fluide dans la direction perpendiculaire à l'écoulement local ; donc la force surfacique
+exercée par un élément de surface dA du disque actuateur peut être décomposée en deux
+43
+composantes normale et tangentielle dénotées par fn et ft, respectivement (voir la figure 4.2)
+dont les expressions seront définies par la théorie de l'élément de pale.
+Figure 4.2 Description du disque actuateur.
+4.2.3 La théorie de l'élément de pale
+Afin d'analyser les effets aérodynamiques de la pale, on aura recours à la théorie de
+l'élément de la pale qui consiste à diviser la pale en plusieurs éléments de longueur dr (voir
+figure 4.3). Cette théorie se fonde sur deux hypothèses principales :
+• il n'y a aucune interaction aérodynamique entre différents éléments de pales;
+• les forces sur les éléments de pale sont seulement déterminées par les coefficients de
+portance et de traînée.
+44
+Les forces de traînée FD et de portance FL sont exprimées en fonction des coefficients de
+traînée et de portance et de l'angle d'attaque et son respectivement parallèle et
+perpendiculaire à la vitesse relative de l'écoulement.BB
+Figure 4.3 Représentation de l'élément de pale d'un rotor.
+45
+Figure 4.4 Profile aérodynamique d'une section de pale.
+Tel qu'illustré à la figure (4.4), pour chaque élément de pale on a :
+cosϕ sinϕ N L D dF = dF + dF (4.36)
+sinϕ cosϕ T L D dF = dF - dF (4.37)
+Où dFL
+et dFD sont respectivement les forces de portance et de traînée sur chaque
+élément de pale. Elles sont calculées à partir des coefficients de portance Cl et de traînée CD.
+dF C U c dr L l rel
+2
+2
+= 1 ρ
+(4.38)
+dF C U c dr D d rel
+2
+2
+= 1 ρ
+(4.39)
+46
+Où c est la corde de la pale de l'éolienne et Urel la vitesse relative de l'air sur la pale et il est
+définie comme suit :
+U U(1 a)/ sinϕ rel = - (4.40)
+
+ étant l'ange formé entre Urel et le plan de rotation. Il est obtenue par :
+p T ϕ =α +θ +θ ,0 (4.41)
+Avec K l'angle d'attaque formé entre le plan de rotation et la corde du profil. Dp,0 et DT sont
+respectivement l'angle de calage de la pale et l'angle de vrille local.
+Si B est le nombre de pale, les forces moyennes exercées sur le rotor au complet seront :
+dF B U (C C )c dr N rel l d ρ cosϕ sinϕ
+2
+= 1 2 +
+(4.42)
+dF B U (C C )c dr D rel l d ρ cosϕ sinϕ
+2
+= 1 2 -
+(4.43)
+Les composantes normale et tangentielle fn et ft des forces surfaciques exercées par le rotor
+sur l'écoulement sont définies par :
+2
+' 2
+rel n
+n
+U c
+f
+σ ρ
+=
+(4.44)
+2
+' U 2 c r
+f rel t
+t
+σ ρ
+=
+(4.45)
+47
+Où L' = Bc / (2Qr) est la solidité locale et cn et ct sont respectivement le coefficient normal et
+tangentiel et sont définis par :
+( cosϕ sinϕ ) n l d c = C + C (4.46)
+( sinϕ cosϕ ) t l d c = C + C (4.47)
+La théorie de l'élément de pale ne peut être appliquée que lorsque la géométrie de la pale est
+connue. Lorsqu'une telle information n'est pas disponible, il est encore possible de
+représenter l'effet du rotor sur l'écoulement si le coefficient de poussée CT est connu:
+ρ 2 π 2 2 γ
+inf cos
+2
+1 U R
+C T T = (4.48)
+Où FR2 est la surface balayée par le rotor et T est la poussée totale. En supposant que le
+rotor est chargé uniformément, les composantes normales et tangentielles de la force de
+surface exercée par le rotor sur l'écoulement sont :
+2
+inf 2
+f 1 C U n T = ρ , = 0 t f (4.49)
+48
+4.3 Modifications aérodynamiques
+4.3.1 Perte au bout de pales
+En raison de la différence de pression entre l'extrados et l'intrados, l'air tend à circuler autour
+de la pale créant ainsi des tourbillons près du moyeu et au bout de la pale. Ce phénomène se
+traduit par la diminution du couple et par conséquent la puissance fournie par le rotor.
+Un certain nombre de méthodes ont été proposées pour introduire l'effet des pertes au bout
+de pales. L'approche la plus simple à utiliser est celle développée par Prandtl. Selon cette
+approche, un facteur de correction, F, doit être présenté dans les équations discutées
+préalablement. Ce facteur de correction peut être décomposé en deux Ftip et Fhub, pour les
+deux extrémités de la pale :
+F = Ftip . Fhub (4.50)
+H	
+
+
+KL
+
+N NO
+P
+Q QR
+S = - -
+π 2 sinϕ
+2 cos exp
+r
+F ar B R r tip
+(4.51)
+H	
+
+
+KL 
+N NO
+P
+Q QR
+S -
+= -
+π 2 sinϕ
+2 cos exp
+hub
+hub
+hub R
+r R
+F ar B
+(4.52)
+Où Rhub est la distance entre l'axe de rotation et la fin de la partie cylindrique de la pale, r
+représente la position de l'élément de pale à l'étude.
+Il est à noter que F caractérise la réduction des forces à la position r le long de la pale et qu'il
+varie toujours entre 0 et 1.
+49
+4.3.2 Coefficient de traînée de la partie cylindrique
+Dans la région interne des pales où la section transversale est cylindrique, on suppose que
+le coefficient de portance est nul et que le coefficient de traînée varie en fonction du nombre
+de Reynolds et est calculé à partir de coefficient de traîné d'un cylindre infiniment long [22].
+C C C
+D
+C C C
+E
+F
++
+-
++
++ + -
+=
+-
+-
+-
+∞
+0.7
+0.14321 0.1234568.10 Re
+1.6 3.043448.10 Re
+1 3.64.10 Re
+0.0004Re
+Re
+1.96
+Re
+1.18 6.8
+6
+6
+0.89 7 2
+,
+d
+d
+d
+d
+d d
+cyl
+d C
+6
+5 6
+5 5
+5
+Re 4.5.10
+4.6.10 Re 4.5.10
+2.0.10 Re 4.6.10
+Re 2.0.10
+>
+< ≤
+< ≤
+≤
+d
+d
+d
+d
+Où
+μ
+ρ '
+Re
+U d rel
+d =
+(4.54)
+Le coefficient de traînée du cylindre infiniment long, cyl,∞
+d C , est alors corrigé pour un cylindre
+de longueur finie [22].
+, = (0.624 + 0.0077 ) cyl,∞
+d
+cyl AR
+d C AR C , AR ≥10 (4.55)
+Avec
+d'
+AR = R où d' et R sont respectivement le diamètre de la partie cylindrique et le
+rayon total de la pale.
+(4.53)
+CHAPITRE 5
+MÉTHODE NUMÉRIQUE
+Comme précédemment énoncé, la modélisation du rotor d'une éolienne dans un écoulement
+stationnaire et turbulent est complexe. Il est donc nécessaire d'utiliser un modèle numérique
+pour résoudre le système d'équations résultant. Le logiciel Fluent est, parmi les logiciels
+commerciaux, connu pour sa grande diversité et capacité. L'implantation d'un module éolien
+nécessite différents modèles de turbulences et de grandes variétés de cas d'études. D'où le
+choix de ce logiciel pour effectuer nos simulations.
+Le modèle de turbulence utilisé dans cette étude est celui proposé par Chen et Kim (1987).
+C'est une modification du modèle k-B standard, qui se reflète dans l'introduction d'un terme
+source supplémentaire dans l'équation de transport de B.
+5.1 Description générale de la méthode
+Le système d'équations présenté précédemment sera résolu par la méthode numérique de
+calculs aux volumes finis. C'est la méthode sur laquelle est basé le logiciel FLUENT
+(version 6.3) utilisant le schéma standard comme schéma d'interpolation pour la pression et
+la convection. Le but de cette méthode consiste à intégrer les équations différentielles sur
+chaque volume de contrôle puis de les convertir en équation algébriques.
+En employant cette approche, FLUENT résoudra les équations algébriques en suivant les
+étapes suivantes :
+• division du domaine en volumes de contrôle discrets avec l'utilisation d'un maillage;
+51
+• intégration des équations fondamentales sur chaque volume de contrôle pour
+construire des équations algébriques pour les variables dépendantes comme la vitesse,
+la pression, la température, et des grandeurs scalaires conservées;
+• linéarisation des équations discrétisées et la solution du système d'équation résultant
+pour rapporter des valeurs mises à jour des variables dépendantes.
+Ces étapes sont répétées jusqu'à ce que les critères de convergence soient remplis.
+5.1 Choix du maillage et domaine de calcul
+Bien évidement le nombre de mailles affecte la précision des résultats ainsi que la rapidité
+des calculs. Le but de cette partie est de modéliser l'écoulement autour de la nacelle en
+créant un maillage dont la priorité est de minimiser le temps de calcul tout en obtenant des
+résultats cohérents.
+Pour obtenir de bonnes simulations, il est important que le maillage soit resserré dans toutes
+les zones où les variables présentent de forts gradients, en particulier au voisinage des parois.
+En effet, il faut s'assurer que les propriétés de l'écoulement turbulent sont bien représentées
+et résolues lors des simulations numériques.
+Ainsi, pour modéliser adéquatement l'écoulement près de la paroi avec le modèle k- B
+standard et la méthode de la loi de la paroi (law-of-the wall), il est impératif de choisir une
+première maille pour laquelle y+ doit être inférieur à 60. L'estimation de la taille de la
+première maille se fait par la relation :
+ν
+u y p
+y + = * (5.1)
+52
+Dans cette expression, y+ est la distance adimensionnée du point P à la paroi, u* est la vitesse
+de friction, donnée par :
+ρ
+τ u = w * (5.2)
+Où Gw est la contrainte de cisaillement au mur :
+=0 ∂
+= ∂
+y
+w y
+τ μ u (5.3)
+Figure 5.1 Voisinage immédiat de la paroi.
+Dans de nombreux cas, une mauvaise résolution dans les régions critiques peut
+considérablement modifier les caractéristiques d'écoulement, d'où l'importance de considérer
+certains aspects notamment :
+• les mailles doivent demeurées rectangulaires et avoir un ratio longueur sur largeur
+inférieur à 10;
+• les zones près du rotor et du système de fixation de l'anémomètre doivent être raffinée
+le plus possible;
+• la transition de grosseur des mailles doit être régulière entre les différentes zones.
+53
+La figure 5.2 montre une section du domaine. Ce domaine est discrétisée en des mailles
+non structurées composées de 334808 éléments rectangulaires. Comme présenté sur la figure
+5.2, des noeuds sont distribués le long de la surface du disque actuateur. Des mailles
+uniformes dans les directions longitudinales et transversales sont utilisées pour couvrir le
+domaine physique entier. Les dimensions du domaine informatique ont été fixées à 5D en
+amont et 3D en aval de l'éolienne (D étant le diamètre de turbine) et 10 D dans la direction
+radiale, respectivement.
+Une étude de maillage a montré que les dimensions choisies étaient suffisantes pour que les
+effets des conditions aux frontières soient négligeables (voir section 6.1.2).
+Figure 5.2 Topologie du maillage près de la nacelle.
+54
+5.3 Modélisation du rotor
+La modélisation du rotor a été mise en application en utilisant l'option ``fan model'' de
+FLUENT, qui détermine l'impact d'un ventilateur avec des caractéristiques connues. Le
+modèle tient compte de l'introduction d'un saut de pression constant ou variable le long de la
+pale.
+La fonction utilisateur sera donc utilisée pour calculer le saut de pression Δp le long de la
+pale à l'aide du coefficient de poussée CT et la vitesse normale un en chaque maille.
+2
+2
+1
+T n Δp = ρC u (5.4)
+5.4 Conditions aux limites
+Les conditions frontières spécifient l'écoulement et les variables physiques du modèle
+étudié. Elles sont donc un élément critique dans les simulations et il est important qu'elles
+soient spécifiées convenablement.
+Entrée
+L'entrée du domaine est située à une distance radiale et axiale loin de la turbine. À cette
+frontière, on assume que :
+• l'écoulement est non- perturbé;
+• seule la composante axiale de la vitesse est non-nulle;
+• les propriétés de k-B sont uniformes et dépendent de l'intensité de turbulence IT.
+55
+wt KH
+u3
+ε = * (5.5)
+Avec
+5.48 *
+u = k , K est la constante de Von Karman et Hwt et la hauteur du moyeu de
+l'éolienne
+2 2
+2
+3
+∞ k = IT V (5.6)
+Sortie
+La frontière de sortie est située à 3D en aval de la turbine. Ici les propriétés de l'écoulement
+(vitesse et k-B) sont calculées en utilisant la condition de la sortie proposée par Patankar qui
+transforme les équations elliptiques en équations paraboliques [23]. Cette hypothèse est
+implantée dans FLUENT par l'option des conditions aux limites '' Outflow''.
+Axe
+C'est l'axe de symétrie qui, dans ce cas d'étude, coïncide avec l'axe de l'éolienne.
+Nacelle
+La présence de la nacelle dans le domaine de calcul est représentée par la région du mur, où
+les propriétés des turbulences et des champs de vitesse sont prescrits en utilisant la méthode
+de la loi de la paroi.
+Rotor
+Comme mentionné dans la section 3, la modélisation numérique du rotor nécessite un
+traitement particulier pour bien représenter les forces aérodynamiques.
+56
+La modélisation du rotor a été mis en oeuvre en utilisant la fonction 'Fun model' dans
+FLUENT, qui détermine l'impact d'un ventilateur avec des caractéristiques connues. Le
+modèle permet l'introduction d'un saut de pression au niveau du rotor.
+CHAPITRE 6
+RÉSULTATS ET DISCUSSIONS
+Comme mentionné précédemment, ce mémoire traite la technique de l'anémométrie à la
+nacelle dans le sillage. Cette technique se base sur une relation liant la vitesse lue par
+l'anémomètre à celle du vent non perturbé (UnacCUinf). Les manufacturiers fournissent une
+corrélation générale pour une éolienne isolée. Les sections suivantes permettent de savoir si
+cette méthode est valide pour toutes les éoliennes du parc qui opèrent souvent dans le sillage
+les unes des autres.
+Les résultats présentés dans ce chapitre ont été réalisés d'abord pour une éolienne isolée,
+ensuite pour deux éoliennes une dans le sillage de l'autre. L'influence du sol est négligée
+afin de se concentrer sur la validation de la représentation des effets du rotor sur
+l'écoulement.
+6.1 Éolienne isolée
+Les calculs ont été entrepris pour une intensité de turbulence (IT) de 13%. Comme l'illustre
+la figure 6.1, cette éolienne est équipée d'un générateur, du système de refroidissement (c'està-
+dire un radiateur) situé en-dessous et légèrement en amont de l'anémomètre. Le radiateur
+peut donc influencer l'écoulement autour de l'anémomètre. Toutefois, en raison de la forme
+géométrique complexe du radiateur, il serait très difficile de produire une bonne simulation
+de la présence du radiateur dans l'écoulement. Par conséquent, pour évaluer correctement
+l'impact du radiateur, trois situations différentes ont été étudiées:
+• La présence d'un radiateur a été simulée avec un saut de pression Δp. Une valeur
+approximative de Δp peut être obtenue à l'aide de la relation suivante:
+58
+Δp = HKun
+2 (6.1)
+Où un est la vitesse normale à la surface perméable, K est le coefficient de la chute de
+pression du radiateur caractérisant la forme géométrique complexe du radiateur qui est
+supposé constant sous diverses conditions de vent.
+• Configuration fermée: le radiateur a été remplacé par un mur de la région (i.e.
+KRS).
+• Configuration ouverte: les effets du radiateur ont été complètement ignorée (i.e.
+K =0).
+Figure 6.1 Domaine de calcul.
+59
+6.1.1 Corrélations UnacCUinf expérimentale
+Le filtrage des données a été effectué par le centre de recherche ECN. Seules les mesures
+moyennées sont envoyés pour la réalisation de cette étude.
+Les figures 6.2 et 6.3 représentent respectivement les corrélations d'une éolienne à l'arrêt et
+en marche. Il faut noter que cette corrélation est obtenue seulement lorsque l'éolienne est en
+fonction et hors sillage.
+0 5 10 15 20 25
+0
+5
+10
+15
+20
+25
+Vitesse à la nacelle (m/s)
+Vitesse infinie (m/s)
+Mesures
+Linéaire
+Figure 6.2 Résultats expérimentaux: éolienne isolée, rotor à l'arrêt.
+60
+0 5 10 15 20 25
+0
+5
+10
+15
+20
+25
+Vitesse à la nacelle (m/s)
+Vitesse infinie (m/s)
+Mesures
+Linéaire
+Figure 6.3 Résultats expérimentaux: éolienne isolée, rotor en marche.
+Sur la figure 6.3, on remarque une légère décélération de l'écoulement autour de la nacelle
+pour les vitesses de vent supérieures à 7 m/s. Ceci est expliqué par la présence du rotor en
+rotation.
+Les équations de la corrélation générale sont les suivantes :
+Uinf = 1.01Unac +0.28 (résultats expérimentaux, éolienne (6.2)
+isolée, rotor à l'arrêt)
+Uinf = 1.1Unac -0.47 (résultats expérimentaux, éolienne (6.3)
+isolée, rotor en marche)
+61
+6.1.2 Influence du maillage
+Comme mentionné dans le chapitre précédent, plusieurs maillages ont été essayés avant d'en
+choisir un.
+0 5 10 15 20 25
+0
+5
+10
+15
+20
+25
+Unac (m/s)
+Uinf (m/s)
+Mesures
+A
+B
+C
+Figure 6.4 Comparaison des différents maillages: éolienne isolée,
+rotor en arrêt, KBC, modèle k-D standard.
+La figure 6.4 illustre des corrélations Unac C Uinf effectuées avec trois différents maillages.
+On remarque une importante différence entre le maillage C avec 167251 mailles et les
+mesures expérimentales. Les maillages A et B donnent tous les deux des résultats
+acceptables. Toutefois, pour minimiser le temps de calcul, seul le maillage A a été retenu
+pour la réalisation des simulations avec 334808 mailles et y+=29 comparé au maillage B qui
+compte 1339232 soit 4 fois le nombre de mailles du maillage A.
+62
+6.1.3 Configuration ouverte et fermée
+La figure 6.5 présente les corrélations UnacCUinf d'une éolienne isolée pour les cas du rotor
+à l'arrêt et rotor en marche. Les résultats des différentes simulations sont comparés avec les
+données expérimentales. Comme prévu, les résultats de la configuration ouverte sont
+systématiquement plus élevés que les données expérimentales pour les deux cas (rotor en
+marche et rotor en arrêt), tandis que les résultats de la configuration fermée sont plus
+proches des données expérimentales pour le cas du rotor à l'arrêt contrairement au cas du
+rotor en marche ou on remarque une accélération de la vitesse à la nacelle.
+63
+0 5 10 15 20 25
+0
+5
+10
+15
+20
+25
+Unac (m/s)
+Uinf (m/s)
+Mesures
+Fermée
+Ouverte
+0 5 10 15 20 25
+0
+5
+10
+15
+20
+25
+Unac (m/s)
+Uinf (m/s)
+Mesures
+Fermée
+Ouverte
+Figure 6.5 Comparaison entre les résultats des simulations des
+configurations ouverte et fermée et les données expérimentales :
+éolienne isolée, modèle k-B standard (a) rotor à l'arrêt (b) rotor en marche.
+(b)
+(a)
+64
+6.1.4 Configuration avec radiateur
+6.1.4.1 Ajustement de la valeur de K avec le modèle k-B standard
+Différentes simulations ont été effectuées afin de trouver la meilleure valeur du coefficient
+K pour les cas du rotor à l'arrêt et rotor en opération.
+Figure 6.6 L'écoulement autour de la nacelle pourun rotor en arrêt,
+modèle k-D standard, K=25.
+La figure 6.6 montre les résultats de simulation du champ de vitesse autour de la nacelle
+pour la vitesse du vent Uinf= 15m/s. Étant donné que l'écoulement autour de la nacelle
+montre quasiment le même comportement pour les trois configurations de radiateur, la
+figure 6.6 montre une seule configuration (la simulation avec radiateur pour un K=25). Dans
+ce cas, la région d'accélération est significative près du radiateur.
+65
+0 5 10 15 20 25
+0
+5
+10
+15
+20
+25
+Unac (m/s)
+Uinf (m/s)
+Mesures
+Fermée
+Ouverte
+K=21
+K=25
+K=30
+0 5 10 15 20 25
+0
+5
+10
+15
+20
+25
+Unac (m/s)
+Uinf (m/s)
+Mesures
+Fermée
+Ouverte
+K=21
+K=25
+K=30
+Figure 6.7 Comparaison entre les résultats des simulations et les
+données expérimentales pour différentes valeurs de K : éolienne isolée,
+modèle k-D standard (a) rotor à l'arrêt (b) rotor en marche.
+(a)
+(b)
+66
+Comme le montre la figure 6.7, une bonne corrélation avec les mesures est obtenue pour
+K=25, qui mène à la relation Unac C Uinf décrivant de manière adéquate les données
+expérimentales.
+Uinf = 1.0 Unac -0.29 (éolienne isolée, K=25 modèle k-B standard, (6.4)
+rotor à l'arrêt)
+Uinf = 1.2 Unac -0.96 (éolienne isolée K=25, modèle k-B standard, (6.5)
+rotor en marche)
+6.1.4.2 Ajustement de la valeur de K avec le modèle proposé
+La figure 6.8 montre différents résultats obtenues avec différentes valeur de K pour une
+éolienne isolée dans le cas du rotor en marche ainsi qu' à l'arrêt. Il est bien évident sur les
+figures qu'une valeur de K=30 donne des résultats proches des données mesurées sur le site
+dans les deux cas (rotor à l'arrêt et rotor en marche).
+Uinf = 1.06 Unac -0.33 (éolienne isolée, K=30 modèle proposé, (6.6)
+rotor à l'arrêt)
+Uinf = 1.063 Unac -0.22 (éolienne isolée K=30, modèle proposé, (6.7)
+rotor en marche)
+Tous les résultats présentés ci-après sont obtenus avec des simulations avec une valeur de
+K=30 et le modèle proposé.
+67
+0 5 10 15 20 25
+0
+5
+10
+15
+20
+25
+Unac (m/s)
+Uinf (m/s)
+Mesures
+k=25
+k=30
+k=35
+0 5 10 15 20 25
+0
+5
+10
+15
+20
+25
+Unac (m/s)
+Uinf (m/s)
+Mesures
+k=25
+k=30
+k=35
+Figure 6.8 Comparaison entre les résultats des simulations et les
+mesures expérimentales avec le modèle proposé et pour différentes
+valeurs de K: (a) rotor à l'arrêt (b) rotor en marche.
+(b)
+(a)
+68
+6.2 Nacelle opérant dans le sillage
+Pour étudier les effet du sillage sur la relation Unac C Uinf , les nacelles ont été placées à
+trois distances différentes l'une de l'autre (3D, 4D et 5D) et l'écoulement du vent a été
+analysé pour chaque emplacement. Aussi, différentes positions de l'anémomètre sur la
+nacelle ont été étudiées afin de satisfaire les recommandations de l'IEC [8].
+Finalement, le modèle proposé dans le chapitre 6 sera étudié et comparé avec le modèle k-B
+standard.
+6.2.1 Corrélation UnacCUinf expérimentale
+Sur la figure 6.9, on remarque une décélération importante de l'écoulement autour de la
+nacelle. Ceci est expliqué par la présence de l'éolienne dans le sillage. En effet, dans le
+sillage la vitesse moyenne du vent est diminuée puisque une partie de l'énergie cinétique du
+vent non perturbé est captée par l'éolienne en amont.
+L'équation de cette corrélation est la suivante
+Uinf = 1.1 Unac +2 (résultats expérimentaux, éolienne en (6.8)
+sillage, rotor en marche)
+69
+0 5 10 15 20 25
+0
+5
+10
+15
+20
+25
+Unac (m/s)
+Uinf (m/s)
+Mesures
+linéaire
+Figure 6.9 Résultats expérimentaux : éolienne en sillage,
+rotor en marche.
+70
+6.2.2 Comparaison des résultats de simulation du modèle k-B standard pour
+K=25 avec ceux du modèle proposé pour K=30
+Les résultats présentés dans cette partie sont destinés à démontrer l'effet du modèle proposé
+par rapport au modèle k-B standard sur le comportement de la vitesse au niveau de
+l'anémomètre.
+Pour évaluer l'impact du modèle proposé, les profils de vitesse ont été analysés en deux
+emplacements différents soit à la position de l'anémomètre et à une distance de 2 D en
+amont de chaque éolienne pour une vitesse de vent Uinf=15m/s.
+Figure 6.10 Distribution de la vitesse dans le sillage de deux
+éoliennes à une distance de 2D en amont de chaque éolienne,
+K=25, Uinf=15m/s.
+71
+0.5 0.6 0.7 0.8 0.9 1 1.1 1.2
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+1.4
+1.6
+1.8
+U/Uinf
+r (m )
+anemo1 k-epsilon
+Nacelle amont modèle proposé
+Nacelle aval k-epsilon standard
+Nacelle aval modèle proposé
+Position
+anémomètre
+1.2
+Nacelle amont k-epsilon standard
+16
+96
+112
+128
+144
+64
+48
+32
+80
+1.3
+0.5 0.6 0.7 0.8 0.9 1 1.1 1.2 1.3 1.4
+0
+0.02
+0.04
+0.06
+0.08
+0.1
+0.12
+0.14
+0.16
+0.18
+0.2
+U/Uinf
+r (m)
+anemo1 k-epsilon
+Nacelle amont modèle proposé
+Nacelle aval k-epsilon standard
+Nacelle aval modèle proposé
+Position
+anémomètre
+Nacelle amont k-epsilon standard
+1.6
+8
+9.6
+11.2
+12.8
+14.4
+16
+6.4
+4.8
+3.2
+Figure 6.11 (a) Distribution de la vitesse dans le sillage de deux
+éoliennes à 4D à la position de l'anémomètre pour chaque éolienne,
+Uinf=15m/s (b) Agrandissement de la zone proche de l'anémomètre.
+(b)
+(a)
+72
+Les Figures 6.10 et 6.11 montrent la distribution des vitesses pour les deux éoliennes. Les
+différences de résultats entre les deux modèles sont produites par l'introduction de
+l'expression supplémentaire à l'équation du transport approximative du taux de dissipation
+d'énergie de turbulence.
+Le modèle proposé a été appliqué aux deux éoliennes à des vitesses de vent, 5, 10, 15 et
+20m/s. (voir les figures 6.12 et 6.13)
+0 5 10 15 20 25
+0
+5
+10
+15
+20
+25
+Unac (m/s)
+Uinf (m/s)
+Mesures
+modèle k-epsilon
+modèle proposé
+Figure 6.12 Comparaison des deux modèles avec les données
+expérimentales pour la nacelle amont,rotor en marche.
+73
+0 5 10 15 20 25
+0
+5
+10
+15
+20
+25
+Unac (m/s)
+Uinf (m/s)
+Mesures
+modèle k-epsilon
+modèle proposé
+Figure 6.13 Comparaison des deux modéles avec les données
+expérimentales pour la nacelle aval.
+Les figures 6.12 et 6.13 représentent la comparaison des résultats des simulations avec les
+mesures. Pour la nacelle amont (fig. 6.13), les deux modèles utilisés donnent presque les
+mêmes résultats contrairement aux résultats présentés dans la figure 6.12 qui montrent la
+capacité du modèle proposé à bien présenter l'écoulement autour de la turbine dans le
+sillage.
+Les résultats de ces analyses suscitent le réajustement de la valeur du coefficient de la chute
+de pression du radiateur K avec le modèle proposé.
+74
+6.2.2.2 Influence de la distance entre les éoliennes
+Comme le montre la figure 6.14 (figure I.1, Annexe I pour le cas du modèle k-B standard), la
+comparaison des simulations pour les cas 3, 4 et 5D démontre que la distance entre les
+éoliennes a un impact significatif sur les résultats obtenus. En effet, une éolienne installée à
+une distance de 3D derrière une autre est très influencée par le sillage de cette dernière.
+Toutefois, comme avec le modèle k-B standard, les résultats obtenus avec le modèle proposé
+montre que plus la distance entre les éoliennes est grande (5D) plus les résultats s'approchent
+des mesures dans le sillage.
+0 5 10 15 20 25
+0
+5
+10
+15
+20
+25
+Unac (m/s)
+Uinf (m/s)
+Mesures
+3D
+4D
+5D
+Figure 6.14 Résultats des différentes simulations obtenues pour
+une éolienne opérant dans le sillage placée à 3,4 et 5D, avec
+le modèle proposé et pour K=30.
+75
+11 11.8 12.6 13.4 14.2 15 15.816
+20
+40
+60
+80
+100
+120
+140
+U/Uinf
+r (m)
+Nacelle amont
+Nacelle aval à 5D
+Nacelle aval à 4D
+Nacelle aval à 3D
+0.75 0.8 0.85 0.9 0.95 1 1.05 1.1
+Figure 6.15 Profil de la vitesse à la position axiale de l'anémomètre
+pour différents emplacements de l'éolienne aval, modèle proposé,
+Uinf=15 m/s, K=30.
+La figure 6.15 donne un bon exemple sur l'impact de la distance entre les éoliennes sur la
+distribution verticale de la vitesse. En effet, pour la vitesse de vent Uinf=15 m/s, on constate
+que plus les éoliennes sont proches l'une de l'autre plus les effets du sillage, comparé au cas
+isolé, sont remarquables.
+Les données des installations expérimentales sur le site d'ECN concernant la distance entre
+les éoliennes est 3.8 fois le diamètre dans le sens du vent dominant. Toutefois, pour des
+raisons de simplification, la distance de 4 fois le diamètre de l'éolienne a été choisie pour le
+reste des simulations.
+76
+6.2.2.3 Influence de l'emplacement de l'anémomètre
+La disposition appropriée de l'anémomètre sur la nacelle est importante pour les tests précis
+d'éoliennes. Il doit être situé de façon à minimiser les distorsions de l'écoulement, en
+particulier celle due à la rotation du rotor.
+Pour étudier l'influence de l'emplacement de l'anémomètre sur les résultats de simulations,
+six différentes positions sur la nacelle on été choisies selon le projet de norme IEC 61400-
+12-2 pour être comparées avec la position actuelle. Pour chaque position, l'écoulement du
+vent a été analysé sur la ligne verticale et horizontale afin de choisir celle qui donne les
+meilleurs résultats.
+Figure 6.16 L'emplacement de l'anémomètre sur la nacelle par
+apport à la zone de recommandation de l'IEC.
+77
+Tableau 6.1 Coordonnées de l'anémomètre sur la nacelle
+ainsi que celles des positions choisies
+Position Unité A B C D E Position actuelle de
+l'anémomètre (Pan)
+x M 9.7 9.9 10.1 10.1 10.1 10.1
+r M 2.25 2.25 3 3.5 4 2.25
+La figure 6.16 illustre les cinq emplacements de l'anémomètre situés à des distances
+différentes. Les coordonnées de ces positions sont présentées dans le Tableau 6.1. Parmi les
+caractéristiques des points sélectionnés sont les suivants:
+• positions A et B : se trouvent à la même hauteur que l'emplacement actuel de
+l'anémomètre. Les mesures en ces points sont utilisées pour étudier l'effet du
+déplacement axial ;
+• positions C, D et E: Ces points sont tous dans la zone de recommandation de la norme
+IEC 61400-12-2. Les mesures en ces trois points sont utilisées pour vérifier la validité
+de cette région ainsi que l'effet du déplacement radial.
+Les figures 6.17 et 6.18 représente la variation de la vitesse en fonction de la position de
+l'anémomètre horizontalement (fig. 6.17) et verticalement (fig.6.18). Pour le cas d'étude
+utilisant le modèle k-B standard (voir les figures I.2, I.3 et I.4 Annexe I), les mêmes
+remarques ont été constatées.
+78
+Figure 6.17 Variation axiale de la vitesse à r=2.25m
+pour Uinf=15m/s, modèle proposé, K=30.
+Comme il est montré dans la figure 6.17, le rapport entre la vitesse du vent, u/Uinf, est
+presque constant sur la plage 8 m X 12 m. Il s'agit d'une bonne position radiale de la
+vitesse lue à l'anémomètre de la nacelle qui est peu sensible à la position axiale. Toutefois,
+selon la géométrie de la nacelle, l'espace axial disponible pour l'installation de
+l'anémomètre est entre 9.7m et 10.5m ce qui ne laisse pas beaucoup d'espace pour
+investiguer d'autres emplacements.
+La figure 6.18 montre le rapport u/Uinf à la position axiale de 10.1m à des positions radiales
+différentes. On remarque que le profil de vitesse a une valeur maximales à proximité de la
+position r=2.8m. La variation verticale de la position de l'anémomètre ne semble pas avoir
+une incidence sur la vitesse du vent à la nacelle à partir de r=7.2m. Aussi, on peut noter sur
+la figure 6.19 que les résultats des simulations obtenues avec la position actuelle et qui se
+trouve dans la zone de recommandation de l'IEC sont très proches des mesures.
+79
+Figure 6.18 Variation radiale de la vitesse à x=10.1m
+pour Uinf=15m/s, modèle proposé, K=30.
+0 5 10 15 20 25
+0
+5
+10
+15
+20
+25
+Unac (m/s)
+Uinf (m/s) Mesures
+Position actuelle
+Position D
+Position C
+Position E
+Figure 6.19 Comparaison des résultats obtenus aux différents
+emplacements de l'anémomètre, modèle proposé, K=30.
+80
+6.2.2.4 L'anémométrie à la nacelle
+Habituellement, chaque modèle d'éolienne a une corrélation permettant d'appliquer
+l'anémométrie à la nacelle. Celle de la machine Nordex N80 n'est pas fournie par Nordex.
+Toutefois, elle a été obtenue expérimentalement à l'ECN. Cette corrélation obtenue par les
+mesures sur le terrain pour une éolienne isolée sera utilisée pour comparer la corrélation
+obtenue dans le sillage.
+0 5 10 15 20 25
+0
+5
+10
+15
+20
+25
+Unac (m/s)
+Uinf (m/s)
+Nacelle amont
+Nacelle aval
+Figure 6.20 Comparaison entre les différentes corrélations,
+modèle proposé, K=30.
+A la figure 6.20, on remarque que les pentes de ces deux corrélations sont similaires, mais le
+décalage vertical entre les deux est considérable. En effet, pour une vitesse Uinf=10m/s, les
+vitesses à la nacelle associées sont respectivement de 9.5 m/s (nacelle amont) et de 8.25
+(nacelle aval). Cette différence de 1.25 m/s peut engendrer d'énormes conséquences sur les
+tests de performance de l'éolienne.
+81
+La même étude a été effectuée avec le model k-B standard (figure I.5, Annexe I). L'écart
+entre les deux corrélations est deux fois plus que celui du cas précédant soit 2.4 m/s
+Il est également intéressant d'étudier un autre paramètre que Uinf, celui des courbes de la
+vitesse moyenne au rotor, Urot , en fonction de Unac (figure 6.21).
+0 5 10 15 20 25
+0
+5
+10
+15
+20
+25
+Unac (m/s)
+Urot (m/s)
+nacelle amont
+nacelle aval
+Figure 6.21 Comparaison entre les corrélations Urotor C Unac
+des deux éoliennes, modèle proposé, K=30.
+La figure 6.21 montre une concordance quasi parfaite des deux courbes tout comme pour le
+cas avec k-B standard (voir figure I.6, Annexe I). Ceci pourrait être expliqué par le fait que le
+rotor a le même effet sur l'écoulement autour de la nacelle peu importe si la machine opère
+dans le sillage ou pas. D'où l'intérêt de l'utilisation de la vitesse moyenne au rotor au lieu de
+la vitesse du vent non perturbé pour l'étude de l'anémométrie à la nacelle.
+CONCLUSION
+Une méthode numérique pour analyser l'anémométrie à la nacelle a été présentée dans ce
+mémoire. Une bonne concordance entre les mesures et les résultats des simulations a été
+constatée pour le cas de l'éolienne isolée. Cependant, Il a été démontré que les simulations
+en présence d'un rotor en amont sont fortement influencées par celui-ci.
+Aussi, Il a été démontré que l'emplacement des anémomètres sur la nacelle est un critère à
+ne pas négliger dans l'étude de l'anémométrie à la nacelle. En effet, quand un anémomètre
+est bien placé sur la nacelle, les valeurs ne sont pas soumises à la variation spatiale élevée ni
+influencé par les fluctuations de la turbulence atmosphérique.
+Ensuite, pour améliorer la précision des prédictions d'écoulement autour des rotors et des
+nacelles, une analyse basée sur la comparaison entre le modèle k-B et celui proposé a été
+effectuée. Le modèle proposé a donné des meilleurs résultats que celui de k-B standard. Ces
+résultats sont principalement attribuables au terme de transfert d'énergie introduit dans
+l'équation de taux dissipation, ce qui supprime le phénomène de dépassement de l'énergie
+cinétique turbulente.
+Enfin, un nouveau paramètre a été élaboré qui est la vitesse moyenne au rotor. Une bonne
+concordance entre les résultats des deux éoliennes a été notée.
+RECOMMANDATIONS
+Pour une application réussie de la méthode de l'anémométrie à la nacelle dans le sillage,
+certaines exigences doivent être remplies :
+• La position de l'anémomètre sur la nacelle doit être choisie avec prudence. Il faut
+supposer que la position de l'anémomètre choisie par les manufacturiers n'est pas
+toujours idéale et il faut explorer d'autres meilleurs emplacements.
+• La position de l'anémomètre doit être identique sur la nacelle utilisée sur le site que
+celle pour les simulations pour pouvoir comparer les mesures avec les simulations.
+• L'application du modèle proposé à l'écoulement autour d'une éolienne dans le sillage
+sur un terrain complexe donnera une meilleure évaluation de la possibilité de
+généraliser ce modèle de turbulence.
+• Avoir comme donnée supplémentaire la mesure réelle de la vitesse moyenne au rotor
+pour pouvoir valider la méthode utilisant la corrélation UrotC Unac au lieu de
+UinfCUnac.
+ANNEXE I
+RÉSULTATS DES SIMULATIONS AVEC LE MODÈLE
+k-B STANDARD POUR K=25
+0 5 10 15 20 25
+0
+5
+10
+15
+20
+25
+Unac (m/s)
+Uinf (m/s)
+Mesures
+3D
+4D
+5D
+Figure I.1 Résultats des différentes simulations obtenues pour
+une éolienne opérant dans le sillage placée à 3,4 et 5D, K=25,
+modèle k-D standard.
+85
+Figure I.2 Variation axiale de la vitesse à r= 2.25m
+pour Uinf=15m/s, modèle k-D standard, K=25.
+Figure I.3 Variation radiale de la vitesse à x=10.1m
+pour Uinf=15m/s, modèle k-B standard, K=25.
+86
+0 5 10 15 20 25
+0
+5
+10
+15
+20
+25
+Unac (m/s)
+Uinf (m/s)
+Mesures
+Position D
+Position C
+Position E
+Position actuelle
+Figure I.4 Comparaison des résultats obtenus aux différents emplacements
+de l'anémomètre, modèle k-B standard, rotor en marche.
+0 5 10 15 20 25
+0
+5
+10
+15
+20
+25
+Unac (m/s)
+Uinf (m/s)
+Nacelle amont
+Nacelle aval
+Figure I.5 Comparaison entre les différentes corrélations des
+résultats obtenus, K=25, modèle k-B standard, rotor en marche.
+87
+0 5 10 15 20 25
+0
+5
+10
+15
+20
+25
+Unac (m/s)
+Urot (m/s)
+nacelle amont
+nacelle aval
+Figure I.6 Comparaison entre les corrélations Urot C Unac des
+deux éoliennes, K=25, modèle k-B standard, rotor en marche.
+ANNEXE II
+FICHE TECHNIQUE DE NORDEX N80
+ANNEXE III
+DESSIN TECHNIQUE DE LA N80 (2.5MW)
+ANNEXE IV
+DISPOSITION DES ANEMOMETRES SUR LA NACELLE DE N80
+BIBLIOGRAPHIE
+[1] Retscreen International. Site de ressources naturelles Canada. En ligne. <http://www.
+retscreen.net/>.consulté le 12 février 2009.
+[2] The Wind Power. En ligne. http://www.thewindpower.net/ consulté le 12 février 2009
+[3] Wind Power Devleoppement. En ligne. http://www.telosnet.com/wind/ consulté le 30
+mars 2009
+[4] M. Sthyajith. 2006. Wind Energy: Fundamentals, Resource Analysis and Economic.
+[5] W.A. Timmer, Van Roy RPJOM .1993. Wind Tunnel results for 25% thick wind turbine
+blade airfoil. Proceedings of EWEC'93, pp 416-419.
+[6] Dahlks. 1999. Experimental verifications of the new Riso-A1 airfoil family for wind
+turbine. In: Proceeding of EWEC'99, pp 85-88
+[7] IEC61400-12Ed1. 1998. Power performance measurements of grid connected wind
+turbine. Technical Report 61400-12,IEC.
+[8] IEC 61400-12-2. 2007. Verification of power performance of individual wind turbine.
+[9] B. Smith, H. Link, G. Randal and T. Mc Coy. June 2002. Applicability of Nacelle
+Anemometer Measurements for Use in Turbine Power Performance Tests. Conference
+Paper.
+[10] R. Hunter, T.F. Pedersen, P. Dunbabin, I. Antoniou, S. Frandsen, H. Klug, A. Albers,
+and W.K. Lee. 2001. Task 1: Measurement method to verify wind turbine performance
+characteristics. Technical Report Risø-R-1209(EN), Risø, Danemark.
+[11] R. Mikkelsen. 2003. Actuator Disc Methods Applied to Wind Turbine.
+[12] RE Froude. 1889. On the part played in propulsion by difference in pressure.
+Transaction of the institute of Naval Architects, pp 390-423
+[13] H. Glauert. 1935. Airplane propellers. Aerodynamic Theory, Division L, 4(1) :169-360.
+[14] H.A. Madsen. 1992. The actuator cylinder a flow model for vertical axis wind turbines.
+92
+[15] A. Crespo, F. Manuel, D. Moreno, E. Fraga, and J. Hernandez. 1985. Numerical
+analysis of wind turbine wakes.
+[16] W.P.Jones and B.E. Launder. 1972. The prediction of laminarization with a twoequation
+model of turbulence. Int. J. Heat Mass Trans., 15:301-314.
+[17] BE. Launder and DB. Spalding. 1974. The numerical computation of turbulent flows,
+Computer Methods in Applied Mechanics and Engineering, 3(2) pp 269-289.
+[18] Y.S. Chen, S.W. Kim. 1987. Computation of turbulent flow using an extended
+turbulence closure model. NASA Contractor Report, NASA CR-179204.
+[19] A. El kasmi and C. Masson. 2008. An extended k-B model for turbulent flow through
+Horizontal - axis wind turbines, Journal of Wind Engineering and Industrial
+Aerodynamics 96 103-122.
+[20] I.Ammara. 1998. Modélisation aérodynamique tridimensionnelle d'un parc d'éoliennes
+à axe horizontal. Master's thesis, École Polytechnique de Montréale.
+[21] C. Alinot.2002. Analyse aérodynamique des parcs éoliens immergés dans une couche
+limite terrestre ayant différentes conditions de stabilité thermique. Thèse de doctorat
+[22] A. Smaïli and C. Masson. 2004. On the rotor effects upon nacelle anemometry for
+wind turbines. Wind Engineering, 28(6) :695-714.
+[23] S.V. Patankar. 1980. Numerical heat transfer and fluid flow.

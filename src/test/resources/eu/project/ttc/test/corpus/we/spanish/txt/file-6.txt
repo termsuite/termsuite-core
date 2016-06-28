@@ -1,0 +1,140 @@
+Por
+
+Conrado Moreno Figueredo *
+
+
+Análisis de las partes que componen
+
+los pequeños aerogeneradores
+
+y sus particularidades .
+
+Fig . 1 . Aerogenerador instalado en la Estación Ecológica de cayo Sabinal , en Ciego de Ávila .
+
+Si los sistemas fotovoltaicos , por lo general , son muy parecidos unos con otros , o son prácticamente iguales , los pequeños aerogeneradores se caracterizan por su gran variedad , con diferentes formas y tamaños . Sin embargo , en los últimos tiempos han ido cambiando hacia una configuración común . Si bien pueden parecer distintos , en realidad son muy similares .
+
+
+Muchos pequeños aerogeneradores trabajan aislados de la red ( Fig . 1 ) . Antes que todo , hay que recordar que la tecnología de los aerogeneradores que trabajan aisladamente es diferente a la tecnología que se emplea para las turbinas eólicas conectadas a la red .
+
+Las diferencias entre ambas tecnologías afectan todas las partes o subsistemas .
+
+
+Los pequeños aerogeneradores no conectados a la red se emplazan ahí donde existe una cierta necesidad de energía eléctrica y la demanda que se debe satisfacer está dada por la aplicación para la cual ha sido seleccionado el aerogenerador .
+
+
+Para los aerogeneradores conectados a la red se selecciona el mejor emplazamiento factible y no hay limitación en la energía generada , excepto alguna limitación de potencia impuesta por la misma red eléctrica .
+
+
+En un trabajo realizado en el 2006 , en el Nordic Folkecenter for Renewable Energy , de Dinamarca , se llegó a la conclusión de que hay 218 modelos de pequeños aerogeneradores presentes en el mercado , producidos por 88 fabricantes de 27 países . Según las potencias nominales de estas pequeñas turbinas eólicas , los modelos existentes son :
+De los pequeños aerogeneradores analizados en dicho estudio , el aerogenerador de mayor potencia es de
+
+40 000 W y 12 m de diámetro . El más pequeño es de 5 W y 0 , 53 m de diámetro . Los más grandes también se ofertan para ser conectados a la red .
+
+La mayoría de los pequeños aerogeneradores presentes en el mercado son de eje horizontal de cara al viento o a barlovento ( reciben el viento de frente ) y poseen los siguientes subsistemas : rotor , generador eléctrico , sistema de frenado , sistema de orientación , sistema de regulación de velocidad de giro y torre soportante . También los hay de eje vertical , con sus ventajas y desventajas , y con varias formas , pero en mucha menor cuantía .
+Tabla 1 . Modelos de
+
+pequeños aerogeneradores ,
+
+según su potencia nominal
+
+Rotor
+
+El rotor es de tipo hélice . En la tecnología actual el rotor más frecuente es el de dos y tres palas , aunque los hay hasta de seis palas con soluciones intermedias de tres , cuatro y cinco palas . Es decir , la mayoría de los modelos existentes son tripalas y bipalas . La única ventaja de los rotores bipalas es que el precio inicial es más bajo , pero los tripalas trabajan más uniformemente y por consecuencia duran más . Mayores números de palas se corresponden con turbinas eólicas de potencia nominal menor de 250 W . La mayoría de los pequeños aerogeneradores emplean materiales compuestos para la fabricación de las palas . El material más usado es la fibra de vidrio reforzada con poliéster . Una última tendencia es el uso de la fibra de carbón . Algunas se fabrican de madera .
+Generador eléctrico
+
+La mayoría de los modelos existentes emplean conexión directa entre el rotor y el generador eléctrico , o sea , no poseen caja multiplicadora , aunque no están ausentes en la totalidad de los modelos ( Fig . 2 ) .
+
+Fig . 2 . La mayoría de los aerogeneradores pequeños
+
+emplean conexión directa entre el rotor y el generador eléctrico .
+La tendencia más generalizada en los pequeños aerogeneradores es a la utilización de generadores síncronos de imanes permanentes ( PMG ) en todo el rango de potencias existente , aunque los de menor potencia emplean casi exclusivamente generadores de imanes permanentes .
+
+
+Este generador es el más simple , eficiente y más robusto , y suelen tener 4 , 6 , 8 o 10 polos . La mayoría produce corriente alterna trifásica para hacer un mejor uso del espacio dentro de la carcasa del generador .
+
+
+Es común el uso del diseño invertido , en el cual la carcasa gira por fuera del estator unida al rotor .
+
+
+Existen modelos que emplean los generadores de inducción , presentes en los grandes aerogeneradores conectados a la red .
+Sistema de orientación
+
+Todos los aerogeneradores de eje horizontal tienen un cojinete alrededor del cual gira y se coloca de frente al viento . A la línea vertical que pasa por este cojinete se le conoce como eje de orientación . Debido a las pequeñas dimensiones , los pequeños aerogeneradores no tienen espacio para instalar los mecanismos de transmisión y los motores eléctricos que orientan al rotor de frente al viento , presentes en los grandes aerogeneradores . Por esto , el sistema de orientación de estos pequeños aerogeneradores es por veleta de cola , excepto en los modelos a sotavento ( o de espalda al viento ) , que no la necesitan ( Fig . 3 ) . Aparecen las veletas tanto de forma recta horizontal , como elevada con respecto al eje de rotación del rotor .
+
+Fig . 3 . El sistema de orientación de casi todos los aerogeneradores
+
+pequeños es por veleta de cola .
+La veleta se coloca al final de un brazo . Ésta captura el viento y aparece una fuerza lateral resultante sobre la veleta , que actúa sobre el brazo que hace girar la máquina sobre el eje de orientación para colocarla de frente al viento . El momento producido por la veleta es simplemente la fuerza lateral multiplicada por la longitud del brazo . La fuerza lateral depende del área de la veleta y de la velocidad del viento al cuadrado . Como regla simple se puede asumir que la longitud del brazo debe ser igual a la longitud de la pala del rotor . El área de la veleta no debe ser menor que 3 % del área de barrido del rotor ( Fig . 4 ) .
+
+Fig . 4 . El área de la veleta no debe ser menor
+
+que 3 % del área de barrido del rotor .
+Sistema de frenado
+
+Reconocer que se necesita un sistema que detenga el aerogenerador no es prudente .
+
+El aerogenerador debe estar diseñado para que trabaje todo el tiempo mientras el viento sea capaz de moverlo . Es suficiente con aceptar que el aerogenerador no trabajará en los períodos de baja velocidad ( calma ) . El problema es que puede aparecer una pérdida de balance del rotor o un fallo eléctrico y en esos casos se necesita una parada de emergencia . También cuando se necesita izar o desmontar la turbina de la torre en un día ventoso , el rotor debe ser detenido . Entonces , todo aerogenerador debe poseer un subsistema que asegure la parada del rotor . Este subsistema consiste en un mecanismo capaz de reducir la velocidad del rotor hasta detenerlo totalmente a una velocidad del viento máxima , que es especificada por el fabricante .
+
+
+Aunque la mayoría de los pequeños aerogeneradores emplean sistema de frenado , algunos fabricantes no lo incluyen , por lo que no debe resultar raro encontrar algún modelo sin sistema de frenado .
+
+
+Los sistemas de frenado más empleados son : mecánico , aerodinámico , pala a posición bandera , desorientación , cabeceo y cortocircuito de generador . La mayoría emplean doble sistema de frenado : el primero es de tipo mecánico o colocando la pala en posición bandera ( paralela al viento ) , y el segundo freno generalmente es de tipo mecánico , aerodinámico o por cortocircuito eléctrico del generador .
+Sistema de regulación de la velocidad de giro
+
+No resulta económico instalar un gran generador eléctrico que sea capaz de convertir en electricidad toda la potencia contenida en las altas velocidades del viento . Entonces , esta potencia que no puede ser absorbida provoca sobrevelocidades de giro que traen como resultado excesivas altas fuerzas centrífugas e indeseables ruidos y vibraciones ; en fin , condiciones de trabajo peligrosas . Si el rotor tiene un diámetro mayor que un metro , esta sobrevelocidad debe evitarse . Por lo general , todos los aerogeneradores , tanto grandes como pequeños , poseen un medio para controlar el rotor expuesto a fuertes vientos , es decir , todos poseen algún medio para prevenir que se supere la velocidad límite de rotación de diseño y lo mantenga dentro de los límites de diseño .
+
+
+Existen varias soluciones para controlar la velocidad de giro en los pequeños aerogeneradores .
+
+Regulación por desorientación : El rotor se pliega en el plano horizontal con respecto a la dirección del viento y el rotor gira hacia la cola . El flujo de viento a través del rotor se ve reducido por la disminución del área que enfrenta a éste al ponerse el rotor de lado .
+
+De esta forma la potencia que se extrae del viento es reducida . Éste es el sistema empleado en los molinos de viento multipalas , usados en el bombeo de agua .
+
+
+Regulación por cabeceo : El rotor se pliega igual al caso anterior , pero en el plano vertical , es decir , el rotor se mueve verticalmente . El efecto es el mismo ; el área de enfrentamiento del rotor se reduce en función de la magnitud de la velocidad del viento .
+
+
+En ambos casos , cuando la velocidad del viento aumenta , la fuerza de empuje axial sobre el rotor también aumenta ; cuando esta fuerza alcanza el valor que hace activar el mecanismo de desorientación , el aerogenerador se ubica en una posición no perpendicular al viento , lo que limita la velocidad de giro y la potencia entregada .
+
+En un caso el movimiento del rotor es horizontal y en el otro vertical ( por cabeceo ) .
+
+
+Regulación por cambio de paso : Es un sistema similar al empleado en los grandes aerogeneradores , pero con la diferencia de que los pequeños usan sistemas de cambio de paso pasivos , en los que la variación del ángulo de paso de las palas se produce mediante mecanismos centrífugos . El ajuste del ángulo de la pala cambia el ángulo de ataque y se reduce la fuerza de sustentación sobre la pala .
+Regulación por pérdida aerodinámica : Este sistema es igual al utilizado en los grandes aerogeneradores .
+
+
+Sin regulación : En este caso el aerogenerador se diseña para soportar las cargas que se produzcan en todas las condiciones de operación , incluidas las velocidades de giro que puedan presentarse en funcionamiento en vacío . Es común ver esta solución en los aerogeneradores más pequeños .
+
+Los sistemas más comunes son por cabeceo de la turbina eólica y por cambio de paso pasivo .
+Torre
+
+Las torres más encontradas son las autoportantes y las atirantadas o con tensores , las tubulares y las de celosía . Los tensores son generalmente indeseables por ser vulnerables a accidentes y daños ; además , no son agradables a la vista . Las torres autoportantes son las más preferidas , pero están sometidas a mayores tensiones , son más pesadas y más caras que las atirantadas . Finalmente , la más frecuente es la tubular con tensores . Estas deben ser capaces de resistir las fuerzas máximas que aparecen durante el izaje y las tormentas ( Fig . 5 ) .
+
+Fig . 5 . Las torres más frecuentes son las autoportantes y las atirantadas
+
+o con tensores ( A ) , las de celosía ( B ) y las tubulares ( C ) .
+Es común que el fabricante ofrezca diferentes tipos de torres , para su selección de acuerdo con las características de la instalación . La altura de la torre también es ofrecida en diferentes tamaños para que sea seleccionada adecuadamente .
+Aerogenerador típico
+
+Si se analizan todas las variantes de aerogeneradores que actualmente se ofrecen en el mercado , se llega a la conclusión de que el aerogenerador de pequeña potencia más común en el mercado es una máquina eólica con las características siguientes :
+• Rotor de tipo hélice de eje horizontal con tres palas de frente al viento ( a barlovento ) .
+
+• Unido directamente ( sin caja multiplicadora ) a un generador síncrono de imanes permanentes trifásico .
+
+• Se orienta con respecto a la dirección del viento por una veleta .
+
+• Regulación de la velocidad de giro por cabeceo o cambio de paso pasivo .
+
+• Dos sistemas de frenado , uno de ellos de tipo mecánico .
+
+• Podría tener cualquier tipo de torre soportante , con diferentes alturas .
+* Doctor en Ciencias Técnicas . Especialista en energía eólica del
+
+Centro de Estudio de Tecnologías Energéticas Renovables ( CETER ) .
+
+Miembro de la Junta Directiva de CUBASOLAR .
+
+tel . ( 537 ) 2663637 .
+
+e - mail :

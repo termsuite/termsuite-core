@@ -1,0 +1,765 @@
+High-Performance Wind Power Plant INNOVA WIND POWER 150KW
+
+Data Sheet
+
+Project:
+
+Research and Development
+
+Status: INTERNAL
+
+File: INNOVAWINDPOWER_150KW
+
+INNOVA W I N D
+
+Highly confidential!
+
+High-Performance Wind Power Plant NW22-150 HY
+Data Sheet
+
+REPOWERING
+
+2.22.2-00.01.00-011
+
+INNOVA WIND POWER
+Table of Contents 1 2 3 3.1 3.2 3.3 3.4 Main Technical Data Views of the Wind Power Plant Short Description of the Wind Power Plant and Its Operation Purpose Type of Construction Type of Operation General Description of the Wind Power Plant 4 5 8 8 8 9 9 10 10 11 11 14 14 16 16 16 18 18 18 18 19 19 19 19 20 20 20 21
+page 2 of 26 pages Status as of 10.01.10
+
+3.5 Design of the Main Components 3.5.1 Rotor 3.5.2 Machine Support 3.5.3 Main Drive 3.5.4 Electrical Generator 3.5.5 Lateral Angle System 3.5.6 Tower and Foundation 3.5.7 Grid Formation 3.5.8 Hood 4 Safety and Operation Control Concept
+
+4.1 General 4.1.1 Operation and Operation Control System 4.1.2 Safety Concept and Safety System 4.2 Production Process 4.2.1 Production in the Derated Load Range 4.2.2 Production in the Rated Load Range 4.2.3 Shut-down of the WPP 4.3 Operation Control in Special Situations 4.3.1 Start-up upon Extremely Low Temperatures 4.3.2 Securing against Storm 5 Installation of the Plant
+
+Project:
+
+Research and Development
+
+Status: INTERNAL
+
+File: INNOVAWINDPOWER_150KW
+
+INNOVA W I N D
+
+Highly confidential!
+
+High-Performance Wind Power Plant NW22-150 HY
+Data Sheet
+
+REPOWERING
+
+2.22.2-00.01.00-011
+
+6 6.1 6.2 6.3 7 8
+
+Maintenance Maintenance Cycles Scheduled Preventive Maintenance Unscheduled Overhaul Main Components of the Wind Power Plant Characteristic Curves
+
+22 22 22 23 24 25
+
+page 3 of 26 pages Status as of 10.01.10
+
+Project:
+
+Research and Development
+
+Status: INTERNAL
+
+File: INNOVAWINDPOWER_150KW
+
+INNOVA W I N D
+
+Highly confidential!
+
+High-Performance Wind Power Plant NW22-150 HY
+Data Sheet
+
+REPOWERING
+
+2.22.2-00.01.00-011
+
+1
+
+Main Technical Data
+gearless high-performance horizontal axle-type wind power plant with two-blade rotor and variable number of revolutions grid-forming for stand-alone and parallel-to-net operation reacting, automatic operation, remote-monitored and -controlled, performance control through active adjustment of rotor speed hydrostatic, directly connected brushless synchronous generator nonpositive, rotor-initiated no crane required, own load-carrying devices Parameters Unit kW ms-1 m m2 rpm/ms-1 rpm rpm ms-1 MWh p.a. 98.4 11.5 351.0 11.5 Variant A Variant B 150.0 13.0 22.0 380.1 0.4216 9.5 8.2 33.0 66.0 8.0 336.3 60.2 7.3 317.2 16.5 Variant C
+
+Type of construction
+
+Type of operation Principle of operation
+
+Main drive Adjustment of lateral angle Installation
+
+Rated output Nominal wind speed Rotor diameter Rotor circle area Optimal aerodynamic efficiency Designed high-speed coefficient Specific rotor speed within the variable range of revolutions Minimum speed of operation Maximum speed of operation at wind speeds of Energy yield in reference location acc. to Renewable Energy Act Average performance in reference location acc. to REA Output
+
+kW
+
+40.1
+
+38.4
+
+36.2
+
+rotary current 3 x 400 V, 216 A with loadable neutral conductor, net frequency 50 or 60 Hz, cos φ adjustable.
+
+Table 1-1:Main technical data of the WPP
+
+page 4 of 26 pages Status as of 10.01.10
+
+Project:
+
+Research and Development
+
+Status: INTERNAL
+
+File: INNOVAWINDPOWER_150KW
+
+INNOVA W I N D
+
+Highly confidential!
+
+High-Performance Wind Power Plant NW22-150 HY
+Data Sheet
+
+REPOWERING
+
+2.22.2-00.01.00-011
+
+2
+
+Views of the Wind Power Plant
+
+Figure 2-1: View of the entire plant from aside
+
+page 5 of 26 pages Status as of 10.01.10
+
+Project:
+
+Research and Development
+
+Status: INTERNAL
+
+File: INNOVAWINDPOWER_150KW
+
+INNOVA W I N D
+
+Highly confidential!
+
+High-Performance Wind Power Plant NW22-150 HY
+Data Sheet
+
+REPOWERING
+
+2.22.2-00.01.00-011
+
+page 6 of 26 pages Status as of 10.01.10
+
+Project:
+
+Research and Development
+
+Status: INTERNAL
+
+File: INNOVAWINDPOWER_150KW
+
+INNOVA W I N D
+
+Highly confidential!
+
+High-Performance Wind Power Plant NW22-150 HY
+Data Sheet
+
+REPOWERING
+
+2.22.2-00.01.00-011
+
+Figure 2-2: View of the entire plant from afront
+Pumpe Rotoradapter Rotorlager Notbremssystem Hebezeug Hydraulikmotor Haube
+
+Rotorblatt
+
+Rotorblattflansch
+
+Nabe
+
+Steuereinheit
+
+Kupplung Maschinenträger Pumpenflansch Azimutbremse
+
+Turmkopf mit Vierpunktlager
+
+Azimutnachführung Generator Schwingungsdämpfer
+
+Figure 2-3: View of the machine pod from aside
+
+page 7 of 26 pages Status as of 10.01.10
+
+Project:
+
+Research and Development
+
+Status: INTERNAL
+
+File: INNOVAWINDPOWER_150KW
+
+INNOVA W I N D
+
+Highly confidential!
+
+High-Performance Wind Power Plant NW22-150 HY
+Data Sheet
+
+REPOWERING
+
+2.22.2-00.01.00-011
+
+3
+3.1
+
+Short Description of the Wind Power Plant and Its Operation
+Purpose
+
+The INNOVA 150kW type WPP is a plant designed for the generation of electrical energy from wind as a renewable energy source. It is capable of grid formation and, thus able to work either in parallel to a public or private energy supply net or in stand-alone operation. The WPP can be operated as single plant or in connection with other grid-forming WPP's or electrical generators. 3.2 Type of Construction
+
+The INNOVA 150kW type WPP as a gearless high-performance horizontal axle-type wind power plant with two-blade rotor and variable number of revolutions stands out by the following significant features regarding its type of construction: − state-of-the-art two-blade rotor, equipped with rotor blades which are optimized in performance and noise-minimized due to their profile, and with integrated lightning protection, − hydrostatic main drive with immediately reacting behaviour for performance limitiation, − uninterrupted, active, rotor-initiated lateral angle adjustment during the production process, − strict exclusion of positive force-transmitting elements in all sub-assemblies which are exposed to the wind, − variable number of rotor rotations controlled by the operation control system to optimize and limit the performance, − possibility of a plant start-up from standstill even upon extremely low temperatures with the rotor in idle run, − fully automatic operation on the basis of the operation control system, − automatic adaptation to the existing net and/or consumption situation by application of an intelligent performance control system (IPC: Intelligent Power Control), − integrated diagnosis, resource and performance control system as an integral part of the operation control system, − remote monitoring and remote opration from one or more mobile or stationary posts.
+
+page 8 of 26 pages Status as of 10.01.10
+
+Project:
+
+Research and Development
+
+Status: INTERNAL
+
+File: INNOVAWINDPOWER_150KW
+
+INNOVA W I N D
+
+Highly confidential!
+
+High-Performance Wind Power Plant NW22-150 HY
+Data Sheet
+
+REPOWERING
+
+2.22.2-00.01.00-011
+
+3.3
+
+Type of Operation
+
+The electrical energy produced by the WPP can either be used for partial or complete satisfaction of the operator's own energy need, or can be fed, completely or partially, into an existing net. The WPP is operated automatically by an operation control system. The relatively high plant performance regarding the given rotor diameter is determined by the designs of the components. In order to achieve this high rated performance at a reasonable wind speed, the advantages of an infinite variability of the revolutions are utilized. However, the relatively high revolving speed of the blade tips within the rated performance range causes a higher noise level. Such noise is generally absorbed by the environmental sounds occurring in connection with the nominal wind speed anyways, and will not be noticable separately. In cases where such noise cannot be tolerated due to the fact that the WPP is located in close neighborhood to residential areas, it is possible to reduce the the number of revolutions. In such a case, the WPP reaches its rated performance at higher wind speeds but runs at a "whispering" level which makes up for the yield losses. The variants A, B and C reflect the different modes of operation, with A representing operation with the highest and C with the lowest thinkable number of revolutions. Variant B represents a randomly chosen mode between both extremes. The appropriate mode of operation is determined before the plant is put into operation, namely by setting the respective parameters in the operation control software in the computer. For the operator, it is possible to change these settings at any time within the range between both extremes A and C. The safety of the WPP is constantly monitored by the safety system. All functions relevant for safety are of a fail-safe design. Local manual operation is possible. A remote system ensures monitoring of the WPP from a stationary or mobile operation center. Also from there, unrestricted manual operation is possible. In the event of errors, the WPP remedies them independently to the extent it is capable of. Temporary errors, such as mains failures which lead to a shut-down of the plant, are analyzed and documented by the WPP and reported to the control center. After remedy of the error the WPP re-starts operation automatically. The same procedure is followed in the event of permanent errors or in case the safety system has responded. An automatic re-start, however, is not performed in such cases. 3.4 General Description of the Wind Power Plant
+
+In the first step, the rotor of the WPP converts the kinetic energy of the moving air mass into mechanical energy. This energy is directly transported to a hydraulic pump which converts it into hydraulic fluid energy. After conversion into fluid energy, a hydraulic motor re-converts the energy into driving mechanical energy, which is finally converted into electrical energy by the electrical generator. In order to adapt the aerodynamic properties of the rotor to the individual modes of operation in an optimal manner, especially with regard to the given wind speed, the WPP operates with variable
+page 9 of 26 pages Status as of 10.01.10
+
+Project:
+
+Research and Development
+
+Status: INTERNAL
+
+File: INNOVAWINDPOWER_150KW
+
+INNOVA W I N D
+
+Highly confidential!
+
+High-Performance Wind Power Plant NW22-150 HY
+Data Sheet
+
+REPOWERING
+
+2.22.2-00.01.00-011
+
+numbers of revolutions. Since there is no positive force transmission between rotor and generator, the constant speed of the generator is independent of the rotor speed, which is necessary for grid formation or grid feeding. Consequently, the generator can be connected to the grid or to the consumers directly. The selected generator type is a state-of-the-art brushless synchronous machine with integrated energizing system. During the production process, the rotor of the WPP is located on the weather side of the tower, namely windward. The rotor blades of the WPP are firmly screwed together with the hub and are not adjustable around its longitudinal axis. This is why adjustment of the aerodynamic rotor efficiency for performance regulation and limitation is done via regulation of the rotor speed exclusively. Within the derated load range, meaning below the rated performance, the rotor speed is adjusted such that the rotor is constantly running with optimal aerodynamic efficiency. This is done depending on the wind speed which acts on the rotor circle area in an integral manner. Restrictions to the max. admissible speed are taken into account depending on the selected variant. Within the rated load range, the rotor speed is adjusted such that the aerodynamic efficiency is reduced to the extent necessary for the limitation of the plant's performance to the designed rated performance. Adjustment of the specifically required rotor speed is done by braking processes, directly performed by the hydraulic system of the main drive. This part of the hydrostatic main drive is used as operating brake which is absolutely free from wear and reliable in its operation. The produced braking energy is fed directly into the hydraulic oil of the main drive and can be discharged without any problems. This ensures unlimited, safe and reliable adjustment of the rotor speed even in cases when the countermoment for the rotor is only small due to low consumption by the generator. This can occur especially in stand-alone operation of the WPP and cannot be controlled only through adjustment of the number of revolutions. The machine set is located in a rotary manner in the machine pod on top of the steel-tube tower. The electrical energy is transported from the machine pod, which is that part of the plant rotary in a lateral angle, into the tower, as a firm part of the plant, via tow cables. Their twist is reliably checked by the operation control system of the WPP. Both control and electro-technical installation are arranged in the tower bottom part where they are protected against the weather. Control of all operational processes of the plant and monitoring of the various safety functions are performed from there in a fully automatic manner. Remote operation and remote monitoring of the WPP are possible from one or more operating posts, provided the necessary means for data transmission are available there. 3.5 3.5.1 Design of the Main Components Rotor
+
+The rotor of the WPP is a two-blade rotor. It consists of two rotor blades which are offset to each other by 180°, the rigid rotor hub and the rotor support which connects the rotor with the machine support and the hydraulic pump.
+
+page 10 of 26 pages Status as of 10.01.10
+
+Project:
+
+Research and Development
+
+Status: INTERNAL
+
+File: INNOVAWINDPOWER_150KW
+
+INNOVA W I N D
+
+Highly confidential!
+
+High-Performance Wind Power Plant NW22-150 HY
+Data Sheet
+
+REPOWERING
+
+2.22.2-00.01.00-011
+
+3.5.1.1 Rotor Blades The rotor blades are made of glass fibre-reinforced plastic, namely polyester. The plastic body of the rotor blade terminates in a cast-iron blade flange to which it is glued and additionally secured by bolts. The rotor blade is firmly screwed together with the rotor hub by means of that blade flange. The blades terminate in removable end caps made of refined steel which are required for effective protection against lightning. These end caps are connected to the blade flange via a copper cable in a conducting manner. 3.5.1.2 Rotor Hub The rotor hub has the function to connect the two rotor blades with each other, and both blades with the rotor bearing. An appropriately machined weld construction made of sheet steel serves as rotor hub. It is planned for a later point in time to apply a grey-cast iron part. The rotor hub is furnished with closable inspection openings at the front and sides. 3.5.1.3 Rotor Support The rotor support connects the rotor with the hydraulic pump and the machine support. The support is a concentric two-row four-point support of the necessary dimensions, capable to safely absorb the produced axial and radial forces and to transmit the torques initiated by the rotor to the hydraulic pump of the main drive. The outer ring of the rotor support is firmly screwed together with the front part of the machine support which is shaped appropriately for this purpose. The inner ring bears the drive shaft for the hydraulic pump, which is a flange shaft with multiple-wedge profile, as well as the hub itself. 3.5.2 Machine Support
+
+The machine support carries all essential plant components. It is placed on the tower head in a rotary manner. Its design is a machined, hot-galvanized weld construction made of sheet steel, of the required thickness and quality. 3.5.3 Main Drive
+
+The main drive is a gearless hydrostatic drive which, by nature, is a fluidic transmission of the socalled retransmitting type. It consists of the hydraulic pump, the hydraulic motor and the hydraulic system with oil tank, oil piping, valves, pressure store and accessories. The hydrostatic drive enables complete exclusion of the more or less rigid, positive connection between rotor and electrical generator, typical with conventional WPP's. This is one of the most important requisites for the immediately reactive behaviour of the WPP towards the wind and for the required capability of the WPP to form grids. Due to the lack of a positive connection between rotor and generator in the drive flux of the WPP, the rotor, on one hand, can be operated exactly at the speed which, in relation to the given wind speed, ensures the best thinkable aerodynamic efficiency of the rotor in the derated load range and the necessary reduction of the aerodynamic efficiency in the rated load range. On the other hand,
+page 11 of 26 pages Status as of 10.01.10
+
+Project:
+
+Research and Development
+
+Status: INTERNAL
+
+File: INNOVAWINDPOWER_150KW
+
+INNOVA W I N D
+
+Highly confidential!
+
+High-Performance Wind Power Plant NW22-150 HY
+Data Sheet
+
+REPOWERING
+
+2.22.2-00.01.00-011
+
+the generator, independent of the rotor speed, can revolve at the speed required by the grid and/or the consumers. Performance limitation of the WPP is possible by means of purposeful control of the rotor's number of revolutions. The process to this effect is extremely reliable, plant-saving and nearly independent of external influences, the application of which was not possible in connection with conventional plant technologies. This type of performance regulation allows the abandonment of mechanical adjustment of the rotor blades around their longitudinal axle (pitch) and facilitates the manufacture of the WPP drastically. Valves, appropriately arranged in the hydraulic system of the main drive, enable purposeful control of the oil volume flow such that the desired rotor speed can be set exactly even in the rated performance range at any time. As a special feature, the hydrostatic drive is able to brake the rotor directly and in a nearly wearless manner, should this become necessary during operation. The kinetic energy of the rotor which is converted in this process, is transmitted into the hydraulic oil as thermal energy and can be either discharged without any problems due to the high, volume-related thermal capacity of the entire hydraulic system, or provided as available heat. The hydrostatic main drive itself serves as operating brake for the rotor, if controlled appropriately, and thus substitutes the pitch system as conventional aerodynamic brake. It is characteristic for the immediately reactive behaviour of the WPP towards the wind that it evades overloads resulting from gusts, which act on the rotor suddenly and briefly, in a nearly undelayed manner. Further, the rotor is braked immediately which reduces its aerodynamic efficiency to the required extent. Consequently, almost all energy contained in the entire gust is avoided and cannot damage the WPP at all. The braking process itself is executed by the hydrostatic main drive in a wearless manner. The braking energy is transmitted into the hydraulic oil and discharged without any problems.
+
+page 12 of 26 pages Status as of 10.01.10
+
+Project:
+
+Research and Development
+
+Status: INTERNAL
+
+File: INNOVAWINDPOWER_150KW
+
+INNOVA W I N D
+
+Highly confidential!
+
+High-Performance Wind Power Plant NW22-150 HY
+Data Sheet
+
+REPOWERING
+
+2.22.2-00.01.00-011
+
+3.5.3.1 Hydraulic Pump The hydraulic pump is a slowly running radial piston pump. It has been selected from an entire series of available pumps regarding speed and torque as optimally as possible to exactly comply with the speed/torque characteristics of the rotor at optimal efficiency of the pump. The case of the hydraulic pump and the machine support are screwed together firmly. The pump shaft is a hollow multiple-wedge shaft which is connected with the rotor hub and thus with the driving rotor by means of a flange shaft. This way of connecting the hydraulic pump to the rotor ensures that the pump shaft and its bearings are not exposed to any moments and/or axial or radial forces, which may damage the bearings in the long run, except to those torques which are to be transmitted and converted. 3.5.3.2 Emergency Brake An emergency brake is firmly connected with the hydraulic pump. It has a compact design and is a multi disk-type brake. In the case of need, the emergency brake is used as emergency and holding brake for the rotor. It constitutes, as per requirement, the second brake system which is mainly used by the safety system. The operation control system uses this brake only to put the rotor in the final position for regular braking. 3.5.3.3 Hydraulic Motor The hydraulic motor re-converts the flow energy of the hydraulic oil into mechanical energy which drives the electrical generator. An adjustable motor of an axial piston design is applied as hydraulic motor. The adjusting device necessary to control the volume flow is firmly connected with the hydraulic motor. Hydraulic motor and electrical generator form a constructional unit. To this effect, the case of the hydraulic motor and the case of the electrical generator are firmly connected with each other by means of a motor support and a relating damping ring for body sound decoupling. The shafts of hydraulic motor and electrical generator are connected by an elastic coupling. The entire motor/generator unit is suspended below the machine support by means of another damping ring, thus reaching into the tower from above. 3.5.3.4 Hydraulic System The hydraulic system of the main drive comprises all components necessary to ensure its proper performance. These components are the tank, the line system, a pressure store and the appropriate valves and fittings to enable control of the hydrostatic drive by the operation control system and the safety system.
+
+page 13 of 26 pages Status as of 10.01.10
+
+Project:
+
+Research and Development
+
+Status: INTERNAL
+
+File: INNOVAWINDPOWER_150KW
+
+INNOVA W I N D
+
+Highly confidential!
+
+High-Performance Wind Power Plant NW22-150 HY
+Data Sheet
+
+REPOWERING
+
+2.22.2-00.01.00-011
+
+When designing the hydraulic system, special attention has been paid to the absolute tightness of all connections and a complete return of leak oil to the tank. The selected designs of all fittings and components comply with these requirements. Moreover, application of biologically decomposable hydraulic oil brands has been ensured. Seals and hoses have been selected accordingly. 3.5.4 Electrical Generator
+
+The electrical generator converts the mechanical drive energy of the hydraulic motor into electrical energy. A brushless rotary current synchronous motor with a rotating energizing system is applied. Energizing of the generator is controlled by the operation control system during the production process in compliance with the purpose. The same applies when asynchronizing it to an existing power grid and/or to other WPP's or electrical generators. During the production process the generator works at a fixed speed. This is done completely independently of the speed of the rotor of the WPP. The required control of the hydraulic motor to this effect, depending on the volume flow, is performed automatically by the operation control system. 3.5.5 Lateral Angle System
+
+The lateral angle system consists of the tower head bearing, the brake disk, the lateral angle adjusting device and the lateral angle brake. The lateral angle system of the WPP has the function to place the rotor at right angles to the respective wind direction as exactly as possible. To this effect, the entire machine pod is rotated in the tower head bearing by means of the lateral angle adjusting device. The lateral angle adjusting device and the lateral angle brake serve to fix the rotor in its optimally aligned position before the wind. The problem of alignment of the rotor before the wind constitutes one of the most difficult problems of the wind energy technology and has been solved by conventional plant technologies only in a preliminary and poor manner. With the two-blade rotor, however, an optimal solution has become possible. When rotating and exposed to an angular airflow, the two-blade rotor, in contrast, for example, to the three-blade rotor, develops yawing moments rotating in a sine-shaped manner. This means that, with the rotor rotating and depending on the given rotor position, both leeward and windward yawing moments act on the tower head. This would lead to a continuous swivel movement of the machine pod around its zero position before the wind when the rotor is exposed to a horizontal angular airflow. However, the rotor is secured against such swivel movements: the yawing moments do not occur when the rotor is exposed to an exactly right-angles airflow, and the machine pod will remain in its optimal position even if the lateral angle brake is bled. The problem would be solved in an optimal manner, if it was possible to make use of these rotorinitiated moments, especially of the windward ones, to adjust the rotor's lateral angle in a plant saving way, meaning to practically take advantage of the angular airflow itself which acts on the entire rotor blade in an integral way, and not, as is the case with conventional WPP's, to rely on the
+page 14 of 26 pages Status as of 10.01.10
+
+Project:
+
+Research and Development
+
+Status: INTERNAL
+
+File: INNOVAWINDPOWER_150KW
+
+INNOVA W I N D
+
+Highly confidential!
+
+High-Performance Wind Power Plant NW22-150 HY
+Data Sheet
+
+REPOWERING
+
+2.22.2-00.01.00-011
+
+information taken from a wind vane fluttering before the wind without orientation. It is exactly this kind of solution which has been put into practice with our WPP. In contrast to conventional technologies, positive force transmission has been excluded at all both in the lateral angle brake and in the lateral angle adjusting device. This is why the usual toothing of the tower head flange, in which one or more driving pinions of geared motors engage, is absent in our WPP. The lateral angle brake is a spring-operated, hydraulically bled-type brake. Its function is to hold the machine pod and thus the rotor in a specified angle over any period of time. The lateral angle adjusting device consists of a hydraulically operated brake caliber, two hydraulic cylinders, which are firmly connected with the machine support and between which the brake caliber is mounted, and a device which enables specified shifting of the brake caliber relative to the machine support. It ensures that the machine pod and the rotor are always in an optimal position before the wind during operation of the WPP. When the WPP is in operation, the optimally aligned rotor is held only by the lateral angle adjusting device, while the lateral angle brake is bled. The yawing moments initiated by the rotor when exposed to a horizontal angular airflow, cause cyclic pressure fluctuations in the hydraulic system of the lateral angle adjusting device. The hydraulic system itself interprets such pressure fluctuations and performs a continuous adjustment of the cylinders for an optimal alignment of the rotor before the wind as long as such pressure fluctuations occur and/or exceed a certain value. If the lateral airflow and thus the initiated yawing moments and the differential pressure in the system exceed a certain admissible value, a pressure relief valve, which controls the windward position, opens automatically which causes the rotor to turn windward by its own yawing moment. In the case that the load on the WPP is getting too high due to an excessive lateral gust the rotor is relieved by a horizontal turn out of the wind. To this effect, a pressure relief valve, which controls the leeward position, opens automatically if the highest admissible pressure in the system is exceeded. This enables the rotor to escape from such an overload by an automatic turn out of the wind. The lateral angle adjusting device allows a lateral turn of the machine pod out of its central position by ±6.0° and/or from final position to final position by 12.0°. For larger lateral angles, the lateral angle adjusting device has to make up, which is done in interaction with the lateral angle brake: the brake holds the machine pod in its position during the make-up process. The machine pod can be turned by any lateral angle by repeated making up. This is done, on one hand, prior to the start-up of the WPP out of the standstill to align the motor preliminarily on the basis of the data taken from the wind direction measuring device, and, on the other hand, if cable untwisting is required. At wind speeds beyond the nominal wind speed, at which the rated performance of the WPP is achieved safely even upon a lateral airflow, alignment of the pod depending on the wind direction is done just to a limited extent.
+page 15 of 26 pages Status as of 10.01.10
+
+Project:
+
+Research and Development
+
+Status: INTERNAL
+
+File: INNOVAWINDPOWER_150KW
+
+INNOVA W I N D
+
+Highly confidential!
+
+High-Performance Wind Power Plant NW22-150 HY
+Data Sheet
+
+REPOWERING
+
+2.22.2-00.01.00-011
+
+If securing against storm is required, the machine pod is held in its position safely by both the lateral angle adjusting device and the lateral angle brake.
+
+3.5.6
+
+Tower and Foundation
+
+The tower is a conical two-section steel construction. Both tower sections are screwed together at the building site by means of internal flanges. The static design of the tower is such that it can be erected together with the machine pod by means of a lifting device. To this effect, the tower is placed in a hinge during installation which connects tower and foundation safely for erection. A safety ladder is fixed at the outside of the tower which provides access to the pod for service and maintenance. Likewise, there is a ladder installed inside the tower reaching up to the connection flange, allowing for the regular checks of the flange connection. The foundation below the WPP tower is a flat standard type. The tower is attached to the foundation section, and the forces and moments are transmitted into the foundation via this section which is integrated in the steel-reinforced foundation. 3.5.7 Grid Formation
+
+There is a platform arranged at the bottom of the tower on which the low-voltage installation is arranged. It comprises all necessary switchgear and devices required to connect the WPP to the grid and/or the consumers. The switchgear is arranged in sheet steel cabinets which are vented and heated to prevent the formation of sweat or condensed water. The protection class of the cabinets is in accordance with the climatic conditions in the place of application. The low-voltage switchgear is controlled by the operation control system of the WPP; the computer itself with all its components is arranged in the switchgear system. The electrical energy is dissipated via earth cables which lead into the ground through appropriate cable pipes in the foundation. The same cable pipes are used to lead the required control, signal and other communication lines necessary for the operation of the WPP to the outside. 3.5.8 Hood
+
+All components of the machine pod are embraced by a hood and are protected by the same against weather inclemency. The design of the hood complies with the requirements resulting from the specific climatic and other environmental conditions in the place of erection of the WPP, thus enabling the hood to fulfil its protective function. The hood is made of glass fibre-reinforced plastic and consists of two parts. The lower part of the hood is firmly connected with the machine support and turns around the tower head together with
+
+page 16 of 26 pages Status as of 10.01.10
+
+Project:
+
+Research and Development
+
+Status: INTERNAL
+
+File: INNOVAWINDPOWER_150KW
+
+INNOVA W I N D
+
+Highly confidential!
+
+High-Performance Wind Power Plant NW22-150 HY
+Data Sheet
+
+REPOWERING
+
+2.22.2-00.01.00-011
+
+the machine support at a lateral angle. The top part of the hood is carried by the lower part and has the design of a cover. It can be opened by means of hydraulic cylinders.
+
+page 17 of 26 pages Status as of 10.01.10
+
+Project:
+
+Research and Development
+
+Status: INTERNAL
+
+File: INNOVAWINDPOWER_150KW
+
+INNOVA W I N D
+
+Highly confidential!
+
+High-Performance Wind Power Plant NW22-150 HY
+Data Sheet
+
+REPOWERING
+
+2.22.2-00.01.00-011
+
+4
+4.1
+
+Safety and Operation Control Concept
+General
+
+The safety and operation control concept of the WPP is an essential and basic part of the plant concept. It has been developed and designed together with all other components of the WPP. The design data determined by the safety and operation control concept have been taken as the basis for the calculation of the load cases of the WPP. Consequently, the design data used in the assumed load cases either correspond to the data of the safety and operation control system or have been set up in a conservative manner. A complete description of the safety and operation control concept can be taken from the document "High-performance Wind Power Plant INNOVA 150kW, Operation Control and Safety Conception", Document No. 2.22.4-00.05.00-011.
+
+In the present document, explanations are only given to the extent necessary for a basic understanding of the principal function. 4.1.1 Operation and Operation Control System
+
+By operation control, we generally understand a procedure designed on the basis of the specific design data of the WPP, which allows for the effective and safe operation of the WPP as troublefree as possible and exposed to as little load as possible. Operation of the WPP is controlled by an operation control system based on a decentral control concept. Fibreoptic cables are used as transmission medium for the serial signals of the system between tower bottom and pod. The operation control system is designed to control, regulate and monitor the WPP. It ensures operation of the WPP under all thinkable inner and outer conditions in the standard range of operation. 4.1.2 Safety Concept and Safety System
+
+The safety system serves to secure the plant's behaviour stipulated in the safety concept, in the case of malfunctions. It ensures a safe state of the WPP even in case of malfunctions under all thinkable inner and outer conditions. The safety system precedes the operation control system logically. It reacts after safety-relevant limits have been exceeded or if the operation control system is not or no longer able to keep the WPP within the standard range of operation, and thus also upon a complete failure of the operation control system. The operation control system on its part is able to activate the safety system a priori in case it is no langer able to ensure operation of the WPP under all thinkable inner and outer conditions within
+page 18 of 26 pages Status as of 10.01.10
+
+Project:
+
+Research and Development
+
+Status: INTERNAL
+
+File: INNOVAWINDPOWER_150KW
+
+INNOVA W I N D
+
+Highly confidential!
+
+High-Performance Wind Power Plant NW22-150 HY
+Data Sheet
+
+REPOWERING
+
+2.22.2-00.01.00-011
+
+the standard range of operation, if it recognizes this state and is still able to activate the safety system. 4.2 Production Process
+
+The production process comprises that part of operation of the WPP in which electrical energy beyond the WPP's own need is generated and fed into the grid or to the consumers. Generally, this happens in the wind speed range of 2.0 ms-1 to 25.0 ms-1 at hub height. This working range is reasonably subdivided into derated load range and rated load range since the WPP behaves differently in each of these two sub-ranges. 4.2.1 Production in the Derated Load Range
+
+In the derated load range, the WPP operates below its rating. In this sub-range, the control has to ensure that the WPP produces energy at the best thinkable degree of efficiency. This is done first of all by variation of the rotor speed according to the respective wind speed and by constant optimal alignment of the rotor within the lateral angle. 4.2.2 Production in the Rated Load Range
+
+In the rated load range, the WPP has to reduce its aerodynamic efficiency at a wind speed of 12.5 ms-1 to 25.0 ms-1 at hub height. This is done by a defined reduction of the rotor speed. The controller of the rotor speed reacts directly, immediately and undelayed to the respective wind speed. Alignment of the rotor within the lateral angle is done in a more restrained manner than in the derated load range as long as the rated output is achieved even upon lateral airflow and this lateral airflow does not cause inadmissable load to the WPP. 4.2.3 Shut-down of the WPP
+
+Regular shut-down of the WPP from production is done if - the energy amount available from the wind is smaller than the minimum energy amount necessary for economic operation of the WPP. Except where minimum supply to the consumers is preferred, neglecting the costs. - the wind speed at hub height exceeds a wind speed of 25.0 ms-1, which is the threshold value for a shut-down. - the operation control system performs the shut-down due to a defect/error, load relief or other irregularities in the operation of the WPP. Regular shut-down of the WPP is done by regulating the generator down through a controlled reduction of the rotor speed up to its complete standstill and disconnecting it from the grid subsequently. If the plant needs to be secured against storm, or if it is expected that storm securing will become necessary, the rotor, upon shut-down, is to be put in the so-called final braking position, i. e. with the rotor blades in a horizontal position. In this position, the rotor is held by the emergency brake over an unlimited period of time.
+page 19 of 26 pages Status as of 10.01.10
+
+Project:
+
+Research and Development
+
+Status: INTERNAL
+
+File: INNOVAWINDPOWER_150KW
+
+INNOVA W I N D
+
+Highly confidential!
+
+High-Performance Wind Power Plant NW22-150 HY
+Data Sheet
+
+REPOWERING
+
+2.22.2-00.01.00-011
+
+If the WPP was switched off at ambient temperatures below 0°C due to low winds or a defect, it must be ensured for a subsequent re-start that the rotor can start in idle run, which means that it only has to overcome the frictional moments of rotor bearing and hydraulic pump support. To this effect, the pistons of the hydraulic pump are to be pressed into their rearmost stop positions during the last rotor revolution and held in this position. The entire hydraulic oil flows back into the tank automatically through opened valves, and the pump is empty. 4.3 4.3.1 Operation Control in Special Situations Start-up upon Extremely Low Temperatures
+
+The WPP is designed for operation at ambient temperatures down to -400C. This is ensured through an appropriate design of all components, the use of adequate materials, and the use of synthetic biological oil brands in the hydraulic systems. If the WPP produces energy at extremely low ambient temperatures, there will hardly ever be problems due to the occurring heat loss. However, the situation will be more difficult if the WPP is switched off and cooled down, and its own temperature falls down to the extreme ambient values while in a standstill. For a start-up of the WPP in such a situation it is important to set the rotor in motion successfully. The smaller the counter moment against the rotor revolution, the easier this will be possible. This is the point at which the hydrostatic main drive becomes invaluably advantegous compared to conventional drives, as it allows for a start-up in idle run. To this effect, there is no feed pressure applied to the hydraulic pump, which was completely emptied upon shut-down, so that its pistons stay in the rearmost neutral position and cannot be operated. Only if the rotor is moving at the smallest speed, feed pressure is being built up very slowly by pre-heated oil. This pressure puts the pistons in their working position in a progressive manner. The increasing volume flow is used for a further heating-up of the steadily increasing oil amount until the system has reached the minimum temperature necessary for a regular connection of the WPP. 4.3.2 Securing against Storm
+
+The WPP is secured against storm by placing the rotor in a horizontal position. In this position, the rotor blades do not overtop the machine pod and cannot exert any forces, which would be augmented by leverage, on the tower head. The rotor blades are held in their horizontal position for storm securing purposes under all circumstances as long as storm securing is necessary. Due to the applied type of emergency brake (spring-operated, hydraulically bled) this is possible over an unlimited period of time.
+
+page 20 of 26 pages Status as of 10.01.10
+
+Project:
+
+Research and Development
+
+Status: INTERNAL
+
+File: INNOVAWINDPOWER_150KW
+
+INNOVA W I N D
+
+Highly confidential!
+
+High-Performance Wind Power Plant NW22-150 HY
+Data Sheet
+
+REPOWERING
+
+2.22.2-00.01.00-011
+
+5
+
+Installation of the Plant
+
+Installation of the plant will be possible without any cranes if there are sufficient personnel available for mounting. The one thing that is typical for the installation of the plant is that the tower, after pre-assembly, can be erected together with machine pod and rotor blades out of its horizontal position. Regarding the statics, the resulting load on the tower has been included in the calculation as installation load case. A complete description of the installation of the plant is contained in the document "High-performance Wind Power Plant INNOVA 150kW, Instructions on Plant Installation", Document No. 2.22.2-00.08.00-011. The tower segments are placed on blocks so as to lie on the ground. Subsequently, the two segments are screwed together to one unit by means of an internal flange. Afterwards, the tower is connected with the prepared foundation section, which should be in a set condition and ready to be loaded, by means of a hinge. Then the machine pod, without the generator assembly, is screwed to the tower head such that the rotor hub points downwards. The blocks underneath the tower are to be arranged in a way which provides the necessary space for installation. Afterwards, the two rotor blades are screwed together with the hub. In order to erect the tower and the pod, mounted on the ground in the described way, one or more pulling devices, for example, with a minimum pulling force of 1,000 kN are required. If the ground conditions are normal, this will equal two trucks/lorries loaded with 50 kN or more. Upon erection, attention is to be paid to a constant, jerk-free pull. The use of a capstan device would be the ideal case. The hinge provided at the tower bottom is necessary for erection. It is removed after setting up and can be used again for further installations. After the tower has been set up, the generator assembly is lifted upwards inside the tower from down on the ground using a lifting device and, subsequently, connected with the machine support by screwing it to its bottom from below. At this stage, the conncetion cables are already connected with the generator and were lifted upwards together with it. Installation of the WPP in the place of service is complete after the necessary pre-assembled hydraulic connections to the hydraulic motor and the electical connections have been established. Now the WPP is ready to be started for trial operation.
+
+page 21 of 26 pages Status as of 10.01.10
+
+Project:
+
+Research and Development
+
+Status: INTERNAL
+
+File: INNOVAWINDPOWER_150KW
+
+INNOVA W I N D
+
+Highly confidential!
+
+High-Performance Wind Power Plant NW22-150 HY
+Data Sheet
+
+REPOWERING
+
+2.22.2-00.01.00-011
+
+6
+
+Maintenance
+
+In favor of an economically reasonable plant concept, the WPP is designed such that, provided the prescribed maintenance intervals are observed and the design-owed scheduled preventive maintenance (SPM) measures are performed, a minimum service life of 25 years in the place of reference according to the Renewable Energy Act (REA) is most likely to be achieved. This service life can be further increased if, after ascertainment of state, a general overhaul is performed upon completion of the 25th year of the minimum service life. Afterwards, the subsequent maintenance cycles and scheduled preventive maintenance measures have to be re-determined. The concept of scheduled preventive maintenance determines the design of the WPP from the outset. Its components are, unlike with conventional wind energy technologies, no longer designed to last for the entire life time of the plant regarding their fatigue strength, but only for a period between two SPM measures1. This leads to a significant reduction of the investment costs at almost the same operating costs and enables the desired and required life time of the WPP to become reality indeed. In order to ensure that the operating costs of the plant do not increase or increase only slightly by the performance of SPM, it has been secured by constructive measures that replacement of the individual components can be carried out by the maintenance personnel quickly, without problems and without any additional auxiliary means such as cranes or lifting devices. Moreover, it has been ensured that the replaced components can be reconditioned at a reasonable price and reused as replacements, if possible1. For maintenance and overhaul measures, no additional auxiliary means are required except those tools and auxiliaries available to the service technicians. 6.1 Maintenance Cycles
+
+In the course of one year of opration, maintenance should be carried out twice. The range of works is such that two technicians will need 2 work days to perform. 6.2 Scheduled Preventive Maintenance
+
+In intervals of 5 years, starting 5 years after commissioning, one of the two yearly maintenance measures will be replaced by scheduled preventive maintenance. The range of works comprises, among others, replacement of the hydraulic pump, the main hydraulic system including all hose connections, and the generator unit with hydraulic motor, coupling and generator. The time between the scheduled preventive maintenance measures may be reduced or extended depending on the actual operating conditions. Whether reduction or extension applies can be taken from the records of the diagnosis, resource and performance control system. This system constantly checks and registers the actual number of load changes and their amplitudes, from which the actual dissipation of resources is derived. Depending on these conclusions, the time between two subsequent scheduled preventive maintenance measures can be either reduced or extended. However, the regular maintenance intervals are not affected by this.
+
+page 22 of 26 pages Status as of 10.01.10
+
+Project:
+
+Research and Development
+
+Status: INTERNAL
+
+File: INNOVAWINDPOWER_150KW
+
+INNOVA W I N D
+
+Highly confidential!
+
+High-Performance Wind Power Plant NW22-150 HY
+Data Sheet
+
+REPOWERING
+
+2.22.2-00.01.00-011
+
+6.3
+
+Unscheduled Overhaul
+
+Unscheduled overhaul is performed after damages or inspections, for example after maintenance if defects were found, the remedy of which would exceed the range of standard maintenance works. Generally, unscheduled overhaul will not become necessary considering the plant's operation concept. However, they cannot be excluded completely.
+
+page 23 of 26 pages Status as of 10.01.10
+
+Project:
+
+Research and Development
+
+Status: INTERNAL
+
+File: INNOVAWINDPOWER_150KW
+
+INNOVA W I N D
+
+Highly confidential!
+
+High-Performance Wind Power Plant NW22-150 HY
+Data Sheet
+
+REPOWERING
+
+2.22.2-00.01.00-011
+
+7
+
+Main Components of the Wind Power Plant
+Component Type NW 22 Remarks glass fibre-reinforced polyester, steel flange connection two-row four-point ball bearing with steel cage box-shape weld construction CA 100-S BICA 37 PA 360 radial piston pump multi-disk brake, fail-safe variable axial piston motor with electronic speed regulation for main drive, emergency brake, AZIMUT brake and AZIMUT adjusting device SHI 107 FC 2 x DW80/40 x 132, 1 x SHD 75 S25B25-009 Mod.17.12.03 spring-operated, hydraulically bled, fail-safe two hydraulic cylinders with brake caliber brushless synchronous machine with rotating energizing system with automatic system to asynchronize to an existing grid single-row roller bearing, four point-borne, screwed together with AZIMUT bearing two-part, hinged, self-supporting, glass-fibre with internal attachments and safety ladder decentral control firmly wired
+
+Rotor blade
+
+Rotor bearing Rotor hub Hydraulic pump Emergency brake Hydraulic motor Hydraulic unit AZIMUT brake AZIMUT adjusting device Generator Low-voltage switchgear AZIMUT bearing AZIMUT brake disk Hood Steel-tube tower Operation control system Safety system Remote control system
+Table 7-1: Main components of the wind power plant
+
+page 24 of 26 pages Status as of 10.01.10
+
+Project:
+
+Research and Development
+
+Status: INTERNAL
+
+File: INNOVAWINDPOWER_150KW
+
+INNOVA W I N D
+
+Highly confidential!
+
+High-Performance Wind Power Plant NW22-150 HY
+Data Sheet
+
+REPOWERING
+
+2.22.2-00.01.00-011
+
+8
+
+Characteristic Curves
+Kennlinien der Anlagenleistungen
+160
+
+140
+
+120
+
+100 Leistungen in kW
+
+80
+
+60
+
+40
+
+Anlagenleistung Betz Anlagenleistung A Anlagenleistung B
+
+20
+
+Anlagenleistung C
+
+0 0 5 10 15 Windgeschw indigkeit in Nabenhöhe in m/s 20 25
+
+Figure 8-1: Characteristic curves of the plant's rating
+Kennlinien der Rotordrehzahlen
+100
+
+80
+
+60 Drehzahl in rpm 40
+
+Rotordrehzahlen Betz Rotordrehzahlen A 20 Rotordrehzahlen B Rotordrehzahlen C
+
+0 0 5 10 15 Windgeschw indigkeit in Nabenhöhe in m /s 20 25
+
+Figure 8-2: Characteristic curves of the rotor speeds
+
+page 25 of 26 pages Status as of 10.01.10
+
+Project:
+
+Research and Development
+
+Status: INTERNAL
+
+File: INNOVAWINDPOWER_150KW
+
+INNOVA W I N D
+
+Highly confidential!
+
+High-Performance Wind Power Plant NW22-150 HY
+Data Sheet
+Kennlinien der Energieerträge am Referenzstandort nach EEG
+
+REPOWERING
+
+2.22.2-00.01.00-011
+
+60
+
+40
+
+Ertrag in kWh 20 Ertrag A Ertrag B Ertrag C 0 0 5 10 15 20 25 Windgeschw indigkeit in Nabenhöhe in m /s
+
+Figure 8-3: Energy yields in reference location according to the Renewable Energy Act
+
+Kennlinien der kumulierten Energieerträge am Referenzstandort nach EEG
+400
+
+300
+
+Ertrag in kWh
+
+200
+
+Ertrag A 100 Ertrag B Ertrag C
+
+0 0 5 10 15 20 25 Windgeschw indigkeit in Nabenhöhe in m /s
+
+Figure 8-4: Cumulative energy yields in reference location according to the Renewable Energy Act
+
+page 26 of 26 pages Status as of 10.01.10
+

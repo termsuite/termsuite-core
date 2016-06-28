@@ -1,0 +1,533 @@
+Zonas Potencialmente Productoras de Energía Eléctrica Eólica, en Baja California
+
+Proyecto Piloto: Granja Eólica en La Rumorosa
+
+REPORTE FINAL
+
+Zonas Potencialmente Productoras de Energía Eléctrica Eólica, en Baja California
+Proyecto Piloto: Granja Eólica en La Rumorosa
+
+REPORTE FINAL
+Preparado para
+
+Gobierno del Estado de Baja California
+Por
+
+Centro de Investigación Científica y de Educación Superior de Ensenada
+
+Mayo, 2003
+
+2
+
+Zonas Potencialmente Productoras de Energía Eléctrica Eólica, en Baja California
+Proyecto Piloto: Granja Eólica en La Rumorosa
+
+REPORTE FINAL
+
+3
+
+Tabla de Contenido
+♦ Resumen ♦ Objetivos ♦ Introducción ♦ Metodología • Descripción del Área de Estudio • Estadísticas Climatológicas y Clasificación Climática • Estadísticas y Modelo Matemático del Viento ♦ Resultados • Marcha Anual del Viento • Influencia de Escala Sinóptica, Regional y Local, y Fenómenos Diversos. • Modelo Matemático y Densidad Energética del Viento • Zonas Propuestas para Establecer una Granja Eólica ♦ Conclusiones y Recomendaciones ♦ Apéndices • Gráficas de las Estadísticas Climatológicas • Mapas Mensuales del Viento Sinóptico • Rosas de Viento de las Estaciones Climatológicas Utilizadas en este Proyecto ♦ Bibliografía
+
+4
+
+RESUMEN
+El hombre, ha utilizado la energía eólica de una u otra forma desde hace miles de años. Los primeros “molinos de viento”, fundamentalmente sirvieron para la agricultura durante el siglo XIX. Con la imperante preocupación que se tiene de conservar el medio ambiente, el interés hacia la energía renovable se ha incrementado en las últimas dos décadas. La energía eólica, como una fuente de energía alternativa, renovable y ambientalmente sustentable, ha ido creciendo aceleradamente. Cualquier objeto que se mueve tiene energía cinética; el movimiento del aire, el viento, tiene esta energía, y ésta es la fuente de energía que se utiliza para hacer girar las aspas de un generador, rotor o turbina eólica. Conocidos también como convertidores de energía eólica y aerogeneradores, ellos se encargan de transformar, o “cosechar”, la energía cinética del viento en energía eléctrica. En este proyecto, se determinan algunas de las principales zonas potencialmente productoras de energía eléctrica, de acuerdo con la magnitud del viento. Por medio de estadísticas básicas y un modelo matemático, se estimó la magnitud del viento promedio anual y su perfil vertical. Con esta magnitud, se calculó la densidad de la energía eólica para cada una de las estaciones climatológicas analizadas, esta es una manera de poder evaluar el potencial de los recursos eólicos en ese lugar. En particular, como proyecto piloto, el estudio se realizó en la región montañosa de La Rumorosa. Con el establecimiento de una o varias granjas eólicas, y la subsecuente generación de electricidad en esta región, se pretende disminuir el alto costo de la electricidad en Mexicali, Baja California. Los resultados muestran que, es viable el aprovechamiento (transformación) de la energía eólica mediante el establecimiento de una granja de aerogeneradores. Este trabajo, se basó en el análisis de los datos meteorológicos, climatológicos, geográficos y topográficos disponibles para esta zona, y fueron proporcionados por la Comisión Nacional del Agua, CNA; Instituto Nacional de Estadística, Geografía e Informática, INEGI, Gobierno del Estado de Baja California, Centro de Investigación Científica y de Educación Superior de Ensenada, CICESE. Se realizaron algunas visitas a diferentes localidades dentro del área de estudio, con el objeto de verificar los variados aspectos fisiográficos, ambientales y paisajísticos de esta región montañosa. En el presente trabajo, se incluyo información testimonial de algunos habitantes de la región, coincidiendo la mayoría de ellos en la descripción del comportamiento del viento a lo largo del año, esto, de manera general, en concordancia con los resultados numéricos. Para el establecimiento de una granja eólica rentable en cualquier logar, se requiere que exista un viento promedio anual, con una magnitud entre 5.5 y 6 m•s-1 (Clase 4). Esta rapidez del viento, debe medirse a 10 metros de la superficie del suelo, (AWEA, 1998). Los resultados de los análisis efectuados en este proyecto, muestran para todas las estaciones climatológicas utilizadas, velocidades entre 6.2 (La Puerta) y 10.9 m•s-1 (Pino Suárez). El valor de la
+
+5
+
+magnitud de las otras estaciones climatológicas se encuentra entre estos dos valores. La densidad de energía eólica, es decir la cantidad de energía “cosechada” con esta magnitud de viento, por ejemplo, para Pino Suárez es de 1299.6 W•m-2. Cantidad que estaría por encima de los valores normales, incluso para la máxima categoría de la clasificación de tipo eólica estándar (AWEA, 1998), la cual seria Clase 7 y cuya densidad de energía eólica es de 800 W•m-2, para magnitudes de viento medidas a la altura de 10 metros. Estos valores necesitan ser tomados con cautela y ser corroborados con un estudio meteorológico diseñado exclusivamente para este fin, que es el establecimiento de una granja eólica. Pues, la cantidad exacta de energía capturada por un aerogenerador, depende de la distribución anual de la velocidad del viento, en cada uno de los lugares. Es muy importante contemplar que para efectuar una inversión económica, para el establecimiento de una o varias granjas eólicas, se deben establecer, primeramente, métodos apropiados para el calculo del recurso eólico, las condiciones de estabilidad y turbulencia, las condiciones extremas de viento, y los efectos propios de las estelas de los aerogeneradores, (Petersen, et. al, 1997). Es necesario mencionar, que se utilizaron los datos diarios de viento (magnitud y dirección) de la CNA, observaciones que se realizan a las 08:00 horas, aproximadamente. Desde el punto de vista meteorológico, se estaría subestimando el valor real de la magnitud del viento, ya que es bien sabido, que el viento alcanza su máxima magnitud, normalmente, alrededor de medio DIA o por la tarde. Como conclusión, se puede decir que con la información recopilada y analizada en este trabajo, es que la zona montañosa de La Rumorosa, es una región con mucho potencial para la transformación de energía eólica en electricidad, aprovechando la energía cinética proporcionada por el viento.
+
+6
+
+OBJETIVOS
+El objetivo principal de este proyecto, es realizar una investigación bibliográfica, y en lo posible, hacer un acopio de datos e información relevante, para determinar las principales zonas potenciales productoras de electricidad a través del aprovechamiento de la energía eólica mediante aerogeneradores o turbinas eólicas. Algunos de los puntos que sobresalen dentro de los objetivos, en el presente trabajo son: ♦ Determinación, mediante modelos estadísticos básicos, el comportamiento del viento a lo largo del año, en el área de La Rumorosa; ♦ El proponer las posibles áreas potenciales para el establecimiento de una o varias granjas eólicas, ello, con los resultados obtenidos en el punto anterior; ♦ Hacer las recomendaciones pertinentes para el seguimiento de una estrategia con fines de aprovechar, al cien por ciento, el establecimiento de una granja de aerogeneradores totalmente rentable.
+
+7
+
+INTRODUCCIÓN
+El viento es producido por el calentamiento desigual de la radiación solar al alcanzar la atmósfera la superficie terrestre, y modificado por la orografía y el efecto de la rotación de la tierra. Por tal razón, el comportamiento espacio-temporal de los vientos esta determinado por las características orográficas de cada localidad, por la presencia de los distintos fenómenos en esa región, en sus escalas locales, regionales y sinópticas, y por las variaciones diurna y estacional de la incidencia de la radiación solar. La circulación general y regional, tanto de la atmósfera como del océano, juega un papel importante en el comportamiento del viento, sobretodo en las variaciones estacionales y anuales. Los fenómenos atmosféricos, incluyen movimientos que van desde milímetros hasta miles de kilómetros, y con duración de unos cuantos segundos hasta días, meses o estaciones, por esta razón existen modelos matemáticos para las distintas escalas tanto temporales como espaciales. En este trabajo, se consideró únicamente la escala anual, es decir, los valores promediados en todo el periodo de registro de las variables meteorológicas disponibles, obteniéndose un año característico o climatológico. El modelo que se aplico, fue para visualizar el perfil vertical del viento promedio anual, en cada una de las estaciones climatológicas seleccionadas.. Considerando, que la principal fuente para la generación de electricidad por medio de turbinas eólicas o aerogeneradores, es el viento, tendremos que analizar esta variable meteorológica con mucho detalle. El viento es aire en movimiento, cualquier objeto que se mueve tiene energía cinética, el movimiento del aire, el viento, tiene esta energía, y ésta, es la que se utiliza para impulsar las aspas de un aerogenerador, también llamados convertidores de energía eólica. La ubicación de una granja eólica debe considerar que el viento tiene variaciones diurnas y estacionales, modificadas éstas por el tipo de terreno y la altura sobre el suelo, y el tipo de superficie, entre otros factores. A nivel mundial, la energía cinética total contenida en el viento es más de 80 veces que la energía consumida por el hombre. Desafortunadamente, sólo una fracción pequeña de este recurso se podría cosechar, debido a la amplia variabilidad espacio-temporal del comportamiento del viento. Es difícil estimar la cantidad total del recurso eólico (como fuente de energía eléctrica) que podría generar una granja eólica, éste total depende de muchos factores tales como la distribución de las magnitudes del viento local a lo largo del año, la disponibilidad de terreno adecuado para ubicar las turbinas de viento, la cercanía de las líneas de transmisión hacia los centros de consumo, en este caso Mexicali, Baja California, el porcentaje de eficiencia de la turbina eólica, y los costos de las turbinas eólicas tanto para su instalación como para su mantenimiento.
+
+8
+
+El aprovechamiento de la energía eólica, hoy en día, es una de las tecnologías más promisorias. Por ser abundante, una energía totalmente sustentable, además de que en su transformación en energía eléctrica, tiene grandes ventajas, entre las más importantes, se pueden mencionar: no produce, en general, contaminación alguna al agua ni al aire ni al suelo, no involucra substancias tóxicas o peligrosas, y no representa peligro alguno para los habitantes. Por estas razones, la energía eólica es considerada como una energía verde. De esta manera, cuando las turbinas eólicas, son impulsadas por la energía cinética producida por el viento, pueden producir energía eléctrica. Esto es, los grandes avances en el desarrollo tecnológico en aerodinámica, dinámica estructural y meteorología, han logrado hacer que la energía eólica haya alcanzado una superioridad considerable en relación a otro tipo de instalaciones productoras de energía eléctrica. Mientras que un aerogenerador utiliza 36 metros cuadrados, ó 0,0036 hectáreas, para producir entre 1,2 y 1,8 millones de kilovatios-hora anuales, una planta de biocombustible necesitaría 154 hectáreas de bosque de sauces para producir 1,3 millones de kilovatios-hora al año. Los paneles solares (células fotovoltaicas) precisarían un área de 1,4 hectáreas para producir la misma cantidad anual de energía, (DWIA, 2003). Para un proyecto de 300 MWh, como el que se pretende realizar en esta zona, se tienen que hacer consideraciones muy especiales para asegurar el máximo aprovechamiento de la energía eólica. Primeramente, es muy recomendable realizar un estudio del impacto ambiental que tendría la instalación de una granja de turbinas eólicas de estas dimensiones. Ya que, aunque no hay evidencias de una perturbación marcada del medio ambiente, si la pudiera haber en la producción de ruido o en la perturbación en la ruta migratoria de aves u otros animales que habiten en esa zona. Esto ha sucedido en otras regiones del mundo (Country Guardian, 2003), puede ser que en las regiones de nuestro estado si se tenga algún tipo de impacto al medio ambiente. Algunas consideraciones positivas son: ausencia de emisiones atmosféricas directas; el material con que están hechas las turbinas es totalmente reciclable; la energía invertida en la fabricación, instalación, operación y mantenimiento se recupera en menos de un año de operación; el área utilizada por una granja eólica es de 8-13 MW/km-2. Entre las consideraciones negativas están: la emisión de ruido, el impacto visual en el paisaje, erosión, impacto en las aves, y la interferencia con las telecomunicaciones. (Andersen, 1999). En el siguiente capítulo, se discuten los métodos de análisis utilizados, también se incluye una climatología muy general de la zona, la topografía del área de estudio, y se muestra una caracterización climática. Finalmente se discuten los resultados obtenidos.
+
+9
+
+METODOLOGÍA
+Descripción del Área de Estudio El establecimiento de una granja de generadores eólicos, debe contemplar varios aspectos determinantes para tener un aprovechamiento al máximo de la cantidad de energía en alguna zona determinada. Algunos de estos factores son: o cercanía a los centros de consumo, o localización de una zona con viento permanente o al menos que tenga una magnitud del viento promedio anual, mínimo de 5.5 a 6 m•s -1, o proximidad con las líneas existentes de abastecimiento de energía eléctrica, o consideraciones del uso futuro del suelo en esa región, La zona montañosa de La Rumorosa, fue seleccionada como una de las localidades potenciales por su cercanía con Mexicali, que es considerado como el principal centro consumidor, de la energía eléctrica, en el estado, particularmente durante el verano. Otro de los puntos importantes al considerar esta región, es que la red de la Comisión Federal de Electricidad, CFE, pasa por este sitio. En la Fig. 1, se muestra un mapa general de la zona de estudio. El cuadro sombreado dentro de la misma figura, señala la región que nos ocupa en este proyecto. Esta área, se encuentra delimitada, aproximadamente, de la siguiente manera: • • • • Al norte: Frontera de EUA Al sur: latitud 32° 25’ Al oeste: longitud: 115° 45’ Al este: longitud: 116° 20’
+
+Se obtuvieron los datos de elevación digital para esta región de estudio, dentro del presente proyecto. La Fig. 2, muestra una proyección tridimensional del área bajo estudio, así como, las ubicaciones geográficas de las estaciones climatológícas utilizadas, las cuales están señaladas con triángulos rojos. Los lugares donde se realizaron las prospecciones, fueron los siguientes: Ej. Jacumé, El Cóndor, El Hongo y La Rumorosa, Baja California, y también, se visitó el poblado de Jacumba, perteneciente al condado de San Diego, California, EUA, y que se ubica al norte del Ejido Jacumé.
+
+10
+
+Los registros diarios de viento (velocidad y dirección) para cada una de las siete estaciones climatológicas, fueron capturados, procesados y analizados. Estos datos fueron obtenidos de la Comisión Nacional del Agua, CNA. Con estos registros diarios magnitud y dirección del viento, se obtuvieron los promedios mensuales y anuales, y las rosas de viento, para cada una de las estaciones climatológicas. El análisis de esta información se presenta en el capítulo de resultados. Desafortunadamente, no se encontraron datos de humedad, radiación solar, y algunos otros elementos climáticos que pudiesen ser relevantes en este proyecto. Por lo cual es urgente la instalación de una o varias estaciones meteorológicas automáticas, que permitan recolectar estos datos in situ.
+
+Fig. 1, Mapa regional de la parte noroeste de Baja California, México. El rectángulo sombreado enmarca el área de la Rumorosa. (Mapa obtenido de MapPoint de MS)
+
+11
+
+Fig. 2.- Modelo de elevación digital, muestra el relieve tridimensional de la región noroeste de Baja California. Este mapa se elaboró con la información proporcionada por INEGI. Los información de los vientos mensuales, utilizados para graficar los datos de viento sinóptico a diferentes alturas, a decir superficie, a 925 y 850 milibares, fueron los generados por el proyecto Reanálisis de los Centros Nacionales de Protección al Ambiente, NCEP, y puestos en línea por NOAA-CIRES Climate Diagnostics Center, CDC, en Boulder, Colorado, USA, en su página de internet (http://www.cdc.noaa.gov). El proyecto, incorporó los datos disponibles de todos los radiosondeos y globos piloto, asi como datos de superficie, barcos, aviones, satelites, y otras fuentes de datos, (Schwarz, 1999). Este centro cuenta con datos para cada componente del viento (zonal y meridional) desde el año 1948 a la fecha. Los datos son globales y se encuentran dispuestos en una malla regular de 2.5 X 2.5 grados latitud y longitud. Se realizaron programas de interpolación para obtener una mejor resolución del campo de viento en la región de estudio. El período de los datos es de 11 años partiendo de enero de 1992 a diciembre del 2002. Estadísticas Climatológicas y Caracterización Climática En el presente estudio, se utilizaron principalmente los datos de la Comisión Nacional del Agua, CNA. Se compararon estos datos con algunas estaciones meteorológicas automáticas del vecino país. Los datos meteorológicos y climatológicos obtenidos, se les aplicaron las pruebas estadísticas necesarias para validar su utilización en este estudio. Aplicándoles algunas pruebas de control de
+
+12
+
+calidad, para desechar aquellos datos inconsistentes. Las variables que se analizaron, fueron: temperatura (máxima, media y mínima), precipitación total mensual, número de días con heladas, número de días con precipitación mayor de 1 mm, etc. Las estaciones climatológicas utilizadas en el presente estudio, así como su ubicación geográfica y el periodo con registro, se encuentra en la Tabla I. Tabla I.- Estaciones climatológicas utilizadas en el presente proyecto Latitud (norte) Ej. Jacume La Rumorosa Ej. José Ma. Pino Suárez El Hongo La Puerta El Centinela El Pinal 32° 35’ 26” 32° 32’ 55” 32° 22’ 22” 32° 30’ 59” 32° 32’ 28” 32° 34’ 38” Longitud (oeste) 116° 11’ 30” 116° 02’ 47” 116° 04’ 05” 116° 18’ 10” 116° 40’ 42” 115° 41’ 30” Altitud (msnm) Periodo ( años )
+
+888 1993-1996 1232 1948-1989 1345 1978-2000 960 1978-2000 480 1948-2000 50 1975-1998 1350 1964-1994
+
+32° 11’ 00” 116° 17’ 30”
+
+Algunas de las estaciones climatológicas seleccionadas, presentan falta de datos en sus registros, estos “huecos” pueden ser desde un solo mes hasta años completos de datos. Estas consideraciones fueron tomadas en cuenta en la elaboración del análisis estadístico. A continuación, se mostraran algunos ejemplos de los resultados de las estadísticas básicas para los parámetros temperatura y precipitación. El resto de las graficas obtenidads se ecuentra en el Apéndice A. Y en los siguientes párrafos, se presentará el ejemplo más sobresaliente de cada uno de esos parámetros. En la Fig. 3, se muestran los valores mensuales promedio de las temperaturas: máxima, media y mínima, para la estación climatológica del Ejido Jacumé. Esta estación, muestra la oscilación térmica critica mas alta de todas las estaciones, con un valor de 47.3 °C. Ya que la temperatura mínima promedio para el mes de diciembre es de -6.3 °C y el mes mas calido, julio, tiene un valor de 41.0°C. Las graficas para el resto de las estaciones climatológicas, se muestran en la figura 3.1 en el Apéndice A.
+
+13
+
+Fig. 3.- Muestra las temperaturas: máxima (barras de color rosa), media (barras moradas), y mínima (barras azul claro), para la estación climatológica del Ejido Jacumé. En el caso de la precipitación, se puede mencionar que las estaciones climatológicas de La Rumorosa, El Pinal, Ejido Pino Suárez, El Hongo y, prácticamente, Ejido Jacumé, presentan un tipo de distribución bimodal, es decir, que se tiene lluvia en invierno y en verano, aunque esta última se presente con un valor menor. Lo anterior se puede apreciar, principalmente en los meses de enero, febrero y marzo, para invierno; y para verano, en julio, agosto y septiembre. El caso más representativo, se muestra en la Figura 4. En esta figura, se puede ver como es la precipitación media mensual en el Ejido José María Pino Suárez. Se puede mencionar el caso de la estación climatológica de El Centinela, que presenta los valores más bajos de precipitación, para las siete estaciones. Al igual que las temperaturas, el resto de las graficas para la precipitación, se muestran en el Apéndice A.
+
+14
+
+Fig.- 4. Precipitación media mensual para el Ejido José Maria Pino Suárez. Se puede ver la distribución bimodal de la precipitación. Los datos mensuales del número de días con precipitación, para la estación de El Pinal, se muestran en la figura 5. Aquí, se puede observar que el mayor número de días se presenta en los meses de invierno, desde el mes de noviembre hasta abril. Los meses de verano, julio, agosto y septiembre, incluso octubre, presentan un promedio considerable para los más de 30 años de registro para este lugar.
+
+15
+
+Al igual que la Fig. 5, la estación de El Pinal presenta la mayor cantidad de precipitación en un periodo de 24 horas (precipitación máxima en 24 horas). En el mes de febrero, se presenta el valor máximo 37 mm, aproximadamente. Es evidente el carácter bimodal de la precipitación en este lugar, ya que en el mes de agosto se presenta un valor de 13.3 mm. Se observa lo anterior, en la Figura 6.
+
+Fig. 6.- La precipitación máxima en 24 horas, para la estación climatológica de El Pinal. Para el caso del número de días con heladas, el Ejido J. Ma. Pino Suárez, es el caso más representativo de las estaciones procesadas. Los valores máximos se presentan en los meses de diciembre y enero, como puede observarse en la figura 7. No obstante, los meses de noviembre, febrero y marzo, también presentan valores de más de 15 días con heladas, en un promedio de 31 años.
+
+16
+
+Fig. 7.- El Ejido José María Pino Suárez, presenta los valores más altos en la incidencia de heladas en un periodo de 31 años de registros.
+
+Clasificación Climática
+En la Fig. 8, se muestran los diferentes tipos de clima que se presentan en la región norte de Baja California. Se utilizó la clasificación del Sistema Köppen modificado por Enriqueta García de Miranda. Como puede observarse, la zona de estudio es caracterizada por tres tipos de climas: el de tipo BSks, que prácticamente va desde la costa oeste de Baja California hasta las faldas de la Sierra Juárez, y que es un clima del tipo seco con un subtipo mediterráneo templado, con lluvias principalmente en invierno, y con un porcentaje de lluvias invernales mayor de 36 %. El segundo tipo de clima que se presenta es Cs, rodea prácticamente a la parte mas alta de la sierra, es del tipo templado subhumedo con lluvias en invierno, y con porcentaje de lluvias invernales mayor de 36 %. El tercer tipo, es el C(E)s(x’), es decir un clima semifrío subhumedo con lluvias principalmente en invierno, con un porcentaje de lluvias invernales menor de 26 %.
+
+17
+
+Fig. 8.- Clasificación Climatológica del Sistema Köppen, modificado por Enriqueta García, (tomada del Atlas del Medio Ambiente, INEGI, 1988). Las características del clima tipo BWks(x’), que se presenta al este del área de estudio, la zona escarpada de la rumorosa, son: clima seco templado de latitudes medias desértico, con lluvia de invierno, principalmente, y con un porcentaje de lluvias invernales menor del 36 %. El clima de la Laguna Salada, es del tipo muy seco semicálido, con precipitación invernal, y porcentaje menor de 36 % de la lluvia de invierno. El clima para el Valle de Mexicali, es muy similar al de la Laguna Salada, es del tipo seco semicálido, y lluvias en invierno, y estas lluvias con porcentaje menor a 26 %. Fundamentalmente, los elementos climáticos utilizados, para la clasificación climática, fueron: la precipitación y temperatura (máxima, media y mínima). A continuación se presentan los resultados de las estadísticas del viento.
+
+18
+
+Estadísticas y Modelo Matemático del Viento Los vientos son producidos por las variaciones de temperatura y presión atmosféricas provocadas por la radiación solar durante el día. Estos patrones del viento coinciden con la demanda de electricidad durante el día. Durante la noche, las variaciones de temperatura son menores, por ende los vientos son menos intensos. No obstante, los vientos geostróficos (o vientos globales) determinan la dirección prevaleciente y la magnitud en una área, los vientos superficiales (mas o menos hasta 100 m de altura) tales como la brisa marina o los vientos de montaña son factores clave para estimar el contenido de energía utilizable en un lugar particular, (AWEA, 1999). La dirección del viento esta influenciada por la suma del viento global y los efectos locales, cuando los vientos de escala sinóptica son débiles, los vientos locales dominan los patrones de viento. Para la generación de los mapas sinópticos de viento, se procesaron las matrices de los datos obtenidos del proyecto de Reanálisis, del Nacional Centers for Environmental Prediction, NCEP, y del Nacional Center for Atmospheric Research, NCAR. Una vez que se tuvieron listas las matrices, cada una de ellas es procesada individualmente. Con estos datos bien podríamos crear el campo de viento, solo que la resolución como ya se mencionó sería de 2.5 grados. Esto no serviría de mucho pues el área de la zona de estudio es incluso más pequeña que dicha resolución. Por lo tanto fue necesario hacer una malla más fina. La nueva malla (malla 2) tiene una resolución de 1 X 1 grado de latitud y longitud, pero ésta incluso se podría refinar aún más. En la Fig. 9, se muestran los resultados de los datos de escala sinóptica, interpolados para la zona noroeste de México y suroeste de EUA. Las variaciones estacionales pueden observarse con mayor claridad entre el verano (julio, agosto y septiembre) y el invierno (noviembre, diciembre y enero). En esas estaciones del año, el calentamiento diferencial de la radiación solar es un evidente factor que determina la circulación general de la atmósfera. Los valores en cada uno de los puntos de la malla 2, se infieren utilizando el método de interpolación cúbica. La efectividad de este método de interpolación, depende en gran medida de los puntos que se tengan en consideración para hacer dicha interpolación. Es por estar razón, que se decidió utilizar todos los puntos de la malla original, proporcionando así una mayor confiabilidad del método. Ahora bien, cada una de las nuevas bases de datos, constituyen un arreglo matricial de 181 filas por 359 columnas, que corresponden a los datos interpolados en cada uno de los puntos de la malla 2. Con estos nuevos datos, se calcularon las resultantes del viento de tal forma que se pudiera contar con un campo de viento de mayor resolución, que los ofrecidos en línea por diversas instituciones, como por ejemplo los de la NOAA.
+
+19
+
+Figura 9.- Mapas del viento sinóptico con los datos obtenidos del Nacional Centers for Environmental Prediction, NCEP. Estos mapas, fueron elaborados con 10 años de registros.
+
+20
+
+Datos diarios Se mencionó anteriormente que este trabajo requiere de una descripción detallada, razón por la cual es necesario contar con datos medidos. Es por ello que fue indispensable recurrir a los datos climatológicos que están disponibles en la Comisión Nacional del Agua (CNA), con sede en Mexicali. El día de visita a esta institución y en acuerdo con los requerimientos de este estudio, se consideró necesario contar con los datos de 7 estaciones climatológicas, cubriendo así de la mejor manera la zona de interés. Las estaciones solicitadas, su situación geográfica y su período de funcionamiento se resumen en la Tabla II.
+Tabla II. Situación geográfica y período de funcionamiento de las estaciones.
+Situación geográfica Período de observación Latitud Longitud Altitud (m) Inicio Fin Jacumé 32° 30' 00'' 116° 10' 00'' 890 Nov-73 Abr-96 Rumorosa 32° 31' 30'' 116° 04' 00'' 1200 Ene-48 Ene-87 La puerta 32° 30' 38'' 116° 40' 42'' 480 May-48 Dic-02 El Hongo 32° 30' 59'' 116° 18' 10'' 960 Dic-78 Dic-02 El Centinela 32° 34' 38'' 115° 44' 31'' 50 Ago-75 Junio-01 El Pinal 32° 11' 00'' 116° 17' 30'' 1350 Jun-64 Ene-94 J. Ma. Pino Suárez 32° 22' 22'' 116° 04' 05'' 1350 Sep-81 Abr-96 Estación
+
+Los datos de viento disponibles en los registros climatológicos son, la magnitud y dirección del viento a la hora de la medición (8:00 AM) y la magnitud y dirección prevaleciente en las 24 horas anteriores. A pesar de la disponibilidad de los datos, estos no se encuentran en forma digital, por lo que fue necesario sacar copias de los registros y proceder a digitarlos. El proceso de fotocopiado y captura de los datos llevo un tiempo aproximado de dos semanas, y requirió la contratación de 4 personas con la finalidad de tener los datos listos en el menor tiempo posible. Durante el trabajo de captura se encontraron los siguientes inconvenientes: hojas mensuales faltantes; fotocopias poco legibles; datos de dirección más no de magnitud y viceversa, y alguna incertidumbre de los datos de magnitud. En este último punto, hace alusión a que a pesar de que existe una uniformidad de los símbolos para designar las magnitudes del viento, dicha uniformidad no es posible mantenerla en todo los observadores, de tal forma que cada observador hace un símbolo parecido más no el mismo, y la interpretación de dicho símbolo también dependerá del capturista de los datos. Hoy día, este error se subsana con las estaciones automáticas, pues guardan en forma electrónica los datos. Además es posible tener los datos en tiempo real si a estas estaciones se les implementa el sistema de telemetría. Cabe mencionar que todos los datos en los cuales no se tenía certeza por la poca legibilidad de los datos, fueron eliminados. Asimismo la mayoría de las
+
+21
+
+líneas que sirven para designar la magnitud del viento, debido a la imprecisión de los símbolos fueron tomadas como múltiplos de diez. En las Figuras 10 y 11, se muestran las rosas de viento para la estación climatológica en el Ejido Jacumé.
+ENERO ABRIL
+
+17 17 14 24
+
+JACUME
+14 13 22 20 10 14 11
+
+61
+10 16
+
+56
+
+20 18
+
+FEBRERO
+
+MAYO
+
+18 18 17 17 24 10 22 13 19 10 15 12
+
+65
+13
+
+61
+
+19 18
+
+MARZO
+
+JUNIO
+
+15 18
+
+10
+
+16 11 10 10 14
+
+12
+
+17 10 18
+
+55
+14
+
+63
+13
+
+17 20 % Frecuencias
+
+0
+
+10
+
+20
+
+30
+
+22
+
+JULIO
+
+OCTUBRE
+
+JACUME
+13 10 13 70 13 14 13 15 13 16 14 20 15 15 10 10 13
+
+70
+
+AGOSTO
+
+NOVIEMBRE
+
+10 20 11 69 13 14
+
+15 10 15
+
+16 19 12 20
+
+63
+20 15
+
+18
+
+SEPTIEMBRE
+
+DICIEMBRE
+
+15 15 15 13 12 14 18 20 14 16 18 14 18
+
+74
+
+67
+15
+
+% Frecuencias
+
+0
+
+10
+
+20
+
+30
+
+Una turbina eólica convierte la fuerza del viento en una torca que gira las aspas de la turbina, las cuales están conectadas al vástago de un generador eléctrico. La cantidad de energía que el viento transfiere a las aspas depende de la densidad del aire, el área del aspa y de la rapidez del viento. La velocidad del viento determina cuanta energía hay disponible para la conversión a electricidad. Generalmente, para establecer una granja eólica se buscan localidades con una
+
+23
+
+velocidad del viento media anual de 5.5 a 6 m•s-1, esta magnitud, medida a la altura del dinamo de la turbina por ejemplo a 60 m, (AWEA, 1998). De particular importancia, son los datos de temperatura, presión y viento. Idealmente, para este último, se requiere que los datos sean tomados en por lo menos dos alturas (3 y 10 metros) sobre la superficie, que se tengan promedios cada 10 minutos y por lo menos un año de registro continuo, para contemplar las variaciones estacionales. Idealmente, las mediciones de viento deberían realizarse a la altura del aerogenerador. Se obtuvieron los datos diarios del viento (magnitud y dirección). Estos datos se capturaron, El viento promedio diario, mensual y anual se obtendrá a partir de los datos disponibles. Como se sabe, los valores mensual y anual enmascaran la verdadera velocidad del viento, y este factor es importante para el diseño de una granja de turbinas eólicas. Para solucionar este problema, es necesario utilizar la distribución de probabilidad de la rapidez del viento para un año. Para ello se utilizan valores horarios (o cada 10 minutos, idealmente). La descripción estadística climática del viento para un lugar, deberá realizarse con por lo menos 10 años de datos, esto para una mejor representación estadística, y considerar variaciones anuales. Varias distribuciones estadísticas han sido aplicadas a los datos de viento. La Distribución Weibull, que se ha encontrado que se ajusta con una mayor precisión, a la descripción estadística de este elemento meteorológico. La Distribución Weibull se determina mediante la siguiente expresión matemática:
+k ⎛u⎞ Φ= ⎜ ⎟ c⎝c⎠
+k −1
+
+⎛ ⎛ u ⎞k ⎞ exp⎜ − ⎜ ⎟ ⎟ ⎜ ⎝c⎠ ⎟ ⎝ ⎠
+
+donde: u es la rapidez del viento, c es el parámetro de escala (con unidades de velocidad), y k es el parámetro de forma (adimensional). Resolviendo esta ecuación, se puede encontrar que c esta muy relacionado a la rapidez media del viento, del sitio en cuestión. 1⎞ ⎛ u = cΓ ⎜1 + ⎟ k ⎠ ⎝ donde: Γ es la Función Gamma Incompleta Similarmente:
+
+u
+
+n
+
+n⎞ ⎛ = c nΓ ⎜1 + ⎟ k ⎠ ⎝
+
+24
+
+y, por ende
+
+u
+
+3
+
+3⎞ ⎛ = c 3Γ ⎜1 + ⎟ k ⎠ ⎝
+
+De esta manera, la densidad de energía disponible se obtiene de la siguiente expresión:
+
+Ε=
+
+3⎞ 1 3 ⎛ ρc Γ ⎜ 1 + ⎟ 2 k⎠ ⎝
+
+donde E es la densidad de energía en Watts / m². El factor de forma k esta relacionada a la varianza del viento por medio de:
+
+⎡⎛ 2 ⎞ ⎛ ⎛ 1 ⎞ ⎞ 2 ⎤ σ = c ⎢⎜1 + ⎟ − ⎜ Γ⎜1 + ⎟ ⎟ ⎥ ⎜ ⎟ ⎢⎝ k ⎠ ⎝ ⎝ k ⎠ ⎠ ⎥ ⎣ ⎦
+2 2
+
+La descripción matemática de la frecuencia del viento nos permite conocer la curva de energía de la turbina eólica. Así se puede obtener un promedio de la energía total capturada en un año. Dando como resultado, que con esto se pueden elegir algunas características de la turbina para maximizar el total de energía capturada. Uno de los aspectos importantes del análisis del viento, es su variación con respecto a la altura. La mezcla turbulenta en la atmósfera puede considerarse de igual manera que la mezcla molecular (esta es la Teoría K). Suponiendo que la mezcla esta dominada por una mezcla mecánica debido a las fuerzas de cizallamiento, la relación de la velocidad del viento con la altura se obtiene de:
+
+u=
+
+u* ⎛ z − D ⎞ ⎟ ln ⎜ k ⎜ z0 ⎟ ⎠ ⎝
+
+donde: u* es la velocidad de fricción, k es la contando de von Karman, z0 es la medida de rugosidad y D es la altura del desplazamiento. La Constante de von Karman, k, se toma generalmente como 0.4. La medida de rugosidad z0, esta relacionada con la superficie del suelo (si hay vegetación, rocas, agua, etc.). La altura del desplazamiento, D, es la altura por encima de los elementos de la superficie donde el flujo esta libre de su influencia.
+
+25
+
+La velocidad del viento, a cualquier altura puede calcularse a partir de la velocidad del viento a una altura conocida, zR:
+⎛ z ln ⎜ ⎜ z 0 ⎝ ⎛ z R ln ⎜ ⎜ z 0 ⎝ ⎞ ⎟ ⎟ ⎠ ⎞ ⎟ ⎟ ⎠
+
+u u R
+
+=
+
+donde uR es la velocidad del viento a la altura de referencia zR. La altura de referencia normalmente es de 10 m, la altura a la cual el viento medio es medido. Algunas veces, se utiliza la Ley de la Potencia para describir el incremento de la velocidad del viento con la altura, la cual es más fácil de evaluar:
+
+⎛ z − D ⎞ u ⎟ = ⎜ ⎜ z ⎟ uR R ⎝ ⎠ donde α es el exponente de la Ley de Potencia. Este exponente, generalmente varia entre 0.1 y 0.32, dependiendo del tipo de superficie. El exponente puede calcularse a partir de la medida de rugosidad:
+⎛ ⎛z ⎞ ⎞ ⎜ ln⎜ z ⎟ ⎟ ⎝ 0⎠ ⎟ ln⎜ z ⎜ ln⎛ R ⎞ ⎟ ⎜ z ⎟⎟ ⎜ 1 0 ⎠⎠ ⎝ α= ⎝ ≈ ⎛z ⎞ z • zR ln⎜ ⎟ ln ⎝ zR ⎠ z0
+
+α
+
+donde: z es la altura de medición, zR es la altura de referencia y z0 es la altura de rugosidad.
+
+26
+
+RESULTADOS
+Marcha Anual del Viento
+Un buen ejemplo del comportamiento del viento en la region de estudio, a lo largo del año, se presaenta en las Figuras 12 y 13, que representan las rosas de viento para la estacion climatológica de La Rumorosa. En particular, podemosEn las Figuras 10 y 11, se muestran las rosas de viento para la estación climatológica en el .
+
+27
+
+ENERO
+
+ABRIL
+
+RUMOROSA
+15 15 18 15 16 14 14 14 13 19 15 21
+
+7
+16 21
+
+15
+
+21
+
+4
+
+FEBRERO
+
+MAYO
+
+15 14 20
+
+15 17
+
+14 14 14 19
+
+4
+16 20 15
+
+7
+13 20 20
+
+14
+
+MARZO
+
+JUNIO
+
+14 18 20
+
+15 17 17 18 17
+
+15
+
+13 15 17
+
+4
+
+4
+
+21
+
+18
+
+15 17
+
+% Frecuencias
+
+0
+
+10
+
+20
+
+30
+
+28
+
+JULIO
+
+OCTUBRE
+
+RUMOROSA
+12 12 15 11 12 12 12 12 12 16 14 18 14 12 14 14
+
+12
+
+8
+
+AGOSTO
+
+NOVIEMBRE
+
+13 11 11 14 11 12 12 10 18 14 13 14 18 13
+
+8
+
+7
+15
+
+14
+
+SEPTIEMBRE
+
+DICIEMBRE
+
+13 13 16
+
+13 17 14 12 16 17
+
+15
+
+15
+
+11
+16 13
+
+8
+15
+
+14
+
+16
+
+% Frecuencias
+
+0
+
+10
+
+20
+
+30
+
+29
+
+Influencias de Escala Sinóptica, Regional y Local, y Fenómenos Diversos
+La región de estudio, se encuentra localizada dentro del cinturón de las altas presiones, el cual se manifiesta alrededor de los 30° de latitud, de ambos hemisferios, norte y sur. En particular, esta región, recibe una gran influencia del sistema anticiclónico del pacifico nor-oriental, que oscila dependiendo la época del año. Durante el invierno, la influencia de los fenómenos de escala sinóptica, se muestran en la Fig. 12.
+
+Fig. 12.- Esta figura, muestra la Circulación General de la Atmósfera. Puede observarse como la región de estudio, se encuentra bajo la influencia de las Celdas de Hadley, para el hemisferio norte. El aire que desciende en estas regiones, tiene bajo contenido de humedad. Como resultado de la circulación general de la atmósfera, se forman centro de acción, que sobre los océanos tienden a ser semipermanentes, conocidos como anticiclones o centros de alta presión atmosférica (se les asocia una circulación de los vientos conforme las manecillas del reloj, en el hemisferio norte), con pequeñas oscilaciones estacionales, y en los continentes, se observa una clara alternancia de centros de alta y baja presión. Esta alternancia, da origen a circulaciones muy particulares, conocidas como monzónicas, (Reyes, 2002).
+
+30
+
+En particular, la región noroeste de Baja California, se encuentra influenciada por una circulación monzónica, conocida como El Monzon Mexicano o también El Monzón de Norteamérica. Reyes (2001), en su libro menciona que, ‘las características y efectos de esta circulación monzónica sobre el clima de la región, muestran que el mayor porcentaje de la humedad está contenido en los niveles inferiores de la troposfera y se asocian a los máximos de precipitación de verano del noroeste mexicano y suroeste de EUA. Continua Reyes en su trabajo, describiendo el campo de viento, que en los niveles superficiales la atmósfera es relativamente mas baroclínica y estable, detectándose la circulación monzónica con flujos atmosféricos provenientes del este (Golfo de México), y vientos del suroeste provenientes del Pacifico tropical oriental, esto alrededor de los 900 mb. En la Figura 13, se presentan los promedios para 10 años de datos reanalizados. La utilización de datos “reanalizados”, en el caso particular del viento, sirve para generar información adicional a los datos medidos en superficie, también para tener una idea de cómo es el patrón del viento en terrenos muy complejos, donde son escasas o nulas las observaciones de superficie, (Schwarz, 1999). Es el caso de la región de estudio, donde, debido a lo extremoso de las condiciones climáticas, no se cuenta con una red información meteorológica homogénea. Los campos de viento promedio sobre los 11 años de datos y para los tres niveles de la atmósfera (superficie, 925 mb, y 850 mb) son mostrados en las figuras (13). Se muestra una zona comprendida entre los 30 y 35 °N y los 112 y 120 °W, cubriendo de esta manera el área de interés. En éstas figuras, es posible apreciar un régimen estacional del viento, con vientos promedio de ~ 4 m/s (2 m/s) durante el verano-otoño (invierno-primavera). Estos mapas mensuales proporcionan una idea global del viento en la zona de interés. No obstante, resulta necesario para efectos de este trabajo contar con una descripción más detallada, y aunque en principio se pudiera hacer con una interpolación más fina, es conveniente contar con datos medidos.
+
+31
+
+Figura 13.- Mapas del viento sinoptico para la region noroeste de Baja California, y suroeste de los EUA. Se pueden apreciar los contrastes entre el verano(julio,agosto y septiembre) y el invierno (diciembre, enero y febrero).
+
+32
+
+Fenómenos de Escala Regional El desplazamiento del anticiclón del pacifico nor-oriental hacia el este, es decir hacia el continente, produce fenómenos de recurrencia anual, algunas ocasiones con una fuerte intensidad, y otras, no tanto. Estos fenómenos, conocidos en la región como Vientos Santana, producen tormentas de arena y en un momento dado podrían afectar el funcionamiento eficiente de las turbinas eólicas. Puesto que transportan grandes cantidades de arena de las zonas desérticas. Un ejemplo de este fenómeno, lo pdemos observar en la fig. 15.
+
+33
+
+34
+
+Modelo Matemático y Densidad Energética del Viento
+En la Fig. xx, se presenta uno de los resultados mas importantes del presente trabajo, ya que muestra que en todos los sitios donde se localizan las estaciones climatológicas, se tienen unas condiciones de viento muy favorables para la generación de electricidad por medio de turbinas eólicas. Fig. xx, Muestra los resultados del modelo matemático, aplicado a cada una de las estaciones climatológicas utilizadas en el presente trabajo.
+
+35
+
+Estación La puerta La Rumorosa El Centinela El Hongo El Pinal Jacume Pino _ Suárez
+
+Media (nudos) 11.5 14.9 17.2 12.0 11.7 15.5 20.2
+
+Media m/s 6.2 8.0 9.3 6.5 6.3 8.3 10.9
+
+Desv. Std 2.5 4.0 4.9 2.6 2.9 3.7 4.5
+
+Energía (W•m2) 238.2 516.4 793.7 274.0 254.7 581.6 1299.6
+
+Zonas Propuestas para Establecer una Granja Eólica
+
+36
+
+37
+
+CONCLUSIONES Y RECOMENDACIONES
+
+Se debe tener en cuenta, que al no existir una red de estaciones meteorológicas automáticas, en esta región (i. e. sensores de viento a 10 m sobre la superficie del suelo, con registro continuo, o idealmente, promedios cada 10 minutos, etc.), los resultados de este estudio son muy generales y servirán para diseñar un experimento riguroso y formal, que arroje resultados técnicos y científicos para ser utilizados de manera adecuada y lograr el objetivo final, generación de electricidad con el aprovechamiento de la energía proporcionada por el viento, esto con la mayor eficiencia posible. El viento varia durante el día, la época del año, la altura sobre el suelo, y por el tipo de terreno. Un área con una superficie rugosa y con obstáculos, puede también ser determinante en el aprovechamiento de este recurso. Una gran rugosidad de la superficie del suelo y grandes obstáculos en la trayectoria del viento, dan como resultado una disminución de la velocidad del viento creando
+
+38
+
+turbulencia, por lo tanto, disminuyendo la cantidad de energía cinética que pudiera ser transformada a electricidad por el aerogenerador La cantidad de lluvia durante los meses de verano, julio, agosto y septiembre, es importante, denotando que las tormentas convectivas durante el verano son considerables. Aquí, es importante resaltar que el número de días con lluvia también es importante durante el verano, con ello se puede inferir, que las tormentas eléctricas se presentan frecuentemente en esta zona.
+
+Una granja eólica, difiere de un sistema convencional productor de electricidad. En un sistema convencional, el operador puede controlar la cantidad de electricidad generada. La generación de electricidad de una granja eólica, no puede controlarse, debido a las fluctuaciones del viento, (Mujaljadi, 2002).
+
+Las pendientes deben de ser suaves, para que no se forme turbulencia, eso disminuye el rendimiento de la turbina.
+
+39
+
+APÉNDICE Apéndice A.- Estadísticas de Climatológicas
+Las siguientes figuras muestran los valores mensuales promedio de temperatura, precipitación total, precipitación total en 24 horas, número de días con precipitación mayor o igual a 0.1 milímetro, y numero de días con heladas. Figura 3.1.- Temperaturas mensuales máxima, media y mínima
+
+40
+
+Figura 3.2.- Gráficas de Precipitación Promedio Mensual
+
+41
+
+Figura 3.3.- Graficas de la Precipitación Máxima Ocurrida en 24 horas.
+
+42
+
+Figura 3.4.- Graficas del Número de Dias con Precipitación Mayor o Igual a 0.1mm.
+
+43
+
+Figura 3.5.- Gráficas del Número de Días con Heladas.
+
+44
+
+Mapas Mensuales del Viento Sinóptico
+Figura 14.1.- Gráficas del Viento Sinóptico. Estos datos fueron obtenidos del NCEP, del Proyecto Reanálisis. El espaciamiento de los dados originales es de 2 grados de latitud por 2 grados de longitud. Aqui se muestran de un grado de latitud por un grado de longitud.
+
+45
+
+Figura 14.2.- Gráficas del Viento Sinóptico para el nivel de los 850 milibares. Estos datos fueron obtenidos del NCEP, del Proyecto Reanálisis. El espaciamiento de los dados originales es de 2 grados de latitud por 2 grados de longitud. Aqui se muestran de un grado de latitud por un grado de longitud. Como puede observarse durante los meses de verano (julio, agosto y septiembre) hay un marcado flujo del suroeste.
+
+46
+
+Rosas de Viento de las Estaciones Climatológicas Seleccionadas para este Proyecto.
+
+47
+
+48
+
+Bibliografía
+Andersen, D., Ph. D., 1999: ‘Review of Historical and Modern Utilization of Wind Power’. Risø National Laboratory. Wind Energy Department. DK-4000 Roskilde. Atlas del Agua de la República Mexicana, 1976, Secretaria de Recursos Hidráulicos. México D. F., pp 252. Country Guardian, 2003: ‘What’s Wrong With Windarms?, The Case Against Wind Farms’. Document at the WebSite: http://www.countryguardian.net/case.htm. DWIA, 2003: ‘21 Frequently Asked Questions About Wind Energy’. Danish Wind Industry Association, - Vester Voldgade 106 - DK-1552 Copenhagen V, DenmarkD.L.
+
+49
+
+Elliott and M.N. Schwartz, 1993: ‘Wind Energy Potential in the United States’. PNLSA-23109. Richland, WA: Pacific Northwest Laboratory. NTIS no. DE94001667. Muljadi, E., Y. Wan, C.P. Butterfield, and B. Parsons, 2002: ‘A Study of a Wind Farm Power System’. Preprint, January 2002 • NREL/CP-500-30814. To be presented at the 21st American Society of Mechanical Engineers Wind Energy Symposium Reno, Nevada January 14–17, 2002 National Renewable Energy Laboratory. Golden, Colorado 80401-3393,NREL is a U.S. Department of Energy Laboratory. García, E. y P. Mosiño, 1967: ‘ Los Climas de Baja California’. Decenio Hidrológico, Memorias 1966-1967. Mexico INEGI, 1988: ‘Atlas Nacional del Medio Físico’. Impreso en México. ISBN-968-892278-1. MapPoint, 2002. Sofware de Microsoft Corp. Milligan, M. R. & R. Artig, ‘ Choosing Wind Power Plant Locations and Sizes Based on Electrical Reliability Measures Using Multiple-Year Wind Speed Measurements’, U. S. Association for Energy Economics Annual Conference, Orlando Florida, August 29-September 1, 1999. Miranda, R. F., 1987. ‘Caracterización de Zonas Climáticas Sinópticas en la Peninsula de Baja California. Tesis de Licenciatura, Fac. de Cs. Marinas, UABC. Miranda, R. F., S. Reyes, y J. García L. 1992. ‘Climatologia de la Región Noroeste de México (Baja California, Baja California Sur, Sonora y Sinaloa). Parte I.Precipitación: Series de Tiempo del Valor Mensual y Estadísticas del Año Climatológico. CICESE CIOFR9202, 179 pp. Petersen, E. L., N. G. Niels, G. Mortensen, L. Landberg, J Højstrup and H. P. Frank.: Wind Power Meteorology. Risø-I-1206(EN). Risø National Laboratory, Roskilde, Denmark. December 1997. Reyes, S., 2001: ‘Introducción a la Meteorología’. Mexicali, Baja California, México. UABC. ISBN-970-9051-44-X. pp 468. Reyes, S., F. Miranda, y J. García L. 1991. ‘Climatología de la Región Noroeste de México (Baja California, Baja California Sur, Sonora y Sinaloa). Parte II.Temperatura: Series de Tiempo del Valor Mensual y Estadísticas del Año Climatológico. 170 pp.
+
+50
+
+Schwartz, Marc N. & Dennis L. Elliot, ‘ México Wind Resource Assesment Project’. Prepared for Wind power ’95, Washington, D. C., March 27-30, 1995. Schwartz, Marc N. & Raymond L. George: ‘On the Use of Reanalysis Data for Wind Resource Assesment’. Presented at 11th Applied Climatology Conference, American Meteorology Society, Dallas, Texas. January 10-15, 1999. National Renewable Energy Laboratory. NRRL/CP-500-25610. Secretaria de Recursos Hidráulicos, 1976: ‘Atlas del Agua de la Republica Mexicana’. Editado en Mexico D. F., pp 252.
+
+51
+

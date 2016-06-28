@@ -1,0 +1,53 @@
+Vēja ģeneratoru iekārtu izmantošana patērētāju apgādei ar siltumenerģiju nozīmē šo iekārtu pieslēgšanu jau esošajai vietējai siltumapgādes sistēmai nelielās pilsētās vai lauku apdzīvotās vietās , kas atrodas vējainos apgabalos un kam , dažādu iemeslu dēļ , ir grūtības esošo apkures katlu apgādei ar kurināmo .
+
+
+Risinot šo jautājumu tika veikts teorētisks aprēķins , kurā , lai ar siltumenerģiju apgādātu 1000 m ³ lielu ēku , kā rezerves pieslēgumu 40 kW jaudas apkures katlam izmantoja vēja energoiekārta .
+
+
+Lai izveidotu apkures slodzes aprēķina grafiku , vispirms tika aprēķināts nepieciešamais siltuma patēriņš ēkā , ko galvenokārt ietekmē āra gaisa temperatūra un vēja ātrums .
+
+
+Siltuma patēriņa aprēķinu izdarīja vadoties no noteikuma : lai gaisa temperatūru telpā uzturētu vienmērīgu , jānodrošina vienādu siltuma zudumu un tā pieplūdi .
+
+
+Tāpēc aprēķināja atsevišķas dzīvojamās mājas siltuma izlietojumu apkurei vienas stundas laikā , ņemot vērā ēkas siltuma balansu .
+
+
+Praktiskie eksperimenti tika veikti Krievijas ZA Ziemeļu Kolas Enerģētikas fizikāli - tehnisko problēmu zinātniskā centra ( Центр физико - технических проблем энергетики Севера Кольского научного центра РАН , г . Апатиты ) vēja enerģētikas iekārtu testēšanas poligonā , Daļņije Zeļenci ciemā pie Barenca jūras .
+
+
+Primāro energoresursu ekonomija , izmantojot integrētās vēja ģeneratoru iekārtas ar 20 , 40 vai 60kW jaudu
+
+Vērtējot tika izskatīti trīs dažādas jaudas – 20 , 40 un 60 kW izmantojamo vēja ģeneratoru iekārtu varianti . Apkures katla jauda visos gadījumos palika nemainīga – 40 kW .
+
+
+Ja siltumapgādes sistēmai pieslēgta vēja ģeneratoru iekārta , tad daļa apkures slodzes grafikas būs pārsegta uz tās rēķina . Izmantojot 2007 . gada februārī , kad vidējais vēja ātrums bija 10 m / sek . , veiktā eksperimenta rezultātus , sastādīja apkures slodzes grafikus , ņemot vērā vēja ģeneratoru iekārtas darba daļu .
+
+
+Pamatojoties uz to , var izdarīt secinājumu , ka liela vēja ātruma periodos vēja ģeneratoru sistēma var zināmā mērā , vai pilnībā apmierināt siltumapgādes nepieciešamību , dažos gadījumos radot pat enerģijas pārpalikumu .
+
+
+Ja izmanto 20 kW jaudīgu vēja ģeneratora sistēmu , tad tā patērētāju ar siltumenerģiju var nodrošināt 52 % apmērā . Pavisam citādi ir , ja izmanto 40 un 60 kW jaudīgas vēja ģeneratoru sistēmas .
+
+
+Uz vēja ģeneratoru jaudas palielinājuma rēķina patērētāju ar siltumenerģiju var nodrošināt 85 - 90 % apmērā . Tas ļauj minimāli izmantot apkures katla ražoto siltumenerģiju , līdz ar to ievērojami ieekonomēt tradicionālo fosilo kurināmo un samazināt kaitīgo izmešu daudzumu atmosfērā , kas rodas tai sadegot .
+
+
+Apkopojot iegūto informāciju , secināts , ka maksimālu kurināmā ekonomiju panākama izmantojot 60 kW jaudas vēja ģeneratoru sistēmu , un vienā mēnesī ( februāris – 28 dienas ) tā var būt : 2 257 , 037 rubļu ( ja kā pamata apkures veids izmantota dabasgāze ) ; 2 257 , 188 rubļu ( ja kā pamata apkures veids izmantotas ogles ) ; 2 256 , 953 rubļu ( ja kā pamata apkures veids izmantots mazuts ) un 2 256 , 564 rubļu ( ja kā pamata apkures veids izmantota koksne ) .
+
+
+Secinājumi :
+
+1 . Vēja ģeneratoru iekārtas izmantošana ļauj lūkoties uz vēju ne tikai kā uz klimatisku faktoru , kas veicina siltuma zudumu ēkā , bet arī kā uz pilnvērtīgu enerģijas avotu , kas apgādā ar maksimālu enerģijas izstrādi , apmierinot apkures resursu trūkumu tieši savas vislielākās aktivitātes laikā .
+
+
+2 . Izmantojot vēja enerģiju ēku apkures mērķiem nav nepieciešams uzturēt augstu vēja ģeneratoru sistēmas izstrādāto enerģijas kvalitāti , ļaujot maksimāli vienkāršot pašu vēja ģeneratoru iekārtu , padarot to lētāku un drošu ekspluatācijai . Nepieciešams , lai saražotais enerģijas daudzums pietiktu siltuma slodzes nodrošinājumam .
+
+
+3 . Vēja ģeneratoru sistēmas izmantošana rajonos , kuros nav centralizēta siltuma apgāde , tā var nodrošināt 80 - 90 % no deficītā organiskā kurināma lietošanas , ar to uzlabojot apkārtnes ekoloģisko stāvokli .
+
+
+4 . Izmantojot vēja ģeneratoru sistēmas siltuma apgādē , ir radusies iespēja sekmīgi cīnīties ar vēja enerģijas galveno trūkumu – laika nevienmērību . Īslaicīgas ( sekundes un minūtes ) vēja stipruma izmaiņas vēja ģeneratoru sistēma var izlīdzināt uz siltumapgādes sistēmas akumulējošo spēju . Ilgstošākas vēja stipruma svārstības ( no dažām minūtēm līdz vairākām stundām ) var izlīdzināt uz pašu apkurināmo māju akumulējošām spējām . Ilgstošu pārtraukumu ( bezvēja ) gadījumā var ekspluatēt tradicionālā fosilā kurināmā apkures katlu .
+
+
+Pēdējās izmaiņas : Piektdiena , 11 janvāris 2008 19 : 10

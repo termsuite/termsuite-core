@@ -1,0 +1,162 @@
+Technical Description and Data of the Wind Turbine
+
+REpower 48/600
+
+REpower Systems AG, Hamburg Husum Rendsburg Trampe, Germany
+Dok.-Nr.:D-80.1-GP.SD.03-A-A-GB
+
+Technical Description REpower 48/600
+
+Table of Contents 1 Description of the Wind Turbine ............................................................................. 3 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 Design Concept............................................................................................... 3 Rotor ............................................................................................................... 3 Gearbox .......................................................................................................... 3 Brake System ................................................................................................... 4 Generator ........................................................................................................ 4 Yaw System ..................................................................................................... 4 Nacelle............................................................................................................ 5 Tower.............................................................................................................. 5 Corrosion Protection........................................................................................ 5
+
+1.10 Lightning Protection ........................................................................................ 5 1.11 Remote Data Monitoring ................................................................................. 6 2 3 4 Technical data.......................................................................................................... 7 Predicted power curve of REpower 48/600.............................................................. 8 Calculated annual energy production ...................................................................... 9
+
+Doc.-No.: D-80.1-GP.SD.03-A-A-GB
+
+2002-09-10
+
+page 2/9
+
+Technical Description REpower 48/600
+
+1
+
+Description of the Wind Turbine
+
+1.1 Design Concept
+The 48/600 wind turbine, type-tested by Germanischer Lloyd, has a nominal electrical power of 600 kW. The rotor diameter is 48.4 m, and power control is based on the "stall" principle. For the sake of smooth connection to the grid, a set of thyristors is interposed between the mains supply and the generator during the start phase. Even at inland sites with relatively low wind speed, the 48/600 attains very good production because of its large rotor and correspondingly high tower.
+
+1.2 Rotor
+The rotor consists of three blades rigidly flange-mounted on a cast hub. The overall diameter is 48.4 m giving a swept area of 1840 m². As a function of wind speed the rotational speed is 14 or 21 rpm. This matching of rotational speed makes the 48/600 particularly suitable for inland locations. The material of the blades is a glass-fibre reinforced plastic (GRP). Each blade tip is pivotable and can be turned 74 degrees to the main blade. The three blade tips are working by an independent hydraulic-system. The hydraulic-pressure is required to keep the tips in the operational position.
+
+1.3 Gearbox
+The gearbox is a planetary/spur gear system and meets all requirements of the Germanischer Lloyd classification society. These components are designed and constructed by an experienced transmission manufacturer in accordance with REpower specifications. The ratio is about 72. Wind turbines made by REpower Systems AG are distinguished by their particularly quiet running. Vibration dampers specially developed by us are used for the decoupling of structureborne noise. These guarantee maximum attenuation between gearbox and machine bed.
+
+Doc.-No.: D-80.1-GP.SD.03-A-A-GB
+
+2002-09-10
+
+page 3/9
+
+Technical Description REpower 48/600
+
+1.4 Brake System
+The blade tip adjustment works independently in each individual blade. If one system fails, the aerodynamic brakes in the other two blades continue to be active. Even at maximum output, extending and twisting just one blade tip is sufficient to bring the plant into the safe rotational speed range. In addition, there is a mechanical disk brake on the fast shaft between drive train and generator. The two braking systems, the aerodynamic and mechanical disk brake, work independently of each other. In order to guarantee safe braking even in the event of failure of individual components (the hydraulics, for example) or a mains failure, the braking systems are configured to be fail-safe. Besides this, an independent power supply is provided for the controller that guarantees safe braking of the wind turbine in the event of a voltage or grid failure.
+
+1.5 Generator
+The generator is a two-stage, pole-changeable asynchronous machine. Depending on wind speed, the first stage supplies up to 160 kW and the second up to 600 kW. The generator is of protection class IP 54. Cooling is effected by forced-air ventilation. Temperature sensors are installed both on the bearings and in the windings for monitoring the machine temperature. Various covers, e.g. on the fast shaft, make it impossible to come into contact with moving parts. The housing of the generator is earthed in order to provide equipotential bonding. The generator is elastically supported on the machine bed by noise and vibration-decoupling elements, for the sake of improved noise insulation and decoupling.
+
+1.6 Yaw System
+The nacelle is connected to the tower by means of a four-point bearing. Yawing of the nacelle is achieved by means of two electrical servo drives. Hydraulic brakes serve to secure the nacelle. In the case of grid failure the brakes are active. An electronic wind-direction sensor system with the corresponding software controls the switch-on times and the direction of rotation of the motors. It also operates the automatic cable untwisting when under varying wind direction the plant has turned repeatedly in one direction.
+
+Doc.-No.: D-80.1-GP.SD.03-A-A-GB
+
+2002-09-10
+
+page 4/9
+
+Technical Description REpower 48/600
+
+1.7 Nacelle
+The nacelle is fitted with a sound-proofed GRP covering. In order to provide optimal conditions for servicing and maintenance, the nacelle is of sufficiently large dimension. Maintenance work can be done even in poor weather without opening the nacelle covering. Access from the tower into the nacelle is gained via a hatch in the basic frame. There is additionally a maintenance platform for accessing the components underneath the basic frame. All components, as for example the azimuth system and the hydraulics, can be operated via the control panels of the nacelle. For safety there is an "emergency button".
+
+1.8 Tower
+The tower is made from steel piping and consists of three segments, regardless of the hub height. In accordance with regulations there are various assembly platforms in the tower as well as additional landings incorporated into the ladder. An internal ladder makes it possible to ascend regardless of the weather. The power cabinets are accommodated in the bottom of the tower and are thus protected against the effects of weather. The plant can be completely operated from here. For safety, an "emergency button" is provided here as well.
+
+1.9 Corrosion Protection
+All parts of the plant, from the tower through the machine bed and on to the nacelle covering, are protected by a special multiple coating against corrosion and other environmental influences. The coating system complies with all the requirements of DIN EN ISO 12944.
+
+1.10 Lightning Protection
+The rotor blades are fitted with a proven lightning protection system. Lightning is led away via receptors in the rotor tips and the "tip cables" connected to them, which control the blade tips. The lightning is transmitted to the bearing ring via slip-rings and air gaps on the main shaft. From there, the overvoltage is led off to the tower and finally into the ground via foundation earth electrodes and deep earth electrodes.
+
+Doc.-No.: D-80.1-GP.SD.03-A-A-GB
+
+2002-09-10
+
+page 5/9
+
+Technical Description REpower 48/600
+
+1.11 Remote Data Monitoring
+All the operational data for the wind turbine can be retrieved over a telephone connection (fixed ISDN network) using a modem. The remote data monitoring software is supplied when the wind turbine is erected. Some of the most important operational data that can be retrieved via remote data transmission are mentioned below:
+
+Momentary electrical power of generator Rotor and generator rotational speed Gearbox and bearing temperatures Hydraulic pressures (pitch adjustment of the blade tips, disk brake, etc.) Azimuth angle Momentary wind speed and direction Statistics: - daily, monthly and annual energy production figures - fault statistics, and much else.
+
+Faults can be detected and eliminated using these operational data. In addition, in the event of faults in plant operation, the corresponding error message is sent automatically to the responsible service point via remote data monitoring so that rectification of the fault is organised and performed without delay. Besides the fundamentally low liability to faults of the type 48/600 wind power plant, this automatic fault reporting assists in attaining high availability.
+
+Doc.-No.: D-80.1-GP.SD.03-A-A-GB
+
+2002-09-10
+
+page 6/9
+
+Technical Description REpower 48/600
+
+2
+
+Technical data
+3 13.5 20 50 , 65 or 75 3 48.4 glass fibre reinforced plastic (GRP) 1840 upwind 14 or 21 53 stall 3-stage planetary/spur gear system 72 600 or 160 1523 or 1010 pole-changeable asynchronous generator IP 54 690 approx. 9.45 approx. 25 kW min-1 m/s m/s m/s m
+
+Basic Design data Cut-in wind speed Rated wind speed Cut-out wind speed Hub height Rotor Number of blades Rotor diameter Material Swept area Rotor position Rotor speed Blade-tip speed Power control Gearbox Type Gear ratio Generator Nominal power Rotational speed Type Protection class Voltage Weights Rotor blades Nacelle incl. hub Braking systems Aerodynamic Mechanical Operating mode
+
+m m² min-1 m/s
+
+V t t
+
+three independent tip-brakes disk brake at the high speed shaft independent in "fail-safe" function
+
+All technical data are subject to modification due to ongoing technical development.
+
+Doc.-No.: D-80.1-GP.SD.03-A-A-GB
+
+2002-09-10
+
+page 7/9
+
+Technical Description REpower 48/600
+
+3
+
+Predicted power curve of REpower 48/600
+48.4 1.225 3.0 20 101 m kg/m³ m/s m/s dB(A)
+
+Rotor diameter Air density Cut-in speed Cut-out wind speed Noise level (95% of nominal power)* *measured in accordance with FGW Guideline Reference characteristic (basis of guarantee)
+
+wind speed v [m/s]
+3.0 4.0 5.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 14.0 15.0 16.0 17.0 18.0 19.0 20.0
+
+electrical output P [kW]
+2 20 52 88 152 239 318 418 490 556 590 605 610 605 600 590 580 570
+
+Based on: power curve measured on 13 March 2002 by Wind-consult GmbH, report 368LKB01
+
+Doc.-No.: D-80.1-GP.SD.03-A-A-GB
+
+2002-09-10
+
+page 8/9
+
+Technical Description REpower 48/600
+
+4
+
+Calculated annual energy production
+
+The calculated figures for annual energy production are indicative values under standard conditions. They cannot replace a site-based prediction.
+
+Wind speed at hub height [m/s]
+5 5.5 6 6.5 7 7.5 8
+
+annual energy production [MWh]
+841 1,086 1,319 1,552 1,800 2,015 2,234
+
+(information subject to change)
+
+Basis for the calculation: Wind speed at hub height air density 1.225 kg/m³ turbulence intensity 10% theoretical availability 100% Single plant Rayleigh distribution, k=2 roughness class 1 (roughness length 0.03 m)
+
+Doc.-No.: D-80.1-GP.SD.03-A-A-GB
+
+2002-09-10
+
+page 9/9
+

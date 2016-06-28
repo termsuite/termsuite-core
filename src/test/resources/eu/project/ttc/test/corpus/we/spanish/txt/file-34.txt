@@ -1,0 +1,118 @@
+DESARROLLO TECNOLOGICO DE MICROGENERADORES EOLICOS Autores: MSc. Ing. Teodoro Sánchez Campos, Ing. Saúl Ramírez Atahui,
+
+I. INTRODUCCION El viento es una las fuentes de energía renovables y limpias utilizada por el hombre desde tiempos remotos. Desde A..C. se utilizaba en la navegación, luego para otros usos como molienda de granos y bombeo de agua, y desde fines del siglo IXX para la generación de energía eléctrica. Aunque en realidad el gran salto tecnológico de la energía eólica para generación eléctrica se produce durante las últimas 3 décadas, pasando de la etapa de desarrollo y experimentación a la producción e instalación de máquinas comerciales, y de bosques eólicos de cientos de MW en diversas partes del mundo, especialmente en los países desarrollados. En la actualidad el desarrollo tecnológico está focalizado al tema de la competitividad, vía calidad de producto, cambio de materiales y aprovechamiento de los efectos de la economía de escala mediante la construcción de unidades de potencias cada vez mayores. En el Perú, durante el siglo pasado se han instalado aerobombas de diversa procedencia, así mismo se han reportado dos casos muy interesantes de uso a gran escala, Miramar en Piura y Segovia en Arequipa1. En el campo del desarrollo tecnológico hay que destacar la importante contribución del Instituto de Investigación Tecnológico Industrial y de Normas Técnicas (ITINTEC) entre fines de la década de los 70’s hasta finales de los 80’s, otros esfuerzos también relevantes son aquellos aportados por las universidades como la UNI y la Católica del Perú, especialmente durante la década del 90 El presente documento tiene por finalidad presentar la experiencia en el desarrollo tecnológico de un micro aerogenerador de 100W ejecutado entre 1997 y el 2000 mediante un proyecto de investigación y desarrollo tecnológico efectuado por el ITDG2, con financiamiento de la Agencia Británica para el Desarrollo (DFID). El objetivo principal de este proyecto fue desarrollar la tecnología de diseño, fabricación e instalación de aerogeneradores pequeños para el cargado de baterías, focalizando la atención en el mercado rural disperso. En la actualidad se ha culminado la fase de desarrollo y experimentación, se ha transferido la tecnología a una pequeña empresa nacional, y durante los próximos tres años se hará un trabajo de promoción de la tecnología en el ámbito nacional e internacional.
+
+II. EL CONCEPTO DE DESARROLLO TECNOLOGICO EN BASE AL MERCADO En Primer lugar hay que señalar que este desarrollo tecnológico fue pensando principalmente en las necesidades energéticas de la población rural. Es importante indicar también, que antes de hacer los diseños técnicos e inclusive hacer la propuesta
+En Miramar, que es un valle del río Chira, al final de los 70’s había alrededor de 1000 unidades de molinos viento artesanales construidos con tecnología local que servían para irrigar cerca de 3000 hectáreas de terreno, actualmente habrían disminuido el número de unidades por efectos del fenómeno de niño y otros. En Arequipa, un taller pequeño en manos de un señor Segovia desarrolló su tecnología, construyo y vendió cientos de aerobombas semi-artesanales, instalados en Puno, Arequipa y algunos en Bolivia. 2 ITDG (Intermediate Technology Development Group) es un organismo no gubernamental sin fines de lucro, de origen Británico, cuya misión principal es apoyar a los sectores de menores recursos de la sociedad mediante el desarrollo y transferencia de tecnologías, y el fortalecimiento de capacidades técnicas.
+1
+
+financiera a los que apoyaron el proyecto, fue necesario hacer un análisis de las necesidades del sector rural a fin de diseñar un modelo que por un lado ofrezca una solución al problema de la falta de energía de la población rural y por otro lado que su costo esté al alcance al menos de una buena fracción de esta población rural peruana. Entre otros datos relevantes para el diseño, por ejemplo, se encontró que: los consumos en zonas rurales especialmente en aquellos hogares pobres oscilan entre los 10 y 20 kWh al mes, que los ingresos anuales de la población campesina está concentrada en el rango de US$ 300 a US$ 1500 por familia (con pocas excepciones), que las necesidades más urgentes de energía eléctrica para ese sector de la población es el alumbrado, pequeñas radios y TVs y muy eventualmente algunos artefactos pequeños. Tomando en cuenta todos estos elementos y otros, se llegó a determinar que un aerogenerador de 100W podría satisfacer medianamente estas necesidades, ya que un aerogenerador de esta potencia puede producir aproximadamente un promedio de 0.6kWh de energía por día a velocidades moderadas de viento como es el caso de la mayoría de zonas rurales peruanas con recursos eólicos. Obteniéndose así un promedio de generación mensual de 18kwh, cantidad que como se indica en párrafo anterior, cubre las necesidades básicas promedio de las familias rurales. Asimismo, tecnológicamente se ha optimizado el uso de materiales y componentes de modo que permita bajos costos y pueda en un plazo corto ser una alternativa real en el mercado, es así que el costo aproximado de esta máquina para el comprador final se estima que será de US$ 400 incluyendo todos sus componentes (excepto la batería), costo que puede fácilmente competir con otras alternativas técnicas.
+
+III. DISEÑO CONCEPTUAL Aunque la determinación de los parámetros del tipo social y económico indicados en el acápite anterior podrían también ser parte del diseño conceptual de la máquina; este capítulo se refiere a la definición de los parámetros tecnológicos para el diseño de ingeniería, siendo necesario definir las características físicas de cada uno de los componentes principales y las respectivas tecnologías a utilizar. Asimismo, definir los criterios generales como la necesidad de ciertos accesorios, el uso del sistema, la necesidad del mayor número de horas de operación posible la cual esta relacionada con la velocidad de diseño; así el aerogenerador, en lo tecnológico queda conceptualmente definido a diseñar con las siguientes características: a) Máquina “lenta” y con baja velocidad de diseño, ello permite más horas de trabajo al año, este criterio afecta especialmente el diseño de la turbina b) Fabricación en serie, siendo para ello lo más conveniente el uso de fibra de vidrio para los álabes, ya que se puede trabajar con modelos y moldes que facilitan su producción en serie. c) Generador eléctrico de imanes permanentes, la principal ventaja de este tipo de generadores es que trabaja en un amplio rango de velocidades de giro y por lo tanto se acoplan muy bien con las turbinas eólicas las cuales giran acorde a la velocidad de los vientos existentes en la zona. d) Simplicidad para la instalación, operación y mantenimiento. Entre los elementos tomados en cuenta está el acoplamiento directo turbina-generador. e) Almacenamiento de la energía generada, utilizando baterías automotrices de 12V por ser las más comerciales y baratas. f) La altura de la torre debe tener en cuenta todas las facilidades de instalación y la necesidad de la menor intervención posible de personal especializado para su montaje, de tal forma que pueda ser instalado por agentes de locales.
+
+IV. DISEÑO DE INGENIERIA El diseño de esta máquina fue desarrollado utilizando las ecuaciones aerodinámicas correspondientes, utilizando perfiles estandarizados para la sección de los álabes y la necesaria compatibilidad entre los parámetros de la turbina con los del generador. 4.1. Diseño de la turbina eólica • Cálculo del diámetro del rotor: Para este calculo se utilizó la ecuación de potencia de las turbinas eólicas.
+
+P=
+
+1 ⋅ ρ ⋅ ( A) ⋅ V 3 ⋅ C p ⋅ η 2
+
+⎛ d2 ⎞ A = ⎜π ⋅ ⎟ ⎜ 4 ⎟ ⎝ ⎠
+(1)
+
+⎛ ⎞ 8⋅ P ⎟ d= ⎜ 3 ⎜ π ⋅ ρ ⋅ V ⋅ C ⋅η ⎟ p ⎝ ⎠
+
+Donde: d: Diámetro del rotor de la turbina eólica (m) P: Potencia de diseño del aerogenerador (W) ρ: Densidad del aire, variable con la a.s.n.m (1.23 kg/m3 a nivel del mar) V: Velocidad del viento (m/s) A: Area barrida por la turbina (m2) Cp: Coeficiente de potencia (adimensional) η: Eficiencia del generador
+
+λ=
+
+U π ⋅ N ⋅d = 60 ⋅VD VD
+(2)
+
+⎛ 60 ⋅ λ ⋅VD ⎞ N =⎜ ⎟ ⎝ π ⋅d ⎠
+Donde: N: Velocidad de giro de la turbina eólica (r.p.m.) U: Velocidad tangencial al extremo de la pala (m/s) VD: Velocidad de diseño (m/s) λ: Celeridad
+
+Utilizando la ecuación (1), con un Cp=0.35, velocidad de viento igual a la velocidad de diseño de 6.5 m/s, densidad del aire de 1.23 kg/m3, potencia de 100 W a la salida del generador y una eficiencia del 75% para el generador (valor aceptable en pequeños generadores de imán permanente), se obtiene un diámetro de 1.7 m. De la ecuación (2), seleccionando el valor de 53 para la celeridad de diseño, se obtiene la velocidad de giro de 365 r.p.m.
+El valor seleccionado para la celeridad de diseño, es un valor moderado, conveniente para zonas de regímenes de viento moderados, como es el caso de la mayoría de zonas de posible aplicación de esta turbina, se puede considerar también como un valor conservador.
+3
+
+Por tanto se tiene una turbina de tres álabes, de 1.7 m de diámetro y una velocidad de giro de 365 r.p.m.
+
+Gráfico 1: Coeficiente de Potencia vs celeridad
+
+4.2. Cálculo de la sección del álabe y selección del perfil Para el cálculo de la sección del álabe se utilizaron las siguientes ecuaciones:
+
+λr =
+2 3
+
+λo ⋅ r
+R
+⎛ 1⎞ ⎟ ⎟ ⎝ λr ⎠
+
+(3)
+
+φ = ⋅ arctan⎜ ⎜
+C=
+
+(4)
+
+8 ⋅ π ⋅ r ⋅ (1 − cosφ ) Z ⋅ Cl
+
+(5)
+
+β = φ −α
+
+(6)
+
+Donde: λr: Celeridad local para el radio r λο: Celeridad de diseño r: Distancia del centro del rotor a la sección evaluada (m) R: Radio de la turbina (m) φ: Angulo formado por la velocidad relativa con el plano de giro del rotor C: Cuerda de la sección del álabe Z: Número de álabes o palas Cl: Coeficiente de sustentación del álabe β: Angulo formado por el álabe con el plano de giro α: Angulo de ataque, depende del perfil seleccionado.
+
+Utilizando las ecuaciones (3), (4), (5) y (6), para una turbina tripala y Cl=0.8, este valor del coeficiente de sustentación se obtiene de la gráfica Cl vs Cd4 del perfil seleccionado previamente, para presente caso, es el NACA 42125. Para diferentes valores de radio “r”, se obtiene los valores del ángulo de posición y la longitud de cuerda respectivas. Los resultados de los cálculos antes indicados nos dan valores variables no lineales, tanto para la cuerda como para ángulo de posición, lo cual hace complicado el proceso de fabricación de los álabes, para simplificar esto se adopta el concepto de linearización del álabe. 4.3. Linearización del álabe Este concepto viene siendo utilizado por los diseñadores y fabricantes desde comienzos de la década de los 80’s (siglo pasado); que consiste en transformar tanto a la cuerda (C) del álabe como al ángulo (β) en parámetros lineales dependientes de la posición del radio. Las rectas de linearización toman como puntos de paso r=0.5R y r=0.9R. Luego a partir de las rectas obtenidas se procede al cálculo de la cuerda y ángulo definitivos, ver resultados en la tabla 1.
+r (mm) β (º) C (mm) Tabla 1: Resultado de la linearización del álabe 150 200 250 300 350 400 450 500 550 600 650 14.5 13.6 12.7 11.8 10.9 9.9 9.1 8.2 7.3 6.3 5.4 167.9 160.8 153.7 146.6 139.5 132.4 125.3 118.2 111.1 104.0 96.9 700 4.5 89.8 750 3.6 82.7 800 2.7 75.6 850 1.8 68.5
+
+Gráfico 2: Ubicación de las secciones en el álabe
+
+4 5
+
+Cd: Coeficiente de arrastre Se ha seleccionado estándar NACA 4412 por su buen coeficiente de sustentación, su facilidad para la fabricación y porque tiene una sección relativamente gruesa que permite soportar los esfuerzos en la raíz del álabe, aunque esta rigidez tiene que ver también con los materiales que se utilizan.
+
+Gráfico 3: Diagrama del rotor
+
+V. EL GENERADOR ELECTRICO El generador eléctrico que se utiliza es de imanes permanentes, su elección se debe principalmente al hecho de que este tipo de generadores trabajan muy bien a velocidades de giro variables y por lo tanto compatibilizan con las velocidades de giro que se pueden obtener en una turbina de viento. Para el diseño del generador de imanes se consideraron los siguientes parámetros: - Velocidad nominal igual a la de la turbina (360 r.p.m.) - Ocho pares de imanes - Generación de corriente alterna y rectificada a través de diodos a corriente continua - Poco peso y fácil construcción
+
+Fotos 1 y 2: Fabricación del generador de imanes (bobinas e imanes)
+
+VI. ENSAMBLE TURBINA - GENERADOR Tanto en el diseño de la turbina como del generador se han tenido en cuenta los elementos de ensamble con los otras componentes. Los álabes van unidos empernados en la periferia del rotor del generador, mientras que el estator sirve como soporte y como elemento de unión con la torre. Ver fotos 3 y 4.
+
+Fotos 3 y 4: Ensamble del generador con el rotor de la turbina eólica
+
+VII. PROCESO DE FABRICACION DEL ALABE El diseño en general y los procesos de fabricación de la turbina eólica han considerado dos aspectos fundamentales: i) Un diseño que permita la construcción de la máquina en pequeños talleres, y ii) Que a pesar de ser fabricados en pequeños talleres, debe permitir su fabricación en serie o al menos algunos componentes en serie. De este modo, se han fabricado modelos (en madera) y moldes del álabe (en fibra de vidrio y aluminio). De igual forma se prepararon moldes para facilitar la fabricación del generador que permitan una producción en serie. Para la fabricación de la torre se utiliza un tubo de acero de 2”de diámetro con una longitud o altura entre 7 y 9 metros, dependiendo de la ubicación y las condiciones de viento existentes en el lugar de instalación, la topografía, etc. En el extremo superior, se ensambla una pequeña tornamesa (bastidor) al cual va acoplado el generador y turbina.
+
+Foto 5: Preparación del molde con fibra de vidrio
+
+Foto 6: Conformación del alabe
+
+Foto 7: Molde y álabes en fibra de vidrio terminados
+
+IX. ENSAYOS DE CAMPO Para los ensayos de campo se instaló un aerogenerador prototipo en Paiján (Trujillo) en una finca privada, los resultados obtenidos se pueden observar en el gráfico 5. Los datos han sido ajustados a una ecuación potencial con un exponente cercano a 3 (2,8366) y el coeficiente de correlación R2=0.9577 indican un buen ajuste de los datos a la curva. Se ha instalado un segundo prototipo a la altura del km. 125 de la carretera panamericana norte, entre Chancay y Huacho, el cual suministra energía para usos domésticos y para la atención de las necesidades un negocio familiar (restaurante), el cual se encuentra funcionando desde Mayo 2001.
+GRAFICO 5: VELOCIDAD DE VIENTO vs POTENCIA
+Watts
+140 120 100 80 60 40 20 0 0.0 1.0 2.0 3.0 4.0 5.0 6.0 7.0
+m/s
+
+y = 0.3721x2.8366 R2 = 0.9577
+
+8.0
+
+Fotos 7 y 8: Prototipos instalados en Paiján y km125 de la P. Norte X. CONCLUSIONES • Aunque aún no existe un mapa eólico detallado, hay suficiente evidencia de la existencia de recursos para su explotación a pequeña escala, que podría ser interesante para la población rural aislada. • Existe un mercado interesante para pequeñas máquinas eólicas de generación eléctrica, sin embargo su introducción en el mercado necesita un importante trabajo de promoción y demostración. • Los aerogeneradores fácilmente pueden competir con otras alternativas, siempre y cuando existan los recursos eólicos. Como se puede apreciar en el cuadro comparativo de costos (4.2), en todos los casos el costo generado por este cargador de batería por kWh es menor que el de los PVs. Esto comprueba que en la mayoría de los casos (aún con vientos relativamente ligeros), los aerogeneradores pueden competir fácilmente con otras alternativas. • La unidad de 100W diseñada en este proyecto es para uso familiar y para pequeños negocios de cargado de baterías. Quizás las personas que tienen la capacidad económica para adquirir un sistema propio prefieran utilizarlo exclusivamente para fines familiares. Sin embargo, el sistema también es adecuado para pequeños negocios. • Los pobladores rurales de menos recursos pueden beneficiarse con estos micro sistemas, especialmente si optan por instalar negocios de cargado de baterías, siempre y cuando cuenten con sistemas de financiación adecuados (créditos). En la actualidad existen sistemas de crédito comercial en el Perú, pero también hay proyectos que consideran sistemas de crédito no tradicionales que podrían ser beneficiosos para la diseminación de aerogeneradores tal es el caso del PROER, un
+
+fondo Holandés que ha sido rediseñado para que el uso de energías renovables esté al alcance de la gente pobre.
+
+XI. BIBLIOGRAFIA [1] ITDG, Informes y evaluaciones de campo del proyecto “Small wind system for battery charging”, Lima, Perú
+[2] Angel Cornejo, “Estudio del potencial de viento”, ITDG, Setiembre 1998, Lima, Perú
+
+[3] Curso internacional para la implementación de sistemas eólicos de energía, ECN (Energy
+Center Foundation), Holanda 1994 [4] Proyecto de Aerogeneradores CESADE-RED, Remi Rijs, Holanda 1997. [5] Tesis para optar el grado de Ingeniero Mecánico, Bombas de desplazamiento positivo para molinos de viento, Teodoro Sánchez C., Lima Perú, 1986 [6] Windpumps for irrigation, H.J.Van Dijk, P.D.Goedhart, CWD, Holanda 1987 [7] Emilio Mayorga, Programa global de evaluación de aerobombas, ITINTEC, Junio 1997,
+
+Lima, Perú [8] OLADE, “Atlas eólico preliminar de América Latina y el Caribe”, Vol. IV [8] Oliveros Alfredo, Sánchez Teodoro, Comportamiento de Aerobombas de Baja Solidez, ITINTEC, 1982.
+
+Presentado en el CONIMERA, Octubre 2001 Mayores informes: Programa de Energía de ITDG-Perú Av. Jorge Chávez 275, Lima 18 – Perú Tel. (511) 444 7055 Fax: (511) 446 6621 E-mail: energia@itdg.org.pe
+

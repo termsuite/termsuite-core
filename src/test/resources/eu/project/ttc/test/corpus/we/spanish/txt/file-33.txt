@@ -1,0 +1,513 @@
+XIII ERIAC DÉCIMO TERCER ENCUENTRO REGIONAL IBEROAMERICANO DE CIGRÉ
+Puerto Iguazú Argentina
+
+24 al 28 de mayo de 2009
+
+XIII/PI-C6 -11
+
+Comité de Estudio C6 - Sistemas de Distribución y Generación Dispersa
+
+DISEÑO Y OPTIMIZACIÓN DE PARQUES EÓLICOS UTILIZANDO HERRAMIENTAS DE MICROSITTING – EJEMPLO DE USO DE LA HERRAMIENTA WINDFARM N.L. Valencia* AES – Gener Chile
+
+Resumen – Una vez realizada una campaña de medición de viento en un sitio candidato para la instalación de un parque eólico, el paso siguiente es el análisis de la generación anual esperada del parque. Sin embargo, esta evaluación no depende solamente de la medición de viento o de la turbina eólica que se utilizará, sino también de los límites y orientación del terreno, la ubicación final de los aerogeneradores y las posibles interferencias generadas por obstáculos existentes (como por ejemplo, las mismas turbinas). Este trabajo muestra los resultados de utilizar el programa WindFarm (Resoft) para el diseño y optimización de un parque eólico ficticio de 300 hectáreas, procedimiento también conocido como micrositting. Se presentarán los resultados del uso de las herramientas de modelamiento y optimización, y su impacto en el diseño de parques eólicos.
+1. INTRODUCCIÓN Posteriormente a la obtención de datos de medición de viento para una zona determinada, y una vez conocida también la delimitación final de la superficie a utilizar para un proyecto de generación eólica (dadas las condiciones de borde tanto legales como ambientales que correspondan), es necesario determinar la ubicación final de los aerogeneradores, así como la potencia total a instalar en la zona delimitada. Esta tarea va a depender tanto de la rosa de vientos obtenida, así como de la rugosidad del terreno, la topografía, y de la existencia de obstáculos que interfieran con el viento. En este último punto, es de gran importancia la interferencia que existirá entre las mismas turbinas eólicas. La definición de la ubicación final de los aerogeneradores dependerá entonces de muchos factores, y la determinación óptima de la distribución de los aerogeneradores tendrá relación (entre otras cosas) de la cantidad de turbinas a instalar. Por esa razón, surge la necesidad de determinar hasta qué punto la existencia de otras turbinas eólicas puede influir en la generación total del parque (por ejemplo, relacionando el factor de planta con la cantidad de hectáreas por MW instalados). En este análisis se utilizó una zona ficticia rectangular de 300 hectáreas para el diseño de una granja eólica, y se utilizaron dos diferentes rosas de viento (para estimar también la influencia de la disposición del terreno con respecto a la velocidad predominante). Se evaluó la mejora en la generación de un parque eólico utilizando la herramienta de optimización WindFarm (de la empresa RESOFT) que utiliza el modelo WASP para la estimación de generación eólica. Asimismo, se estimaron las variaciones en la generación de granjas eólicas para diferentes densidades de potencia eólica instalada (en Has/MW).
+
+*Alonso de Córdoba 5151 – Of 303 Las Condes, Santiago – Leonardo.valencia@aes.com
+
+2. CONDICIONES DE VIENTO Y ROSAS DE LOS VIENTOS PARA CADA ESCENARIO Las rosas de los vientos en este caso reflejarán una dirección predominante con un 40% de tiempo. Las demás direcciones de la Rosa se repartirán el 60% del tiempo restante (las direcciones inmediatamente cercanas a la predominante por ejemplo, presentarán un 20% de tiempo cada una). Se realizó un ordenamiento de la Rosa de los vientos de manera que siempre se mantuviera una simetría de los aportes de viento con respecto a la velocidad predominante escogida. En el caso de la Rosa N°1, la velocidad predominante es Oeste, mientras que en el caso de la segunda rosa, la dirección escogida será Norte. Las figuras 1 y 2 muestran las rosas de vientos correspondientes a ambos escenarios.
+
+Fig. 1. Rosas de vientos utilizadas en el estudio
+Como ejemplo para el diseño de un parque eólico tipo, utilizaremos un terreno de 300 hectáreas, con 3 km de ancho y 1 km de largo. Este tipo de terrenos son característicos de las concesiones de exploración minera y podrán servir como escenario base en este estudio. Solamente a manera de ejemplo, ubicaremos los vértices de este terreno en las coordenadas de la siguiente tabla. Supondremos asimismo que el anemómetro se encontraba al centro de la zona a evaluar.
+TABLA I: UBICACIÓN DE VÉRTICES CORRESPONDIENTES AL LÍMITE DE LA PROPIEDAD DE 300 HAS
+
+Como criterio general asumiremos una distancia mínima de 3 diámetros de rotor entre turbinas, y realizaremos la primera ubicación considerando una distancia mínima de 5 diámetros de rotor en la dirección predominante. De acuerdo a estos datos, se elaboraron los siguientes dos escenarios base, con una distribución simétrica de turbinas, tal como muestra la siguiente figura:
+
+2
+
+Fig. 2. Diagrama de ordenamiento de turbinas eólicas de acuerdo a la dirección predominante. “D” corresponde a los diámetros de rotor (regla 5D-3D). Considerando este ordenamiento, se elaboraron los siguientes dos escenarios: un ordenamiento que llamaremos “a” y que corresponde a aplicar la regla de la figura 3 para la dirección predominante norte, y un ordenamiento “b” análogo al caso anterior pero para una rosa de vientos con dirección predominante oeste. Para efectos de este ejemplo hemos seleccionado la turbina Vestas V47 de 660 kW y 47 metros de diámetro de rotor. Las siguientes figuras muestran el ordenamiento final obtenido. El caso específico del ordenamiento tipo “b” permitía incluir más turbinas (105 en total) debido a su posición más adecuada para aprovechar el viento norte, pero para realizar una comparación más equitativa con el escenario tipo “a”, se limitó finalmente el total a 91 turbinas. La potencia total de ambos parques “a” y “b” fue de 60 MW instalados, lo que entrega una utilización de aproximadamente 5 hectáreas/MW
+7436200 7436000 7435800 7435600 7435400 7435200 7435000 7434800 340500
+
+7436200 7436000 7435800 7435600 7435400 7435200 7435000 7434800 340500
+
+341000
+
+341500
+
+342000
+
+342500
+
+343000
+
+343500
+
+344000
+
+344500
+
+341000
+
+341500
+
+342000
+
+342500
+
+343000
+
+343500
+
+344000
+
+344500
+
+Fig. 3. Ordenamiento de turbinas para un área de 300 hectáreas (3 km ancho dirección este-oeste, 1 km largo dirección norte-sur) considerando la regla de diseño 5D-3D para dirección predominante Norte (izquierda) y dirección predominante Oeste (derecha) Utilizando la herramienta WindFarm para la evaluación de la generación anual de la central eólica, obtuvimos que el ordenamiento tipo “a” (correspondiente a la dirección predominante norte) entregaría una generación un 24% mayor que la obtenida en el ordenamiento tipo “b”. Esta generación adicional significó un factor de planta 3.08% mayor que la obtenida en el ordenamiento tipo “b”. La interferencia de las demás turbinas en la generación total fue sin duda el factor más importante de reducción de generación total. Evidentemente, el ordenamiento “b” tuvo un efecto de interferencia total mayor debido a la forma en que se encontraba orientada el área de diseño. Una distribución de espacio que sea perpendicular a la velocidad predominante significó en este caso una mejora de 24% en la generación total. El efecto de la topografía en este ejercicio no fue considerado. Es importante destacar que efectos debidos a la existencia de obstáculos u otros fenómenos topográficos de importancia podrían afectar de manera importante la generación de un parque eólico, reduciendo incluso el efecto debido a la orientación del área de generación. La optimización del diseño de un parque eólico debe considerar siempre ambos efectos de manera simultánea.
+
+3
+
+3. OPTIMIZACIÓN 1: UTILIZACIÓN DEL CASO DE DISEÑO BASE Aunque el ordenamiento base formulado en el capítulo anterior está ideado para reducir la interferencia entre las turbinas, es posible realizar un proceso de optimización de manera de incrementar al máximo posible la generación del parque eólico total. Para este efecto, utilizaremos las herramientas de optimización del programa WindFarm en ambos escenarios. Esta herramienta corresponde a un algoritmo iterativo que modifica la posición de las turbinas de acuerdo a la generación global obtenida en cada escenario. Como restricción se impuso que la distancia mínima entre cada turbina debía ser de 3 diámetros de rotor. Las siguientes figuras muestran los resultados del micrositing después de utilizar el algoritmo iterativo para los casos “a” y “b”, donde cada círculo tiene un tamaño diferente dependiendo de la generación de cada turbina. Se utilizó el color verde para el caso “a” (viento predominante norte) y rojo para el caso “b” (viento predominante oeste).
+7437000
+7437000
+
+7436500
+
+7436500
+
+7436000
+
+7436000
+
+7435500
+
+7435500
+
+7435000
+
+7435000
+
+7434500
+
+7434500
+
+7434000 340000
+
+340500
+
+341000
+
+341500
+
+342000
+
+342500
+
+343000
+
+343500
+
+344000
+
+344500
+
+345000
+
+7434000 340000
+
+340500
+
+341000
+
+341500
+
+342000
+
+342500
+
+343000
+
+343500
+
+344000
+
+344500
+
+345000
+
+Fig. 4. Ordenamiento final obtenido para los escenarios “a” (verde) y “b” (rojo) utilizando el algoritmo optimizador del programa WindFarm. El aumento de generación del escenario optimizado con respecto al escenario inicial fue de 2.67% para el caso “a” y 3.38% para el caso “b”. Estos aumentos se tradujeron en una mejora del factor de planta de 0.43% total en ambos casos.
+
+4. OPTIMIZACIÓN 2: ANÁLISIS DE GENERACIÓN POR NÚMERO DE TURBINAS En este análisis, se realizó el cálculo de la generación total de diferentes escenarios de generación (desde 1 a 85 turbinas) utilizando la misma área total de 300 hectáreas en todos los casos. El objetivo de este estudio era descubrir el grado de importancia de la densidad de potencia eólica instalada en terreno (en términos de MW/Hectárea), o bien del factor de utilización de terreno (unidad más conocida y expresada en términos de Has/MW) en la generación total de la central. Se realizó un análisis para ambos escenarios de rosa de vientos (“a” con viento predominante norte y “b”, viento predominante oeste) y considerando diferentes números de turbinas instaladas dentro del predio de 300 hectáreas. En cada escenario se analizó la distribución óptima de generadores utilizando el algoritmo de optimización del programa WindFarm y considerando siempre una separación mínima de 3 diámetros de rotor. Los escenarios analizados están resumidos en la siguiente Tabla:
+TABLA II: RESUMEN DE ESCENARIOS PARA EVALUACIÓN DE GENERACIÓN ANTE DIFERENTES CONDICIONES DE DENSIDAD DE POTENCIA EÓLICA
+
+4
+
+El factor de utilización de terreno (o UT como lo llamaremos en este estudio, en [Has/MW]) está íntimamente relacionado con la generación de energía y con la reducción de ésta al incrementar el número de aerogeneradores en una zona delimitada. Aunque se ha hablado preliminarmente de que un valor de UT de 10 Has/MW instalado es un promedio generalmente aceptado, en este estudio consideraremos desde 454 hasta 5.3 Hectáreas por MW instalado, de manera de analizar un espectro más amplio y así descubrir (si existe) alguna regla para determinar la reducción de generación debido al aumento en el valor de UT. Realizando el algoritmo de optimización para los diferentes escenarios explicados en la tabla 2, y para las dos rosas de viento, obtuvimos ordenamientos diferentes dependiendo del número de turbinas (siempre se utilizó para efectos de este estudio el mismo modelo de turbina VESTAS V47). Las siguientes figuras muestran algunos ejemplos de distribución para ambos escenarios de dirección predominante de viento. Se puede identificar en la figura 5 una tendencia a generar de manera natural filas en dirección W-E para el escenario “a”, las que aumentan en número dependiendo de la cantidad de turbinas utilizadas. La misma tendencia puede identificarse en la Figura 6, pero para filas en la dirección N-S, debido al cambio de dirección predominante. En ambas figuras, se ha modificado el tamaño del círculo que representa la ubicación de cada turbina, de forma que represente también la generación individual obtenida (si la generación es menor, la figura presentará un círculo con un radio menor y viceversa).
+7437000
+7437000
+
+7436500
+
+7436500
+
+7436000
+
+7436000
+
+7435500
+
+7435500
+
+7435000
+
+7435000
+
+7434500
+
+7434500
+
+7434000 340000
+
+340500
+
+341000
+
+341500
+
+342000
+
+342500
+
+343000
+
+343500
+
+344000
+
+344500
+
+345000
+
+7434000 340000
+
+340500
+
+341000
+
+341500
+
+342000
+
+342500
+
+343000
+
+343500
+
+344000
+
+344500
+
+345000
+
+7437000
+
+7437000
+
+7436500
+
+7436500
+
+7436000
+
+7436000
+
+7435500
+
+7435500
+
+7435000
+
+7435000
+
+7434500
+
+7434500
+
+7434000 340000
+
+340500
+
+341000
+
+341500
+
+342000
+
+342500
+
+343000
+
+343500
+
+344000
+
+344500
+
+345000
+
+7434000 340000
+
+340500
+
+341000
+
+341500
+
+342000
+
+342500
+
+343000
+
+343500
+
+344000
+
+344500
+
+345000
+
+Fig. 5. Distribuciones de Turbinas obtenidas a través de la herramienta de optimización para los escenarios de 10, 30, 50 y 85 turbinas, considerando viento predominante norte (escenario “a”).
+
+5
+
+7437000
+
+7437000
+
+7436500
+
+7436500
+
+7436000
+
+7436000
+
+7435500
+
+7435500
+
+7435000
+
+7435000
+
+7434500
+
+7434500
+
+7434000 340000
+
+340500
+
+341000
+
+341500
+
+342000
+
+342500
+
+343000
+
+343500
+
+344000
+
+344500
+
+345000
+
+7434000 340000
+
+340500
+
+341000
+
+341500
+
+342000
+
+342500
+
+343000
+
+343500
+
+344000
+
+344500
+
+345000
+
+7437000
+
+7437000
+
+7436500
+
+7436500
+
+7436000
+
+7436000
+
+7435500
+
+7435500
+
+7435000
+
+7435000
+
+7434500
+
+7434500
+
+7434000 340000
+
+340500
+
+341000
+
+341500
+
+342000
+
+342500
+
+343000
+
+343500
+
+344000
+
+344500
+
+345000
+
+7434000 340000
+
+340500
+
+341000
+
+341500
+
+342000
+
+342500
+
+343000
+
+343500
+
+344000
+
+344500
+
+345000
+
+Fig. 6. Distribuciones de Turbinas obtenidas a través de la herramienta de optimización para los escenarios de 10, 30, 50 y 85 turbinas, considerando viento predominante oeste (escenario “b”). La siguiente figura es un gráfico comparativo del factor de planta obtenido para cada uno de los escenarios v/s el número de turbinas. Se puede observar que para los escenarios de hasta 10 turbinas, los factores de planta de ambas rosas de vientos fueron prácticamente idénticos, debido a que la influencia de las demás turbinas en la generación total era prácticamente irrelevante. La curva muestra una división significativa (de 0.72% en el factor de planta) desde 15 turbinas en adelante (o bien, desde un UT de 30 Has / MW). Esta diferencia aumenta gradualmente hasta llegar a 8.6% en el caso de 85 turbinas.
+Variación FP v/s N° Turbinas
+25%
+
+Escenario "b" Escenario "a"
+
+Factor de Planta [%]
+
+20%
+
+15%
+
+10%
+
+5%
+
+0% 0 10 20 30 40 50 60 70 80 90
+
+Turbinas [N°]
+
+Fig. 7. Variación del factor de planta para diferentes escenarios de instalación de turbinas. Comparación de dos diferentes tipos de rosas de viento. Se pueden observar rápidamente los siguientes fenómenos relacionados con el factor de planta en ambos escenarios de rosas de viento: • En ambos escenarios “a” y “b”, se observa una reducción aparentemente lineal del factor de planta desde aproximadamente 20 turbinas instaladas (lo que es equivalente en este caso a un UT de 22.7 Hectáreas / MW) En ambos casos, los factores de planta observador hasta un total de 10 turbinas instaladas (45.5 Hectáreas / MW) mostraron factores de planta muy similares, con diferencias menores a 0.3% de factor de planta total.
+
+•
+
+Graficando el mismo resultado obtenido en la figura 10, pero considerando únicamente los valores correspondientes a 20 turbinas hacia delante (es decir: la zona donde el comportamiento empieza a ser diferente para ambos tipos de rosas de viento, 22.7 Has/MW) y utilizando esta vez la densidad de potencia
+
+6
+
+eólica instalada en el eje de absisas (o DU, es decir, el inverso de UT, en MW/Ha) obtenemos el gráfico de la figura 8.
+25% Escenario "a" 20% Factor de planta [%] Escenario "b"
+
+15%
+
+10%
+
+5%
+
+0% 0.00
+
+0.05
+
+0.10 DU [MW/Ha]
+
+0.15
+
+0.20
+
+0.25
+
+Fig. 8. Variación del factor de planta a partir para diferentes escenarios de DU. Comparación de dos diferentes tipos de rosas de viento. Realizando una aproximación lineal a través de mínimos cuadrados, obtenemos las siguientes fórmulas para representar el comportamiento del factor de planta para ambos escenarios:
+
+Escenario “a” (viento predominante norte) FP = -0.3736 ⋅ DU + 0.237 (R2 obtenido: 0.9973) Escenario “b” (viento predominante oeste) FP = -0.5095⋅ DU + 0.232 (R2 obtenido: 0.9982) Con: FP: Factor de planta DU: Densidad de potencia eólica instalada (en MW/Ha) En ambos casos se obtiene un valor de R2 superior a 0.99, por lo que es posible asumir que el comportamiento es cercano a un modelo lineal. Asimismo, se observa también un claro aumento de la pendiente para el caso del escenario “b”, lo que representaría la mayor reducción de potencia debida a los obstáculos al viento predominante producidos por las mismas turbinas. Consideremos ahora el caso del indicador UT en el eje de absisas (y que se mide en [Has/MW]). Si realizáramos el análisis en este caso, para ambos escenarios tenemos las curvas que se observan en la figura 9.
+25%
+
+20% Escenario "b" Factor de Planta [%] Escenario "a" 15%
+
+10%
+
+5%
+
+0% 0 5 10 15 20 25 UT [Has/MW] 30 35 40 45 50
+
+Fig. 9. Factor de Planta v/s UT (en Has/MW) para ambos escenarios de rosas de viento Los valores de factor de planta obtenidos de ambas curvas son prácticamente idénticas para valores de UT altos (sobre 45 Has/MW) debido a que en este caso, y para ambos escenarios, prácticamente no existirían
+
+7
+
+obstáculos importantes (o en palabras simples: cuando hay una o dos turbinas en un terreno de 300 Has, es irrelevante la dirección del viento predominante). Si utilizamos las fórmulas lineales obtenidas a partir de los datos correspondientes a la figura 8, tenemos la siguiente expresión para el factor de planta v/s el factor de utilización UT en Has/MW Escenario “a”: FP = 0.237 −
+
+0.3736 UT 0.5095 UT
+
+Escenario “b”: FP = 0.232 −
+
+Con: UT = Factor de utilización de terreno (en Has/MW) En ambos casos, se puede observar que existe un valor de FP máximo (suponiendo una disponibilidad “infinita” de hectáreas) que es de aproximadamente 23%, y que corresponde al valor que se encuentra a la izquierda de la expresión de FP. Este valor inicial de factor de planta dependerá del potencial eólico existente en la zona a altura de buje y, teóricamente, sería idéntico a la generación de una sola turbina ubicada dentro de la zona evaluada, sin la interferencia de otras turbinas. Utilizando ahora las fórmulas encontradas, se muestran a continuación los FP para diferentes escenarios. Se incluye la variación en términos de FP total, así como la variación porcentual con respecto al valor inicial.
+TABLA III: VARIACIÓN DEL FACTOR DE PLANTA PARA LOS ESCENARIOS “A” Y “B” DADOS DIFERENTES VALORES DE DENSIDAD DE POTENCIA (EN HAS/MW)
+
+Para el caso de 20 Has / MW, tenemos una variación de 7.4% con respecto al valor inicial del Factor de planta (o valor máximo) en el escenario “a”, y 10,6% para el escenario “b”. Pero estas variaciones prácticamente se doblan para el caso de 10 Has / MW, donde los porcentajes son de 15,5% para el escenario “a” y 21,6% para el escenario “b”. Si la intención es reducir hasta 5 Has/MW el valor de UT, entonces las variaciones son de 31.3% para el escenario “a” y 43.7% para el escenario “b”. 5. RESUMEN • En este análisis se estudiaron dos escenarios de rosas de vientos (una con viento predominante norte o escenario “a” y otos con viento predominante Oeste, o escenario “b”) y se realizaron ejercicios de micrositing con la herramienta WindFarm de Resoft, para una zona rectangular de 300 hectáreas orientada WE (3km) y NS (1km). Aplicando una regla simple de diseño de parques eólicos en ambos escenarios (o regla “5D-3D”) se estimó la generación eólica en ambos escenarios, obteniéndose un 24% de generación total en el escenario mejor orientado (escenario “a”).
+
+•
+
+8
+
+•
+
+•
+
+•
+
+•
+
+•
+
+Utilizando la herramienta de optimización del programa WindFarm en ambos diseños de parques eólicos, obtuvimos una mejora en la generación total con respecto a los casos base de 2.67% para el escenario “a” y 3.38% para el escenario “b”. Estos aumentos se tradujeron en una mejora del factor de planta total en 0.43% para ambos casos. Realizando un análisis optimizado de diferentes poblaciones de turbinas, en ambos escenarios de rosas de vientos, se observa una reducción lineal del factor de planta desde un número de 20 turbinas instaladas (lo que es equivalente en este caso a un índice UT de 22.7 Hectáreas / MW) En ambos casos, se puede observar que existe un valor de FP máximo que corresponde al valor inicial de factor de planta. Este valor dependerá del potencial eólico existente en la zona a altura de buje y, teóricamente, sería idéntico a la generación de una sola turbina ubicada dentro de la zona evaluada utilizando la modelación obtenida para los diferentes escenarios analizados, se obtuvo una reducción de factor de planta de entre un 7.4% y un 10.6% con respecto al valor máximo (o inicial) para un factor UT de 20 Has/MW. Este rango de reducción es de entre 15,5% y 21,6% para una utilización de 10 Has/MW, y de entre 31.3% y 43.7% para un UT de 5 Has/MW. Un análisis de situaciones reales con límites y topografías de casos concretos, permitiría poner a prueba las relaciones analizadas anteriormente. En especial, la existencia de obstáculos de terreno (y la existencia de topografía compleja) podría afectar de manera significativa los resultados.
+
+9
+

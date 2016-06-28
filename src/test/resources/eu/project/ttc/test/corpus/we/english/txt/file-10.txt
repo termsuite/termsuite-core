@@ -1,0 +1,416 @@
+Copyright ©1997, American Institute of Aeronautics and Astronautics, Inc.
+AIAA Meeting Papers on Disc, January 1997 A9715950, AIAA Paper 97-0977
+
+Wind turbine performance under icing conditions
+William J. Jasinski
+Illinois Univ., Urbana
+
+Shawn C. Noe
+Illinois Univ., Urbana
+
+Michael S. Selig
+Illinois Univ., Urbana
+
+Michael B. Bragg
+Illinois Univ., Urbana
+
+AIAA, Aerospace Sciences Meeting & Exhibit, 35th, Reno, NV, Jan. 6-9, 1997
+The effects of rime ice on horizontal axis wind turbine performance were estimated. For typical supercooled fog conditions found in cold northern regions, four rime ice accretions on the S809 wind turbine airfoil were predicted using the NASA LEWICE code. The resulting airfoil/ice profile combinations were wind-tunnel tested to obtain the lift, drag, and pitching moment characteristics over the Reynolds number range 1-2 x 10 exp 6. These data were used in the PROPID wind-turbine performance prediction code to predict the effects of rime ice on a 450-kW rated-power, 28.7-m diameter turbine operated under both stall-regulated and variable-speed modes. Performance losses on the order of 20 percent were observed for the variable-speed rotor. For the stall-regulated rotor, however, a relatively small rime ice profile yielded significantly larger performance losses. For a larger 0.08-c long rime ice protrusion, the rated peak power was exceeded by 16 percent because at high angles the rime ice shape acted like a leading edge flap, thereby increasing the airfoil Cl(max) and delaying stall. (Author)
+
+Page 1
+
+A/M-97-0977WIND TURBINE PERFORMANCE UNDER ICING CONDITIONS
+William J. Jasinski,* Shawn C. Noe,1' Michael S. Selig+ and Michael B. BraggS Department of Aeronautical and Astronautical Engineering University of Illinois at Urbana- Champaign Urbana, Illinois 61801 added loads increase material fatigue, reducing the operational life of the turbine and causing non-productive down times for repair. Icing concerns regarding wind turbine operation are not limited to extreme icing conditions but start at the first sign of surface roughness on the blades. It has been shown that even the slightest amount of surface roughness has the potential of reducing energy output from a wind turbine by 20%.x As the icing process continues, aerodynamic performance degradation is similar to that experienced by aircraft wings3 and helicopter rotors.4 Methods of ice prevention, similar to those applied to aircraft, have been investigated for wind turbine use.3'4 However, as Makkonen and Autti7 conclude for a 100kW turbine, "anti-icing by heating requires at least 25% of the maximum power production capacity of the turbine, and the energy required for efficient de-icing by sudden heating far exceeds this capacity." For smaller wind turbines, the problem of ice prevention is even more severe due to the higher ice collection efficiency and smaller potential power output when compared with a larger turbine. For more severe icing events, stopping the turbine may be the most logical solution due to the energy required for ice prevention and wear on the machine. Stopping a wind turbine during the presence of every icing condition, however, would be non-productive. For slight to moderate icing events, where the turbine continues to operate but at reduced levels of efficiency, it may be beneficial to continue operation with, or perhaps, without anti-icing devices in place. The determination of the best option to maximize energy output from the turbine operating in an icing environment requires a knowledge of the performance loss that can be expected during the icing event. There have already been several investigations of airfoils operating in icing conditions as related to aircraft. These studies, however, have mainly focused on a range of angles of attack up to sta:' for airfoils with ice Accretions based on aircraft flight conditions. Expanded angle of attack ranges through stall are necessary to properly predict wind turbine performance. Furthermore, blade leading-edge ice shapes based on meteorological conditions prevalent during wind turbine icing events must be generated for good correlation of airfoil performance experimental data to full-scale wind turbines.
+
+Abstract
+The effects of rime ice on horizontal axis wind turbine performance were estimated. For typical supercooled fog conditions found in cold northern regions, four rime ice accretions on the S809 wind turbine airfoil were predicted using the NASA LEWICE code. The resulting airfoil/ice profile combinations were wind-tunnel tested to obtain the lift, drag and pitching moment characteristics over the Reynolds number range 1-2 x 106. These data were used in the PROPID wind-turbine performance prediction code to predict the effects of rime ice on a 450-kW rated-power, 28.7-m diameter turbine operated under both stall-regulated and variable-speed modes. Performance losses on the order of 20% were observed for the variable-speed rotor. For the stallregulated rotor, however, a relatively small rime ice profile yielded significantly larger performance losses. For a larger O.OSc long rime ice protrusion, however, the rated peak power was exceeded by 16% because at high angles the rime ice shape acted like a leading edge flap, thereby increasing the airfoil C^max and delaying stall.
+
+Introduction
+For many northern regions of the world, the best locations for the placement of wind energy stations are along coastal areas or on the tops of hills and mountains. These locations, however, are inherently susceptible to atmospheric icing events during the winter months. Performance degradation of horizontal axis wind turbines (HAWTs) due to ice accretion has been investigated on a number of machines at different locations.1"6 Power output can be negligible for a wind turbine operating under extreme icing conditions. Furthermore, random shedding of ice from the rotating turbine blades can cause severe out-of-balance loads on the wind turbine. These Copyright©1997 by William J. Jasinski, Shawn C. Noe, Michael S. Selig and Michael B. Bragg. Published by the American Institute of Aeronautics and Astronautics, Inc. with permission. *Graduate Research Assistant. Student Member AIAA. f Graduate Research Assistant. Currently Engineer, Hughes Missile Systems Co., Tuscon, AZ 85734 t Assistant Professor. Member AIAA. S Professor. Member AIAA.
+
+To predict the degradation in wind turbine performance due to icing, wind tunnel tests were conducted on the S809 wind-turbine airfoil8 (see Fig. 1) under clean and various icing conditions. Lift, drag and pitching moment data were taken over the Reynolds number range of 1-2 x 106. The icing conditions studied included initial ice accretions and four rime ice accretions that were determined using the NASA LEWICE code.9 The airfoil performance data were then used in the strip-theory code PROPID10 to predict the effects of ice accretions on wind turbine performance.
+
+upper surface
+
+0.03-1
+
+lower surface
+
+x/c
+
+Experimental Methods
+The experiments were performed at the University of Illinois at Urbana-Champaign (UIUC) Low-Turbulence Subsonic Wind Tunnel. The tunnel is a conventional open-return type with a contraction ratio of 7.5:1. Test section dimensions are approximately 2.8 x 4 ft, widening approximately 0.5 in. over the 8-ft length of the test section to allow for boundary-layer growth. The tunnel inlet settling chamber contains 4-in. thick honeycomb
+followed by four anti-turbulence screens. Test section
+
+Fig. 1 Comparison between the NREL S809 model coordinates and true coordinates.
+
+flow velocity can be varied up to 160 mph (235 ft/sec), which corresponds to a Reynolds number of approximately 1.5 x 106/ft. The two-dimensional S809 airfoil model was cantilevered vertically in the tunnel, spanning the test section height. The 18-in. chord model was constructed of
+
+a carbon-fiber skin surrounding a foam core. Steel pipe spars spanned the length of the model at the 20% and 60% chord stations and attached to the balance force
+plate through a flange. To ensure that the model did not
+
+touch the tunnel walls, the model was fixtured to allow for ~ 0.020 in. gap at the balance (floor) and ~ 0.035 in. at the free end (ceiling). To determine the profile accuracy of the model, it was digitized with a Brown &: Sharpe coordinate measuring machine. The measured coordinates at the model centerline were compared with the true coordinates using a 2-D least squares approach (rotation and vertical translation). Figure 1 shows the comparison of the S809 measured model coordinates (dot-dash line) and true coordinates (solid line). The figure depicts the differences between the model airfoil and the true for the airfoil upper surface (solid line) and lower surface (dot-dash line). A displacement above or below the axis means that the model surface lies above or below the true, respectively. Thus, the S809 was thicker than the true airfoil by approximately 0.015 in. over most of the airfoil chord. Airfoil lift and moment data were taken with a threecomponent external floor-mounted balance manufactured by Aerotech ATE Limited of Heathfield, UK. The normal and axial forces measured by the balance were
+
+used to determine the lift force. Drag data over the low drag range (typically -7 to 8 deg) was determined by the standard wake momentum deficit method reported by Jones11 and described in Schlichting.12 Three total-head pressure probes spaced 3 in. apart were traversed horizontally through the wake (perpendicular to the model span) at 0.15-in. intervals. The center probe approximately corresponded to the center of the model. Pressures were acquired using a Pressure Systems, Inc. 8400 electronically scanned pressure system with ±1 psid and ±5 psid pressure scanners. For angles of attack higher than approximately 8 deg, drag data used later in the wind turbine performance prediction section were taken from balance measurements. Lift, drag and moment data taken on the S809 model for Re = 1.5 x 106 is shown in Fig. 2 and compared with data taken at Delft13 and the Ohio State University (OSU).14 Although there are some differences, particularly at the corners of the polar, the agreement shown is good, and this serves to validate the current approach.15
+
+Icing Conditions and Simulation
+The model was tested with simulated initial and rime ice accretions based on predictions that were determined using the NASA-Lewis LEWICE code (Version 1.6),9 which uses the Messinger ice-accretion model.16 In the model, any unfrozen water runs back on top of the frozen water layer in a uniform wet film. This assumption works well for the rime accretions where the temperatures are so low that the freezing occurs quickly with little run back.17 The particular icing conditions considered are listed in Table 1. These ground icing conditions are representative of those experienced by the primary airfoil (75% blade-radius station) of a typical 450 kW wind turbine in operation during supercooled fog/cloud conditions (hereafter simply referred to a supercooled fog). Supercooled fog conditions, which give rise to rime ice accretions, mainly occur along coastal regions and/or mountain peaks in the northwestern United States, Alaska, Greenland, and valleys in western Europe. Rime ice ac-
+
+UIUC o Delft o OSU Re = 1,500,000
+1.5
+
+Table 1: Icing conditions corresponding to the four rime ice profiles (Rl, R2, R3, and R4).
+-0.3
+
+1.0
+
+-0.2
+
+0.5
+
+-0.1
+
+•'m.cft
+0.0 0.0
+
+Icing event duration (hr) Droplet Dia. (pm) 3 7 ~ Rl R2 15 R3 R4 35 Conditions for supercooled fog a = 5 deg c = 0.75 m V = 65.2 m/s T = -10 deg C LWC= 0.1 g/m 3
+
+-0.5
+
+0.1
+
+-1.0
+-20 -10 0 10
+
+0.2 20
+
+a (deg)
+" UIUC o Delft o OSU Re = 1,500,000
+
+1.0
+
+-o
+
+0.5
+\
+
+f I
+
+Fig. 3 Illustration of the four leading-edge rime ice profiles tested (only 20% of chord shown).
+
+0.0
+
+-0.5
+
+L
+±
+
+"X ^
+
+o--o
+
+-1 n
+0.000 0.025 0.050 0.075 0.100
+
+Fig. 2 Comparison of the NREL S809 measured drag polars from the UIUC, Delft13 and Ohio State14 wind-tunnel facilities.
+
+erections on wind turbines are particularly problematic in some regions of Finland where conditions for rime ice can last for 20-25 consecutive days.18 In the current study, the principal parameters varied included the accretion time and droplet size. The resulting ice profiles are shown in Fig. 3 and are typical of rime ice profiles seen on wind turbines under such conditions. The table LWC refers to the liquid water content. The onset of ice accretion (light rime ice) was simulated by applying aluminum oxide grit over the model leading edge. The limits of simulated accretion were on the upper surface x/c = 0.005 and on the lower surface x/c = 0.05. Two different degrees of rough-
+
+ness were simulated by using 46- and 16-grit aluminum oxide, which corresponded to k/c values of 0.0009 and 0.0019, respectively, where k is the nominal grit diameter. The approximate grit densities for the initial ice accretions were 400/in2 for k/c = 0.0009 and 15/in2 for k/c = 0.0019. Simulated rime ice accretions for the profiles shown in Fig. 3 were manufactured from foamcores covered with carbon-fiber skins. These ice profiles were secured to the model leading edge with tape along the span and screws at the end cap ribs. Again, 46and 16-grit aluminum oxide was used to simulated the rime ice roughness; however, due to the more lengthy ice accretion times, the grit densities were increased to approximately 1000/in2 for k/c = 0.0009 and 85/in2 for k/c = 0.0019. The grit in this case was only applied to the rime ice profile.
+
+Test Results
+In this section, highlights of the airfoil performance data are presented and discussed. Figure 4 shows the Ci-a, Ci-Cm^n and Ci-Cd curves for Re = 1 x 106 and 2 x 106. Data are shown for the airfoil under clean conditions with leading-edge grit roughness (LEGR) and with ice profiles R2 and R4 for k/c = 0.0019. It should be realized that the coefficients are normalized by the
+nominal airfoil chord. If the data for the ice profiles were
+
+normalized by the airfoil chord including the rime ice
+
+A Clean °LEGR
+
+oR2 nR4
+-0.3
+
+Re = 1,000,000 k/c = 0.0019
+
+A Clean °LEGR °R2 oR4 Re = 2,000,000 k/c = 0.0019
+
+1.5 1.0
+
+1.5
+1.0
+
+-0.3
+
+-0.2
+
+-0.2
+
+0.5
+
+-0.1
+0.0
+
+0.5
+
+-0.1
+
+0.0
+
+0.0
+
+0.0
+
+-0.5
+
+0.1
+0.2 -10 0 10 20
+
+-0.5
+
+0.1
+
+-1.0 -20
+
+-1.0 -20
+
+0.2 -10 0 10 20
+
+a(deg)
+A Clean oLEGR oR2 aR4 Re =1,000,000 k/c =0.0019
+A Clean
+1.0
+
+oc(deg)
+oLEGR oR2 nR4
+
+Re = 2,000,000 k/c = 0.0019
+
+1.0
+0.5
+
+0.5
+
+0.0
+
+0.0
+
+-0.5
+
+-0.5
+
+-1.0 0.000
+
+0.025
+
+0.050
+
+0.075
+
+0.100
+
+-1.0 0.000
+
+0.025
+
+0.050
+
+0.075
+
+0.100
+
+Fig. 4 S809 performance for Re = 1 x 10s and 2 X 106 under clean and icing conditions for k/c = 0.0019.
+
+horn, the corresponding coefficients would be reduced by 2.5% and 7.2% for cases R2 and R4, respectively. The two most obvious features of the polars are the large loss in lift and the increase in drag as the degree of icing increases. It is particularly noticeable that the lowest drag for the icing cases corresponds to the angle of attack used to generate the ice profiles, that is a = 5 deg - a result that is typical of other tests on iced airfoils. Above and below this angle of attack, significant flow separation occurs on the upper and lower surfaces, respectively. The result is an increase in drag above and below the 5 deg angle of attack. The sharp rise in drag above 5 deg is caused by the rapid growth of upper surface separation, which is also reflected in the change in the lift curve slope.
+
+Several other interesting features can be identified. Firstly, Fig. 4 illustrates important Reynolds number effects. As expected, the drag was reduced with increasing Reynolds number for the clean case. For the icing cases, however, the Reynolds number effects were minimal because transition to turbulent flow was promoted artificially by the grit roughness-a process that is known to be rather insensitive to Reynolds number for large roughness. Secondly, the rather dramatic increase in Citmax and stall delay for ice profile R4 as compared with the clean case and the other icing cases is surprising. It is, however, similar to the effects produced by leading-edge flaps.19'20 Thirdly, as the icing becomes more extreme, the separation pocket on the lower surface at zero lift grows, thereby producing a
+
+slight increase in the zero-lift angle of attack. Finally, the pitching moment curves change rather dramatically as compared with the clean case. This trend is most easily explained by considering the R4 case. As the angle of attack is increased, the pitching moment becomes more positive, which is indicative of a center of pressure
+that moves forward. This movement is attributable to
+
+Re = 1,000,000
+
+Re = 1 ,500,000
+
+A Smooth o kfc = 0.0009
++ Me = 0.0019
+
+o Smooth a k/c = 0.0009
+x We = 0.0019
+
+the large upper-surface leading-edge suction peak, which becomes more extreme with increasing angle of attack. Additional tests were performed to determine the effect of roughness on the ice shapes. The results shown in Fig. 5 for case Rl at Re = I x 106 and 1.5 x 106 are quite typical of the other cases. When the roughness is reduced from k/c = 0.0019 to 0.0009, there is a small drag reduction. When no roughness is used, however, drag is substantially reduced and the low drag range is extended to both higher and lower lift coefficients. These changes result from less separated flow as can be deduced from the increase in lift over the entire positive lift range. Clearly, these results underscore the importance of simulating the roughness of the rime ice.
+
+-1.0
+
+0.2
+
+Effects of Rime Ice on HAWT Performance
+code, PROPID,10 to estimate the effects of the rime ice on the power production of a 28.7-m diameter three-blade rotor operated in both stall-regulated and
+variable-speed modes. For both cases, the rotor blade The experimental data was used in the strip-theory
+1.0
+
+Re = 1,000,000
+
+Re = 1,500,000
+
+A Smooth
+o k/c = 0.0009 + kfc = 0.0019
+
+o Smooth
+D k/c = 0.0009 x k/c = 0.0019
+
+depicted in Fig. 6 was designed for a rated power of 450 kW under clean conditions. For the stall-regulated case, a rotor speed of 48 rpm was used with a blade pitch of 1.36 deg. A tip speed ratio of 7 was used for the
+variable-speed case, and the pitch was again 1.36 deg.
+
+0.5
+0.0
+
+Figure 7a shows the predicted performance for the stall-regulated rotor for the clean case and for rime ice cases R2 and R4 with k/c = 0.0019. Corresponding data is shown in Fig. 7b for the variable-speed rotor. It is known that for the variable-speed rotors in operation at constant tip speed ratio, the (^-distribution along the blade span remains the same for wind speeds below that for rated power. Thus, the percentage loss in performance due to icing is nearly constant at all wind speeds-14.5% for rime ice profile R2 and 20% for R4. For the stall-regulated rotor, the lift coefficient along the blade span changes with wind speed, and this leads to substantially different effects as compared with the variable-speed case. For wind speeds above approximately 13 m/s, the power curves are dictated largely by the airfoil characteristics in the vicinity of stall. In particular, a higher Cltmax produces a higher peak rotor power. For rime ice profile R2, the Ci>max is below that for the clean airfoil (see Fig. 4). Consequently, the power curve falls below that for the clean case. Both the loss
+
+-0.5
+
+-1.0 0.000
+
+0.025
+
+0.050
+
+cd
+
+0.075
+
+0.100
+
+Pig. 5 The effects of roughness on the S809 for Re - I X 106 and 1.5 X 10s ice profile Rl.
+
+in lift and increase in drag lead to the substantial loss
+
+in peak rotor power. For rime ice profile R4, however, the airfoil Ci,max is increased over the clean case and the stall is delayed to a higher angle of attack-effects that are produced by the streamlined rime ice profile that acts similar to a leading-edge flap. Thus, for rime ice profile R4, there is a rather large increase in peak power, which unfortunately leads to greater generator and blade loads. This result provides supporting evidence to speculation that ice build-up has been responsible for stall delay and associated peak power excursions on wind turbines in icing environments.21 Below 13 m/s
+
+600
+
+- - - R4k/c = 0.0019
+
+Stall R«sgulated Pin an -- R2 k/c = 0.0019
+
+500
+/
+-
+
+_.
+-,
+
+400
+
+X.
+
+300
+
+/ / /
+
+/?
+/
+
+^_ - -' - ""
+
+Fig. 6 Rotor geometry used to study the effects of rime ice accretion on wind turbine performance.
+
+200
+
+If If
+
+/'''
+
+where the blade is largely unstalled, the performance
+
+inn n
+(a)
+
+If /
+10 15 20 25
+
+degradation is similar to that for the variable-speed rotor. A particularly important difference, however, is the undesirable increased cut-in speed. It should be noted that the estimated performance
+under icing conditions is based on using the measured
+
+30
+
+V (m/sec)
+
+iced airfoil performance data along the entire span. The icing condition corresponds approximately to that experienced by the blade at the 75% station. Toward the blade tip the ice accretion would be higher than that tested and likewise lower than tested toward the root.22 Thus, these two competing effects will tend to offset each other, making the use of a single data set representative of the conditions at the 75% station appropriate.
+
+Variable Speed Clea n -- R2 1</c= 0.0019 - - - R4 1 </c= 0.0019
+500 400
+
+1.300 Q. 200
+
+Conclusions
+Horizontal axis wind turbines in northern regions
+along coastlines and atop high mountains where winds
+
+100
+
+are generally favorable for wind energy production are susceptible to rime ice accretion under supercooled fog and cloud conditions. The resulting adverse effects on wind turbine performance were estimated by using experimental data acquired on the S809 wind turbine airfoil under typical rime icing conditions. Based on the results for variable-speed rotors, the performance degraded uniformly by as much as 20% at wind speeds below rated power. For the stall-regulated rotors that rely on airfoil stall to regulate power, the effects of rime ice can be more pronounced and unexpected. As shown, a small rime horn that protruded 0.025c ahead of the clean airfoil leading edge lead to a loss in performance over the entire operating range, especially at wind speeds near peak power. In contrast, a larger O.OSolong rime ice
+horn behaved like a leading-edge flap and produced an
+
+/, ^** /
+
+lit
+
+JjL r>'
+
+A //'
+
+10
+
+15
+
+20
+
+25
+
+30
+
+(b)
+
+V (rrVsec)
+
+Fig. 7 Rotor performance under clean and icing conditions for operation in the (a) stall-regulated and (b) variable-speed modes.
+
+Acknowledgments
+The support of the National Renewable Energy Laboratory under Subcontract XAF-4-14076-03 is gratefully acknowledged. Also, the several discussions with
+J.L. Tangier of NREL proved to be quite helpful during
+
+increase in Giimax and a delay in stall to a higher angle of attack. These changes in the airfoil performance lead to a 16% increase in the peak rotor power-an undesirable result that can lead to generator burn-out and high blade loads. Finally, these estimates are conservative since the ice accretion studied here did not attempt to model the extreme icing events sometimes observed on real rotors under more prolonged rime ice conditions.
+
+the course of this work. Assistance from R. Chrenko of Kenetech Windpower and R.K. Jeck of the FAA Technical Center in identifying the conditions under which icing took place on wind turbines is gratefully acknowledged.
+
+References
+^ong, J.Q. and Bose, N., "Power Reduction from Ice Accretion on a Horizontal Axis Wind Turbine," Proceedings of the 12th British Wind Energy Association Conference, Norwich, March 27-30, 1990.
+
+Seifert, H., and Schloz, C., "Additional Loads Caused by Ice on Rotor Blades During Operation," Proceedings of the European Community Wind Energy Conference, Madrid, Spain, Sept. 10-14, 1990. 3 Chappell, M.S. and Templin, R.J., "And the Cold Winds Shall Blow ... Wind Energy Research and Development in Canada- Spring 1985," Proceedings of the 7th British Wind Energy Association Conference, Oxford, UK, 1985.
+
+2
+
+Messinger, B.L., "Equilibrium Temperature of an Unheated Icing Surface as a Function of Airspeed," J. of the Aeronautical Sciences, Jan. 1953, pp. 24-42.
+17
+
+16
+
+Bragg, M.B., Cummings, M.J., Lee, S. and Henze.
+
+Bose, N., "Icing on a Small Horizontal Axis Wind Turbine - Part 2: Three Dimensional Ice and Wet Snow Formations," J. of Wind Engineering and Industrial Aerodynamics, Vol. 45, 1992, pp. 87-96. 5 Rong. J., Bose, N., Brothers, C. and Lodge, M., "Icing Test on a Horizontal Axis Wind Turbine," Wind Engineering, Vol. 15, No. 2, 1991, pp. 109-113. 6 Seifert, H., "Icing of Wind Turbine Rotor Blades During Operation," Presented at BOREAS, An International Expert's Meeting on Wind Power in Icing Conditions, Enontekio, Finland, 1992. 7 Makkonen, L. and Autti, M., "The Effects of Icing on Wind Turbines," Proceedings of the European Community Wind Energy Conference, Amsterdam, Netherlands, 1991. 8 Tangler, J.L. and Somers, D.M., "NREL Airfoil Families for HAWTs," Proceedings of the American Wind Energy Association WINDPOWER Conference, Washington, DC, March 1995. 9 Ruff, G., "Users Manual for the NASA Lewis Ice Accretion Prediction Code (LEWICE)," NASA CR185129, May 1990. 10 Selig, M.S. and Tangier, J.L., "Development and Application of a Multipoint Inverse Design Method for Horizontal Axis Wind Turbines," Wind Engineering, Vol. 19, No. 2, 1995, pp. 91-105. "Jones, B.M., "The Measurement of Profile Drag by the Pitot Traverse Method." Aeronautical Research Council, R&M 1688, 1936. 12 Schlichting, H., Boundary-Layer Theory, Seventh Edition, McGraw-Hill Book Company, New York, 1979. 13 Somers, D.M., "Design and Experimental Results for the S809 Airfoil," Airfoils, Inc., Hampton, VA, March 1989. 14 Ramsay, R.R., Hoffmann, M.J. and Gregorek, G.M., "Effects of Grit Roughness and Pitch Oscillation on the S809 Airfoil," Draft Report of The Ohio State University, Aeronautical and Astronautical Research Laboratory, Columbus, Ohio, National Renewable Energy Laboratory Contract No. XF-1-11009-3, June 1994.
+Noe, S.C., "Force Balance Measurements of WindTurbine Airfoil Performance with Simulated LeadingEdge Ice Accretions," Master's Thesis, University of Illinois at Urbana-Champaign, Urbana, Illinois, Aug. 1996.
+15
+
+4
+
+C.M., "Boundary-Layer and Heat-Transfer Measurements on a Airfoil with Simulated Ice Roughness," AIAA Paper 96-0866, Jan. 1996. 18 Tammelin, B. and Santti, K., "Rime Accretions on the Fells," Presented at BOREAS, An International Expert's Meeting on Wind Power in Icing Conditions, Enontekio, Finland, 1992. 19 Bragg, M.B., Gregorek, G.M. and Shaw, R.J., "Wind Tunnel Investigation of Airfoil Performance Degradation Due to Icing," AIAA Paper 82-0582, March 1982. 20 McCormick, B.W., Aerodynamics, Aeronautics, and Flight Mechanics, Second Edition, John Wiley and Sons,
+Inc., New York, 1995.
+
+Ronsten, G., "Can Delayed Stall Be Caused by Ice Accretion on the Leading Edge of an Airfoil?," FFA Institute of Sweden, FFAP-A-981, Stockholm, Sweden, May 1993.
+22
+
+21
+
+Bose, N., "Icing on a Small Horizontal Axis Wind
+
+Turbine - Part 1: Glaze Ice Profies," J. of Wind Engineering and Industrial Aerodynamics, Vol. 45, 1992, pp. 75-85.
+

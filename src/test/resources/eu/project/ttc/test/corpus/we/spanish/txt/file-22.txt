@@ -1,0 +1,116 @@
+DISEÑO, ANIMACIÓN Y FUNCIONAMIENTO DE GENERADORES EÓLICOS COMO NUEVA METODOLOGÍA DIDÁCTICA APLICADA A LA ENSEÑANZA DE LAS ENERGÍAS RENOVABLES
+San Martín Díaz, José Javier (1) ; Romero García, David (1) ; Aperribay Maiztegui, Víctor (2) Martín Amundarain, Iñaki (2) ; San Martín Díaz, José Ignacio (1) ; Arrieta Albizu José Mª (1) ; Zuazua Ojanguren, Jon (1)
+EUITI EIBAR. Universidad del País Vasco (UPV-EHU) Dpto. Ingeniería Eléctrica Correo electrónico: iepsmdij@sb.ehu.es
+(2) (1)
+
+Dpto. Expresión Gráfica y Proyectos de Ingeniería Correo electrónico: eppmaami@sc.ehu.es
+
+RESUMEN
+La creación de una aplicación multimedia, con fines docentes se fundamenta como respuesta a las conclusiones a las que se ha llegado después de varios años desde la puesta en marcha del plan nuevo de estudios. En esta comunicación se presenta una herramienta de apoyo al proceso de EnseñanzaAprendizaje aplicada al estudio de las Energías Renovables. Para alcanzar este objetivo se han diseñado y desarrollado dos tipos de aerogenerador, con y sin caja multiplicadora, analizando las ventajas e inconvenientes de cada uno de los mismos, en un entorno gráfico 3D, complementándolos con una animación, para poder visualizar sus detalles constructivos y su funcionamiento, tanto interno como externo. Palabras clave: Energías renovables, Diseño, Aerogenerador.
+
+ABSTRACT
+The creation of a multimedia application, with educational aims, is based like answer to the conclusions at which it has been arrived after several years from the beginning from the new plan of studies. In this communication a tool of support to the process Teaching-Learning appears applied to the study of the Renewable Energies. For its attainment they have been designed and developed two types of wind powers, with and without multiplying box, analyzing the advantages and disadvantages of each one of such, in graphical surroundings 3D, complementing them with an animation, to be able to visualize its constructive details and their operation, as much internal as external. Key words: Renewable Energies, Design, Windpower. Grupo temático: Realidad virtual: modelado, animación, simulación y multimedia.
+
+1. Introducción
+Esta comunicación está basada en la realización de un curso multimedia sobre Energías Renovables, en particular de la energía eólica constituyendo una herramienta de apoyo al proceso de Enseñanza-Aprendizaje. La creación de una aplicación multimedia, con fines docentes se fundamenta como una respuesta a las conclusiones a las que se ha llegado después de varios años desde la puesta en marcha del plan nuevo de estudios. Así pues, es evidente la necesidad de incorporar a los antiguos métodos de enseñanza, las modernas tecnologías de aprendizaje, que en los últimos años han estado surgiendo y siguen desarrollándose. Por todo ello, se estima imprescindible la creación de un nuevo método de enseñanza interactiva, aplicada al estudio de las Energías Renovables.
+
+2. Desarrollo del curso
+A lo largo del curso multimedia se hace un repaso a todos los aspectos relacionados con la energía eólica. El curso está dividido en los siguientes apartados (figura 1): Introducción. Funcionamiento y componentes. Potencial eólico. Tendencias actuales.
+
+Fig. 1. Estructura del curso
+
+2.1. Introducción
+En este apartado se mencionan los tipos de vientos existentes (figura 2) según la escala a la que nos refiramos (global, local, etc.), las diferentes clasificaciones que se pueden hacer de las turbinas eólicas, según ciertos criterios como son el tipo de eje, velocidad, etc. y de los distintos tipos de instalaciones de las cuales se puede optar ya sea en red o aislada (figura 3).
+
+Fig. 2. Tipos de viento
+
+Fig. 3. Tipos de turbina
+
+2.2 Funcionamiento y componentes
+Existe una gran variedad en cuanto al tipo de turbinas empleadas para aprovechar la energía del viento y transformarla en energía eléctrica. La tecnología actual de aerogeneradores ha evolucionado hacia máquinas de eje horizontal, de tres palas orientadas a barlovento y con torre tubular. Por otra parte cada aerogenerador se diseña en función de unas necesidades de potencia y eficiencia del aprovechamiento de la energía eólica.
+
+2.2.1 Funcionamiento
+En este apartado se intenta dar una visión general de las partes que habitualmente constituyen un aerogenerador (figura 4), teniendo presente que en cualquier momento se puede prescindir de alguna de ellas.
+
+Fig. 4. Componentes del aerogenerador
+
+En esta sección también se puede ver la animación de un aerogenerador con caja multiplicadora en movimiento. La animación tiene una doble finalidad tratando, por una parte, de explicar cómo trabaja el conjunto de componentes que forman el aerogenerador y por otro lado, mostrar de forma visual el funcionamiento de cada uno de ellos. En las imágenes siguientes (figuras 5 - 12) se muestran diferentes detalles de un aerogenerador.
+
+Fig. 5. Imagen inicial
+
+Fig. 6. Vista de la góndola
+
+Fig. 7. Detalle de la góndola
+
+Fig. 8. Mecanismo interno de la góndola
+
+Fig. 9. Vista posterior
+
+Fig. 10. Vista lateral
+
+Fig. 11. Vista anterior
+
+Fig. 12. Vista frontal
+
+2.2.2 Componentes
+
+Fig. 13. Componentes del aerogenerador
+
+A lo largo de este curso se pueden visualizar los principales componentes (figura 13) de forma muy detallada. La visualización se lleva a cabo a lo largo de una pequeña animación en la cual el componente elegido resaltará sobre los demás, pudiendo verlo posteriormente de forma aislada y con todo detalle debido a que las piezas están realizadas en 3D. Todo esto hace que la compresión del funcionamiento y composición de un aerogenerador sea mucho mejor desde el punto de vista docente, ya que la memoria visual es la más rápida (figuras 14 - 21).
+
+Fig. 14. Imagen virtual del generador
+
+Fig. 15. Generador
+
+Fig. 16. Caja multiplicadora
+
+Fig. 17. Buje
+
+Fig. 18. Control de paso de pala
+
+Fig. 19. Sistema Yaw
+
+Fig. 20. Anemómetro y veleta
+
+Fig. 21. Cimentación
+
+2.3 Potencial eólico
+Son muchos conceptos los que hay que tener claros a la hora de llegar a comprender, cómo y cuánta energía es capaz absorber un aerogenerador de la energía que posee el viento. Es por eso por el cual, se ha creado este apartado, para poder llegar a entender que existen variables, limitaciones físicas a las cuales un diseñador se tiene que atener a la hora de implementar un aerogenerador en una ubicación determinada. Este apartado puede llegar a ser muy extenso, siendo muy laborioso el intentar de forma concisa, explicar cada uno de los conceptos pertenecientes al tema. Intentando abarcar lo máximo posible se realiza un repaso general de los conceptos físicos más importantes. Los apartados en los cuales hemos dividido este tema se pueden ver en la figura 22:
+
+Fig. 22. Barra de navegación
+
+• Cp: El coeficiente de potencia indica con que eficiencia el aerogenerador convierte la energía del viento en electricidad. • Curva de Potencia: La curva de potencia de un aerogenenerador indica la potencia eléctrica obtenida por cada velocidad del viento. • Weibull: La distribución Weibull es la probabilidad que hay a lo largo de un año en un sitio determinado, de que un viento sople a una velocidad u otra. • Densidad de Potencia: Es la distribución de energía eólica a distintas velocidades del viento.
+
+• Ley de Betz: Es la ley que establece el máximo de potencia que puede absorber un aerogenerador ideal del viento para convertirla en energía mecánica útil • Potencia del viento: Es la potencia que posee el viento, de la cual el aerogenerador absorberá una parte. En esta sección (figura 23) se detalla cuánta energía es capaz extraer del viento un aerogenerador y los parámetros de los que depende: área del rotor, velocidad del viento y la densidad del aire.
+
+Fig. 23. Potencia del viento
+
+2.4 Tendencias actuales
+La eficiencia energética se esta convirtiendo en el caballo de batalla del siglo XXI. Obtener energía a partir de fuentes renovables es una meta a la cual estamos obligados a llegar si queremos preservar la salud de nuestro planeta. Este es el objetivo, pero para ello hay que avanzar paso a paso procurando conseguir energía de manera más eficiente, produciendo más y mejor. En nuestro caso se ha procurado entrever las nuevas tendencias tecnológicas al respecto (figura 24).
+
+Fig. 24. Nuevas directrices tecnológicas
+
+• • • •
+
+I+D: Investigación y desarrollo. Parques marinos: La energía marina es una aplicación de la energía eólica con un futuro enormemente prometedor. Megaturbinas: Las máquinas de gran potencia explotan mejor los recursos eólicos. Multipolar: Los generadores síncronos directamente acoplados a la turbina es una de las opciones más prometedoras en el futuro de la industria eólica (figuras 25 - 29).
+
+•
+
+Fig. 25. Aerogenerador síncrono multipolar, sin caja multiplicadora
+
+Fig. 26. Vista general
+
+Fig. 27. Sistema Yaw
+
+Fig. 28. Detalle del estator
+
+Fig. 29. Detalle del rotor multipolar
+
+Fig. 30. Almacenamiento en forma de hidrógeno
+
+3. Conclusiones
+Dada la dificultad existente en el aprendizaje de las nuevas asignaturas de Energías Renovables, en particular de la eólica, motivada por la dificultad de explicar y entender ciertos fenómenos o conceptos, surge la necesidad de introducir nuevas tecnologías atractivas para el alumno y que, además, permitan adaptarse a su ritmo de aprendizaje, ofreciendo contenidos representativos de la materia. A tal fin, en esta comunicación se han diseñado y desarrollado dos tipos de aerogenerador, analizando las ventajas e inconvenientes de cada uno de los mismos, en un entorno gráfico 3D, complementándolos con una animación, para poder visualizar sus detalles constructivos y su funcionamiento, tanto interno como externo. Se analizan las tendencias de futuro para la obtención de energía eléctrica mediante la utilización de generadores eólicos multipolares, de alta eficiencia, sin caja multiplicadora, reduciendo pérdidas por transmisión y ruido. Por otra parte ahorraremos hasta 250 litros al año en lubricantes y la baja velocidad de sus palas (20 rpm) reduce el peligro de colisión de las aves.
+
+4. Bibliografía
+[1] [2] [3] [4] [5] [6] [7] A. Macdonald, M. Berry, Reseach Notes – Clean Energy for the Future, Berlin, 2003. I Encuentro Científico del Hidrógeno y las Pilas de Combustible, Madrid, 2004. www. windpower.org www.ecoterra.org www.energias-renovables.com www.mtorres.es www.ballard.com
+

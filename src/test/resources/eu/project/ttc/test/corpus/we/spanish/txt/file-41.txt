@@ -1,0 +1,898 @@
+Informes y Monografías
+
+/ 27
+
+Energía eólica
+Evolución y perspectivas
+
+Redacción:
+Mercedes Teruel Moreno
+
+Edita:
+Fundación Cajamar Paseo de Almería, 25 - 04001 Almería www.fundacioncajamar.com
+
+Diseño y maquetación:
+Beatriz Martínez Belmonte
+
+Imprime: Publidisa Depósito Legal: SE - xxxx - 2010 Fecha de publicación: Julio 2010
+
+Índice
+1. Introducción ................................................................................... 5 2. ¿Qué es la energía eólica? ............................................................ 9 3. La energía eólica en el contexto internacional ............................. 16 4. La energía eólica en el mix energético europeo para la producción de electricidad ............................................... 22 5. Principales indicadores del mercado de la energía eléctrica en España ................................................................................... 24 6. La energía eólica en el Plan Nacional de Energías Renovables .... 29 7. Potencia eólica instalada en España........................................... 31 8. Estructura de la oferta del sector eólico en España .................... 35 8.1. Distribución del mercado eólico nacional ............................. 38 8.2. Presencia internacional de la industria eólica española ....... 40 9. Impacto económico y medioambiental de la energía eólica en España ................................................................................... 42 9.1. Balance coste-beneficio de la energía eólica en España ..... 43
+
+10. Marco normativo .......................................................................... 45 11. La energía eólica marina ............................................................. 49 12. Conclusiones .............................................................................. 54 Anexo I. Parques eólicos de mayor tamaño operativos en España (2009) ............................................................................. 61 Anexo II. Energía vendida, retribución total, precio medio retribuido y prima equivalente por tipos de energías renovables (2004-2009) .... 65 Anexo III. Coste de los principales componentes de una turbina eólica onshore................................................................................... 66 Referencias bibliográficas ................................................................. 67 Recursos en Internet ........................................................................ 72
+
+1. Introducción
+
+Las sucesivas crisis de los años 70 del siglo XX motivadas por los shocks pretrolíferos pusieron de relieve, para la mayor parte de los países, dos circunstancias capitales. La primera era la debilidad implícita de un sistema energético dependiente de una sola fuente primaria, no renovable, y ubicada preferentemente en países relativamente inestables. La segunda era la propia dependencia del conjunto del sistema económico de aportes de energía continuados y crecientes. Había, por tanto, que tomar medidas relacionadas con la diversificación energética (incorporando fuentes de suministro renovables) y con la mejora del rendimiento de los sistemas productivos. Por otro lado, en los últimos tiempos, el aumento de la certidumbre sobre la influencia de las emisiones de CO2 de origen antropogénico en el proceso de cambio climático, ha convertido la reducción de emisiones en un nuevo objetivo de la política energética mundial (plasmado inicialmente en el Protocolo de Kyoto). En el cumplimiento de estos tres objetivos estratégicos: diversificación de fuentes, mejora del rendimiento y eliminación de emisiones, las energías renovables y, en concreto la eólica, se convierten en protagonistas de la planificación energética del planeta. A escala europea, la proyección para el fomento de fuentes de energía renovables tomó fuerza en 1993 tras la creación del Programa Altener1 por parte de la UE, cuyo periodo de vigencia se extendió hasta 1997, renovándose en años sucesivos (1998 y 2000)2. La finalidad de estos planes de acción era incrementar la cuota de mercado de las energías renovables en la producción y consumo de energía primaria. Estos programas representaron un punto de inflexión en la política energética comunitaria ya que por primera vez se dotó de un instrumento financiero para la consecución del objetivo propuesto. La sensibilización de la Comisión Europea hacia el diseño de una estrategia en energías renovables continuó vigente, plasmándose en sucesivas comunicaciones: Libro Verde de enero de 1995, Libro Blanco de diciembre de 1995 y Libro Verde de noviembre de 1996. En las dos primeras, la citada institución expresó su opinión sobre el futuro de la política energética en la Comunidad y sobre la función que han de desempeñar las energías renovables. La tercera de las comunicaciones es un documento de reflexión para desarrollar una estrategia comunitaria y un plan de acción sobre fuentes de energía renovables.
+
+1 2
+
+Decisión 93/500/CEE. Decisiones 98/352/CE y 646/2000/CE.
+
+5
+
+Informes y monografías / 27
+
+En 1997, la Comisión publicó el documento estratégico Energía para el futuro: fuentes de energía renovables. Libro Blanco para una estrategia y un plan de acción comunitarios, en el que fijó como objetivo de referencia que las fuentes de energía renovables contribuyesen, como mínimo, en un 12% al consumo energético bruto para 2010. Este Libro Blanco expresaba que la prioridad concedida a las energías renovables en las políticas, los programas y los presupuestos comunitarios era esencialmente escasa. Asimismo, manifestó el papel crucial de cada Estado miembro en el desarrollo y la aplicación de un Plan de Acción que contuviera objetivos específicos y estrategias para lograrlos. Bajo las premisas citadas, el Libro Verde. Hacia una estrategia de seguridad del abastecimiento energético indicaba la debilidad estructural que supone para la UE la elevada dependencia externa de los hidrocarburos y la escasez de recursos energéticos fósiles internos que permitan cubrir satisfactoriamente el incremento de la demanda futura. En el ámbito legislativo, el Parlamento Europeo y el Consejo aprobaron la Directiva 2001/77/CE, tratándose del primer marco jurídico comunitario para la promoción de la electricidad a partir de fuentes de energía renovables. Esta normativa fijó como cuota indicativa, que el 21% de la electricidad generada en toda la UE para 2010 fuese de origen renovable. Asimismo, estableció objetivos diferenciados por Estado miembro. La Comisión publicó en 2009 un informe de avance sobre la energía procedente de fuentes renovables, manifestando que a pesar de los progresos realizados en los últimos años y, a no ser que se realice un gran esfuerzo, la meta planteada no se logrará, quedando en un 19%. Los últimos datos publicados por la Dirección General de Energía de la Comisión Europea correspondientes a 2007, detallan una cuota del 15,6%3. Si bien, tal y como queda reflejado en el Gráfico 1, existen importantes diferencias entre los Estados miembros. Mientras que Alemania, Hungría y Dinamarca ya han conseguido sus objetivos, otros se encuentran muy próximos (Bélgica, Lituania, Luxemburgo y Holanda), en tanto que un grupo amplio de países está aún lejos de alcanzarlos. La reglamentación vigente, la Directiva 2009/28/CE, que modifica y deroga las Directivas 2001/77/CE y 2003/30/CE, asigna objetivos vinculantes de consumo final bruto de energía procedente de fuentes renovables por Estado miembro para 2020, siendo como mínimo del 20%4 en el conjunto de la UE. Asimismo, la Comisión considera que para alcanzar este porcentaje, la aportación de la electricidad a partir de energía renovable deberá situarse en torno a un 33%.
+3 4
+
+http://ec.europa.eu/energy/publications/doc/statistics/ext_renewables_gross_electricity_generation.xls También establece por Estado miembro una cuota mínima del 10% respecto al consumo final de energía en el transporte.
+
+6
+
+Energía eólica. Evolución y perspectivas
+
+Gráfico 1. Grado de cumplimiento de generación eléctrica a partir de energías renovables por países en la UE-27 (2007) y objetivo planteado para 2010. En porcentaje*
+
+*Los porcentajes corresponden a consumo bruto de electricidad calculado en base a la siguiente fórmula: a/(b+c), siendo a = generación bruta de electricidad procedente de energías renovables; b = generación bruta de electricidad; c = importaciones netas de electricidad. Fuente: Comisión de las Comunidades Europeas (2007) y Dirección General de Energía y Transporte de la Comisión Europea. Elaboración propia.
+
+En el contexto descrito, la energía eólica está desempeñado entre todas las renovables un notable cometido para la consecución del objetivo planteado en la Directiva 2001/77/CE. De hecho, el Libro Blanco Energía para el futuro: fuentes de energía renovables, la situaba entre las primeras por potencia a instalar, otorgándole 40.000 MW en 2010. Sin embargo, esta cifra fue ya rebasada en 2005. Adicionalmente, es de destacar que, excluyendo la hidroeléctrica, la eólica es la fuente renovable que más producción de electricidad está aportando para cumplir la cuota global del 21%5. Considerando el conjunto de aspectos arriba descritos, el presente estudio se plantea como objetivos los siguientes: a) Presentar la evolución de la potencia eólica instalada en el mundo, prestando una especial atención a la UE-27, e identificar los países que tienen un mayor margen de recorrido.
+
+5
+
+Coenraads et al. (2008), p. 8.
+
+7
+
+Informes y monografías / 27
+
+b) Conocer el grado de penetración de la eólica en el mix energético europeo para la producción de electricidad y el nivel de cobertura de la demanda eléctrica a partir de la citada fuente renovable. c) Exponer los principales indicadores del mercado de la energía eléctrica y la evolución de la cobertura de las energías renovables en la demanda de electricidad en España. d) Analizar el impacto económico y medioambiental de la energía eólica en España. e) Detallar las cuotas de mercado del sector eólico español en los segmentos fabricación y promoción. f) Mostrar la posición competitiva de la industria eólica española a nivel internacional. g) Describir el marco jurídico de la energía eólica, así como presentar las últimas modificaciones legislativas que han afectado al sector. Para abordar los objetivos especificados, el informe ha sido estructurado en doce epígrafes, el último de los cuales se ha dedicado a las principales conclusiones.
+
+8
+
+Energía eólica. Evolución y perspectivas
+
+2. ¿Qué es la energía eólica?
+La energía que puede obtenerse del viento, tanto en el medio terrestre (onshore) como marino (offshore)6, se denomina eólica. La producción de esta energía a escala comercial se realiza mediante aerogeneradores de eje horizontal (el eje de rotación es paralelo a la dirección del viento)7, los cuales pueden ser de dos tipos, dependiendo del generador que lleven: a) Asíncronos o de inducción. Funcionan con multiplicadora. b) Síncronos. Suelen funcionar sin multiplicadora. Otras dos características por las que se clasifican estos aerogeneradores son: a) Control de potencia. Los aerogeneradores pueden rentabilizar su rendimiento reduciendo la captura de recurso eólico para velocidades iguales o superiores a la de potencia nominal (desde 11 a 15 m/s)8. En consecuencia, se disminuyen las cargas mecánicas provocadas por vientos turbulentos y se aumenta la producción de energía. Esta última característica afecta específicamente a aerogeneradores con sistemas de control de potencia activos. Existen tres tipos de control de potencia: por variación del ángulo de paso (pitch control), control activo por pérdida aerodinámica (active stall control) y control por pérdida aerodinámica (stall control). Los dos primeros son sistemas activos de paso variable y el tercero pasivo. • Control por variación del ángulo de paso (pitch control). Existen dos posibles configuraciones: las palas pueden girar sobre su eje hasta 90º, o bien sólo en el tramo final (último tercio). Control activo por pérdida aerodinámica (active stall control). El giro de las palas es de sólo unos grados (menos de 10º), si bien, una vez que el aerogenerador alcanza velocidad de viento que supone potencia nominal, las
+
+•
+
+6 7
+
+Véase el Epígrafe 11 de este mismo documento: "La energía eólica marina" (p. 49). Los aerogeneradores de eje horizontal son los más eficientes. También pueden ser de eje vertical si el eje de rotación es perpendicular a la dirección del viento. Este margen varía ligeramente dependiendo de la potencia del aerogenerador y del tamaño de las palas.
+
+8
+
+9
+
+Informes y monografías / 27
+
+palas se orientan en sentido contrario al que lo hacen las reguladas por variación del ángulo de paso, a fin de llevarlas hasta una posición de mayor pérdida de sustentación. • Control por pérdida aerodinámica (stall control). Esto significa que las palas están unidas al buje en ángulo fijo y presentan un diseño torsionado. De esta forma, ante velocidades de viento elevadas el exceso de energía es absorbido gradualmente por las palas a lo largo de su eje longitudinal limitando que la fuerza del viento actúe en el rotor.
+
+b) Control de velocidad del generador. La velocidad de giro del rotor afecta a la del generador, aumentando ésta última de forma lineal respecto a la primera. Esta característica es relevante ya que influye en tres aspectos: en el aprovechamiento del recurso eólico, en la interconexión del aerogenerador a la red eléctrica y en las demandas mecánicas a las que se ve sometido. Se diferencian dos velocidades: constante o variable. • Velocidad constante9. La velocidad del generador varía en un estrecho margen en el rango de operación de la turbina eólica; o bien trabaja a dos velocidades (una para vientos bajos y otra para vientos superiores). • Velocidad variable10. La velocidad de giro del generador es distinta en diferentes rangos de intensidad de viento. En este último caso existe un incremento del rendimiento de la máquina (aumenta la producción eléctrica), ya que se extrae la máxima energía para distintos regímenes de viento y se mejora la capacidad de amortiguación del tren mecánico (rotor-eje lentomultiplicadora y generador).
+
+9 10
+
+Los aerogeneradores de paso fijo tienen el control de velocidad del generador constante. Los aerogeneradores de paso variable tienen el control de velocidad variable.
+
+10
+
+Energía eólica. Evolución y perspectivas
+
+Tabla 1. Clasificación de los aerogeneradores comerciales
+Criterio En función de la regulación del ángulo de paso de las palas (control de potencia) En función del control de velocidad del rotor En función del tipo de generador Características • Paso fijo • Paso variable • Velocidad fija • Velocidad variable • Generadores síncronos (suelen funcionar sin multiplicadora) • De polos formados por electroimanes alimenta dos por corriente continua • De polos formados por imanes permanentes • Generadores asíncronos o de inducción (funcionan con multiplicadora) • De jaula de ardilla • De rotor devanado (o bobinado)
+
+A continuación se detallan los principales componentes de un aerogenerador: a) Torre. Es una estructura tubular con diámetro creciente hacia la base sobre la que se instala la góndola y el rotor, oscilando su altura de media entre 44 y 100 metros. Se fabrica a partir de láminas de chapa oxicortada e imprimada que son curvadas hasta formar secciones cilíndricas, las cuales se unen soldándose. La segunda etapa del proceso de fabricación consiste en pintar la torre y aplicarle tres tratamientos internos y externos. El primero es un granallado de acero y los otros dos son de pintura con epoxi rico en zinc y ceramic. Por último, se le aplica un recubrimiento externo de poliuretano. En el caso de que la torre supere el último valor especificado puede estar construida total o parcialmente de hormigón. b) Rotor. Es el conjunto formado por las palas y el buje, siendo éste último el rodamiento que une las tres palas y el eje lento. Desempeña la función de asimilar la energía cinética del viento y transformarla en mecánica de giro, transfiriéndola a la multiplicadora a través del eje lento. El buje está protegido con una cubierta cuya parte frontal es una pieza independiente denominada cono nariz, la cual permite mejorar el coeficiente aerodinámico del rotor. Ambos elementos son de fibra de vidrio.
+
+11
+
+Informes y monografías / 27
+
+Las palas están fabricadas en fibra de vidrio y de carbono, o bien en resina de poliéster reforzada con fibra de vidrio. Su diseño es aerodinámico para lograr un equilibrio entre la captación eficaz de la energía cinética del viento, reducir las emisiones acústicas y ejercer una mínima carga sobre la turbina. El diámetro del rotor determina la capacidad del aerogenerador para producir energía. Así pues, conforme aumenta el área de barrido la potencia de la máquina es mayor. La actual configuración comercial oscila entre 44 y 128 metros de diámetro, lo que se traduce en una potencia de 800 kW a 7,5 MW (Tabla 2).
+Tabla 2. Configuración de un aerogenerador a escala comercial (2010)
+Diámetro del rotor 44-59 metros 56-90 metros 71-105 metros 82-128 metros Potencia 800-900 kW 1-1,8 MW 2-2,5 MW 3-7,5 MW
+
+Fuente: Datos recopilados de los fabricantes del sector. Elaboración propia.
+
+c) Góndola o nacelle. Se sitúa detrás del rotor, y es el compartimiento en el que se encuentran los diferentes dispositivos que generan la energía eléctrica y orientan el aerogenerador de la forma más óptima para captar el viento. En ella se distinguen varios elementos: • Eje lento (o eje principal). Es una pieza tubular de acero macizo que une el rotor y la multiplicadora. Multiplicadora. Transforma la baja velocidad de giro del rotor en alta velocidad de rotación para adaptarla al generador. Eje secundario (o de alta velocidad). Es una pieza tubular de acero macizo o de fibra aislante que une la multiplicadora con el generador. Generador. Es la máquina encargada de convertir la energía mecánica en eléctrica. Sistema de frenado. El aerogenerador dispone de un freno aerodinámico activo en las palas. Éste permite reducir la velocidad de giro del rotor ante una intensidad de viento igual o superior a la de potencia nominal mediante regulación por cambio del ángulo de paso (pitch control) o active stall control.
+
+•
+
+•
+
+• •
+
+12
+
+Energía eólica. Evolución y perspectivas
+
+Estos sistemas no existen en los aerogeneradores de paso fijo, aqueéllos en los que el ángulo de ataque de la pala respecto del viento incidente no se puede variar. En este caso, el control de potencia se denomina stall control. Además, los aerogeneradores tienen un rotor lock que actúa de pestillo bloqueando su giro. Se utiliza específicamente en operaciones de mantenimiento. • Sistema de orientación. Es un mecanismo situado en la base de la góndola siendo su función la de situar el conjunto rotor-góndola en la dirección perpendicular al viento. Como elementos básicos pueden citarse: el motor-reductor encargado de girar la góndola; los frenos que sujetan la misma tras haber alcanzado aquella la orientación correcta; y el rodamiento de la corona que permite el giro relativo entre la torre y la góndola. Controlador electrónico del aerogenerador. Cada máquina dispone de un autómata industrial (Programable Logit Control, PLC) que recibe señales de diferentes sensores, e igualmente supervisa y recoge estadísticas de su funcionamiento. También desempeña la función de enviar diferentes parámetros sobre la actividad del aerogenerador al sistema de control del parque. En una turbina eólica moderna se pueden monitorizar un amplísimo número de parámetros.
+Figura 1. Principales componentes de un aerogenerador
+
+•
+
+Fuente: El País (18 de noviembre de 2005). Disponible en http://www.elpais.com/graficos/sociedad/Energia/eolica/ elpgrasoc/20051118elpepusoc_1/Ges. Elaboración propia.
+
+13
+
+Informes y monografías / 27
+
+Los aerogeneradores suelen agruparse por sectores constituyendo un parque eólico. Una instalación de este tipo consta de una infraestructura por medio de la cual se evacua la energía generada por los aerogeneradores al sistema eléctrico. Esto se realiza mediante una red de cables y transformadores. Cada aerogenerador tiene su propio transformador de baja a media tensión, ubicado generalmente en la torre, y mediante cableado subterráneo se conduce la electricidad a una subestación situada en el propio parque que puede tener uno o más transformadores. Los parques eólicos están supervisados por el gestor en un centro de operaciones mediante un sistema de monitorización remota que le permite conocer en tiempo real el estado de los aerogeneradores y equipos de la subestación, y actuar sobre ellos. Este sistema funciona de la siguiente manera: • En la subestación del parque se localiza un sistema local informatizado que recoge datos relevantes sobre el estado de funcionamiento de los aerogeneradores, equipos de la subestación y torres meteorológicas. Mediante este sistema es posible observar la actividad de todos ellos, pudiendo asimismo ejecutar órdenes sobre los mismos. • En el centro de control central se reciben los datos enviados por el sistema local de cada parque a través de una línea de fibra óptica. Además, suele existir una segunda línea de respaldo (back-up) que funciona vía satélite o GPRS (Global Packet Radio System). • Cada gestor envía al Centro de Control de Energías Renovables de Red Eléctrica Española (CECRE)11 los datos a tiempo real de producción de electricidad. Esto se realiza empleando el protocolo de comunicación Intercontrol Centers Communications IEC-870-6 (ICCP).
+
+11
+
+El Real Decreto 661/2007, en su art. 18 d, especifica que "todas las instalaciones de régimen especial con potencia superior a 10 MW deberán estar adscritas a un centro de control de generación, que actuará como interlocutor con el operador del sistema, remitiéndole la información en tiempo real de las instalaciones y haciendo que sus instrucciones sean ejecutadas con objeto de garantizar en todo momento la fiabilidad del sistema eléctrico". Asimismo, expone que "la obligación de adscripción a un centro de control de generación será condición necesaria para la percepción de la tarifa o, en su caso, prima establecida en el presente real decreto, o en reales decretos anteriores vigentes con carácter transitorio. Si la opción de venta elegida fuera la venta a tarifa regulada, el incumplimiento de esta obligación implicaría la percepción de un precio equivalente al precio final horario del mercado, en lugar de la tarifa".
+
+14
+
+Energía eólica. Evolución y perspectivas
+
+Cuadro 1. Principales factores que influyen en la producción de energía eléctrica en los aerogeneradores
+
+La cantidad de electricidad que produce un aerogenerador depende de múltiples factores, tales como: a) La velocidad y frecuencia del recurso eólico. A medida que aumenta la intensidad y disponibilidad de viento, hasta un nivel específico que viene determinado por la potencia nominal del aerogenerador, se genera más energía. b) La cantidad de energía que extrae la turbina depende linealmente de la densidad del aire. Ésta varía en función de la temperatura y la altura, de tal forma que cuanto más pesado sea el aire y el emplazamiento esté más próximo al nivel del mar, la energía capturada por el rotor del aerogenerador será mayor . c) El diámetro del rotor. Condiciona el área de barrida y en consecuencia, a mayor diámetro se incrementa la captura de viento. d) El hecho de que el aerogenerador disponga de un sistema de control de potencia activo. Esta característica permite producir más electricidad frente a una turbina de paso fijo. e) La orientación del aerogenerador en el parque. Las máquinas se ubican de manera que se optimice la captación del recurso eólico.
+
+15
+
+Informes y monografías / 27
+
+3. La energía eólica en el contexto internacional
+La potencia eólica instalada en el mundo alcanzó la cifra de 158.505 MW en 2009, de los cuales un 54,7% correspondió a EEUU, Alemania y China. Este último país ha escalado un puesto y, por cuarto año consecutivo, su capacidad productiva se ha duplicado. Las siguientes posiciones fueron para España, India, Italia, Francia, Reino Unido, Portugal, Dinamarca y Canadá, que acumularon conjuntamente una cuota del 34%. No obstante, existen importantes diferencias entre los dos primeros y el resto, al ostentar sendas cuotas del 12,1 y 6,9%. Entre los aspectos más relevantes acontecidos en los últimos años (2005-2009) referentes a la evolución de la oferta, deben citarse los siguientes: a) La potencia eólica acumulada se ha multiplicado por 2,7 veces, hasta alcanzar 158.505 MW (Tabla 3). b) En 2008, EEUU se convirtió en el país que acumuló un mayor número de megavatios instalados, aventajando a Alemania que tradicionalmente ocupaba el primer puesto. También, China ha desbancado a España de la tercera posición en 2009. c) Los países que han registrado crecimientos más intensos han sido China, Francia, Canadá, Portugal y EEUU. d) En el ámbito de la UE-27 (Gráficos 2 y 3) se alcanzaron casi 75.000 MW, siendo el ritmo de crecimiento del 16,6% en el periodo analizado. Por países, Alemania sigue siendo el Estado con más megavatios conectados a la red eléctrica, aunque ha perdido cuota de mercado fruto del avance registrado por otras naciones europeas (particularmente, Francia, Portugal, Suecia, Reino Unido e Italia). e) Dinamarca ha reducido a casi la mitad su participación, situándose ésta en un 4,6% en 2009, pues la potencia instalada ha crecido a un ritmo mucho más modesto que la de los países mencionados en el párrafo anterior. En consecuencia, desciende desde la tercera posición a la séptima. f) Por el contrario, España gana cerca de un punto porcentual respecto a 2005, alcanzando el 25,6% del mercado eólico europeo. El buen nivel de crecimiento de la actividad promotora ha permitido consolidar a nuestro país como el segundo de Europa.
+
+16
+
+Energía eólica. Evolución y perspectivas
+
+Tabla 3. Potencia eólica acumulada a nivel mundial por países (2005-2009). En MW
+Participación sobre el total 2009 (%) 22,1 16,3 16,3 12,1 6,9 3,1 2,8 2,6 2,2 2,2 2,1 1,4 1,3 1,1 1,0 0,8 0,7 0,6 4,5 100,0
+
+País EEUU Alemania China España India Italia Francia Reino Unido Portugal Dinamarca Canadá Holanda Japón Australia Suecia Irlanda Grecia Austria Otros Total
+
+2005 9.149 18.415 1.260 10.011 4.430 1.718 757 1.332 1.022 3.128 683 1.219 1.061 708 510 496 573 819 1.783 59.074
+
+2006 11.575 20.622 2.599 11.586 6.270 2.123 1.567 1.962 1.716 3.136 1.460 1.558 1.309 817 571 746 746 965 2.686 74.014
+
+2007 16.824 22.247 5.910 15.104 7.845 2.726 2.454 2.406 2.150 3.125 1.846 1.747 1.538 824 788 795 871 982 3.612 93.794
+
+2008 25.068 23.903 12.020 16.689 9.655 3.736 3.404 2.974 2.862 3.163 2.369 2.225 1.880 1.306 1.048 1.027 985 995 4.988 120.297
+
+2009 35.064 25.777 25.805 19.149 10.926 4.850 4.492 4.051 3.535 3.465 3.319 2.229 2.056 1.712 1.560 1.260 1.087 995 7.173 158.297
+
+vma (%) 39,9 8,8 112,7 17,6 25,3 29,6 56,1 32,1 36,4 2,6 48,5 16,3 18,0 24,7 32,2 26,2 17,4 5,0 41,6 28,0
+
+Fuente: Asociación Empresarial Eólica (AEE) y Global Wind Energy Council (GWEC). Elaboración propia.
+
+Gráfico 2. Distribución de la capacidad eólica acumulada instalada en la UE-27 (2005). En porcentaje
+
+Fuente: AEE y European Wind Energy Association (EWEA). Elaboración propia.
+
+17
+
+Informes y monografías / 27
+
+Gráfico 3. Distribución de la capacidad eólica acumulada instalada en la UE-27 (2009). En porcentaje
+
+Fuente: AEE y EWEA. Elaboración propia.
+
+En un contexto de sensibilización política para reducir las emisiones de GEI al amparo del Protocolo de Kyoto (2002), la energía eólica se posiciona entre todas las renovables como la tecnología más consolidada para contribuir al cumplimiento de este objetivo. Las previsiones de crecimiento realizadas por el Global Wind Energy Council (GWEC) para 2015 y 2020 plantean tres posibles escenarios mundiales (conservador, moderado y avanzado). Considerando el promedio de todos ellos, el incremento de la potencia acumulada para cada año objetivo sería respectivamente de casi 2,5 y 4,5 veces respecto a 2009, situándose en algo más de 714.000 MW en el último año citado. Entre los países más dinámicos y que liderarán el crecimiento del sector a nivel mundial en los próximos años (2010-2020) se encuentran Canadá, China, EEUU o Reino Unido. El Gobierno chino ha identificado la energía eólica como un área estratégica de desarrollo económico y diversificación energética (10 GW Size Wind Base Programme), y su propósito es instalar algo más de 60.000 MW hasta 2020, distribuidos en seis provincias12. En el contexto de este ambicioso plan, el citado país asiático alcanzó los 25.104 MW en 2009, desbancando a España del tercer puesto en el ranking mundial y convirtiéndose, asimismo, en el primer país no europeo que ha iniciado la puesta en marcha de instalaciones marinas.
+12
+
+http://www.gwec.net/index.php?id=125
+
+18
+
+Energía eólica. Evolución y perspectivas
+
+Gráfico 4. Perspectivas de crecimiento del mercado eólico mundial. En MW
+
+Fuente: Greenpeace Internacional y GWEC (2000). Elaboración propia.
+
+Respecto a EEUU, la Administración estadounidense se propuso en 2008 el objetivo de conseguir para 2030 el 20% de la demanda de energía eléctrica a partir de producción eólica13. Para ello, sería necesario disponer de una potencia de 305.000 MW, lo que supondría un incremento de 269.841 MW respecto a 2009. El citado objetivo se pretende cubrir en parte con la instalación de aerogeneradores en el mar (en torno al 18%). Otro referente a tener en cuenta es Canadá, que junto con EEUU goza de los mayores recursos eólicos del planeta14. Sin embargo, el hecho de que esta fuente de energía tenga un nivel de penetración muy reducido en su demanda eléctrica se debe al desarrollo de la energía hidráulica que abastece en torno al 60% de las necesidades internas de electricidad. En el ámbito de la UE, la Directiva 2009/28/CE establece que el consumo de energía procedente de fuentes renovables de cada Estado miembro, deberá alcanzar una determinada cuota15 en 2020, siendo del 20% para toda la UE. De entre todas las alternativas posibles, la energía eólica contribuirá decisivamente al cumplimiento de este objetivo dada la alta capacitación tecnológica de la industria europea y el elevado volumen previsto a
+13 14 15
+
+US Department of Energy (2009). Instituto para la Diversificación y Ahorro de la Energía (2006); p. 14. Directiva 2009/28/CE, DOUE L 140; p. 46.
+
+19
+
+Informes y monografías / 27
+
+instalar en los próximos años. Las estimaciones realizadas por la European Wind Energy Association (EWEA) asumen una capacidad instalada acumulada de en torno a 144.000 y 247.500 MW para 2015 y 2020 respectivamente. Esto representa un crecimiento medio anual del 11%. Entre los países europeos, el más dinámico es el Reino Unido. La norma estatal Renewables Obligation Order exige a los suministradores de electricidad que un determinado porcentaje de sus ventas provenga de energías renovables. Para impulsar el cumplimiento de la cuota del 15,4% en 2015, el gobierno británico está promoviendo el desarrollo de la energía eólica y en 2009 adjudicó nueves parques marinos que suman una potencia de 32.200 MW. Entre los adjudicatarios se encuentra Iberdrola Renovables, a través de la subsidiaria ScottishPower Renewables y su socio Vattenfall, que explotarán el segundo mayor complejo eólico, de 7.200 MW, en el Mar del Norte. Por otro lado, es de destacar que otras naciones europeas con una dilatada experiencia en la producción de electricidad a partir de energía eólica (Alemania, España o Dinamarca) previsiblemente crecerán a un ritmo inferior al del conjunto de la UE-27. No obstante, las dos primeras seguirán liderando el mercado eólico europeo. Por ejemplo, Dinamarca, pionera en la instalación de aerogeneradores desde la década de los años setenta y donde en la actualidad la citada fuente de energía renovable cubre alrededor del 20% de la demanda eléctrica, posee un potencial productivo relevante. Las previsiones realizadas por la Danish Energy Agency consideran que la capacidad offshore a instalar se sitúa en unos 4.600 MW16. Esto representa algo más del total operativo en 2009, que fue de 3.465 MW17. Para nuestro país, se prevé que la capacidad acumulada sea de unos 40.000 MW en 2020, de los cuales, alrededor de un 3% podría ser offshore. Asimismo, existen mercados emergentes con posibilidades de recorrido como Francia e Italia y, especialmente, determinados países del Este (Hungría, Polonia y Rumania).
+
+16 17
+
+Jensen y Jacobsen, ed. (2009), p. 19. De esta cifra, 639 MW fueron offshore.
+
+20
+
+Energía eólica. Evolución y perspectivas
+
+Tabla 4. Previsiones de crecimiento de la potencia instalada acumulada en la UE-27 (2020). En MW
+País 2009 Alemania 25.777 Austria 995 Bélgica 563 Bulgaria 177 Chipre 0 Dinamarca 3.465 Eslovaquia 3 Eslovenia 0 España 19.149 Estonia 142 Finlandia 146 Francia 4.492 Grecia 1.087 Holanda 2.229 Hungría 201 Irlanda 1.260 Italia 4.850 Letonia 28 Lituania 91 Luxemburgo 35 Malta 0 Polonia 725 Portugal 3.535 Reino Unido 4.051 Rumania 14 R. Checa 192 Suecia 1.560 UE-27 74.767 2020 (Bajo) 49.000 3.500 3.900 3.000 300 6.000 800 500 40.000 500 1.900 23.000 6.500 9.500 900 6.000 15.500 200 1.000 300 100 10.500 7.500 26.000 3.000 1.600 9.000 230.000 2020 (Alto) 52.000 4.000 4.500 3.500 500 6.500 1.000 700 42.500 600 3.000 26.000 8.500 11.400 1.200 7.000 18.000 300 1.100 700 200 12.500 9.000 34.000 3.500 1.800 11.000 265.000 Promedio 2009-2020 (Bajo) 46.657 3.410 3.849 2.984 300 5.685 800 500 38.259 487 1.887 22.592 6.401 9.297 882 5.885 15.059 197 992 297 100 10.434 7.179 25.632 2.999 1.583 8.858 223.203 Promedio 2009-2020 (Alto) 49.657 3.910 4.449 3.484 500 6.185 1.000 700 40.759 587 2.987 25.592 8.401 11.197 1.182 6.885 17.559 297 1.092 697 200 12.434 8.679 33.632 3.499 1.783 10.858 258.203 vma (Bajo) 6,0 12,1 19,2 29,3 na 5,1 66,2 na 6,9 12,1 26,3 16,0 17,7 14,1 14,6 15,2 11,1 19,6 24,3 21,6 na 27,5 7,1 18,4 62,9 21,3 17,3 10,8 vma (Alto) 6,6 13,5 20,8 31,2 na 5,9 69,6 na 7,5 14,0 31,6 17,3 20,6 16,0 17,6 16,9 12,7 24,1 25,4 31,3 na 29,5 8,9 21,3 65,2 22,6 19,4 12,2
+
+Fuente: Zervos y Kjaer (2009). Elaboración propia.
+
+21
+
+Informes y monografías / 27
+
+4. La energía eólica en el mix energético europeo para la producción de electricidad
+La energía eólica es la quinta por orden de importancia en el mix energético europeo de producción eléctrica, siendo su participación del 8,1% en 2008. Un aspecto a tener en cuenta es el relativo a la evolución de las cuotas de producción de cada tecnología. Tal y como se deduce de los datos aportados en el Gráfico 5, la energía eólica ha sido la segunda que ha mostrado un diferencial más amplio entre 1995 y 2008 (7,6 puntos porcentuales), situándose en primer lugar el gas natural. Considerando la evolución en términos absolutos de potencia instalada (Gráfico 6), la energía procedente del viento ha sido la tercera que ha registrado un mayor aumento, por detrás del gas natural y del carbón. Desde el punto de vista de la cobertura de la demanda eléctrica europea, la energía procedente del viento supuso el 4,1% en 2008, si bien esta cuota presenta importantes diferencias entre Estados miembros (Gráfico 7). Destacan Dinamarca, España y Portugal; y en menor medida, Irlanda y Alemania, si bien la eólica cuenta con un grado de penetración más elevado (20,3%) en el primero de ellos. Para el resto de los países citados, el rango de dispersión varía entre un 6,9 y un 12,3%.
+Gráfico 5. Distribución de la capacidad instalada para la producción de electricidad por tecnologías (2000 y 2008). En porcentaje
+
+Fuente: Zervos y Kjaer (2009). Elaboración propia.
+
+22
+
+Energía eólica. Evolución y perspectivas
+
+Gráfico 6. Incremento de la capacidad instalada para la producción de electricidad por tecnologías (1995-2008). En MW
+
+Fuente: Zervos y Kjaer (2009). Elaboración propia.
+
+Gráfico 7. Cobertura de la demanda eléctrica a partir de energía eólica en la UE-27 (2008). En porcentaje*
+
+* La cuota fue del 0% para Chipre, Eslovaquia, Eslovenia, Malta y Rumania. Fuente: Zervos y Kjaer (2009). Elaboración propia
+
+23
+
+Informes y monografías / 27
+
+5. Principales indicadores del mercado de la energía eléctrica en España
+La producción de energía eléctrica17 en España ha mantenido una trayectoria expansiva en el periodo 1999-2008. Sin embargo, en 2009, y como consecuencia de la desaceleración de la actividad económica, se ha registrado una contracción interanual del 10,6%. Por tipo de régimen, el especial, en el que se incluyen las energías renovables, ha evolucionado entre 1999 y 2009 a un ritmo más rápido computando una variación media anual del 12,1%, frente al 1% del ordinario. En sintonía con la producción, y por tratarse de variables directamente correlacionadas, la demanda de energía eléctrica presenta la misma tendencia, habiendo descendido con el mismo grado de intensidad en 2009 (Gráfico 9). Entre los aspectos más significativos de la estructura de la producción del ejercicio 2009, caben citarse los siguientes: a) El incremento interanual del conjunto de alternativas energéticas acogidas al régimen especial ha sido del 16,4% frente al -18,7% del ordinario. b) En este último, todas las fuentes de energía, a excepción de la hidráulica, han registrado descensos contabilizando el carbón el retroceso más pronunciado (-25,8%). c) La participación del régimen especial en la producción total de electricidad sigue aumentando, situándose en torno al 30%. Esto representa un avance de torno a 16,9 puntos porcentuales en relación a 1999. d) En el balance eléctrico, otro indicador a destacar corresponde al saldo de los intercambios internacionales, siendo favorable para España desde 2004 por un valor promedio de casi 5.500 GWh.
+
+17
+
+Este concepto hace referencia a la producción menos los consumos en generación y en bombeo.
+
+24
+
+Energía eólica. Evolución y perspectivas
+
+Gráfico 8. Producción neta y demanda de energía en España (1999-2009). En valores absolutos (GW/h)*
+
+*El saldo es la diferencia entre las importaciones y las exportaciones; el valor positivo indica saldo importador y el negativo saldo exportador. RO: régimen ordinario; RE: régimen especial (cogeneración y energías renovables). Fuente: Red Eléctrica Española (REE). Elaboración propia.
+
+Gráfico 9. Producción neta y demanda de energía en España (1999-2009). Variación interanual (en porcentaje)*
+
+*RO: régimen ordinario; RE: régimen especial (cogeneración y energías renovables). Fuente: REE. Elaboración propia.
+
+25
+
+Informes y monografías / 27
+
+Analizando la evolución de la intensidad energética eléctrica en los últimos años18, por medio de la cual se puede conocer el nivel de eficiencia energética en este segmento, de los datos aportados en el Gráfico 10 se deduce que apenas ha existido variación entre 1999 y 2008, manteniéndose en un margen comprendido entre el 31,9 y el 33,7%. Un tercer indicador relevante del mercado eléctrico es la capacidad del parque español, que fue de 95.934 MW en 2008. Distinguiendo entre energías renovables y no renovables, la potencia de las primeras ha crecido a un ritmo más intenso (Gráfico 11) computando cerca de 39.000 MW, lo que supone haber alcanzado el 40,6% del total instalado. Como conclusión a estas cifras, tal y como queda reflejado en el Gráfico 12, las tecnologías "verdes" están adquiriendo un mayor protagonismo en el sistema productivo eléctrico español, ya que su progresión ha sido de 4,2 puntos porcentuales durante el periodo analizado.
+Gráfico 10. Evolución de la intensidad energética eléctrica en España (1999-2008). En porcentaje
+
+Fuente: Instituto Nacional de Estadística (INE) y REE. Elaboración propia.
+
+18
+
+La intensidad energética es el cociente entre la cantidad consumida de energía por cada 100 unidades monetarias producidas.
+
+26
+
+Energía eólica. Evolución y perspectivas
+
+Gráfico 11. Crecimiento acumulado de la potencia instalada para producir electricidad en España. Índice 100=2000
+
+Fuente: REE. Elaboración propia.
+
+Gráfico 12. Participación de la capacidad instalada del parque eléctrico español entre energías renovables y no renovables (2000, 2004 y 2008). En porcentaje
+
+Fuente: REE. Elaboración propia.
+
+27
+
+Informes y monografías / 27
+
+Una variable representativa del nivel de inserción de las energías renovables es la tasa de cobertura de la demanda eléctrica. A partir de los datos aportados por la CNE y tomando como referencia el periodo 1999-2009, las citadas fuentes energéticas han cubierto entre un 15,9 y un 21,7% el consumo nacional de electricidad, excepto en el último año especificado, que se registró el máximo histórico del 30,5%. Este margen de variación se debe en parte a la oscilación de la aportación de la energía hidráulica cuya producción está sujeta al volumen de recursos hídricos disponibles, condicionada a su vez por la aleatoriedad de las precipitaciones. Considerando el mix energético del conjunto de alternativas renovables, la eólica es la que ha logrado una tasa de cobertura más elevada, pasando del 1,4% en 1999 al 15,3% en 2009 (Tabla 5). La hidráulica junto con la cogeneración son las otras dos que aportan una mayor producción en el abastecimiento de electricidad. En este mismo orden de aspectos, cabe resaltar el importante impulso que ha tenido la energía solar, pues de no tener ninguna contribución en 2003, ha pasado a ser del 3,1% en 2009.
+
+Tabla 5. Cobertura de las energías renovables en la demanda de energía eléctrica en España (1999-2009). En porcentaje
+Energía renovable 1999 Eólica 1,4 Cogeneración 8,5 Hidráulica RO 12,5 Solar Hidráulica RE 2,0 Tratamiento de residuos 0,1 Residuos 0,9 Biomasa 0,1 Total 15,9 Fuente: CNE. Elaboración propia. 2000 2,3 8,2 13,6 1,9 0,1 0,8 0,1 17,9 2001 3,2 7,7 16,8 2,0 0,3 0,9 0,3 22,4 2002 4,3 8,2 7,9 1,7 0,4 1,0 0,5 14,5 2003 5,1 8,0 14,9 2,1 0,9 1,0 0,7 22,7 2004 6,4 7,7 10,6 0,01 1,9 1,1 0,9 0,7 19,7 2005 8,1 7,2 5,6 0,02 1,5 1,2 1,0 0,8 16,0 2006 8,6 6,3 8,0 0,04 1,5 1,3 0,9 0,8 19,1 2007 10,0 6,4 8,4 0,2 1,5 1,2 1,0 0,8 20,8 2008 11,5 7,6 6,7 0,9 1,7 1,1 1,0 0,9 21,7 2009 15,3 9,9 8,5 3,1 2,4 1,8 1,3 1,2 30,5
+
+28
+
+Energía eólica. Evolución y perspectivas
+
+6. La energía eólica en el Plan Nacional de Energías Renovables
+El Plan de Energías Renovables (PER) es el documento de planificación estratégica nacional donde quedan definidas las líneas de actuación en materia de recursos renovables. En él se especifican los objetivos a cumplir por cada tecnología, las medidas necesarias para su cumplimiento y el apoyo público en materia de financiación para la consecución de los objetivos propuestos. El actual Plan vigente tiene un periodo de extensión de cinco años (2005-2010). A partir de los objetivos especificados en el PER (2005-2010), y tomado como referencia el cierre del año 2009, la única energía renovable que ha superado la meta propuesta ha sido la fotovoltaica. La eólica y los residuos sólidos urbanos se sitúan en la segunda y tercera posición respectivamente, habiendo logrado sendos registros del 89,8 y 79,7%. Por el contrario, la solar termoeléctrica y la biomasa (grupos b6 y b8)19 han sido las que han registrado un menor avance (Gráfico 13).
+Gráfico 13. Grado de cumplimiento de las diferentes opciones tecnológicas en el contexto del PER (2009)
+
+Fuente: CNE. Elaboración propia.
+
+19
+
+Biomasa (b6): centrales que utilizan como combustible principal biomasa procedente de cultivos energéticos, de residuos de las actividades agrícolas o de jardinería, o residuos de aprovechamientos forestales. Biomasa (b7): centrales que utilizan como combustible principal biomasa procedente de estiércoles, biocombustibles o biogás procedente de la digestión anaerobia de residuos agrícolas y ganaderos, de residuos biodegradables de instalaciones industriales o de lodos de depuración de aguas residuales, así como el recuperado en los vertederos controlados. Biomasa (b8): centrales que emplean como combustible principal biomasa de residuos agroindustriales tales como los procedentes de aceite de oliva, aceitunas, frutos secos, vino y similares.
+
+29
+
+Informes y monografías / 27
+
+El crecimiento de la energía solar fotovoltaica ha estado impulsado por la existencia de una elevada subvención. Tal y como se deduce de los datos aportados en la Tabla 6, desde 2006 se ha incrementado la brecha entre la energía vendida y la prima percibida hasta alcanzar sendos porcentajes del 7,7 y del 43% en 2009. Sin embargo, la energía eólica, que es de entre todas las renovables la que genera más electricidad, aportó el 46,6% de la energía renovable total vendida y aglutinó el 26% de las primas.
+Tabla 6. Participación de la energía eólica y solar respecto al total renovables en energía vendida, retribución total y prima equivalente (2004-2009). En porcentaje
+Eólica Energía vendida Prima equivalente 34,30 36,33 40,92 49,19 44,40 48,51 47,39 43,93 46,66 34,25 46,55 25,98 Solar Energía vendida Prima equivalente 0,04 0,49 0,08 1,12 0,20 8,53 0,85 8,53 3,70 29,36 7,67 43,04 Resto Energía vendida Prima equivalente 65,66 63,18 59,00 49,69 55,40 42,96 51,76 47,54 49,64 36,40 45,78 30,97
+
+2004 2005 2006 2007 2008 2009
+
+Fuente: CNE. Elaboración propia.
+
+30
+
+Energía eólica. Evolución y perspectivas
+
+7. Potencia eólica instalada en España
+El primer parque eólico instalado en España data de 1984 y estuvo ubicado en El Ampurdán (Girona), siendo su potencia de 24 kW. Dos años más tarde entraron en funcionamiento otros como el de Granadilla de Abona (Santa Cruz de Tenerife), La Muela (Zaragoza), Estaca de Bares (La Coruña), Ontalafia (Albacete), Tarifa (Cádiz) y Cabo de Creus (Girona), si bien no fue hasta 1995 cuando se inició el despegue del sector, siendo la potencia eólica acumulada de 98 MW. Durante los siguientes cuatro años, la potencia instalada registró consecutivamente variaciones interanuales positivas. Tal intensidad no se mantuvo en el periodo 2000-2008, contabilizándose en algunos años registros negativos. Esto significa que, aunque el número de MW siguió aumentando, el ritmo fue menos acelerado (Tabla 7). En 2009 entraron en funcionamiento 2.459 MW, lo que ha representado el segundo mayor crecimiento histórico absoluto de la energía eólica en España, tras el contabilizado en 2007. De este modo, la potencia acumulada alcanzó la cifra de 19.149 MW (Tabla 7), situándose muy cerca del objetivo propuesto en el PER (20.155 MW). Este dinamismo se debió, en buena medida, a la entrada en vigor del Registro de Pre-asignación, lo que incentivó a las empresas, ante el nuevo escenario normativo, a impulsar sus proyectos.
+
+Tabla 7. Evolución de la potencia eólica instalada y acumulada en España (1995-2008). En MW
+Instalada 287 692 950 1.165 1.490 1.327 2.298 1.524 1.558 3.518 1.585 2.460 29,6 Acumulada 839 1.415 2.365 3.530 4.879 6.206 8.504 10.028 11.586 15.104 16.689 19.149 45,4 Potencia eólica Instalada (var. interanual %) 141,1 37,3 22,6 28,5 -23,6 100,4 -32,3 1,5 123,4 -54,9 55,1 Acumulada (var. interanual %) 68,7 67,1 49,3 42,4 22,7 37,1 18,3 15,7 30,4 10,5 14,7 -
+
+1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 vma (%)
+
+Fuente: AEE. Elaboración propia.
+
+31
+
+Informes y monografías / 27
+
+Realizando una valoración de la distribución de la potencia instalada al cierre del ejercicio 2009 en el conjunto del territorio nacional, caben detallarse como aspectos más relevantes los siguientes (Mapas 1 y 2): a) Albacete es la primera provincia con un mayor número de megavatios operativos (1.989,6 MW), lo que representa el 10,4% del total nacional. b) La distribución de la potencia eólica en España no presenta una elevada concentración, ya que las cinco primeras provincias (Albacete, Lugo, Zaragoza, Burgos y Cádiz) ostentaron el 37,2% de la potencia instalada, cuota que ascendió al 53% considerando las ocho primeras (además de las especificadas, el resto que conforman este grupo son La Coruña, Soria y Navarra). c) Entre las primeras ocho provincias merece la pena resaltar las importantes diferencias que existen entre ellas, oscilando la participación entre el 5 y 10,4%. d) Alicante, Badajoz, Cáceres, Córdoba, Gerona y Madrid son las regiones españolas que no tenían instalado ningún parque eólico en 2009. e) En términos de potencia atribuida por cada 1.000 km2, Cádiz ocupa el primer puesto con 165,5 MW, situándose a continuación Lugo, La Coruña, Albacete y Pontevedra. En el extremo opuesto, se posicionan nueve provincias que no superan la ratio de 10 MW.
+
+32
+
+Energía eólica. Evolución y perspectivas
+
+Mapa 1. Distribución de la potencia eólica instalada en España por provincias (2009). En porcentaje
+
+Fuente: AEE y datos aportados por las empresas del sector. Elaboración propia.
+
+Mapa 2. Potencia eólica instalada en España (2009). En MW por cada 1.000 km2
+
+Fuente: AEE, INE y datos aportados por las empresas del sector. Elaboración propia.
+
+33
+
+Informes y monografías / 27
+
+Otro asunto a tener en cuenta es el relativo a la composición de la potencia del parque eólico. Los datos elaborados a partir de la AEE, permiten concluir que casi un tercio de la potencia operativa (32,1%) corresponde a instalaciones de entre 40 y 51 MW (Anexo 1). Concretamente, este rango es el techo máximo operativo en España, en parque debido a las restricciones para recibir la compensación económica por kW/h de electricidad vertida en la red. Las centrales productoras se encuentran localizadas en 32 provincias, aunque Albacete, Cuenca y Burgos concentran un mayor número de centros productivos comprendidos en la citada categoría. En este mismo orden de aspectos, es destacable citar que el mayor parque eólico existente en España se encuentra en Romica (Albacete) y está formado por 34 aerogeneradores Acciona Wind Power de 1.500 kW. Por otro lado, resulta relevante poner de manifiesto que el tamaño medio de los aerogeneradores ha mostrado una tendencia ascendente. Tomando como referencia 1997, en trece años se ha multiplicado por 4,5 veces, lo que supone haber pasado de una potencia promedio de 409 a 1.985 kW. Asimismo, cabe precisar que la potencia máxima operativa unitaria es de 3.600 kW y 4.500 kW, encontrándose estas máquinas funcionando respectivamente en Barrax (Albacete) y Jaullín (Zaragoza). Las sociedades propietarias de los parques son General Electric Wind Energy y Sistemas Energéticos Cabezo Negro.
+Gráfico 14. Potencia media del aerogenerador instalado (1997-2009). En kW
+
+Fuente: AEE. Elaboración propia.
+
+34
+
+Energía eólica. Evolución y perspectivas
+
+8. Estructura de la oferta del sector eólico en España
+En el sector de la energía eólica se distinguen básicamente cinco tipos de agentes económicos (fabricantes de aerogeneradores, fabricantes de componentes específicos, promotores de parques, empresas constructoras y centros de investigación): a) Fabricantes de aerogeneradores. La fabricación de aerogeneradores se realiza en centros especializados por tipo de trabajo (ensamblaje de góndolas)20 y por componentes específicos (bujes, palas, torres y sistemas de control). El fabricante del aerogenerador suele encargarse del montaje y la puesta en funcionamiento de las máquinas, así como de su mantenimiento durante los dos primeros años, que corresponde con el periodo de garantía. No obstante, puede ocurrir que éste se amplíe hasta los cinco u ocho años. Nuestro país cuenta con una sólida industria de fabricación de aerogeneradores formada por seis compañías -Acciona Wind Power, Alstom Wind, Eólica del Zenete (Eozen), Gamesa, Made Tecnologías Renovables y MTorresque disponen de plantas productivas distribuidas en el conjunto de la geografía española (Tabla 8). Gamesa es la corporación que tiene un mayor número de centros productivos, en total 27. De ellos, 21 están ubicados en España y el resto en el exterior (China, India y EEUU). La especialización industrial nacional está distribuida en las siguientes unidades: • Catorce fábricas dedicadas a la fabricación de palas (moldes o raíces de palas), torres y ensamblaje de góndolas. En relación a esta última actividad, las dos mayores plantas por capacidad productiva son las de Ágreda (Soria) y Medina del Campo (Valladolid). Siete centros productivos que fabrican componentes estratégicos del aerogenerador (principalmente, generadores, multiplicadoras y convertidores), los cuales se encuentran en Benisanó (Valencia), Reinosa (Cantabria), Coslada (Madrid), Asteasu (Guipúzcoa), Mungia (Vizcaya), Bergondo (La Coruña) y Lerma (Burgos).
+
+•
+
+20
+
+El ensamblaje de la góndola se realiza en el siguiente orden: corona y reductora de giro, eje del rotor, multiplicadora, generador, eje del pitch y cableado eléctrico.
+
+35
+
+Informes y monografías / 27
+
+Por su parte, Acciona Wind Power dispone de dos plantas de ensamblaje en España que suman 1.350 MW, y una tercera en Iowa (EEUU) de igual capacidad que cada una de las nacionales (675 MW). Las plantas de componentes están especializadas en la producción de bujes, palas y el eje principal. Asimismo, Vestas tiene cuatro centros localizados en Daimiel (Ciudad Real), Ólvega (Soria), Villadangos del Páramo (León) y Viveiro (Lugo). Estos dos últimos dedicados al ensamblaje de nacelles. b) Fabricantes de componentes específicos. Son empresas no ensambladoras de aerogeneradores especializadas en la fabricación de determinadas piezas como torres, componentes eléctricos y mecánicos. En el caso de Gamesa existe una integración vertical hacia atrás del proceso de producción. Esto significa que otras empresas del grupo fabrican determinados componentes especialmente importantes de la turbina. c) Promotores de parques. Se encargan de promover los proyectos, existiendo la posibilidad de construir la instalación por cuenta propia o delegar esta tarea en otra empresa. El promotor realiza el diseño, elige la ubicación y la compañía encargada de construirlo. d) Empresas constructoras de parques. Existen varias opciones: • El promotor del parque puede disponer de recursos internos para llevar a cabo la obra. Esto significa que una sociedad del grupo ejecuta el proyecto. En este modelo se encuentran Iberdrola Renovables y Enerfín, que suelen delegar esta labor en Iberdrola Ingeniería y Consultoría (Iberinco) y Grupo Elecnor respectivamente. Si el promotor no cuenta con medios propios, puede optar por elegir que la empresa suministradora de los aerogeneradores construya el parque. Son los casos de Acciona Energía y Gamesa Energía, que además de fabricar aerogeneradores son promotores por cuenta propia y ajena. Una tercera opción es la subcontratación de la obra civil y la eléctrica a una o más empresas de ingeniería.
+
+•
+
+•
+
+36
+
+Energía eólica. Evolución y perspectivas
+
+Tabla 8. Fabricantes de aerogeneradores instalados en España (2010)
+Empresa Acciona Wind Power Localización -Ensamblaje de aereogeneradores: Barasoain (Navarra) -Ensamblaje de aereogeneradores: La Vall D'Uixó (Castellón) -Palas: Lumbier (Navarra) -Bujes y eje principal: Toledo -Ensamblaje de aereogeneradores: Buñuel (Navarra) -Sistemas de control: Somozas (La Coruña) -Sistemas de control: Castro, Narón (La Coruña) -Torres: Coreses (Zamora) (b) -Generadores y ensamblaje de góndolas: Ferreira (Granada) -Torres: Avilés (Asturias), Linares (Jaén) y Olazagutía (Navarra) (d) -Palas: Somozas (La Coruña), Miranda de Ebro (Burgos), Albacete y Tudela (Navarra) -Raíces de palas: Cuenca -Moldes de palas: Imarcoain (Navarra) -Ensamblaje de aerogeneradores: Sigüeiro (La Coruña), Tauste (Zaragoza), Ágreda (Soria), Imarcoain (Navarra) y Medina del Campo (Valladolid) (e) - Valencia Power Converter (Benisanó, Valencia): convertidores de potencia eléctrica -Cantarey Reinosa (Reinosa, Cantabria): generadores -Enertron (Coslada, Madrid): convertidores de potencia eléctrica -Echesa (Asteasu, Guipúzcoa): determinadas piezas de la multiplicadora -Especial Gear Transmissions (Mungia, Vizcaya): multiplicadoras y repuestos para multiplicadoras -Transmisiones Eólicas de Galicia (Bergondo, La Coruña): multiplicadoras -Gamesa Energy Transmission (Lerma, Burgos): multiplicadoras -Ensamblaje de aerogeneradores: Ólvega (Soria) -Palas: Daimiel (Ciudad Real) -Sistemas de control: Ólvega (Soria) -Ensamblaje de aerogeneradores: Villadangos del Páramo (León) -Ensamblaje de aerogeneradores: Viveiro (Lugo)
+
+(a)
+
+Alstom Wind
+
+Eólica del Zenete (Eozen) Gamesa (c)
+
+Participadas por Gamesa
+
+MTorres Vestas
+
+Desde 2007 tiene operativa una tercera planta de ensamblaje de aerogeneradores localizada en West Branch, Iowa (EEUU). (b)Corresponde a la empresa participada Calderería Torres Altamira. (c)En el extranjero cuenta con los siguientes centros productivos: Fairless Hills (Pensilvania, EEUU): torres y ensamblaje de góndolas; Ebensburg (Pensilvania, EEUU): palas; Tiajin, China: diferentes centros para generadores, multiplicadoras, palas y emsablaje de góndolas; y, por último, Chennai (India): ensamblaje de góndolas. (d)Las fábricas de torres corresponden a la empresa Windar Renovables, cuyos principales accionistas son Gamesa y Grupo Daniel Alonso. (e)La fábrica de Medina del Campo (Valladolid) corresponde a la empresa participada Made Tecnologías Renovables (Gamesa).
+(a)
+
+Fuente: AEE, Informe Anual Gamesa 2009 y datos facilitados por las empresas del sector. Elaboración propia.
+
+Las dos primeras modalidades indicadas, en las que se entrega el parque llave en mano, son las más extendidas. e) Centros de investigación. La actividad de desarrollo tecnológico la realizan, además de los fabricantes de los aerogeneradores, los centros de investigación. En España existen varias entidades: el Centro Nacional de Energías Renovables (CENER), el Centro de Investigación de Recursos y Consumos Energéticos (CIRCE) y el Instituto de Investigación de Energías Renovables (IER). 37
+
+Informes y monografías / 27
+
+8.1. Distribución del mercado eólico nacional
+Por lo que respecta al reparto del mercado eólico español por agentes económicos en términos de potencia acumulada instalada al cierre del ejercicio 2009, hay que distinguir entre fabricantes de aerogeneradores y promotores de parques. a) Fabricación de aerogeneradores Gamesa, junto a su filial Made Tecnologías Renovables, aglutinó el 53,9% de la potencia total instalada, situándose a continuación Vestas, Acciona Wind Power, Alstom Wind, General Electric Wind Energy y Siemens, quienes ostentaron globalmente un 40,4% (Gráfico 15). En base a estas cifras, se deduce que en el segmento de fabricación existe una elevada concentración. b) Promoción de parques En cuanto a los promotores, Iberdrola Renovables es la empresa líder ostentando una participación del 25,5%, en tanto que Acciona Energía ocupó la segunda posición (20,9%). Los siguientes puestos correspondieron a Neo Energía, Enel
+
+Gráfico 15. Cuota de mercado de los fabricantes de aerogeneradores en relación a la potencia eólica acumulada instalada en España (2009)
+
+Fuente: AEE. Elaboración propia.
+
+38
+
+Energía eólica. Evolución y perspectivas
+
+Unión Fenosa Renovables (Eufer), Energías y Recursos Ambientales (Eyra), Endesa Cogeneración y Energía (Ecyr), Olivento, Enerfín y Gas Natural, cuya participación conjunta alcanzó un 26,8%. A este respecto, es importante destacar las notables diferencias que existen entre los dos primeros operadores y el resto. También cabe distinguir un segundo grupo cuya cuota osciló entre el 2 y el 8,3%. En un tercer grupo están incluidas un amplio número de empresas que presentaron una participación individual inferior al 1,8%. Tal y como se desprende de los datos aportados (Gráfico 16), el segmento de promoción de parques eólicos está caracterizado por una menor concentración que el de fabricación (los dos primeros empresas ostentaron el 46,4% frente a un 69,7%22) y por existir un número bastante superior de operadores.
+
+Gráfico 16. Cuota de mercado de los promotores eólicos en relación a la potencia acumulada instalada en España (2009)
+
+Fuente: AEE. Elaboración propia.
+
+22
+
+Incluye la participación de Made Tecnologías Renovables, empresa que pertenece a Gamesa.
+
+39
+
+Informes y monografías / 27
+
+8.2. Presencia internacional de la industria eólica española
+La tecnología eólica española es un referente a nivel mundial, pues la presencia de los aerogeneradores nacionales no sólo se circunscribe al ámbito de la UE-27, sino también a otros mercados extracomunitarios como Australia, Canadá, EEUU, México e India. Según se desprende de la cifras aportadas por Make Consulting, en el ranking de los quince mayores fabricantes mundiales de turbinas eólicas por potencia instalada se encuentran Acciona Wind Power y Gamesa, correspondiendo el liderazgo a Vestas Wind Systems (Dinamarca) (Gráfico 17). Como aspecto destacado, cabe citar la progresión mostrada por los fabricantes chinos en los últimos años, pues tanto Sinovel como Goldwind ocupaban la posición novena y séptima en 2007. Dos años después se han situado en los puestos tercero y quinto respectivamente.
+
+Gráfico 17. Cuota de mercado de los principales fabricantes mundiales de aerogeneradores por potencia instalada acumulada (2009). En porcentaje
+
+Fuente: Make Consulting (2010). Elaboración propia.
+
+40
+
+Energía eólica. Evolución y perspectivas
+
+La presencia del sector eólico español en el exterior no queda limitada al ámbito industrial, pues algunos promotores españoles poseen activos en diferentes mercados. La actividad internacional de éstos traspasa las fronteras europeas, sobresaliendo entre los países extracomunitarios EEUU (Gráfico 18). Como caso más destacado se encuentra Iberdrola Renovables, que es el primer operador de parques eólicos en el mundo, ascendiendo la potencia acumulada a 10.752 MW en 2009. De esta cifra, 5.475 MW, es decir, algo más de la mitad, se encuentran fuera de España, localizándose el grueso de la actividad en EEUU. Acciona Energía también tiene en propiedad parques eólicos en el extranjero que sumaron 1.639 MW en 2009, lo que representó cerca de un 30% de su potencia total operativa. Sus principales mercados foráneos por orden de importancia son EEUU, Australia y México.
+
+Gráfico 18. Distribución de la potencia instalada acumulada por promotores eólicos españoles en el extranjero por países (2009). En porcentaje
+
+Fuente: AEE. Elaboración propia.
+
+41
+
+Informes y monografías / 27
+
+9. Impacto económico y medioambiental de la energía eólica en España
+Un informe editado en 2009 por la AEE23 señala que este sector genera una riqueza creciente para la economía española. Si en 2003 representó un 0,24% del Producto Interior Bruto (PIB), en 2008 fue del 0,39%, incluyendo el efecto indirecto hacia otras ramas de actividad. Considerando su contribución al PIB energético, el citado registro ascendió a un 7,05%. El impacto económico colateral del sector eólico se extiende a diversas industrias auxiliares, destacando la metalúrgica junto con la fabricación de maquinaria y material eléctrico. En términos de comercio exterior, las ventas han registrado igualmente una evolución ascendente en los últimos años (2004-2008). En consecuencia, el saldo comercial positivo ha presentado una mejora durante el periodo estudiado.
+
+Gráfico 19. Participación del sector eólico en el PIB total español y en el PIB del sector energético (2003-2008). En porcentaje*
+
+*La aportación del sector eólico al PIB nacional incluye el impacto indirecto a otros sectores (metalúrgica, fabricación de maquinaria y material eléctrico, construcción, transporte terrestre y otros). Fuente: Deloitte (2009). Elaboración propia.
+
+23
+
+Deloitte (2009).
+
+42
+
+Energía eólica. Evolución y perspectivas
+
+Desde el punto de vista medioambiental, la energía eólica está reemplazando el uso de combustibles fósiles (carbón, gas natural y fuel) para la producción de electricidad y, por ende, está contribuyendo a la contención de las emisiones de gases contaminantes. De término medio, por cada megavatio eólico instalado se han dejado de emitir 1.348,5 toneladas de CO2 equivalentes en nuestro país (2003-2008)24.
+
+9.1. Balance coste-beneficio de la energía eólica en España
+La prima que perciben los promotores eólicos se fundamenta en un conjunto de externalidades positivas que se derivan de su actividad: valor económico de los derechos de emisión de CO2, reducción de importaciones de combustible fósil, saldo de la balanza fiscal e impacto económico que supone tener un sector industrial altamente competitivo, así como el efecto arrastre que ejerce en otros sectores conexos. Tal y como reflejan las cifras aportadas en el Gráfico 20, el balance coste-beneficio es favorable para la energía eólica, pues únicamente la partida correspondiente al gasto que se incurriría en la importación de combustibles necesarios para generar la producción eólica equivalente supera el coste de las primas. En términos de ratio, por cada unidad monetaria (um) desembolsada en primas, se está generando un excedente económico de entre 1,5 y 2,5 um.
+
+24
+
+Deloitte (2009), p. 36.
+
+43
+
+Informes y monografías / 27
+
+Gráfico 20. Balance coste-beneficio de la energía eólica en España (2005-2008). En millones de euros*
+
+*La balanza fiscal del sector eólico es la diferencia entre los impuestos pagados y las subvenciones recibidas. Fuente: Deloitte (2009). Elaboración propia.
+
+44
+
+Energía eólica. Evolución y perspectivas
+
+10. Marco normativo
+El Real Decreto 661/2007 regula la producción de energía eléctrica en régimen especial, estableciendo el marco jurídico y económico para las instalaciones de cogeneración así como las que utilicen como energía primaria fuentes renovables, biomasa de origen animal y vegetal o la fracción biodegradable de residuos urbanos e industriales. Los aspectos más destacados de la citada legislación se exponen a continuación: a) Ámbito de aplicación. Incluye los tipos de instalaciones especificadas con una potencia de hasta 50 MW, las cuales pertenecen al régimen especial. No obstante, para la cogeneración, la energía eólica y otras asignadas en la categoría (b)25, con la excepción de la hidroeléctrica, la normativa especifica que si superan la citada cifra pueden percibir una prima que complemente su retribución (arts. 1.c y 45.1). En el caso de los parques eólicos de potencia superior a 50 MW, pueden percibir una prima aplicada a la electricidad vendida al mercado26, igual a la de una instalación de 50 MW del mismo grupo y subgrupo (art. 45.2). b) Procedimiento administrativo para la inclusión de una instalación de producción de energía eléctrica en el régimen especial. La autorización administrativa para la construcción, explotación, modificación sustancial27, transmisión y cierre de las instalaciones de producción en régimen especial y el reconocimiento de tal condición, es competencia de las Comunidades Autónomas. La Dirección General de Política Energética y Minas del Ministerio de Industria, Turismo y Comercio tiene asignadas las siguientes atribuciones: • La autorización administrativa para la construcción, explotación, modificación sustancial, transmisión y cierre de las instalaciones de producción en régimen especial y la asignación de tal condición cuando la Comunidad Autónoma no cuente con competencias en esta materia o cuando las instalaciones estén ubicadas en más de una Comunidad Autónoma.
+
+25
+
+A la categoría (b) pertenecen las siguientes instalaciones que utilicen como fuente primaria: biogás de vertederos, biomasa, así como energía eólica, solar y geotérmica. Esta prima queda corregida en base a un coeficiente que se detalla en el art. 45.2. La modificación sustancial se refiere a la sustitución de los equipos principales, debiéndose acreditar que el coste de reposición supera el 50% de la inversión total de la planta.
+
+26 27
+
+45
+
+Informes y monografías / 27
+
+•
+
+La autorización administrativa para la construcción, explotación, modificación sustancial, transmisión y cierre de las instalaciones objeto del ámbito de regulación cuya potencia instalada supere los 50 MW, o se encuentren ubicadas en el mar, previa consulta con las Comunidades Autónomas afectadas por la instalación.
+
+c) Tipología de las instalaciones eólicas. Al Grupo b.2 pertenecen las instalaciones de energía eólica, distinguiéndose entre las ubicadas en tierra y en mar territorial. d) Régimen económico. En función del tipo de tecnología, los titulares de las instalaciones deberán acogerse a una de las dos siguientes modalidades retributivas (arts. 24 y 25): • Transferir la electricidad al sistema percibiendo una tarifa regulada, única para todo el periodo de programación, expresada en céntimos de euro por kW/h. Vender la electricidad en el mercado de producción de energía eléctrica. El precio será el que resulte en el mercado organizado o el libremente negociado por el propietario de la instalación, complementado con una prima.
+
+•
+
+En ambos casos existe una revisión periódica que carece de carácter retroactivo, hasta alcanzar los objetivos del PER, excepto para la energía solar fotovoltaica. Ésta goza de unas tarifas asociadas por cupos de potencia a instalar de actualización anual que decrecen trimestralmente28. En el caso concreto de la energía eólica, la normativa establece para las instalaciones en tierra el derecho a percibir una tarifa regulada durante los 20 primeros años siendo inferior a partir de entonces29. También es posible acogerse a una prima de referencia aunque la ley contempla que se percibirá durante el periodo especificado. Respecto a la energía eólica marina se aplicará esta última retribución (art. 38.2)30. La revisión de la tarifa es de carácter anual tomando como referencia el incremento del Índice de Precios al Consumo (IPC) menos veinticinco puntos básicos hasta el 31 de diciembre de 2012, y cincuenta puntos básicos a partir de la citada fecha (art. 44 y disposición adicional primera).
+
+28 29 30
+
+RD 1578/2008. RD 661/2007, BOE 126, p. 22.862; Orden ITC/3519/2009, BOE 315, p. 12.156. La regulación de la retribución económica de la energía eólica marina se estableció por primera vez en el RD 436/2004.
+
+46
+
+Energía eólica. Evolución y perspectivas
+
+Por otro lado, mediante el Real Decreto-Ley 6/2009 se creó el registro de pre-asignación de retribución para las instalaciones acogidas en el ámbito de actuación del Real Decreto 661/200731, entre las que se encuentran los parques eólicos. Este precepto es obligatorio desde el 7 de mayo de 2009, siendo condición sine qua non para acogerse a la actividad de producción de energía eléctrica en régimen especial32. La razón esgrimida por el Ministerio de Industria, Turismo y Comercio para implantar este requisito atiende a la previsible insostenibilidad del sistema, tanto a nivel económico como técnico. Queda patente que el Gobierno estableció este requisito con el objetivo de que no se repitiese con la energía solar termoeléctrica el mismo escenario de crecimiento anárquico de la fotovoltaica. Si bien, no se tuvo en cuenta que el sector eólico no necesitaba ser ordenado por diversos motivos: la instalación de potencia se estaba produciendo a un ritmo que permitía alcanzar en 2010 el objetivo establecido en el PER, la capacidad de la industria española para hacer frente a la demanda interna o los plazos de ejecución de los proyectos. La formalización del trámite de inclusión en el registro de pre-asignación exige que el promotor entregue la solicitud del proyecto en la Dirección General de Política Energética y Minas del Ministerio de Industria, Turismo y Comercio, debiendo contener los documentos justificativos de los requisitos establecidos en la ley (art. 4), tales como: a) Contar con la autorización administrativa otorgada por el órgano competente33. b) Disponer de la concesión del punto de conexión para la totalidad de la instalación por parte de la empresa eléctrica distribuidora. c) Haber sido expedida la licencia de obras por la administración local si resultase exigible disponer de la misma. d) Tener un contrato de compra firmado entre el promotor de la instalación y el suministrador de los equipos por un importe de al menos el 50% del valor de los mismos.
+
+31 32
+
+La energía solar fotovoltaica tiene su propio Registro de Preasignación en virtud del RD 1.578/2008. Igualmente afectó a los parques eólicos cuyos expedientes fueron presentados con anterioridad a la fecha especificada y no estaban inscritos en el registro administrativo de instalaciones de energía eléctrica en régimen especial. Este requisito no es necesario para las instalaciones de hasta 100 kW.
+
+33
+
+47
+
+Informes y monografías / 27
+
+e) Entregar un aval en la Caja General de Depósitos de la Administración General del Estado, a favor de la Dirección General de Política Energética y Minas, por una cuantía de 20 euros/kW de potencia a instalar34. La forma de inscripción de las instalaciones será en orden cronológico empezando por las fechas más antiguas y hasta que se cubra el objetivo de potencia asignado. El criterio de prioridad temporal a seguir es el de la última fecha de los documentos justificativos que se han de aportar. Una vez formalizado este procedimiento, se dispone de un plazo de 36 meses a contar desde la fecha de la notificación para dar de alta la instalación en el registro administrativo. De no ser así, se pierde el derecho a percibir la retribución económica asociada a la incorporación en el Registro de Pre-asignación. Asimismo, la disposición transitoria quinta fija varios aspectos de destacada relevancia: a) Cuando la potencia asociada a los proyectos inscritos supere el objetivo previsto, el régimen económico establecido se agotará con dichas instalaciones inscritas. Ocurrido esto, se aprobará un nuevo marco jurídico-económico. b) Ante la situación descrita en el punto anterior, mediante acuerdo del Consejo de Ministros, a propuesta del Ministro de Industria, Turismo y Comercio, se podrán implantar restricciones anuales a la ejecución de las instalaciones inscritas a fin de mantener la viabilidad económica y técnica del sistema. Finalmente, es importante destacar que mediante Resolución de la Secretaría de Estado de Energía, de 19 de noviembre de 2009, se han asignado cupos de potencia a instalar durante el periodo 2009-2012 que suman un total de 6.389,1 MW. De esta cantidad, casi un 60% entrarán en funcionamiento durante el bienio 2009-2010 (Tabla 9).
+Tabla 9. Asignación de potencia para la energía eólica en España (2009-2012)*
+Período Fase I (2009-2010) Fase II (2011) Fase III (2012)
+*Toda la potencia corresponde a parques eólicos onshore. Fuente: Registro de Pre-asignación de Instalaciones de Régimen Especial (Ministerio de Industria, Turismo y Comercio). Elaboración propia.
+34
+
+Potencia a instalar (MW) 3.767,8 1.658,8 962,5
+
+Esta cifra asciende a 100 euros/kW para la energía solar termoeléctrica.
+
+48
+
+Energía eólica. Evolución y perspectivas
+
+11. La energía eólica marina
+El aprovechamiento del viento en el medio marino goza de diversas ventajas respecto al terrestre, entre las que caben citarse las siguientes: a) No existen obstáculos que puedan reducir la velocidad del viento y, por tanto, no se requiere instalar torres de gran altura. b) El recurso eólico es más regular, menos turbulento y de mayor velocidad. En consecuencia, se aprovecha de forma más eficiente el viento, el aerogenerador está sometido a un esfuerzo mecánico inferior y se amplia la vida útil del mismo. c) Existe una mayor amplitud de espacio y el impacto visual se reduce, dada la lejanía con los núcleos de población. Por el contrario, las instalaciones marinas presentan determinadas desventajas respecto a las terrestres, tales como: a) Existe un incremento de los costes de construcción, operación y mantenimiento que llegan a duplicarse respecto a una instalación homóloga en tierra35. b) Los trabajos de montaje y mantenimiento se realizan en circunstancias más adversas. c) Los equipos han de estar fabricados con materiales más resistentes y fiables ante un entorno de exposición de exigentes condiciones medioambientales (humedad, oleaje, tormentas y salinidad). Los parques eólicos marinos tienen una reducida implantación en el mundo. La primera infraestructura de este tipo fue construida en Dinamarca en 1991, siendo la potencia de 4,95 MW. En ese mismo decenio fueron inaugurados otros cuatro en el Norte de Europa. Durante la primera mitad de la década de 2000, entraron en funcionamiento los parques eólicos de Horns Rev I y Nysted (Rødsand I), de 160 y 165,6 MW respectivamente, siendo los primeros offshore a gran escala existentes en el mundo. La potencia de éstos ha sido superada por el de Lynn & Inner DowSing en el Reino Unido, que se encuentra operativo desde 2009.
+
+35
+
+Ministerio de Industria, Turismo y Comercio y Ministerio de Medio Ambiente y Medio Rural y Marino (2009), p. 20.
+
+49
+
+Informes y monografías / 27
+
+Tabla 10. Primeros parques eólicos marinos construidos en el mundo (1991-2002)
+Nombre Vindeby Lely Tunø Knob Dronten Gotland Blyth Offshore Uttgrunden Middelgrunden Yttre Stengrund Horns Rev Fecha de entrada País en funcionamiento Dinamarca 1991 Holanda 1994 Dinamarca 1995 Holanda 1996 Suecia 1998 Reino Unido 2000 Suecia 2000 Dinamarca 2001 Suecia 2001 Dinamarca 2002 MW Potencia del aerogenerador Distancia de la costa (km) 4,95 Bonus 450 kW 2,5 2 NedWind 500 kW 0,75 5 Vestas 500 kW 6 11,4 Nordtank 600 kW nd 2,5 Wind World 500 kW 3 4 Vestas 2 MW 0,8 10,5 GE Wind 1,5 MW 8 40 Bonus 2 W 3 10 NEG Micon NM72 4-5 160 Vestas 2 MW 14-20
+
+Fuente: British Wind Energy Association (BWEA).
+
+La explotación comercial de la energía eólica en el mar se concentra en territorio europeo habiendo ascendido la potencia acumulada a 2.056 MW en 2009, repartida en 38 instalaciones. Además, se han de tener en cuenta los tres aerogeneradores que se conectaron a la red eléctrica en China a finales de 2009 como parte del parque eólico marino que se está construyendo en Shanghai. De este modo, el país asiático va a ser el primero no europeo en tener una instalación offshore. En base a las cifras aportadas por la EWEA, Reino Unido es la primera potencia eólica marina con cerca de 900 MW instalados, seguida de Dinamarca, Holanda y Suecia. El resto de países europeos que disponen de al menos alguna instalación de este tipo son Alemania, Bélgica, Irlanda, Finlandia y Noruega. En España, el impulso para el desarrollo de la energía eólica en el mar se inició tras la aprobación del RD 1.028/2007 y la posterior presentación en 2009 del Estudio estratégico ambiental del litoral español para la instalación de parques eólicos marinos. A continuación se detallan los principales aspectos de cada uno de ellos: a) RD 1.028/2007. Representa la primera normativa que regula la autorización administrativa para la construcción y ampliación de instalaciones de generación de electricidad ubicadas en el mar territorial. En ella se define como parque eólico marino a "todo proyecto de inversión que se materialice en la instalación integrada de uno o varios aerogeneradores, interconectados eléctricamente mediante redes propias, compartiendo una misma estructura de accesos y control, con medición de energía propia y con conexión a la red de transporte, y ubicado físicamente en el mar territorial". 50
+
+Energía eólica. Evolución y perspectivas
+
+Gráfico 21. Reparto de la potencia eólica marina instalada en el mundo (2009). En porcentaje
+
+Fuente: EWEA (2010). Elaboración propia.
+
+Estas instalaciones deberán tener una potencia mínima superior a 50 MW aunque el Ministerio de Industria, Turismo y Comercio se reserva la potestad de permitir la autorización administrativa de instalaciones de potencia igual o inferior a 10 MW, cuando tengan por finalidad la investigación, desarrollo, innovación y demostración de tecnología. En este caso existe un procedimiento simplificado de autorización. Las competencias administrativas para la puesta en funcionamiento de un parque eólico marino corresponden a varios organismos: i) La Dirección General de Política Energética y Minas del Ministerio de Industria, Turismo y Comercio es la encargada de conceder la autorización para la construcción, ampliación, modificación y cierre de las instalaciones.
+
+ii) La Dirección General de Costas del Ministerio de Medio Ambiente ha de otorgar la concesión de ocupación del dominio público marítimo-terrestre.
+
+51
+
+Informes y monografías / 27
+
+iii) El Ministerio de Medio Ambiente es el responsable de realizar los oportunos informes medioambientales. iv) En caso de afectar a la seguridad marítima, a la navegación y a la vida humana en el mar, el Ministerio de Fomento, a través de la Dirección de Marina Mercante, debe autorizar la instalación. v) Si el parque eólico se ubica en dominio público portuario, la autoridad portuaria competente ha de otorgar el correspondiente permiso. La normativa establece que las instalaciones de potencia no superior a 50 MW se incluirán en el régimen especial y las que excedan este registro tienen derecho a percibir una prima aplicada a la electricidad vendida en el mercado, igual a la de una instalación de 50 MW del mismo grupo y subgrupo, multiplicada por un coeficiente36. b) Estudio estratégico ambiental del litoral español para la instalación de parques eólicos marinos. La elaboración de este estudio responde a lo establecido en la disposición adicional tercera del RD 1.028/2007, siendo su objetivo identificar las zonas del dominio público marítimo-terrestre que reúnen condiciones favorables desde el punto de vista medioambiental para la instalación de parques eólicos marinos. El informe identifica tres tipos de zonas, agrupadas en 72 áreas eólicas marinas37: i) Zonas aptas. Se trata de los enclaves idóneos para el establecimiento de este tipo de instalaciones al no haberse detectado ninguna probable afección medioambiental.
+
+ii) Zonas aptas con condicionantes ambientales. Son áreas que podrían albergar un parque eólico, aunque han sido detectados efectos o conflictos que deben ser examinados en el procedimiento de evaluación medioambiental del proyecto.
+
+36 37
+
+Véanse los artículos 25.1 del RD 1.028/2007 y 45.2 del RD 661/2007. Ministerio de Industria, Turismo y Comercio y Ministerio de Medio Ambiente y Medio Rural y Marino (2009), pp. 64-70.
+
+52
+
+Energía eólica. Evolución y perspectivas
+
+iii) Zonas de exclusión. Son áreas que presentan incompatibilidad con la puesta en funcionamiento de un parque al haber sido identificados potenciales efectos ambientales adversos o conflictividad con otros usos del medio marino. Por otro lado, el Instituto para la Diversificación y el Ahorro de la Energía (IDAE) publicó de forma interactiva el Atlas Eólico de España38 en julio de 2009, siendo la empresa encargada de su realización Meteosim TrueWind. En él se detalla la cantidad de recurso eólico marino disponible en el territorio nacional. El contenido se estructura en torno a tres aplicaciones: a) Localizador. Permite obtener la cantidad de recurso eólico por coordenadas y municipios en valores estacionales a 80 metros de altura. b) Cartografía. Este marco, que es el centro de la aplicación, se agrupa en elementos denominados "capas": recurso eólico, divisiones administrativas39, espacios naturales protegidos, zonificación EEAL-parques marinos40, figuras ambientales, información catastral41, mapas eólicos42 y mapa topográfico nacional. c) Generación eólica. Esta herramienta permite estimar la producción energética que suministraría un aerogenerador que estuviera ubicado en un determinado lugar del territorio nacional, expresada en MW/h por año (bruto y neto)43. Esta herramienta tiene como principal propósito ser un sistema de consulta tanto para las administraciones públicas como para los promotores que les ayude respectivamente en la elaboración de planes de energías renovables y en la toma de decisiones con vistas a la presentación de solicitudes de autorización.
+
+38 39 40
+
+Se puede consultar en http://atlaseolico.idae.es Las divisiones administrativas contiene los límites nacionales, provinciales y municipales. Se trata de las zonas del dominio público marítimo-terrestre declaradas de exclusión, aptas con condicionantes y aptas para la puesta en funcionamiento de parques eólicos marinos. Contiene información catastral pública procedente de la Oficina Virtual del Catastro del Ministerio de Economía y Hacienda. Los mapas eólicos contienen elementos continuos que permiten consultar varios parámetros: velocidad media anual del viento (m/s) a cuatro alturas modelizadas (30, 60, 80 y 100 metros); densidad de potencia eólica (W/m2) para los cuatro niveles; recurso eólico estacional a 80 metros en las cuatro estaciones del año expresado en velocidad del viento, densidad del aire media anual (kg/m3) a 80 metros; presión atmosférica media anual a la misma altura; temperatura media anual a 80 metros y una última capa denominada "Topografía y rugosidad" que indica la elevación del terreno sobre el nivel del mar y el valor estimado de su rugosidad. La herramienta utiliza un coeficiente de corrección de pérdidas de producción del 15% para estimar la energía neta, aunque se puede realizar el cálculo empleando otro diferente que el usuario considere adecuado.
+
+41 42
+
+43
+
+53
+
+Informes y monografías / 27
+
+Según datos aportados por la Asociación Empresarial Eólica en su Anuario 2009, existen 32 proyectos de parques eólicos marinos a construir repartidos en varias Comunidades Autónomas: Andalucía (17), Galicia (7), Valencia (3), Cataluña (4) y Región de Murcia (1). Los promotores más representativos son: Acciona Energía, Capital Energy, Endesa, Enerfín, Iberdrola Renovables y Unión Fenosa. Las solicitudes de autorización de estos proyectos han sido presentadas en el Ministerio de Industria, Turismo y Comercio y se encuentran en fase previa a la convocatoria del concurso de reserva de zona. Concretamente, en el procedimiento de caracterización de área eólica marina44.
+
+12. Conclusiones
+España es el segundo país europeo y el cuarto del mundo con una mayor potencia eólica instalada. El desarrollo del sector en el mercado interno ha estado marcado por la existencia de marcos normativos que ha estimulado el desarrollo tecnológico, creándose incentivos no sólo para las empresas que realizan la actividad investigadora sino también para los promotores, ya que su actividad genera externalidades positivas para el conjunto de la sociedad. Los efectos no sólo son de carácter económico en términos de generación de riqueza y de una menor dependencia de las importaciones de combustibles fósiles, sino también medioambientales debido a su contribución a la reducción de emisiones de CO2. Sin embargo, el funcionamiento del sector se ha visto alterado con la aprobación del Registro de Pre-asignación (RD 6/2009), que entró en vigor en mayo de 2009, desvinculando a las Comunidades Autónomas de la competencia de autorización definitiva de los parques eólicos. Ello supone que esta responsabilidad sea asumida por el Ministerio de Industria, Turismo y Comercio. Esta medida, que ha afectado colateralmente a la energía eólica, debería haber sido aplicada a determinadas tecnologías que han registrado una progresión desmedida, al amparo de incentivos retributivos muy atractivos. Dicha circunstancia no se producía en la generación eólica, pues el desarrollo de los proyectos se estaba produciendo de una forma ordenada siguiendo el objetivo planteado en el PER, pudiendo haberse obviado esta exigencia en la etapa final hasta la expiración del citado Plan.
+44
+
+RD 1.028/2007 (arts. 9-13). Mediante este procedimiento, la Dirección General de Política Energética y Minas consulta a las instituciones afectadas a fin de que emitan un informe respecto a los previsibles impactos que la instalación pueda tener en el entorno. La caracterización de área eólica marina ha de incluir la estimación de la cantidad de energía máxima evacuable a través de las redes eléctricas de transporte y la repercusión que el parque eólico pueda tener en el entorno (pesca, flora y fauna, aves, paisaje, turismo, etc.).
+
+54
+
+Energía eólica. Evolución y perspectivas
+
+El giro de orientación dado por la Administración pública estableciendo un ritmo gradual de instalación de energías renovables hasta 2014, que para la energía eólica, su horizonte temporal es en 2012 (Resolución de 19 de noviembre de 2009), responde al impacto económico no programado que representa para las arcas públicas el creciente desembolso en primas, no existiendo de este modo una planificación en los costes que se han de imputar en la tarifa eléctrica. Precisamente, la razón aludida ha motivado al Gobierno a consensuar con las patronales eólica y termosolar un cambio retributivo de las citadas tecnologías45. Entre los aspectos más destacados del nuevo acuerdo alcanzado el pasado mes de julio en lo que respecta a la energía eólica pueden citarse los siguientes: a) Las primas se reducirán en un 35% hasta el 1 de enero de 2013. b) Se establece una convocatoria extraordinaria de 160 MW experimentales que computarán en el cupo de 2012 y, otra para determinadas plantas eólicas con una potencia conjunta de 300 MW, que teniendo el acta de puesta en servicio antes del 30 de abril de 2010, no fueron inscritas en el Pre-registro. c) La Administración se reserva el derecho de controlar el cambio de titularidad de las plantas durante los primeros cuatro años de construcción y operación; así como la devolución de avales a las instalaciones que renuncien a su inscripción en el Pre-registro. Una segunda razón a tener en cuenta es la relativa a las limitaciones que presenta el sistema para absorber la electricidad generada por las energías renovables. A este respecto, es preciso indicar que un informe realizado por REE, entregado a la Secretaría de Estado de Energía del Ministerio de Industria, Turismo y Comercio en octubre de 2009, recomienda no sobrepasar un ritmo de instalación anual de entre 3.000-3.300 MW procedentes de renovables hasta 201446.
+
+45 46
+
+Ministerio de Industria, Turismo y Comercio (2010b). Resolución de 19 de noviembre de 2009, BOE; p. 99.850.
+
+55
+
+Informes y monografías / 27
+
+En este mismo orden de aspectos, cabe señalar que la creación del Registro de Preasignación ha generado una situación de incertidumbre en el sector al tratarse de una norma que no ha sido consensuada y su impacto tampoco ha sido evaluado previamente. Los efectos negativos ya se han traducido en, entre otros, la pérdida de unos 15.000 empleos, entre directos e indirectos, en 2009 según la Asociación Empresarial Eólica47. Según expresa la antedicha asociación48, los fabricantes no han recibido nuevos pedidos de los promotores durante los últimos siete meses de 2009 ya que han tenido que esperar hasta el 15 de diciembre para conocer si sus proyectos eran inscritos. Además, con el perjuicio de desconocer la tarifa que reemplazaría a la actual (Real Decreto 661/2007) una vez completado el objetivo del PER. Asimismo la asociación manifiesta que si se pretende alcanzar para 2020 los objetivos propuestos de potencia eólica con tecnología nacional o fabricada en nuestro país, es necesario garantizar la viabilidad de la industria eólica, que corre el riesgo de deslocalización tras la aprobación del registro de pre-asignación y el subsiguiente parón49. En este sentido, entendemos que los riesgos de deslocalización están siempre presentes, pues es una cuestión más relacionada con los costes que con cualquier otra circunstancia. Por tanto, y dado que la instalación de parques eólicos se está produciendo en todo el mundo, las empresas españolas van a tener que verse obligadas a competir en un mercado más globalizado, si bien es cierto que la coyuntura actual no lo pone precisamente fácil. A modo de resumen, cabe señalar que el nuevo escenario programado de potencia anual a instalar en los próximos años (2010-2012) implica una reducción de la actividad de en torno al 53% respecto al trienio 2007-2009 (Tabla 11). En el contexto descrito, es preciso destacar que el Gobierno presentó en junio de 2010 el borrador del Plan de Acción Nacional de Energías Renovables (2011-2020) en el que se propone el mix energético para la producción de electricidad en el horizonte 2020 a partir de recursos renovables, constituyendo la energía eólica la primera fuente tanto en potencia instalada como en producción eléctrica. El objetivo es alcanzar 35.000 MW de eólica terrestre y 3.000 MW de eólica marina (Tabla 12). Esto es algo inferior a la propuesta del sector que sólo en onshore sumaría 40.000 MW.
+47 48 49
+
+Asociación Empresarial Eólica (2010c y 2010d, p. 18). Idem (2009b). Idem (2010b).
+
+56
+
+Energía eólica. Evolución y perspectivas
+
+Tabla 11. Nuevo escenario de potencia a instalar (2010-2012). En MW
+Año Potencia eólica instalada/a instalar 2007 3.518 2008 1.585 2009* 2.720 2010 1.048 2011 1.659 2012 963 Promedio 2007-2009 2.608 Promedio 2010-2012 1.223 Variación 2007-09/2010-12 en potencia instalada (%) -53,1
+*La cifra de potencia instalada en 2009 corresponde a la potencia inscrita en el Registro Administrativo de Instalaciones de Régimen Especial. Fuente: AEE y Ministerio de Industria, Turismo y Comercio. Elaboración propia.
+
+Tabla 12. Distribución del mix energético de energías renovables en España (2005, 2010, 2015 y 2020)
+MW Tecnología Hidroeléctrica Geotérmica Solar Fotovoltaica Solar concentrada Energía hidrocinética, del oleaje y maremotriz Eólica Terrestre Marina Biomasa Total Tecnología Hidroeléctrica Geotérmica Solar Fotovoltaica Solar concentrada Energía hidrocinética, del oleaje y maremotriz Eólica Terrestre Marina Biomasa
+Fuente: PANER (2010). Elaboración propia.
+
+2005 15.831 60 60 9.918 9.918 0 596 26.405
+
+2010 16.141 4.653 4.021 632 20.155 20.155 0 752 41.701
+
+2015 16.349 8.966 5.918 3.048 27.997 27.847 150 965 54.277 Porcentaje 30,1 16,5 10,9 5,6 51,6 51,3 0,3 1,8
+
+2020 16.662 50 13.445 8.367 5.079 100 38.000 35.000 3.000 1.587 69.844
+
+60,0 0,2 0,2 37,6 37,6 2,3
+
+38,7 11,1 9,6 1,5 48,3 48,3 1,8
+
+23,9 0,1 19,3 12,0 7,3 0,1 54,4 50,1 4,3 2,3
+
+57
+
+Informes y monografías / 27
+
+Entre las principales fortalezas del sector, se encuentra su capacidad para competir en el exterior. El conocimiento tecnológico acumulado y, en menor medida, el dimensionamiento productivo a nivel interno, han permitido la internacionalización del sector habiéndose identificado oportunidades de negocio que están siendo explotadas con éxito por las empresas españolas. Prueba de ello lo constituye la tendencia ascendente de las ventas externas de aerogeneradores en los últimos años, la presencia de los promotores nacionales en un mayor número de países y el inicio de la actividad fabril de determinados operadores como Acciona Energía que inauguró una planta de ensamblaje de aerogeneradores en EEUU en 2007. El dinamismo de la actividad en I+D+i es otro aspecto a destacar. La Red Científico Tecnológica del Sector Eólico español (REOLTEC) creada bajo el auspicio del Ministerio de Educación y Ciencia en 2005 es una plataforma cuya misión es la de coordinar programas de investigación, desarrollo e innovación que atiendan las necesidades del sector eólico a fin de mejorar la posición competitiva de la industria nacional. La componen 64 entidades públicas y privadas, aglutinando el sector empresarial una participación mayoritaria. Su estructura operativa gira en torno a un comité de dirección, un órgano gestor, la secretaría técnica50 y ocho grupos de trabajo temáticos (minieólica, aplicaciones, recursos, emplazamiento y predicción, aerogeneradores, certificación, eólica marina, análisis social y medioambiental e integración a red). Las actuaciones de REOLTEC se complementan con los programas públicos de I+D+i. En este sentido cabe indicar que el nuevo Plan Nacional de Energías Renovables contempla diversas medidas dirigidas al fortalecimiento tecnológico del sector eólico español como el apoyo financiero y administrativo para la implantación de parques marinos experimentales y el mantenimiento de una participación pública activa en I+D+i (Tabla 13). En el ámbito de las amenazas, se debe tener en cuenta el incremento de la competencia industrial procedente de países asiáticos, particularmente China e India, que se verá impulsado por las medidas que puedan seguir adoptando sus gobiernos para promover el uso de energías verdes en sus territorios.
+
+50
+
+La secretaría técnica es coordinada por la Asociación Empresarial Eólica, siendo su misión la de apoyar al órgano gestor. Sus principales funciones son: a) elaborar la propuesta del plan de actuación anual de REOLTEC y realizar un seguimiento de las actividades y del presupuesto; b) convocar a los grupos de trabajo y coordinar las tareas; c) proponer y elaborar propuestas de captación de fondos; y d) informar a los integrantes de la red sobre la evolución de las actividades.
+
+58
+
+Energía eólica. Evolución y perspectivas
+
+Tabla 13. Principales medidas destinadas al fomento de la energía eólica establecidas en el PANER (2011-2020)
+Tipo de medida Denominación de la medida Financiera Mantenimiento de una participación pública activa en I+D+i, estableciendo programas anuales para apoyar iniciativas industriales prioritarias Revisión de los procedimientos técnicos de operación a fin de adaptar el comportamiento de los aerogeneradores a la red Tratamiento administrativo diferenciado para la repotenciación de parques eólicos Planificación de las infraestructuras de evacuación eléctrica de los parques eólicos marinos en estado avanzado de tramitación administrativa Impulsar la puesta en funcionamiento de parques eólicos marinos de demostración de tamaño reducido Desarrollo de tecnologías marinas específicas e implantación de plataformas experimentales Reglamentaria Resultado esperado Plena competitividad de la eólica sin necesidad de apoyos específicos (reducción de los costes de generación de electricidad) Mayor capacidad de integración de la eólica en el sistema eléctrico Modernización de los parques obsoletos Eliminación de obstáculos en la promoción de parques eólicos marinos Despliegue de la eólica marina Grupo y/o actividad a la que se destina Administración General de Estado Existente o en proyecto Existente y en proyecto
+
+Administración General Existente y de Estado en proyecto
+
+Reglamentaria
+
+Reglamentaria
+
+Administración General En proyecto de Estado y Gobiernos Autonómicos Administración General En proyecto de Estado
+
+Reglamentaria financiera
+
+Administración General En proyecto de Estado
+
+Financiera
+
+Incentivo a la I+D+i
+
+Industria eólica y centros tecnológicos
+
+En proyecto
+
+Implantación de un marco Reglamentaria retributivo que incentive financiera las instalaciones eólicas de pequeña potencia Nueva regulación para Reglamentaria conectar las instalaciones eólicas de baja potencia en puntos de consumo interconectados con la red eléctrica Fuente: PANER (2010). Elaboración propia.
+
+Impulso del sector eólico de pequeña potencia Disminución de barreras administrativas
+
+Administración General En proyecto de Estado
+
+Administración General En proyecto de Estado y Gobiernos Autonómicos
+
+59
+
+Informes y monografías / 27
+
+Tabla 14. Principales hitos del sector eólico español
+Año 1984 1999 2004 2005 2007 2009 Hito Se instala el primer parque eólico en España El parque eólico español se sitúa por encima de 1.000 MW La potencia eólica instalada supera a la nuclear Se establece como meta alcanzar 20.155 MW en 2010 (PER) • Récord histórico de potencia instalada anual (3.518 MW) • La potencia eólica instalada es casi el doble de la nuclear • Récord histórico de producción horaria con 11.429 MW/h (8 de noviembre) • La energía eólica alcanza una cobertura máxima del 53% de la demanda total eléctrica (4 y 5 de noviembre) • La energía eólica supuso el 15,3% de la demanda eléctrica Récord histórico de producción horaria con 12.843 MW/h (24 de febrero)
+
+2010
+
+Fuente: AEE, CNE, IDAE y REE. Elaboración propia.
+
+Tabla 15. Principales magnitudes del sector eólico español
+Datos de síntesis Aportación al PIB (2008) Potencia eólica acumulada (En MW, 2009) Potencia eólica acumulada (En MW, 2005) Crecimiento acumulado de la potencia eólica (2005-2009) Crecimiento de la potencia eólica anual (2005-2009) Fabricantes de aerogeneradores instalados en España (2010) • Nacionales (Acciona Wind Power, Eozen, Gamesa, Made Tecnologías Renovables y MTorres) • Extranjeros (Alstom Wind y Vestas) Concentración de la potencia eólica instalada por provincias (%) • Albacete • Lugo • Zaragoza • Burgos • Cádiz • La Coruña • Resto Concentración porcentual de la potencia eólica acumulada instalada (2009) • Por fabricantes • Dos primeros (Gamesa y Vestas) • Tres primeros (Gamesa, Vestas y Acciona Wind Power) • Por promotores • Dos primeros (Iberdrola Renovables y Acciona Energía) • Tres primeros (Iberdrola Renovables, Acciona Energía y Neo Energía) Fuente: AEE (varios años) y Deloitte (2009). Elaboración propia. 0,39% 19.149 10.028 91,0% 61,4% 7 5 2 10,4 7,1 6,8 6,5 6,4 5,6 57,2
+
+63,2 70,8 46,4 54,6
+
+60
+
+Energía eólica. Evolución y perspectivas
+
+Anexo I. Parques eólicos de mayor tamaño operativos en España (2009)
+
+Denominación del parque eólico (municipio) Andalucía Almería El Carrascal I (Serón y Tíjola) La Cerradilla (Serón y Tíjola) Serón I (Serón) Tres Villas (Las Tres Villas) La Herrería (Tarifa) Jerez (Jerez de la Frontera) Viento de Alcalá (Alcalá de los Gazules) Cortijo de Guerra I (Puerto Real) Dólar I (Dólar y Huéneja) Dólar III (Dólar y Ferreira) Ferreira II (Ferreira y La Calahorra) Huéneja III (Huéneja) Majal Alto (El Almendro y Puebla de Guzmán) El Centenar (Puebla de Guzmán) Tallisca (El Almendro) Altamira (Ardales) Cerro de la Higuera (Ardales y Teba) Cerro Gavira (Campillos y Sierra de Yeguas) Cerro Durán (Los Corrales y Campillos) Curiscao Fase I (Salas y Valdés) Aragón Huesca Teruel Zaragoza Tardienta I (Tardienta) Tardienta II (Tardienta) Sierra Costera II (Cañada Velilla, Cuevas de Almudén, Galve y Mezquita de Jarque) La Carracha (La Muela) Plana de Jarreta (La Muela) El Bayo (Pedrola y Luceni) La Serreta (Rueda de Jalón) Belchite (Belchite) Fuendetodos II (Fuendetodos) Fuendetodos I (Fuendetodos) San Juan de Bargas (Alberite de San Juan, Bureta y Magallón) Santo Cristo de Magallón (Magallón)
+
+MW 50,0 50,0 49,5 49,5 46,8 42,5 42,0 40,8 49,5 49,5 49,5 49,5 50,0 40,0 40,0 49,3 44,0 41,7 45,0 42,5 49,5 44,2 40,8 49,5 49,5 49,5 49,5 49,5 47,6 46,0 44,8 40,0
+
+Entidad propietaria Sistemas Energéticos El Carrascal Sistemas Energéticos El Carrascal Energías y Recursos Ambientales (EYRA)-Grupo ACS Viento y Energía Aerogeneradores del Sur Wigep Andalucía Acciona Energía Parque Eólico Puerto Real Iberdrola Renovables Iberdrola Renovables Iberdrola Renovables Iberdrola Renovables Gamesa Energía Gamesa Energía Sistemas Energéticos La Tallisca Gamesa Energía Sistemas Energéticos de la Higuera Acciona Energía Eólica Guadalteba Eólica Curiscao Pumar Iberdrola Renovables Sistemas Energéticos Torralba Endesa Cogeneración y Energías Renovables Parque Eólico La Carracha Plana de Jarreta Molinos del Ebro Molinos del Ebro Parque Eólico Belchite Iberdrola Renovables Iberdrola Renovables San Juan de Bargas Eólicas Geólica Magallón II
+
+Cádiz
+
+Granada
+
+Huelva
+
+Málaga
+
+Sevilla Asturias
+
+61
+
+Informes y monografías / 27
+
+Denominación del parque eólico (municipio) Castilla La Mancha Albacete Casa del Aire II (Romica) Casa del Aire I (Bonillo) Cabeza Moreno Dueñas (El Bonillo) Los Pedreros (Fuente Álamo) Hoya Gonzalo (Romica) La Fuensanta (Alcodozo y Peñas de San Pedro) Majales (Masegoso) Malefatón (Higueruela) Molar del Molinar (Peñas de San Pedro) Carcelén (Carcelén) Cerro Blanco (Pinilla) Isabela (Casas de Lázaro) Sabina (Hellín, Liétor y Pozohondo) Sierra de la Oliva (Almansa y Caudete) Muela (Chinchilla de Montearagón y Corralrubio) Portachuelo (Romica) La Caballa (Romica) El Relumbrar (Alpera) Malagón II (Fuente del Fresno y Los Cortijos) Bailones (Alhambra y Membrilla) El Moral (Moral de Calatrava) Chumillas Muela Cubillo (Alcalá de la Vega, Algarra y Fuentelespino de Moya) Callejas (Olmedilla) Cerro Calderón (Alcázar del Rey y Paredes) Maza (Olmedilla) Muela I (Atalaya, Sisante y Vara del Rey) Lomillas (Tébar) Cerro del Palo (Atalaya, Cañavete y Tébar) Cuesta Colorada (Atalaya, Cañavete y Tévar) Campalbo (Campalbo y Garja) Cruz I (San Martín de Boniches) Loma Gorda (Tartanedo) Sierra Menera I (Setiles y Tordesilos) Urbel del Castillo II (Huércenes, Montorio y Urbel del Castillo) El Perul (Urbel del Castillo y Valladiego) La Lora I (La Riba de Valdelucio) La Lora II (La Riba de Valdelucio) Páramo de Poza I (Poza de la Sal) Las Pardas (Valle de Sedano) Lodoso (Pedrosa del Río Urbel) Marmellar (Pedrosa del Río Urbel) Páramo de Poza II (Poza de la Sal) Cerro Blanco (Briviesca, Galbarros, Reinoso y Salinillas del Bureba)
+
+MW 51,0 50,4 50,0 50,0 49,5 49,5 49,5 49,5 49,5 48,8 48,0 48,0 48,0 46,9 45,5 45,1 41,7 40,0 50,0 42,0 40,0 50,0 50,0 49,5 49,5 49,5 49,5 49,5 49,5 49,5 49,3 40,0 50,0 40,0 50,0 49,6 49,6 49,6 49,5 49,5 49,5 49,5 48,7 40,0
+
+Entidad propietaria Energías Alternativas Energías Alternativas Acciona Energía Gecal Evolución 2000 GE Wind Energy Acciona Energía Iberdrola Renovables Iberdrola Renovables Elecdey Acciona Energía Iberdrola Renovables Iberdrola Renovables Iberdrola Renovables Iberdrola Renovables Eólica Campollano Eólica Campollano Acciona Energía Eufer Renovables Ibéricas 2004 Acciona Energía Parque Eólico El Moral Elecdey Energías Eólicas de Cuenca Iberdrola Renovables Iberdrola Renovables Iberdrola Renovables Iberdrola Renovables Neo Energía Iberdrola Renovables Iberdrola Renovables Iberdrola Renovables Iberdrola Renovables Parque Eólico Cabo Vilano Iberdrola Energías Renovables Biovent Energía Eólica Energías y Recursos Ambientales (EYRA)-Grupo ACS La Boga La Boga Eólicas Páramo de Poza Prorener La Boga Marmellar Eólicas Páramo de Poza Energía Global Castellana
+
+Ciudad Real
+
+Cuenca
+
+Guadalajara Castilla y León Burgos
+
+62
+
+Energía eólica. Evolución y perspectivas
+
+León
+
+Denominación del parque eólico (municipio) Peña del Gato (Igüeña, Torre del Bierzo y Villagatón) La Mallada (Lucillo) Cuesta Mañera (Ampudia) Carrasquillo (Astudillo y Pedrosa del Príncipe) (a) EL Teruelo (Astudillo, Melgar de Yuso y Villodré) La Muñeca (Ampudia) Caramonte (Medinaceli) Juno (Arancón, Magaña, Narros y Suellacabras) Luna (Fuentestrún, Trévago, Valdegeña, Matalebreras y Villar del Campo) Las Aldehuelas (Aldehuelas, Arévalo de la Sierra, La Poveda, Santa Cruz de Yanguas y Vizmanos) Bordecorex Norte (Bordecorex) Sierra Ministra (Medinaceli) Alentisque (Alentisque) San Lorenzo A (Torrelobatón) Sierra de las Carbas (Ferreruela)
+
+MW 50,0 44,8 49,5 49,3 43,4 40,5 49,9 49,5 49,5 47,2
+
+Entidad propietaria Energías Especiales del Ato Ulla Investigación y Desarrollo de Energías Renovables (IDER) Renovalia Iberdrola Renovables Iberdrola Renovables Renovalia Eólica de Medinaceli Danta de Energías Danta de Energías Explotaciones Eólicas Aldehuelas
+
+Palencia
+
+Soria
+
+Valladolid Zamora Cataluña Barcelona
+
+44,4 42,0 46,5 48,8 40,0
+
+Iberdrola Energías Renovables Peesa Eólica Peesa Eólica Parques Eólicos San Lorenzo Energías y Recursos Ambientales (EYRA)-Grupo ACS Acciona Energía Acciona Energía Bon Vent de Vilalba Ecovent Parc Eolic Acciona Energía
+
+Serra de Rubió I (Castellfollit del Boix y Serra de Rubió) LLeida Serra de Vilobí (Fulleda y Tarrés) Tarragona Vilalba (Vilalba de Arcs) Ecovent CAT II y III (Tortosa) Serra del Tallat ( Passanat y Vallbona de les Moges) Comunidad Valenciana Castellón Arriello (Ares del Maestre, Castellfort y Villafranca del Cid) Folch I (Castellfort) Refoyas (Forcall y Todolella) Torre Miró I (Morella) Torre Miró II (Morella) Alto Palancia II (Barracas y Viver) Muela de Todolella (Olocau del Rey y Todolella) Valencia Villanueva I (Jarafuel) La Solana (Ayora) Rincón del Cabello (Ayora)
+
+49,5 40,5 49,8 48,1 49,5
+
+49,5 49,5 49,5 49,5 49,5 46,0 40,5 48,3 44,2 40,0
+
+Energías Renovables Mediterráneas (Renomar) Energías Renovables Mediterráneas (Renomar) Energías Renovables Mediterráneas (Renomar) Energías Renovables Mediterráneas (Renomar) Energías Renovables Mediterráneas (Renomar) Proyectos Eólicos Valencianos Energías Renovables Mediterráneas (Renomar) Parques Eólicos de Villanueva Corporación Acciona Eólica Corporación Acciona Eólica
+
+(a)
+
+39,95 MW corresponden a Palencia.
+
+63
+
+Informes y monografías / 27
+
+Denominación del parque eólico (municipio) Galicia La Coruña Monte Redondo (Vimianzo) Somozas (As Somozas) Ponte Rebordelo (Dumbría) Coruxeiras (Muras) Fonsagrada (A Fonsagrada, Baleira, Castroverde, Ribera de Piquín y Pol) Mondoñedo (Mondoñedo) Serra de Meira (Meira) Pena Ventosa ( Ourol, O Vicedo, Viveiro) Monseivane (Abadín y Villalba) Buio (Baladouro) Fonteavía I y II (A Lama, Covelo y Fomelos) (b) Sil (Esgos, Montederramo y Nogueira) Tea (Avión, Melón y Tea Covelo) (c) Masgalán-Campo do Coco (Forcarei y Silleda) Ameixeiras-Testeiros (Forcarei, Lalín y O Irixo) (d) Cabimonteros (Robles del Arnedillo) Escurrillo (Autol, Quel y Villaroya) Alcarama II (Cervera del Río Alhama) Navarra Montes de Cierzo I y II (Tudela) Las Llanas de Codés I (Aguilar de Codés) Caluengo (Funés y Peralta) Vedadillo (Falces) Las Llanas de Codés II (Azuelo) País Vasco Badaia
+(b) (c) (d)
+
+MW 49,5 48,0 40,3 49,6 49,5 49,4 49,3 44,8 41,4 40,3 49,4 49,2 48,1 49,5 49,5 49,5 49,5 45,1 59,5 50,0 49,5 49,5 43,2 49,5
+
+Entidad propietaria Energías Ambientales Vimianzo Energías Ambientales Somozas Desarrollos Eólicos Dumbría Norvento Curuxeiras Acciona Energía Fergo Galicia Vento Sistemas Energéticos Bibeiro Endesa Cogeneración y Energías Renovables Desarrollos Eólicos de Lugo Acciona Energía Acciona Energía Iberdrola Renovables Acciona Energía Iberdrola Renovables Iberdrola Renovables Desarrollos de Energías Renovables Desarrollos de Energías Renovables Sistemas Energéticos Alhama-Linares Eólica Montes Cierzo Acciona Energía Desarrollos de Energías Renovables Acciona Energía Acciona Energía Eólicas de Euskadi
+
+Lugo
+
+Orense
+
+Pontevedra La Rioja
+
+31,85 MW están asignados a Orense. 29,90 MW están localizados en Orense. 28,28 MW están ubicados en Pontevedra.
+
+Fuente: AEE. Elaboración propia.
+
+64
+
+Energía eólica. Evolución y perspectivas
+
+Anexo II. Energía vendida, retribución total, precio medio retribuido y prima equivalente por tipos de energías renovables (2004-2009)
+Tecnología Cogeneración Solar Eólica Hidráulica Biomasa Residuos Trat. residuos Cogeneración Solar Eólica Hidráulica Biomasa Residuos Trat. residuos Cogeneración Solar Eólica Hidráulica Biomasa Residuos Trat. residuos Cogeneración Solar Eólica Hidráulica Biomasa Residuos Trat. residuos Cogeneración Solar Eólica Hidráulica Biomasa Residuos Trat. residuos Cogeneración Solar Eólica Hidráulica Biomasa Residuos Trat. residuos Energía vendida (GW/h) 19.269 18 16.087 4.752 1.799 2.312 2.662 46.900 18.826 41 21.190 3.820 2.120 2.620 3.172 51.790 16.782 107 23.168 4.148 2.136 2.447 3.395 52.183 17.715 497 27.603 4.126 2.174 2.722 3.415 58.252 21.188 2.549 32.131 4.640 2.488 2.732 3.140 68.867 21.499 6.060 36.790 5.236 2.672 2.885 3.894 79.036 Retribución total (miles de euros) 1.139.503 6.791 1.013.031 316.587 117.698 122.592 163.680 2.879.880 1.435.418 16.410 1.856.465 336.154 183.529 177.970 279.472 4.285.418 1.357.299 45.589 2.103.682 371.181 189.277 171.439 334.548 4.573.016 1.347.898 215.579 2.157.034 319.376 192.480 167.814 318.586 4.718.768 2.106.481 1.155.068 3.226.384 446.051 290.032 239.335 349.548 7.812.899 1.846.511 2.832.475 2.959.867 423.506 299.804 195.763 473.567 9.031.494 Precio medio retribución Prima equivalente total (cent. por kW/h) (miles de euros) 5,91 467.133 36,74 6.146 6,29 451.667 6,66 150.753 6,54 54.932 5,30 41.900 6,14 70.791 6,14 1.243.323 7,62 330.461 39,90 13.996 8,76 612.785 8,80 111.955 8,65 59.094 6,79 24.200 8,81 93.309 8,27 1.245.800 8,08 460.623 42,74 39.891 9,08 865.815 8,94 149.567 8,86 75.132 7,00 40.717 9,85 153.131 8,76 1.784.876 7,60 607.658 43,39 194.819 7,81 1.003.575 7,74 146.946 8,85 101.633 6,16 54.068 9,33 175.903 8,10 2.284.602 9,94 741.113 45,32 990.830 10,04 1.155.818 9,61 147.033 11,65 129.669 8,76 63.301 11,13 147.211 11,34 3.374.974 8,58 1.035.329 46,74 2.603.832 8,04 1.571.737 8,08 225.939 11,22 198.980 6,78 86.902 12,16 326.631 11,42 6.049.349
+
+2004
+
+Total 2005
+
+Total 2006
+
+Total 2007
+
+Total 2008
+
+Total 2009
+
+Total
+
+Fuente: CNE. Elaboración propia
+
+65
+
+Informes y monografías / 27
+
+Anexo III. Coste de los principales componentes de una turbina eólica onshore
+
+Gráfico 22. Coste de los principales componentes de una turbina eólica onshore. En porcentaje
+
+Notas: Cuotas obtenidas respecto a una turbina eólica de 5MW. Fuente: Clifford, coord. (2009). Los dos componentes de mayor coste de una turbina eólica son la torre y las palas que suponen casi un 50% del total. La multiplicadora, el convertidor, el transformador y el generador son los otros elementos más importantes representado en torno al 50%. Considerando los costes totales de promoción de un parque eólico onshore, las turbinas representan en torno a un 70%, es decir, absorben la mayor parte de la inversión. Los costes de construcción junto con los de conexión a la red e infraestructuras eléctricas representan la segunda partida más importantes, de media un 20%.
+
+66
+
+Energía eólica. Evolución y perspectivas
+
+Referencias bibliográficas
+• ASOCIACIÓN EMPRESARIAL EÓLICA (2009a): Eólica 2009. • ASOCIACIÓN EMPRESARIAL EÓLICA (2009b): "AEE anuncia el alto riesgo de pérdida de miles de empleos por la paralización del sector eólico". Nota de prensa, 21 de diciembre de 2009. • ASOCIACIÓN EMPRESARIAL EÓLICA (2010a): "La eólica instaló en España 2.459 MW en 2009 pero este año se reducirán a cerca de 1.000 MW". Nota de prensa, 1 de febrero de 2010. • ASOCIACIÓN EMPRESARIAL EÓLICA (2010b): "La eólica reclama una rectificación hoy del Registro de Pre Asignación para hacer posible en 2020 el desarrollo propuesto por el Gobierno". Nota de prensa, 2 de marzo de 2010. • ASOCIACIÓN EMPRESARIAL EÓLICA (2010c): "Manifiesto por el empleo en la eólica. Sindicatos y AEE reclaman al Gobierno que adelante los cupos de potencia eólica". Nota de prensa, 16 de marzo de 2010. • ASOCIACIÓN EMPRESARIAL EÓLICA (2010d): La situación del sector eólico. • ASOCIACIÓN EMPRESARIAL EÓLICA (2010e): Eólica 2010. • CLIFFORD, S., coord. (2009): The Economics of Wind Energy. European Wind Energy Association. • COENRAADS, R.; REECE, G.; VOOGT, M.; RAGWITZ, M.; HELD, A.; RESCH, G.; FABER, T.; HAAS, R.; KONSTANTINAVICIUTE, I.; KRIVOŠÍK, J. y CHADIM, T. (2008): Progress, Promotion and Growth of Renewable Energy Sources and Systems. Ecofys, Fraunhofer ISI, Energy Economics Group, Lithuanian Energy Institute y Seven. • COMISIÓN DE LAS COMUNIDADES EUROPEAS (1995a): Por una política energética de la Unión Europea . Libro Verde. COM (1994) 659 final. • COMISIÓN DE LAS COMUNIDADES EUROPEAS (1995b): Libro Blanco. Una política energética para la Unión Europea. COM (1995) 682 final.
+
+67
+
+Informes y monografías / 27
+
+• COMISIÓN DE LAS COMUNIDADES EUROPEAS (1996): Comunicación de la Comisión. Energía para el futuro: fuentes de energía renovables. Libro Verde para una estrategia comunitaria. COM (96) 576. • COMISIÓN DE LAS COMUNIDADES EUROPEAS (2007): Comunicación de la Comisión al Consejo y al Parlamento Europeo. Acción de seguimiento del Libro Verde. Informe sobre el progreso e la electricidad. COM (2006) 849 final. • COMISIÓN DE LAS COMUNIDADES EUROPEAS (2009): Informe de avance sobre la energía procedente de fuentes renovables. Informe de la Comisión de conformidad con el artículo 3 de la Directiva 2001/77/CE, el artículo 4, apartado 2 de la Directiva 2003/30/CE y sobre la aplicación del plan de acción de la UE sobre la biomasa, COM (2005) 628. COM (2009) 192 final. • COMISIÓN EUROPEA (1997): Comunicación de la Comisión. Energía para el futuro: fuentes de energía renovables. Libro Blanco para una estrategia y un plan de acción comunitarios. COM (1997) 599 final. • COMISIÓN EUROPEA (2001): Libro Verde. Hacia una estrategia europea de seguridad del abastecimiento energético. Luxemburgo, Oficina de Publicaciones Oficiales de las Comunidades Europeas. • DECISIÓN 93/500/CEE DEL CONSEJO, de 13 de diciembre de 1993, relativa al fomento de las energías renovables en la Comunidad (Altener). Diario Oficial de las Comunidades Europeas L 235, de 18 de septiembre de 1993; pp. 41-44. • DECISIÓN 98/352/CE DEL CONSEJO, de 18 de mayo de 1998, sobre un programa plurianual de fomento de las energías renovables en la Comunidad (Altener II). Diario Oficial de las Comunidades Europeas L 159, de 3 de junio de 1998; pp. 53-57. • DECISIÓN 646/2000/CE DEL PARLAMENTO EUROPEO Y DEL CONSEJO, de 28 de febrero de 2000, por la que se aprueba un programa plurianual de fomento de las energías renovables en la Comunidad (Altener) (1998-2002). Diario Oficial de las Comunidades Europeas L 79, de 30 de marzo de 2000; pp. 1-5. • DELOITTE (2009): Estudio macroeconómico del impacto del sector eólico en España. AEE. • DE OTTO, S. (2010): La situación del sector eólico. AEE.
+
+68
+
+Energía eólica. Evolución y perspectivas
+
+• DIRECTIVA 2009/28/CE, DEL PARLAMENTO EUROPEO Y DEL CONSEJO, de 23 de abril de 2009, relativa al fomento del uso de energía procedente de fuentes renovables y por la que se modifican y se derogan las Directivas 2001/77/CE y 2003/30/ CE. Diario Oficial de la Unión Europea L 140, de 5 de junio de 2009; pp. 16-62. • EUROPEAN WIND ENERGY ASSOCIATION (EWEA) (2009): EWEA 2008 Annual Report. • EUROPEAN WIND ENERGY ASSOCIATION (EWEA) (2010a): The European Offshore Wind Industry. Key Trends and Statistics 2009. • EUROPEAN WIND ENERGY ASSOCIATION (EWEA) (2010b): Wind in Power. 2009 European Statistics. • BLANCO, I. y KJAER, C. (2009): Wind at work. Wind energy and job creation in the EU. European Wind Energy Association. • GAMESA (2010): Informe Anual Gamesa 2009. • GLOBAL WIND ENERGY COUNCIL (GWEC) (2007-2010): Global Wind Report. • GREENPEACE INTERNATIONAL y GLOBAL WIND ENERGY COUNCIL (2008): Global Wind Energy Outlook 2008. • INSTITUTO PARA LA DIVERSIFICACIÓN Y AHORRO DE LA ENERGÍA (2006): Energía eólica. Ministerio de Industria, Turismo y Comercio e Instituto para la Diversificación de la Energía. • JENSEN, P. C. y JACOBSEN, S. H., eds. (2009): Wind Turbines in Denmark. Copenague, Danish Energy Agency. • KROHN, S., ed. (2009): The Economics of Wind Energy. European Wind Energy Association. • MAKE CONSULTING (2010): WTG OEM Market Shares 2009. • MINISTERIO DE ECONOMÍA Y HACIENDA (2009): Acuerdo Político para la recuperación del crecimiento económico y la creación de empleo.
+
+69
+
+Informes y monografías / 27
+
+• MINISTERIO DE INDUSTRIA, TURISMO Y COMERCIO y MINISTERIO DE MEDIO AMBIENTE Y MEDIO RURAL Y MARINO (2009): Estudio estratégico ambiental del litoral español para la instalación de parques eólicos marinos. • MINISTERIO DE INDUSTRIA, TURISMO Y COMERCIO (2010a): Plan de Acción nacional de energías renovables de España (PANER). • MINISTERIO DE INDUSTRIA, TURISMO Y COMERCIO (2010b): "Industria cierra con los sectores eólico y termosolar un acuerdo para revisar sus marcos retributivos". Nota de prensa, 2 de julio de 2010. • MOSQUERA, P. y MERINO, L., dirs. (2009a): "Una directiva para hacer renovables"; en Energías Renovables (78), mayo de 2009. • MOSQUERA, P. y MERINO, L., dirs. (2009b): "Eólica, frenazo coyuntural, repunte a futuro"; en Energías Renovables (81), septiembre de 2009. • MOSQUERA, P. y MERINO, L., dirs. (2010a): "Anuario 2009"; en Energías Renovables (85), enero de 2010. • MOSQUERA, P. y MERINO, L., dirs. (2010b): "Especial eólica. Un sector en el aire"; en Energías Renovables (88), abril de 2010. • REAL DECRETO 436/2004, de 12 de marzo, por el que se establece la metodología para la actualización y sistematización del régimen jurídico y económico de la actividad de producción de energía eléctrica en régimen especial. Boletín Oficial del Estado 75, de 27 de marzo de 2004; pp. 13.217-13.238. • REAL DECRETO 661/2007, de 25 de mayo, por el que se regula la actividad de producción de energía eléctrica en régimen especial. Boletín Oficial del Estado 126, de 26 de mayo de 2007; pp. 22.846-22.886. • REAL DECRETO 1.028/2007, de 20 de julio, por el que se establece el procedimiento administrativo para la tramitación de las solicitudes de autorización de instalaciones de generación eléctrica en el mar territorial. Boletín Oficial del Estado 183, de 1 de agosto de 2007; pp. 33.171-33.179.
+
+70
+
+Energía eólica. Evolución y perspectivas
+
+• REAL DECRETO 1.578/2008, de 26 de septiembre, de retribución de la actividad de producción de energía eléctrica mediante tecnología solar fotovoltaica para instalaciones posteriores a la fecha límite de mantenimiento de la retribución del Real Decreto 661/2007, de 25 de mayo, para dicha tecnología. Boletín Oficial del Estado 24, de 27 de septiembre de 2008; pp. 39.117-39.125. • REAL DECRETO LEY 6/2009, de 30 de abril, por el que se adoptan determinadas medidas en el sector energético y se aprueba el bono social. Boletín Oficial del Estado 111, de 7 de mayo de 2009; pp. 39.404-39.415. • RED ELÉCTRICA DE ESPAÑA (2000-2001): Operación del sistema eléctrico. • RED ELÉCTRICA DE ESPAÑA (2002-2009): El sistema eléctrico español • RESOLUCIÓN DE 19 DE NOVIEMBRE DE 2009, de la Secretaría de Estado de Energía, por la que se publica el Acuerdo del Consejo de Ministros de 13 de noviembre de 2009, por el que se procede a la ordenación de los proyectos o instalaciones presentados al registro administrativo de preasignación de retribución para las instalaciones de producción de energía eléctrica, previsto en el Real Decretoley 6/2009, de 30 de abril, por el que se adoptan determinadas medidas en el sector energético y se aprueba el bono social. Boletín Oficial del Estado 283, de 24 de noviembre de 2009; pp. 99.848-99.856. • US DEPARTMENT OF ENERGY (2008): 20% Wind Energy by 2030: Increasing Wind Energy`s Contribution to US Electricity Supply. • VIDAL, J. (2009): "Supervisión y control de parques eólicos". Ponencia presentada a la Conferencia Sistemas de control y supervisión de parques eólicos, organizada por iiR España (Madrid, 24 de febrero de 2009). • VIDAL, J. (2009): "Energía Eólica". Ponencia presentada en el III Curso Superior de Energías Renovables, organizado por la Escuela de Organización Industrial (octubre de 2009). • WILKES, J. y FICHAUX, N. (2009): Oceans of opportunity. European Wind Energy Association. • ZERVOS, A. y KJAER, C. (2009): Pure Power. Wind Energy Targets for 2020 and 2030. European Wind Energy Association. 71
+
+Informes y monografías / 27
+
+Recursos en Internet
+• ACCIONA ENERGÍA: http://www.acciona-energia.com • ASOCIACIÓN EMPRESARIAL EÓLICA: http://www.aee.es • BRITISH WIND ENERGY ASSOCIATION: http://www.bwea.com • COMISIÓN NACIONAL DE ENERGÍA: http://www.cne.es • DANISH WIND INDUSTRY ASSOCIATION: http://www.windpower.org • DIRECCIÓN GENERAL DE ENERGÍA DE LA COMISIÓN EUROPEA: http:// ec.europa.eu/energy/index_en.htm • EL PAÍS: "Energía eólica. Características y funcionamiento de los aerogeneradores instalados en los parques eólicos terrestres y marinos". Disponible en http://www.elpais.com/graficos/sociedad/Energia/eolica/elpgrasoc/ 20051118elpepusoc_1/Ges • ENERCON: http://www.enercon.de/es/_home.htm • EOZEN: http://www.eozen.es/esp/index.htm • GAMESA: http://www.gamesacorp.com/es • GENERAL ELECTRIC ENERGY: http://www.gepower.com/businesses/ ge_wind_energy/en/index.htm • GLOBAL WIND ENERGY COUNCIL: http: //www.gwec.net • IBERDROLA RENOVABLES: http://www.iberdrolarenovables.es • INSTITUTO PARA LA DIVERSIFICACIÓN Y EL AHORRO DE LA ENERGÍA (IDAE): http://www.idae.es • LM WIND POWER: http://www.lmwindpower.com • MINISTERIO DE INDUSTRIA, TURISMO Y COMERCIO: http://www.mityc.es
+
+72
+
+Energía eólica. Evolución y perspectivas
+
+• SIEMENS WIND POWER: http://www.energy.siemens.com/hq/en/powergeneration/renewables/wind-power/wind-turbines • SUZLON: http://www.suzlon.com • VESTAS WIND SYSTEMS: http://www.vestas.com
+
+73
+

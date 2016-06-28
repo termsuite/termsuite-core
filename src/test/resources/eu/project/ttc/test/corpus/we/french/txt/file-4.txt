@@ -1,0 +1,881 @@
+3ème Colloque International CPI'2003, 22-24 octobre 2003, ENSAM, Maroc.
+Aide à la décision pour la définition d'un
+système éolien adapté à un site donné
+Abdelaziz Arbaoui*,***— Jean-Pierre Nadeau*— Patrick
+Sébastian*— Lahsen Bchir**— Abderrahim Brakez**
+* : LEPT-ENSAM UMR CNRS 8508, Esplanade des Arts et Métiers, 33405 Talence
+France.
+{arbaoui, nadeau, sebas}@lept-ensam.u-bordeaux.fr
+** : LMFE, Faculté des Sciences Semlalia Marrakech Maroc.
+*** : ENSAM-Meknès BP 4024, Meknès Ismaïlia Maroc.
+RÉSUMÉ. Cette étude a pour objectif de réaliser un outil d'aide à la décision pour la définition
+d'un système éolien adapté à un site donné. L'approche globale se base sur la démarche de
+Conception Inversée Intégrée (CII) ; elle prend en compte l'ensemble des coûts du projet et les
+caractéristiques du site. La recherche de solutions est réalisée au moyen d'un solveur CSP
+(basé sur l'arithmétique des intervalles). L'intérêt de l'utilisation d'une telle méthode de
+résolution dans le contexte de l'aide à la décision est montré en la comparant avec une
+méthode évolutionnaire (Algorithmes Génétiques). L'apport de l'intégration des spécificités du
+site est illustré au travers l'étude de trois sites différents. Les gains obtenus sur le coût du kWh
+sont importants pour les sites méditerranéens, l'influence du choix technologique est
+négligeable.
+ABSTRACT. The objective of this study is to develop a decision support tool for the site specific
+definition of wind turbines. The global approach is based on the Integrated Inversed Design
+(IID) methodology; it takes into account all the costs of the project and the characteristics of
+the site. The solutions are determined using a CSP solver (based on interval arithmetic). The
+interest of using this solving method is showed with comparison with a method based on the
+use of genetic algorithms. The contribution of integration of the site specificities is illustrated
+through study of three different sites; it displayed a significant reduction in cost of energy for
+Mediterranean site; the influence of technological choice appears to be negligible.
+MOTS-CLÉS : Conception Inversée Intégrée, aide à la décision, système éolien, sites
+méditerranéens, satisfaction de contraintes, Algorithmes Génétiques.
+KEYWORDS: Integrated Inversed Design, decision support, wind turbine, mediterranean sites
+constraints satisfaction, genetic algorithms.
+2 3ème Colloque International CPI'2003, 22-24 octobre 2003, ENSAM, Maroc.
+1. Introduction
+L'énergie éolienne a connu un développement rapide depuis une trentaine
+d'années. Grâce à ses caractéristiques d'énergie renouvelable non polluante,
+l'intégration de ce type d'énergie est devenue un élément clé pour des nouvelles
+politiques énergétiques dans de nombreux pays. Les gouvernements sont intéressés
+par le développement durable au travers d'une large intégration de l'énergie éolienne
+dans les systèmes de production de l'énergie électrique. Les distributeurs
+s'intéressent à la viabilité du système, au coût et à la qualité de l'énergie produite.
+Les investisseurs voient le profit qui peut être réalisé, tandis que les concepteurs, les
+fabricants et les maîtres d'oeuvre définissent l'architecture du système et son
+adéquation au site d'installation.
+Un système éolien est complexe. Différents types de systèmes ont été conçus et
+construits. Ils utilisent des technologies et des concepts différents. La multiplicité,
+des choix possibles, des interactions entre les différents paramètres du problème, et
+des points de vue à prendre en compte rend la définition des systèmes éoliens
+difficile. Pratiquement, les conséquences d'un choix sont souvent difficiles à
+percevoir et à quantifier par le concepteur. Il est aussi difficile de prédire la différence
+de comportement du système pour des sites différents [Fulglsang et al.].
+Plusieurs outils et logiciels dédiés à la conception des systèmes éoliens ont été
+réalisés. Ces outils cherchent à maximiser les performances et/ou réduire le coût de
+l'énergie produite. Ils prennent, souvent, en compte tous les efforts et les propriétés
+de résistance des structures par une approche par éléments finis et par analyse
+modale. En outre, ils utilisent des simulations numériques pour la reproduction des
+caractéristiques aérodynamiques du vent sur le site. Ces outils sont orientés vers la
+conception détaillée d'un système éolien ; ils sont complexes, consommateurs de
+temps, et coûteux pendant les premières étapes de la conception [Ficher et al.]. De
+plus on ne peut élaborer rapidement un Scénario d'Approvisionnement en Energie
+Eolienne (SAEE) dans une région donnée [Kiranoudis et al.]. La conception
+préliminaire et l'élaboration des SAEE exigent des outils spécifiques. En effet 70% du
+coût total du projet est engagé à la fin de ces deux étapes.
+L'étude que nous présentons a pour objectif de réaliser un outil d'aide à la
+décision pour la définition d'un système éolien adaptée à un site donné. L'approche
+globale prend en compte l'ensemble des coûts du projet et les caractéristiques du
+site. Cet outil pourra être utilisé en étape préliminaire par les différents décideurs
+concernés. Pour atteindre cet objectif nous avons mis en oeuvre une démarche de
+conception architecturale (Embodiment Design), dite «Conception Inversée
+Intégrée» (CII) [Ficher et al.], basée sur trois étapes (cf. figure 1) : analyse et
+structuration, modélisation et formulation par contraintes, et résolution de problèmes
+par un solveur CSP (CSP numérique, basée sur l'arithmétique des intervalles). Cette
+méthode de résolution est impliquée dans le projet CO2 (Réseau National des
+Technologies Logicielles « COnception par COntraintes »).
+Aide à la décision pour la définition d'un système éolien 3
+Dans la suite de ce texte nous présentons
+successivement l'analyse et la structuration
+du problème de définition d'un système
+éolien, la formulation sous contraintes,
+l'intérêt d'une résolution par satisfaction de
+contraintes dans le contexte de l'aide à la
+décision en la comparant avec une méthode
+évolutionnaire (Algorithmes Génétiques),
+l'apport de l'intégration des spécificités du
+site et du choix technologique dans le
+processus de définition des systèmes
+éoliens, les limites actuelles de notre outil et
+nos perspectives.
+2. Analyse et structuration
+Dans le contexte de la Conception
+Inversée Intégrée le processus de conception
+consiste à identifier, formuler et à satisfaire
+un ensemble de contraintes, celles-ci
+définissent le problème de conception:
+P = (V, D,C)
+Où V est l'ensemble de variables du
+problème, D est l'ensemble des domaines de
+valeurs de chaque variable et C l'ensemble
+des contraintes liant les variables entre elles. Les domaines de valeurs peuvent être,
+indifféremment, continus ou discrets. Ainsi les variables peuvent prendre des valeurs
+réelles, intervalles, booléennes ou énumérées. Les contraintes, quant à elles, relient
+les variables du problème. Ce sont des relations analytiques, à savoir des égalités ou
+des inégalités, des relations logiques, ou des relations discrètes (catalogues).
+La représentation sous forme d'organigrammes techniques nous a permis de
+déterminer les niveaux de description possible du système. Le but de cette
+représentation est de faire émerger des relations manipulables par un moteur de
+recherche CSP et qui sont en même temps cohérentes avec l'objectif de conception.
+La figure 2 montre l'organigramme technique pour un système «stall ». Sur cet
+organigramme on retrouve les variables qui interviennent dans le modèle de calcul de
+la quantité d'énergie produite.
+Figure 1. Démarche de
+conception
+CII
+Recherche
+de concept
+Conception
+détaillée
+Analyse
+et
+Structuration
+Formulation
+par
+contraintes
+Résolution
+Par
+CSP
+« Embodiment Design Phase »
+4 3ème Colloque International CPI'2003, 22-24 octobre 2003, ENSAM, Maroc.
+Figure 2. Organigramme technique, milieu extérieur pertinent et variables
+associées.
+Les critères d'appréciation d'un système éolien retenus sont le coût du kWh
+produit, la quantité de l'énergie produite et le coût total actualisé du projet. Le
+système éolien est caractérisé par un ensemble de paramètres qui définissent son
+architecture (paramètres principaux). Le site est caractérisé par les paramètres de
+Weibull k et c, un paramètre de la loi de puissance a considéré constant et la vitesse
+maximale Vmax. Les paramètres k, c et a sont utilisés pour calculer l'énergie produite
+par an, tandis que Vmax intervient dans le dimensionnement de certain composant du
+système. Les paramètres principaux utilisés et leurs domaines de variation sont
+donnés dans le tableau 1.
+Paramètres principaux Domaines de variation
+p 2 ou 3
+DR (m) [20,80]
+Hhub (m) [30,95]
+N (tr/min) [15,65]
+Vdes (m/s) [6, 15]
+Pn (kW) [300,2000]
+Type de contrôle
+²stall² à vitesse constante (SVC), ou
+²pitch² à vitesse constante (PVC), ou
+²pitch² à vitesse variable (PVV).
+Tableau 1. Domaine de variation des paramètres principaux.
+Aide à la décision pour la définition d'un système éolien 5
+La plupart de ces paramètres sont classiquement utilisés pour l'étude des
+systèmes éoliens. La puissance générée par le système peut être calculée en utilisant
+différents paramètres. Dans notre étude, nous avons utilisé le paramètre Vdes. Ce
+paramètre est la vitesse du vent pour laquelle le facteur puissance du système est
+maximal, il a une grande influence sur la quantité d'énergie récupérée par le système :
+Plus cette vitesse est élevée, plus l'éolienne récupère de l'énergie dans les hautes
+vitesses de vent. La courbe du Cp en fonction de la vitesse du vent subit alors un
+décalage vers ces hautes vitesses (cf. figure 3).
+0 5 10 15 20 25
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+V (m.s-1)
+Cp
+Cp
+(Vdes=8m/s)
+Cp
+(Vdes=12m/s)
+Figure 3. Influence du paramètre Vdes sur le facteur de puissance du système.
+3. Formulation par contraintes
+3.1. Contraintes liées aux critères d'appréciation
+Les critères d'appréciation utilisés sont le coût du kWh produit, la quantité de
+l'énergie produite par an et le coût total actualisé du projet. Le coût de l'énergie
+produite est égal au rapport du coût total actualisé du projet Cta sur l'énergie
+électrique produite Eap.
+6 3ème Colloque International CPI'2003, 22-24 octobre 2003, ENSAM, Maroc.
+ap
+ta
+ep E
+C
+C = [1]
+Le coût total actualisé est donné par la relation :
+ta it am C = aC + C [2]
+Le facteur d'actualisation défini par :
+( ) n r
+r
+a - - +
+=
+1 1
+[3]
+Où r : taux d'actualisation (r = 8%)
+n : durée de vie économique du projet (n = 20 ans)
+Le coût annuel de maintenance est fixé à un pourcentage de 2,5% du coût
+d'investissement total Cit, Cit est défini par le coût de l'éolienne et des autres coûts
+du projet.
+3.2. Contraintes liées à l'énergie électrique produite.
+La quantité d'électricité annuelle produite dépend de nombreux facteurs :
+l'énergie disponible sur le site au niveau du mât, la vitesse et les caractéristiques
+géométriques du rotor, le rendement du train de puissance, et les vitesses de
+démarrage et d'arrêt de l'éolienne.
+Le vent dans le site est caractérisé par quatre paramètres :
+- les paramètres de Weibull k et c qui définissent la distribution
+du vent dans le site :
+k
+c
+k V
+e
+c
+V
+V
+f V k ÷÷
+ø
+ö
+ççè
+æ -
+÷ø
+ö
+çè×
+æ
+÷ø
+ö
+çè
+( ) = æ [4]
+Le paramètre d'échelle c caractérise la vitesse moyenne du vent, tandis que le
+paramètre de forme k caractérise la répartition du vent, il varie en fonction de la
+hauteur Z:
+( ) 0.03 0.02 0 k Z = k + Z + [5]
+Avec: k0 : paramètre de forme à la hauteur de mesure du vent Z0.
+- Le paramètre de la loi de puissance a , considéré constant, qui
+caractérise le gradient vertical de la vitesse :
+a
+÷ ÷ø
+ö
+ç çè
+æ
+=
+0 0 Z
+Z
+c
+c
+[6]
+Avec : c, c0 : paramètres d'échelle aux hauteurs Z et Z0
+Aide à la décision pour la définition d'un système éolien 7
+- La vitesse maximale Vmax, elle intervient dans le
+dimensionnement de certains composants du système.
+Les autres paramètres qui caractérisent le vent comme la turbulence et la direction ne
+sont pas pris en compte.
+La puissance récupérée par une éolienne est :
+3
+2
+1
+P C A V e = r × × × [7]
+Le facteur d'efficacité dépend de la vitesse du vent et de l'architecture du système
+[Kiranoudis et al.1997] :
+( )
+( ) ú
+û
+ù
+êë
+é - = × - 2
+2
+2 ln
+( ) exp ln ln
+s
+C V C V Vdes
+e em [8]
+Dans cette expression, le système est caractérisé par son facteur d'efficacité maximale
+Cem, sa vitesse de fonctionnement optimale Vdes, et le paramètre s qui caractérise la
+plage de fonctionnement du système.
+Le facteur Ce est calculé à partir des performances de l'unité de transformation de
+l'énergie:
+e p m g C = C ×h ×h [9]
+Le calcul de la valeur maximale de Cp est effectué par une relation analytique [Wilson
+et al, 1976] :
+( )
+ú ú ú ú
+û
+ù
+ê ê ê ê
+ë
+é
+×
++
+-
++ - +
+=
+z
+x
+P
+C
+C
+p
+p
+p
+p
+C
+max
+2
+max
+2
+max max
+0.67
+0.67
+max
+max
+1 2
+1.92
+1.48 0.04 0.0025
+0.593
+l
+l
+l l
+l
+[10]
+Avec:
+des
+R R
+V
+w R
+l = max [11]
+Le rendement du multiplicateur est donné par :
+( ) ( ) ( ) ú
+û
+ù
+êë
+é
+÷ ÷ø
+ö
+ç çè
+æ
+=1- 1- +3 / 4
+P V
+P
+V n
+m m h p [12]
+Avec :
+0.89 0.012 m n p = P [13]
+Le rendement de la génératrice est donné par :
+8 3ème Colloque International CPI'2003, 22-24 octobre 2003, ENSAM, Maroc.
+( ) ( ) ( ) ( )
+( ) ú
+ú
+û
+ù
+ê ê
+ë
+é
+÷ ÷ø
+ö
+ç çè
+æ
+÷ ÷
+ø
+ö
+ç ç
+è
+æ
++ ÷
+÷
+ø
+ö
+ç ç
+è
+æ
+= - -
+V P V
+P
+P
+P V V
+V
+m
+ng
+ng
+m
+g g 6 ( )
+1 1 5 1
+2
+h
+h
+h p [14]
+Avec:
+0.87 0.014 g n p = P [15]
+L'énergie électrique produite annuellement en kWh/an par l'éolienne possédant
+un rotor de surface A, entre les vitesses de vent de connexion au réseau Vi et de
+coupure Vf est donc la somme des énergies sur une année (8760 heures) réduites du
+facteur d'efficacité du système :
+E A f V C V V
+Vf
+Vi
+ap e ´ ´ D
+´
+= å ( ) ( )
+2
+8.760 r
+[16]
+3.3. Contraintes liées aux coûts
+3.3.1. Cas général
+Le coût de l'éolienne est calculé en estimant le poids des composants dont le
+dimensionnement dépend des efforts qui leur sont appliqués. C'est le cas pour le
+rotor, la transmission, la nacelle et la tour. Pour la génératrice et l'équipement
+électrique associé, le coût est davantage lié à la puissance nominale même si le poids
+est nécessaire pour, par exemple, connaître le poids total supporté par le mât
+[Harrison et al.]. Ce poids est converti en coût par des facteurs appropriés. Les autres
+coûts du projet (développement du site, transport, etc.) sont estimés d'après des
+données provenant de la société Nordex [Diveux et al.].
+3.3.2. Exemple : modèle de poids de la structure des pales
+Le dimensionnement est effectué en considérant les efforts de fatigue créés par
+les rafales du vent.
+3
+2
+max
+2
+2
+( ) 1 ÷
+ø
+ö ç
+è
+æ
+÷ ÷ø
+ö
+ç çè
+æ
+÷ ÷ø
+ö
+ç çè
+æ + = p D
+e
+P kg F F F V e
+SP
+SP
+r
+r
+SP Fol cc cr des s
+r l r [17]
+Les facteurs Fcc et Fcr sont évalués à partir des données expérimentales [Harrison et
+al.].
+3.4. Contraintes liées à la sécurité et à l'environnement
+D'autres contraintes relatives à la sécurité et aux facteurs environnementaux sont
+prises en compte. Ces considérations concernent deux inégalités qui limitent le
+Aide à la décision pour la définition d'un système éolien 9
+diamètre du rotor par rapport à la hauteur du mât et limitent la vitesse du rotor. Pour
+prendre en compte les problèmes de sécurité, la distance entre le bout de pale et le
+sol doit être supérieure ou égale à 15m :
+hub
+R H
+D
++15 £
+2
+[18]
+Pour limiter le bruit aérodynamique émit par le rotor, la vitesse linéaire en bout de pale
+ne doit pas dépasser 80 m/s:
+80
+120
+2
+= R £
+tip
+ND
+V
+p
+[19]
+4. Intérêt de la résolution par satisfaction de contraintes
+Le système éolien est défini par un ensemble de paramètres. Le domaine de
+variation de ces paramètre est discrets (nombre de pales, type de contrôle) ou
+continu (diamètre du rotor, hauteur du mât, vitesse du fonctionnement optimale,
+puissance nominale, vitesse de rotation du rotor). Les domaines de variation
+possibles sont limités par des contraintes de nature physique ou technologique
+(contraintes liées à de l'énergie électrique produite, contrainte liées aux coûts) et des
+contraintes de sécurité et environnementales.
+Le problème de conception ainsi défini est un problème combinatoire. Plusieurs
+méthodes de résolution existent en intelligence artificielle pour résoudre ce type de
+problèmes.
+Les travaux précédemment développés par le Lept-Ensam [Diveux et al.] avaient
+pour but de montrer la faisabilité d'un outil technico-économique d'aide au choix
+optimal d'une éolienne sur un site donné. L'outil créé s'appuie sur un code de
+simulation des performances et un code d'optimisation. Le code d'optimisation utilise
+des algorithmes évolutionnistes de type algorithmes génétiques (AG) pour
+déterminer une éolienne adaptée à un site donné. L'optimisation consiste à minimiser
+une fonction objectif (coût du kWh produit).
+Cette méthode de résolution orientée optimisation répond au critère d'émergence
+des solutions en conception. Néanmoins, étant une méthode stochastique et, donc
+non complète, elle ne fourni pas l'ensemble complet des solutions du problème et ne
+garanti pas l'optimalité de la solution. En outre elle nécessite un effort de
+modélisation pour l'adapter au problème étudié.
+Le travail que nous présentons dans cette étude a pour but de mettre au point un
+outil facilitant l'interaction entre les modèles et les décideurs, en intégrant une
+méthode de résolution complète utile dans le contexte d'aide à la décision : la
+résolution par satisfaction de contraintes. L'objectif de cette méthode n'est pas de
+générer une solution vis -à-vis d'une fonction objectif, à l'image des algorithmes
+génétiques, mais de garantir un ensemble complet de solutions. Elle offre ainsi une
+10 3ème Colloque International CPI'2003, 22-24 octobre 2003, ENSAM, Maroc.
+flexibilité aux décideurs qui, à partir de leurs connaissances (critères et contraintes
+spécifiques ou non exprimables) choisissent une solution valable du problème. Elle
+permet également de dissocier complètement la résolution du problème de
+conception du modèle qu'il utilise, d'intégrer les contraintes du cahier des charges
+de l'éolienne directement dans le modèle, de faciliter la capitalisation des
+connaissances pendant la conception et d'accélérer la phase de préconception de
+l'éolienne. L'utilisation de cette méthode exige, ce pendant, des modèles
+parcimonieux afin de limiter le temps de calcul.
+5. Résultats et discussion
+5.1. Influence des spécificités du site
+Trois types de site ont été étudiés. Leurs caractéristiques sont données dans le
+tableau 2. Les trois critères d'appréciation et les paramètres principaux ont été
+calculés pour une éolienne de référence (prototype du fabriquant) dans le site1 (site
+du nord de l'Europe) et ont été comparés avec ceux de l'éolienne optimisée (vis -à-vis
+du coût de l'énergie) pour chaque site. Les résultats obtenus sont représentés dans
+le tableau 3.
+Tableau 2. Caractéristiques des sites étudiés
+On constate que le coût de l'énergie est globalement réduit pour toutes les
+éoliennes optimisées et que une éolienne optimisée pour un site ne l'est pas
+forcement pour un autre. Les possibilités d'optimisation diffèrent d'un site à l'autre ;
+le faible écart de coût de l'énergie entre l'éolienne de référence et l'éolienne optimisée
+sur le site 1 montre que les éoliennes actuelles sont déjà bien adaptées à ce type de
+site. Par contre, l'écart est plus important sur le site 3 et indique que les éoliennes
+actuelles conviennent moins bien et qu'une redéfinition en adéquation avec le site
+est nécessaire.
+Site 1 2 3
+Z0 30 30 30
+k0 2 2 1.4
+c0 8 8 10
+a 0.12 0.2 0.12
+Aide à la décision pour la définition d'un système éolien 11
+Tableau 3. Comparaison des performances des éoliennes optimisées pour chaque
+site avec ceux de l'éolienne de référence(ER) implantée dans le site 1.
+5.1.1. Influence des coefficients c et k
+Le site 3 est un site méditerranéen (caractérisé comme étant un site où k est faible
+et c est fort c'est-à-dire un site à fort potentiel éolien). Sur ce site la quantité
+d'énergie produite est plus grande et les coûts (coût de l'énergie et le coût total
+actualisé) sont réduits considérablement. A fin de bien caractérisé les systèmes
+éoliens adaptés à ce site, nous avons représenté, sur le tableau 4, la comparaison des
+quatre meilleures solutions (vis -à-vis du coût de l'énergie) obtenus pour ce site avec
+l'éolienne de référence (ER).
+Toute les solutions obtenues sont des systèmes bipales avec une régulation
+« pitch » à vitesse variable dont les paramètres liés à la taille physique (DR et Hhub)
+ont des valeurs relativement faibles et dont les paramètres liés à la puissance
+installée (N, Vdes et Pn) sont élevés. Cette particularité est propre aux sites
+méditerranéens; le fort potentiel éolien de ces sites permet de diminuer la hauteur du
+mât et le diamètre du rotor. La comparaison entre les solutions 1 et 2, montre qu'un
+accroissement de la vitesse de rotation et une réduction du diamètre, semble orienter
+les solutions vers une réduction de la taille du multiplicateur dont le coût est
+relativement important, induisant, ainsi, un allégement de la nacelle (voir tableau 5).
+Critères
+d'appréciation
+Paramètres principaux
+Eolienne
+s Cep
+(%)
+Cta
+(%)
+Eap
+(%)
+Pn
+kW
+Hhub
+m
+D
+m
+N
+tr/min
+Vdes
+m/s
+p Type de
+contrôle
+ER
+Site 1 100 100 100 600 50 43 27 8 3 SVC
+optimisé
+e
+Site 1
+85 132 151 140
+0
+40 50 30 9.4 2 PVV
+optimisé
+e
+Site 2
+79 142 178 150
+0
+50 50 30 9.5 2 PVV
+optimisé
+e
+Site 3
+53 88 165 130
+0
+35 40 35 10.4 2 PVV
+12 3ème Colloque International CPI'2003, 22-24 octobre 2003, ENSAM, Maroc.
+Tableau 4. Comparaison des performances des quatre meilleures solutions avec
+l'éolienne de référence (ER) dans le site 3.
+Tableau 5. Comparaison de coûts des composants du système (exprimés en% du
+coût total actualisé du projet) avec ceux de l'éolienne de référence dans le site 3.
+5.1.2. Influence du coefficient a
+Le coût de l'énergie dans le site 2 est moins élevé par rapport à celui au site1
+(21% contre 15%) ; ceci vient du fait que le vent moyen est plus élevé pour a plus
+grand. Nous observons également que la hauteur du mât et la puissance doivent être
+supérieures quand a augmente (tant que le coût diminue, l'énergie gagnée a plus
+d'importance que le surcoût lié à un mât plus haut et à une génératrice plus
+puissante). Ces résultats sont en bon accord avec ceux des études précédentes
+[Harrison et al. 1989].
+Critères
+d'appréciation
+Paramètres principaux
+solutions
+Cep
+(%)
+Cta
+(%)
+Eap
+(%)
+Pn
+(kW)
+Hhu
+b
+(m)
+DR
+(m
+)
+N
+(tr/min)
+Vdes
+(m/s)
+p Type de
+contrôle
+ER
+Site3
+100 100 100 600 50 43 27 8 3 SVC
+1 62.6 84 135 130
+0
+35 40 35 10.4 2 PVV
+2 62.7 47.
+8
+76.
+5
+800 30 30 50 11 2 PVV
+3 63 82.
+1
+130 120
+0
+35 40 35 10.2 2 PVV
+4 63.7 80 125 110
+0
+35 40 35 9.9 2 PVV
+Coûts des composants du système en % du coût total actualisé du
+solution projet
+s mât multiplicateu
+r
+nacelle rotor génératrice
+ER 25.8 6.6 3.9 17.1 4.2
+1 14.8 8.2 4.1 12.4 11
+2 13.9 5.8 3.3 10.1 11.9
+3 15.1 7.7 4.2 12.5 10.4
+4 15.6 7.3 4.22 12.7 9.8
+Aide à la décision pour la définition d'un système éolien 13
+5.2 Analyse de l'influence du choix technologique :
+Une étude de sensibilité est effectuée pour voir l'influence des choix
+technologiques sur les performances de l'éolienne optimisée pour le site 3. Le tableau
+6 montre les performances des solutions optimisées tripale, stall à vitesse constante,
+et pitch à vitesse constante avec l'éolienne optimisée (solution 1 du tableau 4).
+On remarque que ces solutions possèdent pratiquement tous les paramètres
+identiques à ceux de la solution 2 (tableau 4) ce qui peut indiquer que le choix
+technologique n'est pas primordial. En effet l'éolienne tripale produit plus d'énergie
+mais ce gain de production ne rattrape pas son coût supérieur et le coût du kWh
+produit est légèrement supérieur à celui de la bipale. Pour cette raison, la bipale
+domine dans tous les résultats, sur le site choisi. L'optimisation de l'éolienne avec
+une régulation « stall » donne un coût légèrement plus faible que celle avec une
+régulation « pitch » à vitesse constante pour des paramètres principaux identiques ;
+ceci est du au surcoût entraîné par le mécanis me régulation qui est plus cher que le
+frein aérodynamique utilisé dans le cas « stall ».
+Tableau 6. Influence du choix technologique.
+6. Conclusions et perspectives
+Nous avons présenté un outil d'aide à la décision pour la définition d'un système
+éolien adaptée à un site donné. L'approche globale est basée sur la démarche de
+Conception Inversée Intégrée (CII), elle prend en compte les coûts du projet et les
+caractéristiques du site. Le système éolien est défini par un ensemble de paramètres,
+Critères
+d'appréciation
+Paramètres principaux
+Eolienne
+s Cep
+(%)
+Cta
+(%)
+Eap
+(%)
+Pn
+(kW)
+Hhu
+b
+(m)
+D
+(m
+)
+N
+(tr/min
+)
+Vdes
+(m/s)
+p Type de
+contrôle
+optimisé
+e
+SVC
+103 58.
+4
+57 800 30 30 50 11 2 SVC
+optimisé
+e
+PVC
+104 58.
+8
+57 800 30 30 50 11 2 PVC
+optimisé
+e
+p = 3
+106 60.
+4
+58 800 30 30 50 10.6 3 PVV
+14 3ème Colloque International CPI'2003, 22-24 octobre 2003, ENSAM, Maroc.
+les critères d'appréciation des solutions retenus sont le coût du kWh produit, la
+quantité de l'énergie produite et le coût total actualisé. La recherche de solutions est
+réalisée en utilisant la technique de résolution par satisfaction de contraintes (CSP).
+Nous avons montré l'intérêt de l'utilisation de cette méthode de résolution en la
+comparant aux algorithmes génétiques. L'importance de l'intégration des spécificités
+du site d'implantation dans le processus de définition d'un système éolien est
+montrée au travers de différentes applications. Les gains obtenus sur le coût du kWh
+sont importants pour les sites méditerranéens et la plupart des paramètres principaux
+influencent fortement ce coût. Nous avons également montré les possibilités de notre
+outil en adaptant les choix technologiques au contexte du site.
+Ces applications ont été réalisées dans l'état et les limites actuelles de l'outil,
+l'intérêt principal étant de montrer l'approche originale utilisée pour la définition des
+systèmes éoliens. Les modèles utilisés sont des modèles de description globale et les
+résultats ne peuvent que donner des tendances. Il serait ainsi intéressant d'améliorer
+l'état décisionnel des modèles, c'est-à-dire leurs capacités à produire une aide à la
+décision. Pour ce faire, nous proposons d'intégrer :
+-d'autres particularités du site (turbulence, accessibilité  ...),
+-de nouvelles technologies (« stall actif »  ...)
+-les phénomènes vibratoires,
+-une modélisation plus fine de la connexion au réseau.
+Notre outil doit s'étendre aux parcs éoliens et aux sites « offshore », il s'agit alors
+d'intégrer l'effet de sillage et la topographie du site afin trouver une répartition, une
+architecture, et un nombre optimal des machines à implanter.
+7. Bibliographie
+Diveux T., Sebastian P., Bernard D., Puiggali J.R., Grandidier J.Y, « Horizontal Axis Wind
+Turbine Systems: Optimization Using Genetic Algorithms », Wind Energy, 4, 2001, p.
+151-171.
+Fuglsang P., Bak C., Schepers JG., Cockerill TT., Claiden P., Olesen A., van Rossen R.,
+« Site-specific Design Optimisation of Wind Turbines », Wind Energy , 5, 2002, p. 261-
+279.
+Ficher X., Nadeau J.P, Sebastian P., « Conception inverse intégrée : prédimentionnement de
+produits par satisfaction de contraintes, Mécanique et industrie », vol. 3, n° 6, 2002,
+p.593-605.
+Naudts B., Schoofs L., « GA performance distributions and randomly generated binary
+constraint satisfaction problems », Theoretical Computer Science, 287, 2002, 167-185.
+Aide à la décision pour la définition d'un système éolien 15
+Harrison R., Jenkins G., « Cost modelling of horizontal axis wind turbines » (phase 2), ETSU
+W/34/00170/REP, University of Sunderland, 1994.
+Kiranoudis CT., Voros NG., Maroulis Zb., « Short-cut design of wind farms » Energy policy,
+29, 2001, p. 567-578.
+Diveux T., « Implantation d'un système éolien, optimisation par algorithmes génétiques »,
+thèse de l'ENSAM, 2000.
+Wilson R.E, Lissaman P.B.S., Walker S.N., « Aerodynamic performance of wind turbines »,
+ERDA/NSF/04014-76/1, Washington, DC, 1976.
+Harrison R., Jenkins G., Taylor R.J., « Cost modelling of horizontal axis wind turbines -
+results and conclusions », Wind Engineering, vol. 13, n° 6, 1989, p. 315-323.
+8. Nomenclature
+A
+Cam
+Ce
+Cem
+Cep
+Cit
+CP
+Cpm
+Cta
+CX
+CZ
+DR
+Eap
+Fcc
+Fcr
+FFol
+Hhub
+N
+Pn
+Png
+: surface balayée par le rotor (m2),
+: coût annuel de maintenance
+(Euros)
+: facteur d'efficacité du système
+: facteur d'efficacité maximal
+du système
+: coût de l'électricité produite
+(Euros/kWh)
+: coût d'investissement total
+(Euros)
+: coefficient de puissance du
+rotor
+: coefficient de puissance
+maximum
+: coût total actualisé du projet
+(Euros)
+: coefficient de traînée du profil
+de pale
+: coefficient de portance du
+profil de pale
+: diamètre du rotor (m)
+: énergie électrique annuelle
+produite par l'éolienne (kWh/an)
+: facteur lié aux charges
+cycliques
+: facteur lié au contrôle du
+rotor
+: facteur universel de Follings
+: hauteur au moyeu (m)
+Vf
+Vi
+Vma
+Vtip
+a
+c
+er
+f
+k
+n
+p
+r
+lmax
+r
+hm
+hg
+pg
+: vitesse de déconnexion du
+réseau (m/s)
+: vitesse de connexion au
+réseau (m/s)
+: vitesse maximale du vent (m/s)
+: vitesse en bout de pale (m/s)
+: facteur d'actualisation
+: paramètre d'échelle de la
+distribution de Weibull (m/s)
+: rapport entre l'épaisseur de la
+section d'un profil et sa corde
+: densité de probabilité de la
+distribution de Weibull
+: paramètre de forme de la
+distribution de Weibull
+: durée de vie économique du
+projet
+: nombre de pales,
+: taux d'actualisation
+: vitesse spécifique du rotor à
+coefficient de puissance
+maximum
+: masse volumique de l'air (kg/m3)
+: rendement du multiplicateur
+: rendement de la génératrice
+: facteur d'efficacité de la
+génératrice
+: facteur d'efficacité du
+16 3ème Colloque International CPI'2003, 22-24 octobre 2003, ENSAM, Maroc.
+Um
+V
+Vdes
+: vitesse de rotation du rotor
+: puissance du système (kW)
+: puissance nominale de la
+génératrice (kW)
+: facteur de multiplication
+: Vitesse du vent (m/s)
+: vitesse optimale de
+fonctionnement (m/s)
+pm
+rSP
+sSP
+multiplicateur
+: masse volumique de la
+structure des pales (kg.m-3)
+: contrainte admissible de la
+structure des pales (Pa)

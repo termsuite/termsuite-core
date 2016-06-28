@@ -1,0 +1,108 @@
+4º CONGRESO ESPAÑOL DE MANTENIMIENTO Barcelona 28 al 30 de noviembre de 2.000 “EL MANTENIMIENTO PREDICTIVO EN AEROGENERADORES. CASO PRÁCTICO: ESTUDIO DE AVERÍAS”
+
+Autor: D. PUBLIO BELTRÁN PALOMO. Dña. ANGELA LÓPEZ DOMINGO. TSI – TÉCNICAS Y SERVICIOS DE INGENIERÍA.
+
+1.- HISTORIA DEL APROVECHAMIENTO EÓLICO.La fuente de energía eólica es el viento, o lo que es lo mismo, la energía mecánica que, en forma de energía cinética transporta el aire en movimiento. El viento es originado por el desigual calentamiento de la superficie de nuestro planeta, originando movimientos conectivos en la masa atmosférica. La tierra recibe una gran cantidad de energía procedente del Sol. Esta energía, en lugares favorables, puede ser del orden de 2.000 Kwh/m2 anuales. El dos por cien de ella se transforma en energía eólica con un valor capaz de dar una potencia de 10E+11 Gigavatios. Es evidente que en la antigüedad no se conocían estos datos, pero intuitivamente eran conocedores del gran potencial de esta energía. Así la historia nos muestra que ya existían artilugios y molinos de viento en la antigua Persia, Irak, Egipto y China. La primera referencia histórica de que se dispone sobre el aprovechamiento del viento son unos molinos de eje vertical que figuran en obras geográficas del siglo V a. de C. Los citan en el Sijistán, situado entre lo que hoy en día es Irán y Afganistán, donde sopla un viento muy constante llamado de los 120 días. Otras referencias históricas destacan que, hacia el siglo II a. de C. Herón de Alejandría construyó a un molino de viento para proporcionar aire a su órgano y, en el 1.700 a. de C. una máquina eólica que se utilizaba para bombear agua en Alejandría . Hacia el siglo VII aparecieron en Europa, procedentes del este, grandes molinos de eje horizontal con cuatro palas. Su fabricación en gran número, en particular por los holandeses, les hizo alcanzar una gran firmeza, pese a que, debido a las dimensiones de sus palas distaban mucho de alcanzar el máximo de potencia. Necesitaban una regulación de la orientación de tela. Siempre sucede esto en los molinos de eje horizontal que han de hacer siempre frente al viento. Estos molinos eran muy adecuados para vientos del orden de 5 m/seg (20 Km/h). Es a partir de los siglos XII-XIII cuando empieza a generalizarse el uso de los molinos de viento para la elevación del agua y la molienda del grano, los más antiguos aparecieron en Turquía, en Irán y en Afganistán A principios del siglo XII Europa se llenó a su vez de molinos, sobre todo en Bélgica y en los Países Bajos. Los molinos de Holanda tienen cuatro (4) aspas de lona, mientras que los de Baleares y Portugal tienen seis (6), y los de Grecia (12). Los molinos con gran número de palas determinan velocidades de rotación relativamente bajas y un funcionamiento útil a partir de velocidades del viento del orden de 2 m/s. Aunque la evolución en la historia de los molinos de viento transcurre de forma contínua, a finales de la Edad Media las innovaciones y aplicaciones de las máquinas eólicas se produce con mayor rapidez. Entre la segunda mitad de los siglos XVIII y la segunda mitad del XIX, los molinos de viento europeos alcanzan su más alto nivel de perfeccionamiento, dentro de las limitaciones de la tecnología artesanal.
+
+2
+
+El desarrollo de los molinos de viento se interrumpe con la revolución industrial y la utilización masiva del vapor, la electricidad y los combustibles fósiles como fuentes de energía motriz. Es sin embargo, en la segunda mitad del siglo XIX cuando tiene lugar uno de los más importantes avances en la tecnología del aprovechamiento del viento, con la aparición del popular “Molino multipala tipo americano”, utilizado para bombeo de agua prácticamente en todo el mundo, y cuyas características habrían de sentar las bases para el diseño de los molinos generadores eólicos. Fue entre las guerras mundiales cuando aparecieron, como consecuencia de los progresos técnicos de las hélices de aviación, y con ellas los proyectos de grandes aerogeneradores de dos (2) ó tres (3) palas. Los aerogeneradores de eje vertical derivan todos ellos del inventado en 1925 por el Ingeniero Francés Darrieus, patentado en los Estados Unidos y luego caído en un olvido casi en total. Su estudio volvió a iniciarse en Canadá en 1973 y en Estados Unidos a partir de 1975. El bajo precio del petróleo determinó entonces la suspensión total de los grandes proyectos en todo el mundo. Pero en los años 70, coincidiendo con la primera crisis del petróleo, se inicia una nueva etapa en el aprovechamiento de la energía del viento. Las aplicaciones de las modernas tecnologías, y en especial de las desarrolladas para aviación, ha dado como resultado la aparición de una nueva generación de máquinas eólicas muy perfeccionadas, y que permiten su explotación, bajo criterios de rentabilidad económica, en zonas de potencial eólico elevado. A principios de los años 70, los norteamericanos, enfrentados al aumento de los problemas de abastecimiento de energía iniciaron un amplio programa para explotar la energía eólica. En aquel momento se estimaba, en efecto, que esa energía renovable podría, aparte de sus aplicaciones tradicionales, proporcionar Kw/h a las redes eléctricas a un precio igual o inferior al de las centrales térmicas. Ello sería pronto una realidad con la puesta en servicio, de grandes aerogeneradores que producían potencias eléctricas comprendidas entre 2 y 5 MW. Los primeros grandes aerogeneradores se encuentran en los Estados Unidos, donde en 1941 había ya una eólica cuya hélice pesaba siete (7) toneladas y tenía un diámetro de 53 metros. Desde 1973, y bajo la responsabilidad de la NASA los Estados Unidos han reanudado la construcción de eólicas gigantes. Las dos más grandes miden 61 y 91 metros de diámetro y funcionan desde 1978 en Boone (Ohio) y en Barstow (California). Producen 2.000 a 2500 Kw de electricidad. A lo largo del siglo XX, las aplicaciones basadas en el aprovechamiento del viento fueron declinando, a medida que se hacía más popular el uso del petróleo. Sin embargo, la crisis energética ha iniciado de nuevo un período en el campo del aprovechamiento eólico, habiéndose elaborado innumerables programas de estudio que han centrado su interés en dos grandes aspectos: • • Elaboración de mapas eólicos y localización de emplazamientos. Cálculo, diseño y construcción de plantas de gran potencia.
+
+Paralelamente se ha pretendido crear incentivos que motiven la iniciativa privada a fabricar y comercializar pequeñas máquinas de funcionamiento autónomo, que permitan cubrir las necesidades de explotaciones agrícolas o industriales situadas en zonas apartadas. [1]
+3
+
+2.- LA ENERGÍA EÓLICA EN ESPAÑA.En 1979 el Ministerio de Industria y Energía, puso en marcha un programa de investigación y desarrollo para el aprovechamiento de la energía eólica y su conversión en electricidad. El primer paso fue el diseño y fabricación de una máquina experimental, de 100 Kw con una velocidad de viento de 12 m/seg. Su objetivo era facilitar el proyecto de grandes aerogeneradores con potencias del orden de MW. La máquina, estaba formada por una aeroturbina de eje horizontal con tres palas de fibra de vidrio y poliéster de veinte (20) metros de diámetro. Para su emplazamiento se hizo un estudio previo de las curvas de potencial eólico en España, escogiéndose la región de Tarifa por ser la que presenta un mayor número de horas de viento al año con un régimen de gran uniformidad y una intensidad (densidad de potencia) de más de 500 w/m2 de media anual. El incremento de la potencia de origen eólico en la red eléctrica Española está aumentando de manera notable. En la actualidad, y como puede apreciarse por la Tabla 1 adjunta, España ocupa el tercer puesto mundial en energía eólica, con un potencial estimado para los próximos años de unos 8/10 Gw.
+PAIS ALEMANIA ESTADOS UNIDOS ESPAÑA DINAMARCA INDIA PAISES BAJOS REINO UNIDO ITALIA CHINA SUECIA GRECIA CANADA MW 4.973 ** 2.533 ** 1.812 ** 1.761 ** 1.095 434 380 277 * 246 220 * 158 * 127
+
+TABLA 1
+(*) En incremento.
+
+(**) Incremento muy rápido. En el primer trimestre del 2.000 se han puesto en marcha diez (10) parques eólicos, constando de 363 turbinas y totalizando una potencia instalada de 235,4 MW. A finales del trimestre estaban en construcción activa 30 parques eólicos que totalizaban 418,7 MW. De potencia. España ha superado ya en potencia a Dinamarca, por lo que ocupa el tercer puesto mundial y el segundo en Europa en potencia eólica instalada. [2]
+4
+
+3.- ELEMENTOS Y SISTEMAS DE UN AEROGENERADOR.Los aerogeneradores son, por tanto, máquinas eólicas que nos permiten convertir la energía cinética del viento en energía eléctrica a través del accionamiento de un generador eléctrico. De forma general, los diseños actuales de aerogeneradores, constan de los siguientes elementos y sistemas: • Cimientos, soportes o torre. • Barquilla o chasis. • Buje y palas (Sistema de captación). • Sistemas: orientación, regulación, transmisión y generación. Si bien el estudio de cada uno de estos elementos o componentes es importante para conocer las bases para el diseño y construcción de este tipo de máquinas, por los objetivos del presente artículo y limitaciones en el texto, nos centraremos única y exclusivamente en el equipo rotativo, localizado en la barquilla, Figura 1, particularmente en las cajas multiplicadoras, al haberse revelado como un elemento crítico en el funcionamiento, operación y rentabilidad de estos Parques Eólicos
+
+FIGURA 1 La barquilla o chasis, es el soporte donde se encuentra el generador, sistema de frenado, sistema de orientación, equipos auxiliares (hidráulico), caja de cambio, ...etc. Protege a estos equipos del ambiente y sirve, a su vez, de aislamiento acústico. La barquilla suele tener 6,20 metros de largo. Por 2,80 de alto y 2,20 de ancho, y pesa entre 18 y 23,5 toneladas. La estructura interna de la barquilla está articulada para captar la energía del viento y transformarla en energía eólica. Pero debe tenerse en cuenta que el aerogenerador no es una estructura aislada en el paisaje, sino que está conectada a la red eléctrica general, y la red tiene sus pautas. Una de ellas es que la energía eléctrica producida en el aerogenerador debe tener una frecuencia de paso de 50 Hz. Ello obliga a que el generador eléctrico que está situado en la parte posterior de la barquilla y que es el encargado de producir electricidad deba girar a una velocidad determinada armonizada con la velocidad de giro del rotor. [3]
+5
+
+4.- MANTENIMIENTO PREDICTIVO DE AVERÍAS (MPA) COMPONENTES ROTATIVOS DE AEROGENERADORES.-
+
+EN
+
+El MPA o Mantenimiento según Condición, es una metodología sobradamente conocida e implantada en todo el espectro industrial, por sus buenos resultados, que mediante la medida, análisis y control de niveles de vibración y otros parámetros, permite: • Reducir drásticamente los costes de mantenimiento. • Reducir el número de averías imprevistas. • Aumentar la disponibilidad de los equipos y/o planta. La “correcta aplicación” de esta metodología del Mantenimiento Predictivo a los aerogeneradores está permitiendo, mediante la consecución de los tres objetivos básicos reseñados anteriormente, garantizar una Explotación óptima de los Parques Eólicos. Adicionalmente y como se verá en el Caso Práctico, el potencial de esta técnica ha permitido, durante la Recepción y Período de Garantía de los parques, identificar precozmente averías debidas a defectos de diseño en componentes esenciales de los aerogeneradores. Ello a supuesto, desde el punto de vista del Usuario: • Argumentación técnica, frente al Suministrador, para introducir mejoras y/o modificaciones en los diseños originales. • Extensión de Períodos de Garantía. La experiencia del autor, ha demostrado, en este tipo de unidades, que si bien el análisis y control de aceites, que tiene entidad suficiente, puede ser una técnica complementaria de confirmación de diagnóstico, el enorme potencial que actualmente ofrece el control de vibraciones, mediante la obtención de niveles, espectros en frecuencia y análisis de frecuencias ultrasónicas: HDF, SPIKE Energy, ...etc, es suficiente para la precoz identificación de defectos en los componentes de los aerogeneradores. [4]
+
+4.1.- JUSTIFICACIÓN TÉCNICO-ECONÓMICA.De forma general, las Especificaciones Técnicas de los Parques Eólicos requieren que el diseño de los componentes garanticen 120.000 horas de funcionamiento y una vida útil del parque de, aproximadamente, 20 años. Así mismo, los Períodos de Garantía, se establecen en dos (2) años. Frente a este marco contractual, cabe plantearse las siguientes preguntas: ¿Qué garantías técnicas puede adoptar el Inversor-Usuario del Parque para asegurarse la rentabilidad de su inversión al disponer de un diseño adecuado?. ¿Qué acciones se deben emprender para optimizar la Explotación del Parque?.
+6
+
+•
+
+•
+
+El MPA, responde adecuadamente ambas preguntas. En efecto, y empezando por la segunda, la correcta aplicación del MPA durante la Explotación del Parque mediante la reducción drástica del número de averías imprevistas y la identificación y seguimiento de defectos hasta su reparación en tiempos muertos –ausencia de viento-, permiten un aumento de disponibilidad y una reducción significativa de los Costes de Mantenimiento. Según datos publicados en la Revista MANTENIMIENTO, la aplicación de esta técnica a cajas reductoras de sistemas de tracción, ha supuesto, después de un año de aplicación, una reducción de costes de repuestos del 70%. Si a esto le añadimos que, dependiendo de la modalidad de implantación del MPA: Servicio Externo de Especialistas o Servicio Combinado, su coste puede oscilar entre 2/3 millones/año, queda sobradamente justificada la ventaja de esta aplicación. Con relación a la segunda pregunta, la experiencia está demostrando que las dos actuaciones técnicas que permite asegurar la idoneidad del diseño y en consecuencia el futuro de la inversión, son: • • Recepción de unidades aplicando las técnicas de MPA. Caracterización del Parque mediante medidas experimentales de cargas reales en componentes y estudios de ciclos de fatiga (RAINFLOW). [4]
+
+4.2.- REALIMENTACIÓN A LA MEJORA DE DISEÑO.La potencialidad del MPA, mediante la aplicación de sus técnicas en la fase de Recepción de los Aerogeneradores, está permitiendo la identificación temprana –antes del vencimiento de los Plazos de Garantía- de defectos de diseño que se traducen en mejoras ó modificaciones por parte del Suministrador. En algunos casos estos defectos ó mejoras, imputables al vertiginoso desarrollo de componentes y/o elementos para su adecuación a la alta demanda, imponen ligeros cambios como mejoras en la lubricación de componentes, aumento de capacidades de carga de rodamientos, etc... que no afectan al diseño global. En otros casos, lamentablemente, el defecto de diseño identificado supone cambios estructurales importantes que dan al traste con la inversión. Es por ello, a juicio del autor, recomendable ejecutar en la fase inicial, incluso en prototipo, las técnicas de MPA y Caracterización o determinación de Cargas reales, al objeto de garantizar los objetivos técnico-económicos de cada Parque. [4]
+
+5.-
+
+CASO PRÁCTICO: AVERÍAS EN CAJAS MULTIPLICADORAS.-
+
+El caso que se presenta corresponde a la prematura degradación – dentro del Período de Garantía-, que se viene apreciando en un elevado número de cajas multiplicadoras de un Parque Eólico.
+7
+
+La intervención realizada ha tenido por objeto, comprobar y diagnosticar, mediante inspecciones de daños y medidas de niveles de vibración y obtención de espectros en frecuencia, es decir, mediante técnicas de MPA, la causa raíz de la prematura degradación detectada y del fallo de los multiplicadores.
+
+5.1.- INSPECCIONES.Las inspecciones realizadas de los trenes helicoidales (Figuras 2 y 3), de las muestras de aceite y partículas de cárteres, han evidenciado de forma general los siguientes defectos:
+
+FIGURA 2 • • • •
+
+FIGURA 3
+
+Presencia de pitting en grado muy avanzado, incluso con acusadas pérdidas de material, en los trenes helicoidales de los engranajes. Alto contenido partículas metálicas en suspensión en el aceite. Abundante depósito de partículas en los cárteres de las cajas multiplicadoras. Deterioro de rodamientos.
+
+5.2.- MEDICIÓN DE VIBRACIONES.A la vista de los datos precedentes, se procedió a realizar medidas de vibraciones, mediante un colector portátil, en puntos representativos de cada unidad, Figura 4.
+
+1
+
+2
+
+3 7
+
+8
+
+9
+
+6 4 5
+
+FIGURA 4 En todos los puntos y direcciones de medida, se obtuvieron niveles globales –Tabla 2- y espectros en frecuencia.
+
+8
+
+PUNTO/DIREC
+
+NIVEL DE VIBRACIÓN GLOBAL Amplitud EVALUACIÓN mm/s rms ISO 2372 G III
+1,95 1,09 3,34 2,51 1,56 3,71 3,38 2,85 3,18 3,35 4,32 3,07 3,90 3,34 3,85 ACEPTABLE BUENA ACEPTABLE ACEPTABLE BUENA ACEPTABLE ACEPTABLE ACEPTABLE ACEPTABLE ACEPTABLE ACEPTABLE ACEPTABLE ACEPTABLE ACEPTABLE ACEPTABLE
+
+NIVELES DE VIBRACIÓN HFD Valor EVALUACIÓN Gs rms
+0,04 0,46 0,27 2,56 2,56 2,83 1,54 1,97 2,11 2,22 2,98 7,91 2,17 2,89 2,33 BUENA BUENA BUENA BUENA ALERTA ALERTA ALERTA BUENA ALERTA ALERTA ALERTA FALLO ALERTA ALERTA ALERTA
+
+1-H 1-V 1-A 2-H 2-V 2-A 3-H 3-V 3-A 4-H 4-V 4-A 5-H 5-V 5-A
+
+TABLA 2 Así mismo se obtuvieron análisis de modulación en alta frecuencia (HFD).
+
+5.3.- ANÁLISIS DE RESULTADOS.El análisis de las tablas precedentes de resultados experimentales, ha permitido comprobar, que con niveles de vibración ACEPTABLES (lo que revela un comportamiento mecánico-operativo correcto); existen, como lo ponen de relieve los indicadores de alta frecuencia, defectos de lubricación y/o agotamiento prematuro en la vida de los rodamientos.
+
+5.4.- DIAGNÓSTICO.Una vez “cercado” el problema, los análisis y posterior cálculos de cargas en engranajes y rodamientos, los ensayos complementarios: Caracterización y determinación de ciclos de fatiga con cargas reales Figura 5, han permitido diagnosticar que la causa raíz de este fallo se encuentra en los rodamientos de estas unidades.
+
+FIGURA 5 Una vez desgastados los rodamiento, se produce la degradación de los dientes de los trenes, con el subsiguiente fallo de la caja multiplicadora. [5]
+9
+
+6.- CONCLUSIONES.La experiencia descrita en los párrafos precedentes permite establecer las siguientes conclusiones: • El Mantenimiento, en su vertiente especializada de Mantenimiento Predictivo de Averías –MPA-, se ha revelado como una eficaz herramienta, no sólo para optimizar condiciones de Explotación de los Parques Eólicos, sino como medio de identificación precoz de fallos o defectos de diseño. Esta técnica de MPA, junto con la Caracterización Experimental, o determinación de ciclos de fatiga, permiten garantizar técnicamente al Inversor-Usuario, la viabilidad de la inversión. A juicio del Autor, y teniendo en cuenta que la vertiginosa carrera de aumentos de potencias unitarias de los aerogeneradores, hace que la totalidad de los parques actuales sean “extrapolaciones” –en diseño y geografías de modelos ya existentes-, se hace imprescindible que estas herramientas se apliquen desde las fases iniciales del proyecto y construcción de Parques.
+
+•
+
+•
+
+REFERENCIAS.[1] INTERNET. [2] INTERNET. [3] INTERNET. [4] CURSO DE MANTENIMIENTO PREDICTIVO DE AVERIAS. TSI – TÉCNICAS Y SERVICIOS DE INGENIERIA. D. Publio Beltrán Palomo. [5] INFORME INTERNO. TSI – TÉCNICAS Y SERVICIOS DE INGENIERIA. D. Publio Beltrán Palomo.
+
+10
+

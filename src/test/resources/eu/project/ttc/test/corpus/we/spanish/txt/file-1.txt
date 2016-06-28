@@ -1,0 +1,1117 @@
+I . DEDICATORIA .
+II . AGRADECIMIENTO .
+III . ANTECEDENTES .
+III . 1 . PLANTEAMIENTO DEL PROBLEMA .
+III . 2 . JUSTIFICACION .
+III . 3 . HIPOTESIS .
+CAPITULO I
+1 . 0 . GENERALIDADES
+1 . 1 . AEROGENERADORES : ENERGIA ACCESIBLE .
+1 . 1 . 1 . HISTORIA DE LOS AEROGENERADORES .
+1 . 1 . 2 . DISTINTAS CLASES DE AEROMOTOR .
+1 . 1 . 2 . 1 . AEROMOTOR DE EJE HORIZONTAL .
+1 . 1 . 2 . 2 . AEROMOTOR DE EJE VERTICAL .
+1 . 1 . 3 . RAZON DE LA ELECCION DE AEROMOTOR DE EJE
+HORIZONTAL BIPALA .
+1 . 1 . 4 . CONFIGURACION DE UNA ESTACION EOLICA .
+1 . 1 . 5 . CONSTITUCION DE UN AEROMOTOR .
+1 . 1 . 6 . TORRE DE SOPORTE DEL AEROGENERADOR .
+1 . 1 . 7 . DISPOSITIVO PARA EL ALMACENAMIENTO DE ENERGIA PRODUCIDA .
+1 . 1 . 8 . FUENTE ENERGETICA DE APOYO .
+1 . 1 . 9 . DISPOSITIVO PARA VIGILAR EL ESTADO DE LAS BATERIAS DE ACUMULADORES .
+CAPITULO II
+2 . 0 . METEOROLOGIA .
+2 . 1 . EL VIENTO
+2 . 1 . 1 . ORIGEN DEL VIENTO .
+2 . 1 . 2 . VELOCIDAD DEL VIENTO - VARIACIONES DE LA VELOCIDAD DEL VIENTO EN EL TIEMPO .
+2 . 1 . 2 . 1 . FENOMENOS INSTANTANEOS : RAFAGAS .
+2 . 1 . 2 . 2 . FENOMENOS DIARIOS .
+2 . 1 . 2 . 3 . FENOMENOS ESTACIONALES .
+2 . 1 . 2 . 4 . VARIACIONES DE VELOCIDAD DEL VIENTO CON LA ALTITUD .
+2 . 1 . 3 . VARIACIONES DE ORIENTACION DEL VIENTO EN EL TIEMPO
+2 . 1 . 3 . 1 . VARIACIONES INSTANTANEAS DE DIRECCION : TURBULENCIAS .
+2 . 1 . 3 . 2 . VARIACIONES ESTACIONALES .
+2 . 1 . 4 . IMPORTANCIA DE ESTOS FENOMENOS PARA UNA INSTALACION EOLICA .
+2 . 1 . 5 . MEDICION DE LAS VELOCIDAD DEL VIENTO .
+2 . 2 . LUGARES DE EMPLAZAMIENTO DE LOS AEROMOTORES .
+2 . 2 . 1 . DETERMINACION DEL EMPLAZAMIENTO .
+2 . 2 . 1 . 1 . POTENCIAL EOLICO .
+2 . 2 . 1 . 2 . CONSIDEREACIONES SOBRE EL LUGAR DE INSTALACION CUANDO NO SE DISPONE DE ESTADISTICAS APROPIADAS .
+2 . 2 . 1 . 3 . OBSTACULOS DE LOS ALREDEDORES .
+2 . 2 . 2 . DETERMINACION EN RELACION A ELEMENTOS FAVORABLES .
+2 . 2 . 3 . TORRE DE SOPORTE .
+CAPITULO III
+3 . 0 . MOTOR EOLICO . ( Proyectado )
+3 . 1 . EL AEROMOTOR : ESTUDIO TEORICO .
+3 . 1 . 1 . ENERGIA SUMINISTRADA POR EL VIENTO .
+3 . 1 . 2 . ACCION DEL VIENTO SOBRE LA SUPERFICIE PLANA .
+3 . 1 . 2 . 1 . DESCOMPOSICION DEL VECTOR RESULTANTE :
+ARRASTRE Y SUSTENTACION .
+3 . 1 . 3 . APLICACION AL CASO DE UN AEROMOTOR - ACCION SOBRE LAS PALAS .
+3 . 2 . EL AEROMOTOR : DESCRIPCION .
+3 . 2 . 1 . LAS PALAS DEL AEROMOTOR .
+3 . 2 . 1 . 1 . LONGITUD DE LAS PALAS .
+3 . 2 . 1 . 2 . EL PERFIL .
+3 . 2 . 1 . 3 . ANCHURA . ( Longitud de la cuerda del perfil )
+3 . 2 . 1 . 4 . NUMERO DE PALAS .
+3 . 2 . 2 . SISTEMAS DE PROTECCION .
+3 . 2 . 2 . 1 . SISTEMAS DE FRENADO .
+3 . 2 . 2 . 1 . 1 . SISTEMAS DE FRENADO MANUAL .
+3 . 2 . 2 . 1 . 2 . SISTEMA DE FRENADO AUTOMATICO .
+3 . 2 . 3 . SISTEMAS DE REGULACION .
+3 . 2 . 3 . 1 . UTILIZACION DE LA TORRE ABATIBLE COMO REGULADOR .
+3 . 2 . 4 . SISTEMAS DE ORIENTACION .
+CAPITULO IV
+4 . 0 COMPLEMENTOS PARA LA UTILIZACION DE ENERGIA EOLICA .
+4 . 1 . EL GENERADOR ELECTRICO Y EL MULTIPLICADOR .
+4 . 1 . 1 . EL GENERADOR ELECTRICO
+4 . 1 . 2 . GENERADOR DE CORRIENTE CONTINUA ( Dínamo )
+4 . 1 . 3 . GENERADOR SINCRONO DE CORRIENTE ALTERNA
+4 . 1 . 4 . VENTAJAS E INCONVENIENTES .
+4 . 1 . 5 . EL MULTIPLICADOR .
+4 . 1 . 6 . RECUPERACION DE LA ENERGIA EN EL SOPORTE FIJO .
+4 . 1 . 6 . 1 . MAQUINAS SIN MULTIPLICADOR .
+4 . 1 . 6 . 2 . MAQUINAS CON MULTIPLICADOR .
+4 . 1 . 7 . PROTECCION CONTRA LOS RAYOS .
+4 . 2 . SOPORTE PARA AEROGENERADORES .
+4 . 2 . 1 . SOPORTES ATIRANTADOS ABATIBLES . ( Proyectado )
+4 . 3 . DISPOSITIVOS DE ALMACENAMIENTO .
+4 . 3 . 1 . ACUMULADORES DE PLOMO . ( Proyectado )
+4 . 3 . 1 . 1 . DETERMINACION DE LA CAPACIDAD DE LA BATERIA DE ACUMULADORES .
+4 . 3 . 2 . CONTROL DEL ESTADO DE LA CARGA DE LA BATERIA DE ACUMULADORES . CIRCUITOS ELECTRICOS ASOCIADOS . ( Control manual ) .
+4 . 3 . 2 . 1 . EQUIPAMIENTO CON GENERADOR DE CORRIENTE CONTINUA .
+4 . 3 . 2 . 2 . EQUIPAMIENTO CON ALTERNADOR .
+4 . 3 . 2 . 3 . EMPLEO DE CONTADOR AMPERIOS - HORA .
+4 . 3 . 3 . VALORES DE LA TENSION FINAL DE CARGA Y DESCARGA .
+4 . 3 . 3 . 1 . VALOR DE LA TENSION FINAL DE CARGA .
+4 . 3 . 3 . 2 . VALOR DE LA TENSION DE DESCARGA POR ELEMENTO .
+4 . 4 . LAS FUENTES DE EMERGENCIA .
+4 . 4 . 1 . PANELES SOLARES .
+4 . 4 . 2 . MOTORES DE EXPLOCION .
+CAPITULO V
+5 . 0 . UTILIZACION DE LA ENERGIA ELECTRICA DE ORIGEN EOLICO . ( Proyectada )
+5 . 1 . UTILIZACION DE LA ENERGIA ELECTRICA .
+5 . 1 . 1 . UTILIZACION DE ENERGIA EOLICA PARA USO DOMESTICO .
+5 . 1 . 1 . 1 . EVALUACION DE CONSUMO DE ENERGIA EN UN DOMICILIO .
+5 . 1 . 2 . LOS CONVERTIDORES .
+CAPITULO VI
+6 . 0 . ANEXOS .
+6 . 1 . GASTOS DE INVERSION Y COSTOS DE FUNCIONAMIENTO .
+6 . 2 . DATOS METOROLOGICOS EN ORURO .
+6 . 3 . BIBLIOGRAFIA .
+ANTECEDENTES
+III . 1 . PLANTEAMIENTO DEL PROBLEMA . -
+Bolivia como país desde el punto de vista económico se encuentra en una posición muy baja , con respecto al desarrollo del continente en su totalidad .
+Al ser esta posición desfavorable , las consecuencias internas son grandes y variadas , e inciden directamente en la población y sus medios de susbsistencia . Uno de estos medios es irreparablemente la energía eléctrica ; en Bolivia el tendido electrico es reducido y no abastece la necesidad humana , por varias razones entre las cuales la más importante quizas sea la densidad del factor humano ( 6 , 48 hab . / km ? ) , la lejania entre urbes y la mala distribución del mismo .
+III . 2 . JUSTIFICACION . -
+La tesina esta dirigida hacia la busqueda de mejores recursos alternativos y económicos que abastescan las necesidades imperantes en el olvidado altiplano boliviano como ser la dotación de energía eléctrica .
+La energía de tipo eólica ha dado muy buenos resultados en países desarrollados ; este no es el caso de Bolivia debido a que el aprovechamiento de ese recurso tan disponible e inagotable como es el viento no ha sido difundido de una manera significativa ; pero , la construcción de un aereomotor casero es sencilla y barata con su consecuente aprovechamiento económico . Por lo tanto mediante este trabajo se busca el proponer una posibilidad de obtener electricidad casera , vale decir a mediana escala , para poblaciones rurales alejadas del cableado eléctrico e incluso para zonas urbanas que deseen un medio limpio y relativamente sencillo de abastecimiento .
+III . 3 . HIPOTESIS .
+" Es posible , aprovechar la energía eólica , en el altiplano , como un medio alternativo de abastecimiento interno de energía eléctrica a mediana escala dentro las fronteras de la población rural . "
+CAPITULO I
+1 . 0 . GENERALIDADES .
+1 . 1 . AEROGENERADORES : ENERGIA ACCESIBLE .
+Los aereogeneradores , tienen diversas aplicaciones específicas , ya sea eléctricas o de bombeo de agua , mediante el aprovechamiento y transformación de energía eólica en energía mecánica . Se entiende por energía eólica a los vientos que existen en el planeta producto de fenómenos que se estudiaran más adelante .
+Esta energía , es inagotable , no contamina ; y aunque la instalación de uno de estos aparatos es relativamente costosa y morosa , a la larga se sentiran los resultados positivos , especialmente en el campo económico .
+Un punto que vale hacer notar , es la autonomía frente a la fuente más cercana accesible , que en este caso es la Empresa Nacional de Energia ( ENDE ) . Esta última no siempre se presenta en los pueblos alejados , por el costo que supone instalar una red hacia aquellos .
+1 . 1 . 1 . HISTORIA DE LOS AEROGENERADORES .
+Es importante destacar e interesante además , algunas fechas dentro de la tecnología eólica y de la utilización de aeromotores .
+En el s . V a . C . se encuentran los primeros aeromotores en Asia : son máquinas de eje vertical iguales a las denominadas panemonas de algunas islas griegas . Más o menos por la misma época , en Egipto se utilizaban molinos de eje vertical para moler grano y bombear agua , también en la zona de Sijistán entre Irán y Afganistán .
+Todos estos molinos tenían el mismo principio : transformar la energía eólica en energía para el bombeo de agua y la molturación del grano entre otras .
+En el siglo VII d . C . se da origen a los primeros modelos rústicos de los clásicos molinos holandeses que hoy en día son mecánicamente sofisticados . O los aeromotores para el bombeo de agua que progresa con la invención de las multipalas en 1870 por los americanos .
+Fue en el año 1802 cuando Lord Kelvin trató de asociar un generador eléctrico a un aeromotor para la producción de energía eléctrica .
+Hacia el año 1920 la energía eólica obtiene cierto éxito , pues habían trescientos constructores de estos aparatos .
+El estudio en los campos de la aerodinámica permitió alcanzar enormes progresos en los aeromotores , esto hasta el año 1961 ; desgraciadamente en ese año el precio del petróleo bajó , poniendo al kilowatt " eólico " a precios inaccesibles . Todas las máquinas fueron desmontadas y vendidas al precio de chatarra .
+Desde el año 1973 ocurre el proceso inverso , impulsando programas de estudio y realización de aerogeneradores . La demanda en países industrializados es mínima . Pero no obstante la demanda en países tercermundistas aumentó de nivel , esto por el obvio bajo costo de producción e instalación de estos aparatos en comparación a las ganancias retribuidas .
+En Bolivia , existen aeromotores de bombeo particulares , pero hasta ahora , no se hizo ninguna prospección , para la instalación de los aereogeneradores eléctricos o estos trabajos nos son desconocidos .
+1 . 1 . 2 . DISTINTAS CLASES DE AEROMOTOR .
+Se definen en general , los aeromotores según la posición de su eje de rotación , con relación a la dirección del viento .
+Así se dividen en :
+? Aeromotores de eje horizontal .
+- Con el eje paralelo a la dirección del viento .
+- Con el eje perpendicular a la dirección del viento .
+? Aeromotores de eje vertical .
+? Aeromotores que utilizan el desplazamiento de un movil
+1 . 1 . 2 . 1 . Aeromotores de eje horizontal .
+* Eje paralelo a la dirección del viento .
+Son las máquinas más difundidas , y con rendimiento superior a las demás . Incluyen aquellas de 1 , 2 , 3 o 4 palas , además de las típicas multipalas para el bombeo de agua .
+Debemos distinguir aquellas de " cara al viento " y aquellas que tiene sus palas situadas de " espalda al viento " .
+Los aerogeneradores , generalmente van provistos de rotores bipala o tripala ( cara al viento ) , para potencias inferiores a 1 kW ( P < 1 kW ) . Y de espaldas al viento para potencias superiores a 1 kW ( P > 1 kW ) .
+* Eje horizontal perpendicular a la dirección del viento .
+Los aerogeneradores más significativos de eje perpendicular a la dirección del viento , son el de perfil oscilante y el sistema de captación con palas batientes .
+Estos sistemas se han estudiado ampliamente , también se construyeron prototipos ; pero presentan más inconvenientes que ventajas ; en especial necesitan sistemas de orientación igual a los de eje horizontal paralelo al viento . La recuperación de energía es en generalmente complicada y no presenta un buen rendimiento .
+1 . 1 . 2 . 2 . Aeromotores de eje vertical .
+Son presumiblemente , las primeras máquinas que se utilizaron para la captación de energía eólica , ya que son más sencillas que las de eje horizontal ; no nesecitan ningún sistema de orientación . Lo que constituye una ventaja constructiva . En funcionamiento las palas , los rodamientos y los ejes , no están sometidos a esfuerzos importantes por cambios de orientación . Son de fácil construcción .
+El rendimiento es mediocre ( el rotor Savonius un 20 % del límite de Betz ) . No se experimentó un gran desarrollo en estos aparatos .
+Existen 3 grandes familias de aeromotores de eje vertical .
+? Aeromotores Savonius .
+Esencialmente utilizan el arrastre diferencial creado por las palas que pueden ser de diversas formas . El par de arrastre
+es elevado , pero la velocidad máxima es claramente inferior a la de los rotores de eje horizontal .
+? Aeromotores Darrieus . ( patent / 1931 )
+Emplea la sustentación de las palas y están caracterizados por débil par de arranque y velocidad de rotación elevada que permite la recuperación de una gran potencia .
+Para mejorar el par de arranque se pueden acoplar otro tipo de rotores haciéndolo mixto ( Savonius - Darrieus ) .
+Este tipo de máquinas son susceptibles de competir con los aeromotores rápidos , bipalas y tripalas de eje horizontal ; son objeto de estudio y desarrollo .
+1 . 1 . 3 . RAZON DE LA ELECCION DEL AEROMOTOR DE EJE HORIZONTAL BIPALA .
+Los aeromotores de eje horizontal paralelo a la dirección del viento , son los más extendidos , por tener el mejor rendimiento en relación a la energía máxima recuperable , conocida como límite de Betz . En esta tesina , nos limitaremos de este tipo de aeromotores para la generación de electricidad .
+1 . 1 . 4 . CONFIGURACION DE UNA ESTACION EOLICA .
+Cualquier estación eólica destinada a la producción de energía eléctrica tiene según el siguiente organigrama esta configuración :
+Organigrama de una estación de suministro de energía por aerogenerador .
+1 . 1 . 5 . CONSTITUCION DE UN AEROMOTOR .
+Un aeromotor está constituido por las siguientes partes :
+? Un aeromotor de dos palas ( o tres , no es nuestro caso ) , provisto de un sistema de regulación , que confiera al rotor una velocidad de rotación estable a partir de cierta velocidad del viento , y un sistema de seguridad destinado a frenar la máquina en caso de tempestad , si el sistema de regulación es inoperante a altas velocidades .
+? Un generador eléctrico que puede estar :
+- directamente acoplado al aeromotor . En el caso más sencillo las palas van directamente montadas en el eje del generador .
+- acoplado a un multiplicador , colocado entre el aeromotor y el generador . Se verá que la velocidad de rotación depende del diámetro del rotor y disminuye cuando el diámetro aumenta . Entonces para tener un buen rendimiento , es necesario aumentar las revoluciones del aeromotor antes de acoplarlo al generador .
+? Mecanismo de giro , que permita a la máquina estar siempre orientada en la dirección del viento , cualquiera que sea esta . La energía producida en la parte móvil , se transmite por medio de un dispositivo colector asociado al mecanismo de rotación .
+? Cárter o armazón , que envuelva y proteja a todas las piezas del conjunto del los factores climáticos .
+? Una cola , en el caso de que la máquina funcione de cara al viento , para obtener una orientación según los movimientos de la masa de aire .
+En la siguiente figura se representa al aerogenerador de cara al viento con las partes descritas :
+Aerogenerador con aeromotor " cara al viento "
+1 . 1 . 6 . TORRE DE SOPORTE DEL AEROGENERADOR .
+Es importante su construcción por varias razones , la cual es mecánicamente sencilla .
+? Su altura . El aerogenerador debe estar situado por encima de las perturbaciones causadas por el terreno . La instalación de la torre en el altiplano boliviano no será necesariamente muy alta , debido a la peculiaridad de la configuración geográfica en esta zona .
+? Su frecuencia . Cualquier máquina giratoria es siempre asiento de vibraciones ; es por tanto , esencial que la frecuencia propia de la torre sea muy diferente a la frecuencia de las vibraciones ( fundamentales y armónicas ) , engendradas por el aerogenerador .
+? Mantenimiento . El acceso a la torre debe ser fácil para su buen mantenimiento . En nuestro caso la torre abatible es la que mejores bondades presenta .
+? Robustez . La torre deberá resistir las sobrecargas producidas , como ser : esfuerzos ocasionados por funcionamiento anormal , ráfagas de viento , y turbulencias .
+? Forma . Preferiblemente no angular , para evitar esfuerzos innecesarios en la misma torre mejorando así el flujo de corrientes de aire .
+1 . 1 . 7 . DISPOSITIVO PARA EL ALMACENAMIENTO DE LA ENERGIA PRODUCIDA .
+La estación eólica deberá disponer de un medio para el almacenamiento de la energía producida , esto con el fin de abastecimiento en períodos de calma atmosférica . En general el medio más accesible para este propósito son los acumuladores de plomo .
+Vale hacer notar que una parte importante de la inversión esta dirigida a este campo . Aproximadamente de un 20 % a 50 % del total del costo .
+1 . 1 . 8 . FUENTE ENERGETICA DE APOYO .
+Según la capacidad del aereogenerador , su utilización y los regímenes de viento , puede ser necesario el uso de fuentes de apoyo .
+? Para garantizar el funcionamiento continuo de la instalación en caso de fallo en el aerogenerador .
+? Para disminuir el uso de almacenadores .
+A este objetivo , se perfilan dos grandes representantes :
+? Motores de explosión ( combustión interna ) , a diesel o gasolina u otro derivado del petróleo .
+? Batería de acumuladores cargada por células fotovoltáicas .
+1 . 1 . 9 . DISPOSITIVO PARA VIGILAR EL ESTADO DE LAS BATERIAS DE ACUMULADORES .
+A pesar de ser los acumuladores de plomo el medio más barato y fácil de instalar , necesitan una vigilancia muy severa .
+Los acumuladores de plomo , son extremadamente sensibles a regímenes de descarga y sobrecarga prolongados . Por lo tanto es indispensable instalar un sistema manual o automático de vigilancia .
+Este dispositivo deberá asegurar prioritariamente :
+? El corte de la corriente de carga de la batería cuando está completamente cargada .
+? La conmutación del circuito de utilización hacia la fuente de apoyo , si existe , cuando la batería esté descargada .
+? La protección de los distintos elementos de la instalación mediante fusibles .
+? Los medios para medir el buen funcionamiento de la estación ( valor de la corriente de carga , de la tensión dada por aerogenerador , etc . ) .
+CAPITULO II
+2 . 0 . METEOROLOGIA .
+2 . 1 . EL VIENTO .
+La finalidad de este subtítulo es tratar de manera superficial , aquel fenómeno tan perceptible pero que pasa tan desapercibido ante nosotros , el viento . Se abordará solamente algunas características del viento que serán útiles para la construcción de los aeromotores ; además se hará una referencia a las características del viento altiplánico y se tomará como ejemplo las cercanías de la ciudad de Oruro , por tener este lugar características semejantes a la región en su totalidad .
+2 . 1 . 1 . ORIGEN DEL VIENTO .
+La atmósfera constituida esencialmente por oxígeno , nitrógeno y vapor de agua , se caracteriza por su presión , que varía con la altura .
+La radiación solar se absorbe de manera muy distinta en los polos que en el ecuador , a causa de la redondez de la tierra . Es pues la energía absorbida en el ecuador mucho mayor a la de la absorbida en los polos . Estas variaciones de temperatura , provocan cambios en la densidad de las masas de aire , por lo que se desplazan en diferentes latitudes . Estas traslaciones se realizan desde las zonas en que la densidad del aire ( presión atmosférica ) es alta en dirección a las de baja presión atmosférica .
+Se establece así , cierto equilibrio por transferencia de energía hacia las zonas de temperaturas extremas , que sin esto serían inhabitables . Existen otros desplazamientos que se ejercen perpendicularmente a la dirección del movimiento de las masas de aire , hacia la derecha en el hemisferio norte , y hacia la izquierda en el hemisferio sur .
+Sin embargo , estas direcciones , están frecuentemente perturbadas por :
+? las tormentas que desvían la dirección dominante , como se hace patente en registros .
+? los obstáculos naturales , bosques , cañadas , depresiones , etc . . Estos obstáculos modifican la circulación de las masas de aire en dirección y velocidad .
+? las depresiones ciclónicas que pueden desplazarse en cualquier dirección , pero de hecho , tienen ciertas direcciones establecidas , superponiendose , al sistema general de presión atmosférica .
+El viento se caracteriza entonces , por dos grandes variables respecto al tiempo : la velocidad y la dirección . La velocidad incide más directamente que la dirección en el rendimiento de la estación .
+2 . 1 . 2 . VELOCIDAD DEL VIENTO - VARIACIONES DE LA VELOCIDAD DEL VIENTO EN EL TIEMPO .
+2 . 1 . 2 . 1 . Fenómenos instantáneos : Ráfagas .
+Son difíciles de caracterizar ; para tener una idea aproximada de estas variaciones , se necesitan registros meteorológicos de vientos periódicos , de por lo menos 20 años hacia atrás .
+No obstante , nosotros contamos con un registro de estos fenómenos instantáneos de hace 10 años , estos datos fueron recogidos por SENAMHI ( Servicio Nacional de Meteorología ) con sub - base en Vinto ( Oruro ) . Estos datos se encuentran en el Anexo 6 . 2 .
+Por lo tanto , cuando se quiere utilizar la energía eólica , es importante tener en cuenta las ráfagas . Así , las variaciones bruscas de la velocidad del viento originan variaciones muy considerables de la energía aplicada al aeromotor .
+Un viento presentado en ráfagas , impondrá condiciones que se deberán tener en cuenta durante la utilización del aeromotor y en el cálculo de su soporte ; casi todos los sistemas de regulación tienen generalmente una inercia muy superior a la duración de una ráfaga .
+En el lugar de emplazamiento se presentaron ráfagas de hasta 22 m / s . Ver Anexo 6 . 2 .
+2 . 1 . 2 . 2 . Fenómenos diarios .
+Se deben a los fenómenos térmicos producidos por la radiación solar . Las variaciones de temperatura con la altitud crean corrientes ascendentes . La velocidad media del viento es más débil por la noche , con pocas variaciones . Aumenta a partir de la salida del sol y alcanza su máximo entre las 12 pm . y las 16 pm . horas de T . U .
+En las afueras de la ciudad se puede hacer tangible esta afirmación , pues a partir de las 12 : 00 la velocidad del viento aumenta de manera considerable hasta más o menos con variaciaciones leves hasta las 23 : 00 horas estos datos se encuentran en el anexo 6 . 2 .
+" El Viento Foehn " . Si el viento recorre un sector montañoso se ve obligado a elevarse , lo que comporta la condensación y la lluvia . El calor perdido por el vapor de agua pasa al aire . En la otra vertiente de la montaña será seco y cálido . Este caso es particularmente aplicable a la planicie precedida por los Andes de la región altiplánica de Oruro .
+El viento " Foehn " .
+2 . 1 . 2 . 3 . Fenómenos estacionales .
+? Fenómenos mensuales .
+Las variaciones mensuales dependen esencialmente del lugar geográfico y solo las estadísticas meteorológicas pueden predecir estas variaciones .
+Según el SENAMHI , y como se ve en el Anexo 6 . 2 . . Los meses más ventosos generalmente , son : septiembre , octubre , noviembre , diciembre y enero ; con velocidades de 6 a 8 m / s . estos son promedios mensuales , por lo que las velocidades representadas tiene notable diferencia con las velocidades reales diárias .
+? Fenómenos anuales .
+Las variaciones anuales son periódicas con buena precisión en los datos , de modo que de un año a otro , es posible hacer una buena evaluación de la energía eólica recuperable en un lugar deteminado .
+Las masas de aire que se mueven en Oruro tienden a disminuir de velocidad con el transcurso de los años . Tomaremos como ejemplo el registro de Noviembre de 1990 la velocidad registrada fue de 6 . 82 m / s y de Noviembre de 1995 que fue de 6 . 51 m / s .
+2 . 1 . 2 . 4 . Variaciones de velocidad del viento con la altitud .
+Dependen esencialmente del relieve del terreno por el cual se mueven las masas de aire . Estas variaciones se pueden representar por la ley :
+donde V1 y V2 representan las velocidades horizontales del viento a las alturas h1 ( altura de la torre ) y h2 ( altura del radio de las palas del aeromotor ) . El exponente Ó caracteriza al terreno . En la siguiente tabla se encuentran los valores de Ó para diferentes tipos de terreno agrupados en cuatro familias .
+Remplazando :
+h1 = 12 m .
+h2 = 2 , 5 m .
+Ó1 = 0 , 08 ( mínima )
+Ó2 = 0 , 12 ( máxima )
+Resultado :
+V2 / V1 = 1 , 13 ( mínima )
+V2 / V1 = 1 , 21 ( máxima )
+Naturaleza del terreno
+Irregul . del suelo , h0 en milímetros .
+Exponente Ó
+1 . Llano : altiplano
+0 a 20
+0 , 08 a 0 , 12
+2 . Poco accidentado : pastos , cultivos
+20 a 200
+0 , 13 a 0 , 15
+3 . Accidentado : bosques
+1000 a 1500
+0 , 20 a 0 , 23
+4 . Muy accidentado : ciudad
+1000 a 4000
+0 , 25 a 0 , 40
+Con Ó = 0 , 096 lg h0 + 0 , 016 ( lg h0 ) ? + 0 , 24
+Esto muestra que los lugares más interesantes para la recuperación de energía eólica son los poco o no accidentados , para los cuales el exponente Ó es bajo . En efecto se beneficia de velocidades elevadas cerca del suelo y la variación de la velocidad con la altura es mínima . Esto tiene como consecuencia la disminución de los esfuerzos cíclicos sobre las palas del aeromotor cuando esta girando . Esta consideración más importante cuanto mayor sea el diámetro del rotor .
+En general el altiplano de Bolivia , en la parte Este es casi totalmemte llano , con algunas elevaciones pequeñas entre montaña y montaña . Especialmente en la zona de Oruro se presenta un embudo demarcado por las serranias Sancaré y las faldas de la Cordillera Real . Este embudo viene desde el departamento de La Paz . Por tanto el exponente Ó es bajo ; beneficiable para al recuperación de energía eólica .
+En esta zona semidesertica existen pequeñas elevaciones geograficas ( cerros , montes ) que pueden ser aprovechados en favor de la energía recuperable . Al colocar el aereomotor en una pequeña cuesta existe un aumento de velocidad de hasta el 20 % del original .
+2 . 1 . 3 . VARIACIONES DE ORIENTACION DEL VIENTO EN EL TIEMPO .
+2 . 1 . 3 . 1 . Variaciones instantáneas de dirección : turbulencias .
+Son características propias de lugares con terreno accidentado que perturban las masas de aire . Estas variaciones instantáneas imponen esfuerzos muy severos a todos los aeromotores de eje horizontal .
+Este como se ha visto anteriormente no es nuestro caso , aunque existen ciclones y anticiclones , que son dignos de tomar en cuenta al momento de probar el aeromotor . Los ciclones se producen cuando existe una corriente tropical al este de una corriente polar , por efecto de la rotación de la tierra , tenderan a separarse quedando entre ellas una zona de vacio que derivará en un sistema de bajas presiones , si las corrientes son muy potentes se forma un ciclón , de forma que el aire caliente se diriga al centro en sentido contrario a las manecillas del relój . El anticiclón procede de una corriente tropical al oeste de una polar en el que las presiones disminuyen del centro para afuera y las corrientes que salen lo hacen en sentido igual al de las manecillas del relój .
+Ver Anexo 6 . 2 .
+2 . 1 . 3 . 2 . Variaciones estacionales .
+A cada estación le corresponde una dirección general del viento . Siendo esta muy particular al lugar en que se estudie tomando en cuenta la latitud y longitud en que se encuentre .
+En la alcarria , se presentan las siguientes caracteristicas estacionales :
+? Verano : Los vientos tienen una dirección predominante de Este ; Noreste ; Norte .
+? Otoño : Los vientos tienen una dirección predominante de Este ; Norte .
+? Invierno : Los viento tienen una dirección predominante de
+Norte ; Noroeste .
+? Primavera : Los vientos tiene una dirección predominante de
+Norte .
+Los datos se detallan en el Anexo 6 . 2 .
+2 . 1 . 4 . IMPORTANCIA DE ESTOS FENOMENOS PARA LA INSTALACION EOLICA .
+El buen funcionamiento de la máquina requiere de un estudio profundo del lugar en función de los fenómenos antes explicados .
+En el caso de utilización de aeromotores de pequeña y mediana potencia , la instalación esta adherida a los elementos desfavorables siendo estos en la mayoría de los casos insuperables . Ahí es donde el altiplano encuentra su funcionalidad dentro el proyecto , por sus características favorables .
+2 . 1 . 5 . MEDICION DE LAS VELOCIDADES DEL VIENTO .
+Antes de comenzar la explotación de una estación de energía eólica , en un lugar dado , es necesario disponer de un mínimo de datos sobre las características del viento en dicho lugar . Este estudio debe ser llevado con datos anteriores a tres años en un determinado lugar .
+Ver Anexo 6 . 2 .
+2 . 2 . LUGARES DE EMPLAZAMIENTO DE LOS AEROMOTORES .
+Para todo tipo de aeromotor la elección del emplazamiento es un elemento determinante , los parámetros varían según la potencia del aeromotor .
+? Para las grandes máquinas ( P > 100 kW ) , el número de emplazamientos es casi limitado , puesto que el criterio esencial de elección es : el coste de la unidad de energía kilowatt hora ( kWh ) producida debe ser competitiva con otras fuentes de energía . Es por lo tanto necesaria una gran cantidad de energía potencial y también un previo estudio profundo del viento en diferentes partes del lugar de emplazamiento .
+? Para pequeñas potencia ( P < 10 kW ) ; el número de emplazamientos es también limitado , puesto que el criterio esencial es en este caso es la proximidad al usuario . No es indispensable una gran cantidad de energía potencial .
+Trataremos desde ahora , criterios para la elección de emplazamientos para pequeños aerogeneradores . Es decir no teniendo en cuenta el precio del terreno .
+2 . 2 . 1 . DETERMINACION DEL EMPLAZAMIENTO .
+2 . 2 . 1 . 1 . Potencial eólico .
+La evaluación de la energía recuperable en un lugar debe conocerse o estimarse antes de cualquier otro trabajo . El usuario debe estar seguro de si el viento puede abastecer sus necesidades energéticas , y que la inversión no será desproporcionada al rendimiento del aeromotor .
+Es necesario un pequeño estudio económico cuando en el posible emplazamiento se dispone de otra fuente de energía ; como una línea de distribución , etc . Aunque este sería un estudio con una aplicabilidad de grandes envergaduras .
+Entendiendo que este trabajo tiene como finalidad presentar una alternativa razonable de tipo energética a la zonas rurales , y sabiendo que la extensión altiplánica es enorme entre puntos poblados . Sería poco razonable dar datos irreales sobre los costes de instalación de un tendido eléctrico desde las urbes a los ya mencionados poblados . El aereogenerador proyectado es de tipo general es decir este puede ser instalado en cualquier punto favorable , entre las cordillera real y occidental .
+Los siguientes gráficos muestran las prestaciones del potencial eólico en un lugar no designado .
+Las abscisas pueden graduarse en % .
+Las ordenadas pueden graduarse en kw / m ? .
+Curvas de duración de velocidades .
+2 . 2 . 1 . 2 . Consideraciones sobre el lugar de instalación cuando no se dispone de estadísticas apropiadas .
+Medios para medir la velocidades del viento : existen algunos aparatos para esta medición , pero el más utilizado es el anemómetro de cazoletas cuya rotación es más rapida cuanto mayor sea la velocidad del viento , hallándose en un registrador electrico que genera datos lineales ( eoleograma ) .
+Las lecturas de velocidad deberán hacerse a una hora fija ( se harán todas las medidas a una misma hora y lugar ) .
+En el Anexo 6 . 2 . se detalla estos datos esquemáticamente .
+2 . 2 . 1 . 3 . Obstáculos de los alrededores .
+Perturbaciones del viento con el terreno .
+( Cada vector representa la dirección y el valor de la velocidad a la altura considerada ) .
+I - - - Colinas de pendientes suaves y cima redondeada : lugar muy favorable , el incremento de velocidad puede llegar a un 20 % .
+II - - Colinas de pendientes fuertes y cima acantilada : lugar provocante de la destrucción del aeromotor en un tiempo breve .
+III - Peñón , árbol , edificio , casa , etc . Producen mucha turbulencia .
+? En el suelo las perturbaciones aumentan con el viento .
+Cuando se conozca la viabilidad de la energía eólica , será necesaria una selección del emplazamiento en función de las distancias a los posible obstáculos y sobre todo en dirección de los vientos predominantes .
+Siempre que sea posible , se emplazará el aeromotor en lugares no perturbados por los vientos dominantes y en caso contrario a una distancia que depende de la forma del obstáculo y su tamaño .
+? Torre ( cuadrada o cilíndrica ) : 10 veces el diámetro .
+? Muro : 10 veces la altura .
+? Arboles : 6 veces la altura .
+? Aeromotor cercano : 6 veces el diámetro . ( min )
+12 veces el diámetro . ( max )
+En el caso particular del relieve se debe hacer el emplazamiento en lugares poco accidentados .
+El objetivo de este estudio es evitar las tensiones variables con el tiempo en velocidad que son dañinas para la máquina a corto o mediano plazo .
+Dada la geografía plana del altiplano boliviano y siendo los vientos predominantes constantes , se podría afirmar que este lugar es muy apto para la recuperación eólica en cualquier punto de su extensión ; esto desde el punto de vista teórico .
+2 . 2 . 2 . DETERMINACION EN RELACION A ELEMENTOS FAVORABLES .
+? La mínima vegetación posible .
+? Colinas de poca pendiente ( ver figura ) , o estrechamientos de valles .
+? Naturaleza del terreno para los cimientos de la torre . Sería perfecto si el terreno fuera rocoso . Se estudiará en particular la torre abatible .
+? Medios de acceso fáciles para el mantenimiento y construcción .
+? Proximidad del usuario o del almacenamiento ; cuanto más cortas sean las transmisiones eléctricas , menos perdidas habrá , por ejemplo la caída de la tensión ? U se puede determinar por :
+l Longitud del cable entre el aerogenerador y el consumo en metros .
+s Sección del cable en m ? .
+f Resistividad del material utilizado .
+Cobre : 1 , 8Å
+Cobre : 1 , 8 * 10 - 8W m .
+Aluminio : 2 , 7 * 10 - 8W m .
+I Intensidad nominal en amperios .
+n Número de conductores según sea monofásico o trifásico .
+2 . 2 . 3 . TORRE DE SOPORTE .
+Se determina la altura que muchas veces es el único parámetro que se puede variar en los aeromotores pequeños ya que los demás parámetros precedentes son muy poco variables .
+La altura dependerá de los obstáculos circundantes . Según la ley de variación del viento en función de la altura y de los criterios de turbulencia ; la altura se determina por el siguiente criterio :
+? En los lugares favorables el soporte tendrá una altura mínima de 6 metros .
+Más fácil y económico es disponer de una torre abatible . Los lugares que pueden proporcionar el máximo de energía anual sin crear problemas mecánicos son aquellos en los cuales los vientos son regulares con una velocidad media de 6 a 8 m / s .
+CAPITULO III
+3 . 0 . MOTOR EOLICO .
+3 . 1 . EL AEROMOTOR : ESTUDIO TEORICO .
+3 . 1 . 1 . ENERGIA SUMINISTRADA POR EL VIENTO .
+La energía que el viento proporciona es una forma de energía cinética , en función de la masa y de la velocidad de un determinado volumen de aire . Si se considera que la masa por unidad de volumen o densidad del aire es constante se puede afirmar que la energía proporcionada por el viento está en función de su velocidad .
+La energía cinética de una masa de aire en movimiento es igual a :
+m : Masa de volumen de aire dado ( kg )
+V : Velocidad instantánea del viento ( m / s )
+Ec : Energía cinética ( Joule )
+Remplazando :
+m = 1 , 25 kg / m3
+V = 7 m / s
+Resultado :
+Ec = 30 , 72 joule
+Supongamos : un artefacto para recuperar esta energía que tenga una superficie de captación S . Asumiendo la hipótesis de que la velocidad del viento es constante en cualquier punto de la superficie S , el volumen de aire que atraviesa la superficie S en 1 segundo es igual a VS .
+La energía teóricamente recuperable en un segundo ( potencia ) será pues igual a :
+m : Masa de volumen de aire que pasa S en 1 seg
+mo : Masa por unidad de volúmen ( densidad del aire ) ( 1 , 25 kg / m3 )
+VS : Volumen de aire que atraviesa la superficie S ( m ? )
+Por unidad de tiempo ( s ) . ( m3 / s )
+P : Potencia obtenible ( Watt )
+Por tanto , la potencia disponible a partir de una superficie S es :
+mo : Masa por unidad de volumen ( densidad del aire ) ( 1 , 25 kg / m3 )
+S : Superficie de contacto ( m ? ) V : Velocidad del viento ( m / s )
+P : Potencia obtenible ( Watt )
+Remplazando :
+S = 5 m .
+V = 7 m / s
+Resultado :
+P = 1071 , 87 watts
+Desgraciadamente , no se puede captar toda esta energía ; ya que la velocidad del viento , una vez atravesada la superficie de captación , no es nunca nula y el teorema de Betz demuestra que la máxima energía recuperable ( teóricamente ) , es igual a 16 / 27 ( ~ 60 % ) de la energía total .
+Tomando como densidad del aire ( mo ) un valor medio de 1 , 25 kg / m3 , la potencia máxima teóricamente recuperable por un aeromotor de superficie S es igual a :
+S : Superficie de contacto ( m ? ) V : Velocidad del viento ( m / s )
+P : Potencia obtenible ( Watt )
+Remplazando :
+S = 5 m
+V = 7 m / s
+Resultado :
+P = 634 , 56 watts
+En el caso de un rotor , la superficie S es la barrida por las palas . Si el diámetro de las palas es D , el límite de Betz es :
+V : Velocidad del viento ( m / s )
+D : Diámetro de las aspas del aeromotor ( m )
+Remplazando :
+D = 5 m .
+V = 7 m / s
+Resultado :
+P = 2486 , 77 watts
+Luego la potencia suministrada por un aeromotor es proporcional :
+- al cuadrado del diámetro o radio del rotor
+- al cubo de la velocidad del viento
+La energía proporcionada por un aeromotor adquiere la forma de energía mecánica se puede utilizar directamente ( bombeo ) o transformar según la necesidades y posibilidades ( electricidad , calor , etc . ) .
+Además el límite de los diferentes aeromotores está limitado por todos los rendimientos propios de las diferentes transformaciones :
+El rotor : 0 , 20 < n > 0 , 85
+El multiplicador / reductor : 0 , 7 < n < 0 , 98
+El generador eléctrico : 0 , 80 < n < 0 , 98
+El transformador : 0 , 85 < n < 0 , 98
+El rectificador : 0 , 9 < n < 0 , 98
+Las baterías : 0 , 7 < n < 0 , 8
+Las pérdidas en las líneas de conducción : 0 , 9 < n < 0 , 99
+n = régimen nominal
+Por otro lado , el rendimiento de cada elemento depende del régimen de funcionamiento de la máquina , o sea , de la velocidad de rotación del rotor . Ello implica que , fuera del régimen nominal , aún disminuye más el rendimiento global del sistema .
+Límite de Betz para diferentes diámetros del rotor .
+Para los aerogeneradores clásicos , actualmente comercializados , el rendimiento varía entre el 30 % y el 50 % del límite de Betz .
+Hay que destacar que , entre los aerogeneradores de potencia superior o igual a 100 kW , citados al principio de ésta tesina , los rendimientos eran en general , más elevados , ya que cada etapa transformadora se había proyectado cuidadosamente . Por ejemplo , la máquina número 0 de la NASA ( ERDA ) tiene un rendimiento del 82 % del límite de Betz , lo cual es , sin duda , muy elevado .
+3 . 1 . 2 . ACCION DEL VIENTO SOBRE UNA SUPERFICIE PLANA .
+Si se coloca una superficie plana y delgada , ya sea cuadrada , rectangular o circular , en el seno de un flujo de aire , se observa que los diferentes fenómenos , para una velocidad de circulación de aire constante , están íntimamente ligados al ángulo ( i ) que forman la superficie y la dirección del flujo . La forma de la superficie tiene también su influencia , pero es mucho menor .
+Perturbaciones creadas por la introducción de una placa en el seno de un flujo de aire .
+Estos fenómenos , que pueden observarse en un túnel aerodinámico , se traducen en una presión sobre la cara delantera de la placa ( la expuesta al viento ) y una depresión sobre la parte trasera , las cuales pueden evidenciarse mediante manómetros , que son instrumento que sirven para medir la tensión de los fluidos elásticos .
+Sus fuerzas , debidas a la presión y a la depresión , se suman . La resultante de estas fuerzas es perpendicular a la placa y su punto de aplicación es el centro aerodinámico .
+Esta fuerza resultante tiene la siguiente expresión : R = KSV ? donde :
+S : es la superficie aparente de la placa en m ? ( la proyección de la superficie de la placa sobre un plano perpendicular a la dirección del viento ) .
+V : es la velocidad del viento en m / s .
+K : es un coeficiente que depende del ángulo de incidencia i .
+Se puede constatar que esta fuerza resultante es máxima para i = 38 ? ( K = 0 , 145 ) . Al contrario , toma su valor mínimo para i = 20 ? e i = 90 ? ( K = 0 , 08 ) .
+Observación :
+Para un ángulo de incidencia comprendido entre los 0 ? y 10 ? el punto de aplicación de la resultante de las fuerzas aplicadas a la placa está situada aproximadamente en el tercio delantero .
+Efectivamente , si se denomina borde de ataque , al borde de la placa que recibe en primer lugar el impacto del aire y borde de fuga al borde opuesto , se observa que la presión y la depresión son mayores en el borde de ataque y se anulan en las proximidades del borde de fuga .
+Fuerza resultante de la acción del aire .
+3 . 1 . 2 . 1 . Descomposición del vector resultante : arrastre y sustentación .
+La fuerza resultante R de la acción del aire sobre una placa puede descomponerse en dos fuerzas : S y A .
+S : perpendicular a la dirección del viento : fuerza de sustentación .
+A : en la misma dirección del viento : fuerza de arrastre .
+Al comparar los valores relativos de S y A para distintos ángulos i pequeños ( < 15 ? ) , la fuerza de sustentación aumenta
+rápidamente , mientras que la de arrastre aumenta lentamente .
+Las fuerzas S y A pueden expresarse , al igual que R , bajo la expresión :
+S = Ky * S * V ?
+A = Kx * S * V ?
+3 . 1 . 3 . APLICACION AL CASO DE UN AEROMOTOR - ACCION DEL VIENTO SOBRE LAS PALAS .
+Supongamos que la placa considerada anteriormente sea la pala de un rotor inmóvil , cuyo eje de rotación sea paralelo a la dirección del viento . Para cada pala se puede dibujar la fuerza
+Descomposición de las fuerzas eólicas en un punto de la pala .
+resultante , perpendicular al perfil , aplicada en el centro de sustentación aerodinámica y dirigida según se muestra en el dibujo de la figura anterior .
+De ello resultan :
+? 2 fuerzas A1 y A2 paralelas en el mismo sentido , que tienden a desplazar al rotor con un movimiento de traslación en la dirección del viento .
+Estas fuerzas de sustentación crean un par motor que tiende a girar al rotor en un plano perpendicular a la dirección del viento .
+Si se dejan libres las palas , bajo la acción de las fuerzas S1 y S2 , el rotor girará . A partir de este instante , lo que ha sido explicado hasta aquí , se modifica sensiblemente , ya que el viento que " choca " la pala será composición de la acción real del viento y la acción del viento creado por el giro de las palas . Este viento resultante se denomina viento aparente o relativo . Su notación en la pala es Vr .
+Ahora bien , el viento creado por el movimiento de desplazamiento de la pala varía a lo largo de la misma , en todos sus puntos proporcionalmente a su distancia al eje de rotación .
+Por otra parte , esta velocidad es proporcional a la velocidad de rotación .
+U : Velocidad del viento por el empuje de la pala
+r : Distancia desde el punto considerado hasta el eje de rotación
+ý : Velocidad de rotación ( rad / s )
+V : Velocidad de rotación ( rpm )
+Remplazando :
+r = 2 , 45 m
+n = 350 rpm
+Resultado :
+U = 89 , 8 m / s
+Consideremos ahora un elemento de pala ( una sección recta de la misma ) en la cual la velocidad U pueda considerarse constante .
+En nuestro caso : La velocidad relativa se obtiene como continua :
+Remplazando :
+U = 89 , 8 m / s
+v = 7 m / s
+Resultado :
+Vr = 90 , 07
+El ángulo de ataque es siempre el ángulo formado por la pala y la dirección del viento aparente . Por tanto , variará a lo largo de la pala .
+Igual que antes , la resultante de las fuerzas aplicadas a este elemento de pala es perpendicular a la pala y puede descomponerse en dos fuerzas , S y A :
+S : fuerza de sustentación , perpendicular a la dirección del viento relativo .
+A : fuerza de arrastre , de sentido igual al del viento aparente .
+Se obtiene , por tanto , la representación que sigue a continuación , para el elemento de pala considerando , a la distancia r del eje de rotación .
+Pero lo que realmente interesa , son los componentes útiles en el plano de rotación .
+Componentes útiles en el plano de rotación .
+Fz es la fuerza propulsora
+Fx es una fuerza inútil que tiende a desplazar al rotor en el sentido del viento .
+Observaciones :
+El ángulo formado por la pala y el plano de rotación se denomina ángulo de calaje , y su notación es " Ú " . No debe confundirse con el ángulo formado por la pala y la dirección del viento aparente , denominado ángulo de ataque , que denotaremos por " Ú " .
+Los valores que hay que calcular son los de las fuerzas S y A tal como se ha visto anteriormente .
+g : Aceleración de la gravedad ( 9 , 81m / s ? )
+mo : Masa volumétrica o densidad del aire ( 1 , 25 kg / m3 )
+S : Superficie del elemento de la pala ( proyección de la superficie sobre el plano perpendicular a la dirección del viento aparente ) .
+Vr : Viento aparente ( m / s )
+Cx y Cz : Determ . en túneles aereodinámicos . ( fig / ant )
+de la forma general KSV ? .
+Remplazando :
+Ú = 12 ?
+Cx = 0 , 025
+Cz = 0 , 8
+m0 = 1 , 25 kg / m3
+g = 9 , 81 m / s ?
+S = 0 , 7375 m ?
+Resultado :
+S = 2991 , 5 nt Con A y S obtenemos R = 2994 , 96 nt
+A = 93 , 5 nt
+Polar de un perfil : Ó en función de Cx y Cz .
+Fz : S sen ( Ú + Ó ) - A cos ( Ú + Ó ) Ú + Ó = Ý
+Fx : S cos ( Ú + Ó ) + A sen ( Ú + Ó )
+El par para este elemento de la pala considerado será igual a :
+C = r [ S * sen ( Ú + Ó ) - A * cos ( Ú + Ó ) ]
+Luego el par motor de toda la pala será igual a la suma de todos los pares motores elementales a lo largo de la pala , teniendo en cuenta que varía desde el origen hasta los extremos de la misma .
+Descomposición de los vectores en la pala utilizada .
+Se puede demostrar que el rendimiento de un elemento de pala , que es igual a la relación entre la potencia recuperada y la potencia proporcionada por el viento , es función de la relación Cz / Cx , la cual , a su vez , función del ángulo Ó .
+La gráfica que se da a continuación representa la variación de la relación S / A ( Cz / Cx ) , en función de Ó .
+La función S tiene un máximo .
+Existirá pues , para cada proporción elemental de pala , un ángulo de ataque óptimo . Esto explica que para optimizar el rendimiento de una pala es necesario variar el calaje a lo largo de la misma , es decir , hacer una pala de superficie alabeada .
+3 . 2 . EL AEROMOTOR DESCRIPCION .
+3 . 2 . 1 . LAS PALAS DEL AEROMOTOR .
+Las palas son una parte muy importante del aeromotor . De su naturaleza dependen el buen funcionamiento y la duración de la vida de la máquina , así como su rendimiento .
+Hay muchos elementos que caracterizan estas palas :
+- longitud
+- anchura
+- perfil
+- materiales
+- número
+Entre estos elementos , algunos se determinan por la hipótesis de cálculo : potencia y par . Por orden de importancia son : longitud , perfil y anchura .
+Los otros se eligen en función de criterios tales como : coste , resistencia a las condiciones climáticas de trabajo , etcétera .
+El organigrama muestra el esquema para la determinación de los elementos del aeromotor .
+3 . 2 . 1 . 1 . La longitud de las palas .
+El diámetro de las palas está en función de la potencia deseada . La determinación de éste , fija también la frecuencia de rotación máxima , que la hélice no deberá pasar para evitar las tensiones en la punta de las palas , debidas a la fuerza centrífuga . Es esencial tener en cuenta la fatiga de las palas y los riesgos de vibraciones , sobre todo para las palas muy largas .
+Ý en m
+1
+2
+5
+10
+20
+50
+n max ( rpm . )
+2000
+1000
+400
+200
+100
+40
+Organigrama para la determinación de los elementos de aeromotor .
+Las velocidades de giro que se dan en la tabla definen la envolvente representada en el siguiente gráfico .
+Velocidad máxima de un aeromotor en función de su diámetro .
+Además de estas velocidades máximas , la que se elija tener en cuenta la relación entre la velocidad en la punto de la pala U y la velocidad del viento natural o real V .
+Esta relación determina , en efecto , el rendimiento de la hélice en relación al límite de Betz , según el tipo de máquina .
+Rendimientos de diversos tipos de aeromotores .
+3 . 2 . 1 . 2 . El perfil .
+Se elige función del par deseado , cada perfil proporciona , para el ángulo de ataque óptimo un par función de Cz y de Cx , ( Despreciable ante Cz para el ángulo de ataque óptimo ) .
+Cuando ya se ha elegido el perfil y la velocidad de giro para la velocidad nominal del viento , se determina el calaje .
+Para la mayoría de aeromotores de mediana y pequeña potencia las palas no están alabeadas , es decir , el ángulo de ataque sólo es óptimo para una sección de la pala , situada entre la mitad y los dos tercios .
+Sin embargo , la mayoría de los aeromotores de más de 100 KW tienen las palas alabeadas .
+Las características de los perfiles se determinan en el túnel aerodinámico . Estos datos son constantes estudiadas en especial para la aviación militar y comercial . A Cada perfil se le asocia generalmente el nombre del laboratorio y un número de referencia .
+Perfil de la pala proyectada .
+3 . 2 . 1 . 3 . Anchura . ( longitud de la cuerda del perfil ) .
+La anchura de las palas no interviene en la potencia del aeromotor , que esta en función de la superficie barrida . La anchura interviene en el par de arranque ( que son dos fuerzas de igual magnitud y sentido opuesto , cuyas líneas de acción son paralelas pero no coinciden . Estas no producen traslación , el único efecto del par es la rotación ) que será mayor cuanto más ancha sea la pala , pero para obtener velocidades de rotación elevadas se prefieren las palas finas y ligeras . Entonces el resultado será s un compromiso entre estos dos factores .
+? Materiales .
+Contrariamente a lo que se cree frecuentemente , no es la propia aerodinámica en donde está la dificultad , sino en la construcción y la resistencia de los materiales de la pala .
+En todos los aeromotores actuales , se está estudiando el método de construcción de las palas que se deben hacer para aumentar la seguridad del funcionamiento , manteniendo los precios , sin que las máquinas se transformen en prototipos eternos que no puedan comercializarse .
+Los materiales utilizados en las palas son esenciales tanto como el sistema de regulación , opinamos que son los dos elementos básicos que definen la calidad del aeromotor .
+El material utilizado para las palas debe responder en los aeromotores modernos a frecuetes elevaciones de rotación y a otras exigencias , a veces contradictorias :
+- Ligero .
+- Perfectamente homogéneo para facilitar la producción en serie .
+- Indeformable .
+- Resistente a la fatiga mecánica ( en particular a las tensiones alternas debidas al funcionamiento de los rotores y las vibraciones ) .
+- Resistente a la erosión y a la corrosión .
+- De uso y producción sencillos .
+- Coste bastante bajo para que el aeromotor se pueda construir y vender .
+Actualmente se encuentran cuatro tipos de materiales para hacer las palas de la hélice .
+Madera .
+Presenta ciertas ventajas : Es sencilla , ligera , fácil de trabajar y resiste bien la fatiga .
+La falta de homogeneidad obliga a los constructores a elegir las palas en función de su masa , la cual puede variar a lo largo del tiempo de diferente manera para dos palas iguales cuando están en servicio .
+Estas variaciones de masa y estas deformaciones son el origen de vibraciones destructoras para los aeromotores .
+El nogal y la haya son las dos maderas más utilizadas en la fabricación de las palas , pero el nogal s una madera escasa , por lo tanto cara , sobre todo si se quieren hacer palas de una longitud superior a 2 metros .
+Para conservar las ventajas de la madera y reducir los inconvenientes , se puede recurrir a tratamientos o protecciones de la madera antes o después de hacer la pala :
+- Chapas encoladas o chapas con baquelita ;
+- Protección contra la humedad por tratamiento hidrófugo ;
+- Protección del borde de ataque por un perfil pegado ( o clavado ) ;
+- Protección total por un recubrimiento ligero ;
+- Por revestimiento sintético duro ( resínas de poliéster ) ;
+- Por revestimiento de neopreno .
+Metal .
+Por lo general en las palas se emplea una aleación ligera con silicio o con magnesio , ya que con estos materiales se pueden obtener costes muy bajos si se producen grandes series ( aluminio moldeado , hilado o repujado ) .
+Sin embargo , hay que destacar que el aluminio resiste bastante mal la fatiga , lo cual limita su empleo . También existen materiales ligeros con características mecánicas superiores , pero su coste hace su empleo difícil .
+Materiales sintéticos , resinas , fibras y otros .
+Algunos aeromotores funcionan con palas de materiales plásticos ( 10 KW bipala , fabricado en Alemania Federal , bajo la dirección de M . U . Hutter , Lübing ) , pero estos materiales , siendo muy interesantes en ciertos aspectos , como :
+- poco peso ;
+- insensibilidad a la corrosión ;
+- buena resistencia a la fatiga ,
+presentan ciertos inconvenientes que podrían reducirse :
+- coste elevado ;
+- falta de homogeneidad en la construcción ; las características dimensionales pueden variar de una pala a otra .
+Los aeromotores realizados por ERDA en colaboración con la NASA , estan equipados con palas de fibra de carbono , según la tecnología utilizada en los helicópteros .
+Palas compuestas .
+Las palas con diferentes materiales son una buena solución , en particular para los aeromotores de pequeña y mediana potencia . Ejemplos :
+Aleación ligera + espuma de poliuretano ;
+Aleación ligera + poliéster y fibra de vidrio ;
+Madera + polié ? ter ;
+Madera + metal .
+Las palas son la parte del aeromotor que sin duda tienen que evolucionar más .
+3 . 2 . 1 . 4 . Número de palas .
+Aeromotor con par de arranque elevado . Son las hélices multipalas conocidas por todo el mundo para el bombeo de agua y cuyo para de arranque es proporcional al número de palas y al diámetro . Su rendimiento respecto al límite de Betz es pequeño , puesto que la velocidad de la punta de la pala está limitada , su diámetro máximo es de 8 metros .
+Aeromotores denominados " rápidos " . Generalmente son bipalas o tripalas ; el número de palas no tiene influencia en la potencia proporcionada , sino que es función de la superficie barrida por el rotor .
+La máquinas que se construían antes eran generalmente tripalas , pero en la actualidad suelen ser bipalas , aunque sean de pequeña o gran potencia .
+BIPALA
+Ventajas
+Inconvenientes
+? Velocidades de giro muy altas que permiten rendimientos elevados .
+? Máquina muy simple en particular por su tipo de regulación .
+? Máquina más ligera y multiplicador más pequeño .
+? Conjunto menos costoso .
+? Sensible a las vibraciones , es el principal inconveniente puesto que a igualdad de calidad la hélice bipala es menos resistente .
+? Más ruidosa por la velocidad de giro , ya que la velocidad de la punta de la pala es más elevada .
+Nota : La hélices monopalas con contrapeso permiten mejorar el rendimiento , pero los problemas de vibraciones son muy difíciles de evitar .
+3 . 2 . 2 . SISTEMAS DE PROTECCION .
+Cualquiera que sea el tipo de aeromotor es necesario , para evitar su destrucción cuando los vientos son demasiados fuertes , que esté provisto de un sistema que permta disminuir las tensiones mecánicas en la hélice .
+3 . 2 . 2 . 1 . Sistemas de frenado .
+3 . 2 . 2 . 1 . 1 . Sistemas de frenado manual .
+Es el método más simple para proteger la hélice de la destrucción . Cuando el viento alcanza una cierta fuerza un operador detiene el rotor con ayuda de un freno , poniéndolo paralelo al viento ( en bandera ) o modificando el ángulo de calaje de las palas para obtener un par motor nulo ( este es el sistema más eficaz ) .
+En nuestro caso aplicaremos un sistema de frenado utilizado en el tren trasero de los automoviles Volkswagen , este sistema conocido trabaja por medios mecanicos , como sera de conocimiento este sistema es de freno es de tambor aplicado sobre balatas .
+3 . 2 . 2 . 1 . 2 . Sistemas de frenado automático .
+Los medios citados pueden automatizarse mediante la acción del viento sobre un " pala " de mando .
+La pala anexa está paralela y es solidaria al plano de rotación de la hélice .
+Cuando la presión del viento sobre la pala alcanza un cierto valor , acciona mecánicamente una leva para poner en bandera al rotor o frenar el eje de giro ( la presión del viento es proporcional al cuadrado de la velocidad V y a la superficie de las palas S ; P = KSV ? ; K ~ 0 , 9 ) .
+El dispositivo precedente puede asociarse a un resorte que ponga en funcionamiento ( posición inicial ) , al aeromotor cuando la velocidad del viento esté por debajo de la velocidad máxima que puede aguantar el aeromotor .
+Incluso la acción en este caso puede ser progresiva . en efecto , el ángulo que forma el plano de la hélice con el viento , depende de la presión sobre la pala y la velocidad de rotación disminuiría hasta cero cuando el ángulo pase de 90 ? a 0 ? .
+Estos sistemas no pueden utilizarse más que con los aeromotores cuya velocidad de giro no debe ser constante . Por otra parte , presentan el gran inconveniente de interrumpir el funcionamiento del aeromotor más allá de una cierta velocidad del viento .
+Estos son los sistemas de regulación más utilizados en los aeromotores de bombeo , en los cuales la constancia de la velocidad de giro así como el rendimiento no son importantes , ya que el agua puede almacenarse fácilmente .
+3 . 2 . 2 . 2 . Sistemas de regulacion .
+Se revisará rápidamente algunos tipos de regulación . Al ser estos altamente costosos no se realizarán en la práctica de instalación en zonas rurales .
+Sistemas de regulación por freno aerodinámico centrífugo .
+( perfil y calaje constantes ) .
+- Regulador patentado , utilizado por el aeromotor WINCHARGER .
+- Las palas principales están fijas ( calaje constante ) .
+- La regulación dispone de dos paletas , P1 y P2 , articuladas en O1 y O2 , sobre un soporte perpendicular al eje de las palas principales . Estas paletas tienen la parte delantera un poco más larga y pesada que el posterior . Se mantienen en la posición inicial mediante los tensores t1 y t2 y los muelles ajustados x1 y x2 .
+Hasta una velocidad de giro determinada f0 ( es decir , la velocidad del viento correspondiente a V0 ) , las paletas están en posición concéntrica . Actuando como un volante de inercia , tienden a mantener estable la velocidad de giro cuando la velocidad del viento varía durante breves momentos ( pequeñas ráfagas ) .
+Las palas que tienen un calaje fijo aumentan su velocidad de giro con la del viento ; cuando esta velocidad sobrepasa V0 la velocidad de giro sobrepasa f0 y la fuerza centrífuga y la presión del aire sobre las paletas son preponderantes . Las paletas P1 y P2 giran alrededor de O1 y O2 y toman la posición correspondiente al frenado .
+Sistema de " regulación " por disminución de la sección de la hélice , ya sea total o parcial , mediante una pala auxiliar .
+Entonces la velocidad de giro disminuye y la fuerza de los muelles x1 y x2 vuelve a ser preponderante , volviendo las paletas a la posición inicial . Si el viento es siempre superior a V0 el proceso vuelve a comenzar , aceleración , abertura , frenado , vuelta a la posición inicial , etcétera .
+De hecho el movimiento real no comporta más que pequeñas oscilaciones alrededor del punto de equilibrio . Las paletas en funcionamiento parecen conservar una posición de equilibrio fijo , pero la velocidad de giro no es muy estable para toda la gama real de vientos .
+Además de este sistema de regulación , debe instalarse un freno para poder inmovilizar al aeromotor en caso de temporal , de parada de urgencia o de no utilización .
+3 . 2 . 2 . 2 . 1 . Utilización de la torre abatible como freno .
+Sistema de frenado aprovechando la torre abatible .
+Se tratara de hacer una innovación más práctica para frenar o desactivar el giro del aeromotor .
+Aprovechando el movimiento de la torre de tipo basculante , se desactivará el aeromotor por causas de viento fuerte , clima desfavorable , cese de actividad o parada de urgencia .
+Este sistema es una variante del frenado automático visto anteriormente . Con una aplicación menos complicada .
+3 . 2 . 4 . DISPOSITIVO DE ORIENTACION .
+Los aeromotores de eje horizontal necesitan una orientación permanente de la máquina en una dirección paralela a la del viento para disminuir los esfuerzos y las pérdidas de potencia .
+Características del aereogenerador proyectado .
+Existen muchos dispositivos de orientación , elegidos generalmente de acuerdo con la potencia del aeromotor . Son parte importante del buen rendimiento de la instalación eólica .
+Los aeromotores de eje horizontal están sometidos a fuertes esfuerzos durante los cambios bruscos de orientación , originados por los cambios de velocidad y dirección del viento . Estos esfuerzos son mayores cuanto mayores sean las aceleraciones que se producen en un cambio de dirección .
+La componente perpendicular al eje de rotación de la hélice es proporcional al cuadrado de la velocidad de giro alrededor del eje principal ( en rad / s ) .
+Los cambios de dirección y las variaciones de frecuencia de rotación provocados por las ráfagas son el origen de vibraciones nefastas para el buen funcionamiento del aeromotor .
+El sistema de orientación deberá cumplir con la condición necesaria de mantener el rotor cara al viento sin provocar grandes cambios de dirección del rotor cuando se produzcan cambios rápidos de la dirección del viento .
+Para los aeromotores de pequeña y mediana potencia , cuya hélice está situada cara al viento , el dispositivo de orientación es una cola , constituida generalmente por una superficie plana ( placa metálica o de madera ) situada en el extremo de un soporte unido al cuerpo del aeromotor .
+La condición antes descrita se obtiene por la determinación de la superficie de la cola sobre la cual se ejerce el par de giro .
+Esta superficie se determina experimentalmente situando la máquina prototipo en un lugar donde la corriente de aire está perturbada y buscando la superficie óptima de la cola .
+Cuando la cola se sitúa en el eje aeromotor , la longitud de soporte juega una función importante , puesto que cuanto más largo sea menos se situará en la zona de turbulencias del aeromotor , originadas por el giro de la hélice .
+Para evitar que la cola este situada en la zona de turbulencias debidas a la rotación de la hélice ( una distancia igual a 6 o 10 veces el diámetro ) , algunos constructores ( Aerowatt ) , después de haberlo ensayado en túneles aerodinámicos , han equipado a sus aeromotores con colas cuya parte útil está situada fuera de las perturbaciones .
+Dispositivo de orientación para aeromotores de cara al viento .
+Para adaptar esta cola a lugares perturbados , el mismo constructor ha hecho una cola cuya superficie varía en función de las solicitudes originadas por los cambios de orientación del viento . La parte útil de la cola está constituida por una parte fija y una parte móvil articulada a la anterior mediante un material elástico .
+En el caso de que se produzcan cambios de dirección del viento , la parte móvil gira , disminuyendo así el para de giro y por consiguiente la velocidad angular de orientación es menor así como los esfuerzos .
+Las colas , que son muy eficaces , son muy difíciles de poner en práctica por causa de su peso y sus dimensiones en los aerogeneradores cuya hélice tenga un diámetro superior a 20 m ( dimensión que corresponde a un potencia cercana a los 100 KW para una máquina con una velocidad nominal de 11m / s y un rendimiento del 65 % con relación al de Betz ) .
+La mayoría de los aeromotores destinado a instalaciones de pequeña potencia ( P < 10 KW ) funcionan con la hélice situada contra al viento y están equipados con la cola orientadora .
+Los aeromotores cuyo diámetro es superior a los 20 metros funcionan generalmente con la hélice a favor del viento , es decir , con ésta detrás de la torre de sustentación . Desgraciadamente , éste sistema de orientación implica un funcionamiento de la hélice que crea esfuerzos periódicos destructivos .
+CAPITULO IV
+4 . 0 . COMPLEMENTOS PARA LA UTILIZACION DE ENERGIA EOLICA .
+4 . 1 . EL GENERADOR ELECTRICO Y EL MULTIPLICADOR .
+4 . 1 . 1 . EL GENERADOR ELECTRICO .
+El aereomotor puede accionar directamente o indirectamente ( a través de un multiplicador ) , dos tipos de generador eléctrico :
+- Generador de corriente contínua ( dínamo ) .
+- Generador de corriente alterna ( alternador ) .
+Estos transformarán la energía mecánica en energía eléctrica , teniendo en cuenta las pérdidas ocurridas dentro el generador .
+La fórmula de la transformación de energía es :
+Cu * 2Ò * n
+Cu : par del aereomotor ( N * m )
+n : velocidad de rotación ( rpm )
+i : Corriente proporcionada por el aereogenerador a una tensión U
+4 . 1 . 2 . GENERADOR DE CORRIENTE CONTINUA . ( Dínamo ) .
+La máquina está formada por dos partes bien diferenciadas :
+- El cicuito magnético ( bobina de inducción ) que crea un campo de inducción en el entrehierro y recibe el nombre de inductor .
+- El bobinado de inducido en el que se recupera la energía eléctrica producida por la rotación del rotor accionado por el aeromotor .
+Para recuperar esta energía , el inducido va provisto de un colector , que en la mayoría de los casos va provisto por dos sectores aislados de 180 ? .
+Dos escobillas , situadas una frente a otra , se ponen en contacto suscesivamente con el sector A despúes con el sector B , lo que permite que la corriente circule siempre en el mismo sentido en la utilización . En relidad , el colector consta de un gran número de sectores , que corresponden a otros tantos conductores , pero su papel es el mismo : hacer circular una corriente de igual sentido por todos los conductores de un mismo polo .
+Si se considera que ese flujo producido por la bobina de exitación es constante ( máquina compensada ) , la corriente proporcionada es proporcional a la velocidad de rotación . La relación entre la tensión en bornes de la máquina y la corriente es :
+u = E - R * i
+E : fuerza electromotriz de la dínamo .
+R : resistencia de inducido .
+i : Corriente sumunistrada a la carga .
+Sección de un generador de continua , dínamo .
+Inducido simplificado de una dínamo
+4 . 1 . 3 . GENERADOR SINCRONO DE CORRIENTE ALTERNA .
+La máquina consta de las siguientes partes .
+- La bobina de excitación que crea el campo magnético en el cual el entrehierro es móbil , es el rotor accionado por el aeromotor . Puede ser de dos tipos :
+? Rotor bobinado alimentado por dos colectores continuos en los que la corriente circula siempre en el mismo sentido .
+? Rotor de imanes permanentes , con lo que se suprimen escobillas y colectores , que pueden ser causa de averías .
+- El inducido , en el que se recupera la energía , solidario a la carcasa , y conectado a la utilización . Este al estator , y puede ser monofásico o trifásico . El trifásico permite obtener una tensión alterna casi sinuosidal ( curva representativa de los valores del seno ) y , por tanto , mejor rendimiento .
+4 . 1 . 4 . Ventajas e inconvenientes .
+El principal inconveniente de la dínamo es la presencia de escobillas y colectores , que requieren un mantenimiento periódico . Por otra parte , la dínamo es más pesada y cara que un generador de corriente alterna .
+Pero no necesita ningún dispositivo complicado para la carga de baterías .
+Un simple diodo , ( valvula de vacio termodiónica formada por dos electrodos ; conectada a un circuito permite el paso de la corriente en un solo sentido ) , que soporte la intensidad nominal de la dínamo , será suficiente para evitar que la batería pueda ser cortocircuitada por el inducido , cuando esté parado .
+El alternador , principalmente del tipo de rotor de imanes permanentes , presenta muchas ventajas . Su mantenimiento es nulo debido a la total ausencia de piezas en rozamiento . Para una misma potencia es más ligero y económico .
+Pero debe girar a una velocidad más elevada y más estable que la dínamo ( en general 3000 rpm ) y además requiere un rectificador para la carga de baterías . A pesar de los inconvenientes propios de alternador , su utilización está generalizada , excepto para aeromotores de pequeña potencia , en los que la estabilidad de la velocidad de rotación no es suficiente .
+En general , se utilizan alternadores trifásicos de imanes permanentes .
+4 . 1 . 5 . El multiplicador .
+Se comprobó que el empleo de alternadores obliga a utilizar un multiplicador .
+Efectivamente , los rotores de diámetro superior a los 5 metros , tienen velocidades de rotación demasiado bajas ( < 200rpm ) para poder accionar directamente un alternador clásico .
+Por tanto , para estas máquinas , es imprescindible intercalar un multiplicador entre el aeromotor y el generador .
+Hay tres tipos de multiplicador que pueden utilizarse con los aeromotores :
+- El más sencillo es el multiplicador de engranajes , de uno o varios ejes de ruedas dentadas cilíndricas . Es económico , pero de construcción embarazosa para conseguir relaciones de multiplicación elevadas .
+- El empleo de trenes planetarios permite obtener multiplicaciones elevadas en un espacio reducido . La repartición de pares y esfuerzos entre varios satélites , así como la disposición coaxial , ( perteneciente al eje o concerniente a él ) , de los ejes de entrada y salida facilitan una construcción compacta y relativamente ligera . Los satélites , arrastrados por un tren , engranan por una parte con el piñón colocado en el eje de salida , y por otra con una corona exterior fija . El eje de entrada es solidario con el tren que mueve satélites .
+- El reductor de acoplamiento cónico , permite disponer el eje de salida perpendicular al de entrada .
+En todos los casos , las dientes helicoidales aseguran un mejor rendimiento y también un funcionamiento más silencioso .
+Nota : Se han realizado algunos sistemas para aumentar la velocidad de rotación del generador , sin multiplicador , como pueden ser :
+- Hélices de contrarotación .
+- Empleo de la elevada velocidad periférica del rotor ( rotor con llanta ) ,
+pero estos sistemas nunca han pasado del estado de prototipo .
+Tipos de multiplicadores .
+4 . 1 . 6 . RECUPERACION DE LA ENERGIA EN EL SOPORTE FIJO .
+4 . 1 . 6 . 1 . Máquinas sin multiplicador
+El generador eléctrico está siempre colocado en la parte móvil de la máquina . La energía eléctrica se transmite al soporte fijo mediante un conjunto de colectores y escobillas , generalmente sobredimensionados para evitar pérdidas inútiles por resistencia en los contactos demasiado elevada .
+4 . 1 . 6 . 2 . Máquinas con multiplicador .
+En este caso , puede estudiarse la solución del multiplicador colocado en la base , sobre todo para la recuperación de la energía mecánica . El multiplicador tiene entonces dos ejes perpendiculares , el eje horizontal y el vertical . Pero los problemas de estancamiento en el eje vertical son graves . En el caso de recuperación de energía eléctrica , interesa siempre utilizar el sistema de colectores escobillas .
+4 . 1 . 7 . PROTECCION CONTRA LOS RAYOS .
+Los aerogeneradores se colocan generalmente en puntos elevados , y además deben ser más altos que los obstáculos de sus alrededores . Por tanto , frecuentemente constituyen los puntos de descarga de electricidad estática durante las tormentas .
+Aunque , por propia constitución el generador está protegido contra las descargas eléctricas , por estar encerrado en una estructura metálica conectada a tierra ( caja de Faraday ) , la instalación a la que está conectada puede ser destruida por las sobretensiones que se propagan por el cable eléctrico de alimentación colocado entre el aerogenerador y la utilización . El generador eléctrico puede resultar dañado por contracorriente , en caso de que la utilización quede en cortocircuito .
+Por tanto , para emplazamientos expuestos a posibles descargas atmosféricas , es indispensable :
+? Conectar la torre soporte a una buena toma de tierra ( inferior o a igual a 3 Û ) .
+? Colocar disyuntores de gas en el punto de conexión de la utilización , con los cables eléctricos del aerogenerador . La tensión de cebado de los disyuntores debe ser aproximadamente el doble de la tensión máxima del generador eléctrico :
+- dínamo : tensión en vacío X 2 ;
+- alternador : tensión eficaz en vacío X 2 .
+Estos disyuntores deben estar conectados a la toma de tierra por una línea lo más directa posible .
+4 . 2 . SOPORTE PARA AEROGENERADORES .
+Los aeromotores de pequeña y mediana potencia , pueden estar colocados en dos tipos de soporte :
+? Soportes autoportantes :
+- Estructura metálica .
+- Tubulares .
+- De hormigón .
+? Soportes atirantados
+- Estructura metálica .
+- Tubulares .
+4 . 2 . 1 . LOS SOPORTES ATIRANTADOS ABATIBLES .
+El empuje en la parte superior del soporte es debido principalmente al arrastre del rotor , sobre todo si el sistema de regulación empleado es de arrastre máximo , cuyo valor es :
+T : Empuje en la parte superior del soporte ( newtons )
+m : Masa volumétrica o densidad del aire ( 1 , 25 kg / m3 )
+S : Superficie barrida por el rotor ( m ? )
+V : Velocidad del viento ( m / s )
+Cx : Coeficiente de empuje .
+Remplazando :
+S = 0 , 7375 m ?
+V = 7 m / s
+Cx = 0 , 025
+Resultado :
+T = 0 , 56 nt
+Siempre que el terreno lo permita , es aconsejable utilizar un soporte atirantado basculante , que facilite el mantenimiento del aeromotor y del mismo soporte , en el suelo y por tanto con una mayor comodidad y sin peligro .
+Empleando elementos tubulares , muy utilizados en los circuitos de distribución , y las bridas de unión normalizadas , la construcción de un soporte de hasta 15 m es simple y menos costoso que el soporte autoportante .
+Debe realizarse un atirantamiento con cuatro vientos , inclinados 45 ? , un cable de acero galvanizado , y de forma que el punto de anclaje sobre el soporte sea lo suficientemente bajo para no impedir el giro del rotor . La unión de los cables al suelo , debe hacerse a través de tensores que permitan regular la tensión de cada cable .
+Cualquiera que sea el tipo de soporte utilizado , hay que tener en cuenta :
+- la protección contra la corrosión ;
+- la facilidad de montaje y desmontaje de la máquina ;
+- los riesgos de la formación de hielo .
+Ý aspa
+Altura torre
+Altura ancla
+Mast . maniob .
+Secc . cable
+2 m
+15 m
+14 , 2 m
+3 , 6 m
+11 m
+5 m
+15 m
+13 m
+4 , 5 m
+20 m
+Dimensionado de soportes atirantados y basculantes
+? Nivelación de los puntos de anclaje al suelo ,
+Nos referimos aquí a los cables que se emplean para las maniobras de elevación y abatimiento de la torre soporte . Se emplean dos cables laterales para guiar la trayectoria de bajada y otros dos para subir o bajar el soporte .
+Los tensores permiten variar ligeramente la longitud de los cables , pero es insuficiente , y por tanto es indispensable colocar los cables laterales en el mismo plano horizontal que el pie del soporte , y alinearlos con el eje de basculamiento de dicho pie .
+La posición del anclaje de los otros dos cables es menos importante . en terreno inclinado , debe colocarse el anclaje correspondiente al dispositivo de elevación ( torno de tambor o cabría de fricción ) en el punto menos elevado de los dos , ya que así se disminuirá el esfuerzo inicial .
+Torre atirantada abatible .
+4 . 3 . DISPOSITIVOS DE ALMACENAMIENTO .
+Dado que una característica esencial del viento es su discontinuidad en el tiempo , se han realizado diversos estudios destinados a desarrollar sistemas que permitan almacenar la energía producida por el viento y no utilizada directamente durante los períodos de producción a fin de restituir una parte , la mayor posible , durante los días de calma .
+Este aspecto de la energía eólica es , aún hoy , uno de los que más frenan su desarrollo , ya que este almacenamiento , tanto más importante cuanto más irregular sea el régimen de vientos , constituye frecuentemente una parte importante ( > 20 % ) del costo de una instalación de producción de energía eléctrica a partir del viento .
+En esta obra daremos , sólo a título informativo , una breve descripción de los dispositivos de almacenamiento , exceptuando las baterías de acumuladores clásicos , que trataremos con más detalle ya que siguen siendo el sistema más fácil y a menudo más económico ( relativamente ) para almacenar energía eléctrica en pequeña cantidad .
+Hay que remarcar que todos los dispositivos de almacenamiento , incluidas las baterías de acumuladores , tienen rendimientos entre el 70 y el 80 % .
+4 . 3 . 1 . ACUMULADORES DE PLOMO .
+El tipo de acumulador de plomo que conviene utilizar , fué puesto a punto de 1860 por Planté . Desde entonces no ha sufrido más modificaciones que las destinan a mejorar sus prestaciones , pero el principio de funcionamiento sigue siendo el mismo .
+? Construcción .
+- El recipiente es de material aislante , vidrio o plástico .
+- Las placas están formadas por rejillas de plomo - antimonio en las mallas de las cuales se encuentra la materia activa en forma de pasta .
+Electrodo positivo - ánodo : 75 % de minio + 25 % de litargio .
+Electrodo positivo - cátodo : 25 % de minio + 75 % de litargio .
+- El electrólito es una solución de ácido sulfúrico cuya densidad es máxima al final de la carga ( 30 % ) y mínima al final de la descargar ( 16 % ) .
+? Principio fundamental de funcionamiento .
+Durante la descarga , el ácido sulfúrico del electrodo se descompone :
+- por una parte , se forma agua y óxido de plomo en el ánodo ;
+- por otra , en el cátodo , se acumula sulfato de plomo insoluble .
+Si la descarga es demasiado profunda , se forma sulfato de plomo incapaz de descomponerse por reacción inversa durante la carga , y las placas negativas se " sulfatan " ( se vuelven blanquecinas ) .
+Durante la carga , el fenómeno es exactamente el inverso , y cuando está del todo cargado se llega a la electrólisis del agua con desprendimiento de hidrógeno en el cátodo . Esquemáticamente tenemos :
+PbO2 + 2H2SO4 + Pb ? - ? PbSO4 + 2H2O
+El electrólito , pues , participa estrechamente en la reacciones .
+Una particularidad del acumulador de plomo , es su sensibilidad a la reacciones secundarias : acción del ácido sulfúrico sobre el plomo y el óxido de plomo , corrientes locales ocasionadas por la constitución heterogénea de las placas , sobre todo en las placas positivas en las que la fuerza electromotriz debida al contacto plomo - óxido de plomo es elevada .
+El resultado de todo es la autodescarga y sulfatación progresiva de la placas .
+Otra característica del acumulador de plomo es la variación de materia activa a lo largo del ciclo de carga - descarga :
+- En la descarga , las placas casi duplican su volumen inicial , por lo cual se corre el peligro de que la materia activa se despegue en trozos y cree cortocircuitos en el acumulador .
+Todo lo expuesto hasta aquí tiene por objeto dejar patente la importancia de la vigilancia adecuada del estado de carga o descarga de una batería de plomo para conservarla en buenas condiciones de funcionamiento , ya que una carga o descarga excesivas provocan el rápido envejecimiento del acumulador .
+El rendimiento de la batería conveniente , cuando las instalaciones se alimenten exclusivamente de la energía almacenada en las baterías , distribuir la descarga de las mismas , y no descargarlas simultáneamente siempre que sea posible ( ver también las características de los fabricantes ) .
+- Vida útil : 10 a 20 años según la calidad de acumulador .
+- Número de ciclos de carga durante la vida útil del acumulador : ~ 1500 .
+- Resistencia interna de un elemento , siendo la masa en kilogramos de un elemento de acumulador : Ri ¸ 0 , 08Û * 1 / m
+- Masa : 1kg para 20 a 40 KW .
+- Rendimiento - capacidad : Estas dos características dependen en gran medida del régimen de carga - descarga ( valor típico para cálculos : 80 % ) .
+Todos cuando antecede es cierto para los acumuladores son preferibles las baterías de tipo estacionario o semi - fijo de 2 V por elemento y no las baterías de arranque ( para automóviles ) , que tienen una vida útil más corta , capacidad nominal más baja y sobre todo , que soportan mal los ciclos de carga - descarga .
+CONCLUSIONES .
+A pesar de los inconvenientes que presenta , en particular la necesidad de no sobrecargarlo ni descargarlo en exceso , el acumulador de plomo de tipo semifijo es actualmente el mejor adaptado y más económico para su empleo con aerogeneradores . Para minimizar las pérdidas de rendimiento debidas al paso por el sistema de almacenamiento , el usuario de energía eólica debe realizar la instalación y adaptar su funcionamiento de manera que puede utilizar el máximo de energía de salida del aerogenerador .
+Ejemplo :
+En las zonas en que el viento sopla regularmente cada día , puede aprovecharse el período de producción de energía eólica para bombear agua a un depósito situado por encima del nivel de utilización , de forma que ésta se distribuya después por gravedad .
+Emplear los aparatos eléctricos ( sierra , taladro . . . ) :
+? directamente desde la salida eléctrica del aerogenerador , si éste nos proporciona corriente en formato industrial ( 220 V o 380 V ) .
+? o bien utilizando un convertidor ( giratorio o estático ) conectado directamente a la salida del rectificador .
+Nota : Reposición de acumuladores de plomo de tipo semifijo cuyas placas puedan sacarse del recipiente ( generalmente de vidrio ) .
+Cuando las placas de una batería están sulfatadas ( tono blanquecino para las placas negativas y claro para las positivas ) , puede conseguirse una des - sulfatación con una serie de cargas a baja intensidad , reemplazando el ácido por agua ( destilado o de lluvia ) . Esta se enriquece con ácido y antes de la puesta en servicio del elemento se le añade el necesario para conseguir la concentración adecuada .
+Cuando se desea dejar una batería en reposo durante varios meses , es necesario guardarla en estado de plena descarga reemplazando el ácido por agua destilada .
+4 . 3 . 1 . 1 . Determinación de la capacidad de la batería de acumuladores .
+Para garantizar el suministro de energía en la utilización con un mínimo de discontinuidad , la batería de acumuladores deberá estar correctamente determinada . Para ello necesitamos conocer :
+? Los datos meteorológicos del emplazamiento . Cuanto más exactos sean estos datos , mejor será la determinación de la batería de acumuladores .
+? La potencia del aerogenerador de que dispone la instalación .
+? La potencia media consumida por la utilización ( P ) . Esta potencia debe tener en cuenta todos los aparatos alimentados con energía eléctrica proveniente de la batería de acumuladores , y sus turnos , es decir el número de horas que funciona cada uno al día .
+Todos los fenómenos que hemos citado , tienen carácter aleatorio :
+- la producción de energía es discontínua ;
+- el consumo varía según los días ;
+- el valor de la corriente dada por el aerogenerador , depende del estado de carga de las baterías ;
+- además , se ha visto ya que la energía restituída por la batería depende del régimen de descarga ;
+- y , por otra parte , no toda la energía producida pasa por la baterías y por tanto no queda afectada por el rendimiento de éstas .
+Para un dimensionado exacto , hay que recurrir a una simulación de funcionamiento de la instalación , mediante ordenador . Los datos esenciales son las velocidades de viento que proporciona el SENAMHI , en formato directamente aplicable al ordenador , siempre que estos sean aplicables a nuestro emplazamiento . Estos métodos requieren procesos engorrosos y caros , y normalmente se recurre a cálculos más sencillos , como el que describimos a continuación :
+Designemos por N1 el período más largo durante el cual el viento ha sido inferior al viento productivo ( V < Vd ) . No se tendrán en cuenta aquellos períodos excesivamente largos que no se repitan más de 4 veces durante un año , ya que el hacerlo conduciría a sobredimensionar la batería , con el consiguiente sobrecosto .
+Y por N2 el período más largo durante el cual el viento se ha mantenido entre el productivo ( Vd ) y de nominal ( Vn ) . Cuando el viento alcanza la velocidad nominal o de regulación , el aerogenerador da su potencia nominal .
+En general se toma una autonomía para las baterías , en días N , inferior o igual a 1 , 25 N1 :
+N ? 125N1
+En efecto , el coeficiente de N1 depende de la importancia de N2 frente a N1 .
+Si N1 ¸ N2 , los vientos serán débiles muy frecuentemente , y por tanto conviene tomar N ¸ 1 , 25 N1 .
+Este valor de N nos permite calcular la capacidad de la batería en watt - hora .
+Capacidad de la batería :
+CWh = N * 24 * Pm ( Pm = Potencia media total ) Result : 8649 w / h
+CWh = N * E ( E = Energía total )
+Teniendo en cuenta la tensión Ub elegida par la batería de acumuladores , en función de los aparatos y de la tensión nominal del aerogenerador , la capacidad vendrá dada por :
+CAh = CWh / Ub
+Resultado :
+CAh = 360 , 375 amp / h
+Esta capacidad debe ser compatible :
+- Con la intensidad de corriente máxima que puede suministrar el aerogenerador ( Imax = Pmax / Ub ) que se debe ser inferior a CAh / 10 .
+Imax < CAh / 10 .
+Resultado :
+I max = 41 , 67 amp
+41 , 67 < 36 , 0375
+para las baterías de plomo ;
+- Con un coste y dimensiones aceptables para la batería de capacidad suficiente para la autonomía deseada de n días .
+En caso en que el valor hallado para CAh se a demasiado elevado , será necesario disponer de una fuente de emergencia mayor , o buscar otro emplazamiento con régimen de vientos más favorables , si es que es posible .
+4 . 3 . 2 . CONTROL DEL ESTADO DE LA CARGA DE LA BATERIA DE ACUMULADORES . CIRCUITOS ASOCIADOS ( Control manual ) .
+4 . 3 . 2 . 1 . Aerogenerador equipado con generador de corriente continua .
+Contiene los siguientes dispositivos de protección , en serie con el circuito de carga de la batería de acumuladores :
+- Obligatoriamente , un diodo de potencia que evite que la batería pueda descartarse a través del generador , cuando esté parado por la falta de viento o por estar frenado .
+- Un interruptor y un fusible en el circuito de carga del aerogenerador , que pueden estar colocados en la misma caja . El interruptor permite abrir el circuito de carga , cuando las baterías estén totalmente cargadas . El fusible protege a los componentes en caso de falsas maniobras o de fallo de un componente ; debe estar calibrado en función de la corriente máxima que puede proporcionar el aerogenerador .
+- Un interruptor y un circuito de utilización ( optativo ) que proteja las baterías y el circuito eléctrico en caso de cortocircuito prolongado en la utilización .
+- Dispositivo de control ( optativos ) :
+- Un voltímetro calibrado según la tensión de la batería y que sirve para verificar su estado de carga .
+- Un amperímetro o testigo de carga montado en serie en el circuito de carga , que permita medir la corriente suministrada por el aerogenerador .
+Empleando un amperímetro de cero central , podemos medir la corriente suministrada por el aerogenerador y la consumida por la utilización , pudiendo verificar así los cálculos de autonomía .
+Circuito de gobierno y maniobra asociado a una aerogenerador con dínamo .
+4 . 3 . 2 . 2 . Aerogenerador equipado con alternador .
+El diodo es sustituido por un rectificador monofásico o trifásico según el alternador utilizado .
+Entre el alternador y el rectificador , puede intercalarse un transformador para adaptar la tensión de salida del alternador a la de la batería de acumuladores .
+En todos los casos , el estado de carga de las baterías , debe ser comprobado periódicamente , verificando la concentración del electrólito del acumulador con un ácido graduado en densidad o en grados Baumé .
+Circuito de gobierno asociado a una aereogenerador con alternador .
+4 . 3 . 2 . 3 . EMPLEO DE UN CONTADOR DE AMPERIOS - HORA
+Cabe mencionar que existe un mecanismo de control automático , el cual es bastante complejo por lo cual obviaremos su explicación en la tesina
+Otra posibilidad , válida para cualquier tipo de generador , consiste en emplear un contador reversible que nos dé en cada instante el número de Ah almacenados en la batería . Este contador va provisto de los índices regulables que pueden colocarse en los niveles de frecuencia elegidos como umbral de carga o descarga . Estos índices , asociados a contactos , pueden gobernar :
+- Un contador .
+- La puesta en marcha de la fuente de energía .
+- Una sirena . . .
+Además , el contador está afectado por el rendimiento de la batería , cuyo valor puede elegirse en el momento de instalarlo .
+Pero estos contadores presentan graves inconvenientes :
+- Son muy caros .
+- No se adaptan más que a una determinada capacidad de carga variables y que el rendimiento de la batería decrece al envejecer ésta .
+4 . 3 . 3 . VALORES DE LAS TENSIONES DE FINAL DE CARGA Y DESCARGA .
+Las indicaciones más importantes vienen especificadas por el fabricante : por una parte , para las tensiones y , por otra , para la densidad volumétrica .
+Sin embargo , las siguientes indicaciones , permiten conseguir una regulación adaptada al tipo de utilización .
+4 . 3 . 3 . 1 . Valor de la tensión de final de carga .
+El valor de la tensión cuando " hierve " un elemento acumulador de plomo de tipo semifijo es de 2 , 35 V aproximadamente , a 25 ? C . SI se elige este valor como límite de final de carga , el consumo de agua por electrólisis será verdaderamente importante en caso de largos períodos de viento . La elección del valor umbral de final de carga , dependerá de las características propias de la instalación :
+? El régimen de vientos : un régimen de vientos regular permite acercarse al funcionamiento en flotación y el nivel final de carga se alcanzará difícilmente . Es el régimen de funcionamiento más favorable , pero desgraciadamente no el más generalizado . Un régimen de vientos irregular implica el funcionamiento de la batería en ciclos de carga - descarga . el nivel de final de carga se alcanza frecuentemente , y es importante que la regulación está bien hecha .
+? Capacidad de la batería de acumuladores ( C ) con relación a la corriente de la I n del generador . Cuanto mayor sea la relación C / In , menor será el riesgo de que la batería se sobrecargue en régimen de vientos irregulares .
+? Tipo de utilización . Es más favorable un funcionamiento continuo que secuencial .
+Por tanto el funcionamiento de la instalación será más satisfactorio cuanto más regulares sean el régimen de vientos y la utilización , ya que entonces nos acercaremos más a una utilización directa de la energía producida por el aerogenerador , sin pasar por la batería de acumuladores .
+Regla práctica : Para los emplazamientos en los que predomine el funcionamiento por carga y descarga , se ajustará el nivel de corte de la corriente de carga al máximo en función del consumo de agua . Se ha visto que el consumo normal de agua es aproximadamente de 0 , 18 litros por mes para un elemento de 2 V y de 1000 Ah .
+Cualquiera que sea el ajuste , es importante que al final de la carga , la densidad del electrólito alcance el valor especificado por el fabricante de la batería .
+4 . 3 . 3 . 2 . Valor de la tensión de final de descarga por elemento .
+Depende del tipo de acumulador empleado , pero para acumuladores plomo de tipo semifijo es importante no descender por debajo de los 1 , 8 V por elemento , para evitar la formación de depósitos de óxido no soluble en la recarga y , por tanto , una disminución importante de la capacidad . El valor de 1 , 8 citado , es un mínimo para una corriente de descarga inferior o igual a C / 10 . Este valor de tensión corresponde a una densidad volumétrica del electrólito de 1180 kg / m3 .
+Además de los fenómenos de oxidación , el electrólito de las baterías descargadas se congela a temperaturas más altas . Según el emplazamiento , el valor elegido como umbral de descarga deberá tener en cuenta la posibilidad de congelación del electrólito , que puede provocar la rotura de los recipientes en los que están colocadas las placas y el electrólito .
+Por otra parte , este valor de 1 , 8 V por elemento puede ser incompatible con el buen funcionamiento de los aparatos de instalación ; en tal caso , el final de descarga vendrá evidentemente condicionado por el nivel de no funcionamiento de los aparatos .
+4 . 4 . LAS FUENTES DE EMERGENCIA .
+Las fuentes de emergencia deben proporcionar energía a la utilización en caso de ausencia de viento o avería en el aerogenerador .
+En algunos casos , no es posible cortar la alimentación de la utilización aunque la batería está totalmente descargada . Un ejemplo pueden ser las estaciones de teletransmisión ( teléfono , teleseñalización , telecontrol , . . . ) .
+Entre las estaciones alimentadas por un aerogenerador y que dispongan de fuente de emergencia hay que distinguir aquellas que tengan un consumo medio inferior a 4 A de las que la tengan superior .
+? En el primer caso , una batería de pilas químicas , generalmente alcalinas ( potasa ) con despolarización por aire , es la solución más adecuada ya que es el tipo de pilas que proporciona la energía eléctrica más económica . Su vida útil , en servicio , es de 3 años .
+La tensión nominal por elemento es de 1 , 2 V . La tensión necesaria para el funcionamiento de la instalación se consigue conectando en serie los elementos necesarios .
+La corriente nominal necesaria para la alimentación de la utilización puede conseguirse por conexión en paralelo de varias series de elementos . Pero siempre es preferible emplear pilas que den la corriente necesaria , para evitar que en la conexión en paralelo , unas series puedan descargarse en otras .
+? En el segundo caso es necesario utilizar un motor térmico , debiendo distinguir dos tipos :
+- Motores de gasolina para pequeñas potencias ( 1 - 2KW ) y utilización poco frecuente .
+- Motores diesel para potencias medias ( 3 - 20 KW ) y uso más frecuente .
+En el caso en que la energía eólica se emplee para alimentar una vivienda aislada , el grupo diesel presenta la ventaja de adaptarse al consumo de los aparatos que deben funcionar con corriente alterna y de potencia elevada . En los otros casos , el grupo puede usarse para recargar parcialmente la batería de acumuladores .
+Siempre que sea posible debe evitarse la instalación de una fuente de emergencia , ya que son caras y si la instalación está bien dimensionada , su uso será muy poco frecuente .
+CAPITULO V
+5 . 0 . UTILISACION DE LA ENERGIA ELECTRICA DE ORIGEN EOLICO .
+5 . 1 . UTILIZACION DE LA ENERGIA ELECTRICA .
+Cualquiera que se el tipo de aparato alimentado por energía eléctrica de origen eólico , se caracteriza por tres parámetros :
+? La naturaleza de la tensión de alimentación y su valor :
+- contínua
+- alterna
+- indistinta
+? La potencia necesaria para su funcionamiento :
+- en el arranque
+- en régimen normal
+? El factor de utilización : porcentaje de tiempo durante la cual el aparato está en funcionamiento y eventualmente , la frecuencia de utilización . Estos parámetros permiten definir :
+- El aerogenerador ;
+- La batería de acumuladores ;
+- Los aparatos anexos a la instalación ;
+- La fuente de emergencia en caso de haberla .
+5 . 1 . 1 . UTILIZACION DE LA ENERGIA EOLICA PARA USOS DOMESTICOS .
+En este caso el número y tipo de aparatos es muy diverso , aunque para usuarios acostumbrados a vivir en sentidos aislados puede establecerse una prioridad de necesidades en el orden que se da a continuación . Este orden tiene en cuenta criterios de control y no de consumo .
+1 . Iluminación de locales .
+2 . Suministro de agua corriente .
+3 . Refrigeración - Congelación .
+4 . Equipos musicales , receptores de radio y televisión .
+5 . Pequeñas herramientas de taller y motores eléctricos ( circulares de calefacción , por ejemplo ) .
+6 . Accesorios electrodomésticos .
+Hay que resaltar que , excepto en emplazamientos muy favorables ( lugares muy ventosos ) , no se considera la posibilidad de calefacción a partir de aerogeneradores .
+Para satisfacer todas estas necesidades , existen dos tipos de aparatos :
+- Los comerciales de gran difusión , y por tanto económicos , pero mal adaptados a esta utilización y con rendimientos mediocres , y que normalmente se alimentan con corriente alterna de 220 V y 50 Hz .
+- Los mejor adaptados , a menudo más robustos y caros , pero de difusión mucho menor .
+Vamos a estudiar cada una de las necesidades en el orden dado y a determinar los elementos para la elección de los aparatos .
+Iluminación .
+Las lámparas de incandescencia clásicas , que funcionan indistintamente con continua o alterna , se encuentra con distintos tipos de casquillo B22 ( bayoneta ) o E27 ( rosca ) y potencias comprendidas entre los 15 y 100 W para las tensiones siguientes : 12 , 24 , 48 , 110 - 130 , 210 - 230 voltios .
+Los tubos fluorescentes pueden alimentarse con continua a través de un convertidor o transistores a una frecuencia de 16 Khz a partir de 12 V , 24 V o 110 V .
+Vemos claramente que el rendimiento luminoso es superior con tubos fluorescentes ( para un mismo flujo luminoso constante , la lámpara de incandescencia consume más del doble de energía ) .
+El costo inicial de instalación es muy superior en el caso del tubo fluorescente , porque el convertidor es caro , pero el costo de emplear un tubo fluorescente es prácticamente el mismo que para la lámpara de incandescencia .
+Refrigeración - Congelación .
+Los armarios frigoríficos o congeladores más difundidos , van equipados de compresores alimentados con corriente alterna . En el momento del arranque se producen demandas de intensidad 4 a 10 veces superiores a la nominal , lo cual es muy perjudicial si se emplean convertidores de continua - alterna estáticos .
+Es mucho más interesante emplear refrigeradores - congeladores de absorción ( sin motor ) que se encuentran con capacidades hasta de 250 litros y que funcionan a 12 , 24 , 110 o 220 V de continua . Pero estos aparatos consumen mucha energía ( 1 KWh / días para 250 litros ) .
+Existe finalmente otro sistema de refrigeración - congelación de elevado rendimiento , empleando en las embarcaciones Este sistema consta de un compresor , moviendo por un motor de continua , una bomba que hace circular agua por el condensador , y la generación de fría se consigue haciendo circular un líquido por placas tipos radiador ( placas frías ) .
+La ventaja esencial de este sistema es que sólo funciona 2 horas al día ( una por la mañana y otra por la tarde ) .
+Equipos musicales , receptores de radio y televisión .
+El consumo de estos aparatos , actualmente de transitores , es muy bajo .
+Pueden utilizarse :
+- De continua a 9 ó 12 V , bien sea directamente o através de un convertidor continua - continua . Es el caso de los receptores de televisión , que generalmente pueden funcionar a 12 V .
+- O de alterna , y su bajo consumo permite alimentadores através de un convertidor ( ondulador ) de continua - alterna de pequeña potencia ( máximo 100W ) .
+Pequeñas herramientas de taller , motores eléctricos y electrodomésticos .
+Algunos aparatos van provistos de motores universales que pueden funcionar tanto con corriente continua como con alterna para una misma tensión , pero tienen muy poco rendimiento .
+Excepto para los circuladores de calefacción que pueden encontrarse con motores de continua , es interesante que estos aparatos funcionen 220 o 380 V 50 H :
+- Utilizando un convertidor estático o rotativo ;
+- Haciéndolos funcionar directamente a la salida del aerogenerador , cuando sople el viento y proporcione la tensión nominal de salida 220 V 50 H monofásica ó 380 V 50 H trifásica .
+Nota : En caso de que el aerogenerador proporcione una tensión alterna de las mismas características que la de la red de distribución , y que alimente aparatos directamente a la salida de éste durante los períodos de funcionamiento , es importante :
+- No sobrepasar la potencia nominal del aerogenerador ;
+- Vigilar las sobreintensidades de arranque ( mínimo , 4 veces superior a la intensidad nominal para motores de pequeña potencia ) .
+5 . 1 . 1 . 1 . Estimación del gasto energético en una casa de campo .
+APARATO
+CA
+Tasa util .
+Costo
+Bs .
+Cosum / día
+kWh / día
+Consu / mes
+kWh / mes
+Consum / año
+kWh / año
+Consu / kW
+Refrigerador
+1
+3
+1 , 95
+0 , 63
+18 , 9
+226 , 8
+0 , 21
+Tubos de neón
+10
+11
+6 , 13
+1 , 98
+59 , 4
+712 , 8
+0 , 018
+Televisión
+1
+4
+1 , 23
+0 , 39
+11 , 8
+143 , 8
+0 , 09
+Radio
+1
+10
+0 , 5
+0 , 18
+5 , 4
+64 , 8
+0 , 018
+TOTALES :
+- -
+- - -
+9 , 81
+3 , 18
+95 , 6
+1148 , 2
+- - - - -
+Esta estimación es puramente teórica , basándonos en planos de instalaciones eléctricas caseras . Tomando esto en cuenta quizás en la práctica la diferencia se mínima , ya sea favorable o no , pero , considerable desde el punto de vista de reservas energéticas en los acumuladores .
+5 . 1 . 2 . LOS CONVERTIDORES .
+Los convertidores son de dos tipos :
+- Continua - continua . Generalmente formados por reductores o elevadores de tensión a transistores o tiristores . Permiten adaptar la tensión de la batería a la de utilización .
+- Continua - alterna . Pueden ser ondulares estáticos , a transistores o tiristores , o bien convertidores rotativos .
+Los onduladores a transistores o tiristores son : para potencias inferiores o iguales a 1000 W y a transistores ; para potencias superiores se emplean tiristores . Estos onduladores tienen un rendimiento cercano al 60 % y son muy sensibles a las sobrecargas . En particular , soportan mal las sobreintensidades de arranque de los motores . Además , ellos mismos presentan intensidades de arranque 5 a 6 veces superiores a la intensidad nominal , lo que implica que los dispositivos de mando ( fusibles , seccionadores , contactores , . . . ) deben estar bien dimensionados .
+Los convertidores rotativos . Esencialmente constan de un motor de corriente continua acoplado a un alternador . La tendencia es sustituirlos por los estáticos . En ulizaciones con sobreintensidades de arranque frecuentes , pueden todavía emplearse con ventaja . Pudiéndose comprar fácilmente de ocasión .
+CAPITULO VI
+6 . 0 . ANEXOS .
+6 . 1 . VALORACION DE LAS VELOCIDADES DEL VIENTO .
+Beafort
+m / s
+Designación
+Caracterizticas
+2
+1 , 8 / 3 , 3
+Flojito
+Apenas perceptible
+3
+3 , 4 / 5 , 2
+flojo
+Movimiento de hojas
+4
+5 , 3 / 7 , 4
+Bonacible
+Movimiento de ramitas
+5
+7 , 5 / 9 , 8
+Fresquito
+Silva el viento
+6
+9 , 9 / 12 , 4
+Fresco
+Dificil hablar
+7
+12 , 5 / 15 , 2
+Muy fresco
+Hojas arrancadas
+8
+15 , 3 / 18 , 2
+Duro
+Rotura de ramas
+9
+18 , 3 / 21 , 5
+Muy duro
+Arboles caídos
+10
+21 , 6 / 25 , 1
+Temporal
+Viento aúlla
+11
+25 , 2 / 29
+Tormenta
+Desperfectos en casas
+12
+29 >
+Huracán
+Muros derribados
+Valoración de las velocidades del viento .
+6 . 2 . DATOS METOROLOGICOS EN ORURO .
+REGISTRO EOLICO DIARIO
+FECHA : 08 - 09 / ABRIL / 1995
+ESTACION : Vinto ( La Lama )
+EQUIPO : Automatico SIAP
+Velocidad . . . . . . . . 7 . 6 Velocidad máxima . . . . . . . . 11 . 5 Dirección . . . . . . . . 186 Temperatura . . . . . . 8 . 3 Temp . max . diaria . . . . . . . . . 20 . 1 Temp . min . diaria . . 1 . 2 Humedad relativa . 25 Presión . . . . . . . . . . . . . . . . . 646 . 8 Lluvia . . . . . . . . . . . . 0
+Velocidad . . . . . . . . 4 . 8 Velocidad máxima . . . . . . . . 6 . 3 Dirección . . . . . . . . 186 Temperatura . . . . . . 7 . 8 Temp . max . diaria . . . . . . . . . 20 . 1 Temp . min . diaria . . 1 . 2 Humedad relativa . 25 Presión . . . . . . . . . . . . . . . . . 646 . 8 Lluvia . . . . . . . . . . . . 0
+Velocidad . . . . . . . . 7 . 6 Velocidad máxima . . . . . . . . 11 . 5 Dirección . . . . . . . . 186 Temperatura . . . . . . 8 . 3 Temp . max . diaria . . . . . . . . . 20 . 1 Temp . min . diaria . . 1 . 2 Humedad relativa . 25 Presión . . . . . . . . . . . . . . . . . 646 . 8 Lluvia . . . . . . . . . . . . 0
+Velocidad . . . . . . . . 7 . 6 Velocidad máxima . . . . . . . . 11 . 5 Dirección . . . . . . . . 186 Temperatura . . . . . . 8 . 3 Temp . max . diaria . . . . . . . . . 20 . 1 Temp . min . diaria . . 1 . 2 Humedad relativa . 25 Presión . . . . . . . . . . . . . . . . . 646 . 8 Lluvia . . . . . . . . . . . . 0
+Velocidad . . . . . . . . 7 . 6 Velocidad máxima . . . . . . . . 11 . 5 Dirección . . . . . . . . 186 Temperatura . . . . . . 8 . 3 Temp . max . diaria . . . . . . . . . 20 . 1 Temp . min . diaria . . 1 . 2 Humedad relativa . 25 Presión . . . . . . . . . . . . . . . . . 646 . 8 Lluvia . . . . . . . . . . . . 0
+Velocidad . . . . . . . . 7 . 6 Velocidad máxima . . . . . . . . 11 . 5 Dirección . . . . . . . . 186 Temperatura . . . . . . 8 . 3 Temp . max . diaria . . . . . . . . . 20 . 1 Temp . min . diaria . . 1 . 2 Humedad relativa . 25 Presión . . . . . . . . . . . . . . . . . 646 . 8 Lluvia . . . . . . . . . . . . 0
+Velocidad . . . . . . . . 7 . 6 Velocidad máxima . . . . . . . . 11 . 5 Dirección . . . . . . . . 186 Temperatura . . . . . . 8 . 3 Temp . max . diaria . . . . . . . . . 20 . 1 Temp . min . diaria . . 1 . 2 Humedad relativa . 25 Presión . . . . . . . . . . . . . . . . . 646 . 8 Lluvia . . . . . . . . . . . . 0
+Velocidad . . . . . . . . 7 . 6 Velocidad máxima . . . . . . . . 11 . 5 Dirección . . . . . . . . 186 Temperatura . . . . . . 8 . 3 Temp . max . diaria . . . . . . . . . 20 . 1 Temp . min . diaria . . 1 . 2 Humedad relativa . 25 Presión . . . . . . . . . . . . . . . . . 646 . 8 Lluvia . . . . . . . . . . . . 0
+Velocidad . . . . . . . . 7 . 6 Velocidad máxima . . . . . . . . 11 . 5 Dirección . . . . . . . . 186 Temperatura . . . . . . 8 . 3 Temp . max . diaria . . . . . . . . . 20 . 1 Temp . min . diaria . . 1 . 2 Humedad relativa . 25 Presión . . . . . . . . . . . . . . . . . 646 . 8 Lluvia . . . . . . . . . . . . 0
+Velocidad . . . . . . . . 7 . 6 Velocidad máxima . . . . . . . . 11 . 5 Dirección . . . . . . . . 186 Temperatura . . . . . . 8 . 3 Temp . max . diaria . . . . . . . . . 20 . 1 Temp . min . diaria . . 1 . 2 Humedad relativa . 25 Presión . . . . . . . . . . . . . . . . . 646 . 8 Lluvia . . . . . . . . . . . . 0
+Velocidad . . . . . . . . 7 . 6 Velocidad máxima . . . . . . . . 11 . 5 Dirección . . . . . . . . 186 Temperatura . . . . . . 8 . 3 Temp . max . diaria . . . . . . . . . 20 . 1 Temp . min . diaria . . 1 . 2 Humedad relativa . 25 Presión . . . . . . . . . . . . . . . . . 646 . 8 Lluvia . . . . . . . . . . . . 0
+Velocidad . . . . . . . . 7 . 6 Velocidad máxima . . . . . . . . 11 . 5 Dirección . . . . . . . . 186 Temperatura . . . . . . 8 . 3 Temp . max . diaria . . . . . . . . . 20 . 1 Temp . min . diaria . . 1 . 2 Humedad relativa . 25 Presión . . . . . . . . . . . . . . . . . 646 . 8 Lluvia . . . . . . . . . . . . 0
+Velocidad . . . . . . . . 7 . 6 Velocidad máxima . . . . . . . . 11 . 5 Dirección . . . . . . . . 186 Temperatura . . . . . . 8 . 3 Temp . max . diaria . . . . . . . . . 20 . 1 Temp . min . diaria . . 1 . 2 Humedad relativa . 25 Presión . . . . . . . . . . . . . . . . . 646 . 8 Lluvia . . . . . . . . . . . . 0
+Velocidad . . . . . . . . 7 . 6 Velocidad máxima . . . . . . . . 11 . 5 Dirección . . . . . . . . 186 Temperatura . . . . . . 8 . 3 Temp . max . diaria . . . . . . . . . 20 . 1 Temp . min . diaria . . 1 . 2 Humedad relativa . 25 Presión . . . . . . . . . . . . . . . . . 646 . 8 Lluvia . . . . . . . . . . . . 0
+Velocidad . . . . . . . . 7 . 6 Velocidad máxima . . . . . . . . 11 . 5 Dirección . . . . . . . . 186 Temperatura . . . . . . 8 . 3 Temp . max . diaria . . . . . . . . . 20 . 1 Temp . min . diaria . . 1 . 2 Humedad relativa . 25 Presión . . . . . . . . . . . . . . . . . 646 . 8 Lluvia . . . . . . . . . . . . 0
+Velocidad . . . . . . . . 7 . 6 Velocidad máxima . . . . . . . . 11 . 5 Dirección . . . . . . . . 186 Temperatura . . . . . . 8 . 3 Temp . max . diaria . . . . . . . . . 20 . 1 Temp . min . diaria . . 1 . 2 Humedad relativa . 25 Presión . . . . . . . . . . . . . . . . . 646 . 8 Lluvia . . . . . . . . . . . . 0
+Velocidad . . . . . . . . 7 . 6 Velocidad máxima . . . . . . . . 11 . 5 Dirección . . . . . . . . 186 Temperatura . . . . . . 8 . 3 Temp . max . diaria . . . . . . . . . 20 . 1 Temp . min . diaria . . 1 . 2 Humedad relativa . 25 Presión . . . . . . . . . . . . . . . . . 646 . 8 Lluvia . . . . . . . . . . . . 0
+Velocidad . . . . . . . . 7 . 6 Velocidad máxima . . . . . . . . 11 . 5 Dirección . . . . . . . . 186 Temperatura . . . . . . 8 . 3 Temp . max . diaria . . . . . . . . . 20 . 1 Temp . min . diaria . . 1 . 2 Humedad relativa . 25 Presión . . . . . . . . . . . . . . . . . 646 . 8 Lluvia . . . . . . . . . . . . 0
+Velocidad . . . . . . . . 7 . 6 Velocidad máxima . . . . . . . . 11 . 5 Dirección . . . . . . . . 186 Temperatura . . . . . . 8 . 3 Temp . max . diaria . . . . . . . . . 20 . 1 Temp . min . diaria . . 1 . 2 Humedad relativa . 25 Presión . . . . . . . . . . . . . . . . . 646 . 8 Lluvia . . . . . . . . . . . . 0
+Velocidad . . . . . . . . 7 . 6 Velocidad máxima . . . . . . . . 11 . 5 Dirección . . . . . . . . 186 Temperatura . . . . . . 8 . 3 Temp . max . diaria . . . . . . . . . 20 . 1 Temp . min . diaria . . 1 . 2 Humedad relativa . 25 Presión . . . . . . . . . . . . . . . . . 646 . 8 Lluvia . . . . . . . . . . . . 0
+Velocidad . . . . . . . . 7 . 6 Velocidad máxima . . . . . . . . 11 . 5 Dirección . . . . . . . . 186 Temperatura . . . . . . 8 . 3 Temp . max . diaria . . . . . . . . . 20 . 1 Temp . min . diaria . . 1 . 2 Humedad relativa . 25 Presión . . . . . . . . . . . . . . . . . 646 . 8 Lluvia . . . . . . . . . . . . 0
+Velocidad . . . . . . . . 7 . 6 Velocidad máxima . . . . . . . . 11 . 5 Dirección . . . . . . . . 186 Temperatura . . . . . . 8 . 3 Temp . max . diaria . . . . . . . . . 20 . 1 Temp . min . diaria . . 1 . 2 Humedad relativa . 25 Presión . . . . . . . . . . . . . . . . . 646 . 8 Lluvia . . . . . . . . . . . . 0
+Velocidad . . . . . . . . 7 . 6 Velocidad máxima . . . . . . . . 11 . 5 Dirección . . . . . . . . 186 Temperatura . . . . . . 8 . 3 Temp . max . diaria . . . . . . . . . 20 . 1 Temp . min . diaria . . 1 . 2 Humedad relativa . 25 Presión . . . . . . . . . . . . . . . . . 646 . 8 Lluvia . . . . . . . . . . . . 0
+Velocidad . . . . . . . . 7 . 6 Velocidad máxima . . . . . . . . 11 . 5 Dirección . . . . . . . . 186 Temperatura . . . . . . 8 . 3 Temp . max . diaria . . . . . . . . . 20 . 1 Temp . min . diaria . . 1 . 2 Humedad relativa . 25 Presión . . . . . . . . . . . . . . . . . 646 . 8 Lluvia . . . . . . . . . . . . 0
+Velocidad . . . . . . . . 7 . 6 Velocidad máxima . . . . . . . . 11 . 5 Dirección . . . . . . . . 186 Temperatura . . . . . . 8 . 3 Temp . max . diaria . . . . . . . . . 20 . 1 Temp . min . diaria . . 1 . 2 Humedad relativa . 25 Presión . . . . . . . . . . . . . . . . . 646 . 8 Lluvia . . . . . . . . . . . . 0
+Velocidad . . . . . . . . 7 . 6 Velocidad máxima . . . . . . . . 11 . 5 Dirección . . . . . . . . 186 Temperatura . . . . . . 8 . 3 Temp . max . diaria . . . . . . . . . 20 . 1 Temp . min . diaria . . 1 . 2 Humedad relativa . 25 Presión . . . . . . . . . . . . . . . . . 646 . 8 Lluvia . . . . . . . . . . . . 0
+Velocidad . . . . . . . . 7 . 6 Velocidad máxima . . . . . . . . 11 . 5 Dirección . . . . . . . . 186 Temperatura . . . . . . 8 . 3 Temp . max . diaria . . . . . . . . . 20 . 1 Temp . min . diaria . . 1 . 2 Humedad relativa . 25 Presión . . . . . . . . . . . . . . . . . 646 . 8 Lluvia . . . . . . . . . . . . 0
+Velocidad . . . . . . . . 7 . 6 Velocidad máxima . . . . . . . . 11 . 5 Dirección . . . . . . . . 186 Temperatura . . . . . . 8 . 3 Temp . max . diaria . . . . . . . . . 20 . 1 Temp . min . diaria . . 1 . 2 Humedad relativa . 25 Presión . . . . . . . . . . . . . . . . . 646 . 8 Lluvia . . . . . . . . . . . . 0
+Velocidad . . . . . . . . 7 . 6 Velocidad máxima . . . . . . . . 11 . 5 Dirección . . . . . . . . 186 Temperatura . . . . . . 8 . 3 Temp . max . diaria . . . . . . . . . 20 . 1 Temp . min . diaria . . 1 . 2 Humedad relativa . 25 Presión . . . . . . . . . . . . . . . . . 646 . 8 Lluvia . . . . . . . . . . . . 0
+Velocidad . . . . . . . . 7 . 6 Velocidad máxima . . . . . . . . 11 . 5 Dirección . . . . . . . . 186 Temperatura . . . . . . 8 . 3 Temp . max . diaria . . . . . . . . . 20 . 1 Temp . min . diaria . . 1 . 2 Humedad relativa . 25 Presión . . . . . . . . . . . . . . . . . 646 . 8 Lluvia . . . . . . . . . . . . 0
+Velocidad . . . . . . . . 7 . 6 Velocidad máxima . . . . . . . . 11 . 5 Dirección . . . . . . . . 186 Temperatura . . . . . . 8 . 3 Temp . max . diaria . . . . . . . . . 20 . 1 Temp . min . diaria . . 1 . 2 Humedad relativa . 25 Presión . . . . . . . . . . . . . . . . . 646 . 8 Lluvia . . . . . . . . . . . . 0
+Velocidad . . . . . . . . 7 . 6 Velocidad máxima . . . . . . . . 11 . 5 Dirección . . . . . . . . 186 Temperatura . . . . . . 8 . 3 Temp . max . diaria . . . . . . . . . 20 . 1 Temp . min . diaria . . 1 . 2 Humedad relativa . 25 Presión . . . . . . . . . . . . . . . . . 646 . 8 Lluvia . . . . . . . . . . . . 0
+6 . 3 . BIBLIOGRAFIA .
+? Machinery ' s Handbook ( Erik Oberg y Franklin D . Jones )
+? Atlas de Meteorología ( R . Candal Vila )
+? Prontuario de Meteorología y Oceanografía ( Serie KOEL )
+? Enciclopedia Visual ( Colección EDUCAR )
+? El hobby de la construcción ( Campero di Napoli )
+? Manual Práctico del Automovil ( Colección CULTURAL )
+? Diccionario de Sinonimos y Antonimos ( Colección CULTURAL )
+Autor :
+Aldo Barbera Saal – Erich Rude Cuzmar – David Mercado Mendoza
+Tesis de graduación secundaria
+Bolivia
+
+Comentarios
+El comentario ha sido publicado .
+Para dejar un comentario , regístrese gratis o si ya está registrado , inicie sesión .
+Agregar un comentario
+Enviar comentario
+Los comentarios están sujetos a los Términos y Condiciones
+Trabajos relacionados
+Pitagoras y el pitagorismo
+Biografía de pitagoras . Armonía de los contrarios . La comunidad pitagorica . Nació hacia el año 578 ac . En samos ( rival . . .
+Filósofos de la naturaleza
+Sócrates . La Política . Enseñanzas . El juicio . Tales de Mileto . Platón : Obra ; Teoría de las ideas ; Teoría del conocimien . . .
+Eutanasia
+Definición del término eutanasia . Eutanasia : ¿ Existe un derecho a morir ? . Formas de aplicación de la eutanasia . La batal . . .
+Ver mas trabajos de Filosofia
+Nota al lector : es posible que esta página no contenga todos los componentes del trabajo original ( pies de página , avanzadas formulas matemáticas , esquemas o tablas complejas , etc . ) . Recuerde que para ver el trabajo en su versión original completa , puede descargarlo desde el menú superior .
+
+Todos los documentos disponibles en este sitio expresan los puntos de vista de sus respectivos autores y no de Monografias . com . El objetivo de Monografias . com es poner el conocimiento a disposición de toda su comunidad . Queda bajo la responsabilidad de cada lector el eventual uso que se le de a esta información . Asimismo , es obligatoria la cita del autor del contenido y de Monografias . com como fuentes de información .
+El Centro de Tesis , Documentos , Publicaciones y Recursos Educativos más amplio de la Red .
+
+Términos y Condiciones | Haga publicidad en Monografías . com

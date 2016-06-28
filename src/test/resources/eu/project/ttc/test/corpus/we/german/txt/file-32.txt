@@ -1,0 +1,3148 @@
+Windenergie in Europa:
+Was bringen Gesetzgebung und Fördermassnahmen
+
+ausgearbeitet durch
+Béatrice Langraf, Thiemo Kellner
+Interwind AG
+Buchzelgweg 5, 8053 Zürich
+im Auftrag des
+Bundesamtes für Energie
+
+Mai 2000
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+I
+
+Inhaltsverzeichnis
+1 ZUSAMMENFASSUNG..................................................................................1
+1.1
+
+Fördersysteme
+
+1
+
+1.2
+
+Richtlinien der EU
+
+1
+
+1.3
+
+Lage in der Schweiz
+
+2
+
+2 AUSGANGSLAGE ........................................................................................2
+3 ZIELSETZUNG .............................................................................................2
+4 STRATEGIEN ZUR FÖRDERUNG VON WINDENERGIE IN EUROPA....................3
+4.1
+
+Die Einflussfaktoren der Energiepolitik
+
+3
+
+4.2
+
+Drei Strategien zur Förderung von Windenergie in Europa
+
+3
+
+4.2.1 System fixer Rücknahmetarife, REFITs (Renewable Energy Feed Tariffs)
+4.2.2 Ausschreibungssystem
+4.2.3 System „Grüner Zertifikate“
+
+3
+4
+5
+
+4.3
+
+Vergleich der drei Fördersysteme
+
+6
+
+4.4
+
+Technologie und Gestehungskosten von Windstrom
+
+9
+
+4.5
+
+Liberalisierung des europäischen Strommarktes und EU- Richtlinien
+für erneuerbare Energien
+9
+
+5 SCHLUSSFOLGERUNGEN UND EMPFEHLUNGEN FÜR DIE SCHWEIZ............. 10
+ANHANG:
+A.1
+
+LÄNDER .................................................................................. 11
+
+Statistischer Vergleich mit der Schweiz
+
+11
+
+A.1.1 Allgemein
+A.1.2 Stromverbrauch
+A.1.3 Installierte Windturbinenkapazität
+
+11
+12
+12
+
+A.2
+
+Dänemark
+
+13
+
+A.2.1
+A.2.2
+A.2.3
+A.2.4
+
+Statistische Daten
+Beschreibung der Windverhältnisse
+Turbinenhersteller
+Fördermassnahmen und Gesetzgebung
+
+13
+13
+13
+13
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+II
+
+A.3
+
+Deutschland
+
+14
+
+A.3.1
+A.3.2
+A.3.3
+A.3.4
+
+Statistische Daten
+Beschreibung der Windverhältnisse
+Turbinenhersteller
+Fördermassnahmen und Gesetzgebung
+
+14
+14
+15
+15
+
+A.4
+
+Frankreich
+
+16
+
+A.4.1
+A.4.2
+A.4.3
+A.4.4
+
+Statistische Daten
+Beschreibung der Windverhältnisse
+Turbinenhersteller
+Fördermassnahmen und Gesetzgebung
+
+16
+17
+17
+17
+
+A.5
+
+Grossbritannien
+
+18
+
+A.5.1
+A.5.2
+A.5.3
+A.5.4
+
+Statistische Daten
+Beschreibung der Windverhältnisse
+Turbinenhersteller
+Fördermassnahmen und Gesetzgebung
+
+18
+19
+19
+19
+
+A.6
+
+Irland
+
+20
+
+A.6.1
+A.6.2
+A.6.3
+A.6.4
+
+Statistische Daten
+Beschreibung der Windverhältnisse
+Turbinenhersteller
+Fördermassnahmen und Gesetzgebung
+
+20
+20
+20
+20
+
+A.7
+
+Italien
+
+21
+
+A.7.1
+A.7.2
+A.7.3
+A.7.4
+
+Statistische Daten
+Beschreibung der Windverhältnisse
+Turbinenhersteller
+Fördermassnahmen und Gesetzgebung
+
+21
+22
+22
+22
+
+A.8
+
+Niederlande
+
+22
+
+A.8.1
+A.8.2
+A.8.3
+A.8.4
+
+Statistische Daten
+Beschreibung der Windverhältnisse
+Turbinenhersteller
+Fördermassnahmen und Gesetzgebung
+
+22
+23
+23
+23
+
+A.9
+
+Österreich
+
+23
+
+A.9.1
+A.9.2
+A.9.3
+A.9.4
+
+Statistische Daten
+Beschreibung der Windverhältnisse
+Turbinenhersteller
+Fördermassnahmen und Gesetzgebung
+
+23
+24
+24
+24
+
+A.10 Schweiz
+
+25
+
+A.10.1 Statistische Daten
+
+25
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+III
+
+A.10.2 Beschreibung der Windverhältnisse
+A.10.3 Turbinenhersteller
+A.10.4 Fördermassnahmen und Gesetzgebung
+
+25
+25
+25
+
+A.11 Spanien
+
+27
+
+A.11.1
+A.11.2
+A.11.3
+A.11.4
+
+27
+27
+27
+27
+
+Statistische Daten
+Beschreibung der Windverhältnisse
+Turbinenhersteller
+Fördermassnahmen und Gesetzgebung
+
+ANHANG:
+
+QUELLENVERZEICHNIS ............................................................ 29
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+IV
+
+Abbildungsverzeichnis
+Abb. 1: Entwicklung der installierten Windenergieleistung in ausgewählten europäischen
+Ländern, Anzahl Turbinenhersteller in Klammern (Grossanlagen/Kleinanlagen)...... 7
+Abb. 2: Entwicklung der installierten Windenergieleistung in kW / 1'000 Einwohner............. 8
+Abb. 3: Entwicklung der installierten Windenergieleistung in MW / TWh
+Elektrizitätsverbrauch.................................................................................................. 8
+Abb. 4: Entwicklung der installierten Windenergieleistung in kW / km 2 Landesfläche........... 9
+
+Tabellenverzeichnis
+Tab. 1: Vergleich der drei Fördersysteme und der ergänzenden Massnahmen der
+Steuererleichterung ..................................................................................................... 6
+Tab. 2: Allgemeine statistische Daten (*: nur Wind, Ziel der EOLE 2005; MWe: MW
+elektrisch) .................................................................................................................. 11
+Tab. 3: Stromendverbrauch der 90er-Jahre in TWh............................................................. 12
+Tab. 4: Installierte Nennleistung aller Windturbinen des entsprechenden Landes in MW .. 12
+Tab. 5: Rückvergütungen nach Bundesländern und Anlagengrösse, gültig bis 19.8.1999,
+neue Tarife z. T. noch nicht festgelegt (1 ÖS = 0,115 CHF, Okt.99) ....................... 25
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+1
+
+Zusammenfassung
+
+1.1
+
+1
+
+Fördersysteme
+
+Europäische Länder fördern die Windkraftnutzung mit unterschiedlichen Massnahmen und
+markant unterschiedlichem Erfolg. Die Entwicklung der letzten 10 Jahren beruht zur Hauptsache auf folgenden drei Fördersystemen:
+1. Fixe Rücknahmetarife, sog. REFITs (Renewable Energy Feed in Tariffs)
+Dieses System schreibt den Stromverteilern vor, dass sie die Produzenten von „Ökostrom“ mit einem festgesetzten Mindestpreis pro kWh entschädigen müssen und ihre
+ganze Produktion abzunehmen haben. In Ländern mit fixen Rücknahmetarifen wie
+Deutschland, Dänemark, Italien, Spanien und Österreich waren bis Ende 1999 rund
+8‘000 MW Windkraft installiert. In diesen Ländern befinden sich auch die 24 grossen
+Windturbinen Hersteller und eine weltweit tätige, dynamisch wachsende Windindustrie.
+2. Ausschreibungssysteme
+Beim Ausschreibungssystem reichen Stromanbieter im freien Wettbewerb bei einer
+staatlichen Stelle ihren Stromverkaufspreis ein. Der Staat vergibt ein festgelegtes Kontingent zur Stromerzeugung durch Windenergie den günstigsten Anbietern. Frankreich,
+Grossbritannien und Irland, die dieses System anwenden, verfügen trotz ihres grossen
+Windkraftpotentials bis heute nur über 416 MW Windkraft und haben nur 2 grosse Windturbinenhersteller. Nur wenige, finanzstarke Grosskonzerne leisten sich ein Engagement
+unter diesen unrentablen Bedingungen mit der Absicht, in ferner Zukunft den Markt und
+damit auch die Preise zu beherrschen. Mittlere und kleine Unternehmen ohne starke finanzielle Rückendeckung bleiben bei diesen Spielregeln auf der Strecke.
+3. Zertifikate (Green-Certificates)
+„ Green-Certificates“ sind der jüngste Ansatz zur Förderung erneuerbarer Energien. Die
+Energieversorgungsunternehmen werden verpflichtet, einen bestimmten Prozentsatz ihres Stromangebots aus erneuerbaren Energiequellen zu beziehen und haben dies durch
+sog. „grüne Zertifikate“ zu belegen. Der Prozentsatz an erneuerbaren ist variabel und
+wird periodisch neu fest gelegt; die Zertifikate ihrerseits können auf dem freien Markt, in
+der Zukunft auch im Ausland, erworben und gehandelt werden. Dieses System ist zur
+Zeit nur in den Niederlanden verbindlich. In anderen europäischen Ländern werden Zertifikatsysteme als Instrument zur Reduktion von CO2-Emissionen diskutiert bzw. bereits
+erprobt. Die Weltbank bietet seit April 2000 Beteiligungen an einem CO2-Fonds an.
+
+1.2
+
+Richtlinien der EU
+
+Die EU-Richtlinien zur Strommarktliberalisierung und die angekündigte Festlegung steigender Anteile an erneuerbaren Energien am Gesamtenergieverbrauch verlangen nach neuen,
+wirksamen Instrumenten, um die ambitiösen Zielvorgaben von 21 % des Stromverbrauchs
+aus erneuerbaren Energien bis 2010 zu erreichen und dem Anspruch der Liberalisierung zu
+genügen. Ziel der EU Länder ist die Kapazitätsvergrösserung der Windkraft von heute
+6‘000 MW auf 40‘000 MW bis im Jahr 2010. Dies bedeutet ein Geschäftsvolumen von 36
+Milliarden US $. Für Spannung sorgt die Frage, welche Förderstrategien sich Europa leisten
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+2
+
+kann und leisten wird, und wie die erneuerbaren Energien wirksam gefördert werden können.
+Unter der Liberalisierung kommt zumindest das System der fixen Rücknahmetarifen zunehmend unter Druck.
+
+1.3
+
+Lage in der Schweiz
+
+Die Schweiz hat ihr, im Vergleich zu anderen europäischen Ländern bescheidenes Ziel,
+0.5 % Elektrizität aus erneuerbaren Energien zusätzlich zur Wasserkraft zu erzeugen, mit
+Beiträgen aus Biomasse (aus Holz, Kehrichtverbrennungs- und Abwasserreinigungsanlagen)
+erreicht. Das Nachfolgeprogramm E2000+ formuliert bis 2010 einen „Zielkorridor“ von zusätzlichen 0.5 - 1.5 % „Ökostrom“ am gesamten Elektrizitätsverbrauch. Wenn die Schweiz
+die obere Grenze des Zielkorridors des Programms E2000+ erreichen will, sind Massnahmen zu ergreifen, die über das Prinzip der Freiwilligkeit hinaus die erneuerbaren Energien
+fördern. Dies bedarf weiterer Abklärungen und einer breiten politischen Diskussion. Wenn
+die „neuen“ erneuerbaren Energien für die Schweiz kein Thema sind, läuft sie Gefahr, den
+Anschluss an eine weltweit ökonomisch konkurrenzfähige, ökologische Energietechnologie
+zu verlieren.
+
+2
+
+Ausgangslage
+
+Anfangs 1999 betrug die installierte Windenergieleistung in den in diesem Bericht betrachteten Ländern 6‘150 MW, wovon in der Schweiz lediglich 3 MW Windenergie installiert waren. Die Ziele des Programms E2000 für Strom aus erneuerbaren Energien lauten: 0,5 %
+des aktuellen Stromverbrauchs sind durch neue regenerierbare Energiequellen zu decken.
+Diese Ziele wurden bis Ende 1999 erreicht, wobei aber die Erzeugung aus Sonne und Wind
+nur sehr unbedeutend ist. Von 264 GWhe stammen 7.2 GWhe aus Photovoltaik und
+2.7 GWhe aus Wind. Eine vom Bundesamt für Energie in Auftrag gegebene Potentialstudie
+stellte 1996 fest, dass unter den bestehenden ökonomischen Bedingungen in der Schweiz
+3,5 % des Stromverbrauchs mit Windenergie gedeckt werden könnten. Die Regelungen der
+Vergütung auf Gesetzesebene lassen jedoch einen grossen Spielraum zur Interpretation
+durch die Akteure, so dass die meisten Projekte zur Erzeugung von Elektrizität aus Sonne
+und Wind nicht über eine erste Evaluation gedeihen. Die Aussicht, die gesetzlich verbindlichen Rückliefertarife vor Gericht erstreiten zu müssen, sind für die wenigsten Projektentwickler sehr erbauend. Nach Auffassung der Politiker lassen sich die Ziele von E2000+ durch
+freiwillige Massnahmen aller Beteiligten erreichen. Windkraftwerke in der Schweiz können
+unter diesen Bedingungen nur durch einen freiwilligen Strompreisaufschlag umweltbewusster Unternehmen und Privatkonsumenten realisiert werden. Dazu bedarf es jedoch des uneingeschränkten Zuganges der Produzenten von Strom aus erneuerbaren Energieträgern zu
+allen Konsumenten. Ein Blick über die Grenzen zeigt, wie sich die Windkraftnutzung entwikkelt und welche Gesetze und Fördermassnahmen dabei wirken.
+
+3
+
+Zielsetzung
+
+Diese Studie soll die Entwicklung der Windenergienutzung in Europa in Bezug auf Gesetzgebung und Fördermassnahmen aufzeigen. Daraus werden Schlussfolgerungen für die
+Situation in der Schweiz und Empfehlungen für das weitere Vorgehen des Windenergieverbandes „ Suisse Éole“ abgeleitet. In diesen Bericht einbezogen sind die Länder: Dänemark,
+Deutschland, Frankreich, Grossbritannien, Irland, Italien, die Niederlande, Österreich, Spanien und die Schweiz.
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+4
+
+Strategien zur Förderung von Windenergie in Europa
+
+4.1
+
+3
+
+Die Einflussfaktoren der Energiepolitik
+
+Strom gehört zu den effizientesten Energieträgern unseres Zeitalters. Seine Verfügbarkeit
+wird durch die Energiepolitik und die nationale Gesetzgebung reglementiert und widerspiegelt die unterschiedlichen Faktoren:
+-
+
+Ressourcen
+
+-
+
+Stromnachfrage
+
+-
+
+Stromangebot
+
+-
+
+Preis / Einfluss auf Industrie und Volkswirtschaft
+
+-
+
+Stand der Technologie / Einfluss auf Industrie und Arbeitsmarkt
+
+-
+
+Liberalisierung des Energiemarktes
+
+-
+
+Internationale Verpflichtungen: Stromabnahmeverträge, Umweltpolitik
+
+-
+
+Nationale Umweltpolitik als Ausdruck des nationalen Umweltbewusstseins
+
+Gesetzgebung und Fördermassnahmen für erneuerbare Energien entsprechen in Europa
+einer national unterschiedlichen Bewertung dieser Parameter.
+
+4.2
+
+Drei Strategien zur Förderung von Windenergie in Europa
+
+Zur Förderung von Windenergie werden in Europa drei unterschiedliche Strategien verfolgt:
+-
+
+REFITs, fixe Rücknahmetarife
+
+-
+
+Ausschreibungssysteme
+
+-
+
+Grüne Zertifikate
+
+Zusätzliche Anreize bewirken in einigen Ländern Steuererleichterungen und spezielle Abschreibungsmöglichkeiten für erneuerbare Energien.
+4.2.1
+
+System fixer Rücknahmetarife, REFITs (Renewable Energy Feed Tariffs)
+
+(Deutschland, Dänemark, Spanien, Italien, Österreich, bis 1994 Irland, bis 1995 Niederlande)
+
+Dieses System schreibt den Stromverteilern vor, dass sie den Produzenten von „Ökostrom“
+einen Prozentsatz des Endverbraucherpreises oder einen bestimmten Preis pro kWh vergüten müssen und seine ganze Produktion abzunehmen haben.
+Solange die Stromverteiler über eine Monopolstellung verfügen, werden die Kosten für die
+Entschädigung der unabhängigen ‚Ökostromproduzenten‘ auf die gesamte Kundschaft a
+bgewälzt. Dem Konsumenten wird ein Strommix aus diversen Energiequellen angeboten und
+verrechnet. Da Windstrom nur geringfügig teurer ist als konventionell hergestellter Strom und
+der Windstromanteil an der gesamten Stromproduktion relativ gering, verteuern sich die
+Strompreise für den Konsumenten nicht. In der deutschen Gesetzgebung regelt eine 5%
+Klausel die maximale Windstrommenge pro Verteiler. Was darüber produziert wird und abgenommen werden muss, wird vom übergeordneten, grösseren Verteiler rückvergütet.
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+4
+
+Mit der Liberalisierung wird sich diese Praxis sicher ändern. Infolge Teilliberalisierung dürfen
+Grossverbraucher als erstes ihren Stromlieferanten frei wählen. Neue, unabhängige Grossverteiler mit viel billigem Strom aus den ehemaligen Ostblockstaaten und Atomstrom sind die
+neuen Vertragspartner der Grossverbraucher. Die Abnahme von Ökostrom konzentriert sich
+zunehmend auf die verbleibenden, kleineren Elektrizitätsversorgungsunternehmen, die ihren
+Privatkunden den teureren Strommix anbieten. Ob sich unter diesen neuen Marktbedingungen das System fixer Rücknahmetarife politisch halten kann, ist fraglich.
+Der Hauptvorteil dieses Systems mit der festen Abnahmegarantie ist die relative Sicherheit,
+von der die Beteiligten profitieren: Die Produzenten vom rentablen Geschäft, die Bewohner
+und Stromkonsumenten von der nachhaltigen und emissionsfreien Stromproduktion. Sichere
+Geschäftsaussichten haben z.B. bis 1998 in Dänemark Windkraftwerke mit 1‘450 MW installierter Leistung hervorgebracht und zu einem regelrechten Boom in der Windindustrie g
+eführt: in Dänemark sind schon seit längerem mehr Menschen in der Windindustrie
+beschäftigt als im Fischereisektor. Der konjunkturelle Nutzen ist unbestreitbar.
+Ein Nachteil dieses Systems ist der geringe Kostendruck auf die Produzenten von Ökostrom.
+Die Geschäftsaussichten sind für die Beteiligten relativ sicher und es wird sehr viel Aufwand
+getrieben, um die Preise zu schützen anstatt die Kosten zu senken. Dies verstärkt den Eindruck, Windenergie und andere erneuerbare Energien seien teuer. Auch hier wird sich mit
+der Liberalisierung des Strommarkts einiges ändern.
+4.2.2
+
+Ausschreibungssystem
+
+Grossbritannien, Frankreich, Irland seit 1995
+
+Ausschreibungssysteme sind Wettbewerbe unter Stromanbietern. In Grossbritannien müssen z.B. potentielle Stromproduzenten einer staatlichen Stelle eine Angebot unterbreiten. Auf
+dieser Grundlage setzt der Staat einen Vertragspreis fest, den die Stromverteiler für die
+erneuerbaren Energien zahlen müssen und wählt die Angebote aus, die diesen Preis unterbieten. Mit einer nationalen Stromabgabe werden die Verteiler für ihre Zusatzaufwendungen
+entschädigt. Für sie entstehen damit keine Wettbewerbsunterschiede. Durch die nationale
+Stromabgabe erhöht sich für alle Konsumenten der Strompreis geringfügig.
+Ausschreibungssysteme wie das NFFO-System (Non Fossil Fuel Obligation) Grossbritanniens fördern den Wettbewerb unter den Stromanbietern und zwingen die Windindustrie, die
+Kosten fortlaufend zu senken. Ihre Erfolge, die Elektrizitätspreise zu drücken, sind enorm.
+Der durchschnittliche Windenergiepreis in der Ausschreibungsrunde des NFFO von 1997
+entsprach ungefähr der Hälfte des Windenergiepreises in Deutschland und die NFFO-Runde
+von 1998 brachte noch einmal beträchtlich tiefere Preise.
+Diesen unbestreitbaren Vorteilen stehen nicht minder gewichtige Nachteile gegenüber. Die
+Realisierungschancen für die kostengünstigen Windparks sind erfahrungsgemäss sehr g
+ering. Die Beteiligten scheinen darauf zu warten, dass die Turbinenhersteller ihre Preise senken, oder sie scheitern an kostspieligen Planungsverfahren. Da die Bedingungen von
+Ausschreibungsrunde zu Ausschreibungsrunde variieren, ist ein Vergleich nur schon innerhalb eines Systems schwierig.
+Das System ist sehr bürokratisch und schwerfällig. Die Bewerbungen sind langwierig und
+deshalb kostspielig. Es werden viele Bewerbungen abgewiesen: damit gehen seitens der
+Bewerber viel Aufwand, Geld und guter Wille verloren. Durch den enormen Preiskampf
+werden nur Standorte mit den allerbesten Windverhältnissen für Windparks ausgewählt. In
+vielen Fällen sind dies Gebiete, die bisher von der Zivilisation verschont geblieben sind und
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+5
+
+Flora und Fauna wertvolle Rückzugsmöglichkeiten bieten. Gegen diverse Windprojekte
+wächst in Naturschutzkreisen Grossbritanniens Widerstand.
+Ein weiterer Nachteil des Ausschreibungssystems ist die mangelnde Kontinuität. Das Rundensystem verhindert jegliche Beständigkeit im Bau der Anlagen, was für die Industrie ein
+wesentlicher Nachteil ist. Am Anfang der Entwicklung der Windindstrie gehörten die englischen Turbinenproduzenten zu den führenden in der Welt, während sie heute im Vergleich
+zu Deutschland und Dänemark nur noch lokale Bedeutung haben. Selbst die Windindustrie
+des Spätstarters Spanien ist heute bereits stärker einzuschätzen.
+4.2.3
+
+System „Grüner Zertifikate“
+
+Die Niederlande, bis 1996 REFITs
+
+Ein vielversprechender, neuer Ansatz ist die Einführung sog. ‚grüner Zertifikate‘ für Strom
+aus erneuerbaren Energiequellen. Diese Zertifikate dürfen in Holland auf dem freien Markt
+gehandelt werden. Der Staat schreibt vor, wieviel Strom aus erneuerbaren Energien stammen muss. Dies kann auf nationaler oder europäischer Ebene geschehen. Die Stromlieferanten werden rechtlich verpflichtet, Zertifikate zu erlangen im Umfang eines bestimmten
+Prozentsatzes ihrer Stromlieferung. Durch Eigenproduktion oder durch den Einkauf der
+benötigten Zertifikate auf dem freien Markt werden diese Bestimmungen erfüllt, wobei die
+Stromlieferanten selbst auch berechtigt sind, Zertifikate zu handeln. Angebot und Nachfrage
+regeln den Preis. Bussen sorgen dafür, dass die Quoten eingehalten werden und die Möglichkeit, eine bestimmte Menge auf zukünftige Jahre zu übertragen, für eine gewisse Preisstabilität. Voraussetzungen für den Handel sind sehr schnell aufgebaut und die Transaktionen können elektronisch abgewickelt werden. Die Quoten der einzelnen Stromlieferanten
+können anfänglich sogar den lokalen bzw. regionalen Gegebenheiten angepasst werden.
+Diese Anpassungen werden in mehreren Etappen aufgehoben, bis sich die Quoten aller
+Stromanbieter ausgleichen. Auf dem freien Markt werden die Stromlieferanten bald nicht
+mehr an ihren ursprünglichen Standort gebunden sein. Neue Windkraftanlagen werden dort
+errichtet, wo sie akzeptiert und ökonomisch sind.
+
+6
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+4.3
+
+Vergleich der drei Fördersysteme
+
+Modell
+REFITs
+Staatliche Preisregulierung
+
+Beschreibung
+Festsetzen eines
+Mindestpreises,
+Abnahmeverpflichtung
+
+Länder
+Dänemark,
+Deutschland,
+Italien, Österreich,
+Spanien
+
+Ausschreibungsverfahren
+Regulierter Wettbewerb
+
+Wettbewerber
+bieten zu einem
+möglichst günstigen Preis an und
+der Staat wählt
+aus
+
+Frankreich,
+Grossbritannien,
+Irland
+
+Grüne Zertifikate
+Markt getrieben
+
+Kapazitätsverpflichtung der
+Stromverteiler für
+Strom aus erneuerbaren Energien,
+Verteilung von
+Zertifikaten an die
+Stromproduzenten
+
+Die Niederlande
+
+Steuererleichterungen
+Markt getrieben
+
+Erneuerbare von
+Energiesteuern/
+MwSt. befreit,
+beschleunigte
+Abschreibung
+
+Die Niederlande,
+Dänemark,
+Deutschland,
+Frankreich
+
+Vorteile
+Garantierter Preis,
+sichere Projektkalkulation,
+vielfältige Windindustrie in gegenseitigem
+Wettbewerb,
+Zusatzkosten auf
+alle Konsumenten
+verteilt
+Stark gedrücktes
+Preisniveau,
+geringe Zusatzkosten für Konsumenten,
+kompatibel mit
+Liberalisierung
+
+Garantierter
+Markt, grosses
+Marktvolumen,
+vielfältige Windindustrie in gegenseitigem
+Wettbewerb,
+geringe Zusatzkosten für alle,
+effiziente Projekte
+bevorzugt,
+kompatibel mit
+Liberalisierung
+und elektronischem Handel
+Teilweise Internalisierung externer
+Kosten
+
+Nachteile
+Nationale Zusatz kosten, mässiger
+Druck für wir tschaftliche
+Projekte, Widerspruch zur
+Marktliberalisierung
+
+Kommentar
+Politisch und
+Seitens der
+Stromverteiler
+unter Beschuss
+
+Begünstigt neue
+Monopole, da
+tiefes Preisniveau
+keine kurz- und
+mittelfrisitg
+rentablen Projekte
+erlaubt, Konzentration der Windindustrie auf
+wenige kapitalkräftige Unternehmen, wenige
+und langsame
+Projektrealisierungen nur an
+rentabelsten
+Standorten
+konzentriert
+Konzentration an
+rentablen Standorten im Ausland,
+Inlandemissionen
+bleiben hoch
+
+Wegen mangelndem Fördererfolg
+in Diskussion; in
+Frankreich
+werden Projekte
+quersubventioniert; dänische
+Hersteller erhalten
+staatliche Ex portförderung
+
+Politisch anfechtbar
+
+Viele verschiedene Varianten in
+Kraft
+
+Seit 1. Januar
+1998 wirksam,
+diskutiert in
+Dänemark und
+Deutschland
+
+Tab. 1: Vergleich der drei Fördersysteme und der ergänzenden Massnahmen der Steuererleichterung
+Die drei vorherrschenden Fördersysteme für erneuerbare Energien haben alle ihre Vor- und
+Nachteile. Markante Unterschiede zeigen sich bei den Auswirkungen auf die Nutzung von
+Windenergie und die entsprechende Entwicklung einer nationalen Industrie (Abbildung 1-4).
+Unverkennbar wird deutlich, dass sich die Windenergienutzung in Ländern mit REFITs sehr
+schnell entwickelt. Diese Entwicklung wird begleitet von einer starken Windindustrie mit
+Zehntausenden von Arbeitsplätzen. Davon profitieren Dänemark, Deutschland, Italien Öster-
+
+7
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+reich und Spanien, bis 1994 Irland und bis 1995 Holland. In Ländern, die das Ausschreibungssystem vorziehen, entwickelt sich die Windenergienutzung nur sehr langsam, und dies
+unabhängig von den vorhandenen Windressourcen. Obwohl Frankreich, Grossbritannien und
+Irland über windreiche Küstengebiete verfügen, bleibt ihre Windkraftnutzung relativ bescheiden. In diesen Ländern hat sich keine Industrie entwickeln können bzw. aus der Pionierzeit
+stammende Betriebe bekamen grosse Schwierigkeiten und gingen vielfach ein. Das weitaus
+jüngste System ist das Zertifikatsystem. Es wurde erst 1996 in den Niederlanden eingeführt,
+und muss noch zeigen, wie es um seine Effizienz steht.
+3'500
+3'000
+
+MW
+
+2'500
+2'000
+1'500
+1'000
+
+Schweiz (-/1)
+Frankreich (1/1)
+Irland (-/-)
+Grossbritannien (1/3)
+Die Niederlande (3/1)
+Österreich (1/-)
+Italien (3/-)
+Spanien (4/1)
+Deutschland (10/2)
+Dänemark (6/2)
+
+500
+0
+1990
+
+1991
+
+1992
+
+1993
+
+1994
+
+1995
+
+1996
+
+1997
+
+1998
+
+Jahr
+
+Abb. 1: Entwicklung der installierten Windenergieleistung in ausgewählten europäischen
+Ländern, Anzahl Turbinenhersteller in Klammern (Grossanlagen/Kleinanlagen)
+1998 befindet sich in Deutschland, Dänemark und Spanien die höchste Leistung installierter
+Windturbinen gefolgt von Holland, Grossbritannien und Italien. Irland, Frankreich Österreich
+und die Schweiz belegen die Schlussplätze unter den untersuchten europäischen Ländern
+dieser Studie.
+Die Interpretation dieser unterschiedlichen Kurven verlangt einen erweiterten Massstab, der
+die grossen Unterschiede der einzelnen Länder bezüglich Einwohner, Stromverbrauch und
+Landesgrösse miteinbezieht. Dazu werden die absoluten Werte der installierten Windkraft im
+Verhältnis zu Einwohnerzahl, zum Stromverbrauch und zur Landesfläche gesetzt. Untersucht
+werden die Auswirkungen der drei unterschiedlichen Fördersysteme auf die Entwicklung der
+Windenergie. Länder mit gleicher Förderstrategie sind zu je einer Kurve zusammengefasst,
+die sich aus dem Mittelwert der einzelnen Länderwerte ergibt.
+Die Resultate der Abbildungen 2, 3, und 4 sind eindeutig: nur die Förderstrategie der fixen
+Rücknahmetarife, REFITs ermöglicht eine signifikante Entwicklung der Windenergienutzung
+und einer entsprechenden Industrie.
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+70
+
+8
+
+Schweiz (CH)
+
+kW / 1'000 Einwohner
+
+60
+
+Ausschreibung
+(F, GB, IE)
+
+50
+40
+
+REFITs (A,
+DE, DK, IT,
+SP)
+Niederlande*
+(NL)
+
+30
+20
+10
+
+* bis 1996 REFITs
+
+0
+1990 1991 1992 1993 1994 1995 1996 1997 1998
+
+Jahr
+
+Abb. 2: Entwicklung der installierten Windenergieleistung in kW / 1'000 Einwohner
+12
+
+Schweiz (CH)
+
+MW / TWh
+
+10
+
+Ausschreibung
+(F, GB, IE)
+
+8
+
+REFITs (A,
+DE, DK, IT,
+SP)
+Niederlande*
+(NL)
+
+6
+4
+2
+
+* bis 1996 REFITs
+
+0
+1990 1991 1992 1993 1994 1995 1996 1997 1998
+
+Jahr
+
+Abb. 3: Entwicklung der installierten Windenergieleistung in MW / TWh Elektrizitätsverbrauch
+Aufgrund der Nutzung der Windkraft sind die Strompreise für die Verbraucher in Europa
+gesamthaft nicht gestiegen, da Windstrom nur geringfügig teurer als Strom aus konventionellen Kraftwerken und der Windstromanteil am gesamten Stromverbrauch gegenwärtig
+vergleichsweise gering ist. Die 5 % Klausel in der deutschen Gesetzgebung legt den maximalen Windstromanteil pro Verteiler auf 5 % fest. Was darüber produziert und abgenommen
+werden muss, wird vom grösseren übergeordneten Verteiler vergütet.
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+10
+
+9
+
+Schweiz (CH)
+
+9
+8
+
+Ausschreibung
+(F, GB, IE)
+
+kW / km
+
+2
+
+7
+6
+
+REFITs (A,
+DE, DK, IT,
+SP)
+Niederlande*
+(NL)
+
+5
+4
+3
+2
+
+* bis 1996 REFITs
+
+1
+0
+1990 1991 1992 1993 1994 1995 1996 1997 1998
+
+Jahr
+
+Abb. 4: Entwicklung der installierten Windenergieleistung in kW / km 2 Landesfläche
+
+4.4
+
+Technologie und Gestehungskosten von Windstrom
+
+Den erneuerbaren Energien wird häufig vorgeworfen, sie seien zu teuer. Das stimmt nur im
+Vergleich zu konventionell erzeugter Energie, die zu billig angeboten wird. Diese Kalkulation
+ist möglich, weil nicht alle Kosten dem Verbraucher verrechnet, sondern die Umwelt belastenden Faktoren von der Öffentlichkeit getragen werden. Auf die verschiedenen Modelle der
+internalisierten Kosten wird hier nicht eingegangen. Windenergie liefert jedoch heute bereits
+einen relativ günstigen Ökostrom. Die technische Entwicklung schreitet schnell voran und
+erfordert einen grossen Kapitaleinsatz. Die Turbinenhersteller sind gezwungen, den weitaus
+grössten Teil ihrer Einkünfte in Forschung und Entwicklung zu stecken. Für die Optimierung
+der einzelnen Produktionsabläufe bleibt kaum noch Geld oder Zeit. Fusionen haben die
+Anzahl der Turbinenhersteller stark vermindert und gehörten in den letzten Jahren zur Tagesordnung. Je nach Standort kommt hinzu, dass die Transportkosten für die Maschinen
+sehr hoch sind, da die Produzenten sich in relativ eng begrenzten geographischen Räumen
+konzentrieren. Eine dezentralisierte Windindustrie würde die Transportkosten drastisch
+reduzieren und neue Arbeitsplätze schaffen.
+
+4.5
+
+Liberalisierung des europäischen Strommarktes und EU- Richtlinien für
+erneuerbare Energien
+
+Die Direktive der Europäischen Union für gemeinsame Regelungen des Internen Elektrizitätsmarktes, bekannt auch als Liberalisierungsdirektive, ist seit Januar 1997 in Kraft. Ihr Ziel
+ist es, mehr Wettbewerb in die nationalen Strommärkte zu bringen. Die Art und Geschwindigkeit der Einführung variiert von Land zu Land. Sicher werden sich dadurch die Spielregeln
+für die Stromvermarktung stark verändern. Die Aussicht auf einen liberalisierten Strommarkt
+hat bei vielen Produzenten und Verteilern von Strom aus konventionellen wie auch aus
+erneuerbaren Energien Befürchtungen ausgelöst. Die Liberalisierung wird zurecht als Bedrohung für des System fixer Rücknahmetarife empfunden. Nicht alleine weil es dieses System
+untergräbt, indem nur noch einige wenige die Zusatzkosten für die erneuerbaren Energien
+tragen müssen, sondern auch weil die Elektrizität aus Erdgas-Kombi-Kraftwerken so billig
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+10
+
+geworden ist, dass praktisch nichts mit ihr konkurrieren kann. Aus Umweltschutz- und strategischen Gründen ist jedoch eine einseitige Verlagerung auf die Gas-Kombi-Kraftwerke nicht
+wünschenswert.
+Zur Zeit sind EU-Richtlinien in Bearbeitung mit Zielvorgaben für ihre Mitgliedstaaten. Im
+Energieprogramm 2010-2020 wird eine Quote von 12 % für den Anteil erneuerbarer Energien am Gesamtenergieverbrauch festgesetzt. Europaweit gilt es Fördermodelle zu finden,
+welche die Nutzung der verschiedenen erneuerbaren Energien unterstützen, eine Weiterentwicklung der Industrie ermöglichen und mit den Gesetzen der freien Marktwirtschaft kompatibel sind. Die Förderschwerpunkte werden sich von den fixen Preisbindungen lösen.
+Aufgrund verbindlicher Quoten für ökologischen Strom im Portefeuille der Elektrizitätsanbieter wird der Markt einen kontinuierlichen Wettbewerb unter den ‚Ökostromproduzenten‘
+erzeugen und die Windenergienutzung mengenmässig unterstützen.
+
+5
+
+Schlussfolgerungen und Empfehlungen für die Schweiz
+
+Auf den ersten Blick erscheint es, die bestehende Gesetzgebung für Windstrom in der
+Schweiz liege im Bereich der REFITs. Gemäss den relevanten Gesetzestexten für die Förderung erneuerbarer Energien im Energiegesetz [22] und in der Energieverordnung [23] besteht zwar eine Abnahmepflicht. Der jedoch im Gesetz nicht genauer definierte Begriff der
+"gleichwertigen Energie" lässt die Höhe der Einspeisevergütung offen und überlässt damit
+diesen Entscheid grösstenteils dem zuständigen Elektrizitätswerk ganz im Sinne einer föderalistischen Lösung. Angesichts der Liberalisierung eines übersättigten Strommarkts in Europa sind die grossen Schweizer Energieverteiler damit beschäftigt, ihre Dienste zu
+rationalisieren und zur Zeit nicht bereit, freiwillig zusätzlichen Strom abzunehmen. Wünschenswert wäre eine sofortige Öffnung des Strommarktes für die erneuerbaren Energien bis
+zum Endverbraucher.
+Im Anhang sind die drei Förderstrategien für erneuerbare Energien in den einzelnen Ländern
+mit ihren gesetzlichen, politischen und marktwirtschaftlichen Vor- und Nachteilen beschrieben. Die Entscheidung, welche von diesen Strategien in welcher Kombination in der Schweiz
+angewendet werden soll, muss im Verband ‚Suisse-Eole‘ weiter besprochen werden. Für die
+Autoren dieser Studie ist es klar, dass die untersuchten Fördersysteme alle ihre Vor- und
+Nachteile haben. Unabhängig davon, welche Förderung man vorzieht, steht fest, dass jede
+Strategie besser ist als eine unschlüssige Politik. Falls die Schweizer Energiepolitik beabsichtigt, die erneuerbaren Energien und damit auch die Windenergie namhaft zu fördern, ist
+die bestehende Gesetzgebung durch eine oder mehrere Förderstrategien zu ergänzen.
+Dabei geht es nicht nur um die Energieproduktion sondern auch um den Anschluss an eine
+der weltweit konkurrenzfähigsten Technologien zur Energienutzung. Der eingeschlagene
+Weg gibt Anlass zur Hoffnung, dass die Schweiz im europäischen Umfeld nicht abseits
+stehen will. Das vom Parlament verabschiedete Förderabgabegesetz zielt in die gewünschte
+Richtung. Seine Einführung ist jedoch von der Annahme der Übergangsbestimmungen abhängig, die im Verlauf des Jahres 2000 dem Schweizer Volk vorgelegt werden.
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+11
+
+Anhang: Länder
+A.1
+
+Statistischer Vergleich mit der Schweiz
+
+A.1.1
+
+Allgemein
+
+Quellen: [1], [2], [3] und [4]
+Oberfläche
+
+Ziele
+
+Windverhältnisse
+
+[km2]
+Dänemark
+
+Einwohner
+[Mio.]
+
+aus erneuerbaren / bis
+
+50 m über Grund
+
+43'090
+
+5.2
+
+20 % Strom / 2003 sehr gut - ausgezeichnet
+
+Deutschland
+
+356'910
+
+81.6
+
+Frankreich
+
+551'500
+
+58.0
+
+Grossbritannien
+
+244'880
+
+58.3
+
+10 % Strom / 2010
+
+gut - ausgezeichnet
+
+Irland
+
+70'280
+
+3.6
+
+550 MWe / 2005
+
+gut - ausgezeichnet
+
+Italien
+
+301'270
+
+57.2
+
+nicht verfügbar
+
+schlecht - gut
+
+Niederlande
+
+37'330
+
+15.5
+
+10 % Strom / 2020
+
+gut - sehr gut
+
+Österreich
+
+83'850
+
+8.0
+
+3 % Strom / 2005
+
+schlecht - gut
+
+Spanien
+
+504'780
+
+39.6
+
+Schweiz
+
+41'290
+
+7.2
+
+10 % Strom / 2010
+
+schlecht - gut
+
+* 250 – 500 MWe / 2007 schlecht - ausgezeichnet
+
+12 % Strom / 2010 mässig - ausgezeichnet
+0.5 % Strom / 2000
+
+schlecht - gut
+
+Tab. 2: Allgemeine statistische Daten (*: nur Wind, Ziel der EOLE 2005; MWe: MW elektrisch)
+
+12
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+A.1.2
+
+Stromverbrauch
+
+Quellen: [5] und [36]
+1990
+
+1991
+
+1992
+
+1993
+
+1994
+
+1995
+
+1996
+
+1997
+
+29.3
+
+29.7
+
+30.2
+
+30.6
+
+31.0
+
+31.2
+
+32.2
+
+31.8
+
+Deutschland
+
+446.5
+
+434.7
+
+470.3
+
+424.3
+
+427.0
+
+452.6
+
+458.0
+
+461.7
+
+Frankreich
+
+301.9
+
+321.1
+
+330.0
+
+332.3
+
+333.7
+
+342.6
+
+355.5
+
+355.2
+
+Grossbritannien
+
+274.4
+
+281.0
+
+281.5
+
+286.1
+
+284.3
+
+293.9
+
+305.7
+
+309.3
+
+Irland
+
+11.9
+
+12.5
+
+13.2
+
+13.5
+
+14.2
+
+14.8
+
+15.8
+
+16.7
+
+Italien
+
+214.1
+
+218.9
+
+222.9
+
+223.8
+
+230.9
+
+237.7
+
+240.2
+
+247.8
+
+Niederlande
+
+73.5
+
+75.6
+
+77.9
+
+78.7
+
+81.3
+
+83.1
+
+86.2
+
+89.5
+
+Österreich
+
+43.2
+
+44.8
+
+44.6
+
+44.7
+
+45.4
+
+46.7
+
+48.0
+
+48.8
+
+Spanien
+
+125.8
+
+128.6
+
+130.8
+
+130.7
+
+137.0
+
+140.9
+
+147.2
+
+153.6
+
+Schweiz
+
+46.6
+
+47.6
+
+47.9
+
+47.2
+
+46.9
+
+47.9
+
+48.7
+
+48.6
+
+Dänemark
+
+Tab. 3: Stromendverbrauch der 90er-Jahre in TWh
+A.1.3
+
+Installierte Windturbinenkapazität
+
+Quellen: [5], [32], [33], [34] und [35]
+1990
+
+1991
+
+1992
+
+1993
+
+1994
+
+1995
+
+1996
+
+1997
+
+1998
+
+343
+
+413
+
+458
+
+487
+
+539
+
+619
+
+857
+
+1'116
+
+1'450
+
+60
+
+110
+
+175
+
+326
+
+632
+
+1'136
+
+1'545
+
+2'080
+
+2'874
+
+Frankreich
+
+-
+
+-
+
+1
+
+4
+
+4
+
+7
+
+10
+
+10
+
+19
+
+Grossbr itannien
+
+8
+
+12
+
+50
+
+130
+
+171
+
+200
+
+270
+
+320
+
+334
+
+Irland
+
+-
+
+-
+
+1
+
+7
+
+7
+
+7
+
+11
+
+51
+
+63
+
+Italien
+
+2
+
+5
+
+8
+
+18
+
+25
+
+25
+
+71
+
+100
+
+180
+
+40
+
+83
+
+106
+
+132
+
+162
+
+236
+
+299
+
+325
+
+363
+
+-
+
+-
+
+-
+
+-
+
+-
+
+3
+
+3
+
+20
+
+30
+
+Spanien
+
+10
+
+20
+
+27
+
+57
+
+73
+
+145
+
+249
+
+512
+
+834
+
+Schweiz
+
+0.2
+
+0.2
+
+0.2
+
+0.1
+
+0.2
+
+0.3
+
+2.0
+
+2.1
+
+3.0
+
+Dänemark
+Deutschland
+
+Niederlande
+Öste rreich
+
+Tab. 4: Installierte Nennleistung aller Windturbinen des entsprechenden Landes in MW
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+A.2
+
+Dänemark
+
+A.2.1
+
+13
+
+Statistische Daten
+
+•
+
+Einwohnerzahl:
+
+5.2 Mio.
+
+•
+
+Landesgrösse:
+
+43'090 km 2
+
+•
+
+Stromverbrauch 97:
+
+31.8 TWh
+
+•
+
+Installierte Windturbinenleistung 97 / 98:
+
+1'116 / 1‘450 MW
+
+•
+
+Ziele:
+
+A.2.2
+
+20 % der elektrischen Energie aus erneuerbaren bis 2003
+
+Beschreibung der Windverhältnisse
+
+Quelle: [2]
+
+Der Nordosten im Bereich des Limfjorden ist vom Wind am meisten begünstigt (> 6.0 m/s).
+Im restlichen Land weht der Wind im Jahresdurchschnitt mit 5.0 – 6.0 m/s.
+A.2.3
+
+Turbinenhersteller
+
+Quelle: [25]
+
+Grossanlagen:
+•
+
+NEG Micon A/S (Nordtank Energy Group & Micon S/A) ; 225 bzw. 249 Angestellte, 97
+bzw. 102 Mio. ECU Umsatz, 110 bzw. 162 MW installierte Leistung 1996
+
+•
+
+Nordex A/S; 130 Angestellte, 21 Mio. ECU Umsatz, 31 MW installierte Leistung 1996
+
+•
+
+Vestas Wind Systems A/S; 1200 Angestellte, 257 Mio. ECU Umsatz, 308 MW installierte
+Leistung 1996
+
+•
+
+Wind World A/S, von NEG Micon aufgekauft; 98 Angestellte, 45 Mio. ECU Umsatz, 40
+MW installierte Leistung 1996
+
+•
+
+Bonus Energy A/S; 230 Angestellte, 98 Mio. ECU Umsatz, 117 MW installierte Leistung
+1996
+
+•
+
+Wincon West Wind A/S
+
+Kleinanlagen:
+•
+
+Gaia Wind Energy
+
+•
+
+Genwind Production A/S
+
+A.2.4
+
+Fördermassnahmen und Gesetzgebung
+
+Quelle: [6]
+
+Fördermassnahmen:
+•
+
+Abnahmeverpflichtung der Netzbetreiber.
+
+•
+
+Vergütung des Stromes zu einem festen Prozentsatz des Endverbraucherpreises.
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+14
+
+Anpassung des Gesetzes zur Nutzung erneuerbarer Energien Nr. 837 (7. Oktober 1992,
+Anpassungen: Gesetze Nr. 1089 vom 20. Dezember 1995, Nr. 427 vom 10. Juni 1997 und
+Nr. 378 vom 2. Juni 1999) durch Gesetz Nr. 378 vom 2. Juni 1999:
+Die wichtigen Änderungen vom 2. Juni 1999 werden in geschweiften Klammern { } angegeben. Durchgestrichene Passagen wurden aufgehoben, normal geschriebene kamen neu
+hinzu.
+Vor dem Hintergrund eines Gesuches kann ein Subventionsversprechen gegeben werden.
+{Wo besondere Umstände dies aufzeigen, können die Subventionen ganz oder teilweise im
+voraus ausgezahlt werden.}
+Der von Windkraftwerken an das Netz gelieferte Strom ist mit 85 % des Endverbraucherpreises für ordentliche Konsumenten {mit einem jährlichen Verbrauch von 20 MWh} von der
+Elektrizitätsgesellschaft ohne die Kosten und ohne {die Subventionen und die Zuschläge} zu
+vergüten, in deren Gebiet das Windkraftwerk steht. {Zusätzlich ist den Produzenten ein
+Zuschlag von DKK 0.27 pro kWh zu gewähren.
+Windkraftwerke im Besitz eines Elektrizitätswerkes bekommen lediglich einen Zuschlag von
+DKK 0.10 pro kWh. Für teilweisen Besitz wird einem Elektrizitätswerk ihrem Besitzanteil
+entsprechend der Zuschlag von DKK 0.10 pro kWh gewährt.}
+Die Teilnahme an diesem Programm beinhaltet keinen Wettbewerb, aber Planungsgenehmigung und Finanzierung müssen im voraus gesichert sein. Zusätzlich erlaubt die Verwaltung
+eine Rückerstattung der Energiesteuer, der CO2-Steuer und der Mehrwertsteuer auf die
+Energiesteuer.
+
+A.3
+
+Deutschland
+
+A.3.1
+
+Statistische Daten
+
+•
+
+Einwohnerzahl:
+
+81.6 Mio.
+
+•
+
+Landesgrösse:
+
+356'910 km 2
+
+•
+
+Stromverbrauch 97:
+
+461.7 TWh
+
+•
+
+Installierte Windturbinenleistung 97 / 98:
+
+2'080 / 2'874 MW
+
+•
+
+Ziele:
+
+A.3.2
+
+10 % der elektrischen Energie aus erneuerbaren bis 2010
+
+Beschreibung der Windverhältnisse
+
+Quelle: [2]
+
+An der Nordküste und in Schleswig-Holstein herrschen sehr gute Windbedingungen (5.0 6.0 m/s). Gegen Süden nimmt die mittlere Jahresgeschwindigkeit ab, um südlich der Linie
+Darmstadt – Bamberg unter 4.5 m/s zu fallen. Der Südwesten Deutschlands (ungefähr Baden-Württemberg) hat vergleichsweise schlechte Windverhältnisse (bis 3.5 m/s).
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+A.3.3
+
+15
+
+Turbinenhersteller
+
+Quellen: [26] und [27]
+
+Grossanlagen:
+•
+
+Enercon; 900 Angestellte, 144 Mio. ECU Umsatz, 153 MW installierte Leistung 1996
+
+•
+
+Nordex Balcke-Dürr GmbH; 130 Angestellte, 21 Mio. ECU Umsatz, 31 MW installierte
+Leistung 1996
+
+•
+
+Südwind Energiesysteme GmbH, von Nordex Balcke-Dürr übernommen worden
+
+•
+
+DeWind Technik
+
+•
+
+Fuhrländer
+
+•
+
+HSW Husumer Schiffswerft
+
+•
+
+Jacobs Energie GmbH
+
+•
+
+Tacke Windtechnik GmbH & Co. KG, aufgekauft von Enron Wind Corp. (USA); 160 A
+ngestellte, 67 Mio. ECU Umsatz, 83 MW installierte Leistung 1996
+
+•
+
+SEEWIND Windenergiesysteme GmbH
+
+•
+
+GENESYS GmbH
+
+Kleinanlagen:
+•
+
+SoWiCo / Aerocraft
+
+•
+
+WENUS Windenergie-Nutzungs-Systeme
+
+A.3.4
+
+Fördermassnahmen und Gesetzgebung
+
+Quelle: [7]
+
+Fördermassnahmen:
+•
+
+Vergütung des Stromes zu einem festen Prozentsatz des Endverbraucherpreises.
+
+•
+
+Abnahmeverpflichtung der Netzbetreiber.
+
+Stromeinspeisungsgesetz (vom 1. Januar 1991 bis 31. März 2000 in Kraft):
+Das Stromeinspeisungsgesetz regelt die Abnahme und die Vergütung von Strom aus Wasserkraft, Windkraft, Sonnenenergie, Deponiegas, Klärgas oder aus Biomasse durch öffentliche Elektrizitätsversorgungsunternehmen. Nicht erfasst wird Strom aus Anlagen, die
+obengenannte Energiequellen nutzen, mit einer installierten Generatorleistung von über
+5 MW sowie Anlagen, die zu über 25 % der Bundesrepublik Deutschland, einem Bundesland, öffentlichen Elektrizitätsunternehmen oder Unternehmen gehören, die mit ihnen im
+Sinne des § 15 des Aktiengesetzes verbunden sind, es sei denn, dass aus diesen Anlagen
+nicht in ein Versorgungsgebiet dieser Unternehmen eingespeist werden kann.
+Elektrizitätsversorgungsunternehmen, die ein Netz für die allgemeine Versorgung betreiben,
+sind verpflichtet, den in ihrem Versorgungsgebiet erzeugten Strom aus erneuerbaren Energien abzunehmen und gemäss nachfolgendem Absatz zu vergüten. Strom, der nicht im
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+16
+
+Versorgungsgebiet eines Netzbetreibers erzeugt wird, wird in das nächstgelegene, geeignete
+Netz eingespeist. Mehrkosten können in Ansatz gebracht werden.
+Für Wasserkraft, Deponiegas, Klärgas und Biomasse werden für Anlagen bis 500 Kilowatt
+mindestens 80 % des Endverbraucherpreises vergütet. Für Strom aus Sonnenenergie und
+Windkraft beträgt die Vergütung 90 % des Endverbraucherpreises. Der massgeblich Endverbraucherpreis ist der in der amtlichen Statistik des Bundes für das vorletzte Jahr veröffentlichte Wert ohne Umsatzsteuer in Pfennigen pro Kilowattstunde. Die Berechnung der
+Vergütung ist auf zwei Stellen hinter dem Komma zu runden.
+Wenn nach diesem Gesetz die zu vergütenden Kilowattstunden 5 % des vom Elektrizitätsversorgungsunternehmen im Kalenderjahr insgesamt über sein Versorgungsnetz abgesetzten Kilowattstunden übersteigt, ist der vorgelagerte Netzbetreiber verpflichtet, dem
+aufnehmenden Elektrizitätsversorgungsunternehmen die Mehrkosten, die durch die diesen
+Anteil übersteigenden Kilowattstunden entstehen, zu erstatten.
+Wenn das zur Abnahme verpflichtete Elektrizitätsversorgungsunternehmen seine Strompreise spürbar über die Preise gleichartiger oder vorgelagerter Elektrizitätsversorgungsunternehmen hinaus anheben müsste, entfallen die oben genannten Verpflichtungen.
+Erneuerbare-Energien-Gesetz (in Kraft seit 1. April 2000):
+Das Ziel des Erneuerbare-Energien-Gesetz ist es, im Interesse des Klima- und Umweltschutzes eine nachhaltige Entwicklung der Energieversorgung zu ermöglichen und den
+Beitrag Erneuerbarer Energien an der Stromversorgung deutlich zu erhöhen, um entsprechend den Zielen der Europäischen Union und der Bundesrepublik Deutschland den Anteil
+Erneuerbarer Energien am gesamten Energieverbrauch bis zum Jahr 2010 mindestens zu
+verdoppeln.
+Neben den Vergütungstarifen für Strom aus erneuerbaren Energien, der z. B. für Wind mindestens 17.8 Pfennige pro Kilowattstunde für die ersten fünf Jahre beträgt, regelt es auch
+Netzzugang und Abnahme- und Vergütungspflicht. In der Regel nehmen die Vergütungen
+mit zunehmender Anlagengrösse und im Laufe der Jahre nach Inbetriebnahme kontinuierlich
+ab. Ausserdem legt es Regeln für die Behandlung von Anlagen fest, die vor dem In-KraftTreten des Erneuerbare-Energien-Gesetzes in Betrieb genommen wurden.
+
+A.4
+
+Frankreich
+
+A.4.1
+
+Statistische Daten
+
+•
+
+Einwohnerzahl:
+
+58.0 Mio.
+
+•
+
+Landesgrösse:
+
+551'500 km 2
+
+•
+
+Stromverbrauch 1997:
+
+355.2 TWh
+
+•
+
+Installierte Windturbinenleistung 97/98:
+
+10 MW / 19 MW
+
+•
+
+Ziele:
+
+250 – 500 MW Elektrizität aus Wind bis 2007
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+A.4.2
+
+17
+
+Beschreibung der Windverhältnisse
+
+Quelle: [2]
+
+Am Ärmelkanal, in der Bretagne und an der nördlichen Westküste werden sehr hohe durchschnittliche Windgeschwindigkeiten gemessen (5.0 – 6.0 m/s). In einem ungefähr 100 km
+breiten Streifen südlich davon herrscht eine Jahresmittelgeschwindigkeit von 4.5 – 5.0 m/s.
+An den Meeresmündungen der Rhône und der Garonne weht der Wind im Jahr durchschnittlich mit mehr als 6.0 m/s. Nach ca. 50 km landeinwärts ist die Durchschnittsgeschwindigkeit
+auf 5.0 – 6.0 m/s gefallen. In den topographisch höheren, an Baden-Württemberg westlich
+anschliessenden Gebiete der Vogesen, französischer Jura und Massif Central und die Gascogne wird der Wind bis unter 3.5 m/s gebremst.
+A.4.3
+
+Turbinenhersteller
+
+Grossanlagen:
+•
+
+Jeumont Industrie seit 1995, seit 1998 mit namhafter Beteiligung von Framatom
+
+Kleinanlagen:
+•
+
+Vergnet S.A.
+
+A.4.4
+
+Fördermassnahmen und Gesetzgebung
+
+Quellen: [8], [9], [37], [38], [39], [40], [41] und [42]
+
+In Frankreich untersteht die Stromwirtschaft dem Staatsmonopol Electricité de France, EDF,
+das rund 80% des Stroms in Kernkraftwerken erzeugt. Von breiten Kreisen in der französischen Bevölkerung wird dies vorbehaltlos akzeptiert. Unter dem Druck der nationalen Industrie und im Rahmen umweltpolitischer Bestrebungen gemäss EU, setzte sich 1996 auch
+Frankreich quantitative Ziele für die Nutzung erneuerbarer Energien. Im Programm Éole
+2005 des Industrieministeriums sind für die Windenergienutzung 250 – 500 MW installierte
+Windleistung festgesetzt. Die Zulassung der Projekte erfolgt im Ausschreibungsverfahren.
+Unabhängige potentielle Windkraftwerkbetreiber geben EDF den gewünschten Rücknahmetarif an, den sie während 15 Jahren für ihr geplantes Projekt benötigen. Bewilligt werden
+die Projekte der günstigsten Anbieter.
+Seit 1997 fanden vier Ausschreibungsrunden statt mit kontinuierlich strengeren Bedingungen
+für die Projektanbieter. In jeder Runde wurde die zu vergebende elektrische Leistung neu
+festgelegt und vergrösserte sich entsprechend den Erkenntnissen der Windtechnologie, den
+Bedürfnissen der Windindustrie sowie den veränderten energiepolitischen Zielen. Nachdem
+sich EDF 1997 noch verpflichtete, den bewilligten Projekten 33,8 cts/kWh zu vergüten, beträgt der Rücknahmepreis während 15 Jahren heute nur noch 30,8 cts/kWh. Dies sind 8,9%
+weniger als vor zwei Jahren. Bisher wurden 52 Projekte mit insgesamt 325 MW bewilligt.
+Damit sind die Ziele von ‚Eole 2005‘ – mindestens auf dem Papier – erreicht.
+-
+
+1. Runde, Vergabe Frühjahr 97:
+
+13 MW
+
+4 Projekte
+
+-
+
+2. Runde, Vergabe Herbst 97:
+
+64 MW
+
+16 Projekte
+
+-
+
+3. Runde, Vergabe 1998:
+
+48 MW
+
+11 Projekte
+
+-
+
+4. Runde, Vergabe Herbst 99:
+
+200 MW
+
+21 Projekte
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+18
+
+Nach Ansicht der EDF fördert der Preiskampf einen harten Wettbewerb unter den Anbietern
+und zwingt die beteiligte Windindustrie konkurrenzfähige Produkte zu entwickeln. Ob diese
+strengen Rahmenbedingungen einer neu entstandenen französische Windindustrie ermöglichen, ihren Rückstand gegenüber den europäischen Konkurrenten aufzuholen, ist fraglich.
+Seit kurzem unterstützt die französische Nuklearindustrie Framatom den einzigen grossen
+Windturbinenhersteller in Frankreich, die Jeumont Industrie. Ausserdem äussert der französische Windenergieverband, FEE, seit 1998 gegenüber der Ausschreibungsstrategie von
+EDF starke Bedenken und fordert neue Spielregeln. Kritisiert werden unter anderem:
+•
+
+fehlende Stabilität beim Zeitraum der Ausschreibungsrunden
+
+•
+
+mangelnde Kontinuität und fehlende Transparenz der Auswahlkriterien
+
+•
+
+Beschränkung der Projektgrösse auf max. 8 MW (verunmöglicht Kosteneffizienz)
+
+•
+
+nationale Marktaussichten für französische Zulieferindustrie zu klein
+
+•
+
+fehlender Anreiz zur eigenen Produkteentwicklung inkl. kostspieliger Zertifizierung
+
+•
+
+fehlende finanzielle Unterstützung bei der Entwicklung neuer Produkte und Prototypen
+
+•
+
+Tiefstpreisvergabe; welche unrealistische Eingaben der Anbieter fördere ohne Berücksichtigung der aufwendigen Planungskosten für Umweltgutachten und administrativen
+Aufwand. Preise sind rein technisch kalkuliert und lokal nicht verifiziert. Für private Investoren ist die Rentabilität im Vergleich zu anderen Projekte dadurch zu gering. Dies betrifft die Windindustrie wie die Projektrealisierung. Rücknahmepreise von 34 cts/kWh
+entsprechen einer Rendite von 8%. Zur Förderung einer innovativen, risikoreichen neuen
+Windindustrie brauche es mindestens 12 % Rendite was 45 cts/kWh entspricht.
+
+Der französische Windenergieverband hofft, dass die von der EU vorgeschlagene Prozentuale Mengenregulierung für erneuerbaren Energien der Windindustrie zum erhofften Aufschwung verhilft und viele neue Projekte entstehen lässt.
+Noch ist es zu früh um festzustellen, ob die 325 MW Windkraft von Eole 2005 rechtzeitig im
+Gelände aufgestellt werden und rentabel Strom produzieren. Tatsache ist, dass von den
+1997 bewilligten 13 MW der 1. Ausschreibungsrunde nur 3 Projekte mit insgesamt 6,9 MW in
+Betrieb sind und die erste französische Windturbine (750kW) seit Oktober 99 läuft. Der französischen Windindustrie wurde zugesichert, dass die Ausschreibungsbedingungen von EDF
+gemeinsam mit dem Industrieminister überarbeitet werden.
+
+A.5
+
+Grossbritannien
+
+A.5.1
+
+Statistische Daten
+
+•
+
+Einwohnerzahl:
+
+58.3 Mio.
+
+•
+
+Landesgrösse:
+
+244'880 km 2
+
+•
+
+Stromverbrauch 97:
+
+309.3 TWh
+
+•
+
+Installierte Windturbinenleistung 97 / 98:
+
+320 / 334 MW
+
+•
+
+Ziele:
+10 % der elektrischen Energie aus erneuerbaren bis 2010 (1500 MW aus
+erneuerbarer bis 2000)
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+A.5.2
+
+19
+
+Beschreibung der Windverhältnisse
+
+Quelle: [2]
+
+Die nördlichen Inseln (wie Hebrides, Shetland, Isle of Man und Orkney), Schottland, die
+Nordküste Nordirlands und Northumberland besitzen ein ausgezeichnetes Windpotential (>
+6.0 m/s). Abgesehen vom Zentrum Englands (Vieleck von Stonehenge, London, Cambridge,
+Peterborough, Sheffield und Coventry) weht der Wind sehr stark mit 5.0 – 6.0 m/s.
+A.5.3
+
+Turbinenhersteller
+
+Quelle: [28]
+
+Grossanlagen:
+•
+
+NEG Micon UK, ehemals Wind Energy Group Ltd. bei der Übernahme durch NEG Micon
+A/S umbenannt
+
+Kleinanlagen:
+•
+
+Ampair Natural Energy
+
+•
+
+Rutland / Marlec Engineering Co. Ltd.
+
+•
+
+Proven Engineering Products Ltd.
+
+A.5.4
+
+Fördermassnahmen und Gesetzgebung
+
+Quellen: [10] und [11]
+
+Fördermassnahmen:
+•
+
+Abnahmeverpflichtung des Elektrizitätsnetzwerkbetreibers.
+
+Non Fossil Fuel Obligation (erstmals ausgeschrieben im April 1994):
+Die NFFO ist ein rundenbasiertes Ausschreibungssystem wobei die Regeln für die einzelnen
+Runden voneinander leicht abweichen können. Es gilt für England und Wales. Für Schottland und Nordirland gibt es ähnliche Mechanismen (SRO bzw. NI-NFFO).
+Der NFFO-Prozess beginnt mit der Ankündigung zur Vergabe von Abnahmeverträgen, wobei
+die zur Teilnahme berechtigten Technologien ausgeschrieben werden. Die Non-Fossil Purchasing Agency nimmt die Angebote entgegen, die den vorläufigen Preis (p/kWh) und die
+Nettokapazität (MW) der Projekte beinhalten müssen. Die Bieter müssen je nach Energiequelle die Verfügbarkeit derselben nachweisen.
+Das Office of Electricity Regulation prüft die technischen, ökonomisch-kommerziellen und
+rechtlichen Aspekte, um den Projekten eine Wahrscheinlichkeit zuzuordnen, dass diese
+verwirklicht werden. Alle Projekte, die dieses Stadium durchschritten haben, geben ein endgültiges Strompreisangebot ab. Die Verwaltung wählt dann die billigsten Anbieter aus, so
+dass das Leistungskontingent der einzelnen Klassen ausgeschöpft wird.
+Die erfolgreichen Bewerber bekommen Verträge, deren Laufzeit maximal 15 Jahre beträgt.
+Der Abnahmepreis ist für die vereinbarte Kapazität das letzte Angebot des Bewerbers
+(NFFO3; NFFO2 – höchstes, erfolgreiches Angebot). Überproduktion muss auf dem freien
+Markt abgesetzt werden.
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+20
+
+Erst jetzt werden Planungserlaubnis und Stromerzeugungslizenz eingeholt und die Finanzierung gesichert. Der NFFO-Vertrag bedeutet aber nicht gleichzeitig, dass diese Voraussetzungen einfach gegeben sind.
+Die Mehrkosten, die durch die Vergabe dieser Verträge entstehen, werden durch eine Abgabe auf fossile Brennstoffe gedeckt.
+
+A.6
+
+Irland
+
+A.6.1
+
+Statistische Daten
+
+•
+
+Einwohnerzahl:
+
+3.6 Mio.
+
+•
+
+Landesgrösse:
+
+70'280 km 2
+
+•
+
+Stromverbrauch 97:
+
+16.7 TWh
+
+•
+
+Installierte Windturbinenleistung 97 / 98:
+
+51 / 63 MW
+
+•
+
+Ziele:
+
+A.6.2
+
+500 MW aus erneuerbaren bis 2005
+
+Beschreibung der Windverhältnisse
+
+Quelle: [2]
+
+Die gesamte Westküste ist einem ausgezeichnetem Wind ausgesetzt (> 6.0 m/s), der zur
+Inselmitte auf 4.5 – 5.0 m/s abnimmt.
+A.6.3
+
+Turbinenhersteller
+
+keine
+A.6.4
+
+Fördermassnahmen und Gesetzgebung
+
+Quelle: [12]
+
+Fördermassnahmen:
+•
+
+Abnahmeverpflichtung des irischen Elektrizitätswerkes ESB.
+
+Alternative Energy Requirement AER (erstmals ausgeschrieben im April 1994):
+Das AER ist auch ein rundenbasiertes Ausschreibungssystem. Das irische Elektrizitätswerk
+ESB ist verpflichtet eine bestimmte Menge Elektrizität von Produzenten, die alternative
+Energieträger nutzen, abzukaufen. Dazu werden in unregelmässigen Abständen festgelegte
+Kapazitäten ausgeschrieben. Für diese Kapazitäten bewerben sich geeignete Anbieter,
+indem sie Angebote unterbreiten. Die Anbieter müssen sich erst technisch qualifizieren, um
+dann ein kommerzielles Angebot unterbreiten zu können. Die Angebote enthalten einen
+Antrag auf einen Zuschuss und die Angebote werden nach der Höhe des Zuschusses bewertet. Einen Vertrag erhalten die besten Projekte, bis die ausgeschriebene Kapazität e
+rreicht ist. Der Vertrag hat eine Laufzeit von 10 – 15 Jahren und ist nicht verhandelbar.
+Bislang haben drei solcher Ausschreibungsrunden stattgefunden, wobei die zweite lediglich
+für Biomasse und Energie aus Abfallverbrennung offen stand. AER1 wurde 1994 für 75 MW
+installierter Leistung ausgeschrieben und die Projekte mussten Ende 1997 fertiggestellt sein.
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+21
+
+Von 172 technischen Eingaben kamen knapp über hundert zum kommerziellen Angebot.
+Ihre Gesamtleistung entsprach dem Fünffachen der ausgeschriebenen Leistung. Schliesslich
+wurden Abnahmeverträge für 34 Projekte mit einer Gesamtleistung von 111 MW gewährt.
+Der Anteil der Windenergie war 73 MW, was ungefähr dem Dreieinhalbfachen des Erwarteten entspricht. Projekte, bei denen Biomasse bzw. Abfall die Primärenergie stellten, wurden
+keine realisiert.
+AER3 war ähnlich wie AER1, wobei die Ausschreibung von einem unabhängigen Gutachter
+durchgeführt wurde. Vorgesehen waren 100 MW installierter Leistung, wovon 90 % für
+Windkraft vorgesehen war. Das irische Elektrizitätswerk war nur noch für die Kostenabschätzung der Netzanbindung, Stromabnahmeverträge und Anschlussvereinbarungen zuständig.
+Die Angebote wurden auf Basis des Strompreises pro Kilowattstunde beurteilt. Der tatsächliche Preis wird jede Saison auf einer Tageszeitbasis angepasst. Die erfolgreichen Anbieter
+erhielten einen Zuschuss von der Europäischen Union, der aber von den Anbietern bei der
+Berechnung ihrer Gebote schon einbezogen wurde und so keinen echten Nutzen für sie
+darstellte. Schliesslich wurden 159 MW vergeben, wovon 137 MW an die Windkraft ging.
+Die irische Regierung überarbeitet ihren Ansatz zur Förderung erneuerbarer Energien. Es
+hat sich gezeigt, dass das AER ungeeignet für die Entwicklung der irischen Windressourcen
+ist, die grösser sind als die von irischem Gas und Torf zusammen.
+Der Irische Windenergie Verband schlägt folgendes vor:
+•
+
+Jährliche Installation von mindestens 100 MW Leistung für die Jahre 2000 – 2010.
+
+•
+
+Über 20 Jahre laufende fixe Rücknahmetarife für vier Kategorien. Der Preis wird jährlich
+überarbeitet, wobei die Emissionsvorteile zu berücksichtigen sind. Die Kategorien sind:
+-
+
+Anlagen zwischen 2 und 10 MW und einem Basispreis von mindestens 3.3 p/kWh.
+
+-
+
+Anlagen mit weniger als 2 MW und einem Basispreis von mindestens 3.6 p/kWh.
+
+-
+
+•
+
+Anlagen mit mehr als 10 MW und einem Basispreis von mindestens 3 p/kWh.
+
+Kleinstanlagen für Selbstversorger mit weniger als 100 kW, deren Stromproduktion
+monatlich vom Bezug abgezogen wird.
+
+Ein kontinuierliches Programm für Projekte, die den folgenden Ansprüchen genügen:
+-
+
+Planungserlaubnis wurde erteilt
+
+-
+
+Netzanbindung wurde gewährt
+
+-
+
+Technische und finanzielle Machbarkeit wurde nachgewiesen
+
+A.7
+
+Italien
+
+A.7.1
+
+Statistische Daten
+
+•
+
+Einwohnerzahl:
+
+57.2 Mio.
+
+•
+
+Landesgrösse:
+
+301'270 km 2
+
+•
+
+Stromverbrauch 97:
+
+247.8 TWh
+
+•
+
+Installierte Windturbinenleistung 97 / 98:
+
+100 / 180 MW
+
+•
+
+Ziele:
+
+nicht verfügbar
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+A.7.2
+
+22
+
+Beschreibung der Windverhältnisse
+
+Quelle: [2]
+
+Der Absatz des Stiefels, die Westspitze Siziliens und die West- und Südküste Sardiniens
+werden durchschnittlich von Wind mit der Geschwindigkeit von 4.5 – 5.0 m/s angeweht.
+Norditalien und Gebiete westlich der Linie San Marino, Perugia, Rom und Salerno kommen
+nur in den Genuss von weniger als 3.5 m/s Wind, während der Rest Italiens 3.5 – 4.5 m/s
+aufweist.
+A.7.3
+
+Turbinenhersteller
+
+Quelle: [29]
+
+Grossanlagen:
+•
+
+Riva Calzoni Wind Turbines srl
+
+•
+
+WEST (Wind Energy Systems Taranto)
+
+•
+
+IWT (Italian Wind Technology), Joint-Venture von Vestas (DK) und WEST für die Produktion von Vestas-Turbinen
+
+Kleinanlagen: keine
+A.7.4
+
+Fördermassnahmen und Gesetzgebung
+
+Quellen: [13] und [14]
+
+Vom nationalen Elektrizitätsunternehmen ENEL wird ein Spitzenpreis für erneuerbare Energien entrichtet, der durch die Stromrechnung der Verbraucher bezahlt wird. Die Rückvergütungstarife werden vom CIP (Commitato Interministeriale dei Prezzi) periodisch festgesetzt.
+Unter CIP-6, das bis zur Zeit in Kraft ist, werden für Windenergie 215 Lire/kWh bezahlt.
+Windenergie-Projekte müssen vom Ministerium für Industrie genehmigt werden; abgeschlossen wird hingegen der Vertrag mit dem staatlichen Stromverteilmonopolisten ENEL, das den
+unabhängig produzierten Strom seit 1993 abnehmen muss. Dieser Vertrag hat eine Laufzeit
+von 8 Jahren. Danach sind die Preise verhandelbar. CIP-7 ist in Vorbereitung und wird im
+November 1999 bekannt gegeben. Es wird erwartet, dass eine 2 % Quote erneuerbarer
+Energien im Portefeuille der Elektrizitätsverteiler vorgeschrieben wird. Ausserdem ist seit
+1999 ist eine CO2-Abgabe in Kraft, die sich bis 2004 jedes Jahr erhöht.
+
+A.8
+
+Niederlande
+
+A.8.1
+
+Statistische Daten
+
+•
+
+Einwohnerzahl:
+
+15.5 Mio.
+
+•
+
+Landesgrösse:
+
+37'330 km 2
+
+•
+
+Stromverbrauch 97:
+
+89.5 TWh
+
+•
+
+Installierte Windturbinenleistung 97 / 98:
+
+325 / 363 MW
+
+•
+
+Ziele:
+
+10 % der elektrischen Energie aus erneuerbaren bis 2020
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+A.8.2
+
+23
+
+Beschreibung der Windverhältnisse
+
+Quelle: [2]
+
+Eine 50 – 100 km breiter Küstenstreifen hat sehr gute Windressourcen (5.0 – 6.0 m/s). Südlich davon weht der Wind im Mittel nur 4.5 – 5.0 m/s.
+A.8.3
+
+Turbinenhersteller
+
+Quellen: [30] und [31]
+
+Grossanlagen:
+•
+
+NedWind b.v. wurde aufgekauft von NEG Micon; 130 Angestellte, 30 Mio. ECU Umsatz,
+32 MW installierte Leistung 1996
+
+•
+
+WindMaster Nederland b.v. Ging bankrott, aufgekauft von Lagerwey, produziert z. T.
+weiter. Der belgische Arm besteht weiterhin unter dem Namen Turbowinds; 75 Angestellte, 17 Mio. ECU Umsatz, 19 MW installierte Leistung 1996
+
+•
+
+Lagerwey Windturbinen b.v.
+
+Kleinanlagen:
+•
+
+LMW Renewables b.v.
+
+A.8.4
+
+Fördermassnahmen und Gesetzgebung
+
+Quellen: [15] und [16]
+
+Unter dem neuen Elektrizitätsgesetz (Dez. 1997) müssen die lokalen Stromverteilungsfirmen
+Produzenten erneuerbarer Energien ans Netz anschliessen und ihnen den Strom zu einem
+Preis vergüten, der sich aus dem aktuellen Preis zusammensetzt, den sie selbst von der
+Reservezentrale dafür bekommen, und einer Ökosteuer. Die Produzenten bekommen von
+den Abnehmern ihrer Produktion entsprechend sogenannte „Grüne Zertifikate“, die sie auf
+dem freien Markt handeln können. Abnehmer sind die Stromverteiler, die eine 3 % Quote
+erneuerbaren Stroms an ihrem gesamten Stromumsatz erfüllen und dies durch den Besitz
+„Grüner Zertifikate“ nachweisen müssen. Das System wird von einer unabhängigen Watchdog-Organisation überwacht. Nach dem Jahr 2000 werden für die Quoten kontinuierlich neue
+Ziele gesetzt, so dass der Markt von diesem Mechanismus angetrieben werden wird.
+Ausserdem ist seit 1996 ein neues Preisstützungssystem in Kraft, das anstelle von Kapitalzuschüssen Steuererleichterungen gewährt. Unter anderem ist die Mehrwertsteuer für sogenannt „grünen“ Strom von 17.5 % auf 6 % vermindert. Mit der VAMIL-Regelung ist eine
+beschleunigte Abschreibung für Investitionen im Umweltbereich möglich.
+
+A.9
+
+Österreich
+
+A.9.1
+
+Statistische Daten
+
+•
+
+Einwohnerzahl:
+
+8.0 Mio.
+
+•
+
+Landesgrösse:
+
+83'850 km 2
+
+•
+
+Stromverbrauch 97:
+
+48.8 TWh
+
+24
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+•
+
+Installierte Windturbinenleistung 97 / 98:
+
+•
+
+Ziele:
+
+A.9.2
+
+20 / 30 MW
+
+3 % der Elektrizität aus erneuerbaren bis 2005
+
+Beschreibung der Windverhältnisse
+
+Quelle: [3]
+
+In den flachen östlichen Landesteilen sind die Windverhältnisse gut. Zu den Alpen hin nimmt
+die durchschnittliche Windgeschwindigkeit ab. Lokal können aber auch dort gute Standorte
+auftreten, z. B. in Föhntälern.
+A.9.3
+
+Turbinenhersteller
+
+Grossanlagen:
+•
+
+Windtec GmbH
+
+Kleinanlagen: keine
+A.9.4
+
+Fördermassnahmen und Gesetzgebung
+
+Quelle: [3]
+
+Das österreichische Modell beinhaltet zwei Elemente. Zum einen werden von den Ländern
+Tarife vorgeschrieben und zum anderen wird vom Umweltministerium eine Investitionsförderung bis maximal 30 % der Investitionskosten gewährt.
+Für die Investitionsförderung stehen 30 Mio. ÖS zur Verfügung, die in einem Ausschreibeverfahren verteilt werden. Die Projekte mit dem geringsten Förderbedarf pro kWh bekommen
+die Fördergelder, bis der Förderungsfond leer ist. Die Bewerber geben dabei selbst an (in
+Prozent), wieviel Fördergelder sie für ihr Projekt beanspruchen.
+Der Bundeskanzler hat die Festlegung der Höhe der Tarife an die Länder delegiert, so dass
+für die verschiedenen Bundesländer unterschiedliche Tarife gelten.
+[ÖS/kWh]
+
+Sommer NT
+
+Sommer HT
+
+Winter NT
+
+Winter HT
+
+ø
+
+Burgenland (Verordnung des Landeshauptmanns)
+< 2 MW
+
+0.421
+
+0.473
+
+0.668
+
+0.900
+
+0.634
+
+> 2 MW
+
+0.421
+
+0.473
+
+0.607
+
+0.720
+
+0.564
+
+Wien (Verordnung des Lande shauptmanns)
+< 2 MW
+
+0.492
+
+0.552
+
+0.706
+
+0.900
+
+0.680
+
+> 2 MW
+
+0.421
+
+0.473
+
+0.607
+
+0.720
+
+0.564
+
+0.792
+
+0.792
+
+0.656
+
+Niederösterreich (Tarifsätze der EVN AG)
+unbegrenzt
+
+0.520
+
+0.520
+
+Niederösterreich (Tarifsätze der WIENSTROM)
+< 2 MW
+
+0.421
+
+0.473
+
+0.668
+
+0.900
+
+0.634
+
+> 2 MW
+
+0.421
+
+0.473
+
+0.607
+
+0.720
+
+0.564
+
+Oberösterreich (Tarifsätze der OKA)
+< 1 MW
+
+0.632
+
+0.710
+
+0.911
+
+1.080
+
+0.846
+
+1 < 2 MW
+
+0.421
+
+0.473
+
+0.668
+
+0.900
+
+0.634
+
+> 2 MW
+
+0.421
+
+0.473
+
+0.607
+
+0.720
+
+0.564
+
+25
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+Oberösterreich (Tarifsätze der ESG Linz)
+< 2 MW
+
+0.421
+
+0.473
+
+0.668
+
+0.900
+
+0.634
+
+> 2 MW
+
+0.421
+
+0.473
+
+0.607
+
+0.720
+
+0.564
+
+Salzburg (Tarifsätze der SAFF)
+< 2 MW
+
+0.421
+
+0.473
+
+0.668
+
+0.900
+
+0.634
+
+> 2 MW
+
+0.421
+
+0.473
+
+0.607
+
+0.720
+
+0.564
+
+Kärnten (Verordnung des Landeshauptmanns)
+n. gesichert
+
+0.470
+
+0.530
+
+0.680
+
+0.800
+
+0.630
+
+gesichert
+
+0.421
+
+0.473
+
+0.607
+
+0.720
+
+0.564
+
+0.460
+
+0.590
+
+0.700
+
+0.540
+
+0.673
+
+0.819
+
+0.602
+
+0.668
+
+0.900
+
+0.623
+
+Tirol (Tarifsätze der TIWAG)
+< 2 MW
+
+0.410
+
+> 2 MW
+
+Individuell vereinbart
+
+Vorarlberg (Tarifsätze der VKW)
+unbegrenzt
+
+0.410
+
+0.460
+
+Steiermark (Verordnung des Landeshauptmanns)
+unbegrenzt
+
+0.400
+
+0.449
+
+Tab. 5: Rückvergütungen nach Bundesländern und Anlagengrösse, gültig bis 19.8.1999,
+neue Tarife z. T. noch nicht festgelegt (1 ÖS = 0,115 CHF, Okt.99)
+
+A.10
+
+Schweiz
+
+A.10.1
+
+Statistische Daten
+
+•
+
+Einwohnerzahl:
+
+7.2 Mio.
+
+•
+
+Landesgrösse:
+
+41'290 km 2
+
+•
+
+Stromverbrauch 97:
+
+48.6 TWh
+
+•
+
+Installierte Windturbinenleistung 97 / 98:
+
+2.1 / 3.0 MW
+
+•
+
+Ziele:
+
+A.10.2
+
+1 –2 % der Elektrizität aus erneuerbaren bis 2010
+
+Beschreibung der Windverhältnisse
+
+Im Mittelland herrschen schlechte bis mässige Verhältnisse. Im Jura und den Voralpen wehen je nach Exposition des Standortes durchschnittlich mässige bis gute Winde. Ähnliches
+gilt für die Alpen.
+A.10.3
+
+Turbinenhersteller
+
+Kleinanlagen:
+•
+
+Aventa
+
+A.10.4
+
+Fördermassnahmen und Gesetzgebung
+
+Quellen: [22], [23] und [24]
+
+Fördermassnahmen:
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+26
+
+•
+
+Abnahmeverpflichtung der öffentlichen Energieversorger.
+
+•
+
+Mindestabnahmepreis entsprechend dem Preis für die Beschaffung gleichwertiger Energie: bis 31. 12. 1999 16 Rp/kWh, ab 1. 1. 2000 15 Rp/kWh.
+
+Energiegesetz (EnG 730.0, Inkrafttreten: 1. Januar 1999) und Energieverordnung (EnV
+730.01, Inkrafttreten: 1. Januar 1999):
+Die Unternehmungen der öffentlichen Energieversorgung sind verpflichtet, die von unabhängigen Produzenten angebotene Überschussenergie, in einer für das Netz geeigneten Form
+abzunehmen, wenn die Energie durch die Nutzung von erneuerbaren Energien gewonnen
+wird. Die Vergütung richtet sich nach den Kosten für die Beschaffung gleichwertiger Energie
+aus neuen inländischen Produktionsanlagen. Unabhängige Produzenten sind Inhaber von
+Energieerzeugungsanlagen, an deren Unternehmen der öffentliche Energieversorgung zu
+höchstens 50 Prozent beteiligt sind und die leitungsgebundene Energien vorwiegend für den
+Eigenbedarf oder ohne öffentlichen Auftrag vorwiegend oder ausschliesslich zur Einspeisung
+ins Netz erzeugen. Erneuerbare Energien sind Wasserkraft, Sonnenenergie, Geothermie,
+Umgebungswärme, Windenergie und Biomasse.
+Der Bund kann Massnahmen zur Nutzung erneuerbarer Energie unterstützen.
+Der Bund kann zur Förderung der Energie- und Abwärmenutzung jährlich Globalbeiträge an
+die Kantone ausrichten. Er unterstützt Einzelprojekte in diesem Bereich nur in Ausnahmefällen. Mindestens 50 Prozent des einem Kanton zugesprochenen Globalbeitrages sind zur
+Förderung von Massnahmen Privater reserviert.
+Der unabhängige Produzent ist verpflichtet, auf eigene Kosten Massnahmen zu ergreifen,
+um störende oder gefährliche Wirkungen im Netz zu vermeiden. Unter dieser Voraussetzung
+sind die Unternehmen der öffentlichen Energieversorgung verpflichtet, die Energieerzeugungsanlagen der unabhängigen Produzenten mit dem Netz zu verbinden, so dass die Einspeisung und der Bezug von Energie sichergestellt ist. Die Kosten für die Erstellung der dazu
+notwendigen Erschliessungsleitungen gehen zu Lasten des unabhängigen Produzenten.
+Die Vergütung nach marktorientierten Bezugspreisen richtet sich nach den vermiedenen
+Kosten des Unternehmens der öffentlichen Energieversorgung für die Beschaffung gleichwertiger Energie. Die beanspruchten Systemdienstleistungen müssen vom unabhängigen
+Produzenten abgegolten werden.
+Übergangsbestimmungen und Förderabgabegesetz:
+Übergangsbestimmungen und Förderabgabegesetz sind Gegenstand einer Volksabstimmung mit parlamentarischem Gegenvorschlag im Jahr 2000. In ihnen wird festgelegt, dass
+eine zweckgebundene Förderabgabe von 0.1 bis 0.5 Rp/kWh auf nicht erneuerbare Energien
+erhoben wird. Von diesen Einkünften soll ein gewisser Prozentsatz für die Förderung der
+erneuerbaren Energien verwandt werden. Zusätzlich steht eine Grundnorm zur Reduktion
+der Lohnnebenkosten von 2 Rp/kWh zur Abstimmung. Da die Windenergie im Förderabgabegesetz nicht namentlich aufgeführt wird, ist eine Schwerpunktbildung darauf auf Bundesebene nicht möglich.
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+A.11
+
+Spanien
+
+A.11.1
+
+27
+
+Statistische Daten
+
+•
+
+Einwohnerzahl:
+
+39.6 Mio.
+
+•
+
+Landesgrösse:
+
+504'780 km 2
+
+•
+
+Stromverbrauch 97:
+
+153.6 TWh
+
+•
+
+Installierte Windturbinenleistung 97 / 98:
+
+512 / 834 MW
+
+•
+
+Ziele:
+
+A.11.2
+
+12 % der elektrischen Energie aus erneuerbaren bis 2010
+
+Beschreibung der Windverhältnisse
+
+Quelle: [2]
+
+Die höchsten Durchschnittswerte werden im Raum Zaragoza und im Ebrotal gemessen, die
+tiefsten in den zentralen und westlichen Pyrenäen. Sehr gute Windbedingungen herrschen
+nördlich von Albacete und im Norden und Nordwesten Galiziens. Immer noch gute Bedingungen findet man an der Mittelmeerküste südlich von Tarragona bis zur portugiesischen
+Grenze am Atlantik (4.5 – 5.0 m/s). Bei Málaga wird der Wind durch den Einfluss der
+Cordilleras auf 3.5 – 4.5 m/s abgebremst, während im Tal des Guadalquivir ein Geschwindigkeitsdorn von der Mündung bis nach Córdoba reicht (4.5 – 5.0 m/s).
+A.11.3
+
+Turbinenhersteller
+
+Grossanlagen:
+•
+
+Desarollos Eólicos SA; 102 Angestellte, 20.4 Mio. ECU Umsatz, 19.8 MW installierte
+Leistung 1996
+
+•
+
+Ecotècnia SCCL; 53 Angestellte, 12 Mio. ECU Umsatz, 18.3 MW installierte Leistung
+1996
+
+•
+
+Gamesa Eólica; 250 Angestellte, 120 Mio. ECU Umsatz, 130 MW installierte Leistung
+1996
+
+•
+
+MADE, Energías Renovables, S.A. ; 80 Angestellte, 17 Mio. ECU Umsatz, 18.5 MW
+installierte Leistung 1996
+
+Kleinanlagen:
+•
+
+J. Bornay Aeorgeneradores S.R.C.
+
+A.11.4
+
+Fördermassnahmen und Gesetzgebung
+
+Quellen: [17], [18], [19] und [20]
+
+Ein staatliches Programm zur Reduktion von CO2-Ausstoss gewährt den Produzenten von
+Strom aus erneuerbaren Energien bis 100 MW einen festen Strompreis. Die Verträge haben
+eine Laufzeit von 5 Jahren, und die Vergabe kann z. T. an bestimmte Bedingungen geknüpft
+sein. Abgesehen von den festen Spitzenstrompreisen gewährt der spanische Staat den
+Produzenten von Windstrom Steuererleichterungen und Zuschüsse. Um in den Genuss von
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+28
+
+Zuschüssen zu kommen, darf ein einzelnes Projekt nicht grösser als 20 MW sein. Die obere
+Limite der Zahlungen ist auf 40 % der gesamten Investition bzw. auf 400 Mio. Pesetas festgelegt. Speziell bevorzugt werden Projekte in schwer zugänglichem Land oder in Gebieten,
+wo das Stromnetz schwach ist. Der Strompreis wird vom Staat bis mindestens zum Jahr
+2000 2 Pts./kWh über dem Preis konventionell erzeugter Energie gehalten. Seit 1. Januar
+1999 ist ein Gesetz in Kraft, dass Produzenten von Windstrom 5.26 Pts./kWh (1999) zusätzlich zum durchschnittlichen Abnahmepreis von 5.79 Pts./kWh (1999) garantiert. Diese Z
+uschüsse werden jährlich angepasst, so dass der Endabnahmepreis von Windstrom 88.5 %
+des Endverbraucherpreises beträgt.
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+29
+
+Anhang: Quellenverzeichnis
+[1]
+
+CD-ROM Microsoft Encarta Atlas 97 (Oberfläche: 1994 Food and Agriculture Organisation (FAO) Production Yearbook, Einwohner: (UN) World Population Prospects:
+The 1994 Revision)
+
+[2]
+
+European Wind Atlas 50 m über Boden, 1989, Risø National Laboratory, Denmark
+
+[3]
+
+Interessengemeinschaft Windkraft Österreich
+
+[4]
+
+Meteonorm, Wind, Leitfaden für den Windenergieplaner, 1990, Bundesamt für Energiewirtschaft
+
+[5]
+
+Bundesamt für Energie
+
+[6]
+
+Inoffizielle Übersetzung des Gesetzes Nr. 378 vom 2. Juni 1999, 30 Juni 1999
+
+[7]
+
+„Das Stromeinspeisungsgesetz“, 7. Dezember 1990 (BGBl. S. 2633), geändert durch
+Gesetz vom 19. Juli 1994 (BGBl. I S. 1618)
+
+[8]
+
+„France prepares market incentives, Scheme similar to UK’s now in the Works“,
+Windpower Monthly, Feb. 1996, S. 18 ff.
+
+[9]
+
+„France surprises with big tender“, Windpower Monthly, März 1998, S. 21
+
+[10]
+
+„NFFO Fact Sheet 1“, ETSU, Harwell, Didcot, Oxfordshire, OX11 0RA
+
+[11]
+
+„NFFO Fact Sheet 2“, ETSU, Harwell, Didcot, Oxfordshire, OX11 0RA
+
+[12]
+
+„Status and Prospects for Wind Energy in Ireland“, L. Staudt, Irish Wind Energy Association
+
+[13]
+
+„Italy agrees big contracts“, Windpower Monthly, März 1994
+
+[14]
+
+„New tax on CO2 emissions“, Windpower Monthly, Feb. 1999, S. 6
+
+[15]
+
+„Government rules on tax credits“, Windpower Monthly, Nov. 1997, S. 17 f.
+
+[16]
+
+„ Tradeable credit theory in practice“, Windpower Monthly, Okt. 1998, S. 41 f.
+
+[17]
+
+„Not far from the first one hundred megawatt“, Windpower Monthly, Feb. 1996,
+S. 34 f.
+
+[18]
+
+„Subsidy terms“, Windpower Monthly, März 1997, S. 34
+
+[19]
+
+„Spain sets fixed prices in new law“, Windpower Monthly, Feb. 1999, S. 22
+
+[20]
+
+„The production incentives for wind“, Windpower Monthly, April 1999, S. 12 f.
+
+[21]
+
+„Setting the agenda for the long term“, Windpower Monthly, Okt. 1997, S. 41 ff.
+
+[22]
+
+„Energiegesetz“ (EnG) vom 26. Juni 1998, 730.0, Art. 7 Abs. 1 und 3
+
+[23]
+
+„Energieverordnung“ (EnV) vom 7. Dez. 1998, 730.01, Art. 1 f, Art. 3, Art. 4 Abs. 1
+
+[24]
+
+„Strom für 16 Rappen“, Tages-Anzeiger, 15. Mai 1997
+
+[25]
+
+„Firm favourite“, Windpower Monthly, März 1999, S. 16
+
+[26]
+
+„Raging bull“, Windpower Monthly, Feb. 1999, S. 6 ff.
+
+[27]
+
+„New owners add strength“, Windpower Monthly, Dez. 1998, S. 28
+
+Windenergie in Europa: Was bringen Gesetzgebung und Fördermassnahmen
+
+30
+
+[28]
+
+„On their own“, Windpower Monthly, Sept. 1998, S. 8 f.
+
+[29]
+
+„Joint venture for production in Italy“, Windpower Monthly, Juli 1998, S. 20
+
+[30]
+
+„Sold to Denmark“, Windpower Monthly, Okt. 1998, S. 8
+
+[31]
+
+„Bankruptcy and a quick takeover“, Windpower Monthly, Jan. 1999, S. 25 f.
+
+[32]
+
+„ Vindmollestatistik – 1995“, BTM Consult ApS
+
+[33]
+
+„ The Windicator“, Windpower Monthly, Jan. 1997, S. 50
+
+[34]
+
+„ The Windicator“, Windpower Monthly, Jan. 1998, S. 50
+
+[35]
+
+„ The Windicator“, Windpower Monthly, Jan. 1999, S. 42
+
+[36]
+
+„Energetischer Endverbrauch“, Eurostat, Auszug aus der Datenbank „New Cronos“,
+theme8 : sirene : s-quant : sir10 : sir106 : sir106a : 101700
+
+[37]
+
+„Le communiqué d‘EDF“, Systèmes Solaires n° 118, 1997, S. 46
+
+[38]
+
+„Seconde étape pour Eole 2005: 100 MW de plus“, Systèmes Solaires n° 124, mars –
+avril 1998, S. 22
+
+[39]
+
+„France Energie Eolienne donne son avis“, Systèmes Solaires n° 124, mars – avril
+1998, S. 26
+
+[40]
+
+„Brest 98: le point sur l’éolien en France“, Systèmes Solaires n° 129, janvier – février
+1999, S. 49
+
+[41]
+
+„Union européenne vers de nouvelles règles du jeu“, Systèmes Solaires n° 129,
+janvier – février 1999, S. 55
+
+[42]
+
+„Eole 2005: 200 MW de plus!“, Systèmes Solaires n° 133, septembre – octobre 1999,
+S. 46
+
+[43]
+
+„Aktionsprogramm Energie 2000, 9. Jahresbericht“, Berichtsjahr Juli 1998 – Juni
+1999, BBL, 3000 Bern
+

@@ -1,0 +1,189 @@
+DESARROLLO DE UN SISTEMA DE CONTROL PREDICTIVO EN UN GENERADOR EOLICO DE ACOPLE DIRECTO A LA TURBINA
+
+Nelson Aros Oñate Rubén Cifuentes Muñoz Boris Pavez Lazo Universidad de La Frontera, Departamento de Ingeniería Eléctrica Marcela Aros Beltrán Universidad Católica de Temuco
+
+Resumen
+La preocupante situación medioambiental a nivel global y la constante innovación han permitido el mejoramiento de la eficiencia energética de los sistemas eólicos debido al avance en el tamaño de los generadores y al desarrollo de la electrónica de potencia para su extracción. Contribuyendo al mejoramiento, este articulo presenta un sistema de control predictivo en la etapa de conversión de potencia que regule los requerimientos de potencia eléctrica del sistema según la carga presente. El controlador predictivo se enfoca para un convertidor AC/DC/AC aplicado a un sistema aerogenerador con acople directo, particularmente a los requerimientos de potencia y corriente de la carga. Vía simulación se comprueba su funcionamiento y se compara con una topología de conversión usada para sistemas convencionales. Se analiza el sistema simulado bajo características de viento medidas en la zona sur. Además, se consideran fallas en el enlace DC y en la carga, para el análisis de robustez. De los resultados se observa como el sistema controlado mantiene valores de voltaje y corriente requeridos por la carga frente a variaciones de viento, y también se muestra que el sistema controlado tiene un buen desempeño ante ocurrencia de fallas eléctricas.
+
+Abstract
+The constant innovation and improvement of non-conventional energy sources, have made wind power is a competitive energy source, so the investigation has made rapid progress in the size of wind turbines and developing the associated power electronics more efficient. From the standpoint of energy efficiency, this paper develops a predictive control system in the power conversion in order to regulate the electric power requirements of the system according to the present load. The development of predictive control is performed to the AC/DC/AC converter applied to a wind turbine system with direct coupling. Via simulation tests the performance of this driver and compared with a conversion topology used for
+53
+
+conventional systems. We examine the characteristics of simulated system under wind action in the south. Moreover, they are considered failures in the DC link and load, for the analysis of robustness. The results obtained show as the controlled system maintains the values of voltage and current required by the load against wind variations, and also demonstrates that the controlled system performs well with electrical type failures occurrence. Palabras clave: Energía renovable, Generador eólico, Eficiencia energética, Control predictivo Keywords: Renewable energy, wind generator, energy efficiency, predictive control
+
+1. Introducción
+La constante innovación y mejoramiento de fuentes energéticas no convencionales junto con la preocupante situación medioambiental a nivel global crean un interesante desafío a la ingeniería, tanto con sus tradicionales metodologías como también las nuevas herramientas que se disponen para abordar el tema, lo cual deriva en una aplicación multidisciplinaria. Por ello, dentro de la amplia gama de fuentes energéticas no convencionales, ha existido un auge en el estudio de la energía eólica. Debido a la demostración de la vialidad industrial la energía eólica a incrementado su popularidad en la actualidad. El uso de esta energía nació de la búsqueda en la diversificación en el abanico para la generación de energía eléctrica, en conjunto con un crecimiento de la demanda y una situación geopolítica cada vez más complicada en el ámbito de los combustibles tradicionales. Así, la energía eólica constituye un suceso histórico a nivel mundial como la fuente energética de mayor crecimiento, tanto así que desde 2005 al 2008 las instalaciones a nivel mundial han aumentado al doble. A saber, en el año 2008, la captación de este tipo de energía alcanzó la suma de 121.188 [MW]. El mercado para nuevas instalaciones eólicas entre el año 2007 y 2008 presentó un alza del 42% con un incremento de nuevas instalaciones eólicas de 27.261 [MW] en 2008, frente a los 19.776 [MW] en 2007. Diez años atrás el mercado para nuevos aerogeneradores tuvo un alza de 2.197 [MW], menos de la décima parte del incremento de 2008, de acuerdo a la información entregada por la IAEA (International Atomic Energy Agency). Chile a comienzo del año 2009 cuenta con una capacidad instalada de 20 [MW], lo que representaba el 0.2% de la energía eléctrica para el país (WWEA 2009), y con respecto a Latinoamérica, que tiene en total instalados 667 [MW], nuestro país aporta un 3% a esa cifra, por lo que aún queda mucho por implementar en este tipo de energía. Por otro lado, la normativa chilena actual establece que a partir del 2010 el 5% de la energía que se comercializa en el país debe provenir de fuentes renovables, porcentaje que aumenta progresivamente hasta llegar al 10% en 2024. Basados en la experiencia y los rangos de crecimiento de años recientes la WWEA (World Wind Energy Association) estima que el aprovechamiento de la energía eólica continuará su dinámico desarrollo en los años venideros. Se espera que en el mediano plazo la energía eólica atraiga más investigadores debido a su bajo riesgo y la necesidad de fuentes energéticas limpias y renovables. Cada vez más gobiernos entienden los beneficios de la energía eólica y están creando políticas favorables a su desarrollo, incluyéndose en éstas promover la investigación descentralizada por productores de energía independientes, la
+54
+
+pequeña y mediana empresa y proyectos de comunidades, lo que permitirá manejar sistemas sustentables de energía en el futuro. A través de los años el mejoramiento de la tecnología aplicada al aprovechamiento de la energía eólica ha dado significativos avances, tanto así que la hacen una fuente energética competitiva frente a las ya conocidas fuentes energéticas para generar electricidad. Este grado de competitividad de la energía eólica se debe a que ha sido un punto focal en la investigación de fuentes energéticas renovables, sumado también al rápido avance en el tamaño de los generadores eólicos y el desarrollo de la electrónica de potencia en su aplicación de la extracción de este tipo de energía (Baroudi et al., 2007). Siguiendo la línea del mejoramiento de la eficiencia de los sistemas eólicos, el presente trabajo propone un sistema de control predictivo en la etapa de conversión de potencia con el fin de regular la potencia eléctrica que provee la turbina hacia la interface eléctrica. Esta potencia eléctrica a su vez está sincronizada según los requerimientos de corriente hacia el suministro eléctrico, el cual es modelado como una carga de tipo resistiva – inductiva. Para mejorar la eficiencia en la captación de energía se elige una turbina de velocidad de operación variable, pues ésta capta mayor energía del viento que una turbina de velocidad de operación fija, reduce las fluctuaciones de potencia y regula el suministro de potencia reactiva (Kim et al., 2007). Dentro de las turbinas de velocidad de operación variable, se considera el acople turbina-generador directo, ya que hay una mejor transmisión de potencia que evita la pérdida de energía en los engranajes de la caja multiplicadora, además de suprimir el uso de lubricantes, lo que supone una ventaja en cuanto a la disminución del ruido emitido, como así también la operación, mantención y vida útil de la turbina (Salinas et al., 2007). Como consecuencia, en pos de mejorar este tipo de turbinas, se diseña un sistema de control predictivo de potencia en la interface eléctrica y se compara su desempeño frente a topologías eléctricas diseñadas para controles enfocados en la parte mecánica (Salinas et al., 2007). De este modo se pueden proponer nuevas ideas para futuros desarrollos y obtener conclusiones sobre las ventajas y desventajas de estos tipos de controladores.
+
+2. Objetivos
+Diseñar un sistema de control predictivo en la etapa de conversión AC/DC/AC en un sistema de generación eólica de acople directo a la turbina. Específicamente:   Analizar las ventajas y desventajas del sistema de control predictivo desarrollado, en cuanto al diseño de la estrategia de control sobre la cual se basa el controlador. Analizar y comparar el sistema de control predictivo propuesto frente a la topología eléctrica de sistemas convencionales, enfocados principalmente al control mecánico del sistema. Obtener el desempeño del sistema de control predictivo bajo distintas condiciones de viento. Analizar el comportamiento del sistema de control propuesto frente a perturbaciones de tipo eléctricas.
+
+ 
+
+55
+
+3. Metodología y Caso de estudio
+Un aerogenerador es básicamente un generador eléctrico movido por una turbina accionada por el viento. En este caso, la energía eólica, en realidad la energía cinética del aire en movimiento, proporciona energía mecánica a un rotor hélice que, a través de un sistema de transmisión mecánico, hace girar el rotor de un generador, normalmente un alternador trifásico, que convierte la energía mecánica rotacional en energía eléctrica. Para aportar energía a la red eléctrica, los aerogeneradores deben estar dotados de un sistema de sincronización para que la frecuencia de la corriente generada se mantenga perfectamente sincronizada con la frecuencia de la red. La turbina eólica es el elemento captador de energía en un aerogenerador y está constituido por aspas o palas, unidas en el buje, donde la energía del viento captada se transforma en energía de rotación. La acción asociada al viento pasa a través del rotor rozando la superficie de las aspas, donde las resultantes de presión y de viscosidad del aire dan lugar a fuerzas de tipo aerodinámico. El Convertidor de potencia en el generador eólico se compone del generador eléctrico y el convertidor AC/DC/AC, este último se subdivide en tres etapas; rectificador, DC Link e inversor. Los diseños de turbinas eólicas son muy variados, no sólo en términos de apariencia externa, sino también la configuración de la interface eléctrica y el sistema de control que la compone. Respecto a la configuración eléctrica de los aerogeneradores, en Baroudi et al. (2007) hace una reseña de las principales topologías conversoras de potencia mecánica en eléctrica, clasificándolas según el tipo de generador, el tipo de semiconductores usados en la etapa rectificadora e inversora y la conexión que existe entre el generador y la carga. La configuración del convertidor básica se muestra en la Figura 1.
+
+Figura 1. Esquema básico del convertidor de potencia y de control
+
+Para análisis de la factibilidad técnica el software MATLAB ofrece un amplio abanico de herramientas para soluciones de tipo ingenieril. Bajo la plataforma de SIMULINK se obtiene un poderoso entorno de simulación en el cual es posible ver en detalle el comportamiento del sistema. En Villablanca et al. (2006) se desarrolló un simulador para un aerogenerador, el cual considera un modelo de generador eólico para el análisis dinámico acoplado directamente al sistemas de potencia bajo la plataforma de simulación PSCAD/EMTDC, aquí se realiza la simulación de un aerogenerador de acople directo modelo E-70 de la empresa alemana
+56
+
+Enercon. Del mismo modo, el trabajo realizado por Kim et al. (2007), consiste en el modelo y análisis de un aerogenerador de acople directo, se muestra el modelado dinámico del viento, de la turbina eólica, del generador, las fuerzas dinámicas asociadas y un sistema de control de potencia, que son la base para el desarrollo del trabajo. Las estrategias de control automático para aerogeneradores se enfocan hacia el control de captación de viento y el control de disparo de los elementos semiconductores en la interface de potencia. En Salinas et al. (2007), se presenta un sistema de control de pitch de un aerogenerador, consta de un controlador PID para controlar el ángulo pitch, dependiendo de la potencia eléctrica requerida, asegurando así la cantidad de potencia necesaria para la carga modelada. Por otro lado, en Rodríguez et al. (2005) presenta un sistema de control predictivo de potencia de un convertidor AC/DC/AC sobre cada una de las etapas del convertidor, enfocándose principalmente en los requerimientos de corriente y potencia en la carga. Previo al control de corriente, para asegurar una tensión constante hacia el inversor, se controla el voltaje DC del capacitor, manteniéndolo de manera continua y en un rango de referencia que asegure el correcto funcionamiento del control de corriente en la carga. De este modo, para asegurar una potencia definida hacia la carga, se controla el sistema de disparo del rectificador en modo de frente activo trifásico, el funcionamiento detallado del sistema de control del rectificador se presenta en Rodríguez et al. (2008). Del mismo modo para examinar de manera extendida el control de corriente en la etapa inversora, en Cortés et al. (2008) se analiza un diseño de control predictivo de corriente de carga bajo un espectro de frecuencias definido.
+
+3.1. Modelo de la turbina eólica
+Este trabajo se basa en las características del aerogenerador de la Empresa Alemana Enercon, Modelo E-70 con acople directo turbina–generador, ver Tabla1.
+Tabla 1. Características del Aerogenerador Enercon E- 70
+
+CARACTERÍSTICAS Fabricante / Modelo Potencia Nominal Velocidad de Viento Nominal Rango de Velocidad de Viento Diámetro del Rotor Área de Barrido Altura del Buje Generador Conexión a Red
+
+DATOS Enercon / E-70 2000 [kW] 13.5 [m/s] 2.5 – 34 [m/s] 71 [m] 3959 [m2] 64 – 133 [m] Síncrono de 80 polos Inversor
+
+Las relaciones mecánicas del aerogenerador son las siguientes: La potencia de una masa de aire en una turbina eólica
+
+PA 
+
+1 AA  VW 3 2
+57
+
+la velocidad específica (λ)
+
+
+La potencia captada por una turbina eólica
+Pm 
+
+Wm R VW
+
+1 A  VW 3 CP ( ,  ) 2
+  C5   1 
+
+Coeficiente de Potencia (CP) definida en (Villablanca et al., 2006)
+
+C   CP ( ,  )  C1  2  C3   C4  e  1 
+en donde:
+1
+
+ C6
+
+1
+El torque mecánico en el rotor de la turbina (Tm)
+
+
+
+1 0.035  3   0.08   1
+
+1 A  VW 3 CP ( ,  ) Tm  2 Wm
+
+Siendo PA: Potencia de una masa de aire [W], AA: Área que atraviesa el flujo de aire. [m2], ρ: Densidad del Aire [kg/m3], Vw: Velocidad del viento [m/s], R: Radio del Rotor [m], Pm: Potencia captada por la turbina [W], A: Área de barrido de las aspas. [m2], y β: Ángulo Pitch [º]. Los coeficientes C1 al C6 son, respectivamente (Salinas et al., 2007): C1 = 0.5176; C2 = 116; C3 = 0.4; C4 = 5; C5 = 21; C6 = 0.0068. De manera más ilustrativa en la Figura 2 se muestra el diagrama de bloques.
+
+Figura 2. Modelo de la turbina eólica en diagrama de bloques
+
+3.2. Modelo del convertidor AC/DC/AC
+Para el convertidor AC/DC/AC se usa un rectificador de frente activo (active front-end rectifier, AFEs), ya que permite un flujo bidireccional de potencia, mediante Control Directo de Potencia (Direct Power Control, DPC), donde las potencias activa y reactiva son estimadas usando las medidas de corriente muestreadas para la carga; y el voltaje en la etapa DC es regulado controlando las corrientes de entrada o la entrada de potencia (Rodríguez et. al. 2005). La función de calidad evalúa el error de la entrada de potencia
+58
+
+activa y reactiva para el rectificador. Para efectos de cálculos y deducción del sistema de control predictivo, conviene representar el generador como una fuente trifásica con impedancia externa. Las ecuaciones dinámicas de los sistemas eléctricos se resumen de la siguiente forma: La dinámica de la corriente de entrada al rectificador di en coordenadas estacionarias α-β Ls s  v s  vafe  Rs is dt en donde:
+vafe  SafeVdc
+
+El vector de estado del rectificador (S1, S2 y S3 representan los estados del rectificador) El vector de corriente de entrada is en relación a las corrientes de fase de entrada El vector de voltaje del generador vs siendo vsan, vsbn y vscn el voltaje de fase a neutral en donde:
+
+2 Safe  ( S1  aS2  a 2 S3 ) 3 2 is  (isa  aisb  a 2isc ) 3 2 v s  (vsan  avsbn  a 2vscn ) 3
+
+ae
+
+j
+
+2 3
+
+Donde Ls y Rs corresponde a la inductancia y resistencia equivalente del generador respectivamente, is el vector de corriente del generador, vs es el voltaje del generador, vafe es el voltaje generado por el rectificador, Vdc el voltaje en el capacitor (Rodríguez et al., 2005). La dinámica de la carga RL - inversor
+vinv  Rl il  Ll dil dt
+
+en donde:
+
+El vector de estado del inversor (S1, S2 y S3 representan los estados del rectificador) El vector de corriente de la carga
+
+2 Sinv  ( S4  aS5  a 2 S6 ) 3
+
+Donde vinv es el voltaje generado por el inversor e il es la corriente de carga. Rl y Ll son la son la resistencia e inductancia de carga, respectivamente. 3.3. Sistema de control del convertidor AC/DC/AC El sistema de control del convertidor AC/DC/AC debe básicamente tomar la potencia desde el generador y enviarla a la carga. En casos ideales, la entrada y salida de potencia debería
+59
+
+ser iguales y no debería ser necesario tener elementos de almacenamiento de energía. No obstante, en sistemas reales las diferencias de potencias entre la entrada y salida de potencia son inevitables, en este caso estas diferencias son absorbidas por el capacitor en la etapa Link DC, y estas fluctuaciones del capacitor DC son representadas por: Pdc  Pin  Pload , considerándose Pdc como la potencia en el capacitor, Pin como la potencia de entrada y Pload, la potencia requerida por la carga. El propósito del control en el rectificador es regular el voltaje DC, para ello se propone el * control predictivo con función de calidad gafe a minimizar: gafe  Qin  Qin  P*  P , en in in donde P*in y Q*in son las entradas requeridas de potencia activa y reactiva respectivamente y Pin y Qin son las entradas de potencia activa y reactiva predichas, las que dependen del estado de conducción de . Además, es requerido que las corrientes de entrada sinusoidales estén en fase con sus respectivos voltajes, así la referencia de potencia reactiva de entrada, Q*in, debe ser cero. Por otro lado el voltaje DC es regulado controlando la * * * potencia de entrada P*in, el que puede ser separado en dos términos: Pin  Pload  Pdc , donde P*load es la potencia activa instantánea requerida por la carga, y P*dc es la potencia activa requerida por el capacitor DC para alcanzar el voltaje de referencia, V*dc. En estado estable P*load es el término más importante, mientras que P*dc es más relevante en transiente y en la compensación de pérdidas no consideradas en el modelo. Bajo estas consideraciones, la * * estructura final de gafe es: gafe  Qin  Pload  PDC  Pin .
+
+Figura 3. Esquema de control propuesto para el convertidor AC/DC/AC
+
+60
+
+Las relaciones del modelo de predicción se tienen:
+
+La corriente predicha generada
+is (k  1) 
+
+1  Ls is (k )  Ts vafe (k  1)  Ts vs (k  1)   RsTs  Ls 
+
+La potencia activa predicha La potencia reactiva predicha
+
+P (k  1)  Re{vs (k  1) is (k  1)}  vs is  vs is in Qin (k  1)  Im{vs (k  1) is (k  1)}  vs is  vs is
+
+En donde, Rs y Ls corresponden a la resistencia e inductancia equivalentes del generador síncrono. Para pequeños tiempos de muestreo Ts, se puede asumir que vs(k+1) ≈ vs(k). La corriente de entrada is(k) es medida directamente en el circuito. vector de voltaje generado. Note que is es el complejo conjugado del vector i s . La función de calidad también necesita una estimación de la potencia activa en la carga. * Ésta fue obtenida usando la referencia de la corriente de carga: Pload  Rl il* il * . Para regular el voltaje DC del capacitor se usa un controlador PI, donde su salida corresponde a la potencia necesitada para compensar el error en el voltaje DC. Esta variable es nombrada como P*dc. En este caso, la potencia de entrada debe ser igual a la potencia requerida por la carga más la potencia necesitada en el capacitor DC (Rodríguez et al., 2005). El propósito del control de la fase inversora consiste en disponer en la carga un vector de corriente determinado por el consumo, para ello se dispone de una función de calidad dada p por: ginv  il*  il  il*  ilp a minimizar. Aquí se considera el error de corriente, de la   referencia y la corriente predicha de carga expresadas en coordenadas ortogonales, donde * * il* il  e son la parte real e imaginaria del vector de referencia de corriente de carga il . Las
+p ip i (k  1) variables il y l  son la parte real e imaginaria del vector de corriente predictiva l . El predictor de corriente de la carga según 1 Cortés et al. ( 2008) il (k  1)   Ll il (k )  Ts vinv (k  1) RlTs  Ll
+
+Donde Rl es la resistencia de carga, Ll el valor de inductancia de la carga RL y Ts el tiempo de muestreo.
+
+4. Resultados y Conclusiones
+4.1. Resultados En este apartado se muestra el comportamiento del sistema de control propuesto, donde se prueba en un aerogenerador de 2 [MW] a una velocidad nominal de 13.5 [m/s]. Más detalles acerca del experimento se muestran en la ¡Error! No se encuentra el origen de la referencia.. El análisis del sistema bajo condiciones normales de operación, es decir bajo
+
+61
+
+un viento constante, la turbina eólica genera su potencia de trabajo nominal (2 [MW] a un viento de 13.5 [m/s]).
+
+Tabla 2. Valores nominales de prueba para el sistema de control
+
+Variable Potencia Nominal de entrada Tiempo de Muestreo Voltaje de referencia DC (Vdcref) Modelo de la Carga Referencia de Corriente de Carga (il*)
+
+Valor 2 [MW] 10 [μs] 8 [KV] 1 [MW] Max Senoidal de 100 [A] y 50 [Hz] por fase
+
+a) variables mecánicas del sistema
+
+b) variable eléctricas del sistema
+
+Figura 4. Curvas características del aerogenerador bajo condiciones nominales
+
+Las graficas de la Figura 4 muestran el comportamiento del sistema de control bajo condiciones nominales. En esta figura se aprecia un transiente aproximadamente de 0.25 [seg], que representa el cambio de estado del sistema. La potencia generada se ajusta de acuerdo a las condiciones de operación del aerogenerador. En la corriente del condensador se observa la acción de conmutación del inversor, debido al control predictivo del tipo discreto. En el comportamiento del voltaje en la carga trifásica se observan los distintos estados que dan las combinaciones de los semiconductores, dada la carga tipo estrella, esta señal tiene una frecuencia de 50 [Hz] de acuerdo a las referencias dadas al sistema. Las señales de corriente en la carga se aprecian simétricas y equilibradas de 100 [A] de amplitud máxima a 50 [Hz]. La Figura 5 se muestran los resultados ante una falla en la carga, específicamente un cortocircuito en la fase A, entre el intervalo de tiempo 0.40 – 0.45 [seg]. En éstas, el sistema controlado no presenta ningún cambio en la tensión del condensador, es decir en la
+62
+
+etapa Link DC. Por lo cual, al no verse afectada esta etapa las variables mecánicas y eléctricas del generador no sufren cambios. Al lado izquierdo, se muestra la tensión de la fase A de la carga donde ocurre el cortocircuito. Al lado derecho, la corriente en la carga no presenta cambios indeseados, lo que demuestra el correcto funcionamiento y robustez del sistema de control propuesto.
+
+a) Tensión en la fase A de la carga
+
+b) Corriente en la carga durante la falla
+
+Figura 5. Curvas características de la carga bajo condición de falla
+
+4.2. Conclusiones El trabajo desarrollado muestra el desempeño del sistema de control predictivo de potencia, donde el comportamiento fue el esperado. Sin embargo, la principal ventaja de este sistema de control es la facilidad con que se pueden incluir las no linealidades del sistema y se pueden controlar diferentes variables (multivariable). La principal característica que se observa en este tipo de control es que su referencia principal corresponde a los requerimientos de potencia en la carga, tomando así la cantidad requerida de potencia a la interface mecánica, generando así un suministro de potencia hasta cierto punto independiente de la potencia captada por el generador eólico. Esto tiene ciertas ventajas y desventajas, pues en el caso de una carga constante en el tiempo esto puede significar un desaprovechamiento de la energía captada por la turbina, pero la principal ventaja es el mantenimiento constante de la energía, liberada de ruido y cambios abruptos de potencia. El sistema de control propuesto presenta un desempeño robusto frente a variaciones de tipo mecánicas. Esto se debe principalmente a la estabilización y control en la etapa DC, donde se logra una tensión y potencia constante a través de la señal de control PI que es procesada y ejecutada a través del control de switcheo AFE del rectificador. El comportamiento de la corriente en la etapa DC es un reflejo o causa de los requerimientos de control de corriente en la carga, los cuales son controlados de acuerdo a una señal de referencia en los switcheos del inversor. En el control del inversor se ve un seguimiento óptimo de la referencia de corriente pues al analizar a través de su espectro de frecuencias, se observa una señal concentrada y de baja distorsión armónica comparada frente a su símil de corriente no controlada. Frente a fallas de tipo eléctricas, en el caso de una falla en la carga, se ve que el sistema responde, ya que la corriente en la carga no se ve afectada de manera abrupta. La única señal afectada en este tipo de falla fue la tensión en la carga, pero ésta no estaba siendo controlada.
+63
+
+BIBLIOGRAFÍA
+ Baroudi J., Dinavahi V., Knight A. (2007). “A review of power converter topologies for wind generators.” Elsevier Renewable Energy, Vol. 32, Issue 14, November 2007, Pages 2369-2385. Cortés P., Rodriguez J., Quevedo D., Silva C. (2008). “Predictive Current Control Strategy With Imposed Load Current Spectrum”. IEEE Transactions on Power Electronics. Vol. 23, Issue 2, March 2008 Page(s):612 – 618. Kim S., Kim E. (2007). “PSCAD/EMTDC-Based Modeling and Análisis of a Gearless Variable Speed Wind Turbine.” IEEE Transactions on Energy Conversion, Vol. 22, nº 2, June 2007. Rodríguez J., Pontt J., Correa P., Lezana P., Cortés P. (2005). “Predictive Power Control of an AC/DC/AC converter”. IEEE Industry Applications Conference, 2005. Fourtieth IAS Annual Meeting. Conference Record of the 2005, Vol. 2, 2-6 Oct. 2005 Page(s):934 - 939 Vol. 2. Rodríguez J., Lezana P., Cortés P. (2008). “Control de un rectificador de frente activo trifásico”. Departamento de Electrónica, Universidad Técnica Federico Santa María, Valparaíso. Salinas F., Siles L. (2007). “Control de Ángulo Pitch de un Aerogenerador”. Trabajo de título de Ingeniero de Ejecución en Electrónica. Universidad de La Frontera, Temuco. Villablanca M., Pérez J. (2006). “Modelo de Generador Eólico para el análisis dinámico en Sistemas de Potencia”. Trabajo de título de Ingeniero de Ejecución Electrónico. Universidad de La Frontera, Temuco. World Wind Energy Association WWEA (2009). “World Wind Energy Report 2008”. www.wwindea.org. Bonn, Germany.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Correspondencia:
+M. Sc. Nelson Aros Oñate. e-mail: naros@ufro.cl Facultad de Ingeniería, Ciencias y Administración Universidad de La Frontera Temuco – Chile Fax: 0056.45. 32 55 50 Teléfono: 0056.45. 32 55 47
+
+64
+

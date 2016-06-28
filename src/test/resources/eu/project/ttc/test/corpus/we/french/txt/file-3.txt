@@ -1,0 +1,2804 @@
+Toute reproduction sans autorisation du Centre français d'exploitation du droit de copie est strictement interdite.
+© Techniques de l'Ingénieur, traité Génie énergétique
+B 8 585
+-
+1
+Énergies éoliennes
+par
+Jean MARTIN
+Ingénieur de l'École nationale supérieure des arts et métiers
+'énergie éolienne est probablement la plus ancienne énergie utilisée par
+l'homme en dehors de son énergie musculaire. Ce fut, sans doute, d'abord
+une énergie captée par la voile pour la navigation, voilà quelques millénaires.
+Par la suite, sans date précise, quelque inventeur de génie, sédentaire, pense
+faire tourner indéfiniment la voile autour d'un axe fixe : le moulin était né. Les
+plus anciens connus, chinois ou perses, sont en effet constitués par des mâts
+verticaux entraînés par des voiles. C'est seulement plus tard que l'axe devient
+sensiblement horizontal, avec des ailes, pour prendre la disposition bien connue
+des moulins à vent.
+L'énergie éolienne joue un rôle économique important jusqu'au début du
+XIX
+e
+siècle. Ensuite, ce rôle diminue par suite de l'accroissement rapide de
+l'utilisation des énergies fossiles.
+1. Le vent
+......................................................................................................... B 8 585 - 1
+1.1 Causes .......................................................................................................... — 2
+1.2 Caractéristiques ........................................................................................... — 2
+1.2.1 Irrégularité spatiale............................................................................. — 2
+1.2.2 Irrégularité temporelle ....................................................................... — 3
+1.2.3 Énergie du vent récupérable.............................................................. — 3
+1.3 Choix du site ................................................................................................ — 4
+2. Organes capteurs
+..................................................................................... — 4
+2.1 Différents types de capteurs ....................................................................... — 4
+2.2 Capteurs à axe horizontal ........................................................................... — 6
+2.2.1 Théorie sommaire. Performances..................................................... — 6
+2.2.2 Profil. Efforts développés................................................................... — 7
+2.2.3 Construction........................................................................................ — 8
+2.2.4 Orientation .......................................................................................... — 10
+2.2.5 Régulation ........................................................................................... — 10
+2.3 Bruit .............................................................................................................. — 10
+2.4 Capteurs à axe vertical ................................................................................ — 10
+2.4.1 Rotor de Savonius .............................................................................. — 10
+2.4.2 Rotor de Darrieus................................................................................ — 12
+2.5 Comparaison des différents capteurs présentés ...................................... — 13
+3. Organes annexes
+...................................................................................... — 14
+3.1 Organes de supportage............................................................................... — 14
+3.2 Organes de conversion ............................................................................... — 14
+3.2.1 Conversion électrique ........................................................................ — 15
+3.2.2 Pompage de l'eau ............................................................................... — 16
+3.2.3 Conversion thermique........................................................................ — 16
+3.2.4 Conversion directe.............................................................................. — 16
+4. Organes de stockage
+.............................................................................. — 17
+5. Données économiques. Intérêt
+............................................................ — 17
+6. Développement des machines éoliennes
+.......................................... — 18
+7. Navigation éolienne
+................................................................................ — 19
+8. Énergie de la houle
+.................................................................................. — 19
+Pour en savoir plus
+........................................................................................... Doc. B 8 585
+L
+ÉNERGIES ÉOLIENNES __________________________________________________________________________________________________________________
+Toute reproduction sans autorisation du Centre français d'exploitation du droit de copie est strictement interdite.
+B 8 585
+-
+2
+© Techniques de l'Ingénieur, traité Génie énergétique
+Les éoliennes subsistent pourtant surtout dans des pays de vastes steppes
+(ex-URSS, Argentine, etc.) ou le long de façades maritimes (Baléares, Crète,
+Portugal, etc.) ; toutes sont de modèles fabriqués depuis longtemps.
+Toutefois au XX
+e
+siècle, s'appuyant sur les progrès de l'aérodynamique,
+certaines tentatives de réalisation de nouvelles machines sont faites. Aux
+États-Unis, en ex-URSS, en Angleterre et en France par Électricité de France
+autour de 1960, des éoliennes puissantes, jusqu'à 1 000 kW environ, sont
+essayées. Malgré des résultats encourageants, c'est de nouveau l'abandon, le
+pétrole bon marché se substituant à toutes les autres formes d'énergie.
+L'augmentation brutale du prix du pétrole relance l'énergie éolienne. La crainte
+de n'utiliser qu'une seule énergie, dont l'approvisionnement peut être aléatoire,
+les idées écologiques orientent certains pays vers cette forme inépuisable et
+nationale !
+Des progrès importants dans l'aérodynamique, l'arrivée de nouveaux matériaux
+vont permettre d'exploiter ce gisement mondial estimé à 4 TWh à partir
+de nouvelles machines fiables et diminuer le prix de l'énergie produite, qui ne
+devient plus marginale dans certains pays comme le Danemark ou certaines
+contrées comme la Californie.
+1. Le vent
+1.1 Causes
+Le vent est un
+sous-produit
+de l'énergie primaire provenant du
+soleil. La terre et son atmosphère constituent une vaste machine
+thermique dont la source chaude, constamment variable, est l'hémisphère
+irradié par le soleil, et la source froide, également variable,
+l'hémisphère obscur. Le fluide de travail, l'air, passe chaque jour de
+l'un à l'autre. Ce cycle produit une énergie mécanique qui est l'énergie
+cinétique de l'air ou
+vent
+. Par suite du faible écart de température,
+de l'ordre d'une dizaine de degrés, le rendement est peu élevé. Néanmoins,
+étant donné la quantité de chaleur, l'énergie éolienne, pour
+l'ensemble du globe, est considérable. Elle se situe entre 2,5
+×
+10
+15
+et 5
+×
+10
+15
+kWh/an. Toutefois, une petite partie seulement est vraiment
+récupérable.
+1.2 Caractéristiques
+La puissance du vent est sensiblement constante à chaque instant
+pour l'ensemble du globe, en un lieu donné et sur une période
+solaire, mais elle varie considérablement en tout lieu et suivant les
+jours. La vitesse du vent est très variable. Le tableau
+1
+donne, en
+fonction de sa vitesse, les différents effets que l'on peut constater.
+(0)
+1.2.1 Irrégularité spatiale
+Le vent est, en moyenne, faible dans la zone polaire nord et dans
+la zone intertropicale ; il est maximal vers ± 55
+o
+de latitude. Il est
+fort en mer. En Eurasie, il décroît d'ouest en est. À ces évolutions
+à grande échelle, se superposent de nombreuses irrégularités à
+échelle beaucoup plus petite, parfois de quelques dizaines de kilomètres
+carrés.
+La vitesse du vent est une fonction croissante avec la hauteur
+au-dessus du sol et avec l'altitude (par rapport au niveau de la mer).
+La loi de répartition de la vitesse suivant une verticale dépend,
+d'une part, du relief local et, d'autre part, de la
+rugosité
+de la région.
+Au sommet d'une colline arrondie, on a un accroissement local de
+Notations et symboles
+Symbole Unité Définition
+C
+N · m couple sur le capteur
+C
+f
+sans dimension coefficient de poussée
+C
+m
+sans dimension coefficient de couple
+C
+p
+sans dimension coefficient de puissance
+C
+x
+sans dimension coefficient de traînée
+C
+z
+sans dimension coefficient de portance
+D
+m diamètre du capteur
+F
+x
+N force de traînée
+F
+z
+N force de portance
+L
+m longueur de pale
+P
+N poussée axiale sur le capteur
+R
+m rayon du capteur ou rayon
+minimal de l'aubage
+S
+m
+2
+surface
+W puissance
+i
+rad angle d'incidence ou d'attaque
+du profil
+m longueur de la corde d'une
+pale
+kgs débit-masse du vent à travers
+l'éolienne
+n
+tr/s vitesse de rotation du capteur
+u
+m/s vitesse tangentielle de
+déplacement de l'aubage
+v
+m/s vitesse instantanée du vent
+v
+m
+m/s vitesse moyenne du vent
+v
+n
+m/s vitesse nominale du vent
+v
+R
+m/s vitesse relative du vent
+η
+sans dimension rendement
+λ
+sans dimension paramètre de vitesse
+Λ
+sans dimension portance
+ρ
+kg/m
+3
+masse volumique de l'air
+ω
+rad/s vitesse angulaire de rotation
+du capteur
+W ˙
+B
+m˙
+__________________________________________________________________________________________________________________ ÉNERGIES ÉOLIENNES
+Toute reproduction sans autorisation du Centre français d'exploitation du droit de copie est strictement interdite.
+© Techniques de l'Ingénieur, traité Génie énergétique
+B 8 585
+-
+3
+vitesse dont l'effet peut inverser le gradient de vitesse habituel et
+faire que la vitesse au sol soit plus grande qu'à une certaine hauteur.
+La figure
+1
+traduit la répartition de la vitesse du vent en fonction
+du relief rencontré et de l'altitude.
+En terrain plat, on peut représenter la variation de vitesse
+v
+en
+fonction de la hauteur
+h
+au-dessus du sol par la loi :
+(1)
+avec
+v
+0
+vitesse à la hauteur
+h
+0
+de référence au-dessus du sol,
+α
+coefficient caractéristique du lieu.
+Le coefficient
+α
+a sensiblement les valeurs suivantes :
+— en mer :
+α
+= 0,13 ;
+— sur un rivage :
+α
+= 0,16 ;
+— en plaine :
+α
+= 0,2 ;
+— en plaine boisée :
+α
+= 0,24 ;
+— en ville :
+α
+= 0,3.
+1.2.2 Irrégularité temporelle
+Le vent varie considérablement dans le temps. À partir de relevés
+anémométriques, on trace la
+courbe vitesse-durée
+intéressant une
+période donnée (en général un an) : pour chaque valeur de la vitesse
+du vent, on détermine le nombre d'heures pendant lesquelles cette
+vitesse du vent est supérieure ou égale à la vitesse considérée
+(figure
+2
+a
+). On peut caractériser ces courbes par la valeur moyenne
+annuelle pour la période considérée. Il est possible aussi d'en déduire
+la
+courbe de fréquence
+(c'est-à-dire la variation inverse de la pente
+des courbes vitesse-durée) qui indique le nombre d'heures, pour la
+période considérée, pendant lesquelles la vitesse du vent reste
+comprise entre des valeurs données (figure
+2
+b
+). Cette courbe de
+fréquence donne une idée de la régularité du vent en un lieu donné.
+Les irrégularités sont maximales à l'échelle du mois. En moyenne,
+le vent est le plus fort en janvier, le plus faible en juillet. La répartition
+saisonnière est approximativement sinusoïdale. Les variations de
+courte durée ont des causes locales.
+1.2.3 Énergie du vent récupérable
+L'énergie du vent est l'énergie cinétique de l'air qui traverse une
+certaine surface
+S
+. La puissance est donc :
+(2)
+avec
+ρ
+masse volumique de l'air (
+ρ
+≈
+1,25 kg/m
+3
+dans les conditions
+normales de température et de pression au niveau
+de la mer).
+La puissance varie donc comme le cube de la vitesse
+v
+du vent.
+Tableau 1 - Effets du vent en fonction de sa vitesse
+Échelle
+en degrés
+Beaufort
+Nature du vent Effets physiques
+Vitesse
+du vent
+(moyenne)
+(m/s)
+1 vent insensible et très faible la fumée monte verticalement
+(les feuilles semblent immobiles) 1
+2
+brise infime imperceptible frémissement des feuilles
+la fumée est légèrement déviée 2
+brise légère (les moulins démarrent) les feuilles s'agitent doucement
+la fumée est nettement déviée 3
+3 vent modéré (frais) les petits rameaux remuent un peu 4
+4
+vent léger les branchettes plient légèrement 6
+brise moyenne (bon frais) les branchettes plient nettement 7
+5
+forte brise les branches oscillent et se balancent 8
+grand frais les branches plient 9
+très forte brise les peupliers plient 10
+6 vent fort les feuilles sont arrachées 12
+7 vent très fort les petites branches cassent 15
+8 vent impétueux les branches moyennes se brisent 20
+9 fort coup de vent début de dégâts sur les toitures 22
+10 tempête violente les fortes branches cassent 24
+11 tempête violente ravages étendus 30
+12
+ouragan les toitures sont très endommagées 36
+grand ouragan gros arbres et toitures sont arrachés
+effets catastrophiques 46
+v
+v0
+------ h
+h0
+------ 
+ α
+=
+Figure 1 - Répartition de vitesse du vent
+en fonction du relief rencontré et de l'altitude
+W ˙
+W ˙
+1
+2
+---- ρ v 2 S v
+1
+2
+= = ---- ρ S v 3
+W ˙
+ÉNERGIES ÉOLIENNES __________________________________________________________________________________________________________________
+Toute reproduction sans autorisation du Centre français d'exploitation du droit de copie est strictement interdite.
+B 8 585
+-
+4
+© Techniques de l'Ingénieur, traité Génie énergétique
+La masse volumique étant faible, la puissance éolienne est une
+puissance diluée puisque la vitesse
+v
+ne vaut, le plus souvent, que
+quelques mètres par seconde.
+On parle plutôt d'énergie annuelle. Dans des régions à vent très
+faible, l'énergie théorique ne peut être que de 200 kWh/m
+2
+et par
+an. Dans certaines régions privilégiées, en Bretagne, Normandie et
+Roussillon, elle atteint 4 000 kWh/m
+2
+et par an à 40 m au-dessus du
+sol. En moyenne en France, elle est de 800 kWh/m
+2
+et par an. Une
+carte des vents pour la France a été établie par EDF-IGN qui précise
+l'énergie pour différentes régions [1].
+1.3 Choix du site
+Par suite de l'irrégularité des vents, la rentabilité d'une machine
+éolienne dépendra beaucoup du site sur lequel elle est installée et
+sera liée aussi à son utilisation.
+Les sites les plus intéressants sont situés au
+bord de la mer
+ou
+aux
+sommets de collines et de montagnes
+bien dégagés. Toutefois
+dans ces premiers lieux se posent des problèmes de corrosion et
+dans les seconds des risques de givrage.
+La prospection des sites possibles constitue donc le premier travail
+à effectuer pour juger de la possibilité d'utiliser le vent. Des relevés
+météorologiques complets sur les sites présumés doivent être effectués
+au moins pendant une année. Non seulement il faut connaître
+la vitesse moyenne mais aussi la quantité d'énergie annuelle. Pour
+cela, des anémomètres spéciaux totalisateurs de l'énergie par mètre
+carré ont été mis au point (anémomètre de C. Ailleret ou celui de
+la société Aérowatt) [14].
+Les vents les plus intéressants, qui donnent le maximum d'énergie
+annuelle, sont les
+vents réguliers, comme les alizés
+, ayant une
+vitesse moyenne de 6 à 8 m/s, voire jusqu'à 10 m/s.
+Outre ceux ayant une quantité d'énergie annuelle insuffisante, il
+faut éliminer les sites soumis à des variations très brutales de la
+vitesse du vent (type mistral par exemple). Le relief local joue un
+rôle important. Aussi, y a-t-il lieu d'en tenir compte dans l'interprétation
+des mesures effectuées souvent à la hauteur standard de 10 m
+au-dessus du sol (hauteur adoptée par la Météorologie nationale).
+2. Organes capteurs
+L'organe capteur prélève l'énergie cinétique du vent pour la transformer
+en énergie utilisable, mécanique ou électrique. C'est l'organe
+le plus important et il en existe de nombreux types.
+2.1 Différents types de capteurs
+Le tableau
+2
+en donne une classification méthodique et précise
+les principales caractéristiques des capteurs. À partir d'ailleurs de
+ces modèles élémentaires, de nombreux autres capteurs peuvent
+être imaginés par conjugaison de plusieurs de ces modèles élémentaires.
+Toutefois,
+seuls ceux dont le nom est indiqué en gras dans
+le tableau
+2
+présentent un réel intérêt et font l'objet d'applications.
+Le coefficient d'utilisation d'aubage
+S
+c
+/
+S
+v
+est le rapport de l'aire
+développée par l'ensemble de l'aubage à l'aire de la veine d'air interceptée,
+donc motrice. Plus ce coefficient est petit, plus le capteur
+est intéressant sur le plan économique. Le paramètre de vitesse
+λ
+=
+u
+/
+v
+est le rapport de la vitesse maximale de déplacement de
+l'aubage
+u
+à la vitesse du vent
+v
+, avec
+u
+=
+ω
+R
+.
+De fortes valeurs du paramètre
+λ
+(jusqu'à 20) permettent un
+meilleur rendement et de meilleures possibilités d'utilisation.
+Les capteurs qui n'ont pas besoin d'être orientés, et sont à axe
+vertical, sont aussi appelés
+panémones
+(à tout vent).
+Les
+capteurs dynamiques ou rotors
+sont de très loin les plus
+développés ; les
+capteurs statiques
+ne sont que des élaborations
+théoriques.
+Les capteurs dynamiques modifient l'écoulement de l'air qui les
+traverse et se trouvent soumis à sa réaction. Cette réaction peut
+être réduite à une force résultante et à un couple. Cette force peut
+être décomposée en :
+— une poussée perpendiculaire au vent relatif ou
+portance
+;
+— une réaction parallèle au vent relatif ou
+traînée
+.
+On définit aussi la circulation
+Γ
+d'un profil
+C
+par :
+(3)
+Cette circulation peut soit varier périodiquement, l'écoulement
+est alors
+instationnaire
+, soit être constante, l'écoulement est alors
+stationnaire
+.
+Figure 2 - Exemple d'irrégularités temporelles du vent
+Γ BC
+= vdS
+__________________________________________________________________________________________________________________ ÉNERGIES ÉOLIENNES
+Toute reproduction sans autorisation du Centre français d'exploitation du droit de copie est strictement interdite.
+© Techniques de l'Ingénieur, traité Génie énergétique
+B 8 585
+- 5
+La force de portance Fz d'une surface S est donnée par la
+relation :
+(4)
+De même, la force de traînée Fx est égale à :
+(5)
+La portance ne dégrade pas l'énergie, tandis que la traînée
+résulte en partie de cette dégradation. Les machines à traînées
+(tableau 2) sont irrationnelles ; seul le rotor de Savonius présente
+un certain intérêt du fait d'ailleurs qu'il n'utilise pas seulement la
+différence de traînée.
+Les capteurs à circulation instationnaire, dont la théorie est
+complexe, ont reçu il y a une dizaine d'années un développement
+important qui en faisant des concurrents directs des capteurs à
+circulation stationnaire, seuls utilisés pratiquement depuis
+longtemps. (0)
+Fz
+1
+2
+= ---- ρ v 2 S Cz
+Fx
+1
+2
+= ---- ρ v 2 S Cx
+Tableau 2 - Types de capteurs classification et caractéristiques
+Types de capteurs Schéma Sens
+de l'axe
+Orientation
+S
+c
+/
+S
+v
+Caractéristiques principales
+CAPTEURS DYNAMIQUES
+Axe horizontal
+à circulation stationnaire
+type américain
+horizontal oui 0,9 à 1,5 0,9 à 1,5
+— capteur rustique mais pas très
+simple,
+— couple au démarrage élevé, surtout
+pour le pompage de l'eau.
+moulin à hélice
+horizontal oui 0,1 à 0,3 5 à 12
+— capteur simple, réglage facile,
+— bon rendement, vitesse élevée
+mais couple au démarrage faible.
+Axe vertical
+à simple traînée
+à écran vertical oui 3 à 5 0,2 à 0,6 — double dispositif (écran) lourd,
+— prise au vent élevée.
+à clapet
+battant vertical non 2 à 5 0,2 à 0,6
+— capteur bruyant,
+— usure importante,
+— bonne utilisation du vent.
+orientation
+cyclique
+des aubes
+vertical oui 2 à 4 0,2 à 0,6 — capteur compliqué,
+— usure importante.
+à traînée différentielle
+moulinet
+vertical non 5 0,3 à 0,8
+— capteur simple,
+— capteur utilisé uniquement pour
+la mesure de vitesse.
+flux
+transversal vertical non 6 à 10 0,3 à 0,4 — capteur fiable,
+— prise au vent élevée.
+rotor
+de Savonius
+vertical non 1,2 à 1,6 0,9 à 1,7
+— capteur simple,
+— démarrage à faible vitesse et
+couple élevé.
+B
+ÉNERGIES ÉOLIENNES __________________________________________________________________________________________________________________
+Toute reproduction sans autorisation du Centre français d'exploitation du droit de copie est strictement interdite.
+B 8 585
+-
+6
+© Techniques de l'Ingénieur, traité Génie énergétique
+Seuls seront décrits ci-après les deux capteurs à axe horizontal
+actuellement les plus répandus et les capteurs à axe vertical, mais
+dont le développement s'est réduit. Les capteurs statiques ne font
+l'objet d'aucune recherche en cours, donc ne seront pas étudiés en
+détail ici.
+2.2 Capteurs à axe horizontal
+2.2.1 Théorie sommaire. Performances
+L'énergie cinétique du vent ne peut être entièrement récupérée car
+il faut, en particulier, évacuer l'air qui a travaillé dans le capteur. En
+outre, par suite de l'action de retenue de la veine d'air par la roue,
+la vitesse axiale amont
+v
+1
+diminue en aval jusqu'à la vitesse
+v
+2
+(figure
+3
+).
+D'après la
+théorie de Betz
+[2], la puissance récupérable sur
+l'éolienne est due à la variation de l'énergie cinétique du vent :
+(6)
+avec le débit-masse du vent à travers l'éolienne .
+L'effort qui s'exerce sur l'éolienne est donné par le théorème de
+la variation de la quantité de mouvement :
+(7)
+Cet effort crée une puissance :
+(8)
+CAPTEURS DYNAMIQUES
+Axe vertical ou horizontal
+à circulation instationnaire
+tapis roulant
+vertical
+ou
+horizontal
+oui 2 à 4 1 à 2 — capteur compliqué,
+— capteur peu fiable et coûteux.
+profil oscillant
+vertical
+ou
+horizontal
+oui 2 0,5 à 1 — capteur compliqué,
+— capteur coûteux.
+train de rotors
+Magnus vertical oui 1,5 à 4 1
+— capteur compliqué,
+— sous forme élémentaire et appliqué
+à la navigation.
+variation
+cyclique et
+aubes fixes
+(Darrieus)
+vertical non 0,1 à 0,3 3 à 8
+— capteur très simple, fiable et peu
+coûteux,
+— couple au démarrage très faible.
+variation
+cyclique et
+aubes mobiles
+vertical oui 0,2 à 0,6 3 à 8
+— capteur compliqué,
+— usure importante,
+— capteur assez coûteux, avec un
+bon rendement.
+CAPTEURS STATIQUES
+à variation
+de pression oui 5 à 8 — capteur simple et fiable,
+— hauteur d'aspiration faible.
+à convertisseur
+électrostatique oui 5 à 8 — capteur simple en théorie,
+— pas de développement actuel.
+Tableau 2 - Types de capteurs classification et caractéristiques
+(suite)
+Types de capteurs Schéma Sens
+de l'axe
+Orientation
+S
+c
+/
+S
+v
+B Caractéristiques principales
+W ˙
+Δ E˙
+c
+1
+2
+---- m ˙ v 2
+2 v 1
+2 = = ( - )
+m˙
+m˙
+= ρ S v
+Figure 3 - Capteur à axe horizontal : définition des vitesses
+F = ρ S v (v1 - v2)
+W ˙
+= F ⋅ v = ρ Sv2 (v1 - v2)
+__________________________________________________________________________________________________________________ ÉNERGIES ÉOLIENNES
+Toute reproduction sans autorisation du Centre français d'exploitation du droit de copie est strictement interdite.
+© Techniques de l'Ingénieur, traité Génie énergétique
+B 8 585
+-
+7
+qui est évidemment la même que celle donnée par (6). Ainsi, la
+combinaison de (6) et (8) donne :
+(9)
+Si on pose on peut écrire :
+(10)
+Cette puissance admet une valeur maximale
+pour la valeur de
+k
+qui annule sa dérivée :
+(11)
+Alors :
+(12)
+On a démontré que l'énergie récupérable dépend du rapport
+v
+2
+/
+v
+1
+et passe par un maximum lorsqu'il est égal à 1/3. Dans ces conditions,
+l'énergie récupérable est égale aux 16/27 de l'énergie cinétique
+totale. Il n'est donc possible de récupérer, au mieux, que moins de
+60 % de cette énergie, ce qui définit le
+rendement de Betz
+par rapport
+auquel on établit le
+rendement d'un capteur
+.
+Les caractéristiques d'un capteur sont :
+— sa puissance :
+(13)
+— sa poussée axiale :
+(14)
+— son couple sur l'axe :
+(15)
+avec
+S
+surface efficace de la roue =
+π
+R
+2
+.
+Les coefficients de puissance
+C
+p
+, de poussée
+C
+f
+et de couple
+C
+m
+varient avec la forme du capteur et le paramètre de vitesse
+λ
+=
+u
+/
+v
+(figure
+4
+).
+2.2.2 Profil. Efforts développés
+Les pales sont constituées par de simples lames galbées dans le
+cas des capteurs à marche lente et par des hélices à profil d'ailes
+dans le cas de capteurs à marche rapide.
+La finesse du profil
+C
+z
+/
+C
+x
+joue un rôle important. Elle doit être assez
+grande pour que la traînée n'absorbe pas une partie trop élevée du
+couple moteur. La théorie des hélices propulsives, ou celle des pales
+d'hélicoptères, est valable en tenant compte du changement de
+certains signes ; en effet, dans les éoliennes (figure
+5
+), on a la relation
+suivante :
+ϕ
+=
+i
++
+β
+La détermination des pales ne dépend pas uniquement de données
+aérodynamiques du profil mais aussi de celles de la résistance des
+matériaux (problème de fatigue).
+Le profil étant choisi, donc la polaire connue, pour une section
+de pale située à la distance
+r
+de l'axe, on a :
+avec
+Λ
+portance dont les différentes valeurs, en fonction du
+rapport
+λ
+, sont données dans la figure
+6
+a
+.
+Les courbes de la figure
+6
+b
+permettent de déterminer l'évolution
+des profils le long d'une pale quelconque. Tous les points d'une
+même pale sont situés sur un même segment de droite passant par
+l'origine et par le point défini par le rayon de la pale et le rapport
+λ
+considéré (droite en tiretés). Si l'on prend le même profil, dans
+les mêmes conditions d'incidence
+i
+et de finesse, on obtient la
+longueur de la corde (figure
+5
+) de la section considérée. La portance
+Λ
+d'un élément de pale de longueur
+L
+est alors :
+On peut aussi déterminer, le long de la pale, la répartition de la
+portance, donc la répartition du moment fléchissant. Connaissant les
+différentes sections, on en déduit les moments d'inertie et les
+fatigues.
+v
+v1 + v2
+2
+= -------------------
+k
+v2
+v1
+= ------
+W ˙
+1
+4
+--- ρ Sv 1
+3 = (1 + k)2 (1 - k)
+dW ˙
+dk
+---------- = 0 ⇒ 2 ( 1 + k ) ( 1 - k ) - (1 + k )2 = 0
+soit k 1
+3
+= ----
+W ˙
+max
+16
+27
+------ 1
+2
+---- ρ Sv 1
+3 0,6
+1
+2 --- ρ Sv 1
+3 = × ≈
+W ˙
+Cp
+S ρ v3
+2
+= ----------------
+P Cf
+S ρ v2
+2
+= ----------------
+C Cm
+RSρ v2
+2
+= --------------------
+CzBn rλ
+= ---Λ
+Figure 4 - Coefficients de puissance
+C
+p
+, de couple
+C
+m
+et de poussée axiale
+C
+f
+en fonction du paramètre de vitesse
+pour des éoliennes à axe horizontal
+Figure 5 - Caractéristiques d'un profil de pale d'éolienne
+B
+B
+Λ Czρ
+v
+R
+2
+2
+= ------ - B L
+ÉNERGIES ÉOLIENNES __________________________________________________________________________________________________________________
+Toute reproduction sans autorisation du Centre français d'exploitation du droit de copie est strictement interdite.
+B 8 585
+-
+8
+© Techniques de l'Ingénieur, traité Génie énergétique
+Sur un élément d
+S
+de la pale, situé à la distance
+r
+de l'axe de
+rotation, s'exerce un effort de portance d'après la relation (4) :
+et un effort de traînée d'après la relation (5) :
+avec
+C
+ix
+,
+C
+iz
+coefficients de traînée et de portance de l'élément
+d
+S
+de pale,
+d'où le couple élémentaire par projection sur le plan de rotation :
+et le couple total est obtenu par intégration.
+De même, la poussée élémentaire d
+P
+par projection sur l'axe de
+rotation (figure 5) est égale à :
+ce qui permet de calculer l'effort s'exerçant en tête de la structure
+de supportage.
+2.2.3 Construction
+La construction des capteurs à axe horizontal diffère suivant qu'ils
+sont à marche lente ou rapide (tableau
+3
+). (0)
+2.2.3.1 Roues à marche lente
+Elles sont généralement constituées par un ou plusieurs anneaux
+concentriques (roue multipale à jante) sur lesquels sont disposées
+des ailettes (figure
+7
+), le plus souvent de simples plaques de métal
+galbées. Le nombre de ces ailettes varie en général entre 20 et 40.
+Elles sont en acier galvanisé, ou plastifié, parfois en alliages d'aluminium.
+L'intérieur de la roue jusqu'au tiers du rayon reste vide. Par
+suite de leur inertie importante, leur comportement lors de rafales
+de vent fait que leur diamètre reste limité, au maximum à 8 m. Leurs
+coefficients de performance sont donnés à la figure
+4
+a
+. On note un
+couple élevé au démarrage qui décroît par la suite. Les vitesses de
+rotation sont faibles (de l'ordre de 100 tr/min pour un diamètre de
+roue de 3 m).
+Dans des installations très rustiques, de moins en moins utilisées,
+les aubes sont constituées par des voiles (réglage facile et bon
+comportement aux grands vents mais vitesse faible).
+2.2.3.2 Roues à marche rapide
+Ce sont actuellement, à part les petites éoliennes très utilisées pour
+le pompage de l'eau, les plus répandues. Elles sont quasi exclusivement
+présentes pour la production électrique dès que les puissances
+dépassent quelques kilowatts.
+Figure 6 - Évolution des profils le long d'une pale quelconque
+dFz
+1
+2
+---- Ciz ρ v R
+2 = dS
+dFx
+1
+2
+---- Cix ρ v R
+2 = dS
+dC = r (dFz sin ϕ - dFx cos ϕ )
+1
+2
+---- r v R
+2 ρ d S C = ( iz sin ϕ - Cix cos ϕ )
+dP 1
+2
+--- ρ d S vR
+2 C = ( iz cos ϕ + Cix s in ϕ )
+Tableau 3 - Types de construction de capteurs
+à axe horizontal
+Pales
+en porte-àfaux
+(marche
+rapide)
+Pales simples Pales composites
+Roue
+à pales
+à jante
+Jante
+périphérique
+Jante
+intermédiaire
+Multipale
+à jante
+(marche lente)
+Roue
+à pales
+haubanées
+ou
+triangulées
+(marche
+lente)
+Exemple :
+prenons le cas courant d'une éolienne utilisée dans nos
+champs pour l'alimentation du bétail. C'est une éolienne à marche lente
+à 12 pales pour un diamètre de 3,6 m. Pour une hauteur de refoulement
+d'eau de 10 m et un vent de 5 m/s, le débit d'eau fourni est d'environ
+12,6 m
+3
+/h.
+                  
+(marche rapide)
+__________________________________________________________________________________________________________________ ÉNERGIES ÉOLIENNES
+Toute reproduction sans autorisation du Centre français d'exploitation du droit de copie est strictement interdite.
+© Techniques de l'Ingénieur, traité Génie énergétique
+B 8 585
+-
+9
+Elles sont constituées par un moyeu recevant 1 à 4 pales (figure
+8
+),
+éventuellement liées entre elles. Les pales sont fixes ou orientables
+(réglage de la puissance). La roue bipale est la plus économique mais
+elle est génératrice de vibrations qui peuvent être importantes. La
+roue tripale présente moins de risques de vibrations (car son ellipsoïde
+d'inertie est plat), d'où fatigue et bruit faibles.
+Leurs coefficients de performance sont donnés sur la figure
+4
+b
+.
+Ces machines ont un faible couple au démarrage mais qui augmente
+par la suite. Leur vitesse en bout de pale est très supérieure à celle
+du vent (jusqu'à 10 fois plus) et un bruit peut apparaître surtout si
+cette vitesse dépasse 1/3 de la vitesse du son. Elles ne démarrent
+que pour des vitesses du vent le plus souvent supérieures à 3 m/s.
+La longueur des pales peut être très grande, supérieure à 30 m. Elles
+sont soumises à des fatigues importantes dont les causes essentielles
+sont :
+— la force centrifuge (traction sur le moyeu) ;
+— le poids des pales (sens alterné suivant la position) ;
+— la poussée (moment de flexion égal à environ dix fois le couple
+moteur) ;
+— les moments alternés et les efforts gyroscopiques dus aux
+changements de direction du vent ;
+— le déséquilibre dynamique de l'hélice dû à la régulation par
+variation du pas (si elle existe) ;
+— les rafales dues aux vents forts qui entraînent une instabilité
+en direction et en puissance ;
+— le couplage entre le mode vibratoire du pylône et de l'hélice.
+Suivant le site, ces fatigues peuvent être aussi provoquées par :
+— le déséquilibre de l'hélice par création de givre sur le bord
+d'attaque ;
+— l'érosion du bord d'attaque par le sable et l'eau.
+Les principaux modes de vibration de pales sont calculés par
+optimisation en modifiant la répartition des masses dans chaque
+pale. Il est possible d'adapter une pale à un aérogénérateur en situation
+de construction, les fréquences propres dans un domaine où
+il n'y a pas de résonance avec la structure de la machine ou avec
+des excitations aérodynamiques. La technologie des pales creuses,
+qui accepte ces ajustements, permet de réduire considérablement
+les contraintes et les fatigues et, de ce fait, de garantir une meilleure
+longévité de la machine, tout en espaçant les délais de visite de
+maintenance.
+Pour les grandes machines, des codes de calcul ont été développés,
+surtout par l'ONERA, sur la dynamique des sillages et des profils
+qui sont inclus dans le programme de réponse dynamique
+d'une hélice à pale déformable de façon à disposer de la partie
+essentielle d'un code de calcul d'éolienne équipée de ce type de
+pales.
+B
+Les
+matériaux utilisés pour la réalisation des pales
+sont variés et
+ont bénéficié de nombreux progrès, particulièrement ceux dus aux
+pales d'hélicoptère.
+C
+
+Le bois
+: le bois recherché est droit de fil, sans noeud et sec. Les
+plus utilisés sont les résineux (l'épicéa, le spruce, le sapin du Haut-
+Jura, le pin d'Arkhangelsk, le pin de l'Orégon) et les feuillus
+(l'okoumé, l'acajou, le hêtre, le frêne) ; généralement, les pales sont
+ensuite vernies. Le bois est réservé pour des pales assez petites, 2 à
+3 m au maximum.
+C
+Le lamellé-collé
+: c'est un matériau composite constitué d'un
+empilement de lamelles de bois collées ensemble soit d'essences
+différentes, soit de même nature. Il est possible de réaliser des pales
+jusqu'à 5 à 6 m de longueur ayant une bonne tenue en fatigue.
+C
+Les alliages d'aluminium
+: trois types de construction sont
+utilisés :
+— la
+tôle sur longerons
+,
+pliée et rivetée
+: c'est une technique
+couramment utilisée en aéronautique et permettant la fabrication de
+pales à profil évolutif (calage et corde variables) ;
+— les
+profilés de filières
+: constituent une solution économique
+mais limitent les possibilités de fabrication à une pale à corde, profil
+et calage constants ;
+—
+l'étiré à froid
+, très coûteux, est réservé à des applications particulières
+et limite les possibilités de réalisation.
+Ces alliages se rencontrent pour des pales allant principalement
+jusqu'à 20 m de longueur.
+B
+Les matériaux composites
+: leur intérêt est de permettre la réalisation
+de toutes les formes et dimensions, ainsi que d'obtenir les caractéristiques
+mécaniques exactes recherchées : pale vrillée, corde
+évolutive, changement de profil. On peut faire varier la quantité de
+matière le long de la pale, c'est-à-dire passer d'un profil ne possédant
+qu'une peau très mince en extrémité, à un profil plein en pied de pale.
+On peut faire passer les efforts par une section représentant le
+moment d'inertie nécessaire mais également pouvant représenter
+un centrage correct : on peut considérer, en première approximation,
+que le centre de poussée aérodynamique, en régime subsonique, est
+situé au quart avant, alors que son centre de gravité est situé au tiers
+avant, donnant ainsi naissance à un couple de rappel à plat de la pale.
+Les produits de base utilisés sont les tissus de verre, le
+Kevlar
+,
+le carbone. On trouve actuellement des tissus composés de plusieurs
+matériaux tels que : verre-carbone, verre-
+Kevlar
+, carbone-
+Kevlar
+,
+carbone seul, dans différents gommages et différents tissages. Les
+résines sont variées, les résines époxydes étant les plus courantes.
+Afin de pouvoir obtenir des pièces de même masse volumique,
+on travaille avec des tissus préimprégnés de résine qui, par la suite,
+sont passés au four à des températures se situant entre 90 et 140
+o
+C.
+La structure la plus couramment employée est le pain de mousse
+enrobé. Ces types de matériau sont de plus en plus utilisés par suite
+de leurs qualités (faible masse, résistance à la corrosion, bonne tenue
+en fatigue, pas d'interférence radio, etc.), aussi bien pour de petites
+Figure 7 - Éolienne à marche lente
+Figure 8 - Éoliennes bipale et tripale à marche rapide
+ÉNERGIES ÉOLIENNES __________________________________________________________________________________________________________________
+Toute reproduction sans autorisation du Centre français d'exploitation du droit de copie est strictement interdite.
+B 8 585
+-
+10
+© Techniques de l'Ingénieur, traité Génie énergétique
+pales que pour les plus grandes qui peuvent dépasser 30 m. Avec
+le carbone, les gains de masse sont considérables. Une pale de 32 m,
+réalisée avec ce matériau, pèse 3 000 kg, alors qu'en verre polyester,
+elle pèse 6 000 kg.
+2.2.4 Orientation
+Les capteurs à axe horizontal doivent toujours être orientés pour
+faire face au vent. Les dispositifs le permettant sont donnés dans
+le tableau
+4
+. (0)
+Les systèmes les plus simples sont ceux qui laissent le
+capteur
+libre dans le vent
+. Le capteur, placé à l'amont du supportage, nécessite
+une gouverne mais soustrait les pales au sillage de ce supportage.
+Par contre, s'il est placé à l'aval, le gouverne n'existe plus et
+les efforts de manoeuvre sont plus faibles. Cette dernière disposition
+est donc plus simple et donne une stabilité supérieure. Toutefois,
+dans tous les cas, il est utile de monter un amortisseur.
+La disposition roue aval est de loin maintenant la plus utilisée,
+même exclusivement dès que la puissance dépasse quelques
+kilowatts.
+Les grandes machines font appel à la technologie électrohydraulique
+et le contrôle de l'orientation se fait par embrayage et valves
+hydrauliques.
+2.2.5 Régulation
+Par suite des fluctuations très grandes de la vitesse du vent, il est
+absolument nécessaire de prévoir un dispositif de régulation. En
+général, une éolienne doit pouvoir résister à un vent d'au moins 40
+à 50 m/s. Les solutions pour limiter les efforts, l'emballement et la
+puissance de la machine sont nombreuses (tableau
+5
+).
+Sur les
+éoliennes à marche lente
+, l'effacement d'ensemble avec
+gouvernail articulé est la solution la plus utilisée.
+Les
+éoliennes à marche rapide
+ont souvent des pales orientables.
+C'est donc par variation de l'angle de calage que l'on agit. La pale
+est généralement rappelée par un ressort (solution simple et facilement
+réglable), on place alors l'axe d'articulation de manière que
+la résultante des forces aérodynamiques crée un couple qui, à partir
+d'une certaine valeur, provoque la rotation de la pale. Ce dispositif
+répond bien au coup de vent.
+Avec des
+pales fixes,
+c'est le décrochage aérodynamique qui est
+le plus intéressant, bien qu'il nécessite un profil assez fin qui n'est
+donc pas extrêmement résistant. On n'en utilise la propriété que
+lorsque l'angle relatif atteint une certaine valeur, le coefficient de
+portance décroît brusquement, ce qui limite la puissance de la
+machine.
+Enfin, les
+freins
+, agissant le plus souvent à partir d'un seuil, sont
+intéressants car ils permettent, entre autres, d'arrêter tout mouvement
+lorsqu'une intervention est nécessaire (entretien, etc.).
+Pour les
+grandes machines
+, la régulation est faite par un microprocesseur
+interne qui agit par l'intermédiaire de vérins hydrauliques
+sur le calage des pales. Les freins sont souvent aussi du type à
+disques commandés hydrauliquement.
+2.3 Bruit
+Les éoliennes engendrent du bruit, qui peut être important. Actuellement
+toutefois l'optimisation des profils de pale permet de le
+réduire à des valeurs très acceptables. La figure
+9
+montre les niveaux
+de bruit en fonction de la distance à l'éolienne pour une machine
+bien construite. Souvent d'ailleurs le bruit de l'éolienne est même
+pratiquement couvert par celui du vent lui-même.
+En outre, l'implantation des éoliennes le plus souvent en site
+isolé, ne cause que de faibles perturbations. De même le bruit de
+celles fréquemment implantées en bord de mer est couvert par
+celui des vagues.
+2.4 Capteurs à axe vertical
+Si les capteurs à axe vertical ont été probablement les premiers
+utilisés, par la suite ils ont été abandonnés au profit des précédents.
+C'est assez récemment qu'ils ont été redécouverts et ont fait l'objet
+de nouveaux développements qui en font des concurrents directs
+des capteurs à axe horizontal en présentant sur eux un certain
+nombre d'avantages. Les calculs de leurs caractéristiques se font à
+partir des mêmes relations (13), (14) et (15) que celles des capteurs
+à axe horizontal.
+2.4.1 Rotor de Savonius
+Ce rotor a été inventé par le Finlandais Sigurd Savonius en 1925
+et a fait l'objet d'un brevet français [3]. Il comporte essentiellement
+deux demi-cylindres dont les axes sont décalés l'un par rapport à
+l'autre (figure
+10
+et tableau
+2
+).
+Exemple :
+les éoliennes installées à Dunkerque sont équipées
+chacune d'une roue tripale en polyester et fibre de verre de 25 m de diamètre
+avec calage variable des pales montées sur un mât tubulaire de
+22 m. Avec un vent de 15 m/s, la puissance est de 300 kW, la vitesse
+du rotor de 52 tr/min. Le multiplicateur comporte 3 étages hélicoïdaux
+de rapport 1/29. La production moyenne annuelle est de 460 000 kWh
+par machine.
+Tableau 4 - Différents types d'orientation des capteurs
+Système
+libre
+dans le vent
+Roue
+amont
++ empennage
+Roue aval
+Système
+à
+servomoteur
+Rose des vents en tête Rose des vents en pied
+Figure 9 - Bruit d'éolienne en fonction de la distance
+__________________________________________________________________________________________________________________ ÉNERGIES ÉOLIENNES
+Toute reproduction sans autorisation du Centre français d'exploitation du droit de copie est strictement interdite.
+© Techniques de l'Ingénieur, traité Génie énergétique
+B 8 585
+-
+11
+(0)
+Outre le fait que les forces exercées par le vent sur les aubages
+diffèrent suivant qu'il s'agit de la partie convexe ou de la partie
+concave, le rotor dans la position de la figure est soumis à un couple
+aérodynamique supplémentaire dû aux deux déviations successives
+à 180
+o
+des filets par les aubages.
+Le meilleur rendement est obtenu pour un rapport
+e
+/
+d
+= 1/6.
+Le couple au démarrage, qui est élevé, est cependant fonction de
+l'orientation du rotor et peut s'annuler, voire être légèrement négatif
+(figure
+11
+). Aussi est-il intéressant d'utiliser deux rotors superposés
+décalés de 90
+o
+. Certains rotors possèdent 3, voire 4, aubages ce qui
+évite les irrégularités de couple au démarrage.
+Le coefficient de puissance
+C
+p
+maximal atteint 0,3 et les
+conditions optimales de fonctionnement sont réalisées lorsque le
+paramètre de vitesse :
+est voisin de 1,
+e
+étant le décalage des demi-cylindres et
+d
+le diamètre
+d'un demi-cylindre.
+La puissance maximale, d'après la relation (13), est égale à :
+W
+max
+= 0,18
+S
+v
+3
+avec
+S = h
+(2
+d
+-
+e
+) surface utile du capteur.
+Le couple moyen est donné par :
+Le coefficient
+C
+m
+est donné par la courbe de la figure
+12
+.
+Tableau 5 - Différents types de régulation
+Moyens Action Schéma Appréciation
+Par modification
+des caractéristiques
+de la roue
+diamètre
+de la roue
+— éclipsage des pales dans le lit du vent : commandé, ou
+articulation à ressort,
+— petite éolienne.
+surface
+des pales
+(voile, moulin à vent)
+— nécessite une manoeuvre,
+— historique.
+angle
+des pales
+— nécessite des articulations pour les grosses machines,
+— commandé par un servomoteur,
+— bonne efficacité,
+— sur pale souple, d'où un problème de résistance.
+forme du profil
+(à décrochement
+aérodynamique)
+— intéressant car simple et fiable,
+— très utilisé sur les petites machines.
+effacement
+d'ensemble
+— utilisé sur multipales,
+— nécessite en plus un amortisseur.
+Par modification
+des caractéristiques
+du récepteur
+frein commandé
+— déclenché pour une vitesse
+donnée,
+— centrifuge.
+— très utilisé,
+— permet l'accès facile au mécanisme.
+Figure 10 - Rotor de Savonius
+λ ω (2d - e)
+2v
+= --------------------------
+C 1
+4
+= --- ρ C m v 2 h ( 2 d - e)2
+ÉNERGIES ÉOLIENNES __________________________________________________________________________________________________________________
+Toute reproduction sans autorisation du Centre français d'exploitation du droit de copie est strictement interdite.
+B 8 585
+-
+12
+© Techniques de l'Ingénieur, traité Génie énergétique
+Le rotor de Savonius, étant très simple, présente un intérêt pour
+les pays très peu industrialisés car il est facile à fabriquer. Il a été
+développé aussi pour de petites éoliennes conçues pour la navigation
+de plaisance (recharge de batteries). Par suite de son couple
+au démarrage élevé, il est aussi intéressant de l'associer au rotor
+de Darrieus. De plus, il démarre à de faibles vitesses de vent, de
+l'ordre de 2 m/s.
+Les dimensions des machines à rotor de Savonius restent toutefois
+modestes, 3 à 4 m de hauteur maximale pour des diamètres de 2 m
+environ.
+2.4.2 Rotor de Darrieus
+Il s'agit d'un capteur à circulation instationnaire. Conçu par l'ingénieur
+français Georges Darrieus, il a fait l'objet d'un brevet français
+en 1925 [4]. Non exploité, il a été redécouvert il y a environ 20 ans
+par les Canadiens et a fait l'objet d'un certain nombre d'études dans
+plusieurs pays.
+Toutefois actuellement, à part quelques réalisations, jusqu'à
+quelques centaines de kilowatts, surtout au Canada et aux
+États-Unis, son développement semble assez faible.
+Le rotor est constitué de plusieurs pales, en général 2 ou 3, de
+profil symétrique biconvexe liées rigidement entre elles et tournant
+autour d'un axe vertical. Les formes adoptées pour les surfaces décrites
+par les pales (figure
+13
+) sont cylindriques ou coniques ou bien
+encore, cas le plus courant, engendrées par une courbe chaînette
+afin de ne soumettre les pales qu'à une contrainte de traction, cette
+dernière surface étant assimilable à une surface parabolique.
+Ce rotor est à variation cyclique d'incidence. La vitesse relative
+de l'air par rapport aux aubages est reliée à la vitesse du vent
+et à la vitesse périphérique (figure
+14
+) par la relation :
+qui peut s'écrire encore
+La connaissance des vecteurs et permet de déterminer le
+vecteur et par voie de conséquence les forces aérodynamiques
+qui agissent sur les pales.
+Dans l'hypothèse où l'on admet que le vent garde une direction
+et une vitesse absolue constantes à la traversée de la roue, cette
+détermination ne présente pas de difficultés.
+L'étude des triangles de vitesses pour différentes positions de
+pales montre que les forces qui agissent ont un moment moteur dans
+toutes les situations sauf lorsque le plan de symétrie du profil de
+l'élément de pale est parallèle à la direction du vent ou proche de
+cette position. Les profils sont attaqués par le
+vent relatif
+sous des
+angles d'incidence variable ne dépassant jamais la valeur limite
+i
+max
+= arcsin
+v
+/
+u
+.
+Ces angles sont relativement aigus, si la vitesse périphérique du
+rotor
+u
+est grande par rapport à la vitesse du vent
+v
+. Cette constatation
+laisse espérer des rendements aérodynamiques acceptables.
+Par contre, si l'éolienne est arrêtée, la vitesse relative
+v
+r
+s'identifie
+avec la vitesse du vent
+v
+. Les incidences sur les pales sont alors
+beaucoup plus élevées dans l'ensemble. Il y a décrochement aérodynamique
+pour certaines positions des aubes. Le couple au démarrage
+est très faible.
+Exemple :
+prenons le cas d'un rotor de Savonius utilisé au Sahel,
+fabriqué à partir de bidons coupés en deux (diamètre du fût = 0,58 m
+pour une hauteur de 0,90 m) ce qui donne une éolienne de 1,80 m de
+hauteur pour 1 m de diamètre. Pour une hauteur de refoulement d'eau
+de 10 m et pour un vent de 6 m/s le débit d'eau fourni est d'environ
+0,65 m
+3
+/h.
+Figure 11 - Coefficient de couple
+C
+m
+au démarrage en fonction
+de la position du rotor de Savonius
+Figure 12 - Coefficients de puissance
+C
+p
+et de couple
+C
+m
+en fonction
+du paramètre de vitesse B dans le cas du rotor de Savonius
+Figure 13 - Rotor de Darrieus : différentes formes adoptées
+pour les surfaces décrites par les pales
+vr
+v u
+v u vr = +
+v r = v - u
+v u
+vr
+__________________________________________________________________________________________________________________ ÉNERGIES ÉOLIENNES
+Toute reproduction sans autorisation du Centre français d'exploitation du droit de copie est strictement interdite.
+© Techniques de l'Ingénieur, traité Génie énergétique
+B 8 585
+-
+13
+L'effort aérodynamique radial d'un rotor bipale suivant la position
+des pales est donné à la figure
+15
+.
+En fait, l'étude de ces rotors est complexe et deux types de théories
+ont été développées :
+— celles dites des quantités de mouvement [5] [6] [7] [8] [9], la
+référence [9] paraît être la plus exacte ;
+— celles dites tourbillonnaires [10] [11] [12].
+Les performances calculées au moyen des théories tourbillonnaires
+sont un peu plus précises que celles obtenues avec les théories
+à quantité de mouvement mais nécessitent des calculs plus longs.
+La variation du coefficient de puissance
+C
+p
+est donnée par la
+figure
+16
+; ce coefficient atteint 0,35 pour des paramètres
+λ
+de 4 à 5.
+La connaissance de ce coefficient de puissance permet de calculer
+celui de couple par la relation :
+Le couple est très faible au démarrage, voire nul. Aussi, parfois
+un petit Savonius est ajouté.
+Les matériaux de construction des pales sont les mêmes que ceux
+utilisés pour les capteurs rapides à axe horizontal (§ 2.2.3.2).
+2.5 Comparaison des différents capteurs
+présentés
+Du point de vue des performances, les rotors à marche lente et
+les rotors de Savonius sont sensiblement équivalents. Les rotors à
+marche rapide ont un coefficient de puissance
+C
+p
+un peu supérieur
+à ceux des Darrieus, avec des paramètres de vitesse nettement plus
+élevés en général (figure
+17
+). Les coefficients de couple
+C
+m
+sont
+assez voisins, un peu plus grands au démarrage pour les rotors à
+marche rapide, surtout ils sont constants, quelle que soit l'orientation
+des pales. Toutefois, si l'on a besoin d'un couple au démarrage élevé,
+il est nécessaire d'utiliser soit un rotor lent, soit un rotor de Savonius.
+De plus, ces rotors démarrent pour des vitesses de vent faible, surtout
+les rotors de Savonius.
+Du point de vue construction, les rotors à axe vertical sont un peu
+plus simples : nul besoin d'orientation, supportage plus léger,
+organe de conversion au sol, dans le cas de générateur électrique
+aucun contact tournant.
+Figure 14 - Principe de fonctionnement du rotor de Darrieus
+Figure 15 - Effort aérodynamique radial d'un rotor bipale
+de Darrieus
+[9]
+Figure 16 - Coefficients de puissance
+C
+p
+et de couple
+C
+m
+d'un rotor de Darrieus
+Figure 17 - Courbe limite de Betz et courbes caractéristiques
+des principaux rotors à axes vertical ou horizontal
+Cm
+2W
+ρ S v 3
+-----------------
+1
+λ
+---
+C
+p
+λ
+= = -------
+ÉNERGIES ÉOLIENNES __________________________________________________________________________________________________________________
+Toute reproduction sans autorisation du Centre français d'exploitation du droit de copie est strictement interdite.
+B 8 585
+-
+14
+© Techniques de l'Ingénieur, traité Génie énergétique
+Toutefois, notamment par suite de leur meilleur rendement, les
+rotors à axe horizontal sont de loin les plus utilisés et ont fait l'objet
+de la plus grande avancée technologique. Si ceux à pales multiples
+de faible puissance sont destinés essentiellement au pompage de
+l'eau, les rotors à marche rapide sont sans concurrent dès que la
+puissance dépasse quelques kilowatts et des essais pour des valeurs
+supérieures à 1 500 kW, voire 3 000 kW, sont en cours. Toutefois par
+suite, en particulier, de problèmes de vibrations, les puissances ne
+devraient pas pouvoir dépasser 4 000 à 5 000 kW.
+Actuellement les aérogénérateurs de 300 à 500 kW sont parfaitement
+au point et présentent une bonne fiabilité.
+3. Organes annexes
+3.1 Organes de supportage
+Le supportage est calculé pour résister aux vents les plus forts
+du site. Les forces qui s'exercent sur lui sont :
+— la
+poussée sur le capteur
+qui est maximale lorsqu'il est arrêté
+(cas du grippage de l'axe notamment) ; sa valeur
+P
+, d'après la relation
+(14), est donnée par :
+avec
+S
+surface frontale des pales.
+Dans le cas de l'arrêt du rotor,
+C
+f
+est pratiquement toujours égal
+à 1,5 ;
+— la
+traînée du supportage
+qui s'exprime avec une relation de
+forme analogue à la relation (14), le coefficient de traînée
+C
+x
+du
+support dépendant de la géométrie de la section du supportage. Elle
+est répartie sur toute la hauteur du pylône.
+Pour les rotors à axe horizontal, ce rapport de la hauteur du pylône
+au diamètre du capteur le plus économique est égal à 1 pour les
+sites à faible gradient vertical de vitesse et à 1,35 pour ceux à fort
+gradient.
+Les différents types de supportage à axe horizontal sont donnés
+dans le tableau
+6
+. Les pylônes peuvent être réalisés en acier (poutre
+treillis ou structure type caisson) ou en béton armé. Ils peuvent être
+autoporteurs et autorésistants ou haubanés. Si le haubanage permet
+de réduire les dimensions du mât, par contre il pénalise l'emprise
+au sol. Actuellement les mâts en caisson, souvent en acier et fortement
+ancrés au sol, sont très courants pour les éoliennes de forte
+puissance. (0)
+Les pylônes des machines à axe vertical sont courts, entre 0,1 et
+0,5 fois la hauteur du rotor. Ils sont le plus souvent du type haubané.
+Les problèmes de corrosion et de montage sont les paramètres
+principaux dans le choix de la solution à adopter.
+3.2 Organes de conversion
+L'énergie éolienne est captée dans les rotors sous forme mécanique,
+c'est-à-dire sous la forme d'un couple dans un arbre en rotation.
+Du fait, le plus souvent, de l'irrégularité de cette énergie elle
+n'est pas utilisée sous cette forme mais convertie en énergie mécanique
+potentielle (pompage d'eau), en énergie thermique (chauffage,
+mais peu fréquent), électrique souvent.
+La détermination des organes de conversion, générateurs électriques
+ou pompes, se pose sous le double aspect du choix du type
+et de la puissance nominale.
+Cette détermination est liée en particulier aux conditions météorologiques
+du site, dont on connaît les courbes vitesse-durée et puissance-
+durée.
+On définit une vitesse de démarrage
+v
+0
+(du vent) pour laquelle
+le capteur commence à tourner, une vitesse de fourniture
+v
+f
+pour
+laquelle le générateur commence à fournir de l'énergie utile, une
+vitesse nominale
+v
+n
+pour laquelle la pleine puissance est atteinte.
+À partir de cette dernière vitesse, le dispositif de réglage doit agir
+pour limiter la puissance fournie et la maintenir constante. Enfin, on
+définit la vitesse dite
+hors service v
+hs
+à partir de laquelle la machine
+doit être mise hors service.
+L'énergie recueillie est donnée par l'aire hachurée de la figure
+18
+représentant la zone d'utilisation de l'éolienne.
+Un paramètre important dans la conversion de l'énergie mécanique
+en une autre énergie est la vitesse de rotation du rotor. Cette
+dernière est généralement faible (quelques dizaines à une centaine
+de tours par minute), même pour des rotors d'assez faible diamètre
+et des paramètres
+λ
+élevés. Or les générateurs électriques, mais aussi
+les pompes rapides ou les convertisseurs thermiques, doivent tourner
+beaucoup plus vite, d'où la plupart du temps la nécessité d'augmenter
+cette vitesse soit par un artifice (tableau
+7
+), soit par un
+multiplicateur.
+P 1
+2
+= ---- ρ Cf Sv 2
+Tableau 6 - Différents types de supportage
+Types Schéma Appréciation
+Monopode
+— simple,
+— supportage robuste,
+— ancrage profond
+nécessaire,
+— montage assez facile.
+Monopode
+avec étai
+tournant
+— supportage assez léger,
+— compliqué, peu utilisé,
+— montage assez difficile.
+Multipode
+— pour grande machine,
+— supportage relativement
+coûteux,
+— perturbation possible
+si hélice arrière,
+— très solide,
+— montage difficile.
+Haubané
+fixe
+— simple et économique,
+— fondations faibles,
+— emprise au sol assez
+importante,
+— montage facile.
+Haubané
+tournant
+— mât peu coûteux
+mais deux roulements,
+— emprise au sol très
+importante,
+— montage facile.
+__________________________________________________________________________________________________________________ ÉNERGIES ÉOLIENNES
+Toute reproduction sans autorisation du Centre français d'exploitation du droit de copie est strictement interdite.
+© Techniques de l'Ingénieur, traité Génie énergétique
+B 8 585
+-
+15
+La solution la plus répandue utilise un
+multiplicateur de vitesse
+à courroies, si le rapport est inférieur à 4 ou 5 et la puissance limitée
+à quelques kilowatts, ou à engrenages. Si ces derniers sont de bonne
+qualité, leur rendement peut atteindre jusqu'à 95 %. Toutefois, il ne
+faut pas oublier que le rendement d'un multiplicateur est toujours
+inférieur à celui qu'il aurait en fonctionnement inverse, c'est-à-dire
+en réducteur, et ceci d'autant que le rapport est plus élevé.
+Des solutions ont été proposées pour augmenter la vitesse du
+générateur sans utiliser de multiplicateur. Elles sont résumées dans
+le tableau
+7
+mais, en fait, assez peu utilisées en pratique. Il est aussi
+intéressant de coupler le rotor et le générateur grâce à un embrayage
+centrifuge. Le rotor peut démarrer à vide facilement pour des vitesses
+du vent assez faibles et la mise en mouvement de l'ensemble est
+progressivement et sans choc.
+3.2.1 Conversion électrique
+On distingue deux types de générateurs électriques :
+— les générateurs pour installations isolées et comportant un
+dispositif de stockage, le plus souvent une batterie d'accumulateurs ;
+— les générateurs débitant sur un réseau alternatif de grande
+puissance.
+B
+Générateurs pour installations isolées
+Dans ce cas, les machines donnent une tension aussi indépendante
+que possible de la vitesse et de la charge. Les plus utilisées
+sont des
+dynamos à enroulement anticompound et pôles de
+commutation
+, ou les
+dynamos à champ transversal
+. Toutefois, la
+présence de collecteurs rend ces machines relativement peu fiables
+et, actuellement, la tendance est de les remplacer par des alternateurs
+complétés par des cellules de redressement.
+On cherche aussi à utiliser des génératrices qui tournent lentement
+pour, éventuellement, se passer de multiplicateurs. Le nombre de
+paires de pôles peut être élevé mais, à partir d'une certaine vitesse,
+la génératrice devient très lourde et chère. Les génératrices à entrefer
+axial, qui ne tournent que lentement, sont aussi intéressantes, ainsi
+que les rotors à aimants permanents, qui éliminent tout contact
+glissant.
+(0)
+B
+Générateurs débitant sur un réseau alternatif
+de grande puissance
+(à partir de 100 kW)
+Dans ce cas, on peut utiliser une génératrice asynchrone ou
+synchrone. La première est la plus économique et la plus rustique.
+Sa construction est simple et il n'y a pas de contact tournant sur
+le rotor. En outre, elle permet un couplage facile sur le réseau et
+ne présente pas de risque d'oscillation, ce qui n'est pas le cas avec
+une génératrice synchrone. Il n'y a aucun inconvénient à coupler la
+machine avec un écart de vitesse de plusieurs pour-cent par rapport
+à la vitesse de synchronisme, la surpuissance très brève étant bien
+absorbée par la machine. L'inconvénient vient qu'elle emprunte son
+énergie magnétisante au réseau et absorbe de la puissance réactive.
+Toutefois, l'emploi de condensateurs permet de limiter cette
+dernière.
+Il y a intérêt à ne pas surdimensionner la génératrice pour en
+réduire le prix et la masse. La détermination de la puissance est fonction
+du site. Il y a pour chaque valeur de vitesse moyenne
+v
+m
+du
+vent, une valeur de vitesse du vent
+v
+n
+qui donne le maximum d'énergie
+possible. Il y a lieu aussi de prendre en considération le coût
+des équipements qui varie avec la puissance équipée, puisque l'on
+cherche finalement le prix minimal du kilowattheure.
+On trouve alors approximativement :
+— pour une petite éolienne :
+v
+n
+= 1,8 à 1,9
+v
+m
+;
+— pour une éolienne moyenne :
+v
+n
+= 1,65
+v
+m
+;
+— pour une grande éolienne :
+v
+n
+= 1,5
+v
+m
+.
+Figure 18 - Évolution des vitesses et puissances
+en fonction du temps
+Tableau 7 - Dispositifs d'augmentation
+de la vitesse du générateur
+Dispositif Schéma Avantages. Inconvénients
+A venturi
+— solution lourde
+et onéreuse,
+— rendement augmenté
+par la suppression des
+pertes marginales.
+Machines
+séries
+— grande vitesse mais
+nécessite de renforcer
+les pales,
+— efforts gyroscopiques
+et centrifuges importants,
+— effacement difficile
+des pales.
+A
+dépression
+— rendement global faible
+(deux machines en
+série),
+— nécessité d'une section
+importante pour les
+pales,
+— effacement difficile.
+Hélices
+contrarotatives
+— difficultés de réalisation,
+— double hélice (prix),
+— multiplie par deux
+la vitesse du récepteur.
+Prise
+à la jante
+— solution assez
+économique,
+mais nécessite une
+jante,
+— parfois, galet en appui
+sur la jante,
+— pour petite machine.
+ÉNERGIES ÉOLIENNES __________________________________________________________________________________________________________________
+Toute reproduction sans autorisation du Centre français d'exploitation du droit de copie est strictement interdite. B 8 585 - 16 © Techniques de l'Ingénieur, traité Génie énergétique
+La puissance de la génératrice Wg est alors donnée par :
+avec D diamètre du capteur,
+η rendement de la génératrice.
+3.2.2 Pompage de l'eau
+Les éoliennes sont très utilisées pour le pompage de l'eau. Les
+organes de conversion sont les pompes à pistons et les pompes
+rotatives.
+B Pompe à pistons
+Elle est simple et permet une hauteur de refoulement importante.
+Par contre, elle demande un couple assez élevé et surtout constant ;
+sa vitesse est faible.
+Ce type de pompe s'accommode donc bien avec les éoliennes
+lentes qui présentent des caractéristiques voisines des siennes. Étant
+donné le mode d'attaque par une tige descendante le long de la
+conduite de refoulement, tige adaptée surtout aux efforts de traction,
+c'est la pompe à simple effet qui est la plus courante. Son inconvénient
+est toutefois de présenter une irrégularité de couple entre les
+deux courses. Pour régulariser le couple, on utilise des dispositifs
+extérieurs : levier, poids, ressort. Ce dernier est intéressant, car il
+évite les articulations supplémentaires et réduit les frottements.
+Pour des grandes profondeurs de pompage, il faut minimiser les
+efforts d'inertie et éviter les phénomènes de résonance dans la tige
+de commande qui, par suite de sa grande longueur, se comporte
+comme un ressort. On est alors souvent conduit à réduire la vitesse
+par l'utilisation d'un réducteur.
+B Pompe rotative
+Ce type de pompe a une caractéristique très différente de la
+précédente ; le couple, faible aux basses vitesses, croît assez rapidement.
+Elle s'adapte bien aux éoliennes à marche rapide, leur caractéristique
+puissance-vitesse (figure 4) est telle qu'il est possible de
+faire coïncider la zone de rendement maximal de l'éolienne et celle
+de la meilleure utilisation de la pompe.
+Le facteur essentiel de la qualité d'une pompe est l'importance
+du nombre possible d'heures de fonctionnement pour une hauteur
+de refoulement donnée. Pour accroître ce nombre, il y a intérêt à
+choisir un point de fonctionnement nominal de la pompe, situé très
+au-delà du rendement maximal, cela du fait que la caractéristique
+débit-hauteur manométrique d'une pompe de ce type est très plate
+entre le débit nul et le rendement maximal.
+Il est avantageux aussi de choisir une pompe dont la caractéristique
+débit-hauteur manométrique est montante, même pour les
+faibles valeurs du débit. Cela est possible avec les pompes à grande
+vitesse spécifique, tout spécialement celles à hélice. Ces dernières
+pompes sont donc un peu mieux adaptées que les pompes centrifuges
+à l'entraînement par éolienne, surtout pour les fortes puissances
+(au-delà de 50 kW) pour lesquelles il est possible de modifier
+leurs caractéristiques par orientation des pales de la pompe.
+3.2.3 Conversion thermique
+Dans ce type de conversion, l'énergie recueillie sur l'arbre du
+moteur éolien est transformée directement en chaleur par frottements
+mécaniques d'un fluide caloporteur. L'énergie thermique est
+ensuite transportée par des tuyauteries calorifugées vers le bâtiment
+à chauffer. Parmi les systèmes envisageables permettant une
+conversion mécanothermique, les systèmes utilisant des convertisseurs
+hydrauliques sont les plus utilisés.
+B Agitateur à palettes
+La puissance délivrée par une éolienne en fonction de sa vitesse
+de rotation passe par un maximum pour un vent donné. Le lieu des
+maximums de puissance est une courbe qui croît comme le cube
+de la vitesse de rotation de l'éolienne ou, ce qui est équivalent,
+comme le cube de la vitesse du vent. Or, un convertisseur hydraulique
+comportant des ailettes tournant dans un fluide possède
+précisément une caractéristique de puissance croissant avec le cube
+de sa vitesse de rotation. C'est donc, en principe, un convertisseur
+idéal pour une éolienne.
+De plus, la rotation des palettes provoque l'échauffement du
+liquide avec un rendement égal à l'unité, si l'on néglige quelques
+pertes mécaniques non récupérées. C'est, enfin, un système particulièrement
+fiable du fait de sa simplicité et sa robustesse.
+Une étude systématique [13] des divers paramètres susceptibles
+d'optimiser le convertisseur montre que :
+— le jeu entre les ailettes n'a qu'une faible influence sur la puissance
+récupérée, et un jeu faible, de l'ordre de 1 à 2 mm, est
+intéressant ;
+— l'accroissement du nombre de palettes permet d'augmenter la
+puissance absorbée ;
+— l'augmentation de la température de l'huile entraîne une variation
+importante de sa viscosité et rend moins efficace le convertisseur
+; l'eau semble donc plus intéressante, pour des températures
+inférieures à 90 oC, car elle possède une viscosité pratiquement
+constante.
+B Coupleurs hydrocinétiques
+Ce sont des machines industrielles comportant deux rotors en
+vis-à-vis munis chacun d'un nombre élevé de palettes. Leur emploi
+comme convertisseur d'énergie se fera en bloquant l'un des rotors
+et en réalisant une circulation d'huile dans le coupleur pour évacuer
+la chaleur produite.
+Il existe aussi des convertisseurs du type électrique assez
+intéressants ; ce sont les convertisseurs à courants de Foucault. Un
+rotor multipolaire à aimants permanents engendre des courants de
+Foucault dans les parois métalliques d'un échangeur de chaleur où
+l'on introduit de l'eau froide qui, après un parcours hélicoïdal au
+contact des parois, ressort à une température que l'on peut asservir
+en agissant sur le débit. Le rendement d'un convertisseur à courants
+de Foucault est pratiquement égal à l'unité. De plus, plus de 95 %
+de la chaleur du convertisseur est récupérée par le fluide caloporteur
+pour une température de sortie d'eau de 60 oC. Pour une position
+fixe du stator et un matériau donné, la valeur du couple résistant
+croît d'abord linéairement, passe par un maximum et décroît ensuite
+lentement à mesure qu'augmente la vitesse de rotation du rotor.
+En augmentant la résistivité de la chemise dans laquelle circulent
+les courants de Foucault, on constate une augmentation de la vitesse
+de rotation correspondant au couple maximal, sans que la valeur
+de ce dernier soit modifiée. La puissance maximale s'en trouve donc
+accrue.
+Pour une vitesse donnée de rotation, le couple et la puissance
+varient avec la position relative du stator par rapport au rotor. Cette
+variation est linéaire sauf au voisinage des positions extrêmes où
+existent des effets de bord. Un dispositif mécanique permet de régler
+la position du stator afin d'obtenir une caractéristique de puissance
+du convertisseur fonction du cube de la vitesse de rotation du rotor.
+3.2.4 Conversion directe
+Le capteur étant l'élément le plus coûteux et le moins fiable, il serait
+très intéressant de pouvoir transformer, sans organe mobile, l'énergie
+cinétique du vent en énergie utilisable.
+Un certain nombre de solutions ont été proposées, aussi bien en
+production d'électricité qu'en pompage. Toutes ces solutions
+utilisent uniquement des capteurs statiques.
+Wg 2,86 10-4 η D 2 v n
+= × 3 (en kW)
+__________________________________________________________________________________________________________________ ÉNERGIES ÉOLIENNES
+Toute reproduction sans autorisation du Centre français d'exploitation du droit de copie est strictement interdite.
+© Techniques de l'Ingénieur, traité Génie énergétique
+B 8 585
+-
+17
+En
+production électrique
+, la vitesse du vent entraîne le déplacement
+de charges électriques produites par ionisation et collectées
+par des systèmes de grilles (t a bleau 2).
+En
+pompage
+, l'idée directrice est d'utiliser la variation de pression
+statique dans un venturi (tableau
+2
+). Toutefois, les faibles valeurs
+obtenues nécessitent des dispositifs en cascade.
+Des développements importants sont nécessaires pour passer à
+des applications pratiques et juger de leur rentabilité.
+4. Organes de stockage
+L'énergie éolienne étant très variable dans le temps, si elle n'est
+pas utilisée au fil du vent (débit sur un réseau), il est nécessaire de
+prévoir des possibilités d'accumulation pour l'adapter à une utilisation
+régulière, ce qui est souvent le cas.
+Il est donc utile de déterminer l'évolution dans le temps de la
+quantité d'énergie produite et de la comparer aux besoins. Le
+premier problème est celui de déterminer la capacité de ce stockage.
+Pour cela, on représente les variations de puissance de l'éolienne
+en puissance intégrée en fonction du temps (figure
+19
+). La courbe
+est sans cesse croissante. Si la puissance demandée est constante,
+elle sera représentée par une droite. La différence entre les ordonnées
+de la courbe de l'éolienne et de la droite de puissance demandée
+représente la part de la capacité de stockage. On en déduit donc la
+courbe donnant l'évolution dans le temps de la puissance fournie
+ou absorbée par le stockage . L'aire hachurée représente les
+quantités d'énergie fournies ou absorbées
+Q
+t
+:
+La capacité de stockage sera au moins égale au maximum de
+cette courbe
+Q
+t
+.
+B
+Il existe différentes possibilités de stockage
+Pour la production d'électricité, le système de loin le plus utilisé
+est celui par batteries d'accumulateurs. Celles au plomb, bien que
+lourdes et encombrantes, s'accommodent bien des fluctuations
+propres au vent. Les autres types sont mal adaptés. Toutefois, ce
+type de stockage ne convient que pour de petites puissances de
+quelques kilowatts tout au plus.
+Pour les stockages importants, on peut faire appel au pompage
+de l'eau entre deux réservoirs et une turbine si le terrain fournit une
+possibilité intéressante en dénivelé. Le simple pompage de l'eau
+dans un réservoir est aussi la solution pour stocker de l'eau dans
+le cas, par exemple, de distribution d'eau alimentaire.
+Le stockage thermique commence aussi à se développer, essentiellement
+pour le chauffage. Les différents types de stockage thermiques
+existant sont utilisés : réservoir de fluide, chauffage de
+produits à haute capacité thermique, etc.
+Il semble qu'un procédé d'avenir, mais pas encore vraiment au
+point, soit celui de la décomposition de l'eau par voie électrolytique
+et l'utilisation de l'hydrogène soit comme combustible (avec l'oxygène),
+soit dans une pile à combustible.
+5. Données économiques.
+Intérêt
+Deux faits essentiels dominent le problème de l'utilisation de
+l'énergie du vent : d'une part, la grande dilution de cette énergie dans
+l'espace et, d'autre part, son irrégularité à la fois considérable et
+imprévisible.
+La séduisante gratuité de cette énergie donne toute son importance
+à l'économie de construction.
+B
+En
+production d'électricité
+, le générateur éolien peut fonctionner
+isolément ou en parallèle avec une autre source d'énergie électrique,
+qui doit d'ailleurs être pratiquement beaucoup plus puissante que lui.
+Dans ces deux cas, les considérations économiques seront différentes.
+Le générateur isolé est, le plus souvent, de puissance assez
+faible (jusqu'à 10 ou 20 kW), le prix de revient de l'énergie produite,
+quoique important, peut être relativement secondaire par rapport
+aux possibilités de disposer de cette énergie. Dans ce cas, le groupe
+éolien est très voisin, du point de vue conception, de l'éolienne
+entraînant une pompe centrifuge et les organes de stockage jouent
+un rôle très important.
+Pour un fonctionnement en parallèle avec d'autres sources d'énergie
+électrique, les puissances sont beaucoup plus importantes
+(100 kW et plus) ; le prix de revient minimal du kilowattheure produit
+est l'objectif qui imposera le dimensionnement, le choix et la
+disposition des différents composants.
+Dans ce cas, et pour des éoliennes à axe horizontal, il est intéressant
+de donner des ordres de grandeur relatifs à chacun des principaux
+composants, en précisant la variation de leur poids au kilowatt
+installé, par rapport au diamètre
+D
+du capteur : (0)
+Si, en première approximation, l'on veut établir une variation de
+l'ordre de grandeur du prix, en partant de la variation de poids, il
+faut noter que le poids de la machine varie sensiblement comme
+la puissance 0,7 de la vitesse moyenne du vent
+v
+m
+pour laquelle elle
+est construite.
+Figure 19 - Stockage d'énergie d'une éolienne
+W ˙
+s
+Qt B0
+t
+W ˙
+= s d t
+Élément
+Part du prix
+total
+(%)
+Poids au kW
+proportionnel
+à
+Capteurs avec dispositifs
+d'orientation et de réglage.. 50
+D
+2/5
+Multiplicateur ....................... 9
+D
+2/5
+Transmission, générateur ... 12
+D
+-1/5
+Supportage, fondation ........ 14
+D
+3/5
+Montage................................ 8
+D
+Terrain................................... 7
+D
+-3/5
+ÉNERGIES ÉOLIENNES __________________________________________________________________________________________________________________
+Toute reproduction sans autorisation du Centre français d'exploitation du droit de copie est strictement interdite.
+B 8 585
+-
+18
+© Techniques de l'Ingénieur, traité Génie énergétique
+À puissance constante, cette variation ne suit pas la loi en carré
+comme on pourrait s'y attendre [relations (14) et (15)], car, d'une
+part, une fraction importante de la construction reste constante
+quelle que soit la vitesse du vent et, d'autre part, les vents à prendre
+en considération pour les calculs des efforts sont les vents maximaux
+et non les vents moyens.
+Il semble que, compte tenu des conditions actuelles de production
+d'énergie électrique par les autres sources d'énergie, seuls les sites
+donnant des vents annuels d'au moins 8 m/s soient susceptibles
+d'accueillir des générateurs éoliens suffisamment rentables.
+D'après le tableau précédent, on voit que le capteur représente
+environ la moitié du coût de l'ensemble, d'où l'intérêt de le simplifier
+le plus possible, ce qui, par ailleurs, en augmente la fiabilité. C'est
+l'intérêt actuel en particulier des machines type Darrieus pour les
+panémones
+.
+En ce qui concerne les
+générateurs isolés
+, le problème du stockage
+de l'énergie électrique joue un rôle très grand dans les considérations
+économiques. Le dispositif de stockage et de retransformation éventuelle
+de l'énergie stockée en courant directement utilisable peut
+atteindre, voire dépasser, le coût du reste de l'installation. Il est bien
+certain alors que, si de nouvelles possibilités étaient au point
+(l'hydrogène, en particulier), l'énergie éolienne pourrait avoir un
+développement important dans les lieux isolés où la fourniture
+d'énergie électrique est élevée par suite en particulier de l'éloignement
+du réseau de distribution.
+Le
+facteur d'échelle est très favorable
+, spécialement pour les
+grands aérogénérateurs de 300 à 500 kW. Le coût de l'investissement
+se situe de 2 400 à 3 600 F par mètre carré de surface balayée par
+le rotor ou est de 7 000 F le kilowatt installé, en comptant sur un
+amortissement du capital à 5 %, la durée de vie de l'installation étant
+estimée à 20 ans. Le kilowattheure se situe alors entre 0,30 et 0,50 F
+mais est encore supérieur à celui produit par les grandes sources
+classiques : charbon, gaz ou nucléaire.
+B
+Le
+chauffage éolien
+commence à recevoir un timide développement,
+associé le plus souvent au chauffage solaire, voire de plus à la
+pompe à chaleur. Il faut remarquer d'ailleurs que chauffages solaire
+et éolien sont complémentaires, le vent soufflant le plus souvent
+lorsque le soleil fait défaut.
+L'énergie éolienne, tirée directement du vent, est d'abord une énergie
+d'utilisation individuelle, sur site isolé, mais, depuis quelques
+années, des considérations écologiques font qu'elle se développe
+dans des pays venteux pauvres en énergie classique. Le groupement
+d'un certain nombre de machines (de 10 à 50) assure une production
+nationale non négligeable (quelques pour-cent), à un coût qui se
+rapproche de celui du réseau électrique classique.
+6. Développement
+des machines éoliennes
+Les anciens moulins à vent, bien que de dimensions souvent
+impressionnantes, n'avaient que de faibles puissances, en moyenne
+quelques kilowatts, les plus importantes ne dépassaient guère 10
+à 15 kW.
+Les machines que l'on voit encore actuellement, dans l'immense
+majorité utilisées pour pomper de l'eau (alimentation du bétail,
+irrigation, assèchement du marais) et le plus souvent de type roue
+américaine (tableau
+2
+) ont des puissances de quelques kilowatts, en
+moyenne 1 à 5 kW.
+Après une désaffection presque générale à partir de 1960 pour les
+éoliennes, un regain d'intérêt très net s'est manifesté depuis
+quelques années en de nombreux pays, suscitant recherches et
+essais. Les éoliennes à axe vertical ont pratiquement été redécouvertes
+et leurs études théoriques ont été entreprises. On assiste
+même à un début de fabrication en série de machines de petite et
+moyenne puissances (de quelques watts à une cinquantaine de kilowatts)
+ce qui contribue de façon importante à baisser leur prix de
+revient et donc celui de l'énergie produite.
+D'abord essentiellement destinées à une production d'énergie très
+individualisées, les éoliennes vont à partir de 1975 contribuer à la
+production électrique nationale dans un certain nombre de pays. Les
+puissances installées vont croître avec la mise au point de machines
+de plus en plus puissantes regroupées en
+ferme éolienne
+.
+La puissance éolienne mondiale est actuellement de 3 700 MW,
+les États-Unis possédant la part la plus importante : 1 700 MW.
+D'autres pays européens vont aussi développer cette énergie, pour
+certains, bien exposés du point de vue du vent, comme le Danemark
+avec 540 MW installés et une production qui représente 3 % de son
+énergie totale. L'Allemagne avec 630 MW, les Pays-Bas avec 162 MW
+(où le développement est rapide), la Grande-Bretagne avec 170 MW
+sont aussi dans le peloton de tête.
+Toutes ces productions sont essentiellement réalisées à partir
+d'éoliennes rapides à axe horizontal bipale et surtout tripale de puissance
+comprise entre 100 et 1 000 kW.
+Si la France a été pionnière dans la recherche éolienne avec
+quelques prototypes dans les années 1950-1960, elle a traversé
+ensuite une période où l'énergie éolienne a été délaissée. Seuls des
+sites isolés tels que les phares et les balises, les stations de télécommunication,
+équipés de petites puissances allant de quelques
+watts à 1 à 5 kW, et bien sûr les pompages dans les champs ont
+donné lieu à quelques activités.
+Depuis 1990, un regain d'intérêt important se manifeste dans notre
+pays pour les aérogénérateurs d'une puissance de quelques
+centaines de kilowatts couplés en nombre sur le réseau national. Les
+deux réalisations marquantes sont celle de Port-la-Nouvelle dans
+l'Aude avec une machine de 200 kW et 4 de 500 kW et celle de
+Dunkerque avec 10 machines de 300 kW.
+Cette puissance installée, de l'ordre de 35 MW, est modeste par
+rapport à d'autres pays mais des projets sont en étude surtout sur
+certains bords de mer (côte Ouest méditerranéenne, Cotentin, Nord
+de la France) qui présentent de nombreux avantages. Outre-mer
+aussi, des réalisations débutent car cette énergie est intéressante,
+même sur le plan économique, en raison des vents constants : les
+alizés.
+Actuellement l'énergie éolienne dans les pays industrialisés
+produit un kilowattheure de coût plus élevé que celui des énergies
+plus classiques, fossiles ou nucléaire, mais le développement de
+machines, plus puissantes et plus nombreuses permet d'espérer une
+certaine compétitivité.
+Même si, en France, cette énergie est sans doute appelée à rester
+marginale, son industrie et sa recherche sur les machines
+progressent. En particulier les études de pales de grandes dimensions
+continuent et la réalisation de pales avec des matériaux tels
+que les composites permet une exportation importante.
+Exemple :
+sur un site isolé, un aérogénérateur de 5 m de diamètre
+et d'une puissance de 6 kW par vent moyen de 6,5 m/s peut produire
+30 kWh par jour. Son prix est d'environ 100 000 F. Le coût du kilowattheure
+se situe entre 0,8 et 1 F et est souvent nettement moins élevé
+que celui sur le réseau qui est entaché par la distance.
+Exemple :
+la
+ferme éolienne
+de Port-la-Nouvelle dans l'Aude
+comporte un aérogénérateur de 200 kW et quatre de 500 kW, ces
+derniers, à rotor tripale de 39 m de diamètre sur une tour tubulaire de
+39 m, produisent une moyenne annuelle de 6
+×
+10
+6
+kWh avec un vent
+moyen de 7,7 m/s, le facteur de charge étant de 35 %.
+__________________________________________________________________________________________________________________ ÉNERGIES ÉOLIENNES
+Toute reproduction sans autorisation du Centre français d'exploitation du droit de copie est strictement interdite.
+© Techniques de l'Ingénieur, traité Génie énergétique
+B 8 585
+-
+19
+7. Navigation éolienne
+La forme première de l'utilisation du vent a sans doute été dans
+la navigation et cette énergie a été pendant des siècles la seule, grâce
+aux voiles, à propulser les navires. Utilisée actuellement pour la seule
+navigation de plaisance, elle semble devoir être redécouverte pour
+certains paquebots, voire des navires marchands. La différence vient
+que ces voiles vont être actionnées, au moins en grande partie, automatiquement
+et à partir d'une gestion par ordinateur.
+Des tentatives ont été faites au début du siècle pour utiliser
+d'autres éléments que les voiles et un navire allemand a même été
+construit et a navigué équipé de rotors tournants à effet Magnus
+(rotors de Flettner). La force de propulsion peut s'expliquer de la
+façon suivante : un cylindre placé dans un fluide en mouvement, de
+la gauche vers la droite (figure
+20
+a
+), offre une résistance représentée
+par la force
+F
+. La création de cette force est liée au sillage
+qui apparaît derrière le cylindre. Elle est d'autant plus importante
+que le corps est moins profilé. Dès que le cylindre entre en rotation
+(figure
+20
+b
+), la force
+F
+change de direction ; elle se décompose en
+une force de portance
+P
+perpendiculaire à l'écoulement et en une
+force de traînée
+R
+dans le sens de l'écoulement. L'intensité de la
+portance dépend de la vitesse de rotation du cylindre, de la vitesse
+du vent et des dimensions du cylindre. L'inconvénient est la difficulté
+de faire tourner des cylindres hauts et de gros diamètres.
+Pour éviter les inconvénients liés à la rotation du cylindre, l'équipe
+de la Fondation Cousteau eut l'idée d'empêcher le décollement des
+filets d'air au point de décrochage en aspirant une partie de la couche
+limite. Un volet placé dans la partie arrière inférieure du profil permet
+de séparer les écoulements d'
+intrados
+et d'
+extrados
+(figure
+20
+c
+).
+Le cylindre induit une portance exceptionnelle égale à plusieurs
+fois celle d'une voile classique de même surface projetée ; ses dimensions
+seront donc relativement réduites. La symétrie exige que deux
+zones d'aspirations soient prévues, vers l'arrière et de part et d'autre
+du plan de symétrie (un carénage elliptique a été ajouté à l'avant
+pour diverses raisons, liées en particulier à la stabilité de fonctionnement),
+mais une seule est utilisée : l'autre est donc occultée par
+un carénage qui se déplace autour de l'arrière du cylindre. Ce carénage
+porte le petit volet utilisé pour séparer, à l'arrière, l'écoulement
+accéléré (par l'aspiration) de l'
+intrados
+, les
+termes extrados et
+intrados
+étant utilisés par analogie avec ceux adoptés pour désigner
+le dessus et le dessous d'un profil d'aile. L'aspiration (de niveau
+modeste, limité par des phénomènes de saturation) est réalisée
+grâce à un ventilateur situé à l'une des extrémités du cylindre (l'extrémité
+haute sur un navire, pour des raisons de simplification).
+La seule énergie réellement dépensée correspond donc à celle
+utilisée pour entraîner le ventilateur : elle est très approximativement
+égale au sixième de celle utilisée pour entraîner l'hélice d'un navire
+à propulsion uniquement marine, évoluant à la même vitesse.
+S'y ajoute, mais elle est négligeable, l'énergie du système utilisé
+(servomoteur) pour orienter :
+— l'axe du cylindre par rapport au vent relatif ;
+— le carénage porteur du petit volet et chargé d'occulter celle des
+deux zones d'aspiration non utilisée.
+Cette forme d'utilisation du vent est toutefois encore un stade
+expérimental.
+8. Énergie de la houle
+Le vent en mer est à l'origine de la houle. C'est donc une forme
+d'énergie éolienne mais plus
+concentrée
+puisque le fluide en mouvement
+est de l'eau dont la masse volumique est environ 800 fois celle
+de l'air. Des tentatives ont été faites pour récupérer cette énergie
+qui est considérable, au moins en bordure des côtes, et de nombreux
+projets ont été proposés (le nombre de brevets est sensiblement de
+même importance que ceux des machines éoliennes à
+air
+).
+Certains ont été poussés assez loin et ont fait l'objet d'essais soit
+en maquette, soit en vraie grandeur.
+Les différentes solutions proposées pour récupérer cette énergie
+peuvent se classer d'une manière assez générale en deux grands
+types : la colonne d'eau oscillante et le flotteur mobile.
+B
+Colonne d'eau oscillante
+Un tube, le plus souvent fixe et partiellement immergé, voit son
+niveau d'eau interne osciller sous l'action de la houle. Ce tube peut
+être muni intérieurement d'une hélice entraînant un générateur
+(figure
+21
+a
+) qui va être mise en rotation par l'oscillation de la
+colonne d'eau ; l'action est directe.
+Il est aussi possible que l'extrémité supérieure du tube communique
+avec une turbine à air (figure
+21
+b
+) et ce sera la compression
+ou la dépression de l'air qui servira de fluide intermédiaire pour
+actionner le générateur.
+Il est nécessaire de prévoir, soit un dispositif antiretour entre
+l'hélice (ou turbine) et le générateur, soit, mieux, un dispositif
+inversant le sens de rotation pour tirer pleinement profit de l'énergie.
+Enfin, la colonne d'eau peut remplir un réservoir qui se vide à
+travers une turbine hydraulique (figure
+21
+c
+).
+Figure 20 - Effet du vent sur un cylindre
+ÉNERGIES ÉOLIENNES __________________________________________________________________________________________________________________
+Toute reproduction sans autorisation du Centre français d'exploitation du droit de copie est strictement interdite.
+B 8 585
+-
+20
+© Techniques de l'Ingénieur, traité Génie énergétique
+À titre d'exemple, le Japon a réalisé des
+bouées océaniques
+alimentées en énergie électrique à partir d'une turbine à air
+(figure
+21
+d
+).
+Le tube peut d'ailleurs avoir une forme parallélépipédique, bâtiment
+en béton pour des installations de fortes puissances
+(figure
+22
+), constituant de véritables barrages à houle.
+B
+Flotteur mobile
+Dans ce type de solution, le mouvement vertical d'un flotteur est
+transmis à l'aide d'un bras à un générateur (figure
+23
+a
+), lié à un
+support fixe.
+Figure 21 - Énergie de la houle : principe de la colonne d'eau
+oscillante
+Figure 22 - Barrage à houle
+Figure 23 - Énergie de la houle : principe du flotteur mobile
+__________________________________________________________________________________________________________________ ÉNERGIES ÉOLIENNES
+Toute reproduction sans autorisation du Centre français d'exploitation du droit de copie est strictement interdite.
+© Techniques de l'Ingénieur, traité Génie énergétique
+B 8 585
+-
+21
+Là encore, il est nécessaire de prévoir un dispositif d'inversion de
+sens. Différentes réalisations ont été proposées : batterie de flotteurs
+ovoïdes, dits
+canards basculants
+(figure
+23
+b
+) ou des ensembles de
+pontons à la suite les uns des autres et articulés entre eux
+(figure
+23
+c
+), le mouvement relatif entre eux étant utilisé pour
+actionner un ou plusieurs générateurs portés par quelques-uns. Avec
+de gros dispositifs flottants, des efforts considérables sont développés.
+Toutefois, la transformation en énergie électrique n'est pas facile
+car les vitesses sont lentes (utilisation surtout de transmissions
+hydrauliques).
+Une autre difficulté à surmonter avec les dispositifs de récupération
+de l'énergie de la houle est qu'ils doivent pouvoir résister aux
+tempêtes. De plus, ils sont soumis à des corrosions importantes.
+Actuellement, aucune réalisation industrielle hormis les bouées
+n'a vu le jour mais certains pays poursuivent les recherches.
+Toute reproduction sans autorisation du Centre français d'exploitation du droit de copie
+est strictement interdite.
+-
+© Techniques de l'Ingénieur, traité Génie énergétique
+Doc. B 8 585
+-
+1
+POUR
+EN
+SAVOIR
+PLUS
+Énergies éoliennes
+par
+Jean MARTIN
+Ingénieur de l'École nationale supérieure des arts et métiers
+Bibliographie
+Références de l'article
+[1]
+EDF et IGN. -
+Carte des vents pour la France.
+Direction des Études et Recherches et Direction
+de l'équipement (1980).
+[2]
+VADOT (L.). -
+Étude synoptique des différents
+types d'éoliennes.
+La houille blanche, marsavril
+1957.
+[3]
+SAVONIUS. - Brevet français n
+o
+601.266 du
+23 juil. 1925.
+[4]
+DARRIEUS. - Brevet français n
+o
+604.390 du
+9 oct. 1925.
+[5]
+TEMPLIN (R.J.). -
+Aerodynamic performance
+theory for the NCR vertical axis wind turbine.
+Rapport LTR LA 160 du Conseil National de
+Recherches du Canada, Ottawa, juin 1974.
+[6]
+STRICKLAND (J.M.). -
+A performance prediction
+model for the Darrieus turbine.
+1
+st
+Intern.
+Symp. Wind Energy Systems, éd. BHRA,
+Cranfield, England (1976).
+[7]
+PARASCHIVOIU (I.). -
+Aerodynamics loads
+and rotor performance for the Darrieus wind
+turbine.
+2
+nd
+AIAA Terrestrial Energy Systems
+Conference. Colorado Springs (USA) (1981).
+[8]
+READ (S.) et SHARP (D.J.). -
+An extended multiple
+streamtube theory for vertical axis wind
+turbine.
+Proc. 2
+nd
+B.W.E.A, Wind Energy Workshop,
+Cranfield. Multiscience, avril 1980.
+[9]
+COMOLET (R.). -
+Éolienne Darrieus : théorie et
+performances.
+Séminaire éolien, AFME
+Valbonne, nov. 1982.
+[10]
+HOLME (O.). -
+A contribution to the aerodynamic
+theory of the vertical-axis wind
+turbine.
+Proc. 1
+st
+Intern. Symp. Wind Energy
+Systems, Ed. BHRA, Cranfield, England (1976).
+[11]
+FANUCCI (J.R.). -
+An investigation of rotation
+induced stresses of straight and curved vertical
+axis wind turbine.
+Sandia Laboratories.
+SAND, 74.03.79 (1975).
+[12]
+STRICKLAND (J.M.). -
+A vortex theory of the
+Darrieus turbine. An analytical and experimental
+data.
+Sandia Laboratories, SAND,
+79.70.058 (1980).
+[13]
+DRIVIERE (J.). -
+Étude expérimentale d'une
+éolienne type Darrieus couplée à un convertisseur
+oléothermique.
+17
+e
+Colloque d'Aérodynamique
+Appliquée, Grenoble (1980).
+[14]
+SCHON (J.P.), COMTE-BELLOT (G.) et
+CHARNAY (G.). -
+Anémomètres à fil ou à film
+chaud.
+Tehniques de l'Ingénieur, R2272, traité
+Mesures et Contrôle (1994).
+Livres et revues
+BETZ (A.). -
+Die Windmühlen im Lichte neuerer Forschung.
+Die Naturwissenschafte, Berlin, Heft 46,
+nov. 1927.
+BOISSON (A.). -
+Aérodynamique du vol de l'avion.
+Dunod (1969).
+BONNEFILLE (R.). -
+Les réalisations d'Électricité de
+France concernant l'énergie éolienne.
+La Houille
+Blanche n
+o
+1 (1975).
+BREDECHE (Ph.) et BREUZARD (M.). -
+Le vent : une
+inépuisable source d'énergie.
+Éd. J. Grancher
+(1981).
+CHAMPLY (R.). -
+Moteurs à vent.
+Dunod (1933).
+CHILCOTT (R.). -
+Notes on the development of the
+Brace Airscrew Windmill as a prime mover.
+Brace
+Institute Mc Gill University, Montréal (1969).
+COMOLET (R.), HARAJLI (L.), MERCIER DES
+ROCHETTES (P.) et YEZNASNI (A.). -
+Sur
+l'épanouissement du flux à la traversée d'une
+éolienne Darrieus : théorie et expérience.
+C.R.
+Acad. Sc. 28.06.1982.
+CUNTY (G.). -
+Éoliennes et aérogénérateurs
+- Guide
+de l'énergie éolienne. Édisud, la Calade (1982).
+DEKKER (Th. A.H.). -
+Performance characteristics of
+some pail and stell bladed wind rotors.
+Steering
+committee for windenergy in developping
+countries. Amersfoort The Netherlands,
+déc. 1977.
+ELDRIDGE (F.B.). -
+Wind machines.
+National Science
+Foundation Research. Applications Directorate,
+U.S. energy. Research and development
+(Washington), oct. 1975.
+GOLDING (E.W.). -
+The generation of electricity by
+wind power.
+E. et F. Spon Ltd, London (1976).
+Le GOURIERES (D.). -
+Énergie éolienne, théorie,
+conception et calcul pratique des installations.
+Éd. Eyrolles (1982).
+HLADIK (J.). -
+Énergétique éolienne.
+Éd. Masson et
+Presses de l'université du Québec (1984).
+LACROIX (G.). -
+L'énergie du vent.
+Revue de la Technique
+moderne, avril 1949.
+LANOIX (H.). -
+Les aéromoteurs modernes.
+Librairie
+Girardot (1947).
+LECHAPELLIER (P.). -
+Le vent, les éoliennes et
+l'habitat.
+Éd. Eyrolles (1981).
+MARTIN (J.). -
+L'énergie éolienne demain.
+Revue
+Ingénieurs et Techniciens, déc. 1974.
+MARUZLAZ (P.D.). -
+Guide des implantations de
+petites éoliennes.
+CSTB Nantes (1984).
+da MATHA SANT'ANNA (F.). -
+Les moulins à vent et
+l'énergie de demain.
+École Polytechnique de
+Montréal, Canada (1975).
+PRUNIERAS. -
+Contribution à la mise au point des
+aérogénérateurs dans les établissements de
+signalisation maritime.
+Mécanique et électricité,
+avril 1966.
+PUTNA (P.C.). -
+Power from the wind.
+Van Nostrand
+Reinhold Company (1947).
+ROGER (R.). -
+Produire son énergie avec le vent.
+Éd
+La Lanterne (1981).
+SERRA (L.). -
+Le vent en France et ses possibilités
+d'utilisation.
+Direction des Études et Recherches
+d'Électricité de France, Revue La Météorologie,
+oct. déc. 1953.
+SHEFTER (Ya.I.). -
+Wind powered machines.
+Léo
+Kanner Associates, Redwood City California
+(traduit du russe en anglais) (1974).
+SIMMONS. -
+Wind power.
+Noyes data Corporation
+(1975).
+SOUTH (P.) et RANGI (R.). -
+Rendement et rentabilité
+de l'éolienne à axe vertical conçue au Conseil
+National des Recherches.
+Ottawa Canada
+(Congrès de l'American Society of Agricultural
+Engineers, 12 oct. 1974).
+SOUTH (P.) et RANGI (R.S.). -
+An experimental investigation
+of a 12 ft diameter high speed vertical
+axis wind turbine.
+Rapport LRT-LA 166 du Conseil
+National de Recherches du Canada. Ottawa,
+avril 1975.
+TEMPLIN (R.J.). -
+An estimate of the interaction of
+windmills in widespread arrays.
+Rapport
+LTR-LA 171 du Conseil National de Recherches
+du Canada, Ottawa, déc. 1974.
+VADOT (L.). -
+Le pompage de l'eau par les éoliennes.
+La houille blanche, sept. 1957.
+VADOT (L.). -
+La production d'énergie électrique par
+éoliennes.
+La Houille Blanche, oct. 1958 et
+janv.-fév. 1959.
+Von FLACHSBART (O.). -
+Messungen auf ebenen
+und gewölbten Platten.
+Göttingen (1931).
+Proceedings of the first international symposium on
+wind energy systems.
+Éd. BHRA (1976).
+Second international symposium on wind energy
+systems.
+Éd. BHRA (1978).
+Third international symposium on wind energy
+systems.
+Éd. BHRA (1980).
+GIPE (P.). -
+Wind Energy comes of ages
+- John Wiley
+and sons, inc (1995).
+Colloque ADEME du 18 novembre 1993 à Dunkerque
+sur l'énergie éolienne.
+ANDRIEUX (T.). -
+Étude d'une éolienne pour le chauffage
+d'une maison individuelle.
+Thèse Université
+de Technologie de Compiègne (1994).
+Énergie éolienne
+- Rencontres et journées techniques
+à Sophia-Antipolis, ADEME, 1-2 oct. 1992.
+Le paysage éolien mondial.
+ADEME. Séminaire de
+contractants, Lastours, 19-20 sept. 1991.
+HELMER (J.M.). -
+Modélisation d'éoliennes comportant
+des rotors avec pales déformables.
+Rapport
+contrat ADEME (1992).
+ÉNERGIES ÉOLIENNES __________________________________________________________________________________________________________________
+POUR
+EN
+SAVOIR
+PLUS
+Toute reproduction sans autorisation du Centre français d'exploitation du droit de copie
+Doc. B 8 585
+-
+2
+est strictement interdite.
+-
+© Techniques de l'Ingénieur, traité Génie énergétique
+VERGNET. -
+Description et résultats des essais de
+prototypes des pales en matériau composite
+fibre de carbone-Kevlar.
+Rapport contrat ADEME
+(1991).
+LERBET (J.). -
+Dynamique d'un aérogénérateur à
+structure portante et pales souples.
+Rapport
+contrat ADEME (1989).
+NOEL (J.M.). -
+Réalisation de l'étude des influences
+respectives des profils et des formes utilisées
+pour construire les pales sur la productivité des
+aérogénérateurs à calage variable.
+Rapport
+contrat ADEME (1988).
+CONNAY (A.). -
+Wind to help nuclear make the non
+fossil quota.
+Atom, janv. 1989.
+POLO (J.F.). -
+À la recherche de l'énergie idéale.
+Hatier (1992).
+Systèmes solaires, numéro 94/95 (1993).
+Systèmes solaires, numéro 110, déc. 1995.
+Pour la science, numéro spécial énergie n
+o
+157,
+nov. 1990.
+Fournisseurs
+Éoliennes
+Éole Technologie
+Éolienne Humblot
+Éotec
+Poncelet et Cie
+Proengin
+SFER
+Vergnet
+Pales et supportage
+Atoutvent
+Petitjean
+Normalisation
+Association française de Normalisation (AFNOR)
+E 50-001 12.56 Aérogénérateurs de petite puissante
+Norme européenne
+NF EN 150 9001 08.94 Système qualité. Modèle pour l'assurance de la qualité
+en conception, développement, production, installation
+et prestations associées.

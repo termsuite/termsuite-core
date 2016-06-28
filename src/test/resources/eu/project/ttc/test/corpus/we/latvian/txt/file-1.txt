@@ -1,0 +1,2908 @@
+﻿Vējdzirnavas	N	vējdzirnavas	N-fpn---------n-----------f-
+ir	V	būt	Vp----3--i----------7-----l-
+vismaz	R	vismaz	R----p---------------g----l-
+4000	D	4000	D--pg-----------------------
+gadu	N	gads	N-mpg---------n-----------l-
+vecas	A	vecs	A-fsgp-n------------------l-
+.	SENT	.	T--------------------------.
+
+Līdz	S	līdz	S----------------sdp------f-
+ar	S	ar	S----------------sap------l-
+riteņa	N	ritenis	N-msg---------n-----------l-
+izgudrošanu	N	izgudrošana	N-fsa---------n-----------l-
+dažādās	A	dažāds	A-fsgp-y------------------l-
+vietās	N	vieta	N-fpl---------n-----------l-
+vienlaicīgi	A	vienlaicīgs	A-mpnp-n------------------l-
+tika	V	tikt	Vs----3--i----------6-----l-
+radīti	G	radīts	Gsmpnp-n---p--------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+dzinēji	N	dzinējs	N-mpn---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Vējdzirnavas	N	vējdzirnavas	N-fpn---------n-----------f-
+,	T	,	T--------------------------,
+būdamas	G	būdams	G-fp---------l------------l-
+vienas	M	viens	M-fpa---c-----------------l-
+no	S	no	S----------------pdp------l-
+pirmajām	M	pirmais	M-fpd---o-----------------l-
+tehniski	R	tehniski	R----p--------------------l-
+izmantojamām	G	izmantojams	Gpfpdp-n---p--------------l-
+enerģijas	N	enerģija	N-fsg---------n-----------l-
+ieguves	N	ieguve	N-fsg---------n-----------l-
+iekārtām	N	iekārta	N-fpd---------n-----------l-
+,	T	,	T--------------------------,
+atbrīvoja	V	atbrīvot	Vs----3--i----------------l-
+cilvēku	N	cilvēks	N-msa---------n-----------l-
+no	S	no	S----------------sgp------l-
+smaga	A	smags	A-msgp-n------------------l-
+un	C	un	C---------------------c---l-
+vienmuļa	A	vienmuļš	A-msgp-n------------------l-
+darba	N	darbs	N-msg---------n-----------l-
+rokas	N	roka	N-fsg---------n-----------l-
+dzirnavās	N	dzirnavas	N-fpl---------n-----------l-
+un	C	un	C---------------------c---l-
+dzīvniekus	N	dzīvnieks	N-mpa---------n-----------l-
+Ģēpeļa	-	Ģēpeļa	----------------------------
+iekārtās	N	iekārta	N-fpl---------n-----------l-
+,	T	,	T--------------------------,
+fizisko	A	fizisks	A-msap-y------------------l-
+darbu	N	darbs	N-msa---------n-----------l-
+liekot	G	liekot	G----------a-n------------l-
+veikt	V	veikt	V--------n----------------l-
+dabas	N	daba	N-fsg---------n-----------l-
+spēkiem	N	spēks	N-mpd---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Vēja	N	vējš	N-msg---------n-----------f-
+darbinātām	G	darbināts	Gsfpdp-n---p--------------l-
+mašīnām	N	mašīna	N-fpd---------n-----------l-
+vajadzēja	V	vajadzēt	Vs----3--i----------2-----l-
+sūknēt	V	sūknēt	V--------n----------------l-
+,	T	,	T--------------------------,
+malt	V	malt	V--------n----------------l-
+,	T	,	T--------------------------,
+zāģēt	V	zāģēt	V--------n----------------l-
+,	T	,	T--------------------------,
+kalt	V	kalt	V--------n----------------l-
+,	T	,	T--------------------------,
+presēt	V	presēt	V--------n----------------l-
+,	T	,	T--------------------------,
+celt	V	celt	V--------n----------------l-
+un	C	un	C---------------------c---l-
+pēc	S	pēc	S----------------sgp------l-
+dinamo	N	dinamo	N-msg---------n-----------l-
+izgudrošanas	N	izgudrošana	N-fpn---------n-----------l-
+arī	Q	arī	Q-------------------------l-
+ražot	V	ražot	V--------n----------------l-
+strāvu	N	strāva	N-fsa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Ar	S	ar	S----------------sap------f-
+vēja	N	vējš	N-msg---------n-----------l-
+spēku	N	spēks	N-msa---------n-----------l-
+tika	V	tikt	Vs----3--i----------6-----l-
+radīti	G	radīts	Gsmpnp-n---p--------------l-
+trokšņi	N	troksnis	N-mpn---------n-----------l-
+vai	C	vai	C---------------------c---l-
+darbinātas	G	darbināts	Gsfpnp-n---p--------------l-
+noslēpumaini	R	noslēpumaini	R----p--------------------l-
+skanošās	G	skanošs	Gpfpnp-y---a--------------l-
+Eola	-	Eola	----------------------------
+flautas	N	flauta	N-fpn---------n-----------l-
+,	T	,	T--------------------------,
+vējā	N	vējš	N-msl---------n-----------l-
+griezās	V	griezties	Vs----3--i-----y----------l-
+pat	Q	pat	Q-------------------------l-
+lūgšanu	N	lūgšana	N-fpg---------n-----------l-
+dzirnaviņas	N	dzirnaviņas	N-fpn---------n-----------l-
+,	T	,	T--------------------------,
+uzlabojot	G	uzlabojot	G----------a-n------------l-
+to	P	tas	P-msa-------d-------------l-
+īpašnieku	N	īpašnieks	N-msa---------n-----------l-
+garīgo	A	garīgs	A-fsap-y------------------l-
+labsajūtu	N	labsajūta	N-fsa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Daudzi	M	daudzi	M-mpn---c-----------------f-
+izgudrotāji	N	izgudrotājs	N-mpn---------n-----------l-
+konstruējuši	G	konstruējis	Gsmpn--n---a--------------l-
+fantastiskas	A	fantastisks	A-fsgp-n------------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+spēkstacijas	N	spēkstacija	N-fpn---------n-----------l-
+,	T	,	T--------------------------,
+kas	P	kas	P---n-------r---------x---l-
+vēl	Q	vēl	Q-------------------------l-
+šodien	R	šodien	R----p--------------------l-
+dod	V	dot	Vp----3--i----------------l-
+daudzas	M	daudzi	M-fpa---c-----------------l-
+ierosmes	N	ierosme	N-fpa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Jaunas	A	jauns	A-fpnp-n------------------f-
+atziņas	N	atziņa	N-fsg---------n-----------l-
+aerodinamikā	N	aerodinamika	N-fsl---------n-----------l-
+un	C	un	C---------------------c---l-
+īpaši	R	īpaši	R----p--------------------l-
+līdz	S	līdz	S----------------sdp------l-
+ar	S	ar	S----------------sap------l-
+lidaparātu	N	lidaparāts	N-msa---------n-----------l-
+radīšanu	N	radīšana	N-fsa---------n-----------l-
+ļāva	V	ļaut	Vs----3--i----------9-----l-
+izveidot	V	izveidot	V--------n----------------l-
+arvien	R	arvien	R----p--------------------l-
+labākas	A	labs	A-fpnc-n------------------l-
+sistēmas	N	sistēma	N-fpa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Fosilo	A	fosils	A-mpgp-y------------------f-
+enerģijas	N	enerģija	N-fsg---------n-----------l-
+nesēju	N	nesēja	N-fpg---------n-----------l-
+izmantošanas	N	izmantošana	N-fsg---------n-----------l-
+bums	N	bums	N-msn---------n-----------l-
+pārtrauca	V	pārtraukt	Vs----3--i----------------l-
+to	P	tas	P-fsa-------d-------------l-
+tālāku	A	tāls	A-fsac-n------------------l-
+attīstību	N	attīstība	N-fsa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Mūsdienās	N	mūsdienas	N-fpl---------n-----------f-
+interese	N	interese	N-fsn---------n-----------l-
+par	S	par	S----------------sap------l-
+vēja	N	vējš	N-msg---------n-----------l-
+enerģijas	N	enerģija	N-fsg---------n-----------l-
+izmantošanu	N	izmantošana	N-fsa---------n-----------l-
+atkal	R	atkal	R----p--------------------l-
+pieaug	V	pieaugt	Vp----3--i----------------l-
+,	T	,	T--------------------------,
+un	C	un	C---------------------c---l-
+ir	V	būt	Vp----3--i----------7-----l-
+pamats	N	pamats	N-msn---------n-----------l-
+domāt	V	domāt	V--------n----------------l-
+,	T	,	T--------------------------,
+ka	C	ka	C---------------------p---l-
+šajā	P	šis	P-msl-------d-------------l-
+jomā	N	joma	N-fsl---------n-----------l-
+radīsies	V	rasties	Vf----3--i-----y----------l-
+vēl	Q	vēl	Q-------------------------l-
+daudzas	M	daudzi	M-fpn---c-----------------l-
+jaunas	A	jauns	A-fpap-n------------------l-
+idejas	N	ideja	N-fpn---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+
+
+
+
+Kōnig	-	Kōnig	----------------------------
+dod	V	dot	Vp----3--i----------------l-
+vienkāršu	A	vienkāršs	A-fsap-n------------------l-
+izmantojamās	G	izmantojams	Gpfpnp-y---p--------------l-
+enerģijas	N	enerģija	N-fsg---------n-----------l-
+formulu	N	formula	N-fsa---------n-----------l-
+:	T	:	T--------------------------:
+p	-	p	----------------------------
+=	T	=	T--------------------------=
+0	D	0	D--p------------------------
+,	T	,	T--------------------------,
+000255	D	000255	D--p------------------------
+x	-	x	----------------------------
+v	-	v	----------------------------
+3	D	3	D--p------------------------
+xA	-	xA	----------------------------
+(	T	(	T--------------------------(
+kW	Y	kW	Y-------------------------l-
+)	T	)	T--------------------------)
+,	T	,	T--------------------------,
+kur	R	kur	R----p----------------f---l-
+p	-	p	----------------------------
+ir	V	būt	Vp----3--i----------7-----l-
+jauda	N	jauda	N-fsn---------n-----------l-
+kilovatos	N	kilovats	N-mpl---------n-----------l-
+,	T	,	T--------------------------,
+v	-	v	----------------------------
+ir	V	būt	Vp----3--i----------7-----l-
+vēja	N	vējš	N-msg---------n-----------l-
+ātrums	N	ātrums	N-msn---------n-----------l-
+m	Y	m	Y-------------------------l-
+/	T	/	T--------------------------/
+s	Y	s	Y-------------------------l-
+,	T	,	T--------------------------,
+A	Y	A	Y-------------------------f-
+ir	V	būt	Vp----3--i----------7-----l-
+darbrata	-	darbrata	----------------------------
+virsmas	N	virsma	N-fsg---------n-----------l-
+laukums	N	laukums	N-msn---------n-----------l-
+m	Y	m	Y-------------------------l-
+2	D	2	D--p------------------------
+.	SENT	.	T--------------------------.
+
+Faktors	N	faktors	N-msn---------n-----------f-
+0	D	0	D--p------------------------
+,	T	,	T--------------------------,
+000255	D	000255	D--p------------------------
+ietver	V	ietvert	Vp----3--i----------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+rotoru	N	rotors	N-mpg---------n-----------l-
+aerodinamisko	A	aerodinamisks	A-fsap-y------------------l-
+lietderības	N	lietderība	N-fsg---------n-----------l-
+koeficientu	N	koeficients	N-mpg---------n-----------l-
+apmēram	R	apmēram	R----p---------------g----l-
+50	D	50	D--pg-----------------------
+%	T	%	T--------------------------%
+un	C	un	C---------------------c---l-
+spārnu	N	spārns	N-mpg---------n-----------l-
+lietderības	N	lietderība	N-fsg---------n-----------l-
+koeficientu	N	koeficients	N-msa---------n-----------l-
+0	D	0	D--p------------------------
+,	T	,	T--------------------------,
+9	D	9	D--p------------------------
+.	SENT	.	T--------------------------.
+
+Šī	P	šis	P-fsn-------d-------------f-
+formula	N	formula	N-fsn---------n-----------l-
+izmantojama	G	izmantojams	Gpfsnp-n---p--------------l-
+aptuvenai	A	aptuvens	A-fsdp-n------------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+dzinēja	N	dzinējs	N-msg---------n-----------l-
+jaudas	N	jauda	N-fsg---------n-----------l-
+aprēķināšanai	N	aprēķināšana	N-fsd---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+Redzams	G	redzams	Gpmsnp-n---p--------------f-
+,	T	,	T--------------------------,
+ka	C	ka	C---------------------p---l-
+vēja	N	vējš	N-msg---------n-----------l-
+ātrums	N	ātrums	N-msn---------n-----------l-
+tiek	V	tikt	Vp----3--i----------6-----l-
+kāpināts	G	kāpināts	Gsmsnp-n---p--------------l-
+trešajā	M	trešais	M-fsl---o-----------------l-
+pakāpē	N	pakāpe	N-fsl---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Formulu	N	formula	N-fsa---------n-----------f-
+pārveidojot	G	pārveidojot	G----------a-n------------l-
+,	T	,	T--------------------------,
+var	V	varēt	Vp----3--i----------3-----l-
+aprēķināt	V	aprēķināt	V--------n----------------l-
+jaudu	N	jauda	N-fsa---------n-----------l-
+uz	S	uz	S----------------sap------l-
+laukuma	N	laukums	N-msg---------n-----------l-
+vienību	N	vienība	N-fsa---------n-----------l-
+P	-	P	----------------------------
+/	T	/	T--------------------------/
+A	Y	A	Y-------------------------f-
+(	T	(	T--------------------------(
+kW	Y	kW	Y-------------------------l-
+/	T	/	T--------------------------/
+m	Y	m	Y-------------------------l-
+2	D	2	D--p------------------------
+)	T	)	T--------------------------)
+.	SENT	.	T--------------------------.
+
+Salīdzinot	G	salīdzinot	G----------a-n------------f-
+to	P	tas	P-fsa-------d-------------l-
+ar	S	ar	S----------------sap------l-
+Boforta	N	Boforta	N-fsv---------n-----------f-
+skalu	N	skals	N-msa---------n-----------l-
+,	T	,	T--------------------------,
+ir	V	būt	Vp----3--i----------7-----l-
+skaidri	R	skaidri	R----p--------------------l-
+saskatāms	G	saskatāms	Gpmsnp-n---p--------------l-
+kāpinājums	N	kāpinājums	N-msn---------n-----------l-
+:	T	:	T--------------------------:
+
+
+Vēja	N	vējš	N-msg---------n-----------f-
+stiprums	N	stiprums	N-msn---------n-----------l-
+ballēs	N	balle	N-fpl---------n-----------l-
+(	T	(	T--------------------------(
+pēc	S	pēc	S----------------sgp------l-
+Boforta	N	Boforta	N-fsn---------n-----------f-
+)	T	)	T--------------------------)
+
+
+Vēja	N	vējš	N-msg---------n-----------f-
+ātrums	N	ātrums	N-msn---------n-----------l-
+m	Y	m	Y-------------------------l-
+/	T	/	T--------------------------/
+s	Y	s	Y-------------------------l-
+
+
+Iespējamā	A	iespējams	A-fsnp-y------------------f-
+jauda	N	jauda	N-fsn---------n-----------l-
+uz	S	uz	S----------------sgp------l-
+laukuma	N	laukums	N-msg---------n-----------l-
+vienību	N	vienība	N-fsa---------n-----------l-
+kW	Y	kW	Y-------------------------l-
+/	T	/	T--------------------------/
+m2	-	m2	----------------------------
+
+
+3	D	3	D--p------------------------
+
+
+4	D	4	D--p------------------------
+,	T	,	T--------------------------,
+4	D	4	D--p------------------------
+
+
+0	D	0	D--p------------------------
+,	T	,	T--------------------------,
+021	D	021	D--s------------------------
+
+
+4	D	4	D--p------------------------
+
+
+6	D	6	D--p------------------------
+,	T	,	T--------------------------,
+8	D	8	D--p------------------------
+
+
+0	D	0	D--p------------------------
+,	T	,	T--------------------------,
+08	D	08	D--p------------------------
+
+
+5	D	5	D--p------------------------
+
+
+9	D	9	D--p------------------------
+,	T	,	T--------------------------,
+5	D	5	D--p------------------------
+
+
+0	D	0	D--p------------------------
+,	T	,	T--------------------------,
+23	D	23	D--p------------------------
+
+
+6	D	6	D--p------------------------
+
+
+12	D	12	D--pg-----------------------
+,	T	,	T--------------------------,
+3	D	3	D--p------------------------
+
+
+0	D	0	D--p------------------------
+,	T	,	T--------------------------,
+47	D	47	D--p------------------------
+
+
+7	D	7	D--p------------------------
+
+
+15	D	15	D--pg-----------------------
+,	T	,	T--------------------------,
+5	D	5	D--p------------------------
+
+
+0	D	0	D--p------------------------
+,	T	,	T--------------------------,
+95	D	95	D--p------------------------
+
+
+8	D	8	D--p------------------------
+
+
+19	D	19	D--pg-----------------------
+
+
+1	D	1	D--s------------------------
+,	T	,	T--------------------------,
+75	D	75	D--p------------------------
+
+
+9	D	9	D--p------------------------
+
+
+22	D	22	D--p------------------------
+
+
+2	D	2	D--p------------------------
+,	T	,	T--------------------------,
+27	D	27	D--p------------------------
+
+
+10	D	10	D--pg-----------------------
+
+
+26	D	26	D--p------------------------
+,	T	,	T--------------------------,
+5	D	5	D--p------------------------
+
+
+4	D	4	D--p------------------------
+,	T	,	T--------------------------,
+75	D	75	D--p------------------------
+
+
+11	D	11	D--pg-----------------------
+
+
+30	D	30	D--pg-----------------------
+
+
+6	D	6	D--p------------------------
+,	T	,	T--------------------------,
+89	D	89	D--p------------------------
+
+
+12	D	12	D--pg-----------------------
+
+
+34	D	34	D--p------------------------
+,	T	,	T--------------------------,
+5	D	5	D--p------------------------
+
+
+10	D	10	D--pg-----------------------
+,	T	,	T--------------------------,
+5	D	5	D--p------------------------
+
+
+Šie	P	šis	P-mpn-------d-------------f-
+lielumi	N	lielums	N-mpn---------n-----------l-
+nav	V	nebūt	Vp----3--i------y---1-----l-
+izmantojami	G	izmantojams	Gpmpnp-n---p--------------l-
+visu	P	viss	P-mpg-------g-------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+dzinēju	N	dzinēja	N-fpg---------n-----------l-
+jaudas	N	jauda	N-fsg---------n-----------l-
+aprēķināšanai	N	aprēķināšana	N-fsd---------n-----------l-
+,	T	,	T--------------------------,
+jo	C	jo	C---------------------r---l-
+to	P	tas	P-fpg-------d-------------l-
+dažādas	A	dažāds	A-fsgp-n------------------l-
+konstrukcijas	N	konstrukcija	N-fpn---------n-----------l-
+tiek	V	tikt	Vp----3--i----------6-----l-
+īpaši	R	īpaši	R----p--------------------l-
+piemērotas	G	piemērots	Gsfsgp-n---p--------------l-
+noteiktiem	G	noteikts	Gsmpdp-n---p--------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+ātrumiem	N	ātrums	N-mpd---------n-----------l-
+,	T	,	T--------------------------,
+pie	S	pie	S----------------pdp------l-
+kuriem	P	kurš	P-mpd-------r---------a---l-
+tie	P	tas	P-mpn-------d-------------l-
+darbojas	V	darboties	Vp----3--i-----y----------l-
+visoptimālāk	-	visoptimālāk	----------------------------
+.	SENT	.	T--------------------------.
+
+Ja	C	ja	C---------------------f---f-
+vēja	N	vējš	N-msg---------n-----------l-
+ātrums	N	ātrums	N-msn---------n-----------l-
+ir	V	būt	Vp----3--i----------7-----l-
+attiecīgi	R	attiecīgi	R----p--------------------l-
+mazāks	A	mazs	A-msnc-n------------------l-
+vai	C	vai	C---------------------c---l-
+lielāks	A	liels	A-msnc-n------------------l-
+,	T	,	T--------------------------,
+dzinēju	N	dzinēja	N-fpg---------n-----------l-
+lietderības	N	lietderība	N-fsg---------n-----------l-
+koeficients	N	koeficients	N-msn---------n-----------l-
+samazinās	V	samazināt	Vf----3--i----------------l-
+.	SENT	.	T--------------------------.
+
+
+Tā	R	tā	R----p--------------------f-
+kā	C	kā	C---------------------f---l-
+vēja	N	vējš	N-msg---------n-----------l-
+enerģija	N	enerģija	N-fsn---------n-----------l-
+tiek	V	tikt	Vp----3--i----------6-----l-
+saņemta	G	saņemts	Gsfsnp-n---p--------------l-
+ar	S	ar	S----------------pdp------l-
+pārtraukumiem	N	pārtraukums	N-mpd---------n-----------l-
+,	T	,	T--------------------------,
+nepieciešama	G	nepieciešams	Gpfsnp-n---p----y---------l-
+enerģijas	N	enerģija	N-fsg---------n-----------l-
+uzkrāšana	N	uzkrāšana	N-fsn---------n-----------l-
+.	SENT	.	T--------------------------.
+
+To	P	tas	P-msa-------d-------------f-
+var	V	varēt	Vp----3--i----------3-----l-
+veikt	V	veikt	V--------n----------------l-
+sūkņu	N	sūknis	N-mpg---------n-----------l-
+akumulācijas	N	akumulācija	N-fsg---------n-----------l-
+sistēmās	N	sistēma	N-fpl---------n-----------l-
+vai	C	vai	C---------------------c---l-
+akumulējot	G	akumulējot	G----------a-n------------l-
+elektroenerģiju	N	elektroenerģija	N-fsa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+Jaudas	N	jauda	N-fpn---------n-----------f-
+
+
+Vēja	N	vējš	N-msg---------n-----------f-
+elektrostacijas	N	elektrostacija	N-fpn---------n-----------l-
+tiek	V	tikt	Vp----3--i----------6-----l-
+būvētas	G	būvēts	Gsfpnp-n---p--------------l-
+individuāli	R	individuāli	R----p--------------------l-
+dažādos	A	dažāds	A-mplp-n------------------l-
+lielumos	N	lielums	N-mpl---------n-----------l-
+vai	C	vai	C---------------------c---l-
+nelielās	A	neliels	A-fplp-n--------y---------l-
+sērijās	N	sērija	N-fpl---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Patlaban	R	patlaban	R----p--------------------f-
+lielākais	A	liels	A-msnc-y------------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+dzinējs	N	dzinējs	N-msn---------n-----------l-
+atrodas	V	atrasties	Vp----3--i-----y----------l-
+Dānijā	N	Dānija	N-fsl---------n-----------f-
+(	T	(	T--------------------------(
+Tvind	-	Tvind	----------------------------
+)	T	)	T--------------------------)
+;	T	;	T--------------------------;
+tā	P	tas	P-fsn-------d-------------l-
+nominālā	A	nomināls	A-fsnp-y------------------l-
+jauda	N	jauda	N-fsn---------n-----------l-
+ir	V	būt	Vp----3--i----------7-----l-
+1	D	1	D--s------------------------
+,	T	,	T--------------------------,
+7	D	7	D--p------------------------
+MW	-	MW	----------------------------
+un	C	un	C---------------------c---l-
+darbrata	-	darbrata	----------------------------
+diametrs	N	diametrs	N-msn---------n-----------l-
+-	T	-	T---------------------------
+54	D	54	D--p------------------------
+m	Y	m	Y-------------------------l-
+.	SENT	.	T--------------------------.
+
+Milzīgas	A	milzīgs	A-fsgp-n------------------f-
+iekārtas	N	iekārta	N-fpn---------n-----------l-
+ar	S	ar	S----------------sap------l-
+darbrata	-	darbrata	----------------------------
+diametru	N	diametrs	N-msa---------n-----------l-
+,	T	,	T--------------------------,
+kas	P	kas	P---n-------r---------x---l-
+pārsniedz	V	pārsniegt	Vp----3--i----------------l-
+100	D	100	D--pg-----------------------
+m	Y	m	Y-------------------------l-
+(	T	(	T--------------------------(
+piemēram	R	piemēram	R----p--------------------l-
+,	T	,	T--------------------------,
+projekts	N	projekts	N-msn---------n-----------l-
+“	T	“	T--------------------------“
+Groivian	-	Groivian	----------------------------
+”	T	”	T--------------------------”
+BMFT	-	BMFT	----------------------------
+,	T	,	T--------------------------,
+nominālā	A	nomināls	A-fsnp-y------------------l-
+jauda	N	jauda	N-fsn---------n-----------l-
+3	D	3	D--p------------------------
+MW	-	MW	----------------------------
+)	T	)	T--------------------------)
+,	T	,	T--------------------------,
+tiek	V	tikt	Vp----3--i----------6-----l-
+plānotas	G	plānots	Gsfpnp-n---p--------------l-
+vai	C	vai	C---------------------c---l-
+būvētas	G	būvēts	Gsfpnp-n---p--------------l-
+.	SENT	.	T--------------------------.
+
+
+Lielākais	A	liels	A-msnc-y------------------f-
+piedāvātais	G	piedāvāts	Gsmsnp-y---p--------------l-
+projekts	N	projekts	N-msn---------n-----------l-
+ir	V	būt	Vp----3--i----------7-----l-
+iekārta	N	iekārta	N-fsn---------n-----------l-
+Menas	N	Mena	N-fsg---------n-----------f-
+līcī	N	līcis	N-msl---------n-----------l-
+(	T	(	T--------------------------(
+ASV	Y	ASV	Y-------------------------u-
+)	T	)	T--------------------------)
+,	T	,	T--------------------------,
+kas	P	kas	P---n-------r---------x---l-
+iecerēta	G	iecerēts	Gsfsnp-n---p--------------l-
+kā	C	kā	C---------------------f---l-
+peldošs	A	peldošs	A-msnp-n------------------l-
+torņu	N	tornis	N-mpg---------n-----------l-
+mežs	N	mežs	N-msn---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Tā	P	tas	P-fsn-------d-------------f-
+realizēšana	N	realizēšana	N-fsn---------n-----------l-
+ir	V	būt	Vp----3--i----------7-----l-
+salīdzināma	G	salīdzināms	Gpfsnp-n---p--------------l-
+ar	S	ar	S----------------pdp------l-
+kosmiskajām	A	kosmisks	A-fpdp-y------------------l-
+programmām	N	programma	N-fpd---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Ari	V	art	Vs-s--2--i----------------f-
+PSRS	Y	PSRS	Y-------------------------u-
+tiek	V	tikt	Vp----3--i----------6-----l-
+plānota	G	plānots	Gsfsnp-n---p--------------l-
+lielu	A	liels	A-fsap-n------------------l-
+iekārtu	N	iekārta	N-fsa---------n-----------l-
+uzstādīšana	N	uzstādīšana	N-fsn---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Līdz	S	līdz	S----------------pdp------f-
+1990	D	1990	D--pg-----------------------
+.	T	.	T--------------------------.
+gadam	N	gads	N-msd---------n-----------l-
+ir	V	būt	Vp----3--i----------7-----l-
+paredzēts	G	paredzēts	Gsmsnp-n---p--------------l-
+izvei	-	izvei	----------------------------
+¬	-	¬	----------------------------
+dot	V	dot	V--------n----------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+elektrostaciju	N	elektrostacija	N-fsa---------n-----------l-
+tīklu	N	tīkls	N-msa---------n-----------l-
+,	T	,	T--------------------------,
+kas	P	kas	P---n-------r---------x---l-
+sastāvēs	V	sastāvēt	Vf----3--i----------------l-
+no	S	no	S----------------pdp------l-
+150	D	150	D--pg-----------------------
+000	D	000	D--p------------------------
+vēja	N	vējš	N-msg---------n-----------l-
+spēkstacijām	N	spēkstacija	N-fpd---------n-----------l-
+ar	S	ar	S----------------sap------l-
+kopējo	A	kopējs	A-fsap-y------------------l-
+jaudu	N	jauda	N-fsa---------n-----------l-
+45	D	45	D--p------------------------
+000	D	000	D--p------------------------
+MW	-	MW	----------------------------
+.	SENT	.	T--------------------------.
+
+
+
+
+Lielu	A	liels	A-mpgp-n------------------f-
+vēja	N	vējš	N-msg---------n-----------l-
+elektrostaciju	N	elektrostacija	N-fpg---------n-----------l-
+aizsākums	N	aizsākums	N-msn---------n-----------l-
+rodams	G	rodams	Gpmsnp-n---p--------------l-
+jau	Q	jau	Q-------------------------l-
+trīsdesmitajos	M	trīsdesmitais	M-mpl---o-----------------l-
+gados	N	gads	N-mpl---------n-----------l-
+,	T	,	T--------------------------,
+par	S	par	S----------------sap------l-
+ko	P	kas	P---a-------r-------------l-
+liecina	V	liecināt	Vp----3--i----------------l-
+H	Y	h	Y-------------------------f-
+.	SENT	.	T--------------------------.
+
+Honnef	-	Honnef	----------------------------
+plāni	R	plāni	R----p--------------------l-
+,	T	,	T--------------------------,
+kuros	P	kurš	P-mpl-------r---------o---l-
+redzamai	G	redzams	Gpfsdp-n---p--------------l-
+100	D	100	D--pg-----------------------
+MW	-	MW	----------------------------
+jaudas	N	jauda	N-fsg---------n-----------l-
+vēja	N	vējš	N-msg---------n-----------l-
+torņi	N	tornis	N-mpn---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+Pastāvot	G	pastāvot	G----------a-n------------f-
+centralizētai	G	centralizēts	Gsfsdp-n---p--------------l-
+enerģijas	N	enerģija	N-fsg---------n-----------l-
+apgādes	N	apgāde	N-fsg---------n-----------l-
+struktūrai	N	struktūra	N-fsd---------n-----------l-
+,	T	,	T--------------------------,
+īpaši	R	īpaši	R----p--------------------l-
+tiek	V	tikt	Vp----3--i----------6-----l-
+veicināta	G	veicināts	Gsfsnp-n---p--------------l-
+lielu	A	liels	A-mpgp-n------------------l-
+projektu	N	projekts	N-mpg---------n-----------l-
+radīšana	N	radīšana	N-fsn---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Tomēr	Q	tomēr	Q-------------------------f-
+tie	P	tas	P-mpn-------d-------------l-
+nav	V	nebūt	Vp----3--i------y---1-----l-
+savienojami	G	savienojams	Gpmpnp-n---p--------------l-
+ar	S	ar	S----------------sap------l-
+pielāgotas	G	pielāgots	Gsfsgp-n---p--------------l-
+tehnoloģijas	N	tehnoloģija	N-fsg---------n-----------l-
+pamatprincipiem	N	pamatprincips	N-mpd---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Veidojot	G	veidojot	G----------a-n------------f-
+liela	A	liels	A-msgp-n------------------l-
+mēroga	N	mērogs	N-msg---------n-----------l-
+iekārtas	N	iekārta	N-fpa---------n-----------l-
+,	T	,	T--------------------------,
+jāapsver	V	apsvērt	Vp-------c----------------l-
+arī	Q	arī	Q-------------------------l-
+kaitējums	N	kaitējums	N-msn---------n-----------l-
+,	T	,	T--------------------------,
+ko	P	kas	P---a-------r-------------l-
+var	V	varēt	Vp----3--i----------3-----l-
+nodarīt	V	nodarīt	V--------n----------------l-
+videi	N	vide	N-fsd---------n-----------l-
+un	C	un	C---------------------c---l-
+ainavai	N	ainava	N-fsd---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+Nelielas	A	neliels	A-fsgp-n--------y---------f-
+vēja	N	vējš	N-msg---------n-----------l-
+elektrostacijas	N	elektrostacija	N-fpn---------n-----------l-
+ar	S	ar	S----------------sap------l-
+nominālo	A	nomināls	A-fsap-y------------------l-
+jaudu	N	jauda	N-fsa---------n-----------l-
+10	D	10	D--pg-----------------------
+-	T	-	T---------------------------
+15	D	15	D--pg-----------------------
+kW	Y	kW	Y-------------------------l-
+ar	S	ar	S----------------sap------l-
+darbrata	-	darbrata	----------------------------
+diametru	N	diametrs	N-msa---------n-----------l-
+0	D	0	D--p------------------------
+,	T	,	T--------------------------,
+6	D	6	D--p------------------------
+-	T	-	T---------------------------
+15	D	15	D--pg-----------------------
+m	Y	m	Y-------------------------l-
+-	T	-	T---------------------------
+tiek	V	tikt	Vp----3--i----------6-----l-
+ražotas	G	ražots	Gsfpnp-n---p--------------l-
+sērijveidā	R	sērijveidā	R----p--------------------l-
+jau	Q	jau	Q-------------------------l-
+daudzus	M	daudzi	M-mpa---c-----------------l-
+gadus	N	gads	N-mpa---------n-----------l-
+un	C	un	C---------------------c---l-
+vienmēr	R	vienmēr	R----p--------------------l-
+tiek	V	tikt	Vp----3--i----------6-----l-
+izpirktas	G	izpirkts	Gsfpnp-n---p--------------l-
+.	SENT	.	T--------------------------.
+
+Ātrgaitas	N	ātrgaita	N-fsg---------n-----------f-
+dzinēji	N	dzinējs	N-mpn---------n-----------l-
+sasniedz	V	sasniegt	Vp----3--i----------------l-
+ražotāju	N	ražotāja	N-fsa---------n-----------l-
+nosaukto	G	nosaukts	Gsfsap-y---p--------------l-
+jaudu	N	jauda	N-fsa---------n-----------l-
+tikai	Q	tikai	Q-------------------------l-
+pie	S	pie	S----------------sgp------l-
+liela	A	liels	A-msgp-n------------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+ātruma	N	ātrums	N-msg---------n-----------l-
+(	T	(	T--------------------------(
+8	D	8	D--p------------------------
+-	T	-	T---------------------------
+10	D	10	D--pg-----------------------
+mis	N	mis	N-fpn---------n-----------l-
+)	T	)	T--------------------------)
+.	SENT	.	T--------------------------.
+
+Mūsu	P	mēs	P--pg-1-----p-------------f-
+klimatiskajos	A	klimatisks	A-mplp-y------------------l-
+apstākļos	N	apstāklis	N-mpl---------n-----------l-
+,	T	,	T--------------------------,
+kad	R	kad	R----p----------------f---l-
+vēja	N	vējš	N-msg---------n-----------l-
+ātrums	N	ātrums	N-msn---------n-----------l-
+dažādās	A	dažāds	A-fplp-n------------------l-
+vietās	N	vieta	N-fpl---------n-----------l-
+vidēji	A	vidējs	A-mpnp-n------------------l-
+gadā	N	gads	N-msl---------n-----------l-
+svārstās	V	svārstīties	Vp----3--i-----y----------l-
+no	S	no	S----------------sgp------l-
+2	D	2	D--p------------------------
+līdz	S	līdz	S----------------sdp------l-
+7	D	7	D--p------------------------
+m	Y	m	Y-------------------------l-
+/	T	/	T--------------------------/
+s	Y	s	Y-------------------------l-
+,	T	,	T--------------------------,
+šīs	P	šis	P-fpa-------d-------------l-
+nominālās	A	nomināls	A-fpnp-y------------------l-
+jaudas	N	jauda	N-fpn---------n-----------l-
+netiek	V	netikt	Vp----3--i------y---6-----l-
+sasniegtas	G	sasniegts	Gsfpnp-n---p--------------l-
+.	SENT	.	T--------------------------.
+
+
+Apgabalos	N	apgabals	N-mpl---------n-----------f-
+,	T	,	T--------------------------,
+kur	R	kur	R----p----------------f---l-
+vidējais	A	vidējs	A-msnp-y------------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+ātrums	N	ātrums	N-msn---------n-----------l-
+ir	V	būt	Vp----3--i----------7-----l-
+4	D	4	D--p------------------------
+m	Y	m	Y-------------------------l-
+/	T	/	T--------------------------/
+s	Y	s	Y-------------------------l-
+(	T	(	T--------------------------(
+VFR	-	VFR	----------------------------
+šādi	P	šāds	P-mpn-------d-------------l-
+apstākļi	N	apstāklis	N-mpn---------n-----------l-
+ir	V	būt	Vp----3--i----------7-----l-
+10	D	10	D--pg-----------------------
+%	T	%	T--------------------------%
+no	S	no	S----------------sgp------l-
+kopējās	A	kopējs	A-fpnp-y------------------l-
+platības	N	platība	N-fsg---------n-----------l-
+)	T	)	T--------------------------)
+,	T	,	T--------------------------,
+iekārta	N	iekārta	N-fsn---------n-----------l-
+,	T	,	T--------------------------,
+kuras	P	kurš	P-fsg-------r---------o---l-
+nominālā	A	nomināls	A-fsnp-y------------------l-
+jauda	N	jauda	N-fsn---------n-----------l-
+ir	V	būt	Vp----3--i----------7-----l-
+10	D	10	D--pg-----------------------
+kW	Y	kW	Y-------------------------l-
+,	T	,	T--------------------------,
+apgādā	V	apgādāt	Vp-s--2--i----------------l-
+ar	S	ar	S----------------sap------l-
+elektrību	N	elektrība	N-fsa---------n-----------l-
+trīs	M	trīs	M-fpa---c-----------------l-
+vienģimeņu	-	vienģimeņu	----------------------------
+mājas	N	māja	N-fsg---------n-----------l-
+visa	P	viss	P-msg-------g-------------l-
+gada	N	gads	N-msg---------n-----------l-
+garumā	N	garums	N-msl---------n-----------l-
+(	T	(	T--------------------------(
+ja	C	ja	C---------------------d---l-
+patēriņš	N	patēriņš	N-msn---------n-----------l-
+atbilst	V	atbilst	Vp----3--i----------------l-
+piedāvājumam	N	piedāvājums	N-msd---------n-----------l-
+;	T	;	T--------------------------;
+sk	-	sk	----------------------------
+.	T	.	T--------------------------.
+nod	-	nod	----------------------------
+.	T	.	T--------------------------.
+“	T	“	T--------------------------“
+Enerģijas	N	enerģija	N-fsg---------n-----------f-
+aprites	N	aprite	N-fsg---------n-----------l-
+sistēma	N	sistēma	N-fsn---------n-----------l-
+”	T	”	T--------------------------”
+)	T	)	T--------------------------)
+.	SENT	.	T--------------------------.
+
+Ziemeļjūras	N	Ziemeļjūra	N-fsg---------n-----------f-
+piekrastē	N	piekraste	N-fsl---------n-----------l-
+(	T	(	T--------------------------(
+gadā	N	gads	N-msl---------n-----------l-
+vidēji	A	vidējs	A-mpnp-n------------------l-
+7	D	7	D--p------------------------
+m	Y	m	Y-------------------------l-
+/	T	/	T--------------------------/
+s	Y	s	Y-------------------------l-
+)	T	)	T--------------------------)
+šāda	P	šāds	P-msg-------d-------------l-
+iekārta	N	iekārta	N-fsn---------n-----------l-
+varētu	G	varēts	Gsfsap-n---p--------------l-
+saražot	V	saražot	V--------n----------------l-
+elektrību	N	elektrība	N-fsa---------n-----------l-
+,	T	,	T--------------------------,
+ko	P	kas	P---a-------r-------------l-
+gada	N	gads	N-msg---------n-----------l-
+laikā	N	laiks	N-msl---------n-----------l-
+patērē	V	patērēt	Vp----3--i----------------l-
+20	D	20	D--pg-----------------------
+ģimenes	N	ģimene	N-fpa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+Vēja	N	vējš	N-msg---------n-----------f-
+dzinēji	N	dzinējs	N-mpn---------n-----------l-
+ar	S	ar	S----------------sap------l-
+šādu	P	šāds	P-fsa-------d-------------l-
+jaudu	N	jauda	N-fsa---------n-----------l-
+piemēroti	G	piemērots	Gsmpnp-n---p--------------l-
+decentrālai	-	decentrālai	----------------------------
+izmantošanai	N	izmantošana	N-fsd---------n-----------l-
+mājā	N	māja	N-fsl---------n-----------l-
+un	C	un	C---------------------c---l-
+apdzīvotā	A	apdzīvots	A-fslp-n------------------l-
+vietā	N	vieta	N-fsl---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Mazākas	A	mazs	A-fsgc-n------------------f-
+iekārtas	N	iekārta	N-fsg---------n-----------l-
+(	T	(	T--------------------------(
+nominālā	A	nomināls	A-msgp-y------------------l-
+jauda	N	jauda	N-fsn---------n-----------l-
+1	D	1	D--s------------------------
+-	T	-	T---------------------------
+2	D	2	D--p------------------------
+kW	Y	kW	Y-------------------------l-
+)	T	)	T--------------------------)
+parasti	R	parasti	R----p--------------------l-
+spēj	V	spēt	Vp----3--i----------3-----l-
+apgādāt	V	apgādāt	V--------n----------------l-
+tikai	Q	tikai	Q-------------------------l-
+atpūtas	N	atpūta	N-fsg---------n-----------l-
+mājiņas	N	māja	N-fpa---------y-----------l-
+vai	C	vai	C---------------------c---l-
+reti	R	reti	R----p--------------------l-
+izmantojamas	G	izmantojams	Gpfpnp-n---p--------------l-
+telpas	N	telpa	N-fpn---------n-----------l-
+utml	-	utml	----------------------------
+.	SENT	.	T--------------------------.
+
+Vēja	N	vējš	N-msg---------n-----------f-
+elektrostacijas	N	elektrostacija	N-fsg---------n-----------l-
+,	T	,	T--------------------------,
+kuru	P	kurš	P-fpg-------r---------a---l-
+jauda	N	jauda	N-fsn---------n-----------l-
+ir	V	būt	Vp----3--i----------7-----l-
+ap	S	ap	S----------------pdp------l-
+100	D	100	D--pg-----------------------
+kW	Y	kW	Y-------------------------l-
+,	T	,	T--------------------------,
+kopā	R	kopā	R----p--------------------l-
+ar	S	ar	S----------------sap------l-
+vienoto	A	vienots	A-msap-y------------------l-
+energotīklu	N	energotīkls	N-msa---------n-----------l-
+var	V	varēt	Vp----3--i----------3-----l-
+apgādāt	V	apgādāt	V--------n----------------l-
+veselus	A	vesels	A-mpap-n------------------l-
+ciemus	N	ciems	N-mpa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+Lēngaitas	-	Lēngaitas	----------------------------
+iekārtas	N	iekārta	N-fpn---------n-----------l-
+,	T	,	T--------------------------,
+piemēram	R	piemēram	R----p--------------------l-
+,	T	,	T--------------------------,
+“	T	“	T--------------------------“
+amerikāņu	N	amerikānis	N-mpg---------n-----------l-
+vēja	N	vējš	N-msg---------n-----------l-
+turbīnu	N	turbīna	N-fsa---------n-----------l-
+”	T	”	T--------------------------”
+tips	N	tips	N-msn---------n-----------l-
+,	T	,	T--------------------------,
+ievērojamu	A	ievērojams	A-fpgp-n------------------l-
+jaudu	N	jauda	N-fsa---------n-----------l-
+sasniedz	V	sasniegt	Vp----3--i----------------l-
+jau	R	jau	R----p--------------------l-
+pie	S	pie	S----------------sgp------l-
+vēja	N	vējš	N-msg---------n-----------l-
+ātruma	N	ātrums	N-msg---------n-----------l-
+2	D	2	D--p------------------------
+m	Y	m	Y-------------------------l-
+/	T	/	T--------------------------/
+s	Y	s	Y-------------------------l-
+.	SENT	.	T--------------------------.
+
+Maksimumu	N	maksimums	N-msa---------n-----------f-
+tās	P	tas	P-fsg-------d-------------l-
+sasniedz	V	sasniegt	Vp----3--i----------------l-
+pie	S	pie	S----------------sgp------l-
+vēja	N	vējš	N-msg---------n-----------l-
+ātruma	N	ātrums	N-msg---------n-----------l-
+5	D	5	D--p------------------------
+m	Y	m	Y-------------------------l-
+/	T	/	T--------------------------/
+s	Y	s	Y-------------------------l-
+,	T	,	T--------------------------,
+un	C	un	C---------------------c---l-
+jauda	N	jauda	N-fsn---------n-----------l-
+nepalielinās	V	nepalielināties	Vp----3--i-----yy---------l-
+arī	Q	arī	Q-------------------------l-
+tad	R	tad	R----p--------------------l-
+,	T	,	T--------------------------,
+ja	C	ja	C---------------------d---l-
+vēja	N	vējš	N-msg---------n-----------l-
+ātrums	N	ātrums	N-msn---------n-----------l-
+ir	V	būt	Vp----3--i----------7-----l-
+daudz	R	daudz	R----p---------------g----l-
+lielāks	A	liels	A-msnc-n------------------l-
+.	SENT	.	T--------------------------.
+
+Apgabalos	N	apgabals	N-mpl---------n-----------f-
+,	T	,	T--------------------------,
+kur	R	kur	R----p----------------f---l-
+pārsvarā	N	pārsvars	N-msl---------n-----------l-
+ir	V	būt	Vp----3--i----------7-----l-
+lēns	A	lēns	A-msnp-n------------------l-
+vējš	N	vējš	N-msn---------n-----------l-
+,	T	,	T--------------------------,
+tās	P	tas	P-fpn-------d-------------l-
+izmantojamas	G	izmantojams	Gpfpnp-n---p--------------l-
+kā	C	kā	C---------------------f---l-
+nelieli	R	nelieli	R----p----------y---------l-
+,	T	,	T--------------------------,
+bet	C	bet	C---------------------c---l-
+konstanti	A	konstants	A-mpnp-n------------------l-
+enerģijas	N	enerģija	N-fsg---------n-----------l-
+avoti	N	avots	N-mpn---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+Funkcijas	N	funkcija	N-fpn---------n-----------f-
+
+
+Daudzas	M	daudzi	M-fpn---c-----------------f-
+no	S	no	S----------------pdp------l-
+seno	A	sens	A-mpgp-y------------------l-
+laiku	N	laiks	N-mpg---------n-----------l-
+vēja	N	vējš	N-msg---------n-----------l-
+mašīnām	N	mašīna	N-fpd---------n-----------l-
+darbojas	V	darboties	Vp----3--i-----y----------l-
+tikai	Q	tikai	Q-------------------------l-
+pēc	S	pēc	S----------------sgp------l-
+spiediena	N	spiediens	N-msg---------n-----------l-
+principa	N	princips	N-msg---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Veidojot	G	veidojot	G----------a-n------------f-
+savdabīgas	A	savdabīgs	A-fpap-n------------------l-
+konstrukcijas	N	konstrukcija	N-fpn---------n-----------l-
+,	T	,	T--------------------------,
+tika	V	tikt	Vs----3--i----------6-----l-
+mēģināts	G	mēģināts	Gsmsnp-n---p--------------l-
+uzlabot	V	uzlabot	V--------n----------------l-
+to	P	tas	P-fsa-------d-------------l-
+efektivitāti	N	efektivitāte	N-fsa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Parasti	R	parasti	R----p--------------------f-
+tika	V	tikt	Vs----3--i----------6-----l-
+samazināta	G	samazināts	Gsfsnp-n---p--------------l-
+vai	C	vai	C---------------------c---l-
+aizsegta	G	aizsegts	Gsfsnp-n---p--------------l-
+pret	S	pret	S----------------pdp------l-
+vēju	N	vējš	N-msa---------n-----------l-
+ejošās	A	ejošs	A-fsgp-y------------------l-
+puses	N	puse	N-fsg---------n-----------l-
+virsma	N	virsma	N-fsn---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Šis	P	šis	P-msn-------d-------------f-
+princips	N	princips	N-msn---------n-----------l-
+tomēr	Q	tomēr	Q-------------------------l-
+neļauj	V	neļaut	Vp----3--i------y---9-----l-
+sasniegt	V	sasniegt	V--------n----------------l-
+lielas	A	liels	A-fpap-n------------------l-
+jaudas	N	jauda	N-fpa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+Jaunākie	A	jauns	A-mpnc-y------------------f-
+vēja	N	vējš	N-msg---------n-----------l-
+dzinēji	N	dzinējs	N-mpn---------n-----------l-
+vairāk	R	daudz	R----c--------------------l-
+vai	C	vai	C---------------------c---l-
+mazāk	R	maz	R----c---------------g----l-
+veidoti	G	veidots	Gsmpnp-n---p--------------l-
+pēc	S	pēc	S----------------sgp------l-
+aerodinamikas	N	aerodinamika	N-fsg---------n-----------l-
+likumiem	N	likums	N-mpd---------n-----------l-
+,	T	,	T--------------------------,
+kas	P	kas	P---n-------r---------x---l-
+ļauj	V	ļaut	Vp----3--i----------9-----l-
+pacelties	V	pacelties	V--------n-----y----------l-
+lidmašīnām	N	lidmašīna	N-fpd---------n-----------l-
+un	C	un	C---------------------c---l-
+būrāt	V	burt	Vs-p--2--i----------------l-
+šķērsām	R	šķērsām	R----p--------------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+virzienam	N	virziens	N-msd---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Vējš	N	vējš	N-msn---------n-----------f-
+šādā	P	šāds	P-msl-------d-------------l-
+gadījumā	N	gadījums	N-msl---------n-----------l-
+pūš	V	pūst	Vp----3--i----------------l-
+perpendikulāri	R	perpendikulāri	R----p--------------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+dzinēja	N	dzinējs	N-msg---------n-----------l-
+griešanās	N	griešanās	N-fsn---------n-----------l-
+virzienam	N	virziens	N-msd---------n-----------l-
+un	C	un	C---------------------c---l-
+iedarbojas	V	iedarboties	Vp----3--i-----y----------l-
+uz	S	uz	S----------------sap------l-
+nedaudz	R	nedaudz	R----p---------------g----l-
+ieslīpo	A	ieslīps	A-msap-y------------------l-
+spārna	N	spārns	N-msg---------n-----------l-
+profilu	N	profils	N-msa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Tā	P	tas	P-msg-------d-------------f-
+rezultātā	N	rezultāts	N-msl---------n-----------l-
+uz	S	uz	S----------------pdp------l-
+spārna	N	spārns	N-msg---------n-----------l-
+vēja	N	vējš	N-msg---------n-----------l-
+pusē	N	puse	N-fsl---------n-----------l-
+rodas	V	rasties	Vp----3--i-----y----------l-
+spiediens	N	spiediens	N-msn---------n-----------l-
+,	T	,	T--------------------------,
+bet	C	bet	C---------------------c---l-
+aizvēja	N	aizvējš	N-msg---------n-----------l-
+pusē	N	puse	N-fsl---------n-----------l-
+-	T	-	T---------------------------
+retinājums	N	retinājums	N-msn---------n-----------l-
+,	T	,	T--------------------------,
+kas	P	kas	P---n-------r---------x---l-
+abi	P	abi	P-mpn-------i-------------l-
+kopā	R	kopā	R----p--------------------l-
+virza	V	virzīt	Vp----3--i----------------l-
+spārnus	N	spārns	N-mpa---------n-----------l-
+griešanās	N	griešanās	N-fsg---------n-----------l-
+virzienā	N	virziens	N-msl---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Spārnu	N	spārns	N-mpg---------n-----------f-
+griešanos	N	griešanās	N-fsa---------n-----------l-
+kavē	V	kavēt	Vp----3--i----------------l-
+pretvējš	N	pretvējš	N-msn---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Summējot	G	summējot	G----------a-n------------f-
+dzenošo	G	dzenošs	Gpmsap-y---a--------------l-
+vēju	N	vējš	N-msa---------n-----------l-
+(	T	(	T--------------------------(
+reālo	A	reāls	A-mpgp-y------------------l-
+vēju	N	vējš	N-msa---------n-----------l-
+)	T	)	T--------------------------)
+un	C	un	C---------------------c---l-
+pretvēju	N	pretvējš	N-msa---------n-----------l-
+,	T	,	T--------------------------,
+veidojas	V	veidoties	Vp----3--i-----y----------l-
+šķietamais	G	šķietams	Gpmsnp-y---p--------------l-
+vējš	N	vējš	N-msn---------n-----------l-
+,	T	,	T--------------------------,
+kas	P	kas	P---n-------r---------x---l-
+ideālā	A	ideāls	A-mslp-n------------------l-
+gadījumā	N	gadījums	N-msl---------n-----------l-
+slīd	V	slīdēt	Vp----3--i----------------l-
+pār	S	pār	S----------------sap------l-
+ieslīpo	A	ieslīps	A-msap-y------------------l-
+profilu	N	profils	N-msa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Tā	R	tā	R----p--------------------f-
+kā	C	kā	C---------------------f---l-
+spārnu	N	spārns	N-mpg---------n-----------l-
+aploces	N	aploce	N-fsg---------n-----------l-
+ātrums	N	ātrums	N-msn---------n-----------l-
+pieaug	V	pieaugt	Vp----3--i----------------l-
+virzienā	N	virziens	N-msl---------n-----------l-
+no	S	no	S----------------sgp------l-
+centra	N	centrs	N-msg---------n-----------l-
+uz	S	uz	S----------------sap------l-
+ārpusi	N	ārpuse	N-fsa---------n-----------l-
+,	T	,	T--------------------------,
+šeit	R	šeit	R----p--------------------l-
+ir	V	būt	Vp----3--i----------7-----l-
+arī	Q	arī	Q-------------------------l-
+lielāks	A	liels	A-msnc-n------------------l-
+pretvējš	N	pretvējš	N-msn---------n-----------l-
+,	T	,	T--------------------------,
+kas	P	kas	P---n-------r---------x---l-
+spēcīgāk	R	spēcīgi	R----c--------------------l-
+ietekmē	V	ietekmēt	Vp----3--i----------------l-
+šķietamo	G	šķietams	Gpmsap-y---p--------------l-
+vēju	N	vējš	N-msa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Tādēļ	R	tādēļ	R----p--------------------f-
+vēja	N	vējš	N-msg---------n-----------l-
+dzinēju	N	dzinējs	N-msa---------n-----------l-
+darbratu	-	darbratu	----------------------------
+spārnu	N	spārns	N-mpg---------n-----------l-
+gali	N	gals	N-mpn---------n-----------l-
+tiek	V	tikt	Vp----3--i----------6-----l-
+veidoti	G	veidots	Gsmpnp-n---p--------------l-
+plakanāki	A	plakans	A-mpnc-n------------------l-
+nekā	C	nekā	C---------------------w---l-
+rotācijas	N	rotācija	N-fsg---------n-----------l-
+ass	N	ass	N-fsg---------n-----------l-
+tuvumā	N	tuvums	N-msl---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Bieži	R	bieži	R----p--------------------f-
+vien	Q	vien	Q-------------------------l-
+uzplūdes	-	uzplūdes	----------------------------
+leņķis	N	leņķis	N-msn---------n-----------l-
+ir	V	būt	Vp----3--i----------7-----l-
+regulējams	G	regulējams	Gpmsnp-n---p--------------l-
+atbilstoši	R	atbilstoši	R----p--------------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+ātrumam	N	ātrums	N-msd---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+Līdzās	R	līdzās	R----p--------------------f-
+berzei	N	berze	N-fsd---------n-----------l-
+,	T	,	T--------------------------,
+inercei	N	inerce	N-fsd---------n-----------l-
+,	T	,	T--------------------------,
+enerģijas	N	enerģija	N-fsg---------n-----------l-
+zudumiem	N	zudums	N-mpd---------n-----------l-
+pārvadīšanas	N	pārvadīšana	N-fsg---------n-----------l-
+rezultātā	N	rezultāts	N-msl---------n-----------l-
+u	-	u	----------------------------
+.	T	.	T--------------------------.
+c	-	c	----------------------------
+.	T	.	T--------------------------.
+,	T	,	T--------------------------,
+kas	P	kas	P---n-------r---------x---l-
+samazina	V	samazināt	Vp----3--i----------------l-
+iegūto	G	iegūts	Gsfpgp-y---p--------------l-
+enerģijas	N	enerģija	N-fsg---------n-----------l-
+daudzumu	N	daudzums	N-msa---------n-----------l-
+,	T	,	T--------------------------,
+vēja	N	vējš	N-msg---------n-----------l-
+dzinēju	N	dzinēja	N-fpg---------n-----------l-
+jaudu	N	jauda	N-fsa---------n-----------l-
+īpaši	R	īpaši	R----p--------------------l-
+ietekmē	V	ietekmēt	Vp----3--i----------------l-
+divi	M	divi	M-mpn---c-----------------l-
+faktori	N	faktors	N-mpn---------n-----------l-
+:	T	:	T--------------------------:
+vēja	N	vējš	N-msg---------n-----------l-
+enerģijas	N	enerģija	N-fsg---------n-----------l-
+izmantošanas	N	izmantošana	N-fsg---------n-----------l-
+koeficients	N	koeficients	N-msn---------n-----------l-
+Cp	-	Cp	----------------------------
+un	C	un	C---------------------c---l-
+ātrgaitas	N	ātrgaita	N-fsg---------n-----------l-
+koeficents	N	koeficents	N-msn---------n-----------l-
+(	T	(	T--------------------------(
+λ	-	λ	----------------------------
+)	T	)	T--------------------------)
+.	SENT	.	T--------------------------.
+
+Vēja	N	vējš	N-msg---------n-----------f-
+enerģijas	N	enerģija	N-fsg---------n-----------l-
+izmantošanas	N	izmantošana	N-fsg---------n-----------l-
+koeficients	N	koeficients	N-msn---------n-----------l-
+aerodinamikā	N	aerodinamika	N-fsl---------n-----------l-
+ir	V	būt	Vp----3--i----------7-----l-
+noteikts	G	noteikts	Gsmsnp-n---p--------------l-
+lielums	N	lielums	N-msn---------n-----------l-
+;	T	;	T--------------------------;
+tas	P	tas	P-msn-------d-------------l-
+nozīmē	V	nozīmēt	Vp----3--i----------------l-
+,	T	,	T--------------------------,
+ka	C	ka	C---------------------p---l-
+brīvi	R	brīvi	R----p--------------------l-
+rotējoša	G	rotējošs	Gpfsnp-n---a--------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+turbīna	N	turbīna	N-fsn---------n-----------l-
+maksimāli	A	maksimāls	A-mpnp-n------------------l-
+var	V	varēt	Vp----3--i----------3-----l-
+izmantot	V	izmantot	V--------n----------------l-
+16	D	16	D--pg-----------------------
+/	T	/	T--------------------------/
+27	D	27	D--p------------------------
+no	S	no	S----------------sgp------l-
+teorētiski	R	teorētiski	R----p--------------------l-
+iespēja	V	iespēt	Vs----3--i----------------l-
+¬	-	¬	----------------------------
+mās	N	māsa	N-fsv---------n-----------l-
+vēja	N	vējš	N-msg---------n-----------l-
+enerģijas	N	enerģija	N-fsg---------n-----------l-
+(	T	(	T--------------------------(
+Cp	-	Cp	----------------------------
+max	-	max	----------------------------
+=	T	=	T--------------------------=
+0	D	0	D--p------------------------
+,	T	,	T--------------------------,
+59	D	59	D--p------------------------
+,	T	,	T--------------------------,
+pēc	S	pēc	S----------------sgp------l-
+Betz	-	Betz	----------------------------
+)	T	)	T--------------------------)
+.	SENT	.	T--------------------------.
+
+Šis	P	šis	P-msn-------d-------------f-
+lielums	N	lielums	N-msn---------n-----------l-
+atbilst	V	atbilst	Vp----3--i----------------l-
+ideālām	A	ideāls	A-fpdp-n------------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+mašīnām	N	mašīna	N-fpd---------n-----------l-
+;	T	;	T--------------------------;
+zināmajos	G	zināms	Gpmplp-y---p--------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+dzinējos	N	dzinējs	N-mpl---------n-----------l-
+tas	P	tas	P-msn-------d-------------l-
+netiek	V	netikt	Vp----3--i------y---6-----l-
+sasniegts	G	sasniegts	Gsmsnp-n---p--------------l-
+.	SENT	.	T--------------------------.
+
+
+No	S	no	S----------------sgp------f-
+spieķota	-	spieķota	----------------------------
+riteņa	N	ritenis	N-msg---------n-----------l-
+izgatavots	G	izgatavots	Gsmsnp-n---p--------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+dzinējs	N	dzinējs	N-msn---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Ar	S	ar	S----------------sap------f-
+ārējā	A	ārējs	A-msgp-y------------------l-
+gredzena	N	gredzens	N-msg---------n-----------l-
+palīdzību	N	palīdzība	N-fsa---------n-----------l-
+tiek	V	tikt	Vp----3--i----------6-----l-
+nostiprinātas	G	nostiprināts	Gsfsgp-n---p--------------l-
+metāla	N	metāls	N-msg---------n-----------l-
+plāksnītes	N	plāksne	N-fpa---------y-----------l-
+.	SENT	.	T--------------------------.
+
+Piemērots	G	piemērots	Gsmsnp-n---p--------------f-
+lēna	A	lēns	A-msgp-n------------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+apstākļos	N	apstāklis	N-mpl---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Izmantojams	G	izmantojams	Gpmsnp-n---p--------------f-
+sūknēšanai	N	sūknēšana	N-fsd---------n-----------l-
+un	C	un	C---------------------c---l-
+elektrības	N	elektrība	N-fsg---------n-----------l-
+ražošanai	N	ražošana	N-fsd---------n-----------l-
+ar	S	ar	S----------------sap------l-
+automobiļa	N	automobilis	N-msg---------n-----------l-
+ģeneratora	N	ģenerators	N-msg---------n-----------l-
+palīdzību	N	palīdzība	N-fsa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+Dažādu	A	dažāds	A-mpgp-n------------------f-
+vēja	N	vējš	N-msg---------n-----------l-
+dzinēju	N	dzinēja	N-fpg---------n-----------l-
+jaudu	N	jauda	N-fpg---------n-----------l-
+salīdzinājums	N	salīdzinājums	N-msn---------n-----------l-
+parāda	V	parādīt	Vp----3--i----------------l-
+šaurās	A	šaurs	A-fsgp-y------------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+enerģijas	N	enerģija	N-fsg---------n-----------l-
+izmantošanas	N	izmantošana	N-fsg---------n-----------l-
+koeficienta	N	koeficients	N-msg---------n-----------l-
+robežas	N	robeža	N-fsg---------n-----------l-
+atkarībā	N	atkarība	N-fsl---------n-----------l-
+no	S	no	S----------------sgp------l-
+ātrgaitas	N	ātrgaita	N-fsg---------n-----------l-
+koeficienta	N	koeficients	N-msg---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Katrs	P	katrs	P-msn-------g-------------f-
+vēja	N	vējš	N-msg---------n-----------l-
+dzinējs	N	dzinējs	N-msn---------n-----------l-
+ir	V	būt	Vp----3--i----------7-----l-
+paredzēts	G	paredzēts	Gsmsnp-n---p--------------l-
+noteiktam	G	noteikts	Gsmsdp-n---p--------------l-
+,	T	,	T--------------------------,
+optimālam	A	optimāls	A-msdp-n------------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+ātrumam	N	ātrums	N-msd---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Visus	P	viss	P-mpa-------g-------------f-
+vēja	N	vējš	N-msg---------n-----------l-
+dzinējus	N	dzinējs	N-mpa---------n-----------l-
+raksturojošās	G	raksturojošs	Gpfpnp-y---a--------------l-
+līknes	N	līkne	N-fsg---------n-----------l-
+stipri	R	stipri	R----p--------------------l-
+atšķiras	V	atšķirties	Vp----3--i-----y----------l-
+no	S	no	S----------------sgp------l-
+ideālas	A	ideāls	A-fsgp-n------------------l-
+līknes	N	līkne	N-fsg---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Vienmērīgāku	A	vienmērīgs	A-msac-n------------------f-
+vēja	N	vējš	N-msg---------n-----------l-
+izmantošanu	N	izmantošana	N-fsa---------n-----------l-
+var	V	varēt	Vp----3--i----------3-----l-
+panākt	V	panākt	V--------n----------------l-
+,	T	,	T--------------------------,
+izmantojot	G	izmantojot	G----------a-n------------l-
+vairākus	P	vairāki	P-mpa-------i-------------l-
+,	T	,	T--------------------------,
+atšķirīgus	A	atšķirīgs	A-mpap-n------------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+dzinējus	N	dzinējs	N-mpa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+Uzbūve	N	uzbūve	N-fsn---------n-----------f-
+un	C	un	C---------------------c---l-
+izmantošana	N	izmantošana	N-fsn---------n-----------l-
+
+
+Vēja	N	vējš	N-msg---------n-----------f-
+dzinēji	N	dzinējs	N-mpn---------n-----------l-
+iedalās	V	iedalīties	Vp----3--i-----y----------l-
+ātrgaitas	N	ātrgaita	N-fpn---------n-----------l-
+un	C	un	C---------------------c---l-
+lēngaitas	-	lēngaitas	----------------------------
+iekārtās	N	iekārta	N-fpl---------n-----------l-
+ar	S	ar	S----------------sap------l-
+horizontālu	A	horizontāls	A-fsap-n------------------l-
+vai	C	vai	C---------------------c---l-
+vertikālu	A	vertikāls	A-fsap-n------------------l-
+asi	N	ass	N-fsa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Horizontālās	A	horizontāls	A-fsgp-y------------------f-
+ass	N	ass	N-fsg---------n-----------l-
+dzinējiem	N	dzinējs	N-mpd---------n-----------l-
+darbrats	-	darbrats	----------------------------
+var	V	varēt	Vp----3--i----------3-----l-
+būt	V	būt	V--------n----------1-----l-
+izvietots	G	izvietots	Gsmsnp-n---p--------------l-
+frontāli	R	frontāli	R----p--------------------l-
+vai	C	vai	C---------------------c---l-
+astē	N	aste	N-fsl---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Ātrgaitas	N	ātrgaita	N-fsg---------n-----------f-
+koeficents	N	koeficents	N-msn---------n-----------l-
+λ	-	λ	----------------------------
+ir	V	būt	Vp----3--i----------7-----l-
+starpība	N	starpība	N-fsn---------n-----------l-
+starp	S	starp	S----------------sap------l-
+spārnu	N	spārns	N-msa---------n-----------l-
+galu	N	gals	N-mpg---------n-----------l-
+aploces	N	aploce	N-fsg---------n-----------l-
+ātrumu	N	ātrums	N-msa---------n-----------l-
+un	C	un	C---------------------c---l-
+vēja	N	vējš	N-msg---------n-----------l-
+ātrumu	N	ātrums	N-msa---------n-----------l-
+v	-	v	----------------------------
+.	SENT	.	T--------------------------.
+
+
+λ	-	λ	----------------------------
+=	T	=	T--------------------------=
+u	-	u	----------------------------
+/	T	/	T--------------------------/
+v	-	v	----------------------------
+;	T	;	T--------------------------;
+
+
+
+
+λ	-	λ	----------------------------
+=	T	=	T--------------------------=
+2	D	2	D--p------------------------
+rn	-	rn	----------------------------
+/	T	/	T--------------------------/
+60	D	60	D--pg-----------------------
+v	-	v	----------------------------
+;	T	;	T--------------------------;
+
+
+
+
+kur	R	kur	R----p----------------o---l-
+n	-	n	----------------------------
+-	T	-	T---------------------------
+apgriezienu	N	apgrieziens	N-mpg---------n-----------l-
+skaits	N	skaits	N-msn---------n-----------l-
+un	C	un	C---------------------c---l-
+r	-	r	----------------------------
+-	T	-	T---------------------------
+darbrata	-	darbrata	----------------------------
+rādiuss	N	rādiuss	N-msn---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+Ja	C	ja	C---------------------f---f-
+λ	-	λ	----------------------------
+mazāks	A	mazs	A-msnc-n------------------l-
+par	S	par	S----------------sap------l-
+1	D	1	D--s------------------------
+,	T	,	T--------------------------,
+vēja	N	vējš	N-msg---------n-----------l-
+dzinējus	N	dzinējs	N-mpa---------n-----------l-
+sauc	V	saukt	Vp----3--i----------------l-
+par	S	par	S----------------pdp------l-
+lēngaitas	-	lēngaitas	----------------------------
+iekārtām	N	iekārta	N-fpd---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Ātrgaitas	N	ātrgaita	N-fpn---------n-----------f-
+dzinē	-	dzinē	----------------------------
+¬	-	¬	----------------------------
+jiem	-	jiem	----------------------------
+λ	-	λ	----------------------------
+ir	V	būt	Vp----3--i----------7-----l-
+5	D	5	D--p------------------------
+-	T	-	T---------------------------
+10	D	10	D--pg-----------------------
+.	SENT	.	T--------------------------.
+
+Lēngaitas	-	Lēngaitas	----------------------------
+dzinēju	N	dzinējs	N-mpg---------n-----------l-
+griezes	N	grieze	N-fsg---------n-----------l-
+moments	N	moments	N-msn---------n-----------l-
+pie	S	pie	S----------------sgp------l-
+λ	-	λ	----------------------------
+=	T	=	T--------------------------=
+1	D	1	D--s------------------------
+-	T	-	T---------------------------
+2	D	2	D--p------------------------
+ir	V	būt	Vp----3--i----------7-----l-
+ļoti	R	ļoti	R----p---------------g----l-
+liels	N	liels	N-msn---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Ātrgaitas	N	ātrgaita	N-fsg---------n-----------f-
+dzinēju	N	dzinējs	N-msa---------n-----------l-
+(	T	(	T--------------------------(
+λ	-	λ	----------------------------
+=	T	=	T--------------------------=
+6	D	6	D--p------------------------
+)	T	)	T--------------------------)
+griezes	N	grieze	N-fsg---------n-----------l-
+moments	N	moments	N-msn---------n-----------l-
+ir	V	būt	Vp----3--i----------7-----l-
+6	D	6	D--p------------------------
+reizes	N	reize	N-fsg---------n-----------l-
+mazāks	A	mazs	A-msnc-n------------------l-
+.	SENT	.	T--------------------------.
+
+Uzbūves	N	uzbūve	N-fsg---------n-----------f-
+ziņā	N	ziņa	N-fsl---------n-----------l-
+tie	P	tas	P-mpn-------d-------------l-
+galvenokārt	R	galvenokārt	R----p--------------------l-
+atšķiras	V	atšķirties	Vp----3--i-----y----------l-
+ar	S	ar	S----------------sap------l-
+spārnu	N	spārns	N-msa---------n-----------l-
+virsmas	N	virsma	N-fsg---------n-----------l-
+laukuma	N	laukums	N-msg---------n-----------l-
+lielumu	N	lielums	N-msa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+Lēngaitas	-	Lēngaitas	----------------------------
+iekārtām	N	iekārta	N-fpd---------n-----------l-
+ir	V	būt	Vp----3--i----------7-----l-
+liela	A	liels	A-msgp-n------------------l-
+spārnu	N	spārns	N-mpg---------n-----------l-
+virsma	N	virsma	N-fsn---------n-----------l-
+,	T	,	T--------------------------,
+kas	P	kas	P---n-------r---------x---l-
+liek	V	likt	Vp----3--i----------------l-
+darbratam	-	darbratam	----------------------------
+griezties	V	griezties	V--------n-----y----------l-
+jau	Q	jau	Q-------------------------l-
+pavisam	R	pavisam	R----p---------------g----l-
+lēnā	A	lēns	A-mslp-n------------------l-
+vējā	N	vējš	N-msl---------n-----------l-
+un	C	un	C---------------------c---l-
+rada	N	rads	N-msg---------n-----------l-
+lielu	N	liels	N-msa---------n-----------l-
+griezes	N	grieze	N-fsg---------n-----------l-
+momentu	N	moments	N-msa---------n-----------l-
+pie	S	pie	S----------------sgp------l-
+maza	A	mazs	A-msgp-n------------------l-
+apgriezienu	N	apgrieziens	N-msa---------n-----------l-
+skaita	N	skaits	N-msg---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Stiprā	A	stiprs	A-mslp-n------------------f-
+vējā	N	vējš	N-msl---------n-----------l-
+to	P	tas	P-fpg-------d-------------l-
+jauda	N	jauda	N-fsn---------n-----------l-
+nemainās	V	nemainīties	Vp----3--i-----yy---------l-
+,	T	,	T--------------------------,
+jo	C	jo	C---------------------r---l-
+vējš	N	vējš	N-msn---------n-----------l-
+darbratam	-	darbratam	----------------------------
+vairs	R	vairs	R----p--------------------l-
+nepūš	V	nepūst	Vp----3--i------y---------l-
+cauri	R	cauri	R----p--------------------l-
+,	T	,	T--------------------------,
+bet	C	bet	C---------------------c---l-
+to	P	tas	P-msa-------d-------------l-
+apiet	V	apiet	Vp----3--i----------------l-
+.	SENT	.	T--------------------------.
+
+Lielās	A	liels	A-fsgp-y------------------f-
+spārnu	N	spārns	N-mpg---------n-----------l-
+virsmas	N	virsma	N-fsg---------n-----------l-
+dēļ	S	dēļ	S----------------sgt------l-
+šos	P	šis	P-mpa-------d-------------l-
+dzinējus	N	dzinējs	N-mpa---------n-----------l-
+var	V	varēt	Vp----3--i----------3-----l-
+viegli	R	viegli	R----p--------------------l-
+sabojāt	V	sabojāt	V--------n----------------l-
+vētra	N	vētra	N-fsn---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+
+
+
+
+Ātrgaitas	N	ātrgaita	N-fsg---------n-----------f-
+dzinējiem	N	dzinējs	N-mpd---------n-----------l-
+ir	V	būt	Vp----3--i----------7-----l-
+divi	M	divi	M-mpn---c-----------------l-
+vai	C	vai	C---------------------c---l-
+trīs	M	trīs	M-mpn---c-----------------l-
+propellera	N	propellers	N-msg---------n-----------l-
+formas	N	forma	N-fsg---------n-----------l-
+spārni	N	spārns	N-mpn---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Tie	P	tas	P-mpn-------d-------------f-
+sāk	V	sākt	Vp----3--i----------3-----l-
+darboties	V	darboties	V--------n-----y----------l-
+tikai	Q	tikai	Q-------------------------l-
+pie	S	pie	S----------------sgp------l-
+vēja	N	vējš	N-msg---------n-----------l-
+ātruma	N	ātrums	N-msg---------n-----------l-
+3	D	3	D--p------------------------
+-	T	-	T---------------------------
+4	D	4	D--p------------------------
+m	Y	m	Y-------------------------l-
+/	T	/	T--------------------------/
+s	Y	s	Y-------------------------l-
+un	C	un	C---------------------c---l-
+izmanto	V	izmantot	Vp----3--i----------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+plūsmas	N	plūsma	N-fsg---------n-----------l-
+enerģiju	N	enerģija	N-fsa---------n-----------l-
+daudz	R	daudz	R----p---------------g----l-
+labāk	R	labi	R----c--------------------l-
+nekā	C	nekā	C---------------------w---l-
+lēngaitas	-	lēngaitas	----------------------------
+iekārtas	N	iekārta	N-fpn---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+
+
+Horizontālās	A	horizontāls	A-fsgp-y------------------f-
+ass	N	ass	N-fsg---------n-----------l-
+dzinējiem	N	dzinējs	N-mpd---------n-----------l-
+spārni	N	spārns	N-mpn---------n-----------l-
+ir	V	būt	Vp----3--i----------7-----l-
+noslogoti	G	noslogots	Gsmpnp-n---p--------------l-
+vienmērīgi	R	vienmērīgi	R----p--------------------l-
+,	T	,	T--------------------------,
+jo	C	jo	C---------------------r---l-
+tie	P	tas	P-mpn-------d-------------l-
+pastāvīgi	R	pastāvīgi	R----p--------------------l-
+atrodas	V	atrasties	Vp----3--i-----y----------l-
+optimālā	A	optimāls	A-mslp-n------------------l-
+stāvoklī	N	stāvoklis	N-msl---------n-----------l-
+-	T	-	T---------------------------
+“	T	“	T--------------------------“
+pusvējā	-	pusvējā	----------------------------
+”	T	”	T--------------------------”
+.	SENT	.	T--------------------------.
+
+To	P	tas	P-mpg-------d-------------f-
+trūkums	N	trūkums	N-msn---------n-----------l-
+ir	V	būt	Vp----3--i----------7-----l-
+enerģijas	N	enerģija	N-fsg---------n-----------l-
+patērēšana	N	patērēšana	N-fsn---------n-----------l-
+mehāniska	A	mehānisks	A-msgp-n------------------l-
+darba	N	darbs	N-msg---------n-----------l-
+veikšanai	N	veikšana	N-fsd---------n-----------l-
+,	T	,	T--------------------------,
+kas	P	kas	P---n-------r---------x---l-
+rada	V	radīt	Vp----3--i----------------l-
+lielus	N	liels	N-mpa---------n-----------l-
+zaudējumus	N	zaudējums	N-mpa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+Dzinēji	N	dzinējs	N-mpn---------n-----------f-
+ar	S	ar	S----------------sap------l-
+vertikālu	A	vertikāls	A-fsap-n------------------l-
+asi	N	ass	N-fsa---------n-----------l-
+nav	V	nebūt	Vp----3--i------y---1-----l-
+jāpieskaņo	V	pieskaņot	Vp-------c----------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+virziena	N	virziens	N-msg---------n-----------l-
+maiņām	N	maiņa	N-fpd---------n-----------l-
+,	T	,	T--------------------------,
+tādēļ	R	tādēļ	R----p--------------------l-
+ietaupās	V	ietaupīties	Vp----3--i-----y----------l-
+daudz	R	daudz	R----p---------------g----l-
+izdevumu	N	izdevums	N-msa---------n-----------l-
+,	T	,	T--------------------------,
+kas	P	kas	P---n-------r---------x---l-
+saistīti	R	saistīti	R----p--------------------l-
+ar	S	ar	S----------------sap------l-
+regulēšanu	N	regulēšana	N-fsa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Jauda	N	jauda	N-fsn---------n-----------f-
+tiek	V	tikt	Vp----3--i----------6-----l-
+atdota	G	atdots	Gsfsnp-n---p--------------l-
+tieši	R	tieši	R----p--------------------l-
+uz	S	uz	S----------------sgp------l-
+leju	N	leja	N-fsa---------n-----------l-
+,	T	,	T--------------------------,
+tādēļ	R	tādēļ	R----p--------------------l-
+tie	P	tas	P-mpn-------d-------------l-
+ir	V	būt	Vp----3--i----------7-----l-
+ļoti	R	ļoti	R----p---------------g----l-
+piemēroti	R	piemēroti	R----p--------------------l-
+mehāniska	A	mehānisks	A-msgp-n------------------l-
+darba	N	darbs	N-msg---------n-----------l-
+veikšanai	N	veikšana	N-fsd---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Tomēr	Q	tomēr	Q-------------------------f-
+šie	P	šis	P-mpn-------d-------------l-
+dzinēji	N	dzinējs	N-mpn---------n-----------l-
+vēja	N	vējš	N-msg---------n-----------l-
+enerģiju	N	enerģija	N-fsa---------n-----------l-
+izmanto	V	izmantot	Vp----3--i----------------l-
+daudz	R	daudz	R----p---------------g----l-
+mazāk	R	maz	R----c---------------g----l-
+,	T	,	T--------------------------,
+jo	C	jo	C---------------------r---l-
+darbrata	-	darbrata	----------------------------
+lāpstiņas	N	lāpsta	N-fpn---------y-----------l-
+griežas	V	griezties	Vp----3--i-----y----------l-
+iepriekš	R	iepriekš	R----p--------------------l-
+radītajā	G	radīts	Gsfslp-y---p--------------l-
+gaisa	N	gaiss	N-msg---------n-----------l-
+virpulī	N	virpulis	N-msl---------n-----------l-
+,	T	,	T--------------------------,
+atpakaļceļā	N	atpakaļceļš	N-msl---------n-----------l-
+virzās	V	virzīties	Vp----3--i-----y----------l-
+pret	S	pret	S----------------sap------l-
+vēju	N	vējš	N-msa---------n-----------l-
+,	T	,	T--------------------------,
+un	C	un	C---------------------c---l-
+notiek	V	notikt	Vp----3--i----------------l-
+bremzēšanās	N	bremzēšanās	N-fsg---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Arī	Q	arī	Q-------------------------f-
+modernie	A	moderns	A-mpnp-y------------------l-
+vertikālās	A	vertikāls	A-fpap-y------------------l-
+ass	N	ass	N-fsn---------n-----------l-
+dzinēji	N	dzinējs	N-mpn---------n-----------l-
+veic	V	veikt	Vp----3--i----------------l-
+kaut ko	P	kaut_kas	P---a-------g-------------l-
+līdzīgu	A	līdzīgs	A-msap-n------------------l-
+“	T	“	T--------------------------“
+burāšanas	N	burāšana	N-fsg---------n-----------l-
+manevra	N	manevrs	N-msg---------n-----------l-
+aplim	N	aplis	N-msd---------n-----------l-
+”	T	”	T--------------------------”
+.	SENT	.	T--------------------------.
+
+
+Enerģijas	N	enerģija	N-fsg---------n-----------f-
+pamešanai	N	pamešana	N-fsd---------n-----------l-
+no	S	no	S----------------sgp------l-
+ass	N	ass	N-fsg---------n-----------l-
+jānotiek	V	notikt	Vp-------c----------------l-
+pēc	S	pēc	S----------------sgp------l-
+iespējas	N	iespēja	N-fsg---------n-----------l-
+tieši	R	tieši	R----p--------------------l-
+,	T	,	T--------------------------,
+bez	S	bez	S----------------pdp------l-
+daudziem	M	daudzi	M-mpd---c-----------------l-
+mehānis	-	mehānis	----------------------------
+¬	-	¬	----------------------------
+kiem	-	kiem	----------------------------
+pārveidojumiem	N	pārveidojums	N-mpd---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Labi	R	labi	R----p--------------------f-
+piemērotas	G	piemērots	Gsfpnp-n---p--------------l-
+ir	V	būt	Vp----3--i----------7-----l-
+vienkāršas	A	vienkāršs	A-fpnp-n------------------l-
+piedziņas	N	piedziņa	N-fpn---------n-----------l-
+asis	N	ass	N-fpa---------n-----------l-
+un	C	un	C---------------------c---l-
+izciļņu	N	izcilnis	N-mpg---------n-----------l-
+piedziņa	N	piedziņa	N-fsn---------n-----------l-
+,	T	,	T--------------------------,
+koniskie	A	konisks	A-mpnp-y------------------l-
+zobrati	N	zobrats	N-mpn---------n-----------l-
+un	C	un	C---------------------c---l-
+pārnesumi	N	pārnesums	N-mpn---------n-----------l-
+mazina	V	mazināt	Vp----3--i----------------l-
+jaudu	N	jauda	N-fsa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Ģeneratoriem	N	ģenerators	N-mpd---------n-----------f-
+vajadzētu	V	vajadzēt	Vp-------s----------2-----l-
+pēc	S	pēc	S----------------sgp------l-
+iespējas	N	iespēja	N-fsg---------n-----------l-
+atrasties	V	atrasties	V--------n-----y----------l-
+tieši	R	tieši	R----p--------------------l-
+uz	S	uz	S----------------sgp------l-
+ass	A	ass	A-msnp-n------------------l-
+,	T	,	T--------------------------,
+bez	S	bez	S----------------sgp------l-
+pārnesumu	N	pārnesums	N-mpg---------n-----------l-
+starpniecības	N	starpniecība	N-fsg---------n-----------l-
+.	SENT	.	T--------------------------.
+
+To	P	tas	P-msa-------d-------------f-
+tinumu	N	tinums	N-mpg---------n-----------l-
+skaitam	N	skaits	N-msd---------n-----------l-
+jābūt	V	būt	Vp-------c----------------l-
+saskaņotam	G	saskaņots	Gsmsdp-n---p--------------l-
+ar	S	ar	S----------------sap------l-
+apgriezienu	N	apgrieziens	N-msa---------n-----------l-
+skaitu	N	skaits	N-msa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Ģeneratora	N	ģenerators	N-msg---------n-----------f-
+veids	N	veids	N-msn---------n-----------l-
+atkarīgs	A	atkarīgs	A-msnp-n------------------l-
+no	S	no	S----------------sgp------l-
+izmantošanas	N	izmantošana	N-fsg---------n-----------l-
+veida	N	veids	N-msg---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+Horizontālās	A	horizontāls	A-fsgp-y------------------f-
+ass	N	ass	N-fsg---------n-----------l-
+vēja	N	vējš	N-msg---------n-----------l-
+dzinēju	N	dzinēja	N-fpg---------n-----------l-
+regulēšana	N	regulēšana	N-fsn---------n-----------l-
+prasa	V	prasīt	Vp----3--i----------3-----l-
+zināmus	G	zināms	Gpmpap-n---p--------------l-
+tehniskus	A	tehnisks	A-mpap-n------------------l-
+līdzekļus	N	līdzeklis	N-mpa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+To	P	tas	P-fsa-------d-------------f-
+var	V	varēt	Vp----3--i----------3-----l-
+veikt	V	veikt	V--------n----------------l-
+ar	S	ar	S----------------sap------l-
+astes	N	aste	N-fsg---------n-----------l-
+plāksni	N	plāksnis	N-msa---------n-----------l-
+līdzīgi	R	līdzīgi	R----p--------------------l-
+kā	C	kā	C---------------------f---l-
+vējrāžiem	N	vējrādis	N-mpd---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Lielās	A	liels	A-fplp-n------------------f-
+dzirnavās	N	dzirnavas	N-fpl---------n-----------l-
+zobu	N	zobs	N-msa---------n-----------l-
+vainaga	N	vainags	N-msg---------n-----------l-
+pārstādīšanai	N	pārstādīšana	N-fsd---------n-----------l-
+izmanto	V	izmantot	Vp----3--i----------------l-
+perpendikulāri	R	perpendikulāri	R----p--------------------l-
+griešanās	N	griešanās	N-fsg---------n-----------l-
+plaknei	N	plakne	N-fsd---------n-----------l-
+uzstādītus	G	uzstādīts	Gsmpap-n---p--------------l-
+spārniņus	N	spārns	N-mpa---------y-----------l-
+,	T	,	T--------------------------,
+kas	P	kas	P---n-------r---------x---l-
+,	T	,	T--------------------------,
+vējam	N	vējš	N-msd---------n-----------l-
+pūšot	G	pūšot	G----------a-n------------l-
+slīpi	R	slīpi	R----p--------------------l-
+,	T	,	T--------------------------,
+ar	S	ar	S----------------sap------l-
+zobratu	N	zobrats	N-msa---------n-----------l-
+piedziņu	N	piedziņa	N-fsa---------n-----------l-
+torni	N	tornis	N-msa---------n-----------l-
+pagriež	V	pagriezt	Vp----3--i----------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+virzienā	N	virziens	N-msl---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Vienkāršāki	A	vienkāršs	A-mpnc-n------------------f-
+ir	V	būt	Vp----3--i----------7-----l-
+t	Y	t	Y-------------------------l-
+.	T	.	T--------------------------.
+s	Y	s	Y-------------------------l-
+.	T	.	T--------------------------.
+aizmugures	N	aizmugure	N-fsg---------n-----------l-
+dzinēji	N	dzinējs	N-mpn---------n-----------l-
+(	T	(	T--------------------------(
+Hecklāufer	-	Hecklāufer	----------------------------
+)	T	)	T--------------------------)
+,	T	,	T--------------------------,
+kad	R	kad	R----p----------------f---l-
+vēja	N	vējš	N-msg---------n-----------l-
+darbrats	-	darbrats	----------------------------
+griežas	V	griezties	Vp----3--i-----y----------l-
+masta	N	masts	N-msg---------n-----------l-
+aizmugurē	N	aizmugure	N-fsl---------n-----------l-
+un	C	un	C---------------------c---l-
+vēja	N	vējš	N-msg---------n-----------l-
+spiediena	N	spiediens	N-msg---------n-----------l-
+rezultātā	N	rezultāts	N-msl---------n-----------l-
+pats	P	pats	P-msn-------m-------------l-
+pagriežas	V	pagriezties	Vp----3--i-----y----------l-
+vajadzīgajā	A	vajadzīgs	A-mslp-y------------------l-
+virzienā	N	virziens	N-msl---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Lielās	A	liels	A-fsgp-y------------------f-
+iekārtās	N	iekārta	N-fpl---------n-----------l-
+regulēšanu	N	regulēšana	N-fsa---------n-----------l-
+veic	V	veikt	Vp----3--i----------------l-
+motori	N	motors	N-mpn---------n-----------l-
+,	T	,	T--------------------------,
+kas	P	kas	P---n-------r---------x---l-
+orientē	V	orientēt	Vp----3--i----------------l-
+dzinējus	N	dzinējs	N-mpa---------n-----------l-
+atkarībā	N	atkarība	N-fsl---------n-----------l-
+no	S	no	S----------------pdp------l-
+meteoroloģiskajiem	A	meteoroloģisks	A-mpdp-y------------------l-
+mērījumiem	N	mērījums	N-mpd---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+Vēl	Q	vēl	Q-------------------------f-
+viens	M	viens	M-msn---c-----------------l-
+svarīgs	A	svarīgs	A-msnp-n------------------l-
+konstruktīvs	A	konstruktīvs	A-msnp-n------------------l-
+faktors	N	faktors	N-msn---------n-----------l-
+ir	V	būt	Vp----3--i----------7-----l-
+vēja	N	vējš	N-msg---------n-----------l-
+dzinēju	N	dzinēja	N-fpg---------n-----------l-
+pasargāšana	N	pasargāšana	N-fsn---------n-----------l-
+no	S	no	S----------------pdp------l-
+bojājumiem	N	bojājums	N-mpd---------n-----------l-
+vētras	N	vētra	N-fsg---------n-----------l-
+laikā	N	laiks	N-msl---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Regulējami	G	regulējams	Gpmpnp-n---p--------------f-
+darbratu	-	darbratu	----------------------------
+spārni	N	spārns	N-mpn---------n-----------l-
+var	V	varēt	Vp----3--i----------3-----l-
+palikt	V	palikt	V--------n----------------l-
+vējā	N	vējš	N-msl---------n-----------l-
+,	T	,	T--------------------------,
+citiem	P	cits	P-mpd-------i-------------l-
+ir	V	būt	Vp----3--i----------7-----l-
+atsperu	N	atspere	N-fpg---------n-----------l-
+mehānismi	N	mehānisms	N-mpn---------n-----------l-
+,	T	,	T--------------------------,
+kas	P	kas	P---n-------r---------x---l-
+katru	P	katrs	P-msa-------g-------------l-
+spārnu	N	spārns	N-msa---------n-----------l-
+atsevišķi	R	atsevišķi	R----p--------------------l-
+vai arī	C	vai_arī	C---------------------c---l-
+visu	P	viss	P-msa-------g-------------l-
+darbratu	-	darbratu	----------------------------
+izgriež	V	izgriezt	Vp----3--i----------------l-
+no	S	no	S----------------sgp------l-
+vēja	N	vējš	N-msg---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Senajām	A	sens	A-fpdp-y------------------f-
+vējdzirnavām	N	vējdzirnavas	N-fpd---------n-----------l-
+spārnos	N	spārns	N-mpl---------n-----------l-
+bija	V	būt	Vs----3--i----------7-----l-
+plāksnītes	N	plāksne	N-fpn---------y-----------l-
+,	T	,	T--------------------------,
+kuras	P	kurš	P-fpn-------r---------o---l-
+varēja	V	varēt	Vs----3--i----------3-----l-
+atvērt	V	atvērt	V--------n----------------l-
+,	T	,	T--------------------------,
+vai arī	C	vai_arī	C---------------------c---l-
+buras	N	bura	N-fpn---------n-----------l-
+,	T	,	T--------------------------,
+ko	P	kas	P---a-------r-------------l-
+varēja	V	varēt	Vs----3--i----------3-----l-
+rēvēt	V	rēvēt	V--------n----------------l-
+(	T	(	T--------------------------(
+samazināt	V	samazināt	V--------n----------------l-
+laukumu	N	laukums	N-msa---------n-----------l-
+)	T	)	T--------------------------)
+.	SENT	.	T--------------------------.
+
+Vertikālās	A	vertikāls	A-fsgp-y------------------f-
+ass	N	ass	N-fsg---------n-----------l-
+vēja	N	vējš	N-msg---------n-----------l-
+dzinēji	N	dzinējs	N-mpn---------n-----------l-
+vētras	N	vētra	N-fsg---------n-----------l-
+laikā	N	laiks	N-msl---------n-----------l-
+tiek	V	tikt	Vp----3--i----------6-----l-
+pārveidoti	G	pārveidots	Gsmpnp-n---p--------------l-
+ļoti	R	ļoti	R----p---------------g----l-
+reti	R	reti	R----p--------------------l-
+,	T	,	T--------------------------,
+tādēļ	R	tādēļ	R----p--------------------l-
+to	P	tas	P-fpg-------d-------------l-
+konstrukcijai	N	konstrukcija	N-fsd---------n-----------l-
+ir	V	būt	Vp----3--i----------7-----l-
+jābūt	V	būt	Vp-------c----------------l-
+atbilstoši	R	atbilstoši	R----p--------------------l-
+robustai	A	robusts	A-fsdp-n------------------l-
+.	SENT	.	T--------------------------.
+
+
+Šajā	P	šis	P-msl-------d-------------f-
+jomā	N	joma	N-fsl---------n-----------l-
+sagaidāmas	G	sagaidāms	Gpfpnp-n---p--------------l-
+vēl	Q	vēl	Q-------------------------l-
+daudzas	M	daudzi	M-fpn---c-----------------l-
+jaunas	A	jauns	A-fpnp-n------------------l-
+konstrukcijas	N	konstrukcija	N-fpa---------n-----------l-
+vai	C	vai	C---------------------c---l-
+esošo	G	esošs	Gpmpgp-y---a--------------l-
+principu	N	princips	N-mpg---------n-----------l-
+kombinācijas	N	kombinācija	N-fpn---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Dzinēju	N	dzinēja	N-fpg---------n-----------f-
+iebūvēšana	N	iebūvēšana	N-fsn---------n-----------l-
+mājās	N	māja	N-fpl---------n-----------l-
+izvirzīs	V	izvirzīt	Vf----3--i----------------l-
+daudzas	M	daudzi	M-fpn---c-----------------l-
+jaunas	A	jauns	A-fpnp-n------------------l-
+prasības	N	prasība	N-fpn---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+Lai	C	lai	C---------------------k---f-
+būtu	V	būt	Vp-------s----------7-----l-
+iespējams	G	iespējams	Gpmsnp-n---p--------------l-
+izmantot	V	izmantot	V--------n----------------l-
+dažāda	A	dažāds	A-msgp-n------------------l-
+stipruma	N	stiprums	N-msg---------n-----------l-
+vēju	N	vējš	N-msa---------n-----------l-
+un	C	un	C---------------------c---l-
+taupīt	V	taupīt	V--------n----------------l-
+līdzekļus	N	līdzeklis	N-mpa---------n-----------l-
+,	T	,	T--------------------------,
+uz	S	uz	S----------------sgp------l-
+viena	M	viens	M-msg---c-----------------l-
+masta	N	masts	N-msg---------n-----------l-
+ieteicams	G	ieteicams	Gpmsnp-n---p--------------l-
+uzstādīt	V	uzstādīt	V--------n----------------l-
+vairākus	P	vairāki	P-mpa-------i-------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+dzinējus	N	dzinējs	N-mpa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Atkarībā	N	atkarība	N-fsl---------n-----------f-
+no	S	no	S----------------pdp------l-
+vēja	N	vējš	N-msg---------n-----------l-
+īpatnībām	N	īpatnība	N-fpd---------n-----------l-
+dzinēji	N	dzinējs	N-mpn---------n-----------l-
+varētu	V	varēt	Vp-------s----------3-----l-
+būt	V	būt	V--------n----------1-----l-
+vienādi	R	vienādi	R----p--------------------l-
+vai	C	vai	C---------------------c---l-
+dažādi	R	dažādi	R----p--------------------l-
+,	T	,	T--------------------------,
+kas	P	kas	P---n-------r---------x---l-
+kopumā	N	kopums	N-msl---------n-----------l-
+nodrošinātu	V	nodrošināt	Vp-------s----------------l-
+vienmērīgu	A	vienmērīgs	A-fsap-n------------------l-
+enerģijas	N	enerģija	N-fsg---------n-----------l-
+padevi	N	padeve	N-fsa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Iespējams	G	iespējams	Gpmsnp-n---p--------------f-
+savstarpēji	A	savstarpējs	A-mpnp-n------------------l-
+kombinēt	V	kombinēt	V--------n----------------l-
+vertikālās	A	vertikāls	A-fsgp-y------------------l-
+un	C	un	C---------------------c---l-
+horizontālās	A	horizontāls	A-fsgp-y------------------l-
+ass	N	ass	N-fsg---------n-----------l-
+dzinējus	N	dzinējs	N-mpa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Vēl	Q	vēl	Q-------------------------f-
+viena	M	viens	M-fsn---c-----------------l-
+priekšrocība	N	priekšrocība	N-fsn---------n-----------l-
+šādos	P	šāds	P-mpl-------d-------------l-
+gadījumos	N	gadījums	N-mpl---------n-----------l-
+būtu	V	būt	Vp-------s----------7-----l-
+drošības	N	drošība	N-fsg---------n-----------l-
+rezerve	N	rezerve	N-fsn---------n-----------l-
+apstākļos	N	apstāklis	N-mpl---------n-----------l-
+,	T	,	T--------------------------,
+ja	C	ja	C---------------------d---l-
+kāds	P	kāds	P-msn-------r---------a---l-
+no	S	no	S----------------pdp------l-
+dzinējiem	N	dzinējs	N-mpd---------n-----------l-
+pārstāj	V	pārstāt	Vp----3--i----------------l-
+darboties	V	darboties	V--------n-----y----------l-
+.	SENT	.	T--------------------------.
+
+
+Amerikāņu	N	amerikānis	N-mpg---------n-----------f-
+vēja	N	vējš	N-msg---------n-----------l-
+turbīna	N	turbīna	N-fsn---------n-----------l-
+ir	V	būt	Vp----3--i----------7-----l-
+piemērota	G	piemērots	Gsfsnp-n---p--------------l-
+galvenokārt	R	galvenokārt	R----p--------------------l-
+lēna	A	lēns	A-msgp-n------------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+apstākļiem	N	apstāklis	N-mpd---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Tās	P	tas	P-fsg-------d-------------f-
+darbratam	-	darbratam	----------------------------
+var	V	varēt	Vp----3--i----------3-----l-
+būt	V	būt	V--------n----------1-----l-
+vairāk	R	daudz	R----c--------------------l-
+par	S	par	S----------------pdp------l-
+100	D	100	D--pg-----------------------
+lāpstiņām	N	lāpsta	N-fpd---------y-----------l-
+.	SENT	.	T--------------------------.
+
+Tas	P	tas	P-msn-------d-------------f-
+ir	V	būt	Vp----3--i----------7-----l-
+izplatītas	G	izplatīts	Gsfpnp-n---p--------------l-
+visā	P	viss	P-fsl-------g-------------l-
+pasaulē	N	pasaule	N-fsl---------n-----------l-
+un	C	un	C---------------------c---l-
+tiek	V	tikt	Vp----3--i----------6-----l-
+izmantotas	G	izmantots	Gsfsgp-n---p--------------l-
+ūdens	N	ūdens	N-msg---------n-----------l-
+sūknēšanai	N	sūknēšana	N-fsd---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Ļoti	R	ļoti	R----p---------------g----f-
+robustas	A	robusts	A-fpnp-n------------------l-
+un	C	un	C---------------------c---l-
+vienkāršas	A	vienkāršs	A-fpnp-n------------------l-
+.	SENT	.	T--------------------------.
+
+
+Darjē	-	Darjē	----------------------------
+dzinējs	N	dzinējs	N-msn---------n-----------l-
+(	T	(	T--------------------------(
+nosaukts	G	nosaukts	Gsmsnp-n---p--------------l-
+izgudrotāja	N	izgudrotājs	N-msg---------n-----------l-
+vārdā	N	vārds	N-msl---------n-----------l-
+)	T	)	T--------------------------)
+ir	V	būt	Vp----3--i----------7-----l-
+pazīstamākais	G	pazīstams	Gpmsnc-y---p--------------l-
+vertikālais	A	vertikāls	A-msnp-y------------------l-
+ātrgaitas	N	ātrgaita	N-fsg---------n-----------l-
+vēja	N	vējš	N-msg---------n-----------l-
+dzinējs	N	dzinējs	N-msn---------n-----------l-
+ar	S	ar	S----------------pdp------l-
+aerodinamiskiem	A	aerodinamisks	A-mpdp-n------------------l-
+profiliem	N	profils	N-mpd---------n-----------l-
+,	T	,	T--------------------------,
+kas	P	kas	P---n-------r---------x---l-
+veidots	G	veidots	Gsmsnp-n---p--------------l-
+kā	C	kā	C---------------------f---l-
+ķēdes	N	ķēde	N-fsg---------n-----------l-
+līkne	N	līkne	N-fsn---------n-----------l-
+un	C	un	C---------------------c---l-
+pārnes	V	pārnest	Vp----3--i----------------l-
+tikai	Q	tikai	Q-------------------------l-
+vilkmes	N	vilkme	N-fsg---------n-----------l-
+spēku	N	spēks	N-msa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Profilam	N	profils	N-msd---------n-----------f-
+ir	V	būt	Vp----3--i----------7-----l-
+konstants	A	konstants	A-msnp-n------------------l-
+ķērsgriezums	-	ķērsgriezums	----------------------------
+,	T	,	T--------------------------,
+ko	P	kas	P---a-------r-------------l-
+var	V	varēt	Vp----3--i----------3-----l-
+iegūt	V	iegūt	V--------n----------------l-
+profilpresējot	-	profilpresējot	----------------------------
+.	SENT	.	T--------------------------.
+
+Vienkāršā	A	vienkāršs	A-fsnp-y------------------f-
+uzbūve	N	uzbūve	N-fsn---------n-----------l-
+un	C	un	C---------------------c---l-
+apkope	N	apkope	N-fsn---------n-----------l-
+dod	V	dot	Vp----3--i----------------l-
+tam	P	tas	P-msd-------d-------------l-
+zināmas	G	zināms	Gpfsgp-n---p--------------l-
+priekšrocības	N	priekšrocība	N-fpa---------n-----------l-
+,	T	,	T--------------------------,
+neskatoties	G	neskatoties	G----------a-n-yy---------l-
+uz	S	uz	S----------------sap------l-
+mazāku	A	mazs	A-fsac-n------------------l-
+jaudu	N	jauda	N-fsa---------n-----------l-
+(	T	(	T--------------------------(
+salīdzinājumā	N	salīdzinājums	N-msl---------n-----------l-
+ar	S	ar	S----------------sap------l-
+horizontālās	A	horizontāls	A-fsgp-y------------------l-
+ass	N	ass	N-fsg---------n-----------l-
+dzinējiem	N	dzinējs	N-mpd---------n-----------l-
+)	T	)	T--------------------------)
+.	SENT	.	T--------------------------.
+
+Tomēr	C	tomēr	C-------------------------f-
+Darjē	-	Darjē	----------------------------
+dzinējam	N	dzinējs	N-msd---------n-----------l-
+ir	V	būt	Vp----3--i----------7-----l-
+nepieciešama	G	nepieciešams	Gpfsnp-n---p----y---------l-
+palīdzība	N	palīdzība	N-fsn---------n-----------l-
+palaižot	G	palaižot	G----------a-n------------l-
+.	SENT	.	T--------------------------.
+
+To	P	tas	P-fsa-------d-------------f-
+var	V	varēt	Vp----3--i----------3-----l-
+veikt	V	veikt	V--------n----------------l-
+ar	S	ar	S----------------sap------l-
+Savoniusa	-	Savoniusa	----------------------------
+elementu	N	elements	N-msa---------n-----------l-
+vai	C	vai	C---------------------c---l-
+ar	S	ar	S----------------sap------l-
+elektroģeneratoru	N	elektroģenerators	N-msa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+Buru	V	burt	Vp-s--1--i----------------f-
+vējdzirnavas	N	vējdzirnavas	N-fpa---------n-----------l-
+,	T	,	T--------------------------,
+ka	C	ka	C---------------------p---l-
+,	T	,	T--------------------------,
+piemēram	R	piemēram	R----p--------------------l-
+,	T	,	T--------------------------,
+šīs	P	šis	P-fpn-------d-------------l-
+,	T	,	T--------------------------,
+kas	P	kas	P---n-------r---------x---l-
+atro	-	atro	----------------------------
+¬	-	¬	----------------------------
+das	-	das	----------------------------
+Grieķijā	N	Grieķija	N-fsl---------n-----------f-
+,	T	,	T--------------------------,
+nav	V	nebūt	Vp----3--i------y---1-----l-
+mainījušās	G	mainījis	Gsfpn--y---a--------------l-
+2000	D	2000	D--pg-----------------------
+gadu	N	gads	N-mpg---------n-----------l-
+laikā	N	laiks	N-msl---------n-----------l-
+un	C	un	C---------------------c---l-
+ir	V	būt	Vp----3--i----------7-----l-
+izplatītas	G	izplatīts	Gsfsgp-n---p--------------l-
+Vidusjūras	N	Vidusjūra	N-fsg---------n-----------f-
+reģionā	N	reģions	N-msl---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+Ietekme	N	ietekme	N-fsn---------n-----------f-
+uz	S	uz	S----------------sap------l-
+apkātni	-	apkātni	----------------------------
+
+
+Vēja	N	vējš	N-msg---------n-----------f-
+dzinēju	N	dzinēja	N-fpg---------n-----------l-
+uzstādīšana	N	uzstādīšana	N-fsn---------n-----------l-
+-	T	-	T---------------------------
+kā	C	kā	C---------------------f---l-
+jebkura	P	jebkurš	P-fsn-------g-------------l-
+cita	P	cits	P-fsn-------i-------------l-
+būve	N	būve	N-fsn---------n-----------l-
+-	T	-	T---------------------------
+nozīmē	V	nozīmēt	Vp----3--i----------------l-
+iejaukšanos	N	iejaukšanās	N-fsa---------n-----------l-
+pastāvošajā	G	pastāvošs	Gpfslp-y---a--------------l-
+dabas	N	daba	N-fsg---------n-----------l-
+sistēmā	N	sistēma	N-fsl---------n-----------l-
+,	T	,	T--------------------------,
+tādēļ	R	tādēļ	R----p--------------------l-
+jāņem	V	ņemt	Vp-------c----------------l-
+vērā	R	vērā	R----p--------------------l-
+to	P	tas	P-fpg-------d-------------l-
+ietekme	N	ietekme	N-fsn---------n-----------l-
+uz	S	uz	S----------------sap------l-
+apkārtni	N	apkārtne	N-fsa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+Veidols	N	veidols	N-msn---------n-----------f-
+
+
+Mēs	P	mēs	P--pn-1-----p-------------f-
+esam	V	būt	Vp-p--1--i----------1-----l-
+pieraduši	G	pieradis	Gsmpn--n---a--------------l-
+redzēt	V	redzēt	V--------n----------------l-
+elektropārvades	N	elektropārvade	N-fsg---------n-----------l-
+līnijas	N	līnija	N-fpa---------n-----------l-
+,	T	,	T--------------------------,
+kuru	P	kurš	P-fsa-------r---------a---l-
+dēļ	S	dēļ	S----------------pdp------l-
+tiek	V	tikt	Vp----3--i----------6-----l-
+izcirstas	G	izcirsts	Gsfsgp-n---p--------------l-
+stigas	N	stiga	N-fsg---------n-----------l-
+mežos	N	mežs	N-mpl---------n-----------l-
+,	T	,	T--------------------------,
+un	C	un	C---------------------c---l-
+kuru	P	kurš	P-mpg-------r---------f---l-
+izvietojums	N	izvietojums	N-msn---------n-----------l-
+ne	Q	ne	Q---------------y---------l-
+vienmēr	R	vienmēr	R----p--------------------l-
+ir	V	būt	Vp----3--i----------7-----l-
+pieskaņots	G	pieskaņots	Gsmsnp-n---p--------------l-
+ainavas	N	ainava	N-fsg---------n-----------l-
+īpatnībām	N	īpatnība	N-fpd---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Bet	C	bet	C---------------------c---f-
+par	S	par	S----------------pdp------l-
+vēja	N	vējš	N-msg---------n-----------l-
+elektrostacijām	N	elektrostacija	N-fpd---------n-----------l-
+pastāv	V	pastāvēt	Vp----3--i----------------l-
+uzskats	N	uzskats	N-msn---------n-----------l-
+,	T	,	T--------------------------,
+ka	C	ka	C---------------------p---l-
+tās	P	tas	P-fpn-------d-------------l-
+bojā	V	bojāt	Vp----3--i----------------l-
+ainavu	N	ainava	N-fsa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+Vēja	N	vējš	N-msg---------n-----------f-
+dzinēji	N	dzinējs	N-mpn---------n-----------l-
+liecina	V	liecināt	Vp----3--i----------------l-
+par	S	par	S----------------sap------l-
+tiešu	A	tiešs	A-msap-n------------------l-
+,	T	,	T--------------------------,
+dabai	N	daba	N-fsd---------n-----------l-
+draudzīgu	A	draudzīgs	A-fpgp-n------------------l-
+enerģijas	N	enerģija	N-fsg---------n-----------l-
+izmantošanu	N	izmantošana	N-fsa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Tiem	P	tas	P-mpd-------d-------------f-
+nav	V	nebūt	Vp----3--i------y---1-----l-
+vajadzīgas	A	vajadzīgs	A-fsgp-n------------------l-
+elektropārvades	N	elektropārvade	N-fsg---------n-----------l-
+līnijas	N	līnija	N-fpa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Kustību	N	kustība	N-fpg---------n-----------f-
+valdzinājumu	N	valdzinājums	N-msa---------n-----------l-
+un	C	un	C---------------------c---l-
+aerodinamiskās	A	aerodinamisks	A-fpnp-y------------------l-
+formas	N	forma	N-fsg---------n-----------l-
+skaistumu	N	skaistums	N-msa---------n-----------l-
+sliktākajā	A	slikts	A-mslc-y------------------l-
+gadījumā	N	gadījums	N-msl---------n-----------l-
+var	V	varēt	Vp----3--i----------3-----l-
+traucēt	V	traucēt	V--------n----------------l-
+neveiksmīgs	A	neveiksmīgs	A-msnp-n--------y---------l-
+torņa	N	tornis	N-msg---------n-----------l-
+plānojums	N	plānojums	N-msn---------n-----------l-
+un	C	un	C---------------------c---l-
+tehnikas	N	tehnika	N-fsg---------n-----------l-
+izvietojums	N	izvietojums	N-msn---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Tie	P	tas	P-mpn-------d-------------f-
+,	T	,	T--------------------------,
+kas	P	kas	P---n-------r---------x---l-
+pazīst	V	pazīt	Vp----3--i----------------l-
+La	N	la	N-msn---------n-----------f-
+-	T	-	T---------------------------
+Sita	V	sist	Vs----3--i----------------f-
+līdzenumu	N	līdzenums	N-msa---------n-----------l-
+Krētā	N	Krēta	N-fsl---------n-----------f-
+vai	C	vai	C---------------------c---l-
+polderu	N	polderis	N-mpg---------n-----------l-
+apgabalus	N	apgabals	N-mpa---------n-----------l-
+Holandē	N	Holande	N-fsl---------n-----------f-
+,	T	,	T--------------------------,
+zina	V	zināt	Vp----3--i----------------l-
+,	T	,	T--------------------------,
+ka	C	ka	C---------------------p---l-
+tieši	R	tieši	R----p--------------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+dzinēji	N	dzinējs	N-mpn---------n-----------l-
+ir	V	būt	Vp----3--i----------7-----l-
+raksturīgākā	A	raksturīgs	A-fsnc-y------------------l-
+ainavas	N	ainava	N-fsg---------n-----------l-
+iezīme	N	iezīme	N-fsn---------n-----------l-
+un	C	un	C---------------------c---l-
+neatkārtojams	G	neatkārtojams	Gpmsnp-n---p----y---------l-
+tās	P	tas	P-fsg-------d-------------l-
+elements	N	elements	N-msn---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+Atkarībā	N	atkarība	N-fsl---------n-----------f-
+no	S	no	S----------------pdp------l-
+reģionālajiem	A	reģionāls	A-mpdp-y------------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+apstākļiem	N	apstāklis	N-mpd---------n-----------l-
+vēja	N	vējš	N-msg---------n-----------l-
+dzinēju	N	dzinējs	N-mpg---------n-----------l-
+tips	N	tips	N-msn---------n-----------l-
+un	C	un	C---------------------c---l-
+lielums	N	lielums	N-msn---------n-----------l-
+jāpieskaņo	V	pieskaņot	Vp-------c----------------l-
+vietējām	A	vietējs	A-fpdp-y------------------l-
+īpatnībām	N	īpatnība	N-fpd---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Tie	P	tas	P-mpn-------d-------------f-
+vienmēr	R	vienmēr	R----p--------------------l-
+atradīsies	V	atrasties	Vf----3--i-----y----------l-
+visvējainākajā	A	vējains	A-fsls-y------------------l-
+vietā	N	vieta	N-fsl---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Tādējādi	R	tādējādi	R----p--------------------f-
+tie	P	tas	P-mpn-------d-------------l-
+zināmā	G	zināms	Gpmslp-n---p--------------l-
+mērā	N	mērs	N-msl---------n-----------l-
+raksturo	V	raksturot	Vp----3--i----------------l-
+apkārtni	N	apkārtne	N-fsa---------n-----------l-
+,	T	,	T--------------------------,
+kurā	P	kurš	P-fsl-------r---------p---l-
+tie	P	tas	P-mpn-------d-------------l-
+atrodas	V	atrasties	Vp----3--i-----y----------l-
+,	T	,	T--------------------------,
+kļūstot	G	kļūstot	G----------a-n------------l-
+pat	Q	pat	Q-------------------------l-
+par	S	par	S----------------sap------l-
+ainavas	N	ainava	N-fsg---------n-----------l-
+tipa	N	tips	N-msg---------n-----------l-
+identifikācijas	N	identifikācija	N-fsg---------n-----------l-
+pazīmi	N	pazīme	N-fsa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+Konstruktīvā	A	konstruktīvs	A-fslp-n------------------f-
+ziņā	N	ziņa	N-fsl---------n-----------l-
+ir	V	būt	Vp----3--i----------7-----l-
+lietderīgi	R	lietderīgi	R----p--------------------l-
+veidot	V	veidot	V--------n----------------l-
+kopēju	A	kopējs	A-fpgp-n------------------l-
+mājas	N	māja	N-fsg---------n-----------l-
+un	C	un	C---------------------c---l-
+vēja	N	vējš	N-msg---------n-----------l-
+dzinēja	N	dzinējs	N-msg---------n-----------l-
+nesošo	G	nesošs	Gpfpgp-y---a--------------l-
+konstrukciju	N	konstrukcija	N-fsa---------n-----------l-
+,	T	,	T--------------------------,
+šīs	P	šis	P-fpn-------d-------------l-
+abas	P	abi	P-fpn-------i-------------l-
+lietas	G	liets	Gsfpnp-n---p--------------l-
+savstarpēji	A	savstarpējs	A-mpnp-n------------------l-
+saskaņojot	G	saskaņojot	G----------a-n------------l-
+.	SENT	.	T--------------------------.
+
+Iespējamo	A	iespējams	A-fsap-y------------------f-
+vibrāciju	N	vibrācija	N-fsa---------n-----------l-
+var	V	varēt	Vp----3--i----------3-----l-
+novērst	V	novērst	V--------n----------------l-
+smagas	A	smags	A-fpap-n------------------l-
+,	T	,	T--------------------------,
+masīvas	A	masīvs	A-fpap-n------------------l-
+būvdetaļas	N	būvdetaļa	N-fpn---------n-----------l-
+,	T	,	T--------------------------,
+kuras	P	kurš	P-fsg-------r---------o---l-
+mājā	N	māja	N-fsl---------n-----------l-
+nepieciešamas	G	nepieciešams	Gpfpnp-n---p----y---------l-
+arī	Q	arī	Q-------------------------l-
+klimatisku	A	klimatisks	A-mpgp-n------------------l-
+apsvērumu	N	apsvērums	N-msa---------n-----------l-
+!	T	!	T--------------------------!
+dēļ	S	dēļ	S----------------sgt------l-
+.	SENT	.	T--------------------------.
+
+Jaubūvējamā	G	jaubūvējams	Gpfslp-n---p--------------f-
+mājā	N	māja	N-fsl---------n-----------l-
+šādi	R	šādi	R----p--------------------l-
+iespējams	G	iespējams	Gpmsnp-n---p--------------l-
+samazināt	V	samazināt	V--------n----------------l-
+izdevumus	N	izdevums	N-mpa---------n-----------l-
+,	T	,	T--------------------------,
+kas	P	kas	P---n-------r---------x---l-
+citkārt	R	citkārt	R----p--------------------l-
+nepieciešami	A	nepieciešams	A-mpnp-n--------y---------l-
+vēja	N	vējš	N-msg---------n-----------l-
+dzinēja	N	dzinējs	N-msg---------n-----------l-
+torņa	N	tornis	N-msg---------n-----------l-
+būvei	N	būve	N-fsd---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+Trokšņi	N	troksnis	N-mpn---------n-----------f-
+.	SENT	.	T--------------------------.
+
+Vibrācija	N	vibrācija	N-fsn---------n-----------f-
+
+
+Vēja	N	vējš	N-msg---------n-----------f-
+dzinēji	N	dzinējs	N-mpn---------n-----------l-
+rada	V	radīt	Vp----3--i----------------l-
+skaņas	N	skaņa	N-fpn---------n-----------l-
+,	T	,	T--------------------------,
+kas	P	kas	P---n-------r---------x---l-
+var	V	varēt	Vp----3--i----------3-----l-
+izsaukt	V	izsaukt	V--------n----------------l-
+dažādas	A	dažāds	A-fsgp-n------------------l-
+cilvēku	N	cilvēks	N-mpg---------n-----------l-
+izjūtas	N	izjūta	N-fsg---------n-----------l-
+un	C	un	C---------------------c---l-
+reakcijas	N	reakcija	N-fpa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Ja	C	ja	C---------------------f---f-
+iekārta	N	iekārta	N-fsn---------n-----------l-
+nav	V	nebūt	Vp----3--i------y---4-----l-
+bojāta	G	bojāts	Gsfsnp-n---p--------------l-
+,	T	,	T--------------------------,
+to	P	tas	P-fsa-------d-------------l-
+tomēr	C	tomēr	C-------------------------l-
+nevar	V	nevarēt	Vp----3--i------y---3-----l-
+uzskatīt	V	uzskatīt	V--------n----------------l-
+par	S	par	S----------------sap------l-
+troksni	N	troksnis	N-msa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Tā	R	tā	R----p--------------------f-
+drīzāk	R	drīzi	R----c--------------------l-
+rada	V	radīt	Vp----3--i----------------l-
+klusas	A	kluss	A-fsgp-n------------------l-
+skaņas	N	skaņa	N-fpa---------n-----------l-
+,	T	,	T--------------------------,
+kas	P	kas	P---n-------r---------x---l-
+izklausās	V	izklausīties	Vp----3--i-----y----------l-
+pēc	S	pēc	S----------------sgp------l-
+maigas	A	maigs	A-fsgp-n------------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+šalkoņas	N	šalkoņa	N-fsg---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Vēja	N	vējš	N-msg---------n-----------f-
+dzinēji	N	dzinējs	N-mpn---------n-----------l-
+nerada	V	nerast	Vs----3--i------y---------l-
+skaņas	N	skaņa	N-fpn---------n-----------l-
+,	T	,	T--------------------------,
+kas	P	kas	P---n-------r---------x---l-
+līdzinās	V	līdzināties	Vp----3--i-----y----------l-
+helikoptera	N	helikopters	N-msg---------n-----------l-
+dzenskrūves	N	dzenskrūve	N-fsg---------n-----------l-
+radītajam	G	radīts	Gsmsdp-y---p--------------l-
+troksnim	N	troksnis	N-msd---------n-----------l-
+,	T	,	T--------------------------,
+jo	C	jo	C---------------------r---l-
+vēja	N	vējš	N-msg---------n-----------l-
+dzinēja	N	dzinējs	N-msg---------n-----------l-
+griešanās	N	griešanās	N-fsg---------n-----------l-
+ātrums	N	ātrums	N-msn---------n-----------l-
+pieskaņojas	V	pieskaņoties	Vp----3--i-----y----------l-
+vēja	N	vējš	N-msg---------n-----------l-
+ātrumam	N	ātrums	N-msd---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Šis	P	šis	P-msn-------d-------------f-
+mehānisko	A	mehānisks	A-mpgp-y------------------l-
+trokšņu	N	troksnis	N-mpg---------n-----------l-
+un	C	un	C---------------------c---l-
+vēja	N	vējš	N-msg---------n-----------l-
+šalkoņas	N	šalkoņa	N-fsg---------n-----------l-
+sajaukums	N	sajaukums	N-msn---------n-----------l-
+diezin	Q	diezin	Q-------------------------l-
+vai	C	vai	C---------------------c---l-
+var	V	varēt	Vp----3--i----------3-----l-
+kļūt	V	kļūt	V--------n----------5-----l-
+par	S	par	S----------------sap------l-
+traucēkli	N	traucēklis	N-msa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Vēja	N	vējš	N-msg---------n-----------f-
+dzinēja	N	dzinējs	N-msg---------n-----------l-
+īpašnieks	N	īpašnieks	N-msn---------n-----------l-
+varbūt	Q	varbūt	Q-------------------------l-
+pat	Q	pat	Q-------------------------l-
+izjutīs	V	izjust	Vf----3--i----------------l-
+gandarījumu	N	gandarījums	N-msa---------n-----------l-
+,	T	,	T--------------------------,
+dzirdot	G	dzirdot	G----------a-n------------l-
+,	T	,	T--------------------------,
+ka	C	ka	C---------------------p---l-
+iekārta	N	iekārta	N-fsn---------n-----------l-
+darbojas	V	darboties	Vp----3--i-----y----------l-
+viņa	P	viņš	P-fsn-3-----p-------------l-
+labā	R	labā	R----p--------------------l-
+,	T	,	T--------------------------,
+līdzīgi	R	līdzīgi	R----p--------------------l-
+kā	C	kā	C---------------------f---l-
+uguns	N	uguns	N-fsg---------n-----------l-
+sprakšķēšana	N	sprakšķēšana	N-fsn---------n-----------l-
+akustiskā	A	akustisks	A-mslp-n------------------l-
+ceļā	N	ceļš	N-msl---------n-----------l-
+rada	V	rast	Vs----3--i----------------l-
+siltuma	N	siltums	N-msg---------n-----------l-
+sajūtu	N	sajūta	N-fsa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+
+
+Tomēr	Q	tomēr	Q-------------------------f-
+nav	V	nebūt	Vp----3--i------y---1-----l-
+izslēgta	G	izslēgts	Gsfsnp-n---p--------------l-
+vibrācija	N	vibrācija	N-fsn---------n-----------l-
+,	T	,	T--------------------------,
+kas	P	kas	P---n-------r---------x---l-
+novadās	V	novadīties	Vp----3--i-----y----------l-
+uz	S	uz	S----------------sap------l-
+leju	N	leja	N-fsa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Frontālā	A	frontāls	A-msgp-y------------------f-
+darbrata	-	darbrata	----------------------------
+spārnu	N	spārns	N-mpg---------n-----------l-
+griešanās	N	griešanās	N-fsg---------n-----------l-
+masta	N	masts	N-msg---------n-----------l-
+priekšpusē	N	priekšpuse	N-fsl---------n-----------l-
+rada	V	rast	Vs----3--i----------------l-
+mainīgu	A	mainīgs	A-msap-n------------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+spiedienu	N	spiediens	N-msa---------n-----------l-
+,	T	,	T--------------------------,
+kā rezultātā	C	kā_rezultātā	C---------------------x---l-
+masts	N	masts	N-msn---------n-----------l-
+svārstās	V	svārstīties	Vp----3--i-----y----------l-
+.	SENT	.	T--------------------------.
+
+Astes	N	aste	N-fsg---------n-----------f-
+dzinējiem	N	dzinējs	N-mpd---------n-----------l-
+rodas	V	rasties	Vp----3--i-----y----------l-
+galvenokārt	R	galvenokārt	R----p--------------------l-
+spārnu	N	spārns	N-mpg---------n-----------l-
+svārstības	N	svārstība	N-fpa---------n-----------l-
+,	T	,	T--------------------------,
+jo	C	jo	C---------------------r---l-
+tie	P	tas	P-mpn-------d-------------l-
+griežas	V	griezties	Vp----3--i-----y----------l-
+torņa	N	tornis	N-msg---------n-----------l-
+radītajā	G	radīts	Gsmslp-y---p--------------l-
+aizvējā	N	aizvējš	N-msl---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Jārēķinās	V	rēķināties	Vp-------c-----y----------f-
+arī	Q	arī	Q-------------------------l-
+ar	S	ar	S----------------sap------l-
+vēl	Q	vēl	Q-------------------------l-
+citām	P	cits	P-fpd-------i-------------l-
+vibrācijām	N	vibrācija	N-fpd---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+
+
+Vibrāciju	N	vibrācija	N-fpg---------n-----------f-
+pārvadīšanās	N	pārvadīšanās	N-fsn---------n-----------l-
+īpaši	R	īpaši	R----p--------------------l-
+jāņem	V	ņemt	Vp-------c----------------l-
+vērā	R	vērā	R----p--------------------l-
+,	T	,	T--------------------------,
+veidojot	G	veidojot	G----------a-n------------l-
+savienojuma	N	savienojums	N-msg---------n-----------l-
+konstrukciju	N	konstrukcija	N-fsa---------n-----------l-
+ar	S	ar	S----------------sap------l-
+māju	N	māja	N-fsa---------n-----------l-
+;	T	;	T--------------------------;
+dažkārt	R	dažkārt	R----p--------------------l-
+ir	V	būt	Vp----3--i----------7-----l-
+vienkāršāk	R	vienkārši	R----c--------------------l-
+dzīvojamo	G	dzīvojams	Gpfsap-y---p--------------l-
+ēku	N	ēka	N-fpg---------n-----------l-
+un	C	un	C---------------------c---l-
+dzinēja	N	dzinējs	N-msg---------n-----------l-
+torni	N	tornis	N-msa---------n-----------l-
+veidot	V	veidot	V--------n----------------l-
+atsevišķi	R	atsevišķi	R----p--------------------l-
+,	T	,	T--------------------------,
+nekā	C	nekā	C---------------------w---l-
+veikt	V	veikt	V--------n----------------l-
+sarežģītus	A	sarežģīts	A-mpap-n------------------l-
+pasākumus	N	pasākums	N-mpa---------n-----------l-
+vibrācijas	N	vibrācija	N-fsg---------n-----------l-
+novēršanai	N	novēršana	N-fsd---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+Ekoloģiskie	A	ekoloģisks	A-mpnp-y------------------f-
+aspekti	N	aspekts	N-mpn---------n-----------l-
+
+
+Vēja	N	vējš	N-msg---------n-----------f-
+dzinēji	N	dzinējs	N-mpn---------n-----------l-
+,	T	,	T--------------------------,
+būdami	G	būdams	G-mp---------l------------l-
+šķēršļi	N	šķērslis	N-mpn---------n-----------l-
+vēja	N	vējš	N-msg---------n-----------l-
+ceļā	N	ceļš	N-msl---------n-----------l-
+,	T	,	T--------------------------,
+ietekmē	V	ietekmēt	Vp----3--i----------------l-
+tā	P	tas	P-fsn-------d-------------l-
+normālo	A	normāls	A-fsap-y------------------l-
+plūsmu	N	plūsma	N-fsa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Vidēja	A	vidējs	A-msgp-n------------------f-
+lieluma	N	lielums	N-msg---------n-----------l-
+vēja	N	vējš	N-msg---------n-----------l-
+dzinēji	N	dzinējs	N-mpn---------n-----------l-
+vēja	N	vējš	N-msg---------n-----------l-
+bremzēšanas	N	bremzēšana	N-fsg---------n-----------l-
+ziņā	N	ziņa	N-fsl---------n-----------l-
+ir	V	būt	Vp----3--i----------7-----l-
+pielīdzināmi	G	pielīdzināms	Gpmpnp-n---p--------------l-
+pieaugušiem	G	pieaudzis	Gsmpd--n---a--------------l-
+kokiem	N	koks	N-mpd---------n-----------l-
+ar	S	ar	S----------------pdp------l-
+20	D	20	D--pg-----------------------
+m	Y	m	Y-------------------------l-
+vainaga	N	vainags	N-msg---------n-----------l-
+diametru	N	diametrs	N-msa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Turklāt	R	turklāt	R----p----------------x---f-
+vēja	N	vējš	N-msg---------n-----------l-
+enerģija	N	enerģija	N-fsn---------n-----------l-
+tiek	V	tikt	Vp----3--i----------6-----l-
+pārvērsta	G	pārvērsts	Gsfsnp-n---p--------------l-
+rotācijas	N	rotācija	N-fsg---------n-----------l-
+spēkā	N	spēks	N-msl---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Tādēļ	R	tādēļ	R----p--------------------f-
+vēja	N	vējš	N-msg---------n-----------l-
+dzinēji	N	dzinējs	N-mpn---------n-----------l-
+,	T	,	T--------------------------,
+tāpat kā	C	tāpat_kā	C---------------------w---l-
+koki	N	koks	N-mpn---------n-----------l-
+,	T	,	T--------------------------,
+patērē	V	patērēt	Vp----3--i----------------l-
+enerģiju	N	enerģija	N-fsa---------n-----------l-
+,	T	,	T--------------------------,
+bet	C	bet	C---------------------c---l-
+nenovirza	V	nenovirzīt	Vp----3--i------y---------l-
+vēju	N	vējš	N-msa---------n-----------l-
+,	T	,	T--------------------------,
+līdz ar to	-	līdz_ar_to	----------------------------
+nerodas	V	nerasties	Vp----3--i-----yy---------l-
+tā	P	tas	P-msg-------d-------------l-
+sablīvēšanās	N	sablīvēšanās	N-fsg---------n-----------l-
+citā	P	cits	P-fsl-------i-------------l-
+vietā	N	vieta	N-fsl---------n-----------l-
+,	T	,	T--------------------------,
+ko	P	kas	P---a-------r-------------l-
+izraisa	V	izraisīt	Vp----3--i----------------l-
+cietie	A	ciets	A-mpnp-y------------------l-
+šķēršļi	N	šķērslis	N-mpn---------n-----------l-
+(	T	(	T--------------------------(
+kalni	N	kalns	N-mpn---------n-----------l-
+un	C	un	C---------------------c---l-
+mājas	N	māja	N-fpn---------n-----------l-
+)	T	)	T--------------------------)
+,	T	,	T--------------------------,
+īpašos	A	īpašs	A-mplp-n------------------l-
+gadījumos	N	gadījums	N-mpl---------n-----------l-
+vējdzirnavas	N	vējdzirnavas	N-fpn---------n-----------l-
+varētu	V	varēt	Vp-------s----------3-----l-
+kalpot	V	kalpot	V--------n----------------l-
+aizsardzībai	N	aizsardzība	N-fsd---------n-----------l-
+pret	S	pret	S----------------sap------l-
+vēju	N	vējš	N-msa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Tomēr	Q	tomēr	Q-------------------------f-
+parasti	G	parasts	Gsmpnp-n---p--------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+dzinēju	N	dzinējs	N-mpg---------n-----------l-
+darbināšanai	N	darbināšana	N-fsd---------n-----------l-
+tiek	V	tikt	Vp----3--i----------6-----l-
+izmantots	G	izmantots	Gsmsnp-n---p--------------l-
+augstākos	A	augstāks	A-mplp-n------------------l-
+gaisa	N	gaiss	N-msg---------n-----------l-
+slāņos	N	slānis	N-mpl---------n-----------l-
+esošais	G	esošs	Gpmsnp-y---a--------------l-
+,	T	,	T--------------------------,
+ap	S	ap	S----------------pdp------l-
+mājām	N	māja	N-fpd---------n-----------l-
+un	C	un	C---------------------c---l-
+kokiem	N	koks	N-mpd---------n-----------l-
+nesavirpuļotais	G	nesavirpuļots	Gsmsnp-y---p----y---------l-
+vējš	N	vējš	N-msn---------n-----------l-
+,	T	,	T--------------------------,
+līdz ar to	-	līdz_ar_to	----------------------------
+vēja	N	vējš	N-msg---------n-----------l-
+ātruma	N	ātrums	N-msg---------n-----------l-
+samazināšanās	N	samazināšanās	N-fsg---------n-----------l-
+pie	S	pie	S----------------sgp------l-
+zemes	N	zeme	N-fsg---------n-----------l-
+virsas	N	virsa	N-fsg---------n-----------l-
+nerodas	V	nerasties	Vp----3--i-----yy---------l-
+.	SENT	.	T--------------------------.
+
+Nelielā	A	neliels	A-mslp-n--------y---------f-
+attālumā	N	attālums	N-msl---------n-----------l-
+aiz	S	aiz	S----------------pdp------l-
+darbrata	-	darbrata	----------------------------
+(	T	(	T--------------------------(
+apmēram	R	apmēram	R----p---------------g----l-
+četru	M	četri	M-mpg---c-----------------l-
+darbrata	-	darbrata	----------------------------
+diametru	N	diametrs	N-mpg---------n-----------l-
+apjomā	N	apjoms	N-msl---------n-----------l-
+)	T	)	T--------------------------)
+gaisa	N	gaiss	N-msg---------n-----------l-
+plūsma	N	plūsma	N-fsn---------n-----------l-
+atkal	R	atkal	R----p--------------------l-
+izlīdzinās	V	izlīdzināties	Vp----3--i-----y----------l-
+.	SENT	.	T--------------------------.
+
+Pat	Q	pat	Q-------------------------f-
+lielas	A	liels	A-fsgp-n------------------l-
+iekārtas	N	iekārta	N-fpn---------n-----------l-
+kā	C	kā	C---------------------f---l-
+,	T	,	T--------------------------,
+piemēram	R	piemēram	R----p--------------------l-
+,	T	,	T--------------------------,
+Menas	N	Mena	N-fsg---------n-----------f-
+līča	N	līcis	N-msg---------n-----------l-
+projekts	N	projekts	N-msn---------n-----------l-
+,	T	,	T--------------------------,
+nerada	V	nerast	Vs----3--i------y---------l-
+būtiskas	A	būtisks	A-fpap-n------------------l-
+klimatiskas	A	klimatisks	A-fpnp-n------------------l-
+sekas	N	sekas	N-fpn---------n-----------l-
+,	T	,	T--------------------------,
+kas	P	kas	P---n-------r---------x---l-
+būtu	V	būt	Vp-------s----------7-----l-
+iespējamas	A	iespējams	A-fsgp-n------------------l-
+,	T	,	T--------------------------,
+piemēram	R	piemēram	R----p--------------------l-
+,	T	,	T--------------------------,
+milzīgu	A	milzīgs	A-fpgp-n------------------l-
+saules	N	saule	N-fsg---------n-----------l-
+bateriju	N	baterija	N-fpg---------n-----------l-
+uzstādīšanas	N	uzstādīšana	N-fsg---------n-----------l-
+rezultātā	N	rezultāts	N-msl---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Vēju	N	vējš	N-msa---------n-----------f-
+radošā	G	radošs	Gpmslp-n---a--------------l-
+spiedienu	N	spiediens	N-mpg---------n-----------l-
+starpību	N	starpība	N-fsa---------n-----------l-
+izlīdzināšanās	N	izlīdzināšanās	N-fsn---------n-----------l-
+,	T	,	T--------------------------,
+sastopot	G	sastopot	G----------a-n------------l-
+savā	P	savs	P-msl-------s-------------l-
+ceļā	N	ceļš	N-msl---------n-----------l-
+“	T	“	T--------------------------“
+jaunu	A	jauns	A-fsap-n------------------l-
+topogrāfiju	N	topogrāfija	N-fsa---------n-----------l-
+”	T	”	T--------------------------”
+,	T	,	T--------------------------,
+drīkstētu	V	drīkstēt	Vp-------s----------3-----l-
+norisināties	V	norisināties	V--------n-----y----------l-
+arī	Q	arī	Q-------------------------l-
+lēnāk	R	lēni	R----c--------------------l-
+.	SENT	.	T--------------------------.
+
+
+Vēja	N	vējš	N-msg---------n-----------f-
+dzinēju	N	dzinēja	N-fpg---------n-----------l-
+izmantošana	N	izmantošana	N-fsn---------n-----------l-
+no	S	no	S----------------sgp------l-
+mūsdienu	N	mūsdienas	N-fpg---------n-----------l-
+zināšanu	N	zināšana	N-fpg---------n-----------l-
+viedokļa	N	viedoklis	N-msg---------n-----------l-
+nerada	V	nerast	Vs----3--i------y---------l-
+ekoloģisku	A	ekoloģisks	A-msap-n------------------l-
+kaitējumu	N	kaitējums	N-mpg---------n-----------l-
+ne	C	ne	C---------------y---------l-
+mazā	A	mazs	A-fslp-n------------------l-
+,	T	,	T--------------------------,
+ne	Q	ne	Q---------------y---------l-
+lielā	A	liels	A-mslp-n------------------l-
+mērogā	N	mērogs	N-msl---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+Posted	-	Posted	----------------------------
+by	-	by	----------------------------
+admin	-	admin	----------------------------
+@	T	@	T--------------------------@
+8	D	8	D--p------------------------
+:	T	:	T--------------------------:
+53	D	53	D--p------------------------
+am	-	am	----------------------------

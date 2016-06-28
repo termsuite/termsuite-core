@@ -1,0 +1,322 @@
+Offshore wind energy: 'The road to maturity'
+Dutch Offshore Wind Energy Converter (DOWEC) project 1997 - 2003
+
+I. Global offshore wind overview II. DOWEC formation III. DOWEC achievements and future potential
+
+January 2004
+
+1
+
+2
+
+Preface The successful completion of the DOWEC project is a milestone for us. Six partners with totally different experience and backgrounds worked together on fundamental scientific as well as industrial development tasks. The multipartner approach proved not always an easy one. It provided at the same time excellent opportunities to grow into a new exiting business field with great future promise, and to reflect on early offshore visions and expectations of DOWEC 's founding fathers. The booklet is subdivided into three closely interlinked parts. Part I provides a global overview of offshore wind energy developments, and installation targets set by leading wind nations. Also covered are subjects like technology and market trends, offshore complexities, cost trends, installation challenges, and clever maritime innovations. Part II describes DOWEC 's formation period, plus a number of key objectives and research considerations. Part III evaluates achievements of the DOWEC project, and how results are envisaged to positively affect offshore wind progress and international competitiveness of all six parties involved. We are pleased that partners judge positively about project achievements and spin-offs for their individual organisations. One observed that DOWEC has been the first Dutch project of this complexity and of this nature that was successfully completed. A second partner praised the atmosphere of openness in the group. We regard both statements as a compliment to the whole group, as they together made things happen. A combination of strengthened network and widened know-how base has no doubt better equipped all DOWEC partners to successfully participate in other challenging future offshore wind energy projects around the globe. In what manner and at which pace this rapidly maturing technology can contribute towards solving tomorrow 's energy needs for the benefit of next generations, depends on real people and their drive to get things moving. On behalf of the DOWEC group we do sincerely hope that you will enjoy reading this booklet, and that some of our spirit and strong belief in the future of offshore wind energy will be passed on. December 2003 DOWEC Steering Committee
+
+3
+
+Introduction Plans for DOWEC date back to 1997, interrupted in 1998 by a turbulent period with many changes for the Dutch wind industry. This combination of events affected the pace of DOWEC 's formation and the group 's final composition. When the project commenced, it comprised six partners from two distinct business fields: offshore technology and wind energy. Key project objective was to develop all know-how necessary for designing a competitive 6 MW class offshore wind turbine, plus innovative erection, operating, and maintenance methods best suited for the rough maritime environment. One of the envisaged key project outcomes was a 3 MW + R&D demonstration prototype, with a 100-metre rotor diameter. The erection of a 2.75 MW Demonstrator prototype February 2003 at ECN 's new test site for multimegawatt class wind turbines in the Wieringermeer, NH-Province was a project highlight. Product specifications of the turbine, with a 92-metre rotor currently one of the world 's largest commercial prototypes, slightly differ from earlier indicative figures for various reasons. The Demonstrator itself has been performing to expectations and will produce about nine million kWh annually, sufficient to cover the electricity needs of 2,800 Dutch households. Under offshore conditions annual energy production will be even higher. In addition within weeks after commissioning the turbine, energy centre ECN commenced with a comprehensive measuring and validation programme. DOWEC 's added value for partners, project developers, and other stakeholders alike lies in a balanced combination of applied and scientific knowhow, as will be summarised in the following chapters.
+
+Figure 1: The DOWEC demonstrator turbine in the Wieringermeer (photo NEG Micon)
+
+4
+
+Contents Preface Introduction Contents Partner views
+
+Part I: Global offshore wind overview 1. Offshore wind energy ambitions 2. Kick-off projects 3. Fast track to large turbines 4. Market driven development 5. Maturing technology 6. Variable speed for superior control 7. Costs structure trends 8. Offshore complexities 9. Foundation and installation challenges 10. Maritime innovations
+
+Part II: DOWEC formation 11. DOWEC - from plans to project 12. Pre-concept study 13. DOWEC partners 14. Partners in brief 15. Project objectives 16. Key focus wind farm optimisation 17. DOWEC Demonstrator - R&D considerations
+
+Part III: Partner achievements and future potential 18. NEG Micon Holland: 'DOWEC Demonstrator' 19. LMGH: 'World 's longest rotor blade from Heerhugowaard' 20. Ballast Nedam: 'DOWEC design installation method' 21. Van Oord: 'Cable related and scour protection tasks' 22. ECN: 'Measuring and validation programme' 23. TU Delft: 'Research and design focussed knowledge transfer' 24. Future potential
+
+5
+
+Partner views All six DOWEC partners had their own motives and expectations when they decided to participate into the project. Below is a random selection of their views and statements: 'Through our participation in DOWEC we came to know and understand the wind energy market much better.' 'For us the balance is positive, especially when viewed from an European perspective and the advancement of wind energy and offshore technology in general.' 'DOWEC fits well in the current phase of offshore wind energy development, integration between wind technology and offshore is thereby highly essential.' 'Through our participation in DOWEC we have as a relative outsider in the offshore field learned a great deal about wind turbine installation methods.' 'DOWEC has served as a fabric to strengthen our wind energy research base, especially with regard to cost-effective and large-scale utilisation of offshore wind turbines.' 'This was the first Dutch wind project whereby multiple partners from research bodies and industry worked closely together in a complex multi-year project.' 'DOWEC was the first large Dutch project of this nature that was brought to a successful completion.' 'It was a great opportunity that we could work in a team with industrial partners, which have the development of large commercial wind turbines and rotor blades for onshore- and offshore application as their core business.' 'This was the first Dutch wind project whereby the TU Delft and ECN worked closely together with specialised offshore and civil-engineering parties.' 'Our institute could experience first hand how internationally oriented offshore and civil-engineering parties tackle specific challenges in their respective fields.'
+
+6
+
+Part I: Global offshore wind overview
+Chapters 1 - 10 provide an overall global overview of international wind energy and offshore technology developments, and envisaged wind plant Costs of Energy (CoE; €ct/kWh/20-years) trends. 1. Offshore wind energy ambitions At the Madrid EWEC 2003 wind conference in June 2003, the European Wind Energy Association (EWEA) announced an ambitious 10,000 MW offshore wind energy target by 2010. This European offshore wind volume is envisaged to reach 70,000 MW ten years later in 2020. By that time wind capacity on land and offshore combined (180,000 MW), is expected to generate sufficient energy to cover 13% of Europe 's electricity needs. Background for the optimistic offshore forecasts is that an increasing number of countries have set ambitious medium and long-term goals for harvesting offshore wind energy in their territorial waters. In Europe wind energy champion Germany has taken the lead with plans for an impressive 40,000 MW offshore wind capacity by 2030. The latest UK offshore target is 20,000 MW, and the Dutch government aims at 6,000 MW in 2020. Also on the other side of the Atlantic offshore wind power is gaining interest. A number of generally large US projects planned for the period 2004 - 2006 already add up to 3,500 MW. 2. Kick-off projects In The Netherlands, offshore wind energy commenced with two projects, both comprising 'real offshore characteristics': wind farm Lely (1994) and Dronten (1996). Lely consists of four two-blade 500 kW NedWind turbines. The project was built in the IJsselmeer near Medemblik in water depths between 5 - 10 metres. Wind farm Dronten is also positioned in the IJsselmeer, some 30 metres from shore and comprises 28 turbines of the 3blade Nordtank43/600 series. Already at these projects later Dowec partners like Rotorline/LM Glasfiber, Nedwind/NEG-Micon, and Ballast Nedam were the selected parties that produced the required blades and turbines, and installed the purpose-designed foundations.
+
+Figure 2: The Lely wind farm (photo Lex Salverda)
+
+7
+
+Optimistic plans build on successful recent fast-track development experiences with a limited number of semi-commercial offshore wind projects. The technology applied in these wind farms typically comprises offshoremodified turbines in the 1.5 - 2.3 MW range. It is also noticeable that these 'demonstration' projects were accomplished in only three European pioneer countries: Denmark, Sweden, and the UK (Table 1). Autumn 2002 the huge Danish 160 MW Horns Rev North Sea project, widely regarded the genuine kick-off for large-scale offshore wind utilisation in the world, became operational.
+
+Figure 3: The Horns Rev offshore wind farm (photo Vestas)
+
+This year again a large (165 MW) offshore wind farm has been completed in Denmark, this time near Nysted. And in the UK, Europe 's nation blessed with the best (offshore) wind resource, the North Hoyle project (60 MW) recently became operational. This sizable wind farm is regarded the UK 's first genuine entrance in the offshore wind market, the Scroby Sands offshore wind farm installation is underway and many more projects are in the pipeline for the next years.
+
+8
+
+Figure 4: The Nysted offshore wind farm (photo Bonus)
+
+Finally, in the Irish Sea south of Dublin (Ireland) a seven-turbine wind farm was completed this autumn.
+Table 1 European offshore wind projects 2000 - 2003 Name and location Turbine make & type and Project rated capacity number [MW] Blyth, UK Middelgrunden, DK Utgrunden, SE Yttre Stengrund, SE Horns Rev, DK Samsø, DK Frederikshavn, DK 2 x Vestas 2 MW 20 x Bonus 2 MW 7 x GE Wind 1,42 MW 5 x NEG Micon 2 MW 80 x Vestas 2 MW 10 x Bonus 2.3 MW 2 x Vestas 3 MW 1 x Bonus 2.3 MW 1 x Nordex 2.3 MW 'Offshore' 72 x Bonus 2.3 MW 30 x Vestas 2 MW 7 x GE Wind 3.6 MW Offshore 4 40 10 10 160 23 6 2.3 2.3 165 60 25.2 On-line 2000 2000 2000 2001 2002 2002 2003 2003 2003 2003 2003 2003
+
+Nysted, DK North Hoyle, UK Arklow Bank, IR
+
+Sources: Renewable Energy World, July-August 2003; Suppliers, 2000 - 2003
+
+9
+
+3. Fast track to large turbines In the offshore wind industry 2003 will be remembered as the year when the 2 MW+ offshore size barrier was 'smashed' by the historic first-time installation of much larger 3.6 MW size wind turbines (Table 1). In addition a 4.2 MW NEG Micon NM 110/4200 prototype was erected early October at a new onshore test field in Denmark. The latter comprises a 110-metre rotor diameter and a top head mass (THM, nacelle plus rotor) of only 214 tonnes, which is an industry record. For 2004 at least two new prototype installations in the 4.0 - 5 MW range are expected (Table 2).
+
+Figure 5: The NM110 prototype (photo NEG Micon)
+
+10
+
+A genuine 2002 wind industry milestone formed the erection of the world 's largest 4.5 MW prototype near Magdeburg (GE). This year a second Enercon E-112 has become operational, and a third land prototype is under construction. Multi-megawatt wind turbine suppliers all aim at both land based and offshore applications, for the single reason that there is still uncertainty about the pace of offshore wind development. Pleasing is a favourable shift in visual acceptance of larger wind turbines. And despite uncertainties reinforced by continuously delayed planning permission procedures, a limited 4 - 5 MW market takeoff is expected for 2005/6. Offshore wind projects with even larger 5 - 6 MW size turbines might according to some experts typically be characterised by water depths of 30 - 40 metres, and a distance to shore in the range of 40 kilometres and up. Others argue that there are lots of highly suitable shallow water locations available, and that independent of water depth and distance to shore site issues the arrival of new generations turbines in the 8 - 12 MW class might become feasible within eight to ten years.
+Table 2 Make & Type 2002 Enercon E-112 GE 3.6 Offshore NEG Micon NM92/2750 Vestas V90 2003 ScanWind NEG Micon NM110/4200 Expected 2004 Pfleiderer M5000 REpower 5M WinWind WWD-3 1. 2. 3. Some multi-megawatt offshore wind turbine prototypes 2002 - 2004 Capacity [MW] 4.5 3.6 2.75 3.0 rotor diameter Transmission [m.] type 112.8 100.0 92.0 90.0 DD 2 GD GD GD
+1
+
+Prototype
+
+August May June May
+
+3.0 4.2
+
+90 110.0
+
+DD GD
+
+n.a. October
+
+5.0 5.0 3.0
+
+116.0 126.5 90.0
+
+HD GD 3 HD
+
+Spring Spring Spring
+
+Direct driven - slow running multi-pole ring generator Gear driven - multi-stage gearbox and fast running generator Hybrid drive - single-stage gearbox with medium speed generator
+
+Sources: Wind industry, 2002 - 2003; Windkraftanlagenmarkt 2003
+
+4. Market driven development Market driven wind turbine development in general favours a gradual evolutionary type of up scaling, and a commercial time scale in balance with economically viable (offshore) wind site development progress. The bulk of offshore wind farms now planned are typically projected in water depths between 5 - 20 metres, perfect conditions for the latest 4 - 5 MW generation turbines. An example is the 4.2 MW NM 110/4200 for which NEG Micon foresees an optimising step for their current platform, increasing rotor size as well as the power rating.
+
+11
+
+This 'playing safe' strategy itself is typical for the wind industry, as it helps reducing development risks and improves cost effectiveness. A limiting factor hampering up scaling is that key components for turbines of this size, such as cast-iron machine frames and rotor hubs, are already very bulky and heavy. Only a handful of component suppliers in the world is currently capable of manufacturing such huge complex components in sufficient quantities at the required quality and for an acceptable price.
+
+Figure 6: Production of a monopile for offshore wind turbines (photo NEG Micon)
+
+This well-documented bottleneck could potentially slow down a fast entry into the performance class of 6 MW and up. On the other hand a main supplier of wind turbine gearboxes recently inaugurated testing facilities capable to accommodate units up to 6 MW, while further steps up to even 12 MW are envisaged. An unresolved question is whether the ongoing process of continuously stretching technological and scientific boundaries, will in the end also produce economically viable offshore wind turbines. 5. Maturing technology While wind turbine up scaling is in full swing, rotor diameters tend to grow even faster than installed power (MW). This positive trend results in an increased energy production potential per megawatt installed capacity. It is a fact that larger rotor sizes for a given generator capacity remains within limits an economical investment in terms of energy yield potential, even under highspeed offshore wind conditions. However, industry analysts initially predicted that for offshore applications modified maritime versions of given land turbine types would be fitted with substantially larger generators (+ 40 - 50%). That proved wrong. Currently development of large relatively light rotor blades like the 54-metre long LM54.0 P seems to keep pace with wind turbine up scaling. With a global market share of about 80% grid connected state-of-the-art wind turbine technology continues to be dominated by 'conventional' gear driven systems with well-known manufacturers like NEG-Micon, Vestas, GE Wind, Bonus, and Nordex.
+
+12
+
+The grid connected direct drive segment has been an Enercon monopoly since 1992. In addition a number of small international contenders like former Lagerwey of the Netherlands have been trying for years to establish a position into this 'minority' market segment. Hybrid drive (single step-up stage) was pioneered by engineering consultancy aerodyn Energiesysteme of Germany, a patented compact drive solution they named Multibrid®. Since 2001 licensee WinWind of Finland operates several 1 MW machines, a 3 MW prototype is planned early 2004. Pfleiderer of Germany also plans a 5 MW Multibrid prototype for spring 2004. However, hybrid Multibrid type concepts still have to prove what they are worth in the short to medium term as the track record of this novel technology is very limited. 6. Variable speed for superior control For wind turbine systems from 1.5 - 2 MW and up, the combination variable speed operation with full span rotor blade pitch control has rapidly become state-of-the-art technology. Key system features include superior power output control and advanced grid support functions. One distinct control option is the capability to operate a wind farm like a peakpower plant: in other words a built-in capacity to instantly reduce or increase plant output on demand. The only limitation is that the prevailing wind speed has to be within operating range.
+
+Figure 7: Rotor hub with pitch system, for connection of the blades to a main shaft and for turning the blades during operation (picture NEG Micon)
+
+13
+
+Variable speed operation also means superior gearbox torque control. For example when a wind gust hits the rotor, drive train torque is more or less kept constant by temporary accelerating the rotor (flywheel effect). The majority of 1.5 - 1.65 MW and up gear driven wind turbines is fitted with a double-fed induction type generator. Key advantage of this innovative variable speed concept is that only 20 - 30% of the generated power has to be fed through a frequency inverter. This represents a substantial investment cost saving compared to identical systems fitted with a standard synchronous or asynchronous generator, which both feed 100% of the power through an inverter. The latter cost advantage is still valid today despite a substantial drop in power electronics costs during the past 6 - 8 years. In new direct drive wind turbine designs there appears a clear favour for permanent magnet type synchronous generators (PMG). However, the commercial wind market is currently dominated by 'conventional' synchronous generator systems with external field excitation. 7. Costs structure trends Land-based wind turbines investment percentages for foundation and necessary infrastructure typically account for 25 -30% of total project costs. Early studies indicate that this ratio is more or less reversed for offshore wind farms, whereby the turbine (tower, nacelle, and rotor) typically caters for 30 - 35% of cumulated project costs. However, as a positive industry trend foundation and infrastructure costs tend to drop structurally as a percentage of total project investments, as the Nysted offshore wind farm cost overview indicates (Table 3). Surprisingly fast learning curve advancements of equipment manufacturers and offshore installation contractors is said to be a major contributing factor explaining the positive phenomenon.
+Table 3 165 MW Nysted investment cost structure % investment costs 49 18 6 12 4 11
+
+System component Wind turbines (tower + nacelle + rotor) Gravity-based foundations* Cable infrastructure wind farm Transformer station + 132 kV connection Scada system Miscellaneous
+
+Note: Total investment € 245 million (€ 1,500/ kW) * Water depth 9 metres, relatively heavy expensive concrete foundations
+Source: Wind-kraft Journal & Natürliche Energien, Issue 4/2003
+
+Future will tell whether power plants built in much deeper water and with full exposure to rough North Sea conditions will be capable to produce comparable investment cost-breakdown figures.
+
+14
+
+8. Offshore complexities Due to the limited offshore 'weather window' wherein erection activities at sea can be safe and economically performed, speed of work is crucial. It will among others determine whether future wind farms of 500 MW and up can still be completed in a single offshore season. The workable North Sea weather window is typically restricted to the period April - September. However, due to new generation jack-up barges this window can be extended. Substantially longer windows are by comparison available in the relatively calm Baltic Sea environment. When critical offshore activities are performed outside the workable period, delays can be expected. For above reasons and cost reduction purposes it is not surprising that wind developers increasingly search for time saving offshore installation methods. The ultimate aim is to lift and transport onshore assembled and pre-tested wind turbine units in one single unit to their destination.
+
+Figure 8: The measurement mast as erected end of 2003 by NoordZeeWind (combination of NUON and Shell) for the coast of Egmond aan Zee; used for wind and wave measurements (photo NoordZeeWind)
+
+15
+
+A second key issue is operation and maintenance, by definition complex and costly offshore activities. The main reason is that offshore wind turbine service and maintenance access can be problematic during autumn and winter periods. It is therefore a major challenge for the emerging offshore wind industry to develop cost-effective, reliable, but above all safe all-weather installation access methods. For wind turbine and auxiliary equipment suppliers an equally challenging task is the development of much more reliable 'offshore design' wind turbines requiring only one annual planned service visit. This in contrast to a target twice a year service interval for stateof-the-art land based units. 9. Foundation and installation challenges The offshore industry quickly transforms itself into a competent and highly valued partner to the global wind industry. Their joint aim is the rapid development by the wind industry of state-of-the-art multi-megawatt class wind turbines for future offshore power plants, which are in addition easy to erect, connect to the grid, and maintain. The easy erection trend is reflected by the increasing but still limited presence of purpose-built wind turbine installation barges like Dutch Mammoet Van Oord's Jack-up barge Jumping Jack®, the Mayflower® Resolution [under construction, UK], and A2SEA 's modified self-propelled freighter. Internationally active Dutch offshore, civil engineering and steel construction specialists do play already a leading role in the emerging offshore wind market. Their key involvement in Horns Rev (2002) can serve as an example (Table 4).
+Table 4 Company Key role Dutch companies in Horns Rev construction Activity Foundation Installation, both monopiles and transition sections, using the chartered jack-up barge "Buzzard" (owned by Ballast Nedam) Rolling and precision welding of all eighty thick-wall monopile and transition piece tubes Detail design and production engineering of transition pieces in cooperation with MT Hyjgaard (DK) en Techwise (DK) Transition piece handling and construction; surface treatment monopiles Engineering and construction offshore transformer station Offshore installation transformer station
+
+Mammoet Van Oord
+
+SIF
+
+Smulders Group
+
+HBG Smit Heavy Lift
+
+Source: Dutch industry, 2002
+
+This year Mammoet Van Oord (a company with two main shareholders, Mammoet and DOWEC partner Van Oord), and the SIF/Smulders Group carry out comparable tasks for Arklow Bank.
+
+16
+
+A major difference is that Mammoet Van Oord is this time responsible for both foundation and wind turbine installation works, activities for which it employs the Jumping Jack. Mammoet Van Oord is in addition member of the Dutch Q7-WP consortium, which for 2005 aims at building a 120 MW (60 x 2 MW) North Sea wind farm outside the 12-mile zone, in 20 - 25 metre deep water. NEG Micon/DOWEC and Ballast Nedam are preferred EPC-contractors for installing thirty-six 2.75 MW DOWEC offshore turbines as part of the 99 MW Near Shore Windpark planned in 2005 near Egmond aan Zee.
+
+Figure 9: The Jumping Jack of Mammoet van Oord (photo Mammoet van Oord)
+
+10. Maritime innovations Offshore wind turbine technology progress encourages the rapid development of novel installation methods and the birth of completely new installation vessel concepts. Some examples: Civil engineering contractor and DOWEC partner Ballast Nedam developed a special catamaran type installation vessel: the Svanen. The 103-metres long and 90-metres wide self-propelled catamaran type Svanen is currently one of the largest installation vessels available in the market. The vessel is very stable in moderate wave height conditions, with standard wind compensation technology fitted for lift activities performed at 80-metre elevations. 17
+
+The superstructure is capable to hoist a maximum load of 8,100-tonnes, more than sufficient to lift, transport, and install complete 5 - 6 MW wind turbines in one single piece. The Nieuwegein based specialist will probably utilize the unique vessel for NSW construction.
+
+Figure 10: The Svanen of Ballast Nedam (picture Ballast Nedam)
+
+Mammoet Van Oord 's new 91-metre long and 33-metres wide Jumping Jack is equipped with four large steel legs, one at each corner. Main difference with existing jack-up barges is that in conditions with water depths up to 32metres, and a sea states of up to around 2m significant wave height, the Jumping Jack can raise itself out of the waves. The fixed positioning of the legs onto the seabed secures a large, save and stable working platform for installation crews. A clever systems innovation is that the barge lifts her self up along the huge 49-metre long legs with the aid of steel cables and cable winches. This lift solution works much faster compared to a common rackand-pinion drive. The less rigid cable connection between hull and legs in addition reduces load impact on the barge in the treacherous transition period between floating and standing position. Finally, fitted on the deck is a rotating ringer type crane, capable to lift a maximum load of 1,200 tons at 24m reach. This is more than sufficient to lift complete 4 - 5 MW wind turbine assemblies (nacelle + rotor + tower) as well as handle continuously in size growing foundation piles.
+
+Figure 11: The Jumping Jack of Mammoet van Oord (photo Mammoet van Oord)
+
+18
+
+The Danish A2SEA Group developed an offshore wind turbine installation method comprising a modified commercial freighter fitted with four spud-legs and a crane system. For wind turbine construction purposes the hull is elevated just sufficient to create a stable working platform. Marine Structure Consultants of the Netherlands (MSC) finally presents with the Trifloater® a completely different focussed offshore wind technology innovation. Trifloater is essentially a floating wind turbine assembly destined for future applications in water depths of 45 - 50m. MSC designers suggest that a complete structure comprising wind turbine tower, nacelle, and rotor, can be assembled, commissioned and tested in a sheltered place before being towed to its final destination. The novel concept is a spin-off of a recent Dutch feasibility study on floating wind energy named 'Drijfwind' [Floating wind]. The latter study was performed in cooperation with DOWEC partners TU Delft and ECN, Marin, TNO, and former Lagerwey the Windmaster.
+
+Figure 12: The Trifloater concept
+
+19
+
+Part II: DOWEC formation
+The following chapters 11 - 17 contain an overview of project formation stages, provide an introduction to the six DOWEC partners, and state objectives and key R&D considerations. 11. DOWEC - from plans to project Driving force behind plans for a high-profile Dutch offshore wind turbine development group in 1997 were three companies: ECN, Rotorline and Aerpac. Their joint initiative led to the formation of the Dutch Offshore Wind Energy Converter (DOWEC) group. Background was a sobering analysis that a once leading national wind industry had largely lost the world market to more successful Danish and German competitors. A dedicated effort by determined Dutch wind energy and offshore technology players, supported by the government, had to reverse the tide by creating 'last chance' high-growth opportunities within an emerging offshore wind sector. Late 1997 DOWEC plans evolved into a research proposal. Next step was a pre-feasibility subsidy application to the government sponsored EET program (Economy, Ecology, Technology). Awaiting the outcome a pre-concept study funded by the Netherlands Organisation for Energy and the Environment (Novem) commenced early 1999. This study was executed by a group comprising turbine manufacturer NedWind, rotorblade manufacturers Rotorline and Aerpac, offshore specialist Van Oord, technology research institutes Delft University and ECN, and engineering consultancy SPE. A major project change occurred when NEG Micon of Denmark took over NedWind, and Danish rotor blade supplier LM Glasfiber became Rotorline 's new owner. In the new setting NEG Micon Holland took over the position of DOWEC project leader. 12. Pre-concept study Starting point for the pre-concept study was a clean sheet of paper, leaving all conceptual design options open. This approach resulted in six different concepts (Table 5), for which a comparative analysis was conducted, covering criteria like expected yearly failure frequencies, availability, and calculated annual energy yield. In addition covered were indicative energy production potential, and operation & maintenance (O&M) costs in €/kWh.
+
+20
+
+Table 5
+Concept Base Line Advanced* Robust Stall-teeter Smart Stall Advanced DD DD GD FS VS
+
+Operational data six pre-concepts
+Drive system GD GD GD GD GD DD Rotor blades 3 3 2 2 3 3 Operation FS & Active Stall VS & Active Pitch FS & 'Classic' Stall VS & 'Classic' Stall VS & Stall & blade tip control VS & Active Pitch
+
+= Direct drive = Gear drive = Fixed Speed = Variable Speed
+
+* Current DOWEC technology
+Source: DOWEC, 2000
+
+But despite accumulation of substantial know-how during the study, qualitative and quantitative inputs did not justify hard and decisive conclusions favouring one of the pre-selected concepts. Specific recommendations for continued investigation in the DOWEC project were formulated. Finally, all preparatory project tasks were completed in 1999. Partners used this 'spare' time also for necessary teambuilding and the development of a set of shared principles. January 1, 2000 marked DOWEC 's formal take-off. 13. DOWEC partners DOWEC 's six partners can be subdivided into three different categories on the basis of specific competence fields. Each group comprising two partners was responsible for conducting specific tasks within the DOWEC project: Industrial and Product Development
+
+NEG Micon Holland
+
+LM Glasfiber Holland (LMGH)
+
+Offshore & Civil Engineering
+
+Ballast Nedam 21
+
+Van Oord
+
+Fundamental and Applied Research
+
+Energy research centre ECN
+
+TU Delft
+
+14. Partners in brief DOWEC leader NEG Micon Holland is a 100% subsidiary of NEG Micon A/S. This world 's third largest (2002) manufacturer has a presence in all key wind markets. It offers a range of products from 600 kW (fixed speed, stall control) to the latest 2.75 MW (variable speed, pitch control) onshore/offshore wind turbine. The fifteen person strong Bunnik based DOWEC team serves as the Group 's global offshore competence centre. With regard to offshore wind track record, formerly two small projects consisting of 500 and 550 kW turbines were built in The Netherlands (Medemblik) and Sweden (Bockstigen). A major technological and logistical leap forward was the 10 MW Swedish Yttre Stengrund wind farm (5 x 2 MW). Again a step forward is that NEG Micon has now been selected to supply 2.75 MW DOWEC wind turbines for NSW.
+
+Figure 13: The Yttre Stengrund offshore project of NEG Micon (photo NEG Micon)
+
+22
+
+LM Glasfiber Holland is a full subsidiary of LM Glasfiber A/S, the world's leading rotor blade manufacturer. Heerhugowaard based LMGH is part of LM Glasfiber 's rotor blade development organisation, employing seven design specialists. LM Glasfiber bases its offshore know-how on a broad experience with supplying blades to more than 50% of all offshore wind farms in operation by the end of 2002. In addition twelve years of operational experience have been gained from monitoring rotor blades of the world 's first offshore wind farm. LM is in addition one of the few manufacturers with in-house blade testing facilities and the only true global manufacturer of rotor blades for wind turbines. A recent company milestone was the completion of an ambitious Future Blade Technology research programme, aimed at setting new standards with advanced lightweight rotor blades.
+
+Figure 14: The blade test of the LM54 blade, in which the extreme strength and the lifetime of the blade is verified (photo LM)
+
+Ballast Nedam is Europe-wide active in civil engineering contracting works like utility buildings, harbours, tunnels and bridges. A prestigious project Ballast Nedam took part in was the world famous Størebelt bridge connection between Denmark and Sweden. For lifting and exact positioning of piers and superstructure elements for this major project Ballast Nedam developed the Svanen initially.
+
+Figure 15: The Svanen installation vessel during the Størebelt bridge construction (photo Ballast Nedam)
+
+23
+
+Van Oord is a specialist marine contractor with over 50 years of experience and a proven track record in three areas: dredging, offshore works and coastal construction. Van Oord is one of the internationally leading contractors for dredging works, with a substantial fleet of dredging vessels. It is also market leader in offshore rock placement activities boasting the world 's largest fleet of flexible fall-pipe vessels. Furthermore, through a fleet of dedicated vessels and equipment Van Oord is a leading contractor for landfalls aimed at cable and pipeline installations. In June 2002 Mammoet Van Oord, officially inaugurated the Jumping Jack, marking a new and challenging offshore wind turbine installation era for both companies. The combination is capable to offer a complete installation package, including quayside logistics (Mammoet), and offshore cable installation plus scour protection installation (Van Oord).
+Figure 16: Equipment of Van Oord: a dredging vessel and a stone placement vessel (photos Van Oord)
+
+Energy research centre ECN is an independent market-oriented organisation for research, development, consultancy, and knowledge transfer in energy and related fields. With sustainable development as a guiding principle ECN 's R&D effort is focused on seven priority fields: solar energy, wind energy, energy from biomass, energy policy studies, efficient use of energy and materials in industry and the built environment, and clean use of fossil fuels. Wind energy is one of the seven ECN sustainable energy priority areas.
+
+24
+
+The 45-person strong wind energy unit ECN Wind Energy (established in 1975) covers all relevant disciplines, including offshore wind. Key activities comprise among others integral design of offshore and onshore wind power farms, resource assessment studies, aerodynamic and aeroelastic diagnosis, and rotor design. Finally, ECN develops and evaluates 'first of a kind projects' and offers specialist wind energy training courses.
+
+Figure 17: Investigation on the development of vortices (i.e. the aerodynamic flow) behind a wind turbine) (photo ECN)
+
+The TU Delft has a rich history in wind energy research, which commenced in 1975 with rotor aerodynamics and rotor blade tip vane behaviour. This was in 1985 reinforced by new subjects like fundamentals of rotor blade fatigue, control technology and power electronics. A milestone in the early 1990s was a new professorship in wind energy & technology and the founding of DUWIND (1999), a multidisciplinary organisation and cooperation between various engineering departments. Key objectives were strengthening internal and external networks, and conducting joint projects. With a student population of 13,000 the TU Delft is the largest technical university in the Netherlands.
+
+Figure 18: Wind tunnel test on airfoil DU96W180, which is used on wind turbine blades (photo TU Delft)
+
+25
+
+15. Project objectives DOWEC 's key industrial objective (2000 - 2003) was to develop all necessary knowledge, design tools, competences, and related facilities to build reliable commercially attractive multi-megawatt class offshore wind turbines. In a broader perspective, the DOWEC project aimed at contributing to an overall increase of wind energy capacity to the national Dutch power supply. Being a nationally funded project with local partners, competitiveness of the local industry at the world market should also be substantially improved with clearly measurable end results. Another more scientific focussed part of DOWEC activities aimed at acquiring generic knowledge of offshore wind energy application, subdivided in fundamental and applied research. Some activities specifically focused at obtaining knowledge required for the offshore wind system design process, supplemented by applied industrial research aimed at specific product and process design solutions. Part of the scientific package was to evaluate the economics of different wind turbine concepts. The systems evaluation encompassed turbine scale effects, CoE and cost breakdown aspects, technological and related challenges. These and additional external design drivers logically resulted - compared with better-known onshore conditions into a need for a fundamental concept evaluation, rather than simply up scaling existing onshore technology. 16. Key focus wind farm optimisation Initially science-driven DOWEC research indicated that 5 - 6 MW class wind turbines developed for offshore wind power plants of about 500 MW, would be a prerequisite for competitive industrial-scale maritime wind application. It is already a fact that several offshore wind plants of this size and even substantially larger have been planned in Germany. With this background intelligence the DOWEC group engaged in a baseline design for a 500 MW reference wind plant, comprising installation, operation and maintenance strategy, grid connection, and wind turbine pre-design. This design has been partly optimised, and contains a detailed cost analysis plus a CoE calculation. In addition a substantial number of design variations was predefined and evaluated. This evaluation had a key focus at influences of specific design variations on CoE. The evaluation comprised conceptual and parametric design factors like changes in water depth and distance to shore. Possibilities for significant cost optimisation have been pinpointed at in the operation and maintenance strategy, reliability of the machine design, installation procedures, and load reducing control strategies. What size and type of wind installations will finally become winning concepts for these future mega projects therefore depends on many preconditions. Certain is that besides water depth and distance to shore, one of the most crucial factors will be the timely availability of economic reliable state-of-the-art wind turbines with sufficient track record.
+
+26
+
+Break-down of Generating Costs
+
+Retrofit & Overh aul 6% Y early Operatio n & Maint enanc e 2 7%
+
+De comm is sioni ng 1%
+
+Fo undatio n 9%
+
+To wer 9%
+
+W ind t urbine 24%
+
+As sem b ly, Trans po rt a nd Installa tion 11%
+
+Other 5%
+
+Trans mi ss ion Sy ste m to Shore 6%
+
+El ec tric Col lec tion Sys tem 2%
+
+Figure 19: The beak-down of generating costs for the reference wind farm (calculation and graph by ECN)
+
+17. DOWEC Demonstrator - R&D considerations DOWEC 's research package comprised the development of a 3 MW (D = 100 m.) demonstrator prototype, aimed at evaluating load patterns and behavioural aspects on both individual component and systems level. Another key research topic was improved understanding of the complex offshore environment, and how this affects commercial application of wind energy. Examples of external influences are hydrodynamic loading (tides, waves and current), the corrosive offshore environment, and preventing seabed erosion around foundation structures. Related issues encompassed power transmission, support structure alternatives, and offshore maintenance. Freedom in design is much a much more favourable condition for offshore installations compared to land-based systems. Also transport logistics, structural and visual aspects, noise, and safety related issues differ considerably from the onshore situation, and are usually characterised by (potentially) far fewer restrictions. DOWEC research activities with reason had a major focus on exploring design related opportunities provided by the challenging operational offshore environment. And while the search for an optimal offshore wind turbine was initially envisaged to commence with a clean sheet of paper, it became in practice soon embedded into a more market oriented industrial product development effort. This shift in focus was a consequence of the anticipated boom in commercial scale offshore wind power projects, which substantially reduces the available Time-to-Market. These commercial projects in turn are planned by risk avoiding developers interested in the well functioning of their investment for at least twenty years. They therefore demand products and procedures based on well-known technology concepts and proven principles. 27
+
+Part III: Partner achievements and future potential
+The last seven chapters of this booklet contain a summary of DOWEC partner key achievements, followed by a closing chapter on the future potential with key challenges to commercial offshore wind energy application. 18. NEG Micon Holland: 'DOWEC Demonstrator' Besides conducting product design, development, and coordinating tasks for the 2.75 MW NM 92/2750 and DOWEC Demonstrator spin-offs, the Dutch specialists are engaged in many other future oriented Group activities. They played among others a key role in the structural design of the 4.2 MW NM 110/4200 offshore wind turbine, and several smaller 1.5 - 2 MW class machines. The DOWEC NM 92/2750 Demonstrator operates with an optimized variable speed and functionally integrated blade pitching system called Pitch Regulated Variable Speed (PRVS). This proven technology dates back to the beginning of 2002. The huge three-blade rotor itself is optimized for cost-effective and reliable offshore operation. For the Demonstrator drive train a deliberate choice was made for a stateof the-art three-point gearbox support assembly and a non-integrated generator system. This design concept builds on experiences with hundreds of smaller NEG Micon turbines types in the 1.5 - 2 MW capacity class. It is also the semi-standard state-of-the-art engineering solution for a majority of gear driven systems now applied in the wind industry.
+Figure 20: The DOWEC NM92/2750 wind turbine (picture NEG Micon)
+
+Benefits of proven technology and a strong multi-year track record clear: reduced risks, optimized system costs plus improved quality, and a substantially shortened 'Time to Market'. This evolutionary rather than revolutionary design strategy offers the best guarantees for substantial kWh cost price reduction, even when measured during a twenty-year operational period. And as grid power quality requirements are becoming more stringent all the time, a lot of emphasis has been given to wind turbine grid integration capabilities of the system. Among advanced PRVS features are active grid support and stabilization of weak grids, and a built-in capacity to operate wind turbines if required as a peak power plant. 28
+
+Flexibility As the Demonstrator was specifically designed for offshore operation, the system has a built-in flexibility to cope with different support structures, grid connection and installation methods. One distinct Demonstrator system feature is a modest Top Head Mass (THM) aimed at easier (offshore) installation as well as reduced structural loads on the foundation structure. Finally, the machine is equipped with an internal crane system consisting of a permanent so-called column and beam assembly in the nacelle. Two different hoisting system types are available for service and maintenance visits: - a permanent winch with a 1-tonne capacity; - a temporary winch assembly for larger lift jobs, like interchanging a blade, gearbox, or generator. The permanent winch is used during 'normal' once-a-year planned service visits, and as an assistance tool during assembly of the temporary hoisting system. The 1-tonne hoisting winch itself operates with a 'crab type' transport movement mechanism enabling it to cover the entire nacelle area in longitudinal as well as transverse directions.
+
+Figure 21: The wind turbine with the internal crane construction mounted (picture NEG Micon)
+
+The combination of the above crane systems in place, and a stringent designfor-easy-maintenance strategy, offers the best guarantees that turbine downtime is reduced to an absolute minimum. The outcome is increased availability, and substantial CoE advantages that apply both for offshore as well as demanding land based applications.
+
+29
+
+19. LMGH: 'World 's longest rotor blade from Heerhugowaard' During 1999 - 2001 LMGH made substantial design contributions to the 44.8metre long LM 44.8 P, a rotor blade used on the DOWEC Demonstrator The longer LM 54.0 P blade is specifically designed for the NM110/4200. The design itself is a result of close cooperation between specialist teams of LM Glasfiber Holland and NEG Micon Holland. When the test blade and prototype set of the LM 54.0 P blade were produced in 2003 it was the longest commercial blade in the world. LM Glasfiber Holland specialists performed all blade design and management tasks of this ambitious project. The LM 54.0 P is a glass fibre reinforced epoxy (GFRE) blade for which extensive use is made of the Future Blade Technology, resulting in a total mass of only 13.5 tonnes. Consequently, this blade is 20-50% lighter compared to competing blades with sizes above 50-metre length. Furthermore the automated Future Blade Technology has resulted in a blade, which is highly competitive and well suited for mass production. The blade has already been successfully tested statically. Dynamic fatigue tests will be finished by mid 2004. Finally, the LM 54.0 P blade is equipped with LM 's well-tested and documented Multi Receptor Lightning Protection System. This lightning protection system, the use of welltested proven materials, new aerodynamic profiles, and novel working procedures all contribute to the blade 's reliability.
+
+Figure 22: Transport of the LM54.0 P blade by LM (photos LM)
+
+The combination with built-in damage tolerance capacity and low maintenance requirements finally results into trend setting availability standards, all essential preconditions and key success factors for the upcoming offshore wind industry.
+
+30
+
+20. Ballast Nedam: 'DOWEC design installation method' Within the DOWEC project Ballast Nedam focussed at the development and engineering of state-of-the-art foundations, and new installation methods for foundations as well as turbines. As part of the project the group developed an innovative offshore installation method for the Svanen. During start-up the Svanen will take a monopile, transition piece and piling hammer on board in IJmuiden harbour. Each monopile typically has a length between 45 and 56metres, a diameter of approximately 4.5-metres, and a mass between 270 360 tonnes. Transition pieces slide over the top of the monopiles. Their function is to correct misalignment with a maximum of 0.5 degrees. Misalignment occurs when a monopile is not hammered exactly vertical into the seabed, but the tower position has to be level. After loading the Svanen sets sail to its destination, hammer in the monopile and install a corresponding transition piece. When the vessel returns to IJmuiden a next corresponding monopile and transition piece set are being loaded. This time transport also incorporates a complete superstructure comprising tower, nacelle, and rotor. But even with a complete installation on deck, the additional 800-tonne payload for 6 MW scale wind systems is minor compared to the 8,000-tonne cargo capacity. A special support vessel meanwhile positions anchors for the Svanen in a predefined pattern. Immediately after arrival, cables will be attached to the anchors and the vessel can manoeuvre itself in a predefined position for placing the superstructure.
+
+Figure 23: The Svanen (picture Ballast Nedam)
+
+To minimize wave motion influence the Svanen is also positioned at a predefined angle relative to the prevailing wave direction. The hoisting system itself is fitted with a surge-compensator (constant tensioning technology). Under favourable conditions up to 3 - 4 turbines can be loaded in a single voyage. This is from a time and costs saving point of view especially attractive for large wind farm construction jobs, but depends in practice to a large extend on weather conditions. A major uncertainty is for instance that installation activities can only take place during moderate wave heights, while weather predictions are normally reliable for a time span of two to three days at a maximum.
+
+31
+
+21. Van Oord: 'Cable related and scour protection tasks' Van Oord's tasks within DOWEC were twofold: cable related, and scour protection works around turbine foundations. The pull-in of a cable into each individual wind turbine unit is by itself a highly complex operation. It comprises cable transition from a static wind turbine into the dynamic and continuously moving surrounding seabed. Long-term cable protection and securing the turbine foundation's integrity in the eroding seabed environment were both specialised Van Oord inputs into the DOWEC project. In June 2002 Mammoet Van Oord, officially inaugurated the Jumping Jack, marking a new and challenging offshore wind turbine installation era for both companies: Mammoet and Van Oord. The combination is capable to offer a complete installation package. This encompasses quayside logistics (Mammoet), and offshore cable installation plus scour protection installation (Van Oord).
+
+Figure 24: Jumping Jack working on the installation of foundations (photo Van Oord)
+
+22. ECN: 'Measuring and validation programme' ECN coordinates DOWEC 's R&D programme. Key research basis is an integrated wind farm concept, focussed primarily at price-performance improvement issues. The research effort included a comparative wind turbine concept evaluation, and cost-modelling studies focussed at interactions between cost parameters versus performance characteristics. Related questions were how these interactions affect CoE of large future offshore wind plants (>500 MW) during a twenty-year operational lifetime. ECN finally conducted among others rotor blade aerodynamics calculations in close cooperation with NEG Micon and LM Glasfiber, and engaged in developing advanced control strategies. Soon after the Demonstrator became operational, ECN commenced with a comprehensive measuring and validation programme comprising three main objectives: testing all main mechanical components like the gearbox, validation of aero-elastic and aerodynamic turbine behaviour, and the application of new measurement techniques especially suited for offshore use.
+
+32
+
+As part of the program strain gauges have been attached at different sections of the blade length measured from each tip. The use of strain gauges based on glass-fibre technology is new and offers specific advantages. With this novel technology solution and a large 92metre rotor fitted on the Demonstrator, the risk of lightning strikes at critical rotor sections can be substantially reduced.
+
+Figure 25: Simulation of the dynamic behaviour of a rotor construction (picture ECN)
+
+The technology offers in addition new and exiting opportunities for better dynamic loads monitoring and turbine control on the basis of these measured results. Equally new is a Sodar-type wind measuring system that enables wind measurements up to a height of 250 metres, without having to invest into an expensive wind measuring mast.
+
+23. TU Delft: 'Research and design focussed knowledge transfer' A number of DUWIND specialists have been assigned to the DOWEC project, with research priorities mainly concentrating on two key subjects: operation & maintenance (O&M), and life cycle cost analysis research focussed on future large scale (> 500 MW) wind power plants. A key research question was the actual performance of current state-of-theart (semi) offshore turbines in the 2 - 3 MW capacity class with respect to maintenance requirements and availability. Related issues include among others (potential) measures that reduce the need for service and maintenance from the current twice a year interval to only one annual visit. Equally important is whether these results can serve as relevant design criteria for future offshore wind plants, consisting of much larger custom designed offshore wind turbines in the 4 - 6 MW range. DOWEC provided an excellent opportunity for the TU Delft to implement lessons learnt in previous research studies on offshore wind energy in a result-oriented design-focussed project environment. In the margin of the project, knowledge could be transferred to the other five partners. The latter is at the same time one of the TU Delft 's main objectives. In return, experience and knowledge from industry has provided valuable feedback on practical issues involved. Knowledge obtained during the DOWEC project has in addition been integrated in courses developed for master students, and serves to the general benefit of the Dutch industry.
+
+33
+
+One practical idea picked up during project execution is fitting tower segments with a slip-joint, a proven solution applied before at some smaller onshore turbines. Instead of a grouted or flanged connection the tower slides over the somewhat conical top of the foundation pile. The method appears to be feasible for current state-of-the-art offshore wind turbines. It might offer substantial advantages like eliminating the costs of a transition piece and accompanying cumbersome installation process.
+
+Figure 26: A family of DU profiles which are used on wind turbine blades (picture TU Delft)
+
+24. Future potential DOWEC partners today stand at the forefront of wind energy and offshore technology development. This is an excellent starting point for further strengthening that strong position in future. Group experiences of today will make it easier for individual DOWEC partners to face challenges offered by tomorrows demanding offshore wind markets. These challenge turned opportunities are clearly reinforced by joint network benefits built since 2000. What offshore wind energy will bring in future challenges our imagination. One thing seems certain: developments will accelerate even faster than anticipated and thought possible today. This fast offshore wind development track is also envisaged to result into even more reliable wind turbines, technologically superior cost-effective installation methods, and CoE levels far below than what can currently be imagined. From a wind technology point of view a rotor diameter in the range of 110 - 125 metres, and a 4 - 4.5 MW installed capacity is at present regarded top of the market. In this highly dynamic market environment discussions about turbine capacities of 8 - 12 MW and rotor sizes in the range of 155 - 160 metres have evolved already into feasibility studies and beyond. Some visionaries envisage such huge installations to become operational within 8 - 10 years from today, but their technological and economic feasibility still awaits hard answers. DOWEC partners are confident that the positive outcomes of their project will serve as a catalyst for a professional and successful Dutch offshore wind energy sector, potentially providing highly skilled well-paid jobs for thousands of professionals. They also believe that with the right approach and dedicated support offshore wind will turn into a formidable powerhouse, serving an increasingly power hungry world with competitive and inexhaustible supplies of clean energy.
+Editor: Eize de Vries.
+
+34
+

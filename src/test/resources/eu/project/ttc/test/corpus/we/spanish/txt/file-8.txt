@@ -1,0 +1,125 @@
+XIII ERIAC DÉCIMO TERCER ENCUENTRO REGIONAL IBEROAMERICANO DE CIGRÉ
+Puerto Iguazú Argentina
+
+24 al 28 de mayo de 2009 Comité de Estudio C1 - Desarrollo de Sistemas y Economía
+
+XIII/PI-C1 -21
+
+ANÁLISIS DEL LÍMITE DE ESTABILIDAD DINÁMICO EN TURBINAS EÓLICAS CON GENERADORES DE ROTOR EN CORTO CIRCUITO
+
+ALEJANDRO JURADO Grupo Energía y Ambiente (GEA), Departamento de Electrotecnia Facultad de Ingeniería, Universidad de Buenos Aires
+
+Resumen: En el presente trabajo se analiza el comportamiento de distintos modelos dinámicos utilizados para representar turbinas eólicas con generadores de inducción de rotor tipo jaula para el estudio del límite de estabilidad transitoria de una red, cuando se produce un cortocircuito trifásico a tierra en alguna parte de la misma. Evaluándose la influencia del modelo en la elección del tiempo crítico de despeje de falla. Las simulaciones y gráficas se realizaron con el programa ATP/EMTP. Palabras Claves: Estabilidad transitoria, Energía eólica, Modelos, Velocidad crítica, Tiempo de
+
+despeje de falla. ATP/EMTP.
+1 INTRODUCCIÓN:
+
+El límite de estabilidad transitoria de un Sistema Eléctrico de Potencia está relacionado con la capacidad que posee el sistema para mantenerse operable luego de producirse una falla en algún punto del mismo. Este límite puede evaluarse a través del tiempo crítico de despeje de falla, el cual depende entre otras cosas de las características mecánicas del molino, de la carga entregada por la turbina en el momento previo a la falla, de la tensión remanente en bornes del generador en el estado post falla, etc. Distintos modelos dinámicos de turbinas eólicas son utilizados para el estudio de estabilidad transitoria en los sistemas de potencia donde se encuentran conectados generadores de inducción. Básicamente la diferencia radica en el número de masas rotantes consideradas. En general cuanto mayor es el número de masas consideradas mayor es la precisión del modelo pero también mayor es la complejidad de cálculo. El modelo mas simple es aquel que considera como una masa concentrada a aquellas correspondientes a la turbina, la caja multiplicadora y el generador, aunque el mas utilizados para este tipo de estudios resulta ser el de dos masas, considerando la masa rotante de la turbina unida a la masa rotante del generador por medio de un eje con cierto grado de elasticidad. La elección del modelo deberá responder al tipo de análisis que se desee realizar y a los datos disponibles de la turbina y del sistema de potencia. 2 ESTABILIDAD DEL GENERADOR DE INDUCCIÓN, RESBALAMIENTO CRÍTICO.
+
+El par electromagnético de la máquina de inducción puede expresarse mediante la siguiente ecuación:
+
+Paseo Colón 850, ( C 1063 ACV ) Ciudad Autónoma de Buenos Aires, ARGENTINA Tel/Fax (5411) 4343-0891
+
+email:ajurado@fi.uba.ar
+
+3 Te = ⋅ ΩS   R1 + 
+Donde:
+
+′ U 2 ⋅ R2
+2
+
+s
+
+′ R2  ′ 2  + (X1 + X 2 ) s 
+
+(1)
+
+U, es la tensión L-N del generador, S, es la velocidad sincrónica, s, resbalamiento y R1, R´2, X1, X´2, son los parámetros eléctricos del generador de inducción. Al producirse un hueco de tensión en el punto común de conexión (PCC) del generador con el sistema de potencia, debido a una falla, aparece una disminución momentánea del par electromagnético desarrollado por este, pudiendo ser cero dependiendo del valor de la tensión en bornes del generador, como puede verse de la ecuación (1). Si en estas condiciones el par motor actuante (turbina) se mantiene constante y superior al par desarrollado por el generador el conjunto se acelera aumentando la velocidad del rotor del generador respecto al campo sincrónico. Si en el momento en que la falla es despejada, el par motor es superior al electromagnético desarrollado por el generador el molino se acelerará provocando la actuación de las protecciones. Un factor importante que contribuye a que el par electromagnético disminuya sustancialmente es que al aumentar la velocidad el generador absorbe una mayor energía reactiva del sistema acentuándose con esto la caída de tensión en los bornes del mismo. En la figura 3 se representa la cupla electromagnética de un generador de inducción y la cupla motora constante originada por el viento ambas en función del resbalamiento. Se considera para el análisis del trabajo que durante la falla, la cupla originada por el viento se mantiene constante.
+
+Fig.1: Resbalamiento crítico. Considerando que el sistema se encuentra en equilibrio en el punto de resbalamiento S0, se produce una falla que según lo dicho anteriormente origina una disminución de la cupla electromagnética produciéndose un incremento de la velocidad del generador hasta por ejemplo el resbalamiento S1. En este punto se libera la falla restableciéndose la tensión de pre-falla en los terminales del generador por tanto el par electromagnético existente en el instante anterior a la falla. Para este caso el par electromagnético producido por el generador supera el par motor reduciéndose la velocidad hasta el resbalamiento S0 lográndose la estabilidad del sistema. Por el contrario si el tiempo de despeje de falla fuera tal que el generador se acelerara hasta la velocidad correspondiente al resbalamiento S2, al despejarse la falla el par motor será superior al electromagnético desarrollado por el generador, originándose un par acelerante que incrementa la velocidad de la turbina perdiéndose la estabilidad de la máquina conectada.
+
+2
+
+Existe un valor de resbalamiento arriba del cual el sistema pierde la estabilidad, este es denominado resbalamiento crítico, consecuentemente con este se define la velocidad crítica. Al tiempo necesario para alcanzar esta velocidad se lo denomina tiempo crítico. La velocidad crítica resulta independiente del tipo de falla, sin embargo el tiempo crítico de limpieza de falla depende de la aceleración del rotor del generador durante la duración de la falla la cual si depende de la naturaleza de la falla. 3 RESBALAMIENTO CRÍTICO Y TENSIÓN DE POST-FALLA:
+
+El valor de la tensión en bornes del generador luego del despeje de la falla, puede no alcanzar su nivel nominal, provocando una reducción de la cupla electromecánica del generador con el cuadrado del valor de la tensión como se muestra en la ecuación (1). La consecuencia de esto es una reducción en el valor de la velocidad crítica. En la figura 2 se representa la reducción de la cupla electromagnética y la consecuente variación de la velocidad crítica para una cupla de viento constante.
+
+Fig.2: Resbalamiento crítico y tensión de post-falla. Otro factor que interviene en el valor de la velocidad crítica y por consiguiente en el tiempo crítico de despeje de falla, es el nivel de carga de la turbina en el momento anterior a la falla. En la figura 3 puede verse que cuanto mayor es el nivel de carga del generador menor es la velocidad crítica por tanto mas rápido debe despejarse la falla para evitar la inestabilidad del sistema.
+
+Fig.3: Resbalamiento crítico y nivel de generación
+
+3
+
+4
+
+INFLUENCIA DE LOS MODELOS EN EL TIEMPO CRÍTICO DE DESPEJE DE FALLA.
+
+4.1 Modelo de masas concentradas: Este modelo considera como una masa concentrada la correspondiente a las partes rotantes de la turbina, caja de velocidad y generador. En estas condiciones la dinámica de la turbina estará dada por la siguiente ecuación:
+
+dω Tm − Te = dt J
+
+.
+
+(2)
+
+donde: ω: es la velocidad angular del generador. J: es el momento de inercia de las masas rotantes. Tm: cupla mecánica impuesta por la acción del viento sobre las palas de la turbina. Te: cupla electromagnética del generador. Puede verse en la ecuación anterior que la variación de la velocidad de la turbina, durante un cortocircuito y considerando la cupla motora constante depende exclusivamente de la inercia del sistema rotor-generador. 4.2 Modelo de masas distribuidas: Este modelo considera las masas rotantes del rotor de la turbina y de la caja de velocidad como una inercia única unida por medio de un eje con elasticidad a la masa del generador. Es común referir las masas y el coeficiente de elasticidad a la velocidad del generador. La dinámica de este tipo de turbina puede ser representada por las siguientes ecuaciones diferenciales de primer orden:
+
+& J T θ&T + K S (θ T − θ G ) = Tm
+(3)
+
+& J G θ&G + K S (θ G − θ T ) = Te
+donde:
+
+& θ& =
+
+dω dt
+
+JT: momento de inercia de la turbina, referida a la velocidad del generador JG: momento de inercia del generador KS: coeficiente de elasticidad del eje de la turbina, referido a la velocidad del generador. θT; θG: ángulo de desplazamiento de la turbina y el generador respecto de la referencia vertical. En este modelo se observa que la aceleración de la turbina durante la falla esta gobernada no sólo por la inercia del sistema motor-generador, sino también por el coeficiente de elasticidad del eje, el que como se verá en el desarrollo del trabajo influye fuertemente en el valor del tiempo crítico de despeje de falla. 5 CASO DE ESTUDIO:
+
+Para analizar la variación del tiempo crítico de despeje de falla con los modelos mencionados, se simula una red eléctrica simple compuesta por una turbina de 2 MW, su transformador asociado y una carga, conectados a la red en el PCC. Sobre este sistema se provocan cortocircuitos trifásicos simétricos de variada duración con el fin de estudiar la respuesta de ambos modelos de turbinas. En la figura 4 se observa el sistema estudiado.
+
+4
+
+Turb ina eólica 2 MW
+
+0.69/13.2 kV
+
+Red
+
+Z de falla
+
+Falla Compensación
+
+Carga
+
+Fig.4: Sistema eléctrico utilizado para la simulación. Para la simulación se utilizó el programa ATP/EMTP de uso libre muy difundido por sus grandes prestaciones para la resolución de transitorios electromagnéticos en sistemas de potencia. El generador se representó mediante el modelo UM3 de máquina asincrónica existente en el ATP. Los modelos mecánicos han sido desarrollados mediante modelos eléctricos equivalentes como se muestra en la figura 5(a) y 5(b).
+
+Donde Tm representa la cupla originada por el viento, Cg representa la masa rotante del generador, Ct y Lk representan respectivamente la masa rotante de la turbina y la elasticidad del eje ambos parámetros referidos a la velocidad del generador. Para la representación del modelo mecánico se han utilizado los siguientes datos: HG=0.5 seg., HT=2.5 seg. ,K= 1.9 kN/rad. , Relación de transmisión 1: 89. 6 COMPARACIÓN DEL TIEMPO CRÍTICO DE DESPEJE DE FALLA PARA EL MODELO DE UNA Y DOS MASAS. A continuación se presentan los resultados obtenidos para ambos modelos considerando distintos tiempos de liberación de falla. En la figura 6 puede verse la evolución de la velocidad del generador para ambos modelos en el caso de un tiempo de despeje de falla de 0.16 seg. En este caso los dos modelos mantienen la estabilidad, advirtiéndose una mayor oscilación para el modelo de dos masas.
+
+5
+
+Fig.6: Velocidad de la turbina para una duración de falla de 0.16 seg. La figura 7 muestra la tensión en bornes del generador para los dos modelos considerados. Si bien con ambos modelos se llega a que el sistema resulta estable para ese tiempo de despeje de falla se observa en el modelo de dos masas determinadas oscilaciones que afectarán la calidad de la energía en el punto de interconexión.
+
+Fig.7: Tensión en el generador para una duración de falla de 0.16 seg. En las figuras 8 y 9 pueden verse la evolución de la velocidad y la tensión respectivamente para los dos modelos analizados para un tiempo de despeje de falla de 0.2 seg.
+
+Fig.8: Velocidad del generador para una duración de falla de 0.2 seg.
+
+6
+
+Fig.9: Tensión en el generador para una duración de falla de 0.2 seg. En las figuras 8 y 9 se observa que utilizando el modelo de dos masas el sistema resulta inestable, mientras que para el modelo de masas concentradas el sistema mantiene la estabilidad para un mismo tiempo de despeje de falla. Esto quiere decir que en el caso de usar un modelo que tenga en cuenta la elasticidad del eje el sistema turbina-generador alcanza más rápido la velocidad crítica. Lo dicho puede entenderse considerando que en condiciones de estado estable, antes de la falla el eje posee una determinada energía potencial causada por la torsión del mismo bajo la acción de los pares actuantes. Durante la falla la cupla electromagnética desaparece o toma un bajo valor haciendo que la energía potencial contenida en el eje se transforme en energía cinética acelerando en muy corto tiempo al generador. Esta energía acumulada en el eje en estado estable contribuye a que el generador llegue más rápido a la velocidad crítica, haciendo que deba disminuirse el tiempo de despeje de falla para evitar la inestabilidad del sistema. De lo expuesto anteriormente queda claro que en este tipo de sistema la aceleración del generador no solo está gobernada por las masas rotantes, sino también por la elasticidad del eje. 7 CONCLUSIONES:
+
+En el presente trabajo se han comparado las respuestas dinámicas, frente a un cortocircuito trifásico simétrico, de dos modelos que pretenden representar el comportamiento de turbinas eólicas con generadores de inducción de rotor tipo jaula utilizados para el análisis de la estabilidad transitoria en los sistemas de potencia.
+
+Se ha considerado para la realización del estudio que durante la falla la turbina trabaja con un ángulo de pala constante. Además no se han tenido en cuenta durante el período de post-falla los mecanismos de paso de pala variable, ni de compensación dinámica de reactivo usados habitualmente para mantener la estabilidad de las turbinas eólicas de velocidad fija.
+De lo expuesto en este trabajo se desprende que es necesario para el estudio de la estabilidad de un sistema de potencia y para el análisis del tiempo crítico de despeje de falla utilizar un modelo que tenga en cuenta la elasticidad del eje que une la masa rotante de la turbina con la del generador ya que este factor influye en forma notoria durante el período de falla en la aceleración del generador. Se ha mostrado que al no considerar para el estudio este parámetro se incurre en un gran error, ya que el tiempo crítico de despeje de falla resulta mayor que el que se obtendría al considerar el modelo de dos masas Del análisis de las figuras 6 y 7 puede decirse que si bien el sistema retorna al equilibrio luego de la perturbación, las oscilaciones obtenidas con el modelo de dos masas ponen de manifiesto la influencia de la falla en la calidad de la energía del sistema eléctrico. Es necesario destacar que muchas veces no se dispone de los datos necesarios para realizar el modelo completo de la turbina eólica, con lo cual es necesario modelar el conjunto con un modelo de masas concentradas, teniendo en cuenta que los resultados obtenidos diferirán en gran medida de los reales.
+
+7
+
+8
+
+BIBLIOGRAFÍA:
+
+S.K.Salman, A.L.J. Teo, “Investigation into the Estimation of the Critical Clearing Time of a Grid Connected Wind Power Based Embedded Generator”, IEEE/PES, Transmission and Distribution Conference and Exhibition, Asia Pacific, 2002. Pp. 975-980. S.K.Salman, A.L.J. Teo, “Improvement of Fault Clearing Time of Wind Farm Using Reactive Power Compensation”, Porto Power Tech 2001, Portugal, 10-13 September, 2001. S.K.Salman, A.L.J. Teo, “The Effect of Shaft Modelling on the Assessment of fault CCT and the Power Quality of a Wind Farm. IEEE conf. On harmonics and quality of Power, Orlando, USA, pp 994-998, 1-4 Oct. 2000. H.Li, Z. Chen, “Comparison and Evaluation of Induction Generator Models in Wind Turbine Systems for Transient Stabily of Power System”, International Conference on Power System Technology,2006. K.C. Divya, P.S. Nagendra Rao, “ Study of Dynamic Behavior of Grid Connected Induction generators”, IEEE Power Engineering Society General Meeting, pp. 2200-2205. 2004. V. Akhmatov, H. Knudsen, A. Nielsen, J. Pedersen, “Modelling and Transient Stability of Wind Farm”. Electrical Power and Energy System 25 (2003) 123-144. B. Badrzadeh, S.K. Salman, “Mechanical Analogous Model of Wind Turbine Generators for Grid Connection Studies”. IEEE. Ackermann T, “Wind Power in Power System”. 2005 John Wiley & Sons, Ltd. ISBN:0-470-85508-8
+
+8
+

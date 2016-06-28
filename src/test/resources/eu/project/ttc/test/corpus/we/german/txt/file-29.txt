@@ -1,0 +1,245 @@
+BETRIEBSERFAHRUNGEN UND DATENAUSWERTUNG
+BEI SODAR MESSUNGEN
+H. Mellinghoff, Martin Strack
+
+Vortrag gehalten auf der 6. Deutschen Windenergie-Konferenz (DEWEK 2002)
+23. bis 24. Okt. 2002 in Wilhelmshaven
+
+Sitzung 5: Messung & Zertifizierung
+Betriebserfahrungen und Datenauswertung bei Sodar Messungen
+H. Mellinghoff, M. Strack
+Deutsches Windenergie-Institut Wilhelmshaven, Eberstrasse 96, D-26382 Wilhelmshaven
+
+Am DEWI wird seit einigen Jahren im Bereich der Windmessung mit dem akustischen Fernerkundungsverfahren Sodar (Sound detection and ranging) gearbeitet. Die ersten Erfahrungen mit Leiheräten im Rahmen von EU-Forschungsprojekten ermutigten zum Kauf
+eines eigenen Systems. Zum Einsatz in entlegenen Regionen musste das Gerät zusätzlich mit einer autonomen, batteriegepufferten
+230 V Spannungsversorgung ausgerüstet werden. Inzwischen liegen aus verschiedenen Kampagnen, unter anderem in komplexem
+Gelände, Betriebserfahrungen vor.
+Neben dem Bericht von den praktischen Aspekten soll auch auf Fragestellungen im Zusammenhang mit der Auswertung der Daten
+eingegangen werden. Da die Daten eines Sodars in der Regel keine vollständigen Zeitreihen darstellen, die Verfügbarkeit mit der
+Höhe abnimmt und die Messkampagne nur auf wenige Wochen ausgelegt ist, stellt sich die Frage nach dem Bezug auf langfristige
+Windverhältnisse. Es wird ein Verfahren zur Korrelation von Windgeschwindigkeitsgradienten vorgestellt.
+Einführung
+Die Nachfrage nach Sodar-Messungen steigt. Das Messprinzip
+zur Bestimmung aller drei Komponenten des Windvektors bietet
+interessante Alternativen zu immer drängender auftretenden Fragen im Zusammenhang mit der Windenergienutzung. Vielfach ist
+die Errichtung eines konventionellen Messmasten mit zu hohen
+Kosten und bürokratischen Hindernissen verbunden. Aus der
+Mobilität des Gerätes folgt auch die Möglichkeit, das Windprofil
+an mehreren Positionen in rascher Folge zu vermessen.
+Den unbestreitbaren Vorteilen stehen allerdings auch einige systembedingte Nachteile gegenüber. Aufgrund des akustischen
+Messprinzips ist ein Sodar sensibel gegenüber verschiedenen
+Störeinflüssen. Neben den Hintergrundgeräuschen eines Standortes sind dies vor allem sogenannte Festechos die an in der
+Umgebung befindlichen Hindernissen auftreten können. Die
+Plazierung eines Sodars erfordert Erfahrung. Eine endgültige
+Bewertung zur Standortwahl kann oft erst nach einer Zwischenauswertung erfolgen. Weitere Einschränkungen ergeben sich
+aus der Tatsache, dass ein Sodar nicht unter allen Umständen
+eine auswertbare Messung liefern kann. Da für das zu vermessende Signal beim dem verwendeten monostatischen Sodar
+minimale Temperaturschwankungen in der Atmosphäre verantwortlich sind, ist die thermische Schichtung von entscheidender
+Bedeutung für das Messverhalten. Typischerweise wird eine Abnahme der Datenverfügbarkeit mit der Höhe beobachtet, die zusätzlich stark von der Tageszeit und den allgemeinen Wetterbedingungen abhängt. Für die Auswertung der Daten ergibt sich daher der Bedarf nach zusätzlicher Interpretation der Daten. Beispielsweise lassen sich aus einer SODAR-Messung in der Regel
+nicht direkt die mittleren Windgeschwindigkeiten auf den verschiedenen Höhen durch einfache Mittelung bilden.
+
+Dauerbetrieb ausgelegt. Ein elektrischer Anlasser ist ebenfalls
+nicht Standard. Aus diesem Grund wurde ein System bestehend
+aus einem 1.5 kW Diesel, einem programmierbaren Wechselrichter und einem Bleiakkusatz mit hoher Kapazität (4 x 240 Ah) und
+Ladezyklenzahl aufgebaut.
+Der Diesel Motor wurde zusätzlich mit einem vergrößertem Tank
+versehen. Serienmäßig wurde auf eine gute Schalldämpfung geachtet. Im Betrieb wird das Aggregat in 50 - 100 m Entfernung
+vom Sodar plaziert. Die auf diese Weise produzierten zusätzlichen Störgeräusche erwiesen sich als unkritisch. Auf dem Anhänger befinden sich neben dem Sodar und der Auswerteelektronik zusätzlich der Wechselrichter und der Batteriesatz.
+Der Computer des Messsystems verfügt über einen Zugang zu
+einem GSM Funkmodem zum Herunterladen der Daten sowie
+der Möglichkeit Veränderungen der Konfiguration vorzunehmen.
+Ein vergleichbarer Fernzugang auf die Spannungsversorgung
+wäre wünschenswert, konnte aber in der ersten Stufe des Ausbaus noch nicht erfolgen.
+Mit dieser Kombination ist es möglich das System für bis zu eine
+Woche ohne einen weiteren Standortbesuch zu betreiben. Dabei
+wurden der Diesel im Abstand von 4 - 6 Stunden zum Laden der
+Batterien gestartet. Die Steuerung des Wechselrichters sorgte
+ferner dafür, dass die Batterien im Hinblick auf eine hohe Ladezyklenzahl betrieben wurden.
+Bei einem Ausfall des Diesels ist jedoch der Fernzugang zum
+Sodar mit Entladung der Batterie unmöglich. In diesem Fall ist ein
+Standortbesuch zur Fortführung der Messung unerlässlich. Die
+vergleichsweise komplexe Technik des gesamten Aufbaus macht
+eine SODAR-Messung mit autonomer Spannungsversorgung
+tendenziell personalaufwändig.
+
+Autonome Spannungsversorgung
+
+Signalverfügbarkeit
+
+Die Leistungsaufnahme des verwendeten Sodars beträgt 200 300 Watt. Diese Leistungen können nicht mehr durch Solarzellen
+abgedeckt werden. Daher ist eine Versorgung mit einem Dieselaggregat ein Ansatz. Da ein System das die minimalen Anforderungen an eine autonome Spannungsversorgung erfüllt nicht in
+dieser Leistungsklasse am Markt erhältlich ist, musste ein Aufbau
+aus einzelnen Komponenten erfolgen. Die erhältlichen kleinen
+Diesel unter 1 kW Leistung sind aber in den seltensten Fällen auf
+
+Das Messprinzip eines Sodars bedingt, dass es nicht unter allen
+Umständen plausible Daten liefern kann. Zu den Beeinträchtigungen der Messung zählen neben Hintergrundgeräuschen vor
+allem die Streubedingungen des Schalls in der Atmosphäre. Bei
+einem monostatischen Sodar sind ausschliesslich geringe Temperaturfluktuationen für die Reflexion des Schalls verantwortlich.
+Unter bestimmten Bedingungen kann es aber gerade am frühen
+Abend dazu kommen, dass diese Streubedingungen unzurei-
+
+DEWEK 2002 Tagungsband
+
+1
+
+Sitzung 5: Messung & Zertifizierung
+chend gegeben sind. Es ist eine charakteristische Eigenschaft
+eines Sodars, dass die Verfügbarkeit eines auswertbaren Signals
+mit der Höhe abnimmt. Neben dem genannten Effekt ist dafür
+unter anderem auch Dämpfung des Signals mit längerem Weg
+durch die Luftschichten verantwortlich.
+
+Availab ility o f w ind speed signal [% ]
+100
+
+P ercentage
+
+80
+60
+A va ilab ility [% ]
+40
+20
+0
+0
+
+50
+
+100
+
+150
+
+200
+
+M e a su r i n g h e igh t [m ]
+
+Abb. 2: Verfügbarkeit des Signals für die horizontale Windgeschwindigkeit über der Höhe.
+Gradientenkorrelation zur Auswertung in Vergleich mit
+einem Messmasten
+Der unterschiedliche Charakter der Daten im Vergleich mit der
+Windmessung mit einem auf Mast montierten Schalensternanemometer lässt die Frage nach einer sinnvollen Kombination der
+Messungen aufkommen.
+
+Abb. 1: Sodar-Trailer im Messbetrieb in komplexem Gelände in
+Nordspanien.
+Das folgende Diagramm zeigt die mittlere Verfügbarkeit des Signals für die horizontale Windgeschwindigkeit nach den Filterkriterien des Sodars. Es wurde über drei Messkampagnen von jeweils einem Monat Messzeit gemittelt. Die Einstellung des Gerätes war dabei auf die maximale Messhöhe von 200 m ausgerichtet. Die Messfrequenz des Sodars beträt 4500 Hz, ein einzelner
+Puls hat eine Länge von 110 ms. Die vertikale Abstufung der
+Messhöhen betrug 10 m. Es wurden 10 Minuten Mittelwerte erhoben.
+Alle genannten Parameter beeinflussen die Signalverfügbarkeit
+und sind zum Teil variabel. Als eine effektive Maßnahme zur Steigerung der Datenrate hat sich dabei die Begrenzung der maximalen Messhöhe erwiesen. Durch eine Reduktion dieses Wertes
+verringert sich ebenfalls die Laufzeit des Schalls und es können
+in einem Messintervall eine höhere Anzahl von Pulsen ausgesendet werden.
+Zusammenfassend kann zu diesem Punkt festgehalten werden:
+-
+
+2
+
+Die Signalverfügbarkeit nimmt mit der Höhe ab.
+Die Zeitreihe eines Sodars wird für eine Messhöhe in den seltensten Fällen vollständig sein.
+Auch bei einer erfolgreichen Messung schwankt die Anzahl
+der ausgewerteten Einzelpulse pro Messintervall stark.
+
+Einfache Tests an den Sodar Daten zeigen, dass mit den
+üblichen Methoden einer Winddatenauswertung (Mittelwertbildung, Fit einer Weibull-Verteilung) unplausible Werte bestimmt
+werden. Die Daten erfordern also ein erhebliches Maß an Interpretation, was wiederum einen breiten Spielraum für die Bewertung des gleichen Datensatzes zulässt. Prinzipiell gibt es zwei
+Möglichkeiten mit der Situation umzugehen. Zum einen können
+die Datenlücken unter Anwendung eines Modells aufgefüllt werden, zum anderen besteht die Möglichkeit, die Daten nach zusätzlichen Kriterien zu filtern und mit den verbleibenden Daten zu
+arbeiten.
+Am DEWI wird der zweite Ansatz verfolgt. Dabei wird die absolute Information zur Windgeschwindigkeit aufgegeben und stattdessen ein Windprofil auf eine bestimmte Höhe (hier 50 m) bezogen. Die so gewonnen normierten Profile geben zum Beispiel relative Informationen über die Zunahme der Windgeschwindigkeit
+mit der Höhe. Sehr gut sind Schwankungen zwischen stabiler
+und labiler Schichtung erkennbar, wie sie sich zum Beispiel häufig zwischen Tag und Nacht ergeben.
+Die ersten Auswertungen von Sodar Daten am DEWI führten jedoch bald auf eine weitere Fragestellung: zur Bewertung der
+Häufigkeit der Schichtungszustände.
+Eine mobile Sodar Messung wird in der Regel nur wenige
+Wochen oder Monate an einem Standort durchgeführt. Für die
+Rentabilität eines Windenergieprojektes ist aber der langjährige
+Mittelwert des Windes von Bedeutung. Daher ergibt sich die Frage, wie sich aus einer, ohnehin mit eingeschränkter Datenverfügbarkeit, erhobenen Messung aus einem Kurzzeitraum eine Statistik auf ein langjähriges Mittel beziehen lässt.
+Zur Beantwortung der Frage ist es notwendig, die Häufigkeit des
+Auftretens von Schichtungszuständen zu kennen. Da die erforderlichen Messungen der Wärmeflüsse in der Regel nicht an
+einem Standort vorliegen, wurde nach einer Methode gesucht,
+dies aus den Winddaten der Windmessung auf zwei Höhen zu
+gewinnen.
+
+DEWEK 2002 Tagungsband
+
+Sitzung 5: Messung & Zertifizierung
+120
+Neutral
+Mit Schichtung (stabil)
+100
+
+Höhe [m]
+
+80
+
+60
+
+40
+
+20
+
+0
+0.70
+
+0.80
+
+0.90
+
+1.00
+
+1.10
+
+1.20
+
+1.30
+
+Windgeschw . relativ [-]
+
+Abb. 3: Normierte Windprofile für neutralen und stabilen Fall.
+Die Abbildung 3 verdeutlicht die theoretischen Hintergründe des
+Ansatzes. Dargestellt sind ein neutrales Windprofil und ein stabiles Windprofil unter ansonsten vergleichbaren Bedingungen. Mit
+Bezug auf die Höhe von 50 m ergeben sich relative Gradienten
+der Windgeschwindigkeit zwischen dem 25 m Niveau und dem
+100 m Niveau. Dabei fällt auf, dass eine starke Zunahme im unteren Abschnitt zwischen 25 und 50 m mit einer starken Zunahme
+im oberen Teil zwischen 50 und 100 m einhergeht. Das Gleiche
+gilt umgekehrt für den Fall der labilen Schichtung im Vergleich mit
+einem neutralen Profil.
+Es liegt also nahe, die relative Zunahme der Windgeschwindigkeit über der Höhe für eine Korrelation zu nutzen.
+Parameterstudien unter Verwendung der Monin-Obukhov-Theorie zur Beschreibung des Windprofils in geschichteter Atmosphäre zeigen, dass sich das Verhältnis der relativen Gradienten
+in Abhängigkeit von der atmosphärischen Temperaturschichtung
+gut linear approximieren lässt (Abbildung 4) und gleichzeitig völlig unabhängig von oder wenig sensitiv gegenüber anderen Parametern ist. Die am häufigsten auftretenden Fälle nahe eines
+neutralen Schichtungszustandes liegen im Diagramm ungefähr
+bei der 10 % Marke, die davon links liegenden Zustande entsprechen labiler Schichtung, zur rechten Seite hin liegen die stabilen
+Schichten.
+
+Abbildung 6 Gradientenkorrelation zwischen Sodar-Daten und
+Mastdaten für einen Sektor.
+Bei den betrachteten Beispielen führte dies zu der Aussage, dass
+der Ertrag in Nabenhöhe (100 m) um ca. 10 % höher ausfiel als
+das aufgrund der Mast-Windmessung (50 m) und der Berechnung mit WASP der Fall gewesen wäre.
+Zur Plausibilisierung wurde die Methode an den Daten des 130
+m Messmastes nahe dem DEWI-Testfeld bei Wilhelmshaven und
+eines weiteren hohen Mastes getestet. Dabei wurde die Beziehung der Windgeschwindigkeitsgradienten im oberen Segment
+an jeweils einem Monat Daten bestimmt. Mit dieser Information
+wurde eine korrelierte Zeitreihe für das zweijährige Mittel basierend auf den Eingangsdaten des unteren Segmentes berechnet.
+Der Vergleich der gemessenen mit den korrelierten Windgeschwindigkeiten der oberen Messhöhe lag bei verschiedensten
+Trainingszeiträumen bei 2 - 3 % Abweichung.
+
+Abb. 4: Theoretische Werte für relative Windgeschwindigkeitsgradienten bei Variation des Stabilitätsparameters L.
+Anwendungsfall in Kombination aus Sodar- und Mastmessung
+Basierend auf den theoretischen Überlegungen wurde das Verfahren bei Messungen angewendet, bei denen mehrere Monate
+Mastmessdaten und überlappend mehrere Wochen Sodar Daten
+vom gleichen Standort zur Verfügung standen. Dabei wurden die
+Daten des 50 m Masten zur Bestimmung der Gradienten im unteren Sektor und die Sodar Daten zur Bestimmung des Gradienten
+im oberen Sektor verwendet.
+In der Darstellung Abbildung 1 zeigt sich, dass sich der theoretisch hergeleitete lineare Zusammenhang gut in den Messdaten
+des betrachteten Windrichtungssektors wiederfindet (Korrelation
+R=0.88). Das Verfahren wird für alle Windrichtungssektoren
+durchgeführt. Die erreichbaren Korrelation lassen es als gerechtfertigt erscheinen, die ermittelten linearen Beziehungen zur
+Hochrechnung des Datensatzes aus der Mast-Windmessung zu
+verwenden.
+
+DEWEK 2002 Tagungsband
+
+3
+

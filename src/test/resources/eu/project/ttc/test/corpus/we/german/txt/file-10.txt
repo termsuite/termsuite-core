@@ -1,0 +1,4863 @@
+fk-wind:
+Forschungs- und Koordinierungsstelle Windenergie
+
+Windenergie
+Forschungs-, Entwicklungs- und
+Demonstrationsvorhaben im Land Bremen
+
+Inhalt
+
+Vorwort
+
+3
+
+Grußwort
+
+4
+
+FK-Wind: Die Forschungs- und Koordinierungsstelle Windenergie
+an der Hochschule Bremerhaven
+
+5
+
+WAB e.V.: Die Windenergie-Agentur Bremerhaven/Bremen Das Netzwerk für Windkraft in der Weserregion
+
+8
+
+Perspektiven und Forschungsthemen
+für On- und Offshore-Windenergie
+
+10
+
+Förderprogramme für die Windenergie des Landes Bremen
+
+12
+
+Gemeinsame Arbeitsgruppe Windenergie des Landes Bremen
+
+14
+
+Thematische Übersicht der vom Land Bremen geförderten Projekte
+
+15
+
+Forschungs-, Entwicklungs- und Demonstrationsvorhaben
+im Land Bremen
+
+16–37
+
+Impressum
+
+38
+
+Vorwort
+
+Die Windenergie spielt in den strukturpolitischen Überlegungen
+des Bremer Senats eine wichtige Rolle. Dieses große Engagement des
+Landes Bremen für die Nutzung der On- und Offshore-Windenergie wird
+in dieser Broschüre dokumentiert.
+Die speziﬁschen Förderprogramme des Landes zur Unterstützung der
+Windenergieunternehmen umfassen, von der angewandten Forschung
+über die Entwicklung von Umwelttechnik bis hin zur Investition, alle
+Entwicklungsstufen von der Idee bis zur Marktreife. Mit Hilfe dieser
+Programme sind in den letzten 4 Jahren über 40 Vorhaben zur Weiterentwicklung vielfältiger technologischer Aspekte der Windenergie
+von Unternehmen durchgeführt worden, in vielen Fällen in enger
+Zusammenarbeit mit der Wissenschaft.
+Die Unterstützung durch bedarfsgerechte Förderprogramme ist für
+Unternehmen eine grundlegende Vorraussetzung für erfolgreiches
+wirtschaftliches Handeln im technologischen Neuland der OffshoreWindenergie, die Flankierung durch überbetriebliche Infrastrukturen
+und Netzwerke ist eine weitere entscheidende Komponente. Die Gründung
+der Forschungs- und Koordinierungsstelle Windenergie in der Hochschule Bremerhaven ist daher ein wichtiger Schritt für die Vernetzung
+von Wirtschaft und Wissenschaft und für den Transfer anwendungsbezogener wissenschaftlicher Ergebnisse in die Unternehmen.
+Mit der konsequenten Umsetzung unserer Landesstrategie zu On- und
+Offshore-Windenergie schaffen wir für die Windenergiebranche ideale
+Bedingungen, damit die Nutzung der Windenergie und der Zukunftsmarkt
+Offshore-Windenergie zu einem großen Erfolg für den Klimaschutz und
+gleichzeitig für innovative und zukunftssichere Arbeitsplätze wird.
+
+3
+
+Jens Eckhoff
+Senator für Bau, Umwelt und Verkehr
+
+Grußwort
+
+Das Land Bremen hat sich das Ziel gesetzt, optimale Rahmenbedingungen für die Windenergiebranche zu schaffen, um so seine Position als
+Forschungs-, Entwicklungs- und Produktionsstandort für die Windenergie zu verbessern und auszubauen. Die Einrichtung der Forschungsund Koordinierungsstelle Windenergie an der Hochschule Bremerhaven
+soll das gesamte einschlägige Forschungs- und Entwicklungspotenzial
+des Landes Bremen einbeziehen, vernetzen, stärken und Wirtschaftspartnern zur Verfügung stellen. Dabei erfolgt die Arbeit der Forschungs- und Koordinierungsstelle in enger Zusammenarbeit mit
+der Windenergie-Agentur Bremerhaven/Bremen (WAB e.V.).
+Die Einrichtung der Forschungs- und Koordinierungsstelle Windenergie
+an der Hochschule Bremerhaven ist ein Ausdruck des Vertrauens des
+Bremischen Senats an unsere Leistungsfähigkeit und ein wesentlicher
+Baustein zur Schärfung unseres maritimen Proﬁls. Sie ist eng verknüpft
+mit dem neuen internationalen Studiengang Maritime Technologien,
+der zum Wintersemester 2003/04 den Betrieb an der Hochschule
+Bremerhaven aufgenommen hat. Der ingenieurtechnische Studiengang
+umfasst in seiner verfahrenstechnischen Ausrichtung wesentliche
+Fragestellungen der Offshore-Technologie. Neueste Entwicklungs- und
+Forschungsergebnisse ﬂießen somit direkt in die Lehre ein.
+Die fachliche Leitung der Forschungs- und Koordinierungsstelle Windenergie erfolgt durch Hochschullehrer der Hochschule Bremerhaven.
+Zur Zeit beﬁnden sich zwei Professuren mit Forschungsschwerpunkten
+für den Bereich Windenergie im Auswahlverfahren.
+Die Hochschule Bremerhaven wird die Forschungs- und Koordinierungsstelle nach allen Kräften unterstützen. Gern stellt die Hochschule ihre
+technischen und räumlichen Ressourcen zur Verfügung. Ich wünsche
+allen Beteiligten, Wissenschaftlern und Mitarbeitern gutes Gelingen
+und innovative, erfolgreiche Projekte.
+4
+
+Prof. Dr. rer. nat. Josef Stockemer
+Rektor der Hochschule Bremerhaven
+
+Forschungs- und Koordinierungsstelle Windenergie
+an der Hochschule Bremerhaven (FK-Wind)
+Die erfolgreiche Proﬁlierung Bremens
+
+bremischen Wissenschafts- und
+
+On- und Offshore-Windenergie in
+
+als Standort für die Windenergie
+
+Forschungseinrichtungen vorhan-
+
+den Hochschulen und in den wissen-
+
+erfordert eine interdisziplinäre und
+
+denen Kompetenzen im Bereich
+
+schaftlichen Einrichtungen im
+
+institutionenübergreifende Koopera-
+
+der Offshore-Windenergie. Diese
+
+Land Bremen sowie Erfassung
+
+tion der Wissenschaftseinrichtungen
+
+Vernetzung zielt auf eine stärkere
+
+der überregionalen Aktivitäten;
+
+– auch überregional – sowie eine
+
+Proﬁlierung Bremens ab, um damit
+
+• Identiﬁzierung von Forschungs-
+
+verstärkte Zusammenarbeit mit der
+
+eine wesentliche Grundlage für den
+
+und Entwicklungsbedarfen der
+
+Wirtschaft, um das in den verschie-
+
+weiteren wirtschaftlichen Ausbau
+
+Unternehmen insbesondere im
+
+denen wissenschaftlichen Einrich-
+
+des Landes als Kompetenzstandort
+
+EU Ziel 2 Gebiet in Zusammenarbeit
+
+tungen vorhandene F&E-Potenzial
+
+für Offshore-Windenergie zu legen.
+
+mit der Windenergie-Agentur
+
+stärker zu verknüpfen und die vor-
+
+Der Aufbau zusätzlicher Forschungs-
+
+Bremerhaven/Bremen e.V. (WAB);
+
+handenen Kompetenzen auszubauen.
+
+aktivitäten einzelner Einrichtungen
+
+• Transfer der F&E Ergebnisse in die
+
+Zudem muss die Orientierung und
+
+wird durch Beratung und Beteiligung
+
+Wirtschaft durch die Beratung und
+
+Spezialisierung der einschlägigen
+
+sowie auch durch die Vermittlung
+
+Vermittlung entsprechender Partner
+
+Fachwissenschaften im Hinblick auf
+die besonderen Aufgabenstellungen
+und F&E-Bedarfe der Unternehmen
+
+Unternehmen der Region Bremerhaven / Bremen
+
+für die Offshore-TechnologieAnforderungen vertieft und praxisgerecht weiterentwickelt werden.
+Der Senat des Landes Bremen hat im
+Frühjahr 2003 festgestellt, dass zur
+Lösung der noch zahlreichen offenen
+
+FK-Wind
+
+ÜBERREGIONAL
+Windenergiebranche
+
+REGIONAL
+Windenergiebranche
+
+Koordinierung
+
+Fragestellungen bei der Nutzung der
+Offshore-Windenergie die Zusammenarbeit zwischen Wissenschaft,
+
+F&E-Netzwerke
+
+Vernetzung
+
+F&E - Kompetenz
+
+F&E-Bedarfe
+
+WAB e.V.
+über 130
+
+Forschung und praktischen Anwendern weiter auszubauen ist. „Dieser
+
+Mitglieder aus
+
+Wissenschaftliche
+
+Zielrichtung soll mit der Einrichtung
+
+unterschiedlichen
+
+Einrichtungen
+
+einer Koordinations- und For-
+
+Bereichen
+
+schungsstelle Offshore-Technologien
+in Verbindung mit der WindenergieAgentur Bremerhaven/Bremen (WAB)
+
+von weiteren Partnern und der
+
+aus der Wissenschaft sowie die
+
+Rechnung getragen werden. Sie soll
+
+Entwicklung von Themenfeldern
+
+Begleitung von Verbundprojekten.
+
+in die wissenschaftliche Infrastruk-
+
+unterstützt. Die wissenschaftlichen
+
+Die Forschungs- und Koordinie-
+
+tur des Landes, speziell Bremerha-
+
+Einrichtungen sind eingeladen,
+
+rungsstelle Windenergie wird neben
+
+vens, eingebunden werden, um die
+
+diesen Prozess mitzugestalten.
+
+der koordinierenden und transfer-
+
+vorhandenen wissenschaftlichen
+
+Die Forschungs- und Koordinierungs-
+
+orientierten Tätigkeit insbesondere
+
+Ansätze zu bündeln, sie in Zusam-
+
+stelle Windenergie unterstützt damit
+
+im Rahmen von Verbundprojekten
+
+menarbeit mit Forschungsinstituten
+
+als überbetriebliche Infrastruktur-
+
+mit Unternehmen Forschungs- und
+
+für die Praxisanwendungen nutzbar
+
+einrichtung Unternehmen, die sich
+
+Entwicklungsvorhaben initiieren
+
+zu machen und Anderen Anstöße für
+
+innovativen Fragestellungen im
+
+und durchführen.
+
+ihre bedarfsgerechte Weiterentwick-
+
+Bereich der Erneuerbaren Energien
+
+Die Schwerpunkte dieser Forschungs-
+
+lung zu geben.“
+
+stellen. Schritte zur Umsetzung
+
+vorhaben liegen in den Bereichen:
+
+dieser Ziele sind:
+
+• F&E-Arbeiten als Basis für den
+
+Ziele
+
+• Systematische Erfassung und
+
+Aufbau und Betrieb von Prüfständen
+
+Das zentrale Ziel besteht in der
+
+Koordinierung der vorhandenen
+
+für Offshore-Windenergie-Gondeln
+
+Vernetzung der in den verschiedenen
+
+wissenschaftlichen Kompetenzen zur
+
+und der Betriebssimulation;
+
+5
+Aufgaben und Ziele
+der Foschungs- und
+Koordinierungsstelle
+Windenergie
+
+in den Fachbereichen Physik/Elek-
+
+zusammenbringen. Kooperationen
+
+trotechnik, Produktionstechnik,
+
+mit den u.a. im Land Niedersachsen
+
+Informatik und Geowissenschaften
+
+eingerichteten Forschungsgruppen
+
+ein Spektrum von Forschungskompe-
+
+werden vertieft. Das Forschungs-
+
+tenzen in die On- und Offshore-
+
+programm des ‚Forschungs- und
+
+Windenergie einbringen. In der
+
+Kompetenzzentrum Windenergie’ an
+
+Hochschule Bremen gibt es An-
+
+den Universitäten Oldenburg und
+
+knüpfungspunkte vor allem in den
+
+Hannover stellt in weiten Berei-
+
+Fachbereichen Maschinenbau,
+
+chen eine sinnvolle Ergänzung der
+
+Schiffbau und Meerestechnik, Bau-
+
+Themenschwerpunkte dar, die durch
+
+ingenieurswesen sowie im Institut
+
+Einrichtungen im Land Bremen
+
+für Technischen Umweltschutz und
+
+repräsentiert werden. Grundlage der
+
+im Institut für Kreislaufwirtschaft.
+An der Hochschule Bremerhaven sind
+
+Bremen und Niedersachsen ist eine
+
+und Regeltechnik für Windenergiean-
+
+Kompetenzen in den Studiengängen
+
+gemeinsame Kabinettssitzung der
+
+lagen; innovative Prüfverfahren und
+
+Transportwesen und Logistik, Process
+
+beiden Länder vom November 2003,
+
+Kontrollmechanismen zum Betriebs-
+
+Engineering and Energy Technology,
+
+auf der die Kooperation zur Nutzung
+
+verhalten; Zuverlässigkeitsanalysen,
+
+Versorgungs- und Anlagenbetriebs-
+
+der ökonomischen, ökologischen
+
+Zustandsermittlung und technischen
+
+technik, Produktionstechnologie
+
+und wissenschaftlichen Potenziale
+
+Diagnosen;
+
+sowie in angegliederten Instituten
+
+der On- und Offshore-Windenergie
+
+• Erforschung von Techniken und
+
+des Technologie-Transfer-Zentrum
+
+beschlossen wurde.
+
+Prüfungen für Offshore-Materialien
+
+Bremerhaven (ttz) vorhanden.
+
+und Oberﬂächen
+
+Weiterhin sind vor allem das Alfred-
+
+Forschung
+
+Wegener-Institut für Polar- und Mee-
+
+Einzelne speziﬁsche wissenschaft-
+
+Regionale und überregionale
+
+resforschung (AWI), das Fraunho-
+
+lich-technische Fragestellungen für
+
+Kooperationen
+
+fer-Institut IFAM, das Faserinstitut
+
+die Offshore-Windenergienutzung im
+
+Die Zusammenarbeit mit allen Ein-
+
+Bremen, das Institut für Werkstoff-
+
+Land Bremen können bisher jedoch
+
+richtungen, die durch praktische
+
+technik, das Bremer Institut für
+
+nicht beantwortet werden. Dies gilt
+
+Entwicklungen sowie wissenschaft-
+
+Betriebstechnik und angewandte
+
+vor allem für die Bereiche der Funda-
+
+liche Forschung zum Aufbau von
+
+Arbeitswissenschaft (BIBA), das
+
+mentierung und Gründung der An-
+
+Offshore-Windenergie-Anlagen
+
+Institut für Seeverkehrswirtschaft
+
+lagen, für die konstruktive und
+
+beitragen, stellt die wesentliche
+6
+
+Zusammenarbeit zwischen dem Land
+
+• F&E-Arbeiten zu Steuer-, Mess-
+
+und Logistik (ISL) die Gesellschaft
+
+materialbezogene Auslegung von
+
+Grundlage für die Arbeit der FK-Wind
+
+für Angewandten Umweltschutz und
+
+Trägerstrukturen bis hin zu inge-
+
+dar. Durch die bereits seit zwei
+
+Sicherheit im Seeverkehr (GAUSS),
+
+nieurtechnischen Aufgaben beim
+
+Jahren tätige Windenergie-Agentur
+
+das Bremer Energie-Institut (BEI)
+
+Gondel- und Turbinenbau und bei
+
+Bremerhaven/Bremen e.V. existiert
+
+und andere mit unterschiedlichen
+
+Fragen der Leit- und Steuerungstech-
+
+ein lebendiges Forum insbesondere
+
+Aspekten und Fragestellungen der
+
+nik sowie im Bereich des Betriebs
+
+mit Entwicklern in der Industrie.
+
+Windenergieforschung befasst.
+
+und der Wartung der Anlagen.
+
+Die FK-Wind kooperiert dabei sowohl
+
+Die Kompetenzen dieser wissen-
+
+Hierbei wird sich die Forschungs-
+
+mit wissenschaftlichen Einrichtun-
+
+schaftlichen Einrichtungen werden
+
+und Koordinierungsstelle ein eigenes
+
+gen als auch mit Unternehmen der
+
+aufbereitet sowie in Veranstaltungen
+
+Forschungsproﬁl geben, das durch
+
+Windenergiebranche z.B. bei der
+
+präsentiert, um die jeweiligen F&E-
+
+die Inhalte im Rahmen des neu
+
+Entwicklung von Verbundprojekten.
+
+Bedarfe seitens der Unternehmen
+
+eingerichteten Studiengangs Mari-
+
+In den Hochschulen und Wissen-
+
+im Land Bremen bestmöglich zu
+
+time Technologie an der Hochschule
+
+schaftseinrichtungen des Landes
+
+bedienen.
+
+Bremerhaven geprägt ist. Die dabei
+
+Bremen ist im Bereich der Wind-
+
+Die Forschungs- und Koordinierungs-
+
+entwickelten Forschungs- und Ent-
+
+energie bereits ein einschlägiges
+
+stelle wird die regionalen Einrich-
+
+wicklungsaktivitäten werden sich an
+
+Potenzial vorhanden. So kann die
+
+tungen ebenfalls mit überregionalen
+
+der bestehenden Struktur orientieren
+
+Universität Bremen insbesondere
+
+F&E-Netzwerken sowie Unternehmen
+
+und diese sinnvoll erweitern.
+
+fk-wind:
+Forschungs- und Koordinierungsstelle Windenergie
+
+Die Entwicklung der eigenen Forschungskompetenz dient gleichfalls
+
+On- und Offshore-Windenergie
+
+der praxisorientierten Ausbildung
+des ingenieurtechnischen Nachwuchses. Im April 2003 wurde der
+erste Forschungsworkshop mit den
+im Land Bremen geförderten Projekten
+
+Prof. Dr.-Ing. Peter Ritzenhoff
+
+von der WAB in der Hochschule Bre-
+
+Leitung
+
+merhaven organisiert. Die Fortschritte
+
+Tel.: 0471/4823-110
+
+der laufenden Projekte sowie weitere
+
+peter.ritzenhoff@hs-bremerhaven.de
+
+neue Projekte werden in diesem Jahr
+in einem gemeinsam gestalteten
+
+Koordinierungsaufgaben
+und Leistungen
+• Erfassung der wissenschaftlichen Kompetenz
+im Land Bremen
+• Vernetzung mit überregionalen Forschungsaktivitäten
+
+zweiten Forschungsworkshop präsen-
+
+• Identiﬁzierung des F & E-Bedarfs von Unternehmen
+
+tiert werden.
+
+• Beratung und Vermittlung bei F & E-Projekten
+Mit der vorliegenden Zusammenstel-
+
+• Koordinierung von Verbundprojekten
+
+lung bisher geförderter Forschungs-
+
+• Transfer von F & E-Ergebnissen
+
+projekte im Land Bremen im Bereich
+der Offshore-Windenergie hat die
+Forschungs- und Koordinierungsstelle
+
+Dipl.-Ing. Jörn Böcker
+
+ihre inhaltliche Arbeit aufgenommen.
+
+Projektingenieur
+
+Im Laufe dieses Jahres ist die Beset-
+
+Tel.: 0471/4823-544
+
+zung von zwei Professuren für den
+
+• Durchführung von Forschungsworkshops
+
+joern.boecker@hs-bremerhaven.de
+
+Studiengang Maritime Technologien
+
+F & E - Aktivitäten in den Bereichen
+• Simulation für Auslegung und Betrieb
+
+in den Bereichen MSR-Technik und
+Prozesssimulation, Maschinenbau und
+
+von Offshore-Windenergie-Anlagen
+
+Energiesysteme sowie Schwerpunkten
+
+• Mess-, Steuer- und Regelungstechnik
+
+in der Windenergie vorgesehen.
+
+• Grundlagen zum Aufbau und Betrieb von Prüfständen
+
+Die Aufgaben der FK-Wind werden
+
+• Offshore-Materialien und Oberﬂächen
+
+durch die Inhaber der beiden Professuren maßgeblich mitgestaltet.
+Die Bereiche Materialien und Oberﬂächen werden durch einen Mitarbeiter
+
+Dipl.-Ing. Carsten Heinze
+
+des Fraunhoferinstituts für Fertigungs-
+
+Projektingenieur
+
+Columbusstr. 2 Haus C
+
+technik und Angewandte Materialfor-
+
+Tel.: 0471/4823-545
+
+27568 Bremerhaven
+
+schung (IFAM) im Team der FK-Wind
+
+carsten.heinze@hs-bremerhaven.de
+
+Tel.: 0471/4823-540
+
+vertreten.
+
+7
+
+Fax: 0471/4823-548
+FK-Wind@hs-bremerhaven.de
+
+Auf der Basis der bisherigen Erkenntnisse wird eine Detaillierung der bestehenden Kompetenzen der wissenschaftlichen Einrichtungen sowie der
+noch offenen Entwicklungsfragen erfolgen. Um die regionalen Gegebenheiten möglichst gut abbilden zu
+können, werden wir Sie - die Akteure
+
+Regina Urban
+
+aus Industrie und Wissenschaft - um
+
+Verwaltung
+
+Mithilfe bitten. Ihre Anfragen und An-
+
+Tel.: 0471/4823-540
+
+regungen nehmen wir gerne entgegen.
+
+regina.urban@hs-bremerhaven.de
+
+Die Windenergie-Agentur Bremerhaven/Bremen e.V. (WAB):
+Das Netzwerk für Windkraft in der Weserregion
+
+8
+wab e.v.
+Windenergie-Agentur Bremerhaven/Bremen
+Schifferstr. 10-14
+27568 Bremerhaven
+Tel.: 0471/391 77-0
+Fax: 0471/391 77-19
+info@windenergie-agentur.de
+www.windenergie-agentur.de
+
+windenergie
+agentur
+bremerhaven
+bremen e.v.
+
+Transfereinrichtungen und Strukturen sind ein
+
+arbeiten in den Bereichen Logistik, Service,
+
+wichtiger Stützpfeiler der Landesstrategie zur Pro-
+
+Fundamentierung sowie Datenübertragung geleis-
+
+ﬁlierung des Landes Bremen als Kompentenzstand-
+
+tet werden müssen. Aus dieser Fachgruppenarbeit
+
+ort für die Nutzung der On- und Offshore-Winden-
+
+sind bereits zahlreiche Forschungsprojekte und
+
+ergie. Mit der Gründung der Windenergie-Agentur
+
+Kooperationen zwischen Firmen aus dem mariti-
+
+Bremerhaven/Bremen e.V. (WAB) im Frühjahr 2002
+
+men Sektor, der Windbranche und Forschungs-
+
+ist eine überbetriebliche Infrastruktur geschaffen
+
+institutionen entstanden.
+
+worden, die die Kompetenzen ihrer Mitglieder
+bündelt, Wissenstransfer fördert und Synergien
+
+In den Jahren 2004/2005 liegt ein Schwerpunkt
+
+zwischen den Unternehmen unterstützt.
+
+der WAB-Aktivitäten und -Veranstaltungen im
+Bereich Offshore-Windenergie, wo eine Verstär-
+
+Die Windenergie-Agentur Bremerhaven/Bremen e.V.
+
+kung des internationalen Austausches auf der
+
+vertritt als Verein mittlerweile etwa 130 Mit-
+
+Unternehmensebene im Nordseeraum angestrebt
+
+gliedsunternehmen und –Institutionen. Die WAB
+
+wird. Bereits im Jahr 2003 wurde zu diesem
+
+setzt sich gezielt für einen weiteren erfolgreichen
+
+Zweck eine Studienreise zum dänischen Windpark
+
+Ausbau der Windkraft im In- und Ausland, an Land
+
+„Nystedt“ mit Unternehmensvertretern organisiert.
+
+und im Meer, ein.
+
+Als weiterer Schwerpunkt wird die WAB mittels
+mehrerer Veranstaltungen die Potenziale beim
+
+Wesentliche Aufgabe der WAB ist die Förderung
+
+Repowering von Windparks im Küstenbereich
+
+der Windenergie. An zentraler Stelle steht dabei
+
+erörtern. Hier ist ein Ziel der Veranstaltungs-
+
+die Vernetzung ihrer Mitglieder, um damit einen
+
+reihe ‚Best-Practice’-Erfahrungen aufzuzeigen,
+
+vielfältigen Austausch zu erreichen. Die WAB
+
+mit welchen planerischen und technischen
+
+fördert gemeinsam mit der FK-Wind den wissen-
+
+Umsetzungsstrategien für Repowering-Projekte
+
+schaftlich-technischen Erfahrungsaustausch
+
+für alle Stakeholder gute Ergebnisse erzielt
+
+zwischen Industrie und Wissenschaft durch die
+
+werden können. Weiterhin vertritt die WAB
+
+Organisation von Fachtagungen und Informa-
+
+das Firmennetzwerk für Windenergie auf
+
+tionsveranstaltungen, Kongressen und gemein-
+
+bedeutenden Fachmessen.
+
+samen Messeauftritten und bietet dadurch ein
+Forum für die Herstellung von Kontakten und
+zur Entwicklung von Netzwerken. Die Arbeit der
+WAB ist insgesamt so angelegt, dass sie aus den
+Unternehmen unmittelbar technologische Bedarfe
+identiﬁziert und in die Forschungs- und Koordinierungsstelle Windenergie hinein transportiert,
+die dann die entsprechenden wissenschaftlichen
+Kompetenzen vermittelt.
+In Fachgruppen bietet die WAB ihren Mitgliedern
+die Möglichkeit insbesondere technische Fragestellungen zu bearbeiten. Der Schwerpunkt der
+Fachgruppenarbeit liegt im Bereich der OffshoreWindkraft, wo noch bedeutende Entwicklungs-
+
+9
+
+Perspektiven und Forschungsthemen
+für On- und Offshore-Windenergie
+Forschungsthemen für Onund Offshore-Windenergie
+Im Land Bremen wurden und werden die Unternehmen aus dem Windenergiesektor effektiv mit
+maßgeschneiderten Förderprogrammen bei ihren
+Forschungs- und Entwicklungsvorhaben unterstützt. Die verschiedenen Förderbausteine folgen
+dabei den Entwicklungsstufen von der Formulierung einer Idee bis hin zur Marktreife eines
+Produktes, einer Produktion oder einer Dienstleistung. Eine Übersicht der Förderprogramme ﬁnden
+Sie auf den Seiten 12-13, die AnsprechpartnerInnen der „Gemeinsamen Arbeitsgruppe Windenergie
+des Landes Bremen“ auf Seite 14.
+Eine Vielzahl von Projekten konnte dadurch in
+der Region in den letzten Jahren erfolgreich
+umgesetzt werden. Aus Sicht der Unternehmen
+haben sich dabei insbesondere die verschiedenen
+Programme bewährt, die es gezielt ermöglichen,
+sowohl anwendungsnah technische EntwickDie Windenergietechnologie hat in den letz-
+
+lungen durchzuführen und Produktionsprozesse
+
+ten zwei Jahrzehnten eine erstaunlich schnelle
+
+zu optimieren als auch die Markteinführung zu
+
+Entwicklung durchgemacht. Einige Kennzahlen
+
+beschleunigen.
+
+der Anlagenentwicklung zeigen dies eindrucksvoll:
+Die durchschnittliche Leistung von Windenergie-
+
+5 Megawatt: vom Prototypen zum Serienmodell
+
+anlagen (WEA) hat sich zwischen 1990 und 2004
+
+Der Trend zu größeren WEA hält weiterhin an:
+
+von ca. 200 Kilowatt auf ca 1,5 Megawatt erhöht,
+
+aktuell werden Prototypen und Null-Serien mit
+
+die durchschnittliche Länge der Rotorblätter
+
+Nennleistungen zwischen 2,5 und 5 Megawatt
+
+wuchs von 25 auf 45 Meter, die Turmhöhe stieg
+
+aufgestellt. Insbesondere die speziellen Anforde-
+
+von 30 auf ca. 90-100 Meter.
+
+rungen bei der Errichtung von Offshore-Windparks
+in deutschen Gewässern, mit großer Küstenent-
+
+10
+
+Diese rein quantitativen Entwicklungen von WEA
+
+fernung und Wassertiefe, erfordern diese neue
+
+sind im Wesentlichen durch eine evolutionäre
+
+Generation großer Anlagen. Zunächst besteht
+
+und sehr beharrliche Herangehensweise in kleinen
+
+die F&E-Aufgabe der Anlagenhersteller darin, die
+
+und mittelständischen Unternehmen geleistet
+
+prototypischen Anlagen ausgiebig zu testen und
+
+worden. Eine Vielzahl von technischen Entwick-
+
+ihre Zuverlässigkeit zu prüfen. Industriestandards
+
+lungen war nötig, um die Größe der Anlagen -
+
+kommen dabei immer mehr auch für die Steue-
+
+bei gleichzeitiger Verbesserung von Efﬁzienz
+
+rung und Datenverarbeitung zum Einsatz. Damit
+
+und Zuverlässigkeit - soweit steigern zu können.
+
+die Anlagen in küstenfernen Windparks fehlerfrei
+
+So wurden wesentliche Verbesserungen der Anla-
+
+betrieben werden können, steht insbesondere die
+
+gentechnik z.B. durch verstellbare Rotorblätter,
+
+Erprobung des Gesamtsystems an erster Stelle.
+
+optimierte Antriebskonzepte mit und ohne Getrie-
+
+Dazu sind geeignete Testmöglichkeiten und Pilot-
+
+be, innovative Leistungselektronik sowie umfas-
+
+standorte in Küstennähe zu entwickeln.
+
+sende Datenfernüberwachungssysteme erreicht.
+Viele dieser Innovationen sind in enger
+
+Qualitätssicherung
+
+Kooperation von Betrieben aus der Branche mit
+
+Nach dem rasanten Wachstum der Branche in
+
+Forschungsinstitutionen, wissenschaftlichen
+
+Europa in den vergangenen Jahren haben Ver-
+
+Einrichtungen und Ingenieursbüros entstanden.
+
+sicherungsunternehmen und Anlagenhersteller
+
+gemeinsam die Qualitätsstandards für die Branche
+
+schen Bedingungen, das Transportkonzept und die
+
+weiterentwickelt. Eine Optimierung der Qualitäts-
+
+-Fahrzeuge einen Einsatz ermöglichen. Abhängig
+
+sicherung und die damit verbundene Produkt- und
+
+vom Seegebiet muss von einer Erreichbarkeit der
+
+Produktionszertiﬁzierung wird sicherlich in den
+
+Offshore-WEA von weniger als 200 Tagen im Jahr
+
+nächsten Jahren weiterhin in der gesamten Pro-
+
+ausgegangen werden. Anlagenhersteller, -Betrei-
+
+duktionskette eine zentrale Bedeutung einneh-
+
+ber und maritime Servicedienstleister arbeiten
+
+men, nicht zuletzt um damit auch eine Verringe-
+
+deshalb gemeinsam daran, möglichst intelligente
+
+rung der Wartungsintensität zu erreichen. Damit
+
+und kostengünstige Logistiksysteme für den
+
+verbunden sind auch wachsende Qualiﬁzierungsan-
+
+Windparkbetrieb zu entwickeln, um damit teure
+
+forderungen an das eigene Personal.
+
+Ausfallzeiten zu vermeiden. Für die Wirtschaftlichkeit von Offshore-Anlagen im aggresiven marinen
+
+Anlagenüberwachung
+
+Umfeld ist ein lang wirksamer Korrosionsschutz
+
+Die zunehmende Größe der Windparks an Land
+
+und eine optimale Lacktechnik sehr wichtig.
+
+hat zu einem steigenden Bedarf an informationsverarbeitenden Systemen geführt. Gleichzeitig
+
+Meteorologie und Modellierung
+
+setzen die Service- und Wartungssysteme der
+
+Die stark steigende Windenergieleistung im
+
+Anlagenhersteller und Windparkbetreiber darauf,
+
+Stromversorgungsnetz bedeutet auch, dass eine
+
+mit intelligenten Überwachungssystemen teure
+
+zuverlässige Leistungsvorhersage der Windparks
+
+Ausfallzeiten zu minimieren. Die aus anderen
+
+immer wichtiger wird. Um die Leistung der Wind-
+
+Branchen bekannten Condition Monitoring
+
+parks optimal ins Versorgungsnetz integrieren zu
+
+Systeme (CMS), mit denen viele der Anlagenpara-
+
+können, sind genaue Leistungsvorhersagen für
+
+meter mittels Sensoren überwacht werden, haben
+
+bestimmte Zeitintervalle erforderlich. Dazu werden
+
+auch in der Windenergiebranche Einzug gehalten.
+
+sowohl zuverlässige meteorologische Modelle
+
+Hier gilt es, vorliegende Erfahrungen zu sammeln
+
+als auch eine genaue Modellierung der
+
+und auszuwerten. Vor allem die Daten, die aus
+
+einzelnen WEA oder der gesamten
+
+der Überwachung des gesamten Antriebsstranges
+
+Windparks gebraucht.
+
+entstehen, haben an Bedeutung gewonnen.
+Die Service- und Wartungsunternehmen werden
+allerdings noch Erfahrungen mit der Interpretation der Daten aus den CMS-Systemen
+
+Umweltaspekte
+
+sammeln müssen.
+
+und Sicherheitskonzepte
+Mit zunehmendem Alter
+
+Offshore-Anlagen
+
+der WEA gewinnen auch
+
+Für die Entwicklung von Offshore-Windparks in
+
+das umweltverträgliche
+
+großer Wassertiefe und Küstenentfernung müssen
+
+Recyling oder Rückbaukon-
+
+den rauen Bedingungen entsprechende Montage-
+
+zepte einschließlich der Entsorgung
+
+und Betriebslogistikkonzepte entwickelt werden.
+
+der WEA an Bedeutung. Hier sind
+
+Ab ca. 25 Meter Wassertiefe können für Offshore-
+
+insbesondere die Glasfaserverbund-
+
+WEA die bekannten Monopile-Fundamente nicht
+
+werkstoffe zu erwähnen, die wegen
+
+mehr eingesetzt werden. Es gilt hier mit anderen
+
+ihrer günstigen Materialeigenschaften
+
+Fundamentkonzepten, z.B. einem Tripod, eine
+
+verbreitet für WEA eingesetzt werden.
+
+ausreichende Stabilität der Anlagen zu erreichen.
+
+Auch der umweltgerechte Umgang
+
+Diese Fundamente müssen entwickelt, modelliert
+
+mit Materialien auf hoher See stellt
+
+und auch zertiﬁziert werden. Im Meer können
+
+die Branche vor neue Heraus-
+
+Störungen aufgrund der eingeschränkten Erreich-
+
+forderungen. Weiterhin müssen
+
+barkeit der Anlagen sehr lange Ausfallzeiten
+
+Schiffssicherheitskonzepte für Off-
+
+verursachen. Im Gegensatz zu Onshore-WEA, die
+
+shore-Windparks optimiert werden.
+
+rund um die Uhr erreichbar sind, sind OffshoreAnlagen nur erreichbar, wenn die meteorologi-
+
+11
+
+Förderprogramme
+für die Windenergie des Landes Bremen
+Förderprogramm
+
+Was wird gefördert?
+
+Wie und in welcher Höhe
+wird gefördert?
+
+Wo können Anträge gestellt werden?
+
+Förderprogramme des Landes Bremen zur Windkraftnutzung
+Förderrichtlinie
+„Windkraftnutzung
+im Lande Bremen“
+
+Neuerrichtung von netzgekoppelten Windkraftanlagen
+im Lande Bremen
+
+Zuschuss bis zu 30 % bzw. bei
+kleineren und mittleren Unternehmen (KMU) 40 % der umweltbedingten Mehrkosten, wobei der
+Zuschuss so zu bemessen ist,
+dass sich die Anlage innerhalb
+von 12 Jahren über die prognostizierten Erträge reﬁnanziert.
+
+Der Senator für Bau, Umwelt und Verkehr
+Ansgaritorstr. 2
+28195 Bremen
+Tel.: 0421/361-10854 (Dr. Jan Viebrock)
+Fax: 0421/361-9253
+Jan.Viebrock@umwelt.bremen.de
+
+Förderprogramme des Landes Bremen für die Angewandte Umweltforschung
+Förderung der
+Angewandten
+Umweltforschung
+
+12
+
+Anwendungsorientierte Umweltforschungsvorhaben, die dazu
+beitragen, Forschungserkenntnisse in die wirtschaftliche
+Praxis umzusetzen und zur
+Verbesserung der F&E-Infrastrukturen im Umweltschutz
+beizutragen.
+
+Zuschuss bis zu 100% der förderfähigen Kosten der antragstellenden wissenschaftlichen Institution, bis zu 50% der förderfähigen
+Kosten beteiligter Unternehmen.
+Förderhöchstsumme 150.000,- €
+
+Der Senator für Bau, Umwelt und Verkehr
+Ansgaritorstr. 2
+28195 Bremen
+Tel.: 0421/361-4950 (Dr. Uwe Probst)
+Tel.: 0421/361-6521 (Ute Krumwiede)
+Fax: 0421/361-9253
+Uwe.Probst@umwelt.bremen.de
+Ute.Krumwiede@umwelt.bremen.de
+
+Förderprogramm
+
+Was wird gefördert?
+
+Wie und in welcher Höhe
+wird gefördert?
+
+Wo können Anträge gestellt werden?
+
+Förderprogramme des Landes Bremen für Umwelttechnologie und umweltgerechte Produktionsstrukturen
+Programm
+
+Förderung von Pilotprojekten:
+Förderung der Entwicklung,
+Konstruktion, Erstellung und
+Erprobung innovativer umweltfreundlicher Produkte und die
+Entwicklung neuer Verfahren und
+Dienstleistungen mit positiven
+Auswirkungen auf die Umwelt.
+
+Zuschuss bis zu 50 %, Förderhöchstsumme 150.000,- €,
+bei Kooperationsvorhaben
+200.000,- €. Ausnahmen
+in Einzelfällen möglich.
+
+Für Antragsteller in Bremen:
+
+Förderung von Verbundprojekten:
+Förderung der Durchführung von
+innovativen Entwicklungen mit
+positiven Umweltauswirkungen,
+wobei die Zusammenarbeit
+zwischen wissenschaftlichen
+Forschungseinrichtungen und
+bremischen Unternehmen
+weiterentwickelt und gefestigt
+werden soll.
+
+Zuschuss bis zu 50% der förderfähigen Kosten des antragstellenden Unternehmens, bis zu 80%
+der förderfähigen Kosten des
+wissenschaftlichen Partners,
+jedoch max. 75 % für das gesamte
+Vorhaben. Förderhöchstsumme
+200.000,- €. Ausnahmen in
+Einzelfällen möglich.
+
+Dr. Detlef Pukrop
+Tel.: 0421/9600-346
+Fax: 0421/9600-8346
+pukrop@bia-bremen.de
+
+Förderung von
+Markterschließungen:
+Unterstützung von Unternehmen
+bei Maßnahmen zur Markteinführung von innovativen,
+umweltverträglichen Produkten,
+Verfahren und Dienstleistungen.
+
+Zuschuss bis zu 50% der förderfähigen Kosten. Förderhöchstsumme 50.000,- €.
+
+Für Antragsteller in Bremerhaven:
+
+Programm
+
+Demonstrationsvorhaben
+
+zur Förderung
+
+im Bereich der Entwicklung
+und Anwendung neuer umweltverträglicher Produkte sowie
+innovativer Verwertungs- und
+Vermeidungstechnologien
+
+Zuschuss bis zu 50% der förderfähigen Kosten des Unternehmens
+und max 75% der förderfähigen
+Kosten des wissenschaftlichen
+Partners. Keine Begrenzung der
+Förderhöchstsumme.
+
+Nils Schnorrenberger
+Tel.: 0471/946 46-60
+Fax: 0471/946 46-69
+schnorrenberger@bis-bremerhaven.de
+
+Zuschuss bis zu 30% der förderfähigen Kosten, plus 10% wenn
+KMU. Keine Begrenzung der
+Förderhöchstsumme.
+
+Dr. Mathias Grabs
+Tel.: 0471/946 46-741
+Fax: 0471/946 46-69
+grabs@bis-bremerhaven.de
+
+zur Förderung
+anwendungsnaher
+Umwelttechnologien (PFAU)
+
+umweltgerechter
+Produktionsstrukturen
+
+Förderung von Investitionen
+für den Aufbau einer Kreislaufwirtschafts-Infrastruktur:
+Förderung von Maßnahmen,
+die dazu beitragen, das
+Anlagenpotenzial bremischer
+Unternehmen für hochwertige
+umwelttechnische Produkte
+und kostengünstige Verfahren,
+die das derzeitige Niveau
+des produktions- und entsorgungsbezogenen Umwelt- und
+Ressourcenschutzes übertreffen,
+zu erhöhen.
+
+BIA Bremer Innovations-Agentur GmbH
+Kontorhaus am Markt
+Langenstr. 2–4
+28195 Bremen
+www.bia-bremen.de
+
+Dr. Barbara Schieferstein
+Tel.: 0421/9600-337
+Fax: 0421/9600-830
+schieferstein@bia-bremen.de
+
+BIS Bremerhavener Gesellschaft
+für Investitionsförderung
+und Stadtentwicklung mbH
+Am Alten Hafen 118
+27568 Bremerhaven
+www.bis-bremerhaven.de
+
+13
+
+Gemeinsame Arbeitsgruppe Windenergie
+des Landes Bremen: Ihre Ansprechpartner
+Ko o rd i nation
+Der Senator für Bau, Umwelt und Verkehr
+Dr. Rita Kellner-Stoll
+Tel.: 0421/361 95 61
+Fax: 0421/361 92 53
+rita.kellner-stoll@umwelt.bremen.de
+
+Dr. Hans-Joachim Stietzel
+Tel.: 0421/361 17 247
+Fax: 0421/361 92 53
+hans-joachim.stietzel@umwelt.bremen.de
+
+Michael Richts
+Tel.: 0421/361 44 14
+Fax: 0421/361 10 875
+michael.richts@umwelt.bremen.de
+
+w w w. umw e l t - u nt e r ne h me n.bremen.de
+Der Senator für Arbeit, Frauen,
+Gesundheit, Jugend und Soziales
+Dr. Ruth Kayser
+Tel.: 0421/361 21 65
+Fax: 0421/361 20 72
+ruth.kayser@arbeit.bremen.de
+www.bremen.de/arbeitssenator
+
+Der Senator für Bildung
+und Wissenschaft
+Rosemarie Goerke
+Tel.: 0421/361 6787
+Fax: 0421/49 66 787
+rosemarie.goerke@wissenschaft.bremen.de
+www.bildung.bremen.de
+
+Der Senator für Wirtschaft
+und Häfen
+
+14
+
+Gerlind Schütte
+Tel.: 0421/361 88 51
+Fax: 0421/361 87 17
+gerlind.schuette@wuh.bremen.de
+www.bremen.de/wuh
+
+BIS Bremerhavener Gesellschaft
+für Investitionsförderung und
+Stadtentwicklung mbH
+Dipl.-Ing. Nils Schnorrenberger
+Tel.: 0471/946 46 60
+Fax: 0471/946 46 69
+schnorrenberger@bis-bremerhaven.de
+www.bis-bremerhaven.de
+
+BIG Bremer-Investitionsgesellschaft mbH
+Thorsten Tendahl
+Tel.: 0421/96 00 121
+Fax: 0421/96 00 810
+thorsten.tendahl@big-bremen.de
+www.big-bremen.de
+
+BIA Bremer InnovationsAgentur GmbH
+Dr. Detlef Pukrop
+Tel.: 0421/96 00 346
+Fax: 0421/96 00 8346
+pukrop@bia-bremen.de
+www.bia-bremen.de
+
+Prof. Dr.-Ing. Peter Ritzenhoff
+Tel.: 0471/4823 110
+Fax: 0471/4823 548
+peter.ritzenhoff@
+hs-bremerhaven.de
+www.hs-bremerhaven.de
+
+Thomas Hofhans
+Tel.: 0421/96 00 251
+Fax: 0421/96 00 820
+hofhans@wfg-bremen.de
+www.wfg-bremen.de
+
+Überseestadt GmbH
+Jons Abel
+Tel.: 0421/30 885 43
+Fax: 0421/30 885 44
+abel@ueberseestadt-bremen.de
+www.ueberseestadt-bremen.de
+
+BRAG Bremerhavener
+Arbeit GmbH
+Marlis Kaap
+Tel.: 0471/926 36 70
+Fax: 0471/926 36 71
+m.kaap@brag-bremerhaven.de
+www.brag-bremerhaven.de
+
+BAG Bremer Arbeit GmbH
+Katja Barloschky
+Tel.: 0421/95 84 89 360
+Fax: 0421/95 84 89 331
+katja.barloschky@bremerarbeit.de
+www.bremerarbeit.de
+
+B e ra t u ng
+FK-Wind Forschungs- und
+Koordinierungsstelle
+Windenergie
+
+WFG Bremer Wirtschaftsförderungsgesellschaft mbH
+
+WAB - Windenergie-Agentur
+Bremerhaven/Bremen e.V.
+Jan Rispens
+Tel.: 0471/391 77-11
+Fax: 0471/391 77-19
+jan.rispens@windenergie-agentur.de
+www.windenergie-agentur.de
+
+Thematische Übersicht
+der vom Land Bremen geförderten Projekte
+
+e
+ltb
+
+u
+ng
+di
+
+Se
+ite
+
+akziv GmbH
+
+ng
+zu
+ut
+en ur
+gi
+kt
+er
+En stru
+ra
+ng
+nf
+ru
+/I
+ie
+ik
+st
+in e
+gi
+rd
+i
+Lo
+oo
+og
+ol
+/K
+rk
+Ge
+t
+we
+en
+tz
+em
+Ne
+ag
+an are
+lm
+ria oftw
+te
+S
+Ma
+n/
+ng
+tio
+tu
+la
+al
+mu ndh
+k
+Si
+ta
+ni
+ns
+ch
+/I
+te
+üf
+ice
+k
+Pr
+rv
+ni
+Se
+ch
+Te
+Rr
+to
+MS
+ra
+ne
+Ge
+u
+k/
+ba
+ni
+en
+ch
+in
+Te
+ch
+Eng
+as
+lu
+/M ick
+au
+tw
+lb
+en
+en
+ah
+en nlag
+St
+nt
+ea
+ne
+gi
+ng
+po
+er
+ru
+m
+en
+tie
+Ko
+nd
+ek
+Wi
+oj
+ng
+Pr
+du
+g/
+ün
+un
+Gr
+an
+ng
+Pl
+hu
+rsc
+lfo
+it
+ria
+he
+te
+er
+Ma Sich
+en
+ng
+
+we
+Um
+
+Institution
+
+29
+
+Alphaterm GmbH
+
+36
+
+AN windenergie gmbh
+
+16
+
+AWI Alfred-Wegener-Institut
+
+30
+
+Bosch Maintenance GmbH
+
+20
+
+Bremer Energie Institut, BEI
+
+•
+
+35
+
+CebeNetwork GmbH
+
+•
+
+31
+
+Energiekontor AG
+
+•
+
+34
+
+deneg GmbH
+
+•
+
+23
+
+Compass GmbH
+
+•
+•
+
+24
+
+Energiekontor-VB-GmbH
+
+•
+•
+•
+•
+
+•
+
+•
+
+37
+
+FhG-IFAM
+GAUSS mbH
+
+30
+
+Hochschule Bremen, IGBre
+
+25
+
+Hochschule Bremen, ITU
+
+•
+
+16, 28
+
+•
+
+•
+
+29
+
+•
+•
+•
+
+Hochschule Bremerhaven, FK-Wind 33
+Hochschule Bremerhaven, WKA
+
+•
+
+24
+
+Hydrogen Challenger GmbH
+
+36
+
+Lloyd Dynamowerke GmbH&Co KG
+
+17, 18
+
+meteocontrol GmbH
+
+32
+
+Mühlhan Bremen GmbH
+
+28
+
+MWB AG
+
+19
+
+REETEC GmbH
+
+•
+
+22, 37
+
+SIPOC GmbH
+
+•
+•
+•
+
+•
+•
+•
+•
+
+SSC Group GmbH
+
+20
+
+Trenz AG
+
+•
+
+22
+
+Uni Bremen, FPB
+
+wab e.V.
+
+33
+26, 27, 31
+
+15
+•
+
+32
+
+WeserWind GmbH
+
+•
+
+17, 25, 35
+
+Uni Bremen, MARUM
+
+•
+
+•
+
+34
+
+Uni Bremen, IALB
+
+•
+
+•
+
+•
+
+21, 23
+18, 19
+
+Thales instruments GmbH
+
+•
+
+•
+•
+
+•
+
+•
+•
+•
+
+•
+
+•
+
+Die vorliegende Übersicht stellt die vom Land Bremen geförderten Projekte dar (Stand März 2004). Die Zuordnung der Themenschwerpunkte ergibt sich aus den nachfolgenden Projektbeschreibungen. Weitere Themenfelder dieser und anderer Unternehmen und
+Institutionen finden Sie u.a. auf der Homepage der WAB e.V. (www.windenergie-agentur.de). Die nachfolgend aufgeführten Projekte
+umfassen ein großes Spektrum der Windenergie, ausgehend von der Entwicklung von WEA und deren Komponenten über Fragen zum
+Betrieb und zur Mess-, Steuer- und Regelungstechnik bis hin zu Umweltfragen. Schließlich folgen Infrastrukturprojekte sowie ergänzende Themenstellungen.
+
+•
+
+Projekte
+
+Entwicklung des Prototyps einer AN Bonus
+2 MW-Windkraftanlage zur Serienmaschine
+
+Schwingfestigkeitsprüfung zur Qualiﬁzierung
+von Faserverbundkunststoffen für OffshoreWindenergieanlagen
+
+Die Firma AN windenergie gmbh hat den Windenergieanlagen-
+
+Ein wirtschaftlicher Betrieb von Windenergieanlagen (WEA) im
+
+Prototypen AN Bonus 2 MW zu einer Serienmaschine entwi-
+
+Offshore-Bereich erfordert optimierte Werkstoffkombinationen
+
+ckelt. Im Rahmen des Vorhabens wurden die Baupläne erstellt,
+
+mit hohen Betriebsfestigkeiten. Dies gilt insbesondere für die
+
+der Prototyp aufgestellt und erprobt, die Vermessung u. a.
+
+stark beanspruchten Rotorblätter. Für Offshore-WEA werden
+
+der elektronischen Komponenten, der Leistungsdaten, der
+
+aufgrund der höheren Belastungen neben Glasfaser- (GFK)
+
+Schallemissionen und der Rotorblätter durchgeführt, sowie
+
+auch zunehmend Kohlefaserverbundkunststoffe (CFK) interes-
+
+die Auswertung der Daten und die Optimierung der Anlage
+
+sant. Daten über die Schwingfestigkeit als Maß für Materialer-
+
+vorgenommen. Mit diesem Projekt wurde ein Schritt in Richtung
+
+müdung und Totalversagen, insbesondere in Kombination mit
+
+großer und leistungsstarker Anlagen unternommen, wie sie der
+
+Umgebungseinﬂüssen (Feuchtigkeit, Temperatur), und
+
+Markt zunehmend verlangt.
+
+Lastspielzahlen bis 108 liegen bisher jedoch nur in sehr
+begrenztem Umfang vor.
+
+Laufzeit: 15.09.1998 – 30.06.2001
+
+Im Rahmen des Vorhabens sollen eingehende material- und
+bauteilkundliche Untersuchungen durchgeführt werden, um eine
+
+Förderprogramm/Institution:
+
+gut abgesicherte experimentelle Basis für Betriebsfestigkeits-
+
+PFAU / Bremer Innovations-Agentur GmbH
+
+berechnungen bereitzustellen. Die Untersuchungen erfolgen
+an Prüfkörpern (Laminate) und real geformten Bauteilen.
+
+Durchführende Institution:
+
+Die Forschungsarbeiten sollen insbesondere zu vereinfachten
+
+AN windenergie gmbh
+
+Auswahlkriterien geeigneter Faserverbundkunststoffe (FVK)
+
+Cuxhavener Str. 10a / Speicher 16
+
+für WEA führen. Daneben wird ein Konzept zur Bewertung von
+
+28217 Bremen
+
+Umwelteinﬂüssen auf die Schwingfestigkeit von FVK-Bauteilen
+
+Tel.: 0421/69458-0
+
+entwickelt.
+
+www.anwind.de
+info@anwind.de
+
+Laufzeit: 01.01.2003 – 31.12.2005
+
+Projektleiter/in:
+
+Förderprogramm /Institution:
+
+Lorenz Meesenburg
+
+Angewandte Umweltforschung /
+
+Tel.: 0421/69458-72
+
+Der Senator für Bau, Umwelt und Verkehr
+
+Lorenz.Meesenburg@anwind.de
+Durchführende Institution:
+Fraunhofer-Institut für Fertigungstechnik
+und Angewandte Materialforschung IFAM
+Wiener Str. 12
+16
+
+28359 Bremen
+Tel.: 0421/2246-0
+www.ifam.fraunhofer.de
+info@ifam.fraunhofer.de
+Projektleiter/in:
+Dr. Christof Nagel
+Tel.: 0421/2246-477
+na@ifam.fhg.de
+Projektpartner:
+Abeking & Rasmussen Rotec GmbH
+
+Projekte
+Projekte
+
+Optimierte TransversalﬂussGeneratoren für Windenergieanlagen,
+TransWind
+
+Berechnung und Konstruktion eines
+50 kW-Transversalﬂussgenerator-Systems
+
+Um bei Windenergieanlagen einen optimalen Gesamtwirkungs-
+
+Erstrebenswerte Leistungsmerkmale für moderne Generatoren
+
+grad zu erzielen, werden diese immer häuﬁger mit Stromrichtern
+
+sind vorrangig eine hohe Kraftdichte in Bezug auf Gewicht und
+
+ausgerüstet. Darüber hinaus hat ein namhafter Hersteller den
+
+Volumen, geringe Geräusche und Vibrationen sowie Eingriffs-
+
+Generator direkt an die Windturbine gekoppelt. Soll bei dieser
+
+möglichkeiten zur Leistungsregelung, um zukünftig über eine
+
+Bauart die Anlagenleistung gesteigert werden, entstehen immer
+
+regulierbare Netzeinspeisung verfügen zu können.
+
+größere Maschinendurchmesser, deren Stabilisierung aufwendige
+
+Mit der Entwicklung von Transversalﬂussgeneratoren können
+
+Konstruktionen erfordert, die wiederum hohe Zusatzgewichte
+
+diese Forderungen im Prinzip weitestgehend erfüllt werden.
+
+verursachen. Mit neuartigen Transversalﬂussmaschinen (TFM)
+
+Hinsichtlich ihrer Einsetzbarkeit in Windkraftanlagen besteht
+
+ergeben sich grundlegend neue Freiheitsgrade zur Konstruktion
+
+jedoch noch grundlegender Forschungsbedarf zur Optimierung
+
+hochpoliger Generatoren bei kleinem Durchmesser und deutli-
+
+industriell handhabbarer Dimensionierungsregeln und zur
+
+cher Gewichtsreduzierung gegenüber konventionellen Genera-
+
+Verbesserung der Gleichlaufeigenschaften, die aus den
+
+toren. Die Nachteile: hohe Drehmomentpulsationen und starke
+
+zur Zeit auftretenden Drehmomentpulsationen resultieren.
+
+Geräuschentwicklung.
+
+Dieses Projekt soll die Ergebnisse des IALB (Uni Bremen) zu
+
+Im Rahmen des Forschungsvorhabens sollten Lösungen entwi-
+
+einem serientauglichen Generator weiterentwickeln.
+
+ckelt werden, die die Störeffekte der TFM auf ein tolerierbares
+Maß senken. Der Schwerpunkt lag auf der Erarbeitung einer
+
+Laufzeit: 01.10.2003 - 30.09.2005
+
+optimierten Maschinengeometrie und efﬁzienter Stromanregung
+unter Verwendung von Simulationswerkszeugen. Ziel war ein
+
+Förderprogramm /Institution:
+
+optimierter Transversalﬂuss-Generator, der insbesondere für die
+
+PFAU / Bremer Innovations-Agentur GmbH
+
+großen Offshore-WEA nutzbar wird.
+Durchführende Institution:
+Laufzeit: 01.04.2001 – 30.09.2003
+
+Lloyd Dynamowerke GmbH & Co KG
+Hastedter Osterdeich 250
+
+Förderprogramm /Institution:
+
+28207 Bremen
+
+Angewandte Umweltforschung /
+
+Tel.: 0421/45 89-0
+
+Der Senator für Bau, Umwelt und Verkehr
+
+www.ldw.de
+
+Durchführende Institution:
+
+Projektleiter/in:
+
+Universität Bremen
+
+Hans-Peter Hermann
+
+Institut für elektrische Antriebe,
+
+Tel.: 0421/45 89 351
+
+Leistungselektronik und Bauelemente IALB
+
+hermann@ldw.de
+
+Otto-Hahn-Allee, NW 1
+28359 Bremen
+
+Projektpartner:
+
+Tel.: 0421/218-4436
+
+Universität Bremen, Institut für elektrische Antriebe,
+
+www.ialb.uni-bremen.de
+
+Leistungselektronik und Bauelemente IALB
+
+IALB@Elektrotechnik.Uni-Bremen.de
+Projektleiter/in:
+Prof. Dr.-Ing. Bernd Orlik
+Tel.: 0421/218-4023
+b.orlik@ialb.uni-bremen.de
+Projektpartner:
+Lloyd Dynamowerke GmbH, Bremen
+
+17
+
+Projekte
+
+Inbetriebnahme- und Diagnosesystem
+für Generatoranlagen
+
+Integration der Fräsbearbeitung in die
+Turmfertigung von Windenergieanlagen
+
+Die LDW GmbH hat ein Betriebsdatenüberwachungssystem für
+
+Im Rahmen des Verbundprojektes soll ein Verfahren zur
+
+Generatoranlagen entwickelt, das dem Anwender die Online-
+
+In-line-Fräsbearbeitung von Flanschen an Turmsegmenten von
+
+Erfassung der aktuellen Betriebszustände des Drehstromge-
+
+Windenergieanlagen konzeptionell neu entwickelt und anschlie-
+
+nerators mit Spannungsregler ermöglicht. Dabei werden die
+
+ßend in die Fertigung eingeführt werden. Eine vergleichbare
+
+folgenden technischen Funktionen realisiert:
+
+Technologie gibt es am Markt bisher nicht und ist auch aus
+anderen Bereichen aufgrund der Randbedingungen bei der
+
+- Optimierung der Ausnutzung des Generators
+im stationären und dynamischen Betrieb
+- Langzeitüberwachung von lebensdauerbestimmenden
+Subsystemen und Komponenten
+
+Produktion von Turmsegmenten für Windenergieanlagen nicht
+übertragbar.
+In den Vorversuchen werden die Prozessparameter zur Fräsbearbeitung von Flanschen an Turmsegmenten von Windenergiean-
+
+- Selbstdiagnosefähigkeit des Generatorsystems
+
+lagen ermittelt, optimiert und anschließend in den Fertigungs-
+
+- Beschleunigung von Inbetriebnahmen vor Ort
+
+prozess umgesetzt. Das Ziel ist die Steigerung der Qualität der
+
+- Verhinderung von Überspannungen
+
+Turmsegmente bei gleichzeitiger Reduzierung der Fertigungszeit
+
+an den Generatorwicklungen
+- Verbesserung der Regeleigenschaften
+bei geregelten Generatoren
+
+und -kosten. Der Erfolg des Vorhabens ist eng an die interdisziplinäre Zusammenarbeit des Unternehmens mit der Stiftung
+Institut für Werkstofftechnik (IWT) sowie mit dem Fachgebiet
+Fertigungseinrichtungen (FG05) Universität Bremen gebunden.
+
+Laufzeit: 20.08.2001 – 31.08.2003
+Laufzeit: 01.01.2004 – 31.12.2005
+Förderprogramm /Institution:
+PFAU / Bremer Innovations-Agentur GmbH
+
+Förderprogramm /Institution:
+PFAU / Bremer Innovations-Agentur GmbH
+
+Durchführende Institution:
+Lloyd Dynamowerke GmbH & Co. KG
+
+SSC Group GmbH
+
+28207 Bremen
+
+Am Werfttor 1, 28755 Bremen
+
+Tel.: 0421/45 89-0
+
+Tel.: 0421/668 35 95
+
+www.ldw.de
+
+www.ssc-group.de
+
+Projektleiter/in:
+
+Projektleiter/in:
+
+Herr Hans-Peter Hermann
+
+Hinrich Eden
+
+Tel.: 0421/45 89 351
+18
+
+Durchführende Institution:
+
+Hastedter Osterdeich 250
+
+Tel.: 0421/668 35 35
+
+hermann@ldw.de
+
+h.eden@ssc-group.de
+
+Projektpartner:
+
+Projektpartner:
+
+Universität Bremen, Institut für elektrische Antriebe,
+
+Institut für Werkstofftechnik,
+
+Leistungselektronik und Bauelemente IALB
+
+ECO-Centrum, Bremen
+Universität Bremen,
+Fachgebiet Fertigungseinrichtungen
+
+Projekte
+Projekte
+
+Bau einer Fertigungsanlage zur kostenoptimierten Herstellung von Türmen
+für Multi-Megawatt-Windenergieanlagen
+
+SIMA-WIND Entwicklung eines simulationsgestützten Instandhaltungs-Management
+Cockpits für Offshore-Windparks
+
+Der Markt für Windenergieanlagen erfordert heute von den Her-
+
+Die wirtschaftliche Betreibung zukünftiger Offshore-Windparks
+
+stellern eine Optimierung und Anpassung der Fertigungseinrich-
+
+wird in entscheidendem Maße von einer efﬁzienten Instand-
+
+tungen am Produktionsstandort an die immer größer werdenden
+
+haltungsplanung abhängen. Im Rahmen des Projektes wird ein
+
+Teilsegmente der Windenergieanlagen (WEA).
+
+neuartiges simulationsgestütztes Instandhaltungs-Management-
+
+Aufbauend auf erste Vorversuche baut die Firma SSC in diesem
+
+Tool entwickelt, um eine vorausschauende logistische Planung
+
+Kontext eine mobile, innovative Fräs-Anlage zur hochwertigen,
+
+und Umsetzung von Wartungsintervallen für Offshore-Windparks
+
+spangebenden Bearbeitung für Flansche von Türmen für Multi-
+
+vornehmen zu können.
+
+Megawatt-WEA, die zu den Flanschen der riesigen Turmseg-
+
+Die Wartbarkeit einzelner WEA von Offshore-Windparks ist mit
+
+mente transportiert werden kann. Die Herstellung der Flansch-
+
+besonderen Problemen verbunden. Diese resultieren beispiels-
+
+verbindungen für die WEA-Türme soll verbessert werden, denn
+
+weise daraus, dass Wartungsarbeiten nur bei bestimmten
+
+die Genauigkeitsanforderungen an die Flanschverbindung sind
+
+Witterungsverhältnissen durchgeführt werden können oder der
+
+erheblich gestiegen. Aufgrund der Größe der Bauteile (Durch-
+
+Transport zu den Offshore-Windparks realisiert werden muss.
+
+messer 4 bis 6 m, Länge 20 bis 35 m) und Instabilitäten im
+
+Ein efﬁzientes Instandhaltungsmanagement ist die Vorausset-
+
+Fertigungszustand sind produktionstechnische Optimierungen
+
+zung dafür, dass Offshore-Windparks weniger Ausfälle verursa-
+
+notwendig.
+
+chen und damit wirtschaftlich betrieben werden können.
+
+Die Anlage ist eine Neuentwicklung, mit der sich das Unternehmen einen neuen Fertigungsbereich erschließt. Die Fertigung
+
+Laufzeit: 01.10.2003 – 30.09.2005
+
+der Anlage wird von Testläufen ﬂankiert.
+Förderprogramm /Institution:
+Laufzeit: 01.03.2004 - 31.12.2005
+
+PFAU / Bremerhavener Gesellschaft für
+Investitionsförderung und Stadtentwicklung mbH
+
+Förderprogramm /Institution:
+Ökofonds, Teilfonds: „Umweltgerechte Produktionsstrukturen“/
+
+Durchführende Institution:
+
+Der Senator für Bau, Umwelt und Verkehr
+
+MWB Motorenwerke Bremerhaven AG
+Barkhausenstraße
+
+Durchführende Institution:
+
+27517 Bremerhaven
+
+SSC Stahl-Service-Center GmbH
+
+Tel.: 0471/9450-0
+
+Am Werfttor 1
+
+www.mwb-bremerhaven.de
+
+28775 Bremen-Vegesack
+Tel.: 0421/668 3535
+
+Projektleiter/in:
+
+www.stahl-service-center.de
+
+Henning von Wedel
+
+h.eden@stahl-service-center.de
+
+Tel: 0471/9450-226
+Henning.VonWedel@mwb-bremerhaven.de
+
+Projektleiter/in:
+Dipl.-Ing. U. van Scharrel
+
+Projektpartner:
+
+Tel.: 0421/668 3535
+
+Balance GmbH, Bremen
+
+v.scharrel@nyblad.de
+
+19
+
+Projekte
+
+IRIS Intelligentes RestlebensdauerInformationssystem für OffshoreWindenergieanlagen
+
+Markteinführung eines Datenloggers zur
+Vermessung potenzieller Windstandorte
+
+Ziel des Projekts sind Entwicklung und Optimierung eines intel-
+
+Die Thales instruments GmbH beabsichtigte, ein Markterschlie-
+
+ligenten, visualisierten Diagnose- und Informationssystems zur
+
+ßungsprojekt für den von ihr entwickelten Datenlogger durch-
+
+sicheren Bewertung aller ermüdungs- und schwingungs-
+
+zuführen. Dazu entwickelte das Unternehmen eine geeignete
+
+relevanten Lasten sowie der strömungsmechanischen und
+
+Internet-Präsentation.
+
+thermischen Vorgänge an Offshore-Windenergieanlagen.
+Die am Markt erhältlichen Diagnosesysteme für mechanische
+
+Die THALES instruments GmbH entwickelt und vertreibt elektro-
+
+Bauteile in Windenergieanlagen (Condition-Monitoring-Systems)
+
+technische Produkte für die Windenergiebranche. So entwickelt
+
+basieren im Wesentlichen auf schwingungsdiagnostischen Maß-
+
+THALES Systeme zur Windgeschwindigkeitsmessung. Dabei
+
+nahmen sowie deren Analyse und Bewertung. Dadurch erkennen
+
+zeichnet die THALES-Datenlogger - gegenüber auf dem Markt
+
+sie Schädigungen am Bauteil, die durch schnelles Handeln
+
+beﬁndlichen Geräten - die Integration von Telematikfunktionen
+
+behoben werden können, sie liefern jedoch kein Wissen über
+
+und ihre Anbindung an eine Datenbank aus. Im Rahmen des
+
+den aktuellen Zustand der Bauteile und sind somit nicht in der
+
+Projektes verfolgt THALES die Vermarktung des Datenloggers.
+
+Lage, Aussagen über die jeweilige Restlebensdauer zu geben.
+Im Rahmen des Projektes wird ein intelligentes Diagnosesystem
+
+Laufzeit: 06.08.2001 – 31.12.2001
+
+entwickelt, das Aussagen zur sicheren Bewertung aller ermüdungs- und schwingungsrelevanten Lasten ermöglicht,
+
+Förderprogramm/Institution:
+
+und damit den Ansatz einer durch die Betreibergesellschaften
+
+PFAU / Bremer Innovations-Agentur GmbH
+
+von Offshore-Windenergieanlagen geforderten intelligenten
+Instandhaltungsstrategie realisiert.
+
+Durchführende Institution:
+Thales instruments GmbH
+
+Laufzeit: 01.10.2003 – 31.03.2005
+
+Am Holzhafen 8
+28217 Bremen
+
+Förderprogramm/Institution:
+
+Tel.: 0421/380 43 40
+
+PFAU / Bremerhavener Gesellschaft für
+
+www.thales-instruments.de
+
+Investitionsförderung und Stadtentwicklung mbH
+
+info@thales-instruments.de
+
+Durchführende Institution:
+
+Projektleiter/in:
+
+Bosch Maintenance GmbH
+
+Anne Higgen
+
+Stresemannstr. 46 (BRIG)
+
+Tel.: 0421/380 43 40
+
+27570 Bremerhaven
+
+Anne.Higgen@thales-instruments.de
+
+Tel.: 0471/140-537
+www.bosch-mt.de
+20
+
+d.bosch@bosch-mt.de
+Projektleiter/in:
+Dieter Bosch
+Tel.: 0471 – 140-537
+d.bosch@bosch-mt.de
+Projektpartner:
+Institut für Seeverkehrswirtschaft
+und Logistik (ISL), Bremerhaven
+
+Projekte
+Projekte
+
+Entwicklung eines modularen
+internetbasierten Monitoring-Systems
+für Windenergieanlagen
+
+Entwicklung eines modularen
+internetbasierten Monitoring-Systems/
+Markterschließung
+
+Der Bereich der Windenergie hatte in den letzten Jahren erheb-
+
+Die SIPOC GmbH hat ein Markterschließungsprojekt für
+
+liche Zuwachsraten und wird auch in absehbarer Zukunft ein
+
+ihr neu entwickeltes Fernüberwachungssystem für WEA,
+
+wachsender Markt sein. Der Betrieb der Anlagen erreicht zuneh-
+
+EnergyControlCenter, durchgeführt. Dazu wurde eine Vertriebs-
+
+mend industrielle Dimensionen, die entsprechend professionelle
+
+struktur konzipiert, ein Werbekonzept sowie ein Internet-
+
+Werkzeuge erfordern. Dies gilt insbesondere auch für Instrumen-
+
+auftritt und Prospektmaterialien erstellt. Im Rahmen des Vorha-
+
+te zur Fernüberwachung der großräumig verteilten oder sogar
+
+bens wurde das Produkt erfolgreich auf Messen, internationalen
+
+im Offshore-Bereich beﬁndlichen WEA.
+
+Konferenzen und bei Besuchen von Anlagenherstellern
+
+Die SIPOC GmbH hat im Rahmen des Vorhabens einen Prototyp
+
+präsentiert.
+
+für eine umfassende Online-Erfassung von Betriebsdaten von
+WEA entwickelt. Die Kombination mit einer fortschrittlichen
+
+Laufzeit: 23.07.2001 – 30.09.2002
+
+Datenanalyse, einer abgesicherten Datenarchivierung sowie
+einer gezielten Verteilung speziﬁscher Daten an Betreiber,
+
+Förderprogramm/Institution:
+
+Wartung und Kommanditisten ermöglicht dabei einen op-
+
+PFAU / Bremer Innovations-Agentur GmbH
+
+timierten Anlagenbetrieb. Das Anlagenkonzept verbessert
+insbesondere das Betriebsverhalten der Windenergieanlagen
+
+Durchführende Institution:
+
+durch Verkürzung der Reaktionszeiten für Diagnose und Service.
+
+SIPOC Simulation based Planning,
+
+Zur Überwachung weiterer Betriebsparameter ist das Konzept
+
+Optimization and Control GmbH
+
+modular erweiterbar.
+
+Am Deich 61/62
+28199 Bremen
+
+Laufzeit: 01.12.2000 – 28.02.2002
+
+Tel.: 0421/598 601-0
+www.sipoc.de
+
+Förderprogramm/Institution:
+
+info@sipoc.de
+
+PFAU / Bremer Innovations-Agentur GmbH
+Projektleiter/in:
+Durchführende Institution:
+
+Dr.–Ing. Wolfgang Kühn
+
+SIPOC Simulation based Planning,
+
+Tel.: 0421/792 88 65
+
+Optimization and Control GmbH
+
+Kuehn@sipoc.de
+
+Am Deich 61/62
+28199 Bremen
+Tel.: 0421/598 601-0
+www.sipoc.de
+info@sipoc.de
+Projektleiter/in:
+Dr.-Ing. Wolfgang Kühn
+Tel.: 0421/792 88 65
+Kuehn@sipoc.de
+
+21
+
+Projekte
+
+Entwicklung/Prototypenfertigung/Erprobung
+
+Windparkmanager
+
+einer mobilen Einrichtung zur Messwert-Erfassung der
+Netzqualität beim Betrieb von Windenergieanlagen
+
+Die REETEC GmbH bietet den WEA-Herstellern im Rahmen der
+
+Im Vorhaben wurde eine modular aufgebaute Datenbank entwi-
+
+Hersteller-Gewährleistung eine weitere Dienstleistung an, die in
+
+ckelt, die alle am Windenergieprojekt beteiligten Unternehmen
+
+der Ausführung als „Mobile Messeinrichtung“ eine Marktneuheit
+
+und Personen in ihren Geschäftsprozessen unterstützt.
+
+darstellt. Die Dienstleistung besteht aus einer Mobilen Ein-
+
+Auf einer Oberﬂäche, die übersichtlich und einfach zu bedienen
+
+richtung zur Messwerte-Erfassung der Netzqualität. Mit dieser
+
+ist, werden alle Projektdaten für Windparks oder Einzelstand-
+
+Einrichtung wurde für die WEA-Hersteller die neue Möglichkeit
+
+orte erfasst. Sämtliche am Projekt beteiligten Personen wie
+
+geschaffen, bei der REETEC GmbH sowohl Equipment als auch
+
+Grundstückseigentümer, Bauunternehmen und Ansprechpartner
+
+ausgebildetes Mess- und Gutachterpersonal zu buchen, um an
+
+für die Gewerke, die Daten des zuständigen Energieversorgers
+
+die erforderlichen Daten zu gelangen. Dabei verringert sich der
+
+etc. werden nur einmal im System eingepﬂegt. Analog wird
+
+Kostenfaktor.
+
+mit den Grundstücksdaten verfahren: Gemarkungen, Fluren und
+Flurstücke, die Verwendung der Grundstücke als Windenergie-
+
+Laufzeit: 15.07.2003 – 28.02.2004
+
+anlagenstandort, Wegeﬂäche oder Kabeltrassen werden nur ein
+einziges Mal erfasst.
+
+Förderprogramm/Institution:
+PFAU / Bremer Innovations-Agentur GmbH
+
+Im Rahmen der Projektarbeit erstellte oder erhaltene Dokumente wurden ebenso verwaltet wie Zahlungstermine oder
+
+Durchführende Institution:
+
+Wartungsintervalle. Schnittstellen schaffen die Möglichkeit
+
+REETEC GmbH Regenerative Energie- und Elektrotechnik
+
+zur Einbindung vorhandener Programme, die Internetfähigkeit
+
+Cuxhavener Straße 10
+
+ermöglicht den ortsungebundenen Zugriff auf sämtliche Projekt-
+
+28217 Bremen
+
+daten. Hierbei gelten im Bankbereich übliche Sicherheitsstan-
+
+Tel.: 0421/39987-0
+
+dards, persönliche Zugriffsdeﬁnitionen sind möglich.
+
+www.reetec.de
+info@reetec.de
+
+Laufzeit: 09.07.2003 – 31.01.2004
+
+Projektleiter/in:
+
+Förderprogramm/Institution:
+
+Detlef Lindenau
+
+PFAU / Bremer Innovations-Agentur GmbH
+
+Tel.: 0421/39987-14
+detlef.lindenau@reetec.de
+
+Durchführende Institution:
+TRENZ AG
+Lahnstr. 100
+28199 Bremen
+Tel.: 0421/59589-0
+
+22
+
+www.trenz.ag
+info@trenz.ag
+Projektleiter/in:
+Stefan Gerdts
+Tel.: 0421/59589-13
+s.gerdts@trenz.ag
+
+Projekte
+Projekte
+
+Simulation von Prozessabläufen für Betrieb,
+Service und Wartung von Offshore-WEA
+
+Verteiltes Software-System für Steuerung
+und Überwachung von WindenergieanlagenGondel-Prüfständen
+
+Das Konzept zur Simulation der Prozessabläufe bei Offshore-
+
+Die Stadt Bremerhaven bemüht sich darum, einer der Top–
+
+Windenergieanlagen (WEA) soll eine leistungsfähige Plattform
+
+Standorte für die Produktion von Offshore-WEA zu werden. Zu
+
+bilden, die auf zukünftige Anforderungen ausgerichtet ist.
+
+diesem Zweck wird ein Industriegebiet mit Anschluss an einen
+
+Im Verlauf dieses Projektes sollen Bausteine entwickelt werden,
+
+Tiefwasserhafen erschlossen. Die Kapazität der Fertigung soll
+
+mit denen in der Planungsphase eine dynamische Absicherung
+
+in der letzten Ausbaustufe für 200 WEA per Anno ausreichend
+
+und Optimierung der Versorgungs-, Service-, Wartungs- und
+
+sein. Die Voraussetzungen sind durch die kurzen Wege zu den
+
+Reparaturprozesse von Offshore-WEA erfolgen kann. Das Simula-
+
+projektierten Einsatzgebieten in der Nordsee, Schleusenbreiten
+
+tionskonzept soll offen für die Einbindung weiterer Module zur
+
+für große Montageschiffe usw. denkbar günstig.
+
+operativen dynamischen Einplanung von Produktionsmitteln und Personal sein.
+
+Unverzichtbarer Bestandteil der Fertigung solcher Anlagen
+ist eine Endabnahme der Komplettsysteme. Hier werden zwei
+
+Der Simulationsansatz erlaubt im Vorfeld verschiedene Pla-
+
+konkurrierende Systeme gesehen: Die Abnahme auf einem Test-
+
+nungsalternativen und Szenarien durchzutesten. Auf Basis der
+
+standort nahe der Produktionsanlage und ein Gondelprüfstand.
+
+Simulation können für verschiedene Modelle detaillierte Ana-
+
+Die MWB Motorenwerke Bremerhaven AG planen den Bau eines
+
+lysen durchgeführt werden. Damit sind zuverlässige Aussagen
+
+solchen Prüfstandes für (WEA) Windenergieanlagen-Gondeln.
+
+möglich, wie und unter welchen Randbedingungen die erfor-
+
+Aufgrund der bestehenden Risiken hinsichtlich der tatsächlichen
+
+derlichen Prozesse innerhalb welcher Zeiträume durchgeführt
+
+Realisierung des Prüfstandes werden die Arbeiten im Rahmen
+
+werden können. Die Simulation betrachtet dabei sowohl den
+
+des vorliegenden Projektes bis zur Erstellung eines Pﬂichtenhef-
+
+Einsatz von Personal und Produktionsmitteln als auch die
+
+tes geführt.
+
+Dynamik der relevanten Material- und Informationsﬂüsse unter
+Einbeziehung sich verändernder Umwelt- und Wetterszenarien.
+
+Laufzeit: 01.01.2004 – 30.06.2004
+
+Laufzeit: 01.01.2004 – 11.05.2005
+
+Förderprogramm/Institution:
+PFAU / Bremer Innovations-Agentur GmbH
+
+Förderprogramm/Institution:
+PFAU / Bremer Innovations-Agentur GmbH
+
+Durchführende Institution:
+CebeNetwork GmbH
+
+Durchführende Institution:
+
+Flughafenallee 28
+
+SIPOC Simulation based Planning,
+
+28199 Bremen
+
+Optimization and Control GmbH
+
+Tel.: 0421/55 83 64-0
+
+Am Deich 61/62
+
+www.cebenetwork.de
+
+28199 Bremen
+
+cbn@cebenetwork.de
+
+Tel.: 0421/598 601-0
+www.sipoc.de
+
+Projektleiter/in:
+
+info@sipoc.de
+
+Arne Schulz
+Tel.: 0421/55 83 64-37
+
+Projektleiter/in:
+Edzard Behm
+Tel.: 0421/598601-0
+behm@sipoc.de
+
+schulz@cebenetwork.de
+
+23
+
+Projekte
+
+Erarbeitung eines Konzeptes für einen
+Abnahme- und Forschungsprüfstand
+für komplette Maschinenhäuser für WEA
+
+Entwicklung von innovativen Dienstleistungen zur technischen Optimierung
+von Offshore- Windparks
+
+Der wirtschaftliche Betrieb von Offshore-Windenergieanlagen
+
+Die geplanten Dienstleistungen der Energiekontor AG umfassen
+
+(WEA) setzt Wartungskonzepte voraus, die mit einer minimalen
+
+grundlegende Planungsschritte, die bei der Realisierung eines
+
+Anzahl von Wartungsoperationen und Stillständen auskommen.
+
+Offshore-Windparks unerlässlich sind. Dazu zählen die Entwick-
+
+Dennoch muss eine permanente Überwachung aller Bauteile
+
+lung von Konzepten zur :
+
+gewährleistet sein. Um verlässliche Daten für eine Erhöhung
+
+- umweltgerechten Logistik bei der Bauphase und dem Rückbau
+
+der Dauerfestigkeit von Offshore-WEA und damit mehr Kenntnis
+
+- Seekabelüberwachung
+
+hinsichtlich der Ursachen eventueller Schädigungen zu erlan-
+
+- Durchführung von Baugrund- und geophysikalischen
+
+gen, ist ein Dauertestlauf mit anschließender Zerlegung und
+
+Untersuchungen
+
+Untersuchung der Anlagenkomponenten erforderlich.
+
+- Förderung der öffentlichen Akzeptanz
+
+Dafür wird ein Prüfstand benötigt, der realitätsnahe Belastun-
+
+- für Ausgleichsmaßnahmen im Bereich „Fischerei“
+
+gen einer deﬁnierten Größe simulieren kann.
+
+und „Naturschutz“
+
+Im Rahmen des Projektes soll ein Prüfstandskonzept entstehen,
+
+- Durchführung und Optimierung von Offshore-Windmessungen
+
+das geeignet ist, eine komplette Generatorgondel im fertig
+
+- Vorarbeiten für die Erarbeitung eines
+
+montierten Zustand extremen Betriebs- und Standortbedingungen auszusetzen. Der zu planende Prüfstand soll sowohl als
+Abnahme- als auch als Forschungsprüfstand fungieren.
+
+umweltgerechten Wartungskonzepts
+- Entwicklung von Genehmigungsverfahren
+eines Offshore-Windparks
+
+Die Projektergebnisse werden dazu beitragen, das Land Bremen,
+und hier insbesondere Bremerhaven, als Forschungs-, Entwick-
+
+Nachdem die Konzepte und Handlungsanleitungen an den
+
+lungs- und Produktionsstandort für Windenergieanlagen zu
+
+Offshore-Projekten Nordergründe und Borkum Riffgrund West
+
+etablieren.
+
+entwickelt und getestet wurden, sollen die Ergebnisse für die
+Planung und Realisierung weiterer Offshore-Windparks im In-
+
+Laufzeit: 01.03.2003 – 30.06.2004
+
+und Ausland genutzt werden.
+
+Förderprogramm/Institution:
+
+Laufzeit: 01.04.2003 – 31.12.2003
+
+Angewandte Umweltforschung /
+Der Senator für Bau, Umwelt und Verkehr
+
+Förderprogramm/Institution:
+PFAU / Bremer Innovations-Agentur GmbH
+
+Durchführende Institution:
+Hochschule Bremerhaven
+
+Energiekontor AG
+
+An der Karlstadt 8, 27568 Bremerhaven
+
+Mary-Somerville-Str. 5
+
+Tel.: 0471/4823-166
+24
+
+Durchführende Institution:
+
+Institut für Wärmekraft- und Arbeitsmaschinen
+
+28359 Bremen
+
+www.hs-bremerhaven.de
+
+Tel.: 0421/33 04-0
+
+rbehrens@hs-bremerhaven.de
+
+www.energiekontor.de
+planung_offshore@energiekontor.de
+
+Projektleiter/in:
+Prof. Dr.-Ing. Roland Behrens
+
+Projektleiter/in:
+
+Tel.: 0471/4823-144
+
+Martin Bretag
+
+rbehrens@hs-bremerhaven.de
+
+Tel.: 0421/33 04-210
+martin.bretag@energiekontor.de
+
+Projektpartner:
+MWB Motorenwerke Bremerhaven AG
+Fraunhofer-Institut für Fertigungstechnik
+und Angewandte Materialforschung IFAM
+
+Projekte
+Projekte
+
+Power Quality von Offshore-Windparks
+
+Grundlage einer Richtlinie für den Entwurf
+von Offshore-Windenergieanlagen
+
+Der Anteil regenerativ erzeugter Energie gewinnt bei der
+
+In der insgesamt noch jungen Technik für Offshore-Windener-
+
+Einspeisung in Verbundnetze zunehmend an Bedeutung. Mit
+
+gieanlagen sind speziﬁsche Normungen in Form von DIN-Vor-
+
+der Netzintegration von Windparks sind allerdings speziﬁsche
+
+schriften bisher nicht verfügbar. Die direkte Übertragung von
+
+Probleme verbunden, die gelöst werden müssen, um bei ver-
+
+Onshore-Daten ist nur bedingt möglich; insbesondere die Größe
+
+tretbaren Kosten eine hohe Netzqualität und einen optimalen
+
+der geplanten Anlagen, der Baugrund, die stärkere Wind- sowie
+
+Wirkungsgrad zu gewährleisten. Im Rahmen des Forschungs-
+
+die Welleneinwirkung schaffen gravierende Unterschiede zu WEA
+
+vorhabens sollen drei Themenkomplexe bearbeitet werden: die
+
+an Land. Das Projekt soll einen Beitrag leisten, um die beste-
+
+Möglichkeiten der Energieübertragung in das öffentliche Ver-
+
+hende Normierungslücke zu schließen. Ziel ist die Erarbeitung
+
+bundnetz (Transport der auf See gewonnenen Energie an Land),
+
+praxistauglicher Konzepte zur sicheren, verbindlichen,
+
+der Vergleich verschiedener Umrichterkonzepte, sowie die Off-
+
+aber auch vereinfachten Berechnung von Offshore-Anlagen.
+
+shore-Windpark-Simulation. Bei der Simulation stehen zunächst
+
+Notwendig sind umfangreiche statistische Auswertungen sowie
+
+Einzelanlagen im Vordergrund, um insbesondere den Einﬂuss
+
+Berechnungen an vorgegebenen bzw. entsprechend ausgewähl-
+
+von Spannungsschwankungen aufgrund von Böen zu erforschen.
+
+ten Tragwerkssystemen, die in ein anwendungsfreundliches
+
+Auf dieser Basis soll das Netzmodell eines Windparks entwickelt
+
+System münden sollen. Betrachtet werden dabei die drei
+
+werden, mit dem dann das Netzverhalten im Windpark und an
+
+Substrukturen Anlagenturm (über dem Wasser), Stützkonstruk-
+
+der Übergabestelle simuliert wird. Wegen der hohen ﬁnanziellen
+
+tion (im Wasser) und Gründung (im/auf dem Meeresboden)
+
+Risiken der Betreiber ist eine aussagekräftige Simulation, wie
+
+im Hinblick auf die jeweilige Beanspruchung durch Wind und
+
+sie im Rahmen des Vorhabens entwickelt werden soll, hilfreich,
+
+Wellen. Übergeordnetes Ziel ist es, diese Ergebnisse in eine
+
+um nachvollziehbare und realitätsnahe Resultate abzubilden.
+
+Arbeitsgruppe zur Entwicklung einer Richtlinie für den Entwurf
+von Offshore-WEA einzubringen.
+
+Laufzeit: 01.10.2003 – 30.09.2005
+Laufzeit: 01.06.2003 – 31.05.2005
+Förderprogramm/Institution:
+Angewandte Umweltforschung /
+
+Förderprogramm/Institution:
+
+Der Senator für Bau, Umwelt und Verkehr
+
+Angewandte Umweltforschung /
+Der Senator für Bau, Umwelt und Verkehr
+
+Durchführende Institution:
+Universität Bremen
+
+Durchführende Institution:
+
+Institut für elektrische Antriebe,
+
+Hochschule Bremen
+
+Leistungselektronik und Bauelemente IALB
+
+Institut für Geotechnik
+
+Otto-Hahn-Allee, NW 1
+
+Neustadtswall 30
+
+28359 Bremen
+
+28199 Bremen
+
+Tel.: 0421/218-4436
+
+Tel.: 0421/5905-2333
+
+www.ialb.uni-bremen.de
+
+www.igbre.de
+
+IALB@Elektrotechnik.Uni-Bremen.de
+
+igbre@igbre.de
+
+Projektleiter/in:
+
+Projektleiter/in:
+
+Prof. Dr.-Ing. Bernd Orlik
+
+Prof. Dipl.-Ing. Horst Bellmer
+
+Tel.: 0421/218-4023
+
+Prof. Dr.-Ing. Harry Harder
+
+b.orlik@ialb.uni-bremen.de
+
+Tel.: 0421/5905-2331
+Harder@IGBre.de
+
+Projektpartner:
+ALSTOM Energietechnik GmbH, Niederlassung Bremen
+
+25
+
+Projekte
+
+Verfahrenstechnologie
+TRIPOD - Serienfertigung
+
+ÖKOPOD - Entwicklung einer TRIPOD-Gründung
+für Offshore-WEA mit reduziertem Gewicht unter
+Berücksichtigung einer wirtschaftlichen Fertigung
+
+Ziel des Projektes ist die Entwicklung von Verfahrenskombinati-
+
+Ziel des Projektes war die Entwicklung einer neuartigen
+
+onen zum Trennen, Umformen, Montieren einschließlich Fügen,
+
+TRIPOD-Gründung mit weniger Gewicht, die sich wirtschaftlich
+
+Prüfen und Oberﬂächenschutz zur Herstellung von Stahlgrün-
+
+fertigen lässt.
+
+dungen für Offshore–Windenergieanlagen und deren Bewertung
+
+Das Ergebnis des Projektes ist eine detaillierte Konstruktion der
+
+hinsichtlich Fertigungszeit, Kosten und Qualität. Außerdem
+
+Gründung mit einem unter Kostengesichtspunkten optimierten
+
+soll eine innovative Verfahrenstechnologie für den Oberﬂä-
+
+Kompromiss zwischen möglichst geringem Gewicht und einer
+
+chenschutz der Stahlgründungen unter Berücksichtigung der
+
+möglichst günstigen Fertigung. Zur Gewichtsreduzierung werden
+
+optimalen Verfahrenskombinationen, der Korrosionsschutzanfor-
+
+moderne Verfahren der komplexen statischen und dynamischen
+
+derungen und der Umweltschutzgesetze entwickelt werden.
+
+Auslegung von großen Stahlstrukturen eingesetzt und für
+die Beurteilung der Fertigungskosten erfolgt eine grobe
+
+Laufzeit: 15.10.2003 – 31.10.2004
+
+Fertigungsplanung.
+
+Förderprogramm/Institution:
+
+Laufzeit: 01.06.2003 – 31.01.2004
+
+PFAU / Bremerhavener Gesellschaft für
+Investitionsförderung und Standtentwicklung mbH
+
+Förderprogramm/Institution:
+PFAU / Bremerhavener Gesellschaft für
+
+Durchführende Institution:
+
+Investitionsförderung und Standtentwicklung mbH
+
+WeserWind GmbH
+Stresemannstr. 46 (BRIG)
+
+Durchführende Institution:
+
+27570 Bremerhaven
+
+WeserWind GmbH
+
+Tel.: 0471/140 561
+
+Stresemannstr. 46 (BRIG)
+
+www.weserwind.de
+
+27570 Bremerhaven
+
+info@weserwind.de
+
+Tel.: 0471/140 561
+www.weserwind.de
+
+Projektleiter/in:
+
+info@weserwind.de
+
+Dirk Kassen
+Tel.: 0471/140 561
+
+Projektleiter/in:
+
+d.kassen@weserwind.de
+
+Dirk Kassen
+Tel.: 0471/140 561
+
+Projektpartner:
+
+d.kassen@weserwind.de
+
+Fraunhofer Institut für Fertigungstechnik
+und Angewandte Materialforschung (IFAM), Bremen
+26
+
+Projektpartner:
+Fraunhofer Institut für Fertigungstechnik
+und Angewandte Materialforschung (IFAM), Bremen
+
+Projekte
+Projekte
+
+Intelligente Fertigungssteuerung
+TRIPOD
+
+Montagekonzept mit Betonbauteilen
+für Offshore-Windenergieanlagen
+
+Das technische Ziel des Projektes ist die Entwicklung eines
+
+Ziel des Projektes ist die Entwicklung von Stahlgründungskon-
+
+intelligenten Fertigungssteuerungssystems für die Serienpro-
+
+struktionen unter Verwendung von Betonbauteilkomponenten.
+
+duktion von schweren Stahlgründungen für Offshore-Wind-
+
+Es ist angedacht, eine Hybridbauweise zu entwickeln, die die
+
+energieanlagen. Diese Entwicklung beinhaltet die geometrische
+
+unterschiedlichen Vorteile von Stahl und Beton sinnvoll mit-
+
+Vermessung der einzelnen Baugruppen einer solchen Struktur
+
+einander kombinieren kann. Parallel dazu soll ein innovatives
+
+zur informations- und steuerungstechnischen on-line Einbin-
+
+Montagekonzept entwickelt werden, mit dessen Hilfe Rotorblät-
+
+dung von Maßnahmen zum Ausgleich von Fertigungstoleranzen.
+
+ter mit einer angepassten Hebevorrichtung montiert werden
+
+Die Entwicklung des Systems ist notwendig, da die erwarteten
+
+können.
+
+Gewichte und Stückzahlen der zu fertigenden Gründungen
+
+Das Projekt ist in die Arbeitspakete Entwicklung eines Stre-
+
+weit über das hinausgehen, was zurzeit mit den existierenden
+
+benwerkes mit Betonbauteilkomponenten, Entwicklung einer
+
+Systemen und Fertigungsabläufen geleistet werden kann.
+
+Verbindung zwischen der Stahlstruktur und den Betonbauteilkomponenten, Entwicklung eines Flügelmontagekonzeptes,
+
+Laufzeit: 15.10.2003 – 31.10.2004
+
+Bewertung unterschiedlicher Fertigungsstandorte für die Herstellung einer Strebengründung mit Betonbauteilkomponenten,
+
+Förderprogramm/Institution:
+
+technische Zusammenführung zum Gesamtkonzept sowie wirt-
+
+PFAU / Bremerhavener Gesellschaft für
+
+schaftliche Betrachtung des innovativen Konzeptes eingeteilt.
+
+Investitionsförderung und Standtentwicklung mbH
+
+Die Kombination von Stahl und Beton ist bisher noch nicht
+untersucht worden. Da mittlerweile hochfeste Betone zur Verfü-
+
+Durchführende Institution:
+
+gung stehen, könnte durch Kombination der beiden Werkstoffe
+
+WeserWind GmbH
+
+eine kostengünstigere Struktur hergestellt werden.
+
+Stresemannstr. 46 (BRIG)
+27570 Bremerhaven
+
+Laufzeit: 01.01.2004 – 30.08.2004
+
+Tel.: 0471/140 561
+www.weserwind.de
+
+Förderprogramm/Institution:
+
+info@weserwind.de
+
+PFAU / Bremerhavener Gesellschaft für
+Investitionsförderung und Standtentwicklung mbH
+
+Projektleiter/in:
+Dirk Kassen
+
+Durchführende Institution:
+
+Tel.: 0471/140 561
+
+WeserWind GmbH
+
+d.kassen@weserwind.de
+
+Stresemannstr. 46 (BRIG)
+27570 Bremerhaven
+
+Projektpartner:
+
+Tel.: 0471/140 561
+
+Fraunhofer Institut für Fertigungstechnik
+
+www.weserwind.de
+
+und Angewandte Materialforschung (IFAM), Bremen
+
+info@weserwind.de
+
+Fraunhofer Institut für Fabrikbetrieb
+
+Projektleiter/in:
+
+und -automatisierung (IFF), Magdeburg
+
+Dirk Kassen
+Tel.: 0471/140 561
+d.kassen@weserwind.de
+Projektpartner:
+Fraunhofer Institut für Fertigungstechnik
+und Angewandte Materialforschung (IFAM), Bremen
+
+27
+
+Projekte
+
+Korrosionsschutz und Lacktechnik
+für Offshore-Windenergieanlagen
+
+Entwicklung eines optimalen
+Korrosionsschutz-Konzeptes
+für Offshore-Windenergieanlagen
+
+Offshore-Windenergieanlagen sind im aggressiven maritimen
+
+Im Rahmen des Vorhabens soll ein speziell auf Offshore-Wind-
+
+Umfeld besonderen Belastungen ausgesetzt, die aus korrosivem
+
+energieanlagen abgestimmtes und praktisch erprobtes Konzept
+
+Angriff im Tide- und Spritzwasserbereich, starker Einwirkung
+
+für den schweren, maritimen Korrosionsschutz sowie ein
+
+ultravioletten Lichts auf den Anstrich, starken mechanischen
+
+Qualiﬁzierungskonzept für die anzuwendenden Beschichtungs-
+
+Beanspruchungen durch Anlagengröße und extreme Wind-
+
+materialien bereitgestellt werden. Die Vorläuferstudie hat
+
+geschwindigkeiten sowie Eisgang oder sogar Einfrieren der
+
+gezeigt, dass eine Reihe von Fragestellungen für den Korro-
+
+Fundamente resultieren. Da zusätzlich im Interesse der Konkur-
+
+sionsschutz von Offshore-Windenergieanlagen noch nicht
+
+renzfähigkeit eine Verlängerung der Standzeiten der Anlagen
+
+befriedigend beantwortet werden konnte. Es fehlen bisher
+
+angestrebt wird, kommt dem Korrosions- und Oberﬂächenschutz
+
+praktische Untersuchungen zu einem passenden Beschichtungs-
+
+eine besondere Bedeutung zu. Im Rahmen der Forschungsstudie
+
+konzept hinsichtlich wirtschaftlich-technischer Betrachtung für
+
+sollten Daten und Erfahrungen zusammengestellt und bewertet
+
+die jeweilige Belastungszone (Überwasserbereich, Unterwas-
+
+werden, die in Bereichen mit ähnlich hoher korrosiver Belas-
+
+serbereich, Spritzwasser-, bzw. Wechseltauchzone). Ferner soll
+
+tung, z.B. in Chemieanlagen oder auf Offshore-Ölplattformen,
+
+getestet werden, welche (Kurzzeit-)Korrosions- und Abrieb-
+
+gewonnen wurden. Ziel war es, ein optimiertes, wirtschaftliches
+
+beständigkeitstests eine brauchbare Vorhersage für die
+
+und ökologisch verträgliches Konzept für den Korrosionsschutz
+
+Wirksamkeit eines Lacksystems gestatten, bzw. welche Quali-
+
+der Windenergieanlagen im Offshore-Einsatz zu erstellen.
+
+ﬁzierungskriterien für den Korrosionsschutz bei der Erstellung
+
+Das Projekt wurde in Kooperation mit drei Bremer bzw.
+
+und dem Betrieb von Offshore-WEA notwendig sind.
+
+Bremerhavener Unternehmen durchgeführt.
+Laufzeit: 01.01.2004 – 31.12.2006
+Laufzeit: 01.08.2002 – 30.04.2003
+Förderprogramm/Institution:
+Förderprogramm/Institution:
+
+PFAU / Bremer Innovations-Agentur GmbH
+
+Angewandte Umweltforschung /
+Der Senator für Bau, Umwelt und Verkehr
+
+Durchführende Institution:
+Mühlhan Bremen GmbH
+
+Durchführende Institution:
+
+Am Werfttor, ZAW-Gebäude C 56
+
+Fraunhofer-Institut für Fertigungstechnik
+
+28755 Bremen
+
+und Angewandte Materialforschung IFAM
+
+Tel.: 0421/69 32 69
+
+Wiener Str. 12, 28359 Bremen
+
+www.muehlhan.com
+
+Tel.: 0421/2246-0
+
+bremen@muehlhan.com
+
+www.ifam.fraunhofer.de
+info@ifam.fraunhofer.de
+28
+
+Projektleiter/in:
+Christian Lüttenberg
+
+Projektleiter/in:
+
+Tel.: 0421/69 32 69
+
+Dr. Michael Schneider
+
+luettenberg@muehlhan.com
+
+Dr. Volkmar Stenzel
+Tel.: 0421/2246-435
+
+Projektpartner:
+
+msch@ifam.fhg.de
+
+Fraunhofer-Institut für Fertigungstechnik
+und Angewandte Materialforschung IFAM, Bremen
+
+Projektpartner:
+SSW Fähr- und Spezialschiffbau GmbH, Bremerhaven
+Dr. Möller & Tamm GmbH, Bremen
+Ing.-Büro E. Kock, Bremen
+
+Projekte
+Projekte
+
+S.U.U.M.A. Konzept zum sicheren u. umweltverträglichen Umgang mit Materialien und Abfällen beim Betrieb
+
+adlatus - Sicherheitsbegleiter
+für Wartungsarbeiten
+
+und bei der Wartung von Offshore-Windenergieanlagen
+
+Bei Betrieb und Wartung von Windenergieanlagen sowie bei
+
+Mobile Computer können als persönliche Sicherheitsbegleiter
+
+der Instandsetzung werden Materialien und Stoffe eingesetzt,
+
+(Adlatus) einen Beitrag zur Arbeitssicherheit leisten. Am Ein-
+
+die zu unterschiedlichsten Abfällen führen. Zu den Ver- und
+
+satzfeld der Wartung von WEA soll dies gezeigt werden. Ziele:
+
+Entsorgungsgütern zählen u.a. Schmierstoffe, Grundierungen
+
+• Steigerung der Arbeitssicherheit für Monteure
+
+und Lacke, Klebstoffe, Reinigungsmittel, Austauschteile, aber
+auch Werkzeuge und Prüfgeräte. Bisher sind weder die Zuständigkeiten der Gesetzgebung geregelt, noch die landseitigen
+Schnittstellen in den Häfen einheitlich gestaltet. Im Rahmen
+des Forschungsvorhabens ist ein Konzept erarbeitet worden,
+das für Betrieb, Wartung und Instandhaltung von Offshore-WEA
+eine Basis zum kontrollierten Umgang mit Materialien schafft
+und den gezielten und umweltverträglichen Einsatz von Maßnahmen und Techniken gewährleistet. Projektinhalte waren die
+Abbildung der Material- und Abfallströme, sowie eine Recherche
+und Dokumentation der gesetzlichen und technischen Rahmenbedingungen. Neben der Entwicklung von land- und seeseitigen
+Verwertungs- und Entsorgungsstrategien sollte ein Stoffstrommanagementsystem entstehen, das als Informations- und
+Dokumentationsverfahren in ein allgemeines
+Controllingsystem integrierbar ist.
+
+und Wartungspersonal
+• Effizienzsteigerung durch Integration von Arbeitsschutz
+in die Kerntätigkeit
+• Entwicklung von Prinzipien für die ergonomische Gestaltung
+mobiler Systeme zur Unterstützung von Wartungsarbeiten
+• Erprobung von Methoden asymmetrischer rechnergestützter
+mobiler Kooperation Mensch – Maschine – Mensch
+• Methoden-Entwicklung zur situationsbezogenen Unterweisung
+als Gegenstück zu E-Learning
+• Kompensation des Informationslecks bei
+Außendienstmitarbeitern
+• Nutzung von GSM/GPRS/UMTS/Seefunk
+und ggf. Satelliten-Strecken
+• Demonstration der technischen Machbarkeit
+unter rauen Bedingungen
+• Realisierbarkeit von Sicherheit auch in
+Offshore-Windenergieparks.
+
+Laufzeit: 01.11.2002 – 31.07.2003
+Laufzeit: 01.10.2003 – 30.09.2005
+Förderprogramm/Institution:
+Angewandte Umweltforschung /
+
+Förderprogramm /Institution:
+
+Der Senator für Bau, Umwelt und Verkehr
+
+Arbeit und Technik / Senator für Arbeit, Frauen,
+Gesundheit, Jugend und Soziales
+
+Durchführende Institution:
+Hochschule Bremen
+
+Durchführende Institution:
+
+Institut für technischen Umweltschutz
+
+akziv GmbH
+
+Neustadtswall 30, 28199 Bremen
+
+Fahrenheitstr. 1, 28359 Bremen
+
+Tel.: 0421/5905-2314
+
+Tel.: 0421/221375
+
+www.hs-bremen.de
+
+www.akziv.de/adlatus
+
+albers@fbb.hs-bremen.de
+
+adlatus@akziv.de
+
+Projektleiter/in:
+
+Projektleiter/in:
+
+Prof. Dr.-Ing. Henning Albers
+
+Uwe Haupt
+
+Tel.: 0421/5905-2314
+
+Tel.: 0421/221375
+
+albers@fbb.hs-bremen.de
+
+info@akziv.de
+
+Projektpartner:
+
+Projektpartner:
+
+Gesellschaft für Angewandten Umweltschutz
+
+accavia GmbH
+
+und Sicherheit im Seeverkehr GAUSS GmbH
+
+REETEC GmbH
+
+REETEC GmbH
+
+Berufsgenossenschaft der Feinmechanik und Elektrotechnik
+
+Institut für Kreislaufwirtschaft GmbH
+
+29
+
+Projekte
+
+Sicherheits- und Arbeitsschutzkonzept
+für Offshore-Windparks
+
+Für die zukünftige nachhaltige Energieversorgung spielt Winden-
+
+Die Deutsche Nordsee wird bereits vielseitig genutzt. Mit dem
+
+ergie, insbesondere im Offshore-Bereich, eine bedeutende Rolle.
+
+Bau von Offshore-Windparks wird eine weitere ﬂächige Nutzung
+
+Da zukünftige Offshore-Anlagen nur in großﬂächigen Windfar-
+
+des begrenzten Küstenmeeres dazukommen. Gleichzeitig besteht
+
+men tragfähig sein werden, sind Fragen der Planungssicherheit
+
+Interesse, die marine Aquakultur in Deutschland mit dem Ziel
+
+zum Betrieb der Anlagen, zur Sicherheit des Seeverkehrs sowie
+
+zu etablieren, Muscheln und Makroalgen umweltverträglich
+
+zur umwelt-, natur- und landschaftsverträglichen Nutzung von
+
+und wirtschaftlich zu produzieren. Ob eine gemeinsame, d.h.
+
+immenser Bedeutung. U.a. hinsichtlich Vermeidung/Vermin-
+
+multifunktionale Nutzung von Flächen, Anlagen und Technologi-
+
+derung der Belastung der Meeresumwelt, der bautechnischen
+
+en realistisch ist, ist derzeit eine offene Frage. Im Rahmen des
+
+Ausführung und der Simulation möglicher Schadstoffaustritte
+
+Forschungsvorhabens werden die biologischen Grundvoraus-
+
+laufen bereits Untersuchungen. Konzepte zur Arbeitssicherheit
+
+setzungen für eine Aquakultur an Offshore-Standorten in der
+
+und zur betrieblichen Anlagensicherheit lagen bisher jedoch
+
+Deutschen Bucht getestet. Um Aufschluss über das Ansiedlungs-
+
+nicht vor. Gegenstand des Projektes war daher eine Studie zu
+
+und Wachstumspotenzial zu gewinnen, sollen das Larven-
+
+Sicherheits- und Arbeitsschutzkonzepten für den Betrieb von
+
+angebot und die damit verbundene Ansiedlung an künstlich
+
+Offshore-WEA. Vier Themenfelder standen im Mittelpunkt der
+
+ausgebrachten Substraten, das Muschel- bzw. Algenwachstum
+
+Projektarbeit: die Infrastruktur der Anlagen, ihre Sicherheit und
+
+in Abhängigkeit vom Nahrungs- und Nährstoffangebot, sowie
+
+Überwachung, das Personalmanagement sowie die Notfallvorsor-
+
+ein möglicher Krankheits- und Parasitenbefall der Muscheln
+
+ge. Die Untersuchungen wurden in Kooperation mit den Firmen
+
+untersucht werden. Die Standorte sind so ausgewählt, dass sie
+
+Plambeck Neue Energien AG, Cuxhaven, und EnergieKontor AG,
+
+zuverlässige Aussagen hinsichtlich der geplanten Offshore-Wind-
+
+Bremen, praxisnah und umsetzungsorientiert durchgeführt.
+
+parks ermöglichen.
+
+Laufzeit: 01.06.2001 – 30.09.2002
+
+Laufzeit: 01.11.2002 – 30.04.2004
+
+Förderprogramm/Institution:
+
+Förderprogramm/Institution:
+
+Angewandte Umweltforschung /
+
+Angewandte Umweltforschung /
+
+Der Senator für Bau, Umwelt und Verkehr
+
+Der Senator für Bau, Umwelt und Verkehr
+
+Durchführende Institution:
+
+Durchführende Institution:
+
+Gesellschaft für Angewandten Umweltschutz
+
+Alfred-Wegener-Institut für Polar- und Meeresforschung AWI
+
+und Sicherheit im Seeverkehr GAUSS mbH
+
+Am Handelshafen 12, 27570 Bremerhaven
+
+Werderstr. 73, 28199 Bremen
+
+Tel.: 0471/4831-0
+
+Tel.: 0421/5905-4850
+
+www.awi-bremerhaven.de
+
+www.gauss.org
+30
+
+Untersuchungen zum Ansiedlungs- u. Wachstumspotenzial von
+
+vsmetacek@awi-bremerhaven.de
+
+Muscheln und Makroalgen i. d. Deutschen Bucht zur Überprüfung der Eignung v. Offshore-Standorten für Marine Aquakultur
+
+gauss@gauss.org
+Projektleiter/in:
+Projektleiter/in:
+
+Prof. Dr. Victor Smetacek
+
+Dipl.-Ing. Hans-Gerd Knoop
+
+Tel.: 0471/4831-1440
+
+Tel.: 0421/5905-4850
+
+vsmetacek@awi-bremerhaven.de
+
+gauss@gauss.org
+Projektpartner:
+Projektpartner:
+Plambeck Neue Energien AG, Cuxhaven
+EnergieKontor AG, Bremen
+
+Forschungszentrum Terramare, Wilhelmshaven
+
+Projekte
+Projekte
+
+Transportkonzept für OffshoreWindenergieanlagen
+
+Windenergie-Prognoseserver
+für die Energiewirtschaft
+
+Ziel des Projektes ist die Entwicklung eines Verfahrens zum
+
+Die Bedeutung einer genauen Vorhersage von durch Windener-
+
+wasserseitigen Transport von Windenergieanlagen einschließlich
+
+gieanlagen (WEA) erzeugtem Strom nimmt aufgrund der wach-
+
+deren Gründungskonstruktion. Es werden möglichst viele Anla-
+
+senden Zahl der installierten Anlagen inklusive der absehbaren
+
+gen im Verbund auf einmal auf See zu den Offshore-Standorten
+
+Offshore-Entwicklung, aber auch wegen der mit der Liberalisie-
+
+transportiert. Die Montage wird Offshore ohne zusätzlichen
+
+rung des Energiemarktes notwendig gewordenen Anmeldung
+
+Schwimmkran erfolgen. Darüber hinaus werden neue Gründungs-
+
+von Fahrplänen, zu. Ziel des Projektes ist es, einen via
+
+varianten zur Befestigung der Struktur auf dem Meeresboden
+
+Internet verfügbaren „Prognose-Server“ zu installieren,
+
+untersucht. Weiterhin wird untersucht, wie die Kosten für die
+
+auf dem Energieunternehmen die für sie relevanten
+
+Verfahren der Pfahlgründung, Flachgründung und Saugglocken-
+
+Windenergie-Vorhersagen gegen Gebühr abrufen können.
+
+gründung gesenkt werden können und wie sich die Kosten der
+Verfahren unterscheiden.
+
+Laufzeit: 01.01.2004 – 31.12.2004
+
+Laufzeit: 15.04.2004 – 31.10.2004
+
+Förderprogramm/Institution:
+PFAU / Bremer Innovations-Agentur GmbH
+
+Förderprogramm/Institution:
+PFAU / Bremerhavener Gesellschaft für
+
+Durchführende Institution:
+
+Investitionsförderung und Stadtentwicklung mbH
+
+deneg GmbH
+Kurfürstenallee 130
+
+Durchführende Institution:
+
+28211 Bremen
+
+WeserWind GmbH
+
+Tel.: 0421/20 43-260
+
+Stresemannstr. 46 (BRIG)
+
+www.deneg.de
+
+27570 Bremerhaven
+
+info@deneg.de
+
+Tel.: 0471/140 561
+www.weserwind.de
+
+Projektleiter/in:
+
+info@weserwind.de
+
+Dipl.-Ing. Wilhelm Morgner
+Tel.: 0421/20 43-260
+
+Projektleiter/in:
+
+morgner@deneg.de
+
+Dirk Kassen
+Tel.: 0471/140 561
+d.kassen@weserwind.de
+Projektpartner:
+Fraunhofer Institut für Fertigungstechnik und
+Angewandte Materialforschung (IFAM), Bremen
+
+31
+
+Projekte
+
+Windleistungsprognose
+für Offshore-Windparks
+
+Derzeit werden genaue Wetterprognosen auf der Basis von
+
+Die Errichtung von Offshore-Windenergieanlagen setzt um-
+
+24 Stunden vorhergesagt. Insbesondere für Offshore-Anlagen
+
+fassende geotechnische Untersuchungen des Meeresgrundes
+
+jedoch werden zeitlich detaillierte Werte gefordert; für pass-
+
+voraus. Von der australischen Firma Benthic Geotech Pty Ltd
+
+genaue Werte insbesondere im Windenergiebereich werden
+
+wurde das Bohrgerät PROD (Portable Remotely Operated Drill)
+
+Vorhersagen auf 1/4 h Basis benötigt, um z.B. die genaue Ein-
+
+entwickelt, das am Meeresboden abgesetzt wird und damit
+
+speisung von Windenergie in den nächsten Stunden berechnen
+
+unabhängig von Schiffsbewegungen arbeitet. PROD kann im
+
+zu können. Die derzeit am Markt beﬁndlichen Prognosesysteme
+
+Verlaufe einer Bohrung nach Bedarf, d.h. nach jeweiliger Bo-
+
+weisen jedoch nur eine zeitliche Auﬂösung von 1 Stunde auf.
+
+denbeschaffenheit, zwischen Drucksondierung, konventioneller
+
+Weiterhin haben sich die Vorhersagefehler der aktuell genutzten
+
+Rotationsbohrung (Hartgestein) und dem Kolbenlotverfahren
+
+Wettermodelle als zu groß erwiesen.
+
+(Lockersedimente) variieren. Dennoch sind Geräteoptimierungen
+
+Mit dem Vorhaben werden die Vorhersagefehler aktuell benutz-
+
+erforderlich, um geotechnische Untersuchungen gemäß den
+
+ter Wettermodelle minimiert und eine 1/4-stündliche Aktuali-
+
+Vorgaben der Deutschen Industrienorm durchführen zu können.
+
+sierung der Wetterinformationen mit dem Ziel der Optimierung
+
+Ziel des geplanten Forschungsvorhabens ist es daher, das Bohr-
+
+sensibler Anwendungen im Netzbetrieb der Energiewirtschaft
+
+gerät PROD so weiterzuentwickeln, dass es universell für alle im
+
+gewährleistet. Dabei werden Algorithmen zur automatisierten
+
+Zusammenhang mit Offshore-Windenergieanlagen erforderlichen
+
+Verarbeitung hochauﬂösender meteorologischer Zeitreihen
+
+geotechnischen Untersuchungen einsetzbar ist und dabei die
+
+entwickelt. Auf der Basis eines kompakten Web-Servers wird ein
+
+Voraussetzungen für die Zertiﬁzierung durch den Germanischen
+
+Internet-Gateway für bestehende Wetterstationen entwickelt
+
+Lloyd erfüllt. Darüber hinaus erfolgt als technische Ergänzung
+
+werden. Auf der Serverseite werden die Daten aufgenommen
+
+die Integration einer Sonde zur Bestimmung der Scherfestigkeit
+
+und in die benötigten meteorologischen Formate konvertiert.
+
+des Baugrundes.
+
+Laufzeit: 01.11.2002 – 31.03.2004
+
+Laufzeit: 01.10.2002 – Laufzeit zur Zeit unterbrochen
+
+Förderprogramm/Institution:
+
+Förderprogramm/Institution:
+
+PFAU / Bremerhavener Gesellschaft für
+
+Angewandte Umweltforschung /
+
+Investitionsförderung und Stadtentwicklung mbH
+
+Der Senator für Bau, Umwelt und Verkehr
+
+Durchführende Institution:
+
+Durchführende Institution:
+
+Meteocontrol GmbH
+
+Universität Bremen
+
+Stresemannstr. 46
+
+MARUM Zentrum für marine Umweltwissenschaften
+
+27570 Bremerhaven
+
+Postfach 330 440
+
+Tel.: 0471/140-0
+32
+
+Geotechnische Untersuchungen
+für Offshore-Windenergieanlagen
+
+28334 Bremen
+
+www.meteocontrol.de
+
+Tel.: 0421/218-3385
+
+info@meteocontrol.de
+
+www.marum.de
+gwefer@uni-bremen.de
+
+Projektleiter/in:
+Gerd Heilscher
+
+Projektleiter/in:
+
+Tel.: 0471/140 - 0
+
+Prof. Dr. Gerold Wefer
+
+heilscher@meteocontrol.de
+
+Tel.: 0421/218-3585
+gwefer@uni-bremen.de
+
+Projektpartner:
+Fraunhofer Institut für Fertigungstechnik
+
+Projektpartner:
+
+und Angewandte Materialforschung (IFAM), Bremen
+
+EnergieKontor AG, Bremen
+Benthic Geotech Pty Ltd, Australien
+
+Projekte
+Projekte
+
+Aufbau eines „Offshore-Windenergie
+Kompetenzzentrums“ in Bremerhaven
+
+Aufbau einer Forschungs- und Koordinierungsstelle Windenergie in Bremerhaven
+
+Mit diesem Projekt ist eine überbetriebliche Infrastrukturein-
+
+Im Rahmen des Infrastrukturprojektes erfolgt der „Aufbau einer
+
+richtung geschaffen worden, die die technologischen, logis-
+
+Forschungs- und Koordinierungsstelle Windenergie (FK-Wind)“
+
+tischen und wissenschaftlichen Kompetenzen im Bereich der
+
+in Bremerhaven. Es handelt sich dabei um eine überbetriebliche
+
+On- und Offshore-Windenergie fördert. Die Windenergie-Agentur
+
+Einrichtung, die durch die Koordinierung der wissenschaftlichen
+
+Bremerhaven/Bremen e.V. (wab) wurde im Jahre 2002 gegrün-
+
+Aktivitäten sowie eigene Forschung im Bereich der On- und Off-
+
+det und hat zur Zeit ca. 130 Mitglieder aus Firmen, Verbänden,
+
+shore-Windenergie zur Stärkung der regionalen Wirtschaft beiträgt.
+
+Hochschulen und Behörden.
+
+Die Ausrichtung der Forschungs- und Koordinierungsstelle Wind-
+
+Die wab hat u.a. folgende Aufgaben:
+
+energie konzentriert sich auf die folgenden Felder:
+
+• Aufbau eines regionalen Offshore-Windenergie Netzwerks
+
+• Erfassung und Koordinierung der vorhandenen wissenschaft-
+
+• Unterstützung und Ausbau der regionalen
+Innovationspotenziale
+• Unterstützung und Stärkung der Kompetenz von Unternehmen
+durch Wissens- und Technologietransfer
+• Unterstützung der Integration und Diversiﬁkation
+traditioneller insbesondere maritimer Strukturen
+
+lichen Kompetenzen zur On- und Offshore-Windenergie
+• Identiﬁzierung von F&E-Bedarfen der Unternehmen
+• Beratung und Vermittlung entsprechender Partner
+aus der Wissenschaft
+• Transfer der F&E-Ergebnisse in die Wirtschaft
+• Entwicklung von Verbundprojekten
+
+• Unterstützung bei der Einwerbung von Fördermitteln
+• Koordinierung und Konzeption von notwendigen
+Qualiﬁzierungsmaßnahmen
+
+Die FK-Wind bearbeitet neben den koordinierenden Aufgaben
+eigene F&E-Projekte. Die Forschungsthemen orientieren sich
+
+• Organisation und Durchführung von Fachveranstaltungen
+
+dabei an folgenden Inhalten:
+
+• Messeteilnahmen und Organisation von Gemeinschaftsständen
+
+• F&E-Arbeiten als Basis für Aufbau und Betrieb von Prüf-
+
+• Aufbau eines Internet-Portals für die OffshoreWindenergie-Branche
+• Stärkung der Akzeptanz von erneuerbaren Energien
+
+ständen für Offshore-WEA-Gondeln und Betriebssimulation
+• F&E-Arbeiten zur MSR-Technik für WEA; innovative Prüfverfahren und Kontrollmechanismen zum Betriebsverhalten;
+Zuverlässigkeitsanalysen, Zustandsermittlung und
+
+Laufzeit: 01.06.2002 - 30.04.2005
+
+technischen Diagnose
+• Erforschung von Techniken und Prüfungen für Offshore-
+
+Förderprogramm/Institution:
+
+Materialien und Oberﬂächen
+
+EU-Ziel 2/Phase V; 3.2 Infrastrukturprojekte /
+Der Senator für Bau, Umwelt und Verkehr
+
+Laufzeit: 01.09.2003 - 31.08.2006
+
+Durchführende Institution:
+
+Förderprogramm /Institution:
+
+wab e.v.
+
+EU-Ziel 2/Phase V; 3.2 Infrastrukturprojekte /
+
+Windenergie-Agentur Bremerhaven/Bremen
+
+Der Senator für Bau, Umwelt und Verkehr
+
+Schifferstr. 10-14
+27568 Bremerhaven
+
+Durchführende Institution:
+
+Tel.: 0471/391 77-0
+
+Forschungs- und Koordinierungsstelle Windenergie
+
+Fax: 0471/391 77-19
+
+An der Karlstadt 8, 27568 Bremerhaven
+
+www. windenergie-agentur.de
+
+Tel.: 0471/4823-540
+
+info@windenergie-agentur.de
+
+www.hs-bremerhaven.de
+fk-wind@hs-bremerhaven.de
+
+Projektleiter/in:
+Jan Rispens
+
+Projektleiter/in:
+
+Tel.: 0471-391 77-0
+
+Prof. Dr.-Ing. Peter Ritzenhoff
+
+jan.rispens@windenergie-agentur.de
+
+Tel.: 0471/4823-110
+pritzenhoff@hs-bremerhaven.de
+Projektpartner:
+Fraunhofer Institut für Fertigungstechnik
+und Angewandte Materialforschung (IFAM), Bremen
+
+33
+
+Projekte
+
+Infrastruktur- und Logistikkonzept für die
+Erschließung des Industriebgebietes Luneort für Offshore-Windenergieanlagenbauer
+
+Aufbau eines Offshore-WindenergieWertschöpfungs-Zentrums in Bremen-Nord
+
+Ziel der Studie war es, zu untersuchen, welche infrastrukturellen
+
+Bei der Herstellung, dem Transport, der Montage und Inbetrieb-
+
+Voraussetzungen vorhanden, bzw. geschaffen werden müssen,
+
+nahme von Offshore-Anlagen müssen im Vergleich zu Onshore-
+
+um in Bremerhaven optimale Rahmenbedingungen als Produkti-
+
+Anlagen neue quantitative und qualitative Wege beschritten
+
+ons- und Endmontagestandort für Offshore-Windenergieanlagen
+
+werden. Neben den technischen Herausforderungen wie z. B.
+
+zu schaffen.
+
+der Beherrschung der enormen Dimensionen von Größe und
+
+Auf der Basis der Anforderungen von Unternehmen, die an
+
+Gewicht sind es vor allem die organisatorischen Veränderungen
+
+einem seeschifftiefen Standort Fundamente, Türme, Gondeln
+
+in den produzierenden Unternehmen, die dieses gemeinsame
+
+und Rotorblätter fertigen bzw. montieren und zur Errichtung
+
+Gestaltungsprojekt von Wirtschaft und Wissenschaft erforder-
+
+von kompletten Offshore-Windenergieanlagen ausliefern wollen,
+
+lich machen.
+
+wurde in Zusammenarbeit mit Unternehmen der Windenergie-
+
+Im Forschungsfokus des Vorhabens stehen die Mechanismen
+
+branche ein Infrastruktur- und Logistikkonzept für die Erschlie-
+
+und Anforderungen an den Umorganisationsprozess im Unter-
+
+ßung des Industriegebietes Luneort für Offshore-Windenergie-
+
+nehmen SSC bei der Vorbereitung der Produktionsumstellung
+
+anlagenbauer erarbeitet.
+
+vom Onshore- auf den Offshore-Markt. Der Umorganisationsprozess wird unter aktiver Beteiligung der Belegschaft durchge-
+
+Laufzeit: 01.02.2002 - 31.08.2002
+
+führt. Die Ergebnisse zu den Mechanismen und Erfordernissen
+sollen auf ähnlich komplexe Unternehmensstrukturen über-
+
+Förderprogramm/Institution:
+
+tragen werden können.
+
+Ökofonds Bremerhaven /
+Der Senator für Bau, Umwelt und Verkehr
+
+Laufzeit: 01.05.2003 – 31.10.2005
+
+Durchführende Institution:
+
+Förderprogramm/Institution:
+
+Compass GmbH
+
+Arbeit und Technik / Senator für Arbeit, Frauen,
+
+Am Leuchtturm 10
+
+Gesundheit, Jugend und Soziales
+
+27568 Bremerhaven
+Tel.: 0471/4802-500
+
+Durchführende Institution:
+
+www.compass-consult.de
+
+Universität Bremen
+
+info@compass-consult.de
+
+Forschungsgruppe Praxisnahe Berufsausbildung (FPB)
+Wilhelm-Herbst-Str. 7
+
+Projektleiter/in:
+
+28539 Bremen
+
+Hans-Joachim Ibe
+
+Tel.: 0421/218-0
+
+Tel.: 0471/4802-401
+
+www.fpb.uni-bremen.de
+
+info@compass-consult.de
+34
+
+Projektleiter/in:
+Projektpartner:
+
+Dr. Reiner Schlausch
+
+Dr. Möller + Tamm GmbH
+
+Tel.: 0421/218-2146
+
+Ingenieurbüro für Maschinenbau
+
+reiner.schlausch@uni-bremen.de
+
+und Schiffstechnik Nord, Bremen
+Projektpartner:
+SSC Stahl-Service-Center GmbH, Bremen
+3P Entwicklungs GmbH, Bremen
+
+Projekte
+Projekte
+
+Ökonomische und ökologische Bewertung
+des Einsatzes regenerativer Energien in
+einem Verbundsystem
+
+Dezentrale Inselnetze auf der Basis
+regenerativer Energien, DIREEN
+
+Für die nachfrageseitigen Lastschwankungen im elektrischen
+
+In den Ländern der Dritten Welt leben etwa 2,5 Mrd. Menschen
+
+Verbundnetz verfügen die Stromerzeuger und Netzbetreiber über
+
+ohne hinreichende Energieversorgung, die für die soziale und
+
+hochentwickelte Kraftwerkregelungs- und –steuerungsstrate-
+
+wirtschaftliche Entwicklung dieser Länder aber Vorausset-
+
+gien, mit denen sie die Erzeugung dem Bedarf anpassen. Über
+
+zung ist. Lokale Inselnetze, die mit elektrischer Energie aus
+
+technisch und ökonomisch optimierte Strategien, auf das stark
+
+dezentral angeordneten Erzeugungsanlagen unterschiedlicher
+
+ﬂuktuierende Angebot der Windenergie einzugehen, verfügen
+
+Energiequellen gespeist werden, bilden für die Versorgung eine
+
+sie gegenwärtig noch nicht. Dies gilt umso mehr je größer der
+
+realistische Perspektive. Zur kontinuierlichen Versorgung spielt
+
+Anteil der durch Wind erzeugten Primärenergie an der
+
+die Verwendung eines „Energiemixes“ aus konventioneller und
+
+Stromversorgung wird.
+
+regenerativer Energie eine wichtige Rolle. Die für den Betrieb
+
+Ausgehend von einer Modellierung des status quo des Verbund-
+
+der Verbundnetze entwickelten Steuerungs- und Regelungsstra-
+
+netzes wurden im Vorhaben Entwicklungsszenarien des Strom-
+
+tegien werden den Anforderungen von Inselnetzen mit verschie-
+
+netzes für die Jahre 2000, 2010 und 2020 in hoher Auﬂösung
+
+denen Generatorsystemen (Wind, Sonne, Biomasse etc.) bei
+
+modelliert. Den Berechnungen wurde die Annahme zugrunde
+
+weitem nicht gerecht. Im Vorhaben werden auf der Basis eines
+
+gelegt, dass die Stromerzeugung aus WEA – wie politisch
+
+modularen Inselnetzmodells das komplette Energiesystem be-
+
+avisiert - wesentliche Anteile am Gesamtbedarf (in 2020 mehr
+
+schrieben, die Einspeiseeinheiten mit ihren Leistungsmerkmalen
+
+als 25%) ausmacht und die vorgegebenen Klimaschutzziele
+
+deﬁniert, ein Hardwarekonzept zur Steuerung und Regelung
+
+(z.B. Reduktion der CO2-Emissionen bis 2020 um 40%) erreicht
+
+entworfen, Software zur hochdynamischen Regelung erstellt,
+
+werden sollen. Das verfügbare Rechnermodell ist ein lineares
+
+die Parallelschaltbarkeit der Wechselrichter bei der Realisierung
+
+Optimierungsmodell.
+
+des Energiemixes untersucht und eine Demonstrationsanlage
+aufgebaut.
+
+Laufzeit: 01.10.1999 – 30.06.2002
+Laufzeit: 01.10.2002 – 30.09.2004
+Förderprogramm /Institution:
+Angewandte Umweltforschung /
+
+Förderprogramm/Institution:
+
+Der Senator für Bau, Umwelt und Verkehr
+
+Angewandte Umweltforschung /
+Der Senator für Bau, Umwelt und Verkehr
+
+Durchführende Institution:
+bremer energie institut
+
+Durchführende Institution:
+
+Fahrenheitstr. 8
+
+Universität Bremen
+
+28359 Bremen
+
+Institut für elektrische Antriebe,
+
+Tel.: 0421/20143-0
+
+Leistungselektronik und Bauelemente IALB
+
+www.bei.uni-bremen.de
+
+Otto-Hahn-Allee, NW 1
+
+info@bremer-energie-institut.de
+
+28359 Bremen
+Tel.: 0421/218-4436
+
+Projektleiter/in:
+
+www.ialb.uni-bremen.de
+
+Prof. Dr. Wolfgang Pfaffenberger
+
+ialb@Elektrotechnik.Uni-Bremen.de
+
+Tel.: 0421/20143-13
+pfaffen@uni-bremen.de
+
+Projektleiter/in:
+Prof. Dr.-Ing. Bernd Orlik
+
+Projektpartner:
+
+Tel.: 0421/218-4023
+
+INCOTEC GmbH
+
+b.orlik@ialb.uni-bremen.de
+
+STN ATLAS Elektronik GmbH
+Projektpartner:
+REETEC GmbH, Bremen
+KRYPTON GmbH, Bremen
+AN windenergie gmbh, Bremen
+
+35
+
+Projekte
+
+ETROW Früherkennung von Schäden
+durch Thermographie
+
+H2-Challenger Wind-WasserstoffProduktionsschiff
+
+Beim Betrieb einer WEA kann es durch Feuchtigkeit, Windbelas-
+
+Zur besseren Nutzung des Potenzials von Windenergie hat die
+
+tung und Salzgehalt an vielen Bauteilen zu Schäden kommen.
+
+Hydrogen Challenger GmbH ein System entwickelt, das die auf
+
+Bei vielen dieser Schäden wird Wärme frei. Diese Wärmebildung
+
+dem Meer erzeugte Windenergie in den Energieträger Wasser-
+
+ist mit der Thermographie bzw. mit einer Infrarotkamera deut-
+
+stoff umwandelt. Auf einem umgebauten Tankschiff werden
+
+lich zu erkennen. Ein Vorteil dieser Methode ist, dass die Unter-
+
+Windenergieanlagen verschiedener Höhe und Leistungsstärke
+
+suchungen bei laufender Anlage durchgeführt werden können.
+
+installiert und betrieben. Das Schiff kann auf See aus dem
+
+Ziel des Projekts ist es zu prüfen, ob die Thermographie
+
+Meerwasser Wasserstoff und Sauerstoff produzieren und in den
+
+hinsichtlich der Logistik und der Beschaffenheit der WEA ein
+
+vorgesehenen Drucktanks speichern. Die mit den Windenergie-
+
+geeignetes Früherkennungsinstrument von Schäden an Offshore-
+
+anlagen erzeugte elektrische Stromleistung wird an Bord zur
+
+Windenergieanlagen ist. Zunächst werden an einer bestehenden
+
+Wasserspaltung mittels Elektrolyse eingesetzt. Mit den befüllten
+
+Onshore-Anlage eines Projektpartners die Anwendungsmöglich-
+
+Tanks kann das Schiff direkt beim Kunden (z. B. Lebensmittel-
+
+keiten der Thermographie erprobt. Eine Anlage wird vollständig
+
+verarbeiter in Bremerhaven) die erzeugten Gase anliefern.
+
+„thermographiert“. Aufgrund der gewonnenen Erkenntnisse wird
+
+Bei der genannten Laufzeit handelt es sich nur um ein Teil-
+
+eine geeignete Wärmequelle für die Erwärmung der gesamten
+
+projekt. Zur Umsetzung des Gesamtprojektes sind noch zwei
+
+Windenergieanlage entwickelt.
+
+weitere Phasen bzw. Teilprojekte vorgesehen.
+
+Die vorhandene Bildverarbeitungssoftware der Thermographiekamera wird analysiert und modiﬁziert. Aus den Ergebnissen
+
+Laufzeit: 01.07.2003 – 31.08.2004
+
+der Untersuchungen werden konkrete Empfehlungen für die
+wartungsfreundliche Konstruktion von WEA-Komponenten
+
+Förderprogramm/Institution:
+
+erarbeitet.
+
+PFAU / Bremerhavener Gesellschaft für
+Investitionsförderung und Stadtentwicklung mbH
+
+Laufzeit: 23.09.2002 – 30.09.2004
+Durchführende Institution:
+Förderprogramm/Institution:
+
+Hydrogen Challenger GmbH
+
+PFAU / Bremerhavener Gesellschaft für
+
+Hoebelstraße 55
+
+Investitionsförderung und Stadtentwicklung mbH
+
+27572 Bremerhaven
+Tel.: 0471/9269857
+
+Durchführende Institution:
+
+hydrogen.challenger@web.de
+
+Alphatherm GmbH
+Am Lunedeich 70
+
+Carsten Michels
+
+Tel.: 0471/40 700
+36
+
+Projektleiter/in:
+
+27572 Bremerhaven
+
+Tel.: 0172/4257279
+
+www.alphatherm.de
+
+carstenmichels@web.de
+
+mail@alphatherm.de
+Projektpartner:
+Projektleiter/in:
+Marco Brinkmann
+Tel.: 0471/40700
+mail@alphatherm.de
+Projektpartner:
+TTZ Bremerhaven (Umweltinstitut)
+L & L Rotorservice GmbH
+Bremerhavener Energiemanagement-Agentur (BEA)
+
+Hochschule Bremerhaven, IAE
+
+Projekte
+Projekte
+
+Markterschließung für
+Wind-Wasserstoff-Tankstelle
+
+Komponentenentwicklung Nachtkennzeichnung für Luftfahrthindernisse
+
+Zielsetzung des Gutachtens war es, die technische und wirt-
+
+Ein Firmenschwerpunkt stellt die Entwicklung von Nachtkenn-
+
+schaftliche Machbarkeit einer Wind-Wasserstoff-Anlage sowie
+
+zeichnungen für Luftfahrthindernisse von Windenergieanla-
+
+deren mittelfristige Perspektiven darzustellen. Das untersuchte
+
+gen dar. Zur Ergänzung eines bereits durch REETEC erstellten
+
+System umfasst die Wasserstoffproduktion aus Windstrom mit-
+
+Gefahrfeuersystems entwickelte das Unternehmen hier zwei
+
+tels Elektrolyse, eine Druckwasserstofftankstelle für Stadtbusse
+
+weitere Module (Stromversorgung, Synchronisation), die die
+
+inklusive Kompressor, Wasserstoffspeicher und allen notwendi-
+
+zulässigen Grenzwerte der EMV-Vorgaben einhalten und die
+
+gen Einrichtungen sowie eine kleine Brennstoffzelle zur Kraft-
+
+zudem hinsichtlich ihrer Funktionalitäten und Schnittstellen an
+
+Wärme-Kopplung bzw. reiner Stromerzeugung.
+
+die Ansprüche der WEA-Hersteller angepasst sind.
+
+Es wurde angenommen, dass durch die Wasserstofftankstelle
+zwei Brennstoffzellen-Busse versorgt werden. Die Reichweite
+
+Laufzeit: 01.12.1999 – 31.03.2000
+
+der Drucktanks in den Fahrzeugen beträgt etwa 300 km und
+reicht damit für einen Tag.
+
+Förderprogramm /Institution:
+
+Die Wasserstofferzeugung erfolgt in der Tankstelle via Elektro-
+
+PFAU / Bremer Innovations-Agentur GmbH
+
+lyse mit Strom aus Windkraft. Bei der Auswertung wurden zwei
+Zeithorizonte 2001 und 2010 betrachtet. Für das Jahr 2001
+
+Durchführende Institution:
+
+wurde nur der Strom aus einer an Land aufgestellten Windkraft-
+
+REETEC GmbH Regenerative Energie- und Elektrotechnik
+
+anlage (Onshore) an einem Küstenstandort betrachtet, für das
+
+Cuxhavener Straße 10
+
+Jahr 2010 wurde zusätzlich Offshore-Windenergie betrachtet.
+
+28217 Bremen
+Tel.: 0421/39987-0
+
+Laufzeit: 10.07.2001 – 31.07.2001
+
+www.reetec.de
+info@reetec.de
+
+Förderprogramm/Institution:
+PFAU / Bremerhavener Gesellschaft für
+
+Projektleiter/in:
+
+Investitionsförderung und Stadtentwicklung mbH
+
+Gerd Möller
+Tel.: 0421/39987-15
+
+Durchführende Institution:
+
+Gerd.Moeller@reetec.de
+
+Energiekontor -VB- GmbH
+Mary-Somerville-Str. 5
+28359 Bremen
+Tel.: 0421/3304-0
+www.energiekontor.de
+info@energiekontor.de
+Projektleiter/in:
+Sönke Paulsen
+Tel.: 0421/3304-113
+soenke.paulsen@energiekontor.de
+
+37
+
+Impressum
+
+Herausgeber
+
+Konzeption und Fachredaktion
+
+Forschungs- und Koordinierungsstelle
+
+Dr. Hans-Joachim Stietzel
+
+Windenergie (FK-Wind)
+
+(Der Senator für Bau,
+
+An der Karlstadt 8
+
+Umwelt und Verkehr)
+
+27568 Bremerhaven
+
+Prof. Dr.-Ing. Peter Ritzenhoff
+
+Tel.: 0471/4823-540
+
+Jörn Böcker (FK-Wind)
+
+FK-Wind@hs-bremerhaven.de
+
+Jan Rispens (Windenergie-Agentur
+
+www.hs-bremerhaven.de
+
+Bremerhaven/Bremen e.V.)
+
+Der Senator für Bau,
+
+In Zusammenarbeit mit:
+
+Umwelt und Verkehr
+Ansgaritorstr. 2
+
+Nils Schnorrenberger
+
+28195 Bremen
+
+Dr. Mathias Grabs
+
+ofﬁce@bau.bremen.de
+
+(Bremerhavener Gesellschaft
+
+www.bauumwelt.bremen.de
+
+für Investitionsförderung
+
+www.umwelt-unternehmen.bremen.de
+
+und Stadtentwicklung mbH)
+
+in Zusammenarbeit mit der
+
+Dr. Detlef Pukrop
+Dr. Barbara Schieferstein
+
+BIS Bremerhavener Gesellschaft
+
+(Bremer Innovations-Agentur GmbH)
+
+für Investitionsförderung
+und Stadtentwicklung mbH
+
+Gestaltung und Redaktion
+
+Am Alten Hafen 118
+
+bigbenreklamebureau gmbh,
+
+27568 Bremerhaven
+
+Fischerhude
+
+Tel.: 0471/946 46-0
+Fax: 0471/946 46-89
+
+Druck
+
+mail@bis-bremerhaven.de
+
+Druckerei Ditzen GmbH & Co. KG,
+Bremerhaven
+
+BIA Bremer InnovationsAgentur GmbH
+
+Stand: März 2004
+
+Kontorhaus am Markt
+Langenstraße 2-4
+38
+
+Bildnachweis
+
+D-28195 Bremen
+
+Ein herzlicher Dank für die Über-
+
+Tel.: 0421 / 9600-30
+
+lassung des Bildmaterials in dieser
+
+Fax: 0421 / 9600-830
+
+Broschüre geht an:
+
+mail@bia-bremen.de
+
+AN windenergie gmbh,
+DeWind GmbH, LM Glasﬁber A/S,
+
+und der
+
+Reetec GmbH, Aginma/SSC Group
+und Jörn Böcker
+
+WAB e.V., Windenergie-Agentur
+Bremerhaven/Bremen
+Schifferstr. 10-14
+27568 Bremerhaven
+Tel.: 0471/391 77-0
+
+Die Forschungs- und Koordinierungs-
+
+Fax: 0471/391 77-19
+
+stelle Windenergie wird aus Mitteln
+
+info@windenergie-agentur.de
+
+des Europäischen Fonds für reginale
+
+www.windenergie-agentur.de
+
+Entwicklung (EFRE) koﬁnanziert.
+
+„umwelt unternehmen“
+ist eine partnerschaftliche Initiative zur
+wirtschaftlichen Stärkung von umweltaktiven Unternehmen, die vom Senator
+für Bau, Umwelt und Verkehr, der RKW
+Bremen GmbH, der Bremer InnovationsAgentur GmbH und der Bremerhavener
+Gesellschaft für Investitionsförderung
+und Stadtentwicklung mbH getragen wird.
+Unter dem Dach „umwelt unternehmen“
+sind sowohl Umweltförderprogramme wie
+z.B. Beratungsförderungen, Förderung
+der Umweltforschung und -technik,
+Investitionsförderung, als auch umweltpartnerschaftliche Initiativen, Netzwerke,
+Preise, Veranstaltungen, Veröffentlichungen
+und Internetportale zusammengefasst.
+Ziel ist die umfassende Unterstützung von
+umwelt- und ressourcenschonenden Aktivitäten
+von Unternehmen, aber auch von wissenschaftlichen Einrichtungen im Land Bremen.
+Die Initiative ist offen für Aktivitäten mit
+anderen Partnern, die mit der Zielstellung
+von „umwelt unternehmen“ übereinstimmen.
+
