@@ -30,8 +30,9 @@ public enum TermSuiteCollection {
 	TXT("txt", Charset.forName("UTF-8")),
 	TEI("tei", Charset.forName("UTF-8")),
 	EMPTY("", Charset.forName("UTF-8")), 
-	XMI("xmi", Charset.forName("UTF-8"));
-	
+	XMI("xmi", Charset.forName("UTF-8")),
+	JSON("json", Charset.forName("UTF-8"));
+
 	private String defaultFileExtension;
 	private Charset charset;
 

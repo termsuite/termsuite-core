@@ -62,7 +62,9 @@ import eu.project.ttc.metrics.test.DiacriticInsensitiveLevenshteinSpec;
 	HasSingleWordSelectorSpec.class,
 	DiacriticInsensitiveLevenshteinSpec.class,
 	GraphicalVariantGathererSpec.class,
-	CrossTableSpec.class
+	CrossTableSpec.class, 
+	TermsuiteJsonCasSpec.class
+//	TeiCollectionReaderSpec.class,
 	})
 public class AllTests {
 

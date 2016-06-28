@@ -24,27 +24,18 @@ package eu.project.ttc.engines;
 import java.util.Collection;
 import java.util.Iterator;
 
-import org.apache.uima.UimaContext;
-import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.fit.descriptor.ExternalResource;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.FSArray;
 import org.apache.uima.jcas.cas.StringArray;
-import org.apache.uima.resource.ResourceInitializationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.google.common.base.Optional;
-import com.google.common.base.Preconditions;
-
 import eu.project.ttc.resources.OccurrenceFilter;
-import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.resources.TrueFilter;
-import eu.project.ttc.types.SourceDocumentInformation;
 import eu.project.ttc.types.TermOccAnnotation;
 import eu.project.ttc.types.WordAnnotation;
-import eu.project.ttc.utils.JCasUtils;
 import eu.project.ttc.utils.OccurrenceBuffer;
 import eu.project.ttc.utils.TermSuiteConstants;
 import eu.project.ttc.utils.TermSuiteUtils;
@@ -77,15 +68,7 @@ public class RegexSpotter extends TokenRegexAE {
 	@ConfigurationParameter(name = CONTEXTUALIZE, mandatory = false, defaultValue = "false")
 	private boolean contextualize;
 
-	public static final String KEEP_OCCURRENCES_IN_TERM_INDEX = "KeepOccurrencesInTermIndex";
-	@ConfigurationParameter(name = KEEP_OCCURRENCES_IN_TERM_INDEX, mandatory = false, defaultValue = "true")
-	private boolean keepOccurrencesInTermIndex;
 
-	public static final String PARAM_ADD_TO_TERM_INDEX = "AddToTermIndex";
-	@ConfigurationParameter(name = PARAM_ADD_TO_TERM_INDEX, mandatory = false, defaultValue = "true")
-	private boolean addToTermIndex;
-
-	
 	public static final String CHARACTER_FOOTPRINT_TERM_FILTER = "CharacterFootprintTermFilter";
 	@ExternalResource(key =CHARACTER_FOOTPRINT_TERM_FILTER, mandatory = false)
 	private OccurrenceFilter termFilter = TrueFilter.INSTANCE;
@@ -96,31 +79,12 @@ public class RegexSpotter extends TokenRegexAE {
 	private FilterResource stopWordFilter;
 	
 	
-	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=false)
-	private TermIndexResource termIndexResource;
-	
-	private String currentFileURI;
-	
-	@Override
-	public void initialize(UimaContext context) throws ResourceInitializationException {
-		super.initialize(context);
-		
-		Preconditions.checkState(
-				!(addToTermIndex && termIndexResource == null),
-				"{} is configured to store terms in TermIndex but no TermIndex was passed",
-				this.getClass().getName());
-	}
-	
 	@Override
 	protected void beforeRuleProcessing(JCas jCas) {
-		Optional<SourceDocumentInformation> sdi = JCasUtils.getSourceDocumentAnnotation(jCas);
-		this.currentFileURI = sdi.isPresent() ? sdi.get().getUri() : "(no source uri given)";
 		this.occurrenceBuffer = new OccurrenceBuffer(this.postProcessingStrategy);
 	}
 	
 	private OccurrenceBuffer occurrenceBuffer;
-	
-	private int addedOccurrences = 0;
 	
 	@Override
 	public void ruleMatched(JCas jCas, RegexOccurrence occurrence) {
@@ -215,28 +179,11 @@ public class RegexSpotter extends TokenRegexAE {
 		annotation.setSpottingRuleName(occurrence.getRule().getName());
 		annotation.setTermKey(TermSuiteUtils.getGroupingKey(annotation));
 		annotation.addToIndexes();
-		if(addToTermIndex)
-			this.termIndexResource.getTermIndex().addTermOccurrence(
-				annotation, 
-				currentFileURI, 
-				keepOccurrencesInTermIndex);
-		addedOccurrences++;
 	}
 	
 	@Override
-	public void collectionProcessComplete()
-			throws AnalysisEngineProcessException {
-		if(addToTermIndex) {
-			LOGGER.info("Number of spotted term occurrences added to term index: {}", addedOccurrences);
-			this.termIndexResource.getTermIndex().getOccurrenceStore().makeIndex();
-		}
-	}
-	@Override
 	protected void afterRuleProcessing(JCas jCas) {
 		flushOccurrenceBuffer(jCas);
-		if(addToTermIndex)
-			this.termIndexResource.getTermIndex().getOccurrenceStore().flush();
-
 	}
 
 }

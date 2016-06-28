@@ -27,9 +27,12 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.security.SecureRandom;
+import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.BlockingQueue;
 
+import org.apache.commons.lang.mutable.MutableInt;
+import eu.project.ttc.engines.exporter.TermsuiteJsonCasExporter;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.collection.CollectionReader;
 import org.apache.uima.collection.CollectionReaderDescription;
@@ -40,6 +43,8 @@ import org.apache.uima.fit.factory.ExternalResourceFactory;
 import org.apache.uima.fit.pipeline.SimplePipeline;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ExternalResourceDescription;
+import com.google.common.collect.Maps;
+import org.codehaus.groovy.runtime.metaclass.NewMetaMethod;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -64,6 +69,7 @@ import eu.project.ttc.engines.StringRegexFilter;
 import eu.project.ttc.engines.SyntacticTermGatherer;
 import eu.project.ttc.engines.TermClassifier;
 import eu.project.ttc.engines.TermIndexBlacklistWordFilterAE;
+import eu.project.ttc.engines.TermOccAnnotationImporter;
 import eu.project.ttc.engines.TermSpecificityComputer;
 import eu.project.ttc.engines.TreeTaggerLemmaFixer;
 import eu.project.ttc.engines.cleaner.AbstractTermIndexCleaner;
@@ -108,6 +114,7 @@ import eu.project.ttc.readers.GenericXMLToTxtCollectionReader;
 import eu.project.ttc.readers.QueueRegistry;
 import eu.project.ttc.readers.StreamingCollectionReader;
 import eu.project.ttc.readers.StringCollectionReader;
+import eu.project.ttc.readers.JsonCollectionReader;
 import eu.project.ttc.readers.TeiCollectionReader;
 import eu.project.ttc.readers.TxtCollectionReader;
 import eu.project.ttc.readers.XmiCollectionReader;
@@ -132,6 +139,7 @@ import eu.project.ttc.stream.ConsumerRegistry;
 import eu.project.ttc.stream.DocumentProvider;
 import eu.project.ttc.stream.DocumentStream;
 import eu.project.ttc.stream.StreamingCasConsumer;
+import eu.project.ttc.types.TermOccAnnotation;
 import eu.project.ttc.types.WordAnnotation;
 import eu.project.ttc.utils.OccurrenceBuffer;
 import eu.project.ttc.utils.TermSuiteUtils;
@@ -484,6 +492,15 @@ public class TermSuitePipeline {
 						XmiCollectionReader.PARAM_LANGUAGE, this.lang.getCode()
 						);
 				break;
+			case JSON:
+				this.crDescription = CollectionReaderFactory.createReaderDescription(
+						JsonCollectionReader.class,
+						JsonCollectionReader.PARAM_INPUTDIR, collectionPath,
+						JsonCollectionReader.PARAM_COLLECTION_TYPE, termSuiteCollection,
+						JsonCollectionReader.PARAM_ENCODING, collectionEncoding,
+						JsonCollectionReader.PARAM_LANGUAGE, this.lang.getCode()
+				);
+				break;
 			case EMPTY:
 				this.crDescription = CollectionReaderFactory.createReaderDescription(
 						EmptyCollectionReader.class
@@ -580,6 +597,14 @@ public class TermSuitePipeline {
 //		return aggregateAndReturn(ae, null, 0);
 //	}
 
+	private Map<String, MutableInt> taskNumbers = Maps.newHashMap();
+	private String getNumberedTaskName(String taskName) {
+		if(!taskNumbers.containsKey(taskName))
+			taskNumbers.put(taskName, new MutableInt(0));
+		taskNumbers.get(taskName).increment();
+		return String.format("%s-%d", taskName, taskNumbers.get(taskName).intValue());
+	}
+	
 	private TermSuitePipeline aggregateAndReturn(AnalysisEngineDescription ae, String taskName, int ccWeight) {
 		Preconditions.checkNotNull(taskName);
 
@@ -706,7 +731,7 @@ public class TermSuitePipeline {
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 
 
-			return aggregateAndReturn(ae, "Exporting the terminology to " + toFilePath, 1);
+			return aggregateAndReturn(ae, getNumberedTaskName("Exporting the terminology to " + toFilePath), 1);
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
@@ -784,7 +809,7 @@ public class TermSuitePipeline {
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 
-			return aggregateAndReturn(ae, "Exporting the terminology to " + toFilePath, 1);
+			return aggregateAndReturn(ae, getNumberedTaskName("Exporting the terminology to " + toFilePath), 1);
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
@@ -830,7 +855,7 @@ public class TermSuitePipeline {
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 
-			return aggregateAndReturn(ae, "Exporting the terminology to " + toFilePath, 1);
+			return aggregateAndReturn(ae, getNumberedTaskName("Exporting the terminology to " + toFilePath), 1);
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
@@ -1017,9 +1042,7 @@ public class TermSuitePipeline {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					RegexSpotter.class,
 					TokenRegexAE.PARAM_ALLOW_OVERLAPPING_OCCURRENCES, true,
-					RegexSpotter.POST_PROCESSING_STRATEGY, postProcStrategy,
-					RegexSpotter.PARAM_ADD_TO_TERM_INDEX, this.addSpottedAnnoToTermIndex,
-					RegexSpotter.KEEP_OCCURRENCES_IN_TERM_INDEX, spotWithOccurrences
+					RegexSpotter.POST_PROCESSING_STRATEGY, postProcStrategy
 				);
 			
 			if(enableSyntacticLabels)
@@ -1054,11 +1077,33 @@ public class TermSuitePipeline {
 					DefaultFilterResource.class, 
 					TermSuiteResource.STOP_WORDS_FILTER.getFileUrl(lang));
 			
-			return aggregateAndReturn(ae, "Spotting terms", 0);
+			return aggregateAndReturn(ae, "Spotting terms", 0).aeTermOccAnnotationImporter();
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
 	}
+	
+	
+	/**
+	 * An AE thats imports all {@link TermOccAnnotation} in CAS to a {@link TermIndex}.
+	 * 
+	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
+	 */
+	public TermSuitePipeline aeTermOccAnnotationImporter()  {
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					TermOccAnnotationImporter.class,
+					TermOccAnnotationImporter.KEEP_OCCURRENCES_IN_TERM_INDEX, spotWithOccurrences
+				);
+			ExternalResourceFactory.bindResource(ae, resTermIndex());
+
+			return aggregateAndReturn(ae, "TermOccAnnotation importer", 0);
+		} catch (Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
+	}
+
 	
 	
 	/**
@@ -1230,6 +1275,25 @@ public class TermSuitePipeline {
 		}
 	}
 
+	/**
+	 * Exports all CAS as JSON files to a given directory.
+	 *
+	 * @param toDirectoryPath
+	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
+	 */
+	public TermSuitePipeline haeTermsuiteJsonCasExporter(String toDirectoryPath)  {
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					TermsuiteJsonCasExporter.class,
+					TermsuiteJsonCasExporter.OUTPUT_DIRECTORY, toDirectoryPath
+			);
+
+			return aggregateAndReturn(ae, "Exporting Json Cas files", 0);
+		} catch(Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
+	}
 
 	/**
 	 * Export all CAS in TSV format to a given directory.
@@ -1479,7 +1543,7 @@ public class TermSuitePipeline {
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 
-			return aggregateAndReturn(ae, "Cleaning", 0);
+			return aggregateAndReturn(ae, getNumberedTaskName("Cleaning"), 0);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
@@ -1832,7 +1896,7 @@ public class TermSuitePipeline {
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 
-			return aggregateAndReturn(ae, "Counting stats ["+statName+"]", 0);
+			return aggregateAndReturn(ae, getNumberedTaskName("Counting stats ["+statName+"]"), 0);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
@@ -2044,7 +2108,7 @@ public class TermSuitePipeline {
 					JsonCasExporter.class,
 					JsonCasExporter.OUTPUT_DIRECTORY, toDirectoryPath
 			);
-			return aggregateAndReturn(ae, "Exporting CAS to JSON files", 0);
+			return aggregateAndReturn(ae, getNumberedTaskName("Exporting CAS to JSON files"), 0);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
