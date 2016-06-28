@@ -1,21 +1,52 @@
 package eu.project.ttc.readers;
 
-import com.fasterxml.jackson.core.*;
-import eu.project.ttc.types.SourceDocumentInformation;
-import eu.project.ttc.types.TermOccAnnotation;
-import eu.project.ttc.types.WordAnnotation;
-import org.apache.uima.cas.CAS;
-import org.apache.uima.cas.CASException;
-import org.apache.uima.jcas.cas.FSArray;
-import org.apache.uima.jcas.cas.StringArray;
+import static eu.project.ttc.readers.JsonCasConstants.F_BEGIN;
+import static eu.project.ttc.readers.JsonCasConstants.F_CASE;
+import static eu.project.ttc.readers.JsonCasConstants.F_CATEGORY;
+import static eu.project.ttc.readers.JsonCasConstants.F_CORPUS_SIZE;
+import static eu.project.ttc.readers.JsonCasConstants.F_CUMULATED_DOCUMENT_SIZE;
+import static eu.project.ttc.readers.JsonCasConstants.F_DEGREE;
+import static eu.project.ttc.readers.JsonCasConstants.F_DOCUMENT_INDEX;
+import static eu.project.ttc.readers.JsonCasConstants.F_DOCUMENT_SIZE;
+import static eu.project.ttc.readers.JsonCasConstants.F_END;
+import static eu.project.ttc.readers.JsonCasConstants.F_FORMATION;
+import static eu.project.ttc.readers.JsonCasConstants.F_GENDER;
+import static eu.project.ttc.readers.JsonCasConstants.F_LABELS;
+import static eu.project.ttc.readers.JsonCasConstants.F_LAST_SEGMENT;
+import static eu.project.ttc.readers.JsonCasConstants.F_LEMMA;
+import static eu.project.ttc.readers.JsonCasConstants.F_MOOD;
+import static eu.project.ttc.readers.JsonCasConstants.F_NB_DOCUMENTS;
+import static eu.project.ttc.readers.JsonCasConstants.F_NUMBER;
+import static eu.project.ttc.readers.JsonCasConstants.F_OFFSET_IN_SOURCE;
+import static eu.project.ttc.readers.JsonCasConstants.F_PATTERN;
+import static eu.project.ttc.readers.JsonCasConstants.F_PERSON;
+import static eu.project.ttc.readers.JsonCasConstants.F_REGEX_LABEL;
+import static eu.project.ttc.readers.JsonCasConstants.F_SPOTTING_RULE_NAME;
+import static eu.project.ttc.readers.JsonCasConstants.F_STEM;
+import static eu.project.ttc.readers.JsonCasConstants.F_SUB_CATEGORY;
+import static eu.project.ttc.readers.JsonCasConstants.F_TAG;
+import static eu.project.ttc.readers.JsonCasConstants.F_TENSE;
+import static eu.project.ttc.readers.JsonCasConstants.F_TERM_KEY;
+import static eu.project.ttc.readers.JsonCasConstants.F_URI;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Collection;
-import java.util.NavigableMap;;
-import java.util.TreeMap;
+import java.util.List;
 
-import static eu.project.ttc.readers.JsonCasConstants.*;
+import org.apache.uima.cas.CAS;
+import org.apache.uima.cas.CASException;
+import org.apache.uima.fit.util.JCasUtil;
+import org.apache.uima.jcas.cas.FSArray;
+import org.apache.uima.jcas.cas.StringArray;
+
+import com.fasterxml.jackson.core.JsonFactory;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.JsonToken;
+import com.google.common.collect.Lists;
+
+import eu.project.ttc.types.SourceDocumentInformation;
+import eu.project.ttc.types.TermOccAnnotation;
+import eu.project.ttc.types.WordAnnotation;
 
 /**
  * Created by smeoni on 27/05/16.
@@ -32,7 +63,6 @@ public class TermSuiteJsonCasDeserializer {
             SourceDocumentInformation sdi = (SourceDocumentInformation) cas.createAnnotation(cas.getJCas().getCasType(SourceDocumentInformation.type), 0, 0);
             WordAnnotation wa = (WordAnnotation) cas.createAnnotation(cas.getJCas().getCasType(WordAnnotation.type), 0, 0);
             TermOccAnnotation toa = (TermOccAnnotation) cas.createAnnotation(cas.getJCas().getCasType(TermOccAnnotation.type), 0, 0);
-            NavigableMap<Integer, WordAnnotation> waTreeMap = new TreeMap<>();
             boolean inSdi = false;
             boolean inWa = false;
             boolean inToa = false;
@@ -48,7 +78,7 @@ public class TermSuiteJsonCasDeserializer {
                             inSdi = false;
                         }
                         else {
-                            FillSdi(parser,token,sdi);
+                            fillSdi(parser,token,sdi);
                         }
                     }
 
@@ -57,11 +87,10 @@ public class TermSuiteJsonCasDeserializer {
                             inWa = false;
                         }
                         else if (token == JsonToken.END_OBJECT) {
-                            waTreeMap.put(wa.getBegin(),(WordAnnotation) wa.clone());
                             wa.addToIndexes();
                             wa = (WordAnnotation) cas.createAnnotation(cas.getJCas().getCasType(WordAnnotation.type), 0, 0);
                         }
-                        FillWordAnnotations(parser, token, wa);
+                        fillWordAnnotations(parser, token, wa);
                     }
 
                     else if (inToa){
@@ -69,7 +98,7 @@ public class TermSuiteJsonCasDeserializer {
                             inToa = false;
                         }
                         else if (token == JsonToken.END_OBJECT) {
-                            FillWords(toa,waTreeMap,cas);
+                            fillWords(toa,cas);
                             toa.addToIndexes();
                             toa = (TermOccAnnotation) cas.createAnnotation(cas.getJCas().getCasType(TermOccAnnotation.type), 0, 0);
                         }
@@ -109,19 +138,15 @@ public class TermSuiteJsonCasDeserializer {
         }
     }
 
-    private static void FillWords(TermOccAnnotation toa, NavigableMap<Integer, WordAnnotation> waTreeMap, CAS cas) throws CASException {
-        int begin = toa.getBegin();
-        int end = toa.getEnd();
-        Collection<WordAnnotation> subWaCollection = waTreeMap.subMap(begin,true,end,true).values();
-        WordAnnotation[] waArray = subWaCollection.toArray(new WordAnnotation[subWaCollection.size()]);
-        FSArray fs = (FSArray) cas.createArrayFS(subWaCollection.size());
-        for (int i = 0; i < waArray.length; i++){
-            fs.set(i,(WordAnnotation) waArray[i].clone());
-        }
+    private static void fillWords(TermOccAnnotation toa, CAS cas) throws CASException {
+        List<WordAnnotation> words = Lists.newArrayList(JCasUtil.subiterate(cas.getJCas(), WordAnnotation.class, toa, false, true));
+        FSArray fs = (FSArray) cas.createArrayFS(words.size());
+        for(int i=0; i<words.size();i++) 
+        	fs.set(i,words.get(i));
         toa.setWords(fs);
     }
 
-    private static void FillWordAnnotations(JsonParser parser, JsonToken token, WordAnnotation wa) throws IOException {
+    private static void fillWordAnnotations(JsonParser parser, JsonToken token, WordAnnotation wa) throws IOException {
         if (token.equals(JsonToken.FIELD_NAME)){
             switch (parser.getCurrentName()){
                 case F_CATEGORY :
@@ -179,7 +204,7 @@ public class TermSuiteJsonCasDeserializer {
         }
     }
 
-    private static void FillSdi(JsonParser parser , JsonToken token, SourceDocumentInformation sdi) throws IOException {
+    private static void fillSdi(JsonParser parser , JsonToken token, SourceDocumentInformation sdi) throws IOException {
         if (token.equals(JsonToken.FIELD_NAME)){
             switch (parser.getCurrentName()){
                 case F_URI :
