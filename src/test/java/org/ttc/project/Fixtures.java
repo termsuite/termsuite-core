@@ -113,7 +113,7 @@ public class Fixtures {
 		return w;
 	}
 
-	
+
 	/**
 	 * na: énergie éolien
 	 * @return

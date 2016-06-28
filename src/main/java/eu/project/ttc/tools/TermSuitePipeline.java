@@ -32,6 +32,7 @@ import java.util.UUID;
 import java.util.concurrent.BlockingQueue;
 
 import org.apache.commons.lang.mutable.MutableInt;
+import eu.project.ttc.engines.exporter.TermsuiteJsonCasExporter;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.collection.CollectionReader;
 import org.apache.uima.collection.CollectionReaderDescription;
@@ -42,7 +43,7 @@ import org.apache.uima.fit.factory.ExternalResourceFactory;
 import org.apache.uima.fit.pipeline.SimplePipeline;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ExternalResourceDescription;
-import org.assertj.core.util.Maps;
+import com.google.common.collect.Maps;
 import org.codehaus.groovy.runtime.metaclass.NewMetaMethod;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -108,6 +109,7 @@ import eu.project.ttc.readers.GenericXMLToTxtCollectionReader;
 import eu.project.ttc.readers.QueueRegistry;
 import eu.project.ttc.readers.StreamingCollectionReader;
 import eu.project.ttc.readers.StringCollectionReader;
+import eu.project.ttc.readers.JsonCollectionReader;
 import eu.project.ttc.readers.TeiCollectionReader;
 import eu.project.ttc.readers.TxtCollectionReader;
 import eu.project.ttc.resources.BankResource;
@@ -487,6 +489,16 @@ public class TermSuitePipeline {
 						TxtCollectionReader.PARAM_LANGUAGE, this.lang.getCode()
 						);
 				break;
+
+				case JSON:
+					this.crDescription = CollectionReaderFactory.createReaderDescription(
+							JsonCollectionReader.class,
+							JsonCollectionReader.PARAM_INPUTDIR, collectionPath,
+							JsonCollectionReader.PARAM_COLLECTION_TYPE, termSuiteCollection,
+							JsonCollectionReader.PARAM_ENCODING, collectionEncoding,
+							JsonCollectionReader.PARAM_LANGUAGE, this.lang.getCode()
+					);
+					break;
 			case EMPTY:
 				this.crDescription = CollectionReaderFactory.createReaderDescription(
 						EmptyCollectionReader.class
@@ -1211,6 +1223,25 @@ public class TermSuitePipeline {
 		}
 	}
 
+	/**
+	 * Exports all CAS as JSON files to a given directory.
+	 *
+	 * @param toDirectoryPath
+	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
+	 */
+	public TermSuitePipeline haeTermsuiteJsonCasExporter(String toDirectoryPath)  {
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					TermsuiteJsonCasExporter.class,
+					TermsuiteJsonCasExporter.OUTPUT_DIRECTORY, toDirectoryPath
+			);
+
+			return aggregateAndReturn(ae, "Exporting Json Cas files", 0);
+		} catch(Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
+	}
 
 	/**
 	 * Export all CAS in TSV format to a given directory.
