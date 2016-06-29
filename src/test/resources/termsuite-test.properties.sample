@@ -1,2 +1,2 @@
-treetagger.home.path=/home/cram-d/Apps/TreeTagger/
-resources.path=/home/cram-d/git/termsuite-resources-2.2/
+treetagger.home.path=/path/to/TreeTagger/
+resources.path=/path/to/termsuite-resources/
