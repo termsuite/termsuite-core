@@ -23,14 +23,17 @@ package eu.project.ttc.engines;
 
 import java.util.Deque;
 import java.util.LinkedList;
+import java.util.Set;
 
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.FSIterator;
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.fit.descriptor.ExternalResource;
+import org.apache.uima.fit.util.JCasUtil;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
+import org.assertj.core.util.Sets;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -38,6 +41,7 @@ import com.google.common.collect.Lists;
 
 import eu.project.ttc.resources.FixedExpressionResource;
 import eu.project.ttc.types.FixedExpression;
+import eu.project.ttc.types.TermOccAnnotation;
 import eu.project.ttc.types.WordAnnotation;
 import eu.project.ttc.utils.JCasUtils;
 
@@ -55,6 +59,14 @@ public class FixedExpressionSpotter extends JCasAnnotator_ImplBase {
 	@ExternalResource(key=FixedExpressionResource.FIXED_EXPRESSION_RESOURCE, mandatory=true)
 	protected FixedExpressionResource fixedExpressionResource;
 
+
+	public static final String REMOVE_TERM_OCC_ANNOTATIONS_FROM_CAS = "RemoveTermOccFromCas";
+	@ConfigurationParameter(name=REMOVE_TERM_OCC_ANNOTATIONS_FROM_CAS, mandatory=false, defaultValue="false")
+	private boolean removeTermoccAnnotationsFromCas;
+
+	public static final String REMOVE_WORD_ANNOTATIONS_FROM_CAS = "RemoveWordFromCas";
+	@ConfigurationParameter(name=REMOVE_WORD_ANNOTATIONS_FROM_CAS, mandatory=false, defaultValue="false")
+	private boolean removeWordAnnotationsFromCas;
 
 	public static final String FIXED_EXPRESSION_MAX_SIZE = "FixedExpressionMaxSize";
 	@ConfigurationParameter(name=FIXED_EXPRESSION_MAX_SIZE, mandatory=false, defaultValue="5")
@@ -122,7 +134,6 @@ public class FixedExpressionSpotter extends JCasAnnotator_ImplBase {
 							candidateFE.getLast().getEnd());
 					fe.addToIndexes();
 				}
-
 				/*
 				 * Loops again without the left-most word
 				 */
@@ -130,9 +141,32 @@ public class FixedExpressionSpotter extends JCasAnnotator_ImplBase {
 			}
 		}
 		
+		
+		/*
+		 * Removes all WordAnnotation and TermOccAnnotation contained
+		 * in a FixedExpression
+		 */
+		Set<Annotation> trash = Sets.newHashSet();
+		if(removeWordAnnotationsFromCas || removeTermoccAnnotationsFromCas) {
+			FSIterator<Annotation> it2 = aJCas.getAnnotationIndex(FixedExpression.type).iterator();
+			while (it2.hasNext()) {
+				FixedExpression fe = (FixedExpression) it2.next();
+				if(removeWordAnnotationsFromCas)
+					for(WordAnnotation a:JCasUtil.subiterate(aJCas, WordAnnotation.class, fe, false, true)) {
+						trash.add(a);
+					}
+				if(removeTermoccAnnotationsFromCas)
+					for(TermOccAnnotation a:JCasUtil.subiterate(aJCas, TermOccAnnotation.class, fe, false, true))
+						trash.add(a);
+			}
+		}
+		for(Annotation a:trash)
+			a.removeFromIndexes();
+		
 		LOGGER.debug("{} fixed expressions found in {}",
 				cnt,
 				JCasUtils.getSourceDocumentAnnotation(aJCas).get().getUri());
+		
 	}
 	
 	

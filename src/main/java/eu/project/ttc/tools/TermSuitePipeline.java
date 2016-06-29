@@ -1046,7 +1046,9 @@ public class TermSuitePipeline {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					FixedExpressionSpotter.class,
-					FixedExpressionSpotter.FIXED_EXPRESSION_MAX_SIZE, 5
+					FixedExpressionSpotter.FIXED_EXPRESSION_MAX_SIZE, 5,
+					FixedExpressionSpotter.REMOVE_WORD_ANNOTATIONS_FROM_CAS, false,
+					FixedExpressionSpotter.REMOVE_TERM_OCC_ANNOTATIONS_FROM_CAS, true
 				);
 			
 			ExternalResourceFactory.createDependencyAndBind(
