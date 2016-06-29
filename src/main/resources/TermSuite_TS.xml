@@ -94,6 +94,13 @@
       </features>
     </typeDescription>
     <typeDescription>
+      <name>eu.project.ttc.types.FixedExpression</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+      <features>
+      </features>
+    </typeDescription>
+    <typeDescription>
       <name>eu.project.ttc.types.TermOccAnnotation</name>
       <description/>
       <supertypeName>uima.tcas.Annotation</supertypeName>

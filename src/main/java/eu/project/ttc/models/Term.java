@@ -108,6 +108,11 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 	private String spottingRule;
 
 	/*
+	 * A flag that is true if this term is a fixed expression
+	 */
+	private boolean fixedExpression = false;
+	
+	/*
 	 * The morphological components of this term
 	 */
 	private List<TermWord> termWords = Lists.newArrayList();
@@ -666,4 +671,12 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 		this.specificity = specificity;
 	}
 	
+	public void setFixedExpression(boolean fixedExpression) {
+		this.fixedExpression = fixedExpression;
+	}
+
+	public boolean isFixedExpression() {
+		return this.fixedExpression;
+	}
+
 }

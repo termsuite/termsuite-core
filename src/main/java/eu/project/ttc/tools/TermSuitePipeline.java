@@ -32,7 +32,6 @@ import java.util.UUID;
 import java.util.concurrent.BlockingQueue;
 
 import org.apache.commons.lang.mutable.MutableInt;
-import eu.project.ttc.engines.exporter.TermsuiteJsonCasExporter;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.collection.CollectionReader;
 import org.apache.uima.collection.CollectionReaderDescription;
@@ -43,19 +42,20 @@ import org.apache.uima.fit.factory.ExternalResourceFactory;
 import org.apache.uima.fit.pipeline.SimplePipeline;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ExternalResourceDescription;
-import com.google.common.collect.Maps;
-import org.codehaus.groovy.runtime.metaclass.NewMetaMethod;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
+import com.google.common.collect.Maps;
 
 import eu.project.ttc.engines.CasStatCounter;
 import eu.project.ttc.engines.Contextualizer;
 import eu.project.ttc.engines.EvalEngine;
 import eu.project.ttc.engines.ExtensionDetecter;
+import eu.project.ttc.engines.FixedExpressionSpotter;
+import eu.project.ttc.engines.FixedExpressionTermMarker;
 import eu.project.ttc.engines.GraphicalVariantGatherer;
 import eu.project.ttc.engines.MateLemmaFixer;
 import eu.project.ttc.engines.MateLemmatizerTagger;
@@ -89,6 +89,7 @@ import eu.project.ttc.engines.exporter.JsonExporter;
 import eu.project.ttc.engines.exporter.SpotterTSVWriter;
 import eu.project.ttc.engines.exporter.TBXExporter;
 import eu.project.ttc.engines.exporter.TSVExporter;
+import eu.project.ttc.engines.exporter.TermsuiteJsonCasExporter;
 import eu.project.ttc.engines.exporter.VariantEvalExporter;
 import eu.project.ttc.engines.exporter.VariationExporter;
 import eu.project.ttc.engines.exporter.XmiCasExporter;
@@ -111,16 +112,17 @@ import eu.project.ttc.readers.AbstractToTxtSaxHandler;
 import eu.project.ttc.readers.CollectionDocument;
 import eu.project.ttc.readers.EmptyCollectionReader;
 import eu.project.ttc.readers.GenericXMLToTxtCollectionReader;
+import eu.project.ttc.readers.JsonCollectionReader;
 import eu.project.ttc.readers.QueueRegistry;
 import eu.project.ttc.readers.StreamingCollectionReader;
 import eu.project.ttc.readers.StringCollectionReader;
-import eu.project.ttc.readers.JsonCollectionReader;
 import eu.project.ttc.readers.TeiCollectionReader;
 import eu.project.ttc.readers.TxtCollectionReader;
 import eu.project.ttc.readers.XmiCollectionReader;
 import eu.project.ttc.resources.CharacterFootprintTermFilter;
 import eu.project.ttc.resources.CompostInflectionRules;
 import eu.project.ttc.resources.EvalTrace;
+import eu.project.ttc.resources.FixedExpressionResource;
 import eu.project.ttc.resources.GeneralLanguageResource;
 import eu.project.ttc.resources.ManualSegmentationResource;
 import eu.project.ttc.resources.MateLemmatizerModel;
@@ -139,6 +141,7 @@ import eu.project.ttc.stream.ConsumerRegistry;
 import eu.project.ttc.stream.DocumentProvider;
 import eu.project.ttc.stream.DocumentStream;
 import eu.project.ttc.stream.StreamingCasConsumer;
+import eu.project.ttc.types.FixedExpression;
 import eu.project.ttc.types.TermOccAnnotation;
 import eu.project.ttc.types.WordAnnotation;
 import eu.project.ttc.utils.OccurrenceBuffer;
@@ -1028,7 +1031,68 @@ public class TermSuitePipeline {
 		}
 	}
 
-		
+	/**
+	 * Iterates over the {@link TermIndex} and mark terms as
+	 * "fixed expressions" when their lemmas are found in the 
+	 * {@link FixedExpressionResource}.
+	 * 
+	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
+	 */
+	public TermSuitePipeline aeFixedExpressionTermMarker()  {
+		/*
+		 * TODO Check if resource is present for that current language.
+		 */
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					FixedExpressionTermMarker.class
+				);
+			
+			ExternalResourceFactory.createDependencyAndBind(
+					ae,
+					FixedExpressionResource.FIXED_EXPRESSION_RESOURCE, 
+					FixedExpressionResource.class, 
+					TermSuiteResource.FIXED_EXPRESSIONS.getFileUrl(lang));
+
+			ExternalResourceFactory.bindResource(ae, resTermIndex());
+
+			return aggregateAndReturn(ae, "Marking fixed expression terms", 0);
+		} catch (Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
+	}
+	
+	/**
+	 * Spots fixed expressions in the CAS an creates {@link FixedExpression}
+	 * annotation whenever one is found.
+	 * 
+	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
+	 */
+	public TermSuitePipeline aeFixedExpressionSpotter()  {
+		/*
+		 * TODO Check if resource is present for that current language.
+		 */
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					FixedExpressionSpotter.class,
+					FixedExpressionSpotter.FIXED_EXPRESSION_MAX_SIZE, 5,
+					FixedExpressionSpotter.REMOVE_WORD_ANNOTATIONS_FROM_CAS, false,
+					FixedExpressionSpotter.REMOVE_TERM_OCC_ANNOTATIONS_FROM_CAS, true
+				);
+			
+			ExternalResourceFactory.createDependencyAndBind(
+					ae,
+					FixedExpressionResource.FIXED_EXPRESSION_RESOURCE, 
+					FixedExpressionResource.class, 
+					TermSuiteResource.FIXED_EXPRESSIONS.getFileUrl(lang));
+
+			return aggregateAndReturn(ae, "Spotting fixed expressions", 0);
+		} catch (Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
+	}
+	
 	/**
 	 * The single-word and multi-word term spotter AE
 	 * base on UIMA Tokens Regex.
