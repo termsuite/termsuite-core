@@ -57,12 +57,4 @@ public class FunctionalTests {
 		Collections.sort(terms, termProperty.getComparator(termIndex, desc));
 		return terms;
 	}
-	
-	public static TermAssert assertThat(Term term) {
-		return new TermAssert(term);
-	}
-	
-	public static TermIndexAssert assertThat(TermIndex termIndex) {
-		return new TermIndexAssert(termIndex);
-	}
 }

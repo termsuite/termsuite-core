@@ -15,7 +15,7 @@ import eu.project.ttc.models.VariationType;
 
 public class TermAssert extends AbstractAssert<TermAssert, Term> {
 
-	protected TermAssert(Term actual) {
+	public TermAssert(Term actual) {
 		super(actual, TermAssert.class);
 	}
 
