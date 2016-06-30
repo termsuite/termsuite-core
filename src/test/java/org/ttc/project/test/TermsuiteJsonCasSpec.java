@@ -113,7 +113,26 @@ public class TermsuiteJsonCasSpec {
         wa.addToIndexes();
 
         WordAnnotation wa1 = (WordAnnotation) fixtureCas.getCas()
-                .createAnnotation(fixtureCas.getCasType(WordAnnotation.type), 16, 21);
+                .createAnnotation(fixtureCas.getCasType(WordAnnotation.type), 16, 28);
+        wa1.setCategory("adverb");
+        wa1.setLemma("parfaitement");
+        wa1.setStem("parfait");
+        wa1.setTag("ADV");
+        wa1.setSubCategory("test");
+        wa1.setRegexLabel("R");
+        wa1.setNumber("tata");
+        wa1.setGender("toto");
+        wa1.setCase("titi");
+        wa1.setMood("test");
+        wa1.setTense("test");
+        wa1.setPerson("test");
+        wa1.setDegree("test");
+        wa1.setFormation("test");
+        wa1.setLabels("label");
+        wa1.addToIndexes();
+
+        wa1 = (WordAnnotation) fixtureCas.getCas()
+                .createAnnotation(fixtureCas.getCasType(WordAnnotation.type), 29, 34);
         wa1.setCategory("adjective");
         wa1.setLemma("total");
         wa1.setStem("tot");
@@ -132,7 +151,7 @@ public class TermsuiteJsonCasSpec {
         wa1.addToIndexes();
 
         TermOccAnnotation toa = (TermOccAnnotation) fixtureCas.getCas()
-                .createAnnotation(fixtureCas.getCasType(TermOccAnnotation.type),3,21);
+                .createAnnotation(fixtureCas.getCasType(TermOccAnnotation.type),3,34);
 
 
         StringArray stringArray = new StringArray(fixtureCas, 2);
@@ -147,7 +166,7 @@ public class TermsuiteJsonCasSpec {
         toa.setWords(fs);
         toa.addToIndexes();
 
-        fixtureCas.setDocumentText("le recouvrement total");
+        fixtureCas.setDocumentText("le recouvrement parfaitement total");
 
 
     }
@@ -186,9 +205,13 @@ public class TermsuiteJsonCasSpec {
         for (int i = 0; i < toa.getWords().size(); i++){
             assertEquals(toaExpected.getWords().get(i).toString(),toa.getWords().get(i).toString());
         }
+        
+        //Test Size of FSArrayWords in termOccAnnotation
+        assertEquals("this two array must have the same size",toaExpected.getWords().size(),toa.getWords().size());
+
 
         //Test covered Text
-        assertEquals("le recouvrement total", jCas.getDocumentText());
+        assertEquals("le recouvrement parfaitement total", jCas.getDocumentText());
     }
 
 }
