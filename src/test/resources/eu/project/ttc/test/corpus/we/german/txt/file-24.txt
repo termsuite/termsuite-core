@@ -1,0 +1,216 @@
+Aspekte des Windklimas in der Deutschen Bucht aus Beobachtungen
+an der FINO1-Forschungsplattform
+Stefan Emeis
+Matthias Türk
+Institut für Meteorologie und Klimaforschung
+- Atmosphärische Umweltforschung Forschungszentrum Karlsruhe GmbH
+Kreuzeckbahnstr. 19
+82467 Garmisch-Partenkirchen
+stefan.emeis@imk.fzk.de
+
+Einleitung
+Strom aus Offshore-Windenergieanlagen soll einen wichtigen Beitrag zur zukünftigen
+Energieversorgung in Deutschland leisten. Um die gesetzten Klimaschutzziele (Reduktion des CO2Ausstoß) zu erreichen und den Ausbau der Windenergienutzung in Deutschland auf hohem Niveau
+aufrecht zu halten, ist eine allmähliche Erschließung geeigneter Offshore-Standorte erforderlich. Für
+die Planung, Auslegung und den Betrieb von Offshore-Windkraftanlagen bzw. -parks z.B. in der
+Deutschen Bucht ist eine detaillierte Kenntnis des Windklimas zwingende Voraussetzung. Zur
+Verbesserung der Datenlage im entsprechenden Seegebiet wurde im Herbst 2003 ein weltweit bislang
+einzigartiger Messmast mit einer Höhe von gut 100 m und Auslegern für die Windmessung mit
+Schalenkreuz- (alle 10 m) und Ultraschallanemometern (in drei Höhen) auf der OffshoreForschungsplattform FINO1 in der Deutschen Bucht ca. 45 km nördlich vor Borkum, in Betrieb
+genommen. Die FINO1-Messdaten werden im Rahmen des BMU-finanzierten dreijährigen
+Verbundprojektes OWID ausgewertet. Hier werden Auswertungen der Daten von den
+Schalenkreuzanemometern gezeigt. Die Daten der Ultraschallanemometer werden in den beiden
+Folgejahren analysiert, um insbesondere auch die Turbulenzstruktur zu ermitteln.
+Vorgehensweise
+Aus den 10-Minuten-Mittelwertdaten und den maximalen 1 sec-Werten innerhalb dieser 10 minIntervalle der Schalenkreuzanemometer in den acht Messhöhen zwischen 33 und 103 m Höhe werden
+zunächst mittlere Wind- und Turbulenzprofile für verschiedene Stabilitätszustände der Atmosphäre
+(sortiert nach der Bulk-Richardson-Zahl) abgeleitet. Die Bulk-Richardson-Zahl wird hierzu aus den
+Wind- und Temperaturwerten in 43 m Höhe und der Wasseroberflächentemperatur gebildet (Lange et
+al. 2003). Da die Rauhigkeit der Meeresoberfläche mit zunehmender Windgeschwindigkeit auf Grund
+der Wellenbildung ansteigt (Johnson et al. 1998), wird die Abhängigkeit der Turbulenzintensität von
+der Windgeschwindigkeit gesondert untersucht. Schließlich werden Methoden der Extremwertanalyse
+verwendet, um die zu erwartende maximale 1 sec-Böe in 50 Jahren abzuschätzen. Dabei wird zunächst
+eine Häufigkeitsverteilung der 1 sec-Böen im Beobachtungszeitraum erstellt (Klassenbreite: 1 m/s),
+daraus die Summenhäufigkeit gebildet, und von dieser dann der doppelte negative Logarithmus
+gebildet und gegen die Klassenuntergrenzen aufgetragen. Es sollte sich eine Gerade ergeben, wenn die
+Häufigkeitsverteilung der 1 sec-Böen einer Gumbel’schen Extremwertverteilung entspricht (Schroers
+und Lösslein 1983). Bei allen Auswertungen wurden Daten aus Windrichtungssektoren, die durch den
+Mastschatten beeinflusst sind, ausgeschlossen.
+Ergebnisse
+Das linke Bild in Abb. 1 zeigt beispielhaft für den Herbst und Winter 2004/05, dass die
+Turbulenzintensität mit kleiner werdenden Bulk-Richardson-Zahlen (instabiler werdende
+atmosphärischer Schichtung) zunimmt, da die Turbulenz im Vergleich zu Fällen mit stabilerer
+Schichtung eine geringere Dämpfung erfährt und thermisch induzierte Turbulenz zu der dynamisch
+durch Scherung erzeugten hinzutritt. Der Vertikalgradient der Windgeschwindigkeit (rechtes Bild in
+
+Abb. 1) nimmt mit zunehmend stabiler Schichtung zu, während er bei stark labiler Schichtung wegen
+der guten Durchmischung der atmosphärischen Grenzschicht kaum noch nachweisbar ist. Die
+Windgeschwindigkeit selbst ist bei neutraler Schichtung am größten. Die thermische Schichtung an
+diesem Standort 45 km von der Küste entfernt zeigt nahezu keinen Tagesgang sondern wird nur durch
+die synoptischen Bedingungen und den sich dadurch einstellenden Unterschied zwischen Luft- und
+Meeresoberflächentemperatur bestimmt.
+110
+
+100
+
+90
+
+80
+
+Höhe (m)
+
+70
+
+60
+
+50
+
+40
+
+30
+
+20
+
+10
+
+0
+0.04
+
+Alle Klassen
+Ri [0…0.0625]
+Ri [-0.0625…0]
+Ri [-0.125…-0.0625]
+
+0.06
+
+Alle Klassen
+Ri [0…0.0625]
+Ri [-0.0625…0]
+Ri [-0.125…-0.0625]
+
+0.08
+
+0.10
+
+Turbulenzintensität (σ/u)
+
+0.12
+
+0
+
+5
+
+10
+
+15
+
+20
+
+Windgeschwindigkeit (m/s)
+
+Abb.1: Profile der Turbulenzintensität (σu/u) und der mittleren Windgeschwindigkeit in Abhängigkeit
+der Bulk-Richardson-Zahl (Ri). Oktober 2004 bis Januar 2005, Sektor 210-250°, v103 m > 5m/s.
+Abb. 2 zeigt die Turbulenzintensität in 103 m Höhe über der Meeresoberfläche als Funktion der
+Windgeschwindigkeit. Bis zu einer Windgeschwindigkeit von ca. 10 m/s nimmt die
+Turbulenzintensität ab, da bei geringen Windgeschwindigkeiten die thermisch erzeugte Turbulenz
+noch eine größere Rolle spielt. Ab einer Windgeschwindigkeit von ca. 12 m/s nimmt die
+Turbulenzintensität aufgrund der zunehmenden Oberfächenrauhigkeit der Meeresoberfläche und der
+dadurch erzeugten mechanischen Turbulenz mit zunehmender Windgeschwindigkeit wieder zu. Dieses
+Verhalten unterscheidet das Offshore-Windklima eindeutig von Inlandstandorten.
+Abb. 3 präsentiert auf Basis aller Schalenkreuzanemometer-Daten aus 93 m Höhe der Jahre 2004 und
+2005 eine Extremwertextrapolation für die maximale 1 sec-Böe in einem Gumbel-Diagramm.
+Während sich die Häufigkeitsverteilung der 1 sec-Werte über alle Windgeschwindigkeitsklassen sehr
+gut durch eine Rayleighverteilung beschreiben lässt, folgt die Verteilung für die
+Windgeschwindigkeitsklassen oberhalb von 18-20m/s wie erwartet eher der Gumbel’schen
+Extremwertverteilung. Markiert man in diesem Diagramm zudem die den einzelnen
+Überschreitungshäufigkeiten (1 Monat, 1 Jahr, 10 Jahre, 50 Jahre) entsprechenden doppelt
+logarithmierten Wahrscheinlichkeitswerte als waagerechte Linien, so kann aus diesem Diagramm die
+Größe des Extremereignisses zu einer gesuchten Überschreitungshäufigkeit grafisch ermittelt werden.
+Bestimmt man die Koeffizienten der zugehörigen Regressionsgerade, können die Extremwerte für
+beliebige Überschreitungshäufigkeiten rechnerisch ermittelt werden. Der aus den für die Jahre 2004
+und 2005 vorliegenden Daten extrapolierte 50 Jahreswert der maximalen 1 sec-Böe liegt bei 52m/s.
+
+0.30
+
+Turbulenzintensität (σ/u)
+
+0.25
+
+0.20
+
+0.15
+
+0.10
+
+0.05
+
+0.00
+0
+
+5
+
+10
+
+15
+
+20
+
+25
+
+30
+
+35
+
+Windgeschwindigkeit (m/s)
+
+Abb.2:Turbulenzintensität in Abhängigkeit der Windgeschwindigkeit in 100m Höhe. Oktober 2004
+bis Januar 2005, Sektor 210-250°, v100 > 5m/s.
+18
+16
+14
+
+-ln(-ln(p))
+
+12
+10
+8
+6
+1s-Bö
+50-Jahres-Wert
+10-Jahres-Wert
+1-Jahres-Wert
+1-Monats-Wert
+
+4
+2
+0
+0
+
+10
+
+20
+
+30
+
+40
+
+50
+
+60
+
+v90_1s-Bö (m/s)
+
+Abb.3: Grafische Extremwertextrapolation der 1-Sekunden Bö in 90m Höhe. 2004-2005,
+ausgeschlossener Sektor: 280-350°.
+Danksagung: Die vorgestellten Untersuchungen entstanden im Rahmen des Projekts „Ermittlung
+designrelevanter Belastungsparameter für WEA in der Deutschen Bucht auf Basis der FINOMessdaten (OWID)“, das dankenswerterweise vom BMU unter dem Förderkennzeichen 0329961 vom
+1. April 2005 bis 30. Juni 2008 gefördert wird. Das Projekt ist Teil eines BMU-Verbundprojekts
+gleichen Namens, das vom Deutschen Windenergie-Institut in Wilhelmshaven geleitet wird.
+Literatur:
+Johnson, H. K.; Hojstrup, J.; Vested, H. J.; Larsen, S. E. (1998): On the Dependence of Sea Surface
+Roughness on Wind Waves. J. Phys. Oceanogr. 28, S. 1702–1716.
+Lange, B.; Soren, E.; Hojstrup, J.; Barthelmie, R. (2003): The Wind Speed Profile at Offshore Wind
+Farm Sites. Proceedings of the OWEMES 2003, S. 201–215.
+Schroers, H.; Lösslein, H. (1983): Extremwertextrapolation und Windprofile bei Starkwind und Sturm.
+Meteorol. Rdsch. 36, S. 205–213.
+

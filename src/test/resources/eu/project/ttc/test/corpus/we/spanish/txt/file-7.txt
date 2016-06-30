@@ -1,0 +1,60 @@
+Como la mayor parte de las energías renovables , la eólica tiene su origen en el sol . Entre el 1 y el 2 % de la energía proveniente del sol se convierte en viento , debido al movimiento del aire ocasionado por el desigual calentamiento de la superficie terrestre . Excluyendo las áreas con valor ambiental , esto supone un potencial de energía eólica de 53 TWh / año , cinco veces más que el actual consumo eléctrico en el mundo . Por tanto , en teoría , la energía eólica permitiría atender sobradamente las necesidades energéticas del mundo .
+Funcionamiento / El AEROGENERADOR :
+Las máquinas empleadas para transformar la fuerza cinética del viento en electricidad reciben el nombre de turbinas eólicas o aerogeneradores . Éstos se dividen en dos grupos : los de eje horizontal y los de eje vertical . El aerogenerador de eje horizontal , considerado el más eficiente , es , con diferencia , el más empleado en la actualidad .
+Funcionamiento / Funcionamiento Aerogenerador :
+Las turbinas extraen la energía del viento utilizando una tecnología que se asemeja a la de los aviones o helicópteros . Los sistemas principales de un aerogenerador son :
+Sistema de captación . ( Se encuentra en el exterior ) 1
+Rotor : Incluye el buje y las palas ( por lo general tres ) .
+Palas : Elementos que capturan el viento y transmiten su potencia hacia el buje . Pueden ser de :
+Paso variable : aquellas que capturan en todo momento la energía del viento . La reducción de la potencia mecánica suministrada al generador la controla mediante modificación del ángulo de pala ( calaje ) .
+Paso fijo : este tipo de palas no dispone de modificación de ángulo de pala , por lo que cuando el viento supera un margen , es necesario un sistema que limite el empuje mecánico del viento al generador . Esta limitación se consigue con la entrada en pérdida aerodinámica a partir de cierta velocidad de viento ( aprox . 15 m / s ) , provocando turbulencias en el flujo de aire , reduciendo así el par suministrado al eje lento .
+Buje : Une las palas solidarias al eje lento . Está acoplado al eje de baja velocidad del aerogenerador .
+Sistema de transmisión .
+Eje lento . El eje de baja velocidad del aerogenerador conecta el buje del rotor al multiplicador . Por el interior del eje , discurren conductos del sistema hidráulico o eléctrico , paso variable o controlar los sensores del rotor .
+Multiplicador . Por una entrada se encuentra el eje de baja velocidad , y mediante unos engranajes , consigue que el eje de salida , de alta velocidad , gire más rápido ( entre 79 y 50 veces más rápido ) , dependiendo de la potencia de la turbina .
+Eje de alta velocidad . Gira aproximadamente a 1 . 500 revoluciones por minuto ( r . p . m . ) , lo que permite el funcionamiento del generador eléctrico . Está equipado con un freno de disco mecánico de emergencia .
+Sistema de orientación .
+Motores de giro . En las turbinas eólicas grandes , es necesario un mecanismo que posicione la turbina enfrente al viento . Este movimiento circular , se consigue con unos motores y reductores fijos a la góndola , y engranando en un dentado de la parte superior de la torre , llamada corona de orientación . La señal de posicionamiento correcta la recibe del controlador de la turbina , con las lecturas de la veleta y anemómetro instaladas en cada turbina .
+Freno en orientación . Tienen como misión evitar desplazamientos radiales de la góndola , por efecto del viento incidente o giro del rotor , no deseados . Asimismo , reducen el desgaste de los engranajes de orientación . Su accionamiento puede ser hidráulico o eléctrico , actuando en pinzas de freno o motor eléctrico respectivamente .
+Sistema de generación .
+Generador eléctrico . Son los elementos de la turbina encargados de convertir la energía mecánica ( en forma rotatoria ) , en energía eléctrica . La electricidad producida en el generador baja por unos cables a la base de la torre , para ser transformada ( elevar la tensión y reducir intensidad ) y enviada a la red .
+Cableado de potencia . Transporta la energía eléctrica generada desde el alternador hasta el transformador fuste , pasando por las distintas protecciones de máxima o mínima tensión , sobre intensidad o frecuencia ; evitando daños a la red o a la propia turbina en caso de producirse contingencias en el aerogenerador o red de distribución .
+Transformador interno . Se eleva la tensión de generación desde los 690 , hasta 20 KV , reduciendo la intensidad para disminuir el calentamiento de cableado y reducir pérdidas eléctricas .
+Sistema de control .
+Controlador de turbina . El controlador de la turbina eólica consta de varios ordenadores que continuamente supervisan las condiciones de la turbina eólica , y recogen estadísticas de su funcionamiento . Como su propio nombre indica , el controlador también controla un gran número de interruptores , bombas hidráulicas , válvulas y motores dentro de la turbina .
+Sensores de control . Se utilizan para medir los parámetros físicos de funcionamiento y supervisión de la turbina . Las señales electrónicas son utilizadas por el controlador electrónico del aerogenerador para conectar el aerogenerador cuando la señal recibida es correcta . El ordenador parará el aerogenerador automáticamente si la información recibida de los sensores es errónea , con el fin de proteger a la turbina .
+Salidas de control y regulación . Desde el controlador de turbina , en base a la información analizada de los sensores , salen unas órdenes que afectan a la operación y funcionamiento del aerogenerador .
+Sistema de soporte .
+Torre . Soporta la góndola y el rotor . Puede ser tubular o de celosía ( estas últimas , aunque más baratas , están en desuso ya que las tubulares son mucho más seguras ) . Tienen varios tramos para facilitar el transporte . La unión de los distintos tramos se realiza mediante pernos en las bridas de unión .
+Zapata o cimentación . Es la parte que permite el asegurar la torre vertical , absorber los esfuerzos de rotor y góndola y transmitirlos correctamente al terreno . Se calcula en base al tipo de suelo y al tamaño del aerogenerador a instalar .
+Sistema hidráulico .
+Grupo de presión . Se encarga de suministrar fluido hidráulico a una presión determinada para permitir el accionamiento de sistemas de captación , orientación o transmisión .
+Conductos hidráulicos . Canalizan el fluido hidráulico hasta el punto de utilización .
+Válvulas de control . Adaptan la presión y caudal del fluido en base al actuador a accionar .
+Sistemas refrigeración .
+Ventiladores . Funcionan a requerimiento del controlador para crear una circulación de aire .
+Intercambiadores de calor . Disipan el calor del componente a refrigerar ( generador , multiplicador o central hidráulica ) hacia la corriente de aire creada por los ventiladores .
+Funcionamiento / Estrategia de funcionamiento . :
+ARRANQUE DEL AEROGENERADOR .
+Cuando la turbina detecta viento en cualquier dirección , por los sensores de velocidad de viento ( anemómetros de turbina ) , el controlador realiza las siguientes órdenes al aerogenerador , a través de los motores correspondientes :
+Entre 2 - 3 m / s . Envía la orden de posicionarse frente al viento . Esta orden se denomina orientación de la turbina .
+A partir de 3 m / s . La orden de desaplicar frenos para permitir el giro de la turbina y comenzar a girar por el efecto únicamente del empuje del viento .
+Paso variable , además envía la consigna de posición de las palas progresivamente 90º ® 0º .
+Rpm = > 1500 . Al llegar a la velocidad de sincronismo del generador solicitado ( dependiendo del viento , se selecciona un generador u otro con velocidades diferentes ) , se conecta el generador a red de forma suave , contando para ello con electrónica de potencia mediante tiristores ( un tipo de interruptor continuo de semiconductor , que puede ser controlado electrónicamente ) . Al realizar la conexión ( dura entre 3 y 4 segundos ) , se conecta directamente el generador a red , mediante un interruptor .
+Conexión directa red . A partir de este momento , el generador queda conectado directamente a la red eléctrica general , enviando la energía al sistema nacional . La velocidad es constante y limitada únicamente por la frecuencia de la red . Cuando el viento es fuerte , existe una limitación de potencia en las palas al incrementar las turbulencias del flujo de aire .
+Paso Variable . El control del aerogenerador se realiza mediante la actuación en el ángulo de paso , capturando o limitando la potencia extraída del viento . La velocidad de generación puede ser variable .
+Las turbinas de doble devanado . Cuya finalidad es aprovechar la intensidad del viento en sus diferentes rangos de velocidad .
+PARADA DEL AEROGENERADOR .
+Puede ocurrir por los siguientes motivos :
+Vientos altos . Cuando el viento supera un margen ( > 25 m / s ó 90 km / h ) , o bien cuando un error es detectado en base a la lectura de los sensores de viento al controlador .
+Error de funcionamiento . Se detecta un error de funcionamiento mediante la información de sensores .
+Parada por poco viento . Se inicia la secuencia si se detecta poca generación o vientos muy bajos .
+Parada Manual . Se realiza bajo la supervisión del personal de operación y mantenimiento .
+La parada de turbina entra en los siguientes procedimientos :
+Parada Suave .
+Paso fijo . El controlador envía una orden al sistema de captación para desplegar los aerofrenos , simultáneamente desconecta generador , revisa la disminución de rpm y aplica frenos de forma suave . Al cabo de varios segundos , aplica una presión de frenada cada vez mayor hasta conseguir la detención total .
+Paso Variable . La orden la envía a los actuadores del calaje palas ( pitch ) aumentando los grados hasta los 90º . Simultáneamente desconecta el generador y realiza de igual forma un incremento paulatino de presión en el circuito secundario de frenada .
+Parada de Emergencia . Se produce ante errores importantes , peligro para personas o integridad de la turbina . Se aplican frenos con la máxima presión desde el primer momento .
+Cambio devanado generador . No se llega a realizar una parada , sólo una disminución de velocidad de giro en el caso de pasar del generador grande al pequeño . En el caso contrario , la turbina se desacopla y permite el embalamiento con el viento hasta alcanzar la nueva velocidad de sincronismo .
+
+

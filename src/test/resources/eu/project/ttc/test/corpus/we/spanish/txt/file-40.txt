@@ -1,0 +1,1783 @@
+Universidad de San Carlos de Guatemala Facultad de Ingeniería Escuela de Ingeniería Mecánica
+
+GUÍA SOBRE LA UTILIZACIÓN DE AEROGENERADORES PARA PRODUCCIÓN DE ENERGÍA ELÉCTRICA
+
+Mario Enrique Figueroa Salazar Asesorado por Ing. Mario Alfonso Pérez
+
+Guatemala, julio de 2004
+
+i
+
+UNIVERSIDAD DE SAN CARLOS DE GUATEMALA
+
+FACULTAD DE INGENIERÍA
+
+GUÍA SOBRE LA UTILIZACIÓN DE AEROGENERADORES PARA PRODUCCIÓN DE ENERGÍA ELÉCTRICA TRABAJO DE GRADUACIÓN PRESENTADO A JUNTA DIRECTIVA DE LA FACULTAD DE INGENIERÍA POR
+
+MARIO ENRIQUE FIGUEROA SALAZAR ASESORADO POR ING. MARIO ALFONSO PÉREZ AL CONFERÍRSELE EL TÍTULO DE INGENIERO MECÁNICO
+
+GUATEMALA, JULIO DE 2004 ii
+
+UNIVERSIDAD DE SAN CARLOS DE GUATEMALA FACULTAD DE INGENIERÍA
+
+NÓMINA DE JUNTA DIRECTIVA DECANO VOCAL I VOCAL II VOCAL III VOCAL IV VOCAL V SECRETARIO Ing. Sydney Alexander Samuels Milson Ing. Murphy Olympo Paiz Recinos Lic. Amahán Sánchez Álvarez Ing. Julio David Galicia Celada Br. Kenneth Issur Estrada Ruiz Br. Elisa Yazminda Vides Leiva Ing. Pedro Antonio Aguilar Polanco
+
+TRIBUNAL QUE PRACTICÓ EL EXAMEN GENERAL PRIVADO DECANO EXAMINADOR EXAMINADOR EXAMINADOR SECRETARIA Ing. Herbert René Miranda Barrios Ing. José Arturo Estrada Martínez Ing. Raymond Ludwin Taylor Cruz Ing. Juan Luis Obiols Del Cid Inga. Gilda Marina Castellanos Baiza de Illescas
+
+iii
+
+HONORABLE TRIBUNAL EXAMINADOR
+
+Cumpliendo con los preceptos que establece la ley de la Universidad de San Carlos de Guatemala, presento a su consideración mi trabajo de graduación titulado:
+
+GUÍA SOBRE LA UTILIZACIÓN DE AEROGENERADORES PARA PRODUCCIÓN DE ENERGÍA ELÉCTRICA
+
+Tema que me fuera asignado por la Dirección de la Escuela de Ingeniería Mecánica con fecha 30 de abril de 2003.
+
+Mario Enrique Figueroa Salazar
+
+iv
+
+“Los sabios son los que buscan la sabiduría; los necios piensan ya haberla encontrado.” Napoleón I Bonaparte
+
+AGRADECIMIENTOS A Dios La Universidad de San Carlos de Guatemala La Facultad de Ingeniería Mi asesor, Ing. Mario Alfonso Pérez Mis catedráticos Mis compañeros de estudio Y a todas las personas que de alguna manera colaboraron para concluir exitosamente esta etapa de mi formación académica
+
+ACTO QUE DEDICO A Dios Mis padres Mis hermanos Mis familiares y amigos Dador de vida y oportunidades Carlos Enrique Figueroa Ruiz María Salomé Salazar Barreda de Figueroa Carlos Roberto Flor de María
+
+v
+
+vi
+
+ÍNDICE GENERAL
+
+ÍNDICE DE ILUSTRACIONES LISTA DE SÍMBOLOS GLOSARIO RESUMEN OBJETIVOS INTRODUCCIÓN
+
+VII IX XI XV XVII XIX 1 1 2 4 5 5 8 10 10 10 13 Frente frío Frente cálido Frente estacionario Frente ocluido 1.2.2.4.1. 1.2.2.4.2. I Oclusión tipo frente frío Oclusión tipo frente cálido 13 14 15 15 15 16
+
+1.
+
+RECURSOS EÓLICOS 1.1. Origen de los vientos 1.1.1. 1.1.2. 1.1.3. Fuerza de Coriolis Vientos geostróficos Vientos locales 1.1.3.1. 1.1.3.2. 1.1.3.3. 1.2. 1.2.1. 1.2.2. Brisas marinas Brisas terrestres Vientos de montaña
+
+Aspectos climáticos Masas de aire Frentes 1.2.2.1. 1.2.2.2. 1.2.2.3. 1.2.2.4.
+
+1.2.3. 1.2.4.
+
+Tornados Ciclones tropicales 1.2.4.1. 1.2.4.2. 1.2.4.3. Depresión tropical Tormenta tropical Huracán
+
+16 18 18 18 19 20 20 22 23 24 24 25 27 27 27 28 29 30 32 35 37 41 41 Terminología de perfiles Clasificación de perfiles 2.2.1.2.1. 2.2.1.2.2. Nomenclatura de los perfiles NACA 4 Nomenclatura de los perfiles 43 42 43
+
+1.3.
+
+Aspectos topográficos 1.3.1. 1.3.2. 1.3.3. 1.3.4. Rugosidad Cizallamiento del viento Obstáculos del terreno Efectos aceleradores 1.3.4.1. 1.3.4.2. Efecto túnel Efecto colina
+
+2.
+
+POTENCIAL ENERGÉTICO DEL VIENTO 2.1. Mecánica de los fluidos 2.1.1. 2.1.2. 2.1.3. Densidad del aire Potencia del viento Velocidad y dirección del viento 2.1.3.1. 2.1.3.2. 2.1.3.3. 2.1.4. 2.2. 2.2.1. Aerodinámica Perfiles 2.2.1.1. 2.2.1.2. Anemómetros Rosa de los vientos Distribución de Weibull
+
+Ley de Betz
+
+II
+
+NACA 5 2.2.1.2.3. 2.2.2. 2.2.3. 2.2.4. Sustentación 2.2.2.1. Pérdida de sustentación Resistencia aerodinámica Fuerza aerodinámica Modificaciones a perfiles NACA 4 y 5
+
+44 45 45 47 48 49 51 51 51 52 54 56 56 58 59 60 62 62 64 64 65
+
+3.
+
+DISEÑO DE AEROGENERADORES 3.1. Clasificación de los aerogeneradores 3.1.1. Aerogeneradores de eje vertical 3.1.1.1. 3.1.1.2. 3.1.2. 3.1.2.1. 3.1.2.2. Aerogenerador Savonius Aerogenerador Darrieus Aerogeneradores de eje horizontal lentos Aerogeneradores de eje horizontal rápidos 3.1.2.2.1. 3.1.2.2.2. 3.2. 3.2.1. 3.2.2. Caja multiplicadora Rotor 3.2.2.1. 3.2.2.2. Buje Palas 3.2.2.2.1. Materiales de la pala 3.2.2.2.1.1. 3.2.2.2.1.2. 3.2.2.2.1.3. 3.2.2.2.2. Madera/epoxi Fibra de vidrio/ poliéster Acero Número de palas Rotor a barlovento Rotor a sotavento
+
+Aerogeneradores de eje horizontal
+
+Componentes de un aerogenerador
+
+65 65 66 66 67
+
+III
+
+3.2.2.2.2.1. 3.2.2.2.2.2. 3.2.2.2.2.3. 3.2.3. 3.2.4. 3.2.5. 3.2.6. 3.3. 3.3.1. Sistema de orientación Sistema de refrigeración Eje de baja velocidad Eje de alta velocidad
+
+Tres palas Dos palas Una pala
+
+67 68 68 69 71 71 72 72 73 73 74 76 77 78 80 81 81 81 82 82 82 83 85 86 86 87 87 88 88
+
+Sistemas de regulación de potencia Sistemas de regulación por acción sobre el rotor 3.3.1.1. 3.3.1.2. 3.3.2. Orientación del rotor Paso variable
+
+Sistemas de regulación por acción sobre el eje Generadores de corriente continua Generadores de corriente alterna Tipos de diseño 3.5.1.1. 3.5.1.2. 3.5.1.3. 3.5.1.4. Torres tubulares de acero Torres de celosía Torres de mástil tensado con vientos Torres híbridas
+
+3.4.
+
+Generadores de turbinas eólicas 3.4.1. 3.4.2.
+
+3.5.
+
+Torres de los aerogeneradores 3.5.1.
+
+3.5.2. 3.6. 3.6.1. 3.6.2. 3.7. 3.7.1. 3.7.2.
+
+Fabricación Razones para elegir turbinas grandes Razones para elegir turbinas pequeñas Instalaciones terrestres Instalaciones marítimas 3.7.2.1. Hormigón
+
+Tamaño de los aerogeneradores
+
+Instalación
+
+IV
+
+3.7.2.2. 3.7.2.3. 3.7.2.4. 3.8. 3.8.1. 3.8.2.
+
+Acero Monopilote Trípode
+
+89 90 90 91 91 92 95 95 96 98 99 101 102 105 105 105 106 108 108 109 110 111 111 111 111 112
+
+Aspectos de seguridad Seguridad en los aerogeneradores Seguridad en el trabajo
+
+4.
+
+IMPACTO AMBIENTAL DE LOS AEROGENERADORES 4.1. Ruido provocado por los aerogeneradores 4.1.1. 4.1.2. 4.2. 4.3. 4.4. Medición de los niveles de sonido Propagación del sonido
+
+Contaminación visual Sombra proyectada Aerogeneradores y su relación con la fauna
+
+5.
+
+MANTENIMIENTO 5.1. Tareas 5.1.1. 5.1.2. 5.1.3. 5.1.4. 5.2. 5.3. Vida útil Cambio de aceite de la caja reductora Inspección del rotor Mantenimiento de la torre Comprobación de sensores
+
+Períodos recomendados
+
+6.
+
+ASPECTOS ECONÓMICOS 6.1. Cálculo de costos de instalación de un aerogenerador 6.1.1. 6.1.2. 6.2. Precio de los aerogeneradores Costos de montaje
+
+Factibilidad de puesta en marcha de un aerogenerador
+
+V
+
+7.
+
+CASO PRÁCTICO DEL AEROGENERADOR DE LA FACULTAD DE INGENIERÍA DE LA UNIVERSIDAD DE SAN CARLOS DE GUATEMALA 7.1. 7.2. 7.3. Descripción del aerogenerador Utilización Programa de capacitación del personal a cargo del Parque Tecnológico 7.3.1. 7.3.2. Seguridad Mantenimiento 118 118 119 121 123 125 115 115 116
+
+CONCLUSIONES RECOMENDACIONES BIBLIOGRAFÍA
+
+VI
+
+ÍNDICE DE ILUSTRACIONES
+
+FIGURAS 1. 2. 3. 4. 5. 6. 7. 8. 9. 10. 11. 12. 13. 14. 15. 16. 17. 18. 19. 20. 21. 22. Dirección de los vientos globales Ciclo de las brisas marinas Ciclo de las brisas terrestres Frente frío Frente cálido Oclusión tipo frente frío Oclusión tipo frente cálido Velocidad del viento a diferentes alturas Turbulencia alrededor de un obstáculo Potencia del viento a diferentes velocidades Anemómetro de cazoletas Rosa de los vientos Distribución de Weibull Tubo de corriente Potencia máxima del viento Terminología de perfiles Perfiles NACA-4 Generación de sustentación Descomposición de la fuerza aerodinámica Flujo sobre un perfil aerodinámico Rotores Savonius Aeroturbina Savonius para bombeo de agua 2 8 9 14 14 15 16 22 23 29 31 33 35 37 40 42 44 47 49 50 53 54
+
+VII
+
+23. 24. 25. 26. 27. 28. 29. 30. 31. 32. 33. 34. 35. 36. 37.
+
+Aerogenerador Darrieus Molino americano Rotor a barlovento Rotor a sotavento Caja multiplicadora Sistema de orientación mediante veleta Eje de baja velocidad Sistemas de regulación por orientación del rotor Sistema de regulación centrífuga mediante bielas Sistemas de regulación del ángulo de calaje de las palas Laminación de las secciones cónicas de las torres Relación potencia-diámetro del rotor Parque eólico Kappel Mantenimiento a una pala de rotor Aerogenerador Land Wind AIR 403
+
+55 57 60 61 63 70 71 74 74 75 83 85 99 107 115
+
+TABLAS I. II. III. IV. V. VI. VII. VIII. Direcciones dominantes del viento Escala Fujita-Pearson Escala Saffir-Simpson Clases de rugosidad Densidad del aire a presión atmosférica estándar Escala de Beaufort Escala decibelios (A) Períodos de mantenimiento para una aerogenerador 4 17 19 21 27 30 97 110
+
+VIII
+
+LISTA DE SÍMBOLOS
+
+°N °S dB (A) CA FC Hz kPa kW ln MPH MW NACA
+
+Grados norte Grados sur Decibelios (A) Corriente Alterna Fuerza de Coriolis Hercio Kilo Pascal Kilovatio Logaritmo natural Millas por hora Megavatio National Advisory Committee of Aeronautics (Comité asesor nacional de aeronáutica) National Aeronautics and Space Administration (Administración nacional de aeronáutica y el espacio) Noreste Noroeste Potencia del viento extraída por el rotor Probabilidad Revoluciones por minuto Sureste Suroeste Tonelada Métrica Voltio
+
+NASA
+
+NE NO P p(u) r.p.m. SE SO TM V
+
+IX
+
+Vg W W/m2 z0
+
+Velocidad geostrófica Vatio Vatios por metro cuadrado Longitud de rugosidad
+
+X
+
+GLOSARIO
+
+Acero calmado
+
+Acero que ha sido completamente desoxidado antes de colarlo, mediante la adición de manganeso, silicio o aluminio. Ángulo formado por la pala y el plano de rotación del rotor. Parte de donde viene el viento, con respecto a un punto o lugar determinado. Enrejado de listoncillos de madera o hierro. Transporte en un fluido de una magnitud física, como masa, electricidad o calor, por desplazamiento de sus moléculas debido a diferencias de densidad. Chaparrón o aguacero con mucho viento. Acción y efecto de hacer que adquiera gran velocidad un motor desprovisto de regulación automática, cuando se suprime la carga. Paisaje formado por estratos, es decir, nubes que se presentan en forma de faja en el horizonte.
+
+Ángulo de calaje
+
+Barlovento
+
+Celosía
+
+Convección
+
+Chubascada
+
+Embalamiento
+
+Estratiforme
+
+XI
+
+Extrudir
+
+Dar forma a una masa metálica, plástica, etc., haciéndola salir por una abertura especialmente dispuesta. Razón entre la variación del valor de una magnitud en dos puntos próximos y la distancia que los separa. Curva para la representación cartográfica de los puntos de la Tierra que tienen la misma presión atmosférica en un momento determinado. Que está en ángulo recto. Imprimir lentitud a alguna operación o proceso, disminuir su velocidad. Sistema electromecánico que se regula por sí mismo al detectar el error o la diferencia entre su propia actuación real y la deseada. La parte opuesta a aquella de donde viene el viento con respecto a un punto o lugar determinado. Viento fuerte que no llega a ser temporal declarado. Capacidad o potencia de moverse a varias partes o alrededor.
+
+Gradiente
+
+Isobara
+
+Ortogonal
+
+Ralentizar
+
+Servomecanismo
+
+Sotavento
+
+Vendaval
+
+Verticidad
+
+XII
+
+Viento sostenido
+
+Viento promedio de 1 minuto, medido a una altura de 10 metros por encima de la superficie. Torbellino, remolino. Centro de un ciclón.
+
+Vórtice
+
+XIII
+
+XIV
+
+RESUMEN
+
+Los aerogeneradores son máquinas que convierten la energía eólica en energía mecánica por medio de un sistema de aspas; luego, esta energía es convertida en energía eléctrica por medio de un generador eléctrico. Para poder utilizar con éxito la energía eólica, es necesario comprender cómo se comporta el viento y cuáles son las propiedades físicas, químicas y energéticas del aire. En el presente trabajo de graduación se muestran los conceptos básicos sobre mecánica de fluidos y aerodinámica, los cuales están relacionados directamente con el diseño de aerogeneradores. También se presentan los distintos tipos de aerogeneradores que se fabrican y sus respectivas aplicaciones. Además de esto, se describen los componentes básicos de los aerogeneradores. El impacto ambiental en los alrededores de donde se instalan este tipo de máquinas ocupa una parte de este trabajo. De la misma forma, el mantenimiento, que en el caso de las turbinas eólicas necesita de cuotas muy bajas, es incluido para poderse formar una idea de cómo poderle dar servicio a un aerogenerador. Para poder tener una idea clara de cómo funciona la energía eólica, el último capítulo abarca la descripción, funcionamiento y mantenimiento del aerogenerador de la Facultad de Ingeniería de la Universidad de San Carlos de Guatemala.
+
+XV
+
+XVI
+
+OBJETIVOS
+
+•
+
+General Realizar una guía sobre la utilización de aerogeneradores para producción de energía eléctrica.
+
+•
+
+Específicos 1. Describir los principios de funcionamiento mecánico de un aerogenerador. 2. Determinar los factores ambientales que se ven involucrados en el diseño de un sistema de generación eólico. 3. Obtener los conocimientos sobre energía eólica necesarios para iniciar el estudio relativo a la factibilidad de la instalación y puesta en marcha de un aerogenerador o de una emplazamiento eólico. 4. Conocer el proceso de selección, diseño y montaje de un aerogenerador. 5. Proporcionar la información relativa a la operación y
+
+mantenimiento de un aerogenerador.
+
+XVII
+
+XVIII
+
+INTRODUCCIÓN
+
+El agotamiento de fuentes de energía no renovables, como los combustibles fósiles, y el daño ecológico que provoca la generación por medio de sistemas de energía renovables, como las hidroeléctricas, hacen necesaria la investigación y desarrollo de nuevas tecnologías para producción de energía eléctrica, que sean limpias, baratas y seguras. La energía eólica es una opción que cumple estos requisitos, lo cual la hace competitiva con los sistemas tradicionales de generación de energía. Este trabajo de graduación está enfocado en los diversos aspectos que se ven involucrados en el diseño y utilización de aerogeneradores para producción de energía eléctrica. Aquí se encuentran contenidos los conceptos básicos que debe de conocer todo ingeniero mecánico, y que podrían serle útiles en algún momento determinado de su carrera profesional. Si bien, algunos aerogeneradores y tecnologías presentados en este trabajo de graduación no pueden encontrarse actualmente en nuestro país, los principios de diseño y funcionamiento son los mismos que se aplican en aerogeneradores de menor tamaño. Además, es importante conocer los casos europeos (en algunos países la energía eléctrica producida a nivel nacional por aerogeneradores llega a valores de entre 10% y 20%), ya que, con la globalización y el aumento de la demanda de energía eléctrica, esta tecnología podría estar pronto al alcance de nosotros.
+
+XIX
+
+XX
+
+1. RECURSOS EÓLICOS
+
+1.1.
+
+Origen de los vientos La Tierra no está fija ni tiene una superficie uniforme y regular, la cantidad
+
+de radiación solar recibida no es la misma en todas las regiones, por lo que se producen movimientos horizontales del aire y corrientes de convección debido a la desigualdad de temperaturas. Estos movimientos del aire se llaman vientos. Viento es todo movimiento de traslación, de un lugar a otro, de masas de aire. La causa del viento es la existencia de un desequilibrio en el régimen de presiones en relación con variaciones térmicas; el origen de los vientos se debe a los gradientes de presión. Sin embargo, no siempre aparece el viento como resultado exclusivo de la intensidad del gradiente. Actúan además otras causas perturbadoras que lo intensifican o debilitan y en términos generales lo modifican. El movimiento del aire es el resultado de la acción de varias fuerzas, en especial fuerzas de presión y de roce. El aire circula siempre empujado desde un centro de alta presión a uno de más baja presión, a fin de anular la diferencia existente entre ambas. La intensidad del viento depende de las variaciones de presión, pues cuando mayores son éstas, mayor es la intensidad del viento. Cuando el viento empieza a soplar, comienzan a actuar fuerzas como la fricción por la configuración orográfica y una fuerza producida por el movimiento de rotación de la Tierra, llamada fuerza de Coriolis.
+
+1
+
+1.1.1.
+
+Fuerza de Coriolis
+
+Debido al movimiento de rotación de la Tierra, cualquier movimiento en el Hemisferio Norte es desviado hacia la derecha, si se mira desde nuestra posición en el suelo (en el Hemisferio Sur es desviado hacia la izquierda). Esta aparente fuerza de curvatura es conocida como fuerza de Coriolis (debido al matemático francés Gustave Gaspard Coriolis 1792-1843). La fuerza de Coriolis es un fenómeno visible. Las vías del ferrocarril se desgastan más rápidamente de un lado que del otro. Las cuencas de los ríos están excavadas más profundamente en una cara que en la otra (de cual se trate depende en qué hemisferio nos encontremos: en el Hemisferio Norte las partículas sueltas son desviadas hacia la derecha). En el Hemisferio Norte el viento tiende a girar en el sentido contrario al de las agujas del reloj cuando se acerca a un área de bajas presiones. En el Hemisferio Sur el viento gira en el sentido de las agujas del reloj alrededor de áreas de bajas presiones, estos movimientos se ilustran en la figura 1. Figura 1. Dirección de los vientos globales
+
+Fuente: Whipple 1985, Universidad Técnica de Berlín http://www.tu-berlin.de/~kehl/project/lv-twk/coriolis.htm
+
+2
+
+La fuerza de Coriolis actúa sobre cualquier móvil por unidad de masa y su componente horizontal es: FC = -2Ω senϕ V Donde Ω es la velocidad angular de la tierra (360° en 24 horas ó 7.29x10-5 radianes/seg), ϕ es la latitud y V la velocidad del móvil. A 2Ω senϕ se le conoce como parámetro de Coriolis. La dirección de la fuerza es perpendicular al movimiento y hace que en el Hemisferio Norte el aire se desplace desviándose constantemente hacia la derecha (al contrario en el Hemisferio Sur). Por lo tanto, el movimiento anticiclónico es en sentido horario y el ciclónico en sentido antihorario. La desviación es proporcional al seno de la latitud y por tanto será máxima en los polos (senϕ = 1) y mínima en el Ecuador (senϕ = 0). Para las latitudes peninsulares (36° a 44°) el parámetro de Coriolis varía entre 10.1x10-5. En la atmósfera libre y en situación de equilibrio, la fuerza del gradiente de presión queda equilibrada con la de Coriolis:
+1 Δp ⋅ = -2ΩsenϕV ρ Δn
+
+8.5x10-5
+
+y
+
+−
+
+En la que ρ es la densidad del aire, ∆p es la diferencia de presión entre dos puntos y ∆n es la distancia que los separa cuando ambos puntos cruzan perpendicularmente las isóbaras. El viento ideal que cumple esta igualdad se denomina viento geostrófico (el cual se describirá más adelante) y su valor, velocidad geostrófica:
+
+3
+
+Vg = -
+
+1 Δp ⋅ 2 ρΩsenϕ Δn
+
+Debido a esto, el viento sube desde el Ecuador y se desplaza hacia el norte y hacia el sur en las capas más altas de la atmósfera. Alrededor de los 30° de latitud en ambos hemisferios la fuerza de Coriolis evita que el viento se desplace más allá. En esa latitud se encuentra un área de altas presiones, por lo que el aire empieza a descender de nuevo. Cuando el viento sube desde el Ecuador hay un área de bajas presiones cerca del nivel del suelo, que atrae los vientos del norte y del sur. En los polos, habrá altas presiones debido al aire frío. Estos fenómenos, tienen como resultado que las direcciones dominantes de los vientos alrededor de la Tierra sean los que se muestran en la tabla I. Tabla I. Direcciones dominantes del viento.
+LATITUD 90-60°N 60-30°N 30-0°N 0-30°S 30-60°S 60-90°S DIRECCIÓN NE SO NE SE NO SE
+
+1.1.2.
+
+Vientos geostróficos
+
+Una masa de aire inicialmente en reposo se moverá de un área de alta presión a una de baja presión, debido a la fuerza del gradiente de presión. Cuando el aire comienza a moverse, éste es desviado por la fuerza de Coriolis. Conforme el viento obtiene velocidad, la desviación aumenta hasta que la fuerza de Coriolis iguala a la fuerza del gradiente de presión. En este punto, el viento soplará paralelo a las isobaras. Cuando esto pasa, el viento se denomina geostrófico. 4
+
+Los vientos en la naturaleza son raramente geostróficos, pero como una buena aproximación, los vientos en la parte alta de la tropósfera (entre 1 y 10 km sobre la superficie de la tierra) pueden estar cerca de serlo. Esto es debido a que los vientos son considerados realmente geostróficos cuando las isobaras son rectas y no existe ninguna otra fuerza actuando sobre ellos; y estas condiciones no son encontradas muy a menudo en la naturaleza.
+
+1.1.3.
+
+Vientos locales
+
+Aunque los vientos globales son importantes en la determinación de los vientos dominantes de un área determinada, las condiciones climáticas locales pueden influir en las direcciones de viento más comunes. Los vientos locales siempre se superponen en los sistemas eólicos a gran escala, esto es, la dirección del viento es influenciada por la suma de los efectos global y local. Cuando los vientos a gran escala son suaves, los vientos locales pueden dominar los regímenes de viento.
+
+1.1.3.1.
+
+Brisas marinas
+
+Durante el transcurso de un día en la playa, un notable descenso en la temperatura puede ocurrir durante las primeras horas de la tarde, una brisa fría comienza a soplar fuera del agua. Este viento es conocido como brisa marina, la cual ocurre en respuesta a la diferencia de temperatura entre un cuerpo de agua y el terreno adyacente. La circulación de brisas marinas ocurre mayormente en días calurosos y soleados durante primavera y verano, cuando la temperatura de la tierra es normalmente mayor que la del agua.
+
+5
+
+Durante las primeras horas de la mañana, la tierra y el agua están casi a la misma temperatura. En una mañana despejada, una superficie de presión está a la misma altura arriba de ambas, la tierra y el agua. Unas horas después, la energía del Sol comienza a calentar la tierra más rápidamente que al agua. Esto ocurre porque el agua, especialmente grandes cuerpos de agua como un lago o un océano, es capaz de absorber más energía que la tierra, sin calentarse. Es importante mencionar que el aire no es calentado directamente desde arriba por el Sol. De hecho, la mayoría de energía solar entra directamente a través de la atmósfera. Como la tierra no absorbe toda esta energía, el calor es irradiado de vuelta hacia el interior de la atmósfera (desde la tierra), calentando el aire que se encuentra arriba. Parte de este calor es transportado a niveles más altos en la atmósfera a través de convección. Por otra parte, debido a que la temperatura sobre el agua se mantiene relativamente constante a lo largo del día, el aire sobre el agua no es calentado desde abajo (como ocurre sobre la tierra), resultando en menores temperaturas sobre el agua. Dado que el aire caliente es menos denso que el aire frío, el aire sobre la tierra se expande en respuesta al calentamiento del suelo debajo de él. Esta expansión conduce a un incremento en la distancia entre superficies de presión constante dentro del aire caliente. Sobre el agua, donde el aire es calentado muy poco, dicha expansión no ocurre y la distancia entre superficies de presión continúa siendo la misma.
+
+6
+
+En respuesta al continuo calentamiento, un área de alta presión se genera a grandes alturas sobre la tierra, mientras un área de baja presión se desarrolla sobre el agua. La fuerza de gradiente de presión resultante causa que el aire a grandes alturas fluya hacia adentro del mar (de alta a baja presión). Ya que la presión en cualquier parte es determinada por el peso del aire sobre ese lugar, el desplazamiento de aire a grandes alturas causa que la presión debajo de estos puntos decrezca. En el caso de la circulación de la brisa marina, un área de baja presión se genera sobre la tierra, en la superficie, en respuesta al aire removido a grandes alturas por el flujo hacia alta mar. Inversamente, un área de alta presión se desarrolla sobre el agua, en respuesta a la acumulación de aire a grandes alturas. Estas áreas, de alta y baja presión, establecen un gradiente de presión; lo cual genera un flujo de aire hacia adentro de la costa, al nivel del suelo, o bien llamado brisa marina. Movimientos verticales son inducidos en respuesta al movimiento horizontal del aire. Sobre la tierra, por ejemplo, el viento que se dirige hacia la costa provoca que el aire se acumule a nivel del suelo; mientras que el flujo hacia el mar remueve el aire a grandes alturas. Como resultado, el aire asciende de bajas alturas para remplazar el aire que está siendo removido en lo alto. Por otro lado, sobre el agua, el aire es acumulado en lo alto mientras es removido desde niveles más bajos. En respuesta, el aire desciende de grandes alturas para reemplazar el aire que está siendo removido de niveles más bajos. Estos movimientos verticales completan el ciclo de la brisa marina, el cual se puede observar en la figura 2.
+
+7
+
+Figura 2. Ciclo de las brisas marinas
+
+La brisa marina penetra regularmente, dentro de la tierra, a una distancia horizontal de menos de 40 kilómetros desde la costa. Esto es debido al incremento de la superficie de fricción, resultante de la topografía del terreno. Conforme la distancia de la costa se incrementa, la circulación de la brisa marina se debilita, y al final ésta desaparece por la fricción.
+
+1.1.3.2.
+
+Brisas terrestres
+
+Este fenómeno podría describirse como el ciclo inverso de la brisa marina. Las brisas terrestres pueden ocurrir durante cualquier época del año, pero son más comunes durante las temporadas de otoño e invierno cuando la temperatura del agua se mantiene considerablemente caliente y las noches son frías.
+
+8
+
+Con la puesta del Sol, el enfriamiento comienza a lo largo de la superficie de la tierra y el mar. Como el calentamiento durante el día, el enfriamiento ocurre a diferente intensidad sobre la tierra y el agua. La tierra que se enfría rápidamente, pronto tiene una superficie de presión más alta sobre ella que la que se tiene sobre el mar, entonces el aire comienza a fluir hacia abajo del gradiente de presión en dirección al mar, comenzando un ciclo inverso al que experimenta la brisa marina; como se puede apreciar en la figura 3. Ésta es la brisa terrestre, la cual también es influenciada por la rugosidad de la línea costera, la fuerza de los vientos a gran escala y la configuración de la costa. Figura 3. Ciclo de las brisas terrestres
+
+A diferencia de la brisa marina, la brisa terrestre es regularmente más débil en velocidad y menos común. La brisa terrestre es a menudo dominante por solo unas cuantas horas y su dirección es más variable. Sin embargo, la brisa terrestre puede penetrar 10 km mar adentro.
+
+9
+
+1.1.3.3.
+
+Vientos de montaña
+
+Las regiones montañosas muestran modelos de clima muy interesantes. Un ejemplo es el viento del valle que se origina en las laderas que dan al sur (o en las que dan al norte en el Hemisferio Sur). Cuando las laderas y el aire próximo a ellas están calientes la densidad del aire disminuye, y el aire asciende hasta la cima siguiendo la superficie de la ladera. Durante la noche la dirección del viento se invierte, convirtiéndose en un viento que fluye ladera abajo. Si el fondo del valle está inclinado, el aire puede ascender y descender por el valle; este efecto es conocido como viento de cañón. Los vientos que soplan en las laderas a sotavento pueden ser bastante potentes. Ejemplos de ellos son: El Fhon de los Alpes en Europa, el Chinook en las Montañas Rocosas de los Estados Unidos y el Zonda en los Andes. Ejemplos de otros sistemas de viento locales son el Mistral, soplando a lo largo del valle del Rhone hasta el Mar Mediterráneo, y el Siroco, un viento del sur proveniente del Sahara que sopla hacia el Mar Mediterráneo.
+
+1.2.
+
+Aspectos climáticos
+
+1.2.1.
+
+Masas de aire
+
+Las masas de aire tienen gran importancia climatológica. Las masas de aire son áreas de gran extensión y potencia de la atmósfera, movibles, con propiedades termodinámicas que tienen como características la temperatura y la humedad. Reciben las propiedades termodinámicas de la superficie terrestre.
+
+10
+
+La temperatura y la humedad en las masas de aire son homogéneas, manteniéndose en sentido horizontal en los distintos niveles, y la uniformidad de las masas de aire se debe a la permanencia del aire y a su desplazamiento a lo largo de grandes extensiones. La propagación del calor desempeña un papel básico tanto en la temperatura como en la humedad, en las diferentes mezclas del aire, en el sentido vertical u horizontal. Por otra parte, el calentamiento del aire es diferente según se produzca sobre la superficie continental o sobre la superficie oceánica, determinando la región de origen del desplazamiento de las masas de aire. Sobre la superficie continental la radiación solar penetra poco y el calor irradiado calienta las capas cercanas a la superficie. El aire caliente se torna inestable, provocando un movimiento ascendente con arrastre de humedad y calor hacia las capas más altas. Sobre la superficie oceánica la radiación solar no actúa sobre una delgada capa superficial, sino sobre una enorme masa líquida de espesor mucho mayor, en continua renovación, que aumentará el calor recibido, por lo que la temperatura de la superficie es mucho más baja que la terrestre. Cuando las masas de aire se ponen en movimiento se manifiestan como corrientes muy extensas de origen polar o tropical, actuando entre ellas y estableciendo el intercambio en la circulación de la atmósfera. Una masa de aire depende de dos características básicas: la distribución vertical de la temperatura y el contenido de la humedad.
+
+11
+
+Al moverse una masa de aire frío (procede de los casquetes polares o de los anticiclones invernales) sobre una masa de aire caliente, dicha masa determina un fuerte gradiente de temperatura en sus capas inferiores, haciéndose inestable el sistema con formación de ráfagas de viento con tendencia a temporales y precipitaciones a chubascadas de corta duración. Si la masa de aire caliente (procede de los anticiclones oceánicos subtropicales o de los continentales de verano) se mueve sobre una masa de aire frió se formará un estrato de inversión térmica de poca altura, identificada en ocasiones por condensación, nubosidad, nieblas y se manifiestan precipitaciones seguidas y moderadas. El calor de una masa de aire polar es desprendido por radiación hacia la tierra. Según la región donde adquieren sus propiedades básicas, las masas de aire se clasifican en • Masa de aire ártico o antártico (A). Se genera sobre la región cubierta de hielo y nieve, con circulación preferentemente anticiclónica. Es fría, seca y estable. • • • • • Masa de aire polar continental (Pc). Se genera en la región subpolar. Es fría y seca. Masa de aire polar marítimo (Pm). Se genera en las zonas subsolar y ártica. Es fría y húmeda. Masa de aire tropical continental (Tc). Se genera en la zona continental subtropical de altas presiones. Es cálida y seca. Masa de aire tropical marítimo (Tm). Se genera en los anticiclones subtropicales, sobre los océanos. Es cálida y húmeda. Masa de aire ecuatorial (E). Se genera en los mares tropicales y ecuatoriales. Es caliente y muy húmeda.
+
+12
+
+1.2.2.
+
+Frentes
+
+Las masas de aire se desplazan en conjunto y se empujan unas a otras. En cambio, raramente se mezclan. Esta propiedad es la causante del acentuado dinamismo de la atmósfera en la llamada superficie frontal, como se denomina a la superficie de contacto entre dos masas de aire. Como la atmósfera tiene tres dimensiones, la separación entre las masas de aire es una superficie llamada superficie frontal, siendo el frente, la línea determinada por la intersección de la superficie frontal y el suelo. Los frentes pueden tener una longitud de 500 km a 5,000 km, un ancho de 5 a 50 km y una altura de 3 a 20 a km. La pendiente de la superficie frontal puede variar entre 1:100 y 1:500. La formación de los frentes se llama frontogénesis y el proceso inverso se llama frontólisis.
+
+1.2.2.1.
+
+Frente frío
+
+Cuando una superficie frontal se desplaza de tal manera que es el aire frío el que desplaza al aire caliente en superficie, se dice que se está en presencia de un frente frío. Como la masa de aire frío es más densa, ataca al aire caliente por debajo, como si fuese una cuña, lo levanta, lo desaloja y lo obliga a trepar cuesta arriba sobre la empinada superficie frontal. El fenómeno es muy violento y en estos ascensos se producen abundantes nubes de desarrollo vertical, como se ilustra en la figura 4. En los mapas se los representa con una línea azul continua o una negra orlada de picos.
+
+13
+
+Figura 4. Frente frío
+
+Fuente: Silvia Larocca. La meteorología al alcance de todos. http://www.geocities.com/silvia_larocca/Temas/ff.jpg
+
+1.2.2.2.
+
+Frente cálido
+
+En este caso, el aire caliente avanza sobre el frío, pero al ser este último más pesado se adhiere al suelo, y a pesar de retirarse la masa fría, no es desalojada totalmente, de manera que el aire cálido asciende suavemente por la superficie frontal que hace de rampa, como se ve en la figura 5. En general la nubosidad es estratiforme y las precipitaciones menos intensas que en un frente frío. En los mapas se representa con una línea continua roja o una negra orlada por semicírculos. Figura 5. Frente cálido
+
+Fuente: Silvia Larocca. La meteorología al alcance de todos. http://www.geocities.com/silvia_larocca/Temas/fc.jpg
+
+14
+
+1.2.2.3.
+
+Frente estacionario
+
+Es aquel que marca la separación entre dos masas de aire, entre las que no se manifiesta desplazamiento de una respecto de la otra. La sección es similar a la de un frente cálido.
+
+1.2.2.4.
+
+Frente ocluido
+
+Dado que los frentes fríos se desplazan más rápidamente que los frentes cálidos, acaban por alcanzarlos. En estas condiciones el sector caliente desaparece progresivamente de la superficie, quedando solamente en altitud. Cuando los frentes se han unido forman un frente ocluido o una oclusión. Las oclusiones pueden ser del tipo frente frío o del tipo frente cálido.
+
+1.2.2.4.1.
+
+Oclusión tipo frente frío
+
+Se produce cuando el aire que se encuentra por delante del frente cálido es menos frío que el que llega por detrás del frente frío. En este caso el aire que está por detrás del frente frío, al ser más denso, hará de cuña y levantará al primero, tal como se aprecia en la figura 6. Figura 6. Oclusión tipo frente frío
+
+Fuente: Silvia Larocca. La meteorología al alcance de todos. http://www.geocities.com/silvia_larocca/Temas/of.jpg
+
+15
+
+1.2.2.4.2.
+
+Oclusión tipo frente cálido
+
+Es la que se produce cuando el aire que está por delante del frente cálido es más frío que el que está por detrás del frente frío. Este último, por ser más liviano, trepará por sobre el primero, como se observa en la figura 7. El área de precipitaciones y la nubosidad está más extendida en este tipo de oclusión. Figura 7. Oclusión tipo frente cálido
+
+Fuente: Silvia Larocca. La meteorología al alcance de todos. http://www.geocities.com/silvia_larocca/Temas/oc.jpg
+
+1.2.3.
+
+Tornados
+
+Un tornado es un vórtice o remolino de reducida extensión horizontal y gran intensidad que se prolonga hacia abajo, en la tierra, desde la base de una nube de tormenta (cumulonimbo). Se puede observar a simple vista una nube giratoria en forma de embudo que se extiende desde la base de la nube que le dio origen. Su color puede ser blanco, o gris claro mientras permanece suspendido de la nube madre, pero al hacer contacto con la tierra toma color gris oscuro o negro debido al polvo y escombros que son succionados del suelo.
+
+16
+
+La acción combinada de la fuerza del viento giratorio, que puede sobrepasar los 500 km/h y la diferencia de presión que ejerce en áreas muy localizadas, sumadas a las intensas lluvias, el granizo y los rayos, pueden llegar a ser devastadores. Cuando el tornado se desplaza en una superficie líquida se llama tromba. Se producen por lo general en la zona de transición entre las masas de aire polar y tropical (entre los 20º y 50º de latitud a ambos lados del Ecuador). Son poco frecuentes en latitudes mayores a 60º donde raramente se dan las condiciones de temperatura y humedad necesarias para la formación de este fenómeno. Por lo general ocurren en el verano y especialmente en las horas de mayor calentamiento diurno. Su desplazamiento está asociado al movimiento de la nube madre, pero a veces el embudo se suelta de la base y se mueve de forma errática. El paso de un tornado es acompañado de una repentina caída de la presión atmosférica. Su diámetro puede variar de unos pocos metros hasta de unos cientos de metros (en promedio 250 metros) y se clasifican según la escala FPP para tornados (Fujita-Pearson), que aparece en la tabla II. Tabla II. Escala Fujita-Pearson
+Velocidad máxima del Categoría viento en km/h F0 Menos de 120 F1 121-180 F2 181-250 F3 251-320 F4 321-420 F5 421-500 Largo de la Daño trayectoria en probable kilómetros Ligero Menos de 1.5 Moderado 1.6-5 Considerable 5.1-16 Severo 16.1-50 Devastador 50.1-160 Increíble 160.1-500 Ancho de la trayectoria en metros Menos de 15 16-50 51-160 161-500 501-1,500 1501-5,000
+
+17
+
+1.2.4.
+
+Ciclones tropicales
+
+Como se dijo al inicio de este capítulo, no toda la tierra es calentada de la misma manera por el Sol, por eso la tierra busca constantemente su equilibrio, y para ello utiliza ciertos mecanismos que le permiten transportar el exceso de calor desde la zona tropical hacia regiones más frías. El ciclón tropical es uno de esos mecanismos. Dado que para que se formen los ciclones tropicales la temperatura del mar tiene que estar a más de 27°C, se forman en diferentes lugares, en diferentes meses del año, por lo general en la época más calurosa. Los ciclones tropicales se clasifican de acuerdo con la intensidad de sus vientos sostenidos.
+
+1.2.4.1.
+
+Depresión tropical
+
+Es un sistema organizado de nubes con una circulación definida, cuyos vientos máximos sostenidos son de 62 km/h o menos; y la presión disminuye hasta cerca de los 100 kPa. Se considera un ciclón tropical en su fase formativa.
+
+1.2.4.2.
+
+Tormenta tropical
+
+La depresión tropical crece o se desarrolla y adquiere la característica de tormenta tropical, lo que significa que el viento continúa aumentando a una velocidad máxima de entre 63 y 117 km/h inclusive, las nubes se distribuyen en forma de espiral y empieza a formarse un ojo pequeño, casi siempre en forma circular, y la presión se reduce a menos de 100 kPa. En esta fase es cuando recibe un nombre correspondiente a una lista formulada por la Organización Meteorológica Mundial (Comité de huracanes).
+
+18
+
+1.2.4.3.
+
+Huracán
+
+Es el más severo de los fenómenos meteorológicos conocidos como ciclones tropicales. Se caracteriza por un intenso centro de baja presión rodeado de bandas nubosas dispuestas en forma de espiral que giran alrededor de su centro (ojo del huracán) en sentido de las agujas del reloj en el Hemisferio Sur y en contra de las agujas del reloj en el Hemisferio Norte, produciendo vientos que sobrepasan los 119 km/h y provocando lluvias torrenciales. Vientos de más de 240 km/h han sido medidos en los huracanes más intensos. Los huracanes se clasifican según la escala Saffir-Simpson, que se muestra en la tabla III. Tabla III. Escala Saffir-Simpson
+Presión barométrica Categoría Daños Marejadas mínima Igual o superior a 1 Mínimos 1.20-1.50 m 98 kPa 2 Moderados 1.80-2.40 m 96.5-97.9 kPa 3 Extensos 2.70-3.60 m 94.5-96.4 kPa 4 Extremos 3.90-5.40 m 92.0-94.4 kPa 5 Catastróficos Más de 5.40 m Inferior a 92 kPa Vientos en km/h 119-153 154-177 178-209 210-250 Mayor de 250
+
+Este inmenso remolino es mantenido y nutrido por el cálido océano hasta que se adentra en aguas más frías o hasta que entra a tierra firme. Al tocar tierra, el aumento en la fricción sobre el suelo hace que disminuyan los vientos sostenidos, pero aumenten las ráfagas en la superficie. Los vientos sostenidos se reducen por el efecto de la fricción, pero las ráfagas son más fuertes porque se incrementa la turbulencia. Sin embargo, después de unas pocas horas, comienza a debilitarse rápidamente sobre la tierra, no a causa de la fricción sino porque carece de las fuentes de humedad y calor que le proporciona el océano.
+
+19
+
+1.3.
+
+Aspectos topográficos A una gran altura de la superficie del suelo, alrededor de un kilómetro, la
+
+superficie terrestre apenas ejerce influencia alguna sobre el viento. Sin embargo, en las capas más bajas de la atmósfera, las velocidades del viento se ven afectadas por la fricción con la superficie terrestre. Entre los factores que afectan el comportamiento del viento se encuentran: la rugosidad del terreno, la influencia de los obstáculos, y la influencia del contorno del terreno, también llamada orografía del área.
+
+1.3.1.
+
+Rugosidad
+
+La rugosidad de una determinada superficie se establece por el tamaño y distribución de los elementos de rugosidad que contiene. Para superficies terrestres son la vegetación, los edificios, y la superficie del suelo los elementos de rugosidad. Se halla la rugosidad del terreno mediante el parámetro llamado longitud de rugosidad, z0, cuyo sentido físico es la altura a la que la velocidad media es cero cuando el viento tiene una variación logarítmica con la altura. El valor de z0, puede estimarse mediante la expresión:
+
+z0 = 0.5
+
+hS AH
+
+Donde h es la altura, S es la sección cara al viento de los elementos de rugosidad y AH el área horizontal media correspondiente a cada uno de los elementos. En general, cuanto más pronunciada sea la rugosidad del terreno mayor será la ralentización que experimente el viento.
+
+20
+
+Obviamente, los bosques y las grandes ciudades ralentizan mucho el viento, mientras que las pistas de hormigón de los aeropuertos solo lo ralentizan ligeramente. Las superficies de agua son incluso más lisas que las pistas de hormigón, y tendrán por tanto menos influencia sobre el viento, mientras que la hierba alta y los arbustos ralentizan el viento de forma considerable. Tabla IV. Clases de rugosidad
+Clase de rugosidad 0 z0 0.0002 Tipo de paisaje Superficie del agua Terreno completamente abierto con una superficie lisa, por ejemplo, pistas de hormigón en los aeropuertos, césped cortado, etc. Área agrícola abierta sin cercados ni setos y con edificios muy dispersos. Sólo colinas suavemente redondeadas Terreno agrícola con algunas casas y setos resguardantes de 8 metros de altura con una distancia aproximada de 1,250 metros Terreno agrícola con algunas casas y setos resguardantes de 8 metros de altura con una distancia aproximada de 500metros Terreno agrícola con muchas casas, arbustos y plantas, o setos resguardantes de 8 metros de altura con una distancia aproximada de 250 metros. Pueblos, ciudades pequeñas, terreno agrícola, con muchos o altos setos resguardantes, bosques y terreno accidentado y muy desigual. Ciudades más grandes con edificios altos Ciudades muy grandes con edificios altos y rascacielos
+
+0.5
+
+0.0024
+
+1
+
+0.03
+
+1.5
+
+0.055
+
+2
+
+0.1
+
+2.5
+
+0.2
+
+3 3.5 4
+
+0.4 0.8 1.6
+
+La clase de rugosidad se define a partir de la longitud de rugosidad medida en metros, y puede calcularse mediante las fórmulas que se presentan a continuación. Algunos ejemplos de los distintos tipos de rugosidad son los que se describen en la tabla IV.
+
+21
+
+Si z0 ≤ 0.003 ⇒ Clase = 1.6998 + (ln z0 / ln 150) Si z0 > 0.003 ⇒ Clase = 3.9125 + (ln z0 / ln 3.3333)
+
+1.3.2.
+
+Cizallamiento del viento
+
+En la figura 8 se muestra como varía la velocidad del viento en una rugosidad de clase 2, considerando que el viento sopla a una velocidad de 10 m/s a 100 metros de altura. Figura 8. Velocidad del viento a diferentes alturas
+
+Fuente: Soern Krohn & Asociación danesa de la industria eólica www.windpower.org
+
+El hecho de que el perfil del viento se mueva hacia velocidades más bajas conforme se acerca al nivel del suelo suele llamarse cizallamiento del viento. El cizallamiento del viento también es importante en el diseño de aerogeneradores.
+
+22
+
+Considerando un aerogenerador con una altura de buje de 40 metros y con un diámetro del rotor de 40 metros, se puede observar que el viento sopla a 9.3 m/s cuando el extremo de la pala se encuentra en su posición más elevada, y sólo a 7.7 m/s cuando dicho extremo se encuentra en la posición inferior. Esto significa que las fuerzas que actúan sobre la pala del rotor cuando está en su posición más alta son mucho mayores que cuando está en su posición más baja.
+
+1.3.3.
+
+Obstáculos del terreno
+
+Los obstáculos del viento tales como edificios, árboles, formaciones rocosas, etc. pueden disminuir su velocidad de forma significativa y a menudo crean turbulencias en torno a ellos, con flujos de aire muy irregulares, con remolinos y vórtices en los alrededores. Las turbulencias disminuyen la posibilidad de utilizar la energía del viento de forma efectiva en un aerogenerador. También provocan mayores roturas y desgastes en la turbina eólica. Las torres de aerogeneradores suelen construirse lo suficientemente altas como para evitar las turbulencias del viento cerca del nivel del suelo. Figura 9. Turbulencia alrededor de un obstáculo
+
+Fuente: Asociación danesa de la industria eólica. www.windpower.org
+
+23
+
+Como puede verse en la figura 9, de típicas corrientes de viento alrededor de un obstáculo, la zona de turbulencias puede extenderse hasta una altura 3 veces superior a la altura del obstáculo. La turbulencia es más acusada detrás del obstáculo que delante de él. Los obstáculos disminuyen la velocidad del viento corriente abajo del obstáculo. Esta disminución depende de la porosidad del obstáculo, es decir, de que tan abierto sea el obstáculo (la porosidad se define como el área libre dividida por el área total del objeto de cara al viento). Obviamente un edificio es sólido y no tiene porosidad, mientras que un árbol completamente abierto en invierno (sin hojas) puede dejar pasar a través de él más de la mitad del viento. Sin embargo, en verano el follaje puede ser muy denso, con lo que puede hacer disminuir la porosidad hasta dejarla en una tercera parte. El efecto de frenado del viento que un obstáculo produce aumenta con la altura y la longitud del mismo. Obviamente, el efecto será más pronunciado cerca del obstáculo y cerca del suelo. Cuando se calcula la producción de energía de un aerogenerador, siempre se tienen en cuenta los obstáculos próximos a la turbina (a menos de un kilómetro en cualquiera de las direcciones más importantes del viento).
+
+1.3.4.
+
+Efectos aceleradores
+
+1.3.4.1.
+
+Efecto túnel
+
+En un camino entre dos edificios altos o en un paso estrecho entre montañas, se puede observar que el aire se comprime en la parte de los edificios o de la montaña que está expuesta al viento, y su velocidad crece considerablemente entre los obstáculos. Esto se conoce como efecto túnel.
+
+24
+
+Así pues, incluso si la velocidad normal del viento en un terreno abierto puede ser de unos 6 m/s, en un túnel natural puede fácilmente alcanzar los 9 m/s. Para obtener un buen efecto túnel, el túnel debe estar suavemente enclavado en el paisaje. En el caso de que las colinas sean muy accidentadas, puede haber muchas turbulencias en esa área, es decir, el viento soplara en muchas direcciones y con cambios muy rápidos.
+
+1.3.4.2.
+
+Efecto colina
+
+En las colinas, siempre se aprecian velocidades de viento superiores a las de las áreas circundantes. Al igual que en el efecto túnel, esto es debido a que el viento es comprimido en la parte de la montaña que da al viento, y una vez el aire alcanza la cima de la colina puede volver a expandirse al descender hacia la zona de bajas presiones por la ladera a sotavento de la colina. El viento empieza a inclinarse algún tiempo antes de alcanza la colina, debido a que en realidad la zona de altas presiones se extiende hasta una distancia considerable enfrente de la colina. Al igual que en el caso anterior, si la colina es escarpada o tiene una superficie accidentada, puede haber una cantidad de turbulencias significativa, que puede anular la ventaja que supone tener unas velocidades de viento mayores.
+
+25
+
+26
+
+2. POTENCIAL ENERGÉTICO DEL VIENTO
+
+2.1.
+
+Mecánica de los fluidos
+
+2.1.1.
+
+Densidad del aire
+
+La energía cinética de un cuerpo en movimiento es proporcional a su masa. Así, la energía cinética del viento depende de la densidad del aire, es decir, de su masa por unidad de volumen. En otras palabras, cuanto más pesado es el aire más energía recibe la turbina. A presión atmosférica normal y a 15°C el aire pesa alrededor de 1.225 kilogramos por metro cúbico, aunque la densidad disminuye ligeramente con el aumento de la humedad. Además, como se ve en la tabla V, el aire es más denso cuando hace más frío que cuando hace calor. A grandes altitudes, como en las montañas, la presión del aire es más baja y el aire menos denso.
+
+Tabla V. Densidad del aire a presión atmosférica estándar
+
+Temperatura °C -15 -10 -5 0 5 10 15 20 25 30
+
+Densidad del aire 3 seco en kg/m 1.368 1.342 1.317 1.292 1.269 1.247 1.225 1.204 1.184 1.165
+27
+
+Contenido máximo de 3 agua en kg/m 0 0 0 0.005 0.007 0.009 0.013 0.017 0.023 0.030
+
+2.1.2.
+
+Potencia del viento
+
+La velocidad del viento es muy importante para la cantidad de energía que un aerogenerador puede transformar en electricidad: la cantidad de energía que posee el viento varía con el cubo (la tercera potencia) de la velocidad media del viento; por ejemplo, si la velocidad del viento se duplica la cantidad de energía que contenga será 23 = 2 x 2 x 2 = ocho veces mayor. Esto queda demostrado con la siguiente expresión que es conocida como ley del cubo.
+1 ρ ⋅ A ⋅ V3 2
+
+P=
+
+P = Energía por unidad de tiempo, es decir potencia (W, vatios) ρ = Densidad del aire (kg/m3) A = Área interceptada (m2) V = Velocidad del viento (m/s) Ahora bien, la energía que contiene el viento varía con la tercera potencia de su velocidad debido a la segunda ley de Newton. En el caso de las turbinas eólicas se utiliza la energía de frenado del viento, por lo que si se duplica la velocidad del viento se tendrá dos veces más porciones cilíndricas de viento moviéndose a través del rotor cada segundo, y cada una de esas porciones contiene cuatro veces más energía. La figura 10 muestra que con una velocidad del viento de 8 m/s se obtiene una potencia de 314 W por cada metro cuadrado expuesto al viento. A 16 m/s se consigue una potencia ocho veces mayor, esto es 2,509 W/m2.
+
+28
+
+Figura 10. Potencia del viento a diferentes velocidades
+
+Fuente: Asociación danesa de la industria eólica. www.windpower.org
+
+2.1.3.
+
+Velocidad y dirección del viento
+
+En energía eólica la velocidad del viento se mide normalmente en unidades de m/s, aunque algunos organismos meteorológicos todavía registran rutinariamente las medidas de viento en otras unidades tales como km/h, nudos, millas por hora e inclusive la escala de Beaufort. Las equivalencias entre las distintas unidades son: 1 km/h = 0.2778 m/s 1 Nudo = 0.5144 m/s 1 MPH = 0.4470 m/s Cuando se efectúan mediciones de la velocidad del viento, es importante dar también la referencia de la altura de la medición como dato complementario a la velocidad.
+
+29
+
+Desde 1805, la velocidad del viento se determinaba por la escala de Beaufort, ideada por el hidrógrafo irlandés Francis Beaufort, quien estableció doce grados de fuerza del viento. Sus denominaciones originales fueron modificadas más tarde, la escala que se usa actualmente es la mostrada en la tabla VI, ahora se caracterizan los grados en el mar por la altura de las olas; y en tierra, por los efectos en árboles, edificios, etc. Tabla VI. Escala de Beaufort
+Grado 0 1 2 3 4 5 6 7 8 9 10 11 12 Velocidad del viento (km/h) Menos de 1 1-5 6-11 12-19 20-28 29-38 39-49 50-61 62-74 75-88 89-102 103-117 Más de 117 Denominación del viento Calma Ventolina Muy flojo Flojo Bonancible Fresquito Fresco Frescachón Duro Muy duro Temporal Borrasca Huracán
+
+2.1.3.1.
+
+Anemómetros
+
+Las mediciones de la velocidad del viento se realizan normalmente usando un anemómetro de cazoletas, como el de la figura 11. El anemómetro de cazoletas tiene un eje vertical y tres cazoletas que capturan el viento. El número de revoluciones por segundo son registradas electrónicamente. Normalmente, el anemómetro está provisto de una veleta para detectar la dirección del viento. En lugar de cazoletas el anemómetro puede estar equipado con hélices, aunque no es lo habitual.
+
+30
+
+Figura 11. Anemómetro de cazoletas
+
+Fuente: Mb Automazioni. www.mbautomazioni.com
+
+Otros tipos de anemómetros incluyen ultrasonidos o láser, que detectan el desfase del sonido o la luz coherente reflejada por las moléculas de aire. Los anemómetros de hilo electrocalentado detectan la velocidad del viento mediante pequeñas diferencias de temperatura entre los cables situados en el viento y en la sombra del viento (cara a sotavento). La ventaja de los anemómetros no mecánicos es que son menos sensibles a la formación de hielo. Sin embargo, en la práctica los anemómetros de cazoletas son ampliamente utilizados, y modelos especiales con ejes y cazoletas eléctricamente calentados pueden ser usados en las zonas árticas. La mejor forma de medir la velocidad del viento en una futura localización de una turbina eólica es situar un anemómetro en el extremo superior de un mástil que tenga la misma altura de buje esperada de la turbina que se va a utilizar. Esto evita la incertidumbre que conlleva el recalcular la velocidad del viento a una altura diferente. Por lo general, las velocidades del viento son medidas en medias de 10 minutos. Los resultados en las velocidades del viento son diferentes si se utilizan diferentes períodos de tiempo para calcular las medias.
+
+31
+
+Colocando el anemómetro en la parte superior del mástil se minimizan las perturbaciones de las corrientes de aire creadas por el propio mástil. Si el anemómetro está situado en la parte lateral del mástil es fundamental enfocarlo en la dirección de viento dominante para minimizar el abrigo del viento de la torre. Para evitar el abrigo de viento, en lugar de utilizar torres de celosía, normalmente se utilizan postes cilíndricos delgados, tensados con vientos, en los que se colocan los mecanismos de medición del viento. Los datos de las velocidades y direcciones del viento obtenidos por el anemómetro son recogidos en un chip electrónico en una pequeña computadora, el registrador de datos, que puede funcionar con batería durante una largo periodo de tiempo.
+
+2.1.3.2.
+
+Rosa de los vientos
+
+Los fuertes vientos suelen venir de una dirección determinada. Para mostrar la información sobre la distribución de velocidades del viento y la frecuencia de variación de las direcciones del viento, puede dibujarse la llamada rosa de los vientos, basándose en observaciones meteorológicas de las velocidades y direcciones del viento. En la figura 12, se muestra la imagen de la rosa de los vientos de Brest, en la costa atlántica de Francia, la cual se ha dividido en doce sectores, abarcando cada uno 30° del horizonte (también puede dividirse en 8 ó 16 sectores, aunque 12 es el número de sectores que se utiliza como estándar).
+
+32
+
+Figura 12. Rosa de los vientos
+
+Fuente: Atlas Eólico Europeo, Risø National Laboratory, Dinamarca.
+
+El radio de las cuñas amplias (las más exteriores) proporciona la frecuencia relativa de cada una de las doce direcciones del viento, es decir, qué tanto por ciento del tiempo el viento sopla desde esa dirección. La segunda cuña da la misma información pero multiplicada por la media de la velocidad del viento en cada dirección particular. El resultado se normaliza sumando hasta el 100%. Esto indica la contribución de cada sector en la velocidad media del viento en esta ubicación particular. La cuña más interior (sombreada) proporciona la misma información que la primera pero multiplicada por el cubo de la velocidad del viento en cada ubicación. El resultado se normaliza sumando hasta el 100%. Esto indica la contribución de cada sector en la energía contenida en el viento del lugar donde se hacen las mediciones. Estas cuñas son las más importantes, ya que como se ha mencionado anteriormente, el contenido energético del viento varía con el cubo de la velocidad del viento. Indican donde encontrar una mayor potencia que impulse los aerogeneradores. 33
+
+Una rosa de los vientos proporciona información sobre las velocidades relativas del viento en diferentes direcciones, es decir, cada uno de los tres grupos de datos es multiplicado por un número que asegura que la cuña más larga del grupo mide exactamente lo mismo que el radio del círculo más exterior del diagrama. Las rosas de los vientos varían de un lugar a otro. Son en realidad una especie de huella meteorológica. No obstante, las rosas de los vientos de las áreas vecinas son a menudo similares, por lo que en la práctica la interpolación de las rosas de los vientos de las áreas circundantes puede dar resultados seguros. Pero si el terreno es complejo, por ejemplo en montañas y valles que recorren diferentes direcciones o litorales orientados en diferentes direcciones, no es seguro en general adoptar este tipo de suposiciones. Un vistazo a la rosa de los vientos es extremadamente útil para situar aerogeneradores. Si una gran parte de la energía del viento viene de una dirección particular, lo que se deseará, cuando se coloque una turbina eólica en el paisaje, será tener la menor cantidad de obstáculos posibles en esa dirección, así como un terreno lo más liso posible. En el ejemplo visto anteriormente la mayor parte de la energía viene del suroeste, por lo que no es necesario preocuparse de los obstáculos al este y al sureste del aerogenerador, ya que apenas llegaría energía de esas direcciones. Sin embargo, los modelos eólicos pueden variar de un año a otro. Por lo tanto, lo más conveniente es tener observaciones de varios años para poder obtener una media fidedigna. Por lo regular, cuando se proyectan grandes parques eólicos se cuenta con un año de medidas locales y se utilizan observaciones meteorológicas a largo plazo de las estaciones climáticas cercanas para ajustar las medidas y obtener así una media a largo plazo fiable.
+
+34
+
+2.1.3.3.
+
+Distribución de Weibull
+
+Para el análisis de la energía eólica es muy importante poder describir la variación de las velocidades del viento. Cuando se planifica montar una turbina se necesita la información para optimizar el diseño de los aerogeneradores, así como para minimizar los costos de generación. Si se mide las velocidades del viento a lo largo de un año se observará que en la mayoría de áreas los fuertes vendavales son raros, mientras que los vientos frescos y moderados son bastante comunes. La variación del viento en un emplazamiento típico suele describirse utilizando la llamada distribución de Weibull, como la mostrada en la figura 13. Este emplazamiento en particular tiene una velocidad media del viento de 7 metros por segundo, y la forma de la curva está determinada por un parámetro de forma de 2. Figura 13. Distribución de Weibull
+
+Fuente: Asociación danesa de la industria eólica. www.windpower.org
+
+35
+
+En la figura 13 se muestra una distribución de probabilidad. El área bajo la curva siempre vale exactamente 1, ya que la probabilidad de que el viento sople a cualquiera de las velocidades, incluyendo el cero, debe ser de 100%. La mitad del área sombreada está a la izquierda de la línea vertical a 6.6 m/s. Los 6.6 m/s son la mediana de la distribución. Esto significa que la mitad del tiempo el viento soplará a menos de 6.6 m/s y la otra mitad soplará a más de 6.6 m/s. Podrá cuestionarse entonces porqué se dice que la velocidad media es de 7 m/s. La velocidad del viento media es realmente el promedio de las observaciones de la velocidad del viento que se tendrá en ese emplazamiento. Como se puede observar, la distribución de las velocidades del viento es sesgada, es decir, no es simétrica. A veces se tendrá velocidades del viento muy altas, pero son muy raras. Por otro lado, las velocidades del viento de 5.5 m/s son las más comunes. Los 5.5 metros por segundo es el llamado valor modal de la distribución. Si se multiplica cada diminuto intervalo de la velocidad del viento por la probabilidad de tener esa velocidad particular, y se suman todos, se obtiene la velocidad del viento media. La distribución estadística de las velocidades del viento varía de un lugar a otro del globo, dependiendo de las condiciones climáticas locales, del paisaje y de su superficie. Por lo tanto, la distribución de Weibull puede variar tanto en la forma como en el valor medio. Si el parámetro de forma es exactamente 2, como el de la figura 13, la distribución es conocida como distribución de Rayleigh. Los fabricantes de aerogeneradores proporcionan gráficas de rendimiento para sus máquinas usando la distribución de Rayleigh.
+
+36
+
+2.1.4.
+
+Ley de Betz
+
+Un aerogenerador desvía el viento incluso antes de que el viento llegue al plano del rotor. Esto significa que nunca se tendrá la capacidad de capturar toda la energía que hay en el viento utilizando un aerogenerador. El rotor de la turbina eólica debe obviamente frenar el viento cuando captura su energía cinética y la convierte en energía rotacional. Esto implica que el viento se moverá más lentamente en la parte izquierda del rotor que en la parte derecha. Dado que el caudal de aire que pasa a través del área barrida por el rotor desde la derecha debe ser igual al que abandona el área del rotor por la izquierda, el aire ocupa una mayor sección transversal detrás del plano del rotor. Este efecto puede apreciarse en la figura 14, donde se muestra un tubo imaginario, el llamado tubo de corriente, alrededor del rotor de la turbina eólica. El tubo de corriente muestra cómo el viento, moviéndose lentamente hacia la izquierda, ocupa un gran volumen en la parte posterior del rotor. Figura 14. Tubo de corriente
+
+Fuente: Asociación danesa de la industria eólica. www.windpower.org
+
+37
+
+El viento no es frenado hasta su velocidad final inmediatamente detrás del plano del rotor. La ralentización se produce gradualmente en la parte posterior del rotor hasta que la velocidad llega a ser prácticamente constante. Cuanto mayor es la energía cinética que un aerogenerador extrae del viento, mayor es la ralentización que sufre el viento que deja el aerogenerador. Consecuentemente, si se intentara extraer toda la energía del viento, el aire saldría con una velocidad nula, es decir, el aire no podría abandonar la turbina. En ese caso no se extraería ninguna energía en absoluto, ya que obviamente también se impediría la entrada de aire al rotor del aerogenerador. En el otro caso extremo, el viento podría pasar a través del tubo de corriente sin ser para nada estorbado. En este caso tampoco se habría extraído ninguna energía del viento. Así pues, se puede asumir que debe haber alguna forma de frenar el viento que esté en medio de estos dos extremos, y que sea más eficiente en la conversión de la energía del viento en energía mecánica útil. La respuesta a esto es sorprendentemente simple: un aerogenerador ideal ralentizaría el viento hasta 2/3 de su velocidad inicial. Para entender el porqué, se tiene que usar la ley física fundamental para los aerogeneradores: la ley de Betz. La ley de Betz dice que sólo puede convertirse menos de 16/27 (el 59%) de la energía cinética en energía mecánica usando un aerogenerador. La ley de Betz fue formulada por primera vez por el físico alemán Albert Betz en 1919. Su libro Viento-Energía, publicado en 1926, proporciona buena parte del conocimiento que en ese momento se tenía sobre energía eólica.
+
+38
+
+Para demostrar esta afirmación que hizo Betz se considera, cosa bastante razonable, que la velocidad promedio del viento a través del área del rotor es el promedio de la velocidad del viento sin perturbar antes de la turbina eólica, v1, y la velocidad del viento después de su paso por el plano del rotor, v2, esto es, (v1+v2)/2. El caudal másico es la masa de la corriente de aire a través del rotor durante un segundo, su ecuación es:
+& m = ρ ⋅ A(v 1 + v 2 ) / 2
+
+& Donde m es la masa por segundo, ρ es la densidad del aire, A es el área
+barrida por el rotor y [(v1+v2)/2] es la velocidad del viento promedio a través del área del rotor. La potencia del viento extraída por el rotor es igual al caudal másico por la diferencia de los cuadrados de la velocidad del viento:
+1 & m v 12 − v 2 2 2
+
+P=
+
+(
+
+)
+
+& Sustituyendo en esta expresión m de la primera ecuación se obtiene la
+siguiente expresion para la potencia extraida del viento:
+⎛ρ⎞ P = ⎜ ⎟ ⋅ v 12 − v 2 2 ⋅ (v 1 + v 2 ) ⋅ A ⎝4⎠ Ahora, comparando este último resultado con la potencia total de una corriente de viento no perturbada (véase la página 28) a través de exactamente la misma área A, sin ningún rotor que bloquee el viento. Se llamará a esta potencia P0:
+
+(
+
+)
+
+39
+
+P0 =
+
+ρ ⋅ v13 ⋅ A 2
+
+La razón entre la potencia que se extrae del viento y la potencia del viento sin perturbar es:
+2 P 1 ⎛ ⎛ v 2 ⎞ ⎞ ⎛ ⎛ v 2 ⎞⎞ ⎜1 − ⎜ ⎟ ⎟ ⋅ ⎜1 + ⎜ ⎟⎟ = ⋅⎜ ⎜ P0 2 ⎜ ⎝ v 1 ⎟ ⎟ ⎜ ⎜ v 1 ⎟ ⎟ ⎟ ⎝ ⎝ ⎠ ⎠ ⎠⎠ ⎝
+
+En la grafica de P/P0 en función de v2/v1, que está trazada en la figura 15, se puede observar que la función alcanza su máximo para v2/v1 en 1/3; y que el valor máximo de la potencia extraída del viento, es decir P/P0, es de 0.5926 veces ó 16/27 de la potencia total del viento. Figura 15. Potencia máxima del viento
+
+Fuente: Soern Krohn & Asociación danesa de la industria eólica www.windpower.org
+
+40
+
+2.2.
+
+Aerodinámica
+
+Se podría afirmar que lo que hace que el rotor de un aerogenerador gire es el viento. Pero en realidad, no se trata simplemente de moléculas de aire que chocan contra la parte delantera de las palas del rotor. Los aerogeneradores modernos toman prestada de los aviones y los helicópteros tecnología ya conocida, además de tener algunos trucos propios más avanzados, ya que los aerogeneradores trabajan en un entorno realmente muy diferente, con cambios en las velocidades y en las direcciones del viento.
+
+2.2.1.
+
+Perfiles
+
+Los perfiles se pueden dividir en dos grandes tipos: simétricos y asimétricos. Los perfiles simétricos tienen idénticas superficies tanto en la parte superior (extradós) como en la inferior (intradós). En éstos su centro de presión no varía, la variación permanece casi inalterable bajo los diferentes ángulos de ataque, ofreciendo la mejor relación sustentación/resistencia para las diferentes velocidades de la raíz y de la punta de la pala. Sin embargo, un perfil simétrico produce menos sustentación que uno asimétrico, teniendo también características no deseables de pérdida. Por otra parta las palas del rotor deben adaptarse a un ancho rango de velocidades desde la raíz hasta la punta, siendo el perfil simétrico perfectamente adaptable a estas condiciones, además de tener un bajo costo y fácil construcción con respecto al perfil asimétrico. Las ventajas de los perfiles asimétricos, en contrapartida de los simétricos, es su mayor capacidad de generar sustentación y mejores prestaciones ante la entrada en pérdida. Anteriormente no eran utilizados debido al movimiento de su centro de presión, pero debido a los nuevos materiales de construcción de palas son tenidos cada vez más en cuenta.
+
+41
+
+2.2.1.1.
+
+Terminología de perfiles
+
+A continuación se describe la terminología utilizada en los perfiles, la cual se ilustra en la figura 16. Figura 16. Terminología de perfiles
+
+Fuente: Gustavo C. Bottaro. Helicópteros The Site. http://helicopter.virtualave.net/aerodinamica/perfiles.htm
+
+•
+
+Línea de la cuerda. Es la línea recta que pasa por el borde de ataque y
+
+por el borde de fuga. •
+Cuerda. Es la línea recta que une el borde de ataque con el borde de
+
+fuga. Es una dimensión característica del perfil. •
+Línea de curvatura media. Línea equidistante entre el extradós y el
+
+intradós. Esta línea determina la curvatura del perfil. Si la línea de curvatura media cae sobre la cuerda (como en la figura 16) se dice que la curvatura es positiva; si cae por debajo, negativa; y si va por debajo y por arriba, doble curvatura.
+
+42
+
+•
+
+Ordenada máxima. Es la máxima distancia entre la línea de curvatura
+
+media y la cuerda del perfil. El valor suele darse en porcentaje de la cuerda. •
+Espesor máximo y posición. Son dos características importantes, que se
+
+expresan en porcentaje de la cuerda. El valor varía desde un 3% en los perfiles delgados hasta un 18% en los más gruesos. •
+Radio de curvatura del borde de ataque. Define la forma del borde de
+
+ataque y es el radio de un círculo tangente al extradós e intradós, y con su centro situado en la línea tangente en el origen de la línea de curvatura media.
+
+2.2.1.2.
+
+Clasificación de perfiles
+
+En general, los tipos de perfiles utilizados en las máquinas eólicas rápidas son de la serie NACA (National Advisory Committee of Aeronautics), y están determinados por un conjunto de cifras que definen su geometría. Existen otros tipos de perfiles como los de la serie NASA (antecesora de la NACA), Göttinger, Clark, etc. que incluyen en su nomenclatura no sólo características geométricas, sino también su comportamiento aerodinámico.
+
+2.2.1.2.1.
+
+Nomenclatura de los perfiles NACA 4
+
+La primera cifra indica la máxima flecha de la línea media en porcentaje de la cuerda, la segunda cifra indica la distancia desde el borde de ataque hasta la posición de la máxima flecha de la línea media y las dos ultimas cifras el espesor máximo en porcentaje de la cuerda (espesor relativo).
+
+43
+
+Figura 17. Perfiles NACA-4
+
+Fuente: Pedro Fernández Diez. Energía eólica. http://personales.ya.com/universal/TermoWeb/EnergiasAlternativas/eolica/
+
+Por ejemplo, el perfil NACA 4412, mostrado en la figura 17, es un perfil que tiene un 4% de altura máxima de la línea media, situado a un 40% del borde de ataque y con un espesor relativo del 12%. La línea media (curvatura) del perfil está dada por dos parábolas tangentes en el punto de máxima línea media.
+
+2.2.1.2.2.
+
+Nomenclatura de los perfiles NACA 5
+
+La primera cifra indica el valor del coeficiente de sustentación ideal de la curvatura del perfil multiplicado por 20 y dividido por 3. las dos siguientes cifras indican el doble de la posición de la máxima flecha de la línea media (curvatura) en porcentaje de la cuerda. Las dos últimas cifras indican el espesor relativo máximo de la cuerda en porcentaje, igual al del perfil NACA de 4 cifras. La curvatura se obtiene mediante una parábola cúbica empalmada a una línea recta que llega hasta el borde de salida. La serie 230XX, muy utilizada en rotores de aeroturbinas, corresponde a perfiles simétricos biconvexos, indicando la relación XX el espesor máximo.
+
+44
+
+2.2.1.2.3.
+
+Modificaciones a perfiles NACA 4 y 5
+
+Se pueden añadir dos cifras más a la nomenclatura básica de 4 ó 5 cifras, cuyo significado es el siguiente: La primera indica el radio de curvatura de la distribución de espesores en el borde de ataque con una escala entre 0 y 8, tal que el número 6 indica perfil no modificado. La segunda cifra indica la posición de máximo espesor en décimas de cuerda, no estando localizado en el 30%. Existen otras tabulaciones realizadas por NACA (NACA-1 o NACA-6) en la que la distribución de espesores aparece en forma tabulada, y la línea media del perfil (curvatura) da una distribución especial de coeficiente local de sustentación.
+
+2.2.2.
+
+Sustentación
+
+El aumento de la velocidad del aire sobre el extradós de un perfil, con respecto al intradós, genera presiones, tanto en uno como en otro lado. La diferencia entre estas presiones (si la presión en el extradós es mayor) genera una resultante a la que se llama sustentación. Para obtener una idea cualitativa del fenómeno físico implicado en la aparición de una fuerza sustentadora, se considerará un fluido incompresible que circula por un canal de sección constante en el que existe un estrechamiento suave. La velocidad en la zona de sección mínima es mayor que en el resto del canal y, por lo tanto, la presión es menor, para que se cumpla la ecuación de Bernoulli. Es decir, existirá una fuerza neta de succión sobre las paredes del canal en la zona del estrechamiento.
+
+45
+
+Suponiendo, ahora, un perfil aerodinámico simétrico con ángulo de ataque nulo, ocurrirá un fenómeno similar si se asume que la línea de la cuerda del perfil hace las veces de la pared del canal. Si se aumenta el ángulo de ataque del perfil se creará una asimetría, dándole mayor peso de succión al extradós y menor al intradós. En este caso el borde afilado de salida del perfil juega un papel fundamental, y la fuerza neta de presión resulta ser fundamentalmente perpendicular a la corriente incidente, que es la fuerza conocida como sustentación aerodinámica. Igual efecto se puede obtener con un perfil asimétrico y con ángulo de ataque nulo, siendo la curvatura de la línea media la responsable de la asimetría. En la figura 18 se puede ver la secuencia simplificada del proceso de generación de sustentación. El primer perfil corresponde a la solución ideal sin viscosidad en la que la resultante de las fuerzas de presión sobre el perfil resulta ser nula (paradoja de D’Alembert). Sin embargo, la viscosidad es la responsable de que se desprenda un torbellino del borde de salida con verticidad negativa. La conservación de la verticidad implica que se genere una verticidad positiva entorno al perfil. Hasta el momento la teoría potencial no indica cual puede ser el valor de esta verticidad, entrando en juego la hipótesis de Kutta que, en su versión más simplificada, enuncia que debe existir una línea de corriente que arranque del borde de salida del perfil, tal y como se esquematiza en el último dibujo de la figura 18. En otras palabras, el borde afilado del perfil es el responsable de que se genere una fuerza sustentadora. Como consecuencia de lo anterior se puede destacar que la existencia de sustentación (esquematizada en la figura 18) va asociada a que la circulación (medida de la verticidad) alrededor del perfil no sea nula.
+
+46
+
+Figura 18. Generación de sustentación
+
+Fuente: Ramón Ramírez Carreras. Hypertexto web sobre energía eólica. http://www.uco.es/grupos/labvirtual/tutoriales/eolica/PROYECTO/ESCUELA.htm
+
+2.2.2.1.
+
+Pérdida de sustentación
+
+¿Qué es lo que ocurre cuando un avión se inclina demasiado hacia atrás en un intento de subir más rápidamente? La sustentación del ala va de hecho a aumentar, pero llega un punto en que el flujo de aire de la superficie superior deja de estar en contacto con la superficie del ala. En su lugar, el aire gira alrededor de un vórtice irregular (condición que también se conoce como turbulencias). Bruscamente, la sustentación derivada de la baja presión en la superficie superior del ala desaparece. Este fenómeno es conocido como pérdida de sustentación. Un avión pierde la sustentación si la forma del ala va disminuyendo demasiado rápidamente conforme el aire se mueve a lo largo de su dirección general de movimiento (por supuesto, no será el ala propiamente dicha la que cambie su forma, sino el ángulo que forma el ala con la dirección general de la corriente, también conocido como ángulo de ataque). La turbulencia es creada en la cara posterior del ala en relación con la corriente del aire.
+
+47
+
+La pérdida de sustentación puede ser provocada si la superficie del ala del avión (o la pala del rotor de un aerogenerador) no es completamente uniforme y lisa. Una mella en el ala o en la pala del rotor, o un trozo de cinta adhesiva, pueden ser suficiente para iniciar una turbulencia en la parte trasera, incluso si el ángulo de ataque es bastante pequeño. Obviamente, los diseñadores de aviones intentan evitar la pérdida de sustentación a toda costa, ya que un avión sin la sustentación de sus alas caerá como si fuera una piedra.
+
+2.2.3.
+
+Resistencia aerodinámica
+
+La resistencia aerodinámica de un perfil es la componente paralela a la corriente incidente de las fuerzas de presión y fricción sobre el perfil. La teoría potencial de perfiles, que se basa fundamentalmente en despreciar la viscosidad sobre la base del movimiento a altos números de Reynolds, predice que la resistencia aerodinámica de los cuerpos es nula (paradoja de D’Alembert). No obstante, la experiencia confirma que un cuerpo inmerso en una corriente fluida experimenta una fuerza de arrastre en la dirección de la corriente. Se puede distinguir, ciñéndose al caso subsónico, que existen dos causas para la aparición de la resistencia. Una es la fuerza de rozamiento debida a la viscosidad, generalmente mucho más pequeña que la fuerza de sustentación. Y otra, la resistencia de presión, que aparece cuando la corriente se desprende. La primera se materializa en la aparición de una estela detrás del perfil, con una cantidad de movimiento más baja que la corriente libre, que está en relación directa con el valor de la resistencia de rozamiento.
+
+48
+
+Todos los perfiles en mayor o menor medida sufren resistencia aerodinámica, presentándose un mínimo de resistencia para pequeños ángulos de ataque y creciendo moderadamente en función de la carga aerodinámica, hasta que sufre un incremento muy fuerte al entrar en pérdida de perfil.
+
+2.2.4.
+
+Fuerza aerodinámica
+
+Una fuerza aerodinámica es generada cuando una corriente de aire fluye sobre y por debajo de un perfil. El punto donde esta corriente se divide se le denomina punto de impacto. Ahora bien, la fuerza aerodinámica, como se ve en la figura 19, es la resultante de dos fuerzas que desempeñan un papel importantísimo, éstas son, la sustentación y la resistencia aerodinámica. Figura 19. Descomposición de la fuerza aerodinámica
+
+Fuente: Gustavo C. Bottaro. Helicópteros The Site. http://helicopter.virtualave.net/aerodinamica/fuerzaaero.htm
+
+Una presión muy alta se genera en el punto de impacto (ver figura 20). Normalmente el área de alta presión se localiza en la porción más baja del perfil, dependiendo del ángulo de ataque. Esta área de alta presión contribuye a las fuerzas producidas por la pala.
+
+49
+
+Figura 20. Flujo sobre un perfil aerodinámico
+
+Fuente: Gustavo C. Bottaro. Helicópteros The Site. http://helicopter.virtualave.net/aerodinamica/fuerzaaero.htm
+
+La figura 20 muestra también líneas que ilustran como el flujo de aire se desplaza por arriba y por debajo del perfil. Es de notar que el flujo de aire es desviado hacia abajo, y recordando la tercera ley de Newton, “cada acción tiene una reacción opuesta”, se genera una fuerza hacia arriba también. Esta fuerza se suma a la fuerza total aerodinámica. A muy bajos ángulos de ataque esta fuerza puede ser muy baja o nula.
+
+50
+
+3. DISEÑO DE AEROGENERADORES
+
+3.1.
+
+Clasificación de los aerogeneradores
+
+3.1.1.
+
+Aerogeneradores de eje vertical
+
+Los aerogeneradores de eje vertical alrededor.
+
+disponen del eje de giro
+
+verticalmente, mientras que las palas se mueven en un plano horizontal a su
+
+Poseen un diseño crítico, pues con esta orientación cuando las palas son empujadas para que se produzca el avance, también son frenadas por la parte trasera otras palas que se aproximan al viento. Así pues, el diseño de la pala debe realizarse de forma que sea capaz de captar el máximo viento por su parte delantera, mientras que por la trasera ofrezca la mínima resistencia posible. Los diseños más utilizados son el rotor Savonius y el rotor Darrieus. Las principales ventajas teóricas de una máquina de eje vertical son • Puede situarse el generador, el multiplicador, etc. en el suelo, y puede no necesitarse una torre para la máquina. • No es necesario un mecanismo de orientación para girar el rotor en contra del viento. • No requieren mecanismos de cambio de revoluciones, por cuanto no suelen usarse en aplicaciones que precisen velocidad angular constante.
+
+51
+
+Las principales desventajas son • Las velocidades del viento cerca del nivel del suelo son muy bajas, por lo que a pesar de que puede ahorrarse la torre, sus velocidades de viento serán muy bajas en la parte más inferior de su rotor. • La eficiencia promedio de las máquinas de eje vertical no es extraordinaria. • La máquina no es de arranque automático (es decir, por ejemplo, una máquina Darrieus necesita un empuje antes arrancar. Sin embargo, esto es sólo un inconveniente sin importancia, ya que puede utilizarse el generador como motor, absorbiendo corriente de la red para arrancar la máquina). • La máquina puede necesitar cables tensores que la sujeten, aunque esta solución no es practicable en áreas muy cultivadas. • Para sustituir el cojinete principal del rotor se necesita desmontar el rotor, tanto en las máquinas de eje horizontal como en las de eje vertical. En caso de las últimas, esto implica que toda la máquina deberá ser desmontada.
+
+3.1.1.1.
+
+Aerogenerador Savonius
+
+El aerogenerador Savonius fue inventado por el finlandés Sigurd Savonius en el año 1924 y patentado en 1929. Se compone de dos semicilindros de igual diámetro, de ejes paralelos acoplados al eje de giro y separados una cierta distancia.
+
+52
+
+La principal ventaja de este tipo de rotores consiste en que
+
+pueden
+
+trabajar con velocidades del viento muy bajas. El sistema presenta además buenas características aerodinámicas para el autoarranque y la autorregulación. El funcionamiento de este tipo de aerogeneradores se debe a que las fuerzas que ejerce el viento en la parte cóncava y convexa son diferentes, y ello hace que el conjunto a su alrededor gire. Cuando se selecciona un rotor Savonius se deben de tomar en cuenta las opciones de configuración que pueden existir, que incluyen espaciados entre palas, número de palas, esbeltez y posicionamiento de las mismas y discos laterales que conforman las bases de apoyo, como se muestra en la figura 21, donde se presentan diversas opciones; se puede observar que la e tiene una mayor esbeltez que la f, mientras que la g mejora el rendimiento del rotor a bajas revoluciones, así como la energía liberada para un determinado campo de velocidades del viento. Figura 21. Rotores Savonius
+
+Fuente: Pedro Fernández Diez. Energía eólica. http://personales.ya.com/universal/TermoWeb/EnergiasAlternativas/eolica/
+
+La sencillez de su diseño y la posibilidad de construir bombas eólicas con buenos rendimientos utilizando los típicos toneles de aceite, convierten a estas turbinas en las más adecuadas para regiones poco industrializadas.
+
+53
+
+En la figura 22 se esquematiza una aeroturbina Savonius utilizada para bombeo de agua, la cual es muy adecuada para aplicaciones de riego. Figura 22. Aeroturbina Savonius para bombeo de agua
+
+Fuente: Pedro Fernández Diez. Energía eólica. http://personales.ya.com/universal/TermoWeb/EnergiasAlternativas/eolica/
+
+3.1.1.2.
+
+Aerogenerador Darrieus
+
+La única turbina de eje vertical que ha sido comercialmente fabricada en todos los volúmenes es la máquina Darrieus, que debe su nombre al ingeniero francés Georges Darrieus, quien patentó el diseño en 1931. El rotor Darrieus consta de finas palas con forma de ala de avión simétrica, que están unidas al eje sólo por los dos extremos, con una curva especial diseñada para un máximo rendimiento entre las dos uniones del eje. El modelo de curva más utilizado es el denominado Troposkien, aunque también se utiliza la catenaria. Normalmente se construyen con dos o tres palas. 54
+
+La máquina Darrieus permite mayores velocidades que las del rotor Savonius, pero no alcanza a las de un rotor de eje horizontal; de todas formas es útil para la generación de energía eléctrica. En la figura 23 se muestra un ejemplo de rotor Darrieus de tres hojas de aluminio extrudido. En lo alto del mástil lleva un anemómetro y un sensor de vibraciones, a cuyas señales anómalas el aerogenerador se frena. Para evitar sobrecargas y exceso de velocidad en el alternador, se colocan unos contrapesos ensamblados en las hojas del aparato para absorber la energía extra del viento durante los períodos de alta velocidad; el peso total es de 3 TM y la potencia generada en el alternador es de 25 kW para velocidades del viento del orden de 12 m/s. Figura 23. Aerogenerador Darrieus
+
+Fuente: Pedro Fernández Diez. Energía eólica. http://personales.ya.com/universal/TermoWeb/EnergiasAlternativas/eolica/
+
+55
+
+Los Laboratorios Sandia (Nuevo México, USA) construyeron en 1977 una aeroturbina de 17 m de diámetro y una potencia de 70 kW. Ese mismo año, el
+National Research Council de Canadá encargó la construcción de una máquina
+
+de 24 m de diámetro y 200 kW de potencia, que se instaló en la isla Magdalena, acoplada a una planta Diesel. El prototipo funcionó durante un año antes de que las palas acabaran por romperse. Posteriormente los Laboratorios Sandia desarrollaron otro modelo de 120 kW de potencia y 34 m de diámetro. En USA se han diseñado modelos comerciales de aerogeneradores Darrieus con potencias de 150 y 250 kW, y en California existen parques eólicos, con turbinas de este tipo, que alcanzan los 30 MW. En Europa, el programa eólico holandés ha dedicado especial atención a este tipo de turbinas. Dadas las dificultades para encontrar emplazamientos adecuados a las grandes turbinas de eje horizontal, los holandeses intentan desarrollar modelos Darrieus de potencia media, con menores requerimientos desde el punto de vista de la utilización del suelo.
+
+3.1.2.
+
+Aerogeneradores de eje horizontal
+
+Las aeroturbinas de eje horizontal se suelen clasificar según su velocidad de giro o según el número de palas que lleva el rotor, aspectos que están íntimamente relacionados, en rápidas y lentas; las primeras tienen un número de palas no superior a 4 y las segundas pueden tener hasta 24.
+
+3.1.2.1.
+
+Aerogeneradores de eje horizontal lentos
+
+Las máquinas eólicas de este tipo son de arrastre, y aprovechan la componente de la fuerza del viento perpendicular a la superficie de sus aspas, palas o aletas.
+
+56
+
+El molino americano, como el de la figura 24, es un generador lento que hizo su aparición hacia 1800; está formado por un rotor compuesto por un número de palas que pueden oscilar entre 12 y 24. Su diámetro suele estar entre 5 y 8 metros; diámetros mayores originarían un excesivo peso del rotor que dificultaría el arranque; suelen ponerse en funcionamiento con vientos de 2 a 3 m/s, aunque no alcanzan su potencia máxima hasta velocidades mayores. Figura 24. Molino americano
+
+Fuente: Pedro Fernández Diez. Energía eólica. http://personales.ya.com/universal/TermoWeb/EnergiasAlternativas/eolica/
+
+El rotor está conformado por delgadas placas metálicas, de perfil no aerodinámico, prácticamente planas, con una cierta orientación; el viento ejerce sobre ellas una fuerza de arrastre que provoca el par de giro. Su rendimiento máximo es del orden del 30%, aproximadamente el 50% del límite de Betz. Su funcionamiento es muy simple, por cuanto el rotor acciona directamente un sistema biela-manivela que mueve un embolo, produciendo un movimiento de vaivén. La utilización más común para estas máquinas es el bombeo de agua mediante una bomba de émbolo. 57
+
+3.1.2.2.
+
+Aerogeneradores de eje horizontal rápidos
+
+En los aerogeneradores de eje horizontal rápidos, el rotor está constituido por una hélice de 2 o más palas; los perfiles utilizados normalmente en las mismas son muy parecidos al perfil de ala de avión, por lo que éstos están muy estudiados y se conocen muy bien sus características; dichos perfiles se eligen teniendo en cuenta el número de revoluciones por minuto que se desea que adquiera el aparato. Para aerogeneradores destinados a la obtención de energía eléctrica, el número de palas puede ser de 2 ó 3, dado que la potencia generada no depende más que de la superficie barrida por la hélice, y no del número de palas. La aeroturbina puede accionar dos tipos distintos de generadores eléctricos, de corriente continua (dinamos), o de corriente alterna (síncronos, asíncronos, etc.), ya sea directamente o mediante un sistema de multiplicación de engranajes. Los primeros diseños que eran de potencias pequeñas y velocidad fija, tenían generadores de inducción directamente conectados a la red. La potencia máxima de un aerogenerador rápido se obtiene a altas revoluciones, requiriéndose velocidades del viento superiores a 6 m/s. Su rendimiento es del orden del 35% al 40%, que es un valor más alto que el de los multipala. Con 3 ó 4 palas se consigue un par de arranque importante, debido a que en la puesta en marcha la fuerza ejercida por el viento es proporcional al número de palas (de ahí el uso de rotores multipalas para el bombeo de agua, que requieren un buen par de arranque dadas las características del fluido a bombear), cosa que no se consigue con aparatos bípala que, en algunos casos, precisan de energía adicional para comenzar a funcionar.
+
+58
+
+El funcionamiento de estas máquinas es diferente, por lo que respecta al tipo de la acción debida al viento que las hace funcionar; en las máquinas lentas la fuerza de arrastre es mucho más importante que la de sustentación, mientras que en las máquinas rápidas la componente de sustentación es mucho mayor que la de arrastre. La hélice puede presentar dos tipos de posiciones frente al viento, como son barlovento y sotavento.
+
+3.1.2.2.1.
+
+Rotor a barlovento
+
+Las turbinas eólicas a barlovento son las que poseen el rotor o hélice enfrentando al viento, es decir delante de la torre. La ventaja básica de este tipo de máquinas es que evitan la influencia de la sombra aerodinámica de la torre. Sin embargo, aunque en menor medida que en una configuración a sotavento, existe una pequeña perturbación. Esto se debe a que en la porción del área del rotor que enfrenta a la torre se induce un cambio en el patrón normal de variación de presiones a lo largo de las líneas de flujo que atraviesan dicho sector. Debido a esto, estas líneas de flujo empiezan a curvarse antes de llegar a la torre, aún si la superficie de ésta es cilíndrica y perfectamente lisa. Así, la potencia que posee el viento, y que éstas captan, cae sensiblemente cada vez que las palas del rotor pasan por las cercanías de la torre. No obstante, la desventaja principal de una configuración a barlovento es que requiere un sistema de orientación del rotor que lo mantenga enfrentado al viento. Tales sistemas pueden ser activos o pasivos.
+
+59
+
+Un sistema de orientación activo requiere utilizar sensores de dirección y accionamientos motorizados que guíen al rotor automáticamente hacia la dirección del viento. Un sistema de orientación pasivo en una turbina de rotor a barlovento es el que utiliza una aleta estabilizadora, tal es el caso del que se muestra en la figura 25. Figura 25. Rotor a barlovento
+
+Fuente: Luis Delfín Gómez Moya. La energía eólica http://club.telepolis.com/iceba/iceba/energeol/tema04.htm
+
+3.1.2.2.2.
+
+Rotor a sotavento
+
+Las máquinas con este tipo de configuración tienen el rotor o hélice situado, como su nombre lo dice, en el lado a sotavento de la torre. Este sistema posee la ventaja fundamental de no requerir dispositivo de orientación alguno, siempre y cuando se diseñe adecuadamente el rotor y la góndola, como el aerogenerador que se muestra en la figura 26, de tal modo que haga que la misma siga de forma pasiva a la dirección del viento. 60
+
+Figura 26. Rotor a sotavento
+
+Fuente: Ramón Ramírez Carreras. Hypertexto web sobre energía eólica. http://www.uco.es/grupos/labvirtual/tutoriales/eolica/PROYECTO/ESCUELA.htm
+
+Sin embargo, esta manera de orientar a la hélice se ve obstaculizada por la forma en que se puede transmitir la corriente saliente desde el generador; ya que una vinculación directa por medio de cables necesita un control activo del enroscado de los mismos (si la góndola gira repetidamente en el mismo sentido por un largo periodo de tiempo), y una vinculación por medio de anillos rozadores debe ser muy bien estudiada dadas las elevadas intensidades de carga que son transmitidas. Una importante ventaja adicional de un rotor a sotavento es la posibilidad de emplear materiales más flexibles para las palas. Esta importancia se debe en primer lugar a la disminución del peso que implica una pala menos rígida; y en segundo lugar a que de este modo se alivian las cargas dinámicas sobre todo el sistema, debido a que a altas velocidades de viento, por ejemplo durante ráfagas, las palas pueden empezar a curvarse, aliviando en parte a la torre y a toda la estructura de soporte.
+
+61
+
+El inconveniente principal es la fluctuación de la potencia eólica, debida al paso del rotor a través del abrigo de la torre. Esto puede crear más cargas de fatiga en la turbina que con un diseño a barlovento.
+
+3.2.
+
+Componentes de un aerogenerador
+
+La góndola contiene los componentes clave del aerogenerador, incluyendo la caja multiplicadora y el generador eléctrico. El personal de mantenimiento puede entrar en la góndola desde la torre de la turbina. Al lado de la góndola se encuentra el rotor del aerogenerador, es decir, las palas y el buje.
+
+3.2.1.
+
+Caja multiplicadora
+
+La potencia de rotación del rotor de la turbina eólica es transferida al generador a través del tren de potencia, o sea, a través del eje principal, la caja multiplicadora y el eje de alta velocidad. La caja multiplicadora es necesaria, ya que si se usara un generador ordinario conectado directamente a una red trifásica de CA (corriente alterna) a 50 Hz, con dos, cuatro o seis polos, se debería tener una turbina de velocidad extremadamente alta, de entre 1000 y 3000 revoluciones por minuto (r.p.m.). Con un rotor de 43 metros de diámetro, esto implicaría una velocidad en el extremo del rotor de más de dos veces la velocidad del sonido, por lo que esa opción no es factible. Otra posibilidad es construir un generador de CA lento con muchos polos. Pero si se quisiera conectar el generador directamente a la red, tendría que ser un generador de 200 polos (es decir, 300 imanes) para conseguir una velocidad de rotación razonable de 30 r.p.m.
+
+62
+
+Otro problema es que la masa del rotor del generador tiene que ser aproximadamente proporcional a la cantidad de par torsor (momento, o fuerza de giro) que tiene que manejar. Así que, en cualquier caso, un generador accionado directamente sería muy pesado y caro. La solución práctica, utilizada en dirección contraria en muchas máquinas industriales, y que está relacionada con los motores de automóviles, es la de utilizar un multiplicador. Una caja multiplicadora hace la conversión entre la potencia de alto par torsor, que obtiene del rotor de la turbina eólica girando lentamente, y la potencia de bajo torsor, a alta velocidad, que utiliza el generador. La caja multiplicadora de la turbina eólica no cambia las velocidades. Normalmente, suele tener una única relación de multiplicación entre la rotación del rotor y el generador. Para una máquina de 600 ó 750 kW, parecida a la de la figura 27, la relación de multiplicación suele ser aproximadamente de 1:50. Figura 27. Caja multiplicadora
+
+Fuente: Asociación danesa de la industria eólica. www.windpower.org
+
+63
+
+Generalmente
+
+existen
+
+dos
+
+tipos
+
+de
+
+cajas
+
+multiplicadoras
+
+en
+
+aerogeneradores: de ejes paralelos y de planetarios. Hasta un intervalo en torno a los 500 kW hay poca diferencia entre el costo de una multiplicadora de ejes paralelos y una planetaria. Los planetarios son de menos tamaño pero son más difíciles de inspeccionar y mantener. A partir de los 500 kW, el peso y el tamaño menor hacen aventajar a los planetarios.
+
+3.2.2.
+
+Rotor
+
+El rotor está compuesto por un buje y por las palas. Generalmente gira de 19 a 30 r.p.m.
+
+3.2.2.1.
+
+Buje
+
+El buje, o cubo, une las palas entre sí y transmite el movimiento de giro al eje de baja velocidad. Para las aeroturbinas cuyo diámetro es inferior de 30 ó 40 metros se puede utilizar un buje rígido, especialmente cuando la hélice es tripala porque este tipo de rotor es más equilibrado que el tipo bipala. El momento de cabeceo es menor para el primero, por lo que la fatiga a la flexión del eje del rotor se reduce. Cuando el diámetro es superior a 40 m se considera preferible la utilización del cubo articulado (flexible) para los rotores bipalas. El momento de cabeceo disminuye y la fatiga a la flexión de las palas, del eje y de la torre se reduce considerablemente.
+
+64
+
+3.2.2.2.
+
+Palas
+
+Las palas del rotor capturan el viento y transmiten su potencia hacia el buje.
+
+3.2.2.2.1.
+
+Materiales de la pala
+
+Una cuestión que hay que tener muy en cuenta en el diseño de un rotor es el problema estructural, por cuanto siempre es posible diseñar una pala muy buena desde el punto de vista aerodinámico, pero que no sea capaz de resistir los esfuerzos a que esté sometida. Las palas están sometidas a condiciones de trabajo muy duras, como fenómenos de corrosión, erosión, contracciones y dilataciones debidas a las vibraciones (fatiga). Por esto es muy importante el material con que se construyen. Hasta hoy, tres materiales se utilizan principalmente para la construcción de palas de aerogeneradores: laminados de madera/epoxi, fibra de vidrio reforzada con poliéster y acero.
+
+3.2.2.2.1.1.
+
+Madera/epoxi
+
+Sus ventajas son el bajo peso, la ausencia de problemas de corrosión y la facilidad de construir formas complejas. En contra presenta elevados costos, falta de información en cuanto a sus propiedades a largo plazo, baja rigidez y problemas de humedad y radiación ultravioleta.
+
+65
+
+3.2.2.2.1.2.
+
+Fibra de vidrio/poliéster
+
+Presenta las mismas ventajas que las palas de madera/epoxi y además existe una tecnología de construcción bien desarrollada y un buen conocimiento de su comportamiento a fatiga. También, como el material anterior, tiene los inconvenientes de su elevado costo, baja rigidez y problemas de humedad y radiación ultra violeta.
+
+3.2.2.2.1.3.
+
+Acero
+
+A diferencia de los anteriores materiales, presenta un bajo costo, elevada rigidez y un conocimiento muy bueno de su comportamiento a fatiga. En cambio, sus principales inconvenientes son su elevado peso, la dificultad que presenta para construir formas complejas y la necesidad de protección anticorrosión. Estos inconvenientes lo hacen cada vez menos atrayente que los otros dos materiales. El efecto de este elevado peso se hace más significativo para grandes aerogeneradores, para los cuales el efecto fatiga predominante es el del propio peso. Las diferencias empiezan a ser muy obvias cuando se compara el peso que tienen 25 metros de diámetro de rotor: madera/epoxi: 400 kg; fibra de vidrio/poliéster: 700 kg; acero: 1700 kg. El efecto de un mayor peso de la pala es más significativo en las grandes turbinas, donde el predominante efecto fatiga actúa sobre el propio peso de las palas. Otros materiales como la fibra de carbón y titanio han sido propuestos, pero el rendimiento y el costo del material no hacen factible aún estos tipos de materiales.
+
+66
+
+3.2.2.2.2.
+
+Número de palas
+
+Los aerogeneradores modernos no se construyen con un gran número de palas del rotor, debido a que las turbinas con muchas palas o con palas muy anchas, es decir con un rotor muy sólido, estarían sujetas a fuerzas muy grandes cuando el viento soplara a una velocidad de huracán. Además, el número de palas de un aerogenerador no es de gran importancia en su actuación, por cuanto sus criterios de selección son más bien económicos, ya que a más palas mayor costo; a mayor número de palas mayor par de arranque. En la actualidad, cuando se proyecta la construcción de aerogeneradores se evitan los diseños de grandes máquinas con un número par de palas. La razón más importante es la estabilidad de la turbina. Un rotor con un número impar de palas (y como mínimo tres palas) puede ser considerado como un disco a la hora de calcular las propiedades dinámicas de la máquina. Un rotor con un número par de palas puede dar problemas de estabilidad en una máquina que tenga una estructura rígida. La razón es que en el preciso instante en que la pala más alta se flexiona hacia atrás, debido a que obtiene la máxima potencia del viento, la pala más baja pasa por la sombra del viento de enfrente de la torre.
+
+3.2.2.2.2.1.
+
+Tres palas
+
+La mayoría de aerogeneradores modernos tienen diseños tripala, con el rotor a barlovento, usando motores eléctricos en su mecanismo de orientación. Además del uso de un generador asíncrono.
+
+67
+
+A este diseño se le suele llamar el clásico concepto danés, y tiende a imponerse como estándar al resto de diseños. La gran mayoría de las turbinas vendidas en los mercados mundiales poseen este diseño. El concepto básico fue introducido por primera vez por el célebre aerogenerador de Gedser.
+
+3.2.2.2.2.2.
+
+Dos palas
+
+Los diseños bipala de aerogeneradores tienen la ventaja de ahorrar el costo y el peso de una pala. Sin embargo, suelen tener dificultades para penetrar en el mercado, en parte porque necesitan una mayor velocidad de giro para producir la misma energía de salida que un rotor tripala. Esto supone una desventaja tanto en lo que respecta al ruido como al aspecto visual. Últimamente, varios fabricantes tradicionales de máquinas bipala han cambiado a diseños tripala. Las máquinas bi y monopala requieren de un diseño más complejo, con un rotor basculante (buje oscilante), es decir, el rotor tiene que ser capaz de inclinarse, con el fin de evitar fuertes sacudidas en la turbina cada vez que una de las palas pasa por la torre. Así pues, el rotor está montado en el extremo de un eje principal, que gira junto con el eje principal. Esta disposición puede necesitar de amortiguadores adicionales que eviten que las palas del rotor choquen contra la torre.
+
+3.2.2.2.2.3.
+
+Una pala
+
+Los aerogeneradores monopala existen y, de hecho, ahorran el costo de otra pala. Sin embargo, los rotores monopala no están muy extendidos comercialmente, pues los inconvenientes de los bipala también son aplicables, e incluso en mayor medida a las máquinas monopala.
+
+68
+
+Además de una mayor velocidad de giro, y de los problemas de ruido y de intrusión visual, necesitan un contrapeso en el buje, del lado opuesto a la pala, para que equilibre al rotor. Obviamente, esto anula el ahorro de peso comparado con un diseño bipala.
+
+3.2.3.
+
+Sistema de orientación
+
+Uno de los principales problemas que presentan los aerogeneradores de eje horizontal es la necesidad de su orientación, de forma que el viento incida perpendicularmente al disco barrido por el rotor, con el fin de obtener la máxima potencia a base de hacer incidir la mayor cantidad posible de masa de aire en movimiento y así obtener la mayor cantidad posible de energía cinética; con este fin existen diversos sistemas que permiten la orientación de la máquina, tales como • • • • Cola o veleta, muy eficaz sobre todo en máquinas pequeñas. Sistema de orientación accionado por rotores auxiliares. Servomotor controlado electrónicamente. Sistema de orientación por efecto de la conicidad que se da a las palas en su disposición sobre el buje del rotor. Las veletas, o timones, son dispositivos de orientación situados en la prolongación del eje del rotor, tienen por misión orientar la aeroturbina en la dirección del viento. Están constituidas por una superficie plana metálica o de madera, sobre la que el viento ejerce una presión en el momento en que no están orientadas paralelamente en la dirección del mismo, provocando un par de giro que orienta la máquina.
+
+69
+
+Figura 28. Sistema de orientación mediante veleta
+
+Fuente: Pedro Fernández Diez. Energía eólica. http://personales.ya.com/universal/TermoWeb/EnergiasAlternativas/eolica/
+
+Tomando por ejemplo el aerogenerador de la figura 28, si se llama m a la distancia entre el centro de gravedad de la placa que conforma la veleta y el eje de giro vertical de la máquina, y s a la distancia entre el plano barrido por las palas y dicho eje de giro, se debe cumplir que: m = 4s. Otro procedimiento de orientación de las máquinas eólicas consiste en la utilización de rotores auxiliares colocados en un plano ortogonal al plano del rotor del aerogenerador; cuando éste no está orientado correctamente, los rotores eólicos auxiliares comienzan a girar y hacen que la máquina principal se oriente correctamente. El aerogenerador también se puede orientar mediante un servomecanismo que actúe sobre él al recibir información de la dirección del viento por medio de una veleta. Este procedimiento es adecuado para su utilización en grandes máquinas o en parques eólicos con varias máquinas.
+
+70
+
+3.2.4.
+
+Sistema de refrigeración
+
+Los generadores necesitan refrigeración durante su funcionamiento. En la mayoría de turbinas, la refrigeración se lleva a cabo mediante encapsulamiento del generador en un conducto, utilizando un gran ventilador para la refrigeración por aire, aunque algunos fabricantes usan generadores refrigerados por agua. Los generadores refrigerados por agua pueden ser construidos de forma más compacta, lo que también les proporciona algunas ventajas en cuanto a rendimiento eléctrico se refiere, aunque precisan de un radiador en la góndola para eliminar el calor del sistema de refrigeración por líquido.
+
+3.2.5.
+
+Eje de baja velocidad
+
+Como se puede ver en la figura 29, el eje de baja velocidad conecta el buje del rotor al multiplicador. En un aerogenerador moderno de 600 kW el rotor gira bastante lentamente, de unas 19 a 30 r.p.m. El eje contiene conductos del sistema hidráulico para permitir el funcionamiento de los frenos aerodinámicos. Figura 29. Eje de baja velocidad
+
+Fuente: Asociación danesa de la industria eólica. www.windpower.org
+
+71
+
+3.2.6.
+
+Eje de alta velocidad
+
+El eje de alta velocidad acopla el multiplicador con el generador eléctrico, gira aproximadamente a 1500 r.p.m., lo que permite el funcionamiento de este último. Está equipado con un freno de disco mecánico de emergencia. El freno mecánico se utiliza en caso de fallo del freno aerodinámico, o durante las labores de mantenimiento de la turbina.
+
+3.3.
+
+Sistemas de regulación de potencia
+
+Un dispositivo muy importante en un aerogenerador eólico es el que permite la regulación y control del número de revoluciones, que además sirve de protección de dicha máquina para velocidades del viento superiores a las admisibles bajo el punto de vista estructural. Cuando una máquina está sometida a una determinada velocidad del viento comienza a girar, dicha velocidad es la velocidad de conexión, pero su giro es lento y la máquina está lejos de generar su máxima potencia. A medida que la velocidad del viento aumenta el rotor gira más rápidamente y la potencia que produce también aumenta; a una determinada velocidad (nominal), el rotor gira a las revoluciones precisas para que la máquina proporcione su potencia nominal y a partir de este momento, aunque aumente la velocidad del viento, no interesa que la velocidad de giro aumente, por lo que hay que actuar sobre ella regulando su velocidad. Si la velocidad del viento sigue aumentando, el rotor puede peligrar desde el punto de vista estructural, por lo que es muy importante disminuir las vibraciones; por eso, cuando esta velocidad aumenta mucho el rotor se tiene que frenar.
+
+72
+
+Los sistemas más sencillos trabajan solamente en la etapa de exceso de potencia, evitando velocidades de giro demasiado elevadas que podrían poner en peligro la integridad de la turbina en condiciones de viento elevado. Los sistemas más elaborados mantienen las fluctuaciones de la velocidad de rotación en unos márgenes estrechos, existiendo un tercer nivel que permite al sistema adaptarse a cualquier condición de viento y potencia, incluidas las condiciones correspondientes a la puesta en marcha. Los dos grandes grupos de sistemas de regulación vienen definidos por su forma de actuación. En unos el control se realiza actuando sobre el rotor, aumentando o disminuyendo la potencia absorbida. En los otros, la regulación se lleva a cabo sobre el eje del rotor. Los primeros solo son posibles en rotores de eje horizontal, mientras que los segundos son adaptables a cualquier tipo de máquina eólica.
+
+3.3.1.
+
+Sistemas de regulación por acción sobre el rotor
+
+3.3.1.1.
+
+Orientación del rotor
+
+El rotor se puede orientar de cara al viento cuando deba funcionar a su potencia nominal y paralelo a él en situación de parada. Entre estas dos situaciones extremas se puede regular a voluntad, variando el área de captación adecuada a la potencia deseada. Este tipo de regulación se utiliza para máquinas de pequeña potencia. Los sistemas modernos de control por orientación del rotor funcionan automáticamente mediante una veleta, que hace girar la turbina cuando la velocidad del viento es demasiado elevada, o bien aprovechando la fuerza del empuje aerodinámico sobre una excéntrica. Ambos sistemas (que se ilustran en la figura 30) actúan sobre un resorte que devuelve a la máquina a su posición normal cuando la velocidad del viento disminuye.
+
+73
+
+Figura 30. Sistemas de regulación por orientación del rotor
+
+Fuente: Pedro Fernández Diez. Energía eólica. http://personales.ya.com/universal/TermoWeb/EnergiasAlternativas/eolica/
+
+3.3.1.2.
+
+Paso variable
+
+Posiblemente la forma de regulación más eficaz y de utilización más extendida sea la de paso variable. Este sistema actúa variando el ángulo de ataque de las palas, con lo que aumenta o disminuye el rendimiento aerodinámico, y en consecuencia la potencia absorbida. Figura 31. Sistema de regulación centrífuga mediante bielas
+
+Fuente: Pedro Fernández Diez. Energía eólica. http://personales.ya.com/universal/TermoWeb/EnergiasAlternativas/eolica/
+
+74
+
+Dentro de los diferentes tipos de regulación por paso variable, los más sencillos, que actúan sólo en la etapa de exceso de potencia, suelen ir provistos de algún mecanismo de acción centrífuga que mueve el ángulo de calaje de las palas cuando las revoluciones son muy elevadas, llegando a ponerlas en posición de bandera (sin sustentación aerodinámica) cuando la velocidad del viento alcanza la de desconexión; es el caso del dispositivo mostrado en la figura 31. Como alternativa, la acción centrífuga se puede usar para accionar elementos auxiliares que actúan como frenos aerodinámicos. En máquinas pequeñas y de diseño sencillo, se puede utilizar un sistema para variar el ángulo de calaje de las palas basado exclusivamente en fuerzas aerodinámicas. Si se diseña la pala de forma que el eje que la atraviesa, y sobre el que gira para adaptar su ángulo de calaje, quede por delante del punto sobre el que se obtiene la resultante de las fuerzas aerodinámicas, se produce un momento de giro (momento aerodinámico) que tiende a poner las palas en posición bandera. El sistema va provisto de un mecanismo elástico para que entre en acción en el momento conveniente y vuelva después a su posición de parada. Figura 32. Sistemas de regulación del ángulo de calaje de las palas
+
+Fuente: Pedro Fernández Diez. Energía eólica. http://personales.ya.com/universal/TermoWeb/EnergiasAlternativas/eolica/
+
+75
+
+En el caso de las turbinas de gran potencia, la fuerza necesaria para mover las palas es demasiado grande para confiarla a una masa centrífuga. El problema se suele solucionar mediante un mecanismo que actúa a través del eje de baja velocidad y del buje (figura 32a), mandado por un sistema automático. Este tipo de regulación es más complicado y costoso, pero permite adaptarse a mayores condiciones variables de viento y de potencia de salida. Una variante de este sistema consiste en modificar las características aerodinámicas de la pala, actuando solamente sobre el ángulo de calaje de una parte de ella, dejando el resto de paso fijo (figura 32b). Otra posibilidad es utilizar una pala con un alerón en el borde de salida, de forma que cambiando su posición se pueda actuar sobre el comportamiento aerodinámico de toda la pala (figura 32c). Ambos sistemas van provistos de mecanismos en el interior de la pala, del buje y del eje principal, que son controlados desde el interior de la máquina mediante un microprocesador e impulsados mediante motores eléctricos.
+
+3.3.2.
+
+Sistemas de regulación por acción sobre el eje
+
+Este sistema se utiliza para las turbinas tipo Darrieus y las hélices de paso fijo. El control de la potencia se realiza mediante el frenado del eje cuando gira a un número excesivo de revoluciones. El freno puede ser de zapatas, de disco o de tipo electromagnético; actuar mediante algún mecanismo centrífugo o mediante algún tipo de circuito de control.
+
+76
+
+Este sistema de regulación tiene que realizar esfuerzos mayores que en el caso de los sistemas de regulación por acción sobre el rotor, lo que exige que los mecanismos sean más resistentes. Sin embargo, tienen la ventaja de que son sistemas más sencillos y que pueden encontrarse ya comercializados, lo que disminuye sus costes.
+
+3.4.
+
+Generadores de turbinas eólicas
+
+El aerogenerador convierte la energía mecánica en energía eléctrica. Los aerogeneradores son algo inusuales, si se les compara con los otros equipos generadores que suelen encontrarse conectados a la red eléctrica. Una de las razones es que el generador debe trabajar con una fuente de potencia (el rotor de la turbina eólica) que suministra una potencia mecánica muy variable (momento torsor). En grandes aerogeneradores (alrededor de 100-150 kW), el voltaje (tensión) generado por la turbina suele ser de 690 V de corriente alterna trifásica. Posteriormente, la corriente es enviada a través de un transformador anexo a la turbina (o dentro de la torre), para aumentar su voltaje entre 10000 y 30000 V, dependiendo del estándar de la red eléctrica local. Los grandes fabricantes proporcionan modelos de aerogeneradores tanto de 50 Hz (para las redes eléctricas de la mayor parte del mundo) y de 60 Hz (para la red eléctrica de América). Los tipos de generadores de electricidad a conectar en un aerogenerador se pueden clasificar en generadores de corriente continua (dínamos) y generadores de corriente alterna (alternadores).
+
+77
+
+3.4.1.
+
+Generadores de corriente continua
+
+Si una armadura gira entre dos polos de campo fijos, la corriente en la armadura se mueve en una dirección durante la mitad de cada revolución, y en la otra dirección durante la otra mitad. Para producir un flujo constante de corriente en una dirección, o continua en un aparato determinado, es necesario disponer de un medio para invertir el flujo de corriente fuera del generador una vez cada revolución. En las máquinas antiguas esta inversión se llevaba a cabo mediante un conmutador, un anillo de metal partido montado sobre el eje de una armadura. Las dos mitades del anillo se aislaban entre sí y servían como bornes de la bobina. Las escobillas fijas de metal o de carbón se mantenían en contra del conmutador, que al girar conectaba eléctricamente la bobina a los cables externos. Cuando la armadura giraba, cada escobilla estaba en contacto de forma alternativa con las mitades del conmutador, cambiando la posición en el momento en el que la corriente invertía su dirección dentro de la bobina de la armadura. Así se producía un flujo de corriente de una dirección en el circuito exterior al que el generador estaba conectado. Los generadores de corriente continua funcionan normalmente a voltajes bastante bajos para evitar las chispas que se producen entre las escobillas y el conmutador a voltajes altos. El potencial más alto desarrollado para este tipo de generadores suele ser de 1500 V. En algunas máquinas más modernas esta inversión se realiza usando aparatos de potencia electrónica, como por ejemplo rectificadores de diodo.
+
+78
+
+Los generadores modernos de corriente continua utilizan armaduras de tambor, que suelen estar formadas por un gran número de bobinas agrupadas en hendiduras longitudinales dentro del núcleo de la armadura y conectadas a los segmentos adecuados de un conmutador múltiple. Si una armadura tiene un solo circuito de cable, la corriente que se produce aumentará y disminuirá dependiendo de la parte del campo magnético a través del cual se esté moviendo el circuito. Un conmutador de varios segmentos usado con una armadura de tambor conecta siempre el circuito externo a uno de cable que se mueve a través de un área de alta intensidad del campo, y como resultado la corriente que suministran las bobinas de la armadura es prácticamente constante. Los campos de los generadores modernos se equipan con cuatro o más polos electromagnéticos que aumentan el tamaño y la resistencia del campo magnético. En algunos casos, se añaden interpolos más pequeños para compensar las distorsiones que causa el efecto magnético de la armadura en el flujo eléctrico del campo. Los generadores de corriente continua se clasifican según el método que usan para proporcionar corriente de campo que excite los imanes del mismo. Un generador de excitado en serie tiene su campo en serie respecto a la armadura. Un generador de excitado en derivación, tiene su campo conectado en paralelo a la armadura. Un generador de excitado combinado tiene parte de sus campos conectados en serie y parte en paralelo. Los dos últimos tipos de generadores tienen la ventaja de suministrar un voltaje relativamente constante, bajo cargas eléctricas variables. El de excitado en serie se usa sobre todo para suministrar una corriente constante a voltaje variable. Un magneto es un generador pequeño de corriente continua con un campo magnético permanente.
+
+79
+
+3.4.2.
+
+Generadores de corriente alterna
+
+Como se decía antes, un generador simple sin conmutador producirá una corriente eléctrica que cambia de dirección a medida que gira la armadura. Este tipo de corriente es ventajosa para la transmisión de potencia eléctrica, por lo que la mayoría de generadores son de este tipo. En su forma más simple, un generador de corriente alterna se diferencia de uno de corriente continua en sólo dos aspectos: los extremos de la bobina de su armadura están salidos hacia los anillos colectores sólidos sin segmentos del árbol del generador en lugar de los conmutadores, y las bobinas de campo se excitan mediante una fuente externa de corriente continua más que con el generador en sí. Los generadores de corriente alterna de baja velocidad se fabrican con hasta 100 polos, para mejorar su eficiencia y para lograr con más facilidad la frecuencia deseada. Los alternadores accionados por turbinas de alta velocidad, sin embargo, son a menudo máquinas de dos polos. La frecuencia de la corriente que suministra un generador de corriente alterna es igual a la mitad del producto del número de polos y el número de revoluciones por segundo de la armadura. A veces, es preferible generar un voltaje tan alto como sea posible. Las armaduras rotatorias no son prácticas en este tipo de aplicaciones, debido a que pueden producirse chispas entre las escobillas y los anillos colectores, y a que pueden producirse fallos mecánicos que podrían causar cortocircuitos. Por lo tanto, los alternadores se construyen con una armadura fija en la que gira un rotor compuesto de imanes de campo. El principio de funcionamiento es el mismo que el del generador de corriente alterna descrito con anterioridad, excepto en que el campo magnético (en lugar de los conductores de la armadura) está en movimiento.
+
+80
+
+La corriente que se genera mediante los alternadores descritos anteriormente, aumenta hasta un pico, cae hasta cero, desciende hasta un pico negativo y sube otra vez a cero varias veces por segundo, dependiendo de la frecuencia para la que esté diseñada la máquina. Este tipo de corriente se conoce como corriente alterna monofásica. Sin embargo, si la armadura la componen dos bobinas, montadas a 90° una de otra y con conexiones externas separadas, se producen dos ondas de corriente, una de las cuales está en su máximo cuando la otra es cero. Este tipo de corriente se denomina corriente alterna bifásica. Si se agrupan tres bobinas de armadura en ángulos de 120°, se producirá corriente en forma de onda triple, conocida como corriente alterna trifásica. Se puede obtener un número mayor de fases incrementando el número de bobinas en la armadura, pero en la práctica de la ingeniería eléctrica moderna se usa sobre todo la corriente alterna trifásica, con alternador trifásico, que es la máquina dinamoeléctrica que se emplea normalmente para generar potencia eléctrica.
+
+3.5.
+
+Torres de los aerogeneradores
+
+3.5.1.
+
+Tipos de diseño
+
+3.5.1.1.
+
+Torres tubulares de acero
+
+La mayoría de los grandes aerogeneradores se montan en torres tubulares de acero, fabricadas en secciones de 20 a 30 metros con bridas en cada uno de los extremos, y son unidas con pernos in situ. Las torre son troncocónicas (es decir, con un diámetro creciente hacia la base), con el fin de aumentar su resistencia y al mismo tiempo ahorrar material.
+
+81
+
+3.5.1.2.
+
+Torres de celosía
+
+Las torres de celosía son fabricadas utilizando perfiles de acero soldados. La ventaja básica de las torres de celosía es su costo, puesto que una torre de celosía requiere solamente la mitad de material que una torre tubular, sin sustentación adicional y con la misma rigidez. La principal desventaja de este tipo de torres es su apariencia visual (aunque esa cuestión es claramente debatible). En cualquier caso, por razones estéticas, las torres de celosía han desaparecido prácticamente en los grandes aerogeneradores.
+
+3.5.1.3.
+
+Torres de mástil tensado con vientos
+
+Muchos de los aerogeneradores pequeños están construidos con delgadas torres de mástil sostenidas por cables tensores. La ventaja es el ahorro de peso y, por lo tanto, el costo. Las desventajas son el difícil acceso a las zonas alrededor de la torre, lo que las hace menos apropiadas para zonas agrícolas. Finalmente, este tipo de torres es más propensa a sufrir actos vandálicos, lo que compromete la seguridad del conjunto.
+
+3.5.1.4.
+
+Torres híbridas
+
+Algunas torres están hechas con diferentes combinaciones de las ya mencionadas. Un ejemplo es la torre de tres patas Bonus, de la que podría decirse que es un híbrido entre una torre de celosía y una torre tensada con vientos.
+
+82
+
+3.5.2.
+
+Fabricación
+
+Como se explicó en la pagina 81, la mayoría de las torres en los aerogeneradores actuales son torres tubulares tronco-cónicas. En la figura 33, que muestra un taller de fabricación de torres, se observa como una plancha de acero es enrollada en una subsección cónica para la torre de un aerogenerador. Es un poco complicado obtener la forma cónica, pues la tensión de los cilindros de acero tiene que ser diferente en ambos extremos, con el fin de que la plancha se curve adecuadamente. Las torres son ensambladas a partir de estas subsecciones cónicas más pequeñas, que son cortadas y laminadas con la forma correcta, y posteriormente unidas por soldadura. Figura 33. Laminación de las secciones cónicas de las torres
+
+Fuente: Asociación danesa de la industria eólica. www.windpower.org
+
+83
+
+Cada sección de la torre está soldada con un cordón longitudinal, además de un cordón circular que une a las siguientes secciones de la torre. Esto se hace colocando las secciones de la torre sobre un banco de rodillos que hace girar lentamente a la torre, mientras que un operador con una máquina de soldadura por arco sumergido solda las secciones desde el exterior y otro operador solda el correspondiente grupo de cordones en el interior. Los cordones de soldadura de las torres son inspeccionados utilizando dispositivos de ultrasonido o de rayos X. Las torres suelen fabricarse en secciones de 20 a 30 m, siendo el transporte por tren o por carretera el factor limitante. Los pesos típicos de las torres modernas son 40 toneladas métricas para una torre de 50 m, de una turbina con un diámetro de rotor de 44 m (600 kW); y de 80 toneladas métricas para una torre de 60 m, con un diámetro de rotor de 72 m (2000 kW). Las torres de aerogeneradores son generalmente diseñadas por cada fabricante de turbinas, ya que todo el aerogenerador en conjunto tiene que ser homologado como una unidad, debido a la dinámica estructural. Por tanto, incluso si algunas torres son fabricadas por productores independientes, son siempre específicas para cada fabricante. Los pesos de las torres (por kilowatt de potencia instalada) han disminuido alrededor del 50% en los últimos años, gracias a métodos de diseño más avanzados. Aunque la torre todavía sigue siendo una parte del aerogenerador bastante pesada, por lo que los costos de transporte son importantes. En los mercados más grandes, generalmente es mejor no transportar las torres por carretera más de 100 km. En el caso de que la distancia sea superior, y que se trate de un gran proyecto, las torres suelen fabricarse localmente.
+
+84
+
+3.6.
+
+Tamaño de los aerogeneradores
+
+El área del disco cubierto por el rotor y, por supuesto, las velocidades del viento determinan cuanta energía se puede colectar en un año. La figura 34 da una idea de los tamaños de rotor normales en aerogeneradores: una típica turbina con un generador eléctrico de 600 kW suele tener un rotor de unos 44 metros. Si se duplica el diámetro del rotor, se obtendrá un área cuatro veces mayor (dos al cuadrado). Esto significa que también se obtendrá del rotor una potencia disponible cuatro veces mayor. Figura 34. Relación potencia-diámetro del rotor
+
+Fuente: Asociación danesa de la industria eólica. www.windpower.org
+
+Los diámetros de rotor pueden variar algo respecto a las cifras dadas arriba, ya que muchos de los fabricantes optimizan sus máquinas ajustándolas a las condiciones de viento locales: por supuesto, un gran generador requiere más potencia sólo para poder girar. Por lo tanto, si se instala un aerogenerador
+
+85
+
+en área de vientos suaves, realmente se maximizará la producción anual utilizando un generador pequeño para un tamaño de rotor determinado.
+3.6.1. Razones para elegir turbinas grandes
+
+•
+
+Existen economías de escala en las turbinas eólicas, es decir, las máquinas más grandes son capaces de suministrar electricidad a un costo más bajo que las máquinas más pequeñas. La razón es que los costos de las cimentaciones, la construcción de carreteras, la conexión a la red eléctrica, además de otros componentes en la turbina, son más o menos independientes del tamaño de la máquina.
+
+•
+
+Las máquinas más grandes están particularmente bien adaptadas para la energía eólica en el mar. Los costos de las cimentaciones no crecen en proporción con el tamaño de la máquina, y los costos de mantenimiento son ampliamente independientes del tamaño de la máquina.
+
+•
+
+En las áreas en las que resulta difícil encontrar emplazamientos para más de una única turbina, una gran turbina con una torre alta utiliza los recursos eólicos existentes de manera más eficiente.
+
+3.6.2.
+
+Razones para elegir turbinas pequeñas
+
+•
+
+La red eléctrica local puede ser demasiado débil para manipular la producción de energía de una gran máquina. Este puede ser el caso de las partes remotas de la red eléctrica, con una baja densidad de población y poco consumo de electricidad en el área.
+
+•
+
+Hay menos fluctuación en la electricidad de salida de un parque eólico compuesto de varias máquinas pequeñas, pues las variaciones de viento
+
+86
+
+raras veces ocurren y, por lo tanto, tienden a cancelarse. Una vez más, las máquinas pequeñas pueden ser una ventaja en una red eléctrica débil. • El costo de usar grandes grúas, y de construir carreteras lo suficientemente fuertes para transportar los componentes de la turbina, puede hacer que en algunas áreas las máquinas más pequeñas resulten más económicas. • Con varias máquinas pequeñas el riesgo se reparte, en caso de fallo temporal de la máquina (por ejemplo si cae un rayo). • Consideraciones estéticas en relación al paisaje pueden a veces imponer el uso de máquinas más pequeñas. Sin embargo, las máquinas más grandes suelen tener una velocidad de rotación más pequeña, lo que significa que realmente una máquina grande no llama tanto la atención como muchos rotores pequeños moviéndose rápidamente.
+
+3.7.
+
+Instalación
+
+3.7.1.
+
+Instalaciones terrestres
+
+Las torres suelen estar unidas con pernos a las cimentaciones de hormigón sobre las que reposan. Sin embargo, hay otros métodos en el que la parte inferior de la torre es fundida dentro de la cimentación de hormigón, por lo que la parte más inferior de la torre tiene que ser soldada directamente en el propio emplazamiento. Este método requiere que la torre esté provista de guías y abrazaderas especiales para mantener las dos secciones de la torre en su sitio mientras se está realizando la soldadura. También requiere una pequeña
+
+87
+
+fábrica de torres móvil, incluyendo un generador, un equipo de soldadura y un equipo de inspección de rayos X, para inspeccionar los cordones de soldadura. Las secciones de la torre de un aerogenerador son atornilladas utilizando bridas de acero laminado en caliente, soldadas a los extremos de cada sección de la torre. Las bridas están fabricadas de acero calmado.
+
+3.7.2.
+
+Instalaciones marítimas
+
+3.7.2.1.
+
+Hormigón
+
+Los
+
+primeros
+
+proyectos
+
+experimentales
+
+en
+
+el
+
+mundo
+
+utilizaron
+
+cimentaciones de cajón de hormigón (por gravedad). Como su propio nombre lo indica, una cimentación por gravedad cuenta con la gravedad para mantener la turbina en una posición vertical. Las cimentaciones de cajón son construidas en diques secos cerca de los emplazamientos utilizando hormigón armado, y se llevan a su destino final antes de ser rellenadas con grava y arena hasta que alcanzan el peso necesario. Así pues, el principio se parece mucho a la construcción de puentes tradicionales. Utilizando técnicas de cimentación con hormigón, el costo de la cimentación completa es proporcional al cuadrado de la profundidad del agua (la regla cuadrática). De acuerdo con la regla cuadrática, las plataformas de hormigón se hacen prohibitivamente caras y pesadas de instalar a profundidades de agua de más
+
+88
+
+de 10 metros. Por lo tanto, han tenido que desarrollarse otras técnicas para poder atravesar la barrera del costo.
+
+3.7.2.2.
+
+Acero
+
+La mayoría de parques eólicos marinos existentes utilizan cimentaciones por gravedad. Una nueva tecnología ofrece un método similar al de cajón de hormigón. En lugar de hormigón armado se utiliza un tubo de acero cilíndrico situado en una caja de acero plana sobre el lecho marino. Una cimentación de acero por gravedad es considerablemente más ligera que las cimentaciones de hormigón. Aunque la cimentación final debe tener un peso de aproximadamente 1000 toneladas, el peso de la estructura de acero será solamente de 80 a 100 toneladas para profundidades de agua entre 4 y 10 metros. El relativo poco peso permite que los remolques transporten e instalen muchas cimentaciones a la vez, utilizando las mismas grúas relativamente ligeras utilizadas para el montaje de las turbinas. Las cimentaciones por gravedad se rellenan de olivino, que es un mineral muy denso, que proporciona la suficiente resistencia para que las cimentaciones soporten las olas. La base de una cimentación de este tipo es de 14 por 14 m (o de 15 m de diámetro para una base circular) para profundidades de agua de 4 a 10 m (en caso de un aerogenerador con diámetro del rotor de aproximadamente 65 m). La ventaja de la solución del cajón de acero es que la cimentación puede ser preparada en tierra, y puede ser utilizada en cualquier tipo de lecho marino,
+
+89
+
+aunque se necesita un acondicionamiento previo del mismo. El limo tiene que ser eliminado y un lecho de grava debe ser preparado por buzos antes de colocar la cimentación en su emplazamiento. Normalmente, el lecho marino de alrededor de la base de la cimentación deberá estar protegido contra la erosión colocando rocas alrededor de los bordes de la base. Lo mismo ocurre con la versión en hormigón de las cimentaciones por gravedad, lo que hace que este tipo de cimentación sea relativamente mas costoso en áreas con una erosión significativa.
+
+3.7.2.3.
+
+Monopilote
+
+La cimentación Monopilote es una construcción simple. La cimentación consta de un pilote de acero con un diámetro de entre 3.5 y 4.5 metros. El pilote está clavado de 10 a 20 metros en el lecho marino, dependiendo del tipo de subsuelo. Una ventaja importante de este tipo de cimentación es que no necesita que el lecho marino sea acondicionado. Por otro lado, requiere un equipo de pilotaje pesado, y no se aconseja este tipo de cimentación en localizaciones con muchos bloques de mineral en el lecho marino. Si se encuentra un bloque de mineral durante la instalación, es posible perforarlo y estallarlo con explosivos.
+
+3.7.2.4.
+
+Trípode
+
+La cimentación en trípode se inspira en las ligeras y rentables plataformas de acero con tres patas para campos petrolíferos marinos marginales en la industria del petróleo.
+
+90
+
+Desde el pilote de acero bajo la torre de la turbina parte una estructura de acero que transfiere los esfuerzos de la torre a tres pilotes de acero. Los tres pilotes están clavados de 10 a 20 metros en el lecho marino, dependiendo de las condiciones del suelo. La ventaja de un modelo de tres patas es que es apropiado para grandes profundidades del agua. Al mismo tiempo, sólo necesita una preparación mínima del emplazamiento antes de la instalación. La cimentación es anclada al lecho marino mediante un pilote de acero relativamente pequeño (0.9 m) en cada esquina. Debido a requerimientos de instalación, la cimentación en trípode no es apropiada para lechos marinos con múltiples y grandes bloques de roca. Este tipo de cimentación no es conveniente para profundidades del agua menores a 6 ó 7 metros. La razón principal es que las embarcaciones de servicio a bajas profundidades tendrían problemas para acercarse a la cimentación debido a la estructura de acero.
+
+3.8.
+
+Aspectos de seguridad
+
+3.8.1.
+
+Seguridad en los aerogeneradores
+
+Los componentes de un aerogenerador están diseñados para durar 20 años. Esto significa que tienen que resistir más de 120000 horas de funcionamiento, a menudo bajo condiciones climáticas tormentosas. Si se compara con un motor de automóvil ordinario, éste sólo funciona durante unas 5000 horas a lo largo de su vida útil. Los grandes aerogeneradores están equipados con diversos dispositivos de seguridad que garantizan un funcionamiento seguro durante sus años de servicio.
+
+91
+
+Uno de los más clásicos y simples dispositivos de seguridad en un aerogenerador es el sensor de vibraciones. Consiste sencillamente en una bola que reposa sobre un anillo. La bola está conectada a un interruptor a través de una cadena. Si la turbina empieza a vibrar, la bola cae del anillo sobre el que reposa y desconecta la turbina. Hay muchos otros sensores en la góndola, como termómetros electrónicos que controlan la temperatura del aceite en la caja multiplicadora y la temperatura del generador. Es fundamental que un aerogenerador se pare automáticamente en caso de un mal funcionamiento de alguno de los componentes críticos. Por ejemplo, si hay un sobrecalentamiento del generador o se desconecta de la red eléctrica dejará de frenar al rotor y, en cuestión de segundos, el rotor empezaría a acelerarse rápidamente. En un caso así es esencial disponer de un sistema de protección contra el embalamiento.
+
+3.8.2.
+
+Seguridad en el trabajo
+
+El principal peligro de trabajar con aerogeneradores es la altura sobre el suelo durante los trabajos de instalación y de mantenimiento. En los nuevos aerogeneradores es obligatorio disponer de dispositivos de protección anticaída, es decir, una persona que suba a la turbina debe llevar un conjunto de correas como un paracaidista. Las correas están sujetas con un cable de acero a un sistema de anclaje, que sigue a la persona que está
+
+92
+
+subiendo o bajando de la turbina. El sistema de cables debe incluir un amortiguador, con el fin de que, en el caso de una caída, las personas estén razonablemente seguras. Una tradición, que ha sido adoptada por muchos fabricantes, es la de construir las escaleras a una cierta distancia de la pared. Esto permite que el personal de mantenimiento pueda apoyar los hombros en la parte interior de la pared de la torre mientras escala. La protección de la maquinaria, contra el fuego y de aislamiento eléctrico, está regulada por diversos estándares internacionales. Durante el funcionamiento es esencial que la maquinaria pueda pararse completamente. Además de un freno mecánico, el rotor puede fijarse al sitio con una chaveta, para evitar cualquier movimiento de alguna de las partes.
+
+93
+
+94
+
+4. IMPACTO AMBIENTAL DE LOS AEROGENERADORES
+
+4.1.
+
+Ruido provocado por los aerogeneradores
+
+Cuando el viento choca contra diferentes objetos a una cierta velocidad, generalmente empieza a emitir un sonido. Si choca contra los arbustos o contra las hojas de los árboles, o contra la superficie del agua, crea una mezcla al azar de altas frecuencias, llamada a menudo ruido blanco. El viento también puede inducir vibraciones en superficies, como ocurre a veces con partes de un edificio, un automóvil e, incluso, con un planeador (sin motor). Cada una de estas superficies emite su propio sonido. Si el viento choca contra un borde afilado, puede producir un tono puro, como el de los instrumentos musicales de viento. Las palas del rotor producen un ligero sonido silbante que puede oírse si se está cerca de un aerogenerador a velocidades de viento relativamente bajas. Las palas deben frenar el viento para transferir la energía al rotor. En este proceso producen algunas emisiones de ruido blanco. Si la superficie de la pala es muy lisa (que de hecho debe serlo por razones aerodinámicas), las superficies emiten una pequeña parte del ruido. La mayor parte del ruido se origina en el borde de salida (posterior) de las palas. Un cuidadoso diseño de los bordes de salida y una cuidadosa manipulación de las palas durante su
+
+95
+
+ensamblado, han llegado a ser una práctica habitual en la industria de los aerogeneradores. Sin variar el resto de parámetros, la presión sonora aumenta con la quinta potencia de la velocidad de la pala relativa al aire circundante. Así pues, se puede observar que los aerogeneradores modernos con grandes diámetros del rotor tienen una velocidad de giro muy baja. Ningún paisaje está nunca en silencio absoluto. Por ejemplo, las aves y las actividades humanas emiten sonidos y, a velocidades de viento de alrededor de 4-7 m/s y superiores, el ruido del viento en las hojas, arbustos, árboles, mástiles, etc. enmascara gradualmente cualquier potencial sonoro de los aerogeneradores. Esto hace que la medición del sonido de los aerogeneradores de forma precisa sea muy difícil. Generalmente, a velocidades de 8 m/s y superiores llega a ser una cuestión sin sentido, dado que el ruido de fondo encubre completamente cualquier ruido de la turbina. La reflexión del sonido por parte de las superficies del terreno y de los edificios puede hacer que el mapa de sonido sea diferente en cada localización. En general, corriente arriba de los aerogeneradores apenas se oye algún sonido. Por lo tanto, la rosa de los vientos es importante para registrar la dispersión sonora potencial en diferentes direcciones.
+
+4.1.1.
+
+Medición de los niveles de sonido
+
+Las autoridades públicas en todo el mundo utilizan la denominada escala dB (A), o decibelios (A), para cuantificar las medidas de sonido. La escala de decibelios (A) mide la intensidad de sonido en todo el rango de las diferentes frecuencias audibles (diferentes tonos), y posteriormente utiliza un sistema de
+
+96
+
+ponderación teniendo en cuenta el hecho de que el oído humano tiene una sensibilidad diferente a cada frecuencia de sonido. Generalmente, el oído humano escucha mejor a frecuencias medias (rango vocal) que a bajas o altas frecuencias. El sistema de dB (A) dice que la presión sonora a las frecuencias más audibles debe ser multiplicada por valores altos, mientras que las frecuencias menos audibles son multiplicadas por valores más bajos, y con todo esto se obtiene un índice numérico. En la tabla VII se muestran ejemplos de diferentes intensidades de sonidos en la escala decibelios (A), además de los efectos y daños a largo plazo que produce en el ser humano. Tabla VII. Escala decibelios (A)
+dB (A) 10 20 30 40 50 60 70 80 90 100 110 120 130 140 150 Ejemplo Respiración. Rumor de hojas Susurro Campo por la noche Biblioteca Conversación tranquila Conversación en un salón Aspiradora. Televisión alta Lavadora. Fábrica Moto. Camión ruidoso Cortadora de césped Bocina a 1 m. Grupo de rock Sirena cercana Audífonos con alto volumen Cubierta de portaaviones Despegue de avión a 25 m Efecto. Daño a largo plazo Gran tranquilidad Gran tranquilidad Gran tranquilidad Tranquilidad Tranquilidad Algo molesto Molesto Molesto. Daño posible Muy molesto. Daños Muy molesto. Daños Muy molesto. Daños Algo de dolor Algo de dolor Dolor Rotura del tímpano
+
+El sistema de ponderación (A) se utiliza para sonidos débiles, como el de los aerogeneradores. Existen otros sistemas de ponderación para sonidos fuertes, llamados (B) y (C), aunque raras veces se utilizan.
+
+97
+
+La escala de decibelios es una escala logarítmica, o escala relativa. Esto significa que al doblar la presión sonora (o energía del sonido) el índice aumenta aproximadamente en 3. Así pues, un nivel de sonido de 100 dB (A) contiene el doble de energía que uno de 97 dB (A). La razón de medir el sonido de esta manera es que los oídos y mente perciben el sonido en términos de logaritmo de la presión sonora, en lugar de en términos de la presión sonora en sí misma. Por otro lado, la intensidad sonora subjetiva (sonoridad), es decir la percepción que el ser humano tiene del sonido, se duplica cada vez que el nivel de dB(A) aumenta en 10.
+
+4.1.2.
+
+Propagación del sonido
+
+La energía de las ondas sonoras, y por lo tanto la intensidad del sonido, disminuyen con el cuadrado de la distancia a la fuente sonora. En otras palabras, si se aleja 200 metros de un aerogenerador, el nivel de sonido es un cuarto del que se tiene a 100 metros. Y así, si se multiplica por dos la distancia se hace que el nivel de dB (A) disminuya en 6. A una distancia de un diámetro de rotor de la base de un aerogenerador emitiendo 100 dB (A) generalmente se tiene un nivel de sonido de 55-60 dB (A), correspondiente a una secadora de ropa. Cuatro diámetros de rotor más allá se tienen 44 dB(A), que corresponden al sonido que tiene una tranquila sala de estar. A una distancia de 6 diámetros de rotor tiene alrededor de 40 dB(A).
+
+98
+
+En la practica, la absorción y la reflexión del sonido por superficies blandas y duras puede jugar un papel significativo en un emplazamiento particular, modificando los resultados mostrados en el párrafo anterior. Si se tienen dos aerogeneradores, en lugar de uno solo, situados a la misma distancia de una persona, naturalmente la energía sonora que llega a sus oídos es el doble. Esto significa que las dos turbinas aumentan el nivel de sonido en 3 dB (A). Cuatro turbinas en lugar de una aumentan el nivel de sonido en 6 dB (A). Se necesitan diez turbinas situadas a la misma distancia para percibir que la sonoridad se ha duplicado (es decir que el nivel de decibelios ha aumentado en 10).
+
+4.2.
+
+Contaminación visual
+
+En la figura 35 se muestra el parque eólico Kappel, en Dinamarca. Desde el punto de vista estético, es una de las distribuciones más agradables que se pueden encontrar. La forma del dique a lo largo de la costa se repite en la línea de las turbinas. Solo hay un elemento que molesta en la imagen: la única turbina al lado de la granja, que interrumpe la que de otra manera sería una disposición uniforme de las turbinas (esa turbina ya estaba ahí antes de que se construyera el parque eólico). Figura 35. Parque eólico Kappel
+
+99
+
+Fuente: Asociación danesa de la industria eólica. www.windpower.org
+
+Los aerogeneradores son siempre elementos altamente visibles en el paisaje. De lo contrario, no estarían situados adecuadamente desde un punto de vista meteorológico. En áreas llanas suele ser una buena opción situar las turbinas en una distribución geométrica simple, fácilmente perceptible por el espectador. Colocar las turbinas equidistantemente a lo largo de una línea recta es una buena solución, aunque el ejemplo del parque eólico Kappel puede ser incluso más elegante, donde los contornos del paisaje sugieren una solución así. Sin embargo, existen límites sobre la utilización de patrones simples. Por ejemplo, en paisajes con fuertes pendientes, rara vez es viable la utilización de un patrón simple, y suele ser mejor hacer que las turbinas sigan los contornos de altitud del paisaje. Cuando las turbinas están situadas en varias filas, rara vez es posible percibir la distribución cuando se mira el parque desde una altura de los ojos normal. Solo si el observador se sitúa al final de una fila, aparece como una distribución ordenada. 100
+
+Pintar las torres con un tono gris claro es un método empleado para camuflar los aerogeneradores, de esta forma se hace que se confundan bien con el paisaje. Bajo un criterio estético, los grandes aerogeneradores suponen una ventaja, porque generalmente tienen una velocidad de rotación menor que las turbinas más pequeñas. Así pues, en general las grandes turbinas no llaman la atención de la misma forma que lo hacen los objetos que se mueven rápidamente.
+4.3. Sombra proyectada
+
+Los aerogeneradores, al igual que el resto de estructuras altas, proyectan una sombra en las áreas vecinas cuando el sol está visible. Si se vive cerca de un aerogenerador es posible que sea molesto si las palas del rotor cortan la luz solar, causando un efecto de parpadeo cuando el rotor está en movimiento. Sin embargo, una planificación adecuada para el emplazamiento del aerogenerador puede ayudar a resolver este problema. Si se conoce la zona donde el potencial efecto de parpadeo va a tener determinado tamaño, se puede ser capaz de situar las turbinas de forma que se evite cualquier molestia importante para los vecinos. Afortunadamente, se puede predecir con bastante exactitud la
+
+probabilidad de cuándo y durante cuánto tiempo puede haber un efecto de parpadeo. No se puede saber por adelantado si habrá viento o cuál será la dirección del mismo, aunque utilizando astronomía y trigonometría se puede calcular bien un escenario probable o el caso más desfavorable, es decir, una situación donde siempre hay insolación cuando el viento está todo el tiempo
+
+101
+
+soplando y el rotor de la turbina sigue exactamente al Sol orientando la turbina exactamente como se mueve el Sol. Obtener la forma exacta, lugar y tiempo de la sombra de un aerogenerador requiere muchos cálculos, pero un programa informático eólico puede hacerlo de forma muy precisa, incluso en terrenos accidentados, y con ventanas de las casas de cualquier tamaño, forma, localización e inclinación. El tamaño de la sombra del rotor y el número de minutos de sombra anuales en las proximidades de la turbina varía proporcionalmente al área del rotor. La altura de buje de un aerogenerador tiene poca importancia para la sombra del rotor. En una torre más alta, la misma sombra se extenderá en un área mayor, por lo que alrededor de la turbina el número de minutos anuales con sombra realmente decrecerá. Dependiendo del tamaño del rotor de los aerogeneradores, pero en el caso de las turbinas más grandes, a más de entre 500 y 1000 metros de la torre, no parece que las aspas estén interceptando la luz, sino que la turbina se ve como un objeto con el sol tras de sí. Así pues, generalmente no es necesario considerar la proyección de la sombra a tales distancias.
+
+4.4.
+
+Aerogeneradores y su relación con la fauna
+
+Las aves colisionan a menudo con líneas aéreas de alta tensión, mástiles, postes y ventanas de edificios. También mueren atropelladas por los automóviles. Sin embargo, rara vez se ven molestadas por los aerogeneradores. Estudios de radar realizados en la parte occidental de Dinamarca, donde hay instalado un aerogenerador de 2 MW con un diámetro
+
+102
+
+de rotor de 60 metros, muestran que las aves tienden a cambiar su ruta de vuelo unos 100-200 metros antes de llegar a la turbina, y pasan sobre ella a una distancia segura. Alrededor del mundo hay varios ejemplos de aves anidando en jaulas montadas en las torres de los aerogeneradores. Las líneas de alimentación, incluidas las líneas de alimentación que conducen a los parques eólicos, representan para las aves un peligro mucho mayor que los aerogeneradores en sí mismos. Algunas aves se acostumbran a los aerogeneradores muy rápidamente, a otras les lleva algo más de tiempo. Así pues, la posibilidad de levantar parques eólicos al lado de santuarios de aves depende de la especie en cuestión. Al emplazar los parques eólicos normalmente se tendrán en cuenta las rutas migratorias de las aves, aunque estudios realizados muestran que las aves migratorias no colisionan con los aerogeneradores.
+
+103
+
+104
+
+5. MANTENIMIENTO
+
+5.1.
+
+Tareas
+
+Una de las ventajas de la utilización de los aerogeneradores para la producción de energía eléctrica es el bajo mantenimiento que deben recibir. Debido a la simplicidad del funcionamiento de estas máquinas, son pocas las tareas de mantenimiento rutinarias a las que se ven sometidos los aerogeneradores; por lo que la mayoría del tiempo pueden ser simplemente vigilados remotamente por medio de sensores para detectar irregularidades en su funcionamiento. Sin embargo, al estar los aerogeneradores sometidos a las condiciones climatológicas y al continuo funcionamiento de sus componentes, se hace necesario realizar labores de mantenimiento, para garantizar un óptimo desempeño de los componentes.
+
+105
+
+5.1.1.
+
+Cambio de aceite de la caja reductora
+
+La caja multiplicadora es la parte del aerogenerador donde se concentra la mayor cantidad de piezas en movimiento. Estas piezas (engranajes, cojinetes, ejes, etc.), al estar en contacto directo unas con otras, se ven sometidas a fricción, desgaste, calentamiento y todos los problemas que surgen debido a la naturaleza misma de los metales. Para reducir estos inconvenientes es necesario contar con una adecuada lubricación, la cual depende en gran parte de la calidad del aceite lubricante. Para evitar que la degradación del aceite impida que éste realice sus funciones dentro de la caja multiplicadora, es necesario reemplazarlo de acuerdo con las especificaciones del fabricante; respetando las normas de calidad, ingredientes y viscosidad del aceite que son recomendadas para cada caja multiplicadora. Esta tarea tiene la ventaja de poder realizarse en pocos minutos y con poco personal, ya que la mayoría de aerogeneradores están diseñados para tener un acceso directo y cómodo a los lugares donde se encuentran los puntos de mantenimiento de la caja multiplicadora. Adicional a esto, son pocas las herramientas y el equipo que se necesitan para realizar esta labor, pues solo es necesaria una llave para abrir el drenaje de aceite, otra para retirar los filtros y las mangueras para reemplazar el aceite.
+
+5.1.2.
+
+Inspección del rotor
+
+La parte de los aerogeneradores más propensa a fallar por la fuerza del viento es el rotor. Aún cuando las palas del rotor se fabrican con materiales,
+
+106
+
+formas y dimensiones que son lo suficientemente flexibles para soportar los esfuerzos provocados por los fuertes vientos y que al mismo tiempo son altamente rígidas para poder transmitir la potencia del viento; es necesario realizar inspecciones periódicas cuando el aerogenerador ya se encuentra emplazado, con el fin de localizar grietas o deformaciones que podrían derivar en fallas mayores en las aspas del rotor. La rotura de una parte de alguna pala puede provocar el paro total del aerogenerador. Incluso el desprendimiento de una pieza podría provocar accidentes en personas, animales o construcciones que pudieran estar alrededor de la máquina. Dependiendo del tamaño y diseño de la torre del aerogenerador, las inspecciones pueden realizarse accediendo al rotor por la torre o por medio de grúas. Este último caso es el que se muestra en la figura 36, donde personal de mantenimiento trabaja en una pala de 32 m de largo. Figura 36. Mantenimiento a una pala de rotor
+
+Fuente: Asociación danesa de la industria eólica. www.windpower.org
+
+También es importante que el rendimiento aerodinámico de la pala se mantenga en niveles aceptables; esto implica que debe de mantenerse libre de hongos, polvo, óxido, o cualquier otro elemento que pueda alterar el peso y
+
+107
+
+perfil aerodinámico de la pala. En el caso de palas con sistemas de regulación de ángulo de calaje (ver página 75) también debe de dársele mantenimiento a los alerones, es decir, mantener lubricados sus ejes de inclinación. Un aspecto muy importante a considerar en la realización de esta tarea es la seguridad. Debido a que se trabaja a grandes alturas, es fundamental ocupar arneses, cascos y todo el equipo de seguridad necesario para evitar accidentes, que a esas alturas pueden ser fatales. Otra medida de precaución, que siempre debe tomarse, es bloquear el rotor por medio del freno mecánico de emergencia.
+5.1.3. Mantenimiento de la torre
+
+Al ser la torre un componente estático en el funcionamiento del aerogenerador, podría decirse que es un elemento que se encuentra libre de mantenimiento. Sin embargo, al estar sometida en todo momento al deterioro que provocan las fuerzas de la naturaleza, es necesario prestarle la protección adecuada para un buen funcionamiento. El principal elemento que se tiene que evitar, por medio del mantenimiento, es la corrosión. Ya sea por el óxido que se forma en el metal (principal material de fabricación de las torres) debido a la lluvia; o, aún mayor, la corrosión provocada por la sal, en el caso de las torres marinas y parques eólicos situados en los litorales, es necesario que la torre esté recubierta de una capa de pintura que la proteja de los agentes externos que podrían dañar su estructura. Además, la selección de un color de pintura adecuado ayuda a reducir el impacto visual que provocan los aerogeneradores en el paisaje.
+
+5.1.4.
+
+Comprobación de sensores
+
+108
+
+En los aerogeneradores de alta tecnología, muchos de los parámetros de funcionamiento son medidos mediante sensores. De estos depende que se aproveche al máximo la energía del viento, así como también que los distintos componentes de la máquina trabajen de una forma segura y eficiente. Por esto debe de comprobarse que las lecturas que los sensores arrojen sean reales. Si, luego de evaluarse, resulta que algún sensor, sistema de medición o dispositivo de seguridad no cumple con las normas de buen funcionamiento, debe de ser reemplazado por uno que se encuentre en condiciones óptimas.
+
+5.2.
+
+Períodos recomendados
+
+Las horas que un aerogenerador está en funcionamiento dependen de diversos factores, tales como la época del año, su ubicación topográfica, las condiciones atmosféricas, etc. Además de esto, no todos los aerogeneradores trabajan bajo las mismas condiciones, ya que, dependiendo de su ubicación geográfica, pueden estar sometidos a vientos moderados o a vientos de gran potencia. Debido a estas circunstancias, tan variables, los períodos de mantenimiento no pueden ser generalizados para todas las máquinas, inclusive en aquellos aerogeneradores de un mismo parque eólico. La mejor forma de dar mantenimiento a este tipo de maquinaria, es haciéndolo de acuerdo al tiempo real de funcionamiento y a las condiciones de trabajo a las que ha estado expuesto el aerogenerador. Una manera de saber cuando es el momento propicio de realizar alguna tarea de mantenimiento es mediante un sistema de monitoreo de los distintos componentes. La mayoría de estos sistemas son electrónicos, y pueden llevar un registro con datos, como las horas de funcionamiento, las velocidades promedio del viento, la energía
+
+109
+
+generada; datos, con los cuales, se puede hacer un programa de mantenimiento acorde a cada generador. En aerogeneradores pequeños que no cuentan con la tecnología para poder realizar un programa de mantenimiento predictivo, el fabricante, por lo general, proporciona datos sobre los períodos de tiempo recomendados para hacer los servicios. Para tener un dato de referencia, en la tabla VIII se muestran los períodos de mantenimiento adecuados para un generador promedio trabajando bajo condiciones normales. Tabla VIII. Períodos de mantenimiento para un aerogenerador Tarea Aceite de la caja reductora Inspección del rotor Mantenimiento de la torre Comprobación de sensores Horas en funcionamiento 1,500 500 No influye 200 Tiempo transcurrido 6 meses 3 meses 2 años 1 mes
+
+5.3.
+
+Vida útil
+
+Los aerogeneradores modernos están diseñados para trabajar alrededor de 120,000 horas a lo largo de su tiempo de vida de diseño de 20 años. Esto supone mucho más que un motor de automóvil, que dura generalmente alrededor de 4,000 a 6,000 horas. La vida real de un aerogenerador depende tanto de la calidad de la turbina como de las condiciones climáticas locales, es decir, de la cantidad de turbulencias del emplazamiento. Por ejemplo, las turbinas marinas pueden durar más debido a la baja turbulencia en el mar.
+
+110
+
+6. ASPECTOS ECONÓMICOS
+
+6.1.
+
+Cálculo de costos de instalación de un aerogenerador
+
+6.1.1.
+
+Precio de los aerogeneradores
+
+Los precios entre aerogeneradores de la misma potencia pueden variar. Los motivos son, por ejemplo, las diferentes alturas de las torres y los diferentes diámetros de rotor. Una máquina especial para vientos suaves con un diámetro de rotor relativamente grande es más cara que una máquina para vientos fuertes con un diámetro de rotor pequeño. Al cambiar de una máquina de 150 kW a otra de 600 kW los precios más o menos se triplican, en lugar de cuadruplicarse. La razón es que hasta cierto punto existen economías de escala, por ejemplo la cantidad de mano de obra que participa en la construcción de una máquina de 150 kW no es muy diferente de la que hace falta para construir una máquina de 600 kW. Las características
+
+111
+
+de seguridad, la cantidad de electrónica necesaria para hacer funcionar una máquina pequeña o una grande es aproximadamente la misma.
+
+6.1.2.
+
+Costos de montaje
+
+Los costos de montaje incluyen las cimentaciones, normalmente hechas de hormigón armado, la construcción de carreteras, un transformador, conexión telefónica para el control remoto y vigilancia de la turbina, y los costos de cableado, es decir, el cable que va desde la turbina hasta la línea de alta tensión. Los costos de las carreteras y de las cimentaciones dependen de las condiciones del suelo, es decir, de cuan barato y fácil sea construir una carretera capaz de soportar camiones de gran peso. Otro factor variable es la distancia a la carretera ordinaria más cercana, los costos de llevar una grúa móvil hasta el sitio, y la distancia a una línea de alta tensión capaz de manejar la producción de energía máxima de la turbina. La conexión telefónica y el control remoto no es una necesidad, pero a menudo es bastante barato, por lo que resulta económico incluirlo en la instalación de una turbina. Obviamente es más barato conectar muchas turbinas en la misma localización que conectar una sola. Por otra parte, hay limitaciones a la cantidad de energía eléctrica que la red local puede aceptar. Si la red eléctrica es demasiado débil para manejar la producción de la turbina, puede ser necesario un refuerzo de red, es decir, una extensión de la red eléctrica de alta tensión.
+
+6.2.
+
+Factibilidad de puesta en marcha de un aerogenerador
+
+Los factores que se deben de tomar en cuenta cuando se planea ejecutar un proyecto eólico deben de ser perfectamente evaluados, ya que la mayoría de
+
+112
+
+las veces se requiere de una alta inversión monetaria que debe de verse retribuida con un eficiente funcionamiento de la maquinaria. Los elementos que más influyen para que un proyecto sea exitoso son los siguientes: •
+Condiciones eólicas. Los estudios sobre las condiciones eólicas en el
+
+terreno donde se planea emplazar el aerogenerador deben de hacerse en un periodo de al menos un año, debido a que si únicamente se recogen datos de algunos meses, los cambios estacionales podrían arrojar información engañosa sobre el potencial eólico del área. •
+Demanda eléctrica. En el caso de instalaciones eólicas interconectadas a
+
+la red eléctrica pública, debe de evaluarse la demanda de fluido eléctrico en el territorio donde brindarán servicio las turbinas eólicas. Muchas veces la cobertura y la oferta existente en ciertos territorios alcanza niveles tan altos que la introducción de este sistema de generación difícilmente podría llegar a ser rentable. •
+Aspecto financiero. Para llevar a buen término un proyecto eólico es
+
+fundamental contar con los recursos financieros que permitan desarrollarlo en todas sus etapas. En la mayoría de los casos este financiamiento proviene de bancos o entidades dedicadas a este tipo de actividades, por lo que es necesario evaluar las tasas de interés y los plazos de pago que se fijan, para determinar si la inversión puede ser recuperada en un tiempo prudencial. •
+Aspecto legal. Además de los aspectos técnicos que deben de
+
+contemplarse para evaluar la factibilidad de un proyecto eólico, también es indispensable conocer la legislación en materia energética, aduanera y tributaria para no tener inconvenientes para desarrollar el proyecto dentro de un marco legal.
+
+113
+
+•
+
+Aspecto político. La estabilidad política es esencial para poder tener el
+
+respaldo de que el proceso de inversión se desarrollará con el apoyo de las instituciones gubernamentales relacionadas con el tema, además de la seguridad de que el proyecto se hará en un ambiente de justicia y respeto de todas las partes involucradas.
+
+114
+
+7. CASO PRÁCTICO DEL AEROGENERADOR DE LA FACULTAD DE INGENIERÍA DE LA UNIVERSIDAD DE SAN CARLOS DE GUATEMALA
+
+7.1.
+
+Descripción del aerogenerador
+
+El aerogenerador instalado en el Parque Tecnológico es una máquina tripala marca Land Wind, serie AIR 403; la turbina alimenta un banco de baterías que pueden ser de 12 ó 24 voltios, en donde se acumula la carga para usos posteriores. El diámetro del rotor es de 117 mm y necesita de una velocidad mínima del viento de 3 m/s para poder arrancar. El sistema, con un peso de 6 kg, puede generar una potencia de 400 vatios a una velocidad de 20 m/s. En la figura 37, se muestra un diagrama del aerogenerador. Figura 37. Aerogenerador Land Wind AIR 403
+
+115
+
+Fuente: Manual AIR 403. http://www.windenergy.com/SUPPORT/downlman/ma403_d.pdf
+
+7.2.
+
+Utilización
+
+Una vez que se ha instalado el sistema correctamente, el regulador interno de la turbina se encarga del funcionamiento completo de ésta. La función principal de este regulador es detectar cuando la batería está completamente cargada, para que las aspas de la turbina entren en un estado de rotación lenta y silenciosa. Cuando esto ocurre, la turbina deja de mandar carga a la batería. Si las aspas se encuentran girando rápidamente y se enciende una luz roja en el cuerpo de la turbina, esto indicará que está cargando.
+
+Para detener el sistema o apagarlo, lo único que se debe hacer es desconectar el cable positivo y negativo de la batería, para luego unirlos (unir cable rojo con cable negro); esto hace que la velocidad de la turbina disminuya y se detenga. Para encender el sistema, se deben conectar los cables negativo y positivo de la turbina a la batería. Jamás debe cambiarse la polaridad de la conexión turbina-batería. Esto inmediatamente destruiría los sistemas electrónicos de la turbina.
+
+116
+
+El diseño de las aspas también ofrece regulación de potencia, en el caso de vientos fuertes. Las puntas de las aspas tienen una forma especial que arroja el exceso de viento cuando éste alcanza aproximadamente 18 m/s. Una desventaja de este sistema es que la turbina produce fuertes ruidos cuando la velocidad del viento es alta. El aerogenerador puede funcionar de 4 maneras distintas, estas son
+
+•
+
+Circuito abierto. Cuando la turbina está desconectada de la batería, ésta
+
+puede girar libremente; si funciona en circuito abierto por un periodo corto de tiempo, no se producirán daños. Por el contrario, si opera en circuito abierto por un período largo de tiempo, se puede producir cierto deterioro en las partes móviles, lo cual no es recomendado. Se debe tener la turbina en corto circuito (aspas bloqueadas) en vez de tenerla en circuito abierto, ya que los cojinetes sufren desgaste. •
+Funcionamiento normal. Se deben de conectar las baterías descargadas
+
+con la turbina, de manera que ésta las cargue hasta que el voltaje sea igual al punto de regulación. •
+Regulación. Cuando el voltaje de la batería iguala al punto de regulación,
+
+la turbina entra en estado de regulación. Las revoluciones por minuto se reducen considerablemente y el envío de corriente eléctrica hacia la batería se detiene. La operación de cargar la batería se reinicia cuando el voltaje de la batería disminuye del valor de carga total. •
+Frenado. Esto se logra al realizar un corto circuito, uniendo los cables
+
+positivo y negativo de la turbina con un interruptor de apagado. El
+
+117
+
+interruptor desconecta la turbina de la batería y luego produce el corto circuito. De este modo, las aspas pueden girar libremente, pero sin cargar la batería.
+
+7.3.
+
+Programa de capacitación del personal a cargo del Parque Tecnológico
+
+7.3.1.
+
+Seguridad
+
+Existen ciertos aspectos que deben de ser tomados en cuenta por el personal que esté a cargo de la operación y mantenimiento del aerogenerador del Parque Tecnológico, con el fin de evitar accidentes y fallas en el funcionamiento de los diversos componentes que integran el equipo de generación eléctrica. Los principales factores que deben ser considerados son los mecánicos y los eléctricos. •
+Factores mecánicos. Las aspas en rotación son el riesgo más grande.
+
+Estas aspas son fabricadas con un termoplástico sumamente resistente. En la punta del aspa, se pueden llegar a alcanzar velocidades de más de 480 kilómetros por hora. A esta velocidad, las aspas son casi invisibles y pueden causar serios daños. Por esto, el aerogenerador nunca debe colocarse donde alguien pueda acercarse a la trayectoria de las aspas. •
+Factores eléctricos. Este aerogenerador está equipado con dispositivos
+
+electrónicos que lo protegen contra sobrecargas eléctricas. Aun así, los
+
+118
+
+riesgos inherentes a la corriente eléctrica son potenciales, por lo que deben de tomarse todas las precauciones cuando se trabaja con este tipo de equipos. También es fundamental utilizar el calibre de cable adecuado en todas las conexiones, para evitar sobrecargas eléctricas que pudieran provocar un incendio.
+
+7.3.2.
+
+Mantenimiento
+
+Aunque este tipo de aerogeneradores están diseñados para funcionar por largos períodos sin requerir de mantenimiento, el desempeño y la fiabilidad aumentan si el sistema es revisado periódicamente. Antes de realizar cualquier inspección, se debe de asegurar que la turbina se encuentra apagada. Las siguientes tareas deben ser realizadas dos meses después de la instalación inicial, y luego cada seis meses • Revisar las aspas en busca de fracturas, desperfectos o desgaste de las mismas. Éstas deben ser reemplazadas si se encuentran dañadas. La turbina no debe ser operada con aspas fracturadas o desbalanceadas. Esto puede provocar desgaste, daño y fallas en el equipo. Las aspas no deben ser instaladas individualmente, éstas son balanceadas en conjunto, por lo tanto, se debe reemplazar el juego completo. • Revisar que los tornillos de las aspas y la tuerca del buje se encuentren perfectamente apretadas.
+
+119
+
+•
+
+Asegurarse de que los tornillos que acoplan el aerogenerador y la torre estén correctamente apretados de acuerdo a las especificaciones de torque que se encuentran en el manual del fabricante.
+
+• •
+
+Inspeccionar la torre. Suciedad en las aspas y en el cuerpo del aerogenerador pueden provocar disminución en el rendimiento de la turbina. Deben limpiarse las aspas con agua y jabón, para mantenerlas libres de partículas extrañas.
+
+•
+
+Revisar todas las conexiones eléctricas para asegurarse que se encuentran ajustadas y libres de corrosión.
+
+•
+
+Revisar los niveles de liquido en las baterías y, de ser necesario, agregar agua destilada.
+
+•
+
+Revisar el buje del rotor. El fabricante recomienda reemplazar las aspas y cojinetes cada cinco
+
+años, para un óptimo desempeño, ésta es únicamente una recomendación para mejorar el rendimiento, ya que la turbina ha sido diseñada para ser lo suficientemente resistente y segura para operar con poco o bajo mantenimiento por 20 años.
+
+120
+
+CONCLUSIONES
+
+1.
+
+El óptimo funcionamiento de un aerogenerador está directamente ligado a las condiciones eólicas del área donde se instalará éste.
+
+2.
+
+El diseño de aerogeneradores debe de hacerse individualmente, de acuerdo a las necesidades y aplicaciones de cada proyecto; utilizar un aerogenerador con condiciones distintas a las requeridas, podría resultar en pérdida de la inversión.
+
+3.
+
+Comparada con otras fuentes de energía alterna, la energía eólica es una excelente opción para disminuir el déficit de cobertura eléctrica a nivel nacional en áreas donde se reúnen las condiciones eólicas y de infraestructura eléctrica apropiadas.
+
+4.
+
+El impacto ambiental provocado por los aerogeneradores es tan bajo, comparado con otras fuentes utilizadas para producir energía eléctrica,
+
+121
+
+que puede no tomarse en cuenta al momento de proyectar un parque eólico. 5. Algunos aerogeneradores, debido a su bajo rendimiento y a los avances tecnológicos, han dejado de ser fabricados, tal es el caso del molino americano. Sin embargo, en algunos lugares del área rural aún pueden verse en funcionamiento, por lo que todavía existe el mercado para prestarle mantenimiento a este tipo de máquinas.
+
+122
+
+RECOMENDACIONES
+
+1.
+
+Para todo proyecto eólico se sugiere realizar un estudio del comportamiento del viento en el área en donde se planea instalar los aerogeneradores, por medio de estos análisis se conocerán los datos reales de la potencia del viento a lo largo de todo el año y se podrá seleccionar el equipo que mejor se adapte a esas condiciones. 123
+
+2.
+
+Es preciso reforzar los conocimientos de tecnología en medios no tradicionales de producción de energía eléctrica, en los estudiantes de Ingeniería Mecánica, de la Universidad de San Carlos de Guatemala.
+
+3.
+
+Incentivar el uso de aerogeneradores en zonas que aún no han sido electrificadas y que cuentan con los recursos eólicos suficientes para hacer factible la instalación de este tipo de máquinas.
+
+4.
+
+Como en todo tipo de máquinas, se debe cumplir estrictamente con los programas de mantenimiento de los aerogeneradores. Los bajos niveles de mantenimiento de las turbinas eólicas hacen que sea más fácil mantenerlos en condiciones óptimas de funcionamiento.
+
+124
+
+BIBLIOGRAFÍA
+
+1. Asociación danesa de la industria eólica. Visita guiada sobre la energía eólica. www.windpower.org. 2. Bottaro, Gustavo. Helicópteros The Site. http://helicopter.virtualave.net. 3. Departamento de Ciencias Atmosféricas, Universidad de Illinois UrbanaChampaign. Weather World 2010. http://www.2010.atmos.uiuc.edu.
+
+125
+
+4. Enciclopedia Encarta 1999. Microsoft Corporation. Washington, Estados Unidos, 1998. 5. Fernández Diez, Pedro. Energía Eólica. Departamento de ingeniería eléctrica y energética, Universidad de Cantabria. http://personales.ya.com/universal/TermoWeb/EnergiasAlternativas/eolic a/ 6. Gómez Moya, Luis Delfín. “La Energía Eólica”. Boletín de noticias El Bonillo, mayo del 2000. El bonillo virtual. http://club.telepolis.com/iceba/iceba/energeol/tema04.htm. Silvia. La meteorología 7. Larroca, http://www.geocities.com/silvia_larocca.
+al alcance de todos.
+
+8. López Hoenes, Carlos Roberto y Hesler Eduardo Acevedo Guerra. Guía para la instalación y operación de los sistemas solar y sistema eólico del Parque Tecnológico. Tesis Ing. Mec., Guatemala, Universidad de San Carlos de Guatemala, Facultad de Ingeniería, 2003. 84 pp. 9. Manual del propietario turbina Land Wind serie AIR 403. Revisión D, agosto del 2001. Southwest Windpower. http://windenergy.com/SUPPORT/downlman/ma403_d.pdf.
+
+126
+

@@ -52,7 +52,8 @@ public class PrefixSplitter extends JCasAnnotator_ImplBase {
 			else {
 				lemmaIndex.put(swt.getLemma(), swt);
 			}
-			
+		}
+		for(Term swt:termIndexResource.getTermIndex().getTerms()) {
 			Word word = swt.getWords().get(0).getWord();
 			lemma = word.getLemma();
 			pref = prefixTree.getPrefix(lemma);

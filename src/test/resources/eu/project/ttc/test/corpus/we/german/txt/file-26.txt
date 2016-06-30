@@ -1,0 +1,500 @@
+Technische Ausrüstung von Windenergieanlagen an extremen Standorten
+Henry Seifert
+Ebertstr. 96
+D-26382 Wilhelmshaven
+www.dewi.de
+
+Die Windenergienutzung hat in den letzten Jahren weltweit ein starkes Wachstum erfahren.
+Dabei wurden in den Anfängen der modernen Windenergietechnik zuerst die küstennahen
+windstarken Gebiete im Norden Europas mit direkt an das Netz gekoppelten
+Windenergieanlagen (WEA) erschlossen. Insbesondere in Deutschland, das momentan mit
+mehr als 10.000 MW installierter Leistung [1] an der Spitze der Windenergienutzung weltweit
+liegt, wuchsen nach und nach Windparks auf den küstennahen Standorten. Die
+Umgebungsbedingungen, d. h., die Windkonditionen, andere meteorologische Bedingungen
+sowie die Anschlußbedingungen an das elektrische Netz unterschieden sich nicht sehr von
+den Anforderungen die von der zu dieser Zeit dominierenden dänischen
+Windenergieindustrie und den entsprechenden Richtlinien abgedeckt wurden. Dies galt
+insbesondere auch für die standardisierten Windprognoseverfahren wie z.B. WAsP, das für
+diese Bedingungen optimiert und teilweise auch verifiziert war. Mit zunehmender
+Standortverknappung sowie mit zunehmender Nutzung der Windenergie in anderen
+Gebieten Europas und der Welt, mußten die damaligen Serienanlagen plötzlich gänzlich
+anderen externen Bedingungen trotzen. Dies reichte vom Betrieb in komplexem Gelände,
+wie es in Spanien, Griechenland aber auch in den Gebirgen von Deutschland und Österreich
+zu finden ist, bis hin zu extremen Standorten mit hohen Vereisungsaufkommen im Norden
+Skandinaviens.
+5,000 kW
+140
+
+Serien-WEA
+Prototypen
+
+2,500 kW
+
+Rotordurchmesser, m
+
+120
+
+1,500 kW
+100
+
+80
+
+600 kW
+500 kW
+
+60
+
+300 kW
+40
+
+50 kW
+20
+
+0
+1980
+
+1985
+
+1990
+
+1995
+
+2000
+
+2005
+
+2010
+
+Jahr
+
+Abbildung 1 Größenwachstum der Serien-WEA und von Prototypen auf dem deutschen
+Markt von 1980 bis heute.
+Die netzeinspeisende Windenergietechnik ist immer noch eine junge Technologie, die,
+werden nur WEA betrachtet, die in größeren Stückzahlen gebaut wurden, auf
+Betriebserfahrungen von maximal 10 bis 12 Jahre zurückschauen kann. Das oben genannte
+starke Wachstum bezieht sich aber nicht nur auf die hergestellten Stückzahlen, sondern
+auch auf das Größenwachstum, das, allein auf dem deutschen Markt, innerhalb von 12
+Jahren Serien - WEA von 300 kW bis heute 2,5 MW hervorgebracht hat. Prototypen bis
+4,5 MW werden gerade aufgebaut und in Betrieb genommen. Zusammen mit diesen
+Größenwachstum ging auch eine technische Entwicklung einher, die nicht nur aus der
+Forderung der größeren Dimensionen entstand, sondern auch durch die wachsende
+Erfahrung von immer neueren Anforderungen durch extreme, nicht „standardisierte“
+
+Seite 1 von 6
+
+Standorte gegeben sind. Das Größenwachstum der WEA auf dem deutschen Markt seit
+1980 ist in Abbildung 1 dargestellt
+Mit zunehmender Anzahl aufgestellter Anlagen und Zunahme der Betriebsstunden traten
+auch schon Schäden an Einzelkomponenten auf, deren Ursache vielerlei Gründe hatte. Die
+nationale und internationale Richtlinien- und Normenarbeit, die ebenso mit der Anwendung
+wuchs und umfangreicher wurde, konnte jedoch nur dem schnellen Wachstum „hinterher
+hinken“. Messungen der Beanspruchungen waren in der Anfangsphase ehr selten und meist
+nur auf Forschungsprojekte beschränkt. Verifizierungen der Lastannahmen fordern aber
+solche Messungen, nicht nur, um die Bauvorschriften den aktuellen externen Lasten und
+Betriebsbedingungen
+anzupassen,
+sondern
+auch
+um
+die
+entsprechenden
+Simulationsprogramme zur Auslegung der Strukturen zu optimieren. International sind die
+nachzuweisenden Lastfälle, die sich aus der Kombination von externen Lasten und
+Betriebsbedingungen ergeben in der IEC 61400-1 ed 2 festgelegt [2]. Dabei weist diese
+internationale Norm vier WEA-Klassen aus, die im Wesentlichen durch die mittlere
+Jahreswindgeschwindigkeit, den 50-Jahreswind und die Turbulenzintensität bestimmt sind.
+Die Werte gelten dabei in Nabenhöhe der Anlage. Gleich für alle Klassen ist die Forderung
+nach einer Betriebsfestigkeit von mindestens 20 Jahren. Die Norm verlangt den Nachweis
+von sogenannten Maximallasten und Ermüdungs- oder Fatiguelasten. Weitere Vorgaben
+sind zum Beispiel Windgradienten, Temperaturen, Niederschläge wie Schnee und Eis, aber
+auch entsprechende Bedingungen des elektrischen Netzes.
+Üblicherweise bieten Hersteller ihre Anlagen für eine dieser WEA-Klassen an, so dass die
+Projektentwickler den entsprechenden Typ nach den Standortbedingungen bestellen
+können. Für extreme Standorte sieht dies jedoch anders aus. Hier schreibt die IEC 61400-1
+ed 2 vor, dass der Konstrukteur die speziellen Anforderungen berücksichtigt und dies in einer
+S-Klasse mit speziellen externen Bedingungen definiert. Hierunter fallen zum Beispiel per
+Definition die Off-Shore-Anlagen. Aber auch Standorte mit sehr komplexem Gelände können
+leicht die „normalen“ Bedingungen überschreiten. Werden an solchen Standorten die
+Anlagen in Parks auch noch dicht aneinandergestellt, so sind frühzeitige Schäden an
+Komponenten wie Rotorblätter, Getriebe und Nachführantrieb vorprogrammiert. Beispiele,
+wie extreme externe Bedingungen die technische Ausstattung von WEA beeinflussen sind im
+Folgenden dargestellt:
+Im alpinen Raum Mitteleuropas, aber auch in den Bergen Nordspaniens sind über die
+Jahreszeiten große Schwankungen der Temperatur und damit der Luftdichte festzustellen.
+Eine reine stall-geregelte WEA an diesem Standorten, ist sie für den Betrieb im Winter
+optimiert und erreicht dort ihre Nennleistung, wird in der Sommerhälfte bei hohen
+Temperaturen bei weitem nicht die Nennleistung erreichen, und in der sowieso
+windschwächeren Zeit drohen höhere Ertragsverluste. Wird die Anlage auf den
+Sommerbetrieb optimiert, so quittiert sie es mit Überleistung bei der hohen Luftdichte im
+Winterhalbjahr. Dies führt zu Abschaltungen und damit ebenso zu Ertragsverlusten, oder
+möglicherweise sogar durch Überhitzung des Generators zu Schäden. Auch zweimaliges
+manuelles „Einstellen“ der Rotorblätter kostet Zeit und Geld, wobei unter Umständen durch
+das extreme Ent- und Belasten der Verbindungsschrauben Ermüdungsschäden auftreten
+können. Blattgeregelte WEA, seien es aktiv-pitch oder aktiv-stall Anlagen, stellen sich
+automatisch auf die geänderte Luftdichte ein. Bei der Standortauswahl ist der saisonale
+Temperaturgang ein deutliches Indiz und sollte entsprechend beachtet werden, nicht nur
+durch die entsprechende Korrektur der Leistungskennlinie, die Abschaltungen durch
+Überhitzung nicht berücksichtigt.
+Komplexe Gelände führen auch zu unvorhersehbaren Windstrukturen, die nur mit großem
+Aufwand rechnerisch oder meßtechnisch ermittelt werden können [3]. Bei Windmessungen
+in diesen Gebieten ist zu empfehlen, zusätzlich zu den Schalensternanemometern
+Ultraschallanemometer zu verwenden, um vertikale Komponenten im Bereich des Rotors zu
+
+Seite 2 von 6
+
+erkennen. Auch SODAR Messungen liefern neben detaillierten Windprofilen
+Vertikalkomponenten (Beispiel siehe Abbildung 2) und Windrichtungsänderungen über der
+Höhe [4]. Für diese Standortbedingungen ist es für den Konstrukteur wichtig, die
+Turbulenzintensität und die Anströmrichtungen zu kennen, um die Komponenten
+entsprechend auszulegen.
+
+Abbildung 2 Beispiel SODAR Meßkampagne über eine Messung im komplexen Gelände.
+Zwei exemplarische Windprofile (10 min-Mittelwerte) aus einem Tag zu
+verschiedenen Zeitpunkten. Meßhöhe bis 150 m.
+In vielen gebirgigen Standorten ist auch mit entsprechend häufigen Vereisungsbedingungen
+zu rechnen. In [5] wird über Ergebnisse eines von der Europäischen Kommission
+unterstützten Forschungsvorhaben berichtet. In vereisungsgefährdeten Gebieten sind
+mehrere Randbedingungen zu beachten, die zum größten Teil auch zu technischen
+Änderungen an der Maschine führen. Auch hier, wie bei Aufstellungen im komplexen
+Gelände ist eine Analyse des Standorts im Vorfeld der Planung unerläßlich. Schwierigkeiten
+bestehen in der genauen Vorhersage von Vereisungsbedingungen. Einerseits werden die für
+das Auftreten von Rotorblattvereisung benötigten meteorologischen Größen nicht an allen
+Meteorologiestationen
+aufgezeichnet,
+andererseits
+können
+orographische
+und
+kleinklimatische Eigenheiten des Standorts die Eisbildung stark beeinflussen, so dass eine
+genaue Aussage nicht getroffen werden kann [6]. In den seltensten Fällen wurde an
+vereisungsgefährdeten Standorten die Langzeitwindmessungen mit heizbaren Anemometern
+und Windfahnen durchgeführt, wobei meistens nur die Achse, nicht aber die Schalen
+beziehungsweise die Fahne beheizt wurden. Erkennbar sind Vereisungsbedingungen
+beispielsweise in monatlichen Windgeschwindigkeitsverteilungen, wenn im Winterhalbjahr
+die Häufigkeit der Windgeschwindigkeiten unterhalb 1 m/s deutlich zunimmt und das
+Anemometer nachweislich keine zu große Lagerreibung aufweist. Kriterien zur
+Standortbeurteilung bezüglich Vereisungsbedingungen sind also gefordert, ebenso wie eine
+angepaßte Ausstattung der meteorologischen Meßgräte. Ein schalenbeheiztes Anemometer,
+eine beheizte Windfahne sollten zusätzlich zu den üblichen Instrumenten zur
+Mindestausstattung einer Windmessung an solchen Standorten gehören.
+Eine weitere Forderung ergibt sich aus den immer größer und damit auch immer höher
+werdenden WEA. Nabenhöhen um die 100 m gehören heute schon zu den
+„Standardgrößen“, was bedeutet, dass die Rotorblätter durchaus in Kontakt mit niedrigen
+Wolken bekommen können. Sogenannte Wolkenvereisung ist die Folge. Die Anlagen
+müssen also mit entsprechenden Ausrüstungen zum Erkennen von Rotorblattvereisung
+ausgestattet sein und entsprechend reagieren. Während einer Vereisungswetterlage setzt
+sich Eis an der Rotorblattvorderkante (Blattnase) an. Es gibt nun zwei verschieden
+Strategien, mit dieser Tatsache umzugehen. Entweder die WEA setzt den Betrieb fort, dann
+muss gesichert sein, dass die WEA für die zusätzlichen Beanspruchungen aus Eislast und
+geänderter Aerodynamik und Dynamik ausgelegt ist und die Umgebung nicht durch vom
+Rotorblatt weggeschleuderte Eisstücke gefährdet wird [7], oder die WEA wird bei
+Vereisungsbeginn stillgesetzt. Beide Strategien verlangen, dass die Betriebsführung der
+
+Seite 3 von 6
+
+WEA den Eisansatz erkennt und entsprechende Maßnahmen ergreift. Abbildung 3 zeigt für
+einen Rotorblattschnitt die prinzipiellen Mechanismen des Eisansatzes im Betrieb, Leerlauf
+und Stillstand. Erste Erfahrungen mit Rotorblattheizungen liegen vor und zeigen, dass
+dessen Einsatz an stark vereisungsgefährdeten Standorten zur Erhöhung des
+Energieertrags und der Sicherheit beitragen kann [6]. Ob der Einsatz von Blattheizungen
+wirtschaftlich ist, hängt stark von der Häufigkeit der Vereisungswetterlagen ab. Auf dem
+Markt werden heute zwei Versionen von Rotorblattheizung angeboten. Eine
+Nasenbeheizung, die während des Betriebs oder im Stillstand die Profilnase durch
+entsprechende elektrisch gespeiste Heizfolien eisfrei hält, oder eine Aufheizung des
+stillstehenden Rotorblattes mit entsprechenden Warmluftkanälen und Heizlüftern im Innern
+des Blattes.
+Pitch geregelte WEA
+
+Stall geregelte WEA
+
+Fai
+
+im Stillstand
+
+ω∗r
+
+ω∗r
+α
+
+im Leerlaufbetrieb
+
+gebremst
+
+α
+v
+
+v eff
+
+v'
+
+f
+
+v ef
+
+Rotorebene
+
+α
+
+v
+
+v
+
+α = αca0
+
+ff
+
+v
+
+ve
+
+v = Windgeschwindigkeit
+v’ = reduzierte Windgeschwindigkeit in der Rotorebene
+r = örtlicher Radius
+ω = Winkelgeschwindigkeit
+veff = Effektive Anstömgeschwindigkeit am Blattelement
+α = Anstellwinkel
+Fai = Aerodynamische Kraft
+
+ϑ
+
+ϑ
+ω∗r
+ω∗
+
+Stärkerer Eisansatz an der Profilnase durch unterschiedliche Betriebsart
+Links Leerlauf, rechts Leistungsbetrieb
+
+Heizelemente
+
+Eisansatz an
+ungeheizten Teilen
+
+Eisansatz an geheizten
+Teilen und abgeschalteter
+Heizung
+
+Abbildung 3 Eisansatz an rotierenden WEA (linke Seite) und an abgestellten WEA mit
+Rotorblattnasenbeheizung.
+In vielen Fällen reicht es allerdings aus, die WEA bei beginnender Vereisung abzuschalten.
+Die Betriebsführung der WEA muß dies aber erkennen und die Anlage stillsetzen, bevor sich
+Eisstücke vom drehenden Rotor lösen und weggeschleudert werden. Eine nicht in Betrieb
+befindliche, vereiste WEA unterscheidet sich prinzipiell nicht von anderen Strukturen mit
+Eisansatz, wie zum Beispiel Türme oder Masten von Hochspannungsfreileitungen. Je nach
+Rotorstellung der stillstehenden Anlage ergeben sich für die beim einsetzenden Tauwetter
+abfallenden Eisstücke verschiedene Flugweiten in Lee-Richtung der Anlage. Es muss von
+der WEA-Betriebsführung her gewährleistet sein, dass die Anlage schon bei geringstem
+Eisansatz abschaltet und stillgesetzt wird bzw. nicht in Betrieb geht. Nach einer Abschaltung
+wegen Eisansatzes darf die WEA nicht wieder automatisch in Betrieb gehen, sondern nur
+nach visueller Inspektion, wenn sicher ist, dass kein Eis mehr an den Rotorblättern haftet
+und durch die erneute Inbetriebnahme jegliche Gefährdung der benachbarten Objekte
+ausgeschlossen ist. Dies kann beispielsweise eine ständige Überwachung der
+Leistungskurve sein, die einen Eisansatz an den Rotorblättern im Anfangsstadium erkennen
+kann. Rotorblätter von benutzen aerodynamisch hochwertige Profile, die die Leistung des
+Windes nur effektiv umsetzen können, wenn sie bei hohen Auftriebsbeiwerten geringe
+Widerstandsbeiwerte aufweisen. In [6] wurde der Einfluß verschiedener Vereisungsstadien
+auf genau diese Profileigenschaften im Windkanal untersucht. Eine Grundvoraussetzung für
+diese Methode der automatischen Eiserkennung ist die Verwendung von eisfreien, das heißt,
+heizbaren Anemometern (Schalenheizung, nicht nur Achsenheizung) und Windfahnen, um
+sicherzustellen, dass die WEA sich immer richtig in den Wind stellt. Beobachtungen zeigten,
+dass sich erst ein nennenswerter Eisansatz an der Rotorblattnase ansetzen muss, ehe sich
+einzelne Stücke vom Rotor lösen und weggeschleudert werden. Die Leistung des Rotors ist
+aber schon bei einem Eisansatz von etwa 3% (bezogen auf die örtliche Profiltiefe) deutlich
+vermindert.
+Ein eindeutiges Anzeichen von beginnender Rotorblattvereisung kann auch eine Zunahme
+des aerodynamischen Geräuschs sein, aber auch ein Verschieben des Geräuschspektrums
+Seite 4 von 6
+
+hin zu höheren Frequenzen. Eine Messung an einer WEA mit minimaler
+Rotorblattnasenvereisung und – bei sonst gleichen Wetterbedingungen – anschließendem
+Betrieb ohne Eisansatz zeigt diese Effekte deutlich (siehe Abbildung 4).
+65
+
+1/3 octave band spectrum
+SPL dB(A)
+
+Sound Pressure Level dB(A)
+
+63
+61
+59
+
+Frequency
+
+57
+55
+53
+51
+
+Clean LE
+49
+
+Iced LE
+
+47
+45
+0
+
+20
+
+40
+
+60
+
+80
+
+100
+
+120
+
+Electrical Power Output P/Prated*100, %
+
+Abbildung 4 Geräuschmessung bei leichter Rotorblattnasenvereisung und unvereistem
+Rotorblatt.
+Mit zunehmender Erschließung von Innlandsstandorten und Ländern, in denen
+Vereisungsbedingungen vorkommen, müssen die WEA mit entsprechender Instrumentierung
+ausgestattet sein.
+Die wachsenden Rotordurchmesser und Turmhöhen, der Anstieg der Massen der einzelnen
+Komponenten stellen nicht nur geänderte Anforderungen an die Fertigungsmethoden und
+Auslegungsstrategien der WEA-Komponenten, sondern auch an die Infrastruktur, den
+Transport und die Aufstellung. Kräne und Hubbühnen sind mit den WEA gewachsen,
+Turmkonzepte wurden angepaßt. Unter den großen WEA mit Durchmessern von 45 m und
+mehr ist heute beispielsweise eine deutlich Entwicklung weg von den reinen stall-geregelten
+WEA mit fester Drehzahl zu verzeichnen, wie in Abbildung 5 zu sehen ist. Das Bild zeigt die
+im Jahr 2002 auf dem deutschen Markt angebotenen WEA, aufgeteilt nach den technischen
+Ausstattungen [8].
+Eine weitere große Herausforderung wird die Anpassung der heutigen Anlagen und der
+nächsten Generation der Multimegawatt-Anlagen an die extremen Bedingungen des Offshore-Einsatzes sein. Die entfernte Lage der Standorte in der offenen See und die an ihnen
+anzutreffenden Wind- und Wellenbedingungen verlangen eine entsprechende technische
+Anpassung der Windenergieanlage. Durch die aufwendige und zeitlich begrenzte
+Zugänglichkeit bedingt müssen Offshore-WEA eine deutlich höhere Zuverlässigkeit im
+Betrieb erreichen, als es bei heutigen Anlagen erreicht wird. Ebenso länger müssen aus den
+gleichen Gründen die Wartungsintervalle sein. Die korrosive und erosive maritime
+Umgebung erfordert entsprechende Schutzmaßnahmen und Abdichtungen. Mit größerer
+Wassertiefe wächst der Aufwand für die Gründung. Da die Nabenhöhe über dem
+Wasserspiegel unabhängig von der Wassertiefe am Standort ist, muss die gesamte
+Tragkonstruktion entsprechend der Wassertiefe wachsen. Die wegen des langen
+Hebelarmes wirkenden Kippmomente sowie die durch Wellen angeregten zusätzlichen
+Belastungen müssen statisch und dynamisch beherrscht werden.
+
+Seite 5 von 6
+
+30
+
+G
+
+gearboxless
+
+25
+
+gearbox
+
+Anzahl angebotener WEA
+
+25
+
+pitch
+
+G
+17
+
+stall
+
+19
+
+20
+
+active-stall
+1 fix rotor speed
+
+17
+
+17
+
+2 fixed rotor speeds
+
+15
+12
+
+variable speed
+
+13
+10
+
+10
+
+G
+
+G
+5
+
+3
+
+3
+
+G
+3
+
+1
+
+3
+
+1
+
+3
+
+2
+
+1
+
+2
+
+0
+45 - 64.0
+
+64.1- 80
+
+Rotordurchmesser, m
+
+>80
+Quelle: BWE Marktübersicht 2002
+
+Abbildung 5 Heute auf dem deutschen Markt angebotenen Serien-WEA
+Windenergieanlagen werden heute schon an vielen extremen Standorten weltweit aufgebaut,
+vom Einsatz im kalten Klima der Antarktis, Nordskandinaviens und im alpinen Raum
+Europas, im komplexen Gelände Südeuropas bis zum Off-Shore-Einsatz. Jeder extreme
+Standort erfordert spezielle technische Anpassungen an die Komponenten der
+Windenergieanlage,
+die
+hier
+nur
+exemplarisch
+angeführt
+werden
+konnten.
+Betriebserfahrungen, Vermessungen aber auch aufgetretene Schäden, die an solchen
+extremen Standorten auftreten können, fließen in die Neuentwicklungen der WEA-Industrie
+ein, so dass immer mehr „nicht der Norm entprechende“ Standort in Zukunft sicher und
+wirtschaftlich genutzt werden können.
+
+Literatur
+[1] Ender, Carsten: Windenergienutzung in der Bundesrepublik Deutschland - Stand
+30.06.2002. DEWI-Magazin (2002) Nr. 21, S. 10 - 23.
+[2] International Electrotechnical Commission, IEC 61400-1 ed 2, Safety Requirements for
+Wind Turbines
+[3] M. Strack, e.a.; Wind Potential Assessment in Complex Terrain: Verification of WASP
+and Investigation of Improvements by Integration of Flow Models of Different Complexity;
+DEWEK 2000, Deutsches Windenergie-Institut, Wilhelmshaven, Oktober 2000.
+[4] Mellinghoff, H.; Strack, M.; Erfahrungen aus dem Meßbetrieb mit SODAR; DEWEK 2002,
+Wilhelmshaven, Germany, 23.-24. Oktober 2002.
+[5] Tammelin, B., Seifert, H.; WECO, Wind Energy production in COld climate, DEWEK
+2000, Deutsches Windenergie-Institut, Wilhelmshaven, Oktober 2000.
+[6] B. Tammelin; e.a.; Wind Energy Production in Cold Climate; Final Report, Meteorological
+Publications 41; Finnish Meteorological Institute, Helsinki, Finland, 2000.
+[7] H. Seifert: Betrieb von Windenergieanlagen unter Vereisungsbedingungen – Ergebnisse
+und Empfehlungen aus einem EU – Forschungsprojekt. 5. Österreichisches Wind Energie
+Symposium, St. Pölten 21. Oktober 1999, Energiewerkstatt, Friedburg, Österreich; S. 51
+– 61.
+[8] Windenergie 2002 Marktübersicht, Bundesverband Windenergie, ISBN 3-9808-236-0-1.
+
+Seite 6 von 6
+

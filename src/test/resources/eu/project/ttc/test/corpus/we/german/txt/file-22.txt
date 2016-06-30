@@ -1,0 +1,6723 @@
+Energieversorgung für Deutschland
+Statusbericht für den Energiegipfel am 3. April 2006
+
+Berlin, März 2006
+
+-B-
+
+Stand und Entwicklung der Energieversorgung
+Statusbericht zur Energieversorgung für den Energiegipfel
+
+Gliederung:
+
+Seite
+
+A. Kurzfassung I - XII
+B. Langfassung
+1. Entwicklung des Energieangebots 1
+2. Energienachfrage 5
+2.1 Internationale Entwicklung 5
+2.2 Entwicklung in Deutschland 8
+2.2.1 Energieverbrauch und —effizienz 8
+2.2.2 Energieaufkommen und Importe 11
+2.2.3 Beitrag erneuerbarer Energien 14
+2.2.4 Perspektiven 17
+3. Energiepreise 20
+3.1 Fossile Energierohstoffe 20
+3.2 Strom- und Warmepreise 22
+3.3 Internationale Preisvergleiche 27
+3.4 Preisbestandteile und Kosten fur Strom, Gas und Kraft-Warme-Kopplung 30
+3.5 Erneuerbare Energien 32
+4. Markte fur Strom und Gas 34
+4.1 Rechtlicher Ftahmen 35
+4.2 Anbieter, l\/Iarktzugang, Wettbewerb 36
+5. Klimaschutz 38
+5.1 Internationale und europaische Rahmenbedingungen 38
+5.2 Globale Entwicklung der Treibhausgasemissionen 40
+5.3 Emissionsentwicklung und Klimaschutzpolitik in Deutschland 43
+5.4 Erneuerbare Energien 47
+
+- C -
+6. Stromversorgung 49
+6.1 Stromerzeugung und -verbrauch 49
+6.2 Potentiale fur Effizienzsteigerungen 52
+6.3 Investitions- und I\/Iodernisierungsbedarf 53
+6.4 Abschaltung von Kernkraftwerken gemafi geltendem Atomgesetz 55
+6.5 Stromnetze 56
+6.6 Perspektiven 59
+7. Wérmeversorgung 60
+7.1 Energieverbrauch (nach Energietragern) 60
+7.2 Potentiale zur Effizienzsteigerung (einschl. KWK) 61
+7.3 Ausbau erneuerbarer Energien 63
+8. Verkehr und Kraftstoffe 63
+8.1 Energieverbrauch (nach Energietragern) 63
+8.2 Potentiale zur Effizienzsteigerung 64
+8.3 Perspektiven fur alternative Kraftstotfe 65
+9. Technologie und Forschung 67
+9.1 Weltmarkt Energietechnologien 67
+9.2 Forschungsschwerpunkte und strategische Handlungstelder 68
+9.3 Internationale Technologiepartnerschaften 71
+9.4 Exportinitiative Erneuerbare Energien 73
+C. Herausforderungen der Energiepolitik 1 - 5
+Schlussfolgerungen aus dem Statusbericht
+
+A. Statusbericht zur Energieversorgung
+- Kurzfassung –
+1. Einleitung
+
+In diesen Zeiten wird deutlicher als bisher sichtbar, wie sehr unser Land auf eine
+sichere, wirtschaftliche und umweltverträgliche Energieversorgung angewiesen ist. Die
+weltweit schnell wachsende Energienachfrage führt zu steigenden Energie- und
+Strompreisen.
+
+Diese
+
+belasten
+
+die
+
+Privathaushalte
+
+und
+
+machen
+
+vor
+
+allem
+
+energieintensiven Unternehmen im weltweiten Wettbewerb zu schaffen. Deutschland ist
+in hohem Maße von Energieimporten abhängig, Öl und Gas beziehen wir aus wenigen politisch
+
+teilweise
+
+instabilen
+
+-
+
+Förderregionen.
+
+Der
+
+weltweit
+
+wachsende
+
+Energieverbrauch führt auch zu einer Zunahme der Emissionen von Treibhausgasen.
+Die damit einhergehende Erwärmung der Atmosphäre erhöht die Wahrscheinlichkeit
+drastischer Folgen für Mensch und Natur. Erforderlich ist ein Gesamtkonzept, das
+Versorgungssicherheit, tragbare Energiekosten sowie wirksamen Klimaschutz in
+effizienter Weise miteinander verknüpft und eine Richtung für die anstehenden
+Investitionen in unsere Energieversorgung vorgibt. Der Statusbericht bestätigt die
+Notwendigkeit einer derart integrierten Strategie.
+
+Mit dem vorliegenden Statusbericht werden die Fakten und Zahlen zur Energieversorgung dargestellt. Sie machen insbesondere deutlich, in welchem Maße unsere
+Energieversorgung in die globalen Rohstoffmärkte und in den europäischen
+Binnenmarkt für Energie eingebunden ist. Der Bericht enthält eine Bestandsaufnahme
+der aktuellen Situation sowie eine Vorschau auf den Zeitraum bis 2020. Auf der
+Grundlage
+
+der
+
+Zahlen
+
+und
+
+Fakten
+
+werden
+
+in
+
+einem
+
+zweiten
+
+Schritt
+
+die
+
+Herausforderungen beschrieben, die sich daraus für die Modernisierung unserer
+Energieversorgung ergeben.
+
+2. Energiemix und Versorgung
+
+Der weltweite Energieverbrauch liegt gegenwärtig fast doppelt so hoch wie zu Beginn
+der 70er Jahre. Die wichtigsten Energieträger sind heute Öl (34 %), Kohle (24 %) und
+
+- II Gas (21 %). Die erneuerbaren Energien decken 14 %, die Kernenergie 7 % des
+globalen Energieverbrauchs.
+
+Nahezu alle vorliegenden globalen Szenarien gehen von einem weiteren Anstieg des
+weltweiten
+
+Energieverbrauchs
+
+aus.
+
+Nach
+
+Schätzungen
+
+der
+
+Internationalen
+
+Energieagentur (IEA) steigt der globale Energiebedarf bis 2020 um ein Drittel, wenn
+keine
+
+wirksamen
+
+Gegenmaßnahmen
+
+ergriffen
+
+werden.
+
+Getrieben
+
+wird
+
+diese
+
+Energienachfrage vor allem durch das hohe Wirtschaftswachstum in großen
+Schwellenländern wie China und Indien. Gerade hier gibt es aber auch ein beträchtliches Potenzial zur Verbesserung der Energieeffizienz und für den Einsatz
+erneuerbarer Energien. Dies verdeutlicht die Notwendigkeit einer Politik der weltweiten
+Ressourcenschonung und Effizienzsteigerung gerade auch aus ökonomischer und
+energiepolitischer Sicht.
+
+In Deutschland ist der Energieverbrauch seit vielen Jahren stabil bzw. sogar leicht
+sinkend. Er liegt heute um 4,5 % unter dem Wert von 1990. Der Energieverbrauch hat
+sich damit in unserem Land weitgehend vom Wirtschaftswachstum entkoppelt. Der
+spezifische Energieverbrauch als Maßstab für die Energieeffizienz liegt in Deutschland
+niedriger als in den meisten anderen Industriestaaten.
+
+Die Abhängigkeit der deutschen Energieversorgung von Importen ist im Zeitablauf
+ständig gestiegen. Sie beträgt bei Uran 100 %, bei Mineralöl nahezu 97 % und bei Gas
+83 %. Bei Steinkohle beträgt der Importanteil 61 %. Lediglich bei Braunkohle und bei
+den
+
+erneuerbaren
+
+Energien
+
+greift
+
+Deutschland
+
+vollständig
+
+auf
+
+einheimische
+
+Energieproduktion zurück. Strom aus Kernenergie wird nach internationaler Konvention
+als heimische Energiequelle gewertet.
+
+Erdöl, Kohle, Erdgas und Uran sind erschöpfliche Rohstoffe, die nur für einen begrenzten Zeitraum zur Verfügung stehen. Zu unterscheiden sind „Reserven“ (= sicher
+nachgewiesen und wirtschaftlich gewinnbar) und „Ressourcen“ (= nicht sicher oder
+derzeit nicht wirtschaftlich gewinnbar). Ein Maßstab für die Verfügbarkeit ist die
+sogenannte statische Reichweite, die den aktuellen Jahresverbrauch zugrundelegt. Die
+tatsächliche Reichweite wird allerdings durch die wachsende Energienachfrage, die
+
+- III Effizienz der Rohstoffnutzung, die Explorationstätigkeit und die technologische
+Entwicklung (z.B. bei Förder- oder Kraftwerkstechnologien) beeinflusst.
+
+Kohle ist der fossile Energieträger mit dem größten Vorkommen, das regional breit
+diversifiziert ist. Gemessen an dem gegenwärtigen Jahresverbrauch (statische
+Reichweite) werden die Reserven auf 95 Jahre und die Ressourcen auf zusätzliche 470
+Jahre geschätzt. Bei Erdgas liegen die Reserven bei 70 Jahren und die Ressourcen bei
+weiteren 75 Jahren. Bei Uran werden die Reserven auf 67 Jahre, die Ressourcen auf
+weitere 150 Jahre geschätzt. Der knappste fossile Energieträger ist das Erdöl. Für
+konventionelles Erdöl liegen die Reserven bei 42 Jahren und die Ressourcen bei
+zusätzlichen 21 Jahren. Hinzu kommt nicht-konventionelles Erdöl mit Reserven von 17
+Jahren und Ressourcen von weiteren 65 Jahren. Bei konventionellen Ölvorkommen
+wird der Scheitelpunkt der weltweit maximalen Förderung nach Schätzungen der
+Bundesanstalt für Geowissenschaften und Rohstoffe (BGR) zwischen 2015 und 2035
+erwartet. Die Öl- und Gasvorräte sind regional stark auf den Nahen Osten, Osteuropa
+und Afrika konzentriert. Die IEA erwartet bei den fossilen Energien bis 2030 keine
+grundlegenden
+
+Engpässe.
+
+Allerdings
+
+nimmt
+
+die
+
+Abhängigkeit
+
+der
+
+Öl-
+
+und
+
+Gasversorgung von politisch und ökonomisch instabilen Förderregionen zu.
+
+Die Bedeutung der erneuerbaren Energien wächst weltweit. Anders als bei den fossilen
+Energieträgern und Uran gibt es hier keine zeitlich und mengenmäßig begrenzten
+Ressourcen.
+
+Allerdings
+
+verschiedener
+
+Faktoren
+
+ist
+
+das
+
+wirtschaftlich
+
+eingeschränkt.
+
+realisierbare
+
+Der
+
+Potenzial
+
+Wissenschaftliche
+
+aufgrund
+
+Beirat
+
+der
+
+Bundesregierung für Globale Umweltveränderungen (WBGU) schätzt, dass mit deutlich
+weitergehenden
+
+Maßnahmen
+
+der
+
+Anteil
+
+der
+
+erneuerbaren
+
+Energien
+
+am
+
+Weltenergieverbrauch bis 2050 auf 50 % erhöht werden kann.
+
+Zu den Perspektiven des künftigen Energieverbrauches in Deutschland gibt es
+verschiedene Studien, die je nach Annahmen zu Energiepreisen, Energieeffizienz,
+erneuerbaren Energien und Politikmaßnahmen zu unterschiedlichen Ergebnissen
+kommen:
+
+EWI/PROGNOS gehen in ihrer Energieprognose im Energiereport IV (erstellt im Auftrag
+des BMWi) davon aus, dass der Primärenergieverbrauch in Deutschland bis 2010 in
+
+- IV etwa unverändert bleibt und bis 2020 um 9 % abnimmt. Dabei kommt es zu
+Verschiebungen bei den Marktanteilen der Energieträger. Während der Anteil des
+Mineralöls bis 2020 weitgehend stabil bleibt, erhöht sich der Anteil von Erdgas auf
+29 %. Der Anteil der Steinkohle sinkt geringfügig (11 %), während der Anteil der
+Braunkohle leicht ansteigt (12 %). Erneuerbare Energien erreichen einen Anteil von
+8 %. Bei der Stromerzeugung aus Kernenergie wird angenommen, dass sie gemäß den
+Regelungen des Atomgesetzes nach 2020 ausläuft. Insgesamt steigt nach der
+Prognose des Energiereports bis 2020 der Anteil von Öl und Gas an der
+Energieversorgung, entsprechend erhöht sich die Importabhängigkeit von gegenwärtig
+60 % auf etwa 70 %.
+
+Zu anderen Ergebnissen gelangt ein Szenario von DLR/IFEU/WI (erstellt im Auftrag des
+BMU), das verstärkte Maßnahmen im Bereich der Energieeffizienz und einen
+schnelleren Ausbau der erneuerbaren Energien unterstellt. Der Primärenergieverbrauch
+in Deutschland sinkt danach bis zum Jahr 2020 um 24 % gegenüber 2002. Der Anteil
+erneuerbarer Energien erhöht sich im selben Zeitraum auf 12 %. Als Folge sinken
+sowohl die absolute Menge als auch der Anteil der fossilen Energieträger Erdöl, Erdgas
+und Steinkohle. Die Importabhängigkeit der deutschen Energieversorgung verringert
+sich.
+
+3. Märkte und Preise
+
+Die massiv gestiegenen Energie- und Strompreise belasten Privathaushalte und
+Unternehmen. Wichtige Einflussfaktoren sind die Beschaffungskosten für Energierohstoffe, Herstellungs- und Netzkosten sowie staatliche Maßnahmen. Letztlich ist aber
+die Preisgestaltung auch ganz wesentlich von einem funktionierenden Wettbewerb auf
+den Strom- und Gasmärkten abhängig.
+
+Im deutschen Strommarkt sind mehr Unternehmen tätig als in den Märkten anderer EULänder. Er ist dennoch durch eine hohe Konzentration auf der Erzeugungsebene
+gekennzeichnet. Im Strombereich entfallen auf die vier Verbundunternehmen
+zusammen über 80 % der inländischen Kraftwerkskapazität. Allerdings gibt es eine
+große Anzahl von regionalen Versorgern und Stadtwerken. Im Gasbereich gibt es nur
+
+-Vwenige Unternehmen, die Gas importieren und überregionale Netze zur Gasversorgung
+besitzen. Zentrale Bedeutung für den Wettbewerb hat sowohl bei Strom als auch bei
+Gas ein diskriminierungsfreier Netzzugang.
+
+Durch Umsetzung des europäischen Rechts wurden in Deutschland die Strom- und
+Gasmärkte liberalisiert. Mit dem 2005 neu gestalteten Energiewirtschaftsgesetz sind die
+Voraussetzungen für einen funktionierenden Wettbewerb verbessert worden. Mit dem
+Gesetz wurde die Bundesnetzagentur beauftragt, bis Mitte 2006 ein tragfähiges
+Konzept zur Erhöhung der Kosteneffizienz im Netzbereich (sog. „Anreizregulierung“)
+vorzulegen. Im Gasbereich hat die Netzagentur mit den Verbänden einen Vorschlag
+erarbeitet, wie ein diskriminierungsfreier Zugang zum Gasnetz realisiert werden kann.
+Deutsche und europäische Kartellbehörden untersuchen daneben auch die Frage des
+möglichen Missbrauchs der marktbeherrschenden Stellung einzelner Unternehmen im
+Bereich der Stromerzeugung und beim Gasvertrieb.
+
+Der Ölpreis steigt auf den Weltmärkten seit 2001 stetig an und liegt gegenwärtig
+(Februar 2006) auf einem Niveau von 60 $/b. Ähnliches gilt für die mit den Ölpreisen
+verknüpften Gaspreise. Im Vergleich dazu sind die Preise für Importkohle relativ stabil,
+allerdings haben auch hier die Preise seit 2002 angezogen.
+
+Über die weitere Entwicklung der Preise für fossile Energien gehen die Prognosen
+auseinander. Die IEA geht mittelfristig von einer Preisberuhigung aus, weil ausreichend
+Ressourcen vorhanden sind und sich die inzwischen angelaufenen Investitionen in
+neue Vorkommen auswirken werden. Andererseits wird in Erwartung weltweit
+steigender Energienachfrage, anhaltender Spekulation und globaler Krisensituationen
+auch ein dauerhafter Hochpreispfad nicht ausgeschlossen.
+
+Eine Erhöhung des Ölpreises um 1 $/b belastet die deutsche Rechnung für Öl und Gas
+mit 1 Mrd. €. Die inländischen Energiepreise werden durch den Weltmarkt unmittelbar
+beeinflusst. Davon ausgenommen sind die Kosten der heimischen Energien: Bei
+Braunkohle ist von langfristig stabilen und bei erneuerbaren Energien von sinkenden
+Kosten auszugehen. Die Preise für Heizöl und Gas haben sich in den letzten 10 Jahren
+sowohl für die Industrie als auch für private Haushalte stark erhöht, z.T. sogar mehr als
+verdoppelt. Der Preis für Normalbenzin stieg 1995 bis 2005 von 0,77 € auf 1,20 € pro
+
+- VI Liter. Die Strompreise sind im Zuge der Liberalisierung der Märkte zunächst gesunken,
+seit 2001 jedoch wieder deutlich angestiegen. Bei den Strompreisen liegt Deutschland
+zusammen mit Großbritannien, Italien und der Schweiz im oberen Drittel der
+europäischen Länder.
+
+Wichtige Ursachen für die Preisentwicklung bei Strom und Gas sind die gestiegenen
+Preise für Energierohstoffe, die auch in Europa zunehmende Stromnachfrage
+(Deutschland ist seit 2003 Nettoexporteur) sowie die Wettbewerbsbedingungen für die
+Durchsetzung höherer Strom- und Gaspreise. Aber auch staatliche Abgaben
+(Stromsteuer),
+
+das
+
+Erneuerbare-Energien-Gesetz
+
+und
+
+bestimmte
+
+Effekte
+
+des
+
+Emissionshandels (insbesondere die Einpreisung der kostenlos zugeteilten Emissionszertifikate) haben zu dieser Entwicklung beigetragen.
+
+4. Klimaschutz
+Wenn schwere negative Folgen des globalen Klimawandels auf Mensch und Ökosysteme verhindert werden sollen, muss sichergestellt werden, dass die globale
+Erwärmung der Oberflächentemperatur der Erde nicht mehr als 2 °C gegenüber der
+vorindustriellen Zeit beträgt. Um dies zu erreichen, müssten der steigende Trend bei der
+Emission von Treibhausgasen gebrochen und bis zum Jahr 2050 die Emissionen
+weltweit halbiert werden.
+
+Allerdings zeigt der derzeitige Trend in eine ganz andere Richtung. Von 1990 bis 2004
+ist die Emission der Treibhausgase weltweit um 26 % gestiegen. Nahezu zwei Drittel
+des Anstiegs seit 1990 entfallen auf China, die USA und Indien. In der EU-15 sind die
+Emissionen seit 1990 leicht gesunken. Deutschland hat seine Emissionen bis Ende
+2004 gegenüber 1990 bereits um rund 18 % vermindert. Einen wichtigen Beitrag hierzu
+haben die Steigerung der Energieeffizienz, etwa durch Modernisierung von Kraftwerken
+oder Sanierung von Gebäuden, und der Ausbau erneuerbarer Energien geleistet.
+
+Die 1994 in Kraft getretene VN-Klimarahmenkonvention und das 2005 in Kraft getretene
+Kyoto-Protokoll bilden die rechtliche Grundlage für den weltweiten Klimaschutz. Nach
+dem Kyoto-Protokoll müssen die Industrieländer ihre Gesamtemissionen im Zeitraum
+
+- VII 2008 bis 2012 gegenüber 1990 um 5 % senken. Mit Ausnahme der USA und Australien,
+die das Protokoll bislang nicht ratifiziert haben, haben alle Industrieländer verbindliche
+Verpflichtungen übernommen. Die EU-15 hat sich verpflichtet, die Treibhausgase um
+8 % zu reduzieren. Die Mitgliedstaaten tragen in unterschiedlichem Umfang zu diesem
+Ziel bei. Im Rahmen der EU-Lastenverteilung hat Deutschland einen Anteil von 21 %
+übernommen. Die Zielerreichung in der EU-15 ist sehr unterschiedlich. Einige Länder
+müssen noch massive Anstrengungen unternehmen, um ihre Verpflichtungen zu
+erfüllen.
+
+Im Dezember vergangenen Jahres begannen in Montreal Gespräche über den
+weltweiten Klimaschutz für die Zeit nach 2012 (Ablauf der Kyoto-Periode). Der
+Europäische Rat hält eine möglichst breite Mitwirkung aller Länder für erforderlich und
+schlägt für die Industrieländer eine weitergehende Verminderung der Treibhausgase in
+einer Größenordnung von 15 bis 30 % bis zum Jahre 2020 vor. Der Umweltrat hat sich
+darüber hinaus dafür ausgesprochen, für die Industrieländer eine Minderung der
+Emissionen um 60 bis 80 % bis 2050 zu prüfen. Die Bundesregierung setzt sich dafür
+ein, dass alle Industriestaaten und wirtschaftlich fortgeschrittene Schwellenländer wie
+China und Indien wirksam in ein neues Klimaschutzabkommen einbezogen werden und
+entsprechend ihren Fähigkeiten Verpflichtungen übernehmen. Sie schlägt in diesem
+Zusammenhang
+
+vor,
+
+dass
+
+sich
+
+die
+
+EU
+
+im
+
+Rahmen
+
+der
+
+internationalen
+
+Klimaschutzverhandlungen verpflichtet, ihre Treibhausgasemissionen bis zum Jahr
+2020 gegenüber 1990 um 30 % zu reduzieren. Unter dieser Voraussetzung wird in
+Deutschland eine darüber hinausgehende Reduktion der Emissionen angestrebt.
+
+Weltweit existieren große Potenziale, die Emission von Treibhausgasen durch eine
+Steigerung der Energieeffizienz und eine wirtschaftlich effiziente Nutzung erneuerbarer
+Energien zu mindern. Ein Weg zur Ausschöpfung dieser Potenziale sind gemeinsame
+Projekte zur Modernisierung der Energieversorgung. Dort kann mit vergleichsweise
+geringen Kosten eine Verminderung der Treibhausgase erreicht werden. Die dort
+erzielte Minderung kann den Unternehmen im Rahmen des Emissionshandels
+gutgeschrieben werden. Über den Emissionshandel können mittelfristig zunehmend
+kosteneffiziente Potenziale zur Verminderung der Treibhausgase mobilisiert werden.
+Darüber hinaus ist nach der Absprache der G 8 in Gleneagles eine enge
+
+- VIII Zusammenarbeit zwischen Industrie- und Entwicklungsländern zur anspruchsvollen
+Modernisierung der Energieversorgung notwendig.
+
+5. Stromversorgung
+
+Die Stromerzeugung basiert in Deutschland gegenwärtig auf den „drei Säulen“
+Kernenergie (26 %), Braunkohle (25 %) und Steinkohle (22 %). Aber auch Erdgas
+(11 %) und erneuerbare Energien (10 %) tragen substanziell zur Stromerzeugung bei.
+Seit Mitte der 90er Jahre hat sich die Stromerzeugung aus erneuerbaren Energien
+kräftig erhöht, insbesondere durch den Ausbau der Windenergie.
+
+Kernenergie-, Braunkohle- und Wasserkraftwerke decken aus Kostengründen den
+sogenannten Grundlastbereich ab, d. h. sie laufen in der Regel rund um die Uhr,
+während Steinkohle und Erdgas wegen höherer Brennstoffkosten vorwiegend im
+sogenannten Mittellastbereich eingesetzt werden. Aber auch die Stromerzeugung aus
+Biomasse kann im Mittellast- und Grundlastbereich eingesetzt werden. Dagegen stellt
+die
+
+fluktuierende
+
+Stromerzeugung
+
+aus
+
+Wind
+
+und
+
+Photovoltaik
+
+besondere
+
+Anforderungen an die Steuerung des Gesamtsystems. Die Netzstudie der Deutschen
+Energieagentur zeigt auf, welche Probleme auftreten und mit welchen Maßnahmen und
+Kosten diese gelöst werden können.
+
+Der Stromverbrauch ist in Deutschland seit 1990 um 11% gestiegen und liegt 2005 bei
+611 TWh. Beim Pro-Kopf-Verbrauch rangiert Deutschland in der OECD im Mittelfeld.
+Trotz erreichter Erfolge bestehen nach wie vor erhebliche Potenziale zur Erhöhung der
+Stromeffizienz. Die Beispiele reichen von der Vermeidung von Stand-by-Verlusten bei
+Elektrogeräten
+
+über
+
+moderne
+
+Heizungspumpen
+
+bis
+
+hin
+
+zu
+
+hocheffizienten
+
+Elektromotoren in der Industrie. Die Ausschöpfung dieser Potenziale hängt von der
+Entwicklung der Strommärkte und -preise sowie von der Gestaltung der politischen
+Rahmenbedingungen ab.
+
+Nach den Regelungen des Atomgesetzes wird der Beitrag der Kernkraftwerke zur
+Stromerzeugung von derzeit 163 TWh (etwa 26 % der Gesamterzeugung) bis zum Jahr
+2023 auslaufen. Die danach vorgesehene Abschaltung der Anlagen richtet sich nach
+
+- IX den gesetzlich festgelegten Reststrommengen, der jährlichen Stromerzeugung sowie
+der Übertragung von Strommengen zwischen den Anlagen.
+
+Die weitere Entwicklung von Stromverbrauch und Stromerzeugung hängt von einer
+Vielzahl ökonomischer und politischer Faktoren ab. In einer Reihe von Studien wurden
+verschiedene Szenarien für die zukünftige Entwicklung abgeleitet.
+
+Der Energiereport IV geht davon aus, dass der Stromverbrauch in Deutschland bis
+2010 auf 617 TWh leicht ansteigt, danach wieder langsam absinkt und im Jahr 2020 mit
+594 TWh geringfügig unter dem derzeitigen Niveau liegt. Der Anteil der Steinkohle sinkt
+danach im Jahr 2020 auf 18 %, der Anteil der Braunkohle steigt auf 28 %, der Anteil von
+Erdgas steigt deutlich auf 24 %, die Stromerzeugung aus erneuerbaren Energien erhöht
+sich auf 20 %. Dabei unterstellt die Studie für die Kernenergie die Umsetzung des
+Ausstiegsbeschlusses.
+
+In anderen Studien wird eine stärkere Absenkung des Stromverbrauchs und ein höherer
+Anteil regenerativen Stroms angenommen. Nach einem Szenario der Deutschen
+Energieagentur, das auf einer Untersuchung der TU München zu Effizienzpotenzialen
+basiert, sinkt der Stromverbrauch bis 2020 um 5 %. Ein Szenario von DLR/IFEU/WI
+prognostiziert unter den derzeitigen Rahmenbedingungen, dass die Stromerzeugung
+aus erneuerbaren Energien im Jahr 2020 einen Anteil von 25 % erreicht und damit
+deutlich über der Prognose des Energiereport IV liegt. Auch diese Studien gehen von
+der Umsetzung des Kernenergieausstiegsbeschlusses aus.
+Für die deutsche Stromversorgung besteht mittel- bis langfristig ein erheblicher
+Investitions- und Modernisierungsbedarf. Bis 2020 muss ein großer Teil der bestehenden Kraftwerkskapazität ersetzt werden. Ein großer Teil der fossilen Kraftwerke
+ist älter als 25 Jahre, einige Anlagen sind älter als 50 Jahre. Auch aus der nach dem
+Atomgesetz
+
+vorgesehenen
+
+Abschaltung
+
+von
+
+Kernkraftwerken
+
+ergibt
+
+sich
+
+ein
+
+Investitionsbedarf, damit rechtzeitig ausreichende Ersatzkapazitäten zur Verfügung
+stehen. Modernisierungsbedarf besteht zudem bei den Elektrizitätsnetzen.
+
+Welche Kraftwerke in welchen Zeiträumen neu gebaut werden hängt von den
+Marktbedingungen, der Stilllegung von Kernkraftwerken und dem politischen Rahmen
+
+-Xab. Außerdem ist die Entwicklung von Stromnachfrage und Verbrauchseffizienz
+einzubeziehen. In jüngerer Zeit ist eine Vielzahl von Planungen für den Neubau fossiler
+Kraftwerke bekannt geworden. Danach sollen bis 2012 neue Kraftwerkskapazitäten in
+der Größenordnung von 20.000 MW in Betrieb genommen werden. Hinzu kommt bis
+2012 ein Ausbau der Stromerzeugungskapazität aus erneuerbaren Energien um etwa
+12.000 bis 14.000 MW.
+
+6. Wärme und Kraftstoffe
+
+Der Wärmebedarf in Deutschland wird zur Hälfte durch Gas, zu einem Viertel durch
+Heizöl sowie durch Strom, Kohle, Fernwärme und andere Energieträger gedeckt. Der
+Anteil erneuerbarer Energien an der Wärmebereitstellung liegt bei gut 5 %. Der
+Kraftstoffbedarf wird fast ausschließlich durch Mineralölprodukte gedeckt. Der Anteil
+erneuerbarer Energien am Kraftstoffbedarf im Straßenverkehr liegt bei gut 3 %.
+
+Der Verbrauch von Benzin, Diesel und Heizöl ist wegen der stark gestiegenen Preise in
+den letzten Jahren rückläufig. Es bestehen aber nach wie vor erhebliche Potenziale zur
+Effizienzsteigerung sowie zur Nutzung erneuerbarer Energien. Die Ausschöpfung dieser
+Potenziale hängt von der Entwicklung der Öl- und Gaspreise und der Gestaltung der
+politischen Rahmenbedingungen ab.
+
+Effizienzpotenziale im Wärmebereich liegen vor allem in der Verbesserung der
+energetischen Qualität von Gebäuden und Heizanlagen. Die Bundesregierung
+unterstützt höhere Energieeffizienz durch rechtliche Standards für den Neubau und die
+Förderung der Gebäudesanierung. Darüber hinaus leistet auch die Kraft-WärmeKopplung einen wichtigen Beitrag. Nach der KWK-Vereinbarung zwischen Wirtschaft
+und Bundesregierung soll bis 2010 (Basis: 1998) eine CO2-Einsparung von 20 bis
+23 Mio. t durch KWK-Maßnahmen erreicht werden.
+
+Das langfristige Nutzungspotenzial für Wärme aus erneuerbaren Energien (Biomasse,
+Solarenergie, Geothermie) liegt in Deutschland nach vorliegenden Schätzungen
+(u.a. ZSW) bei bis zu 820 TWh. Dies entspricht mehr als 50 % des heutigen
+Wärmebedarfs. Es ist noch näher zu prüfen, in welchem Umfang dieses Potenzial auch
+
+- XI wirtschaftlich nutzbar ist. Zur Förderung des weiteren Ausbaus sind neben der
+Fortschreibung des Marktanreizprogramms auch weitere Instrumente (z.B. ein
+regeneratives Wärmenutzungsgesetz) in der Diskussion.
+
+Große Effizienzpotenziale existieren auch bei der Absenkung des Kraftstoffverbrauchs
+von Fahrzeugen. Die Kraftstoffstrategie der Bundesregierung geht bis 2020 von
+Effizienzsteigerungen bei Motoren von etwa 15 bis 30 % aus. Die europäische
+Automobilwirtschaft will die durchschnittlichen CO2-Emissionen neu zugelassener PKW
+bis 2008 auf 140 g pro km senken. Zudem soll das EU-rechtlich vorgegebene Ziel
+erreicht werden, den Anteil der Biokraftstoffe bis zum Jahr 2010 auf 5,75 % des
+Kraftstoffmarktes zu erhöhen.
+
+7. Technologie und Forschung
+
+Forschung und Entwicklung sowie der breite Einsatz moderner Technologien sind
+entscheidend, um unter den weltweit veränderten Bedingungen die Anforderungen an
+eine sichere, wirtschaftliche und umweltverträgliche Energieversorgung zu meistern.
+Die Schwerpunkte der Forschungsförderung lagen in den letzten Jahren in den
+Bereichen rationelle Energieumwandlung, erneuerbare Energien, nukleare Sicherheitsund Endlagerforschung sowie Fusionsforschung. Deutschland hat eine international
+führende Position auf den Gebieten Kraftwerkstechnologie, Brennstoffzellen, Sonnenund Windenergie.
+
+Allerdings sind die Fördermittel des Bundes für Forschung und Entwicklung moderner
+Energietechnologien in den letzten Jahren beträchtlich zurückgefahren worden. Sie
+lagen 2004 real rund 40 % unter dem Niveau Ende der 90er Jahre. Damit bleibt die
+staatliche Förderung moderner Energietechnologien weit hinter dem Engagement
+anderer Industrieländer, etwa den USA und Japan, zurück. Ebenso wichtig ist aber das
+Engagement der Privatwirtschaft, insbesondere auch der großen Energieversorgungsunternehmen.
+
+Folgende Schwerpunkte stehen bisher im Hinblick auf die Modernisierung der
+Energieversorgung im Mittelpunkt: Das ist einmal die rationelle Energieumwandlung,
+
+- XII etwa im Bereich Kraftwerkstechnik und Brennstoffzellen. Im Hinblick auf den
+Klimaschutz gehören dazu neue Technologien zur Abscheidung und Speicherung von
+CO2. Zunehmend wichtiger werden Effizienztechnologien auf der Nachfrageseite
+(Industrie, Produkte, Verkehr, Gebäude). Bei den erneuerbaren Energien zielen die
+Anstrengungen darauf ab, innovative Techniken voranzubringen und die Kosten der
+Nutzung erneuerbarer Energieträger weiter zu senken. Aber auch die nukleare
+Sicherheits- und Endlagerforschung behält ihren Stellenwert.
+
+Technologiepolitik wird nicht mehr allein national geleistet, sondern ist eng in die
+europäische und die internationale Zusammenarbeit eingebettet. Weltweit wird die
+steigende Nachfrage nach Energie nur dann gebremst werden können und der Trend
+bei der Emission von Treibhausgasen umgekehrt werden, wenn es gelingt, mit
+moderner Technologie die Energieeffizienz und die Nutzung erneuerbarer Energien
+auch in den schnell wachsenden Entwicklungsländern zu steigern. Deshalb sind neue
+Partnerschaften
+anspruchsvolle
+
+zwischen
+
+Industrie-
+
+Modernisierung
+
+der
+
+und
+
+Entwicklungsländern,
+
+Energieversorgung
+
+und
+
+die
+
+auf
+
+eine
+
+Technologietransfer
+
+gerichtet sind, von entscheidender Bedeutung. Dabei kann auf bestehenden
+Partnerschaften, etwa zu hocheffizienten Kohletechnologien oder erneuerbaren
+Energien, aufgebaut werden.
+
+Weltweit bietet sich für die deutsche Wirtschaft ein großes Exportpotenzial. Nach
+Schätzungen der IEA müssen bis zum Jahr 2030 weltweit insgesamt 16 Billionen US-$
+– d.h. rund 570 Mrd. US-$ pro Jahr – in die Modernisierung der Energieversorgung
+investiert werden. Allein die Umsetzung des Internationalen Aktionsprogramms zu
+erneuerbaren Energien der Konferenz Renewables 2004 in Bonn erfordert jährliche
+Investitionen von rund 30 Mrd. US-$. Die bestehende Exportförderung in Deutschland
+leistet einen wichtigen Beitrag zur Erschließung dieser Märkte. Zunehmende Bedeutung
+auch als Instrument der Exportförderung können darüber hinaus internationale
+Klimaschutzprojekte nach dem Kyoto-Protokoll und die Marktentwicklung durch
+Einführung neuer Anreizinstrumente für Effizienztechnologien und erneuerbare
+Energien in Entwicklungsländern erlangen.
+
+B.
+
+Statusbericht zur Energieversorgung
+- Langfassung -
+
+1. Entwicklung des Energieangebots
+Die deutsche Energieversorgung ist eingebunden in die globalen Rohstoffmärkte sowie
+in den europäischen Energie-Binnenmarkt. Das globale Energieangebot wird vor allem
+bestimmt von der langfristigen Verfügbarkeit an fossilen und spaltbaren Energierohstoffen sowie wachsenden Beiträgen aus dem Potential der erneuerbaren Energien.
+Der Anteil der fossilen Energieträger Kohle, Erdöl und Erdgas an der globalen
+Energieversorgung liegt gegenwärtig bei rund 80 %. Weitere Beiträge liefern
+Kernenergie (7 %), Wasserkraft (2 %) und - überwiegend in den Entwicklungsländern nicht-kommerzielle Biomasse sowie sonstige erneuerbare Energien (12 %).
+
+Erdöl, Kohle, Erdgas und Uran sind erschöpfbare Rohstoffe, die nur für einen begrenzten Zeitraum zur Verfügung stehen. Die potentielle Nutzungsdauer wird bestimmt
+durch die Größe des jeweiligen Ressourcenpotentials sowie die Intensität und
+Produktivität der Nutzung. Für die Abschätzung des Gesamtpotentials gibt es
+unterschiedliche Definitionen und Messkonzepte. Wichtig ist insbesondere die
+Unterscheidung der Begriffe „Reserven“ und „Ressourcen“. Reserven umfassen die
+sicher nachgewiesenen und mit bekannter Technologie wirtschaftlich gewinnbaren
+Vorkommen. Ressourcen sind Vorkommen, die entweder noch nicht wirtschaftlich zu
+fördern sind oder die noch nicht sicher nachgewiesen, aber aufgrund geologischer
+Indikatoren erwartet werden. Die Reserven an nicht-erneuerbaren Energierohstoffen
+betrugen nach BGR (2005) Ende 2004 insgesamt etwa 37.500 Exajoule (EJ). Die Höhe
+der Ressourcen wird mit rund 180.000 EJ angegeben.
+
+Kohle ist der fossile Energieträger mit den größten Vorkommen. Die Reserven werden
+auf 20.800 EJ, die Ressourcen auf 105.000 EJ geschätzt. Bei den Reserven entfallen
+jeweils rund ein Drittel auf Nordamerika und Austral-Asien. Hypothetisch betrachtet
+entsprechen die ausgewiesenen Reserven an konventionellen Energierohstoffen etwa
+95 gegenwärtigen Jahresverbräuchen; die Ressourcen etwa 470 Jahresverbräuchen.
+Kohlenvorräte sind auch in Deutschland in beträchtlichem Maße vorhanden. Die Steinkohlenreserven (Ruhr, Saar, Ibbenbüren) werden von der BGR mit etwa 6 EJ (200 Mio t
+SKE) bewertet, die Ressourcen mit etwa 138 EJ (4.700 Mio t SKE). Die Schätzungen
+. . .. . .
+
+-2für die Braunkohlenreserven (Lausitz, Mitteldeutschland, Rheinisches Revier) liegen bei
+58 EJ (6.600 Mio t), für die Ressourcen bei 668 EJ (76.000 Mio t).
+
+Die globalen Reservenschätzungen für den gegenwärtig wichtigsten Energieträger, das
+konventionelle Erdöl, liegen bei 6.700 EJ (= 160 Mrd. t). Die zusätzlichen Ressourcen
+werden mit 3.400 EJ (82 Mrd. t) angegeben. Hypothetisch betrachtet entsprechen die
+ausgewiesenen
+
+Reserven
+
+an
+
+konventionellen
+
+Erdöl
+
+etwa
+
+42
+
+gegenwärtigen
+
+Jahresverbräuchen, die Ressourcen weiteren 21 Jahresverbräuchen. Außerdem
+schätzt die BGR die Reserven an nicht-konventionellem Erdöl (Schweröl, Ölsande,
+Ölschiefer) auf 2.760 EJ (66 Mrd. t); bei den Ressourcen ergibt sich eine Schätzung von
+10.460 EJ (250 Mrd. t). Hier entsprechen die Reserven etwa 17 und die Ressourcen
+weiteren 65 gegenwärtigen Jahresverbräuchen. Die Förderung von konventionellem
+Erdöl wird einen Scheitelpunkt der weltweiten maximalen Förderung (sog. „depletion
+mid-point“) erreichen, der je nach zugrunde liegender Modellrechnung zwischen 2015
+und 2035 eintreten wird. Steigende Rohölpreise, Technologieentwicklungen und
+Effizienzsteigerungen schieben diesen Zeitpunkt tendenziell nach hinten. Nach
+Erreichen des Scheitelpunktes wird die maximal mögliche Produktion unabhängig von
+der Nachfrage von Jahr zu Jahr abnehmen.
+
+Die Ölvorräte sind regional stark konzentriert. Auf die Länder des Nahen Ostens entfallen ca. 62 %, die OPEC insgesamt verfügt über 76 % der konventionellen Reserven.
+In den OECD-Ländern liegen nur 6 %. Bei den konventionellen Ressourcen haben die
+Länder des Nahen Ostens einen Anteil von 25 %, der GUS 26 % sowie Afrikas 12 %.
+Beim nicht-konventionellen Erdöl dominieren dagegen die OECD-Länder bei den Reserven (63 %, vor allem Nordamerika) und bei den Ressourcen (56 %).
+
+Europas Anteil (ohne GUS) an den konventionellen Erdölreserven liegt bei 2 %. Auch in
+Deutschland gibt es nur vernachlässigbare Ölreserven. Die gegenwärtige heimische
+Förderung deckt lediglich 3 % des inländischen Ölbedarfs.
+
+Beim konventionellen Erdgas geht die BGR aktuell von verfügbaren globalen Reserven
+in Höhe von ca. 5.600 EJ (176.000 Mrd. m3) aus. Zusätzlich gibt es Ressourcen in
+Höhe von 6.560 EJ (207.000 Mrd. m3). Darüber hinaus werden Ressourcen von nichtkonventionellem Erdgas in Höhe von 48.633 EJ erwartet. Davon entfällt ein Großteil auf
+...
+
+-3Aquifere
+
+und
+
+Gashydrate,
+
+deren
+
+wirtschaftliche
+
+Nutzung
+
+ungewiss
+
+ist.
+
+Die
+
+ausgewiesenen Reserven an konventionellem Erdgas entsprechen hypothetisch
+betrachtet etwa 70 gegenwärtigen Jahresverbräuchen; die Ressourcen (ohne
+Aquifergas und Gashydrate) etwa 75 weiteren Jahresverbräuchen.
+
+Auch die Erdgasvorkommen sind regional ungleich verteilt. 41 % der konventionellen
+Reserven entfallen auf Länder des Nahen Ostens und 32 % auf Länder der GUS, während in den gegenwärtigen Verbrauchsschwerpunkten Nordamerika und Europa insgesamt nur knapp 8 % der Reserven liegen. Für Deutschland gibt die BGR die Erdgasreserven mit 9 EJ (270 Mrd. m3) und die zusätzlichen Ressourcen mit 6 EJ (200 Mrd. m3)
+an (gegenwärtige Förderung rd. 20 Mrd. m3).
+
+Nach Angaben der BGR wird die Höhe der Uranreserven mit 3,8 Mio. t U (gewinnbar
+bis 80 $/kg U) bzw. mit 4,7 Mio. t U (bis 130 $/kgU) angegeben. Darüber hinaus gibt es
+weltweite Ressourcen in Höhe von 10 Mio. t, die bei steigenden Preisen und
+technischem Fortschritt gewinnbar sind oder aus geologischen Gründen zu erwarten
+sind. Ausgehend von einem konstanten jährlichen Verbrauch von 70 000 t U
+entsprechen die Reserven etwa 67 gegenwärtigen Jahresverbräuchen der weltweiten
+Kernkraftwerke, die Ressourcen 150 Jahresverbräuchen. Darüber hinaus ist die
+Reichweite von Kernbrennstoffen für die Kernenergienutzung abhängig von dem jeweils
+eingesetzten Brennstoffzyklus und der angewandten Reaktortechnologie.
+
+Nach Einschätzung des Energiereports IV (EWI/PROGNOS 2005) sowie der
+Internationalen Energieagentur werden bei den fossilen Energieressourcen im
+Prognosezeitraum bis 2030 keine Engpässe erwartet. Allerdings nimmt sowohl für die
+EU insgesamt als auch vor allem für Deutschland die Abhängigkeit der Öl- und
+Gasversorgung von Förderregionen zu, die teilweise politisch oder ökonomisch instabil
+sind. Kohle ist dagegen über einen langen Zeitraum stabil verfügbar. Deutschland
+verfügt mit der Braunkohle über einen Energieträger, der über längere Zeiträume zu
+niedrigen Kosten gefördert werden kann.
+
+Die Bedeutung der erneuerbaren Energien wächst weltweit. Der Anteil der
+erneuerbaren Energien am Weltprimärenergieverbrauch liegt nach Angaben der IEA im
+Jahr 2003 bei rund 14 %, 18 % der weltweiten Stromproduktion gehen auf erneuerbare
+...
+
+-4Energien zurück, vor allem auf große Wasserkraft. Mehr als 45 Staaten haben
+Ausbauziele, 48 Staaten haben Förderinstrumente für erneuerbare Energien entwickelt.
+Die EU hat sich das Ziel gesetzt, bis zum Jahr 2010 den Anteil der erneuerbaren
+Energien am Stromverbrauch auf 21 % (EU-25) und an der Gesamtenergie auf 12 % zu
+erhöhen.
+
+Anders als bei den fossilen Energieträgern und Uran gibt es bei erneuerbaren Energien
+keine zeitlich und mengenmäßig begrenzten Ressourcen oder Reserven. Allerdings ist
+aufgrund begrenzter Flächen, unterschiedlicher meteorologischer Bedingungen und
+weiterer Faktoren das jährlich realisierbare Potenzial eingeschränkt.
+
+Der Wissenschaftliche Beirat der Bundesregierung für Globale Umweltveränderungen
+(WBGU) schätzt, dass bei Ausschöpfung aller Möglichkeiten der Anteil der
+erneuerbaren Energien an der globalen Energiebereitstellung bis zum Jahr 2050 auf
+50 % erhöht werden kann.
+
+Eine Abschätzung des realisierbaren Potenzials in Deutschland ergibt nach
+einschlägigen Studien, dass ein Großteil des derzeitigen Energiebedarfs auf der Basis
+Erneuerbarer Energien gedeckt werden kann, wenn es gelingt, diese Potenziale
+langfristig wirtschaftlich zu erschließen (s. Tab. 1).
+
+...
+
+-5Tab. 1: Langfristiges Nutzungspotenzial erneuerbarer Energien für die Strom,- Wärmeund Kraftstoffbereitstellung in Deutschland sowie Nutzung erneuerbarer Energien im
+Jahr 2005 (Endenergie); im Vergleich Gesamtendenergieverbrauch 2005
+Strombereitstellung
+
+Wärmebereitstellung
+
+Kraftstoffbereitstellung
+
+Nutzung
+2005
+
+Potenziale
+Ertrag
+
+Nutzung
+2005
+
+Potenziale
+Ertrag
+
+Nutzung
+2005
+
+Potenziale
+Ertrag
+
+TWh
+
+TWh/a
+
+TWh
+
+TWh/a
+
+TWh
+
+TWh/a
+
+Wasserkraft
+
+21,5
+
+24
+
+-
+
+-
+
+-
+
+-
+
+Windenergie
+(Land und See)
+
+26,5
+
+165
+
+-
+
+-
+
+-
+
+-
+
+Biomasse
+
+13,1
+
+60
+
+76,5
+
+200
+
+20,7
+
+60
+
+Photovoltaik
+
+1,0
+
+105
+
+-
+
+-
+
+-
+
+-
+
+Geothermie
+
+0,0002
+
+200
+
+1,6
+
+330
+
+-
+
+-
+
+Solarthermie
+
+-
+
+-
+
+3,0
+
+290
+
+-
+
+-
+
+62,1
+
+554
+
+81,1
+
+820
+
+20,7
+
+60
+
+Erneuerbare Energien
+Gesamt
+Gesamtverbrauch 2005
+
+611
+
+1.499
+
+610*)
+
+*) Kraftstoffverbrauch im Straßenverkehr
+Quelle: BMU-Studien: "Ökologisch optimierter Ausbau der Nutzung erneuerbarer Energien in Deutschland", 2004;
+"Stoffstromanalyse zur nachhaltigen energetischen Nutzung von Biomasse", 2004; AGEE-Stat, ZSW
+Stand Februar 2006
+
+Das Potenzial der Wasserkraft in Deutschland ist bereits weitgehend ausgeschöpft,
+große noch ungenutzte Potenziale bestehen jedoch noch bei der Nutzung von
+Biomasse, Geothermie , Solarenergie und Windenergie.
+
+2. Energienachfrage
+2.1. Internationale Entwicklung
+
+Mit 443 EJ liegt der Weltenergieverbrauch nach Angaben der IEA gegenwärtig (2003)
+fast doppelt so hoch wie zu Beginn der 70er Jahre (229 EJ). Wichtigster Energieträger
+ist Öl (34 %) vor Kohle (24 %) und Gas (21 %). Die erneuerbaren Energien decken fast
+14 % des globalen Energieverbrauchs, davon entfallen rund 11 %-Punkte auf
+...
+
+-6Biomasse, 2 %-Punkte auf Wasserkraft und 1 %-Punkt auf die anderen erneuerbaren
+Energien. Die Kernenergie hat einen Anteil von knapp 7 %. 51 % des weltweiten
+Energieverbrauchs beanspruchen gegenwärtig die Industrieländer (OECD), 10 % die
+Übergangsländer und 39 % die Entwicklungs- und Schwellenländer.
+
+Nahezu alle gegenwärtig vorliegenden globalen Szenarien gehen von einem weiteren
+Anstieg des Weltenergieverbrauchs aus. Das Referenzszenario des World Energy
+Outlook (IEA, 2005) unterstellt mit einer Rate von 1,6 % einen Verbrauchszuwachs bis
+2030 um rund die Hälfte auf 682 EJ. Mehr als zwei Drittel des Verbrauchszuwachses
+würden dabei von den Entwicklungsländern, deren Pro-Kopf-Verbrauch im Jahr 2003
+ein Bruchteil des Pro-Kopf-Verbrauchs in den Industrieländern betrug, in Anspruch
+genommen. So entfiel auf einen Inder im Durchschnitt etwa ein Neuntel des
+Energieverbrauchs eines Einwohners innerhalb der OECD. Gerade in diesen Regionen
+sind die Erwartungen hinsichtlich Wirtschaftswachstum und Bevölkerungszunahme am
+größten. 80 % des Energieverbrauchszuwachses würden durch fossile Energieträger
+geleistet werden. Selbst im Alternativszenario – unter der Voraussetzung stärkerer
+energiepolitischer Eingriffe (u.a. steuerliche und kapitalmarktbezogene Anreize für
+massive Investitionen in Effizienzsteigerung, verstärkter Einsatz von erneuerbaren
+Energien und Kernkraft) – ergäbe sich noch ein deutlicher Anstieg des globalen
+Energieverbrauchs um 1,2 % auf 615 EJ, ca. 10 % (CO2-Emissionen ca. 16%) unter
+dem Ergebnis des Referenzszenarios.
+
+Vor diesem Hintergrund erklärt sich das strategische Interesse vieler Staaten und
+Unternehmen an der Sicherung der Ressourcenbasis durch Investitionen in die Öl- und
+Gasexploration im Ausland.
+
+...
+
+-7Abb.1: Zuwachs des weltweiten Primärenergieverbrauchs bis 2030 gegenüber 2002
+
+257
+
+Welt
+
+170
+
+Entwicklungsländer
+
+67
+
+OECD
+
+20
+
+Übergangsländer
+
+0
+
+50
+
+100
+
+150
+
+200
+
+250
+
+300
+
+EJ
+Quelle: IEA
+
+Auf die EU (25) entfällt ein Anteil von 16 % am globalen Energieverbrauch. Das größte
+Verbraucherland ist Deutschland (Anteil am EU-Verbrauch 20,0 %; Anteil am Weltverbrauch 3,3 %), vor Frankreich (15,6/2,6 %) und Großbritannien (13,4/2,2 %). Die
+Energieversorgung der EU stützt sich zu 48 % auf Energieimporte (ohne
+Berücksichtigung von Uranimporten).
+
+...
+
+-8Abb. 2: Energieverbrauch 2003
+
+Gas
+21%
+
+Welt = 443 EJ
+
+Nuklear
+7%
+Wasser
+2%
+andere
+Erneuerbare
+12%
+
+EU (25) = 73 EJ
+Nuklear
+15%
+
+Gas
+23%
+
+Wasser
+1%
+andere
+Erneuerbare
+5%
+Kohle
+18%
+
+Öl
+38%
+
+Öl
+34%
+
+Kohle
+24%
+
+Quelle: IEA 2005
+
+2.2. Entwicklung in Deutschland
+
+2.2.1 Energieverbrauch und -effizienz
+
+Anders als in vielen anderen Industriestaaten ist der Energieverbrauch in
+Deutschland seit vielen Jahren weitgehend stabil. Er erreichte bereits 1979 ein Maximum. Heute (2005) liegt er bei 14.238 Petajoule (PJ) und damit um 4,5 % unter dem
+Wert von 1990. Energieverbrauchsanstieg und Wirtschaftswachstum sind somit in
+Deutschland weitgehend entkoppelt.
+
+...
+
+-9Abb. 3: Entwicklung des Primärenergieverbrauchs in Deutschland seit 1990
+16.000
+
+14.916
+14.238
+
+14.000
+
+12.000
+
+10.000
+
+PJ
+
+Sonstige
+Kernenergie
+Wasser/Wind
+Gas
+Mineralöl
+Braunkohle
+Steinkohle
+
+8.000
+
+6.000
+
+4.000
+
+2.000
+
+1990
+
+1991
+
+1992
+
+1993
+
+1994
+
+1995
+
+1996
+
+1997
+
+1998
+
+1999
+
+2000
+
+2001
+
+2002
+
+2003
+
+2004
+
+2005
+
+Quelle: AG Energiebilanzen 2006
+
+Abb. 4: Entkopplung von Wirtschaftswachstum und Energieverbrauch in Deutschland
+130
+125
+120
+
+Index 1990 = 100
+
+115
+
+Wirtschaftswachstum
+
+110
+105
+100
+95
+90
+
+Primärenergieverbrauch
+
+85
+80
+1990 1991 1992 1993 1994 1995 1996 1997 1998 1999 2000 2001 2002 2003 2004 2005
+Quelle: AG Energiebilanzen, Statistisches Bundesamt, eigene Berechnungen
+
+...
+
+- 10 Hinsichtlich der gebräuchlichen Effizienz-Indikatoren für die Energienutzung schneidet
+Deutschland im internationalen Vergleich relativ günstig ab. Bezogen auf die wirtschaftliche Leistung (BIP) liegt der spezifische Energieverbrauch („Energieintensität“)
+in Deutschland mit 0,18 toe/$ unter dem Durchschnitt der IEA (0,20), der EU-25 (0,20)
+und der Welt (0,32).
+
+Dabei hat sich der spezifische Energieverbrauch in Deutschland im Zeitablauf deutlich
+verbessert. Für den Zeitraum 1990 bis 2005 ergibt sich auf der Basis nationaler Werte
+eine durchschnittliche Verbesserung um 1,8 % p.a. Im internationalen Vergleich liegt
+Deutschland damit unter den Industrienationen in der Spitzengruppe (Zeitraum 1990 bis
+2003).
+
+Auch künftig ist mit einer weiteren Verbesserung der Energieeffizienz zu rechnen. Nach
+der Einschätzung des Energiereport IV wird der durchschnittliche spezifische Energieverbrauch bis 2030 um 2,1 % p.a. sinken. Dies wäre allerdings nicht ausreichend, um
+die im Koalitionsvertrag angestrebte Verdopplung der Energieproduktivität für den
+Zeitraum 1990 bis 2020 zu erreichen. Nach den vergleichsweise niedrigen
+Effizienzverbesserungen in den ersten Jahren dieses Jahrzehnts (seit 2000: 0,9 % p.a.)
+muss sich die Produktivitätsrate in den kommenden Jahren sprunghaft auf
+durchschnittlich 2,9 % p.a. erhöhen, um das Verdopplungsziel zu erreichen.
+
+Die Energieversorgung Deutschlands ist breit diversifiziert. Der Anteil des Mineralöls
+zum Primärenergieverbrauch (PEV), der zu Beginn der 90er Jahre noch bei 40 % lag,
+ist bis 2005 zugunsten des zunehmenden Einsatzes von Erdgas auf 36 % gefallen.
+Mineralöl und Erdgas zusammen liegen seit Jahren relativ stabil bei fast 60 %. Erdgas
+hat gegenwärtig einen Anteil von 23 %, Steinkohle von 13 %, Kernenergie von 12 %
+und Braunkohle von 11 %. Der Beitrag der erneuerbaren Energien erreichte 2005 einen
+Anteil von 4,6 %.
+
+...
+
+- 11 Abb. 5: Primärenergieverbrauch in Deutschland 2005 nach Energieträgern
+
+14.238 PJ
+Steinkohle
+13%
+
+Braunkohle
+11%
+
+Kernenergie
+12%
+Sonstige
+0,1%
+
+Erdgas
+23%
+
+Wasser + Wind
+1,2%
+
+Erneuerbare
+4,6%
+
+Andere EE
+3,4%
+
+Mineralöl
+37%
+
+Quelle: AG Energiebilanzen 2006
+
+2.2.2.
+
+Energieaufkommen und Importe
+
+Die Importabhängigkeit der deutschen Energieversorgung ist im Zeitablauf beständig
+gestiegen. Sie liegt gegenwärtig bei 62 % (ohne Berücksichtigung von Uran). Dabei
+erreicht die Abhängigkeit von importierter Energie bei Uran 100 %, bei Mineralöl nahezu
+97 % und bei Gas 83 %. Bei der Steinkohle beträgt die Importabhängigkeit 61 %.
+Lediglich bei Braunkohle und bei den erneuerbaren Energien kann die deutsche
+Energieversorgung nahezu vollständig auf heimische Energieproduktion zurückgreifen.
+Die Stromerzeugung aus Kernenergie wird allerdings nach internationaler Konvention
+als heimische Energiequelle gewertet.
+
+Informationen zur Herkunft der Energieträger für die Energieversorgung in Deutschland
+sind den Schaubildern (Öl, Gas, Kohle, Uran) zu entnehmen. Generell sind die
+Energiebezüge breit diversifiziert. Hervorzuheben ist aber gleichwohl der beträchtliche
+Beitrag der GUS-Länder bzw. Russlands zur deutschen Energieversorgung, der beim
+Erdöl 41 %, beim Gas 37 %, bei Uran 19 % und bei der Kohle 8 % des Aufkommens
+ausmacht.
+...
+
+- 12 Abb. 6: Rohölaufkommen in Deutschland 2004
+
+50000
+
+GUS
+46043
+
+45000
+
+insgesamt 113 Mio t
+
+40000
+35000
+
+tsd. toe
+
+30000
+
+Norwegen
+21804
+
+25000
+
+UK
+12968
+
+20000
+
+Libyen
+12781
+Inlandsgewinnung 3463
+
+Syrien
+3936
+
+15000
+Saudi-Arabien
+Algerien 4219
+2840
+
+10000
+5000
+
+Venezuela Nigeria
+914
+783
+
+Sonstige
+3746
+
+0
+
+Quelle: Mineralölwirtschaftsverband
+
+Abb. 7: Erdgasaufkommen in Deutschland 2004
+
+36,8 %
+
+1600
+
+insges. 3987
+PJ
+
+1400
+
+26,0 %
+
+1200
+
+1000
+18,8 %
+17,2 %
+800
+
+1.467
+
+PJ
+600
+1.038
+
+400
+
+685
+
+749
+
+3,40%
+200
+136
+
+0
+-88
+
+-200
+Inlandsgewinnung
+
+Niederlande
+
+Norwegen
+
+Russland
+
+Sonstige
+
+Speichersaldo
+
+Quelle: Bundesamt für Wirtschaft und Ausfuhrkontrolle
+
+...
+
+- 13 Abb. 8: Steinkohleaufkommen in Deutschland 2004
+
+Inlandsgewinnung
+27593
+30000
+25000
+
+tsd. t
+
+20000
+
+10000
+5000
+
+EU
+11261
+
+Südafrika
+9876
+
+15000
+
+USA
+1541
+
+Kolumbien
+4719
+Kanada
+2123
+
+Australien
+China
+4357
+1819 Indonesien
+838
+
+GUS
+6011
+Sonstige
+2051
+
+0
+
+Quelle: Statistik der Kohlenwirtschaft e.V.
+
+Abb. 9: Natururaneinfuhren in Deutschland 2004
+450
+
+46,9 %
+
+400
+
+insgesamt 930 t
+
+350
+300
+25,6 %
+250
+tU
+
+19,2 %
+
+200
+150
+
+8,2 %
+
+100
+50
+0
+Kanada
+
+Großbritannien
+
+Russland
+
+Frankreich
+
+Quelle: Bundesanstalt für Geowissenschaften und Rohstoffe
+
+...
+
+- 14 -
+
+2.2.3.
+
+Beitrag erneuerbarer Energien
+
+Der Anteil der Erneuerbaren Energien am Primärenergieverbrauch (PEV – Berechnung
+nach der sog. Wirkungsgradmethode) in Deutschland stieg von 2,6 % im Jahre 2000
+auf 4,6 % im Jahre 2005. Damit wurde die Zielstellung der Bundesregierung für das
+Jahr 2010, einen Anteil von 4,2 % am PEV zu erreichen, bereits überschritten. Die
+Ursachen hierfür liegen in erster Linie darin, dass erneuerbare Energien im
+Strombereich durch das EEG und im Wärmebereich durch das Marktanreizprogramm
+gefördert werden.
+
+Der Anteil der Erneuerbaren Energien am Bruttostromverbrauch erhöhte sich von 6,7 %
+im Jahr 2000 auf 10,2 % im Jahr 2005, der Anteil an der gesamten Wärmebereitstellung
+stieg von 3,9 % in 2000 auf 5,4 % im Jahr 2005. Der Anteil des biogenen
+Kraftstoffverbrauchs für den Straßenverkehr ist von 0,3 % im Jahr 2000 auf 3,4 % im
+Jahr 2005 gestiegen. Insgesamt trugen die Erneuerbaren Energien im Jahr 2005 mit
+rund 6,4 % zum gesamten Endenergieverbrauch bei.
+
+...
+
+- 15 Abb. 10: Entwicklung der Anteile Erneuerbarer Energien am Primärenergieverbrauch
+(Berechnung nach der Wirkungsgradmethode) und am Bruttostromverbrauch (2006 2020: Ziele der Bundesregierung und Abschätzung gemäß Studie DLR, ZSW, WI:
+Ausbau Erneuerbarer Energien im Stromsektor bis 2020, 2005, i.A. des BMU)
+30
+
+möglicher Ausbau im Strombereich (nach
+Studie DLR/ZSW/WI "EE-Strom bis 2020"):
+25
+
+25,5
+
+Anteil EE am gesamten Primärenergieverbrauch
+
+20,0
+Anteil EE am gesamten Bruttostromverbrauch
+
+[Prozent]
+
+20
+
+Ziel 2010: mind.
+12,5 %
+Anteil EE am gesamten Bruttostromverbrauch nach
+Studie 2020
+
+15
+
+Ziel 2020:
+mind. 20 %
+
+12,5
+
+10,0
+
+10,2
+10
+
+6,7
+
+6,4
+
+4,7
+
+4,6
+
+Ziel
+2020:
+Ziel 2010: mind. 4,2 % i d 10
+
+5
+
+2,6
+
+2,1
+
+2005: Ziel 2010
+überschritten
+
+20
+
+19
+
+20
+
+20
+
+17
+
+16
+
+18
+20
+
+20
+
+15
+20
+
+20
+
+13
+
+12
+
+14
+20
+
+20
+
+20
+
+10
+
+09
+
+08
+
+07
+
+11
+20
+
+20
+
+20
+
+20
+
+20
+
+05
+
+04
+
+06
+20
+
+20
+
+20
+
+02
+
+03
+20
+
+00
+
+01
+
+20
+
+20
+
+20
+
+98
+
+97
+
+96
+
+99
+19
+
+19
+
+19
+
+95
+
+19
+
+19
+
+93
+
+92
+
+90
+
+94
+19
+
+19
+
+19
+
+19
+
+19
+
+91
+
+0
+
+nach Wirkungsgradmethode; Jahr 2003 - 2005 vorläufig; Stand Februar 2006; Werte für Ziel 2020 ab dem Jahr 2005 linear auf das
+Jahr 2020 hochgerechnet, Werte für möglichen Ausbau 2020 nach Studie: "Ausbau EE im Stromsektor bis zum Jahr 2020",
+DLR/ZSW/WI 2005;
+Ab dem Jahr 2003 erfolgte auf Grund der verbesserten Daternlage eine Neubewertung der EE
+Quellen: AGEB, AGEE-Stat, VDEW, BMU, BMWi
+
+Ziel der Bundesregierung ist es, den Anteil der Erneuerbaren Energien am gesamten
+Energieverbrauch bis zum Jahr 2010 auf mindestens 4,2 % und bis 2020 auf
+mindestens 10 % zu steigern. Bis Mitte des Jahrhunderts sollen Erneuerbare Energien
+rund die Hälfte des Energieverbrauchs decken. Im Strombereich soll entsprechend dem
+Beschluss der Bundesregierung der Anteil der Erneuerbaren Energien bis 2010 auf
+mindestens
+
+12,5 %
+
+und
+
+bis
+
+2020
+
+auf
+
+mindestens
+
+20 %
+
+steigen.
+
+Für
+
+den
+
+Kraftstoffbereich besteht das Ziel, bis 2010 mindestens 5,75 % aus Erneuerbaren
+Energien abzudecken. Eine aktuelle Bilanz zeigt, dass Deutschland diese Mindestziele
+erreichen wird und übertreffen dürfte.
+
+...
+
+- 16 Tab. 2: Anteile der Erneuerbaren Energien an der Energiebereitstellung 2000 – 2005 in %
+2000
+
+2001
+
+2002
+
+2003*)
+
+2004*)
+
+2005*)
+
+6,7
+
+6,7
+
+7,8
+
+8,0
+
+9,4
+
+10,2
+
+3,9
+
+3,8
+
+4,0
+
+5,1
+
+5,2
+
+5,4
+
+0,3
+
+0,5
+
+0,8
+
+1,1
+
+1,9
+
+3,4
+
+3,8
+
+3,8
+
+4,3
+
+5,0
+
+5,7
+
+6,4
+
+1,1
+
+1,2
+
+1,4
+
+1,5
+
+1,8
+
+2,0
+
+Wärmebereitstellung
+(bezogen auf gesamten
+Primärenergieverbrauch)
+
+1,4
+
+1,4
+
+1,5
+
+1,9
+
+2,0
+
+2,1
+
+Kraftstoffverbrauch
+(bezogen auf gesamten
+Primärenergieverbrauch)
+
+0,06
+
+0,09
+
+0,14
+
+0,2
+
+0,3
+
+0,5
+
+Summe der EE-Anteile am PEV
+
+2,6
+
+2,7
+
+3,0
+
+3,5
+
+4,0
+
+4,6
+
+Endenergieverbrauch
+Stromerzeugung aus EE
+(bezogen auf gesamten
+Bruttostromverbrauch)
+Wärmebereitstellung von EE
+(bezogen auf gesamte
+Wärmebereitstellung)
+Kraftstoffverbrauch aus EE im
+Straßenverkehr
+(bezogen auf gesamten
+Kraftstoffverbrauch im
+Straßenverkehr)
+Anteil der EE am gesamten
+Endenergieverbrauch von
+Deutschland
+Primärenergieverbrauch (PEV)
+Stromerzeugung
+(bezogen auf gesamten
+Primärenergieverbrauch)
+
+Anteil am PEV berechnet nach der Wirkungsgradmethode
+Stand Februar 2006
+*) vorläufige Angaben
+Ab dem Jahr 2003 erfolgte auf Grund der verbesserten Datenlage eine Neubewertung der EE
+Quellen: Quelle: AGEB, VDN, Stat. Bundesamt, ZSW, AGEE-Stat, BMU-Publikation "Erneuerbare Energien in Zahlen - Nationale
+und internationale Entwicklung", Internet-Update, Stand Dezember 2005;
+
+Nach der aktuellen Studie „Ausbau der Erneuerbaren Energien in Stromsektor bis zum
+Jahr 2020“ (DLR, ZSW, WI 2005 i.A. des BMU) ist es möglich, den Anteil der
+erneuerbaren Energien an der Stromversorgung bis zum Jahr 2020 auf rund 150 TWh
+(Mrd. kWh) pro Jahr zu steigern, der Anteil am Bruttostromverbrauch würde dann rund
+25 % betragen. Die Studie geht davon aus, dass der Stromverbrauch im Jahr 2020
+etwa 3 % unter dem des Jahres 2005 liegt. Der Energiereport IV erwartet dagegen bis
+2020 einen Anteil der erneuerbaren Energien an der Stromversorgung von 20 %
+(120 TWh).
+...
+
+- 17 -
+
+2.2.4.
+
+Perspektiven
+
+Die Perspektiven der künftigen Energieverbrauchsentwicklung in Deutschland werden
+in
+
+verschiedenen
+
+Studien
+
+dargestellt,
+
+insbesondere
+
+im
+
+Energiereport
+
+IV
+
+(EWI/PROGNOS, 2005) und in der Studie „Ökologisch optimierter Ausbau der
+Erneuerbaren Energien“ (DLR, IFEU, WI, 2004), aber auch in anderen Szenarien. Die
+verschiedenen
+
+Prognosen
+
+und
+
+Szenarien
+
+kommen
+
+zu
+
+deutlich
+
+voneinander
+
+abweichenden Ergebnissen.
+
+Die vom BMWi in Auftrag gegebene Prognos-Studie beschreibt die aus Sicht der
+Gutachter
+
+als
+
+wahrscheinlich
+
+eingeschätzte
+
+Entwicklung
+
+auf
+
+den
+
+relevanten
+
+Energiemärkten bis zum Jahre 2030 und berücksichtigt dabei insbesondere die
+Einbindung der Versorgung mit Strom und Gas in den europäischen Binnenmarkt.
+
+-
+
+Der Primärenergieverbrauch in Deutschland nimmt bei steigender Wirtschaftsleistung (1,4 % p.a.) langfristig ab. Bis 2010 wird das gegenwärtige Niveau gehalten.
+2015 liegt der PEV ca. 4 % und 2020 ca. 9 % unter dem Ausgangswert 2002. Die
+CO2-Emissionen sinken bis 2020 um 21 % gegenüber 1990.
+
+-
+
+Die Marktanteile der Energieträger verschieben sich zum Teil deutlich. Während
+der Anteil des Mineralöls langfristig weitgehend stabil bleibt, trägt Erdgas in
+zunehmendem Maße zur Deckung des Energiebedarfs bei. Sein Anteil steigt von
+22 % (2002) über 25 % (2010) und 26 % (2015) auf 29 % (2020). Kernenergie wird
+auf Grund des Ausstiegsbeschlusses im Energiemix des Jahres 2020 nur noch mit
+einem Beitrag von 3 % vertreten sein. Der Steinkohlenanteil sinkt von 13 % auf
+11 %. Der Anteil der Braunkohle steigt von 11 % auf 12 %. Deutliche Gewinne verzeichnen die erneuerbaren Energien mit einer Anteilszunahme von 4,6 % (2005)
+über 5,8 % (2010) und 6,9 % (2015) auf 8,3 % (2020).
+
+-
+
+Die Energieeffizienz steigt weiter. Der Energieverbrauch pro Kopf sinkt zwischen
+2002 und 2020 um 8 % auf 160 GJ/Einwohner. Die Energieproduktivität (BIP/PEV)
+
+...
+
+- 18 steigt im gleichen Zeitraum mit einer durchschnittlichen Rate von 2,1 % um
+insgesamt 45 %.
+
+-
+
+Die mit den Energieimporten verbundenen Mengen- und Preisrisiken werden sich
+tendenziell verschärfen. Der Anteil von Öl und Erdgas am Primärenergieverbrauch
+steigt von rund 60 % über 63 % (2010) und 67 % (2020) auf knapp 70 % in 2030,
+und die Erdgasbezüge verlagern sich zunehmend in politisch und wirtschaftlich
+instabile Regionen.
+
+Dabei unterstellen die Gutachter, dass der Ölpreis im Jahr 2020 bei 46 $/barrel (real zur
+Preisbasis 2000: 32 $/barrel), also unter dem derzeit hohen Niveau liegt. Im Rahmen
+einer Sensitivitätsanalyse haben EWI/Prognos untersucht, wie sich ein höherer Ölpreis
+(bis 2020: 68 $/barrel nominal, 47 $/barrel real) auf die Verbrauchsentwicklung
+auswirken würde. Unter dieser Voraussetzung würde der Primärenergieverbrauch bis
+2020 um 2,1 % gegenüber dem Referenzfall niedriger liegen. Der Stromverbrauch wäre
+um 2,5 % geringer.
+
+Abb. 11: Prognosen und Szenarien zum Primärenergieverbrauch in Deutschland 2020
+
+16000
+
+Energiereport IV
+
+insgesamt
+14000 14.238
+
+insgesamt
+13.019
+
+12000
+
+insgesamt
+10.920
+
+Erneuerbare
+
+10000
+PJ
+
+DLR/IFEU/WI 2004
+
+Braunkohle
+
+8000
+
+Steinkohle
+
+6000
+Kernenergie
+
+4000
+Erdgas
+
+2000
+Mineralöl
+
+0
+2005
+
+2020
+
+2020
+
+Quelle: Arbeitsgemeinschaft Energiebilanzen; EWI/PROGNOS (2005); DLR/IFEU/WI (2004)
+
+...
+
+- 19 Die vom BMU in Auftrag gegebene Studie „Ökologisch optimierter Ausbau der Nutzung
+erneuerbarer Energien in Deutschland“ (DLR/IFEU/WI 2004) geht davon aus, dass sich
+als wahrscheinlichste Entwicklung ein ökonomisch und ökologisch optimiertes
+Energieszenario
+
+in
+
+Kraftwerksparks
+
+Deutschland
+
+mit
+
+hohem
+
+realisieren
+
+KWK-Anteil
+
+lässt.
+
+und
+
+eine
+
+Eine
+
+Modernisierung
+
+deutliche
+
+Steigerung
+
+des
+der
+
+Energieeffizienz wird dabei zu Grunde gelegt. Der Ausbau der erneuerbaren Energien
+erfolgt auf hohem Niveau unter Berücksichtigung von Umwelt- und Naturschutzanliegen
+sowie
+
+ökonomischer
+
+Effizienz
+
+und
+
+Kostendegressionen
+
+im
+
+Zuge
+
+von
+
+Lernkurveneffekten. Die Studie kommt zu folgenden Ergebnissen:
+
+-
+
+Der Primärenergieverbrauch in Deutschland kann bei einer mit EWI/PROGNOS
+vergleichbaren Zunahme der Wirtschaftsleistung (durchschnittlich um 1,7 % p.a. bis
+2020) langfristig abnehmen. 2010 liegt das Niveau bei 92 % des Verbrauchs von
+2002. Bis 2020 sinkt er auf 10.920 PJ/a und damit um 24% gegenüber 2002. Der
+Stromverbrauch nimmt bis 2010 um rund 7 % und bis 2020 um rund 14 % ab.
+
+-
+
+Die Marktanteile der Energieträger am Primärenergieverbrauch verschieben sich
+deutlich. Insbesondere reduziert sich der Beitrag aller fossilen Energieträger von
+12.100 PJ/a in 2002 auf 9.150 PJ /a in 2020. Der Ölverbrauch reduziert sich bis
+2020 absolut um 23 %, der Gasverbrauch um 5%. Atomkraft wird im Jahr 2020 nur
+noch in geringem Umfang genutzt. Die Anteile der Energieträger belaufen sich im
+Jahr 2020 im Einzelnen auf 7 % Braunkohle, 12 % Steinkohle, 38 % Mineralöl, 27 %
+Erdgas, 12 % Erneuerbare Energien und 4% Kernenergie.
+
+-
+
+Die Energieeffizienz steigt deutlich rascher als in den vergangenen Jahren. Der
+Primärenergieverbrauch pro Kopf sinkt zwischen 2002 und 2020 um 23 % auf
+135 GJ/Einwohner. Die Energieproduktivität (BIP/PEV) steigt im gleichen Zeitraum
+durchschnittlich um 3% pro Jahr und verdoppelt sich somit bis 2020. Hierfür sind
+u.a. eine deutlich stärkere Nutzung der Kraft-Wärme-Kopplung in Verbindung mit
+dem
+
+Ausbau
+
+von
+
+Modernisierung
+
+des
+
+Nahwärmenetzen,
+Gebäudebestandes
+
+eine
+und
+
+beschleunigte
+die
+
+energetische
+
+Ausschöpfung
+
+der
+
+Effizienzpotenziale in der Stromnutzung und der Prozesswärmebereitstellung
+verantwortlich.
+
+...
+
+- 20 -
+
+Die mit den Energieimporten verbundenen Mengen- und Preisrisiken werden sich
+aufgrund der Verringerung der ressourcenproblematischen Öl- und Erdgasmenge
+von 8.500 PJ/a in 2002 auf 7.100 PJ/a im Jahr 2020 verringern. Aufgrund des
+deutlich sinkenden Primärenergieverbrauchs steigt der relative Anteil von Öl und
+Gas leicht (2002: 60 %; 2020: 65 %). Der Beitrag der heimischen Erneuerbaren
+Energien steigt bis 2020 auf 1.350 PJ/a, was einem Anteil von 12 % entspricht.
+
+Die Ziele der Koalitionsvereinbarung zur Steigerung der Energieeffizienz, zum Ausbau
+der erneuerbaren Energien und zur Senkung der Treibhausgasemissionen werden nach
+dieser Studie erreicht. Bis 2020 können die CO2-Emissionen gegenüber 1990 um 40 %
+reduziert werden.
+
+3. Energiepreise
+Wettbewerbsfähige Energiepreise sind ein wichtiger Faktor für die wirtschaftliche
+Entwicklung eines Landes. Ihre relative Höhe (im Vergleich zu anderen potentiellen
+Standorten) kann bei der Standortwahl eine entscheidende Determinante sein. Sie werden im Wesentlichen bestimmt durch die Beschaffungskosten der Energierohstoffe, die
+Umwandlungs- und Lieferkosten und Energiesteuern und vergleichbare Aufschläge.
+Hinsichtlich der Preise für Energierohstoffe spielen Erwartungen der Marktteilnehmer,
+politisch verursachte Risiken und die Frage der Verfügbarkeiten eine wichtige Rolle.
+
+3.1. Fossile Energierohstoffe
+
+Die Preise für die Energierohstoffe werden auf den Weltmärkten bestimmt. Insbesondere beim Marktführer, dem Erdöl, ist der Marktpreis erheblichen Schwankungen unterworfen und unterliegt vielfältigen Einflüssen (z.B. Nachfragespitzen, Naturereignisse,
+spekulative
+
+Marktbewegungen,
+
+politische
+
+Krisen,
+
+Verfügbarkeit).
+
+Einen
+
+ersten
+
+Höhepunkt hatte der Ölpreis Anfang der 80er Jahre mit einer Preisspitze von 33 $/b
+(nominal). Mitte der 80er Jahre setzte ein starker Preisverfall ein, der bis Mitte der 90er
+Jahre anhielt. Seit 2001 steigt der Ölpreis stetig an und liegt gegenwärtig (Februar
+...
+
+- 21 2006) auf einem Niveau von ca. 60 $/b. Während die Weltmarktpreise für Erdgas dieser
+Preisentwicklung annähernd, wenn auch in zeitlichem Abstand, folgen, zeigt die
+Preisentwicklung für die Steinkohle eine weitgehend eigenständige, stabile Entwicklung
+(Schaubild). Allerdings haben temporäre Angebotsverknappungen bzw. massive
+Nachfragesteigerungen zu Beginn der 80er Jahre und seit 2002 auch die
+Weltmarktkohlenpreise kräftig anziehen lassen.
+
+Abb. 12: Entwicklung der Einfuhrpreise (nominal) für Rohöl, Gas und Kohle
+250
+
+Index 1990 = 100
+
+200
+Rohöl
+Kohle
+Erdgas
+
+150
+
+100
+
+50
+
+0
+1990
+
+1991
+
+1992
+
+1993
+
+1994
+
+1995
+
+1996
+
+1997
+
+1998
+
+1999
+
+2000
+
+2001
+
+2002
+
+2003
+
+2004
+
+2005
+
+Quelle: Mineralölwirtschaftsverband, Verband der Industriellen Energie- und Kraftstoffwirtschaft e.V.
+
+Die künftigen Perspektiven der Energiepreisentwicklung werden uneinheitlich gesehen. Hinsichtlich der Preisentwicklung für den Marktführer Erdöl wird in vielen Szenarien und Prognosen (IEA, EU-Kom, Energiereport IV, Mineralölwirtschaft) erwartet, dass
+mittelfristig zunächst eine Preisberuhigung und danach ein leicht ansteigender
+Preispfad unterstellt werden kann. Zur Begründung wird auf „Fundamentalfaktoren“
+(ausreichende Ressourcenbasis; Marktreaktionen auf Angebots- und Nachfrageseite)
+verwiesen. Andererseits wird in Erwartung fortdauernder globaler Krisensituationen und
+des „Energiehungers“ der Entwicklungsländer ein langfristiger Hochpreispfad nicht ausgeschlossen.
+
+...
+
+- 22 Generell preiserhöhend wird sich die künftig notwendige intensivere Suche und immer
+aufwändigere Exploration der zusätzlich benötigten Energiequellen auswirken (Tiefsee;
+Arktis; Gewinnung aus kleineren/entlegeneren Vorkommen; Anwendung aufwändigerer
+Förder- und Gewinnungstechniken). Dies gilt für alle fossilen Energieträger.
+
+3.2. Strom- und Wärmepreise
+
+Die inländischen Energiepreise werden durch die Weltmarktpreisentwicklung unmittelbar beeinflusst. Davon ausgenommen sind die Kosten der heimischen Energiegewinnung. Insbesondere bei der inländischen Braunkohle können niedrige und
+langfristige stabile Produktionskosten unterstellt werden. Bei den importierten
+Energieträgern werden die Auswirkungen der Weltmarktpreisentwicklung für den
+deutschen
+
+Verbraucher
+
+durch
+
+den
+
+Beitrag
+
+der
+
+anderen
+
+Kostenfaktoren
+
+(Transportkosten, Umwandlungs- und Verarbeitungskosten, Steuern und Abgaben)
+teilweise abgeschwächt. Dennoch haben sich die Energieverbrauchspreise in allen
+Marktsegmenten in den letzten Jahren kräftig erhöht. (vgl. Schaubilder).
+
+Im Industriebereich sind die Preise für Heizöl-S zwischen 1995 und 2005 um 140 %
+von 2,36 €/GJ auf 5,66 €/GJ angestiegen. Der industrielle Erdgaspreis hat sich in diesem Zeitraum um 84 % erhöht und der Drittlandskohlenpreis um 67 %. Der industrielle
+Strompreis für eine Abnahmemenge von 70.000 MWh/a ist im Zuge der Liberalisierung
+durchschnittlich zunächst von 6,0 Cent/kWh (1995) auf 4,5 Cent/kWh (2000) gefallen,
+seither jedoch wieder angestiegen und betrug 2002 5,0 Cent/kWh. 2005 erreichte er
+8,0 Cent/kWh. Soweit der Emissionshandel die angestiegenen Strompreise mit
+verursacht hat, stellt sich derzeit insbesondere die Frage, wie das Problem "windfall
+profits" und Strompreise gelöst werden kann.
+
+...
+
+- 23 Abb. 13: Entwicklung der Energiepreise im industriellen Wärmemarkt
+14
+
+12
+
+Schweres Heizöl
+Leichtes Heizöl
+Erdgas (Durchschnittserlöse)
+Importkohle
+Braunkohle (Staub) NBL
+
+10
+
+€ je GJ
+
+8
+
+6
+
+4
+
+2
+
+0
+1995
+
+1996
+
+1997
+
+1998
+
+1999
+
+2000
+
+2001
+
+2002
+
+2003
+
+2004
+
+2005
+
+Quelle: Statistik der Kohlenwirtschaft
+
+Auf dem Wärmemarkt (Haushaltsbereich) sind die Preise des Heizöls zwischen 1995
+und 2005 um über 130 % von 6,1 €/GJ auf über 14,4 €/GJ angestiegen. Neben der
+Entwicklung der Rohöleinstandskosten wirkte sich auch die Erhöhung der Heizölsteuer
+im Rahmen der ökologischen Steuerreform aus. Die Gaspreise folgten dieser
+Entwicklung mit zeitlicher Verzögerung und in etwas geringerem Ausmaß. Dies gilt
+ebenso für die Fernwärme. Eine stabile Entwicklung mit einem nur geringfügigen
+Preisanstieg ergibt sich für Braunkohlenbriketts.
+
+...
+
+- 24 Abb. 14: Entwicklung der Energiepreise im häuslichen Wärmemarkt
+18
+16
+14
+
+in € je GJ
+
+12
+10
+8
+6
+
+Heizöl
+Erdgas
+BK-Briketts
+Fernwärme
+
+4
+2
+0
+1995
+
+1996
+
+1997
+
+1998
+
+1999
+
+2000
+
+2001
+
+2002
+
+2003
+
+2004
+
+2005
+
+Quelle: Statistisches Bundesamt
+
+Auch im Verkehrssektor haben sich die Mineralölproduktpreise in den letzten Jahren
+stetig erhöht. Die Preise für Normalbenzin stiegen von 1995 von 0,77 € auf 1,20 € im
+Jahre 2005, für Dieselkraftstoff von 0,59 € (1995) auf 1,07 € (2005). Hier wirkte sich
+neben den Rohöleinstandskosten auch die Erhöhung der Mineralölsteuer auf Kraftstoffe
+im Rahmen der Einführung der Ökologischen Steuerreform aus.
+
+...
+
+- 25 Abb. 15: Entwicklung der Energiepreise im Verkehrssektor
+230
+
+210
+
+190
+
+Vergaser
+Diesel
+
+Index 1990 = 100
+
+170
+
+150
+
+130
+
+110
+
+90
+
+70
+
+50
+1990
+
+1991
+
+1992
+
+1993
+
+1994
+
+1995
+
+1996
+
+1997
+
+1998
+
+1999
+
+2000
+
+2001
+
+2002
+
+2003
+
+2004
+
+2005
+
+Quelle: Statistisches Bundesamt
+
+Der Strompreis für Haushaltskunden (Durchschnittspreis für 3-Personen-Musterhaushalt) ist im Zeitraum 1995 bis 2000 von 18,99 Ct/kWh auf 13,94 Ct/kWh zurückgegangen. Die niedrigen Preise auf der Erzeugerstufe im Jahr 2000 orientierten sich zum
+Teil nur noch an kurzfristigen Grenzkosten und lagen unter den langfristigen Kosten, die
+für die Realisierung notwendiger Investitionen in Kraftwerkskapazitäten abzudecken
+sind. Danach stieg der Strompreis wieder deutlich an und erreichte 2005 mit
+18,66 Ct/kWh nahezu das Ausgangsniveau. Dabei lagen die Kosten für Erzeugung,
+Transport und Vertrieb 2005 immer noch um über 2 Ct/kWh unter dem Wert für 1995.
+Der
+
+Wegfall
+
+der
+
+Ausgleichsabgabe
+
+wurde
+
+überkompensiert
+
+durch
+
+die
+
+Zusatzbelastungen aus Stromsteuer, EEG, Kraft-Wärme-Kopplungsgesetz und erhöhter
+Mehrwertsteuer. Der Anteil der staatlich verursachten Belastungen des Strompreises
+hat sich seit der Liberalisierung des Jahres 1998 von 25 % auf 40 % im Jahre 2005
+erhöht. Zurückzuführen ist dies auf die Stromsteuer, das EEG und das Kraft-WärmeKopplungsgesetz. Der absolute Netto-Erlös der Stromwirtschaft aus dem Stromverkauf
+...
+
+- 26 an den o. g. Haushaltstyp (ohne staatliche Belastungen) liegt 2005 mit 11,28 Cent/kWh
+noch unter dem Wert von 1995 mit 13,41 Cent/kWh (in jeweiligen Preisen). An den
+Stromkostensteigerungen für private Haushalte hatten zwischen 2002 und 2005
+Produktion, Transport und Vertrieb einen Anteil von 75,0% (Zwischen 2000 und 2005
+66,9%). Die Stromsteuer, die in Zusammenhang mit der Ökologischen Steuerreform
+erhoben wird, hatte einen Anteil an den Stromkostensteigerungen von 12,2% (19,3%),
+das EEG von 10,0% (9,1%), das KWK-G von 2,8% (4,8%). Darüber hinaus wurde am
+1.4.1996 die Mehrwertsteuer erhöht.
+
+Abb. 16: Entwicklung der Strompreise für einen Durchschnittshaushalt
+- Jahresverbrauch 3.500 kWh -
+
+19,0
+
+20
+
+18,6
+
+18
+16
+
+13,9
+
+Cent/kWh
+
+14
+12
+10
+8
+6
+4
+2
+0
+1995
+Erzeug./Transp./Vertrieb
+
+Konzessionsabgabe
+
+2000
+StrEG/EEG
+
+2005
+Ausgleichsabgabe
+
+KWKG
+
+Stromsteuer
+
+MWSt
+
+Quelle: Verband der Elektrizitätswirtschaft e.V.
+
+Mit den steigenden Energiepreisen hat sich die Energiekostenbelastung für die privaten Verbraucher in Deutschland in den letzten Jahren deutlich erhöht. Die Gesamtausgaben stiegen von 69 Mrd. € (1996) auf über 91 Mrd. € (2005). Pro Haushalt bedeutet dies einen Anstieg der Energiekosten von 1.859 € (1996) auf 2.308 € (2005); der
+Anteil der Energiekosten an den Konsumausgaben erhöhte sich in diesem Zeitraum von
+6,4 % auf 7,2 %.
+...
+
+- 27 -
+
+3.3. Internationale Preisvergleiche
+
+Im internationalen Vergleich liegen die Strompreise in Deutschland in der Regel im
+oberen Drittel. Dies zeigt sich zum Beispiel am Strompreis für industrielle Kunden
+(Versorgungsfall: 300 Mill. kWh/a). Die deutschen Industriestrompreise bewegten sich
+nach der Liberalisierung des heimischen Strommarkts zunächst im EU-Mittelfeld. Seit
+2001 ist eine Tendenz steigender Industriestrompreise zu verzeichnen.
+
+Abb. 17: Strompreise Industrie - incl. Steuern ohne Mehrwertsteuer
+- Abnahmefall: 300 Mio. kWh/a 10
+
+9
+
+8
+
+7
+
+Cent/kWh
+
+6
+
+5
+
+4
+
+3
+
+2
+
+1
+Deutschland
+
+Frankreich
+
+Großbritannien
+
+Italien
+
+Schweiz
+
+Finnland
+
+Spanien
+
+0
+Jan Apr Jul Okt Jan Apr Jul Okt Jan Apr Jul Okt Jan Apr Jul Okt Jan Apr Jul Okt Jan Apr Jul Okt Jan Apr Jul Okt Jan Apr Jul Okt Jan
+98 98 98 98 99 99 99 99 00 00 00 00 01 01 01 01 02 02 02 02 03 03 03 03 04 04 04 04 05 05 05 05 06
+
+Quelle: Energy Advice Ltd.
+
+Im Zusammenhang mit der Liberalisierung des deutschen Strommarktes wurde die
+Leipziger Strombörse EEX gebildet. Die Zahl der Handelsteilnehmer ist im Laufe des
+Jahres 2005 auf 132 Unternehmen aus 16 Ländern gestiegen.
+
+Am Spot- und Terminmarkt wurden im Jahre 2005 insgesamt 602 TWh Strom
+gehandelt.
+...
+
+- 28 -
+
+Die Terminmarktpreise für Stromlieferungen im Jahre 2006 sind – wie auch an anderen
+europäischen Strombörsen – stark gestiegen. Die Preise an den europäischen
+Strombörsen entwickeln sich nahezu parallel.
+
+Abb. 18: Preisentwicklung im Großhandel – Grundlaststrom (Forwardpreise für 2006)
+65
+60
+55
+Skandinavien
+
+€ je MWh
+
+50
+Deutschland
+
+45
+Frankreich
+
+40
+Niederlande
+
+35
+30
+25
+Jan
+
+Feb
+
+Mrz
+
+Apr
+
+Mai
+
+Jun
+
+Jul
+
+Aug
+
+Sep
+
+Okt
+
+Nov
+
+Dez 05
+
+Quelle: Verband der Elektrizitätswirtschaft e.V.
+
+Die Entwicklung der Strompreise ist auf eine Vielzahl von Ursachen (u.a. gestiegene
+Brennstoffkosten) zurückzuführen. Nach vorliegenden Erkenntnissen haben die
+Stromerzeuger allerdings einen wesentlichen Anteil des Werts der ihnen kostenlos
+zugeteilten CO2-Emissionszertifikate als Opportunitätskosten in die Strompreise
+einpreisen können. Dies ist nach vorliegenden Studien nicht nur in Deutschland,
+sondern auch in anderen EU-Mitgliedstaaten der Fall. Aufgrund dieser Entwicklungen
+ergeben sich höhere Strompreise für die Verbraucher und zudem erhebliche "windfall
+profits" für die Stromerzeuger. Die stromintensive Industrie sieht sich durch die
+Strompreissteigerungen in ihrer Wettbewerbsfähigkeit beeinträchtigt.
+
+...
+
+- 29 Abb.: 19: Preise für Emissionsrechte - EEX
+
+35,00
+
+29,00
+
+30,00
+
+26,67
+24,40
+Euro pro Emissionsrecht
+
+25,00
+
+22,62
+19,94
+
+20,00
+
+18,00
+15,00
+10,76
+10,00
+
+5,00
+Handelspreis
+
+6
+Fe
+b.
+0
+
+Ja
+n.
+
+.0
+ez
+D
+
+06
+
+5
+
+5
+.0
+ov
+N
+
+.0
+kt
+O
+
+Se
+p
+
+Au
+g
+
+.0
+
+5
+
+5
+
+5
+.0
+
+05
+
+Ju
+n.
+
+Ju
+l.
+
+05
+
+ai
+.0
+5
+M
+
+M
+
+Ap
+
+rz
+
+r.
+0
+
+5
+
+.0
+5
+
+0,00
+
+Quelle: EEX
+
+Die inländischen Gaspreise sind seit Ende 2004 im Gefolge der Ölpreissteigerungen
+stark
+
+gestiegen.
+
+Ursächlich
+
+hierfür
+
+ist
+
+insbesondere
+
+die
+
+in
+
+langfristigen
+
+Gasimportverträgen enthaltene Gaspreisgleitklausel, die eine Preisbildung nach dem
+Anlegbarkeitsprinzip vorsieht. Dieses bewirkte, dass der Grenzübergangswert für
+importiertes Erdgas vom Dezember 2004 bis Dezember 2005 um rund 45 % anstieg.
+Die steigenden Importpreise wiederum führten zu Gaspreissteigerungen im Inland.
+Zudem
+
+hat
+
+diese
+
+Preisentwicklung
+
+zu
+
+umfassenden
+
+wettbewerbsrechtlichen
+
+Überprüfungen der Kartellbehörden geführt, deren Ergebnisse allerdings noch nicht
+feststehen.
+
+Da die Gasimportpreise in Kontinentaleuropa ebenso wie in Deutschland in aller Regel
+dem
+
+Anlegbarkeitsprinzip
+
+folgen,
+
+sind
+
+europaweit
+
+in
+
+der
+
+Tendenz
+
+ähnliche
+
+Gaspreissteigerungen (Ausnahme: UK, dort allerdings höhere Preisausschläge) zu
+verzeichnen
+
+gewesen.
+
+Im
+
+europäischen
+
+Vergleich
+
+liegen
+
+die
+
+Gaspreise
+
+für
+
+Haushaltskunden in Deutschland im Mittelfeld. Günstiger sieht es dagegen bei den
+industriellen Gaspreisen aus, die im vergangenen Jahr zu den niedrigsten in Europa
+zählten.
+...
+
+- 30 -
+
+Abb. 20: Gaspreise Industrie - incl. Steuern ohne Mehrwertsteuer
+- Abnahmefall: 500 Mio. kWh/a (f) 330 – 200 Tage Lieferung -
+
+3
+
+3
+
+Cent/kWh (Ho)
+
+2
+
+2
+
+1
+
+1
+
+0
+
+Dänemark
+
+Deutschland
+
+Frankreich
+
+Großbritannien
+
+Italien
+
+Spanien
+
+Schweiz
+
+Jan Apr Jul Okt Jan Apr Jul Okt Jan Apr Jul Okt Jan Apr Jul Okt Jan Apr Jul Okt Jan Apr Jul Okt Jan Apr Jul Okt Jan Apr Jul Okt Jan
+98 98 98 98 99 99 99 99 00 00 00 00 01 01 01 01 02 02 02 02 03 03 03 03 04 04 04 04 05 05 05 05 06
+(Ho) oberer Heizwert
+
+(f) feste, nicht unterbrechbare Lieferungen
+
+Quelle: Energy Advice Ltd.
+
+3.4. Preisbestandteile und Kosten für Strom, Gas und Kraft-Wärme-Kopplung
+
+Eine Darstellung einzelner Preisbestandteile für die Strom- und Gaspreise in
+Deutschland vermittelt folgendes Schaubild:
+
+...
+
+- 31 Abb. 21: Strom- und Gaspreise der privaten Haushalte 2005 nach Bestandteilen
+Strompreis
+
+Gaspreis
+
+18,7 Cent/kWh
+
+Transp.,
+Strukturierung,
+Vertrieb
+Erzeugung, 40%
+Vertrieb
+25%
+
+MwSt
+14%
+
+Stromsteuer
+11%
+
+5,72 Cent/kWh (HO)
+Konzessionsabgabe
+3%
+anteilige
+Förderabgabe
+1%
+Erdgassteuer
+10%
+
+Konzessionsabgabe
+10%
+KWKG
+2%
+EEG
+3%
+
+MwSt
+14%
+Netz
+35%
+
+Import
+32%
+
+KWKG Kraft-Wärme-Kopplungsgesetz
+
+Netz einschl. Messung, Energiedatenmanagement und Netzabrechnung
+
+Quelle: Verband der Elektrizitätswirtschaft e.V, Energy Advice Ltd.
+
+Die Erzeugungskosten für Strom werden wesentlich bestimmt durch die Struktur des
+bestehenden Kraftwerkparks, der jederzeit in der Lage sein muss, die jeweilige Nachfragesituation (Grundlast, Mittellast, Spitzenlast) abzudecken. In Deutschland wird der
+Grundlastbedarf hauptsächlich durch Kernenergie, Braunkohle und Laufwasserkraft
+gedeckt. Steinkohle- und Gaskraftwerke produzieren in der Mittellast, während die Spitzenlast von GuD-Anlagen und Pumpspeicherkraftwerken abgedeckt wird. Die Kostenstruktur der einzelnen Kraftwerkstypen ist unterschiedlich. Nach Untersuchungen der
+TU München („CO2-Vermeidungskosten im Kraftwerksbereich bei den erneuerbaren
+Energien sowie bei nachfrageseitigen Energieeffizienzmaßnahmen“) von 2004 ergeben
+sich in Abhängigkeit von der installierten Kraftwerksleistung, der Benutzungsdauer und
+dem Brennstoffpreisniveau (in der Studie: Brennstoffpreise des Jahres 2003) für in
+Abschreibung befindliche Braunkohle- und Steinkohle-Kraftwerke Stromgestehungskosten von 2,9-3,8 Cent/kWh, für Erdgas-Kraftwerke von 5,2-7,9 Cent/kWh und für
+GuD-Kraftwerke von 5,4-7,3 Cent/kWh. Der Anteil der Brennstoffkosten ist bei den
+kapitalintensiven Kraftwerken vergleichsweise gering. Bei einer Verdopplung des
+Uranpreises würden sich z.B. die spezifischen Erzeugungskosten für Kernenergiestrom
+allenfalls um bis zu 5 % erhöhen, bei einem Steinkohlenkraftwerk ergäbe sich bei der
+Verdopplung der Brennstoffkosten ein Verteuerungseffekt um 30 %, bei einem
+Gaskraftwerk um 70 – 80 %.
+
+...
+
+- 32 In Anlagen der Kraft-Wärme-Kopplung werden die beiden leitungsgebundenen
+Energien Strom (ggf. Kraft) und Wärme gleichzeitig erzeugt. Dies ist der Hintergrund für
+die prinzipielle energetische und klimaschutzpolitische Vorteilhaftigkeit der KWK. Die
+Kosten der gekoppelten Erzeugung von Strom und Wärme in einer KWK-Anlage
+werden im Prinzip von denselben Einflußfaktoren beeinflußt wie die Kosten der
+Erzeugung in anderen Stromerzeugungsanlagen, d. h. insbesondere von den
+Kapitalkosten und den Brennstoffkosten. In einer Systembetrachtung kommt als
+zusätzlicher
+
+Kostenblock
+
+im
+
+Falle
+
+von
+
+KWK-Anlagen
+
+allerdings
+
+noch
+
+das
+
+nachgeschaltete Wärmenetz hinzu. Im industriellen Bereich ist die Kostensituation
+deutlich günstiger. Ein entscheidender Parameter für die Wirtschaftlichkeit ist
+angesichts relativ hoher Fixkosten die Auslastung der KWK-Anlagen (Anzahl der
+Benutzungsstunden). KWK-Anlagen werden, sofern keine Förderung erfolgt, dann
+wirtschaftlich betrieben, wenn die insgesamt anfallenden Kosten abzüglich der für den
+Verkauf der Wärme anfallenden Erlöse (Wärmegutschrift) unterhalb der für den Strom
+am Markt zu erlösenden Preise liegen.
+
+3.5. Erneuerbare Energien
+
+Die Vergütungen für Strom aus erneuerbaren Energien entsprechend EEG §§ 6 bis 12
+lagen im Jahr 2005 durchschnittlich bei 9,5 Ct/kWh (Abschätzung VDN 2005). Die
+Vergütungen sind nach Sparte, Leistung der Anlage, Art der Biomasse und im
+Windbereich standortspezifisch differenziert.
+
+Tabelle 3 gibt einen Überblick über die Spanne der Vergütungen für Strom aus
+repräsentativ ausgewählten Anlagen, die in den Jahren 2005, 2010 und 2020 neu in
+Betrieb gehen. Die große Bandbreite kommt durch die starke Ausdifferenzierung in den
+verschiedenen Sparten und die Degression zustande. Die Vergütungshöhe und
+-degression wird regelmäßig überprüft mit dem Ziel einer sachgerechten Regelung.
+
+...
+
+- 33 Tab. 3: Vergütungen nach dem EEG (2004) für Strom aus Anlagen, die 2005, 2010 und
+2020 in Betrieb gehen; Die Bandbreite ergibt sich aus der Differenzierung nach Sparten,
+Leistungsgrößen, jährlicher Degression und weiteren Vorschriften
+Vergütungssätze
+Anlagen
+
+Vergütungssätze
+
+Vergütungssätze
+
+für 2005 neu in
+
+für 2010 neu in
+
+für 2020 neu in
+
+Betrieb gegangene
+
+Betrieb gehende
+
+Betrieb gehende
+
+Anlagen
+
+Anlagen
+
+Anlagen
+
+[Cent/kWh]
+
+[Cent/kWh]
+
+[Cent/kWh]
+
+Biogas (400 kW, NawaRo, 70 % KWK)
+
+17,74
+
+16,99
+
+15,64
+
+Biogas (4 MW, Bioabfall, nur Strom)
+
+8,95
+
+8,30
+
+7,13
+
+Altholz (bis 4,5 MW, mit A III und A IV)
+
+8,93
+
+3,56
+
+3,06
+
+8,53
+
+7,71
+
+6,30
+
+5,39
+
+4,87
+
+3,98
+
+- Anfangsvergütung (mind. 12 Jahre)
+
+9,10
+
+8,57
+
+4,77
+
+- Endvergütung
+
+6,19
+
+5,83
+
+4,77
+
+Sonne (Fassaden bis 30 kW)
+
+59,53
+
+47,19
+
+30,27
+
+Sonne (Dach ab 30 kW)
+
+51,87
+
+40,15
+
+24,05
+
+Sonne (Freifläche)
+
+43,42
+
+31,02
+
+15,84
+
+Geothermie (1 MW)
+
+15,00
+
+14,85
+
+13,43
+
+Geothermie (25 MW)
+
+7,16
+
+7,09
+
+6,41
+
+Kleine Wasserkraft (400 kW)
+
+9,67
+
+9,67
+
+9,67
+
+4,51
+
+4,30
+
+3,89
+
+Wind Land
+- Anfangsvergütung
+(z. Zt. durchschnittlich 16 Jahre)
+- Endvergütung
+Wind Offshore
+
+Große Wasserkraft
+(Leistungserhöhung um 40 MW)
+
+In den vergangenen 12 bis 15 Jahren sind ohne Inflationsbereinigung die Kosten für
+Windstromanlagen um über ein Drittel, die Kosten für PV-Anlagen um über 60% und die
+Kosten für die Solarthermie-Anlagen um rund 50% gesunken. Hintergrund für diese
+Entwicklung ist die Kostenstruktur der erneuerbaren Energien: der wichtigste
+Kostenfaktor liegt bei der Produktion der Anlagen, nicht im Betrieb (mit Ausnahme der
+Nutzung von Teilen der Biomasse). Diese Anlagenkosten sinken wie bei anderen
+Produkten der Anlagentechnik seit jeher aufgrund von technischer Entwicklung und
+Innovation sowie des Einstiegs in die Serien- und Massenproduktion (Lernkurven).
+
+Bei Berücksichtigung dieser Kostendegression und Lernkurven auch in Zukunft dürften
+bei einem Teil der erneuerbaren Energien nach der Studie von DLR / ZSW / WI 2005
+die Stromgestehungskosten neuer Anlagen bis zum Jahr 2020 unter den Kosten
+...
+
+- 34 konventionell erzeugten Stroms liegen (bspw. Strom aus Windenergie und aus einem
+Teil der Biomasseanlagen). Ein anderer Teil der erneuerbaren Energien dürfte
+voraussichtlich auch 2020 noch auf Förderung angewiesen sein (bspw. Photovoltaik,
+Geothermie und ein Teil der Bioenergie). Der Kostenverlauf hängt neben der dann
+erreichten Kostensenkung bei der Nutzung erneuerbarer Energien auch vom Grad der
+zu erwartenden Preissteigerung konventionell erzeugten Stroms ab.
+
+Das Gesamtvolumen der Einspeisevergütungen betrug im Jahr 2005 ca. 4,3 Mrd. €
+(VDN). Die Mehrkosten gegenüber konventionellem Strom (orientiert am EEXBörsenpreis für Grundlaststrom als Richtgröße) betrugen 2005 rund 2,4 Mrd. €. Für
+einen durchschnittlichen Haushalt bedeutet dies Mehrkosten von rund 1,60 € pro Monat
+oder rund 0,56 Cent pro kWh. Für die stromintensive Industrie betrugen die Mehrkosten
+im Jahr 2005 rund 0,12 Cent pro kWh (besondere Ausgleichsregelung für
+stromintensive Unternehmen). Ohne die im Gesetzgebungsverfahren befindliche
+Änderung dieser Ausgleichsregelung würden die Mehrkosten im Jahr 2006 auf rund 0,2
+Cent pro kWh steigen. In dieser Kostenberechnung sind nicht die durch die
+erneuerbaren Energien vermiedenen externen Kosten enthalten.
+
+Im Jahr 2020 werden die Einspeisevergütungen unter der Voraussetzung eines Anteils
+der erneuerbaren Energien an der Stromerzeugung von 25 % (gemäß Studie „Ausbau
+EE im Stromsektor bis zum Jahr 2020“, DLR / ZSW / WI 2005) auf rund 7,3 Mrd. € und
+die Mehrkosten gegenüber konventionellem Strom auf rund 3,6 Mrd. € geschätzt. Dabei
+geht die Studie von einem relativ geringen Preisanstieg der konventionellen
+Stromversorgung aus.
+
+4. Märkte für Strom und Gas
+Seit der Marktöffnung ist die deutsche Strom- und Gasversorgung in den europäischen
+Binnenmarkt
+
+einbezogen.
+
+Investitions-
+
+und
+
+Betriebsentscheidungen
+
+folgen
+
+Wirtschaftlichkeitsüberlegungen. Die Bundesregierung erwartet, dass der Standortwettbewerb künftig deutlich zunehmen wird.
+
+...
+
+- 35 -
+
+4.1. Rechtlicher Rahmen
+
+Der neue energiewirtschaftliche Ordnungsrahmen wird den Wettbewerb auf den Stromund Gasmärkten in Deutschland stärken.
+
+Am 13. Juli 2005 ist das Zweite Gesetz zur Neuregelung des Energiewirtschaftsrechts
+in Kraft getreten. Das Gesetz setzt die EU-Richtlinien 2003/54/EG und 2003/55/EG in
+nationales Recht um, die für die Schaffung eines Energiebinnenmarktes die Liberalisierung der nationalen Strom- und Gasmärkte beschleunigen.
+
+Das neue Energiewirtschaftsgesetz unterscheidet klar zwischen dem Netzbereich, der
+den europäischen Vorgaben entsprechend einer detaillierten Regulierung unterworfen
+ist, und den vor- und nachgelagerten Wettbewerbsbereichen, die in erster Linie in der
+Aufsicht der Kartellbehörden verbleiben.
+
+Ein Schwerpunkt im Rahmen der Netzregulierung ist die rechtliche, organisatorische,
+informationelle und buchhalterische Entflechtung des Netzbetriebs von den anderen
+Tätigkeitsbereichen der Energieversorgung. Die Vorgaben erhöhen die Transparenz
+und sichern eine diskriminierungsfreie Ausgestaltung des Netzbetriebs.
+
+Auch die Netzentgelte werden einer umfassenden Regulierung unterworfen. Sie
+unterliegen einer Genehmigungspflicht. So bald wie möglich soll ein System der
+Anreizregulierung etabliert werden. Die Bundesnetzagentur ist gesetzlich dazu
+beauftragt worden, bis Mitte 2006 ein tragfähiges Konzept für die Einführung der
+Anreizregulierung zu entwickeln, das anschließend durch eine Rechtsverordnung
+umgesetzt werden soll.
+
+Weitere Maßnahmen im Hinblick auf effiziente und wettbewerbsfähige Strom- und
+Gasmärkte sind beschlossen. Hierzu gehören die konsequente Durchsetzung des
+neuen Ordnungsrahmens durch die Regulierungsbehörden und die Vervollständigung
+des Rechtsrahmens zur Strom- und Gasnetzregulierung. Z. Zt. werden Rechtsverordnungen zum Netzanschluss im Massenkundengeschäft, zur Grundversorgung und zur
+
+...
+
+- 36 Anreizregulierung
+
+vorbereitet.
+
+Das
+
+Energiewirtschaftsgesetz
+
+enthält
+
+weitere
+
+Verordnungsermächtigungen.
+
+4.2. Anbieterstruktur, Marktzugang, Wettbewerb
+
+Der deutsche Strommarkt ist seit 1998 liberalisiert. Die Marktstruktur in der deutschen
+Elektrizitätsversorgung war vor der Liberalisierung des Jahres 1998 bereits durch einen
+im Vergleich zu anderen Branchen hohen Grad horizontaler Konzentration auf der
+Erzeugungsebene und durch eine vergleichsweise ausgeprägte vertikale Integration
+über die verschiedenen Wertschöpfungsstufen gekennzeichnet. Durch die nach der
+Liberalisierung zu verzeichnende Fusionstätigkeit hat die Konzentration seither zugenommen.
+
+Die
+
+Zahl
+
+der
+
+Verbundunternehmen
+
+hat
+
+sich
+
+durch
+
+horizontale
+
+Unternehmenszusammenschlüsse von 8 auf 4 vermindert (RWE, E.ON, Vattenfall
+Europe, EnBW). Auch die vertikale Konzentration hat zugenommen. Derartige
+Zusammenschlüsse unterliegen der Kontrolle des Bundeskartellamtes.
+
+Im deutschen Strommarkt sind mehr Unternehmen tätig als in den Strommärkten
+anderer EU-Länder. Nach VDEW-Angaben sind 2005 in Deutschland ca. 1.100
+Unternehmen im Strommarkt aktiv, davon vier Verbundunternehmen mit vier
+Übertragungsnetzbetreibern, 50 reine Stromerzeuger, 60 regionale Versorger, 25 größere Stadtwerke, 700 mittlere und kleine Stadtwerke, 100 kleine private Versorger und
+150 neue Marktteilnehmer. Die vier Verbundunternehmen (E.ON, RWE, Vattenfall Europe und EnBW) verfügen zusammen über rd. 80 % der inländischen Stromerzeugungskapazitäten.
+
+In Deutschland sind über 700 Gasversorgungsunternehmen (GVU) tätig. Das Versorgungssystem ist im Wesentlichen dreistufig aufgebaut.
+
+Unternehmen der importierenden Ferngasstufe sind E.ON Ruhrgas, Wingas (BASFTochter mit Gasprom-Beteiligung), Exxon Mobil und Shell (ehemals BEB), Verbundnetz
+Gas (VNG/Leipzig) und RWE (über ehemalige Thyssen-Gas). E.ON Ruhrgas deckt den
+deutschen Gasbedarf zu ca. 55 %. Die anderen genannten Unternehmen haben Anteile
+
+...
+
+- 37 zwischen 5 und 16 %. Nur E.ON Ruhrgas und RWE halten im größeren Umfang
+Beteiligungen an regionalen Weiterverteilern und Stadtwerken.
+
+Ca. 30 regionale Gasversorgungsunternehmen und rund 700 lokale Endverteiler sorgen
+für die Verteilung des Gases an die Endkunden.
+
+Allerdings gibt es keine eindeutigen Abgrenzungskriterien für die einzelnen Stufen.
+Ferngasunternehmen beliefern nicht nur regionale Weiterverteiler, sondern auch lokale
+GVU (Stadtwerke) und Industriekunden. Größere lokale GVU beliefern nicht nur Endverbraucher, sondern sind teilweise auch in der regionalen Weiterverteilung tätig.
+
+Wettbewerb hat sich im Gasmarkt anders als im Strommarkt bisher nur im Bereich
+größerer Abnehmer, aber auch dort nicht in hinreichender Breite entwickelt. Einer der
+wesentlichen Gründe für fehlenden Wettbewerb in der Gaswirtschaft wurde bisher auch
+im Fehlen eines funktionsfähigen Netzzugangsmodells für den deutschen Gasmarkt
+gesehen.
+
+Auf der Basis der am 29. Juli 2005 in Kraft getretenen Rechtsverordnung zum Zugang
+zu den Gasversorgungsnetzen haben daher die Bundesnetzagentur und die Verbände
+der Gaswirtschaft ein transaktionsunabhängiges Gasnetzzugangsmodell erarbeitet.
+Über die Eckpunkte dieses Modells wurde am 31. Januar 2006 Einigung erzielt. Diese
+Eckpunkte müssen jetzt in praxistaugliche Detailregelungen und standardisierte
+vertragliche Vereinbarungen zwischen den Netzbetreibern (u. a. Kooperationsvertrag,
+Ein- und Ausspeisevertrag) umgesetzt werden. Zieldatum für die Praktizierung dieses
+neuen Netzzugangsmodells ist der 1. Oktober 2006. Dann sollten auch am Gasmarkt
+Netzzugangsprobleme kein Hinderungsgrund für Wettbewerb mehr sein.
+
+Die Innovationen und Investitionen im Bereich der Erneuerbaren Energien erfolgten
+ganz überwiegend durch kleine und mittlere Unternehmen (KMU).
+
+...
+
+- 38 -
+
+5. Klimaschutz
+Die
+
+Europäische
+
+Union
+
+orientiert
+
+ihre
+
+Klimaschutzpolitik
+
+am
+
+Ziel
+
+des
+
+Rahmenübereinkommens der Vereinten Nationen über Klimaänderungen und an
+wissenschaftlichen Erkenntnissen des IPCC. Wenn schwere negative Folgen des
+globalen Klimawandels auf Mensch und Ökosysteme verhindert werden sollen, muss
+sichergestellt werden, dass die globale Erwärmung der Oberflächentemperatur der Erde
+um nicht mehr als 2°C gegenüber der vorindustriellen Zeit steigt.1 Damit das
+Temperaturziel der EU erreichbar bleibt, müssen die globalen Treibhausgasemissionen
+innerhalb von zwei Jahrzehnten ihren Höchststand erreichen und danach erhebliche
+Verringerungen von wenigstens 15 % und möglicherweise bis zu 50 % bis 2050 im
+Vergleich zum Niveau von 1990 folgen. Der globale Charakter des Klimaproblems
+erfordert
+
+weltweit
+
+gemeinsame
+
+Anstrengungen
+
+aller
+
+Länder
+
+–
+
+gemäß
+
+ihren
+
+unterschiedlichen Verantwortlichkeiten und den jeweiligen Fähigkeiten.
+
+5.1. Internationale und europäische Rahmenbedingungen
+
+Die 1994 in Kraft getretene VN-Klimarahmenkonvention und das 1997 verabschiedete
+und am 16. Februar 2005 in Kraft getretene Kyoto-Protokoll bilden die Grundlagen für
+eine weltweit koordinierte Klimaschutzpolitik. Das Kyoto-Protokoll sieht in Anlage B für
+Industrieländer,
+
+die
+
+das
+
+Kyoto-Protokoll
+
+ratifiziert
+
+haben,
+
+quantifizierte
+
+Emissionsbegrenzungs- oder –reduktionsziele vor. Die USA und Australien, die das
+Kyoto-Protokoll bislang nicht ratifiziert haben, haben keine Reduktionsverpflichtung
+übernommen. Das gleiche gilt für die Schwellen- und Entwicklungsländer.
+
+In den internationalen Klimaschutzverhandlungen übernimmt Europa eine zentrale
+Rolle. Die EU strebt eine möglichst breite Mitwirkung aller Länder und ihre Teilnahme
+an einem internationalen Klimaschutzregime an, das wirksam und angemessen sein
+muss, und will in diesem Zusammenhang mit anderen Vertragsparteien prüfen, mit
+welchen Strategien die erforderliche Emissionsverringerung zu verwirklichen ist. Sie
+1
+
+Laut IPCC ist es unwahrscheinlich, dass eine Stabilisierung der Treibhausgaskonzentrationen auf einem Niveau
+über 550 ppmv CO2-Äquivalente mit dem 2-ºC-Ziel vereinbar ist. Es wird festgestellt, dass zur Realisierung des Ziels
+
+...
+
+- 39 vertritt diesbezüglich die Auffassung, dass für die Gruppe der Industrieländer
+Reduzierungspfade in der Größenordnung von 15 - 30 % bis zum Jahr 2020 gegenüber
+den im Kyoto-Protokoll vorgesehenen Ausgangswerten - und darüber hinaus im Sinne
+der Schlussfolgerungen des Rates (Umwelt) - in Aussicht genommen werden sollten.
+Weitergehend formuliert der Umweltrat, dass für die Gruppe der Industrieländer bis zum
+Jahr 2050 eine Reduzierung der Emissionen um 60 – 80 % gegenüber 1990 geprüft
+werden sollte. Wichtig ist, dass solche Reduzierungspfade ohne Nachteile für die
+deutsche und europäische Wirtschaft beschritten werden können. Dafür müssen die
+Kosteneffizienz der bestehenden Klimaschutzmaßnahmen in allen Ländern weiter
+verbessert und verstärkt solche Maßnahmen ergriffen werden, die gleichzeitig zum
+Klimaschutz und zur Stärkung der Wettbewerbsfähigkeit beitragen. Neben wirksamer
+Emissionsminderung
+
+muss
+
+Klimapolitik
+
+darüber
+
+hinaus
+
+auch
+
+internationale
+
+Lastenteilung und langfristige Investitionssicherheit beachten und auf diese Weise eine
+standortsichernde Wirkung in Deutschland entfalten. Die Bundesregierung setzt sich
+dafür ein, dass andere Industriestaaten und wirtschaftlich fortgeschrittene Schwellenund Entwicklungsländer (China, Indien, Südkorea, Mexiko, Brasilien, Südafrika u. a.)
+wirksam in ein neues Klimaschutzabkommen einbezogen werden und ihren Fähigkeiten
+entsprechende Verpflichtungen übernehmen. Sie schlägt in diesem Zusammenhang
+vor, dass sich die EU im Rahmen der internationalen Klimaschutzverhandlungen
+verpflichtet, ihre Treibhausgasemissionen bis zum Jahr 2020 insgesamt um 30 % zu
+reduzieren.
+
+Unter
+
+dieser
+
+Voraussetzung
+
+wird
+
+in
+
+Deutschland
+
+eine
+
+darüber
+
+hinausgehende Reduktion der Emissionen angestrebt.
+
+Im Rahmen des Kyoto-Protokolls hat sich die EU-15 verpflichtet, im Zeitraum 2008 bis
+2012 ihre Treibhausgasemissionen gegenüber dem Stand von 1990 (bei einigen
+Treibhausgasen 1995) um 8 % zu reduzieren. Die 15 EU-Mitgliedstaaten tragen in
+unterschiedlichem Umfang zum Kyoto-Ziel der EU-15 bei. Im Gegensatz zu den 15
+alten EU-Mitgliedstaaten gelten für die Beitrittsländer die in Kyoto festgelegten Ziele,
+wobei zwei Länder bislang keine Ziele übernommen haben, da sie den Nicht-Annex I
+Staaten zugeordnet sind (Malta und Zypern). Deutschland hat das Ziel übernommen,
+die Treibhausgasemissionen um 21 % gegenüber 1990/95 zu verringern.
+
+eine Stabilisierung der Konzentration auf einem Niveau deutlich unterhalb von 550 ppmv CO2-Äquivalent erforderlich
+sein könnte.
+
+...
+
+- 40 Die Europäische Kommission hat zu Beginn dieses Jahrzehnts den Prozess zur
+2. Phase des europäischen Klimaschutzprogramms (ECCP) eingeleitet. Dieses
+Programm ergänzt die auf nationaler Ebene existierenden Klimaschutzprogramme und
+soll gemeinsam mit diesen die Erreichung der Kyoto-Ziele sicherstellen. Kernelement
+des ECCP ist der europäische Emissionshandel, der nahezu 50 % der CO2-Emissionen
+der EU-Staaten erfasst. Neben dem Emissionshandel sieht das europäische
+Klimaschutzprogramm auch Aktivitäten in den Sektoren private Haushalte, Verkehr
+sowie Handel, Gewerbe und Dienstleistungen vor.
+
+Das Kyoto-Protokoll sowie die auf dieser Grundlage verabschiedeten Beschlüsse
+ermöglichen es, die eingegangenen Reduktionsverpflichtungen auch mit den flexiblen
+Instrumenten des Emissionshandels und der projektbezogenen Mechanismen Joint
+Implementation und Clean Development Mechanism zu erreichen. Die europäische
+Emissionshandelsrichtlinie führte zum 1.1.2005 in den 25 Mitgliedstaaten den Handel
+mit CO2-Emissionszertifikaten ein und sieht in einer Erweiterung auch die Verknüpfung
+der projektbezogenen Mechanismen mit dem Emissionshandel vor.
+
+Zugleich ergeben sich aus der Klimarahmenkonvention und dem Kyoto-Protokoll
+Berichtspflichten zu den Treibhausgasemissionen gegenüber dem UNFCCC-Sekretariat
+sowie komplementär gegenüber der EU-Kommission auf der Grundlage der
+Entscheidung über den Aufbau und die Durchführung eines Monitoringsystems. Zur
+Teilnahme Deutschlands an den flexiblen Mechanismen des Kyoto-Protokolls ist die
+Erfüllung dieser Berichtspflichten zwingende Voraussetzung. Dazu müssen auch in
+Deutschland die notwendigen Voraussetzungen noch geschaffen werden.
+
+5.2. Globale Entwicklung der Treibhausgasemissionen
+
+Die Treibhausgasinventare zeigen, dass die Emissionen weltweit ansteigen. Die
+weltweiten energiebedingten CO2-Emissionen sind im Zeitraum 1990 – 2004 um
+5,7 Mrd. t (+25,9 %) auf 27,5 Mrd. t gestiegen. Im Jahr 2004 stiegen die Emissionen
+weltweit um gut 4,5 % an. Nahezu 65 % des Anstiegs der Emissionen seit 1990 wurde
+von China (+2.173 Mio. t), den USA (+937 Mio. t) und Indien (+533 Mio. t) verursacht.
+Aber auch in den übrigen Entwicklungs- und Schwellenländern stiegen die Emissionen
+...
+
+- 41 seit 1990 massiv an (+2.684 Mio. t). Zwischen 1990 und 2003 sind die
+Treibhausgasemissionen in der EU-15 um 1,7% gesunken. Deutschland hat seine
+Treibhausgasemissionen im Jahr 2004 gegenüber 1990 bereits um 18,3 % (222 Mio. t
+CO2e) reduziert.
+Die USA sind nach wie vor der mit Abstand größte CO2-Emittent (Anteil: 21 %), gefolgt
+von China (16,2 %), der EU-25 (14,2 %), Russland (5,6 %), Japan (4,3 %) und Indien
+(4,1 %). Der Anteil Deutschlands an der weltweiten CO2-Bilanz beträgt 3,2 %. Die
+Staaten mit quantifizierten Reduktionsverpflichtungen, die das Kyoto-Protokoll ratifiziert
+haben, sind heute für weniger als 30 % der weltweiten CO2-Emissionen verantwortlich.
+Die Emissionen Chinas (+94,9 % gegenüber 1990) und Indiens (+89,6 %) werden in
+wenigen Jahren bei Fortführung der gegenwärtigen Trends die der USA noch
+übersteigen.
+
+Zur Entwicklung innerhalb der EU-25 haben auch die Emissionsminderungen in den
+osteuropäischen
+
+Transformationsländern
+
+beigetragen,
+
+die
+
+größtenteils
+
+auf
+
+die
+
+Sonderfaktoren im Zusammenhang mit der Auflösung der Sowjetunion zurückzuführen
+sind. Zur Erreichung der Klimaschutzziele müssen alle Sektoren ihre Beiträge leisten.
+Um dem aktuellen Trend der globalen Treibhausgasemissionsentwicklung entgegen zu
+wirken sind weitere Anstrengungen notwendig. Die folgende Tabelle 4 gibt eine
+Übersicht über die regionale Entwicklung der energiebedingten CO2-Emissionen
+weltweit:
+
+...
+
+- 42 Tab. 4: Energiebedingte CO2-Emissionen in ausgewählten Ländern und Regionen
+Land / Region
+
+1990
+
+2004
+
+in Mio. t CO2e
+
+in Mio. t CO2e
+
+Anteil 2003 an
+
+absolute
+
+prozentuale
+
+weltweiten
+
+Veränderung
+
+Veränderung
+
+Emissionen
+
+2004/1990
+
+2004/1990
+
+USA
+
+4.836,4
+
+5.773,0
+
+21,0
+
++ 936,6
+
++ 19,4
+
+EU-15
+
+3.167,0
+
+3.308,5
+
+12,0
+
++ 141,5
+
++ 4,5
+
+EU-25
+
+3.933,8
+
+3.902,9
+
+14,2
+
+- 30,9
+
+- 0,8
+
+Japan
+
+1.048,3
+
+1.189,5
+
+4,3
+
++ 141,2
+
++ 13,5
+
+China
+
+2.289,0
+
+4.461,7
+
+16,2
+
++ 2.172,7
+
++ 94,9
+
+Indien
+
+594,7
+
+1.127,8
+
+4,1
+
++ 533,1
+
++ 89,6
+
+Lateinamerika
+
+603,4
+
+889,5
+
+3,2
+
+286,1
+
++ 47,4
+
+Afrika
+
+547,2
+
+809,4
+
+2,9
+
++ 262,2
+
++ 47,9
+
+14.069,3
+
+14.133,5
+
+51,4
+
++ 64,2
+
++ 0,5
+
+Nicht-Annex-I-Länder
+
+7.141,7
+
+12.531,7
+
+45,5
+
++ 5.390
+
++ 75,5
+
+Annex-I-Economies in
+
+4.109,4
+
+2.628,1
+
+9,6
+
+- 1.481,3
+
+- 36,0
+
+Annex-I-Länder
+
+Transition (EIT)
+Quelle: DIW-Wochenbericht Nr. 39/2005. Für Deutschland = Nationaler Inventarbericht 2006 (vorläufige Fassung, Stand Februar
+2006)
+
+In der EU-15 sanken die gesamten Treibhausgasemissionen (neben CO2 auch CH4,
+N2O, FKW, H-FKW und SF6) im Zeitraum 1990/95 – 2004 um 1,7 %. Allerdings sind die
+Emissionen seit 2002 stets leicht gestiegen, zuletzt um 0,3 % gegenüber 2003. Ohne
+die deutschen Beiträge wären die Emissionen der EU-15 sogar um knapp 150 Mio. t
+angestiegen. Um ihr verbindliches Kyoto-Reduktionsziel (-8 % bis 2010) zu erreichen,
+muss die EU-15 ihre aktuellen Emissionen noch um rd. 6,4 % reduzieren; dies
+entspricht einer Minderung um weitere rd. 267,3 Mio. t CO2e (Tab. 5). Die EUKommission geht davon aus, dass die EU-15 insgesamt ihr Kyoto-Ziel mit zusätzlichen
+Maßnahmen und bei Nutzung der flexiblen Mechanismen erreichen wird. Die Erfolge
+der einzelnen Mitgliedstaaten sind sehr unterschiedlich. Die Kommission stellt fest, dass
+Deutschland sein Kyoto-Reduktionsziel wohl erfüllen dürfte.
+
+...
+
+- 43 Tab. 5: Kyoto-Ziele und Entwicklung der Treibhausgasemissionen der EU-15
+Land
+
+Basisjahr-
+
+2003
+
+Emissionen
+
+in Mio. t CO2e
+
+prozentuale
+
+Kyoto-Ziel
+
+Veränderung
+
+Veränderung
+
+2008-2012
+
+2003/Basisjahr
+
+in Mio. t CO2e
+
+absolute
+
+2003/Basisjahr
+
+Belgien
+
+146,8
+
+147,7
+
+0,9
+
++ 0,6
+
+- 7,5
+
+Dänemark
+
+69,6
+
+74,0
+
+4,4
+
++ 6,3
+
+- 21,0
+
+Deutschland (*)
+
+1.216,1
+
+993,9
+
+- 222,2
+
+- 18,3
+
+- 21,0
+
+Finnland
+
+70,4
+
+85,5
+
+15,1
+
++ 21,5
+
+0,0
+
+Frankreich
+
+568,0
+
+557,2
+
+- 10,8
+
+- 1,9
+
+0,0
+
+Griechenland
+
+111,7
+
+137,6
+
+25,9
+
++ 23,2
+
++ 25,0
+
+Großbritannien
+
+751,4
+
+651,1
+
+-100,3
+
+- 13,3
+
+- 12,5
+
+Irland
+
+54,0
+
+67,6
+
+13,6
+
++ 25,2
+
++ 13,0
+
+Italien
+
+510,3
+
+569,8
+
+59,5
+
++ 11,6
+
+- 6,5
+
+Luxemburg
+
+12,7
+
+11,3
+
+- 1,4
+
+- 11,5
+
+- 28,0
+
+Niederlande
+
+213,1
+
+214,8
+
+1,7
+
++ 0,8
+
+- 6,0
+
+Österreich
+
+78,5
+
+91,6
+
+13,1
+
++ 16,6
+
+- 13,0
+
+Portugal
+
+59,4
+
+81,2
+
+21,8
+
++ 36,7
+
++ 27,0
+
+Schweden
+
+72,3
+
+70,6
+
+- 1,7
+
+- 2,4
+
++ 4,0
+
+Spanien
+
+286,1
+
+402,3
+
+116,2
+
++ 40,6
+
++ 15,0
+
+EU-15
+
+4.252,5
+
+4.179,6
+
+- 72,9
+
+- 1,7
+
+- 8,0
+
+Quelle: Annual European Community greenhouse gas inventory 1990-2003 and Inventory Report 2005 (European Environment
+Agency, Mai 2005). (*) Für Deutschland sind die Daten für 2004 angegeben.
+
+5.3. Emissionsentwicklung und Klimaschutzpolitik in Deutschland
+
+Bis zum Jahr 2004 wurde in Deutschland bereits eine Reduzierung der gesamten
+Treibhausgasemissionen um 222,2 Mio. t (-18,3 %) erreicht. Die Entwicklung der Treibhausgasbilanz in Deutschland seit 1990 lässt sich wie folgt beschreiben: Während
+zunächst insbesondere bei CO2 und Methan sehr hohe Minderungen stattfanden,
+schwächten sich ab Mitte der 90er Jahre die Minderungsraten deutlich ab. Wesentlicher
+Grund für die überproportionale Emissionsminderung Anfang der 90er Jahre war die
+Umstrukturierung der Wirtschaft in den Neuen Bundesländern. Seit Beginn des gegenwärtigen Jahrzehnts dagegen stagniert der Ausstoß von Treibhausgasemissionen.
+
+Im Energiesektor verlief die Entwicklung bis 1999 relativ kontinuierlich nach unten. Seit
+2000 nahmen die CO2-Emissionen der Energiewirtschaft allerdings wieder deutlich zu,
+was zum Teil rechnerisch auf Umbuchungen des Betriebs von Industriekraftwerken und
+zum Teil auf vermehrten Einsatz von Braunkohle und von Erdgas zurückzuführen ist. Im
+...
+
+- 44 Bereich der Industrie ist der Emissionstrend weiter nach unten gerichtet. Allerdings hat
+sich die CO2-Minderungsrate hier gegenüber den ersten Jahren der 90er Jahre deutlich
+reduziert. Bis zum Ende der 90er Jahre sind die verkehrsbedingten CO2-Emissionen
+ganz massiv angestiegen, sie sanken jedoch zwischen 1999 und 2004 wieder etwas ab.
+Die Emissionen lagen allerdings im Jahr 2004 immer noch deutlich über dem Niveau
+von 1990. Die nicht temperaturbereinigten CO2-Emissionen der privaten Haushalte
+schwanken aufgrund der unterschiedlichen, witterungsbedingten Einflüsse erheblich.
+Eine Trendlinie zeigt, dass die Emissionen im Mittel gesunken sind. Der Bereich
+Gewerbe, Handel und Dienstleistungen befindet sich im Zielkorridor.
+
+Die AG Energiebilanzen hat nach vorläufigen Berechnungen einen Rückgang des
+Primärenergieverbrauchs in 2005 von 1,3 % gegenüber 2004 errechnet, der einen
+zusätzlichen Rückgang der CO2-Emissionen um mehr als 1 % erwarten lässt.
+Tab. 6: Sektorale Entwicklung der gesamten CO2-Emissionen in Deutschland
+(Angaben in Mio. t CO2, nach UNFCCC-Gliederung, nicht temperaturbereinigt)
+Sektoren
+
+1995
+
+1996
+
+1997
+
+1998
+
+1999
+
+2000*
+
+2001*
+
+2002*
+
+2003*
+
+2004*
+
+Energiewirtschaft
+
+1990
+408,7
+
+351,7
+
+356,9
+
+338,6
+
+341,1
+
+327,2
+
+340,1
+
+345,7
+
+352,8
+
+358,8
+
+355,1
+
+Industrie (energiebed.)
+
+156,0
+
+115,5
+
+110,9
+
+109,5
+
+103,5
+
+104,4
+
+101,5
+
+100,4
+
+98,7
+
+100,4
+
+102,7
+
+Industrieprozesse
+
+77,8
+
+71,0
+
+66,1
+
+70,6
+
+69,5
+
+66,4
+
+71,1
+
+67,0
+
+66,5
+
+67,4
+
+68,7
+
+Zwischensumme
+
+642,5
+
+538,2
+
+533,9
+
+518,8
+
+514,1
+
+498,0
+
+512,7
+
+513,2
+
+517,9
+
+526,7
+
+526,6
+
+Verkehr (national)
+
+162,4
+
+176,6
+
+176,7
+
+177,2
+
+180,4
+
+186,1
+
+182,3
+
+178,3
+
+176,2
+
+170,2
+
+171,1
+
+priv. Haushalte
+
+129,4
+
+129,2
+
+142,5
+
+138,4
+
+132,0
+
+119,9
+
+116,8
+
+131,2
+
+120,1
+
+122,4
+
+115,6
+
+Kleingewerbe
+
+86,7
+
+Insgesamt (Summe)
+
+65,2
+
+75,9
+
+65,6
+
+63,6
+
+59,3
+
+56,1
+
+59,1
+
+56,2
+
+57,6
+
+55,0
+
+1.021,1
+
+909,1
+
+928,9
+
+899,9
+
+890,1
+
+863,3
+
+868,0
+
+881,8
+
+870,4
+
+876,9
+
+868,3
+
+CO2 aus LULUCF
+
+-28,6
+
+-31,5
+
+-32,0
+
+-32,4
+
+-32,6
+
+-33,1
+
+-34,4
+
+-35,1
+
+-35,3
+
+-35,9
+
+-35,9
+
+Insgesamt (Summe)
+
+992,4
+
+877,6
+
+897,0
+
+867,5
+
+857,5
+
+830,2
+
+833,6
+
+846,7
+
+835,1
+
+841,0
+
+832,4
+
+Quelle: Nationales Treibhausgasinventar 2006 (Stand: 20.12.05) - vorläufig. LULUCF = Landnutzungsänderung und Forstwirtschaft.
+
+Im Jahr 1990 wurde die Interministerielle Arbeitsgruppe (IMA) „CO2-Reduktion“
+eingerichtet, die über mittlerweile sieben Arbeitskreise verfügt. Die Gesamtfederführung
+liegt beim Bundesministerium für Umwelt, Naturschutz und Reaktorsicherheit, während
+die Leitung der Arbeitskreise von den jeweils zuständigen Ressorts wahrgenommen
+wird. Mit Beschluss vom 18. Oktober 2000 wurde zudem die Arbeitsgruppe
+Emissionshandel zur Bekämpfung des Treibhauseffektes (AGE) unter Federführung
+des
+
+BMU
+
+eingerichtet.
+
+In
+
+dieser
+
+Arbeitsgruppe
+
+sind
+
+neben
+
+Vertretern
+
+der
+
+Bundesregierung und ausgewählter Landesregierungen vor allem Teilnehmer aus
+
+...
+
+- 45 Wirtschaftsverbänden und Unternehmen sowie Gewerkschaften und Umweltverbänden
+vertreten.
+
+Zur
+
+Erreichung
+
+des
+
+deutschen
+
+Kyoto-Reduktionsziels
+
+müssen
+
+die
+
+Treibhausgasemissionen im Durchschnitt der Periode 2008 – 2012 noch um 33,2 Mio. t
+CO2e (3,3 %) verringert werden. Deutschland erreicht sein Klimaschutzziel durch ein
+breites Maßnahmenbündel:
+•
+
+Im Bereich von Energiewirtschaft und Industrie ist seit Januar 2005 der CO2Emissionshandel wirksam.
+
+•
+
+Für die Sektoren private Haushalte, Verkehr und Gewerbe, Handel, Dienstleistungen
+wurden im Nationalen Klimaschutzprogramm vom 13. Juli 2005 Maßnahmen
+festgelegt.
+
+Grundlage für die nationale Klimaschutzpolitik sind die folgenden Zielsetzungen:
+•
+
+Minderung der jährlichen Emissionen der sechs Treibhausgase des Kyoto-Protokolls
+im Zeitraum 2008-2012 um 21 % gegenüber dem Basisjahr 1990/95.
+- Um dies zu erreichen, wurden allgemeine CO2-Minderungsziele festgelegt und
+wie folgt auf die Sektoren verteilt:
+
+Tab. 7: sektorale CO2-Minderungsziele
+Zuteilungsperiode 2005-2007 Zuteilungsperiode 2008-2012
+Energie und Industrie
+
+503 Mio. t / Jahr
+
+495 Mio. t / Jahr
+
+Verkehr und Haushalte
+
+298 Mio. t / Jahr
+
+291 Mio. t / Jahr
+
+Gewerbe, Handel und
+
+58 Mio. t / Jahr
+
+58 Mio. t / Jahr
+
+859 Mio. t / Jahr
+
+844 Mio. t / Jahr
+
+Dienstleistungen
+Insgesamt
+
+Quellen: Zuteilungsgesetz 2007 und Nationaler Allokationsplan für Deutschland, Berlin 2004
+
+- Unter Berücksichtigung der anderen Treibhausgase (CH4, N2O, SF6, HFKW und
+FKW) wurden im Nationalen Allokationsplan im Jahr 2004 die Klimaschutzziele
+für die Periode 2005-2007 auf 982 Mio. t CO2-Äquivalente / Jahr und für die
+Periode 2008-2012 auf 962 Mio. t CO2-Äquivalente / Jahr festgelegt.
+
+...
+
+- 46 - Diese Ziele werden bei Beschluss des Nationalen Allokationsplans für die
+Zuteilungsperiode 2008 bis 2012 überprüft. Hierbei werden auch die aktuellen
+Erkenntnisse der Treibhausgasbilanzen berücksichtigt.
+•
+
+Zudem hat die Bundesregierung in einer Selbstverpflichtungserklärung zugesagt, die
+CO2-Emissionen in ihrem Geschäftsbereich um 25 % bis 2005 und um 30 % bis
+2008-2012 (Basisjahr 1990) zu mindern.
+
+Im Koalitionsvertrag ist vereinbart, dass Deutschland weiterhin seine führende Rolle im
+Klimaschutz
+
+wahrnimmt.
+
+Ziel
+
+ist,
+
+den
+
+weltweiten
+
+Temperaturanstieg
+
+auf
+
+ein
+
+klimaverträgliches Niveau von 2°C gegenüber dem vorindustriellen Stand zu
+begrenzen. Das Nationale Klimaschutzprogramm wird weiterentwickelt und zusätzliche
+Maßnahmen werden ergriffen, damit Deutschland sein Kyoto-Ziel für 2008-2012
+erreicht. Folgende Eckpunkte wurden u.a. festgelegt:
+
+a) Verdopplung der Energieproduktivität bis 2020 gegenüber 1990
+b) Beschleunigte energetische Sanierung des Gebäudebestandes u.a. durch Erhöhung
+des Fördervolumens für CO2-Gebäudesanierung auf mindestens 1,4 Mrd. Euro pro
+Jahr
+c) Modernisierung des Kraftwerksparks (u.a. durch Anreize für den Bau effizienter und
+klimafreundlicher Kraftwerke im Rahmen des Emissionshandels)
+d) Förderung des Ausbaus von dezentralen Kraftwerken und hocheffizienten KWKAnlagen
+
+und
+
+Überprüfung
+
+der
+
+Fördersystematik
+
+des
+
+Kraft-Wärme-
+
+Kopplungsgesetzes auf der Grundlage des Monitoringberichts
+e) Unterstützung der europäischen Initiativen zur Verbesserung der Energieeffizienz
+und zur Entwicklung eines europäischen Top-Runner-Programms
+f) Fortführung und Verstärkung der dena-Initiativen zur Energieeinsparung in den
+Bereichen Gebäude, Stromverbrauch (z.B. Leerlauf und stand-by) und Verkehr
+g) Entwicklung eines internationalen Klimaschutzabkommens bis 2009 für die Zeit nach
+2012, das auf dem Kyoto-Protokoll aufbaut und in das andere Industriestaaten und
+wirtschaftlich
+
+fortgeschrittene
+
+Schwellenländer
+
+mit
+
+ihren
+
+Fähigkeiten
+
+entsprechenden Verpflichtungen einbezogen werden
+h) Weiterentwicklung des Emissionshandels, mit dem Ziel, diesen ökologisch und
+ökonomisch
+
+effizienter
+
+unbürokratischer
+
+zu
+
+und
+
+gestalten
+
+das
+
+Zuteilungssystem
+
+(Mitnahmeeffekte
+
+transparenter
+
+vermeiden,
+...
+
+und
+
+internationale
+
+- 47 Wettbewerbsfähigkeit der energieintensiven Wirtschaft besonders berücksichtigen,
+Kostenentlastung der Wirtschaft, Einbeziehung anderer Industrieländer und großer
+Schwellenländer)
+i) Unterstützung der EU-Kommission bei ihrer Prüfung, den Flugverkehr in den
+Emissionshandel einzubeziehen
+j) Erleichterung der Nutzung der flexiblen Mechanismen (Joint Implementation und
+Clean Development Mechanism), um die Marktchancen der deutschen Industrie im
+Ausland zu stärken
+k) Erhöhung des Anteils der erneuerbaren Energien an der Stromversorgung bis zum
+Jahr 2010 auf mindestens 12,5 % und bis zum Jahr 2020 auf mindestens 20 %
+l) Erhöhung des Anteils erneuerbarer Energien am Primärenergieverbrauch auf
+mindestens 4,2 % bis zum Jahr 2010, auf 10 % bis zum Jahr 2020
+
+5.4. Erneuerbare Energien
+
+Die erneuerbaren Energien sind bei entsprechender ökologischer Ausgestaltung
+umweltfreundlich, tragen besonders zum Klimaschutz bei und sind Voraussetzung für
+den Aufbau einer nachhaltigen Energieversorgung auf nationaler und globaler Ebene.
+Die verstärkte Nutzung der erneuerbaren Energien vermeidet die Freisetzung von
+klimaschädlichen Treibhausgasen. Aus diesem Grund ist der Ausbau der erneuerbaren
+Energien von zentraler Bedeutung für die Klimaschutzpolitik und die nachhaltige
+Energiepolitik der Bundesregierung.
+Der Beitrag der erneuerbaren Energien zur CO2-Vermeidung in Deutschland ist in
+Tab. 8 dargestellt.
+
+...
+
+- 48 Tab. 8: Vermiedene Emissionen durch die Nutzung erneuerbarer Energien
+und mögliche Entwicklung bis zum Jahr 2020
+in [Mio. t/a]
+Strom
+dav. durch das
+EEG
+Wärme
+biogene Kraftstoffe
+Summe
+CO2-Vermeidung
+
+2000
+30,9
+17,0
+
+2001
+31,2
+18,3
+
+2002
+36,7
+23,5
+
+2003
+44,3
+26,1
+
+2004
+53,8
+34,4
+
+2005 2010 * 2020 *
+57,5
+72,0 111,0
+38,0
+52,0
+89,0
+
+13,5
+0,7
+45,1
+
+13,8
+1,0
+46,0
+
+13,7
+1,4
+51,7
+
+17,3
+2,4
+64,0
+
+17,8
+4,0
+75,6
+
+18,5
+6,9
+82,9
+
+19,7
+14,2
+105,9
+
+27,4
+19,8
+158,2
+
+CO2-Emissionsfaktoren [kg/kWh]
+Strom
+0,800 0,800
+Wärme
+0,236 0,236
+biogene Kraftstoffe 0,276 0,276
+
+0,800
+0,236
+0,242
+
+0,935
+0,229
+0,351
+
+0,935
+0,229
+0,351
+
+0,925
+0,229
+0,331
+
+0,845
+0,220
+0,350
+
+0,733
+0,206
+0,350
+
+* mögliche CO2-Minderung durch EE
+Ab dem Jahr 2003 erfolgte auf Grund der verbesserten Datenlage eine Neubewertung der EE
+Für die Jahre 2003 - 2005 Werte vorläufige Angaben, Stand Februar 2006
+Die Berechnung der Emissionsminderung durch EEG 2000 - 2002 erfolgte auf Basis aktueller Emissionsfaktoren für das Jahr
+2005
+Quellen: BMU-Publikationen "Erneuerbare Energien in Zahlen …", Ausgabe Dez. 2005; AGEE-Stat; ZSW;
+Studie "Ausbau EE im Stromsektor bis 2020" DLR/ZSW/WI, 2005
+BMWi: Studie "Energiereport IV" EWI/Prognos, 2005
+
+Durch die Nutzung der erneuerbaren Energien wurden im Jahr 2005 insgesamt rund
+83 Mio. t CO2 (2000: 45 Mio. t CO2) vermieden. Bis 2020 kann sich die Vermeidung von
+Treibhausgasen auf rund 160 Mio. t CO2/a erhöhen.
+Alleine im Strombereich belief sich die Reduktion durch die erneuerbaren Energien im
+Jahr 2005 auf rund 57 Mio. t CO2 (2000: rund 30 Mio. t CO2). Bis zum Jahr 2020 kann
+dieser Wert auf rund 110 Mio. t CO2/a steigen. Wichtigstes Instrument zur Erreichung
+dieser Werte ist das EEG, durch welches im Jahr 2005 rund 38 Mio. t CO2 eingespart
+wurden (2000: 17 Mio. t CO2) und bis zum Jahr 2020 rund 90 Mio. t CO2/a vermieden
+werden können.
+
+Die
+
+Höhe
+
+der
+
+mit
+
+der
+
+Nutzung
+
+erneuerbarer
+
+Energien
+
+verbundenen
+
+CO2-
+
+Vermeidungskosten wurde in verschiedenen Studien untersucht. Tabelle 9 gibt eine
+Übersicht über die Ergebnisse von drei Studien aus den letzten drei Jahren. Infolge
+unterschiedlicher Annahmen und Methoden kommen die Studien zu einer großen
+Bandbreite von Ergebnissen. Dabei kommt die Studie DLR/IFEU/WI (2004) auf Grund
+der Kostendegression (Lernkurveneffekte) bei den erneuerbaren Energietechnologien
+...
+
+- 49 und der zu erwartenden steigenden Kosten der fossilen Energieträger zu deutlich
+sinkenden (mit Ausnahme der Wasserkraft) CO2-Vermeidungskosten.
+Tab. 9: CO2-Vermeidungskosten erneuerbarer Energietechniken (€/t CO2)
+DLR / IFEU / WI (2004)1)
+2000
+2010
+2020
+
+IFEU
+2002
+
+TU München
+2020
+70
+
+Wind
+an Land
+Offshore
+
+45
+-
+
+35
+52
+
+20
+32
+
+größer 1 MW
+kleiner 1 MW
+
+18
+28
+50
+970
+
+25
+40
+38
+720
+
+30
+61
+21
+450
+
+Wasserkraft
+
+22
+
+Biomasse-HKW
+Photovoltaik
+Bioethanol2)
+Biodiesel2)
+
+1.944
+25 -3.000
+40 -1.600
+
+1) Preisentwicklung fossiler Energieträger „mittlere Variante“; Bezug: Mix neuer fossiler Kondensationskraftwerke entsprechend
+dem Referenzszenario;
+2) Auf Grund der hohen Nicht-CO2-Emissionen von Biokraftstoffen, bspw. Lachgas ist nur eine Gesamtbetrachtung der
+Treibhausgase sinnvoll; daher hierzu Angaben in € / t eingesparte CO2-Äquivalent, Bandbreiten auf Grund von unterschiedlich
+eingesetzten Rohstoffen.
+Quellen: DLR / IFEU / WI (2004): „Ökologisch optimierter Ausbau der Nutzung erneuerbarer Energien in Deutschland“, Studie i. A.
+des BMU ; IFEU (2004): „CO2-neutrale Wege zukünftiger Mobilität durch Biokraftstoffe. Eine Bestandsaufnahme“, Studie im Auftrag
+der Forschungsvereinigung Verbrennungskraftmaschinen; TU München (2004): „CO2-Vermeidungskosten im Kraftwerksbereich, bei
+den erneuerbaren Energien sowie bei nachfrageseitigen Energieeffizienzmaßnahmen“, Studie i.A. des BMWi
+
+6. Stromversorgung
+6.1. Stromerzeugung und –verbrauch
+
+Durch den EU-Binnenmarkt für Strom und bestehende Kuppelleitungen ist die deutsche
+Elektrizitätswirtschaft in den europäischen Strommarkt integriert. Die Stromerzeugung
+ist wettbewerblich organisiert; Investitions- und Betriebsentscheidungen folgen Wirtschaftlichkeitsüberlegungen.
+
+Nach Angaben der IEA lag die europäische Stromerzeugung (EU25) 2003 bei
+3.084 TWh und wurde hauptsächlich durch Kohle (991 TWh), Kernenergie (974 TWh),
+Erdgas (551 TWh) und Wasserkraft (290 TWh) gewährleistet. Der Beitrag der erneuer...
+
+- 50 baren Energien lag bei 13 %. Innerhalb Europas sind Deutschland (594 TWh) vor
+Frankreich (562 TWh) und Großbritannien (396 TWh) die größten Strommärkte.
+
+Die installierte Gesamtleistung des deutschen Kraftwerksparks betrug im Jahre 2004 rd.
+129.000 MW. Damit wurden im Jahre 2004 rd. 616 TWh (Mrd. kWh) Strom erzeugt. Den
+größten Anteil an der installierten Gesamtkapazität hat (2004) Steinkohle (25 %),
+gefolgt von Kernenergie und Braunkohle mit je 17 %, Erdgas mit 15 %, Wasserkraft mit
+8 % (inkl. Pumpwasserkraftwerken) und den anderen erneuerbaren Energien mit 14 %
+(Windenergie 13%, Biomasse 1,6%, Photovoltaik 0,7%) (Quelle: VDEW).
+
+In Deutschland wird der Grundlastbedarf hauptsächlich durch Kernenergie, Braunkohle
+und Laufwasserkraft gedeckt. Steinkohle- und Gaskraftwerke produzieren in der
+Mittellast, während die Spitzenlast von GuD-Anlagen und Pumpspeicherkraftwerken
+abgedeckt wird.
+
+Aufgrund der unterschiedlichen Auslastung der einzelnen Kraftwerkstypen unterscheidet sich die Struktur der Stromerzeugung von der Kapazitätsstruktur. Die Stromerzeugung basiert in Deutschland gegenwärtig auf den „drei Säulen“ Kernenergie (26,5 %),
+Braunkohle (25,1 %) und Steinkohle (21,7 %). Erdgas trägt 11,4 % und die erneuerbaren Energien rund 10,2 % zur Stromerzeugung bei (Quelle: AGEB, AGEE-Stat). Seit
+Mitte der 90er Jahre hat sich die Stromerzeugung aus erneuerbaren Energien kräftig
+erhöht, insbesondere durch den Ausbau der Windenergie (1995/2005: + 25 TWh für
+Wind).
+
+Ende des Jahres 2005 war eine Leistung von rund 27.000 MWel in Anlagen zur
+Nutzung erneuerbarer Energien im Strombereich installiert (Tab. 10). Der Anstieg der
+Kapazitäten wird nach aktuellen Studien auf rund 35.800 MWel in 2010 und rund
+56.400 MWel in 2020 abgeschätzt. Diese Entwicklung berücksichtigt auch den
+(teilweisen) Ersatzbedarf der bereits bestehenden Anlagen und Maßnahmen zum
+Repowering (Windenergie) bzw. Leistungserhöhung durch Modernisierungen (z.B.
+Wasserkraft).
+
+...
+
+- 51 Tab. 10:
+
+Kapazitätsentwicklung in der Stromversorgung aus Erneuerbaren Energien
+bis 2020 gemäß Abschätzung aktueller Studien
+2005
+
+2010
+
+2015
+
+2020
+
+Leistung
+
+Wasserkraft
+Wind
+Photovoltaik
+Biomasse
+Geothermie
+Import
+Summe
+
+Erzeugung
+
+Leistung
+
+Erzeugung
+
+Leistung
+
+Erzeugung
+
+[MW]
+4.660
+18.428
+1.458
+2.400
+0,2
+0,0
+26.946
+
+[TWh]
+21,5
+26,5
+1,0
+13,1
+0,0002
+0,0
+62,1
+
+[MW]
+4.858
+24.100
+4.136
+2.636
+55
+0
+35.785
+
+[TWh]
+22,7
+41,4
+3,4
+17,4
+0,3
+0,0
+85,2
+
+[MW]
+5.089
+28.600
+7.070
+3.548
+230
+0
+44.537
+
+[TWh]
+23,8
+56,9
+6,3
+23,7
+1,5
+0,0
+112,1
+
+Leistung Erzeugung
+
+[MW]
+5.237
+35.600
+9.973
+4.493
+530
+535
+56.368
+
+[TWh]
+24,5
+81,8
+9,3
+30,1
+3,5
+2,3
+151,4
+
+Stand Februar 2006, teilweise geschätzt
+Leistung: ohne Anlagen zur thermischen Abfallverwertung; Erzeugung: einschl. biogener Anteil der thermischen Abfallverwertung
+Quelle: Studie "Ausbau der erneuerbaren Energien im Stromsektor bis zum Jahr 2020" DLR/ZSW/WI, 2005; ZSW; AGEE-Stat
+
+Der Ausbau der erneuerbaren Energien im Strombereich ist nach dieser Studie mit
+Investitionen von etwa 5 Mrd. € pro Jahr verbunden. Dies entspricht bis 2020 einer
+kumulierten Summe von rund 75 Mrd. €.
+
+Biomasse(heiz)kraftwerke
+
+können
+
+im
+
+Grund-
+
+und
+
+Mittellastbereich
+
+und
+
+Biogas(heiz)kraftwerke im Grund-, Mittel- und Spitzenlastbereich eingesetzt werden.
+Die Wasserkraft deckt überwiegend den Grundlastbereich ab (Laufwasser) und kann
+auch zur Deckung der Spitzenlast genutzt werden (Pumpspeicher). Geothermie ist
+grundlastfähig. Biomasse und Geothermie verfügen über endogene Energiespeicher
+und sind somit bedarfsgerecht regelbar. Strom aus Windenergie ist mit einem
+fluktuierenden Angebot verbunden und kann vor allem zur Mittellast beitragen. Strom
+aus Photovoltaik ist ebenfalls mit einem fluktuierenden Angebot verbunden und kann
+tagsüber vor allem zur Mittellast beitragen. Mit Speichertechnologien sowie Regelung
+und Steuerung des Gesamtsystems können bei Bedarf Angebotsschwankungen
+ausgeglichen werden.
+
+Der Stromverbrauch (brutto) ist in Deutschland seit 1990 um 11 % auf 611 TWh (2005)
+angestiegen. Mit einem Pro-Kopf-Verbrauch von 6.900 kWh pro Jahr rangiert
+Deutschland im Jahr 2003 im Vergleich der IEA-Länder im Mittelfeld. 70,3 % des
+Stromverbrauchs
+
+beanspruchen
+
+Industrie
+
+sowie
+
+Gewerbe,
+
+Handel
+
+und
+
+Dienstleistungen, 26,6 % die privaten Haushalte. Der Anteil des Verkehrssektors am
+Stromverbrauch beträgt 3,1%.
+
+...
+
+- 52 -
+
+6.2. Potentiale für Effizienzsteigerungen
+
+Die Effizienz der Stromerzeugung hat sich im Zeitraum 1990 bis 2004 verbessert. Zu
+Beginn der 90er Jahre mussten noch 9.727 kJ für die Erzeugung einer kWh in
+konventionellen Wärmekraftwerken eingesetzt werden; seither ist der durchschnittliche
+spezifische Brennstoffverbrauch um 9 % auf 8.866 kJ zurückgegangen. Bei den einzelnen Kraftwerksarten verbesserte sich die Effizienz des Stromerzeugungsprozesses
+wie folgt: Steinkohlenkraftwerke 2 %, Braunkohlenkraftwerke 7,4 %, Erdgaskraftwerke
+23,6 %. Die Effizienz der Stromerzeugung in Kernkraftwerken hat sich um eine
+Größenordnung von 20 % verbessert. Stand der Technik sind gegenwärtig bei
+Kohlenstaubfeuerungen Wirkungsgrade von etwa 43 % bis 45 % bei der Braunkohle
+gegenüber 30 % bei den wenigen in Betrieb befindlichen 50 Jahre alten Anlagen bzw.
+46 % bis 48 % bei Steinkohle und bei modernen erdgasbefeuerten GuD-Anlagen rund
+58 %. Bei Kohle- und Gaskraftwerken gibt es ein weiteres erhebliches Potenzial der
+Wirkungsgradsteigerung. Ziel der Forschung und Entwicklung ist es, bis 2020 den
+Wirkungsgrad von Kohlekraftwerken (Braun- und Steinkohle) auf etwa 55 % zu steigern.
+Das entspricht einer Verbesserung gegenüber dem Stand der Technik um etwa 20 %.
+GuD-Anlagen sollen im gleichen Zeitraum auf einen Wirkungsgrad von etwa 65 %
+gebracht werden. Für die Erzeugung einer kWh wären dann nur noch 7.300 TJ nötig
+und die CO2-Emissionen um weitere 20 % reduziert. Weitere Effizienzerhöhungen
+könnten durch eine verstärkte Anwendung von Kraft-Wärme-Kopplung erreicht werden
+
+Auch bei der Stromanwendung hat sich die Effizienz deutlich verbessert. So ist zum
+Beispiel der spezifische Verbrauch elektrischer Haushaltsgeräte (Neugeräte) zwischen
+1995 und 2002 um 17 % bei Kühlschränken, um 18 % bei Waschmaschinen und um
+14 % bei Geschirrspülern zurückgegangen (EWI/PROGNOS). Diese Entwicklung wird
+sich fortsetzen. EWI/PROGNOS unterstellen im Rahmen ihrer Referenzprognose für
+den Zeitraum 2002/2020 folgende Steigerungsraten der Energieeffizienz: Kühlschränke
+25 %, Waschmaschinen 23 %, Geschirrspüler 14 %. Trotz der Erfolge der
+Vergangenheit sind die Potenziale zur Effizienzsteigerung des Stromverbrauchs bei
+weitem noch nicht ausgeschöpft (z.B. Leerlauf- und Standby-Verluste). Erhebliche
+Potenziale zur Effizienzverbesserung bestehen jedoch nicht nur im Bereich der privaten
+
+...
+
+- 53 Haushalte, sondern auch in der Industrie sowie im Bereich Gewerbe, Handel und
+Dienstleistungen.
+
+6.3. Investitions- und Modernisierungsbedarf
+
+Die Perspektiven für die weitere Entwicklung des Stromverbrauchs und der Bedarfsdeckung hängen von einer Vielzahl ökonomischer und politischer Faktoren ab. Eine Abschätzung der wahrscheinlichen Entwicklung des Energiereport IV (EWI/Prognos) ergibt
+folgendes Bild:
+
+Der Stromverbrauch wird in Deutschland nach EWI/Prognos bis 2010 mit 0,5 % p. a.
+nur noch mäßig steigen, um danach mit abnehmender Bevölkerung und steigender
+Nutzungseffizienz langsam wieder abzusinken. Für 2020 erwartet der Energiereport IV
+eine Bruttostromerzeugung, die geringfügig unter dem gegenwärtigen Niveau liegt. Das
+dena-Szenario geht dagegen unter Einbeziehung der Ausschöpfung weiterer
+Effizienzpotenziale von einer Senkung der Bruttostromerzeugung in Deutschland bis
+zum Jahr 2020 um 5 % aus. Das Szenario basiert auf einer Studie der TU München von
+Wagner et.al. (2004).
+
+Hinsichtlich der Entwicklung der Erzeugungsstruktur ist zu beachten, dass im Zeitraum
+bis 2030 mehr als die Hälfte der bestehenden Kraftwerkskapazität ersetzt werden muss.
+Zu der nach dem geltenden Atomgesetz zu unterstellenden Abschaltung von
+Kernkraftwerken (KKW) wird auf das nachfolgende Kapitel verwiesen. Ein erheblicher
+Teil der Kapazitäten auf fossiler Basis ist älter als 25 Jahre. Heute bereits angekündigte
+Investitionsvorhaben im Kraftwerksbereich sind in Tab. 11 zusammengestellt.
+Unbekannt ist, ob alle nach den Angaben in Tab. 11 bereits kurz- und mittelfristig zur
+Inbetriebnahme anstehenden Projekte zum gegenwärtigen Zeitpunkt schon einen Stand
+erreicht haben, der eine Realisierung zu dem in der Spalte „Vorgesehene
+Inbetriebnahme“ genannten Jahr als wahrscheinlich erscheinen lässt.
+
+...
+
+- 54 Tab. 11:
+
+Angekündigte Investitionsvorhaben im konventionellen Kraftwerksbereich (>20 MWel) 1)
+Vorgesehene
+Inbetriebnahme
+
+Leistung
+
+Standort
+
+Investor
+
+Brennstoff
+
+MWel
+
+Weisweiler
+
+RWE
+
+2006/2007
+
+Erdgas
+
+380
+
+Hamm-Uentrop
+
+Trianel
+
+2007
+
+Erdgas
+
+800
+
+Herdecke
+
+Mark E
+
+2007
+
+Erdgas
+
+400
+
+GuD-Hürth
+
+Statkraft/Norwegen
+
+2007
+
+Erdgas
+
+800
+
+GuD-Lubmin I
+
+Concord Power
+
+2007
+
+Erdgas
+
+1.200
+
+Tiefstack
+
+Vattenfall
+
+2007
+
+Erdgas
+
+125
+
+Rüdersdorf
+
+Vattenfall
+
+2007/2008
+
+GuD-Braunschweig
+
+Braunschweiger Vers. AG
+
+2008
+
+Abfall
+
+30
+
+Erdgas
+
+400
+
+Hamburg
+
+Norddeutsche Affinerie
+
+2008
+
+Abfall
+
+100
+
+GuD-Irsching
+
+E.ON
+
+2008
+
+Erdgas
+
+800
+
+Reuter West Topping
+
+Vattenfall
+
+2008
+
+Erdgas
+
+150
+
+GuD-Lingen
+
+RWE
+
+2009
+
+Erdgas
+
+850
+
+Duisburg/Walsum
+
+STEAG
+
+2010
+
+Steinkohle
+
+750
+
+Neurath (BoA)
+
+RWE
+
+2010
+
+Braunkohle
+
+Karlsruhe o. Heilbronn
+
+EnBW
+
+2010
+
+Erdgas
+
+400
+
+Niedersachsen
+
+Electrabel
+
+Steinkohle
+
+800
+
+Blaubeuren
+
+Stadtwerke Ulm
+
+2010/2011
+2011
+
+Pumpspeicher
+
+2.100
+
+45
+
+Boxberg
+
+Vattenfall
+
+2011
+
+Braunkohle
+
+675
+
+Bremen-Mittelbüren
+
+swb
+
+2011
+
+Steinkohle
+
+800
+
+Datteln
+
+E.ON
+
+2011
+
+Steinkohle
+
+1.100
+
+Herne
+
+STEAG
+
+2011
+
+Steinkohle
+
+750
+
+Irsching
+
+E.ON (Forschungsprojekt m. Siemens)
+
+2011
+
+Erdgas
+
+530
+
+Rheinfelden
+
+NaturEnergie/EnBW
+
+2011
+
+Laufwasser
+
+74
+
+Karlsruhe/Rheinhafen (RDK 8)
+
+EnBW
+
+2011
+
+Steinkohle
+
+800
+
+2011
+
+Steinkohle
+
+1.100
+
+2011/2012
+
+Steinkohle
+
+1.410
+
+Ruhrgebiet
+
+EWMR
+
+Hamm
+
+RWE
+
+Hamburg/Moorburg
+
+Vattenfall
+
+2012
+
+Steinkohle
+
+1.640
+
+Lünen
+
+Trianel
+
+2012
+
+Steinkohle
+
+750
+
+Zwischensumme bis 2012
+
+19.759
+
+GuD-Lichtenberg oder
+
+Vattenfall
+
+2013-2019
+
+Erdgas
+
+500
+
+Klingenberg
+
+Vattenfall
+
+GuD-Lichterfelde
+
+Vattenfall
+
+2016
+
+Kohle
+
+800
+
+Erdgas
+
+150
+
+Dettelbach
+
+N-Energie
+
+GuD-Lingen
+
+RWE
+
+offen
+
+Erdgas
+
+800
+
+offen
+
+Erdgas
+
+850
+
+GuD-Lubmin II
+Mainz
+
+Concord Power
+
+offen
+
+Erdgas
+
+1.200
+
+KW MainzWiesb.
+
+offen
+
+Steinkohle
+
+800
+
+oder Erdgas
+
+400
+
+Mannheim
+
+GKM
+
+offen
+
+Steinkohle
+
+280
+
+Profen
+
+MIBRAG
+
+offen
+
+Braunkohle
+
+500
+
+Ruhrgebiet
+
+Ges.f. Stromhandel
+
+offen
+
+Erdgas
+
+400
+
+GuD-Saarbrücken
+
+Electrabel
+
+offen
+
+Erdgas
+
+400
+
+Baden-Württemberg
+
+Südweststrom
+
+offen
+
+Steinkohle
+
+750
+
+1)
+
+Quellen: VDEW, VKU und Unternehmensangaben; kein Anspruch auf Vollständigkeit
+ohne Windenergieanlagen, Biomasse-, Geothermie- und Solar-Kraftwerke
+
+...
+
+- 55 6.4. Abschaltung von Kernkraftwerken gemäß geltendem Atomgesetz
+
+Gemäß der anhand des Atomgesetzes angestellten vorläufigen Berechnungen (Elektrizitätsmengen bzw. rund 32 Jahre Laufzeit seit Inbetriebnahme) wird sich der jährliche
+Beitrag der deutschen Kernkraftwerke zur Stromerzeugung von 154,63 TWh im Jahre
+2005 voraussichtlich auf 0 im Jahre 2023 verringern. Der Schluss des Betriebs der
+KKW wird in dem Maße später liegen, in dem durch Elektrizitätsmengenübertragungen
+bzw. betriebsbedingte Minderproduktion die für 2023 errechnete Elektrizitätsmenge
+noch nicht erreicht ist.
+
+Das Absinken dieses Beitrags wird kontinuierlich vor sich gehen, da nach den
+gesetzlich zugewiesenen Reststrommengen (Anlage 3 zum Atomgesetz) – vorbehaltlich
+der Übertragung von Elektrizitätsmengen zwischen den Anlagen - im Durchschnitt etwa
+jedes Jahr eines der verbleibenden 17 KKW abzuschalten sein wird.
+
+Zu berücksichtigen ist noch, dass 107,25 TWh Kernkraftwerks Mülheim-Kärlich (KMK)
+und 4,79 TWh des vorzeitig abgeschalteten KKW Stade (KKS) auf andere KKW gemäß
+Atomgesetz übertragen werden können.
+
+Für die Jahre 2000 bis 2005 ist die tatsächlich erzeugte Elektrizitätsmenge der KKW
+bekannt. Legt man einen statistischen Durchschnittswert aus der Produktion in den
+ersten sechs Jahren des Atomkonsenses zugrunde, lässt sich veranschaulichen, wie
+der Beitrag der Energieerzeugung aus den KKW in den kommenden Jahren verlaufen
+könnte:
+
+...
+
+- 56 Abb. 22:
+Prognose der Erzeugung elektrischer Energie aus KKW
+auf Basis AtG ohne Elektrizitätsmengenübertragung
+(Basis: Durchschnitt der 4 mittleren Jahresproduktionen jedes KKW zwischen 2000 und 2005)
+
+160,00
+140,00
+
+Reststrommenge
+
+120,00
+
+TWh
+
+100,00
+80,00
+60,00
+40,00
+20,00
+
+20
+06
+20
+07
+20
+08
+20
+09
+20
+10
+20
+11
+20
+12
+20
+13
+20
+14
+20
+15
+20
+16
+20
+17
+20
+18
+20
+19
+20
+20
+20
+21
+20
+22
+20
+23
+
+0,00
+
+Jahr
+
+6.5. Stromnetze
+
+Die Elektrizitätsversorgung ist eine Systemaufgabe; Kraftwerke, Übertragungsnetze,
+Verteilungsnetze, Stromhandel und –vertrieb sowie Stromkunden müssen in diesem
+System zu jedem Zeitpunkt zusammenwirken und funktionieren.
+
+Die Stromversorgung erfolgt nicht nur national, sondern hat eine in ihrer Bedeutung
+ständig wachsende europäische Dimension (EU-Binnenmarkt, UCTE-Stromverbund).
+So haben der Stromhandel und die Stromtransite durch die deutschen Stromnetze in
+den letzten Jahren kontinuierlich zugenommen; Stromimport und –export betrugen im
+Jahr 2004 in Summe 95,7 TWh (2003: 91,7 TWh; 2002: 91,7 TWh; 2001: 88,3 TWh).
+
+Der lang anhaltende Stromausfall im Münsterland Ende November 2005 hat gezeigt,
+welche große Bedeutung eine sichere Stromversorgung für Bevölkerung und Wirtschaft
+besitzt.
+...
+
+- 57 -
+
+Der Gesetzgeber hat in den §§ 11 bis 14 des EnWG klare Verantwortlichkeiten der
+Netzbetreiber fixiert. Sie haben gemäß § 12 Abs. 3 bzw. § 14 Abs. 1 i. V. m. § 12 Abs. 3
+des EnWG "dauerhaft die Fähigkeit des Netzes sicherzustellen, die Nachfrage nach
+Übertragung von Elektrizität zu befriedigen und insbesondere durch entsprechende
+Übertragungskapazität und Zuverlässigkeit des Netzes zur Versorgungssicherheit
+beizutragen."
+
+Berichte über den Netzzustand und die Netzausbauplanung sind zu erstellen und der
+Bundesnetzagentur auf Verlangen vorzulegen; Versorgungsstörungen sind zu melden.
+Das Bundesministerium für Wirtschaft und Technologie führt ein Monitoring der
+Versorgungssicherheit durch. Mit diesen Maßnahmen soll sichergestellt werden, dass
+Schwachpunkte für einen zuverlässigen Netzbetrieb rechtzeitig lokalisiert werden und
+entsprechende Schritte zur Beseitigung von Schwachstellen eingeleitet werden können.
+
+Anhaltspunkte dafür, dass bereits im heutigen Betrieb Auslastungsgrenzen in den Netzen erreicht werden und in besonderen Situationen Risiken für die Versorgungssicherheit auftreten können, liegen bereits vor:
+
+-
+
+An den wichtigsten Kuppelstellen zum internationalen Stromverbund mussten
+Verfahren zur Engpassbewirtschaftung eingeführt werden.
+
+-
+
+Die Volatilität und der Umfang der Windstromerzeugung wirken auf die Stromnetze,
+da die Windenergieanlagen hauptsächlich in verbrauchsschwache Netzteile in
+Norddeutschland einspeisen.
+
+In der dena-Netzstudie (I) ist die Frage der Integration der Windkraftstromerzeugung
+untersucht worden. Dabei wurden Probleme, Kosten und zum Teil Lösungsmöglichkeiten für eine derartige Integration aufgezeigt.
+
+Wichtig ist in diesem Zusammenhang insbesondere,
+
+-
+
+die Planungsverfahren für netztechnische Baumaßnahmen in Deutschland – wie in
+der Koalitionsvereinbarung vorgesehen – zu beschleunigen,
+
+-
+
+den Netzausbau zu forcieren,
+...
+
+- 58 -
+
+ältere
+
+Windenergieanlagen
+
+nach
+
+Möglichkeit
+
+so
+
+nachzurüsten,
+
+dass
+
+die
+
+Netzintegration verbessert wird.
+-
+
+bei der Modernisierung des konventionellen Kraftwerksparks die aus der
+fluktuierenden Windstromerzeugung erwachsenden neuen Anforderungen an die
+Flexibilität des Kraftwerkseinsatzes angemessen zu berücksichtigen,
+
+-
+
+die Möglichkeiten eines erweiterten Einsatzes von Erzeugungs- und Lastmanagement zu prüfen und – wo möglich und wirtschaftlich – zu nutzen,
+
+-
+
+die
+
+Möglichkeiten
+
+des
+
+Einsatzes
+
+von
+
+kurz-
+
+und
+
+mittelfristig
+
+verfügbaren
+
+Speichertechnologien zu prüfen und – wo möglich und wirtschaftlich – zu nutzen,
+-
+
+die Möglichkeiten einer Bereitstellung von Systemdienstleistungen durch Anlagen
+auf Basis erneuerbarer Energien zu prüfen und
+
+-
+
+die Prognose der Windstromerzeugung zu verbessern.
+
+Energieunternehmen und Anlagenhersteller arbeiten bereits an der Umsetzung von
+Vorschlägen aus der dena-Netzstudie.
+
+Die mit der dena-Netzstudie geschaffenen Erkenntnisse sollen Ausgangsbasis einer
+weiteren Studie sein (dena II), die den Zeithorizont auf 2020 erweitert. Dabei sollen
+neue Möglichkeiten zur besseren Integration der Windenergie in das Stromnetz
+aufgezeigt werden.
+
+...
+
+- 59 6.6. Perspektiven
+
+Nach Einschätzung des Energiereport IV wird sich – bei Unterstellung des Kernenergieausstiegs - die Stromerzeugung in Deutschland künftig verstärkt auf Braunkohle,
+Erdgas (Erdgas ist beim derzeitigen Preisniveau allerdings nicht grundlastfähig) und
+erneuerbare Energien (vor allem Windenergie) stützen. Dabei wird die Integration stark
+steigender Windenergiekapazitäten in das deutsche Stromnetz zukünftig erhöhte
+Anforderungen an die Regelbarkeit der Anlagen, an den Netzausbau und an die
+Flexibilität des konventionellen Kraftwerkparks (vgl. dena-Netzstudie) stellen.
+
+Abb. 23: Bruttostromerzeugung bis 2020 in Deutschland nach Energiereport IV
+
+700
+600
+
+619
+
+616
+
+594
+
+538
+PV, Geotherm.
+
+500
+
+Windenergie
+
+400
+TWh
+
+Wasser
+Andere
+
+300
+
+Heizöl
+Erdgas
+
+200
+
+Braunkohle
+Steinkohle
+
+100
+
+Kernkraft
+
+0
+1995
+
+2000
+
+2005
+
+2010
+
+2015
+
+2020
+
+Quelle: Energiereport IV, Werte für 2005 AG Energiebilanzen
+
+Das auf einer Studie der TU München (Wagner et.al. 2004) basierende Szenario der
+dena berücksichtigt den gesetzlich festgelegten Ausstieg aus der Kernenergie und die
+auf europäischer und internationaler Ebene zugesagten Treibhausgasemissionsminderungsverpflichtungen Deutschlands. Für die Entwicklung der erneuerbaren
+Energien wurden die Ergebnisse der dena-Netzstudie und die Ziele der OffshoreStrategie zugrunde gelegt. Durch die Umsetzung von Maßnahmen zur weiteren
+Ausschöpfung von Energieeffizienz- und Einergieeinsparpotenzialen kommt das dena
+...
+
+- 60 Szenario insgesamt zu einer deutlicheren Senkung der gesamten Bruttostromerzeugung.
+
+Abb. 24: Bruttostromerzeugung bis 2020 in Deutschland nach dena-Szenario
+
+Quelle: dena
+
+7. Wärmeversorgung
+7.1. Energieverbrauch (nach Energieträgern)
+
+Im Haushaltsbereich dient der Endenergieverbrauch (2003 = 2.591 PJ) zu 91 % zur
+Deckung des Wärmebedarfs (Raumwärme, Warmwasser, Prozesswärme). Im Bereich
+Gewerbe, Handel und Dienstleistungen (GHD 2003 = 1.099 PJ) sowie im industriellen
+Sektor betragen die jeweiligen Anteile 71 % bzw. 75 %
+
+Die Energieträgerstruktur des Wärmemarkts ergibt sich aus folgender Übersicht:
+...
+
+- 61 -
+
+Abb. 25: Energieträgeranteil am Wärmemarkt*) in Deutschland 2003
+
+Kohle
+8%
+
+Erneuerbare
+5%
+Mineralöl
+23%
+
+Fernwärme
+6%
+
+Strom
+10%
+
+Sonstige
+0,1%
+
+Gase
+48%
+*) Endenergie für Raumwärme, Warmwasser und Prozesswärme aller Sektoren
+Quelle: VDEW-Projektgruppe „Nutzenergiebilanzen“, AG Energiebilanzen, AGEE-Stat
+
+Wichtigster Energieträger ist Gas vor Mineralöl. Während der Anteil der Kohlen seit Jahren rückläufig ist, haben die erneuerbaren Energien ihren Marktanteil in den letzten Jahren deutlich auf über 5 % erhöht.
+
+7.2. Potentiale zur Effizienzsteigerung (einschl. KWK)
+
+Die Potentiale zur Effizienzsteigerung auf dem Wärmemarkt sind beträchtlich. Ihre
+wirtschaftliche Ausschöpfung hängt zum einen von der künftigen Preis- und Marktentwicklung und zum anderen von der Gestaltung der politischen Rahmenbedingungen
+ab. Nach Einschätzung des Energiereports IV ist bis 2030 mit folgender Entwicklung zu
+rechnen:
+
+Im Haushaltsbereich wird trotz einer Ausweitung der Wohnflächen um knapp ein Drittel
+für die Erzeugung von Raumwärme im Jahre 2030 rund 17 % weniger Energie benötigt
+...
+
+- 62 als 2002. Der Grund hierfür liegt in einer energetisch verbesserten Qualität der Gebäude und effizienteren Heizanlagen. So erwarten die Institute eine Halbierung der
+Wärmeleistungsbedarfe gegenüber Mitte der 90er Jahre und eine Steigerung der mittleren Neuanlagennutzungsgrade bei Erdgasheizungen auf 101 % und bei Ölheizungen
+auf 96 % bis 2030. Im Dienstleistungssektor (GHD) geht der Energiebedarf für die
+Raumwärmenutzung aus den gleichen Gründen um 46 % zurück. Nach DLR et al sinkt
+der
+
+Endenergieeinsatz
+
+im
+
+Wärmebereich
+
+aufgrund
+
+der
+
+Ausschöpfung
+
+der
+
+Effizienzpotenziale insbesondere bei der Raumwärme im Gebäudebestand im Vergleich
+zu 2000 bis 2020 um rund 22% (2030: rund 33%). Aufgrund eines steigenden Anteils
+von Kraft-Wärme-Kopplung von 12,3% in 2000 auf 16,7% in 2020 (2030: 21,0%) ist die
+Einsparung von Primärenergie noch höher.
+
+Kraft-Wärme-Kopplung leistet einen Beitrag zur Ausschöpfung der Effizienzpotentiale
+durch gleichzeitige Wärme- und Stromerzeugung. Sie muss jedoch den lokal
+bestehenden Wärmebedarf und die jeweilige Bebauungsstruktur berücksichtigen.
+
+Die Energiewirtschaft hat sich in einer die Klimaschutzvereinbarung vom 9.11.2000
+ergänzenden KWK-Vereinbarung gegenüber der Bundesregierung verpflichtet, eine
+Emissionsreduktion von insgesamt bis zu 45 Mio. t CO2 pro Jahr bis zum Jahr 2010 zu
+erreichen. Die CO2-Reduktion soll durch KWK-spezifische Maßnahmen wie folgt
+realisiert werden: Minderung in einer Größenordnung von 10 Mio. t pro Jahr bis 2005
+und insgesamt möglichst 23 Mio. t pro Jahr, mindestens jedoch 20 Mio. t pro Jahr bis
+2010 gegenüber dem Basisjahr 1998. Die Erreichung dieser Zielvorgaben wird durch
+das Kraft-Wärme-Kopplungsgesetz flankiert, das hierzu durch den befristeten Schutz
+und die Modernisierung von KWK-Anlagen sowie den Ausbau der Stromerzeugung in
+kleinen KWK-Anlagen und die Markteinführung der Brennstoffzelle im Interesse der
+Energieeinsparung, des Umweltschutzes und der Klimaschutzziele einen Beitrag leistet.
+Ferner soll nach der Vereinbarung eine CO2-Minderung bis zu 25 Mio. t pro Jahr in
+2010 über andere Maßnahmen erfolgen, die in den die Selbstverpflichtung der
+Wirtschaft konkretisierenden Einzelerklärungen der Energiewirtschaftsverbände näher
+ausgeführt werden. Gemeinsam mit der Wirtschaft lässt die Bundesregierung
+gegenwärtig prüfen, ob diese anspruchsvolle Zielsetzung realisiert werden wird.
+
+...
+
+- 63 7.3. Ausbau erneuerbarer Energien
+
+Der Anteil der erneuerbaren Energien an der Wärmeversorgung in Deutschland lag
+nach jüngsten Angaben der Arbeitsgruppe Erneuerbare Energienstatistik 2005 bei rund
+5,4% (2000: 3,9%). Der größte Anteil davon ist bisher meist traditionelle Heizungen auf
+Holzbasis.
+
+Das langfristige Wärmegesamtpotenzial der erneuerbaren Energien (Biomasse,
+Geothermie, Solarenergie) liegt in Deutschland bei bis zu 820 TWh pro Jahr. Dies
+entspricht deutlich über 50% des heutigen Bedarfs. Starke Zuwächse gab es
+insbesondere bei der Nutzung von Solarkollektoren zur Warmwasserbereitung und zur
+Heizungsunterstützung. Aufgrund des Marktanreizprogramms Erneuerbare Energien
+hat sich die Anzahl von Solarkollektoranlagen von 350.000 in 2000 auf 800.000 in 2005
+mehr als verdoppelt. Auch moderne Holzheizungen (insbesondere Holzpelletheizungen)
+haben starke Wachstumsraten, allerdings auf niedrigem absoluten Niveau. Um die
+bessere Erschließung der Potenziale der erneuerbaren Energien im Wärmebereich
+stärker voranzubringen, wird das Marktanreizprogramm Erneuerbare Energien auf
+hohem Niveau fortgeschrieben und ist eine haushaltsunabhängige Regelung in der
+Diskussion.
+
+8. Verkehr und Kraftstoffe
+8.1. Energieverbrauch (nach Energieträgern)
+
+Der Energieverbrauch im Verkehrsektor hat einen Anteil von 28 % am gesamten EEV.
+Nachdem er über viele Jahre deutlich steigende Tendenz aufwies, ist er seit Beginn des
+neuen Jahrzehnts rückläufig. Der Energiebedarf wird fast ausschließlich durch Mineralölprodukte gedeckt (Ottokraftstoffe, Dieselkraftstoffe und Flugbenzin). Elektrizität (Einsatz vor allem im Schienenverkehr) sowie andere Kraftstoffe haben derzeit insgesamt
+eine vergleichsweise geringe Bedeutung.
+
+...
+
+- 64 Innerhalb des Verkehrsbereichs spielt der Straßenverkehr im Hinblick auf die Höhe des
+Energieverbrauchs die entscheidende Rolle (86 % des EEV) vor dem Luftverkehr
+(11 %). Schienenverkehr (3 %) und Binnenschifffahrt (0,4 %) sind vernachlässigbar. Der
+Anteil der Biokraftstoffe am EEV des Straßenverkehrs lag im Jahr 2005 bei 3,4 %.
+
+8.2. Potentiale zur Effizienzsteigerung
+
+Die Effizienzpotentiale im Straßenverkehr liegen insbesondere bei der Ausschöpfung
+der technischen Möglichkeiten zur Absenkung des spezifischen Kraftstoffverbrauchs
+der
+
+PKW
+
+und
+
+LKW.
+
+Die
+
+Kraftstoffstrategie
+
+der
+
+Bundesregierung,
+
+die
+
+als
+
+Faktengrundlage ebenso wie die EU-Kommission die europaweit durchgeführte
+EUCAR/CONCAWE-Studie nutzt, geht für den Zeitraum 2002 bis 2020 von
+beträchtlichen Effizienzsteigerungen im Kraftfahrzeugbereich aus. Beim Dieselmotor
+liegen die möglichen Effizienzsteigerungen zwischen 16 und 34 %. Beim Ottomotor wird
+eine Effizienzverbesserung von 13 bis 26 % angenommen. Diese Entwicklung soll
+auch
+
+dazu
+
+beitragen,
+
+dass
+
+die
+
+europäische
+
+Automobilwirtschaft
+
+ihre
+
+CO2-
+
+Selbstverpflichtung erfüllen kann. Danach sollen die durchschnittlichen CO2-Emissionen
+neu zugelassener PKW bis zum Jahr 2008 auf 140 mg/km reduziert werden. Der
+Einsatz von Biokraftstoffen soll teilweise auf die Erreichung dieses Ziels angerechnet
+werden.
+
+Da in der Vergangenheit die Wirkungen der bereits realisierten technischen
+Effizienzgewinne jeweils durch eine erhöhte Verkehrsleistung zu einem großen Teil
+kompensiert wurden, sind weitere Maßnahmen notwendig. Diese erstrecken sich auf
+die individuellen Nutzungsbedingungen (Mobilitätsverhalten), auf organisatorische
+Aspekte
+
+(Verkehrsflussmanagement)
+
+sowie
+
+auf
+
+verkehrsträgerübergreifende
+
+Maßnahmen zur Steigerung der Gesamteffizienz im Verkehrsbereich.
+
+8.3. Perspektiven für alternative Kraftstoffe
+
+Die Bundesregierung orientiert sich bei dem Ausbau der Nutzung alternativer Kraftstoffe
+an der Ende 2004 veröffentlichten Kraftstoffstrategie. Ein Teil dieser Strategie bezieht
+sich auf die Umsetzung der EU-Richtlinie „Förderung der Verwendung von
+...
+
+- 65 Biokraftstoffen und anderen erneuerbaren Kraftstoffen im Verkehrssektor“, die eine
+Absatzsteigerung von Biokraftstoffen bis 2010 auf 5,75 % des Kraftstoffmarktes
+vorsieht.
+
+Biokraftstoffe
+
+Energierohstoffen
+
+können
+
+hergestellt
+
+nicht
+
+werden;
+
+nur
+sie
+
+aus
+
+heimischen,
+
+reduzieren
+
+auch
+
+erneuerbaren
+
+die
+
+spezifischen
+
+Treibhausgas-Emissionen erheblich. Dieser Effekt wird bei Energiepflanzen allerdings
+durch die Emissionen aus der landwirtschaftlichen Vorkette (beispielsweise N2O)
+gemindert.
+
+Neben den Biokraftstoffen zählen auch CNG („Erdgas“) und LPG („Autogas“) zu den
+alternativen Kraftstoffen. Diese Kraftstoffe sind fossilen Ursprungs, bieten jedoch einen
+CO2-Vorteil gegenüber Benzin und Diesel und werden durch eine ermäßigte
+Mineralölsteuer
+
+gefördert.
+
+In
+
+Deutschland
+
+wuchs
+
+flüssiggasbetriebenen Kraftfahrzeuge auf jeweils
+
+die
+
+Anzahl
+
+der
+
+erd-
+
+und
+
+nahezu 40.000 (Ende 2005)
+
+kontinuierlich an.
+
+Im Verkehrsbereich hat als erneuerbarer Energieträger im wesentlichen die Biomasse
+größere Bedeutung. Der Sektor der biogenen Kraftstoffe verzeichnete seit 1990 ein
+beachtliches Wachstum. Der Anteil der Biokraftstoffe am Gesamtverbrauch von
+Kraftstoffen im Straßenverkehr in Deutschland ist zwischen 2003 und 2005 von rund
+1,1 % auf rund 3,4 % gestiegen. Verantwortlich dafür ist insbesondere die seit dem
+1. Januar 2004 geltende Steuerbefreiung für Biokraftstoffe als Reinkraftstoffe und als
+Beimischung zu fossilen Kraftstoffen. Die Produktionskosten der ersten Generation der
+Biokraftstoffe (Biodiesel und Bioethanol) liegen derzeit über denjenigen von fossilen
+Kraftstoffen. Diese Biokraftstoffe wären erst bei einem Rohölpreis von über 100 US$
+wettbewerbsfähig. Das o.g. Fördersystem wird derzeit überarbeitet.
+
+Der mit Abstand am meisten genutzte biogene Kraftstoff ist Biodiesel. Der Absatz hat
+sich von 130.000 Tonnen im Jahr 1999 auf rund 2 Mio. Tonnen im Jahr 2005 erhöht.
+Über 1.900 Tankstellen bieten bundesweit Biodiesel an. Allerdings dürften sich die
+Einführung des Partikelfilters bei Dieselfahrzeugen und die zur Verfügung stehenden
+Anbaumöglichkeiten für Raps begrenzend auf den mittelfristigen Absatz reinen
+Biodiesels auswirken.
+
+...
+
+- 66 Seit kurzem wird in Deutschland auch Bioethanol in größerem Maß produziert. Im Jahre
+2005 dürfte der Absatz bei rund 210.000 t gelegen haben. Im Jahr 2005 sind zwei neue
+Anlagen in Betrieb gegangen, die die Produktionskapazität auf 600.000 t/a erhöhen und
+Deutschland auf Platz 1 der Bioethanol-Produzenten in Europa setzen.
+
+Neben den bereits auf dem Markt befindlichen Biodiesel und Bioethanol werden weitere
+Verfahren
+
+entwickelt
+
+(„Biokraftstoffe
+
+der
+
+zweiten
+
+Generation“),
+
+beispielsweise
+
+Synthetischer Biodiesel oder Bioethanol aus Zellulose.
+
+Die Potenziale für eine Biokraftstoffproduktion hängen stark von der Zukunft der
+deutschen Landwirtschaft ab. Auch andere Entwicklungen, die aus Nachhaltigkeitssicht
+wünschenswert
+
+sind,
+
+beanspruchen
+
+Fläche
+
+-
+
+etwa
+
+die
+
+Extensivierung
+
+der
+
+Landwirtschaft im Ökolandbau oder die Umsetzung von Kompensationsflächen,
+Biotopverbünden
+
+und
+
+anderen
+
+Maßnahmen
+
+des
+
+Natur-,
+
+Boden-
+
+und
+
+Gewässerschutzes. Die Nutzung der biogenen Reststoffe und Energiepflanzen für die
+Kraftstoffherstellung steht zudem in einer Konkurrenz zu CO2-Einsparungen, die mit
+diesen Stoffen in anderen Sektoren (Strom-, Wärmemarkt, stoffliche Nutzung) erzielt
+werden können.
+
+Langfristig wird sich die Flächensituation allerdings aufgrund steigender spezifischer
+Erträge in der Landwirtschaft und sinkender Bevölkerungszahlen entspannen. Dem
+Import von Biomasse – als Rohstoff wie auch als fertiger Bioenergieträger – könnte eine
+verstärkte Bedeutung zukommen.
+
+Die Marktchancen der Hybridfahrzeuge hängen letztlich von verkehrs- und umweltpolitischen Vorgaben ab. Der Energiereport IV erwartet nur ein langsames Vordringen. Der
+Marktanteil von PKW mit alternativen Antrieben (ohne Hybridfahrzeuge) wird bis 2030
+bei ca. 8 % liegen, im wesentlichen gasbetriebene Motoren. Mit Brennstoffzellen ausgerüstete PKW werden erst nach 2020 auf dem Markt kommen.
+
+...
+
+- 67 -
+
+9. Technologie und Forschung
+9.1. Weltmarkt Energietechnologien
+
+Für die Sicherung der Energieversorgung sind nach Einschätzung der IEA (2005) global
+für den Zeitraum 2004 – 2030 Investitionen in Höhe von 17 Billionen US$ erforderlich.
+Die Hälfte dieser Summe wird von den Entwicklungsländern beansprucht. China allein
+benötigt 2,5 Billionen US$. Mehr als 60 % der Gesamtinvestitionen gehen nach
+Einschätzung der IEA in den Elektrizitätssektor, 3 Billionen US$ in den Öl- und
+Gasbereich.
+
+Der deutsche Markt für konventionelle Kraftwerksanlagen bewegt sich seit 15 Jahren
+auf einem niedrigen Niveau von ca. 1 GW. Aufgrund des hohen Alters des
+konventionellen deutschen Kraftwerksparks wird für die nächsten 15 bis 20 Jahre mit
+einem Ersatzbedarf von 40 GW gerechnet, d.h. durchschnittlich von 2,2 GW
+Neuinstallationen p.a. Schätzungen gehen von einem Investitionsbedarf in Kraftwerke
+und Netze in Deutschland in Höhe von 80 Mrd. € bis zum Jahr 2030 aus. Die deutschen
+Gas- und Dampfturbinenhersteller haben 2005 ihren weltweiten Umsatz um rund 13 %
+auf 13,7 Milliarden Euro steigern können, was insbesondere dem Auslandsgeschäft zu
+verdanken war.
+
+Deutsche Kraftwerkstechniken zählen weltweit zur Spitze, was nicht zuletzt durch die
+staatliche Forschungsförderung und die damit verstärkte enge Zusammenarbeit
+zwischen Unternehmen und wissenschaftlichen Instituten erreicht worden ist. Diese
+Spitzenstellung sichert deutschen Herstellern einen beträchtlichen Anteil am stark
+wachsenden Weltmarkt und ist damit Grundlage für hochqualifizierte Arbeitsplätze. Mit
+der Stärkung der Energieforschung kann unser Anspruch nach weiterer technologischer
+Führerschaft untermauert werden.
+
+Im Bereich der Erneuerbaren Energien haben deutsche Unternehmen in den
+vergangenen Jahren Ihre Position auf dem internationalen Markt deutlich verbessern
+können und sind in vielen Bereichen weltweit führend. Damit haben sie zurzeit eine
+ausgezeichnete Position im globalen Wettbewerb. Im Bereich der Windenergie betrug
+der Weltmarktanteil der deutschen Produktion etwa 40 %. Das Exportvolumen
+...
+
+- 68 Deutschland bei den Erneuerbaren Energien lag 2004 bei rund 2 Mrd. €. Die
+Auswertung von globalen Szenarien (IEA, IPCC, WBGU, WEC, EREC) lässt nach ZSW
+bis 2020 einen Zubau der installierten Leistung (Strom und Wärme) von insgesamt rund
+3.350 GW global möglich erscheinen (Die gesamte installierte Leistung im Bereich
+Erneuerbare Energien Strom/Wärme lag Ende 2005 bei rund 2.350 GW). Dies
+entspricht einem Investitionsvolumen von rund 250 Mrd. € im Jahr 2020 (etwa ein
+Viertel davon ist der Windenergie zuzuordnen). Bei einem angenommen deutschen
+Weltmarktanteil von rund 10% kann das Exportpotential Deutschlands auf rund
+20 Mrd. € im Jahr 2020 gesteigert werden.
+
+9.2. Forschungsschwerpunkte und strategische Handlungsfelder
+
+Die Bundesregierung fördert Forschung und Entwicklung moderner Energietechnologien im Rahmen ihres Energieforschungsprogramms. Aktuell stehen zwei Ziele im
+Mittelpunkt:
+•
+
+Leistung eines konkreten Beitrags zur Erfüllung der aktuellen politischen Vorgaben:
+Dabei geht es prioritär um die Sicherstellung eines ausgewogenen Energiemixes,
+um die Steigerung der Energieproduktivität, die Erhöhung des Beitrages der
+erneuerbaren Energien sowie eine möglichst kostengünstige Minderung der
+energiebedingten Treibhausgasemissionen.
+
+•
+
+Sicherung und Erweiterung der technologischen Optionen zur Verbesserung der
+Reaktionsfähigkeit und Flexibilität der Energieversorgung, um Wirtschaft und
+Verbrauchern die Möglichkeit zur Anpassung an zukünftige Entwicklungen zu
+geben.
+
+Jenseits dieser spezifischen energiepolitischen Aufgaben leistet die Energieforschungspolitik einen Beitrag, um Innovationsprozesse zu beschleunigen, neue Energietechnologien schneller in den Markt zu bringen, klimaschonende Techniken zu
+entwickeln und sie auch für andere Länder verfügbar zu machen. Das stärkt Wachstum
+und Beschäftigung in Deutschland.
+
+...
+
+- 69 Die Bundesregierung unterstützt Forschung und Entwicklung moderner Energietechnologien auch außerhalb des Energieforschungsprogramms. Dabei geht es um Vorhaben
+in anderen Programmen, in denen auch - aber nicht vorrangig - energiepolitische
+Aspekte eine Rolle spielen (Mobilitätsforschung, Luftfahrtforschung, Forschung und
+Entwicklung auf dem Gebiet des Bau- und Wohnungswesens, Klimaschutz- und
+Umweltforschung u. a.).
+
+In den letzten 30 Jahren hat die Bundesregierung beträchtliche finanzielle Beträge für
+die Förderung von Forschung und Entwicklung moderner Energietechnologien zur Verfügung
+
+gestellt.
+
+Mit
+
+diesen
+
+Mitteln
+
+konnte
+
+nicht
+
+nur
+
+eine
+
+leistungsfähige
+
+Forschungsinfrastruktur aufgebaut werden, sie sind auch für den hohen Stand der
+Forschung auf dem Gebiet der Energietechnologien in Deutschland und für die
+beachtlichen Exporterfolge auf diesem Gebiet mitverantwortlich.
+
+Die Schwerpunkte der Forschungsförderung lagen in den letzten Jahren auf den Bereichen rationelle Energieumwandlung, erneuerbare Energien, nukleare Sicherheits- und
+Endlagerforschung sowie Fusionsforschung. Damit hat die Bundesregierung dazu beigetragen, dass Deutschland seine international führende Position auf den Gebieten
+Kraftwerkstechnologie, Brennstoffzellen, Sonnen- und Windenergie halten bzw. weiter
+ausbauen konnte.
+
+Die Fördermittel der Bundesregierung für Forschung und Entwicklung moderner Energietechnologien sind im Trend der letzten Jahre beträchtlich zurückgefahren worden. Im
+Jahr 2004 lagen die Fördermittel real rd. 40 % unter dem Niveau Ende der 90’er Jahre.
+2004 hat der Bund rd. 370 Mio. € für die Energieforschung zur Verfügung gestellt. Der
+Beitrag der Länder liegt bei rd. 60 Mio. €. Damit bleibt die staatliche Förderung von Forschung und Entwicklung moderner Energietechnologien in Deutschland weit hinter dem
+Engagement anderer Industrieländer, insbesondere unseren Hauptkonkurrenten auf
+den Weltmärkten, USA und Japan, zurück. Auch die Wirtschaft hat ihre Ausgaben für
+Forschung und Entwicklung moderner Energietechnologien gegenüber dem Niveau
+Anfang der 90’er Jahre reduziert.
+
+Um die energiewirtschaftlichen und klimapolitischen Herausforderungen des 21. Jahrhunderts meistern zu können, sieht die Bundesregierung weiteren Handlungsbedarf und
+...
+
+- 70 wird in den kommenden Jahren die Schwerpunkte der Förderpolitik im Energiebereich
+auf die folgenden Technologiefelder konzentrieren:
+•
+
+Rationelle Energieumwandlung: Aufgrund der unverzichtbaren Rolle fossiler Energien in der mittelfristigen Energieversorgung und des Ersatzes von rd. 40.000 MW
+der Kraftwerkskapazität bis 2020 bilden moderne Kraftwerkstechnologien auf Basis
+von Kohle und Gas einschließlich CO2-Speicherung einen besonderen Schwerpunkt
+(COORETEC-Programm). Als mögliche Elemente einer modernen Strom- und Wärmeversorgung sowie im Verkehrsbereich sind auch Brennstoffzellen sowie Wasserstofftechnologien und Energiespeicher wichtig. Der Erfolg des Sekundärenergieträgers Wasserstoff wird jedoch insbesondere davon abhängen, ob es langfristig gelingt, ihn wirtschaftlich und umweltverträglich zu erzeugen und ob wirtschaftliche
+Nutzungsmöglichkeiten vorhanden sind, z. B. bezahlbare Brennstoffzellenfahrzeuge.
+Hierzu gibt es weiteren Forschungsbedarf. Einen weiteren herausgehobenen Förderschwerpunkt bilden mit Blick auf ihre großen Energieeinsparpotentiale die
+Technologien zur energetischen Optimierung von Gebäuden.
+
+•
+
+Erneuerbare Energien
+Vor dem Hintergrund des angestrebten deutlichen Ausbaus der Nutzung der erneuerbaren Energien zielen Forschung und Entwicklung in diesem Bereich insbesondere
+darauf ab, innovative Techniken voranzubringen, die Kosten der Nutzung erneuerbarer Energieträger zu senken und die Effizienz und Zuverlässigkeit der Anlagen weiter
+zu erhöhen. Forschungsschwerpunkte sind Solarenergie, Windenergie, Geothermie
+und Bioenergie. Die ökologische Begleitforschung stellt sicher, dass der Ausbau
+umwelt- und naturgerecht stattfindet. System- und Querschnittsstudien tragen dazu
+bei, das Gesamtsystem im Zuge des Ausbaus der erneuerbaren Energien zu
+optimieren.
+
+•
+
+Nukleare Sicherheits- und Endlagerforschung: Die Reaktorsicherheitsforschung
+wird fortgeführt, um den Stand der Wissenschaft zum möglichst sicheren Betrieb von
+Kernkraftwerken voranzutreiben. Sie wird um zusätzliche Themen wie Digitale Leittechnik und fortschrittliche Brennstoffe erweitert, die von der Modernisierung der
+laufenden Kernkraftwerke und der internationalen Entwicklung vorgegeben werden.
+Die Endlagerforschung trägt, nachdem die technisch sichere Realisierbarkeit der
+...
+
+- 71 Endlagerung nach internationaler Expertenmeinung bereits seit mehreren Jahren erreicht ist, durch Optimierung der wissenschaftlichen Grundlagen zu dem Ziel bei, die
+Frage der sicheren Endlagerung radioaktiver Abfälle noch in dieser Legislaturperiode zu lösen.
+
+Im Rahmen des Haushaltes 2006 plant die Bundesregierung eine schrittweise Erhöhung der Fördermittel (6 Mrd. €-Programm). Diese zusätzlichen Mittel sollen vor allem
+bereit gehalten werden für:
+•
+
+„Leuchtturmprojekte“ zu den Themen „Kraftwerkstechnik“ und „Brennstoffzellen“ zur
+Stärkung des Technologiestandorts Deutschland,
+
+•
+
+Verstärkung der Förderung im Bereich Effizienztechnologien bei der Nachfrage
+(Industrie,
+
+Produkte,
+
+Verkehr,
+
+Gebäude),
+
+zentrale
+
+und
+
+dezentrale
+
+Effi-
+
+zienztechnologien bei der Energieerzeugung (einschließlich Speichertechnologien),
+Wasserstofftechnologien (einschließlich Brennstoffzellen),
+•
+
+Verstärkung der Förderung von erneuerbaren Energien
+
+•
+
+Fortsetzung und Ausbau der Forschung zum sicheren Betrieb von Kernkraftwerken
+und für die Endlagerung radioaktiver Abfälle.
+
+9.3. Internationale Technologiepartnerschaften
+
+Deutsche Forschung und Entwicklung sind eng eingebunden in die Europäische Forschungs- und Entwicklungspolitik, seitens der Unternehmen wie auch der Wissenschaft.
+Mit dem 7. Forschungsrahmenprogramm 2007-13 wird der „Europäische Forschungsraum“ weiter konkretisiert, u.a. durch sog. Technologieplattformen und Forschungs- und
+Entwicklungsnetzwerke unter Einschluss nationaler Programme. Die Bundesregierung
+gestaltet dieses zusammen mit Unternehmen aktiv mit, mit dem Ziel, Synergievorteile
+zwischen nationaler und europäischer Förderpolitik zu realisieren.
+
+Die internationale Zusammenarbeit zwischen Deutschland und seinen Partnern konzentriert sich im Energiebereich ferner auf die Internationale Energieagentur (IEA) sowie auf internationale Kooperationen mit ausgewählten Ländern (die in aller Regel direkt oder indirekt in Verbindung zu Forschungsaktivitäten der EU oder IEA stehen).
+...
+
+- 72 -
+
+Mit Blick auf internationale Kooperationen im Bereich der Energieforschung sind folgende Vorhaben von aktueller Bedeutung:
+•
+
+Carbon Sequestration Leadership Forum (CSLF) und International Partnership for
+the Hydrogen Economy (IPHE): Ziel beider Vorhaben ist die langfristig angelegte
+bilaterale und multilaterale Zusammenarbeit im Bereich CO2-freier Kohle- und Gaskraftwerke (CSLF) bzw. bei Wasserstofftechnologien und Brennstoffzellen (IPHE).
+Zur Zeit sind am CSLF 20 und an IPHE 16 Länder beteiligt, ferner die EU-Kommission. Deutschland gehört in beiden Initiativen zur technologischen Spitze und nimmt
+teilweise führende Positionen ein. CSLF ist von den G8 in Gleneagles aufgefordert
+worden, zusammen mit der IEA Maßnahmen im Hinblick auf den weltweiten Einsatz
+von Technologien zur CO2-Abtrennung und -Speicherung durchzuführen.
+
+•
+
+Generation IV International Forum (GIF): Deutschland ist an GIF über Euratom
+beteiligt. Die Forschung des GIF gilt insbesondere innovativen Reaktorkonzepten,
+die neben weiter verbesserten Sicherheitseigenschaften auch mehr Wirtschaftlichkeit und die Verringerung der Abfallmengen erwarten lassen.
+
+Die
+
+Bundesregierung
+
+wird
+
+neue
+
+Partnerschaften
+
+zwischen
+
+Industrie-
+
+und
+
+Entwicklungsländern vorantreiben, die u.a. auf eine anspruchsvolle Modernisierung der
+Energieversorgung zur Steigerung der Energieeffizienz und auf den Ausbau
+erneuerbarer Energien gerichtet sind. Hierzu können auch die projektbezogenen
+Mechanismen des Kyoto-Protokolls Clean Development Mechanism (CDM) und Joint
+Implementation (JI) beitragen. Der CDM verbessert die Kosteneffizienz des
+Klimaschutzes,
+
+fördert
+
+Entwicklungsländer
+
+den
+
+und
+
+Transfer
+trägt
+
+zu
+
+von
+
+zukunftsträchtigen
+
+einer
+
+Technologien
+
+Reduzierung
+
+der
+
+in
+
+globalen
+
+Treibhausgasemissionen bei. Der Abschluss von bilateralen Vereinbarungen über die
+Zusammenarbeit beim CDM soll die Identifizierung, Anbahnung und Durchführung
+geeigneter Projekte positiv befördern und zum Abbau spezifischer Risiken und
+Hemmnisse beitragen. Bisher wurde ein Memorandum of Understanding mit Mexiko
+unterzeichnet. Mit Schlüsselländern sollen Arbeitsgruppen eingerichtet werden, die
+interessierte Unternehmen mit Projektpartnern in den Gastländern zusammenbringen
+sollen. Mit Joint Implementation werden die gleichen Ziele in Zusammenarbeit mit
+anderen Industrieländern verfolgt. Partnerländer sind hier vor allem die mittel- und
+...
+
+- 73 osteuropäischen
+
+Länder
+
+in
+
+und
+
+außerhalb
+
+der
+
+Europäischen
+
+Union.
+
+Die
+
+Bundesregierung wird die Nutzung der projektbezogenen Mechanismen erleichtern, um
+die Marktchancen deutscher Unternehmen auf den technologischen Zukunftsmärkten
+im Ausland zu erhöhen.
+
+Initiativen zur Entwicklung moderner, effizienter Technologien oder Partnerschaften zur
+technologischen Zusammenarbeit – wie das G 8-Aktionsprogramm oder wie die
+deutsch-amerikanischen Vereinbarungen des Jahres 2005 – können ein verbindliches
+Klimaschutzabkommen auf internationaler Ebene sinnvoll ergänzen, aber nicht
+ersetzen. In diesem Sinne wird sich die Bundesregierung auch weiterhin an solchen
+Initiativen konstruktiv beteiligen. Ein Monitoringverfahren sollte vereinbart werden, um
+die Ergebnisse derartiger Technologieinitiativen darzulegen.
+
+9.4. Exportinitiative Erneuerbare Energien
+
+Der Deutsche Bundestag hatte das Bundeswirtschaftsministerium und die Deutsche
+Energie-Agentur GmbH (dena) beauftragt, zur Unterstützung der Exporttätigkeiten
+deutscher Hersteller der EE-Branche
+
+die Exportinitiative Erneuerbare Energien
+
+aufzubauen und umzusetzen (Bundestagsdrucksache 14/8278).
+
+Im Rahmen der Exportinitiative wurde von BMWi und dena ein aufeinander
+abgestimmtes Paket von Maßnahmen entwickelt. Die Angebote an die Unternehmen
+reichen von der Bereitstellung strukturierter und branchenspezifischer Informationen
+bezüglich
+
+der
+
+wichtigsten
+
+internationalen
+
+Zielmärkte,
+
+über
+
+Publikationen
+
+und
+
+Fachveranstaltungen bis hin zu Angeboten für den Kontaktaufbau zu Partnern und
+Kunden vor Ort. Dabei kommt das Instrumentarium der Außenwirtschaftsförderung des
+BMWi zur Anwendung, das auf die speziellen Bedürfnisse der EE-Branche abgestimmt
+wurde. Den Unternehmen werden keine Barmittel zur Verfügung gestellt (dies wären
+unerlaubte Beihilfen i. S. d. EU-Beihilferechts), sondern sie erhalten Unterstützung, um
+sich in fremden Märkten zurechtzufinden, Partner zu finden und sich schließlich aus
+eigener Kraft zu behaupten.
+
+...
+
+- 74 Nach Einschätzung der dena umfasst die deutsche EE-Branche ca. 800 - 1.000
+Unternehmen, von denen zum gegenwärtigen Zeitpunkt ca. 400 als exportorientiert
+betrachtet werden können.
+
+Seit Beginn der Umsetzung der Exportinitiative Ende 2003 wurden folgende
+Veranstaltungen/Aufgaben aus dem BMWi-Haushalt bis Ende 2005 mit insgesamt rd.
+25 Mio. € finanziert:
+•
+
+46 Messen speziell für EE, 2006 kommen weitere 12 dazu,
+
+•
+
+rd. 20 bfai- Informations- und Kontaktveranstaltungen, 2006 kommen weitere 13
+dazu,
+
+•
+
+67 AHK-Geschäftsreisen in über 50 Länder mit 421 teilnehmenden Unternehmen,
+2006 kommen weitere 40 Geschäftsreisen dazu,
+
+•
+
+8 Machbarkeitsstudien aus dem Projektstudienfonds,
+
+•
+
+Koordinierungsaufgaben und Informationen der dena
+
+•
+
+Beteiligung seit Ende 2004 am BASREC-Fonds (5 Mio. €) und seit September 2005
+am KfW-Klimaschutzfonds (4 Mio. €), um die Finanzierung von JI- und CDM-Projekten im Bereich der EE zu fördern.
+
+Die Auswertung von Angaben der Branchenverbände sowie einer Umfrage der dena
+lassen den Schluss zu, dass der Anteil des Exportgeschäfts der gesamten Branche von
+unter 15% in 2002 auf über 20% Ende 2004 angestiegen ist. Dieser Trend setzte sich
+im Jahr 2005 fort.
+
+...
+
+C.
+
+Herausforderungen der Energiepolitik
+– Schlussfolgerungen aus dem Statusbericht –
+
+Der Statusbericht für den Energiegipfel beschreibt die aktuelle Lage und die zu erwartende Entwicklung der Energieversorgung unter Berücksichtigung des europäischen
+und internationalen Rahmens. Er schafft damit die Basis für die Ableitung der Herausforderungen, an denen eine Gesamtstrategie zu messen ist. Für die langfristige Sicherung einer wirtschaftlich und umweltpolitisch tragfähigen Energieversorgung brauchen
+wir ein in sich schlüssiges energiepolitisches Gesamtkonzept. In diesem Zusammenhang sind vor allem folgende Fragen zu beantworten:
+
+1.
+
+Versorgungssicherheit
+
+Statusbericht: Bis 2030 sind weltweit voraussichtlich keine grundlegenden Versorgungsengpässe zu erwarten. Für Deutschland und die Europäische Union nimmt
+jedoch bei den Energieträgern Öl und Gas die Abhängigkeit von politisch instabilen
+Förderregionen zu.
+⇒
+
+Wie lässt sich der Energieverbrauch insgesamt weiter senken?
+
+⇒
+
+Wie lässt sich die Abhängigkeit von Öl und Gas reduzieren?
+
+⇒
+
+Wie lässt sich der Anteil inländischer Energieträger erhöhen?
+
+⇒
+
+Welche Anforderungen ergeben sich im Hinblick auf einen ausgewogenen
+Energiemix?
+
+⇒
+
+Wie kann eine Energie-Effizienz-Strategie am besten umgesetzt werden?
+
+2.
+
+Modernisierung der Stromversorgung
+
+Statusbericht: Der Strombedarf wird in Deutschland etwa auf heutigem Niveau bleiben
+und langfristig sinken. Mit dem altersbedingten Ersatz von Kraftwerken und dem
+gesetzlich verankerten Ausstieg aus der Kernenergie ergibt sich ein hoher
+Investitionsbedarf.
+⇒
+
+Welche Investitionen in hocheffiziente Kraftwerke und Netze sind erforderlich und
+geplant?
+. . .. . .
+
+-2⇒
+
+Wie lässt sich die Effizienz der Stromerzeugung erhöhen?
+
+⇒
+
+Wie lässt sich mittelfristig der Strombedarf durch erhöhte Effizienz senken?
+
+⇒
+
+Wie lässt sich der Ausbau erneuerbarer Energien wirtschaftlich effizient
+voranbringen und eine optimale Integration in die Stromversorgung erreichen?
+
+⇒
+
+Wie lässt sich der Ausbau erneuerbarer Energien im Strom- und Wärmemarkt
+verstärken, um die Ziele für 2020 zu erreichen bzw. wenn möglich zu übertreffen?
+
+⇒
+
+Wird es für die auslaufende Stromerzeugung aus Kernenergie quantitativ
+ausreichend und wirtschaftlich vertretbar Ersatz geben?
+
+⇒
+
+Wie kann zügig die Lösung der sicheren Endlagerung radioaktiver Abfälle erreicht
+werden?
+
+3.
+
+Energie- und Strompreise
+
+Statusbericht: Die Energie- und Strompreise sind in den letzten Jahren stark gestiegen.
+Wegen der weltweit wachsenden Energienachfrage insbesondere der Schwellenländer,
+aber auch durch staatliche Regelungen ist auch in Zukunft mit einem hohen Preisniveau
+zu rechnen.
+⇒
+
+Wie erreichen wir eine wettbewerbsfähige Strom- und Gasversorgung für Industrie
+und private Haushalte in Deutschland, u.a. durch
+-
+
+wirtschaftlich effiziente Gestaltung des Emissionshandels,
+
+-
+
+4.
+
+Stärkung des Wettbewerbs und der Transparenz der Märkte,
+
+wirtschaftlich effizienten Ausbau der erneuerbaren Energien ?
+
+Klimaschutz
+
+Statusbericht: Die weltweiten Treibhausgasemissionen müssen langfristig deutlich
+sinken, wenn ein gefährlicher Klimawandel verhindert werden soll. Dies setzt langfristig
+drastische Emissionsminderungen der Industrieländer und angemessene Beiträge der
+Entwicklungsländer voraus. Eine wichtige Rolle kommt der Entwicklung und
+Anwendung kohlenstoffarmer Technologien zu.
+...
+
+-3⇒
+
+Mit welchen Strategien, Technologien und Maßnahmen lässt sich die Emission
+von Treibhausgasen in Deutschland, Europa und weltweit kosteneffizient senken?
+
+⇒
+
+Wie kann eine Zusammenarbeit von Industrie- und Entwicklungsländern erreicht
+werden, die eine anspruchsvolle weltweite Modernisierung der Energieversorgung
+vorantreibt und den Boden für ein wirksames internationales Klimaabkommen
+bereitet?
+
+⇒
+
+Wie kann der Export von Technologien für Klimaschutz und für erneuerbare
+Energien verstärkt werden?
+
+5.
+
+Innovation und Technologie
+
+Statusbericht: Innovation und neue Technologien sind ein Schlüssel für die Bewältigung
+der energiepolitischen Herausforderungen. D braucht leistungsfähige, wirtschaftliche
+und umweltfreundliche Technologien für die eigene Energieversorgung, aber auch für
+die Sicherung der starken Stellung deutscher Unternehmen auf einem weltweiten
+Wachstumsmarkt.
+⇒
+
+Auf welchen Feldern der Grundlagenforschung (z.B. neue Materialien, Prozesse,
+Systemsteuerung) können wichtige Innovationen für die künftige Energietechnik
+vorangetrieben werden?
+
+⇒
+
+Welche Schwerpunkte muss die öffentlich und privat finanzierte Energieforschung
+unter Einbeziehung von Energieeffizienz und erneuerbaren Energien setzen?
+
+⇒
+
+Wie kann das CO2-freie Kraftwerk auf fossiler Basis wirtschaftlich effizient
+vorangebracht werden?
+
+⇒
+
+Wie können Forschung und Entwicklung verstärkt zur Nutzung der Energiespeicherung, sowie zum Management von Energieversorgung, Energieverteilung
+und Energieverbrauch beitragen?
+
+⇒
+
+Wie lässt sich die Markteinführung neuer Technologien durch Staat und Wirtschaft
+vorantreiben?
+
+⇒
+
+Wie kann der Weltmarkt für Ausbau und Modernisierung der Energieversorgung
+für deutsche Unternehmen besser erschlossen werden?
+
+⇒
+
+Wie können alternative Kraftstoffe wettbewerbsfähig gemacht werden?
+...
+
+-4-
+
+6.
+
+Europäische und internationale Zusammenarbeit
+
+Statusbericht: Die Energieversorgung in D ist eingebunden in die globalen Rohstoffmärkte, den internationalen rechtlichen Rahmen und den europäischen Binnenmarkt. Eine sichere, wirtschaftliche und umweltfreundliche Versorgung setzt enge
+internationale Zusammenarbeit voraus.
+⇒
+
+Wie lässt sich eine stabile Partnerschaft mit den Förderländern sichern?
+
+⇒
+
+Welche Prioritäten sollte die europäische Energie- und Klimapolitik setzen?
+
+⇒
+
+Wie kann der Beitrag internationaler Organisationen für eine sichere, wirtschaftliche und umweltverträgliche Energieversorgung gestärkt werden?
+
+...
+
+-5-
+
+Elemente einer integrierten Gesamtstrategie
+Der Statusbericht und die daraus ableitbaren Herausforderungen zeigen, dass
+bestimmte Strategien gleichzeitig die Antwort für mehrere der drängenden Fragen
+liefern. Dabei ist eine sinnvolle Aufteilung energiepolitischer Aufgaben zwischen der
+Europäischen Union und den Mitgliedstaaten anzustreben. Zentrale Elemente für eine
+Gesamtstrategie sind insbesondere:
+• Investitionen zur Erneuerung des Kraftwerksparks und der Netze
+• Partnerschaften zur Sicherung der Energieimporte
+• Funktionsfähiger Wettbewerb für tragfähige Energie- und Strompreise
+• Initiativen und Maßnahmen zur Steigerung der Energieeffizienz
+• Wirtschaftlich effizienter Ausbau erneuerbarer Energien
+• Forschungs- und Innovationsoffensive für neue Technologien
+• Internationale Zusammenarbeit zur anspruchsvollen Modernisierung der weltweiten
+Energieversorgung
+• Neues weltweites Klimaschutzabkommen unter Einbeziehung der Industrieländer
+und großer Schwellenländer, aufbauend auf dem Kyoto-Protokoll
+
+Auf dieser Grundlage wird die Bundesregierung ein energiepolitisches Gesamtkonzept
+entwickeln und im Jahr 2007 vorlegen.
+
+...
+

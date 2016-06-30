@@ -1,0 +1,117 @@
+GE ENERGY'S OFFSHORE WIND ENERGY ACTIVITIES: DEVELOPMENT, ON-SITE EXPERIENCE, AND TURBINE ENHANCEMENTS T. Fric, H-J Kooijman, G. Auer, and J. Leonard The Wind Energy Business of GE Energy Holsterfeld 16, 48499 Salzbergen, Germany Voice: +49 (0) 5971 980-1198, Fax -2198, E-mail: henkjan.kooijman@ps.ge.com
+
+Summary GE Wind Energy is using the extensive experience gained with the Arklow offshore demonstrator project to optimize the 3.6s offshore wind turbine and to plan upcoming offshore wind parks. Improved overall cost-of-electricity, improved turbine features, and optimized design features will provide for successful future offshore wind parks. Sitespecific analyses are being utilized to assess offshore turbine accessibility and wind/sea conditions. Such analyses are critical for cost-effective foundation and access system design.
+
+1.
+
+Introduction
+
+The GE Wind 3.6s wind turbine, rated at 3.6MW and with a rotor diameter of 104 meters, is the largest turbine in operation offshore in the world. Seven 3.6s wind turbines were installed and commissioned in late 2003 and early 2004 at Arklow Bank, Ireland. The turbines have been providing power to the Irish grid for much of 2004. GE Wind Energy is utilizing the experience from the Arklow project in preparation for future offshore wind parks. This experience is inclusive of design, installation and construction, commissioning, and operation. Turbine design optimization is underway that will improve the overall cost-of-energy for the electricity customer. Site-specific design considerations are being incorporated based on, for example, the Gunfleet Sands project off the coast of the UK. Future turbines based on the 3.6 platform will incorporate lessons learned from GE Wind Energy's experience at Arklow Bank. In addition GE Wind Energy has obtained significant experience from the 3.6s prototype in Barrax, Spain, and the variant 3.2s installed in Dunkerque, France. The 3.6 product incorporates the experience that GE Wind Energy has gained from its installed fleet of over 2500 1.5 MW wind turbines, including seven of which are installed offshore at Utgrunden, Sweden. 2. GE Wind 3.6s wind turbine
+
+Figure 1: GE Wind Energy 3.6s offshore turbine The 3.6s offshore wind turbine is a three bladed, upwind, 5° tilted axis wind turbine. The hub height of the GE Wind Energy 3.6 MW is based on site-specific parameters like water depth, waves, and tide conditions. These conditions drive the structural design of the foundation. A typical offshore hub height may be 75 meters above MLLW (Mean Lower Low Water level). The machine employs active yaw control, active blade pitch control, and a generator / power electronic converter system (designed to produce, e.g., nominal 50 Hertz (Hz), 690 Volt (V) rotor side and 3.3 kV stator side). A three coil transformer converts the voltages up to nominally 36 kV. The final voltage level is determined following the completion of electrical system studies. The major components of the 3.6s turbine are shown in figure 1. The hub, nacelle, and electrical container are designed to prevent water penetration. No ambient air is actively drawn through the hub, nacelle, or electrical container. The heat exchangers of the gearbox and generator are designed to force ambient cooling air through dedicated channels/ducts and not
+
+The GE Wind 3.6s offshore turbine was expressly designed for offshore use. The 3.6s, with its 104 meter rotor diameter, has a rated power output of 3.6 MW, achieved at the rated wind speed of 14 m/s. It is designed to operate in IEC 61400 type class IB (mean wind speed of 10 m/s, turbulence intensity of 16%, survival wind speed of 70 m/s) and type class IIA (mean wind speed of 8.5 m/s, turbulence intensity of 18%, survival wind speed of 59.5 m/s) site conditions. Cut-in wind speed is 3.5 m/s and cut-out wind speed is 27 m/s.
+
+through the nacelle enclosure. All hatches are sealed to the environment. Environmental isolation of sensitive electrical components is provided by the electrical container that is attached beneath the nacelle. The container compartments housing the converter, low voltage distribution, main controller and synchronization switch are sealed from the environment. The modular design of the 3.6s allows for flexibility in transportation, handling, and installation. 3. Arklow experience
+
+related issues was one key area of strength for the project, setting an industry standard. Access to the turbines during construction and commissioning is key to enable cost-effective construction and timely availability of the turbines. Highlighting and incorporating the lessons-learned will enable improvements to the product and logistics for future offshore wind parks.
+
+The Arklow project is a 25 MW demonstrator project located 10 km off the coast of Arklow in the Irish Sea. The project was co-developed by GE Energy and Airtricity. The goals of the project include demonstration of reliability of the 3.6 design in a marine environment, achievement of high availability, and optimization of operation & maintenance (O&M) for cost effective and safe offshore wind energy.
+
+Figure 3: 3.6s installation at Arklow Bank One of the Arklow turbines is fully instrumented with over 60 channels of instrumentations for design validation. Structural loads assessment of the turbine, blades through foundation, is underway. Validation by cross-simulation of wind and sea conditions is included. Performance (power curve) validation is also underway. The Arklow project is also being used to validate accessibility to the turbines for O&M. The GE Energy team has evaluated accessibility of several offshore vessels in order to demonstrate safe access to the turbines. Vessel trials have been conducted to evaluate access at various wave heights. Such experience will enable high turbine availability of the Arklow turbines. Arklow Bank site has severe wave conditions that have facilitated the study. Specific about the Arklow Bank site is the high tidal range. This results in a strong current. For this reason two ladder are available on either side of the foundation to guarantee accessibility independent of the current direction.
+
+Figure 2: 3.6s turbines at Arklow Bank During the construction phase of the project, a detailed lessons-learned database was created that captured manufacturing, installation and engineering-related items that were particularly successful to the project or that need to be addressed prior to future offshore projects. A complete detailed logistics plan early in the execution phase was considered essential to its success. Timely completion of turbine, tower, foundation and balance-of-plant (BOP) design and close coordination with the supply chain are essential. A strong focus on environmental, health, and safety (EHS)
+
+1 onboard crane
+
+1 2 3 4 5 1 2 3 4 5 6 7
+
+best
+
+average
+
+vessel option
+
+2 3 4 5 6
+
+30 turbine farm 20 life cycle analysis
+fixed costs: onboard crane fixed costs: tool container fixed costs: maintenance fixed costs: special contract mob/demob onboard crane mob/demob vessel mob/demob small crane mob/demob large crane
+
+7 external crane 8 9
+
+best
+
+average
+
+operation GEWE crew operation vessel operation small crane operation large crane
+
+vessel option
+
+10 11 12 13 14
+
+0
+
+10,000
+
+Relative cost per turbine per year
+
+20,000
+
+30,000
+
+40,000
+
+50,000
+
+60,000
+
+€
+
+Figure 4: Boat access to transition piece ladder 4. Turbine optimization
+
+Figure 5: Onboard crane cost-benefit study Gearbox reliability is a key area of focus. Long term operation and maintenance costs are a strong function of gearbox reliability. Offshore wind turbine gearboxes will meet the most recent industry and GE Wind Energy standards for design. Specifically the gearbox will be designed in accordance with new AGMA 6006, new GL (December 2003), DIN 3990 and ISO 6336 industry standards. GE Wind Energy gearbox design requirements add additional factors of safety into the design of the critical gearbox components. The design is further improved by enhanced bearing lubrication. Strict criteria to avoid the overlap of inherent gearbox frequencies will be applied. Expanded grid compatibility is planned for the next version of the 3.6s turbine. Expanded grid frequency and voltage tolerances will be achieved. Most significant will be its voltage tolerance capability through the implementation of GE Wind Energy's Low Voltage Ride-thru (LVRT) technology. LVRT allows the offshore wind farm to ride through transmission system events that temporarily drop grid voltage levels at the point of common coupling. LVRT remains engaged until the fault is cleared. LVRT enhances the turbines availability and its consistency in providing energy to the grid. Another advantage is the reduction in number of emergency stops triggered by grid faults, which reduces the mechanical loads on the turbine. The power electronics control technology experience that GE Wind Energy has obtained with the implementation of LVRT in its 1.5MW wind turbine will be leveraged. An overall weight reduction of the nacelle and rotor will be realized. The hub design will be modified to incorporate a reinforcement web at each blade location to provide a strong yet lighter weight design. The integral 40-ton (capacity) crane will be removed and therefore will allow for significant weight reduction of the nacelle. Overall weight reduction will lead to reduced loads and overall lower tower and foundation costs. Availability is key to successful offshore wind operation. Reliability modeling is being utilized to
+
+Further optimization of the 3.6s wind turbine is being driven by the reduction of overall cost-of-energy for the electricity customer. Key elements to ongoing design efforts are optimization of energy capture and loads for the 3.6s architecture, improved reliability and availability through implementation of lessons-learned, improved design requirements, improved quality, added redundancy and sensors, enhanced control and condition monitoring, and enhanced grid compatibility. Product requirements have been expanded to meet a broader offshore wind turbine market, and common requirements are in place for the 50 and 60 Hz versions of the turbine. Each 3.6s turbine installed at Arklow Bank has an onboard large (40-ton) capacity bow-type slewing crane in the nacelle. This crane facilitates removal of large components like the gearbox and generator. GE Wind Energy has conducted a detailed study to assess the overall cost-benefit of such a crane system. Figure 5 shows results of this analysis. The study compares the relative cost per turbine per year of servicing a 30turbine farm over 20 years between turbines with large capacity onboard cranes and turbines without such an internal crane. For the latter case, external cranes on jack-up barges are required. For each case, several vessel options associated with the service were evaluated. On average, turbines with external cranes were only slightly less expensive than those with onboard cranes. However, the lowest cost case with external cranes was significantly lower than the lowest cost onboard crane option. Further more, significant tower-top weight reduction is realized by removal of this crane system. Based on this analysis and customer feedback supporting the conclusion, future versions of the 3.6s will not be offered with a large capacity onboard crane system. Instead a small service crane will be incorporated for replacement of small components of approximately 2 metric tons and less.
+
+allocate and track the reliability and availability of the 3.6s. Targets and lower specification limits (LSL) are set at the turbine level and are subsequently flowed down to the subsystem level and component level (figure 6). Targets are values that the design teams design to, and lower specification limits are the minimum capability that must be met to meet customer expectations. This methodology is consistent with GE's Six Sigma Quality initiative and Design-for-Reliability process. Field data and experience from the Arklow units, the Barrax prototype, and the Dunkerque turbine are used to populate the reliability model. Analytical techniques validated on GE's large fleet of 1.5 turbines are also being utilized.
+
+turbine mass as power rating and water depth increase. At a certain stage, a transition to other types of support is deemed necessary. 6. Gunfleet Sands project
+
+An upcoming offshore wind energy project for GE is the Gunfleet Sands wind park. It is located 7 km from the British coastline, west of the London Thames estuary and comprises 5 rows of 6 turbines (http://www.gunfleetsands.co.uk), see Figure 7.
+
+Figure 7: Gunfleet Sands project The hub height of the turbines follows from the accumulation of the highest astronomical tide and storm surge, the highest wave crest as well as some additional margin. In this respect it is also considered that there is sufficient space between the lowest blade tip position and a small crane operating from the platform deck.
+
+Figure 6: Availability / reliability allocation 5. Foundation
+
+Cost effective offshore foundation design calls for tailored solutions, not only project specific but also location specific inside the farm, addressing local variations in water depth and soil conditions. Two important design targets for the foundation are the ability to withstand extreme loading conditions and to offer a lowest natural frequency that is safely above the highest rotor revolution frequency (so called stiff-soft design). Particularly the requirement of dynamic stability stresses the benefit of turbine weight savings. Because the rotor speed operation of all the turbines in the farm as well as wall thickness and diameter of the support structure are the same for all turbines, variation in the length of the monopile needs to accommodate for variations in soil conditions and water depth [ref. 1]. Designing a support structure is an iterative process, starting with an appropriate preliminary design that is modeled in a simulation tool to verify the strength and dynamics of the entire structure and adjusting these as found necessary. For stiff-soft offshore monopile designs it becomes increasingly more important to save
+
+frequency 10% 9% 8% 7% 6% 5% 4% 3% 2% 1% 0% 0 5 10
+
+measured wind distribution
+Weibull (k) = 2.1
+
+15
+
+20
+
+25
+
+Wind Velocity at 60m above MSL [m/s]
+Figure 8: Wind distribution Gunfleet Sands
+
+The array lay out for the 30 turbines at Gunfleet Sands is relatively dense, approximately eight and four diameters between the turbine rows and the turbines within a row respectively. Almost three years of measured wind data have been collected at the site. These results have been correlated to long-term wind conditions registered on shore. The free flow conditions match very well with a Weibull distribution of 9.3 m/s average wind speed at hub height and a shape parameter (k) = 2.1, see Figure 8. Because of a limited water depth of around 7.5m w.r.t. LAT and a location that is relatively close to the shore, the wave conditions at Gunfleet Sands are relatively benign. In addition, the extreme wind conditions are less severe than IEC wind class I. For fatigue loading assessment at Gunfleet Sands use has been made of the turbulence class C distribution (TC-C) as defined in the draft release of the IEC 61400-1, ed. 3 [ref. 2]. It is interesting to compare the TC-C distribution with effective turbulence intensity levels that need to be accounted for inside the contours of the farm, i.e. the combination of ambient turbulence and wake induced turbulence. For the calculation of these design turbulence levels GE uses an in-house developed tool called TBONTB that is based on the well-known Sten Frandsen model [ref. 3]. Special features of the tool are that it is able to model nongeometrical farm layouts and takes wind rose effects into account. This leads to the fact that effective turbulence levels are below the IEC turbulence class C distribution.
+
+References 1. Böker, C., Becker, C, and Cheng, P.W. (GE Wind Energy): Considerations regarding grouping of locations for monopile foundations for Offshore Wind Farms. Paper presented at DEWEK conference 2004, Wilhelmshaven Germany, October 2004. IEC 61400-1 ed. 3: Wind Turbine Generator Systems - Part 1: Safety Requirements. Geneva, Switzerland (unofficial release). Frandsen, S. "Turbulence and turbulencegenerated fatigue loading in wind turbine clusters" by Sten Frandsen, Risoe-R-1188 (EN).
+
+2. 3.
+
+35.0% 30.0% 25.0% 20.0% 15.0% 10.0% 5.0% 0.0% 0
+
+IEC ed.3 TC-C Effective TI (Wöhler exp. m = 10) Measured characteristic TI
+
+10
+
+20 30 mean wind speed [m/s]
+
+Figure 9: Turbulence distribution Gunfleet Sands site. The effective turbulence levels represent the design driving location in the farm and component class with specific Wöhler slope.
+

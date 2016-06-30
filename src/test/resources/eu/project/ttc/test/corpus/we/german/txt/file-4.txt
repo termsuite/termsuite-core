@@ -1,0 +1,3797 @@
+Auslegung und Optimierung von Generatoren für eine systemfähige Windkraftanlage kleiner Leistung
+
+Dissertation zur Erlangung des akademischen Grades eines Doktors der Ingenieurwissenschaften (Dr.-Ing.) im Fachbereich Elektrotechnik / Informatik der Universität Kassel Institut für Elektrische Energietechnik / Fachgebiet Elektrische Energieversorgungssysteme
+
+vorgelegt von Dipl.-Ing. Abdelbahi Tamzarti aus Taza / Marokko geb. 18.06.1973
+
+Tag der mündlichen Prüfung 18.06.2008
+
+1. Gutachter: 2. Gutachter:
+
+Prof. Dr.-Ing. Siegfried Heier Prof. Dr.-Ing. Bernd Weidemann
+
+Inhaltsverzeichnis
+Eidesstattliche Erklärung............................................................................................................ 1 Vorwort ...................................................................................................................................... 1 1 Einführung ........................................................................................................................... 1 2 Stand der Technik ................................................................................................................ 2 3. Systembetrachtungen ........................................................................................................... 5 4 Richtlinien zum Bau und Betrieb von kleinen Windkraftanlagen ....................................... 7 4.1 Zertifizierungsinstitutionen ......................................................................................... 7 4.2 Richtlinie für die Zertifizierung ................................................................................... 9 5 Mechanisch-elektrische Energiewandlerkonzepte ............................................................ 10 5.1 Generatorauslegung für die Nutzung der Windenergie ............................................. 11 5.2 Wandlersysteme mit Asynchrongeneratoren (ASG) ................................................. 12 6 Messtechnische Untersuchungen und Analysen am Beispiel einer 5°kW Windkraftanlage ........................................................................................................................................... 15 6.1 Dreiphasen-Asynchrongenerator ............................................................................... 16 6.1.1 Kennlinien des generatorischen Betriebes ............................................................. 16 6.1.2 Transientes Verhalten im Kurzschlußfall .............................................................. 26 6.1.3 Transientes Verhalten bei Netzzuschaltung ........................................................... 33 6.1.4 Wicklungserwärmung ............................................................................................ 36 6.1.5 Bremsverhalten von Asynchronmaschinen ............................................................ 39 6.1.6 Magnetisierungsverhalten ...................................................................................... 46 6.2 Einphasen-Asynchrongenerator................................................................................. 47 6.2.1 Kennlinien des generatorischen Betriebes ............................................................. 49 6.2.2 Wicklungserwärmung ............................................................................................ 56 6.2.3 Magnetisierungsverhalten ...................................................................................... 59 6.2.4 Stationäres Verhalten des Generators ................................................................... 60 6.2.5 Transientes Verhalten bei Netzzuschaltung ........................................................... 63 6.2.6 Wahl des Kondensatortyps .................................................................................... 65 6.3 Parameterbestimmung und Analysen ........................................................................ 66 6.3.1 Dreiphasen-Asynchrongenerator ........................................................................... 66 6.3.2 Einphasen-Asynchrongenerator ............................................................................. 69 7 Simulationsergebnisse im Vergleich mit Messungen und Auslegung .............................. 87 7.1 Modellbildung und Simulation .................................................................................. 87 7.1.1 Dreiphasen-Asynchrongenerator im Netzbetrieb................................................... 87 7.1.2 Dreiphasen-Asynchrongenerator im Inselnetzbetrieb............................................ 90 7.1.3 Einphasen-Asynchrongenerator im Netzbetrieb .................................................... 92 7.2 Meß-und Simulationsergebnisse im Vergleich.......................................................... 94 7.2.1 Dreiphasen-Asynchrongenerator im Netzbetrieb................................................... 95 7.2.2 Einphasen-Asynchrongenerator im Netzbetrieb .................................................... 96 7.3 Ergebnisse der Auslegung ......................................................................................... 98 7.3.1 Dreiphasen-Asynchrongenerator ........................................................................... 98 7.3.2 Einphasen-Asynchrongenerator ........................................................................... 100 8 Triebstrangverhalten ........................................................................................................ 103 8.1 Bestimmung der Getriebeverluste ........................................................................... 103 8.2 Geräusch- und Schwingungsuntersuchungen .......................................................... 108 8.3 Kühlung der kleinen Windenergieanlage ................................................................ 114 9. Zusammenfassung und Ausblick ..................................................................................... 117 Verwendete Formelzeichen .................................................................................................... 119 Literaturverzeichnis ................................................................................................................ 124
+
+Eidesstattliche Erklärung
+Hiermit versichere ich, daß ich die vorliegende Dissertation selbständig und ohne unerlaubte Hilfe angefertigt und andere als die in der Dissertation angegebenen Hilfsmittel nicht benutzt habe. Alle Stellen, die wörtlich oder sinngemäß aus veröffentlichten oder unveröffentlichten Schriften entnommen sind, habe ich als solche kenntlich gemacht. Kein Teil dieser Arbeit ist in einem anderen Promotions- oder Habilitationsverfahren verwendet worden.
+
+Kassel, 22.11.2007
+
+Vorwort
+Diese Dissertationsarbeit entstand am Fachgebiet Elektrische Energieversorgungssysteme im Fachbereich der Elektrotechnik / Informatik der Universität Kassel während meiner Tätigkeit als wissenschaftlicher Mitarbeiter. Die umfangreich durchgeführten Messungen und Laboruntersuchungen im Rahmen des Forschungsvorhaben Entwicklung kleiner Windkraftanlage lieferten dabei sehr wichtige Ergebnisse für das Gelingen dieser Arbeit. Herrn Prof. Dr.-Ing. Siegfried Heier, Leiter des Forschungsbereichs Windkrafttechnik und Initiator dieses Vorhabens, möchte ich für die wertvollen Anregungen und die zahlreichen fachlichen Diskussionen, die zu dieser Arbeit führten, ganz besonders für seine ständige Gesprächsbereitschaft sehr herzlich danken. Weiterhin möchte ich mich bei Herrn Prof. Dr.-Ing. Bernd Weidemann, Leiter des Fachgebietes Elektrische Maschinen, für die fachlichen Diskussionen und für die Übernahme des Zweitgutachtens sowie bei seinen Mitarbeitern für Ihre Unterstützung sehr herzlich danken. Insbesondere bedanke ich mich bei Herrn Dipl.-Ing. Lothar Gier für die Unterstützung bei der Durchführung von Lärmmessungen. Mein besonderer Dank gilt auch Herrn Prof. Dr.-Ing. habil. Peter Zacharias, Leiter des Fachgebietes Elektrische Energieversorgungssysteme und Vorstand des ISET, für die Unterstützung und das Interesse an meiner Arbeit. Ebenso möchte ich mich bei den Herrn Dr.-Ing. Gunter Arnold, Herrn Volker Berge und Bernhard Siano sehr herzlich bedanken für die Unterstützung und Durchführung von Laboruntersuchungen. Darüber hinaus möchte ich allen Kolleginnen und Kollegen des Fachgebietes Elektrische Energieversorgungssysteme sowie allen Studenten, die im Rahmen von Studien- und Diplomarbeiten mitwirkten, für ihre Unterstützung danken. Insbesondere bedanke ich mich bei Frau Anja Clark-Carina, Frau Judith Keuch, Herrn Dr. Boris Valov, Herrn Dipl.-Ing. Werner Döring, Herrn Dipl.-Ing Bernd Gruß, Herrn M.Sc. Mehedi Hasan Chowdhury, Herrn M.Sc. Rajesh Saiju, Herrn Dipl.-Ing Van Wang und Herrn Dr.-Ing Oliver Haas.
+
+1
+
+Einführung
+
+1 Einführung
+In westlichen Industriestaaten wird die Deckung des Energiebedarfs durch die Energiepolitik des Staates im Zusammenspiel mit der Energiewirtschaft gewährleistet. Die Energiepolitik steckt die Ziele ab und schafft die Bedingungen, unter welchen die Energiewirtschaft dem Handel ( z.B. Ein- und Ausfuhr von Erdöl ), der Gewinnung, der Energieumwandlung sowie der Verteilung von Energie und Energierohstoffen nachgehen kann. Dabei standen bis Mitte der 70er Jahre die Versorgungssicherheit und die Wirtschaftlichkeit im Vordergrund. Seither haben im Zuge des wachsenden Umweltbewußtseins auch die Schonung der Energievorräte durch effiziente Energienutzung und Umweltverträglichkeit eine gleichrangige Bedeutung erhalten. Die heutige Forderung, Versorgungssicherheit, Wirtschaftlichkeit, nachhaltige Energienutzung und Umweltverträglichkeit miteinander in Einklang zu bringen, läßt sich jedoch schwer erfüllen, da einige Ziele im Gegensatz zueinander stehen. Das 1989 aufgelegte Förderprogramm „100MW Wind“ des Bundes, das später auf 250MW aufgestockt wurde, war Ausgangspunkt der Markteinführung von Windenergieanlagen. Die Förderung betrug umgerechnet auf die mittlere Stromproduktion der Windenergieanlagen etwa 3ct/kWh (später 4ct/kWh), was eine Nutzung der Windenergie in erster Linie im privaten Bereich, der Landwirtschaft oder für kommunale Betriebe zur teilweisen Eigenbedarfsdeckung interessant machte [1]. Den entscheidenden Schub erhielt der Windenergiemarkt in Deutschland mit der Einführung des Stromeinspeisungsgesetzes zum 1. Januar 1991. Nach diesem war die ins öffentliche Stromnetz eingespeiste Energie mit mindestens 8ct/kWh zu vergüten. Zusammen mit der Bundesförderung und diversen Zusatzleistungen der Länder wurde einerseits eine sichere Planungsgrundlage für Investoren geschaffen, andererseits führte die Ausschöpfung technischer Verbesserungspotentiale zu einer erheblichen Senkung der Stromgestehungskosten. So konnte sich die Windenergienutzung sehr rasch aus einer Nischenanwendung zu einem breiten, kommerziellen Markt entwickeln und sah in Deutschland einem einzigartigen Boom entgegen. Die installierte Leistung stieg von ca. 4500 MW im Jahr 1999 auf 17132 MW im Jahr 2005 an und hat sich somit etwa vervierfacht [1].
+
+2
+
+Stand der Technik
+
+2 Stand der Technik
+Die dezentrale elektrische Energieversorgung stellt eine weltweite Herausforderung dar. Es werden große Anstrengungen unternommen, modular aufgebaute Hybridversorgungssysteme zu entwickeln und Demonstrationsanlagen für Labor- und zum Teil auch für Feldtests zu installieren. Dabei sind die Entwicklungsschwerpunkte bisher auf Photovoltaik-Wechselrichter, Batterie-Umrichter und Betriebsführung ausgerichtet. Zu einer wirtschaftlich kostengünstigen elektrische Energieversorgung mit Hybridsystemen, die auf regenerativen Energien basieren soll, wird insbesonders die Windenergie einen Beitrag leisten müssen. Zurzeit auf dem Markt vorhandene kleine Windenergieanlagen sind nur als preiswerte Batterielader oder als sehr teure Netzverbundeinheiten zu beziehen. Kleine Anlagen bleiben im Vergleich zu großen MW-Anlagen aufgrund der fehlenden Integration in dezentrale Energiesysteme noch am Anfang der Entwicklung. Die Merkmale einer systemfähigen kleinen Windenergieanlage, die eine Schlüsselkomponente für den Einsatz von Hybridanlagen in dezentralen Versorgungseinrichtungen darstellt, sind u.a.:
+-
+
+-
+
+Hybridsystemfähigkeit Wartungsarmut Reduzierung von mechanischen Funktionsbereichen und Verlagerung auf elektrische Komponenten Speziell auf den Einsatz ausgelegter robuster Generator
+
+Abbildung 2 verdeutlicht die Integrationsfähigkeit der zu entwickelnden Windkraftanlage. Ihr Einsatz im Verbund mit Batteriesystemen oder kleinen Dieselaggregaten ist insbesondere für die Bildung von Inselnetzen sowie zur Anbindung an schwache Netze von großer Bedeutung und bietet vielschichtige Möglichkeiten zur Elektrifizierung. Die Erwartung an die kleine Windenergieanlage
+-
+
+Wartungsarmut, hohe Lebensdauer, niedriger Anlagenpreis und hoher Energieertrag
+
+erfordern u.a. eine besondere Wahl und Auslegung des Generators.
+
+3
+
+Stand der Technik
+
+Abbildung 2: Aufbau eines modularen Inselnetzes
+
+Zu diesem Zweck werden im Rahmen dieser Dissertation Untersuchungen an verschiedenen Generatortypen durchgeführt.
+
+umfangreiche
+
+Wie eingangs erwähnt, konnten sich kleine Windenergieanlagen aufgrund hoher Anlagenkosten bisher auf dem Weltmarkt nicht stark durchsetzen. Die Marktführer in der Herstellung und Vermarktung von Anlagen im Leistungsbereich zwischen 5 und 10 kW kommen aus den USA. Deutsche Hersteller sind meistens nicht über die Prototypentwicklung hinausgekommen oder erreichen nur kleine Absatzzahlen, die keinen wirtschaftlichen Erfolg versprechen. Die nachfolgende Tabelle 2.1 stellt die zurzeit wichtigsten Anlagentypen kleiner Leistungsklasse dar.
+Anlagentyp Proven Southwest Westwind Tabelle 1: Anlagenübersicht [1] Leistung [kW] 6 3 5,5 Preis [Euro/kW] 3600 2500 2500
+
+Anhand der Tabelle wird deutlich, dass die hohen relativen Kosten eines der Haupthemmnisse für den wirtschaftlichen Durchbruch der kleinen Windkraftanlagen sind. Bei den preisgünstigeren Anlagen, in der Tabelle nicht aufgelistet, fehlt die Möglichkeit zur Integration in Netzen.
+
+4
+
+Stand der Technik
+
+Im Rahmen eines vom Bundesministerium für Wirtschaft und Technologie geförderten Verbundprojektes soll eine systemfähige und kostengünstige Windenergieanlage entwickelt werden. Dabei werden sowohl die mechanischen und elektrischen Komponenten ausgelegt und optimiert, als auch der Aerodynamik und der Integration in die Systemtechnik einen hohen Stellenwert beigemessen.
+
+5
+
+Systembetrachtungen
+
+3.
+
+Systembetrachtungen
+
+Um die angestrebten Entwicklungsziele zu erreichen, werden nach Möglichkeit störungsanfällige mechanische Funktionsbereiche soweit es geht auf elektrische Komponenten verlagert, d.h. es sollen weniger mechanisch bewegliche Steuer- und Regelungselemente eingesetzt werden. Die Konstruktion und Auslegung soll sich an den Vorgaben der internationalen Normreihe IEC 61400 orientieren. Dadurch lassen sich auch Standorte abdecken die extremen Bedingungen unterliegen, so muß u.a. die Anlage Anforderungen erfüllen wie
+-
+
+hohe maximale Überlebenswindgeschwindigkeiten von 70 m/s, hohe Schutzklasse gegen Feuchtigkeit und Staub für das Gehäuse: IP 65, weiter Netzspannungsbereich von 400 V (+- 15%) in 5% der Betriebszeit, weiter Frequenzbereich von 50 Hz +- 2% hohe technische und Personensicherheit, hohe Lebensdauer bei langen Wartungszyklen.
+
+Den systemtechnischen Aufbau der kleinen Windkraftanlage zeigt Abbildung 3.1 schematisch für den Anschluß an ein Verbund- oder Inselnetz mit 400 V Spannungsebene.
+
+Abbildung 3.1: Systemtechnischer Aufbau der kleinen Windkraftanlage [1]
+
+In der Anlage wird ein polumschaltbarer Asynchrongenerator zum Einsatz kommen. Dieser verfügt über zwei getrennte Wicklungen, die es erlauben optimal in zwei Drehzahlstufen auf unterschiedliche Windverhältnisse zu reagieren. Der Generator ist über ein einstufiges Stirnradgetriebe mit dem Rotor, der sich durch das Leeläuferprinzip selbst in den Wind dreht, gekoppelt. Aus Sicherheitsgründen und auch entsprechend den Richtlinien werden in der kleinen Windkraftanlage zwei Bremsen integriert. Diese werden von der Betriebsführung
+
+6
+
+Systembetrachtungen
+
+geschaltet und elektrisch gelüftet, mit dem Vorteil der sicheren Abbremsung bei Netzausfall oder Unterbrechung des Bremskreises. Das zweite Sicherheitssystem vertreten durch eine rein mechanische Fliehkraftbremse bremst bei Versagen der ersten Bremse. Weiterhin übernimmt die Systemsteuerung u.a. die Aufgabe der Generatorumschaltung, der Netzkopplung und der Blindleistungskompensation. Sie sorgt auch für eine optimale Integration in modulare Hybridsysteme. Aus systemtechnischer Sicht kann eine Windkraftanlage bzw. eine kleine Windkraftanlage in die 3 Teilsysteme
+-
+
+Rotor, Mechanisch-elektrischer Energiewandler (Generator) und Betriebsführung bzw. Systemsteuerung
+
+unterteilt werden. Dabei erfordert jedes Teilsystem einen sehr hohen Entwicklungsaufwand. So sollen z.B. die Rotorblätter sehr gute Ermüdungseigenschaften, eine hohe Abriebfestigkeit und hervorragende UVBeständigkeit besitzen. Darüber hinaus soll die aerodynamische Auslegung des Blattprofils die abgegebene Leistung bei hohen Windgeschwindigkeiten durch Strömungsabriss erfolgen. Die Betriebsführung oder die Systemsteuerung hat die Aufgabe, alle Betriebszustände der kleinen Windkraftanlage zu erkennen und falls erforderlich auch zu reagieren. Folgende Operationen sollen durchgeführt werden können:
+-
+
+-
+
+Das Netz überwachen und freischalten, Betätigen und Lüften der Bremse, Zuschalten des Generators nach einer Drehfeldprüfung auf das Netz über Sanftanlauf, Schalten von Kondensatoren zur Blindleistungskompensation, Umschalten der Drehzahlstufen, Messen sämtlicher elektrischer Größen wie z.B. Strom und Spannung,
+....
+
+Bei der Entwicklung der elektrischen Komponenten stellt der Generator als Teilsystem des Gesamtkonzeptes die Schlüsselkomponente dar. Er wird dahin gehend optimiert und ausgelegt, daß u.a. hohe Wirkungsgrade im Teillastbereich erreicht werden.
+
+7
+
+Richtlinien zum Bau und Betrieb von kleinen Windkraftanlagen
+
+4 Richtlinien zum Bau und Betrieb von kleinen Windkraftanlagen
+Durch die Zertifizierung von Windkraftanlagen läßt sich neben der Kundenzufriedenheit eine größere Marktetablierung erreichen. Für die Zertifizierung können Methoden bzw. Vorgehensweisen nach Underwriters Laboratories, dem Tüv Nord und dem Germanischen Lloyd ausgewählt werden. Die rechtliche Basis bei den Verfahren bilden gültige UL-Standards, die Richtlinie des Germanischen Lloyds sowie die IEC-Norm 61400-2. Hier soll ein Abgleich der Richtlinienforderungen mit der Anlagenkonzeption erfolgen.
+
+4.1 Zertifizierungsinstitutionen
+Grundsätzlich ergibt sich nach den Recherchen [1] über mögliche Zertifizierungsverfahren und den dort zugrunde gelegten Richtlinien die Struktur nach Abbildung 4.1
+
+Abbildung 4.1: Zertifizierungsinstitutionen
+
+Die Zertifizierung nach UL, dem TÜV Nord und dem Germanischen Lloyd bilden dabei die wesentlichen Schwerpunkte. UL-Zertifizierung Für die Entwicklung der kleinen Windkraftanlage und die anschließende Vermarktung bedarf es allgemein einer Zertifizierung. Im Hinblick auf die Vermarktung in den USA, wo die größten Absatzmarktchancen zu erwarten sind, wird es nach dem geltenden Gesetz nicht erforderlich sein, eine Zertifizierung bzw. eine Typenprüfung nachzuweisen. Da aber UL-Kennzeichnungen in den USA ein hohes Ansehen haben, ist es hinsichtlich des Einflusses auf das Kaufverhalten von Vorteil. Zum jetzigen
+
+8
+
+Richtlinien zum Bau und Betrieb von kleinen Windkraftanlagen
+
+Stand gibt es aber noch keine eigene Richtlinie (UL) für die Zertifizierung von kleinen Windkraftanlagen. Tüv-Nord Neben den USA ist auch Deutschland ein interessanter Absatzmarkt für kleine Windkraftanlagen. Für Deutschland wird die Zertifizierung durch den Tüv-Nord ausgewählt. Er ist neben dem Germanischen Lloyd die am meisten bekannte Institution bezüglich Gutachten, Bewertung und Zertifizierung von Maschinen. Nach Abbildung 4.2 wird deutlich, wie umfangreich die Anlagen nach Tüv-Nord geprüft werden.
+
+Abbildung 4.2: Zertifizierung beim Tüv-Nord
+
+Der Tüv-Nord beruft sich bei allen Prüfungen auf folgende Richtlinien: DIBt-Richtlinie für WKA GL-Richtlinie Richtlinie des GL zur Zertifizierung von WKA IEC-61400 Int. Richtlinie zur Zertifizierung von WKA und für Dänemark „DS 472 dänische Richtlinie zur Zertifizierung von WKA“ Germanischer Lloyd Grundlage der Zertifizierung nach dem Germanischen Lloyd bildet die Richtlinie für die Zertifizierung von Windkraftanlagen, die selbst vom GL herausgebracht wurde. Es handelt sich dabei um eine sehr umfangreiche einmalige Richtlinie ohne Einschränkung hinsichtlich Anlagengröße. Durch den weltweiten Anstieg der Windkraftanlagenzahl bzw. das ansteigende Interesse an der Windenergienutzung wurde der Umfang der Prüftätigkeiten des GL immer größer, was zu der Gründung einer Tochterfirma Germanischer Lloyd Wind Energie GmbH führte, die heute vom Akkreditierungs-Rat (DAR) als Produktzertifizierungsstelle für Windenergieanlagen und deren Komponenten anerkannt wird. Abbildung 4.3 stellt alle Leistungen schematisch dar.
+
+9
+
+Richtlinien zum Bau und Betrieb von kleinen Windkraftanlagen
+
+Abbildung 4.3: Leistungen des GL WindEnergie GmbH
+
+4.2 Richtlinie für die Zertifizierung
+Alle Themenbereiche der Richtlinie für die Zertifizierung von Windkraftanlagen sind in der Abbildung 4.4 schematisch dargestellt. Zu erwähnen ist, daß die Richtlinie keine Einschränkung hinsichtlich Anlagengröße hat. D.h. sie ist für kleine Windkraftanlagen nur teilweise anwendbar.
+
+Abbildung 4.4: Richtlinienbereiche des Germanischen Lloyds
+
+Jedoch ist die Erfüllung der Richtlinie anzustreben, da sie die Grundlage für die Zertifizierung durch den Tüv-Nord bildet und auch weitestgehend die Anforderung der allgemein gültigen IEC-Norm 61400-2 Ed abdeckt. Sie enthält Angaben, welche die Sicherheit der strukturellen, mechanischen, elektrischen und der Kontrollsysteme einer Windkraftanlage gewährleisten sollen.
+
+10
+
+Mechanisch-elektrische Energiewandlungskonzepte
+
+5 Mechanisch-elektrische Energiewandlerkonzepte
+Eine Schlüsselkomponente in der Wirkungskette einer Windkraftanlage dargestellt in Abbildung 5.1 ist der Generator.
+
+Abbildung 5.1: mechanisch-elektrische Wirkungskette einer Windenergieanlage
+
+Die elektrische Energie kann mit jedem beliebigen Generator in einer Windenergieanlage erzeugt werden, wobei der elektrische Strom sowohl Gleich- als auch Wechselstrom sein kann. Ein Gleichstromgenerator, der meist in kleinen Windkraftanlagen eingesetzt wird um Batterien aufzuladen, hat den Vorteil mit variabler Drehzahl betrieben werden zu können. Als Nachteil wäre hier zu nennen, daß dieser Maschinentyp über einen wartungsintensiven Kommutator verfügt und im Vergleich mit Wechsel- oder Drehstrommaschinen relativ teuer ist. Daher kommen für die Energieumwandlung im Wesentlichen aufgrund ihres einfachen und robusten Aufbaus nur Asynchron- und Synchrongeneratoren zum Einsatz. Sie besitzen ein Drehfeld, das durch die Drehung z.B. von Permanentmagneten hervorgerufen wird. Derartige Felder induzieren im Ständersystem elektrische Spannungen mit einer dem Drehfeld synchronen Frequenz. Asychronmaschinen können dagegen dem Drehfeld nicht folgen, es entsteht eine Differenzdrehzahl zwischen Läuferdrehzahl und Drehfelddrehzahl bzw. ein Schlupf. Im Läufer wirkt dann ein Drehmoment, was dem Schlupf proportional ist. Die Einspeisung ins Netz erfolgt im übersynchronen Betrieb. Für die Magnetisierung benötigt der Asynchrongenerator induktive Blindleistung. Hinsichtlich Blindleistung wird zwischen Generatorsystemen unterschieden, die Erregerleistung vom Netz beziehen und solchen die induktive Blindleistung liefern. Es ergeben sich dadurch verschiedene Konfigurationen, dargestellt in der Abbildung 5.2, zur mechanisch-elektrischen Energiewandlung.
+
+11
+
+Mechanisch-elektrische Energiewandlungskonzepte
+
+Abbildung 5.2: Wandlersysteme für die Nutzung der Windenergie [2]
+
+Nach der obigen Abbildung wird unterschieden zwischen Ausführungen mit
+-
+
+Starrer Netzkopplung und Systemen mit entkoppelter Netzanbindung.
+
+So stellen z.B. die Konzeptionen Asynchrongenerator mit Getriebe und Synchrongenerator mit Getriebe starre Netzkopplungen dar. Bei allen anderen Ausführungen lässt sich aufgrund Leistungselektronischer Baugruppen die mechanische Drehzahl von der elektrischen Netzfrequenz entkoppeln. Hinsichtlich Blindleistung erlaubt die Variante mit dem Synchrongenerator und Getriebe über den Stromrichter eine geregelte Blindleistungslieferung. Ein solches System eignet sich zur Bildung oder Stützung elektrischer Drehstromnetze.
+
+5.1 Generatorauslegung für die Nutzung der Windenergie
+Die Darstellung der einzelnen Ausführungen in Abbildung 5.2 lässt bereits erkennen, dass eine spezielle Auslegung des Generators für den Einsatz in Windkraftanlagen erforderlich ist. Neben den Ausführungsformen lassen sich Generatoren nach speziellen Kriterien unterscheiden, wie
+-
+
+Dynamisches Verhalten am starren Netz, Blindleistungsverhalten, Netzrückwirkungen, Synchronisierung, Verhalten bei Netzausfall, Wirkungsgrad, Kosten, Wartung und Zuverlässigkeit.
+
+12
+
+Mechanisch-elektrische Energiewandlungskonzepte
+
+Die Entwicklung einer Windenergieanlage im Leistungsbereich von 5 kW soll aus Wirtschaftlichkeitserwartungen die folgenden Vorraussetzungen erfüllen:
+-
+
+kostengünstig, hybridsystemfähig, wartungsfrei und über einen robusten Generator verfügen.
+
+Aus dieser Sicht kommen nach Abbildung 5.2 die Konzeptionen Asynchrongenerator mit Getriebe und Synchrongenerator mit Getriebe über den Gleichstromzwischenkreisumrichter in Betracht. Ein Vergleich zwischen den beiden Ausführungen hinsichtlich Kosten zeigt, dass das Konzept des Asynchrongenerators eine Variante ist, die im Rahmen dieser Dissertation weiter verfolgt werden muss. Neben der dreiphasigen Kopplung für kleine Inselsysteme soll auch für anders geartete Netze –z.B. in den USA– ein einphasiger Asynchrongenerator ausgelegt werden.
+
+5.2 Wandlersysteme mit Asynchrongeneratoren (ASG)
+Für die Einspeisung der Windenergie in dreiphasige elektrische Netze werden u.a. auch Drehstromasynchongeneratoren eingesetzt. Sie werden im Ständer mit einer symmetrischen dreisträngigen Wicklung ausgeführt. Je nach Läuferbauart werden ASG mit Käfigläufer und Schleifringläufern unterschieden. Die Läuferwicklung besteht entweder aus in das Läuferblechpaket eingegossenen Aluminium- oder eingeschlagenen Kupfer-Stäben, die an den Enden durch Kurzschlußringe verbunden sind oder aus drei symmetrisch angeordneten Wicklungssträngen deren Enden auf Schleifringe geführt sind, die von außen zugänglich sind. Bei Netzkopplung der Windenergieanlage entsteht im Luftspalt des Asynchrongenerators ein räumlich sinusförmig verteiltes Feld, das mit konstanter f ω Winkelgeschwindigkeit 1 umläuft. Die zugehörige Drehzahl n1 = 1 wird als
+p p
+
+synchrone Drehzahl definiert. Dabei ist f1 die Netzfrequenz und p die Polpaarzahl des Generators. Das Luftspaltfeld (Oberwellenfelder vernachlässigt) induziert in der Läuferwicklung Spannungen der Frequenz [1]
+f 2 = s ⋅ f1
+
+Gleichung 5-1
+
+mit s als Schlupf
+s= (n1 − n) Gleichung 5-2 n1
+
+13
+
+Mechanisch-elektrische Energiewandlungskonzepte
+
+und n als mechanische Drehzahl. Im stationären Betrieb unter symmetrischen Betriebsbedingungen und unter Vernachlässigung der Eisen- und Reibungsverluste gelten für die Asynchronmaschine folgende Spannungsgleichungen:
+U 1 = ( R1 + jX 1σ ) ⋅ I 1 + jX h ⋅ I µ 0 =[
+
+Gleichung 5-3a und b (R ' 2 ) ' + jX ' 2σ ] ⋅ I 2 + jX h ⋅ I µ s
+
+Die beiden Gleichungen bilden die Maschengleichungen der Ersatzschaltung nach Abbildung 5.3
+
+Abbildung 5.3: Ersatzschaltbild der Asynchronmaschine mit Kurzschlußläufer [2]
+
+Für den Betrieb der Asynchronmaschine als Generator ist es zunächst sehr wichtig, dass der Maschine zur Erzeugung und Aufrechterhaltung des Magnetfeldes ein Magnetisierungsstrom zugeführt wird. Der Blindstrombedarf ist leistungsabhängig. Im Netzbetrieb kann dieser dem Netz entnommen werden. Im Inselnetzbetrieb muss eine zusätzliche Blindstromkompensation vorhanden sein. Eine Änderung der Drehzahl ist bei diesem Generatortyp sehr schwierig. In sehr engen Grenzen kann die Drehzahl z.B. über eine Veränderung der Klemmenspannung beeinflusst werden. Eine weitere Möglichkeit besteht z.B. beim Schleifringläufer darin, durch zusätzliche Widerstände den Schlupf zu vergrößern um die Drehzahl zu verändern. Ein Käfigläufer kann nur mit Hilfe der Polumschaltung in seiner Leerlaufdrehzahl verändert werden. Dazu werden im Ständer entweder zwei Wicklungssysteme mit unterschiedlicher Polzahl ausgeführt, oder nach bekannten Verfahren die Polumschaltung nur in einer Wicklung realisiert. Es stehen zusammenfassend die folgenden Möglichkeiten zur Verfügung: [3][4]
+-
+
+Dahlander-Schaltung, Mandi-Schaltung, Krebs-Schaltung, Rawcliffe-Ausführung oder zwei getrennte Wicklungen.
+
+14
+
+Mechanisch-elektrische Energiewandlungskonzepte
+
+Bezüglich der einzelnen Schaltungen wird auf die Literatur hingewiesen. Hier werden nur die letzten beiden Ausführungen näher dargestellt. Die Pol-Amplituden-Modulation (Rawcliffe) beruht auf der Gleichung 5.4
+1 sin p 2α sin p mα = [cos( p 2 − p m )α − cos( p 2 + p m )α ] 2
+
+Gleichung 5-4
+
+wobei p2 die Grundpolpaarzahl der Ständerwicklung, und pm die Modulierungspolpaarzahl darstellen. Die Grundpolpaarzahl wird abschnittsweise entsprechend der Modulierungspolpaarzahl umgeschaltet. Es entstehen nach der Gleichung 5.4 zwei Harmonische Schwingungen in der Feldverteilung mit den Polpaarzahlen p2 – pm und p2 + pm. In der Abbildung 5.4 ist die Darstellung der Harmonischen wiedergegeben. Durch die Wicklungsauslegung wird eine der beiden Harmonischen so unterdrückt dass nur eine zur Auswirkung kommt. Die praktische Ausführung ist aufgrund des komplizierten Wicklungsaufbaus sehr schwierig. Trotzdem führen diese Ausführungen bei großen Maschinen zu wesentlich besseren Betriebsergebnissen als Generatoren mit zwei getrennten Wicklungen. Es lässt sich z.B. dadurch
+-
+
+kleinere Bauweisen realisieren, Wickelmaterial einsparen, dazu noch fast doppelt so hoher wirksamer Kupferquerschnitt in der Nut erzielen und ein hoher Wirkungsgrad und Leistungsfaktor erreichen.
+0,6
+
+0,4
+
+0,2
+
+0 0
+Feldverlauf
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10 sinp2asinpma cos(p2-pm)a cos(p2+pm)a
+
+-0,2
+
+-0,4
+
+-0,6
+
+-0,8
+
+-1 Winkel
+
+Abbildung 5.4:
+
+Pol-Amplituden-Modulation nach Rawcliffe
+
+15
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+6 Messtechnische Untersuchungen und Analysen am Beispiel einer 5° kW Windkraftanlage
+Windenergieanlagen werden aufgrund der Windverhältnisse meist im Teillastbereich betrieben, und erzeugen somit ein Großteil der von ihnen gelieferten Energie auch in diesem Bereich, in dem normal ausgelegte, auf dem Markt vorhandene Generatoren einen schlechten Wirkungsgrad haben, da sie für den Volllastbetrieb ausgelegt und optimiert wurden. Zur Verbesserung des Wirkungsgrades im Teillastbereich ist daher eine entsprechende spezielle Auslegung des Generators erforderlich. Dies kann durch folgende Maßnahmen erreicht werden
+-
+
+beim Käfigläufer Ausführung der Stäbe aus Kupfer, Minimierung der Reibungsverluste der Lager, Verbesserung der Blechqualität, Vergrößerung des Bauvolumens und Auslegung der Maschine auf niedrigere Sättigungsgrade (Kennlinienverfahren).
+
+Hinsichtlich der Erzielung hoher Energieerträge im unteren Leistungsbereich (Abbildung. 6.1), wird der Generator polumschaltbar ausgeführt, und im Betrieb entsprechend der aktuell eingespeisten Leistung mit zwei verschiedenen Synchrondrehzahlen betrieben.
+
+Abbildung 6.1: Turbinenkennfeld der Leistung und Arbeitsbereich des Generators [3]
+
+16
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+6.1 Dreiphasen-Asynchrongenerator
+Bei der Auslegung und Optimierung von Generatoren ist für Entwurfs-, Dimensionierungs- und Wirtschaftlichkeitsfragen die Kenntnis von Kennwerten auf dem Markt verfügbarer elektrischer Maschinen von entscheidender Bedeutung. Dieses Kapitel befaßt sich mit den meßtechnischen Untersuchungen von Asynchronmaschinen, die auf ihre Eignung als Generator für eine Windkraftanlage miteinander verglichen und optimiert werden. 6.1.1 Kennlinien des generatorischen Betriebes Auf einem Maschinenprüfstand nach Abbildung 6.2, bestehend aus einer schwingungsgedämpften Plattform, auf der der komplette Antriebsstrang montiert ist, werden im gesamten auftretenden Leistungsspektrum die mechanischen und elektrischen Messwerte in Abhängigkeit von der abgegebenen elektrischen Leistung von Leerlauf bis in den Nennlastbetrieb ermittelt. Darüber hinaus werden diese Messungen in Spannungsstufen von 90% bis 110% Nennspannung im gesamten Leistungsspektrum durchgeführt. Es werden sowohl dynamische als auch stationäre Messungen durchgeführt.
+
+Abbildung 6.2: Maschinenprüfstand
+
+Der Antriebsstrang besteht aus einer Antriebsmaschine, einer Drehmoment/Drehzahlmeßaufnehmerwelle und der zu untersuchenden Maschine. In der Abbildung 6.3 ist der Versuchsaufbau schematisch dargestellt. Die Klemmen des Generators werden über einen Leistungsschutzschalter und einen Stelltransformator mit dem Netz verbunden. Durch Variieren der Netzspannung werden unterschiedliche Auslegungen nachgebildet. Weiterhin ergeben sich durch
+
+17
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+Zwischenschalten eines dazu notwendigen Anpassungstransformators Verhältnisse entsprechend einem schwachen Netz.
+
+Abbildung 6.3: Versuchsaufbau zur Aufnahme der Genratorkennlinien
+
+Bei eingestellter Statorspannung wird die abgegebene elektrische Wirkleistung des Asynchrongenerators über die Drehzahl der Gleichstrommaschine geregelt. Es werden die Messwerte
+-
+
+Schein-, Wirk- und Blindleistung sowie Leiterströme in allen Phasen mechanische aufgenommene Leistung Leistungsfaktor Schlupf Wirkungsgrad Drehzahl
+
+der motorisch ausgelegten Asynchronmaschine ( in dieser Arbeit mit ASM-1 abgekürzt ) mit den folgenden Daten
+Typenbezeichnung Nennleistung Nennspannung Nennstrom Nenndrehzahl Leistungsfaktor Schaltungsart 132S-4 5,5 kW 400 V, 3~, 50 Hz 11,6 A 1440 U/min 0,84 Dreieck-Schaltung
+
+Tabelle 6-1: Daten der Asynchronmaschine in Standardausführung (ASM-1)
+
+im gesamten Leistungsspektrum aufgenommen. Ein kleiner Auszug aus dem Meßprogramm soll im Folgenden kurze Teilaspekte der Untersuchungen darstellen. Besondere Bedeutung kommt dabei dem Wirkungsgrad zu. Die Wicklung einer elektrischen Maschine bzw. der Asynchronmaschine läßt sich ausgehend von [11]
+
+18
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+Uh =
+
+ω
+2
+
+(ξ ⋅ w) ⋅ φ h
+
+Gleichung 6-1
+
+wobei Uh die erste harmonische der induzierten Spannung in der Wicklung, φh der Hauptfluß durch die Wicklung auslegen. Ziel der Auslegung ist die Auswahl einer geeigneten Wicklung, mit deren Kennwerten die zur Energiewandlung notwendige Windungszahl realisierbar ist und die bestimmte Randbedingungen erfüllt. Die Verluste im Generator bilden die Grundlage für die Berechnung des Wirkungsgrades, der als Verhältnis der abgegebenen elektrischen zu der aufgenommenen mechanischen Leistung angegeben ist. In der Gleichung 6.2 erfolgt die Beschreibung des Wirkungsgrades über die Verluste [5].
+
+η=
+
+Pel Pvo + PVL + Pel
+
+Gleichung 6-2
+
+wobei Pvo die Leerlaufverluste und PvL die lastabhängigen sowie die Stromwärmeverluste beschreiben. Bei den üblicherweise ausgelegten Generatoren tritt der maximale Wirkungsgrad etwa bei Volllast auf, d.h. wenn die Leerlaufverluste etwa gleich den Lastverlusten sind. Das ist jedoch für den Einsatz in der Windenergie nicht wünschenswert, weil der Generator selten im Nennbetrieb arbeitet. Da die lastabhängigen Verluste näherungsweise dem Quadrat der elektrisch abgegebenen Leistung proportional sind
+
+PVL = k ⋅ P 2 el
+
+Gleichung 6-3
+
+ergibt die Differentiation der modifizierten Gleichung 6.2 nach der ersten Ableitung unter Berücksichtigung der Gleichung 6.3
+dPVL dPel ∂η = ∂Pel ( Pvo + PVL + Pel ) 2 Pvo + PVL −
+
+Gleichung 6-4
+
+Der maximale Wirkungsgrad tritt ein, wenn
+∂η =0 ∂Pel
+
+19
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+Aus Gleichung 6.3 und 6.4 folgt
+Pvo + PVL − Pel dPVL =0 dPel
+
+bzw.
+Pvo + PVL dPVL = Pel dPel
+
+Der maximale Wirkungsgrad soll bei Pel<Pn liegen, wo die Tagente an die Verlustkurve Pvo+PvL gerade durch den Ursprung geht. Mit Gleichung 6.3 ergibt sich
+Pel = PVo k
+
+Nach Abbildung 6.4 ist deutlich zu erkennen, dass hoher Teillastwirkungsgrad und ein maximaler Wirkungsgrad von ca. 90% für Spannungen von ca. 340 V schon bei etwa 2°kW elektrischer Leistung erreicht wird und dann bis zur Nennleistung nur noch ganz leicht abfällt bzw. fast konstant bleibt. Da die Windenergieanlage im Betrieb z.B. bei 5 bis 7°m/s mittlerer Windgeschwindigkeit sehr häufig im Bereich unterhalb der Nennleistung laufen wird, kommt diese Charakteristik dem Ziel, hohe Energieerträge zu erreichen, sehr entgegen.
+
+100 90 80
+
+400V 380V 360V 340V 320V 300V
+
+Wirkungsgrad [%]
+
+70 60 50 40 30 20 10 0 1000 2000 3000 4000 5000
+
+6000
+
+elektr. Leistung [W]
+
+Abbildung 6.4: Messung des Wirkungsgrades der Asynchronmaschine im generatorischen Betrieb
+
+Anhand der Voruntersuchungen an der Standardmaschine wird eine auf niedrigen Sättigungsgrad ausgerichtete zweistufige polumschaltbare Asynchronmaschine mit den folgenden Daten entwickelt. Der Generator arbeitet entsprechend der Windgeschwindigkeit in zwei Drehzahlbereichen mit der ersten Stufe bis 1,5 kW und der zweiten bis Nennlast von 5,5 kW.
+
+20
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+Polumschaltung Nennleistung Nennspannung Nennstrom Nenndrehzahl Schutzart Iso.Kl. Schaltungsart Luftspaltbreite
+
+2 getrennte Wicklung 5,5 kW/ 1,5 kW 400 V, 3~, 50 Hz 9,9 A/ 3,9 A 1538 U/min / 1023 U/min IP 54 B Stern-Schaltung/ Stern-Schaltung 0,35mm
+
+Tabelle 6-2: Daten des polumschaltbaren Asynchrongenerators (ASM-2)
+
+Im nächsten Schritt wird der mit 2 getrennten Wicklungen ausgeführte polumschaltbare Asynchrongenerator vermessen und optimiert. Nach den Abbildungen 6.5 und 6.6 ist deutlich zu erkennen, dass hohe Teillast- und Maximalwirkungsgrade für Spannungen unterhalb des Nennwertes erreicht werden. Beim 4-poligen Betrieb wird ein maximaler Wert von ca. 90% für Spannungen von ca. 360V schon bei etwa 2 kW elektrischer Leistung erreicht. Der Wirkungsgrad fällt dann bis zur Nennleistung leicht ab. Er erreicht beim 6poligen Betrieb des Generators einen Maximalwert von 84% bei etwa 1kW. Sowohl für den 4poligen als auch für den 6poligen Betrieb des polumschaltbaren Asynchrongenerators liegen die Wirkungsgrade im Nennbereich bei ca. 90% für die obere und etwa 83% für die untere Drehzahlstufe. Diese Charakteristik, bei der hohe Energieerträge zu erreichen sind, kommt der Auslegung des Prototyps sehr entgegen.
+100,00
+
+90,00
+
+80,00
+
+70,00
+
+Wirkungsgrad [%]
+
+60,00
+
+50,00
+
+40,00
+
+Nennspannung in der 4-poligen Stufe 90% Nennspannung in der 4-poligen Stufe
+
+30,00
+
+Nennspannung in der 6-poligen Stufe 90% Nennspannung in der 6-poligen Stufe
+
+20,00
+
+10,00
+
+0,00 0,00
+
+1000,00
+
+2000,00
+
+3000,00
+
+4000,00
+
+5000,00
+
+6000,00
+
+7000,00
+
+Leistung [W]
+
+Abbildung 6.5: Vergleich der 4- und 6-poligen Stufe hinsichtlich Wirkungsgrad bei 90% der Nennspannung
+
+21
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+100,00
+
+90,00
+
+80,00
+
+70,00
+
+60,00
+Wirkungsgrad [%]
+
+50,00
+
+40,00
+
+110% Nennspannung in der 4-poligen Stufe
+30,00
+
+Nennspannung in der 4-poligen Stufe 110% Nennspannung in der 6-poligen Stufe
+
+20,00
+
+Nennspannung in der 6-poligen Stufe
+
+10,00
+
+0,00 0,00
+
+1000,00
+
+2000,00
+
+3000,00 Leistung [W]
+
+4000,00
+
+5000,00
+
+6000,00
+
+7000,00
+
+Abbildung 6.6: Vergleich der 4- und 6-poligen Stufe hinsichtlich Wirkungsgrad bei 110% der Nennspannung
+
+Neben dem Wirkungsgrad ist auch ein hoher Leistungsfaktor von Interesse, da von diesem die Blindleistungsbelastung des Netzes abhängt und die Blindströme ihrerseits Verluste verursachen. Der Verlauf des Leistungsfaktors hat gewisse Ähnlichkeit mit dem Verlauf des Wirkungsgrades, mit dem Unterschied, dass die Kurve nicht im Koordinatenursprung anfängt, sondern mit einem niedrigen endlichen Wert. Der maximale Leistungsfaktor liegt näherungsweise bei [9]
+cos ϕ max ≈ 1 − 2 I0 Ik − I0 ≈ I∞ Ik + I0 Gleichung 6-5
+
+I 0 = Leerlaufstrom I k = Kurzschlußstrom I ∞ = Strom bei s = ∞
+
+und mit der Gleichung 6.6 kann der Leistungsfaktor sehr einfach berechnet werden.
+[1 − ( cos ϕ = I0 2 I ) ][1 − ( 1 ) 2 ] I1 I∞ I 1+ 0 I∞
+
+Gleichung 6-6
+
+Der Leistungsfaktor ist von der Generatorleistung abhängig.
+
+22
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+Bei
+I0 I = 1 I1 I ∞
+
+erreicht er seinen maximalen Wert.
+1−σ Gleichung 6-7 1+σ σ = Gesamtstreuung cos ϕ max =
+
+Die Abbildungen 6.7 und 6.8 veranschaulichen den Verlauf des Leistungsfaktors in Abhängigkeit von der elektrisch abgegebenen Leistung. Sowohl bei der 4-poligen als auch bei der 6-poligen Drehzahlstufe stellen sich bei kleineren Netzspannungen und höherer Abgabeleistung größere Leistungsfaktorwerte ein. Die 6-polige Ausführung hat nach der Abbildung 6.8 allerdings im gesamten Arbeitsbereich einen schlechten Leistungsfaktor.
+1,00
+
+0,90
+
+0,80
+
+0,70
+
+0,60
+
+Leistungsfaktor
+
+0,50
+
+0,40
+
+90% Nennspannung in der 4-poligen Stufe
+0,30
+
+Nennspannung in der 4-poligen Stufe 90% Nennspannung in der 6-poligen Stufe
+
+0,20
+
+Nennspannung in der 6-poligen Stufe
+
+0,10
+
+0,00
+
+0
+
+1000
+
+2000
+
+3000
+
+4000
+
+5000
+
+6000
+
+7000
+
+elektrische Leistung [W]
+
+Abbildung 6.7: Vergleich der 4- und 6-poligen Stufe hinsichtlich Leistungsfaktor bei 90% der Nennspannung
+
+23
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+1,00
+
+0,90
+
+0,80
+
+0,70
+
+0,60
+
+Leistungsfaktor
+
+0,50
+
+0,40
+
+Nennspannung in der 4-poligen Stufe
+0,30
+
+110% Nennspannung in der 4-poligen Stufe Nennspannung in der 6-poligen Stufe 110% Nennspannung in der 6-poligen Stufe
+
+0,20
+
+0,10
+
+0,00
+
+0
+
+1000
+
+2000
+
+3000
+
+4000
+
+5000
+
+6000
+
+7000
+
+elektrische Leistung [W]
+
+Abbildung 6.8: Vergleich der 4- und 6-poligen Stufe hinsichtlich Leistungsfaktor bei 110% der Nennspannung
+
+Die Auswertung der durchgeführten Messungen an ASM-2 bestätigt, daß diese Auslegung hinsichtlich Leistungsfaktors vor allem im Teillastbereich in beiden Drehzahlstufen Verbesserungen bedarf. Einen maßgebenden Einfluß auf den Leistungsfaktor bzw. auf die Höhe des Magnetisierungsstromes hat der Luftspalt. Er sollte so klein wie möglich gewählt werden. Eine weitere Möglichkeit besteht darin die Polumschaltung, wie im Kapitel 5.2 eingeführt, nach Rawcliffe durchzuführen. Sie soll vorallem bei großen Maschinen zu wesentlich besseren Betriebsergebnissen bezüglich Wirkungsgrad und Leistungsfaktor führen. Durch die Ausführung der Polumschaltung in nur eine Wicklung läßt sich zwar nach Abbildung 6.9 der Leistungsfaktor um einige Prozentpunkte verbessern, dagegen bringt diese Ausführung nach der Abbildung 6.10 bezüglich der energetischen Ausnutzung des Generators eine deutlich Verschlechterung mit sich.
+
+24
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+1
+
+0,9
+
+0,8
+
+0,7
+
+Leistungsfaktor
+
+0,6
+
+0,5
+
+0,4
+
+0,3 getrennte Wicklungen PAM-Wicklung 0,2
+
+0,1
+
+0 0 1000 2000 3000 elektrische Leistung [W] 4000 5000 6000
+
+Abbildung 6.9: Vergleich der Polumschaltungen nach Rawcliffe (PAM) und 2 getrennte Wicklungen hinsichtlich Leistungsfaktor
+100
+
+90
+
+80
+
+70
+
+Wirkungsgrad [%]
+
+60
+
+50
+
+40
+
+30 getrennte Wicklungen PAM-Wicklung 20
+
+10
+
+0 0 1000 2000 3000 elektrische Leistung [W] 4000 5000 6000
+
+Abbildung 6.10: Vergleich der Polumschaltungen nach Rawcliffe (PAM) und 2 getrennte Wicklungen hinsichtlich Wirkungsgrad
+
+Aufgrund der Schwierigkeit der praktischen Ausführung des komplizierten Wicklungsaufbaus wird die Möglichkeit, mit dieser Auslegung die Verbesserung des Leistungsfaktors in dieser Leistungsklasse zu erzielen, ausgeschlossen.
+
+25
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+Die im Weiteren technisch noch realisierte Verringerung des Luftspaltes um 0,10mm auf 0,25mm ergibt eine Verbesserung des Leistungsfaktors im Teillastbereich um 10%. Abbildung 6.11 veranschaulicht den Verlauf des Leistungsfaktors der 6-poligen Stufe. Mit der Verringerung des Luftspaltes ergibt sich zudem auch eine Erhöhung des Wirkungsgrades im Teillastbereich der kleinen Drehzahlstufe zwischen 500W und 1kW um ca. 10 %-Punkte (vgl. Abbildung 6.12).
+
+0,80
+
+0,70
+
+0,60
+
+Leistungsfaktor
+
+0,50
+
+0,40
+
+0,30 ASM-2 mit 0,35mm Luftspalt 0,20 ASM-3 mit 0,25mm Luftspalt
+
+0,10
+
+0,00 0,00
+
+500,00
+
+1000,00
+
+1500,00
+
+2000,00
+
+2500,00
+
+elektrische Leistung [W]
+
+Abbildung 6.11: Messung des Leistungsfaktors der 6-poligen Drehzahlstufe für beide Auslegungen im Vergleich
+
+Gegenüber herkömmlich ausgelegten polumschaltbaren Asynchronmaschinen dieser Leistungsklasse konnten also Wirkungsgradverlauf und Leistungsfaktor erheblich verbessert werden, was der Netzverträglichkeit und letztlich den Stromgestehungskosten entgegen kommt.
+
+26
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+100,00 90,00 80,00 70,00 Wirkungsgrad [%] 60,00 50,00 40,00 30,00 20,00 10,00 0,00 0,00 ASM-2 mit 0,35mm Luftspalt ASM-3 mit 0,25mm Luftspalt
+
+500,00
+
+1000,00
+
+1500,00
+
+2000,00
+
+2500,00
+
+elektrische Leistung [W]
+
+Abbildung 6.12: Messung des Wirkungsgrades der 6-poligen Drehzahlstufe für beide Auslegungen im Vergleich
+
+6.1.2 Transientes Verhalten im Kurzschlußfall Eine Asynchronmaschine gerät in den Kurzschluß, wenn in ihrer Nähe ein Netzkurzschluß auftritt oder wenn ein Wicklungsschluß auftritt. Dabei kommt es zu zwei Erscheinungen. Einmal fließen in der Maschine selbst hohe Kurzschlußströme und rufen Kräfte elektromagnetischen Ursprungs hervor, die mechanisch beherrscht werden müssen. Zum anderen liefert der Asynchrongenerator im Fall des Netzkurzschlusses einen Beitrag zum Kurzschlußstrom über die Kurzschlußbahn. Diese Kurzschlüsse haben im Hinblick auf die Auslegung der mechanischen und elektrischen Komponenten wie z.B. des Getriebes und des Schleifringkörpers einen wesentlichen Einfluß. Die Untersuchungen an Prototypen sollen veranschaulichen, ob die hervorgerufenen transienten Drehmomente bei den Kurzschluss- und später im Kapitel 6.1.3 bei den Aufschaltversuchen am Netz kritische mechanischen Beanspruchungen für das Getriebe darstellen. Für den Schleifringkörper sind die auftretenden Stromspitzen, die während des Kurzschlusses und Aufschalten ein Vielfaches des Nennstromes betragen können, zu berücksichtigen. Beim Betrieb der Asynchronmaschine am dreiphasigen Netz gibt es mehrere Kurzschlussmöglichkeiten wie z.B. der
+-
+
+dreiphasige Kurzschluss mit und ohne Erdkontakt, der zweiphasige Kurzschluss mit und ohne Erdkontakt und der einphasige Kurzschluss (Erdschluss)
+
+wobei im realen Betrieb der kleinen Windenergieanlage im Kurzschlussfall noch zu berücksichtigen ist, daß der Strom auch durch die innere Netzinduktivität begrenzt
+
+27
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+wird. Bei den durchgeführten Untersuchungen befindet sich die Maschine vor dem Kurzschluß im Nennbetrieb. Die meßtechnischen Untersuchungen haben gezeigt, daß die auftretenden Stromspitzen im Kurzschluß nicht mehr als das 7-fache des Nennstromes betragen. Die nachfolgende Tabelle stellt zusammenfassend ausgewählte Ergebnisse in Abhängigkeit vom Kurzschlussfall der Untersuchungen dar. Kurzschlußfall Erdschluß 2-phasiger Erdschluß 2-phasiger Kurzschluß 3-phasiger Erdschluß Erdschluß 2-phasiger Erdschluß 2-phasiger Kurzschluß 3-phasiger Erdschluß Stromspitze IS [A] Polpaarzahl IS/IN Dauerstrom ID [A] 13,5 3 2,45 >0 24 3 4,36 >0 22 3 4 =0 23 3 4,2 =0 52 70 75 78 2 2 2 2 3,7 5 5,36 5,6 >0 >0 =0 =0
+
+Tabelle 6–3: Stoßkurzschlußstrom in Abhängigkeit vom Kurzschlußfall
+
+Hier soll im folgenden der einfache interessierende Fall untersucht werden, dass der Asynchrongenerator zum Zeitpunkt t=0 plötzlich dreiphasig kurzgeschlossen wird. Der schematische Aufbau des Versuchs ist der Abbildung 6.13 zu entnehmen.
+
+Abbildung 6.13: 3-phasiger Kurzschluß mit Erdkontakt (a) und ohne Erdkontakt (b)
+
+Das Kurzschlussverhalten der Asynchronmaschine beim dreiphasigen Kurzschluß wird anhand der hierfür relevanten Größen Strom und Drehmoment als zeitlicher Verlauf in den Abbildungen 6.14 bis 6.16 dargestellt und auf der Grundlage der Anwendung des Prinzips der Flusskonstanz beschrieben.
+
+28
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+80,00
+
+60,00
+i1 i2 i3
+
+40,00
+
+20,00 Strom [A]
+
+0,00 0 20 40 60 80 100 120 140 160 180 200
+
+-20,00
+
+-40,00
+
+-60,00
+
+-80,00 Zeit [ms]
+
+Abbildung 6.14:Stromverlauf aller Phasen bei 3phasigem Kurzschluss im 4-poligen Betrieb
+55,00
+
+45,00
+
+35,00
+
+Dre hm om e nt [Nm ]
+
+25,00
+
+15,00
+
+5,00
+
+0 -5,00
+
+50
+
+100
+
+150
+
+200
+
+250
+
+300
+
+350
+
+400
+
+-15,00 Zeit [ms]
+
+Abbildung 6.15:Drehmomentverlauf bei 3phasigem Kurzschluss im 4-poligen Betrieb
+
+29
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+25,00
+i1
+
+20,00
+
+i2 i3
+
+15,00
+
+10,00
+
+5,00 Strom [A]
+
+0,00 0 -5,00 20 40 60 80 100 120 140 160 180 200
+
+-10,00
+
+-15,00
+
+-20,00
+
+-25,00 Zeit [ms]
+
+Abbildung 6.16: Stromverlauf bei 3phasigem Kurzschluss im 6poligen Betrieb
+
+Aus den Diagrammen ist ersichtlich, dass sich die Stromverläufe für beide Kurzschlussfälle etwa ähnlich verhalten, aber unterschiedliche Maximalwerte aufweisen. Die Stromamplituden der Kurzschlussströme klingen nach einer Exponentialfunktion ab. Der Verlauf entspricht einer gedämpften exponentiellen Schwingung und ist eine Lösung einer homogenen Differentialgleichung 2. Ordnung.
+2 i '' (t ) + 2 Dω 0 i ' (t ) + ω 0 i (t ) = 0
+
+Gleichung 6–8
+
+Für den Kurzschlussvorgang lassen sich ausgehend von
+r r s dΨ1s rs u1 = R1 ⋅ i1 + dt Gleichung 6–9 und r r r L Ψ1s = L1 ⋅ i1 s + 12 ⋅ Ψ2L ⋅ e jϑ L22
+
+folgende Gleichungen formulieren
+r u1s = 0
+und dϑ = (1 − s ) ⋅ ω1 dt
+
+Gleichung 6–10
+
+weiterhin wird angenommen, dass die Drehzahl unmittelbar nach dem Eintritt des Kurzschlusses konstant bleibt. Für den Läuferkreis gilt wegen des Rotortyps (Kurzschlusskäfig) die folgende Spannungsgleichung
+
+30
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+r u 2L = 0
+
+Gleichung 6–11
+
+Der Kurzschluß tritt zum Zeitpunkt t=0 ein, mit
+ϑ = (1 − s ) ⋅ ω1 ⋅ t + ϑ0 Gleichung 6–12
+
+und einem Versatz des Stranges a des Läufers um ϑ = ϑ0 gegenüber dem des Ständers in diesem Augenblick. Das Verhalten des Generators wird beim Kurzschluß mit Hilfe seiner Stranggrößen beschrieben. So gilt für den Strang a
+u1a = R1 ⋅ i1a + und Ψ1a = L1 ⋅ i1a + dΨ1a dt
+
+Gleichung 6–13
+) u1 ( a )
+
+ω1
+
+' cos(ϑ − ϑo + ϕ u1( a ) −
+
+π
+2
+
+)
+
+Bei Anwendung des Prinzips der Flusskonstanz erhält man den Anfangsverlauf der Kurzschlussströme zu [7]
+) ) u1 (a) π u1 (a) π ' ' ia = i1a + cos(ϕ u1( a ) − ) − cos[(1 − s (a ))ω1t + ϕ u1( a ) − ] X1 2 X1 2
+Gleichung 6–14
+
+Nach Gleichung 6-14 treten zwei Anteile im Kurzschlussstrom auf. Ein Wechselanteil der Frequenz Gleichung 6-15 f~ = (1-s)f1 rührt von dem Feld her, das die Kurzgeschlossene Läuferwicklung festhält. Der zweite Anteil, der Gleichanteil hängt vom gewählten Schaltaugenblick ab. Nach den Abbildungen 6-14 und 6-16 klingen die Ströme nach einer bestimmten Zeitkonstante ab. Der Einfluß der ohmschen Widerstände im Ständer sorgt für das Verschwinden der Flussverkettungen und damit des Gleichanteils der Stator-Kurzschlussströme. Im Läufer bewirken die ohmschen Anteile der Wicklung das Abklingen der Gleichanteile der Läuferflussverkettungen und somit auch der Wechselkomponente der Ständerströme. Somit klingen die Gleich- und Wechselanteile mit zwei unterschiedlichen Zeitkonstanten ab. Da es sich bei Kurzschluß um einen nichtstationären Betrieb handelt, sind zur Bestimmung der Zeitkonstanten des Abklingvorgangs die Übergangsinduktivität der Ständerwicklung Ls und die des Läufers LL maßgebend. Sie werden nach Gleichung°6–16 bestimmt [8].
+
+31
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+L's = Lsσ + und
+
+Lsh LLσ = σ sL Lss Lsh + LLσ
+
+Gleichung 6–16
+
+L'L = σ sL LLL
+
+Mit den ohmschen Anteilen RS im Ständer und RL im Läufer lassen sich die Zeitkonstanten wie folgt angeben
+τs =
+und L's Rs
+
+Gleichung 6–17
+L'L RL
+
+τL =
+
+Die Anfangskurzschlussströme liegen für den 4-poligen Betrieb des Generators bei etwa 78A und für den 6-poligen Betrieb bei ca. 23A für den Fall mit Erdberührung. Die Stromspitzen liegen für den erdfreien Fall um ca. 10% höher. Die Kurzschlussströme sind nach etwa 5 Perioden vollständig abgeklungen. Trotz dieser hohen Ströme werden keine entsprechenden Wellendrehmomentänderungen hervorgerufen, die die Nennmomente wesentlich überschreiten, so dass kritische mechanische Beanspruchungen des Getriebes im dreipoligen Kurzschluss nicht zu erwarten sind. Die elektrisch entwickelten Drehmomente enthalten Frequenzen, die außerhalb der Torsionseigenfrequenz liegen. Der Messaufbau zu den Untersuchungen kann als ein Zweimassensystem (Antrieb und Last) aufgefaßt werden. Das System wird im stationären Betrieb durch ein zeitlich konstantes Drehmoment angetrieben. Ein solches System kann keine erzwungenen Schwingungen erzeugen. Aufgrund der Kupplung (Messwelle) bzw. über das Getriebe ist es nicht möglich ein reines konstantes Drehmoment zu übertragen. Es treten immer schwingende Anteile der Drehzahlfrequenz, die dem zeitlich konstanten Drehmoment überlagert sind und Resonanz erzeugen können. Die Vermeindung von Resonanzerscheinungen ist unerlässlich. Das Zweimassensystem lässt sich nach der Differentialgleichung 6-18 beschreiben [12].
+M (t ) d 2η + βη = 2 J2 dt
+
+η = ϕ1 − ϕ 2
+und
+
+Gleichung 6–18
+
+β =c
+
+J1 + J 2 J1 ⋅ J 2
+
+Das Drehmoment M(t) setzt sich bei der Einphasenmaschine und beim dreipoligen Kurzschluß der Dreiphasenmaschine aus einem zeitlich konstanten und einem schwingenden Anteil zusammen. Mit dem Ansatz
+
+32
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+M (t ) = M + ∆M ⋅ sin(ωt )
+
+Gleichung 6–19
+
+kann für die Gleichung 6-18 die allgemeine Lösung nach Gleichung 6-20 formuliert werden
+η = A sinνt + B cosνt +
+für ν ≠ ω M ∆M sin ωt + 2 2 ν J 2 (ν − ω 2 ) ⋅ J 2 Gleichung 6–20
+
+Mit den Anfangsbedingungen
+η (0) = η 0
+
+Gleichung 6–21 und & & η (0) = η 0 ergibt sich die allgemeine Lösung zu
+& η ∆M ⋅ ω M M ∆M sin ωt η=( 0 − ) sinνt + (η 0 − ) cosνt + 2 + 2 2 2 ν ν (ν − ω ) ⋅ J 2 ν ² ⋅ J2 ν J 2 (ν − ω 2 ) ⋅ J 2 für ν ≠ ω Gleichung 6–22
+
+Die Lösung 6-22 besteht aus 4 Anteilen. Die beiden Glieder & η ∆M ⋅ ω η1 = ( 0 − ) sinνt 2 ν ν (ν − ω 2 ) ⋅ J 2
+und
+
+η 2 = (η 0 −
+
+M ) cosνt ν ² ⋅ J2
+
+sind zeitlich harmonische Schwingungen mit der Kreisfrequenz v und sind Eigenschwingungen mit der Eigenfrequenz
+νe = c
+J1 + J 2 J1 ⋅ J 2
+
+Gleichung 6-23
+
+Die Eigenschwingungen klingen mit der Zeit ab. Das dritte Glied
+η3 =
+M ν ² ⋅ J2
+
+33
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+ist eine konstante Größe und beschreibt die elastische Verdrehung beider Massen durch das konstante äußere Moment M. Der schwingende Anteil
+η4 =
+∆M sin ωt (ν − ω 2 ) ⋅ J 2
+2
+
+wird durch den pulsierenden Anteil verursacht. Im Resonanzfall ν = ω wird die folgende Lösung herangezogen
+η = A sin ωt + B cos ωt +
+M ∆M cos ωt −t 2 2ω ⋅ J 2 ω J2
+
+Gleichung 6-24
+
+Man erkennt deutlich die lineare Zunahme der Amplitude der erzwungenen Schwingung mit der Zeit. Um eine Resonanz auszuschließen, darf die Eigenschwingung der elektrisch entwickelten Drehmomente nicht mit der Torsionseigenfrequenz des Antriebssystems zusammenfallen. Anhand der Gleichung 6-23 kann die Eigenfrequenz der Torsionsschwingung ermittelt werden. Bei den Untersuchungen wird das Antriebssystem als ein Zwei-Massen-System betrachtet. Die Massenträgheitsmomente des Antriebsstranges werden ersatzweise in JASG und JGM auf der Last- und Motorseite konzentriert und über eine als massenlos angenommene elastische Welle mit der Federkonstanten cw und der Dämpfungskonstante D miteinander verbunden. Das Übertragungsverhalten wird in Kapitel 7 mathematisch beschrieben und nachgebildet. 6.1.3 Transientes Verhalten bei Netzzuschaltung Eine weitere Zustandsänderung erfährt eine Asynchronmaschine infolge von Aufschaltvorgängen. Genau wie beim Kurzschluss treten auch hier dynamische Ströme und Drehmomente auf. Ihre Kenntnis ist vor allem für die Auslegung der mechanischen und elektrischen Bauelemente wichtig, so daß die Ergebnisse des Aufschaltverhaltens von wesentlicher Bedeutung sind. Bei den durchgeführten Untersuchungen erfolgt die Netzaufschaltung der Ständerwicklung in der Nähe des synchronen Betriebes. Der Generator besitzt vor dem Einschalten eine konstante Drehzahl n = (1-s)n1. Der stationäre Ausgangszustand ist durch die folgenden Gleichungen gekennzeichnet
+r i1 s = 0 und
+sowie r Ψ1s = 0 und
+
+r i2L = 0
+
+r Ψ2L = 0
+
+Gleichungen 6-25
+
+34
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+Zu einem beliebigen Zeitpunkt t=0 werden die drei Ständerstränge an das Netz
+r ) u1s = u1 ⋅ e j (ω1t +ϕu 1 )
+
+angeschlossen. Zur Ermittlung des Anfangsverlaufs der Ströme und Flussverkettungen soll auch hier das Prinzip der Flusskonstanz herangezogen und unter Berücksichtigung der Wicklungswiderstände im Ständer die allgemeinen Gleichungen 6-26 und 6-27 zur Lösung herangezogen werden.
+r r s dΨ1s rs u1 = R1 ⋅ i1 + dt und r r L dΨ2L rL u 2 = R 2 ⋅ i2 + dt
+
+Gleichung 6-26
+
+r r r Ψ1s = L11 ⋅ i1 s + L12 ⋅ i2L ⋅ e jϑ
+Gleichung 6-27 und rL r s − jϑ rL Ψ2 = L12 ⋅ i1 ⋅ e + L22 ⋅ i2
+
+Hinsichtlich Aufschaltverhalten soll aufgezeigt werden wie sich die transienten Größen Strom und Drehmoment durch die verschiedenen Zuschaltmöglichkeiten und Betriebsarten des Inselnetzes –droop mode / ohne droop mode– beeinflussen lassen. Die Betriebsart (droop mode) des Sunny Island Batteriewechselrichters erlaubt z.B die Leistungsaufteilung beim Parallelbetrieb mittels Wirkleistungs-/Frequenzstatik, wie sie in Abbildung 6.17 dargestellt ist.
+
+Abbildung 6.17: Wirkleistungs-/Frequenzstatik
+
+Die nachfolgenden Abbildungen veranschaulichen, daß die Ausgleichsvorgänge bei Zuschalten über die Aufschaltvarianten bei Spannungs-Nulldurchgang • NTC‘s • ohmsche Widerstände • Triac
+
+35
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+zur Begrenzung des Einschaltstromes deutlich kleinere Überströme aufweisen. Nach Abbildung 6.18 liegt die niedrigste Amplitude des Aufschaltstromes bei etwa 22A beim Anlauf über den Triac. Annährend gleiche Aufschaltverhältnisse ergeben sich beim Zuschalten über den ohmschen Widerstand. Zu erwähnen sei noch die starke Erwärmung des NTC(15), bei dem die Anfangsstromspitze um das 3-fache des Nennstromwertes beträgt.
+100,00
+
+80,00
+
+60,00
+
+40,00 Ständerstrom [A] NTC15 Triac R105 direkt
+
+20,00
+
+0,00 0,00
+
+500,00
+
+1000,00
+
+-20,00
+
+-40,00
+
+-60,00 Zeit [ms]
+
+Abbildung 6.18: Gegenüberstellung der einzelnen Aufschaltvarianten bezüglich Einschaltstrom
+
+Die Verringerung des Einschaltstromes ist auf die Vergrößerung der Ständerimpedanz, d.h. durch das Vorschalten der oben aufgelisteten Bauelemente im Ständerkreis zurückzuführen. Sie bewirken eine Vergrößerung der Dämpfung D nach Gleichung 6–12, und einen „schnellen“ Abklingvorgang auf einen stationären Wert.
+Aufschaltversuch 4p; drop mode; n=1500
+3
+
+2 1 0 Drehmoment [Nm]
+
+-1 -2
+
+M [Nm]
+
+-3 -4 -5
+
+-6 -7 0 200 400 600 800 1000 Zeit [ms] 1200 1400 1600 1800 2000
+
+Abbildung 6.19: Drehmomentverlauf bei direkter Zuschaltung der 4-poligen Wicklung des Asynchrongenerators bei Synchrondrehahl
+
+36
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+Da der Drehmomentverlauf in Abb. 6.19 den schlechtesten Fall bei direkter Zuschaltung darstellt, zeigt sich daß die auftretenden kurzzeitigen Stromspitzen nicht zu gefährlichen Drehmomentstoßbelastungen führen und somit keine unzulässige Belastung für den Triebstrang darstellen. 6.1.4 Wicklungserwärmung Bei transienten Vorgängen treten in elektrischen Maschinen große Stromwerte auf, die zu hohen Verlustleistungen führen. Diese Vorgänge laufen mit Zeitkonstanten ab, die weit unter den thermischen Zeitkonstanten liegen. Deshalb entstehen bei den dynamischen Untersuchungen keine gravierenden Fehler, wenn der Erwärmungseinfluß zunächst nicht berücksichtigt wird. Für die analytische Ermittlung des thermischen Verhaltens des Asynchrongenerators kann die Maschine durch ein sehr einfaches thermisches Modell nach Abbildung 6.20 ersetzt werden [5].
+
+Abbildung 6.20: Thermisches Modell einer elektrischen Maschine als homogener Körper
+
+PV entspricht der gesamten Verlustleistung der Maschine, Cth stellt die Speicherkapazität der gesamten Maschine (Masse m), als homogener Körper mit einheitlicher spezifischer Wärme c dar und Rth berücksichtigt den Wärmeübergang zwischen Maschinenoberfläche und der kühlenden Umgebung. In diesem einfachen Modell bleiben die thermodynamischen Ereignisse innerhalb der Maschine unberücksichtigt. Der Temperaturverlauf entspricht der Lösung einer Differentialgleichung 1.Ordnung
+∆TM (t ) = ∆TM 0 + (∆TM∞ − ∆TM 0 ) ⋅ (1 − e − t / τ th )
+Gleichung 6–28
+
+wobei τth = RthCth. Der tatsächliche Temperaturverlauf weicht deutlich von der obigen einfachen Annahme ab. Die elektrische Maschine beinhaltet verschiedene Teile bzw. Massen, die sich gegenseitig beeinflussen. So sind die inneren Temperaturen von Wicklungen, Eisen und Kühlluft verschieden. Eine gute aussagekräftige Nachbildung des Temperaturverhaltens der elektrischen Maschine erfordert zumindest die Betrachtung der drei homogenen Körper
+
+37
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+• Wicklungskupfer • Eisen und • Kühlluft. Eine detaillierte numerische Untersuchung des Temperaturverhaltens des Asynchrongenerators würde den Rahmen dieser Arbeit sprengen. Trotzdem wird hier durch einfache Modellvorstellungen und mit Hilfe von Labormessungen die Erwärmung der Wicklung im Nennbetrieb untersucht. Die zulässige Erwärmung elektrischer Maschinen ist mit Rücksicht auf die Wärmebeständigkeit der Isolierstoffe begrenzt. Je nach eingesetztem Material sind unterschiedliche Höchstwerte zulässig. Die Einhaltung der zulässigen Temperaturwerte ist mit Rücksicht auf die Lebensdauer der Asynchronmaschine von großer Bedeutung. Zur Überprüfung der Erwärmung werden verschiedene Methoden angewandt. Im Rahmen der thermischen Untersuchung des polumschaltbaren Asynchrongenerators wird das Widerstandsverfahren herangezogen. Dabei wird die Höhe der Übertemperatur der Wicklung durch Messung der Zunahme des Wicklungswiderstandes gemessen. Dabei soll die mit dem Thermometer gemessene Anfangstemperatur der Wicklung praktisch gleich der Temperatur der Kühlluft sein. Die Übertemperatur errechnet sich aus:
+T2 − Ta = R2 − R1 (235°C + T1 ) + (T1 − Ta ) R1
+
+T2 Temperatur der warmen Wicklung T1 Temperatur der kalten Wicklung Ta Kühllufttemperatur am Ende der Messung R1 Widerst . im kalten Zusta. R2 Widerst . im warmen Zusta.
+
+Nach den Bestimmungen in VDE 0530 werden mehrere Isolierstoffklassen unterschieden und diese jeweils höchstzulässigen Dauertemperaturen zugeordnet. Die polumschaltbare Asynchronmaschine, die zu untersuchen ist, hat die Isolierstoffklasse B. Damit hat sie laut VDE 0530 eine Grenz-Übertemperatur von 80°C. Die gemessenen Übertemperaturen sind für beide Betriebsstufen in den Abbildungen 6.21 und 6.22 sowie für die 4-poligen als auch für die 6-poligen Wicklung graphisch dargestellt. Der Generator befindet sich vor der Abschaltung im Dauerbetrieb. Die Abbildung 6.21 stellt den Abkühlungsverlauf beim Betrieb der kleinen Drehzahlstufe dar, wobei die Wicklung der großen Stufe stromlos ist. Im zweiten Fall ist die große Drehzahlstufe im Betrieb mit stromloser Wicklung der kleinen Stufe. Die Abkühlungskurven klingen mit zwei unterschiedlichen Zeitkonstanten ab.
+
+38
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+25
+
+Wicklung der großen Drehzahlstufe Wicklung der kleinen Drehzahlstufe 20
+
+Übertemperatur[° C]
+
+15
+
+10
+
+5
+
+0 0 500 1000 1500 Zeit[ms] 2000 2500 3000 3500
+
+Abbildung 6.21: Thermisches Verhalten (Abkühlungskurve) der Statorwicklungen beim Betrieb der kleinen Drehzahlstufe
+
+40,00
+
+35,00 Wicklung der großen Drehzahlstufe Wicklung der kleinen Drehzahlstufe 30,00
+
+Übertemperatur[° C]
+
+25,00
+
+20,00
+
+15,00
+
+10,00
+
+5,00
+
+0,00 0 100 200 300 Zeit[ms] 400 500 600 700
+
+Abbildung 6.22: Thermisches Verhalten (Abkühlungskurve) der Statorwicklungen beim Betrieb der großen Drehzahlstufe
+
+Aus den Graphiken wird deutlich, daß die zulässige Grenz-Übertemperatur für beide Wicklungen bei weitem nicht erreicht wird und somit die Maschine thermisch nicht
+
+39
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+ausgelastet wird. Nach Wiedemann und Kellenberger [12] besteht ein sehr enger Zusammenhang zwischen Lebensdauer und Temperatur von Isolierstoffen. So verringert sich nach Montsinger die Lebensdauer bei Erhöhung der Betriebstemperatur um jeweils 8°C bis 10°C um die Hälfte. Für das ganze Isolationssystem einer Wicklung läßt sich weitgehend der Zusammenhang Lebensdauer und Erwärmung nach
+L = a ⋅ e −b / T
+
+Gleichung 6–29
+
+erfassen, wobei L die Lebensdauer, T die absolute Temperatur, a der Lageparameter und b der thermische Lebensdauerexponent ist. Der Lebensdauerexponent b ist von der chemischen Struktur der Isolierung abhängig. Der Lageparameter a wird von dem Isolierstoff, dem geometrischen Aufbau der Isolierung und den Prüfbedingungen bestimmt. 6.1.5 Bremsverhalten von Asynchronmaschinen Oft sind Windkraftanlagen mit einer aerodynamischen und einer mechanischen Bremse ausgestattet. Die erste wirkt auf den Rotor und die zweite auf den Triebstrang. Gewöhnlich wird als mechanische Bremse eine Scheibenbremse verwendet. Im Hinblick auf eine kostengünstige Ausführung der kleinen Windkraftanlage werden insbesondere Möglichkeiten und Grenzen des Asynchrongenerators als Gegen- bzw. Gleichstrombremse untersucht. Dabei werden die Ausführungen der einzelnen Generatortypen gegenübergestellt. Im Nennbetrieb der 5kW Windkraftanlage soll auf der schnelllaufenden Welle ein Antriebsmoment von ca. 35 Nm wirken.. Demnach muss ein entsprechendes Gegenmoment (Bremsmoment) aufgebracht werden, um den Rotor abzubremsen. Das Getriebe kann, resultierend aus den Festigkeitsberechnungen, keine Momente aufnehmen, die höher als 90 Nm sind.
+6.1.5.1 Gleichstrombremsung
+
+Das Verhalten der Asynchronmaschine bei Gleichstrombremsung läßt sich mit der üblichen Ersatzschaltung beschreiben, wenn man auf der Primärseite, anstelle einer festen Spannung, einen konstanten Strom einprägt.
+R1 X1σ X´2σ R´2/(1-s)
+
+I1=konst Uq Xh
+
+I´2
+
+Abbildung 6.23: Asynchronmaschine als Gleichstrombremse
+
+40
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+Das Bremsmoment folgt aus der Tatsache, daß die Stromwärmeverluste im Läufer gleich der von außen zugeführten mechanischen Leistung sein müssen [5], zu:
+R2 (1 − s ) X 1(1 − σ ) I 12 X2 R ω 0 {[ 2 ] 2 + (1 − s ) 2 } X2
+
+m2 M Br =
+
+Gleichung 6–30
+
+Zu Beginn des Bremsvorganges besitzt der Läufer bezüglich des von den Ständerströmen erzeugten stillstehenden Gleichfeldes eine relative Drehzahl, die etwa gleich der synchronen Drehzahl ist. Die Läuferfrequenz ist gleich der Drehzahlfrequenz. Durch die Läuferströme mit der Frequenz f2=(1-s)f1 werden im Läufer Stromwärmeverluste erzeugt, die aus der kinetischen Energie des Läufers und des angekuppelten Antriebes gedeckt werden müssen. Mit abnehmender Drehzahl nimmt auch die Läuferfrequenz ab, die Läuferströme werden kleiner, wobei das Bremsmoment zunächst zunimmt, und im Stillstand verschwinden die Läuferverluste und das Bremsmoment. Das maximale Moment läßt sich ermitteln nach:
+M Br max = m1 X 1 (1 − σ ) I 12 2ω 0
+
+Gleichung 6–31
+
+Das Bremsmoment läßt sich demnach durch die Einstellung des eingeprägten Gleichstromes und die Wahl des Kurzschlußläufers innerhalb weiter Grenzen beeinflussen. In Abhängigkeit von der Läuferfrequenz f2 und der Läuferleitergeometrie verändert sich, aufgrund von Wirbelströmen, die Streuimpedanz und der Wirkwiderstand des Läufers. Der Läuferwiderstand nimmt mit wachsender Frequenz zu (R2~f2). Dieser Effekt kann wegen s~f2 ausgenutzt werden. Dieser Stromverdrängungseffekt kann durch Auswahl einer geeigneten Läufergeometrie beeinflusst werden. Die Erhöhung des Läuferwiderstandes ist von Vorteil, um bei höheren Drehzahlen genügend große Bremsmomente zu erzielen.
+
+41
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+65 60 55 50
+
+Drehmoment M [Nm]
+
+bei I=10 Ampere bei I=12,5 Ampere bei I=15 Ampere bei I=20 Ampere
+
+45 40 35 30 25 20 15 10 5 0 0 250 500 750 1000 1250 1500 1750 2000
+
+Drehzahl n [1/min]
+Abbildung 6.24: Bremsmomente des 4-poligen Asynchronmotors (Al-Läufer)
+65 60 55 50
+
+Drehmoment M [Nm]
+
+bei I=10 Ampere bei I=12,5 Ampere bei I=15 Ampere bei I=20 Ampere
+
+45 40 35 30 25 20 15 10 5 0 0 250 500 750 1000 1250 1500 1750 2000
+
+Drehzahl n [1/min]
+Abbildung 6.25: Bremsmomente des 4-poligen Asynchronmotors (Al-Si Läufer)
+
+42
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+60 55 50
+
+Drehmoment M [Nm]
+
+45 40 35 30 25 20 15 10 5 0 0 250 500 750 1000 1250
+
+bei I=9,9 Ampere bei I=12,5 Ampere bei I=15 Ampere bei I=19,8 Ampere
+
+1500
+
+1750
+
+2000
+
+Drehzahl n [1/min]
+Abbildung 6.26: Bremsmomente des polumschaltbaren Asynchrongenerators im Betrieb der großen Drehzahlstufe
+
+50 45 40
+
+Drehmoment M [Nm]
+
+bei I=9,9 Ampere bei I=12,5 Ampere bei I=15 Ampere bei I=19,8 Ampere
+
+35 30 25 20 15 10 5 0 0 250 500 750 1000 1250 1500 1750 2000
+
+Drehzahl n [1/min]
+Abbildung 6.27: Bremsmomente des polumschaltbaren Asynchrongenerators
+
+43
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+Die Gleichstrombremsuntersuchungen an unterschiedlich ausgelegten Asynchronmaschinen weisen nach den Abbildungen ähnliche Drehmomentenverläufe auf. Bei Verringerung der Drehzahl steigt das Bremsmoment bis zu seinem Maximalwert, welcher zwischen den Drehzahlen von 50 und 200 U/min liegt. Ab dort fällt das Drehmoment sehr steil ab, und erreicht bei Stillstand der Antriebswelle Drehmomente unterhalb 5 Nm. Durch das Erhöhen der Erregerströme resultieren höhere Drehmomente. Auch die Steigung des Drehmomentenverlaufs wächst mit zunehmender Erregerstromstärke. Die Extremwerte (Drehmomentsattel) der Bremskennlinien verschieben sich bei abnehmender Erregerstromstärke in Richtung Stillstand. Der Asynchronmotor mit Aluminium-Spritzgussläufer erreichte trotz nahezu identischer Auslegung noch geringfügig höhere Momente. Da der AluminiumSilizium-Läufer den höchsten Widerstand aufweist, stellen sich erwartungsgemäß bei der Asynchronmaschine mit Aluminium-Silizium-Läufer die höchsten Bremsmomente ein. Der Generator kann das geforderte Bremsmoment nur durch das Einspeisen sehr hohe Erregerströme, die bei weitem das 10-fache des Nennstromes übersteigen, erreichen. Eine Haltebremsung ist, aufgrund der niedrigen Bremsmomente bei Stillstand, keinesfalls möglich. Darüber hinaus wäre der Einbau zusätzlicher Reglungseinheiten notwendig, welche das resultierende Bremsmoment zwischen den geforderten 75 Nm und der Getriebebelastungsgrenze von 90 Nm durch Variation der Gleichspannung regeln. Resultierend aus diesen Notwendigkeiten, kann keine der hier untersuchten Asynchronmaschinen die geforderten Rahmenbedingungen zum Bremsen der Anlage einhalten.
+
+6.1.5.2
+
+Gegenstrombremsung
+
+Die Gegenstrombremse arbeitet nach dem Prinzip der Drehfeldrichtungsumkehr, die durch das Vertauschen von zwei beliebigen Phasen erreicht wird. Die Asynchronmaschine dreht in entgegengesetzte Drehfeldrichtung und bremst in diesem Fall den Rotor auf Stillstand ab.
+
+Abbildung 6.28: Schaltplan für Gegenstrombremsen
+
+Die Untersuchungen des Bremsverfahrens wurden bei verminderter Spannung durchgeführt (um die Maschine nicht zu zerstören), und die anschließend auf 400V
+
+44
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+hochgerechneten Ergebnisse ergeben nach den Abbildungen im kompletten Drehzahlbereich nahezu konstante Bremsmomente. Des Weiteren ist auch zu erkennen, dass das geforderte Bremsmoment von 75 Nm in der Nähe der Synchrondrehzahl (1500 U/min) mit den hier erheblich verminderten Spannungen bei weitem nicht erreicht wird. Das Verhältnis der Bremsmomente ist gleich dem Verhältnis der Spannungen zum Quadrat.
+2 M alt U alt = 2 M neu U neu
+
+Ein Vergleich der gemessenen Bremsmomente nach Abbildung 6.29 mit den mathematisch hochgerechneten Werten bei 100V und 133V zeigt, dass eine Hochrechnung zu korrekten Ergebnissen führt.
+[ N m ] D re h m o m e n t
+10
+
+8
+
+6
+
+4
+1 von 133 von 120 1 von 100 von 120 00 au au 33 au au V o lt f 100 f 100 V o lt f 133 f 133 gem essen V u m g e re ch V u m g e re ch gem essen V u m g e re ch V u m g e re ch net net net net
+
+2
+
+0 0 300 600 900 1200 1500
+
+D re h z a h l
+
+[ U m d ./ m in ]
+
+Abbildung 6.29: Vergleich zwischen hochgerechneten und gemessenen Bremsmomenten
+
+Hochgerechnet auf eine Spannung von 400V erreicht die 4-polige Asynchronmaschine mit dem ALSi-Läufer ein Bremsmoment von etwa 95Nm. Anhand der Abbildung 6.30 ist zu erkennen, daß die Bremsmomente bei der Variante mit dem ALSi-Läufer um etwa 15Nm höher liegen als bei der Normalausführung mit dem Al-Läufer. Die Erregerströme steigen bei Nennspannung auf das 4,5-fache (ALSi-Läufer) bis etwa das 6-fache (AL-Läufer) des Nennstromes.
+
+45
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+A lu m A lu m
+1 1 5 1 1 0
+
+in iu m in iu m
+
+- L ä u fe r - S iliz iu m
+
+- L ä u fe r
+6 2 6 0
+
+A lu m A lu m
+
+in iu m in iu m
+
+- L ä u fe r - S iliz iu m
+
+- L ä u fe r
+
+[ N m ]
+
+[ A ] S t r o m s t ä r k e
+
+1 0 5 1 0 0 9 5
+
+5 8 5 6 5 4 5 2 5 0 4 8 4 6
+
+D re h m o m e n t
+
+9 0 8 5 8 0 7 5 7 0 6 5 6 0 5 5 0 5 0 0 1 0 0 0 1 5 0 0 2 0 0 0 2 5 0 0 3 0 0 0
+
+0
+
+5 0 0
+
+1 0 0 0
+
+1 5 0 0
+
+2 0 0 0
+
+2 5 0 0
+
+3 0 0 0
+
+D r e h z a h l
+
+[ U m
+
+d . / m
+
+in ]
+
+D r e h z a h l
+
+[ U m
+
+d . / m
+
+in ]
+
+Abbildung 6.30: Bremsmomente und Ströme in Abhängigkeit von der Drehzahl
+
+Da der Aluminium-Silizium-Läufer (ALSi-Läufer) einen höheren Widerstand als der Aluminium-Läufer aufweist, stellen sich erwartungsgemäß bei der 4-poligen Asynchronmaschine mit ALSi-Läufervariante geringfügig höhere Bremsmomente als bei der Maschine mit dem Läufer in Normalausführung ein. Aus der Abbildung 6.31 geht hervor, daß bei der Gegenstrombremsung im 4-poligen Betrieb befindliche Asynchronmaschine ein Bremsmoment von ca. 50 Nm sich entwickelt. Im Betrieb der kleinen Drehzahlstufe beträgt das Moment ca. 20 Nm und ist damit nur knapp halb so groß, wie bei dem 4-poligen Betrieb. Die hier aufgeführten unterschiedlichen Verläufe der Bremsmomente sind auf die entsprechend unterschiedlichen Widerstände der Läufertypen zurückzuführen. Die Stromstärken steigen bei beiden Drehzahlstufen um ca. das 5-Fache des Nennstromes.
+A lu m in iu m - L ä u f e r A lu m in iu m - S iliz iu m - L ä u f e r 4 P o l 6 P o l
+
+1 2 0
+
+[ N m ] D re h m o m e n t
+
+1 0 0
+
+8 0
+
+6 0
+
+4 0
+
+2 0
+
+0
+
+5 0 0
+
+1 0 0 0
+
+1 5 0 0
+
+2 0 0 0
+
+2 5 0 0
+
+3 0 0 0
+
+D re h z a h l
+
+[ U m d ./ m in ]
+
+Abbildung 6.31: Bremsmomente bei verschiedenen Läufertypen
+
+Der polumschaltbare Asynchrongenerator erreicht die geforderte Bremsleistung von 75 Nm in keinem Drehzahlbereich, weder in der kleinen noch in der großen Drehzahlstufe. Der Einsatz als Gegenstrombremse kann nur bei Teillast bis zu bestimmten Windgeschwindigkeiten (ca. 8,5 m/sec) erfolgen. Eine Ausführung der Windkraftanlage mit dem polumschaltbaren Asynchrongenerator schränkt aus Sicherheitsgründen die Anwendung der Asynchronmaschine als Gegenstrombremse, um die Kosten einer zusätzlichen Bremse zu sparen, ein.
+
+46
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+6.1.6 Magnetisierungsverhalten Um das Netz weitgehend von einer Blindleistungslieferung zu entlasten, können Asynchrongeneratoren über Kapazitäten grob-kompensiert werden. Durch die Teilkompensation reduziert sich im Betrieb des Generators die noch zusätzlich aus dem Netz zu beziehende Blindleistung um den Wert der gelieferten Blindleistung von der Erregerkapazität. Zur Bestimmung der Leerlauferregung wird die Drehzahlabhängigkeit der Generatorspannung für verschiedene Werte der Erregerkapazitäten dargestellt. Da die Klemmenspannung stark mit der Drehzahl des Generators zunimmt, muss sichergestellt werden, daß mit dem ermittelten Kapazitätswert im Bereich der möglicherweise eintretenden Spannungserhöhung vorkommen kann. Die Erregerkennlinie des polumschaltbaren Asynchrongenerators ist in den beiden Graphiken dargestellt. Bei Leerlauferregung beträgt die Kapazität für den 4poligen Betrieb ca. 18µF und sie liegt bei etwa 11µF für den 6-poligen Betrieb. Dadurch wird die Asynchronmaschine über zuschaltbare Kapazitäten soweit kompensiert, daß die für den Leerlauf notwendige Blindleistung bei Nenndrehzahl vollständig von den Kompensationskondensatoren geliefert wird. Diese Kapazität kann z.B. über ein Schütz mit dem Generator verbunden werden.
+500 450 U[V] bei 18µF 400 Generatorspannung [V] 350 300 250 200 150 100 50 0 0 200 400 600 800 1000 1200 1400 1600 1800 Drehzahl [U/min ] U[V] bei 18,5µF U[V] bei 19µF
+
+Abbildung 6.32: Leerlaufspannung in Abhängigkeit von der Drehzahl mit der Erregerkapazität als Parameter.
+
+47
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+700
+
+600 U[V] bei 11µF 500 Generatorspannung[V] U[V] bei 11,5µF U[V] bei 12µF
+
+400
+
+300
+
+200
+
+100
+
+0 0 200 400 600 Drehzahl [U/min] 800 1000 1200
+
+Abbildung 6.33: Leerlaufspannung in Abhängigkeit von der Drehzahl mit der Erregerkapazität als Parameter.
+
+6.2
+
+Einphasen-Asynchrongenerator
+
+Aufgrund anders gearteter elektrischer Netze in anderen Teilen der Welt, wo einphasige Systeme verbreitet sind wie z.B in den USA, erfordert der dortige Einsatz der kleinen Windenergieanlage eine neue Auslegung des Generators. Die einphasige Ausführung eines Asynchrongenerators ist in dieser Leistungsklasse von 5kW nicht marktüblich. Einphasenasynchronmaschinen werden im Allgemeinen als Motoren ausgelegt und bis etwa 2kW ausgeführt. Der Generator beruht auf dem Prinzip einer zweisträngigen Asynchronmaschine, deren Wicklungsstränge um 90° gegeneinander angeordnet sind. Um die geforderte Phasenverschiebung zwischen den einzelnen Strangdurchflutungen an einem einphasigen Wechselspannungsnetz zu erhalten, wird einem der beiden Wicklungsstränge eine so genannte Hilfsimpedanz vorgeschaltet. Diese bewirkt eine zusätzliche Phasenverschiebung des entsprechenden Strangstroms und somit auch der Strangdurchflutung. Am häufigsten wird ein Kondensator als Hilfsimpedenz eingesetzt, da mit ihm im Bereich des Nennbetriebes annähernd die Betriebseigenschaften einer symmetrisch gespeisten Asynchronmaschine realisiert werden können. Es ergibt sich folgende Anordnung
+
+48
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+U HA
+
+I HA I HI
+
+I
+
+U
+
+UC
+
+U HI
+
+HA = Hauptstrang HI = Hilfsstrang
+Abbildung 6.34:Aufbau eines Einphasen-Asynchrongenerators
+
+Die beiden Stränge sind nicht gleich ausgeführt. Der Unterschied kann entweder nur in der Windungszahl und dem Drahtquerschnitt oder auch in der unterschiedlichen Leiterverteilung in den Nuten bestehen. Um auch annähernd ähnliche Betriebseigenschaften wie bei der symmetrisch gespeister Asynchronmaschine zu erhalten, wird eine Kondensatorkapazität im Hilfszweig eingesetzt. Dadurch wird eine Phasenverschiebung zwischen den einzelnen Strangdurchflutungen erreicht. Das bedeutet, daß für einen symmetrischen Betrieb müssen die Durchflutungsgrundwellen der beiden Stränge nach Gleichung 6-32 die gleichen Beträge und Phasenverschiebung von π/2 zueinander aufweisen müssen.
+I HA wHAξ HA = I HI wHI ξ HI
+
+und
+
+ϕ HI − ϕ HA =
+
+π
+2
+
+Gleichung 6-32
+
+Für einen generatorischen Betrieb der Einphasen-Asynchronmaschine muß die Phasenverschiebung π/2 überschreiten. Zur Berechnung der Kapazität für einen annähernd symmetrischen Betriebspunkt kann die Gleichung 6-33 herangezogen werden.
+C= P cos γ 2ωU 2 sin γ
+
+Gleichung 6-33
+
+Aufgrund des festen Übersetzungsverhältnisses
+ü= wHI ξ HI = 0.155 wHAξ HA
+
+kann der Generator nur für einen Verschiebungswinkel von etwa γ=130° symmetriert werden.
+
+49
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+ü = tan(π − γ )
+
+Gleichung 6-34
+
+Die beiden Prototypmaschinen die in dieser Arbeit untersucht werden ähneln sich grundsätzlich in ihrem Aufbau. Die Tabelle 6-4 stellt die Unterschiede der beiden Generatoren dar.
+Prototyp I Prototyp II Drehzahlstufe 4-polig 6-polig 4-polig 6-polig Wickeldrahtdurchmesser Hauptstrang Hauptstrang Hauptstrang Hauptstrang 4x0,85 2x0,85 2x0,85/2x0,9 1x0,85/1x0,9 Hilfsstrang Hilfsstrang Hilfsstrang Hilfsstrang 2x0,71 1x0,71 2x0,77 1x0,75 Anzahl der Windungen HA 13/ HI 20 HA 26/ HI 40 HA 12/ HI 18 HA 24/ HI 36 Anzahl der Nuten im Ständer 36 36 Nuten pro Pol und Strang HA 4 / HI 2 HA 6 / HI 3 HA 4 / HI 2 HA 6 / HI 3 Tabelle 6-4: Prototypmaschinen im Vergleich (HA: Hauptstrang HI: Hilfsstrang)
+
+6.2.1 Kennlinien des generatorischen Betriebes Analog zum Kapitel 6.1 wird für das Einphasenkonzept die gleiche Vorgehensweise bei der Optimierung und Auslegung wie bei der Dreiphasenvariante gewählt; mit dem Unterschied des unsymmetrischen Aufbaus des Ständerwicklungssystems. Ausgehend vom Prototyp I werden nach dem Kennlinienverfahren weitere Prototypen ausgelegt und optimiert. Aufgrund der Polumschaltung ( 4/6 polige Drehzahlstufung ) wird der Prototyp II mit dem 4-poligen Blechschnitt verwendet, der für die große Drehzahlstufe besser geeignet ist, und der Prototyp III mit dem 6-poligen Blechschnitt ausgeführt, was dann in der großen Drehzahlstufe zu erhöhten Geräuschen führen kann. Die messtechnischen Untersuchungen und die anschließende Auswertung der beiden Generatorkennlinien haben ergeben, daß die Auslegung des polumschaltbaren Einphasengenerators Prototyp II mit dem hohen Sättigungsgrad der Wicklung hinsichtlich des Wirkungsgrads bessere Werte erreicht, als die Ausführung des Prototypen III. Dagegen erreicht der Prototyp III bessere Leistungsfaktoren. Die Abbildungen 6.35 bis 6.39 veranschaulichen die Unterschiede der beiden Generatorauslegungen für z.B. eine Kondensatorstufe.
+
+50
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+100
+
+90
+
+80
+
+70
+
+Wirkungsgrad[%]
+
+60 Prototyp III (66µF) Prototyp II (65µF)
+
+50
+
+40
+
+30
+
+20
+
+10
+
+0 0,00
+
+1000,00
+
+2000,00
+
+3000,00
+
+4000,00
+
+5000,00
+
+6000,00
+
+7000,00
+
+elektrische Leistung[W]
+
+Abbildung 6.35:Wirkungsgradvergleich im 4-poligen Betrieb mit 65µF-Kapazität
+100
+
+90
+
+80
+
+70
+
+Wirkungsgrad [%]
+
+60 Prototyp II Prototyp III
+
+50
+
+40
+
+30
+
+20
+
+10
+
+0 0 200 400 600 800 1000 1200 1400 1600 1800 2000 elektrische Leistung [W]
+
+Abbildung 6.36: Wirkungsgradvergleich im 6-poligen Betrieb mit 33µF-Kapazität
+
+Es ist deutlich aus den Abbildungen erkennbar, daß die Auslegung des Prototyp III im Vergleich zum Prototyp II Wirkungsgradeinbußen zur Folge hat. So erreicht z.B. Prototyp II im Nennpunkt in der 4-poligen Drehzahlstufe ca. 86% Wirkungsgrad, wobei im Vergleich der Wirkungsgrad des Prototyp III um etwa 2- bis 3% darunter
+
+51
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+liegt. In der kleinen Drehzahlstufe liegen die Wirkungsgrade um etwa 2 Prozentpunkte unter dem des Prototypen II. In den nachfolgenden Abbildungen 6.37 und 6.38 werden die beiden Prototypen hinsichtlich des Leistungsfaktors gegenübergestellt.
+1
+
+0,9
+
+0,8
+
+0,7
+
+Leistungsfaktor
+
+0,6 Prototyp II Prototyp III
+
+0,5
+
+0,4
+
+0,3
+
+0,2
+
+0,1
+
+0 0 200 400 600 800 1000 1200 1400 1600 1800 2000 elektrische Leistung [W]
+
+Abbildung 6.37: Leistungsfaktorvergleich im 6-poligen Betrieb mit 33µF-Kapazität
+1
+
+0,9
+
+0,8
+
+0,7
+
+Leistungsfaktor
+
+0,6 Prototyp II Prototyp III
+
+0,5
+
+0,4
+
+0,3
+
+0,2
+
+0,1
+
+0 0 1000 2000 3000 elektrische Leistung [W] 4000 5000 6000
+
+Abbildung 6.38: Leistungsfaktorvergleich im 4-poligen Betrieb mit 65µF-Kapazität
+
+52
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+Die Abbildungen veranschaulichen den Vergleich zwischen den beiden Prototypen abhängig von der Kondensatorstufe. In der kleinen Drehzahlstufe stellen sich mit der neuen Auslegung des Einphasengenerators (Prototyp III) bessere Leistungsfaktorwerte ein. So liegt der Leistungsfaktor durchgehend in der kleinen Stufe bei dem Wert 0,9. Eine Verbesserung des Leistungsfaktors wird auch in der großen Drehzahlstufe mit den kleineren Kondensatorstufen erreicht. Mit größer werdenden Kapazitäten verschlechtert sich dagegen der Leistungsfaktor des Prototyp III gegenüber dem des Prototypen II. Die Laufeigenschaft der Maschine wird anhand der Drehmomentschwankungen im Betrieb charakterisiert. Anders als bei der Dreiphasenasynchronmaschine treten beim Einphasenasynchrongenerator die Pendelmomente nicht nur durch die Oberwellen sondern auch durch die Wirkung der Grundwelle auf. In Einphasengeneratoren mit elliptischem Drehfeld ändert sich die Größe der Umlaufgeschwindigkeit und daher auch das Drehmoment der Grundwelle, welches mit der doppelten Netzfrequenz schwankt. Durch solche Drehmomentschwankungen wird der Generator abwechselnd beschleunigt oder verzögert. Erreicht die Frequenz dieser Momente eine bestimmte Drehzahl, die gleich der Eigenfrequenz eines schwingungsfähigen Maschinenteils ist, so treten infolge der Resonanz lästige Geräusche auf. Der Antriebsaufbau kann als ein elastisches Gebilde aus Stahl zu mechanischen Schwingungen angeregt werden. Hier werden nur Torsionsschwingungen, bei denen sich benachbarte Elemente gegenseitig um einen Winkel verdrehen, betrachtet. Zur Charakterisierung des Antriebsstranges wird die Eigenfrequenz des Systems herangezogen. Für den Messaufbau im Labor beträgt nach Abbildung 6.39 die Eigenfrequenz etwa 100 Hz.
+
+Abbildung 6.39: Eigenfrequenz-Messung des Antriebsstranges im Labor
+
+Das System darf nicht mit Größen dieser Frequenz angeregt werden, da im Resonanzfall die Welle stark beansprucht wird. Definitionsgemäß entsteht jedes Drehmoment über tangentiale Kräfte, die am Läufer angreifen, d.h. Drehmomentpendelungen großer Frequenz sind Umfangskräfte großer Frequenz zugeordnet. Derartige Kräfte greifen auch an den Stäben des Kurzschlußkäfigs an und können ihn zu Schwingungen anregen und den Generator
+
+53
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+somit mechanisch belasten und infolge dessen die Lebensdauer der Maschine minimieren. Ein kleiner Auszug aus dem Messprogramm des Drehmomentverhaltens im stationären Betrieb soll im folgenden Teilaspekte der Untersuchungen darstellen. Wobei hier die Schwingungen nach
+dM Drehmomentmesswert − Drehmomentmittelwert [%] = ⋅ 100% M AVG Drehmomentmittelwert
+
+normiert sind.
+80
+
+60
+
+40
+
+20 dM/Mavg[%] C=33µF und P=1,44kW C=49 µF und P=1,55 kW C=66µF und P=1,46kW C=88µF und P=1,56kW
+
+0 0 100 200 300 400 500
+
+-20
+
+-40
+
+-60
+
+-80 Zeit[ms]
+
+Abbildung 6.40: Drehmomentschwankungen im Betrieb der großen Stufe bei P=1,5kW
+
+54
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+40
+
+30
+
+20
+
+10
+
+dM/Mavg [%]
+
+0 0 -10 100 200 300 400 500
+
+C=33µF und P=2,57kW C=49µF und P=2,47kW C=66µF und P=2,5 kW C=88µF und P=2,65kW
+
+-20
+
+-30
+
+-40
+
+-50 Zeit [ms]
+
+Abbildung 6.41: Drehmomentschwankungen im Betrieb der großen Stufe bei P=2,5kW
+
+40
+
+30
+
+20
+
+10 dM/Mavg[%] C=33µF und P=3,6kW C=49µF und P=3,5kW C=66µF und P=3,5kW C=88µF und P=3,6kW
+
+0 0 100 200 300 400 500
+
+-10
+
+-20
+
+-30
+
+-40 Zeit[ms]
+
+Abbildung 6.42: Drehmomentschwankungen im Betrieb der großen Stufe bei P=3,5kW
+
+55
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+30
+
+20
+
+10
+
+dM/Mavg [%]
+
+0 0 100 200 300 400 500
+
+C=33µF und P=4,7 kW C=49µF P=4,55kW C=66µF und P=4,4kW C=88µF und P=4,6kW
+
+-10
+
+-20
+
+-30 Zeit [ms]
+
+Abbildung 6.43: Drehmomentschwankungen im Betrieb der großen Stufe bei P=4,5kW
+40
+
+30
+
+20
+
+10 dM/Mavg[%] C=33µF und P=5,5kW C=49µF und P=5,45 kW C=66µF und P=5,54kW C=88µF und P=5,52kW
+
+0 0 100 200 300 400 500
+
+-10
+
+-20
+
+-30
+
+-40 Zeit[ms]
+
+Abbildung 6.44: Drehmomentschwankungen im Betrieb der großen Stufe bei P=5,5kW
+
+Die Abbildungen 6.40 bis 6.44 zeigen die starke Abhängigkeit der Pendelmomente vom Grad der Symmetrierung bzw. vom Betriebskondensator an. Je nach
+
+56
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+Betriebspunkt und Betriebskapazität können die Drehmomentschwankungen –relative Abweichung bezogen auf den Mittelwert – bis zu 60% betragen. Die Abbildung 6.40 zeigt, daß bei 1,5 kW elektrischer Leistung die geringsten Drehmomenschwankungen von bis zu 10% nur mit dem 33µF Betriebskondensator zu erreichen sind. Alle anderen durchgeführten Messungen mit jeweils größeren Kapazitäten liegen weit über 10%. Mit der nächsten Kondensatorstufe (49µF) wird der Generator bei 2,5 kW Einspeiseleistung in Abbildung 6.41 dargestellt optimal symmetriert. Die geringeren Drehmomentschwankungen, die zwischen 5 und maximal 8% liegen, bestätigen dies. Weiterhin erreichen die Pendelmomente in Abbildung 6.42 bei 3,5 kW sowohl mit dieser Kondensatorstufe als auch mit dem 66µF Kondensator maximal 10%. Von 3,5 kW bis zur Nennleistung liegen die Drehmomentschwankungen, dargestellt in Abbildungen 6.43 und 6.44, mit einer Betriebskapazität von 66µF maximal 10%. 6.2.2 Wicklungserwärmung Die zulässige Erwärmung elektrischer Maschinen ist mit Rücksicht auf die Wärmebeständigkeit der Isolierstoffe begrenzt. Je nach eingesetztem Material sind unterschiedliche Höchstwerte zulässig. Die Einhaltung der zulässigen Temperaturwerte ist mit Rücksicht auf die Lebensdauer der Asynchronmaschine von großer Bedeutung. Zur Überprüfung der Erwärmung werden verschiedene Methoden angewandt. Im Rahmen der thermischen Untersuchung des polumschaltbaren Einphasenasynchrongenerators wird die Temperatur über zwei PT-100 auf der A- und V-Seite im Wickelkopf gemessen. Nach den Bestimmungen in VDE 0530 werden mehrere Isolierstoffklassen unterschieden und diese jeweils höchstzulässigen Dauertemperaturen zugeordnet. Die polumschaltbare Einphasenasynchronmaschine, die zu untersuchen ist, hat Isolierstoffklasse F. Die Wicklung hat dann laut VDE 0530 eine höchstzulässige Übertemperatur (gegenüber der umgebenden Luft) von 105°C bzw. eine Dauertemperatur von 155°C. Die gemessenen Temperaturen sind für beide Betriebsstufen in den Abbildungen 6.45 bis 6.48 sowohl für den 4-poligen als auch für den 6-poligen Betrieb graphisch dargestellt. Mit Rücksicht auf eine gute Materialausnutzung wird man bestrebt sein, die Grenzwerte – zulässige Übertemperatur – im Nennbetrieb angenähert zu erreichen. Um die geforderte hohe Lebensdauer von ca. 160.000 Betriebsstunden des Generators garantieren zu können muß allerdings ein möglichst großer Abstand zu dem zulässigen Wert eingehalten werden. Im Dauerbetrieb bei Nennbelastung wird der thermische Beharrungszustand – die Endtemperatur – nach etwa 2 bis 3 Stunden in der großen bzw. nach etwa 1h in der kleinen Leistungsstufe erreicht.
+
+57
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+Dauerbetrieb
+6500 6000 5500 5000 4500 4000 Leistung 3500 3000 2500 2000 1500 1000 500 0 12:00:00 Wirkleistung [W] Scheinleistung [VA]
+
+12:28:48
+
+12:57:36
+
+13:26:24
+
+13:55:12
+
+14:24:00
+
+14:52:48
+
+15:21:36
+
+Uhrzeit
+
+Abbildung 6.45: Dauerbetrieb der großen Drehzahlstufe bei etwa 5,5kW
+Dauerbetrieb
+140,00
+
+120,00
+
+100,00
+
+Temperatur ° C
+
+80,00 Temp_1 Temp_2 60,00
+
+40,00
+
+20,00
+
+0,00 10:48:00
+
+12:00:00
+
+13:12:00
+
+14:24:00 Uhrzeit
+
+15:36:00
+
+16:48:00
+
+18:00:00
+
+Abbildung 6.46: Temperaturverhalten im Dauerbetrieb der großen Stufe bei etwa 5,5kW
+
+58
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+Dauerbetrieb
+3500
+
+3000
+
+2500
+
+Leistung
+
+2000 Wirkleistung [W] Scheinleistung [VA] 1500
+
+1000
+
+500
+
+0 10:48:00
+
+11:02:24
+
+11:16:48
+
+11:31:12 Uhrzeit
+
+11:45:36
+
+12:00:00
+
+12:14:24
+
+Abbildung 6.47: Dauerbetrieb der kleinen Drehzahlstufe bei etwa 2kW und 1,5kW
+Dauerbetrieb
+
+100,00 90,00 80,00 70,00 Temperatur ° C 60,00 50,00 40,00 30,00 20,00 10,00 0,00 10:33:36 Temp_1 Temp_2
+
+11:02:24
+
+11:31:12
+
+12:00:00
+
+12:28:48 Uhrzeit
+
+12:57:36
+
+13:26:24
+
+13:55:12
+
+14:24:00
+
+Abbildung 6.48: Temperaturverhalten im Dauerbetrieb der kleinen Drehzahlstufe bei etwa 2kW und 1,5kW
+
+59
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+Aus den Graphiken wird deutlich, daß die zulässige Grenz-Übertemperatur bei Nennleistung für beide Wicklungen bei weitem nicht erreicht wird und somit die Maschine thermisch niedrig ausgelastet wird. Im 4-poligen Betrieb erreicht die Wicklung in der grossen Drehzahlstufe bei einer Abgabeleistung von 5,5 kW (Nennleistung) eine absolute Temperatur von etwa 117°C. Im Betrieb der kleinen Drehzahlstufe erreicht die Maschine Werte unter der 70°C-Grenze. Sie ist somit thermisch weit unter der Belastungsgrenze. Somit kann von der geforderten hohen Lebensdauererwartung ausgegangen werden
+
+6.2.3 Magnetisierungsverhalten Das Netz wird aufgrund des vorhandenen Symmetrierungskondensators in der Hilfsphase des Einphasenasynchrogenerators von einer Blindleistungslieferung entlastet. Dieser Kondensator trägt neben der Selbsterregung des Generators auch zu einer Kompensation bei. Bei den Messungen wird die Drehzahlabhängigkeit der Generatorspannung für verschiedene Werte der Kapazitäten in der Hilfswicklung dargestellt. Die Erregerkennlinie des polumschaltbaren Einphasenasynchrongenerators ist in den beiden nachfolgenden Graphiken dargestellt.
+Generatorspannung
+300,00
+
+250,00
+
+200,00 Spannung [V]
+
+150,00
+
+C = 88µF C = 66µF C = 49µF C = 33µF
+
+100,00
+
+50,00
+
+0,00 0,00
+
+200,00
+
+400,00
+
+600,00
+
+800,00
+
+1000,00
+
+1200,00
+
+1400,00
+
+1600,00
+
+1800,00
+
+2000,00
+
+Drehzahl [1/min]
+
+Abbildung 6.49: Leerlaufspannung in Abhängigkeit von der Drehzahl mit der Symmetrierungskapazität als Parameter in der 4-poligen Stufe
+
+60
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+Generatorspannung 400,00
+
+350,00
+
+300,00
+
+250,00 Spannung [V]
+
+200,00
+
+C = 33µF C = 49µF
+
+150,00
+
+100,00
+
+50,00
+
+0,00 0,00
+
+200,00
+
+400,00
+
+600,00
+
+800,00
+
+1000,00
+
+1200,00
+
+1400,00
+
+Drehzahl [ 1/min ]
+
+Abbildung 6.50: Leerlaufspannung in Abhängigkeit von der Drehzahl mit der Symmetrierungskapazität als Parameter in der 6-poligen Stufe
+
+Die Einphasenmaschine erregt sich in der 4-poligen Drehzahlstufe abhängig vom Symmetrierungskondensator bei verschiedenen Drehzahlen auf Nennspanung. So erreicht sie z.B. mit einer Kapazität von 49 µF bei einer kritischen Drehzahl von etwa 1800 1/min die Nennerregung. Aus der Abbildung 6.50 wird deutlich, daß mit größeren Kondensatorkapazitäten die Maschine sich schon bei niedrigeren Drehzahlen erregt. Mit dem 33µF Kondensator, der sowohl in der kleinen Drehzahlstufe als auch im unteren Teillastbereich der grossen Drehzahlstufe im Betrieb ist, wird keine Erregung erzielt. In der kleinen Drehzahlstufe kann sich der Generator erst bei einer Kapazität von 49µF erregen. 6.2.4 Stationäres Verhalten des Generators Nach Abbildung 6.48 ändert der Strom in der Hilfswicklung (Hilfsstrom) über die gesamte Leistung kaum seinen Wert. Er fällt sogar mit steigender Leistung leicht ab. Im Gegensatz dazu steigt der Strom in der Hauptwicklung (Hauptstrom) mit steigender elektrischer Einspeisung, und bestimmt auch den Verlauf und die Größe des Netzstromes (Gesamtstrom). Um den Einfluss der Betriebskapazität zu verdeutlichen, veranschaulichen die nachfolgenden Abbildungen 6.52 bis 6.54 die Verhältnisse der Ströme im Generator in Abhängigkeit von der Leistung, wobei die Kapazität als Parameter gilt.
+
+61
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+35,00
+
+30,00
+
+25,00
+
+Strom [A]
+
+20,00 Gesamtstrom[A] Hauptstrom[A] Hilfsstrom[A] 15,00
+
+10,00
+
+5,00
+
+0,00 0 1000 2000 3000 4000 5000 6000 elektrische Leistung [W]
+
+Abbildung 6.51: Ströme in Abhängigkeit der elektrischen Leistung in der großen Drehzahlstufe
+
+Weiterhin ist nach Abbildung 6.52 zu bemerken, dass der Strom in der Hauptwicklung im Leerlauf höhere Werte erreichen kann als im Teillastbereich. Das Auftreten der Gegenkomponente des Drehfeldes erzeugt hohe Verluste und führt zur Erwärmung des Generators. Die Höhe der Kapazität im Hilfsstrang hat nach den Abbildungen einen wesentlichen Einfluss auf die Ausnutzung des Generators.
+35,00
+
+30,00
+
+25,00
+
+20,00 Strom[A]
+
+15,00
+
+C=88µF C=33µF C=49µF C=66µF
+
+10,00
+
+5,00
+
+0,00 0,00
+
+1000,00
+
+2000,00
+
+3000,00
+
+4000,00
+
+5000,00
+
+6000,00
+
+elektrische Leistung[W]
+
+Abbildung 6.52:Strom durch die Hauptwicklung in Abhängigkeit der elektrischen Leistung in der großen Drehzahlstufe
+
+62
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+18,00
+
+16,00
+
+14,00
+
+12,00
+
+Strom[A]
+
+10,00
+
+8,00
+
+C=33µF C=49µF C=66µF C=88µF
+
+6,00
+
+4,00
+
+2,00
+
+0,00 0 1000 2000 3000 4000 5000 6000 elektrische Leistung[W]
+
+Abbildung 6.53:Strom durch die Hilfswicklung in Abhängigkeit der elektrischen Leistung in der großen Drehzahlstufe
+35,00
+
+30,00
+
+25,00
+
+20,00 Strom[A]
+
+15,00
+
+C=88µF C=66µF C=33µF C=49µF
+
+10,00
+
+5,00
+
+0,00 0,00
+
+1000,00
+
+2000,00
+
+3000,00
+
+4000,00
+
+5000,00
+
+6000,00
+
+elektrische Leistung[W]
+
+Abbildung 6.54:Gesamtstrom in Abhängigkeit der elektrischen Leistung in der großen Drehzahlstufe
+
+63
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+12,00
+
+8,00
+
+4,00
+
+Strom[A]
+
+0,00 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+
+Gesamtstrom Hauptstrom Hilfsstrom
+
+-4,00
+
+-8,00
+
+-12,00 Phasenwinkel in rad
+
+Abbildung 6.55:Stromverläufe in Abhängigkeit der Zeit bei ca. 1,5kW Einspeisung und C=33µF
+
+Der Betriebskondensator mit der Kapazität C=33µF bewirkt nach Abbildung 6.55 bei ca. 1,5 kW elektrische Einspeisung eine Phasenverschiebung der Ströme in der Hauptund Hilfswicklung um etwa 110° bzw. 0,6π. Die Abweichung um ca. 20° vom Symmetriepunkt ist auf die Gegenkomponenten der Ströme, die im Abschnitt 6.3.2 behandelt werden, zurückzuführen. Der überwiegende Anteil der kapazitiven Spannung im Hilfszweig bewirkt das starke Voreilen vom Hilfsstrom gegen den Hauptstrom.
+
+6.2.5 Transientes Verhalten bei Netzzuschaltung Nicht anders als beim Dreiphasenasynchrongenerator erfährt die Einphasenasynchronmaschine auch infolge von Aufschaltvorgängen Zustandsänderungen. So treten beim Aufschalten dynamische Ströme und Drehmomente auf. Ihre Kenntnis ist vor allem für die Auslegung der mechanischen und elektrischen Bauelemente wichtig, so daß eine Untersuchung des Aufschaltverhaltens von wesentlicher Bedeutung ist.
+
+64
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+100,00
+
+80,00
+
+60,00
+
+40,00
+
+20,00 Strom [A] Gesamtstrom [A] Hauptstrom [A] Hilfsstrom [A]
+
+0,00 300 -20,00
+
+305
+
+310
+
+315
+
+320
+
+325
+
+330
+
+335
+
+340
+
+345
+
+350
+
+-40,00
+
+-60,00
+
+-80,00
+
+-100,00 Zeit [ms]
+
+Abbildung 6.56: Ströme bei Netzzuschaltung der großen Drehzahlstufe ( 1810 1/min und 33µF )
+60,00
+
+50,00
+
+40,00
+
+30,00
+
+20,00 Strom[A] Gesamtstrom[A] Hauptstrom[A] Hilfsstrom[A]
+
+10,00
+
+0,00 300,00 -10,00
+
+305,00
+
+310,00
+
+315,00
+
+320,00
+
+325,00
+
+330,00
+
+335,00
+
+340,00
+
+345,00
+
+350,00
+
+-20,00
+
+-30,00
+
+-40,00 Zeit[ms]
+
+Abbildung 6.57: Ströme bei Netzzuschaltung der kleinen Drehzahlstufe ( 1200 1/min und 33µF )
+
+Die Netzaufschaltung der Ständerwicklung der beiden Drehzahlstufen erfolgt in der Nähe des synchronen Betriebes. Die Strom- und Drehmomentspitzen, die bei direkter Zuschaltung entstehen, sind vom Sättigungsgrad der Haupt- und Streureaktanzen der Einphasenasynchronmaschine sowie vom Aufschaltaugenblick (Netzspannung zur
+
+65
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+Generatorspannung) abhängig. Die Abbildungen 6.56 und 6.57 zeigen die Verhältnisse für die Zuschaltung auf das starre Niederspannungsnetz. Beim Aufschalten der 4poligen Drehzahlstufe im übersynchronen Betrieb bei 1810min-1 tritt ein Strom auf, der in der Größenordnung um das 3-fache des Nennstromes ( IN = 28,8A ) liegt. Die Anfangsstromspitze der 6-poligen Ständerwicklung beträgt etwa das 5-fache des Nennwertes ( IN = 8,8A ) beim Aufschalten der kleinen Stufe im synchronen Betrieb. Die auftretenden Anfangsstromspitzen klingen aufgrund der äußerst geringen Erregung in beiden Drehzahlstufen innerhalb von etwa 3 bis 4 Perioden auf den stationären Wert ab. Die weiteren Untersuchungen im Rahmen der Diplomarbeit [Alter,J] bestätigen die hier durchgeführten Aufschaltversuche. Darüber hinaus wird wie auch bei der Dreiphasen-Variante, zur Reduzierung der Aufschaltströme eine Sanftanlauffunktion eingesetzt. Die Umschaltung zwischen den Drehzahlstufen erfolgt erst nach einer „kurzen“ Netztrennung. 6.2.6 Wahl des Kondensatortyps Im symmetrischen Betrieb des Einphasengenerators fließen sowohl in der Hauptwicklung als auch in der Hilfswicklung Ströme, die im Idealfall gegeneinander um 90° phasenverschoben sind und in den jeweiligen Strängen zwei gleich große Wechselfelder hervorrufen. Diese Betriebsbedingungen lassen sich nur annähernd über eine Kapazität im Hilfsstrang erreichen. Für die Auswahl der Kondensatoren sind die Vorschriften für Motorkondensatoren nach DIN 48501 und VDE 0560 zu berücksichtigen [10]. Eine wesentliche Größe, die dabei beachtet werden muß, ist die Kondensatorspannung während des Betriebes. Sie ist wie in der Abbildung 6.58 dargestellt stets größer als die speisende Netzspannung. In dieser Darstellung ist die Kapazität – 88µF– für den Nennbetriebspunkt dimensioniert.
+500,00
+
+450,00
+
+400,00
+
+350,00
+
+300,00 Spannung[V] Kondensatorspannung[V] Hilfswicklungsspannung[V]
+
+250,00
+
+200,00
+
+150,00
+
+100,00
+
+50,00
+
+0,00 0,00
+
+1000,00
+
+2000,00
+
+3000,00
+
+4000,00
+
+5000,00
+
+6000,00
+
+elektrische Leistung[W]
+
+Abbildung 6.58: Spannungen in Abhängigkeit der elektrischen Leistung in der großen Drehzahlstufe
+
+66
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+Nach der Graphik wird es in der Praxis nicht auszuschließen sein, daß Kondensatoren mit einer Bemessungsspannung von über 450V notwendig sind, obwohl die Einphasenmaschine nur an 240V Netzspannung angeschlossen ist. Besonders im Leerlauf erreicht die Kondensatorspannung diese hohen Werte. Die Symmetrierungskondensatoren verwenden als Dielektrikum Papier oder Kunststoffolien mit dem Vorteil, daß beim Durchbruch die aufgedampften Metallbeläge kleiner Dicke an Fehlstellen verdampfen, so daß der Kondensator ohne wesentlichen Kapazitätzverlust betriebsfähig bleibt. Am Kondensator entstehen während des Betriebes Wärmeverluste, die abgeführt werden müssen, ohne daß die höchstzulässige Temperatur überschritten wird. Nach VDE 0560 beträgt die maximale Oberflächentemperatur allgemein 60°C bis 70°C. Näherungsweise kann der Kondensator bei 1K Übertemperatur 0,6mW pro 1cm² Kondensatoroberfläche abführen. Die entstehenden Verluste drückt man als Verhältnis der Verlustleistung zu der Blindleistung durch den Verlustfaktor tanδ aus. Die Symmetrierungskondensatoren mit Papierdielektrikum weisen einen Verlustfaktor von etwa 0,006 auf. Im Vergleich dazu können elektrolytische Kondensatoren bis zu 0,15 erreichen.
+
+6.3 Parameterbestimmung und Analysen
+Bei der Auslegung und Optimierung von elektrischen Maschinen, hier speziell des Asynchrongenerators sind mehrere Faktoren maßgebend. Für die praktische Berechnung von Maschinenreihen ist die Erkenntnis wichtig, daß sowohl die elektrischen als auch die mechanischen Größen der einzelnen Maschinen sich nach bestimmten Gesetzen in Abhängigkeit von der Leistung ändern. Im Folgenden soll anhand von Ortskurven, Berechnungen und Analysen der Einfluß unterschiedlicher Auslegungsparametern (wie z.B. Werkstoff, Luftspalt, usw.) veranschaulicht werden. Weiterhin sollen bei der Einphasenmaschine aufgrund der Unsymmetrie im Wicklungssystem sowohl das Moment als auch die Stromverläufe näher betrachtet werden.
+6.3.1 Dreiphasen-Asynchrongenerator
+
+Das stationäre Betriebsverhalten verschiedener Asynchrongeneratoren kann ausgehend von der sogenannten Ersatzschaltung auf einfache Weise ermittelt werden. Nach dieser Schaltung ist der Ständerstrom bei fester Klemmenspannung und konstanten Widerständen und Reaktanzen nur eine Funktion des Schlupfes. Für den Zeiger I1(s) entsteht dadurch eine für den Generator charakteristische Ortskurve. So zeigt die Abbildung 6.59 im Vergleich den Einfluß vom Blechmaterial auf die Betriebsgrößen des Generators.
+
+67
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+Abbildung 6.59: Blechsorteeinfluss auf das Betriebsverhalten des Asynchrongenerators
+
+Beim Vergleich werden zwei Ausführungen mit unterschiedlichen Blechschnitten berücksichtigt. Es handelt es sich z.B. bei der Stromortskurve M800 um den Standardblechschnitt IEC 132/4.125 und bei der anderen Ortskurve M600 um den IEC 132/4.1248 Schnitt. Eine Gegenüberstellung der Blechsorten ist in der folgenden Tabelle 6–4 wiedergegeben. Blechsorte Nenndicke [mm] Dichte [Kg/dm³] Umag.verluste Umag.verluste bei 1,5 T [W] bei 1 T [W] 2,6 3,6
+
+M600-50A 0,5 7,75 6 M800-50A 0,5 7,8 8 Tabelle 6–4: Blechsorten M800 und M600 im Vergleich (DIN EN 10106)
+
+Anhand der Stromortskurve wird deutlich, dass vom Leerlauf bis Nennlast (Generatorbetrieb) kaum Unterschiede bzw. vernachlässigbar kleine Differenzen auftreten. Eine Verbesserung des Wirkungsgrades bei Verwendung des besseren Bleches M600 ist in dieser Leistungsklasse von 5,5kW kaum messbar. Die geringfügig besseren Wirkungsgrade sind auf die Rotornuten zurückzuführen. Der Blechschnitt weist keine Doppelstabnut auf. Als nächstes soll veranschaulicht werden, wie eine Verkleinerung des Luftspaltes den Stromortskurvenverlauf beeinflusst. In der Abbildung 6.60 ist der Einfluss dargestellt.
+
+68
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+Abbildung 6.60: Asynchrongeneratoren mit unterschiedlichen Luftspaltbreiten im Vergleich
+
+Die Stromortskurve mit dem δ=0.25mm Luftspalt stellt die endgültige Auslegungsvariante für die kleine Windkraftanlage dar. Aus dieser Stromortskurve werden alle relevanten Größen ermittelt. Die berechneten Maschinendaten dienen im nächsten Kapitel als Parameter für das Simulationsmodell. Der ohmsche Widerstand der Ständerwicklung R1 wird mit Hilfe des Multimeters ermittelt. Er beträgt für den Generatorprototyp in der großen Stufe (p=2) R1=1.5 Ω und für die kleine Stufe (p=3) R1=5 Ω Die Ständerreaktanz X1 kann mit den Ergebnissen des Leerlaufversuchs [7] nach Gleichung 6–35 bestimmt werden. Im Leerlauf ist s=0 und die Eisenverluste werden vernachlässigt
+I0 ≈ U1 R1 + X 12
+2
+
+Gleichung 6–35
+
+Im Kurzschluß (Stillstand) bei s=1 kann unter der Annahme daß X h >> X 2' σ erfolgt nach Gleichung 6–36
+
+69
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+Ik =
+
+U1 Rk + X k2
+2
+
+Gleichung 6–36
+
+' die Bestimmung von R2 erfolgen wobei vereinfachend Rk ≈ R1 + R2 angenommen wird. Die Gesamtstreuung der Wicklung ergibt sich aus
+
+σ=
+
+Xk Gleichung 6–37 X1
+
+' Mit den oben berechneten Größen lassen sich die Parameter X 2 und X 2' σ nach Gleichung 6–38
+
+' X2 =
+
+2 Xh Gleichung 6–38 (1 − σ ) X 1
+
+und Gleichung 6–39
+' ' X 2σ = X 2 − X h Gleichung 6–39
+
+bestimmen. Die Ergebnisse der Berechnungen sind in der nachfolgenden Tabelle 6–5 zusammenfassend dargestellt.
+Parameter R1 L1 R‘2 L‘2 Lh σ Polzahl 1,5 0,191 0.8 0,18 0,179 0,06 P=2 5 0,318 3,29 0,281 0,28 0,123 P=3 Tabelle 6–5: Parameterdaten aus Messungen und Berechnungen für das vereinfachte Modell
+
+6.3.2 Einphasen-Asynchrongenerator
+
+Bei der Berechnung des Einphasen-Asynchrongenerators wird von der Drehfeldtheorie ausgegangen, bei der das entstehende Ellipsenfeld in zwei Kreisdrehfelder zerlegt wird. Es existieren ein Mitsystem, (Feld) welches das Nutzdrehmoment bildet und ein Gegensystem, das Brems- und Pendelmomenten zur Folge hat. Die Bestimmung der Drehmomentschwankungen bzw. der Pendelmomente wird im Weiteren näher untersucht.
+6.3.2.1 Oberwellen und Pendelmomente
+
+Bei allen folgenden Berechnungen wird nur die Grundwelle berücksichtigt. Alle Oberwellenfelder bleiben dabei unberücksichtigt. Diese Felder führenl zu erhöhter Geräuschentwicklung und zu Zusatzverlusten im Generatorbetrieb.
+
+70
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+Um trotzdem die Wirkung zu zeigen, werden in der nachfolgenden Abbildung 6.61 die Stromverläufe dargestellt.
+15,00 Gesamtstrom [A] Hauptstrom[A] Hilfsstrom[A]
+
+10,00
+
+5,00
+
+Strom[A]
+
+0,00 0,00
+
+10,00
+
+20,00
+
+30,00
+
+40,00
+
+50,00
+
+60,00
+
+-5,00
+
+-10,00
+
+-15,00 Zeit[ms]
+
+Abbildung 6.61: Stromverläufe bei P=1,5kW und C=33µF
+
+Die Wicklungsausführung und Oberwellenordnung haben einen wesentlichen Einfluß auf die Wirkung der Oberwellen. Von den Wellen niedriger Ordnung sind besonders bei verhältnismäßig einfach verteilten Wicklungen die 3., 5. und 7 Oberwellen wichtig. Sehr wichtig sind auch die Nutharmonischen der Ordnung
+ν=Ns/p + 1 und ν=Ns/p – 1
+
+Gleichung 6–40
+
+Sie können durch die Wicklungsverteilung nicht unterdrückt werden, und werden zusätzlich durch die Nutöffnungen des Ständers und Läufers verstärkt. So ergibt eine Fourieranalyse der gemessenen Verläufe nach Abbildung 6.61 die Existenz der 3. und 5. Oberwelle. Eine detaillierte Untersuchung bezüglich Oberwellenbehandlung von Einphasenasynchrongeneratoren würde über den Inhalt dieser Arbeit hinausgehen, und erfordert deshalb spezielle eigenständige Ausarbeitungen und Untersuchungen zu diesem Thema und wird im Weiteren nicht verfolgt Die Pendelmomente im Einphasen-Asynchrongenerator sind auf das elliptische Drehfeld, das sich in Größe und Umlaufgeschwindigkeit ändert, zurückzuführen. Nach [10] besteht das Drehmoment aus einem zeitlich konstanten Mittelwert sowie einem pulsierenden Anteil, der die doppelte Netzfrequenz besitzt. Beim Betrieb am 60Hz Netz treten demnach Momente mit 120 Hz auf. Eine analytische Berechnung anhand der Mit- und Gegenkomponenten (nur das Grundfeld, die Oberfelder wurden nicht berücksichtigt!) des Drehmomentes, hier unten als Endergebnis dargestellt [7], bestätigt die obige Erklärung.
+
+71
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+Pulsierender Anteil
+
+ˆ m(t ) = M + m ⋅ cos(2ωt + ϕ ) Gleichung 6–41
+
+wobei nach [7] gilt:
+
+M = und
+ˆ m=
+
+R 3 p R2 2 2 ( I 2m − 2 I 2 g ) ω s 2−s
+3p
+
+R2 2 2 I 2 m I 2 g cos(2ωt + ϕ ) ω s(2 − s)
+
+Neben der Drehmomentenbildung durch Strombelags- und Feldwellen gleicher Drehrichtung erzeugen das Mitfeld zusammen mit dem Gegenstrombelag und das Gegenfeld mit dem Mitstrombelag je ein Drehmoment. Da während eines Umlaufs das Feld und der entgegengesetzt rotierende Strombelag zweimal in Phase und zweimal in Gegenphase sind, schwankt das Moment, dessen Mittelwert gleich Null ist, mit doppelter Netzfrequenz und liefert somit ein Pendelmoment. Im symmetrischen Betrieb verschwindet die Stromkomponente des Gegenfeldes, und es tritt in der obigen Gleichung nur der zeitlich konstante Mittelwert auf [7].
+M=
+3 p R2 2 ( I ) ω s 2m
+
+Gleichung 6–42
+
+Nach den Abbildungen 6.40 bis 6.44 der gemessenen Pendelmomente des Einphasengenerators treten diese Drehmomente als amplitudenund frequenzmodulierte Schwingungen mit 2-facher Netzfrequenz (120Hz) auf, bei der sich Amplitude und Frequenz zeitlich ändern (Schwebung). Es kann vereinfachend angenommen werden, daß nur amplitudenmodulierte Schwingungen der Form
+ˆ m = k ⋅ m ⋅ cos ω m t ⋅ cos ω T t
+
+Gleichung 6–43
+
+auftreten, wobei
+den Modulationsgrad beschreibt , sowie ωm die Amplituden − Modulationsfrequenz und k
+
+ωT die doppelte Netzfrequenz
+
+darstellen, mit der das Drehmoment schwingt [6].
+
+72
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+Ma
+
+η
+Maschinenauslegung, Verluste
+
+Mm
+(1− m⋅ cos M ⋅ t) ⋅ cos2⋅ωT ⋅ t ω
+
+ω N ωM
+
+Zusammenfassend können die hergeleiteten Ergebnisse als Blockschaltbild dargestellt werden. Dieses gibt die Maschinencharakteristik der Einphasenmaschine hinsichtlich der Pendelmomente wieder. Der Einphasenasynchrongenerator wird mit dem konstanten Antriebsmoment Ma angetrieben. Die Pendelmomenterscheinung ist eine Überlagerung vom konstanten Antriebsmoment (z.B. Windturbine) und den pulsierenden elektromagnetischen Anteilen aufgrund der unsymmetrischen Verhältnisse des Einphasenasynchrongenerators selbst. Die Drehmomentschwankungen können als Problem der Schwingungstechnik betrachtet und beschrieben werden [4]. Aus den Abbildungen der Pendelmomente ist die Abhängigkeit des pulsierenden Anteiles von Schlupf und Kondensatorstufe deutlich zu erkennen. Analytisch lässt sich dieser Zusammenhang darstellen, indem die Gleichung der Einhüllenden der Trägerfrequenz mit der Gleichung 6-44 gleichgesetzt wird
+∆m = 3⋅ p
+
+ω1
+
+⋅
+
+R2 ˆ ˆ ˆ ⋅ i 2 m ⋅ i2 g = k ⋅ m ⋅ cos(ω m ⋅ t ) s(2 − s)
+
+Gleichung 6–44
+
+Die Gleichung 6-44 beschreibt die Abhängigkeit mit den Läufergrößen. Mit Hilfe der Beschreibung in Ständergrößen kann der Einfluß der Kondensatorstufe analytisch leicht erfasst werden. Eine detaillierte Berechnung liefert die folgende Gleichung
+R+ ⋅ R− ˆ ˆ 3⋅ p ˆ ⋅ i1m ⋅ i1g ⋅ = k ⋅ m ⋅ cos(ω m ⋅ t ) s(2 − s) 2 ⋅ ω1
+
+Gleichung 6–45
+
+R+ und R- beschreiben den Realteil der Mit- und Gegenkomponenten der Parallelschaltung der Hauptreaktanz und des Läuferkreises im Einphasenasynchrongenerator. Die Abhängigkeit läßt sich weiterhin vereinfachen wenn die Modulationsfrequenz als konstant angenommen wird. Diese Annahme wird durch die gemessenen und berechneten Pendelmomente bestätigt. Durch die geometrische Anordnung des Einphasenasynchrongenerators lässt sich eine analytische Berechnung sehr problematisch durchführen. Die physikalischen Mechanismen in der Maschine können mit Hilfe der Methode der symmetrischen
+
+73
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+Komponentenzerlegung erklärt werden. Die Anordnung wird dabei in zwei symmetrische Systeme zerlegt, d.h. in einen Bildbereich transformiert und zu einer Gesamtlösung überlagert. Wie schon in dieser Arbeit erwähnt, werden durch die Wahl der Betriebskapazitäten für jeden Arbeitspunkt symmetrische Verhältnisse bzw. Kreisfelder angestrebt. Der symmetrische Betrieb kann mit einer Kapazität für einen Punkt erreicht werden. Es müssen dann folgende Bedingungen erfüllt werden: Der Stromvektor der Hilfswicklung steht senkrecht zum Stromvektor der Hauptwicklung. Die Durchflutungsbeträge in beiden Wicklungen sind gleich.
+
+Die Gegenkomponenten verschwinden, wenn die beiden oben genannten Bedingungen erfüllt sind. Im Folgenden werden die stationären Verhältnisse im Generator mit Hilfe der symmetrischen Komponenten und Ersatzschaltbilder nach [10] behandelt. Die Abbildung 6.62 zeigt das Ersatzschaltbild der Hauptphase und ihre Mitkomponente. Die resultierenden Widerstände können für die übereinstimmende m m Komponente Z d sowie für die Stromkomponente I d berechnet werden.
+
+I md
+
+R1d
+
+X1d
+
+X2
+
+Ud
+
+Zm
+
+X12
+
+R2 s
+
+Abbildung 6.62: Ersatzschaltbild der Mitkomponente des Hauptstranges
+
+Die Spannung des Hauptstranges Ud ist gleich der Netzspannung UN und beträgt
+Ud = I d ⋅ Z 1d +
+′ ′ Iq Iq Id I ⋅Zm + d ⋅Zg − j ⋅Zm + j ⋅Zg 2 2 2 2
+
+Gleichung 6–46
+
+wobei
+Z 1d = R1d + jX 1d
+
+die Impedanz des Hilfsstranges im Mitsystem ist. Die Mitkomponente des Stromes im Hauptstrang ergibt sich zu
+Id m =
+′ Iq Id − j 2 2
+
+Gleichung 6–47
+
+74
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+und die Gesamtimpedanz des Hauptstranges im Mitsystem zu
+
+Z d m = Z 1d + Z m
+
+Gleichung 6–48
+
+Jetzt werden die Gegenkomponenten der Hauptphase anhand der Abbildung 6.63 angegeben. Anschließend wird der Endwert der Hauptspannung Ud berechnet.
+I gd
+R1d X1d
+
+X2
+
+Ud
+
+Zg
+
+X12
+
+R2 2−s
+
+Abbildung 6.63:Ersatzschaltbild der Gegenkomponente des Hauptstranges
+
+Der Strom des Hauptstranges im Gegensystem ist
+Id =
+g
+
+′ Iq Id + j Gleichung 6–49 2 2
+
+und die Gesamtimpedanz im Gegensystem zu
+Z d = Z 1d + Z g Gleichung 6–50
+g
+
+Die Gesamtspannung Ud besteht damit aus den zwei Mit- und Gegenkomponenten
+U d = I d ⋅ Z1d + I d ⋅ Z m + I d ⋅ Z g = I d ⋅ Z 1d + Z m + I d ⋅ ( Z1d + Z g ) Gleichung 6–51
+m g m g
+
+(
+
+)
+
+U d = I d ⋅ Z d + I d ⋅ Z d Gleichung 6–52
+m m g g
+
+U d = U d + U d Gleichung 6–53
+m g
+
+für die Komponentenberechnung im Hilfsstrang wird ein in Reihe zu der Hilfswicklung geschalteter Kondensator berücksichtigt. Zur Vereinfachung werden sämtliche Wicklungen auf gleiche Windungszahl umgerechnet. Es werden sämtliche Originalgrößen mit dem Umrechnungsfaktor k oder k2 auf die Hauptwicklungsbedingungen zurückgeführt werden. Dabei wird berücksichtigt, dass der Hilfsstrang aus zHi Windungen besteht, und der Wicklungsfaktor ξ hi ist und für den Umrechnungsfaktor die Gleichung 6-55 gilt.
+
+75
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+′ I q ⋅ z d ⋅ ξ d = I q ⋅ z q ⋅ ξ q Gleichung 6–54
+
+Der Umrechnungsfaktor ergibt sich zu
+′ Iq
+
+Iq
+
+=
+
+zq ⋅ ξ q zd ⋅ξd
+
+= k Gleichung 6–55
+
+Für den Widerstand gilt dann nach Gleichung 6-56
+′ ′ I q ⋅ Rq = I 2 q ⋅ Rq Gleichung 6–56
+2
+
+wobei auch hier gilt
+′ Rq
+
+Rq
+
+=
+
+Rq 1 ⇒ = k 2 Gleichung 6–57 2 ′ Rq k
+
+Das Spannungsverhältnis ergibt sich zu
+′ Uq
+
+Uq
+
+=
+
+Uq 1 ⇒ = k Gleichung 6–58 ′ k Uq
+
+Für die Hilfsphase ergeben sich nach den Ersatzschaltbildern 6.64 und 6.65 für das Mit- und Gegensystem die Gleichungen 6-59 bis 6-71
+I mq
+Xc R1q X1q
+X2
+
+Uq
+
+Zm
+
+X12
+
+R2 s
+
+Abbildung 6.64:Ersatzschaltbild des Hilfsstranges im Mitsystem
+
+Die folgenden Berechnungen für die Mitkomponenten der Hilfsphase erfolgen jetzt in Strichgrößen. Die Gleichungen können wie folgt ausgegeben werden
+′ ′ U q = I q ⋅ Z 1q +
+′ Iq
+2
+
+⋅Zm +
+
+′ Iq
+2
+
+⋅Zg − j⋅
+
+Id I ⋅ Z m + j d ⋅ Z g Gleichung 6–59 2 2
+
+mit
+′ Z 1q =
+1 ⋅ ( R1q + j ⋅ ( X 1q − X c )) Gleichung 6–60 k2
+
+und der Hilfsstrom im Mitsystem
+
+76
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+′ Iq =
+m
+
+′ Iq
+2
+
+−j
+
+Id Gleichung 6–61 2
+
+die Impedanz im Mitsystem
+′ Z ′ m q = Z 1q + Z m
+
+Die Abbildung 6.65 zeigt das Ersatzschaltbild für die Gegenkomponente der Hilfsphase. Der Hilfsstrom im Gegensystem I g q wird somit:
+′ Iq =
+g
+
+I I ′q + j d Gleichung 6–62 2 2
+
+und die Impedanz im Gegensystem
+′ Z ′ g q = Z 1q + Z g Gleichung 6–63
+
+I gq
+
+Xc
+
+R1q
+
+X1q
+
+X2
+
+Uq
+
+Zg
+
+X12
+
+R2 2−s
+
+Abbildung 6.65:Ersatzschaltbild der Hilfswicklung im Gegensystem
+
+Die Gesamtspannung der Hilfsphase ergibt sich zu
+′ ′ ′ U ′q = I q ⋅ Z1q + I ′ m q ⋅ Z m + I q g ⋅ Z g
+
+Gleichung 6–64
+
+Mit der Addition der Ströme im Hilfsstrang
+′ ′ ′ Iq = Iqg + Iqm
+
+Gleichung 6–65
+
+folgt die vereinfachte Gesamtspannung
+′ ′ ′ ′ ′ Uq = Iq ⋅ Zq + Iq ⋅ Zq = Uq
+m m g g
+
+′m
+
++Uq
+
+′g
+
+Gleichung 6–66
+
+Da die beiden Stränge des Generators (Hauptwicklung und Hilfswicklung) aus demselben Einphasennetz gespeist werden, sind die Spannungen
+
+77
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+U d = Uq = Uq ′ ⋅ k = U Gleichung 6–67
+
+Die analytische Berechnung der Ströme nach der Methode der symmetrischen Komponenten ergeben die folgenden Gleichungen 6-68 und 6-69:
+I md = U
+g
+
+Z gq − j ⋅k ⋅Z gd Gleichung 6–68 Z md ⋅ Z g q + Z g d ⋅ Z mq
+
+I
+
+d
+
+Z mq − j ⋅ k ⋅ Z md =U m Gleichung 6–69 Z d ⋅ Z g q + Z g d ⋅ Z mq
+j m ⋅ I d = j ⋅ I ′ m q Gleichung 6–70 k
+
+Die Stromkomponenten der Hilfsphase ergeben sich somit zu
+I mq =
+
+und
+j I g q = − ⋅ I g d = j ⋅ I ′ g q Gleichung 6–71 k
+
+Anhand der nachfolgenden Darstellungen wird der starke Einfluß des Verhältnisses der Gegen- zur Mitkomponente des Stromes in der Hauptwicklung auf den pulsierenden Anteil des Drehmomentes verdeutlicht.
+Symmetrische Komponenten
+1 0,9 0,8 0,7 0,6 0,5 0,4 0,3 0,2 0,1 0 0 1000 2000 3000 elektrische Leistung [W] 4000 5000 6000 C=33µF C=49µF C=66µF C=88µF Ihag/Iham
+
+Abbildung 6.66: Gegen- zum Mitsystem des Stromes in der Hauptwicklung
+
+Anhand der Abbildung 6.66 wird deutlich daß das Verhältnis des Gegen- zum Mitsystem vom Betriebspunkt und von der Kondensatorstufe abhängt. Eine Gegenüberstellung mit der nächsten Abbildung 6.67 lässt einen Zusammenhang im Hinblick auf die Drehmomentschwankungen erkennen.
+
+78
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+Drehmomentschwankungen
+60
+
+50
+
+40 dM/Mavg[%]
+
+30
+
+C=33µF C=49µF C=66µF C=88µF
+
+20
+
+10
+
+0 0 1000 2000 3000 elektrische Leistung [W] 4000 5000 6000
+
+Abbildung 6.67: Drehmomentschwankungen mit C als Parameter
+
+Entsprechend dem Ziel der Auslegung möglichst symmetrische Betriebsverhältnisse zu erreichen, erkennt man, dass das Stromgegensystem in der Hauptwicklung und die Pendelmomentamplitude ein Minimum je nach Kondensatorstufe bei etwa gleichem Lastpunkte haben. Mit Hilfe der Gleichungen 6-44 und 6-72 läßt sich die Abhängigkeit der relativen Drehmomentschwankungen von der Leistung bzw. vom Schlupf wie folgt angeben:
+
+2 ⋅ I 2m ⋅ I 2 g ∆m = 2 M (2 − s) I 2 2 m − sI 2 g
+
+Gleichung 6–72
+
+Im symmetrischen Betrieb wird
+
+∆m = 0 angestrebt, d.h im Zähler der Gleichung 6-72 M
+
+muss das Gegensystem im Läuferkreis verschwinden. Im Leerlauf ist die Amplitude des pulsierenden Anteils direkt proportional dem Verhältnis von Gegen- zur Mitkomponente des Läuferstromes.
+∆m I 2 g = M I 2m
+
+Gleichung 6–73
+
+Im Anlauf bei s=1 dürfen sich nach Gleichung 6-72 das Mit- und Gegensystem nicht in ihrer Wirkung aufheben. Wenn
+
+79
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+I 2m = I 2 g
+
+wird, entsteht im Mittel kein Moment bzw. nach Gleichung 6-72 theoretisch ein unendlich hoher pulsierender Anteil
+∆m =∞ M
+
+6.3.2.2 Parameterbestimmung
+
+Die Erstellung einer Systemsimulation erfordert die Kenntniss der Parameter des realen Systems. Dafür wird ausgehend von den Ersatzschaltbildern der Einphasenmaschine ein Messprogramm zur Identifikation der Maschine erstellt [7].
+
+Abbildung 6.68: Ersatzschaltbild des Einphasen-Asynchrongenerators
+
+Im Ersatzschaltbild bedeuten: R1ha: Statorwiderstand vom Hauptstrang R1Hi: Statorwiderstand vom Hilfsstrang X1Ha: Statorreaktanz vom Hauptstrang X1Hi: Statorreaktanz vom Hilfsstrang Xh: Hauptreaktanz R2: Rotorwiderstand X2: Rotorreaktanz Mit den Vereinfachungen
+
+80
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+-
+
+Vernachlässigung der Eisenverluste und Streuung im Läuferkreis
+
+ergeben sich folgende Gleichungen zur Berechnung der Maschinenparameter. Das Ersatzschaltbild 6.68 läßt sich für den Hauptstrang im Leerlaufbetrieb, unter der Annahme daß der Läuferstrom verschwindend klein ist, auf Abbildung 6.69 reduzieren.
+
+I1ha
+
+Abbildung 6.69: Hauptstrang-Ersatzschaltbild des Einphasen-Asynchrongenerators
+
+Durch diese Vereinfachung lässt sich die Hauptinduktivität nach Gleichung 6-74 berechnen
+X h = Z ha − Rha − X ha
+2 2
+
+Gleichung 6–74
+
+und die Phasenverschiebung ϕ ha nach
+tan ϕ ha =
+X ha + X h Rha
+
+Gleichung 6–75
+
+Analog zum Hauptstrang dient im Leerlauf für den Hilfsstrang folgendes Ersatzschaltbild als Berechnungsgrundlage
+
+81
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+. Abbildung 6.70: Hilfsstrang-Ersatzschaltbild des Einphasen-Asynchrongenerators Die Reaktanz Xhi läßt sich nach Gleichung 6-76 ermitteln
+X hi = Zk
+2
+
+− Rhi 2 − X h + X c
+
+Gleichung 6–76
+bei der
+
+Der Widerstand Rhi in der Hilfswicklung wird wie Dreiphasenasynchronmaschine anhand einer Ohmmessung ermittelt.
+
+Anhand der Kurzschlußmessung können die restlichen Parameter bestimmt werden. Dabei wird das vereinfachte Ersatschaltbild für den Kurzschlußfall für die Berechnung angenommen.
+
+I1ha
+
+Abbildung 6.71: Hilfsstrang-Ersatzschaltbild des Einphasen-Asynchrongenerators
+
+Die Gesamtimpedanz berechnet sich im Kurzschlußfall nach
+Zk = U 2 2 = RK + X K Ik
+
+Gleichung 6–77
+wobei der Realteil
+
+82
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+R K = Rha + 2 ⋅ R2
+
+Gleichung 6–78
+
+und der Imaginärteil
+X k = X ha + 2 ⋅ X 2σ
+
+Gleichung 6–79
+
+betragen. Die Phasenverschiebung ϕ ha im Kurzschlusspunkt berechnet sich nach
+cos ϕ ha =
+
+U hi − U N − U c − 2 ⋅U N ⋅U c
+2 2
+
+2
+
+Gleichung 6–80
+
+Der Läuferwiderstand kann wie folgt ermittelt werden
+R2 =
+1 ( Rk + Rha ) 2
+
+Gleichung 6–81
+
+Es ergeben sich für beide Drehzahlstufen p=2 und p=3 die Parametergrössen dargestellt in der Tabelle 6-5.
+Rha Rhi X ha X hi Xh
+
+R2
+
+P=2 0,9 1,84 2,62 2,79 33,51 0,74 P=3 3,6 7,2 4,21 6,41 37,97 1,52 Tabelle 6-5: Parameter des Einphasen-Asynchrongenerators für p=2 und p=3 Zusätzlich zu den oben ermittelten Parametern, ist die Kenntnis des Übersetzungsverhältnisses des Haupt- und Hilfsstrangs für die Auslegung des symmetrischen Betriebspunktes erforderlich. Da der Hilfsstrang die doppelte Windungszahl, aber nur die Hälfte des Nutenraumes einnimmt, ist das Windungsverhältnis gleich 1. Der Wicklungsfaktor bzw. das Übersetzungsverhältnis in der Tabelle 6-6 lassen sich aus den Vorgaben des Einphasen-Asynchrongenerators nach [2] bestimmen. Drehzahlstufe Wicklungsart Wicklungsfaktor 4-polige Stufe Hauptstrang Hilfsstrang 0,83 0,96 6-polige Stufe Hauptstrang Hilfsstrang 0,84 0,97
+
+Tabelle 6-6: Wicklungsfaktoren des Einphasen-Asynchrongenerators für p=2 und p=3
+
+6.3.2.3 Zeigerdiagramme und Ortskurven
+Anhand der Ersatzschaltung der Einphasenasynchronmaschine und mit Hilfe der Zeigerdiagramme der Maschine lässt sich jeder generatorischer Punkt, festgelegt durch den Schlupf und die Kapazität, angeben. Die gemessenen Ströme in der Haupt –als auch in der Hilfswicklung werden mit Hilfe der Methode der symmetrischen Komponenten in Mit- und Gegenkomponenten zerlegt. Die ermittelten Grössen für
+
+83
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+den ausgewählten Betriebspunkt im Bildbereich werden nun in Zeigerdiagramme dargestellt. Anschliessend lassen sich die Phasenverschiebungen zwischen der Netzspannung (Generatorspannung) und den Strömen Ihi und Iha bestimmen. Die so berechneten Zeigerdiagramme werden zu einer Ortskurve zusammengefasst. Die Ortskurvendarstellung stellt somit für jeden Betriebspunkt der Maschine die Abhängigkeit der Generatorströme vom Schlupf dar. Durch Variation der Kapazität lässt sich die Charakteristik der Ortskurve verändern.
+
+Abbildung 6.72: Ströme in der großen Drehzahlstufe bei ca. P=1,5 kW und C=33 µF
+
+Abbildung 6.73: Ströme in der großen Drehzahlstufe bei ca. P=1,5 kW und C=66 µF
+
+84
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+Unter Berücksichtung der Abbildung 6.67 kann die Höhe der Amplitude des pulsiernden Anteils vom Drehmoment mit den Darstellungen in den Abbildungen 6.72 und 6.73 interpretiert werden. So überwiegt z.B. bei P=1,5kW und 33µF die Gegenkomponente des Stromes in der Hauptwicklung und die Phasenverschiebung zwischen den Strömen in der Haupt- und Hilfswicklung liegt bei etwa 100°. Der Generator erreicht in diesem Betriebszustand annäherend symmetrische Verhältnisse. Dagegen liegen bei der großen Kondensatorstufe (C=66µF) die Mit- und Gegenkomponente des Stromes im Hauptstrang in der gleichen Größenordnung, wobei die Drehmomentschwankungen nach Abbildung 6.67 sehr hohe Werte erreichen. Die Phasenverschiebung zwischen den Strömen in der Haupt- und Hilfswicklung beträgt etwa 180°. Die Ortskurven der beiden Ströme durch die Haupt- und Hilfswicklung sind in den Abbildungen 6.74 und 6.75 dargestellt.
+
+Abbildung 6.74: Ortskurve des Stromes durch den Hauptstrang in der großen Drehzahlstufe für unterschiedliche Kondensatorstufen
+
+85
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+Abbildung 6.75: Ortskurve des Stromes durch den Hilfsstrang in der großen Drehzahlstufe für unterschiedliche Kondensatorstufen
+
+Die Ortskurven beschreiben anders als bei einer symmetrischen Asynchronmaschine bizirkuläre Quartiken. Die Lage als auch die Größe des Kreises wird wesentlich von der Kapazität im Hilfsstrang beeinflußt. Die Ströme durch die beiden Stränge erreichen bei gleicher Abgabeleistung unterschiedliche Werte. So sinkt der Strom in der Hauptwicklung in einigen Bereichen um etwa 50% bei steigender Kondensatorgröße. Im Hilfsstrang liegen etwa proportionale Verhältnisse vor. Bei größerer Kapazität steigt auch der Strom durch die Hilfswicklung. Die nächste Abbildung 6.76 stellt die Ortskurve des Gesamtstromes mit der Betriebskapazität als Parameter dar. Hier beschreiben die Ortskurven einen Kreis.
+
+86
+
+Messtechnische Untersuchungen und Analysen am Beispiel einer 5kW Windkraftanlage
+
+Abbildung 6.76: Ortskurve des Gesamtstromes in der großen Drehzahlstufe für unterschiedliche Kondensatorstufen
+
+87
+
+Simulationsergebnisse im Vergleich mit Messungen und Auslegung
+
+7 Simulationsergebnisse im Vergleich mit Messungen und Auslegung
+Als Hilfsmittel für die Untersuchung von Vorgängen im Generator der kleinen Windkraftanlage bzw. zur Parameteroptimierung bietet sich die Simulationsmethode an. Basierend auf dem mathematischen Modell des Asynchrongenerators soll die Simulation Aussagen u.a. zu typischen Übergangsvorgängen wie das Zuschalten auf das Netz liefern.
+
+7.1
+
+Modellbildung und Simulation
+
+Es werden Simulationsmodelle des Dreiphasen-Asynchrongenerators für den Netzbetrieb und für den Inselnetzbetrieb implementiert. Diese Nachbildung läßt sich auf das Modell der Einphasen-Asynchronmaschine durch die Zuschaltung der Hilfsimpedanz im Stator in der q-Achse des Zwei-Achsenmodells der DreiphasenAsynchronmaschine erweitern.
+
+7.1.1 Dreiphasen-Asynchrongenerator im Netzbetrieb
+Das mathematische Modell der Dreiphasen-Asynchronmaschine basiert auf den folgenden Differentialgleichungen der Stator- und Rotorwicklungen. Es wird ein Anschluß an das symmetrische Drehstromnetz betrachtet. Die Rotorwicklung wird kurzgeschlossen (Käfigwicklung). Die Gleichungen der Ständerspannungen:
+dψ d 1 − ω1ψ q1 dt dψ q1 U q1 = R1I d 1 + + ω1ψ d 1 dt U d 1 = R1I d 1 +
+
+Gleichung 7–1 und 7–2
+
+Die Gleichungen der Rotorspannungen:
+0 = R'2 I 'd2 + 0 = R 2I
+' ' q2
+
+dψ ' d 2 dt dψ ' q 2 + dt
+
+Gleichung 7–3 und 7–4
+
+Ständerflußverkettungen:
+ψ d 1 = L1I d 1 + Lh I 'd 2 ψ q1 = L1I q1 + Lh I ' q 2
+
+Gleichung 7–5 und 7–6
+
+Rotorflußverkettungen:
+
+88
+
+Simulationsergebnisse im Vergleich mit Messungen und Auslegung
+
+ψ ' d 2 = L' 2 I ' d 2 + Lh I d 1 ψ ' q 2 = L' 2 I ' q 2 + Lh I q1
+
+Gleichung 7–7 und 7–8
+
+Das Drehmoment
+
+M el = p.( ' q 2 .I ' d 2 − ψ ' d 2 .I ' q 2 ) ψ
+
+Gleichung 7–9
+
+Die nachfolgende Matrix beschreibt die Stromabhängigkeit der Flußverkettungen: ψ d 1   L1 0 Lh 0   I d 1  ψ       q1  =  0 L1 0 Lh  =  I q1  Gleichung 7–10 ψ ' d 2   L 0 L' 0   I ' d 2  h 2
+  ψ ' q 2       0 Lh 0 L ' 2    I ' q2   
+
+Die obigen Gleichungen basieren auf dem Zweisachsensystem. Die Transformation von dem Dreiphasen- zum Zweiphasensystem ist eine leistungsinvariante Transformation Tzw.
+U d  U u      U q  = [TZW ]U v  U  U w     0
+
+Gleichung 7–11
+
+[TZW ] =
+
+  2π  2π    cos α cos α − 3  cos α − 3         2 2π  2π      − sin  α −   − sin α − sin  α − 3 3  3      1  1 1   2 2  2 
+
+Gleichung 7–12
+
+Für die inverse Transformation gilt
+I d  I u   −1    [  I v  = TZW ]  I q  I  I w     0
+
+Gleichung 7–13
+
+Wobei
+ 1 − sinα α  cos 2   [TZW]−1 = 2 cosα − 2π  −sinα − 2π  1     3 3 2 3     4π   4π  1   cos α −  − sinα −  3 3 2            
+
+Gleichung 7– 14
+
+89
+
+Simulationsergebnisse im Vergleich mit Messungen und Auslegung
+
+α ist der Drehwinkel zwischen dem Stator- und Rotorwicklungssystem. Das mechanische Übertragungssystem wird als ein Zwei-Massen-System nach Abbildung 7.1
+
+Abbildung 7.1: Modell eines mechanischen Übertragungssystem
+
+nachgebildet. Es gelten die folgenden Bewegungsgleichungen:
+M M − M 12 = J M M 12 − M L = J L M 12 dω1 dt
+
+dω 2 dt = c12 (α 1 − α 2 ) + d 12 (ω1 − ω 2 )
+
+Gleichung 7–15
+
+Das Asynchronenmaschinenmodell wird mit Matlab/Simulink nachgebildet.
+
+Abbildung 7.2: Simulationsmodell des Dreiphasenasynchrongenerators
+
+Der Kern des Modells bildet das Untermodell Asynchronous Generator, dargestellt in der Abbildung 7.3.
+
+90
+
+Simulationsergebnisse im Vergleich mit Messungen und Auslegung
+
+Abbildung 7.3: Untermodell Asynchrongenerator
+
+Die Eingänge bilden die beiden Spannungen in der d- und q- Achse sowie das mechanische Antriebsmoment von der Windturbine. Als Ausgangsgrößen werden die Statorströme, die elektrische Leistung und die mechanische Drehzahl zur Auswertung herangezogen. Die berechneten Parameter in Kapitel 6.3.1 werden getrennt als Matlab Unterprogramm eingegeben.
+
+7.1.2 Dreiphasen-Asynchrongenerator im Inselnetzbetrieb
+Damit ein Asynchrongenerator allein ein Inselnetz bilden kann, muß ihm neben dem Antrieb die notwendige Blindleistung z.B. durch eine Kondensatorbatterie zur Verfügung gestellt werden [3]. Der Aufbau ist in der Abbildung 7.4 schematisch dargestellt.
+
+Abbildung 7.4: Asynchrongenerator im Inselnetzbetrieb
+
+91
+
+Simulationsergebnisse im Vergleich mit Messungen und Auslegung
+
+Die sättigungsabhängige Maschinenhauptinduktivität L1h und die Kondensatoren bilden zusammen einen Schwingkreis, der bei angetriebenem Läufer durch einen Stromstoss oder den Restmagnetismus (Remanenz) zu aufklingenden Schwingungen angeregt werden kann. Der stabile Gleichgewichtszustand läßt sich durch den Schnittpunkt der Leerlaufkennlinie mit der Kondensatorgeraden nach Abbildung 7.5 festlegen. Durch die Wahl der Kapazität kann die Spannungsgröße in einem großen Bereich eingestellt werden.
+
+Abbildung 7.5: Einstellung der Spannungsgröße
+
+Um das Verhalten im Inselnetz zu untersuchen, wird ein mathematisches Modell des selbsterregten Asynchrongenerators entwickelt und mit den berechneten Parametern simuliert [2]. Für das Modell werden folgende Gleichungen zugrunde gelegt
+I c = U 0 . jω C = − I µ = C=
+2
+
+U0 jω L h
+
+1 1 = ω Lh (2πf )2 Lh
+
+Gleichung 7–16 und 7–17
+
+Die Summe des Magnetisierungsstroms
+I c = I µ + I rec
+
+Gleichung 7–18
+
+Bei Vernachlässigung der Ständerverluste und konstater Frequenz kann der Blindstrom wie folgt bestimmt werden
+IW R = 2 I B sX k
+'
+
+Gleichung 7–19
+
+Das Asynchrongeneratormodell im Inselnetz basiert auf den oben angegebenen Gleichungen. Die Magnetisierungskurve ist im Modell als Kennlinienfeld integriert.
+
+92
+
+Simulationsergebnisse im Vergleich mit Messungen und Auslegung
+
+Analog zum Modell für den Netzbetrieb wird auch im Inselnetz die Zweiachsentransformation gewählt. Die nachfolgende einfache Nachbildung in Matlab/Simulink in der Abbildung 7.6 kann zur Betriebsverhaltensuntersuchung im Inselnetz herangezogen werden.
+
+Abbildung 7.6: vereinfachtes Asynchronmaschinenmodell im Inselnetz
+
+7.1.3 Einphasen-Asynchrongenerator im Netzbetrieb
+Der Einphasen-Asynchrongenerator lässt sich als ein Zweiphasensystem nach Abbildung 7.5 durch die Differentialgleichungen 7–20 bis 7–25, die das mathematische Modell beschreiben, nachbilden [4].
+i1d
+
+u1d
+
+Stator
+i1q
+
+u1q
+
+u Cs
+
+i2 d
+
+Rotor
+i2 q
+
+Abbildung 7.7: Zweiachsenmodell
+
+93
+
+Simulationsergebnisse im Vergleich mit Messungen und Auslegung
+
+Die Spannungsgleichungen
+u1d = R1d ⋅ i1d + dψ 1d Gleichung 7–20 dt + u c Gleichung 7–21
+
+u1q = R1q ⋅ i1q +
+
+dψ 1q
+dt
+
+0 = R2 d ⋅ i 2 d +
+
+dψ 2 d dα + ⋅ψ 2 q Gleichung 7–22 dt dt dψ 2 q
+dt
+
+0 = R2 q ⋅ i2 q +
+
+−
+
+dα ⋅ψ 2 d Gleichung 7–23 dt
+
+Der Strom in der Hilfswicklung
+i1q = C s ⋅ du c Gleichung 7–24 dt
+
+Die Bewegungsgleichung
+M M − M 12 = J M M 12 − M L = J L M 12 dω1 dt
+
+dω 2 Gleichung dt = c12 (α 1 − α 2 ) + d 12 (ω1 − ω 2 )
+
+7–25
+
+M el = P ψ 1d ⋅ i1q −ψ 1q ⋅ i1d Gleichung 7–26
+
+(
+
+)
+
+Flussverkettungsgleichungen
+ψ 1d = L1d ⋅ i1d + L12 d ⋅ i2 d Gleichung 7–27 ψ 1q = L1q ⋅ i1q + L12 q ⋅ i2 q Gleichung 7–28 ψ 2 d = L2 d ⋅ i2 d + L12 d ⋅ i1d Gleichung 7–29
+ψ 2 q = L2 q ⋅ i2 q + L12 q ⋅ i1q Gleichung 7–30
+
+Dabei wird die Käfigwicklung des Rotors in zwei senkrecht zueinander angeordnete Teilwicklungen, die magnetisch entkoppelt sind, zerlegt.
+
+94
+
+Simulationsergebnisse im Vergleich mit Messungen und Auslegung
+
+Der Einfluß der fiktiven Rotorströme hinsichtlich der elektromagnetischen Verhältnisse und des Gesamtverhaltens der Maschine soll identisch mit den realen Strömen in den Stäben der Käfigwicklung sein. Weiterhin wird das Rotorsystem in ein statorfestes Koordinatensystem transformiert, dabei bleiben die Richtungen gegenüber dem Stator fest.
+
+Abbildung 7.8: Modelldarstellung des Einphasen-Asynchrongenerators
+
+Das Modell der Einphasen-Asynchronmaschine wird mit einem Matlab/SimulinkTool, dargestellt in der Abbildung 7.8 nachgebildet. Auf eine Funktionsbeschreibung der Untersysteme wird hier verzichtet und ein Teil der Simulationsergebnisse wird in Kapitel 7.2 dargestellt.
+
+7.2
+
+Meß-und Simulationsergebnisse im Vergleich
+
+Die Überprüfung von Simulationsmodellen kann am besten mit den Messergebnissen der durchgeführten Untersuchungen im Labor vollzogen werden. Die Simulation sowohl der Dreiphasen- als auch der Einphasenasynchronmaschine mit konstanten Parametern dient dazu, die Verhältnisse in der Maschine zu erfassen. Dabei wird der Einfluß der Sättigung auf Streu- und Hauptreaktanzen vernachlässigt. Untersucht wird neben dem stationären Betrieb auch das Übergangsverhalten der Maschinen im transienten Bereich.
+
+95
+
+Simulationsergebnisse im Vergleich mit Messungen und Auslegung
+
+7.2.1 Dreiphasen-Asynchrongenerator im Netzbetrieb
+Die Ergebnisse der Simulation des Dreiphasenasynchrongenerators im stationären Betrieb weisen geringe Abweichungen von den Messungen auf. Die Erhöhung des Antriebes vom Leerlauf bis zum Nennpunkt wird durch eine Drehmomentrampe am Eingang des Modells bei konstanter Spannung und Frequenz realisiert.
+
+Abbildung 7.7: Vergleich des Statorstromes bei Nennspannung
+
+Der Vergleich der Simulation mit den entsprechenden Meßergebnissen des stationären Betriebes ergab geringe Fehler. So liegt z.B der Leerlaufpunkt nach der Simulation bei etwa 2,8 A um 0,7 A kleiner als der Meßwert.
+
+96
+
+Simulationsergebnisse im Vergleich mit Messungen und Auslegung
+
+Netzzuschaltung 2 1 Mel (p.u) 0 -1 -2 0.5
+
+1 Time (sec)
+
+1.5
+
+2
+
+5 Istart (p.u)
+
+0
+
+-5 0.5 1 Time (sec) 1.5 2
+
+Abbildung 7.8: Drehmoment und Statorstrom bei Netzzuschaltung
+
+Der Aufschaltstrom in der Simulation nach Abbildung 7.8 entspricht dem etwa 6fachen Nennstrom, wobei hier eine direkte Netzzuschaltung erfolgte.
+
+7.2.2 Einphasen-Asynchrongenerator im Netzbetrieb
+Einen Auszug aus den Simulationsberechnungen und Vergleiche mit den stationären Meßergebnissen im Kapitel 6 stellt die Abbildung 7.9 dar. Der gemessene Strom im Hauptstrang beträgt nach Abbildung 6.51 bei ca. 5,5kW Einspeisung und einer Betriebskapazität von C=33µF etwa 25A. Ein Vergleich mit dem Ergebnis der Simulation ergibt eine Abweichung von etwa 4A. Der Strom im Hilfsstrang beträgt laut Messung (Abbildung 6.48) 4A. In der Simulation liegt er bei etwa 3A.
+
+97
+
+Simulationsergebnisse im Vergleich mit Messungen und Auslegung
+
+30
+
+25
+
+Hauptstrom Hilfsstrom
+
+20 Strom[A]
+
+15
+
+10
+
+5
+
+0
+
+0.2
+
+0.3
+
+0.4
+
+0.5 0.6 Leistung (p.u)
+
+0.7
+
+0.8
+
+0.9
+
+1
+
+Abbildung 7.9: Ströme aus den Simulationsberechnungen
+
+50 40 30 20 10 Strom[A] 0 -10 -20 -30 -40 -50 0.4 Hauptstrom Hilfsstrom
+
+0.5
+
+0.6
+
+0.7 time
+
+0.8
+
+0.9
+
+1
+
+Abbildung 7.10: Ströme bei Netzzuschaltung
+
+98
+
+Simulationsergebnisse im Vergleich mit Messungen und Auslegung
+
+Die Abbildung 7.10 stellt die Verhältnisse bei direkter Netzzuschaltung des Generators dar. Die Stromspitze erreicht etwa den 1,5 fachen Nennwert. In der nächsten Abbildung wird das Drehmoment dargestellt.
+1.2 1 0.8 0.6 Mel [p.u.] 0.4 0.2 0 -0.2 -0.4 -0.6
+
+0.5 time
+
+1
+
+1.5
+
+Abbildung 7.11: Drehmoment bei Netzzuschaltung
+
+7.3
+
+Ergebnisse der Auslegung
+
+Aus Gründen der Kostenbegrenzung wird für die kleine Windkraftanlage ein polumschaltbarer Asynchrongenerator vorgesehen. Es werden zwei Generatorvarianten eingesetzt; der Einphasen-Asynchrongenerator für Einphasennetze, z.B. für den Einsatz in den USA (240V/60Hz), und der DreiphasenAsynchrongenerator für Niederspannungsnetze in Europa (400V/50Hz). Die Auslegung wird nach dem Kennlinienverfahren von motorisch ausgelegten Serienmaschinen – Asynchrongeneratoren als Ständerausführungen in zwei Schritten untersucht, dimensioniert und insbesondere auf hohen Wirkungsgrad im Teillastbereich optimiert. Abschließend werden gleichartige Stator- und Rotorsysteme von Asynchrongeneratoren im Gehäuse der kleinen Windkraftanlage aufgebaut und gemeinsam mit dem Getriebe als gesamter Triebstrang untersucht.
+
+7.3.1 Dreiphasen-Asynchrongenerator Mit Hilfe der im Rahmen dieser Arbeit durchgeführten Laboruntersuchungen läßt sich feststellen, daß eine Auslegung des Windkraftanlagengenerator, der überwiegend im Teillast betrieben wird, auf einen niedrigen Sättigungsgrad ausgerichtet sein sollte. Eine Verbesserung bezüglich der Magnetisierung bzw. des Leistungsfaktors wird in einem weiteren Schritt durch konstruktive Maßnahmen wie Luftspaltverkleinerung um
+
+99
+
+Simulationsergebnisse im Vergleich mit Messungen und Auslegung
+
+0,1mm von 0,35 auf 0,25mm erreicht. Diese Maßnahme führt nach Abbildung 7.12 auch zu einem Wirkungsgradanstieg um einige Prozentpunkte sowohl in der kleinen als auch in der großen Drehzahlstufe.
+aeroSmart5 Asynchrongenerator Standardasynchronmaschine
+
+100 90 80 70 Wirkungsgrad [%] 60 50 40 30 20 10 0 0 1000 2000 3000 elektrische Leistung [W] 4000 5000 6000
+
+Abbildung 7.12: Optimierter Generator im Vergleich zum Standardgenerator
+
+Das stationäre Betriebsverhalten des ausgelegten Generators wird nach der Ortskurve in der Abbildung 7.13 vollständig beschrieben. Dabei ist darauf zu achten, daß eine Umschaltung des Betriebes von der kleinen (p=3) auf die große Drehzahlstufe (p=2) je nach Windangebot bei etwa Pel=1,5kW vorgenommen wird. Gegenüber herkömmlich ausgelegten polumschaltbaren Asynchrongeneratoren dieser Leistungsklasse konnten Wirkungsgrad und Leistungsfaktor erheblich verbessert werden, was der Netzverträglichkeit und letztlich den Stromgestehungskosten entgegen kommt.
+
+100
+
+Simulationsergebnisse im Vergleich mit Messungen und Auslegung
+
+Abbildung 7.13: Optimierter Generator im Vergleich zum Standardgenerator
+
+Im Hinblick auf eine kostengünstige Ausführung der Windenergieanlage wurden Möglichkeiten und Grenzen unterschiedlich ausgelegter Asynchronmaschinen als Gleich- und Gegenstrombremse untersucht. Bei der Gegenstrombremsung wurden in der Nähe der Synchrondrehzahl Bremsmomente erzielt, die eine Rotorbremsung in allen Drehmomentbereichen (bis 80Nm) erlauben. Dagegen kann die Gleichstrombremsung aufgrund der erreichten kleinen Bremsmomente nur bei niedrigeren Windgeschwindigkeiten (6m/s) für Montage- oder Wartungsarbeiten eingesetzt werden. Ein Vergleich der beiden Läuferausführungen – AL- und ALSiLäufer – hat gezeigt, daß die erzielten Bremsmomente bei der Asynchronmaschine mit dem ALSi-Läufer um etwa 18% höher liegen als mit dem AL-Läufer. Eine Ausführung mit AL-Si Läufer würde aber zu hohe Verluste verursachen und somit zu Wirkungsgradeinbußen führen.
+
+7.3.2 Einphasen-Asynchrongenerator
+Das Verhalten des speziell ausgelegten polumschaltbaren Asynchrongenerators, bei niedrigen Leistungen bereits einen hohen Wirkungsgrad und niedrigen Blindleistungsbedarf zu erzielen und dabei einen etwas geringeren Wert auf hohe Wirkungsgrad bei Nennleistung zu erhalten, soll auch beim EinphasenAsynchrongenerator erreicht werden. Die nachfolgenden Abbildungen veranschaulichen die Verläufe von Wirkungsgrad und Leistungsfaktor in Abhängigkeit der Kondensatorstufe, welche für die "Symmetrierung des jeweiligen Betriebspunktes" auszulegen ist.
+
+101
+
+Simulationsergebnisse im Vergleich mit Messungen und Auslegung
+
+100
+
+90
+
+80
+
+70
+
+Wirkungsgrad
+
+60 C=33µF C=49µF C=66µF C=88µF
+
+50
+
+40
+
+30
+
+20
+
+10
+
+0 0 1000 2000 3000 4000 5000 6000 elektrische Leistung[W]
+
+Abbildung 7.14: Wirkungsgrade in Abhängigkeit von der Leistung
+
+Die Auslegung der Betriebskapazität richtet sich nach den Drehmomentschwankungen. Die Untersuchungen haben für jede Kondensatorstufe Pendelmomente unterschiedlicher Amplituden ergeben. Die Auswertung hat für die Symmetrierung des Generators folgende Stufen ergeben:
+
+P [kW]
+0 0,5 1 1,5 2 2,5 3 3,5 4 4,5 5 5,5 6
+
+C [µF]
+33 49 66 88
+
+Abbildung 7.15: Ruhige Laufbereiche bei verschiedenen Kondensatorstufen und Leistungsbereichen
+
+Als Beispiel ergeben sich für den Betriebspunkt P=1,5kW für unterschiedliche Kondensatorgrößen Drehmomentschwankungen nach der Abbildung 7.16. Es ist deutlich, daß für diesen Betriebspunkt die Drehmomentschwankungen mit C=33µF am geringsten sind. Sie liegen unter 10% um den Mittelwert.
+
+102
+
+Simulationsergebnisse im Vergleich mit Messungen und Auslegung
+
+80
+
+60
+
+40
+
+20 dM/Mavg[%] C=33µF und P=1,44kW C=49 µF und P=1,55 kW C=66µF und P=1,46kW C=88µF und P=1,56kW
+
+0 0 100 200 300 400 500
+
+-20
+
+-40
+
+-60
+
+-80 Zeit[ms]
+
+Abbildung 7.16: Drehmomentschwankungen im Betrieb der großen Stufe bei P=1,5kW
+
+Zur Erzielung eines symmetrischen Betriebs des Einphasenasynchrongenerators muß die Drehrichtung beachtet werden. Soll eine im Nennpunkt motorisch symmetrierte Einphasenasynchronmaschine als Generator eingesetzt werden, muß unbedingt die richtige Drehrichtung gewählt werden. Bei falscher Festlegung der Drehrichtung erreicht der Strom durch den Hauptstrang unzulässig hohe Werte und führt zu Überhitzung des Generators.
+
+103
+
+Triebstrangverhalten
+
+8 Triebstrangverhalten
+Die Umwandlung der mechanischen Drehbewegung des Rotors in elektrische Energie geschieht im Triebstrang. Das Verhalten wird zum grössten Teil vom Windrotor als Antriebsaggregat bestimmt. Vor dem eigentlichen Feldtest werden Untersuchungen hinsichtlich des Verhaltens des gesamten Triebstranges für einen Dreiphasen-Prototyp in stationären Betriebsbereichen durchgeführt. Dabei werden insbesondere die Getriebeverluste im gesamten Leistungsbereich für beide Drehzahlstufen bestimmt sowie das Temperaturverhalten des Generators untersucht. Hinsichtlich evtl. auftretender mechanischer Geräusche, die bei kleinen Anlagen die aerodynamischen Laufgeräusche übertönen können und im Vorfeld reduziert werden sollen, werden zusätzlich Lärmmessungen durchgeführt und analysiert.
+
+8.1
+
+Bestimmung der Getriebeverluste
+
+Der mechanische Triebstrang der kleinen Windkraftanlage besteht aus einer funktionalen Einheit von
+-
+
+Windrotor als Antriebssystem, Getriebe und Generator.
+
+Getriebe und Generator sind in einem geschlossenen Gehäuse untergebracht. Abbildung 8.1 zeigt die prinzipielle Versuchsanordnung der kleinen Windkraftanlage.
+
+Abbildung 8.1: Aufbau mechanischer Triebstrang
+
+104
+
+Triebstrangverhalten
+
+Der Laboraufbau besteht aus einer geregelten fremderregten Gleichstrommaschine (links) zur Simulation des Windrades und der zu untersuchenden Gondel (rechts), die den Generator trägt. Um den realen Betrieb bzw. das Antriebsmoment an der kleinen Windkraftanlage näherungsweise nachfahren zu können, müssen für den Generator die Dynamik des Windes und das Massenträgheitsmoment des Windrades nachgebildet werden. Dies erreicht man durch eine entsprechend geregelte 200 kW Gleichstrommaschine. In der Abbildung 8.2 ist der Versuchsaufbau schematisch dargestellt. Die Klemmen des Generators wurden über einen Leistungsschutzschalter und einen Stelltransformator mit dem Netz verbunden.
+
+M/n
+M, n
+
+ASG Gondel
+3~
+
+3~ Power Analyzer System Norma D 6000
+
+NETZ
+
+M-/n- Aufnehmer
+
+Analogverstärker
+
+Stelltransformator
+
+Abbildung 8.2: Laboraufbau zur meßtechnischen Untersuchung
+
+Bei eingestellter Statorspannung (–Nennspannung–) wurde die abgegebene elektrische Wirkleistung des polumschaltbaren Asynchrongenerators über das Drehmoment der Gleichstrommaschine geregelt [1]. Wie bei den Voruntersuchungen wird auch bei den Triebstrangmessungen das Power Analyzer System Norma D 6000 Messgerät eingesetzt, das in der Abbildung 8.3 dargestellt ist.
+
+Abbildung 8.3: Power Analyser System Norma D 6000 (rechts)
+
+105
+
+Triebstrangverhalten
+
+Es wurden die Betriebsdaten Schein-, Wirk- und Blindleistung Leiterströme in allen Phasen mechanisch aufgenommene Leistung Leistungsfaktor Schlupf Wirkungsgrad Drehzahl sowohl für den 4-poligen als auch für den 6-poligen Betrieb des Asynchrongenerators im gesamten Leistungsspektrum gemessen bzw. ermittelt. Ein kleiner Auszug aus dem gesamten Meßprogramm soll im Folgenden kurze Teilaspekte der Untersuchungen darstellen. Die folgenden Ausführungen sollen sich daher nur auf Wirkungsgraddarstellungen beschränken. Um die nachfolgenden Untersuchungen zu ermöglichen und den Generator thermisch nicht zu überlasten, wird ein Ventilator (Abbildung 8.4) zur Kühlung eingesetzt. Damit konnten alle wichtigen Betriebsbereiche durchfahren werden. Definierte Kühlverhältnisse, wie sie im Turbinenbetrieb zu erwarten sind, können damit allerdings nicht simuliert werden. Diese können nur im Rahmen der Feldtests überprüft werden.
+
+Abbildung 8.4: Ventilator zur Kühlung des Generators
+
+Zur Bestimmung der Getriebeverluste bieten sich Berechnungsverfahren an, die einen enormen Aufwand und umfangreiche Prüfstandversuche benötigen. Eine vom Prinzip her einfache Methode ist die Verlusttrennung in der Übertragungs- bzw. Wirkungsgradkette des mechanischen Aufbaus des Triebstranges, schematisch dargestellt in der Abbildung 8.5.
+
+106
+
+Triebstrangverhalten
+
+Abbildung 8.5: Übertragungskette aus Getriebe und Asynchrongenerator des Triebstranges
+
+Vereinfacht und mit sehr gute Näherung besteht der Gesamtwirkungsgrad aus
+η Gesamt = η Getriebe ⋅ η Generator
+Gleichung 8-1
+
+Als erstes wurden in den Voruntersuchungen die Wirkungsgrade des Generators im Standardgehäuse über den gesamten Leistungsbereich für beide Drehzahlstufen bestimmt, und als nächstes im Rahmen der Triebstranguntersuchungen dann der gesamte Wirkungsgrad der Übertragungskette ermittelt.
+100
+
+90
+
+80
+
+70
+
+Wirkungsgrad [%]
+
+60 Standardgehäuse Prototyp II
+
+50
+
+40
+
+30
+
+20
+
+10
+
+0 0 1000 2000 3000 elektrische Leistung [W] 4000 5000 6000
+
+Abbildung 8.6: Wirkungsgradverlauf des Asynchrongenerators mit und ohne Getriebe in der oberen Drehzahlstufe
+
+107
+
+Triebstrangverhalten
+
+100,00
+
+90,00
+
+80,00
+
+70,00
+
+Wirkungsgrad [%]
+
+60,00 Standardgehäuse Prototyp II
+
+50,00
+
+40,00
+
+30,00
+
+20,00
+
+10,00
+
+0,00 0,00
+
+200,00
+
+400,00
+
+600,00
+
+800,00
+
+1000,00
+
+1200,00
+
+1400,00
+
+1600,00
+
+elektrische Leistung [W]
+
+Abbildung 8.7: Wirkungsgradverlauf des Asynchrongenerators mit und ohne Getriebe in der unteren Drehzahlstufe
+
+Es ist deutlich zu erkennen, daß die Getriebeverluste im unteren Drehzahlbereich bzw. im Teillastbetrieb mehr in Erscheinung treten als in der oberen Drehzahlstufe bzw. in der Nähe des Nennbetriebes. Sie liegen bei etwa 4% bei Vollast und über 30% im unteren Teillastbetrieb. In den Abbildungen 8.8 und 8.9 sind die Getriebeverluste in Abhängigkeit von der elektrisch abgegebenen Leistung dargestellt.
+35,00
+
+30,00
+
+25,00
+
+Verluste [%]
+
+20,00
+
+15,00
+
+10,00
+
+5,00
+
+0,00 0 1000 2000 3000 elektrische Leistung [W] 4000 5000 6000
+
+Abbildung 8.8: Getriebeverluste in Abhängigkeit von der elektrisch abgegebenen Leistung in der 4poligen Drehzahlstufe
+
+108
+
+Triebstrangverhalten
+
+45
+
+40
+
+35
+
+30
+
+Verluste [%]
+
+25
+
+20
+
+15
+
+10
+
+5
+
+0 0 200 400 600 800 elektrische Leistung [W] 1000 1200 1400 1600
+
+Abbildung 8.9: Getriebeverluste in Abhängigkeit von der elektrisch abgegebenen Leistung in der 6poligen Drehzahlstufe
+
+8.2
+
+Geräusch- und Schwingungsuntersuchungen
+
+Um einen erfolgreichen Einsatz der Windenergieanlage im Betrieb gewährleisten zu können, müssen auch hinsichtlich der Geräuschentwicklung Untersuchungen durchgeführt werden. Neben Drehmoment- werden auch Strom- und Spannungsverläufe aufgenommen und mit Hilfe der Fourieranalyse ausgewertet, um festzustellen, ob die elektromagnetischen Schwingungen einen Beitrag zur Geräuschbildung des Triebstranges leisten. Geräusche dieses Ursprungs besitzen eine höhere Frequenz, die bei etwa 500 bis 1500 Hz liegt [2], dagegen hängen die Getriebegeräusche meistens von den Zahneingriffsfrequenzen ab. Sie liegen für diesen Prototyp in der kleinen Drehzahlstufe bei etwa 320 Hz und in der 4-poligen Stufe bei ca. 480 Hz. Die nachfolgenden Diagramme stellen beispielhaft die Oberwellenanalyse der gemessenen Ströme, Spannungen und Drehmomente für beide Drehzahlstufen dar.
+
+109
+
+Triebstrangverhalten
+
+Abbildung 8.10: Oberwellenanalyse des Spannungsverlaufs im Betrieb der großen Drehzahlstufe bei 1,67 kW
+
+Abbildung 8.11: Oberwellenanalyse des Stromverlaufes im Betrieb der großen Drehzahlstufe bei 1,67 kW
+
+110
+
+Triebstrangverhalten
+
+Abbildung 8.12: Oberwellenanalyse des Drehmomentes im Betrieb der großen Drehzahlstufe bei 1,67 kW
+
+Abbildung 8.13: Oberwellenanalyse des Spannungsverlaufs im Betrieb der kleinen Drehzahlstufe bei 1,1 kW
+
+111
+
+Triebstrangverhalten
+
+Abbildung 8.14: Oberwellenanalyse des Stromverlaufes im Betrieb der kleinen Drehzahlstufe bei 1,1 kW
+
+Abbildung 8.15: Oberwellenanalyse des Drehmomentes im Betrieb der kleinen Drehzahlstufe bei 1,1 kW
+
+Nach den Abbildungen 8.10 bis 8.15 treten sowohl bei der 4-poligen als auch bei der 6-poligen Drehzahlstufe im Betrieb für Strom und Spannung nur die 3.,5. und 7. Oberwelle auf, die weit unterhalb der Geräuschgrenze elektromagnetischen Ursprungs liegen. Beim Drehmoment tritt nur der Gleichanteil auf. Um nach weiteren Geräuschquellen zu suchen, die evtl. vom Getriebe herkommen könnten, können Lärmmessungen durchgeführt. Es werden zwei unterschiedliche Messverfahren eingesetzt, um die Ergebnisse vergleichen und kontrollieren zu können. Mit dem ersten Messverfahren wird über einen Beschleunigungsaufnehmer die Rüttelbewegung des Maschinenhauses aufgenommen. Für das zweite Messverfahren wird zur Durchführung der Geräuschmessung ein Lärmmeßsystem – Mikrofon – eingesetzt. In den nachfolgenden Abbildungen sind die Ergebnisse der beiden Messmethoden dargestellt.
+
+112
+
+Triebstrangverhalten
+
+Abbildung 8.16: Frequenzanalyse mit dem Beschleunigungsaufnehmer im Betrieb der kleinen Drehzahlstufe bei 1,1kW
+
+Abbildung 8.17: Frequenzanalyse mit dem Beschleunigungsaufnehmer im 4poligen Drehzahlstufe bei 1,7kW
+
+Betrieb der
+
+Nach den Abbildungen 8.16 und 8.17 treten die stark ausgeprägten Geräuschpegel sowohl in der kleinen als auch in der großen Drehzahlstufe bei etwa 316 Hz und deren Vielfachen auf.
+
+113
+
+Triebstrangverhalten
+
+Um die Ergebnisse zu bestätigen, werden weitere Messungen mit einem Lärmmeßsystem durchgeführt. Die erste Messung (Abbildung 8.18), zur Feststellung der Umgebungsgeräusche, wurde ohne den Generator in Betrieb zu nehmen durchgeführt und dient als Referenzmessung.
+
+Abbildung 8.18: Geräuschmessung –Referenzmessung– mit dem Lärmmeßsystem (Mikrofon)
+
+Abbildung 8.19:
+
+Geräuschmessung mit dem Lärmmeßsystem (Mikrofon) im Betrieb der kleinen Drehzahlstufe bei 0,75kW
+
+Abbildung 8.20:Geräuschmessung mit dem Lärmmeßsystem (Mikrofon) im Betrieb der großen Drehzahlstufe bei 1kW
+
+Erwartunggemäß treten auch hier dieselben stark ausgeprägten Geräuschpegel bei den gleichen Frequenzen auf wie bei den Messungen mit dem Beschleunigungsaufnehmer.
+
+114
+
+Triebstrangverhalten
+
+Somit konnten Getriebegeräusche, die z.B. infolge von Zahnradschäden oder Ähnlichem entstehen könnten, ausgeschlossen werden. Es hat sich aus den umfangreichen Messungen herausgestellt, daß die Schwingungsneigung und daraus resultierende Lärmentwicklung von der Antriebsmaschine herrühren. Beim Turbinenbetrieb sind somit keine Geräusche und mögliche Lebensdauerminderungen zu erwarten.
+
+8.3
+
+Kühlung der kleinen Windenergieanlage
+
+Um einen stationären Betriebszustand zu erreichen, muß die Wärmeabfuhr gleich groß sein wie die Wärmezufuhr. Die Zeitspanne bis zum Erreichen des stationären Betriebspunkts wird durch die thermische Zeitkonstante τth bestimmt. Sie wird durch mehrere Parameter beschrieben [3]. τth = f(c, γ/g, ρ, ϑ, i) mit c[Ws/Kg°C] : spezifische Wärme γ/g[Kg/cm³] : Dichte i[A/mm²] : Stromdichte ρ[Ωcm] : spez. el. Widerstand ϑ[°C] : Erwärmung Die, für die Kühlung notwendige Kühlluftmenge V (Volumenstrom) läßt sich näherungsweise wie folgt berechnen
+V =
+•
+
+PV c ⋅ ρ ⋅ϑ
+
+Gleichung 8-2
+
+mit PV [W] abzuführende Verlustleistung. So ist die Verlustleistung des Asynchrongenerators in der Windenergieanlage die dominierende Größe hinsichtlich Erwärmung bzw. die zu abführende Wärme, und ist gemäß der Definition aus dem Wirkungsgrad des Generators zu bestimmen. Die nachfolgende Abbildung veranschaulicht die Abhängigkeit der Verlustleistung von der elektrisch abgegebenen Leistung für einen 5,5 kW polumschaltbaren Asynchrongenerator. Nun soll im Folgenden untersucht werden, ob eine Selbstkühlung als Kühlungsart ausreicht oder nicht. Bei dieser Kühlungsart wird die Anlage ohne Verwendung von Zusatzventilatoren durch Luftströmung und Strahlung gekühlt.
+
+115
+
+Triebstrangverhalten
+
+1200
+
+4-polige Drehzahlstufe 1000
+
+6-polige Drehzahlstufe
+
+800 Verlustleistung [W]
+
+600
+
+400
+
+200
+
+0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 Windgeschwindigeit [m/s]
+
+Abbildung 8.21: Verlustleistung im Generator als Wärme in Abhängigkeit von der Windgeschwindigkeit
+
+Mit Gleichung 8-2 und der Verlustleistung nach Abbildung 8.21 wird die erforderliche Kühlluftmenge in Abhängigkeit von der Verlustleistung berechnet und in Abbildung 8.22 graphisch dargestellt. Die spezifische Wärme der Luft beträgt c = 1,1 kW/°Cm³; für die Erwärmung der Luft kann 20°C als Erfahrungswert angenommen werden. Für Luftdruck kann vereinfachend 1Kg/m³ eingesetzt werden.
+Kühlluftmenge [m³/min] 100
+
+10 vorhandene Kühlluftmenge
+erforderliche Kühlluftmenge
+
+1
+
+0,1
+
+0
+
+1000
+
+2000
+
+3000
+Betriebspunkt [W]
+
+4000
+
+5000
+
+6000
+
+Abbildung 8.22: Luftmengen zur Kühlung der kleinen Windenergieanlage
+
+116
+
+Triebstrangverhalten
+
+Beim Generator bzw. Gondel der kleinen Windenergieanlage handelt es sich um einen außenbelüfteten Generator mit Kühlrippen. Die Wärmeabgabe findet vom inneren der Maschine zu der Oberfläche der Gondel über das Ständerblechpaket und innere Luft. Nach Abbildung 8.22 reicht die natürliche Kühlung aus. Eine Zwangsbelüftung ist nicht erforderlich.
+
+117
+
+Zusammenfassung und Ausblick
+
+9.
+
+Zusammenfassung und Ausblick
+
+Im Rahmen der Entwicklung einer kostengünstigen und systemfähigen Windenergieanlage, mit der die Nutzung erneuerbarer Energien durch Einbindung in die modulare Systemtechnik erweitert wird, soll nahezu der weltweite Einsatz der Anlage gewährleistet werden. Dabei stellt das Generatorsystem die Schlüsselkomponente dar. Wobei hier der Asynchrongenerator wegen seiner zahlreichen Vorzüge gegenüber der Synchronmaschine zum Konzept der mechanische-elektrischen Energiewandlung in kleinen Windkraftanlagen vorzuziehen ist. Er hat einen einfachen Aufbau und ist sehr robust und wartungsarm. Zunächst werden nach dem Kennlinienverfahren motorisch ausgelegte Standardmaschinen –Asynchronmaschinen als Ständerausführungen– in zwei Schritten untersucht, dimensioniert und insbesondere auf hohen Wirkungsgrad optimiert und ausgelegt. Abschließend werden gleichartige Stator- und Rotorsysteme von Asynchrongeneratoren im Gehäuse der kleinen Windkraftanlage aufgebaut und gemeinsam mit dem Getriebe als gesamter Triebstrang untersucht. Der Generator wird polumschaltbar ausgeführt und wird im Betrieb entsprechend der aktuell eingespeisten Leistung zwischen den zwei Drehzahlen geschaltet. Die Nennleistung der kleinen Stufe (6-polig) beträgt 1,5kW, die der großen Stufe (4-polig) 5,5kW. Um den Anlagenbetrieb für nahezu alle Netze weltweit zu gewährleisten, wird anschließend eine polumschaltbare Einphasenmaschine für 240V / 60Hz ausgelegt. Der Generator kann mit Betriebskondensatorstufen im gesamten Leistungsbereich von Leerlauf bis Nennleistung ohne Laufgeräusche und Rüttelkräfte betrieben werden. Dabei erreichte der Einphasenasynchrongenerator nach dem gleichem Optimierungsverfahren wie beim Dreiphasigen Asynchrongenerator sowohl für die 4polige als auch für die 6-polige Drehzahlstufe hohe Teillastwirkungsgrade. Sie liegen in der großen Drehzahlstufe bei etwa 89% und in der kleinenDrehzahlstufe bei ca. 80%. Im Hinblick auf die Auslegung der mechanischen und elektrischen Komponenten wie z.B. des Getriebes und des Schleifringkörpers sind dynamische Zustandsänderungen wie verschiedene Kurzschlussvarianten und die Zuschaltung auf das Netz maßgebend. Die hervorgerufenen transienten Drehmomente sowohl bei den Kurzschluss- als auch bei den Aufschaltversuchen stellen keine kritischen mechanischen Beanspruchungen für das Getriebe dar. Dagegen muss der Schleifringkörper für die hohen Stromspitzen, die während des Kurzschlusses und Aufschalten auftreten, dimensioniert werden. Die maximal gemessenen Werte liegen bei etwa 7-fachen des Nennstromes. Durch zusätzliche Elemente zur Strombegrenzung (NTC’s, Triac und ohmsche Widerstände) können Aufschaltströme bis auf 2-fachen Nennstromes reduziert werden. Weitere Lösungen zur Einspeisung in den Einphasennetzen bestehen darin durch zusätzliche Maßnahmen das Dreiphasenkonzept anzupassen. Als Konzepte stehen im Wesentlichen der Drehstromasynchrongenerator in Steinmetzschaltung oder die
+
+118
+
+Zusammenfassung und Ausblick
+
+indirekte Netzkopplung des Generators über einen speziell ausgelegten Transformator, der eine Phasenzahländerung ermöglicht, zur Verfügung:
+
+119
+
+Verwendete Formelzeichen
+
+Verwendete Formelzeichen
+C
+
+C : Kondensatorkapazität c : spezifische Wärme
+D
+
+D : Dämpfungskons tan te
+F
+
+f1 : Netzfrequenz f 2 : Läuferfrequenz
+I
+
+I 1 : Statorstrom I 0 : Leerlaufstrom I k : Kurzschlußstrom I ∞ : Strom bei s = ∞ I µ : Magnetisierungsstrom
+
+i '' (t ) : Subtransienter Ständerstrom i ' (t ) : Transienter Ständerstrom
+I 2 : Läuferstrom i1s : komplexer Strom im Ständer I HA : Strom durch die Hauptwicklung I HI : Strom durch die Hilfswicklung I 2 m : Läuferstrom im Mitsystem I 2 g : Läuferstrom im Gegensystem ˆ i2 m : Läuferstromamplitude im Mitsystem ˆ i2 g : Läuferstromamplitude im Gegensystem I m d : Strom in der Hauptwicklung im Mitsystem I g d : Strom in der Hauptwicklung im Gegensystem I m q : Strom in der Hilfswicklung im Mitsystem I g q : Strom in der Hilfswicklung im Gegensystem I m q ' : umgerechnete Strom in der Hilfswicklung im Mitsystem I g q ' : umgerechnete Strom in der Hilfswicklung im Gegensystem ′ I q : umgerechnete Strom in der Hilfswicklung = k : Übersetzungsfaktor Iq I d 1 : Ständerstrom in der d − Achse I q1 : Ständerstrom in der q − Achse I d 2 : Läuferstrom in der d − Achse
+' '
+
+′ Iq
+
+I q 2 : Läuferstrom in der q − Achse
+'
+
+120
+
+Verwendete Formelzeichen
+
+I u : Strangstrom in der u − Wicklung I v : Strangstrom in der v − Wicklung I w : Strangstrom in der w − Wicklung I c : Strom durch den Kondensator I w : Wirkstrom I B : Blindstrom
+J
+
+J1 : Trägheitsmoment der Masse 1 J 2 : Trägheitsmoment der Masse 2
+L
+
+L1 : Statorinduktivität L12 : Koppelinduktivität
+
+L's : Übergang sin duktivität der Statorwicklung Lsσ : Streuinduktivität der Statorwicklung LLσ : Streuinduktivität der Rotorwicklung L'L : Übergang sin duktivität der Rotorwicklung L1 : Statorinduktivität L2 : Rotorinduktivität Lh : Hauptinduktivität
+M
+
+M (t ) : Drehmoment M : Drehmomentmittelwert M el : elektrische Drehmoment
+
+M Br : Bremsmoment
+N
+
+n : mechanische Drehzahl in
+
+n1 : Drehfeld Drehzahl in
+
+P
+p2 : Grundpolpaarzahl der Ständerwicklung pm : Modulierungspolpaarzahl PVL : lastabhängige Verluste Pvo : Leerlaufverluste PV : Verlustleistung
+
+R
+R1 : Statorwiders tan d ' R2 : Läuferwiders tan d R1 Widerst . im kalten Zus tan d .
+R2 Widerst . im warmen Zus tan d .
+R + : Realteil der Mitkomponente der Parallelschaltung der Hauptreaktanz und des Läuferkreises im Einphasenasynchrongenerator R − : Realteil der Gegenkomponente der Parallelschaltung der Hauptreaktanz und des Läuferkreises im Einphasenasynchrongenerator
+
+R1d : Wirkwiderstand des Hauptstranges R1q : Wirkwiderstand des Hilfsstranges
+
+121
+S
+
+Verwendete Formelzeichen
+
+s : Schlupf
+T
+
+T2 Ta
+
+Temperatur der warmen Wicklung Kühllufttemperatur am Ende der Messung
+
+T1 Temperatur der kalten Wicklung
+
+[TZW ] : Zweiachsen − Transformationsmatrix
+U
+U 1 : Statorspannung U h : die erste harmonische der induzierten Spannung in der Wicklung r u1s : komplexe Spannung im Ständer r u 2L : komplexe Spannung im Läufer u1a : Spannung des Stranges a im Ständer Ud : Spannung am Hauptstrang Uq : Spannung am Hilfsstrang m U d : Spannung am Hauptstrang im Mitsystem
+m U q : Spannung am Hilfsstrang im Mitsystem
+
+U dg : Spannung am Hauptstrang im Gegensystem U qg : Spannung am Hilfsstrang im Gegensystem
+
+U d 1 : Ständerspannung in der d − Achse U q1 : Ständerspannung in der q − Achse U d 2 : Läuferspannung in der d − Achse
+'
+
+U q 2 : Läuferspannung in der q − Achse
+'
+
+U 0 : Leerlaufspannung ü : Übersetzung
+V
+•
+
+V : Kühlluftmenge
+W
+
+wHA : Windungszahl im Hauptstrang wHI : Windungszahl im Hilfsstrang
+X
+
+X 1σ : Statorstreureak tan z X h : Hauptreak tan z
+' X 2 : Läuferstreureak tan z ' X 2σ : Streureak tan z im Läufer
+
+X 1d : Reaktanz des Hauptstranges X 1q : Reaktanz des Hilfsstranges
+Z
+
+Z 1d : Impedanz des Hauptstranges Z 1q : Impedanz des Hilfsstranges
+
+122
+m g
+
+Verwendete Formelzeichen
+
+Z d : Gesamtimpedanz des Hauptstranges im Mitsystem Z d : Gesamtimpedanz des Hauptstranges im Gegensystem ∆ ∆M : ⋅Drehmomentschwankung ∆TM (t ) = ∆TM 0 + (∆TM∞ − ∆TM 0 ) ⋅ (1 − e − t / τ th )
+
+σ : Gesamtstreuung ϑ : Drehwinkel ϑ : Erwärmungstemperatur ξ : Wicklungsfaktor ξ HA , ξ d : Wicklungsfaktor des Hauptstranges ξ HI , ξ q : Wicklungsfaktor des Hilfsstranges
+
+σ
+
+ϑ
+
+ξ
+
+τ τ s : Zeitkons tan te im transienten Bereich τ L : Zeitkons tan te im transienten Bereich ω
+
+ω1 : Kreisfrequenz ω0 : Eigenfrequenz ω m die Amplituden − Modulationsfrequenz ωT die doppelte Netzfrequenz
+φh : Hauptfluß durch die Wicklung
+ϕ1 : Drehwinkel ϕ 2 : Drehwinkel ϕ HI : Phasenverschiebung im Hilfsstrang ϕ HA : Phasenverschiebung im Hauptstrang
+r Ψ1s : komplexer Flusverkettung im Ständer r Ψ1s : komplexer Flusverkettung im Ständer ψ d 1 : Statorflussverkettung in der d − Achse
+
+φ
+ϕ
+
+ψ
+
+ψ q1 : Statorflussverkettung in der q − Achse ψ d 2 ' : Läuferflussverkettung in der d − Achse ψ q 2 ' : Läuferflussverkettung in der q − Achse
+η : Wirkungsgrad η
+
+123
+
+Verwendete Formelzeichen
+
+η Gesamt : Triebstrangwirkungsgrad η Getriebe : Getriebewirkungsgrad η Generator : Generatorwirkungsgrad
+
+ν e : Eigenfrequenz
+ρ : Dichte
+
+ν
+ρ
+
+124
+
+Literaturverzeichnis
+
+Literaturverzeichnis
+Literatur zu Kapitel 1
+[1] Staiß, F.: Jahrbuch Erneuerbare Energien 2000, Bieberstein Verlag, 2000
+
+Literatur zu Kapitel 2
+[1] Windkraftanlagenmarkt, Erneuerbaren Energien 2005
+
+Literatur zu Kapitel 3
+[1] Hahn, B.; Heier, S.; Landau, M.; Reekers, J.; Siegfriedsen, S.; Tamzarti, A. ; Trinkaus, M.: kleine Windkraftanlagen für modulare Hybridsysteme, Tagungsband Neuntes Kasseler Symposium Energie-Systemtechnik, Kassel 2004
+
+Literatur zu Kapitel 4
+[1] Brill, A.: Untersuchung zur Zertifizierung kleiner Windkraftanlagen am Beispiel ,,aeroSmart5", Studienarbiet an der Universität Kassel, 2004
+
+Literatur zu Kapitel 5
+[1] [2] [3] [4] Fischer, R.: Elektrische Maschinen, Carl Hanser München, 1995 Heier, S.: Windkraftanlagen, Teubner Stuttgart, 2005 Nürnberg, W.: Die Asynchronmaschine, Springer Berlin, 1952 Vogt, K.: Elektrische Maschinen, VEB Berlin, 1983
+
+Literatur zu Kapitel 6
+[1] [2] [3] [4] [5] [6] [7] [8] [9] [10] Bödefeld, Th.; Sequenz,H.:Elektrische Maschinen, Springer Wien, 1962 Fischer, R.: Elektrische Maschinen, Carl Hanser München, 1995 Heier, S.: Windkraftanlagen, Teubner Stuttgart, 2005 Irretier, H.: Schwingungstechnik, Uni Kassel Institut für Mechanik, 2005 Jordan, H; Klima, V.; Kovacs, K.P.: Asynchronmaschinen, Vieweg Braunschweig, 1975 Lubosny, Z.: Wind Turbine Operation in electric power systems, Springer Berlin, 2003 Müller, G.: Theorie elektrischer Maschinen, VCH Weinheim, 1995 Rüdenberg, R.: Elektrische Schaltvorgänge, Springer Berlin, 1974 Schuisky, W.: Induktionsmaschinen, Springer Wien, 1957 Stepina, J.: Die Einphasenasynchronmotoren, Springer Verlag, Wien 1982
+
+125
+
+Literaturverzeichnis
+
+[11] [12]
+
+Vogt, K.: Elektrische Maschinen, VEB Berlin, 1983 Wiedemann, E.; Kellenberger, W.: Konstruktion elektrischer Maschinen, Springer Berlin, 2003
+
+Literatur zu Kapitel 7
+[1] Alter, J.: Analyse und Optimierung der Betriebsführung und des Betriebsverhaltens der einphasigen Windkraftenergieanlage, Diplomarbeit bei SMA Technologie AG, 2006 Fischer, R.: Elektrische Maschinen, Carl Hanser München, 1995 Heier, S.: Windkraftanlagen, Teubner Stuttgart, 2005 Lubosny, Z.: Wind Turbine Operation in electric power systems, Springer Berlin, 2003
+
+[2] [3] [4]
+
+Literatur zu Kapitel 8
+[1] [2] [3] Leonhard, W.: Control of Electrical Drives, Springer, Berlin 1996 Schuisky, W.: Induktionsmaschinen, Springer Wien, 1957 Wiedemann, E.; Kellenberger, W.: Konstruktion elektrischer Maschinen, Springer Berlin, 2003
+

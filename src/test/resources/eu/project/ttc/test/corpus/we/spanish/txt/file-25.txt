@@ -1,0 +1,249 @@
+P RÁCT ICA 8. T OR RE E ÓLICA E S TRUCTUR AS EN ALTURA
+L A G AR E NA (A LC A LÁ
+DE
+
+H.)
+
+I NN OVAC IONE S T EC NOLÓGIC AS C URS O 2004/2005 S AR A A LB A L OZANO S ANDR A H E R NÁNDE Z D IE GUE Z
+
+INNOVACIONES TECNOLÓGICAS
+
+Práctica nº 8. Torre Eólica. Estructuras en altura
+
+ÍNDICE DOCUMENTACIÓN
+
+• MEMORIA TORRE EÓLICA.
+- Bases - Metodología - Sistema constructivo - Anexo: Aerogenenerador Darrieux - Bibliografía
+
+• PLANOS. • MEDICIONES Y PRESUPUESTOS.
+
+1
+
+INNOVACIONES TECNOLÓGICAS
+
+Práctica nº 8. Torre Eólica. Estructuras en altura
+
+MEMORIA TORRE
+
+TORRE EÓLICA......................................................................................................................3 1. BASES.................................................................................................................................3 2. METODOLOGÍA ...............................................................................................................3 3. SISTEMA CONSTRUCTIVO...........................................................................................6
+
+ANEXO. AEROGENERADOR DARRIEUX (texto extraído de Parámetros de diseño de aerogeneradores) ...................................................................................................................7 AEROGENERADOR DARRIEUX. .....................................................................................7 POTENCIA Y PAR MOTOR. ...............................................................................................8
+
+BIBLIOGRAFÍA.....................................................................................................................11
+
+2
+
+INNOVACIONES TECNOLÓGICAS
+
+Práctica nº 8. Torre Eólica. Estructuras en altura
+
+TORRE EÓLICA
+A continuación se acomete a la redacción de las bases y sistemas utilizados para la realización del proyecto de una estructura en altura o torre capaz de albergar actividad en su interior. Este trabajo está planteado desde un punto de vista constructivo basado en la utilización de elementos y sistemas constructivos existentes en el mercado que con modificaciones, tanto en forma, disposición o funcionamiento puedan suponer una innovación encaminada a la búsqueda de un abaratamiento de costes, mano de obra, fabricación, maquinaria utilizada en el montaje, y por supuesto un mejor comportamiento mecánico; sin olvidar su carácter estético ya que se convertirán en puntos de referencia del horizonte.
+
+1. BASES En un principio el planteamiento de esta estructura como molino eólico para la creación de un parque eólico en el polígono de La Garena de Alcalá de Henares, polígono residencial-industrial, nos supuso un condicionante estético y de convivencia con la población del lugar. Debido a esta primera premisa buscamos la posibilidad de establecer un juego de forma y escala dentro de la misma torre, creando así como esculturas variables que se alzasen al aire conformando un nuevo paisaje.
+
+2. METODOLOGÍA La primera fase del proyecto fue la búsqueda de información sobre las diferentes máquinas eólicas existentes, barajando las ventajas e inconvenientes de cada una, decidiéndonos finalmente por la máquina Darrieux de eje vertical o de catenaria con tres hojas o palas (de fibra de carbono, más ligera que la de vidrio) que requiere para un correcto funcionamiento, vientos de 4 a 5 metros por segundo como mínimo, manteniendo grandes velocidades de giro y un buen rendimiento. Fig III.3. Un motivo de la elección, fueron las ventajas que tienen los aerogeneradores de eje vertical frente a los de horizontal: a) No necesitan sistemas de orientación. b) Los elementos que requieren un cierto mantenimiento pueden ir situados a nivel del suelo. c) No requieren mecanismos de cambio de revoluciones, por cuanto no suelen emplearse en aplicaciones que precisen una velocidad angular constante.
+
+3
+
+INNOVACIONES TECNOLÓGICAS
+
+Práctica nº 8. Torre Eólica. Estructuras en altura
+
+No obstante, el motivo principal de la elección de este tipo de aerogenerador fue que su diseño permitía la variación de su escala, y es que existen desde Darrieux de tamaño doméstico hasta megaestructuras.
+
+4
+
+INNOVACIONES TECNOLÓGICAS
+
+Práctica nº 8. Torre Eólica. Estructuras en altura
+
+Esta variación de escala nos daba la posibilidad de juego de pequeños molinos Darrieux de escala variable apilados y conectados en altura que podían conformar una torre de eje central y anillos variables unidos mediante barras a forma de torre de celosía capaz de transmitir esfuerzos y quedando así la torre habitada por los propios molinos.
+
+5
+
+INNOVACIONES TECNOLÓGICAS
+
+Práctica nº 8. Torre Eólica. Estructuras en altura
+
+Las torres de celosía son fabricadas utilizando perfiles de acero soldados. La ventaja básica de éstas es su coste, puesto que una torre de celosía requiere sólo la mitad de material que una torre tubular sin sustentación adicional con la misma rigidez. Así mismo, las torres de celosía con vientos tienen la ventaja de ofrecer menos abrigo que una torre maciza. La principal desventaja de este tipo de torres no es su comportamiento estructural sino su apariencia visual, razones estéticas que han propiciado su desaparición gradual en los grandes aerogeneradores modernos. Sin embargo, en este ejercicio esta desventaja es solucionada gracias a ese juego de escala y apilamiento mencionado. Otro inconveniente a tener en cuenta es que este tipo de aerogenerador necesita un aporte de energía que ayude a su arranque si los vientos no son muy fuertes. Debido a esto, se han colocado pequeños aerogeneradores Savonius en la base y cabeza de cada uno, solucionando así este inconveniente.
+
+3. SISTEMA CONSTRUCTIVO La estructura consta de un mástil central al que se fijan los elementos de rotación de las aspas. Entre generador y generador se dispone un anillo sujeto al mástil a través de tres tubulares soldados al mástil en un extremo y atornillados al anillo por el otro. Estos anillos tienen un diámetro diferente, en función de las dimensiones de cada uno de los aerogeneradores, a los que se unen los perfiles tubulares que forman el perímetro de la torre. Esta unión se ejecuta mediante una fijación atornillada. Con la incorporación de estos anillos se consigue mayor estabilidad de conjunto, así como salvar la distinta anchura de cada generador utilizando piezas de directriz recta.
+
+6
+
+ANEXO. AEROGENERADOR DARRIEUX (texto extraído de Parámetros de
+diseño de aerogeneradores)
+
+AEROGENERADOR DARRIEUX. Los aerogeneradores de eje vertical fueron recuperados por Darrieux en los años veinte. El rotor Darrieux fue patentado en 1931, y está constituido por hojas perfiladas que giran alrededor de un eje vertical. En la Fig IV.21 se muestra un ejemplo de rotor Darrieux de tres hojas de aluminio extruido; el alternador síncrono gira a 1500 rpm y la relación de velocidades (alternador-rotor Darrieux) es de 16,78. En lo alto del mástil lleva un anemómetro y un sensor de vibraciones, a cuyas señales anómalas el Darrieux se frena. Para evitar sobrecargas y exceso de velocidad en el alternador, se colocan unos contrapesos ensamblados en las hojas del aparato para absorber la energía extra del viento durante los períodos de alta velocidad; el peso total es de 3 Tm y la potencia generada en el alternador es de 25 kW para velocidades del viento del orden de 12 m/seg. Los Laboratorios Sandia (New México), construyeron en 1977 una aeroturbina de 17 m de diámetro y una potencia de 70 kW, Fig IV.22. Ese mismo año, la National Research de Canadá encarga la construcción de una máquina de 24 m de diámetro y 200 kW de potencia, que se instaló en la isla Magdalena, acoplada a una planta Diesel. El prototipo funcionó durante un año antes de que las palas acabaran por romperse. Posteriormente los Laboratorios Sandia desarrollaron otro modelo de 120 kW de potencia y 7
+
+INNOVACIONES TECNOLÓGICAS
+
+Práctica nº 8. Torre Eólica. Estructuras en altura
+
+34 m de diámetro. En USA se han diseñado modelos comerciales de aerogeneradores Darrieux, con potencias de 150 y 250 kW y en California existen parques eólicos con turbinas de este tipo que alcanzan los 30 MW. En Europa, el programa eólico holandés ha dedicado una especial atención a este tipo de turbinas. Dadas las dificultades para encontrar emplazamientos adecuados a las grandes turbinas de eje horizontal, los holandeses intentan desarrollar modelos Darrieux de potencia media con menores requerimientos desde el punto de vista de la utilización del suelo. Después de fabricar máquinas de baja potencia con el fin de adquirir experiencia en este campo y contrastar modelos y métodos de análisis, la Fokker diseñó y construyó un prototipo de 400 kW. POTENCIA Y PAR MOTOR. La fuerza ascensional o de sustentación en un rotor Darrieux, es la producida en el perfil según una dirección perpendicular a la dirección del viento aparente. En la Fig IV.23 se observa que para un rotor Darrieux la fuerza ascensional modifica continuamente su dirección, sentido y magnitud, dependiendo de la posición de las aspas respecto al viento, y es la que vería un observador situado sobre el propio perfil. La fuerza ascensional viene dada por la expresión: Fsust Fy =1/2 Cy S c2
+
+Rendimiento en %
+
+8
+
+INNOVACIONES TECNOLÓGICAS
+
+Práctica nº 8. Torre Eólica. Estructuras en altura
+
+9
+
+INNOVACIONES TECNOLÓGICAS
+
+Práctica nº 8. Torre Eólica. Estructuras en altura
+
+La potencia desarrollada por el aparato es: N =1/2 Cy S c3
+
+En la Fig IV.25, se ha hecho la representación ( aerod-TSR), para un rotor Darrieux; se observa que el rotor tiene que ser acelerado cuando su TSR sea menor de 2. Esta aceleración se puede conseguir mediante un motor de arranque, como por ejemplo el representado en la Fig IV.26, que consiste en dos turbinas Savonius acopladas al eje de la turbina principal, para así poder pasar a un TSR de funcionamiento normal, en que será accionado únicamente por la acción del viento; el prototipo indicado tiene una potencia de 20 kW, (Instituto de Climatología y Meteorología de Hannover, Alemania). En la Fig IV.27 se indica la influencia de la suciedad de las hojas de un rotor Darrieux en la potencia, cuando se ensucian con el paso del tiempo. En la Fig IV.28 se muestra un prototipo giromill en el que se observa las posiciones de frenado y de trabajo normal de las hojas. Aunque hasta el momento todas las aeroturbinas Darrieux construidas no han sobrepasado el rango de las potencias medias, el campo de las grandes potencias no está vedado a los sistemas de eje vertical. A medida que se ha ido adquiriendo experiencia práctica se han emprendido proyectos cada vez más ambiciosos; así, a finales de los sesenta, South y Rangi, en el National Research Council de Canadá, comenzaron los estudios y ensayos sobre unas turbinas de este tipo que, hoy en día, constituyen uno de los modelos eólicos de interés. Así, por ejemplo, el proyecto Eolo canadiense consistía en una turbina de 4 MW que fue instalada en Cap Chat, Quebec, en 1987. El aerogenerador, de 2 palas y 98 m de altura, tiene un diámetro ecuatorial de 64 m y es una de las mayores instalaciones construidas hasta el momento. A finales de 1991 había completado 14.000 horas de operación, si bien con algunos problemas de agrietamiento en las palas. Otra planta de 1,2 MW diseñada por J. Fischer, utiliza varias aeroturbinas Darrieux acopladas en serie, e instaladas por pisos en una torre de gran altura, Fig IV.29.
+
+10
+
+INNOVACIONES TECNOLÓGICAS
+
+Práctica nº 8. Torre Eólica. Estructuras en altura
+
+BIBLIOGRAFÍA
+AA.VV. Catálogo de publicaciones 2004. Energías renovables www.fotovoltaica.com/catcenco.pdf BILBAO, Armando y Zarraoa, Amaia: Diseño estructural de un aerogenerador. IDOM, Ingeniería, Arquitectura y Construcción. www.idom.es Antecedentes de los aerogeneradores europeos: www.personales.ya.com/universal/TermoWeb/ - EnergiasAlternativas/eolica/PDFs/EOLO6Europa.pdf Ingeniería de Sistemas Interactivos I.S.I.: www.isi.es Listado de empresas productoras de generadores de energía eólica: www.isf-aragon.org Máquinas eólicas: cargas, orientación y regulación: www.personales.ya.com/universal/TermoWeb/ - EnergiasAlternativas/eolica/PDFs/EOLO32002.pdf Parámetros de diseño de aerogeneradores: www.personales.ya.com/universal/TermoWeb/ - EnergiasAlternativas/eolica/PDFs/EOLO42002.pdf Turbinas eólicas Darrieux: www.windturbine-analysis.com
+
+11
+
+INNOVACIONES TECNOLÓGICAS
+
+Práctica nº 8. Torre Eólica. Estructuras en altura
+
+PLANOS
+
+PLANOS TORRE EÓLICA BARRAS …………………………………………………13 1. ALZADO ACOTADO ................................................................................................13 2. SECCIÓN Y PLANTA ................................................................................................14 3. DETALLES CONSTRUCTIVOS ...............................................................................15 1. Unión mástil – anillo exterior. 2. Unión anillo- tubos perimetrales. 3. Cimentación
+
+PLANOS TORRE EÓLICA CABLES ………………………………………………….18
+
+12
+
+13
+
+Torre barras Alzado acotado. Escala 1/50.
+
+1
+
+2
+
+3
+
+14
+
+Torre barras. Sección y planta. Escala 1/50.
+
+1. Unión mástil-anillo exterior
+1. mastil tubo redondo Ø 250; e= 10 mm 2. tubo unión soldada Ø 100; e= 4 mm
+
+2
+
+1
+
+15
+
+Detalles constructivos esc.:1:5
+
+7
+
+4
+
+6
+
+4 3
+
+5
+
+2
+
+3
+
+4
+
+2. Unión anillo-tubos perimetrales
+2. tubo unión soldada Ø 100; e= 4 mm 3. placa metálica conexión 4. esparrago conector alta resistencia Ø 5 mm 16
+
+(sección y alzado) 5. anillo perimetral; tubo redondo Ø 150 mm 6. embudo metálico conexión anillo-tubos perimetrales 7. tubo perimetral Ø 100; e= 4mm
+
+Detalles constructivos esc.:1:5
+
+17
+
+3. Cimentación esc.: 1/5
+
+18
+
+TORRE CABLES. Planta y alzado. Escala 1/50.
+
+INNOVACIONES TECNOLÓGICAS
+
+Práctica nº 8. Torre Eólica. Estructuras en altura
+
+MEDICIONES Y PRESUPUESTOS
+
+ESTRUCTURA ................................................................................................................. 20
+
+UNIONES ........................................................................................................................... 21
+
+* Precio total sin incluir aerogeneradores y mano de obra (estimada por horas) = 9.176,02 €
+
+19
+
+MEDICIONES Y PRESUPUESTO. TORRE
+CÓDIGO UNIDAD DESCRIPCIÓN DETALLE DE LAS MEDICIONES COSTO ESTIMADO CANTIDAD LONGITUD ANCHO UNIDADES PRECIO IMPORTE
+
+CAPÍTULO 1. P03AL010 kg
+
+ESTRUCTURAS 2654,2 kg 0,66 €/ kg 1.751,77 € 1.841,32 € 4.550,15 €
+
+Mastil. Plancha de acero laminado E275 (A 42b) e= 15mm. 0,3381 m3 28,7 m 92 m 4062.63 kg 429 m
+
+P03AT020 kg / mAnillos.Perfil tubular acero A 42b Ø= 150 mm. E= 5 mm P03AT020 kg / mBarrasPerfil tubular acero A 42b Ø= 100 mm. E = 4 mm.
+
+1644,04 kg 1,12 €/ kg 4062.63 kg 1,12 €/ kg
+
+Coste total estructura
+
+8.143,24 €
+
+20
+
+CÓDIGO
+
+UNIDAD DESCRIPCIÓN CAPÍTULO 2. CAPÍTULO 2.1 ELEMENTOS CONECTORES
+
+DETALLE DE LAS MEDICIONES COSTO ESTIMADO CANTIDAD LONGITUD ANCHO UNIDADES PRECIO IMPORTE UNIONES
+
+P03AL010 ud P03AL010 ud ud
+
+Placa conexión. Plancha de acero laminado E275 (A 42b) e= 10mm. Placa conexión. Plancha de acero laminado E275 (A 42b) e= 10mm. Embudo metálico conexión anillo-barras perimetrales
+
+150 mm 100 mm
+
+70 mm 70 mm
+
+510 ud 60 ud 75 ud
+
+0,55 € 0,40 € 3,20 €
+
+280,50 € 24,00 € 240,00 €
+
+CAPÍTULO 2.2 SOLDADADURAS P01US020 Ud. Paquete electrodos (192 ud) O010B800 hora Soldador Oficial CAPÍTULO 2.3 TORNILLOS P01UT022 Ud. Esparrago acero alta resistencia Ø= 5 mm. long= 76 mm 390 1,90 €/ ud. 390 0,16 €/ ud. 9,60 €/ hora 370,50 € 62,40 € 6 paq. 6 paq. 9,23 €/ kg 10,48 €/ hora 55,38 €
+
+P01UG090 Ud. Tuerca acero O010B510 hora Montador Oficial
+
+Coste total uniones (*incluir mano de obra)
+
+1.032,78 €
+
+COSTE TOTAL TORRE * * incluir mano de obra (coste estimado por hora), maquinaria auxiliar, y aerogeneradores
+
+9.176,02 €
+
+21
+

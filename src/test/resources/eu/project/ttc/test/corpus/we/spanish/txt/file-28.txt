@@ -1,0 +1,834 @@
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 1 de 37
+
+AEROGENERADORES DE POTENCIA INFERIOR A 100 kW
+
+María José Cuesta Santianes Marta Pérez Martínez Juan Antonio Cabrera Jiménez
+
+Julio 2008
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 2 de 37
+
+ÍNDICE 1. INTRODUCCIÓN……………………………………………………………………………………….. ……… 2. HISTORIA DE LA ENERGÍA EÓLICA………………………………………………………………………... 3. CARACTERIZACIÓN ENERGÉTICA DEL VIENTO: POTENCIAL EÓLICO…………………………….. 4. AERODINÁMICA DE LOS AEROGENERADORES ………………………………………………………… 4.1. Tipos de aerogeneradores…………………………………………………………………………….. 4.2. Componentes principales de un aerogenerador…………………………………………………. 4.2.1. Rotor……………………………………………………………………………………………………. 4.2.2. Góndola………………………………………………………………………………………………… 4.2.3. Generador……………………………………………………………………………………………… 3 4 6 8 8 10 11 12 12
+
+4.2.4. Multiplicador…………………………………………………………………………………………… 13 4.2.5. Sistema de control……………………………………………………………………………………. 13 4.2.6. Sistema de orientación………………………………………………………………………………. 14 4.2.7. Torre…………………………………………………………………………………………………….. 15 5. OTROS COMPONENTES DE UN SISTEMA DE ENERGÍA EÓLICA……………………………………. 16
+
+5.1. Sistemas de almacenamiento…………………………………………………………………………. 16 5.2. Inversores………………………………………………………………………………………………….. 17 5.3. Rectificadores y Cargadores de Baterías……………………………………………………………. 17 6. APLICACIONES DE LOS AEROGENERADORES DE BAJA POTENCIA………………………………. 17 6.1. Instalaciones aisladas a la red eléctrica ……………………………………………………………. 17 6.2. Instalaciones conectadas a la red eléctrica.………………………………………………………… 19 6.3. Energía eólica en el entorno urbano………………………………………………………………….. 20 7. ESTADO ACTUAL DE LA ENERGÍA EÓLICA DE BAJA POTENCIA……………………………………. 21 8. EXPERIENCIA DE CUBA EN EL USO DE LA ENERGÍA EÓLICA DE BAJA POTENCIA…………….. 34 9. CONCLUSIONES ………………………………………………………………………………………………… 36 10. BIBLIOGRAFÍA…………………………………………………………………………………………………. 36
+
+1. INTRODUCCIÓN
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 3 de 37
+
+Actualmente, la energía eólica se está convirtiendo, cada vez más, en una fuente muy importante dentro de las energías renovables y además, en principio, está disponible en todas partes. La producción de energía eléctrica a través del viento normalmente se asocia con la imagen de numerosos y g randes aerogeneradores que se encuentran formando los denominados parques eólicos. Sin embargo, también se pueden utilizar instalaciones eólicas de pequeño tamaño para dicho fin. Acostumbrados a las grandes turbinas eólicas, es fácil olvidar el papel tan importante que desempeñan los aerogeneradores pequeños. La potencia de estas máquinas oscila desde apenas unos kilovatios hasta el centenar, y resultan tremendamente útiles en casas aisladas, granjas, campings, sistemas de comunicación y otras aplicaciones para el autoconsumo, pero son muy pocos los usuarios con equipos conectados a red. Estas instalaciones consisten en pequeños aerogeneradores, también llamados aerogeneradores de baja potencia y aunque en su mayoría y a nivel doméstico son instalaciones de no más de 10 kW, su capacidad de producción se considera como máximo de 100 kW (Tabla 1). Aunque hay que indicar que no existe ninguna legislación que considere tecnología eólica de baja potencia a aquellos aerogeneradores cuya potencia nominal esté por debajo de 100 kW. Solamente existe una normativa, que no es de obligado cumplimiento, del Comité Eléctrico Internacional (CEI) (Norma IEC-61400-2 Ed. 2), la cual define un aerogenerador de pequeña 2 potencia como aquel cuya área barrida por su rotor es menor de 200 m . La potencia que corresponde a dicha área dependerá de la calidad del diseño del aerogenerador, existiendo de hasta 65 kW como máximo. Los aerogeneradores de baja potencia presentan características que hacen que sean una opción muy interesante en la producción de la energía eléctrica y entre ellas cabe destacar las siguientes: se evitan pérdidas en transporte, ya que la energía se producirá en el mismo lugar que se demanda. No requieren grandes espacios para su instalación, en las zonas urbanas se pueden instalar en los tejados de los edificios y además esta tecnología permite al consumidor ser productor de energía, vendiendo la energía excedente a los demás consumidores. Tabla 1: Clasificación de aerogeneradores para producción eléctrica en función de su potencia Denominación Muy baja
+1
+
+kW <1 1-10
+
+Utilización Embarcaciones, sistemas montaña, iluminación, etc. de comunicación, refugios de
+
+Granjas, viviendas aisladas (sistemas EO-FV), bombeo, etc. Comunidades de vecinos, PYME’s (sistemas mixtos EODiesel), drenaje, tratamientos de aguas, etc. Parques eólicos (terreno complejo) Parques eólicos (terreno llano, mar adentro) En fase de investigación y desarrollo, requieren nuevos diseños y materiales no convencionales. No antes del año 2010
+Fuente: Energía Eólica, IDAE
+
+Baja Media Alta Muy alta
+
+10-100 100-1 000 1 000-10 000 > 10 000
+
+1.- Esta clase se divide según la potencia en microaerogeneradores (< 1 kW) y miniaerogeneradores (1-10 kW).
+
+Los aerogeneradores más pequeños o “micro”, <1 kW, se emplean en una gran variedad de aplicaciones tales como la carga de baterías para embarcaciones, sistemas de comunicación, refugios de montaña, etc. Las turbinas de 1 a 10 kW se suelen usar en granjas, para bombear agua, viviendas aisladas, comunidades de vecinos, etc. Las turbinas para aplicaciones residenciales pueden estar en el rango de 400 W hasta los 100 kW dependiendo de la cantidad de electricidad que se desee generar. Por ejemplo, una turbina de 1.5 kW podría cubrir las necesidades en un hogar que consuma alrededor de 300 kWh al mes en un sitio con una velocidad de viento de 6.26 m/s. En la actualidad, dentro del mercado mundial se están produciendo importantes desarrollos en las máquinas eólicas de pequeña potencia, lo que supone una continuación en la mejora de la fiabilidad y la
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 4 de 37
+
+eficiencia de los aerogeneradores. También se ha producido un aumento de escala ya que hasta ahora la mayor oferta del mercado estaba en el entorno de aerogeneradores de potencia nominal de 1 kW y solo para aplicaciones conectadas a baterías, mientras que se está evolucionando hacía aerogeneradores en el entorno de 5 kW con capacidad de operar tanto aislados como conectados a red. Existe una demanda razonable en la potencia comprendida entre 10 y 100 kW especialmente para conexión a red, pero que requiere disponer de herramientas de diseño similares a las de la tecnología de gran potencia, para lo cual, las empresas basadas en actividad artesanal con desarrollos, primordialmente, de tipo empírico, tienen que evolucionar hacía las nuevas tecnologías que garanticen la fiabilidad y decrezcan el tiempo de desarrollo y, por tanto, el coste final. En los últimos años, la conexión de la energía eólica de baja potencia a la red se ve como una gran posibilidad de mercado a nivel mundial, principalmente en el mundo desarrollado donde la red convencional tiene una implantación mayoritaria. Sin embargo, en algunos países el usuario se puede encontrar con el inconveniente de que no reciba un incentivo económico lo suficientemente atractivo para compensar el largo y complicado proceso de tramitar los permisos con la empresa eléctrica local. En Dinamarca, la retribución al kilovatio-hora inyectado por la pequeña eólica es exactamente el doble que el de la gran eólica. Esta tarifa se aplica a sistemas de hasta 25 kW de potencia instalada. EE.UU., presenta el sistema de retribución denominado “net meetering”, que ofrece a particulares que disponen de sistemas de generación de energías renovables en sus hogares la posibilidad de descontar en sus facturas el exceso de energía cuando generan más de la que utilizan o abastecerse del sistema convencional en periodos de insuficiencia. Uno de los mercados más prometedores para este tipo de energía son los emplazamientos urbanos. Recientemente, se ha introducido un nuevo tipo de turbina eólica, que está especialmente desarrollada para el entorno urbano. Este tipo de turbinas se caracterizan porque son seguras, el nivel de ruido es muy bajo, forma estética y fácil de instalar en los edificios. Alemania, Finlandia y Dinamarca han comenzado a utilizar pequeños aerogeneradores de este tipo. Pero, Holanda es la verdadera pionera de esta tecnología, principalmente debido a la falta de espacio geográfico para otro tipo de instalaciones de energía. 2. HISTORIA DE LA ENERGÍA EÓLICA El viento ha sido utilizado por el hombre para obtener energía desde la antigüedad. El primer uso que se conoce data del IV o V milenio a.C. cuando los egipcios lo utilizaban para impulsar sus embarcaciones de vela. La primera referencia sobre molinos de viento es del siglo VII d.C. en Persia, aunque ya en algunos manuscritos griegos hay alusiones a algún artilugio movido por el viento. En e stos primeros molinos, utilizados para la molienda del grano o el bombeo de agua, la rueda que sujetaba las aspas era horizontal y estaba soportada sobre un eje vertical, son los denominados molinos de eje vertical. Estas máquinas no resultaban demasiado eficaces, pero aún así se extendieron por China y el Oriente Próximo. En Europa se empezaron a utilizar de forma generalizada entre los siglos XI-XIII. Según algunos autores, su introducción se debe a las Cruzadas, mientras otros opinan que Occidente desarrolló su propia tecnología, ya que el molino occidental es de eje horizontal mientras que el oriental, como se comentó anteriormente, es vertical. Estas máquinas se han usado para moler, bombear agua, mover serrerías, extraer mineral, etc. Holanda y Dinamarca fueron los países que más explotaron la utilización industrial de estos aparatos. En el siglo XIV, los holandeses tomaron el liderazgo en el mejoramiento de los molinos y comenzaron a utilizarlos extensivamente para drenar las regiones pantanosas del delta del río Rin. A finales del siglo XV se construyeron los primeros molinos de viento para la elaboración de aceites, papel y procesar la madera en aserraderos y a comienzos del XVI se empezaron a utilizar para el drenaje de "polders", empleándose máquinas de hasta 37 kW cada una. Los primeros molinos eran estructuras de madera que se h acían girar a mano alrededor de un poste central para levantar sus aspas. Con el paso del tiempo se fueron modernizando. En 1745 se agregó el abanico de aspas que los hacía girar a más velocidad y en 1772 se introdujo el aspa con resortes que permitía mantener u velocidad de giro constante, en caso de vientos variables, y que consistía en un na
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 5 de 37
+
+sistema de cerraduras de madera que podía controlarse de forma manual o automática. Poco después se añadió el freno hidráulico para detener el movimiento, y se recurrió al uso de aspas aerodinámicas, en forma de hélices, para aumentar el rendimiento en zonas con vientos débiles. La industria de estos aparatos fue creciendo significativamente hasta la aparición, en el siglo XIX, de los motores térmicos, primero la máquina de vapor y luego el motor de combustión interna. Estos motores, gracias al bajo precio de los combustibles, permitían la obtención de energía a costes más bajos, por lo que el uso de las máquinas eólicas quedó, prácticamente, restringido a la molienda del grano y el bombeo del agua en las regiones rurales, especialmente en las más remotas y pobres. En la segunda mitad del siglo XIX, tiene lugar uno de los avances más importantes en la tecnología del aprovechamiento del viento. En 1854 Daniel Halladay diseñó un molino de eje horizontal con rotor multipala y en 1883 aparece el pequeño multipala americano diseñado por Steward Perry. Este molino, usado para el bombeo de agua en zonas aisladas ha sido el más vendido de la historia, se han llegado a fabricar más de 6 millones de unidades, de las que aún existen varios miles en funcionamiento. Los intentos de producir electricidad mediante energía eólica surgen por primera vez en 1802, cuando Lord Kelvin tuvo la idea de acoplar un generador eléctrico a una máquina eólica. No obstante, hubo que esperar hasta 1850 cuando se inventó la Dínamo. En 1888 Brush, en EE.UU., construyo la primera turbina eólica de funcionamiento automático para generar electricidad. Se trataba de un autentico gigante con un rotor que tenía de diámetro 17 m y 144 palas fabricadas con madera de cedro. Pero fue en 1892, en Dinamarca, cuando La Cour diseñó el primer aerogenerador eléctrico, constituido por cuatro palas de 25 metros de diámetro y capaz de desarrollar entre 5 y 25 kW de potencia. Los trabajos de La Cour constituyeron los primeros pasos para los aerogeneradores modernos, pero la aerodinámica no estaba aún suficientemente desarrollada y estas máquinas eólicas, a pesar de ser las más avanzadas de la época, seguían siendo rotores clásicos de bajo rendimiento. La teoría de la aerodinámica se desarrolla durante las primeras décadas del siglo XX. En los años 20 se comienza a aplicar los perfiles aerodinámicos, que habían sido diseñados para las alas y hélices de los aviones, a los rotores eólicos. Así, en 1927, el holandés J. Dekker construye el primer rotor provisto de palas con sección aerodinámica, capaz de alcanzar velocidades en punta de pala cuatro o cinco veces superiores a la del viento incidente frente al valor tradicional de dos o tres veces. El primer sistema para conexión a la red eléctrica se desarrolló en Rusia con el generador Balaclava de 100 kW. El mayor d ellos se construyó en 1941 en EE.UU. con una potencia de 1.25 MW. En Europa, e después de la segunda guerra mundial, cabe destacar la construcción de los primeros aerogeneradores de corriente alterna, Johannes Juul llegó a ser un pionero en el desarrollo de estos aerogeneradores con la construcción del aerogenerador Gedser de 200 kW para la compañía eléctrica SEAS que funcionó durante 11 años sin mantenimiento y que en 1975 fue reparado en petición de la NASA. En 1957, el gobierno danés, después de realizar una evaluación detallada de los recursos del país, instala un generador de este tipo con una potencia de 240 kW y que sirvió de base para el desarrollo pionero de modernas turbinas eólicas, lo que ha convertido a este país en un líder mundial. Durante los años 60, y debido a la importante disminución en los precios del petróleo, la energía eólica dejo de ser competitiva, pero tras la crisis del petróleo de 1973 los países más desarrollados vuelven a despertar su interés por la energía eólica y en esa época, sobre todo, se dedican a recuperar y reconstruir las maquinas eólicas de los años anteriores. En los años ochenta, en EE.U. U., los fabricantes desarrollaron nuevos diseños para pequeñas turbinas eólicas. Varios fabricantes durante este tiempo construyeron pequeñas turbinas usando generadores de inducción para interconexión directa con las líneas de la red eléctrica. Aunque técnicamente eran una buena solución para integrar turbinas eólicas a la red, supuso un fracaso comercial por razones regulatorias y políticas. Sin embargo, en Europa encontraron un clima mucho más aceptable, especialmente en Dinamarca, Alemania y Holanda. El tamaño de las turbinas eólicas fue creciendo gradualmente desde 10 a 15 kW, después hasta 30 kW y por el año 1982 se llegaron a alcanzar los 50 kW. El periodo de crecimiento más espectacular ha tenido lugar a partir de los años 90 cuando la
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 6 de 37
+
+energía eólica, comenzó a ser una importante actividad industrial y económica y actualmente ya existen en servicio grandes aerogeneradores que llegan a producir potencias eléctricas de 2 MW e incluso superiores. Actualmente, a pesar del rápido desarrollo que está teniendo lugar en los medianos y grandes aerogeneradores conectados a la red, los sistemas eólicos de pequeño tamaño para generación eléctrica en áreas sin acceso a la red, sistemas descentralizados en áreas rurales o países en vía de desarrollo han experimentado un ritmo de desarrollo mucho más lento. Sin embargo, cabe destacar el caso de China, donde en los últimos 20 años se instalaron alrededor de 140 000 aerogeneradores de baja potencia, de cuya energía se abastece un tercio de la población de la parte interior de Mongolia, donde no se dispone de conexión a la red eléctrica. Actualmente existen programas de ayuda para la electrificación en países tan diversos como Brasil, México, Indonesia, Filipinas y Sudáfrica. 3. CARACTERIZACIÓN ENERGÉTICA DEL VIENTO: POTENCIAL EÓLICO La cantidad de energía que puede generar una turbina eólica depende mucho de las características del viento. El viento es una masa de aire en movimiento y como tal posee una energía. Los aerogeneradores permiten utilizar dicha energía para generar directamente electricidad. Por lo tanto, antes de instalar un aerogenerador es conveniente conocer el potencial del viento en el lugar de emplazamiento, valor que viene dado por la siguiente ecuación: Pd = ½ ?Av (Ec. 1) Del análisis de esta ecuación se pueden obtener las siguientes conclusiones: a) Que la velocidad a la que el aire pasa por las palas resulta determinante, pues la energía del viento es proporcional al cubo de la velocidad a la que se mueve. Por ejemplo: si la velocidad se duplica, la energía será ocho veces mayor. Por otro lado, en la velocidad del viento existen una serie de factores entre los que cabe destacar los siguientes: • Rugosidad del terreno. La variación de velocidad con respecto a la altura depende esencialmente de la rugosidad del terreno. Superficies lisas, como superficies de agua, terrenos llanos sin arboleda o llanuras nevadas, producen una variación suave, al contrario que superficies de gran rugosidad, como edificaciones urbanas, terrenos muy irregulares o superficies boscosas. Por tanto, para un mejor aprovechamiento de la energía del viento interesa la presencia de terrenos lisos y despejados. El relieve de terreno. Las elevaciones del terreno, tales como montañas, colinas, acantilados, etc., pueden ocasionar un aumento de velocidad si el perfil es de forma y pendiente suave o pueden disminuir la velocidad si se trata de fuertes pendientes, crestas o bordes agudos. Por ejemplo, las colinas suaves, con pendientes desprovistas de alta vegetación u obstáculos y cimas redondeadas, son lugares potencialmente adecuados para la instalación de aerogeneradores ya que pueden aprovechar el efecto acelerador del relieve. Por el contrario, las fuertes pendientes, acantilados, escarpados, etc., son lugares peores debido a la formación de zonas de turbulencia, que no sólo reducen la energía que puede obtener el aerogenerador, sino que producen esfuerzos mecánicos de fatiga sobre la máquina acortando su vida útil. Presencia de obstáculos. Los obstáculos, como edificios, arbolado o accidentes del terreno, provocan en general dos efectos desfavorables: una disminución de la velocidad del viento y un aumento de las turbulencias.
+3
+
+•
+
+•
+
+b) La potencia es directamente proporcional al área barrida por el rotor de la turbina, la cual viene dada 2 por la siguiente expresión A = p R . Por lo tanto, otro factor importante en la cantidad de energía es el radio del rotor. Un incremento relativamente pequeño de la longitud del aspa o del diámetro del rotor produce un importante incremento de la potencia.
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 7 de 37
+
+c) La potencia depende linealmente de la densidad del aire, cuanto más pesado sea el aire más energía recibirá el aerogenerador. Hay que tener en cuenta que la densidad del aíre varía con la temperatura y la altura, como ya se comento anteriormente. El aíre caliente es menos denso que el frío, por lo que cualquier turbina producirá menos energía durante el verano, con la misma velocidad de viento, que durante el invierno. Asimismo, y a igual temperatura, un lugar situado a una cota próxima al nivel del mar presentará una densidad de potencia superior a otro que se encuentre a mayor altitud, por el hecho de que la densidad del aire disminuye con la altura. La potencia según la Ec. 1 es la máxima potencia que se podría extraer del viento, si toda la energía cinética del viento se pudiese convertir en energía útil, pero diferentes limitaciones como rozamientos aerodinámicos y mecánicos, límite de Betz, rendimiento del generador eléctrico, etc., sólo permiten en la práctica aprovechar, y en el mejor de los casos, un 40 % de la potencia eólica disponible. La potencia eólica extraída o captada del viento por el rotor de la máquina se conoce como potencia eólica aprovechada o recuperada (Pa). El rendimiento de conversión se describe por medio de un coeficiente de conversión o de potencia (Cp) definido como la relación entre la potencia aprovechada y la disponible (Cp=Pa/Pd). Este coeficiente tiene un límite máximo que se conoce como límite de Betz y depende del tipo de generador, de la geometría del mismo, de su velocidad de giro y de la velocidad del viento. Por lo tanto, la potencia eólica aprovechada se puede calcular a partir de la Ec. 2 Pa = Cp (½ ?A v ) (Ec. 2) En la Figura 1 se muestra la variación del coeficiente Cp en función de la velocidad para distintos tipos de aerogeneradores de eje horizontal y vertical.
+3
+
+Fuente: http://exa.unne.edu.ar/depar/areas/fisica/maestria/modulo2/eolica/eolo42002.pdf
+
+Figura 1: Variación del coeficiente de potencia (Cp) para distintos tipos de aerogeneradores La potencia generada por los aerogeneradores en relación de la velocidad del viento viene dada por la denominada curva de potencia (Figura 2). Dicha curva es una de las características más significativas de los aerogeneradores, ya que cada tipo de aerogenerador tiene su propia curva de potencia. En la Figura 2 se muestra una curva típica de aerogeneradores de pequeña potencia, en este caso la de un aerogenerador con potencia nominal de aproximadamente 11 kW, y como se puede observar el aerogenerador está caracterizado por cuatro velocidades diferent es: • Velocidad de arranque: velocidad del viento a partir de la cual el generador empieza a producir electricidad.
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 8 de 37
+
+•
+
+Velocidad nominal: la velocidad del viento para la que se alcanza la potencia nominal. El tramo de curva comprendido entre la velocidad de arranque y la nominal sigue una ley no lineal respecto a la velocidad. Velocidad de freno: la velocidad del viento a la cual el rotor se detiene por la acción de los sistemas de regulación y control para evitar el riesgo de sufrir algún daño dada la elevada velocidad del viento. Velocidad de supervivencia: Velocidad del viento por encima de la cual el aerogenerador puede dañarse a pesar de estar parado.
+
+•
+
+•
+
+14 12 Potencia (kW) 10 8 6 4 2 0 0 2 4 6 8 10 12 14 16 18 20 22 24 Velocidad del viento (m/s)
+Fuente: http://www.uni-oldenburg.de/ppre/download/Downloads/ENERG%CDAS_RENOVABLES.pdf
+Velocidad de arranque Velocidad de potencia nominal Velocidad de freno Velocidad de supervivencia
+
+Figura 2: Curva de potencia para un aerogenerador de 11 kW
+
+4. AERODINÁMICA DE LOS AEROGENERADORES 4.1. Tipos de aerogeneradores Dependiendo de la posición del eje de giro de los aerogeneradores respecto a la dirección del viento, los aerogeneradores se pueden clasificar en dos grandes grupos: a) Aerogeneradores de eje horizontal o HAWT (Horizontal Axis Wind Turbine). En estos modelos el eje de rotación es paralelo a la dirección del viento, de forma similar a la de los clásicos molinos de viento. Este tipo de aerogeneradores, a su vez, se pueden clasificar, según su velocidad de giro, en: • Aerogeneradores lentos: En general, están constituidos por un número alto de palas, multipalas, que cubren casi toda la superficie del rotor. Poseen un elevado par de arranque, gracias al cual pueden ponerse en marcha incluso con velocidades de viento muy bajas. Su baja velocidad de rotación hace que sean poco útiles para la producción de electricidad, siendo su uso más frecuente para el bombeo de agua. • Aerogeneradores r ápidos: Presentan un par de arranque pequeño y requieren velocidades de viento del orden de 4 a 5 m/s para su puesta en marcha. La mayoría poseen tres palas y se utilizan para la producción de electricidad, a través de su acoplamiento con un alternador. Su gama de potencias es muy amplia, va desde modelos de 1 kW, usados en instalaciones autónomas, a modelos de gran potencia.
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 9 de 37
+
+• Aerogeneradores de velocidad intermedia: Tienen entre 3 y 6 palas y sus prestaciones están comprendidas entre las correspondientes a los dos casos anteriores. Se utilizan cuando las condiciones de viento no son muy favorables y en general son de pequeña potencia. Su aplicación principal es en equipos autónomos para producción de electricidad. b) Aerogeneradores de eje vertical o VAWT (Vertical Axis Wind Turbine). En éstos el eje de rotación es perpendicular a la dirección del viento y existen dos diseños básicos: • Tipo Savonius: En 1924, el ingeniero Savonius diseñó un rotor cuya principal ventaja consiste en trabajar con v elocidades de viento muy bajas. Se compone de dos semicilindros de igual diámetro situados paralelamente al eje vertical de giro (Figura 3a), en el diseño original estaban separados una pequeña distancia el uno del otro. La fuerza que el viento ejerce en las caras de los cilindros (cara cóncava y cara convexa) es distinta, por lo que las hace girar alrededor del eje. Este sistema presenta buenas características aerodinámicas para el autoarranque y la autorregulación. Su campo de aplicación está en la producción autónoma de electricidad o el bombeo de agua. • Tipo Darrieus: Este tipo de aerogeneradores fue patentado por el académico francés G.J.M. Darrieus. Están formados por dos o tres palas de forma ovalada de perfil aerodinámico (Figura 3b) y tienen características parecidas a las de eje horizontal, presentando un par de arranque muy pequeño. Los laboratorios Sandia construyó en 1974 un primer prototipo de 5 m de diámetro Su potencia es pequeña y aunque su aplicación es similar a los aerogeneradores rápidos de eje horizontal, están poco implantados.
+
+(a)
+
+(b)
+
+Fuente: http://personales.ya.com/universal/TermoWeb/EnergiasAlternativas/eolica/PDFs/EOLO32002.pdf
+
+Figura 3: Tipos de Aerogeneradores de eje vertical (a) Savonius y (b) Darrieus
+
+Los aerogeneradores de eje vertical presentan ciertas ventajas sobre las de eje horizontal. Debido a su simetría vertical, no necesitan sistemas de orientación para alinear el eje de la turbina con la dirección del viento, su mantenimiento es más sencillo, dada su poca altura con respecto al suelo y en el caso de que se trabaje a velocidad constante, no es necesario incorporar ningún mecanismo de cambio de paso, menor coste de instalación. Pero no todo son ventajas ya que necesitan un motor de arranque, presentan menor velocidad de giro y su rendimiento es menor que el de las máquinas de eje horizontal a igual potencia.
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 10 de 37
+
+Las mejoras tecnológicas que se han aplicado sobre los aerogeneradores de eje horizontal y las consecuentes mejorías en las prestaciones técnicas y económicas han dejado en segundo plano el desarrollo de los aerogeneradores de eje vertical. Sin embargo, a pequeña escala, los aerogeneradores de eje vertical vuelven a ser competitivos respecto a los de eje horizontal si se consideran las ventajas anteriormente citadas. Dentro de los aerogeneradores de eje vertical cabe citar el prototipo concebido por la empresa finlandesa Windside. En la Figura 4 se puede apreciar un aerogenerador de este tipo capaz de producir 50 kW y que tiene la tarea de climatizar un centro comercial en las cercanías de Turku (Finlandia). Esta tecnología relativamente nueva y prometedora, con rendimientos similares a los aerogeneradores de eje horizontal, es aplicada para abastecer pequeños consumos.
+
+Fuente: http://www.misteriospdf.com/otros/aerogenerador.pdf
+
+Figura 4: Detalle turbina Windside
+
+4.2. Componentes principales de un aerogenerador Técnicamente las turbinas de bajo potencial eólico tienen una estructura similar a las grandes, solo que su diseño es más simple. Como en general, el aerogenerador más empleado es el de eje horizontal, a continuación se hace una descripción de los componentes principales que constituyen ese tipo de aerogenerador (Figura 5).
+
+Eje de baja velocidad
+
+Pala s
+
+Sistema hidráulico
+
+Góndola Generador
+
+Contador electrónico
+
+Buje
+
+Multiplicador Eje de alta velocidad Mecanismo de orientación Torre Unidad de Refrigeración Fuente: Energía Eólica, IDAE
+
+Figura 5: Componentes de un aerogenerador de eje horizontal 4.2.1. Rotor
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 11 de 37
+
+La función del rotor es transformar la energía cinética del viento en energía mecánica. Cuanto mayor sea el área barrida por el rotor mayor será la producción de energía. Por ejemplo un aerogenerador de 10 kW de potencia tiene un diámetro, aproximadament e, de siete metros, mientras que una turbina eólica de 750 kW posee un diámetro de 24 metros. Según la disposición del rotor se distinguen básicamente dos tipos de aerogeneradores (Figura 6): • Rotor a barlovento: el viento incide primero sobre el plano del rotor y posteriormente sobre la torre de sustentación, con lo cual se minimiza la influencia de su sombra sobre el rotor. En este tipo se requiere un sistema de orientación que mantenga siempre el plano de giro del rotor perpendicular a la dirección del viento. Rotor a sotavento: en este caso no se requiere ningún dispositivo de orientación. Su desventaja radica, además de los efectos de sombra que producen la góndola y la torre sobre las palas del rotor, con la consiguiente pérdida de potencia y aumento de tensiones de fatiga, en la disposición del sistema de cables conductores que deben transportar la energía eléctrica producida por el generador situado en el interior de la góndola, al ser ésta giratoria.
+
+•
+
+Fuente: http://martingiordano.blogspot.com/2006/02/energa-elica-tipos-de-generadores.html
+
+Figura 6: Disposición del rotor con relación al viento
+
+En la mayoría de los casos el rotor se encuentra situado a barlovento, con el objeto de reducir las cargas cíclicas sobre las aspas. El rotor está formado por dos partes bien diferenciadas. a) Las palas.- El número de palas en una turbina eólica es muy variable, una, dos, tres o multipalas. A la hora de diseñar un aerogenerador hay que considerar que el rotor g irará a mayor velocidad cuanto menor sea el número de palas que posee y que para la generación de electricidad es aconsejable que el rotor gire al mayor número de revoluciones posibles. Por lo tanto, el número de palas debe de ser bajo, 1, 2 ó 3 palas. En general, los aerogeneradores constan de tres palas ya que es el menor número de palas que permite ahorrar más material y peso sin complicar el sistema. Algunos modelos utilizan rotores bipalas o monopalas, que logran un ahorro todavía mayor pero tienen el inconveniente de que son menos eficientes y deben de introducir sistemas de control más complicados para mejorar su estabilidad. Además, en el caso de los aerogeneradores tripalas cabe destacar que producen menor ruido aerodinámico que los monopalas y bipalas, propiedad que es muy importante, sobre todo, cuando este tipo de turbinas son utilizadas para el abastecimiento eléctrico en puntos aislados, o lugares urbanos donde generalmente la máquina se debe emplazar en las cercanías de la población y se debe minimizar la perturbación introducida en el hábitat natural.
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 12 de 37
+
+Los materiales tradicionales, madera, aluminio, etc., que se utilizaban, inicialmente, para la fabricación de las palas se han visto desplazados por la utilización de plásticos y resinas. La mayoría de las pequeñas turbinas eólicas usan materiales compuestos, tal como fibra de vidrio y actualmente existe una tendencia clara al uso de epoxy (generalmente resina de poliéster) reforzado de fibra de vidrio o de carbono, solo algún fabricante usa madera. El aluminio, actualmente, no se utiliza ya que es un metal propenso a la fatiga. b) El buje.- Es el elemento al que se encuentran unidas las palas y a través del cual la potencia eólica captada por el rotor se transmite a la caja multiplicadora o variador de velocidad. 4.2.2. Góndola La góndola es el compartimiento en cuyo interior se encuentra el generador eléctrico, la caja multiplicadora y los sistemas de control, regulación, orientación y frenado. Generalmente está formado por una estructura metálica, construida con placa y perfiles de acero, que se sitúa en el extremo superior de la torre. 4.2.3. Generador La función del generador es transformar la energía mecánica procedente del rotor en energía eléctrica. Existen diferentes tipos de generadores: a) Generador de Corriente Continua (Dínamos) b) Generador de Corriente Alterna • Síncronos o Alternadores - De polos formados por electroimanes alimentados por corriente continua - De polos formados por imanes fijos o permanentes • Asíncronos o de Inducción - De jaula de ardilla - De rotor devanado Las dínamos, generadores de corriente continua, son máquinas eléctricas sencillas que tienen la ventaja de no necesitar sistemas especiales para cargar baterías y generan corriente aún para bajas velocidades de giro. Sin embargo, su uso cada vez es menor, se han ido reemplazando por los generadores de corriente alterna ya que presentan el inconveniente de que necesitan un mantenimiento periódico y son más pesadas y caras que los generadores de corriente alterna de igual potencia, aunque hay que tener en cuenta que son idóneos para los aerogeneradores de muy pequeño tamaño (decenas de vatios). Los generadores síncronos o alternadores que existen son de velocidad variable, es decir suministran corrientes de frecuencia variables. Por lo tanto, para conectarlos directamente a la red de corriente alterna es preciso utilizar un convertidor de frecuencia como elemento intermedio entre el generador y la red. Esta desventaja se compensa con una mayor eficiencia de la turbina y una mejor compatibilidad con la red. Principalmente, este tipo de generadores se usan en máquinas que alimentan instalaciones autónomas, como en aplicaciones para iluminación, calefacción, etc., y la mayoría utilizan alternadores de imán permanente ya que se trata de la configuración más sencilla y robusta. El generador asíncrono o de inducción se caracteriza porque usa corriente de la red eléctrica para crear su campo magnético. En principio, este tipo de generador no es capaz de operar sin la red. Sin embargo, sistemas electrónicos pueden engañar a los generadores de inducción por medio de condensadores para cargar el campo, permitiendo así a estos generadores ser utilizados en sistemas de potencias aislados. Por ejemplo, las turbinas eólicas Vergnet trabajan con generadores de inducción en sistemas híbridos éolicodiesel y para cargar baterías.
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 13 de 37
+
+En general, e generador más utilizado en las pequeñas turbinas eólicas e el alternador de imanes l s permanentes que parece ser el modelo ideal para las micro y miniturbinas eólicas. En los aerogeneradores de tamaño doméstico hay más diversidad. Por ejemplo, la Bergey Windpower se decidió por los alternadores de imanes permanentes, pero la Wind Turbine I dustries usa un alternador convencional de n arrollamientos, mientras que la Vergnet emplea un generador de inducción, comercial. 4.2.4. Multiplicador El acoplamiento entre el rotor eólico y el generador, en la mayoría de los casos, se realiza a través de una caja multiplicadora y su función es multiplicar la velocidad de giro que llega del rotor para adaptarla a las necesidades del generador. Su empleo es necesario a medida que crece el diámetro del rotor, pues se deben limitar las r.p.m del rotor para evitar que las puntas de las palas trabajen a velocidades que comprometen la resistencia de los materiales empleados o induzcan vibraciones perjudiciales. Pero en el caso de las turbinas con una potencia inferior a 10 kW, generalmente, no se usa el multiplicador ya que el rotor está conectado directamente al generador. 4.2.5. Sistema de control Toda turbina eólica necesita un sistema de control que permita por un lado detener la máquina y limitar su velocidad por razones de seguridad y por el otro optimizar el funcionamiento. Además, en el caso de generación eléctrica a frecuencia constante es necesario mantener la velocidad de giro del rotor dentro de ciertos límites para obtener un alto rendimiento. El sistema de control es diferente en función del tamaño del aerogenerador. a) Sistemas con ángulo de paso fijo y variación del área de captación “Furling”. Su principio fundamental es reducir el área de captación o área del rotor en posición perpendicular a la corriente de aire incidente cuando la velocidad de éste supera cierto valor crítico. El sistema de detección de la energía en exceso y el de actuación lo forman el mismo rotor y su vinculación a la torre a través de la góndola. El rotor oscila lateralmente fuera del viento (alrededor de un eje vertical) para disminuir la potencia. En la práctica, esta técnica sólo se usa en aerogeneradores muy pequeños (< 5 kW), pues somete al rotor a fuerzas que varían cíclicamente y que a la larga pueden dañar toda la estructura, y en lugares que se encuentren alejados de la población debido a la gran emisión de ruido acústico que producen. b) Sistema de ángulo de paso fijo por pérdida aerodinámica “stall regulation”. Este es un sistema de control pasivo que reacciona con la velocidad del viento. En este tipo de sistema de control, las palas están unidas al buje en un ángulo fijo. El perfil de la pala ha sido aerodinámicamente diseñado para asegurar que a medida que aumente la velocidad real del viento en la zona, el ángulo de ataque de la pala del rotor también aumente hasta llegar al punto donde empieza a perder sustentación. La pala está ligeramente torsionada a lo largo de su eje longitudinal. Esto es así en parte para asegurar que la pala pierde la sustentación de forma gradual, en lugar de hacerlo bruscamente, cuando la velocidad del viento alcanza su valor crítico. La principal ventaja de este sistema es que se evitan las partes móviles del rotor y un complejo sistema de control. Sin embargo, la regulación por pérdida aerodinámica representa un problema de diseño muy complejo y comporta retos en el diseño de la dinámica estructural de toda la turbina, para evitar las vibraciones provocadas por la pérdida de sustentación. Alrededor de las dos terceras partes de los aerogeneradores que actualmente se están instalando en todo el mundo son máquinas de regulación por pérdida aerodinámica. c) Sistema con ángulo de paso variable o “pitch regulation”. Este método de control consiste en que las palas varían su ángulo de incidencia con respecto al viento. En este tipo de sistema, un ordenador comprueba varias veces por segundo la potencia generada. Cuando ésta alcanza un valor demasiado alto, el controlador envía una orden al mecanismo de cambio del ángulo de paso, que inmediatamente hace girar las palas del rotor ligeramente fuera del viento. Y a la inversa, las palas son vueltas hacia el viento cuando éste disminuye de nuevo. El diseño de aerogeneradores controlados por este tipo de sistema requiere una
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 14 de 37
+
+ingeniería muy desarrollada, para asegurar que las palas giren exactamente el ángulo deseado. En este tipo de aerogeneradores, el ordenador generalmente girará las palas unos pocos grados cada vez que el viento cambie, para mantener un ángulo óptimo que proporcione el máximo rendimiento a todas las velocidades de viento. El mecanismo de cambio del ángulo de paso suele funcionar de forma hidraúlica. Este tipo de sistema es más frecuente en eólicas de gran potencia, con diámetros superiores a 20 m, así como en aerogeneradores que trabajan en paralelo con grupos electrógenos (sistemas mixtos eólico-diesel). En estos sistemas activos de paso variable, se encuentran a su vez dos posibles configuraciones: • Sistemas en los que gira toda la pala alrededor de su eje longitudinal, cambiando el ángulo de paso de la misma para situarse siempre en condiciones de máximo rendimiento o para sacar a la pala de la acción del viento y parar el rotor. • Sistemas en los que el giro se realiza sólo en el tramo final de la pala correspondiente al extremo o punta de la misma, de forma similar al funcionamiento del alerón en un avión. d) Sistema de regulación activa por pérdida aerodinámica. Un número creciente de grandes aerogeneradores (a partir de 1 MW) están siendo desarrollados con un mecanismo de regulación activa por pérdida aerodinámica. Técnicamente, las máquinas de regulación activa por pérdida aerodinámica se parecen a las de regulación por cambio del ángulo de paso, en el sentido de que ambos tienen palas que pueden girar. Para tener un momento de torsión (fuerza de giro) razonablemente alto a bajas velocidades del viento, este tipo de máquinas serán normalmente programadas para girar sus palas como las de regulación por cambio del ángulo de paso a bajas velocidades del viento (a menudo sólo utilizan unos pocos pasos fijos, dependiendo de la velocidad del viento). Sin embargo, cuando la máquina alcanza su potencia nominal, este tipo de máquinas presentan una gran diferencia respecto a las máquinas reguladas por cambio del ángulo de paso: si el generador va a sobrecargarse, la máquina girará las palas en la dirección contraria a la que lo haría una máquina de regulación por cambio del ángulo de paso. En otras palabras, aumentará el ángulo de paso de las palas para llevarlas hasta una posición de mayor pérdida de sustentación, y poder así consumir el exceso de energía del viento. Una de las ventajas de la regulación activa por pérdida aerodinámica es que la producción de potencia puede ser controlada de forma más exacta que con la regulación pasiva, con el fin de evitar que al principio de una ráfaga de viento la potencia nominal sea sobrepasada. Otra de las ventajas es que la máquina puede funcionar casi exactamente a la potencia nominal a todas las velocidades de viento. Un aerogenerador normal de regulación pasiva por pérdida aerodinámica tendrá generalmente una caída en la producción de potencia eléctrica a a ltas velocidades de viento, dado que las palas alcanzan una mayor pérdida de sustentación. El mecanismo de cambio del ángulo de paso suele operarse mediante sistemas hidráulicos o motores eléctricos paso a paso. 4.2.6. Sistema de orientación A fin de optimizar el aprovechamiento energético del viento, el plano de rotación del rotor debe mantenerse perpendicular a la dirección del viento. En el caso de que el rotor esté situado a sotavento, como ya se comentó anteriormente, no es necesario un sistema de orientación ya que mediante una conicidad adecuada de las palas el sistema es autoorientable. En cambio en los rotores situados a barlovento, delante de la torre, si se debe incorporar algún sistema de orientación. Entre estos sistemas cabe distinguir los siguientes: a) Eólicas auxiliares: en particular molinos de cola, usados sólo en algunas eólicas pequeñas. Es un sistema poco fiable. b) Veletas de cola: se usan en pequeñas turbinas, formando parte del conjunto timón-veleta. La orientación del rotor se realiza de forma mecánica, al incidir el viento sobre el timón-veleta y ejerciendo sobre éste un par de fuerzas que hace que el rotor se coloque perpendicularmente a la dirección del viento.
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 15 de 37
+
+c) Rotor a barlovento con orientación asistida: es el sistema más utilizado en grandes aerogeneradores. Incorpora un sensor con un ordenador y, en función de la dirección y la velocidad del viento, envía las correspondientes órdenes de control a un servomotor para la orientación del plano de giro del rotor. El servomotor (eléctrico o hidráulico, acciona, a través de un sistema de piñones, una corona dentada que a su vez hace girar el plano del rotor para colocarlo perpendicularmente a la dirección del viento. Debido a sus dimensiones, las pequeñas turbinas eólicas no pueden acomodar los mecanismos de transmisión y los motores de orientación que se emplean en las turbinas más grandes. Casi todas las pequeñas turbinas utilizan veletas de cola, aunque una de las pocas excepciones es la turbina de espalda al viento de la Proven Engineering. 4.2.7. Torre Las máquinas eólicas deben estar situadas sobre una estructura de soporte capaz de aguantar el empuje del viento. Existen varios tipos de torres como los que se describen a continuación (Figura 7).
+
+(a)
+
+(b)
+
+(c)
+
+(d)
+
+Fuente: http://www.windpower.org/ES/tour/wtrb/tower.htm
+
+Figura 7: Tipos de torre: (a) tubular, (b) celosía, (c) tensada y (d) híbrida
+
+a) Torres tubulares de acero.- En el caso de los grandes aerogeneradores generalmente se utilizan torres tubulares de acero (Figura 7a), fabricadas en secciones de 20-30 metros con bridas en cada uno de los extremos, y son unidas con pernos "in situ". Las torres son tronco-cónicas, es decir con un d iámetro creciente hacia la base, con el fin de aumentar su resistencia y al mismo tiempo ahorrar material. b) Torres de celosía.- Son fabricadas utilizando perfiles de acero soldados (Figura 7b). La ventaja básica de las torres de celosía es su costo, puesto que para su fabricación se requiere sólo la mitad de material que en una torre tubular. La principal desventaja de este tipo de torres es su apariencia visual. En cualquier caso, por razones estéticas, las torres de celosía han desaparecido prácticamente en los grandes aerogeneradores modernos. Son muy comunes en la India, aunque se encuentran en otros países como Alemania y EE.UU. c) Torres de mástil tensado.- Muchos de los aerogeneradores pequeños están construidos con delgadas torres de mástil sostenidas por cables tensores (Figura 7c ). La ventaja es el ahorro de peso y, por lo tanto, de costo. Las desventajas son el difícil acceso a las zonas alrededor de la torre, lo que las hace menos apropiadas para zonas agrícolas. Las torres tubulares son las que ofrecen una vista más agradable, pero son las más costosas y, a menos que e stén articuladas para arriarlas, son también las que ofrecen más dificultades a la hora de efectuar el mantenimiento de la turbina. Las torres con tensores son las menos costosas.
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 16 de 37
+
+d) Torres híbridas.- Algunas torres están hechas con diferentes combinaciones de las ya mencionadas. Un ejemplo es la torre de tres patas Bonus 95 kW, de la que podría decirse que es un híbrido entre una torre de celosía y una torre tensada con vientos (Figura 7d). 5. OTROS COMPONENTES DE UN SISTEMA DE ENERGÍA EÓLICA Además del aerogenerador para poner en marcha un pequeño sistema de energía eólica es necesario un equipo adicional que está constituido por los siguientes componentes: 5.1. Sistemas de almacenamiento En sistemas que no se encuentran conectados a red generalmente se dispone de algún sistema de almacenamiento con el objeto de disponer de la energía en periodos de viento flojo o de calma. • Baterías: Actualmente, es el sistema más utilizado para almacenar la electricidad generada por la turbina. Permite construir sistemas de muy pequeño tamaño, adecuados para balizas, repetidores de señal, estaciones de recogidas de datos y puestos de socorro remotos. Su rendimiento es del 60 % al 75 %. Se emplean baterías especiales que permitan reducciones de su carga hasta el 60 % sin daños. Su vida en estas condiciones es del orden de 5 a 7 años. No es adecuado para tamaños grandes por su elevado coste y dificultades de mantenimiento. Acumulación térmica: la energía extraída del viento se usa para calentar agua, directamente por medio de un freno hidráulico o por calentamiento de resistencias eléctricas tras la conversión a electricidad. El agua se almacena y el aprovechamiento energético posterior sería solo adecuado si se requiere en forma calorífica. Bombeo de agua: Durante períodos con exceso de producción de energía se puede usar la energía eléctrica para bombear agua hasta un depósito elevado. Durante períodos de viento insuficiente la carga podría alimentarse con una minicentral hidráulica cuyo generador síncrono se conectaría en paralelo con el aerogenerador a través de un sistema de protección y control adecuado. Este método proporciona una eficiencia de energía eléctrica recuperada entre el 50 % y el 80 %. Es la solución que se encontró para poder electrificar eólicamente la isla de El Hierro. Generación de hidrógeno y pila de combustible: El exceso de electricidad para descomponer el agua en hidrogeno y oxígeno. El hidrógeno posteriormente se podría utilizar directamente como combustible o electricidad de corriente continua mediante una pila de combustible. recuperación varía entre el 50 % y el 70 %. producida se utiliza se almacenaría y bien para generar El rendimiento de
+
+•
+
+•
+
+•
+
+•
+
+Volante de inercia: La energía se almacena en un volante capaz de girar a elevado régimen en un recinto al vacío, que impida la resistencia aerodinámica. Es un sistema conveniente para fluctuaciones fuertes en la energía eólica ya que es capaz de absorber potencias instantáneas elevadas. Se obtiene rendimientos de recuperación muy altos, del orden del 80 %. Desalación del agua: En lugares donde coincida la demanda de agua potable con la disponibilidad de energía eólica y su impacto ecológico sea aceptable, es posible recurrir a emplear la energía sobrante en desalinizar agua, la cual es fácilmente almacenable y proporciona una utilidad completa.
+
+•
+
+5.2. Inversores Los inversores se utilizan para convertir la corriente continua (CC) generada por los aerogeneradores eólicos, paneles solares fotovoltaicos, acumuladores o baterías, etc., en corriente alterna (CA) y de esta manera poder ser inyectada en la red eléctrica o usada en instalaciones eléctricas aisladas. Se pueden diferenciar diferentes tipos de inversores:
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 17 de 37
+
+• Inversores de onda sinusoidal. Se utiliza en los sistemas que no están conectados a la red. Emplean la corriente continua de un sistema de almacenamiento con baterías y producen una corriente alterna de onda sinusoidal similar a la de la red, aunque no idéntica. • Inversores síncronos. Usan conmutadores RCS (Rectificador Controlado de Silicio) con controles analógicos para señalizar cuando deben enviar pequeñas señales eléctricas a la red, debidas a que necesitan la presencia de la red eléctrica para su funcionamiento. En EE.UU., la Bergey Windpower y la Wind Turbine Industries fabrican turbinas con este tipo de inversor. • Inversores autoconmutados. Éstos pueden producir electricidad compatible con la red usando su propio circuito interno, con controles IGBT (compuerta integrada con transistores bipolares) y digitales, mejorando notablemente la fiabilidad y la calidad de la potencia con respecto a los modelos sincronizados mediante la propia red. Estos inversores usan exactamente la misma tecnología que los inversores de orden sinusoidal vistos anteriormente. En los nuevos sistemas, cuando la demanda eléctrica excede al suministro y las baterías están cerca de la descarga total, el inversor automáticamente toma potencia de la red hasta que éstas resultan recargadas, pero, cuando hay un exceso de generación con respecto a la demanda y las baterías están totalmente cargadas, el inversor puede también suministrar el exceso de potencia a la red. Incluso, si el sistema de potencia de la red falla, por ejemplo durante una tormenta, el inversor y las baterías dan un suministro de potencia ininterrumpido. El inversor automáticamente cambia a un sistema aislado con baterías convencional. 5.3. Rectificadores y Cargadores de Baterías Los rectificadores son opuestos a los inversores, convierten la energía de corriente alterna en corriente continua. Además, si el generador no dispone de una salida de la carga de la batería, un cargador de batería es obligatorio. Algunos inversores pueden actuar como cargadores de baterías. 6. APLICACIONES DE LOS AEROGENERADORES DE BAJA POTENCIA Existen dos aplicaciones generales de utilizar la energía eléctrica generada a partir de los aerogeneradores de baja potencia: instalaciones aisladas e instalaciones conectadas a la red eléctrica. 6.1. Instalaciones aisladas a la red eléctrica Las pequeñas turbinas eólicas pueden ser fuente económica de electricidad para sitios aislados. La aplicación más común de sistemas aislados es la electrificación de viviendas rurales, para la cual existen diferentes configuraciones. a) Sistemas individuales: Generalmente, cuentan con un pequeño aerogenerador, una o más baterías para almacenar la energía generada y un regulador que controla la carga y descarga de las baterías. Dependiendo de la aplicación, pueden incluir un inversor para transformar la electricidad de corriente continua en alterna. Los aerogeneradores de baja potencia se pueden utilizar sin conectar a la red eléctrica en diferentes aplicaciones. Generalmente se utilizan para cargar baterías, suministrando tanto corriente alterna como continua, con los modernos sistemas de control electrónicos, pueden ser usados para mover bombas eléctricas directamente, sin emplear baterías. Los pequeños aerogeneradores también se pueden emplear para la calefacción de viviendas, etc. Por ejemplo, la Universidad de Massachussttes propuso un calentador eólico a mediados de los años setenta, y varias compañías trataron de sacar este proyecto al mercado. El concepto nunca tuvo acogida en Norteamérica porque no daba beneficios económicos, pero si lo tuvo en Dinamarca, donde los precios de la calefacción eran considerablemente altos. El Folkecenter for Renewable Energy de Dinamarca demostró que una turbina eólica que cubre las demandas de la calefacción en el invierno puede fácilmente cubrir las necesidades de agua caliente en verano.
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 18 de 37
+
+Además de los usos tradicionales, miles de microturbinas son utilizadas en barcos. Una de las primeras aplicaciones fue la alimentación de instalaciones remotas de telecomunicaciones. Éstas eran habitualmente emplazadas en las cimas de inaccesibles montañas, donde el suministro de combustible era difícil y caro. b) Sistemas centralizados: Si las viviendas a electrificar se encuentran relativamente próximas entre sí, la opción más apropiada puede ser un sistema eólico centralizado debido a la concentración de equipos y energía, lo cual ofrece ventajas desde los puntos de vista técnico y económico. Un sistema eólico centralizado satisface la demanda energética de una comunidad con electricidad producida, almacenada y transformada en un “sistema eólico central” y luego se distribuye, a través d e líneas eléctricas, hasta cada una de las viviendas y otros sitios. Generalmente, este tipo de sistemas cuenta con más de una fuente de generación, para lograr mayor confiabilidad del sistema. c) Sistemas híbridos: Las p equeñas turbinas eólicas, como se comento anteriormente, brindan una solución muy atractiva para la electrificación rural en muchos lugares, pero muchas veces la fluctuación del viento hace que no se pueda obtener una producción de electricidad de manera constante. Por esta razón, frecuentemente, se usa una turbina eólica en combinación con otra fuente de generación: por ejemplo, paneles fotovoltaicos o un generador eléctrico a base de diesel. Este tipo de sistemas se denominan “sistemas híbridos”, y una de las mayores ventajas que presentan, con respecto a un sistema individual, es que dan una mayor seguridad para la generación de energía eléctrica. - Instalaciones híbridas eólico-fotovoltaicas: La energía eólica y la fotovoltaica son complementarias. Juntas, no sólo mejoran la fiabilidad de los sistemas aislados sino que también los hacen más rentables que cuando operan separadamente. Como se puede ver en la Figura 8, estas instalaciones suelen estar constituidas por un aerogenerador de pequeñas dimensiones que, a través de un rectificador/regulador de carga, suministra la energía producida a las baterías. En paralelo se encuentra un sistema de paneles fotovoltaicos, uno o varios, que mediante su regulador de carga se conectan también a la batería. Las dimensiones de cada uno de los equipos (aerogenerador y paneles) dependerán de las características climatológicas así como de las características de la carga. - Sistema eólico-diesel: En este tipo de instalación, el grupo diesel, interconectado a través de su sistema de control, permite una gran flexibilidad en su régimen de funcionamiento. El grupo diesel trabaja a plena carga cuando el viento está en calma o en régimen variable apoyando la producción del aerogenerador por existir variación de la velocidad del viento. Cuando el viento mantiene un régimen de velocidad suficientemente alto, el grupo diesel está parado y la producción eléctrica es suministrada solamente por el aerogenerador o mantiene su funcionamiento en condiciones de regulación mientras dura el viento fuerte.
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 19 de 37
+
+Fuente: http://www.inersol.es/Sistemas_Hibridos.htm Figura 8: Sistema híbrido de electrificación con energía solar y eólica
+
+6.2. Instalaciones conectadas a la red eléctrica Si la legislación del sector eléctrico lo permite, existe la oportunidad de suministrar energía a la red con pequeños sistemas eólicos. Esto es aplicable en los casos que exista una red en las proximidades del centro de consumo. En este caso, la energía requerida por el usuario sería suministrada por el sistema eólico y por la red eléctrica. Si el aerogenerador produce energía en exceso, se entrega el excedente a la red eléctrica y, si se produce menos energía de la requerida, se toma de la red. El almacenamiento de la
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 20 de 37
+
+electricidad en baterías es opcional, pero su inclusión exige dispositivos rectificadores de corriente alterna para la carga de las baterías e inversores de corriente continua. Dentro de los sistemas conectados a red empiezan a tener importancia los sistemas híbridos Por ejemplo en España, la Agencia Energía de Barcelona (AEB) y la Universitat Politècnica de Catalunya (UPC), Regesa y Fecsa Endesa firmaron, en Noviembre de 2007, un convenio de colaboración para la construcción de una instalación mixta eólica-fotovoltaica de conexión a la red en un edificio de 175 viviendas. Éste es un proyecto pionero en el uso de energías renovables que se realiza como sustitución de una instalación solar térmica para la producción de agua caliente sanitaria. El proyecto piloto consiste en una instalación de al menos 3 aerogeneradores verticales de 2.5 kW de potencia cada uno y un sistema de energía fotovoltaica de conexión a la red de 34.3 kW. Se estima que la central eólica-fotovoltaica producirá anualmente unos 52 200 kWh, es decir, el equivalente al consumo energético total, no sólo para calentar agua, de unas 24 2 viviendas de 80 m , y permitirá una ahorro de 5.5 toneladas de emisiones de CO2 a la atmósfera cada año. 6.3. Energía eólica en el entorno urbano Actualmente, se está produciendo un gran interés por la introducción de la energía eólica en el entorno urbano y se están desarrollando un nuevo tipo de turbinas eólicas, llamadas Turbinas Urbanas (TU). La integración de muchos pequeños molinos en el paisaje urbano incrementan notablemente la cobertura eólica, a la vez que quedan disimulados por el paisaje y no ocupan terrenos de cultivo ni se entrometen en el paisaje (Figura 9).
+
+Fuente: http://eco.microsiervos.com/tecnologia/aerogeneradores-domesticos.html
+
+Figura 9: Aerogenerador integrado en zona urbana, donde además facilita cobertura publicitaria
+
+Una de las características fundamentales de estas TU es su capacidad para acercar físicamente la producción de electricidad al usuario final, de modo que ofrece al consumidor la posibilidad de generar su propia electricidad. Sin embargo, esta tecnología aún no está muy desarrollada ya que la investigación no le dedica, a las TU, los mismos recursos que a sus hermanos mayores. Además, los vientos de ciudad no son los mejores para conseguir una gran eficiencia energética con aerogeneradores clásicos de eje horizontal, la velocidad media del viento en la ciudad es menor que en las áreas rurales y esa velocidad no es constante, sino que cambia rápida y frecuentemente, del mismo modo que lo hace la dirección; las corrientes tienen un componente vertical y se producen efectos de concentración al lado de los edificios
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 21 de 37
+
+más altos. Y por otro lado, hay que tener en cuenta las turbulencias, que obligan a la turbina a girar a velocidades variables y a modificar frecuentemente su orientación para seguir la dirección del viento. El pequeño aerogenerador urbano se puede decir que se encuentra en el mercado en una fase de desarrollo anterior a la de los grandes aerogeneradores. Parece ser que los aerogeneradores de eje vertical son los más adecuados para las aplicaciones en el entorno urbano, ya que tienen como ventaja la capacidad para funcionar con vientos turbulentos cerca de la tierra, lo que les hace adecuados para la instalación cerca de los edificios o en los tejados. Además, la velocidad de rotación en este tipo de aerogeneradores es relativamente lenta, lo que hace que sean más silenciosos. Holanda es uno de los países pioneros en este tipo de tecnología, principalmente debido a la falta de espacio geográfico para otro tipo de instalaciones y en los últimos años varias empresas pequeñas han desarrollado e instalado turbinas en los edificios, como escuelas, oficinas y bloques de apartamentos. En el año 2000, en la azotea del pabellón que representaba a este país en la exposición Universal de Hannover, se montaron, sobre mástiles de 12 m, 6 turbinas de 5 m de diámetro y 2.5 kW de potencia cada una del modelo Tulipo. Tres años después, ocho ciudades holandesas contaban ya con aerogeneradores urbanos y otras 20 se preparaban para instalarlos. Según un estudio realizado, en 2002, por la consultora Royal Haskoning para la Agencia Holandesa para la Energía y el MedioAmbiente (Novem), la potencia eólica urbana instalada en Holanda podría alcanzar en 2020 los 60 MW, lo que supondría la instalación de entre 25 000 y 35 000 de este tipo de aerogeneradores. Hay que tener en cuenta que la colocación de aerogeneradores en el techo de un edifico no es tan simple como suena y así se han diseñado turbinas para la colocación específica de los techos (Turby y WindWall). Entre 1998 y 2000 se desarrolló el proyecto WEB (Wind Energy for the Built Environment), financiado por la UE. En este proyecto se proponía diseñar los futuros edificios en los que los aerogeneradores fuera una parte más de sus estructuras. A tal fin, arquitectos de la Universidad de Stuttgart (Alemania) diseñaron dos torres de 200 m de altura ligeramente inclinadas y unidas entre sí por tres turbinas eólicas de 30 m de diámetro. Pero quedó en eso, en un proyecto. En un futuro si puede que los edificios pueden ser construidos con los aerogeneradores integrados en su estructura, aunque hay que tener en cuenta que para la mayoría de los diseñadores de aerogeneradores, así como arquitectos e ingenieros civiles, el concepto de integración de una turbina eólica en un edifico es bastante nuevo. La integración de dos tecnologías requiere nuevas formas de pensar de todos los participantes. Esto incluye el desarrollo de nuevas competencias para hacer frente a las complejidades en el ámbito de los costos en relación con la construcción de forma y funciones de usuario. Para la integración de este tipo de energía a la red es necesario en muchos países el desarrollo de nuevos marcos regulatorios que activen el mercado. 7. ESTADO ACTUAL DE LA ENERGÍA EÓLICA DE BAJA POTENCIA En los últimos años se están produciendo avances importantes en el campo de la energía eólica de baja potencia. El líder mundial en este mercado es EE.UU. Según la American Wind Energy Association (AWEA), en este país, durante 2006, se instalaron 8 565 kW y se vendieron 8 329 aerogeneradores de baja potencia (Tabla 2), de los cuales el 98 % se fabricaron en el país. En el resto del mundo, se vendieron 6 803 unidades de las cuales el 94 % también fueron fabricadas en EE.UU. (Tabla 2). El mercado mundial de los pequeños aerogeneradores presenta un desarrollo prometedor. Existe un número creciente de fabricantes de pequeños aerogeneradores (Tabla 3) y, actualmente, los fabricantes de grandes aerogeneradores empiezan a realizar incursiones en este sector, atraídos por las posibilidades del nuevo mercado. La mayoría de las empresas no Americanas fabrican turbinas eólicas inferiores a 1 kW y principalmente suelen vender en su propio país, sobre todo China. Las pocas empresas que han entrado en el mercado Americano proceden de Reino Unido, Canadá o Alemania.
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 22 de 37
+
+Tabla 2: Unidades de Aerogeneradores instalados / Potencia instalada (kW) EE.UU. Fabricación Nacional 8159 / 7100 ON-Grid 416 / 3119 OFF-Grid 7 743 / 3981 Fabricación Extranjera 170 / 1465 ON-Grid 37 / 1403 OFF-Grid 133 / 62 8329 / 8565 Total Fabricación Americana 5373 / 3354 ON-Grid 69 / 466 OFF-Grid 5303 / 2889 Resto mundo Fabricación no Americana 711 / 2904 ON-Grid OFF-Grid 6803 / 6258 Total
+
+352 / 2784 359 / 156
+
+Fuente: Tabla realizada a partir de los datos del estudio “AWEA Small Wind Turbine. Global Market Study 2007”
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 23 de 37
+
+Tabla 3: Principales fabricantes de aerogeneradores de baja potencia a nivel mundial País Empresa AC-120 AC-240 AC-500 Aerocraft AC-750/NE AC-1002 H AC-3000 AC-5000 Aerosmart Aircon GmbH & Co. KG Atlantis Windkraft AeroSmart5 Aircon 10 S Atlantis WB 15 Atlantis WB 20 Windkraft 1.5 DRAGOTHERM GmbH Fuhrländer Alemania Heyde Windtechnik INVENTUS GmbH WindGen1000 FL 30 FL 100 Antaris 2.5 INVENTUS 6 ML 300 “Butterfly” Moratec ML 1500 “Shark” ML 3000 “Air” ML 10 “Eko” Cyclon Marine Point. Of.com GmbH Cyclon 1.0 kW Cyclon 2.0 kW Vertikale 0.3 SIRENA GmbH Vertikale 0.5 Winplex Superwind GmbH Thümler GmbH Windtechnik Geiger GmbH Superwind 350 Alu Windrad SG 280 SG 500 F500/8 F1000/11 Abatec S.A. Argentina IVS 500 INVAP Ingenieria S.A. IVS 1000 IVS 1500 IVS 4500 Horizontal 0.5 1 1.5 4.5 F2000/9 F4500/12 Horizontal Vertical Horizontal Horizontal Horizontal Horizontal Horizontal Horizontal Vertical Horizontal Horizontal Horizontal Horizontal Horizontal Horizontal Horizontal Modelo Tipo Potencia (kW) 0.12 0.24 0.5 0.75 1 3 5 5 10 0.3 0.6 1.5 1 30 100 2.2 6 0.3 1.5 3 6 0.6 1 2 0.3 0.5 0.25 0.35 0.006 1.5 5 0.5 1 2 4.5
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 24 de 37
+
+País
+
+Empresa Flowtrack Pty Ltd Soma Power P/L
+
+Modelo Flowtrack 5kW Soma 400 Soma 1000 3 kW 5 kW 10 kW 20 kW Notus 112 Notus 138
+
+Típo Horizontal Horizontal
+
+Potencia (kW) 5 0.4 1 3 5 10 20 0.25 0.35
+
+Australia WestWind Wind Turbines
+
+Horizontal
+
+Brasil
+
+Enersud Ind.
+
+Gerar208 Gerar246 Verne555 AJT-15 AJT-30
+
+Horizontal
+
+0.7 1 6 1.5 3
+
+Aerojoule
+
+AJT-45 AJT-100
+
+Horizontal
+
+4.5 10
+
+Atlantic Orient Canada Inc. Cleanfield Energy
+
+AOC 15/50 Cleanfield 3.5 kW 300W 500W
+
+Horizontal Vertical
+
+50 3.5 0.3 0.5
+
+Cyclone Wind Generators
+
+1000W 2000W 3000W Electrovent 15 Electrovent 30 PGE11/35 PGE 20/35 PGE 50/35 Windports 5 kW Windports 10 kW Windports 20 kW EW 15 Model 5 Wenvor Turbine 1 Kw VAWT 3 Kw VAWT Windports 5 kW Windports 10 kW
+
+Horizontal
+
+1 2 3 0.25 0.5 3.5 35 50 5
+
+Electrovent Canadá Énergie PGE
+
+Horizontal
+
+Horizontal
+
+Energy Resource Development Inc. Entegrity (EWSI) Wind Systems Inc.
+
+Vertical Horizontal Horizontal Horizontal Vertical
+
+10 20 50 5 30 1 3 5 10
+
+Quantum Wind Power Corp. Wenvor Technologies Inc. WestTech Environmental Systems Inc
+
+Windports
+
+Vertical
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 25 de 37
+
+País
+
+Empresa 300 W 500 W
+
+Modelo
+
+Típo
+
+Potencia (kW) 0.3 0.5
+
+Canadá
+
+Windturbine c.a.
+
+1 Kw 2 Kw 3 kW HM2.2-300 H.M2.5-500 H.M2.8-1000
+
+Horizontal
+
+1 2 3 0.3 0.5 1
+
+Huamin Win.power Inc.
+
+H.M3.2-2000 H.M4.5-3000 H.M5.0-5000 H.M7.0-10000 HY- 400 HY- 600 HY- 2000 FD2.5-200W FD2.8-500W FD4.0-1000W FD4.0-2000W TAOS400 TAOS800 TAOS1500 TGT-2 LT2.2-300W LT2.7-500W LT3.0-1000W LT3.6-2000W LT4.5-3000W LT5.0-5000W
+
+Horizontal
+
+2 3 5 10 0.4
+
+Guangzhou Hongying Energy Technology Co., Ltd
+
+Horizontal
+
+0.6 2 0.2 0.5 1 2 0.4 0.8 1.5 2 0.3 0.5 1 2 3 5
+
+China
+
+Prostar International Electric Co., Ltd.
+
+Horizontal
+
+TAOS Wind Energy
+
+Horizontal
+
+Zhejiang Liten Wind Power Co.
+
+Horizontal
+
+Gaia Wind A/S Genvind Engineering ApS Dinamarca Nordic Folkecenter for Renewable Energy Windmission
+
+11kW 50/60 Hz GV20-2 7.5 Kw Unimill Windflower 1 kW Inclin 250 Inclin 600 Inclin 1500 neo Inclin 3000 neo Inclin 6000 neo Bk 12
+
+Horizontal Horizontal Horizontal Horizontal
+
+11 22 7.5 1 0.25 0.6 1.5 3 6 12
+
+España
+
+Bornay
+
+Horizontal
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 26 de 37
+
+País
+
+Empresa Velter B Velter D Solener Velter I Velter II Velter XV Windeco Abundant Renewable Energy Aeromax Corporation Aerostar Wind Turbines Inc. Appropriate Energy Inc. Bay Winds
+
+Modelo
+
+Típo
+
+Potencia (kW) 0.3 0.5
+
+Horizontal
+
+1 2 15 5 8 2.5 10 0.9 8.6 0.5
+
+España
+
+Vento 5000 Vento 8000 ARE 110 ARE 442 Lakota Aerostar 6 meter S5000 S20000 SLG 23-10 BWC XL.1
+
+Horizontal Horizontal Horizontal Horizontal Horizontal Horizintal
+
+20 30 10 1
+
+Bergey WindPower Co. Endurance Wind Power Inc.
+
+BWC 1500 BWC Excel S-250 FSW Gyro-2 FSW Gyro-3 FSW Gyro-5 FSW GyroExtreme FSW Gyro 1kW FSW Gyro 3kW
+
+Horizontal Horizontal
+
+1.5 10 4.25 0.2 0.3 0.5 0.5 1 3
+
+Four Seasons Windpower Estados Unidos Hamilton Ferris Company Helix Wind Northeast Wind Energy
+
+Vertical
+
+Ferris WindPower 200 Savonius 2 kW Savonius 5 Kw NW 3000 Seahawk
+
+Horizontal Vertical Horizontal
+
+0.2 2 5 3 0.5
+
+Pac Wind Inc.
+
+Delta I Aeolian Delta II ST1.2American Twin Air X
+
+Vertical
+
+2 5 10 1 0.4
+
+Selsam Innovations
+
+Horizontal
+
+Southwest Windpower Inc.
+
+Whisper 100 Whisper 200 Whisper 500
+
+Horizontal
+
+0.9 1 3
+
+Thermodyne Systems
+
+Condor Hornet
+
+Horizontal
+
+0.8
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 27 de 37
+
+País
+
+Empresa Wind Simplicity
+
+Modelo Windancer 3 Windancer 7 Jacobs 23-10 Jacobs 23-12.5
+
+Tipo Horizontal
+
+Potencia (kW) 3 7 10 12.5
+
+Estados Unidos Wind Turbine Industries, Corp.
+
+Jacobs 26-15 Jacobs 26-17.5 Jacobs 31-20
+
+Horizontal
+
+15 17.5 20
+
+Finnwind Oy
+
+Tuule T23 Tuule T 188 WS-4C
+
+Horizontal
+
+0.54 4 1
+
+Finlandia
+
+Oy Windside Production Ltd.
+
+WS-2B WS-0.3 WS-12
+
+Vertical
+
+1.8 8
+
+Pem-Energy Oy Auton´Home Productions Ebony´s Creations Eoltec SAS Gual Industrie
+
+MyPower EPR 3.5 EPR 5 150 W Scirocco Windrunner Statoeolien GSE 4 Statoeolien GSE 8 T.A. 2.4 900 T.A. 3.2 1200 T.A. 3.6 1500
+
+Horizontal Horizontal Horizontal Vertical
+
+2 0.5 0.9 0.15 6 25 1.3 6 0.9 1.2 1.5
+
+Francia
+
+Travere Industries
+
+T.A. 3.6 1600 T.A. 6.0 2100 T.A. 3.6 3000 T.A. 6.0 5500 GEV 5/5 Alizes
+
+Horizontal
+
+1.6 2.1 3 5.5 5
+
+Vergnet
+
+GEV 7/10 Lastours GEV 10/20 Gazelle Butterfly BF 1 K
+
+Horizontal
+
+10 20 1
+
+Grecia
+
+Energotech S.A. Ecofys
+
+BF 3 K BF 6 K Neoga Fortis Montana
+
+Horizontal Vertical
+
+3 6 3 5
+
+Holanda
+
+Fortis Wind Energy
+
+Fortis Passaat Fortis Espada Fortis Alize Provane 5
+
+Horizontal
+
+1.4 0.8 10 2
+
+Prowin
+
+Horizontal
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 28 de 37
+
+País
+
+Empresa The Wind Factory TH Rijswijk Tulipower
+
+Modelo TWFi-280 TWFi-500 Th Rijswijk Tulipo Turby Ventury 110 WES5 Tulipo WES18 WW 2000 Sidilu roof top wind power generator AR-200W
+
+Tipo Horizontal Horizontal Horizontal Vertical Vertical Horizontal Vertical Horizontal
+
+Potencia (kW) 1.8 6 5 2.5 2.5 0.5 2.5 80 2.4 0.75 0.2
+
+Holanda
+
+Turby B.V. Venturi Wind b.v. Wind Energy Solutions (WES) WindWall B.V. Sidilu Renewable Energy
+
+India Vaigunth Enertek
+
+AR-500W AR-1000W AR-5000W ENGINEERING Nasin 2.5 kW mt-15120
+
+Horizontal
+
+0.5 1 5 2.5
+
+Irak
+
+ARMAN DESIGNIN CO
+
+Horizontal
+
+Irlanda
+
+Atlantic Power Master Surface Power Technologies BluMiniPower Jonica Impianti Cooperativa Società
+
+mt-2110 SP 460W MaestraleForza 20 JIMP20 WRE.007
+
+Horizontal Horizontal Horizontal Horizontal
+
+0.8 1.2 0.46 20 20 0.75 0.3 1 3 6 20
+
+Italia Ropatec Srl.
+
+Speedy Vertical Easy Vertical Simply Vertical Maxi Vertical Big Star Vertical Krei Kogyo Co., Lyd. Loopwing Co. Wind-ST Tronc U2850 NWG-200 Horizontal Horizontal Vertical
+
+0.3 2 0.2 0.2
+
+Japón Nikko
+
+FUGUE/NWG-200F NWG-600 NWG-4K NWG-10K Zephyr Corporation Airdolphin Horizontal Horizontal
+
+0.7 4 10 1
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 29 de 37
+
+País
+
+Empresa
+
+Modelo CS03TDR CS09TDR CS12TDR CS15TDR
+
+Tipo
+
+Potencia (kW) 0.3 0.9 1.2 1.5
+
+Kenia
+
+Craftskills
+
+CS18TDR CS24TDR CS32TDR CS48TDR CS90TDR
+
+Horizontal
+
+1.8 3.5 6 9
+
+Gusto Energy Ltd. Nueva Zelanda
+
+Gusto 2.0 kW I0/3000 I0/6000 I0/10 000 I0/30 000 Enwia E08
+
+Horizontal
+
+2 3 6 10 30 8
+
+Solwind Ltd.
+
+Vertical
+
+Polonia
+
+Enwia
+
+Enwia E15 Enwia E40 Ampair 100
+
+Horizontal
+
+15 40 0.1
+
+Ampair Microwind
+
+Ampair 300 Ampair 600
+
+Horizontal
+
+0.3 0.6
+
+Brumac Wind Systems Ltd.
+
+Eurowind 1.3 kW Eurowind 5 kW
+
+-
+
+1.3 5
+
+Eurowind Small Turbines Ltd
+
+Eurowind 10.8 kW Eurowind 19 kW Eurowind 30 kW
+
+Vertical
+
+10.8 19 30
+
+FuturEnergy Ltd. Reino Unido Gazelle Wind Turbines Ltd. Gotwind.org Iskra Wind Turbine Manufactures Ltd. LVM Ltd.
+
+FuturEnergy 1kW Gazelle DIY 12v-100w generator Iskra AT5 -1 Aero4gen-F Aero6gen-F Rutland 503 Rutland 913 wind
+
+Horizontal Horizontal Horizontal Horizontal
+
+1 20 0.1 5.3 0.12 0.24 0.025 0.09
+
+Horizontal
+
+Marlec Engineering Co Ltd.
+
+Rutland FM 910-3 Rutland FM 1803
+
+Horizontal
+
+0.09 0.7
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 30 de 37
+
+País
+
+Empresa 200W 300W 500W Navitron 1kW 2Kw 5kW 10Kw 20Kw
+
+Modelo
+
+Tipo
+
+Potencia (kW) 0.2 0.3 0.5 1 2 5 10 20 2.5
+
+Horizontal
+
+Proven 2.5 Reino Unido Proven Energy Products Ltd. Proven WT 600 Proven WT 6000 Proven WT 15000 Quietrevolution Ltd. Renewable Turbines Devices Swift qr 5 Swift 0.4 kW Wren Micro-turbine Wren Extreme Wren Mistral AWT (1) 2000 AWT(2)2X2000 WS-1000 Breeze 5000 SW-2/5 Rusia SCIENMET Group SWD-20 SWD-30 SWD-40 e150 Kestrel Wind Turbines (Pty) Ltd. e220 e300 e400 Sudáfrica Turbex T330 T460 T550 T780 T1100 Winglette Wind Machines DalWind Energy Group Suecia PitchWind Systems AB SVIAB W03 DalWind 1.8 P 14-30 VK240 Horizontal Vertical Horizontal Horizontal Horizontal Horizontal Horizontal Vertical Horizontal Horizontal Horizontal Vertical Horizontal Vertical Horizontal
+
+0.6 6 15 6 1.5 0.4 0.3 0.3 0.85 2 4 1 5 2.5 20 30 40 0.6 0.8 1 3 1.5 3 4.5 10 20 3 1.8 30 0.75
+
+Rugged renewables Samrey Generators & Turbines Ltd.
+
+Winddam Windsave JSC “Wind Energy Company”
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 31 de 37
+
+País Aventa LTD. Suiza
+
+Empresa AV-7
+
+Modelo
+
+Tipo Horizontal Horizontal
+
+Potencia (kW) 6.5 0.5 6 50 1
+
+Enflo 0060/0.5 Enflo Systems AG Enflo 0300/0.6 Enflo 0700/50 WE-1000 Wind Electric WE-8000 WE-20000 Horizontal
+
+8 20
+
+A continuación se realiza un estudio más detallado de la energía eólica de baja potencia. Canadá En Canadá se están vendiendo una media de 800 aerogeneradores de baja potencia al año. En los últimos años se ha experimentado un importante crecimiento en el mercado, especialmente en los aerogeneradores de 1 kW de potencia. Las aplicaciones con mayor futuro parecen ser para carga de baterías, en viviendas residenciales con conexión a red, en granjas, lugares comerciales y en comunidades aisladas en el norte del país. En el intervalo comprendido entre 300 W y 3 kW, l s aerogeneradores, o principalmente, proceden de empresas estadounidenses (Bergey, Aeromax, Southwest Windpower, Wind Turbina Industries Corp.) aunque también algunos son de origen europeo como Proven Energy Products Ltd., Windmission y Bornay, e incluso del algún fabricante canadiense como Electrovent. En el rango de 10 kW a 100 kW, la mayoría son de fabricación interna (Aerojoule, Atlantic Orient Canada Inc., Wenvor Technologies) o procedentes de Europa (Vergnet, Fuhrländer). Los sistemas de 10 a 100 kW principalmente están conectados a red. EE.UU. EE.UU. ha lanzado ambiciosos programas de fomento de la instalación de pequeños aerogeneradores. La Asociación Americana de Energía Eólica (AWEA) ha realizado estudios de mercado dentro de este sector indicando que el crecimiento reciente anual fue del 35 % y con objetivos de crecimiento en torno al 20% anual hasta 2010. Todo ello teniendo en cuenta que la industria estadounidense de pequeños aerogeneradores es líder a nivel mundial, copiando un tercio del mercado mundial. Dos empresas de EE.UU. son las líderes, Southwest Windpower de Flagstaff (Arizona) y Bergey Windpower de Norman (Oklahoma). Sólo Southwest Windpower vendió en 2006 aerogeneradores de pequeña potencia por valor de 10 millones d dólares, controlando prácticamente el mercado mundial. El 40 % las unidades se e vendieron en EE.UU. Hasta esa fecha, Bergey Windpower ha producido más de 4 800 unidades entre 1 Kw y 10 kW. Además, en EE.UU. se realizan importantes inversiones dentro del campo de la investigación. Por ejemplo, NPS estaba desarrollando una nueva versión de aerogeneradores con una potencia de 100 kW, la empresa SouthWest Windpower estaba llevando a cabo un nuevo prototipo de aerogeneradores de 1.8 kW (Sky Stream), Abundant Renewable Energy está realizando un aerogenerador de 6 kW, Composite Engineering investiga una nueva pala de bajo coste de fabricación de 7.5 m de longitud, Pricenton Power Systems estudia un nuevo convertidor para aerogeneradores de potencia inferior a 100 kW, SNL Distributed Energy Technology Laboratory ensaya dos nuevos prototipos de aerogeneradores de 50 kW, etc.
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 32 de 37
+
+España Actualmente, en España los aerogeneradores con potencias inferiores a 100 kW sólo se utilizan para generar electricidad en entornos aislados, alejados de la red y generan en total, aunque es difícil de predecir, una potencia de 7 MW. La falta de un marco regulatorio propio y la falta de incentivos fiscales impide que se active este mercado y se impulse la fabricación en masa de este tipo de máquinas. Ecologistas en Acción ha pedido una tarifa específica que fomente la conexión a red de estos equipos ya que actualmente este tipo de energía recibe el mismo incentivo que la gran eólica –unos 6. 6 céntimos de euro el kWh– y ese dinero difícilmente compensa el largo y complicado trámite burocrático de conectar un aerogenerador de baja potencia a la red. En el campo de la investigación, cabe destacar la puesta en marcha del Proyecto “Singular Estratégico Minieólica”, dotado con 13 millones de euros, liderado por el Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas (CIEMAT) y el centro Tecnológico especializado en Energía Robotiker Energía; si bien participan un total de siete empresas privadas y seis centros de Investigación de distinta naturaleza. El objetivo de este proyecto es incrementar la viabilidad de las aplicaciones eólicas de pequeña potencia a través de la investigación y desarrollo de los aerogeneradores de pequeña potencia, para su optimización en términos de fiabilidad, reducción de emisiones de ruido y aumento de la energía capturada e innovación, tanto en los distintos componentes que lo constituyen como en los nuevos desarrollos. Asimismo, se pretende acometer la certificación de todos los aerogeneradores comerciales de pequeña potencia fabricados en España, para avalar la calidad, fiabilidad y sobre todo la seguridad de sus diseños tanto en aplicaciones aisladas como conectadas a la red eléctrica. Por último se pretende desarrollar varios proyectos innovadores que sirvan de demostración de este tipo de instalaciones, mostrando su gran utilidad para generación de energía en lugares con viento moderado, como integraciones en los tejados de las viviendas o en polígonos industriales, desalación o tratamientos de agua, aire acondicionado o sistemas de detección de incendios, entre otros. Dentro de la Unión Europea, este proyecto es él más ambicioso en investigación y desarrollo en tecnología eólica de pequeña potencia y uno de los mayores del mundo, tras algunos proyectos desarrollados en EE.UU. y Japón. En la actualidad en España hay tres fábricas de aerogeneradores de baja potencia, Bornay, Solener y Windeco (Tabla 3). Finlandia Aunque en este país el desarrollo de turbinas eólicas de baja potencia no es muy favorable, la empresa WIindside Oy es uno de los principales actores europeos en el mercado de la producción de turbinas de baja potencia y de eje vertical. Además, cabe destacar que Pem-Energy Oy ha lanzado a finales de 2007 una pequeña turbina eólica, “MyPower”, de 2 kW de potencia, lo que es suficiente para cubrir las necesidades de una pequeña casa. Las palas tienen un diámetro de 3.5 m y puede ser fácilmente instalada en los tejados. Además, si el espacio lo permite se pueden conectar varias unidades en serie. Italia En Italia, durante el año 2006, los fabricantes de turbinas de baja potencia sufrieron un importante impulso, que se mantuvo durante el 2007, gracias a la nueva regulación que se aprobó para la electricidad y el gas. En esta regulación se indica que el intercambio de energía entre la red y las plantas de energías renovables subirá a una capacidad de 20 kW. Gracias a esta medida y a la reducción a 50 MWh el umbral de la energía para obtener los certificados verdes, la industria de fabricación de aerogeneradores de baja potencia espera importantes crecimientos
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 33 de 37
+
+Entre los últimos desarrollos cabe destacar la turbina eólica, modelo JIMP20, diseñada por Jonica Impianti, en 2006, para la producción en serie. Una nueva compañía BluMiniPower ha entrado en el mercado con el modelo de aerogenerador de baja potencia, 20 kW, MaestraleForza 20, la turbina tiene un rotor de 8 m de diámetro con una velocidad de 12 m/s. Otras compañías, también recientes dentro de este sector, son el Grupo Tozzi y Cepa. En el caso del Grupo Tozzi cabe destacar, junto la Universidad de Trento y la Universidad Politécnica de Milán, el proyecto enfocado al diseño y construcción de dos tipos de turbinas: una de eje vertical con una potencia inferior a 3 kW, para ser usada en áreas urbanas y otra de eje horizontal de hasta 80 kW para aplicaciones industriales, rurales, etc. Cabe destacar, que en Italia la actividad dentro del desarrollo de las turbinas urbanas parece estar por encima del término medio. Hay varias empresas como Jonica Impianti o Ropatec (Tabla 3) que trabajan dentro de este campo. Japón En Japón, últimamente la empresa Zephyr Corp. desarrolló el modelo Z-1000 Airdolphin, de 1 kW. Este tipo de turbina eólica está siendo demostrada en muchos lugares alrededor del mundo, tales como: Tarifa (España), Soria (España), Rimini (Italia) en el Reino Unido y en distintas ciudades de Japón. Esta empresa así como también Toshiba Engineering, Matsushita Ecology system, TORISHIMA Pump o Fuji Heavy Industries Ltd, son activos actores en el mercado dinámico de turbinas urbanas en Japón. En la Tabla 4 se recogen diferentes tipos de Turbinas Urbanas (< 100 kW) instaladas en Japón entre 1987 y 2002. Tabla 4: Principales tipos de turbinas urbanas, <100 kW, instaladas en Japón entre 1987 y 2002 Año 1987 1990 1991 1992 1992 1993 1993 1994 1994 1994 1994 1995 1995 1996 1997 1997 1997 1998 1999 2000 2001 Fabricante Yamaha Motor Yamaha Motor Mitsubishi Heavy Industries Yamaha Motor Yamaha Motor NEG-Micon Kenetch Yamaha Motor Yamaha motor Yamaha Motor Yamaha Motor Isobe Iron Works, Ltd Yamaha Motor Yamaha Motor Yamaha Motor Yamaha Motor TACKE Lagerwey Fuhrlander Fuji Industries Mie University Potencia (kW) 15 16.5 100 16.5 16.5 100 100 16.5 16.5 16.5 16.5 15 16.5 16.5 16.5 16.5 80 80 100 40 30 Número de Unidades 1 2 1 2 5 1 3 1 1 1 1 1 1 1 1 1 1 1 3 1 1
+
+Fuente: Informe “WINEUR” Wind Energy integration in the urban envinroment
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 34 de 37
+
+Portugal En Portugal se están realizando importantes avances en el uso de aerogeneradores de baja potencia. Así, en Noviembre de 2007, se aprobó un decreto ley para diferentes tecnologías de microgeneración: eólica, solar, hidráulica, cogeneración de biomasa, etc. En este decreto se establece una tarifa única de referencia de 650 €/MWh, durante los 5 primeros años de vida de la instalación y para los primeros 10 MW que se instalen en el país. Por cada 10 MW adicionales que se instalen la tarifa irá disminuyendo un 5 % y después de los cinco primeros años la instalación percibirá durante los próximos 10 años, anualmente, la tarifa única que corresponda a la del 1 de enero de ese año, aplicable a las nuevas instalaciones que sean equivalentes. Después de este período de 15 años, las instalaciones pasarán al régimen general. Cada tecnología recibirá un porcentaje de esta tarifa única. En el caso de la energía mini eólica, será el 70 % de la misma, es decir 450 €/kWh. Dentro del campo de la investigación cabe destacar el National Institute for Engineering Tecnology and Innovation I.P. (INETI). INETI está desarrollando turbinas de bajo coste para uso urbano. Es un proyecto Nacional, T .URBan, que está financiado por el Programa Nacional DEMTEC- Sistema de Incentivos a la Realización de Proyectos Piloto Relativos a Productos, Procesos y Sistemas Tecnológicamente Innovadores. El proyecto se espera que esté finalizado a mediados de 2008. Reino Unido En Reino Unido, la energía eólica de baja potencia cada vez va teniendo más importancia debido a la iniciativa que se estableció en 2004 “Microgeneration Strategy” y que marca como objetivo que en el 2050 entre el 30 % y 40 % de la demanda eléctrica del país sea abastecida por tecnologías de microgeneración, como la minieólica, la fotovoltaica y la minihidraúlica, así como reducir las emisiones de CO2 en un 15 % al año. Posteriormente, y a partir de 2006, el gobierno está proporcionando subvenciones para las instalaciones de tecnologías de microgeneración bajo el Plan Low Carbon Building Programme de Edificios de Bajo Carbono (LCBP), que reemplaza al anterior programa Clear Skies. En Reino Unido cabe destacar el último trimestre de 2006 ya que en esa época se pusieron a la venta, en comercios esparcidos por toda Inglaterra, aerogeneradores eólicos de potencias inferiores 1 Kw, al alcance de todo el mundo, con manual de instalación y garantía de funcionamiento de 10 años. Estimaciones preeliminares señalan que pueden producir hasta el 30 % de la energía eléctrica consumida en una casa y además está la posibilidad de interconectarlos a red de forma que la energía de red de distribución sólo se utilizará cuando la generación propia no sea suficiente. En relación con los aerogeneradores con una potencia inferior a 10 kW hay que señalar que aunque el número de instalaciones realizadas y potencialmente previsibles en lo próximos años es alto, su contribución energética es muy baja. Se estima que hacía el año 2010 puede existir una potencia instalada total de unos 13 000 kW. Los aerogeneradores entre 10 y 100 kW, se utilizaron en la década pasada con fines experimentales y actualmente se utilizan en aplicaciones concretas con limitaciones de potencia. En dicho país e xisten más de ocho fabricantes, Proven Energy, Gazelle, Iskra, Ampair, Windsave, RenewablesDevicesSwift, Rutland-Marlec (Tabla 3). Entre ellos, Proven Energy es el líder mundial de proveedores de aerogeneradores de baja potencia, tiene más de 1 500 aerogeneradores instalados por todo el mundo. 8. EXPERIENCIA DE CUBA EN EL USO DE LA ENERGÍA EÓLICA DE BAJA POTENCIA En Cuba, partir de los años noventa, algunas instituciones, como el Centro de Investigación de Energía Solar (CIES) de Santiago de Cuba y el Centro de Estudio de Tecnologías Energéticas Renovables (CETER), del Instituto Superior Politécnico “José Antonio Echeverría” (ISPJAE), incursionaron en el diseño y construcción de sistemas eólicos, aunque sin llegar a un grado de madurez tecnológico aceptable para acceder a su producción industrial. Es importante mencionar la puesta en marcha en Cabo Cruz, Granma, del único aerogenerador fabricado en Cuba con potencia nominal mayor de 1 kW, el Tornado T7-10 kW.
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 35 de 37
+
+Este proyecto surge como resultado de la transferencia de tecnología del FOLKCENTER de Dinamarca, ofrecida a Cuba a través del CETER. La responsabilidad de la ejecución del proyecto la asumió la Empresa Mecánica de Bayamo (EMBA), del Ministerio de la Industria Sideromecánica (SIME), con la asesoría técnica de especialistas del CETER. La Comisión Nacional de Energía en esos años importó más de diez pequeños aerogeneradores chinos, que fueron distribuidos por diferentes organismos, pero dejaron de operar por diversas razones. A esto se añade la producción informal de estas máquinas por parte de algunas entidades y personas interesadas en el tema.
+
+Fuente: Revista “Energía y Tú” No. 39/2007. Editada por la ONG CUBASOLAR
+
+Figura 10: Aerogenerador instalado en la Estación Ecológica de Cayo Sabinal, en Ciego de Ávila
+
+A partir de 1996 la empresa EcoSol Solar, División de Copextel S.A., comienza un programa de instalación de sistemas eólicos e híbridos, que en la actualidad ya cuenta con una potencia instalada de 28,9 kW, en dieciséis instalaciones, con veinte aerogeneradores de diferentes marcas y procedencias (Tabla 5). Hay que mencionar igualmente la instalación de un pequeño aerogenerador experimental de fabricación alemana en el Centro Integrado de Tecnología Apropiada (CITA) en 1998.
+
+Tabla 5: Principales tipos de sistemas instalados por Ecosol Solar Potencia instalada (kW) Eólica (E) 0.4 0.4 0.4 0.4 0.4 0.4 0.8 0.4 Fotovoltaica (FV) 0.17 0.17 0.17 0.1 0.17 0.17 0.33 Diésel (Ds) Marca
+
+Año de instalación 2000 2000 2000 2001 2002 2002 2002 2002
+
+Tipo de Sistema Híbrido E-FV Híbrido E-FV Híbrido E-FV Híbrido E-FV Híbrido E-FV Híbrido E-FV Híbrido E-FV Eólico
+
+Cantidad de Ubicación Aerogeneradores 1 1 1 1 1 1 2 1 Guantánamo Guantánamo Guantánamo Villa Clara Camagüey Camagüey Camagüey Pinar del Río
+
+AirMarine AirMarine AirMarine AirMarine AirMarine AirMarine AirMarine AirMarine
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 36 de 37
+
+2002 2002 2002 2003 2003 2004 2005 2006
+
+Híbrido E-FV Híbrido E-FV Híbrido E-FV Híbrido E-FV Híbrido E-FV-Ds Híbrido E-FV-Ds Eólico Eólico
+
+0.8 0.8 0.8 0.4 6 1.5 3 1.5
+
+0.24 0.24 0.24 0.8 16 2.4 -
+
+10 20 -
+
+AirMarine AirMarine AirMarine AirMarine Inclin 6000 Inclin 1500 Inclin 3000 Inclin 1500
+
+2 2 2 1 1 1 1 1 20
+
+Isla de la Juventud Isla de la Juventud Isla de la Juventud Matanzas Guantánamo Villa Clara Camagüey Pinar del Río
+
+Total de Aerogeneradores
+
+Los modelos instalados en este período provienen de las firmas Southwest Windpower Inc. (AirMarine ó Air X) de Estados Unidos y de la española Bornay (Inclin). 9. CONCLUSIONES • La energía eólica de baja potencia constituye una importante opción energética, ya que tiene ventajas muy importantes frente a otras tecnologías, como es la posibilidad de ubicar sus instalaciones casi en cualquier sitio con un potencial eólico moderado. Existe un prometedor mercado para el empleo de pequeños aerogeneradores en aplicaciones aisladas en países en vía de desarrollo, donde se está incrementando la demanda de instalaciones híbridas para sistemas aislados. El mercado mundial de los pequeños aerogeneradores presenta un desarrollo prometedor. El líder mundial es EE.UU., y actualmente, los fabricantes de grandes aerogeneradores empiezan a realizar incursiones en este sector. Para la integración de este tipo de energía a la red es necesario en muchos países el desarrollo de nuevos marcos regulatorios que activen el mercado.
+
+•
+
+•
+
+•
+
+10. BIBLIOGRAFÍA - Eólica 2007. Anuario del sector. Análisis y datos. AEE - “Energía y Tú” No. 37/2007 y ”No. 39/2007. Editada por la ONG CUBASOLAR. La Habana. Cuba - Gipe P (2000) Edit. PROGENSA, S.A. “Energía eólica práctica” - Informe “WINEUR” Wind Energy integration in the urban envinroment - http://eco.microsiervos.com/tecnologia/aerogeneradores-domesticos.html - http://www.ewea.org - http://exa.unne.edu.ar/depar/areas/fisica/maestria/modulo2/eolica/eolo42002.pdf - http://www.uni-oldenburg.de/ppre/download/Downloads/ENERG%CDAS_RENOVABLES - http://personales.ya.com/universal/TermoWeb/EnergiasAlternativas/eolica/PDFs/EOLO32002.pdf - http://www.misteriospdf.com/otros/aerogenerador.pdf
+
+PROSPECTIVA Y VIGILANCIA TECNOLÓGICA
+
+VT-3/08/Ed1 Página: 37 de 37
+
+- http://martingiordano.blogspot.com/2006/02/energa-elica-tipos-de-generadores.html - http://www.windpower.org/ES/tour/wtrb/tower.htm - http://www.inersol.es/Sistemas_Hibridos.htm - Villarubia M (2004) “Energía Eólica” Ediciones CEAC
+

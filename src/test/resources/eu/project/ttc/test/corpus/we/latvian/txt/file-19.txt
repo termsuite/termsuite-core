@@ -1,0 +1,96 @@
+Vējdzirnavas ir vismaz 4000 gadu vecas . Līdz ar riteņa izgudrošanu dažādās vietās vienlaicīgi tika radīti vēja dzinēji . Vējdzirnavas , būdamas vienas no pirmajām tehniski izmantojamām enerģijas ieguves iekārtām , atbrīvoja cilvēku no smaga un vienmuļa darba rokas dzirnavās un dzīvniekus Ģēpeļa iekārtās , fizisko darbu liekot veikt dabas spēkiem . Vēja darbinātām mašīnām vajadzēja sūknēt , malt , zāģēt , kalt , presēt , celt un pēc dinamo izgudrošanas arī ražot strāvu . Ar vēja spēku tika radīti trokšņi vai darbinātas noslēpumaini skanošās Eola flautas , vējā griezās pat lūgšanu dzirnaviņas , uzlabojot to īpašnieku garīgo labsajūtu . Daudzi izgudrotāji konstruējuši fantastiskas vēja spēkstacijas , kas vēl šodien dod daudzas ierosmes . Jaunas atziņas aerodinamikā un īpaši līdz ar lidaparātu radīšanu ļāva izveidot arvien labākas sistēmas . Fosilo enerģijas nesēju izmantošanas bums pārtrauca to tālāku attīstību . Mūsdienās interese par vēja enerģijas izmantošanu atkal pieaug , un ir pamats domāt , ka šajā jomā radīsies vēl daudzas jaunas idejas .
+
+
+Kōnig dod vienkāršu izmantojamās enerģijas formulu : p = 0 , 000255 x v 3 xA ( kW ) , kur p ir jauda kilovatos , v ir vēja ātrums m / s , A ir darbrata virsmas laukums m 2 . Faktors 0 , 000255 ietver vēja rotoru aerodinamisko lietderības koeficientu apmēram 50 % un spārnu lietderības koeficientu 0 , 9 . Šī formula izmantojama aptuvenai vēja dzinēja jaudas aprēķināšanai .
+Redzams , ka vēja ātrums tiek kāpināts trešajā pakāpē . Formulu pārveidojot , var aprēķināt jaudu uz laukuma vienību P / A ( kW / m 2 ) . Salīdzinot to ar Boforta skalu , ir skaidri saskatāms kāpinājums :
+Vēja stiprums ballēs ( pēc Boforta )
+Vēja ātrums m / s
+Iespējamā jauda uz laukuma vienību kW / m2
+3
+4 , 4
+0 , 021
+4
+6 , 8
+0 , 08
+5
+9 , 5
+0 , 23
+6
+12 , 3
+0 , 47
+7
+15 , 5
+0 , 95
+8
+19
+1 , 75
+9
+22
+2 , 27
+10
+26 , 5
+4 , 75
+11
+30
+6 , 89
+12
+34 , 5
+10 , 5
+Šie lielumi nav izmantojami visu vēja dzinēju jaudas aprēķināšanai , jo to dažādas konstrukcijas tiek īpaši piemērotas noteiktiem vēja ātrumiem , pie kuriem tie darbojas visoptimālāk . Ja vēja ātrums ir attiecīgi mazāks vai lielāks , dzinēju lietderības koeficients samazinās .
+Tā kā vēja enerģija tiek saņemta ar pārtraukumiem , nepieciešama enerģijas uzkrāšana . To var veikt sūkņu akumulācijas sistēmās vai akumulējot elektroenerģiju .
+Jaudas
+Vēja elektrostacijas tiek būvētas individuāli dažādos lielumos vai nelielās sērijās . Patlaban lielākais vēja dzinējs atrodas Dānijā ( Tvind ) ; tā nominālā jauda ir 1 , 7 MW un darbrata diametrs - 54 m . Milzīgas iekārtas ar darbrata diametru , kas pārsniedz 100 m ( piemēram , projekts “ Groivian ” BMFT , nominālā jauda 3 MW ) , tiek plānotas vai būvētas .
+Lielākais piedāvātais projekts ir iekārta Menas līcī ( ASV ) , kas iecerēta kā peldošs torņu mežs . Tā realizēšana ir salīdzināma ar kosmiskajām programmām . Ari PSRS tiek plānota lielu iekārtu uzstādīšana . Līdz 1990 . gadam ir paredzēts izvei ¬ dot vēja elektrostaciju tīklu , kas sastāvēs no 150 000 vēja spēkstacijām ar kopējo jaudu 45 000 MW .
+
+Lielu vēja elektrostaciju aizsākums rodams jau trīsdesmitajos gados , par ko liecina H . Honnef plāni , kuros redzamai 100 MW jaudas vēja torņi .
+Pastāvot centralizētai enerģijas apgādes struktūrai , īpaši tiek veicināta lielu projektu radīšana . Tomēr tie nav savienojami ar pielāgotas tehnoloģijas pamatprincipiem . Veidojot liela mēroga iekārtas , jāapsver arī kaitējums , ko var nodarīt videi un ainavai .
+Nelielas vēja elektrostacijas ar nominālo jaudu 10 - 15 kW ar darbrata diametru 0 , 6 - 15 m - tiek ražotas sērijveidā jau daudzus gadus un vienmēr tiek izpirktas . Ātrgaitas dzinēji sasniedz ražotāju nosaukto jaudu tikai pie liela vēja ātruma ( 8 - 10 mis ) . Mūsu klimatiskajos apstākļos , kad vēja ātrums dažādās vietās vidēji gadā svārstās no 2 līdz 7 m / s , šīs nominālās jaudas netiek sasniegtas .
+Apgabalos , kur vidējais vēja ātrums ir 4 m / s ( VFR šādi apstākļi ir 10 % no kopējās platības ) , iekārta , kuras nominālā jauda ir 10 kW , apgādā ar elektrību trīs vienģimeņu mājas visa gada garumā ( ja patēriņš atbilst piedāvājumam ; sk . nod . “ Enerģijas aprites sistēma ” ) . Ziemeļjūras piekrastē ( gadā vidēji 7 m / s ) šāda iekārta varētu saražot elektrību , ko gada laikā patērē 20 ģimenes .
+Vēja dzinēji ar šādu jaudu piemēroti decentrālai izmantošanai mājā un apdzīvotā vietā . Mazākas iekārtas ( nominālā jauda 1 - 2 kW ) parasti spēj apgādāt tikai atpūtas mājiņas vai reti izmantojamas telpas utml . Vēja elektrostacijas , kuru jauda ir ap 100 kW , kopā ar vienoto energotīklu var apgādāt veselus ciemus .
+Lēngaitas iekārtas , piemēram , “ amerikāņu vēja turbīnu ” tips , ievērojamu jaudu sasniedz jau pie vēja ātruma 2 m / s . Maksimumu tās sasniedz pie vēja ātruma 5 m / s , un jauda nepalielinās arī tad , ja vēja ātrums ir daudz lielāks . Apgabalos , kur pārsvarā ir lēns vējš , tās izmantojamas kā nelieli , bet konstanti enerģijas avoti .
+Funkcijas
+Daudzas no seno laiku vēja mašīnām darbojas tikai pēc spiediena principa . Veidojot savdabīgas konstrukcijas , tika mēģināts uzlabot to efektivitāti . Parasti tika samazināta vai aizsegta pret vēju ejošās puses virsma . Šis princips tomēr neļauj sasniegt lielas jaudas .
+Jaunākie vēja dzinēji vairāk vai mazāk veidoti pēc aerodinamikas likumiem , kas ļauj pacelties lidmašīnām un būrāt šķērsām vēja virzienam . Vējš šādā gadījumā pūš perpendikulāri vēja dzinēja griešanās virzienam un iedarbojas uz nedaudz ieslīpo spārna profilu . Tā rezultātā uz spārna vēja pusē rodas spiediens , bet aizvēja pusē - retinājums , kas abi kopā virza spārnus griešanās virzienā . Spārnu griešanos kavē pretvējš . Summējot dzenošo vēju ( reālo vēju ) un pretvēju , veidojas šķietamais vējš , kas ideālā gadījumā slīd pār ieslīpo profilu . Tā kā spārnu aploces ātrums pieaug virzienā no centra uz ārpusi , šeit ir arī lielāks pretvējš , kas spēcīgāk ietekmē šķietamo vēju . Tādēļ vēja dzinēju darbratu spārnu gali tiek veidoti plakanāki nekā rotācijas ass tuvumā . Bieži vien uzplūdes leņķis ir regulējams atbilstoši vēja ātrumam .
+Līdzās berzei , inercei , enerģijas zudumiem pārvadīšanas rezultātā u . c . , kas samazina iegūto enerģijas daudzumu , vēja dzinēju jaudu īpaši ietekmē divi faktori : vēja enerģijas izmantošanas koeficients Cp un ātrgaitas koeficents ( λ ) . Vēja enerģijas izmantošanas koeficients aerodinamikā ir noteikts lielums ; tas nozīmē , ka brīvi rotējoša vēja turbīna maksimāli var izmantot 16 / 27 no teorētiski iespēja ¬ mās vēja enerģijas ( Cp max = 0 , 59 , pēc Betz ) . Šis lielums atbilst ideālām vēja mašīnām ; zināmajos vēja dzinējos tas netiek sasniegts .
+No spieķota riteņa izgatavots vēja dzinējs . Ar ārējā gredzena palīdzību tiek nostiprinātas metāla plāksnītes . Piemērots lēna vēja apstākļos . Izmantojams sūknēšanai un elektrības ražošanai ar automobiļa ģeneratora palīdzību .
+Dažādu vēja dzinēju jaudu salīdzinājums parāda šaurās vēja enerģijas izmantošanas koeficienta robežas atkarībā no ātrgaitas koeficienta . Katrs vēja dzinējs ir paredzēts noteiktam , optimālam vēja ātrumam . Visus vēja dzinējus raksturojošās līknes stipri atšķiras no ideālas līknes . Vienmērīgāku vēja izmantošanu var panākt , izmantojot vairākus , atšķirīgus vēja dzinējus .
+Uzbūve un izmantošana
+Vēja dzinēji iedalās ātrgaitas un lēngaitas iekārtās ar horizontālu vai vertikālu asi . Horizontālās ass dzinējiem darbrats var būt izvietots frontāli vai astē . Ātrgaitas koeficents λ ir starpība starp spārnu galu aploces ātrumu un vēja ātrumu v .
+λ = u / v ;
+
+λ = 2rn / 60v ;
+
+kur n - apgriezienu skaits un r - darbrata rādiuss .
+Ja λ mazāks par 1 , vēja dzinējus sauc par lēngaitas iekārtām . Ātrgaitas dzinē ¬ jiem λ ir 5 - 10 . Lēngaitas dzinēju griezes moments pie λ = 1 - 2 ir ļoti liels . Ātrgaitas dzinēju ( λ = 6 ) griezes moments ir 6 reizes mazāks . Uzbūves ziņā tie galvenokārt atšķiras ar spārnu virsmas laukuma lielumu .
+Lēngaitas iekārtām ir liela spārnu virsma , kas liek darbratam griezties jau pavisam lēnā vējā un rada lielu griezes momentu pie maza apgriezienu skaita . Stiprā vējā to jauda nemainās , jo vējš darbratam vairs nepūš cauri , bet to apiet . Lielās spārnu virsmas dēļ šos dzinējus var viegli sabojāt vētra .
+
+
+Ātrgaitas dzinējiem ir divi vai trīs propellera formas spārni . Tie sāk darboties tikai pie vēja ātruma 3 - 4 m / s un izmanto vēja plūsmas enerģiju daudz labāk nekā lēngaitas iekārtas .
+
+Horizontālās ass dzinējiem spārni ir noslogoti vienmērīgi , jo tie pastāvīgi atrodas optimālā stāvoklī - “ pusvējā ” . To trūkums ir enerģijas patērēšana mehāniska darba veikšanai , kas rada lielus zaudējumus .
+Dzinēji ar vertikālu asi nav jāpieskaņo vēja virziena maiņām , tādēļ ietaupās daudz izdevumu , kas saistīti ar regulēšanu . Jauda tiek atdota tieši uz leju , tādēļ tie ir ļoti piemēroti mehāniska darba veikšanai . Tomēr šie dzinēji vēja enerģiju izmanto daudz mazāk , jo darbrata lāpstiņas griežas iepriekš radītajā gaisa virpulī , atpakaļceļā virzās pret vēju , un notiek bremzēšanās . Arī modernie vertikālās ass dzinēji veic kaut ko līdzīgu “ burāšanas manevra aplim ” .
+Enerģijas pamešanai no ass jānotiek pēc iespējas tieši , bez daudziem mehānis ¬ kiem pārveidojumiem . Labi piemērotas ir vienkāršas piedziņas asis un izciļņu piedziņa , koniskie zobrati un pārnesumi mazina jaudu . Ģeneratoriem vajadzētu pēc iespējas atrasties tieši uz ass , bez pārnesumu starpniecības . To tinumu skaitam jābūt saskaņotam ar apgriezienu skaitu . Ģeneratora veids atkarīgs no izmantošanas veida .
+Horizontālās ass vēja dzinēju regulēšana prasa zināmus tehniskus līdzekļus . To var veikt ar astes plāksni līdzīgi kā vējrāžiem . Lielās dzirnavās zobu vainaga pārstādīšanai izmanto perpendikulāri griešanās plaknei uzstādītus spārniņus , kas , vējam pūšot slīpi , ar zobratu piedziņu torni pagriež vēja virzienā . Vienkāršāki ir t . s . aizmugures dzinēji ( Hecklāufer ) , kad vēja darbrats griežas masta aizmugurē un vēja spiediena rezultātā pats pagriežas vajadzīgajā virzienā . Lielās iekārtās regulēšanu veic motori , kas orientē dzinējus atkarībā no meteoroloģiskajiem mērījumiem .
+Vēl viens svarīgs konstruktīvs faktors ir vēja dzinēju pasargāšana no bojājumiem vētras laikā . Regulējami darbratu spārni var palikt vējā , citiem ir atsperu mehānismi , kas katru spārnu atsevišķi vai arī visu darbratu izgriež no vēja . Senajām vējdzirnavām spārnos bija plāksnītes , kuras varēja atvērt , vai arī buras , ko varēja rēvēt ( samazināt laukumu ) . Vertikālās ass vēja dzinēji vētras laikā tiek pārveidoti ļoti reti , tādēļ to konstrukcijai ir jābūt atbilstoši robustai .
+Šajā jomā sagaidāmas vēl daudzas jaunas konstrukcijas vai esošo principu kombinācijas . Dzinēju iebūvēšana mājās izvirzīs daudzas jaunas prasības .
+Lai būtu iespējams izmantot dažāda stipruma vēju un taupīt līdzekļus , uz viena masta ieteicams uzstādīt vairākus vēja dzinējus . Atkarībā no vēja īpatnībām dzinēji varētu būt vienādi vai dažādi , kas kopumā nodrošinātu vienmērīgu enerģijas padevi . Iespējams savstarpēji kombinēt vertikālās un horizontālās ass dzinējus . Vēl viena priekšrocība šādos gadījumos būtu drošības rezerve apstākļos , ja kāds no dzinējiem pārstāj darboties .
+Amerikāņu vēja turbīna ir piemērota galvenokārt lēna vēja apstākļiem . Tās darbratam var būt vairāk par 100 lāpstiņām . Tas ir izplatītas visā pasaulē un tiek izmantotas ūdens sūknēšanai . Ļoti robustas un vienkāršas .
+Darjē dzinējs ( nosaukts izgudrotāja vārdā ) ir pazīstamākais vertikālais ātrgaitas vēja dzinējs ar aerodinamiskiem profiliem , kas veidots kā ķēdes līkne un pārnes tikai vilkmes spēku . Profilam ir konstants ķērsgriezums , ko var iegūt profilpresējot . Vienkāršā uzbūve un apkope dod tam zināmas priekšrocības , neskatoties uz mazāku jaudu ( salīdzinājumā ar horizontālās ass dzinējiem ) . Tomēr Darjē dzinējam ir nepieciešama palīdzība palaižot . To var veikt ar Savoniusa elementu vai ar elektroģeneratoru .
+Buru vējdzirnavas , ka , piemēram , šīs , kas atro ¬ das Grieķijā , nav mainījušās 2000 gadu laikā un ir izplatītas Vidusjūras reģionā .
+Ietekme uz apkātni
+Vēja dzinēju uzstādīšana - kā jebkura cita būve - nozīmē iejaukšanos pastāvošajā dabas sistēmā , tādēļ jāņem vērā to ietekme uz apkārtni .
+Veidols
+Mēs esam pieraduši redzēt elektropārvades līnijas , kuru dēļ tiek izcirstas stigas mežos , un kuru izvietojums ne vienmēr ir pieskaņots ainavas īpatnībām . Bet par vēja elektrostacijām pastāv uzskats , ka tās bojā ainavu .
+Vēja dzinēji liecina par tiešu , dabai draudzīgu enerģijas izmantošanu . Tiem nav vajadzīgas elektropārvades līnijas . Kustību valdzinājumu un aerodinamiskās formas skaistumu sliktākajā gadījumā var traucēt neveiksmīgs torņa plānojums un tehnikas izvietojums . Tie , kas pazīst La - Sita līdzenumu Krētā vai polderu apgabalus Holandē , zina , ka tieši vēja dzinēji ir raksturīgākā ainavas iezīme un neatkārtojams tās elements .
+Atkarībā no reģionālajiem vēja apstākļiem vēja dzinēju tips un lielums jāpieskaņo vietējām īpatnībām . Tie vienmēr atradīsies visvējainākajā vietā . Tādējādi tie zināmā mērā raksturo apkārtni , kurā tie atrodas , kļūstot pat par ainavas tipa identifikācijas pazīmi .
+Konstruktīvā ziņā ir lietderīgi veidot kopēju mājas un vēja dzinēja nesošo konstrukciju , šīs abas lietas savstarpēji saskaņojot . Iespējamo vibrāciju var novērst smagas , masīvas būvdetaļas , kuras mājā nepieciešamas arī klimatisku apsvērumu ! dēļ . Jaubūvējamā mājā šādi iespējams samazināt izdevumus , kas citkārt nepieciešami vēja dzinēja torņa būvei .
+Trokšņi . Vibrācija
+Vēja dzinēji rada skaņas , kas var izsaukt dažādas cilvēku izjūtas un reakcijas . Ja iekārta nav bojāta , to tomēr nevar uzskatīt par troksni . Tā drīzāk rada klusas skaņas , kas izklausās pēc maigas vēja šalkoņas . Vēja dzinēji nerada skaņas , kas līdzinās helikoptera dzenskrūves radītajam troksnim , jo vēja dzinēja griešanās ātrums pieskaņojas vēja ātrumam . Šis mehānisko trokšņu un vēja šalkoņas sajaukums diezin vai var kļūt par traucēkli . Vēja dzinēja īpašnieks varbūt pat izjutīs gandarījumu , dzirdot , ka iekārta darbojas viņa labā , līdzīgi kā uguns sprakšķēšana akustiskā ceļā rada siltuma sajūtu .
+
+Tomēr nav izslēgta vibrācija , kas novadās uz leju . Frontālā darbrata spārnu griešanās masta priekšpusē rada mainīgu vēja spiedienu , kā rezultātā masts svārstās . Astes dzinējiem rodas galvenokārt spārnu svārstības , jo tie griežas torņa radītajā aizvējā . Jārēķinās arī ar vēl citām vibrācijām .
+
+Vibrāciju pārvadīšanās īpaši jāņem vērā , veidojot savienojuma konstrukciju ar māju ; dažkārt ir vienkāršāk dzīvojamo ēku un dzinēja torni veidot atsevišķi , nekā veikt sarežģītus pasākumus vibrācijas novēršanai .
+Ekoloģiskie aspekti
+Vēja dzinēji , būdami šķēršļi vēja ceļā , ietekmē tā normālo plūsmu . Vidēja lieluma vēja dzinēji vēja bremzēšanas ziņā ir pielīdzināmi pieaugušiem kokiem ar 20 m vainaga diametru . Turklāt vēja enerģija tiek pārvērsta rotācijas spēkā . Tādēļ vēja dzinēji , tāpat kā koki , patērē enerģiju , bet nenovirza vēju , līdz ar to nerodas tā sablīvēšanās citā vietā , ko izraisa cietie šķēršļi ( kalni un mājas ) , īpašos gadījumos vējdzirnavas varētu kalpot aizsardzībai pret vēju . Tomēr parasti vēja dzinēju darbināšanai tiek izmantots augstākos gaisa slāņos esošais , ap mājām un kokiem nesavirpuļotais vējš , līdz ar to vēja ātruma samazināšanās pie zemes virsas nerodas . Nelielā attālumā aiz darbrata ( apmēram četru darbrata diametru apjomā ) gaisa plūsma atkal izlīdzinās . Pat lielas iekārtas kā , piemēram , Menas līča projekts , nerada būtiskas klimatiskas sekas , kas būtu iespējamas , piemēram , milzīgu saules bateriju uzstādīšanas rezultātā . Vēju radošā spiedienu starpību izlīdzināšanās , sastopot savā ceļā “ jaunu topogrāfiju ” , drīkstētu norisināties arī lēnāk .
+Vēja dzinēju izmantošana no mūsdienu zināšanu viedokļa nerada ekoloģisku kaitējumu ne mazā , ne lielā mērogā .
+Posted by admin @ 8 : 53 am

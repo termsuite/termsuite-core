@@ -1,0 +1,334 @@
+MODELOS DE AEROGENERADORES PARA ESTUDIOS DE ESTABILIDAD DE SISTEMAS ELÉCTRICOS M. González, L. Rouco
+Instituto de Investigación Tecnológica, Universidad Pontificia Comillas Alberto Aguilera 23, 28015 Madrid
+
+M. Alonso, J.R. Diago, F.J. Pérez
+Empresa Nacional de Electricidad, S.A. Príncipe de Vergara 187, 28002 Madrid RESUMEN Este artículo presenta los modelos dinámicos de aerogeneradores desarrollados para un paquete de programas de simulación de sistemas eléctricos comercial. Se describen los modelos de los componentes de los aerogeneradores: la máquina asíncrona, la turbina eólica, los condensadores de compensación y su control, y las protecciones. Se muestra la respuesta de un parque eólico que utiliza los aerogeneradores descritos ante dos tipos de perturbaciones: variaciones del viento y faltas en la red próxima. Palabras clave: estabilidad, aerogeneradores, generadores asíncronos, turbinas eólica, protecciones. 1. Introducción La conexión de los parques eólicos a las redes eléctricas presenta problemas de diferente naturaleza. Estos problemas se derivan de la naturaleza del elemento de conversión electromecánico de energía (la máquina asíncrona) y de la característica aleatoria de la fuente de energía primaria (el viento). La máquina asíncrona carece de capacidad de regulación de tensión y frecuencia y absorbe potencia reactiva en todo su margen de funcionamiento. Es preciso pues, que la red a la que está conectada proporcione la potencia reactiva que necesita y mantenga la tensión y frecuencia en sus bornes ante variaciones de la carga. Por otro lado, la potencia desarrollada por la turbina eólica que acciona el generador asíncrono depende de la velocidad del viento. Estos problemas pueden tener diferente impacto dependiendo de las características de la red a la que está conectado el parque: red aislada o sistema interconectado. En cualquier caso, la conexión de un parque eólico a una red requiere la realización de estudios detallados tanto de régimen permanente como de régimen dinámico para valorar con precisión su impacto [1]. Este artículo describe los modelos dinámicos desarrollados para un paquete de programas de simulación comercial ampliamente utilizado por la industria eléctrica española [2]. Estos modelos se han desarrollado utilizando la capacidad de este paquete para incorporar “modelos definidos por el usuario”. Este artículo contiene otras tres secciones. La segunda sección del artículo expone los modelos de los componentes del aerogenerador desarrollados e implantados para el estudio del funcionamiento en régimen dinámico de los parques eólicos. La tercera sección muestra los resultados de simulaciones, que ilustran la respuesta típica de los aerogeneradores ante dos tipos de perturbaciones: (i) variaciones en la velocidad del viento, y (ii) faltas en la red próxima al parque. La cuarta sección resume las conclusiones más importantes obtenidas de los estudios realizados. 2. Modelos de los componentes del aerogenerador 2.1 Máquina asíncrona El modelo de máquina asíncrona contemplado es el habitual en estudios de estabilidad de sistemas eléctricos: se desprecian los transitorios de los circuitos del estator [3]. En cada paso de integración de la simulación numérica, el generador de inducción de jaula simple se puede representar como una fuente de tensión E ′ detrás de una impedancia transitoria jX ′ (figura 1).
+
+E′
+
+X′
+
+V I
+
+~
+
+Figura 1. Equivalente Thevenin del generador asíncrono de simple jaula de ardilla. Las ecuaciones eléctricas (diferenciales y algebraicas) de la máquina asíncrona de jaula simple expresadas en magnitudes unitarias referidas a la potencia base de la máquina y considerando el criterio de generador (intensidad saliente y deslizamiento positivo) son: dE ′ −1 = E ′+ j( X− X ′)I + jE ′sω 0 ′ dt T 0
+
+[
+
+]
+
+(1) (2) (3)
+
+E ′=V− jX ′⋅I Pe =Re E ′⋅I ∗
+
+{
+
+}
+
+Los parámetros de las ecuaciones (1), (2) y (3) (reactancia a circuito abierto en pu X , la reactancia transitoria en pu X ′ ,y T 0 la constante de tiempo del rotor en segundos) se obtienen del circuito ′ equivalente de la máquina asíncrona (figura 2) según las expresiones: X = Xs + Xm X ′ = Xs + T0 = ′ X m Xr X m + Xr (4) (5)
+
+Xr + X m Rr ω 0
+
+(6)
+
+I V
+
+Xs
+
+Xr Xm Rr s
+
+Figura 2. Circuito equivalente de la máquina asíncrona de jaula simple. La ecuación mecánica de la máquina asíncrona es: ds Pm − Pe = 2H dt siendo s el deslizamiento en pu, y H la constante de inercia en segundos: s= (7)
+
+ω 0 −ω r ω0
+1 2Jω 2 Sbase
+
+(8)
+
+H=
+
+(9)
+
+Los parámetros del modelo de usuario desarrollado son los correspondientes son los definidos en las ecuaciones (4), (5), (6) y (7). Las variables de salida son el deslizamiento s y la potencia eléctrica generada Pe . La variable de entrada es la potencia mecánica Pm . Por tanto el modelo puede conectarse con otro modelo, por ejemplo de una turbina, que determine la potencia mecánica aplicada al generador. 2.2 Turbina eólica El modelo de una turbina eólica comprende tres partes claramente diferenciadas: • El viento como fuente de energía. Las diferentes componentes de la velocidad del viento deben ser representadas adecuadamente.
+
+• •
+
+Las características aerodinámicas de las palas, que se traducen en una curva de potencia determinada, dependiente de la velocidad del viento. El sistema mecánico formado por el conjunto palas, buje, multiplicador y acoplamiento al eje del generador. Se caracteriza por la inercia elevada de la turbina, y la baja rigidez del acoplamiento al generador, especialmente en las máquinas más grandes.
+Vw Modelo del viento Característica Potencia-Velocidad Pw
+H H
+
+Pm
+
+Modelo Mecánico
+
+Figura 3. Componentes del modelo de turbina eólicas. Se ha desarrollado un modelo de usuario que representa el comportamiento dinámico de una turbina eólica de álabes fijos, basado en los modelos que se describen a continuación. En el desarrollo del modelo se ha tratado de mantener un compromiso entre la representación detallada de los fenómenos, y la facilidad de obtención de los parámetros necesarios para alimentar el modelo. 2.2.1 Modelo del viento En un sistema de conversión de energía eólica es necesario modelar adecuadamente el comportamiento espacial y temporal del viento. Especialmente importante es conocer como afectarán ráfagas y cambios rápidos en rampa al comportamiento dinámico de la máquina y su repercusión en la calidad de la energía entregada a la red [4]. También es interesante tener un modelo de las variaciones aleatorias que sufre continuamente el flujo de aire. Con estas cuatro componentes se consigue un modelo razonablemente flexible para el estudio de las perturbaciones debidas al viento.
+Base V base
+
+Rampa
+
+V rampa V w = Vbase + V ráfaga + V rampa + V aleatorio
+
+Ráfaga V ráfaga Ruido Valeatorio
+
+Figura 4. Componentes de la velocidad del viento. 2.2.2 Modelo de las características aerodinámicas La capacidad de una turbina eólica para extraer la energía del viento depende de tres factores: (i) la potencia eólica disponible, (ii) la curva de potencia de la máquina, y (iii) el buen comportamiento de la máquina para responder a fluctuaciones en la velocidad del viento [5]. La potencia mecánica obtenida por una turbina eólica es: 1 3 Pw = ρ ⋅A⋅CP ⋅V w 2 donde: • • • • • Pw es la potencia debido al viento (W), (10)
+
+ρ es la densidad específica del aire (un valor típico es 1,225 Kg/m3),
+A es el área barrida por las palas de la turbina (m2), CP es el coeficiente de eficiencia aerodinámica (es una magnitud adimensional), y V w es la velocidad del viento (m/s).
+
+En la práctica las mayores diferencias proceden de la forma de regulación que limita la potencia de salida. La figura 5 muestra las características de la turbina eólica que equipa al aerogenerador considerado a lo largo del artículo:
+
+2.3 Condensadores del compensación de potencia reactiva El aerogenerador considerado está equipado con condensadores de compensación de reactiva, distribuidos en 4 escalones (ver tabla I). El microporcoesador de supervisión y control del aerogenerador determina la conexión de los los escalones en función de la potencia activa generada. Tabla I. Control de los condensadores de compensación de reactiva. Escalón 1 2 3 4 Potencia Reactiva 33,4 kVAR 33,4 kVAR 50 kVAR 50 kVAR Desconexión 40 kW 130 kW 230 kW 320 kW Conexión 80 kW 150 kW 250 kW 340 kW
+
+Para el control del banco de condensadores, se ha desarrollado un modelo de usuario que contiene la lógica y las instrucciones necesarias par controlar la inserción o desconexión de los condensadores, según la potencia que entrega el aerogenerador. 2.4 Protecciones El microprocesador de supervisón y control también incluye también las protecciones del aerogenerador. Ajustes típicos de las protecciones relevantes para estos estudios son: • • • • • • Máxima y mínima tensión : 1.1 y 0.9 p.u. durante 1 segundo. Máxima y mínima frecuencia : 51 y 49 Hz durante 0.2 segundos. Sobreintensidad en los cables : 2.3 p.u. durante 2 segundos. Sobrecarga del 120 % durante 10 segundos. Sobrevelocidad en el generador: 1650 r.p.m. durante 1 segundo. Sobrevelocidad en la turbina: 39 r.p.m. durante 1 segundo.
+
+Las protecciones se han incluido en otro modelo de usuario, que contiene la lógica de las protecciones, y se encarga de dar el disparo del generador si se sobrepasan los límites durante más tiempo del definido. 3. Respuesta de un parque eólico conectado a un sistema interconectado Las perturbaciones que puede sufrir un parque eólico son, principalmente, de dos tipos: (i) perturbaciones debidas a variaciones en la velocidad del viento, y (ii), perturbaciones originadas por faltas en la red próxima al parque eólico. Esta sección detalla la respuesta de los aerogeneradores o del modelo agregado del parque, ante ambos tipos de perturbación. 3.1 Respuesta ante variación de la velocidad del viento Entre las perturbaciones debidas a cambios en la velocidad del viento, se estudian especialmente las variaciones en rampa y las ráfagas, ambas según los modelos ya explicados. Para ilustrar el comportamiento de un parque eólico, se ha considerado un caso con una sóla máquina equivalente. Cuando un generador asíncrono recibe un aumento del par mecánico, aumenta la potencia activa que genera, pero esto conlleva también un aumento del consumo de reactiva. A partir de los estudios realizados sobre cambios en la velocidad del viento, se ha tratado de ajustar el control de las baterías de condensadores para minimizar el impacto sobre las tensiones de la red, de las variaciones en la generación del parque. En las gráficas de las figuras 7 y 8, se muestra la evolución de las variables más importantes de un aerogenerador, cuando sufre una de las perturbaciones mencionadas. En los gráficos de la izquierda, se muestran las potencias activas (MW) y reactivas (MVAr) del parque y de las máquinas. En los gráficos de la derecha se muestran la tensión en los terminales de las máquinas (p.u.), y el deslizamiento (%). Se puede apreciar que mientras no hay apenas diferencia entre la potencia activa de la máquina y la del parque, (será únicamente las pérdidas), si hay una importante diferencia entre la potencia reactiva total consumida por los aerogeneradores, y la reactiva que absorbe el parque de la red externa. En ambos casos se puede observar como se conectan o desconectan los bancos de condensadores, según varía la potencia del aerogenerador en función de la velocidad del viento. El efecto del control dinámico de
+
+los condensadores, es el de mantener las variaciones de tensión dentro de unos márgenes aceptables, como se aprecia en las gráficas de la derecha de las figuras 7 y 8. En el gráfico de la izquierda de la figura 7 se muestra la respuesta ante un cambio en rampa de la velocidad del viento de 5 m/s de amplitud, y duración 10 segundos. Se puede apreciar claramente el momento en que son conectados los bancos de condensadores según se va incrementando la potencia generada, como consecuencia del aumento en la velocidad del viento, manteniendo la tensión al final de la rampa prácticamente en el mismo valor que tenía antes. Si se estuviera utilizando un banco de condensadores fijo, se deduce de la gráfica que la tensión habría caído aproximadamente un 3 %.
+POWER TECHNOLOGIES, INC.R POWER TECHNOLOGIES, INC.R
+
+2.0000
+
+1.0000
+
+2.0000
+
+1.1000
+
+2.0000 CHNL# 1: 100*[PE AERO] 0.0
+15.000 13.500
+
+1.0000 CHNL# 2: 100*[QE AERO] -1.000
+
+AEROGENERADOR (4 X 350 KW) COMPENSACION DE REACTIVA CON 4 ESCALONES
+
+AEROGENERADOR (4 X 350 KW) COMPENSACION DE REACTIVA CON 4 ESCALONES
+
+CHNL# 4: 100*[DESLIZAMIENT]
+
+CHNL# 6: [TENSION AERO]
+
+FILE: C1RAM.OUT
+
+FILE: C1RAM.OUT
+
+CHNL# 8: [P PARQUE] -1.000 0.0
+
+CHNL# 9: [Q PARQUE]
+
+0.90000
+15.000 13.500
+
+0.0
+
+0.0 1.5000
+
+3.0000 4.5000
+
+6.0000 7.5000
+
+9.0000 10.500
+
+12.000
+
+0.0 1.5000
+
+3.0000 4.5000
+
+6.0000 7.5000
+
+9.0000 10.500
+
+12.000
+
+TIME(SECONDS)
+
+TIME(SECONDS)
+
+FRI, JUN 07 1996
+
+17:38
+
+Figura 7. Respuesta del aerogenerador ante una rampa del viento: Potencias activa y reactiva suministradas por el parque y un aerogenerador (izquierda), tensión en bornes y deslizamiento del aerogenerador (derecha). En las gráficas de la figura 8, se tiene la respuesta ante una ráfaga de viento de 5 m/s de amplitud, y 10 segundos de duración. En la gráfica de la tensión, a la derecha, se observa como los condensadores contribuyen a aliviar el hueco de tensión. Cuando la ráfaga comienza, y el generador aumenta su generación, y por tanto, su consumo de reactiva, se conectan dos escalones de condensadores, que serán desconectados cuando pasada la ráfaga, el generador vuelva al punto de trabajo inicial.
+POWER TECHNOLOGIES, INC.R POWER TECHNOLOGIES, INC.R
+
+2.0000
+
+1.0000
+
+1.1000
+
+2.0000
+
+2.0000 CHNL# 1: 100*[PE AERO] 0.0
+15.000 13.500
+
+1.0000 CHNL# 2: 100*[QE AERO] -1.000
+
+AEROGENERADOR (4 X 350 KW) COMPENSACION DE REACTIVA CON 4 ESCALONES
+
+AEROGENERADOR (4 X 350 KW) COMPENSACION DE REACTIVA CON 4 ESCALONES
+
+CHNL# 4: 100*[DESLIZAMIENTO]
+
+CHNL# 6: [TENSION AERO]
+
+FILE: C1RAF.OUT
+
+FILE: C1RAF.OUT
+
+CHNL# 8: [P PARQUE] -1.000 0.0
+
+CHNL# 9: [Q PARQUE]
+
+0.90000
+15.000 13.500
+
+0.0
+
+0.0 1.5000
+
+3.0000 4.5000
+
+6.0000 7.5000
+
+9.0000 10.500
+
+12.000
+
+0.0 1.5000
+
+3.0000 4.5000
+
+6.0000 7.5000
+
+9.0000 10.500
+
+12.000
+
+TIME(SECONDS)
+
+TIME(SECONDS)
+
+Figura 8. Respuesta del aerogenerador ante una ráfaga de viento: Potencias activa y reactiva suministradas por el parque y un aerogenerador (izquierda), tensión en bornes y deslizamiento del aerogenerador (derecha). Es importante observar que al considerar el parque como una sóla máquina equivalente se está en un caso muy desfavorable, puesto que supondría que todas las máquinas sufren la misma perturbación, y responden al unísono. En realidad hay un efecto mediador porque no todas las máquinas ven las variaciones de viento al mismo tiempo, y por tanto la respuesta del parque vista desde la red sería más suave. 3.2 Respuesta ante un cortocircuito en la red De las perturbaciones que pueden ocurrir en la red cercana a un parque eólico un cortocircuito trifásico es la más severa de cara a la estabilidad de la red y del propio parque. Cuando se produce un cortocircuito en las cercanías de un generador asíncrono, éste se acelera rápidamente al perder el par resistente ofrecido por la red. Una vez que la falta ha sido despejada, normalmente abriendo la línea afectada, el generador debe remagnetizar el rotor, y frenarlo hasta recuperar su punto de trabajo pre-falta.
+
+Si el deslizamiento de la máquina asíncrona es demasiado alto cuando se despeja la falta, se ha entrado en la zona inestable de la curva par-deslizamiento. La tensión en bornes del generador volverá a caer limitada únicamente por su impedancia de cortocircuito, y el deslizamiento seguirá aumentando, hasta que la máquina sea desconectada por sus protecciones de mínima tensión o sobrevelocidad. Cuando una máquina asíncrona en cortocircuito es desconectada, se produce una subida súbita de las tensiones en las máquinas adyacentes, que en ocasiones es suficiente para llevarlas de nuevo a condiciones de funcionamiento estables. En las figuras 9, 10 y 11 se presenta el caso de un parque representado por 3 máquinas equivalentes, por ejemplo correspondientes a tres filas o grupos de máquinas próximas. Se provoca un cortocircuito trifásico en una de las líneas de salida, despejado en 100 ms, y uno de los aerogeneradores, (el más próximo a la falta), dispara por actuación de su protección de mínima tensión, mientras que los demás permanecen conectados. En las gráficas de la figura 9 se puede ver, a la izquierda, la evolución de las tensiones en bornes de las tres máquinas equivalentes, y la tensión en la salida a 132 kV del parque; a la derecha, se muestra la potencia activa generada por cada uno de los grupos. Puede observarse claramente como hay una máquina que no consigue recuperarse y queda con una tensión muy baja. Cuando se desconecta, hay una subida de tensión que hace subir las tensiones de las otras, que quedan trabajando en su estado inicial.
+POWER TECHNOLOGIES, INC.R POWER TECHNOLOGIES, INC.R
+
+1.2000 CHNL# 40: [V CAP.132] FILE:C2_COR100TRI.OUT 0.0
+4.0000 3.6000
+
+1.2000 CHNL# 40: [V CAP.132] FILE:C41_COR100TRI.OUT 0.0
+
+10.000
+
+10.000
+
+10.000
+
+1.2000 FILE:C41_COR100TRI.OUT CHNL# 39: [V B1] 0.0
+
+1.2000 FILE:C41_COR100TRI.OUT CHNL# 38: [V A2] 0.0
+
+1.2000 FILE:C41_COR100TRI.OUT CHNL# 37: [V A1] 0.0
+
+CORTOCIRCUITO EN SUBESTACION CERCANA AL PARQUE EOLICO TRES GRUPOS AEROGENERADORES
+0.0
+4.0000 3.6000
+
+CORTOCIRCUITO EN SUBESTACION CERCANA AL PARQUE EOLICO TRES GRUPOS AEROGENERADORES
+
+FILE: C41_COR100TRI.OUT
+
+CHNL# 6: 100*[PE A1] 0.0
+
+CHNL# 7: 100*[PE A2] 0.0
+
+CHNL# 8: 100*[PE B1]
+
+0.0 0.40000
+
+0.80000 1.2000
+
+1.6000 2.0000
+
+2.4000 2.8000
+
+3.2000
+
+0.0 0.40000
+
+0.80000 1.2000
+
+1.6000 2.0000
+
+2.4000 2.8000
+
+3.2000
+
+TIME(SECONDS)
+
+TIME(SECONDS)
+
+Figura 9. Tensión (izquierda) y potencia activa (derecha) de los aerogeneradores ante una falta trifásica. En la figura 10 se muestra para el mismo caso explicado anteriormente la evolución del deslizamiento de las tres máquinas. En este caso, la máquina disparó por mínima tensión, pero si esto hubiera fallado, habría disparado poco después por sobrevelocidad. Es importante recordar que mientras en un motor asíncrono, el cortocircuito se corresponde con el bloqueo del rotor, en el funcionamiento como generador, el cortocircuito supone el embalamiento de la máquina.
+POWER TECHNOLOGIES, INC.R
+
+9.0000 CHNL# 30: 100*[SLIP A1] -1.000
+4.0000 3.6000
+
+9.0000 CHNL# 31: 100*[SLIP A2] -1.000
+
+50.000
+
+CORTOCIRCUITO EN SUBESTACION CERCANA AL PARQUE EOLICO TRES GRUPOS AEROGENERADORES
+
+FILE: C41_COR100TRI.OUT
+
+CHNL# 32: 100*[SLIP B1] 0.0
+
+0.0 0.40000
+
+0.80000 1.2000
+
+1.6000 2.0000
+
+2.4000 2.8000
+
+3.2000
+
+TIME(SECONDS)
+
+Figura 10. Deslizamiento de los aerogeneradores ante una falta trifásica. Para ilustrar mejor como afecta a la máquina asíncrona un cortocircuito cercano, se muestra en la figura 11 la curva de par-deslizamiento de una de las máquinas del parque anterior para diferentes tiempos de despeje de falta, concretamente 100, 150, y 200 ms. Cuando el cortocircuito aparece, las máquinas pasan a funcionar sobre la curva de par-deslizamiento correspondiente a la tensión de falta, (curva ondulada inferior de la figura 11). Cuando la falta es despejada,
+
+la máquina tiende a volver a una curva superior correspondiente a la tensión normal. Dependiendo del tiempo que se haya estado deslizando por la curva inferior de la tensión de falta, es posible que haya alcanzado un punto de deslizamiento del cual no puede recuperarse por carecer de suficiente par de frenado. En la figura 11, se puede ver el primer caso, falta despejada en 100 ms, en la que la máquina no tiene ningún problema en alcanzar su punto de trabajo pre-falta. En el segundo caso, (línea sólida), falta despejada en 150 ms, se aprecia como está apunto de hacerse inestable, pero termina volviendo a su punto de trabajo. El trazo vertical que se ve cuando está cerca del punto de trabajo se debe a la subida de tensión provocada por la desconexión de una máquina cercana. El tercer caso, falta despejada en 200 ms, se aprecia como la máquina ha llegado a un punto de deslizamiento del cual no se recupera por no tener suficiente par eléctrico de frenado, y finalmente es desconectada por actuación de su protección de mínima tensión.
+1.5000 1.3500
+POWER TECHNOLOGIES, INC.R
+
+CURVA DE PAR-VELOCIDAD CORTOCIRCUITO DESPEJADO EN 100, 150 Y 200 MS
+
+FILE: C42_COR100BI.OUT FILE: C42_COR200BI.OUT FILE: C42_COR150BI.OUT
+
+TSTART: 0.0
+
+1.2000 1.0500 0.90000 0.75000 0.60000 0.45000 0.30000 0.15000 0.0
+0.09000 0.08000
+
+TSTOP: 4.0 TIC INCREMENT: 0.25 CHNL# 57: [TE A2]
+
+-0.0100 0.0
+
+0.01000 0.02000
+
+0.03000 0.04000
+
+0.05000 0.06000
+
+0.07000
+
+CHNL# 31: [SLIP A2]
+
+Figura 11. Curvas dinámicas de par-velocidad de un aerogenerador ante diferentes tiempos de despeje de falta. 4. Conclusiones Este artículo ha detallado los modelos de aerogeneradores desarrollados para un paquete de simulación de sistemas eléctricos comercial ampliamente utilizado por la industria eléctrica nacional. Se han mostrado simulaciones de la respuesta de un parque proyectado ante diferentes perturbaciones. En los estudios realizados se ha puesto de manifiesto la importancia del correcto ajuste del control de los bancos de condensadores de compensación, y de su adecuado escalonamiento, para evitar un excesivo impacto de las variaciones de generación en la tensiones de la red. También resulta primordial un ajuste adecuado de las protecciones de mínima tensión y sobrevelocidad para el caso de perturbaciones en la red, además de las protecciones de frecuencia y sobretensión, que cobran importancia cuando se trata de detectar el funcionamiento en isla de parque eólico. En general, se ha comprobado el funcionamiento satisfactorio de la red aún en el caso de ocurrencia de perturbaciones severas próximas a los parques. Bajo estas condiciones la seguridad de la red es preservada por la actuación de las protecciones del parque y de los aerogeneradores que los desconectan al entrar las máquinas asíncronas en cortocircuito. 5. Referencias [1] Ministerio de Industria y Energía, Normas administrativas y técnicas para funcionamiento y conexión a las redes eléctricas de centrales hidroeléctricas de hasta 5.000 kVA y centrales de autogeneración eléctrica. B.O.E. No. 219, 12 Septiembre 1985. Power Technologies, Inc., PSS/E Program Operation Manual, Schenectady, November, 1989. P. Kundur, Power System Stability and Control, McGraw-Hill, New York, 1994. C. Counan, P.Juston, G. Testud, “Fonctionement dynamique d’aérogénérateurs raccordés à un réseau électrique”. E.D.F. Bulletin de la Direction des Études et Recherches - Série B, Reseaux Électriques, Matériels Électriques, Nº 3, 1986, pp. 41-59. L.L. Freris (Editor). Wind Energy Conversions Systems. Prentice Hall, New York, 1990.
+
+[2] [3] [4]
+
+[5]
+

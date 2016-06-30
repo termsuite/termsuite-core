@@ -1,0 +1,479 @@
+International Journal of Rotating Machinery 1995, Vol. 2, No. 1, pp. 33-41 Reprints available directly from the publisher Photocopying permitted by license only
+
+(C) 1995
+
+OPA (Overseas Publishers Association) Amsterdam B.V. Published under license by Gordon and Breach Science Publishers SA Printed in Singapore
+
+Dynamics of Vertical Axis Wind Turbines
+
+(Darrieus Type)
+A.F. ABDEL AZIM EL-SAYED
+Mechanical Engineering Department, Zagazig University, Zagazig, Egypt
+
+C. HIRSCH and R. DERDELINCKX
+Vrije Universiteit Brussel, Dept. of Fluid Mechanics, Pleinlaan 2,1050 Brussel, Belgium
+
+A computing package that combines finite element methods for evaluating the resonance frequencies and modes of turbine subcomponents (blade, tower and shaft) together with the aerodynamic calculations for forces and moments taking into consideration the dynamic stall as well as the dynamic response is developed. This method was applied to a realistic VAWT; namely; the PIONEER built in the Netherlands by Fokker company. A reasonable agreement between the calculated and field results was predicted.
+
+Key Words: Vertical axis; Darrieus; Aerodynamics; Aeroelasticity; Dynamics
+
+INTRODUCTION
+o meet economic levels of power generation, the wind turbine designer is being forced towards compliant designs. As a consequence of this fact, more emphasis is being placed on both aeroelastic and dynamic analyses in the design phase of producing a new product. Since a wind turbine blade is highly dynamically loaded, it requires intensive investigations before being put into production to ensure both safety and reliability. This paper is devoted towards the investigation of the aerodynamics and stability of a Darrieus vertical axis wind turbine (VAWT). VAWT's have several advantages over the horizontal axis wind turbines; (HAWT's) like the indifference to wind direction, the proximity of the gearbox and generator to the ground and the non-reversal gravitational stresses in their troposkien shaped blades. However, the main disadvantage of VAWT's is their disabilities for self starting. At the Vrije Universiteit Brussel (V.U.B) a substantial effort has been done to investigate both the aerodynamics
+
+ponents; Bathe [1982], modal coupling technique; Benfield, et al. [1971], to define the behavior of the whole structure, the aerodynamic calculations for loads on blades, eigenvalue problem solver for natural frequencies and modes evaluation as well as a stability investigation via a forced vibration analysis. This package is analogous to that developed by Garrad, et al. [1984]. In this regard it can substitute using the well-known code NASTRAN (MSA/NASTRAN User's manuals 1981 ]), and also the European code ARLIS, Kirchgi[ner [1984]. Extensive analytical and experimental research works regarding the aerodynamics, aeroelasticity and dynamics of Darrieus VAWT's are performed both in Sandia laboratories; Lobitz [1986] and Popelka [1982], in USA and in the Netherlands Energy Research Foundation (ECN) in Netherlands; Machielse [1984] and Machielse, et al. [1986]. Most investigations elsewhere compare their results with the findings published by Sandia and/or ECN. In this paper, our model is applied to the 15 m VAWT manufactured by ECN and named Pioneer I, Ottens [1981].
+
+and dynamics/aeroelasticity of both HAWT's and VAWT' s. Concerning the specific work with VAWT' s, a computing package is developed which combines the versatile finite element methods (FEM) for evaluating the natural frequencies and modes of the turbine's subcom-
+
+MATHEMATICAL MODEL
+A mathematical model capable for investigating both of
+the aeroelastic and dynamic responses of a Darrieus
+
+34
+
+A. E ABDEL AZIM EL-SAYED, C. HIRSCH AND R. DERDELNICKX
+
+VAWT is presented here. The equations of motion for a small displacement (q) from a steady state for the discretized model may be derived either from the energy equation of continuum mechanics, or the principle of virtual displacements leading to a Lagrangian form of governing equation. Both techniques lead to the same equation. The following assumptions are made:
+1. The blade has a troposkien shape; refer to Blackwell, et al. [1974]. 2. Blade cross section is symmetric about its major principal axis and can have three distinct points; namely, the elastic, aerodynamic and tension centers. The elastic and mass centers are coincident. 3. Blade material is isotropic and linearly elastic. 4. Blade cross sections which are normal to the elastic axis before deformation remain plain after deformation (Bernoulli-Euler hypothesis). Also torsional warping is negligible. 5. Blade can bend in two mutually perpendicular directions normal to the elastic axis. 6. Deflections, strains and rotations are small. 7. Quasi-steady blade-element strip theory is applicable.
+(-a)
+
+'o
+Xo
+Zl
+
+/,,.,.(-)
+z/"
+
+Z'2
+
+(-e)
+
+Frames of Reference
+The first frame of reference is an inertial one So(Xo, Yo, Zo) fixed to the undeflected rotor. Next a series of transformations including rotations and translations are considered. S I(X1, Y1, Z1) has the same origin but rotated an angle 0 w.r.t, the inertial frame So. Next $2(X2, Y2, Z2) is shifted a distance g from the frame S 1. While $3(X3, Y3, Z3) and $4(X4, Y4, Z4) are inclined angles and w.r.t, the Y2 and X3 respectively. Finally the frame $5(X5, Y5, Z5) locates any point on the blade itself whose tangent is inclined angle -,/ to the Z4 direction. The different frames of reference are related to each other by the equation.
+
+FIGU
+
+Different frames of reference.
+
+number of the generalized coordinates or in other words unknowns are assigned. Usually, vibration modes of non-rotating turbines are adopted. To calculate these vibration modes, finite element methods are applied. Vibration modes of the components of the whole stBcture; here the blades, tower and the shaft together with the transmission and generator, are calculated. This is described as the "component mode method". The subcomponents of the wind turbine are discretized into finite number of beam elements. Each beam element is characterized by two nodes and 12 degrees of freedom (6 rotational and 6 translational). The coordinates of each node together with the cross-sectional area and moments of ineaia about three mutually pewendicular axes and 5 i= {Si} [Ki] {Si- 1}, the material density distribution are fed to a stBctural T and {Si} (1) code. {X Yi Zi} Consequently, the mass, flexural and torsional and {Ki} is a transformation matrix. More details are rigidities of each element are calculated. A powerful code given in E1-Sayed [1990]. Figure (1) illustrates these developed by the stBctural depament of the Vfije frames of reference. Universiteit BBssel; Belgium, known as DAPST (which is analogous to NASTRAN) is used to calculate the natural frequencies and modal shapes of the three subFinite Element Method components (refer to its user's guide [1985]). Treatment of such flexible continuous body can be Since blades are axisymmetfic, then the same mode performed by considering its deformation as the sum of shape can be used for all blades. The displacement anor few number of its normal modes multiplied by general- rotation of a point on the kth blade and tower are denoted ized coordinates. This method is known as the MODAL by Sik and where varies from to n and varies from METHOD. This method is advantageous over the to m. The generalized coordinates of the shaft are its lumped mass deformation as in the former only few angular displacement (0), and the torsional deflection
+
++
+
+;
+
+VERTICAL AXIS WIND TURBINES
+
+35
+
+of the mechanical transmission and rotating part of the generator (A02).
+
+the vector y which includes (A0,A02,qj, Ski), k number of blades.
+
+Equations of Motion in Lagrangian Form
+
+Equations of Motion
+After a lengthy mathematical deductions, equation (2) will have the form:
+
+Subsequent to these steps the kinetic and potential energies are derived as described in [12]. Since the governing equations in the Lagrangian form have the form:
+
+i=1,2
+
+n
+
+where T and V are respectively the kinetic and potential energies of the whole turbine, while hi are the generalized coordinates (A0,A02,qj,Sik). Forces are divided into conservative and non-conservative forces. Here both of the aerodynamic and gravitational forces represent the conservative forces. These conservative forces are derived from the potential energy. The non-conservative forces (except for the viscous damping) are expressed by Qi. The viscous damping are expressed by 0F / 0hi where F is the well known Rayleigh's Dissipation Function (Strickland 1975]).
+
+-
+
+[m] + ([d] + Dig]) + (l-k]- [Gr] + D[-Is] +
+
+d aT
+
+(i)
+
+aT
+0h
+
++
+
+OV
+0h
+
++
+
+OF
+
+01Zlj
+
+Qi
+
+(2)
+
+D,2[c]) y Q
+where
+
+(3)
+
+Q
+
+[Qo
+
+o QT QB QB2] T
+
+and [m], [d], [k] are the structural mass, damping and stiffness matrices respectively. [g], [s] are the coriolis (gyroscopic) and geometric stiffness matrices. [Gr], [c] are the gravitational and centrifugal matrices. Moreover, Q represents all the forces, which is now a function of both space and time (due to the aerodynamic forces on blades). Calculations are now performed in the time domain using the classical 4th order Runge-Kutta integration scheme, with automatic time step integration.
+
+Aerodynamics with Dynamic Stall Calculations
+Aerodynamic Force
+The aerodynamic forces are defined both theoretically (refer to Strickland [1975], Sharpe [1977], Templin [1974], Simhan [1984] and Mandal [1986]) and experimentally (refer to Worstell [1979], Muraca, et al. [1976] and South, et al. 1972]). The double-multiple stream tube theory [23, 24] is employed in this model. In such a model the Darrieus VAWT is represented by a pair of actuator disks in tandem at each level of the rotor as illustrated in Figure (2). The elements of normal and tangential forces (SNk and 8Tk) and the resulting moment on a strip (SMk) through the principle of virtual work provide the generalized forces QA0, Qqi and Qski. Dynamic stall will be discussed later on.
+Gravitational Force
+
+As was pointed out earlier, the aerodynamic forces are calculated with the double multiple streamtube
+L.o(erol view
+
+Upwind view
+
+The forces due to gravity are the second conservative force. The generalized forces due to gravity associated with the tower and blades are, GA0, Gqi and GSik
+
+respectively
+Modal Coupling
+
+olor elemen BCD reploced r.o Gciuolor disks in londern
+
+b
+
+To apply the modal coupling technique; Benfield, et al. [1971], the generalized coordinates are assembled into
+
+FIGURE 2 Darrieus rotor geometry and the double-multiple stream
+tube.
+
+36
+
+A. E ABDEL AZIM EL-SAYED, C. HIRSCH AND R. DERDELNICKX
+
+theory. At higher wind speed this theory fails to predict NACA 0012 profile the actual values are K 74.5, the forces on the turbine correctly due to dynamic stall K1 4.47. G is a weighing factor depending on which effects. Therefore, the present theory has been extended, part of the dynamic stall hysteresis loop, the cycling to account for these effects. The circular path of the value of am lies. (See Figure 3). blades of a vertical axis wind turbine cause periodic The rate of change o is determined as: oscillations of the angle of attack at a frequency of once per revolution and at higher multiples of this frequency. do This rapid variation introduces unsteady flow phenomdt sin0.cos+ )2]. r R. + cos0] enon, that are not accounted for by the classical theories. [1 + (. V r R.12 They are known as dynamic stall. Stall is a phenomenon + cos0 R V that occurs at higher angles of attack (of the order of 10 degrees) when the flow separates from the body. As a sin 0 "+- COS0} 2 { R.D, (5) result a pressure drop and thus a decrease in lift will r + cos0 occur. When this occurs at a relatively slow angle of R V attack change, the phenomenon is called "static stall". When the angle of attack changes more rapidly unsteady Once the modified angle of attack is calculated, the lift flow phenomenon introduces hysteresis effects as shown force coefficient CLs is calculated for stalled conditions. in figure 3. When the angle of attack increases rapidly the modified lift force coefficient is calculated above the static stall angle, the separation of the flow is Finally from the static value CLo and the stall value CLs as" retarded and stall will occur at higher angles of incidence. The lift forces will be higher than in the static (6) Ce C0. (1 P) + Cs. P case. In order to take into account dynamic stall effects, the Boeing-Vertol dynamic-stall model, modified by where: P is defined in figure 4. Strickland [1975], is used. This model assumes that the lift-curve slope and the zero-lift angle remain unchanged RESULTS and that the only change due to dynamic effects is the angle of attack at which stall occurs. Thus a modified In this section the dynamic response of blades and tower angle of attack is utilized for use in entering two- of the Pioneer I to the external forces is presented. These external forces are the centrifugal, gravitational and dimensional force coefficient data. In this method dynamic stall corrections are consid- aerodynamic forces. ered only for angles of attack above 5 degrees and below three times the static stall angle. Lift and drag coeffi- CASE STUDY
+
+.
+
+cos+
+
+.
+
+[.
+
+.
+
+cients are calculated first for the static case and then adjusted for dynamic stall effects. A modified angle of attack om is calculated as:
+O O0
+
+G.Ae. S
+
+(4)
+
+The mathematical model described above is now applied to one of the most documented wind turbines, namely PIONEER I, built in the Netherlands by Fokker company. Figure 5 illustrates this turbine and the employed
+1.0
+
+where:
+
+K. [e.C/(2 U)] 5 + K K, K1 are empirical constants, depending on the Mach number and the thickness ratio of the profile. For the
+
+Ae
+
+0.8
+0.6
+
+0.4
+
+unstalled
+0.2
+0.0
+fully stalled
+
+"...
+
+5
+
+stall
+
+3 slall
+
+FIGURE 3 Lift force and weighing factor for hysteresis loop.
+
+ar91o ot attack (de0) FIGURE 4 Weighing factor E
+
+VERTICAL AXIS WIND TURBINES
+PIONEER V15
+60000
+
+37
+40rpm
+
+50000
+40000
+
+30000 20000
+10000
+
+with D.S. wlhoul D.S,
+
+!
+
+lO
+
+ROTOR GENERATOR
+
+20 Wind Speed (m/s)
+
+FIGURE 7 Power versus wind speed for a rotational speed of 40
+
+FIGURE 5 Pioneer VAWT & Discretized model (blade-rotortower-rotor axis & generator).
+
+that for higher wind speeds the aerodynamic power is considerably higher when dynamic stall is taken into
+account.
+
+discretized model. PIONEER I is a two-bladed VAWT with rotor height of 15 m and diameter of 14.92 m, has a troposkien blade shape with a blade chord of 0.75 m. The main bearings on the top of the tower and in the rotor center are situated at the inside of the rotor tube. Both of the rotor tube and the turbine tower are made of two steel tubes of different length, diameter and wall thickness. The blades have a NACA 0012 cross section and made of glass fiber reinforced polyester (GFRP) skins and a polyurethane foam core. Operational speed varies from 25 to 50 rpm at a wind speed of l0 m/s. Power output at 18 m/s is 65 kW.
+
+The normal and tangential forces on the blades as a function of azimuthal position at a rotational speed of 50 m/s and a wind speed of 10 m/s are presented in figures 8 and 9 respectively. At the upstream side these forces are considerably larger than at the downstream side.
+
+Dynamic Response
+
+Forces and Power
+Figure 6 shows the power coefficient versus wind speed for 30 and 50 rpm. (without dynamic stall). At 30 rpm a maximal power is extracted at a wind speed of 7 m/s. This power is approximately 10 kW. At 50 rpm the power increases to 53 kW at a wind speed of 12 m/s. In figure 7 the power at a rotational speed of 40 rpm is shown, as calculated without and with dynamic stall. It may be seen
+PIONEER! Cp for 30 and 50rpm
+0.5
+0,4
+
+0,3
+
+0,2
+
+0.1
+
+0,0
+
+10
+
+30
+
+Wind speed (m
+
+FIGURE 6 Power coefficient vs. wind speed (without dynamic stall).
+
+In figures 10 to 12 the generalized forces and dynamic blade responses due to the centrifugal forces are shown for a two mode representation of the blades. As can be seen from figure 10 the centrifugal force is constant and thus leads to a constant generalized force. In principle, the centrifugal force is balanced by the gravitational forces, due to the special geometry of a troposkien shape. This leads to a general force, that should be equal to zero. However due to numerical rounding errors, a small force remains that will result in a very low dynamic response, as can be seen in figures 11 and 12. This response is characterized by a damped oscillation level at transient, and a constant level after some settling time. This type of response is typical for a damped oscillation to a constant force. In figures 13 to 15 the dynamic response of the blade to the gravitational forces are shown. As the centrifugal forces and gravity introduce a constant force into the blades of the turbine and into the tower, it will introduce a damped oscillation with constant level in the flapping direction. In lagging direction a zero displacement level should be found. However, due to the modal approximation and rounding errors, a small amplitude of the order of 10-6 remains. In figures 16 to 18 the displacements of the midpoint of the blade and the generalized forces, due to aerodynamic loading are presented. As can be seen the aerody-
+
+38
+
+A. E ABDEL AZIM EL-SAYED, C. HIRSCH AND R. DERDELNICKX
+
+1. 18
+
+B.
+
+50.
+
+olgB.
+
+159.
+
+2B9. 5. 25.
+
+30.
+
+L
+
+2.
+
+3.
+
+AZIMUTH (OEGREES)
+
+FIGURE 8 Normal force on the blade at wind speed of 10 rn/s and rotational speed of 50 m/s.
+
+FIGURE 12 Lagging displacement of the centre of blade due to
+centrifugal forces.
+
+IS6.
+
+'
+58.
+
+X
+o--
+
+Gsik
+Gqi
+
+e.
+
+FIGURE 13 Generalized forces due to gravitational forces.
+FIGURE 9 Tangential force on the blade at wind speed of 10 s and rotational speed of 50 s.
+
+.
+FIGURE 10 Generalized forces on the blade due to centrifugal
+forces.
+
+1.
+
+RL'VOLUT
+
+FIGURE 14 Flapping displacement of the centre of the blades due to gravitational forces.
+DISPI,C..,E)EJ'T OF
+
+1.5 10
+
+RE'VOI.UT
+
+FIGURE 11 Flapping displacement of the centre of the blade due to centrifugal forces.
+
+FIGURE 15 Lagging displacement of the centre of the blade due to gravitational forces.
+
+VERTICAL AXIS WIND TURBINES
+DISPLACEMENT OF BLADES
+(LAGGING)
+
+39
+
+1
+
+Qsu
+
+2. 0
+
+10-2
+
+FIGURE 16 Generalized forces on the blades due to aerodynamic loading.
+
+0.
+
+I. 00
+
+2. gO
+
+:3. 60
+
+gO
+
+5. 0
+
+RE VOLUT ONS
+
+namic loading is more or less periodic, with a maximal amplitude when the blade is in the upstream region. For a damping ratio of 0.1, the flapping displacement of the blade is symmetric, with a nearly zero amplitude at mid span. The lagging displacement follows the patt,ern of the aerodynamic forces with a period of 2 per revolution. In figures 19 to 21 the generalized forces and displacements of the blade to all external loading are presented. As can be seen, the displacements of the midpoint of the blade in flapping motion are dominated by the gravitational forces, while the displacements in lagging motion are mainly due to the aerodynamic loading.
+
+FIGURE 18 Lagging displacement of the centre of the blades due to aerodynamic loading.
+
+4. Aerodynamic loading is periodic with maximum amplitude when blades are in the upstream region. 5. Displacements in the lagging and flapping directions are dominated by aerodynamic and gravitational forces respectively.
+
+ACKNOWLEDGEMENT
+The first author acknowledges the Financial support given to him by Vrije Universiteit Brussel while he was visiting professor to the fluid mechanics department in 1986. The support of Mr. Riad M. E1-Sharawi; Enppi Co., during the preparation of this paper is greatly acknowledged.
+Nomenclature
+
+CONCLUSIONS
+1. The designed package which is described here predicted its validity and accuracy in evaluating the aerodynamic, aeroelastic and dynamic behaviors of Darrieus VAWT' s. 2. Dynamic stall has to be incorporated in the aerodynamic calculations since it drastically changes the extracted power compared to models ignoring it. 3. Centrifugal forces on blades are counteracted by gravitational ones. The transient behavior due to them shows a damped response.
+DISPLACEMENT OF BLADES
+(FLAPPING)
+
+[c1 C
+
+C,
+
+CLs
+[dl
+
+centrifugal matrix cord length (m) modified lift forces coefficient lift force coefficient for static case lift force coefficient for stalled case structural damping matrix
+GENERALIZED FORCE
+
+g
+
+i---
+
+REVDLUT
+
+FIGU 17 Flapping displacement of the centre of the blade due to aerodynamic loading.
+
+-
+
+0.2B I
+
+"
+-5.
+
+-l. EB
+
+j-2.06
+
+0.
+
+50.0
+
+100.
+
+150.
+
+200,
+
+250.
+
+30.
+
+350.
+
+AZIMUTH
+
+FIGURE 19 Generalized forces on the blades due to all loading.
+
+40
+
+A. E ABDEL AZIM EL-SAYED, C. HIRSCH AND R. DERDELNICKX
+DISPLACEMENT OF BLADES
+(FLAPPING)
+
+.
+
+O
+
+1-2
+
+generalized coordinates vector resulting moment on a blade strip element of normal force element of normal force element of tangential force
+Greek Letters
+ot
+
+angle of attack static angle of attack
+modified angle of attack angle between tangent to blade and Z4 direction rotational angle of S Frame w.r.t. S rotational angle of $3 Frame w.r.t. $2 rotational angle of $4 Frame w.r.t. $3 rotational speed of the turbine (rad/s) azimuthal position (rad) local blade element slope
+
+/
+
+0
+
+4'
+REVOLUT ONS
+
+FIGURE 20 Flapping displacement of the centre of the blade due to all loading.
+
+0
+
+O q
+References
+
+F
+[gl G [Grl h [kI K, K1
+
+Rayleigh's dissipation force gyroscopic stiffness matrix weighing factor gravitational matrix generalized coordinates structural stiffness matrix empirical constants
+transformation matrix structural mass matrix
+
+[kil [ml P Qi
+
+weighing factor (figure 4) non-conservative forces (except viscous damping)
+force vector local radius of blade (m) blade radius at mid span (m) geometric stiffness matrix frame of reference sign of the rate of change of ot(eqn 4) kinetic energy wind speed (m/s) potential energy local "disk" velocity (m/s) cartesian coordinates
+
+R Is] S Sot T U V Va X,Y,Z
+
+Bathe, K.J., Finite Element Procedures in Engineering Analysis Prentice-Hall, Inc., 1982. Benfield, W.A. and Hurda, R.E Vibration Analysis of Structure by Component Mode Situation AIAA J., Vol. 9, No. 7, July 1971. Garrad, A.D. and Quarton, D.C. Symbolic Computing as a Tool in Wind Turbine Dynamics Proc. European Wind Energy Conference, 22-26 October 1984, Hamburg, Germany, pp 295-301. MSC/NASTRAN User's Manual, Vols. and II, The MacNeal Schwendler Corp., 1981. Kirchgi[3ner, B. ARLIS-A Program System For Aeroelastic Analysis of Rotating Linear System Proc. European Wind Energy Conference, 22-26 October 1984, Hamburg, Germany, pp 253-258. Lobitz, D.W. and Ashwill, T.D. Aerolastic Effects in the Structural Dynamic Analysis of Vertical Axis Wind Turbines Sandia Report SAND 85-0957, April 1986. Popelka, D. Aeroelastic Stability Analysis of a Darrieus Wind Turbine Sandia Report SAND 82-0672, February 1982. Machielse, L.A.H. The 15 m Vertical Axis Wind Turbine Pionier I-Description and Experiments Proc. European Wind Energy Conf., 22-26 October 1984, Hamburg, Germany, pp 138-144. Machielse, L.A.H., Rieffe, H.Ch. and EM. Peeters Structural Vibration Frequencies and Drive Train Behavior of 15 m VAWT ECN-86-038. Ottens, H.H. Calculated Dynamic Behavior of the 15 m Vertical Axis Wind Turbine NLR Memorandum SC-81-044 U and Appendix (in
+
+Dutch). Blackwell, B.E and Reis, G.E. Blade Shape for a Troposkien Type of Vertical-Axis Wind Turbine Sandia Report SLA-74-0154, 1974. E1-Sayed, A.EA.A. Aeroelastic Analysis of Vertical Axis Wind Turbines Proc. ISROMAC-3, Honolulu, Hawaii, 1990. Users Guide to DAPST Vrije Universiteit Brussel Report, May 1985. Meirovitch, L. Elements of Vibration Analysis McGraw-Hill Publishing Co., 1975. Strickland, J.H. The Darrieus Wind Turbines: A Performance Prediction Model Using Multiple Streamtubes Sandia Report SAND 75-0431 October, 1975. Sharpe; D.J. A Theoretical and Experimental Study of the Darrieus Vertical Axis Wind Turbine School of Mech., Aero. & Prod. Engry Kingston Polytechnic Research Rep., Oct. 1977. Templin, R.J. Aerodynamic Performance Theory for the NRC VerticalAxis Wind Turbine. Nat. Res. Council Canada, Laboratory Technical Report LTR-LA- 160, June 1974.
+
+VERTICAL AXIS WIND TURBINES
+Simhan, K. A Review of Calculation Methods for the Determination of Performance Characteristics of Vertical Axis Wind Energy Converters with Special Reference to the Influence of Solidity and Starting Characteristics Proc. European Wind Energy Conf., Hamburg, Germany, October 1984. Mandal, A.C. Aerodynamic and Design Analysis of Vertical Axis Darrieus Wind Turbines Ph.D. Thesis, Vrije Universiteit Brussel, Jan.
+
+41
+
+1986. Worstell, M.H. Aerodynamic Performance of the 17 m Diameter Darrieus Wind Turbine SAND 78-1737, 1978 and SAND 79-1753, 1979.
+
+Muraca, R.J. and Guillotte, R.J. Wind Tunnel Investigation of 14 Vertical Axis Windmill NASA TM X-72663, 1976. South, P. and Rangi, R.S. A Wind Tunnel Investigation of 14 FT Diameter Vertical Axis Windmill Nat. Research Council Canada, Lab. Tech. Rep., LTR-LA- 105, Sep., 1972. Paraschivoiu, I. Aerodynamic Loads and Performance of the Darrieus Rotor J. Energy, Vol. 6, No. 6, pp 406-412, 1982. Paraschivoiu, I. and Allet, A. Aerodynamic Analysis of the Darrieus Wind Turbine Including Dynamic-Stall Effects J. Propulsion and Power, Vol. 4, No. 5. Sept.-Oct., 1988, pp 472-477.
+

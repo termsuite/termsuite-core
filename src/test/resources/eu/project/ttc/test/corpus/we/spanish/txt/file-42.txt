@@ -1,0 +1,1430 @@
+
+
+
+
+
+PROYECTO DE INSTALACIONES EÓLICAS
+
+
+
+
+
+1.	PROYECTO DE INSTALACIÓN EÓLICA	3
+1.1	Memoria descriptiva.	3
+1.1.1	Antecedentes y objeto del Proyecto.	3
+1.1.2	Peticionario.	3
+1.1.3	Emplazamiento.	3
+1.1.4	Instalaciones que constituyen el parque eólico	4
+1.1.5	Elección y descripción de las infraestructuras eólicas.	4
+1.1.6	Reglamentación.	4
+1.1.7	Descripción del aerogenerador.	4
+1.1.7.1	Características generales	4
+1.1.7.2	Elementos del aerogenerador.	5
+1.1.7.3	Parametros de diseño.	9
+1.1.7.4	Equipamiento de alta tensión.	11
+1.1.7.5	Mantenimiento de aerogeneradores.	12
+1.1.7.6	Red interna del parque.	15
+1.1.7.7	Centro de transformación.	16
+1.1.7.8	Edificio de mando del parque.	16
+1.1.7.9	Caminos internos y plataformas de montaje de los aerogeneradores.	18
+1.2	Memoria de cálculo.	19
+1.2.1	Introducción	19
+1.2.2	Cálculos eléctricos.	19
+1.2.2.1	Cálculo de la red interna de 20 Kw.	19
+1.2.2.2	Cálculo del centro de transformación.	22
+1.2.2.3	Cálculo de las instalaciones eléctricas del edificio de control.	23
+1.2.3	Calculo justificación de medidas contraincendios del edificio de control.	24
+1.2.3.1	Compartimentación.	24
+1.2.3.2	Ocupación del edificio.	25
+1.2.3.3	Evacuación.	25
+1.2.3.4	Señalización.	25
+1.2.3.5	Comportamiento ante el fuego de elementos constructivos y materiales	25
+1.2.3.6	Instalaciones de proteccion contra incendios	25
+1.2.4	Cálculo de estructuras del edificio de control.	26
+1.3	Planos	27
+1.3.1	Planos de situación y emplazamiento	27
+1.3.2	Planos de elementos estructurales del aerogenerador	27
+1.3.3	Planos de equipos electromecánicos del aerogenerador	27
+1.3.4	Planos de cimentación y toma de tierra del aerogenerador	27
+1.3.5	Plano de diagrama de bloque del sistema de control	27
+1.3.6	Plano de Esquema unifilar de la instalación eléctrica del aerogenerador	28
+1.3.7	Planos del Centro de Transformación	28
+1.3.8	Planos del edificio o sala de control	28
+1.3.9	Planos de detalles estructurales del edificio de control	28
+1.3.10	Plano de trazado de laS LíneaS subterráneas de Media Tensión	28
+1.3.11	Plano de Trazado de las Líneas subterráneas de baja tensión	28
+1.3.12	Plano de canalizaciones de la línea subterránea de media tensión	28
+1.3.13	Plano de canalizaciones de la Línea subterránea de baja tensión	28
+1.4	Pliego de condiciones.	29
+1.4.1	Pliego de Condiciones para la Oba Civil	29
+1.4.1.1	Condiciones generales y normativa.	29
+1.4.1.2	Condiciones de Indole Técnica y de Ejecución	29
+1.4.1.3	Condiciones de Indole Facultativa	31
+1.4.1.4	Condiciones de Indole Económica	32
+1.4.1.5	Condiciones de Indole Legal	33
+1.4.1.6	Libro de Ordenes	33
+1.4.2	Pliego de Condiciones para instalaciones eléctricas de baja tensión.	33
+1.4.2.1	Calidades y características de los materiales empleados en la instalación	33
+1.4.2.2	Normas de ejecución de las instalaciones	33
+1.4.2.3	Pruebas, ensayos y verificaciones reglamentarias	34
+1.4.2.4	Certificados y documentación	34
+1.4.2.5	Libro de órdenes	34
+1.4.3	Pliego de Condiciones para líneas eléctricas subterráneas de alta tensión	34
+1.4.3.1	Calidades y características de los materiales empleados	34
+1.4.3.2	Normas de ejecución de las obras y de las instalaciones	34
+1.4.3.3	Pruebas, ensayos y verificaciones reglamentarias	34
+1.4.3.4	Condiciones de uso, mantenimiento y seguridad	34
+1.4.3.5	Certificados y documentación	34
+1.4.3.6	Libro de órdenes	34
+1.4.4	Pliego de Condiciones para centro de transforfación.	34
+1.4.4.1	Calidades y características de los materiales empleados	34
+1.4.4.2	Normas de ejecución de las obras y de las instalaciones	35
+1.4.4.3	Pruebas, ensayos y verificaciones reglamentarias	35
+1.4.4.4	Condiciones de uso, mantenimiento y seguridad	35
+1.4.4.5	Certificados y documentación	35
+1.4.4.6	Libro de órdenes	35
+1.5	Mediciones y Presupuesto	35
+1.5.1	Aerogeneradores  y sistema de control.	35
+1.5.2	Obra civil.	35
+1.5.2.1	Aerogeneradores	35
+1.5.2.2	Edificio de mando.	35
+1.5.2.3	Remodelacion de accesos y acondicionamiento de la parcela.	35
+1.5.3	Equipamientos del edificio de mando	36
+1.5.3.1	Aparamenta e instalaciones de alta tensión.	36
+1.5.3.2	Aparamenta e intalaciones de baja tensión	36
+1.5.3.3	Varios	36
+1.5.4	Red eléctrica del parque (MT o BT)	36
+1.5.5	Línea de evacuación a la red de evacuación.	36
+1.6	Seguridad y salud	37
+1.6.1	Objeto del estudio de seguridad y salud.	37
+1.6.2	Descripción general de la actividad.	37
+1.6.3	Recursos considerados.	38
+1.6.4	Idendificación y valoración de riesgos	38
+1.6.5	Planificación de la acción preventiva.	38
+1.6.6	Normas generales de seguridad dispociciones mínimas.	39
+1.6.6.1	Consideraciones aplicables durante la ejecución	39
+1.6.6.2	Disposiciones mÍnimas a aplicar en las obras	39
+1.6.7	Tipos de trabajo e instrucciones	40
+1.6.8	Empleo y conservación del material de seguridad.	40
+1.6.9	Presupuesto de las medidas de prevención.	41
+1.7	Estudio de impacto medioambiental.(si procede).	41
+1.8	Estudio de flujo de potencia.	42
+1.8.1	Introducción.	42
+1.8.2	Objetivos	42
+1.8.3	Formulación del análisis del flujo de potencia.	43
+
+
+
+
+
+1. PROYECTO DE INSTALACIÓN EÓLICA
+
+1.1 Memoria descriptiva.
+
+1.1.1 Antecedentes y objeto del Proyecto.
+
+      El proyecto tiene como objeto  primordial  definir y proyectar todas las obras y actuaciones necesarias para la instalación de un parque eólico. Este objetivo implica:
+      
+      La elección de un emplazamiento propicio para el parque.
+      
+      La elección de una tecnología de generación eólica adecuada al emplazamiento.
+      
+      El diseño de las líneas de evacuación del parque para la interconexión con la red pública.
+      La elección del sistema de protecciones.
+      
+      El diseño de la parcela y de la creación o modificación de accesos que sea necesarios para la correcta ejecución de la obra.
+      
+      Elaboración de un estudio de potencial eólico de la zona que permita la correcta modelización del mismo.
+      
+      El diseño de un edificio de mando y control del parque que cumpla a la vez las funciones de almacén de los consumibles necesarios para el correcto funcionamiento del parque.
+      
+      Predicción de los vientos anuales a distintas alturas y la elaboración de una estimación del funcionamiento  del parque.
+      
+      Estudio de impacto ambiental del parque eólico.
+      
+      Estudio de Flujo de potencia de la red con la inclusión del parque.
+      
+      Estudio económico y de rentabilidad del parque.
+
+1.1.2 Peticionario.
+
+      Nombre y domicilio social del promotor o titular del parque eólico proyectado. Puede ser una empresa o un particular.
+      
+1.1.3 Emplazamiento.
+
+      Indicación de la ubicación del parque eólico en cuestión, indicando el nombre de las parcelas, localidad y término municipal.
+
+
+1.1.4 Instalaciones que constituyen el parque eólico 
+
+      Los elementos que integraran la instalación son:
+
+* Parque de Aerogeneradores.
+* Un edificio principal que albergará:
+o Centro de control y maniobra.
+o Transformador de servicios auxiliares.
+o El almacén de repuestos y herramientas necesarios para un buen mantenimiento del parque.
+o La oficina de control, mando y telemando del parque.
+
+* Red interna de baja o media tensión (B.T./M.T.) a la tensión de 400 o 20.000 V que conecte cada  aerogenerador con el centro de transformación correspondiente.
+* Red externa de media tensión (M.T.)  a la tensión de 20.000 V que conecte el parque con la subestación o centro de transfomación de la red de distribución pública (cuando únicamente se trate de un parque no aislado).
+
+1.1.5 Elección y descripción de las infraestructuras eólicas.
+
+      La elección de un modelo de aerogenerador no es una decisión que se deba tomar a la ligera. Existe variedad de potencias, tecnologías, y  curvas de funcionamiento en el mercado. En cada emplazamiento hay que estudiar cual de las máquinas existentes en el mercado, se adapta mejor a las condiciones especificas del emplazamiento y necesidades. Estas condiciones son varias, siendo las más importantes el régimen de vientos, las condiciones técnico administrativas propias de la comunidad autónoma y  las limitaciones de espacio de la parcela.
+      
+1.1.6 Reglamentación.
+
+      Indicación de la reglamentación de aplicación al Proyecto con expresión de nombres y fechas de aprobación.
+      
+      
+1.1.7 Descripción del aerogenerador.
+
+
+1.1.7.1 Características generales
+
+      Descripción de las características fundamentales, siendo como mínimo las que se indican a continuación:
+      
+* Marca  y modelo.
+* Tipo de rotor, dimensiones, palas y orientación de funcionamiento (barlovento o sotavento).
+* Sistema de Orientación.
+* Sistemas de Control.
+* Buje
+* Características Eléctricas.
+* Multiplicadora.
+* Frenos
+* Góndola
+* Torre del Aerogenerador
+
+Condiciones climáticas.
+
+      Indicación de las características nominales climáticas del diseño del aerogenerador:
+      
+* Margen nominal de temperaturas ambiente de funcionamiento.
+* Margen nominal de humedad relativa de funcionamiento.
+* Protección contra corrosión.
+Distancia entre aerogeneradores.
+
+      Descripción de las distancias de funcionamiento entre aerogeneradores en las dos direcciones perpendiculares de configuración del parque eólico.
+
+1.1.7.2 Elementos del aerogenerador.
+
+Rotor.
+
+      Descripción de los siguientes parámetros:
+
+* Diámetro.
+* Área de Barrido.
+* Velocidad de rotación de operación.
+* Sentido de rotación.
+* Orientación.
+* Ángulo de inclinación.
+* Conicidad del rotor.
+* Número de palas.
+* Freno aerodinámico.
+ 
+Palas
+
+      Descripción de las siguientes características técnicas de las palas:
+
+* Longitud de pala.
+* Sistema pararrayos.
+* Distancia entre raíz de las palas hasta el centro del buje.
+* Material de fabricación y concepto estructural de las palas.
+* Perfiles aerodinámicos.
+* Torsión.
+* Peso.
+* Cuerda de la pala.
+* Conexión de palas.
+* Descripción de la unión pala-rodamiento.
+
+
+Buje
+
+
+      Descripción de las siguientes características técnicas de las palas:
+
+* Tipología.
+* Material de fabricación y estructura.
+* Accesibilidad.
+* Cono de la nariz.
+* Rodamientos de pala.
+
+
+Multipllicadora.
+
+      Características técnicas de la multiplicadora.
+
+* Tipo.
+* Ratio.
+* Refrigeración.
+* Calentador de aceite.
+* Dimensiones.
+* Peso.
+
+Eje principal.
+
+      Breve descripción técnica del elemento encargado en realizar la transmisión del par motor que provoca el viento sobre el rotor hasta la multiplicadora.
+
+
+Bastidor.
+
+      Somera descripción de la estructura encargada de soportar sustentar la góndola y transmitir las cargas hasta la torre. La transmisión de estas cargas se realiza a través del cojinete de la corona de orientación.
+
+Capota.
+
+      Descripción de la cubierta que protege los componentes del aerogenerador que se encuentran en la góndola, resaltando las siguientes características:
+
+* Material de fabricación.
+* Aislamiento acústico logrado.
+* Espacio necesario en el interior de la góndola para realizar actuaciones de reparación y mantenimiento.
+* Ventilación.
+* Iluminación (claraboyas).
+* Diseño seguro para el personal técnico.
+
+
+Medida de viento.
+
+      Indicación del sistema y ubicación del sistema de sensores para realizar las medidas de viento.
+      
+Sistema de control.
+      
+      Descripción del sistema de control, el cual monitoriza y gobierna todas las funciones del aerogenerador, intentando que las actuaciones sean óptimas en todo momento. El sistema de control debe registrar continuamente las señales de los distintos sensores del aerogenerador, y cuando detecta algún error realiza las acciones oportunas para subsanarlo. El sistema de control detiene el aerogenerador si el error detectado así lo requiere.
+
+Sistema y mecanismo de giro.
+
+      Descripción de la tipología del sistema y mecanismo de giro, destacando el modelo de corona de orientación, su velocidad de orientación, elementos de fricción y motorizaciones del mecanismo de giro.
+
+Torre.
+
+      Se deberán especificar las siguientes características de las torres de los aerogeneradores:
+
+* Tipo.
+* Material.
+* Especificaciones de las Virolas.
+* Especificaciones de las bridas.
+* Tratamiento superficial.
+* Diámetro en la parte superior.
+* Diámetro en la parte inferior.
+* Altura del buje.
+* Longitudes y pesos de los tramos.
+
+Generador
+
+      Se describirán los principales parámetros técnicos del generador eléctrico.
+
+* Tipo de rotor.
+* Potencia nominal.
+* Voltaje.
+* Frecuencia.
+* Nº de Polos.
+* Clase de protección (IP).
+* Velocidad nominal de rotación.
+* Factor de Potencia.
+* Dimensiones.
+* Peso.
+
+Cimentaciones
+
+      Establecimiento de las bases del diseño de las zapatas de los aerogeneradores, las cuales deben ser capaces de soportar las cargas gravitacionales provocadas por la torre, la góndola, el transformador y todos los equipos que integran el aerogenerador. La zapata además debe ser capaz de soportar las solicitaciones provocadas por la acción del viento y resistir al vuelco. 
+       
+      A continuación se definen los datos principales de cálculo para las cimentaciones de un aerogenerador:
+      
+* Tensión admisible del terreno supuestas.
+* Cargas gravitatorias. 
+* Cargas provocadas por la acción del viento.
+* Hormigón a emplear.
+* Tipo de Acero para las armaduras.
+
+1.1.7.3 Parametros de diseño.
+
+Condiciones del viento.
+
+      Las condiciones de viento para un emplazamiento se especifican normalmente por una distribución de Weibull. Esta distribución viene descrita por el factor de escala A y el factor de forma k. El factor A es proporcional a la velocidad media del viento y el factor k define la forma de la distribución para diferentes velocidades de viento. La turbulencia es el parámetro que describe las variaciones o fluctuaciones a corto plazo del viento. A continuación se muestra las condiciones de diseño de un aerogenerador:
+      
+ConceptoValorUnidadesComentariosClase IECIA-IEC 61400-1 Ed. 2Velocidad media anual del viento10m/sReferido a altura del bujeParámetro de forma
+de Weibull, k2Intensidad de turbulencia
+a 15 m/s, I1518%Viento de referencia
+(10 min.)50m/sPeriodo recurrencia 50 añosViento de referencia
+(3 seg.)70m/sPeriodo recurrencia 50 añosMáx. aceleración ráfaga
+de viento10m/s2Velocidad de viento de parada / reinicio25/20m/sFiltrada a 100 segundos      
+      
+
+      La curva de potencia (calculada para una turbulencia del 10 %) junto con las curvas Cp y Ct y la producción anual del aerogenerador de ejemplo se adjuntan a continuación.
+
+      
+
+Verificaciones de las condiciones del viento.
+
+      Los aerogeneradores se pueden colocar bajo diferentes y variadas condiciones climáticas: donde la densidad del aire, la intensidad de turbulencia, la velocidad media del viento y el parámetro de forma k son los parámetros a considerar. Si la intensidad de turbulencia es alta las cargas en el aerogenerador aumentan y su tiempo de vida disminuye. Por el contrario, las cargas se reducirán y su tiempo de vida aumentará si la velocidad media del viento o la intensidad de turbulencia o ambas son bajas. Por lo tanto, los aerogeneradores pueden colocarse en emplazamientos con alta intensidad de turbulencia si la velocidad media del viento es adecuadamente baja. Las condiciones climáticas han de examinarse si lo prescrito es excedido.
+      
+      En terreno complejo, las condiciones de viento serán verificadas sobre la base de medidas realizadas en el emplazamiento. Además, habrá que considerar el efecto de la topografía en la velocidad y perfil del viento, la intensidad de turbulencia y la inclinación del flujo de viento sobre cada aerogenerador.
+      
+1.1.7.4 Equipamiento de alta tensión.
+
+      Exceptuando los aerogeneradores de pequeña potencia, todos ellos disponen de un transformador elevador en seco dispuesto en la torre, a efectos de elevar la tensión de baja tensión del aerogenerador a una tensión que generalmente asciende a 20 kV. Este transformador es protegido mediante la correspondiente celda de protección del transformador ubicada en la base de la torre, junto con otras celdas o conexiones que permiten la conexión al anillo de media tensión del parque eólico.
+
+Celda de media tensión.
+
+      
+      Las celdas podrán ser modulares o compactas, y estarán equipada para realizar las funciones de protección del Transformador BT/MT y la conexión a los cables de la Red de  MT. 
+
+      A continuación se indican las características eléctricas más comunes de las celdas habitualmente empleadas:
+      
+TipoAparamenta aislada SF6ServicioContinuoInstalaciónInteriorNº de fases3Nº embarrados1Tensión nominal asignada24 kVTensión del servicio20 kVFrecuencia nominal50 HzIntensidad nominalFunción de protección (P)200 AFunción de conexión a red (L)400 ANivel de aislamientoSobre distancia de Seccionamiento (frecuencia industrial / tipo rayo)60 kV / 145 kVA tierra, entre polos y entre bornas (frecuencia industrial / tipo rayo)50 kV / 125 kVIntensidad de cortocircuitoAdmisible de corta duración (1 s)16 kANominal cresta40 kAVoltaje24 kVMedidasDimensiones Aproximadas1200 x 800 x 2090 (alto) mm3
+
+Transformador
+
+      El transformador de BT/MT será de tipo seco y aislado con materiales  autoextinguibles. Las características mínimas a indicar son las que se muestran en el siguiente ejemplo, que se trata de un transformador de 900 kVA empleado en algunos modelos de aerogeneradores.
+
+      
+Tipo
+Trifásico, seco encapsuladoRelación20 kV / 690 VPotencia nominal900 kVAFrecuencia50 HzGrupo de conexiónDyn11n11Tensión de cortocircuito<=6%Clase de aislamientoFNivel de aislamiento del primarioFrecuencia Industrial24 kVImpulso tipo rayo125 kVNivel de aislamiento del secundarioFrecuencia Industrial3 kVDimensiones Aproximadas860 x 1720 x 1660 (alto) mm3Peso Aproximado2900-3000 kgNorma UNEUNE 21538
+      Para protección contra contactos directos, el transformador irá protegido con una malla metálica. 
+1.1.7.5 Mantenimiento de aerogeneradores.
+
+Mantenimiento correctivo.
+
+      Son intervenciones no programadas o de emergencia. Las intervenciones de mantenimiento correctivo las realizará personal cualificado para realizar tal fin.
+
+Mantenimiento preventivo.
+      
+      Son inspecciones programadas de mantenimiento. En la programación de estas intervenciones es recomendable seguir las indicaciones del fabricante, como mínimo incluirán:
+
+   Buje
+   
+* Detección de fisuras.
+* Revisión del par de apriete de los tornillos.
+
+   Palas
+   
+* Inspección visual de las palas.
+* Detección de fisuras.
+* Inspección del extender de las palas.
+
+   Eje transversal, biela
+   
+* Lubricación cojinetes de las bielas.
+* Lubricación sistema de anti-rotación para el eje transversal
+* Lubricación soporte del eje transversal y del cojinete liso delantero.
+* Chequeo del par de apriete de los tornillos.
+* Chequeo de los rodamientos.
+
+   Cilindro del pitch
+   
+* Lubricación anillos guía en alojamiento del eje de orientación de palas.
+* Lubricación rodamiento del eje de orientación.
+* Lubricación cabeza de bulón en el vástago del pistón.
+* Lubricación soporte del cilindro hidráulico.
+* Chequeo del par de apriete de los tornillos.
+* Chequeo del cojinete liso.
+* Chequeo de las partes en tubo portador.
+* Chequeo de rodamiento del eje de orientación de palas y anillos guía.
+* Chequeo del soporte del cilindro.
+* Chequeo del cilindro hidráulico.
+* Chequeo de posibles fugas de aceite.
+* Chequeo de la posición cero del sistema del eje de orientación de la palas.
+
+   Eje principal
+   
+* Lubricación rodamiento principal, frontal / trasero.
+* Chequeo de rodamientos.
+* Chequeo del par de apriete de los tornillos.
+
+   Sistema de amortiguación
+
+* Lubricación disco de muelles derecho / izquierdo.
+* Chequeo del par de apriete de los tornillos.
+
+   Reductora
+   
+* Lubricación general.
+* Chequeo par de apriete de los tornillos.
+* Chequeo de la holgura de los rodamientos.
+* Chequeo fugas de aceite.
+* Test de aceite.
+
+   Frenos
+   
+? Chequeo del par de apriete de los tornillos.
+* Chequeo pinzas y pastillas de frenos.
+* Chequeo del disco de freno.
+* Eje de transmisión.
+* Lubricación general.
+* Chequeo del eje de transmisión.
+
+   Generador
+   
+* Lubricación general.
+* Chequeo de los amortiguadores de caucho.
+* Chequeo de los rodamientos.
+* Chequeo del dispositivo protector del ventilador y tratamiento de la superficie.
+
+   Sistema hidráulico
+   
+* Revisión de niveles.
+* Cambio filtro alta presión.
+
+   Motor de orientación
+   
+* Lubricación general.
+* Chequeo de rodamientos.
+* Revisión de fugas de aceite.
+
+   Sistema del rodamiento de orientación
+   
+* Lubricación mordazas, vértice inferior, borde interno, dientes.
+* Chequeo del par de apriete de los tornillos.
+* Chequeo de los rodamientos de deslizamiento.
+* Control del material.
+
+   Góndola y corona
+   
+* Chequeo del par de apriete de los tornillos.
+* Control del material.
+* Chequeo de soldaduras.
+
+   Carcasa
+   
+* Revisión general.
+
+   Torre tubular
+   
+* Chequeo del par de apriete de los tornillos y revisión general.
+
+Consumibles.
+
+      Los consumibles que sean necesarios tales como aceites, lubricantes, grasas, filtros, juntas, fusibles, etc., tanto en las inspecciones programadas de mantenimiento como en las intervenciones no programadas. Por ello se dispondrá un almacén, cuya misión será albergar los consumibles necesarios para los trabajos de mantenimiento. 
+       
+1.1.7.6 Red interna del parque.
+
+
+Red de media tensión.
+
+      La red de media tensión tiene como misión transmitir la energía generada en los aerogeneradores hasta el edificio de mando del parque donde se encuentran las celdas de protección y maniobra. También la red servirá para alimentar a los aerogeneradores durante las labores de mantenimiento. 
+      
+      En este apartado se describirá el trazado de la red, la tipología, sección y características nominales del cable empleado. 
+       
+Cable de comunicaciones
+
+      Para la transmisión de señales se conectarán entre sí todos los aerogeneradores y éstos con el edificio de control, generalmente se emplea cable armado de fibra óptica con protección antirroedores dieléctrica.  Este cable irá  en la zanja de los cables de M.T. a una profundidad aproximada de 80 cm. Se han de especificar todas las características técnicas del cable de comunicaciones seleccionado.
+       
+
+Canalizaciones de red interna.
+
+      Antes de comenzar los trabajos, se marcarán las zonas donde se abrirán las zanjas, marcando tanto su anchura como su longitud. Al marcar el trazado de las zanjas se tendrá en cuenta el radio mínimo que hay que dejar en las curvas con arreglo a la sección del conductor o conductores que se vayan a canalizar (El radio de curvatura después de colocado un cable será como mínimo 10 veces su diámetro exterior y 20 veces en las operaciones de tendido).
+      
+      Las zanjas se harán verticales hasta la profundidad escogida, colocándose entubaciones en los casos en que la naturaleza del terreno lo haga preciso.
+      
+      Se eliminará toda rugosidad del fondo que pudiera dañar la cubierta de los cables y se extenderá una capa de arena o tierra fina de 10 cm de espesor que servirá para nivelar el fondo y asiento de los cables. Los conductores se instalarán en tal manera que no se les perjudique ni disminuyan sus características dadas por el fabricante. Se seguirán en todo momento las indicaciones descritas en el pliego de condiciones técnicas referidas a la instalación de los conductores. Deberán emplearse un sistema, bien mediante cintas señalizadoras o placas de PVC, que permitan indicar la presencia de cables  eléctricos, frente a una posible apertura o cata en una zanja.
+      
+Señalización externa.
+
+      Se colocarán mojones de señalización para las líneas de alta tensión, cuando sea posible, deberán identificar el trazado de la línea. Los mojones serán cilíndricos, y las medidas aproximadas serán de 20 centímetros de diámetro, una altura total de 1,1 metros, siendo la altura vista de al menos 40 centímetros.  Los mojones  irán pintados con franjas rojas y blancas, indicándose en su parte superior una referencia de letras AT.
+      
+1.1.7.7 Centro de transformación.
+
+      En aquellos casos en que el objetivo del  parque eólico es generar fluido eléctrico para el consumo de unas instalaciones existentes, tales depuradoras, desaladoras, o cualquier otra actividad industrial, independientemente, de que pueda simultáneamente, suministrar fluido eléctrico a la red pública, se deberá disponer de un centro de transformación que permita transformar la energía eléctrica a los niveles de tensión de uso, generalmente 400 V, a la vez que si se trata de un sistema conectado a la red de alta tensión, le permite suministrarse de fluido eléctrico en ausencia de viento, en este último caso se deberá instalar un contador de energía eléctrica bidireccional.
+      
+      En este aparado se describirán los siguientes apartados:
+      
+* Obra civil del Centro de Transformación.
+* Aparamenta de Alta Tensión empleada.
+* Aparamenta de Baja Tensión empleada.
+* Configuración y descripción de Celdas de Alta Tensión.
+* Transformadores de potencia.
+* Transformadores para servicios auxiliares.
+* Cuadros Generales de Baja Tensión.
+* Protecciones eléctricas empleadas.
+* Sistemas contraincendios.
+* Ventilación.
+* Sistemas de tierras (neutro, herraje, superficie equipotencial).
+* Iluminación.
+* Alumbrado de Emergencia.
+* Equipos de protección individual.
+
+1.1.7.8 Edificio de mando del parque.
+
+Introducción.
+
+      La instalación de un parque eólico lleva aparejado una serie de infraestructuras o servicios adicionales a los aerogeneradores. Es necesario disponer de unas protecciones del conjunto del parque, así como de unos equipos de medición en bornes de estas protecciones. También para realizar el telecontrol de cada aerogenerador, es necesario instalar un ordenador que contenga el software de control de los equipos. Dicho software es necesario para maniobrar los aerogeneradores desde el propio ordenador o desde otro punto conectado telefónicamente, o bien, vía satélite. 
+
+      Por estas razones, es necesario construir un pequeño edificio que albergue la aparamenta eléctrica, los dispositivos de telecontrol y un almacén para los consumibles del parque.
+
+
+Descripción general.
+
+      En este apartado se describirán las dimensiones del edificio, así como los elementos constructivos. Se deberá procurar, integrar esta unidad edificatoria en su entorno, a efectos de minimizar el impacto visual.
+
+Estancia de aparamenta eléctrica.
+
+      Se describirá detalladamente dimensiones, así como la disposición de los equipos de alta tensión y de baja tensión que contendrá, tales como las celdas con aislamiento en gas de SF6  de protección, mando, celda de medida, el transformador de servicios auxiliares, los transformadores de potencia y cuadros generales de baja tensión.
+       
+
+Estancia del ordenador de control.
+
+      Se describirá sus detalladamente sus dimensiones. En el interior de la estancia se colocará una mesa en la que se situarán un teléfono, el ordenador de control del parque y todos los periféricos necesarios para su correcto funcionamiento.
+      
+      En este mismo cuarto y a una altura asequible se colocará un botiquín de primeros auxilios. 
+
+Almacén.
+
+      Deberán indicarse sus dimensiones y describir el mobiliario que se instalará en su interior.
+      
+      La función del almacén es tener un local donde poder acopiar los consumibles necesarios para el correcto mantenimiento de los aerogeneradores. 
+
+Justificación de las medidas contraincendios de la unidad edificatoria.
+
+      Se dispondrán y justificarán todas las medidas contraincendios que deriven de la vigente normativa contraincendios, que como mínimo se atenderá a la siguiente normativa:
+
+> Norma básica de protección contra incendios NBE-CPI 96 sobre Condiciones de Protección Contra Incendios.
+> Real Decreto 786/2001, de 6 de julio, por el que se aprueba el Reglamento de Seguridad contra incendios en los establecimientos industriales (BOE de 30 de julio de 2001).
+> Reglamento de Instalaciones de Protección Contra Incendios aprobado por Real  Decreto 1492 / 1993 de Ministerio de Industria y Energía.
+
+Justificación del cumplimiento de las instalaciones eléctricas interiores de baja tensión.
+
+      Las instalaciones eléctricas interiores de baja tensión se diseñarán de acuerdo con el vigente Real Decreto 842/2002, de 2 de agosto de 2002, Reglamento Electrotécnico para Baja Tensión.
+
+      En todos los cuartos se dispondrán de tomas de corriente, iluminación y alumbrado de emergencia, siendo conveniente instalar una pequeña UPS para los equipos informáticos.
+
+Otras infraestructuras del edificio de control.
+      
+      En el inmueble se dispondrán de las siguientes infraestructuras y servicios necesarias para el correcto funcionamiento del edificio:
+      
+> Infraestructuras de comunicaciones.
+> Saneamiento.
+> Pluviales.
+> Aire Acondicionado en la habitación de control.
+
+1.1.7.9 Caminos internos y plataformas de montaje de los aerogeneradores.
+
+Trazado de los caminos internos
+
+      Se describirán los caminos internos en la/s parcela/s, respondiendo, por una parte a la condición de facilitar el acceso a todos los aerogeneradores del parque, y por otra a la de utilizar en la mayor medida posible los caminos existentes, minimizando de esta forma la afección ambiental de la obra. Como condición general de trazado, se considerará la pendiente máxima, los radios en curvas mínimo y la inclinación lateral, a efectos de realizar la correcta programación del transporte del material y grúas para el montaje de los aerogeneradores. No obstante, se procurará encajar los caminos de la forma más ventajosa para evitar al máximo la aparición de terraplenes, que son más difíciles de integrar con el paisaje. 
+       
+Plataformas de montaje
+
+      Se describirán la constitución y medidas de la plataforma que se dispondrán junto a cada aerogenerador, en prolongación con los accesos, necesaria para el establecimiento de las grúas empleadas en el montaje de las torres y los generadores.
+
+1.2 Memoria de cálculo.
+
+1.2.1 Introducción
+
+      La memoria de cálculo estará constituida por los métodos de cálculo y los resultados que justifican las diferentes soluciones adoptadas en los diversos capítulos de las obras proyectadas. 
+
+      Se deberán analizar los siguientes capítulos:
+
+      CÁLCULOS ELÉCTRICOS: Se justificará la red interior del parque, el centro de transformación, instalaciones de baja tensión del edificio de control, los servicios auxiliares y la línea de evacuación del parque si existe (sistema no aislado).
+
+      CÁLCULOS ESTRUCTURALES: De la estructura y cimentación del edificio de mando del parque, donde estarán ubicadas las protecciones, los equipos de telemando y los consumibles necesarios.
+
+      CÁLCULOS DE MOVIMIENTO DE TIERRAS: Necesarios para la ejecución de las cimentaciones, vías de acceso y trazado de las líneas.
+
+      CÁLCULOS REFERIDOS A LA NORMATIVA DE PREVENCIÓN DE INCENDIOS: Evaluación del nivel de riesgo del local, medidas de prevención y cálculo de la ventilación del edificio.
+
+1.2.2 Cálculos eléctricos.
+
+1.2.2.1 Cálculo de la red interna de 20 Kw.
+
+Introducción.
+
+      La red interna del parque es la encargada de conectar eléctricamente los aerogeneradores entre sí y llevar la energía producida por estos al embarrado del parque. Se deberá diseñar sus interconexiones de manera que logre el mejor compromiso entre la fiabilidad del sistema y la economía de la ejecución.   
+
+Metodología.
+
+      Para determinar la sección de conductor que se precisa en la instalación se atenderá a tres criterios de cálculo:
+      
+> Intensidad máxima admisible en servicio permanente.
+> Intensidad máxima admisible en cortocircuito durante un tiempo dado.
+> Caída de tensión.
+
+Intensidad máxima admisible en el servicio permanente.
+
+      Se calculará el caso más desfavorable que pudiera originarse en cada tramo. El cálculo de la sección por máxima intensidad en régimen permanente estará supeditada a los siguientes extremos:
+
+      Máxima intensidad generada por el parque eólico en el tramo de línea analizada (IMG).
+       Intensidad máxima admisible corregida por el conductor (IAC). Como referencia de cálculo de este parámetro se puede recurrir la norma UNE 20435 Guía para la elección de cables de alta tensión.
+
+      En todo caso siempre se deberá cumplir:
+
+IAC ? IMG
+
+Caida de tensión.
+
+      Para realizar la comprobación de la caída de tensión de las líneas, se utilizaran, los valores de la resistencia óhmica (R) y de la reactancia (X), en C.A. a 50 Hz, en las condiciones de servicio, que serán facilitados por el fabricante. La caída de tensión de la línea para el caso de C.A. trifásica, se puede calcular por varios métodos, tales como, mediante técnicas de flujo de potencia, ecuaciones hiperbólicas, esquema en ? o esquema serie, etc. Las ecuaciones hiperbólicas son las más exactas y más complejas, mientras que el esquema serie, es el más sencillo y rápido de calcular,  y el que más caída de tensión da como resultado al eliminar la parte capacitiva del modelo eléctrico. No obstante, la selección del método a emplear debe venir ligado a la envergadura de la red interna de interconexión entre aerogeneradores. 
+       
+Intensidad máxima admisible en cortocircuito.
+
+      Según este criterio, la sección del conductor, será aquella que permita soportar una corriente de cortocircuito por un espacio de tiempo, que deberá ser inferior al de actuación de las protecciones aguas arriba de la red interna del parque eólico, es decir, las protecciones generales del parque ubicadas en el edificio de control. Estas protecciones, ante un defecto, deberán actuar con antelación a las dispuestas en la Subestación de la Compañía Eléctrica, es decir, serán selectivas con la red de distribución pública, a efectos de evitar un disparo que afecte a otros abonados.
+      
+      La compañía eléctrica facilita la potencia de cortocircuito en el punto de evacuación de energía, a partir de este valor, y dado que podemos modelizar  el sistema eléctrico de potencia aguas abajo al punto de entronque de la red  de distribución pública, podremos determinar la potencia de cortocircuito en cualquier punto de la red interna del parque eólico. Se debe tener en cuenta, que en caso de cortocircuito, además de la potencia que suministrar la red, podría sumarse la de los generadores eólicos.
+
+Calculo de la intensidad en cortocircuito en barras del edificio de mando.
+
+      En caso de producirse un cortocircuito, tanto la red, como los aerogeneradores alimentarían éste. La intensidad en cortocircuito será por lo tanto la suma de ambas, tal como se representa en el siguiente esquema conceptual.
+      
+      
+
+APORTACIÓN DE LA RED.
+
+      En primer lugar se determina la aportación de la red. El esquema eléctrico del circuito sería el siguiente:
+      
+
+
+
+APORTACIÓN DE LOS AEROGENERADORES.
+
+      La aportación de los aerogeneradores a la corriente de cortocircuito en las barras del edificio de mando, es distinta para cada aerogenerador, ya que en función de la lejanía  de estos al edificio de mando, su potencia de cortocircuito está más amortiguada. El esquema simplificado de la instalación sería, donde Zequivalente Total responde a la impedancia equivalente del circuito de la red interna de líneas del parque, así como las impedancias de cada los aerogeneradores:
+      
+
+Por lo tanto la intensidad de cortocircuito en barras del edificio de mando es:
+
+
+
+
+Cálculo de intensidad de cortocircuito en un punto interior de la red del parque.
+
+      Se deberá analizar la potencia de cortocircuito en otros puntos de la red interna, concretamente, se deberá prestar especial atención, aquellos donde la intensidad de cortocircuito alcance los valores máximos.
+      
+      Al igual que el caso anteriormente expuesto, se deberá tener en cuenta, la aportación del parque eólico, además de la red de distribución.
+
+      Una vez disponemos de la máxima intensidad de cortocircuito, así como el tiempo de actuación de las protecciones frente a las faltas, podremos determinar si una sección dada de un conductor, soporta las solicitaciones del cortocircuito para un tiempo de actuación dado. Para ello, se deberá emplear los datos facilitados por el fabricante del conductor.  
+
+Comprobación del embarrado de 20 kv.
+
+      Se deberá comprobar que el embarrado de las celdas, una vez determinado la intensidad de cortocircuito en el edificio de mando, tiene unas características nominales facilitadas por el fabricante superior a las solicitaciones calculadas.
+
+1.2.2.2 Cálculo del centro de transformación.
+
+Cálculo justificativo.
+
+* Intensidad en Alta Tensión.
+* Intensidad en Baja Tensión.
+* Cortocircuitos:
+
+> Cálculo de la corriente de cortocircuito.
+> Cortocircuito en el lado de Alta Tensión.
+> Cortocircuito en el lado de Baja Tensión.
+
+* Dimensionado del embarrado:
+
+> Comprobación por densidad de corriente.
+> Comprobación por solicitación electrodinámica.
+> Cortocircuito por solicitación técnica.
+
+* Selección de fusibles de Alta y Baja Tensión.
+* Interruptores de Baja Tensión.
+* Dimensionado de la ventilación.
+* Dimensiones de la fosa apagallamas.
+* Cálculo de las instalaciones de puesta en tierra:
+
+> Investigación de las características del suelo.
+> Determinación de las corrientes máximas de puesta en tierra y del tiempo máximo de eliminación del defecto.
+> Diseño preliminar de la instalación de tierra.
+> Cálculo de la resistencia del sistema de tierra.
+> Cálculo de las tensiones de paso interior de la instalación.
+> Cálculo de las tensiones en el exterior de la instalación.
+> Cálculo de las tensiones aplicadas.
+> Investigación de las tensiones transferidas al exterior por tuberías, vallas, neutros, blindajes de cables, circuitos de señalización y de los puntos especialmente peligrosos.  Estudio de las formas de reducción o eliminación.
+> Corrección y ajuste del diseño inicial, estableciendo el diseño definitivo.
+
+1.2.2.3 Cálculo de las instalaciones eléctricas del edificio de control.
+Cálculos luminotécnicos.
+
+      Se justificarán los sistemas de alumbrado a emplear en los distintos espacios de la del edificio de control, en función de las características del trabajo a efectuar, y de las luminarias y lámpara empleadas.
+      
+      Asimismo, se deberá reflejar los cálculos de números de luminarias a instalar y niveles lumínicos resultantes. En caso de usarse ordenador para los cálculos, incluir hipótesis de cálculo y resultados, especificando el programa empleado.
+
+Cálculos eléctricos.
+      
+Previsión de cargas
+
+* Potencia total instalada. Para ello es preciso especificar:
+> Relación de receptores de alumbrado con indicación de sus potencias eléctricas.
+> Relación de receptores de fuerza con indicación de sus potencias eléctricas.
+> Relación de otros receptores con indicaciones de sus potencias eléctricas.
+
+* Indicar y justificar la potencia en kW de los generadores (UPS) o grupos electrógenos que existan.
+
+Cálculo de las secciones 
+      
+      Se procederá a calcular las secciones de conductores y de las características de las canalizaciones de línea o líneas repartidoras, derivaciones individuales, líneas secundarias y otras, pudiendo simplificarse los cálculos por medio de tablas indicativas, aunque siempre es preciso indicar las fórmulas y los criterios empleados.
+
+Cálculo de las protecciones
+
+      A instalar en las diferentes líneas generales y secundarias, teniendo en cuenta sobrecargas, cortocircuitos y sobretensiones.
+      
+Cálculo de la compensación del factor de potencia y selección del equipo
+
+Cálculo y características de los sistemas de protección contra contactos indirectos
+
+
+1.2.3 Calculo justificación de medidas contraincendios del edificio de control.
+1.2.3.1 Compartimentación.
+
+      Se indicarán los sectores de incendios que se han considerado en el edificio o edificios donde se ubica la industria.
+      
+1.2.3.2 Ocupación del edificio.
+      
+      Se establecerá el número de personas que según el uso puedan estar simultáneamente en cada una de las dependencias de la industria, en cada sector de incendios y, si el caso lo requiere, en cada planta del edificio.
+
+1.2.3.3 Evacuación.
+
+      Se especificará con detalle lo siguiente:
+
+
+* Orígenes de evacuación en cada sector.
+* Recorridos de evacuación para cada sector.
+* Alturas de evacuación con respecto al exterior.
+* Salidas de planta. Número y disposición.
+* Dimensiones de salidas, pasillos, escaleras y rampas, teniendo en cuenta las recomendaciones establecidas en la NBE-CPI 96.
+
+1.2.3.4 Señalización.
+
+      Indicación de los elementos necesarios de señalización bien de carácter pasivo como rótulos y señales o de carácter activo como alumbrados de emergencia y señalización.
+
+1.2.3.5 Comportamiento ante el fuego de elementos constructivos y materiales
+
+      Se especificará la Estabilidad al Fuego (EF) para los elementos constructivos y estructurales del edificio de mando: estructura, cubiertas, muros medianeros, muros separadores de sectores de incendio y fachada. Asimismo para los diversos materiales empleados se indicarán sus características y su clasificación (MO, M1, M2, M3, M4 o M5).
+
+1.2.3.6 Instalaciones de proteccion contra incendios
+
+      De cada una de las instalaciones exigidas por la normativa vigente, o bien, instaladas por diseño del proyectista, se expresará y se calculará lo siguiente:
+
+* Extintores.
+
+> Máximo recorrido hasta un extintor, indicando máxima distancia entre extintores.
+> Eficacia de los extintores empleados, número y disposición de los mismos.
+
+* Bocas de incendio equipadas.
+
+> Cálculo del número de bocas, de los diámetros de las tuberías, de la potencia de la bomba necesaria y de la capacidad del depósito de agua.
+> Criterios de colocación de bocas y emplazamiento de las mismas.
+
+* Instalación de detección y alarma.
+
+> Tipo de detectores a emplear.
+> Cálculo del número de detectores y disposición de los mismos.
+> Ubicación de la central de detección y de los sistemas internos y externos de alarma.
+
+* Alumbrados de emergencia y señalización.
+
+> Descripción ce los elementos de estas instalaciones y condiciones de ubicación de los aparatos.
+
+* Otras instalaciones.
+
+> Descripción ce los elementos de estas instalaciones y condiciones de ubicación de los aparatos.
+
+1.2.4 Cálculo de estructuras del edificio de control.
+
+      Se deberá reflejar los siguientes cálculos y soluciones adoptadas:
+
+* Resistencia admisible del terreno y otros parámetros que afecten al cálculo de las cimentaciones.
+* Acciones consideradas teniendo en cuenta las normas en vigor: cargas permanentes, sobrecargas de uso, nieve, viento, sismo y cargas térmicas.
+* Calidades de los materiales resistentes empleados en cimentaciones y estructuras.
+* Coeficientes de seguridad adoptados (mayoración de acciones y minoración de resistencias de materiales).
+* Niveles de control considerados.
+* Si el proyectista adopta acciones, disposiciones o procesos de cálculo distintos de los estipulados en las normas, deberá hacerlo constar y lo justificará detalladamente.
+
+
+      En la actualidad la mayoría de los cálculos de este tipo se realizan con ordenador por lo que es preciso especificar en el proyecto e nombre del programa empleado, la versión del mismo, el nombre del fabricante y el tipo de ordenador empleado.
+
+
+1.3 PLANOS
+
+      Los planos del proyecto de un parque eólico, se estructurarán de la siguiente forma, y contendrán como mínimo lo reflejado a continuación:
+
+1.3.1 Planos de situación y emplazamiento
+
+      Se reflejará el paraje o lugar donde se ubique el parque eólico, destacando accesos o puntos de referencia de fácil identificación. Las escalas adecuadas son entre 1/1000 y 1/2000.
+
+      Planos de Distribución en parcela. Situación equipos principales
+
+      Se distribuirán en las parcelas los aerogeneradores y el edificio de control. En los mismos, se reflejarán las distancias entre aerogeneradores. Se recomienda una escala de 1/500.
+
+1.3.2 Planos de elementos estructurales del aerogenerador
+
+      Se reflejará todas las características de los elementos estructurales del aerogenerador, reflejando los detalles de los elementos de ensamblaje de las diferentes piezas. Se recomienda escala 1/50.
+
+1.3.3 Planos de equipos electromecánicos del aerogenerador
+
+      Se reflejará todas las características de los elementos electromecánicos del aerogenerador, reflejando los detalles de los elementos de ensamblaje de las diferentes piezas. Se recomienda escalas entre 1/25 y 1/50.
+
+1.3.4 Planos de cimentación y toma de tierra del aerogenerador
+
+      Deberán contener los detalles de la conformación de la cimentación, incluyendo el detalle de la ferralla a emplear. Escala recomendada 1/25.
+
+1.3.5 Plano de diagrama de bloque del sistema de control
+
+      Reflejará la distribución del sistema de control de mando y funcionamiento del aerogenerador.
+1.3.6 Plano de Esquema unifilar de la instalación eléctrica del aerogenerador
+
+      Se representará los aparatos eléctricos de potencia, indicando las principales características nominales eléctricas.
+
+1.3.7 Planos del Centro de Transformación
+
+      Dichos planos deberán ser al menos dos, por un lado un esquema unifilar de la instalación, con indicación de las características principales de los elementos fundamentales que la integran, y por otra parte, los planos generales en planta y alzado suficientemente amplios, a escalas convenientes (recomendada 1/25) y con indicación de las cotas esenciales, poniendo de manifiesto el emplazamiento y la disposición de las máquinas, aparatos y conexiones principales. 
+
+1.3.8 Planos del edificio o sala de control
+
+      Se representará todos los detalles constructivos de dicho edificio, así como la distribución en planta de los equipos instalados. Escala recomendada entre 1/25 y 1/50.
+
+1.3.9 Planos de detalles estructurales del edificio de control
+
+      Se representará todos los detalles constructivos de dicho edificio, tales como planta de pilares, pórticos, secciones de forjados, secciones de vigas, etc.
+
+1.3.10 Plano de trazado de laS LíneaS subterráneas de Media Tensión
+
+      Se representará todos los trazados de las líneas de media tensión proyectadas, tanto las resultantes de los anillos del parque, como la línea de entronque a la red de distribución pública cuando proceda. Escala recomendada 1/500.
+
+1.3.11 Plano de Trazado de las Líneas subterráneas de baja tensión
+
+      Se representará todos los trazados de las líneas de baja tensión proyectadas, resultantes de las conexiones de los aerogeneradores a los centros de transformación. Escala recomendada 1/500.
+
+1.3.12 Plano de canalizaciones de la línea subterránea de media tensión
+
+      Se representará todas las secciones transversales acotadas de las zanjas de los tendidos de líneas de media tensión, indicando los materiales que la constituyen, tales como diámetro de tubos, tipo de hormigón y señalización de peligro eléctrico. Escala recomendada 1/20.
+ 
+1.3.13  Plano de canalizaciones de la Línea subterránea de baja tensión
+
+      Se representará todas las secciones transversales acotadas de las zanjas de los tendidos de líneas de baja tensión, indicando los materiales que la constituyen, tales como diámetro de tubos, tipo de hormigón y señalización de peligro eléctrico. Escala recomendada1/20.
+      
+
+1.4 Pliego de condiciones.
+
+      Tendrá dos formatos diferentes, según se trate de la Obra Civil o de las Instalaciones. Se ofrece la posibilidad de incluir un pliego de condiciones para cada instalación y obra civil, pero se recomienda la redacción de un Pliego único en el que se detallen los aspectos característicos de cada instalación.
+      
+1.4.1 Pliego de Condiciones para la Oba Civil
+      
+      Se estructurará en las partes siguientes:
+      
+1.4.1.1 Condiciones generales y normativa.
+
+* Alcance y contenido del Pliego General de Condiciones.
+* Normativa aplicada.
+* Documentos de obra.
+* Variaciones de lo establecido en el proyecto.
+* Consideraciones a cumplir por los materiales no especificados en este pliego.
+* Contradicciones y omisiones en la documentación.
+* Legislación social.
+* Seguridad pública.
+
+
+1.4.1.2 Condiciones de Indole Técnica y de Ejecución
+* Movimientos de tierras.
+
+> Replanteo preliminar.
+> Replanteo definitivo de las obras.
+> Acta de replanteo.
+> Organización y seguridad de los trabajos.
+> Desmontes.
+> Zanjas y pozos de cimentación.
+> Zanjas para tubos de saneamiento.
+> Precauciones y responsabilidades.
+> Medición y valoración de los desmontes y vaciados.
+> Medición y valoración de las zanjas de cimentación.
+> Medición y valoración del relleno y compactación de zanjas.
+
+* Cimentación.
+
+> Resistencia del terreno.
+> Nivelación y apisonado de los fondos.
+> Fábrica de cimientos.
+> Medición y valoración.
+
+* Hormigón armado.
+
+> Características.
+> Pruebas.
+> Armaduras.
+> Encofrados.
+> Ejecución.
+> Medición y valoración de las obras de hormigón.
+> Medición y valoración del acero.
+
+* Estructuras metálica.
+
+> Materiales.
+> Control de materiales base.
+> Control de equipos e instalaciones.
+> Control de soldadura
+> Perfiles a emplear: condiciones que deben reunir. Sustituciones.
+> Hipótesis de carga. Modificaciones.
+> Cubiertas.
+> Ejecución.
+> Pintura de la estructura metálica.
+> Ejecución del pintado.
+> Medición y valoración de la estructura metálica.
+
+* Albañilería.
+
+> Aguas.
+> Arenas y áridos.
+> Fábrica de bloques.
+> Morteros.
+> Ejecución de fábricas de bloques.
+> Revestimiento.
+> Medición y valoración de las paredes y tabiques.
+> Medición y valoración de revestimientos.
+
+* Solados y alicatados.
+
+> Encachados y afirmados.
+> Pavimentos.
+> Alicatados.
+> Medición y valoración.
+
+* Redes de saneamiento.
+
+> Condiciones generales.
+> Redes de aguas pluviales.
+> Sifones.
+> Fijación.
+> Uniones.
+> Condiciones generales para tuberías.
+> Arquetas y pozos de registros.
+> Unión de tuberías.
+> Medición y valoración de las redes de tuberías.
+> Valoración de los tubos.
+> Valoración de piezas especiales.
+
+* Carpintería.
+
+> Materiales.
+> Herrajes.
+> Muestras, modelos y repasos.
+> Medición y valoración.
+
+
+* Pinturas y barnices.
+
+> Generalidades.
+> Colores.
+> Operaciones previas.
+> Colores y tonos.
+1.4.1.3 Condiciones de Indole Facultativa
+
+* Obligaciones y derechos del contratista.
+* Dirección facultativa.
+* Oficina en la obra.
+* Trabajos no estipulados expresamente en el Pliego de Condiciones.
+* Reclamaciones contra las órdenes del Director de Obra.
+* Recusación por el Contratista del personal nombrado por el Director de obra.
+* Interpretación, aclaraciones y modificaciones de los documentos del proyecto.
+* Comienzo de la obra. Ritmo de ejecución de los trabajos.
+* Orden de los trabajos.
+* Ampliación del proyecto por causas imprevistas.
+* Prórrogas por causa de fuerza mayor.
+* Condiciones generales de ejecución de los trabajos
+* Obras ocultas.
+* Trabajos defectuosos.
+* Vicios ocultos.
+* Materiales no utilizados.
+* Materiales y aparatos defectuosos.
+* Medios Auxiliares.
+* Recepciones provisionales.
+* Conservación de las obras recibidas provisionalmente.
+* Medición definitiva de los trabajos.
+* Recepciones definitivas.
+
+
+1.4.1.4 Condiciones de Indole Económica
+
+* Base fundamental.
+* Fianza.
+* Ejecución del trabajo con cargo a la fianza.
+* Carácter de las liquidaciones parciales.
+* Composición de los precios unitarios.
+* Precios de contrata. Importe de contrata.
+* Precios contradictorios.
+* Reclamaciones de aumento de precios por causas diversas.
+* Revisión de los precios contratados.
+* Abono de las obras.
+* Abono de unidades de obras ejecutadas.
+* Relaciones valoradas y certificaciones.
+* Abono de trabajos presupuestados con partida alzada.
+* Indemnización por retraso no justificado en el plazo de terminación de las obras.
+* Indemnización por incumplimiento del contrato.
+* Indemnizaciones por retraso en el pago al contratista.
+* Seguro de las obras.
+* Conservación de la obra.
+
+1.4.1.5 Condiciones de Indole Legal
+
+* Contrato y Formalización del mismo.
+* Adjudicación de las obras.
+* Responsabilidad del Contratista.
+* Reconocimiento de obras con vicios ocultos.
+* Policía de obra.
+* Accidentes de trabajo.
+* Causas de rescisión del contrato.
+* Devolución de la fianza.
+* Daños a terceros.
+* Plazo de entrega de las obras.
+* Régimen Jurídico.
+
+1.4.1.6 Libro de Ordenes
+
+      Se especificará la existencia, disponibilidad, funciones y condiciones de uso del Libro de Ordenes.
+
+1.4.2 Pliego de Condiciones para instalaciones eléctricas de baja tensión.
+
+1.4.2.1 Calidades y características de los materiales empleados en la instalación
+
+Contendrá como mínimo:
+
+* Conductores eléctricos. Conductores de protección.
+* Identificación de los conductores.
+* Tubos y canalizaciones protectoras.
+* Cajas de empalmes y derivaciones.
+* Aparatos de mando y maniobra.
+* Elementos de protección.
+
+1.4.2.2 Normas de ejecución de las instalaciones
+
+1.4.2.3 Pruebas, ensayos y verificaciones reglamentarias
+
+1.4.2.4 Certificados y documentación
+
+1.4.2.5 Libro de órdenes
+
+1.4.3 Pliego de Condiciones para líneas eléctricas subterráneas de alta tensión
+1.4.3.1 Calidades y características de los materiales empleados
+
+* Conductores
+* Empalmes y accesorios.
+* Arquetas.
+1.4.3.2 Normas de ejecución de las obras y de las instalaciones
+
+* Características de la empresa instaladora.
+* Características y normas de tendido.
+
+1.4.3.3 Pruebas, ensayos y verificaciones reglamentarias
+
+1.4.3.4 Condiciones de uso, mantenimiento y seguridad
+
+1.4.3.5 Certificados y documentación
+
+1.4.3.6 Libro de órdenes
+
+1.4.4 Pliego de Condiciones para centro de transforfación.
+
+1.4.4.1 Calidades y características de los materiales empleados
+
+* Obra civil.
+* Conductores y aparamenta en Alta Tensión.
+* Conductores, aparamenta y cuadros de Baja Tensión.
+* Transformadores.
+* Equipos de medida y otros elementos.
+
+1.4.4.2 Normas de ejecución de las obras y de las instalaciones
+
+* Características de la empresa instaladora.
+
+1.4.4.3 Pruebas, ensayos y verificaciones reglamentarias
+
+1.4.4.4 Condiciones de uso, mantenimiento y seguridad
+
+1.4.4.5 Certificados y documentación
+
+1.4.4.6 Libro de órdenes
+
+
+1.5 Mediciones y Presupuesto
+
+      Se realizará una completa medición de la totalidad de las instalaciones y de sus elementos, considerándose  todas las unidades de obra completamente terminadas, probadas y en funcionamiento. Las mediciones y el presupuesto se pueden desglosar en: 
+      
+1.5.1 Aerogeneradores  y sistema de control.
+
+1.5.2 Obra civil.
+
+1.5.2.1 Aerogeneradores
+Cimentación y puesta a tierra de los aerogeneradores.
+
+1.5.2.2 Edificio de mando.
+
+Cimentación y losa.
+
+Estructura y cerramientos.
+
+Carpintería metálica.
+
+1.5.2.3 Remodelacion de accesos y acondicionamiento de la parcela.
+
+1.5.3 Equipamientos del edificio de mando
+
+1.5.3.1 Aparamenta e instalaciones de alta tensión.
+1.5.3.2 Aparamenta e intalaciones de baja tensión
+1.5.3.3 Varios
+
+1.5.4 Red eléctrica del parque (MT o BT)
+
+1.5.5 Línea de evacuación a la red de evacuación.
+
+
+
+
+1.6 Seguridad y salud
+
+
+1.6.1 Objeto del estudio de seguridad y salud.
+      
+      El estudio precisará las normas de seguridad y salud aplicables a la obra, contemplando la identificación de riesgos laborales que puedan ser evitados, indicando las medidas técnicas necesarias para ello; relación de riesgos laborales que no puedan eliminarse especificando las medidas preventivas y protecciones técnicas tendentes a controlar y reducir dichos riesgos, a la vez que se valora su eficacia. Además se contemplará las previsiones y las informaciones útiles necesarias para efectuar en su día, en las debidas condiciones  de seguridad y salud, los previsibles trabajos posteriores. 
+      
+      Resulta de vital importancia, aplicar con todo su rigor el Real Decreto 614/2001, de 8 de junio, sobre disposiciones mínimas para la protección de la salud y seguridad de los trabajadores frente al riesgo eléctrico, dado la especificidad de su articulado, en relación con la ejecución de las instalaciones eléctricas.
+      
+
+1.6.2 Descripción general de la actividad.
+
+
+      El objeto de las obras es la construcción de un parque eólico, con todas las instalaciones que ello conlleva. Las actividades a realizar son las siguientes:
+      
+      Transporte y acopio de materiales.
+
+> Arena silícea o arrocillo.
+> Bloques de protección del cable.
+> Tierra seleccionada.
+> Empalmes y terminaciones.
+> Bobinas y cables.
+> Etcétera.
+
+      Excavaciones (apertura y cierre de zanjas) y movimiento de tierras.
+      
+      Adecuación terrenos, accesos y plataformas que facilite el transporte de materiales y montaje de los aerogeneradores
+      
+      
+      Tendido de cables subterráneos.
+
+      Hormigones.
+
+> Para protección de zanjas.
+> Para cruces de calles, carreteras, barrancos, etc.
+
+* Reposición de pavimentos asfálticos (sí fuera necesario) en cruces de calles y carreteras.
+* Reposición de calle sin asfalto.
+* Construcción de CT y edificio de control.
+
+
+1.6.3 Recursos considerados.
+
+      Los medios auxiliares y maquinaria para la ejecución de las obras son:
+
+* Retroexcavadora.
+* Camiones.
+* Camión grúa. Grúa para montaje aerogeneradores.
+* Máquina compactadora.
+* Autohormigonera.
+* Martillo rompedor - retro.
+* Compresores de diferentes presiones.
+* Maquinaria de tendido de cables y rodillos.
+* Tractores.
+* Herramientas manuales para ejecución de empalmes y terminaciones.
+* Cubas de agua.
+* Compactador vibrador para los hormigones.
+* Planchas metálicas, etc.
+
+1.6.4 Idendificación y valoración de riesgos
+      
+      En este apartado se han de identificar los factores de riesgo, los riesgos de accidente de trabajo y/o enfermedad profesional derivados de los mismos, procediendo a su posterior evaluación, de manera que sirva de base a la posterior planificación de la acción preventiva en la cual se determinarán las medidas y acciones necesarias para su corrección.
+      
+      Tras el análisis de las características de la instalación y del personal expuesto a los riesgos se  determinarán los riesgos que afectan al conjunto de la obra, a los trabajadores de una sección o zona de la obra y a los de un puesto de trabajo determinado.
+      
+1.6.5 Planificación de la acción preventiva.
+
+      Tras realizar el análisis de las características de los trabajos y del personal expuesto a los riesgos se establecerán las medidas y acciones necesarias para llevarse a cabo por parte de la empresa instaladora o constructora, para tratar cada uno de los riesgos de accidente de trabajo y/o enfermedad profesional  detectados.
+      
+1.6.6 Normas generales de seguridad dispociciones mínimas.
+
+1.6.6.1 Consideraciones aplicables durante la ejecución
+
+      Como mínimo será las que se redactan a continuación:
+       
+* El mantenimiento de la obra en buenas condiciones de orden y limpieza.
+* La correcta elección del emplazamiento de los puestos y áreas de trabajo, teniendo en cuenta sus condiciones de acceso, y la determinación de las vías o zonas de desplazamiento o circulación.
+* Manipulación adecuada de los distintos materiales y utilización de los medios auxiliares.
+* El mantenimiento, el control previo a la puesta en marcha y el control periódico de las instalaciones y dispositivos necesarios para la ejecución de la obra, con objeto de corregir los defectos que pudieran afectar a la seguridad y salud de los trabajadores.
+* La delimitación y el acondicionamiento de las zonas de almacenamiento y depósito de los distintos materiales, en particular si se trata de materias o sustancias peligrosas.
+* La recogida de los materiales peligrosos utilizados.
+* El almacenamiento y la eliminación o evacuación de residuos y escombros.
+* La adaptación, en función de la evolución de la obra, del período efectivo que habrá de dedicarse a los distintos trabajos o fases de trabajo.
+* La cooperación entre contratistas, subcontratistas y trabajadores autónomos.
+* Las interacciones e incompatibilidades con cualquier otro tipo de trabajo o actividad que se realice en la obra o cerca del lugar de la obra.
+
+1.6.6.2 Disposiciones mÍnimas a aplicar en las obras
+
+      Estas disposiciones deberán ser respetadas rigurosamente a lo largo de toda la ejecución de la obra, como mínimo se tendrán en cuenta las siguientes:
+
+* El responsable de Trabajos debe comprobar, bajo su responsabilidad, si se cumplen las Prescripciones de Seguridad, cerciorándose de que las condiciones de trabajo sean seguras, de que se emplean las protecciones necesarias y el equipo de seguridad apropiado, y de que las herramientas, materiales y equipos, tanto de trabajo como de seguridad y primeros auxilios, están en debidas condiciones.
+* El responsable de Trabajos debe asegurarse de que todos los operarios comprenden  plenamente la tarea que se les ha asignado.
+* Todo operario debe dar cuenta a su superior de las situaciones inseguras que observe  en su trabajo, y advertirle del material o herramienta que se encuentre en mal estado.
+* Sé prohibe expresamente los mal llamados actos de valentía, que entrañan siempre un riesgo evidente.
+* Sé prohibe consumir bebidas alcohólicas en el trabajo.
+* No se permiten bromas, juegos, etc., que puedan distraer  a los operarios en su trabajo.
+
+1.6.7 Tipos de trabajo e instrucciones
+
+      Se describirán cada uno de los trabajos en la ejecución del parque eólico, indicando las instrucciones, útiles y medidas de seguridad a emplear en cada uno de ellos, de tal manera que se realicen de forma segura y salubre. Se pueden agrupar como se describe a continuación:
+      
+* Trabajos en instalaciones eléctricas de baja tensión, con y sin tensión.
+* Trabajos en instalaciones eléctricas de alta tensión, con y sin tensión.
+* Trabajos en la ejecución de canalizaciones subterráneas eléctricas.
+* Trabajos en la obra civil de cimentaciones y edificio de mando.
+* Trabajos de transporte, acopio y montaje de aerogeneradores.
+* Trabajos de soldadura.
+
+1.6.8 Empleo y conservación del material de seguridad.
+
+      En este apartado se reflejarán las condiciones que debe reunir todo el material de seguridad, así como explicar su correcto empleo, entre ellos, estarán los que se describen a continuación:
+
+* Casco-visera de seguridad aislante para trabajos eléctricos, adecuados al nivel de tensión  de empleo.
+* Casco de seguridad frente a choques.
+* Gafas de protección frente penetración de cuerpos.
+* Gafas de protección para soldar.
+* Guantes de seguridad aislante para trabajos eléctricos, adecuados al nivel de tensión  de empleo.
+* Guantes de protección mecánica.
+* Cinturones y arneses de seguridad.
+* Trepadores.
+* Botas de protección.
+* Banqueta, alfombrilla y pértiga aislante.
+* Dispositivos de puesta a tierra temporal.
+
+1.6.9 Presupuesto de las medidas de prevención.
+
+      Se presupuestarán las partidas concernientes a las medidas preventivas necesarias para acometer la obra, así como las medidas y equipos de protección individual necesarios para realizar la correcta explotación del parque eólico. 
+      
+
+1.7 Estudio de impacto medioambiental.(si procede).
+
+      El Estudio de Impacto Ambiental será elaborado cuando la normativa medioambiental así lo exigiera, actualmente, en el ámbito de la legislación Autonómica, es aplicación la vigente Ley 11/1990, de 13 de julio, de Prevención del Impacto Ecológico, que no incluye dentro sus apéndices de actividades que la instalación de un parque eólico sea objeto de la tramitación de Evaluación de Impacto Ambiental, a no ser que:
+      
+      Sus infraestructuras, total o parcialmente, se localicen dentro de un Área de Sensibilidad Ecológica.
+      
+      El proyecto sea financiado total o parcialmente, con fondos de la Hacienda Pública Canaria, salvo cuando su realización tenga lugar dentro de suelo urbano, o en aquellos en los que el convenio o resolución que establezca la cooperación o subvención se exceptúe motivadamente. 
+
+      En estos dos supuestos, la categoría de evaluación a aplicar sería de Evaluación Básica de Impacto Ecológico.
+      
+      Por otra parte, en el ámbito de la legislación nacional, actualmente está vigente el Real Decreto 1302/1986, de 28 de junio, de Evaluación de Impacto Ambiental, modificado por el Real Decreto 9/2000, de 6 de octubre, y por la Ley 6 /2001, de 8 de mayo, estableciendo que deberán someterse a una evaluación de impacto ambiental los parques eólicos que:
+      
+      Tengan 50 o más aerogeneradores, o que se encuentren a menos de 2 kilómetros de otro parque eólico.
+      
+       Que dispongan más de 10 aerogeneradores, y que se desarrollen en zonas especialmente sensibles, designadas en aplicación de la Directiva 79/409/CEE, del Consejo, de 2 de abril, relativa a la conservación de las aves silvestres, y de la Directiva 92/43/CEE, del Consejo, de 21 de mayo, relativa a la conservación de los hábitats naturales y de la fauna y flora silvestre, o en humedales incluidos en la lista del Convenio de Ramsar.
+      
+      
+      Cualquier parque eólico no incluido en los dos apartados anteriores, siempre y cuando,  lo decida el órgano ambiental competente, decisión, que deberá ser motivada y pública, la cual se ajustará a los criterios establecidos en el Anexo III del Real Decreto 1302/1986, de 28 de junio, de Evaluación de Impacto Ambiental, modificado por el Real Decreto 9/2000, de 6 de octubre, y por la Ley 6 /2001, de 8 de mayo.
+      
+      El contenido mínimo que deben tener los Estudios de Evaluación de Impacto Ambiental está reflejado en el articulado las normativas anteriormente reseñadas.
+
+1.8 Estudio de flujo de potencia.
+
+1.8.1 Introducción.
+
+      El Análisis de Flujo de Potencia tiene como objetivo calcular las potencias activas y reactivas que discurrirán por las diferentes líneas que constituyen el Sistema Eléctrico de Potencia para los diferentes estados de carga en régimen estacionario, así como determinar la tensión en los diferentes nudos donde la tensión no es controlable (subestaciones). Dicho estudio, incluso un análisis de estabilidad Sistema Eléctrico de Potencia frente a la conexión de un nuevo parque eólico, únicamente será obligatorio, cuando la envergadura del proyecto lo requiera, o bien, sea solicitado por Organismos Competentes.
+
+      Con esta información se pueden calcular:
+
+      Las pérdidas de potencia y caídas de tensión para los estados de cargas.
+      
+      Las caídas de tensión nos permite comprobar que las tensiones en los diferentes nudos están dentro del intervalo de tolerancia de los transformadores de potencia.
+      
+      Las potencias circulantes por las líneas del sistema eléctrico de potencia. Las potencias por las líneas nos permitirá determinar en que momento una línea quedará sobrecargada.
+      
+      Así mismo el análisis de flujo de potencia permite estudiar la red frente a  diferentes situaciones de carga, por ejemplo, que ocurre en un nudo cuando en otro nudo vecino la carga disminuye considerablemente su valor esperado. No debemos olvidar que el Análisis de Flujo de Potencia se refiere siempre al estudio de un estado de carga una vez se ha alcanzado el régimen permanente.
+
+      Por otra parte, permite estudiar el efecto de la compensación de energía reactiva mediante la inclusión de baterías de condensadores. Esto permitirá a la Compañía Suministradora mantener los valores de tensión en determinados puntos de la red muy cercanos a los deseados. También puede orientarnos sobre la necesidad de llevar a cabo un cambio topológico en el Sistema Eléctrico de Potencia, como podría ser la apertura de una nueva línea, crear una nueva subestación, etc. 
+       
+1.8.2 Objetivos
+
+      El  objetivo  del Estudio de Flujo de Potencia  es analizar la afección a la red que tiene la conexión de un parque a un sistema eléctrico de potencia. Para evaluar la afección del parque se estudiará:
+
+      La repercusión que tiene el Parque Eólico sobre el perfil de tensiones de la red Insular en cuestión:
+      
+      La variación de intensidad que produce la conexión del parque en las líneas de media tensión que conectan la subestación con la red insular, y estudiar si las infraestructuras actuales son capaces de soportar dicho incremento de potencia.
+      
+      Para un correcto análisis de estos objetivos se estudiaran varias configuraciones y supuestos de carga.
+
+1.8.3 Formulación del análisis del flujo de potencia.
+      
+      El análisis de Flujo de Potencia se traduce en el análisis de un circuito monofásico equivalente, en régimen estacionario. El método tradicionalmente empleado es el análisis por nudos, con lo cual las intensidades inyectadas en los nudos y las tensiones nodales están relacionadas a través de las ecuaciones nodales de la red:
+
+
+
+      En los estudios de Flujo de Potencia se suele trabajar con potencias activas P y potencias reactivas Q, en lugar de intensidades, ya que se considera que el comportamiento de la demanda en Subestaciones Eléctricas se adapta mejor al modelo de potencia constante que a otros.
+      
+      Las Ecuaciones de Flujo de Potencia en forma General o Compleja se obtienen a partir de la ecuación nodal correspondiente a un nudo genérico i:
+
+
+
+
+
+      A partir de las ecuaciones anteriores, las Ecuaciones de Flujo de Potencia en Forma Real pueden ser expresadas en coordenadas polares como:
+      
+
+
+      En un sistema eléctrico de n nudos, habrá un total de n ecuaciones en forma compleja o 2n ecuaciones en forma real. Según el teorema de Boucherot, es necesario añadir una nueva ecuación compleja que tenga en cuenta las pérdidas en la red:
+
+      No obstante, las pérdidas en la red sólo podrán determinarse una vez conocidas todas las tensiones Vi. En consecuencia, no todas las potencias Si = Pi + jQi pueden ser especificadas a priori, razón por la cual suele seleccionarse un nudo de la red como  nudo balance , en el cual la potencia Sbal = Pbal + jQbal será determinada una vez conocidas las tensiones Vi correspondientes a todos los nudos del sistema.
+
+      Según la formulación adoptada, para cada nudo se contemplan 2 variables complejas {Si,Vi} o 4 variables reales {(Pi,Qi,Vi,?i) o (Pi,Qi,Ei,Fi)}. En el nudo balance, Sbal = Pbal + jQbal serán incógnitas a calcular y Vbal = Vbal(?bal) = Ebal + jFbal serán datos de partida, tomándose habitualmente ?bal = 0 y refiriendo el ángulo de fase de las restantes tensiones a este nudo balance.
+      
+      Los demás nudos del sistema se clasifican en nudos de carga y nudos de generación. En los nudos de carga, o nudos PQ, se conocen la potencia activa P y la potencia reactiva Q, mientras que las variables a calcular son el módulo V y el ángulo de fase ? de la tensión. En los nudos de generación, o nudos PV se conocen la potencia activa P y la tensión V, mientras que las incógnitas a calcular son la potencia reactiva Q y el ángulo de fase ? de la tensión.
+
+Tipo de nudoDatosIncógnitasBalanceV,?P,QPQP,QV,?PVP,VQ,?
+      En la aplicación del método de Newton-Raphson, las Ecuaciones de Flujo de Potencia se ponen en la forma f(x) = 0 y la expresión iterativa a emplear es la siguiente:
+
+		(1)
+
+siendo:
+
+   	    (2)	
+
+      donde J representa el jacobiano.
+      
+      Para coordenadas polares las expresiones  (1) y (2) se convierten en las siguientes:
+
+
+
+
+
+definiéndose los vectores de error como:
+
+
+
+
+
+
+El proceso iterativo se detendrá cuando se alcance la precisión requerida:
+
+
+
+
+
+
+
+Programa informatico utilizado.
+
+      Para resolver estos sistemas de ecuaciones es necesario recurrir a algún paquete informático de cálculo de métodos numéricos, actualmente en el mercado existen diversos programas elaborados con el objetivo exclusivo del análisis de sistemas de redes de potencia. Generalmente, los mismos programas también permiten realizar estudios de estabilidad.
+
+
+CONTENIDOS MINIMOS EN INSTALACIONES RECEPTORAS DE GAS
+
+CONTENIDOS MINIMOS EN INSTALACIONES EOLICAS
+
+Página 4 de 1
+
+
+Página 1 de 25
+
+Página 3 
+
+
+
+
+
+
+
+
+Página 45 
+
+
+Página 44 
+

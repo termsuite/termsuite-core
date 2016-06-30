@@ -1,0 +1,346 @@
+Manual Práctico - Fotovo Manual Práctico ltaica
+
+Energía Eólica
+Manual Práctico de evaluación de una instalación de energía eólica a pequeña escala
+
+En Español
+
+Walter Hulshorst ECON Internacional
+Con la colaboración de Víctor Criado Universidad Politécnica de Madrid
+
+Pot. nominal
+Veloc del viento
+
+Power (kW)
+
+Veloc viento de potenc nominal
+
+Wind speed (m/s)
+
+Veloc de arranque
+
+Veloc de corte
+
+www.leonardo-energy.org/espanol
+
+Página 1 de 20
+
+Manual Práctico - Fotovoltaica
+
+1.
+
+INTRODUCCIÓN 1.1. CÓMO USAR ESTE MANUAL 1.2. TEORÍA BÁSICA DE LA ENERGÍA EÓLICA 1.3. TECNOLOGÍA DE LA ENERGÍA EÓLICA Rotor Generador Caja de cambios Góndola Sistema de orientación Torre Sistemas de protección y control
+
+2.
+
+CÓMO PLANIFICAR UN AEROGENERADOR 2.1 2.2 2.3 2.4 VALORACIÓN DEL VIENTO ¿CUÁNTA ENERGÍA NECESITA? INSTALACIÓN DE UN AEROGENERADOR FUNCIONAMIENTO Y MANTENIMIENTO
+
+3.
+
+COSTES Y BENEFICIOS 3.1. 3.2. 3.3. COSTES DE INVERSIÓN COSTES DE FUNCIONAMIENTO EVALUACIÓN DE UN SISTEMA DE ENERGÍA EÓLICA
+
+4.
+
+INSTALACIÓN EN SU CASA, FINCA O NEGOCIO 1. Valoración de las medidas de eficiencia energética 2. Valoración de asuntos legales, sociales y medioambientales 4. Determinar la aplicación del sistema eólico 5. Compra de un sistema eólico 6. Determinación de los requisitos para la conexión con la compañía eléctrica 7. Evaluación económica de un sistema eólico
+
+www.leonardo-energy.org/espanol
+
+Página 2 de 20
+
+Manual Práctico - Fotovoltaica
+
+1. Introducción
+¿Puedo utilizar la energía del viento para alimentar mi casa o negocio? Ésta es una cuestión que se está preguntado cada vez más en todo el mundo a medida que más y más gente busca fuentes de electricidad asequibles económicamente y fiables. Se están realizando avances en la tecnología de los aerogeneradores todos los días. A la sombra de de los aerogeneradores de muchos megavatios, hay otro sector en crecimiento dentro de esta industria: sistemas para fincas, empresas y pequeños negocios.
+
+1.1. Cómo usar este manual
+
+Este documento está destinado a proporcionarle información básica acerca de los sistemas de energía eólica desde, aproximadamente, 500W hasta 50 kW. Además de ser ecológicos, los sistemas de energía eólica pueden hacer bajar su factura de electricidad, ayudarle a evitar los altos costes que supone tener que extender las líneas de energía de la compañía eléctrica a lugares remotos y darle cobertura ante cortes de corriente.
+
+Sea cual sea su razón, este manual le ayudará a decidir si la energía eólica es una opción viable para usted. En esta guía: • • • • Se ofrece información básica sobre cómo funcionan los sistemas de energía eólica; Se presentan algunos de los componentes principales de los sistemas de energía eólica; Se dan algunos consejos de cómo diseñar y determinar el emplazamiento óptimo para su sistema de energía eólica; Se expone en líneas generales de qué modo determinar si la energía eólica tiene sentido en su caso.
+
+1.2. Teoría básica de la energía eólica
+
+El viento es un proceso muy complejo que, sin embargo, puede ser descrito en términos muy sencillos. El sol calienta la superficie de la Tierra en diferente medida, dependiendo de si la superficie está cubierta de nubes, si está directamente expuesta a la luz solar, o si se trata de la superficie del océano. El aire que está encima de las zonas más cálidas, se calienta, se vuelve menos denso y asciende. El aire que sube crea una zona de baja
+
+www.leonardo-energy.org/espanol
+
+Página 3 de 20
+
+Manual Práctico - Fotovoltaica
+
+presión, que hace que el aire frío adyacente a alta presión se mueva a las zonas de baja presión. Este movimiento de aire es lo que llamamos viento.
+
+Como se muestra en la figura 1, la producción de energía por una turbina eólica o aerogenerador va en función de la velocidad del viento. La relación entre la velocidad del viento y la energía está definida por la curva de potencia, que es única para cada modelo de turbina y, en algunos casos, única para las características de un sitio específico. En general, la mayoría de los aerogeneradores empiezan a producir energía a velocidades de unos 4 m/s, logran la potencia nominal a aproximadamente 13 m/s, y se detiene la producción de energía a 25 m/s. La variabilidad en los recursos eólicos hace que el aerogenerador en funcionamiento esté continuamente cambiando los niveles de potencia.
+
+Pot nominal
+Power (kW)
+Veloc del viento
+
+Veloc viento de potenc nominal
+
+Wind speed (m/s)
+
+Veloc arranque
+
+de
+
+Veloc de corte
+
+Figura 1: Paso de velocidad del viento a potencia eléctrica (curva P-v) La velocidad de arranque es la mínima velocidad del viento a la que las palas rotarán y generarán potencia utilizable; típicamente, está entre 3 y 4 m/s. La velocidad nominal es la mínima velocidad del viento a la que la turbina eólica generará su potencia nominal de diseño. Un aerogenerador de 10 kW, por ejemplo, no generará 10 kW hasta que la velocidad del viento no alcance lo velocidad del viento de potencia nominal. A velocidades del viento entre la velocidad de arranque y las velocidades nominales, la potencia de salida es proporcional al cubo de la velocidad del viento. A velocidades del viento muy altas, típicamente de 25 m/s, la mayoría de los aerogeneradores cesan la producción de energía y se apagan. La velocidad del viento a la que esto ocurre se llama velocidad de corte. Se impone una velocidad de corte por seguridad con el fin de proteger de daños a la turbina eólica. El corte se produce de varias maneras. En algunas máquinas se activa un freno automático mediante un sensor de
+
+www.leonardo-energy.org/espanol
+
+Página 4 de 20
+
+Manual Práctico - Fotovoltaica
+
+velocidad del viento. En otras máquinas se cambia el ángulo de las palas respecto al viento, con el fin de anular el empuje rotatorio. Otras usan “spoilers”: se montan unos alerones de resistencia al aire en las palas que son automáticamente activados cuando la velocidad de rotación es demasiado elevada. El funcionamiento normal del aerogenerador por lo general se reanuda cuando el viento desciende a niveles seguros. 1.3. Tecnología de la energía eólica
+
+El rotor del aerogenerador es una de las partes más visibles del sistema de energía eólica. La mayoría de las turbinas eólicas que se fabrican hoy en día son máquinas de eje horizontal, con rotor a barlovento con dos o tres palas. El principal tipo de rotor tiene un eje que es paralelo al suelo, y por lo tanto, horizontal al viento (figura 2). Para sistemas de energía eólica pequeños se puede usar también una turbina eólica vertical. Los aerogeneradores verticales tienen un eje perpendicular al flujo del viento (figura 3). Los pequeños sistemas de energía eólica generalmente consisten en un rotor, un generador montado en una estructura, una caja de cambio, una góndola, una cola de orientación u otro sistema de orientación y algunos sistemas de protección y control.
+
+Figura 2: Aerogenerador horizontal1
+
+Figura 3: Aerogenerador vertical2
+
+En este manual nos vamos a concentrar mayoritariamente en los aerogeneradores horizontales; sin embargo, cabe mencionar que los sistemas verticales son también usados para sistemas eólicos a pequeña escala como se muestra en la figura 3. La figura 4 nos da una visión general de las partes de una turbina horizontal.
+
+1 2
+
+www.eoltec.com www.turby.nl
+
+www.leonardo-energy.org/espanol
+
+Página 5 de 20
+
+Manual Práctico - Fotovoltaica
+
+Caja C bi
+
+de Generador
+
+Mecanismo de cambio de ángulo de paso Yaw system Sistema orientación de
+
+Torre Palas del rotor
+
+Conexión a la red
+
+Cimientos
+
+Figure 4: Componentes principales de un aerogenerador Rotor El rotor consiste en palas con formas especiales, superficies aerodinámicas. Los rotores están hechos normalmente de compuestos de fibra de vidrio, plástico reforzado o madera. La cantidad de energía que una turbina eólica producirá está determinada sobre todo por el diámetro de este rotor. El diámetro del rotor define su “área de barrido”, o la cantidad de viento interceptado por la turbina eólica. Las palas son giratorias para conseguir un cierto ángulo de ataque con respecto al viento, para así controlar la velocidad de giro del rotor e impedir que éste gire con vientos que son o demasiado altos o demasiado bajos para producir electricidad. Generador El generador convierte el movimiento de rotación de las palas de la turbina eólica en electricidad. El generador puede producir corriente alterna (AC) o corriente continua (DC), y existe en un amplio rango de potencias disponibles. La categoría o magnitud del generador depende de la longitud de las palas del la turbina eólica: cuanto más largas sean las palas, más energía se genera. www.leonardo-energy.org/espanol Página 6 de 20
+
+Manual Práctico - Fotovoltaica
+
+Caja de cambios Muchas turbinas (particularmente aquellas por encima de los 10 kW) usan una caja multiplicadora de velocidad de giro para adaptar la velocidad del rotor a una velocidad adecuada para el generador. Góndola La góndola es el recinto que protege la caja multiplicadora, el generador y otros componentes de los elementos. La góndola se puede retirar para operaciones de mantenimiento. Sistema de orientación El sistema de orientación alinea la turbina eólica con el viento. La mayoría de las pequeñas unidades usan una simple cola que dirige el rotor hacia el viento. Existen ciertos mecanismos especiales para desorientar la turbina en caso de vientos peligrosamente elevados. Torre La torre sostiene la turbina y es, por lo tanto, una parte integrante del sistema de energía eólica. Las torres deben ser capaces de resistir rayos, vientos extremos, granizo, y formación de hielo. Como el viento se vuelve menos turbulento e incrementa su velocidad con la altura respecto al suelo, y la producción de potencia se incrementa sustancialmente con la velocidad del viento, incrementar la altura de la torre de 10 a 50 metros puede duplicar la energía del viento disponible.
+
+Hay dos tipos básicos de torres: autosoportadas y mantenidas mediante cables. La mayoría de las torres de sistemas de energía eólica para sistemas domésticos son mantenidas mediante cables. Estas torres son las menos caras, pueden ser construidas con partes de celosía, tubería o tubo y los cables de soporte. Las torres afianzadas con cables son también más fáciles de instalar que las autosoportadas. Sin embargo, en el caso de torre mantenida con cables, se requiere más espacio para su instalación. Existen también las torres inclinables, que aunque son más caras, ofrecen mayor facilidad para llevar a cabo el mantenimiento en turbinas pequeñas y ligeras (de menos de 5 kW).
+
+Sistemas de protección y control Los sistemas de control abarcan desde interruptores, fusibles y reguladores de la carga de baterías hasta sistemas computerizados de control de sistemas de orientación. La sofisticación de los sistemas de control y protección varía dependiendo de la aplicación de la turbina eólica y del sistema de energía que soporta. www.leonardo-energy.org/espanol Página 7 de 20
+
+Manual Práctico - Fotovoltaica
+
+2. Cómo planificar un aerogenerador
+El tamaño del aerogenerador que usted necesita depende de la intención de uso que tenga para él. Las turbinas eólicas para usos residencial e industrial abarcan el tamaño de entre 20W a 50kW. Las turbinas más pequeñas se usan en diversas aplicaciones, tales como la recarga de baterías de vehículos de recreo y barcos de vela. Para aplicaciones más grandes, para determinar el tamaño de la turbina que necesita, es conveniente definir el monto global de energía que se desea obtener. Antes de que empiece a considerar una turbina eólica, debe también asegurarse de que está obteniendo una eficiencia energética óptima en su casa, finca o negocio. Esto, a su vez, reducirá el coste de su aerogenerador.
+
+Otro punto a considerar antes de invertir en un sistema de energía eólica es la presencia de algún posible obstáculo. Algunos municipios limitan la altura de las estructuras permitidas en áreas residenciales. Para obtener más información acerca de las ordenanzas de planificación urbana en su zona, contacte con las autoridades locales. Ellos pueden decirle si necesitará obtener un permiso de edificación y pueden también proporcionarle una lista de requisitos.
+
+Además de estas cuestiones relativas a la planificación urbana, necesitará igualmente el acuerdo de sus vecinos, ya que éstos pudieran oponerse a la instalación de una eólica por motivos de ruido potencial y/o degradación de las vistas.
+
+2.1 Valoración del viento Para hacer funcionar una turbina eólica, usted necesitará bastante viento en su zona. Sin embargo, al igual que el tiempo en general, los patrones de viento pueden ser impredecibles, variando de un lugar a otro, y de uno a otro momento. La velocidad del viento puede estar afectada por árboles, edificios, colinas y valles que tengamos alrededor. Una turbina eólica no debe colocarse en lugares expuestos a flujos de aire muy turbulentos. Por esta razón, se debe mantener la turbina tan libre de obstáculos como sea posible. Incluso una leve turbulencia puede disminuir el rendimiento del aerogenerador, ya que una turbina no puede reaccionar a los cambios rápidos en la dirección del viento, y una fuerte turbulencia puede reducir la vida útil de la turbina. El viento es una fuente de energía difusa que no puede ser ni contenida o almacenada, ni utilizarse para otra cosa en otro momento posterior. Se requiere en primer lugar una evaluación del viento en un determinado emplazamiento. Hay que determinar las condiciones del viento mediante mediciones de por lo menos algunos meses de duración, y www.leonardo-energy.org/espanol Página 8 de 20
+
+Manual Práctico - Fotovoltaica
+
+preferiblemente de un año o más, especialmente si espera usar los datos como base de comparación con las medidas tomadas en una estación cercana de medida del viento. La instrumentación necesaria para llevar a cabo estas medidas está disponible para su compra o alquiler, y es a menudo proporcionada como una parte de la evaluación del emplazamiento que llevan a cabo los consultores o distribuidores de turbinas. Recuerde que la energía del viento es función del cubo de la velocidad del viento. Un 10 % de error en la estimación de la velocidad del viento puede significar un 33 % de diferencia en el cálculo de la energía aprovechable. En general, se requiere una media de velocidad del viento a lo largo del año superior a 4 m/s para considerar un sistema de energía eólica. Sin embargo, es conveniente tener velocidades mayores a 4 m/s. Los aerogeneradores deben ser instalados en zonas no obstruidas, abiertas, con una clara exposición a los vientos dominantes. La figura 5 muestra un mapa eólico de Europa Occidental3. Este diagrama ilustra que Escandinavia, el Reino Unido, Irlanda y la costa Atlántica de Europa tienen las condiciones de viento más favorables para el desarrollo de la energía eólica4.
+> 6 m/s 5 - 6 m/s 4,5 - 5 m/s 3,5 - 4,5 m/ <3,5 m/s
+
+3 4
+
+www.windpower.org/en/tour/wres/euromap.htm www.windpower.org/en/tour/wres/euromap.htm
+
+www.leonardo-energy.org/espanol
+
+Página 9 de 20
+
+Manual Práctico - Fotovoltaica
+
+Figura 5: Muestra del mapa eólico en Europa (las zonas en gris indican que los datos no están disponibles aún) La siguiente figura, la 6, muestra un ejemplo de la velocidad del viento medida en un lugar con una velocidad media del viento de 6 m/s.
+
+Windspeed distribution (average = 6 m/s)
+1400 1200
+Hours per year
+
+1000 800 600 400 200 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 windspeed (m/s)
+
+Figura 6: Distribución de la velocidad del viento Para un aerogenerador de potencia nominal 3kW, y con la curva de potencia de la figura 1 (velocidad de arranque de 3 m/s y velocidad para la potencia nominal de 13 m/s), la energía anual se puede calcular multiplicando la producción de la turbina eólica para cada velocidad del viento por el número total de horas al año en las que se mantiene esa velocidad, como se muestra en la siguiente tabla. Para una velocidad media de 6 m/s, por ejemplo, la energía anual producida es de 4.508 kWh. Wind speed (m/s) 0–1 1–2 2–3 3–4 4–5 5–6 6–7 7–8 8–9 9 – 10 10 – 11 Hours/year 242 686 1.023 1.213 1.244 1.154 978 765 556 377 239 Output (kW) 0 0 0 0,09 0,18 0,33 0,54 0,82 1,19 1,66 2,22 kWh/yr 0 0 0 109 224 381 528 629 644 626 531
+
+www.leonardo-energy.org/espanol
+
+Página 10 de 20
+
+Manual Práctico - Fotovoltaica
+
+11 – 12 12 – 13 13 – 14 14 – 15 Total
+
+142 79 42 21 8.760
+
+2,76 3 3 3
+
+392 238 125 62 4.508
+
+La siguiente tabla enumera la energía anual esperada para un rango de velocidades del viento medias: Velocidad del viento Energía anual 4 m/s 1.405 kWh 6 m/s 4.508 kWh 8 m/s 9.397 kWh 10 m/s 15.174 kWh
+
+Si usted necesita un sistema de energía eólica que, por ejemplo, proporcione al menos la media anual de consumo de energía en una casa en Europa (3.500 kWh), el tamaño de la turbina es inadecuado en una región con una media de velocidad del viento de 4 m/s. El tamaño del aerogenerador para una región con una media de velocidad del viento de 4 m/s debe ser de unos 8 kW para producir la energía suficiente para alimentar una casa. La inversión requerida para un sistema de energía eólica con una producción de electricidad similar en un lugar con una media de velocidad del viento superior será menor en comparación con la localización con velocidad media menor. 2.2 ¿Cuánta energía necesita? Para determinar la cantidad de energía que necesita, debe primero conocer la cantidad total de energía requerida (en el transcurso de un año) para alimentar todas los electrodomésticos y equipos en su casa. El tamaño y capacidad de generación del aerogenerador para una instalación en particular depende de la cantidad de energía requerida, así como de las condiciones del viento en el lugar. Considere también la altura de la torre: cuanto más alta sea la torre, más cara resulta, pero también ofrece a su turbina un mejor acceso a la energía eólica. Una torre más baja requiere una turbina más grande para generar la misma cantidad de energía que con la torre alta y la turbina más pequeña y menos cara. El tipo de torre que necesitará depende del lugar: ¿hay suficiente espacio para los cables de anclaje de la torre?; ¿es la torre lo suficientemente alta para que la turbina pueda funcionar por encima de obstrucciones cercanas? Como la mayoría de los edificios están conectados a la red de la compañía eléctrica, muchos dueños de aerogeneradores han optado por interconectar sus sistemas. En efecto, los dueños de aerogeneradores utilizan la red de la compañía simplemente como un sistema de reserva. Un exceso de electricidad por parte de la turbina eólica es automáticamente vertido a la red de la compañía y la energía de reserva es automáticamente suministrada. Si
+
+www.leonardo-energy.org/espanol
+
+Página 11 de 20
+
+Manual Práctico - Fotovoltaica
+
+bien esto no constituye un verdadero almacenamiento, proporciona energía cuando hay demanda, en cualquier momento y en cualquier cantidad. El proceso para obtener la aprobación para la conexión con la red de la compañía eléctrica puede, sin embargo, ser largo y complicado, y requiere una cuidadosa planificación. Investigar las posibilidades de interconexión en una fase temprana del proceso de investigación del sistema eólico es una buena idea. Si espera producir un exceso de energía, compruebe en primer lugar que su conexión a la red es adecuada para inyectar electricidad a la red. La variabilidad de su consumo de energía y la cantidad de dinero que esté dispuesto a gastar en un sistema eólico también debe guiar su elección. Por ejemplo, un usuario cuyo consumo es irregular o concentrado en cortos periodos del día debe dimensionar la turbina eólica de modo diferente que un usuario con una demanda de energía constante. En el primer caso, el tamaño de la turbina eólica debe ser función del consumo valle, o de la media de energía demandada.
+
+2.3 Instalación de un aerogenerador
+
+La configuración más ideal para un aerogenerador es montado sobre un mástil sin necesidad de cables de anclaje y en un lugar expuesto al viento. Muchos de los diseños convencionales de turbinas eólicas no son recomendados para su montaje en edificios. Sin embargo, si el único sitio disponible es el tejado de un edificio, instalar un pequeño sistema eólico puede ser, sin embargo, factible si se monta lo suficientemente alto como para minimizar la turbulencia, o si el régimen del viento en ese emplazamiento en particular es favorable. En este caso, hay que señalar que el rendimiento se verá reducido si lo comparamos con el de una máquina equivalente montada en mástil; el edificio mismo actúa como una obstrucción y puede provocar un flujo de aire turbulento.
+
+Para una turbina eólica montada en edificio situado en una zona abierta, la velocidad del viento puede, teóricamente, hasta incrementarse según pasa por encima de la parte superior del edificio. Sin embargo, esto es sólo probable si el edificio se encuentra en un lugar muy expuesto al viento. Un edificio al borde de un poblado puede también estar sujeto a velocidades del viento aceptables y flujos razonablemente buenos de aire en las ocasiones en que el viento sople desde la dirección más expuesta a él, la zona libre; sin embargo, cuando el viento sopla desde la dirección que está poblada, el régimen de viento será pobre. Un edificio localizado en medio de una población o zona construida es improbable que se pueda beneficiar de un buen régimen de viento.
+
+www.leonardo-energy.org/espanol
+
+Página 12 de 20
+
+Manual Práctico - Fotovoltaica
+
+2.4 Funcionamiento y mantenimiento
+
+Previamente y durante el funcionamiento, se deben abordar toda una serie de cuestiones5,6 :
+
+Seguridad No hay consideraciones de seguridad específicas a tener en cuenta en relación con el funcionamiento de los aerogeneradores. Poner cercas u otras restricciones es innecesario desde el punto de vista de la seguridad. Tanto personas como animales pueden aproximarse a la base de los aerogeneradores. Hay un riesgo muy remoto de lesionar a personas o animales o dañar edificios como resultado de que salgan volando fragmentos de hielo (en las palas) o de palas dañadas. La turbina puede sólo arrancar después del deshielo para comenzar el funcionamiento.
+
+Aves Las aves pueden chocar con las palas del rotor de la turbina, o quedar atrapados en la turbulencia que hay detrás del rotor. Las investigaciones han mostrado que el riesgo de choque es relativamente pequeño. El número estimado de choques accidentales para una potencia instalada de 1.000 MW es aproximadamente de 21.000 anuales. Si bien esto puede parecer a primera vista un número bastante grande, cuando lo consideramos anualmente, esta cifra es en realidad muy pequeña en comparación con el número de aves que son víctimas mortales del tráfico de automóviles cada año (2 millones anualmente) o el número de pájaros que perecen cada año debido a las líneas eléctricas (1 millón anualmente). La mayoría de los accidentes con los aerogeneradores que implican a los pájaros suceden por la noche, el crepúsculo, o con mal tiempo. Las aves conocen su forraje y tierras de descanso muy bien, y saben cómo evitar las turbinas eólicas. No obstante, cuando se instalan aerogeneradores, es aconsejable prestar atención a las zonas de cría y forrajeo de las aves.
+
+Interferencia eléctrica Los aerogeneradores, como todos los equipos eléctricos, producen radiación electromagnética, que puede interferir en las comunicaciones por radio. Esta interferencia se puede solucionar a través de la instalación de deflectores o repetidores.
+
+Wind Energy Development Guidelines, Ireland Department of the Environment, Heritage and Local Government, Ireland: www.environ.ie/en/Publications/DevelopmentandHousing/Planning/FileDownLoad,1633,en.pdf. 6 van der Wekken, T., “Wind power” (KEMA Consulting, Autumn 2006), at: www.leonardo-energy.org/drupal/files/2006/wind.pdf?download.
+
+5
+
+www.leonardo-energy.org/espanol
+
+Página 13 de 20
+
+Manual Práctico - Fotovoltaica
+
+Sombra proyectada Los aerogeneradores, como otras estructuras altas, pueden también crear largas sombras cuando el sol está bajo. El efecto, que es conocido como parpadeo de sombra, ocurre cuando las palas de la turbina eólica emiten una sombra en una ventana de una casa cercana, y el movimiento de rotación de las palas cortan la luz del sol y provocan un parpadeo mientras las palas están en movimiento. Este efecto dura poco tiempo y ocurre sólo en ciertas condiciones específicas combinadas, como los casos en los que: • • • el sol brilla y se encuentra e un ángulo bajo (al amanecer o al anochecer) y la turbina está directamente entre el sol y la propiedad afectada y hay suficiente energía en el viento para hacer que las palas de la turbina se muevan.
+
+Como regla general, el parpadeo de sombra en un vecindario, oficina y vivienda a menos de 500 metros no debe exceder 30 horas al año ni un máximo de 30 minutos al día7. A distancias superiores a 10 veces el diámetro del rotor de la turbina, la posibilidad de parpadeo es muy baja.
+
+Ruido Hay dos fuentes de ruido asociadas al funcionamiento de los aerogeneradores: ruido aerodinámico, causado por las palas pasando a través del aire, y ruidos mecánicos, debidos al funcionamiento de elementos mecánicos en la góndola (el generador, la caja de cambios, etc.). El ruido aerodinámico es función de muchos factores que interactúan, incluido el diseño de las palas, la velocidad de rotación, la velocidad del viento y la turbulencia en el flujo de aire. El ruido aerodinámico es generalmente similar a un “silbido”.
+
+Mantenimiento La mayoría de los sistemas de energía eólica que están disponibles necesitan la intervención del dueño durante el funcionamiento. Muchos fabricantes ofrecen servicio de mantenimiento para las turbinas eólicas que ellos instalan. El fabricante debe al menos haber detallado la información acerca de los procedimientos de mantenimiento, y debe estar en condiciones de decirle cuándo debe ser llevado a cabo el mantenimiento. La mayoría de las turbinas pueden funcionar durante largos periodos de tiempo sin localización de defectos ni reparaciones. Se lleva a cabo normalmente un mantenimiento menor sobre una base
+
+7
+
+Éstas son recomendaciones de Predac, una organización esponsorizada por la Unión Europea que promueve la difusión de las mejores prácticas, gracias a la experiencia acumulada en Bélgica, Dinamarca, Francia, Holanda y Alemania.
+
+www.leonardo-energy.org/espanol
+
+Página 14 de 20
+
+Manual Práctico - Fotovoltaica
+
+trimestral o dos veces al año. Anualmente, se requiere un mantenimiento más completo. El mantenimiento puede abarcar desde una simple comprobación del aceite, que más o menos cualquiera puede hacer, hasta subir a la góndola para inspección de engranajes o del dispositivo de orientación de las palas (estas últimas tareas requieren un alto grado de especialización). Al considerar un sistema de energía eólica, asegúrese de que tiene la capacidad técnica necesaria para mantener la instalación.
+
+3. Costes y beneficios
+Junto con los costes de inversión, se debe llevar a cabo una evaluación económica que incluya los siguientes aspectos: 1. Reducción de los costes anuales de la electricidad como resultado de la producción de la misma por el sistema de energía eólica: debe tener en cuenta expectativas futuras del precio de la electricidad; 2. Posibles programas de apoyo por parte del Gobierno, por ejemplo, subvenciones o incentivos fiscales para fomentar el uso de los sistemas de energía eólica; 3. Costes asociados a la emisión de CO2 (cero para los sistemas de energía eólica).
+
+3.1. Costes de inversión
+Si usted ha completado la evaluación en el capítulo 2, debe tener una idea bastante buena de la configuración básica de su sistema. Puede ahora calcular el precio del sistema de energía eólica.
+
+En el año 2008, el precio medio de los sistemas pequeños de energía eólica (de hasta 10 kW) es de aproximadamente 5 euros por Watio (€/W). Para sistemas más grandes este precio disminuye, de tal modo que los parques eólicos que se instalan actualmente apenas rebasan 1€/W 8. Los proveedores pueden también indicar qué piezas de repuesto son importantes para el sistema; por lo tanto, es una buena idea comprar esas piezas de inmediato.
+
+8
+
+Wind Energy: The facts -- An analysis of Wind Energy in the EU-25, EWEA
+
+www.leonardo-energy.org/espanol
+
+Página 15 de 20
+
+Manual Práctico - Fotovoltaica
+
+Además, dependiendo del tamaño y de la complejidad, también puede haber otros costes iniciales, tales como: • • • Costes por la obtención de datos o asesoramiento eólico Transporte del sistema Construcción e instalación: los sistemas más grandes pueden necesitar equipos especiales, como una grúa, para montarlos.
+
+3.2. Costes de funcionamiento
+Los costes anuales más significativos son los de las piezas y la mano de obra necesaria para el mantenimiento del sistema. Sin embargo, dependiendo de su aplicación concreta, también se pueden incluir el arrendamiento de tierras, los impuestos sobre la propiedad y las primas de seguros.
+
+Los costes anuales de funcionamiento y mantenimiento de un aerogenerador pueden estimarse como un porcentaje del coste inicial de capital de los equipos instalados. Valores típicos van entre el 3 y el 10 por ciento del coste inicial de capital por año.6,9
+
+3.3.
+
+Evaluación de un sistema de energía eólica
+
+Para obtener una indicación rápida de los costes de generación de un sistema de energía eólica, simplemente divida los costes del sistema entre la cantidad de kWh producidos durante la vida útil del mismo. Con el sistema de energía eólica descrito en la sección 2.1, puede calcular fácilmente los costes de generación por kWh.
+
+Con una velocidad media del viento de 6 m/s, un aerogenerador de 3 kW como el descrito en la sección 2.1 proporcionará un suministro anual de energía de 4.508 kWh. Durante su vida útil de 20 años, este tipo de turbina producirá: 4.508*20=90.160 kWh. Los costes de inversión serán aproximadamente 3.000 W*5 euro = 15.000. Si incluimos el 10 % por otros costes, el precio sale a 16.500 €. El coste por 1 kWh será: 16.500€/90.160 kWh = 0,183 € (sin tener en cuenta el valor temporal del dinero).
+
+9
+
+Stand alone Wind Energy Systems: A Buyer’s Guide (Natural Resources Canada, 2003).
+
+www.leonardo-energy.org/espanol
+
+Página 16 de 20
+
+Manual Práctico - Fotovoltaica
+
+Con una velocidad media del viento de 8 m/s, el coste de 1 kWh es de 0,088 €. Obviamente, velocidades del viento más altas reducirán el precio por kWh cuando sean usadas en sistemas de energía eólica. Los costes de generación de los sistemas de energía eólica son competitivos con los precios de la electricidad para residencias. El precio de la electricidad varía enormemente a lo largo de los 27 países de la UE. Según Eurostat, el precio medio de la electricidad para un hogar medio de la UE (desde enero de 2007) es, aproximadamente, de 0,1528 kWh10.
+
+Con estos precios, los sistemas de energía eólica pueden ser económicamente competitivos. Los costes de la energía eólica bajarán progresivamente, mientras que los costes de la electricidad sólo se espera que suban. Algunos países ofrecen un precio bonificado por la energía generada mediante sistemas de energía eólica. Por esta razón, puede tener mucho sentido vender a la red la electricidad producida a partir de energía eólica.
+
+Junto con la evaluación económica, la energía eólica también proporciona beneficios adicionales, tales como: • • • • Aumento de la eficiencia de la red eléctrica: si la energía se genera cerca de punto de consumo, las pérdidas en la red eléctrica disminuyen. Menores costes de servicio: después de su inversión inicial en energía eólica, la factura mensual se verá reducida; el viento, después de todo, es gratis. Protección del clima: los sistemas de energía eólica no emiten nada de dióxido de carbono durante su funcionamiento. Seguridad de suministro: si usa un sistema con baterías de almacenamiento, su sistema eólico puede funcionar aunque no se suministre electricidad de la red.
+
+4. Instalación en su casa, finca o negocio
+¿Debe usted invertir en una turbina eólica? Una decisión bien documentada requiere algunas reflexiones e investigación personal. Habiendo leído todos los capítulos hasta ahora, tiene suficiente información sobre la energía eólica para decidir sobre los siguientes pasos.
+
+10
+
+, “Electricity Prices for EU Households and Industrial Consumers on 1 January 2007”, at: www.epp.eurostat.ec.europe.eu.
+
+www.leonardo-energy.org/espanol
+
+Página 17 de 20
+
+Manual Práctico - Fotovoltaica
+
+1. Valoración de las medidas de eficiencia energética Antes de considerar un aerogenerador, debe asegurarse de realizar primero una inspección para asegurar que está obteniendo la eficiencia energética óptima en su casa, finca o negocio. Esta ventaja aquí es doble, puesto que usted puede encontrarse con que el aerogenerador que necesita no es tan grande o tan caro como el que había pensado.
+
+2. Valoración de asuntos legales, sociales y medioambientales Un estudio de estos temas es crucial para su toma de decisiones, porque algunas cuestiones pueden alterar e incluso poner fin a sus planes acerca de un aerogenerador. En general, las zonas rurales son las menos afectadas por estas cuestiones. Para obtener más información sobre las ordenanzas sobre la planificación urbana de la zona y los requerimientos de edificación, póngase en contacto con el consejo de planificación urbana local, el servicio de urbanismo del ayuntamiento o el inspector de edificación de su zona. También debe asegurarse de tratar la cobertura de responsabilidad civil y necesidades del seguro con un agente de seguros con licencia. Para evitar objeciones públicas imprevistas a la vista del aerogenerador en el vecindario, hable de sus planes con sus vecinos. Lleve a cabo una investigación del título de propiedad para determinar si existen acuerdos anteriores que no le permitan instalar un aerogenerador en su propiedad.
+
+3. Evaluación de los recursos eólicos La mejor forma de determinar las condiciones del viento en su zona es tomar medidas durante un periodo de al menos algunos meses, y preferiblemente de un año o mayor, en especial, si usted puede comparar los datos que ha recogido con los de una estación de vigilancia eólica cercana. Los instrumentos que necesita para llevar a cabo las mediciones están disponibles tanto en compra o como en alquiler, y son a menudo proporcionados como parte de la evaluación del terreno realizada por un consultor o un distribuidor de turbinas eólicas. Recuerde que la energía del viento es función del cubo de la velocidad. Un 10 % de error en la estimación de la velocidad del viento puede significar un 33 % de desviación en el cálculo de la energía eólica. 4. Determinar la aplicación del sistema eólico El siguiente paso es determinar el tamaño o capacidad de generación apropiada de la máquina. Como regla general, un aerogenerador debe ser dimensionado para suministrar entre el 25 y el 75 % de las necesidades eléctricas. La cantidad de dinero que usted esté
+
+www.leonardo-energy.org/espanol
+
+Página 18 de 20
+
+Manual Práctico - Fotovoltaica
+
+dispuesto a gastar en un sistema también afectará a la selección del tamaño. Si está considerando almacenar electricidad, por ejemplo, con baterías, entonces la variación diaria de los vientos es un factor menos significativo. La conexión del sistema eólico con la red de la compañía eléctrica elimina la necesidad de tener un almacenamiento independiente y proporciona la comodidad de tener una potencia de reserva casi ilimitada suministrada de una fuente de energía ya existente.
+
+5. Compra de un sistema eólico Una vez que ha decidido cómo le gustaría que la energía del viento trabaje para usted, debe empezar a explorar la amplia gama de aerogeneradores y accesorios que están disponibles en el mercado. Si usted todavía no lo ha hecho, ahora es el momento de contactar con uno o más distribuidores para tratar sus intereses particulares y obtener estimaciones preliminares de los costes. Escoger un buen distribuidor es quizás tan importante como seleccionar un buen sistema porque muchos distribuidores dan servicio de mantenimiento de lo que venden. Los distribuidores deben también proporcionarle referencias. No dude en solicitar un alto nivel de servicio. Usted debe ser tan perfeccionista con el servicio y el mantenimiento de su aerogenerador como lo sería cuando pagase por un automóvil. Familiarícese con la literatura de los fabricantes de estos productos, y lea todo lo que pueda sobre aerogeneradores específicos en revistas populares, artículos de periódico y otros sitios. Hable con dueños de aerogeneradores de la zona, que pueden ser su fuente de información más fiable. Cuando hable con los dueños de los aerogeneradores ya existentes, pregúnteles cómo eligieron sus sistemas eólicos y si el sistema que pusieron satisfizo sus expectativas. Averigüe qué problemas que han tenido con el funcionamiento de sus máquinas, la cooperación de la compañía eléctrica, etc. También asegúrese de preguntar cómo de servicial ha sido el distribuidor con las llamadas al servicio de mantenimiento desde la instalación inicial. A medida que reduce sus opciones a unas pocas máquinas, compare las garantías de los aerogeneradores y tenga en cuenta las diferencias entre aquellas que proporciona el fabricante y las que ofrece el distribuidor. Pregunte si la garantía del distribuidor es transferida o asumida por el fabricante en el caso de que el distribuidor desapareciese del negocio. Compare las necesidades de mantenimiento de las máquinas. Un mayor mantenimiento significa unos costes anuales mayores. También es prudente comparar los términos y precios de los contratos de servicio ofrecidos por los distribuidores. Hay una visión general de pequeños aerogeneradores (que incluye especificaciones técnicas y una indicación de los precios) disponible en: www.allsmallwindturbines.com.
+
+www.leonardo-energy.org/espanol
+
+Página 19 de 20
+
+Manual Práctico - Fotovoltaica
+
+6. Determinación de los requisitos para la conexión con la compañía eléctrica
+
+Si planea conectar su sistema eólico con la red de la compañía eléctrica, debe primero ponerse en contacto con la oficina de su proveedor eléctrico. A algunos proveedores eléctricos no les gusta que sus clientes instalen sistemas de generación conectados con su red. Su proveedor eléctrico puede también informarle sobre la posibilidad de incentivos para los sistemas de energía eólica. También, pregunte acerca de la posibilidad de vender electricidad a la red. Su proveedor eléctrico puede también informarle sobre posibles subvenciones para la inversión y/o primas disponibles. La compañía eléctrica le proporcionará una descripción escrita de los costes, así como los términos y las condiciones relacionados con la conexión, como la eventual necesidad de un doble contador (electricidad absorbida – electricidad inyectada). Averigüe cuáles son los requerimientos para la seguridad y los dispositivos de acondicionamiento de la potencia eléctrica, servicios mensuales adicionales, el precio al que la red compraría la electricidad inyectada y la inspección eléctrica de la instalación. Tenga preparado un diagrama (que incluya planos eléctricos) del sistema eólico proyectado.
+
+7. Evaluación económica de un sistema eólico Ahora es el momento de evaluar las consecuencias financieras de la decisión que tiene pendiente. Los costes iniciales y los gastos anuales del dueño de la turbina eólica deben ser sopesados con los beneficios a largo plazo de ahorro de electricidad.
+
+www.leonardo-energy.org/espanol
+
+Página 20 de 20
+

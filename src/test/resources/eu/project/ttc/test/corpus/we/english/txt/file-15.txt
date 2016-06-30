@@ -1,0 +1,128 @@
+National Unit Specification: general information UNIT CODE Energy: Domestic Wind Turbines Systems (Intermediate 2) F3FR 11
+
+COURSE Energy (Intermediate 2)
+SUMMARY
+This Unit is a mandatory Unit of the Intermediate 2 Skills for Work Energy Course. It is intended for candidates who are interested in a career in the energy sector, or who wish to gain some practical skills and knowledge of how the wind turbine energy sector operates. This Unit can also be taken as a stand-alone Unit. This Unit introduces domestic or microgeneration wind turbine systems which generate electricity. This Unit will provide an opportunity to develop practical skills which will give candidates the ability to wire up an electrical circuit, manufacture parts, assemble, and test a small scale domestic wind turbine. The candidates will use existing components, eg generator and blade, and manufacture others to complete the wind turbine system. This Unit has been designed with secondary school candidates in mind but is also suitable for a wide range of candidate groups. The development of generic employability skills valued by employers will be an important part of this Unit.
+
+OUTCOMES
+1 2 3 4 5 Connect an electrical circuit from a wiring diagram. Manufacture a metal part for a wind turbine system from a component drawing. Produce a team plan for the production and testing of a small scale domestic wind turbine system to a given specification. Contribute as a member of a team to the assembly and testing of a small scale domestic wind turbine system to a given specification. Evaluate the wind turbine and the team working process.
+
+Administrative Information
+Superclass: Publication date: Source: Version: QB April 2008 Scottish Qualifications Authority 01
+
+© Scottish Qualifications Authority 2008 This publication may be reproduced in whole or in part for educational purposes provided that no profit is derived from reproduction and that, if reproduced in part, the source is acknowledged. Additional copies of this Unit Specification can be purchased from the Scottish Qualifications Authority. Please contact the Customer Contact Centre, telephone 0845 279 1000. 1
+
+National Unit Specification: general information (cont) UNIT Energy: Domestic Wind Turbines Systems (Intermediate 2)
+
+RECOMMENDED ENTRY
+Entry is at the discretion of the centre.
+
+CREDIT VALUE
+1 credit at Intermediate 2 (6 SCQF credit points at SCQF level 5*).
+*SCQF credit points are used to allocate credit to qualifications in the Scottish Credit and Qualifications Framework (SCQF). Each qualification in the Framework is allocated a number of SCQF credit points at an SCQF level. There are 12 SCQF levels, ranging from Access 1 to Doctorates.
+
+CORE SKILLS
+There is no automatic certification of Core Skills in this Unit. Opportunities for developing aspects of Core Skills are highlighted in Guidance on Learning and Teaching Approaches for this Unit.
+
+Unit Specification - Energy: Domestic Wind Turbines (Intermediate 2)
+
+2
+
+National Unit Specification: statement of standards UNIT Energy: Domestic Wind Turbines Systems (Intermediate 2)
+
+Acceptable performance in this Unit will be the satisfactory achievement of the standards set out in this part of the Unit Specification. All sections of the statement of standards are mandatory and cannot be altered without reference to SQA.
+
+OUTCOME 1
+Connect an electrical circuit from a wiring diagram. (a) (b) (c) (d) (e) Appropriate tools are selected for the task. Tools and materials are used correctly for the intended purpose. All steps to complete the task are followed in the correct sequence. Health and safety requirements are adhered to throughout the activity. A quality check is carried out on the completed work.
+
+OUTCOME 2
+Manufacture a metal part for a wind turbine system from a component drawing. (a) (b) (c) (d) (e) Appropriate tools are selected for the task. Tools and materials are used correctly for the intended purpose. All steps to complete the task are followed in the correct sequence. Health and safety requirements are adhered to throughout the activity. A quality check is carried out on the completed work.
+
+OUTCOME 3
+Produce a team plan for the production and testing of a small scale domestic wind turbine system to a given specification. (a) (b) (c) (d) Contribute constructively to team discussions to establish roles and realistic timescales. Contribute constructively to team discussions on resources. Contribute constructively to team discussions on tasks. Co-operate with others to finalise a comprehensive plan of roles, resources required, and tasks set out in sequence.
+
+OUTCOME 4
+Contribute as a member of a team to the assembly and testing of a small scale domestic wind turbine system to a given specification. (a) (b) (c) (d) Co-operate with others in the organising, sharing, and safe use of tools and materials. Co-operate with others in maintaining a safe, tidy working area. Adhere to the agreed plan and work positively to complete tasks in the agreed timescale. In an agreed role, carry out practical tasks which contribute to the assembly of the wind turbine system. (e) In an agreed role, carry out practical tasks which contribute to the testing of the system. (f) Participate in a quality check of the finished work against the given specification.
+
+Unit Specification - Energy: Domestic Wind Turbines (Intermediate 2)
+
+3
+
+National Unit Specification: statement of standards (cont) UNIT Energy: Domestic Wind Turbines Systems (Intermediate 2)
+
+OUTCOME 5
+Evaluate the wind turbine and the team working process. (a) (b) (c) (d) Evaluate the strengths and weaknesses of the planning, assembly, and testing of the wind turbine. Evaluate the advantages and disadvantages of team working. Evaluate own contribution to work of the team. Identify action points for improvement in the production of the product and the team working process.
+
+EVIDENCE REQUIREMENTS FOR THIS UNIT
+Evidence is required to demonstrate that candidates have achieved all Outcomes and Performance Criteria. Performance and written/oral evidence is required for this Unit, the evidence should be gathered at appropriate points throughout the Unit in supervised, open-book conditions, in response to a given brief. Performance evidence - Outcomes 1 and 2 Performance evidence will be generated in response to an assignment consisting of practical activities carried out in supervised workshop conditions. An assessor observation checklist must be completed and signed for each candidate. The practical activities will involve two separate tasks: connecting a wire circuit from a wiring drawing, and manufacturing a metal part for a small scale wind turbine system from a component drawing. In each task, candidates must demonstrate that they can: ♦ ♦ ♦ ♦ ♦ select appropriate tools for the task use tools and materials correctly for the intended purpose complete all steps for the task in the correct sequence adhere to health and safety requirements throughout the activity carry out a quality check on the completed work
+
+Performance and product evidence - Outcomes 3 and 4 Performance evidence will be generated in response to a group assignment which will involve the planning, assembly, and testing of a small scale domestic wind turbine system. Practical activities must be carried out in supervised workshop conditions. An assessor observation checklist must be completed and signed for each candidate to confirm achievement. A completed group plan and the finished product should be retained by each group and used by the assessor in discussions with each candidate. The achievement of each candidate is based on his/her individual contribution to the process and not on the final group products. The assessor checklist should be based clearly on the Performance Criteria for Outcomes 3 and 4.
+
+Unit Specification - Energy: Domestic Wind Turbines (Intermediate 2)
+
+4
+
+National Unit Specification: statement of standards (cont) UNIT Energy: Domestic Wind Turbines Systems (Intermediate 2)
+
+Written/oral evidence - Outcome 5 Each candidate must evaluate the effectiveness of the product and process of team working. The evaluation will take the form of a presentation, which could be written, oral, diagrammatical, or electronic. It may be an individual evaluation or a contribution to a group evaluation, provided that all Performance Criteria are met by each candidate. The evidence will be a completed and signed observation checklist for each candidate. The National Assessment Bank (NAB) pack for this Unit contains appropriate assignment briefs and assessor checklists. Centres wishing to produce their own assessments must refer to the NAB to ensure a comparable standard.
+
+Unit Specification - Energy: Domestic Wind Turbines (Intermediate 2)
+
+5
+
+National Unit Specification: support notes UNIT Energy: Domestic Wind Turbines Systems (Intermediate 2)
+
+This part of the Unit Specification is offered as guidance. The support notes are not mandatory. While the exact time allocated to this Unit is at the discretion of the centre, the notional design length is 40 hours.
+
+GUIDANCE ON THE CONTENT AND CONTEXT FOR THIS UNIT
+This Unit has been developed to provide candidates with a range of practical skills focused within the areas of mechanical and electrical engineering. The candidates will gain knowledge on using wind energy to generate a source of electricity suitable for use in a domestic building and will test and evaluate a wind turbine's efficiency. This Unit has a strong focus on individual and team working skills, where candidates will work in small groups to manufacture, assemble, and test a wind turbine. Outcomes 1 and 2 have been developed to ensure each candidate has the opportunity to demonstrate competence in the skills required for this Unit. This should prepare them for the team working exercises in Outcomes 3 and 4 when assembling and testing a wind turbine. Testing should include the use of a voltmeter to measure the output voltage over a set time. Practical skills and team working employability skills are essential for this Unit and candidates are required to evaluate their contribution to the Outcome of the group exercise. Team roles and task functions will be evaluated, ie their role within the team and the tasks the team has to do, and how the team went about doing it. The generic employability skills which are developed in this Unit are: ♦ ♦ ♦ ♦ ♦ ♦ ♦ ♦ ♦ ♦ ♦ ♦ ♦ ♦ ♦ ♦ ♦ ♦ maintaining good timekeeping and attendance maintaining a tidy work place seeking feedback and advice following instructions working co-operatively with others selecting and using tools correctly and for the purpose they were designed using Personal Protective Equipment correctly and working safely following basic drawings correctly checking quality of work working to agreed deadlines organising work effectively working confidently willingness to learn new skills or techniques working independently reflecting on own performance learning from past experiences developing presentation skills developing creativity skills
+
+Unit Specification - Energy: Domestic Wind Turbines (Intermediate 2)
+
+6
+
+National Unit Specification: support notes (cont) UNIT Energy: Domestic Wind Turbines Systems (Intermediate 2)
+
+GUIDANCE ON LEARNING AND TEACHING APPROACHES FOR THIS UNIT
+It is important that there is an induction to the Unit that will include employability skills and health and safety awareness. This Unit involves experiential learning through the various practical experiences and activities. Candidates should experience workshop conditions and should be encouraged to perform tasks and conduct themselves in a manner appropriate to the workplace. General vocational skills, such as selecting and maintaining tools and equipment, are integrated with practical domestic energy engineering activities within the Unit. As well as carrying out practical tasks, candidates will also learn from brief lessons on health and safety and workshop protocol. Teaching and learning approaches will also include demonstrations of practical work by tutors. Short lessons on specific aspects of industrial practice and the correct use of tools will prove invaluable at intervals throughout the learning experience. These may be followed by brief practical sessions in which the candidates practice the skill emphasised by the demonstration. Integrated into the Unit are the employability skills that employers value. It should be stressed that all the employability skills are developed in this Unit but only specified employability skills will be assessed. Employability skills are a focus of this Unit and should be promoted from Unit induction to Unit completion. In order to raise the candidates' awareness of local industries and the realities of the workplace, visits to local energy installations or companies could be arranged, if appropriate. Equally, visiting speakers from local domestic energy firms should be encouraged. Additional useful material and employment opportunities can be resourced by researching local domestic energy firms or from the internet. This Unit should be delivered in a workshop environment. Practical demonstrations and practical exercises should be used to ensure candidates have the necessary skills and knowledge to carry out the tasks in the assessment. It is essential that all candidates have the opportunity to develop a full range of the necessary domestic wind turbine skills; this can be more difficult when candidates are working in teams. It is recommended that all candidates work on small individual exercises in the first instance (Outcomes 1 and 2). This will ensure all candidates can play a full role in the team working part of this project based practical element (Outcomes 3 and 4). Candidates could investigate the wind available at their site through the internet or from tables. This could help inform the evaluations they will make on the effectiveness of the domestic wind turbine in operation. Where this information is not available on the internet, candidates should be given it in a tabular form. Individual exercises could include the following: ♦ ♦ ♦ cutting, filing, and drilling use of standard parts wiring up a light circuit
+
+Unit Specification - Energy: Domestic Wind Turbines (Intermediate 2)
+
+7
+
+National Unit Specification: support notes (cont) UNIT Energy: Domestic Wind Turbines Systems (Intermediate 2)
+
+The assembly of the domestic wind turbine should start with the team members drawing up a plan which lists the tasks to be undertaken to assemble the wind turbine, along with the names of the individuals who have agreed to carry out the tasks. All the components for the wind turbine will be prepared and ready for assembly, although a limited amount of mechanical and electrical work will be needed. Once the wind turbine has been assembled, it will be ready for testing. Initial testing can be carried out in the workshop using two mobile electric fans. Switching between them will test the turbine's ability to alter direction for a change in wind direction and also its electrical output. Testing in an outside environment should supplement the initial testing where the actual wind available will give a more realistic idea of the effectiveness of the assembled wind turbine. Technical evaluations of the assembled wind turbine should include a comparison of completed work against the criteria given in the brief. Personal and team working evaluations should be included to highlight the advantages and disadvantages of working in a team and comparing this against the advantages and disadvantages of working as an individual. Team working tasks and roles within the team that candidates should consider during the assembly of the wind turbine are: ♦ Roles: - leader - worker - finisher - problem solver Tasks: - completing the assembly within time - working co-operatively with others - building up relationships between team members - getting encouragement from team members - giving encouragement to other team members
+
+♦
+
+Teams should ideally be made up of two candidates, but teams of three candidates would be acceptable. Where this Unit is delivered as part of the Intermediate 2 Energy Course, there are good opportunities to integrate the practical skills with the development and assessment of generic employability skills in the Energy: Employability and Careers Unit. The candidate's review of progress in employability skills could be based on the practical activities carried out in this Unit.
+
+OPPORTUNITIES FOR CORE SKILL DEVELOPMENT
+In this Unit there are good opportunities for candidates to develop the Core Skill of Team Working during the assembly of the domestic wind turbine and Problem Solving in the use of drawings and specifications to solve the build sequence, method, and tools to be used. There are opportunities to develop aspects of the Core Skill of Communication, both in the investigation and presentation, of findings.
+
+Unit Specification - Energy: Domestic Wind Turbines (Intermediate 2)
+
+8
+
+National Unit Specification: support notes (cont) UNIT Energy: Domestic Wind Turbines Systems (Intermediate 2)
+
+GUIDANCE ON APPROACHES TO ASSESSMENT FOR THIS UNIT
+Opportunities for the use of e-assessment E-assessment may be appropriate for some assessments in this Unit. By e-assessment we mean assessment which is supported by information and communications technology (ICT), such as e-testing or the use of e-portfolios or e-checklists. Centres which wish to use e-assessment must ensure that the national standard is applied to all candidate evidence and that conditions of assessment as specified in the Evidence Requirements are met, regardless of the mode of gathering evidence. Further advice is available in SQA Guidelines on Online Assessment for Further Education (AA1641, March 2003), SQA Guidelines on e-assessment for Schools (BD2625, June 2005). The assessment of the mechanical/electrical skills will be evidenced by practical assignments involving the manufacture of a small artefact and the wiring up of a simple electrical circuit. These will be supported by assessor observation checklists. It is anticipated that candidates will be given as much practice as possible in mechanical/electrical techniques prior to assessment. The assessment activities should also make an important contribution to the learning process. The practical skills and team working skills are assessed in different Outcomes; Outcomes 1 and 2 are where candidates are assessed on their individual practical skills, and Outcomes 3, 4, and 5 are for assessing their team working skills. The team working skills will be assessed as they work in teams producing a wind turbine. Formative assessment may include practical exercises in metal cutting, drilling, assembly, and electrical wiring. These practical exercises will develop the candidate's skills to a level suitable for progressing to summative assessment. The recommended approach to summative assessment in this Unit is as follows: Outcomes 1 and 2 Candidates will carry out practical exercises according to a given brief. In doing this, they will produce artefacts which will be used as the basis for a discussion between the assessor and the candidate. The assessment evidence will be the completed signed assessor observation checklist which will detail the essential steps in the process as expressed in the Performance Criteria. Outcomes 3 and 4 Teams will carry out a practical exercise according to a given brief. In doing this, they will produce and test a small wind turbine which will be used as the basis for a discussion between the assessor and the team. The assessment evidence will be the completed signed assessor observation checklist which will detail the essential steps in the process as expressed in the Performance Criteria.
+
+Unit Specification - Energy: Domestic Wind Turbines (Intermediate 2)
+
+9
+
+National Unit Specification: support notes (cont) UNIT
+Outcome 5 The assessment is based on the end product of the Outcome which will be a presentation in a form of the team's choosing. Forms of presentation might include, for example, a short talk, poster, leaflet, diagram, or PowerPoint presentation. An assessor checklist identifying the critical aspects of the presentation, regardless of form, should be completed and retained for each candidate. A self build or pre-manufactured wind turbine can be used in the planning, assembly, and testing sequence in Outcomes 3, 4, and 5.
+
+Energy: Domestic Wind Turbines Systems (Intermediate 2)
+
+CANDIDATES WITH DISABILITIES AND/OR ADDITIONAL SUPPORT NEEDS
+The additional support needs of individual candidates should be taken into account when planning learning experiences, selecting assessment instruments, or considering alternative Outcomes for Units. Further advice can be found in the SQA document Guidance on Assessment Arrangements for Candidates with Disabilities and/or Additional Support Needs (www.sqa.org.uk).
+
+Unit Specification - Energy: Domestic Wind Turbines (Intermediate 2)
+
+10
+

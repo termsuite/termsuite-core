@@ -1,0 +1,987 @@
+Luft
+
+Materialien
+Nr. 63
+Windenergieanlagen und Immissionsschutz
+
+Wasser
+
+Boden
+
+Abfall
+
+Landesumweltamt Nordrhein-Westfalen
+
+Technik Verfahren
+
+Materialien
+Nr. 63 Windenergieanlagen und Immissionsschutz
+
+Landesumweltamt NRW, Essen 2002
+
+Windenergieanlagen und Immissionsschutz
+
+Impressum: Herausgegeben vom Landesumweltamt Nordrhein-Westfalen Wallneyer Straße 6 • 45133 Essen Telefon (0201) 79 95 – 0 • Telefax (0201) 79 95 - 1448 e-mail: poststelle@lua.nrw.de Autoren: Dipl.-Ing. Wolfgang Fronz, Dipl.-Ing. Detlef Piorr und Dipl.-Phys. Rainer Kindel, Landesumweltamt NRW
+
+ISSN 0947 – 5206 (Materialien)
+Gedruckt auf 100 % Altpapier ohne Chlorbleiche
+
+Informationsdienste: Bereitschaftsdienst:
+
+Umweltdaten aus NRW, Fachinformationen des LUA NRW: • Internet unter http://www.landesumweltamt.nrw.de Nachrichtenbereitschaftszentrale des LUA NRW (24-Std.-Dienst): Telefon (0201) 714488
+
+2
+
+LUA-Materialien Bd. Nr. 63
+
+Windenergieanlagen und Immissionsschutz
+
+Vorwort
+Mit etwa 1500 Windenergieanlagen, die einen potentiellen Jahresenergieertrag von über 2000 GWh aufweisen, rangiert NRW hinsichtlich der Windenergienutzung im bundesweiten Vergleich gleich an dritter Stelle hinter den Küstenländern Niedersachsen (4800 GWh bei 3000 Anlagen) und Schleswig-Holstein (3300 GWh bei 2400 Anlagen). Allein die in NRW betriebenen Windenergieanlagen produzieren eine Strommenge, die für die Versorgung von etwa 570 000 Haushalten ausreicht. Diese ressourcenschonende Energieerzeugung trägt bei Beachtung der Belange des Natur- und des Immissionsschutzes wesentlich zum Erhalt unserer natürlichen Lebensgrundlagen bei. Bereits im Jahr 1983 hat die Landesanstalt für Immissionsschutz, eine der Vorläuferinstitutionen des Landesumweltamtes NRW, erste Geräuschmessungen an einer Windenergieanlage durchgeführt. Die Nennleistung dieser Anlage betrug 20 kW. Heutzutage weisen serienmäßig hergestellte Windenergieanlagen bereits Leistungen bis zu 2500 kW auf. Diese beeindruckende Entwicklung der Windenergienutzung wurde vom Landesumweltamt NRW mit eigenen Erhebungen und Fachveröffentlichungen begleitet. Der vorliegende Materialienband fasst die Erfahrungen und Erkenntnisse des Landesumweltamtes NRW mit den von Windenergieanlagen erzeugten Immissionen allgemeinverständlich zusammen. Ich hoffe, damit den an der Planung solcher Anlagen beteiligten Ingenieurbüros und Behörden, aber darüber hinaus auch den interessierten Bürgerinnen und Bürgern eine Arbeitshilfe an die Hand zu geben, die dazu beiträgt, die Windenergie im Einklang mit dem Wunsch des Menschen nach Schutz vor unerwünschten Umwelteinwirkungen zu nutzen.
+
+Essen, im Mai 2002
+
+Dr. Harald Irmer Präsident des Landesumweltamtes Nordrhein-Westfalen
+
+LUA-Materialien Bd. Nr. 63
+
+3
+
+Windenergieanlagen und Immissionsschutz
+
+4
+
+LUA-Materialien Bd. Nr. 63
+
+Windenergieanlagen und Immissionsschutz
+
+Inhalt:
+Vorwort ................................................................................................................................. 3 1. 1.1 1.2 1.3 1.4 1.5 2. 2.1 2.2 2.3 3. 3.1 3.2 3.3 3.4 4. 5. 5.1 5.2 5.2.1 5.2.2 5.3 6. Geräuschemissionen von Windenergieanlagen.......................................................... 7 Grundsätzliches zum Geräuschverhalten von Windenergieanlagen ...................... 7 Nachweis des konkreten Geräuschemissionsverhaltens einer Windenergieanlage........................................................................................ 9 Übersicht über die Emissionsdaten von Windenergieanlagen ............................. 10 Geräuschentstehungsmechanismen ...................................................................... 11 Nachträgliche Emissionsminderungsmöglichkeiten ............................................ 12 Immissionsprognosen von Windenergieanlagen...................................................... 12 Immissionsprognosen nach der TA Lärm ............................................................ 12 Der im Rahmen der Prognose zu berücksichtigende Betriebszustand................. 13 Die Ausbreitungsrechnung der TA Lärm............................................................. 13 Schallimmissionen im Umfeld von Windenergieanlagen........................................ 15 Beurteilungspegel in Abhängigkeit zum Abstand der Windenergieanlagen ....... 15 Immissionsrichtwerte ........................................................................................... 18 Infraschall............................................................................................................. 19 Windbedingte Fremdgeräusche............................................................................ 21 Betrachtungen zu Belästigungs-Wirkungen von Geräuschen .................................. 22 Optische Immissionen von Windenergieanlagen ..................................................... 24 Grundsätzliches zu optischen Immissionen von Windenergieanlagen ................ 24 Prognose und Beurteilung optischer Immissionen bei Windenergieanlagen....... 25 Lichtreflexionen - Disco-Effekt ........................................................................... 25 Periodischer Schattenwurf.................................................................................... 26 Möglichkeiten zur Vermeidung und Minderung schädlicher Umwelteinwirkungen durch optische Immissionen - Fazit.................................. 27 Literatur.................................................................................................................... 28 Anhang 1 (Erläuterung von Fachausdrücken und ergänzende Hinweise) ........................... 31 Anhang 2 (Grundsätze für Planung und Genehmigung von WindenergieanlagenWindenergie-Erlass - WEAErl.-) ........................................................................ 35 Immissionsschutz ..................................................................................................... 35 Lärm ......................................................................................................................... 35 Schattenwurf............................................................................................................. 37
+
+LUA-Materialien Bd. Nr. 63
+
+5
+
+Windenergieanlagen und Immissionsschutz
+
+Anhang 3 (Hinweise zur Ermittlung und Beurteilung der optischen Immissionen von Windenergieanlagen) ................................................................................... 38 Vorbemerkung.......................................................................................................... 38 Allgemeines.............................................................................................................. 38 Anwendungsbereich und immissionsschutzrechtliche Grundsätze.......................... 38 Begriffsbestimmungen ............................................................................................. 39 Grundlagen der Ermittlung und Bewertung von Immissionen durch periodischen Schattenwurf ....................................................................................... 40 Vorhersage des periodischen Schattenwurfs ............................................................ 41 Beurteilung ............................................................................................................... 41 Immissionsrichtwerte für die jährliche Beschattungsdauer...................................... 42 Immissionsrichtwert für die tägliche Beschattungsdauer......................................... 42 Auflagen und Minderungsmaßnahmen .................................................................... 42 Schattenwurf............................................................................................................. 42 Lichtblitze................................................................................................................. 43 Anhang ..................................................................................................................... 43 Berechnungsverfahren.............................................................................................. 43 Software ................................................................................................................... 44 Arbeitshilfen............................................................................................................. 44 Beschattungsdauer im Umfeld einer Windenergieanlage - Musterdaten................. 47 Literatur: ................................................................................................................... 47 Liste der bisher erschienenen LUA-Materialien .................................................................. 49
+
+6
+
+LUA-Materialien Bd. Nr. 63
+
+Windenergieanlagen und Immissionsschutz
+
+Windenergieanlagen und Immissionsschutz
+Das Interesse an der Nutzung der Windenergie ist in den letzten Jahren auch in Nordrhein-Westfalen deutlich gestiegen, hat sie doch verglichen mit der Nutzung fossiler Energieträger und der Nutzung der Atomenergie den Vorteil, dass sie sich einer unerschöpflichen Energiequelle bedient und dabei im Betrieb weder Luftschadstoffe, Reststoffe oder Abfälle noch ein atomares Risiko in sich birgt. Im Folgenden ist der aktuelle Stand des Wissens zum Geräuschverhalten von Windenergieanlagen sowie zur Prognose und zur Beurteilung dieser Einwirkungen zusammengestellt. Es wird aufgezeigt, mit welchen Schallimmissionen im Umfeld von Windenergieanlagen gerechnet werden muss. Sodann wird auf die Beurteilung der Geräusche im Rahmen der geltenden Regelwerke eingegangen. Darüber hinaus wird aufgezeigt, mit welchen optischen Effekten im Umfeld von Windenergieanlagen gerechnet werden muss. Der Stand zur Prognose und zur Beurteilung optischer Immissionen wird dargelegt. Auf die bestehenden Möglichkeiten zur Vermeidung oder Minderung schädlicher Umwelteinwirkungen wird eingegangen. Um den Zugang zu dem Thema zu vereinfachen, werden Fachausdrücke in einem Anhang erläutert. Aus gleichem Grund werden die Grundzüge für die Planung, und Genehmigung von Windenergieanlagen, die in Nordrhein-Westfalen in Form des Windenergie-Erlasses veröffentlicht wurden, im Anhang auszugsweise wiedergegeben. Schlagwörter: Windenergie, Geräuschimmissionsschutz, Beurteilung von Geräuschen, Beurteilung von Schatteneinwirkungen, Regelwerke
+
+1.
+1.1
+
+Geräuschemissionen von Windenergieanlagen
+Grundsätzliches zum Geräuschverhalten von Windenergieanlagen
+
+Die Geräusche von Windenergieanlagen weisen eine starke Abhängigkeit von der Windgeschwindigkeit auf. Der Betriebszustand einer Windenergieanlage und damit auch ihre Geräuschemission [siehe Erläuterung 1] wird wesentlich durch die Windgeschwindigkeit bestimmt, die in der Höhe des Rotors herrscht. Mit zunehmender Windgeschwindigkeit steigt zunächst die erzeugte elektrische Leistung und auch die Schallemission. Zur Vermeidung einer Überlastung der Windenergieanlage wird die erzeugte elektrische Leistung regelungstechnisch so begrenzt, dass die Anlage keine (wesentlich) höhere Leistung als ihre Nennleistung erzeugen kann. Hierzu sind zwei grundsätzlich unterschiedliche Regelungsmechanismen in Einsatz [1]:
+
+LUA-Materialien Bd. Nr. 63
+
+7
+
+Windenergieanlagen und Immissionsschutz
+
+- "Pitch"-Regelungen - "Stall"-Regelungen "Pitch"-gesteuerte Anlagen arbeiten mit einer dynamischen Blatteinstellwinkelverstellung. Nach dem Erreichen der Nennleistung werden die Rotorblätter so verdreht, dass sie dem Wind eine geringere Angriffsfläche bieten. Hierdurch wird die dem Wind entnommene Leistung begrenzt.
+
+Bild 1:
+
+Geräuschverhalten einer "pitch"-gesteuerten Windenergieanlage [2]
+
+Bild 1 zeigt das Geräuschverhalten einer "pitch"-gesteuerten Windenergieanlage. Bis zum Erreichen der elektrischen Nennleistung, im Beispiel wird diese bei der Windgeschwindigkeit von etwa 10 m/s erreicht, steigt die Geräuschemission kontinuierlich an. Nach Erreichen der elektrischen Nennleistung tritt keine weitere Erhöhung der Schallemission in Abhängigkeit von der Windgeschwindigkeit auf. Dieses führt dazu, dass die maximale Schallemission derartiger Anlagen in der Regel unabhängig von der Masthöhe ist. Bei "stall"-gesteuerten Anlagen erfolgt die Leistungsbegrenzung dadurch, dass das Rotorblattprofil so ausgelegt ist, dass die aerodynamische Strömung am Rotorblatt nach Erreichen der Nennleistung mit zunehmender Windgeschwindigkeit abreißt.
+
+8
+
+LUA-Materialien Bd. Nr. 63
+
+Windenergieanlagen und Immissionsschutz
+
+Bild 2:
+
+Geräuschverhalten einer "stall"-gesteuerten Anlage nach [3]
+
+Bild 2 verdeutlicht das Geräuschverhalten einer "stall"-gesteuerten Anlage. Die Anlage erreicht ihre elektrische Nennleistung bei der Referenz-Windgeschwindigkeit von etwa 10,4 m/s. Auch nach Erreichen der elektrischen Nennleistung steigt die Schallemission mit zunehmender Windgeschwindigkeit weiter an. "Pitch"- und "stall"-gesteuerte Anlagen zeigen somit bezüglich der Abhängigkeit der Schallemission von der Windgeschwindigkeit nach Erreichen der elektrischen Nennleistung ein unterschiedliches Verhalten. Aus akustischer Sicht weisen die "pitch"-gesteuerten Anlagen den Vorteil auf, dass ihre Schallemission nach Erreichen der Nennleistung nahezu konstant bleibt. Nach Einschätzung des Landesumweltamtes sind die derzeit in NRW neu installierten Windenergieanlagen überwiegend "pitch"-gesteuert. Die Zunahme des Schallleistungspegels (vgl. Erläuterung 1) bis zum Erreichen der Nennleistung mit der Windgeschwindigkeit beträgt im Arbeitsbereich unterhalb der elektrischen Nennleistung erfahrungsgemäß [4] etwa 1 dB bis 2,5 dB pro Zunahme der Windgeschwindigkeit um 1 m/s. Das Geräuschverhalten konkreter Anlagen kann deren akustischen Emissionsgutachten entnommen werden. 1.2 Nachweis des konkreten Geräuschemissionsverhaltens einer Windenergieanlage
+
+Zur Erfassung der Geräuschemissionen einer Windenergieanlage in Abhängigkeit von der Windgeschwindigkeit gibt es ein international genormtes Messverfahren. Es ist üblich, dass die Hersteller zur Kennzeichnung der Geräuschemission eines Anlagentyps eine oder mehrere Anlagen des jeweiligen Typs durch unabhängige Messinstitute vermessen lassen.
+
+LUA-Materialien Bd. Nr. 63
+
+9
+
+Windenergieanlagen und Immissionsschutz
+
+Die Schallemissionen von einzelnen Windenergieanlagen werden in Deutschland entsprechend dem Verfahren der DIN EN 61400-11 "Windenergieanlagen, Teil 11: Schallmessverfahren" [5] in Verbindung mit Konkretisierungen erhoben, welche in den "Technischen Richtlinien für Windenergieanlagen, Teil 1: Bestimmung der Schallemissionswerte" [6] festgelegt sind. Die Anwendung dieser Regelwerke hat u.a. der Länderausschuss für Immissionsschutz (LAI) auf seiner 99. Sitzung im Mai 2000 [7] empfohlen. Eine entsprechende Festlegung enthält der Windenergie-Erlass des Landes NRW [8]. Nach diesen Richtlinien wird das Geräuschverhalten einer Windenergieanlage bei Emissionsmessungen im Bereich der standardisierten Windgeschwindigkeit zwischen 6 m/s und 10 m/s, höchstens jedoch bis zu der Windgeschwindigkeit, die dem 95%-Wert der Nennleistung entspricht, erfasst und dokumentiert. Als Ergebnis der Messungen werden in Abhängigkeit von der Windgeschwindigkeit ausgewiesen: der A-bewertete Schallleistungspegel und die Frequenzzusammensetzung des Geräusches als Terz-Spektrum, falls das Geräusch Einzeltöne [s. Erl. 2] enthält, der Tonzuschlag KT nach DIN 45681 [9], falls das Geräusch impulshaltig [s. Erl. 3] ist, der Impulszuschlag KI entsprechend der TA Lärm [10]. Übersicht über die Emissionsdaten von Windenergieanlagen
+110
+LWA + KTon + KI [dB]
+
+1.3
+
+105
+
+100
+
+95 0 500 1000 1500 2000 2500
+Elektrische Nennleistung [kW]
+
+Bild 3:
+
+Schallemissionen von Windenergieanlagen (Stand: Mai 2001) [LWA*: A-bewerteter Schallleistungspegel, gebildet unter Berücksichtigung des Ton- und des Impulszuschlags] typischerweise einen
+
+Windenergieanlagen erzeugen im Nennleistungsbereich Schallleistungspegel von etwa 103 dB(A).
+
+Bild 3 wurde aufgrund der Emissionsdatensammlung des Staatlichen Umweltamtes Bielefeld zusammengestellt. Aufgetragen ist jeweils die Summe aus dem im Messbericht ausgewiesenen Schallleistungspegel, dem Tonzuschlag und dem Impulszuschlag. In Anlehnung an die Empfehlung des LAI [7] wurden hierbei nur Tonzuschläge berücksichtigt, die größer als 2 dB waren. Bild 3 stellt die Geräuschemission bei der standardisierten
+
+10
+
+LUA-Materialien Bd. Nr. 63
+
+Windenergieanlagen und Immissionsschutz
+
+Windgeschwindigkeit von 10 m/s bzw. bei derjenigen Windgeschwindigkeit dar, bei welcher die Windenergieanlage 95% ihrer Nennleistung erzeugt. Sofern in älteren Messberichten nur die Emissionsdaten für die Windgeschwindigkeit von 8 m/s angegeben wurden, wurden in Übereinstimmung mit den Empfehlungen des LAI [7] die Schallemissionen im Nennleistungsbereich durch Addition von 3 dB zu den im Messbericht ausgewiesenen Schallleistungspegeln abgeschätzt. Bild 3 zeigt nur eine geringe Abhängigkeit der Schallemission von der elektrischen Nennleistung der jeweiligen Anlage auf. Bei gleicher Nennleistung ist der Schwankungsbereich der Emissionsdaten größer als 5 dB [s. Erl. 4]. Wie der Datensammlung des Staatlichen Umweltamtes Bielefeld entnommen werden kann, weisen 12 % der Messberichte für die Geräuschemission der untersuchten Windenergieanlage einen Einzeltonzuschlag von 3 dB aus. Diese einzeltonhaltigen Anlagen sind akustisch sicherlich nicht ausgereift und entsprechen nicht einem anspruchsvollen schalltechnischen Niveau. Der in Bild 3 erkennbare Schwankungsbereich der Emissionsdaten von Anlagen gleicher elektrischer Nennleistung zeigt, dass auf dem Markt Anlagen mit unterschiedlicher akustischer Qualität vertreten sind. Dieses führt dazu, dass - bei gleicher Windgeschwindigkeit - eine Anlage mit großer elektrischer Nennleistung nicht grundsätzlich stets eine höhere Schallemission aufweist als eine Anlage mit geringerer Nennleistung. Als typischer Schallleistungspegel von Windenergieanlagen mit Nennleistungen zwischen 500 kW und 2 MW kann aufgrund der Datenlage ein Wert von 103 dB(A) genannt werden [s. Erl. 5]. 1.4 Geräuschentstehungsmechanismen
+
+Die Geräuschentstehung von Windenergieanlagen kann unterteilt werden in - aerodynamisch erzeugte Geräusche und - mechanisch verursachte Geräusche. Grundsätzlich erzeugen die rotierenden Flügel der Windenergieanlagen aerodynamische Geräusche. Diese sind stark abhängig von der Blattspitzengeschwindigkeit. Auch das Rotorblattprofil und der Abstand der Rotorblätter vom Mast beeinflussen das Geräuschverhalten einer Anlage. Diese Geräuschentstehungsmechanismen wurden in Forschungsvorhaben untersucht, Möglichkeiten zur Geräuschminderung wurden aufgezeigt [12, 13]. Als mechanische Komponenten, die ebenfalls zur Geräuschemission von Windenergieanlagen beitragen können, sind zu nennen: - das Getriebe, - der Generator, - Lüfter und Hilfsantriebe. Diese mechanischen Geräuschquellen führten in der Vergangenheit häufig dazu, dass die Geräusche von Windenergieanlagen auffällige, besonders störende Einzeltöne enthielten. Zur Verminderung der Geräuschemission dieser Quellen wird die Kanzel der Windenergieanlage in der Regel als akustisch wirksame Kapsel ausgebildet. Soweit konstruktiv möglich, werden Maßnahmen zur Körperschallentkopplung realisiert. Diese konstruktiven Maßnahmen führten
+
+LUA-Materialien Bd. Nr. 63
+
+11
+
+Windenergieanlagen und Immissionsschutz
+
+dazu, dass die Geräusche moderner, dem Stand der Lärmminderungstechnik entsprechender Windenergieanlagen nicht mehr einzeltonhaltig sind. 1.5 Nachträgliche Emissionsminderungsmöglichkeiten
+
+Durch Drosselung der Drehzahl und der erzeugbaren elektrischen Leistung kann bei einigen Windenergieanlagen eine Geräuschminderung von bis zu 4 dB erzielt werden. Derartige Geräuschminderungen sind mit Ertragseinbußen verbunden. Bei einer Windenergieanlage können - sofern die Geräuschentwicklung nicht durch mechanische Defekte verursacht ist, - nur wenige Geräuschminderungsmaßnahmen nachträglich durchgeführt werden. "pitch"-gesteuerte Anlagen können prinzipiell - falls erforderlich - mit verringerten Drehzahlen und gedrosselter Leistung betrieben werden. Messtechnisch belegt ist für einzelne Anlagentypen, dass durch solche "Nachtabsenkungen" Pegelminderungen von bis zu 4 dB möglich sind. Derartige Nachtabsenkungen sind jedoch immer mit Leistungseinbußen verknüpft. Eine akustische Minderung von 4 dB bedeutet nach den Erfahrungen des Landesumweltamtes etwa eine Halbierung der erzeugbaren maximalen Leistung. Sofern bei einer "pitch"-gesteuerten Anlage tonale Geräusche bei einer konkreten Drehzahl aufgrund der Anregung von Eigenfrequenzen mechanischer Bauteile entstehen, ist es oftmals möglich, die Regelung der Anlage so einzustellen, dass diese kritische Drehzahl nur kurz durchfahren wird und nicht als stationärer Betriebszustand auftritt. Ein derartig variables Minderungspotential wie "pitch"-gesteuerte Anlagen weisen "stall"gesteuerte Anlagen in der Regel nicht auf. "Stall"-gesteuerte Anlagen besitzen häufig zwei Rotordrehzahlen. Im Einzelfall haben Hersteller angeboten, "stall"-gesteuerte Anlagen zur Geräuschminderung nachts nur auf der niedrigen Rotordrehzahl zu betreiben. Es liegen im Landesumweltamt jedoch keine Erkenntnisse dazu vor, wie sich diese Anlagen bei "festgeklemmter niedriger Drehzahl" bei höheren Windgeschwindigkeiten akustisch und betriebstechnisch verhalten. Sowohl bei "pitch"- als auch bei "stall"-gesteuerten Anlagen ist eine (nächtliche) Abschaltung der Anlagen - gegebenenfalls in Abhängigkeit von der Windgeschwindigkeit - möglich.
+
+2.
+2.1
+
+Immissionsprognosen von Windenergieanlagen
+Immissionsprognosen nach der TA Lärm
+
+Die Ermittlung und die Beurteilung der Geräusche von Windenergieanlagen erfolgen sowohl in der Planung als auch im Beschwerdefall nach den Festlegungen der TA Lärm. Einzelne Windenergieanlagen sind nicht genehmigungsbedürftige Anlagen im Sinne des Bundes-Immissionsschutzgesetzes. Windfarmen sind seit Anfang August 2001 [14] genehmigungsbedürftig im Sinne des BImSchG. In Abhängigkeit davon, ob es sich um einzelne Anlagen oder um eine Windfarm handelt, werden die Belange des Immissionsschutzes im Rahmen des Baugenehmigungsverfahrens oder in einem immissionsschutzrechtlichen Genehmigungsverfahren berücksichtigt. In beiden Fällen sind die Geräuschimmissionen entsprechend den
+
+12
+
+LUA-Materialien Bd. Nr. 63
+
+Windenergieanlagen und Immissionsschutz
+
+Vorgaben der TA Lärm [10] zu prognostizieren und zu beurteilen. Die TA Lärm ist ebenfalls stets im Rahmen von Beschwerdefällen zur Erfassung und Beurteilung der Geräuscheinwirkungen heranzuziehen. 2.2 Der im Rahmen der Prognose zu berücksichtigende Betriebszustand
+
+Nach der TA Lärm ist der Beurteilung derjenige Betriebszustand der Windenergieanlage zugrunde zu legen, welcher zu den höchsten Beurteilungspegeln führt. Als Näherung hierfür wird die Planung auf das Geräuschverhalten der Windenergieanlagen bei der standardisierten Windgeschwindigkeit von 10 m/s ausgelegt. Falls eine Anlage 95% ihrer Nennleistung schon bei niedrigeren Windgeschwindigkeiten erzeugt, wird das Geräuschverhalten im 95%-Betriebspunkt der Planung zugrunde gelegt. Bis 1997 wurde bundesweit im Rahmen der Geräuschprognosen für Windenergieanlagen nur die Immission bei der standardisierten Windgeschwindigkeit von 8 m/s betrachtet. Man ging bis zu diesem Zeitpunkt davon aus, dass bei höheren Windgeschwindigkeiten die Anlagengeräusche aufgrund der dann herrschenden windbedingten Fremdgeräusche nicht mehr stören würden und daher die Geräusche bei diesen Windgeschwindigkeiten in der Planungsphase nicht betrachtet werden müssten. Auch wurde argumentiert, dass im Binnenland höhere Windgeschwindigkeiten so selten auftreten würden, dass sie im Sinne des Immissionsschutzes "seltene Ereignisse" darstellen. Beide Annahmen erwiesen sich als nicht zutreffend. Seitdem wird in NRW der Prognose das Geräuschverhalten bis zur standardisierten Windgeschwindigkeit von 10 m/s zugrunde gelegt. Falls 95% der elektrischen Nennleistung schon bei niedrigeren Windgeschwindigkeiten als 10 m/s erzeugt werden, wird in Übereinstimmung mit den Empfehlungen des LAI [7] und dem Windenergie-Erlass des Landes NRW [8] der 95%Betriebspunkt der Prognose zugrunde gelegt. Das Geräuschverhalten der so definierten Betriebspunkte gilt allgemein als hinreichende Näherung für dasjenige, welches die höchsten Beurteilungspegel erzeugt. Denn dieser Betriebszustand ist nach der TA Lärm den Prognosen zugrunde zu legen [s. Erl. 7]. 2.3 Die Ausbreitungsrechnung der TA Lärm
+
+Die Prognoserechnung ist nach Auffassung des Landesumweltamtes NRW entsprechend dem "alternativen Verfahren zur Berechnung A-bewerteter Schalldruckpegel" der DIN ISO 9613-2 durchzuführen. Von einer sicheren Einhaltung des Richtwertes kann nur dann ausgegangen werden, wenn der prognostizierte Beurteilungspegel unter Berücksichtigung der Prognoseunsicherheit den Immissionsrichtwert nicht überschreitet. Die TA Lärm kennt drei Arten der Geräuschimmissionsprognose: Die überschlägige Prognose entsprechend Abschnitt A.2.4 Die detaillierte frequenzselektive Prognose nach DIN ISO 9613-2 [15], Die Prognose nach dem "alternativen Verfahren zur Berechnung A-bewerteter Schalldruckpegel der DIN ISO 9613-2, Abschnitt 7.3.2 [s. Erl. 8]
+
+Die Ergebnisse der überschlägigen Prognose vernachlässigen die Schallausbreitungsverluste infolge der Luftabsorption und der Bodendämpfung. Sie liegen aus Sicht des Immissions-
+
+LUA-Materialien Bd. Nr. 63
+
+13
+
+Windenergieanlagen und Immissionsschutz
+
+schutzes immer auf der "sicheren Seite". In der Praxis wird dieses Verfahren jedoch so gut wie nie im Rahmen konkreter Planungen angewandt. Nach dem Wortlaut der TA Lärm soll die Geräuschprognose frequenzselektiv erfolgen, sofern die hierzu notwendigen Daten vorliegen. Die berechneten Immissionspegel sind bei frequenzselektiven Ausbreitungsrechnungen für hochliegende, breitbandige Quellen - wie z.B. Windenergieanlagen, Hochfackeln und Schornsteinmündungen - bei Abständen bis zu etwa 500 m um bis zu 4 dB(A) niedriger als die Rechenergebnisse nach dem "Alternativen Verfahren" [16]. Weder die TA Lärm noch die DIN ISO 9613-2 enthalten eine Aussage dazu, welches Berechnungsverfahren das "genauere" ist. Verschiedene Untersuchungen haben jedoch gezeigt, dass das frequenzselektive Ausbreitungsrechenverfahren die Bodendämpfung für hochliegende Schallquellen bei Schallausbreitung über Äcker und Wiesen überschätzt [17, 18, 19]. Dieses führt dazu, dass die von hochliegenden Schallquellen - bei Schallausbreitung über Wiesen und Ackerland -verursachten Immissionen deutlich höher sind als die nach den frequenzselektiven Prognosemodellen berechneten Werte. Die Rechnung nach dem "alternativen Verfahren" führt hingegen zu prognostizierten Immissionspegeln, die in den genannten Fällen geringfügig oberhalb der gemessenen Werte liegen [19]. Geräuschprognosen für Windenergieanlagen sollten, damit sie auf der "sicheren Seite" liegen, entsprechend dem genannten "Alternativen Verfahren" durchgeführt werden; dieses Verfahren wird in der Fachwelt derzeit als Standardverfahren bei der Mehrzahl der üblichen Geräuschprognosen gewerblicher Quellen angewandt. Nach der TA Lärm ist im Rahmen jeder Geräuschprognose eine Aussage zur Qualität der Prognose zu treffen. Die Unsicherheit der Prognose wird bestimmt durch - die Unsicherheit, mit der die Emissionsdaten erhoben wurden, - die möglichen Schwankungen der Emission aufgrund von Serienstreuungen, - der Unsicherheit des Prognosemodells. Nach einer Abschätzung des Landesumweltamtes [20] ist die Geräuschprognose häufig mit einer Unsicherheit von + 2,6 dB(A) behaftet. Nach dem Windenergie-Erlass [8] des Landes NRW ist die Unsicherheit, mit der die prognostizierten Beurteilungspegel behaftet sind, beim Vergleich mit den Immissionsrichtwerten zu berücksichtigen. Es ist notwendig, dass der Gutachter, welcher die Geräuschprognose durchführt, über ein fundiertes akustisches Fachwissen verfügt, und dass er die örtlichen Gegebenheiten der Immissionsorte aus eigener Anschauung kennt. Nur so kann er beispielsweise Pegelerhöhungen, die aufgrund von Schallreflexionen auftreten, in der Prognose berücksichtigen. In der Regel ist das Geräuschverhalten der zu errichtenden Windenergieanlagen also durch messtechnische Gutachten belegt. Bei den ersten Anlagen einer neuen Serie ist das konkrete Geräuschverhalten der Anlagen jedoch noch nicht bekannt. Zwischen der Errichtung des Prototypen und seiner akustischen Vermessung (auf Basis der gerechneten Leistungskurve) kann erfahrungsgemäß bis zu einem halben Jahr vergehen. Wenn das konkrete Geräuschverhalten einer Anlage aus diesem Grund in der Planung noch nicht durch Gutachten unabhängiger Messinstitute belegt werden kann, empfiehlt das Landesumweltamt NRW den potentiellen Betreibern der Anlage, sich zu verpflichten, die Anlage zunächst nur tags zu betreiben und den Nachtbetrieb erst dann aufzunehmen, wenn die Einhaltung des Nachtrichtwertes gegen-
+
+14
+
+LUA-Materialien Bd. Nr. 63
+
+Windenergieanlagen und Immissionsschutz
+
+über den Genehmigungsbehörden durch Vorlage eines entsprechenden Messberichts belegt wurde.
+
+3.
+3.1
+
+Schallimmissionen im Umfeld von Windenergieanlagen
+Beurteilungspegel in Abhängigkeit zum Abstand der Windenergieanlagen
+
+Welche Schalldruckpegel im Umfeld von Windenergieanlagen auftreten, ist vom Anlagentyp, von der Anzahl der Anlagen und deren Lage zum Immissionsort sowie von der Windgeschwindigkeit abhängig. Die folgenden Bilder zeigen, welche Beurteilungspegel [s. Erl. 9] in der Umgebung von Windenergieanlagen typischerweise zu erwarten sind. Für die Anlagen wurde jeweils ein Schallleistungspegel von 103 dB(A) angesetzt. Es wird also eine Geräuschemission angesetzt, die nach Bild 3 typisch für den Betrieb vieler Windenergieanlagen im Nennleistungsbereich ist. Die Nabenhöhe wurde jeweils zu 80 m gesetzt, die Höhe der Immissionsorte zu 5 m. Die Ausbreitungsrechnung erfolgte entsprechend dem "Alternativen Verfahren" der DIN ISO 9613-2. Hierbei wurde der Ausbreitungsrechnung eine Lufttemperatur von 10o C und eine Luftfeuchtigkeit von 70% zugrunde gelegt. Die meteorologische Korrektur [s. Erl. 10] wurde entsprechend der ISO 9613-2 unter Ansatz von Co = 2 dB berücksichtigt. Angegeben sind Kurven gleichen Beurteilungspegels (Pegel bei maximaler Emission). Falls in konkreten Planungen leisere oder lautere Anlagen als in den folgenden Beispielen eingesetzt werden sollen, so folgen hieraus zwangsläufig abstandsabhängig andere Beurteilungspegel als in den Beispielen ausgewiesen sind. Zu Zeiten, zu denen die Anlagen nicht mit Nennleistung betrieben werden, ergeben sich für gleiche Abstände niedrigere Schallimmissionen.
+
+40.0
+
+45.0 35.0
+LWA = 103 dB
+
+0
+
+500 m
+
+Bild 4:
+
+Kurven gleichen Beurteilungspegels im Umfeld einer Windenergieanlage (+: Standort der Windenergieanlage)
+
+LUA-Materialien Bd. Nr. 63
+
+15
+
+Windenergieanlagen und Immissionsschutz
+
+Nach den Berechnungen erzeugt die im Beispiel betrachtete Windenergieanlage im Nennleistungsbetrieb in Abhängigkeit vom Abstand folgende Beurteilungspegel [s. Erl. 9]: 45 dB(A) 40 dB(A) 35 dB(A) in in in ca. 280 m ca. 410 m ca. 620 m
+
+Die folgenden beiden Bilder zeigen die Kurven gleichen Beurteilungspegels im Umfeld mehrerer Windenergieanlagen. Damit die Anlagen sich nicht gegenseitig "den Wind wegnehmen" wird häufig [1] empfohlen, dass die Anlagen in Hauptwindrichtung einen Mindestabstand aufweisen sollen, der dem 8 bis 10-fachen des Rotordurchmessers entspricht; quer zur Hauptwindrichtung wird ein Mindestabstand von 3 bis 5 Rotordurchmessern empfohlen. Diese Faustformel wurde bei der Anordnung der im folgenden betrachteten Anlagen berücksichtigt.
+
+35.0
+
+40.0 45.0
+
+LWA = 103 dB LWA = 103 dB LWA = 103 dB LWA = 103 dB LWA = 103 dB LWA = 103 dB LWA = 103 dB 45.0 35.0
+
+40.0
+
+0
+
+500 m
+
+Bild 5:
+
+Beurteilungspegel im Abstand von 7 Windenergieanlagen (+: Standort einer Windenergieanlage)
+
+16
+
+LUA-Materialien Bd. Nr. 63
+
+Windenergieanlagen und Immissionsschutz
+
+Bild 5 zeigt die örtliche Beurteilungspegelverteilung, die von einer Konzentrationsfläche für Windenenergieanlagen verursacht wird, auf welcher 7 Windenergieanlagen errichtet sind. Der Abstand der Anlagen (quer zur Hauptwindrichtung) beträgt jeweils 200m. Bei den Berechnungen wurden jeweils alle Anlagen berücksichtigt, unabhängig davon, wie hoch ihre jeweiligen Einzelbeiträge zur Gesamtgeräuschimmission sind. Nach den Berechnungen verursachen die im Beispiel betrachteten Anlagen in Abhängigkeit vom Abstand folgende Beurteilungspegel: 45 dB(A) in 440 m Abstand 40 dB(A) in 740 m Abstand 35 dB(A) in 1100 m Abstand (Die Abstände gelten für die Immissionsorte in Hauptwindrichtung.) Das folgende Bild 6 zeigt die örtliche Beurteilungspegelverteilung in der Nachbarschaft eines Feldes von 21 Windenergieanlagen. Der Abstand der Anlagen zueinander beträgt quer zur Hauptwindrichtung 200 m, in Hauptwindrichtung beträgt der Abstand jeweils 500 m. Bei den Berechnungen wurden jeweils wiederum alle Anlagen berücksichtigt, unabhängig davon, wie hoch ihre jeweiligen Einzelbeiträge zur Gesamtgeräuschimmission sind. Nach den Berechnungen verursachen die im Beispiel betrachteten Anlagen in Abhängigkeit vom Abstand zur nächstgelegenen Windenergieanlage folgende Beurteilungspegel: 45 dB(A) in 500 m Abstand 40 dB(A) in 830 m Abstand 35 dB(A) in 1300 m Abstand (Die Abstände gelten für die Immissionsorte in Hauptwindrichtung.) Die Berechnungen verdeutlichen, dass die Geräuschimmissionen, die im Umfeld von Windenergieanlagen auftreten, sowohl von der Anzahl der Windenergieanlagen, die gleichzeitig auf den Immissionsort einwirken, als auch von der Lage der Anlagen zueinander und zum Immissionsort abhängen. Aus akustischer Sicht ist grundsätzlich einer räumlichen Konzentration von Geräuschquellen der Vorzug vor der Vereinzelung der Schallquellen zu geben. Bei gleicher Anzahl von Geräuschquellen und gleicher emittierter Schallleistung führt die räumliche Konzentration dazu, dass insgesamt weniger Fläche akustisch belastet wird als bei vereinzelter Aufstellung mit sehr großem Abstand zwischen den jeweiligen Anlagen.
+
+LUA-Materialien Bd. Nr. 63
+
+17
+
+Windenergieanlagen und Immissionsschutz
+
+35.0
+
+40.0
+
+45.0
+
+LWA = 103 dB LWA = 103 dB LWA = 103 dB LWA = 103 dB LWA = 103 dB LWA = 103 dB LWA = 103 dB LWA = 103 dB LWA = 103 dB LWA = 103 dB LWA = 103 dB LWA = 103 dB LWA = 103 dB LWA = 103 dB LWA = 103 dB LWA = 103 dB LWA = 103 dB LWA = 103 dB LWA = 103 dB LWA = 103 dB LWA = 103 dB 45.0 35.0 40.0
+
+0
+
+500 m
+
+Bild 6:
+
+Beurteilungspegel in der Nachbarschaft einer Konzentrationsfläche mit 21 Windenergieanlagen (+: Standort einer Windenergieanlage)
+
+3.2
+
+Immissionsrichtwerte
+
+Die TA Lärm gibt in Abschnitt 6.1 in Abhängigkeit von der Gebietsausweisung des Immissionsortes folgende Nacht-Richtwerte [s. Erl. 11] an: Nach Abschnitt 3.2.1 der TA Lärm ist der Schutz vor schädlichen Umwelteinwirkungen durch Geräusche (§ 5 Abs. 1, Nr. 1 BImSchG) stets dann sichergestellt, wenn die Gesamtbelastung durch die Geräusche aller einwirkenden Anlagen, die nach der TA Lärm zu beurteilen sind, die Immissionsrichtwerte nicht überschreitet. Neben den Geräuschen der Windenergieanlagen sind in der Planung somit auch die Geräusche anderer gewerblicher und industrieller Quellen zu berücksichtigen [s. Erl. 12]. Jede Geräuschprognose muss daher auch eine Aussage zur Vorbelastung enthalten. Nicht nach der TA Lärm zu beurteilen sind, und damit bei
+
+18
+
+LUA-Materialien Bd. Nr. 63
+
+Windenergieanlagen und Immissionsschutz
+
+Betrachtung der Gesamtbelastung unberücksichtigt bleiben im Rahmen der Beurteilung nach der TA Lärm unter anderem die Verkehrsgeräusche. Tabelle 1: Nacht-Immissionsrichtwerte der TA Lärm Gebietsausweisung bzw. Nutzung Industriegebiet Gewerbegebiet Kerngebiet, Dorfgebiet und Mischgebiet allgemeines Wohngebiet und Kleinsiedlungsgebiet reines Wohngebiet Kurgebiet, Krankenhäuser und Pflegeanstalten Nacht-Immissionsrichtwert 70 dB(A) 50 dB(A) 45 dB(A) 40 dB(A) 35 dB(A) 35 dB(A)
+
+Die Zuordnung der Immissionsorte zu den in Tabelle 1 genannten Gebietsausweisungen bzw. Nutzungen ergibt sich aus den Festlegungen in den Bebauungsplänen. Sonstige in Bebauungsplänen festgesetzte Flächen sowie Flächen, für die keine Festsetzungen bestehen, sind nach Abschnitt 6.6 der TA Lärm entsprechend ihrer Schutzbedürftigkeit zu beurteilen. Nach Urteilen verschiedener Oberverwaltungsgerichte [23] kann ein im Außenbereich Wohnender sich bezüglich etwaiger Lärmbeeinträchtigungen allenfalls auf die Einhaltung der für Mischgebiete angegebenen Immissionsrichtwerte berufen. 3.3 Infraschall
+
+Messtechnisch kann nachgewiesen werden, dass Windenergieanlagen Infraschall verursachen. Die festgestellten Infraschallpegel liegen aber weit unterhalb der Wahrnehmungsschwelle des Menschen und sind damit völlig harmlos. Während der Mensch einer üblichen Geräuschwahrnehmung sowohl eine Lautstärke als auch eine Tonhöhe zuordnen kann, ist eine differenzierte Tonhöhenwahrnehmung im Bereich unterhalb von etwa 20 Hz nicht mehr möglich. Schall in diesem Frequenzbereich wird als Infraschall bezeichnet. Umfangreiche Untersuchungen zur Wirkung von Infraschall führte das Bundesgesundheitsamt Anfang der 80er Jahre durch. Über 100 Versuchspersonen wurden an jeweils fünf aufeinander folgenden Tagen jeweils über 8 Stunden mit Infraschall beaufschlagt. Die Reaktionen der Personen wurden mit sozialwissenschaftlichen als auch mit biochemischen Methoden erfasst. Die Hypothese des Bundesgesundheitsamtes war, dass Infraschall eine "unhörbare Gefahr" darstellt. Die Ergebnisse der Untersuchungen wurden 1982 [24] veröffentlicht. In dem Vorwort dieser Studie fassen die Autoren ihre Forschungsergebnisse folgendermaßen zusammen: "... Jedoch erwies sich unhörbarer Infraschall als völlig harmlos. Für uns war dieses Ergebnis zunächst etwas enttäuschend. Aber bald konnten wir erkennen, dass unsere
+
+LUA-Materialien Bd. Nr. 63
+
+19
+
+Windenergieanlagen und Immissionsschutz
+
+gründlichen Untersuchungen einen Beitrag zur Verminderung der Furcht vor Infraschall in der öffentlichen Meinung leisten können." Die folgende Tabelle zeigt die Wahrnehmungsschwelle des Menschen für Infraschall. Sie basiert auf den Angaben der DIN 45680 [25, 26]. [Auf dieses Regelwerk nimmt die TA Lärm hinsichtlich der Beurteilung von tieffrequenten Geräuschen und von Infraschall Bezug. Die Beachtung, Erfassung und Beurteilung von Infraschalleinwirkungen ist somit für die staatliche Umweltverwaltung in NRW eine als "Sondermessverfahren" geübte Praxis.] Tabelle 2: Frequenz Hörschwelle Hörschwellenpegel im Infraschallbereich nach DIN 45680 8 Hz 103 dB 10 Hz 95 dB 12.5 Hz 87 dB 16 Hz 79 dB 20 Hz 71 dB
+
+Zu tieferen Frequenzen hin steigt die Hörschwelle an. So ist beispielsweise bei 3 Hz ein Schalldruckpegel von etwa 120 dB notwendig, damit Infraschall vom Menschen wahrgenommen wird. Die von modernen Windenergieanlagen (Luv-Läufern [s. Erl. 13]) erzeugten Infraschallanteile liegen im Immissionsbereich deutlich unterhalb der Wahrnehmungsschwelle des Menschen. Dieses wird durch verschiedene Veröffentlichungen sowie durch eigene Messungen bestätigt. Die folgende Tabelle zeigt die Ergebnisse von Infraschallmessungen des bayerischen Landesamtes für Umweltschutz [27] zusammen mit den vorgenannten Hörschwellenpegeln für Infraschall. Der Messpunkt lag in 250 m Abstand von einer 1 MW-Windenergieanlage im Windschatten auf dem Balkon eines Wohnhauses. Die dargestellten Infraschallpegel können nicht nur dem Betrieb der Windenergieanlage zugerechnet werden. Sie sind auch durch den Wind als typische Infraschallquelle bedingt. Eine Fremdgeräuschkorrektur der gemessenen Infraschallpegel, mit deren Hilfe der Infraschall, den die Windenergieanlage allein verursacht, bestimmt werden kann, wurde nicht durchgeführt. Nach Abzug der Fremdgeräuschkorrektur sind für die anlagenbedingten Infraschallanteile noch niedrigere Werte zu erwarten. Tabelle 3: Infraschallpegel, ermittelt in 250 m Abstand von einer 1 MWWindenergieanlage bei einer Windgeschwindigkeit von 15 m/s 8 Hz 72 dB 103 dB 10 Hz 71 dB 95 dB 12.5 Hz 69 dB 87 dB 16 Hz 68 dB 79 dB 20 Hz 65 dB 71 dB
+
+Frequenz Leq Hörschwelle
+
+Als Ergebnis der Messung stellt das bayerische Landesamt für Umweltschutz fest: "Die im Infraschallbereich liegenden Schallimmissionen liegen weit unterhalb der Wahrnehmungsschwelle des Menschen und führen daher zu keinen Belästigungen." [s. Erl. 14].
+
+20
+
+LUA-Materialien Bd. Nr. 63
+
+Windenergieanlagen und Immissionsschutz
+
+3.4
+
+Windbedingte Fremdgeräusche
+
+Bei hohen Windgeschwindigkeiten verursacht der Wind allein schon nennenswerte Schalldruckpegel. Sofern genaue Kenntnisse zu diesen windbedingten Fremdgeräuschen vorliegen, können sie in der Planung berücksichtigt werden. Die windbedingten Fremdgeräusche können auch dazu führen, dass messtechnische Prüfungen auf Einhaltung der Immissionsrichtwerte nur mit erheblichem Aufwand oder nur durch Emissionsmessungen in Verbindung mit Ausbreitungsrechnungen möglich sind. Windenergieanlagen benötigen zum Betrieb Wind. Dieser Wind führt erfahrungsgemäß zum Rauschen von Blättern; an Hauskanten können Turbulenzgeräusche entstehen. Diese windbedingten Geräusche treten unabhängig vom Betrieb möglicher Windenergieanlagen auf und sind bei der Beurteilung der Geräuschimmissionen von Windenergieanlagen nicht dem Betrieb der Anlagen zuzurechnen, sie werden als "Fremdgeräusche" bezeichnet. Nach Ziffer 3.2.1 Abs. 5 der TA Lärm darf eine Genehmigung wegen Überschreitung der Immissionsrichtwerte nicht versagt werden, wenn die Anlagengeräusche wegen ständig vorherrschender Fremdgeräusche keine zusätzlichen schädlichen Umwelteinwirkungen verursachen. Allgemeingültige Erkenntnisse über die Verdeckung der Geräusche von Windenergieanlagen durch windbedingte Fremdgeräuschpegel sind bislang nicht bekannt und auch nur in begrenztem Umfang durch zukünftige Untersuchungen zu erwarten, da die windbedingten Fremdgeräusche vom Bewuchs und vom Geländeprofil abhängen. Es ist zu beachten, dass aufgrund der Böigkeit des Windes die Pegelmaxima des Anlagengeräusches und der windbedingten Fremdgeräusche in der Regel nicht zeitgleich auftreten: Eine Windboe streicht beispielsweise über den Messort und führt dort zu hohen Fremdgeräuschanteilen; die Geräusche der Windenergieanlage sind in dieser Zeit nicht wahrnehmbar. Einige Augenblicke später erreicht die Windböe die Windenergieanlage und führt dort zu einer erhöhten Schallemission der Anlagengeräusche. Sind die windbedingten Fremdgeräusche zu diesem Zeitpunkt am Immissionsort schon wieder leiser geworden, so können die Anlagengeräusche nun wieder deutlich wahrnehmbar sein. Dieses Phänomen führte nach den Beobachtungen des Landesumweltamtes [4] dazu, dass die (nicht einzeltonoder impulshaltigen) Geräusche einer "pitch-"gesteuerten Windenergieanlage phasenweise auch in Situationen deutlich gehört werden konnten, in denen der Pegel des zeitlich gemittelten Anlagengeräusches um bis zu 10 dB unterhalb des zeitlich gemittelten Pegels des windbedingten Fremdgeräusches lag. Ein immissionsseitiger messtechnischer Nachweis des anlagenbedingten Schalldruckpegels ist in einer solchen Situation in der Regel nicht möglich. Gleichwohl waren die Geräusche der Windenergieanlage aufgrund des Höreindrucks zeitweise subjektiv zweifelsfrei wahrnehmbar. Erst wenn der Pegel der windbedingten Fremdgeräusche um mehr als 10 dB oberhalb des Pegels der Anlagengeräusche lag, waren die Geräusche der Windenergieanlage stets durch die windbedingten Fremdgeräusche vollständig maskiert und damit nicht mehr wahrnehmbar. Bei der geschilderten Untersuchung betrug der Pegel der Fremdgeräusche bei der in 10 m über Grund gemessenen Windgeschwindigkeit von 7 m/s etwa 45 dB(A). Aus der geschilderten Untersuchung leitete das Landesumweltamt NRW ab, dass die Geräusche einer "pitch"-gesteuerte Anlage, sofern sie bei der Windgeschwindigkeit von 7 m/s an dem Immissionsort den Richtwert von 35 dB(A) einhalten, bei höheren Windgeschwindigkeiten in der Regel durch die windbedingten Fremdgeräusche vollständig
+
+LUA-Materialien Bd. Nr. 63
+
+21
+
+Windenergieanlagen und Immissionsschutz
+
+maskiert werden, sofern sie nicht einzelton- oder impulshaltig sind. [Sofern ein Immissionsort besonders windgeschützt liegt, ist diese Regel nicht anwendbar.] Eine Untersuchung des bayerischen Landesumweltamtes [27] in der Nachbarschaft einer "stall"-gesteuerten Anlage, die nach den Vorgaben der Behörden einen Nacht-Richtwert von 45 dB(A) einhalten sollte, zeigte, dass eine Verdeckung der Geräusche dieser Anlage am Immissionsort auch bei hohen Windgeschwindigkeiten nicht auftrat. Selbst bei Windgeschwindigkeiten von 15,3 m/s traten die Anlagengeräusche klar aus den sonstigen Umgebungsgeräuschen hervor. Aussagen zur Verdeckung der Anlagengeräusche durch windbedingte Fremdgeräusche bedürfen somit einer sorgfältigen gutachterlichen Betrachtung unter Berücksichtigung der örtlichen Randbedingungen des Einzelfalls [s. Erl. 15].
+
+4.
+
+Betrachtungen zu Belästigungs-Wirkungen von Geräuschen
+
+In ruhigen ländlichen Gebieten gibt es eine Diskrepanz zwischen dem erwartungsorientierten Wunsch von Beschwerdeführern auf Erhaltung der naturnahen Ruhe und der üblicherweise verwaltungsrechtlich festgesetzten Schutzwürdigkeit des Gebietes. Zweck des Bundes-Immissionsschutzgesetzes ist es, Menschen, Tiere und Pflanzen vor schädlichen Umwelteinwirkungen zu schützen. Der Schutzanspruch ist - hinsichtlich der Geräusche genehmigungsbedürftiger und nicht-genehmigungsbedürftiger Anlagen - in der TA Lärm konkretisiert worden. Entsprechend Abschnitt 3.2.1 Absatz 1 der TA Lärm ist der Schutz vor schädlichen Umwelteinwirkungen (d.h. vor Gefahren, erheblichen Nachteilen und erheblichen Belästigungen) dann sichergestellt, wenn die Gesamtbelastung am Immissionsort den anzusetzenden Immissionsrichtwert nicht überschreitet. Im Einzelfall kann entsprechend Abschnitt 3.2.2 der TA Lärm eine ergänzende Prüfung als Sonderfall erforderlich sein, um eine wirkungskonforme Beurteilung zu erreichen. Aus der Lärmwirkungsforschung ist allgemein bekannt, dass die Belästigungsreaktion einer Person auf wahrgenommene Geräusche lediglich zu einem Drittel auf physikalisch beschreibbaren Aspekten des akustischen Stimulus beruht [30, 31]. Der A-bewertete, zeitlich gemittelte Schalldruckpegel sagt also nur zu 1/3 die Belästigung voraus, die es zu vermeiden oder zu begrenzen gilt. Ein weiteres Drittel kann aus dem Einfluss von sogenannten Moderatoren (z.B. individuelle Lärmempfindlichkeit, Kontrolle über die Schallquelle, Einstellung zur Quelle, Einschätzung der Vermeidbarkeit des Geräusches, Wohnumgebung) erklärt werden. Die Beurteilung von Geräuschimmissionen ist im Rahmen der TA Lärm nach umfangreicher Rechtsprechung jedoch nicht auf den individuell vom Lärm Betroffenen und dessen subjektives besonderes Empfinden abzustimmen. Vielmehr ist von dem Empfinden eines durchschnittlichen, repräsentativ verständigen Menschen auszugehen [32]. Das Empfinden dieses normalen "Durchschnittsmenschen" ist zu differenzieren hinsichtlich der Tageszeit, zu der die Geräusche einwirken. Daher kennt die TA Lärm Immissionsrichtwerte für den Tag und für die Nacht. Der erhöhte Schutz vor Geräuschen, die in den Ruhezeiten [s. Erl. 16] auftreten, wird durch einen Ruhezeitenzuschlag, der im Prinzip ein Malus ist, berücksichtigt.
+
+22
+
+LUA-Materialien Bd. Nr. 63
+
+Windenergieanlagen und Immissionsschutz
+
+Der Charakter der Umgebung, in dem die Geräusche einwirken, ist für die Bewertung eines Geräusches von Belang, da die Erwartung, die der Betroffene an sein (akustisches) Wohnumfeld richtet, hierbei von Bedeutung ist. Die TA Lärm berücksichtigt daher die Ausweisung eines Gebietes entsprechend den Festlegungen in Bebauungsplänen sowie sofern solche Festsetzungen nicht bestehen - die Schutzwürdigkeit der Gebiete. Auffällige Geräusche sind erfahrungsgemäß besonders lästig. Die TA Lärm berücksichtigt die erhöhte Lästigkeit von Ton- und Informationshaltigkeit sowie von Impulshaltigkeit durch entsprechende Zuschläge. Dieses Regelwerk der TA Lärm besteht in seinen wesentlichen Grundzügen seit 1968. Es wurde seit dieser Zeit durch ergänzende Erlasse an neuere wissenschaftliche Erkenntnisse angepasst und 1998 insgesamt novelliert. Es handelt sich somit im wesentlichen um ein langjährig erprobtes und bewährtes Beurteilungsverfahren. Das Landesumweltamt wurde in der Vergangenheit in konkreten Einzelfällen von den Staatlichen Umweltämtern zur Bearbeitung von Beschwerdefällen über Geräuschimmissionen von Windenergieanlagen hinzugezogen. Aus den hierbei gewonnenen Erfahrungen kristallisiert sich eine typische Situation heraus, die beschwerdeträchtig ist. Diese wird im folgenden beschrieben: Die Beschwerdeführer wohnen oftmals in alleinstehenden Gebäuden oder in kleinen Splittersiedlungen in einer landschaftlich reizvollen Umgebung mit Blick auf Wiesen und Felder. Die in den Ballungsgebieten üblicherweise allgegenwärtigen Geräuschquellen (starker Straßenverkehr sowie Industrie- und Gewerbelärm) sind nicht vorhanden. Nachts sind nahezu keine Geräusche außer denen der Natur zu hören. In manchen Fällen sind die Menschen aus industriellen Ballungsräumen eigens in diese Landschaft gezogen, um hier Ruhe zu finden. In diese Situation hinein werden nun von Dritten eine oder mehrere Windenergieanlagen errichtet. Die akustische Planung ist auf die Einhaltung des Nachtrichtwertes von 45 dB(A) ausgelegt, da nach geübter Rechtspraxis [23] die Menschen im Außenbereich höchstens den Schutzanspruch haben, der ansonsten für Mischgebiete gilt. Nach den Erkenntnissen der Wirkungsforschung ist davon auszugehen, dass nicht die Lautstärke der Windenergieanlagen die geschilderte Symptomatik ursächlich bewirkt hat. · Nach Sader, zitiert nach Guski [30], gibt es Situationen, in denen nicht der Schall selbst das eigentlich Störende ist, sondern das, was durch den Schall vom Hörer indiziert wird. Dieser psychologische Mechanismus gilt auch für andere Wahrnehmungen, z.B. Gerüche. Möglicherweise erinnert der Schall der Windenergieanlagen die Beschwerdeführer an die als rücksichtslos empfundene Veränderung ihres akustischen Umfeldes. Durch das abwechselnde Auftreten von windstillen und windreichen Nächten wird diese akustische Veränderung immer wieder erfahrbar. · Es gibt in der internationalen Lärmwirkungsforschung [33, 34, 35] Erkenntnisse, dass in besonders ruhigen ländlichen Gebieten eine größere Erwartungshaltung nach "Ruhe und Stille" gegeben ist als in stärker geräuschbelasteten Gebieten und daher pegelmäßig gleiche Einwirkungen in besonders ruhigen Gebieten stärker stören als in anderen Gebieten. Wie gesagt, handelt es sich bei den Erklärungen der subjektiv empfundenen Belästigungen in der oben geschilderten Quellen-Empfänger-Konfiguration um Hypothesen. Auf breiter Basis erhobene, belastbare wissenschaftliche Erkenntnisse zur Belästigungswirkung der Geräusche von Windenergieanlagen - im Gegensatz zur Belästigung durch den Schattenwurf [38] -
+
+LUA-Materialien Bd. Nr. 63
+
+23
+
+Windenergieanlagen und Immissionsschutz
+
+existieren nach dem Kenntnisstand des Landesumweltamtes, der durch eine aktuelle telefonische Befragung von universitären Lärmwirkungsforschern bestätigt wurde, nicht. Betont sei, dass die geschilderte Diskrepanz zwischen dem subjektiven Erleben von Betroffenen und dem in der TA Lärm festgelegten Schutzanspruch für den Außenbereich nicht spezifisch für Windenergieanlagen ist, sondern allgemein bei geräuschemittierenden Anlagen auftreten kann.
+
+5.
+5.1
+
+Optische Immissionen von Windenergieanlagen
+Grundsätzliches zu optischen Immissionen von Windenergieanlagen
+
+Im Folgenden wird aufgezeigt, mit welchen optischen Effekten im Umfeld von Windenergieanlagen gerechnet werden muss. Der Stand zur Prognose und zur Beurteilung optischer Immissionen wird dargelegt. Auf die bestehenden Möglichkeiten zur Vermeidung oder Minderung schädlicher Umwelteinwirkungen wird eingegangen. Windenergieanlagen können durch den bewegten Anlagenrotor außer unerwünschte Geräusche auch störende optische Beeinträchtigungen in der Umgebung verursachen [36, 37]. Diese Erfahrung, die seit ca. 1992 in verschiedenen Gerichtsurteilen Niederschlag gefunden hat, wird durch neuere wissenschaftliche Untersuchungen belegt [38, 39]. Hierbei wird i.d.R. auf den Menschen abgestellt; Gegenstand des Interesses bzw. Streitgegenstand können jedoch im Einzelfall auch mögliche negative Wirkungen auf die Tierhaltung sein. Betreffende optische Effekte können in einem weitreichenden Umfeld um betreffende Anlagen wirksam werden, welches mit steigender Anlagengröße zunimmt. Die Vermeidung oder Minderung der Einwirkung derartiger Effekte in schutzbedürftigen Bereichen wie Wohnungen liegt außer dem Schutz Betroffener auch im Interesse von Anlagenakzeptanz und Konfliktvermeidung. Alle betreffenden optischen Effekte gehen vom betriebsbedingt bewegten Rotor einer Windenergieanlage aus. Hierbei wird unterschieden zwischen dem vom Anlagenrotor verursachten periodischen Schattenwurf sowie Lichtreflexen des bewegten Rotors einer Windenergieanlage ("Disco-Effekt"), welche beide nur bei ausreichendem Sonnenschein wirksam werden können. Diese Effekte sind rechtlich als Immissionen i.S. von § 3 (2) des Bundes-Immissionsschutzgesetzes anzusehen. Nicht als Immission gilt jedoch die Wirkung einer WEA an sich - unabhängig vom Sonnenschein - aufgrund der Eigenart der Rotorbewegung, die ein Anziehen der Aufmerksamkeit bewirken kann. Zur Wirkung des letzteren optischen Effekts liegen nach Kenntnis des Landesumweltamtes bislang keine wissenschaftlichen Erkenntnisse vor. Im Rahmen der an der Universität Kiel in 1999 durchgeführten Untersuchung im Umfeld von Windenergieanlagen [38] gaben 61,9 % der befragten Personen eine empfundene Belästigung durch Geräusche, 43,5 % durch periodischen Schatten, jedoch 65,0 % durch den "visuellen Eindruck" der Windenergieanlagen an. Für die aufgeführten optischen Immissionen durch Schattenwurf und Lichtreflexe bestehen bislang keine rechtsverbindlichen Beurteilungsvorschriften zur Bestimmung der immissionsschutzrechtlichen Erheblichkeitsgrenzen. In verschiedenen Bundesländern sind jedoch in Initiative der Umweltbehörden in den vergangenen Jahren Beurteilungskriterien entwickelt worden, die derzeit ihren Niederschlag in einheitlichen vom Arbeitskreis
+
+24
+
+LUA-Materialien Bd. Nr. 63
+
+Windenergieanlagen und Immissionsschutz
+
+Lichtimmissionen des Länderausschuss für Immissionsschutz erarbeiteten Beurteilungshinweisen finden und eine (bundesweit) einheitliche Beurteilungspraxis in Planungs-, Genehmigungs- und Gerichtsverfahren ermöglichen können [40].
+
+5.2
+
+Prognose und Beurteilung optischer Immissionen bei Windenergieanlagen
+
+5.2.1 Lichtreflexionen - Disco-Effekt Bei Sonnenschein können an einer WEA, ähnlich wie auch bei anderen spiegelnden Flächen z.B. gläsernen Fensterscheiben, störende Reflexionen des Sonnenlichts auftreten. Von derartigen Lichtimmissionen kann eine relevante Belästigungswirkung bei entsprechender Lichtintensität und Einwirkungsdauer an einem Bezugs-/Immissionsort ausgehen. Reflexionen am betriebsbedingt bewegten Rotor von WEAn können darüber hinaus aufgrund der periodisch mit 3-facher Umdrehungsfrequenz (dreiblättriger Rotor) modulierten Lichtreflexe die Aufmerksamkeit anziehen. Die Reflexionen sind von einem Bezugs/Immissionsort wahrnehmbar, soweit die Strahlenein- und - ausfallwinkel von und zur jeweiligen WEA für einen reflektierenden Bestandteil des Rotors übereinstimmen. Quantitative Abschätzungen zur Auftrittswahrscheinlichkeit von Lichtreflexionen finden sich in einem Fachbeitrag von Behr [41]. Dort wurde unter vereinfachter Betrachtung einer exemplarischen Beurteilungssituation (Annahme ebener Rotorblätter ohne Berücksichtigung der Blattform, keine Berücksichtigung der Kurzzeitvariabilität der Windrichtung) ermittelt, dass Lichtreflexionen aus astronomischen Gegebenheiten in einem Großteil des Jahres bei entsprechender Sonnenhöhe über dem Horizont jeweils einmal in den Vor- und den Nachmittagsstunden eines Tages an einem Immissionspunkt auftreten können. Aufgrund der Bewegung der Sonne am Himmel ist dies jeweils nur kurzzeitig (minutenlang) zu erwarten und tritt aufgrund der für die konkrete Wahrnehmbarkeit relevanten meteorologischen Einflüsse der Bewölkung und der die Rotorstellung bestimmenden Windrichtung nur in ca. 10% aller astronomisch möglichen Fälle auf. Zur Bestimmung entsprechender Einwirkungszeiten und Auftrittswahrscheinlichkeiten muss ggf. auf den konkreten Einzelfall abgestellt werden, der u.a. die z.T. komplexen Rotorgeometrien berücksichtigt. Eine diesbezügliche standardisierte und verlässliche Prognosemöglichkeit für Lichtreflexionen besteht nach Kenntnis des Landesumweltamtes derzeit nicht. Die Intensität der Lichtreflexe einer Windenergieanlage hängt maßgeblich von den Reflexionseigenschaften der Rotoroberfläche der Anlage ab. Dies betrifft den Glanzgrad der Rotoroberfläche und das Reflexionsvermögen der gewählten Farbe. Entsprechend den Empfehlungen der Umweltbehörden sollen bei der Rotorbeschichtung mittelreflektierende Farben und matte Glanzgrade verwendet werden [40]. Hierdurch wird die Intensität möglicher Lichtreflexe minimiert. Bei Berücksichtigung genannter Empfehlungen wird nach heutiger Kenntnis und Einschätzung davon ausgegangen, dass durch Lichtreflexionen bei Windenergieanlagen i.a. keine schädlichen Umwelteinwirkungen i.S. des BImSchG ausgehen. Diesbezügliche Beschwerde- oder Konfliktsituationen sind dem Landesumweltamt in jüngerer Vergangenheit nicht bekannt geworden.
+
+LUA-Materialien Bd. Nr. 63
+
+25
+
+Windenergieanlagen und Immissionsschutz
+
+5.2.2 Periodischer Schattenwurf Schattenwurf tritt bei ausreichendem Sonnenschein hinter dem Baukörper einer Windenergieanlage grundsätzlich ebenso wie bei jedem anderen angestrahlten Körper auf. Von daher geht von der Schattenwirkung des Mastes keine besondere Wirkung aus. Eine besondere Störwirkung kann jedoch vom Schattenwurf ausgehen, der vom betriebsbedingt periodisch bewegten Rotor hinter einer Windenergieanlage verursacht wird. Die vom periodischen Schattenwurf von Windenergieanlagen u.U. ausgehende erhebliche Belästigungswirkung wurde im Rahmen von Gerichtsbeschlüssen und -urteilen der vergangenen Jahre wiederholt bestätigt und deckt sich grundsätzlich mit Erkenntnissen der Umweltbehörden. Wissenschaftlich konnte die Stressorwirkung des periodischen Schattenwurfs durch Untersuchungen des Instituts für Psychologie an der ChristianAlbrechts-Universität zu Kiel in 1999/2000 [38, 39] belegt werden. Im Hinblick auf den Schutz betreffender Anwohner in der Umgebung von Windenergieanlagen, aber auch im Interesse einer einheitlichen Verfahrensweise bei der immissionsschutzseitigen Bewertung des periodischen Schattenwurfs von Windenergieanlagen, ergibt sich der Bedarf zur Prognose und zur Beurteilung auftretenden Schattenwurfes einschließlich Festlegungen der immissionsschutzrechtlichen Erheblichkeitsgrenzen. Die Prognose des Schattenwurfs im Umfeld von Windenergieanlagen stützt sich auf standortbezogene Berechnungen des veränderlichen astronomischen Sonnenstandes, deren Randbedingungen während der vergangenen Jahre zunehmend vereinheitlicht wurden. Entsprechend Empfehlungen des Landesumweltamtes Nordrhein-Westfalen wird hierbei auf standardisierte Berechnungsmodelle zurückgegriffen [42, 43]. Ein diesbezügliches Berechnungsbeispiel für eine einzelne Windenergieanlage und 12 Immissionsorte der Umgebung findet sich in Anlage 1. Aufgrund des hiesigen scheinbaren Sonnenlaufes sind insbesondere in westlicher und östlicher Richtung zu einer Windenergieanlage grundsätzlich große Schattenreichweiten möglich. Untersuchungen an der Fachhochschule Kiel [44] haben Erkenntnisse erbracht, die nunmehr genauere Aussagen zur Reichweitebeurteilung ermöglichen. Hieraus lässt sich für konkrete Anlagen ein Beschattungsbereich angeben, außerhalb dessen das Auftreten von periodischem Schattenwurf entsprechend dem heutigen Kenntnisstand sicher ausgeschlossen werden kann, vgl. Anlage 2. Für die Erheblichkeit der Belästigungswirkung durch Schattenwurf wird dessen zeitliche Einwirkdauer an betreffenden Immissionsorten als maßgebend angesehen. Schutzziel ist daher die sichere Begrenzung der Einwirkdauer derartiger Immissionen in schutzwürdigen Wohn- und Arbeitsbereichen. Entsprechend den vom Arbeitskreis Lichtimmissionen des Länderausschuss für Immissionsschutz erarbeiteten Hinweisen zur Ermittlung und Burteilung der optischen Immissionen von Windenergienanlagen, insbesondere des Schattenwurfs, gilt eine Belästigung durch zu erwartenden Schattenwurf dann als zumutbar, wenn die maximal mögliche Einwirkdauer am jeweiligen Immissionsort, ggf. unter kumulativer Berücksichtigung aller Beiträge einwirkender Windenergieanlagen, nicht mehr als 30 Stunden/Jahr, entsprechend einer Begrenzung der "realen", d.h. im langjährigen Mittel für hiesige Standorte zu erwartenden Einwirkungsdauer auf maximal 8 Stunden/Jahr, und darüber hinaus nicht mehr als 30 Minuten/Tag beträgt. Soweit eine Überschreitung genannter Immissionswerte vorliegt, muss von einer erheblichen Belästigungswirkung ausgegangen werden. In diesem Fall soll eine Immissionsminderung durchgeführt werden, die die überprüfbare Einhaltung der Immissionsrichtwerte zum Ziel hat.
+
+26
+
+LUA-Materialien Bd. Nr. 63
+
+Windenergieanlagen und Immissionsschutz
+
+5.3
+
+Möglichkeiten zur Vermeidung und Minderung schädlicher Umwelteinwirkungen durch optische Immissionen - Fazit
+
+Wie oben dargelegt, stellen Lichtreflexe bei Windenergieanlagen (Disco-Effekt) nach Kenntnis und Einschätzung des Landesumweltamtes entsprechend dem Stand der Technik (Berücksichtigung o.g. Empfehlungen zur Oberflächenbeschaffenheit) derzeit kein besonderes Problempotential (mehr) dar. Immissionsprobleme durch periodischen Schattenwurf können im Rahmen der Planung vollständig vermieden werden, wenn dies bei der konkreten Standortwahl von vorn herein mit berücksichtigt wird. Anlagenstandorte sollen nach Möglichkeit so gewählt werden, dass alle schützenswerte Immissionsbereiche außerhalb der konkreten Beschattungsbereiche der einzelnen Windenergieanlagen liegen. Hierbei sind ggf. Höhendifferenzen im Gelände, z.B. bei Aufstellung einer Windenergieanlage auf einem Hügel, zu berücksichtigen, die die Schattenreichweite beeinflussen können. Für schützenswerte Immissionsbereiche, die innerhalb des Beschattungsbereiches von Windenergieanlagen liegen und für die eine nicht vernachlässigbare Beschattungsdauer entsprechend den obigen Ausführungen zu Prognose und Beurteilung besteht, soll und kann zur Sicherstellung des Immissionsschutzes eine zeitweilige Abschaltung beitragender Anlagen für Zeiten real auftretenden Schattenwurfes in den betreffenden Immissionsbereichen erfolgen. Hierbei ist ggf. der räumlichen Ausdehnung am Immissionsort, z.B. Fenster- oder Balkonflächen, bei der Festlegung der genauen Abschaltzeiten Rechnung zu tragen. Im Falle mehrerer beitragender Windenergieanlagen ist eine Aufteilung der Immissionsbeiträge für den jeweiligen Immissionsort möglich. Auch diese ggf. durchzuführende Abschaltmaßnahme führt nach Einschätzung des Landesumweltamtes i.a. nur zu einer begrenzten Beeinträchtigung des Anlagenbetriebs unter zuverlässiger Gewährleistung des Immissionsschutzes potentiell betroffener Anwohner. Keine weitere Berücksichtigung können im Rahmen der Ausführungen zu optischen Effekten weitere Auswirkungen von Windenergieanlagen an sich entsprechend obigen Erläuterungen finden. Dies betrifft den visuellen Eindruck (Erscheinungsbild) der Anlagen sowie die Eigenart der Rotorbewegung. Hierzu sind dem Landesumweltamt keine weiter gehenden Aussagen möglich, da diese rechtlich keine Immissionen i.S. des BundesImmissionsschutzgesetzes darstellen und darüber hinaus keine weiter gehenden belastbaren Informationen vorliegen.
+
+LUA-Materialien Bd. Nr. 63
+
+27
+
+Windenergieanlagen und Immissionsschutz
+
+6.
+[1] [2] [3] [4] [5] [6]
+
+Literatur
+E. Hau: "Windkraftanlagen - Grundlagen, Technik, Einsatz, Wirtschaftlichkeit", Springer-Verlag, Berlin (1996) Nach einer Anlage zum Protokolls Windenergieanlagen" vom 28.05.1997 des Arbeitskreises "Geräusche von
+
+Nach einer Darstellung aus einem Emissionsmessbericht der Ing.-Büro für Akustik Busch GmbH vom 14.06.96 D. Piorr: "Schallemissionen und -immissionen von Windkraftanlagen", Fortschritte der Akustik - DAGA 91, Bad Honnef: DPG-GmbH (1991) DIN EN 61400-11 "Windenergieanlagen, Teil 11: Schallmessverfahren (IEC 61400-11:1998)", Februar 2000 Technische Richtlinien für Windenergieanlagen, Teil 1: "Bestimmung der Emissionswerte", Revision 13, Stand: 1.1.2000, Hg.: Fördergesellschaft für Windenergie e.V., Stresemannplatz 4, 24103 Kiel Niederschrift über die 99. Sitzung des Länderausschusses für Immissionsschutz vom 10. bis 12. Mai 2000 in Lübbenau/Spreewald, TOP 1.4 Grundsätze für Planung und Genehmigung von Windenergieanlagen (Windenergie-Erlass - WEAErl.-) vom 3.5.2002, MBl. NRW (in Vorbereitung) DIN 45681 "Bestimmung der Tonhaltigkeit von Geräuschen und Ermittlung eines Tonzuschlages für die Beurteilung von Geräuschimmissionen", Entwurf Januar 1992 Sechste Allgemeine Verwaltungsvorschrift zum Bundes-Immissionsschutzgesetz (Technische Anleitung zum Schutz gegen Lärm - TA Lärm) vom 26. August 1998, GMBl 1998, S. 503 – 515 E. Knothe: "Technischer Bericht zur Untersuchung der LKW- und Ladegeräusche auf Betriebsgeländen von Frachtzentren, Auslieferungslagern und Speditionen", Umweltplanung, Arbeits- und Umweltschutz, Heft 192 der Schriftenreihe der Hessischen Landesanstalt für Umwelt (1995) S. Wagner, R. Bareiß, G. Guidati: "Wind Turbine Noise", Springer-Verlag, 1996 K. Betke, J. Gabriel, H. Klug, K. Schumacher, G. Wittwer: Abschlussbericht des BMBF-Forschungsvorhabens "Geräuschminderung durch Modifikation der Blattspitze, der Blatthinterkante und des Anstellwinkels von Windkraftanlagen", 1997 Gesetz zur Umsetzung der UVP-Änderungsrichtlinie, der IVU-Richtlinie und weiterer EG-Richtlinien zum Umweltschutz, BGBl. I, Nr. 40 vom 2.8.2001 DIN ISO 9613-2 "Dämpfung des Schalls bei der Ausbreitung im Freien, Teil 2: Allgemeines Berechnungsverfahren (ISO 9613-2: 1996), Entwurf September 1997
+
+[7] [8] [9] [10]
+
+[11]
+
+[12] [13]
+
+[14] [15]
+
+28
+
+LUA-Materialien Bd. Nr. 63
+
+Windenergieanlagen und Immissionsschutz
+
+[16] [17]
+
+D. Piorr: "Weniger Lärm durch Auswahl eines ‚geeigneten' Prognosemodells?"; Jahresbericht des Landesumweltamtes NRW 2000, S. 163-171 H. Klug, V. Mellert, R. Radek: "Zuverlässigkeit von Geräuschimmissionsprognosen bei gewerblichen Anlagen", Forschungsbericht Nr. 89-105 02 702 des Umweltbundesamtes, 1989 Expert group study on recommended practices for wind turbine testing and evaluation. 4th Acoustics. Measurement of Noise Emission from Wind Turbines. 2nd edition 1988. Published by the International Energy Agency N.J.C.M. van der Borg, P.W. Vink: "Measurements of the propagation of wind turbine noise", Netherlands Energy Research Foundation, ECN DE Memo-97-0456, Petten 1997 D. Piorr: "Zum Nachweis der Einhaltung der Immissionswerte mittels Prognose", Protokoll des Erfahrungsaustausches mit den Mess- und Prüfdiensten "Geräusche und Erschütterungen" im Landesumweltamt 2001, S. 37-41 K. Künzel, D. Schulz, R. Schönfelder: "Untersuchungen zur Schallimmission durch Windenergieanlagen im Erzgebirgsvorland", Fortschritte der Akustik - DAGA 97 (1997) R. Schönfelder: "Schallabstrahlung von Windkraftanlagen in orographisch komplexem Gelände", Auszug aus der Diplomarbeit "Messung des Schallimmissionsverhaltens von Windkraftanlagen in orographisch komplexem Gelände", Hochschule Mittweida (FH), Dezember 1998 Lärmimmissionen und Schattenwurf durch Windenergieanlagen, UPR 2/2000 S. 73 H. Ising, B. Markert, F. Shenoda, C. Schwarze: "Infraschallwirkungen auf den Menschen", VDI-Verlag GmbH; (1982) DIN 45680 "Messung und Bewertung tieffrequenter Geräuschimmissionen in der Nachbarschaft", März 1997 Beiblatt 1 zu DIN 45680 "Messung und Bewertung tieffrequenter Geräuschimmissionen in der Nachbarschaft - Hinweise zur Beurteilung bei gewerblichen Anlagen", März 1997 C. Hammerl, J. Fichtner: "Langzeit-Geräuschimmissionsmessung an der 1 MWWindenergieanlage Norde N54 in Wiggensbach bei Kempten (Bayern)", Bayerisches Landesamt für Umweltschutz, Januar 2000 K. Wysocki, K. Schultz, P. Wieg: "Experimentelle Untersuchungen zum Einfluss von Infraschalldruck auf den Menschen", Z. ges. Hyg. 26 (1980), S. 436-440 M. Schust: "Biologische Wirkung von vorwiegend luftgeleitetem Infraschall", Schriftenreihe der Bundesanstalt für Arbeitsschutz und Arbeitsmedizin, Dortmund/Berlin 1997
+
+[18]
+
+[19]
+
+[20]
+
+[21]
+
+[22]
+
+[23] [24] [25] [26]
+
+[27]
+
+[28] [29]
+
+LUA-Materialien Bd. Nr. 63
+
+29
+
+Windenergieanlagen und Immissionsschutz
+
+[30] [31] [32] [33]
+
+R. Guski: "Der Begriff 'Lärm' in der Lärmwirkungsforschung", KdL 1976, S. 43-52 W. Pompetzki: "Lärm und Gesundheit", Jahresbericht des Landesumweltamt NRW 2000, S. 37-51 G. Jansen, W. Klosterkötter: "Lärm und Lärmwirkungen - Ein Beitrag zur Klärung von Begriffen", Hg.: Bundesministerium des Innern (Februar 1980) P. Lercher, G. Brauchle: "Die wechselseitige Beeinflussung von externer akustischer und 'natürlicher' ' Umgebung in einem alpinen Tal: Umweltpsychologische und gesundheitliche Perspektiven", Fortschritte der Akustik - DAGA 2000, S. 118-119 ISO/DIS 1996-1 "Acoustics - Description, measurement and assessment of environmental noise - Part 1: Basic quantities and assessment procedures", Arbeitsentwurf, Stand: Februar 2001 A. Lorenz : "Klangalltag - Alltagsklang", Diss. Universität Zürich (2000) T. Osten, T. Pahlke, Schattenwurf von Windenergieanlagen: Wird die Geräuschabstrahlung in den Schatten gestellt ?, DEWI Magazin Nr. 13, August 1998, S. 6-11 R. Kindel, Hinweise zur Beurteilung von Licht-/Schatteneinwirkungen bei Windenergieanlagen, LUA-Jahresbericht ´98, Essen 1999, S. 140ff J. Pohl, F. Faul, R. Mausfeld, Belästigung durch periodischen Schattenwurf von Windenergieanlagen, Feldstudie, Institut für Psychologie der Christian-AlbrechtsUniversität zu Kiel, 31.07.1999 J. Pohl, F. Faul, R. Mausfeld, Belästigung durch periodischen Schattenwurf von Windenergieanlagen, Laborpilotstudie, Institut für Psychologie der ChristianAlbrechts-Universität, Kiel, 15.05.2000 Hinweise zur Ermittlung und Beurteilung der optischen Immissionen von Windenergieanlagen (Schattenwurf-Hinweise), Länderausschuss für Immissionsschutz, Arbeitskreis Lichtimmissionen, in Vorbereitung H. D. Behr, Licht und Schatten, Windkraft-Journal 3/92, Verlag Natürliche Energie, Grevensberg/Brekendorf DIN 5034-2: Tageslicht in Innenräumen - Grundlagen, Beuth-Verlag Berlin 1985 VDI3789 Blatt2 -10 /94: Umweltmeteorologie - Wechselwirkungen zwischen Atmosphäre und Oberflächen, Berechnung der kurz- und langwelligen Strahlung, VDI Düsseldorf 1994 H.D. Freund, Die Reichweite des Schattenwurfs von Windkraftanlagen, Umweltforschungsdatenbank UFORDAT (Juni 1999)
+
+[34]
+
+[35] [36] [37] [38]
+
+[39]
+
+[40]
+
+[41] [42] [43]
+
+[44]
+
+30
+
+LUA-Materialien Bd. Nr. 63
+
+Windenergieanlagen und Immissionsschutz
+
+Anhang 1
+Erläuterung von Fachausdrücken und ergänzende Hinweise [Erl. 1]: Die Geräuschemission kennzeichnet die akustische Quellstärke. Als Kenngröße für die Schallemission wird international der Schallleistungspegel LWA benutzt. Dieser ist ein Maß für die als hörbare Luftschwingungen abgestrahlte Leistung der Schallquelle. Aus dem Schallleistungspegel kann der in bestimmten Abständen von der Quelle herrschende Schalldruckpegel (Schallimmission) mit den üblichen Prognosemodellen abgeschätzt werden. [Erl. 2]: Als Beispiele für einzeltonhaltige Geräusche können brummende, heulende, quietschende, pfeifende und kreischende Geräusche genannt werden. [Erl. 3]: Als Beispiele für impulshaltige Geräusche können die Arbeitsgeräusche von Hämmern und Schlagrammen sowie Knalle genannt werden. [Erl. 4]: Ein Pegelunterschied von 5 dB ist deutlich wahrnehmbar. Der Pegelunterschied von 5 dB bedeutet, dass eine "laute" Anlage etwa die 3-fache Schallemission aufweist wie eine "leise" Anlage. Ein Pegelunterschied von 5 dB besteht beispielsweise auch zwischen den Immissionsrichtwerten, die nach der TA Lärm einerseits für ein Mischgebiet und andererseits für ein allgemeines Wohngebiet anzusetzen sind. [Erl. 5]: Um ein Gefühl für eine Geräuschemission, deren Schallleistungspegel 103 dB(A) beträgt, zu bekommen, sei zum Vergleich erwähnt, dass ein rangierender LKW durch einen Schallleistungspegel von 99 dB(A) gekennzeichnet werden kann [11]. Die Geräuschemission von 103 dB(A) entspricht somit näherungsweise derjenigen von zwei rangierenden Lastkraftwagen. [Erl. 6]: Grundsätzlich weist die Windgeschwindigkeit eine Höhenabhängigkeit auf. Diese Höhenabhängigkeit wird sowohl von der Oberflächenbeschaffenheit des Erdbodens (einschließlich seines Bewuchses und seiner Bebauung) als auch von meteorologischen Randbedingungen bestimmt. Als Kenngröße für den Betriebszustand einer Windenergieanlage wird zumeist aus der erzeugten elektrischen Leistung unter Zugrundelegen der Leistungskurve, in welcher der Zusammenhang zwischen der Windgeschwindigkeit in Nabenhöhe und der erzeugten Leistung für die untersuchte Windenergieanlage dargestellt ist, die in Nabenhöhe herrschende Windgeschwindigkeit bestimmt. Diese Windgeschwindigkeit wird unter Ansatz eines normativen Windprofils auf diejenige Windgeschwindigkeit umgerechnet, die (fiktiv) in 10 m oberhalb des Erdbodens herrscht. Die so berechnete Windgeschwindigkeit wird als standardisierte Windgeschwindigkeit bezeichnet. [Erl. 7]: In kritischen Planungsfällen sollte bei "stall"-gesteuerten Anlagen in der Planung entsprechend Ziffer 3.2.1 Abschnitt 5 der TA Lärm der Nachweis geführt werden, dass bei Windgeschwindigkeiten > 10 m/s bzw. größer als die Windgeschwindigkeit, bei der 95% der elektrischen Nennleistung erzeugt wird, keine zusätzlichen schädlichen Umwelteinwirkungen zu befürchten sind, da dann die windbedingten Fremdgeräusche den Höreindruck bestimmten (vgl. auch die Ausführungen im Abschnitt "Windbedingte Fremdgeräusche").
+
+LUA-Materialien Bd. Nr. 63
+
+31
+
+Windenergieanlagen und Immissionsschutz
+
+[Erl. 8]: In der Vergangenheit hatte das Landesumweltamt NRW aufgrund von Anfragen Staatlicher Umweltämter mehrfach zu den "Untersuchungen zur Schallimmission durch Windenergieanlagen im Erzgebirgsvorland" [21, 22] Stellung zu nehmen, die von der Hochschule für Technik und Wirtschaft Mittweida (FH) durchgeführt wurden. Diese Untersuchungen - so argumentierten besorgte Bürger - würden aufzeigen, dass die üblichen Prognosemodelle in hügeligem Gelände nicht anwendbar sind. Wie das Landesumweltamt NRW anhand der in [22] dokumentierten Messwerte zeigen konnte, beruht diese Aussage auf einer Fehlinterpretation der Messdaten durch die FH Mittweida. [Erl. 9]: Der Beurteilungspegel wird aus dem Schalldruckpegel des zu beurteilenden Geräusches - gegebenenfalls unter Berücksichtigung von Zuschlägen für die erhöhte Lästigkeit aufgrund der Ton-, Informations- oder Impulshaltigkeit sowie der Tageszeit des Auftretens der Geräusche (Ruhezeitenzuschlag) - gebildet. Bei den Berechnungen, die den Bildern 4 bis 6 zugrunde liegen, wurden die Ton-, Informations-, Impuls- und Ruhezeitenzuschläge jeweils zu 0 dB gesetzt. Die dargestellten Beurteilungspegel entsprechen daher weitgehend den berechneten Schalldruckpegeln. Zur Beurteilung einer Geräuschimmission werden die Beurteilungspegel mit den in der TA Lärm vorgegebenen Immissionsrichtwerten verglichen. [Erl. 10]: Das Prognosemodell der DIN ISO 9613-2 berechnet zunächst den Schalldruckpegel, der am Immissionsort unter Mitwindbedingungen herrscht. Wenn eine Quelle unter Mitwindbedingungen einwirkt, sind für ihre Geräusche besonders gute Ausbreitungsbedingungen gegeben. Sie wird unter Mitwind mit einem höheren Schalldruckpegel einwirken als unter Gegenwind. Mit der Novellierung der TA Lärm 1998 wurde in die Geräuschbeurteilung eine meteorologische Korrektur eingeführt. Auf diese Weise werden die im Langzeitmittel auftretenden verschiedenen Windrichtungen und die dadurch verursachten unterschiedlichen akustischen Ausbreitungsbedingungen bei der Beurteilung berücksichtigt. Die meteorologische Korrektur bewirkt nach dem in der DIN ISO 9613-2 vorgegebenen Algorithmus erst bei Abständen, die größer als das 10-fache der Summe aus Schallquellenhöhe und Immissionspunkthöhe sind, eine Dämpfung im Vergleich zur Mitwindsituation. In den vorliegenden Beispielen hat die meteorologische Korrektur also erst bei Abständen von mehr als 850 m einen Einfluss auf die berechneten Beurteilungspegel. Bis zu diesem Abstand entsprechen die in den Bildern 4 bis 6 dargestellten Beurteilungspegel jeweils den zugehörigen Schalldruckpegeln. [Erl. 11]: Um den Schutz der Nachtruhe sicherzustellen, sind die Nacht-Richtwerte der TA Lärm in allen Gebieten (mit Ausnahme des Industriegebietes) um jeweils 15 dB niedriger als die Tag-Richtwerte. [Erl. 12]: Bei Konzentrationsflächen für Windenergieanlagen kann es sinnvoll sein, im Rahmen der planungsrechtlichen Möglichkeiten den einzelnen Anlagen Geräuschemissionskontingente zuzuweisen, damit nicht eine einzelne "laute" Anlage, die nahe des Immissionsortes errichtet wird, die Nutzungsmöglichkeiten der Konzentrationsfläche durch weitere Anlagen drastisch verringert. [Erl. 13]: Bei Luv-Läufern befinden sich die Rotorblätter auf der windzugewandten Seite der Windenergieanlage. Der Wind streicht bei diesem Anlagentyp zunächst am Rotorblatt vorbei und erreicht dann den Windmast. Luv-Läufer sind grundsätzlich leiser und erzeugen grundsätzlich weniger Infraschall als Lee-Läufer, bei denen die Rotorblätter sich durch das
+
+32
+
+LUA-Materialien Bd. Nr. 63
+
+Windenergieanlagen und Immissionsschutz
+
+vom Mast gestörte Windfeld bewegen. Derzeit wird nach den Kenntnissen des Berichterstatters auf dem deutschen Markt kein Lee-Läufer mehr angeboten. [Erl. 14]: In Zusammenhang mit dem Stichwort "Wirkungen von Infraschall" sei kurz die Arbeit von K. Wysocki, K. Schultz und P. Wieg "Experimentelle Untersuchungen zum Einfluss von Infraschalldruck auf den Menschen" [28] erwähnt. Diese Arbeit wird in der Literaturübersicht von M. Schust "Biologische Wirkung von vorwiegend luftgeleitetem Infraschall" [29] dahingehend interpretiert, dass sie die einzige Arbeit ist, bei der die vom Hörschall bekannten unspezifischen Stressreaktionen schon bei Infraschallpegeln gefunden wurden, die unterhalb der Wahrnehmungsschwelle lagen. Schaut man sich die zitierte Arbeit jedoch im Original an, so ist erkennbar, dass die Untersuchung mit einem Geräusch durchgeführt wurde, dessen Infraschallanteile zwar unterhalb der Wahrnehmungsschwelle des Menschen lagen, das aber im Bereich der 31,5 HzOktave, also oberhalb des Infraschallbereichs, einen Schalldruckpegel von etwa 70 dB aufwies. Dieser tieffrequente Geräuschanteil war somit deutlich hörbar. Die Arbeit von Wysocki belegt somit nicht, dass Infraschall, auch wenn er nicht wahrgenommen wird, beim Menschen zu Belästigungen oder anderen unerwünschten Beeinträchtigungen führen kann. Allerdings zeigt die Untersuchung, dass ungewohnte Geräusche körperliche Reaktionen beim Menschen auslösen können. [Erl. 15]: Bei messtechnischen Untersuchungen im Bereich hoher Windgeschwindigkeiten ist insbesondere darauf zu achten, dass die - aufgrund der nur begrenzten Wirksamkeit der eingesetzten Windschirme - am Mikrofon entstehenden Turbulenzgeräusche die Messwerte nicht verfälschen. [Erl. 16]: In der TA Lärm ist werktags die Zeit von 6.00 Uhr bis 7.00 Uhr und von 20.00 Uhr bis 22.00 Uhr als Ruhezeit festgelegt. Bei der Bildung des Beurteilungspegels wird die erhöhte Störwirkung von Geräuschen, die in den Ruhezeiten auftreten, durch einen Zuschlag von 6 dB berücksichtigt. An Sonn- und Feiertagen umfasst die Ruhezeit zusätzlich zu der Werktagsregelung auch die Zeit von 13.00 Uhr bis 15.00 Uhr.
+
+LUA-Materialien Bd. Nr. 63
+
+33
+
+Windenergieanlagen und Immissionsschutz
+
+34
+
+LUA-Materialien Bd. Nr. 63
+
+Windenergieanlagen und Immissionsschutz
+
+Anhang 2
+
+Grundsätze für Planung und Genehmigung von Windenergieanlagen (Windenergie-Erlass - WEAErl.-)
+Gem. RdErl. d. Ministeriums für Städtebau und Wohnen, Kultur und Sport - II A 1 - 901.3/202 -, d. Ministeriums für Umwelt und Naturschutz, Landwirtschaft und Verbraucherschutz - VII 8 - 30.04.04 d. Ministeriums für Wirtschaft und Mittelstand, Energie und Verkehr - IV A 3-00-19 u. d. Staatskanzlei - IV.4 - 30.27.01 v. 3.5.2002 (- Auszug -) 5.3 Immissionsschutz
+
+Im Rahmen des Genehmigungsverfahrens zur Errichtung einer Windenergieanlage sind die immissionsschutzrechtlichen Vorschriften des Bundes und des Landes zu beachten. Bei Windenergieanlagen handelt es sich um Anlagen im Sinne von § 3 Abs. 5 BundesImmissionsschutzgesetz (BImSchG). Sie unterliegen den immissionsschutzrechtlichen Anforderungen nach § 5 BImSchG bei genehmigungsbedürftigen Anlagen nach dem BImSchG und nach § 22 BImSchG bei nach Baurecht zu genehmigenden Anlagen. Schädliche Umwelteinwirkungen lassen sich durch die Einhaltung erforderlicher Abstände,ggf. in Verbindung mit Standortverschiebungen oder Auflagen (Drehzahlbegrenzung, zeitweise Abschaltung) vermeiden (vgl. OVG NRW, Beschl. v. 13.07.1998 - 7 B 956/98 - NVwZ 1998, 980). Unter Verhältnismäßigkeitsgesichtspunkten sollte die am wenigsten belastende Einschränkung bevorzugt werden. Die Überwachung des Immissionsschutzes gem. § 52 BImSchG (Lärm und Schattenwurf) obliegt den Staatlichen Umweltämtern (vgl. Nr. 24 des Gem.RdErl. v. 01.09.2000 "Verwaltungsvorschriften zum Bundes-Immissionsschutzgesetz" - SMBl. NRW. 7129). Die Bauaufsichtbehördenhaben bei Anlagen, die nicht der Genehmigungspflicht nach dem BImSchG unterliegen, das örtlich zuständige Staatliche Umweltamt zu beteiligen, das später die Anlagen immissionsschutzrechtlich zu überwachen hat. 5.3.1 Lärm Im Rahmen der Prüfung, ob erhebliche Belästigungen durch Geräuschimmissionen zu befürchten sind, ist die Technische Anleitung zum Schutz gegen Lärm - TA - Lärm vom 26.08.1998 (GMBl. S. 503) zu berücksichtigen (vgl. § 18 Abs. 2 BauO NRW, Nr. 18.22 der Verwaltungsvorschrift zur Landesbauordnung - VV BauO NRW). Es ist dabei entsprechend der in der BauNVO zum Ausdruck kommenden Wertung bei Errichtung einer
+
+LUA-Materialien Bd. Nr. 63
+
+35
+
+Windenergieanlagen und Immissionsschutz
+
+Windenergieanlage von einer abgestuften Schutzwürdigkeit der verschiedenen Baugebiete auszugehen. Bauwillige sollten den Genehmigungsbehörden gesicherte Datenblätter vorlegen, in denen unabhängige Institute das Geräuschverhalten der Anlage in allen regulären Betriebszuständen wenigstens bis zum Erreichen der Nennleistung belegen. Die Anforderungen an die Emissionsdaten sind in der Technischen Richtlinie zur Bestimmung der Leistungskurve, der Schallemissionswerte und der elektrischen Eigenschaften von Windenergieanlagen, Teil 1 "Technische Richtlinie zur akustischen Vermessung von Windenergieanlagen" (Herausgeber: FGW, Fördergesellschaft für Windenergie e. V., Stresemannplatz 4, 24103 Kiel, unter Mitwirkung des Arbeitskreises "Geräusche von Windenergieanlagen" der Immissionsschutzbehörden und Messinstitute), beschrieben. Ergänzend zu den Vorgaben der Technischen Richtlinie FWG werden auch akustische Vermessungen durch Messstellen anerkannt, die ihre Kompetenz z.B. durch die Teilnahme an regelmäßigen Ringversuchen zur akustischen Vermessung von Windenergieanlagen nach Technischer Richtlinie nachweisen. Die Schallimmissionsprognose ist nach Nr. A. 2 der TA Lärm durchzuführen. Für die Immissionsprognose ist grundsätzlich der Schallleistungspegel zu verwenden, der gemäß Technischer Richtlinie bei einer Windgeschwindigkeit von 10 m/s in 10 m Höhe über Boden, aber bei nicht mehr als 95 % der Nennleistung ermittelt wurde. Bei üblichen Nabenhöhen von 40 m bis 70 m liegt die Windgeschwindigkeit in Nabenhöhe dann bei etwa 12 bis 14 m/s, so dass bei den meisten Anlagen die Leistungsabgabe im Bereich der Nennleistung liegt. Wenn infolge ständig vorherrschender Fremdgeräusche (z.B. windinduzierte Geräusche) keine zusätzlichen schädlichen Umwelteinwirkungen durch die zu beurteilende Anlage zu berücksichtigen sind, kann in Anlehnung an die Regelungen der Nr. 3.2.1 Abs. 5 der TA Lärm verfahren werden. Hinsichtlich der zu berücksichtigenden Tonzuschläge wird folgende Verfahrensweise festgelegt: 0 < KTN < 2 Tonzuschlag KT von 0 dB 2 < KTN < 4 Tonzuschlag KT von 3 dB KTN > 4 Tonzuschlag KT von 6 dB KTN = Tonhaltigkeit bei Emissionsmessungen im Nahbereich nach der Technischen Richtlinie FGW gemessen KT = in Abhängigkeit vom KTN ab einer Entfernung von 300 m für die Immissionsprognose anzusetzende Tonzuschläge Bei der Schallimmissionsprognose ist der Nachweis zu führen, dass unter Berücksichtigung der oberen Vertrauensgrenze aller Unsicherheiten (insbesondere der Emissionsdaten und der Ausbreitungsrechnung) der nach TA Lärm ermittelte Beurteilungspegel mit einer Wahrscheinlichkeit von 90% den für die Anlage anzusetzenden Immissionsrichtwert einhält. Auf die Möglichkeit nachträglicher Anordnungen im Einzelfall gemäß Nr. 5.2 der TA Lärm sollte im Genehmigungsbescheid hingewiesen werden. Nach Errichtung der Anlage ist durch eine Bescheinigung zu belegen, dass die errichtete Anlage in ihren wesentlichen Elementen und in ihrer Regelung mit derjenigen Anlage übereinstimmt, die der akustischen Planung zugrunde gelegt worden ist. Anstelle der
+
+36
+
+LUA-Materialien Bd. Nr. 63
+
+Windenergieanlagen und Immissionsschutz
+
+Bescheinigung kann auch durch eine akustische Abnahmemessung der Nachweis geführt werden, dass die Emissionsdaten der Anlage nicht höher sind als diejenigen, welche der Genehmigung zugrunde gelegt wurden. Sofern eine Anlage aus Gründen des Immissionsschutzes nachts z. B. durch eine Leistungsoder Drehzahlbegrenzung geräuschreduziert betrieben wird, muss die Anlage mit einer kontinuierlichen Aufzeichnung geeigneter Betriebsparameter (z. B. Windgeschwindigkeit, Leistung, Drehzahl) versehen sein, die rückwirkend für einen Zeitraum von wenigstens drei Monaten den Nachweis der tatsächlichen Betriebsweise der Anlage ermöglicht. 5.3.2 Schattenwurf Die sog. bewegten Schatten und die als Disco-Effekt bezeichneten periodischen Lichtreflexionen fallen als "ähnliche Umwelteinwirkungen" i.S. des § 3 Abs. 3 BImSchG unter den Begriff der Immissionen. Im Unterschied zu den üblichen Fällen des Schattenwurfs durch feststehende Gebäude verursacht bei Windenergieanlagen erst die Bewegung des Rotorblattes einen periodischen Wechsel von Licht und Schatten auf dem Nachbargrundstück. Der Schattenwurf ausgehend von Windenergieanlagen stellt somit eine qualitative Veränderung der natürlichen Lichtverhältnisse dar. Das Ausmaß der qualitativen Veränderung auf die betroffene Nachbarschaft ist i.S. des BImSchG - schädliche Umwelteinwirkungen - zu prüfen. Schattenwurf von geringer Dauer ist hinzunehmen bzw. kann vernachlässigt werden (vgl. OVG NRW, Beschl. v. 09.09.1998 - 7 B 1560/98). Belastende Auswirkungen auf Wohngrundstücke können z.B. durch eine Auflage zur Genehmigung, nach der die Anlage automatisch generell stillzulegen ist, wenn Schlagschatten unmittelbar oder durch Spiegelung mittelbar auf die Wohnhäuser und deren intensiv genutzte Außenbereiche einwirken würden, unterbunden werden (vgl. OVG NRW, Beschl. v. 03.09.1999 - 10 B 1283/99 - NVwZ 1999, 1360). Die Auflage muss deshalb sicherstellen, dass der Immissionsrichtwert für die astronomisch maximal mögliche Beschattungsdauer von 30 Stunden pro Kalenderjahr (das entspricht einer tatsächlichen Beschattungsdauer von 8 Stunden pro Jahr) nicht überschritten wird. Der Immissionsrichtwert für die tägliche Beschattungsdauer beträgt 30 Minuten. Die Einhaltung der Immissionsschutzanforderungen ist durch geeignete Maßnahmen zu gewährleisten. Durch eine Abschaltautomatik, die meteorologische Parameter (z. B. Intensität des Sonnenlichtes) berücksichtigt, ist die tatsächliche Beschattungsdauer auf 8 Stunden pro Jahr zu begrenzen. Es kann davon ausgegangen werden, dass bei einem Abstand einer Windenergieanlage von mehr als 1300 Metern keine Schattenprobleme auftreten. Bei Beschwerden hinsichtlich des Schattenwurfs durch bereits bestehende Anlagen ist zu überprüfen, ob die Immissionsrichtwerte eingehalten werden.
+
+LUA-Materialien Bd. Nr. 63
+
+37
+
+Windenergieanlagen und Immissionsschutz
+
+Anhang 3 Hinweise zur Ermittlung und Beurteilung der optischen Immissionen von Windenergieanlagen (WEA-Schattenwurf-Hinweise)
+Verabschiedet vom Länderausschuss für Immissionsschutz auf der Sitzung vom 6.-8.5.2002
+
+0.
+
+Vorbemerkung
+
+Im Rahmen der zur Verfügung stehenden erschöpflichen Ressourcen hat die alternative/regenerative Energieerzeugung einen hohen Stellenwert, hier insbesondere die Nutzung der Windenergie. Moderne Windenergieanlagen (WEA) haben kaum noch etwas mit den "Windmühlen" früherer Generationen gemeinsam, werfen aber durch ihre Anzahl, Größe und Erscheinungsbilder bisher nicht gekannte Probleme aufgrund der Belästigungen durch Lärm und optische Effekte auf. Hinsichtlich der Lärmeinwirkungen bestehen Regelungen, die insoweit betroffenen Nachbarn entsprechenden Schutz bieten. Für die Beurteilung der Einwirkung durch Lichtblitze und bewegten, periodischen Schattenwurf durch den Rotor einer WEA hat der Gesetzgeber bisher keine rechtsverbindlichen Vorschriften mit Grenz- oder Richtwerten erlassen oder in Aussicht gestellt. Wissenschaftliche Untersuchungen belegen die Erfahrung, dass optische Immissionen insbesondere in Form periodischen Schattenwurfs zu erheblichen Belästigungswirkungen (Stressor) führen können. Unter Berücksichtigung dieser Untersuchungen und Anhörungen von Gutachtern sollen diese Hinweise eine einheitliche und praxisnahe Ermittlung und Beurteilung der optischen Immissionen von Windenergieanlagen ermöglichen.
+
+1.
+1.1
+
+Allgemeines
+Anwendungsbereich und immissionsschutzrechtliche Grundsätze
+
+Die Hinweise finden Anwendung bei der Beurteilung der optischen Wirkungen von WEA auf den Menschen. Sie umfassen sowohl den durch den WEA-Rotor verursachten periodischen Schattenwurf als auch die Lichtreflexe ("Disco-Effekt") und sind Immissionen im Sinne des Bundes-Immissionsschutzgesetzes (BImSchG) [1]. Nicht als Immission gilt jedoch die sonstige Wirkung einer WEA aufgrund der Eigenart der Rotorbewegung, die ein zwanghaftes Anziehen der Aufmerksamkeit mit entsprechenden Irritationen bewirken kann. Die Hinweise enthalten Beurteilungsmaßstäbe zur Konkretisierung der Anforderungen aus § 5 Abs. 1 Nrn. 1 und 2 und § 22 Abs. 1 des Bundes-Immissionsschutzgesetzes (BImSchG). Als Gegenstand von Anordnungen kommen technische Maßnahmen sowie zeitliche Beschränkungen des Betriebes der WEA in Betracht. Eine Stilllegung kommt nur in Betracht,
+
+38
+
+LUA-Materialien Bd. Nr. 63
+
+Windenergieanlagen und Immissionsschutz
+
+wenn ihr Betrieb zu Gefahren für Leben, Gesundheit oder bedeutende Sachwerte führt. Für optische Immissionen bei WEA dürfte dieses in der Regel nicht gegeben sein.
+
+1.2
+
+Begriffsbestimmungen
+
+Lichtblitze (Disco-Effekte) sind periodische Reflexionen des Sonnenlichtes an den Rotorblättern. Sie sind abhängig vom Glanzgrad der Rotoroberfläche und vom Reflexionsvermögen der gewählten Farbe. Kernschatten ist vom Immissionsort aus betrachtet die vollständige Verdeckung der Sonne durch das Rotorblatt. Halbschatten ist vom Immissionsort aus betrachtet die nicht vollständige Verdeckung der Sonne durch das Rotorblatt. Periodischer Schattenwurf ist die wiederkehrende Verschattung des direkten Sonnenlichtes durch die Rotorblätter einer Windenergieanlage. Der Schattenwurf ist dabei abhängig von den Wetterbedingungen, der Windrichtung, dem Sonnenstand und den Betriebszeiten der Anlage. Vom menschlichen Auge werden Helligkeitsunterschiede größer als 2,5 % wahrgenommen [3]. Beschattungsbereich ist die Fläche, in der periodischer Schattenwurf auftritt. Astronomisch maximal mögliche Beschattungsdauer (worst case) ist die Zeit, bei der die Sonne theoretisch während der gesamten Zeit zwischen Sonnenauf- und Sonnenuntergang durchgehend bei wolkenlosem Himmel scheint, die Rotorfläche senkrecht zur Sonneneinstrahlung steht und die Windenergieanlage in Betrieb ist. Tatsächliche Beschattungsdauer ist die vor Ort real ermittelte und aufsummierte Einwirkzeit an periodischem Schattenwurf. Beträgt die Bestrahlungsstärke der direkten Sonneneinstrahlung auf der zur Einfallsrichtung normalen Ebene mehr als 120 W/m2, so ist Sonnenschein mit Schattenwurf anzunehmen. Die Umrechnung in die Beleuchtungsstärke ist im Anhang aufgeführt. Meteorologisch wahrscheinliche Beschattungsdauer ist die Zeit, für die der Schattenwurf unter Berücksichtigung der üblichen Witterungsbedingungen berechnet wird. Als Grundlage dienen die langfristigen Messreihen des Deutschen Wetterdienstes (DWD). Maßgebliche Immissionsorte sind: a) schutzwürdige Räume, die als Wohnräume, einschließlich Wohndielen Schlafräume, einschließlich Übernachtungsräume in Beherbergungsstätten und Bettenräume in Krankenhäusern und Sanatorien Unterrichtsräume in Schulen, Hochschulen und ähnlichen Einrichtungen Büroräume, Praxisräume, Arbeitsräume, Schulungsräume und ähnliche Arbeitsräume genutzt werden.
+
+LUA-Materialien Bd. Nr. 63
+
+39
+
+Windenergieanlagen und Immissionsschutz
+
+Direkt an Gebäuden beginnende Außenflächen (z. B. Terrassen und Balkone) sind schutzwürdigen Räumen tagsüber zwischen 6:00 - 22:00 Uhr gleichgestellt. b) unbebaute Flächen in einer Bezugshöhe von 2 m über Grund an dem am stärksten betroffenen Rand der Flächen, auf denen nach Bau- oder Planungsrecht Gebäude mit schutzwürdigen Räumen zulässig sind.
+
+1.3
+
+Grundlagen der Ermittlung und Bewertung von Immissionen durch periodischen Schattenwurf
+
+Ziel ist die sichere Vermeidung erheblicher Belästigungen, die durch periodische Lichteinwirkungen (optische Immissionen) durch WEA entstehen können. Die Erheblichkeit einer Belästigung hängt nicht nur von deren Intensität ab, sondern auch wesentlich von der Nutzung des Gebietes, auf das sie einwirkt, von der Art der Einwirkungen sowie der Zeitdauer der Einwirkungen. Bei der Beurteilung sind alle WEA im Umkreis einzubeziehen, die auf den jeweiligen Immissionspunkt einwirken. Einwirkungen durch periodischen Schattenwurf können dann sicher ausgeschlossen werden, wenn alle in Frage kommenden Immissionsorte in der Anlagenumgebung außerhalb des möglichen Beschattungsbereiches der jeweiligen WEA liegen. Der zu prüfende Bereich ergibt sich aus dem Abstand zur WEA, in welchem die Sonnenfläche gerade zu 20 % durch ein Rotorblatt verdeckt wird. Da die Blatttiefe nicht über den gesamten Flügel konstant ist, sondern zur Rotorblattspitze hin abnimmt, ist ersatzweise ein rechteckiges Rotorblatt mit einer mittleren Blatttiefe zu ermitteln und zugrunde zu legen: (Mittlere Blatttiefe = 1/2 (max. Blatttiefe + min. Blatttiefe bei 0,9 * Rotorradius)) [7]. Der Beschattungsbereich kann für eine einzelne Anlage konservativ der Abbildung im Anhang entnommen werden oder ansonsten im konkreten Einzelfall nachgewiesen werden. Darüber hinaus kann der Beschattungsbereich nach Freund [3] bestimmt werden. Soweit mehrere WEA zu Immissionsbeiträgen führen können, gelten die Ausführungen für jede Einzelanlage. Höhendifferenzen im Gelände zwischen Standort der WEA und dem Immissionsort (z. B. bei Aufstellung einer WEA auf einem Hügel) sind zu berücksichtigen. Eine Differenzierung in Kern- oder Halbschatten ist für die Belästigung nicht bedeutsam. Soweit sich zu berücksichtigende Immissionsorte innerhalb des Beschattungsbereiches von WEA befinden, muss mit zeitweilig auftretenden wiederkehrenden Belästigungswirkungen gerechnet werden. Von Relevanz sind die an einem Immissionsort tatsächlich auftretenden bzw. wahrnehmbaren Immissionen, die nur bei bestimmten Wetterbedingungen auftreten können. Eine Einwirkung durch zu erwartenden periodischen Schattenwurf wird als nicht erheblich belästigend angesehen, wenn die astronomisch maximal mögliche Beschattungsdauer [8] [9] unter kumulativer Berücksichtigung aller WEA-Beiträge am jeweiligen Immissionsort in einer Bezugshöhe von 2 m über Erdboden nicht mehr als 30 Stunden pro Kalenderjahr und darüber hinaus nicht mehr als 30 Minuten pro Kalendertag beträgt. Bei der Beurteilung des Belästigungsgrades wurde eine durchschnittlich empfindliche Person als Maßstab zugrunde gelegt.
+
+40
+
+LUA-Materialien Bd. Nr. 63
+
+Windenergieanlagen und Immissionsschutz
+
+Bei Überschreitung der Werte für die astronomisch maximal mögliche Beschattungsdauer kommen unter anderem technische Maßnahmen zur zeitlichen Beschränkung des Betriebes der WEA in Betracht. Eine wichtige technische Maßnahme stellt als Gegenstand von Auflagen und Anordnungen die Installierung einer Abschaltautomatik dar, die mittels Strahlungsoder Beleuchtungsstärkesensoren die konkrete meteorologische Beschattungssituation erfasst und somit die vor Ort konkret vorhandene Beschattungsdauer begrenzt. Da der Wert von 30 Stunden pro Kalenderjahr auf Grundlage der astronomisch möglichen Beschattung entwickelt wurde, wird für Abschaltautomatiken ein entsprechender Wert für die tatsächliche, reale Schattendauer, die meteorologische Beschattungsdauer festgelegt. Dieser Wert liegt auf Grundlage von [2] bei 8 Stunden pro Kalenderjahr.
+
+2.
+
+Vorhersage des periodischen Schattenwurfs
+
+Aus Gründen der Vergleichbarkeit und Nachvollziehbarkeit ist bei der Erstellung von Immissionsprognosen von folgenden Vereinfachungen und Annahmen auszugehen: Die Sonne ist als punktförmige Quelle anzunehmen und scheint tagsüber an allen Tagen des Jahres. Es herrscht wolkenloser Himmel und für die Bewegung des Rotors ausreichender Wind (100 % Verfügbarkeit). Die Windrichtung entspricht dem Azimutwinkel der Sonne, die Rotorkreisfläche steht dann senkrecht zur Einfallsrichtung der direkten Sonneneinstrahlung. Den Berechnungen wird geographisch Nord zugrunde gelegt. Abstände zwischen Rotorebene und Turmachse sind zu vernachlässigen. Die Lichtbrechung in der Atmosphäre (Refraktion) wird nicht berücksichtigt. Der Schattenwurf für Sonnenstände unter 3° Erhöhung über Horizont kann wegen Bewuchs, Bebauung und der zu durchdringenden Atmosphärenschichten in ebenem Gelände vernachlässigt werden. Zur genaueren Ermittlung der astronomisch maximal möglichen Beschattungsdauer sollte von der effektiven Schatten werfenden Zone einer WEA ausgegangen werden. Diese Größe ergibt sich unter Einbeziehung der Strahlungsdiffusion in der Atmosphäre [12]. Für das Summieren der Jahresstunden ist das Kalenderjahr mit 365 Tagen und für das Summieren der täglichen Schattenzeiten der 24-Stunden-Tag zugrunde zu legen. Dauerhafte natürliche und künstliche lichtundurchlässige Hindernisse, die den periodischen Schattenwurf von WEA begrenzen, können berücksichtigt werden. In der abschließenden Zusammenfassung ist die astronomisch maximal mögliche Beschattungsdauer anzugeben.
+
+3.
+
+Beurteilung
+
+Eine erhebliche Belästigung durch periodischen Schattenwurf liegt dann nicht vor, wenn sowohl die Immissionsrichtwerte für die tägliche als auch die jährliche Beschattungsdauer durch alle auf den maßgeblichen Immissionsort einwirkenden Windenergieanlagen unterschritten werden.
+
+LUA-Materialien Bd. Nr. 63
+
+41
+
+Windenergieanlagen und Immissionsschutz
+
+3.1
+
+Immissionsrichtwerte für die jährliche Beschattungsdauer
+
+Bei der Genehmigung von Windenergieanlagen ist sicherzustellen, dass der Immissionsrichtwert für die astronomisch maximal mögliche Beschattungsdauer von 30 Stunden pro Kalenderjahr nicht überschritten wird. Bei Beschwerden hinsichtlich des Schattenwurfs durch bereits bestehende Anlagen ist die Einhaltung dieses Immissionsrichtwertes zu überprüfen. Bei Überschreitungen ist durch geeignete Maßnahmen (siehe 4.1) die Einhaltung der Immissionsschutzanforderungen dieser Hinweise zu gewährleisten. Bei Einsatz einer Abschaltautomatik, die keine meteorologischen Parameter berücksichtigt, ist durch diese auf die astronomisch maximal mögliche Beschattungsdauer von 30 Stunden pro Kalenderjahr zu begrenzen. Wird eine Abschaltautomatik eingesetzt, die meteorologische Parameter berücksichtigt (z. B. Intensität des Sonnenlichtes), ist auf die tatsächliche Beschattungsdauer von 8 Stunden zu begrenzen. 3.2 Immissionsrichtwert für die tägliche Beschattungsdauer
+
+Der Immissionsrichtwert für die tägliche Beschattungsdauer beträgt 30 Minuten. In der Laborstudie der Universität Kiel [9] wurde festgestellt, dass bereits eine einmalige Einwirkung des Schattenwurfs von 60 Minuten zu Stressreaktionen führen kann. Aus Vorsorgegründen wird daher die tägliche Beschattungsdauer auf 30 Minuten begrenzt. Dieser Wert gilt bei geplanten Anlagen für die astronomisch maximal mögliche Beschattungsdauer, bei bestehenden Anlagen für die tatsächliche Schattendauer. Bei Überschreitung dieses Richtwertes an mindestens drei Tagen ist durch geeignete Maßnahmen die Begrenzung der täglichen Beschattungsdauer auf 30 Minuten zu gewährleisten.
+
+4.
+4.1
+
+Auflagen und Minderungsmaßnahmen
+Schattenwurf
+
+Bei der Wahl von WEA-Standorten bestimmt sich das Maß der Vorsorgepflicht hinsichtlich der erreichbaren Immissionsminderung gegen Beschattung an maßgeblichen Immissionsorten einzelfallbezogen unter Berücksichtigung der Verhältnismäßigkeit und den Anforderungen der Landes-/Bauleitplanung. Überschreitet eine WEA die zulässigen Immissionsrichtwerte gemäß 3, so ist eine Immissionsminderung durchzuführen, die die überprüfbare Einhaltung der Immissionsrichtwerte zum Ziel hat. Diese Minderung erfolgt durch die gezielte Anlagenabschaltung für Zeiten real auftretenden oder astronomisch möglichen Schattenwurfs an den betreffenden Immissionsorten. Bei der Festlegung der genauen Abschaltzeiten ist die räumliche Ausdehnung am Immissionsort (z. B. Fenster- oder Balkonfläche) zu berücksichtigen. Bei Innenräumen ist die Bezugshöhe die Fenstermitte. Bei Außenflächen beträgt die Bezugshöhe 2 m über Boden.
+
+42
+
+LUA-Materialien Bd. Nr. 63
+
+Windenergieanlagen und Immissionsschutz
+
+Die ermittelten Daten zur Sonnenscheindauer und Abschaltzeit sollen von der Steuereinheit über mindestens ein Jahr dokumentiert werden; entsprechende Protokolle sollen auf Verlangen von der zuständigen Behörde einsehbar sein. Im Falle mehrerer beitragender WEA ist eine Aufteilung der Immissionsbeiträge für den jeweiligen Immissionsort möglich. 4.2 Lichtblitze
+
+Störenden Lichtblitzen soll durch Verwendung mittelreflektierender Farben, z. B. RAL 7035HR [6], und matter Glanzgrade gemäß DIN 67530/ISO 2813-1978 [5] bei der Rotorbeschichtung vorgebeugt werden. Hierdurch werden die Intensität möglicher Lichtreflexe und verursachte Belästigungswirkungen (Disco-Effekt) minimiert. Lichtblitze aufgrund von Nässe oder Vereisung werden nicht berücksichtigt.
+
+Anhang
+Berechnungsverfahren
+Der Nachweis, dass eine bestimmte WEA keine schädlichen Umwelteinwirkungen durch periodischen Schattenwurf verursacht, stützt sich im Rahmen von Planungsvorhaben und Anlagenüberwachung auf eine Schattenwurfprognose. Dies gilt ebenso für die Ermittlung ggf. erforderlicher Abschaltzeiten von WEA Eine Schattenwurfprognose gründet sich auf einem Algorithmus zur Berechnung des standort-, tages- und uhrzeitabhängigen Sonnenstandes. Zur Gewährleistung einer einheitlichen Durchführung und vereinfachter Überprüfbarkeit wird der Bezug auf die normierten und allgemein zugänglichen Berechnungsmodelle [10] bzw. [11] empfohlen. Die Grundgenauigkeit der in eine Prognose eingehenden geometrischen Parameter sollte ± 3 ..... 10 m betragen. Die Bestimmung der Schattenwurfzeiten soll an einer Genauigkeit von 1 min pro Tag orientiert sein. Absolute Zeitangaben sollen in MEZ bzw. MESZ erfolgen. Die möglichen Beschattungszeiten an allen relevanten Immissionsorten sollen in der Schattenwurfprognose tageweise mit Anfangs-, Endzeitpunkt und Beschattungsdauer ausgewiesen sein; im Falle mehrerer WEA sollen die Beiträge der Anlagen einzeln und tageweise aufsummiert entnehmbar sein. Pro Immissionsort ist die aufsummierte Jahresbeschattungsdauer anzugeben. Bestandteil einer Schattenwurfprognose sind weiterhin Auszüge aus topografischen Karten, die Anlagenstandorte und Immissionsorte unter Angabe ihrer Gauß-Krüger-Koordinaten mit Höhenangaben wiedergeben. Als Ergebnis können auch berechnete Iso-Schattenlinien (Kurven gleicher Jahresbeschattungsdauer - insbesondere 30 h Iso-Schattenlinie - in der Anlagenumgebung) ausgewiesen werden.
+
+LUA-Materialien Bd. Nr. 63
+
+43
+
+Windenergieanlagen und Immissionsschutz
+
+Software
+Aufgrund des relativ großen Berechnungsaufwandes und der guten Berechnungsmöglichkeiten mit Hilfe von Computerprogrammen empfiehlt sich der Einsatz geeigneter Software. Hierzu kann auf kommerzielle Programme zurückgegriffen werden. Eine Prognose mit Hilfe geeigneter Tabellendaten ist ebenfalls möglich. Verwendete Arbeitshilfen sollen die Anforderungen dieser Hinweise, z. B. bzgl. der Berechnungsverfahren, berücksichtigen.
+
+Arbeitshilfen
+Tatsächliche Beschattungsdauer: Sonnenstand und Beleuchtungsstärke Die resultierende Beleuchtungsstärke E [lx] in einer horizontalen Messfläche hängt vom Einfallswinkel (Sonnenstand) [°] sowie dem fotometrischen Strahlungsäquivalent [lx/Wm-2] ab, das von der Lichtbrechung (Refraktion) und der Lufttrübung bestimmt wird und ebenfalls vom Sonnenstand abhängt. Vom deutschen Wetterdienst werden folgende Eckdaten für die Beleuchtungsstärke angenommen: Sonnenstand [°] 3 60 Beleuchtungsstärke [lx] 389 10.912 Strahlungsäquivalent [lx/Wm-2] 62 105
+
+In erster Näherung ergeben sich daraus folgende Beleuchtungsstärken in Abhängigkeit vom Sonnenstand: Sonnenstand [°] 3 5 10 15 20 25 30 35 40 45 50 55 60 Beleuchtungsstärke [lx] 389 664 1402 2207 3071 3986 4942 5929 6935 7949 8959 9951 10912
+
+Für das Addieren der Jahresstunden ist das Kalenderjahr mit 365 Tagen und für das Addieren der täglichen Schattenzeiten der 24-Stunden-Tag zugrunde zu legen.
+
+44
+
+LUA-Materialien Bd. Nr. 63
+
+Windenergieanlagen und Immissionsschutz
+
+Sonnenauf- und -untergangszeiten [h:min; h:min]
+Berlin 8:17;16:03 5:41;18:41 3:48;20:32 6:07;17:44 Quelle: DWD/BSH2001
+1. Jan 1. Apr 1. Jul 1. Okt
+
+Essen 8:37;16:34 6:08;19:07 4:20;20:52 6:33;18:10
+
+Hannover 8:32;16:18 5:56;18:56 4:03;20:47 6:22;17:59
+
+Karlsruhe 8:21;16:40 6:04;18:59 4:26;20:34 6:26;18:06
+
+München 8:04;16:31 5:52;18:44 4:18;20:17 6:13;17:53
+
+Schleswig 8:44;16:07 5:54;18:58 3:51;21:00 6:24;17:58
+
+Schwerin 8:32;16:05 5:48;18:50 3:49;20:47 6:16;17:51
+
+LUA-Materialien Bd. Nr. 63
+
+45
+
+Windenergieanlagen und Immissionsschutz
+
+Abb.: Möglicher Beschattungsbereich einer großen Windenergieanlage (WEA)
+1200 1100 1000 Nord obere Schattengrenze
+(niedrigster Sonnenstand am 21. Dez.)
+
+Belästigungsgrenze aufgrund geringem Schattenkontrast
+
+900 800 700 600 500 400 300 200 .
+
+Beschattungsbereich 100
+100 200 300 400 500 600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 1800 -1900 -1800 -1700 -1600 -1500 -1400 -1300 -1200 -1100 -1000 -100 -200 -300 -400 -500 untere Schattengrenze
+(höchster Sonnenstand am 21. Juni )
+
+1900 m
+
+-900
+
+-800
+
+-700
+
+-600
+
+-500
+
+-400
+
+-300
+
+-200
+
+-100
+
+West
+
+0 0
+
+Ost
+
+WEA
+im KoordinatenUrsprung
+
+-600 -700 -800 -900 Süd
+
+Annahmen: Leistung 2 MW Bauhöhe 140 m Blatttiefe 2 m Standort 52° nBr
+
+46
+
+LUA-Materialien Bd. Nr. 63
+
+Windenergieanlagen und Immissionsschutz
+
+Beschattungsdauer im Umfeld einer Windenergieanlage Musterdaten
+Koordinaten des Bezugsstandortes der WEA in ebenem Gelände: Geographisch: 52° 00´ 00´´N 10° 00´ 00´´E (Mitte Deutschlands) Gauß-Krüger (Bessel): 2 637 333 | 5 764 640 Bezugshöhe 2 m über Grund; horizontaler Rezeptor 0,1 x 0,1 m2 Lfd Nr. 1 2 3 4 5 6 7 8 9 Nabenhöhe [m] 60 Rotordurchmesser [m] 40 Azimut von Nord über Ost [°] 0° 40° 120° 0° 40° 120° 0° 40° 120° Entfernung WEAImmissionsort [m] 150 300 450 250 400 650 300 500 750 Stunden/Ja hr 90 25 15 83 28 14 98 37 20 Tage/ Jahr 124 62 49 111 61 46 108 76 54 Minuten/ Tag 60 32 22 56 36 22 62 38 26
+
+90
+
+60
+
+100
+
+80
+
+Aufgrund der Symmetrie des Beschattungsbereiches, korrespondierend mit dem tagesbezogenen (scheinbaren) Sonnenlauf, sind für spiegelbildlich zur Nord-Süd-Achse gelegene Immissionspunkte gleichartige Immissionen zu erwarten. Bei Überlagerung der Immissionen durch mehrere WEA beträgt die Gesamt-Beschattungsdauer an einem Immissionsort maximal gleich die Summe der Beschattungsdauern durch die einzelnen immissionsbeitragenden WEA.
+
+Literatur:
+[1] BImSchG Gesetz zum Schutz vor schädlichen Umwelteinwirkungen durch Luftverunreinigungen, Geräusche, Erschütterungen und ähnliche Vorgänge (Bundes-Immissionsschutzgesetz - BImSchG) vom 15. März 1974 (BGBl. I, S. 721, 1193) in der Fassung der Bekanntmachung vom 14. Mai 1990 (BGBl. I S. 880), zuletzt geändert am 27. Juli 2001 (BGBl. I S. 1950, 1973) H.D. Freund Effektive Einwirkzeit Tw des Schattenwurfs bei Tmax = 30 h/Jahr, Ausarbeitung Institut für Physik und Allgemeine Elektrotechnik, Fachhochschule Kiel, (24.01.2001)
+
+[2]
+
+LUA-Materialien Bd. Nr. 63
+
+47
+
+Windenergieanlagen und Immissionsschutz
+
+[3]
+
+H.D. Freund Die Reichweite des Schattenwurfs von Windkraftanlagen Umweltforschungsbank UFORDAT (Juni 1999) K. Bohne, D. Michelbrand Der Schattenwurf von Windkraftanlagen Diplomarbeit FH Kiel (April 2000) DIN 67530/ISO 2813Reflektometer als Hilfsmittel zur Glanzbeurteilung an ebenen Anstrich- und Kunststoff-Oberflächen Deutsches Institut für Normung e. V. Berlin (1978) RAL 7035-HR - Farbregister Deutsches Institut für Gütesicherung und Kennzeichnung Bonn und St. Augustin (1998) Staatliches Umweltamt Schleswig Ergebnisprotokoll des 3. Fachgesprächs vom 19.11.1999 über Umwelteinwirkungen von Windenergieanlagen, Schleswig (1999) J. Pohl, F. Faul, R. Mausfeld, Belästigung durch periodischen Schattenwurf von Windenergieanlagen, Feldstudie, Institut für Psychologie der Christian-Albrechts-Universität zu Kiel, 31.07.1999 J. Pohl, F. Faul, R. Mausfeld, Belästigung durch periodischen Schattenwurf von Windenergieanlagen, Laborpilotstudie, Institut für Psychologie der Christian-Albrechts-Universität, Kiel, 15.05.2000
+
+[4]
+
+[5]
+
+[6]
+
+[7]
+
+[8]
+
+[9]
+
+[10] DIN 5034-2: Tageslicht in Innenräumen - Grundlagen, Beuth-Verlag Berlin 1985 [11] VDI 3789 Blatt2 -10 /94: Umweltmeteorologie - Wechselwirkungen zwischen Atmosphäre und Oberflächen, Berechnung der kurz- und langwelligen Strahlung, VDI , Düsseldorf 1994 [12] H.D. Freund, Einflüsse der Lufttrübung, der Sonnenausdehnung und der Flügelform auf den Schattenwurf von Windenergieanlagen, Forschungsbericht zur Umwelttechnik, Fachhochschule Kiel, Januar 2002
+
+48
+
+LUA-Materialien Bd. Nr. 63
+
+Seit 1. April 1994 sind bisher folgende „Materialien“ des Landesumweltamtes NRW erschienen: Band 1 Titel Der dynamische Daphnientest - Erfahrungen und praktische Hinweise (Bericht der Bund/Länder Projektgruppe "Wirkungstests Rhein"); Essen: LUA 1994, 43 S. Umsetzung der TA Siedlungsabfall bei Deponien; Essen: LUA 1994, 98 S. Verwertung von Elektro- und Elektronikgeräten; Essen: LUA 1994, 152 S. Einsatz alternativer Baustoffe in Abdichtungssystemen; Essen: LUA 1994, 90 S. Entwicklungen im Bereich der Sonderabfallentsorgung; Essen: LUA 1994, 38 S. Ökologische Auswirkungen von Fischteichen auf Fließgewässer; Essen: LUA 1994, 161 S. Vermeidung von Bunkerbränden in Abfallverbrennungsanlagen mit Hilfe der Infrarot-Thermographie; Essen: LUA 1995, 54 S. Prozeßleittechnik in Anlagen der chemischen Industrie Anlagenschutz und sicherheitsrelevante Komponenten; Essen: LUA 1995, 124 S. Sicherheitstechnische Hinweise und Anforderungen an Abschott- und Entlastungssysteme aus der Sicht der StörfallVerordnung; Essen: LUA 1995, 40 S. Literaturstudien zum PCDD/F-Transfer vom Boden in die Nahrungskette (2 Studien); Essen: LUA 1995, 144 S. Die verlust- und kontaminationsfreie Probenahme und Vorbereitung von Wässern und Feststoffen 17. Aachener Werkstattgespräch am 28./29. Sep. 1993 in Essen; Essen: LUA 1995, 204 S. Essener Verfahren zur Bewertung von Altlastverdachtsflächen; Essen: LUA 1995, 68 S. 7,67 € 14 Optimierung der thermischen Behandlung organischer chlorhaltiger Problemabfälle - Forschungsnetz Abfallwirtschaft und Altlasten des Landes NRW; Essen: LUA 1995, 128 S. Preis (netto)
+
+7,67 € 7,67 € 10,23 € 7,67 € 7,67 €
+
+2 3 4 5 6
+
+12,78 €
+
+8
+
+7,67 €
+
+9
+
+10,23 €
+
+10
+
+7,67 €
+
+11
+
+12,78 €
+
+12
+
+14,32 €
+
+13
+
+12,78 €
+
+Vertrieb: Landesumweltamt NRW • Postfach 102 363 • 45023 Essen
+
+15
+
+Entsorgungsbericht 1993 über Sonder- und Massenabfälle in NRW; Essen: LUA 1995, 76 S. Begleitende messtechnische Erfolgskontrolle bei der Sanierung einer Textilreinigungsanlage; Essen: LUA 1995, 60 S. Ausgewählte Untersuchungsergebnisse der halbtechnischen Versuchskläranlage - Untersuchungen zur Stickstoffelimination - Praxiserprobung von Online-Messtechnik; Essen: LUA 1995, 110 S.
+
+10,23 €
+
+16
+
+7,67 €
+
+17
+
+10,23 € 18 Vergleich verschiedener europäischer Untersuchungs- und Bewertungsmethoden für Fließgewässer; Essen: LUA 1995, 140 S. Zielvorgaben zum Schutz oberirdischer Binnengewässer vor gefährlichen Stoffen - Ergebnisse der Erprobung in NRW; Essen: LUA 1995, 150 S. 12,78 € 20 Information und Dokumentation bei Deponien 4. Abfallwirtschaftliches Fachgespräch, 26.Okt 1994; Essen: LUA 1995, 98 S. Ausbreitungsuntersuchungen von Gerüchen anhand einer Modellquelle; Essen: LUA 1995, 57 S. Erschütterungen und Körperschall des landgebundenen Verkehrs - Prognose und Schutzmaßnahmen -; Essen: LUA 1995, 658 S. Naturraumspezifische Leitbilder für kleine und mittelgroße Fließgewässer in der freien Landschaft. Eine vorläufige Zusammenstellung von Referenzbach- und Leitbildbeschreibungen für die Durchführung von Gewässerstrukturgütekartierungen in NRW; Essen: LUA 1996, 127 S. Siedlungsabfalldeponien - Oberflächenabdichtung und Sickerwasser; Essen: LUA 1996, 162 S. Thermodynamische Analyse der Verfahren zur thermischen Müllentsorgung; Essen: LUA 1996, 121 S. Normierung und Konventionen in der Abfallanalytik Aufgaben und Ziele; Essen: LUA 1996, 188 S. Entsorgungsbericht 1994 über Sonder- und Massenabfälle in Nordrhein-Westfalen; Essen: LUA 1996, 92 S.
+
+12,78 €
+
+19
+
+10,23 €
+
+21
+
+7,67 €
+
+22
+
+20,45 €
+
+23
+
+12,78 € 12,78 €
+
+24 25
+
+12,78 €
+
+26
+
+12,78 €
+
+27
+
+10,23 €
+
+Vertrieb: Landesumweltamt NRW • Postfach 102 363 • 45023 Essen
+
+28
+
+Umweltüberwachung im Spannungsfeld; integral/medial privat/staatlich; Essen: LUA 1996, 289 S. Bauabfallentsorgung - Von der Deponierung zur Verwertung und Vermarktung; Essen: LUA 1996, 181 S. Ergebnisse von Dioxin-Emissionsmessungen an Industrieanlagen in NRW - Dioxinmeßprogramm NordrheinWestfalen -; Essen: LUA 1996, 114 S. Results of Measurements of the Emissions of Dioxins by Industrial Plants in North Rhine-Westphalia - Dioxins Measurement Programme North Rhine-Westphalia Final Report 1996. Essen: LUA 1997, 102 S. Umsetzung der TA Siedlungsabfall bei Deponien in NRW. Fortbildungsveranstaltung am 27./28. Juni 1995 im Bildungszentrum für die Entsorgungs- und Wasserwirtschaft GmbH (BEW) in Essen; Essen: LUA 1996, 189 S. Medienübergreifendes Arbeiten im technischen Umweltschutz. Beiträge aus dem Fachgespräch anläßlich der Verabschiedung von Herrn Abteilungsdirektor Dr.-Ing. H.-O. Weber am 06. Juli 1995; Essen: LUA 1996, 78 S. Handbuch der Laborpraxis für Ver- und Entsorgerinnen/Verund Entsorger - 1. und 2. Ausbildungsjahr -; Essen: LUA 1996, 186 S. Explosionsschutz bei der Lagerung brennbarer Flüssigkeiten Entwicklungen und Erkenntnisse; Essen: LUA 1996, 54 S. Physikalisch-chemische und biologische Auswirkungen bei der Verwendung von Waschbergen in Schifffahrtskanälen Untersuchungsbericht des Arbeitskreises "Waschberge im Wasserbau"; Essen: LUA 1996, 154 S. Anforderungen an sachverständige Stellen für die Bekanntgabe und die Zulassung im Bereich des Immissionsschutzes; Essen: LUA 1996, 132 S. Schadstoffströme bei der Gebrauchtholzverwertung für ausgewählte Abfallarten; Essen: LUA 1997, 275 S. Zivile Anschlussnutzung von Militärstandorten - Risikofaktor Altlasten/Bodenbelastung; Essen: LUA 1997, 168 S.
+
+15,34 €
+
+29
+
+14,32 €
+
+30
+
+10,23 €
+
+30(E)
+
+15,34 €
+
+31
+
+14,23 €
+
+32
+
+10,23 €
+
+33
+
+15,34 €
+
+34
+
+9,20 €
+
+35
+
+12,78 €
+
+36
+
+12,78 €
+
+37
+
+15,34 €
+
+38
+
+12,78 €
+
+Vertrieb: Landesumweltamt NRW • Postfach 102 363 • 45023 Essen
+
+39
+
+Flächenhafter Eintrag von Pflanzenschutzmitteln in das Grundwasser - Abschlußbericht, Dezember 1994; Essen: LUA 1997, 217 S. Gewässerüberwachung in Nordrhein-Westfalen, Teil I: Oberirdische Gewässer; Essen: LUA 1997, 40 S. Brand- und Zersetzungsprodukte - Abschlußbericht des Projekts "Integration von Daten zu Brand- und Zersetzungsprodukten in das Informationssystem für gefährliche/umweltrelevante Stoffe (IGS)"; Essen: LUA 1997, 134 S. Kreislaufwirtschaft und Abfallverwertung in thermischen Prozessen - 9. Aachener Kolloquium am 5. Dezember 1996 Tagungsband -; Essen: LUA 1997, 156 S. Identification of Relevant Industrial Sources of Dioxins and Furans in Europe (The European Dioxin Inventory) - Final Report; Essen: LUA 1997, 926 S. Emissionskataster der genehmigungsbedürftigen Anlagen im Lande NRW; Essen: LUA 1997, 32 S. Entsorgungsbericht 1995 über Sonder- und Massenabfälle in Nordrhein-Westfalen; Essen: LUA 1997, 97 S. Validierung von Passivsammlern für Immissionsmessungen von Kohlenwasserstoffen; Essen: LUA 1998, 91 S. Validation of Passive Samplers for Measurements of Hydrocarbons in Ambient Air; Essen: LUA 1998, 92 S. Leitfaden für Analysen zur Bestimmung der Menge und Zusammensetzung von Abfällen aus Haushaltungen; Essen: LUA 1998, 131 S. Kommunale Abfallvermeidung- und -Verwertungsmaßnahmen in NRW; Essen: LUA 1998, 92 S. Konzept zur Optimierung der Energieversorgung bei einem Unternehmen der Wellenpappenherstellung; Essen: LUA 1998, 164 S. Konzept zur Optimierung der Energieversorgung bei einem Unternehmen der Textilverarbeitung; Essen: LUA 1998, 184 S.
+
+15,34 €
+
+40
+
+7,67 €
+
+41
+
+12,78 €
+
+42
+
+12,78 €
+
+43
+
+25,56 €
+
+44
+
+7,67 €
+
+45
+
+11,25 €
+
+46
+
+11,25 €
+
+46 (E)
+
+15,34 €
+
+47
+
+12,78 €
+
+48
+
+11,25 €
+
+50
+
+15,34 €
+
+51
+
+15,34 €
+
+Vertrieb: Landesumweltamt NRW • Postfach 102 363 • 45023 Essen
+
+52 53
+
+Analysenverfahren für Abwasser Essen: LUA 1999, 81 S. Entsorgungsbericht 1996/97 über Sonder- und Massenabfälle in Nordrhein-Westfalen; Essen: LUA 1999, 100 S. Gezielte Infiltration von Wasser in einen Deponiekörper zur Reduzierung des Emissionspotentials; Essen: LUA 1999, 104 S. Gewässerschutzbezogene Zielvorhaben für Pflanzenschutzmittel - Erprobung der vorläufigen Zielvorgaben für Pflanzenbehandlungs- und Schädlingsbekämpfungsmittel für das Schutzgut aquatische Lebensgemeinschaften, Ergebnisse in NRW; Essen: LUA 1999 68 S. Emissionen luftverunreinigender Stoffe durch den Schiffsverkehr in NRW, mit diversen Farbkarten Essen: LUA 2001, 112 S. Der Immissionsschutz auf dem Weg zum integrierten Umweltschutz, nur CD ROM Ausgabe Essen: LUA 2001, 72 S. Ambient Air Pollution by As, Cd, and Ni Compounds Position Paper, Final Version Essen: LUA 2001, 368 S. European Dioxin Inventory , Stage II Essen: LUA 2001, 364 S. Untersuchungen zur Effizienz von unterschiedlichen Systemen zur Rauchgasreinigung bei Müllverbrennungsanlagen Essen: LUA 2001, 60 S. Langfristiges Emissionsverhalten von Altdeponien Essen: LUA 2001, 253 S. Toxikologische Bewertung polychlorierter Biphenyle (PCB) bei inhalativer Aufnahme Essen: Landesumweltamt NRW 2002, 330 S. Windenergieanlagen und Immissionsschutz Essen: LUA 2002, 57 S.
+
+11,25 €
+
+11,25 €
+
+54
+
+11,25 €
+
+55
+
+10,23 €
+
+56 NEU 57 NEU 58 NEU 59 NEU 60 NEU 61 NEU 62 NEU 63 NEU
+
+15,00 €
+
+10,00 €
+
+25,00 € 25,00 €
+
+15,00 € 15,00 €
+
+30,00 € 15,00 €
+
+Vertrieb: Landesumweltamt NRW • Postfach 102 363 • 45023 Essen
+

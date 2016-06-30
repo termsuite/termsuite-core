@@ -1,0 +1,102 @@
+Wind Turbine Technology
+
+BWEA Briefing Sheet Wind Turbine Technology
+
+Since earliest times, man has harnessed the power of the wind, with the first mill recorded as long ago as the 6th century AD. The technology has diversified over the years to include pumping water, grinding grain, powering sawmills and most recently generating electricity, now the fastest growing energy sector worldwide. Wind turbine technology has developed rapidly in recent years and Europe is at the hub of this hightech industry. Wind turbines are becoming more powerful, with the latest turbine models having larger blade lengths which can utilise more wind and therefore produce more electricity, bringing down the cost of renewable energy generation. The first commercial wind farm in the UK, built in 1991 at Delabole in Growth in size of commercial wind turbine design © EWEA Cornwall, used 400 kilowatt (kW) turbines, while the latest trials have involved turbines ten times more powerful, of four megawatts (MW) and above. The average size of an onshore wind turbine installed in 2005 was approximately 2 MW. Wind turbines have an average working life of 20-25 years, after which the turbines can be replaced with new ones or decommissioned. Old turbines can be sold in the second hand market and they also have a scrap value which can be used for any ground restoration work.
+1
+
+How Does a Wind Turbine Work?
+Wind turbines produce electricity by using the natural power of the wind to drive a generator. The wind is a clean and sustainable fuel source, it does not create emissions and it will never run out as it is constantly replenished by energy from the sun. In many ways, wind turbines are the natural evolution of traditional windmills, but now typically have three blades, which rotate around a horizontal hub at the top of a steel tower. Most wind turbines start generating electricity at wind speeds of around 3-4 metres per second (m/s), (8 miles per hour); generate maximum 'rated' power at around 15 m/s (30mph); and shut down to prevent storm damage at 25 m/s or above (50mph). Wind Turbine Technology Generating electricity from the wind is simple: Wind passes over the blades exerting a turning force. The turbine rotating blades turn a shaft inside the nacelle, which goes into a gearbox. The gearbox increases the rotation speed for the generator, which uses magnetic fields to convert the rotational energy into
+Components of a typical wind
+
+www.embracewind.com
+
+www.bwea.com
+
+electrical energy. The power output goes to a transformer, which converts the electricity from the generator at around 700 Volts (V) to the right voltage for the distribution system, typically between 11 kV and 132 kV. The regional electricity distribution networks or National Grid transmit the electricity around the country, and on into homes and businesses.
+
+Offshore Technology
+Offshore wind farms are an exciting new area for the industry, largely due to the fact that there are higher wind speeds available offshore and economies of scale allow for the installation of larger size wind turbines offshore. Offshore wind turbine technology is based on the same principles as onshore technology. Foundations are constructed to hold the superstructure, of which there are a number of designs, but the most common is a driven pile. The top of the foundation is painted a bright colour to make it visible to ships and has an access platform to allow maintenance teams to dock. Subsea cables take the power to a transformer, (which can be either offshore or onshore) which converts the electricity to a high voltage (normally between 33 kV and 132 kv) before connecting to the grid at a substation on land.
+
+The building of Scroby Sands offshore wind farm Top row, from left: Offshore wind turbines have a brightly coloured base; on to which the wind turbine tower is embedded; jackhammers drive the monopile into the seabed. Bottom row: installation of the nacelle; commissioned wind turbine.
+Images © EON UK Renewables, BWEA.
+
+Operation and Maintenance
+Both onshore and offshore wind turbines have instruments on top of the nacelle, an anemometer and a wind vane, which respectively measure wind speed and direction. When the wind changes direction, motors turn the nacelle, and the blades along with it, around to face into the wind. The blades also 'pitch' or angle to ensure that the optimum amount of power is extracted from the wind. All this information is recorded by computers and transmitted to a control centre, which can be many miles away. Wind turbines are not physically staffed, although each will have
+
+www.embracewind.com
+
+periodic mechanical checks, often carried out by local firms. The onboard computers also monitor the performance of each turbine component, and will automatically shut the turbine down if any problems are detected, alerting an engineer that an onsite visit is required. The amount of electricity produced from a wind turbine depends on three factors: 1) Wind speed The power available from the wind is a function of the cube of the wind speed. Therefore if the wind blows at twice the speed, its energy content will increase eight-fold. Turbines at a site where the wind speed averages 8 m/s produce around 75-100% more electricity than those where the average wind speed is 6 m/s. 2) Wind turbine availability This is the capability to operate when the wind is blowing, i.e. when the wind turbine is not undergoing maintenance. This is typically 98% or above for modern European machines. 3) The way wind turbines are arranged
+
+Typical power curve of a wind turbine
+storm protection shutdown rated wind speed typical average wind speed cut-in wind speed
+
+2
+power (MW)
+
+1
+
+0
+
+0
+
+5
+
+10
+
+15 wind speed (m/s)
+
+20
+
+25
+
+30
+
+LIGHT AIR
+
+MODERATE BREEZE
+
+LIGHT BREEZE
+
+GENTLE BREEZE
+
+STORM
+
+CALM
+
+STRONG BREEZE
+
+Wind farms are laid out so that one turbine does not take the wind away from another. However other factors such as environmental considerations, visibility and grid connection requirements often take precedence over the optimum wind capture layout.
+
+Stand-alone and Grid-connected Small Wind Turbines
+Small scale wind turbines can be used in domestic, community and smaller wind energy projects and these can be either stand-alone or grid-connected systems. Standalone systems are used to generate electricity for charging batteries to run small electrical applications, often in remote locations where it is expensive or not physically possible to connect to a mains power supply. Such examples include rural farms and island communities, with typical applications being water heating or pumping, electric livestock fencing, lighting or any kind of small electronic system needed to control or monitor remote equipment. With grid-connected turbines the output from the wind turbine is directly connected to the existing mains electricity supply. This type of system can be used both for individual wind turbines and for wind farms exporting electricity to the electricity network. A grid-connected wind turbine can be a good proposition if your consumption of electricity is high.
+@Proven Energy
+
+www.bwea.com
+
+VIOLENT STORM
+
+NEAR GALE
+
+FRESH BREEZE
+
+SEVERE GALE
+
+GALE
+
+Wind Turbine Technology
+Sep 2005
+
+Can We Rely on the Wind?
+Wind generation is often described as intermittent, as the wind does not blow continuously. This is a misnomer as it implies an 'all or nothing' delivery of energy. An individual wind turbine will generate electricity for 70-85% of the time and its electricity output varies between zero and full output in accordance with the wind speed. However, the combined output of the UK's entire wind power portfolio shows less variability, given the differences in wind speeds over the country as a whole. Whilst the amount of wind generation varies, it rarely (if ever) goes completely to zero, nor to full output. In order to maintain security of supplies, a second-bysecond balance between generation and demand must be achieved. An excess of generation causes the system frequency to rise whilst an excess of demand causes the system frequency to fall. The electricity system is designed and operated in such a way as to cope with large and small fluctuations in supply and demand. No Wind turbine nacelles. Picture supplied by SLP Energy. © Charles Hodge power station is totally reliable Photography, Lowestoft and demand is also uncertain. Therefore, the system operator establishes reserves that provide a capability to achieve balance given the statistics of variations expected over different timescales. The variability of wind generation is but one component of the generation and demand variations that are considered when setting reserve levels. The GB System Operator, National Grid Transco stated in their Seven Year Statement that "based on recent analysis of the incidence and variation of wind speed we have found that the expected intermittency of wind does not pose such a major problem for stability and we are confident that this can be adequately managed.4"
+
+Summary
+Wind turbine technology has developed and matured over the years and this technology now forms an increasingly important part of the UK's electricity industry. Renewable energy is vital in our fight against climate change and technologies such as wind energy can help in building a sustainable electricity generation system for the future.
+References and further information
+1 EWEA (2004), Wind Energy - The Facts. An Analysis of Wind Energy in the EU-25, Executive Summary, from at www.ewea.org 2 See www.bwea.com/edu/calcs.html for wind energy calculations 3 For more details on integrating wind energy to the electricity network see The Carbon Trust and DTI (2004), Renewables Network Impact Study, www.carbontrust.org.uk; National Grid (2004), Seven Year Statement, go to www.nationalgrid.com 4 National Grid (2004) Seven Year Statement, available at www.nationalgrid.com 5 For other BWEA Briefing Sheets, go to www.bwea.com/energy/briefing-sheets.html 6 For latest wind energy statistics go to www.bwea.com/ukwed
+
+BWEA, 1 Aztec Row, Berners Road, London N1 0PW t 020 7689 1960 • f 020 7689 1969 • e info@bwea.com
+Printed by Kent Art Printers on Revive Uncoated: minimum 80% de-inked post consumer waste and 20% mill broke
+
+www.bwea.com
+

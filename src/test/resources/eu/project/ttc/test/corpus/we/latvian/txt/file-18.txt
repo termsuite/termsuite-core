@@ -1,0 +1,99 @@
+﻿Ģeneratori un pārvadi
+
+Ģenerators vējturbīnā pārvērš rotora ražoto mehānisko enerģiju tādā elektriskā strāvā, kuru iespējams pieslēgt tīklam. Enerģiju līdz ģeneratoram aizvada pārvadi. Parasti tie satur zobratus. Zobrati ļauj palielināt ātrumu un samazināt vērpes momentu. Principus un iespējas skaidro Pols Gardners.
+
+Pārvadi
+Vidējām un lielām vējturbīnām iespējami triju veidu pārvadi:
+•	Fiksētā ātruma, kas sastāv no zobratu pārvada un indukcijas ģeneratora. Tas var būt ar maināmiem poliem, kas pieļauj divus fiksētus ātrumus
+•	Maināma ātruma: satur zobratu pārvadu, ģeneratoru un elektronisko konvertoru
+•	Tiešās piedziņas ar sinhrono ģeneratoru un elektronisko konvertoru pilnīgi bez zobratu pārvada. 
+
+Lai šie varianti kļūtu saprotami, vispirms nepieciešams iepazīties ar ģeneratoru darbības principiem un ar fiksēta un mainīga ātruma priekšrocībām un trūkumiem. 
+
+Ģeneratoru darbības principi
+Komerciālās vējturbīnās izmanto divu veidu ģeneratorus: sinhronos un asinhronos. Pēdējos mēdz arī saukt par indukcijas mašīnām. 
+
+Abas versijas satur cilindrisku statoru (to tā sauc tāpēc, ka tas nespēj rotēt), kura iekšienē atrodas rotors. Statoram ir trīsdaļīgi tinumi, kuri pieslēgti elektriskā tīkla trim fāzēm. Pa šiem trim fāzēm pieslēgtiem tinumiem plūst atbilstoši sinusa likumam viļņveidīgi mainīga strāva, kas statorā rada mainīgu magnētisko lauku. Ja šos trīs tinumus izvietotu statora iekšienē simetriski, tad trīs mainīgos magnētiskos laukus var uzskatīt par vienu vienīgu nemainīgas amplitūdas magnētisko lauku, kurš rotē statora iekšienē. 
+
+Tinumus var izkārtot tā, lai magnētiskais lauks rotētu 50 reizes sekundē (atbilstoši pasaulē visplašāk lietotajam 50 Hz elektriskajam tīklam) vai arī kaut kādā veselu skaitļu daļā no šī ātruma. “Divpolu” mašīnā magnētiskais lauks rotē 50 reizes sekundē jeb izdara 3000 apgriezienus minūtē (apgr/min), “četrpolu” mašīnā tas veic 1500 apgr/min , “sešpolu” mašīnā – 1000 apgr/min utt.
+
+Stators būtībā ir tāds pats gan sinhronām, gan indukcijas mašīnām. Galvenā atšķirība ir rotorā. 
+
+Sinhronās mašīnas
+Sinhronās mašīnas rotoram ir pašam savs attiecībā pret rotoru fiksēts magnētiskais lauks. Divpolu rotoram ir viens ziemeļpols un viens dienvidpols, četrpolu rotoram ir divi ziemeļu un divi dienvidu poli utt. Šis magnētiskais lauks cenšas pielāgoties statora radītajam rotējošam magnētiskam laukam un tādēļ rotors griežas tieši tikpat ātri kā rotējošais magnētiskais lauks. Tādēļ jau šo mašīnu sauc par sinhrono. Ja mašīna darbosies kā ģenerators un, ja tās vārpstai tiks pielikts lielāks vērpes moments, rotors nedaudz apsteigs rotējošo magnētisko lauku, bet stabilā režīmā ātrumu pilnīgi noteiks barošanas sprieguma frekvence. 
+
+Rotora magnētisko lauku iespējams radīt divos veidos. Vienkāršākais veids ir izmantojot pastāvīgos magnetus. Tad to sauc par “pastāvīgo magnetu” mašīnu. Otrajā variantā rotoram uztin spoles un , lai iegūtu elektromagnētu, tām pievada līdzstrāvu. Sauksim to par “rotora tinumu” mašīnu. Rotora tinumu mašīnai ir tāda priekšrocība, ka rotora magnētisko lauku iespējams regulēt un tas savukārt ļauj regulēt ģeneratora spriegumu un izejas jaudu. Trūkums ir tas, ka līdzstrāva rotoram ir kaut kā jāpievada, vai nu izmantojot kontaktgredzenus vai kādu citu ne mazāk sarežģītu paņēmienu. 
+
+Indukcijas mašīnas
+Visvienkāršākā indukcijas mašīna ir pa rotora cilindrisko virsmu izkārtoti vara vai alumīnija stienīši, ko abos galos savieno apaļi diski, izveidojot t.s. “vāveres ratu” jeb būrīti. Šo būrīti gan ir grūti ieraudzīt, jo, lai uzlabotu rotora magnētiskās īpašības, tā lielāko daļu aizņem tērauda plāksnīšu pakete. 
+
+Ja tagad rotors grieztos sinhronā ātrumā, tādā pašā ātrumā kā statora magnētiskais lauks, magnētiskais lauks rotorā nemainītos un ar rotoru faktiski nekas nenotiktu. Turpretī, ja rotors grieztos nedaudz lēnāk par sinhrono ātrumu, magnētiskais lauks rotorā sāktu izmainīties un stienīšos sāktu plūst strāva. Šī strāva radītu pati savu magnētisko lauku, kas censtos rotoru atgriezt atpakaļ sinhronā ātrumā. 
+
+Svarīgi ir tas, ka indukcijas mašīna spēj pārvērst elektrisko enerģiju mehāniskā enerģijā (t.i. darboties kā motors) tikai tad, ja rotora ātrums ir nedaudz mazāks par sinhrono ātrumu. Un līdzīgi – tā spēj darboties kā ģenerators vienīgi tad, ja rotora ātrums ir mazliet lielāks par sinhrono ātrumu. Tā pārnestā jauda ir tieši proporcionāla ātrumu starpībai, kādēļ arī alternatīvais nosaukums - “asinhronā” mašīna. Starpību starp rotora ātrumu un sinhrono ātrumu sauc par “slīdi” un parastam vējturbīnas indukcijas ģeneratoram pie pilnas jaudas slīde ir 1%. 
+
+Tāpēc, ka tiem nav iespējama ne sprieguma, ne jaudas regulēšana, indukcijas ģeneratorus, izņemot vējturbīnas, gandrīz nekur nelieto. To plašais pielietojums vējturbīnās izskaidrojams ar to robustumu un lētumu, kā arī ar to, ka, pateicoties slīdei, turbīnas rotora aerodinamiskās jaudas izmaiņas var izpausties, kā rotora griešanās ātruma izmaiņas. Piemēram, spēja vēja brāzma, liekot pieaugt griešanās ātrumam, uz vējturbīnas rotora inerces momenta rēķina uzkrāj enerģiju. Šī enerģija tiek atdota atpakaļ, samazinoties vēja ātrumam. Rezultātā pārvadu vērpes momenta un izejas jaudas svārstības nogludinās. Sinhronais ģenerators to nespēj. 
+
+
+Fiksēta un mainīga ātruma varianti
+
+Darbība pie fiksēta ātruma
+Konvencionālais fiksēta ātruma zobratu pārvads ar indukcijas ģeneratoru ir vienkāršs un robusts. Tas ir “bāzes variants”, ar kuru salīdzina visus pārējos variantus. 
+
+Darbība pie mainīga ātruma
+Termins “mainīgs ātrums” faktiski aptver vairākus atšķirīgus jēdzienus. Tie ir aprakstīti zemāk. Visu nosaka elektroniskie frekvences pārveidotāji, kuri ļauj ģeneratoram strādāt pie mainīga ātruma, kurš līdz ar to pieslēgšanai pie fiksētas frekvences tīkla ražo mainīgas frekvences strāvu. Pārveidotāju konstrukcijām pilnveidojoties, var sagaidīt mainīga ātruma piedziņas cenu, izmēru, bet arī efektivitātes pieaugumu. 
+
+Darbība pie mainīga ātruma plašā izmaiņu diapazonā. Ātrums izmainās diapazonā 2,5 vai 3 pret 1. Plašais diapazons vējturbīnai nodrošina vislielākās priekšrocības, tai skaitā:
+•	Pie maziem vēja ātrumiem mazu rotācijas ātrumu un līdz ar to zemu trokšņu līmeni (līdzīgi fiksēta ātruma turbīnai ar diviem ātrumiem)
+•	Labāku vēja enerģijas izmantošanu pie maziem ātrumiem (gandrīz tas pats ir arī iespējams divu ātrumu turbīnai)
+•	Mazāku vērpes momentu pie vēja ātrumiem, kuri pārsniedz nominālo
+•	Mazāku kāpes regulēšanas iekārtas noslogojumu.
+
+Tam ir arī priekšrocības attiecībā pret elektrisko tīklu, kuram tas ir pieslēgts:
+•	Ļoti mazas jaudas fluktuācijas un mazs sprieguma flikers, ja vēja ātrums pārsniedz nominālo
+•	Iespējams izmainīt izejas jaudas izmantošanas koeficientu (atkarībā no pārveidotāja konstrukcijas)
+
+Šīs metodes galvenie trūkumi saistās ar izmaksām un enerģijas zudumiem vairāku procentu apmērā. Pārveidotājs arī rada harmonikas (strāvas sastāvdaļas, kuru frekvence vairākkārt pārsniedz pamatfrekvenci), kuru sastāvs atkarīgs no pārveidotāja konstrukcijas. Harmonikas tīklā ir nevēlamas. Parastie pārveidotāji ģenerē subharmonikas, kuras iespējams samazināt ar filtriem, bet tas maksā naudu. Uzlabotu konstrukciju pārveidotāji gandrīz nemaz nerada zemas kārtas harmonikas (zem 40. harmonikas, t.i. 2 Hz), kuru izraisītais “piesārņojums” ir visbīstamākais un uz kurām parasti koncentrē uzmanību elektroapgādes uzņēmumu standarti. Tomēr tie var radīt būtiskas harmonikas un interharmonikas augšpus šī diapazona un daži elektropagādes uzņēmumi uzskata, ka vējturbīnas ir galvenie augstas kārtas harmoniku un interharmoniku avoti tīkla vājākajos posmos. 
+
+Pārveidotāju praktiskā izmantošana neatšķiras no citu rūpnieciska rakstura ražojumu izmantošanas. Iekārtu ražotāji ir daudzi un ir iespējami dažādi tehniskie varianti. Iespējams izmantot ar indukcijas un ar sinhroniem ģeneratoriem. 
+
+Darbība pie mainīga ātruma ierobežotā izmaiņu diapazonā. Ātruma izmaiņu diapazons apmēram 1,5 vai 2 pret 1. Šajā diapazonā saglabājas visas plašā izmaiņu diapazona priekšrocības, kaut arī trokšņu samazinājums, enerģijas izmantošanas iespējas un jaudas izmantošanas koeficienta vadības iespējas nav tik plašas. 
+
+Vienā no konstruktīvajiem variantiem izmanto “dubultās barošanas” indukcijas mašīnas, kuru stators  tāpat kā fiksētā ātruma mašīnām ir tieši pieslēgts tīklam, bet bez tam enerģiju iegūst arī no rotora caur elektronisko pārveidotāju. Caur frekvences pārveidotāju gan plūst tikai daļa (parasti 25 vai 30%) no izejas jaudas. Tādēļ pārveidotāji ir mazāki un, salīdzinot ar plašā izmaiņu diapazona sistēmām tiem ir:
+•	Zemākas kapitālizmaksas
+•	Augstāka kopējā efektivitāte
+•	Zemāks harmoniku līmenis
+
+Rotorā ģenerēto enerģiju pievada frekvences pārveidotājam vai nu, izmantojot kontaktgredzenus vai magnētiski (bezsuku variantā).
+
+Darbība pie mainīga ātruma šaurā izmaiņu diapazonā. Šī varianta ātruma izmaiņu diapazons 1,1 pret 1, kaut arī mazs, tomēr ir pietiekošs, lai nodrošinātu sekojošas priekšrocības:
+•	Mazas pārvadu vērpes momenta svārstības     
+•	Mazas izejas jaudas svārstības un mazs flikera efekts
+•	Praktiski neievērojami zems harmoniku līmenis
+
+Šīs priekšrocības nodrošina “mainīgā slīde”, ļaujot ietaupīt uz frekvences pārveidotāja rēķina. Ģenerators ir zemas slīdes indukcijas mašīna. Ja rodas nepieciešamība pēc lielām ātruma izmaiņām, lai absorbētu vērpes momenta fluktuācijas, slīdi iespējams izmainīt, vajadzības gadījumā pat līdz 10%. To panāk, ssalēdzot virknē ar rotora pretestību  elektroniski maināmu pretestību. Tā kā paaugstinātu rotora pretestību izmanto tikai īslaicīgi, zudumi un sakaršana ir mazi. Elektroniskais pārveidotājs, ko lieto, lai izmainītu pretestību, ir daudz lētāks un tik mazs, ka to var samontēt tieši uz ģeneratora rotora, lai nevajadzētu lietot kontaktgredzenus. Principu komerciālā līmenī ir realizējusi Vestas firma savā Optislip iekārtā.
+
+Tiešā piedziņa
+Tiešās piedziņas galvenā priekšrocība ir tāda, ka tā ļauj vispār atteikties no paātrinošā zobratu pārvada. Tiešo piedziņu īsteno, izmantojot liela diametra ģeneratoru, kas darbojas rotora griezes ātrumā. Tiešās piedziņas sekundārās priekšrocības ir:
+•	Mazākas izmaksas nekā sistēmai ar zobratu pārvadu
+•	Mazāka torņa galā novietotā masa un īsāka gondola
+•	Par vairākiem procentiem augstāks lietderības koeficients.
+
+Tiešās piedziņas mašīnās izmanto kā pastāvīgo magnetu, tā arī tinumu sinhronos ģeneratorus. Tiešās piedziņas turbīnu ātrums ir maināms, jo tām trūkst slodzes izmaiņas kompensējoša elementa, un tādēļ pēkšņas un lielas vērpes momenta izmaiņas fiksēta ātruma mašīnu varētu bojāt. Bez tam elektriskais pārveidotājs ļauj ģeneratoram strādāt ar izejas frekvenci zem 50 Hz, kas vienkāršo šādu lēngaitas mašīnu konstrukciju.
+
+Scanwind tiešās piedziņas turbīnas projekts (sk. Wind Directions, Nov.2000) ir interesants tādā ziņā, ka tajā paredzēts izmantot ABB “Powerformer” pastāvīgo magnetu augstsprieguma ģeneratora principu. Pagaidām vēl nav uzbūvēts reālu izmēru prototips, trūkst arī datu par izmēriem, masu un efektivitāti. Princips ir daudzsološs, jo:
+•	Ģeneratora konstrukcija ļoti atšķiras no “konvencionālo” tiešās piedziņas pārvadu konstrukcijām un tādēļ, ļoti iespējams, ka šī konstrukcija izrādīsies par sava veida kvalitatīvu lēcienu 
+•	Augstsprieguma izejas gadījumā nav vajadzīgs transformators, kas samazina izdevumus, vietu un elektriskos zudumus apmēram 1% apmērā no gadā saražotās  enerģijas 
+•	 Darbs bez transformatora atvieglo visu turbīnu saslēgšanu lokālā vidēja sprieguma līdzstrāvas sistēmā, tādējādi atvieglojot elektronisko pārveidošanu un vienkāršojot ar ārējo elektrības tīklu saistītā konvertora vadību. 
+
+Zobratu pārvadi
+Zobratu pārvadu konstruktīvo variantu ir mazāk nekā ģeneratoriem un piedziņas sistēmām. Tomēr, kā liecina nesenās problēmas vēja industrijā, ne vienmēr ir iespējams tieši un vienkārši izvēlēties vējturbīnas zobratu pārvadu. 
+
+Zobratu pārvada izmaksas ir atkarīgas no vērpes momenta , bet vējturbīnu vērpes moments pieaug ļoti strauji. Līdz ar to lielākām turbīnām arī zobratu pārvadi kļūst relatīvi lielāki un dārgāki. Šī iemesla dēļ tiešais pārvads izraisa sevišķu interesi tieši attiecībā uz lielām turbīnām. 
+
+Varētu arī izrādīties izdevīgi, lai samazinātu gondolas masu un izmaksas, izveidot integrālu zobratu pārvada, rotora galveno gultņojumu un gondolas pamatnes konstrukciju. Tomēr, it sevišķi attiecībā uz jūrā izmantojamām konstrukcijām, ir iebildumi par labu dalītiem agregātiem apkopes un nomaiņas ērtību dēļ un arī, lai izvairītos no monopolizācijas tendencēm. 
+
+Pols Gardners vēja enerģētikas konsultantfirmā Garrad Hassan and Partners atbild par vējfermu un vējturbīnu elektriskām sistēmām un pieslēgumu tīklam. Viņš ir piedalījies projektos visā pasaulē un piedalās IEC un CENELEC vējturbīnu un vējfermu elektriskās daļas standartizācijas darbā. Garrad Hassan veic ekspertīzi visos tehniskos un komerciālos ar vēja enerģētiku saistītos jautājumos, sākot ar meteoroloģiju un beidzot ar turbīnu un vējfermu projektēšanu. Polu var sazvanīt pa tālruni +44 141 945 4774 (fax +44 141 945 5076) vai sameklēt pa e pastu: gardner@glasgow.garradhassan.co.uk
+
+
+
+

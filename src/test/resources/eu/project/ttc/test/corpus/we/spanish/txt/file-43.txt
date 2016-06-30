@@ -1,0 +1,1421 @@
+
+
+Estudio de
+Efectos Ambientales del Parque Eólico
+
+
+
+
+
+ÍNDICE
+
+
+1. INTRODUCCIÓN
+
+2.  ANTECEDENTES
+
+2.1. Energía eólica
+2.2. Ventajas económico-sociales y medioambientales de la energía eólica
+
+3.  JUSTIFICACIÓN DEL ESTUDIO DE EFECTOS AMBIENTALES.
+
+3.1. Marco Normativo
+3.2. Objeto del Estudio y Metodología
+
+4. DEFINICIÓN AMBIENTAL GENERAL DEL EMPLAZAMIENTO Y DEL ÁREA DE INFLUENCIA
+
+5.  DESCRIPCIÓN DEL PROYECTO
+
+5.1. Localización
+5.2. Aerogeneradores
+5.3. Montaje de los aerogeneradores
+5.4. Obra civil
+5.5. Instalaciones eléctricas
+5.6. Producción de energía
+5.7. Residuos generados
+
+6. INVENTARIO AMBIENTAL
+
+6.1. Medio físico
+6.1.1. Calidad del medio Ambiente Atmosférico (ruido)
+6.1.2. Clima
+6.1.3. Geología, geomorfología y edafología
+6.1.4.  Hidrología
+
+6.2. Medio biótico
+6.2.1. Vegetación
+6.2.2. Fauna
+
+6.3. Medio socioeconómico
+6.3.1. Población, actividades e infraestructuras
+6.3.2. Arqueología y Etnografía
+
+6.3.3. Paisaje
+
+
+
+7. IDENTIFICACIÓN, EVALUACIÓN Y VALORACIÓN DE EFECTOS AMBIENTALES
+
+
+7.1.- Efectos sobre la calidad del medio atmosférico (ruido y polvo)
+7.1.1.- Efectos por el aumento del ruido
+7.1.2.- Efectos por aumento de polvo y gases
+7.1.3.- Efectos electromagnéticos
+
+7.2.- Efectos sobre el suelo
+7.2.1.- Efectos por apertura de caminos, zanjas y explanaciones
+7.2.2.- Efectos por ocupación del suelo
+7.2.3.- Efectos por aumento de la erosión
+
+7.3.- Efectos sobre las aguas superficiales y subterráneas
+7.3.1.- Efectos sobre las aguas superficiales
+7.3.2.- Efectos sobre las aguas subterráneas
+7.3.3.- Efectos por pérdida de la calidad de aguas
+7.3.4.- Efectos por modificación de la red de drenaje
+
+7.4.- Efectos sobre la vegetación
+7.4.1.-
+7.4.2.-
+
+7.5.- Efectos sobre la fauna
+7.5.1.- Efectos sobre la fauna terrestre
+7.5.2.- Efectos sobre la avifauna
+
+7.6.- Efectos sobre el paisaje
+
+7.7.- Efectos sobre el patrimonio cultural y arqueológico
+
+7.8.- Efectos sobre el sistema territorial y la socioeconomía
+7.8.1.-
+7.8.2.-
+
+
+8.- IDENTIFICACIÓN DE EFECTOS EN LA FASE DE ABANDONO
+
+9.- ESTABLECIMIENTO DE MEDIDAS CORRECTORAS
+
+10.- PLAN DE SEGUIMIENTO Y VIGILANCIA AMBIENTAL.
+
+
+ANEJOS
+
+ANEJO 1. CARACTERÍSTICAS DE LOS AEROGENERADORES Y DE LOS APOYOS DE LA LÍNEA DE ALTA TENSIÓN.
+ANEJO 2. CÁLCULO DE LOS NIVELES DE RUIDO DE LOS AEROGENERADORES.
+ANEJO 3. ESTUDIO ARQUEOLÓGICO.
+ANEJO 4. REPORTAJE FOTOGRÁFICO.
+
+PLANOS
+
+  1.- SITUACIÓN GENERAL (1:200.000).
+  2.- ZONA DE INFLUENCIA DEL PARQUE (1:200.000).
+  3.- LOCALIZACIÓN DEL PARQUE EÓLICO . ELEMENTOS (1:25.000).
+  4.- LOCALIZACIÓN DE AEROGENERADORES Y OTROS ELEMENTOS (1:10.000).
+  5.- GEOLOGÍA (1:50.000).
+  6.- HIDROLOGÍA (1:25.000).
+  7.- MAPA FORESTAL (1:200.000).
+  8.- VEGETACIÓN REAL (1:10.000).
+  9.- CULTIVOS Y APROVECHAMIENTOS (1:50.000).
+10.- VISIBILIDAD (PERFILES PARA PAISAJE).
+
+1. INTRODUCCIÓN.
+
+El presente documento constituye el Estudio de Efectos ambientales, enmarcado en el proceso de Evaluación marcado por la legislación ambiental gallega. 
+	
+Este estudio se realiza para la instalación del Parque Eólico , promovido por XXX, de 25 MW de potencia instalada total, en los términos municipales de Xunqueira de Espadañedo, Esgos y Nogueira de Ramuín, provincia de Orense.
+
+La infraestructura prevista para el parque es la siguiente:
+
+* 36 aerogeneradores de 660 KW de potencia unitaria
+* Una subestación eléctrica
+* Viales de acceso
+* Zanjas para cableado
+* Equipos eléctricos
+* Instalaciones auxiliares, etc.
+
+En el presente estudio se analizan las distintas operaciones en las fases de ejecución (construcción, puesta en marcha y disposición final de las instalaciones), funcionamiento y de abandono, con el fin de conocer los efectos ambientales producidos por el Parque Eólico.
+
+
+
+
+2. ANTECEDENTES
+
+2.1. Energía eólica
+	
+El desarrollo de la energía eólica ha sido muy espectacular durante los últimos 15 años, aún cuando se encuentra, en la actualidad, muy lejos de los niveles de participación en el pool de generación, que por abundancia del recurso y nivel tecnológico podría tener. Sin embargo, esta situación va cambiando progresivamente. De hecho la potencia eólica instalada en el mundo a principios de 1997 alcanzaba los 6.100 MW, de los que 3.500 estaban en Europa. En España, las instalaciones eólicas alcanzaban en esa misma fecha 270 MW, con una aportación energética anual de unos 50 Ktep, que equivalen al 0,5 % de la energía primaria total consumida por España anualmente.
+
+Las directrices de la política energética española vienen determinadas por el Plan Energético Nacional (P.E.N.) actualmente en vigor, que fue aprobado por la Administración Española en el año 1991.
+
+El P.E.N. incluye el Plan de Ahorre y Eficiencia Energética 1991-2000 (P.A.E.E.), que define la estrategia para el uso eficaz de la energía y la utilización de las energías renovables (Programa de Energías Renovables).
+
+En este sentido, en Galicia la política de aprovechamientos energético se basa en el Plan Eólico Estratégico de Galicia, el cual tiene como objetivo la instalación de 2.814 MW de potencia en un plazo de 10 años, mediante el análisis de 98 áreas de investigación por parte de 10 promotores (en la actualidad están aprobados los 10 Planes Eólicos Estratégicos). La inversión total prevista a dicho plan  es de 415.872 millones de pesetas. 
+
+De estas cifras, Xxx contribuye, con la presentación en 1995 y posterior aprobación en 1996 de su Plan Eólico Estratégico, con la realización de 6 parques eólicos que implican la instalación de 120 MW de potencia, con una inversión de unos 19.800 millones de pesetas. En concreto el Parque Eólico xxx representa, del total del P.E.E. de Xxx, 25 MW de potencia.
+
+
+2.2.  Ventajas económico-sociales y medioambientales de la energía eólica.
+
+a) Ventajas económico-sociales.
+
+Según el IDAE (Instituto para la diversificación y Ahorro Energético), un parque eólico de 10 MW sustituye a 2.447 toneladas equivalentes de petróleo, evita la emisión de 28.450 toneladas/año de CO2, genera electricidad para 11.00 familias, proporciona industria nacional y desarrollo de tecnología, y aporta trabajo equivalente a 130 hombres/año durante su diseño y construcción. 
+
+Siguiendo estos datos, el Parque Eólico xxx de 25 MW, promovido por Xxx, sustituye unas 6.118 Tep, evita la emisión de unas 70.000 T/año de CO2, generaría electricidad para 27.000 familias y aportaría trabajo a 325 hombres/año durante su diseño y construcción.
+
+Además, se estima que por cada puesto de trabajo por la fabricación de aerogeneradores y de sus componentes, instalación y operación y mantenimiento, se crea al menos otro puesto de trabajo en sectores asociados, como son consultorías, gabinetes jurídicos, planificación, investigación, finanzas, ventas, marketing, editorial y educación.
+
+Cualquier política dirigida hacia un futuro sostenible debe estar basada en elevados niveles de eficiencia energética y en una mayor utilización de las energías renovables.
+
+En este sentido, la energía eólica contribuye a ello, puesto que:
+
+* Supone el empleo de recursos autóctonos que incrementa el nivel de abastecimiento y permite reducir las importaciones de combustibles, como petróleo y gas natural, con lo que contribuyen al ahorro de recursos no renovables.
+* Contribuye a la diversificación energética, disminuyendo el grado de dependencia de las fuentes de abastecimiento tradicionales.
+* Supone el desarrollo de actividades económicas e industriales, con efectos positivos sobre la economía y el empleo, como ya se ha mencionado.
+
+
+b) Ventajas medioambientales.
+
+El factor ambiental es clave para el desarrollo de la energía eólica, pues se trata de una fuente de energía limpia exenta de contaminación atmosférica, vertidos tóxicos, generación de residuos radiactivos, riesgo de accidentes nucleares, contribución al cambio climático, etc. Por eso precisamente es necesario y deseable (según reconoce GREEENPEACE) que adquiera un papel mucho más preponderante que el actual.
+
+No cabe duda que la energía eólica tiene claras ventajas medioambientales, en comparación con las fuentes de energía convencional. Sus ventajas en este campo se caracterizan por su reducido impacto ambiental, significativamente menor que las fuentes de energía convencionales. Por tanto, los beneficios ambientales de la eólica se pueden enumerar como la relación de impactos que no produce, y que sí son imputables a las energías convencionales:
+
+
+
+* No existe minería en sentido estricto, es decir, no hay grandes movimientos de terreno, ni arrastres considerables de sedimentos, ni alteraciones significativas de cauces de aguas, ni contaminación por partículas ni acumulación de estériles en fase de funcionamiento, etc.
+* No hay que transportar ni transformar combustible y, por lo tanto, no hay grandes consumos de energía, ni residuos radiactivos, ni problemas de transporte, ni mareas negras, ni contaminación del aire, ni explosiones de gas, ni agentes químicos agresivos, etc.
+* No hay combustión ni fusión de combustibles, ni vertidos de productos radiactivos, ni emisiones a la atmósfera de CO2, ni otros gases de efecto invernadero, ni contaminantes ácidos, ni gases tóxicos, ni polución térmica; etc., etc.
+
+
+No obstante, es exigible, a parte de la propia exigencia normativa, la realización de estudios y la acometida de las medidas necesarias para garantizar que se van a reducir al mínimo los daños que durante la construcción y explotación de cualquier parque se pudiesen producir. Entre ellas:
+
+* Considerar todas las opciones técnicamente posibles para la búsqueda de emplazamientos para cualquier parque eólico previsto, de forma que el impacto sea el mínimo globalmente considerado.
+* Realizar medidas de mejora del entorno para no perjudicar a la fauna y flora de la zona.
+* Seguimiento de las actividades tradicionales, de cualquier índole, con el fin de controlar la incidencia.
+* Limitar el acceso de personal no autorizado.
+* No realizar las obras del parque eólico durante épocas de especial importancia para las posibles especies afectadas.
+* Efectuar trabajos de recuperación de las zonas alteradas, antes, durante y después de la instalación del parque.
+* Supervisión y orientación por profesionales competentes en los casos donde el lugar de instalación tenga una importancia significativa para cualquier elemento del medio.
+* Condiciones y recomendaciones a adoptar en la fase de ejecución de las obras.
+* Participación de los grupos sociales implicados.
+
+
+En este sentido, el presente Es.E.A., ha llevado la línea de atender los requerimientos antes descritos, enfocándose como un instrumento adaptativo de gestión y planificación ambiental para la realización del proyecto constructivo del parque, sirviendo, por tanto, para la elección de aquellas áreas o lugares con mayor capacidad de acogida y menor impacto para los distintos elementos que constituyen el Parque Eólico xxx, al tiempo que para proponer, desde un principio, las oportunas medidas preventivas, correctoras o compensatorias.
+
+Por tanto, se ha insistido en la importancia de la integración, desde un principio, de la vertiente ambiental en la concepción y desarrollo del proyecto, así como, en la exclusión, dentro de las áreas de acción, de las zonas más sensibles que aparecen en el medio estudiado.
+	
+
+
+
+3. JUSTIFICACIÓN DEL ESTUDIO DE EFECTOS AMBIENTALES.
+
+3.1. Marco Normativo
+
+El Decreto 205/1995, del 6 de julio, por el que se regula el aprovechamiento de la energía eólica en la Comunidad Autónoma de Galicia, establece en su artículo 12 c), previa a la autorización administrativa de las instalaciones, la presentación de un estudio de Efectos ambientales, que se realizará conforme a lo dispuesto en el Decreto 327/1991, del 4 de octubre, de evaluación de efectos ambientales para Galicia, que continúa en vigor en tanto no se aprueben las normas reglamentarias de desarrollo de la Ley 1/1995, del 2 de enero, de protección ambiental de Galicia.
+
+El mismo Decreto 205/1995, establece que si por las características del proyecto quedase afectado algún espacio natural incluido en el Registro General de Espacios Naturales de Galicia, y en tanto no se aprueben las normas reglamentarias de desarrollo de la Ley 1/1995, se observará lo dispuesto por el Decreto 442/1990, del 13 de septiembre, de evaluación de impacto ambiental para Galicia, presentando, si es el caso, el correspondiente Estudio de Impacto Ambiental.
+
+Según lo expuesto, el proyecto del Parque Eólico xxx estaría afectado por el procedimiento de Evaluación de Efectos Ambientales, puesto que:
+
+* Según el Decreto 205/1995, artículo 2, quedan sometidos a lo dispuesto en este decreto los parques eólicos de una potencia eléctrica instalada igual o inferior a 100 MVA, y el Parque Eólico xxx tendrá una potencia eléctrica total instalada de 25 MVA.
+* No queda afectado ningún espacio natural incluido en el Registro General de Espacios Naturales de Galicia, en el emplazamiento del Parque.
+* La Ley 1/1995, artículo 3, en el ámbito territorial de Galicia, obliga a toda persona, natural o jurídica, pública o privada, que proyecte realizar o efectivamente realice cualquier actividad susceptible de producir un deterioro en el medio ambiente. En su artículo 10, se indica que serán sometidos a evaluación de efectos ambientales todos los proyectos, obras y actividades que se relacionan en la legislación sectorial y en sus normas de desarrollo. Asimismo, en su disposición transitoria segunda se indica que mientras no se aprueben las normas reglamentarias de desarrollo de esta ley, continúan en vigor el Decreto 442/1990 y el Decreto 327/1997.
+
+Otra normativa sectorial gallega con incidencia en el Parque Eólico xxx será:
+
+- Normas Complementarias y Subsidiarias de Planeamiento de las provincias de A Coruña, Lugo, Ourense y Pontevedra; se estará en lo dispuesto en ellas, concretamente para los componentes en los que se va a instalar el Parque (Ayuntamientos de Nogueira de Ramuín, Xunqueira de Espadañedo y Esgos).
+- Ley 4/1994, de Carreteras de Galicia; en lo relativo a los viales, accesos, distancias de edificación, publicidad, cerramientos, etc. del P.E. xxx, se contemplará lo dispuesto en esta Ley.
+- Ley 8/95, de 30 de octubre, del Patrimonio Cultural de Galicia, que establece la necesidad de realizar prospecciones arqueológicas para este tipo de proyectos, trabajos que deberán ser realizados por técnicos competentes en la materia.
+- Ley 10/1995, de 23 de noviembre, de Ordenación del Territorio de Galicia, se estará a lo dispuesto en la misma, en tanto que el P.E. xxx se trata de un proyecto de incidencia supramunicipal; por lo que la tramitación urbanística se realizará como un Plan Sectorial, según se recoge en el art. 22 de esta Ley.
+- Ley 1/1997, de 24 de marzo, del Suelo de Galicia.
+- Ley 7/1997, de 11 de agosto, contra la Contaminación Acústica.
+
+
+3.2. Objetivos del Estudio y Metodología
+
+Los objetivos fundamentales del presente Estudio han sido:
+
+a)  Servir para la identificación, descripción y valoración de los efectos que sobre los elementos del medio tendrá la ejecución y explotación del proyecto.
+
+b)  Permitir la identificación de las normas de diseño y operación para que el proyecto resulte medioambientalmente aceptable y se integre en el entorno o bien llegue a constituir un espacio con identidad propia al dotarlo de un diseño adecuado.
+
+c)  Servir como un instrumento de gestión ambiental, tratando de adaptar el proyecto a su entorno, priorizando los enfoques preventivos, es decir, incluyendo las consideraciones ambientales desde las primeras fases del propio proyecto, ayudando en el proceso de toma de decisiones (naturaleza adaptativa del Estudio de Efectos Ambientales).
+
+d)  Dotar al promotor de una herramienta útil y eficaz de prevención y corrección de impactos que ayuden a la protección del entorno desde la fase de planificación, sirviendo así, como soporte técnico-ambiental tanto de planificación territorial como ambiental.
+
+e)  Servir para la programación de una serie de medidas preventivas, protectoras, correctoras y compensatorias y para el establecimiento de un plan de vigilancia ambiental.
+
+f)  Servir de base para la tramitación tanto ante los Órganos Substantivo y Ambiental como ante los organismos competentes en lo referente a declaración de efectos, permisos, autorizaciones, etc., necesarias para la ejecución, puesta en marcha y explotación del Parque Eólico.
+
+
+De esta forma, el presente Estudio de Efectos Ambientales del parque eólico se realiza de acuerdo a lo dispuesto en el artículo 2º el Decreto 327/1991, de 4 de octubre, de Evaluación de Efectos Ambientales para Galicia, tal como se estipula en el Decreto 205/1995, del 6 de julio, por el que se regula el aprovechamiento de la energía eólica en la Comunidad Autónoma de Galicia y, en este sentido, la metodología utilizada se adapta a las necesidades de contenido de los Estudios de Efectos Ambientales previstas en el artículo 2º del Decreto 327/1991. Ello se realiza porque los mismos documentos solicitados formalmente tienen una lógica dentro de una secuencia temporal que, mediante aproximaciones, puede llegar al establecimiento del efecto real causado y, por tanto, del conjunto de medidas correctoras.
+
+Esta metodología se muestra de forma esquemática en el diagrama siguiente:
+
+
+4. DEFINICIÓN AMBIENTAL GENERAL DEL EMPLAZAMIENTO Y DEL ÁREA DE INFLUENCIA
+
+El Parque Eólico xxx, en los Ayuntamientos de Nogueira de Ramuín, Xunqueira de Espadañedo y Esgos (Orense), se sitúa en el segmento occidental de la Sierra de Meda, en donde destacan en dirección S-NO, dentro de la superficie ocupada por el parque, las cumbres de A Mallada Vella, As Penas de Millán, Outeiro das Aigues, A Tapada, Carballos da Portela y Rebordondo, con alturas que van desde los 1.198 m a los 821 m.
+
+Esta área pertenece a la zona de transición entre la depresión Orensana de Maceda, el Valle xxx y las Sierras Centrales, de la que Meda es la más septentrional. Esta Sierra de Meda representa una transición entre las dos regiones holárticas características: la mediterránea y la eurosiberiana.
+
+Geológicamente la zona se encuentra en el ámbito regional de las formaciones plutónicas de granitos de dos micas, zonada interiormente en granito de dos micas orientado y granito ademalítico de dos micas. Esta homogeneidad geológica marca las condiciones geomorfológicas y edafológicas del área de estudio a nivel local.
+
+Las pautas de modelado geomorfológico a partir de la acción climática sobre esta masa homogénea dan formas redondeadas a subredondeadas, dentro de la fuerte orografia de las sierras que denota un comportamiento notablemente distinto entre las laderas de umbría y de solana.
+
+La hidrología del área de estudio presenta una cierta simplicidad, formada fundamentalmente por cursos cortos con muy fuerte desnivel, condicionados totalmente en su régimen por las condiciones climatológicas descritas. La mayor parte del ámbito geográfico del parque xxx está drenada por cuatro barrancos profundos, de dirección SW-EN a S-N, y que son afluentes xxx por su margen derecha (embalse de Santo Estevo), con una longitud inferior a los 4 kilómetros y desnivel de hasta 750 metros. Destacan en este ámbito los barrancos de Porticela, do Porto do Vao, Lamateiro, y do Porto dos Carros.
+
+En lo que concierne a la vegetación real, en el ámbito del parque xxx domina en primer lugar la vegetación de matorral, que alterna en las zonas más elevadas con terrenos sin vegetación apreciable. En el matorral, las especies más abundantes son el tojo y el brezo. El primero aparece normalmente asociado con otras leguminosas, aunque también hay áreas en que aparecen asociados el tojo y el brezo. Del tojo se presentan normalmente tres de sus especies: Ulex nanus, Ulex gallii u Ullex europeus. Del brezo se encuentran cuatro especies diferentes: Erica cinerea, E. ciliaris, E. tetralix y E. arborea.  El matorral corresponde a una formación regresiva, teóricamente derivada por degradación de formaciones arbóreas climax preexistentes, bosques de rebollos o de robles. En segundo lugar en superficie aparecen las formaciones de pino silvestre, con carácter repoblador en alturas superiores a los 900 metros.
+
+En lo referente a la fauna, en líneas generales puede decirse que en la Sierra de Meda podrían encontrarse del orden del 35% de los vertebrados inventariados en Galicia. A los presentes efectos lo más interesante es centrarse en las especies más sobresalientes, entendidas no por su importancia ecológica que evidentemente poseen, sino por lo restringido de su distribución, o por su carácter de indicador de la calidad del sistema. Cabe destacar, en este sentido, dos especies de aves, Regulus regulus, (estrella de los pinos) una especie paleártica de distribución montana en la península Ibérica, y Aquila chrysaetos, (águila real), que según las observaciones de Romero et al. (1995) confirman la presencia de ejemplares sobrevolando la zona en 1992, aunque no se han detectado la existencia de nidos en esta zona.
+
+A parte de los valores naturales ya indicados, cabe hacer especial meción y destacar los valores paisajísticos de este área, debido a la existencia en la zona de influencia visual del parque eólico de los Espacios Naturales, definidos por las Normas Complementarias y Subsidiarias de Planeamiento, de San Esteban de Ribas xxx y del Cañón xxx, que representan áreas de alto valor natural y paisajístico, y que se observan hacia el norte desde el parque eólico xxx. Concretamente, del vértice definido por las coordenadas 608.5-4695.0 del P.E. xxx al área de San Esteban de Ribas xxx distan aproximadamente, en línea recta hacia el norte, unos 1.750 m y al área del Cañon xxx unos 750 m.
+
+En el plano 2, que se adjunta, se representa la localización del P.E. xxx con respecto a los espacios naturales de interés que lo rodean.
+
+	
+
+
+5. DESCRIPCIÓN DEL PROYECTO
+
+El principal objetivo de este punto es la descripción general de las obras e instalaciones necesarias para llevar a cabo la construcción del Parque Eólico xxx, en los términos municipales de Nogueira de Ramuín, Xunqueira de Espadañedo y Esgos, en la provincia de Orense.
+
+Se persigue la construcción de un Parque dotado de un sistema de producción eléctrica basado en aerogeneradores que aprovechan la energía del viento y permiten el ahorro de otras fuentes energéticas, fomentando a la vez el uso de tecnologías energéticas avanzadas dentro del campo de las energías renovables.
+
+En este sentido, el Parque Eólico xxx estará compuesto de 36 aerogeneradores G47-600 de 660 kW de potencia unitaria, dispuestos en hilera en lo alto del segmento más occidental de la Sierra de Meda. La potencia total del parque será de 25 MW.
+
+El proyecto del parque eólico comprende los aerogeneradores a instalar y la obra civil prevista para su implantación, así como las instalaciones eléctricas entre las torres y la subestación, y la línea eléctrica de conexión a la red. En los apartados que siguen se describen cada uno de los aspectos mencionados.
+
+
+5.1. Localización
+
+El Parque Eólico xxx estará situado en el segmento occidental de la Sierra de Meda, en la provincia de Ourense, en los términos municipales de Nogueira de Ramuín, Xunqueira de Espadanedo y Esgos. El área de implantación del parque se situaría en el norte de la provincia de Ourense, cerca del límite con la provincia de Lugo. Dista, en línea recta, aproximadamente 15 Km de Ourense en dirección sur-suroeste. Las comunicaciones por carretera se realizan a través de la carretera N-120 de Ourense a Ponferrada. El acceso al parque se realizaría desde esta carretera N-120, por la pista que asciende desde Pensos hasta lo alto de la Sierra.
+
+Las coordenadas UTM del polígono dentro del cual estaría ubicado el parque eólico son aproximadamente:
+
+UTM XUTM Y
+608.0
+608.0
+613.0
+613.0
+4692.5
+4695.5
+4691.0
+4689.5
+Dentro de esta zona se instalan los aerogeneradores en la disposición más adecuada para el aprovechamiento energético.
+
+Los aerogeneradores se dispondrán en hilera en tres alineaciones, con orientación aproximada NW-SE: 
+
+	- La primera  y la segunda alineación se situarían al SE del término municipal de Nogueira de Ramuín hasta adentrarse en el término municipal de Parada de Sil, transcurriendo por la cuerda desde Outeiro das Aigues (1.032 m), pasando por A Mallada Vella (1.179 m) hasta la siguiente cumbre (1.197 m). 
+
+	- La tercera alineación se situa al S del término municipal de Nogueira de Ramuín, atravesando una zona de cumbres (A. Peteira 923 m, Alto do Coio 962 m).
+
+
+A continuación se adjunta la ubicación de los 36 aerogeneradores. 
+
+
+ Nº DE ORDENUTM XUTM Y
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+612853
+612762
+612666
+612628
+612554
+612535
+612458
+612383
+612326
+612165
+612088
+612024
+611157
+611085
+611008
+610996
+610906
+610884
+610864
+610783
+610634
+610536
+610438
+610346
+610267
+610187
+610025
+609942
+609856
+609717
+609647
+609582
+609510
+609434
+609372
+609319
+4690206
+4690250
+4690378
+4690542
+4690604
+4690734
+4690799
+4690868
+4690948
+4691025
+4691089
+4691167
+4691557
+4691622
+4691688
+4691881
+4691933
+4692081
+4692232
+4692320
+4691502
+4691519
+4691534
+4691576
+4691639
+4691701
+4691703
+4691754
+4691804
+4691872
+4691946
+4692021
+4692094
+4692156
+4692246
+4692344
+
+
+
+En el plano 4 se identifica la ubicación prevista para el parque, la disposición de los aerogeneradores y las pistas de acceso.
+
+La conexión del parque con la red eléctrica se realiza a través de una subestación eléctrica  y una Línea de Alta Tensión de aproximadamente 2.020 m de longitud.
+      
+      
+5.2. Aerogeneradores
+
+Cada aerogenerador está constituido por una turbina, un multiplicador y un generador eléctrico situados en lo alto de una torre de acero de 45-60 m de altura, cimentada sobre una zapata de hormigón armado.
+	
+Los aerogeneradores que se utilizarán en el Parque Eólico xxx serán de los modelos G47, todos ellos de 660 kW de potencia.
+
+La turbina tiene el rotor situado a barlovento, con un diámetro de 47 m. Está equipada con:
+* tres palas aerodinámicas de paso variable controlado por un microprocesador
+* regulación electrónica de la potencia de salida
+* un sistema activo de orientación. 
+
+Mediante un multiplicador, se acopla a un generador asíncrono de 4 polos y de 660 kW de potencia unitaria. 
+
+Estos equipos van situados en el interior de una góndola colocada sobre la torre metálica.
+
+El eje principal está soportado por 2 rodamientos montados en alojamientos de fundición, los cuales absorben las fuerzas radiales y axiales que provienen del rotor. El buje del rotor se monta, mediante tornillos, directamente al eje principal.
+
+Las palas quedan instaladas atornillándolas a cojinetes asegurando que puedan pivotar fácilmente. El brazo (biela) que hace pivotar las palas une cada terminación con el sistema de paso variable, consiguiéndose de esta forma que todas las palas tengan el ángulo correcto de ataque.
+
+El multiplicador, fabricado a medida, es instalado detrás del eje principal. El apoyo del multiplicador transfiere todos los momentos desde la parte frontal a la base del bastidor, diseñada para distribuir, por igual, las cargas.
+
+El freno de disco, diseñado para acoplarlo en el eje de alta velocidad (de salida) del multiplicador, consta de tres sistemas hidráulicos (mordazas de frenado) con pastilla de freno sin amianto (asbestos). El generador es activado por el eje de salida del multiplicador mediante un acoplamiento.
+
+La unidad hidráulica alimenta al sistema de freno y al sistema de regulación del paso variable o ángulo de ataque. Tanto el generador como la unidad hidráulica están instalados en la parte posterior del bastidor.
+
+La orientación se consigue mediante dos sistemas de transmisión eléctrica, montados en la base del bastidor. Dicha transmisión engrana con la corona de orientación atornillada en la parte superior de la torre. La orientación está controlada mediante una veleta optoelectrónica.
+
+La turbina se monta sobre una base tubular troncocónica galvanizada/metalizada y pintada en blanco, que aloja en su interior, la unidad de control del sistema, basada en dos microprocesadores.
+
+En el anejo 1 se adjunta documentación sobre las características de los aerogeneradores.
+
+
+5.3. Montaje de los aerogeneradores
+
+El aerogenerador se transporta a pie de obra como un conjunto de piezas dispuestas para su ensamblaje, del modo que se detalla a continuación:
+
+* Dos tramos de la torre tubular.
+* Góndola completa, con cables de conexión a la unidad de control a pie de torre.
+* Tres palas sin ensamblar.
+* Buje del rotor y su protección.
+* Unidad de control.
+* Accesorios (escalera interior, línea de seguridad, tornillos de ensamblaje, etc.).
+
+Se ensamblan los tramos de la torre, verticalmente, sobre la base de anclaje, mediante tornillos que unen las bridas colocadas en los extremos de los tramos. A continuación, se colocan los diversos accesorios de la torre (escaleras, plataformas, cable de seguridad anticaídas, etc.).
+
+Se procede al ensamblaje del rotor, sobre el terreno, acoplando las palas al buje y colocando la protección frontal.
+
+Una vez levantada la torre, se procede al levantamiento del resto de equipos mediante una grúa de 250 Tn, operando del modo siguiente:
+
+* Se iza la góndola, y cuando esté situada sobre el collarín superior de la torre, se aprietan los tornillos de sujeción.
+* Se eleva el rotor completo, en posición vertical. Se fija el buje del rotor al plato de conexión situado en el extremo delantero del eje principal de la góndola.
+* Se conecta el mecanismo de regulación del paso de las palas.
+* Se procede al tendido de los cables de la góndola por el interior de la torre, para su posterior conexión a la unidad de control.
+* Se coloca la unidad de control sobre los apoyos dispuestos en la cimentación y se conectan los cables de potencia y de control de la góndola, quedando el aerogenerador dispuesto para su conexión a la red.
+
+Previamente al montaje, se debe construir una zapata de cimentación en la que quedan embutidos los pernos de anclaje de la torre.
+
+La grúa de 250 Tn, necesaria para elevar la torre, el rotor y la barquilla, precisa disponer de una plataforma, a pie de torre, de 13 x 13 m, así como de un camino de acceso de 4 m de ancho.
+
+
+5.4. Obra civil
+
+Las características topográficas del emplazamiento hacen precisas las siguientes obras para la colocación de las torres y los equipos que conforman la estructura de cada aerogenerador:
+
+* Camino de acceso al pie de las torres (3 m de ancho). Se precisa para el transporte de los equipos y desplazamiento de las grúas.
+* Zapatas cuadradas para anclaje de las torres. Se proyectan de hormigón armado, dimensionadas para resistir los esfuerzos de vuelco y deslizamiento que producen las fuerzas actuantes sobre las torres. Sus dimensiones son de 9,3 m de ancho, 9,3 m de largo y 0,8 m de altura. Resulta condicionante la acción de vuelco lo que implica que se proyecten muy esbeltas, de grandes dimensiones en planta y canto reducido. Sobre cada zapata se dispone un pedestal cilíndrico, de dimensiones de 1,2 m de altura y diámetro 0,4 m, sobre el que se sitúa la sección de anclaje de la torre. Tanto las zapatas como los pedestales se  proyectan de hormigón armado. Toda esta estructura va enterrada en el terreno sobresaliendo sólo unos 20 cm los pedestales sobre los que se fijan las torres.
+* Plataformas para situar las grúas junto a las torres (de 13 x 13 m). Se precisan para la elevación de los equipos. Se proyectan construir con materiales seleccionados de las excavaciones y deberán compactarse adecuadamente para asegurar la estabilidad de las grúas.
+* Se incluyen en el proyecto las zanjas y arquetas necesarias para colocar las canalizaciones eléctricas. Las arquetas se proyectan de hormigón armado y con tapas también de hormigón armado.
+
+Una vez realizadas las obras, se contempla en el proyecto el acondicionamiento y recuperación paisajística del entorno para dejarlo tal como se encontraba antes de la instalación de los aerogeneradores.
+
+* Se incluyen también las obras civiles de la subestación consistentes en:
+==> Explanación del terreno a una única cota de altimetría.
+==> La recogida de aguas pluviales se efectuará por medio de colectores formados por cunetas y tuberías de cemento de distintos diámetros. A los colectores se conducirán todas las aguas pluviales de vialidades, galería de cables de control y correspondientes a las explanadas del sistema eléctrico.
+==> Para la cimentación de las estructuras, la obra consiste en construir los cimientos soporte de las estructuras metálicas que son del tipo prismático de hormigón en masa tipo H-150. Los anclajes de la estructura metálica se realizarán mediante barras corrugadas roscadas, embebidas en el hormigón.
+==> Las zanjas de cables serán del tipo acequia de 0,80 m con tapas de hormigón aligerado de 1 m. Para el apoyo de los cables de control se colocarán unas pequeñas losas de hormigón de modo que el agua discurra por la parte inferior de la galería hasta los colectores de desagüe.
+==> Las cimentaciones de apoyo de los aparatos son de tipo prismático de hormigón en masa tipo H-150. Los anclajes de los soportes metálicos se realizarán mediante barras corrugadas roscadas, embebidas en el hormigón.
+==> Se proyecta también la construcción de las cimentaciones de apoyo de los proyectores de iluminación, así como las correspondientes canalizaciones eléctricas para el tendido de cables.
+==> Junto al transformador se realizará un foso de recogida de aceite dimensionado para albergar toda la capacidad del aceite del transformador en caso de derrame del aceite del mismo.
+==> Todo el recinto estará protegido por un cierre de valla metálica para evitar el acceso a la misma de personas ajenas al servicio. La altura de este cierre será de 2,25 m cumpliendo con lo especificado en el artículo 7º apartado B, del Reglamento de Estaciones de Transformación en vigor, a estos efectos.
+
+
+5.5. Instalaciones eléctricas
+
+	El sistema de potencia del parque se estructura en los siguientes subsistemas:
+
+Aerogeneradores
+Se propone la instalación de máquinas de 660 kW de potencia unitaria, con las características que ya se han comentado. (Ver anejo 1)
+
+Para cada aerogenerador se instalará un centro de transformación (C.T.), que irá ubicado dentro de la torre del propio aerogenerador. El C.T. de cada aerogenerador estará integrado por un transformador, celdas de Media Tensión (20 kV), elementos de telemando y auxiliares y material de seguridad.
+
+
+Red de media tensión
+Los C.T. de cada aerogenerador se unirán a la red de Media Tensión (M.T.) a través de las celdas de M.T., mediante cables de potencia instalados directamente en zanjas enterradas convenientemente señalizadas. 
+
+La red de M.T. en 20 kV unirá -mediante tendido subterráneo instalado a 1 m de profundidad- los C.T. de las turbinas con las celdas de llegada situadas en una subestación 20/132 kV.
+
+Subestación transformadora
+
+Se instalará un edificio formado por elementos prefabricados de hormigón armado con aislamiento térmico. El edificio constará de una sola planta  con dos salas principales. Una de control en la que irán ubicados los equipos correspondientes al control, protección, comunicación,  servicios auxiliares en baja tensión, etc, necesarios para el correcto funcionamiento de la subestación. Esta dependencia tendrá unas dimensiones interiores en planta de 4,8 m por 7,4 m y una altura de 4,3 m.
+
+En la otra dependencia se ubicarán las celdas de media tensión y tendrá unas dimensiones interiores en planta de 12 m por 7,4 m y una altura de 4,8 m. Exteriormente el edificio irá perimetrado con una acera perimetral de 1,10 m. Para el acceso exterior a las distintas dependencias se instalarán dos celdas metálicas de dimensiones adecuadas para el paso de los equipos a montar. Los paneles de fachada será de hormigón liso y acabado de pintura en obra.  El panel de cubierta quedará rematado con un cerramiento matálico tipo . 
+
+El cerramiento que delimitará el terreno destinado a alojar la subestación estará formado por una malla metálica rematada en su parte superior con alambre de espino, fijado todo sobre postes metálicos de 48,3 mm de diámetro, colocados cada 2,5 m. La sujección de los postes al suelo se realizará mediante dados de hormigón rematandose el espacio entre dados con un bordillo prefabricado. Este cerramiento tendrá una altura de 2,3 m sobre el terreno y albergará un área de 95 m por 55 m.
+ 
+La subestación recibirá energía de los aerogeneradores a través de la red de Media Tensión. La disposición general de la instalación en planta se ha previsto de forma que la entrada de la red se realice subterráneamente en 20 kW, y la de salida en 132 kV se realice mediante línea aérea hasta el punto de enlace con la Red de transporte y distribución nacional.
+
+
+
+Línea de alta tensión
+La energía eléctrica producida por el parque, y transformada para su transporte a 132 kV en la subestación descrita en el punto anterior, será adquirida por la Compañía Eléctrica de la zona (XXX). 
+
+Para efectuar la evacuación de la energía se instalará una línea de alta tensión de 220 kV, de doble circuito  de 2.120 m desde la estación transformadora del parque eólico al punto de conexión a la red de alta tensión (ver plano 5.1).
+
+Los apoyos serán metálicos de celosía, constituidos por perfiles de acero laminado de alas iguales galvanizados en caliente. Los apoyos utilizados serán de los tipos 1161, 1165, 1166 y 1169 (ver anejo nº 1). Las fijaciones de los apoyos al terreno se realizarán mediante cimentaciones independientes una por cada pata.
+
+
+5.6.  Producción de energía.
+
+La producción de energía del Parque se ha estimado en base a las siguientes hipótesis:
+
+* Se utilizan datos de viento de los estudios realizados por Xxx, Ingeniería y consultoría, S.A. Los datos se agrupan por intervalos de velocidad y se les aplica la curva de potencia de los aerogeneradores. La velocidad media anual del viento ha sido cifrada en 7 m/s.
+* La curva de potencia/velocidades corresponde al aerogenerador G47, en condiciones normales de 15º de temperatura y altura a nivel del mar, a las que corresponde una densidad del aire de 1,225 Kg/m3. La velocidad mínima de funcionamiento es de 5 m/s y a una velocidad 15 m/s se alcanza la potencia máxima de 660 kW.
+* La potencia real en el Parque se calcula para una densidad del aire a aproximadamente 1.100 m de altura y a una temperatura anual de 8 º C. Hasta 14 m/s se reduce linealmente en función de la densidad y, para velocidades superiores, se limita la potencia al máximo instalado de 660 kW.
+
+El resultado del cálculo es de 1,33 GWh/año, para un aerogenerador de 660 kW. En la práctica, y como es usual en este tipo de instalaciones, es preciso considerar una reducción del 6% en el nivel de disponibilidad, mantenimiento, averías, etc. La producción neta media sería de aproximadamente 1,25 GWh/año, equivalente a aproximadamente 2.080 horas de utilización a plena potencia.
+
+Con estos datos, la producción neta anual media estimada del Parque sería:
+
+Número de
+ MáquinasPotencia
+(MW)Producción
+(GWh/año)
+36
+25
+51,25
+La previsión de producción eléctrica del parque sería equivalente al consumo de aproximadamente 8.500 hogares, o dicho de otro modo, el Parque capaz de abastecer a una población de aproximadamente 34.000 habitantes (suponiendo una media de 4 personas por cada hogar servido).
+
+
+5.7. Residuos generados.
+
+Comparativamente con otras fuentes de energia, la energía eólica resulta claramente ventajosa en aspectos tales como la emisión de contaminantes, la producción de residuos tóxicos, peligrosos o radioactivos, el calentamiento global por la no emisión de CO2, la lluvia ácida o el agotamiento de recursos. 
+
+La energía eólica no produce gases tóxicos ni vertidos al medio ambiente de ningún tipo ni contribuye tampoco a la lluvia ácida. Aprovecha la energía del viento para producir electricidad y dicha transformación se verifica mediante medios mecánicos. Se trata pues de una energía limpia que por cada kWh de electricidad que genera, evita la emisión a la atmosfera de 1 kg de CO2..
+
+
+
+
+6. INVENTARIO AMBIENTAL.
+
+6.1. MEDIO FÍSICO
+
+6.1.1.Ruidos
+
+Nivel de ruido actual
+Se han realizado mediciones in situ para conocer los niveles actuales de ruido en la zona de estudio.
+
+Las mediciones efectuadas con un sonómetro SP120 PROMAX, durante una jornada en la localidad más próxima al parque de Sil, Pardeconde y Picornio, arrojaron un sonido ambiental medio aproximado de 40 dB (A).
+
+Nivel de ruido de los aerogeneradores
+
+El fabricante de los equipos incluye en su documentación los datos de mediciones del nivel de ruido realizadas en Dinamarca y según la normativa vigente en aquél país. Esta documentación se adjunta en el anejo 2.
+
+Los resultados obtenidos fueron los siguientes: El nivel de ruido emitido por la turbina es de LWA.ref = 108 dB para una velocidad de viento de 8 m/s y a una distancia de 10 m. El gradiente del nivel del ruido con la velocidad del viento se ha estimado en 0,5 dB por m/s. En las correspondencias establecidas entre el ruido producido por la velocidad del viento y el producido por los aerogeneradores nos encontramos que para una velocidad de 8 m/s  el ruido ambiental es de 43 dB y el de la turbina es de 57,2 .
+
+
+
+
+6.1.2. Climatología 
+
+El área de la futura instalación del parque eólico del  Sil pertenece a la zona de transición entre la Depresión Orensana de Maceda, el valle xxx y las Sierras Centrales, de la que Meda es la más septentrional. 
+
+Independientemente del criterio de zonificación climática que se utilice, Allué (1966), Papadakis (1966) o Thornthwaite  (1957), la Sierra de Meda representa una transición entre las dos regiones holárticas características, la mediterránea y la eurosiberiana. 
+
+Como ejemplos diagnósticos de cada dominio se han seleccionado las estaciones metereológicas más representativas, Alto do Rodicio (42º 18, 7º 37) a 700 m de altitud s.n.m. y la de San Estebo de Ribas de Sil (42º 26, 7º 40) a 231 m.s.n.m. Trazando un transecto entre ambas, quedaría englobada la Serra de Meda. La longitud de este transecto es de escasamente 12 km y en el se va a encontrar un gradiente transicional entre las regiones antes mencionadas.
+ 
+Así, para Papadakis, la estación de Rodicio se correspondería con una zona de clima mediterráneo templado fresco, y la estación de Ribas de Sil  es mediterráneo templado, estando la Serra de Meda más próximo del segundo que del primero.
+
+Para Allué, el Alto de Rodicio y las cumbres de Meda son de clima centroeuropeo; las partes medias de Meda son mediterráneo subhúmedo con tendencia centroeuropea y San Esteban mediteráneo subhúmedo con tendencia atlántica.
+
+Para Thornthwaite, la estación de Rodicio se corresponde con características perhúmedas, Serra de Meda presenta todos los gradientes de transición posibles, húmedo IV, III, II, siendo San Estebo húmedo I. 
+
+Los datos de la estación de Rodicio son como se representan en el Diagrama de Gaussen, donde se representan las temperaturas y las precipitaciones frente a los meses. La precipitación total acumulada es de 1.785 ml anuales, repartidos muy desigualmente, siendo el verano la estación más seca con el 9% del total, con máximos del 37% en invierno, y precipitaciones también abundantes en primavera y
+ otoño que suponen el 54% del total anual.
+
+
+
+   Figura.... Diagrama de Gaussen de la estación de Rodicio.
+
+Los datos correspondientes a la estación de San Estevo de Ribas de Sil se reflejan en el siguiente diagrama de Gaussen, con unas precipitaciones anuales de 1.494 ml, relativamente inferiores a las de la estación de Rodicio, pero con una distribución semejante con un máximo anual en invierno del 41% y un mínimo en verano de un 8% repartiéndose equilibradamente las precipitaciones en primavera y en otoño. El diferencial entre ambas estaciones es la temperatura, siendo la media de Rodicio de 9º y la de San Estevo de 13,7.
+
+
+
+   Figura..... Diagrama de Gaussen de la estación de San Estevo de Ribas de Sil
+
+
+6.1.3. Geología, geomorfología y edafología 
+
+La zona geológica de emplazamiento del parque eólico se encuentra, por completo, en el ámbito geológico regional de las formaciones plutónicas de granitos de dos micas, zonada interiormente en: 1) granito de dos micas orientado; y 2) granito adamellítico de dos micas.
+
+La distribución superficial del parque eólico previsto, respecto a las formaciones geológicas resulta, aproximadamente:
+
+Zona% superficielitologíaParque eólico xxx70%granito de dos micas orientado30%granito adamellítico de dos micas
+El plano 5 corresponde al mápa geológico de la zona en cuestión.
+
+La homogeneidad geológica descrita marca inevitablemente las condiciones geomorfológicas y edafológicas del área de estudio a nivel local.
+
+El área donde se va a instalar el Parque Eólico de Meda se encuentra en una zona de transición entre la depresión orensana al sureste,  las formaciones montañosas al norte y al este donde comienzan las estribaciones del nudo montañoso de las sierras orientales.
+
+En este área, el juego de fracturas tuvo un gran desarrollo. Como se puede observar en el mapa geológico, existen una serie de fracturas con dirección noroeste sureste en la que destaca la red de fallas de Rodicio. Esta red de fracturas hercínicas van a desarrollar un importante papel en las etapas posteriores, sin olvidarse de la microfracturación que tiene un gran peso en el modelado al detalle. 
+ 
+Así en el neogeno, se producen fenómenos de descompresión entre los bloques, generando elevamientos y hundimientos de los mismos, momento en el que se produce el encajamiento del río Sil, creandose el elemento geomorfológico más característico, los Cañones xxx.
+
+Además esta zona se vió afectada por procesos glaciares recientes, más evidentes en Serra de Queixa y Manzaneda, pero reflejadas en los materiales de desplazamiento periglacial en descenso desde Monte Meda. En los cortes existentes en el terreno demuestran que fueron afectados de una manera importante.
+
+Las pautas de modelado geomorfológico a partir de la acción climática sobre esta masa homogénea, dan formas redondeadas a subredondeadas, dentro de la fuerte orografia de las sierras que denota un comportamiento notablemente distinto entre las laderas de umbría y de solana.
+
+La zonificación de suelos presente en el área es la respuesta a la interacción entre el sustrato granítico común, la altitud, pendiente, y orientación de las áreas. Así, en las zonas más elevadas (cumbres y laderas más abruptas), de un carácter fuertemente erosivo, se forma un delgado horizonte con abundancia de elementos gruesos y pobreza en materia orgánica que descansa sobre roca consolidada. Se clasifica, según la sistemática del CSIC como protoranker y como Lithic Xerorthent, según la USDA Soil Taxonomy. 
+
+En las zonas más  frías y húmedas de las cumbres se desarrolla una variante del ranker pardo: el ranker distrófico o Lithic Xerunmbrept, con un horizonte de lavado Ac, muy ácido que se asienta directamente sobre la roca compacta.
+
+Ya en las zonas que la configuración geográfica y climática lo permite, se dispone un suelo con un mayor grado de evolución, pero todavía sin un gran desarrollo. Su perfil normalmente posee un horizonte A Úmbrico u Ochrico rico en materia orgánica y con bajo porcentaje de saturación por bases, apoyado sobre un horizonte C de la roca madre granítica con cierta alteración.
+
+La configuración geológica, geomorfológica y edafológica aporta unas condiciones favorables para la instalación del proyecto, sin que puedan esperarse problemas de especial envergadura relacionados con aspectos geotécnicos básicos o con los derivados de la calidad de la cubierta del suelo.
+
+Por otra parte, resulta importante destacar en este área la ausencia de formaciones litológicas ígneas básicas o ultrabásicas, así como también la ausencia de formaciones calcáreas, ya que estos tipos, como anomalía litológica dentro del ámbito de Galicia, son los que pueden traer incorporadas especies o formaciones vegetales de carácter endémico.
+
+
+6.1.4. Hidrología	
+
+La hidrología del área de estudio presenta una cierta simplicidad, fomada fundamentalmente por cursos cortos con muy fuerte desnivel, condicionados totalmente en su régimen por las condiciones climatológicas descritas en el punto primero.
+
+La mayor parte del ámbito geográfico del parque xxx está drenada por cuatro barrancos profundos, de dirección SW-EN a S-N, y que son afluentes xxx por su margen derecha (embalse de Santo Estevo), con una longitud inferior a los 4 kilómetros y desnivel de hasta 750 metros. Destacan en este ámbito los barrancos de Porticela, do Porto do Vao, Lamateiro, y do Porto dos Carros.
+
+En el plano 6 se recoge la red hidrográfica de la zona en cuestión.
+
+6.2. MEDIO BIÓTICO
+
+6.2.1. Vegetación potencial
+
+La vegetación potencial del área está ligada a las características climáticas de la zona, que van a estar asociadas a la distribución de áreas biogeográficas, principalmente las fitosociológicas. La Sierra de Meda ( donde se sitúa el parque xxx) representa una zona de ecotonía entre dos regiones fitosociológicas, la Eurosiberiana Cantabro-Atlantica  subsector Xuresiano-Queixense y la Mediterránea Carpetano-Ibérico-Leonesa subsector Orensano-Sanabriense. Para S. Rivas Martínez  (1987)  El área mediterránea .... sigue por la antigua laguna de Antela hasta el valle de Laza, y continúa por la cuenca del río Camba , laderas orientales y septentrionales de la Sierra de Queixa hasta cerca del embalse, alto de Cordeira y vertientes septentrionales de las Sierras de Meda y Múa  (pasillo mediterráneo xxx).
+
+Con relación a los pisos bioclimáticos, y siempre referidos a la Sierra de Meda, existen el piso Montano para la zona Eurosiberiana, Mesomediterraneo para el Cañon xxx y Supramediterránea para el resto.
+
+Las especies fitosociológicamente asociadas a cada piso son las siguientes:
+
+- Piso Montano (Eurosiberiano) que tiene las siguientes características; Temperatura anual media ente 12º-7º, Tª media de las mínimas mes más frío de 2º a -4º, Tª media de las máximas del mes más frío 10º a 3º, índice de termicidad entre 240 y 60. Existen riesgos de heladas de Octubre a Mayo. La Sigmetum asociada es Vaccino myrtilli - Querceto roboris, robledales oligotrofos que se asientan habitualmente en sustratos siliceos pobres en bases (tierra parda oligotrofa centroeuropea, con asociación de brezales eurosiberianos, Daboecion cantabricae, y en el que aparecen elementos mediterráneos iberoatlánticos. Normalmente aparecen Ulex minor, U. europaeus, U. gallii, Daboecia cantabrica, Erica cinerea, E. umbellata, Calluna vulgaris, etc. Normalmente se ven orlados por piornales (xesteiras) donde son comunes Cytisus scoparius, Cytisus striatus, Genista florida, Adenocarpus complicatus, Erica arorea, etc. Esta asociación de robledales galaicoportugueses de la serie montana ocupa un piso superior, (se sitúa entre los 600 y los 1300 m.) a la Rusco - Querceto roboris característica del piso colino. (< 600).
+
+- En la parte superior del montano es posible que aparezca la asociación Saxifrago spathularidi - Betulum celtibericae, que a pesar de tener unos límites imprecisos y últimamente está siendo cuestionada (Izco in Vales 1994), se correspondería con las cumbres de Meda , con las comunidades de Betula celtiberica, Acer pseudoplatanus , Q. Pyrenaica, orladas por Genista florida, Erica arborea y Cytisus striatus.
+		
+- En lo que se refiere a la zona mediterránea se corresponde con el piso Supra - meso mediterráneo que se caracteriza por tener una temperatura media de entre 13º y 8º, Tª  media de las mínimas del mes más frío entre -1º y -4º, la Tª media de las máximas del mes más frío entre 8º-3º, índice de termicidad entre 200 y 70 con riesgo de heladas de Octubre a Mayo (es preciso resaltar que conforme nos adentramos en el Valle xxx el piso es netamente mesomediterráneo) y que se corresponderían con una estrecha franja entre la parte septentrional de Meda y el río Sil. Su sigmetum es Holco molli - Querceto pyrenaica, melojares supramediterráneos con individuos de Quercus suber, más abundantes cuanto más próximos al Sil.
+
+6.2.2. Vegetación real
+
+La vegetación predominante se corresponde con la presencia de brezos y tojos en lo referente a la vegetación arbustiva; destacando con referencia a la arbórea los abedulares asociados a los cursos de agua, los pinares de repoblación. Cabe también mencionar por su interés, de la fraga asociada al arroyo de Porto dos Carros en el extremo nororiental del parque, qunque en absoluto se verá afectada por ninguna de las obras proyectadas.   
+
+Las asociaciones presentes son:
+
+* Holco molli-Betuletum celtibericae: Está bastante bien representada, sobre todo en la cabecera de los arroyos y zonas con una cierta hidromorfia, llegando a la psodolización. Las especies presentes son:                                                                                                  
+ 
+	Betula celtiberica			Lithodora prostrata
+	Quercus robur			Rubus ulmifolius	
+	Erica arborea				Pteridium aquilinum
+      Holcus mollis				Lonicera periclymenum
+      Salix atrocinerea			Ulex europaeus
+      Teucrium scorodonia			Viola riviniana
+      Agrostis capillaris
+      
+* Cytisus scopari-Genistetum polygaliphyllae: Alcanza una altura de 2-4 m. con cobertura elevada y presenta como especies características las siguientes:
+
+	Cytisus scoparius			Deschampsia flexuosa
+	Erica arborea				Potentilla erecta
+	Agrostis capilaris			Rubus ulmifolius
+	Vaccinum myrtillus			Viola riviniana 
+	Stellaria holostea			Quercus robur
+	Genista florida			Betula celtiberica
+	Holcus mollis				Quercus pyrenaica
+
+
+* Halimio alyssoides-Ullicetum gallii, coloniza suelos pobres, presentando un porte menor de un metro con una elevada cobertura. Las especies asociadas son:
+
+	Ulex minor				Potentilla erecta
+	Daboecia cantabrica			Halimium alyssoides
+	Pseudarrhenatherum longifolium	Lithodora prostrata
+	Agrostis curtisii			Pteridium aquilinum
+
+* Pterosparto tridentati-Ericetum aragonensis. Coloniza suelos poco profundos pero con abundante humedad. Las especies asociadas son:
+
+Erica aragonensis			Pterospartum tridentatum
+Agrostis curtisii			Halimium alyssoides
+Polygala microphylla			Erica umbellata
+Asphodellus albus			Quercus pyrenaica
+
+* Daboecio cantabricae-Ericetum aragonensis subassoc. pinetosetum sylvestri. Es la comunidad presente por labores de repoblación forestal para la obtención de madera siendo las especies asociadas las siguientes:
+
+	Pinus sylvestris			Erica aragonensis
+	Pterospartum tridentatum		Agrostis curtissi
+	Halimium alyssoides			Polygala microphylla
+	Simethis mattiazii			Asphodelus albus
+	Erica umbellata			Luzula lactea
+      Quercus pyrenaica			Tuberaria globularifolia 
+
+
+6.2.2.  Fauna
+
+En lo referente a este apartado, se contempla las especies de vertebrados presentes no sólo en el  parque, sino también de su área de influencia. A modo de resumen, en la zona estudiada mediante revisión bibliográfica y visitas realizadas al campo, se pueden encontrar cinco  especies de anfibios y reptiles, setenta y tres de aves y treinta y tres de mamíferos, haciendo un total de ciento once especies de vertebrados en el área de estudio (excluyendo a peces y fauna acuática en general, ya que no les afecta el parque eólico). A continuación se detallan cada una de ellas, presentadas  en grupos:
+
+* Anfibios y Reptiles
+
+FamiliaNombre científicoNombre vulgarProtec.DiscoglossidaeDiscoglossu galganoi Capula-BufonidaeBufo bufo L.-LacertidaeLacerta scheriberi  Bedriaga-LacertidaePodarcis bocagei  Seoane-LacertidaePodarcis hispanica Steindachner -
+Estas especies se encuentran en la Lista Roja de Vertebrados Españoles (1986) dentro de la categoría de NO AMENAZADAS
+
+* Aves
+FamiliaNome científicoProtecciónAccipitridaeAccipiter nisus  L.. 97/49 CE. Anexo IAccipitridaeButeo buteo L..-AcciptricidaeAquila chrisaetos L..97/49 CE. Anexo IFalconidaeFalco tinnunculus L..-PhasianidaePerdix perdix L..hispaniensis97/49 CE. Anexo IPhasianidaeAlectoris rufa L..-PhasianidaeCoturnix coturnix L..-CharadriidaeVanellus vanellus L..-ColumbidaeColumba palumbus L..-ColumbidaeColumba oenas L..-ColumbidaeStreptopelia turtur L..-CuculidaeCuculus canorus L..-TytonidaeTyto alba Scop.-StringidaeAsio otus L..-StringidaeBubo bubo L..97/49 CE. AnexoIStringidaeAthene noctua  Scop.. -CaprimulgidaeCaprimulgus europaeus  -ApodidaeApus apus  L. -UpupidaeUpupa epops L. -PicidaePicus viridis L. -PicidaeDendrocopos major  L.-AlaudidaeLullula arborea L.97/49 CE. Anexo IAlaudidaeAlauda arvensis L.-HirundidaeHirundo rupestris Scop.-HirundidaeHirundo rustica L.-HirundidaeRiparia riparia L. -HirundidaeDelichon urbica  L.-MotacillidaeAnthus compestris  L.97/49 CE. Anexo IMotacillidaeAnthus trivialis  L.-MotacillidaeAnthus espinoleta  L.-MotacilidaeMotacilla flava  L.-MotacillidaeMotacilla cinerea  L.-MotacillidaeMotacilla alba  L.-TroglodytidaeTroglodytes troglodytes  L.-PrunellidaePrunella modularis  L.-MuscicapidaeSylvia atricapilla  L.-MuscicapidaeSylvia comunis  L.-MuscicapidaeSylvia undata  Bodd.97/49 CE. Anexo IMuscicapidaePhilloscopus collybita  Viell.-MuscicapidaePhylloscopus bonelli Viell.  -MuscicapidaeRegulus ignicapillus Temm-MuscicapidaeRegulus regulus L.-MuscipicidaeSaxicola rubetra L.-MuscipicidaeSaxicola torcuata L. -MuscipicidaeOenanthe hispanica L.-MuscipicidaePhoeniclurus ochruros Gm-MuscipicidaeErithacus rubecula L.-MuscipicidaeLuscimia megarhynchos bREHM-MuscipicidaeTurdus merula  L. -ParidaeAegithalos caudatus L.-ParidaeParus ater  L.-ParidaeParus cristatus L.-ParidaeParus caeruleus L.-ParidaeParus major L.-SittidaeSitta europaea L. -CerthriidaeCerthria brachydactyla Brehm.-EmberizidaeEmberiza calandra L. -EmberizidaeEmberiza citrinella L.-EmberizidaeEmberiza cia L.-EmberizidaeEmberiza cirlus L.-FringillidaeFringilla coelebs L.-FringillidaeSerrinus serrinus L.-FringillidaeCarduelis chloris L.-FringillidaeCarduelis carduelis L.-FringillidaeAcanthis cannabina L.-PloceidaePasser domesticus L.-PloceidaePasser montanus L.-PloceidaeStorninus unicolor Term.-OriolidaeOriolus oriolus L.-CorvidaePica pica L.-CorvidaeGarrulus glandarius L.-CorvidaeCorvus corone  L.-CorvidaeCorvus corax  L.-
+
+Las especies que aparecen en negrita en los listados anteriores, según la Lista Roja de los Vertebrados Españoles (1986), han sido catalogadas como amenazadas en distintos niveles como se especifíca a continuación:
+
+Aquila chrisaetos  y Bubo bubo posen la categoría de RARA;Perdix perdix y Riparia riparia posen la categoría de INSUFICIENTEMENTE CONOCIDA;Streptopelia turtur
+está catalogada como VULNERABLE. 
+
+La definición de las diferentes categorías según el estado de conservación de mayor a menor peligro es:
+
+	VULNERABLE:Taxones que entrarían en lla categoría  EN Peligro en un futuro próximo si los factores causales continuaran actuando. Se incluyen aquellos taxones en los que todas o la mayor parte de sus poblaciones sufren regresiones debido a su sobreexplotación, a amplia destrucción del habitat o a cualquier otra perturbación ambiental; con poblaciones que han sido gravemente reducidas y cuya supervivencia  no está garantizada, y los de poblaciones más abundantes, pero que están amenazadas por factores adversos de importancia en toda su área de distribución.
+
+	RARA: Taxones con poblaciones (españolas) pequeñas, que sin pertenecer en la actualidad a las categorias En Peligro o Vulnerable corren riesgo. Normalmente estos taxones se localizan en áreas geográficas o habitats restringidos, o bien presentan una distribución rala en un área más extensa.
+
+	INSUFICIENTEMENTE CONOCIDA: Taxones que se sospecha pertenecen a alguna de las categorías  precedentes, aunque no se tiene certeza debido a la falta de información. 
+
+
+* Mamíferos
+
+FamiliaNome científicoNombre vulgarProtecciónErinaceidaeErinaceus europaeus L.-Talpa occidentalis-Galemys pyrenaicus-Sorex coronatus-Sorex granarius-Sorex minutus-Neomys anomalus-Crocidura russula-Crocidura suaveolens-Rhinolophus hipposideros-Rhinolophus ferrumequinum-Pipistrellus pipistrellus-Oryctolagus cuniculus-Lepus capensis-Sciurus vulgaris-Clethrionomys glareolus-Microtus agrestis-Pitymys lusitanicus-Arvicola sapidus-Ratus norvegicus-Rattus rattus-Apodemus sylvaticus-Mus musculus-Canis lupus-Vulpes vulpes-Mustela erminea-Mustela nivalis-Martes martes-Martes foina-KMeles melesKGenetta genetta-Sus Scrofa-Capreolus capreolus-
+Las especies que aparecen en negrita en los listados anteriores, según la Lista Roja de los Vertebrados Españoles (1986), han sido catalogadas como amenazadas en distintos niveles como se especifíca a continuación:
+
+Meles meles pose  la categoría de INSUFICIENTEMENTE CONOCIDA;
+
+La definición de esta categoria se recoge en el apartado de Aves.
+
+
+
+
+6.3. MEDIO SOCIOECONÓMICO
+
+
+6.3.1.- Población, actividades e infraestructuras.
+
+El futuro parque eólico de Sil se sitúa en la divisoria de los ayuntamientos de Xunqueira de Espadanedo, Esgos y Nogueira de Ramuín, en la provincia de Orense.
+
+La superficie de estos ayuntamientos abarca en total 161,4 km2, repartidos en municipios en la siguiente proporción :(28,8 Km2 Xunqueira de Espadanedo, 37,9 km2  Esgos y 94,7 km2 Nogueira de Ramuín. Posen una densidad de población de 33,9 hb/km2 (censo I.N.E. 1991), que es sólo el 62% de la densidad poblacional media provincial (54,8 hb/km2).
+
+El ayuntamiento de Xunqueira de Espadanedo está dividido en catorce parroquias, contando con una población de 1216 hb. Según censo I.N.E. de 1991, siendo la de Santa María de Xunqueira de Espadanedo  donde se sitúa la capital municipal y donde se ubica el núcleo poblacional más importante.
+
+La base económica municipal se asienta en un sector primario, principalmente forestal y ganadero  que es la actividad principal del 42% de la población ocupada. La agricultura es básicamente de subsistencia, no así la ganadería, sobre todo la del bovino, porcino y avícola por la influencia del grupo Coren, (Cooperativas Orensanas).
+
+En lo referente al sector secundario aunque según se recoge en los datos del I.N.E., el 33% de la población ocupada lo hace en este sector de actividad, en realidad estas cifras están sobredimensionadas, ya que aún tratándose de recidentes en este ayuntamiento, ejercen su actividad en la capital provincial.
+
+El sector servicios sólo ocupa al 15% del total, pese a estar integrados en los itinerarios de la Ribeira Sacra.
+
+El ayuntamiento de Esgos está dividida en siete parroquias, con una población total de 1468 hb. Según censo I.N.E. de 1991, situándose la capital municipal en la parroquia de Santa María de Esgos, donde se asienta el núcleo máis importante de población.
+
+La base económica del municipio es el sector primario que ocupa al 67% de la población activa, destacando el sector forestal y el ganadero- principalmente porcino y bovino- ya que el sector industrial y de servicios es casi inexistente en el municipio, correspondiendo esta función a la capital municipal.
+
+El ayuntamiento de Nogueira de Ramuín está constituído por doce parroquias, siendo su población de 2802 hb, y con capital municipal en la localidad de Luíntra, parroquia de San Martiño de Nogueira, donde se asienta el mayor núcleo de población.
+
+El sector primario es la principal ocupación del 60% de la población activa, y como en los ayuntamientos anteriores, está basada en el sector forestal y en el ganadero, principalmente bovino y avícola, en gran parte integradas dentro de las cooperativas Coren. Los sectores secundario y terciario no tiene demasiado peso específico. 
+
+En líneas generales se puede afirmar que estor términos municipales presentan una economía de subsistencia y en declive.
+
+En la tabla 6.3.1-1 que se adjunta a continuación se recoge la información resumida de los datos de la población de la zona.
+
+
+Tabla 6.3.1-1
+Datos Socioeconómicos
+AYUNTAMIENTOXunqueira de EspadanedoEsgosNogueira de RamuínSUPERFICIE  km228.837.994.7Nº PARROQUIAS14712HABITANTES (1991)121614682802NÚCLEO PRINCIPAL Santa Mª de Xunqueira de EspadanedoSanta Mª de EsgosSan Martín de NogueiraSECTOR PRIMARIO42 %67 %60 %SECTOR SECUNDARIO33%--SECTOR SECUNDARIO15%--
+
+
+6.3.2. Arquología y etnografia
+
+Estos dos apartados son  objeto de un estudio pormenorizado que puede evaluarse en el Anejo 3.
+
+
+6.3.3. Paisaje
+
+La percepción de los valores del paisaje son cuestiones de indiscutible subjetividad. En las distintas preferencias paisajísticas influyen las características de los propios observadores en función de su origen, pertenencia social, edad y sobre el tipo de relación existente con el medio. Así, para los habitantes del medio rural la naturaleza y el paisaje tienen una función diferente a la de los habitantes del medio urbano, ya que para los primeros significa su medio directo de vida y en el que tienen estrechas vinculaciones personales que van más allá de una simple valoración estética. 
+
+El intento de objetivar el paisaje para estimar su calidad paisajística puede hacerse siempre y cuando se asuma que sólo pueden ser aproximaciones a las que pueden ser las apreciaciones mayoritarias de los ciudadanos. Por más que se intente cuantificar en grados de valoración los distintos elementos del paisaje, naturalidad, singularidad, diversidad morfológica, visión panorámica, cromatismo y contraste, complejidad,... aún habría que cosiderar  los aspectos biológicos, históricos, culturales, que en conjunto son imposibles de inventariar.
+
+Podemos definir las siguientes unidades paisajísticas en el área de estudio:
+
+A.- CAÑONES XXX.
+	Los cañones xxx se corresponden con una unidad paisajística abarca desde Puente de Domingo Flórez (León) hasta Peares (Ourense), teniendo continuidad con los cañones del Miño hasta Ribadavia.
+
+      Se encuentran situados al norte del parque y su origen hay que situarlo en la era Cenozoica, al responder la red fluvial con un incremento de la acción erosiva que se mantiene en la actualidad dada la novedad de las formas y la existencia de materiales de desprendimiento en las bases de la ladera  y que el río aún no ha conseguido eliminar. Se caracterizan por las paredes con elevadas pendientes, incluso verticales -como en la zona de Monte Canteiras, en la margen derecha xxx, y en el Balcón dos Mouros en la margen izquierda- y canales encajados en valles estrechos donde el canal del río que da restringido al fondo de valle.
+      
+      En la actualidad, la existencia del embalse de San Esteban para la producción de energía eléctrica, ha alterado la naturalidad de los cañones generando una lámina de agua  que en la actualidad está siendo aprovechada para actividades de recreo y turísticas.
+      
+B.-  SIERRAS DE SAN MAMEDE Y QUEIXA
+	Se encuentran al sureste del la zona de estudio, y son el resultado de la combinación de factores litológicos y estructurales, originando un relieve contrastado con las llanuras y las depresiones tectónicas. La influencia del factor estructura está principalmente definida por  los sistemas de fracturación hercínica, con cumbres que alcanzan los 1700m.s.n.m.
+
+C..- LLANURAS
+	Al norte de este parque, se sitúa el Valle de Lemos, iniciando lo que constituye el mayor y más antigua aplanamiento de Galicia, con una edad mínima de 20 millones de años y con un origen presumiblemente motivado por corrosión química correspondiente a procesos de alteración edáfica sobre el susutrato, produciendo un frente de alteración homogéneo y afectando a grandes superficies. La desaparición posterior de la superficie de recubrimiento dejó al descubierto la base rocosa uniformemente nivelada.
+
+D.- DEPRESIONES TECTÓNICAS
+	La depresión de Maceda se encuentra situada al sur del parque eólico. Aunque su extensión es en reducida, presenta un notable interés morfológico, sedimentológico y tectónico, siendo la depresión de Maceda una de las más importantes. Esta asociada a la serie de fracturas hercínicas de Meda, y que paisajísticamente se caracteriza por ser un valle ancho, alargado, de fondo plano contrastando con laderas abruptas. El espesor de los sedimentos depositados supera en algunos casos los cien metros. Su origen es, geológicamente hablando muy reciente, según distintos autores neogena.
+
+7. DESCRIPCIÓN, EVALUACIÓN Y VALORACIÓN DE LOS EFECTOS AMBIENTALES.
+
+Para la interpretación de los factores ambientales afectados se han tenido en cuenta las acciones, en las distintas fases, que sobre los elementos o factores del medio van a tener repercusiones ambientales y las alteraciones que estos últimos van a sufrir.
+
+Para ello, se ha seguido un método de evaluación utilizando los conceptos reflejados en el Real Decreto 1302/86, de 28 de junio, Reglamento de Evaluación de Impacto Ambiental.
+
+De esta forma se reflejará para cada uno de los factores afectados un análisis de los tipos de efectos según su incidencia y grado de permanencia, valorando todos ellos en función de los conceptos  y de la forma que se indica a continuación:
+
+* Según el tipo de afección producida: positivo o negativo.
+* Según la superficie afectada: impacto local, regional y nacional
+* Según el modo de incidencia: directo o indirecto.
+* Según la duración: temporal o permanente.
+* Según la reversibilidad: reversible o irreversible.
+* Según la magnitud: compatible, moderado, severo o crítico.
+
+Para cada factor del medio se reflejará el tipo de efecto y su descripción, las acciones susceptibles de producir efectos en las distintas fases y su valoración en función de los conceptos anteriormente citados.
+
+7.1.- EFECTOS SOBRE LA CALIDAD DEL MEDIO ATMOSFÉRICO
+A) En fase de construcción.
+* Causas
+==> Circulación de vehículos y maquinaria para la construcción (ruido y polvo)
+==> Voladuras (ruido y polvo)
+==> Movimientos de tierras (polvo)
+B) En fase de funcionamiento
+* Causas
+==> Rotación de las palas y funcionamiento del aerogenerador (ruidos)
+==> Perturbaciones por el generador y el tendido eléctrico (electromagnéticos)
+
+7.1.1.- EFECTOS POR AUMENTO DEL RUIDO
+En fase de construcción
+El aumento de los niveles sonoros en esta fase se deben a las acciones que se realizan durante las obras: a las voladuras de carácter puntual para la realización de las cimentaciones para los aerogeneradores, al funcionamiento de los motores de los vehículos destinados al transporte de material y al movimiento de maquinaria.
+
+Estas fuentes generadoras de ruido se limitarán sólo a esta fase de construcción, mientras se están ejecutando las acciones del proyecto antes citadas, terminándose al ser retirada toda la maquinaria, siendo por tanto un efecto de caracter puntual y reversible.
+
+Las molestias que se pueden ocasionar por estos ruidos pueden ser sobre la poblaciones más cercanas y sobre la fauna situada en el área de influencia. 
+
+Las poblaciones más cercanas, en línea récta, a la zona de obras del parque son Souto, Loña do Monte y Requeixo (a la línea de aerogeneradores del nº 30 al 36), distando de ésta unos 1.500 m, y Pardecorme de Esgos (a la zona de aerogeneradores números 1, 2, 3 y zona subestación), distando 1625 m. Estas poblaciones mencionadas serían las más afectadas, pero dada la distancia, la topografía del terreno y el ruido de fondo producido por el viento, no es de esperar niveles sonoros que sobrepasen los límites aconsejables.
+
+* VALORACIÓN
+En base a lo expuesto, el efecto por aumento del ruido en esta fase se clasifica como: negativo, local, directo, temporal, reversible, recuperable y discontinuo.
+
+Asimismo, considerando la duración de las obras, el aumento de ruido esperado y la clasificación anterior, según la magnitud que adquiere este efecto es la de COMPATIBLE.
+
+En fase de funcionamiento
+El origen del ruido de los aerogeneradores se debe tanto a factores de tipo mecánico, producidos por el funcionameinto del multiplicador y el generador, como de tipo aerodinámico, producidos por el movimiento de las palas. 
+
+Como ya se ha comentado anteriormente de los cálculos de niveles de ruido que adjunta el fabricante de los aerogeneradores (ver anejo nº 3) se extraen los siguientes resultados:
+
+*  El nivel de ruido emitido por la turbina es de LWA.ref = 108 dB re para una velocidad de viento de 8 m/s y a una distancia de 10 m. 
+
+* El gradiente del nivel del ruido con la velocidad del viento se ha estimado en 0,45 dB por m/s. 
+
+* En las correspondencias establecidas entre el ruido producido por la velocidad del viento y el producido por los aerogeneradores nos encontramos que para una velocidad de 8 m/s  el ruido ambiental es de 42 dB y el de la turbina es de 57,2 .
+
+Como puede apreciarse, los valores del ruido total son inferiores a 60 dB(A), siendo el ruido ambiente debido al viento (con el aerogenerador parado) ligeramente superior a 40 dB(A). Esto significa, que la contribución del aerogenerador al ruido ambiente natural sería inferior a 25 dB(A) a aproximadamente 75 m de distancia a su base de sustentación.
+
+Por otra parte, la tabla 7.1.1.-a recoge la variación del nivel de ruido de un aerogenerador en función de la distancia. 
+
+Tabla 7.1.1.-a
+Variación del ruido en función de la distancia
+
+Distancia (m)20406080100120140160180200220240260Nivel sonoro (dB)59,457,455,253,351,650,148,847,646,645,644,743,943,1
+
+Como puede apreciarse, a 200 m de distancia el nivel de ruido disminuye hasta 45,6 dB. Para valorar el nivel de ruido que ello supone, se muestran en la tabla 7.1.1.-b los valores habituales del nivel de presión del sonido producido por distintas fuentes.
+
+Tabla 7.1.1.-b
+Niveles de ruido según fuentes
+
+DBFuente de sonidodBFuente de sonido155   Sirena próxima70  Oficina ruidosa140   Jet (umbral de dolor)60  Conversación130   Prensa hidráulica50  Oficina120   Claxon fuerte40  Biblioteca110   Camiones30  Estudio de grabación100   Metro y avión a hélice20  Reloj eléctrico (3 m)90   Orquesta sinfónica10  Crujido de hierba80   Tráfico pesado0  Umbral de silencio
+La normalización de ensayos no incluye la medición del ruido total de un parque eólico, pero las diferencias existentes ponen de manifiesto que el incremento de ruido de un conjunto de aparatos es reducido dada la forma en que se suman los ruidos y las distancias de unos aparatos a otros (entre 100-200 m)
+
+Es evidente que los niveles de ruido en la zona de estudio se van a ver incrementados en torno a 25 dB. Tomando como niveles admisibles los 55 dB durante la noche (23-7 h) y 65 dB durante el día (7-23 h)  nos encontramos con que estos niveles se superan en la zona de estudio por la noche. Estos niveles han sido determinados para zonas residenciales y en la banda de  200 m. a ambos lados de los aerogeneradores, no existen edificaciones.
+
+También cabe señalar que otro efecto que se ha detectado en la puesta en marcha de estas instalaciones es la reacción de sorpresa en algunos animales, si bien estas reacciones han desaparecido en poco tiempo, acostumbrándose los animales a la nueva situación.
+
+Como conclusión, señalar que la experiencia con este tipo de instalaciones en nuestro país demuestran que en las poblaciones más cercanas a las instalaciones no representa ningún problema para la población, siendo más importante el ruido producido por el propio viento, sobre todo conforme la velocidad del viento es más elevada, ya que este enmascara el ruido producido por los aerogeneradores.
+
+
+
+
+
+* VALORACIÓN
+En base a lo indicado, el efecto que supone el ruido en esta fase se clasifica como: negativo, local, directo, permanente (durante la vida del parque), y de caracter según su magnitud de COMPATIBLE-MODERADO.
+
+
+7.1.2.- EFECTOS POR AUMENTO DEL POLVO Y GASES
+Sólo cabe considerar los efectos en la fase de construcción, dado que en la fase de funcionamiento sólo se prevé circulación de los vehículos propios del parque para las labores de control de las instalaciones, siendo, por tanto, los efectos en este sentido casi despreciables en lo que respecta a emisión de polvo, y muy escasos en relación a los gases. Por ello, no se consideran a efectos de valoración.
+
+En fase de construcción
+Tanto los movimientos de tierra, el tránsito de camiones y de maquinaria pesada, la carga y descarga de materiales, va a provocar el aumento de los niveles de polvo y gases en la atmosfera durante la fase de construcción.
+
+No obstante para predecir el efecto que provoca se tiene en cuenta una serie de factores como: estado del suelo, tipos de vehículos empleados, tipo de vías, estación del año, climatología de la zona (pluviometría y dirección del viento dominante), rugosidad del terreno, tipo de vegetación que puede actuar de pantalla y otros obstáculos. En base a todo esto, se ha estimado que los efectos que puede provocar el aumento de polvo en esta fase no son de importancia, aún así, en periodos de sequía, con el fin de corregir estas afecciones a la atmosfera se proyectarán medidas correctoras, mediante aplicación de riegos periódicos que eviten la dispersión de polvo y partículas. En cuanto a los gases desprendidos por los vehículos estos deberán estar convenientemente revisados, de manera que se garantice la normativa en vigor.
+* VALORACIÓN
+En síntesis, se trata de una afección que tiene caracter puntual ya que desaparece una vez finalicen las obras de construcción, con lo que el efecto cabe clasificarlo como: negativo, local, directo, temporal, reversible y recuperable. Según su magnitud se trata de un efecto COMPATIBLE.
+
+
+7.1.3.- EFECTOS ELECTROMAGNÉTICOS
+Este efecto no se produce en la fase de construcción.
+
+En fase de funcionamiento
+Dentro de este tipo de efectos hay que considerar dos tipos: 
+* Interferencias en las comunicaciones producidas por el efecto sombra de las palas sobre la propagación de las ondas electromecánicas de radio y televisión.
+* Perturbaciones por la formación de campos electromecánicos producidos por las líneas de alta tensión.
+
+El el primer caso el diseño de los aerogeneradores ya incluye medidas técnicas que eliminan este efecto.
+
+En el segundo caso, algunos resultados obtenidos sobre las respuestas biológicas a las fuerzas electromecánicas  parecen sugerir riesgos sobre la salud, sin embargo todavía la comunidad científica no ha llegado a un cansenso definitivo al respecto.
+
+No obstante, a fin de prever y evitar las mencionadas alteraciones se seguirán las normas y recomendaciones establecidas al efecto, como las recomendaciones de la Agencia Internacional de la Energía.
+
+
+
+* VALORACIÓN
+En base a lo expuesto y tomando las oportunas medidas, puede considerarse este efecto como: negativo, puntual y recuperable, y en cuanto a su magnitud como COMPATIBLE.
+
+* VALORACIÓN GLOBAL DE LOS EFECTOS SOBRE LA CALIDAD DEL MEDIO ATMOSFÉRICO 
+El resultado de considerar las valoraciones parciales de los efectos causados en los distintos elementos sobre este factor, desprende un valor global de COMPATIBLE.
+
+
+7.2.- EFECTOS SOBRE EL SUELO
+A) En fase de construcción
+* Causas
+==> Trazado de viales y apertura de zanjas
+==> Explanaciones para los apoyos de los aerogeneradores y para la instalación de la subestación.
+==> Excavaciones para cimentación de las distintas estricturas.
+==> Acumulación temporal de material de las excavaciones.
+B) En fase de funcionamiento
+* Causas
+==> Presencia de instalaciones (aerogeneradores y subestación)
+
+7.2.1.- EFECTOS POR APERTURA DE CAMINOS, ZANJAS Y EXCAVACIONES
+En fase de construcción
+La homogeneidad geológica descrita en el punto 6.1.3, marca inevitablemente las condiciones edafológicas del área de estudio a nivel local, presentándose un suelo poco desarrollado y donde existe un delgado horizonte con abundancia de elementos gruesos y relativa pobreza en materia orgánica, que descansa sobre la roca madre sin alterar.
+
+De acuerdo con la descripción de los trabajos de obra civil del proyecto, se contempla la realización de:
+
+* zanjas de hasta 1,5 m de profundidad y 0,5 m de anchura (en cuyo interior se coloca las líneas de corriente), 
+* excacavaciones circulares de unos 2 m de profundidadad y 10 m de diámetro, sobre las que se colocarán los cimientos de las torres de los aerogeneradores,
+* apertura de caminos de acceso, que representan desbroces, desmontes, construcción de terraplenes y movimiento de tierras en los primeros 20 cm del suelo, en toda la longitud elegida a tal efecto.
+* excavaciones para cimentación de apoyos de la Línea de Alta Tensión
+* excavación para cimentación de la subestación. 
+
+Además, los volúmenes de excavación y de terraplén quedan compensados,  reutilizando los posibles excedentes para el relleno de cimentaciones, zanjas y plataformas, junto con la reutilización de toda la tierra vegetal (6.000 m3) excavada en las obras, para restauración y revegetación de plataformas, zanjas y terraplenes. Así, no es necesario el vertido de excedentes a escombreras y, de este modo, los efectos ambientales producidos sobre el suelo se pueden considerar minimizados.
+La configuración edafológica aporta unas condiciones favorables para la instalación del proyecto, sin que puedan esperarse problemas de especial envergadura relacionados con aspectos geotécnicos básicos o con los derivados de la calidad de la cubierta del suelo.
+
+En la tabla 7.2.1.-a que se recoge a continuación, se muestra la estimación del movimiento de tierras.
+
+* VALORACIÓN
+La ejecución de los viales, zanjas, excavaciones y cimentaciones se hacen teniendo en cuenta los factores ambientales de régimen de lluvias y vientos, pendiente y topografía, naturaleza del suelo y calidad del mismo, de manera que desde una fase temprana de las obras se minimicen los efectos. Con todo ello, la clasificación de los efectos en este caso es: negativo, local, directo, permanente (mientras dure la actividad), reversible y recuperable (una vez cese la actividad y se ejecuten las labores para que pueda volver a su estado inicial). Según su magnitud se trata de un efecto MODERADO.
+
+
+
+
+Tabla 7.2.1.-a
+Movimiento de tierras estimados
+
+LongitudFirmeTierra vegetalDesmonte totalDesmonte 
+sin tierra vegetalTerraplénACCESOS3.8003.7003.2007.0003.8003.600NúmeroFirmeTierra vegetalDesmonte totalDesmonte 
+sin vegetaciónTerraplénPLATAFORMAS36-1.3002.7001.4002.000CIMENTACIONES36-1.50010.1008.6005.760TOTAL-3.7006.00019.80013.80011.360
+Tierra vegetal: 6.000 m3. Se reutilizará  en la restauración para la revegetación.Excedentes: 2.440 m3. Se emplearán en rellenos de cimentaciones y plataformas.Péstamos terraplenes: O m3. No son necesarios pues se compensan con la tierra de los desmontes.
+
+7.2.2.- EFECTOS POR OCUPACIÓN DEL SUELO
+En fase de construcción y funcionamiento
+El grado de ocupación del suelo es el que aparece descrito en el apartado 5.1. y 5.2.
+
+Los aerogeneradores están colocados en tres hileras. La primera con 12 aerogeneradores (orientación NW-SE)  abarcando una longitud total de 1.240 m. La segunda con 8 aerogeneradores (orientación NW-SE) con una longitud aproximada de 920 m. La tercera con 16 aerogeneradores (orientación NW-SE) con una longitud aproximada de 1640 m
+
+Es necesario el acceso a cada uno de los aerogeneradores por lo que se realizará la apertura de un camino de 3,5 m de ancho que transcurre en línea uniendo los aerogeneradores tal y como queda reflejado en el plano 4. Únicamente entre los aerogeneradores nº 21 y 26, ambos incluidos, no es necesario la apertura de camino ya que se utiliza  un camino ya existente.
+
+La subestación total tiene una superficie en planta de 124 m2.
+
+La línea de alta tensión que une la subestación con la línea de Xxx actualmente existente en la zona de estudio tiene aproximadamente 2.120 m de longitud. Para su mantenimiento es necesario el desbroce de la superficie por la que va la línea en una franja de 3 m de ancho en toda su longitud.   
+
+* VALORACIÓN
+En base a lo expuesto, se estima que la superficie utilizada y no útil para otro tipo de usos como consecuencia de la ocupación definitiva en este proyecto es de entre un 1-2 % respecto a la superficie total. De ello se deduce que el resto del terreno está disponible para otros usos que venían dándose en el área de emplazamiento.
+
+Por todo ello cabe clasificar este efecto como: negativo, local, directo, permanente e irreversible mientras dure la explotación, pero dada su escasa incidencia respecto a la superficie, en relación a su magnitud se trata de un efecto considerado COMPATIBLE.
+
+7.2.3.- EFECTOS POR EL AUMENTO DE LA EROSIÓN
+En fase de construcción
+Los efectos de erosión son producidos principalmente por el movimiento de tierras en la preparación de los accesos al parque. Otras causas, aunque de menor intensidad, son la realización de las cimentaciones y la construcción del edificio de la central.
+
+Indudablemente, la erosión actua en mayor medida ante la falta de vegetación y de suelo. De manera que en aquellos lugares en los que se vayan a realizar desmontes y excavaciones, se perderá la capa edáfica y se facilitará la actuación de los agentes erosivos. 
+Sin embargo, en el proyecto de instalación de un parque eólico, tal y como este está concebido, solamente perderá suelo en aquellas zonas en las que se van a realizar obras de excavación  de caracter lineal (colocación de cables eléctricos, caminos de acceso) y/o de caracter puntual (aerogeneradores, subestación total) sin que éstas tengan más consecuencias que la propia desaparición de suelo en aquellos lugares en los que ejecutar alguna de las tareas descritas en el apartado anterior.
+
+En el proyecto se situarán elementos que evitarán la acción directa de los agentes erosivos y, consecuentemente, minimizarán el posible incremento de la erosión del suelo.
+
+* VALORACIÓN
+Dado lo indicado en la descripción de los efectos, se clasifica como: negativo, local, temporal, reversible y recuperable. En función de la magnitud, cabe considerarlo como COMPATIBLE.
+
+* VALORACIÓN GLOBAL DE LOS EFECTOS SOBRE EL SUELO
+De manera global se estima que los efectos sobre el suelo son COMPATIBLES, en cuanto a su intensidad y consecuencias para el suelo de las cercanías.
+
+
+7.3.- EFECTOS SOBRE LAS AGUAS
+A) En fase de construcción
+* Causas
+==> Desbroce y eliminación de la vegetación.
+==> Construcción de viales
+==> Excavaciones y cimentaciones.
+==> Transporte de materiales.
+
+7.3.1.- EFECTOS SOBRE LAS AGUAS SUPERFICIALES
+La hidrología del área de estudio se caracteriza por la presencia de importantes barrancos por los que discurren numeros cursos de agua, que actúan drenando el agua de escorrentía y que presentan un régimen condicionado totalmente por las condiciones climatológicas y pluviométricas y por el fuerte desnivel, de manera que son cursos cortos y energéticos.
+
+La situación del parque, la ubicación de los aerogeneradores, la actividad a desarrollar y el sistema de explotación, no presentan efectos ambientales de consideración sobre las aguas superficiales, siempre que se contemple la ejecución de drenajes de las aguas de lluvia en aquellas zonas donde los caminos de acceso y las instalaciones a construir impidan la evacuación natural de las mismas.
+
+
+7.3.2.- EFECTOS SOBRE LAS AGUAS SUBTERRÁNEAS
+No se considera de especial significancia los efectos sobre las aguas subterráneas. No se prevén alteraciones de su calidad ni de la capacidad de infiltración del terreno, que a la postre podría hacer variar el volumen de agua que se infiltra.
+
+7.3.3.- EFECTOS POR PÉRDIDA DE LA CALIDAD DEL AGUA
+La reducción de la calidad de las aguas, tanto superficiales como profundas, puede verse modificada temporalmente por los movimientos de tierras. Tal y como están previstas las actuaciones en las obras de construcción del parque eólico no no se prevé afecten a la calidad del agua.
+
+7.3.4.- EFECTOS POR MODIFICACIÓN DE LA RED DE DRENAJE
+La mayor parte del ámbito geográfico del parque xxx está drenada por cuatro barrancos profundos, de dirección SW-EN a S-N, tal y como se recoge en el apartado 6.1.4. Destacan en este ámbito los barrancos de Porticela, do Porto do Vao, Lamateiro y do Porto dos Carros. Por lo que respecta a los que vierten al Miño, se encuentra el Regato de Covas de Andón y el Regato da Boca.
+
+La red de drenaje consiste en arroyos importantes, que drenan las aguas de lluvia y vierten aguas abajo en cauces de mayor entidad. 
+
+Ésta, sólo se verá modificada en aquellos puntos de drenaje que se vean cortados por caminos de acceso, donde se proyectarán las obras de drenaje necesarias para no interrumpir el flujo. 
+
+* VALORACIÓN GLOBAL DE LOS EFECTOS SOBRE LAS AGUAS
+Se estima que los efectos sobre las aguas superficiales son: negativos, puntuales, locales, irreversibles y permanentes, y sobre las subterráneas son: negativos, puntuales, irreversibles y temporales. Considerándose conjuntamente como COMPATIBLES-MODERADOS.
+
+
+7.4.- EFECTOS SOBRE LA VEGETACIÓN
+A) En fase de construcción
+* Causas
+==> Por ocupación del terreno
+==> Por explanación
+==> Por desbroce
+==> Por apertura de caminos
+Los efectos sobre la vegetación se restringen a la fase de construcción del parque. Dado que se utilizarán los trazados de los viales preexistentes, y que el valor de la flora y de la vegetación sobre las que se asienta las distintas estructuras no es elevado, ya que no afecta a las unidades de mayor interés dentro de los límites del parque, y con la aplicación de las medidas correctoras que se recogen en este estudio, cabe la siguiente:
+
+* VALORACIÓN
+Por lo expuesto y comentado en el inventario sobre la flora y vegetación estee efecto se clasifica como: negativo, local, permanente e irreversible (en las zonas en las que no se realice revegetación), y en cuanto a su magnitud su valoración es de COMPATIBLE.
+
+7.5.- EFECTOS SOBRE LA FAUNA
+A) En fase de construcción
+* Causas
+==> Por aumento de ruidos
+==> Por destrucción o fragmentación de hábitats
+==> Por apertura de caminos
+==> Por instalación de aerogeneradores y subestación
+B) En fase de funcionamiento
+* Causas
+==> Por presencia de aerogeneradores
+==> Por presencia de tendido eléctrico
+
+
+
+
+7.5.1.- EFECTOS SOBRE LA FAUNA TERRESTRE
+En fase de construcción
+Los efectos sobre la fauna se producen mayoritariamente durante esta fase, ya que esta conlleva una pérdida de suelo útil y destrucción del hábitat, por lo que la fauna local sufrirá desplazamientos temporales como consecuencia de los ruidos, presencia de tráfico rodado intenso y presencia humana. Por ello deben extremarse  los cuidados durante la construcción de pistas, intalación de los aerogeneradores, subestación y línea de tensión.
+En fase de funcionamiento 
+Los desplazamientos pueden hacerse temporales en algunos casos por la apertura de nuevos viales y el funcionamiento de los aerogeneradores.
+
+7.5.2.- EFECTOS SOBRE LA AVIFAUNA
+En fase de funcionamiento
+La bibliografía y experiencia acumulada en España al efecto, indica que la mortandad de las aves se produce por colisión y por electrocución. Siendo más importante la casuística en relación a los tendidos eléctricos que a los propios aerogeneradores. 
+
+Generalmente la colisión contra los aerogeneradores no supone un probrema grave, ya que la visualización de los mismos permite a las aves acostumbrarse rápidamente a ellos y a su movimiento y, por lo tanto, esquivarlos. De hecho, en las aves migratorias diurnas el peligro de colisión, en buenas condiciones climatológicas, es insignificante, puesto que divisan perfectamente los obstáculos que implican los aerogeneradores y modifican su ruta de vuelo a gran distancia cuando la instalación se encuentra en dirección de su vuelo. Respecto a las aves migradoras nocturnas, parece que los problemas de colisión son mayores, ya que en condiciones adversas, estas aves vuelan a cotas más bajas y ello incrementa el riesgo de colisión. No obstante, este efecto de colisión se aprecia con mayor intensidad cuando la colisión se produce contra las línes de tendido eléctrico y cuya incidencia varía según el tipo de especie afectada y el diseño de la red.
+
+La electrocución es la causa principal de efectos sobre la avifauna, dependiendo de factores biológicos (tipo de especie, tamaño de las aves, distribución geográfica y comportamineto) y de factores técnicos (diseño de la red). Estos efectos se producen normalmente por el contacto simultáneo del ave a dos conductores, siendo más frecuente el contacto a un conductor y derivación a tierra. Las aves rapaces son el grupo de aves más afectadas por la electrocución, debido a su mayor tamaño y al hábito de usar posaderos elevados.
+
+Como conclusión cabe indicar que según la literatura al respecto, la experiencia acumulada en nuestro pais y más concretamente en los parque situados en zonas típicas de paso de aves migratorias, no parece haberse detectado de manera significativa ningún caso de mortalidad por estas causas, ni haber sido afectadas negativamente por la presencia de los aerogeneradores.
+
+* VALORACIÓN GLOBAL DE LOS EFECTOS SOBRE LA FAUNA
+En base a lo comentado, se trata de un efecto clasificado como: negativo, local, directo, reversible (parcialmente) y en cuanto a su magnitud de carácter COMPATIBLE-MODERADO.
+
+
+7.6.- EFECTOS SOBRE EL PAISAJE
+A) En fase de construcción
+* Causas
+==> Por apertura de caminos
+==> Por destrucción de la vegetación
+==> Por presencia de maquinaria
+B) En fase de funcionamiento
+* Causas
+==> Por intrusión de elementos extraños
+==> Efectos visuales
+
+La evolución de los estudios sobre el medio ambiente ha conducido al conocimiento del paisaje como un importante factor del medio ambiente y un recurso natural en el sentido socioeconómico del término, porque cumple la doble condición de utilidad y escasez inherente a todo recurso natural. Un recurso, por tanto, en ocasiones escaso, difícilmente renovable y fácilmente despreciable y además, susceptible de alteraciones como consecuencia de las actuaciones del hombre. Puede decirse que la mayor parte de las investigaciones coinciden en la gran repercusión de las obras públicas en la calidad visual del medio. Así, cuando estas alteraciones disminuyen la calidad preexiste, se produce un impacto negativo.
+
+El estudio de los efectos que el parque eólico puede producir sobre el paisaje y la valoración de su posible impacto visual, se realiza utilizando los siguientes criterios:
+
+A.- Incidencia visual que se define como los lugares del territorio desde donde se ve la actuación.
+
+B.- Calidad entendida como el valor estético de las distintas unidades de paisaje que abarca el área alterada. Para su determinación se tendrán en cuenta dos parámetros: calidad visual intrínseca y potencial de visualización (calidad de las vistas que se divisan desde el parque).
+
+C.- Fragilidad o vulnerabilidad visual que se refiere al potencial del paisaje para absorber o ser visualmente perturbado por la actuación.
+
+A.- INCIDENCIA VISUAL
+
+La intrusión visual producida en el paisaje por el conjunto de los aerogeneradores del parque es la objeción más frecuente y el principal factor que determina las actitudes públicas contra la energía eólica. Dicha intrusión, de especial importancia debido a la altura de los aerogeneradores y a la altitud de los lugares en los que se tienen que instalar, puede originar una rotura del equilibrio natural y de su armonía estética, llegando a provocar un grave impacto en zonas de gran interés paisajístico.
+
+La cuantificación de este impacto medioambiental resulta muy difícil, al englobar una serie de conceptos o apreciaciones de índole subjetiva, por ser un proceso de interacciones entre el observador y el medio físico afectado.
+
+La determinación de la incidencia visual pasa por definir la zona visualmente afectada por la instalación del parque, y para ello se utilizarán dos parámetros de medición:
+
+A1.- Cuenca visual, que es la porción de territorio visible desde un punto, o recíprocamente, la cuenca engloba a todos los posibles puntos desde donde la actuación es visible.
+
+A2.- Susceptibilidad, definida como el interés o relación del observador con el paisaje. Se considera a través de dos aspectos, fundamentalmente:
+
+- Número de observadores, reflejado por la frecuencia de uso del área impactada por la instalación del parque.
+- Actitud o reacción de los observadores que responde al mayor o menor interés que los mismos muestran por el paisaje.
+
+
+Teniendo en cuenta estos dos parámetros, se ha analizado la incidencia visual del parque eólico xxx.
+
+El parque se ubica en una cumbre de altitud considerable (el aerogenerador más alto se encuentra a 1198 m), rodeada por zonas mucho más bajas, como son la depresión de Maceda, al Sur, y el Valle de Lemos, al Norte, del que lo separa el cañón xxx. Este hecho hace que la cuenca visual se amplíe notablemente, estando prácticamente en todos los casos únicamente limitada por la distancia de visibilidad, al no existir obstáculos físicos (relieve) que impidan la visión de los aerogeneradores.
+
+ Por esta razón, y dada la imposibilidad de analizar la percepción de la actuación desde todos los posibles puntos de vista, se han seleccionado aquellos que pueden resultar más representativos a la hora de cuantificar el impacto visual. Aquí es donde entra el concepto de susceptibilidad, definido anteriormente, y que incluye tanto la frecuencia de observación como el interés por el paisaje mostrado por los potenciales observadores.
+
+Dada la proximidad del área de actuación a los cañones xxx, zona de gran valor paisajístico, cultural y medioambiental, y que se está potenciando como un valor fundamental del turismo interior de Galicia, se han seleccionado como puntos de vista a analizar aquellos que pueden atraer un mayor número de observadores, como el monasterio de San Esteban o los miradores sobre el Cañón xxx. Los demás puntos de vista analizados se corresponden con núcleos de población ubicados en distintas direcciones respecto al parque. 
+
+Desde cada punto de vista se han levantado los perfiles topográficos del terreno y se han lanzado visuales desde la zona de aerogeneradores, para determinar las áreas desde las que éstos son visibles. No se tiene en consideración ningún apantallamiento que no sea el propio relieve de la zona, como podría ser la vegetación o efectos meteorológicos atenuantes (niebla, bruma, incidencia de la luz solar), suponiéndose en todos los casos el mejor fondo escénico y las condiciones meteorológicas más favorables.
+
+A continuación se presentan los perfiles obtenidos. Se han realizado sobre cartografía a escala 1:25.000, salvo en el caso de los núcleos más lejanos (Monforte y Allaríz), en los que se ha empleado cartografía a escala 1:200.000.
+Como se puede observar, el parque es visible desde la mayor parte de los puntos de la depresión de Maceda, estando únicamente limitada la visión por la distancia, y en algunas zonas puntuales en las que existen pequeñas ondulaciones del terreno que producen áreas de sombra (es el caso del núcleo de Niñodaguia, en el que la visión del parque es limitada por la existencia de una elevación del terreno que actúa como pantalla). Como se observa en el perfil, desde el núcleo de Maceda puede observarse el parque con toda nitidez. La visibilidad desde Allariz también es completa, aunque en este caso la percepción de las instalaciones estará  limitada por la distancia.
+
+La zona Oeste de la cuenca visual puede extenderse varios kilómetros, aunque en este caso existen más limitaciones a la percepción del parque que desde el Sur, debido a la mayor irregularidad del terreno. No obstante, en la franja de terreno que se extiende desde Pereiro de Aguiar al parque, los aerogeneradores podrán verse desde varios puntos.
+
+De entre los analizados, el punto más al Norte potencialmente impactado es el núcleo de Monforte de Lemos. Desde el Castillo de San Vicente, ubicado en dicha localidad, podrán observarse las instalaciones del parque, pese a encontrarse a una distancia considerable (unos 23 km), como se comprueba en el perfil correspondiente. El hecho de que, en la actualidad, pueda observarse desde dicho punto el repetidor de televisión ubicado en Monte Meda, permite suponer que, pese a la distancia, los aerogeneradores podrán distinguirse perfectamente. 
+
+En lo referente la zona de los cañones xxx, que puede considerarse la zona más sensible a un posible impacto paisajístico, se ha analizado la visibilidad desde tres puntos representativos, como son los miradores sobre el cañón y el Monasterio de San Esteban. En alguno de estos casos se han establecido dos visuales, una hacia la zona Este del parque, y otra hacia la zona Oeste.
+
+El parque no es visible desde el Monasterio de San Esteban, pero sí desde todos los miradores existentes sobre el cañón y desde la ruta turística que constituye la carretera de Castro Caldelas a San Esteban de Rivas de Sil.  
+En el cuadro adjunto se resumen los efectos visuales del parque sobre los puntos considerados.
+
+PUNTO DE OBSERVACIÓNOrientaciónAltitud (m)Distancia
+(m)VISIBILIDADMacedaSO57311.280VISIBLENiñodaguiaSO6007.080NULAAllarizSO46521.780VISIBLEArmarizSO55016.950VISIBLEPereiro de AguiarO34013.440NULARañoáO38510.840VISIBLECortiñasO40012.770VISIBLEPardecondeSO7752.580VISIBLEMonforte de LemosEN36321.600VISIBLEMonasterio de San Esteban de Rivas de SilNO4835.680NULAVilouxeNE6802.100VISIBLEMiradores sobre el cañónNE6682.500VISIBLEMirador de los Balcones de MadridNE6006.790VISIBLE
+B.- CALIDAD
+
+La calidad se define como el valor intrínseco del paisaje de un lugar. Los componentes del paisaje se pueden agrupar en :
+
+- Elementos del medio inerte: Relieve, afloramientos, cursos de agua, valles,
+- Elementos del medio biótico
+- Elementos del medio humano: Núcleos de población, infraestructuras.
+
+B.1.- Elementos del medio inerte. 
+
+Este punto ya ha sido comentado suficientemente en los distintos apartados que configuran el inventario y las afecciones sobre el paisaje. 
+
+B.2.- Elementos del medio biótico:
+
+a.- Abedulares.
+	Son los bosques típicos de las zonas de montaña, llegando a alcanzar los 1500 m. El árbol dominalte es el abedul Betula celtiberica, que puede alcanzar los 20 m de altura. En la zona de estudio están constituído por bosquetes dispersos de individuos jóvenes que no sobrepasan los 8 m de altura, probablemente relacionados con episodios relativamente recientes de incendios forestales. Forman manchas discontinuas asociadas a lugares con altos niveles de humedad edáfica con colores predominantemente branco-grisáceos en invierno y verde brillante en verano.
+
+b.- Fragas
+	Son bosques mixtos donde conviven distintas especies de árboles  principalmente caducifolios, y que en la zona de estudio se pueden ver aunque en  reducida extensión, en el monte de Os Burdiallos, descendendo hacia el cañón xxx por su ladera norte. Proporcionan un paisaje característico con verde dominante en las estaciones vegetativas y con tonos rojos y marrones al inicio de la parada invernal, permaneciendo en verde oscuro algunas mancas de perennifolios (laurel, acebo,)
+
+c.- Pinares
+	Los pinares, principalmente de Pinus sylvestris, son producto de acciones de repoblación no sólo para la obtención de madera , sino tambien para evitar la erosión de las laderas. En esta zona se pueden encontrar en el alineamiento de los  montes de Outeiro das Aigües y Penas de Millán. Su altura está entre 15-20 m aunque su desarrollo potencial le permitirá alcanzar los 30 m. Presenta una copa cónica y densa que proporciona una visión bastante homogénea con escasa variación cromática.
+
+d.- Sotos de castaños
+	Aunque en el área del parque no se encuentran formaciones, sí existen en las proximidades, sobre todo hasta los 400 m de altura. Los sotos de castaños no tienen un origen natural; son cultivares potenciados por el hombre por su elevado interés alimenticio. Quizá por esto, representan una unidad paisajística con un elevado interés, tanto por su ubicación habitual en laderas de gran pendiente como por sus características intrínsecas su porte, coloración variada a lo largo del año- y que aporta un importante valor al paisaje.
+
+e.- Matorral
+	Es una asociación arbustiva que en este caso es producto de la degradación serial del clímax por acción antrópica, funcionando incluso como cultivos por su utilización en labores ganaderas. Las formaciones de Ulex, Cystus y Ericas son muy llamativas por la mezcla de colores rosados, amarillentos y verdes en la floración, confiriendo al paisaje una gran vistosidad aunque sólo limitada a la época de floración.
+
+f.- Viñedos
+	Es una de las formaciones más llamativas. Aunque no están presentes directamente en el área de estudio, los aterrazamientos -en muchos casos inferiores a dos metros de anchura- para el cultivo de la vid en las laderas xxx, que impiden la perdida de suelo, le confieren un aspecto definitorio y característico.
+
+B.3.- Elementos del medio humano: 
+
+Como elementos antrópicos destacan en el ámbito del parque, además de los ya considerados en el apartado anterior (repoblaciones de pinos, prados) los siguientes:
+
+* Existen gran número de caminos forestales y pistas por las que se accede al parque.
+* No existen núcleos de población en el propio parque.
+* Otras actuaciones antrópicas son mucho más inarmónicas, como las estaciones repetidoras de T.V. y de telefonía movil ubicadas en las proximidades de Cabeza de Meda, al este y fuera del ámbito del parque.
+
+C.- FRAGILIDAD 
+
+Se refiere al potencial del paisaje  para absorber o ser visualmente perturbado por la actuación. Sus factores pueden ser de tres clases:
+
+- Factores biofísicos, determinantes de la calidad visual de cada punto en sí mismo. (suelo y cubierta vegetal, pendiente y orientación)
+- Factores perceptivos, definidores de las condiciones de fragilidad del punto en relación con su entorno. Se refieren a la facilidad de penetración visual en la configuración del territorio.
+- Factores histórico culturales, determinantes de las compatibilidades de contenido con la actuación proyectada.
+
+Fragilidad visual del área de implantación
+
+- Suelo y cubierta vegetal
+El área de implantación muestra una baja densidad de vegetación, siendo ésta de escasa altura. El contraste cromático suelo-cubierta vegetal es alto. La diversidad de estratos es baja y el contraste cromático dentro de ésta es reducido.
+
+- Pendiente y orientación
+El área presenta una capacidad de absorción visual baja como consecuencia de las pendientes, especialmente en las laderas.
+
+Fragilidad visual del entorno del área
+
+Fundamentalmente viene definida por el tamaño, la forma y la altura del punto respecto a la cuenca visual.
+
+La cuenca visual es muy amplia, estando en la mayoría de los casos la visibilidad únicamente limitada por la distancia, por lo que el área puede calificarse como de alta vulnerbilidad.
+
+En cuanto a la forma, la cuenca visual se puede considerar de alta sensibilidad, al situarse el parque en una zona de gran altitud en relación a su entorno (depresión de Maceda y Valle de Lemos).
+
+Debe señalarse que, al existir en el entorno del área del futuro parque una ruta turística que constituye un punto de atracción, como es la correspondiente a los cañones xxx, que configura un paraje de alto valor paisajístico y cultural y tiene carácter único dentro de la Comunidad Autónoma. Esto propicia una focalización de la visión desde este punto hacia el área de implantación del parque. Por ello, se considera la zona de alta fragilidad en cuanto a las características histórico-culturales del territorio.
+
+A modo de resumen, los efectos que el parque eólico produce sobre el valor paisajístico del área y enfocado según las tres líneas complementarias comentandas anteriormente, son:
+
+a) La cuenca visual.	Su determinación ha puesto de manifiesto los siguientes efectos:
+* Alteración de las vistas de los puntos de observación por introducción de nuevos elementos artificiales (aerogeneradores).
+* Modificación de las condiciones visuales, alterando los flujos visuales producidos.
+* Alteración de las propiedades de la cuenca visual de la finca por la presencia de la actuación, como es la intrusión visual.
+
+b) La susceptibilidad. Su determinación ha mostrado el siguiente efecto:
+* Reacción negativa ante la observación de los aerogeneradores (dadas sus dimensiones)
+
+c) La calidad. Su determinación ha arrojado los siguientes efectos:
+* Introducción de un elemento discordante en el paisaje, lo que hace disminuir el valor estético del mismo y por tanto su calidad visual intrínseca.
+* Disminución de la calidad paisajística en su conjunto, al producir el parque eólico un punto de ruptura, lo que provoca que el paisaje tome valores negativos, es decir, que produce desagrado en lugar de delite para el observador.
+
+d) La fragilidad. Su determinación ha puesto de manifiesto los siguientes efectos:
+* Perturbación visual del paisaje, dadas las características de altura y magnitud que al no guardar relación con el entorno, impide la integración armónica de estos elementos; esto se traduce en una alteración de sus aspectos visuales debido a la escasa aptitud para admitir un cambio de esta magnitud. Es decir, presenta una baja capacidad de absorción visual para el parque eólico.
+* Dada la gran visibilidad desde gran cantidad de puntos de observación, se produce una fragilidad real al añadir el matiz de accesibilidad de la observación.
+
+* VALORACIÓN GLOBAL DE LOS EFECTOS SOBRE EL PAISAJE
+Con todo lo expuesto se pone de manifiesto las afecciones visuales que produce el parque eólico, que se traducen en una disminución importante del valor paisajístico. En este sentido,  y dadas las características comentadas en los distintos puntos en los que se trata el tema del paisaje, y en relación a las conclusiones anteriores, para el caso del parque xxx, esta afección se clasifica, durante la vida de las instalaciones, como: negativo, permanente y extensivo, adquieriendo un valor de SEVERO.
+
+
+
+
+
+7.7.- EFECTOS SOBRE EL PATRIMONIO CULTURAL Y ARQUEOLÓGICO
+
+Este punto es objeto de un estudio independiente que se  se recoge en el Anejo 3. 
+
+
+7.8.- EFECTOS SOBREEL MEDIO SOCIOECONÓMICO
+
+7.8.1.- EFECTOS SOBRE LA RED VIARIA
+Los efectos sobre la red viaria de este proyecto son muy restringidos. La utilización de estructuras ya existentes únicamente supondrá una ligera mejora en los accesos, por lo que este aspecto es considerado como POSITIVO.
+
+7.8.2.- EFECTOS SOBRE SECTORES ECONÓMICOS
+Como ya se ha comentado anteriormente en este estudio, la economía de estos ayuntamientos está muy ligada al sector primario. Las posibles afecciones sobre las actividades ligadas a este sector se reducen a una escasa ocupación de una superficie que actualmente se utiliza para el mantenimiento de ganado (básicamente equino) en régimen de semilibertad y aprovechamientos forestales. Dada la plena compatibilidad del parque con el mantenimiento del ganado y la escasa superficie ocupada sobre el total del área en la que sería posible realizar actividades de repoblación forestal -no siempre con intención exclusivamente económica sino también para el mantenimiento de recursos naturales, como las repoblaciones forestales para la restauración de la cubierta vegetal y control de la erosión, que se están realizando por la Dirección General de Montes y Medio Ambiente Natural con financiación de los Fondos de Cohesión de la Unión Europea al menos en la ladera sur del Alto do Coio- permitirán realizar ambas actividades, por lo que su valoración es COMPATIBLE.
+
+Además, en sentido amplio se va a producir un incremento neto de la población ocupada como consecuencia de los empleos, tanto directos como indirectos, generados por el proyecto ya que además, no se producirán efectos no deseados al no interferir negativamente con otras actividades creadoras de riqueza, con una valoración de POSITIVO.
+
+7.8.3.- ACTIVIDADES RECREATIVAS
+La instalación del parque eólico va a afectar a las actividades de ocio ligadas al medio como son la caza, el senderismo y el vuelo sin motor.
+En lo referente a la caza, en el ámbito del parque existen distintos cotos, alguno privado con vigilancia permanente como el de Nogueira de Ramuín que se verá afectado directamente por una limitación en el área de caza. Si bien este es un efecto negativo y moderado, la existencia dentro de un coto de un área donde no esté permitida la actividad cinegética y en donde, con la aplicación de medidas compensatorias que hagan que la zona restringida se convierta en un área que funcione como un reservorio de caza, con lo que podría pasar de moderado a compatible con la aplicación de las mencionadas medidas compensatorias. Por todo ello cabe una valoración de MODERADO.
+
+Las actividades relacionadas con senderismo, ciclismo o equitación, apenas se verán afectadas, salvo por un descenso en la naturalidad de los paisajes. Para minimizar en lo posible este efecto, en el diseño del parque se ha introducido como medida correctora la menor afección posible a los parajes de mayor interés, los Cañones xxx, y como medida compensatoria se puede articular, con la colaboración de los sectores implicados, actividades que proporcionen un interés cultural  añadido. Su valoración en cuanto a magnitud es COMPATIBLE.
+
+En lo referente a las actividades ligadas a vuelo sin motor, principalmente parapente, y aún no siendo de gran entidad, será conveniente arbitrar medidas compensatorias, ya que el proyecto resulta incompatible con esta modalidad deportiva. Valoración: MODERADO.
+
+A continuación se recoge la matriz de efectos.
+
+8.- IDENTIFICACIÓN DE EFECTOS Y VALORACIÓN EN LA FASE DE ABANDONO.
+
+Se estima que la vida media de un parque eólico, en función de la duración de sus componentes, es de 25-35 años.
+
+Esta fase supone una pequeña fase de obras asociada, que corresponde al desmontaje de las turbinas, subestación y otros elementos.
+
+Se recuperará el área afectada, suprimiendo los cerramientos de la subestación, eleiminación del edificio o destino para otros usos y aerogeneradores. Las zapatas de los aerogeneradores quedarán en el terreno así como los tendidos subterráneos una vez inutilizados. También se dejarán los viales de acceso creados.
+
+9.- MEDIDAS PROTECTORAS Y CORRECTORAS
+
+Su objetivo es el de minimizar y corregir los  efectos negativos  generados por la instalación del parque eólico. Para se adoptarán las siguientes medidas para la fase de construcción y de funcionamiento:
+
+1.- Medio ambiente atmosférico
+
+1.1.- Ruidos 
+a) Fase de construcción.
+* Revisión de los motores de la maquinaria
+* Realización de las obras en periodo diurno (7 a.m  22 a.m.)
+* En caso de superar significativamente los 60 dB (A) en las viviendas más próximas, se adoptarán medidas adicionales de corrección.
+ 
+a) Fase de funcionamiento
+* Revisión de los niveles comprometidos por el fabricante.
+* Correcto mantenimiento de las instalaciones.
+
+1.2.- Polvo y gases
+a) Fase de construcción
+* Revisión del correcto funcionamiento de los motores de la maquinaria.
+* Riego de las superficies afectadas por los movimientos de maquinaria y tierras.
+b) Fase de funcionamiento 
+* No se prevén efectos significativos.
+
+2.- Medio edáfico
+
+2.1.- Viales, caminos y zanjas
+a) Fase de construcción
+* Se utilizarán en la maxima medida posible los viales preexistentes.
+* Separación de la capa superficial del suelo y apilamiento en montones de altura no superior al 1,50 y con una duración del almacenamiento lo menor posible para evitar la degradación del recurso. En el caso de que este periodo superase los dos meses, se procederá al abonado y  a la plantación de especies pratenses (preferentemente fjjadoras de nitrógeno) que permitan mantener la estructura y composición del suelo.
+b) Fase de funcionamiento
+* No se permitirá el paso de vehículos fuera de los viales diseñados al efecto.
+			
+2.2.-Erosión
+a) Fase de construcción
+* Se evitará en la medida de lo posible que la actividad constructiva coincida con los periodos de elevada pluviosidad.
+* Acondicionamiento y revegetación  de taludes, terraplenes y superficies desnudas.
+* Se compensan, como aparece en el proyecto y en este estudio, los desmontes con los terraplenes 
+* Se evitaran las zonas húmedas
+* En caso necesario, se utilizarán medios físicos (mallas antierosión).
+
+
+
+a) Fase de funcionamiento
+* Se realizará el adecuado mantenimiento de las obras de drenaje tanto longitudinales y transversales.
+
+2.3.- Alteración del suelo
+a) Fase de construcción
+* Los materiales de desecho, siempre y cuando tengan la caracterización de inertes, serán depositados provisionalmente en la zona predeterminada y definida al efecto, siendo llevados a un vertedero o depósito autorizado en su totalidad antes de la puesta en funcionamiento del parque.
+* Los cambios de aceites de toda la maquinaria y cualquier otra operación de mantenimiento serán realizados en talleres mecánicos autorizados.
+b) Fase de funcionamiento
+* A fin de evitar la posible pérdida de aceites de las turbinas, estas cuentan con un cubeto de recogida que impide su migración hasta el suelo.
+
+3.- Sobre las Aguas
+a) Fase de construcción
+* Los viales están diseñados de forma que cuentan con las obras de drenaje necesarias para no comprometer la red de drenaje y permitir el flujo normal de las aguas.
+* Utilización en gran medida del trazado de los viales existentes.
+b) Fase de funcionamiento
+* El edificio de la central cuenta con un sistema de depuración adecuado para las aguas residuales procedentes de los servicios higiénicos.
+
+4.- Sobre la Vegetación y Fauna
+a) Fase de construcción 
+* Sólo se eliminará la vegetación que sea imprescindible mediante técnicas de desbroce.
+* El tránsito de la maquinaria se realizará exclusivamente por las áreas marcadas al efecto.
+* Una vez finalizadas las obras de infraestructura, y en lo posible coincidiendo con ellas, se procederá a la revegetación  de las superficies afectadas mediante la descompactación, remodelado y reposición de la capa de suelo previamente reservada y la posterior plantación de  especies propias de la zona.
+b) Fase de funcionamiento
+* Se comprobará la eficiencia, viabilidad y adecuación de las plantaciones realizadas.
+* Todas las líneas eléctricas y de comunicación del  parque son subterraneas.
+* El diseño de los apoyos de la línea de salida de la subestación para su conexión con la red, contempla medidas que junto con la instalación de salvapájaros minimizan el riesgo de afección a las aves.
+ 
+
+5.- Paisaje
+a) Fase de construcción	
+* Las instalaciones fijas provisionales se situarán en zonas poco visibles y su color será poco llamativo.
+b) Fase de funcionamiento 
+* Se ha procurado que los aerogeneradores se sitúen en la ladera opuesta al área natural de los Cañones xxx, minimizando así el efecto negativo que se causa sobre el paisaje.
+* El edificio de la central se adaptará en materiales y acabados a las características constructivas del área del parque.
+* Los acabados de los aerogeneradores son en tonos mate, lo que permite una cierta integración con el entorno.
+
+6.- Medio Socioeconómico
+
+Para este caso concreto, y según lo expuesto en el apartado de efectos sobre el medio socioeconómico, se proponen las siguientes medidas compensatorias:
+
+* Compensar los usos cinegéticos y deportivo-recreativos preexistentes mediante acuerdos de colaboración con las asociaciones y organismos implicados.
+
+* Creación de un parque abierto promoviendo visitas concertadas, elementos de información y explicación sobre la interacción entre la energía eólica y el medio natural, incorporando aquellos elementos socioculturales del entorno.
+
+
+
+
+10.- PLAN VIGILANCIA AMBIENTAL
+
+Este Plan representa un programa de seguimiento de los efectos residuales y constituye un sistema de control de la aplicación de las medidas correctoras así como una comprobación de su eficacia.
+
+Durante la fase de construcción y hasta su finalización seguirá y controlará la integración en las obras de aquellas medidas correctoras que se adoptan en el Estudio de Efectos Ambientales. Para ello en esta fase se comprobará:
+
+* Que los niveles de ruido, tomando las mediciones necesarias para comprobar que no se sobrepasan los límites establecidos en la legislación y normativas de aplicación. En su caso se adoptarán medidas adicionales.
+
+* Que el trazado y ejecución de la infraestructura viaria, explanaciones, obras de drenaje y taludes se realizan de manera adecuada y se ajustan a las zonas previstas.
+
+* El desbroce de la vegetación se hace con las técnicas adecuadas y justo el los lugares indicados.
+
+* El correcto mantenimiento de la maquinaria en los lugares establecidos al efecto.
+
+* La no aparición de residuos en lugares no previstos para ello.
+
+* La aparición de restos arqueológicos en la apertura de viales y zanjas, en cuyo caso se pondrá en conocimiento del organismo competente de la administración. A este efecto deberá estar a pie de obra profesional competente al efecto, que procederá a la delimitación y marcado de la zona.
+
+A todos estos efectos se llevará un libro de registro, en el que se anotarán convenientemente los resultados e incidencias registradas. Asimismo se redactarán los informes pertinentes que serán enviados al órgano ambiental competente. Estos serán 2, uno a os tres meses de comenzadas las obras y otro a los seis meses.
+
+
+En la fase de funcionamiento empezará a actuar un programa de seguimiento de la eficacia de las medidas correctoras adoptadas y de los efectos residuales. A tal efecto se llevarán a cabo los controles que se referencian a continuación y se enviaran los informes oportunos al organismo competente de la administración con una periodicidad anual. Estos controles, que se realizarán cada dos meses, están referidos a: 
+
+* Alteraciones de comportamiento de las aves, y mortandades por colisiones y/o electrocuciones.
+
+* Alteraciones de las redes de drenaje.
+
+* Correcto establecimiento y evolución de la vegetación, en relación al plan de revegetación de las zonas afectadas.
+
+* Niveles de ruidos producidos por el funcionamiento de las instalaciones, para lo que se establecerá un programa de mediciones a distintas distancias y teniendo en cuenta los parámetros climáticos de la zona y tomando como referencia los núcleos de población más próximos al parque.
+
+		
+
+
+Página 8
+
+Estudio de Evaluación Efectos Ambientales del Parque Eólico
+ 
+
+

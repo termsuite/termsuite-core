@@ -1,0 +1,824 @@
+﻿Vēja	N	vējš	N-msg---------n-----------f-
+ģeneratoru	N	ģenerators	N-mpg---------n-----------l-
+iekārtu	G	iekārts	Gsfsap-n---p--------------l-
+izmantošana	N	izmantošana	N-fsn---------n-----------l-
+patērētāju	N	patērētāja	N-fpg---------n-----------l-
+apgādei	N	apgāde	N-fsd---------n-----------l-
+ar	S	ar	S----------------sap------l-
+siltumenerģiju	N	siltumenerģija	N-fsa---------n-----------l-
+nozīmē	V	nozīmēt	Vp----3--i----------------l-
+šo	P	šis	P-fsa-------d-------------l-
+iekārtu	N	iekārta	N-fsa---------n-----------l-
+pieslēgšanu	N	pieslēgšana	N-fsa---------n-----------l-
+jau	Q	jau	Q-------------------------l-
+esošajai	G	esošs	Gpfsdp-y---a--------------l-
+vietējai	A	vietējs	A-fsdp-n------------------l-
+siltumapgādes	N	siltumapgāde	N-fsg---------n-----------l-
+sistēmai	N	sistēma	N-fsd---------n-----------l-
+nelielās	A	neliels	A-fplp-n--------y---------l-
+pilsētās	N	pilsēta	N-fpl---------n-----------l-
+vai	C	vai	C---------------------c---l-
+lauku	N	lauki	N-mpg---------n-----------l-
+apdzīvotās	A	apdzīvots	A-fplp-n------------------l-
+vietās	N	vieta	N-fpl---------n-----------l-
+,	T	,	T--------------------------,
+kas	P	kas	P---n-------r---------x---l-
+atrodas	V	atrasties	Vp----3--i-----y----------l-
+vējainos	A	vējains	A-mplp-n------------------l-
+apgabalos	N	apgabals	N-mpl---------n-----------l-
+un	C	un	C---------------------c---l-
+kam	P	kas	P---d-------r-------------l-
+,	T	,	T--------------------------,
+dažādu	A	dažāds	A-mpgp-n------------------l-
+iemeslu	N	iemesls	N-msa---------n-----------l-
+dēļ	S	dēļ	S----------------sgt------l-
+,	T	,	T--------------------------,
+ir	V	būt	Vp----3--i----------7-----l-
+grūtības	N	grūtība	N-fsg---------n-----------l-
+esošo	G	esošs	Gpmpgp-y---a--------------l-
+apkures	N	apkure	N-fsg---------n-----------l-
+katlu	N	katls	N-mpg---------n-----------l-
+apgādei	N	apgāde	N-fsd---------n-----------l-
+ar	S	ar	S----------------sap------l-
+kurināmo	G	kurināms	Gpmsap-y---p--------------l-
+.	SENT	.	T--------------------------.
+
+
+
+
+
+
+Risinot	G	risinot	G----------a-n------------f-
+šo	P	šis	P-msa-------d-------------l-
+jautājumu	N	jautājums	N-msa---------n-----------l-
+tika	V	tikt	Vs----3--i----------6-----l-
+veikts	G	veikts	Gsmsnp-n---p--------------l-
+teorētisks	A	teorētisks	A-msnp-n------------------l-
+aprēķins	N	aprēķins	N-msn---------n-----------l-
+,	T	,	T--------------------------,
+kurā	P	kurš	P-fsl-------r---------a---l-
+,	T	,	T--------------------------,
+lai	C	lai	C---------------------f---l-
+ar	S	ar	S----------------sap------l-
+siltumenerģiju	N	siltumenerģija	N-fsa---------n-----------l-
+apgādātu	V	apgādāt	Vp-------s----------------l-
+1000	D	1000	D--pg-----------------------
+m	Y	m	Y-------------------------l-
+³	-	³	----------------------------
+lielu	A	liels	A-fpgp-n------------------l-
+ēku	N	ēka	N-fsa---------n-----------l-
+,	T	,	T--------------------------,
+kā	C	kā	C---------------------f---l-
+rezerves	N	rezerve	N-fsg---------n-----------l-
+pieslēgumu	N	pieslēgums	N-msa---------n-----------l-
+40	D	40	D--pg-----------------------
+kW	Y	kW	Y-------------------------l-
+jaudas	N	jauda	N-fsg---------n-----------l-
+apkures	N	apkure	N-fsg---------n-----------l-
+katlam	N	katls	N-msd---------n-----------l-
+izmantoja	V	izmantot	Vs----3--i----------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+energoiekārta	N	energoiekārta	N-fsn---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+
+
+
+
+Lai	C	lai	C---------------------k---f-
+izveidotu	V	izveidot	Vp-------s----------------l-
+apkures	N	apkure	N-fsg---------n-----------l-
+slodzes	N	slodze	N-fsg---------n-----------l-
+aprēķina	N	aprēķins	N-msg---------n-----------l-
+grafiku	N	grafiks	N-msa---------n-----------l-
+,	T	,	T--------------------------,
+vispirms	R	vispirms	R----p--------------------l-
+tika	V	tikt	Vs----3--i----------6-----l-
+aprēķināts	G	aprēķināts	Gsmsnp-n---p--------------l-
+nepieciešamais	G	nepieciešams	Gpmsnp-y---p----y---------l-
+siltuma	N	siltums	N-msg---------n-----------l-
+patēriņš	N	patēriņš	N-msn---------n-----------l-
+ēkā	N	ēka	N-fsl---------n-----------l-
+,	T	,	T--------------------------,
+ko	P	kas	P---a-------r-------------l-
+galvenokārt	R	galvenokārt	R----p--------------------l-
+ietekmē	V	ietekmēt	Vp----3--i----------------l-
+āra	N	ārs	N-msg---------n-----------l-
+gaisa	N	gaiss	N-msg---------n-----------l-
+temperatūra	N	temperatūra	N-fsn---------n-----------l-
+un	C	un	C---------------------c---l-
+vēja	N	vējš	N-msg---------n-----------l-
+ātrums	N	ātrums	N-msn---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+
+
+
+
+Siltuma	N	siltums	N-msg---------n-----------f-
+patēriņa	N	patēriņš	N-msg---------n-----------l-
+aprēķinu	N	aprēķins	N-msa---------n-----------l-
+izdarīja	V	izdarīt	Vs----3--i----------------l-
+vadoties	G	vadoties	G----------a-n-y----------l-
+no	S	no	S----------------sgp------l-
+noteikuma	N	noteikums	N-msg---------n-----------l-
+:	T	:	T--------------------------:
+lai	C	lai	C---------------------f---l-
+gaisa	N	gaiss	N-msg---------n-----------l-
+temperatūru	N	temperatūra	N-fsa---------n-----------l-
+telpā	N	telpa	N-fsl---------n-----------l-
+uzturētu	V	uzturēt	Vp-------s----------------l-
+vienmērīgu	A	vienmērīgs	A-fsap-n------------------l-
+,	T	,	T--------------------------,
+jānodrošina	V	nodrošināt	Vp-------c----------------l-
+vienādu	A	vienāds	A-msap-n------------------l-
+siltuma	N	siltums	N-msg---------n-----------l-
+zudumu	N	zudums	N-msa---------n-----------l-
+un	C	un	C---------------------c---l-
+tā	P	tas	P-fsn-------d-------------l-
+pieplūdi	N	pieplūde	N-fsa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+
+
+
+
+Tāpēc	R	tāpēc	R----p--------------------f-
+aprēķināja	V	aprēķināt	Vs----3--i----------------l-
+atsevišķas	A	atsevišķs	A-fpnp-n------------------l-
+dzīvojamās	G	dzīvojams	Gpfpnp-y---p--------------l-
+mājas	N	māja	N-fsg---------n-----------l-
+siltuma	N	siltums	N-msg---------n-----------l-
+izlietojumu	N	izlietojums	N-mpg---------n-----------l-
+apkurei	N	apkure	N-fsd---------n-----------l-
+vienas	M	viens	M-fsg---c-----------------l-
+stundas	N	stunda	N-fsg---------n-----------l-
+laikā	N	laiks	N-msl---------n-----------l-
+,	T	,	T--------------------------,
+ņemot	G	ņemot	G----------a-n------------l-
+vērā	R	vērā	R----p--------------------l-
+ēkas	N	ēka	N-fsg---------n-----------l-
+siltuma	N	siltums	N-msg---------n-----------l-
+balansu	N	balanss	N-msa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+
+
+
+
+Praktiskie	A	praktisks	A-mpnp-y------------------f-
+eksperimenti	N	eksperiments	N-mpn---------n-----------l-
+tika	V	tikt	Vs----3--i----------6-----l-
+veikti	G	veikts	Gsmpnp-n---p--------------l-
+Krievijas	N	Krievija	N-fsg---------n-----------f-
+ZA	Y	ZA	Y-------------------------u-
+Ziemeļu	N	ziemelis	N-mpg---------n-----------f-
+Kolas	N	kola	N-fsg---------n-----------f-
+Enerģētikas	N	enerģētika	N-fsg---------n-----------f-
+fizikāli	R	fizikāli	R----p--------------------l-
+-	T	-	T---------------------------
+tehnisko	A	tehnisks	A-fpgp-y------------------l-
+problēmu	N	problēma	N-fsa---------n-----------l-
+zinātniskā	A	zinātnisks	A-msgp-y------------------l-
+centra	N	centrs	N-msg---------n-----------l-
+(	T	(	T--------------------------(
+Центр	-	Центр	----------------------------
+физико	-	физико	----------------------------
+-	T	-	T---------------------------
+технических	-	технических	----------------------------
+проблем	-	проблем	----------------------------
+энергетики	-	энергетики	----------------------------
+Севера	-	Севера	----------------------------
+Кольского	-	Кольского	----------------------------
+научного	-	научного	----------------------------
+центра	-	центра	----------------------------
+РАН	-	РАН	----------------------------
+,	T	,	T--------------------------,
+г	-	г	----------------------------
+.	SENT	.	T--------------------------.
+
+Апатиты	-	Апатиты	----------------------------
+)	T	)	T--------------------------)
+vēja	N	vējš	N-msg---------n-----------l-
+enerģētikas	N	enerģētika	N-fsg---------n-----------l-
+iekārtu	N	iekārta	N-fsa---------n-----------l-
+testēšanas	N	testēšana	N-fsg---------n-----------l-
+poligonā	N	poligons	N-msl---------n-----------l-
+,	T	,	T--------------------------,
+Daļņije	-	Daļņije	----------------------------
+Zeļenci	-	Zeļenci	----------------------------
+ciemā	N	ciems	N-msl---------n-----------l-
+pie	S	pie	S----------------sgp------l-
+Barenca	N	Barencs	N-msg---------n-----------f-
+jūras	N	jūra	N-fsg---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+
+
+
+
+Primāro	A	primārs	A-mpgp-y------------------f-
+energoresursu	N	energoresurss	N-mpg---------n-----------l-
+ekonomija	N	ekonomija	N-fsn---------n-----------l-
+,	T	,	T--------------------------,
+izmantojot	G	izmantojot	G----------a-n------------l-
+integrētās	G	integrēts	Gsfpap-y---p--------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+ģeneratoru	N	ģenerators	N-mpg---------n-----------l-
+iekārtas	N	iekārta	N-fpn---------n-----------l-
+ar	S	ar	S----------------pdp------l-
+20	D	20	D--pg-----------------------
+,	T	,	T--------------------------,
+40	D	40	D--pg-----------------------
+vai	C	vai	C---------------------c---l-
+60	D	60	D--pg-----------------------
+kW	Y	kW	Y-------------------------l-
+jaudu	N	jauda	N-fsa---------n-----------l-
+
+
+
+
+Vērtējot	G	vērtējot	G----------a-n------------f-
+tika	V	tikt	Vs----3--i----------6-----l-
+izskatīti	G	izskatīts	Gsmpnp-n---p--------------l-
+trīs	M	trīs	M-fpn---c-----------------l-
+dažādas	A	dažāds	A-fpap-n------------------l-
+jaudas	N	jauda	N-fpa---------n-----------l-
+–	T	–	T--------------------------–
+20	D	20	D--pg-----------------------
+,	T	,	T--------------------------,
+40	D	40	D--pg-----------------------
+un	C	un	C---------------------c---l-
+60	D	60	D--pg-----------------------
+kW	Y	kW	Y-------------------------l-
+izmantojamo	G	izmantojams	Gpmsap-y---p--------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+ģeneratoru	N	ģenerators	N-mpg---------n-----------l-
+iekārtu	N	iekārta	N-fsa---------n-----------l-
+varianti	N	variants	N-mpn---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Apkures	N	apkure	N-fsg---------n-----------f-
+katla	N	katls	N-msg---------n-----------l-
+jauda	N	jauda	N-fsn---------n-----------l-
+visos	P	viss	P-mpl-------g-------------l-
+gadījumos	N	gadījums	N-mpl---------n-----------l-
+palika	V	palikt	Vs----3--i----------------l-
+nemainīga	A	nemainīgs	A-fsnp-n--------y---------l-
+–	T	–	T--------------------------–
+40	D	40	D--pg-----------------------
+kW	Y	kW	Y-------------------------l-
+.	SENT	.	T--------------------------.
+
+
+
+
+
+
+Ja	C	ja	C---------------------f---f-
+siltumapgādes	N	siltumapgāde	N-fsg---------n-----------l-
+sistēmai	N	sistēma	N-fsd---------n-----------l-
+pieslēgta	G	pieslēgts	Gsmsgp-n---p--------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+ģeneratoru	N	ģenerators	N-mpg---------n-----------l-
+iekārta	N	iekārta	N-fsn---------n-----------l-
+,	T	,	T--------------------------,
+tad	Q	tad	Q-------------------------l-
+daļa	N	daļa	N-fsn---------n-----------l-
+apkures	N	apkure	N-fsg---------n-----------l-
+slodzes	N	slodze	N-fsg---------n-----------l-
+grafikas	N	grafika	N-fpn---------n-----------l-
+būs	V	būt	Vf----3--i----------1-----l-
+pārsegta	G	pārsegts	Gsfsnp-n---p--------------l-
+uz	S	uz	S----------------sgp------l-
+tās	P	tas	P-fsg-------d-------------l-
+rēķina	V	rēķināt	Vp----3--i----------------l-
+.	SENT	.	T--------------------------.
+
+Izmantojot	G	izmantojot	G----------a-n------------f-
+2007	D	2007	D--p------------------------
+.	T	.	T--------------------------.
+gada	N	gads	N-msg---------n-----------l-
+februārī	N	februāris	N-msl---------n-----------l-
+,	T	,	T--------------------------,
+kad	R	kad	R----p----------------f---l-
+vidējais	A	vidējs	A-msnp-y------------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+ātrums	N	ātrums	N-msn---------n-----------l-
+bija	V	būt	Vs----3--i----------1-----l-
+10	D	10	D--pg-----------------------
+m	Y	m	Y-------------------------l-
+/	T	/	T--------------------------/
+sek	-	sek	----------------------------
+.	T	.	T--------------------------.
+,	T	,	T--------------------------,
+veiktā	G	veikts	Gsmsgp-y---p--------------l-
+eksperimenta	N	eksperiments	N-msg---------n-----------l-
+rezultātus	N	rezultāts	N-mpa---------n-----------l-
+,	T	,	T--------------------------,
+sastādīja	V	sastādīt	Vs----3--i----------------l-
+apkures	N	apkure	N-fsg---------n-----------l-
+slodzes	N	slodze	N-fsg---------n-----------l-
+grafikus	N	grafiks	N-mpa---------n-----------l-
+,	T	,	T--------------------------,
+ņemot	G	ņemot	G----------a-n------------l-
+vērā	R	vērā	R----p--------------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+ģeneratoru	N	ģenerators	N-mpg---------n-----------l-
+iekārtas	N	iekārta	N-fsg---------n-----------l-
+darba	N	darbs	N-msg---------n-----------l-
+daļu	N	daļa	N-fsa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+
+
+
+
+Pamatojoties	G	pamatojoties	G----------a-n-y----------f-
+uz	S	uz	S----------------sap------l-
+to	P	tas	P-msa-------d-------------l-
+,	T	,	T--------------------------,
+var	V	varēt	Vp----3--i----------3-----l-
+izdarīt	V	izdarīt	V--------n----------------l-
+secinājumu	N	secinājums	N-msa---------n-----------l-
+,	T	,	T--------------------------,
+ka	C	ka	C---------------------p---l-
+liela	A	liels	A-msgp-n------------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+ātruma	N	ātrums	N-msg---------n-----------l-
+periodos	N	periods	N-mpl---------n-----------l-
+vēja	N	vējš	N-msg---------n-----------l-
+ģeneratoru	N	ģenerators	N-mpg---------n-----------l-
+sistēma	N	sistēma	N-fsn---------n-----------l-
+var	V	varēt	Vp----3--i----------3-----l-
+zināmā	G	zināms	Gpmslp-n---p--------------l-
+mērā	N	mērs	N-msl---------n-----------l-
+,	T	,	T--------------------------,
+vai	C	vai	C---------------------c---l-
+pilnībā	N	pilnība	N-fsl---------n-----------l-
+apmierināt	V	apmierināt	V--------n----------------l-
+siltumapgādes	N	siltumapgāde	N-fsg---------n-----------l-
+nepieciešamību	N	nepieciešamība	N-fsa---------n-----------l-
+,	T	,	T--------------------------,
+dažos	P	dažs	P-mpl-------i-------------l-
+gadījumos	N	gadījums	N-mpl---------n-----------l-
+radot	G	radot	G----------a-n------------l-
+pat	Q	pat	Q-------------------------l-
+enerģijas	N	enerģija	N-fsg---------n-----------l-
+pārpalikumu	N	pārpalikums	N-msa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+
+
+
+
+Ja	C	ja	C---------------------f---f-
+izmanto	V	izmantot	Vp----3--i----------------l-
+20	D	20	D--pg-----------------------
+kW	Y	kW	Y-------------------------l-
+jaudīgu	A	jaudīgs	A-mpgp-n------------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+ģeneratora	N	ģenerators	N-msg---------n-----------l-
+sistēmu	N	sistēma	N-fsa---------n-----------l-
+,	T	,	T--------------------------,
+tad	R	tad	R----p--------------------l-
+tā	P	tas	P-fsn-------d-------------l-
+patērētāju	N	patērētāja	N-fsa---------n-----------l-
+ar	S	ar	S----------------sap------l-
+siltumenerģiju	N	siltumenerģija	N-fsa---------n-----------l-
+var	V	varēt	Vp----3--i----------3-----l-
+nodrošināt	V	nodrošināt	V--------n----------------l-
+52	D	52	D--p------------------------
+%	T	%	T--------------------------%
+apmērā	N	apmērs	N-msl---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Pavisam	R	pavisam	R----p---------------g----f-
+citādi	R	citādi	R----p--------------------l-
+ir	V	būt	Vp----3--i----------7-----l-
+,	T	,	T--------------------------,
+ja	C	ja	C---------------------d---l-
+izmanto	V	izmantot	Vp----3--i----------------l-
+40	D	40	D--pg-----------------------
+un	C	un	C---------------------c---l-
+60	D	60	D--pg-----------------------
+kW	Y	kW	Y-------------------------l-
+jaudīgas	A	jaudīgs	A-fsgp-n------------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+ģeneratoru	N	ģenerators	N-mpg---------n-----------l-
+sistēmas	N	sistēma	N-fpn---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+
+
+
+
+Uz	S	uz	S----------------sap------f-
+vēja	N	vējš	N-msg---------n-----------l-
+ģeneratoru	N	ģenerators	N-mpg---------n-----------l-
+jaudas	N	jauda	N-fsg---------n-----------l-
+palielinājuma	N	palielinājums	N-msg---------n-----------l-
+rēķina	N	rēķins	N-msg---------n-----------l-
+patērētāju	N	patērētāja	N-fsa---------n-----------l-
+ar	S	ar	S----------------sap------l-
+siltumenerģiju	N	siltumenerģija	N-fsa---------n-----------l-
+var	V	varēt	Vp----3--i----------3-----l-
+nodrošināt	V	nodrošināt	V--------n----------------l-
+85	D	85	D--p------------------------
+-	T	-	T---------------------------
+90	D	90	D--pg-----------------------
+%	T	%	T--------------------------%
+apmērā	N	apmērs	N-msl---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Tas	P	tas	P-msn-------d-------------f-
+ļauj	V	ļaut	Vp----3--i----------9-----l-
+minimāli	R	minimāli	R----p--------------------l-
+izmantot	V	izmantot	V--------n----------------l-
+apkures	N	apkure	N-fsg---------n-----------l-
+katla	N	katls	N-msg---------n-----------l-
+ražoto	G	ražots	Gsfsap-y---p--------------l-
+siltumenerģiju	N	siltumenerģija	N-fsa---------n-----------l-
+,	T	,	T--------------------------,
+līdz ar to	-	līdz_ar_to	----------------------------
+ievērojami	R	ievērojami	R----p--------------------l-
+ieekonomēt	V	ieekonomēt	V--------n----------------l-
+tradicionālo	A	tradicionāls	A-msap-y------------------l-
+fosilo	A	fosils	A-msap-y------------------l-
+kurināmo	G	kurināms	Gpfsap-y---p--------------l-
+un	C	un	C---------------------c---l-
+samazināt	V	samazināt	V--------n----------------l-
+kaitīgo	A	kaitīgs	A-mpgp-y------------------l-
+izmešu	N	izmeši	N-mpg---------n-----------l-
+daudzumu	N	daudzums	N-mpg---------n-----------l-
+atmosfērā	N	atmosfēra	N-fsl---------n-----------l-
+,	T	,	T--------------------------,
+kas	P	kas	P---n-------r---------x---l-
+rodas	V	rasties	Vp----3--i-----y----------l-
+tai	P	tas	P-fsd-------d-------------l-
+sadegot	G	sadegot	G----------a-n------------l-
+.	SENT	.	T--------------------------.
+
+
+
+
+
+
+Apkopojot	G	apkopojot	G----------a-n------------f-
+iegūto	G	iegūts	Gsfsap-y---p--------------l-
+informāciju	N	informācija	N-fsa---------n-----------l-
+,	T	,	T--------------------------,
+secināts	G	secināts	Gsmsnp-n---p--------------l-
+,	T	,	T--------------------------,
+ka	C	ka	C---------------------p---l-
+maksimālu	A	maksimāls	A-mpgp-n------------------l-
+kurināmā	G	kurināms	Gpmsgp-y---p--------------l-
+ekonomiju	N	ekonomija	N-fsa---------n-----------l-
+panākama	G	panākams	Gpfsnp-n---p--------------l-
+izmantojot	G	izmantojot	G----------a-n------------l-
+60	D	60	D--pg-----------------------
+kW	Y	kW	Y-------------------------l-
+jaudas	N	jauda	N-fsg---------n-----------l-
+vēja	N	vējš	N-msg---------n-----------l-
+ģeneratoru	N	ģenerators	N-mpg---------n-----------l-
+sistēmu	N	sistēma	N-fsa---------n-----------l-
+,	T	,	T--------------------------,
+un	C	un	C---------------------c---l-
+vienā	M	viens	M-msl---c-----------------l-
+mēnesī	N	mēness	N-msl---------n-----------l-
+(	T	(	T--------------------------(
+februāris	N	februāris	N-msn---------n-----------l-
+–	T	–	T--------------------------–
+28	D	28	D--p------------------------
+dienas	N	diena	N-fpa---------n-----------l-
+)	T	)	T--------------------------)
+tā	P	tas	P-fsn-------d-------------l-
+var	V	varēt	Vp----3--i----------3-----l-
+būt	V	būt	V--------n----------1-----l-
+:	T	:	T--------------------------:
+2	D	2	D--p------------------------
+257	D	257	D--p------------------------
+,	T	,	T--------------------------,
+037	D	037	D--p------------------------
+rubļu	N	rublis	N-mpg---------n-----------l-
+(	T	(	T--------------------------(
+ja	C	ja	C---------------------d---l-
+kā	C	kā	C---------------------f---l-
+pamata	N	pamats	N-msg---------n-----------l-
+apkures	N	apkure	N-fsg---------n-----------l-
+veids	N	veids	N-msn---------n-----------l-
+izmantota	G	izmantots	Gsfsnp-n---p--------------l-
+dabasgāze	N	dabasgāze	N-fsn---------n-----------l-
+)	T	)	T--------------------------)
+;	T	;	T--------------------------;
+2	D	2	D--p------------------------
+257	D	257	D--p------------------------
+,	T	,	T--------------------------,
+188	D	188	D--p------------------------
+rubļu	N	rublis	N-mpg---------n-----------l-
+(	T	(	T--------------------------(
+ja	C	ja	C---------------------d---l-
+kā	C	kā	C---------------------f---l-
+pamata	N	pamats	N-msg---------n-----------l-
+apkures	N	apkure	N-fsg---------n-----------l-
+veids	N	veids	N-msn---------n-----------l-
+izmantotas	G	izmantots	Gsfsgp-n---p--------------l-
+ogles	N	ogle	N-fsg---------n-----------l-
+)	T	)	T--------------------------)
+;	T	;	T--------------------------;
+2	D	2	D--p------------------------
+256	D	256	D--p------------------------
+,	T	,	T--------------------------,
+953	D	953	D--p------------------------
+rubļu	N	rublis	N-mpg---------n-----------l-
+(	T	(	T--------------------------(
+ja	C	ja	C---------------------d---l-
+kā	C	kā	C---------------------f---l-
+pamata	N	pamats	N-msg---------n-----------l-
+apkures	N	apkure	N-fsg---------n-----------l-
+veids	N	veids	N-msn---------n-----------l-
+izmantots	G	izmantots	Gsmsnp-n---p--------------l-
+mazuts	N	mazuts	N-msn---------n-----------l-
+)	T	)	T--------------------------)
+un	C	un	C---------------------c---l-
+2	D	2	D--p------------------------
+256	D	256	D--p------------------------
+,	T	,	T--------------------------,
+564	D	564	D--p------------------------
+rubļu	N	rublis	N-mpg---------n-----------l-
+(	T	(	T--------------------------(
+ja	C	ja	C---------------------d---l-
+kā	C	kā	C---------------------f---l-
+pamata	N	pamats	N-msg---------n-----------l-
+apkures	N	apkure	N-fsg---------n-----------l-
+veids	N	veids	N-msn---------n-----------l-
+izmantota	G	izmantots	Gsfsnp-n---p--------------l-
+koksne	N	koksne	N-fsn---------n-----------l-
+)	T	)	T--------------------------)
+.	SENT	.	T--------------------------.
+
+
+
+
+
+
+Secinājumi	N	secinājums	N-mpn---------n-----------f-
+:	T	:	T--------------------------:
+
+
+
+
+1	D	1	D--s------------------------
+.	SENT	.	T--------------------------.
+
+Vēja	N	vējš	N-msg---------n-----------f-
+ģeneratoru	N	ģenerators	N-mpg---------n-----------l-
+iekārtas	N	iekārta	N-fsg---------n-----------l-
+izmantošana	N	izmantošana	N-fsn---------n-----------l-
+ļauj	V	ļaut	Vp----3--i----------9-----l-
+lūkoties	V	lūkoties	V--------n-----y----------l-
+uz	S	uz	S----------------sap------l-
+vēju	N	vējš	N-msa---------n-----------l-
+ne tikai	C	ne_tikai	C---------------------c---l-
+kā	C	kā	C---------------------f---l-
+uz	S	uz	S----------------sap------l-
+klimatisku	A	klimatisks	A-msap-n------------------l-
+faktoru	N	faktors	N-msa---------n-----------l-
+,	T	,	T--------------------------,
+kas	P	kas	P---n-------r---------x---l-
+veicina	V	veicināt	Vp----3--i----------------l-
+siltuma	N	siltums	N-msg---------n-----------l-
+zudumu	N	zudums	N-mpg---------n-----------l-
+ēkā	N	ēka	N-fsl---------n-----------l-
+,	T	,	T--------------------------,
+bet arī	C	bet_arī	C---------------------c---l-
+kā	C	kā	C---------------------f---l-
+uz	S	uz	S----------------sap------l-
+pilnvērtīgu	A	pilnvērtīgs	A-msap-n------------------l-
+enerģijas	N	enerģija	N-fsg---------n-----------l-
+avotu	N	avots	N-msa---------n-----------l-
+,	T	,	T--------------------------,
+kas	P	kas	P---n-------r---------x---l-
+apgādā	V	apgādāt	Vp----3--i----------------l-
+ar	S	ar	S----------------sap------l-
+maksimālu	A	maksimāls	A-msap-n------------------l-
+enerģijas	N	enerģija	N-fsg---------n-----------l-
+izstrādi	N	izstrāde	N-fsa---------n-----------l-
+,	T	,	T--------------------------,
+apmierinot	G	apmierinot	G----------a-n------------l-
+apkures	N	apkure	N-fsg---------n-----------l-
+resursu	N	resurss	N-msa---------n-----------l-
+trūkumu	N	trūkums	N-msa---------n-----------l-
+tieši	R	tieši	R----p--------------------l-
+savas	P	savs	P-fpn-------s-------------l-
+vislielākās	A	liels	A-fsgs-y------------------l-
+aktivitātes	N	aktivitāte	N-fsg---------n-----------l-
+laikā	N	laiks	N-msl---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+
+
+
+
+2	D	2	D--p------------------------
+.	SENT	.	T--------------------------.
+
+Izmantojot	G	izmantojot	G----------a-n------------f-
+vēja	N	vējš	N-msg---------n-----------l-
+enerģiju	N	enerģija	N-fsa---------n-----------l-
+ēku	N	ēka	N-fsa---------n-----------l-
+apkures	N	apkure	N-fsg---------n-----------l-
+mērķiem	N	mērķis	N-mpd---------n-----------l-
+nav	V	nebūt	Vp----3--i------y---1-----l-
+nepieciešams	G	nepieciešams	Gpmsnp-n---p----y---------l-
+uzturēt	V	uzturēt	V--------n----------------l-
+augstu	A	augsts	A-msap-n------------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+ģeneratoru	N	ģenerators	N-mpg---------n-----------l-
+sistēmas	N	sistēma	N-fsg---------n-----------l-
+izstrādāto	G	izstrādāts	Gsmsap-y---p--------------l-
+enerģijas	N	enerģija	N-fsg---------n-----------l-
+kvalitāti	N	kvalitāte	N-fsa---------n-----------l-
+,	T	,	T--------------------------,
+ļaujot	G	ļaujot	G----------a-n------------l-
+maksimāli	A	maksimāls	A-mpnp-n------------------l-
+vienkāršot	V	vienkāršot	V--------n----------------l-
+pašu	P	pats	P-msa-------m-------------l-
+vēja	N	vējš	N-msg---------n-----------l-
+ģeneratoru	N	ģenerators	N-msa---------n-----------l-
+iekārtu	N	iekārta	N-fsa---------n-----------l-
+,	T	,	T--------------------------,
+padarot	G	padarot	G----------a-n------------l-
+to	P	tas	P-msa-------d-------------l-
+lētāku	A	lēts	A-fsac-n------------------l-
+un	C	un	C---------------------c---l-
+drošu	A	drošs	A-fpgp-n------------------l-
+ekspluatācijai	N	ekspluatācija	N-fsd---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Nepieciešams	G	nepieciešams	Gpmsnp-n---p----y---------f-
+,	T	,	T--------------------------,
+lai	C	lai	C---------------------f---l-
+saražotais	G	saražots	Gsmsnp-y---p--------------l-
+enerģijas	N	enerģija	N-fsg---------n-----------l-
+daudzums	N	daudzums	N-msn---------n-----------l-
+pietiktu	V	pietikt	Vp-------s----------------l-
+siltuma	N	siltums	N-msg---------n-----------l-
+slodzes	N	slodze	N-fsg---------n-----------l-
+nodrošinājumam	N	nodrošinājums	N-msd---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+
+
+
+
+3	D	3	D--p------------------------
+.	SENT	.	T--------------------------.
+
+Vēja	N	vējš	N-msg---------n-----------f-
+ģeneratoru	N	ģenerators	N-mpg---------n-----------l-
+sistēmas	N	sistēma	N-fsg---------n-----------l-
+izmantošana	N	izmantošana	N-fsn---------n-----------l-
+rajonos	N	rajons	N-mpl---------n-----------l-
+,	T	,	T--------------------------,
+kuros	P	kurš	P-mpl-------r---------f---l-
+nav	V	nebūt	Vp----3--i------y---4-----l-
+centralizēta	G	centralizēts	Gsmsgp-n---p--------------l-
+siltuma	N	siltums	N-msg---------n-----------l-
+apgāde	N	apgāde	N-fsn---------n-----------l-
+,	T	,	T--------------------------,
+tā	P	tas	P-fsn-------d-------------l-
+var	V	varēt	Vp----3--i----------3-----l-
+nodrošināt	V	nodrošināt	V--------n----------------l-
+80	D	80	D--pg-----------------------
+-	T	-	T---------------------------
+90	D	90	D--pg-----------------------
+%	T	%	T--------------------------%
+no	S	no	S----------------sgp------l-
+deficītā	A	deficīts	A-msgp-y------------------l-
+organiskā	A	organisks	A-msgp-y------------------l-
+kurināma	G	kurināms	Gpmsgp-n---p--------------l-
+lietošanas	N	lietošana	N-fsg---------n-----------l-
+,	T	,	T--------------------------,
+ar	S	ar	S----------------sap------l-
+to	P	tas	P-msa-------d-------------l-
+uzlabojot	G	uzlabojot	G----------a-n------------l-
+apkārtnes	N	apkārtne	N-fsg---------n-----------l-
+ekoloģisko	A	ekoloģisks	A-msap-y------------------l-
+stāvokli	N	stāvoklis	N-msa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+
+
+
+
+4	D	4	D--p------------------------
+.	SENT	.	T--------------------------.
+
+Izmantojot	G	izmantojot	G----------a-n------------f-
+vēja	N	vējš	N-msg---------n-----------l-
+ģeneratoru	N	ģenerators	N-mpg---------n-----------l-
+sistēmas	N	sistēma	N-fsg---------n-----------l-
+siltuma	N	siltums	N-msg---------n-----------l-
+apgādē	N	apgāde	N-fsl---------n-----------l-
+,	T	,	T--------------------------,
+ir	V	būt	Vp----3--i----------7-----l-
+radusies	G	radies	Gsfsn--n---a---y----------l-
+iespēja	N	iespēja	N-fsn---------n-----------l-
+sekmīgi	R	sekmīgi	R----p--------------------l-
+cīnīties	V	cīnīties	V--------n-----y----------l-
+ar	S	ar	S----------------sap------l-
+vēja	N	vējš	N-msg---------n-----------l-
+enerģijas	N	enerģija	N-fsg---------n-----------l-
+galveno	A	galvenais	A-msap-y------------------l-
+trūkumu	N	trūkums	N-msa---------n-----------l-
+–	T	–	T--------------------------–
+laika	N	laiks	N-msg---------n-----------l-
+nevienmērību	N	nevienmērība	N-fsa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Īslaicīgas	A	īslaicīgs	A-fpnp-n------------------f-
+(	T	(	T--------------------------(
+sekundes	N	sekunde	N-fpn---------n-----------l-
+un	C	un	C---------------------c---l-
+minūtes	N	minūte	N-fsg---------n-----------l-
+)	T	)	T--------------------------)
+vēja	N	vējš	N-msg---------n-----------l-
+stipruma	N	stiprums	N-msg---------n-----------l-
+izmaiņas	N	izmaiņa	N-fsg---------n-----------l-
+vēja	N	vējš	N-msg---------n-----------l-
+ģeneratoru	N	ģenerators	N-mpg---------n-----------l-
+sistēma	N	sistēma	N-fsn---------n-----------l-
+var	V	varēt	Vp----3--i----------3-----l-
+izlīdzināt	V	izlīdzināt	V--------n----------------l-
+uz	S	uz	S----------------sgp------l-
+siltumapgādes	N	siltumapgāde	N-fsg---------n-----------l-
+sistēmas	N	sistēma	N-fsg---------n-----------l-
+akumulējošo	G	akumulējošs	Gpmsap-y---a--------------l-
+spēju	N	spēja	N-fsa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+Ilgstošākas	G	ilgstošs	Gpfsgc-n---a--------------f-
+vēja	N	vējš	N-msg---------n-----------l-
+stipruma	N	stiprums	N-msg---------n-----------l-
+svārstības	N	svārstība	N-fsg---------n-----------l-
+(	T	(	T--------------------------(
+no	S	no	S----------------pdp------l-
+dažām	P	dažs	P-fpd-------i-------------l-
+minūtēm	N	minūte	N-fpd---------n-----------l-
+līdz	S	līdz	S----------------pdp------l-
+vairākām	P	vairāki	P-fpd-------i-------------l-
+stundām	N	stunda	N-fpd---------n-----------l-
+)	T	)	T--------------------------)
+var	V	varēt	Vp----3--i----------3-----l-
+izlīdzināt	V	izlīdzināt	V--------n----------------l-
+uz	S	uz	S----------------sgp------l-
+pašu	P	pats	P-msa-------m-------------l-
+apkurināmo	A	apkurināms	A-fsap-y------------------l-
+māju	N	māja	N-fsa---------n-----------l-
+akumulējošām	G	akumulējošs	Gpfpdp-n---a--------------l-
+spējām	A	spējš	A-fpdp-n------------------l-
+.	SENT	.	T--------------------------.
+
+Ilgstošu	G	ilgstošs	Gpmpgp-n---a--------------f-
+pārtraukumu	N	pārtraukums	N-msa---------n-----------l-
+(	T	(	T--------------------------(
+bezvēja	N	bezvējš	N-msg---------n-----------l-
+)	T	)	T--------------------------)
+gadījumā	N	gadījums	N-msl---------n-----------l-
+var	V	varēt	Vp----3--i----------3-----l-
+ekspluatēt	V	ekspluatēt	V--------n----------------l-
+tradicionālā	A	tradicionāls	A-msgp-y------------------l-
+fosilā	A	fosils	A-msgp-y------------------l-
+kurināmā	G	kurināms	Gpmsgp-y---p--------------l-
+apkures	N	apkure	N-fsg---------n-----------l-
+katlu	N	katls	N-msa---------n-----------l-
+.	SENT	.	T--------------------------.
+
+
+
+
+
+
+Pēdējās	A	pēdējais	A-fpnp-y------------------f-
+izmaiņas	N	izmaiņa	N-fpn---------n-----------l-
+:	T	:	T--------------------------:
+Piektdiena	N	piektdiena	N-fsn---------n-----------f-
+,	T	,	T--------------------------,
+11	D	11	D--pg-----------------------
+janvāris	N	janvāris	N-msn---------n-----------l-
+2008	D	2008	D--p------------------------
+19	D	19	D--pg-----------------------
+:	T	:	T--------------------------:
+10	D	10	D--pg-----------------------

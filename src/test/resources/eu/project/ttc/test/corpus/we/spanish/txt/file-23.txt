@@ -1,0 +1,499 @@
+Instalaciones Micro-Eólicas
+
+Instalaciones Micro-Eólicas
+Proyecto RES & RUE Dissemination
+
+ÍNDICE
+
+PREFACIO 1. INTRODUCCIÓN 2. Un poco de teoría: cómo aprovechar el recurso viento
+
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (1 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+2.1 La física de una instalación eólica 2.2 La composición de una instalación eólica
+3. La
+
+energía eólica en España
+
+3.1 Situación actual y potencialidad 3.2 Impacto ambiental 4. La microeólica 4.1 Instalaciones y tecnología 4.2 Aplicaciones 4.3 El potencial micro-eólico en España 4.4 Impacto medioambiental
+5. Pasos
+
+a seguir para la construcción de una instalación microeólica
+
+5.1 Microinstalaciones eólicas 5.2 Elección del lugar y estudio de la velocidad del viento 5.3 Estudio de viabilidad de la instalación y control de costes 5.4 Elección del proyectista constructor y fase de implementación 5.5 Gestión de la instalación (manutención y gestión) 6. Acciones de programación: el papel de las entidades públicas 6.1 Por dónde empezar 6.2 Recursos disponibles
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (2 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+6.3 Qué recursos activar 7. Glosario
+8. Apéndice CECU agradece a todos los que han contribuido a la realización de esta publicación en el contexto del proyecto europeo RES & RUE Dissemination – Programa ALTENER. Se agradece a las entidades públicas, las asociaciones, y las empresas constructoras y/o distribuidoras de componentes por su disponibilidad y participación activa.
+
+Informe realizado por: Ing. Alessandro Brusa Ing. Elena Guarnone
+
+A.P.E.R.
+(Adaptado a la realidad española por CECU)
+
+Prefacio
+ARRIBA
+
+La utilización de sistemas capaces de generar energía de forma “limpia” y sostenible está teniendo en estos últimos años un gran crecimiento, debido en buena medida, al empuje recibido por la constatación de los problemas derivados del cambio climático y el agotamiento de los recursos a los que se enfrenta nuestro planeta. Estos sistemas tendrán una mayor relevancia tras la decisión de la Comunidad Europea, junto con otros países, de aceptar las obligaciones de reducción de las emisiones que provocan el cambio climático, según lo expuesto en el Protocolo de Kyoto.
+
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (3 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+El boom que está teniendo en los últimos años en Europa el desarrollo de las llamadas “Wind Farm” (lugares de producción de energía eólica) ha contribuido de forma decisiva a reducir los costes de la tecnología, iniciando así un efecto en cadena, consecuencia, en parte, de las ayudas de financiación concedidas a estas instalaciones; pero frenado por la dificultades que suponen el otorgamiento de las licencias y los requerimientos de evaluación de impacto ambiental. Lo anterior se refiere a las grandes instalaciones eólicas con una potencia mayor de 500 kW), pero poco o casi nada se dice sobre las instalaciones eólicas de tamaño muy pequeño cuyo impacto visual puede ser, en el caso de bajas potencias en kilowatios, igual o poco superior al de una antena parabólica y que pueden ser utilizadas en aplicaciones diferentes de las industriales: hogares, infraestructuras turísticas (camping, hoteles, puertos turísticos), lugares aislados (estaciones meteorológicas, refugios alpinos, estructuras aisladas tanto en la montaña como en el mar o en islas, reservas naturales), así como también en instalaciones públicas (alumbrado, semáforos). El objetivo principal de este dossier es ofrecer a las Administraciones Públicas, a los que planifican los temas energéticos, urbanos y medio ambientales, a los profesionales y a todos los que tienen un papel fundamental en el desarrollo de sistemas integrados energía-medio ambiente-territorio un instrumento de análisis y evaluación para la utilización de sistemas de producción descentralizada de energía eléctrica, que contribuyan, dentro de un plano orgánico local, a moderar los efectos que supone la utilización incontrolada de combustibles fósiles y de los recursos. El dossier se dirige además a los usuarios finales, es decir, a los consumidores que quieran estar al día en tema de tecnologías limpias, incluso para necesidades civiles y que, con sus elecciones, pueden influir sobre el mercado.
+
+1. Introducción
+ARRIBA
+
+La producción de energía eléctrica a través del viento se asocia normalmente a
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (4 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+la imagen de instalaciones eólicas situadas sobre lomas o, últimamente, en mar abierto, donde se dan las mejores condiciones climáticas, orográficas y medioambientales para un aprovechamiento del recurso viento con fines industriales (producción de energía eléctrica para la venta). Por otra parte, es frecuente ver barcos equipados con pequeños generadores eólicos, de diámetro no superior a 1 metro, que se emplean para cargar las baterías con el motor parado. Estos sistemas pueden alimentar gracias al viento las pequeñas necesidades del barco (frigorífico, cuadro de control, luces, etc.) insertándose perfectamente en el contexto en el que están instaladas. Asimismo, en algunas granjas de los Estados Unidos se emplea la fuerza del viento a través de molinos multipala que generan energía suficiente para bombear el agua de los pozos. Por lo tanto, si se piensa que, a través de microsistemas (con una potencia de pocos kilowatios, que carecen de requisitos para su instalación, a excepción de las precauciones necesarias en lugares de gran valor) se puede producir energía eléctrica de la misma manera, en continuidad y potencia de pico, que los generadores fotovoltaicos (GF), sería una oportunidad perdida no pensar en micro-sistemas eólicos para producir energía eléctrica a pequeña escala, de forma sostenible y compatible con el medio ambiente, con la posibilidad de que se haga de forma conjunta con Paneles Fotovoltaicos. En este punto, las Administraciones Públicas y los profesionales asumen un papel importante para el aprovechamiento de esta oportunidad: por una parte los directivos responsables de la determinación de las directrices en los ámbitos de la energía, el medio ambiente y el territorio, tienen la posibilidad de favorecer la difusión de pequeñas instalaciones de fuentes energéticas renovables, a través de los instrumentos de la programación, de facilitar los trámites de autorización, de la asignación de fondos y de la adhesión a proyectos e iniciativas de programación local (“Campaign for Take-Off”: Iniciativas para el Desarrollo). Por otra parte, los profesionales tienen la tarea de investigar la potencialidad que ofrece el territorio, estudiar como integrar estos sistemas en el medio local y diseñar proyectos-piloto que ayuden a definir y difundir un estándar aplicable
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (5 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+localmente.
+
+2. Un poco de teoría: cómo aprovechar el recurso viento
+2.1 La física de una instalación eólica
+ARRIBA
+
+Las turbinas eólicas – llamadas aerogeneradores – utilizan la energía cinética producida por un flujo de aire con densidad •••que atraviesa el rotor (formado por las palas y el buje) del aerogenerador, reduciendo su velocidad desde el valor v no perturbado frente al rotor, a un valor inferior tras pasar por las palas. La diferencia de velocidad de la masa de aire en la entrada y en la salida del rotor se refleja, siendo constante el caudal del fluido a través de las palas en una diferencia en el área ocupada por la masa de aire, y mide justo la cantidad de energía cinética que mueve el rotor y el correspondiente generador eléctrico. La potencia extraíble de una turbina eólica se puede calcular con la siguiente ecuación: P = ρ/2 Cp η A v3 donde: P = potencia medida en Vatios ρ = densidad de la masa de aire medida en kg/m3
+Cp = coeficiente de potencia máximo de una turbina ideal de eje horizontal, igual a 16/27 = 0.593 = eficiencia mecánica y eléctrica de la turbina η
+
+A = área circular de movimiento de las palas del rotor y en la que se mueve la masa de aire expresada en mq v = velocidad de la masa de aire antes de pasar por las palas, medida en m/s La potencia extraíble del recurso viento a través de un aerogenerador crece al
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (6 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+aumentar el área cubierta por las palas (por lo tanto al aumentar su longitud), y la velocidad del viento; depende, además, de la densidad del aire, en función de las condiciones meteorológicas del lugar (temperatura, humedad, …).
+Caracterización del viento Determinación de los parámetros de interés y de qué dependen Para evaluar la potencialidad real de una instalación es indispensable conocer bien las características del viento en el lugar en el que se piensa instalar los aerogeneradores. Un atento estudio de la velocidad del viento prevé la individuación de los siguientes elementos: distribución de frecuencia de la velocidad del viento y de sus parámetros principales: velocidad media, velocidad media cúbica, velocidad máxima, desviación cuadrática media. curva de duración de la velocidad del viento. distribución de la frecuencia de la dirección del viento (rosa de los vientos).
+
+La intensidad del viento depende de las características orográficas del terreno. Un elemento fundamental es la rugosidad del terreno: en llanura o en el mar el viento sopla con intensidad mayor que en el campo o en los alrededores de las ciudades, que, a su vez son zonas más ventiladas que los centros de las mismas. La intensidad del viento depende también de la altura del terreno: cuanto más se sube, mayor es la velocidad del viento. La intensidad del viento es fundamental para determinar la potencia captable por un aerogenerador ya que, a igualdad de diámetro de las palas, la potencia aumenta con el cubo de la velocidad. Al aumentar la velocidad del viento, por lo tanto, aumenta de forma más que proporcional la potencia teóricamente extraíble, pero aumentan de la misma manera también los requerimientos de la máquina. Las máquinas eólicas están proyectadas sobre la base de tres valores de velocidad. Los aerogeneradores: se activan con viento variable de 2 a 4 m/s (velocidad de “cut-in”);
+
+están equipados con un dispositivo de control de la potencia cuando el viento alcanza la velocidad de 10-14 m/s (velocidad de corte o nominal). Se paran cuando la velocidad del viento alcanza valores de aproximadamente 20-25 m/s
+
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (7 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+(velocidad de cut-off).
+
+2.2 Composición de una instalación eólica
+ARRIBA
+
+Una instalación eólica consta de uno o más aerogeneradores colocados a una distancia adecuada los unos de los otros –para que no interfieran desde el punto de vista aerodinámico entre ellos– y según un diseño sobre el territorio en función de la exposición al viento y del impacto visual (en filas, en grupos,…). Los aerogeneradores están conectados, a través de cables enterrados, con la red de transmisión a la que se entrega la energía.
+
+Esquema de una instalación eólica
+
+Una máquina eólica típica, más allá de las peculiaridades de los modelos y de
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (8 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+los adelantos tecnológicos, que varían según la empresa constructora, consta de lo siguiente: Las palas de la máquina (normalmente en un número que va de uno a tres) están fijadas a un buje y, en el conjunto, constituyen el rotor. El buje, a su vez, está conectado a un primer eje – eje de baja velocidad – que gira a la misma velocidad angular que el rotor y, tras la conexión a un multiplicador de giros, hay un eje de alta velocidad que, en cambio, gira con velocidad angular que es el resultado de la del primer eje por el multiplicador de giros. En el eje de alta velocidad hay un freno, detrás del cual está el generador eléctrico, del que salen los cables eléctricos de potencia. Todos estos elementos se encuentran en la llamada góndola que, a su vez, se encuentra sobre un soporte orientable según la dirección del viento. La góndola se completa con un sistema de control de la potencia y uno de control de la orientación. El primero tiene la doble función de regular la potencia en función de la velocidad del viento instantánea, que hace funcionar la turbina cuanto más cerca está de su potencia nominal, y de interrumpir el funcionamiento de la máquina en caso de que el viento sea excesivo. El sistema de control de la orientación consta de un control continuo del paralelismo entre el eje de la máquina y la dirección del viento. La góndola se encuentra sobre una torre que puede ser de celosía o tubular cónica, anclada al terreno con adecuados cimientos de hormigón armado. Los aspectos característicos que diferencian un tipo de máquina de otra, independientemente de la potencia y por lo tanto del tamaño, son los siguientes: sistema de control de la potencia: por cambio del ángulo de paso o por pérdida aerodinámica; velocidad del rotor: constante o variable; presencia o ausencia del multiplicador de giros;
+Potencia efectiva extraíble de un aerogenerador
+
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (9 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+La potencia teórica extraíble del viento en la realidad se reduce por dos factores: COEFICIENTE Cp El coeficiente Cp, descrito por A. Betz expresa el hecho de que, a nivel teórico, no más del 59.3% de la energía contenida en una masa de aire se puede extraer con una turbina eólica. El límite físico a la potencia máxima extraíble del viento refleja el hecho de que, si se quisiera transformar totalmente la energía cinética del viento en energía eléctrica – o sea, que la masa de aire ceda completamente su energía a la turbina –, haría falta anular su velocidad tras haber pasado por el rotor, cosa que es ilógica. RENDIMIENTO GLOBAL • Las máquinas tienen límites físicos; o sea, están caracterizadas por rendimientos mecánicos y eléctricos (variables en base a la velocidad de funcionamiento y de valor máximo correspondiente a la potencia nominal proyectada), que consideran las inevitables pérdidas aerodinámicas. El producto de los factores Cp y • en relación con las velocidades del viento, tiene una forma de campana y alcanza su máximo a la velocidad nominal, alrededor del 45-50%.
+
+Grafico: Potencia extraíble por metro cuadrado de área cubierta por el rotor
+
+A título de ejemplo, se ven en el gráfico algunas funciones de la potencia por unidad de área cubierta por el rotor: en azul la máxima inalcanzable, en rojo la máxima teóricamente predecible, y la línea punteada representa un ejemplo real obtenido simulando un sistema de regulación de la potencia muy frecuente en los aerogeneradores (de tipo de paso).
+
+3. La energía eólica en España
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (10 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+ARRIBA
+
+3.1 Situación actual y potencialidad
+En el año 2001, la potencia de energía eólica instalada era de 3.337 MW y la producción anual fue de 6.925 GWh. Las previsiones del Plan de Fomento de Energías Renovables para el año 2010 preveían un aumento considerable del peso de esta fuente de energía, con una potencia de 8.974 MW y una producción de 21.537,8 GWh/año. El Plan fija el objetivo de instalar 8.140 MW durante el período 1999-2010. En el año 2002 España pasó a ser el segundo productor de energía eólica en el mundo, después de Alemania. La potencia eólica instalada en España aumentó durante ese año en 1.943,34 MW, llegando a alcanzar los 4.830,35 MW. El 84% de la capacidad entró en funcionamiento en las Comunidades de Galicia, Aragón, Castilla-La Mancha y Castilla y León. En la actualidad, España cuenta con 235 parques eólicos repartidos por las diferentes Comunidades Autónomas. Según un estudio auspiciado por EWEA (Asociación Europea de Energía Eólica) y Greenpeace, España tiene un potencial eólico técnicamente aprovechable de 43.000 MW, lo que supone un margen suficiente para satisfacer en 2020 como mínimo un 20% de su demanda eléctrica prevista.
+3.2 Impacto ambiental
+ARRIBA
+
+En España es obligatorio, según la legislación estatal, someter al procedimiento de evaluación de impacto ambiental la puesta en marcha de instalaciones de energía eólica, en los parques que tengan 50 o más aerogeneradores o que se encuentren a menos de dos kilómetros de otro parque eólico, así como a otros que, no alcanzando los valores de los umbrales establecidos, se desarrollen en zonas especialmente sensibles y tengan más de 10 aerogeneradores.
+
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (11 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+NORMATIVA RELATIVA A LA EVALUACIÓN DE IMPACTO AMBIENTAL Se entiende por Evaluación de Impacto Ambiental (EIA) el conjunto de estudios y sistemas técnicos que permiten estimar los efectos que un determinado proyecto, obra o actividad causa sobre el medio ambiente. El procedimiento de Evaluación de Impacto Ambiental fue regulado por el derecho comunitario mediante la Directiva 85/337/CEE, posteriormente modificada por la Directiva 97/11/CEE, que completó la lista de proyectos que debían someterse a este procedimiento. En España existe una norma estatal aplicable con carácter general que regula el procedimiento de Evaluación de Impacto Ambiental: la Ley 6/2001, de 8 de mayo, de modificación del Real Decreto Legislativo 1302/1986, de 28 de junio, de evaluación de impacto ambiental.
+
+Según lo establecido en el Real Decreto-Ley, el Estudio de Impacto Ambiental debe incluir entre otros aspectos la evaluación de los efectos previsibles directos o indirectos del proyecto sobre la población, la fauna, la flora, el suelo, el aire, el agua, los factores climáticos, el paisaje y los bienes materiales, incluido el patrimonio histórico-artístico y el arqueológico, así como las medidas correctoras previstas para reducir, eliminar o compensar los efectos ambientales significativos, y un Programa de Vigilancia Ambiental durante la vida útil de la instalación.
+
+4. La energía microeólica
+ARRIBA
+
+4.1 Instalaciones y tecnología
+No existe una clasificación convencional que defina el micro-eólico; en este informe nos referiremos a una potencia instalada inferior a 100 kW, por analogía con las instalaciones hidroeléctricas, teniendo en cuenta que por debajo de los 20-30 kW aproximadamente, el uso que se le dará será el doméstico, mientras que por encima de esa potencia se tratará de aplicaciones industriales, normalmente de unos centenares de kW. La potencia de una micro-instalación eólica se calcula mediante la fórmula que
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (12 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+hemos visto en el punto 2.1, donde se puede considerar, a causa de inevitables factores de escala, un rendimiento global comprendido entre 0,3 y 0,6, o sea, inferior a los de dimensiones industriales. Configuración de las turbinas La mayoría de los micro-generadores son de eje horizontal con rotor a barlovento respecto a la torre (el viento encuentra primero las palas y luego el soporte) y conicidad nula (el plano de rotación de las palas forma una línea paralela ideal con la horizontal). Existen diferentes configuraciones de turbinas eólicas: monopala, bipala, tripala, multipala. El aumento del número de palas disminuye la velocidad de rotación, aumenta el rendimiento y encarece el precio de estas turbinas. Excluyendo la monopala y la multipala que tienen aplicaciones especiales, el mercado se ha concentrado en la bipala y en la tripala, orientándose sobre todo hacia esta última configuración, ya que está caracterizada por un motor más uniforme (y, por lo tanto, de mayor duración), la energía producida es ligeramente superior (o sea, en general con un rendimiento mayor), y además, son visualmente menos agresivos, gracias a que tienen una configuración más simétrica y una velocidad de rotación más baja, más relajante para los ojos de quien la observa.
+
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (13 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+Aerogenerador multipala Aerogenerador tripala
+
+Máquina Savonius
+
+La máquina Savonius la inventó hace aproximadamente 60 años un finlandés, que le dio el nombre, y se ha utilizado sobre todo para el bombeo del agua. Las recientes aplicaciones también incluyen la producción de energía eléctrica. Se trata de una máquina de eje vertical, muy sencilla desde el punto de vista constructivo y de funcionamiento. Además de la sencillez, tiene la ventaja de ser muy robusta y de tener un fuerte par de arranque, cosa que permite el arranque incluso con vientos muy débiles. Pero se puede utilizar solo con potencias reducidas ya que la turbina Savonius trabaja bien con vientos débiles, mientras que su rendimiento disminuye con vientos fuertes e incluso resulta vulnerable, ya que su tamaño no puede superar ciertos limites. El rendimiento global máximo es igual a 0,2. Maquina DARRIEUS – Turbina HÍBRIDA
+
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (14 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+La máquina Darrieus fue inventada en los años 20 en su primera versión por un francés que le dio su nombre. Se llama también híbrida porque presenta características de otras máquinas: eje de rotación vertical – como la Savonius – y palas de tipo aerodinámico, como los otros aerogeneradores. La máquina Darrieus se caracteriza por su sencillez de construcción y por un gran rendimiento, de aproximadamente 0.4, logrando juntar las ventajas de las otras tipologías. El régimen de rotación es muy elevado. En cambio, el par de arranque muy bajo no permite a esta tipología de máquinas arrancar de forma espontánea.
+
+Material de composición de las palas La mayor parte de las turbinas mini-eólicas utilizan palas fabricadas con metal plaqueado: poliéster reforzado con fibra de vidrio o, en menor proporción, con fibras de carbono, y raramente madera. Se ha dejado de utilizar el aluminio por su tendencia a deformarse bajo esfuerzo. Orientación El tamaño reducido de las turbinas mini-eólicas no permite colocar motores con orientación del rotor en la dirección del viento u otros componentes metálicos que tienen las turbinas de tamaño mediano: casi todas las miniturbinas tienen brazos direccionales para orientar el rotor en la dirección del viento. Robustez Para obtener un buen rendimiento, las turbinas tienen que situarse en lugares
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (15 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+batidos por vientos consistentes: para las máquinas de minieólica, teniendo en cuenta su reducido tamaño, es fundamental la robustez. La experiencia nos lleva a decir que se impone la opción de la escuela del metal pesante: los aerogeneradores más pesados han dado pruebas de ser de mayor robustez y fiabilidad que los más ligeros. El peso de una turbina de minieólica comparada con el área batida por su rotor -la llamada masa específica, medible en kg/mq- es, por lo tanto, un buen indicador de elección entre máquinas diferentes. Normalmente, a una masa específica más alta corresponde un precio más alto. Control de la potencia En régimen de viento fuerte, las turbinas tienen que tener un sistema de posicionamiento pasivo del rotor que desvíe el eje respecto al de rotación de la pala. La mayor parte de las micro y miniturbinas se dobla sobre una bisagra, de modo que el rotor gire hacia el brazo direccional: algunas en vertical, otras en horizontal. La velocidad del viento a la que se realiza la desalineación y la forma en la que se verifica dependen de la bisagra colocada entre el brazo direccional y la góndola. Generadores La mayor parte de las turbinas eólicas utiliza alternadores de imán permanente: se trata de la configuración más sencilla y robusta. Para las turbinas de uso doméstico, las configuraciones de alternador pueden ser las siguientes: imán permanente, alternador convencional con devanado del campo y generador de inducción. Modalidad de colocación y elección del lugar El lugar de colocación de la turbina tendrá que ser determinado debidamente a través de un estudio de la zona. Por una parte, la cercanía de los elementos que van a utilizar la energía puede resultar perjudicial para la funcionalidad de la máquina (interferencia del viento debida a la proximidad de los edificios). Además, hay que tener en cuenta el impacto del inevitable ruido producido por la turbina. Por otra parte, la lejanía de los elementos hace que los costes de
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (16 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+cableado y enterramiento de las líneas eléctricas sean mayores, además de aumentar la dispersión de energía. Hace falta encontrar una justa relación entre los dos términos, teniendo también en cuenta la importancia de que la posición de la máquina sea segura, o sea en un lugar donde, incluso en caso de hundimiento, los daños sean limitados. Existen casos de aerogeneradores colocados en los tejados de las casas. Se trata de una modalidad bastante controvertida: por una parte, el montaje podría resultar sencillo pero, por la otra existen problemas de vibraciones transmitidas por la turbina a las estructuras sobre las que se monta, y de turbulencia que se va creando alrededor de los tejados, que es causa de una reducción de la potencia generada. La instalación más común sigue siendo la torre, de celosía, tubular o arriostrada.
+
+Instalación arriostrada y de celosía
+
+4.2 Aplicaciones
+ARRIBA
+
+Alimentación de elementos aislados “stand alone” y “off-grid”
+
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (17 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+1. En España existen zonas aisladas desde el punto de vista energético, ya
+
+que no resulta económicamente rentable llevar hasta allí la red eléctrica; aunque en número limitado existen, por tanto, usuarios privados o infraestructuras turísticas (alojamientos de turismo rural, granjas, camping, refugios, usuarios domésticos aislados en montaña, en el mar o en islas) no conectados a la red. En estos casos, es posible utilizar aerogeneradores de pequeño tamaño junto con sistemas de acumulación (baterías) y sistemas híbridos (con paneles fotovoltaicos y generadores diesel).
+
+2. Otras aplicaciones están relacionadas con la alimentación de sistemas de telecomunicación (repetidores, antenas de telefonía móvil instaladas lejos de la red eléctrica, etc.). 3. Sistemas de bombeo y drenaje: áreas de cultivo, etc. 4. Necesidades de alumbrado público: carreteras, viaductos, túneles, faros, plataformas, semáforos, etc…
+5.
+
+Alimentación de zonas aisladas dentro de espacios naturales protegidos.
+
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (18 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+Sistemas “on-grid” o “grid-connected” Con el actual funcionamiento del mercado eléctrico en España, los titulares de las instalaciones de micro-eólica pueden utilizar la energía producida para el autoconsumo, obteniendo un ahorro en la factura de energía eléctrica igual al contravalor del consumo evitado y transferir al sistema, a través de la compañía distribuidora de electricidad, su producción o los excedentes de energía eléctrica, siempre que sea posible su absorción por la red. Una importante aplicación potencial de la micro-eólica, por ejemplo integrada en sistemas híbridos, es la disposición de redes locales en islas pequeñas. En muchas islas, el potencial de la velocidad del viento puede resultar favorable para la instalación de máquinas de tamaño reducido. Hay que tener en cuenta que se trata de una operación bastante compleja y que por lo tanto requiere, en la fase preliminar, una correcta evaluación de la estabilidad de la red, además de las posibles intervenciones de gestión y racionalización de la demanda de las necesidades energéticas. Sistema de intercambio con la red eléctrica de la energía producida en instalaciones de energías renovables
+El actual funcionamiento del sistema eléctrico en España, con la liberalización del mercado eléctrico, permite que las instalaciones de producción de electricidad a partir de fuentes renovables puedan
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (19 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+transferir al sistema, a través de la compañía distribuidora de electricidad, su producción o excedente de energía eléctrica y percibir por ello el precio del mercado mayorista más los incentivos previstos en base al régimen especial de producción de electricidad, determinado en el Real Decreto 2818/1998 (en el que se dictan las normas de producción de energía eléctrica abastecidas por recursos o fuentes de energías renovables). Asimismo, los productores responsables de este tipo de instalaciones tienen derecho a recibir en todo momento de la compañía distribuidora la energía eléctrica que sea necesaria para el desarrollo de su actividad, abonando la tarifa que les corresponda. Las características de este sistema son importantes para el desarrollo de la micro-eólica, teniendo en cuenta las siguientes consideraciones: La energía eólica es un recurso intermitente: la producción no es constante en el tiempo y no se ü puede prever. Puede suceder que momentos de producción de energía coincidan con instantes de necesidad energética nula, o puede suceder lo contrario. Permite reducir los costes, evitando la utilización de sistemas caros de almacenamiento de la ü energía. ü Evita al usuario instalar contadores de energía añadidos.
+
+Sistemas híbridos y combinados
+Los sistemas híbridos nacen de la unión de dos o más sistemas de generación, uno convencional y uno que utilice fuentes renovables, para garantizar una base de continuidad del servicio eléctrico. La configuración típica de un sistema híbrido es la siguiente: una o más unidades de generación de fuentes renovables: eólica, fotovoltaica, hidroeléctrica; una o más unidades de generación convencional: diesel; sistema de almacenaje de tipo mecánico, electroquímico o hidráulico; sistemas de condicionamiento de la potencia: invertidor, rectificadores, reguladores de carga; sistema de regulación y control.
+
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (20 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+La tendencia actual es la de proyectar sistemas híbridos en los que las fuentes renovables y el almacenamiento proporcionen hasta el 80-90% de las necesidades energéticas, dejando la utilización de los sistemas convencionales para casos excepcionales. Los sistemas híbridos representan actualmente una solución viable para las exigencias de energía eléctrica en áreas aisladas o no electrificadas. En el pasado, de hecho, se utilizaban solo generadores diesel, que, en la modalidad operativa de baja carga, muestran una eficiencia reducida en el funcionamiento, altos costes de manutención y un breve tiempo de vida de la instalación. Los sistemas híbridos permiten reducir esos problemas y aprovechar los recursos renovables existentes en el territorio, constituyendo una opción viable y favorable tanto ambiental como socialmente. Aplicaciones de los sistemas híbridos: Sistemas para usuarios o comunidades aisladas: se trata de sistemas hasta un máximo de 100 kW de potencia. Sistemas híbridos de retrofit: se trata de sistemas renovables instalados en redes locales en media tensión, hasta la potencia de unos MW, con el fin de reducir las horas de funcionamiento de los generadores diesel existentes, ahorrando combustible y reduciendo las emisiones contaminantes. Los sistemas combinados completamente renovables unen las tecnologías fotovoltaica, eólica y hidroeléctrica. Consideradas las características de intermitencia de las fuentes utilizadas estos sistemas se pueden utilizar en aplicaciones “grid-connected”. En algunas situaciones, se pueden instalar sistemas híbridos completamente renovables, que permiten la autosuficiencia de la red eléctrica. Estos sistemas combinan una fuente continua, para cubrir la necesidad energética de base (biomasa y/o energía geotérmica), y una o más fuentes intermitentes, para cubrir los picos de potencia solicitada (hidroeléctrica, eólica, solar). Cuando el recurso del viento está disponible, los aerogeneradores de tamaño reducido pueden encontrar muchas aplicaciones en los sistemas combinados o híbridos. A igualdad de energía eléctrica producida, de hecho, la tecnología eólica, respecto a otras fuentes renovables, requiere costes de inversión relativamente limitados.
+ARRIBA
+
+4.3 El potencial micro-eólico en España
+
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (21 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+Los aerogeneradores de baja potencia -entre 10 y 100 kW- fueron utilizados en la década de los años 80 con fines experimentales, y actualmente se usan en aplicaciones concretas con limitaciones de potencia. Los conceptos usados en estas máquinas han sido transferidos a las máquinas de media potencia que, en general, ofrecen claras ventajas en su rendimiento y costes. Existe una demanda potencial interesante en este rango de potencias. En instalaciones pertenecientes a PYMES o a comunidades de vecinos, localizadas en emplazamientos semi-urbanos con un aceptable recurso eólico, las máquinas, con potencias unitarias en torno a 50 kW, pueden servir de excelente apoyo conectadas a la red, aliviando la factura eléctrica de los usuarios. Otra posible aplicación de estas aeroturbinas es formando parte de instalaciones mixtas eólico – diesel en parajes aislados. Actualmente, en el ámbito internacional, se están ensayando prototipos (de unos 15 m. de diámetro) que obtienen producciones elevadas, con alta eficiencia y fiabilidad, buena calidad de la energía producida, un nivel de ruido más bajo de lo habitual y unos costes asequibles. En relación con los aerogeneradores de muy baja potencia -inferior a 10 kWutilizados tradicionalmente para bombeo de agua (aerobombas multipala) y minigeneradores eólicos para producción de energía eléctrica (normalmente formando conjuntos mixtos eólico-fotovoltaicos en viviendas aisladas), hay que señalar que, aunque el número de instalaciones realizadas y potencialmente previsibles en los próximos años es alto, su contribución energética es muy baja. Se estima que hacia el año 2010 puede existir una potencia instalada total de unos 13.000 kW. En España hay actualmente dos fabricantes de pequeños aerogeneradores y varios importadores, especialmente de fabricantes de Estados Unidos. Según fuentes de uno de estos fabricantes, el mercado potencial de este tipo de instalaciones en España podría estimarse en torno a los 600-700 aerogeneradores anuales, cifra que se podía aumentar de forma considerable si existiese un mayor apoyo por parte de las administraciones públicas.
+
+4.4 Impacto ambiental
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (22 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+ARRIBA
+
+El impacto medio ambiental de las instalaciones micro-eólicas tiene elementos en común con el de las grandes instalaciones (gran ocupación de suelo, impacto visual, ruido, interferencias en las telecomunicaciones, efectos negativos sobre la fauna y la vegetación, efectos electromagnéticos), ya que interfiere con los mismos elementos naturales, aunque tenga resultados perceptivos diferentes. Por una parte, las microturbinas tienen un tamaño mucho más pequeño que el de los grandes aerogeneradores y, por tanto, necesitan menos espacio y son relativamente poco visibles. Sin embargo, a menudo están instaladas cerca de otros elementos y pueden suponer una pérdida de espacio que podría estar destinado a otros fines, un impacto visual (se trata de una presencia invasora con la que convivir, aunque pueden ser agradables desde el punto de vista estético), interferencias en las comunicaciones y efectos electromagnéticos. Aunque no son relevantes, estos inconvenientes tiene que ser tenidos en cuenta en el estudio preliminar de viabilidad del proyecto. Una problemática importante, además, es la del ruido: la cercanía al usuario y la ausencia de pantallas para evitar interferencias en la dirección y intensidad del viento, tiene que llevar a una elección ponderada del modelo de turbina y del lugar de su montaje. La inserción de aerogeneradores, aunque sean de pequeño tamaño es, por tanto, una cuestión delicada. La tecnología de la eólica de tamaño reducido se ha orientado mayoritariamente hacia la configuración de la turbina tripala: según muchos, en comparación con la bipala, produce un menor impacto visual en virtud de una mayor simetría cuando las palas están paradas y de una agradable velocidad de rotación cuando están en movimiento. Sin embargo, entre tantos impactos sobre el medio ambiente hay que citar los muchos beneficios de la utilización de pequeñas instalaciones eólicas. Estos se pueden resumir principalmente en los daños evitados respecto a la utilización de otras formas de energía o a soluciones de conexión a la red difícilmente
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (23 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+realizables o con un elevado coste. De forma breve, se puede afirmar que los beneficios de las aplicaciones de la micro-eólica son: suministro a zonas de otra forma aisladas o alcanzables a través de obras de mayor impacto, aplicación de una política de regionalización de la producción eléctrica, contribución a la diversificación de las fuentes,
+
+disminución de la dependencia energética de fuentes convencionales de la zona interesada por el proyecto, se evita la emisión de sustancias contaminantes.
+
+Por lo que concierne al procedimiento de evaluación de impacto ambiental, las micro-instalaciones eólicas no están sujetas a la legislación básica estatal. Sin embargo, es oportuno que el promotor que quiera llevar a cabo un proyecto de este tipo compruebe la normativa de evaluación de impacto ambiental de la Comunidad Autónoma en la que quiera llevar a cabo la instalación.
+
+5. Pasos a seguir para la construcción de una instalación micro-eólica.
+ARRIBA
+
+5.1 Instalaciones micro-eólicas
+La realización de una instalación micro-eólica depende mucho del tamaño (expresado en términos de potencia) de la instalación. También está relacionada con el tamaño, la función y la forma de funcionamiento de la instalación: aplicaciones debajo de los 20 kW son para elementos stand-alone, o sea, sin conexión a la red; aplicaciones de tamaños
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (24 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+más grandes, en cambio, se consideran instalaciones generadoras de electricidad y generalmente grid connected, o sea, conectadas en red y con la posibilidad de vender la excedencia de energía después del autoconsumo. Para definir un modelo de procedimiento para la construcción de una instalación, hemos orientado nuestra elección hacia instalaciones de potencia inferior a 20 kW, considerando que quien desea montar una instalación de este tamaño está motivado más por razones de tipo medioambiental o de ahorro que por razones de tipo industrial. Las fases a seguir serían las siguientes:
+1. Elección del lugar y evaluación de los parámetro útiles (estudio de la 2. 3. 4. 5.
+
+velocidad del viento) Análisis de las autorizaciones necesarias Estudio de viabilidad de la instalación y verificación de los costes Elección del proyectista y constructor y fase de implementación Gestión de la instalación (manutención y gestión)
+
+5.2 Elección del lugar y estudio de la velocidad del viento
+ARRIBA
+
+La elección del lugar se realiza basándose en: − Disponibilidad de terreno; − Evaluación del lugar (accesibilidad, exposición a los vientos); − Evaluación de los parámetros de referencia (intensidad y dirección del viento). Para su correcto funcionamiento, es fundamental averiguar la idoneidad del lugar donde se quiere montar la instalación. La elección preliminar del lugar se puede basar en elementos subjetivos como las experiencias de los residentes, la evaluación de elementos naturales (la tipología y el porte de las especies arbóreas, …- véase Escala de Beaufort) o en elementos objetivos, pero siempre aproximados, como la extrapolación de datos anemométricos disponibles en áreas contiguas, la utilización de mapas de
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (25 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+vientos en el territorio nacional o en los datos de la Aeronáutica Militar o de la Marina. A título de ejemplo, se adjunta un mapa de la velocidad del viento que muestra las curvas de igual velocidad sobre el territorio y el mar en la región de Liguria (Italia): con los colores que van del azul al rojo se pueden diferenciar fácilmente zonas caracterizadas por velocidades medias del viento crecientes de 0 a 5 m/s.
+
+Mapa de la velocidad media del viento en Liguria (Fuente: Centro Meteo-Hidrológico de la Región de Liguri - Italia) http://www.cmirl.ge.infn.it)
+
+Con las máquinas actualmente desarrolladas, la condición del viento necesaria para la instalación de un sistema se puede identificar con una velocidad media anual no inferior a 4 m/s y preferiblemente superior a 6 m/s. La evaluación final de la viabilidad del proyecto tiene que determinarse mediante una campaña de medición anemométrica fiable. A la hora de elegir el lugar del aerogenerador, es importante tener en cuenta fenómenos de turbulencia que se crean en las zonas alrededor de construcciones, árboles, obstrucciones de diferente naturaleza, que pueden provocar una disminución de la capacidad productiva de las máquinas. Hay que poner especial atención en la instalación de turbinas en las lomas, donde la orografía del terreno puede influir mucho sobre la distribución del
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (26 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+viento. Nota histórica: la ESCALA DE BEAUFORT
+(ver apéndice) Para clasificar el tipo de viento basándose en la velocidad, Sir Francis Beaufort, almirante inglés, propuso en 1805 una escala anemométrica llamada Escala anemométrica de Beaufort que expresaba la de fuerza del viento con números del cero (calma) al doce (huracán). El Comité Meteorológico Internacional la adoptó en 1874 y posteriormente, en 1926 ha sido revisada por el mismo comité: por cada número se han determinado los intervalos de velocidad del viento mediante medidas anemométricas en condiciones estándar. Recientemente, gracias a las mejores prestaciones de los anemómetros que permiten medir velocidades incluso superiores a 200 km/h, han sido introducidos otros cinco números, dando origen a la llamada Escala Internacional de Beaufort.
+
+Cómo se lleva a cabo una CAMPAÑA ANEMOMÉTRICA (para potencias superiores a unos kW)
+Duración Aunque el viento es más estable que otros fenómenos atmosféricos, como las precipitaciones, para grandes proyectos es oportuno que la campaña anemométrica dure de 3 a 5 años. Para los proyectos más pequeños, el período de observación puede reducirse, pero debería de ser de por lo menos un año. ¿Cómo se lleva a cabo? La medición de los datos anemométricos se debería realizar con instrumentos instalados a la altura a la que se piensa poner el aerogenerador. Debido a que la intensidad del viento varía mucho en relación a la altura, esto permite medir la potencialidad real del aerogenerador. Equipamiento necesario Para empezar una campaña de medición hace falta un anemómetro adecuado.
+
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (27 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+En los proyectos más grandes se utilizan torres anemométricas constituidas por antenas metálicas riostradas que sujetan dos anemómetros, el primero a 10 metros del suelo y el segundo a 30 metros. Los datos medidos por el anemómetro se transmiten continuamente a un instrumento de registro colocado en la base de la torre donde un chip almacena los datos. Estos se pueden luego descargar a través de sistemas GSM o manualmente transportando el chip a una oficina y utilizando un instrumento específico. Los datos originales descargados del chip tienen luego que ser tratados con un software que los transforma en datos anemométricos: velocidad instantánea y dirección del viento, que se introducen en una hoja de cálculo. En los proyectos más pequeños se utilizan instrumentos que miden el viento basándose en principios físicos diferentes. Entre los más utilizados, el más sencillo es el llamado anemómetro de contacto con cuenta-revoluciones; existen además anemómetros de ultrasonidos y anemómetros de láser, que tienen la ventaja de no sufrir los efectos negativos de la formación de hielo. El anemómetro de contacto es un dispositivo formado por tres o cuatro brazos a 120°, que sujetan externamente otras tantas cazoletas semiesféricas. Están colocadas en el mismo sentido y montadas sobre un eje rotante conectado a un contador, eléctrico o mecánico, sobre cuya pantalla se lee directamente el numero de revoluciones en un determinado periodo de tiempo. Mediante oportunas tablas de calibrado es posible medir la velocidad del viento. El anemómetro puede tener un dispositivo indicador de la dirección del viento llamado anemoscopio: instrumento formado por una simple veleta móvil alrededor de un eje vertical; la posición que toma la misma por la acción del viento se apunta en un índice sobre un cuadrante con la rosa de los vientos.
+
+Conclusión: La estimación de la producibilidad anual de la instalación que se quiere realizar se puede obtener tomando como referencia un valor de 1.500 – 2.000 horas medias anuales de funcionamiento. Produc. anual = P x hfunc. anual [kWh/año] = [kWinstalados] x [horasfunc./año]
+5.3 Estudio de viabilidad de la instalación y control de los costes
+ARRIBA
+
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (28 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+El estudio de viabilidad de una instalación que tenga como fin averiguar los costes e ingresos económicos, la elección de las máquinas más adecuadas y su dimensión. De hecho, se trata de una actividad bastante compleja que tiene que tener en cuenta muchos factores. El Estudio de viabilidad de una instalación con potencia superior a unos kW tiene que averiguar que un determinado layout de instalación tenga la relación costes/ganancias adecuada a las expectativas del futuro productor. Los elementos de costes considerados son los siguientes: Coste del aerogenerador Coste de las obras adicionales Coste del proyecto
+
+Además de estos costes, hay que tener en cuenta los siguientes, una vez que la instalación está en marcha: Costes de utilización, Costes de mantenimiento, Costes de las tasas.
+
+Los costes se comparan con los ingresos procedentes de: Venta de energía eléctrica Ahorro (coste ahorrado) de energía eléctrica Venta de certificados verdes Ingresos de otros incentivos
+
+Si el resultado económico procedente de la aplicación al proyecto de un plan de negocio con las partidas anteriores es aceptable para el inversor, se puede
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (29 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+seguir con la fase de autorización y de construcción. El coste de una instalación eólica con potencia inferior a 100 KW puede variar de 1.000 a 3.000 /kW.
+
+5.4 Elección del proyectista constructor y fase de implementación
+ARRIBA
+
+Consolidada la intención de realizar una instalación micro-eólica, es oportuno contactar con los productores de aerogeneradores (posiblemente más de uno). A través de su experiencia y mediante la comparación directa entre las posibles soluciones relativas al lugar específico, se podrán realizar las elecciones técnicas más oportunas. A menudo, en las aplicaciones de pequeña escala los constructores de aparatos electromecánicos pueden también ofrecer un asesoramiento en la fase de diseño de las obras, o sea un proyecto llave en mano. Según las características estimadas del viento y de la potencia de la que se necesite, es posible, con la ayuda de oportunos gráficos entregados por los constructores de la maquinaria, identificar la tipología de turbina y el tamaño más adecuado.
+5.5 Gestión de la instalación (mantenimiento y gestión)
+ARRIBA
+
+Considerada la simplicidad constructiva de una micro-instalación, su mantenimiento y gestión resultan mucho menos complicadas que las de instalaciones más grandes. Los microgeneradores eólicos que existen actualmente en el mercado han sido diseñados con el propósito de reducir al mínimo las intervenciones. Este objetivo se ha alcanzado cuidando sobre todo el proyecto y utilizando componentes y materiales cuidadosamente escogidos.
+
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (30 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+Cuando entregan un generador, todos los con-structores adjuntan un manual de uso y entretenimiento. Normalmente las operaciones de mantenimiento son muy sencillas y las puede realizar el mismo usuario; como alternativa, muchos constructores ofrecen contratos de mantenimiento a precios razonables (1,5 % anual del coste de la máquina instalada). La gestión se puede incluso realizar a distancia, a través de sistemas de mando y telecontrol que permiten, mediante un ordenador recibir datos y enviar ordenes a la instalación.
+
+6. Acciones de programación: el papel de las entidades públicas
+ARRIBA
+
+El papel de las entidades públicas locales en la programación y planificación del territorio desde el punto de vista energético y medioambiental es, sin lugar a dudas, importante, ya que contribuye a definir el método para alcanzar los objetivos fijados en la fase de programación. En los ámbitos energético y ambiental, las entidades públicas locales, sobre la base de las indicaciones procedentes de los Planes Energéticos Regionales, tienen la posibilidad de proyectar un sistema ambiental sostenible en el marco de una programación específica de las intervenciones, que contribuya a la mejora del medio ambiente y al desarrollo sostenible. Pero, ¿de qué forma las entidades locales, como los Ayuntamientos, las Comunidades de Montaña o Ribereñas, los espacios naturales protegidos, pueden favorecer y difundir el uso de fuentes limpias de energía? A continuación sugerimos algunos pasos que pueden llevar a cabo estas entidades locales si desean activar un programa de difusión de las tecnologías en favor del medio ambiente.
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (31 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+6.1 Por dónde empezar
+ARRIBA
+
+La utilización de recursos energéticos, la programación de los objetivos de consumo y el uso de fuentes de energía alternativas son elementos que definen las Comunidades Autónomas, que tienen las competencias para el desarrollo y gestión de las bases del régimen energético definido por el Estado. La entidad pública, la comunidad o la zona de agrupación tiene que seguir las indicaciones adoptadas por la Comunidad Autónoma correspondiente, la mayoría de las cuales tienen aprobados planes autonómicos de fomento de las energías renovables, a la hora de activar una campaña independiente de promoción y desarrollo de las fuentes renovables y/o el desarrollo sostenible. Además, la referencia a programas o fondos desarrollados en el entorno CE es fundamental si se quieren aprovechar las oportunidades y las experiencias de ámbito europeo. Tabla de referencia
+Comunidad Europea (http://europa.eu.int/comm/dgs/energy_transport/) • • Directiva Europea concerniente a las fuentes renovables (Directiva 2001/77/CE) Programas Marco de financiación (http://europa.eu.int/comm/research/fp6/index_en.html)
+
+Campañas de promoción: Campaign for Take-off – CTO: • (http://europa.eu.int/comm/energy/en/renewable/idae_site/index.html o http://europa.eu.int/comm/energy/en/ctore.htm Comunidades Autónomas Todas las Comunidades Autónomas tienen aprobadas normas o planes relativos a las energías
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (32 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+renovables. Además, existen en todas ellas organismos regionales o locales dedicados a la promoción de la utilización de las energías renovables. Se adjunta una relación de estos organismos al final del documento.
+
+6.2 Recursos disponibles
+ARRIBA
+
+Las oportunidades que se ofrecen a una entidad local para el desarrollo y la difusión de las instalaciones de fuentes de energías renovables de pequeño tamaño son muchas y no necesariamente relacionadas con la financiación o la asignación de fondos. En el siguiente cuadro se muestran algunas de las posibles acciones que se pueden llevar a cabo:
+comunicaCIÓN Campaña de información y de adopción de un programa en favor de las fuentes renovables y sostenibles. aYUDA a la difusiÓN inveRSIONES Adopción de trámites Compra / montaje de administrativos simplificados para microgeneradores para edificios la expedición de las autorizaciones públicos. para la instalación y utilización de las instalaciones. Compra / montaje de sistemas de control; Definición de criterios para la evaluación de impactos sobre el medio ambiente.
+
+Campaña de información sobre las Investigación sobre áreas en las posibilidades del territorio para el que se puedan establecer empleo de tecnologías sostenibles. instalaciones de energías renovables. Elaboración de trámites unificados y normas de impacto ambiental. Adopción de un programa (válido para espacios naturales protegidos) de “emisiones cero” en estas áreas. Promoción de campañas de comunicación en las escuelas.
+
+Definición de los objetivos dentro Montaje de instalaciones-piloto y de los espacios protegidos y control de las mismas. búsqueda de financiación para el montaje de las instalaciones. Organización de concursos entre escuelas, con el patrocinio de Agencias nacionales y/o de las Instituciones. Asignación de premios y/o fondos para la actividad de difusión en las escuelas.
+
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (33 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+6.3 Qué recursos activar
+ARRIBA
+
+La activación de recursos y la participación de las instituciones representa la fase más delicada en un proceso de promoción y/o desarrollo de campañas de difusión o de promoción de las energías renovables. En relación con esto, existen algunas iniciativas de ámbito europeo dignas de mención, como la “Campaign for Take-Off” apoyada por la Dirección General de Energía y Medio Ambiente de la Comisión Europea.
+Campaign for Take-Off (CTO) La Campaña para el fomento de las Fuentes de Energía Renovables es una acción emprendida en sintonía con los objetivos del Libro Blanco, en base a los cuales se prevé una penetración de los recursos renovables en Europa del 12% para el 2010. En el Libro Blanco se prevé la utilización de instrumentos para incentivar las inversiones en el sector de las energías renovables, a través de campañas de difusión. La Campaña comenzó en 1999 y finalizará a finales de 2003, actuando como catalizador de las iniciativas locales y provinciales, para favorecer el desarrollo de las instalaciones de energías renovables y la promoción de comunidades abastecidas sólo por fuentes renovables. La finalidad principal de este programa es el de realizar proyectos conjuntos entre inversores y las comunidades (Ciudades, Comunidades, Industrias) atrayendo inversiones por parte de operadores privados y de la Comunidad Europea. Para obtener más información, se pueden consultar las siguientes direcciones: - www.agores.org - http://europa.eu.int/comm/energy/index_en.html)
+
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (34 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+7. Glosario
+ARRIBA
+
+Recurso renovable
+Un recurso renovable es aquel que no se agota, gracias a su capacidad de regeneración. Normalmente se trata de recursos naturales disponibles en gran cantidad pero, al mismo tiempo, muy valiosos y que, por tanto, se pueden dañar de forma irreparable (en su cantidad y/o calidad) si se utilizan en base a modelos inadecuados de producción y consumo y políticas medio ambientales equivocadas.
+
+Energías Renovables
+Las energías renovables son formas de energía no consumibles, en particular la energía hidroeléctrica, eólica y solar (tanto térmica como fotovoltaica), la biomasa y la energía geotérmica. Los residuos urbanos y otros residuos orgánicos, aunque consumibles, también suelen clasificarse como fuentes de energía renovables. La lista de energías renovables incluye además una serie de tecnologías aún en vías de experimentación o de demostración de su viabilidad económica, como la energía de las olas, de las mareas y de rocas calientes y secas”. (Libro Verde de la Comisión, de 20 de noviembre de 1996, sobre las fuentes de energía renovables; COM (96) 576 final)
+
+Desarrollo sostenible
+“'El desarrollo sostenible es aquel que satisface las necesidades del presente sin comprometer la disponibilidad de recursos que las generaciones futuras precisen para satisfacer sus propias necesidades”; (Informe Bruntland, 1989). El concepto de desarrollo sostenible nace de un debate que, a partir de los años setenta, ha involucrado a instituciones, movimientos, y científicos. Este debate ha sido y sigue siendo objeto de conferencias internacionales como la Conferencia de las Naciones Undidas sobre Medio Ambiente y Desarrollo (UNCED), celebrada en Río de Janeiro en junio de 1992, y la reciente Cumbre
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (35 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+Mundial sobre Desarrollo Sostenible, celebrada en Johannesburgo en los meses de agosto y septiembre de 2002.
+
+8. Apéndice
+ARRIBA
+
+Escala de Beaufort
+. . . . . . En tierra Efectos del viento En la mar cerca de la costa (referidos a botes de vela) En alta mar
+
+escala nudos Km/h mp/h m/s definición Beaufort 0 0 0 0 0 calma
+
+bonanza, el humo bonanza, los barcos no sube verticalmente gobiernan
+
+la mar está como un espejo
+
+1
+
+1-3
+
+1-5
+
+la dirección del viento es indicada Los barcos empiezan a se forman rizos como escamas de pescado 1-3 <2 ventolina por el humo pero moverse pero sin espuma no por las banderas
+
+2
+
+4-6
+
+Suave en la cara y la (brisa muy 6-11 4-7 2-3 banderola se débil)
+
+El viento se siente el viento infla las velas mueve
+
+de los barcos que van a Pequeñas olas, crestas de apariencia aproximadamente 1-2 vítrea, sin romperse nudos
+
+3
+
+7-10
+
+1219 2028 2938
+
+8-12 4-5
+
+Leve (brisa Las hojas y las débil)
+
+Los barcos empiezan a Pequeñas olas cuyas crestas empiezan a inclinarse y van a pequeñas ramas aproximadamente 3-4 romper, espuma de aspecto vítreo aislados
+
+se mueven
+
+nudos
+
+vellones de espuma
+
+4
+
+11-16
+
+5
+
+17-21
+
+Moderado Se levantan papel y polvo, las ramas 6-7 (brisa más finas se 18 moderada) mueven regular Empiezan a 19- 8(brisa moverse los 24 10 fresca) árboles pequeños 1325- 1131 13 fuerte (brisa fuerte)
+
+viento manejable: los Las olas se hacen más largas. Borreguillos barcos tienen las velas bien inclinadas Los barcos arrían las velas Los barcos ponen dos manos de rizos a la vela maestra
+
+numerosos.
+
+Olas moderadas alargadas. Gran abundancia de borreguillos, eventualmente algunos rociones Comienzan a formarse olas grandes. Las crestas de espuma blanca se extienden por todas partes.
+
+6
+
+22-27
+
+3949
+
+Se mueven las ramas grandes. Se utilizan con dificultad los paraguas.
+
+http://www.cecu.es/temas%20interes/medio%20ambiente/res&rue/htm/dossier/1%20eolica.htm (36 of 37) [05/09/2005 11:52:29 p.m.]
+
+Instalaciones Micro-Eólicas
+
+7
+
+28-33
+
+5061
+
+Se mueven los Muy fuerte árboles más 32- 14(viento grandes es difícil 38 16 fuerte) andar contra el viento
+
+Los barcos se quedan en el puerto, las que La mar engruesa; la espuma blanca que están en el mar echan proviene de las olas es arrastrada por el las anclas, si es posible alcanzan una zona de viento refugio
+
+8
+
+34-40
+
+6274
+
+se rompen las todos los barcos se 39- 17- temporal ramas de los dirigen al puerto más árboles, es muy 46 20 (duro) difícil andar al aire cercano libre temporal 47- 21Se levantan los fuerte (muy 55 24 tejados duro) -
+
+Olas de altura media y más alargadas. De las crestas se desprenden algunos rociones en forma de torbellinos. La espuma es arrastrada en nubes blancas. Grandes olas, espesas estelas de espuma a lo largo del viento, las crestas de las olas se rompen en rollos, las salpicaduras pueden reducir la visibilidad Olas muy grandes con largas crestas en penachos, la espuma se aglomera en grandes bancos y es llevada por el viento en espesas estelas blancas en conjunto la superficie esta blanca, la visibilidad esta reducida Olas excepcionalmente grandes (los buques de pequeño y mediano tonelaje pueden perderse de vista). La mar está completamente cubierta de bancos de espuma blanca extendida en la dirección del viento. Se reduce aún más la visibilidad El aire está lleno de espuma y de rociones. La mar está completamente blanca debido a los bancos de espuma. La visibilidad es muy reducida.
+
+9
+
+41-47
+
+7588
+
+10
+
+Se observa rara vez en tierra. 89- 56- 25- temporal Arranca árboles y 48-55 102 64 28 muy fuerte ocasiona daños de consideración en los edificios
+103- 65- 29117 Daños graves a los tempestad edificios y 73 32 destrozos
+
+11
+
+56-63
+
+12
+
+temporal huracanado Daños muy graves >64 >118 >74 >33 (huracán)
+
+ARRIBA
+

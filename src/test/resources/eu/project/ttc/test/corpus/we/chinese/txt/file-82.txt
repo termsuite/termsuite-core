@@ -1,0 +1,1 @@
+4 ) ?  4 :  this.value ;  location =' read.php ? tid = 619 & page ='+ page +'';  return false ;}">    4 ) ?  4 :  this.previousSibling.value ;  location =' read.php ? tid = 619 & page ='+ page +'';  return false ;"> Go 

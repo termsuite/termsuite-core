@@ -1,0 +1,190 @@
+PROPUESTA METODOLÓGICA PARA EL DISEÑO Y CONSTRUCCIÓN DE UN AEROGENERADOR DE BAJA POTENCIA
+
+Electromecánica
+
+Este material de autoestudio fue creado en el año 2007 para la asignatura Electromecánica del programa Ingeniería Electromecánica y ha sido autorizada su publicación por el (los) autor (es), en el Banco de Objetos Institucional de la Universidad Pedagógica y Tecnológica de Colombia.
+
+Carlos Guillermo Carreño Bodensiek carrenobodensiek@gmail.com
+
+Propuesta metodológica para el diseño y construcción de un aerogenerador de baja potencia
+Carlos Guillermo Carreño Bodensiek
+
+Universidad Pedagógica y Tecnológica de Colombia Sede Seccional Duitama Escuela de Ingeniería Electromecánica Duitama 2007
+
+•
+
+Resumen
+
+La energía eólica ha tomado relevancia en la tendencia de reemplazo de las fuentes energéticas tradicionales. El diseño y montaje de sistemas para su aprovechamiento, es materia de estudio creciente. Aquí se presenta una metodología para el diseño y construcción de un aerogenerador de baja potencia; proyecto final propuesto a los estudiantes de la asignatura Energía Eólica de la Escuela de Ingeniería Electromecánica de la UPTC. Se parte del establecimiento de parámetros que delimiten y enfoquen el proyecto y se plantean los estudios anemométricos y de emplazamiento del dispositivo. Luego se discute la selección de componentes, materiales y consideraciones de construcción. Finalmente, se establecen las mediciones y cálculos que con el equipo se pueden realizar y se enuncian algunas conclusiones y expectativas de la actividad.
+
+•
+
+Abstract
+
+The wind energy has taken relevance in the replace tendency of traditional power sources. The design and assembly of systems for its application, is matter of increasing study. Here is presented a design and construction methodology of a small wind turbine; final work proposed to the Wind Energy course students of the Electromechanical Engineering Program at the UPTC. This work start with the establishment of parameters that delimit and focus the project and enounce the anemometric analysis and location studies of the device.
+
+Afterwards is discussed the selection of components, materials and some construction considerations. Finally the measurements and calculations, that with the equipment can be made, are proposed. Some conclusions and expectations are then explained.
+
+•
+
+Palabras Clave: Estudiantes de Ingeniería Electromecánica, Proceso de diseño y construcción, Aerogenerador, Energía Eólica.
+
+Introducción
+
+Los estudiantes de la Escuela de Ingeniería Electromecánica de la UPTC Sede Seccional Duitama tienen la alternativa de cursar la materia de Energía Eólica como electiva de profundización. Dentro del plan de estudios de la materia se ofrece la opción de desarrollar un prototipo a escala de un aerogenerador.
+
+El desarrollo de esta actividad ha presentado problemas metodológicos; los estudiantes no cuentan con una guía de procedimiento para el diseño y construcción de un aerogenerador de baja potencia. Con el fin de dotar a los estudiantes de una propuesta procedimental para esta actividad se ha desarrollado este documento.
+
+En primer lugar se expone la importancia creciente de la energía eólica y de su aprovechamiento a partir de la utilización de aerogeneradores. En seguida se presentan las consideraciones básicas para el diseño y construcción de un aerogenerador de baja potencia. Luego se proponen las mediciones anemométricas requeridas como son la velocidad, la frecuencia y dirección del viento y los ensayos preliminares del generador eléctrico elegido. En los siguientes capítulos se plantea el diseño general del aerogenerador y de su sistema de control. Seguidamente se presentan las mediciones de campo propuestas y los tipos de resultados esperados. Finalmente se enuncian algunas conclusiones y expectativas del proyecto.
+
+1. La Energía Eólica y la Ingeniería Electromecánica
+
+La tendencia mundial y nacional de aprovechamiento de las energías alternativas ha provocado en los últimos 20 años avances científicos y tecnológicos para extender la aplicación de estas técnicas de generación energética. La energía eólica, como recurso renovable y limpio, es una alternativa práctica y sencilla de generación de electricidad en todos los niveles de consumo de potencia eléctrica (alta, media y baja tensión) [Diez, 2002].
+
+La construcción de aerogeneradores, las técnicas para su emplazamiento y su puesta en funcionamiento requiere de conocimientos teóricos y prácticos en las áreas eléctrica, mecánica y electrónica. El Ingeniero Electromecánico, quien reúne o debe dominar todas estas especialidades, está preparado para asumir los retos que implican la integración de estas disciplinas y debe ser capaz de enfrentarse a este tipo de proyectos.
+
+2. Consideraciones generales de diseño y construcción
+
+El diseño y montaje de un aerogenerador de baja potencia debe estar basado en algunas consideraciones generales que establezcan un marco sólido y delimiten su desarrollo práctico para evitar caer en complicaciones innecesarias.
+
+2.1 Nivel de Potencia. En primer lugar se deberá establecer el tipo de aerogenerador que se pretende diseñar en cuanto a nivel de potencia eléctrica requerida. Se considera
+
+inicialmente que se trata de un prototipo de baja potencia (100 Vatios nominales) que debe ser construido y montado en el período de un semestre académico*.
+
+*Para el caso de la UPTC, el semestre académico consta de 16 semanas.
+
+2.2 Tipo de Instalación.
+
+Los aerogeneradores tienen la ventaja de ser instalados
+
+aisladamente, es decir, para generación de electricidad en un lugar retirado o que no cuenta con interconexión a la red eléctrica o puede ser instalado haciendo parte de un parque eólico que provee de electricidad a una zona determinada e interconectado a la red eléctrica local.
+
+Para este caso se determina que el aerogenerador funcione aisladamente. La generación de electricidad puede ser utilizada en pruebas de laboratorio, con fines didácticos, y por consiguiente el lugar de instalación estará también dentro del campus universitario con el fin de permitir un fácil acceso al prototipo por parte de estudiantes y docentes interesados. Se requiere que el lugar de instalación sea alto, abierto al viento y que cumpla con las normas urbanas de construcción y seguridad. En este paso se hace necesaria la supervisión del jefe de seguridad industrial de la universidad o de quien haga sus veces.
+
+2.3 Generador Eléctrico. Para la elección del generador eléctrico se debe tener en cuenta que pueda generar electricidad a bajas revoluciones (menos de 800 rpm), que sea de pequeñas dimensiones y de bajo peso pero con la robustez adecuada.
+
+2.4 Estructura de Soporte. La estructura de soporte debe seleccionarse teniendo en cuenta factores que permitan un montaje sencillo y el fácil acceso para su posterior mantenimiento. La estructura de base pivotante permite instalar el aerogenerador desde el suelo, llevarlo a su posición definitiva y facilita su mantenimiento.
+
+2.5 Sistema de Control. La energía captada por un aerogenerador varía con el cubo de la velocidad del viento. Si esta velocidad se triplica, para un generador de potencia nominal de 100 Vatios, se generará una energía 27 veces mayor (2700 Vatios).
+
+Como ilustra este cálculo, es indispensable diseñar un sistema de control o regulación de potencia extraída del viento contra incrementos sorpresivos de su velocidad. Para un aerogenerador de baja potencia se prefiere un sistema de control mecánico a uno electrónico, que esté basado en el empuje que ejerce el viento sobre las aspas del aerogenerador o la velocidad que se presente.
+
+3. Mediciones anemométricas
+
+La primera etapa del proyecto de diseño y montaje de un aerogenerador es realizar un estudio anemométrico del lugar donde se planea instalar este. Una de las técnicas más usadas actualmente para este propósito es la elaboración de una Rosa de los Vientos [González, 2005]. Las mediciones más importantes que se realizan son: Una recopilación de datos de la velocidad que el viento tiene en el lugar escogido, la frecuencia de velocidad que se presentan en un periodo determinado* y el establecimiento de las direcciones más frecuentes en las que el viento sopla.
+
+Esta fase del proyecto se realiza con el fin de aprender a construir una Rosa de los Vientos y para determinar el potencial eólico del lugar de emplazamiento. En la figura 1 se ilustra un ejemplo de Rosa de los Vientos que es un círculo dividido en 12 segmentos que representan doce direcciones y con tres cuñas en cada uno de ellos.
+
+La cuña más grande representa la frecuencia relativa de cada una de las doce direcciones del viento. La segunda cuña muestra la misma frecuencia multiplicada por la velocidad media que el viento tiene en esa dirección. La tercera cuña muestra la frecuencia relativa del viento multiplicada por el cubo de la velocidad y representa el contenido energético de cada sector.
+* Para este proyecto se sugiere realizar las mediciones durante tres meses. Para estudios anemométricos corrientes se recomienda realizar las mediciones durante un año entero.
+
+Para mostrar la información sobre las distribuciones de velocidades del viento y la frecuencia de variación de las direcciones del viento, puede dibujarse la llamada rosa de los vientos basándose en observaciones meteorológicas de las velocidades y direcciones del viento. Fuente: http://www.windpower.org/es/tour/wres/rose.htm
+
+3.1 Velocidad. El viento es, por definición, el movimiento del aire. Se determina por su velocidad, de la cual depende su potencial energético. Para este propósito se utilizan anemómetros. Hay diferentes tipos de anemómetros, uno de los más sencillos es el de Cazoletas ilustrado en la figura 2.
+
+Los anemómetros tienen, por lo general, un registrador de datos, que puede ser mecánico en el que los datos quedan registrados en una hoja de papel o electrónicos que generan una base de datos a partir de un transductor conectado a un computador o guardados en una memoria portátil. Por lo general la toma de datos se realiza en medias de 10 minutos, que es una medida compatible con la mayoría de programas de cálculo y de la bibliografía sobre el tema.
+
+Fig. 2 Anemómetro de Cazoletas estándar Fuente: www.sciencescope.co.uk/images/anemometer.jpg
+
+3.2 Frecuencia de velocidades: También ha de calcularse la frecuencia o la fracción de tiempo que el viento sopla a una determinada velocidad. Los vientos suaves son más frecuentes y los vientos fuertes son más escasos pero tienen un mayor contenido energético Fig. 3). La frecuencia del viento suele describirse usando el modelo de distribución de Weibull [Devore, 2001].
+
+Fig. 3 La distribución estadística de las velocidades del viento varía de un lugar a otro del globo, dependiendo de las condiciones climáticas locales, del paisaje y de su superficie. Por lo tanto, la Distribución de Weibull puede variar tanto en la forma como en el valor medio. Fuente: http://www.windpower.org/es/tour/wres/weibull.htm
+
+3.3 Dirección del viento:
+
+El anemómetro debe estar acompañado de una veleta que se
+
+oriente en la dirección que el viento sopla. Esta dirección del viento también deberá ser registrada para la construcción de la Rosa de los Vientos del lugar de emplazamiento. Ello permitirá reconocer la orientación más favorable para la instalación del aerogenerador y en que dirección el viento tiene su mayor potencial eólico.
+
+4. Ensayo del generador eléctrico
+
+La siguiente fase del proyecto será llevar a cabo el ensayo de generador eléctrico escogido. Para este tipo de aplicaciones se utilizan generadores asíncronos o de inducción. Se deben realizar mediciones para reconocer sus características de salida que son el voltaje generado y la corriente de salida.
+
+Para lograr este objetivo se debe conectar el eje del generador a un motor impulsor en que se pueda determinar la velocidad de giro y el torque transmitido para encontrar la potencia mecánica entregada por el eje del motor.
+
+El generador eléctrico debe ser examinado en vacío (sin carga) y con su carga nominal de salida en sus bornes. En vacío con el objeto de encontrar las pérdidas mecánicas por efectos de rozamiento en los cojinetes del rotor y por efectos de rozamiento con el aire.
+
+Para encontrar la impedancia de los devanados del rotor se debe hacer pasar por estos una corriente conocida a un voltaje determinado manteniendo el rotor bloqueado. Así se podrá determinar las pérdidas eléctricas en los conductores del arrollamiento del rotor y por consiguiente la eficiencia del generador.
+
+La característica del generador es una gráfica en la que se tabula la corriente de salida contra el voltaje generado a velocidad de giro constante. La eficiencia estará determinada por la relación de potencia de entrada y la potencia de salida que incluirá las pérdidas mecánicas, eléctricas y misceláneas [Chapman, 2000].
+
+5. Diseño general
+
+El diseño general del aerogenerador incluye la selección y número de las aspas que este debe tener, las partes mecánicas de ensamble, un sistema de control de potencia mecánico y una estructura de soporte.
+
+Se deben determinar también algunos parámetros de funcionamiento del conjunto tales como la velocidad del viento nominal que debe estar acorde al tipo de aerogenerador que se pretende construir. Para aerogeneradores de baja potencia y de instalación aislada se puede escoger un valor entre 6 y 9 m/s.
+
+La velocidad de rotación nominal está en directa relación con el generador eléctrico que se haya elegido. Para facilitar un acople directo de las aspas con el generador se puede seleccionar una velocidad rotacional nominal de 800 rpm.
+
+El diámetro del rotor se puede calcular con la ecuación 1.
+
+R=
+
+2 PE π ⋅η ⋅ ρ ⋅ VE
+
+(1)
+
+En la que PE es la potencia nominal del generador eléctrico, η es el rendimiento global de la hélice y del generador, ρ es la densidad del aire y VE es la velocidad de diseño. Aplicando la ecuación 1 para un generador eléctrico de 100 Vatios, el diámetro del rotor no debe superar 1 metro de longitud.
+
+5.1 Diseño de las aspas: Las aspas para un aerogenerador deben tener las características de un ala de avión y cumplir con los mismos principios de sustentación y resistencia aerodinámica [Wood, 2002]. Para la construcción de las aspas se debe seleccionar el diámetro del rotor, el tipo de perfil (sección transversal del aspa) y los materiales de fabricación [Corten, 2001]. Hay diversos tipos de perfiles estandarizados para aplicaciones aerodinámicas como los Wortmann y los NACA. Para esta aplicación el perfil Wortmann FX 63-137 es seleccionado debido a sus excelentes características estructurales y aerodinámicas.
+
+Las aspas del rotor deben estar hechas de materiales resistentes a causa de las cargas fluctuantes a las que estas están sometidas y a otros fenómenos tales como fatiga, contracciones, dilataciones, efectos de erosión y corrosión [Faires, 2000]. La figura 4 muestra los materiales típicos y el método de fabricación de aspas para aerogeneradores.
+
+Fig. 4 Materiales y estructura de aspas para aerogeneradores. Fuente: Díez, Pedro Fernández, “Energía Eólica”, Departamento de Ingeniería Eléctrica y Energética, Universidad de Cantabria, España, 2002.
+
+5.2 Sistema de control. Se hace necesario el diseño de un sistema de control para evitar daños en la estructura del aerogenerador en caso de que se presente un incremento brusco en la velocidad del viento. En aerogeneradores de baja potencia se utilizan sistemas de regulación de pivote o muelle que giran las aspas del aerogenerador para reducir el área de ataque del viento y por consiguiente el empuje que el viento ejerce sobre las aspas [Diez, 2002]. Se logra colocando un eje que permita que la fuerza de empuje del viento produzca un par que desoriente el plano del rotor. En estas situaciones la hélice deja de estar en posición frontal a la dirección del viento.
+
+Se deberá calcular la fuerza que ejerce el viento sobre las aspas a la velocidad nominal de funcionamiento, esta fuerza es proporcional al cuadrado de la velocidad del viento. El aerogenerador será solidario al eje de control en el que se equilibren la fuerza ejercida por el viento sobre las aspas contra el peso mismo del conjunto. Al existir un incremento en la
+
+velocidad del viento, la fuerza correspondiente aumentará y logrará descentrar el aerogenerador para reducir el área de ataque de las aspas.
+
+5.3 Estructura de Soporte. En el diseño de la estructura que soporta al aerogenerador es necesario considerar la altura a la que el aerogenerador se instalará. A mayor altura los vientos son más veloces y presentan un flujo laminar por la ausencia de obstáculos.
+
+La frecuencia natural del conjunto puede ser un problema si coincide con la frecuencia de funcionamiento del aerogenerador [Gere, 1998]. Si estas coinciden el aerogenerador puede entrar en resonancia lo que producirá la destrucción del mismo. Para evitar este problema se cuenta con dos alternativas. La primera es diseñar una torre rígida o dura que tenga una frecuencia de oscilación mayor a la de funcionamiento. Este tipo de torre es más pesada, requiere de una mejor cimentación y su costo es elevado.
+
+La segunda opción es diseñar una torre blanda o flexible que posea una frecuencia natural menor a la de funcionamiento del aerogenerador. Estas torres son de menor costo, para su construcción requieren de menos material y su cimentación es mucho más sencilla.
+
+6. Mediciones de campo propuestas
+
+El aerogenerador diseñado y construido puede ser utilizado por los estudiantes para realizar algunas prácticas de campo tales como la construcción de la curva de velocidad del viento contra potencia eléctrica generada, determinar las velocidades del viento nominal, de arranque y de corte, evaluar el rendimiento general del dispositivo y comprobar el funcionamiento del sistema de control.
+
+6.1 Potencia eléctrica vs. Velocidad del viento. Para la construcción de una gráfica en la que se tabule la velocidad del viento contra la potencia eléctrica generada se usará un anemómetro que permita medir la velocidad del viento, un voltímetro y un amperímetro
+
+que permitan calcular la potencia suministrada por el generador eléctrico tanto en vacío como con diferentes tipos de carga. La dirección del viento no tendrá mayor importancia ya que el aerogenerador es orientable. Adicionalmente se podrán generar gráficas de la
+
+variación de la potencia eléctrica respecto al tiempo durante periodos determinados.
+
+6.2 Velocidades. En general, los aerogeneradores están diseñados para funcionar a una velocidad del viento nominal o de aprovechamiento óptimo. Esta velocidad es uno de los parámetros de diseño del aerogenerador. También se da importancia a la velocidad de arranque, que es la velocidad mínima a la debe soplar el viento para que este empiece a funcionar. Lo mismo sucede con la medición de la velocidad de corte, que es la velocidad máxima que tiene el viento y que logra hacer que el sistema de control entre en funcionamiento para frenar al aerogenerador.
+
+6.3 Rendimiento. El cálculo del rendimiento general del aerogenerador se basará en encontrar la potencia del viento absorbida por las aspas del aerogenerador y relacionarla con la potencia que entrega el generador eléctrico en condiciones nominales. La potencia absorbida por las aspas es proporcional al área de barrido del rotor y al cubo de la velocidad del viento. La potencia entregada por el generador eléctrico es el producto del voltaje generado y la corriente de salida medida en sus terminales.
+
+7. Conclusiones y expectativas del proyecto.
+
+La realización de un montaje de un aerogenerador real por parte de los estudiantes del curso de Energía Eólica permite que estos puedan aplicar los conocimientos teóricos recibidos durante el curso.
+
+Los proyectos de diseño, construcción y montaje son actividades que los Ingenieros realizarán a lo largo del desarrollo de su profesión. Complementa su preparación para la
+
+vida laboral el hecho que la universidad provea espacios para que los estudiantes se enfrenten a este tipo de procesos
+
+Esta metodología pone a prueba la integración de las áreas de conocimiento en la que los ingenieros han sido instruidos. Al no ser una metodología rígida, permite que el estudiante de ingeniería tome sus propias decisiones en cuanto a los mejores criterios escogidos para llevar a cabo el proyecto.
+
+Se espera que el prototipo fabricado pueda ser una herramienta de apoyo al aprendizaje de las materias con las que tiene relación, tanto en el área eléctrica como la mecánica. Se aclara que el prototipo construido no será de uso restringido del curso de Energía Eólica.
+
+Referencias Bibliográficas
+
+[Diez, 2002].- Díez, Pedro Fernández, “Energía Eólica”, Departamento de Ingeniería Eléctrica y Energética, Universidad de Cantabria, España, 2002. Link:http://personales.ya.com/universal/TermoWeb/EnergiasAlternativas/eolica/index.html
+
+[González, 2005].- González Barreras, A, “Prospección Eólica en Cuba”, Grupo Eólico del MINBAS, 2005 Link: http://www.cubasolar.cu/biblioteca/energia/Energia37/HTML/articulo04.htm
+
+[Devore, 2001].- Devore, Jay L., “Probabilidad y estadística para ingeniería y ciencias”, Thompson, 2001.
+
+[Chapman, 2000].- Chapman, Stephen J., “Máquinas eléctricas”, Mc Graw Hill, 2000.
+
+[Wood, 2002].- Wood, David, “The Design and Analysis of Small Wind Turbines”, School of Engineering University of Newcastle, Australia, 2002. Link: http://www.wind.newcastle.edu.au/notes.html
+
+[Corten, 2001].- Corten, G.P., “Flow Separation on Wind Turbine Blades”, University of Utrecht, Holanda, 2001. Link: http://www.ecn.nl/library/thesis/corten.html
+
+[Faires, 2000].- Faires,Virgil Moring, “Diseño de mecanismos y elementos de máquinas”, Limusa, 2000.
+
+[Gere, 1998].- Gere, J., Timoshenko, S., “Mecánica de materiales”, International Thompson Editores, 1998.
+

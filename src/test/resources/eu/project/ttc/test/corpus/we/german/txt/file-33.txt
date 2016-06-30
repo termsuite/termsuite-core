@@ -1,0 +1,94 @@
+DISS ETH Nr. 17324
+,,Dynamische Simulation eines Lastmanagements und Integration
+von Windenergie in ein Elektrizitatsnetz auf Landesebene unter
+regelungstechnischen und Kostengesichtspunktenf
+ABHANDLUNG
+zur Erlangung des Titels
+DOKTOR DER WISSENSCHAFTEN
+der
+ETH zURlcl-1
+vorgslegt von
+Marian Klobasa
+Dipl. Ing., Universitat Karlsruhe
+geboren am 31.12.1975
+in Deutschland
+Angenommen auf Antrag von
+Prof. Dr. Eberhard Jochem
+Prof. Dr. Goran Andersson
+2007
+
+1
+Kurzfassung
+Die Anforderungen an ein zukunftiges nachhaltiges Elektrizitatssystem bestehen in
+einer klimafreundlichen und ressourcenschonenden Strombereitstellung; sie kann mit
+emeuerbaren Energien, danunter auch mit der Windenergie bei entsprechendem
+Windangebot, Iangfristig kostengunstig realisiert werden. Im Vergleich zu konventionel-
+len Kraftwerken ist die Elnspeisung aus Windenergie gr6l2»eren Fluktuationen untenivor-
+fen und nur eingeschrankt vorherzusagen. Daraus ergeben sich Riickwirkungen auf
+den Betrieb der Stromnetze, die sich u. a. in einem erhohten Bedarf und Abruf an Re-
+gelleistung und damit verbundenen Kosten zeigen. Diesen Bedarf durch Speicherung
+von Elektrizitat in Schwungradem, Pumpspeicherkraftwerken oder Druckluftspeichern
+zu decken, erfordert einen erheblichen Kapitaleinsatz und ist sehr kostenintensiv. Deut-
+lich weniger kapitalintensiv kcnnte die Nutzung von nachfrageseitigen Verlagerungspo-
+tenzialen sein, die durch den Einsatz eines Lastmanagements bei den Strcmverbrau-
+chem die Moglichkeit bieten, die Gesamteffizienz des Stromversorgungssystems zu
+steigern.
+Ziel der Arbeit war es daher zu untersuchen, cb und in welchem Umfang die verstark-
+ten Anforderungen nach Regelungsmoglichkeiten innerhalb des Strcmnetzbetriebes in
+Zukunft auch mit einer steuerbaren und flexiblen Nachfrags erfiillt werden kijnnen. Die
+Ausgangshypothese ist dabei, dass ein intelligentes Lastmanagement bei den Strom-
+anwendern bei einem welteren Anstieg der Stromerzeugung aus erneuerbaren Ener-
+gien im Vergleich mit einer reinen erzeugungsseitigen Regelung (inklusive der Nutzung
+von Speichertechnologien) zu einer deutlichen Kostensenkung der Netzregelung fun-
+ren kann.
+Dazu wird zunachst das technische und okonomische Potenzial an verlagerbarer und
+flexibler Nachfrage bei den Stromanwendungen systematisch analysiert, um Umset-
+zungsmoglichkeiten und relevante Akteure zu identlflzieren. Zur Quantifizlerung der
+Effizienzgewinne und Regelungskcsten wurde ein Simulationsmcdell entwickelt, das
+die Flexibilitat der Stromnachfrage, die Erzeugungscharakteristik der Windenergie und
+das traditicnelle Stromerzeugungssystem abbilden kann. Als neuer Ansatz wird dabei
+das Zusammenspiel der Regelenergievcrhaltung der Stromerzeuger und der Einsatz
+eines Lastmanagements bei den Stromverbrauchern innerhlb eines Nlcdells simuliert.
+Lastverlagerungspotenziale wurden in allen Bereichen der Strcmnachfrage identifiziert.
+Dabei stehen in Deutschland ca. 3 GW in der Industrie, weitere 3 GW im GHD-Sektor
+und weitere 4 GW im Haushaltsbereich im Mittel zur Verfugung. Dariiber hinaus exis-
+tieren aulsentemperaturabhangige Potenziale bei Klimatisierungsanwendungen von
+Liber 5 GW und bei Nachtspeicherheizungen von bis zu 18 GW. Gkonomisch attraktiv
+
+2
+sind vor ailem Anwendungen im Industriebereich sowie Kaiteanwehdungen im Le-
+bensmittelhandel.
+Bei niedrigen Penetrationsraten der Windehergie (< 5 % des Stromverbrauchs) Iiegen
+die zusatzlichen Kosten fur die erzeugungsseitige Regelung des deutschen Stromnet-
+zes bei ca. 2,3 Euro/I\AWh entsprechend 25 Mio. Euro und steigen bei hohen Penetra-
+tionsraten (18 % des Stromverbrauohs) auf 4,8 Euro/MWh (entsprechend 475 Nlio.
+Euro) bzw. (bei 22 % Penetrationsrate) auf 5,5 Euro/NIWh (entsprechend 675 IVIio. Eu-
+ro) in 2020. Im Jahr 2006 lag der Stromanteil aus Windenergie in Deutschland bei ca.
+6 %.
+Der Einsatz der Lastmanagementpotenziale bei den Stromverbrauchern kann diese
+erzeugungsseitigen Kosten um bis zu 20 % auf 380 bzw. 560 Mio. Euro pro Jahr redu-
+zieren. Die anlegbaren Kosten fur die Lastmanagementpotenziale Iiegen damit bei 10
+bis 20 Euro pro kW und Jahr. Im Industriebereioh wurden die Kosten fiir eine Aktivie-
+rung von Lastmanagement (z. B. bei der Chlor-, Aluminium- und Elektrostahlindustrie)
+auf unter 4 Euro pro kW gesohatzt, so dass hier ein GroiZ»teiI der Potenziale wirtschaft-
+Iich betrieben werden kann.
+Verbesserte Windleistungsprognosen kdnnen die zusatzlichen Kosten der erzeu-
+gungsseitigen Regelung auf unter 2 Euro/i\AWh reduzieren. Der Einsatz der Lastmana—
+gementpotenziale bei den Stromanwehdern f0hrt zu einer weiteren Reduzierung auf
+untert Euro/NIWh.
+insgesamt bestatigen die Analyseergebnisse die Ausgangshypothese der Dissertation.
+Der Einsatz heutiger Informations- und Kommunikationstechnik im Bereioh der Strom-
+nutzung wird ein Element auf dem Weg zu einer nachhaltigen Stromwirtschaft.
+
+4
+management potentials can lower the supply-side costs by up to 20 % to 384 respec-
+tively 560 million Euro. The investable costs for load management thus amount to 10 to
+20 Euro per kW and year. ln the industrial sector, the costs for activating load man-
+agement have been estimated at less than 4 Euro per I<W, so that a large share of the
+potentials can be operated economically here. Improved wind power forecasts could
+reduce the additional costs to below 2 Euro/MWh. The use of load management poten-
+tials results in a further reduction to less than 1 Euro/MWh.
+As a result of this thesis the importance of information and communication technology
+for a sustainable power system becomes clear. The usage in the electricity demand
+sector is a further step in this direction.
+

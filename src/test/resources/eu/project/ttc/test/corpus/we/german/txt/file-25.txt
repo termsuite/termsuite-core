@@ -1,0 +1,642 @@
+Sitzung 13: Analyse & Verifizierung von Projekten
+Analyse der Unsicherheiten bei der Ertragsberechnung von Windparks
+Analysis of Uncertainties of Wind Farm Projects
+Martin Strack, Wolfgang Winkler;
+Deutsches Windenergie-Institut, Ebertstr. 96, D-26382 Wilhelmshaven
+E-Mail: m.strack@dewi.de
+
+An uncertainty analysis of a wind farm project is essential for a correct assessment of the project and the risks. Furthermore, it enables
+to recognize the required efficient measures to reduce uncertainties. In this article the relevant uncertainty components of a wind farm
+energy yield prediction are described and assessed regarding their uncertainties: meteorological input data, flow models, terrain
+description, wind turbine power curve and others. From this the overall uncertainties of different approaches are calculated. From the
+analysis of the main uncertainties a concept for minimizing the overall uncertainties is derived and discussed. In conclusion, the link
+between uncertainty analysis and risk management is given.
+For a complete english translation of this article, please contact the author (m.strack@dewi.de)
+1 Einleitung
+Das Ergebnis einer Ertragsberechnung eines Windparkprojektes
+ist mit Unsicherheiten behaftet, die je nach Projekt, der Art der
+verwendeten Eingangsdaten und der Berechnungsverfahren ein
+unterschiedliches Ausmaß annehmen können. Während vielfach
+bei deutschen Windenergieprojekten noch pauschal eine Unsicherheit von 10% angenommen und in einer Wirtschaftlichkeitsberechnung als Sicherheitsabschlag eingerechnet wird, erlaubt
+erst die Projektprüfung mit spezifischer Analyse der relevanten
+Unsicherheiten die korrekte Bewertung eines Projektes und dessen Risikos. Da gerade bei ertragsschwachen Projekten die Unsicherheiten des Ertrages im Allgemeinen besonders hoch sind,
+kann eine solche Analyse immens wichtig für den Erfolg eines
+Projektes werden.
+In diesem Artikel werden nach Darstellung möglicher Indikationen für eine Unsicherheitsanalyse die Unsicherheitskomponenten einer Ertragsberechnung analysiert und in Abschnitt 4 typische Unsicherheiten dargestellt. In Abschnitt 5 wird die Unsicherheit der Ertragsberechnungen tatsächlich realisierter Projekte
+ausgewertet. In Abschnitt 6 wird ein Konzept zur Minimierung der
+Unsicherheiten vorgestellt. Der Zusammenhang der Unsicherheitsanalyse und der Risikobewertung eines Projektes wird in Abschnitt 7 hergestellt.
+2 Indikationen für eine Unsicherheitsanalyse
+Die berechneten Erträge stellen die wesentliche Grundannahme
+für die Wirtschaftlichkeitsberechnung eines Windparkprojektes
+dar. Daher kann die Notwendigkeit für eine Unsicherheitsanalyse
+eines Windparkprojektes in verschiedenen Stadien gegeben
+sein:
+•
+
+•
+
+Vorplanung: Nur mit einer einer frühzeitigen Analyse eines
+Standortes lässt sich nach Identifizierung der wesentlichen
+Unsicherheitsfaktoren ein angepasstes Konzept zur Bestimmung des Energieertrages entwickeln, welches einen zeitlich
+abgestimmten ökonomischen Einsatz der Mittel mit möglichst
+frühzeitigen Aussagen erlaubt.
+Bewertung: Die Prüfung und Bewertung der Unsicherheiten
+einer vorliegenden Ertragsberechnung ist eine anspruchsvolle Aufgabe aufgrund der komplexen Berechnungsmethoden,
+der relevanten und oft nicht allgemein bekannten Einflussfaktoren und der notwendigen Erfahrung zur Bewertung von Methoden und Daten. Die vielfach gewählte Strategie, im Zweifelsfall ein drittes oder viertes Windgutachten einzuholen,
+
+DEWEK 2002 Tagungsband
+
+•
+
+•
+
+führt oft nicht zu einer Reduzierung der Unsicherheiten. Erst
+eine Projektprüfung mit systematischer Analyse der Unsicherheiten und der Gründe für Abweichungen verschiedener Ergebnisse kann hier Klärung bringen.
+Risikominimierung: Erweist sich eine Planung als zu risikoreich und droht deshalb zu scheitern, können nach Analyse
+der Unsicherheitsfaktoren mit Hilfe gezielter Maßnahmen die
+Unsicherheiten und damit die Sicherheitsabschläge reduziert
+werden. Hierzu gibt es Konzepte, die auch kurzfristig wirksam
+umgesetzt werden können.
+Projektverifizierung: Bei der Auswertung der Ergebnisse
+unbefriedigender Projekte ist anhand der verfügbaren Daten
+zumeist keine Identifizierung der Ursachen möglich. Mittels
+einer Analyse der zugrundeliegenden Berechnungen kann
+zunächst die Planungsgrundlage überprüft werden. Mit einem
+Windpark-Leistungskurven-Konzept, wie in Abschnitt 6 beschrieben, können mögliche technische Ursachen weitaus
+besser erfasst werden, als mit der exemplarischen Vermessung einer WEA. Gleichzeitig kann die Basis für den zukünftigen Umgang mit Mindererträgen (ggf. Ausgleichzahlungen)
+gelegt werden.
+
+3 Unsicherheitskomponenten einer Ertragsberechnung
+Eine Ertragsberechnung basiert auf wesentlichen meteorologischen, topographischen und technischen Eingangsdaten und darauf angewendeten Rechenschritten. Verschiedene Verfahren
+unterscheiden sich dabei in der Detaillierung, Herkunft und dem
+Umfang berücksichtigter Eingangsdaten sowie der Art der Modellierung.
+Die Ermittlung der Unsicherheiten einer Ertragsberechnung setzt
+die Identifizierung und Quantifizierung der verschiedenen Unsicherheitskomponenten und die geeignete Verknüpfung unter
+Berücksichtigung etwaiger Abhängigkeiten zu einer Gesamtunsicherheit im Rahmen einer Fehlerrechnung voraus.
+Im Abbildung 1 ist schematisch das prinzipielle Vorgehen anhand
+des Europäischen Windatlas-Verfahrens [1] (WASP) dargestellt,
+welches nach wie vor überwiegend zur Ertragsberechnung eingesetzt wird. Im folgenden werden die einzelnen Schritte und die
+damit verbundenen Unsicherheiten anhand dieses Schemas beschrieben, wobei auch auf Besonderheiten anderer Berechnungsmethoden (Strömungsmodelle) eingegangen wird, die zunehmend an Bedeutung für die Ertragsberechnung gewinnen.
+
+9
+
+Sitzung 13: Analyse & Verifizierung von Projekten
+StandortBeschreibung
+Mess-Station
+
+Windatlas
+
+StandortBeschreibung
+Windanlage/-park
+
+Regional gültige
+LangjahresWindstatistik
+
+WEA- Leistungskennlinie
+Windatlas
+Analysemodell
+
+P
+
+Windatlas
+Anwendungsmodell
+
+v
+
+Europäisches WindatlasVerfahren (WASP, ggf.
+Benutzeroberfläche)
+
+WindparkKonfiguration
+
+1-2 Jahren oder weniger, der klimatologisch nicht repräsentativ ist. Um
+eine belastbare Aussage hinsichtlich
+der zukünftigen Windbedingungen
+zu erhalten, ist ein Bezug auf eine
+möglichst langjährige und damit
+möglichst repräsentative Periode
+aus der Vergangenheit herzustellen.
+Dazu werden Korrelationsverfahren und geeignete, konsistente
+langjährige Referenzdaten (bzw. ein
+geeigneter Ertragsindex) benötigt.
+
+Die Anforderungen an Verfahren zur
+Langzeitkorrelation (auch MCP =
+Measure-Correlate-Predict) sind
+Modell für
+umso höher, je kürzer der vorliegenWEA-SchubbeiParkabwertkennlinie
+de Messzeitraum ist. Dieses gilt im
+schattung
+besonderen Maße für nicht abgeProgramm zur Parkberechnung
+ct
+schlossene Klimaperioden von unter
+Langzeit-Daten
+einem Jahr. DEWI hat im Rahmen
+Ggf. Langzeitv
+einer umfangreichen Entwicklungskorrelation
+und Verifizierungsarbeit ein MCPVerfahren optimiert und dessen UnAbb. 1: Schematische Darstellung der Anwendung des Europäischen Windatlas- Verfahrens
+sicherheiten ermittelt. Demnach
+lässt sich ein 3-monatiger Meßzeitraum mit einer mittleren Unsicherheit von ca. 4% im Ertrag auf
+3.1 Meteorologische Messdaten
+ein volles Jahr extrapolieren [3].
+Eine wesentliche Eingangsgröße für die Ertragsberechnung sind
+meteorologische Daten, die je nach Berechnungsverfahren von Eine derart geringe Unsicherheit lässt sich jedoch nur mit hochWetterstationen, Windmessmasten oder numerischen Berech- wertigen Korrelationsverfahren, die sich auf unterschiedliche
+Windsituationen einstellen können, und setzen geeigneten, konnungsmodellen stammen können.
+sistenten Referenzdaten erzielen. Demgegenüber besteht die
+Bei der ursprünglichen Konzeption von WASP, wie sie in Gefahr, durch die Verwendung ungeeigneter Verfahren oder DaDeutschland häufig noch angewendet wird, stammen diese Da- ten durch Korrelationsunsicherheiten von 20% und mehr die mit
+ten von Langzeit-Wetterstationen, an denen üblicherweise auf grossem (Mess-)Aufwand erkaufte Genauigkeit zunichte zu
+10 m Höhe in einem stark von Umgebungseinflüssen (Hindernis- machen. Die Identifizierung geeigneter Referenzdaten ist im allse, Bewuchs) geprägten Umfeld gemessen wird.
+gemeinen sehr anspruchsvoll und nur durch vergleichende Konsistenz-Analysen von Messdaten aus verschiedenen Quellen
+Die Datenqualität dieser Stationen entspricht nicht den
+möglich.
+Anforderungen der Windenergie [2]. Neben häufigen Mängeln in
+der Datenerfassungsrate und Vollständigkeit ist vor allem die Der vielfach verwendete IWET-Ertragsindex [4], der auf WEAMesstechnik oft von niedriger Qualität und nicht exakt kalibriert. Erträgen basiert, wird in Deutschland oft zur Langzeitkorrelation
+Die Messunsicherheiten wirken sich aufgrund der im Allgemeinen von Energieerträgen angewendet. Aufbauend auf vergleichenden
+niedrigen Messwerte zudem stärker aus, was aufgrund der Konsistenz-Analysen mit Höhenwinddaten aus Wettermodellen
+Standorteinflüsse auch für störende Anemometereigenschaften und meteorologischen Daten deckte DEWI gewisse Unsicherwie Schräganströmungs- und Turbulenzabhängigkeit [7] gilt. Die heiten und systematische Abweichungen dieser Methodik auf [5],
+Unsicherheit solcher Windmessdaten lässt sich meist nur schät- die standortspezifisch korrigiert werden müssen, um eine ausreizen, eine typische Unsicherheit liegt bei über 10% im chende Genauigkeit zu erzielen.
+Energieertrag.
+3.3 Geländebeschreibung
+Eine hochwertige Windmessung in großer Höhe weist relativ
+geringe Unsicherheiten auf, die sich anhand der Meßunsicherhei- Die Bodenrauhigkeit eines Geländes ist eine theoretische
+ten zu 1-2% der Windgeschwindigkeit bestimmen lassen (ent- Größe und ein wesentlicher Parameter, der die Windgeschwinspricht ca. 3-5% im Ertrag), wenn die Messung und Aufbereitung digkeit und deren Variation mit der Höhe bestimmt. Die Zuweider Daten in allen Punkten optimal durchgeführt wird. Dieses sung einer Rauhigkeitslänge zu einem Gelände erfordert Erfahkann im Allgemeinen nur von einem Experten bewertet werden.
+rung, ist subjektiv beeinflusst und unterliegt gewissen Unsicherheiten, die auch quantifizierbar sind [1]. Mit Hilfe von SensitiviBesonders im Zusammenhang mit der Anwendung numerischer
+tätsuntersuchungen für zahlreiche Standorte konnten daraus UnStrömungsmodelle zur Ertragsberechnung werden auch langjähsicherheiten im Energieertrag abgeleitet werden, die stark von
+rige Boden- oder Höhenwinddaten aus Klima- oder Wettermoder Höhe und der jeweiligen Konstellation (z.B., ob eine Winddellen als (regional gültige, vgl. Abb. 1) Eingangsdaten verwenmessung am Standort durchgeführt wird) abhängig sind. Analog
+det. Die Unsicherheit dieser Daten lässt sich nur schwer quantifiwurde die Sensitivität des Ertrages auf die Orographiebeschreizieren. Aus langjährigen Erfahrungen mit der Auswertung solcher
+bung ermittelt.
+Daten am DEWI begründet sich allerdings der Verdacht, dass
+solche Daten als alleinige Basis zur Ertragsberechnung den Ge- In der Praxis lässt sich aufgrund empirischer Anteile die Unnauigkeitsanforderungen der Windenergie nicht genügen kön- sicherheit der Geländebeschreibung oft nicht von der Unsichernen.
+heit der Windfeldmodellierung trennen.
+Windmessung
+
++1
+
+Parkwirkungsgr.
+Parkenergieertrag
+
+Koordinaten
+Nr.
+X
+Y
+1
+488871 780889
+2
+488641 760654
+3
+488808 780439
+4
+488909 780176
+5
+489049 779941
+6
+489195 780803
+Summe ganzer Park
+
+Jahresenergieertrag
+frei
+Park
+3123
+2745
+3035
+2823
+3138
+2871
+3223
+2962
+3140
+2933
+3222
+2790
+18881
+17124
+
++2
+
++3
+
++4
+
++5
+
+Parkwirkungsgrad
+87.9%
+93.0%
+91.5%
+91.9%
+93.4%
+86.6%
+90.7%
+
+3.2 Langzeitabgleich
+Durchgeführte Messungen am Standort (bzw. verfügbare WEAErtragsdaten) umfassen meist einen relativ kurzen Zeitraum von
+10
+
+DEWEK 2002 Tagungsband
+
+Sitzung 13: Analyse & Verifizierung von Projekten
+
+Betriebsdaten
+
+0%
+
+10%
+
+20%
+
+30%
+
+Unsicherheit im Energieertrag
+
+Abb. 2: Darstellung der Unsicherheiten im
+Ertrag für die Berechnung auf Basis einer
+hochwertigen Windmessung (hell) und
+einer meteorologischen Station (dunkel)
+
+Unsicherheit der
+Ertragsgarantie
+
+Gesamtunsicherheit
+im Energieertrag
+
+Gesamtunsicherheit
+im Energieertrag
+
+Parkwirkungsgrad
+
+Parkwirkungsgrad
+
+Parkwirkungsgrad
+
+Leistungskennlinie
+
+Leistungskennlinie
+
+Leistungskennlinie
+
+Umrechnung auf
+WEA-Standorte
+
+Umrechnung auf
+WEA-Standorte
+
+Umrechnung auf
+WEA-Standorte
+
+Übertragbarkeit
+Windklimatologie
+
+Übertragbarkeit
+Windklimatologie
+
+Übertragbarkeit
+Windklimatologie
+
+Standortbereinigung
+
+Standortbereinigung
+
+Standortbereinigung
+
+Langzeitkorrelation
+
+Leistungskennl.
+Referenz-WEA
+
+Langzeitvariabilität / korrelation
+
+Windmessung
+Messmast
+
+Variabilität,
+Windindex
+
+Windmessung
+Messmast/Station
+
+Gesamtunsicherheit
+im Energieertrag
+0%
+
+20%
+
+30%
+
+Abb. 3: Darstellung der Unsicherheiten im
+Ertrag für die Berechnung auf Basis von
+nahestehenden Referenz-WEA – günstiger Fall (hell) und komplexes Gelände
+(dunkel)
+
+3.4 Windfeldmodellierung
+Die Unsicherheiten der Windfeldmodellierung in Kombination mit
+der Geländebeschreibung bestimmen die Unsicherheiten bei der
+Bereinigung von Messdaten von deren Umgebungseinflüssen
+und der Übertragung auf andere Standorte. Komplexe und starke
+Umgebungseinflüsse, wie sie an meteorologischen Langzeitstationen meist in Form von Abschattungen und Turbulenz aufgrund
+naher Hindernisse auftreten, lassen sich nicht vollständig bereinigen, was die erheblichen Unsicherheiten dieser Datenbasis erklärt. Bei fachgerecht durchgeführten Messungen mit Messhöhen
+in der Größenordnung von 50 m fällt aufgrund der geringeren
+Umgebungseinflüsse und aufgrund von Ausgleichseffekten die
+diesbezügliche Unsicherheit moderat aus, solange es sich um
+flaches oder nur leicht welliges Gelände handelt.
+Bei stärker komplexen Gelände können die Geländeeinflüsse
+durch das einfache Orographiemodell des Europäischen Windatlasverfahrens nicht vollständig beschrieben werden und WASP
+kann nur mit erhöhten Unsicherheiten angewendet werden, die
+nur aufgrund von Erfahrungswerten unter Berücksichtigung des
+Geländetyps sowie des Abstandes zum Messpunkt abgeschätzt
+werden können. Hier kann die Anwendung von Strömungsmodellen angezeigt sein, die potentiell in der Lage sind, die relevanten Effekte zu beschreiben.
+Generell ist aufgrund der komplexen Thematik und des relativ geringen Erfahrungsschatzes eine Bewertung von Ergebnissen aus
+Strömungsberechnungen sehr schwierig. DEWI hat im Rahmen
+eines Europäischen Forschungsprojektes umfangreiche Verifizierungen verschiedener Strömungsmodelle vorgenommen [8]
+[9] und konnte so die typischen Probleme und Grenzen dieser
+Modelle untersuchen. Demnach bleibt auf diesem Gebiet ein erheblicher Verifizierungsbedarf, weshalb DEWI einen Ringversuch numerische Strömungssimulation in der Windenergie
+initiiert hat [10], mit dem die Unsicherheiten dieser Modelle unabhängig und systematisch untersucht werden sollen.
+3.5 Windparkmodell
+Zur Berechnung der Parkabschattungsverluste wird in der Regel
+das Risø-Windparkmodell angewendet, welches auf einfachen,
+empirisch begündeten Annahmen basiert. Die berechneten Parkabschattungen sind daher mit deutlichen Unsicherheiten behaftet, die sich jedoch im Energieertrag nur leicht bemerkbar
+machen. In Situationen mit großen Windparks (insbesondere Offshore) sowie bei konsequenter Ausschaltung anderer Unsicherheitsquellen (s. Abschnitt 6) gewinnen diese Unsicherheiten jeDEWEK 2002 Tagungsband
+
+10%
+
+0%
+
+Unsicherheit im Energieertrag
+
+10%
+
+20%
+
+30%
+
+Unsicherheit im Energieertrag
+
+Abb. 4: Darstellung der Unsicherheiten im
+Ertrag für die Berechnung mit einem geeignetem Ertragssicherungs-Konzept (Abschnitt 6)
+
+doch an Bedeutung, so dass die Verwendung von realistischeren
+Modellen (Eddy-Viscosity-Modellen) angezeigt ist.
+3.6 Leistungskennlinien
+Die WEA-Leistungskennlinien sind mit einem erheblichen Anteil
+an den Gesamtunsicherheiten beteiligt. Je nach Windbedingungen kann bei einer nach IEC [6] vermessenen Kennlinie von 68% Unsicherheit ausgegangen werden. Hinzu können Abweichungen oder Unsicherheiten durch dynamische Anemometereffekte kommen. Durch Analyse des Messberichtes und Anpassung
+einer oder mehrerer unabhängiger Vermessungen an die Standorteigenschaften lassen sich diese zum Teil deutlich verringern
+[11].
+Eine wesentliche Verringerung der diesbezüglichen Unsicherheit
+lässt sich über geeignete vertragliche Regelungen (Garantien)
+und geeignete Konzepte zu deren Verifizierung und Umsetzung
+erreichen [12].
+4 Typische Unsicherheiten bei der Ertragsermittlung
+Aufbauend auf die in Abschnitt 3 identifizierten Unsicherheitskomponenten werden die Gesamtunsicherheiten einer Ertragsprognose für exemplarische, typische Situationen ermittelt. Nach
+Abb. 3 ergibt sich die typische Unsicherheit einer Berechnung
+ausschließlich auf Basis einer meteorologischen Station auf über
+30% im Ertrag, was als Planungsgrundlage ungeeignet ist. Hingegen lassen sich mittels einer hochwertigen Windmessung am
+Standort die Unsicherheiten auf ca. 12% reduzieren, wenn die
+Messung und Auswertung fachgerecht durchgeführt wird.
+Liegen geeignete Ertragsdaten von benachbarten WEA vor, dann
+lassen sich im günstigen Fall durch Abgleich der Daten Ertragsberechnungen mit nur leicht höheren Unsicherheiten realisieren
+(Abb. 4). Dieses setzt jedoch einen standortspezifisch korrigierten Windindex und eine gute Datenbasis der Betriebsdaten voraus. Im komplexen Gelände hingegen erweisen sich nicht nahe
+am Standort befindliche Referenz-WEA oft als nicht repräsentativ
+für den Standort, was Unsicherheiten von deutlich über 20% zur
+Folge haben kann.
+5 Auswertung realisierter Projekte
+Zur Ermittlung der Abweichungen zurückliegender Ertragsberechnungen wurden die Ergebnisse von über 400 WEA, für die
+DEWI in der Vergangenheit Ertragsberechnungen durchgeführt
+hat, ausgewertet. Die tatsächlich realisierten Erträge wurden mit
+11
+
+Sitzung 13: Analyse & Verifizierung von Projekten
+dem IWET-Index mit angepasster Normierung1 korrigiert, um die
+Verfügbarkeit korrigiert und dem Ergebnis der Ertragsberechnung gegenübergestellt (Abb. 5).
+Es ist eine deutliche Streuung sichtbar, die sich in einer Standardabweichung der Parkmittelwerte von 16% äußert, während sich
+der Mittelwert der berechneten Erträge 2% oberhalb der tatsächlichen befindet. Rechnet man aus dieser Unsicherheit die Unsicherheit der Betriebsdaten sowie der Windindexkorrektur wie in
+Abb. 3 angegeben heraus, so resultiert eine Standardunsicherheit von 13% für die Ergebnisse der Ertragsberechnungen.
+5000
+
+Die erfolgreiche Umsetzung und Akzeptanz einer solchen Konstellation erfordert ein gutes und vollständiges Gesamtkonzept
+und nicht zuletzt eine hohes Maß an Vertrauen in die Fähigkeiten
+und die Unabhängigkeit des Ausführenden.
+DEWI hat diesen Ansatz zu einem Konzept ausgebaut, welches
+sowohl die vertragliche Regelung, die Berechnung der notwendigen Relationen und Leistungskennlinien, die Minimierung und
+sorgfältige Bestimmung und Behandlung der verbleibenden Unsicherheiten sowie die Bereitstellung von Dienstleistungen und
+Werkzeugen zur Überwachung der Performance und der technischen Betriebsführung umfasst.
+Für den Betreiber ergibt sich neben den verminderten Unsicherheiten und damit einem möglichen geringeren Sicherheitsabschlag der Vorteil der gesicherten Performance des Windparks,
+dessen Kontrolle sich einfach und transparent gestaltet. Das Projektrisiko reduziert sich im wesentlichen auf das Risiko von Windschwankungen, die ihrerseits mit einem Wetterderivat abgemildert werden könnten.
+
+4500
+
+Berechneter Ertrag
+
+4000
+
+3500
+
+3000
+
+2500
+
+2000
+
+Dieses verringerte Risiko kommt nicht nur dem Betreiber zugute,
+sondern auch dem Hersteller, da daraus aufgrund des geringeren
+Sicherheitsabschlages einen Marktvorteil seiner WEA erwächst
+und u.U. bestimmte Projekte oder Anlageformen erst mit einem
+solchen Konzept realisierbar werden.
+
+1500
+
+Diverse WEA-Typen
+
+1000
+
+WEA-Typ A
+500
+
+WEA-Typ B
+
+0
+500
+
+1000
+
+1500
+
+2000
+
+2500
+
+3000
+
+Tatsächlicher Ertrag
+
+3500
+
+4000
+
+4500
+
+5000
+
+Abb. 5: Gegenüberstellung berechneter zu tatsächlich realisierter
+Erträge zurückliegender Ertragsermittlungen
+(Horizontale Muster ergeben sich aufgrund der Tatsache, dass
+für diese Auswertung der mittlere Ertrag eines Windparks den tatsächlichen Erträgen der Einzel-WEA gegenüberstehen)
+In diese Auswertungen gehen überwiegend Ertragsberechnungen von 1997 und früher mit dem damaligen Stand der Technik
+und den damals deutlich weniger vorhandenen Referenz-WEA
+für Abgleiche ein, d.h. es wurde ein großer Teil der Berechnungen
+ausschließlich auf Basis von meteorologischen Stationen durchgeführt. Unter dieser Voraussetzung stellt sich die Standardunsicherheit von 13% als gering dar.
+In Abbildung 5 sind nun die Ergebnisse von zwei exemplarisch
+ausgewählten WEA-Typen hervorgehoben. Während die tatsächlichen Erträge der WEA des Typs A offensichtlich systematisch
+niedriger als die Prognose liegen, ist dieses bei der WEA B umgekehrt. Es gibt eine gewisse Korrelation dieser Eigenschaft
+auch mit der Region, so dass diese Eigenschaft nicht vollständig,
+aber doch zu einem deutlichen Anteil dem WEA-Typ zugeordnet
+werden kann.
+
+Für den Hersteller stellt die Konstellation zudem eine gute Basis
+zur standortspezifischen Optimierung jeder einzelnen WEA dar
+und kann aufgrund eines Ausgleichseffektes der verschiedenen
+WEA des Windparks auch das Regressrisiko des Herstellers gegenüber der Variante einer Kennliniengarantie einer exemplarischen WEA vermindern.
+7 Risikobewertung
+Die Analyse der Unsicherheiten ist ein notwendiger Schritt zur
+Ermittlung der Risiken eines Projektes im Rahmen der Projektbewertung oder der Erstellung eines angepassten Finanzierungskonzeptes.
+Das ermittelte Ertragsergebnis ist als das wahrscheinlichste Ergebnis und die Unsicherheit als Schwankungsbreite des zu erwartenden Ergebnisses um das wahrscheinlichste Ergebnis im
+Sinne einer Standardunsicherheit zu verstehen (Abb. 6).
+Die kumuliert Häufigkeit stellt bei dieser Betrachtungsweise die
+Unterschreitungswahrscheinlichkeit eines Energieertrages
+dar, und damit ein Maß für das Risiko von Mindererträgen.
+
+Es zeigt sich hieran die Bedeutung der Leistungskennlinie und
+die Notwendigkeit, diese grundlegende Eigenschaft der WEA
+abzusichern.
+
+Eine Minimierung der Unsicherheiten einer Ertragsberechnung
+läßt sich wirksam durch die Eliminierung von zwei wesentlichen
+Unsicherheitsfaktoren, der Unsicherheit der Windmessung sowie
+die der Kennlinienvermessung, erreichen. Dieses ist möglich
+durch eine spezielle Konstellation, bei der der WEA-Hersteller
+eine Garantie des Energieertrages einräumt, die in Abhängigkeit
+von einer installierten Windmessung formuliert ist, die ihrerseits
+vor Installation des Parks als Basis für die Ertragsprognose dient.
+Dadurch ist es möglich, zu Gesamtunsicherheiten im Energieertrag von unter 10% zu gelangen (Abb. 4).
+
+1
+
+12
+
+Es konnte keine standortspezifische Windindexanpassung
+vorgenommen werden, sondern lediglich eine Um-Normierung.
+
+120%
+110%
+
+2.5
+
+Relative Häufigkeit [-]
+
+6 Ertragsberechnung mit minimierten Unsicherheiten
+
+3.0
+
+Wahrscheinlichkeitsdichte des Ergebnisses
+Kumulierte Häufigkeit (Unterschreitungswahrscheinlichkeit)
+
+100%
+90%
+
+2.0
+
+80%
+70%
+
+1.5
+
+60%
+50%
+
+1.0
+
+40%
+30%
+
+0.5
+
+20%
+
+Kumulierte Häufigkeit [-]
+
+0
+
+10%
+0.0
+1000
+
+1500
+
+2000
+
+2500
+
+0%
+3000
+
+Langjähriger Jahresenergieertrag [MWh/a]
+
+Abb. 6: Darstellung der (kumulierten) Wahrscheinlichkeitsdichte
+eines Eneergieertragsergebnisses.
+Ein für eine gewisse Planungssicherheit benötigter Abschlag im
+Energieertrag lässt sich nun durch Vorgabe des tolerierbaren Risikos aus der kumulierten Wahrscheinlichkeitsdichte berechnen.
+
+DEWEK 2002 Tagungsband
+
+Sitzung 13: Analyse & Verifizierung von Projekten
+Im Zuge einer Unsicherheitsanalyse werden also alle für eine fallspezifische Wahl eines Abschlages notwendigen Daten ermittelt.
+Neben der Analyse des Ertragsergebnisses werden in diese Betrachtung bei einer umfassenden Projektprüfung (Due Diligence)
+auch die technischen, vertragliche und weitere Risikofaktoren
+einbezogen.
+8 Zusammenfassung
+Die Ertragsberechnungen für Windparkprojekte ist mit Unsicherheiten verbunden, die von Fall zu Fall unterschiedlich sind. Pauschalannahmen oder eine Ignorierung der Unsicherheiten werden der Situation nicht gerecht.
+Durch sorgfältige Analyse der Einflussfaktoren können die Unsicherheiten fallspezifisch ermittelt werden. Das stellt die Grundlage für das Erkennen effizienter Handlungsansätze und für ein
+Risikomanagement des Projektes dar.
+Eine Unsicherheitsanalyse ist angezeigt zur Sicherstellung einer
+effektiven Projektplanung, zur Prüfung oder Unsicherheitsminimierung vorliegender Ertragsberechnungen und zur Überprüfung
+laufender Projekte .
+Durch technische Ertrags-Absicherungskonzepte lassen sich die
+Unsicherheiten und damit der Sicherheitsabschlag minimieren
+und zudem das spätere Betreiberrisiko erheblich reduzieren.
+Literaturreferenzen:
+[1]
+
+I. Troen, E.L. Petersen: European Wind Atlas. Risø National
+Laboratory, Denmark, 1989.
+[2] IEA Recommendation 11: Wind Speed Measurement and
+Use of Cup Anemometry, 1. Edition, 1999. Available on
+request from: B. Maribo Pedersen, Dept. of Energy
+Engineering, Building 404, Technical University of
+Denmark, DK-2800 Lyngby, Denmark.
+[3] V. Riedel, M. Strack, H.P. Waldl: Entwicklung verbesserter
+MCP-Algorithmen mit Parameteroptimierung durch Verteilungsanpassung. Tagungsband der DEWEK, Wilhelmshaven, 2002.
+[4] Keiler, Häuser: Monatsinfo, Ingenieur-Werkstatt Energietechnik, 24594 Rade.
+[5] W. Winkler; M. Strack; A. Westerhellweg: Zuverlässige
+Methoden zur Normierung und Bewertung von Energieerträgen von Windparks, Tagungsband der DEWEK, Wilhelmshaven, 2002.
+[6] IEC: IEC61400-10 Wind turbine generator systems - Part
+12: Wind turbine power performance testing, 1. Ed. 1998.
+[7] A. Albers, H. Klug, D. Westermann: Outdoor comparison of
+cup anemometers, proceedings of DEWEK 2000, Wilhelmshaven, 2000.
+[8] D. Heinemann, H.T. Mengelkamp, M. Strack, H.P. Waldl:
+Experiences with the Application of the Non-Hydrostatic
+Mesoscale Model GESIMA for assessing Wind Potential in
+Complex Terrain. Proceedings EWEC 99, Nice, 1999.
+[9] Tammelin, Bengt; Bergström, Hans; Botta, G. ; Douvikas,
+Dimitris; Hyvönen, Reijo; Rathman, Ole; Strack, Martin;
+Verification on wind energy predictions produced by WASP
+and some mesoscale models in European mountains. 2001
+European Union Wind Energy Conference: Copenhagen,
+Denmark, 2-6 July 2001. - S. 678-685.
+[10] M. Strack: Unsicherheit von Ertragsprognosen - Verbesserung durch Strömungssimulation? Uncertainty of Energy
+Yield Prognoses - Can Computational Fluid Dynamics be a
+Solution? DEWI-Magazin (2002) 20, S. 68-70
+[11] H. Klug: Die Bedeutung von Leistungskurven im Rahmen
+von Projektprüfungen, Tagungsband der DEWEK, Wilhelmshaven, 2002.
+[12] H. Klug: Wind Farm Financing: Lessons learned from
+Contractual Issues dealing with Energy Production Warranties, Global Wind Energy Conference, Paris, 2002.
+DEWEK 2002 Tagungsband
+
+13
+

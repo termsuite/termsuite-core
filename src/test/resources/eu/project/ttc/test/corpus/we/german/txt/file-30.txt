@@ -1,0 +1,804 @@
+AUFlWIND 99 St. Pölten, 21. Und 22. Oktober 1999
+
+Betrieb von Windenergieanlagen unter Vereisungsbedingungen
+Ergebnisse und Empfehlungen aus einem EU – Forschungsprojekt
+Henry Seifert, Deutsches Windenergie – Institut GmbH, Wilhelmshaven, Deutschland
+
+Einleitung
+Die zunehmende Anzahl der an vereisungsgefährdeten Standorten aufgestellten Windenergieanlagen (WEA) fordert praxisgerechte Lösungen, um den Betrieb mit Vereisung zu erkennen und eine Gefährdung der Umgebung und der Anlage selbst zu verhindern. In
+Deutschland wurden allein im ersten Halbjahr 1999 über 50 % der in diesem Zeitraum aufgestellten Windenergieanlagen und fast 50 % der im gleichen Zeitraum installierten Leistung
+im Binnenland errichtet [1]. Im nördlichen Finnland zeigten erst Windmessungen mit eisfreien Anemometern das vorhandene Potential für die Windenergienutzung auf und im Alpenraum Österreichs und der Schweiz werden erste Erfahrungen mit Windenergieanlagen
+gesammelt. Mit zunehmender Betriebserfahrung in den Binnenlandstandorten Mittel- und
+Nordeuropas häufen sich die Berichte über Energieverluste durch Minderleistung und längere Stillstandszeiten von vereisten WEA. Selbst kurzfristige Überleistungen mit Abschaltungen wegen überhöhter Generatortemperaturen infolge des Betriebs mit hoher Luftdichte
+bei niedrigen Temperaturen wurden vielfach berichtet. Vermehrt melden Straßenbaubehörden zum Beispiel in Deutschland Bedenken wegen einer möglichen Gefährdung naheliegender Straßen und Wege durch Eisabwurf von benachbarten WEA an. Ein erstes von der
+Europäischen Kommission gefördertes Forschungsprojekt [2] untersuchte alle möglichen
+Effekte von Vereisung auf den Betrieb von WEA. Die Ergebnisse dieses Vorhabens bildeten
+die Basis für ein weiterführendes Forschungsprojekt, in dem neben den Untersuchungen wo,
+in welchem Umfang und wie lange Vereisung auftritt, besonders deren Auswirkungen auf
+Windmessungen, die Betriebslasten und den Energieertrag von entscheidendem Interesse
+waren. Von 1996 bis 1998 bearbeiten mehrere Forschungsinstitutionen, Energieversorger
+und Hersteller von Windenergieanlagen und meteorologischen Instrumenten unter der
+Leitung des Finnischen Meteorologischen Instituts (FMI) das von der Europäischen Kommission im Rahmen des Nichtnuklearen Energieprogramms geförderten Projekt „Wind Energy
+Production in COld Climates“ – WECO [3], um Beobachtungen, Messungen, Simulationen
+und Berechnungen auf dem Gebiet der Vereisung von WEA durchzuführen und Empfehlungen für Planung, Bau und Betrieb von Windenergieanlagen in vereisungsgefährdeten Gebieten und unter kaltem Klima zu formulieren.
+Gegenstand der Untersuchungen des WECO - Projekts
+Die wesentlichen Ziele des Projekts bestanden in der Untersuchung des Betriebs von WEA
+in kaltem Klima und die Bereitstellung der gewonnenen Ergebnisse und Informationen an
+Hersteller, Betreiber, Forschungseinrichtungen, Zertifizierungsstellen und Behörden. Dies
+wurde neben zahlreichen Veröffentlichungen der Projektpartner zum Thema Vereisung von
+WEA auch durch die zwei, im Rahmen des Projekts durchgeführten BOREAS III und IV
+Konferenzen in Nord - Finnland, sowie einen Workshop in Wilhelmshaven erreicht. Der
+wachsende Anteil der Konferenzteilnehmer aus Industrie und Anwendung unterstreicht deren zunehmendes Interesse an dem Thema Vereisung und etablierte die BOREAS - Konferenzen als Diskussionsforum für Wissenschaft und Industrie. Die nächste BOREAS Konferenz wird voraussichtlich im Frühjahr 2000 in Nordfinnland stattfinden.
+
+Seite 1
+
+Die Untersuchungen im Rahmen des
+WECO Projekts erforderten eine vernetzte
+Vorgehensweise, da nicht nur viele
+europäische Partner und Einrichtungen
+beteiligt waren, sondern auch alle EinzelWEA - Auslegung
+Sicherheit
+Wirtschaftlichkeit
+gebiete rund um die Windenergienutzung
+mehr oder weniger betroffen sind. ExpeAerodynamik
+Eisabwurf
+Energieproduktion
+Lasten
+Unwucht
+Standortprognose
+rimentelle Untersuchungen und MessunDynamik
+Resonanz
+Windmessungen
+gen wurden Modellen gegenübergestellt,
+Regelung
+Überleistung Lebensdauer
+Marktanalysen durchgeführt, EmpfehlunBetriebsführung
+Fatigue
+WEA-Ausrüstung
+gen ausgearbeitet, wobei von der MeteoInstrumentierung
+Material
+rolgie über Aerodynamik, Belastungen,
+dynamisches Verhalten, Leistungskurve
+und Instrumentierung fast alle Bereiche
+Bild 1: Einfluß der Vereisung auf die WEA
+einer WEA berührt wurden. Bild 1 zeigt
+exemplarisch den Einfluß von Vereisung auf die Auslegung, die Sicherheit und
+die Wirtschaftlichkeit einer WEA.
+Vereisung von Windenergieanlagen
+beeinflußt:
+
+Die unten zusammengefaßten Einzelthemen wurden im Rahmen des
+WECO - Forschungsprojekts bearbeitet:
+• Potentialabschätzung unter Verwendung von Daten von
+Testfeldern in Gebieten mit Vereisungsgefährdung
+und Erstellung einer europäischen „Eiskarte“.
+• Verbesserung und Überprüfung von Rechenmodellen, die den Einfluß auf die Leistung, die Lasten und die Lebensdauer bei unterschiedlichem
+Vereisungsbetrieb simulieren.
+• Windkanaluntersuchungen verschieden vereister
+Rotorblattprofile und deren Einfluß auf die aerodynamischen Lasten.
+• Untersuchungen an Rotorblattheizungen.
+• Verbesserung der Sicherheit der Anlage und
+der Umgebung bei Vereisungsbetrieb.
+• Marktübersicht und Tests von eisfreien
+Anemometern für genauere Windmessungen, zur genaueren Windpotentialabschätzung und als zuverlässigere Instrumente für
+Weather station
+WEA-Betriebsführungen.
+Few days of icing and rime
+Annual heavy rime accretion
+• Marktübersicht und Tests von Eissensoren.
+accretion
+Several days of icing and
+Occasional icing
+• Auswertung von Messungen an WEA unter
+rime accretion
+Vereisungsbedingungen von Standorten in
+Bild 2: WECO „Eis-Karte“ von Europa [2].
+Finnland, Deutschland, Großbritannien,
+Schweiz und Italien.
+• Auswertung von an WEA - Betreiber verschickten Fragebögen bezüglich Betrieb ihrer
+Anlagen unter Vereisungsbedingungen.
+• Transfer der Ergebnisse und Empfehlungen an Industrie, Betreiber, Zertifizierungsstellen
+und Behörden. Dies erfolgte im Wesentlichen durch direkte Kontakte, über einen Workshop und die zwei BOREAS Konferenzen.
+
+Seite 2
+
+AUFlWIND 99 St. Pölten, 21. Und 22. Oktober 1999
+
+Ein reger Erfahrungsaustausch und eine erfolgreiche Kooperation ergab sich mit dem
+schweizer Windenergieprogramm [4].
+Ergebnisse und Empfehlungen aus dem WECO Projekt
+Einige Ergebnisse aus dem Forschungsprojekt und die daraus resultierenden Empfehlungen
+werden in den folgenden Absätzen exemplarisch vorgestellt:
+
+Europäische „Eiskarte“
+Aus den experimentellen Daten und Beobachtungen der im Projekt untersuchten Standorte
+sowie aus Daten von 90 europäischen Wetterstationen können mit Hilfe der im Projekt erstellten Datenbank die Anzahl erwarteter Tage mit Vereisungsbedingungen, der rechnerische Eisansatz in verschiedenen Höhen über Grund und der erwartete Energieverlust abgeschätzt werden. Gegenwärtig basiert die Abschätzung des Eisansatzes auf Messungen
+der Temperatur, der Windgeschwindigkeit und der Wolkenhöhe über
+Grund. Dies wurde experimentellen Beobachtungen und Messungen an
+einigen Standorten gegenübergestellt. Die vorhandene Datenbasis ermöglicht, zusammen mit dem Windatlasverfahren, genauere
+Abschätzungen des Einflusses von Vereisung an verschiedenen
+Standorten Europas auf den Jahresenergieertrag von WEA und führt
+damit zu genaueren Prognosen der Wirtschaftlichkeit von WEAProjekten. Bild 2 zeigt die auf der beschriebenen Datenbasis ermittelten
+Gebiete für schwere bis gelegentlich zu erwartende Vereisung sowie die
+verwendeten Meßstationen.
+
+Aerodynamik und Lasten
+Eines der ersten Anzeichen beginnender Rotorblattvereisung ist der typische, von der Blattwurzel zur Blattspitze zunehmende, dreiecksförmige Eisansatz an der
+Profilvorderkante, der zwar meistens den Betrieb der Anlage nicht unterbricht, aber zur Erhöhung der Lasten und des Geräuschs und zur
+Verminderung der Leistung beiträgt (Bild 3 unten). Bei längerem Betrieb unter Vereisungsbedingungen können sich die verschiedensten
+Formen und Verteilungen ausbilden, wie in Bild
+3 exemplarisch dargestellt.
+Simulationen von vereisten Rotorblättern bezüglich Lasten und Leistungsabgabe erfordern
+unter anderem die Eingabe der aerodynamischen Kraftbeiwerte von Rotorblattprofilen mit
+unterschiedlichem Eisansatz. In Größe und Art
+verschiedene, von real vereisten Rotorblättern
+abgenommene, Eisformationen wurden daher
+im Rahmen des Projekts experimentell in einem Windkanal der Technischen Universität
+Braunschweig untersucht und teilweise den an
+der WEA gemessenen Daten gegenübergestellt [5].
+
+Seite 3
+
+Bild 3: Unterschiedlicher Eisansatz.
+
+Wie erwartet, führt der Eisansatz zu erheblichen Widerstandszunahmen. Es kommt zu einer
+deutlichen Abnahme der maximalen Auftriebsbeiwerte sowie zu einer Verringerung des
+Auftriebsanstieges. Interessant ist, daß das Stallverhalten (Strömungsabriß bei hohem Anstellwinkel) mit Eisansätzen deutlich gutmütiger verläuft, was darauf schließen läßt, daß der
+Eisansatz eine laminare Ablösung nahe der Profilnase verhindert [5]. Bei einer zum Teil erheblichen Widerstandserhöhung durch den Eisansatz im Pre-Stallbereich schwächt sich die
+Widerstandserhöhung im Stallbereich relativ zum Basisprofil ab. Das auf 25 % der Profiltiefe
+bezogene Nickmoment ändert sich im Stallbereich deutlich in Richtung eines
+Profilaufnickens, das Verhalten ist somit verstärkt instabil. Es zeigte sich, daß die Eigenschaften stark vereister Profile bei hohen Anstellwinkeln sehr gut denen einer ebenen Platte
+mit abgerissener Strömung ähneln und damit nachgebildet werden können. Ein Extrapolationsverfahren, das sich diesen Effekt zunutze macht, sowie eine Methode, die Windkanalergebnisse der untersuchten Profile mit Eisansatz auf andere Profile zu übertragen wurde im
+Rahmen des WECO - Projekts entwickelt und ist in [5] beschrieben.
+Unter den beobachteten Rotorblattvereisungsformen fiel auf, daß Leerlaufbetrieb sehr viel
+stärkeren Eisansatz (bis zu 100% der Profiltiefe im Blattspitzenbereich) verursachen kann,
+als es üblicherweise im Produktionsbetrieb sichtbar wird. Bild 4 zeigt die Anströmverhältnisse für beide Betriebsarten am Beispiel einer pitch-geregelten WEA. Während im Leerlaufbetrieb geringe aerodynamische Kräfte und Fliehkräfte auf den Eisansatz wirken, sorgen
+diese Kräfte im Produktionsbetrieb dafür, daß der Eisansatz, wenn er eine bestimmte Größe
+erreicht hat, abbricht. Die bekannten, sägezahnartigen Eisansätze entlang der Blattnase
+sind die Folge.
+
+Fai
+
+ω∗r
+α
+v
+
+ω∗r
+v
+
+α
+v eff
+
+v'
+
+f
+ef
+
+Stärkerer Eisansatz an der Profilnase durch unterschiedliche Betriebsart
+Links Leerlauf, rechts Leistungsbetrieb
+v = Windgeschwindigkeit
+v’ = Reduzierte Windgeschwindigkeit in der Rotorebene
+r = Örtlicher Radius
+ω = Winkelgeschwindigkeit des Rotors
+veff = Effektive Anströmgeschwindigkeit am Profil
+α = Anstellwinkel
+Fai = Aerodynamische Kraft auf den Eisansatz
+
+Bild 4: Unterschiedlicher Eisansatz an einer pitchgeregelten WEA im Leerlauf- (linke Seite)
+und im Produktionsbetrieb (Mitte), sowie beobachteter Eisansatz nach Leerlaufbetrieb
+(rechte Seite).
+Die im Windkanal ermittelten Kennwerte dienten der Berechnung von Leistungskurven und
+der aerodynamischen Lasten vereister Rotorblätter. Weiterhin ermöglichten sie den Vergleich mit Ergebnissen aus Simulationsrechnungen mit dem in [6] beschriebenen TURBICE-
+
+Seite 4
+
+AUFlWIND 99 St. Pölten, 21. Und 22. Oktober 1999
+
+Modell. Der simulierte Eisansatz ist in Zeitschritten nach 20, 60, 80 und 120 Minuten einem
+beobachteten Eisansatz (graue Kontur und Bild 3 oben) in Bild 5 gegenübergestellt.
+
+20 min
+
+80 min
+
+60 min
+
+120 min
+
+Bild 5: Gegenüberstellung des mit TURBICE [6] simulierten Eiswachstums mit einem beobachteten Eisansatz an der Profilnase einer 500 kW pitchgeregelten WEA.
+Eisansatz an den Rotorblättern beeinflußt die aerodynamischen Lasten und - durch die erhöhte Masse - das dynamische Verhalten der WEA. Der Einfluß von Vereisung auf die Rotorblattlasten kann wie folgt zusammengefaßt werden:
+Zusätzliche Eismassen verursachen größere deterministische Lasten.
+Asymmetrischer Eisansatz führt zu Massenunwucht und zu aerodynamischer Unwucht.
+Größere Anregung der Rotorblattschwenkschwingung wurden bei vereistem Rotor
+ebenso beobachtet wie verstärkte Turmschwingungen.
+Eisansatz beeinflußt das Betriebs- und Regelungssystem. Daraus resultierende Schwingungen wurden beobachtet.
+Schräganströmungsbetrieb durch eine festgefrorene Windfahne der Betriebsführung
+kann zu erhöhten Beanspruchungen führen.
+Blattgeregelte WEA können durch die veränderte Rotorblattaerodynamik vor Erreichen
+der Nennleistung stall - geregelt laufen und damit die Betriebslasten ändern.
+Resonanz kann durch geänderte Eigenfrequenzen vereister Komponenten auftreten wie
+zum Beispiel bei Rotorblättern kleiner WEA und sehr leichten Rotorblättern.
+Geringer Eisansatz kann in bestimmten Fällen die aerodynamische Dämpfung erhöhen
+und so die Schwingungsanregung einzelner Komponenten verringern.
+Das Abschalten von WEA durch Eisansatz an Rotor oder Anemometer der Betriebsführung reduziert die Anzahl der Lastzyklen.
+Der Betrieb bei niedriger Rotordrehzahl (2-stufiger Generator oder variable Drehzahl)
+durch Eisansatz führt ebenso zur Reduktion der Lastzyklen, aber möglicherweise zu erhöhten Lastamplituden.
+
+Abwurf von Eisstücken im Betrieb
+Eisabwurf kann zu Problemen führen, wenn an Binnenlandstandorten mit erhöhter Vereisungsgefahr WEA zu dicht an Straßen, Gebäuden, Freileitungen geplant werden, ohne
+entsprechende Maßnahmen zu ergreifen. Entsprechend der bisherigen Beobachtungen und
+der Simulationen kann für solche Standorte, an denen mit hoher Wahrscheinlichkeit mit
+mehreren Tagen Vereisung im Jahr gerechnet werden muß, empfohlen werden, einen Abstand von 1,5·(Nabenhöhe+Durchmesser) zu den nächsten gefährdeten Objekten einzuhalten. Ist dies nicht möglich, sollte die Anlage während der Vereisungsbedingungen automatisch abgeschaltet bleiben, es sei denn, der Wind kommt aus Richtungen, die eine Gefährdung dieser Objekte durch Eisabwurf ausschließen.
+Ein entsprechendes Rechenprogramm zur Simulation des Eiswurfes wurde im Rahmen des
+WECO-Projektes erstellt und mit Beobachtungen vieler Betreiber und eigener Beobachtungen verifiziert. Dies ermöglicht bei genauer Kenntnis des Standortes, abhängig von der
+Windrichtung, Windstärke und Drehzahl des Rotors die Maximalwurfweite der Eisstücke zu
+berechnen. Zusammen mit einem Eisdetektor oder mit zwei Anemometern, wobei eines
+
+Seite 5
+
+200
+175
+
+Masse und Wurfweite
+von Eisfragmenten
+
+< 100 g
+100 g - 250 g
+250 g - 500 g
+
+150
+Wurfweite in m
+
+davon beheizt wird, kann die entsprechend programmierte Betriebsführung einer WEA bei kritischen Vereisungssituationen die
+WEA gezielt abschalten und somit
+eine Gefährdung der Umgebung
+oder benachbarter WEA im Windpark verhindern.
+
+500 g - 1000 g
+> 1000 g
+
+125
+100
+75
+50
+
+Mit einer Energieertragsermittlung,
+25
+eine Schallimmissionsberechnung
+0
+0
+5
+10
+15
+20
+25
+30
+35
+40
+und ein Schattenwurfgutachten,
+Rotorradius in m
+wie sie üblicherweise für eine
+Windparkplanung erstellt werden, Bild 6: Ergebnis der Betreiberumfrage nach Fundorten
+liegen die Unterlagen für die
+von abgeworfenen Eisfragmenten
+Eiswurfweitenberechnung bereits
+vor und können in ähnlicher Form
+dargestellt werden. Folgende Arbeitsschritte sind dazu notwendig:
+•
+
+•
+•
+•
+•
+•
+
+Technische Daten der zu betrachtenden WEA: Nabenhöhe, Rotordurchmesser, Rotordrehzahl. Bei zwei festen Drehzahlen ist anzugeben, bei welcher Windgeschwindigkeit
+umgeschaltet wird, bei variabler Drehzahl ist die Funktion Drehzahl über Windgeschwindigkeit, oder zumindest die Drehzahlober- und untergrenze anzugeben.
+Festlegung der zu erwartenden Eisstückgröße und –masse.
+Berechnung der Eiswurfweite in 2 m/s – Schritten bis 20 m/s, beginnend mit vin.
+Graphische Darstellung der „Wurfelipsen“, maßstäblich einer Flurkarte 1:5000 angepaßt
+und auf eine transparente Folie geplottet.
+Bei der Berechnung wird davon ausgegangen, daß sich das Eis an der äußersten Blattspitze (höchste Anfangsgeschwindigkeit) und bei der Rotorposition, die die größte
+Wurfweite ergibt, ablöst. Die Berechnung erfolgt in 2° Schritten der Rotorposition.
+Flurkarte 1:5000 mit genauer Kennzeichnung des (der) WEA – Standort(e), die normalerweise beim Katasteramt erhältlich sind.
+
+Bild 7 zeigt exemplarisch eine Berechnung eines fiktiven Standortes mit einer angenommenen MW – WEA. Der Standort der WEA liegt dicht an einer Straße, die bei Vereisungsbedingungen durch möglichen Eisabwurf gefährdet ist. Der grau unterlegte Kreis markiert einen typischen einzuhaltenden Abstand zu Gebäuden, der sich aus der Schallimmissionsprognose ergibt. Die maximal zu erwartenden Eiswurfweiten befinden sich weit innerhalb dieser
+Grenzen, so daß bei den üblichen Planungen nur solche Spezialfälle für eine Eiswurfweitenberechnung zu berücksichtigen sind, die in Gebieten mit erhöhter Vereisungsgefährdung
+liegen und in denen Eisabwurf Personen oder Objekte gefährden können. Im Fall des Beispiels in Bild 7, linke Seite, können Eisfragmente den Verkehr auf der Straße gefährden,
+wenn die WEA bei der vorherrschenden Windrichtung bei Vereisungsbedingungen in der
+schnellen Generatorstufe bei Windgeschwindigkeiten größer 8 m/s betrieben wird. Hier sollte
+die WEA durch die Betriebsführung automatisch gestoppt werden. Die rechte Seite in Bild 7
+zeigt die Situation mit geänderter Windrichtung. Eine Gefährdung des Straßenverkehrs ist
+hier selbst bei hohen Windgeschwindigkeiten nicht zu erwarten.
+Eine automatische Erkennung von Vereisungssituationen, sei es durch Eisdetektoren, der
+Verwendung von zwei Anemometern, wobei eines beheizt sein muß, oder einer kontinuierlichen Überprüfung der Leistungskurve (ebenfalls mit einem beheizten Anemometer) ist al-
+
+Seite 6
+
+AUFlWIND 99 St. Pölten, 21. Und 22. Oktober 1999
+
+lerdings Voraussetzung. In Windparks reicht es jedoch aus, nur eine WEA mit einer Eissensorik auszustatten, was die Kosten stark verringert.
+
+220
+
+220
+
+200
+
+200
+
+180
+
+180
+
+160
+
+160
+
+140
+
+140
+
+120
+
+120
+
+100
+
+100
+
+80
+
+80
+
+60
+
+60
+40
+20
+
+/s
+
+20
+
+20
+
+40
+
+60
+
+80
+
+100
+
+120
+
+140
+
+160
+
+180
+
+200
+
+10
+
+/s
+m
+
+20
+
+40
+
+60
+
+80
+
+100
+
+120
+
+140
+
+8
+
+-120
+
+-200
+
+200
+
+d
+in
+W
+
+/s
+
+-100
+
+-120
+
+-180
+
+180
+
+/s
+
+-80
+
+-100
+
+-160
+
+160
+
+m
+18
+
+-80
+
+0
+
+-60
+
+/s
+
+-60
+
+0
+
+-40
+
+8m
+
+-40
+
+-20
+
+m
+10
+
+/s
+m
+
+-20
+
+18
+
+0
+
+m
+
+0
+
+-140
+
+nd
+Wi
+
+40
+
+-140
+-160
+-180
+-200
+
+Bild 7: Ausgabeplot einer Eiswurfweitenberechnung bei zwei verschiedenen Windrichtungen.
+Vereisung von Windmeßgeräten
+An vereisungsgefährdeten Standorten sind zuverlässige, auch unter Extrembedingungen
+genau anzeigende, Anemometer und Windfahnen für meteorologische Messungen und die
+daraus abgeleiteten Windpotentialabschätzungen unabdingbar. Bislang führten Messungen
+der Windgeschwindigkeit mit herkömmlichen, ungeheizten Anemometern an Standorten mit
+gelegentlicher bis starker Vereisung zu einer systematischen Unterschätzung der mittleren
+Jahreswindgeschwindigkeiten. Da die wenigsten Meteorologiestationen bisher beheizte,
+eisfreie Instrumente installierten, können auch langjährige Messungen, die die statistische
+Basis für das Windatlasverfahren bilden, den Energieertrag oben beschriebener Standorte
+unterschätzen. Bild 8 zeigt den Unterschied der Messungen mit beheiztem und unbeheiztem
+Anemometer während 10-stündiger Vereisung. Die alleinige Schaftheizung des Anemometers ist dabei jedoch nicht ausreichend für eine genaue Windmessung, auch die Schalen
+müssen eisfrei gehalten werden. Diese Messung zeigt auch, daß sich, in Kombination mit
+der Messung der Lufttemperatur, die Verwendung zweier Anemometer auch zur automatischen Erkennung von Vereisungssituationen eignen, wenn nur eines der Anemometer beheizt wird.
+m/s; °
+
+14
+
+Beheiztes Anemometer
+
+12
+
+Selbst leichte Vereisungsbedingungen können den Energieertrag
+deutlich verringern, wenn eingefrorene Anemometer oder Windfahnen auf der Gondel der WEA-Betriebsführung signalisieren, daß zu
+wenig Wind für die Produktion
+vorherrscht. Dies kann unter Um-
+
+WAA25
+
+Windgeschwindigkeit, m/s
+
+Die Verwendung eisfreier Anemometer und Windfahnen ist auch für
+Meteorologiestationen in Gebieten
+mit gelegentlicher Vereisung zu
+empfehlen.
+
+10
+8
+6
+WAA15
+4
+
+Unbeheiztes Anemometer
+
+2
+0
+-2
+-4
+
+Temperatur
+Temp
+
+-6
+-8
+00:00
+
+03:00
+
+06:00
+
+09:00
+
+12:00
+
+15:00
+
+18:00
+
+21:00
+
+00:00
+
+Zeit, h
+
+Bild 8: Windmessung mit beheiztem (graue Linie) und
+unbeheiztem (schwarze Linie) Anemometer.
+Temperaturverlauf im unteren Teil [2].
+
+Seite 7
+
+ständen mehrere Tage unnötigen Produktionsausfall bedeuten. Eine bei schräg angeströmter, stillstehender WEA vereiste Windfahne kann im günstigsten Fall eine ständige Kabelentdrillung auslösen; im ungünstigsten Fall kann eine im Betrieb vereiste Windfahne nach
+Winddrehungen die WEA unter ständiger Schräganströmung in Betrieb halten und die Ermüdungsbeanspruchung der Komponenten erhöhen. Berichte und Beobachtungen von
+Standorten sowohl in Großbritannien als auch von nördlichen Küstenländern zeigten, daß
+Vereisung von Betriebsführungsinstrumenten die meisten Produktionsausfälle verursachten.
+Eine Ausstattung der WEA mit eisfreien Anemometer und Windfahne ist daher selbst an
+Standorten mit nur gelegentlich auftretender Vereisung zu empfehlen [2].
+Zur Zeit gibt es relativ wenig beheizbare Anemometer auf dem Markt, die in der Lage sind,
+auch bei sehr starken Vereisungsbedingungen Eisansatz an den Schalen zu verhindern.
+Eine zuverlässige Heizung wird oftmals mit einer Erhöhung der Wegkonstante oder einer
+größeren Empfindlichkeit gegenüber Vertikalkomponenten der Windgeschwindigkeiten erkauft. Weiterer Forschungs- und Entwicklungsbedarf für heizbare, eisfrei zu haltende Anemometer und Windfahnen für den Einsatz für Windmessungen sowohl in Meteorologiestationen als auch für Betriebsführungen von WEA ist gegeben.
+
+Eisdetektoren und Eiserkennung
+Eisdetektoren sind notwendig, um beispielsweise Rotorblattheizungen steuern zu können,
+oder aber, im Automatikbetrieb richtungsabhängig zu entscheiden, ob eine WEA auf Grund
+von Gefährdung der Umgebung durch Eisabwurf abgeschaltet werden muß. Zur Untermauerung der statistischen Datenbasis von Meteorologiestationen bezüglich der Art, Schwere
+und Häufigkeit von Vereisungsbedingungen, wäre die Ausstattung ausgewählter Meteorologiestationen mit Eisdetektoren wünschenswert. Grundsätzlich wurden zwei Wege zur Erkennung von Vereisungssituationen während der Projektlaufzeit diskutiert und untersucht:
+Die Verwendung spezieller, meist aus dem Luftfahrtbereich abgeleiteter Eisdetektoren und
+die Verwendung zweier Anemometer, wobei eines beheizt und das andere unbeheizt betrieben wird. Gegenwärtig sind am Markt befindliche Eisdetektoren noch relativ teuer, so daß
+die letztgenannte Methode für Einzelanlagen empfohlen werden kann. Bei Windparks kann
+es auch ausreichend sein, nur eine WEA mit einem Eisdetektor auszustatten.
+
+Verbesserte Energieertragsprognose für Standorte mit Vereisungsgefahr
+Sowohl sehr niedrige Temperaturen als auch Vereisung der Rotorblätter an Standorten in
+kaltem Klima beeinflussen den Jahresenergieertrag. Die mit den tiefen Temperaturen einhergehende hohe Luftdichte kann bei stall-geregelten WEA zu Leistungsüberhöhung und
+damit, trotz tiefer Temperaturen, zu einer Generatorüberhitzung mit anschließendem Abschalten oder gar zu einem Schaden führen. Für den Winterbetrieb eingestellte Rotorblätter
+erreichen in den Sommermonaten möglicherweise nicht die Nennleistung.
+Selbst geringer Eisansatz führt zu einer Verringerung der Leistung und zu einer Einbuße im
+Jahresenergieertrag [2]. Im WECO - Projekt wurden Untersuchungen an verschiedenen
+Standorten durchgeführt und Leistungskurven mit Hilfe der im Windkanal ermittelten aerodynamischen Kennwerte vereister Profile simuliert. Bild 9 zeigt ein gerechnete Leistungskurve mit unterschiedlich vereistem Rotor am Beispiel einer blattgeregelten WEA.
+
+Seite 8
+
+AUFlWIND 99 St. Pölten, 21. Und 22. Oktober 1999
+
+Rotorblattheizung
+
+Rotorleistung in % der Nennleistung
+
+120
+
+Ein Flußdiagramm zur Abschätzung des Energieverlustes durch Vereisung und
+dessen Einfluß auf die Gesamtwirtschaftlichkeit
+des
+WEA-Projekts ist in Bild 10
+dargestellt.
+
+100
+
+PNenn
+
+80
+B
+
+Ohne Eisansatz
+
+60
+
+3% Eisansatz an Profilnase
+22% Eisansatz an Profilnase
+
+B
+
+40
+
+20
+
+Heizelemente in der Blatt0
+nase können an stark verei0
+5
+10
+15
+20
+sungsgefährdeten StandorWindgeschwindigkeit in Nabenhöhe in m/s
+ten eine sinnvolle Lösung
+darstellen. Ein Prototyp einer Bild 9: Gerechnete Leistungskurve einer pitch - geregelten
+WEA mit unterschiedlichem Eisansatz.
+solchen Blattheizung wurde
+im Rahmen des WECO Projekts in Nordfinnland an einer 220 kW WEA getestet und optimiert.
+An einem Standort, an dem ein Drittel des Jahresenergieertrags durch Vereisung verloren
+ginge, sind dabei nur 3% der gelieferten Energie notwendig, um durch die Rotorblattheizung
+die Profilnase eisfrei zu halten. Zur Zeit liegen die Kosten für solche Systeme unter 10 % der
+Investitionskosten der Maschine. Ort und Leistungsbedarf der Heizelemente können für
+verschiedene Einsatzzwecke mit Rechenprogrammen abgeschätzt werden, die im WECOProjekt entwickelt wurden. Um den Einsatz der Heizelemente im Betrieb zu optimieren, wird
+ein preiswerter
+und
+zuverlässiger
+Eissensor benötigt. Bild 11 zeigt die
+Ohne
+Windpotential
+Energieertrag
+Situation an einer WEA mit gerade einVereisung
+v = 8 m/s
+100 %
+geschalteter Rotorblattheizung und der
+zunehmenden Generatorleistung bis auf
+Nennleistung.
+100 Tage
+Stillstand an
+Energieertrag
+Vereisung
+
+100 Tagen
+
+70 %
+
+Zusammenfassung
+Die wissenschaftlichen Inhalte des Projekts hatten die Verbesserung von Modellen und Methoden zur Ermittlung des
+Eisansatzes und deren Auswirkung auf
+die Lasten und den sicheren und wirtschaftlichen Betrieb von WEA unter Vereisungsbedingungen zum Ziel. Für die
+Industrie wurden vereinfachte Methoden
+zur Lastermittlung und zur Abschätzung
+des Energieertrags entwickelt, die externen Bedingungen genauer definiert und
+Verbesserungen der Instrumentierung
+erreicht. Der Abwurf von Eisstücken drehender WEA wurde experimentell und
+theoretisch untersucht und die Ergebnisse tragen zur Erhöhung der Sicherheit
+an Standorten mit hoher Vereisungswahrscheinlichkeit bei.
+
+WEA gestoppt
+Vereisung im
+Betrieb
+
+•Instrumente vereist
+•Rotorunwucht
+•Vereiste Blätter
+•Sonstige Defekte
+Energieertrag
+76 %
+
+40 Tage
+Betrieb mit
+Eisansatz
+
+50 %
+Leistungsreduktion
+
+Optimierte WEA
+
+Energieverlust
+durch Heizung
+
+•Eisdetektor
+•Beheizte Anemometer
+•Optimiertes Betriebssystem
+•Spezielle Komponenten
+•Beheizte Rotorblätter
+
+2%
+Erhöhte
+Investition
+
+5%
+
+Energieertrag
+95%
+
+Bild 10: Prognose des Energieertragsverlustes bei
+Vereisungsbedingungen.
+
+Seite 9
+
+Wind speed, m/s
+
+Power, kW
+Generator power
+Heating power
+Wind speed
+
+400
+
+Generatorleistung
+40
+
+30
+
+300
+
+Windgeschwindigkeit
+20
+
+200
+
+10
+
+100
+
+Heizleistung
+0
+
+0
+-2
+
+3
+
+8
+
+13
+
+Windgeschwindigkeit, m/s
+
+50
+
+500
+
+Leistung, kW
+
+Das hier vorgestellte Projekt
+„Wind Energy Production in
+COld Climates“ - WECO
+wurde im Rahmen des Nichtnuklearen Energieprogramms
+der Europäischen Kommission
+unter
+der
+Vertragsnummer
+JOR3-CT950014 gefördert.
+
+18
+
+Time, min
+Zeit, min
+
+Literatur
+
+Bild 11: Einfluß der Rotorblattheizung auf die Leistungsabgabe [2].
+
+[1] Rehfeldt, K.; Windenergienutzung in der Bundesrepublik Deutschland; Stand 30.06.1999;
+DEWI – Magazin Nr. 15, August 1999; Seite25 – 37.
+[2] Seifert, Henry; Tammelin, Bengt: Icing of wind turbines: Final report; Jou2-CT93-0366 /
+Deutsches Windenergie-Institut, Wilhelmshaven (Herausgeber); Finnish Meteorological
+Institute, Helsinki. Wilhelmshaven: DEWI, 1997.
+[3] Tammelin B., Seifert, H..: Wind Energy Production in Cold Climate, Paper presented at
+EWEC ’99, held in Nice, France, 1 - 5 March 1999. Page 1005 – 1008.
+[4] Horbaty, R: Development of Wind Energy in Alpine Regions in Switzerland; Paper presented at EWEC ’99, held in Nice, France, 1 - 5 March 1999. Page 531 – 533.
+[5] Seifert, H., Richert, F.; A recipe to estimate aerodynamics and loads on iced rotor blades;
+BOREAS IV, an international conference on wind power production in cold climate, 31.3.
+– 2.4.1998, Hetta, Enontekiö, Finnland.
+[6] Makkonen, L.; Marjaniemi, M.; Peltola, E.: Calculation of ice accretion on wind turbine blades. Paper presented at EWEC ‘97 held in Dublin, Ireland, 6 - 9 Oct. 1997.
+
+Seite 10
+

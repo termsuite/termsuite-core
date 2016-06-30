@@ -1,0 +1,153 @@
+Información Tecnológica Generador Eólico Superconductor Vol. 21(2), 37-44 (2010)
+doi:10.1612/inf.tecnol.4111it.08
+
+Rodrigues
+
+Generador Eólico Superconductor
+A. Leão Rodrigues Facultad de Ciencias y Tecnología, Universidad Nueva de Lisboa, Departamento de Ingeniería Electrotécnica, Quinta da Torre, 2825 -114 Caparica, Portugal. (e-mail: leao@uninova.pt)
+
+Resumen En este artículo se presentan las propiedades de los materiales superconductores de alta temperatura (SAT) en la construcción de máquinas eléctricas. Se describe un generador sincrónico con configuración en disco con una elevada potencia específica, para futuras aplicaciones de energía. El generador es excitado por medio de bloques de materiales cerámicos SAT y se explica el mecanismo para atrapar el flujo magnético en ellos. El sistema criogénico está formado por un contenedor de nitrógeno líquido localizado en el suelo de forma a reducir el peso sobre la torre. Se presenta el grafico del flujo magnético por dos polos de la maquina, calculado por medio del método de los elementos finitos, así como la distribución de la densidad de flujo en el entrehierro del generador superconductor en disco. Se propone un parque eólico de elevado rendimiento con este tipo de generadores. Palabras clave: materiales superconductores de alta temperatura, aerogeneradores sincrónicos, parque eólico
+
+Superconducting Wind Synchronous Generator
+Abstract This paper presents the properties of high temperature superconductor (HTS) materials in the construction of electrical machines. A disc type configuration synchronous generator with high specific power for future wind power applications is described. The generator is excited by means blocks of HTS ceramic materials. The mechanism to trap the magnetic flux in HTS blocks is explained. To decrease the weight of the generator on the top of the tower, the cryogenic system used consists of a liquid nitrogen storage container located on the ground to reduce weight on the tower. A flux plot per two poles of the machine calculated using the finite element method is presented and the flux density distribution in the air gap of the superconducting disc generator is also displayed. A high efficiency wind park with this type of generators is proposed. Keywords: high temperature superconductor materials, wind synchronous generators, wind park Información Tecnológica Vol. - 21 Nº 2 - 2010 37
+
+Generador Eólico Superconductor INTRODUCCIÓN
+
+Rodrigues
+
+El aprovechamiento de la energía eólica (Ευλυσ, nombre del dios del viento en la mitología griega) para la producción de trabajo es conocido desde tiempos inmemoriales. Son un ejemplo las navegaciones oceánicas portuguesas del siglo XV y los hermosos molinos de viento implantados estratégicamente a lo largo de la costa portuguesa durante el siglo XIX. La energía eólica es una fuente de energía renovable, abundante, limpia y disponible en todas las regiones del globo. La utilización de esta fuente de energía para la generación de energía eléctrica, a escala comercial, tiene su inicio hace poco más de de 30 años. A partir de los conocimientos de la industria aeronáutica, los equipos para la generación eólica evolucionaron rápidamente en términos de ideas y conceptos (Erich, 2005). La conversión de la energía del viento en energía mecánica se hace a través de la turbina eólica y la conversión de energía mecánica en energía eléctrica se realiza mediante generadores eléctricos (generadores asíncronos y sincrónicos, excitados mediante imanes permanentes, y, muy raramente, con los generadores de corriente continua ya obsoletos). Desde la panémona china (Fig.1) y de los molinos portugueses (Fig.2), utilizados tanto para la molienda de cereales como para el bombeo de agua, se ha evolucionado mucho en la concepción y desarrollo tecnológico de las turbinas eólicas (Bussel, 2007).
+
+Fig.1: Panémona China
+
+Fig. 2: Molino Portugues
+
+Con el inicio de la década de los 70, con la primera crisis mundial del petróleo, se despertó un gran interés en los países europeos y en los Estados Unidos por el desarrollo de equipos para la producción de energía eléctrica y disminuir la dependencia de los combustibles fósiles, como el petróleo o el carbón. En la actualidad, la industria de turbinas eólicas registra crecimientos anuales superiores al 30%. Con la incorporación de nuevos materiales, un mejor conocimiento de aerodinámica y nuevas técnicas de diseño, surgieron turbinas eólicas de eje horizontal con un alto rendimiento, con rotores de dos o tres palas, estando en estudio el desarrollo de rotores de una única pala (Baroudi et al., 2007). También reaparece, en la actualidad, el interés por explorar la tecnología de las turbinas de eje vertical, como son las del tipo “Darrieus”, a pesar de no tener par de arranque, o la incorporación de nuevos materiales funcionales como las cerámicas superconductoras en la sustentación de las turbinas (Cusidó et al., 2000). En lo que respecta al aerogenerador eléctrico, conocido ya desde el siglo XIX, ha habido también un enorme desarrollo en su concepción y optimización gracias a la aparición de mejores materiales y, sobre todo, a la utilización de nuevas técnicas de cálculo en la fase de diseño de estas máquinas. Aún así, el aerogenerador continúa siendo el órgano vital del aprovechamiento eólico. Debido a su instalación en el interior de la cabina, o góndola, situada en la parte superior de la torre, a unos cuantos metros de la base, todo el conjunto esta sujeto a los violentos esfuerzos producidos por el viento por lo que el peso y el volumen del generador se convierten en parámetros de primordial importancia en el diseño. 38 Información Tecnológica Vol. - 21 Nº 2 - 2010
+
+Generador Eólico Superconductor
+
+Rodrigues
+
+En consecuencia, la utilización de generadores eléctricos con elevada proporción potencia/peso o potencia/volumen será, ciertamente, la solución ideal en la construcción de los futuros parques eólicos (Xing et al., 2005) LOS MATERIALES SUPERCONDUCTORES EN LA CONSTRUCCIÒN DE MÁQUINAS ELÉCTRICAS Recientemente, varios grupos de investigación (Universidad de Oxford, Universidad de Cambridge, Instituto de Aviación de Moscón, Instituto de Materiales de Jena, Alemán, Instituto de Ciencia de Materiales de Barcelona, Bellaterra, España; Universidad Nueva de Lisboa, Departamento de Ingeniería Electrotécnica, Portugal, en China y Japón), han explorado la posibilidad de utilizar materiales superconductores en la construcción de máquinas eléctricas, en particular, de generadores sincrónicos, con la intención de obtener una mejor potencia específica. La (Fig.3) muestra la comparación en volumen de una máquina eléctrica clásica y de una máquina superconductora de la misma potencia. La utilización de un aerogenerador sincrónico excitado con materiales superconductores cerámicos, permite obtener una potencia específica (potencia/peso) entre tres y seis veces superior a la de un generador clásico. Este resultado es muy prometedor en el caso de generadores eólicos.
+
+a) Máquina clásica
+
+b) Máquina superconductora
+
+Fig.3: Comparación volumétrica de una máquina eléctrica clásica y una superconductora Se sabe que cuando un material superconductor es enfriado a una temperatura inferior a su temperatura de transición, o crítica, Tc, el material se vuelve capaz de conducir corrientes eléctricas de gran intensidad sin ninguna disipación de calor. El fenómeno de la superconductividad fue descubierto en 1911, en el mercurio, por Heike Kammerlingh Onnes, profesor de la Universidad de Leiden. Diversos elementos y aleaciones metálicas (indio, nióbio-titanio, etc.) muestran superconductividad (superconductores de 1ª generación) pero su temperatura crítica nunca sobrepasa los 23 K, por lo que, normalmente, son enfriados mediante helio líquido, que es costoso. Esta situación se modificó en 1986 cuando Bednorz y Müller, descubrieron que la estructura cerámica de perovskita presentaba superconductividad a una temperatura crítica más alta que la de cualquier superconductor metálico de la 1ª generación (Bednorz y Müller, 1986). Entre estas estructuras, una de las mejores es una combinación de itrio (Y), bario (Ba) y óxido de cobre (CuO), conocido por YBaCuO (Fig.4). Esta cerámica fue descubierta en 1987 por Paul Chou, de la Universidad de Houston, y presenta una temperatura crítica de 93 K superior a la temperatura de ebullición del nitrógeno (77 K). Puede ser fabricada en varias configuraciones: bloques, discos y anillos, como se muestra en la Fig. 5. Los materiales superconductores cerámicos de alta temperatura (SCAT) de 2ª generación cuando son enfriados con nitrógeno líquido (mucho más barato que el helio líquido), pueden transportar densidades de corriente >108 A/m2, mucho mayores que las que puede soportar el cobre (aproximadamente 107 A/m2) y, por ello, su utilización en la construcción de máquinas eléctricas da lugar a una miniaturización y mejora de su rendimiento (Kovalev et al., 1999). Información Tecnológica Vol. - 21 Nº 2 - 2010 39
+
+Generador Eólico Superconductor
+
+Rodrigues
+
+Fig.4: Estructura de YBaCuO
+
+Fig. 5: Formas geométricas de YBaCuO
+
+Los SCAT son materiales muy quebradizos y difíciles de mecanizar. Por eso, las máquinas eléctricas que incorporan superconductores en su construcción deberán tener una configuración especial a fin de minimizar os esfuerzos mecánicos que se producen en estos materiales. Además, los materiales superconductores, cuando se someten a un campo magnético variable, disipan energía por histéresis y, por eso, son utilizados normalmente en la construcción del rotor de los generadores sincrónicos y de reluctancia variable (Kovalev et al., 1999). GENERADOR SÍNCRONO DE ROTOR SALIENTE PRE-MAGNETIZADO Las Fig. 6 y Fig.7 muestra el corte de un generador sincrónico superconductor donde el rotor de polos salientes es excitado mediante material cerámico enfriado con nitrógeno líquido. Para conseguir una buena refrigeración es necesario que la superficie en contacto con el nitrógeno sea lo mayor posible. Por eso, estas máquinas tienen normalmente una dimensión axial, l, grande comparada con el diámetro, D, del rotor, esto es, D/l < 1, y un número de polos reducido. Esta configuración no es recomendable en energía eólica porque exige una góndola de gran longitud para albergar el aerogenerador, lo que provoca algunos problemas aerodinámicos. No obstante, es fácil ilustrar con esta configuración la forma como el material superconductor colocado en el rotor, puede ser pre-magnetizado dando lugar a un flujo magnético capaz de excitar el generador. Debido a la fragilidad del material superconductor cerámico, el rotor está bobinado como una única espira formada por bloques de YBaCuO, (Fig.7), formando un solenoide. La distribución del flujo magnético del generador en carga, debido al flujo producido por el solenoide superconductor y al flujo producido por el estator está representada en la Fig.8. El flujo creado por el solenoide es unas veces superior al flujo creado por el mejor imán permanente conocido hasta ahora, con el mismo volumen de material superconductor (Barnes et al., 2000). 40 Información Tecnológica Vol. - 21 Nº 2 - 2010
+
+Generador Eólico Superconductor
+
+Rodrigues
+
+Fig. 6: Circuito criostático do motor sincrónico de rotor saliente superconductor
+
+Fig. 7: Rotor del generador sincrónico superconductor
+
+Fig. 8: Distribución del flujo en el generador
+
+En cuanto al material superconductor, se enfría por debajo de su temperatura crítica (< 93 K), lo que, en la práctica, se consigue mediante nitrógeno líquido (77 K), el rotor permanece magnetizado, como ocurre en el caso de un generador sincrónico excitado mediante imanes permanentes. La Fig.9 muestra la secuencia de magnetización previa del solenoide superconductor del rotor. Con el material cerámico en el estado normal, es decir, a una temperatura T > Tc, se inyecta una corriente estacionaria en el devanado del estator de forma que se produce un flujo magnético en la región del solenoide cerámico, (Fig.9a) El valor de este campo debe ser cerca de dos veces el campo producido por el estator en régimen nominal (Pallarés, 2002) garantizando una penetración total del campo en el material superconductor A continuación, se enfría el material cerámico, en presencia de campo, por debajo de su temperatura crítica, Tc, de forma que transita al estado superconductor, (Fig.9b). Finalmente, se desconecta el campo magnético creado por el estator, de modo que el flujo se queda atrapado en el superconductor, (Fig.9c). El rotor se mantiene magnetizado como si se tratara de un súper-imán. La magnetización se mantiene a causa de la temperatura T < Tc y de la súper-corriente de apantallamiento +Jc e -Jc en el material superconductor del rotor (Granados et al., 2006). Información Tecnológica Vol. - 21 Nº 2 - 2010 41
+
+Generador Eólico Superconductor
+
+Rodrigues
+
+a) Estator conectado, T>Tc
+
+b) Estator conectado, T<Tc
+
+c) Estator desconectado, T<Tc
+
+Fig.9: Pre-magnetización por enfriamiento del rotor en presencia del campo magnético
+
+GENERADOR SÍNCRÓNICO CON CONFIGURACIÓN EN DISCO A fin de reducir el desarrollo axial del generador se propone una configuración en disco, (Fig.10). Con esta configuración, el material superconductor que constituye los polos del rotor tiene la forma rígida de disco y el generador puede estar provisto de doble estator. La Fig.11 muestra el esquema del devanado trifásico de un de los estatores.
+A B
+S8 F7
+
+C’
+
+B’
+F8
+
+A’
+
+Eje Estator 1
+S7
+
+C N
+F6
+
+S
+
+S
+
+N
+
+S2 F1 F
+
+F5F S6
+
+N
+
+S
+S3
+
+F2
+
+Rotor
+S5
+
+S
+F4S
+
+N
+
+Estator 2
+
+Superconductor
+
+F3
+
+S4
+
+Fig.10: Generador em disco de doble estator RESULTADOS Y DISCUSIÓN
+
+Fig. 11: Esquema del devanado trifásico
+
+Es sabido que para que el generador produzca una f.e.m. de frecuencia f, el eje del rotor debe girar con una velocidad de Nr (rpm) = 60f/p donde p es el número de pares de polos del rotor. La configuración en disco permite construir el generador con un elevado número de polos en un pequeño desarrollo axial, permitiendo de este modo el acoplamiento directo a la turbina eólica y la disminución de la dimensión axial de la góndola, (Fig.12). Está claro que este beneficio se consigue a costa del aumento del diámetro de la góndola (Estanqueiro et al., 2008). El flujo magnético producido por los superconductores (súper-imáns) del rotor sobre cada fase del estator fue calculado utilizando un programa comercial de elementos finitos (Infolytica). La Fig.13 muestra a distribución del flujo en un par de polos del generador y a distribución del densidad del flujo B en el entrehierro. La onda de densidad del flujo presenta componentes armónicos debido a la forma de disco de los polos del rotor (Nick et al., 2005: Tentzrakis y Papathanassiou, 2007).
+
+42
+
+Información Tecnológica Vol. - 21 Nº 2 - 2010
+
+Generador Eólico Superconductor
+
+Rodrigues
+
+En vez de situar el depósito de nitrógeno líquido para la refrigeración de los superconductores en la góndola, puede instalarse en un compartimiento a nivel del suelo, que servirá también para albergar el resto del equipo eléctrico y electrónico necesario para el funcionamiento del parque eólico, (Fig.14).
+
+Fig.12: Aerogenerador en disco en la góndola
+
+Fig.13: Distribución de flujo en un par de polos
+
+Fig.14: Circuito de refrigeración del parque eólico Con este sistema, se reduce substancialmente el peso del equipo colocado sobre la torre. Como la potencia específica del generador es entre 3 y 6 veces superior a la de un generador clásico, el parque eólico con estos generadores podrá producir de 3 a 6 veces más energía para igual peso de material (Inácio et al., 2008). CONCLUSIONES Comparado con el generador clásico, el generador superconductor en disco presenta una mayor densidad de potencia específica, mayor rendimiento, un bajo nivel de ruido, elevado valor de f.e.m. inducida y baja reactancia sincrónica lo que le hace más estable frente a una variación brusca de carga. Este generador es, por tanto, ideal para su aplicación en energía eólica, aunque exija un mayor mantenimiento. Información Tecnológica Vol. - 21 Nº 2 - 2010 43
+
+Generador Eólico Superconductor REFERENCIAS
+
+Rodrigues
+
+Barnes, G.J, M. McCulloch y D. Dew-Hughes; Computational modelling of electric motors containing bulk type-II superconducting materials in the rotor, Inst. Phys. Conf. Ser. Nº.167 (IPO Publishing Ltd) 1075-1078 (2000). Baroudi J. A., V. Dinavahi y A.M. Knight; A review of power converter topologies for wind generators, Renewable Energy: 32, 2369-2385 (2007). Bednorz J.G. y K.A. Müller; Possible High Tc Superconductivity in the BaLaCuO System, Sitachrift fur Physik B: pp. 189-193 (1986). Bussel G.J.W.; The science of making more torque from wind: Diffuse experiments and theory revisited. J. Phys: Conference Series. doi:10.1088/1742-6596/75/1/012010 (2007). Cusidó J.A. y otros cuatro autores; HTSC Technology for wind energy systems: The levitating turbine. Renewable Energy, WREC 2000, pp.1345-1349, Ed. A.A.M. Sayigh,ISBN 0080438652 (June, 2000). Erich H.; Wind Turbines Fundamentals, Technologies, Application, Economics, 2nd Edition. Springer, pp.1-783 (2005). Estanqueiro A y otros seis autores; How to prepare a power system for 15% wind energy penetration: the Portuguese case study, Wind Energy: 11, 75-84 (2008). Granados X., y otros once autores; Iron-YBCO heterostructures and their application for trapped field superconducting motor, Journal of Physics: Conference Series, 43, pp. 788-791 (2006). Inácio, S. y otros cinco autores; An electrical gearbox by means of pole variation for induction and superconducting disc motor, Journal of Physics: Conference Series 97 (2008). Kovalev L., B. Oswald y W. Gawalek; Hysteresis and Reluctance Electric Machines with Bulk HTS Elements, IEEE Transactions on Applied Superconductivity: 9(2), 1261-1263 (1999). Nick T.M.H., K. Tan y S. Islam; Mitigation of harmonics in wind turbine driven variable speed permanent magnet synchronous generators, in: Proc. 7th International Power Engineering Conf., Nov.-Dec. (2005). Pallarés J.; Hacia el motor superconductor: estudio de las interacciones entre un rotor superconductor y un estator convencional, Tesis doctoral, ICMAB-CSIC - Universidad Politécnica de Cataluña (TDX-0109103-180241), Barcelona (Abril 2002). Tentzrakis S.T. y S.A. Papathanassiou; An investigation of the harmonic emissions of wind turbines, IEEE Trans. Energy Conversion: 22, 150-158 (2007). Xing Z. X., Q.L. Zheng y X.J. Yao; Integration of large doubly-fed wind power generator system into grid in: Proc. 8th Int. Conf. Electrical Machines and Systems, Sep. (2005).
+
+44
+
+Información Tecnológica Vol. - 21 Nº 2 - 2010
+

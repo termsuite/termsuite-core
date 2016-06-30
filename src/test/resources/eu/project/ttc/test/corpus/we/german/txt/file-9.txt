@@ -1,0 +1,480 @@
+Windkraftanlagen und Tourismus: Zwei unvereinbare Welten oder eine lokale Chance?
+Ergebnisse einer Touristenbefragung im Nordseebad Varel-Dangast
+
+von Prof. Dr. Gerd Hilligweg Prof. Dr. Stephan Kull
+
+Fachhochschule Oldenburg/Ostfriesland/Wilhelmshaven Fachbereich Wirtschaft am Standort Wilhelmshaven
+
+Wilhelmshaven, im April 2005
+
+Die Energiegewinnung aus erneuerbaren Energien auszubauen ist erklärtes Ziel der Bundesregierung. Hierbei steht die Windenergie im Vordergrund. Um die nationale Klimabilanz weiter zu entlasten müssen sich Kommunen zum Aufbau der Windanlagen bereit erklären. Dies stellt eine schwierige Aufgabe für die Politik vor Ort dar, die sich der wirtschaftlichen Vor- und Nachteile für ihre Region bewusst werden muss. Umso komplexer erscheint eine Entscheidung gerade dann, wenn die Errichtung von Windenergieanlagen nahe einer touristischen Destination erfolgen soll. Am Beispiel der Stadt Varel mit ihrem Nordseebad Dangast werden nachfolgend die Auswirkungen von Windkraftanlagen auf das touristische Nachfrageverhalten analysiert. Datengrundlage hierfür ist eine Primärerhebung im Rahmen einer Diplomarbeit am Fachbereich Wirtschaft der Fachhochschule Oldenburg/ Ostfriesland/Wilhelmshaven, Standort Wilhelmshaven. Vorab werden kurz der energiepolitische Hintergrund der Unterstützung der Windenergieanlagen sowie der konkrete Anlass der Umfrage (Planung eines Offshore-Windenergie-Schaufensters in Varel) beleuchtet.
+
+2
+
+Inhalt
+
+Seite 1. Energiepolitische Hintergründe 2. Der Anlass: Lokales Test- und Informationszentrum für Windkraft in der Diskussion 3. Tourismusbezogene Einflusspotenziale von Windkraftanlagen 4. Einflüsse der Windkraft aus Touristenperspektive 4.1. 4.2. 5. Fazit Literaturverzeichnis Anhang Ausgangsthesen und Methodik der Untersuchung Ergebnisse der Untersuchung 7 9 11 11 13 23 3
+
+3
+
+1.
+
+Energiepolitische Hintergründe Der Energiemix in Deutschland ist durch die dominierende Rolle des Mineralöls geprägt. An zweiter Stelle des Primärenergieverbrauchs steht inzwischen das Erdgas, dahinter Stein- und Braunkohle sowie die Kernenergie. Erst mit weitem Abstand folgen die erneuerbaren Energien. Sie trugen 2004 mit rund 3 % zur Deckung des deutschen Primärenergieverbrauchs bei.1 Rund 8 % des Stroms kamen aus erneuerbaren Quellen.2 Wichtigste erneuerbare Energien in der Stromerzeugung waren Wasser und Wind sowie Biomasse. Ziel der Bundesregierung ist es, den Anteil erneuerbarer Energien am gesamten Energieverbrauch bis zum Jahr 2010 mindestens zu verdoppeln.3 In der langen Frist bis 2050 wird sogar ein Anteil von 50 % angestrebt. Ein Hemmnis des Ausbaus erneuerbarer Energien zur Strom- und Wärmeerzeugung liegt in den im Vergleich zu konventionellen Energieträgern höheren (EEG) Stromerzeugungskosten. ein Mindestpreis (so Um dieser Marktbarriere zu begegnen, wird den Erzeugern in Deutschland durch das Erneuerbare-Energien-Gesetz genannte Einspeisevergütung) garantiert, der von den Versorgungsunternehmen zu entrichten ist. Durch eine hinreichend hohe Einspeisevergütung soll das Ziel erreicht werden, neue Anbieter in den Markt einzuführen und somit den Marktanteil erneuerbarer Energien zu steigern. Dementsprechend steht bei diesem Modell eigentlich nicht der Preis, sondern die Menge als Zielgröße im Vordergrund. Neben dem EEG werden über Investitionszuschüsse bzw. verbilligte Kredite von der Kreditanstalt für Wiederaufbau Investitionen in Anlagen zur Nutzung regenerativer Energien erleichtert. Daneben laufen parallel oder in Ergänzung Programme mit vergleichbarer Zielsetzung auch auf Länderebene. Die entscheidende Begründung für die finanzielle Unterstützung der erneuerbaren Energien liegt in deren umwelt- und klimapolitischen Nutzen.4 Während die Umwandlung von Primärenergien zur Strom- und Wärmeerzeugung bei fossilen Brennstoffen mit der Freisetzung von Schadstoffen verbunden ist, wurden nach
+1
+2
+
+Vorläufige Zahl für 2004, Vgl. Arbeitsgemeinschaft Energiebilanzen 2005. Vgl. Bundesministerium für Umwelt, Naturschutz und Reaktorsicherheit (Hrsg.), 2004, S. 2. 3 Vgl. hierzu und im Folgenden Bundesministerium für Umwelt, Naturschutz und Reaktorsicherheit 2005. 4 Insgesamt wird Windenergie durchaus kontrovers diskutiert, gerade die Problematik erhöhter Kosten sowie des Lastmanagements durch schwankende Verfügbarkeit erneuerbarer Energien stellt enorme Herausforderungen an die zukünftige Windkraftnutzung. Dieser Themenbereich soll hier nicht weiter erörtert werden, vgl. hierzu aber u.a. Hilligweg 2002.
+
+4
+
+Angaben der Bundesregierung durch die Stromerzeugung aus regenerativen Energien im Jahr 2004 bereits gut 40 Mill. t CO2 eingespart. Abb. 1: CO2-Vermeidung durch Strom aus Erneuerbaren Energien
+
+Quelle: Bundesministerium für Umwelt, Naturschutz und Reaktorsicherheit, 2004, S. 9 Da die Marktpreise der herkömmlichen Stromerzeugung aus Kohle, Öl und Gas nicht alle relevanten externen Kosten widerspiegeln – aus volkswirtschaftlicher Sicht somit zu niedrig liegen – wird zum einen der Weg der Verteuerung dieser Energieträger (z.B. im Rahmen der sog. Ökosteuer) diskutiert. Als zweite Möglichkeit bietet sich der derzeit praktizierte Weg der Subventionierung der Stromerzeugung aus regenerativen Quellen an. Hier wird der über den betriebswirtschaftlichen Nutzen (Stromerzeugung) hinaus gehende Nutzen (Umweltschutz) entgolten. Gesetzlich festgeschriebene Einspeisevergütungen haben sich in vielen EU-Staaten etabliert und erweisen sich als das erfolgreichste System für Langzeitinvestitionen. So verwenden beispielsweise die in Bezug auf installierte Windleistung pro Gebiet führenden Länder sämtlich das Instrument der Einspeisevergütung. Basierend auf der Verfügbarkeit eines großen lokalen Marktes haben fast alle Turbinenhersteller in diesen Ländern ihren Ursprung. Die Zusage einer festen Vergütung für die Einspeisung von Windstrom schafft Planungssicherheit und ein zuverlässiges Investitionsklima. Der Gefahr einer Dauersubventionierung kann durch die Einführung
+
+5
+
+eines degressiven Elementes in die Systematik der Vergütung begegnet werden. Schließlich bleibt zu beachten, dass jede Form der Einspeisevergütung, die über die Marktpreise hinausgeht, letztendlich vom Stromverbraucher zu begleichen ist.5 Im Vergleich zu den übrigen erneuerbaren Energieträgern wird die derzeit anteilsmäßig noch sehr hohe Wasserkraft bereits seit mehreren Jahrzehnten eingesetzt und ist technologisch weitgehend ausgereift sowie aufgrund geologischer Rahmenbedingungen nahezu ausgeschöpft. Potenziale in Deutschland liegen allenfalls in der Modernisierung und Reaktivierung älterer oder stillgelegter Wasserkraftwerke. Bei den Überlegungen zum Ausbau des Beitrags der erneuerbaren Energien zur deutschen Energieversorgung steht daher eindeutig die Windenergie im Vordergrund. Die Gesamtleistung der Windparks an Land wird sich in den nächsten Jahren weiter erhöhen. Um das Wachstum der Windenergienutzung in Deutschland auf hohem Niveau Potenzial aufrecht für den zu erhalten, von ist ein weiterer an Ausbau den an geeigneten auf die Binnenlandstandorten erforderlich. Es ist allerdings bereits heute erkennbar, dass das Bau Windkraftanlagen bezogen Windverhältnisse günstigen Küstenstandorten an seine Grenzen stößt. Weitere Chancen liegen im Ersatz alter Anlagen durch moderne und leistungsstärkere Anlagen (so genanntes Repowering) sowie in einer allmählichen Erschließung geeigneter Standorte auf See (Offshore) mit Anlagen in der 5 MW–Klasse. Die Offshore-Gebiete liegen aufgrund ihrer großen Ausdehnung und ihrer technisch handhabbaren Wassertiefen vor allem in der Deutschen Bucht.
+
+5
+
+Vgl. hierzu Hilligweg/Weise 2001, S. 53ff.
+
+6
+
+Abb. 2: Entwicklung der Stromerzeugung aus Windenergie
+
+Quelle: Bundesministerium für Umwelt, Naturschutz und Reaktorsicherheit, 2004, S. 13 Unter Federführung des Bundesumweltministeriums wurde bereits 2001 eine „Strategie der Bundesregierung zur Windenergienutzung auf See“ erstellt, in der die Voraussetzungen für Rechts- und Planungssicherheit geschaffen wurden (u.a. Novellierung des Bundesnaturschutzgesetzes, Änderung der Seeanlagenverordnung durch die Festlegung von besonderen Eignungsgebieten für Offshore-Windparks). Danach könnten bis etwa 2025/30 zwischen 20.000 und 25.000 MW Windenergieleistung auf dem Meer erzielt werden. Eine solche Nutzung der Windenergie auf dem Meer entspräche rd. 15 % des heutigen Stromverbrauchs. Abb. 3: Schrittweise Erschließung der Windenergie auf See Phasen 1. Vorbereitungsphase 2. Startphase (Erste Baustufen) 3. Erste Ausbauphase Zeitraum bis 2003 2003/04 – 2006 2007 – 2010 mindestens 500 2.000 – 3.000 20.000 – 25.000 Mögliche Kapazität [MW]
+
+4.Weitere Ausbauphase 2011 – 2030
+
+Quelle: Bundesministerium für Umwelt, 2002, S. 30
+
+7
+
+Bei
+
+der
+
+derzeit
+
+herrschenden
+
+Aufbruchstimmung
+
+bezüglich
+
+der
+
+Offshore-
+
+Windenergienutzung ist zu beachten, dass diese Projekte noch mit großen technischen und wirtschaftlichen Unsicherheiten verbunden sind. Aufgrund des geringeren Raumangebotes als beispielsweise in Dänemark und Schweden und der möglichen Konflikte mit anderen gesellschaftspolitischen Anliegen (z.B. Tourismus) kommen in Deutschland besonders Standorte mit großen Wassertiefen und weiten Entfernungen zur Küste in Frage. Für den Betrieb von Anlagen unter diesen Rahmenbedingungen und mit dieser Dimensionierung liegen jedoch noch keine hinreichenden Erfahrungen vor, so dass eine Anlagenerprobung und -optimierung sowie die Sammlung von Betriebserfahrungen zuerst auf dem Land stattfinden muss.
+
+2.
+
+Der Anlass: Lokales Test- und Info-Zentrum für Windkraft in der Diskussion Vor diesem Hintergrund wurden von den in Varel (Kreis Friesland, Niedersachsen) ansässigen Unternehmen Deutsche WindGuard GmbH und innoVent GmbH Planungen6 für ein sog. Offshore-Windenergie-Schaufenster vorgelegt, bestehend aus: • Einem Pilotwindpark mit 7 Windenergieanlagen der 5 MW-Offshore-Klasse. Diese weisen eine Höhe von jeweils 180 Metern auf und sind die größten je entwickelten Anlagen. • Einem Informationszentrum über die Windenergienutzung auf hoher See. Im Informationszentrum soll der Ausbau der Offshore-Windenergienutzung in Deutschland, der in den nächsten 10 bis 20 Jahren stattfinden wird, durch Informationen der Öffentlichkeit zugänglich gemacht werden. • Einer Dokumentation der Betriebsergebnisse sowohl des Pilotwindparks als auch erster Offshore-Windparks in der Nordsee durch die innoVent GmbH. Das Offshore-Windenergie-Schaufenster soll neben der technischen Erprobung der Anlagen sowohl für nationale als auch internationale Besucher einen Überblick über die eingesetzte Anlagentechnik und die energiepolitische Bedeutung der Windenergienutzung geben und so in die touristischen Aktivitäten der Destination Friesland eingeflochten werden.
+6
+
+Nach Auskunft Deutsche WindGuard GmbH und innoVent GmbH.
+
+8
+
+Das Vareler Firmenkonsortium hat der Stadt im Jahr 2003 einen Entwurf vorgelegt, der die Nutzung einer Fläche im Stadtteil Jeringhave-Rotenhahn (Twickelser Groden) nahe der Autobahn A 29 vorsieht, unweit des bereits bestehenden Windparks Hiddels auf einer Fläche der Nachbargemeinde Bockhorn. Hier wären nach Ansicht der Planer die Einschnitte in die Landschaft eher gering, da das Gelände ohnehin durch bereits vorhandene Anlagen sowie die Autobahn und die Bundesbahnlinie Oldenburg-Wilhelmshaven vorbelastet ist. Der Standort verfügt zudem über eine große Entfernung zur Wohnbebauung, so dass keine relevanten Schatten- und Schallimmissionen bei Anwohnern zu erwarten wären (siehe schraffierte Fläche links unten in Abb. 4). Abb. 4.: Geplantes Baugebiet für Offshore-Windenergie-Schaufenster
+
+Geplantes Test- und Informationszentrum
+
+Quelle: Eigene Darstellung auf Basis der Karte von Reiseplanung 2005 Neben der nationalen und internationalen Bedeutung, die ein Offshore-WindenergieSchaufenster einnehmen kann, errechneten die Planer für die Region Varel folgende positive Auswirkungen in den Bereichen Wirtschaft, Wissenschaft und Tourismus, mit denen sie eine Zustimmung zu ihren Plänen bei Politik und Bevölkerung der Region Varel erwirken wollten7: • Prognostizierte Gewerbesteuereinnahmen von ca. 2.4 Mio. € für die Stadt Varel aus dem Betrieb des Pilotwindparks über 20 Jahre.
+
+9
+
+•
+
+Infrastrukturausgleich von 80.000 € pro Jahr für die Stadt Varel, bis die Gewerbesteuereinnahmen aus dem Pilotwindpark diesen Beitrag übersteigen.
+
+•
+
+Lokale Wertschöpfung bei der Errichtung der Anlagen von ca. 14 Mio. € sowie von ca. 1,5 Mio. € pro Jahr nach Inbetriebnahme.
+
+•
+
+Den Bürgern Varels wird ein Vorrecht zur Investition eingeräumt, so dass die Erträge aus dem Betrieb des Pilotwindparks nach Möglichkeit vor Ort bleiben (Bürgerwindpark).
+
+•
+
+Erhöhung der lokalen Wertschöpfung durch nationale und internationale Besucher des Offshore-Windenergie-Schaufensters (Hotellerie und Gastronomie).
+
+•
+
+Sicherung des Standortes Varel für die zukünftigen Aktivitäten der Unternehmen Deutsche WindGuard GmbH und innoVent GmbH, damit Sicherung von Arbeitsplätzen in der Region.
+
+•
+
+Durch das Offshore-Windenergie-Schaufenster wird Varel in die Aktivitäten der Offshore-Windenergienutzung im Unterweserraum und vor allem in Bremen und Bremerhaven in besonderem Maße einbezogen. Durch die Freigabe des Wesertunnels im Januar 2004 ist dieser noch enger zusammen gewachsen.
+
+•
+
+Bestehende wissenschaftliche Kooperationen der Vareler Unternehmen Deutsche WindGuard GmbH und innoVent GmbH mit den Universitäten Bremen und Oldenburg (Kompetenzzentrum Windenergie) sowie mit der Fachhochschule in Wilhelmshaven (Fachbereich Wirtschaft) werden weiter ausgebaut.
+
+Die skizzierte Idee wurde in der Region um Dangast intensiv diskutiert. Im Vordergrund standen hierbei Tourismus bezogene Überlegungen. Dies liegt umso näher, da Dangast eines der ältesten Tourismusgebiete der Region darstellt und als klassisches Erholungs- und Freizeitzentrum mit einem Bettenaufkommen von rd. 2.500 Gästebetten und mehr als 300.000 Übernachtungen pro Jahr einen gewichtigen Wirtschaftsfaktor
+8
+
+für
+
+eine
+
+ansonsten
+
+als
+
+eher
+
+strukturschwach
+
+einzustufende Region darstellt. Somit verwundert es nicht, dass nahezu alle neuen
+
+7
+
+8
+
+Die Zahlen/Berechnungen sind aus vorliegenden Planungen beider Firmen übernommen. Zahlen für 2003 nach Angaben der Kurverwaltung Dangast, zum wirtschaftlichen Potenzial von Dangast siehe Luft 1998.
+
+10
+
+wirtschaftlichen Vorhaben vor dem Hintergrund ihrer Auswirkungen auf den Tourismus diskutiert werden.
+
+3.
+
+Tourismusbezogene Einflusspotenziale von Windkraftanlagen Nachfolgend soll zur Versachlichung etwaiger Diskussionen im theoretischen Rahmen das Für und Wider der obigen Konzeption umrissen werden, um dann die Grundthesen anhand einer empirischen Analyse näher aus der Perspektive der Nachfrager erschließen zu können. Es lassen sich sowohl positive als auch negative Wirkungen der Windkraft auf den Tourismus anführen. In positiver Perspektive kann die Forcierung von Windenergie den Erlebniswert der Region steigern. Im Sinne eines Infotainment-Events lässt sich hier Arbeit an Hintergrundinformationen für eine regenerative Energievariante mit Unterhaltung und Erlebnis koppeln. Spaß am Aufenthalt und Ausflugswert der Region können so unter Umständen nachhaltig gesteigert werden, wenn eine Attraktion mehr in das Urlaubsprogramm eingefügt werden kann. Technikbegeisterung kann sich ebenfalls in einem verstärkten Besucherstrom der Region niederschlagen. Auch der Image-Faktor, eine Region zu besuchen, die aktiven Umweltschutz forciert, kann nachhaltig zur Kundenbindung für die Region beitragen. Touristen, die der Windenergie positiv gegenüberstehen, empfinden eine Übereinstimmung ihrer Wertvorstellungen mit dem touristischen Leistungsbündel der Region. Denn genau so wie Produkte von Konsumenten als Teil des verlängerten Selbst interpretiert werden, kann auch die Urlaubsgegend Ausdruck gelebter Werte sein. Die eher negativen Auswirkungen der Windkraft auf den Tourismus lassen sich global in dem Begriff des Imageschadens für die Region zusammenfassen. Der Tourismus ist naturgemäß von einer attraktiven Umwelt abhängig. Dieses Abhängigkeitsverhältnis des Fremdenverkehrs gegenüber der ökologischen Umwelt ist viel größer als in den meisten anderen Wirtschaftszweigen. Durch die Beeinträchtigung des Erholungsraums wie auch des Erholungswertes verlieren Ferien- und Naherholungsgebiete an Güte; die Nachfrage wandert ab. Bei Windanlagen vermutete Belastungen wie vermehrter Schattenwurf, Lärm und DiskoEffekte durch Sonneneinstrahlung auf sich drehende Rotorblätter können sicherlich den wahrgenommenen Erholungswert für Touristen schmälern. Auch die Landschaftsbeeinflussung und die Ballung zu vieler oder zu großer Anlagen sind als
+
+11
+
+Beeinträchtigungsfaktoren durch die Windkraft.
+
+denkbar.
+
+Alles
+
+in
+
+allem
+
+münden
+
+diese
+
+Argumentationsstränge in wahrgenommene Störgefühle im touristischen Erleben
+
+Die Abbildung 5 fasst die positiven und negativen Wirkungsargumente von Windkraftanlagen auf den Tourismus nochmals zusammen. Abb. 5: Einflussfaktoren von Windkraftanlagen auf den Tourismus
+
+• • • •
+
+Technologische Bewunderung Eventcharakter Übereinstimmende Wertvorstellungen Beitrag zu aktivem Umweltschutz Imagegewinn durch Erlebniswerte Tourismus
+
+• • • •
+
+Diskoeffekt/Schattenwurf Lärm Landschaftsbeeinflussung Anlagenballung Imageschaden durch Störgefühle
+
+Quelle: Eigene Darstellung
+
+4. 4.1
+
+Einflüsse der Windkraft aus Touristenperspektive Ausgangsthesen und Methodik der Untersuchung Basierend auf den Einflussfaktoren dient die nachfolgend präsentierte empirische Analyse der Untermauerung folgender Nachfrager bezogener Thesen zum regionalen Tourismus:
+
+12
+
+Empirische Leitthesen Positive Wirkung: 1. These: Touristen empfinden Windkraft als positiven Imagefaktor für die Region. 2. These: Touristen sind an mehr Information und Erleben von Windkraftanlagen interessiert. Negative Wirkung: 3. These: Touristen nehmen Windkraftanlagen als störend für Ihr Urlaubserleben wahr. Relativierung der Gesamtwirkung: 4. These: Touristen beziehen Windkraftanlagen in ihre Urlaubsentscheidungen mit ein. Die vorliegende Arbeit knüpft dabei an frühere Untersuchungen in den Regionen „Ostfriesland“ (1996)9 und „Wangerland“ (1997)10 an. Ohne den aktuellen Umfrageergebnissen vorgreifen zu wollen, sei an dieser Stelle darauf verwiesen, dass diese Studien zu dem Ergebnis kamen, der überwiegende Teil der Urlauber (mehr als 90 %) fühle sich nicht durch Windenergieanlagen gestört. Ähnliche Ergebnisse erbringt die regional weiter geschnittene Studie des Institut für Tourismusund Bäderforschung in Nordeuropa GmbH (N.I.T.) über touristische Effekte von Windkraftanlagen in Schleswig-Holstein (2000). Die aktuelle Studie basiert auf Zahlenerhebungen aus einer Diplomarbeit am Fachbereich Wirtschaft 11 der Fachhochschule in Wilhelmshaven. Hierbei wurden 150 Personen an tourismusrelevanten Orten12 in Dangast zufällig ausgewählt, um anhand eines standardisierten Fragebogens Informationen zu den obigen Thesen zu erheben.13 Die Probanden füllten die Fragebogen selbständig aus, lediglich für etwaige Rückfragen halfen geschulte Projektmitglieder mit Erläuterungen weiter. Die Befragung fand an vier Samstagen im Sommer und Herbst des Jahres 2004 statt, also in der klassischen Urlaubszeit für den Ort.
+9
+
+Vgl. Bergsma 1996. Vgl. Hübinger 1997. 11 Datengrundlage ist die Diplomarbeit von Kaufmann 2005, zu den methodischen Grundlagen vgl. Berekoven/Eckert/Ellenrieder 2001. 12 Die Befragungsorte waren der Campingplatz, das Kurhaus, die Schleuse und der Strand in Dangast.
+10
+
+13
+
+Der Fokus der Studie wurde auf das beschriebene Objekt (geplantes Test- und Informationszentrum) in der lokalen Umgebung von Dangast bezogen, hat somit bewusst begrenzten Radius. Auch die beschränkte Fallzahl von 150 Probanden weist dem Projekt insgesamt eher den Charakter einer quantitativ orientierten lokalen Fallstudie zu. Die Auswertung der Daten erfolgte über Häufigkeitstabellen und Kreuztabellierungen zur vertiefenden Analyse von typenspezifischen Besonderheiten. Inhaltlich wurden neben soziodemografischen Merkmalen und allgemeinen
+
+Urlaubsmotiven insbesondere auch die Einstellung zur Windenergie hinterfragt. Nachfolgend werden in erster Linie die Umfrageergebnisse wiedergegeben, die Rückschlüsse auf die Auswirkungen von Windkraftanlagen auf das touristische Nachfrageverhalten zulassen.
+
+4.2
+
+Ergebnisse der Untersuchung Die Darstellung der empirischen Ergebnisse orientiert sich an den vier Thesen aus dem letzten Kapitel, beginnend mit der ersten These: Touristen empfinden Windkraft als positiven Imagefaktor für die Region. Hierzu wurde zunächst erhoben, ob die allgemeine Forcierung der Windenergie eher positive oder negative Imagefaktoren bei den Befragten aufweist. In Abbildung 6 wird deutlich, dass über 2/3 der Befragten die Intensivierung der Windenergienutzung mit positiven Imagefaktoren besetzen und nur eine Minderheit von 11% dem negativ gegenübersteht. Ein positives Empfinden der vermehrten Windenergienutzung war also bei weitem in der Überzahl.
+
+13
+
+Fragebogen im Anhang.
+
+14
+
+Abb. 6: Beurteilung der Zunahme von Windenergie
+Im Laufe der vergangenen Jahre wurden besonders in Norddeutschland aus energie- und umweltpolitischen Gründen immer mehr Windkraftanlagen errichtet. Wie stehen Sie zu dieser Entwicklung?
+Sehr Negativ 3%
+
+N= 150
+
+11%
+Negativ 8%
+
+Neutral
+
+18%
+
+Positiv
+
+42%
+
+Sehr positiv
+
+29%
+
+71%
+
+Forcierung von Windkraft in Norddeutschland wird zu über 2/3 positiv gesehen
+
+Quelle: Eigene Berechnungen auf Basis Kaufmann 2005 In der Erhebung wurde ebenfalls die Herkunft der Befragten erfasst. Hier zeigte sich, dass die positive Einstellung unabhängig hiervon zu sein scheint. Egal ob aus der Umgebung, aus Niedersachsen, anderen Bundesländern oder dem Ausland, die grundsätzliche Zustimmung zur Ausweitung der Windkraft war ein einheitlicher Trend, wie Abbildung 7 verdeutlicht. Abb. 7: regionale Herkunft und Beurteilung Windenergie
+Im Laufe der vergangenen Jahre wurden besonders in Norddeutschland aus energie- und umweltpolitischen Gründen immer mehr Windkraftanlagen errichtet. Wie stehen Sie zu dieser Entwicklung?
+Ausland
+1,67
+
+Angaben von Durchschnittsbeurteilungen nach Herkunft
+2,21
+
+andere Bundesländer
+
+Niedersachsen
+
+2,28
+
+Umgebung
+1 2
+
+2,10
+
+N= 150
+3 4 5
+
+Sehr positiv
+
+Sehr negativ
+
+Zustimmung zum Zuwachs an Windkraftanlagen ist unabhängig von Herkunft
+
+Quelle: Eigene Berechnungen auf Basis Kaufmann 2005
+
+15
+
+Auch die Frage nach dem regionalen Beitrag zur Entwicklung der Windenergie war Bestandteil des Fragebogens. In den Antworten spiegelte sich eine hohe Potenzialvermutung für die Region wider: 78% sahen einen Beitrag der Region. In Abbildung 8 werden diese Ergebnisse kombiniert mit dem allgemeinen Imagefaktor des Windenergie-Ausbaus dargestellt. Es zeigt sich, dass eine grundsätzlich positive Einstellung zum Windenergieausbau auch dazu führt, dass der regionale Beitrag von Friesland positiv bewertet wird. Gleiche Eindeutigkeiten ergeben sich in negativer Abgrenzung. Insgesamt aber überwiegt auch hier eindeutig der positive Imagefaktor für die Region durch Windenergie: 76 % der Befragten haben keine negative Einstellung zur Windenergie und sehen regionale Potenziale zum Ausbau der Windkraft. Somit sehen über ¾ der Befragten einen potenziell positiven Image-Effekt auch für die Region Friesland. Damit konnte die erste These in der Untersuchung bestätigt werden. Abb. 8: Beurteilung Windenergie und Potenzial Region
+
+76%
+Friesland mit Windparks als Beitrag zur alternativen Energiegewinnung Wesentlicher Gewisser Unwesentlicher Beitrag Beitrag Neutral Beitrag Kein Beitrag Windenergieausbau Sehr positiv Positiv neutral Negativ Sehr negativ 21 26 3 0 0 11 37 15 1 1 0 1 0 2 1 0 1 12 2 1 0 1 4 7 1
+
+18%
+N= 148
+
+Windenergie sehen 76% als Chance für die Region
+Quelle: Eigene Berechungen auf Basis Kaufmann 2005
+
+Die zweite These lautete: Touristen sind an mehr Information und Erleben von Windkraftanlagen interessiert. Hintergrund dieser These bildet das in Abschnitt 2 bereits beschriebene Projekt eines Informationszentrums mit begleitenden Führungen. Hierbei war davon auszugehen,
+
+16
+
+dass die Befragten über das
+
+Planungsvorhaben im speziellen eher keine
+
+Informationen hatten. Gleichwohl wurde das Vorhaben kurz skizziert, um bei den Probanden eine grobe Vorstellung zu erzeugen. Dementsprechend stand zunächst das allgemeine Interesse an zusätzlichen Informationen über Windkraft im Vordergrund. Hier zeigte sich, dass bereits ohne konkrete flankierende Marketingkonzeptionen knapp 2/3 der Befragten an mehr Informationen zumindest grundlegend interessiert zu sein scheinen. Abbildung 9 gibt den Überblick. Abb. 9: Interesse an Wissen über Windenergie
+
+Hätten Sie Interesse daran, als Gast/ Urlauber mehr über moderne Windenergieanlagen an Ihrem Urlaubsort oder allgemein zu erfahren?
+
+Unter Umständen
+
+32%
+
+Ja
+
+39%
+
+Nein
+
+29%
+
+N= 149
+
+Knapp 2/3 bekunden Interesse an Hintergundinformationen
+
+Quelle: Eigene Berechnungen auf Basis Kaufmann 2005 Auf die Frage, welcher Art diese Informationen denn sein sollten, sprachen sich 2/3 der eher positiv eingestellten Befragten für ein Informationszentrum aus. Reine Broschüren oder Vorträge scheinen demgegenüber deutlich geringeren Anreizcharakter zu haben, wie Abbildung 10 nachfolgend zeigt.
+
+17
+
+Abb. 10: Präferierte Informationszugänge zur Windenergie
+
+Welche Informationen würden Sie in Anspruch nehmen?
+
+Führung/Infozentrum
+
+67%
+
+Vorträge
+
+21%
+
+Broschüren
+
+43%
+
+N= 106, da nur bei Ja oder unter Umständen
+
+2/3 würden Führungen und ein Infozentrum begrüßen
+
+Quelle: Eigene Berechnungen auf Basis Kaufmann 2005 Aus diesen ersten Anhaltspunkten lässt sich an dieser Stelle lediglich ein grundlegendes Besucherpotenzial für ein Informationszentrum abschätzen. Wie das Konzept ausgestaltet werden könnte und welche tatsächlichen Informationskomponenten hier modulartig zu einer Art Infotainment-Windpark zusammengefügt werden können, muss an anderer Stelle sicherlich vertieft untersucht werden. Dies gilt umso mehr vor dem Hintergrund der Erfahrungen mit derartigen Großprojekten wie beispielsweise dem Space-Center in Bremen oder auch dem Regenwaldhaus in Hannover. Bevor hier Investitionen getätigt werden, sind Chancen und Risiken einer detaillierten Analyse zu unterziehen. Allerdings kann davon ausgegangen werden, dass sich sowohl bei Energieerzeugern und –händlern als auch bei öffentlichen Stellen eine breite Lobby für derartige Betätigungsfelder finden ließe. Mit Bezug auf das konkrete Planungsprojekt zeigte die Untersuchung, dass auch der beschriebene Komplex des Test- und Informationszentrums von fast 2/3 der Stichprobe mit positiven Auswirkungen für die Region verbunden wird. Lediglich 6 % würden eine solche Anlage als derartig gravierende Beeinträchtigung auffassen, dass sie zukünftig nicht mehr nach Dangast reisen würden. Abbildung 11 dokumentiert die Zahlen.
+
+18
+
+Abb. 11: Beurteilung der geplanten Testanlage mit Infozentrum
+
+Um die zukünftigen Meeres-Windanlagen errichten zu können, bedarf es vorab einiger Testanlagen an Land. Dazu existieren Pläne, an der Autobahn Stadtgrenze Varel- Bockhorn, sieben Testanlagen mit einer Gesamthöhe von ca. 180m und ein Offshore - Informationszentrum zu errichten. Wie beurteilen Sie als Gast diese Pläne?
+"Wenn diese Anlagen kommen, dann reise ich nicht mehr nach Dangast"
+
+6%
+
+"Wenn keine weiteren Anlagen mehr folgen, könnte ich damit leben"
+
+32%
+
+"Die Region könnte von diesen Testanlagen profitieren"
+
+61%
+
+N= 145 mit Mehrfachanworten, Missing links 9
+
+Fast 2/3 sehen positive Effekte, nur 6% würden weg bleiben
+Quelle: Eigene Berechnungen auf Basis Kaufmann 2005 Betrachtet man die Facetten zur empirischen Analyse der 2. These, so zeigt sich alles in allem in der Untersuchung ein grundsätzliches Interesse an zusätzlicher Information und vertieftem Erleben von Windkraft. Hier werden Chancen für die Region vermutet, die es nicht zuletzt unter touristischen Vermarktungsaspekten zu nutzen gilt. Es scheint Potenzial zu geben, durch eine Kombination von Bildung und Unterhaltung (Edutainment) für Windkraft die Attraktivität der Region auch für Touristen nachhaltig festigen zu können. Derartig positive Effekte können überlagert sein durch negative Störgefühle, die jedoch bei der konkreten Vorhaben (Test- und Informationszentrum) eine eher geringe Rolle spielten. Aber auch für die allgemeine Perspektive von Windkraft kann es zu negativen Wahrnehmungen bezüglich des Urlaubs kommen. Diese Inhalte wurden bereits in der dritten These zur empirischen Falsifizierung vorformuliert: Touristen nehmen Windkraftanlagen als störend für Ihr Urlaubserleben wahr. Um hier ebenfalls Ergebnisse zu erhalten, die nicht direkt mit dem konkreten Vorhaben oder der Windkraft in Zusammenhang zu denken waren, wurde zunächst die allgemeine Wahrnehmung von Störungen während des Aufenthaltes abgefragt. 70% hatten bisher überhaupt keine nennenswerten Beeinträchtigungen während ihres Aufenthaltes wahrgenommen. Unter den 30% mit Störgefühlen fanden sich nur
+
+19
+
+0,6 %, die von sich aus bekundeten, dass Windkraftanlagen Ursache ihres Unmuts wären. Das deutet darauf hin, dass es viel gravierendere Negativfaktoren in der Region zu geben scheint als Windkraft. Abbildung 12 gibt den Überblick. Abb. 12: Störgefühle durch Windkraftanlagen (ungestützt)
+Ist Ihnen bei Ihrem bisherigen Aufenthalt etwas unangenehm aufgefallen?
+
+Nein : 70%
+
+Unangenehm aufgefallen sind . . . Windkraftanlagen: 0,6%
+
+Ja : 30%
+
+Hauptsächlich: Kurtaxe Strandverunreinigung
+
+N= 148
+
+Ungestützt haben knapp 1/3 Störgefühle, aber nur 0,6% durch Windkraftanlagen
+
+Quelle: Eigenen Berechungen auf Basis Kaufmann 2005 Eröffnet man den Befragten das konkrete Themenfeld „Windenergie“ und fragt nach der grundsätzlichen Wahrnehmung der Anlagen, so hat die überwiegende Mehrheit die Anlagen wahrgenommen, allerdings schwerpunktmäßig bei An- und Abfahrt sowie vereinzelt bei Ausflügen mit dem Rad. Die vermehrte subjektive Einstufung der bisherigen Platzierung derartiger Anlagen ist demnach eher „am Rande des Urlaubs“ zu sehen. Unterkunft und Küste werden weniger fokussiert, wie Abbildung 13 zeigt.
+
+20
+
+Abb. 13: Subjektive Lokalisation von Windkraftanlagen
+Sind Ihnen während Ihres Aufenthaltes Windkraftanlagen aufgefallen? Falls ja, wo?
+Ja; 79%
+Bei der An- uns Abreise bei Ausflügen (z.B. mit dem Rad; Spaziergänge vom Strand aus
+22% 52%
+
+43%
+
+Nein; 21%
+
+von meiner Unterkunft aus
+
+5%
+
+sonstiges
+
+3%
+
+N= 150
+
+Windkraftanlagen fallen eher „im Vorbeifahren“ auf
+
+Quelle: Eigene Berechnungen auf Basis Kaufmann 2005 Gefragt nach den Einschätzungen bezüglich des Landschaftsbildes, sehen lediglich 22% der Befragten zumindest leichte Störungen durch Windenergieanlagen. Auffällig ist, dass in der extremen Polarisierung relativ gleichgroße Antwortgruppen für empfindliche Störung (8%) und für absolute Bereicherung (7%) zustande kommen, wie Abbildung 14 zeigt. Abb. 14: Störgefühle durch Windkraftanlagen (gestützt)
+Wie sehen Sie Windkraftanlagen im Hinblick auf das Landschaftsbild hier an der Küste?
+Sie stören das Landschaftsbild empfindlich
+8%
+
+22%
+Sie stören das Landschaftsbild
+16%
+
+Zwar gewöhnungsbedürftig, aber in die Landschaft durchaus integrierbar
+
+41%
+
+Sie gehören zum Landschaftsbild dazu
+
+28%
+
+78%
+
+Sie bereichern das Landschaftsbild
+
+7%
+
+N = 150
+
+Gestützt haben weniger als 1/4 Störgefühle durch Windkraftanlagen
+
+Quelle: Eigenen Berechnungen auf Basis Kaufmann 2005
+
+21
+
+Da die nächste Generation von Windenergieanlagen wie bereits beschrieben als Offshore–Anlagen geplant ist, ist es in einem Urlaubsgebiet an der Küste auch bedeutsam, ob durch diese Anlagen neue Empfindsamkeiten hervorgerufen werden bzw. wie diese Anlagen gebaut werden müssen, damit sie möglichst wenig Unmut hervorrufen. Hier ist ein entscheidender Faktor, in wie weit derartige Anlagen im Betrachterfokus der Touristen liegen dürfen. Interessanterweise sieht über die Hälfte der Befragten noch nicht einmal Probleme, wenn die Anlagen in Sichtweite lägen. Lediglich 9% der Probanden empfindet grundsätzliche Beeinträchtigungen durch Offshore-Windkraftanlagen unabhängig von ihrem Standort. Die konkreten Zahlen zeigt Abbildung 15. Abb. 15 : Störgefühle durch Offshore-Anlagen
+
+Die zukünftigen Windkraftanlagen sollen zukünftig weitgehend im Meer gebaut werden (Sog. Offshore-Anlagen). Wie weit müssen die Anlagen entfernt sein, um Sie nicht mehr zu stören?
+Anlagen stören mich in jedem Fall
+
+9%
+
+Anlagen außer Sichtweite stören mich nicht
+
+34%
+
+Anlagen in Sichtweite stören mich nicht
+
+58%
+
+N= 149
+
+Über die Hälfte kann mit Offshore-Anlagen in Sichtweite Urlaub machen
+Quelle: Eigene Berechnungen auf Basis Kaufmann 2005 Fasst man alle bisherigen Ausführungen zur These 3 zusammen, so deuten sie eher auf eine Verneinung der These hin. Störgefühle für Windkraftanlagen sind nur in geringem Maße vorhanden. Dies gilt sowohl für die freie Assoziation von Störgefühlen als auch für die gestützt-gelenkte Analyse zum Thema Windenergie. Selbst die geplanten Offshore-Anlagen werden zum überwiegenden Teil von den Probanden mitgetragen.
+
+22
+
+Abschließend soll noch auf die vierte vorformulierte These eingegangen werden: Touristen beziehen Windenergieanlagen in ihre Urlaubsentscheidungen mit ein. Diese Frage relativiert unter Umständen sehr stark die Bedeutung der Diskussion, denn wenn Windenergieanlagen nur wenig Einfluss auf die Urlaubsentscheidungen haben, dann sind zumindest die beschriebenen Störgefühle, die ohnehin nur in geringem Umfang existieren, noch weniger einflussreich als bisher angenommen. Und in der Tat zeigt die empirische Analyse hier eine recht eindeutige Tendenz: Nur 10% sehen diese Beziehung in negativer Hinsicht. Die Auswertung hierzu ist in Abbildung 16 dargestellt. Abb. 16: Urlaubsentscheidung in Abhängigkeit von Windkraftanlagen
+
+Beeinflussen Windenergieanlagen Ihre Urlaubsentscheidung?
+Ja, Negativ; 10% Ja, Positiv; 3%
+
+N= 150
+Nein; 87%
+
+10% sehen negative Einflüsse der Windanlagen auf ihre Urlaubsentscheidung
+
+Quelle: Eigene Berechnungen auf Basis Kaufmann 2005
+
+23
+
+5.
+
+Fazit Die Umfrage im Nordseebad Dangast macht deutlich, dass die weit überwiegende Zahl der Besucher den energiepolitischen Kurs der Bundesregierung, mittels Windanlagen zu einer umweltschonenden Stromerzeugung beizutragen, unterstützt. Fast 80 % der Befragten sind der Meinung, dass Friesland mit seinen Windanlagen einen Beitrag zur alternativen Energiegewinnung leisten kann. Auch ein weiterer Ausbau des Anteils der Windenergie zur zukünftigen Stromerzeugung wird mehrheitlich begrüßt. Eine Beeinträchtigung der für den Tourismus überaus wichtigen attraktiven Umwelt durch den Anblick von Windanlagen kann empirisch nicht belegt werden. Von weniger als einem Viertel der Besucher werden diese als störend empfunden, was aber auch diesen Besucherkreis nicht von einem Besuch von Dangast abhält. Insgesamt wird deutlich, dass der Aufenthalt in Dangast kaum durch die Existenz von Windenergieanlagen beeinflusst wird, da fast 90 % der Befragten hierin kein entscheidendes Motiv für ihre Reiseentscheidung sehen. Beachtlich erscheint in diesem Zusammenhang, dass fast 60 % der Urlauber sogar den Bau von OffhoreWindanlagen im Meer in Sichtweite nicht als gravierende Beeinträchtigung beurteilen. Konkret gefragt nach den Plänen zum Bau des Pilotwindparks mit 7 Anlagen der 5 MW-Klasse im Twickelser Groden urteilen 59 % der Urlauber, die Region könne von diesen Testanlagen profitieren. 31 % „können damit leben“ und nur 6 % sehen darin einen Grund, nicht mehr nach Dangast zu reisen. Auch das von Deutsche Windguard GmbH und innoVent GmbH geplante Informationszentrum zur Windenergienutzung trifft grundsätzlich auf Zustimmung. Zusammenfassend lässt sich feststellen, dass die vorliegende Urlauberbefragung – so sehr sie auch nur den Charakter einer lokalen Momentaufnahme trägt – doch ein erstes Indiz dafür ist, dass eine Beeinträchtigung der touristischen Nachfrage durch bestehende Windanlagen bzw. das geplante Offshore-Windenergie-Schaufenster empirisch nicht zu belegen ist.
+
+24
+
+Literaturverzeichnis
+Arbeitsgemeinschaft Energiebilanzen 2005.: In Internet, URL:[http://www.agenergiebilanzen.de, ohne Stand, Abfrage vom 9.3.2005. Bergsma, E.: Die Windkraftnutzung in Ostfriesland unter besonderer Berücksichtigung ihrer Akzeptanz durch den Fremdenverkehr, Gießen 1996. Berekoven, L./Eckert, W./Ellenrieder, P.: Marktforschung, - methodische Grundlagen und praktische Anwendungen, 9., überarbeitete Auflage 2001 Bundesministerium für Umwelt: Entwicklung der Erneuerbaren Energien, Stand Januar 2002, in: Handbuch Energiemanagement, Heidelberg 2002 (Beitrag 13102). Bundesministerium für Umwelt, Naturschutz und Reaktorsicherheit 2005: Erneuerbare Energien: Kurzinfo. In. Internet : URL: http://www.bmu.de/erneuerbare_Energien/kurzinfo/doc/3988.php. Stand Februar 2005, Abfrage vom 16.03.2005. Bundesministerium für Umwelt, Naturschutz und Reaktorsicherheit (Hrsg.): Gesetz für den Vorrang Erneuerbarer Energien vom 21. Juli 2004 - Abschätzung der Entwicklung der Stromerzeugung aus erneuerbaren Energien bis 2020 und finanzielle Auswirkungen, Berlin 2004. Hilligweg, G. : Nutzung und Einsatz erneuerbarer Energien unter ökonomischen Aspekten. In: Hake, J.Fr. u.a. (Hrsg.): Erneuerbare Energien: Ein Weg zu einer Nachhaltigen Entwicklung? Jülich 2002 , S. 108ff. Hilligweg, G./Weise, E.: Instrumente zur Förderung von Windenergie – Ein Ländervergleich. In: Brennstoff-Wärme-Kraft (BWK), 53. Jg., Heft 5/2001, S. 53ff. Hübinger, S.: Die Auswirkungen der Windenergienutzung auf den Fremdenverkehr in der Gemeinde Wangerland, Wilhelmshaven 1997. Kaufmann, A.: Aktuelle Betrachtung der Auswirkungen von Windanlagen auf das touristische Nachfrageverhalten, vorgelegt im März 2005 im Fachbereich Wirtschaft, Fachhochschule Oldenburg/Ostfriesland/Wilhelmshaven, Standort Wilhelmshaven. Luft, H.: Die wirtschaftliche Bedeutung des Fremdenverkehrs für die Stadt Varel, Gutachten im Auftrag der Kurverwaltung Nordseebad Dangast, Wilhelmshaven 1998.
+
+25
+
+Anschrift der Autoren:
+
+Prof. Dr. Gerd Hilligweg Fachhochschule Oldenburg/Ostfriesland/Wilhelmshaven Fachbereich Wirtschaft am Standort Wilhelmshaven Friedrich-Paffrath-Straße 101 D-26389 Wilhelmshaven E-Mail: hilligweg@fbw.fh-wilhelmshaven.de
+
+Prof. Dr. Stephan Kull Fachhochschule Oldenburg/Ostfriesland/Wilhelmshaven Fachbereich Wirtschaft am Standort Wilhelmshaven Friedrich-Paffrath-Straße 101 D-26389 Wilhelmshaven E-Mail: kull@fbw.fh-wilhelmshaven.de
+
+26
+
+ANHANG: FRAGEBOGEN FÜR DAS NORDSEEBAD DANGAST
+

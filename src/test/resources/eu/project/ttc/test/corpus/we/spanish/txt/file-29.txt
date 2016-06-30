@@ -1,0 +1,145 @@
+ANEXO Nº 5
+Conceptos Básicos de Energía Eólica
+
+JOVS: Evaluación Técnica Centrales Eólicas de Malabrigo y Marcona
+
+4
+
+ENERGÍA EÓLICA BÁSICA Por: Jorge Velasquez Santos Potencial Eólico aprovechable Es el recurso del viento disponible en la faz de la tierra que se pueda aprovechar mediante un sistema mecánico (turbina eólica), es el potencial natural que no es factible aprovechar el 100%, como vamos a demostrar. Cualquier masa en movimiento posee energía cinética, en este caso es el viento. El aire tiene una masa aunque con densidad pequeña, al moverse con velocidad v, tiene una energía cinética dada por : E=
+
+1 .m.v2 2
+
+(1)
+
+La densidad de corriente de aire es denominada por ρ , la energía cinética por volumen del aire a esa velocidad del viento v es : E=
+
+1 .ρ.Volumen v2 2
+
+(2)
+
+Considerando un área A que sea perpendicular a la dirección del viento tal como se esquematiza en la fig. 1., se desplaza por unidad de tiempo el volumen v.A, siendo la velocidad antes del impacto en el área A. La potencia del aire que fluye por el área A , constituye la energía cinética del viento el cual está dado por la expresión : P = Energía/t (3)
+v v.t A
+
+Fig 1 Haciendo un artificio, multiplicando y dividiendo por volumen la expresión 2, tenemos: P= 1 .ρ.(Volumen.v2/volumen).(A.v.t) / t 2 (4)
+
+Como consecuencia, la energía contenida en un flujo de viento de velocidad v está representado por la expresión :
+
+JOVS: Evaluación Técnica Centrales Eólicas de Malabrigo y Marcona
+
+5
+
+1 P = . ρ. A . v 3 2
+
+[ Watts]
+
+(5)
+
+Donde : P : Potencia eólica ρ : Densidad del aire A : Sección del flujo del viento v : Velocidad del viento La expresión (5) representa la potencia extraíble del viento y que realmente se podrá utilizar parte de ella de acuerdo al diseño del rotor del aerogenerador, además se puede observar que la potencia es directamente proporcional a la densidad del aire, por eso es que se debe tener cuidado al seleccionar el lugar de instalación, la densidad del aire al nivel del mar a 15º C es 1.225 Kg/m3 aproximadamente, es también proporcional al área , esto depende de la variación de la longitud de las, palas del rotor del aerogenerador y por último se puede observar que la velocidad del viento está afectado de una potencia al cubo, esto es, si el viento se duplicara , la potencia crece ocho veces. .
+
+v1 S1
+
+v S
+
+v2
+
+S2
+
+Fig. 2 Analizando las velocidades aguas arriba y aguas abajo , se tiene por continuidad de flujo lo siguiente:
+¿Cuánto de energía podemos extraer de viento?
+
+En este caso se considera un proceso de flujo isotérmico y sabiendo que S.V =S1.V1 = S2.V2, la fuerza que ejerce al área barrida (S) por las aspas de aerogenerador, es igual al cambio de las energías cinéticas en el lugar en donde se encuentra ubicado las aspas: Ep + 1 1 1 1 .m.v12 – (Ep + .m.v22)= .m.(v12 - v22) = .m.(v1-v2).(v1+v2) 2 2 2 2 (6)
+
+Al chocar con las aspas el viento se ve disminuido su valor debido a la interferencia, por lo que denominaremos un coeficiente “a” de interferencia, es decir, (v1- a.v1)= v , además (v1 + v 2) asumimos que v = , resolviendo las ecuaciones y reemplazamos en la ecuación (6 ) en 2
+la unidad del tiempo, encontramos la expresión de la potencia en función de “a” y (v1):
+
+JOVS: Evaluación Técnica Centrales Eólicas de Malabrigo y Marcona
+
+6
+
+P=
+
+1 . ρ. A . v1 3.4.a.(1-a)2 2
+
+(7)
+
+Para la condición de máxima potencia teórica que se puede extraer por un rotor perfecto es,
+
+d P = 0, cuando a = 1/3, la expresión (7) resulta: da
+P=
+
+1 1 . ρ. A . v1 3.4.a.(1-a)2 = 0,593. ( . ρ. A . v13) 2 2
+
+(8)
+
+El valor límite de este coeficiente teórico (0,593), es casi inalcanzable por las turbinas actuales, quizás en el futuro. El análisis de este coeficiente3, merece un capítulo a parte y no está prevista en este trabajo, en la fig.3 se presenta un esquema en donde claramente se puede observar que la potencia de la turbina solo es una parte del potencial del viento. Donde: A: Potencia total de entrada
+v (m/s)
+
+Densidad de Potencia {W /m2)
+
+A
+
+B
+
+C
+
+B: Potencia aprovechable (Teorema de Betz) C: Potencia producida por la turbina
+
+Fig. 3
+
+Como consecuencia de la ecuación (8), se puede relacionar con el coeficiente real de la máquina. Es eficiente cuando es afectado a la ecuación de la potencia, por un coeficiente ( Cp η ) ideal de cada tecnología, así: 1 P = ( Cp ). . ρ .(v)3 ……………[W/m2] 2 Donde : (9)
+
+Cp : Fracción de potencia que se puede transformarse de la potencia del viento En el caso real, la potencia aprovechable de la turbina, ya no se considera la velocidad al cubo (curva de velocidades) ,sino la potencia que varía linealmente, como se muestra en la fig. 4, es decir, entre los puntos 1,2,3 y 4 11010
+Teorema del Científico Betz, que trata del frenado en el área de captación del rotor , denominado coeficiente de interferencia.
+JOVS: Evaluación Técnica Centrales Eólicas de Malabrigo y Marcona
+3
+
+7
+
+1. Determinación de la Energía Producible Real
+
+En Malabrigo de acuerdo a los datos estadísticos se ha obtenido una velocidad promedio anual de 8.0 m/s proyectado a 30 m. de altura, la potencia disponible del recurso eólico durante el año es :
+
+Potencia {W )
+
+Curva de velocidad del viento
+
+Pn
+
+2
+
+3
+
+P
+
+P/A = 315 Watts/m2
+
+(10)
+1 0 Vi Vn 4 Vout v (m/s)
+
+Fig. 4 Este resultado indica que por cada metro cuadrado se puede extraer del viento 315 Watts, entonces es factible aprovechar un alto porcentaje de área de barrido de las aspas de un aerogenerador para obtener energía eléctrica. Pero no es posible CURVA Cp MICON M600 250/50 kW transformar toda la energía COEFICIENTE POTENCIA VS. VELO. VIENTO eólica que fluye por el área barrido por las palas en 0.600 0.500 energía mecánica, si 0.400 pudiéramos extraer toda la 0.300 energía, eso constituiría que la 0.200 velocidad del viento detrás de 0.100 las aspas sea cero, lo cual no 0.000 0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 es factible y no se obtendría ninguna potencia, ni Figura Nº 05 m/s tampoco es posible que la velocidad detrás del rotor sea igual a la de ingreso ; la potencia mecánica del rotor obedece a valores óptimos, según el científico Betz el coeficiente de potencia máximo teórico es de 0.593. Para el caso real el coeficiente de potencia (Cp)del aerogenerador de marca MICON A/S, modelo M600-250/50 kW de Malabrigo, tal como se muestra en la figura Nº 05., es decir, se puede determinar el CP por cada valor de la velocidad de viento, se deberá multiplicar la potencia aprovechable del viento por cada uno de los (Cp). Velocidad de viento : 8.0 m/s Cp : 0.44 Area barrida : 607 m2 Cp. P.Area = 0,44 . 315 . 607 = = 84 kW
+JOVS: Evaluación Técnica Centrales Eólicas de Malabrigo y Marcona
+Cp
+
+8
+
+Para este valor, el Factor de Capacidad (FC) es de : FC = 84kW = 34% 250kW
+
+Energía Generada por la Turbina
+
+La energía generada por la máquina resulta de la superposición de las curvas de frecuencia de vientos con la de potencia del generador eólico. Uno de los modelos matemáticos que semeja el comportamiento del viento de ambos lugares Malabrigo y San Juan de Marcona, es la función de Weibull.
+ƒ(v)=(k/C).(v/C) Donde: ƒ(v) C k = función de Weibull en % =Parámetro de forma en m/s =Parámetro de escala
+( k-1 )
+
+.exp(-(v/C) )
+
+k
+
+Los parámetros C y k se determina mediante cálculos estadísticos tomando como base los registros de la velocidad del viento v. Los potenciales energéticos que se puede extraer del viento, se han calculado de acuerdo a la siguiente relación:
+E = ƒ(v) . (horas) . (Potencia de la Turbina) . Nº de Turbinas
+
+Donde: E = en kWh Potencia de la turbina en kW (curva de potencia) ƒ(v) = función de Weibull en función de C y k, por cada rango de velocidad Los valores de energía ( E ) son afectados por factores de pérdidas y utilización, los resultados se aproximan a la energía real de salida. La disposición de las turbinas en el terreno dependerá del diseño de la disposición de las turbinas en el plano del bosque eólico, sin embargo, como información de base, la configuración del terrenos es del tipo arenoso y cuyo parámetro de rugosidad (Zo (m) ) se estima entre 10-4 a 10-3 m.
+
+JOVS: Evaluación Técnica Centrales Eólicas de Malabrigo y Marcona
+
+9
+

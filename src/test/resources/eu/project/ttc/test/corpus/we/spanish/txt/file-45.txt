@@ -1,0 +1,901 @@
+                           
+
+El Generador de Imanes Permanentes (GIP)
+Manual para fabricantes
+Modelo  R 7105
+
+Por: Hugo Piggott
+Scoraig Wind Electric
+
+en asociación con:  ITDG Perú y ITDG South Asia
+     
+                
+     
+     
+     
+Prólogo
+
+Esta  investigación acerca de pequeños sistemas de energía eólica para cargar baterías es el resultado de un esfuerzo cooperativo que implica a numerosos contribuyentes.
+
+El proyecto fue desarrollado por Intermediate Techonology (conocido como The Intermediate Technology Development Group o ITDG) bajo un contrato para el UK Department for Internacional Development.
+
+El proyecto internacional fue coordinado por el doctor Smail Khennas, especialista en energía de ITDG, con apoyo de Simon Dunnett. El trabajo de campo en Perú y Sri Lanka fue realizado por Teo Sánchez y Rohan Senerath con el apoyo técnico de Sunith Fernando.
+
+Hugh Piggott, un consultor técnico para el proyecto, es el principal autor de este manual del generador de imanes permanentes.
+
+Los comentarios expuestos en este manual pertenecen a los autores y  no representa necesariamente el punto de vista de las organizaciones  patrocinadoras, los revisores o los otros contribuyentes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Manual de construcción del GIP
+
+
+
+CONTENIDO
+
+1.  Introducción .................................................................................................................. 4
+
+2.  Lista de materiales y herramientas................................................................................ 8
+
+3.  Plantillas y moldes .......................................................................................................10
+
+4.  Construcción del estator.............................................................................................. 25
+
+5.  Construcción del rotor................................................................................................. 31
+
+6.  El montaje.................................................................................................................... 36
+
+7.  Pruebas y conexiones................................................................................................... 41
+
+8.  Información adicional.................................................................................................. 49
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1.- Introducción
+
+Este manual describe cómo construir un generador de imanes permanentes (GIP). También se puede llamar alternador porque genera corriente alterna (CA). No generará corriente alterna  de tensiones elevadas o potencia. Genera bajo voltaje, corriente alterna de tres fases y la pasa a corriente continua (CC) para poder cargar una batería de 12V.
+
+¿De qué está hecho este GIP?
+
+figura 1: despiece del GIP
+                 
+El GIP (ver figura 1) consta de:
+·  Una columna y eje de acero
+·  Un estator que contiene bobinas de alambre
+·  Dos rotores magnéticos
+·  Un rectificador
+
+El estator contiene seis bobinas de alambre de cobre insertadas en la resina y  fibra de vidrio. Este estator se monta en la columna, no se mueve. Los alambres que salen de las bobinas toman la electricidad para el rectificador, que se transforma de CA a CC para cargar la batería. El rectificador se monta en un disipador de calor de aluminio  para que no se sobrecaliente.
+
+Los rotores de imanes se montan en cajas de bolas que giran sobre el eje. El rotor trasero está detrás del estator y cercado dentro de él. El rotor frontal  está fuera, se fija al trasero a través de unos largos espárragos que pasan por un agujero del estator. Las palas de la turbina de viento se montan en estos espárragos. Girarán los rotores de imanes y moverán los imanes de enfrente de las bobinas. El flujo magnético pasa desde un rotor al otro a través del estator. Este movimiento del flujo magnético es lo que produce la energía eléctrica. 
+Construcción del GIP
+
+Este manual describe cómo construir el GIP. Léalo bien antes de empezar.
+
+En la sección 2 se muestra una lista de materiales y herramientas para el trabajo.
+
+La sección 3 explica cómo construir las plantillas y los moldes que vamos a necesitar. Puedes construir más de un GIP con ellos. Hay muchas maneras de hacer las plantillas y moldes, pero este manual sólo explica una forma de hacerlos.
+
+La sección 4 está dedicada al estator. Se describe cómo enrollar las bobinas de cobre esmaltado y cómo colocarlas en la resina, utilizando las plantillas y los moldes.
+
+La sección 5 indica cómo construir los rotores de imanes usando bloques magnéticos y discos de acero, muestra cómo montarlos en una mezcla de resina.
+
+La sección 6 indica cómo montar los elementos para obtener el GIP completo. Explica cómo hacer las partes mecánicas, cómo hacer el balanceado (equilibrado) de los rotores y qué hace falta para conectar el cableado del estator.
+
+En la sección 7 se explican las pruebas que se le deben hacer al GIP. Contiene procedimientos para comprobar que está correctamente equilibrado y listo para ser usado. Describe las opciones para la conexión de la salida eléctrica. También explica cómo conectar el GIP a la batería.
+
+La sección 8 contiene información adicional sobre el uso de resinas de poliéster y sobre el uso del GIP para generación hidroeléctrica.
+
+
+¿Qué puede hacer este GIP?
+
+Este GIP está hecho para pequeños generadores eólicos (ver figura 2). Para construir un generador eólico completo, necesitas además:
+· una torre: quizás un tubo de acero, con unos tirantes para vientos (cuerdas),
+· una cabeza giratoria en la parte alta de la torre,
+· una cola para mantenerlo de frente al viento,
+· un juego de aspas para hacerlo girar.
+
+La columna del GIP se atornilla a la cabeza giratoria. Las aspas se fijan en la parte frontal del GIP. La cabeza giratoria y la cola deben fabricarse de tal forma que el generador eólico se gire ante vientos fuertes, así quedará  protegido. (Este manual no describe las aspas, la torre ni la cabeza giratoria).
+        
+
+El GIP trabaja a baja velocidad de rotación. La gráfica muestra la salida en potencia del GIP, cargando una batería de 12 V. A 420 rpm genera 180 watios, suministrando 15 A  a 12 V (15 A x 12 V = 180 W).
+
+A mayores velocidades, el GIP puede generar más potencia. Pero a intensidades elevadas puede ocurrir que se sobrecalienten las bobinas y que la eficiencia sea peor según la corriente se vaya haciendo mayor. Para velocidades más altas es mejor cambiar las bobinas del estator, bien usando diferente grosor en el cable, o bien cambiando la forma en que están conectadas.
+
+Si el GIP se va a utilizar para velocidades altas es mejor usar cable más grueso, ya que puede soportar más corriente sin calentarse tanto. Usar cable de mayor grosor implica menos vueltas en las bobinas, lo que significa que el GIP no trabajará a baja velocidad.
+
+Para usar el mismo GIP para bajas y altas velocidades hay que cambiar las conexiones. Hay dos formas de conectar los cables del estator al rectificador. Pueden ir conectados en estrella o en triángulo. En el punto 7 se describen detalladamente las conexiones en estrella y en triángulo.
+
+En la figura 3 se muestra el gráfico potencia-velocidad. La conexión estrella empieza a trabajar a baja velocidad (170 rpm). La conexión triángulo produce más potencia, pero sólo a altas velocidades. La conexión estrella funciona bien a velocidades de viento muy bajas y la conexión triángulo es mejor para velocidades elevadas.
+Una versión más grande de GIP sería capaz de proporcionar mayor potencia a menores velocidades.
+
+figura 3: gráfico potencia/velocidad
+
+
+
+
+Atención
+Cuando construyas y ensambles el GIP, fíjate en que los imanes no queden con holgura. Puede ocurrir bajo condiciones extremas. Si los imanes están flojos y rozan el estator pueden provocar algún desperfecto en el GIP.
+· Sigue las instrucciones para moldear los rotores de imanes, no pegues sencillamente los imanes a los discos de acero.
+·  No golpees los rotores de imanes con el martillo durante el montaje.
+·  Pon atención en que quede al menos un espacio de 1mm entre los imanes y el estator, por ambos lados. (Para cargas pesadas, o velocidades elevadas, mantén un espacio mayor).
+·  No permitas que GIP que gire a más de 800 rpm en una turbina eólica. (Cuando la turbina eólica cabecee, las fuerzas giroscópicas flexionarán el eje y los imanes pueden tocar con el estator).
+·  No amarres el ensamblado de las palas del rotor directamente en el disco o en cualquier punto que no sean los espárragos. Móntalo únicamente sobre los espárragos y tuercas que atraviesan el disco.
+·  Cuando estés montando el GIP sobre la cabeza giratoria de la turbina eólica, mantén la espina o columna del GIP verticalmente hacia arriba, no en sentido horizontal.
+
+
+2. Lista de materiales y herramientas
+
+materiales para los GIPsnº  por GIPtamañomasa 
+total (g)suministros para fibra de vidrioresina de poliéster (premezclada con acelerador)2700catalizador (peróxido)50polvo de talco para relleno1200malla de fibra de vidrio (1 onza / pie cuadrado) (305 g/m2)1 m2300resina de pigmento colorante (si se quiere)50plastilina o masillaacero inoxidablealambre de acero inoxidable2 mm x 10 m200imanesimanes en bloques de ferrita de grado 3 (premagnetizados)1620 x 50 x 50 mm4000material eléctricoalambre esmaltado para devanados14 AWG o 1,7 mm
+(o 17 AWG ver pág. 44)3000alambre flexible (de tamaño alrededor de 14 AWG )el mismo tamaño x 6 msoldador y manguitos para las conexionescinta aislante de sobre 15 mm de anchorectificadores puente225 A 200 V media ondadisipadores para los rectificadores250acerotubo de sección rectangular (RHS) para la espina1380 x 50 x 25 x 4 mm1100planchas de discos (u octógonos) de imanes26 mm x 305 mm de diámetro exterior6000varilla roscada de 10 mm 1000 mm500tuercas de 10 mm32300arandelas de 10 mm16varilla roscada de 8 mm 400 mm125tuercas de 8 mm850tuercas y tornillos de 5 mm para los rectificadores25 mm x 20 mmeje25 mm x 150 mm500elementos mecánicoscaja de rodamientos para ajustar al eje, tal y como se describe en la sección 611250
+
+
+
+
+Materiales para moldes y plantillas
+
+- Tablas de piso compuestas o de composite (posibilidad de utilizar otras alternativas) y cola para madera.
+- Papel de lija, pulimento de cera (barniz de poliuretano y agente separador PVA).
+- Pinceles y brochas, así como disolvente para limpiarlos.
+- Contrachapado de 13 mm para las plantillas y los moldes de las bobinas y del centro del estator.
+- Tubo o redondo de acero para la máquina de enrollar las bobinas.
+- Pequeños trozos de chapa de acero o de lámina gruesa de metal.
+
+Tornillos (con tuercas y arandelas)diámetrolargopara2 con tuercas de mariposa 6 mm60 mmenrolladora de bobinas410 mm25 mmequilibrado con plantillas112 mm150 mmmolde del estator
+
+Herramientas
+
+- Gafas de seguridad, mascarilla, guantes, etc, según sea necesario.
+
+- Banco de trabajo con tornillo de banco.
+- Máquina de soldar.
+- Esmeril y/o amoladora (de ángulo).
+- Sierra para metal, martillo, punzón, cincel.
+- Compás, metro, transportador de ángulos.
+- Llaves fijas de: 8, 10, 13, 17, y 19 mm (dos de cada).
+- Bandeador y machos de M10 para los agujeros exteriores en los rotores de imanes.
+- Alambre de latón para calibrar la altura de los imanes.
+
+- Taladro de columna.
+- Brocas de 6, 8, 10, y 12 mm.
+- Sierras de corona de 25 mm y 65 mm.
+
+- Torno para madera, o un sustituto como se explica en el punto 3.
+- Formón para tornear la madera.
+- Sierra para madera.
+
+- Balanza para pesar la resina. Dispensador para el catalizador, cubos de plástico, tijeras.
+
+- Estañador, estaño, cortador de alambre, cuchillo afilado.
+3. Patrones y moldes
+
+Esta sección describe cómo hacer los patrones y los moldes para construir un GIP (Generador de Imanes Permanentes). Una vez estén fabricados, pueden  usarse de nuevo para hacer más GIPs.
+
+
+
+Máquina de enrollar bobinas
+
+El estator del GIP  tiene seis bobinas de alambre de cobre (ver figura 4)
+
+figura 4: bobina
+                      
+
+Las bobinas se enrollarán en un molde de contrachapado. El molde va montado al final de una manivela, entre dos piezas de apriete.
+
+· Haz una manivela que pueda ser girada a través de un mango (ver figura 5)
+
+figura 5: manivela
+                                  
+· Corta una pequeña chapa de acero de 60 x 30 x 6 mm (medidas orientativas) y fíjala de modo seguro o suéldala al extremo de la manivela como se muestra en la figura 6.
+· Barrena 2 agujeros de 6mm de diámetro y 40 mm entre centros, centrados en el eje.
+· Corta 3 piezas de contrachapado como se indica en la figura 7.
+
+figura 6: chapa de acero
+                              
+
+figura  7: molde para bobinas y piezas de apriete
+
+
+
+
+El molde tiene 50 x 50 mm por 13 mm de ancho, las esquinas son redondeadas. Las dos piezas de apriete miden 125 x 125 mm. Hay unos cortes de 20 mm de ancho en la parte superior e inferior de cada una de las piezas de apriete. Los cortes son para sujetar con cinta aislante las bobinas, así podrán encintarse antes de retirarlas del molde.
+
+· Apila las piezas con los cortes alineados (ver figura 8) y haz los barrenos para los tornillos de montaje. Los barrenos tienen 6 mm de diámetro y 40 mm entre centros. Usa un taladro de columna para hacer los agujeros exactamente perpendiculares al contrachapado.
+
+
+figura 8: elaboración de  los barrenos
+
+
+
+· Pasa dos tornillos a través de los barrenos de la chapa plana y enróscalos en las piezas de apriete con el molde de las bobinas entre ellas. Si es posible, usa tuercas de mariposa  (ver figura 9).
+
+figura 9: ajuste del molde para bobinas y piezas de apriete
+
+
+         
+
+
+
+Patrones o plantillas para los rotores
+
+Patrón o plantilla de DCP para hacer los barrenos
+Los rotores de imanes van montados sobre una caja de bolas (ver figura 10). La caja tiene una brida con barrenos. Por ejemplo, se podrían hacer cuatro barrenos en un diámetro de círculo de paso (DCP) de 102 mm (4 pulgadas), se puede elegir otra disposición dependiendo del tipo de caja de bolas que se utilice. En este manual se va a utilizar un DCP de 102 mm.
+
+figura 10: DCP de la caja de bolas
+     
+
+     
+El patrón de DCP se usará para barrenar y equilibrar los rotores. Los barrenos deben marcarse y barrenarse de forma muy precisa (ver figura 11).
+
+·  Corta una pieza de 125 x 125 mm.
+·  Dibújale las diagonales y marca el centro exacto con un granete.
+·  Pon el compás a 51 mm de radio (o ajústalo a cualquier otro DCP). Dibuja un círculo.
+·  El diámetro del círculo es el DCP de los barrenos de la caja de bolas.
+·  Granetea en los puntos donde la línea se cruce con el círculo.
+·  Pon el compás a 72 mm y marca dos puntos que se encuentran a esa distancia de los dos puntos anteriores en el círculo (si tu DCP es diferente, esta medida no será de 72 mm, encuentra la medida correcta por el método de prueba-error).
+·  Haz los 4 barrenos que van separados 72 mm. Inicia el barreno con una broca fina y luego pasa otra más gruesa.
+
+figura 11: marcar y barrenar el patrón de DCP
+
+                          
+
+     
+Patrón o plantilla para la colocación de los imanes (ver figura 12)
+Esta plantilla sirve para colocar los imanes en el sitio correspondiente de los discos de acero. Sólo se necesita una plantilla, hazla de una hoja de 250 x 250 mm de aluminio o de contrachapado, pero no de acero. 
+
+figura 12: la plantilla de posicionamiento de los imanes
+
+
+
+·  Marca el centro de la pieza.
+·  Con el mismo centro, dibuja tres círculos de diámetros  50, 102 y 200 mm.
+· Dibuja un par de líneas rectas paralelas que sean tangentes al círculo de 50 mm de diámetro, como se indica en la figura anterior. 
+·  Dibuja 3 pares más de líneas rectas a 45º y 90º del primer par.
+·  A partir de estas líneas, marca las posiciones de los imanes y recorta la plantilla por las líneas más gruesas, tal y como se muestra en la figura anterior.
+·  Dibuja una línea que una los centros de dos imanes opuestos.
+·  Pon la guía de DCP encima del círculo de 102 mm y haz cuatro barrenos para que coincidan con los cuatro de los discos de acero.
+
+
+Elaboración de los moldes
+
+Elabora los moldes para las formas del rotor y del estator, pueden  tornearse en madera o aluminio. Otro método puede consistir en hacer tapas de yeso o arcilla sobre una rueda, como una olla. La forma de la tapa debe ser la del exterior del estator. Luego haz una pieza en fibra de vidrio sobre la tapa. La superficie de cada pieza debe ser completamente regular.
+
+Los moldes deben ser resistentes y lisos. No es fácil separar los moldes de las piezas, normalmente se tiene que utilizar un martillo para golpear.
+
+Es buena idea enrollar una bobina (apartado 4) antes de hacer el molde del estator. Esta bobina debe encajar perfectamente en el molde.
+
+Una forma de hacer los moldes es mediante planchas o tablas de madera que se colocan apiladas y después se tornean.
+
+Molde exterior del estator
+·  Corta varios discos de plancha de madera (ver figura 13) de aproximadamente 500 mm de diámetro.
+
+figura 13: discos
+        
+
+
+·  Para hacer los anillos,  corta en todos los discos  (menos uno) un agujero circular de 360 mm de diámetro (ver figura 14).
+
+figura 14: anillos
+                        
+·  Dibuja un círculo de 360 mm de diámetro en el disco que quedó sin cortar.
+·  Barrena un orificio de 12 mm en el centro de este disco para ayudar en el centrado.
+·  Pega los anillos encima del disco que no has cortado y haz una torre (apilado) de 60 mm de profundidad. Echa bastante pegamento entre los anillos.
+· Recorta un pequeño disco de contrachapado de 140 mm de diámetro y 15 mm de espesor y  haz un barreno en el centro de  12 mm. 
+·  Pasa un tornillo de 12 mm de diámetro a través de los dos barrenos, coloca y pega el disco pequeño en el centro exacto del hueco. Echa bastante cola en el borde del disco.
+
+figura 15: torre (apilado)
+                   
+· Monta otra pieza de madera en un torno, un motor o en el soporte de la rueda de un vehículo pequeño (como un taxi de 3 ruedas); será el  soporte para el molde.
+·  Gira el soporte y usa un lápiz para hacer un círculo muy pequeño en el centro.
+·  Barrena un agujero de 12 mm  en ese centro. Mantén la barrena paralela al eje.
+·  Sujeta la torre encolada al soporte para el molde, usa un tornillo de 12 mm de diámetro para centrarlo. Coloca cuatro tornillos para madera a través del disco y en el interior del soporte.
+·  Comprueba que la cara del molde se mueve correctamente. Puedes hacerlo sosteniendo un lápiz pegado al molde mientras éste gira. Donde marque el lápiz, la cara está levantada. Afloja los tornillos y en el lado opuesto a donde marque el lápiz, mete trozos de papel entre el soporte y la torre o apilado. Aprieta los tornillos e inténtalo de nuevo.
+figura 16: torneado de un molde
+
+         
+
+Dale forma al molde con un escoplo. Pon una mascarilla para no respirar el polvo. Ten cuidado con las prendas flojas, te puedes enganchar mientras el molde está girando.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+·  Realiza un chaflán en el borde interior de la torre (figura 17).
+·  La inclinación del chaflán es de aproximadamente 7º.
+·  El diámetro total en el borde exterior es de 380 mm.
+·  El diámetro en el borde interior es de 360 mm.
+·  La esquina interior debe ser suave, con un pequeño radio.
+
+
+figura 17: la forma del molde del estator
+
+
+
+·  Tornea el disco interior, haz un chaflán con las esquinas redondeadas. La parte interior tendrá  130 mm de diámetro (ver figura 18).
+
+
+
+
+
+figura 18: disco central
+
+
+·  Coloca una bobina contra la cara del molde y comprueba que cabe y asienta bien; si no es así, el hueco debe hacerse un poco más grande, o el disco del centro un poco más pequeño. Al final, el centro de la bobina debe estar a 250mm del centro del molde.
+·  Quita el molde del torno o del motor.
+
+figura 19: barrenos en el molde
+                                                       
+·  Realiza cuatro barrenos en la parte central, serán útiles para separar los dos moldes (figura 19). Atornilla algunos pedazos pequeños de contrachapado sobre la superficie interior del molde para hacer los pies.
+Molde interior del estator
+   ·  Corta discos de  370 mm de diámetro.
+   
+   figura 20: molde interior
+   
+           
+
+
+·   Haz un agujero de 12 m en el centro de cada disco.
+·  Apila los discos y pégalos (figura 20), utiliza un perno o tornillo de 12 mm para centrarlos.
+·  La torre o apilado deberá  tener como mínimo  45 m de grueso, mejor que tenga 50 mm.
+·  Realiza un chaflán de unos 20 grados, redondea  las esquinas, de modo que el diámetro se reduzca de 368 mm a 325 mm.
+·  Comprueba que entre el molde externo e interno quedan 6 mm de separación todo alrededor. 
+· Dibuja dos líneas en la cara más grande del molde, con una separación de 340 mm (figura 21).
+·  Corta dos caras planas, según lo mostrado en la figura 21.
+
+
+
+
+
+figura 21: caras de corte en el molde interno
+
+             
+			
+Estas dos caras formarán un bastidor más grueso alrededor de los pernos-soporte de montaje.
+
+
+Moldes del rotor de imanes
+El GIP necesita dos rotores de imanes. Sólo se necesita un molde, pero la producción será más fácil si hay dos moldes, así se podrán hacer dos rotores a la vez.
+El molde externo (figura 22) es similar al molde externo del estator, pero más simple.
+
+figura 22: molde del rotor
+
+          
+Utilice la plantilla de DCP para realizar cuatro barrenos que servirán para emparejar los agujeros en los discos del imán. 
+Cada rotor magnético también necesita un molde interno del disco (figura 23), con el mismo patrón de cuatro barrenos.
+
+figura 23: disco interno del rotor de imanes
+
+
+Todos los moldes se lijan hasta conseguir una superficie muy lisa,  se aplica un acabado con  pulimento o cera de poliuretano. No utilice la pintura ordinaria para los moldes, por causa del calor,  la pintura se arrugará y se obtendrá un mal aspecto en el bastidor.
+
+molde del rotor una vez  realizado y utilizado:
+                                                          
+
+
+
+
+
+
+Plantillas para el estator
+
+Plantilla para los espárragos del estator (ver figura 24)
+El molde del estator necesita cuatro pernos-soporte de 8 m. Mientras la resina no endurece, se necesita una plantilla para mantener estos pernos en el sitio. La plantilla se elabora con madera, tendrá  380 x 50 x 25mm. 
+·  Haz una marca en el centro exacto de la cara más grande (véase figura 24).
+·  Utiliza divisores o un  compás para trazar arcos de radio a 178 mm desde esta marca.
+·  Haz cuatro granetazos en  estos arcos, irán separados a 10 mm del borde y 30mm entre centros (ver figura 24).
+·  Realiza cuatro barrenos de 8 mm de diámetro (probar primero con un tamaño de broca más pequeño), los barrenos deben ir perfectamente escuadrados.
+
+figura 24: plantilla para los espárragos del estator
+    
+
+Plantillas de papel  (ver figura 25)
+La fibra de vidrio chopped strand mat (CSM) debe utilizarse para el estator. Elabora  plantillas de papel para saber cómo cortar los pedazos de CSM. Después coloca las plantillas sobre el tejido o fibra (CSM), dibuja su contorno y recórtalas.
+
+figura 25: plantillas de papel para cortar la fibra de vidrio
+
+               
+
+
+
+
+
+
+
+
+
+
+
+
+4. Construcción del estator
+
+En este apartado se explica cómo construir un estator utilizando las plantillas y  moldes del punto 3. Es  buena idea enrollar una bobina antes de hacer los moldes del estator, para poder probar el molde y comprobar si ajusta correctamente.
+
+Elaboración de las bobinas
+
+·  Coloca el carrete de alambre de la bobina tal y como muestra la figura 26. El alambre debe formar una curva  con forma de S .
+
+figura 26: forma correcta para la alimentación de alambre
+            	   
+·  Dobla el  alambre 90 grados en un punto a 100 mm del extremo. No curves el alambre en ningún otro punto, mantenlo recto, si se dobla no conseguirás una bobina compacta.
+·  Pon la curva del alambre en la muesca.
+·  Envuelve la extremidad del alambre (sin apretar)  alrededor de uno de las tuercas de mariposa.
+· Agarra el alambre entre el carrete y la devanadera en un pedazo de trapo para mantenerlo apretado.
+·  Gira la manivela del cigüeñal.
+La primera vuelta se apoya contra la cara donde sale el extremo. Las otras vueltas se apoyan sin cruzarse por encima. Construye la bobina hacia arriba y en capas uniformes. Cuenta  el número de vueltas, suelen ser 100 vueltas.
+·  Cuando la bobina esté completa, pon un pedazo de cinta aislante debajo de la bobina en ambos lados y átalo firmemente. Corta  el alambre a una distancia de 100 mm lejos de la bobina.
+·  Quita la bobina y enrolla cinco más de la misma manera.
+·  Coloca las bobinas en una tabla de modo que queden todas exactamente en la misma posición (ver figura 27). Comprueba que el extremo de comienzo está en la parte superior y no se oculta bajo la bobina.
+·  Numera las bobinas 1-6, escribiendo su número sobre la cinta que las tapa.
+
+figura 27: las bobinas deben colocarse en la misma posición
+           
+
+· Raspa el esmalte del alambre desde el extremo hasta una distancia de 20 mm, de forma que quede el cobre brillante (para raspar puedes utilizar una lámina de sierra que tenga el borde afilado, se puede afilar con una amoladora).
+·  Suelda estos extremos a  los del alambre flexible (ver figura 28).
+
+figura 28: soldando las colas  de flexión
+                      
+
+
+
+Longitudes recomendadas para las colas flexibles:
+     bobinas 1 y 6  800 mm 
+     bobinas 2 y 5  600 mm 
+     bobinas 3 y 4  400 mm 
+
+·  Cubre los empalmes (uniones), no dejes ningún trozo de cobre desnudo.
+·  Etiqueta las colas con el número y la letra A o B de la bobina. A es para el comienzo de la bobina, B es  para el final. No los mezcles.  O utiliza dos colores: negro para los extremos de comienzo y blanco para los finales.
+·  Pon las bobinas hacia fuera en el molde externo.
+·  Comprueba que asientan y caben bien y que los extremos son lo suficientemente largos para permanecer dentro del molde hasta el punto de la salida entre las bobinas 3 y 4. Es importante poner todas las bobinas con la misma cara hacia arriba.
+
+figura 29: las bobinas en el molde
+
+                   
+
+Preparaciones para el bastidor del estator
+
+El bastidor del estator contendrá:
+   ·  seis bobinas
+   ·  resina de poliéster y polvo de talco (y quizás pigmento)
+   ·  fibra de vidrio (CSM)
+   ·  cuatro pernos-soporte de 8mm x 100mm elaborados de varilla roscada.
+Además, asegúrate de tener los moldes correctamente preparados. Lijados, limpios, encerados... si tienes agente separador PVA, utilízalo.
+Con ayuda de las plantillas, corta piezas de fibra de vidrio CSM. Habrá dos discos circulares para colocar en el molde exterior. Necesitas suficientes trozos de tira curvada para cubrir la pared interior del molde exterior con una doble capa de CSM. Solapa los trozos unos 25 mm. 
+
+Cuando te hayas asegurado de tener todo a mano, comienza el procedimiento de aplicación de la resina. Es buena idea leer primero el  procedimiento y analizar lo que no entiendes antes de empezar. Hay anotaciones sobre la resina de poliéster en el punto 8.
+
+El procedimiento de aplicación de la resina
+
+La figura 30 muestra una forma de pesar la resina y el polvo de talco. El polvo de talco sólo se utiliza cuando se quieren obtener capas de gran espesor, para prevenir el sobrecalentamiento y para espesar la mezcla. Para las diferentes mezclas se usan diferentes cantidades, sigue paso a paso las instrucciones. 
+
+figura 30 : mezcla de resina
+
+               
+
+Mezcla la resina con el catalizador de forma meticulosa y lenta  para evitar que coja burbujas de aire. Añade el polvo de talco tras haber mezclado el catalizador. Cuando la resina esté mezclada utilízala toda junta. Tras unos minutos en la cubeta de mezcla se calentará y empezará a endurecerse.
+
+Usa la cantidad exacta de catalizador que se indica. Para aplicar la resina al molde, se necesita menos catalizador que para su uso normal en capas. Si la temperatura ambiente es elevada, utiliza menos catalizador y para capas finas de resina también. En caso de duda, realiza varias mezclas de prueba, para averiguar la cantidad que se necesita de catalizador. 
+Si no tienes PVA agente separador, no limpies la vaselina del molde frotando con cepillos. Aplica la resina con una acción golpeante.
+
+·  Coloca el molde exterior sobre una mesa de trabajo con papel de periódico por debajo.
+· Mezcla 200 g de resina con 3 cm3  de catalizador (y si fuese necesario 15-30 cm3 de pigmento colorante). No utilices polvos de talco en las dos primeras mezclas.
+·  Aplica la resina por todo el interior de molde exterior. No eches resina en lo alto de la isla central.
+·  Pon  una capa de tejido de fibra de vidrio (CSM)  y aplica más resina sobre ella, con  movimientos para sacar las burbujas. Extiende y trabaja bien la resina  sobre el CSM.
+·  Aplica una segunda capa de CSM a la pared, pero deja un disco para más tarde.
+· Coloca las bobinas en el molde. Los extremos de los alambres saldrán por una zona situada entre las bobinas 3 y 4.
+· Mezcla otros 100 g de resina con 2 cm3 de catalizador. Viértela sobre los alambres de las bobinas de modo que queden empapados. Evita hacer charcos de resina.
+· Mezcla otros 600 g de resina con 9 cm3 de catalizador y 600 g de polvos de talco. Vierte la mezcla entre los espacios que hay entre las bobinas. La resina debería  rellenar el molde exterior hasta que esté nivelado con la isla central.
+· Agita el molde vigorosamente para eliminar las burbujas de aire. Los movimientos rotativos y las vibraciones ayudaran a que se asiente la resina y facilitarán la ascensión de las burbujas. Lava bien la brocha con disolvente.
+·  Pon el molde interior dentro del exterior y ajusta el tornillo de 12 mm que pasa a través de ambos. Mete el cableado, ordenadamente, en el espacio que queda entre los moldes. En un lugar plano del molde interior está la parte por donde los cables van a salir del estator. La resina hará ascender los laterales. Puede que alguna resina se derrame por fuera.
+· Si fuese necesario, vierte suavemente resina en el espacio entre los moldes hasta que ascienda a un nivel cercano a la parte alta del molde hembra. Puede que tengas que mezclar otros 100 g de resina con 1.5 cm3 de catalizador para poder hacerlo. Toma nota de las cantidades de resina  usadas para la próxima vez.
+· Coloca la plantilla (para los espárragos, figura 24) sobre el molde interior, con uno de sus extremos sobre las colas  del cableado. Aprieta fuertemente el perno de 12 mm con una tuerca. Inserta los cuatro pernos de 8 mm en los barrenos con tuercas en su parte superior. Los pernos deberían sumergirse en resina aproximadamente hasta la mitad de su longitud.
+ 
+                     
+
+figura 31: ensamblaje de los elementos  del estator
+
+
+El ensamblaje está completo. El conjunto debería irse calentando y endureciéndose con el paso de las horas. Si la resina no comienza a fraguar en unas horas, coloca el conjunto en un sitio cálido para acelerar el proceso.
+Cuando la resina esté completamente dura, saca la mezcla endurecida del molde. Sé todo lo paciente y cuidadoso que puedas. Saca los pernos de la plantilla. Da golpecitos en los dos moldes por separado, usando un perno en cada uno de los agujeros alrededor del agujero central. Golpea  por fuera del molde exterior dándole la vuelta y golpeando la esquina del molde suavemente contra el suelo . 
+5 .-Construcción  del rotor
+
+El rotor de imanes también se elabora con resina. Existe un procedimiento posterior para ensamblar las partes. Primero reunimos las placas magnéticas, los imanes, el cable de alambre inoxidable,  etc,  tal y  como se describe a continuación.
+ 
+ Placas magnéticas
+
+Cada rotor de imanes está construido a partir de un disco de acero de 6 mm de espesor (ver figura 32). No utilices aluminio o acero inoxidable para hacer el disco. Los discos deben estar hechos de material magnético. El disco deberá barrenarse para poder montarlo en el núcleo. En este manual, el núcleo tiene cuatro barrenos  de 10 mm de diámetro cada uno inscritos en  una circunferencia de 4 (102 mm) de DCP. Si se eligiese un tipo de núcleo diferente, los moldes y las plantillas  deben coincidir con él .
+
+En el centro del disco hay un barreno de 65 mm de diámetro. También habrá cuatro barrenos atravesados por pernos de M10,  situados  entre las posiciones magnéticas e inscritos en una circunferencia de 220 mm de DCP. Atornilla cuatro varillas roscadas de M10 de 20 mm de longitud  en los barrenos correspondientes. Estas piezas se unirán a la resina y ayudarán a asegurar el colado.
+
+figura 32: disco de rotor de imanes
+          
+Las placas magnéticas deben estar planas, no combadas. No es fácil cortar la circunferencia exterior sin combar la placa . Puedes usar una guillotina para cortar la placa de acero con forma de octógono (ver figura 33), sin alabear la placa. Es otra alternativa para obtener el disco del rotor. Primero cortas un cuadrado, a continuación inscribes en él un circulo, luego trazas los ocho lados del octógono dividiendo el círculo en sectores de 45º y uniendo los extremos. Cada lado de la figura debe medir 116 mm.
+Los imanes irán situados en los lados del octógono .
+ 
+figura 33: forma alternativa: un octógono
+     
+El agujero central se hace con una corona o puede recortarse en un torno.
+Afila los discos de acero hasta que estén brillantes y limpios y luego ponlos en el molde para echar la resina. Elimina con alcohol cualquier resto de grasa.
+
+Imanes
+
+Hay ocho imanes en cada rotor. Cada imán tiene un polo norte y un polo sur ( figura 34).
+
+figura 34: polos de los imanes
+
+        
+
+Ten cuidado cuando manipules los imanes. Pueden dañar disquetes, cintas de música, tarjetas de crédito y otros almacenamientos magnéticos. Sepáralos deslizándolos lateralmente. Se atraen entre sí con gran fuerza.  Ten cuidado de que no se peguen de golpe, pueden romperse. Nunca utilices un martillo para el ensamblaje del GIP. Podría romper un imán o la resina que lo mantiene. 
+
+Las superficies frontales de los imanes en el disco deben alternarse N-S, N-S....  El método siguiente sirve para comprobar que lo estás haciendo correctamente. De cada vez se coloca un imán manteniéndolo de forma que repela al anterior (ver figura 35). Sitúalo sin  darle la vuelta. Cuando todos están colocados comprueba con otro imán: será atraído, repelido, atraído, repelido, por cada imán en el círculo.
+figura 35: colocar los imanes
+     
+Los dos rotores de imanes deben atraerse cuando los agujeros de montaje estén alineados. Comprueba que los imanes próximos a los barrenos son distintos de los que están próximos a los barrenos en el otro rotor (ver figura 36).
+
+figura 36: los dos rotores no son iguales
+     
+
+Alambre de acero inoxidable
+
+Cuando el GIP esté girando, los imanes  tratarán de desprenderse de los rotores. Existe una gran fuerza centrífuga que empuja los imanes para que éstos salgan volando. Cuando empezamos a construir estos GIPs, los imanes sencillamente iban pegados a los discos de acero. Cuando los GIPs giraban rápido los imanes se desprendían y los generadores eólicos quedaban desechos.
+
+Ahora  empotramos  los imanes en la resina. La resina sola no es suficientemente resistente como para mantener los imanes. Debe ser reforzada. Enrolla alambre alrededor de la parte exterior del rotor de imanes para mantenerlos en su sitio. El alambre de acero es suficientemente fuerte, pero el acero podría tomar el magnetismo de los imanes. Usa acero inoxidable porque no es magnético y no perturbará el efecto de los imanes. El alambre de acero inoxidable se utiliza en barcos de pesca.
+
+Antes de usar la resina coloca los elementos en seco. Dale cinco vueltas al alambre inoxidable alrededor del exterior de los imanes y córtalo con un cincel o un esmeril. Encíntalo por varios sitios de forma que permanezca en una bobina, listo para ser colocado más tarde.
+Procedimiento para aplicar la resina en el rotor
+
+Antes de empezar, comprueba que todo está listo:
+·  los moldes están preparados con vaselina u otro agente separador
+·  los imanes y los discos de imanes están limpios y brillantes (sin grasas)
+·  16 tiras de CSM están listas para colocarse entre los imanes
+·  el alambre de inoxidable está cortado a medida y encintado
+·  la plantilla de posicionamiento de los imanes está lista
+
+Las cantidades de resina mencionadas en este procedimiento son suficientes para dos rotores de imanes.
+
+figura 37: disposición del molde del rotor de imanes
+     
+
+· Coloca cuatro tornillos a través de los barrenos en el molde exterior, desde la parte inferior (ver figura 37). Coloca un disco de acero en el molde exterior. Pon el molde interior encima. Comprueba el achaflanado y sitúa la cara menor abajo, de forma que pueda ser fácilmente retirado tras la aplicación de la resina.
+· Mezcla 200 g de resina con 3 cm3 de catalizador. Extiende la mezcla sobre el disco de acero. Si quieres, añade 20 g de pigmento colorante . Mezcla 100 g de polvo de talco con lo que sobró de la resina. Vierte esta mezcla sobre el borde del disco hasta que llene el hueco, nivelando con la parte superior del disco.
+
+· Pon la plantilla de posicionamiento de imanes sobre los tornillos. Sitúa los imanes sobre el disco de acero, dentro de la plantilla. Vigila que los polos de los imanes alternen (norte, sur, norte, sur...). Antes de poner cada imán sobre el disco comprueba que la parte inferior del imán es repelida por el que tiene al lado (figura 35). Cuando estén todos los imanes, retira la plantilla de posicionamiento y úsala para el siguiente rotor de imanes. Recuerda: posiciona los imanes de forma diferente, de modo que cada rotor atraiga al otro. No quietes los imanes de su posición, o se deslizarán hacia los otros debido a la atracción magnética.
+
+· Ponles tuercas a los cuatro tornillos y aprieta el disco central contra el disco de acero.
+
+· Mezcla 500 g de resina con 7 cm3 de catalizador. Añade 300 g de polvos de talco. Tiende pequeñas tiras de CSM entre los imanes y en el hueco del borde. Añade la resina hasta que el CSM esté empapado. Golpéala o hazla vibrar para eliminar las burbujas.
+
+· Tiende el rollo de acero inoxidable sin apretarlo alrededor de la parte exterior de los imanes, sin que sobresalga del borde del molde. No permitas que el alambre quede por debajo de los imanes. Deja que se asiente sobre el CSM. Controla que no se muevan los imanes.
+
+· Mezcla 500 g de resina con 7 cm3 de catalizador. Añade 300 g de polvos de talco. Llena los espacios entre los imanes hasta que la resina alcance el borde del molde. 
+
+Deja endurecer la resina de los rotores (bastantes horas) antes de retirarla de los moldes. Sé paciente cuando retires los rotores de los moldes. No lo golpees fuerte con el martillo pues los puedes dañar. Golpea el molde, no el rotor.
+
+     
+
+6. Montaje
+
+Equilibrado del rotor
+
+Cada rotor debe estar equilibrado, o el GIP retemblará al girar. Cuando el GIP esté completo tendrá que volver a equilibrarse, ya que puede ser que los rotores no se hayan montado completamente centrados. Se utiliza un procedimiento distinto para el equilibrado final, como se describe en el apartado 6.
+
+Para equilibrar un rotor de imanes (ver figura 38) sujeta, en primer lugar, la plantilla DCP (de la figura 11) usando cuatro tornillos. Luego equilibra el rotor con un redondo acabado en punta, como se muestra a continuación:
+
+figura 38: ensamblado de la plantilla de equilibrado y del redondo acabado en punta
+
+   
+Si el rotor asienta nivelado es que está equilibrado. Si no, ponle pequeños pesos, o barrena entre los imanes para retirar algo de resina, hasta que esté nivelado. Gira la plantilla de DCP alrededor del rotor y comprueba de nuevo. Reemplaza los pesos por varilla roscada de M10, atornillada a los barrenos en la resina y entre los imanes.
+
+Columna del GIP y caja de bolas  (ver figura 39)
+
+Corta la columna del GIP de 380 mm de largo de tubo de acero de 50x25x4 mm (a veces se llama RHS). Marca el centro exacto de una de las caras más largas y luego haz cuatro barrenos de 8 mm de la misma forma que la utilizada en  la plantilla para los espárragos del estator. Debería usarse dicha plantilla para poder barrenar la columna. 
+El barreno del centro es de 25 mm (o adaptado al eje que se va a usar), para hacer este barreno utiliza una sierra de corona o barrenarlo en un torno.
+figura 39: la columna seccionada de la caja
+
+     
+
+Suelda el eje en el barreno de 25 mm de diámetro. Vigila que el eje vaya lo más perpendicular posible (90º) a la columna, mientras estás soldando. 
+
+El núcleo de la caja de bolas va fijado al eje (figura 40). Tiene dos ranuras de 50x25 mm por donde ruedan las bolas, con un separador entre ellas. Se necesita una tapa plástica para conseguir que la suciedad quede fuera de los rodamientos.
+
+No olvides engrasar los rodamientos. Aplica grasa solamente alrededor de media circunferencia. No se la eches todo alrededor o se volverán más duros para girar.
+
+
+figura 40: el núcleo de la caja de bolas
+                  
+
+
+Las fotografías muestran la colocación del rotor de imanes trasero. 
+
+Ensamblaje del GIP
+
+· Corta 4 piezas de cabilla roscada de M10, de 200 mm de largo cada una. Se utilizarán como espárragos para sujetar los rotores de imágenes al núcleo. Las palas de la turbina eólica también se montarán sobre ellos. 
+· Pon 6 tuercas en cada espárrago (ver figura 41).
+· Encaja, desde el frente,  las tuercas a través de los barrenos de la caja de bolas. 
+· Pon la parte trasera del rotor de imanes al final de los espárragos. 
+· Coloca una tuerca en el extremo de cada espárrago y aprieta las otras hacia adentro de forma que el rotor trasero quede sujeto a la parte de atrás de la brida del núcleo. La tuerca final exterior será sellada con pintura o sellante de tuercas.
+·  Coloca la columna en una mordaza con el eje hacia arriba. Pon el núcleo sobre el eje. No martillees el rotor cuando lo estás encajando. Aprieta el núcleo al eje con una tuerca y mete el pasador. No sobre-aprietes la tuerca. Sobre el núcleo de la caja de bolas coloca algo que lo proteja del polvo. 
+·  Gira el rotor, pásale un trozo de alambre de latón. No utilices alambre de acero porque será atraído por los imanes. Las caras de los imanes deben estar a la misma altura con un margen de 0,5 mm. Si no lo están, coloca unos finos suplementos entre el núcleo-brida y el disco-rotor, para ajustar el rotor.
+· Utilizando un nivel, ajusta la columna en la mordaza hasta que el rotor se encuentre nivelado. Comprueba ambas direcciones, norte-sur, este-oeste. 
+·  Coge el estator. Coloca una tuerca de 8 mm en cada espárrago del soporte. Enróscalas.
+· Sitúa el estator sobre el rotor de imanes y coloca los espárragos-soporte en los barrenos de la columna. Pon más tuercas de 8 mm al final de los espárragos. 
+· Baja lentamente el estator y gira el rotor trasero. Nivela el estator en ambas direcciones. Escucharás un sonido cuando el imán que está más elevado toque el estator.
+· Utiliza las tuercas para elevar el estator por igual 1 mm sobre los 4 espárragos.
+· Encaja varias arandelas en los espacios de   10 mm que soportan los rotores. Siempre el mismo número de tuercas y arandelas en cada espárrago. Puede ser suficiente un total de 6 tuercas y 2 arandelas. En ese momento, encaja el rotor frontal. 
+·  Si el rotor frontal está separado del estator menos de 1 mm en algún punto, coloca más arandelas bajo él. Si la distancia es superior a 1 mm., quita arandelas. Para saber el número que se necesita es preciso quitar tuercas hasta que empiece a rozar el estator. Entonces aumenta 1 mm. Para saber qué número es el correcto, se necesita quitar tuercas hasta que empiece a rozar el estator. Entonces añade 1 mm. 
+·  Cuando el rotor frontal está a 1 mm del estator, coloca más tuercas encima y apriételas de forma segura. 
+
+
+Partes eléctricas
+
+El siguiente apartado (apartado 7), describirá cómo conectar el rectificador al estator. Recomiendo utilizar dos puentes rectificadores de media onda (ver figura 42). Vienen en bloques de 30 x 30 mm. Los terminales positivos van conectados al terminal positivo de la batería (con frecuencia están en ángulo recto con los otros tres terminales). Los terminales negativos, se conectan al terminal negativo de la batería. Los cuatro terminales restantes son para la conexión de alterna al estator. Probablemente sólo necesites usar tres de ellos, conectados de la forma deseada para adaptar la velocidad (ver apartado 7).
+
+
+
+
+
+figura 42: rectificadores y otros componentes
+
+	
+Las fichas de conexión son útiles para conectar los cables del estator. Alternativamente, se podrían soldar o empatar.
+
+Suelda o empata los conectores de receptáculo para conectar los cables a los rectificadores. Ten cuidado de no sobrecalentar los rectificadores mientras los estás soldando. Conecta, mediante pernos o tornillos los rectificadores al disipador, que seguramente se parecerá al de la figura, pero puede ser cualquier pieza de aluminio de aproximadamente 250 g o más de peso. 
+
+Mantén todas las conexiones bajo una cubierta que las proteja del mal tiempo. 
+ 
+
+
+
+
+
+
+
+
+
+
+7. Probando y conectando
+ 
+Comprueba que no tiene fallos antes de ponerlo a funcionar. Será mucho más fácil corregirlos ahora y no tener que llevar la unidad al taller más tarde. 
+
+Prueba mecánica
+
+Coloca verticalmente la columna en una mordaza. Los rotores de imanes se mueven libremente. El eje está  horizontalmente, tal como estará en el aerogenerador. Comprueba que los cables no tocan unos con otros para evitar crear un cortocircuito que haría que el GIP girara con dificultad. 
+
+Comprueba que el rotor gira libremente. Gira el rotor y escucha los sonidos. No debe existir ningún tipo de rozamiento mientras va girando. Debería girar libremente durante varios segundos e ir  parando de forma gradual. Si baja la velocidad rápidamente, puede que exista un fallo eléctrico, o tal vez los rodamientos estén demasiado apretados. 
+
+Sujeta el estator con ambas manos. Empuja un lateral hacia atrás mientras tiras del otro hacia delante, hazlo mientras el rotor gira. No debe tocar el rotor. Si se escucha  un sonido de rozamiento, puede que sea necesario desmontar el GIP y montarlo de una forma más cuidadosa, con más espacio entre el rotor y el estator. Puede que sea posible corregir el problema realizando ajustes menores en los espárragos de montaje del estator.
+
+Detén el rotor con uno de sus espárragos en la posición de las tres en punto (figura 43). Cuelga un objeto que pese 100 g en este espárrago. El rotor debe empezar a girar en el sentido de las agujas del reloj. Si no gira, puede que los rodamientos estén demasiado engrasados o muy apretados. 
+
+figura 43: cuelga un peso en uno de los espárragos
+     
+
+Comprobación del balance
+
+A los rotores ya se les ha comprobado el balance en el apartado 6, a las palas de la turbina eólica también se les debe comprobar el balance de la misma forma. Cuando la unidad esté montada, debes comprobar el balance de nuevo, utilizando el siguiente procedimiento. Es necesario porque el disco del rotor puede no estar perfectamente centrado en el eje del GIP. 
+
+Repite la prueba inicial (figura 43) con cada uno de los 4 espárragos del rotor, en la posición de las tres en punto. Prueba con distintos pesos y averigua cuál es el más pequeño que hace girar el rotor. Si un espárrago necesita un peso mucho mayor que el otro, significa que el rotor no está equilibrado. Fija pequeños pesos al rotor hasta que esté completamente equilibrado. 
+
+Pruebas eléctricas
+
+Prueba de conexión de bobina
+Puede ser útil disponer de un multímetro para realizar las pruebas del GIP, pero pueden realizarse algunos ensayos básicos con una bombilla de 3 voltios (ver figura 44). 
+·  Conecta los cables 1B al 4A, 2B al 5A, 3B a 6A (conexiones en serie de las bobinas que están en la misma fase).
+·  Coloca el multímetro (si lo tienes) a 10 voltios de corriente alterna o similar.
+·  Conecta el medidor, o una bombilla, entre los cables marcados como 1A y 4B. 
+
+figura 44: prueba de bobinas
+     
+
+· Haz girar el GIP lentamente con la mano, aproximadamente a una revolución por segundo.
+·  El medidor debe dar una lectura aproximada de  2 V o la bombilla debe parpadear.
+· Repite la prueba con dos pares más de cables: 2A y 5B, 3A y 6B. En cada caso, el resultado ha de ser el mismo.
+Si no hay lectura o esta es muy baja, comprueba que las conexiones en serie (1B-4A,   2B-5A, 3B-6A) son correctas. Si todas están bien, puede que alguna bobina esté colocada al revés (de arriba abajo). 
+
+Si algunas bobinas están al revés, se necesita hacer otra prueba (ver figura 45), para saber en cuál de ellas está el error. Conecta 4B-2A y 5B-3A como se muestra en la figura. Ahora prueba entre 1A y 6B. No debe haber más que un pequeño voltaje, si hay tensión o la bobina se enciende, intercambia las conexiones (cambia A por B) en las bobinas hasta que el voltaje descienda hasta un nivel bastante bajo.
+
+Cuando se encuentre la bobina que causaba el error, etiqueta los extremos de nuevo, con A y B en las puntas correctas. 
+
+figura 45: prueba para una bobina reversible
+     
+     
+Siempre aparece un pequeño voltaje en estas pruebas porque las bobinas no están perfectamente situadas en el molde. Si la prueba da más de 1 V, en el futuro debe poder hacerse un estator mejorado, colocando las bobinas a distancias exactamente iguales de separación en el molde. 
+
+Prueba de salida de corriente continua
+Cuando las pruebas anteriores den resultados correctos, conecta el rectificador como se muestra en la figura 46. Conecta las puntas 1A, 2A y 3A entre sí. Conecta 4B, 5B y 6B a los tres terminales de corriente alterna del rectificador (marcados con el símbolo S). Se trata de la conexión en estrella. Conecta una lámpara a la salida y si es posible, también un multímetro en 10 V de corriente continua o similar.
+
+ figura 46: prueba de CC                              
+ 	     
+                                                                                                                  
+Igual que antes, gira el rotor a mano, aproximadamente a una revolución por segundo (60 rpm). 
+El medidor debe mostrar una lectura regular de unos 4 V de CC (o 3 voltios con la bombilla). La bombilla debe brillar con luz regular, no parpadeando como antes.
+
+Si no hay lectura, o la bombilla parpadea, entonces hay una mala conexión o un rectificador que falla. Comprueba las conexiones. Prueba con otro rectificador.
+
+También puedes probar el GIP sin bombilla o medidor. Simplemente conecta los cables positivos y negativos desde los rectificadores (los 4 juntos) en cortocircuito. Ahora intenta girar el GIP. El giro debe ser firme pero suave y regular. Si retiembla cuando se intenta girar, hay un fallo.
+
+
+Conexión del GIP a la batería de 12 Voltios
+
+Conexiones en estrella y triángulo
+Para bajas velocidades de viento, conecte las bobinas en estrella como se indica arriba. Para vientos fuertes y una mayor corriente de salida, conecte las bobinas en triángulo como indica la figura 47.
+figura 47: conexión en triángulo                              
+     
+También se puede conectar un relé, con el que se podrá cambiar las conexiones de estrella a triángulo y viceversa.
+
+figura 48: utilización de un relé para el cambio estrella-triángulo 
+     
+Otra opción para conectar el estator
+Durante la redacción de este manual, el arreglo anterior (utilizar un relé para cambiar las conexiones) estaba todavía en desarrollo. 
+Si no desea cambiar las conexiones entre vientos suaves e intensos, el GIP podrá seguir trabajando, pero su eficiencia disminuirá. Existen dos opciones:
+
+·  Si se esperan vientos débiles, se puede usar la conexión en estrella de la figura 46.
+
+·  Si se necesita  alta potencia para vientos fuertes, se puede utilizar un cable de 17 AWG (1,2 mm de diámetro) para enrollar bobinas con 200 vueltas cada una. Entonces se puede conectar un grupo en triángulo y  otro en estrella, como muestra la figura 49. Se necesitan 6 terminales de corriente alterna en los rectificadores, hay que usar 3 bloques de rectificadores.
+
+figura 49: conexión estrella-triángulo
+     
+
+Tamaño del cable GIP-batería
+El cable del GIP a la batería puede ser de 3 fases tanto de CA como de CC. Si el rectificador está montado en el aerogenerador, entonces será en CC. Así sólo será algo más eficiente que con tres fases de alterna. 
+
+Para 12 voltios, el tamaño del cable debe ser grande. Incluso si la corriente es de 15 amperios, es conveniente usar un cable fuerte. Para una distancia de 20 metros, el tamaño recomendado es de 6 mm2 (10 AWG). El diámetro de cada hilo de cobre es de aproximadamente 3 mm. Una corriente de 15 amperios fluyendo por este cable perderá el 15% de la energía del aerogenerador, en forma de calor en el cable. Si el cable es más largo, su grosor tendrá que ser directamente proporcional.
+
+Seguridad eléctrica
+No hay peligro de descarga eléctrica con una batería de 12 voltios, pero si el aerogenerador está desconectado de la batería y gira rápido, el voltaje será mayor de 12 voltios, pudiendo llegar incluso a 50 voltios. No utilices el GIP a altas velocidades sin la batería conectada.
+
+La batería contiene energía eléctrica almacenada. Cuando hay un cortocircuito en el cableado de la batería, por ejemplo el hilo positivo y el negativo se tocan, esa energía se descarga en una corriente muy fuerte, pudiendo quemar el cable. Por tanto, es necesario el uso de un fusible o un automático en todos los hilos adjuntos al polo positivo de la batería. Utiliza un fusible para el aerogenerador y otro independiente para el receptor (las luces, o cualquier elemento que consuma potencia). Consulta la figura 50.
+
+figura 49: conexión de la batería
+
+
+El ácido de la batería es malo para la ropa,  la piel y especialmente los ojos. En caso de accidente, lavar con abundante agua.
+
+Las baterías producen hidrógeno, que es muy explosivo. No provoques chispas cerca de la batería, podría explotar y llenarte los ojos de ácido.
+
+Cargar la batería
+Las baterías de ácido deberían mantenerse en condiciones de carga. En caso de vientos fuertes, puede que tengas que esperar para cargar la batería. Pero ten cuidado de no descargarla demasiado, o mantenerla demasiado tiempo en estado de descarga, pues puede dañarse (sulfatarse) y volverse inutilizable. Deja de usar la batería antes de que esté totalmente descargada. Si hay un problema con el aerogenerador, carga la batería desde otra fuente durante de 2 semanas.
+
+Si cargas demasiado la batería puedes dañarla. En principio, cuando la batería está descargada, puedes usar una corriente intensa, luego la corriente deberá ser reducida o la batería se sobrecalentará y las placas se dañarán. La mejor manera de cargar la batería es usar una corriente de baja intensidad durante largo tiempo.
+
+Mira el voltaje de la batería. Si está por debajo de 11.5 voltios está descargada. Si el voltaje es mayor (sobre 14 voltios), la corriente de carga de la batería es demasiado alta. Utiliza más o menos corriente en los receptores para corregir estos problemas. Si no hay un voltímetro disponible, deberás mirar el brillo de las luces y seguir estos consejos:
+
+·  Luz débil significa baja batería. Utiliza menos electricidad.
+·  Luces muy intensas significan viento muy fuerte. Utiliza más electricidad.
+
+Una buena forma de aprovechar la electricidad es cargar más baterías cuando el viento es fuerte, quizás se puedan cargar las baterías de las casas de los vecinos.
+
+Hay circuitos electrónicos simples que pueden regular el voltaje de la batería automáticamente. Se denominan  desconectores de bajo voltaje y  reguladores en derivación. Si el usuario no está dispuesto a controlar el voltaje de la batería, entonces necesitará adaptar un desconector y un regulador.
+
+
+
+
+
+
+
+
+
+8-Información adicional
+
+Utilización de la resina de poliéster
+El poliéster es la sustancia plástica usada en trabajos con fibra de vidrio para construir embarcaciones, parte de la carrocería de automóviles, etc. Se pueden añadir algunos elementos para facilitar las condiciones en determinados trabajos. Consulta a tu suministrador y explícale para qué quieres usar la resina,  estará dispuesto a ayudarte.
+
+Endurecedores
+Hay dos sistemas para endurecer la resina de poliéster y cada uno utiliza dos productos químicos. Para el ensamblado con resina y la mayoría de los trabajos con fibra de vidrio, se utiliza peróxido  de hidrógeno y cobalto. (Las špastas para estructurasš utilizan el otro sistema).
+
+El cobalto es un fluido púrpura. Pregunta al distribuidor cómo mezclar la cantidad exacta de cobalto en la resina. Después de mezclarlo, la resina debe permanecer en un lugar oscuro, o se endurecerá.
+
+El peróxido de hidrógeno es una sustancia peligrosa. Evita el contacto con la piel. Se debe almacenar en un contenedor de PVC, en la oscuridad y por debajo de 25 °C. No lo mezcles con cobalto (excepto si la resina tiene ya cobalto) o explotará. Mezcla cantidades muy pequeñas (del 1 al 2%) de peróxido con la resina, o se sobrecalentará.
+  
+Wax-free resina inhibidora de aire B
+Este tipo de resina se utiliza para gelificación de cubiertas (gel-coats) en los moldes para embarcaciones. No recomendamos el uso de esta resina para el GIP. Cualquier superficie expuesta quedará pegajosa indefinidamente. Pregunta por resina A, o mejor casting resin. 
+
+Aditivo tixotrópico
+Un polvo especial de sílice muy luminoso se suele usar como espesante de la resina. Es más fácil extenderlo con una brocha. Este polvo no es necesario para casting resin, aunque tampoco le perjudica.
+
+Monómero de estireno
+Aproximadamente un 35% de la resina como aditivo, es monómero de estireno. Se utiliza para aligerar la resina. Es el causante del olor. Se puede añadir un poco más de estireno (10%) para hacer  la resina más líquida.
+
+Pigmento
+Se utiliza para obtener, si se desea, una coloración final. Se añade  a la primera mezcla, que estará en la parte exterior del ensamblado. No añadas más de un 10% a la mezcla. Si no lo utilizas la mezcla será transparente y se podrán ver las bobinas. 
+Fibra de vidrio
+La resina casi no tiene resistencia sin la fibra de vidrio. La fibra está disponible en láminas de CSM. También se pueden comprar sólo šhebras molidasš  y mezclarlas con la resina. Es útil para su aplicación en los rotores de imanes. Añade un poco de resina a la fibra de vidrio y presiona para  expulsar todas las burbujas de aire antes de añadir más resina. 
+
+Polvos de talco
+Los polvos de talco son un producto espesante y de relleno muy barato. Se pueden mezclar con la resina después de añadir el peróxido. Sirven para abaratar la mezcla de resina y espesarla un poco. La resina se puede mezclar con hasta dos veces su propio peso en polvos de talco. El talco también ayuda a reducir el calor generado por la aplicación de cantidades elevadas de resina.
+
+Preparación del molde
+
+Barniz de poliuretano
+No se debe usar pintura común en los moldes. Es mejor no usar nada. Si es posible utiliza barniz de poliuretano. Esto previene contra la humedad que surge del molde hecho con madera, yeso o arcilla. Lija la superficie barnizada antes de pulirla.
+
+Encerado, pulimento
+Pule y encera el molde varias veces antes de usarlo por primera vez. Frota todo el encerado o pulimento con un trapo y déjalo varias horas. Repite la operación. El pulimento de silicona no es compatible con el agente separador PVA. Utiliza pulimento de cera.
+
+Agente separador PVA
+Aplícalo sobre el molde y déjalo secar. Forma una lámina de PVA que ayuda a separar la pieza del molde.
+
+
+
+
+Utilización del GIP  para generación de hidráulica
+
+El GIP también se puede usar para cargar las baterías de pequeñas turbinas hidráulicas. Será ideal para saltos pequeños y emplazamientos de baja potencia, porque es eficiente incluso produciendo unos pocos watios. También se puede utilizar para saltos mayores y mayores potencias, porque es capaz de suministrar salidas de alta potencia a altas revoluciones.
+Hay peligro de daños por corrosión en los rotores de imanes que se encuentran en un entorno muy húmedo o mojado como una aplicación hidráulica. Es recomendable galvanizar los componentes de acero con zinc.
+
+Emplazamientos con saltos pequeños
+Aquí hay algunos ejemplos de condiciones donde el GIP podrá trabajar sin modificación (conectado en triángulo). Será necesario un sencillo impulsador montado en el frente del rotor de imanes.
+Salto (metros)					10	10	5
+Caudal (litros/segundo)				1	5	5
+Potencia neta (watios)				40	200	100
+DCP (cm)						37	27	23
+Velocidad (rpm)					325	440	360
+
+Saltos y potencias mayores
+A mayores revoluciones, mayor potencia habrá disponible desde el GIP. Doblando la velocidad también se puede doblar el voltaje de salida y la corriente, ofreciendo cuatro veces más potencia con la misma eficiencia que antes. El GIP se puede sobrecalentar bajo estas condiciones, así que puede ser mejor mantener la corriente al mismo nivel y tener mayor eficiencia. Dependerá, en gran medida, de la cantidad de agua que se use para refrigerarlo.
+
+En algunos casos, aumentando la velocidad se mejora de forma considerable la capacidad de manejo de potencia del GIP. Podría ser arriesgado mover una turbina eólica a altas velocidades debido al problema de las fuerzas centrífugas en los rotores, pero este problema no se presenta en generación hidráulica porque el eje es fijo.
+
+Si no se requiere un mayor voltaje, el estator eólico puede modificarse para generar 12  voltios (como antes) a la máxima velocidad pero enviando una intensidad mayor sin sobrecalentamiento. Se hace conectando las bobinas de cada fase en paralelo en lugar de en serie. O se pueden enrollar las bobinas con menos vueltas o menor espesor de alambre. Esto es todavía mejor, porque las conexiones en paralelo y en triángulo pueden sufrir corrientes parásitas internas.
+
+No uses la conexión estrella-triángulo (figura 49) para hidrogeneración, en la cual la velocidad es constante, pues no aporta ningún tipo de ventaja.
+
+
+
+1
+
+

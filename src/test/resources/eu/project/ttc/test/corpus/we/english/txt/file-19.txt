@@ -1,0 +1,298 @@
+ARTICLE IN PRESS
+
+Energy Policy 34 (2006) 2137-2149 www.elsevier.com/locate/enpol
+
+A geographic analysis of wind turbine placement in Northern California
+Laura C. Rodmana,Ã, Ross K. Meentemeyerb
+b
+
+Nielsen Engineering & Research, Inc., 605 Ellis St., Ste. 200, Mountain View, CA 94043, USA Department of Geography & Earth Sciences, University of North Carolina, 9201 University City Blvd. Charlotte, NC 28223 Accepted 5 March 2005 Available online 3 May 2005
+
+a
+
+Abstract The development of new wind energy projects requires a significant consideration of land use issues. An analytic framework using a Geographic Information System (GIS) was developed to evaluate site suitability for wind turbines and to predict the locations and extent of land available for feasible wind power development. The framework uses rule-based spatial analysis to evaluate different scenarios. The suitability criteria include physical requirements as well as environmental and human impact factors. By including socio-political concerns, this technique can assist in forecasting the acceptance level of wind farms by the public. The analysis was used to evaluate the nine-county region of the Greater San Francisco Bay Area. The model accurately depicts areas where largescale wind farms have been developed or proposed. It also shows that there are many locations available in the Bay Area for the placement of smaller-scale wind turbines. The framework has application to other regions where future wind farm development is proposed. This information can be used by energy planners to predict the extent that wind energy can be developed based on land availability and public perception. r 2005 Elsevier Ltd. All rights reserved.
+Keywords: Wind turbines; Geography; Spatial analysis
+
+1. Introduction Clean, renewable energy sources are in demand throughout the world, due to concerns associated with fossil fuel availability, rising oil prices, air pollution emissions, and global warming (Kyoto, 1997). Of the available renewable energy sources, wind energy holds great promise as recent technological advances have brought down its cost to the point where it is competitive with conventional fuel sources (Fairley, 2002). Wind energy is also flexible and scalable (AWEA, 2001). Flexible placement enables distributed energy generation, which allows individuals or communities to generate their own electricity, and provides a measure of
+ÃCorresponding author. Tel.: +1 707 538 8591; fax: +1 650 968 1410. E-mail address: rodman@nearinc.com (L.C. Rodman).
+
+protection from associated problems or threats targeting large, centralized power plants (Allen, 2003). Wind turbines are available in various sizes and power output, they can operate over a range of wind speeds, and they can be erected singly by an individual property owner, or grouped together to form a wind farm connected to a utility. One of the most significant obstacles to developing wind power is land use restrictions. Development of wind power plants requires land with sufficient wind resources, proximity to the power grid, and compatibility with environmental and regulatory requirements (WES, 1997). Public resistance to wind farms is another challenge. Strong opposition to wind turbine placement has occurred in and around communities concerned by visual, noise, or environmental impacts (Righter, 1996, Chapter 11). It is essential that these diverse factors are examined so that site suitability is understood before
+
+0301-4215/$ - see front matter r 2005 Elsevier Ltd. All rights reserved. doi:10.1016/j.enpol.2005.03.004
+
+ARTICLE IN PRESS
+2138 L.C. Rodman, R.K. Meentemeyer / Energy Policy 34 (2006) 2137-2149
+
+construction (Baban and Parry, 2001). An assessment of suitable locations for wind power development is essential for energy policy planning, as it will allow predictions of the extent that wind energy can be developed considering the various geographic limitations. Targeting the most suitable sites will minimize controversy and improve public perception of wind power. Public opposition exists to both large- and small-scale wind turbine projects. A particularly contentious battle is currently ongoing in Nantucket Sound, where an offshore wind farm consisting of 130 wind turbines is proposed by a private development company. Residents of Nantucket, Cape Code, and Martha's Vineyard are vehemently opposed to the visual alteration of the coast, and an economic policy study has predicted that the visual pollution will be responsible for a loss of tourism of at least $57 million annually (Haughton et al., 2003). In California, an older wind farm at Altamont Pass has been opposed by neighbors and open space proponents since it opened in the 1980s. Complaints have included the noise of the older turbines, lack of response from the wind companies to repair or replace broken units, the perception that an open space region has been industrialized, and a large number of raptor deaths (Righter, 1996, pp. 241-251). Controversy over the bird
+
+kills is causing the Alameda County supervisors to review their policy of reissuing wind turbine permits (Edds, 2003). Small wind turbines are gathering increased attention as they can generate power at lower wind speeds. An active research area is the improvement of turbine performance in lower wind speed regimes (California Energy Commission, 2004a). However, even small wind turbines meet opposition if they are placed too close to residential areas. As an example in Sonoma County, California, county supervisors revised and clarified zoning regulations in response to strong opposition by neighbors to an individual who sought to install a single wind turbine on his 5-acre property. The reasons cited were based on visual impact and noise (Payne, 2003a). The clarified policy places tighter restrictions in suburban neighborhoods but eases regulation in rural areas (Payne, 2003b). This event demonstrates that factors such as noise, visual impact, proximity to development, and relevant zoning regulations must be included as part of a comprehensive site suitability study. This paper describes a geographic analysis in Northern California for both small-scale (individual) and large-scale (utility) wind turbine placement. The state of California faces multiple energy challenges in the future, due to inadequate reserve margins during anticipated
+
+Sonoma Napa
+
+Solano
+
+N
+Marin
+
+Contra Costa
+
+San Francisco Alameda San Mateo
+
+California
+
+Santa Clara
+
+ci Pa
+c fi
+
+Fig. 1. Geographic study area of nine counties in Northern California.
+
+O
+
+c
+
+e
+
+a
+
+0
+n
+
+25 kilometers
+
+50
+
+ARTICLE IN PRESS
+L.C. Rodman, R.K. Meentemeyer / Energy Policy 34 (2006) 2137-2149 2139
+
+peak demand periods and reliability issues with older power plants. To address these concerns and to meet policy objectives, the state is considering an eligible renewable energy goal of 20% by 2010 and 33% by 2020 (California Energy Commission, 2004b). Further expansion of wind power in California will rely on lowspeed wind development, as the state is ranked only 17th in the US in terms of high wind resource areas (California Energy Commission, 2004a). An examination of wind energy resources and site suitability within California is relevant to these goals. We present a rule-based modeling method to evaluate and target suitable wind power sites. Model predictions are based on biophysical and socio-political factors that influence placement. For the model, maps of the following variables were spatially analyzed in a Geographic Information System (GIS) and ranked in accordance to each variable's effect on wind turbine placement suitability: (1) Physical features such as wind resources, obstacles, and terrain, (2) Environmental factors including land use, vegetation, and sensitive areas such as wetlands or presence of endangered plant species,
+
+(3) Human impact factors including proximity to development and public recreational areas. Models based on each of these three factors were created and examined individually and in combination so that the effect of each factor can be seen. By separating the factors into these categories it is possible to answer various questions; for example, by how much does the human impact factor reduce the availability of otherwise suitable wind turbine locations?
+
+2. Methods 2.1. Study area The study area for this project encompassed the greater San Francisco Bay Area region, including the counties of Alameda, Contra Costa, Marin, Napa, San Francisco, San Mateo, Santa Clara, Solano, and Sonoma (Fig. 1). This region is challenging to investigate since it is heavily populated. A recent study has assessed the wind resources of California and has concluded that wind energy is viable in many locations (Brower, 2002). The good wind resources are associated
+
+N
+
+Average Annual Wind Speed, m/s 1.5 - 3.4 3.4 - 5.3 5.3 - 7.2 7.2 - 9.1
+
+0
+
+25 kilometers
+
+50
+
+Fig. 2. Wind resources in the Bay Area.
+
+ARTICLE IN PRESS
+2140 L.C. Rodman, R.K. Meentemeyer / Energy Policy 34 (2006) 2137-2149
+
+with the consistent onshore flow of wind from the coast and the bay (Fig. 2). Two wind farms are currently operating within this region of California, at Altamont Pass (eastern Alameda County) and in eastern Solano County (Fig. 1).
+
+2.2. Database development The geographic model included multiple variables to represent the physical, environmental, and human impact factors on wind turbine site suitability. Data for each of these factors were mapped in the GIS, converted to a raster (grid cell) format, and resampled to 30 m Â 30 m cell size (the scale of the highest resolution data set). These data were converted to 30 m resolution for the overlay analysis. The wind data set incorporated in our model was developed by TrueWind Solutions LLC (Brower, 2002). Average annual wind speed was used at a height of 50 m and at 200 m horizontal resolution. Three predictor variables were derived from a 30 m digital elevation model (the USGS National Elevation Dataset). These include elevation (m), slope gradient (degrees), and ridge line locations (grid cells with no upslope contributing area).
+
+Data from the California Gap Analysis Project (Davis et al., 1998) were used to map vegetation and land use across the study area based on a minimum mapping unit of 100 ha. Vegetation descriptions follow the California Natural Diversity Database, often referred to as the ''Holland'' system. The Gap data are classified with up to three CNDDB natural community types (primary, secondary, and tertiary). These data were converted to 30 m resolution for the overlay analysis. Finally, public lands were mapped from CERES (2002), which identifies federal, state, and local government-owned lands and their land use.
+
+2.3. Model development We developed a rule-based GIS model to predict suitable sites for wind turbines, based on an evaluation
+
+Table 3 Human impact suitability model for wind turbine placement Suitability score Excellent (4) Unsuitable Urban Not urban Urban Recreation No public parkland Public parkland
+
+Table 1 Physical suitability model class scores for wind speed, obstacles, and terrain Score Wind speed (large Wind speed (small Wind speed (small wind turbines) (m/ wind turbines grid- wind turbines offs) connected) (m/s) grid) (m/s) 47 44.5 43 Obstacles Valley Distance to ridge (m) o10 10-30 30-50 50-100 4100
+
+Excellent (4) Good (3) Fair (2) Poor (1) Unsuitable
+
+o7
+
+o4.5
+
+o3
+
+No forest 0-71 Low density forest 7-161 Medium density 16-301 forest 30-401 High density forest 4401
+
+The wind speeds are average annual wind speeds. The forest densities are determined from the primary and secondary vegetation types at a given location. No forest is defined as (primary vegetation6¼trees, secondary vegetation6¼trees). Low density forest is defined as (primary vegetation6¼trees, secondary vegetation ¼ trees). Medium density forest is defined as (primary vegetation ¼ trees, secondary vegetation6¼trees). High density forest is defined as (primary vegetation ¼ trees, secondary vegetation ¼ trees). The slopes used for the valley are the majority slopes over a 150 m Â 150 m area. The overall terrain score is the maximum of the valley and distance to ridge scores.
+
+Table 2 Environmental suitability model for wind turbine placement Suitability score Excellent (4) Good (3) Fair (2) Poor (1) Unsuitable Land use vegetation Farmland barren Grass Shrubs/chaparral Forest wetlands Endangered plant species No endangered species present Wetlands No wetlands present
+
+Endangered species present
+
+Wetlands present
+
+ARTICLE IN PRESS
+L.C. Rodman, R.K. Meentemeyer / Energy Policy 34 (2006) 2137-2149 2141
+
+where n is the number of input layers, S ij is the score for the jth class of the ith input layer, W i is the weight of the ith input layer, and S is the calculated suitability factor for each grid cell location in the model output. Rulebased overlay models have been used in a wide variety of geographic studies (Meentemeyer et al., 2004, Baban and Parry, 2001). One variation to this model equation was applied in the present study. If any layer i has a class score S ij of Unsuitable (0) at a given location, then the overall suitability factor S is considered to be 0 at that location regardless of the scores from the other layers. Several models of the geographic features that affect wind turbine placement were developed. The first model was based on the physical features required for successful wind turbine operation, the second model included environmental impact factors, and the third model included human impact factors. These three models were examined individually and were also combined to compose various overall site suitability rule-based models. The physical and environmental models were combined and compared against the physical model alone, and all three models were combined and compared with the physical and environmental combination. Each of these models is described in detail below. Physical Model: The physical features model included three layers: average annual wind speed (weight ¼ 3), obstacles (weight ¼ 2), and terrain (weight ¼ 1). The availability of adequate wind resources is the most important criteria for the physical model; thus, it is assigned the highest weight. In general, large-scale wind energy requires an average annual wind speed of 7 m/s at 50 m elevation (AWEA, 1998). Small wind turbines that connect to the power grid require an average annual wind speed of 4.5 m/s (EERE, 2004), and small standalone wind turbines (not grid-connected) can generate
+
+Human impact model
+
+11,677 16,776 2506 527 Areas (in hectares) for each score are provided. The small wind turbine results are for grid-connected wind turbines. Excellent (4) Good (3) Fair (2) Poor (1) 20,554 10,046 886 417,759 286,362 159,375 319,314 327,776 1,051,447 106,877 1,269,662
+
+S¼
+
+Sn Sij W i i , Sn W i i
+
+Table 4 Summary of the site suitability results for each model in the study area
+
+Score
+
+Physical model (large wind turbines)
+
+Physical model (small wind turbines, gridconnected)
+
+Environmental model
+
+Physical and environmental (large wind turbines)
+
+of both advantageous and disadvantageous features at various geographical locations. Rule-based GIS models are appropriate for management and policy problems such as this, as they provide a method to weight the different features according to their effects on the phenomena studied. These models are very flexible and allow different inputs to be used to evaluate a variety of scenarios. Rule-based models use expert input to score and weight the individual layers that influence a decision. Each data layer (such as average wind speed or vegetation) is given a weight that represents its significance to the overall suitability measurement. The layers are also subdivided into multiple classes or values, as illustrated in Tables 1-3. Each of these classes is assigned a score according to its suitability. The equation used to evaluate the model is
+
+Physical, environmental, and human impact (small wind turbines) Physical, environmental, and human impact (large wind turbines)
+
+11,677 15,137 980
+
+162,862 286,646 144,152
+
+ARTICLE IN PRESS
+2142 L.C. Rodman, R.K. Meentemeyer / Energy Policy 34 (2006) 2137-2149
+
+power at average annual wind speeds as low as 3 m/s (AWEA, 1998). Separate physical models were developed for these three types of wind turbines. A binary (rather than continuous) scoring system was applied, in which the average annual wind speed must meet the minimum threshold speed for each class of wind turbine (Table 1). If the wind speed was adequate, a score of Excellent (4) was given for the site suitability. If the wind speed was not adequate, the score was Unsuitable (0). Tall obstacles can obstruct the wind flow and decrease the efficiency of wind power generation. Forest density was considered for the obstacles layer, since it was not possible for this scale of a study to include individual buildings (although urban areas are considered in the human impact model). The weight of the obstacle layer was less than that of the wind speed, since the presence of an obstacle might not entirely preclude the placement of a wind turbine as much as lack of wind. The presence of trees was also included in the environmental model (described below), so its significance was downgraded here since it was accounted for in another layer. The forest layer was derived from the Gap vegetation data set, and the density of trees was used for the scoring. The suitability scores decreased as the density of trees increased (Table 1). The density of trees was inferred
+
+by the primary and secondary vegetation types at each location. It was assumed that the highest density of trees occurred when both the primary and secondary vegetation types were trees, and the lowest density occurred when neither the primary nor secondary vegetation types were trees. The terrain layer included information on elevation and slope. Ridge crests or other high ground are generally preferred for wind turbine placement, and flat valleys may also be suitable if they act as a wind channel (Iowa Energy Center, 2003). The terrain layer was weighted less than the other two physical layers since terrain information was accounted for in the generation of the wind data set (Brower, 2002). The terrain criteria used for site suitability was based on either close proximity to a ridge top or placement on a relatively flat valley (using the majority slope over a 150 m Â 150 m area). The terrain suitability score was based on the maximum of either the ridge top or valley score (Table 1). Environmental Model: The second model considered the environmental factors that affect wind turbine placement. This model consisted of three layers: vegetation/land use (weight ¼ 3), presence of endangered plant species (weight ¼ 2), and presence of wetlands
+
+N
+
+Suitability Score Excellent Good Fair
+
+0
+
+25 kilometers
+
+50
+
+Fig. 3. Physical model for large-scale wind turbine placement.
+
+ARTICLE IN PRESS
+L.C. Rodman, R.K. Meentemeyer / Energy Policy 34 (2006) 2137-2149 2143
+
+(weight ¼ 1). The vegetation/land use layer was considered the most significant in determining environmental impact, and it was given the highest weight. The following classes were derived for this layer: crops, barren, grass, shrubs, forest, and wetlands. Crop or pasture land was scored highest for suitability, since farming and ranching activities can coexist with wind turbines, and farmers can derive extra income by allowing wind turbines to be placed on their land. Undeveloped areas were considered less preferable due to the disturbance of habitat and wildlife, but within undeveloped land, the shorter plant species (grasses and shrubs) were rated as more suitable than the taller plant species (forest). The endangered species layer was given a medium weight. A binary scoring was used, in which the absence of an endangered species was rated Excellent (4) and the presence was rated Unsuitable (0). The wetlands layer was given a lower weight than the other two layers since information on wetlands was also included in the land use layer. Wetlands were also given a binary suitability score, similar to endangered species. The scores for all three layers are shown in Table 2. Human Impact Model: The third data set modeled the human factors affecting wind turbine placement. Devel-
+
+oped, populated areas should be avoided, and regulations typically prohibit wind turbine placement. Public opposition to the sight of wind turbines in recreational areas was also considered in this model. Thus, a layer based on public parkland was included. The urban and recreational layers were given equal weights of one. Binary scores were used for both layers to describe the locations where wind turbines were suitable or not suitable (Table 3). Combined Models: The overall consideration of wind turbine placement used combinations of the three data models described above. Each individual data model resulted in a map with scores ranging from Poor (1) to Excellent (4). Locations with scores of Unsuitable (0) were not considered. If any location had an unsuitable score from an individual model, then that location was considered to be unsuitable for any combined model that included the individual model. For example, in a location where the available wind resources were not adequate, resulting in an unsuitable score for the physical layer, the location was considered unsuitable for any combined model that included the physical model regardless of the scores of the other models. In locations where each individual model had at least a poor suitability rating (score ¼ 1), the individual models
+
+N
+
+Suitability Score Excellent Good Fair
+
+0
+
+25 kilometers
+
+50
+
+Fig. 4. Physical model for small-scale wind turbine placement.
+
+ARTICLE IN PRESS
+2144 L.C. Rodman, R.K. Meentemeyer / Energy Policy 34 (2006) 2137-2149
+
+were given equal weight in any combined model, and the combined models were scaled to result in a suitability score in the range from 1 to 4. Thus, the combination of two models (such as physical and environmental) was computed by adding the resulting scores from each and dividing by two. The combination of all three models was computed by adding the scores from each and dividing by three.
+
+3. Results Results for two wind turbine types are shown here, one for large-scale wind turbines (requiring average annual wind speeds above 7 m/s), and one for gridconnected small-scale wind turbines (requiring average annual wind speeds above 4.5 m/s). Suitability scores range from Poor (1) to Excellent (4). A summary of the land availability for wind turbine placement provided by the various models is given in Table 4. The physical model of the large-scale wind class shows isolated pockets where there is sufficient wind in addition to suitable terrain and few obstacles (Fig. 3). These occur at Altamont Pass (Alameda County), in southeastern and southwestern Solano County, at the tip of Pt. Reyes
+
+on the coast, and in isolated areas along the coastal mountain range. Excellent physical suitability (score ¼ 4) for large wind turbines occurs over 20,554 ha, good suitability (score ¼ 3) occurs over 10,046 ha, and fair suitability (score ¼ 2) occurs over 885 ha. The physical suitability for small-scale wind turbines covers a wider area (Fig. 4). Areas of sufficient wind, terrain, and low tree coverage occurs in coastal areas, through the Petaluma Gap (along the border of Sonoma and Marin counties) and much of the eastern Bay Area, as well as locations in the South Bay and on the San Francisco Peninsula. The environmental suitability model results are given in Fig. 5. The highest suitability (score ¼ 4) appears with the concentration of farming and ranching activities in the Petaluma Gap and in the eastern portion of the Bay Area. The human impact suitability model results are shown in Fig. 6. This model shows highest suitability in areas that are neither urban nor public recreational areas. Next, the different suitability models are shown in different combinations for large-scale wind energy potential (Figs. 7 and 8). The physical and environmental models together (Fig. 7) show that the suitability
+
+N
+
+Suitability Score Excellent Good Fair Poor
+
+0
+
+25 kilometers
+
+50
+
+Fig. 5. Environmental suitability model.
+
+ARTICLE IN PRESS
+L.C. Rodman, R.K. Meentemeyer / Energy Policy 34 (2006) 2137-2149 2145
+
+N
+
+Suitability Score Excellent
+
+0
+
+25 kilometers
+
+50
+
+Fig. 6. Human impact suitability model.
+
+of several areas decreases with the environmental considerations, in particular in areas with undeveloped land. The area that is considered excellent (score ¼ 4) has decreased by 43% to 11,677 ha. These areas have been downgraded in suitability score, so that the area that is considered good (score ¼ 3) has increased by 67% to 16,776 ha, and the area that is considered fair (score ¼ 2) has increased by 183% to 2506 ha. The physical, environmental, and human impact models taken together (Fig. 8) show that the high wind area on Pt. Reyes is now considered unsuitable, since it is a public recreational area. Three remaining suitable sites for large-scale wind development are apparent from Fig. 8, two in Solano County and one in Alameda County. Compared with the physical suitability model alone, the physical, environmental, and human impact models show a decrease of 43% for excellent suitability (score ¼ 4), a gain of 51% for good suitability (score ¼ 3), and a gain of 11% for fair suitability (score ¼ 2). There was a total loss of 12% for areas considered excellent, good, fair, or poor suitability in the physical model. This area is now rated unsuitable with the environmental and human impact factors included.
+
+Small-scale wind energy potential was also evaluated using physical, environmental, and human impact models, as shown in Fig. 9. There are large areas suitable for small wind turbine placement, in particular, the pasture land along the Petaluma Gap and the eastern portions of the Bay Area. With all three factors, approximately 162,862 ha are considered excellent suitability (score ¼ 4), 286,646 ha are considered good suitability (score ¼ 3), and 144,152 ha are considered fair suitability (score ¼ 2). The inclusion of the environmental and human considerations reduced the land considered excellent suitability in the physical model alone by 61%. The area considered good suitability stayed approximately constant, and the area considered fair suitability decreased by 9%.
+
+4. Discussion There is an increasing demand for clean energy sources throughout the world. As electric power needs grow, it will be necessary to evaluate locations for renewable energy generation, and economics dictate that wind power will be the most widely used source of
+
+ARTICLE IN PRESS
+2146 L.C. Rodman, R.K. Meentemeyer / Energy Policy 34 (2006) 2137-2149
+
+N
+
+Suitability Score Excellent Good Fair Poor
+
+0
+
+25 kilometers
+
+50
+
+Fig. 7. Physical and environmental suitability models for large-scale wind potential.
+
+renewable energy. A technique using rule-based spatial analysis within a GIS was developed to determine suitable sites for wind turbine placement in the Greater San Francisco Bay Area. The suitability factors came from different sources, both supporting and opposing suitable placement. These included physical factors, environmental, and human impact. In general, physical factors provide a measure of the maximum land availability that can be considered for wind turbine placement. The environmental and human impact factors reduce this availability. By separating out the factors and examining them separately and in combination, it is possible to identify the impact of each factor that either supports or opposes a wind power project in a specific location. The analysis results for large-scale wind turbine placement can be verified by comparison with actual wind farm development. The current study shows three sites within the Bay Area that are suitable locations for large-scale wind energy (Fig. 8). The two northern sites are in Solano County. The large Solano County site to the east, in the Montezuma Hills west of Rio Vista, is currently the fourth largest wind farm in California. Compared with other major wind farms in the state,
+
+there has been very little controversy associated with this site. It has the advantage of being primarily agricultural, and when permits were sought during the late 1980s, opposition to development was weak due to its distance from major highways (I-680 and I-80) and from the major city of Fairfield (Righter, 1996, p. 240). The second Solano County site to the west, in the Cordelia Hills area, was also proposed as a wind farm location in 1987. However, this site is closer to population centers (the city of Benecia and I-680), and opposition to this site was strong. Residents and real estate interests banded together to convince the county supervisors to reject the wind farm development (Righter, 1996, p. 239). The third site shown in Fig. 8 is the large Altamont Pass wind farm in Alameda County, east of Livermore, with 6500 wind turbines (Righter, 1996, p. 245). Although this site has been active for the past two decades, opposition continues to the present, mainly due to its inadvertent placement in a bird migration route which results in an abnormally large raptor mortality rate. These results of the large-scale suitability model show that the prediction for wind turbine placement could be improved by including additional factors, such
+
+ARTICLE IN PRESS
+L.C. Rodman, R.K. Meentemeyer / Energy Policy 34 (2006) 2137-2149 2147
+
+N
+
+Solano Wind Farm
+
+Suitability Score Excellent Good Fair
+
+Altamont Wind Farm
+
+0
+
+25 kilometers
+
+50
+
+Fig. 8. Physical, environmental, and human impact models for large-scale wind potential.
+
+as visibility from a major city or highway and the location of bird migration corridors. However, given the factors that were used in this GIS-based analytic framework, the results obtained are very promising for predicting suitability based on physical, environmental, and human impact. Information is not easily available for existing personal wind turbine installations in the Bay Area, so a direct assessment of the predicted results is not possible as it is for large-scale wind development. However, there are indications that interest in personal wind energy is increasing, so the site suitability technique may be useful to policy analysts who are predicting the future trends in this area. In conclusion, the rule-based suitability model provides a means of objectively documenting the various geographic factors that influence wind turbine siting, which is necessary for regulatory issues and planning. The model accurately depicts areas where large-scale wind farms have been developed or proposed. It also shows that there are many locations available in the Bay Area for the placement of smaller-scale wind turbines.
+
+This analysis is critical for determining the extent that wind energy can be developed within the regions analyzed. Energy planners may use this tool to determine where future wind turbines may feasibly be located and to identify how much land availability is lost due to environmental and human impact factors. The avoidance of sites where there may be heavy opposition due to environmental and human impact concerns will reduce public controversy over wind turbines. Based on the history of wind farm development in the US (Righter, 1996), it is known that public acceptance is much higher for wind turbines located on agricultural land than located on undeveloped open space or in urban areas. These significant factors are accounted for in the described analysis; however, the analysis can benefit from the inclusion of more detailed factors. In particular, visualization maps can improve the site suitability analysis by locating those areas where wind turbines will be opposed because of visibility to human development or recreational areas. Another improvement would be more advanced geographic modeling of the public acceptance of wind turbines. A model of
+
+ARTICLE IN PRESS
+2148 L.C. Rodman, R.K. Meentemeyer / Energy Policy 34 (2006) 2137-2149
+
+N
+
+Suitability Score Excellent Good Fair
+
+0
+
+25 kilometers
+
+50
+
+Fig. 9. Physical, environmental, and human impact models for small-scale wind potential.
+
+public opinion may be obtained from surveys and interviews conducted in selected towns and agricultural areas. Studies have also shown that in areas where wind turbines have been placed, public acceptance has increased over time. This factor should be included in any models that incorporate public perception. Additional factors to include in future work are zoning regulations and proximity to the power grid. The physical model on a regional scale may be improved with higher resolution wind data, to match the resolution of the digital elevation models. The study area could be expanded to examine other regions of the country where wind energy projects are proposed.
+
+References
+Allen, W., 2003. High-availability combined heat and power systems for critical federal facilities: achieving energy security through distributed energy resources. Energy Workshop and Exposition, Department of Energy, Lake Buena Vista, Florida, 17-20 August 2003. AWEA, 1998. Basic Principles of Wind Resource Evaluation. American Wind Energy Association http://www.awea.org/faq/ basicwr.html.
+
+AWEA, 2001. Wind Energy Applications Guide. American Wind Energy Association. Baban, S.M.J., Parry, T., 2001. Developing and applying a GISassisted approach to locating wind farms in the UK. Renewable Energy 24, 59-71. Brower, M., 2002. New Wind Energy Resource Maps of California. TrueWind Solutions, LLC, Prepared for the California Energy Commission. California Energy Commission, 2004a. Program Opportunity Notice, Expanded Wind Regime Turbine Technology and Intermittency Management Capability Demonstration, 22 July 2004. California Energy Commission, 2004b. Commission Final Report: Integrated Energy Policy Report 2004 Update, Publication 100-04006CM. CERES, 2002. Review of Metadata for GOVLANDS. California Environmental Resources Evaluation System [http://casil-mirror1.ceres.ca.gov/casil/legacy.ca.gov/archive/govcon/]. Davis, F.W., Stoms, D.M., Hollander, A.D., Thomas, K.A., Stine, P.A., Odion, D., Borchert, M.I., 1998. A gap analysis of California. Final Report of the California Gap Analysis Project. USGS Biological Resources Division/University of California, Santa Barbara. Edds, K., 2003. Peril in the wind industry. The Washington Post, December 24, p. A02. EERE, 2004. Evaluating your wind resource and siting your turbine. US Department of Energy, Energy Efficiency and Renewable Energy [http://www.eere.energy.gov/consumerinfo/makeelectricity/ eval_wintrb_eval.html].
+
+ARTICLE IN PRESS
+L.C. Rodman, R.K. Meentemeyer / Energy Policy 34 (2006) 2137-2149 Fairley, P., 2002. Wind power for pennies. Technology Review July/ August, 40-45. Haughton, J., Giuffe, D., Barrett, J., 2003. Blowing in the Wind: Offshore Wind and the Cape Code Economy. Beacon Hill Institute at Suffolk University, ISBN 1-886320-19-5 [http://www.beaconhill.org/BHIStudies/BHIWindFarmStudy 102803.pdf]. Iowa Energy Center, 2003. Wind Energy Manual. [http://www.energy.iastate.edu/renewable/wind/wem/wem-01_print.html]. Kyoto, 1997. Kyoto Protocol to the United Nations Framework Convention on Climate Change. 2149 Meentemeyer, R., Rizzo, D., Mark, W., Lotz, E., 2004. Mapping the risk of establishment and spread of sudden oak death in California. Forest Ecology and Management 200, 195-214. Payne, P., 2003a. Windmill proposal shot down. The Press Democrat, March 12, p. B3. Payne, P., 2003b. Supervisors weigh new windmill rules. The Press Democrat, June 9, p. B1. Righter, R.W., 1996. Wind Energy in America: A History. University of Oklahoma Press, Norman. WES, 1997. Siting Issues for Wind Power Plants. National Wind Coordinating Committee, Wind Energy Series, January 1997, No. 3.
+

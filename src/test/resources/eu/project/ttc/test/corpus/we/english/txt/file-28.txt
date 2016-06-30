@@ -1,0 +1,121 @@
+European Association for the Development of Renewable Energies, Environment and Power Quality (EA4EPQ)
+
+International Conference on Renewable Energies and Power Quality (ICREPQ'10) Granada (Spain), 23th to 25th March, 2010
+
+Effect of rotor blade position on Vertical Axis Wind Turbine performance
+G. Colley1, R. Mishra2, H.V.Rao, R.Woolhead
+Department of Engineering & Technology Huddersfield University Queensgate - Huddersfield, HD1 3DH (UK) Phone/Fax number: +00441484 471282 , e-mail: g.colley@hud.ac.uk r.mishra@hud.ac.uk
+1
+
+Abstract
+In this paper a numerical study is presented with the aim of evaluating the performance output of three Vertical Axis Wind Turbine (VAWT) configurations. Here using Computational Fluid Dynamics (CFD) a two-dimensional Multi Reference Frame (MRF) approach has been used to perform steady state simulations. For this purpose an inlet velocity of 4m/s has been used along with rotor blade Tip Speed Ratios (λ) in the range of 0 to 0.6. The effects of varying rotor blade position on the global and local flow fields have been quantified. Furthermore, the influence of rotor blade position on the performance output has been computed. It has been found that within a typical rotor blade passage, maximum torque is obtained at a unique rotor angle. It can be seen that the torque output of the turbine decreases with an increase in rotor tip speed ratio (λ) for all rotor blade positions. From the data obtained it can be concluded that the VAWT power curve characteristics vary with relative rotor blade position.
+
+more challenging goals that the UK government has committed to in the associated 20-20-20 EU directive [2,3]. A huge step forward was taken in 2007 when EU heads of state agreed on a new framework to allow countries to increase installed capacity from renewable energy sources up to 20% of the requirements. In order to meet such targets it is evident that the number of wind turbines must be increased. Due to limitations on turbine installations in rural areas, many of the new breed of wind turbines are being developed for complex urban installation requirements where wind characteristics are inconsistent. Vertical Axis Wind Turbines (VAWTs) have been around for some time, with Darrieus and Savonius rotors being the most widely recognised. The turbine studied in this research relies on the same fundamental principles as the Savonius rotor in that the aerodynamic drag is used to convert wind energy to mechanical torque. As the nature of the flow within cross flow wind turbines is complex, standard analytical models such as the actuator disc and free stream vortex method cannot be used to accurately predict the flow field [4]. In order to understand the interrelation between the flow field parameters and the performance output of the rotor, a detailed flow analysis must be carried out. The works of Klemm [5], Kamal [6] and Pope [7] present similar types of cross-flow turbine in which CFD and experimental techniques have been used to obtain the operating characteristics of the turbine. The current work will analyse local pressure data at three boundaries to provide a link to any variations in performance for three geometric configurations. The flow field within a cross flow fixed blade VAWT is well documented [8,9] and has shown that torque becomes negative on the leeward side of the turbine. Since very little information is available on the flow field characteristics of hybrid turbines, this work intends to bridge this gap. This study will provide flow field information on this type of wind turbine and bring out operational issues inherent with this type of design.
+
+Key words
+Vertical axis wind turbine, Computational Fluid Dynamics, Performance, Pressure field, Torque.
+
+1. Introduction
+The need for sustainable energy sources becomes greater each year due to the continued depletion of fossil fuels and the resulting energy crisis. For the past decade there has been a call for immediate and concrete solutions to the climatic challenges the world is currently facing. An answer to the need for a sustainable, low cost energy solution is potentially in the form of wind turbines, which are receiving increased political support. Since the last major European wind energy review (2004) the sector had seen a rise of 54,000 MW in global installed generation capacity at the end of 2007. This rise has seen global annual growth rates of above 20% and has placed Europe firmly as a global leader in wind energy conversion [1]. Wind energy is at the forefront of the UK's bid to provide at least 10% of its electricity supplies from renewable energy sources by 2010. Furthermore this 2010 target is a key milestone for far
+
+2. Computational Parameters
+The CFD software Fluent has been used to numerically simulate a virtual flow domain for this application. It iteratively solves the time-averaged Navier-Stokes equations along with the continuity and auxiliary equations using a control volume approach. The finite volume approach has been used to divide the computational domain into a number of control volumes (cells). The governing differential equations are then expressed in the form of general transport equations consisting of convection, diffusion and source terms. The transport equations are integrated over all the finite control volumes. Finite-difference-type substitutions are made for the various terms in these integrated equations, resulting in a set of algebraic equations for the flow parameters. The flow parameters are then numerically solved using suitable iterative methods for the simultaneous algebraic equations. Here an unstructured mesh has been employed to allow flexibility around complex geometry. Both hexahedral and tetrahedral (hybrid) mesh elements have been used to form a 1.2 million element grid, which facilitates mesh generation and local resolution control [11]. Due to the rotational motion of the wind turbine rotor, the flow field in and around the rotor is complex. However, since the flow field within the rotor is of interest in this investigation (torque output), the fluid regions corresponding to the rotor were defined as a MRF. This allowed the flow around the moving rotor to be considered as quasi-steady. This is accomplished in the CFD code by incorporating additional acceleration terms which occur due to the transformation from the stationary to the moving reference frame. The flow around the rotor could then be modelled by solving the transport equations in a steady-state manner. The boundary conditions for the rotor fluid are generated by averaging the interface condition between the rotor and the stator [10]. In the present work the k-ε turbulence model [10, 11] was chosen to resolve the steady-state turbulent parameters in the flow domain. The boundary conditions of the flow domain have been defined to represent practical turbine operating condition. The inlet of the computational flow domain was defined as a 'velocity inlet' boundary condition, in which a constant velocity of 4m/s was used in the positive X axis direction. To ensure higher accuracy a second order discretization scheme has been used for the convection terms of each governing equation.
+
+3. Results
+The following results have been obtained using an identical grid for each configuration. The current design features an outer array of 12 vanes which direct the flow into the rotor assembly at a pre-determined angle. The different VAWT configurations tested are depicted in figures 1-3. The rotor blade position has been varied from 0˚, 10˚ and 20˚ relative to axis O-A in the anticlockwise direction as shown in figure 3. Each configuration has been subjected to an inlet velocity of 4m/s. Furthermore, the rotor blade Tip Speed Ratio (λ) (defined by Eq.1) has been varied from 0 - 0.6 in increments of 0.1 at a constant rotor tip radius of 0.7m. Stator Flow Rotor
+
+Figure 1 'Turbine geometry with rotor at 0°'
+
+2 1 12 11 10
+
+3
+
+4 5 6 7
+
+Blade number
+
+9
+
+8
+
+Figure 2 'Turbine geometry with rotor at 10°'
+
+O A
+
+Figure 3 ' Turbine geometry with rotor at 20°'
+
+λ=
+
+ω ⋅r
+V
+
+(1)
+
+To understand the effects of stator/rotor blade interactions at different rotor blade positions, the global pressure field across the turbine for each configuration has been computed. figures 4, 5 and 6 show the pressure field for an inlet velocity of 4m/s and a TSR of 0.4.
+
+Figure 4 'Pressure field (Pa) with rotor at 0°, λ=0.4' Figure 7 'Variation of rotor blade torque (T/TAVG) contribution at R=0,10 and 20˚'
+
+Figure 5 'Pressure field (Pa) with rotor at 10°, λ=0.4'
+
+Here, the rotor blade passage between blades 11 and 12 generates maximum torque when the rotor is at 20˚. Furthermore, it is evident that each rotor blade generates maximum torque at a different rotor position relative to the adjacent stator blade passage. This is due to the orientation of the blade relative to the oncoming freestream flow. The rotor blade position has a large effect on the performance of each blade passage however for this study only one passage has been analysed. The blade passage between blades 11 and 12 has been chosen for analysis due to its large contribution to overall rotor torque. Within this passage, five equally spaced angular positions have been used at three different boundaries to compute vertex averaged values of pressure as per figure 8.
+
+Figure 6 'Pressure field (Pa) with rotor at 20°, λ=0.4'
+
+From these figures it can be seen that the pressure distribution across the wind turbine is non uniform and features large pockets of high and low pressure. The regions of the turbine that are in direct contact with the air stream (windward) feature the highest pressure. It is also evident that each blade has both a pressure and a suction side. The torque contribution made by each rotor blade for each rotor position is presented in figure 7. This contribution has been non-dimensionalised relative to overall rotor torque output (T/TAVG).
+
+Figure 8 'Pressure boundary zones'
+
+The local pressure fields within this blade passage for each rotor configuration are presented in figures 9, 10 and 11.
+
+Figure 9 'Local pressure field (Pa) with rotor at 0°, λ=0.4'
+
+Figure 12 'Variation of pressure coefficient as a function of angular position at stator boundary for R=0˚,10˚ and 20˚'
+
+Figure 13 'Variation of pressure coefficient as a function of angular position at rotor inlet boundary for R=0˚,10˚ and 20˚' Figure 10 'Local pressure field (Pa) with rotor at 10°, λ=0.4'
+
+Figure 11 'Local pressure field (Pa) with rotor at 20°, λ=0.4' The pressure difference across the blades can be observed
+
+Figure 14 'Variation of pressure coefficient as a function of angular position at rotor exit boundary for R=0˚,10˚ and 20˚'
+
+in much greater detail in Figures.9-11. It can be seen that in each rotor position there is considerable variation in the pressure field. The magnitudes of these changes have been quantified in the plots shown in figures 12-14 by computing the pressure coefficient at a series of points as per the following equation:
+
+Figure 12 shows the effect of rotor blade position on the resultant pressure field at the stator boundary as shown in figure 8. When analysing the pressure variation it can be seen that there is similar variation for all rotor blade positions. Furthermore, maximum pressures are found at all points when the rotor is located at 0˚ whereas minimum pressures are seen when the rotor is at 10˚. The vertex averaged pressure values at the rotor inlet boundary (figure 13) show different trends in that the overall pressure has decreased when compared to the stator boundary. It can be seen that there is minimal pressure variation across the passage at rotor positions of 0˚ and 20˚. When the rotor is positioned at 10˚ the pressure is generally much lower at the beginning of the passage (θ=5˚) and increases toward the end of the passage (θ=25˚).
+
+PCOEFFICIENT =
+
+p-p∞ . 0.5.ρ.V2
+
+(2)
+
+The variations in pressure at the rotor exit boundary (figure 14) are of similar magnitude when compared to those at the rotor inlet. The variations at this boundary vary considerably with rotor blade position and do not share any common trends. The pressure at rotor position 0˚ decreases with an increase in angular position towards the end of the blade passage. When the rotor is located at 10˚ the pressure decreases at the centre and peaks towards the end of the passage. For rotor position 20˚ the trend is opposite in that the pressure is at its maximum at the centre of the passage. It is clear that the rotor blade position has a large effect on the pressure field as the flow exits the first set of rotor blades. Furthermore, the variation between point pressures at different boundaries gives an indication to the areas in which secondary flows will occur due to pressure being higher at the exit of the passage. The overall torque output of this wind turbine at different rotor blade positions is depicted in figure 15 and has been tested through a range of rotor blade tip speed ratios (00.6).
+
+concluded that when the rotor blade is positioned at 0˚ the turbine power output is less sensitive to an increase in TSR, which indicates it can operate at a higher range of TSR when compared to the other two configurations.
+
+Figure 16 'Variation of power output with respect to λ'
+
+4. Conclusions
+• It has been observed that when the rotor position is varied from 0-20˚, the global and local flow fields within the turbine vary significantly at each position. It has been found that within a typical rotor blade passage, maximum torque is obtained at a unique rotor angle. It can be seen that the torque output of the turbine decreases with an increase in rotor tip speed ratio (λ) for all three rotor blade positions. From the data obtained it can be concluded that the VAWT power curve characteristics vary with relative rotor blade position. For positions 10˚ and 20˚ peak power is generated at a tip speed ratio of 0.4 whereas position 0˚ generates maximum power at 0.6. A maximum power coefficient of 0.26 is present when the rotor is positioned at 0˚ and operating at a tip speed ratio of 0.6.
+
+•
+
+•
+
+•
+Figure 15 'Variation of torque output with respect to λ'
+
+It can be seen that the rotor generates maximum torque at all blade positions when stationary (static torque). The maximum dynamic torque of 13.82 Nm is found when the rotor is located at 10 degrees and operating at a TSR of 0.1. Furthermore, rotor blade positions 0° and 20° show relatively similar peak dynamic torques with values of 11.14 and 9.97 respectively. It can be seen that once the rotor TSR increases from 0-0.6 the torque for each blade position decreases. The power curves for all three configurations are depicted in figure 16 and show the variation of power coefficient with respect to TSR. The power coefficient of the turbine can be defined by the following relation: CP = P . 0.5.ρ.A.V3
+
+•
+
+Nomenclature
+p = Pressure (Pa) p∞ = Free-Stream Pressure (Pa) ρ = Air Density (kg/m3) Q = Mass flow rate (kg/s) V = Velocity (m/s) ω = Angular Velocity (rad/s) θ = Blade passage angular Position (˚) λ = Tip Speed Ratio (TSR) P = Power (W) T = Torque (Nm) r = Rotor radius (m) A = Turbine swept area (m2) TAVG = Total rotor torque output (Nm) CT = Torque Coefficient
+
+(3)
+
+Here, an interesting trend can be observed in that the power curves for the rotor at passage positions 10° and 20° increase up to a TSR of 0.4 where a peak power of 0.22 and 0.16 is generated. Beyond this optimum operating point the power output of the VAWT begins to decrease. The power curve computed for a rotor blade position of 0° shows a different trend in that the power continues to increase up to a TSR of 0.6. A peak power of 0.26 is generated at a λ=0.6. It can therefore be
+
+CP = Power Coefficient
+
+References
+[1] EWEC, Wind energy review. (2009) [2] BWEA, England's Regional Renewable Energy Targets: Progress report. (2009) [3] EREC, Renewable energy framework directive. (2007) [4] A.Toffollo, An experimental investigation of the flow field pattern within the impeller of a cross flow fan. Experimental Thermal and Fluid Science Volume 29, Issue 1 (2004) Pages 53-64 [5] T.Klemm et al, Application of a cross flow fan as a wind turbine. Journal of Computational and Applied Mechanics (2007) [6] F.Kamal and Q.Islam, Aerodynamic characteristics of a stationary five bladed vertical axis vane wind turbine. Journal of Mechanical Engineering, Vol. ME39, No. 2 (2008) Transaction of the Mech. Eng. Div., The Institution of Engineers, Bangladesh [7] K.Pope, Effects of stator vanes on power coefficients of a zephyr vertical axis wind turbine. Renewable Energy 35 (2010) 1043-1051 [8] N.Fujisawa, Velocity measurements and numerical calculations of flow fields in and around Savonius rotors. J.Wind Eng. Ind. Aerodyn. 59 (1996) 39-50. [9] R. Howell et al. Wind tunnel and numerical study of a small vertical axis wind turbine. Renewable Energy 35 (2010) 412- 422 [10] Fluent User Guide (2006) [11] A.Gosman, Developments in CFD for industrial and environmental application in wind engineering. J.Wind Eng. Ind. Aerodyn. 81 (1999) 21-39.
+

@@ -1,0 +1,1 @@
+Total 0.011107 ( s )  query 3 ,  Time now is:11 - 09 20:49 ,  Gzip enabled 

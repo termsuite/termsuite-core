@@ -1,0 +1,159 @@
+II.- ENERGÍA DE LAS CORRIENTES MARINAS
+http://libros.redsauce.net/
+
+Un recurso energético importante de los océanos reside en la energía cinética contenida en las corrientes marinas. Su origen está ligado, entre otras causas, a diferencias de temperatura o de salinidad, a las que se añade la influencia de las mareas. Los efectos se amplifican cuando la corriente atraviesa zonas estrechas limitadas por masas de terreno, incrementándose la velocidad. El proceso de captación se basa en convertidores de energía cinética similares a los aerogeneradores. En Europa se han identificado más de 100 lugares con corrientes marinas importantes. El potencial energético se estima en 48 TW/a, equivalentes a una potencia instalada de 12,5 GW con los factores de capacidad esperados. Los emplazamientos más prometedores están en el Reino Unido, Irlanda, Francia, España, Italia y Grecia. Existen zonas que ofrecen potencial para extraer más de 10 MW/km2. Entre las ventajas que se pueden esperar de estos aprovechamientos cabe citar: - Posibilidad de predecir su disponibilidad. - Factores de capacidad del 40 al 60% (el doble del de otras fuentes renovables intermitentes). - Impacto medioambiental mínimo; no producen contaminación visual, polución o ruido ya que sus rotores son lo suficientemente lentos, no afectando a la vida marina. - Las condiciones bajo el mar durante una tormenta son relativamente benignas; se puede decir que está tecnología es inmune a las tormentas, al contrario que los sistemas situados en la costa o los que aprovechan la energía de las olas II.1.- APROVECHAMIENTO DE LA ENERGÍA DE LAS CORRIENTES MARINAS La energía de las corrientes marinas tiene un potencial aprovechable mayor de 30 GW.  Viento: 15 m/seg ⇒ 2 kW/m 2   Corr. marinas: 2 m/seg ⇒ 4 kW/m 2  Corr. marinas: 3 m/seg ⇒ 14 kW/m 2 
+
+Tiene una mayor densidad energética que la energía eólica:
+II.-41
+
+El aprovechamiento de este tipo de energía tiene un inconveniente principal, que es el impacto para la navegación, ya que las mejores corrientes se encuentran en zonas ubicadas principalmente en estrechos o desembocaduras de ríos con gran tránsito marino. Técnicas de captación.- Las técnicas de extracción son similares a las que se utilizan con las turbinas eólicas, empleando en este caso instalaciones submarinas. El rotor de la turbina va montado en una estructura apoyada en el fondo o suspendida de un flotador. Es conveniente que la posición del rotor esté próxima a la superficie, para aprovechar la zona donde las velocidades del agua son más altas. Al igual que en el aprovechamiento de la energía del viento, para las corrientes marinas se utilizan dos tipos de rotores, Fig II.1: - Rotores axiales (tipo hélice, de eje horizontal) - Rotores de flujo cruzado (tipo Giromill, de eje vertical)
+
+Fig II.1.- Rotores axial y de flujo cruzado
+
+A la hora de colocar las turbinas existen dos tendencias: - Sobre el lecho marino, previamente arreglado, diseño que se utiliza preferentemente en aguas poco profundas (20-30 m. de profundidad) - Sobre un sistema flotante con los convenientes amarres, que se aplican tanto en aguas poco profundas como en las profundas (50 m. profundidad).  del diámetro del rotor de la turbina La energía extraible es función   de la velocidad de las corrientes
+
+Fig II.2.- Estructuras soporte
+
+Potencia extraible.- El valor de la velocidad del agua más apropiado para el diseño se estima entre 2 y 3 m/seg, existiendo numerosos emplazamientos disponibles donde la velocidad es de este orden. La potencia
+II.-42
+
+extraible por unidad de área barrida es proporcional a ρc3, siendo ρ la densidad del agua y c la velocidad. Teniendo en cuenta que la densidad del agua es 850 veces superior a la del aire, y que la velocidad del fluido es más pequeña que en el caso del aire, resulta que la potencia por unidad de área barrida es mucho mayor respecto a la que se obtendría con una aeroturbina, Fig II.4. Es conveniente hacer notar que los esfuerzos que debe absorber la turbina son mayores que en el caso eólico, debido a la mayor densidad del agua; sin embargo este efecto viene contrarrestado en parte por la menor relación entre velocidad punta y velocidad media.
+
+Fig II.3.- Energía extraible en función del diámetro del rotor
+
+Fig II.4.- Comparación entre un aerogenerador eólico y una turbina de corrientes marinas para obtener 1 MW Para obtener 1 MW por energía solar harían falta 70x70 m2 de paneles solares
+
+Fig II.5.- Energía anual capturada en MW/m por unidad de tamaño del sistema
+II.-43
+
+Proyecto UE-Joule Cenex (1994-95).- El objetivo de este estudio fué la evaluación del recurso energético de las corrientes marinas en Europa. Se establece el coste de la energía producida en base a los siguientes factores: tamaño, tiempo de vida, tipo de interés, coste de operación y mantenimiento, así como del factor de carga del que se esperan valores comprendidos entre el 20 al 60%. Los resultados dependerán de la velocidad del agua: Para c = 2 m/seg,se puede lograr un coste de 0,15 Euros/kW, con un factor de carga del 40% Para c = 3 m/seg, se puede lograr un coste de 0,1 Euros/kW Estudio de viabilidad para las Islas Orkney y Shetland (Reino Unido) (1994-95).- En este emplazamiento el recurso se basa esencialmente en la existencia de corrientes de marea. Conviene destacar el hecho de que en los sistemas insulares el coste actual del kW suele ser más elevado, lo que favorece la implantación de nuevas fuentes de generación de energía eléctrica. La información necesaria se obtuvo a partir de medidas en el emplazamiento y se utilizó un computador para simular las características de las corrientes. Las turbinas se dimensionaron para una potencia de 200 kW, diámetro 15 m, c = 2 m/seg, con un factor de carga del orden del 45%÷ 55%. El coste de producción resultaría ser de 0,17 Euros por kW, estimado sobre la base de un factor de carga del 50%, un tiempo de vida de 15 años y un tipo de interés del 5%. Con un grupo de ocho turbinas de 20 metros de diámetro, el coste de producción se reduciría a 0,11 Euros/kW. II.2.- TECNOLOGÍA En los años anteriores a 1990 la actividad en este campo fué escasa. En 1980/82 tiene lugar el desarrollo de una turbina para corriente fluvial de 3 m de diámetro para bombear agua de riego en el Nilo.
+
+Fig II.6.- Turbina para riego, tipo Giromill, instalada en Sudán
+
+Fig II.7.- Turbina de Loch Linnhe
+II.-44
+
+Durante 1988 funciona una instalación en el lecho marino del estrecho de Kurashima (Japón); se trataba de un modelo de 1,5 metros de diámetro y 3,5 kW. La primera generación de dispositivos de aprovechamiento de las corrientes marinas estaba basada en el uso de componentes convencionales de ingeniería y sistemas para lograr una fiabilidad razonable al mínimo coste. En 1992/93 se lleva a cabo en el Reino Unido la evaluación del recurso energético de las corrientes marinas. Se estimó que era posible una energía de 20 TW/año aproximadamente, a un coste menor de 0,15 Euros/kW. En Loch Linnhe (Escocia) (1994), la Marine Current Turbines S.A. (MCT) realiza la instalación de un rotor de 3,5 m de diámetro, de flujo axial, suspendido bajo un pontón flotante; con una corriente de velocidad c = 2,25 m/seg se alcanzó una potencia de 15 kW. Los dispositivos de primera generación (CEC, 1996), consistían en turbinas medianas, de 10-15 m. de diámetro y 200 a 700 kW, situadas en aguas poco profundas, siendo posiblemente la solución más económica. Los principales problemas técnicos correspondían a la necesidad de encontrar un ciclo de vida apropiado y a reducir el coste de mantenimiento, ya que el medio marino donde se trabaja es un medio muy duro Los dispositivos de segunda generación siguen la estela de los anteriores, introducen nuevos componentes como los generadores multipolo para bajas velocidades, el sistema de cambio de velocidad hidráulico, etc. Actualmente se están desarrollando nuevos dispositivos, nuevos rotores y técnicas de mando, que se pueden considerar como de tercera generación. Turbinas de flujo axial.- En el estuario del Severn, Lynmouth (Devon-UK), en donde las corrientes marinas alcanzan una velocidad aproximada de 2,5 m/seg, se instaló en 2003/04 una turbina bipala de 0,3 MW y 11 m de diámetro, montada en una torre anclada al fondo, de forma que para las operaciones de mantenimiento asciende a la superficie, proyecto Seaflow. El funcionamiento es similar al de un aerogenerador eólico, de forma que el flujo de la corriente marina hace girar el rotor; el buje del rotor puede orientarse 360º alrededor del poste en que está sujeto para estar siempre frontal a la corriente. Las pruebas realizadas con el Seaflow de 0,3 MW fueron satisfactorias, mejor de lo esperado, habiéndose conseguido eficiencias del orden del 40% y extraer el 25% de la energía disponible, Fig II.8.
+
+Tiempo en horas
+
+Fig II.8.- Comparación entre la energía capturada en el prototipo y la prevista
+
+En 2006 se inicia la 2ª fase, proyecto Seagen, que consiste en un generador con dos hélices bipala de 16 m de diámetro, que llegarán a producir 1 MW, girando entre 10 y 20 rpm, siendo capaz de funcionar con fluII.-45
+
+jos de agua en dos sentidos, pudiendo extraer entre 5 y 10 veces más energía por m2 que un aerogenerador eólico de la misma potencia, Fig II.10, lo que implica máquinas más pequeñas y baratas, al ser el agua un fluido mucho más denso que el aire, por lo que la energía que porta está más concentrada. El costo actual calculado con esta tecnología es de 10 céntimos de euro/kW, similar al de un generador eólico.
+
+Modo operacional Fig II.9- Proyecto Seaflow
+
+Modo mantenimiento
+
+Fig II.10- Proyecto Seagen, 2ª fase
+
+Fig II.11- Proyecto Seagen, 3ª fase
+
+La tercera fase consiste en la instalación de: - Un parque de 5 turbinas (5 MW), 2005/06 - Otros proyectos para conseguir en 2012 una potencia instalada de 1000 MW
+
+Fig II.12.- Coste de cada turbina
+II.-46
+
+Turbinas de flujo cruzado.- Davis desarrolló una turbina de flujo cruzado en 1981; construyó un prototipo de 20 kW y estimó que su potencia podría alcanzar los 45 kW. Más recientemente se ha instalado en el estrecho de Messina en Sicilia, una turbina de 6 m. de diámetro que se espera genere del orden de 50 kW con una corriente de 2,4 m/seg. Turbinas de flujo cruzado.- En Italia, a finales de 1990 se desarrolló un prototipo de 130 kW que utilizaba una turbina de flujo cruzado (turbina Kobold) de tres palas, montada sobre una plataforma flotante de forma cilíndrica amarrada al fondo. Este dispositivo se desplegó en el estrecho de Messina cerca de Sicilia, donde la velocidad de las corrientes es de 1,5 m/s a 20 m de profundidad; del resultado del modelo numérico y físico se estima una eficacia máxima del 42 % para la turbina Kobold.
+
+18,5
+
+0 -5
+
+-14,5 -21 15,5
+
+Flotante Fig II.13.- Turbinas de flujo cruzado
+
+En dique
+
+Fig II.14.- Turbina vertical Gorlov
+
+Fig II.15.- Turbina vertical Kobold
+
+Los objetivos eran los siguientes: Verificar las características de solidez, eficacia y bajo mantenimiento que se le suponían Desarrollar una nueva tecnología, buscando las posibles mejoras en todos sus componente Promover el desarrollo y explotación de la energía de las corrientes marinas frente a otras fuentes de energía renovables Se utilizó una turbina tripala de 6 m de diámetro, con una altura de pala de 5 m y cuerda de 0,4 m, trabajando con números de Reynolds variables. Cada pala se sostiene con dos brazos, siendo su estructura de acero con unos largueros longitudinales y recubierta de fibra de carbono; sus características eran las siguientes:
+II.-47
+
+Sentido de rotación independiente de la dirección de la marea Valor elevado del par de arranque; se trata de una turbina que puede trabajar con una velocidad de corrientes bajas, 1,2 m/seg, sin necesidad alguna de dispositivos externos que ayuden a hacer girar el rotor Buena eficacia, funcionamiento simple y bajo mantenimiento Una instalación está en curso de pruebas en Italia, y otra está prevista en China. Otros proyectos.- Gorlov y colaboradores en USA probaron modelos de turbinas de flujo cruzado con palas helicoidales (Tipo Savonius) para aprovechar las corrientes en ríos y en el Gulf Stream. Salter ha diseñado una gran turbina de flujo cruzado con 10 palas apoyadas en unos anillos arriba y abajo, dirigidas por bombas hidráulicas de tipo leva, que podría llegar a proporcionar 10 MW con una corriente de 4 m/seg. II.3.- TURBINAS EN CONDUCTOS Ventajas de las turbinas en conductos.- En zonas de baño o donde existen gran cantidad de objetos flotando, se puede colocar una rejilla en la entrada del conducto reduciendo el peligro de que puedan ser arrastrados por la corriente, reduciendo así posibles perdidas humanas y daños en la turbina. El conducto impide que la luz solar incida sobre la turbina, reduciendo el crecimiento de algas, que es uno de los principales problemas que se pueden encontrar. Se puede construir un conducto grande con materiales de bajo coste para que actúe como difusor y reduzca así la presión aguas abajo, mientras aumenta el salto a disposición de la turbina, para conseguir extraer más energía. También se puede utilizar una turbina de menor potencia con un flujo de mayor velocidad, de forma que la torsión en el eje de la turbina sea menor, para así reducir el coste de la caja de engranajes. Un factor significativo es que, si la velocidad del flujo y de la turbina son bajas, se requiere de mucho par para generar gran cantidad de potencia útil. El conducto elimina las perdidas en los extremos de las palas de las turbinas de flujo axial, mejorando su eficacia. imanes en las palas En la turbina de Torcado se han colocado  , de forma   arrollamientos a modo de estator en el conducto que la turbina funciona como rotor de un generador de imanes permanentes.
+
+Fig II.16.- Comparación entre la eficiencia y el caudal de turbinas unidad Kaplan y turbinas en un conducto
+
+Principios de funcionamiento de turbinas en conductos.- Las turbinas inmersas en un flujo de corrientes marinas extraen la energía reduciendo la velocidad del flujo sin apenas reducir la presión a su
+II.-48
+
+paso por el rotor; Existe un limite teórico del porcentaje de energía cinética que se puede extraer del flujo, que según Betz es del 59,6% para un solo disco correspondiente a la superficie frontal presentada por la turbina al flujo. Newman demostró que el límite para un disco doble, como el de las turbinas de flujo transversal, es del 64%. Al colocar la turbina en un conducto, la expansión queda limitada por la geometría del mismo, por lo que la energía se extrae principalmente como consecuencia de una caída de presión; las turbinas pueden llegar a altas eficiencias de conversión de energía, del orden del 90%. La caída de presión depende de la forma del conducto; si éste se diseña en forma de difusor aumenta la caída de presión recuperando parte de la altura correspondiente a la velocidad aguas abajo. Se ha estado trabajando en turbinas de viento con difusor, pero prácticamente no se ha aplicado este concepto a turbinas marinas, salvo en - El modelo Bluenergy de flujo cruzado en un conducto, en el que se ha estimado se puede conseguir un aumento de la energía extraída del orden de 5 veces más que sin conducto - En el Hydroventuri, Gilbert y Foreman descubrieron que con una turbina con difusor se podía obtener 4,25 veces más energía que con la misma turbina simplemente inmersa en el fluido, utilizando un difusor más corto, con unas hendiduras para el control de la capa límite, diseño mucho más barato que los largos difusores estudiados por otros investigadores Las turbinas eólicas se construyen para sobrevivir a las fuerzas del viento, a veces muy superiores a las de diseño; antiguamente, para evitar estas fuerzas ocasionales, las palas se colocaban en posición horizontal reduciendo así el área que se oponía al viento, algo que con un difusor sería imposible. En las turbinas para corrientes marinas se pueden predecir con exactitud cuales son las cargas máximas que deben soportar, que serán siempre del orden de las de diseño; no necesitan de ninguna torre que soporte su peso, ya que se pueden dejar flotando (amarradas al fondo), de forma que se orienten por la propia corriente. Las turbinas para las corrientes marinas que operan de una forma análoga a las turbinas eólicas suponen una tecnología relativamente nueva, de la que se puede extraer gran cantidad de energía sin un impacto medioambiental elevado. Proyecto Bluenergy.- Entre utilizar: - La diferencia de energía potencial provocada por las mareas, como ocurre en el Rance - Las turbinas inmersas en un flujo de corrientes Darrieux propuso colocar las turbinas en unos conductos, para aumentar la potencia extraída por las mismas.
+
+Fig II.16.- Planta en dique, y planta semiflotante del proyecto Bluenergy
+II.-49
+
+La Blue Energy en Canadá colocaba turbinas en conductos, en pleno flujo, sin bloquear el paso del mismo, pero obligándole a pasar a través de la turbina; con este concepto se está planteando la construcción de una planta en la que se pretende hacer circular el agua por un estrecho, en el que irían instalados un gran número de turbinas, capaz de producir 2200 MW. Otras empresas también están investigando en este sentido; Ponta y Dutt han ensayado diversos perfiles del conducto para aumentar la caída de presión y la velocidad del flujo a través de la turbina. Proyecto Hidromatric.- Consiste en una nueva disposición para el aprovechamiento de la energía del agua, que utiliza turbinas Kaplan de eje horizontal, que generan entre 200 y 600 kW, dispuestas matricialmente, dependiendo del espacio disponible y del flujo de agua, pudiéndose instalar en estructuras existentes, Fig II.17.
+
+Sistemas en vertedero
+
+Sistemas de irrigación
+
+Admisión en estructuras
+
+Esclusas marítimas
+
+Fig II.17.- Tipos de aplicación: en vertedero, irrigación, admisión de estructuras hidráulicas, esclusas marinas, etc.
+
+Fig II.18.- Matriz 5 x 5 instalada en Freudenau
+
+II.-50
+
+Fig II.19.- Estructura de esclusas de Freudenau
+
+Proyecto de la central eléctrica de Freudenau con exclusas al aire: Sistema de esclusas marítimas; Potencia generada 5000 kW; producción anual de energía eléctrica 3,7.106 kWh Una de las turbinas utilizadas, que se presenta en la Fig II.20 puede ir instalada en sistemas de dique y vertedero. En los ensayos del prototipo se ha obtenido un récord de rendimiento y un óptimo comportamiento en el funcionamiento. Sus datos técnicos son: Generación 380 KW ; Diámetro del rotor: 1.12 m
+
+Fig II.20.- Prototipo KW Agonitz
+
+Una instalación Hidromatic con sistema de vertedero para controlar las crecidas del río Ohio (USA), y generar electricidad, se presenta esquematizada en la Fig II.21.
+
+Fig II.21.- Proyecto Hidromatic río Ohio
+II.-51
+
+II.4.- OTROS PROYECTOS CON TURBINAS Proyecto Hydrolienne.- Hydrohelix Energías ha previsto tres lugares para posibles parques, dos a lo largo de la costa de Bretaña, (uno de 1 GW en el Raz de Sein y otro de 2 GW en Fromveur), y un tercero sobre el Raz Blanchard frente a la costa de Cotentin en el que 1500 turbinas de 16 m de diámetro podrían generar, habida cuenta de la existencia de corrientes excepcionalmente violentas que pueden alcanzar 5 m/seg, una potencia en punta de 3 GW, en total 6 GW. La producción anual de estos tres parques, constituidos por 5000 turbinas de 16 m de diámetro, podría alcanzar los 25.000 GWh, lo que representaría el 5% de la producción eléctrica francesa o el equivalente a 3 centrales nucleares
+
+Fig II.22.- Hydrovisión
+
+Fig II.23.- Proyecto Hydrolienne
+
+Las turbinas, instaladas en serie, tendrían 6 palas, y estarían posadas y fijadas en el fondo, respetando en todo momento el ecosistema y no tendrían ningún tipo de incidencia sobre la navegación, por cuanto irían situadas entre 20 y 40 m de profundidad, en una zona de corrientes de 2 m/seg. Cada parque generaría 1 MW y estaría constituido por 5 turbinas de entre 15 y 20 m de diámetro, funcionando 3000 horas al año. Proyecto Lunar Energy.- Consiste en una turbina bidireccional horizontal instalada en un Venturi, colocado a menos de 40 m de profundidad, el cual conduce la corriente de agua marina capturando y convirtiendo su energía en electricidad, lo que proporciona a este tipo de turbina la ventaja, respecto a sus competidores, de generar del orden de 5 veces más energía para la misma sección frontal interceptada.
+
+Fig II.24.- Proyecto Lunarenergy, Hydroventuri
+
+Hydrovisión.- Es un sistema diseñado para la extracción de energía de las corrientes de marea. Fig II.22; consiste en dos generadores accionados cada uno por un par de turbinas de 15 m de diámetro, generando cada uno 0,5 MW, y montados sobre un mismo soporte transversal sumergido; el conjunto flota y está anclado al fondo por unas cadenas, que permiten que las turbinas se alineen en la dirección de la coII.-52
+
+rriente del flujo de marea sin requerir ninguna intervención externa, proporcionando una manera fiable y económica de seguir el flujo alternativo de la marea. Longitud: 38 m ; Anchura: 15 m ; Peso: 490 Tm ; Generación: 2 x 0,5 = 1 MW Producción anual: 3 a 5 GWh ; Tiempo de vida estimado: 25 años Openhydro.- Es una turbina tipo Straflo que aprovecha la energía de las corrientes de marea en la bahía de Fundy, Fig II.25, en la que se presenta en la etapa de mantenimiento.
+
+Fig II.25.- Openhydro
+
+Fig II.26.- Turbina para el Gulf Stream
+
+Turbina para el Gulf Stream.- La sociedad FHPL (Florida Hidraulic Power and Luz) ha desarrollado una turbina especialmente concebida para ser colocada en corrientes oceánicas como la Corriente del Golfo. La turbina que consiste en dos rotores de fibra de vidrio, de un diámetro de 30m, debe proporcionar 3 MW; la máquina se afianza sobre el fondo marino, por medio de cables. El coste de fabricación para una serie de 400 turbinas sería de 400 euros por kW, lo que haría al sistema competitivo ante una central eléctrica moderna. El sistema se podría utilizar para producir hidrógeno por electrólisis del agua, con un coste de producción estimado inferior a 2$ por kg. II.5.- STINGRAY En UK se instala en 2002 por parte de Engineering Bussines Ltd., el prototipo denominado Stingray, de 150 kW con corrientes de 2 m/seg, en Yell Sound cerca de las islas Shetland (Escocia).
+
+Fig II.27.- 1ª Generación del Stingray de 150 kW
+
+II.-53
+
+El potencial aprovechable que existe en las Islas Shetland a 2 m/seg es de 140 MW. Se trata de una especie de ala de avión submarina horizontal que oscilando con las corrientes marinas varía su ángulo de inclinación para obtener un movimiento ascendente y descendente para generar electricidad; tiene, aproximadamente, 20 m de ancho y 24 m de alto y va montado sobre un brazo horizontal. Las corrientes mueven el ala montada sobre el brazo de arriba abajo, accionando unos cilindros hidráulicos de aceite a presión que le dirigen a un motor hidráulico conectado a un generador eléctrico; la salida de este generador pasa a un sistema de control industrial dando lugar a corriente continua, que viaja por un cable submarino hasta una planta en la costa donde se obtiene corriente alterna. El prototipo fue ensayado durante dos semanas promediando 90 kW con corrientes de 1,5 m/seg. Actualmente se esta desarrollando la idea de instalar una planta de 5 MW, con este tipo de dispositivo. A partir de los resultados obtenidos por el Stingray, la empresa está diseñando una segunda generación capaz de proporcionar 500 kW; la forma de este nuevo prototipo se presenta en la Fig II.29
+
+Fig II.28.- Parque Stingray
+
+Fig II.29.- 2ª Generación del Stingray, de 0,5 MW
+
+Las conclusiones que se pueden sacar son las siguientes: - La tecnología utilizada es válida para obtener un precio de kWh comercialmente viable - Existen gran cantidad de lugares donde se podría instalar un prototipo de este estilo y lograr elevados rendimientos - Es un dispositivo que no genera un impacto medioambiental significativo Proyecto Sea Snail.- Es un prototipo de 22 Tm capaz de generar 150 kW de energía eléctrica; desarrollado por la Universidad Robert Gordon en Aberdeen e instalado en las Islas Orkney, lleva una pequeña turbina que genera electricidad sobre el fondo del mar. Su armazón tubular, de acero, se clava sobre el fondo del océano.
+
+Fig II.30.- El prototipo Sea Snail
+II.-54
+
+La turbina situada en el centro se encuentra rodeada por una serie de lóbulos en forma de ala que crean una fuerza descendente conforme la corriente pasa encima de ellos. Contra más rápido sea el flujo de corriente, más fuertemente son empujados hacia el lecho marino. Las alas tienen un movimiento oscilatorio de acuerdo con la marea; en este prototipo están fabricadas con fibra de vidrio, pero en el futuro se rediseñarán empleando una cubierta inoxidable. Para su mantenimiento, el Sea Snail está diseñado para ser izado a la superficie, ya que como se instala para aprovechar la marea donde las corrientes son más fuertes, resultaría muy peligroso enviar buzos para su reparación. Como la estructura está sumergida, no alteran el paisaje, ni contaminan o provocan cualquier daño ambiental significativo. II.6.- ULTIMA GENERACIÓN DE TURBINAS PARA CORRIENTES DE MAREA La más simple de todas las configuraciones consiste en unos rotores montados sobre un poste fijado al fondo del mar. Para mantener los extremos de las palas libres de cavitación, se diseñan para un TSR de 10 m/seg o menos; las palas estarían moldeadas en fibra de carbono. El diseño lleva dos rotores de 20 m de diámetro, que pueden proporcionar entre 1 y 2 MW, dependiendo de la velocidad de la corriente, funcionando en aguas entre 30 y 50 m de profundidad. Este diseño no sería apropiado para aguas profundas debido a las cargas en la base del poste y a la dificultad de acceder al fondo del mar El brazo pivota en la horizontal con ayuda de la boya flotante del mástil, lo que permite que la turbina se pueda orientar horizontalmente siguiendo la dirección de las corrientes marinas y verticalmente hasta la superficie, para operaciones de mantenimiento. Para elevarse y poner los rotores en situación horizontal, mantenimiento en superficie, una de las turbinas funciona, mientras que la otra se frena, lo que provoca el que el conjunto se levante; esta idea fué patentada en UK en 2003.
+
+Fig II.31.- Tendencias modernas para corrientes de mareas
+
+El diseño se conoce como SST (turbina semisumergida). En el diseño actual de la turbina de Pentland Firth, el flujo a 60 m de profundidad es capturado por 2 pares de rotores de 20 m de diámetro, siendo la energía generada de 4 MW.
+
+II.-55
+

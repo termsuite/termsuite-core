@@ -1,0 +1,521 @@
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 1
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS Version 01.1 - in effect as of: 27 October 2006
+
+CONTENTS A. B. C. D. E. F. G. General description of the small-scale project Baseline Duration of the small-scale project / crediting period Monitoring plan Estimation of greenhouse gas emission reductions Environmental impacts Stakeholders' comments Annexes Annex 1: Contact information on project participants
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 2
+
+SECTION A. General description of the small-scale project A.1. Title of the small-scale project:
+
+Sudenai and Lendimai Wind Power Joint Implementation Project Ver. no. 6, Nov. 6 2007 A.2. Description of the small-scale project:
+
+The objective of the JI project is to establish two wind power plants with a combined capacity of 14 MW at Sudenu and Lendimu villages in Lithuania (JI Project). The renewable electricity produced by the wind power plants will displace carbon intensive electricity produced from fossil fuel sources in the Lithuanian power network, thus contributing to the lowering of greenhouse gas emissions as well as other pollutants related to fossil fuel based power generation. Lithuania has undertaken to increase the share of renewable electricity from current 3,5% to 7% by year 2010. To comply with this undertaking Lithuania would need to achieve ca. 480 GWh electricity production only from wind energy. This would amount to ca. 200 MW of installed wind power capacity. The recently approved National Program of Increasing Efficiency of Energy Consumption for 2006-2010 states that potential of usage of renewable sector to produce electricity is growing 0.2-1% annually; wind energy is first priority, biomass energy second. In order to give incentives for business of wind energy parks, the government has issued legislation1 regulating the obligatory purchase of wind power electricity. The feed-in tariff is set to 0,22 LTL per kWh i.e. 6,37 EUR cents per kWh (1 EUR = 3,4528 LTL). Such a feed-in tariff is expected to remain until 2020 year. In order to obtain the mentioned feed-in tariff the wind power plant must be built in one of the six zones for which tenders for grid connection are organised by Lietuvos Energija AB - the electricity Transmission System Operator in Lithuania. The set feed-in tariff is unfortunately not sufficient to realize the proposed project on a commercial basis. Additional income from the sale of 'carbon credits' under the Kyoto Joint Implementation scheme is thus required to turn the project attractive for the investors.
+
+Procedure of Promoting Generation and Purchase of Electricity Produced by Using Renewable and Spare Energy Resources. Resolution No. 1474 of the Government of the Republic of Lithuania on approval of regulations enacting the Law of the Republic of Lithuania on Electricity, dated 5 December 2001. Resolution No. 7 of the State Commission for Control on Prices and Energy regarding prices of public interest services in the electricity sector, dated 11 February 2002.
+
+1
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 3
+
+A.3. Project participants: Party involved
+
+Legal entity project participant (as applicable) • • Vejo Elektra UAB Nordic Environment Finance Corporation (NEFCO) in its capacity as Fund Manager to the Baltic Sea Region Testing Ground Facility (TGF)
+
+Republic of Lithuania (host Party) One of the investor countries participating in the TGF, tbc. The investor countries in the TGF are: Kingdom of Denmark, Republic of Finland, Federal Republic of Germany, Republic of Iceland, Kingdom of Norway and Kingdom of Sweden.
+
+Please indicate if the Party involved wishes to be considered as project participant (Yes/No) No No
+
+NEFCO, the Nordic Environment Finance Corporation, is a multilateral risk capital institution financing environmental projects in Central and Eastern Europe, increasingly with an emphasis on the Russian Federation and Ukraine. Its purpose is to facilitate the implementation of environmentally beneficial projects in the neighbouring region, with transboundary effects that also benefit the Nordic region. Today, NEFCO manages funds in an aggregate of approximately €300 million. NEFCO is located in Helsinki, in conjunction with the Nordic Investment Bank (NIB). The Baltic Sea Region Testing Ground Facility (TGF) was established at the end of December 2003, to provide financial assistance to concrete projects by purchasing emission reduction credits. The TGF was initially set up by the governments of Denmark, Finland, Germany, Iceland, Norway and Sweden. The TGF is now a Public Private Partnership which acts as a compliance vehicle for its investors' Kyoto and EU Emissions Trading Scheme commitments. From June 2006, it includes the following Nordic and German companies from the energy sector as well as energy intensive industrial consumers: DONG Naturgas A/S (Denmark), Fortum Power and Heat Oy (Finland), Gasum Oy (Finland), Keravan Energia Oy (Finland), Kymppivoima Tuotanto Oy (Finland), Outokumpu Oyj (Finland), Vapo Oy (Finland), Vattenfall Europe Berlin AG & Co. KG (Germany) and Vattenfall Europe Generation AG & Co. KG (Germany). The TGF is currently capitalised at €35 million. NEFCO is the Fund Manager of the TGF, and has been authorised by the governments investing in the TGF to participate on their behalf in actions leading to the generation, transfer and acquisition of ERUs under Article 6 of the Kyoto Protocol.
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 4
+
+A.4.
+
+Technical description of the small-scale project: A.4.1. Location of the small-scale project:
+
+A.4.1.1. Host Party(ies): Republic of Lithuania A.4.1.2. Region/State/Province etc.: Kretingos A.4.1.3. City/Town/Community etc.: Sudenu and Lendimu villages A.4.1.4. Detail of physical location, including information allowing the unique identification of the small-scale project: The proposed JI project would be located in Kretingos county, Sudenu village (Sudenai 8 MW wind power plant) and Lendimu village (Lendimai 6 MW wind power plant). The parks are located approx. 10 km from Baltic Sea on natural hills reaching up to 30m above the sea level and open to winds of all directions. The land plots are located in the midst of a rural area and are unsuitable for residential development. Dominant winds (SW) form two tunnels in the valleys of Sventoji river and Kulse rivulet. 110 kV Sventoji-Zidikai high voltage line crosses the plots. The sites meet other prerequisites for successful wind power generation - nearby technical infrastructure (grid, roads, port) and no environmental or other restrictions. The size of the development lots are 27.65 ha in Sudenai village and 11 ha in Lendimai village. The local inhabitants have signed their acceptances for the projects. Figure 1. Location map
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 5
+
+Figure 2. Location of the project in relation to the national electricity grid
+
+Figure 3. Location of the project
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 6
+
+Figure 4. Location of the project
+
+Figure 5. Detailed plan of UAB Lariteksas wind farm (Land unit of 27.65 ha, at Sudenai village, cadastre No. 5667/0003:0007)
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 7
+
+cadastre No. 5667/0001:3 Senosios pilties k.v)
+
+7.8 ha, at Lendimai village,
+
+!" # % $ ' ( ) * +, , . ,/ % &0 (
+
+&
+
+"
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 8
+
+A.4.2. Small-scale project type(s) and category(ies): Type I JI SSC project: Renewable energy project with a maximum output capacity of less than 15 MW(e). A.4.3. Technology(ies) to be employed, or measures, operations or actions to be implemented by the small-scale project: The purpose of the project is the development, construction and operation of two wind power plants in Lithuania. The power generation of these wind farms will displace carbon-intensive generation from the Lithuanian power plants. Technology The project will employ state of the art wind turbine technology from one of the world's foremost equipment suppliers, Enercon. The supplier was selected on the ground of earlier experience from other wind power projects. The wind power plants will consist of 7 turbines of type E82 with nominal electric capacity of 2000 kW each. The E82 wind energy converters will have a 78 m hub height steel towers and a 82m rotor diameter. For further information on the technology and the supplier please visit www.enercon.de. The project will employ state of the art wind turbine technology from one of the world's foremost equipment suppliers, Enercon. The wind power plants will consist of 7 turbines of type E82 with nominal electric capacity of 2000 kW each. The E82 wind energy converters will have a 78 m hub height steel towers and a 82m rotor diameter. Further information about the turbine is in the table below. Technical data of Enercon E-82-1 wind turbine. Power of generator, P 2000 kW Voltage of generator 400 V Type of generator Enercon direct drive synchronous annular generator Grid feeding Enercon inverter, converter Number of blades 3 Blade material GRP (epoxy); integrated lightning protection Rotor type Upwind rotor Direction of rotation Clockwise Rotor diameter 82 m Blade length 38,8 m Swept area 5281 m2 Turbine concept Gearless, variable single blade pitch control, variable speed Rotational speed Variable, 6- 21.5 rpm Cut-in wind speed 2,5 m/s Rated power at 11,5 m/s Cut- out wind speed 24- 34 m/s (with Enercon storm control) Hub height 78 m Braking system - 3 independent blade pitch systems with emergency supply; - Rotor brake;
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 9
+
+- Rotor lock; The technology risks are judged to be low given the maturity of wind turbine technology, and the immense operating experience of the supplier. Any residual risks will be covered through the performance guarantees and operating warrantees of the supply agreement. Wind turbine risks are low for modern equipment, but include the risk of critical component failure (e.g. gearbox, bearings, blades). As the equipment identified has fewer moving parts (i.e. synchronous movement, no gears) these risks are inherently reduced. The expected technical lifetime of the wind turbines is 20 years. Milestones, time schedule and current status of implementation The project is currently in the advanced development phase with feasibility analysis completed and with the detailed technical design under elaboration. Project financing (dependant also on securing carbon financing) is under completion with a view to wind farm erection during quarters 2-3 2008 and commissioning by August 2008. Emission reductions would thus begin to be generated from 1st of September 2008. Key permits and contracts Besides the low feed-in tariff, the main development barrier to wind projects in Lithuania is the securing of grid connection rights and planning permits. This barrier has been effectively removed for this project. Before take-over of the development rights for the Project by September 2006, Lariteksas UAB and Vejo Elektra UAB won a tender for grid connection in June 2004 and received permissions from the Ministry of Economy for development of the wind farms for Lariteksas UAB in July 2005 and for Vejo Elektra UAB in September 2004. The latter permission has been extended in March 2007. The grid connection fees have already been paid. According to the agreement between UAB "V jo elektra" UAB "Lariteksas" and AB "Lietuvos energija", dated August 2006, the connecting electricity line (including any other necessary equipment) located in the parcels of land of UAB "V jo elektra" and UAB "Lariteksas" shall be installed by the companies themselves in compliance with the technical project approved by AB "Lietuvos energija". The agreement prescribes that requirements for the supply of electricity into the electricity network of AB "Lietuvos energija", such as quality, quantity, timetables, accounting, readings, software, etc., shall be unilaterally set by AB "Lietuvos energija". UAB "V jo elektra" and UAB "Lariteksas" may not exceed the power of electricity production prescribed to them. In case of failure to comply with this obligation, AB "Lietuvos energija" may limit or terminate the supply of electricity into its electricity network. The local Kretingos municipality has agreed to the establishment of the wind farms and approved the respective detailed land use plan in June 2006. The project detailed technical design will be completed by summer 2007 on basis of which the building permit can be obtained. Also an environmental impact assessment has been carried out and approved by the respective authorities. The land has been rented to the project companies on a long-term basis. The Power Purchase Agreement (PPA) for the project has not yet been signed but is a formality under Lithuanian law once the grid connection rights have been secured. The PPA will be secured by Q3, 2008. The turn-key contract has already been agreed with the equipment supplier Enercon. Local civil construction companies will be sub-contracted for construction of project infrastructure. Operation of the
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 10
+
+wind farms will be taken care of by 4Energy and Enercon will take care of technical maintenance of during the first two years . Risks during project implementation and operation Construction cost overrun risk is transferred to the turnkey supplier by the terms of the supply contract. This includes total project management, including foundation construction and all civil engineering work. Enercon will be responsible for installation and operation during the trial period. Technology risks during construction and commissioning are similarly covered by the terms of the supply agreement. The contract includes a two year warranty period which includes maintenance, consumables and spare parts, valid from the takeover certificate (at successful commissioning). Risk is further reduced as the technology supplier is an established and creditworthy company. Delivery risks during operation relate to operation of the wind power plant. These include risks related to high wind, freak conditions, fire and lightning and vessel collision. These will be minimised by employing best practice procedures. The remaining risks will be assumed with the purchase of insurance products, incl. business interruption insurance. The energy yield estimate was calculated by EMD International A/S using measurements from a meteorological mast located on the site with 23-month measurement period. The dataset was correlated with model data from NCAR/NCEP re-analysis data from 1975-2007 (32 years). The measured data was corrected to long-term level using NCAR/NCEP data and the wind energy index method. As the result of analysis the combined annual production capacity of the wind farms is estimated to be 28.988 MWh. The estimate has a 90% probability of occurrence (P90) and can thus be considered very conservative. Figure 8. Energy yield assessment map by EMD International A/S
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 11
+
+Market risks relate to the uncertainties of power tariffs and the purchaser's ability to pay. These are covered through the PPA, which is required by law, with recourse to a creditworthy counterparty, AB Lietuvos Energia, the national power company. The company operates in an EU business environment, with low levels of business and regulatory risk. There remains however the risk of possible change of the feed-in tariff under the legislation. There is also an uncertainty related to the expected sales price of power after the end of the obligatory purchase period in 2020. A.4.4. Brief explanation of how the anthropogenic emissions of greenhouse gases by sources are to be reduced by the proposed small-scale project, including why the emission reductions would not occur in the absence of the proposed small-scale project, taking into account national and/or sectoral policies and circumstances: The renewable electricity produced by the proposed wind power plants would displace carbon intensive electricity produced from fossil fuel sources in the Lithuanian power network. Lithuanian electric power network is being operated by AB Lietuvos Energija. Foremost, they purchase power quotas (on basis of the prior signed contracts) from electric power producers. The producers may also supply electric power, exceeding the quotas, at a lower price. The difference in national demand for the electric power and total production thereof (quotas and over-quotas) is being covered by AB Lietuvos Elektrine. Thus, if the implementation of this JI Project fails, the estimated electric power would be produced by AB Lietuvos Elektrine using fossil fuels - natural gas, heavy fuel oil and orimulsion. It was calculated that AB Lietuvos Elektrine, by generating 1 MWh of electric power, contributes to the pollution of atmosphere with 0.629 tonnes of CO2 (data of 2002-2005).2 See chapter B.1. for more details of baseline calculation and next chapter for estimation of the GHG emission reductions of the JI Project which have been calculated conservatively on basis of the above carbon emission factor of 0.629 tCO2e/MWh and the expected power production. The proposed JI Project supports Lithuania's objective to increase the share of renewable electricity from current ca. 3,5% to 7% by year 2010. To comply with this undertaking Lithuania would need to achieve 480 GWh electricity production only from wind energy. This would amount to ca. 200 MW of installed wind power capacity. The Law of the Republic of Lithuania on Energy3 points out promotion of consumption of renewable energy resources as one of the principal objectives of regulation of state energy sector activities. The law provides that the state encourages the producers to generate electricity from renewable energy sources by imposing the "must carry" obligations. The Rules for Imposing the Public Interest Service Obligations4 provide that supply licence holders are under the obligation to buy up electricity generated by producers (connected to the transmission system) by using renewable and spare energy resources, and to sell it to their customers. In order to provide incentives for wind power development the government has issued legislation regulating obligatory purchase of wind power at a price of 0,22 LTL per kWh (6,37 EUR). Such a feed-in tariff is expected to remain until year 2020. In order to obtain the mentioned feed-in tariff the wind power plant must be built in one of the six zones for which tenders for grid connection are organised by Lietuvos Energija AB - the electricity Transmission System Operator in Lithuania.
+
+JI PDD of Rudaiciai Wind Power Park, December 2006, ver. PDD 01, p.7 Law No. IX-884 of the Republic of Lithuania on Energy, dated 16 May 2002. 4 Order No. 380 of the Minister of Economy of the Republic of Lithuania on approval of regulations enacting the Law of the Republic of Lithuania on Electricity, dated 18 December 2001.
+3
+
+2
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 12
+
+The above feed-in tariff for wind power is unfortunately not sufficient for commercial development of the wind power sector. Thus all recent wind power developments (e.g. Rudaiciai wind power plant of UAB Veju Spektras and Benaiciai wind power plant of UAB Achema Hidrostotys) are being carried out under the JI scheme. A recent report of the European Commission concludes for Lithuania that the progress up to now to increase the share of renewable electricity has been modest: "Amendments made in 2005 to the RES-E support system must lead to tangible results soon in order to reach the 2010 target of 7%".5 It is thus very unlikely that future project will proceed without further financial interventions from the Joint Implementation scheme. For further information about the project's additionality please see section B.2. A.4.4.1. Estimated amount of emission reductions over the crediting period: Length of the crediting period 4 years, 4 months Year Estimate of annual emission reductions in tonnes of CO2 equivalent Year 2008 6.078 Year 2009 18.233 Year 2010 18.233 Year 2011 18.233 Year 2012 18.233 Total estimated emission reductions over the 79.012 crediting period (tonnes of CO2 equivalent) Annual average of estimated emission reductions 15.802 over the crediting period (tonnes of CO2 equivalent) A.4.5 Confirmation that the proposed small-scale project is not a debundled component of a larger project: The Sudenai and Lendimai Wind Power JI Project with a combined capacity of 14.0 MW(e) is not a debundled component of a larger project due to the following reasons: - The project boundaries of the nearest wind power development project (developed by UAB Achemos Hidrostotys) is located at a minimum distance of 3 km from the project boundary of the proposed JI Project (at the closest point). - The project participants of the closest wind power development project are different.
+
+Communication from the Commission to the Council and the European Parliament. Green Paper follow-up action. Report on progress in renewable electricity. Brussels, 10.1.2007, p.8
+
+5
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 13
+
+A.5.
+
+Project approval by the Parties involved:
+
+Written approval by the Host Party involved, including the necessary authorisations, will be attached to the final PDD. The proposed JI Project has already been endorsed the Ministry of Environment with its communication from February 21 2007 "Concerning the approval of the Idea of Joint Implementation Project", Document no. (10-5)-D8-1543. Once the draft determination report is available, the necessary request to issue a host country Letter of Approval will be made to the relevant Lithuanian authorities. The investor country approval will be issued by at least one of the investor countries to the TGF at the point in time when it is required, at the latest. Currently the investor country approval according to the JI Supervisory Committee decision is needed when submitting the first verification report for publication.
+
+SECTION B. Baseline B.1. Description and justification of the baseline chosen:
+
+The baseline is the amount of GHG that would be emitted to the atmosphere during the crediting period of the project, i.e. in 2008-2012, in case the project was not implemented. BASREC Regional Handbook on Procedures for Joint Implementation in the Baltic Sea Region (Version 2 - June 2006) indicates three methods of baseline approach: 1. Existing actual or historical greenhouse gas (GHG) emissions, as applicable; 2. Emissions from a technology that represents an economically attractive course of action, taking into account barriers to investment; 3. Average emissions of similar projects undertaken in the previous 5 years, in similar social, environmental and technological circumstances, and whose performance is in the top 20 per cent of their category. The baseline is calculated referring to historic data as this method is best suited for Lithuanian power market. Approved CDM ACM0002 methodology is not used for the baseline calculation due to the following reasons: 1. Lietuvos Elektrine, power plant with the second largest installed capacity in Lithuania (after Ignalina nuclear power plant -INPP) is operating on the power grid as a marginal plant. It covers all power demand which is remaining after all other power producers have supplied their quota power to the grid. Hence, by simply including all these power plants operating on the grid (excl. INPP) would bias the Operating Margin emissions factor. 2. There is an overcapacity of installed power in Lithuania, so only very few new power plants are built. Because of that, it is impossible to calculate properly the Build Margin emissions factor. Taking into consideration the specifics of the Lithuanian power market, the methodology based on historical data was developed in mid 2006 by a consulting company Ekostrategija. The methodology is described below and was also used when developing the JI project of Rudaiciai Wind Power Park.
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 14
+
+GHG emissions from production of electric power depend on type of fuel used and the efficiency of installations in which fuel is combusted. Thus, for baseline calculation it is important to know which power plants will reduce production due to the supply of additional electric power, generated in a JI project. This can be easily determined knowing the structure of Lithuanian power network. When the manufacturers of electric power supply all quota power to integrated Lithuanian power grid, the rest of power demand is covered by power produced in Lietuvos elektrine (Lithuanian Power Plant). Taking this into consideration, we can say that in case of additional power supply to the grid, the production will be reduced in Lietuvos elektrine. Therefore, in order to calculate GHG emission reductions, resulting from implementation of JI projects related to production of electric power, it is necessary to know the amount of CO2 released to the atmosphere while producing 1 MWh of electric power in Lietuvos elektrine. For determination of the baseline we use fuel consumption and production efficiency data provided by AB Lietuvos elektrine as well as production of electric and thermal power in Lietuvos elektrine in 2002-2005 (Table 1).
+Table 1 Energy production and fuel consumption in Lietuvos elektrine Year Electric power produced (MWh) 736,604 723,858 745,372 1,072,814 Thermal power produced (MWh) 202,060 195,553 212,399 199,383 Natural gas (1000nm3) 199,104 225,813 207,690 280,559 Fuel oil (t) Orimulsion (t)
+
+2002 2003 2004 2005
+
+7,355 5,241 2,750 1,815
+
+52,534 21,238 55,501 86,160
+
+Source: Lietuvos Elektrine, telefax of 06.05.10; Lietuvos Energetika. Energy in Lithuania 2004. Lietuvos energetikos institutas, 2005
+
+The amount of fuel consumed is transferred to oil equivalents using such factors: natural gas - 0.800 toe/1000nm3, fuel oil - 0.955 toe/t, orimulsion - 0.660 toe/t (Table 2).6
+Table 2 Fuel consumption at Lietuvos elektrine, expressed in oil equivalents Year 2002 2003 2004 2005 Natural gas (toe) 159,289 180,657 166,158 224,455 Fuel oil (toe) 7,025 5,005 2,626 1,733 Orimulsion (toe) 34,675 14,018 36,633 56,869
+
+Hereafter, we calculate the percentage of each type of fuel, being consumed in every year (Table 3).
+
+6
+
+P. 20, Lietuvos Energetika. Energy in Lithuania 2004. Lietuvos energetikos institutas, 2005
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 15
+
+Table 3 Proportion of fuels consumed at Lietuvos elektrine Year 2002 2003 2004 2005 Natural gas (%) 79.25% 90.47% 80.89% 79.30% Fuel oil (%) 3.49% 2.51% 1.28% 0.61% Orimulsion (%) 17.25% 7.02% 17.83% 20.09%
+
+According to calorific values of fuel CO2 emission factors are estimated for fuel, expressed in tonnes of oil equivalents (Table 4).
+Table 4 CO2 emission factors Natural gas tCO2/nm3 0.00189605 tne/1000 nm3 0.80002867 tCO2/tne 2.369981446 Fuel oil tCO2/t 3.1028478 tne/t 0.955065574 tCO2/tne 3.24883221 Orimulsion tCO2/t 2.22683985 tne/t 0.660041566 tCO2/tne 3.373787295
+
+Source: Statistical Department of Lithuania. Order on the approval of the methodology for the calculation of the balance of fuel and energy, Annex I. 24. 11.2004,(Official Gazette 2004, No172-6363), National GHG inventory report 2007 of the Republic of Lithuania
+
+Total annual amount of CO2 emitted by Lietuvos Elektrine is calculated by multiplying the amount of each type of fuel consumed annually (expressed in toe) by the corresponding emission factor tCO2/toe (see Table 9). TCO2 = (FGas x EFGas) + (FHFO x EFHFO) + (FOrm x EFOrm) TCO2 - total annual amount of CO2 emitted by Lietuvos elektrine; FGas - annual consumption of natural gas at Lietuvos elektrine, 1000 m3 FHFO - annual consumption of Heavy Fuel Oil at Lietuvos elektrine, tonnes FOrm - annual consumption of Orimulsion at Lietuvos elektrine, tonnes EFGas - CO2 emission factor for Natural gas, tCO2/toe EFHFO - CO2 emission factor for Heavy fuel oil,, tCO2/toe EFOrm - CO2 emission factor for Orimulsion, tCO2/toe Table 5 shows the emissions from each type of fuel at Lietuvos elektrine.
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 16
+
+Table 5 Fuel specific CO2 emissions at Lietuvos elektine Year 2002 2003 2004 2005 Natural gas, tCO2 377,512 428,153 393,791 531,955 Fuel oil, tCO2 22,821 16,262 8,533 5,632 Orimulsion, tCO2 116,985 47,294 123,592 191,865 Total: tCO2 517,318 491,709 525,916 729,451
+
+Amount of CO2 emissions, released while producing thermal power in Lietuvos elektrine, is calculated as follows:
+
+H CO 2 =
+
+H LE ⋅ R% ⋅ K tCO 2 / toe ; E h ⋅ K toe
+
+HCO2 - CO2 emissions, generated while producing thermal power; HLE - Annual amount of thermal power produced; Eh - Efficiency of thermal power production in Lietuvos elektrine (88.1%, see below); Ktoe - Coefficient for transfer of thermal power to conditional fuel (toe - tonnes of oil equivalents). It is equal to 11.63 (Source: Energy in Lithuania 2004); R% - Percentage of each type of fuel within the annual fuel consumption; KtCO2/toe - Emission factor for one unit of conditional fuel (tne - tonnes of oil equivalents) of different fuel types. To calculate efficiency of thermal power production in Lietuvos Elektrine, we have considered the data for consumption of conditional fuel per 1 MWh of heat energy produced, presented by AB Lietuvos Elektrine. These figures were obtained by using an internal enterprise's methodology and are presented in Table 5.
+Table 5. Consumption of conditional fuel to produce 1 MWh of heat energy at Lietuvos elektrine Year 2002 2003 2004 2005 tce/MWhe 0.136 0.141 0.141 0.140
+
+Source: Lietuvos Elektrine, telefax of 23.06.06 Fuel consumption was transferred to the efficiency of thermal power production (Table 6).
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 17
+
+Table 6. Efficiency of thermal power production at Lietuvos elektrine Year 2002 2003 2004 2005 Average Efficiency of thermal power production 90.5% 87.1% 87.1% 87.6% 88.1%
+
+As it can be seen from the table, the average thermal power production efficiency rate in "Lietuvos elektrine" is 88.1%. Based on the above formula, the amount of CO2 emissions released while producing thermal power in Lietuvos elektrine is calculated as following in Table 7.
+Table 7. Emissions attributable to thermal power production at Lietuvos elektrine Natural gas, Fuel oil tCO2 Orimulsion, CO2 emissions (t) tCO2 tCO2 2002 37,041 2,239 11,478 50,759 2003 40,924 1,554 4,520 46,998 2004 39,740 861 12,472 53,073 2005 36,571 387 13,190 50,148
+
+CO2 emissions released for production of electric power are calculated by deducting the amount of CO2 attributable to heat production from the total CO2 amount released by Lietuvos elektrine. PCO2 = TCO2 - HCO2 PCO2 - annual CO2 emissions attributable to power production at Lietuvos elektrine, tCO2 TCO2 - total annual amount of CO2 emitted by Lietuvos elektrine; HCO2 - annual CO2 emissions attributable to heat production at Lietuvos elektrine, tCO2 To calculate emissions factor, CO2 emissions attributable to power production were divided by annual power production. The results are presented in Table 8.
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 18
+
+Table 8. Emissions attributable to power production at Lietuvos elektrin Year Power production, Emissions, t CO2 MWh 2002 2003 2004 2005 Average 736,604 723,858 745,372 1,072,814 819,662 466,559 444,711 472,843 679,303 515,854
+
+tCO2/MWhe 0.633 0.614 0.634 0.633 0.629
+
+To evaluate the correctness of the results obtained, we compared them to the results obtained and provided by AB Lietuvos Elektrine. Calculations made by the technicians of AB Lietuvos Elektrine gave such results: 0.667 tCO2/MWhe for 2005 and 0.726 tCO2/MWhe for the period before 2012 forecast. Considering the results of our calculation and ones presented by AB Lietuvos Elektrine it is possible to draw the conclusion that using emissions factor of 0.629 tCO2/MWhe would represent a conservative approach to the baseline as it would result in fewer CO2 reductions compared to the one calculated by AB Lietuvos Elektrine methodology. Lithuania's National allocation plan for 2005-2007 forecasts an increase in Orimulsion share from 20% (56.9 Ktoe) in 2005 to 40% by 2008 in the fuel mix of Lietuvos elektrine. The forecasted increase in the Orimulsion share, would definitely increase baseline emissions factor. Hence, the current emissions factor - 0.629 tCO2/MWhe is considered to be conservative and will be used as an ex-ante value to calculate CO2 reductions from Sudenai and Lendimai Wind Power JI Project. B.2. Description of how the anthropogenic emissions of greenhouse gases by sources are reduced below those that would have occurred in the absence of the small-scale project: Additionality of the project is proven using the ver. 2 of the CDM Tool for the Demonstration and Assessment of Additionality as approved by the CDM Executive Board. Baseline calculation presented in Section B.1 shows that production of an additional 1 MWh of electric power reduces CO2 emissions at average by 0.629 tCO2. With an estimated annual power production of 28.988 MWh the wind farms of the proposed JI Project would thus reduce CO2 emissions annually by 18.233 tonnes. Step 0. Preliminary screening based on the starting date of the project activity Not applicable as a crediting period starts only after the project registration. Step 1. Identification of alternatives to the project activity consistent with current laws and regulations Sub-step 1a. Define alternatives to the project activity:
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 19
+
+A) The proposed project activity not undertaken as a JI project activity; B) Continuation of the current situation (no project activity or other alternatives undertaken); Electric power in the Lithuanian network will be produced in existing and new cogeneration power plants. Sub-step 1b. Enforcement of applicable laws and regulations: The existing legal and regulatory requirements in Lithuania is in favour of alternative B - continuation of the current situation and is not in favour of alternative A - proposed project activity not undertaken as a JI project activity. The obligatory purchase tariff for wind power established by the governmental regulation on promotion of electric power produced from renewable sources7 is not sufficient for commercial development of the wind power sector. (Sub-step 2c). Step 2. Investment analysis Sub-step 2a. Determine appropriate analysis method Simple cost analysis (option I) is not applicable for the project as the income from sale of 'carbon credits' is not the only source of revenues for the project. Benchmark analysis (option III) is not applicable either as no investment benchmarks for power sector exist in Lithuania. The power market in Lithuania is still partly regulated. Power producers are given quotas to deliver power at a certain price. Over-quota power is delivered at the market price (lower than the quota price). Both, quota and the power price differ on a case by case basis. The investment comparison analysis (option II) will be used for this project as it is the only applicable method. Sub-step 2b. - Option II. Apply investment comparison analysis NPV (Net Present Value) and IRR (Internal Rate of Return), as the most common financial feasibility indicators will be used for investment comparison analysis. NPV is the difference in the present values of cash outflows and inflows, the higher the NPV, the more attractive the project is for investors; IRR estimates the discount rate used in order to obtain NPV equal to 0. IRR is commonly calculated on total investment (disregarding capital structure and depreciation rate) to compare the project with similar projects or on the equity part of investment, which is relevant indicator for investors. Sub-step 2c. Calculation and comparison of financial indicators Given investor requirements and the risks associated with this project, a higher long-term tariff is required to make the project financially viable if the project is not implemented as a JI project.
+
+7
+
+Lithuanian government's decision No. 1474, Dec. 5 2001
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 20
+
+Financial modelling proves that the financial income from sale of Emission Reduction Units during 200812 improves the IRR of the project by almost one percentage point and enables to generate a positive NPV of the investment, thus making the project attractive for the investors to undertake. The prepayment from the sale of carbon credits can also be utilized as part of the equity capital. For financial modelling a less conservative energy yield estimate of 33.708 MWh (as compared to the ERU estimate) has been used as the financial modelling period of 20 years is longer than the ERU generation period (5 years), thus it is more probable that the energy yield will meet the P50 estimate which has a probability of 50%. An Excel file "Sudenai Lendmai sensitivity" with detailed calculations has been made available to the Independent Entity during determination. Sub-step 2d. Sensitivity analysis Power production of the wind farms, ERU price, interest rate and investment cost have been altered to see the effect on projects' profitability. Sensitivity to change in power production, Sudenai/Lendimai
+Production, MWh IRR* *Excl. sale of ERUs -20% 26,966 3.20 % -10% 30,337 4.49 % 0% 33,708 5.63 % +10% 37,079 6.71 % +20% 40,450 7.75 %
+
+Sensitivity to change in ERU price, Sudenai/Lendimai
+-100% ERU price, EUR IRR* -50% -20% 0% 20% 50%
+
+Confidential - information only available to Independent Entity
+
+*Incl. sale of ERUs Step 3. Barrier analysis Sub-step 3a. Identify barriers that would prevent the implementation of type of the proposed project activity: • One of the key barriers listed in the tool for additionality assessment is, "investment barriers ... Debt funding is not available for this type of innovative project activities." This is also the case with the proposed JI Project in Lithuania, as neither debt funding would be available if the project did not have JI status. JI revenue has been considered since the early stages of development of this project and is an integral part of financing the project. No financial support for renewable electricity generation is foreseen under the EU structural funds or any other multilateral or bilateral sources.
+
+•
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 21
+
+•
+
+Due to the real estate market boom that also affects the designated areas for wind power development in Lithuania (incl. Kretingos), there is scarcity of land (at reasonable cost) for construction of commercial scale wind power parks Establishment of wind power plants has become more expensive over the past few years due to a change of leading wind turbine suppliers' pricing strategy, increasing price of components and raw materials (steel), and increasing civil construction price in Lithuania. Tender rules for grid connection in dedicated zones require a significant initial down-payment which the developers are more willing to make when carbon financing is secured or foreseen. There is insecurity regarding purchase of wind power when trading on hourly basis comes into effect after the establishment of the spot market. AB "Lietuvos Energija" has the right to disconnect the wind power-plant park from the power network in case of the system overload. The know-how related to wind power technology and project implementation has been limited in Lithuania.
+
+•
+
+• •
+
+•
+
+Sub-step 3 b. Show that the identified barriers would not prevent the implementation of at least one of the alternatives (except the proposed project activity): • Fossil fuel based power generation in Lithuania does not face the same limitations on availability of finance and many projects may not even require external funding as they can be financed internally by AB Lietuvos Elektrine. Also EU structural funds are available for new cogeneration power plants and for modernization of existing ones. There is more know-how available for cogeneration than for wind power in Lithuania.
+
+• •
+
+Step 4. Common practice analysis Sub-step 4a. Analyze other activities similar to the proposed project activity: No commercial scale wind farms exist in Lithuania and all new projects are being implemented under the Joint Implementation scheme. The JI projects would be excluded from the common practice analysis.
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 22
+
+Table 9. Wind power plants developed under the JI scheme Lithuania Title Rudaiciai Wind Power-Plant Project Benaiciu wind power stations park Sudenu and Lendimu power stations park Ciuteliu Wind Power Plant Project Mockiu Wind Power Plant Project Kreivenu Wind Power Plant Project Estimated emission reductions 2008-12 231,155 148,550 110.940 235,851 67,703 127 244
+
+Source: Lithuania's National Allocation Plan for Greenhouse Gas Emission Allowances for the Period 2008 to 2012, NAP version 18.04.2007
+
+Sub-step 4b. Discuss any similar options that are occurring: The only wind farm that was built in Lithuania (near Kretingale) by not utilizing the JI scheme is still not in operation. Institutional and legal barriers prevented the wind farm from becoming operational. The wind power technology and civil construction costs were also lower when that wind farm was built. Step 5. Impact of JI registration As explained in Step 2, if the project developer is able to sell the 'carbon credits' from the project activity, the additional revenue would improve the financial viability. Also the example of other JI wind projects in Lithuania proves that with the JI status a wind project will be able to attract equity and debt financing, and overcome the barriers described in step 3. Financial modelling proves that the financial income from sale of Emission Reduction Units during 200812 improves the IRR of the project by almost one percentage point and enables to generate a positive NPV of the investment, thus making the project attractive for the investors to undertake. The prepayment from the sale of carbon credits can also be utilized as part of the equity capital, thus lowering the financial risk for the equity investors. a) Baseline scenario In accordance to the baseline scenario, electric power is produced only by AB Lietuvos Elektrine. Forecasted production of electric power and CO2 emissions are presented in Table 6.
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 23
+
+Table 6 Forecasted power production and CO2 emissions in 2008-2012 in baseline scenario AB Lietuvos Elektrine Year Production of electric power (MWh) 1,831,000 1,818,000 1,549,000 4,974,000 5,730,000 Sudenai and Lendimai wind farms Production of electric power (MWh) 0 0 0 0 0
+
+Emissions, tCO2 1,151,699 1,143,522 974,321 3,128,646 3,604,170
+
+Emissions, tCO2 0 0 0 0 0
+
+2008 2009 2010 2011 2012
+
+b) Project scenario: The project scenario foresees an establishment of wind power plant at Sudenai and Lendimai with a combined capacity of 14 MW. The renewable electricity produced by the wind power plant will displace carbon intensive electricity produced from fossil fuel sources by AB Lietuvos Elektrine.
+Table 7 Forecasted power production and CO2 emissions in 2008-2012 in baseline scenario Year AB Lietuvos Elektrine Production of electric power (MWh) 1,821,337 1,789,012 1,520,012 4,945,012 5,701,012 Emissions, tCO2 1,145,621 1,125,289 956,088 3,110,413 3,585,937 Sudenai and Lendimai wind farms Production of electric power (MWh) 9,662 28,988 28,988 28,988 28,988 Emissions, tCO2 0 0 0 0 0
+
+2008 2009 2010 2011 2012
+
+c) Emission reductions will occur due to the simple fact that the Baseline scenario represents a higher emission factor than the Project scenario. Greenhouse gas emissions of the baseline scenario will exceed the emissions of the project baseline scenario by 18.233 tCO2 per year due to the additionality of the project. During the period of 2008-2012 the difference between GHG emissions of baseline and project scenarios will make 79.012 tCO2e.
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 24
+
+B.3. Description of how the definition of the project boundary is applied to the small-scale project: The BASREC JI Project Guidelines describes project boundaries as theoretical boundaries, determining the scope of project's impact on GHG emissions. The sources of GHG involved in project boundaries represent the sources involved in baseline calculations. The project boundary is drawn around the physical boundary of the wind power plants (i.e. the wind turbines and generators) and the power plants of AB Lietuvos Elektrine, the power generation of which the wind power plants would replace. The boundaries of the project are shown in Figure 1. Project boundaries CO2 emissions of AB Lietuvos Elektrine in 2008-2012 Other producers of electric power
+
+Sudenai and Lendimai wind power plants
+
+Consumers of electric power
+
+Figure 1 Project boundaries
+
+B.4. Further baseline information, including the date of baseline setting and the name(s) of the person(s)/entity(ies) setting the baseline: Baseline Study date: Nov. 6 2007 Conducted by: Nelja Energia OÜ in cooperation with LHCarbon OÜ, represented by Hannu Lamp. Tel: +372 51 41 800, E-mail: Hannu@online.ee None of the above entities are considered as project participants. Other baseline studies have been recently undertaken due to the development of other wind power JI projects in Lithuania. The baseline study for the Rudaiciai Wind Power Park published in December 2006 at the UNFCC website has been used for this PDD8.
+
+8
+
+JI PDD of Rudaiciai Wind Power Park, December 2006, ver. PDD 01
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 25
+
+SECTION C. Duration of the small-scale project / crediting period C.1. Starting date of the small-scale project: The wind farm construction will start on April 1 2008. C.2. Expected operational lifetime of the small-scale project: 20 years, 0 months C.3. Length of the crediting period: Total crediting period: 4 years, 4 months (2008-2012) Starting date. September 1, 2008 Pending decisions on the framework for generation and transfer of emissions reduction credits post 2012, the project developer may seek the right to earn credits for the period 2013 to 2017 in addition to emission reductions units (ERUs) generated under the first commitment period of the Kyoto Protocol (2008 to 2012).
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 26
+
+SECTION D. Monitoring plan D.1. Description of monitoring plan chosen:
+
+The main requirements, being imposed on the monitoring plan, are pointed out in the Annex B of Chapter 6 of the Kyoto protocol (Decision 9/CMP.1, "Decisions adopted by the Conference of the Parties serving as the meeting of the Parties to the Kyoto Protocol"). The following points have to be considered in the monitoring plan: • • • All the data necessary to the evaluation or the collection and storage of the data from all the sources of anthropogenic emissions and/or leakage. These data are being collected and stored during all the crediting period; The collection and storage of all the data necessary for the calculation of the baseline from all the anthropogenic sources and leakage during all the crediting period; The determination of all the potential sources, the collection of information about them and storage of it in case of increasing GHG emissions from the anthropogenic sources as well as leakage that have intense and significant impact on the project during its crediting period and that are outside the project boundaries. The project boundaries must involve all the sources and leakage of anthropogenic pollution under the maintenance of the participants of the project; The storage of the information about the state of environmental protection according to the requirements of the hosting country; The assurance of the quality of the monitoring and the procedures of control; The periodic calculation of the saved GHG, according to all the sources and leakage, if such are present.
+
+• • •
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 27
+
+D.2.
+
+Data to be monitored:
+Data variable Source of data Data unit Measured (m), calculated (c), estimated (e) Recording frequency Proportion of data to be monitored How will the data be archived? (electronic/ paper)
+
+ID number (Please use numbers to ease crossreferencing to D.2.) 1
+
+Data to be collected in order to monitor emission reductions from the project, and how these data will be archived:
+
+EGy - Net electricity supplied to the grid
+
+Project proponent
+
+kWh
+
+Measurement. Directly measured with electricity meter, and checked with sales data
+
+Monthly
+
+100%
+
+Electronic and in paper form
+
+Data (Indicate table and ID number) 1. EGy
+
+D.3.
+
+Quality control (QC) and quality assurance (QA) procedures undertaken for data monitored:
+Uncertainty level of data (high/medium/low)
+
+Explain QA/QC procedures planned for these data, or why such procedures are not necessary.
+
+The maximum allowed deviation of the meters is 0,5% (at 110 kV)
+
+Data will be directly measured with metering equipment at the connection point to AB Lietuvos Energia grid at the 110 kV side of the transformer. This equipment will be sealed, calibrated and checked periodically for accuracy. In addition, all metered data will be double checked by receipts of electricity sales, with SCADA system as back-up.
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 28
+
+D.4.
+
+Brief description the operational and management structure that the project operator will apply in implementing the monitoring plan:
+
+The basic guidelines of the Monitoring Plan are as following: The project proponent will measure only the net electricity output of the wind power plants. All other data will be collected at the beginning of the project, and presented in the Baseline Study and PDD. In order to ensure a successful operation of the project and the credibility and verifiability of the emission reductions (ERs) achieved, Vejo Elektra UAB recognises that the project must have a well defined management and operational system. The management and operation of the project is the responsibility of Vejo Elektra UAB i.e. ensuring the environmental credibility of the project through accurate and systematic monitoring of the project's implementation and operation for the purpose of achieving trustworthy ERs. Vejo Elektra UAB will outsource the daily monitoring and verification tasks to 4Energia which will as earlier described also be responsible for operation of the wind turbines. Data handling and quality assurance: Data will be entered on a monthly basis to an MS Excel worksheet on basis of information provided by the power purchaser (AB Lietuvos Energia) on kWh delivered to the grid on basis of the installed bi-directional power meter. Data will be double-checked with information from the wind farm's SCADA system which will be calibrated with the meter. The power purchaser will also be asked to report on scheduled repair/replacement of the power meter. Procedures in case of meter failures will be established. Vejo Elektra UAB's manager Dainius Kriau i nas will be in charge of and accountable for the generation of ERs including monitoring, record keeping, computation of ERs and verification. He will officially sign-off on all monitoring worksheets that are prepared by 4Energia and printed on a monthly basis. Regular back-ups of the monitoring and SCADA databases will be made. Reporting: Vejo Elektra UAB in cooperation with 4Energia will prepare a brief annual monitoring report which will include: information on overall project performance, emission reductions generated and comparison with targets. The report will be provided to the verifier and to the Lithuanian JI focal point on an annual basis or more frequently if so decided. Training: It is Vejo Elektra UAB's and 4Energia's responsibility to ensure that the required capacity and internal training is made available to its operational staff to enable them to undertake the tasks required by the MP. Initial staff training will be provided by 4Energia before the project starts operating and generating ERs.
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 29
+
+Corrective Actions: Vejo Elektra UAB/4Energia will periodically undertake performance reviews as part of its ongoing operation and management. Where corrective actions are required by the Lithuanian authorities or the verifiers, these will be acted upon within a reasonable timescale as dictated by relevant authorities. Data collection: ID number Data variable MP1 Name EGy - Net electricity supplied to the grid Dainius Kriau i nas (kWh) Responsible person Position and department Member of the Management Board
+
+D.5.
+
+Name of person(s)/entity(ies) establishing the monitoring plan:
+
+Dainius Kriau i nas, Vejo Elektra UAB. Vejo Elektra UAB is a project participant as listed in Annex 1.
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 30
+
+SECTION E. Estimation of greenhouse gas emission reductions E.1. Estimated project emissions and formulae used in the estimation: Wind power does not create any anthropogenic greenhouse gas emissions in operation, so project emissions are zero. E.2. Estimated leakage and formulae used in the estimation, if applicable: There are no direct or indirect emissions outside the project boundary attributable to the project activity. E.3. Sum of E.1. and E.2.: Since there are no leakages: E.1 + E.2 = E.1 (0) E.4. Estimated baseline emissions and formulae used in the estimation:
+
+Baseline emissions (BE) are calculated as following: BEy (tCO2) = EGy (MWh) x EFy (tCO2/MWh) EGy - Net electricity supplied to the grid EFy - Emission factor of the power plants of AB Lietuvos Elektrine Please refer to Section B for detail on how the emission factor (0.629 tCO2e/MWh) is calculated. 2008 Baseline emissions (in t CO2e) E.5. 6.078 2009 18.233 2010 18.233 2011 18.233 2012 18.233 2008-2012 79.012
+
+Difference between E.4. and E.3. representing the emission reductions of the project: 2008 2009 18.233 2010 18.233 2011 18.233 2012 18.233 2008-2012 79.012
+
+Baseline emissions = Project emissions (in t CO2e)
+
+6.078
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 31
+
+E.6.
+
+Table providing values obtained when applying formulae above: Estimated project emissions (tonnes of CO2 equivalent) 0 0 0 0 0 0 Estimated leakage (tonnes of CO2 equivalent) 0 0 0 0 0 0 Estimated baseline emissions (tonnes of CO2 equivalent) 6.078 18.233 18.233 18.233 18.233 79.012 Estimated emission reductions (tonnes of CO2 equivalent) 6.078 18.233 18.233 18.233 18.233 79.012
+
+Year
+
+Year 2008 Year 2009 Year 2010 Year 2011 Year 2012 Total (tonnes of CO2 equivalent)
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 32
+
+SECTION F. Environmental impacts F.1. Documentation on the analysis of the environmental impacts of the project, including transboundary impacts, in accordance with procedures as determined by the host Party: Environmental impact assessment of UAB Lariteksas Sudenai wind farm - 4 wind turbines of 8 MW An environmental impact assessment (EIA) has already been carried out for the Sudenai UAB Lariteksas wind farm which concluded that no negative local or global environmental effects are expected with the implementation of wind farm project. The consents of all nearby landowners were obtained on May 20, 2005. At the beginning of the EIA process the society was informed by an announcement published in Kretinga regional newspaper "Svyturys" No. 59 (7582) on July 24, 2004 (About the conclusion of screening concerning Environmental Impact Assessment) and on June 4, 2005 (About public meeting of the Draft Environmental Impact Assessment). Public meeting was held in Darbenai administration building on June 17, 2005. No remarks or suggestions were received from the meeting parties. The public demonstration of the EIA took place at Fundamental Science Faculty of Klaipeda University, Baltic Coast Environmental Research and Planning Institute of Klaipeda University, and at Darbenai administrative office from October 24, 2005 to November 7, 2005. The next public meeting of the improved and updated EIA took place on November 8 2005. The announcement of the public meeting was published in the regional newspaper "Svyturys" (No. 83 (7710) on October 22, 2005. No planning suggestions or objections from the public were received at the meeting. The meeting was held in Ipiltis branch of Kretinga Cultural Centre. Seven participants came to the public meeting. Mr. Saulius Gulbinskas (project manager and representative of Baltic Coast Environmental Research and Planning Institute of Klaipeda University) was elected as the chairman of the meeting and Rosita Mileriene (representative of Baltic Coast Environmental Research and Planning Institute of Klaipeda University) was elected as the secretary. Other participants were Dainius Jurenas (former developer of wind park), Edvardas Stalmokas (foreman of Darbenai) and three local residents. There were two main parts of the meeting: 1. presentation of EIA report and 2. speeches and discussions. The EIA was approved by all related institutions and by the Decision Regarding Admissibility of Planned Economic Activities in the Environmental Perspective issued by the Klaipeda district Environmental Protection Department of the Ministry of Environment of the Republic of Lithuania on May 9 2006. The approval was drawn with subsequent remarks and proposals: 1. Works of intense movement of land are possible only after archaeological research is made, and founded valuables are researched and moved into state storages. 2. Monitoring of noise should be performed. 3. Factual measurements of noise should be performed after the park of wind power stations is built. Additional measures for decreasing of noise shall be planned after estimating of exceeded maximum allowed levels of noise. 4. Following the item 127.9 of 12-05-1992 of the Decision of Government of the Republic of Lithuania No. 343 "Regarding setting the special conditions for usage of land and forest", normalized distances from water bank shall be maintained.
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 33
+
+5. While preparing the detailed plan, in order to avoid shading of wind power stations in the morning hours crossing Sud nai botanical - zoological reservation territory, it is necessary to examine the possibility to move wind power stations from the reservation border, as there is the distance of only 70 m. from the closest planned wind turbine generator to the border of Sud nai botanical - zoological reservation. 6. The means for liquidation of negative shading effect shall be planned while arranging of the technical design. Considering the remarks and proposals listed above, the Decision Regarding Admissibility of Planned Economic Activities in the Environmental Perspective, issued by the Klaipeda Region Environmental Protection Department of the Ministry of Environment of the Republic of Lithuania gives consent to pursuing the wind power station park plan pursuant to the EIA Report. Environmental impact assessment of UAB Vejo Elektra Sudenai/Lendimai wind farm - 3 wind turbines of 6 MW An EIA was not necessary in the course of planning the Lendimai wind farm as stated in the official letter from State Service for Protected Areas under the Ministry of Environment "Concerning Environmental Impact Assessment" No. V3-7.7-1096 issued on August 13, 2005 and in "Screening Conclusion Concerning Environmental Impact Assessment" of Klaipeda Regional Department of Environment of the Ministry of Environment of Republic of Lithuanian No.(9.14.5.)-V4-3168 issued on September 6, 2005. The above stated conclusion was drawn because (extract from the above mentioned document): "Considering the given information about the construction of three wind turbines at villages Sudenai and Lendimai, requirements of national legal acts and after the evaluation of protected natural valuables at Sudenai national botanical - zoological park (territory of European ecological net "Natura 2000" - Sudenai meadows) it is assumed that planned economical activity will not have significant negative effect on protected areas." According to the "Screening Conclusion Concerning Environmental Impact Assessment" of Klaipeda Regional Department of Environment of the Ministry of Environment of Republic of Lithuania No.(9.14.5.)-V4-3168 issued on September 6, 2005 the conclusion, concerning the environmental impact of the planned economic activity, was drawn that the environmental impact assessment (EIA) of the planned economic activity of UAB Vejo Elektra - installation and maintenance of wind power-plants - is not required. The above stated conclusion was drawn because: • The planned economic activity is planned to be executed at a safe distance from inhabited localities • The planned wind turbine generators are widely used in European Union countries and their technical parameters match the standards of the best technology available in the EU. • National Energy Strategy approved by the resolution No.IX-1130 of the Parliament of the Republic of Lithuania of October 10, 2002 (Official Gazette., 2002, No 99-4397) schedules, that aiming to the best use local resources, including wind energy, and at the same time to reduce the import of fuel and to establish new work places as well as to improve the state of environmental protection, the State will promote the implementation of the projects on use of wind, water and sun power and the experience of installation and maintenance will be collected; • At the territory of the planned economic activity it is not forbidden to install and maintain the equipment of planned economic activity. The planned wind farms will have no significant transboundary effects in Latvia as not settlements across the border are established in the vicinity of the wind farm.
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 34
+
+F.2. If environmental impacts are considered significant by the project participants or the host Party, provision of conclusions and all references to supporting documentation of an environmental impact assessment undertaken in accordance with the procedures as required by the host Party: The Environmental impact assessment for Sudenai wind farm specifies the impact to the environment of the wind turbines to be built by Lariteksas. Practically there are no natural flora community at the territory of wind parks. The land area where wind parks will be located will occupy a insignificant area of land of agricultural needs, therefore the wind parks of UAB Lariteksas will not influence the flora of the territory. As the wind farm is farther from Sudenai botanic-zoological reserve park, the wind park will not have major influence to the Sudenai park and territories important for habitat conservation protection values. After the construction of wind turbines there will be some high-rise constructions of technological design that will rise above landscape elements. It will change the visual characteristics of the territory. The constructions of the wind parks will be seen from all near territories. From further territories these constructions will be blocked off by forests (from regional road Skuodas-Darbenai and from road Butinge-Liepoja). General view of wind parks will be seen from Benaiciai-Sudenai villages, where only a few inhabitants live. The wind parks on Impilties mound will be blocked off by other natural elements - forests, trees. The full view of wind parks will be seen from Latvian side and from of other side of the valley of the river Sventoji. The assessed zone of shading impact shows that the discomfort caused by shading will be experienced by two farms to the North East from the wind farm. Compensatory means are planned for them. Compensatory means for farms nearest to the wind farm would include plants which would cover wind power stations at the time when the shadow of the wind power stations covers the farms. The plants will be planted only after the owners of the farms approve them because it would be effective if only they would be planted near these farms (on their private territory). If necessary, the shadow shutdown system of Enercon will be utilized in order to reduce shadow flickering at the residential areas as well as at Sud nai botanical-zoological reservation territory. This system is able to detect the lighting conditions and to decide whether periodical shadow flickering is possible. The system shuts down wind turbines during shadow casting periods at emission sites taking weather conditions into consideration. Detailed calculations of the shadowing effect prepared by Enercon indicate that in the worst case the possible reduction of the production would be 100 hours per year which equals ca. 1% of the annual production. The real reduction will be much lower as the worst case calculation assumes that: - the sun is shining all day from sunrise to sunset, - the rotor plane is always perpendicular to the line from the wind turbine to the sun, - the wind turbine is always operating. According to the preliminary calculations, when the noise level of one wind turbine is 102.1 dB (A), the total noise level caused by four wind turbines will decrease down to 45 dB (A) at the distance of 172215 meters. In order to avoid the negative impact of noise on people in the neighborhood, the wind farm must stand at least 215 m away from the nearest farms. Under the Laws of Lithuania, the noise level requirements are regulated by hygiene norm HN 33-1:2003 "Acoustic noise. Allowed levels in residential and labouring environment. Common requirements of method of measurement" approved by The Order of Minister of Medical Security No. V-520 dated
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 35
+
+September 3, 2003 ("HN"). HN stipulates maximum allowed level of noise in the territories of residential accommodations, as provided below: Object Level of sound, equivalent level of sound, dBA 55 50 45 Maximum level of sound, dBA 70 65 60 Hours of a day
+
+Territory of residential accommodations
+
+6-18 18-22 22-6
+
+The electromagnetic radiation caused by the wind power stations park will have no negative impact on human health (it will not exceed the permitted norm of 15 kV/m and will not even amount to 0.5 kV/m). The beams have only negative impact close to 110 kV line and in a range close to generators, which are located at a 80 meters height. Electromagnetic radiation may have negative impact only on telecommunication signals (as shown of the experience of analogous activity). If such experience occurs the manager of planned activity and the individual that has suffered from the effect of electromagnetic radiation on telecommunication signal should identify the reason of such event and implement means of technical compensation at the expense of manager. As for the risk of possible accidents, the wind power station towers will stand at the distance of 145 meters from the regional road "Darb nai - Laukžem ". No other steadings, farms or halls are situated further than 145 meters from the wind power station towers. According to "Sanitary Preservative Zone Boundaries' Establishment and Schedule Regulations" and according to "Special Conditions of Use of Land and Forest" the normative sanitary preservative zone for a wind farm is not set. There are no registered immovable cultural valuables in the territory of planned wind power station. The closest immovable cultural valuables are in 600-700m from the wind park therefore this park will not have any negative influence on these valuables. There were no possible negative impact on recreational and tourism resources of the region found during the EIA. The EIA report was examined by several institutions which presented their evaluations. Conclusions of the authorities that evaluated impact on the environment were as follows: 1. The Administration of the Klaipeda County Governor by its Letter No. 13.1-34015(17.1-9.3) of 23-03-2006 approves of the Report with a comment (as the nearest wind power station is only at the distance 70 m from the boundary of the Sud nai botanic - zoological reservation, when making the detailed plan, in order to avoid shading covering the reservation territory in morning hours, it is necessary to examine an alternative to move the WPS farther from the boundary of the reservation). 2. The Administration of the Kretinga District Municipality by its Letter No. (6.27.)-D34228 of 08-12-2005 approves of the Report. 3. Kretinga Branch of the Klaip da Public Health Centre by its Letter No. (18.1.13)-V4136 of 02-03-2006 approves of the Report with a condition (the technical design must implement measures enabling to liquidate the negative impact of shading).
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 36
+
+4. The State Fire Prevention Inspectorate of the Kretinga Fire and Rescue Service by its Letter No. 1/10-508 of 01-12-2005 approves of the Report. 5. The Klaip da Territorial Division of the Cultural Heritage Department under the Ministry of Culture by its Letter No. (1.40)-2K1-11 of 21-12-2005 approves of the Report. 6. The State Service of Protected Territories its Letter No. V3-7.7-172 of 27-01-2006 does not object to the possibility to construct the wind power stations park.
+
+SECTION G. Stakeholders' comments G.1. Information on stakeholders' comments on the project, as appropriate:
+
+Stakeholder comments have been invited and compiled in accordance with all local planning legislation as outlined below. While preparing the detailed plans, compulsory stakeholder consultations (incl. meetings and public displays) were undertaken. Also written agreements of residents in surrounding areas were obtained during the process of detailed planning. Stakeholders have not expressed any objections to the proposed development. Detailed land use planning process In order to establish the wind farms it was necessary to form parcels of land and to change the purpose of land use for the park of wind power stations. For this purpose and following the Zoning Law of the Republic of Lithuania9, it was necessary to perform the detailed planning of the land parcels. Pursuant to the Rules for Preparation of Detailed Plans10, the territory planning process consists of: (i) the preparatory stage during which the aims and objectives of the planning are established, the planning action program is prepared and approved, etc.; (ii) the stage of preparation of the territory planning document, analysing the existing situation, formulating the conception, concretising solutions; (iii) the stage of evaluation of solution consequences; (iv) the final stage during which solutions of the territory planning document are discussed and approved and the territory planning document is approved. A detailed plan which is prepared in accordance with the established procedure and conditions and approved by relevant authorities, the solutions of which are not in conflict with laws, the requirements set in special conditions for land use, the effective solutions of master plans and special plans made for the municipal territory or its parts, is to be approved by a relevant municipal council.
+
+Law No. I-1120 of the Republic of Lithuania on Zoning, dated 12 December 1995. Order No. D1-239 of the Minister of Environment of the Republic of Lithuania on approval of the Rules for Preparation of Detailed Plans, dated 3 May 2004.
+10
+
+9
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 37
+
+Detailed plan of UAB Vejo Elektra Sudenai/Lendimai wind farm - 3 wind turbines of 6 MW Detailed planning of two land units (9.75 ha, at S d nai village, cadastre No. 5647/0003:7 Laukžem s k.v, and 7.8 ha, at Lendimai village, cadastre No. 5667/0001:0003 Senosios pilties k.v) started after adoption by the Director of Administration of the Kretinga District Municipality of his Ordinances of 16 September 2005 No. A1-538 and A1-537 and conclusion by the Company of the Agreements on Organization and Financing of Planning with the Kretinga District Municipality (Director of Administration of the Municipality) as the formal Organizer of the planning, on 19 September 2005. As the result of the detailed planning the land plots were split into 2 separate land plots at Lendimai village and into 3 land plots at S d nai village. The newly formed 3 small land plots of 1375 sq.m. each will be used for erection of the wind power stations of 2 MW. These 3 small land plots of engineering and communication infrastructure purpose will be formed within the bigger current agricultural land plots (named above), the purpose of which will not be changed. Access to the small land plots on which the wind power stations are to be built will be ensured through public roads adjacent to the land plots and easements (servitudes) to be formed as a result of the detailed planning (which will come into force only after approval of the detailed plans and registration of the easements with the Real Property Register). In the process of detailed planning various sanitary protection zones of the wind power stations ranging from 120 m to 300 m from the axis of the wind power stations were set down and agreed in writing with the owners of the adjacent land plots. Pursuant to national law stakeholders were informed about possibility to participate in detailed planning process, pretence giving order and public exposition and public consideration place and date in the regional newspaper "Svyturys" No. 35 (7746) published on May 10, 2006. Public display of detailed plans took place at Municipality of Kretinga county (Savanoriu str. 29, Kretinga) from May 11, 2006 to May 25, 2006. The first public meeting of the draft detailed plans took place on May 25 2006. The meeting was announced in the regional newspaper "Svyturys" (No. 35 (7764)) on May 10, 2006. No planning suggestions or objections from the public were received at the meeting. The meeting was held in Klaipeda county municipality. The planning manager (Kretinga county municipality manager) Valerijones erneckis, senior architect of Kretinga county municipality department of Architecture and Urbanistics Jonas Petrulis, representative of detailed plan organizers Rolandas Rumšas, and planner Aušra Debolskyte participated at the meeting. A decision was adopted that public meeting procedure was accomplished. Additional public display of detailed plans took place at Municipality of Kretinga county (Savanoriu str. 29A, Kretinga) from June 23, 2006 to June 27, 2006. The next public meeting of the detailed plans took place on June 27 2006. The meeting was announced in the regional newspaper "Svyturys" (No. 48 (7777)) on June 23, 2006. No planning suggestions or objections from the public were received at the meeting. The meeting was held in Kretinga county municipality. The planning manager (Kretinga county municipality manager) Valerijones erneckis, senior architect of Kretinga county municipality department of Architecture and Urbanistics Jonas Petrulis, representative of detailed plan organizers Rolandas Rumšas, and planner Aušra Debolskyte participated at the meeting. A decision was adopted that public meeting procedure was accomplished and to present all materials concerning the wind power project of UAB Vejo Elektra to the Administration of the Governor of Klaipeda area.
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 38
+
+The above detailed plans were approved by the Klaip da district Environmental Protection Department of the Ministry of Environment of the Republic of Lithuania on 06 September 2005, by the Kretinga branch of the Klaip da Public Health Centre of the Ministry of Health Care of the Republic of Lithuania on 05 June 2006, by the Military Air Forces of the Lithuanian Army on 10 November 2005, and by other authorities. The detailed plans of the Lendimai and S d nai villages of Kretinga district were finally approved on June 29 2006 by the Council of the Kretinga District Municipality decisions No. T2-188 and No. T2187. Detailed plan of UAB Lariteksas Sudenai wind farm - 4 wind turbines of 8 MW The detailed plan foresees an establishment of four wind turbine generators in S d nai village of Kretinga district. As the result of the planning 6 new land plots were formed: 4 for the wind power stations (1250 sq. m each), one for the transformer substation (1800 sq. m) and one larger agricultural land plot within which all the smaller land plots are situated. Detailed planning of the above land plots started after adoption by the Council of the Kretinga District Municipality of its Ordinance of 29 July 2004 No. T2-246 and conclusion by the Company of the Agreement on Transfer of Detailed Planning Organizers rights with the Kretinga District Municipality (Director of Administration of the Municipality) as the formal Organizer of the planning, on 5 August 2004. In the process of territory detailed planning the various sanitary protection zones of the wind power stations ranging from 120 m to 300 m from the axis of the wind power stations were set down. In the process of preparation of the detailed plan, the consents of the owners of the adjacent land plots, which will be affected by the shadowing and noise were obtained, whereby they consented with the effect of shadowing and noise to their land plots as made by the power stations. The detailed plan further states that in noise sensitive areas the wind turbines may at night work at reduced speed and power. If necessary the level of noise generated at night may thus be reduced. The detailed plan provides that due to shadowing generated by the wind power stations the compensatory measures can be introduced. Vegetation could be planted at the territories of the nearing farms and upon obtaining of the consents of the owners. Also the Minutes of the Hygiene Expertise of the Project Documents, dated 7 June 2006, state that compensation measures are to be foreseen to reduce the shadow effect. Pursuant to national law stakeholders were informed about the projects detailed plan preparations planning goals and deadlines in the regional newspaper "Svyturys" No. 98 (7725) on December 14, 2005. Pursuant to national law stakeholders were informed about possibility to participate in detailed planning process, pretence giving order and public exposition and public consideration place and date in the regional newspaper. It was announced in the regional newspaper "Svyturys" (No. 25 (7754)) on April 1, 2006 and additionally on (No. 35 (7764)) on May 10, 2006.
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 39
+
+Public display of detailed plan took place from April 1 to April 14, 2006 and from May 10 to May 22, 2006 at the Municipality of Kretinga county. Public meeting of the draft detailed plans took place on April 15, 2006. The public meeting was announced in the regional newspaper "Svyturys" (No. 25 (7754)) on April 1, 2006. No planning suggestions or objections from the public were received at the meeting or by the addresses mentioned in the newspaper. The meeting was held at the Department of Architecture-Urbanistics of Kretinga county municipality. The planning manager Dainius Jurenas, secretary of the meeting Mantas Kisonas and chairwoman of the meeting Kristina Janaviciene participated at the meeting. Representatives of related parties did not arrive to the meeting, accordingly the decision was adopted that another public meeting should be held. Another public meeting of the detailed plan took place on May 22, 2006. The meeting was announced in the regional newspaper "Svyturys" (No. 35 (7764)) on May 10, 2006. No planning suggestions or objections from the public were received at the meeting or by the addresses mentioned in the newspaper. The meeting was held at the county municipality of Kretinga. The planning manager Dainius Jurenas, secretary of the meeting Mantas Kisonas and chairwoman of the meeting Kristina Janaviciene participated at the meeting. The detailed plan was finally approved by the Council of the Kretinga Municipality on 29 June 2006 No. T2-189.
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 40
+
+Annex 1 CONTACT INFORMATION ON PROJECT PARTICIPANTS Organisation: Street/P.O.Box: Building: City: State/Region: Postal code: Country: Phone: Fax: E-mail: URL: Represented by: Title: Salutation: Last name: Middle name: First name: Department: Phone (direct): Fax (direct): Mobile: Personal e-mail: Vejo Elektra UAB Tuskul n g. 33c Vilnius Lt-09219 Lithuania +370 685 21249 +370 5 272 2332 tadas@4energia.ee
+
+Director Mr. Navickas Tadas +370 685 21249 +370 5 272 2332 tadas@4energia.ee
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+
+JOINT IMPLEMENTATION PROJECT DESIGN DOCUMENT FORM FOR SMALL-SCALE PROJECTS - Version 01.1 Joint Implementation Supervisory Committee
+page 41
+
+Organisation: Street/P.O.Box: Building: City: State/Region: Postal code: Country: Phone: Fax: E-mail: URL: Represented by: Title: Salutation: Last name: Middle name: First name: Department: Phone (direct): Fax (direct): Mobile: Personal e-mail:
+
+Nordic Environment Finance Corporation, NEFCO in its capacity as Fund Manager to the Baltic Sea Region Testing Ground Facility Fabianinkatu, P.O. Box 249 34 Helsinki FI-00171 Finland +358 9 18 001 +358 9 630 976 www.nefco.org Ash Sharma Programme Manager, Testing Ground Facility Mr. Sharma Ash +358 40 08 11 327 +358 9 630 976 +358 40 08 11 327 ash.sharma@nefco.fi
+
+This template shall not be altered. It shall be completed without modifying/adding headings or logo, format or font.
+

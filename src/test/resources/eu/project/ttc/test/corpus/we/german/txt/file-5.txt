@@ -1,0 +1,1466 @@
+Leseprobe
+mit
+Inhaltsverzeichnis + Vorwort + Kapitel 1&2
+Die Graphiken sind in reduzierter Auflösung
+und der Text ist nicht auszudrucken.
+
+BINE Informationspaket
+
+Nutzung der Windenergie
+
+Siegfried Heier
+5., erweiterte und vollständig überarbeitete
+Auflage 2007
+ISBN 978-3-934595-63-7
+
+Hat Sie die Leseprobe überzeugt?
+Dann profitieren Sie vom kompletten Buch
+für nur 17,80 Euro zzgl. Versand.
+Eine Bestellmöglichkeit finden Sie hier.
+
+Informationspaket
+
+Nutzung der
+Windenergie
+5., erweiterte und vollständig überarbeitete Auflage
+Siegfried Heier
+
+Herausgeber
+
+Der BINE Informationsdienst bietet Kompetenz in neuen Energietechniken. Der
+intelligente Umgang mit knappen, wertvollen Energieressourcen, insbesondere in
+Gebäuden und der Gebäudetechnik, sowie die Nutzung erneuerbarer Energien sind
+die BINE-Kernthemen. Zu diesen Inhalten vereinen wir vielfältiges Know-how aus
+Forschung, Technik und Anwendung. Eine Übersicht über unser komplettes Produktund Dienstleistungsangebot finden Sie unter www.bine.info. Gerne senden wir Ihnen
+die Informationen auch zu.
+BINE ist ein Informationsdienst von FIZ Karlsruhe und wird vom Bundesministerium
+für Wirtschaft und Technologie gefördert.
+Für weitere Fragen steht Ihnen zur Verfügung:
+Uwe Milles (Redaktion)
+BINE Informationsdienst, FIZ Karlsruhe, Büro Bonn
+Kaiserstr. 185 – 197, 53113 Bonn
+Tel.: 0228 / 92379-0, E-Mail: bine@fiz-karlsruhe.de, www.bine.info
+Verlag: Solarpraxis AG
+Zinnowitzer Straße 1, 10115 Berlin
+Tel.: 030 / 726296300, E-Mail: verlag@solarpraxis.de, www.solarpraxis.de
+Bibliografische Information der Deutschen Nationalbibliothek:
+Die Deutsche Nationalbibliothek verzeichnet diese Publikation in der Deutschen National­
+bibliografie; detaillierte bibliografische Daten sind im Internet über http://dnb.d-nb.de abrufbar.
+
+Die Inhalte dieses Werkes werden von Verlag, Herausgeber und Autoren nach bestem
+Wissen und Gewissen erarbeitet und zusammengestellt. Eine rechtliche Gewähr
+für die Richtigkeit der einzelnen Angaben kann jedoch nicht übernommen werden.
+Gleiches gilt auch für Websites, auf die verwiesen wird. Es wird betont, dass wir
+keinerlei Einfluss auf die Inhalte und Formulierungen dieser Seiten haben und auch
+keine Verantwortung für sie übernehmen.
+Grundsätzlich gelten die Wortlaute der Gesetzestexte und Richtlinien und die einschlägige Rechtsprechung.
+Gedruckt auf chlorfrei gebleichtem Papier.
+ISBN 978-3-934595-63-7
+© by FIZ Karlsruhe, 2007
+Gestaltung: Solarpraxis AG
+Titelfoto: GE Energy
+Hinweis zu den Abbildungen: Soweit nachfolgend keine anderen Quellen genannt
+werden, stammen die Abbildungen vom Autor.
+
+inh a lt s v er zei chnis
+1
+
+Inhaltsverzeichnis
+Vorwort
+
+...........................................................................................................................................................................................................................
+
+6
+
+1	
+1.1	
+1.2 	
+1.3 	
+1.4 	
+1.5 	
+1.6 	
+1.7 	
+1.8 	
+1.9 	
+
+Stand und Perspektiven der Windenergienutzung ................................................................. 7
+Technik und Rahmenbedingungen in Deutschland ........................................................................ 8
+Stand der Technik von marktbeherrschenden Anlagen . ........................................................ 10
+Prototypen der 5-MW-Klasse .................................................................................................................................... 11
+Anlagenmarkt ............................................................................................................................................................................... 12
+Windenergie und Stromnetze . ................................................................................................................................ 13
+Standorte . ........................................................................................................................................................................................... 14
+Wirtschaftliche Auswirkungen ............................................................................................................................... 16
+Arbeitsplätze ................................................................................................................................................................................... 17
+Gute Gründe für die Windenergie ...................................................................................................................... 18
+
+2	
+2.1 	
+2.2 	
+2.3 	
+2.4 	
+2.5 	
+2.6 	
+
+Windenergie international .....................................................................................................................................
+Situation in Europa .................................................................................................................................................................
+Nordamerika ...................................................................................................................................................................................
+Südamerika .......................................................................................................................................................................................
+Asien ..........................................................................................................................................................................................................
+Afrika .........................................................................................................................................................................................................
+Australien-Pazifik-Region . ..............................................................................................................................................
+
+20
+20
+22
+26
+27
+30
+31
+
+3	
+Der Wind – seit 3.000 Jahren im Dienste der Menschheit ........................................
+3.1 	 Historische Anfänge der Windkraft ..................................................................................................................
+3.2 	
+Pumpen und Mühlen im Mittelmeerraum
+und in angrenzenden Gebieten .............................................................................................................................
+3.3 	 Bock- und Holländerwindmühlen in Nordwesteuropa ...........................................................
+3.4 	 Massenfertigung von „Westernrädern“ ......................................................................................................
+3.5 	 Begründung der Aerodynamik in der Windkrafttechnik .......................................................
+3.6 	 Neue Windkrafttechnologie .......................................................................................................................................
+
+33
+33
+
+4 	
+Meteorologische und physikalische Grundlagen ..................................................................
+4.1 	 Bewegungsabläufe in der Erdatmosphäre ..............................................................................................
+4.2 	 Gebiete zur Windenergienutzung ......................................................................................................................
+4.3 	 Energie aus dem Wind .......................................................................................................................................................
+
+46
+46
+50
+53
+
+34
+37
+40
+41
+42
+
+
+
+nu t zun g d er w ind energie
+1
+
+5	
+5.1 	
+5.2 	
+5.3 	
+5.4 	
+5.5 	
+6	
+6.1 	
+6.2 	
+6.3 	
+6.4 	
+6.5 	
+6.6 	
+6.7 	
+6.8 	
+6.9 	
+6.10 	
+
+
+
+Bauformen von Windkraftanlagen und Systemen am Markt ............................
+Anlagen mit vertikaler Achse ....................................................................................................................................
+Anlagen mit horizontaler Achse . ..........................................................................................................................
+Sonderbauformen . ..................................................................................................................................................................
+Merkmale von Standardanlagen ..........................................................................................................................
+Anlagen am Markt ..................................................................................................................................................................
+
+Komponenten und Technik von marktgängigen Anlagen ...................................... 72
+Turbine .................................................................................................................................................................................................... 72
+Triebstrangausführungen . ............................................................................................................................................ 78
+Generatorsysteme ................................................................................................................................................................... 79
+Maschinenhausausführungen . .............................................................................................................................. 85
+Windrichtungsnachführung ...................................................................................................................................... 87
+Turm ........................................................................................................................................................................................................... 88
+Regelung und Betriebsführung .............................................................................................................................. 89
+Sicherheitssysteme und Überwachungseinrichtungen . ....................................................... 97
+Betriebserfahrungen ........................................................................................................................................................ 100
+Entwicklungstendenzen .............................................................................................................................................. 103
+
+7	
+7.1 	
+7.2 	
+
+Windparks . .................................................................................................................................................................................. 104
+Parkeffekte ..................................................................................................................................................................................... 104
+Parkausführungen ............................................................................................................................................................... 105
+
+8	
+8.1 	
+8.2 	
+8.3 	
+8.4 	
+
+Netzintegration ....................................................................................................................................................................
+Anforderungen der Netzbetreiber ..................................................................................................................
+Netzeinwirkungen und Abhilfemaßnahmen ...................................................................................
+On- und Offshore-Windparks . ..............................................................................................................................
+Auswirkungen eines starken Windenergieausbaus ................................................................
+
+106
+106
+106
+109
+111
+
+9	
+9.1 	
+9.2 	
+9.3 	
+
+Inselsysteme .............................................................................................................................................................................
+Besonderheiten von Inselsystemen . ............................................................................................................
+Einsatz in Deutschland ..................................................................................................................................................
+Einsatz in netzfernen Gebieten ..........................................................................................................................
+
+113
+114
+114
+115
+
+10 	
+10.1 	
+10.2 	
+10.3 	
+
+Planung, Ausbau und Repowering von Windkraftanlagen ................................
+Standortfragen ........................................................................................................................................................................
+Planung und Bau von Anlagen ............................................................................................................................
+Repowering . .................................................................................................................................................................................
+
+118
+118
+121
+124
+
+60
+60
+63
+66
+68
+69
+
+inh a lt s v er zei chnis
+1
+
+11 	
+Betrieb von Windkraftanlagen ..................................................................................................................... 125
+11.1 	 Organisationsmodelle .................................................................................................................................................... 125
+11.2 	 Kosten .................................................................................................................................................................................................. 126
+12 	
+12.1 	
+12.2 	
+12.3 	
+
+Wirtschaftlichkeitsbetrachtungen ..........................................................................................................
+Entwicklung und Trends der Einspeisevergütung ......................................................................
+Stromgestehungskosten .............................................................................................................................................
+Betriebswirtschaftliche Berechnungsmethoden ........................................................................
+
+130
+130
+131
+132
+
+13 	
+
+Ökobilanz
+
+135
+
+......................................................................................................................................................................................
+
+14 	
+Windenergieforschung und -entwicklung .................................................................................. 138
+14.1 	 Grundlagen- und Anwendungsforschung ........................................................................................... 138
+14.2 	 Neuentwicklungen und Großanlagen . ..................................................................................................... 140
+15 	
+Zitierte Literatur und Abbildungsverzeichnis ......................................................................... 144
+15.1 	 Zitierte Literatur ..................................................................................................................................................................... 144
+15.2 	 Abbildungsverzeichnis ................................................................................................................................................... 151
+16 	
+Forschungsvorhaben der Bundesregierung ............................................................................... 152
+16.1 	 Laufende und kürzlich abgeschlossene Forschungsvorhaben ................................... 152
+16.2 	 Forschungsberichte . .......................................................................................................................................................... 155
+17 	
+17.1 	
+17.2 	
+17.3 	
+17.4 	
+17.5 	
+
+Weiterführende Literatur ......................................................................................................................................
+Technik und Nutzung ......................................................................................................................................................
+Offshore-Nutzung . ..............................................................................................................................................................
+Marktübersichten ................................................................................................................................................................
+Datenbanken ..............................................................................................................................................................................
+BINE Informationsdienst ............................................................................................................................................
+
+157
+157
+158
+159
+159
+159
+
+18 	
+
+Zum Autor
+
+160
+
+....................................................................................................................................................................................
+
+
+
+nu t zun g d er w ind energie
+1
+
+Vorwort
+Die Nutzung der Windenergie in Deutschland ist eine Erfolgsgeschichte. Die Strommenge, die eine Anlage 1990 in einem Jahr erzeugte, erbringt die durchschnittliche
+2006er-Anlage an einem Tag. Im selben Zeitraum stieg der Beitrag der Windenergie
+zur Stromversorgung in Deutschland von einigen Promille auf 6,5 Prozent (%) im Jahr
+2005 mit weiter steigender Tendenz. 1990 hat die Stahlindustrie die Windenergie­
+firmen als Kunden kaum wahrnehmen können, heute sind sie der zweitgrößte Stahlabnehmer nach der Automobilindustrie. Wollte man einmal alle direkten und indirekten
+Beschäftigten der deutschen Wind­energiefirmen in Deutschland an einem Ort versammeln, dann hätte 1990 eine Turnhalle gereicht, während man heute ein großes
+Sportstadion füllen könnte. Aus den damaligen Start-up-Firmen ist eine mittelstän­
+dische Industrie entstanden.
+
+
+
+Windenergie ist Hightech. Die Entwicklung und Optimierung der Anlagen war und ist
+bis heute ein sehr forschungsintensiver Bereich, in dem sich die Bundesregierung mit
+der Energieforschung vielfach engagiert hat. Gefördert wurden nicht nur die Ent­
+wicklung innovativer Anlagen und Komponenten, sondern auch Grundlagen wie z. B.
+eine optimierte Netzintegration, die verbesserte Leistungsprognose, die Fehlerfrüh­
+erkennung, der Blitzschutz und die ökologische Begleitforschung. Grundlegende Erfah­
+rungen hat auch das „250-MW-Wind-Programm“ erbracht, in dessen Rahmen An­lagen
+über Jahre auf Zuverlässigkeit, Langlebigkeit und Fehlerursachen beobachtet wurden.
+Auch das – durch die verschiedenen Gesetze zur Einspeisung von Strom aus erneuerbaren Energiequellen geschaffene – wirtschaftlich kalkulierbare Vergütungssystem
+hat den Windboom in Deutschland ermöglicht.
+Windenergie wächst international. Immer mehr Länder intensivieren den Auf- und
+Ausbau der Windenergienutzung. Dieses bietet Chancen für Windenergiefirmen aus
+Deutschland. Bereits heute werden 60 % der nationalen deutschen Produktion exportiert. Diese internationale Entwicklung bestätigt auch, dass die Fördermittel der Energieforschung für die Windenergie gut angelegt waren. Windenergie ist auch eine Erfolgsgeschichte der Energieforschung.
+Das BINE-Informationspaket „Nutzung der Windenergie“ zeichnet wichtige Stationen
+dieser Entwicklung nach. Das Hauptgewicht liegt auf der aktuellen Technik von Kompo­
+nenten und Anlagen sowie deren Planung und Ausbau. Jeweils ein Kapitel beschäftigt
+sich mit der ökonomischen und ökologischen Bilanz der Windenergie. Abschließend
+werden aktuelle industrielle und öffentlich geförderte Forschungsaktivitäten vorgestellt.
+FIZ Karlsruhe
+BINE Informationsdienst
+
+s ta nd und per spek t i v en d er w ind energienu t zun g
+
+1  Stand und Perspektiven der Windenergienutzung
+Steigende Umweltbelastungen und zunehmend zu beobachtende Klimaveränderungen,
+die in hohem Maße durch Prozesse zur Energieumwandlung hervorgerufen werden,
+erfordern eine Reduzierung der größer werdenden umweltschädigenden Emissionen.
+Bei der Elektrizitätserzeugung lassen sich insbesondere durch die Nutzung erneuerbarer Energien nennenswerte Entlastungen erreichen. Dabei kommen, neben der
+weltweit genutzten Wasserkraft, den immensen Potenzialen der Sonnen- und Windenergie große Bedeutung zu. Ihre Angebote sind allerdings – stärker als die Wasserkraft – den zeitlichen Abläufen der Natur unterworfen [1]. Für ihre Nutzung notwendige
+Anlagen befinden sich in der Anfangsphase einer großtechnischen Anwendung. Um
+diese in einem Markt mit sehr hohem technischem Standard etablieren zu können,
+sind insbesondere für die umweltverträgliche Technik angemessene Entwicklungsund Einführungszeiträume notwendig. Zum Ende des Jahres 2005 waren weltweit
+60 Gigawatt (GW) installiert. In diesem Jahr wuchs der Wert um 10 GW (23 %). Das
+Marktvolumen der Windkraftindustrie lag damit bei 10 Mrd. €. Etwa die Hälfte davon
+erwirtschaftete die deutsche Windindustrie (BWE, VDMA-Pressemitteilung am
+17.01.2006).
+Bei der Nutzung regenerativer Energien ist – neben der etablierten Wasserkraft – die
+Windenergie technisch am weitesten vorangeschritten und dem wirtschaftlichen
+Durchbruch am nächsten. Die Windenergie vermag aufgrund der vorhandenen Potenziale weltweit einen gewichtigen Anteil zur Elektrizitätserzeugung beizusteuern. In
+vielen Ländern der Erde übersteigen die technisch und wirtschaftlich nutzbaren Windenergiepotenziale den Elektrizitätsverbrauch bei Weitem. In Deutschland werden
+etwa 6,5 % des Stromes aus Windkraftanlagen eingespeist [2]. Mitte 2003 hat der
+A
+­ nteil der Windenergie bei der Elektrizitätserzeugung in Deutschland die Beiträge der
+Wasserkraft überstiegen.
+Im Folgenden werden die Technik und die Rahmenbedingungen in Deutschland umrissen. In Kapitel 2 folgen die Situation in Europa und weltweite Bestrebungen. Dazu
+sollen bereits hier einige begriffliche Festlegungen vorausgeschickt werden. Wasser-,
+Kohle-, Gas-, Öl- und Kernkraftwerke etc. stehen als feste Begriffe für Energiewandlungsanlagen in der konventionellen Stromversorgungstechnik.
+
+
+
+nu t zun g d er w ind energie
+
+Um auch im Bereich der erneuerbaren Energien die Nomenklatur beizubehalten, sollen
+im Weiteren
+•	 Windkraftanlagen
+	 als Systeme für die Elektrizitätserzeugung stehen.
+•	 Windturbinen oder Windräder
+	 hingegen beschreiben die Umwandlung der Strömungsenergie der Luft in mechanische Rotationsenergie.
+•	 Windenergieanlagen,
+	 eine Bezeichnung, die in Normen, Richtlinien usw. angewandt und festgelegt ist,
+soll in den weiteren Ausführungen allgemeine Wandlungssysteme beschreiben, die
+mechanische (Mühlen), hydraulische (Pumpen) oder thermische (Wärme) und elektrische Energie (Strom) „erzeugen“ können.
+
+1.1  Technik und Rahmenbedingungen in Deutschland
+
+
+Wissenschaftlich fundierte und innovative Ansätze sowie großtechnische Pläne in der
+Windkrafttechnik haben in Deutschland große Tradition. Erste Ansätze zur Strom­
+erzeugung mit Windkraftanlagen wurden bereits Anfang des letzten Jahrhunderts
+unternommen. Entscheidende Impulse gingen von theoretischen Erkenntnissen in
+den zwanziger Jahren aus. Bereits in den dreißiger und vierziger Jahren folgten großtechnische Pläne zur Stromerzeugung aus Windenergie. Neuartige technologische
+Ansätze wurden in den vierziger und fünfziger Jahren bei kleineren Einheiten erfolgreich umgesetzt. Bereits Anfang der 60er-Jahre sind diese Anstrengungen, insbesondere
+durch Niedrigstpreise konventioneller Energieträger, zunichtegemacht und Erfolg
+v
+­ ersprechende Entwicklungen wieder abgebrochen worden.
+Ende der 70er-, Anfang der 80er-Jahre wurde die moderne Windkrafttechnologie
+e
+­ rneut aufgegriffen. Dabei war die Entwicklung zunächst auf Großanlagen der Megawattklasse ausgerichtet. Dazu mussten Berechnungsgrundlagen entwickelt und
+L
+­ astannahmen getroffen werden, um eine Technologie zu beherrschen, die z. B. die
+Dimension von Großflugzeugen bis heute bei Weitem übertrifft.
+Im Schatten der Großprojekte entstanden Kleinanlagen mit hohem Innovationsgrad.
+Ihre Entwicklung führte – von Anlagen der 50-kW-Klasse Anfang der 80er-Jahre aus­
+gehend – knapp zwei Jahrzehnte später zu serienreifen Konvertern der Leistungsgröße
+von 500 bis 2.500 kW. 3- bis 5-MW-Anlagen werden momentan noch in den Markt
+eingeführt (Abb. 1).
+
+s ta nd und per spek t i v en d er w ind energienu t zun g
+
+1982
+1984
+Aeroman Vestas
+20 kW
+55 kW
+ø 11,5 m ø 17 m
+
+1986
+Nordtank
+150 kW
+ø 25 m
+
+1988
+Micon
+250 kW
+ø 30 m
+
+1992
+Enercon
+500 kW
+ø 40 m
+
+1994
+Nordex N 54
+1.000 kW
+ø 54 m
+
+1996
+Enercon E 66
+1.500 kW
+ø 66 m
+
+2000
+Nordex N 80
+2.500 kW
+ø 80 m
+
+2002
+Enercon E 112
+4.500 kW
+ø 112,8 m
+
+Abb. 1: 20 Jahre Entwicklung der Windkraftanlagentechnik
+
+Bei der Entwicklung bis zur 2-MW-Klasse wurden erfolgreiche Konzepte und Inno­
+vationen von kleinen und mittleren Anlagen auf größere Einheiten übertragen. Dies
+führte zu einer stark verbesserten Zuverlässigkeit. Die technische Verfügbarkeit
+e
+­ rreicht heute Durchschnittswerte von ca. 98 %. Darüber hinaus konnte der wirtschaftliche Einsatz enorm gesteigert werden. Dadurch hat die Windenergie einen
+kaum für möglich gehaltenen Aufschwung genommen. Mit ca. 17.600 Anlagen sind in
+Deutschland etwa 18,5 GW Windkraftanlagenleistung installiert. Dies sind rechnerisch gut 75 % der momentan aufgebauten Kernkraftwerksleistung. Dabei erreichen
+die Windkraftanlagen jährlich an Land im Durchschnitt etwa 2.000, an der Küste
+ca. 3.000 und auf See werden 4.000 Volllaststunden erwartet. Grundlastkraftwerke
+kommen auf 5.000 bis 7.000 Volllaststunden pro Jahr. Die Auslastung von Mittellastkraftwerken liegt bei ca. 4.000 Stunden und Spitzenlastkraftwerke bleiben meist unter
+1.000 Stunden im Jahr.
+Neben der Technologie der marktführenden Systeme und der Pilotanlagen bilden die
+Standortqualität und Netzeinspeisemöglichkeiten sowie der wirtschaftliche Erfolg die
+Basis für diese Entwicklung, auf die im Weiteren kurz eingegangen werden soll.
+
+
+
+nu t zun g d er w ind energie
+
+1.2  Stand der Technik von marktbeherrschenden Anlagen
+In Deutschland ist momentan etwa die Hälfte der in Europa bzw. ein Drittel der weltweit installierten Windkraftanlagenleistung aufgebaut (Abb. 2). Die Basis dieses
+E
+­ rfolges konnte durch eine mehr als 20 Jahre dauernde, intensive technische Entwicklung geschaffen werden, der vor 15 Jahren die notwendigen politischen und wirtschaft­
+lichen Rahmenbedingungen zum Durchbruch verholfen haben.
+Dem Trend der letzten 20 Jahre folgend, lösten meist neue, größere Anlagen nach ihrer
+Markteinführung und Konsolidierung die Systeme der Vorgängergeneration nach und
+nach ab. Die Erkenntnisse und Innovationen bei der Weiterentwicklung der größeren
+Einheiten wurde jedoch vielfach auch zum „Re-Design“, d. h., zur Überarbeitung und
+Verbesserung kleinerer Anlagen genutzt.
+
+10
+
+Eine marktführende Position nehmen heute die Einheiten der 600-kW- bis 3-MW-Klasse
+ein. Die meisten der neu installierten Windkraftanlagen haben ­zwischen 60 und 90 m
+Turbinendurchmesser mit einer Nennleistung von 1 bis 3 MW. Sie nehmen nach [2] im
+Jahr 2005 einen Marktanteil von 98,4 % ein. Diese Anlagen sind allerdings für einen
+Offshore-Einsatz noch zu klein.
+
+Abb. 2: Spitzenstellung Deutschlands bei der Windenergienutzung: weltweit, in Europa
+und in den wichtigsten Ländern installierte Windkraftanlagenleistung
+
+s ta nd und per spek t i v en d er w ind energienu t zun g
+
+Nach [2] speisen in Deutschland die Anlagen mit einer Leistung zwischen 1.500 und
+3.100 kW, die zahlenmäßig mit 6.328 Windturbinen einen Anteil von 37,6 % aus­
+machen, etwa zwei Drittel der aus Wind generierten elektrischen Energie in das Netz
+ein. In der Leistungsklasse der 310- bis 750-kW-Anlagen ist mit 5.847 Einheiten nahezu
+die gleiche Anzahl errichtet worden. In der „Königsklasse“ über 3.100 kW waren bis
+Anfang 2005 sieben Windkraftanlagen aufgebaut.
+
+1.3  Prototypen der 5-MW-Klasse
+Obwohl dänische Hersteller weltweit Marktführer waren, konnte in Deutschland bei
+einigen Anlagenproduzenten bereits schon weit unterhalb der MW-Klasse ein Trend
+zu technisch aufwändigen und innovativen Systemen beobachtet werden. Diese weisen
+u. a. Blatteinstellwinkelregelung und drehzahlvariables Turbinen-Generatorsystem
+mit einer Netzeinspeisung über Umrichter auf und führen zu einer wesentlichen Entlastung in den Komponenten – von den Rotorblättern bis zum Triebstrang. Diese ist
+für sehr große Anlagen von entscheidender Bedeutung, um insbesondere die Kräfte
+und Momente der Bauteile abzumindern und sicher beherrschen zu können.
+Mit dem Windangebot in der Nordsee könnte der gesamte europäische Strom­
+verbrauch etwa 4-fach abgedeckt werden. Mit den heute üblichen Anlagengrößen im
+2-MW-Bereich ist dies allerdings wirtschaftlich nicht darstellbar. Deshalb ist die Entwicklung von Windkraftanlagen der 5-MW-Klasse, die zu großen Windparks zusammen­
+geschlossen werden können, insbesondere durch die in Europa erwarteten OffshorePerspektiven, ange­stoßen worden.
+Aus den oben genannten Gründen spielt Deutschland eine Vorreiterrolle beim Bau
+von Großanlagen der 5-MW-Klasse. Diese wurden bisher nur hier hergestellt und aufgebaut. Dabei kamen drei verschiedenartige Generator- bzw. Anlagenkonzepte für die
+weltweit größten Turbinen zum Einsatz (vgl. Kap. 5.5). Ihre Generator- und Umrichtersysteme ermöglichen eine gezielte Führung der Turbinendrehzahlen, die zwischen
+ca. 7 und 15 Umdrehungen pro Minute variieren.
+Mit den Anlagen der Multi-MW-Klasse konnte das Leistungsvermögen im ­Vergleich zu
+kleineren Systemen enorm gesteigert werden. Mit einer Einheit dieser Größe können
+etwa 15.000 Menschen mit Strom versorgt werden. Dadurch wird in Zukunft der Ersatz älterer, kleiner Anlagen durch neue Großturbinen, ein sogenanntes ­Repowering,
+besonders interessant, wenn die Umgebungsbedingungen dies erlauben. Somit kann
+einerseits das Landschaftsbild durch wenige, langsam drehende Großturbinen wesentlich beruhigt und der Energieertrag erheblich (z. B. um den Faktor 3) gesteigert
+werden.
+
+11
+
+nu t zun g d er w ind energie
+
+1.4  Anlagenmarkt
+Während der 80er- bis in die 90er-Jahre dominierten Windkraftanlagen nach dem sogenannten „Dänischen Konzept“ weitgehend den Markt, d. h. Turbinen mit Stall­
+regelung, Getriebe und direkt an das Netz gekoppelte Asynchrongeneratoren. Nach
+wie vor dominieren heute noch Konzepte mit Getrieben. Mit zunehmender Anlagenleistung setzt sich jedoch ein deutlicher Trend zur Blatteinstellwinkelregelung in
+K
+­ ombination mit drehzahlvariablem Triebstrang fort. Die Netzankopplung erfolgt bei
+diesen Einheiten über Umrichtersysteme.
+
+12
+
+In der Klasse über 80 m Turbinendurchmesser sind 63 % der aufgestellten Anlagen mit
+Blatteinstellwinkelregelung und variabler Drehzahl [2] sowie 37 % mit Aktive-StallR
+­ egelung ausgeführt. Auch in der darunterliegenden Größenklasse ist der Trend zur
+blatteinstellwinkelgeregelten Turbine mit variabler Drehzahl erkennbar. Getriebelose
+Konzepte werden bisher weitgehend nur von einem Hersteller (Enercon) vertreten.
+Dieser konnte allerdings die größten Marktanteile in Deutschland erringen. Abb. 3 und 4
+verdeutlichen die marktführende Position von Enercon vor Vestas. Mit wesentlich
+kleineren Anteilen folgen GE Energy (ehemals Tacke), Nordex, Siemens Wind Power,
+REpower Systems, DeWind, Fuhrländer und Gamesa. 2005 lieferten deutsche Her­
+steller etwa die Hälfte der rund um den Globus neu installierten Windkraftanlagen
+und erwirtschafteten etwa 5 Mrd. Euro.
+Abb. 3: Anteile der Anbieter an der
+gesamten in Deutschland installierten
+Windkraftanlagenleistung seit 1982,
+in % (DEWI – 8/2006 [2])
+
+Abb. 4: Anteil der Anbieter an der
+gesamten im ersten Halbjahr 2006 in
+Deutschland installierten Windkraft­
+anlagenleistung, in % (DEWI [2])
+
+s ta nd und per spek t i v en d er w ind energienu t zun g
+
+1.5  Windenergie und Stromnetze
+Grundlage des Erfolges der Windenergie in Deutschland war das 1991 eingeführte
+Stromeinspeisegesetz, das die Pflicht zum Netzanschluss erneuerbarer Energien und
+z. B. bei Windenergie eine Einspeisevergütung von 90 % des Durchschnittstarifs der
+Endverbraucher festlegte. Dieses wurde im Jahr 2000 durch das Erneuerbare-EnergienGesetz (EEG) abgelöst. Mit der Novellierung des EEG wurde 2004 die zukünftige Ver­
+gütung der eingespeisten Energie aus Windkraftanlagen fortgeschrieben. Die hier
+gesetzlich geregelten Einspeisetarife erschweren allerdings eine Erschließung windschwacher Binnenland-Standorte. Durch diese Regularien und aufgrund der zunehmenden Erschließung windhöffiger Küsten-Standorte ist mit weiterhin sinkenden
+Aufstellungszahlen zu rechnen. Die Entwicklung in den Jahren 2004 / 2005 belegt dies.
+Die bisherigen Übertragungs- und Verteilungsnetze sind auf traditionelle Kraftwerks­
+einspeisungen und Verbraucheranforderungen ausgerichtet. Die Einspeisung der
+Windenergie kann daher nur bis zu einem gewissen Grad in die vorhandenen Netze
+erfolgen. Um die angestrebten Ausbauziele von heute 18 GW auf etwa 25 GW im Onund ca. 25 GW im Offshore-Bereich etwa 2025 erreichen zu können, wird deshalb ein
+Netzausbau erforderlich werden. Dabei müssen die hierzu notwendigen, überaus
+l
+­ angen Planungs- und Genehmigungsphasen zur Umsetzung berücksichtigt werden.
+Mit dieser Windenergieeinspeisung sollen ca. 10 % des Stromes an Land und etwa
+15 % auf See erzeugt werden.
+Erstmalig haben sich 2004 sowohl die Windenergieverbände als auch die Netzbetreiber unter Federführung der Deutschen Energie-Agentur (dena) zur Durchführung einer
+umfangreichen Netzstudie entschlossen. Hierbei wurden insbesondere die Auswirkungen eines weiteren Ausbaus der Windkraft unter Berücksichtigung der geplanten
+Offshore-Windparks und der hierfür erforderliche Netzausbau untersucht. Darüber
+hinaus werden in Forschungs- und Entwicklungsvorhaben die Möglichkeiten und
+B
+­ etriebsführungs- sowie Regelungsstrategien zur Zusammenführung und Über­
+tragung der elektrischen Energie aus Offshore-Windparks sowie die Einkopplung in
+bestehende und neu aufzubauende Netze an Land eingehend betrachtet.
+Die Netzanbindung von Windkraftanlagen wurde bisher durch die Netzanschluss­
+regeln so gestaltet, dass bei Netzunregelmäßigkeiten (z. B. Frequenz- oder Spannungsschwankungen) ein sofortiges Trennen der Anlagen vom Netz verlangt worden war.
+Aufgrund der hohen Installationszahlen wurde diese Forderung geändert, um bei
+Netzfehlern großräumige Netzausfälle zu vermeiden. Heute wird verlangt, dass neu
+installierte Windkraftanlagen kurze Netzausfälle im Sekundenbereich überbrücken
+
+13
+
+nu t zun g d er w ind energie
+
+und dadurch die Netze stützen müssen. Anlagen mit starr am Netz geführten Generatoren und Leistungsbegrenzung über aerodynamischen Stall-Betrieb haben somit bei
+einem weiteren Windenergieausbau in Deutschland keine Zukunftsperspektiven mehr.
+
+1.6  Standorte
+Die regionale Verteilung der Windenergienutzung in Deutschland ist in Abb. 5
+w
+­ iedergegeben. Danach hat Niedersachsen mit 4.510 Windkraftanlagen (WKA) bzw.
+4.907 MW WKA-Leistung die meisten Einheiten und die größte Leistung installiert. Die
+durchschnittliche Leistung pro Windturbine beträgt 1.088 kW / WEA. Mit nur 2.033
+Windkraftanlagen nimmt Brandenburg mit 2.620 MW installierter Leistung Platz zwei
+in Deutschland ein. Die durchschnittliche Anlagengröße beträgt hier nahezu 1.289 kW.
+Schleswig-Holstein und das bevölkerungsreichste Bundesland Nordrhein-Westfalen
+folgen auf Platz 3 und 4. Sie haben mit 2.740 bzw. 2.393 Windkraftanlagen 2.275 bzw.
+2.225 MW etwa die gleiche Windkraftanlagenleistung installiert.
+
+14
+
+Sachsen-Anhalt hat mit 1.648 Anlagen enorme 2.193 MW Windkraftanlagenleistung
+den fünftgrößten Anteil in Deutschland aufgebaut. Hier erreicht die mittlere Anlagenleistung mit 1.331 kW den höchsten Wert. In Bezug auf die installierte Windkraft­
+leistung folgen Mecklenburg-Vorpommern, Rheinland-Pfalz, Sachsen, Hessen und
+Thüringen sowie die wenig windbegünstigten süddeutschen Länder Baden-Württemberg und Bayern, das kleinste Flächenland Saarland sowie die Stadtstaaten Bremen
+und Hamburg.
+Neben der installierten Windkraftanlagenleistung nehmen die Energieerträge bzw.
+die Jahresenergieeinspeisungen im Verhältnis zum Stromverbrauch eine bedeutende
+Rolle ein. Abb. 6 zeigt den Nettostromverbrauch (im Jahr 2005), den potenziellen
+Jahres­energieertrag aus den Windkraftanlagen sowie dessen prozentualen Anteil am
+Elektrizitätsverbrauch in den einzelnen Bundesländern und in Deutschland. Dabei
+wird der Jahresenergieertrag auf der Basis der installierten Leistung zum 30.06.2006
+bei einem 100 % Windjahr (Basis IWET V03) berechnet.
+
+s ta nd und per spek t i v en d er w ind energienu t zun g
+
+15
+
+Abb. 5: Regionale Verteilung der Windenergienutzung in Deutschland [3]
+
+nu t zun g d er w ind energie
+
+Bundesland
+Bundesland
+Federal State
+Federal State
+Sachsen-Anhalt
+Schleswig-Holstein
+Mecklenburg-Vorpommern
+Brandenburg
+Niedersachsen
+Thüringen
+Sachsen
+Rheinland-Pfalz
+Nordrhein-Westfalen
+Hessen
+Bremen
+Saarland
+Bayern
+Hamburg
+Baden-Württemberg
+Berlin
+gesamte Bundesrepublik
+Gesamte Bundesrepublik
+Total Germany
+Total Germany
+
+Installierte Leistung Potenzieller Jahres­- NettostromverLeistung
+Nettostrom­
+Anteil am Netto-­
+Nettopotenzieller Jahbis 30.06.2006
+energieertrag
+strom­verbrauch
+brauch 2005 [3]
+resenergieertrag, verbrauch 2005 [3] stromverbrauch,
+bis 30.06.2006
+Installed Capacity
+the Energy
+Consump- Share
+Potential Annual Energy Consump­ Share on the Energy
+Installed Capacity until Potential Annual
+until 30.06.2006
+Energy
+tion 2005 [3]
+[3]
+Consump­tion
+Consumption
+tion
+Energy Yield
+30.06.2006
+MW
+MW
+GWh
+GWh
+%
+2.282,71
+4.574
+13.078
+34,98
+2.289,76
+4.733
+13.636
+34,71
+1.119,40
+2.049
+6.509
+31,48
+2.863,46
+4.913
+18.426
+26,66
+5.089,17
+9.612
+50.679
+18,97
+565,88
+1.033
+10.983
+9,41
+724,22
+1.258
+18.788
+6,70
+882,78
+1.453
+26.714
+5,44
+2.317,24
+4.079
+130.455
+3,13
+440,96
+694
+37.314
+1,86
+52,30
+93
+5.542
+1,68
+57,40
+100
+7.729
+1,29
+308,33
+431
+74.727
+0,58
+33,68
+59
+14.488
+0,40
+272,18
+312
+77.351
+0,40
+0,00
+0
+13.381
+0,00
+19.299,47
+19.299,47
+
+35.393
+35.393
+
+519.800
+519.800
+
+6,81
+6,81
+
+Abb. 6: Nettostromverbrauch, potenzieller Jahresenergieertrag aus Windkraftanlagen und dessen
+Anteil am Nettostromverbrauch in den einzelnen Bundesländern und in Deutschland (DEWI [2])
+
+16
+
+Abb. 6 verdeutlicht die Spitzenstellung von Sachsen-Anhalt beim Windenergieanteil
+am Nettostromverbrauch von 35 %. Es folgen Schleswig-Holstein (34,7 %), Mecklen­
+burg-Vorpommern (31,5 %), Brandenburg (26,7 %) und Niedersachsen (19 %). Diese
+Darstellung zeigt weiterhin, dass Sachsen-Anhalt und Nordrhein-Westfalen (NRW)
+vergleichbare Windenergieerträge aufweisen. Beim direkten Vergleich sind dies ­jedoch
+in dem neuen Bundesland ein Drittel, in dem deutschen Industriezentrum NRW nur
+3 % des Nettostromverbrauchs.
+
+1.7  Wirtschaftliche Auswirkungen
+Die Elektrizitätsversorgung wird momentan mit ca. 60 % von fossilen und mit etwa
+30 % von nuklearen Energieträgern dominiert. Der Anteil der erneuerbaren Energien
+hat sich in den letzten Jahren durch die Windenergiesteigerungen von etwa 5 % auf
+ca. 10 % mehr als verdoppelt. Mit längerfristigen Perspektiven der Windenergie, die in
+der Größenordnung der momentanen Kernenergieanteile zu erwarten sind, wird die
+weitere Entwicklung der Windenergiekosten die Stromversorgung zunehmend beeinflussen. Entscheidende Faktoren sind dabei die Investitions- und die Betriebskosten
+sowie ihr Verhältnis zu den Energieerträgen bzw. die weiteren Kostendegressionen.
+Eine Basis für die Kostenentwicklung stellen sogenannte Lernkurven dar [4]. Bei ihnen
+kommt der Effekt zum Ausdruck, wie mit zunehmender Anzahl von produzierten und
+betriebenen Anlagen die relativen Herstellungs- sowie die Energieerzeugungskosten
+zu Preisveränderungen führen. Dabei werden auch Inflationseinflüsse berücksichtigt.
+
+s ta nd und per spek t i v en d er w ind energienu t zun g
+
+Daraus folgt eine Reduzierung der Stromerzeugungskosten. Diese müssen allerdings
+unter dem Wert der Vergütung liegen, um einen wirtschaftlichen Betrieb zu erreichen.
+Abb. 7 zeigt, dass aufgrund der Vergütungsdegression von Windkraftanlagen und dem
+Anstieg der Erzeugungs- und Bezugskosten ab dem Jahr 2015 die Windenergie günstiger als konventionelle Stromerzeugung sein wird.
+10,0
+
+8,0
+in ct/kWh (real)
+
+10,0
+
+8,0
+
+6,0
+
+6,0
+
+4,0
+
+Abb. 7: Degressive
+
+4,0
+
+Windstromvergütung und
+Preise konventionellen
+Stromes (Bundesverband
+Erneuerbarer Energien [5])
+
+2,0
+
+2,0
+2000 2002 2004 2006 2008 2010 2012 2014 2016 2018 2020
+
+1.8  Arbeitsplätze
+Die Windenergienutzung ist in Deutschland nach dem Boom der letzten 15 Jahre in
+eine Konsolidierungsphase eingetreten. Diese hat bereits ein Ausmaß erreicht, das
+sich grundlegend sowohl auf die Wirtschaft als auch auf den Arbeitsmarkt auswirkt.
+So hat sich die Windenergieindustrie inzwischen nach den Automobilherstellern zum
+zweitgrößten Stahlabnehmer in Deutschland entwickelt. Damit sind insgesamt etwa
+70.000 Beschäftigte im Windbereich tätig. Davon arbeiten ca. 60.000 direkt oder
+i
+­ ndirekt in der Produktion. Mehr als 10.000 sind in der Planung, im Betrieb und der
+Wartung der Anlagen tätig [6].
+Besonders die klassischen Branchen der Elektroindustrie sowie der Anlagen- und
+M
+­ aschinenbau konnten neue Aufgabenfelder erschließen. Diese liegen in der Her­
+stellung von Getrieben, Generatoren sowie von Steuerungs- und Regelungstechnik.
+Zudem sind neue Arbeitsbereiche im Turmbau, der Rotorblattfertigung etc. entstanden. Neue Ausbildungs- und Dienstleistungsbereiche, z. B. für Service und Planung,
+wurden ebenfalls notwendig.
+Die Arbeitsplatzeffekte im Bereich der Windenergienutzung sind – wie bei allen
+e
+­ rneuerbaren Energien – wesentlich höher als in der konventionellen Energietechnik.
+Im Vergleich zur Stromerzeugung aus Kohle sind etwa 4-mal mehr Arbeitskräfte
+e
+­ rforderlich, um die gleiche Energieproduktion zu erzeugen. Im Verhältnis zum Strom
+aus Kernenergie kann sogar mit ca. dem 10-fachen Faktor gerechnet werden.
+
+17
+
+nu t zun g d er w ind energie
+
+Der gravierende Unterschied bei den Arbeitsplatzauswirkungen kann auf verschiedene Rahmenbedingungen und Effekte zurückgeführt werden. Im Vergleich zu Großkraftwerksanlagen mit GW-Systemen bilden Windkraftanlagen auch im MW-Bereich
+nur sehr kleine Einheiten, die relativ große Abmessungen aufweisen. Diese sind notwendig, um die verhältnismäßig kleine Energiedichte des Windes nutzen zu können.
+Daher ist der Bau- und Betriebsaufwand für diese Anlagen hoch und ­arbeitsintensiv.
+Der Energieträger „Wind“ steht jedoch kostenlos zur Verfügung. Dadurch entfallen die
+hohen Kosten für Energieimporte (Öl, Gas, Kohle, Kernenergie), die bei konventionellen
+Versorgungen notwendig sind. Die Wertschöpfung erfolgt direkt am Aufstellungsort
+der Windkraftanlagen und Arbeitsplätze entstehen zusätzlich. Da gute Windstandorte
+meist in strukturschwachen Gebieten Deutschlands an der Küste und im Binnenland
+anzutreffen sind, bieten sich hier gute berufliche Perspektiven. Es wird erwartet, dass
+diese Arbeitsplätze dauerhaft gesichert werden können.
+
+1.9  Gute Gründe für die Windenergie
+
+18
+
+In den letzten Jahren war festzustellen, dass einige betroffene Bürger bzw. aktive Verbände die Installation und den Betrieb von Windkraftanlagen als störend empfinden.
+Die Hauptargumente sind Eingriffe in das Landschaftsbild, Schattenwurf bei tief
+s
+­ tehender Sonne und Lärmerzeugung. In zunehmendem Maße spielt dabei auch die
+Tag- und Nachtkennzeichnung der Anlagen eine Rolle; 2004 wurde erstmals für alle
+Bundesländer einheitlich eine Richtlinie zur Kennzeichnung von Windkraftanlagen
+vom Bundesrat verabschiedet.
+Die oben genannten Kritikpunkte gegen die Windenergienutzung gehen vielfach auf
+alt hergebrachte Vorurteile und Überlieferungen aus Fehlern bzw. falschen Einschätzungen in den Anfangsjahren der Entwicklung zurück. Intensivste Anstrengungen
+machten es möglich, diese Technologie innerhalb weniger Jahre von den „Kinderkrankheiten“ zu befreien und an den überaus hohen Standard der elektrischen Energie­
+versorgung heranzuführen. Heute ist die Windkrafttechnik in vielen Bereichen wie der
+Umrichtertechnik etc. technologischer Motor und Schrittmacher. Langfristig überwiegen die positiven Aspekte einer Windenergienutzung bei Weitem.
+
+s ta nd und per spek t i v en d er w ind energienu t zun g
+
+	
+
+11 gute Gründe für die Windenergie
+1.	 Die weltweiten Vorräte an Öl, Gas und Uran sind in etwa 50 Jahren erschöpft, die Reichweite der Kohle beträgt ca. 200 Jahre. Derzeitige Fördermengen sind ­ darüber hinaus
+nicht beliebig steigerbar. Erneuerbare Energien sind dagegen ­unerschöpflich.
+2.	 Die Verbrennung von Kohle, Öl und Gas setzt Kohlendioxid, Staub und andere Schadstoffe
+in der Atmosphäre frei, belastet damit die Umwelt und beeinflusst das Klima. Vermehrt
+auftretende Wetterkatastrophen sind die Folge. Die Entsorgung nuklearer Reststoffe aus
+Kernkraftwerken ist noch nicht gelöst. Die Herstellung, der Aufbau, der Betrieb und das
+Recycling von Windkraftanlagen haben sich dagegen zu einer eingrenzbaren und siche­ren
+Technologie entwickelt.
+3.	 Bei der „Verstromung“ von Braunkohle werden 2- bis 3-fach größere Flächen benötigt
+und total verändert, als für die gleiche Elektrizitätsmenge pro Jahr aus 3- bis 5-MWWindenergieanlagen erforderlich wäre. Dabei würden bei Windturbinen nur etwa 10 %
+der Fläche für Anlagen, Zuwege und Infrastruktur belegt. Der Rest kann weiterhin z. B.
+landwirtschaftlich genutzt werden.
+4.	 Allein die Sonnenstrahlung auf die Erde übertrifft den momentanen Energie­bedarf etwa
+15.000-fach. Wasser- und Windkraft sind Teil dieser Energie. Sie haben große Tradition in
+unseren Kulturlandschaften.
+5.	 Eine 1,5-MW-Windkraftanlage versorgt rund 1.000 Haushalte mit Elektrizität. Bis 2020
+lassen sich in Deutschland mit dem Einsatz moderner Turbinentechnologie an Land knapp
+10 % und im Meer gut 15 %, also zusammen etwa ein Viertel des Strombedarfs, decken.
+6.	 Windkraftanlagen benötigen zur Gewinnung der für ihre Produktion und Entsorgung
+e
+­ rforderlichen Energie etwa 3 bis 8 Monate, d. h., sie „ernten“ etwa 25- bis 100-fach mehr
+Energie, als für ihre Herstellung etc. notwendig ist.
+7.	 Elektrizität aus Windenergie trägt erheblich zu der von der Bundesregierung ­angestrebten
+Kohlendioxid-(CO2)-Reduzierung bei. Bei der Stromerzeugung aus fossilen Energieträgern
+werden hingegen je Kilowattstunde (kWh) 2 bis 3 kWh Primärenergie verbraucht.
+8.	 Windkraftanlagen wurden bisher hauptsächlich von Privatpersonen installiert und betrieben. Dadurch und aufgrund der hohen Zukunftserwartungen ist die Akzeptanz in der
+Bevölkerung überwiegend positiv.
+9.	 Durch die Windenergie sind in der Hersteller- und Zulieferindustrie etwa 70.000 Arbeitsplätze entstanden. Die Arbeitsplatzeffekte sind im Vergleich zum Kohlestrom etwa 4-fach
+und im Vergleich zum Atomstrom ca. 10-mal höher.
+
+10.	Fossile und nukleare Energieversorgungen basieren auf Importen. Bei der Wind­energie
+nimmt hingegen die regionale Wertschöpfung einen hohen Stellenwert ein. Dadurch ergeben sich insbesondere für den ländlichen Bereich neue zukunftsträchtige Perspektiven.
+Landwirte werden zu Energiewirten.
+11.	Deutsche Windkrafttechnologie hat am Weltmarkt einen Spitzenplatz erreicht. Um
+d
+­ iesen behaupten zu können, müssen einerseits der Industrie und andererseits den
+B
+­ etreibern die erforderlichen Rahmenbedingungen gegeben werden, um große Exportmärkte erschließen zu können.
+
+19
+
+nu t zun g d er w ind energie
+2
+
+2  Windenergie international
+Der Ausbau und die Nutzung der Windenergie, ihre Vergütungs- und Förderstrategien
+sowie ihre Entwicklungsmöglichkeiten sollen für Europa und die wichtigsten Länder
+der bevölkerten Kontinente Amerika, Asien und Australien im Folgenden ausgeführt
+werden. Unbevölkerte Arktis- bzw. Antarktis-Bereiche, die zwar hohe Windenergie­
+potenziale aufweisen, momentan allerdings kaum Nutzungsmöglichkeiten bieten,
+sollen außer Acht gelassen werden. Die europäischen und weltweiten Betrachtungen
+erschöpfend auszuführen, würde den Rahmen dieses Kapitels bei Weitem sprengen.
+Eingehende Darstellungen sind in [7] und weiteren Literaturangaben in diesem ­Kapitel
+wiedergegeben.
+
+2.1  Situation in Europa
+
+20
+
+Der Anlagenmarkt wird europaweit von den dänischen und deutschen Herstellern
+d
+­ ominiert. Deutsche bestimmen allerdings klar die Großanlagentechnik. Produkte aus
+den Traditionsländern der Windmühlen, Niederlande und Großbritannien, konnten
+sich trotz großer Anstrengungen nicht am Markt etablieren. Auch spanischen Eigenentwicklungen gelang dies nicht. Allerdings hat ein spanischer Hersteller über Lizenzverträge mit dem dänischen Weltmarktführer in den letzten Jahren große Markt­
+anteile in Europa erringen können. Andere europäische Länder konnten nur nationale
+bzw. singuläre Erfolge erringen und blieben im Schatten der Marktführer weit zurück.
+•	 Nationale Vergütungs- und Förderstrategien
+Die Einspeisevergütung für Windenergie basiert in Europa im Wesentlichen auf drei
+Modellen, die sich in ihrem Erfolg grundlegend unterscheiden. Da der „deutsche Weg“
+bei der Einführung der Windenergie den größten Erfolg erzielt hat, folgen immer mehr
+Staaten diesem Beispiel. In den weiteren Ausführungen sollen die hauptsächlich
+a
+­ ngewandten Möglichkeiten zur Vergütung kurz dargestellt werden.
+•	 Renewable Energy Feed in Tariffs (REFIT) schreiben Netzbetreibern vor, dass sie
+die Produzenten von Ökostrom bei ihrer Einspeisung mit einem festgesetzten Mindestpreis pro kWh entschädigen müssen. In Deutschland und Dänemark war diese
+sogenannte Mindestpreisregelung die Basis für die Windenergieerfolge in den 90erJahren. Spanien, Österreich und Italien folgten. In diesen Ländern sind demzufolge
+auch die 24 großen Windturbinenhersteller angesiedelt. Dänemark hat allerdings seit
+dem Regierungswechsel 2001 diese Regelung geändert und damit die Installations­
+raten im Land 2004 weitgehend zum Erliegen gebracht.
+
+w ind energie in t ern at i o n a l
+2
+
+•	 Beim Ausschreibungssystem reichen Stromanbieter im freien Wettbewerb ihren
+Strompreis bei einer staatlichen Stelle ein. Den günstigsten Anbietern wird vom Staat
+ein festes Kontingent zur Stromerzeugung durch Windenergie gegeben. In Ländern
+wie Großbritannien, Irland und Frankreich (ist nach Redaktionsschluss zu REFIT übergegangen), die sich durch besonders hohe Windenergiepotenziale auszeichnen,
+scheint die Windenergieentwicklung durch dieses System allerdings gebremst zu
+w
+­ erden. In diesen Ländern sind bis heute nur etwa 500 MW Windkraft installiert und
+lediglich zwei nennenswerte Hersteller anzutreffen. Hintergrund ist, dass sich nur
+fi
+­ nanzstarke Großkonzerne ein Engagement unter diesen Bedingungen leisten
+könnten. Mit einer langfristig angelegten Strategie lassen sich dann allerdings Markt
+und Preise beherrschen.
+•	 Green Certificates verpflichten Energieversorgungsunternehmen, einen bestimmten
+Prozentsatz ihres Stromangebotes aus erneuerbaren Energien zu beziehen und durch
+grüne Zertifikate zu belegen. Der Prozentsatz ist variabel angesetzt. Er wird in vorgegebenen Perioden festgelegt und kann auf dem freien Markt gehandelt werden.
+Dieses System wird lediglich in den Niederlanden angewandt. Andere Länder disku­
+tieren bzw. erproben ähnliche Regelungen.
+•	 Ausbauzustand und Entwicklungsrahmen in Europa
+Die Unterschiede in der Gesetzgebung und der Förderung zur Einführung der erneuerbaren Energien haben in Europa zu großen Unterschieden bei der Nutzung der Windenergie geführt. Die Länder an der Spitze sind Deutschland, Spanien und Dänemark.
+Die Niederlande, Großbritannien, Italien, Österreich und Portugal folgen.
+Die installierte Windkraftanlagenleistung steigt in Europa jährlich um etwa 6 GW. Sie
+erreichte Ende 2005 ca. 40 GW [8]. Davon sind nahezu die Hälfte in Deutschland
+(18 GW) und ein Viertel in Spanien (10 GW) aufgebaut. Dänemark deckt mit knapp
+3,2 GW Windanlagenleistung über 30 % seines Strombedarfs. Österreich, das auf
+große Wasserkrafttradition in der Elektrizitätsversorgung verweisen kann, kommt mit
+nahezu 0,9 GW Windkraft auf etwa den halben Stromanteil (3 %) von Deutschland.
+In den nächsten Jahren muss mit starken Veränderungen bei der Versorgungssicherheit und den Brennstoffpreisen auf dem Energiemarkt in Europa gerechnet werden.
+Weiterhin kristallisieren sich klimatische Veränderungen und damit verbundene Folge­
+probleme, die es für Europa und seine Mitgliedsstaaten zu lösen gilt, als eines der
+Kernthemen heraus. Bei stagnierendem ökonomischem Wachstum und rückläufigen
+Beschäftigungszahlen im Produktionsbereich wird sich europa- und weltweit ein
+z
+­ unehmend stärkerer globaler Wettbewerb entwickeln, der sich auch auf den Energiesektor auswirken wird. Diesen zukunftsfähig bzw. nachhaltig zu gestalten wird eine
+der wichtigsten Aufgaben der kommenden Jahre sein.
+
+21
+
+nu t zun g d er w ind energie
+2
+
+•	 Ziele der Europäischen Union (EU)
+Die Windenergie-Ausbauziele in der EU wurden in den letzten Jahren immer wieder
+nach oben korrigiert. 1991 hielten Optimisten eine installierte Anlagenleistung von
+25 GW bis zum Jahr 2010 für realisierbar. Bereits 1997 wurde die Zielgröße auf 40 GW,
+2001 auf 60 GW und schon 2003 auf 75 GW korrigiert. Momentane Prognosen kommen für 2010 sogar auf 100 GW und für 2020 auf 230 GW Windanlagenleistung [9].
+Diese beruhen auf Analysen der Technologieentwicklung der Windenergieindustrie,
+den Rahmenbedingungen bei der Förderung sowie dem anhaltenden politischen
+W
+­ illen auf lokaler, regionaler und globaler Ebene zur großtechnischen Nutzung der
+Windenergie. Europaweit würden damit 22 % des Stromes aus erneuerbaren Energien
+abgedeckt.
+
+2.2  Nordamerika
+Die folgenden Ausführungen über Nordamerika konzentrieren sich hauptsächlich auf
+die Vereinigten Staaten von Amerika (USA). Dabei fällt besonders Kalifornien die
+V
+­ orreiterrolle zu. Weiterhin werden Besonderheiten anderer Bundesstaaten hervor­
+gehoben. Kanada soll abschließend kurz Erwähnung finden.
+
+22
+
+•	 Vereinigte Staaten von Amerika
+Das „Battelle Pacific Northwest Laboratory“ begann Ende der 70er-Jahre mit Unterstützung der Energiebehörde, das Windenergiepotenzial der USA zu ermitteln. Erste
+Ergebnisse wurden bereits 1981 veröffentlicht. Unter Berücksichtigung eines Klassi­
+fizierungssystems und Bereichen mit Konfliktpotenzial berechnete das „National
+R
+­ enewable Energy Laboratory“ (NREL) einen Windenergieertrag von 700 Terrawattstunden pro Jahr (TWh/a) aus mehr als 300 GW Anlagenleistung. Dies entspricht etwa
+27 % des Strombedarfs bzw. 10 % des Gesamtenergieverbrauchs [10]. Momentan sind
+landesweit 16.800 Windkraftanlagen mit 6,6 GW Nennleistung installiert, die über
+13 TWh Jahresenergie­ertrag liefern.
+Anfang der 80er-Jahre setzte in den USA ein Windenergieboom ein, der in Kalifornien
+besonders stark ausgeprägt war. Ein kontinuierlicher Aufbau der Windenergienutzung
+konnte sich daraus jedoch nicht entwickeln, da eine stabile Gesetzgebung nicht vorhanden war.
+Zwischen den einzelnen Bundesstaaten bestehen große Unterschiede in klimatischer
+und meteorologischer Hinsicht einerseits sowie in politischen Zielsetzungen andererseits. Somit konnte sich eine Anwendung der Windenergie auch nicht bundesweit
+gleichmäßig entwickeln. Grundsätzlich hat sich die Windenergienutzung auf den
+westlichen Teil konzentriert. Nachfolgend werden somit neben Kalifornien, Hawaii
+und Alaska auch die Bundesstaaten im mittleren und nördlichen Westen sowie Texas
+
+w ind energie in t ern at i o n a l
+2
+
+und New Mexico im Süden kurz betrachtet. Der „Production Tax Credit“ (PTC) ist bundesweit geregelt und sieht 1,5 Dollar-Cent pro kWh vor. Dieser wurde 1992 eingeführt
+und ist seitdem bereits 3-mal ausgelaufen [8].
+
+Kalifornien
+Energieengpässe machten Anfang der 80er-Jahre im wirtschaftlich boomenden Kalifornien einen Ausbau der Stromversorgung notwendig. Große Umweltprobleme in
+den Ballungszentren, die unter anderem in Verbindung mit der Energieversorgung
+b
+­ ereits bestanden, ermöglichten keinen weiteren Zubau von fossil befeuerten Kraftwerken. Kernkraftwerke konnten in der Erdbebenregion am San Andreas Graben ebenfalls keine Abhilfe schaffen. Erneuerbare Energien sollten daher Vorrang erhalten.
+Dazu wurden entsprechende gesetzliche Rahmenbedingungen geschaffen. Sie umfassten sowohl bevorzugte Netzeinspeisebedingungen als auch hohe Abschreibe­
+möglichkeiten bei Investitionen in erneuerbare Energiesysteme (Tax Credits). Dies führte
+Anfang bis Mitte der 80er-Jahre zu einem enormen Aufschwung in der Wind­energie.
+Unter wirtschaftlichen Gesichtspunkten waren anfangs im Wesentlichen nur Anlagen
+der 50-kW-Klasse einsetzbar (Abb. 8). Ihre Weiterentwicklung zu serien­ge­fer­tig­ten
+Einheiten größerer Leistung (Abb. 9) mit höherer Verfügbarkeit nahm eine stürmische
+Entwicklung.
+Durch gesetzliche Änderungen kam es jedoch für den neu geschaffenen Absatzmarkt
+bereits Mitte der 80er-Jahre zu einem starken Einbruch. In der Zwischenzeit hat sich
+der Markt stabilisiert. Mit ca. 16.000 Windkraftanlagen wurden in relativ kurzer Zeit in
+den 80er-Jahren etwa 1,5 GW installiert, die nahezu 2 TWh Windstrom pro Jahr in das
+Netz einspeisten. Kalifornien hat sich so zum Pionierstaat der Windenergie entwickelt.
+Dieser Stand konnte bis in die 90er-Jahre gehalten werden.
+
+Abb. 8: Windfarm in Kalifornien mit Anlagen der 50- / 100-kW-Klasse
+
+23
+
+nu t zun g d er w ind energie
+2
+
+Abb. 9: Windfarm in Kalifornien mit 250-kW-Anlagen
+
+Heute sind in Kalifornien 12.000 Windkraftanlagen mit 2 GW Gesamtleistung installiert.
+Hauptstandorte sind Tehachapi, Altamont und San Gorgonio. Weitere Anlagen sind in
+Solano und Pacheco aufgestellt. Ziel ist es, in den nächsten 5 Jahren die Leistung zu
+verdoppeln [11]. Allein in Tehachapi sollen bis 2015 zusätzlich 4 GW installiert werden.
+
+24
+
+Hawaii
+Die Hawaii-Inseln im Pazifischen Ozean weisen an einigen exponierten Standorten
+relativ hohe Windgeschwindigkeiten auf. Sie haben daher in der modernen Windenergie­
+technik ebenfalls eine große Tradition. 1980 bis 1982 wurde eine von vier MOD-OAWindkraftanlagen-Prototypen mit 200 kW Nennleistung in Kahnku betrieben. Auch
+die MOD-5B mit 97 m Rotordurchmesser und 3,2 MW Nennleistung wurde auf der
+b
+­ evölkerungsreichsten Hawaii-Insel Oahu an der Nordküste gemeinsam mit 15 weiteren 600-kW-Westinghouse-Turbinen 1987 installiert. Etwa zur gleichen Zeit wurden
+an der Südspitze von Big Island 37 Mitsubishi-MWT-250 / 250 kW in Betrieb genommen.
+Momentan sind auf den Hawaii-Inseln 132 Anlagen mit 11 MW Windkraftanlagen­
+leistung installiert [7]. Einzelanlagen und Windparks mit einer Gesamtleistung von
+24 MW werden gebaut oder sind in der letzten Planungsphase [12]. Auf der Insel Maui
+sind 30 MW und auf Big Island 10 MW geplant. Für Oahu wird ein weiteres Projekt mit
+39 MW untersucht [13].
+Alaska
+Der nördlichste US-Bundesstaat zeichnet sich einerseits durch hohe Windgeschwindigkeiten aus und ist andererseits von extremen klimatischen Bedingungen geprägt.
+In der polaren Region machen sich daher von der Fundamentierung bis zum Betrieb
+von Windkraftanlagen deutliche Unterschiede zum Einsatz in gemäßigten oder warmen Gebieten bemerkbar. In Bereichen ewigen Eises muss durch „Wärmeableitung“
+das „Eisfundament“ bei genügend tiefer Temperatur gehalten werden. Weiterhin sind
+z. B. Sicherheitseinrichtungen und Rotorblätter vor Vereisung zu schützen sowie Getriebe und Hydrauliksysteme bei Stillstand durch Heizung der Öle gangbar zu halten.
+
+w ind energie in t ern at i o n a l
+2
+
+Hauptstandorte von kleineren Windparks mit Anlagen der 10- bis 100-kW-Klasse sind
+Kotzebue nördlich und Wales direkt an der Beringstraße, der Meerenge zwischen Alaska
+und Sibirien, sowie die Insel St. Paul mitten im Beringmeer gelegen. Wie im Großteil
+des Staates bestehen an diesen Orten keine Straßenverbindungen. Schiffsverkehr ist
+nur wenige Monate im Jahr möglich. Fluganbindung ist überall üblich. Somit gestaltet
+sich der Brennstofftransport schwierig und kostenintensiv. Die Nutzung der Wind­
+energie ist daher an diesen entlegenen Orten auch aus wirtschaftlicher Sicht sehr
+i
+­ nteressant, da hier mit etwa 50 Dollar-Cent pro kWh Stromerzeugungskosten gerechnet wird. Momentan sind in Alaska ca. 1,3 MW Windkraftanlagenleistung installiert.
+Weitere 0,7 MW sind geplant [14]. Nach [7] erreichen die für heutige Verhältnisse sehr
+kleinen Anlagen mit etwa 40 kW Durchschnittsleistung immerhin 3.000 Volllast­
+stunden pro Jahr.
+
+Mittlerer und nördlicher Westen
+Im mittleren Westen sind Iowa und Minnesota führend.
+Windkraftanlagenleistung [MW]
+Iowa
+Minnesota
+Kansas
+Illinois
+Wisconsin
+South Dakota
+Nebraska
+
+installiert
+632
+615
+114
+78
+53
+45
+14
+
+geplant
+302
+223
+180
+46
+200
+50
+60
+
+Michigan und Ohio liegen hingegen unter 10 MW. Auch in den nördlichen Rocky
+M
+­ ountains ist die Windenergienutzung nicht sehr verbreitet [15].
+In Wyoming wurden bereits Anfang der 80er-Jahre Untersuchungen zur Kombination
+von Wind- und Wasserkraft durchgeführt. Ziel war, im Winter vorwiegend die Windund im Sommer die Wasserkraft zu nutzen. Dazu wurden 1982 eine MOD-2B von
+B
+­ oeing mit 91 m Rotordurchmesser und 2,5 MW Nennleistung sowie eine schwedischamerikanische Gemeinschaftsproduktion WT S4 mit 80 m Rotor und 4 MW Leistung
+als Testanlagen in der Nähe von Medicine Bow aufgebaut.
+Momentan sind in der Nähe dieses Standortes Windkraftanlagen mit nahezu 45 MW
+Leistung installiert. Insgesamt sind 285 Anlagen mit nahezu 300 MW aufgebaut, die
+etwa 650 GWh pro Jahr in das Netz liefern. Colorado und Oregon kommen mit jeweils
+ca. 190 Anlagen und 230 bzw. 260 MW Nennleistung auf 490 bzw. 520 GWh Jahres­
+ertrag. Im Staat Washington speisen 320 Turbinen bei 240 MW Leistung 530 GWh
+elektrische Energie in das Netz [7].
+
+25
+
+nu t zun g d er w ind energie
+2
+
+Texas und New Mexico
+Der Ölstaat Texas weist mit 1.400 Anlagen und 1,3 GW nach Kalifornien die zweitgrößte
+Windleistung auf und liefert jährlich 2,9 TWh Stromertrag. New Mexico erzielt mit
+200 Windkraftanlagen und 270 MW über 450 GWh Elektrizität.
+•	 Kanada
+Kanada hat eine Fläche von etwa 10 Mio. Quadratkilometern und nur knapp 33 Mio.
+Einwohner. 62 % des Stromes kommt aus der Wasserkraft. Die installierte elektrische
+Leistung beträgt 105 GW. Große Teile des Landes haben ein sehr hohes Windenergieangebot. Zur Unterstützung der Windenergie bestehen nationale Anreizprogramme
+sowohl zur Elektrizitätserzeugung als auch im Steuerrecht. Momentan sind 450 MW
+Windkraftanlagen aufgebaut. Langfristig existieren sehr gute Chancen für eine großtechnische Windenergienutzung.
+
+2.3  Südamerika
+
+26
+
+Die Darstellungen über den südamerikanischen Teilkontinent werden sich im Folgen­
+den auf die beiden größten Staaten mit hohem Windenergiepotenzial, Brasilien und
+Argentinien, beziehen.
+•	 Brasilien
+Brasilien ist 20-mal größer als Deutschland, hat über doppelt so viele Einwohner, aber
+nur etwa drei Viertel der bei uns installierten Kraftwerksleistung. Das Land bezieht
+über 70 % seiner elektrischen Energie aus Wasserkraft. Eine verstärkte Windenergienutzung könnte dies gut ergänzen. Dazu wurden landesweit bereits intensive Potenzial­
+untersuchungen durchgeführt. Weiterhin sind die momentanen Kraftwerksanlagen
+veraltet und neigen daher vermehrt zu Störungen. Ein Ausbau der Einspeisesysteme
+für die Windenergie ist daher unumgänglich.
+Brasilien bietet somit beste Voraussetzungen für eine großtechnische Nutzung der
+Windenergie. Das Land hat momentan unter allen südamerikanischen Ländern die
+größte Bedeutung, obwohl derzeit nur 29 MW Windkraft-Anlagenleistung installiert
+ist. Diese soll durch das 2004 eingeführte „Renewable Energy Incentive Program“
+(PROINFA) in naher Zukunft gesteigert werden. Es sieht vor, die Installation von erneuer­
+baren Energieanlagen mit einer Leistung von insgesamt 3.300 MW bis Ende 2006 zu
+unterstützen. Davon entfallen 1.100 MW auf Windkraftanlagen. In diesem Zeitraum
+wird mit 1.350 MW gerechnet. Genehmigungen liegen bereits über 3.000 MW vor. In
+einer zweiten Phase sollen in 20 Jahren etwa 10 % der Elektrizität aus Wind-, Biomasseund kleinen Wasserkraftanlagen abgedeckt werden [16].
+
+w ind energie in t ern at i o n a l
+2
+
+•	 Argentinien
+Im Süden Argentiniens sind weltweit wohl mit die höchsten Windgeschwindigkeiten
+anzutreffen. Eigentlich ideale Voraussetzungen zur Anwendung der Windenergie. Aller­
+dings ist die Region Patagonien nur sehr dünn besiedelt. Der größte Teil der in Argentinien betriebenen 26 MW Windkraftanlagenleistung ist daher auch im Süden von
+Patagonien installiert. Für Überlegungen zur großtechnischen Anwendung der Windenergie, die eine „Erzeugung“ in Gebieten mit höchsten Ertragspotenzialen und Energie­
+transport über weite Strecken in Bevölkerungs- und in Industriezentren vorsehen [17],
+bietet diese Region beste Voraussetzungen für eine erfolgreiche Umsetzung. Lang­
+fristig könnte der Ausbau der Windenergie in Argentinien größte Bedeutung erlangen.
+Der elektrische Energiemarkt ist bereits seit 1992 liberalisiert und somit in die drei
+Bereiche „Erzeugung“, „Übertragung“ und „Verteilung“ der Elektrizität untergliedert.
+Somit haben im Prinzip alle Stromerzeuger freien und gleichen Zugang zum Netz.
+Die „Argentine Wind Energy Association“ hat ein Programm entwickelt, das Wasserkraft als Back-up-System für Windkraft vorsieht. Damit haben Windstromeinspeiser
+die Möglichkeit, nicht nur Energie, sondern auch gesicherte Leistung anbieten zu können. Argentinien deckt 39 % seines Strombedarfs aus Wasserkraft.
+In einem Gesetz (Ley Nacional No 25019) ist die Stromerzeugung aus Solar- und Windanlagen zum nationalen Interesse deklariert worden. Es spezifiziert Sub­ventionen und
+steuerliche Vorteile. Die Subventionen beinhalten 0,01 argentinische Pesos pro kWh,
+die über 15 Jahre bezahlt werden. Dies entspricht etwa 0,0026 € / kWh. Provinzgesetze
+sehen zusätzlich 0,005 argentinische Pesos pro kWh vor [7].
+
+2.4  Asien
+In Asien soll der Ausbau der Windenergie in den beiden bevölkerungsreichsten Ländern
+Indien und China, die nahezu die halbe Erdbevölkerung beherbergen, kurz vorgestellt
+werden. Weiterhin werden die Industrieländer Japan, Südkorea sowie das Inselreich
+Indonesien kurz angesprochen.
+•	 Indien
+Der indische Subkontinent mit 9-facher Fläche und 12-facher Bevölkerung von Deutsch­
+land hat etwa die gleiche installierte elektrische Leistung. 26 % des Stromes trägt die Was­
+ser­kraft bei. Mit 3,6 GW Windkraftanlagenleistung ist Indien fünftgrößter Windenergie­
+produzent der Welt. Große Windenergiepotenziale sind vor allem in den Küstenregionen
+anzutreffen. Das Ministerium für Nichtkonventionelle Energie hat sich zum Ziel gesetzt,
+bis März 2007 eine Windkraftleistung von 5 GW zu erreichen. Dazu sind Vorzugstarife für
+die Einspeisung und Vergünstigungen bei der Einkommensteuer vorgesehen [7].
+
+27
+
+nu t zun g d er w ind energie
+2
+
+Der große Windenergiemarkt hat in Indien dazu geführt, dass in die Windindustrie
+investiert wird. Bei der Herstellung von Windkraftanlagen werden bis zu 80 % im Land
+produziert. Importe sind damit weitgehend überflüssig. Bis 2012 sollen 10 % der durch die
+Industrialisierung benötigten Energie aus erneuerbaren Energien bezogen werden [8].
+•	 China
+Im bevölkerungsreichsten Land der Erde leben 1,3 Mrd. Menschen auf einer Land­fläche
+von 9,6 Mio. Quadratkilometern. Die installierte elektrische Leistung beträgt 440 GW.
+Mit 108 GW werden etwa 25 % der Elektrizität aus Wasserkraft gedeckt. Der Strommarkt wurde 2003 liberalisiert. Prinzipiell haben alle Elektrizitätserzeuger freien
+Z
+­ ugang zum Netz. Dieser unterliegt jedoch der Regierungskontrolle. Die Stromerzeugung ist für Investoren geöffnet. Die Einspeisetarife werden von den Preisbüros der
+Provinzen geprüft [7].
+
+28
+
+Berechnungen des Meteorologischen Instituts von China ergaben ein Windpotenzial
+an Land von 253 GW und auf See von 750 GW. Die windreichsten Regionen sind an der
+Südostküste, der inneren Mongolei, in Xingjiang, der Gansu-Provinz und im tibetanischen Quinghai-Plateau anzutreffen. Momentan beträgt die Windkraftanlagen­
+leistung etwa 1 GW. Die Windkraftindustrie in China wächst ebenfalls. Bisher werden
+Anlagen unterhalb der MW-Klasse hergestellt. Die Produktion größerer Anlagen ist
+jedoch in Planung. Bis 2010 sollen 20 Windparks mit je 100 MW gebaut werden. Im
+Reich der Mitte sollen bis zu den Olympischen Spielen u. a. von den Olympiastätten in
+Peking aus, rotierende Windturbinen deutlich sichtbar Zeichen sauberer Energie­
+produktion setzen. Bis 2020 sind 20 bis 30 GW Windleistungsinstallation geplant [8].
+•	 Japan
+Das Reich der aufgehenden Sonne hat bei geringfügig größerer Landfläche als Deutschland etwa eine um die Hälfte größere Bevölkerung und mit 268 GW eine mehr als doppelt
+so hohe installierte elektrische Leistung. 17 % des Stromes werden aus Wasserkraft
+g
+­ edeckt. Die momentan installierte Windkraftanlagenleistung beträgt etwa 1 GW [7].
+Die Ankündigungen der japanischen Regierung, den Anteil erneuerbarer Energien zu
+steigern, haben in den letzten Jahren zu einer Weiterentwicklung der japanischen
+Windindustrie geführt. Diese wurde durch Zahlungen für die Energieeinspeisung und
+Kapitalzuschüsse vorangetrieben. Energie-Verkaufs-Verträge (power purchase agreements) mit 17 Jahren Laufdauer geben dabei den Investoren Sicherheit. Die Einführung des „Renewable Portfolio Standard“ (RPS) im April 2003 sollte den Markt beleben.
+Bis 2010 werden 1,35 % vom Gesamtenergiebedarf aus erneuerbaren Energien erwartet.
+Auf die Windenergie sollen bis 2010 also 3 GW und bis 2020 etwa 12 GW installierte
+Leistung entfallen [8].
+
+w ind energie in t ern at i o n a l
+2
+
+•	 Südkorea
+Südkorea ist mit 99.000 Quadratkilometern und 46 Mio. Einwohnern doppelt so dicht
+besiedelt wie Deutschland. Die installierte elektrische Leistung beträgt etwa 55 GW.
+Nur 1,7 % davon entfallen auf Wasserkraft [7]. Die installierte Windleistung beträgt
+72 MW [18]. Ein „National Basic Plan for Energy“ sieht vor, den Versorgungsanteil erneuerbarer Energien an der Primärenergie von 3 auf 5 % bzw. am Stromverbrauch von
+2,4 auf 7 % zu erhöhen [19].
+Im Rahmen des „Renewable Energy R & D Basic Plans“ wurde Ende 2003 in Südkorea
+das Ziel formuliert, bis 2011 eine Windkraftanlagenleistung von 2.250 MW zu installie­
+ren [20]. Davon sollen möglichst große Anteile der Anlagen im Land produziert werden.
+Dazu werden momentan Windkraftanlagenentwicklungen vorangetrieben.
+•	 Indonesien
+Das Inselreich zwischen dem Indischen und dem Pazifischen Ozean hat eine Ost-Westbzw. Nord-Süd-Ausdehnung von etwa 5.000 x 3.000 km mit weit über 13.000 Inseln,
+von denen 10.000 besiedelt sind. 220 Mio. Menschen bewohnen eine Landfläche von
+knapp 2 Mio. Quadratkilometern. Die installierte elektrische Leistung ist mit weniger
+als 22 GW nur 20 % unseres Elektrizitätsaufkommens. Somit ist der Strombedarf insbesondere auf kleineren Inseln noch sehr hoch. Die jährliche Steigerungsrate liegt
+z
+­ wischen 8 und 10 %. Allerdings nehmen die nationalen Ölreserven rapide ab. Der
+Zwang zur Nutzung erneuerbarer Energien ist also groß.
+Erste Windenergie-Aktivitäten gehen bereits auf den Beginn der 80er-Jahre bei der
+Luft- und Raumfahrtbehörde LAPAN zurück. Bisher wurden allerdings nur etwa 0,5 MW
+Windkraftanlagenleistung installiert. Die höchste Tarifkategorie 1 ist für Energie­
+versorgung mit Wind-, Solar- und Miniwasserkraftanlagen vorgesehen. Die niedrigste
+K
+­ ategorie 4 wurde für Gas, Kohle und Öl festgelegt. Der staatliche Elektrizitätsversorger
+PLN plant, im Rahmen eines sog. PSKSK-Programmes von kleinen privaten Energie­
+erzeugern Strom zu kaufen, die kein Öl als Energieträger verwenden.
+Von LAPAN und anderen staatlichen Stellen werden Windenergie- Potenzialunter­
+suchungen durchgeführt, Nutzungsgebiete definiert und ein Windatlas für das Land
+erstellt. Damit werden wichtige Voraussetzungen für eine Verbreitung der Windenergie
+in Indonesien geschaffen. Dabei kommt einer Ausbreitung auf bisher nicht elektri­
+fizierten Inseln große Bedeutung zu, um ein Abwandern besonders junger Menschen
+in die Slums der Ballungszentren zu vermeiden. Im Gegensatz zu den meisten anderen
+Ländern werden hier vorwiegend kleinere Windkraftanlagen zum Einsatz kommen.
+
+29
+
+nu t zun g d er w ind energie
+2
+
+2.5  Afrika
+Auf dem afrikanischen Kontinent sollen für die drei nördlichen Staaten Marokko, Libyen
+und Ägypten sowie für Südafrika die Rahmenbedingung zur Windenergienutzung
+aufgezeigt werden.
+•	 Marokko
+Das Königreich mit einer sehr ausgedehnten Küste am Atlantik und westlichen Mittelmeer ist etwa doppelt so groß wie Deutschland, es hat aber nur ein Drittel unserer
+Bevölkerung. Die installierte elektrische Leistung beträgt ganze 4,7 GW. Davon basieren
+27 %, also 1,3 GW, auf Wasserkraft und 65 MW trägt momentan die Windkraft bei [7].
+
+30
+
+Marokko verfügt über hervorragende Windbedingungen, die stellenweise sogar Jahres­
+mittelwerte der Windgeschwindigkeit von 11 m / s und mehr erreichen. Das nutzbare
+Windenergiepotenzial überschreitet den elektrischen Energiebedarf bei Weitem.
+Langfristig bieten sich aufgrund der hohen Windenergieerträge und der großen zur
+Verfügung stehenden Landflächen gute Perspektiven zum Elektrizitätstransport in die
+EU [17]. Momentan steht jedoch in dem rohstoffarmen Land die Sicherung der eigenen
+Energieversorgung im Vordergrund des Interesses.
+Die marokkanische Regierung plant, bis 2010 einen Windenergiebeitrag von 4 % zu
+erreichen [21]. Anteile von 5 % erscheinen jedoch durchaus realistisch. Bereits 2006
+sollen zwei Windparks mit 200 MW fertiggestellt werden [22].
+Bei der internationalen Bonner Renewables Konferenz 2004 präsentierte Marokko einen
+ambitionierten Ausbauplan. Bis 2020 sollen 20 % des Stroms aus „grüner Energie“
+g
+­ edeckt werden. Hierfür sollen 1,5 Mrd. US-Dollar investiert werden. Bei der Finanzierung setzt Marokko auf internationale Unterstützung und auf Mechanismen für umweltverträgliche Entwicklung (CDM). Dadurch sollen die Abhängigkeit von Ölimporten
+um 20 Mio. Barrel pro Jahr verringert und 11.000 neue Arbeitsplätze geschaffen
+w
+­ erden [22].
+•	 Libyen
+In dem Ölland Libyen hat in den letzten Jahren ein Umschwung stattgefunden. Vor
+dem Hintergrund endlicher Ölreserven sollen in Zeiten hoher Erdölkonjunktur neue
+Energiequellen erschlossen werden. Ein erstes Windenergieprojekt wird gerade umgesetzt. Zwischen Tobruk und Benghazi wird zurzeit von dem staatlichen Stromversorger
+„General Electricity Company of Libya (GECOL)“ eine 25-MW-Windfarm gebaut. Laut
+GECOL sollen in naher Zukunft 200 MW installiert werden. Ziel ist es, 6 % des ­libyschen
+Energiebedarfs durch regenerative Energien zu decken [23].
+
+w ind energie in t ern at i o n a l
+2
+
+•	 Ägypten
+Der Wüstenstaat zwischen Mittelmeer und Rotem Meer mit der Lebensader Nil beherbergt auf einer Fläche von 1 Mio. Quadratkilometern 78 Mio. Menschen, also nahezu
+die gleiche Bevölkerung wie Deutschland. Die installierte elektrische Leistung beträgt
+bescheidene 17,6 GW, also weniger als 15 % des deutschen Wertes. Immerhin 16 %
+trägt die Wasserkraft bei [7].
+Ende 2005 sollte der endgültige Windatlas für Ägypten fertiggestellt sein, um Projektplanungen zu verbessern. Bei momentan etwa 300 MW installierter Windkraft­leistung
+werden 800 bis 850 MW bis 2010 und 3.000 MW bis 2020 erwartet [7]. 2010 soll die
+Windenergie 3 % zur Stromversorgung beitragen [24]. Bis 2020 ist geplant, 24 % des
+ägyptischen Energiebedarfs aus regenerativen Energien zu decken [25].
+•	 Südafrika
+In dem Land zwischen dem Atlantischen und Indischen Ozean bewohnen 47 Mio. Einwohner eine Fläche von 1,2 Mio. Quadratkilometern. Die installierte elektrische Leistung
+beträgt 40 GW. Wasserkraftanlagen machen mit 600 MW 1 % aus [7]. Derzeit betriebene
+Windkraftanlagen haben nur eine Gesamtleistung von 3 MW, obwohl Windenergieanlagen zum Wasserpumpen am Kap der Guten Hoffnung große Tradition haben.
+N
+­ eben einem bereits fortgeschrittenen 5-MW-Projekt wurden Überlegungen zur
+E
+­ rrichtung einer 20-MW-Windfarm angestellt. Weiterhin wird die Anwendung von
+kleinen Windkraftanlagen untersucht, die in Kombination mit Photovoltaik- oder Diesel­
+anlagen bzw. an Mininetzen betrieben werden [21]. Am Primärenergieaufkommen
+sind im Wesentlichen durch die traditionelle Biomasse, d. h. Feuerholz zum ­ Kochen
+und Heizen, die erneuerbaren Energien mit 10 % vertreten. Bis 2020 soll dieser Anteil
+auf 20 % verdoppelt werden [26].
+
+2.6  Australien-Pazifik-Region
+Auf dem fünften Kontinent kommen die beiden überaus windreichen und dünn besiedel­
+ten Staaten Australien und Neuseeland in Betracht. Exotische Inselreiche dieser Region,
+die zum Teil hervorragende natürliche Ressourcen sowie sehr große Entfernungen zu
+fossilen Energielieferanten aufweisen, bieten für regenerative Energieversorgungen
+ideale Voraussetzungen. Sie sollen hier jedoch nicht angesprochen werden.
+•	 Australien
+Auf 7,7 Mio. Quadratkilometern Landfläche wohnen nur 20 Mio. Menschen, d. h., auf
+mehr als der 21-fachen Fläche Deutschlands wohnt weniger als ein Viertel der Bevölkerung. Die installierte elektrische Leistung macht mit 43 GW ein Drittel des deutschen
+Wertes aus. Die Wasserkraft hat mit 7,3 GW immerhin einen Anteil von 17 %. Etwa
+0,5 GW Windkraftanlagen sind aufgebaut [7].
+
+31
+
+nu t zun g d er w ind energie
+2
+
+Sehr hohe Windangebote und große verfügbare Flächen bieten hervorragende Bedingungen für eine großtechnische Windenergienutzung in den nächsten Jahren. Bisher
+war die Entwicklung aber nur schleppend vorangekommen. Die Eröffnung einer Produktionsstätte des größten dänischen Herstellers löste beträchtliche Erwartungen an
+den australischen Windenergiemarkt aus.
+Bis 2010 soll eine Installation von 5 GW erreicht werden, wodurch 22.000 Arbeitsplätze
+in der Windindustrie entstehen könnten. 2020 wird mit 13 GW installierter Wind­
+leistung gerechnet [8]. Das „Australien Greenhouse Office“ rechnet bis 2010 mit
+9,5 TWh Stromeinspeisung pro Jahr aus den Regenerativen. Es ist zuständig für nationale Programme, die finanzielle Anreize zur Produktion und Nutzung erneuerbarer
+Energien betreffen. Weitere staatliche Programme unterstützen die Erneuerbare-Ener­
+gien-Industrie sowie kleine, innovative Hersteller und die Elektrifizierung entlegener
+Gebiete etc. [7].
+
+32
+
+•	 Neuseeland
+Den Inselstaat mit 286.000 Quadratkilometern Fläche bevölkern nur 4,1 Mio. Ein­
+wohner. Die installierte elektrische Leistung beträgt 8,5 GW. Über 61 % basieren auf
+Wasserkraft und 6,5 % auf Geothermie. Etwa 170 MW Windkraft sind aufgebaut [7].
+Neuseeland hat sich bereits 1986 zur nuklearfreien Zone erklärt.
+Durch das demografische und wirtschaftliche Wachstum steigt der Energieverbrauch
+in Neuseeland bis zu 6 % pro Jahr [27]. Gleichzeitig gehen die Vorräte des größten Ölund Gasfeldes zu Ende und die Ölpreise auf dem Weltmarkt steigen. Dadurch werden
+Versorgungsengpässe befürchtet. Eine Überlastung der Elektrizitätsnetze, die vor
+allem im Nordteil der Südinsel bereits auftreten, lassen in zunehmendem Maße Komplikationen in der Energieversorgung erwarten.
+Verschiedene Regionen der dichter besiedelten Nordinsel haben Jahresmittelwerte
+der Windgeschwindigkeit zwischen 9 und 10 m / s [7]. So hervorragende Windverhältnisse sind weltweit nur an wenigen Standorten anzutreffen. Windkraftanlagen erreichen damit durchaus 4.500 Volllaststunden pro Jahr. Das sind Ausnutzungsdauern,
+die im konventionellen Energieversorgungsbereich an die Werte von Mittellastkraftwerken herankommen, die bei 4.000 bis 6.000 Volllaststunden im Jahr liegen.
+Das technisch nutzbare Windenergiepotenzial von etwa 100 TWh pro Jahr ist hier
+2,5-mal größer als der momentane Elektrizitätsbedarf. Bisher wurden keine speziellen
+Richtlinien für die Windenergie in Neuseeland eingeführt, sie sind jedoch in den
+G
+­ esetzen für Elektrizitätswirtschaft enthalten. Diese ist seit 1998 in die Bereiche
+„Netz“ und „Energiehandel“ mit unterschiedlichen Eigentümern untergliedert. Seit
+2000 fördert die Regierung die erneuerbaren Energien.
+

@@ -1,0 +1,171 @@
+Componentes de una turbina eólica de eje horizontal
+Por
+
+Conrado Moreno Figueredo *
+
+
+Breve guía de los principales elementos que conforman los aerogeneradores actuales . Para estudiar los componentes de una turbina eólica es necesario conocer primeramente el tipo de turbina , que se clasifica de acuerdo con varios criterios , entre los que se encuentra la posición del eje de rotación , que puede ser vertical u horizontal .
+
+Las turbinas eólicas de eje horizontal ( TEEH ) son las más comunes y se dividen a la vez en aquellas en las que el rotor gira frente a la torre ( barlovento ) y las que rotan detrás de la torre ( sotavento ) .
+
+
+
+Una TEEH a barlovento se muestra en la figura 1 , como las que se instalan en la mayoría de los parques eólicos . Estas máquinas se componen de cimiento ( 1 ) , torre ( 2 ) , góndola con tren de fuerza ( 3 ) , rotor ( 5 ) , álabes ( 4 ) y el equipamiento eléctrico . Además , en la figura no se muestra el transformador , que no forma parte de la turbina pero constituye un elemento que no puede faltar en una instalación de este tipo , pues convierte la tensión o voltaje que entrega el generador eléctrico de la turbina a la red eléctrica .
+
+Fig . 1 . Estructura típica de un
+
+aerogenerador moderno de gran potencia .
+
+Torre y cimiento
+
+Para garantizar la estabilidad de una turbina eólica se construyen los cimientos , que pueden ser superficiales o profundos . El tipo de cimentación depende de la consistencia del suelo donde se va a instalar la máquina .
+La torre se construye no solo para resistir el peso de la góndola y de los álabes del rotor , sino también debe absorber las cargas causadas por la variación de potencia del viento .
+
+Existen varios tipos de torres , como las que se describen a continuación :
+• Torres tubulares de acero . La mayoría de los grandes aerogeneradores se construyen con torres tubulares de acero , fabricadas en secciones de 20 - 30 m con bridas en cada uno de los extremos , y son unidas con pernos in situ . Las torres son tronco - cónicas ( es decir , con un diámetro creciente hacia la base ) , con el fin de aumentar su resistencia y al mismo tiempo ahorrar material .
+
+• Torres de concreto . Se construyen en el lugar y están limitadas por la altura , la que decide sobre esta solución . Evitan el problema de la transportación .
+
+• Torres de concreto prefabricado . En este caso los segmentos son colocados en la parte superior de uno sobre el otro in situ .
+
+• Torres de celosía . Son fabricadas utilizando perfiles de acero . La ventaja básica de estas torres es su costo , ya que solo requiere la mitad de material de una torre tubular sin sustentación adicional y con la misma rigidez . La principal desventaja es su apariencia visual ( aunque esa cuestión es claramente debatible ) . En cualquier caso , por razones estéticas , las torres de celosía han desaparecido prácticamente en los grandes aerogeneradores modernos . Son muy comunes en la India , aunque se encuentran en otros países , como los Estados Unidos y Alemania
+
+• Torres híbridas . Algunas torres son construidas con combinaciones de las antes mencionadas ; por ejemplo , la parte inferior de concreto y la superior de acero . Hay tendencias a usar este tipo de torre en los grandes aerogeneradores multimegawatt .
+
+• Torres de mástil tensado con vientos . Muchos de los aerogeneradores pequeños están construidos con torres de mástil sostenidas por cables tensores . La ventaja es el ahorro de peso y , por lo tanto , de costo . Pueden ser izadas sin necesidad de grúas .
+La altura de las torres fabricadas para los aerogeneradores actuales varían según se expone en la tabla 1 .
+Tabla 1 . Altura de las torres en dependencia
+
+de la potencia nominal y del diámetro del rotor
+
+Rotor
+
+El rotor es el componente que ayuda a los álabes o palas del rotor a convertir la energía del viento en movimiento mecánico rotacional . El rotor está compuesto por los propios álabes y el buje ( elemento que une los álabes con el árbol principal mediante el cojinete principal ) . El buje es el centro del rotor y se fabrica de hierro o acero fundido .
+
+Si el aerogenerador tiene caja multiplicadora , el buje se conecta directamente al eje de baja velocidad de la caja multiplicadora y convierte la energía del viento en energía en rotación . Si la turbina no posee caja multiplicadora , la energía se transmite directamente al generador .
+
+
+Actualmente la mayoría de los rotores tienen tres palas , un eje horizontal y un diámetro entre 40 y 90 m . Los rotores de molinos de viento tradicionales para el bombeo de agua emplean 16 palas o más ( llegando a tener hasta 30 ) y se fabrican de metal .
+
+La experiencia ha demostrado que el rotor de tres palas es más eficiente para la generación de energía en las grandes turbinas . Además , los rotores de tres palas tienen una mejor distribución de masa , lo que permite una rotación más estable .
+
+
+Los álabes del rotor son fabricados fundamentalmente de fibra de vidrio o fibra de carbón reforzado con plástico , conocidos como FVRP o FCRP . Las palas de madera , madera y resina epóxica o madera - fibra - resina epóxica son ya poco empleadas .
+
+Las palas de aluminio y aleaciones de acero son muy pesadas y vulnerables a la fatiga del material . Por esta razón , estos materiales se emplean solo en las turbinas eólicas muy pequeñas .
+
+
+El perfil de los álabes es similar al de las alas de los aviones . Ellos realizan su función mediante el mismo principio de la fuerza de empuje : sobre la parte inferior del ala el viento pasa y genera una alta presión , mientras que por la parte superior se genera una baja presión . Esta fuerza , además de la fuerza de resistencia , provoca que el rotor gire . Cada fabricante de palas las fabrica según su concepción y con sus propias características .
+Góndola y tren de fuerza
+
+La góndola soporta toda la maquinaria de la turbina y debe ser capaz de rotar para seguir la dirección del viento , por lo que se une a la torre mediante rodamientos . El diseño de la góndola depende de cómo el fabricante decidió ubicar los componentes del tren de fuerza ( eje del rotor con los cojinetes , caja multiplicadora , generador , acoplamiento y freno ) .
+Caja multiplicadora
+
+La caja multiplicadora es un multiplicador de velocidad que convierte el movimiento rotacional de 18 - 50 rpm del rotor en aproximadamente 1 750 rpm con que rota el generador . La velocidad de giro del generador depende de la frecuencia de la corriente eléctrica y del número de pares de polos de la máquina .
+
+Fig . 2 . Multiplicador planetario tipo A para un aerogenerador de 5 MW .
+La caja multiplicadora tiene la tarea de acoplar las bajas velocidades de rotación del rotor y las altas velocidades del generador , y soportar las amplias variaciones de la velocidad del viento .
+
+
+La relación de transmisión del multiplicador está determinada por su tren de engranajes , constituido en los aerogeneradores actuales por ruedas dentadas cilíndricas — de ejes paralelos — , cuyos dientes al engranar vinculan sus frecuencias de rotación . Los diseños actuales se basan en dos tipos de trenes de engranaje básicos : el tren planetario A y el tren tándem ( Figs . 2 y 3 ) .
+
+Fig . 3 . Estructura de un tren tándem .
+
+Algunas firmas importantes utilizan multiplicadores híbridos cuyas dos primeras etapas constituyen un tren planetario que se combina con una tercera etapa tándem .
+
+Si se emplea un generador de anillo multipolo , desarrollado especialmente para el uso en turbinas eólicas , no se requiere de caja multiplicadora .
+
+Fig . 4 . Tren de fuerza .
+
+A estas turbinas se les conoce como turbinas sin caja multiplicadora o de conexión directa , y el fabricante más conocido es ENERCON , de Alemania
+Generador
+
+El generador de una turbina convierte la energía mecánica en energía eléctrica ( Fig . 4 ) . Para turbinas de gran potencia , los generadores asincrónicos doble alimentados se emplean con mayor frecuencia . En este caso , la velocidad de rotación puede ser variada , diferente a cuando se usan generadores asincrónicos convencionales . Otro concepto consiste en emplear generadores sincrónicos .
+
+
+Hay diferencias entre los generadores sincrónicos y asincrónicos . Los últimos se emplean más , ya que pueden conectarse directamente a la red y son más robustos y de menor mantenimiento . Un generador sincrónico de velocidad constante conectado a la red presenta problemas técnicos muy difíciles de eliminar . Por lo anterior , actualmente no existen generadores sincrónicos de velocidad constante , sino de velocidad variable .
+
+Éste no se puede conectar directamente a la red de corriente alterna con frecuencia constante , por lo que es preciso utilizar un convertidor de frecuencia como elemento intermedio entre el generador y la red . Esta desventaja de tener que utilizar un complicado sistema adicional para la sincronización se compensa con una mayor eficiencia de la turbina y una mejor compatibilidad con la red .
+
+
+Los generadores de anillo multipolo que trabajan sin caja multiplicadora ya fueron mencionados anteriormente .
+Acoplamiento y frenos
+
+Entre el generador y la caja multiplicadora se instala un acoplamiento que suele ser flexible . Igualmente se emplean frenos mecánicos en el tren de fuerza .
+
+
+Generalmente hay dos tipos de frenos : los sistemas de freno aerodinámico y los sistemas mecánicos . Las normas que usualmente se usan en el diseño de aerogeneradores indican que los aerogeneradores deben poseer dos sistemas de freno independientes : uno aerodinámico ( en la punta de los álabes o todo el alabe del rotor por sí mismo cambiando su ángulo de paso ) y otro freno . Este último es generalmente un freno de disco mecánico en la mayoría de las turbinas . Este tipo de freno mecánico se emplea principalmente cuando el aerodinámico falla o la turbina está en reparación ( Fig . 5 ) .
+El tipo de freno mecánico que se utiliza depende de cómo se controla la potencia .
+
+Fig . 5 . Freno aerodinámico de
+
+una pala de turbina , en posición activada .
+
+En turbinas con control por pérdida aerodinámica ( stall control ) , el freno mecánico tiene que asimilar toda la energía generada por el rotor y el generador en caso de emergencia , por lo que debe tener una alta potencia de frenado . Todo lo contrario sucede cuando el freno mecánico se usa en turbinas con álabes de rotores con paso variable ( en este caso son de menor potencia ) .
+Equipamiento eléctrico
+
+El equipamiento eléctrico de una turbina eólica está compuesto por el generador , el sistema de alimentación a la red y varios sensores . Estos últimos se emplean para medir temperatura , dirección del viento , velocidad del viento y otros parámetros que pueden aparecer dentro de la góndola o en los alrededores , por lo que apoyan el control de la turbina y su monitoreo .
+Sistema de alimentación de electricidad a la red eléctrica
+
+El sistema para la alimentación de electricidad a la red depende del generador eléctrico empleado : la mayoría de los modernos aerogeneradores en la categoría de megawatt usan generadores asincrónicos de inducción conectados a la red rotando a velocidad aproximadamente constante y con conexión directa a la red . Esto significa que no se necesitan rectificadores ni inversores .
+
+
+En las turbinas de velocidad variable con generadores sincrónicos la corriente alterna generada fluctúa constantemente su frecuencia . Para entregar la electricidad a la red , ésta es convertida en corriente directa mediante un rectificador , filtrada y después convertida de nuevo en corriente alterna usando un inversor .
+
+
+En ambos tipos de generadores el voltaje es entonces convertido para adaptarlo al nivel del voltaje en la red usando un transformador ; de esta forma el aerogenerador con un contador de electricidad es conectado a la red ( Fig . 6 ) .
+
+Fig . 6 . Cimentación y transformador de una turbina eólica .
+Sensores para el control y monitoreo del generador
+
+La góndola posee sensores o instrumentos de medición que constantemente están midiendo los parámetros siguientes : velocidad ( anemómetro ) y dirección del viento ( veleta ) , velocidad del rotor y del generador , temperatura ambiente y de los componentes , presión del aceite , ángulo de paso y acimut ( ángulo del mecanismo de orientación basado en la dirección del viento ) , magnitudes eléctricas y vibraciones en la góndola ( Figs . 7 y 8 ) .
+
+Estos datos son usados para el control del generador . Por ejemplo , la dirección del viento es transmitida directamente al mecanismo de orientación que hace que el rotor siga al viento , mientras que la medición de la velocidad del viento permite operar , conectar o desconectar el generador . Los sensores , la lectura y el análisis de estos datos controlan el aerogenerador y ofrecen las bases para una correcta gestión operacional .
+
+Fig . 7 . Anemómetro de copas .
+
+
+
+Fig . 8 . Veleta .
+Otros componentes
+
+Finalmente , la turbina eólica contiene otros componentes no incluidos en los tópicos anteriores : sistemas para seguir la dirección del viento o sistemas de orientación , elementos para enfriamiento y calentamiento , equipamiento para la protección contra descargas eléctricas , grúas y elevadores , y extintores de fuego .
+Sistemas de orientación
+
+El objetivo de estos sistemas es colocar el rotor de las turbinas en un ángulo óptimo con respecto al viento . En general , las turbinas eólicas de eje horizontal emplean dos sistemas , el pasivo y el activo .
+• Los sistemas pasivos no necesitan motores eléctricos . Las turbinas cuyo rotor está detrás de la torre ( sotavento ) siguen al viento automáticamente , mientras que las turbinas a barlovento poseen una veleta . Estas veletas se emplean desde hace muchos años en los molinos de viento tradicionales para el bombeo de agua . En este caso , la dirección del viento es determinada de una forma muy sencilla . Las fuerzas que actúan sobre la veleta cuando la dirección del viento cambia repentinamente están limitadas por el tamaño de la veleta , por lo que estos sistemas son empleados en turbinas cuyo diámetro del rotor no exceda 10 m , aproximadamente .
+
+
+• Los sistemas activos son usados fundamentalmente a barlovento . En este caso un mecanismo activamente gira la góndola sobre la torre . Tales sistemas activos fueron usados ya en el siglo xviii en los molinos europeos . Actualmente estos mecanismos de orientación o motores acimut son más comúnmente empleados movidos por un solo motor eléctrico o por varios motores al mismo tiempo . Una veleta o rumbómetro sobre la góndola provee la información necesaria al sistema de orientación . Los motores actúan sobre la rueda de engranaje que mueve la góndola a su posición óptima cuando son movidas por los motores ( Fig . 9 ) .
+
+Fig . 9 . Sistema de orientación .
+Enfriamiento y calentamiento
+
+La temperatura dentro de una góndola puede ser alta por el calor desprendido de la caja multiplicadora y del generador . Por ello se instalan ventiladores especiales en la góndola para mantener una temperatura adecuada . Además de esto se instalan unidades de enfriamiento para componentes individuales de la turbina , como la caja multiplicadora .
+
+Durante el invierno , en los países fríos , las temperaturas suelen caer por debajo de la temperatura de congelación .
+
+
+Cuando el aceite en la caja multiplicadora se congela resulta imposible echar a andar el sistema si éste se mantiene sin movimiento durante algún tiempo . Por lo tanto , se emplean a menudo calentadores para que mantengan el aceite a una temperatura adecuada en la caja multiplicadora . Adicionalmente , los álabes del rotor son también calentados para prever que no se forme hielo sobre ellos o sean dañados por el agua condensada . Finalmente , los anemómetros y veletas direccionales tienen también que ser calentados en las regiones frías para evitar que dejen de funcionar y provoquen daños mayores en la turbina .
+Protección contra descargas eléctricas
+
+Los aerogeneradores son estructuras altas que están por lo general expuestas a las descargas eléctricas y son , por lo tanto , muy vulnerables a estos fenómenos .
+
+Las descargas eléctricas generalmente inciden sobre las puntas de los álabes del rotor .
+
+Se emplean diferentes soluciones para absorber estas descargas en los álabes .
+
+La corriente proveniente del rayo pasa entonces a lo largo del alabe por su interior a través de metales conductores , posteriormente pasa sobre la góndola para después ser dirigida hacia abajo por la torre hasta el anclaje terrestre . La corriente es desviada de las áreas altamente sensibles .
+Grúas y elevadores
+
+La mayoría de las turbinas eólicas poseen elevadores para llevar piezas de repuesto y herramientas dentro de la góndola . Allí también se emplean otros elementos transportadores , como grúas de diferentes tipos para el traslado de piezas , partes y herramientas .
+Extintores de fuego
+
+Los extintores de fuego se adicionan a la turbinas para combatir cualquier incendio que pueda ocurrir en las partes mecánicas o electrónicas . Por lo general , los extintores son tanques manuales , aunque también se emplean detectores y extintores de fuego automáticos .
+* Doctor en Ciencias Técnicas .
+
+Miembro de la Academia de Ciencias de Cuba
+
+y de la Junta Directiva de CUBASOLAR .
+
+e - mail :
