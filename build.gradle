@@ -197,6 +197,37 @@ dependencies {
 	prepare "org.apache.uima:uimaj-tools:2.8.1"
 }
 
+
+test {
+	/*
+	 *  explicitly exclude functional tests from default gradle build
+	 */
+	exclude 'eu/project/ttc/test/func/**'
+}
+
+/*
+ * Launches unit tests manually
+ */
+task unitTest( type: Test ) {
+	exclude 'eu/project/ttc/test/func/**'
+}
+
+/*
+ * Launches cucumber tests manually
+ */
+task cucumberTest( type: Test ) {
+	/*
+	 *  explicitly runs functional tests
+	 */
+	include 'eu/project/ttc/test/func/**'
+	exclude 'eu/project/ttc/test/unit/**'
+}
+
+/*
+ * Enforces the run of cucumber tests before uploading archives
+ */
+uploadArchives.dependsOn cucumberTest
+
 ////////////////////////////////////////////////////////////// SPECIFIC TASKS
 
 jar {
