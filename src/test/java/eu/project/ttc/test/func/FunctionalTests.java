@@ -61,4 +61,8 @@ public class FunctionalTests {
 	public static TermAssert assertThat(Term term) {
 		return new TermAssert(term);
 	}
+	
+	public static TermIndexAssert assertThat(TermIndex termIndex) {
+		return new TermIndexAssert(termIndex);
+	}
 }
