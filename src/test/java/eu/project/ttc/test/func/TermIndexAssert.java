@@ -27,6 +27,10 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 	}
 
 	public TermIndexAssert containsVariation(String baseGroupingKey, VariationType type, String variantGroupingKey) {
+		if(failToFindTerms(baseGroupingKey, variantGroupingKey))
+			return this;
+		
+		
 		List<TermVariation> potentialVariations = Lists.newArrayList();
 		Set<TermVariation> sameType = Sets.newHashSet();
 		
@@ -52,8 +56,23 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 				);
 		return this;
 	}
+
+	private boolean failToFindTerms(String... groupingKeys) {
+		boolean failed = false;
+		for(String gKey:groupingKeys) {
+			if(actual.getTermByGroupingKey(gKey) == null) {
+				failed = true;
+				failWithMessage("Could not find term <%s> in termIndex", gKey);
+			}
+		}
+		return failed;
+	}
 	
 	public TermIndexAssert containsVariation(String baseGroupingKey, VariationType type, String variantGroupingKey, Object info) {
+		if(failToFindTerms(baseGroupingKey, variantGroupingKey))
+			return this;
+
+		
 		List<TermVariation> potentialVariations = Lists.newArrayList();
 		Set<TermVariation> sameType = Sets.newHashSet();
 		for(TermVariation tv:getVariations()) {
