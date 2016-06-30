@@ -36,14 +36,12 @@ public class FrenchWindEnergySpec {
 			.aeRegexSpotter()
 			.aeStopWordsFilter()
 			.aeSpecificityComputer()
-			.aeThresholdCleaner(TermProperty.FREQUENCY, 2)
 			.aeCompostSplitter()
 			.aePrefixSplitter()
 			.aeSuffixDerivationDetector()
 			.aeSyntacticVariantGatherer()
 			.aeGraphicalVariantGatherer()
 			.aeExtensionDetector()
-			.aeScorer()
 			.aeRanker(TermProperty.WR, true)
 			.run();
 			
@@ -80,10 +78,10 @@ public class FrenchWindEnergySpec {
 		assertThat(termIndex.getTermByGroupingKey("npn: vitesse de rotation"))
 			.hasFrequency(308)
 			.hasNBases(0)
-			.hasNVariationsOfType(4, VariationType.SYNTACTICAL)
+			.hasNVariationsOfType(24, VariationType.SYNTACTICAL)
 			.getVariations()
 			.extracting("variant.groupingKey", "info", "variant.frequency")
-			.containsExactly(
+			.contains(
 					tuple("napn: vitesse angulaire de rotation", "S-I1-NPN-A", 2),
 					tuple("napn: vitesse nominal de rotation", "S-I1-NPN-A", 2),
 					tuple("npna: vitesse de rotation correspondant", "S-Ed-NPN-A", 3),
@@ -113,14 +111,16 @@ public class FrenchWindEnergySpec {
 	}
 
 	@Test
-	public void testMorphologicalVariations() {
+	public void testMSNNVariations() {
 		assertThat(termIndex)
-			.hasNVariationsOfType(2, VariationType.MORPHOLOGICAL)
+			.hasNVariationsOfType(28, VariationType.MORPHOLOGICAL)
 			.getVariationsHavingObject("M-S-NN")
-			.hasSize(2)
+			.hasSize(9)
 			.extracting("base.groupingKey", "variant.groupingKey")
 			.contains(
 				   tuple("n: microsystème", "nn: micro système"), 
+				   tuple("n: transistor-diode", "nn: transistor diode"), 
+				   tuple("n: france-allemagne", "nn: france allemagne"), 
 				   tuple("n: schéma-bloc", "nn: schéma bloc")
 			)
 			;
@@ -148,10 +148,14 @@ public class FrenchWindEnergySpec {
 			tuple("na: générateur synchrone", "na: générateur asynchrone"),
 			tuple("na: machine synchrone", "na: machine asynchrone"),
 			tuple("na: contrôle direct", "na: contrôle indirect"),
+			tuple("na: mode direct", "na: mode indirect"),
+			tuple("na: aspect esthétique", "na: aspect inesthétique"),
+			tuple("na: option nucléaire", "na: option antinucléaire"),
 			tuple("na: génératrice synchrone", "na: génératrice asynchrone"),
+			tuple("na: mesure précis", "na: mesure imprécis"),
 			tuple("na: circulation stationnaire", "na: circulation instationnaire")
 		)
-		.hasSize(5)
+		.hasSize(26)
 		;
 		
 	}
@@ -168,7 +172,7 @@ public class FrenchWindEnergySpec {
 	public void testSyntacticalVariationsWithDerivatesSR2DNPN() {
 		assertThat(termIndex)
 			.getVariationsHavingObject("S-R2D-NPN")
-			.hasSize(26)
+			.hasSize(77)
 			.extracting("base.groupingKey", "variant.groupingKey")
 			.contains(
 					tuple("npn: production de électricité", "na: production électrique"),
