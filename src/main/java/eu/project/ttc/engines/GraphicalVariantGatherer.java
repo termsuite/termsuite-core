@@ -54,6 +54,7 @@ import eu.project.ttc.models.index.TermValueProvider;
 import eu.project.ttc.resources.ObserverResource;
 import eu.project.ttc.resources.ObserverResource.SubTaskObserver;
 import eu.project.ttc.resources.TermIndexResource;
+import eu.project.ttc.utils.StringUtils;
 
 /**
  * 
@@ -103,7 +104,7 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 				if(word.getLemma().length() < 5)
 					return ImmutableList.of();
 				else {
-					String substring = word.getLemma().toLowerCase(language.getLocale()).substring(0, 4);
+					String substring = StringUtils.replaceAccents(word.getLemma().toLowerCase(language.getLocale()).substring(0, 4));
 					return ImmutableList.of(substring);
 				}
 			}
