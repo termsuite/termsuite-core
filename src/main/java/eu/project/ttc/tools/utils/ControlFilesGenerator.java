@@ -59,27 +59,27 @@ public class ControlFilesGenerator {
 		 * Write syntactic rules
 		 */
 		for(String ruleName:distinctRuleNames) {
-			String pathname = directory.getAbsolutePath() + "/syntactic-" + ruleNametoFileName(ruleName) + ".txt";
+			String pathname = directory.getAbsolutePath() + "/syntactic-" + ruleNametoFileName(ruleName) + ".tsv";
 			writeVariations(pathname, selectTermVariations(VariationType.SYNTACTICAL, ruleName));
 		}
 		
 		/*
 		 * Write prefix variations
 		 */
-		String prefixPath = directory.getAbsolutePath() + "/prefixes.txt";
+		String prefixPath = directory.getAbsolutePath() + "/prefixes.tsv";
 		writeVariations(prefixPath, selectTermVariations(VariationType.IS_PREFIX_OF));
 		
 
 		/*
 		 * Write derivative variations
 		 */
-		String derivativePath = directory.getAbsolutePath() + "/derivates.txt";
+		String derivativePath = directory.getAbsolutePath() + "/derivates.tsv";
 		writeVariations(derivativePath, selectTermVariations(VariationType.DERIVES_INTO));
 
 		/*
 		 * Write compounds
 		 */
-		String compoundPath = directory.getAbsolutePath() + "/compounds.txt";
+		String compoundPath = directory.getAbsolutePath() + "/compounds.tsv";
 		writeCompounds(compoundPath);
 		
 	}
