@@ -26,27 +26,21 @@ public class FixedExpressionSpotterSpec {
 
 	private static final String CAS_URL = "src/test/resources/org/project/ttc/test/termsuite/json/cas/french-cas1.json";
 	JCas cas;
-	
-	@Before
-	public void set() throws Exception {
-		cas = JCasFactory.createJCas();
-		TermSuiteJsonCasDeserializer.deserialize(new FileInputStream(CAS_URL), cas.getCas());
-	}
-	
+
 	private AnalysisEngine makeAE(boolean removeWordAnnotationFromCas, boolean removeTermOccAnnotationFromCas) throws Exception {
 		AnalysisEngineDescription aeDesc = AnalysisEngineFactory.createEngineDescription(
 				FixedExpressionSpotter.class,
 				FixedExpressionSpotter.FIXED_EXPRESSION_MAX_SIZE, 5,
 				FixedExpressionSpotter.REMOVE_WORD_ANNOTATIONS_FROM_CAS, removeWordAnnotationFromCas,
 				FixedExpressionSpotter.REMOVE_TERM_OCC_ANNOTATIONS_FROM_CAS, removeTermOccAnnotationFromCas
-			);
-		
+		);
+
 		/*
 		 * The term index resource
 		 */
 		ExternalResourceDescription fixedExpressionDesc = ExternalResourceFactory.createExternalResourceDescription(
 				FixedExpressionResource.FIXED_EXPRESSION_RESOURCE,
-				FixedExpressionResource.class, 
+				FixedExpressionResource.class,
 				"file:org/project/ttc/test/resources/french-fixed-expressions.txt"
 		);
 		ExternalResourceFactory.bindResource(aeDesc, fixedExpressionDesc);
@@ -54,7 +48,13 @@ public class FixedExpressionSpotterSpec {
 		AnalysisEngine ae = AnalysisEngineFactory.createEngine(aeDesc);
 		return ae;
 	}
-	
+
+	@Before
+	public void setup() throws Exception {
+		cas = JCasFactory.createJCas();
+		TermSuiteJsonCasDeserializer.deserialize(new FileInputStream(CAS_URL), cas.getCas());
+	}
+
 	@Test
 	public void testNoRemove() throws Exception {
 		AnalysisEngine ae = makeAE(false, false);
