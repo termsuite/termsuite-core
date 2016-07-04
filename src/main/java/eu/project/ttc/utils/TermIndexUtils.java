@@ -50,4 +50,13 @@ public class TermIndexUtils {
 				compounds.add(t);
 		return compounds;
 	}
+
+
+	public static Collection<TermVariation> selectTermVariationsByInfo(TermIndex termIndex, String ruleName) {
+		Set<TermVariation> selected = Sets.newHashSet();
+		for(TermVariation tv:getVariations(termIndex))
+			if(Objects.equal(ruleName, tv.getInfo()))
+				selected.add(tv);
+		return selected;
+	}
 }
