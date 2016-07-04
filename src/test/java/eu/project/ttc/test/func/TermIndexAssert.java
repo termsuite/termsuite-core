@@ -19,6 +19,7 @@ import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.models.VariationType;
+import eu.project.ttc.utils.TermIndexUtils;
 
 public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> {
 
@@ -132,5 +133,16 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 				variations.add(v);
 		return assertThat(variations);
 	}
+
+	public AbstractIterableAssert<?, ? extends Iterable<? extends TermVariation>, TermVariation> asTermVariations(VariationType... variations) {
+		return assertThat(
+				TermIndexUtils.selectTermVariations(actual, variations));
+	}
+
+	public AbstractIterableAssert<?, ? extends Iterable<? extends Term>, Term> asCompoundList() {
+		return assertThat(
+				TermIndexUtils.selectCompounds(actual));
+	}
+
 
 }

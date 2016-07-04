@@ -1,53 +1,27 @@
 package eu.project.ttc.test.func;
 
+import static eu.project.ttc.test.func.FunctionalTests.assertThat;
+import static eu.project.ttc.test.func.FunctionalTests.termsByProperty;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;
-import static eu.project.ttc.test.func.FunctionalTests.termsByProperty;
-import static eu.project.ttc.test.func.FunctionalTests.assertThat;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
-import eu.project.ttc.engines.desc.TermSuiteCollection;
-import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.VariationType;
-import eu.project.ttc.resources.MemoryTermIndexManager;
-import eu.project.ttc.tools.TermSuitePipeline;
 
-public class FrenchWindEnergySpec {
+public class FrenchWindEnergySpec extends WindEnergySpec {
 	
-	
-	static TermIndex termIndex;
-	static Lang lang = Lang.FR;
 	
 	@BeforeClass
 	public static void setup() {
-		MemoryTermIndexManager.getInstance().clear();
-		TermSuitePipeline pipeline = TermSuitePipeline.create(lang.getCode(), "file:")
-			.setResourcePath(FunctionalTests.getResourcePath())
-			.setCollection(TermSuiteCollection.TXT, FunctionalTests.getCorpusWEPath(lang), "UTF-8")
-			.aeWordTokenizer()
-			.setTreeTaggerHome(FunctionalTests.getTaggerPath())
-			.aeTreeTagger()
-			.aeUrlFilter()
-			.aeStemmer()
-			.aeRegexSpotter()
-			.aeStopWordsFilter()
-			.aeSpecificityComputer()
-			.aeCompostSplitter()
-			.aePrefixSplitter()
-			.aeSuffixDerivationDetector()
-			.aeSyntacticVariantGatherer()
-			.aeGraphicalVariantGatherer()
-			.aeExtensionDetector()
-			.aeRanker(TermProperty.WR, true)
-			.run();
-			
-		termIndex = pipeline.getTermIndex();
+		lang = Lang.FR;
+		runPipeline();
 	}
-	
+
+
 	@Test
 	public void testTop10ByFreq() {
 		assertThat(termsByProperty(termIndex, TermProperty.FREQUENCY, true).subList(0, 10))
