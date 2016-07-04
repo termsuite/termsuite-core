@@ -24,7 +24,19 @@ public class WindEnergySpec {
 
 	protected static TermIndex termIndex;
 	protected static Lang lang;
-	protected static List<String> syntacticRules = Lists.newArrayList();
+	protected static List<String> syntacticMatchingRules = Lists.newArrayList();
+	protected static List<String> syntacticNotMatchingRules = Lists.newArrayList();
+
+	protected static void expectNotMatchingRules(String... rules) {
+		for(String rule:rules)
+			syntacticNotMatchingRules.add(rule);
+	}
+
+
+	protected static void expectMatchingRules(String... rules) {
+		for(String rule:rules)
+			syntacticMatchingRules.add(rule);		
+	}
 
 	protected static void runPipeline() {
 		MemoryTermIndexManager.getInstance().clear();
@@ -52,16 +64,25 @@ public class WindEnergySpec {
 	}
 
 	@Test
-	public void weControlSyntacticRules() {
-		for(String ruleName:syntacticRules) {
-			assertThat(termIndex)
-			.asTermVariations(VariationType.SYNTACTICAL, VariationType.MORPHOLOGICAL)
-			.extracting("base.groupingKey", "variant.groupingKey", "variationType")
-			.containsOnly(
-					ControlFiles.syntacticVariationTuples(lang, "we", ruleName)
-			);
-		}
+	public void weControlSyntacticMatchingRules() {
+		assertThat(termIndex)
+			.asMatchingRules()
+			.containsOnlyElementsOf(syntacticMatchingRules)
+			.doesNotContainAnyElementsOf(syntacticNotMatchingRules);
+		
 	}
+
+//	@Test
+//	public void weControlSyntacticVariations() {
+//		for(String ruleName:syntacticMatchingRules) {
+//			assertThat(termIndex)
+//			.asTermVariationsHavingObject(ruleName)
+//			.extracting("base.groupingKey", "variant.groupingKey", "variationType")
+//			.containsAll(
+//					ControlFiles.syntacticVariationTuples(lang, "we", ruleName)
+//			);
+//		}
+//	}
 
 	@Test
 	public void weControlPrefixes() {

@@ -18,8 +18,56 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	@BeforeClass
 	public static void setup() {
 		lang = Lang.FR;
+		expectMatchingRules(
+				"S-NA",
+				"NA-NprefA",
+				"S-Ed-NA-A",
+				"S-Ed-NA-AA",
+				"S-Ed-NA-PN",
+				"S-Ed-NA-PAN",
+				"S-Ed-NA-PACAN",
+				"S-Ed-NA-PNA",
+				"S-Ed-NA-CA",
+				"S-Ed-NA-,ACA",
+				"S-I-NA-A",
+				"S-I-N(N|A)-PN",
+				"S-I-NA-R",
+				"S-I-NA-V",
+				"S-I-NA-AC",
+				"S-I-NA-A,AC",
+				"S-I-NA-PNA",
+				"S-I1-NPN-A",
+				"S-Ed-NPN-A",
+				"S-Ed-NPN-PN",
+				"S-Ed-NPN-PAN",
+				"S-Ed-NPN-PNA",
+				"S-Ed-NPN-PACAN",
+				"S-Ed-NPN-AA",
+				"S-Ed-NPN-CPN",
+				"S-Ed-NPN-,PNCPN",
+				"S-Eg-NA-NP",
+				"S-Eg-NPN-NP",
+				"S-R2-NPN",
+				"S-R2I-NPN-P",
+				"S-R2D-NPN",
+				"S-P-NAPN-A",
+				"S-P-NAA-A",
+				"M-S-NN",
+				"M-PI-EN-P",
+				"M-R1-NA",
+				"M-I-NA-EC");
+		expectNotMatchingRules("S-IEg-NPN-PN,-CPN",
+				"S-IEg-NA-A,-CA",
+				"S-I-NA-RV",
+				"S-R2I2-NPN-PNP",
+				"S-I2-NPN-PN,PNC",
+				"S-PID-NA-P",
+				"S-PID-NAA-P",
+				"M-I-NA-CE",
+				"M-I2-NA");
 		runPipeline();
 	}
+
 
 
 	@Test
@@ -88,7 +136,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	public void testMSNNVariations() {
 		assertThat(termIndex)
 			.hasNVariationsOfType(28, VariationType.MORPHOLOGICAL)
-			.getVariationsHavingObject("M-S-NN")
+			.asTermVariationsHavingObject("M-S-NN")
 			.hasSize(9)
 			.extracting("base.groupingKey", "variant.groupingKey")
 			.contains(
@@ -116,7 +164,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testSyntacticalVariationsWithPrefixes() {
 		assertThat(termIndex)
-		.getVariationsHavingObject("NA-NprefA")
+		.asTermVariationsHavingObject("NA-NprefA")
 		.extracting("base.groupingKey", "variant.groupingKey")
 		.contains(
 			tuple("na: générateur synchrone", "na: générateur asynchrone"),
@@ -137,7 +185,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testSyntacticalVariationsWithDerivatesSPIDNAP() {
 		assertThat(termIndex)
-			.getVariationsHavingObject("S-PID-NA-P")
+			.asTermVariationsHavingObject("S-PID-NA-P")
 			.hasSize(0)
 			;
 	}
@@ -145,7 +193,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testSyntacticalVariationsWithDerivatesSR2DNPN() {
 		assertThat(termIndex)
-			.getVariationsHavingObject("S-R2D-NPN")
+			.asTermVariationsHavingObject("S-R2D-NPN")
 			.hasSize(77)
 			.extracting("base.groupingKey", "variant.groupingKey")
 			.contains(

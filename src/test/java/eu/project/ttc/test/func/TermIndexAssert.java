@@ -126,7 +126,7 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 		return this;
 	}
 
-	public AbstractIterableAssert<?, ? extends Iterable<? extends TermVariation>, TermVariation> getVariationsHavingObject(Object object) {
+	public AbstractIterableAssert<?, ? extends Iterable<? extends TermVariation>, TermVariation> asTermVariationsHavingObject(Object object) {
 		Set<TermVariation> variations = Sets.newHashSet();
 		for(TermVariation v:getVariations())
 			if(Objects.equal(v.getInfo(), object))
@@ -142,6 +142,13 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 	public AbstractIterableAssert<?, ? extends Iterable<? extends Term>, Term> asCompoundList() {
 		return assertThat(
 				TermIndexUtils.selectCompounds(actual));
+	}
+
+	public AbstractIterableAssert<?, ? extends Iterable<? extends String>, String> asMatchingRules() {
+		Set<String> matchingRuleNames = Sets.newHashSet();
+		for(TermVariation tv:TermIndexUtils.selectTermVariations(actual, VariationType.SYNTACTICAL, VariationType.MORPHOLOGICAL)) 
+			matchingRuleNames.add((String)tv.getInfo());
+		return assertThat(matchingRuleNames);
 	}
 
 

@@ -85,9 +85,9 @@ public class ControlFiles {
 	 * @return
 	 * 			the list of tuples parsed from control file
 	 */
-	public static Tuple[] syntacticVariationTuples(Lang lang, String corpus, String ruleName) {
-		Path path = getControlDirectory(lang, corpus).resolve(ControlFilesGenerator.getSyntacticRuleFileName(ruleName));
-		return array(getSyntacticVariationTuples(path.toFile(), ruleName));
+	public static Iterable<Tuple> syntacticVariationTuples(Lang lang, String corpus, String ruleName) {
+		Path path = syntacticVariationControlFilePath(lang, corpus, ruleName);
+		return getSyntacticVariationTuples(path.toFile(), ruleName);
 	}
 	
 	/**
@@ -180,6 +180,10 @@ public class ControlFiles {
 		}
 		return tuples;
 
+	}
+
+	public static Path syntacticVariationControlFilePath(Lang lang, String corpus, String ruleName) {
+		return getControlDirectory(lang, corpus).resolve(ControlFilesGenerator.getSyntacticRuleFileName(ruleName));
 	}
 
 }
