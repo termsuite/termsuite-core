@@ -37,7 +37,7 @@ public class FixedExpressionSpotterSpec {
 		AnalysisEngineDescription aeDesc = AnalysisEngineFactory.createEngineDescription(
 				FixedExpressionSpotter.class,
 				FixedExpressionSpotter.FIXED_EXPRESSION_MAX_SIZE, 5,
-				FixedExpressionSpotter.REMOVE_TERM_OCC_ANNOTATIONS_FROM_CAS, removeWordAnnotationFromCas,
+				FixedExpressionSpotter.REMOVE_WORD_ANNOTATIONS_FROM_CAS, removeWordAnnotationFromCas,
 				FixedExpressionSpotter.REMOVE_TERM_OCC_ANNOTATIONS_FROM_CAS, removeTermOccAnnotationFromCas
 			);
 		
@@ -58,37 +58,166 @@ public class FixedExpressionSpotterSpec {
 	@Test
 	public void testNoRemove() throws Exception {
 		AnalysisEngine ae = makeAE(false, false);
+		TermSuiteAssertions.assertThat(cas)
+				.doesNotContainAnnotation(FixedExpression.class)
+				.containsAnnotation(WordAnnotation.class, 0, 8)
+				.containsAnnotation(WordAnnotation.class, 9, 11)
+				.containsAnnotation(WordAnnotation.class, 12, 20)
+				.containsAnnotation(WordAnnotation.class, 21, 24)
+				.containsAnnotation(WordAnnotation.class, 25, 28)
+				.containsAnnotation(WordAnnotation.class, 29, 36)
+				.containsAnnotation(WordAnnotation.class, 37, 39)
+				.containsAnnotation(WordAnnotation.class, 39,42)
+				.containsAnnotation(TermOccAnnotation.class, 0, 20)
+				.containsAnnotation(TermOccAnnotation.class, 0, 8)
+				.containsAnnotation(TermOccAnnotation.class, 12, 20)
+				.containsAnnotation(TermOccAnnotation.class, 29, 42)
+				.containsAnnotation(TermOccAnnotation.class, 29, 36)
+				.containsAnnotation(TermOccAnnotation.class, 39, 42)
+		;
+
 		ae.process(cas);
-		fail("Not yet implemented");
+		TermSuiteAssertions.assertThat(cas)
+				.containsAnnotation(FixedExpression.class,29 , 42)
+				.containsAnnotation(WordAnnotation.class, 0, 8)
+				.containsAnnotation(WordAnnotation.class, 9, 11)
+				.containsAnnotation(WordAnnotation.class, 12, 20)
+				.containsAnnotation(WordAnnotation.class, 21, 24)
+				.containsAnnotation(WordAnnotation.class, 25, 28)
+				.containsAnnotation(WordAnnotation.class, 29, 36)
+				.containsAnnotation(WordAnnotation.class, 37, 39)
+				.containsAnnotation(WordAnnotation.class, 39,42)
+				.containsAnnotation(TermOccAnnotation.class, 0, 20)
+				.containsAnnotation(TermOccAnnotation.class, 0, 8)
+				.containsAnnotation(TermOccAnnotation.class, 12, 20)
+				.containsAnnotation(TermOccAnnotation.class, 29, 42)
+				.containsAnnotation(TermOccAnnotation.class, 29, 36)
+				.containsAnnotation(TermOccAnnotation.class, 39, 42)
+		;
 	}
 
 	@Test
 	public void testRemoveTermOcc() throws Exception {
 		AnalysisEngine ae = makeAE(false, true);
 		TermSuiteAssertions.assertThat(cas)
-			.doesNotContainAnnotation(FixedExpression.class)
-			.containsAnnotation(TermOccAnnotation.class, 29,42)
-			.containsAnnotation(WordAnnotation.class, 29, 36)
-			.containsAnnotation(TermOccAnnotation.class, 39, 42)
-			.containsAnnotation(WordAnnotation.class, 29, 36)
-			.containsAnnotation(TermOccAnnotation.class, 39, 42)
-			;
+				.doesNotContainAnnotation(FixedExpression.class)
+				.containsAnnotation(WordAnnotation.class, 0, 8)
+				.containsAnnotation(WordAnnotation.class, 9, 11)
+				.containsAnnotation(WordAnnotation.class, 12, 20)
+				.containsAnnotation(WordAnnotation.class, 21, 24)
+				.containsAnnotation(WordAnnotation.class, 25, 28)
+				.containsAnnotation(WordAnnotation.class, 29, 36)
+				.containsAnnotation(WordAnnotation.class, 37, 39)
+				.containsAnnotation(WordAnnotation.class, 39,42)
+				.containsAnnotation(TermOccAnnotation.class, 0, 20)
+				.containsAnnotation(TermOccAnnotation.class, 0, 8)
+				.containsAnnotation(TermOccAnnotation.class, 12, 20)
+				.containsAnnotation(TermOccAnnotation.class, 29, 42)
+				.containsAnnotation(TermOccAnnotation.class, 29, 36)
+				.containsAnnotation(TermOccAnnotation.class, 39, 42)
+		;
 
 		ae.process(cas);
 		TermSuiteAssertions.assertThat(cas)
-			.containsAnnotation(FixedExpression.class, 29, 42)
-			.containsAnnotation(TermOccAnnotation.class, 29,42)
-			.containsAnnotation(WordAnnotation.class, 29, 36)
-			.doesNotContainAnnotation(TermOccAnnotation.class, 39, 42)
-			.containsAnnotation(WordAnnotation.class, 29, 36)
-			.doesNotContainAnnotation(TermOccAnnotation.class, 39, 42)
-			;
+				.containsAnnotation(FixedExpression.class, 29, 42)
+				.containsAnnotation(WordAnnotation.class, 0, 8)
+				.containsAnnotation(WordAnnotation.class, 9, 11)
+				.containsAnnotation(WordAnnotation.class, 12, 20)
+				.containsAnnotation(WordAnnotation.class, 21, 24)
+				.containsAnnotation(WordAnnotation.class, 25, 28)
+				.containsAnnotation(WordAnnotation.class, 29, 36)
+				.containsAnnotation(WordAnnotation.class, 37, 39)
+				.containsAnnotation(WordAnnotation.class, 39,42)
+				.containsAnnotation(TermOccAnnotation.class, 0, 20)
+				.containsAnnotation(TermOccAnnotation.class, 0, 8)
+				.containsAnnotation(TermOccAnnotation.class, 12, 20)
+				.containsAnnotation(TermOccAnnotation.class, 29, 42)
+				.doesNotContainAnnotation(TermOccAnnotation.class, 29, 36)
+				.doesNotContainAnnotation(TermOccAnnotation.class, 39, 42)
+		;
+	}
+
+	@Test
+	public void testRemoveWord() throws Exception {
+		AnalysisEngine ae = makeAE(true, false);
+		TermSuiteAssertions.assertThat(cas)
+				.doesNotContainAnnotation(FixedExpression.class)
+				.containsAnnotation(WordAnnotation.class, 0, 8)
+				.containsAnnotation(WordAnnotation.class, 9, 11)
+				.containsAnnotation(WordAnnotation.class, 12, 20)
+				.containsAnnotation(WordAnnotation.class, 21, 24)
+				.containsAnnotation(WordAnnotation.class, 25, 28)
+				.containsAnnotation(WordAnnotation.class, 29, 36)
+				.containsAnnotation(WordAnnotation.class, 37, 39)
+				.containsAnnotation(WordAnnotation.class, 39,42)
+				.containsAnnotation(TermOccAnnotation.class, 0, 20)
+				.containsAnnotation(TermOccAnnotation.class, 0, 8)
+				.containsAnnotation(TermOccAnnotation.class, 12, 20)
+				.containsAnnotation(TermOccAnnotation.class, 29, 42)
+				.containsAnnotation(TermOccAnnotation.class, 29, 36)
+				.containsAnnotation(TermOccAnnotation.class, 39, 42)
+		;
+
+		ae.process(cas);
+		TermSuiteAssertions.assertThat(cas)
+				.containsAnnotation(FixedExpression.class, 29, 42)
+				.containsAnnotation(WordAnnotation.class, 0, 8)
+				.containsAnnotation(WordAnnotation.class, 9, 11)
+				.containsAnnotation(WordAnnotation.class, 12, 20)
+				.containsAnnotation(WordAnnotation.class, 21, 24)
+				.containsAnnotation(WordAnnotation.class, 25, 28)
+				.doesNotContainAnnotation(WordAnnotation.class, 29, 36)
+				.doesNotContainAnnotation(WordAnnotation.class, 37, 39)
+				.doesNotContainAnnotation(WordAnnotation.class, 39,42)
+				.containsAnnotation(TermOccAnnotation.class, 0, 20)
+				.containsAnnotation(TermOccAnnotation.class, 0, 8)
+				.containsAnnotation(TermOccAnnotation.class, 12, 20)
+				.containsAnnotation(TermOccAnnotation.class, 29, 42)
+				.containsAnnotation(TermOccAnnotation.class, 29, 36)
+				.containsAnnotation(TermOccAnnotation.class, 39, 42)
+		;
+
 	}
 
 	@Test
 	public void testRemoveTermOccAndWord() throws Exception {
 		AnalysisEngine ae = makeAE(true, true);
+		TermSuiteAssertions.assertThat(cas)
+				.doesNotContainAnnotation(FixedExpression.class)
+				.containsAnnotation(WordAnnotation.class, 0, 8)
+				.containsAnnotation(WordAnnotation.class, 9, 11)
+				.containsAnnotation(WordAnnotation.class, 12, 20)
+				.containsAnnotation(WordAnnotation.class, 21, 24)
+				.containsAnnotation(WordAnnotation.class, 25, 28)
+				.containsAnnotation(WordAnnotation.class, 29, 36)
+				.containsAnnotation(WordAnnotation.class, 37, 39)
+				.containsAnnotation(WordAnnotation.class, 39,42)
+				.containsAnnotation(TermOccAnnotation.class, 0, 20)
+				.containsAnnotation(TermOccAnnotation.class, 0, 8)
+				.containsAnnotation(TermOccAnnotation.class, 12, 20)
+				.containsAnnotation(TermOccAnnotation.class, 29, 42)
+				.containsAnnotation(TermOccAnnotation.class, 29, 36)
+				.containsAnnotation(TermOccAnnotation.class, 39, 42)
+		;
+
 		ae.process(cas);
-		fail("Not yet implemented");
+		TermSuiteAssertions.assertThat(cas)
+				.containsAnnotation(FixedExpression.class, 29, 42)
+				.containsAnnotation(WordAnnotation.class, 0, 8)
+				.containsAnnotation(WordAnnotation.class, 9, 11)
+				.containsAnnotation(WordAnnotation.class, 12, 20)
+				.containsAnnotation(WordAnnotation.class, 21, 24)
+				.containsAnnotation(WordAnnotation.class, 25, 28)
+				.doesNotContainAnnotation(WordAnnotation.class, 29, 36)
+				.doesNotContainAnnotation(WordAnnotation.class, 37, 39)
+				.doesNotContainAnnotation(WordAnnotation.class, 39,42)
+				.containsAnnotation(TermOccAnnotation.class, 0, 20)
+				.containsAnnotation(TermOccAnnotation.class, 0, 8)
+				.containsAnnotation(TermOccAnnotation.class, 12, 20)
+				.containsAnnotation(TermOccAnnotation.class, 29, 42)
+				.doesNotContainAnnotation(TermOccAnnotation.class, 29, 36)
+				.doesNotContainAnnotation(TermOccAnnotation.class, 39, 42)
+		;
+
 	}
 }
