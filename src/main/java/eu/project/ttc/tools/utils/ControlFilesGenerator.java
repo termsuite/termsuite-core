@@ -8,11 +8,10 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 
-import org.assertj.core.util.Lists;
-import org.assertj.core.util.Sets;
-
 import com.google.common.base.Joiner;
-import com.google.common.base.Objects;
+import com.google.common.base.Preconditions;
+import com.google.common.collect.Lists;
+import com.google.common.collect.Sets;
 
 import eu.project.ttc.models.Component;
 import eu.project.ttc.models.Term;
@@ -20,6 +19,7 @@ import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.models.VariationType;
 import eu.project.ttc.models.Word;
+import eu.project.ttc.utils.TermIndexUtils;
 
 /**
  * 
@@ -50,7 +50,7 @@ public class ControlFilesGenerator {
 			directory.mkdirs();
 		
 		Set<String> distinctRuleNames = Sets.newHashSet();
-		Set<TermVariation> variations = getVariations();
+		Set<TermVariation> variations = TermIndexUtils.getVariations(termIndex);
 		for(TermVariation tv:variations)
 			if(tv.getVariationType() == VariationType.SYNTACTICAL)
 				distinctRuleNames.add((String)tv.getInfo());
@@ -59,59 +59,83 @@ public class ControlFilesGenerator {
 		 * Write syntactic rules
 		 */
 		for(String ruleName:distinctRuleNames) {
-			String pathname = directory.getAbsolutePath() + "/syntactic-" + ruleNametoFileName(ruleName) + ".tsv";
-			writeVariations(pathname, selectTermVariations(VariationType.SYNTACTICAL, ruleName));
+			String pathname = directory.getAbsolutePath() + "/" + getSyntacticRuleFileName(ruleName);
+			writeVariations(pathname, TermIndexUtils.selectTermVariations(termIndex, VariationType.SYNTACTICAL, ruleName));
 		}
 		
 		/*
 		 * Write prefix variations
 		 */
-		String prefixPath = directory.getAbsolutePath() + "/prefixes.tsv";
-		writeVariations(prefixPath, selectTermVariations(VariationType.IS_PREFIX_OF));
+		String prefixPath = directory.getAbsolutePath() + "/" + getPrefixFileName();
+		writeVariations(prefixPath, TermIndexUtils.selectTermVariations(termIndex, VariationType.IS_PREFIX_OF));
 		
 
 		/*
 		 * Write derivative variations
 		 */
-		String derivativePath = directory.getAbsolutePath() + "/derivates.tsv";
-		writeVariations(derivativePath, selectTermVariations(VariationType.DERIVES_INTO));
+		String derivativePath = directory.getAbsolutePath() + "/" + getDerivatesFileName();
+		writeVariations(derivativePath, TermIndexUtils.selectTermVariations(termIndex, VariationType.DERIVES_INTO));
 
 		/*
 		 * Write compounds
 		 */
-		String compoundPath = directory.getAbsolutePath() + "/compounds.tsv";
+		String compoundPath = directory.getAbsolutePath() + "/" + getCompoundsFileName();
 		writeCompounds(compoundPath);
 		
 	}
 
-	private static String ruleNametoFileName(String ruleName) {
-		return ruleName.replaceAll("\\|", "-or-");
+	public static String getCompoundsFileName() {
+		return "compounds.tsv";
 	}
 
+	public static String getDerivatesFileName() {
+		return "derivates.tsv";
+	}
+
+	public static String getPrefixFileName() {
+		return "prefixes.tsv";
+	}
+
+	public static String getSyntacticRuleFileName(String ruleName) {
+		return "syntactic-" + ruleNametoFileName(ruleName) + ".tsv";
+	}
+
+
+	public static String ruleNametoFileName(String ruleName) {
+		return ruleName.replaceAll("\\|", "-or-");
+	}
 
 	private void writeCompounds(String filePath) throws IOException {
 		Writer writer = new FileWriter(filePath);
 		for(Term t:termIndex.getTerms()) {
 			if(t.isSingleWord() && t.isCompound()) {
-				List<String> componentStrings = Lists.newArrayList();
-				Word word = t.getWords().get(0).getWord();
-				for(Component c:word.getComponents()) {
-					componentStrings.add(String.format("%s:%s", 
-							word.getLemma().substring(c.getBegin(), c.getEnd()),
-							c.getLemma()
-							));
-				}
-				
 				writer.append(String.format("%s\t%s\t%s%n", 
 						t.getGroupingKey(),
-						word.getCompoundType(),
-						Joiner.on("|").join(componentStrings)
-					));
+						t.getWords().get(0).getWord().getCompoundType(),
+						toCompoundString(t)
+					)
+				);
 			}
 		}
 		writer.flush();
 		writer.close();
 		
+	}
+
+
+	public static String toCompoundString(Term t) {
+		Preconditions.checkArgument(t.isSingleWord(), "Term %s should be a single-word term", t);
+		Preconditions.checkArgument(t.isCompound(), "Term %s should be compound", t);
+		List<String> componentStrings = Lists.newArrayList();
+		Word word = t.getWords().get(0).getWord();
+		for(Component c:word.getComponents()) {
+			componentStrings.add(String.format("%s:%s", 
+					word.getLemma().substring(c.getBegin(), c.getEnd()),
+					c.getLemma()
+					));
+		}
+		
+		return Joiner.on("|").join(componentStrings);
 	}
 	
 	private void writeVariations(String path, Collection<TermVariation> variations) throws IOException {
@@ -129,33 +153,6 @@ public class ControlFilesGenerator {
 	}
 
 	
-	private Set<TermVariation> getVariations() {
-		Set<TermVariation> variations = Sets.newHashSet();
-		for(Term t:termIndex.getTerms()) {
-			for(TermVariation tv:t.getVariations())
-				variations.add(tv);
-			for(TermVariation tv:t.getBases())
-				variations.add(tv);
-		}
-		return variations;
-	}
-
-
-	private Set<TermVariation> selectTermVariations(VariationType type, String ruleName) {
-		Set<TermVariation> selected = Sets.newHashSet();
-		for(TermVariation tv:selectTermVariations(type))
-			if(Objects.equal(ruleName, tv.getInfo()))
-				selected.add(tv);
-		return selected;
-	}
-	
-	private Set<TermVariation> selectTermVariations(VariationType type) {
-		Set<TermVariation> selected = Sets.newHashSet();
-		for(TermVariation tv:getVariations())
-			if(tv.getVariationType() == type)
-				selected.add(tv);
-		return selected;
-	}
 
 
 }
