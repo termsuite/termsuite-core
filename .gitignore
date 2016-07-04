@@ -39,5 +39,4 @@ artifacts/
 src/main/java/eu/project/ttc/types/*.java
 src/main/java/org/apache/uima/examples/*.java
 *.tsv
-*.json
 *.tbx

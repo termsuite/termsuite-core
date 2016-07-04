@@ -24,6 +24,7 @@ package eu.project.ttc.test.unit;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
+import eu.project.ttc.test.unit.engines.FixedExpressionSpotterSpec;
 import eu.project.ttc.test.unit.engines.GraphicalVariantGathererSpec;
 import eu.project.ttc.test.unit.engines.SyntacticTermGathererSpec;
 import eu.project.ttc.test.unit.engines.TermClassifierSpec;
@@ -59,6 +60,7 @@ import eu.project.ttc.test.unit.variants.VariantRuleYamlIOSpec;
 	SegmentationSpec.class, 
 	DocumentSpec.class, 
 	TermUtilsSpec.class,
+	FixedExpressionSpotterSpec.class,
 	TermClassifierSpec.class,
 	OccurrenceBufferSpec.class,
 	SimilarityDistanceSpec.class,

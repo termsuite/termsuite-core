@@ -38,10 +38,13 @@ import org.apache.uima.cas.CASException;
 import org.apache.uima.fit.util.JCasUtil;
 import org.apache.uima.jcas.cas.FSArray;
 import org.apache.uima.jcas.cas.StringArray;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
+import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 
 import eu.project.ttc.types.SourceDocumentInformation;
@@ -52,7 +55,13 @@ import eu.project.ttc.types.WordAnnotation;
  * Created by smeoni on 27/05/16.
  */
 public class TermSuiteJsonCasDeserializer {
+	private static final Logger logger = LoggerFactory.getLogger(TermSuiteJsonCasDeserializer.class);
+
+	
     public static void deserialize(InputStream inputStream, CAS cas) {
+    	Preconditions.checkNotNull(inputStream, "Paramater input stream is null");
+    	Preconditions.checkNotNull(inputStream, "Paramater CAS is null");
+    	
         try {
 
 
@@ -70,7 +79,6 @@ public class TermSuiteJsonCasDeserializer {
 
             while ((token=parser.nextToken()) != null)
             {
-                try{
 
                     if (inSdi){
 
@@ -127,14 +135,9 @@ public class TermSuiteJsonCasDeserializer {
                         inCoveredText = true;
                     }
                 }
-                catch (java.lang.NullPointerException e) {
-                    e.printStackTrace();
-                    System.out.print(parser.getParsingContext().getCurrentName());
-                }
-            }
             sdi.addToIndexes();
         } catch (IOException | CASException e) {
-            e.printStackTrace();
+            logger.error("An error occurred during TermSuite Json Cas parsing", e);
         }
     }
 

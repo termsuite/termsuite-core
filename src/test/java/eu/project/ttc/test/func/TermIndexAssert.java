@@ -22,7 +22,7 @@ import eu.project.ttc.models.VariationType;
 
 public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> {
 
-	protected TermIndexAssert(TermIndex actual) {
+	public TermIndexAssert(TermIndex actual) {
 		super(actual, TermIndexAssert.class);
 	}
 

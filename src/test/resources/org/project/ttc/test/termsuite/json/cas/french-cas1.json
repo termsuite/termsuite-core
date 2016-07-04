@@ -1,0 +1,26 @@
+{
+  "sdi" : {
+    "uri" : "french-cas1.json",
+    "begin" : 0,
+    "end" : 37
+  },
+  "word_annotations" : [ 
+  	{"begin" : 0, "end" : 8, "lemma" : "éolienne"},
+  	{"begin" : 9, "end" : 11, "lemma" : "de"},
+  	{"begin" : 12, "end" : 20, "lemma" : "relevage"},
+  	{"begin" : 21, "end" : 24, "lemma" : "sur"},
+  	{"begin" : 25, "end" : 28, "lemma" : "son"},
+  	{"begin" : 29, "end" : 36, "lemma" : "château"},
+  	{"begin" : 37, "end" : 39, "lemma" : "de"},
+  	{"begin" : 39, "end" : 42, "lemma" : "eau"}
+],
+  "term_occ_annotations" : [ 
+  	{"begin" : 0, "end" : 20, "pattern" : "N P N", "term_key" : "npn: éolienne de relevage"},
+  	{"begin" : 0, "end" : 8, "pattern" : "N", "term_key" : "n: éolienne"},
+  	{"begin" : 12, "end" : 20, "pattern" : "N", "term_key" : "n: relevage"},
+  	{"begin" : 29, "end" : 42, "pattern" : "N P N", "term_key" : "npn: château de eau"},
+  	{"begin" : 29, "end" : 36, "pattern" : "N", "term_key" : "n: château"},
+  	{"begin" : 39, "end" : 42, "pattern" : "N", "term_key" : "n: eau"}
+ ],
+  "covered_text" : "éolienne de relevage sur son château d'eau"
+}

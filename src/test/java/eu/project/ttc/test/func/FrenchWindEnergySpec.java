@@ -1,9 +1,9 @@
 package eu.project.ttc.test.func;
 
+import static eu.project.ttc.test.func.FunctionalTests.termsByProperty;
+import static eu.project.ttc.test.TermSuiteAssertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;
-import static eu.project.ttc.test.func.FunctionalTests.termsByProperty;
-import static eu.project.ttc.test.func.FunctionalTests.assertThat;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
