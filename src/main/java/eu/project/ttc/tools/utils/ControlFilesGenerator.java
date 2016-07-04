@@ -52,7 +52,7 @@ public class ControlFilesGenerator {
 		Set<String> distinctRuleNames = Sets.newHashSet();
 		Set<TermVariation> variations = TermIndexUtils.getVariations(termIndex);
 		for(TermVariation tv:variations)
-			if(tv.getVariationType() == VariationType.SYNTACTICAL)
+			if(tv.getVariationType() == VariationType.SYNTACTICAL || tv.getVariationType() == VariationType.MORPHOLOGICAL)
 				distinctRuleNames.add((String)tv.getInfo());
 
 		/*
