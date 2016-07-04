@@ -60,7 +60,7 @@ public class ControlFilesGenerator {
 		 */
 		for(String ruleName:distinctRuleNames) {
 			String pathname = directory.getAbsolutePath() + "/" + getSyntacticRuleFileName(ruleName);
-			writeVariations(pathname, TermIndexUtils.selectTermVariations(termIndex, VariationType.SYNTACTICAL, ruleName));
+			writeVariations(pathname, TermIndexUtils.selectTermVariationsByInfo(termIndex, ruleName));
 		}
 		
 		/*
