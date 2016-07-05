@@ -1,3 +1,7 @@
+require 'tempfile'
+require 'fileutils'
+
+COPYRIGHT=%Q(
 /*******************************************************************************
  * Copyright 2015-2016 - CNRS (Centre National de Recherche Scientifique)
  *
@@ -19,28 +23,28 @@
  * under the License.
  *
  *******************************************************************************/
-package eu.project.ttc.engines.desc;
 
-public class LanguageException extends RuntimeException {
+)
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+SPOT_EXISTING_COPYRIGHT=/Copyright\s+\d{4}(?:-\d{4})?\s+-\s+CNRS/
+REPLACEMENT="Copyright 2015-#{Time.now.strftime("%Y")} - CNRS"
+root_dir=ARGV[0] || '.'
 
-	private String lang;
-
-	public LanguageException(String lang) {
-		super();
-		this.lang = lang;
-	}
-	
-	@Override
-	public String getMessage() {
-		return "The language " + lang + " is not supported.";
-	}
-	
-	public String getLang() {
-		return lang;
-	}
-}
+Dir.glob("#{root_dir}/src/{**/}*.java") do |path|
+  tempfile = Tempfile.new('with_copyright')
+  txt = IO.read(path)
+  if(SPOT_EXISTING_COPYRIGHT =~ txt)
+    puts ">>> Updating header for #{path} ..."
+    new_text = txt.sub(SPOT_EXISTING_COPYRIGHT, REPLACEMENT)
+  else
+    puts ">>> Prepending header for #{path} ..."
+    new_text = COPYRIGHT + txt
+  end
+  tempfile.write(new_text)
+  tempfile.flush
+  tempfile.close
+  #puts "-"*80
+  #puts new_text
+  #next if STDIN.gets == '\n'
+  FileUtils.cp(tempfile.path,path)
+end
