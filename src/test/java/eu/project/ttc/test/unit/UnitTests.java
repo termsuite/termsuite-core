@@ -50,6 +50,8 @@ import eu.project.ttc.test.unit.utils.TermOccurrenceUtilsSpec;
 import eu.project.ttc.test.unit.utils.TermUtilsSpec;
 import eu.project.ttc.test.unit.variants.VariantRuleSpec;
 import eu.project.ttc.test.unit.variants.VariantRuleYamlIOSpec;
+import eu.project.ttc.utils.test.CollectionUtilsSpec;
+import eu.project.ttc.utils.test.CompoundUtilsSpec;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
@@ -67,6 +69,8 @@ import eu.project.ttc.test.unit.variants.VariantRuleYamlIOSpec;
 	JSONTermIndexIOSpec.class,
 	ContextVectorSpec.class,
 	TermOccurrenceUtilsSpec.class,
+	CollectionUtilsSpec.class,
+	CompoundUtilsSpec.class,
 	TermClassSpec.class,
 	StringUtilsSpec.class,
 	PrefixTreeSpec.class,

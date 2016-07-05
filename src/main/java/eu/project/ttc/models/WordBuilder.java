@@ -64,11 +64,11 @@ public class WordBuilder {
 	public Word create() {
 		Word w = word.isPresent() ? word.get() : new Word(lemma, stem);
 		Collections.sort(components);
-		w.setComposition(components);
-		if(components.size() > 0 && !type.isPresent())
-			type = Optional.of(CompoundType.NATIVE);
-		if(type.isPresent())
-			w.setCompoundType(type.get());
+		if(!components.isEmpty()) {
+			if(!type.isPresent())
+				type = Optional.of(CompoundType.NATIVE);
+			w.setComposition(type.get(), components);
+		}
 		return w;
 	}
 

@@ -6,7 +6,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;
 import static org.junit.Assert.fail;
 
-import org.junit.BeforeClass;
+import java.util.List;
+
+import org.assertj.core.util.Lists;
 import org.junit.Test;
 
 import eu.project.ttc.engines.cleaner.TermProperty;
@@ -15,12 +17,16 @@ import eu.project.ttc.models.VariationType;
 
 public class EnglishWindEnergySpec extends WindEnergySpec {
 	
-	
-	@BeforeClass
-	public static void setup() {
-		lang = Lang.EN;
-		runPipeline();
-		expectMatchingRules(
+
+	@Override
+	protected Lang getLang() {
+		return Lang.EN;
+	}
+
+
+	@Override
+	protected List<String> getSyntacticMatchingRules() {
+		return Lists.newArrayList(
 				"M-S-NN",
 				"M-S-(A|N)NN",
 				"M-I-EN-N|A",
@@ -61,15 +67,17 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 				"M-SD-(N|A)N",
 				"S-R2I-NPN-P"
 			);
-		
-		expectNotMatchingRules(
+	}
+
+
+	@Override
+	protected List<String> getSyntacticNotMatchingRules() {
+		return Lists.newArrayList(
 				"M-I2-(A|N)N-E",
 				"M-R3I1-ANNN",
 				"M-IPR2-NPN",
 				"S-I1-NPN-CN",
-				"S-PEg-NN-NP"
-			);
-
+				"S-PEg-NN-NP");
 	}
 
 
@@ -139,7 +147,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 		assertThat(termIndex)
 			.hasNVariationsOfType(1266, VariationType.MORPHOLOGICAL)
 			.asTermVariationsHavingObject("M-S-NN")
-			.hasSize(13)
+			.hasSize(130)
 			.extracting("base.groupingKey", "variant.groupingKey")
 			.contains(
 				   tuple("n: baseline", "nn: base line"), 
@@ -224,5 +232,6 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 //			.containsVariation("n: commerce", VariationType.DERIVES_INTO, "a: commercial")
 //			;
 	}
+
 
 }

@@ -8,6 +8,7 @@ import org.junit.Test;
 import com.google.common.collect.Lists;
 
 import eu.project.ttc.engines.desc.Lang;
+import eu.project.ttc.models.CompoundType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.index.MemoryTermIndex;
@@ -39,11 +40,11 @@ public class TermClassProvidersSpec {
 		this.statorique = termFactory.create("A:statorique|statoric");
 		this.stator = termFactory.create("N:stator|stator");
 		this.machine_synchrone_de_stator = termFactory.create("N:machine|machin", "A:synchrone|synchron", "P:de|de", "N:stator|stator");
-		this.hommegrenouille = termFactory.create("N:homme-grenouille|homme-grenouill");
-		this.hommegrenouille_de_stator = termFactory.create("N:homme-grenouille|homme-grenouill", "P:de|de", "N:stator|stator");
+		this.hommegrenouille = termFactory.create("N:homme-grenouille|homme-grenouille");
+		this.hommegrenouille_de_stator = termFactory.create("N:homme-grenouille|homme-grenouille", "P:de|de", "N:stator|stator");
 		this.term11 = termFactory.create("N:machine|machin");
 		this.aveccapitale = termFactory.create("N:Aveccapitale|Aveccapital");
-		termFactory.wordComposition("homme-grenouille", "homme|homm", "grenouille|grenouill");
+		termFactory.wordComposition(CompoundType.NATIVE, "homme-grenouille", "homme|homme", "grenouille|grenouille");
 		termFactory.addPrefix(this.asynchrone, this.synchrone);
 		termFactory.addDerivesInto("N A", this.stator, this.statorique);
 	}
@@ -69,9 +70,10 @@ public class TermClassProvidersSpec {
 		assertThat(provider.getClasses(termIndex, machine_synchrone_de_stator))
 			.hasSize(3).contains("machine+stator", "machine+synchrone", "stator+synchrone");
 		assertThat(provider.getClasses(termIndex, hommegrenouille))
-			.hasSize(0);
+			.hasSize(1).contains("grenouille+homme");
 		assertThat(provider.getClasses(termIndex, hommegrenouille_de_stator))
-			.hasSize(1).contains("homme-grenouille+stator");
+			.hasSize(4).contains(
+					"homme-grenouille+stator", "grenouille+homme", "grenouille+stator", "homme+stator");
 		assertThat(provider.getClasses(termIndex, aveccapitale))
 			.hasSize(0);
 	}
@@ -193,7 +195,7 @@ public class TermClassProvidersSpec {
 		assertThat(provider.getClasses(termIndex, hommegrenouille_de_stator))
 			.hasSize(3).contains("homme-grenouille", "de", "stator");
 		assertThat(provider.getClasses(termIndex, aveccapitale))
-			.hasSize(1).contains("Aveccapitale");
+			.hasSize(1).contains("aveccapitale");
 	}
 	
 	@Test

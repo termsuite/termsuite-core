@@ -30,15 +30,21 @@ import eu.project.ttc.utils.StringUtils;
 
 public class Word extends LemmaStemHolder {
 	
-	private CompoundType compoundType = CompoundType.UNSET;
+	private CompoundType compoundType;
 	
 	private String stem;
 
-	private List<Component> components = ImmutableList.of();
+	private List<Component> components;
 	
 	public Word(String lemma, String stem) {
 		super(lemma);
 		this.stem = stem;
+		resetComposition();
+	}
+
+	public void resetComposition() {
+		components = ImmutableList.of();
+		compoundType = CompoundType.UNSET;
 	}
 
 	public boolean isCompound() {
@@ -53,7 +59,8 @@ public class Word extends LemmaStemHolder {
 		this.stem = stem;
 	}
 
-	public void setComposition(List<Component> components) {
+	public void setComposition(CompoundType type, List<Component> components) {
+		this.compoundType = type;
 		this.components = ImmutableList.copyOf(components);
 	}
 	
@@ -105,4 +112,5 @@ public class Word extends LemmaStemHolder {
 			this.normalizedLemma = StringUtils.replaceAccents(this.lemma).toLowerCase();
 		return this.normalizedLemma;
 	}
+
 }

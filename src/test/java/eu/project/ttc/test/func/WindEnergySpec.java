@@ -8,7 +8,12 @@ import java.util.List;
 import org.assertj.core.api.iterable.Extractor;
 import org.assertj.core.groups.Tuple;
 import org.assertj.core.util.Lists;
+import org.junit.Before;
 import org.junit.Test;
+
+import com.google.common.cache.CacheBuilder;
+import com.google.common.cache.CacheLoader;
+import com.google.common.cache.LoadingCache;
 
 import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
@@ -20,25 +25,52 @@ import eu.project.ttc.resources.MemoryTermIndexManager;
 import eu.project.ttc.tools.TermSuitePipeline;
 import eu.project.ttc.tools.utils.ControlFilesGenerator;
 
-public class WindEnergySpec {
+public abstract class WindEnergySpec {
 
-	protected static TermIndex termIndex;
-	protected static Lang lang;
-	protected static List<String> syntacticMatchingRules = Lists.newArrayList();
-	protected static List<String> syntacticNotMatchingRules = Lists.newArrayList();
+	protected TermIndex termIndex = null;
+	protected Lang lang;
+	protected List<String> syntacticMatchingRules = Lists.newArrayList();
+	protected List<String> syntacticNotMatchingRules = Lists.newArrayList();
 
-	protected static void expectNotMatchingRules(String... rules) {
+	
+	public WindEnergySpec() {
+		super();
+		this.lang = getLang();
+		this.syntacticMatchingRules = getSyntacticMatchingRules();
+		this.syntacticNotMatchingRules = getSyntacticNotMatchingRules();
+	}
+	
+	protected abstract Lang getLang();
+	protected abstract List<String> getSyntacticMatchingRules();
+	protected abstract List<String> getSyntacticNotMatchingRules();
+
+
+	protected void expectNotMatchingRules(String... rules) {
 		for(String rule:rules)
 			syntacticNotMatchingRules.add(rule);
 	}
 
 
-	protected static void expectMatchingRules(String... rules) {
+	protected void expectMatchingRules(String... rules) {
 		for(String rule:rules)
 			syntacticMatchingRules.add(rule);		
 	}
+	
+	private static final LoadingCache<Lang, TermIndex> TERM_INDEX_CACHE = CacheBuilder.newBuilder()
+				.maximumSize(1)
+				.build(new CacheLoader<Lang, TermIndex>() {
+					@Override
+					public TermIndex load(Lang lang) throws Exception {
+						return runPipeline(lang);
+					}
+				});
+	
+	@Before
+	public void setup() {
+		this.termIndex = TERM_INDEX_CACHE.getUnchecked(lang);
+	}
 
-	protected static void runPipeline() {
+	protected static TermIndex runPipeline(Lang lang) {
 		MemoryTermIndexManager.getInstance().clear();
 		TermSuitePipeline pipeline = TermSuitePipeline.create(lang.getCode(), "file:")
 			.setResourcePath(FunctionalTests.getResourcePath())
@@ -60,7 +92,7 @@ public class WindEnergySpec {
 			.aeRanker(TermProperty.WR, true)
 			.run();
 			
-		termIndex = pipeline.getTermIndex();
+		return pipeline.getTermIndex();
 	}
 
 	@Test

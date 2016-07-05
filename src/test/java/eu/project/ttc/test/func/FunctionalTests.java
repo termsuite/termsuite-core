@@ -19,7 +19,8 @@ import eu.project.ttc.models.TermIndex;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-	FrenchWindEnergySpec.class
+	FrenchWindEnergySpec.class,
+	EnglishWindEnergySpec.class
 	})
 public class FunctionalTests {
 	public static final String CORPUS_WE_PATH="eu/project/ttc/test/corpus/we/";

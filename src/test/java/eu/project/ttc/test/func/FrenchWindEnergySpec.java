@@ -1,11 +1,13 @@
 package eu.project.ttc.test.func;
 
-import static eu.project.ttc.test.func.FunctionalTests.termsByProperty;
 import static eu.project.ttc.test.TermSuiteAssertions.assertThat;
+import static eu.project.ttc.test.func.FunctionalTests.termsByProperty;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;
 
-import org.junit.BeforeClass;
+import java.util.List;
+
+import org.assertj.core.util.Lists;
 import org.junit.Test;
 
 import eu.project.ttc.engines.cleaner.TermProperty;
@@ -14,11 +16,14 @@ import eu.project.ttc.models.VariationType;
 
 public class FrenchWindEnergySpec extends WindEnergySpec {
 	
+	@Override
+	protected Lang getLang() {
+		return Lang.FR;
+	}
 	
-	@BeforeClass
-	public static void setup() {
-		lang = Lang.FR;
-		expectMatchingRules(
+	@Override
+	protected List<String> getSyntacticMatchingRules() {
+		return Lists.newArrayList(
 				"S-NA",
 				"NA-NprefA",
 				"S-Ed-NA-A",
@@ -56,7 +61,12 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 				"M-PI-EN-P",
 				"M-R1-NA",
 				"M-I-NA-EC");
-		expectNotMatchingRules("S-IEg-NPN-PN,-CPN",
+	}
+	
+	@Override
+	protected List<String> getSyntacticNotMatchingRules() {
+		return Lists.newArrayList(
+				"S-IEg-NPN-PN,-CPN",
 				"S-IEg-NA-A,-CA",
 				"S-I-NA-RV",
 				"S-R2I2-NPN-PNP",
@@ -65,11 +75,8 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 				"S-PID-NAA-P",
 				"M-I-NA-CE",
 				"M-I2-NA");
-		runPipeline();
 	}
-
-
-
+	
 	@Test
 	public void testTop10ByFreq() {
 		assertThat(termsByProperty(termIndex, TermProperty.FREQUENCY, true).subList(0, 10))
