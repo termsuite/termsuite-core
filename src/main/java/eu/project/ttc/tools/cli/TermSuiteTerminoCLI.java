@@ -45,6 +45,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
+import java.nio.charset.Charset;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -74,6 +75,7 @@ import eu.project.ttc.models.OccurrenceType;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.resources.MemoryTermIndexManager;
 import eu.project.ttc.tools.TermSuitePipeline;
+import eu.project.ttc.utils.FileUtils;
 import eu.project.ttc.utils.TermUtils;
 
 /**
@@ -82,6 +84,10 @@ import eu.project.ttc.utils.TermUtils;
  * @author Damien Cram
  */
 public class TermSuiteTerminoCLI {
+	
+	private enum CollectionMode {ISTEX_API, FILESYSTEM, INLINE_TEXT}
+	
+	
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermSuiteTerminoCLI.class);
 
 	/** Short usage description of the CLI */
@@ -128,6 +134,19 @@ public class TermSuiteTerminoCLI {
 	private static final String MONGODB_STORE = "mongodb-store";
 	private static final String MONGODB_SOFT_LINK = "json-mongodb-soft-link";
 
+	
+	/** ISTEX API Parameter **/
+	private static final String ISTEX_API_URL = "istex-api";
+	private static final String ISTEX_ID_FILE = "istex-id-file";
+	private static final String ISTEX_ID = "istex-id";
+	
+	
+	/*
+	 * Collection mode
+	 */
+	private static CollectionMode collectionMode = CollectionMode.FILESYSTEM;
+	
+	
 	/*
 	 * The mongo db options
 	 */
@@ -190,6 +209,8 @@ public class TermSuiteTerminoCLI {
 	// the jsonCAS file path argument
 	private static final String JSCASFILE = "jsonCasFile";
 
+	
+	
 	// tagger argument
 	private static Tagger tagger = Tagger.TreeTagger;
 
@@ -203,6 +224,12 @@ public class TermSuiteTerminoCLI {
 	private static TermSuiteCollection corpusType = TermSuiteCollection.TXT;
 	private static float graphicalSimilarityThreshold = 0.9f;
 
+	/*
+	 * Istex parameters
+	 */
+	private static Optional<String> istexAPIUrl = Optional.absent();
+	private static Optional<List<String>> istexIds = Optional.absent();
+	
 	/*
 	 * contetxualizer
 	 */
@@ -307,10 +334,16 @@ public class TermSuiteTerminoCLI {
 				
 				TermSuitePipeline pipeline = TermSuitePipeline.create(language.getCode());
 				
-				if(isInlineMode()) {
+				switch(collectionMode) {
+				case INLINE_TEXT:
 					pipeline.setInlineString(inlineText);
-				} else {
+					break;
+				case FILESYSTEM:
 					pipeline.setCollection(corpusType, corpusPath, encoding);
+					break;
+				case ISTEX_API:
+					pipeline.setIstexCollection(istexAPIUrl.get(), istexIds.get());
+					break;
 				}
 
 				// resource
@@ -427,7 +460,7 @@ public class TermSuiteTerminoCLI {
 
 				// run the pipeline
 				final String termIndexName = "ScriptTermIndex_" + System.currentTimeMillis();
-	            if(isInlineMode()) {
+	            if(collectionMode == CollectionMode.INLINE_TEXT) {
 	            	LOGGER.info("Running TermSuite pipeline (inline mode)");
 	            	JCas cas = JCasFactory.createJCas();
 	            	cas.setDocumentText(inlineText);
@@ -458,12 +491,30 @@ public class TermSuiteTerminoCLI {
 		}
 	}
 
-	private static boolean isInlineMode() {
-		return inlineText != null && inlineText.trim().length() > 0;
-	}
-
 	private static Options declareOptions() {
 		Options options = new Options();
+		
+		options.addOption(TermSuiteCLIUtils.createOption(
+				null, 
+				ISTEX_API_URL, 
+				true, 
+				"URL to the istex API", 
+				false));
+
+		options.addOption(TermSuiteCLIUtils.createOption(
+				null, 
+				ISTEX_ID_FILE, 
+				true, 
+				"File containing the list of Istex document ids (one per line).", 
+				false));
+
+		options.addOption(TermSuiteCLIUtils.createOption(
+				null, 
+				ISTEX_ID, 
+				true, 
+				"List of comma-separated Istex docuement ids", 
+				false));
+
 		
 		options.addOption(TermSuiteCLIUtils.createOption(
 				null, 
@@ -712,19 +763,43 @@ public class TermSuiteTerminoCLI {
 	public static void readArguments(CommandLine line) throws IOException {
 		
 
-		if(line.hasOption(NO_OCCURRENCE))
-			spotWithOccurrences = false;
-			
-		inlineText = line.getOptionValue(TEXT);
-		if(inlineText == null)
-			inlineText = TermSuiteCLIUtils.readIn(encoding);
-		
-		corpusPath = line.getOptionValue(PATH_TO_CORPUS);
-		if(inlineText == null && corpusPath == null)
-			TermSuiteCLIUtils.exitWithErrorMessage("Either the argument --" + TEXT + " or --" + PATH_TO_CORPUS + " must be set.");
-		
+		/*
+		 * Collection Reader arguments
+		 */
+		if(line.hasOption(ISTEX_API_URL))  {
+			collectionMode = CollectionMode.ISTEX_API;
+			istexAPIUrl = Optional.of(line.getOptionValue(ISTEX_API_URL));
+			List<String> ids = Lists.newLinkedList();
+			if(line.hasOption(ISTEX_ID_FILE))  {
+				ids = FileUtils.getUncommentedLines(
+						new File(line.getOptionValue(ISTEX_ID_FILE)), 
+						Charset.forName("UTF-8"));
+			} else if(line.hasOption(ISTEX_ID)) {
+				ids = Splitter.on(",").splitToList(line.getOptionValue(ISTEX_ID));
+			} else
+				TermSuiteCLIUtils.exitWithErrorMessage("On argument of --" 
+						+ ISTEX_ID_FILE + ", --" 
+						+ ISTEX_ID + "  must be set.");
+			istexIds = Optional.of(ids);
+		} else if(line.hasOption(TEXT)) {
+			inlineText = line.getOptionValue(TEXT);
+			if(inlineText == null)
+				inlineText = TermSuiteCLIUtils.readIn(encoding);
+			collectionMode = CollectionMode.INLINE_TEXT;
+		} else if(line.hasOption(PATH_TO_CORPUS)) {
+			corpusPath = line.getOptionValue(PATH_TO_CORPUS);
+			collectionMode = CollectionMode.FILESYSTEM;
+		}
+		else
+			TermSuiteCLIUtils.exitWithErrorMessage("On argument of --" 
+					+ TEXT + ", --" 
+					+ PATH_TO_CORPUS + ", --" 
+					+ ISTEX_API_URL + "  must be set.");
+
 		resourcePack = line.getOptionValue(PATH_TO_RESOURCE_PACK);
 		
+		if(line.hasOption(NO_OCCURRENCE))
+			spotWithOccurrences = false;
 		
 		language = Lang.forName(line.getOptionValue(TermSuiteCLIUtils.P_LANGUAGE));
 		

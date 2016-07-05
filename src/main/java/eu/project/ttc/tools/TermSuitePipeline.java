@@ -27,6 +27,7 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.security.SecureRandom;
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.BlockingQueue;
@@ -112,6 +113,7 @@ import eu.project.ttc.readers.AbstractToTxtSaxHandler;
 import eu.project.ttc.readers.CollectionDocument;
 import eu.project.ttc.readers.EmptyCollectionReader;
 import eu.project.ttc.readers.GenericXMLToTxtCollectionReader;
+import eu.project.ttc.readers.IstexCollectionReader;
 import eu.project.ttc.readers.JsonCollectionReader;
 import eu.project.ttc.readers.QueueRegistry;
 import eu.project.ttc.readers.StreamingCollectionReader;
@@ -453,6 +455,24 @@ public class TermSuitePipeline {
 		}
 	}
 	
+	
+	public TermSuitePipeline setIstexCollection(String apiURL, List<String> documentsIds) {
+		try {
+			this.crDescription = CollectionReaderFactory.createReaderDescription(
+				IstexCollectionReader.class,
+				IstexCollectionReader.PARAM_IGNORE_LANGUAGE_ERRORS, true,
+				IstexCollectionReader.PARAM_LANGUAGE, this.lang.getCode(),
+				IstexCollectionReader.PARAM_ID_LIST, Joiner.on(",").join(documentsIds),
+				IstexCollectionReader.PARAM_API_URL, apiURL
+			);
+			return this;
+		} catch (Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
+	}
+
+	
+
 	/**
 	 * Creates a collection reader for this pipeline.
 	 * 
