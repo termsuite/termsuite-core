@@ -8,6 +8,7 @@ import eu.project.ttc.types.WordAnnotation;
 import eu.project.ttc.types.TermOccAnnotation;
 import org.apache.uima.cas.*;
 import org.apache.uima.jcas.JCas;
+import org.apache.uima.jcas.cas.FSArray;
 import org.apache.uima.jcas.cas.StringArray;
 import org.apache.uima.jcas.tcas.Annotation;
 
@@ -98,8 +99,24 @@ public class TermSuiteJsonCasSerializer {
             writeStringFSArrayField(jg,F_PATTERN, toa.getPattern());
             writeStringField(jg,F_SPOTTING_RULE_NAME, toa.getSpottingRuleName());
             writeStringField(jg,F_TERM_KEY, toa.getTermKey());
+            writeIntFSArrayField(jg,F_WORDS,toa.getWords());
             writeOffsets(jg, toa);
             jg.writeEndObject();
+        }
+        jg.writeEndArray();
+    }
+
+    private static void writeIntFSArrayField(JsonGenerator jg, String fieldName, FSArray words) throws IOException {
+        if(words == null)
+            return;
+        jg.writeArrayFieldStart(fieldName);
+
+        for (int i = 0; i < words.size(); i++){
+            WordAnnotation wa = (WordAnnotation) words.get(i);
+            jg.writeStartArray();
+            jg.writeNumber(wa.getBegin());
+            jg.writeNumber(wa.getEnd());
+            jg.writeEndArray();
         }
         jg.writeEndArray();
     }

@@ -40,6 +40,24 @@
     "begin" : 3,
     "end" : 15
   }, {
+    "cat" : "adverb",
+    "lemma" : "parfaitement",
+    "stem" : "parfait",
+    "tag" : "ADV",
+    "scat" : "test",
+    "regexLabel" : "R",
+    "number" : "tata",
+    "gender" : "toto",
+    "case" : "titi",
+    "mood" : "test",
+    "tense" : "test",
+    "person" : "test",
+    "degree" : "test",
+    "formation" : "test",
+    "labels" : "label",
+    "begin" : 16,
+    "end" : 28
+  }, {
     "cat" : "adjective",
     "lemma" : "total",
     "stem" : "tot",
@@ -55,15 +73,16 @@
     "degree" : "test",
     "formation" : "test",
     "labels" : "label",
-    "begin" : 16,
-    "end" : 21
+    "begin" : 29,
+    "end" : 34
   } ],
   "term_occ_annotations" : [ {
     "pattern" : "N A",
     "spot_rule_name" : "na",
     "term_key" : "na: recouvrement total",
+    "words" : [ [ 3, 15 ], [ 29, 34 ] ],
     "begin" : 3,
-    "end" : 21
+    "end" : 34
   } ],
-  "covered_text" : "le recouvrement total"
+  "covered_text" : "le recouvrement parfaitement total"
 }

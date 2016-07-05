@@ -28,10 +28,12 @@ import static eu.project.ttc.readers.JsonCasConstants.F_TAG;
 import static eu.project.ttc.readers.JsonCasConstants.F_TENSE;
 import static eu.project.ttc.readers.JsonCasConstants.F_TERM_KEY;
 import static eu.project.ttc.readers.JsonCasConstants.F_URI;
+import static eu.project.ttc.readers.JsonCasConstants.F_WORDS;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
+import java.util.Objects;
 
 import org.apache.uima.cas.CAS;
 import org.apache.uima.cas.CASException;
@@ -45,7 +47,6 @@ import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
 import com.google.common.base.Preconditions;
-import com.google.common.collect.Lists;
 
 import eu.project.ttc.types.SourceDocumentInformation;
 import eu.project.ttc.types.TermOccAnnotation;
@@ -57,7 +58,9 @@ import eu.project.ttc.types.WordAnnotation;
 public class TermSuiteJsonCasDeserializer {
 	private static final Logger logger = LoggerFactory.getLogger(TermSuiteJsonCasDeserializer.class);
 
-	
+    private static JsonParser parser;
+    private static JsonToken token;
+
     public static void deserialize(InputStream inputStream, CAS cas) {
     	Preconditions.checkNotNull(inputStream, "Paramater input stream is null");
     	Preconditions.checkNotNull(inputStream, "Paramater CAS is null");
@@ -66,8 +69,7 @@ public class TermSuiteJsonCasDeserializer {
 
 
             JsonFactory factory = new JsonFactory();
-            JsonParser parser = factory.createParser(inputStream);
-            JsonToken token;
+            parser = factory.createParser(inputStream);
 
             SourceDocumentInformation sdi = (SourceDocumentInformation) cas.createAnnotation(cas.getJCas().getCasType(SourceDocumentInformation.type), 0, 0);
             WordAnnotation wa = (WordAnnotation) cas.createAnnotation(cas.getJCas().getCasType(WordAnnotation.type), 0, 0);
@@ -102,11 +104,11 @@ public class TermSuiteJsonCasDeserializer {
                     }
 
                     else if (inToa){
-                        if (token == JsonToken.END_ARRAY) {
+                        if (token == JsonToken.END_ARRAY
+                                && Objects.equals(parser.getParsingContext().getCurrentName(), "term_occ_annotations")) {
                             inToa = false;
                         }
                         else if (token == JsonToken.END_OBJECT) {
-                            fillWords(toa,cas);
                             toa.addToIndexes();
                             toa = (TermOccAnnotation) cas.createAnnotation(cas.getJCas().getCasType(TermOccAnnotation.type), 0, 0);
                         }
@@ -141,12 +143,29 @@ public class TermSuiteJsonCasDeserializer {
         }
     }
 
-    private static void fillWords(TermOccAnnotation toa, CAS cas) throws CASException {
-        List<WordAnnotation> words = Lists.newArrayList(JCasUtil.subiterate(cas.getJCas(), WordAnnotation.class, toa, false, true));
-        FSArray fs = (FSArray) cas.createArrayFS(words.size());
-        for(int i=0; i<words.size();i++) 
-        	fs.set(i,words.get(i));
+    private static void fillWords(TermOccAnnotation toa, CAS cas) throws CASException, IOException {
+        FSArray fs = (FSArray) cas.createArrayFS(toa.getPattern().size());
+        int i = 0;
+        int begin = -1;
+        int end = -1;
+        while(i != toa.getPattern().size()){
+            if (begin != -1 && token == JsonToken.VALUE_NUMBER_INT){
+                end = parser.getValueAsInt();
+            }
+            else if (token == JsonToken.VALUE_NUMBER_INT){
+                begin = parser.getValueAsInt();
+            }
+            else if (end != -1){
+                List<WordAnnotation> wa = JCasUtil.selectCovered(cas.getJCas(),WordAnnotation.class,begin,end);
+                fs.set(i,wa.get(0));
+                begin = -1;
+                end = -1;
+                i++;
+            }
+            token = parser.nextToken();
+        }
         toa.setWords(fs);
+
     }
 
     private static void fillWordAnnotations(JsonParser parser, JsonToken token, WordAnnotation wa) throws IOException {
@@ -262,6 +281,9 @@ public class TermSuiteJsonCasDeserializer {
                     break;
                 case F_TERM_KEY :
                     toa.setTermKey(parser.nextTextValue());
+                    break;
+                case F_WORDS :
+                    fillWords(toa,cas);
                     break;
                 case F_BEGIN :
                     toa.setBegin(parser.nextIntValue(0));

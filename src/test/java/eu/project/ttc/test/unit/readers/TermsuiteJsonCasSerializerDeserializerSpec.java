@@ -51,144 +51,162 @@ import eu.project.ttc.types.WordAnnotation;
  * Created by Simon Meoni on 24/06/16.
  */
 public class TermsuiteJsonCasSerializerDeserializerSpec {
-
-    private File jsonExpectedFile;
-    private File jsonResFile;
-    private JCas jCas = JCasFactory.createJCas();
-    private JCas fixtureCas = JCasFactory.createJCas();
-    FileInputStream fis;
-    public TermsuiteJsonCasSerializerDeserializerSpec() throws UIMAException {
-    }
-
-    @Rule
-    public TemporaryFolder temporaryFolder = new TemporaryFolder();
-
-    @Before
-    public void setup() throws UIMAException, IOException {
-
-        jsonExpectedFile = new File("src/test/resources/org/project/ttc/test/termsuite/json/cas/test.json");
-        jsonResFile = temporaryFolder.newFile("test1.json");
-
-        fis = new FileInputStream(jsonExpectedFile);
-
-        SourceDocumentInformation sdi = (SourceDocumentInformation) fixtureCas.getCas()
-                .createAnnotation(fixtureCas.getCasType(SourceDocumentInformation.type), 0, 37);
-        sdi.setUri("test.json");
-        sdi.setOffsetInSource(0);
-        sdi.setDocumentIndex(1);
-        sdi.setNbDocuments(1);
-        sdi.setDocumentSize(21);
-        sdi.setCumulatedDocumentSize(21);
-        sdi.setLastSegment(true);
-        sdi.addToIndexes();
-
-        WordAnnotation wa = (WordAnnotation) fixtureCas.getCas()
-                .createAnnotation(fixtureCas.getCasType(WordAnnotation.type), 0, 2);
-        wa.setCategory("article");
-        wa.setLemma("le");
-        wa.setStem("le");
-        wa.setTag("DET:ART");
-        wa.setSubCategory("det");
-        wa.setRegexLabel("D");
-        wa.setNumber("sg");
-        wa.setGender("ms");
-        wa.setCase("det");
-        wa.setMood("test");
-        wa.setTense("test");
-        wa.setPerson("test");
-        wa.addToIndexes();
-
-        wa = (WordAnnotation) fixtureCas.getCas()
-                .createAnnotation(fixtureCas.getCasType(WordAnnotation.type), 3, 15);
-        wa.setCategory("noun");
-        wa.setLemma("recouvrement");
-        wa.setStem("recouvr");
-        wa.setTag("NOM");
-        wa.setSubCategory("nom");
-        wa.setRegexLabel("N");
-        wa.setGender("ms");
-        wa.setCase("nom");
-        wa.setTense("test");
-        wa.setPerson("test");
-        wa.addToIndexes();
-
-        WordAnnotation wa1 = (WordAnnotation) fixtureCas.getCas()
-                .createAnnotation(fixtureCas.getCasType(WordAnnotation.type), 16, 21);
-        wa1.setCategory("adjective");
-        wa1.setLemma("total");
-        wa1.setStem("tot");
-        wa1.setTag("ADJ");
-        wa1.setSubCategory("test");
-        wa1.setRegexLabel("A");
-        wa1.setNumber("sg");
-        wa1.setGender("ms");
-        wa1.setCase("dat");
-        wa1.setMood("test");
-        wa1.setTense("test");
-        wa1.setPerson("test");
-        wa1.setDegree("test");
-        wa1.setFormation("test");
-        wa1.setLabels("label");
-        wa1.addToIndexes();
-
-        TermOccAnnotation toa = (TermOccAnnotation) fixtureCas.getCas()
-                .createAnnotation(fixtureCas.getCasType(TermOccAnnotation.type),3,21);
+	private File jsonExpectedFile;
+	private File jsonResFile;
+	private JCas jCas;
+	private JCas fixtureCas;
+	FileInputStream fis;
 
 
-        StringArray stringArray = new StringArray(fixtureCas, 2);
-        stringArray.set(0,"N");
-        stringArray.set(1,"A");
-        FSArray fs = (FSArray) fixtureCas.getCas().createArrayFS(2);
-        fs.set(0,wa);
-        fs.set(1,wa1);
-        toa.setPattern(stringArray);
-        toa.setSpottingRuleName("na");
-        toa.setTermKey("na: recouvrement total");
-        toa.setWords(fs);
-        toa.addToIndexes();
+	@Rule
+	public TemporaryFolder temporaryFolder = new TemporaryFolder();
 
-        fixtureCas.setDocumentText("le recouvrement total");
+	@Before
+	public void setup() throws UIMAException, IOException {
+		jCas = JCasFactory.createJCas();
+		fixtureCas = JCasFactory.createJCas();
 
+		jsonExpectedFile = new File("src/test/resources/org/project/ttc/test/termsuite/json/cas/test.json");
+		jsonResFile = temporaryFolder.newFile("test1.json");
 
-    }
+		fis = new FileInputStream(jsonExpectedFile);
 
-    @Test
-    public void SerializationTest() throws IOException {
+		SourceDocumentInformation sdi = (SourceDocumentInformation) fixtureCas.getCas()
+				.createAnnotation(fixtureCas.getCasType(SourceDocumentInformation.type), 0, 37);
+		sdi.setUri("test.json");
+		sdi.setOffsetInSource(0);
+		sdi.setDocumentIndex(1);
+		sdi.setNbDocuments(1);
+		sdi.setDocumentSize(21);
+		sdi.setCumulatedDocumentSize(21);
+		sdi.setLastSegment(true);
+		sdi.addToIndexes();
 
-        //Test Out File
-        TermSuiteJsonCasSerializer.serialize(new FileWriter(jsonResFile),fixtureCas);
-        final String baseFile = TestUtil.readFile(jsonExpectedFile);
-        final String resFile = TestUtil.readFile(jsonResFile);
-        assertEquals(baseFile,resFile);
-    }
+		WordAnnotation wa = (WordAnnotation) fixtureCas.getCas()
+				.createAnnotation(fixtureCas.getCasType(WordAnnotation.type), 0, 2);
+		wa.setCategory("article");
+		wa.setLemma("le");
+		wa.setStem("le");
+		wa.setTag("DET:ART");
+		wa.setSubCategory("det");
+		wa.setRegexLabel("D");
+		wa.setNumber("sg");
+		wa.setGender("ms");
+		wa.setCase("det");
+		wa.setMood("test");
+		wa.setTense("test");
+		wa.setPerson("test");
+		wa.addToIndexes();
 
-    @Test
-    public void DeserializationTest(){
-        TermSuiteJsonCasDeserializer.deserialize(fis, jCas.getCas());
+		wa = (WordAnnotation) fixtureCas.getCas().createAnnotation(fixtureCas.getCasType(WordAnnotation.type), 3, 15);
+		wa.setCategory("noun");
+		wa.setLemma("recouvrement");
+		wa.setStem("recouvr");
+		wa.setTag("NOM");
+		wa.setSubCategory("nom");
+		wa.setRegexLabel("N");
+		wa.setGender("ms");
+		wa.setCase("nom");
+		wa.setTense("test");
+		wa.setPerson("test");
+		wa.addToIndexes();
 
-        //Test Sdi
-        assertEquals(fixtureCas.getAnnotationIndex(SourceDocumentInformation.type).iterator().next().toString(),
-                jCas.getAnnotationIndex(SourceDocumentInformation.type).iterator().next().toString());
+		WordAnnotation wa1 = (WordAnnotation) fixtureCas.getCas()
+				.createAnnotation(fixtureCas.getCasType(WordAnnotation.type), 16, 28);
+		wa1.setCategory("adverb");
+		wa1.setLemma("parfaitement");
+		wa1.setStem("parfait");
+		wa1.setTag("ADV");
+		wa1.setSubCategory("test");
+		wa1.setRegexLabel("R");
+		wa1.setNumber("tata");
+		wa1.setGender("toto");
+		wa1.setCase("titi");
+		wa1.setMood("test");
+		wa1.setTense("test");
+		wa1.setPerson("test");
+		wa1.setDegree("test");
+		wa1.setFormation("test");
+		wa1.setLabels("label");
+		wa1.addToIndexes();
 
-        //Test wordAnnotation
-        FSIterator<Annotation> itWaEx = fixtureCas.getAnnotationIndex(WordAnnotation.type).iterator();
-        FSIterator<Annotation> itWa = jCas.getAnnotationIndex(WordAnnotation.type).iterator();
-        while (itWa.hasNext()){
-            assertEquals(itWaEx.next().toString(),itWa.next().toString());
-        }
-        assertEquals(
-        		fixtureCas.getAnnotationIndex(TermOccAnnotation.type).iterator().next().toString(),
-                jCas.getAnnotationIndex(TermOccAnnotation.type).iterator().next().toString());
+		wa1 = (WordAnnotation) fixtureCas.getCas().createAnnotation(fixtureCas.getCasType(WordAnnotation.type), 29, 34);
+		wa1.setCategory("adjective");
+		wa1.setLemma("total");
+		wa1.setStem("tot");
+		wa1.setTag("ADJ");
+		wa1.setSubCategory("test");
+		wa1.setRegexLabel("A");
+		wa1.setNumber("sg");
+		wa1.setGender("ms");
+		wa1.setCase("dat");
+		wa1.setMood("test");
+		wa1.setTense("test");
+		wa1.setPerson("test");
+		wa1.setDegree("test");
+		wa1.setFormation("test");
+		wa1.setLabels("label");
+		wa1.addToIndexes();
 
-        //Test termOccAnnotation
-        TermOccAnnotation toaExpected = (TermOccAnnotation) fixtureCas.getAnnotationIndex(TermOccAnnotation.type).iterator().next();
-        TermOccAnnotation toa = (TermOccAnnotation) jCas.getAnnotationIndex(TermOccAnnotation.type).iterator().next();
-        for (int i = 0; i < toa.getWords().size(); i++){
-            assertEquals(toaExpected.getWords().get(i).toString(),toa.getWords().get(i).toString());
-        }
+		TermOccAnnotation toa = (TermOccAnnotation) fixtureCas.getCas()
+				.createAnnotation(fixtureCas.getCasType(TermOccAnnotation.type), 3, 34);
 
-        //Test covered Text
-        assertEquals("le recouvrement total", jCas.getDocumentText());
-    }
+		StringArray stringArray = new StringArray(fixtureCas, 2);
+		stringArray.set(0, "N");
+		stringArray.set(1, "A");
+		FSArray fs = (FSArray) fixtureCas.getCas().createArrayFS(2);
+		fs.set(0, wa);
+		fs.set(1, wa1);
+		toa.setPattern(stringArray);
+		toa.setSpottingRuleName("na");
+		toa.setTermKey("na: recouvrement total");
+		toa.setWords(fs);
+		toa.addToIndexes();
+
+		fixtureCas.setDocumentText("le recouvrement parfaitement total");
+
+	}
+
+	@Test
+	public void SerializationTest() throws IOException {
+
+		// Test Out File
+		TermSuiteJsonCasSerializer.serialize(new FileWriter(jsonResFile), fixtureCas);
+		final String baseFile = TestUtil.readFile(jsonExpectedFile);
+		final String resFile = TestUtil.readFile(jsonResFile);
+		assertEquals(baseFile, resFile);
+	}
+
+	@Test
+	public void DeserializationTest() {
+		TermSuiteJsonCasDeserializer.deserialize(fis, jCas.getCas());
+
+		// Test Sdi
+		assertEquals(fixtureCas.getAnnotationIndex(SourceDocumentInformation.type).iterator().next().toString(),
+				jCas.getAnnotationIndex(SourceDocumentInformation.type).iterator().next().toString());
+
+		// Test wordAnnotation
+		FSIterator<Annotation> itWaEx = fixtureCas.getAnnotationIndex(WordAnnotation.type).iterator();
+		FSIterator<Annotation> itWa = jCas.getAnnotationIndex(WordAnnotation.type).iterator();
+		while (itWa.hasNext()) {
+			assertEquals(itWaEx.next().toString(), itWa.next().toString());
+		}
+		assertEquals(fixtureCas.getAnnotationIndex(TermOccAnnotation.type).iterator().next().toString(),
+				jCas.getAnnotationIndex(TermOccAnnotation.type).iterator().next().toString());
+
+		// Test termOccAnnotation
+		TermOccAnnotation toaExpected = (TermOccAnnotation) fixtureCas.getAnnotationIndex(TermOccAnnotation.type)
+				.iterator().next();
+		TermOccAnnotation toa = (TermOccAnnotation) jCas.getAnnotationIndex(TermOccAnnotation.type).iterator().next();
+		for (int i = 0; i < toa.getWords().size(); i++) {
+			assertEquals(toaExpected.getWords().get(i).toString(), toa.getWords().get(i).toString());
+		}
+
+		// Test Size of FSArrayWords in termOccAnnotation
+		assertEquals("this two array must have the same size", toaExpected.getWords().size(), toa.getWords().size());
+
+		// Test covered Text
+		assertEquals("le recouvrement parfaitement total", jCas.getDocumentText());
+	}
 
 }
