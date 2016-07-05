@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2015 - CNRS (Centre National de Recherche Scientifique)
+ * Copyright 2015-2016 - CNRS (Centre National de Recherche Scientifique)
  *
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
