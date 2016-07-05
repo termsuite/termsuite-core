@@ -160,6 +160,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testSyntacticalVariations() {
 		assertThat(termIndex)
+			.containsVariation("npn: phase du stator", VariationType.SYNTACTICAL, "na: phase statorique", "S-R2D-NPN")
 			.containsVariation("na: machine asynchrone", VariationType.SYNTACTICAL, "naa: machine asynchrone auto-excitée", "S-Ed-NA-A")
 			.containsVariation("na: machine asynchrone", VariationType.SYNTACTICAL, "napn: machine asynchrone à cage", "S-Ed-NA-PN")
 			.containsVariation("na: machine asynchrone", VariationType.SYNTACTICAL, "napna: machine asynchrone à cage autonome", "S-Ed-NA-PNA")
