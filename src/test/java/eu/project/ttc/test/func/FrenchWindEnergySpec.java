@@ -10,46 +10,66 @@ import org.junit.Test;
 
 import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
-import eu.project.ttc.engines.desc.TermSuiteCollection;
-import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.VariationType;
-import eu.project.ttc.resources.MemoryTermIndexManager;
-import eu.project.ttc.tools.TermSuitePipeline;
 
-public class FrenchWindEnergySpec {
+public class FrenchWindEnergySpec extends WindEnergySpec {
 	
-	
-	static TermIndex termIndex;
-	static Lang lang = Lang.FR;
 	
 	@BeforeClass
 	public static void setup() {
-		MemoryTermIndexManager.getInstance().clear();
-		TermSuitePipeline pipeline = TermSuitePipeline.create(lang.getCode(), "file:")
-			.setResourcePath(FunctionalTests.getResourcePath())
-			.setCollection(TermSuiteCollection.TXT, FunctionalTests.getCorpusWEPath(lang), "UTF-8")
-			.aeWordTokenizer()
-			.setTreeTaggerHome(FunctionalTests.getTaggerPath())
-			.aeTreeTagger()
-			.aeUrlFilter()
-			.aeStemmer()
-			.aeRegexSpotter()
-			.aeStopWordsFilter()
-			.aeSpecificityComputer()
-			.aeThresholdCleaner(TermProperty.FREQUENCY, 2)
-			.aeCompostSplitter()
-			.aePrefixSplitter()
-			.aeSuffixDerivationDetector()
-			.aeSyntacticVariantGatherer()
-			.aeGraphicalVariantGatherer()
-			.aeExtensionDetector()
-			.aeScorer()
-			.aeRanker(TermProperty.WR, true)
-			.run();
-			
-		termIndex = pipeline.getTermIndex();
+		lang = Lang.FR;
+		expectMatchingRules(
+				"S-NA",
+				"NA-NprefA",
+				"S-Ed-NA-A",
+				"S-Ed-NA-AA",
+				"S-Ed-NA-PN",
+				"S-Ed-NA-PAN",
+				"S-Ed-NA-PACAN",
+				"S-Ed-NA-PNA",
+				"S-Ed-NA-CA",
+				"S-Ed-NA-,ACA",
+				"S-I-NA-A",
+				"S-I-N(N|A)-PN",
+				"S-I-NA-R",
+				"S-I-NA-V",
+				"S-I-NA-AC",
+				"S-I-NA-A,AC",
+				"S-I-NA-PNA",
+				"S-I1-NPN-A",
+				"S-Ed-NPN-A",
+				"S-Ed-NPN-PN",
+				"S-Ed-NPN-PAN",
+				"S-Ed-NPN-PNA",
+				"S-Ed-NPN-PACAN",
+				"S-Ed-NPN-AA",
+				"S-Ed-NPN-CPN",
+				"S-Ed-NPN-,PNCPN",
+				"S-Eg-NA-NP",
+				"S-Eg-NPN-NP",
+				"S-R2-NPN",
+				"S-R2I-NPN-P",
+				"S-R2D-NPN",
+				"S-P-NAPN-A",
+				"S-P-NAA-A",
+				"M-S-NN",
+				"M-PI-EN-P",
+				"M-R1-NA",
+				"M-I-NA-EC");
+		expectNotMatchingRules("S-IEg-NPN-PN,-CPN",
+				"S-IEg-NA-A,-CA",
+				"S-I-NA-RV",
+				"S-R2I2-NPN-PNP",
+				"S-I2-NPN-PN,PNC",
+				"S-PID-NA-P",
+				"S-PID-NAA-P",
+				"M-I-NA-CE",
+				"M-I2-NA");
+		runPipeline();
 	}
-	
+
+
+
 	@Test
 	public void testTop10ByFreq() {
 		assertThat(termsByProperty(termIndex, TermProperty.FREQUENCY, true).subList(0, 10))
@@ -80,10 +100,10 @@ public class FrenchWindEnergySpec {
 		assertThat(termIndex.getTermByGroupingKey("npn: vitesse de rotation"))
 			.hasFrequency(308)
 			.hasNBases(0)
-			.hasNVariationsOfType(4, VariationType.SYNTACTICAL)
+			.hasNVariationsOfType(24, VariationType.SYNTACTICAL)
 			.getVariations()
 			.extracting("variant.groupingKey", "info", "variant.frequency")
-			.containsExactly(
+			.contains(
 					tuple("napn: vitesse angulaire de rotation", "S-I1-NPN-A", 2),
 					tuple("napn: vitesse nominal de rotation", "S-I1-NPN-A", 2),
 					tuple("npna: vitesse de rotation correspondant", "S-Ed-NPN-A", 3),
@@ -113,14 +133,16 @@ public class FrenchWindEnergySpec {
 	}
 
 	@Test
-	public void testMorphologicalVariations() {
+	public void testMSNNVariations() {
 		assertThat(termIndex)
-			.hasNVariationsOfType(2, VariationType.MORPHOLOGICAL)
-			.getVariationsHavingObject("M-S-NN")
-			.hasSize(2)
+			.hasNVariationsOfType(28, VariationType.MORPHOLOGICAL)
+			.asTermVariationsHavingObject("M-S-NN")
+			.hasSize(9)
 			.extracting("base.groupingKey", "variant.groupingKey")
 			.contains(
 				   tuple("n: microsystème", "nn: micro système"), 
+				   tuple("n: transistor-diode", "nn: transistor diode"), 
+				   tuple("n: france-allemagne", "nn: france allemagne"), 
 				   tuple("n: schéma-bloc", "nn: schéma bloc")
 			)
 			;
@@ -142,16 +164,20 @@ public class FrenchWindEnergySpec {
 	@Test
 	public void testSyntacticalVariationsWithPrefixes() {
 		assertThat(termIndex)
-		.getVariationsHavingObject("NA-NprefA")
+		.asTermVariationsHavingObject("NA-NprefA")
 		.extracting("base.groupingKey", "variant.groupingKey")
 		.contains(
 			tuple("na: générateur synchrone", "na: générateur asynchrone"),
 			tuple("na: machine synchrone", "na: machine asynchrone"),
 			tuple("na: contrôle direct", "na: contrôle indirect"),
+			tuple("na: mode direct", "na: mode indirect"),
+			tuple("na: aspect esthétique", "na: aspect inesthétique"),
+			tuple("na: option nucléaire", "na: option antinucléaire"),
 			tuple("na: génératrice synchrone", "na: génératrice asynchrone"),
+			tuple("na: mesure précis", "na: mesure imprécis"),
 			tuple("na: circulation stationnaire", "na: circulation instationnaire")
 		)
-		.hasSize(5)
+		.hasSize(26)
 		;
 		
 	}
@@ -159,7 +185,7 @@ public class FrenchWindEnergySpec {
 	@Test
 	public void testSyntacticalVariationsWithDerivatesSPIDNAP() {
 		assertThat(termIndex)
-			.getVariationsHavingObject("S-PID-NA-P")
+			.asTermVariationsHavingObject("S-PID-NA-P")
 			.hasSize(0)
 			;
 	}
@@ -167,8 +193,8 @@ public class FrenchWindEnergySpec {
 	@Test
 	public void testSyntacticalVariationsWithDerivatesSR2DNPN() {
 		assertThat(termIndex)
-			.getVariationsHavingObject("S-R2D-NPN")
-			.hasSize(26)
+			.asTermVariationsHavingObject("S-R2D-NPN")
+			.hasSize(77)
 			.extracting("base.groupingKey", "variant.groupingKey")
 			.contains(
 					tuple("npn: production de électricité", "na: production électrique"),

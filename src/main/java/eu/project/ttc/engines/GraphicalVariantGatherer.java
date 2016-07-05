@@ -47,12 +47,14 @@ import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermWord;
 import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.Word;
 import eu.project.ttc.models.index.AbstractTermValueProvider;
 import eu.project.ttc.models.index.CustomTermIndex;
 import eu.project.ttc.models.index.TermValueProvider;
 import eu.project.ttc.resources.ObserverResource;
 import eu.project.ttc.resources.ObserverResource.SubTaskObserver;
 import eu.project.ttc.resources.TermIndexResource;
+import eu.project.ttc.utils.StringUtils;
 
 /**
  * 
@@ -97,9 +99,15 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 	private TermValueProvider nFirstLettersProvider = new AbstractTermValueProvider("") {
 		@Override
 		public Collection<String> getClasses(TermIndex termIndex, Term term) {
-//			if(term.getWords().size() == 1)
-//				// do not gather sw term with that method
-//				return ImmutableList.of();
+			if(term.getWords().size() == 1) {
+				Word word = term.getWords().get(0).getWord();
+				if(word.getLemma().length() < 5)
+					return ImmutableList.of();
+				else {
+					String substring = StringUtils.replaceAccents(word.getLemma().toLowerCase(language.getLocale()).substring(0, 4));
+					return ImmutableList.of(substring);
+				}
+			}
 			StringBuilder builder = new StringBuilder();
 			String normalizedStem;
 			int i = 0;

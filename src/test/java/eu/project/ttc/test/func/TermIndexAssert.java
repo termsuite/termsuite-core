@@ -19,6 +19,7 @@ import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.models.VariationType;
+import eu.project.ttc.utils.TermIndexUtils;
 
 public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> {
 
@@ -27,6 +28,10 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 	}
 
 	public TermIndexAssert containsVariation(String baseGroupingKey, VariationType type, String variantGroupingKey) {
+		if(failToFindTerms(baseGroupingKey, variantGroupingKey))
+			return this;
+		
+		
 		List<TermVariation> potentialVariations = Lists.newArrayList();
 		Set<TermVariation> sameType = Sets.newHashSet();
 		
@@ -52,8 +57,23 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 				);
 		return this;
 	}
+
+	private boolean failToFindTerms(String... groupingKeys) {
+		boolean failed = false;
+		for(String gKey:groupingKeys) {
+			if(actual.getTermByGroupingKey(gKey) == null) {
+				failed = true;
+				failWithMessage("Could not find term <%s> in termIndex", gKey);
+			}
+		}
+		return failed;
+	}
 	
 	public TermIndexAssert containsVariation(String baseGroupingKey, VariationType type, String variantGroupingKey, Object info) {
+		if(failToFindTerms(baseGroupingKey, variantGroupingKey))
+			return this;
+
+		
 		List<TermVariation> potentialVariations = Lists.newArrayList();
 		Set<TermVariation> sameType = Sets.newHashSet();
 		for(TermVariation tv:getVariations()) {
@@ -106,12 +126,30 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 		return this;
 	}
 
-	public AbstractIterableAssert<?, ? extends Iterable<? extends TermVariation>, TermVariation> getVariationsHavingObject(Object object) {
+	public AbstractIterableAssert<?, ? extends Iterable<? extends TermVariation>, TermVariation> asTermVariationsHavingObject(Object object) {
 		Set<TermVariation> variations = Sets.newHashSet();
 		for(TermVariation v:getVariations())
 			if(Objects.equal(v.getInfo(), object))
 				variations.add(v);
 		return assertThat(variations);
 	}
+
+	public AbstractIterableAssert<?, ? extends Iterable<? extends TermVariation>, TermVariation> asTermVariations(VariationType... variations) {
+		return assertThat(
+				TermIndexUtils.selectTermVariations(actual, variations));
+	}
+
+	public AbstractIterableAssert<?, ? extends Iterable<? extends Term>, Term> asCompoundList() {
+		return assertThat(
+				TermIndexUtils.selectCompounds(actual));
+	}
+
+	public AbstractIterableAssert<?, ? extends Iterable<? extends String>, String> asMatchingRules() {
+		Set<String> matchingRuleNames = Sets.newHashSet();
+		for(TermVariation tv:TermIndexUtils.selectTermVariations(actual, VariationType.SYNTACTICAL, VariationType.MORPHOLOGICAL)) 
+			matchingRuleNames.add((String)tv.getInfo());
+		return assertThat(matchingRuleNames);
+	}
+
 
 }
