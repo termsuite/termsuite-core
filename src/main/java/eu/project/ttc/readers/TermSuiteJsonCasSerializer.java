@@ -26,6 +26,7 @@ package eu.project.ttc.readers;
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.google.common.base.Joiner;
+import eu.project.ttc.types.FixedExpression;
 import eu.project.ttc.types.SourceDocumentInformation;
 import eu.project.ttc.types.WordAnnotation;
 import eu.project.ttc.types.TermOccAnnotation;
@@ -56,6 +57,8 @@ public class TermSuiteJsonCasSerializer {
         writeWordAnnotations(jg, jCas);
         jg.writeFieldName(F_TERM_OCC_ANNOTATIONS);
         writeTermOccAnnotations(jg, jCas);
+        jg.writeFieldName(F_FIXED_EXPRESSIONS);
+        writeFixedExpressions(jg, jCas);
         writeCoveredText(jg, jCas);
         jg.writeEndObject();
         jg.flush();
@@ -124,6 +127,18 @@ public class TermSuiteJsonCasSerializer {
             writeStringField(jg,F_TERM_KEY, toa.getTermKey());
             writeIntFSArrayField(jg,F_WORDS,toa.getWords());
             writeOffsets(jg, toa);
+            jg.writeEndObject();
+        }
+        jg.writeEndArray();
+    }
+
+    private static void writeFixedExpressions(JsonGenerator jg, JCas jCas) throws IOException {
+        jg.writeStartArray();
+        FSIterator<Annotation> it = jCas.getAnnotationIndex(FixedExpression.type).iterator();
+        while(it.hasNext()) {
+            FixedExpression fe = (FixedExpression) it.next();
+            jg.writeStartObject();
+            writeOffsets(jg, fe);
             jg.writeEndObject();
         }
         jg.writeEndArray();
