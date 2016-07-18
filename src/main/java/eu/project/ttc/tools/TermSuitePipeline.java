@@ -23,7 +23,8 @@ package eu.project.ttc.tools;
 
 import java.io.Serializable;
 import java.math.BigInteger;
-import java.net.URL;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.security.SecureRandom;
@@ -282,32 +283,25 @@ public class TermSuitePipeline {
 	}
 
 
+	/**
+	 * 
+	 * Starts a chaining {@link TermSuitePipeline} builder. 
+	 * 
+	 * @param lang
+	 * 			The 
+	 * @return
+	 * 			The chaining builder.
+	 * 
+	 */
 	public static TermSuitePipeline create(String lang) {
 		return new TermSuitePipeline(lang, null);
 	}
 	
-	/**
-	 * 
-	 * Starts a chaining {@link TermSuitePipeline} builder and overrides the default 
-	 * {@link URL} prefix (file:). 
-	 * 
-	 * @param lang
-	 * 			The 
-	 * @param urlPrefix
-	 * 			The {@link URL} prefix to use for accessing TermSuite resources
-	 * @return
-	 * 			The chaining builder.
-	 * 
-	 * @see TermSuiteResourceHelper#TermSuiteResourceHelper(Lang, String)
-	 */
-	public static TermSuitePipeline create(String lang, String urlPrefix) {
-		return new TermSuitePipeline(lang, urlPrefix);
-	}
 
-	public static TermSuitePipeline create(TermIndex termIndex, String urlPrefix) {
+	public static TermSuitePipeline create(TermIndex termIndex) {
 		Preconditions.checkNotNull(termIndex.getName(), "The term index must have a name before it can be used in TermSuitePipeline");
 	
-		TermSuitePipeline pipeline = create(termIndex.getLang().getCode(), urlPrefix);
+		TermSuitePipeline pipeline = create(termIndex.getLang().getCode());
 		pipeline.emptyCollection();
 		pipeline.setTermIndex(termIndex);
 		
@@ -570,8 +564,32 @@ public class TermSuitePipeline {
 		}
 	}
 	
-	public TermSuitePipeline setResourcePath(String resourcePath) {
+	/**
+	 * Invoke this method if TermSuite resources are accessible via 
+	 * a "file:/path/to/res/" url, i.e. they can be found locally.
+	 * 
+	 * @param resourcePath
+	 * @return
+	 */
+	public TermSuitePipeline setResourceFilePath(String resourcePath) {
 		TermSuiteUtils.addToClasspath(resourcePath);
+		try {
+			this.resourceUrlPrefix = Optional.of(new URI("file:" + resourcePath));
+		} catch (URISyntaxException e) {
+			throw new TermSuitePipelineException(e);
+		}
+		return this;
+	}
+	
+	private Optional<URI> resourceUrlPrefix = Optional.absent();
+	
+	
+	public TermSuitePipeline setResourceUrlPrefix(String urlPrefix) {
+		try {
+			this.resourceUrlPrefix = Optional.of(new URI(urlPrefix));
+		} catch (URISyntaxException e) {
+			throw new TermSuitePipelineException(e);
+		}
 		return this;
 	}
 
@@ -604,7 +622,7 @@ public class TermSuitePipeline {
 			
 			ExternalResourceDescription	segmentBank = ExternalResourceFactory.createExternalResourceDescription(
 					SegmentBankResource.class, 
-					TermSuiteResource.SEGMENT_BANK.getFileUrl(lang));
+					getResUrl(TermSuiteResource.SEGMENT_BANK));
 
 					
 			ExternalResourceFactory.bindResource(ae, SegmentBank.KEY_SEGMENT_BANK, segmentBank);
@@ -675,13 +693,38 @@ public class TermSuitePipeline {
 					ae,
 					TreeTaggerParameter.KEY_TT_PARAMETER, 
 					TreeTaggerParameter.class, 
-					TermSuiteResource.TREETAGGER_CONFIG.getFileUrl(lang, Tagger.TREE_TAGGER));
+					getResUrl(TermSuiteResource.TREETAGGER_CONFIG, Tagger.TREE_TAGGER));
 
 			return aggregateAndReturn(ae, "POS Tagging (TreeTagger)", 0).ttLemmaFixer().ttNormalizer();
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
 	}
+
+
+	/*
+	 * Builds the resource url for this pipeline
+	 */
+	private String getResUrl(TermSuiteResource tsResource, Tagger tagger) {
+		checkUrlPrefixSet();
+		return tsResource.getUrl(this.resourceUrlPrefix.get(), lang, tagger).toString();
+	}
+
+
+	private void checkUrlPrefixSet() {
+		if(!this.resourceUrlPrefix.isPresent())
+			throw new TermSuitePipelineException("No resource uri prefix set. You must invoked a #setResourceXXX() method once.");
+	}
+	
+	
+	/*
+	 * Builds the resource url for this pipeline	 * 
+	 */
+	private String getResUrl(TermSuiteResource tsResource) {
+		checkUrlPrefixSet();
+		return tsResource.getUrl(this.resourceUrlPrefix.get(), lang).toString();		
+	}
+
 	
 	public TermSuitePipeline setMateModelPath(String path) {
 		this.mateModelsPath = Optional.of(path);
@@ -948,46 +991,46 @@ public class TermSuitePipeline {
 	private TermSuitePipeline caseNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"eu.project.ttc.types.WordAnnotation:case", 
-				TermSuiteResource.TAGGER_CASE_MAPPING.getFileUrl(lang, tagger));
+				getResUrl(TermSuiteResource.TAGGER_CASE_MAPPING, tagger));
 	}
 
 	private TermSuitePipeline categoryNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"eu.project.ttc.types.WordAnnotation:category", 
-				TermSuiteResource.TAGGER_CATEGORY_MAPPING.getFileUrl(lang, Tagger.TREE_TAGGER));
+				getResUrl(TermSuiteResource.TAGGER_CATEGORY_MAPPING, tagger));
 	}
 
 	private TermSuitePipeline tenseNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"eu.project.ttc.types.WordAnnotation:tense", 
-				TermSuiteResource.TAGGER_TENSE_MAPPING.getFileUrl(lang, Tagger.TREE_TAGGER));
+				getResUrl(TermSuiteResource.TAGGER_TENSE_MAPPING, tagger));
 	}
 
 	private TermSuitePipeline subCategoryNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"eu.project.ttc.types.WordAnnotation:subCategory", 
-				TermSuiteResource.TAGGER_SUBCATEGORY_MAPPING.getFileUrl(lang, Tagger.TREE_TAGGER));
+				getResUrl(TermSuiteResource.TAGGER_SUBCATEGORY_MAPPING, tagger));
 	}
 
 	
 	private TermSuitePipeline moodNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"eu.project.ttc.types.WordAnnotation:mood", 
-				TermSuiteResource.TAGGER_MOOD_MAPPING.getFileUrl(lang, Tagger.TREE_TAGGER));
+				getResUrl(TermSuiteResource.TAGGER_MOOD_MAPPING, tagger));
 	}
 
 	
 	private TermSuitePipeline numberNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"eu.project.ttc.types.WordAnnotation:number", 
-				TermSuiteResource.TAGGER_NUMBER_MAPPING.getFileUrl(lang, Tagger.TREE_TAGGER));
+				getResUrl(TermSuiteResource.TAGGER_NUMBER_MAPPING, tagger));
 	}
 
 	
 	private TermSuitePipeline genderNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"eu.project.ttc.types.WordAnnotation:gender", 
-				TermSuiteResource.TAGGER_GENDER_MAPPING.getFileUrl(lang, Tagger.TREE_TAGGER));
+				getResUrl(TermSuiteResource.TAGGER_GENDER_MAPPING, tagger));
 	}
 
 	private TermSuitePipeline mateNormalizer()  {
@@ -1072,7 +1115,8 @@ public class TermSuitePipeline {
 					ae,
 					FixedExpressionResource.FIXED_EXPRESSION_RESOURCE, 
 					FixedExpressionResource.class, 
-					TermSuiteResource.FIXED_EXPRESSIONS.getFileUrl(lang));
+					getResUrl(TermSuiteResource.FIXED_EXPRESSIONS));
+			
 
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 
@@ -1105,7 +1149,7 @@ public class TermSuitePipeline {
 					ae,
 					FixedExpressionResource.FIXED_EXPRESSION_RESOURCE, 
 					FixedExpressionResource.class, 
-					TermSuiteResource.FIXED_EXPRESSIONS.getFileUrl(lang));
+					getResUrl(TermSuiteResource.FIXED_EXPRESSIONS));
 
 			return aggregateAndReturn(ae, "Spotting fixed expressions", 0);
 		} catch (Exception e) {
@@ -1144,13 +1188,13 @@ public class TermSuitePipeline {
 					ae,
 					RegexListResource.KEY_TOKEN_REGEX_RULES, 
 					RegexListResource.class, 
-					TermSuiteResource.MWT_RULES.getFileUrl(lang));
+					getResUrl(TermSuiteResource.MWT_RULES));
 	
 			ExternalResourceFactory.createDependencyAndBind(
 					ae,
 					RegexSpotter.CHARACTER_FOOTPRINT_TERM_FILTER, 
 					CharacterFootprintTermFilter.class, 
-					TermSuiteResource.ALLOWED_CHARS.getFileUrl(lang));
+					getResUrl(TermSuiteResource.ALLOWED_CHARS));
 	
 			if(this.addSpottedAnnoToTermIndex)
 				ExternalResourceFactory.bindResource(ae, resTermIndex());
@@ -1159,7 +1203,7 @@ public class TermSuitePipeline {
 					ae,
 					RegexSpotter.STOP_WORD_FILTER, 
 					DefaultFilterResource.class, 
-					TermSuiteResource.STOP_WORDS_FILTER.getFileUrl(lang));
+					getResUrl(TermSuiteResource.STOP_WORDS_FILTER));
 			
 			return aggregateAndReturn(ae, "Spotting terms", 0).aeTermOccAnnotationImporter();
 		} catch (Exception e) {
@@ -1206,7 +1250,7 @@ public class TermSuitePipeline {
 					ae,
 					PrefixTree.PREFIX_TREE, 
 					PrefixTree.class,
-					TermSuiteResource.PREFIX_BANK.getFileUrl(lang)
+					getResUrl(TermSuiteResource.PREFIX_BANK)
 				);
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
@@ -1227,7 +1271,7 @@ public class TermSuitePipeline {
 					ae,
 					SuffixDerivationList.SUFFIX_DERIVATIONS, 
 					SuffixDerivationList.class,
-					TermSuiteResource.SUFFIX_DERIVATIONS.getFileUrl(lang)
+					getResUrl(TermSuiteResource.SUFFIX_DERIVATIONS)
 				);
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
@@ -1248,7 +1292,7 @@ public class TermSuitePipeline {
 					ae,
 					SuffixDerivationExceptionSetter.SUFFIX_DERIVATION_EXCEPTION, 
 					MultimapFlatResource.class,
-					TermSuiteResource.SUFFIX_DERIVATION_EXCEPTIONS.getFileUrl(lang)
+					getResUrl(TermSuiteResource.SUFFIX_DERIVATION_EXCEPTIONS)
 				);
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
@@ -1272,7 +1316,7 @@ public class TermSuitePipeline {
 					ae,
 					ManualCompositionSetter.MANUAL_COMPOSITION_LIST, 
 					ManualSegmentationResource.class,
-					TermSuiteResource.MANUAL_COMPOSITIONS.getFileUrl(lang)
+					getResUrl(TermSuiteResource.MANUAL_COMPOSITIONS)
 				);
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
@@ -1293,7 +1337,7 @@ public class TermSuitePipeline {
 					ae,
 					ManualPrefixSetter.PREFIX_EXCEPTIONS, 
 					ManualSegmentationResource.class,
-					TermSuiteResource.PREFIX_EXCEPTIONS.getFileUrl(lang)
+					getResUrl(TermSuiteResource.PREFIX_EXCEPTIONS)
 				);
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
@@ -1324,7 +1368,7 @@ public class TermSuitePipeline {
 					ae,
 					FilterResource.KEY_FILTERS, 
 					DefaultFilterResource.class, 
-					TermSuiteResource.STOP_WORDS_FILTER.getFileUrl(lang)
+					getResUrl(TermSuiteResource.STOP_WORDS_FILTER)
 				);
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
@@ -1470,7 +1514,7 @@ public class TermSuitePipeline {
 		if(syntacticVariantRules == null) {
 			syntacticVariantRules = ExternalResourceFactory.createExternalResourceDescription(
 					YamlVariantRules.class, 
-					TermSuiteResource.VARIANTS.getFileUrl(lang)
+					getResUrl(TermSuiteResource.VARIANTS)
 				);
 		}
 		return syntacticVariantRules;
@@ -1520,7 +1564,7 @@ public class TermSuitePipeline {
 		if(generalLanguageResourceDesc == null)
 			generalLanguageResourceDesc = ExternalResourceFactory.createExternalResourceDescription(
 					GeneralLanguageResource.class, 
-					TermSuiteResource.GENERAL_LANGUAGE.getFileUrl(lang));
+					getResUrl(TermSuiteResource.GENERAL_LANGUAGE));
 		return generalLanguageResourceDesc;
 	}
 	
@@ -1942,27 +1986,27 @@ public class TermSuitePipeline {
 					ae,
 					CompostAE.LANGUAGE_DICO, 
 					SimpleWordSet.class, 
-					TermSuiteResource.DICO.getFileUrl(lang));
+					getResUrl(TermSuiteResource.DICO));
 			ExternalResourceFactory.createDependencyAndBind(
 					ae,
 					CompostAE.INFLECTION_RULES, 
 					CompostInflectionRules.class, 
-					TermSuiteResource.COMPOST_INFLECTION_RULES.getFileUrl(lang));
+					getResUrl(TermSuiteResource.COMPOST_INFLECTION_RULES));
 			ExternalResourceFactory.createDependencyAndBind(
 					ae,
 					CompostAE.TRANSFORMATION_RULES, 
 					CompostInflectionRules.class, 
-					TermSuiteResource.COMPOST_TRANSFORMATION_RULES.getFileUrl(lang));
+					getResUrl(TermSuiteResource.COMPOST_TRANSFORMATION_RULES));
 			ExternalResourceFactory.createDependencyAndBind(
 					ae,
 					CompostAE.STOP_LIST, 
 					SimpleWordSet.class, 
-					TermSuiteResource.COMPOST_STOP_LIST.getFileUrl(lang));
+					getResUrl(TermSuiteResource.COMPOST_STOP_LIST));
 			ExternalResourceFactory.createDependencyAndBind(
 					ae,
 					CompostAE.NEOCLASSICAL_PREFIXES, 
 					SimpleWordSet.class, 
-					TermSuiteResource.NEOCLASSICAL_PREFIXES.getFileUrl(lang));
+					getResUrl(TermSuiteResource.NEOCLASSICAL_PREFIXES));
 
 			return aeManualCompositionSetter()
 					.aggregateAndReturn(ae, CompostAE.TASK_NAME, 2);

@@ -123,6 +123,18 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 					)
 			;
 	}
+	
+	@Test
+	public void testCheckTerms() {
+		assertThat(termIndex.getTerms())
+			.extracting("groupingKey")
+			.contains(
+					"n: tourbillon",
+					"npn: givrage de pale"
+					)
+			;
+	}
+
 
 
 	@Test
@@ -214,14 +226,6 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	}
 
 	@Test
-	public void testSyntacticalVariationsWithDerivatesSPIDNAP() {
-		assertThat(termIndex)
-			.asTermVariationsHavingObject("S-PID-NA-P")
-			.hasSize(0)
-			;
-	}
-
-	@Test
 	public void testSyntacticalVariationsWithDerivatesSR2DNPN() {
 		assertThat(termIndex)
 			.asTermVariationsHavingObject("S-R2D-NPN")
@@ -234,6 +238,20 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 			)
 			;
 	}
+	@Test
+	public void testSyntacticalVariationsWithDerivatesSPIDNAP() {
+		assertThat(termIndex)
+			.asTermVariationsHavingObject("S-PID-NA-P")
+//			.hasSize(77)
+			.extracting("base.groupingKey", "variant.groupingKey")
+			.contains(
+					
+					tuple("npn: givrage de pale", "na: pale givrer"),
+					tuple("npn: profondeur de eau", "na: eau profond")
+			)
+			;
+	}
+	
 
 	@Test
 	public void testPrefixes() {

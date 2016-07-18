@@ -104,44 +104,41 @@ public enum TermSuiteResource {
 	private static final String LANG_SHORT_PATTERN = "[LANG_SHORT]";
 
 
-	public String getUrl(String protocol, Lang lang) {
-		return String.format("%s:%s", protocol, getPath(lang));
-	}
+//	public String getUrl(String protocol, Lang lang) {
+//		return String.format("%s:%s", protocol, getPath(lang));
+//	}
 
-	private String checkFileUrl(String urlSpec) {
-		URI uri;
+	private void checkUrl(URI uri) {
 		try {
-			uri = new URI(urlSpec);
 			URL url = uri.toURL();
 			URL absoluteURL = getResolver().resolveRelativePath(url);
 			if (absoluteURL == null)
 				throw new TermSuiteResourceException(String.format(
 					MSG_ERR_RESOURCE_NOT_FOUND, 
-					urlSpec, this, absoluteURL));
-		} catch (URISyntaxException|MalformedURLException e) {
+					uri.toString(), this, absoluteURL));
+		} catch (MalformedURLException e) {
 			throw new TermSuiteResourceException(String.format(
 					BAD_RESOURCE_URL, 
-					urlSpec, this),e);
+					uri.toString(), this),e);
 		}
-		return urlSpec;
 	}
 	
-	public boolean exists(Lang lang) {
-		return exists(getFileUrl(lang));
-	}
+//	public boolean exists(Lang lang) {
+//		return exists(getFileUrl(lang));
+//	}
 
-	private boolean exists(String fileUrl) {
-		try {
-			checkFileUrl(fileUrl);
-			return true;
-		} catch(Exception e) {
-			return false;
-		}
-	}
+//	private boolean exists(String fileUrl) {
+//		try {
+//			checkUrl(fileUrl);
+//			return true;
+//		} catch(Exception e) {
+//			return false;
+//		}
+//	}
 
-	public boolean exists(Lang lang, Tagger tagger) {
-		return exists(getFileUrl(lang, tagger));
-	}
+//	public boolean exists(Lang lang, Tagger tagger) {
+//		return exists(getFileUrl(lang, tagger));
+//	}
 	
 	private static RelativePathResolver resolver = null;
 	private static RelativePathResolver getResolver() {
@@ -150,17 +147,26 @@ public enum TermSuiteResource {
 		return resolver;
 	}
 
-	public String getUrl(String protocol, Lang lang, Tagger tagger) {
-		return String.format("%s:%s", protocol, getPath(lang, tagger));
+	public URI getUrl(URI prefix, Lang lang) {
+		URI url = prefix.resolve(getPath(lang,null));
+		checkUrl(url);
+		return url;
 	}
 
-	public String getFileUrl(Lang lang) {
-		return checkFileUrl(getUrl("file", lang));
+	
+	public URI getUrl(URI prefix, Lang lang, Tagger tagger) {
+		URI url = prefix.resolve(getPath(lang,tagger));
+		checkUrl(url);
+		return url;
 	}
 
-	public String getFileUrl(Lang lang, Tagger tagger) {
-		return checkFileUrl(getUrl("file", lang, tagger));
-	}
+//	public String getFileUrl(Lang lang) {
+//		return getUrl("file", lang);
+//	}
+//
+//	public String getFileUrl(Lang lang, Tagger tagger) {
+//		return getUrl("file", lang, tagger);
+//	}
 	
 	public String getPath(Lang lang) {
 		return getPath(lang, null);
