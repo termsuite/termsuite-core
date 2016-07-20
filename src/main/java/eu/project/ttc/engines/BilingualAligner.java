@@ -224,20 +224,30 @@ public class BilingualAligner {
 				} catch(RequiresSize2Exception e) {
 					// Do nothing
 				}
-				if(!compositional.isEmpty()) {
-					mergedCandidates.addAll(compositional);
-				} else {
-					try {
-						List<TranslationCandidate> semiDist = alignSemiDistributionalSize2Syntagmatic(sourceTerm, nbCandidates, minCandidateFrequency);
-						mergedCandidates.addAll(semiDist);					
-					} catch(RequiresSize2Exception e) {
-						// Do nothing
-					}
+				mergedCandidates.addAll(compositional);
+				List<TranslationCandidate> semiDist = Lists.newArrayList();
+				try {
+					semiDist = alignSemiDistributionalSize2Syntagmatic(sourceTerm, nbCandidates, minCandidateFrequency);
+				} catch(RequiresSize2Exception e) {
+					// Do nothing
 				}
+				mergedCandidates.addAll(semiDist);					
 			} 
 		}
 		
 		return sortTruncateNormalize(targetTermino, nbCandidates, mergedCandidates);
+	}
+
+	/**
+	 * Returns all source lemma sets of given size
+	 */
+	private List<List<Term>> getSourceLemmaSets(Term sourceTerm, int sourceLemmaSetSize) {
+		List<List<Term>> sourceLemmaSets = getSourceLemmaSets(sourceTerm);
+		Iterator<List<Term>> it = sourceLemmaSets.iterator();
+		while (it.hasNext()) 
+			if(it.next().size() !=  sourceLemmaSetSize)
+				it.remove();
+		return sourceLemmaSets;
 	}
 
 	private List<List<Term>> getSourceLemmaSets(Term sourceTerm) {
@@ -332,7 +342,7 @@ public class BilingualAligner {
 	
 	public List<TranslationCandidate> alignCompositionalSize2(Term sourceTerm, int nbCandidates, int minCandidateFrequency) {
 		checkNotNull(sourceTerm);
-		List<List<Term>> swtTerms = getSourceLemmaSets(sourceTerm);
+		List<List<Term>> swtTerms = getSourceLemmaSets(sourceTerm, 2);
 		Collection<TranslationCandidate> candidates = Lists.newArrayList();
 		
 		for(List<Term> pair:swtTerms) {
@@ -443,7 +453,7 @@ public class BilingualAligner {
 
 	public List<TranslationCandidate> alignSemiDistributionalSize2Syntagmatic(Term sourceTerm, int nbCandidates, int minCandidateFrequency) {
 		checkNotNull(sourceTerm);
-		List<List<Term>> swtTerms = getSourceLemmaSets(sourceTerm);
+		List<List<Term>> swtTerms = getSourceLemmaSets(sourceTerm, 2);
 		
 		List<TranslationCandidate> candidates = Lists.newArrayList();
 		for(List<Term> pair:swtTerms) {
