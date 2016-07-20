@@ -28,8 +28,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Queue;
+import java.util.Set;
 
-import org.assertj.core.util.Maps;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -39,6 +39,7 @@ import com.google.common.base.Objects;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 import com.google.common.collect.MinMaxPriorityQueue;
 import com.google.common.collect.Sets;
 import com.google.common.primitives.Ints;
@@ -468,7 +469,16 @@ public class BilingualAligner {
 			candidates.addAll(t2);
 		}
 
+		removeDuplicatesOnTerm(candidates);
 		return sortTruncateNormalize(targetTermino, nbCandidates, candidates);
+	}
+
+	private void removeDuplicatesOnTerm(List<TranslationCandidate> candidates) {
+		Set<Term> set = Sets.newHashSet();
+		Iterator<TranslationCandidate> it = candidates.iterator();
+		while(it.hasNext())
+			if(!set.add(it.next().getTerm()))
+				it.remove();
 	}
 
 	private Collection<? extends TranslationCandidate> semiDistributional(Term dicoTerm, Term vectorTerm) {
