@@ -241,6 +241,36 @@ public class CompoundUtilsSpec {
 				);
 	}
 	
+	
+	@Test
+	public void testAsLemmaPairs() {
+		assertThat(CompoundUtils.asLemmaPairs(w_ab))
+			.hasSize(0);
+
+		assertThat(CompoundUtils.asLemmaPairs(w_abcd))
+			.hasSize(1)
+			.extracting("element1", "element2")
+			.contains(
+				tuple("aa","cc"));
+		
+		assertThat(CompoundUtils.asLemmaPairs(w_abcdef))
+			.hasSize(2)
+			.extracting("element1", "element2")
+			.contains(
+				tuple("aa","cdee"),
+				tuple("abcc","ee"));
+		
+		assertThat(CompoundUtils.asLemmaPairs(w_abcdefgh))
+			.hasSize(3)
+			.extracting("element1", "element2")
+			.contains(
+				tuple("aa","cdefgg"),
+				tuple("abcc","efgg"),
+				tuple("abcdee","gg"));
+
+	}
+
+		
 	@Test
 	public void testInnerComponentPairs() {
 		assertThat(CompoundUtils.innerComponentPairs(w_ab))

@@ -126,14 +126,12 @@ public class TermUtils {
 	 * 			The {@link TermIndex} in which single word terms must be found.
 	 * @param term
 	 * 			The input term.
-	 * @param compoundLevel
-	 * 			The compoundLevel param passed to {@link Term#asComponentIterator(boolean)}.
 	 * @return
 	 * 			The list of single word terms.
 	 * 
 	 * @see Term#asComponentIterator(boolean)
 	 */
-	public static List<Term> getSingleWordTerms(TermIndex termIndex, Term term, boolean compoundLevel) {
+	public static List<Term> getSingleWordTerms(TermIndex termIndex, Term term) {
 		List<Term> terms = Lists.newArrayList();
 		for(TermWord tw:term.getWords()) {
 			Term swt = termIndex.getTermByGroupingKey(toGroupingKey(tw));

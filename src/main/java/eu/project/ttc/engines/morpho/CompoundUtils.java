@@ -195,4 +195,56 @@ public class CompoundUtils {
 		
 	}
 
+	/**
+	 * 
+	 * <b>WARNING: This method does not behave as {@link #innerComponentPairs(Word)}.</b> 
+	 * This method enforces that returned pairs cover the input word completely and 
+	 * without any overlap.
+	 *
+	 * Example 1: with a word that is not a compound, it returns an empty list.
+	 * 
+	 * Example 2: with a word that is a size-2 compound, it returns the only pair of lemmas possible:
+	 * 	
+	 * <code>
+	 * 	w = "ab|cd"
+	 *  returnedPairs are [["ab","cd"]]
+	 * </code>
+	 * 
+	 * Example 3: with a word that is a size-3 compound, it returns two pairs of lemmas:
+	 * 	
+	 * <code>
+	 * 	w = "ab|cd|ef"
+	 *  returnedPairs are [["ab","cded"], ["abcd","ef"]]
+	 * </code>
+	 * 
+	 * Example 4: with a word that is a size-n compound, it returns n-1 pairs of lemmas:
+	 * 
+	 * <code>
+	 * 	w = "comp1|comp2|...|compn"
+	 *  returnedPairs are [
+	 *  	["comp1","comp2comp3...compn"],
+	 *  	["comp1comp2","comp3comp4...compn"], 
+	 *  	..., 
+	 *  	["comp1comp2...compn-1","compn"]
+	 *  ]
+	 * </code>
+	 * 
+	 * 
+	 * @param word
+	 * 			The input compound word
+	 */
+	public static List<Pair<String>> asLemmaPairs(Word word) {
+		List<Pair<String>> pairs = Lists.newArrayList();
+		if(word.isCompound()) {
+			String lemma1, lemma2;
+			int n = word.getComponents().size();
+			for(int i=0; i<n-1; i++) {
+				lemma1 = merge(word, word.getComponents().subList(0, i+1)).getLemma();
+				lemma2 = merge(word, word.getComponents().subList(i+1, n)).getLemma();
+				pairs.add(new Pair<String>(lemma1, lemma2));
+			}
+		}
+		return pairs;
+	}
+
 }

@@ -23,8 +23,11 @@
 
 package eu.project.ttc.utils;
 
+import java.util.List;
+
 import com.google.common.base.Objects;
 import com.google.common.base.Preconditions;
+import com.google.common.collect.Lists;
 
 public class Pair<T extends Comparable<? super T>> {
 	
@@ -69,5 +72,12 @@ public class Pair<T extends Comparable<? super T>> {
 	@Override
 	public String toString() {
 		return String.format("(%s,%s)", element1, element2);
+	}
+
+	public List<T> toList() {
+		List<T> list = Lists.newArrayList();
+		list.add(element1);
+		list.add(element2);
+		return list;
 	}
 }
