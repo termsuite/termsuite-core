@@ -283,6 +283,9 @@ public class BilingualAligner {
 	private List<TranslationCandidate> sortTruncateNormalize(TermIndex termIndex, int nbCandidates, Collection<TranslationCandidate> candidatesCandidates) {
 		List<TranslationCandidate> list = Lists.newArrayList(candidatesCandidates);
 		Collections.sort(list);
+		// set rank
+		for(int i = 0; i < list.size(); i++)
+			list.get(i).setRank(i+1);
 		List<TranslationCandidate> finalCandidates = list.subList(0, Ints.min(nbCandidates, candidatesCandidates.size()));
 		normalizeCandidateScores(finalCandidates);
 		return finalCandidates;
@@ -508,10 +511,24 @@ public class BilingualAligner {
 
 
 	public static enum AlignmentMethod {
-		DICTIONARY,
-		DISTRIBUTIONAL,
-		COMPOSITIONAL,
-		SEMI_DISTRIBUTIONAL;
+		DICTIONARY("dico", "dictionary"),
+		DISTRIBUTIONAL("distrib", "distributional"),
+		COMPOSITIONAL("comp", "compositional"),
+		SEMI_DISTRIBUTIONAL("semi-dist", "semi-distributional");
+		
+		private String shortName;
+		private String longName;
+		private AlignmentMethod(String shortName, String longName) {
+			this.shortName = shortName;
+			this.longName = longName;
+		}
+		
+		public String getShortName() {
+			return shortName;
+		}
+		public String getLongName() {
+			return longName;
+		}
 	}
 
 	
@@ -519,6 +536,7 @@ public class BilingualAligner {
 		private IExplanation explanation;
 		private AlignmentMethod method;
 		private Term term;
+		private int rank=-1;
 		private double score;
 		
 		private TranslationCandidate(Term term, AlignmentMethod method, double score) {
@@ -529,7 +547,14 @@ public class BilingualAligner {
 		public void setScore(double score) {
 			this.score = score;
 		}
+		
+		public void setRank(int rank) {
+			this.rank = rank;
+		}
 
+		public int getRank() {
+			return rank;
+		}
 
 		private TranslationCandidate(Term term, AlignmentMethod method, double score, IExplanation explanation) {
 			super();
