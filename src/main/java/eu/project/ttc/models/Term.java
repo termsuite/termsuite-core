@@ -44,7 +44,7 @@ import eu.project.ttc.utils.TermSuiteUtils;
 import eu.project.ttc.utils.TermUtils;
 
 
-public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
+public class Term implements Comparable<Term> {
 	
 	private static final String NO_OCCURRENCE = "[No occurrence]";
 //	private List<TermOccurrence> occurrences = Lists.newArrayList();
@@ -154,12 +154,6 @@ public class Term implements Iterable<TermOccurrence>, Comparable<Term> {
 	public Collection<TermOccurrence> getOccurrences() {
 		return Collections.unmodifiableCollection(occurrenceStore.getOccurrences(this));
 	}
-	
-	@Override
-	public Iterator<TermOccurrence> iterator() {
-		return getOccurrences().iterator();
-	}
-
 
 //	public boolean isEmpty() {
 //		return occurrences.isEmpty();
