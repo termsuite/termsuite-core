@@ -24,9 +24,12 @@ package eu.project.ttc.engines;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.Queue;
 
+import org.assertj.core.util.Maps;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -348,9 +351,40 @@ public class BilingualAligner {
 		wrLog.compute();
 		for(TranslationCandidate candidate1:candidates1) {
 			for(TranslationCandidate candidate2:candidates2) {
-				List<Term> terms = targetTerminoLemmaLemmaIndex.getTerms(candidate1.getTerm().getLemma() + "+" + candidate2.getTerm().getLemma());
-				terms.addAll(targetTerminoLemmaLemmaIndex.getTerms(candidate2.getTerm().getLemma() + "+" + candidate1.getTerm().getLemma()));
-				for(Term t:terms) {
+				/*
+				 * 1- create candidate combine terms
+				 */
+				List<Term> candidateCombinedTerms = targetTerminoLemmaLemmaIndex.getTerms(candidate1.getTerm().getLemma() + "+" + candidate2.getTerm().getLemma());
+				candidateCombinedTerms.addAll(targetTerminoLemmaLemmaIndex.getTerms(candidate2.getTerm().getLemma() + "+" + candidate1.getTerm().getLemma()));
+				if(candidateCombinedTerms.isEmpty())
+					continue;
+				
+				/*
+				 * 2- Avoids retrieving too long terms by keeping the ones that have 
+				 * the lowest number of lemma+lemma keys.
+				 */
+				final Map<Term, Collection<String>> termLemmaLemmaKeys = Maps.newHashMap();
+				for(Term t:candidateCombinedTerms)
+					termLemmaLemmaKeys.put(t, TermValueProviders.WORD_LEMMA_LEMMA_PROVIDER.getClasses(targetTermino, t));
+				Collections.sort(candidateCombinedTerms, new Comparator<Term>() { 
+					@Override
+					public int compare(Term o1, Term o2) {
+						return Integer.compare(termLemmaLemmaKeys.get(o1).size(), termLemmaLemmaKeys.get(o2).size());
+					}
+				});
+				List<Term> filteredTerms = Lists.newArrayList();
+				int minimumNbClasses = termLemmaLemmaKeys.get(candidateCombinedTerms.get(0)).size();
+				for(Term t:candidateCombinedTerms) {
+					if(termLemmaLemmaKeys.get(t).size() == minimumNbClasses)
+						filteredTerms.add(t);
+					else 
+						break;
+				}
+				
+				/*
+				 * 3- Create candidates from filtered terms
+				 */
+				for(Term t:filteredTerms) {
 					combination.add(new TranslationCandidate(
 							t, 
 							method,
