@@ -26,13 +26,16 @@ package eu.project.ttc.engines;
 import java.util.Set;
 import java.util.TreeSet;
 
+import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
 import org.apache.uima.fit.descriptor.ExternalResource;
 import org.apache.uima.jcas.JCas;
+import org.apache.uima.resource.ResourceInitializationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.base.Optional;
 import com.google.common.collect.Sets;
 
 import eu.project.ttc.models.Term;
@@ -42,13 +45,14 @@ import eu.project.ttc.models.scored.ScoredModel;
 import eu.project.ttc.models.scored.ScoredTerm;
 import eu.project.ttc.models.scored.ScoredVariation;
 import eu.project.ttc.resources.ObserverResource;
+import eu.project.ttc.resources.ObserverResource.SubTaskObserver;
 import eu.project.ttc.resources.TermIndexResource;
-import eu.project.ttc.termino.engines.VariantScorerConfig;
 import eu.project.ttc.termino.engines.TermVariationScorer;
+import eu.project.ttc.termino.engines.VariantScorerConfig;
 
 public class ScorerAE extends JCasAnnotator_ImplBase {
 	private static final Logger logger = LoggerFactory.getLogger(ScorerAE.class);
-	public static final String TASK_NAME = "Scorying of terms";
+	public static final String TASK_NAME = "Scorying terms";
 
 	@ExternalResource(key=ObserverResource.OBSERVER, mandatory=true)
 	protected ObserverResource observerResource;
@@ -56,6 +60,15 @@ public class ScorerAE extends JCasAnnotator_ImplBase {
 	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
 	private TermIndexResource termIndexResource;
 
+	private Optional<SubTaskObserver> taskObserver = Optional.absent();
+
+	@Override
+	public void initialize(UimaContext context) throws ResourceInitializationException {
+		super.initialize(context);
+		if(observerResource != null)
+			taskObserver = Optional.of(observerResource.getTaskObserver(TASK_NAME));
+	}
+	
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
 		/*
@@ -79,7 +92,7 @@ public class ScorerAE extends JCasAnnotator_ImplBase {
 		/*
 		 * 2- remove filtered terms
 		 */
-		logger.debug("Removing filtered terms");
+		logger.debug("Selecting terms for removal");
 		Set<Term> keptTerms = Sets.newHashSet();
 		for(ScoredTerm st:scoredModel.getTerms())
 			keptTerms.add(st.getTerm());
@@ -88,8 +101,14 @@ public class ScorerAE extends JCasAnnotator_ImplBase {
 		for(Term t:termIndex.getTerms())
 			if(!keptTerms.contains(t))
 				remTerms.add(t);
-		for(Term t:remTerms)
+		logger.debug("Removing filtered terms");
+		if(taskObserver.isPresent())
+			taskObserver.get().setTotalTaskWork(remTerms.size());
+		for(Term t:remTerms) {
+			if(taskObserver.isPresent())
+				taskObserver.get().work(1);
 			termIndex.removeTerm(t);
+		}
 		logger.debug("{} terms filtered (and removed from term index) out of {}", 
 				remTerms.size(),
 				size
