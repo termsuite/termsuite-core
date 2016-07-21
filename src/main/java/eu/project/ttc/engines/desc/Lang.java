@@ -28,20 +28,21 @@ import eu.project.ttc.termino.engines.VariantScorerConfig;
 import eu.project.ttc.utils.OccurrenceBuffer;
 
 public enum Lang {
-	FR("french", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.1f, 0.1f, 0.3f, 0.7f, 3, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25)),
-	EN("english", Locale.ENGLISH, OccurrenceBuffer.NO_CLEANING, 0.7f, 0.1f, 0.1f, 0.1f, 0.85f, 3, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25)),
-	ES("spanish", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.1f, 0.1f, 0.3f, 1f, 3, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25)),
-	DE("german", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.3f, 0.1f, 0.1f, 0.85f, 4, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25)),
-	ZH("chinese", Locale.CHINESE, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.1f, 0.1f, 0.3f, 0.7f, 2, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25)),
-	LV("latvian", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5f, 0.1f, 0.1f, 0.3f, 0.8f, 3, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25)),
-	RU("russian", Locale.JAPAN, OccurrenceBuffer.NO_CLEANING,0.3f, 0.1f, 0.4f, 0.2f, 0.7f, 3,VariantScorerConfig.create(0.5, 0.1,0.1, 0.25)),
-	DA("danish", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5f, 0.1f, 0.1f, 0.3f, 0.8f, 3, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25));
+	FR("french", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.1f, 0.1f, 0.3f, 0.7f, 3, 3, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25)),
+	EN("english", Locale.ENGLISH, OccurrenceBuffer.NO_CLEANING, 0.7f, 0.1f, 0.1f, 0.1f, 0.85f, 3, 3, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25)),
+	ES("spanish", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.1f, 0.1f, 0.3f, 1f, 3, 3, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25)),
+	DE("german", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.3f, 0.1f, 0.1f, 0.85f, 3, 4, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25)),
+	ZH("chinese", Locale.CHINESE, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.1f, 0.1f, 0.3f, 0.7f, 3, 2, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25)),
+	LV("latvian", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5f, 0.1f, 0.1f, 0.3f, 0.8f, 3, 3, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25)),
+	RU("russian", Locale.JAPAN, OccurrenceBuffer.NO_CLEANING,0.3f, 0.1f, 0.4f, 0.2f, 0.7f, 3, 3,VariantScorerConfig.create(0.5, 0.1,0.1, 0.25)),
+	DA("danish", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5f, 0.1f, 0.1f, 0.3f, 0.8f, 3, 3, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25));
 	
 	private final float compostAlpha;
 	private final float compostBeta;
 	private final float compostGamma;
 	private final float compostDelta;
-	private final float compostThreshold;
+	private final float compostScoreThreshold;
+	private final int compostMinComponentSize;
 	private final int compostMaxComponentNumber;
 	private final Locale locale;
 	private final String longLang;
@@ -55,7 +56,8 @@ public enum Lang {
     		float compostBeta,
     		float compostGamma,
     		float compostDelta,
-    		float compostThreshold,
+    		float compostCompostThreshold,
+    		int compostMinComponentSize,
     		int compostMaxComponentNumber,
     		VariantScorerConfig scorefierConfig
     		) {
@@ -66,7 +68,8 @@ public enum Lang {
         this.compostBeta = compostBeta;
         this.compostGamma = compostGamma;
         this.compostDelta = compostDelta;
-        this.compostThreshold = compostThreshold;
+        this.compostScoreThreshold = compostCompostThreshold;
+        this.compostMinComponentSize = compostMinComponentSize;
         this.compostMaxComponentNumber = compostMaxComponentNumber;
         this.scorerConfig = scorefierConfig;
     }
@@ -135,8 +138,8 @@ public enum Lang {
 		return compostMaxComponentNumber;
 	}
 	
-	public float getCompostThreshold() {
-		return compostThreshold;
+	public float getCompostScoreThreshold() {
+		return compostScoreThreshold;
 	}
 	
 	public static Lang fromCode(String code) {
@@ -148,5 +151,9 @@ public enum Lang {
 
 	public VariantScorerConfig getScorerConfig() {
 		return scorerConfig;
+	}
+	
+	public int getCompostMinComponentSize() {
+		return compostMinComponentSize;
 	}
 }

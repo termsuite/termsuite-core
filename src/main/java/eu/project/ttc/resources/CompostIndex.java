@@ -74,6 +74,7 @@ public class CompostIndex {
 	}
 	
 	public Iterator<CompostIndexEntry> closedEntryCandidateIterator(String segment) {
-		return indexedDico.get(indexingKey.getIndexKey(segment)).iterator();
+		String indexKey = indexingKey.getIndexKey(segment);
+		return indexedDico.get(indexKey).iterator();
 	}
 }

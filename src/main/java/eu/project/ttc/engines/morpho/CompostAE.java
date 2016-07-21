@@ -25,12 +25,17 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Timer;
+import java.util.TimerTask;
 
+import org.apache.commons.lang.mutable.MutableLong;
+import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.fit.descriptor.ExternalResource;
 import org.apache.uima.jcas.JCas;
+import org.apache.uima.resource.ResourceInitializationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -118,8 +123,8 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 	private float scoreThreshold;
 
 	public static final String SEGMENT_SIMILARITY_THRESHOLD = "SegmentSimilarityThreshold";
-	@ConfigurationParameter(name=SEGMENT_SIMILARITY_THRESHOLD, mandatory=true)
-	private float segmentSimilarityThreshold;
+	@ConfigurationParameter(name=SEGMENT_SIMILARITY_THRESHOLD, mandatory=false, defaultValue="1")
+	private float segmentSimilarityThreshold = 1f;
 
 
 	public static final String MIN_COMPONENT_SIZE = "MinimumComponentSize";
@@ -160,6 +165,12 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 	             }
 	           });
 
+	public void initialize(UimaContext context) throws ResourceInitializationException {
+		super.initialize(context);
+		if(segmentSimilarityThreshold != 1.0) 
+			LOGGER.warn("segmentSimilarityThreshold is set to {}. Another value than 1 can make this AE very long to execute.", 
+					segmentSimilarityThreshold);
+	};
 	
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
@@ -176,11 +187,26 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 		swtLemmaIndex = termIndexResource.getTermIndex().getCustomIndex(TermIndexes.SINGLE_WORD_LEMMA);
 		buildCompostIndex();
 
-		int cnt = 0;
+		
+		final MutableLong cnt = new MutableLong(0);
+		
+		Timer progressLoggerTimer = new Timer("Morphosyntactic splitter AE");
+		progressLoggerTimer.schedule(new TimerTask() {
+			@Override
+			public void run() {
+				int total = termIndexResource.getTermIndex().getWords().size();
+				CompostAE.LOGGER.info("Progress: {}% ({} on {})",
+						String.format("%.2f", ((float)cnt.longValue()*100)/total),
+						cnt.longValue(),
+						total);
+			}
+		}, 5000l, 5000l);
+
+		
 		int observingStep = 100;
-		for(Word word:this.termIndexResource.getTermIndex().getWords()) {
-			cnt++;
-			if(cnt%observingStep == 0) {
+		for(Word word:termIndexResource.getTermIndex().getWords()) {
+			cnt.increment();
+			if(cnt.longValue()%observingStep == 0) {
 				observer.work(observingStep);
 			}
 			
@@ -228,6 +254,10 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 				}
 			}
 		}
+
+		//finalize
+		progressLoggerTimer.cancel();
+
 		LOGGER.debug("segment score cache size: {}", segmentScoreEntries.size());
 		LOGGER.debug("segment score hit count: " + segmentScoreEntries.stats().hitCount());
 		LOGGER.debug("segment score hit rate: " + segmentScoreEntries.stats().hitRate());

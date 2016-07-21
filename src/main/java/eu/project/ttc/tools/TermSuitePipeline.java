@@ -230,14 +230,14 @@ public class TermSuitePipeline {
 	/*
 	 * Compost Params
 	 */
-	private float alpha = 0.5f;
-	private float beta = 0.1f;
-	private float gamma = 0.1f;
-	private float delta = 0.3f;
-	private float compostScoreThreshold = 0.7f;
-	private int compostMinComponentSize = 3;
-	private int compostMaxComponentNum = 3;
-	private Object compostSegmentSimilarityThreshold = 0.7f;
+	private Optional<Float> alpha = Optional.absent();
+	private Optional<Float> beta = Optional.absent();
+	private Optional<Float> gamma = Optional.absent();
+	private Optional<Float> delta = Optional.absent();
+	private Optional<Float> compostScoreThreshold = Optional.absent();
+	private Optional<Integer> compostMinComponentSize = Optional.absent();
+	private Optional<Integer> compostMaxComponentNum = Optional.absent();
+	private Optional<Float> compostSegmentSimilarityThreshold = Optional.of(1f);
 
 	/*
 	 * Graphical Variant Gatherer parameters
@@ -1939,31 +1939,31 @@ public class TermSuitePipeline {
 	
 	public TermSuitePipeline setCompostCoeffs(float alpha, float beta, float gamma, float delta) {
 		Preconditions.checkArgument(alpha + beta + gamma + delta == 1.0f, "The sum of coeff must be 1.0");
-		this.alpha = alpha;
-		this.beta = beta;
-		this.gamma = gamma;
-		this.delta = delta;
+		this.alpha = Optional.of(alpha);
+		this.beta = Optional.of(beta);
+		this.gamma = Optional.of(gamma);
+		this.delta = Optional.of(delta);
 		return this;
 	}
 	
 	public TermSuitePipeline setCompostMaxComponentNum(int compostMaxComponentNum) {
-		this.compostMaxComponentNum = compostMaxComponentNum;
+		this.compostMaxComponentNum = Optional.of(compostMaxComponentNum);
 		return this;
 	}
 	
 	public TermSuitePipeline setCompostMinComponentSize(int compostMinComponentSize) {
-		this.compostMinComponentSize = compostMinComponentSize;
+		this.compostMinComponentSize = Optional.of(compostMinComponentSize);
 		return this;
 	}
 	
 	public TermSuitePipeline setCompostScoreThreshold(float compostScoreThreshold) {
-		this.compostScoreThreshold = compostScoreThreshold;
+		this.compostScoreThreshold = Optional.of(compostScoreThreshold);
 		return this;
 	}
 	
 	public TermSuitePipeline setCompostSegmentSimilarityThreshold(
-			Object compostSegmentSimilarityThreshold) {
-		this.compostSegmentSimilarityThreshold = compostSegmentSimilarityThreshold;
+			float compostSegmentSimilarityThreshold) {
+		this.compostSegmentSimilarityThreshold = Optional.of(compostSegmentSimilarityThreshold);
 		return this;
 	}
 	
@@ -1971,14 +1971,14 @@ public class TermSuitePipeline {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					CompostAE.class,
-					CompostAE.SCORE_THRESHOLD, this.compostScoreThreshold,
-					CompostAE.ALPHA, alpha,
-					CompostAE.BETA, beta,
-					CompostAE.GAMMA, gamma,
-					CompostAE.DELTA, delta,
-					CompostAE.MIN_COMPONENT_SIZE, this.compostMinComponentSize,
-					CompostAE.MAX_NUMBER_OF_COMPONENTS, this.compostMaxComponentNum,
-					CompostAE.SEGMENT_SIMILARITY_THRESHOLD, this.compostSegmentSimilarityThreshold
+					CompostAE.SCORE_THRESHOLD, this.compostScoreThreshold.isPresent() ? this.compostScoreThreshold.get() : this.lang.getCompostScoreThreshold(),
+					CompostAE.ALPHA, alpha.isPresent() ? alpha.get() : lang.getCompostAlpha(),
+					CompostAE.BETA, beta.isPresent() ? beta.get() : lang.getCompostBeta(),
+					CompostAE.GAMMA, gamma.isPresent() ? gamma.get() : lang.getCompostGamma(),
+					CompostAE.DELTA, delta.isPresent() ? delta.get() : lang.getCompostDelta(),
+					CompostAE.MIN_COMPONENT_SIZE, this.compostMinComponentSize.isPresent() ? this.compostMinComponentSize.get() : this.lang.getCompostMinComponentSize(),
+					CompostAE.MAX_NUMBER_OF_COMPONENTS, this.compostMaxComponentNum.isPresent() ? this.compostMaxComponentNum.get() : this.lang.getCompostMaxComponentNumber(),
+					CompostAE.SEGMENT_SIMILARITY_THRESHOLD, this.compostSegmentSimilarityThreshold.get()
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 			ExternalResourceFactory.bindResource(ae, resObserver());
