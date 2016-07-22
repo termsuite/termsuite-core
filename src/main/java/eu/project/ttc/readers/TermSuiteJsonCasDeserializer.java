@@ -58,6 +58,7 @@ import java.io.InputStream;
 import java.util.List;
 import java.util.Objects;
 
+import eu.project.ttc.types.FixedExpression;
 import org.apache.uima.cas.CAS;
 import org.apache.uima.cas.CASException;
 import org.apache.uima.fit.util.JCasUtil;
@@ -97,9 +98,11 @@ public class TermSuiteJsonCasDeserializer {
             SourceDocumentInformation sdi = (SourceDocumentInformation) cas.createAnnotation(cas.getJCas().getCasType(SourceDocumentInformation.type), 0, 0);
             WordAnnotation wa = (WordAnnotation) cas.createAnnotation(cas.getJCas().getCasType(WordAnnotation.type), 0, 0);
             TermOccAnnotation toa = (TermOccAnnotation) cas.createAnnotation(cas.getJCas().getCasType(TermOccAnnotation.type), 0, 0);
+            FixedExpression fe = (FixedExpression) cas.createAnnotation(cas.getJCas().getCasType(FixedExpression.type), 0, 0);
             boolean inSdi = false;
             boolean inWa = false;
             boolean inToa = false;
+            boolean inFe = false;
             boolean inCoveredText = false;
 
             while ((token=parser.nextToken()) != null)
@@ -138,6 +141,18 @@ public class TermSuiteJsonCasDeserializer {
                         FillTermOccAnnotations(parser, token, toa, cas);
                     }
 
+                    else if (inFe){
+                        if (token == JsonToken.END_ARRAY
+                                && Objects.equals(parser.getParsingContext().getCurrentName(), "fixed_expressions")) {
+                            inFe = false;
+                        }
+                        else if (token == JsonToken.END_OBJECT) {
+                            fe.addToIndexes();
+                            fe = (FixedExpression) cas.createAnnotation(cas.getJCas().getCasType(FixedExpression.type), 0, 0);
+                        }
+                        FillFixedExpressions(parser, token, fe, cas);
+                    }
+
                     else if (inCoveredText){
                         if (token == JsonToken.VALUE_STRING) {
                             String text = parser.getText();
@@ -156,6 +171,11 @@ public class TermSuiteJsonCasDeserializer {
                     else if ("term_occ_annotations".equals(parser.getParsingContext().getCurrentName())) {
                         inToa = true;
                     }
+
+                    else if ("fixed_expressions".equals(parser.getParsingContext().getCurrentName())) {
+                        inFe = true;
+                    }
+
                     else if ("covered_text".equals(parser.getParsingContext().getCurrentName())) {
                         inCoveredText = true;
                     }
@@ -163,6 +183,19 @@ public class TermSuiteJsonCasDeserializer {
             sdi.addToIndexes();
         } catch (IOException | CASException e) {
             logger.error("An error occurred during TermSuite Json Cas parsing", e);
+        }
+    }
+
+    private static void FillFixedExpressions(JsonParser parser, JsonToken token, FixedExpression fe, CAS cas) throws IOException {
+        if (token.equals(JsonToken.FIELD_NAME)){
+            switch (parser.getCurrentName()){
+                case F_BEGIN :
+                    fe.setBegin(parser.nextIntValue(0));
+                    break;
+                case F_END :
+                    fe.setEnd(parser.nextIntValue(0));
+                    break;
+            }
         }
     }
 

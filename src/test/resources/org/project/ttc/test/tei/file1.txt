@@ -1,4 +1,20 @@
-
+WordAnnotation wa2 = (WordAnnotation) fixtureCas.getCas().createAnnotation(fixtureCas.getCasType(WordAnnotation.type),35,37);
+		wa2.setCategory("preposition");
+		wa2.setLemma("du");
+		wa2.setStem("du");
+		wa2.setTag("PRP");
+		wa2.setSubCategory("test");
+		wa2.setRegexLabel("P");
+		wa2.setNumber("sg");
+		wa2.setGender("ms");
+		wa2.setCase("dat");
+		wa2.setMood("test");
+		wa2.setTense("test");
+		wa2.setPerson("test");
+		wa2.setDegree("test");
+		wa2.setFormation("test");
+		wa2.setLabels("label");
+		wa2.addToIndexes();
 
                                                                                                                                                                    
              

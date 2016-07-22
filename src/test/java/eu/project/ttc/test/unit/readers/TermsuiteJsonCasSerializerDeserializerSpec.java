@@ -28,6 +28,7 @@ import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import eu.project.ttc.types.FixedExpression;
 import org.apache.uima.UIMAException;
 import org.apache.uima.cas.FSIterator;
 import org.apache.uima.fit.factory.JCasFactory;
@@ -148,6 +149,78 @@ public class TermsuiteJsonCasSerializerDeserializerSpec {
 		wa1.setLabels("label");
 		wa1.addToIndexes();
 
+		WordAnnotation wa2 = (WordAnnotation) fixtureCas.getCas().createAnnotation(fixtureCas.getCasType(WordAnnotation.type),35,37);
+		wa2.setCategory("preposition");
+		wa2.setLemma("du");
+		wa2.setStem("du");
+		wa2.setTag("PRP");
+		wa2.setSubCategory("test");
+		wa2.setRegexLabel("P");
+		wa2.setNumber("sg");
+		wa2.setGender("ms");
+		wa2.setCase("dat");
+		wa2.setMood("test");
+		wa2.setTense("test");
+		wa2.setPerson("test");
+		wa2.setDegree("test");
+		wa2.setFormation("test");
+		wa2.setLabels("label");
+		wa2.addToIndexes();
+
+		wa2 = (WordAnnotation) fixtureCas.getCas().createAnnotation(fixtureCas.getCasType(WordAnnotation.type),38,42);
+		wa2.setCategory("noun");
+		wa2.setLemma("saut");
+		wa2.setStem("saut");
+		wa2.setTag("N");
+		wa2.setSubCategory("test");
+		wa2.setRegexLabel("N");
+		wa2.setNumber("sg");
+		wa2.setGender("ms");
+		wa2.setCase("dat");
+		wa2.setMood("test");
+		wa2.setTense("test");
+		wa2.setPerson("test");
+		wa2.setDegree("test");
+		wa2.setFormation("test");
+		wa2.setLabels("label");
+		wa2.addToIndexes();
+
+		wa2 = (WordAnnotation) fixtureCas.getCas().createAnnotation(fixtureCas.getCasType(WordAnnotation.type),43,45);
+		wa2.setCategory("preposition");
+		wa2.setLemma("de");
+		wa2.setStem("de");
+		wa2.setTag("P");
+		wa2.setSubCategory("test");
+		wa2.setRegexLabel("P");
+		wa2.setNumber("sg");
+		wa2.setGender("ms");
+		wa2.setCase("dat");
+		wa2.setMood("test");
+		wa2.setTense("test");
+		wa2.setPerson("test");
+		wa2.setDegree("test");
+		wa2.setFormation("test");
+		wa2.setLabels("label");
+		wa2.addToIndexes();
+
+		wa2 = (WordAnnotation) fixtureCas.getCas().createAnnotation(fixtureCas.getCasType(WordAnnotation.type),46,50);
+		wa2.setCategory("noun");
+		wa2.setLemma("chat");
+		wa2.setStem("chat");
+		wa2.setTag("N");
+		wa2.setSubCategory("test");
+		wa2.setRegexLabel("N");
+		wa2.setNumber("sg");
+		wa2.setGender("ms");
+		wa2.setCase("dat");
+		wa2.setMood("test");
+		wa2.setTense("test");
+		wa2.setPerson("test");
+		wa2.setDegree("test");
+		wa2.setFormation("test");
+		wa2.setLabels("label");
+		wa2.addToIndexes();
+
 		TermOccAnnotation toa = (TermOccAnnotation) fixtureCas.getCas()
 				.createAnnotation(fixtureCas.getCasType(TermOccAnnotation.type), 3, 34);
 
@@ -163,7 +236,11 @@ public class TermsuiteJsonCasSerializerDeserializerSpec {
 		toa.setWords(fs);
 		toa.addToIndexes();
 
-		fixtureCas.setDocumentText("le recouvrement parfaitement total");
+		FixedExpression fe = (FixedExpression) fixtureCas.getCas()
+				.createAnnotation(fixtureCas.getCasType(FixedExpression.type),38,50);
+		fe.addToIndexes();
+
+		fixtureCas.setDocumentText("le recouvrement parfaitement total du saut de chat");
 
 	}
 
@@ -202,11 +279,17 @@ public class TermsuiteJsonCasSerializerDeserializerSpec {
 			assertEquals(toaExpected.getWords().get(i).toString(), toa.getWords().get(i).toString());
 		}
 
+		//Test fixedExpression
+		FixedExpression feExpected = (FixedExpression) fixtureCas.getAnnotationIndex(FixedExpression.type)
+				.iterator().next();
+		FixedExpression fe = (FixedExpression) jCas.getAnnotationIndex(FixedExpression.type).iterator().next();
+		assertEquals(feExpected.toString(),fe.toString());
+
 		// Test Size of FSArrayWords in termOccAnnotation
 		assertEquals("this two array must have the same size", toaExpected.getWords().size(), toa.getWords().size());
 
 		// Test covered Text
-		assertEquals("le recouvrement parfaitement total", jCas.getDocumentText());
+		assertEquals("le recouvrement parfaitement total du saut de chat", jCas.getDocumentText());
 	}
 
 }

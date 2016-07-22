@@ -75,6 +75,78 @@
     "labels" : "label",
     "begin" : 29,
     "end" : 34
+  }, {
+    "cat" : "preposition",
+    "lemma" : "du",
+    "stem" : "du",
+    "tag" : "PRP",
+    "scat" : "test",
+    "regexLabel" : "P",
+    "number" : "sg",
+    "gender" : "ms",
+    "case" : "dat",
+    "mood" : "test",
+    "tense" : "test",
+    "person" : "test",
+    "degree" : "test",
+    "formation" : "test",
+    "labels" : "label",
+    "begin" : 35,
+    "end" : 37
+  }, {
+    "cat" : "noun",
+    "lemma" : "saut",
+    "stem" : "saut",
+    "tag" : "N",
+    "scat" : "test",
+    "regexLabel" : "N",
+    "number" : "sg",
+    "gender" : "ms",
+    "case" : "dat",
+    "mood" : "test",
+    "tense" : "test",
+    "person" : "test",
+    "degree" : "test",
+    "formation" : "test",
+    "labels" : "label",
+    "begin" : 38,
+    "end" : 42
+  }, {
+    "cat" : "preposition",
+    "lemma" : "de",
+    "stem" : "de",
+    "tag" : "P",
+    "scat" : "test",
+    "regexLabel" : "P",
+    "number" : "sg",
+    "gender" : "ms",
+    "case" : "dat",
+    "mood" : "test",
+    "tense" : "test",
+    "person" : "test",
+    "degree" : "test",
+    "formation" : "test",
+    "labels" : "label",
+    "begin" : 43,
+    "end" : 45
+  }, {
+    "cat" : "noun",
+    "lemma" : "chat",
+    "stem" : "chat",
+    "tag" : "N",
+    "scat" : "test",
+    "regexLabel" : "N",
+    "number" : "sg",
+    "gender" : "ms",
+    "case" : "dat",
+    "mood" : "test",
+    "tense" : "test",
+    "person" : "test",
+    "degree" : "test",
+    "formation" : "test",
+    "labels" : "label",
+    "begin" : 46,
+    "end" : 50
   } ],
   "term_occ_annotations" : [ {
     "pattern" : "N A",
@@ -84,5 +156,9 @@
     "begin" : 3,
     "end" : 34
   } ],
-  "covered_text" : "le recouvrement parfaitement total"
+  "fixed_expressions" : [ {
+    "begin" : 38,
+    "end" : 50
+  } ],
+  "covered_text" : "le recouvrement parfaitement total du saut de chat"
 }
