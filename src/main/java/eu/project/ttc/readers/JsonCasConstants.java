@@ -30,6 +30,7 @@ public class JsonCasConstants {
     public static final String F_SDI = "sdi";
     public static final String F_WORD_ANNOTATIONS = "word_annotations";
     public static final String F_TERM_OCC_ANNOTATIONS = "term_occ_annotations";
+    public static final String F_FIXED_EXPRESSIONS = "fixed_expressions";
     public static final String F_TEXT = "covered_text";
     public static final String F_CATEGORY = "cat";
     public static final String F_LEMMA = "lemma";
