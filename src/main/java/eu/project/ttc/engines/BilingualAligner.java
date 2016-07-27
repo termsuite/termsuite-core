@@ -38,6 +38,7 @@ import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ComparisonChain;
+import com.google.common.collect.Iterators;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.common.collect.MinMaxPriorityQueue;
@@ -210,26 +211,29 @@ public class BilingualAligner {
 	 */
 	public List<TranslationCandidate> align(Term sourceTerm, int nbCandidates, int minCandidateFrequency) {
 		List<TranslationCandidate> mergedCandidates = Lists.newArrayList();
-		for(List<Term> sourceLemmaSet:getSourceLemmaSets(sourceTerm)) {
+		List<List<Term>> sourceLemmaSets = getSourceLemmaSets(sourceTerm);
+		for(List<Term> sourceLemmaSet:sourceLemmaSets) {
 			Preconditions.checkState(sourceLemmaSet.size() == 1 || sourceLemmaSet.size() == 2, 
 					ERR_MSG_BAD_SOURCE_LEMMA_SET_SIZE, sourceLemmaSet);
 			if(sourceLemmaSet.size() == 1) {
-				mergedCandidates.addAll(alignDistributional(sourceTerm, nbCandidates, minCandidateFrequency));
+				mergedCandidates.addAll(alignDistributional(sourceLemmaSet.get(0), 3*nbCandidates, minCandidateFrequency));
 			} else if(sourceLemmaSet.size() == 2) {
 				List<TranslationCandidate> compositional = Lists.newArrayList();
 				try {
-					compositional.addAll(alignCompositionalSize2(sourceTerm, nbCandidates, minCandidateFrequency));
+					compositional.addAll(alignCompositionalSize2(sourceLemmaSet.get(0), sourceLemmaSet.get(1), nbCandidates, minCandidateFrequency));
 				} catch(RequiresSize2Exception e) {
 					// Do nothing
 				}
 				mergedCandidates.addAll(compositional);
-				List<TranslationCandidate> semiDist = Lists.newArrayList();
-				try {
-					semiDist = alignSemiDistributionalSize2Syntagmatic(sourceTerm, nbCandidates, minCandidateFrequency);
-				} catch(RequiresSize2Exception e) {
-					// Do nothing
+				if(mergedCandidates.isEmpty()) {
+					List<TranslationCandidate> semiDist = Lists.newArrayList();
+					try {
+						semiDist = alignSemiDistributionalSize2Syntagmatic(sourceLemmaSet.get(0), sourceLemmaSet.get(1), nbCandidates, minCandidateFrequency);
+					} catch(RequiresSize2Exception e) {
+						// Do nothing
+					}
+					mergedCandidates.addAll(semiDist);
 				}
-				mergedCandidates.addAll(semiDist);					
 			} 
 		}
 		
@@ -343,24 +347,12 @@ public class BilingualAligner {
 	}
 
 	
-	public List<TranslationCandidate> alignCompositionalSize2(Term sourceTerm, int nbCandidates, int minCandidateFrequency) {
-		checkNotNull(sourceTerm);
-		List<List<Term>> swtTerms = getSourceLemmaSets(sourceTerm, 2);
-		Collection<TranslationCandidate> candidates = Lists.newArrayList();
-		
-		for(List<Term> pair:swtTerms) {
-			checkSize2(sourceTerm, pair);
-			Term swt1 = sourceTermino.getTermByGroupingKey(pair.get(0).getGroupingKey());
-			Term swt2 = sourceTermino.getTermByGroupingKey(pair.get(1).getGroupingKey());
+	private List<TranslationCandidate> alignCompositionalSize2(Term lemmaTerm1, Term lemmaTerm2, int nbCandidates, int minCandidateFrequency) {
+		List<TranslationCandidate> candidates = Lists.newArrayList();	
+		List<TranslationCandidate> dicoCandidates1 = translateWithDico(lemmaTerm1, Integer.MAX_VALUE);
+		List<TranslationCandidate> dicoCandidates2 = translateWithDico(lemmaTerm2, Integer.MAX_VALUE);
 			
-			if(swt1 == null || swt2 == null)
-				return Lists.newArrayList();
-			
-			List<TranslationCandidate> dicoCandidates1 = translateWithDico(swt1, Integer.MAX_VALUE);
-			List<TranslationCandidate> dicoCandidates2 = translateWithDico(swt2, Integer.MAX_VALUE);
-			
-			candidates.addAll(combineCandidates(dicoCandidates1, dicoCandidates2, AlignmentMethod.COMPOSITIONAL));
-		}
+		candidates.addAll(combineCandidates(dicoCandidates1, dicoCandidates2, AlignmentMethod.COMPOSITIONAL));
 		return sortTruncateNormalize(targetTermino, nbCandidates, candidates);
 	}
 
@@ -382,10 +374,6 @@ public class BilingualAligner {
 				Joiner.on(TermSuiteConstants.COMMA).join(swtTerms)
 				);
 		}
-	}
-	private void checkSize2(Term sourceTerm, List<Term> swtTerms) {
-		if(swtTerms.size() != 2)
-			throw new RequiresSize2Exception(sourceTerm, swtTerms);
 	}
 
 	/**
@@ -454,22 +442,13 @@ public class BilingualAligner {
 		Preconditions.checkNotNull(sourceTerm, MSG_TERM_NOT_NULL);
 	}
 
-	public List<TranslationCandidate> alignSemiDistributionalSize2Syntagmatic(Term sourceTerm, int nbCandidates, int minCandidateFrequency) {
-		checkNotNull(sourceTerm);
-		List<List<Term>> swtTerms = getSourceLemmaSets(sourceTerm, 2);
-		
+	private List<TranslationCandidate> alignSemiDistributionalSize2Syntagmatic(Term lemmaTerm1, Term lemmaTerm2, int nbCandidates, int minCandidateFrequency) {
 		List<TranslationCandidate> candidates = Lists.newArrayList();
-		for(List<Term> pair:swtTerms) {
-			checkSize2(sourceTerm, pair);
 			
-			Term swt1 = pair.get(0);
-			Term swt2 = pair.get(1);
-			
-			Collection<? extends TranslationCandidate> t1 = semiDistributional(swt1, swt2);
-			candidates.addAll(t1);
-			Collection<? extends TranslationCandidate> t2 = semiDistributional(swt2, swt1);
-			candidates.addAll(t2);
-		}
+		Collection<? extends TranslationCandidate> t1 = semiDistributional(lemmaTerm1, lemmaTerm2);
+		candidates.addAll(t1);
+		Collection<? extends TranslationCandidate> t2 = semiDistributional(lemmaTerm2, lemmaTerm1);
+		candidates.addAll(t2);
 
 		removeDuplicatesOnTerm(candidates);
 		return sortTruncateNormalize(targetTermino, nbCandidates, candidates);
@@ -488,7 +467,7 @@ public class BilingualAligner {
 		List<TranslationCandidate> dicoCandidates = translateWithDico(dicoTerm, Integer.MAX_VALUE);
 		
 		if(dicoCandidates.isEmpty())
-			// Optimisation: no need to align since there is no possible comination
+			// Optimisation: no need to align since there is no possible combination
 			return candidates;
 		else {
 			List<TranslationCandidate> vectorCandidates = alignDistributional(vectorTerm, Integer.MAX_VALUE, 1);
