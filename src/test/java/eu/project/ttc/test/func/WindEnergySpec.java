@@ -96,7 +96,7 @@ public abstract class WindEnergySpec {
 	protected static TermIndex runPipeline(Lang lang) {
 		MemoryTermIndexManager.getInstance().clear();
 		TermSuitePipeline pipeline = TermSuitePipeline.create(lang.getCode())
-			.setResourceFilePath(FunctionalTests.getResourcePath())
+			.setResourceDir(FunctionalTests.getResourcePath())
 			.setCollection(TermSuiteCollection.TXT, FunctionalTests.getCorpusWEPath(lang), "UTF-8")
 			.aeWordTokenizer()
 			.setTreeTaggerHome(FunctionalTests.getTaggerPath())

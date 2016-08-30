@@ -53,7 +53,11 @@ public class BilingualDictionary {
 		StringTokenizer st;
 		while((line = br.readLine()) != null) {
 			st = new StringTokenizer(line, TermSuiteConstants.TAB);
+			if(!st.hasMoreTokens())
+				continue;
 			String source = st.nextToken();
+			if(!st.hasMoreTokens())
+				continue;
 			String target = st.nextToken();
 			dico.targetTerms.put(source.toLowerCase(), target.toLowerCase());
 		}

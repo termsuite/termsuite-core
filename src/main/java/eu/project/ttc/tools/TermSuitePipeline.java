@@ -21,6 +21,7 @@
  *******************************************************************************/
 package eu.project.ttc.tools;
 
+import java.io.File;
 import java.io.Serializable;
 import java.math.BigInteger;
 import java.net.URI;
@@ -147,6 +148,7 @@ import eu.project.ttc.stream.StreamingCasConsumer;
 import eu.project.ttc.types.FixedExpression;
 import eu.project.ttc.types.TermOccAnnotation;
 import eu.project.ttc.types.WordAnnotation;
+import eu.project.ttc.utils.FileUtils;
 import eu.project.ttc.utils.OccurrenceBuffer;
 import eu.project.ttc.utils.TermSuiteUtils;
 import fr.free.rocheteau.jerome.engines.Stemmer;
@@ -568,18 +570,35 @@ public class TermSuitePipeline {
 	 * Invoke this method if TermSuite resources are accessible via 
 	 * a "file:/path/to/res/" url, i.e. they can be found locally.
 	 * 
-	 * @param resourcePath
+	 * @param resourceDir
 	 * @return
 	 */
-	public TermSuitePipeline setResourceFilePath(String resourcePath) {
-		TermSuiteUtils.addToClasspath(resourcePath);
+	public TermSuitePipeline setResourceDir(String resourceDir) {
+		Preconditions.checkArgument(new File(resourceDir).isDirectory(), 
+				"Not a directory: %s", resourceDir);
+		TermSuiteUtils.addToClasspath(resourceDir);
 		try {
-			this.resourceUrlPrefix = Optional.of(new URI("file:" + resourcePath));
+			this.resourceUrlPrefix = Optional.of(new URI("file:" + resourceDir));
+			LOGGER.info("Resource URL prefix is: {}", this.resourceUrlPrefix.get());
 		} catch (URISyntaxException e) {
 			throw new TermSuitePipelineException(e);
 		}
 		return this;
 	}
+	
+	public TermSuitePipeline setResourceJar(String resourceJar) {
+		Preconditions.checkArgument(FileUtils.isJar(resourceJar), 
+				"Not a jar file: %s", resourceJar);
+		try {
+			this.resourceUrlPrefix = Optional.of(new URI("jar:file:"+resourceJar+"!/"));
+			LOGGER.info("Resource URL prefix is: {}", this.resourceUrlPrefix.get());
+		} catch (URISyntaxException e) {
+			throw new TermSuitePipelineException(e);
+		}
+		return this;		
+	}
+
+	
 	
 	private Optional<URI> resourceUrlPrefix = Optional.absent();
 	

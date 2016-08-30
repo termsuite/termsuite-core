@@ -347,7 +347,10 @@ public class TermSuiteTerminoCLI {
 				}
 
 				// resource
-				pipeline.setResourceFilePath(resourcePack);
+				if(resourcePack.endsWith(".jar"))
+					pipeline.setResourceJar(resourcePack);
+				else
+					pipeline.setResourceDir(resourcePack);
 				
 				// mongodb
 				if(mongoStoreDBURL.isPresent())

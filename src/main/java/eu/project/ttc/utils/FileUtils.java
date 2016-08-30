@@ -28,6 +28,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.List;
+import java.util.jar.JarEntry;
+import java.util.jar.JarFile;
 
 import com.google.common.base.Splitter;
 import com.google.common.collect.Iterables;
@@ -46,6 +48,18 @@ public class FileUtils {
 	    String pre = (si ? "kMGTPE" : "KMGTPE").charAt(exp-1) + (si ? "" : "i");
 	    return String.format("%.1f %sB", bytes / Math.pow(unit, exp), pre);
 	}
+	
+	public static boolean isJar(String file) {
+		try {
+			JarFile jar = new JarFile(file);
+			JarEntry entry = jar.getJarEntry("META-INF/MANIFEST.MF");
+			jar.close();
+			return entry != null;
+		} catch (IOException e) {
+			return false;
+		}
+	}
+
 
 	public static List<String> getUncommentedLines(File file, Charset forName) throws IOException {
 		try {
