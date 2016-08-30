@@ -200,4 +200,17 @@ public class JCasUtils {
 			return Optional.absent();
 	}
 
+	public static boolean containsStrictly(Annotation container, Annotation subAnnotation) {
+		return contains(container, subAnnotation) 
+				&& !sameIndexes(container, subAnnotation);
+	}
+
+	public static boolean contains(Annotation container, Annotation subAnnotation) {
+		return container.getBegin() <= subAnnotation.getBegin() && container.getEnd()>= subAnnotation.getEnd();
+	}
+
+	public static boolean sameIndexes(Annotation anno1, Annotation anno2) {
+		return anno1.getBegin() == anno2.getBegin() && anno1.getEnd() == anno2.getEnd();		
+	}
+
 }

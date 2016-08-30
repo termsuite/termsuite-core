@@ -30,7 +30,6 @@ import org.apache.uima.cas.FSIterator;
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.fit.descriptor.ExternalResource;
-import org.apache.uima.fit.util.JCasUtil;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.slf4j.Logger;
@@ -78,6 +77,8 @@ public class FixedExpressionSpotter extends JCasAnnotator_ImplBase {
 
 		// stats
 		int cnt = 0;
+		
+		
 		
 		// Buffer of last n annotations
 		Deque<WordAnnotation> lastNAnnos = new LinkedList<WordAnnotation>();
@@ -148,18 +149,24 @@ public class FixedExpressionSpotter extends JCasAnnotator_ImplBase {
 		 */
 		Set<Annotation> trash = Sets.newHashSet();
 		if(removeWordAnnotationsFromCas || removeTermoccAnnotationsFromCas) {
-			FSIterator<Annotation> it2 = aJCas.getAnnotationIndex(FixedExpression.type).iterator();
-			while (it2.hasNext()) {
-				FixedExpression fe = (FixedExpression) it2.next();
-				if(removeWordAnnotationsFromCas)
-					for(WordAnnotation a:JCasUtil.subiterate(aJCas, WordAnnotation.class, fe, false, true)) {
-						trash.add(a);
+			FSIterator<Annotation> feIt = aJCas.getAnnotationIndex(FixedExpression.type).iterator();
+			while (feIt.hasNext()) {
+				FixedExpression fe = (FixedExpression) feIt.next();
+				FSIterator<Annotation> it3 = aJCas.getAnnotationIndex().iterator();
+				while(it3.hasNext()) {
+					Annotation a = it3.next();
+					if(removeWordAnnotationsFromCas && a instanceof WordAnnotation) {
+						if(JCasUtils.containsStrictly(fe, a))
+							trash.add(a);
+					} else if(removeTermoccAnnotationsFromCas && a instanceof TermOccAnnotation) {
+						if(JCasUtils.containsStrictly(fe, a))
+							trash.add(a);
 					}
-				if(removeTermoccAnnotationsFromCas)
-					for(TermOccAnnotation a:JCasUtil.subiterate(aJCas, TermOccAnnotation.class, fe, false, true))
-						trash.add(a);
+				}
 			}
 		}
+		
+		
 		for(Annotation a:trash)
 			a.removeFromIndexes();
 		

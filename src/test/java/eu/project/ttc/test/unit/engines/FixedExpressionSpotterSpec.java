@@ -23,8 +23,6 @@
 
 package eu.project.ttc.test.unit.engines;
 
-import static org.junit.Assert.fail;
-
 import java.io.FileInputStream;
 
 import org.apache.uima.analysis_engine.AnalysisEngine;
