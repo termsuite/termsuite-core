@@ -136,7 +136,8 @@ public class VariantRuleYamlIOSpec {
 		VariantRuleYamlIO yamlIO = VariantRuleYamlIO.fromYaml(TestUtil.readFile(badRules1Path));
 		when(yamlIO).getVariantRules();
 		// then: we expect an IndexOutOfBoundsException
-		BDDAssertions.then(caughtException())
+		Exception caughtException = caughtException();
+		BDDAssertions.then(caughtException)
 		        .isInstanceOf(type)
 		        .hasMessageContaining(description)
 		        .hasNoCause();

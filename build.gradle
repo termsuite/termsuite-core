@@ -6,7 +6,7 @@ apply plugin: 'maven-publish'
 
 group = 'fr.univ-nantes.termsuite'
 archivesBaseName = 'termsuite-core'
-version = '2.2'
+version = '2.3-snapshot'
 
 project.ext.description = 'A Java UIMA-based toolbox for multilingual and efficient terminology extraction an multilingual term alignment'
 project.ext.organization = 'LINA CNRS UMR 6241 - Université de Nantes'
@@ -16,8 +16,8 @@ project.ext.license = 'Apache 2'
 project.ext.licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
 project.ext.jcasFile = 'src/main/resources/TermSuite_TS.xml'
 
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
 
