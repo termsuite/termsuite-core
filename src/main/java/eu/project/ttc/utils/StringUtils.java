@@ -22,6 +22,10 @@
 package eu.project.ttc.utils;
 
 import java.io.File;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.text.Normalizer;
 import java.text.Normalizer.Form;
 import java.util.Comparator;
@@ -152,6 +156,22 @@ public class StringUtils {
 		
 	}
 	
+	
+	/**
+	 * Collapse all sequences of line breaks into one single line break.
+	 * 
+	 * This helper method is used to convert files into the format where 
+	 * there is only one sentence per phrase.
+	 * @param string
+	 * @return
+	 */
+	public static String toOnelineSentences(String string) {
+		return string
+				.replaceAll("(\n\\s*){2,}", "\n");
+		
+	}
+
+	
 	public static boolean hasSpecialCharacters(String string) {
 		for(char c:string.toCharArray())
 			if(SPECIAL_CHARACTERS.indexOf(c) != -1)
@@ -159,6 +179,20 @@ public class StringUtils {
 		return false;
 	}
 
+	
+	/**
+	 * Read a file to a string
+	 * 
+	 * @param path
+	 * @param encoding
+	 * @return
+	 * @throws IOException
+	 */
+	public static String readFile(String path, Charset encoding) throws IOException {
+		byte[] encoded = Files.readAllBytes(Paths.get(path));
+		return new String(encoded, encoding);
+	}
+	
 	public static boolean hasDigits(String string) {
 		for(char c:string.toCharArray())
 			if(Character.isDigit(c))

@@ -21,7 +21,9 @@
  *******************************************************************************/
 package eu.project.ttc.test.unit.utils;
 
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertEquals;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -35,8 +37,20 @@ public class StringUtilsSpec {
 	
 	@Before
 	public void setUp() {
-		
 	}
+	
+	@Test
+	public void testToOnelineSentences() {
+		assertThat(StringUtils.toOnelineSentences("Bonjour tout le monde."))
+			.isEqualTo("Bonjour tout le monde.");
+
+		assertThat(StringUtils.toOnelineSentences("Bonjour\ntout le monde."))
+		.isEqualTo("Bonjour\ntout le monde.");
+		assertThat(StringUtils.toOnelineSentences("Bonjour\n\n  \ntout le monde."))
+		.isEqualTo("Bonjour\ntout le monde.");
+
+	}
+
 
 	@Test
 	public void nbDigitSequences() {
