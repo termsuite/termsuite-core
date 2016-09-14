@@ -1,0 +1,195 @@
+# [greek:aero]
+аэро-
+# [greek:agro]
+агро-
+# [greek:auto]
+авто-
+# [greek:bio]
+био-
+
+# [greek:cardio]
+кардио-
+# [greek:chrono]
+хроно-
+# [greek:cinema]
+кино-
+# [greek:cosmo]
+космо-
+# [greek:crate]
+-кратия
+-крат
+-кратический
+# [greek:crypto]
+крипто-
+# [greek:cyclo]
+цикло-
+# [greek:demo]
+демо-
+# [greek:drome]
+-дром
+# [greek:electro]
+электро-
+# [greek:gene]
+гене-
+-ген
+# [greek:geo]
+гео-
+# [greek:gram]
+-грам
+-грамма
+# [greek:grapho]
+графо-
+-граф
+-графия
+-графический
+# [greek:hecto]
+гекто-
+# [greek:helio]
+гелио-
+# [greek:hemato]
+гемато-
+гемо-
+# [greek:hetero]
+гетеро-
+# [greek:hippo]
+гиппо-
+# [greek:histo]
+гисто-
+# [greek:homo]
+гомо-
+омо-
+# [greek:hydro]
+гидро-
+# [greek:ide]
+-ид
+# [greek:iso]
+изо-
+# [greek:kilo]
+кило-
+# [greek:leuc]
+лейко-
+# [greek:lipo]
+липо-
+# [greek:logo]
+лого-
+# [greek:logie]
+-логия
+-лог
+-логический
+# [greek:lyse]
+-лиз
+# [greek:macro]
+макро-
+# [greek:mane]
+-мания
+# [greek:mega]
+мега-
+# [greek:metro]
+метро-
+-метр
+# [greek:micro]
+микро-
+# [greek:mono]
+моно-
+# [greek:morpho]
+морфо-
+-морф
+
+# [greek:neo]
+нео-
+# [greek:neuro]
+невро-
+# [greek:nom]
+-ном
+# [greek:ophtalmo]
+офтальмо-
+# [greek:ortho]
+орто-
+орфо-
+# [greek:pan]
+пан-
+
+# [greek:patho]
+пато-
+-пат
+-патия
+-патический
+# [greek:pedo]
+педо-
+-пед
+# [greek:phil]
+фило-
+-филия
+-фил
+# [greek:phobe]
+-фоб
+-фобия
+# [greek:phone]
+фон-
+фоно-
+-фон
+# [greek:photo]
+фото-
+# [greek:physio]
+физио-
+# [greek:pole]
+-полис
+-поль
+# [greek:poly]
+поли-
+# [greek:proto]
+прото-
+
+# [greek:pseudo]
+псевдо-
+# [greek:psycho]
+психо-
+псих-
+# [greek:pyro]
+пиро-
+# [greek:techno]
+техно-
+-технический
+-техника
+# [greek:tele]
+теле-
+# [greek:type]
+-тип
+
+# [greek:thermo]
+термо-
+терм-
+# [greek:therapie]
+-терапия
+-терапевт
+# [greek:tomie]
+-томия
+# [greek:zoo]
+зоо-
+
+# [latin:agri]
+агри-
+# [latin:centi]
+санти-
+# [latin:cid]
+-цид
+# [latin:deci]
+деци-
+# [latin:forme]
+-форм
+# [latin:maxi]
+макси-
+# [latin:milli]
+мили-
+# [latin:mini]
+мини-
+# [latin:multi]
+мульти-
+# [latin:omni]
+омни-
+# [latin:pluri]
+плюр-
+# [latin:radio]
+радио-
+# [latin:uni]
+уни-

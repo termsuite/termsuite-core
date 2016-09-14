@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mapping>
+  <map key="VIMP" value="imperative" />
+  <map key="VINF" value="infinitive" />
+  <map key="VPP" value="participle" />
+  <map key="VPR" value="participle" />
+  <map key="V" value="indicative" />
+  <map key="VS" value="subjunctive" />
+</mapping>

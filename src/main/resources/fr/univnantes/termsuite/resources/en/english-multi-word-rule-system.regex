@@ -1,0 +1,91 @@
+################################################################################
+# Copyright 2015 - CNRS (Centre National de Recherche Scientifique)
+#
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+#
+################################################################################
+
+import eu.project.ttc.types.TermSuiteTypeSystem;
+use eu.project.ttc.types.WordAnnotation;
+set inline = false;
+
+matcher Prep: [category=="adposition" & subCategory=="preposition"];
+matcher P1: [lemma=="of" | lemma=="with"]; # on? between?
+matcher P as P: [Prep & P1];
+matcher V: [category=="verb"];
+matcher A: [category=="adjective" & lemma!="same" & lemma!="many" & lemma!="other" & lemma!="much" & lemma!="several" & lemma!="new"];
+matcher Vpp as A: [V & tag=="VBN"]; # past participle
+matcher Ving as A: [V & tag=="VBG"]; # gerund or present participle
+matcher Vbe as V: [category=="verb" & lemma=="be"];
+matcher A2 as A: [A | Vpp | Ving];
+matcher N: [category=="noun"];
+matcher N1 as N: [category=="noun" & lemma!="number"];
+matcher C: [category=="conjunction"];
+matcher R: [category=="adverb" & lemma!="very" & lemma!="so" & lemma!="much" & lemma!="where" & lemma!="otherwise" & lemma!="most" & lemma!="how" & lemma!="mostly" & lemma!="best" & lemma!="therefore" & lemma!="more" & lemma!="less" & lemma!="yet" & lemma!="only" & lemma!="when" & lemma!="well"];
+matcher D: [category=="determiner" | category=="article"];
+
+term "n": N;
+term "a": A2;
+term "r": R;
+# from ruta
+term "an": A2 N;
+term "nnn": N N N;
+term "nn": N N;
+term "npn": N1 P ~D? N ;	# modified
+term "aan": A A N ;
+term "ann": A N N ;
+term "npan": N1 P ~D? A N ;
+term "npnn": N1 P ~D? N N ;
+term "anpn": A N P ~D? N ;	# modified
+term "npncn": N1 P ~D? N C N ;
+term "acan": A C A N ;
+# from Annexes
+term "aaann": A A A N N;
+term "aaan": A A A N;
+term "aannn": A A N N N;	# noisy
+term "aann": A A N N;
+term "anan": A N A N;
+term "annnn": A N N N N; # noisy
+term "annn": A N N N;
+term "naan": N A A N;
+term "nann": N A N N;	# noisy
+term "nan": N A N;	# noisy
+term "nnan": N N A N;
+term "nnnnn": N N N N N; # noisy
+term "nnnn": N N N N;
+term "raan": R A A N;
+term "rannn": R A N N N;
+term "rann": R A N N;
+term "ran": R A N;
+# added
+term "npnnn": N1 P ~D? N N N ;
+term "acann": A C A N N ;
+term "npncnn": N1 P ~D? N C N N;
+term "anann": A N A N N;	# noisy
+term "anpnn": A N P ~D? N N ;
+term "ncnn": N C N N;
+term "ncan": N C A N;
+#term "apn": A2 P ~D? N ; # based on N, connected to N # too noisy
+term "nnpn": N N P ~D? N ;
+term "ncnpn": N C N P ~D? N ;
+term "npnpn": N P ~D? N P ~D? N ;
+term "npncpn": N1 P ~D? N C P ~D? N;
+term "nva": ~D? N Vbe A ;
+
+# Following rule never matches
+# term "vpp n": Vpp N;

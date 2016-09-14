@@ -1,0 +1,447 @@
+################################################################################
+# Copyright 2015 - CNRS (Centre National de Recherche Scientifique)
+#
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+#
+################################################################################
+
+
+#################################
+#  NN  #
+#################################
+
+# RARE
+"S-I-NN-PA":
+  source: N N
+  target: N P A N
+  rule: s[0]==t[0] && s[1].stem==t[3].stem
+
+
+#################################
+#  NA  #
+#################################
+
+# rotores eólicos || rotores eólicos auxiliar
+"S-Ed-NA-A":
+  source: N A
+  target: N A A
+  rule: s[0]==t[0] && s[1]==t[1]
+
+
+# rotores eólicos || rotores eólicos auxiliar economicos
+"S-Ed-NA-AA":
+  source: N A
+  target: N A A A
+  rule: s[0]==t[0] && s[1]==t[1]
+
+
+# velocidad media/velocidad media del viento
+"S-Ed-NA-PN":
+  source: N A
+  target: N A P N
+  rule: s[0]==t[0] && s[1]==t[1]
+
+
+# turbina eólica / turbina eólica de directa tracción
+"S-Ed-NA-PAN":
+  source: N A
+  target: N A P A N
+  rule: s[0]==t[0] && s[1]==t[1]
+
+# turbina eólica / turbina eólica de tracción directa
+"S-Ed-NA-PNA":
+  source: N A
+  target: N A P N A
+  rule: s[0]==t[0] && s[1]==t[1]
+
+
+# energía eléctrica - energía eléctrica más económica
+"S-Ed-NA-RA":
+  source: N A
+  target: N A R A
+  rule: s[0]==t[0] && s[1]==t[1]
+
+
+# factores físicos - factores físicos y geográficos
+"S-Ed-NA-CA":
+  source: N A
+  target: N A C A
+  rule: s[0]==t[0] && s[1]==t[1]
+
+
+
+# # NOISY  Bizarre
+# "S-I-NA-PA":
+#   source: N A
+#   target: N P A N
+#   rule: s[0]==t[0] && s[1]==t[3]
+
+
+# pérdida aerodinámica/entrada en pérdida aerodinámica
+"S-Eg-NA-NP":
+  source: N A
+  target: N P N A
+  rule: s[0]==t[2] && s[1]==t[3]
+
+
+# equipo necesario || equipo técnico necesario
+"S-I-NA-A":
+  source: N A
+  target: N A A
+  rule: s[0]==t[0] && s[1]==t[2]
+
+
+# carcinoma alveolar/carcinoma de células alveolares
+"S-I-NA-PN":
+  source: N A
+  target: N P N A
+  rule: s[0]==t[0] && s[1].stem==t[3].stem
+
+
+#condición favorable || condición más favorable
+"S-I-NA-R":
+  source: N A
+  target: N R A
+  rule: s[0]==t[0] && s[1]==t[2]
+
+
+
+# factores geográficos - factores físicos y geográficos
+"S-I-NA-AC":
+  source: N A
+  target: N A C A
+  rule: s[0]==t[0] && s[1]==t[3]
+
+
+#  PREDICATION    #
+# (la) colina es escarpada / colina escarpada
+"S-I-NA-V":
+  source: N V A
+  target: N A
+  rule: s[0]==t[0] && s[2]==t[1]
+# V: estar, ser
+
+
+# terreno es irregular o complejo / terreno complejo
+"S-I-NA-VAC":
+  source: N V A C A
+  target: N A
+  rule: s[0]==t[0] && s[4]==t[1]
+
+
+# # DOES NOT MATCH
+# "S-I-NA-CN":
+#   source: N A
+#   target: N C N A
+#   rule: s[0]==t[0] && s[1]==t[3]
+#
+#
+# # DOES NOT MATCH
+# "S-Eg-NA-NC":
+#   source: N A
+#   target: N C N A
+#   rule: s[0]==t[2] && s[1]==t[3]
+
+
+#Plusieurs operations#
+# terreno es irregular o complejo / terreno irregular
+"S-IEd-NA-V-CN":
+  source: N V A C A
+  target: N A
+  rule: s[0]==t[0] && s[2]==t[1]
+
+
+#################################
+#  AN  #
+#################################
+
+# baja o mediana tensión / baja tensión
+"S-I-AN-CA":
+  source: A N
+  target: A C A N
+  rule: s[0]==t[0] && s[1]==t[3]
+
+
+# baja o mediana tensión / mediana tensión
+"S-Eg-AN-AC":
+  source: A N
+  target: A C A N
+  rule: s[0]==t[2] && s[1]==t[3]
+
+
+
+#################################
+#  NPN  #
+#################################
+
+# cambio de aceite / cambio periódico de aceite
+# does not match NPDN - NAPDN
+"S-I1-NPN-A":
+  source: N P N
+  target: N A P N
+  rule: s[0]==t[0] && s[1]==t[2] && s[2]==t[3]
+
+
+# aerogenerador a barlovento/aerogenerador con rotor a barlovento
+"S-I1-NPN-PN":
+  source: N P N
+  target: N P N P N
+  rule: s[0]==t[0] && s[1]==t[3] && s[2]==t[4]
+
+
+# acción de fuerza / acción de varios fuerza
+"S-I2-NPN-A":
+  source: N P N
+  target: N P N N, N P A N
+  rule: s[0]==t[0] && s[2]==t[3]
+
+
+# emplazamiento de subestación || emplazamiento de aerogeneradores y de subestación
+# efectos de la estela y del parque generador / efectos del parque
+"S-I1-NPN-PNC":
+  source: N P N
+  target: N P N C P N
+  rule: s[0]==t[0] && s[1]==t[4] && s[2]==t[5]
+
+
+# clases y longitudes de rugosidad / clases de rugosidad
+"S-I1-NPN-CN":
+  source: N C N P N
+  target: N P N
+  rule: s[0]==t[0] && s[4]==t[2]
+
+
+
+# Efectos de la Colina - Efectos del Túnel y la Colina
+"S-I2-NPN-NC":
+  source: N P N
+  target: N P N C N
+  rule: s[0]==t[0] && s[2]==t[4]
+
+
+
+
+# velocidad de corte/velocidad de corte del viento
+"S-Ed-NPN-PN":
+  source: N P N
+  target: N P N P N
+  rule: s[0]==t[0] && s[1]==t[3] && s[2]==t[2]
+
+
+# disminución de capacidad || disminución de capacidad productivo
+"S-Ed-NPN-A":
+  source: N P N
+  target: N P N A
+  rule: s[0]==t[0] && s[1]==t[1] && s[2]==t[2]
+
+
+# fragmento de roca || fragmento de roca o de bolos
+"S-Ed-NPN-CPN":
+  source: N P N
+  target: N P N C P N
+  rule: s[0]==t[0] && s[1]==t[1] && s[2]==t[2]
+
+
+# Efectos del Túnel - Efectos del Túnel y la Colina
+"S-Ed-NPN-CN":
+  source: N P N
+  target: N P N C N
+  rule: s[0]==t[0] && s[1]==t[1] && s[2]==t[2]
+
+
+# efectos de la estela y del parque generador / efectos de la estela
+"S-Ed-NPN-CPNA":
+  source: N P N
+  target: N P N C P N A
+  rule: s[0]==t[0] && s[1]==t[1] && s[2]==t[2]
+
+
+
+# paso de pala || control de paso de pala
+"S-Eg-NPN-NP":
+  source: N P N
+  target: N P N P N
+  rule: s[0]==t[2] && s[1]==t[3] && s[2]==t[4]
+
+
+# clases y longitudes de rugosidad / longitudes de rugosidad
+" S-Eg-NPN-NC":
+  source: N C N P N
+  target: N P N
+  rule: s[2]==t[0] && s[4]==t[2]
+
+
+#Structures concurrentes
+
+# eleccion del aeromotor || eleccion de aeromotor
+"S-R2I-NPN-P":
+  source: N P N
+  target: N P N
+  rule: s[0]==t[0] && s[2]==t[2]
+
+
+
+# imanes del estator - imanes estatóricos
+# DOES NOT MATCH "N P D N" !! (because of ~)
+"S-R2D-NPN":
+  source: N P N
+  target: N A
+  rule: s[0]==t[0] && s[2].stem==t[1].stem
+
+
+#################################
+#  NPNA/NAPN  #
+#################################
+
+
+"S-I3-NPNA-R":
+  source: N P N A
+  target: N P N R A
+  rule: s[0]==t[0] && s[1]==t[1] && s[2]==t[2] && s[3]==t[4]
+
+
+# efectos de la estela y del parque generador / efectos del parque generador
+"S-I1-NPNA-PNC":
+  source: N P N C P N A
+  target: N P N A
+  rule: s[0]==t[0] && s[5]==t[2] && s[6]==t[3]
+
+
+# diseño y construcción de turbinas eólicas / diseño de turbinas eólicas
+#
+"S-I1-NPNA-CN":
+  source: N C N P N A
+  target: N P N A
+  rule: s[0]==t[0] && s[4]==t[2] && s[5]==t[3]
+
+
+
+# diseño y construcción de turbinas eólicas / construcción de turbinas eólicas
+#
+"S-Eg-NPNA-NC":
+  source: N C N P N A
+  target: N P N A
+  rule: s[2]==t[0] && s[4]==t[2] && s[5]==t[3]
+
+
+
+
+# instalación de parque eólico/instalación parque eólico, velocidad de rotación variable/velocidad rotacional variable
+"S-R2-NPNA":
+  source: N P N A
+  target: N N A, N A A
+  rule: s[0]==t[0] && s[2].stem==t[1].stem && s[3]==t[2]
+
+
+# horas de plena carga/horas de carga plena
+"S-P-NPNA-A":
+  source: N P A N
+  target: N P N A
+  rule: s[0]==t[0] && s[1]==t[1] && s[2]==t[3] && s[3]==t[2]
+
+
+#################################
+#NPNPN    #
+#################################
+
+# velocidad de referencia del viento /velocidad del viento de referencia
+"S-P-NPNPN-PN":
+  source: N P N P N
+  target: N P N P N
+  rule: s[0]==t[0] && s[1]==t[3] && s[2]==t[4] && s[3]==t[1] && s[4]==t[2]
+
+
+#################################
+#NPNPNA    #
+#################################
+
+
+# DOES NOT MATCH ON WIND ENERGY
+"S-I5-NPNPNA-R":
+  source: N P N P N A
+  target: N P N P N R A
+  rule: s[0]==t[0] && s[1]==t[1] && s[2]==t[2] && s[3]==t[3] && s[4]==t[4] && s[5]==t[6]
+
+
+
+#################################
+#    #
+#################################
+
+
+#A verifier
+# aerogenerador/ aerogenerador  con conducto tubular
+"S-Ed-N":
+  source: N
+  target: N P N A
+  rule: s[0]==t[0]
+
+
+#################################
+#  MORPHOLOGICAL  #
+#################################
+
+"M-S-NN":
+  source: N [compound]
+  target: N N
+  rule: t[0]==s[0][0] && t[1]==s[0][1]
+
+
+# DOES NOT MATCH ON WIND ENERGY
+# carcinoma hepatocelular/hepatocarcinoma celular
+"M-P-NEN-E":
+  source: N A
+  target: N A
+  rule: s[1].compound && t[0].compound && s[0]==t[0][1] && s[1][0]==t[0][0] && s[1][1]==t[1]
+
+
+# rare
+"M-A":
+  source: N
+  target: A
+  rule: s[0].stem==t[0].stem
+
+
+
+#################################
+#  PREFIXES  #
+#################################
+
+
+# # DOES NOT MATCH ON WIND ENERGY
+# "M-R-A":
+#   source: A
+#   target: A
+#   rule: t[0].compound && s[0]==t[0][1] && t[0][0] ==("а"||"an"||"ante"||"anti"||"ex"||"in"||"pre"||"re"||"sub"||"trans")
+
+
+
+# DOES NOT MATCH ON WIND ENERGY
+# carcinoma ductal infiltrante/carcinoma intraductal infiltrante
+
+# carcinoma ductal /carcinoma intraductal
+"M-R2-NA":
+  source: N A
+  target: N A
+  rule: t[1].compound && s[0]==t[0] && s[1]==t[1][1] && t[1][0] ==("а"||"an"||"ante"||"anti"||"ex"||"in"||"intra"||"pre"||"re"||"sub"||"trans")
+
+
+"M-R2-NAA":
+  source: N A A
+  target: N A A
+  rule: t[1].compound && s[0]==t[0] && s[1]==t[1][1] && t[1][0] ==("а"||"an"||"ante"||"anti"||"ex"||"in"||"intra"||"pre"||"re"||"sub"||"trans") && s[2]==t[2]

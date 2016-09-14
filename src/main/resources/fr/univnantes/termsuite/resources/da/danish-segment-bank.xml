@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<segments>
+  <segment type="initial" reverse="false" value='"' />
+  <segment type="initial" reverse="false" value="'" />
+  <segment type="final" reverse="true" value='"' />
+  <segment type="final" reverse="true" value="'" />
+  <segment type="initial" reverse="false" value="[" />
+  <segment type="initial" reverse="false" value="{" />
+  <segment type="initial" reverse="false" value="(" />
+  <segment type="initial" reverse="false" value="`" />
+  <segment type="initial" reverse="false" value="»" />
+  <segment type="initial" reverse="false" value="«" />
+  <segment type="initial" reverse="false" value="-" />
+  <segment type="final" reverse="true" value="-" />
+  <segment type="final" reverse="true" value="." />
+  <segment type="final" reverse="true" value="]" />
+  <segment type="final" reverse="true" value="}" />
+  <segment type="final" reverse="true" value="`" />
+  <segment type="final" reverse="true" value=")" />
+  <segment type="final" reverse="true" value="," />
+  <segment type="final" reverse="true" value=";" />
+  <segment type="final" reverse="true" value=":" />
+  <segment type="final" reverse="true" value="!" />
+  <segment type="final" reverse="true" value="?" />
+  <segment type="final" reverse="true" value="%" />
+  <segment type="final" reverse="true" value="»" />
+  <segment type="final" reverse="true" value="«" />
+  <segment type="compound" reverse="false" value="vedvarende energi" />
+</segments>

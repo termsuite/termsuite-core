@@ -24,8 +24,8 @@ package eu.project.ttc.tools;
 import java.io.File;
 import java.io.Serializable;
 import java.math.BigInteger;
-import java.net.URI;
-import java.net.URISyntaxException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.security.SecureRandom;
@@ -203,8 +203,6 @@ public class TermSuitePipeline {
 	 */
 	private Optional<String> mateModelsPath = Optional.absent();
 	private Optional<String> treeTaggerPath = Optional.absent();
-
-	
 	
 
 	/*
@@ -578,9 +576,9 @@ public class TermSuitePipeline {
 				"Not a directory: %s", resourceDir);
 		TermSuiteUtils.addToClasspath(resourceDir);
 		try {
-			this.resourceUrlPrefix = Optional.of(new URI("file:" + resourceDir));
+			this.resourceUrlPrefix = Optional.of(new URL("file:" + resourceDir));
 			LOGGER.info("Resource URL prefix is: {}", this.resourceUrlPrefix.get());
-		} catch (URISyntaxException e) {
+		} catch (MalformedURLException e) {
 			throw new TermSuitePipelineException(e);
 		}
 		return this;
@@ -590,9 +588,9 @@ public class TermSuitePipeline {
 		Preconditions.checkArgument(FileUtils.isJar(resourceJar), 
 				"Not a jar file: %s", resourceJar);
 		try {
-			this.resourceUrlPrefix = Optional.of(new URI("jar:file:"+resourceJar+"!/"));
+			this.resourceUrlPrefix = Optional.of(new URL("jar:file:"+resourceJar+"!/"));
 			LOGGER.info("Resource URL prefix is: {}", this.resourceUrlPrefix.get());
-		} catch (URISyntaxException e) {
+		} catch (MalformedURLException e) {
 			throw new TermSuitePipelineException(e);
 		}
 		return this;		
@@ -600,13 +598,13 @@ public class TermSuitePipeline {
 
 	
 	
-	private Optional<URI> resourceUrlPrefix = Optional.absent();
+	private Optional<URL> resourceUrlPrefix = Optional.absent();
 	
 	
 	public TermSuitePipeline setResourceUrlPrefix(String urlPrefix) {
 		try {
-			this.resourceUrlPrefix = Optional.of(new URI(urlPrefix));
-		} catch (URISyntaxException e) {
+			this.resourceUrlPrefix = Optional.of(new URL(urlPrefix));
+		} catch (MalformedURLException e) {
 			throw new TermSuitePipelineException(e);
 		}
 		return this;
@@ -640,11 +638,16 @@ public class TermSuitePipeline {
 				);
 			
 			ExternalResourceDescription	segmentBank = ExternalResourceFactory.createExternalResourceDescription(
-					SegmentBankResource.class, 
-					getResUrl(TermSuiteResource.SEGMENT_BANK));
+					SegmentBankResource.class,
+					getResUrl(TermSuiteResource.SEGMENT_BANK)
+				);
+			
 
 					
-			ExternalResourceFactory.bindResource(ae, SegmentBank.KEY_SEGMENT_BANK, segmentBank);
+			ExternalResourceFactory.bindResource(
+					ae, 
+					SegmentBank.KEY_SEGMENT_BANK, 
+					segmentBank);
 
 			return aggregateAndReturn(ae, "Word tokenizer", 0);
 		} catch (Exception e) {
@@ -708,11 +711,16 @@ public class TermSuitePipeline {
 					TreeTaggerWrapper.PARAM_TT_HOME_DIRECTORY, this.treeTaggerPath.get()
 				);
 			
-			ExternalResourceFactory.createDependencyAndBind(
+			ExternalResourceDescription ttParam = ExternalResourceFactory.createExternalResourceDescription(
+					TreeTaggerParameter.class,
+					getResUrl(TermSuiteResource.TREETAGGER_CONFIG, Tagger.TREE_TAGGER)
+				);
+			
+			ExternalResourceFactory.bindResource(
 					ae,
 					TreeTaggerParameter.KEY_TT_PARAMETER, 
-					TreeTaggerParameter.class, 
-					getResUrl(TermSuiteResource.TREETAGGER_CONFIG, Tagger.TREE_TAGGER));
+					ttParam 
+				);
 
 			return aggregateAndReturn(ae, "POS Tagging (TreeTagger)", 0).ttLemmaFixer().ttNormalizer();
 		} catch (Exception e) {
@@ -724,27 +732,25 @@ public class TermSuitePipeline {
 	/*
 	 * Builds the resource url for this pipeline
 	 */
-	private String getResUrl(TermSuiteResource tsResource, Tagger tagger) {
-		checkUrlPrefixSet();
-		return tsResource.getUrl(this.resourceUrlPrefix.get(), lang, tagger).toString();
+	private URL getResUrl(TermSuiteResource tsResource, Tagger tagger) {
+		if(!resourceUrlPrefix.isPresent())
+			return tsResource.fromClasspath(lang, tagger);
+		else
+			return tsResource.fromUrlPrefix(this.resourceUrlPrefix.get(), lang, tagger);		
+		
 	}
 
 
-	private void checkUrlPrefixSet() {
-		if(!this.resourceUrlPrefix.isPresent())
-			throw new TermSuitePipelineException("No resource uri prefix set. You must invoked a #setResourceXXX() method once.");
-	}
-	
-	
 	/*
 	 * Builds the resource url for this pipeline	 * 
 	 */
-	private String getResUrl(TermSuiteResource tsResource) {
-		checkUrlPrefixSet();
-		return tsResource.getUrl(this.resourceUrlPrefix.get(), lang).toString();		
+	private URL getResUrl(TermSuiteResource tsResource) {
+		if(!resourceUrlPrefix.isPresent())
+			return tsResource.fromClasspath(lang);
+		else
+			return tsResource.fromUrlPrefix(this.resourceUrlPrefix.get(), lang);		
 	}
 
-	
 	public TermSuitePipeline setMateModelPath(String path) {
 		this.mateModelsPath = Optional.of(path);
 		Preconditions.checkArgument(Files.exists(Paths.get(path)), "Directory %s does not exist", path);
@@ -988,7 +994,7 @@ public class TermSuitePipeline {
 			ae.getMetaData().getConfigurationParameterSettings().setParameterValue((String)parameters[i], parameters[i+1]);
 	}
 
-	private TermSuitePipeline subNormalizer(String target, String mappingFile)  {
+	private TermSuitePipeline subNormalizer(String target, URL mappingFile)  {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					Mapper.class, 
@@ -996,11 +1002,18 @@ public class TermSuitePipeline {
 					Mapper.PARAM_TARGET, target,
 					Mapper.PARAM_UPDATE, true
 				);
-			ExternalResourceFactory.createDependencyAndBind(
+			
+			ExternalResourceDescription mappingRes = ExternalResourceFactory.createExternalResourceDescription(
+					MappingResource.class,
+					mappingFile
+				);
+			
+			ExternalResourceFactory.bindResource(
 					ae,
 					Mapping.KEY_MAPPING, 
-					MappingResource.class, 
-					mappingFile);
+					mappingRes 
+				);
+
 			return aggregateAndReturn(ae, "Normalizing " + mappingFile, 0);
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
@@ -1130,11 +1143,15 @@ public class TermSuitePipeline {
 					FixedExpressionTermMarker.class
 				);
 			
-			ExternalResourceFactory.createDependencyAndBind(
-					ae,
-					FixedExpressionResource.FIXED_EXPRESSION_RESOURCE, 
+			ExternalResourceDescription fixedExprRes = ExternalResourceFactory.createExternalResourceDescription(
 					FixedExpressionResource.class, 
 					getResUrl(TermSuiteResource.FIXED_EXPRESSIONS));
+			
+			ExternalResourceFactory.bindResource(
+					ae,
+					FixedExpressionResource.FIXED_EXPRESSION_RESOURCE, 
+					fixedExprRes
+				);
 			
 
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
@@ -1164,12 +1181,18 @@ public class TermSuitePipeline {
 					FixedExpressionSpotter.REMOVE_TERM_OCC_ANNOTATIONS_FROM_CAS, true
 				);
 			
-			ExternalResourceFactory.createDependencyAndBind(
-					ae,
-					FixedExpressionResource.FIXED_EXPRESSION_RESOURCE, 
+			
+
+			ExternalResourceDescription fixedExprRes = ExternalResourceFactory.createExternalResourceDescription(
 					FixedExpressionResource.class, 
 					getResUrl(TermSuiteResource.FIXED_EXPRESSIONS));
-
+			
+			ExternalResourceFactory.bindResource(
+					ae,
+					FixedExpressionResource.FIXED_EXPRESSION_RESOURCE, 
+					fixedExprRes
+				);
+			
 			return aggregateAndReturn(ae, "Spotting fixed expressions", 0);
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
@@ -1202,28 +1225,42 @@ public class TermSuitePipeline {
 						ae, 
 						RegexSpotter.LOG_OVERLAPPING_RULES, logOverlappingRules.get());
 			
-				
-			ExternalResourceFactory.createDependencyAndBind(
-					ae,
-					RegexListResource.KEY_TOKEN_REGEX_RULES, 
+			
+			ExternalResourceDescription mwtRules = ExternalResourceFactory.createExternalResourceDescription(
 					RegexListResource.class, 
 					getResUrl(TermSuiteResource.MWT_RULES));
-	
-			ExternalResourceFactory.createDependencyAndBind(
+			
+			ExternalResourceFactory.bindResource(
 					ae,
-					RegexSpotter.CHARACTER_FOOTPRINT_TERM_FILTER, 
+					RegexListResource.KEY_TOKEN_REGEX_RULES, 
+					mwtRules
+				);
+
+				
+	
+			ExternalResourceDescription allowedCharsRes = ExternalResourceFactory.createExternalResourceDescription(
 					CharacterFootprintTermFilter.class, 
 					getResUrl(TermSuiteResource.ALLOWED_CHARS));
-	
+			
+			ExternalResourceFactory.bindResource(
+					ae,
+					RegexSpotter.CHARACTER_FOOTPRINT_TERM_FILTER, 
+					allowedCharsRes
+				);
+
 			if(this.addSpottedAnnoToTermIndex)
 				ExternalResourceFactory.bindResource(ae, resTermIndex());
 
-			ExternalResourceFactory.createDependencyAndBind(
-					ae,
-					RegexSpotter.STOP_WORD_FILTER, 
+			ExternalResourceDescription stopWordsRes = ExternalResourceFactory.createExternalResourceDescription(
 					DefaultFilterResource.class, 
 					getResUrl(TermSuiteResource.STOP_WORDS_FILTER));
 			
+			ExternalResourceFactory.bindResource(
+					ae,
+					RegexSpotter.STOP_WORD_FILTER, 
+					stopWordsRes
+				);
+
 			return aggregateAndReturn(ae, "Spotting terms", 0).aeTermOccAnnotationImporter();
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
@@ -1265,12 +1302,17 @@ public class TermSuitePipeline {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					PrefixSplitter.class
 				);
-			ExternalResourceFactory.createDependencyAndBind(
+			
+			ExternalResourceDescription prefixTreeRes = ExternalResourceFactory.createExternalResourceDescription(
+					PrefixTree.class, 
+					getResUrl(TermSuiteResource.PREFIX_BANK));
+			
+			ExternalResourceFactory.bindResource(
 					ae,
 					PrefixTree.PREFIX_TREE, 
-					PrefixTree.class,
-					getResUrl(TermSuiteResource.PREFIX_BANK)
+					prefixTreeRes
 				);
+
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 			
@@ -1286,11 +1328,15 @@ public class TermSuitePipeline {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					SuffixDerivationDetecter.class
 				);
-			ExternalResourceFactory.createDependencyAndBind(
+			
+			ExternalResourceDescription suffixDerivationsRes = ExternalResourceFactory.createExternalResourceDescription(
+					SuffixDerivationList.class,
+					getResUrl(TermSuiteResource.SUFFIX_DERIVATIONS));
+			
+			ExternalResourceFactory.bindResource(
 					ae,
 					SuffixDerivationList.SUFFIX_DERIVATIONS, 
-					SuffixDerivationList.class,
-					getResUrl(TermSuiteResource.SUFFIX_DERIVATIONS)
+					suffixDerivationsRes
 				);
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
@@ -1307,13 +1353,17 @@ public class TermSuitePipeline {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					SuffixDerivationExceptionSetter.class
 				);
-			ExternalResourceFactory.createDependencyAndBind(
+			
+			ExternalResourceDescription suffixDerivationsExceptionsRes = ExternalResourceFactory.createExternalResourceDescription(
+					MultimapFlatResource.class,
+					getResUrl(TermSuiteResource.SUFFIX_DERIVATION_EXCEPTIONS));
+			
+			ExternalResourceFactory.bindResource(
 					ae,
 					SuffixDerivationExceptionSetter.SUFFIX_DERIVATION_EXCEPTION, 
-					MultimapFlatResource.class,
-					getResUrl(TermSuiteResource.SUFFIX_DERIVATION_EXCEPTIONS)
+					suffixDerivationsExceptionsRes
 				);
-			
+
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 			
 			return aggregateAndReturn(ae, "Setting suffix derivation exceptions", 0);
@@ -1331,13 +1381,17 @@ public class TermSuitePipeline {
 					ManualCompositionSetter.class
 				);
 			
-			ExternalResourceFactory.createDependencyAndBind(
+			ExternalResourceDescription manualCompositionListRes = ExternalResourceFactory.createExternalResourceDescription(
+					ManualSegmentationResource.class,
+					getResUrl(TermSuiteResource.MANUAL_COMPOSITIONS));
+			
+			ExternalResourceFactory.bindResource(
 					ae,
 					ManualCompositionSetter.MANUAL_COMPOSITION_LIST, 
-					ManualSegmentationResource.class,
-					getResUrl(TermSuiteResource.MANUAL_COMPOSITIONS)
+					manualCompositionListRes
 				);
-			
+
+
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 			
 			return aggregateAndReturn(ae, "Setting manual composition", 0);
@@ -1352,13 +1406,18 @@ public class TermSuitePipeline {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					ManualPrefixSetter.class
 				);
-			ExternalResourceFactory.createDependencyAndBind(
+			
+			
+			ExternalResourceDescription prefixExceptionsRes = ExternalResourceFactory.createExternalResourceDescription(
+					ManualSegmentationResource.class,
+					getResUrl(TermSuiteResource.PREFIX_EXCEPTIONS));
+			
+			ExternalResourceFactory.bindResource(
 					ae,
 					ManualPrefixSetter.PREFIX_EXCEPTIONS, 
-					ManualSegmentationResource.class,
-					getResUrl(TermSuiteResource.PREFIX_EXCEPTIONS)
+					prefixExceptionsRes
 				);
-			
+
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 			
 			return aggregateAndReturn(ae, "Setting prefix exceptions", 0);
@@ -1383,13 +1442,16 @@ public class TermSuitePipeline {
 					TermIndexBlacklistWordFilterAE.class
 				);
 			
-			ExternalResourceFactory.createDependencyAndBind(
+			ExternalResourceDescription stopWordsFilterResourceRes = ExternalResourceFactory.createExternalResourceDescription(
+					DefaultFilterResource.class, 
+					getResUrl(TermSuiteResource.STOP_WORDS_FILTER));
+			
+			ExternalResourceFactory.bindResource(
 					ae,
 					FilterResource.KEY_FILTERS, 
-					DefaultFilterResource.class, 
-					getResUrl(TermSuiteResource.STOP_WORDS_FILTER)
+					stopWordsFilterResourceRes
 				);
-			
+
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 
 			return aggregateAndReturn(ae, "Filtering stop words", 0);
@@ -2001,32 +2063,62 @@ public class TermSuitePipeline {
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 			ExternalResourceFactory.bindResource(ae, resObserver());
-			ExternalResourceFactory.createDependencyAndBind(
-					ae,
-					CompostAE.LANGUAGE_DICO, 
+			
+			
+			ExternalResourceDescription langDicoRes = ExternalResourceFactory.createExternalResourceDescription(
 					SimpleWordSet.class, 
 					getResUrl(TermSuiteResource.DICO));
-			ExternalResourceFactory.createDependencyAndBind(
+			
+			ExternalResourceFactory.bindResource(
 					ae,
-					CompostAE.INFLECTION_RULES, 
+					CompostAE.LANGUAGE_DICO, 
+					langDicoRes
+				);
+			
+			
+			ExternalResourceDescription compostInflectionRulesRes = ExternalResourceFactory.createExternalResourceDescription(
 					CompostInflectionRules.class, 
 					getResUrl(TermSuiteResource.COMPOST_INFLECTION_RULES));
-			ExternalResourceFactory.createDependencyAndBind(
+			
+			ExternalResourceFactory.bindResource(
 					ae,
-					CompostAE.TRANSFORMATION_RULES, 
+					CompostAE.INFLECTION_RULES, 
+					compostInflectionRulesRes
+				);
+			
+			
+			ExternalResourceDescription transformationRulesRes = ExternalResourceFactory.createExternalResourceDescription(
 					CompostInflectionRules.class, 
 					getResUrl(TermSuiteResource.COMPOST_TRANSFORMATION_RULES));
-			ExternalResourceFactory.createDependencyAndBind(
+			
+			ExternalResourceFactory.bindResource(
 					ae,
-					CompostAE.STOP_LIST, 
+					CompostAE.TRANSFORMATION_RULES, 
+					transformationRulesRes
+				);
+			
+			ExternalResourceDescription compostStopListRes = ExternalResourceFactory.createExternalResourceDescription(
 					SimpleWordSet.class, 
 					getResUrl(TermSuiteResource.COMPOST_STOP_LIST));
-			ExternalResourceFactory.createDependencyAndBind(
+			
+			ExternalResourceFactory.bindResource(
 					ae,
-					CompostAE.NEOCLASSICAL_PREFIXES, 
+					CompostAE.STOP_LIST, 
+					compostStopListRes
+				);
+			
+			
+			ExternalResourceDescription neoClassicalPrefixesRes = ExternalResourceFactory.createExternalResourceDescription(
 					SimpleWordSet.class, 
 					getResUrl(TermSuiteResource.NEOCLASSICAL_PREFIXES));
-
+			
+			ExternalResourceFactory.bindResource(
+					ae,
+					CompostAE.NEOCLASSICAL_PREFIXES, 
+					neoClassicalPrefixesRes
+				);
+			
+			
 			return aeManualCompositionSetter()
 					.aggregateAndReturn(ae, CompostAE.TASK_NAME, 2);
 		} catch(Exception e) {

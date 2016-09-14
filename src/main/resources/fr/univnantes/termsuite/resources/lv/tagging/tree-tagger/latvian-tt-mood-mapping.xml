@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mapping>
+  <map key="VER:cond" value="conditional" />
+  <map key="VER:futu" value="indicative" />
+  <map key="VER:impe" value="imperative" />
+  <map key="VER:impf" value="indicative" />
+  <map key="VER:infi" value="infinitive" />
+  <map key="VER:pper" value="participle" />
+  <map key="VER:ppre" value="participle" />
+  <map key="VER:pres" value="indicative" />
+  <map key="VER:simp" value="indicative" />
+  <map key="VER:subi" value="subjunctive" />
+  <map key="VER:subp" value="subjunctive" />
+</mapping>

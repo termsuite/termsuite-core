@@ -1,0 +1,17 @@
+s, ; Staatsfeind
+n, ; Soziologenkongreß
+en, ; Straußenei
+er, ; Geisterstunde
+es, ; Geisteshaltung
+nen, ; Wöchnerinnenheim
+en,us; Aphorismenshatz
+en,um; Museenverwaltung
+a, um; Aphrodisiakaverkäufer
+en,a; Madonnenkult
+e, ; Hundehalter
+en,on; Stadienverbot
+a,on; Pharmakaanalyse
+ien, ; Prinzipienreiter
+i,e; Carabinierischule
+ ,en; Südwind > Süden
+ ,e; Kirchhof > Kirche 

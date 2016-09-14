@@ -1,0 +1,319 @@
+graphe:c	ghrapho:c	graphie:c	:c
+para:p	à travers:w	côté:w	au moyen de:w	par:p	à côté de:w
+contre:p	contro:p	contra:p	contre:w	contr:p
+carbone:w	charbon:w	carbo:c	carb:c
+gènes:c
+graphe:c	écrire:w	ghrapho:c	:c	écriture:w	graphie:c	enregistrer:w
+millième:w	milli:c
+chondr:c	chondro:c	granulaire:w	grain:w	chondrie:c	cartilage:w
+ostéo:c	os:w	osté:c	ossi:c
+phobie:c	phobe:c
+outil:w	organo:c	organ:c	organe:w
+oeil:w	oculo:c	œil:w	ophtalmo:c	ophtalm:c	ocul:c
+postérieur:w	après:w	post:p	post:w
+xén:c	xéno:c	étranger:w
+ophtalmo:c
+cellule:w	cyt:c	cyto:c	cyte:c
+ide:c	ïde:c
+tétra:c	quadr:c	tétr:c	quadri:c	quatre:w
+enlever:w	privé:w	dé:p	ôter:w	arrêter:w	de:p	sans:w	dés:p
+chimique:w	chimie:w	chémo:c	chimio:c
+morpho:c	morphe:c
+densité:w	densito:c	dense:w	densit:c
+modeler:w	plasique:c	plase:c	reconstruction:w	réparation:w	plasie:c
+hippo:c
+modeler:w	plasique:c	plase:c	reconstruction:w	réparation:w	plasie:c
+local:w	loco:c
+astro:c	astre:w	astr:c	étoile:w
+kilo:c
+calori:c
+lyse:c
+mini:c
+mamelle:w	sein:w	mammaire:w	masto:c	mammo:c	mastoïd:c	mast:c	mamm:c	mamma:c
+entre:p	entr:p	entre:w	inter:p
+maxi:c
+physio:c	nature:w
+rond:w	roue:w	cycl:c	récurrent:w	cyclique:w	cycle:c	cercle:w	cyclo:c
+thermie:c	thermo:c	therme:c
+rhabd:c	rhabdo:c	baguette:w
+semblable:w	ressembler:w
+extra:p	extra:w	dehors:w	externe:w	sortir:w	hors:w	extérieur:w
+progesto:c
+pan:c	panto:c
+pole:c	:c
+pédo:c	péd:c	pédie:c
+cérébral:w	cérébr:c	cérébro:c	cerveau:w
+thelial:c	mamelon:w	thélial:c
+morph:c	morphisme:c	morpho:c	forme:w	morphie:c	morphique:c	morphe:c
+estomac:w	gastro:c	gastrique:w	ventre:w	gastr:c
+méthodo:c
+zoo:c	zoaire:c
+histo:c	histi:c	histio:c	tissu:w	hist:c
+mégalo:c	méga:c
+pas:w	contraire:w	ir:p	non:w	sans:w	in:p	inverse:w
+oophor:c	ovari:c	ovo:c	ov:c	ovaire:w	oophoro:c	ovar:c	oo:c	ovario:c
+chromo:c	chromato:c	couleur:w	chromat:c	chrom:c
+épi:c	supérieur:w	sur:w	dessus:w
+histi:c	hist:c	histio:c	tissu:w	histo:c
+résultant:w	produit:w	gène:c
+pyro:c
+zygotique:c	zyg:c	paire:w	zygote:c	zygo:c
+pré:p	devant:w	antérieur:w	pro:p	avant:w
+cellule:w	cyto:p
+zoo:c	zoaire:c
+typo:c	type:c	typie:c
+stérone:c	stéroïdo:c	stérol:w	stéroïd:c
+neuf:w	nouveau:w	néo:p
+carcino:c	cancer:w	cancér:c	carcin:c	cancéro:c	onco:c
+extra:p	extra:w	dehors:w	externe:w	hors:w	extérieur:w
+leuco:c	leuc:c
+soimême:w	auto:p	propre:w
+forme:c
+technie:c	techno:c	technique:c
+hémato:c	hém:c	émie:c	hémo:c	hémat:c	sang:w
+chromo:c	chromato:c	couleur:w	chromat:c	chrom:c
+droit:w	régulier:w	correct:w	normal:w	ortho:c
+oeil:w	oculo:c	œil:w	ophtalmo:c	ophtalm:c	ocul:c
+phobie:c	phobe:c
+supérieur:w	dessus:w	sur:w	ultra:p
+orchid:c	orchi:c	testicule:w
+jeune:w	nouveau:w	né:c	néo:c
+caillot:w	thromb:c	thrombo:c
+pathe:c	path:c	souffrance:w	patho:c	maladie:w	pathie:c
+hélio:c
+écologie:w	éco:c	écologique:w
+télé:p	tel:p	tél:p	distant:w
+articulation:w	arthr:c	arthro:c
+philo:c	phil:c	phile:c
+phil:c	philo:c	phile:c
+chondr:c	chondro:c	granulaire:w	grain:w	chondrie:c	cartilage:w
+phonie:c	phon:c	phono:c	phone:c
+petit:w	insuffisant:w	peu:w	olig:c	oligo:c
+aroma:c	arôme:w
+un:w	unique:w	mono:p	seul:w	uni:p
+supérieur:w	dessus:w	meta:p	sur:w	audessus:w
+outrance:w	supérieur:w	trop:w	hyper:p	excessif:w	sur:p
+graphe:c	ghrapho:c	graphie:c	:c
+remède:w	pharmaco:c	pharmac:c
+hyphophyse:w	hyphophys:c
+en faveur de:w	favorable:w	pro:p	pré:p	devant:w	antérieur:w	avant:w	pour:w
+pas:w	contraire:w	ir:p	non:w	sans:w	in:p	inverse:w
+supérieur:w	méta:c	audessus:w	meta:c	sur:w	dessus:w
+pseud:c	pseudo:c
+arrière:w	derrière:w	avant:w	rétro:c
+chondr:c	grain:w	granulaire:w	chondro:c	chondrie:c	cartilage:w
+petit:w	minuscule:w	micro:p
+drome:c
+vert:w	chlorine:w	chlor:c	chloro:c
+émique:c	hémie:c	sang:w	émie:c
+cide:c
+rétine:w	rétin:c	rétino:c
+bi:p	double:w	di:p	deux:w
+amputation:w	ectomie:c	coupe:w	ablation:w	section:w
+fait:w	état:w
+supérieur:w	sur:w	épi:p	dessus:w
+thermo:c	chauffer:w	therme:c	chaud:w	thermie:c	therm:c	chaleur:w
+brome:w	odeur:w	bromide:w	bromo:c	brom:c	puanteur:w
+inverse:w	contraire:w	ir:p	non:w	sans:w	in:p	pas:w
+rétine:w	rétin:c	rétino:c
+pouvoir:w	ible:s	able:s
+macrie:c	incluant:w	long:w	gros:w	macro:c
+ectasie:c	dilatation:w
+hémo:c	hémat:c	sang:w	hém:c	hémato:c
+amino:c	amine:w
+ovi:c	ovo:c
+sens:w
+manie:c	mane:c
+lumière:w	photo:c
+moitié:w	en partie:w	semi:p	mi:p	durant:w
+retourner:w	réflex:c	réflexo:c	réflexe:w
+diamino:c
+gonfler:w	tumor:c	tumori:c	tumoro:c	tumoral:w	tumeur:w
+électrique:w	électro:c	électr:c	électricité:w
+technie:c	techno:c	technique:c
+supérieur:w	outrance:w	super:w	super:p	hyper:p	audessus:w	sur:w	trop:w	dessus:w	excessif:w	sur:p
+ribo:c	ribose:w
+morpho:c	morphe:c
+uni:c
+chimique:w	chimie:w	chémo:c	chimio:c
+médio:c	média:c	milieu:w	médi:c
+peau:w	dermo:c	dermat:c	dermato:c
+adréno:c	surrénal:w
+lumière:w	phosphat:c	lumineux:w	phospho:c	phosphato:c	phosphore:w	phosph:c
+petit:w	minuscule:w	micro:c
+charactér:c	charactéro:c
+tomie:c
+soya:c
+thelium:c	mamelon:w	thélium:c
+courbure:w	onc:c	grosseur:w	onch:c	oncho:c	volume:w	tumeur:w	onco:c
+mamelle:w	sein:w	mammaire:w	masto:c	mammo:c	mastoïd:c	mast:c	mamm:c	mamma:c
+manière:w	ement:s	façon:w	avec:w	ment:s
+tumori:c	tumor:c	gonfler:w	tumoro:c	tumoral:w	tumeur:w
+cellule:w	cyto:c	cyt:c	cyte:c
+vaisseau:w	angio:c	angi:c
+andro:c	mâle:w	andr:c	masculin:w	homme:w
+gonfler:w	tumor:c	tumori:c	tumoro:c	tumoral:w	tumeur:w
+inférieur:w	endessous:w	bas:w	hypo:c	faible:w	sous:c	dessous:w	sous:w	sub:c
+producteur:w	gène:c	produire:w
+écrire:w	écriture:w	enregistrer:w	grapheur:c
+rouge:w	érythro:c
+fibrosis:w	lobe:w	fibre:w	fibrille:w	fibr:c	filament:w	fibro:c
+métrique:c	mesure:w	mesurer:w
+hépar:c	héparo:c	hépato:c	foie:w	hépat:c
+mamelle:w	sein:w	mastoïdo:c	mammaire:w	masto:c	mammo:c	mastoïd:c	mast:c	mamm:c	mamma:c
+psycho:c	psych:c
+phil:c	philo:c	phile:c
+inférieur:w	endessous:w	sub:p	dessous:w	sous:p	sous:w	hypo:p
+anthra:c
+oophor:c	ovari:c	ovaire:w	oophoro:c	ovar:c	oo:c
+fluro:c
+some:c	somie:c	corps:w	somat:c	somato:c	soma:c
+ovi:c	ovo:c
+oophor:c	ovari:c	ovaire:w	oophoro:c	ovar:c	oo:c
+tel:p	télé:p	tél:p	distant:w
+contre:p	contr:p	contre:w	contro:p	contra:p
+enlever:w	privé:w	dé:p	ôter:w	arrêter:w	de:p	sans:w	dés:p
+biologie:w	bio:c	biologique:w
+lipo:c
+leuc:c	leuco:c
+plante:w	végétal:w	phyt:c	bourgeon:w	phyto:c	excroissance:w
+phonie:c	phon:c	phono:c	phone:c
+crypto:c
+télé:c
+ré:p	encore:w	recommencer:w	à nouveau:w	refaire:w	r:p	re:p
+lisso:c	lio:c	léio:c	lisse:w
+sous:w	sous:p	inférieur:w	dessous:w	endessous:w
+logique:w	logique:c
+intra:p	intra:w	intérieur:w	interne:w	dans:w	dedans:w	entre:w
+oestrogène:w	œstrogène:w	œstro:c	oestro:c
+thérapie:c
+algique:c	douleur:w	algie:c
+pathe:c	patho:c	pathie:c
+pode:c	podo:c
+stéréo:c	solide:w
+muscle:w	myo:c	musculo:c	muscul:c
+métro:c	métrie:c	mètre:c
+philo:c	phil:c	phile:c
+métro:c	métrie:c	mètre:c
+cœur:w	cardi:c	cardiaque:w	cardio:c
+spectre:w	spectro:c	spectr:c
+leuco:c	leuc:c
+agri:c
+rapa:c
+soimême:w	auto:p	propre:w
+multi:c
+à travers:w	:w	trans:p
+orchid:c	orchi:c	testicule:w
+clinico:c	clinique:w
+scopie:c	examiner:w	observer:w	scope:c	regarder:w	scopique:c
+lympho:c	lymph:c	lymphe:w
+typo:c	type:c	typie:c
+thermie:c	thermo:c	therme:c
+vasculo:c	vaisseau:w	vas:c	vaso:c	vascul:c
+phéno:c	phényl:c	phénique:c	phénol:w	phén:c	briller:w	phénol:c
+hydro:c	liquide:w	hyd:c	hydr:c	eau:w
+hecto:c
+multi:p	plusieurs:w	poly:p	multiple:w
+choroïde:w	chor:c	choro:c	chori:c	chorio:c	chorion:w
+hétéro:c	autre:w
+gramme:c
+anti:p	a:p	inverse:w	contraire:w
+fluoro:c	flurorescence:w	fluorine:w	fluor:c
+outrance:w	supérieur:w	super:w	trop:w	sur:p	audessus:w	super:p	dessus:w	excessif:w	sur:w
+péri:p	autour:w
+menteur:w	pseud:c	faux:w	mensonger:w	pseudo:c
+trio:w	trois:w	tri:p	à trois:w
+colo:c	colon:w	coli:c	intestin:w
+ganglion:w	glande:w	glandulaire:w	adéno:c
+pré:p	devant:w	antérieur:w	pro:p	avant:w
+mauvais:w	mal:w	dé:p	dys:p
+prot:c	protéin:c	protéino:c	premier:w	proto:c
+dose:w	dosi:c
+embryo:c	embryon:w	embry:c	foetus:w
+génicité:c
+vaisseau:w	angi:c	angio:c
+muscle:w	myo:c	my:c
+endocrino:c
+centrisme:c	centrique:c	centre:w	centrie:c	centro:c	centr:c
+omni:c
+radiation:w	rayon:w	radi:c	radio:w	rayonnement:w	radio:c
+lymph:c	lympho:c	lymphe:w
+un:w	uni:p	seul:w	unique:w	mono:p
+blasto:c	blastique:w	blast:c	embryonnaire:w	germe:w	embryon:w	immature:w	blastique:c
+épidémio:c
+gène:c	géno:c
+nomie:c	nome:c
+poly:c	plusieurs:w	multiple:w
+kinésio:c	mouvement:w	kin:c	kinési:c
+parallèle:w	ensemble:w	co:p
+ibilité:s	abilité:s	capacité:w
+logiste:c
+chondr:c	chondro:c	granulaire:w	grain:w	chondrie:c	cartilage:w
+homo:c	semblable:w	ressemblant:w	homéo:c
+un:w	unique:w	mono:c	seul:w	uni:c
+modeler:w	plasique:c	plase:c	reconstruction:w	réparation:w	plasie:c
+claustr:c	cloîtrer:w	claustro:c	clôture:w
+blasto:c	blastique:w	blast:c	embryonnaire:w	germe:w	embryon:w	immature:w	blastique:c	blastome:w
+noyau:w	nucléo:c	nuclé:c	nucleus:w
+génique:c
+centi:c
+poly:p	plusieurs:w	multi:p	multiple:w
+scopol:c
+gluco:c	glucose:w	glyc:c	sucre:w	gluc:c	glyco:c
+ne pas:w	contre:p	contr:p	non:w	pas:w	non:p
+chrono:c	chron:c	temps:w
+psycho:c	mental:w	esprit:w	psychologie:w	psychologique:w	psych:c
+moitié:w	en partie:w	semi:p	mi:p	durant:w
+son:w	audio:c	écouter:w
+mauvais:w	mal:w	faux:w	mé:p	erroné:w
+hystér:c	utérus:w	hystéro:c
+mito:c	mitose:w	filament:w
+bi:p	double:w	di:p	deux:w
+inférieur:w	endessous:w	sub:p	dessous:w	sous:p	sous:w	hypo:p
+méro:c	mérisme:c	mér:c	mère:c	partie:w	élément:w
+neural:c	nerf:w	neuro:c	névro:c	neurie:c	neur:c
+hypn:c	hypno:c	hypnose:w	sommeil:w
+afro:c	africain:w
+logie:c
+phonie:c	phon:c	phono:c	phone:c
+di:c	double:w	bi:c	deux:w
+mastie:c
+mastie:c
+leuc:c	leuco:c
+prot:c	proto:c
+mycét:c	myco:c	mycine:c	mycète:c	myc:c	champignon:w	mucéto:c	myce:c
+adria:c
+andro:c	mâle:w	andr:c	masculin:w	homme:w
+strep:c	strepto:c	contourné:w
+peuple:w	population:w	démo:c
+broncho:c	bronche:w	bronchio:c	bronch:c
+reconstruction:w	plastique:c	plastique:w	réparation:w	plastie:c
+immunité:w	exemption:w	immuno:c	remise:w	dispense:w	immun:c
+géno:c	génit:c	génito:c	génital:w	gène:c	gén:c
+métrie:c	mesure:w	calcul:w	calculer:w	mesurer:w
+logue:c	logo:c
+déci:c
+oestr:c	oestro:c	œstro:c
+pathe:c	path:c	souffrance:w	patho:c	maladie:w	pathie:c
+choréo:c	choré:c	danse:w
+cryo:c	cry:c	froid:w
+morpho:c	morphe:c
+pluri:c
+indo:c
+vasculo:c	vaisseau:w	vas:c	vaso:c	vascul:c
+société:w	social:w	socio:c
+pan:c	panto:c
+contraire:w	anti:p	anti:w	contre:p	contr:p	contre:w
+a:p	sans:w	aucun:w	privé:w	ab:p
+géo:c
+calc:c	calco:c	calcium:w
+écrire:w	écriture:w	graphique:w	graphique:c	enregistrer:w
+stat:c
+son:w	sono:c
+gonfler:w	tumor:c	tumori:c	tumoro:c	tumoral:w	tumeur:w
+hémo:c	hémato:c	émie:c
+gonade:w	gonado:c
+raccourcissement:w	brachy:c	court:w
+femme:w	gyn:c	gynéco:c	gyno:c
+régulier:w	égal:w	uniforme:w	iso:c	symétrique:w
+chimique:w	chimie:w	chémo:c	chimio:c

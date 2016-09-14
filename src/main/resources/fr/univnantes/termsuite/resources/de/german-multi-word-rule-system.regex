@@ -1,0 +1,63 @@
+################################################################################
+# Copyright 2015 - CNRS (Centre National de Recherche Scientifique)
+#
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+#
+################################################################################
+
+import eu.project.ttc.types.TermSuiteTypeSystem;
+use eu.project.ttc.types.WordAnnotation;
+set inline = false;
+
+matcher P: [category=="preposition" & lemma!="an" & lemma!="zu"]; # "von", "mit" - sure; "für", "in", "aus" - sometimes OK
+matcher V: [category=="verb"];
+matcher Vbe as V: [category=="verb" & (lemma=="sein"|lemma=="heißen")];
+matcher Vpp as A: [V & mood=="participle" & tense=="past"];
+matcher R: [category=="adverb"];
+matcher A: [category=="adjective"];
+matcher A2 as A: [A | Vpp];
+matcher N: [category=="noun"];
+# matcher Ngen: [category=="noun" & case=="genitive"]; - NO GENITIVE IN DE MAPPING
+matcher C: [category=="conjunction"];
+matcher D: [category=="determiner" | category=="article"];
+
+term "n": N;
+term "a": A;
+term "r": R;
+term "an": A2 N;
+term "nn": N ~D? N;
+term "npn": N P ~D? N;
+term "aan": A2 A2 N;
+term "nan": N ~D? A2 N;
+term "npan": N P ~D? A2 N;
+term "ancn": A2 N C N;
+term "npncn": N P ~D? N C N;
+term "acan": A2 C A2 N;
+# added
+term "ann": A2 N ~D? N;
+term "npnpn": N P ~D? N P ~D? N;
+#term "apn": A2 P N;
+term "nva": ~D? N Vbe A2 ;
+term "anpn": A2 N P ~D? N;
+term "ran": R A2 N;
+term "nnpn": N ~D? N P N;
+term "ncnn": N C N ~D? N;
+term "nncn": N ~D? N C N;
+
+# removed
+# term "npna": N P N A;	# very noisy

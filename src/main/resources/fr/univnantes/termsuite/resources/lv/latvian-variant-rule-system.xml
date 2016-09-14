@@ -1,0 +1,1363 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rules>
+	<rule id="adjective-prefix">
+		<parameters>
+			<parameter name="base"
+				type="eu.project.ttc.types.SingleWordTermOccAnnotation" />
+			<parameter name="variant"
+				type="eu.project.ttc.types.CompoundTermOccAnnotation" />
+		</parameters>
+		<constraint>
+			<and>
+				<left>
+					<and>
+						<left>
+							<eq>
+								<left>
+									<feature name="category">
+										<element>
+											<variable name="base" />
+										</element>
+									</feature>
+								</left>
+								<right>
+									<string value="adjective" />
+								</right>
+							</eq>
+						</left>
+						<right>
+							<eq>
+								<left>
+									<feature name="category">
+										<element>
+											<variable name="variant" />
+										</element>
+									</feature>
+								</left>
+								<right>
+									<string value="adjective" />
+								</right>
+							</eq>
+						</right>
+					</and>
+				</left>
+				<right>
+					<eq>
+						<left>
+							<feature name="lemma">
+								<element>
+									<variable name="base" />
+								</element>
+							</feature>
+						</left>
+						<right>
+							<feature name="lemma">
+								<element>
+									<get>
+										<left>
+											<sub type="eu.project.ttc.types.TermComponentAnnotation">
+												<element>
+													<variable name="variant" />
+												</element>
+											</sub>
+										</left>
+										<right>
+											<integer value="1" />
+										</right>
+									</get>
+								</element>
+							</feature>
+						</right>
+					</eq>
+				</right>
+			</and>
+		</constraint>
+	</rule>
+	<rule id="adjective-suffix">
+		<parameters>
+			<parameter name="base"
+				type="eu.project.ttc.types.SingleWordTermOccAnnotation" />
+			<parameter name="variant"
+				type="eu.project.ttc.types.CompoundTermOccAnnotation" />
+		</parameters>
+		<constraint>
+			<and>
+				<left>
+					<and>
+						<left>
+							<eq>
+								<left>
+									<feature name="category">
+										<element>
+											<variable name="base" />
+										</element>
+									</feature>
+								</left>
+								<right>
+									<string value="adjective" />
+								</right>
+							</eq>
+						</left>
+						<right>
+							<eq>
+								<left>
+									<feature name="category">
+										<element>
+											<variable name="variant" />
+										</element>
+									</feature>
+								</left>
+								<right>
+									<string value="adjective" />
+								</right>
+							</eq>
+						</right>
+					</and>
+				</left>
+				<right>
+					<eq>
+						<left>
+							<feature name="lemma">
+								<element>
+									<variable name="base" />
+								</element>
+							</feature>
+						</left>
+						<right>
+							<feature name="lemma">
+								<element>
+									<get>
+										<left>
+											<sub type="eu.project.ttc.types.TermComponentAnnotation">
+												<element>
+													<variable name="variant" />
+												</element>
+											</sub>
+										</left>
+										<right>
+											<integer value="0" />
+										</right>
+									</get>
+								</element>
+							</feature>
+						</right>
+					</eq>
+				</right>
+			</and>
+		</constraint>
+	</rule>
+	<rule id="noun-prefix">
+		<parameters>
+			<parameter name="base"
+				type="eu.project.ttc.types.SingleWordTermOccAnnotation" />
+			<parameter name="variant"
+				type="eu.project.ttc.types.CompoundTermOccAnnotation" />
+		</parameters>
+		<constraint>
+			<and>
+				<left>
+					<and>
+						<left>
+							<eq>
+								<left>
+									<feature name="category">
+										<element>
+											<variable name="base" />
+										</element>
+									</feature>
+								</left>
+								<right>
+									<string value="noun" />
+								</right>
+							</eq>
+						</left>
+						<right>
+							<eq>
+								<left>
+									<feature name="category">
+										<element>
+											<variable name="variant" />
+										</element>
+									</feature>
+								</left>
+								<right>
+									<string value="noun" />
+								</right>
+							</eq>
+						</right>
+					</and>
+				</left>
+				<right>
+					<eq>
+						<left>
+							<feature name="lemma">
+								<element>
+									<variable name="base" />
+								</element>
+							</feature>
+						</left>
+						<right>
+							<feature name="lemma">
+								<element>
+									<get>
+										<left>
+											<sub type="eu.project.ttc.types.TermComponentAnnotation">
+												<element>
+													<variable name="variant" />
+												</element>
+											</sub>
+										</left>
+										<right>
+											<integer value="1" />
+										</right>
+									</get>
+								</element>
+							</feature>
+						</right>
+					</eq>
+				</right>
+			</and>
+		</constraint>
+	</rule>
+	<rule id="noun-suffix">
+		<parameters>
+			<parameter name="base"
+				type="eu.project.ttc.types.SingleWordTermOccAnnotation" />
+			<parameter name="variant"
+				type="eu.project.ttc.types.CompoundTermOccAnnotation" />
+		</parameters>
+		<constraint>
+			<and>
+				<left>
+					<and>
+						<left>
+							<eq>
+								<left>
+									<feature name="category">
+										<element>
+											<variable name="base" />
+										</element>
+									</feature>
+								</left>
+								<right>
+									<string value="noun" />
+								</right>
+							</eq>
+						</left>
+						<right>
+							<eq>
+								<left>
+									<feature name="category">
+										<element>
+											<variable name="variant" />
+										</element>
+									</feature>
+								</left>
+								<right>
+									<string value="noun" />
+								</right>
+							</eq>
+						</right>
+					</and>
+				</left>
+				<right>
+					<eq>
+						<left>
+							<feature name="lemma">
+								<element>
+									<variable name="base" />
+								</element>
+							</feature>
+						</left>
+						<right>
+							<feature name="lemma">
+								<element>
+									<get>
+										<left>
+											<sub type="eu.project.ttc.types.TermComponentAnnotation">
+												<element>
+													<variable name="variant" />
+												</element>
+											</sub>
+										</left>
+										<right>
+											<integer value="0" />
+										</right>
+									</get>
+								</element>
+							</feature>
+						</right>
+					</eq>
+				</right>
+			</and>
+		</constraint>
+	</rule>
+	<rule id="noun-noun">
+		<parameters>
+			<parameter name="base"
+				type="eu.project.ttc.types.CompoundTermOccAnnotation" />
+			<parameter name="variant"
+				type="eu.project.ttc.types.MultiWordTermOccAnnotation" />
+		</parameters>
+		<constraint>
+			<and>
+				<left>
+					<and>
+						<left>
+							<eq>
+								<left>
+									<feature name="category">
+										<element>
+											<variable name="base" />
+										</element>
+									</feature>
+								</left>
+								<right>
+									<string value="noun" />
+								</right>
+							</eq>
+						</left>
+						<right>
+							<eq>
+								<left>
+									<feature name="category">
+										<element>
+											<variable name="variant" />
+										</element>
+									</feature>
+								</left>
+								<right>
+									<string value="noun-noun" />
+								</right>
+							</eq>
+						</right>
+					</and>
+				</left>
+				<right>
+					<and>
+						<left>
+							<eq>
+								<left>
+									<feature name="lemma">
+										<element>
+											<get>
+												<left>
+													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+														<element>
+															<variable name="base" />
+														</element>
+													</sub>
+												</left>
+												<right>
+													<integer value="1" />
+												</right>
+											</get>
+										</element>
+									</feature>
+								</left>
+								<right>
+									<feature name="lemma">
+										<element>
+											<get>
+												<left>
+													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+														<element>
+															<variable name="variant" />
+														</element>
+													</sub>
+												</left>
+												<right>
+													<integer value="1" />
+												</right>
+											</get>
+										</element>
+									</feature>
+								</right>
+							</eq>
+						</left>
+						<right>
+							<eq>
+								<left>
+									<feature name="stem">
+										<element>
+											<get>
+												<left>
+													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+														<element>
+															<variable name="base" />
+														</element>
+													</sub>
+												</left>
+												<right>
+													<integer value="0" />
+												</right>
+											</get>
+										</element>
+									</feature>
+								</left>
+								<right>
+									<feature name="stem">
+										<element>
+											<get>
+												<left>
+													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+														<element>
+															<variable name="variant" />
+														</element>
+													</sub>
+												</left>
+												<right>
+													<integer value="0" />
+												</right>
+											</get>
+										</element>
+									</feature>
+								</right>
+							</eq>
+						</right>
+					</and>
+				</right>
+			</and>
+		</constraint>
+	</rule>
+	<rule id="adjective-noun">
+		<parameters>
+			<parameter name="base"
+				type="eu.project.ttc.types.MultiWordTermOccAnnotation" />
+			<parameter name="variant"
+				type="eu.project.ttc.types.CompoundTermOccAnnotation" />
+		</parameters>
+		<constraint>
+			<and>
+				<left>
+					<and>
+						<left>
+							<eq>
+								<left>
+									<feature name="category">
+										<element>
+											<variable name="base" />
+										</element>
+									</feature>
+								</left>
+								<right>
+									<string value="adjective-noun" />
+								</right>
+							</eq>
+						</left>
+						<right>
+							<eq>
+								<left>
+									<feature name="category">
+										<element>
+											<variable name="variant" />
+										</element>
+									</feature>
+								</left>
+								<right>
+									<string value="noun" />
+								</right>
+							</eq>
+						</right>
+					</and>
+				</left>
+				<right>
+					<and>
+						<left>
+							<eq>
+								<left>
+									<feature name="lemma">
+										<element>
+											<get>
+												<left>
+													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+														<element>
+															<variable name="base" />
+														</element>
+													</sub>
+												</left>
+												<right>
+													<integer value="1" />
+												</right>
+											</get>
+										</element>
+									</feature>
+								</left>
+								<right>
+									<feature name="lemma">
+										<element>
+											<get>
+												<left>
+													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+														<element>
+															<variable name="variant" />
+														</element>
+													</sub>
+												</left>
+												<right>
+													<integer value="1" />
+												</right>
+											</get>
+										</element>
+									</feature>
+								</right>
+							</eq>
+						</left>
+						<right>
+							<eq>
+								<left>
+									<feature name="stem">
+										<element>
+											<get>
+												<left>
+													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+														<element>
+															<variable name="base" />
+														</element>
+													</sub>
+												</left>
+												<right>
+													<integer value="0" />
+												</right>
+											</get>
+										</element>
+									</feature>
+								</left>
+								<right>
+									<feature name="stem">
+										<element>
+											<get>
+												<left>
+													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+														<element>
+															<variable name="variant" />
+														</element>
+													</sub>
+												</left>
+												<right>
+													<integer value="0" />
+												</right>
+											</get>
+										</element>
+									</feature>
+								</right>
+							</eq>
+						</right>
+					</and>
+				</right>
+			</and>
+		</constraint>
+	</rule>
+	<rule id="adjective-noun-noun">
+		<parameters>
+			<parameter name="base"
+				type="eu.project.ttc.types.MultiWordTermOccAnnotation" />
+			<parameter name="variant"
+				type="eu.project.ttc.types.MultiWordTermOccAnnotation" />
+		</parameters>
+		<constraint>
+			<and>
+				<left>
+					<and>
+						<left>
+							<eq>
+								<left>
+									<feature name="category">
+										<element>
+											<variable name="base" />
+										</element>
+									</feature>
+								</left>
+								<right>
+									<string value="adjective-noun" />
+								</right>
+							</eq>
+						</left>
+						<right>
+							<eq>
+								<left>
+									<feature name="category">
+										<element>
+											<variable name="variant" />
+										</element>
+									</feature>
+								</left>
+								<right>
+									<string value="adjective-noun-noun" />
+								</right>
+							</eq>
+						</right>
+					</and>
+				</left>
+				<right>
+					<and>
+						<left>
+							<eq>
+								<left>
+									<feature name="lemma">
+										<element>
+											<get>
+												<left>
+													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+														<element>
+															<variable name="base" />
+														</element>
+													</sub>
+												</left>
+												<right>
+													<integer value="0" />
+												</right>
+											</get>
+										</element>
+									</feature>
+								</left>
+								<right>
+									<feature name="lemma">
+										<element>
+											<get>
+												<left>
+													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+														<element>
+															<variable name="variant" />
+														</element>
+													</sub>
+												</left>
+												<right>
+													<integer value="0" />
+												</right>
+											</get>
+										</element>
+									</feature>
+								</right>
+							</eq>
+						</left>
+						<right>
+							<eq>
+								<left>
+									<feature name="lemma">
+										<element>
+											<get>
+												<left>
+													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+														<element>
+															<variable name="base" />
+														</element>
+													</sub>
+												</left>
+												<right>
+													<integer value="1" />
+												</right>
+											</get>
+										</element>
+									</feature>
+								</left>
+								<right>
+									<feature name="lemma">
+										<element>
+											<get>
+												<left>
+													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+														<element>
+															<variable name="variant" />
+														</element>
+													</sub>
+												</left>
+												<right>
+													<integer value="2" />
+												</right>
+											</get>
+										</element>
+									</feature>
+								</right>
+							</eq>
+						</right>
+					</and>
+				</right>
+			</and>
+		</constraint>
+	</rule>
+	<rule id="noun-adjective-noun">
+		<parameters>
+			<parameter name="base"
+				type="eu.project.ttc.types.MultiWordTermOccAnnotation" />
+			<parameter name="variant"
+				type="eu.project.ttc.types.MultiWordTermOccAnnotation" />
+		</parameters>
+		<constraint>
+			<and>
+				<left>
+					<and>
+						<left>
+							<eq>
+								<left>
+									<feature name="category">
+										<element>
+											<variable name="base" />
+										</element>
+									</feature>
+								</left>
+								<right>
+									<string value="noun-noun" />
+								</right>
+							</eq>
+						</left>
+						<right>
+							<eq>
+								<left>
+									<feature name="category">
+										<element>
+											<variable name="variant" />
+										</element>
+									</feature>
+								</left>
+								<right>
+									<string value="noun-adjective-noun" />
+								</right>
+							</eq>
+						</right>
+					</and>
+				</left>
+				<right>
+					<and>
+						<left>
+							<eq>
+								<left>
+									<feature name="lemma">
+										<element>
+											<get>
+												<left>
+													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+														<element>
+															<variable name="base" />
+														</element>
+													</sub>
+												</left>
+												<right>
+													<integer value="0" />
+												</right>
+											</get>
+										</element>
+									</feature>
+								</left>
+								<right>
+									<feature name="lemma">
+										<element>
+											<get>
+												<left>
+													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+														<element>
+															<variable name="variant" />
+														</element>
+													</sub>
+												</left>
+												<right>
+													<integer value="0" />
+												</right>
+											</get>
+										</element>
+									</feature>
+								</right>
+							</eq>
+						</left>
+						<right>
+							<eq>
+								<left>
+									<feature name="lemma">
+										<element>
+											<get>
+												<left>
+													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+														<element>
+															<variable name="base" />
+														</element>
+													</sub>
+												</left>
+												<right>
+													<integer value="1" />
+												</right>
+											</get>
+										</element>
+									</feature>
+								</left>
+								<right>
+									<feature name="lemma">
+										<element>
+											<get>
+												<left>
+													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+														<element>
+															<variable name="variant" />
+														</element>
+													</sub>
+												</left>
+												<right>
+													<integer value="2" />
+												</right>
+											</get>
+										</element>
+									</feature>
+								</right>
+							</eq>
+						</right>
+					</and>
+				</right>
+			</and>
+		</constraint>
+	</rule>
+	<rule id="noun-noun-noun">
+		<parameters>
+			<parameter name="base"
+				type="eu.project.ttc.types.MultiWordTermOccAnnotation" />
+			<parameter name="variant"
+				type="eu.project.ttc.types.MultiWordTermOccAnnotation" />
+		</parameters>
+		<constraint>
+			<and>
+				<left>
+					<and>
+						<left>
+							<eq>
+								<left>
+									<feature name="category">
+										<element>
+											<variable name="base" />
+										</element>
+									</feature>
+								</left>
+								<right>
+									<string value="noun-noun" />
+								</right>
+							</eq>
+						</left>
+						<right>
+							<eq>
+								<left>
+									<feature name="category">
+										<element>
+											<variable name="variant" />
+										</element>
+									</feature>
+								</left>
+								<right>
+									<string value="noun-noun-noun" />
+								</right>
+							</eq>
+						</right>
+					</and>
+				</left>
+				<right>
+					<and>
+						<left>
+							<eq>
+								<left>
+									<feature name="lemma">
+										<element>
+											<get>
+												<left>
+													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+														<element>
+															<variable name="base" />
+														</element>
+													</sub>
+												</left>
+												<right>
+													<integer value="0" />
+												</right>
+											</get>
+										</element>
+									</feature>
+								</left>
+								<right>
+									<feature name="lemma">
+										<element>
+											<get>
+												<left>
+													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+														<element>
+															<variable name="variant" />
+														</element>
+													</sub>
+												</left>
+												<right>
+													<integer value="1" />
+												</right>
+											</get>
+										</element>
+									</feature>
+								</right>
+							</eq>
+						</left>
+						<right>
+							<eq>
+								<left>
+									<feature name="lemma">
+										<element>
+											<get>
+												<left>
+													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+														<element>
+															<variable name="base" />
+														</element>
+													</sub>
+												</left>
+												<right>
+													<integer value="1" />
+												</right>
+											</get>
+										</element>
+									</feature>
+								</left>
+								<right>
+									<feature name="lemma">
+										<element>
+											<get>
+												<left>
+													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+														<element>
+															<variable name="variant" />
+														</element>
+													</sub>
+												</left>
+												<right>
+													<integer value="2" />
+												</right>
+											</get>
+										</element>
+									</feature>
+								</right>
+							</eq>
+						</right>
+					</and>
+				</right>
+			</and>
+		</constraint>
+	</rule>
+	<rule id="noun-noun-dative">
+		<parameters>
+			<parameter name="base"
+				type="eu.project.ttc.types.MultiWordTermOccAnnotation" />
+			<parameter name="variant"
+				type="eu.project.ttc.types.MultiWordTermOccAnnotation" />
+		</parameters>
+		<constraint>
+			<and>
+				<left>
+					<and>
+						<left>
+							<eq>
+								<left>
+									<feature name="category">
+										<element>
+											<variable name="base" />
+										</element>
+									</feature>
+								</left>
+								<right>
+									<string value="noun-noun" />
+								</right>
+							</eq>
+						</left>
+						<right>
+							<eq>
+								<left>
+									<feature name="category">
+										<element>
+											<variable name="variant" />
+										</element>
+									</feature>
+								</left>
+								<right>
+									<string value="noun-noun-dative" />
+								</right>
+							</eq>
+						</right>
+					</and>
+				</left>
+				<right>
+					<and>
+						<left>
+							<eq>
+								<left>
+									<feature name="lemma">
+										<element>
+											<get>
+												<left>
+													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+														<element>
+															<variable name="base" />
+														</element>
+													</sub>
+												</left>
+												<right>
+													<integer value="0" />
+												</right>
+											</get>
+										</element>
+									</feature>
+								</left>
+								<right>
+									<feature name="lemma">
+										<element>
+											<get>
+												<left>
+													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+														<element>
+															<variable name="variant" />
+														</element>
+													</sub>
+												</left>
+												<right>
+													<integer value="0" />
+												</right>
+											</get>
+										</element>
+									</feature>
+								</right>
+							</eq>
+						</left>
+						<right>
+							<eq>
+								<left>
+									<feature name="lemma">
+										<element>
+											<get>
+												<left>
+													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+														<element>
+															<variable name="base" />
+														</element>
+													</sub>
+												</left>
+												<right>
+													<integer value="1" />
+												</right>
+											</get>
+										</element>
+									</feature>
+								</left>
+								<right>
+									<feature name="lemma">
+										<element>
+											<get>
+												<left>
+													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+														<element>
+															<variable name="variant" />
+														</element>
+													</sub>
+												</left>
+												<right>
+													<integer value="1" />
+												</right>
+											</get>
+										</element>
+									</feature>
+								</right>
+							</eq>
+						</right>
+					</and>
+				</right>
+			</and>
+		</constraint>
+	</rule>
+	<rule id="noun-adjective-noun2">
+		<parameters>
+			<parameter name="base"
+				type="eu.project.ttc.types.MultiWordTermOccAnnotation" />
+			<parameter name="variant"
+				type="eu.project.ttc.types.MultiWordTermOccAnnotation" />
+		</parameters>
+		<constraint>
+			<and>
+				<left>
+					<and>
+						<left>
+							<eq>
+								<left>
+									<feature name="category">
+										<element>
+											<variable name="base" />
+										</element>
+									</feature>
+								</left>
+								<right>
+									<string value="adjective-noun" />
+								</right>
+							</eq>
+						</left>
+						<right>
+							<eq>
+								<left>
+									<feature name="category">
+										<element>
+											<variable name="variant" />
+										</element>
+									</feature>
+								</left>
+								<right>
+									<string value="noun-adjective-noun" />
+								</right>
+							</eq>
+						</right>
+					</and>
+				</left>
+				<right>
+					<and>
+						<left>
+							<eq>
+								<left>
+									<feature name="lemma">
+										<element>
+											<get>
+												<left>
+													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+														<element>
+															<variable name="base" />
+														</element>
+													</sub>
+												</left>
+												<right>
+													<integer value="0" />
+												</right>
+											</get>
+										</element>
+									</feature>
+								</left>
+								<right>
+									<feature name="lemma">
+										<element>
+											<get>
+												<left>
+													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+														<element>
+															<variable name="variant" />
+														</element>
+													</sub>
+												</left>
+												<right>
+													<integer value="1" />
+												</right>
+											</get>
+										</element>
+									</feature>
+								</right>
+							</eq>
+						</left>
+						<right>
+							<eq>
+								<left>
+									<feature name="lemma">
+										<element>
+											<get>
+												<left>
+													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+														<element>
+															<variable name="base" />
+														</element>
+													</sub>
+												</left>
+												<right>
+													<integer value="1" />
+												</right>
+											</get>
+										</element>
+									</feature>
+								</left>
+								<right>
+									<feature name="lemma">
+										<element>
+											<get>
+												<left>
+													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+														<element>
+															<variable name="variant" />
+														</element>
+													</sub>
+												</left>
+												<right>
+													<integer value="2" />
+												</right>
+											</get>
+										</element>
+									</feature>
+								</right>
+							</eq>
+						</right>
+					</and>
+				</right>
+			</and>
+		</constraint>
+	</rule>
+	<rule id="noun-conjunction-noun-noun2">
+		<parameters>
+			<parameter name="base"
+				type="eu.project.ttc.types.MultiWordTermOccAnnotation" />
+			<parameter name="variant"
+				type="eu.project.ttc.types.MultiWordTermOccAnnotation" />
+		</parameters>
+		<constraint>
+			<and>
+				<left>
+					<and>
+						<left>
+							<eq>
+								<left>
+									<feature name="category">
+										<element>
+											<variable name="base" />
+										</element>
+									</feature>
+								</left>
+								<right>
+									<string value="noun-noun" />
+								</right>
+							</eq>
+						</left>
+						<right>
+							<eq>
+								<left>
+									<feature name="category">
+										<element>
+											<variable name="variant" />
+										</element>
+									</feature>
+								</left>
+								<right>
+									<string value="noun-conjunction-noun-noun" />
+								</right>
+							</eq>
+						</right>
+					</and>
+				</left>
+				<right>
+					<and>
+						<left>
+							<eq>
+								<left>
+									<feature name="lemma">
+										<element>
+											<get>
+												<left>
+													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+														<element>
+															<variable name="base" />
+														</element>
+													</sub>
+												</left>
+												<right>
+													<integer value="1" />
+												</right>
+											</get>
+										</element>
+									</feature>
+								</left>
+								<right>
+									<feature name="lemma">
+										<element>
+											<get>
+												<left>
+													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+														<element>
+															<variable name="variant" />
+														</element>
+													</sub>
+												</left>
+												<right>
+													<integer value="3" />
+												</right>
+											</get>
+										</element>
+									</feature>
+								</right>
+							</eq>
+						</left>
+						<right>
+							<or>
+								<left>
+									<eq>
+										<left>
+											<feature name="lemma">
+												<element>
+													<get>
+														<left>
+															<sub type="eu.project.ttc.types.TermComponentAnnotation">
+																<element>
+																	<variable name="base" />
+																</element>
+															</sub>
+														</left>
+														<right>
+															<integer value="0" />
+														</right>
+													</get>
+												</element>
+											</feature>
+										</left>
+										<right>
+											<feature name="lemma">
+												<element>
+													<get>
+														<left>
+															<sub type="eu.project.ttc.types.TermComponentAnnotation">
+																<element>
+																	<variable name="variant" />
+																</element>
+															</sub>
+														</left>
+														<right>
+															<integer value="0" />
+														</right>
+													</get>
+												</element>
+											</feature>
+										</right>
+									</eq>
+								</left>
+								<right>
+									<eq>
+										<left>
+											<feature name="lemma">
+												<element>
+													<get>
+														<left>
+															<sub type="eu.project.ttc.types.TermComponentAnnotation">
+																<element>
+																	<variable name="base" />
+																</element>
+															</sub>
+														</left>
+														<right>
+															<integer value="0" />
+														</right>
+													</get>
+												</element>
+											</feature>
+										</left>
+										<right>
+											<feature name="lemma">
+												<element>
+													<get>
+														<left>
+															<sub type="eu.project.ttc.types.TermComponentAnnotation">
+																<element>
+																	<variable name="variant" />
+																</element>
+															</sub>
+														</left>
+														<right>
+															<integer value="2" />
+														</right>
+													</get>
+												</element>
+											</feature>
+										</right>
+									</eq>
+								</right>
+							</or>
+						</right>
+					</and>
+				</right>
+			</and>
+		</constraint>
+	</rule>
+</rules>

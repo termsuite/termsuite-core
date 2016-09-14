@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mapping>
+  <map key="CC" value="conjunction" />
+  <map key="CD" value="number" />
+  <map key="DT" value="determiner" />
+  <map key="EX" value="Existential" /> <!-- unkown -->
+  <map key="FW" value="noun" /> <!-- foreign word -->
+  <map key="HYPH" value="unknown" />
+  <map key="IN" value="adposition" />
+  <map key="JJ" value="adjective" />
+  <map key="JJR" value="adjective" />
+  <map key="JJS" value="adjective" />
+  <map key="LS" value="list item marker" /> <!-- unknown -->
+  <map key="MD" value="modal" /> <!-- unknown -->
+  <map key="NIL" value="unknown" />
+  <map key="NN" value="noun" />
+  <map key="NNP" value="name" />
+  <map key="NNPS" value="name" />
+  <map key="NNS" value="noun" />
+  <map key="PDT" value="determiner" />
+  <map key="POS" value="possessive" /> <!-- determiner -->
+  <map key="PRF" value="unknown" />
+  <map key="PRP" value="pronoun" />
+  <map key="PRP$" value="pronoun" />
+  <map key="RB" value="adverb" />
+  <map key="RBR" value="adverb" />
+  <map key="RBS" value="adverb" />
+  <map key="RP" value="particle" /> <!-- article -->
+  <map key="SYM" value="symbol" />
+  <map key="TO" value="adposition" />
+  <map key="UH" value="interjection" />
+  <map key="VB" value="verb" />
+  <map key="VBD" value="verb" />
+  <map key="VBG" value="verb" />
+  <map key="VBN" value="verb" />
+  <map key="VBP" value="verb" />
+  <map key="VBZ" value="verb" />
+  <map key="WDT" value="determiner" />
+  <map key="WP" value="pronoun" />
+  <map key="WP$" value="pronoun" />
+  <map key="WRB" value="adverb" />
+  <map key="``" value="punctuation" />
+  <map key="," value="punctuation" />
+  <map key=":" value="punctuation" />
+  <map key="''" value="punctuation" />
+  <map key="(" value="punctuation" />
+  <map key=")" value="punctuation" />
+  <map key="$" value="punctuation" />
+  <map key="#" value="punctuation" />
+  <map key="." value="punctuation" />
+</mapping>

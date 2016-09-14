@@ -1,0 +1,175 @@
+# [greek:aero]
+aero-
+# [greek:algie]
+-algia
+# [greek:allo]
+alo-
+# [greek:auto]
+auto-
+autó-
+# [greek:bio]
+bio-
+# [greek:cardio]
+-cardio
+cardio-
+# [greek:cephalo]
+cefalo-
+cefal-
+# [greek:chromato]
+cromo-
+cromato-
+# [greek:chrono]
+cron- crono-
+# [greek:cosmo]
+cosmo-
+# [greek:crate]
+-cracia
+# [greek:crypto]
+cript-
+cripto-
+# [greek:deca]
+deca-
+# [greek:demo]
+demo-
+demó-
+# [greek:drome]
+-dromo
+# [greek:electro]
+electro-
+# [greek:game]
+-gamia
+# [greek:geo]
+geo-
+# [greek:gram]
+-grama
+# [greek:grapho]
+ghrafo-
+-gráfica
+# [greek:hemato]
+hemat-
+hemato-
+hemo-
+# [greek:hippo]
+hipo-
+# [greek:histo]
+histo-
+# [greek:homo]
+homo-
+homó-
+# [greek:hydro]
+hidro-
+# [greek:ide]
+-ide
+# [greek:iso]
+iso- isó-
+# [greek:kilo]
+kilo-
+kiló-
+# [greek:lipo]
+lipo-
+# [greek:litho]
+-lito
+-lítico
+# [greek:logie]
+-logo
+-logía
+# [greek:macro]
+macro-
+# [greek:mane]
+-manía
+# [greek:mega]
+megá-
+mega-
+# [greek:metro]
+-metro
+-metría
+# [greek:micro]
+micro-
+# [greek:mono]
+mono-
+# [greek:morpho]
+morfo-
+-morfo
+# [greek:neo]
+neo-
+neó-
+# [greek:neuro]
+neuro-
+# [greek:nome]
+-nomía
+# [greek:ophtalmo]
+oftalm-
+oftalmo-
+# [greek:ortho]
+orto-
+# [greek:ostéo]
+oste-
+osteo-
+# [greek:patho]
+-patía
+-patia
+pato-
+# [greek:pedo]
+pedó-
+pedo-
+# [greek:phil]
+-filo
+-filia
+filo-
+# [greek:phobe]
+-fobia
+# [greek:phone]
+-fono
+# [greek:photo]
+foto-
+# [greek:physio]
+fisio-
+
+# [greek:poly]
+polí-
+poli-
+# [greek:proto]
+proto-
+# [greek:pseudo]
+pseudó-
+pseudo-
+seudo-
+# [greek:psycho]
+psico-
+# [greek:scope]
+-scopio
+# [greek:techno]
+tecno-
+# [greek:tele]
+telé-
+tele-
+# [greek:therapie]
+-terapia
+# [greek:topo]
+topo-
+# [latin:agri]
+agri
+-agro
+# [latin:centi]
+centí-
+centi-
+# [latin:culteur]
+-cultura
+# [latin:forme]
+-forme
+# [latin:milli]
+mili-
+# [latin:mini]
+mini-
+# [latin:multi]
+multi-
+# [latin:omni]
+omni-
+# [latin:pluri]
+pluri-
+# [latin:radio]
+radio-
+# [latin:uni]
+uni-
+# [latin:vore]
+-voro

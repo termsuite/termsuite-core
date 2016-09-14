@@ -23,9 +23,9 @@
 
 package eu.project.ttc.tools;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.MalformedURLException;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.net.URL;
 
 import org.apache.uima.resource.RelativePathResolver;
@@ -37,6 +37,8 @@ import com.google.common.base.Preconditions;
 
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.engines.desc.TermSuiteResourceException;
+import eu.project.ttc.utils.TermSuiteConstants;
+import eu.project.ttc.utils.URLUtils;
 
 /**
  * 
@@ -75,7 +77,6 @@ public enum TermSuiteResource {
 	;
 	
 	private static final String MSG_ERR_RESOURCE_NOT_FOUND = "Resource %s does not exist for resource %s (resolved URL is %s)";
-	private static final String BAD_RESOURCE_URL = "Bad resource URL for resource %s: %s ";
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermSuiteResource.class);
 
@@ -109,18 +110,16 @@ public enum TermSuiteResource {
 	private static final String LANG_SHORT_PATTERN = "[LANG_SHORT]";
 
 
-	private void checkUrl(URI uri) {
-		try {
-			URL url = uri.toURL();
-			URL absoluteURL = getResolver().resolveRelativePath(url);
-			if (absoluteURL == null)
-				throw new TermSuiteResourceException(String.format(
-					MSG_ERR_RESOURCE_NOT_FOUND, 
-					uri.toString(), this, absoluteURL));
-		} catch (MalformedURLException e) {
-			throw new TermSuiteResourceException(String.format(
-					BAD_RESOURCE_URL, 
-					uri.toString(), this),e);
+	private URL checkUrl(URL url) {
+		Preconditions.checkNotNull(url, "Failed to load resource %s. Url is null.", this);
+		try(InputStream is = url.openStream()) {
+			Preconditions.checkNotNull(is, "Failed to load resource %s. Got a null input stream for url %s",
+					this, url);
+			return url;
+		} catch(IOException e) {
+			throw new TermSuiteResourceException(
+					String.format("Cannot open stream for resource %s and url %s", this, url), 
+					e);
 		}
 	}
 	
@@ -130,30 +129,38 @@ public enum TermSuiteResource {
 			resolver = new RelativePathResolver_impl(TermSuiteResource.class.getClassLoader()); 
 		return resolver;
 	}
+	
+	public URL fromClasspath(Lang lang) {
+		String classpathPath = TermSuiteConstants.DEFAULT_RESOURCE_URL_PREFIX + getPath(lang);
+		URL url = getClass().getResource(classpathPath);
+		return checkUrl(url);
+	}
 
-	public URI getUrl(URI prefix, Lang lang) {
-		URI url = resolve(prefix, lang, null);
-		checkUrl(url);
-		return url;
+
+	public URL fromClasspath(Lang lang, Tagger tagger) {
+		String classpathPath =TermSuiteConstants.DEFAULT_RESOURCE_URL_PREFIX + getPath(lang, tagger);
+		URL url = getClass().getResource(classpathPath);
+		return checkUrl(url);
+	}
+
+	public URL fromUrlPrefix(URL prefix, Lang lang) {
+		URL url = resolve(prefix, lang, null);
+		return checkUrl(url);
 	}
 
 	
-	public URI getUrl(URI prefix, Lang lang, Tagger tagger) {
-		URI url = resolve(prefix, lang, tagger);
-		checkUrl(url);
-		return url;
+	public URL fromUrlPrefix(URL prefix, Lang lang, Tagger tagger) {
+		URL url = resolve(prefix, lang, tagger);
+		return checkUrl(url);
 	}
 
-	private URI resolve(URI prefix, Lang lang, Tagger tagger) {
-		if(prefix.toString().startsWith("jar:"))
-			try {
-				return new URI(prefix.toString() + getPath(lang,tagger));
-			} catch (URISyntaxException e) {
-				LOGGER.error("failed to build uri: " + prefix.toString() + getPath(lang,tagger));
-				throw new RuntimeException(e);
-			}
-		else
-			return prefix.resolve(getPath(lang,tagger));
+	private URL resolve(URL prefix, Lang lang, Tagger tagger) {
+		try {
+			return URLUtils.join(prefix, getPath(lang,tagger));
+		} catch (MalformedURLException e) {
+			LOGGER.error("failed to build url: " + prefix.toString() + getPath(lang,tagger));
+			throw new RuntimeException(e);
+		}
 	}
 
 	public String getPath(Lang lang) {

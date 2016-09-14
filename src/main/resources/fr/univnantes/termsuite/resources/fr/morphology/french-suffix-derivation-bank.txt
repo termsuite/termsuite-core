@@ -1,0 +1,303 @@
+
+
+#########################################"
+# tableau contenant les variations morphologiques
+# pour chaque suffixe d'adjectif en premier champ, le tableau fournit
+# le suffixe de nom equivalent en deuxieme champ
+#
+
+
+### @TMorphAdjRel
+# 1/ RELATIONNEL (adjectif est dérivé du nom)
+# de N1 A2 vers N1 P N2 ou N1 N2 (oiseau marin / oiseau de mer)
+# FORCER A	N
+
+#ique 25 règles
+A N	-ématique	-ème
+# EM le 09/05/08 : thérapeutique/thérapie
+A N	-eutique	-ie
+A N	-étrique	-ètre
+A N	-tifique	-ce
+#hypnotique/hypnose
+A N	-otique	-ose
+A N	-inique	-en
+# suffixe en "ique"
+A N	-atique	-e
+A N	-atique	-a
+#analytique/analyse
+A N	-ytique	-se
+A N	-élique	-ile
+A N	-cique	-x
+A N	-tique	-
+# EM le 09/05/08 : métastatique/métastase
+A N	-tique	-se
+A N	-ique	-
+A N	-ique	-ie
+#dictionnaire/dictionnairique
+A N	-ique	-e
+A N	-ique	-a
+A N	-ique	-i
+A N	-ique	-é
+A N	-ique	-as
+#tétanique/tétanos
+A N	-ique	-os
+#métamorphique/métamorphose
+A N	-ique	-ose
+#tonique/tonus
+A N	-ique	-us
+A N	-ique	-icité
+A N	-ique	-isme
+
+#aire 12 règles
+#pulmonaire/poumon
+A N	-ulmonaire	-oumon
+# muscle/musculaire
+A N	-ulaire	-le
+A N	-étaire	-ète
+A N	-laire	-
+A N	-laire	-e
+A N	-iaire	-e
+A N	-naire	-
+A N	-naire	-in
+A N	-aire	-
+A N	-aire	-e
+#volontaire/volonté
+A N	-aire	-é
+A N	-aire	-ation
+
+#al  22 règles
+A N	-oronal	-ouronne
+#pondéral/poids
+A N	-ndéral	-ids
+A N	-estial	-ête
+# salaire/salarial
+A N	-arial	-aire
+# médical/médecine
+A N	-dical	-decine
+A N	-acal	-e
+A N	-asal	-ez
+#  rénal/rein
+A N	-énal	-ein
+# EM le 15/05/08 : viscéral/viscère
+A N	-éral	-ère
+A N	-ital	-et
+
+# nominal/nom
+A N	-inal	-
+A N	-inal	-en
+A N	-ical	-ex
+A N	-ocal	-oix
+#floral/fleur
+A N	-oral	-eur
+A N	-yal	-i
+# province/provincial
+A N	-ial	-e
+A N	-cal	-que
+A N	-al	-
+A N	-al	-e
+#rectal/rectum
+A N	-al	-um
+#viral/virus
+A N	-al	-us
+
+#eux 11 règles
+A N	-oureux	-eur
+#EM le 13/05/08 : carcinomateuxcarcinome
+A N	-ateux	-e
+#EM le 20/04/08 : cancéreux/cancer
+A N	-éreux	-er
+#pileux/poil
+A N	-ileux	-oil
+A N	-uleux	-le
+A N	-ieux	-e
+A N	-ieux	-ion
+# osseux/os
+A N	-seux	-
+# EM le 15/05/08 : comateux/coma
+A N	-teux	-
+A N	-eux	-
+A N	-eux	-e
+
+#oire 1 règle
+A N	-oire	-ion
+
+#é    6 règles
+A N	-boré	-bre
+A N	-iégé	-iège
+A N	-ulé	-le
+#cactée/cactus
+A N	-é	-us
+A N	-é	-e
+A N	-é	-ure
+
+#cole 1 règle
+A N	-cole	-culture
+
+#er  5 règles
+A N	-égulier	-ègle
+#forêt/forestier
+A N	-estier	-êt
+A N	-ier	-
+#bourse/boursier
+A N	-ier	-e
+A N	-er	-e
+
+#ien 8 règles
+# EM le 20/04/08 : aérien/air
+A N	-érien	-ir
+#rachidien/rachis
+A N	-idien	-is
+#EM le 10/05/08 : ovarien/ovaire
+A N	-arien	-aire
+A N	-orien	-oire
+#Balzac/balzacien
+A N	-ien	-
+# EM le 15/05/08 : oesophagien/oesophage
+A N	-ien	-e
+A N	-ien	-ie
+#pubien/pubis
+A N	-ien	-is
+
+#ain 1 règle
+A N	-orain	-oire
+
+#el 4 règles
+A N	-iel	-ie
+#eternel/eternité
+A N	-el	-ité
+#culture/culturel
+A N	-el	-e
+A N	-el	-
+
+#in 6 règles
+A N	-arin	-er
+A N	-alin	-el
+#sanguin/sang
+A N	-guin	-g
+A N	-lin	-
+A N	-in	-
+#utérin/utérus
+A N	-in	-us
+
+#if 3 règles
+A N	-ursif	-ours
+A N	-if	-
+A N	-if	-ion
+
+#Traitement pas propre des racines supplétives
+#iaque
+
+# EM le 10/05/08 : cardiaque/coeur
+A N	-ardiaque	-oeur
+
+#xillaire
+
+# EM le 15/05/08 : axillaire/aisselle
+A N	-xillaire	-isselle
+
+
+####################################################################
+# 2/ DE NOM VERS NOM
+# Nom typique du 1er actant : transport/transporteur
+# de N1 A vers N2 A (transporteur publique, transport publique)
+# ou de N1 P N vers N2 P N (lever de grue, levage de grue)
+# FORCER N	 N
+### @TSuffS1 = (
+#eur
+N N	-eur	-
+N N	-eur	-e
+#ier
+N N	-ier	-
+N N	-ier	-e
+#er
+N N	-er	-
+N N	-er	-e
+
+##SUFFENS
+# N1 P N vers N2 P N (plume de carnad, plumage de canard)
+# FORCER N	N
+### @TSuffEns = (
+#ade
+N N	-ade	-e
+N N	-ade	-
+#age
+N N	-osage	-ôt
+N N	-lage	-
+N N	-nage	-
+#langage/langue
+N N	-gage	-gue
+N N	-age	-e
+N N	-age	-
+#erie
+#foresterie/forêt
+N N	-esterie	-êt
+N N	-nnerie	-n
+N N	-erie	-e
+N N	-erie	-
+
+
+####################################################################
+# 3/ INVERSION (nom est dérivé de l'adjectif)
+# Traitement morphologique des inversions refletant "action de V"
+# de N1 A vers N P N1 => nuit noire, noirceur de la nuit
+# FORCER A	N
+### @TSuffInv
+#ade
+A N	-ade	-er
+#grossier/grossièreté
+A N	-ièreté	-ier
+#clair/clarté
+A N	-arté	-air
+A N	-ité	-e
+#stupide/stupidité
+A N	-ité	-
+#beau/beauté
+A N	-té	-
+#erie
+A N	-erie	-er
+A N	-erie	-e
+
+#ence
+#transparent/transparence
+A N	-ence	-ent
+
+# esse
+#bas/bassesse
+A N	-ssesse	-s
+#vite/vitesse
+A N	-esse	-e
+
+#eur
+#gros/grosseur
+A N	-sseur	-s
+
+#lent/lenteur
+A N	-eur	-
+
+#ise
+#bête/bêtise
+A N	-ise	-e
+
+#ure
+#droit/droiture
+A N	-ure	-
+A N	-ure	-er
+#ion
+#correct/correction
+A N	-ion	-
+
+#age
+A N	-issage	-ir
+A N	-age	-er
+
+#ation
+A N	-ification	-
+A N	-isation	-
+A N	-ation	-er
+
+#ement
+A N	-chissement	-c
+A N	-issement	-ir
+A N	-nement	-ner
+
+

@@ -1,0 +1,358 @@
+################################################################################
+# Copyright 2015 - CNRS (Centre National de Recherche Scientifique)
+#
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+#
+################################################################################
+
+#################################
+#  NN  #
+#################################
+
+# ausbau der windkraftnutzung || ausbau der windkraftnutzung im offshorebereich
+"S-Ed-NN-PN":
+  source: N N
+  target: N N P N
+  rule: s[0]==t[0] && s[1]==t[1]
+
+
+# änderung der anlage oder betreiberwechsel || änderung einer anlage
+"S-Ed-NN-CN":
+  source: N N C N
+  target: N N
+  rule: s[0]==t[0] && s[1]==t[1]
+
+
+# erhöhung der zuverlässigkeit und verfügbarkeit || erhöhung der verfügbarkeit
+"S-I-NN-NC":
+  source: N N C N
+  target: N N
+  rule: s[0]==t[0] && s[3]==t[1]
+
+
+# potenzial der windenergienutzung - technische potenzial der windenergienutzung
+"S-Eg-NN-A":
+  source: N N
+  target: A N N
+  rule: s[0]==t[1] && s[1]==t[2]
+
+
+# flexibilität der energieversorgung || reaktionsfähigkeit und flexibilität der energieversorgung
+"S-Eg-NN-NC":
+  source: N N
+  target: N C N N
+  rule: s[0]==t[2] && s[1]==t[3]
+
+
+# DOES NOT MATCH
+"S-I-NN-A":
+  source: N N
+  target: N A N
+  rule: s[0]==t[1] && s[1]==t[2]
+
+
+# verschärfung der energieeinsparverordnung || verschärfung und kontrolle der energieeinsparverordnung
+"S-I-NN-CN":
+  source: N N
+  target: N C N N
+  rule: s[0]==t[0] && s[1]==t[3]
+
+
+
+# Potenzial die Windenergie - Potenzial von Windenergie
+# the rule should match NDN-NPN (N N matches N D N), but actually does not match it !
+"S-R2-NPN":
+  source: N N
+  target: N P N
+  rule: s[0].stem==t[0].stem && s[1]==t[2] && t[1]=="von"
+
+
+#################################
+#  AN  #
+#################################
+
+
+# INCORRECT: technische potenzial - technische potenzial der windenergienutzung
+# "S-Ed-AN-N":
+#   source: A N
+#   target: A N N
+#   rule: s[0]==t[0] && s[1]==t[1]
+
+
+# messtechnische Untersuchungen und Analysen - messtechnische Untersuchungen
+"S-Ed-AN-CN":
+  source: A N C N
+  target: A N
+  rule: s[0]==t[0] && s[1]==t[1]
+
+
+# konventionell kraftwerk || wirtschaftlich konventionell kraftwerk
+"S-Eg-AN-A":
+  source: A N
+  target: A A N
+  rule: s[1]==t[2] && s[0]==t[1]
+
+
+# zwangsweise eingeführt windenergie-nutzung || eingeführt windenergie-nutzung
+"S-Eg-AN-R":
+  source: R A N
+  target: A N
+  rule: s[1]==t[0] && s[2]==t[1]
+
+
+# horizontal und vertikal Achse - vertikal Achse
+"S-Eg-AN-AC":
+  source: A C A N
+  target: A N
+  rule: s[3]==t[1] && s[2]==t[0]
+
+
+
+# zukünftig Anforderung || zukünftig erhöht Anforderung
+"S-I-AN-A":
+  source: A N
+  target: A A N
+  rule: s[0]==t[0] && s[1]==t[2]
+
+
+# messtechnische Untersuchungen und Analysen - messtechnische Analysen
+"S-I-AN-NC":
+  source: A N C N
+  target: A N
+  rule: s[0]==t[0] && s[3]==t[1]
+
+
+
+# horizontal und vertikal Achse - horizontal Achse
+"S-I-AN-CA":
+  source: A C A N
+  target: A N
+  rule: s[3]==t[1] && s[0]==t[0]
+
+
+
+#################################
+#  PREDICATION    #
+#################################
+
+# genehmigung ist erforderlich || erforderliche genehmigung
+"S-PI-AN-V":
+  source: N V A
+  target: A N
+  rule: s[0]==t[1] && s[2]==t[0]
+# V: sein, heissen
+
+
+#################################
+#  NPN  #
+#################################
+
+
+
+# Einspeisung von Leistung - Einspeisung von Leistung aus Windkraftanlage
+"S-Ed-NPN-PN":
+  source: N P N
+  target: N P N P N
+  rule: s[0]==t[0] && s[2]==t[2]
+
+
+# Institut für Wirtschaft und ökologie - Institut für Wirtschaft
+"S-Ed-NPN-CN":
+  source: N P N C N
+  target: N P N
+  rule: s[0]==t[0] && s[1]==t[1] && s[2]==t[2] && s[1]!="zwischen"
+
+
+
+# strategie für komponententausch || kostenoptimal strategie für komponententausch
+"S-Eg-NPN-A":
+  source: N P N
+  target: A N P N
+  rule: s[0]==t[1] && s[1]==t[2] && s[2]==t[3]
+
+
+
+# DOES NOT MATCH
+"S-I1-NPN-CN":
+  source: N P N
+  target: N C N P N
+  rule: s[0]==t[0] && s[1]==t[1] && s[2]==t[4]
+
+
+# Einspeisung ins Netz - Einspeisung ins öffentliche Netz
+"S-I2-NPN-A":
+  source: N P N
+  target: N P A N
+  rule: s[0]==t[0] && s[2]==t[3]
+
+
+# DOES NOT MATCH
+"S-Eg-NPN-NC":
+  source: N P N
+  target: N C N P N
+  rule: s[0]==t[2] && s[1]==t[3] && s[2]==t[4]
+
+
+# Institut für Wirtschaft und ökologie - Institut für ökologie
+# should also match match NPDNCN-NPDN
+"S-I2-NPN-NC":
+  source: N P N C N
+  target: N P N
+  rule: s[0]==t[0] && s[1]==t[1] && s[4]==t[2] && s[1]!="zwischen"
+
+
+# magnetische Anziehung - Anziehung des Magneten
+"S-PR2D-NPN":
+  source: A N
+  target: N P N
+  rule: s[0].stem==t[2].stem && s[1]==t[0]
+
+
+
+#################################
+#  OTHERS    #
+#################################
+
+# DOES NOT MATCH
+"S-R2-NPAN":
+  source: N P A N
+  target: N A N
+  rule: s[0]==t[0] && s[2]==t[1] && s[3]==t[2]
+
+
+#################################
+#  MORPHOLOGICAL  #
+#################################
+
+# Photovoltaik-anlage - Photovoltaik Anlage, Magnetfeld - magnetische Feld
+"M-S-(N|A)N":
+  source: N [compound]
+  target: N N, A N
+  rule: s[0].components.size()==t.words.size() && s[0][0]==t[0].stem && s[0][1]==t[1]
+
+#local tip-speed - local tip speed
+"M-S-(A|N)NN":
+  source: A N
+  target: A N N, N N N, A A N
+  rule: s[1][0]==t[1].stem && s[1][1]==t[2]
+
+# Biokraftstoffe - biogene Kraftstoffe, windanlagenleistung - windkraft­ anlagenleistung
+"M-I-EN-A|N":
+  source: N [compound]
+  target: N N, A N
+  rule: t[0].compound && s[0].components.size()==2 && s[0][0]==t[0][0] && s[0][1]==t[1]
+
+
+# Krebsrisiko - Risiko von Krebs,  Errichtungsphase - Phasen der Errichtung
+"M-P-NN":
+  source: N [compound]
+  target: N P N
+  rule: s[0].components.size()==2 && s[0][0]==t[2] && s[0][1]==t[0]
+
+
+# Effizienzsteigerung - Steigerung der Energieeffizienz, stromgestehungskosten || gestehungskosten von windstrom
+"M-PI-NN-P":
+  source: N [compound]
+  target: N P N
+  rule: t[2].compound && s[0][0]==t[2][1] && s[0][1]==t[0]
+
+
+# montagerelevant - relevant für Montage; metastasenfreien || frei von metastasen
+# "M-PR2-APN":
+#   source: A [compound]
+#   target: A P N
+#   rule: s[0][0]==t[2] && s[0][1]==t[0]
+
+# DOES NOT MATCH
+#  - Antrieb mit variabler Drehzahl
+"M-PI1-NAN2-N2-P":
+  source: A N
+  target: N P A N
+  rule: s[0].compound && s[0][0]==t[3] && s[0][1]==t[2] && s[1]==t[0]
+
+
+# Mammakarzinompatientin - Patientin mit kleinen Mammakarzinomen
+"M-PI-NN-PA ":
+  source: N [compound]
+  target: N P A N
+  rule: s[0][0]==t[3] && s[0][1]==t[0]
+
+
+# Energienutzung - Nutzung erneuerbarer Energien
+"M-PI-NN-A":
+  source: N [compound]
+  target: N A N
+  rule: s[0][0]==t[2] && s[0][1]==t[0]
+
+
+# Krebsrisiko - Risiko erbliches Darmkrebs
+"M-PI-NN-AE":
+  source: N [compound]
+  target: N A N
+  rule: t[2].compound && s[0][0]==t[2][1] && s[0][1]==t[0]
+
+
+# VERY RARE, NOISY
+# Therapieerfolg - erfolgreiche Therapie
+"M-AN":
+  source: N [compound]
+  target: A N
+  rule: s[0][0]==t[1] && s[0][1]==t[0].stem
+
+
+# Primärtherapie - primäre endokrine Therapie
+"M-I-(N|A)N-N|A":
+  source: N [compound]
+  target: N N N, A A N, A N N, N A N
+  rule: s[0][0]==t[0] && s[0][1]==t[2]
+
+
+# DOES NOT MATCH
+# Schallimmissionsprognose - Schallimmissions- und Schattenwurfprognose
+"M-I-NN-CN":
+  source: N
+  target: N C N
+  rule: s[0].compound && t[2].compound && s[0][0]==t[0] && s[0][1]==t[2][1]
+
+
+# DOES NOT MATCH
+# Wärmeaufnahme und -abgabe  -  Wärmeaufnahme und Wärmeabgabe
+"M-I2-NCN-N":
+  source: N C N
+  target: N C N
+  rule: t[2].compound && s[0]==t[0] && s[1]==t[1] && s[2]==t[2][1]
+
+
+
+# DOES NOT MATCH
+# Wärmeaufnahme und -abgabe  -  Aufnahme und Abgabe von Wärme
+"M-PI-NNCN-N-P":
+  source: N C N
+  target: N C N P N
+  rule: s[0].compound && s[0][1]==t[0] && s[1]==t[1] && s[0][0]==t[4] && s[2]==t[2]
+
+
+#################################
+#  PREFIXES  #
+#################################
+
+# unbrennbar - nichtbrennbar
+# "M-A":
+#   source: A
+#   target: A
+#   rule: s[0].compound && t[0].compound && (s[0][0] == "un" || s[0][0] == "ir") && (t[0][0] == "nicht" || t[0][0] == "nicht-")

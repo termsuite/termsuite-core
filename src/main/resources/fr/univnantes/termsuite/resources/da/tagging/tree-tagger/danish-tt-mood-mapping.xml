@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mapping>
+  <map key="VB" value="indicative" />
+  <map key="VBD" value="indicative" />
+  <map key="VBG" value="gerund | participle" />
+  <map key="VBN" value="participle" />
+  <map key="VBP" value="indictaive" />
+  <map key="VBZ" value="indictaive" />
+</mapping>

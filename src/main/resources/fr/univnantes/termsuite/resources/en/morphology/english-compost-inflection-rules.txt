@@ -1,0 +1,11 @@
+s, ;
+ed, ; coated - coat
+ed,e; based - base
+ing, ; erecting-erect
+ing,e; erasing-erase
+ies,y; species-specy
+er, ; smaller-small
+ier,y; easier-easy
+est, ; smallest-small
+iest,y; easiest-easy
+al, ; technical-technic

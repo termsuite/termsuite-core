@@ -1,0 +1,127 @@
+################################################################################
+# Copyright 2015 - CNRS (Centre National de Recherche Scientifique)
+#
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+#
+################################################################################
+
+
+import eu.project.ttc.types.TermSuiteTypeSystem;
+use eu.project.ttc.types.WordAnnotation;
+set inline = false;
+
+
+matcher P: [category=="preposition" & (lemma=="de" | lemma=="del" | lemma=="a" | lemma=="en" | lemma=="sobre" | lemma=="para" | lemma=="con")];
+matcher A: [category=="adjective"];
+matcher V: [category=="verb"];
+matcher Vbe as V: [category=="verb" & (lemma=="estar"|lemma=="ser")];
+matcher Vpp as A: [V & mood=="participle" & tense=="past"];
+matcher VLadj as A: [V & tag=="VLadj"];
+matcher A2 as A: [A | Vpp | VLadj];
+matcher N: [category=="noun"];
+matcher NP: [tag=="NP"];
+matcher N2 as N: [N | NP];
+matcher C: [category=="conjunction"];
+matcher R: [category=="adverb"];
+matcher D as D: [category=="article"];
+
+
+# from ruta
+term "n": N;
+term "a": A;
+term "r": R;
+term "an": A N;
+term "na": N A2;
+term "nna": N N A;	# ("pares motores elementales")
+term "naa": N A2 A2;
+term "naaa": N A2 A2 A2;
+term "ana": A N A;
+term "nacn": N A C N;	# ("obras públicas y transportes"), but often N A C N A
+term "napn": N A2 P ~D? N;
+term "npnn": N P N N2;	# noisy
+term "npn": N P ~D? N;
+term "npan": N P A N;
+term "npna": N P ~D? N A2;
+term "npncn": N P ~D? N C ~D? N;
+term "npnpn": N P ~D? N P ~D? N;
+# from Annexes
+term "naapn": N A A2 P ~D? N;
+term "nara": N A R A2;	#  variant of N A
+term "napan": N A P A N;
+term "napana": N A P A N A;
+term "napanpn": N A P A N P ~D? N;
+term "napna": N A2 P ~D? N A2;
+term "napnpn": N A2 P ~D? N P ~D? N;
+term "napnpna": N A2 P ~D? N P ~D? N A;
+term "napnpnpn": N A P ~D? N P ~D? N P ~D? N;
+term "nra": N R A;	#  variant of N A
+term "nnn": N N N2;	#  ("turbinas tipo Darrieus")
+term "nnpna": N N2 P ~D? N A;	#  ("turbina darrieus de palas verticales")
+term "nnpnpn": N N2 P ~D? N P ~D? N;	#  ("valor umbral de final de carga"), noisy
+term "npana": N P A N A;
+term "npanpn": N P A N P ~D? N;
+term "npanpna": N P A N P ~D? N A;
+term "npnaa": N P ~D? N A A;
+term "npnapn": N P ~D? N A P ~D? N;
+term "npnapna": N P N A P N A;
+term "npnapnpn": N P ~D? N A P ~D? N P ~D? N;
+term "npnapnpna": N P ~D? N A P ~D? N P ~D? N A;	# rare
+term "npnra": N P ~D? N R A;	#  variant of N P N A
+term "npnpan": N P ~D? N P A N;
+term "npnpanpn": N P ~D? N P A N P ~D? N;
+term "npnpna": N P ~D? N P ~D? N A2;
+term "npnpnra": N P ~D? N P ~D? N R A;	#  variant of N P N P N A
+term "npnpnpn": N P ~D? N P ~D? N P ~D? N;
+term "npnpnpna": N P ~D? N P ~D? N P ~D? N A;
+term "npnpnpnpn": N P ~D? N P ~D? N P ~D? N P ~D? N;
+term "nnpn": N N2 P ~D? N;	# noisy
+term "nn": N N2;	# noisy, "turbina darrieus", "par motor" - ok
+term "napnn": N A P ~D? N N2;	# noisy
+term "napnaa": N A2 P ~D? N A A;
+
+# with VLadj
+term "narvpn": N A R VLadj P ~D? N;	# rare
+term "navpna": N A VLadj P ~D? N A;	# ok
+term "nvpnapn": N VLadj P ~D? N A P ~D? N;	# rare
+
+# added
+term "nva": ~D? N Vbe A;
+term "ncnpn": N C N P ~D? N;
+term "ncnpna": N C N P ~D? N A;
+term "acan": A C A N;
+term "nvaca": N V A C A;
+term "npncpn": N P ~D? N C P ~D? N;
+term "npnnpn": N P ~D? N N P ~D? N;
+term "npncpna": N P ~D? N C P ~D? N A;
+term "naca": N A C A;
+
+# removed: some patterns extracted, but because of POS errors
+# term "npa": N P A;	# from Annexes
+# term "npaa": N P A A;	# from Annexes
+# term "npnpa": N P N P A;	# from Annexes
+
+# removed
+# term "npac": N P A C;	# from Annexes
+# term "napa": N A P A;	# from Annexes
+# term "npaapn": N P A A P N;	# from Annexes
+# term "naan": N A A N;	# from Annexes
+# term "nan": N A N;	# from Annexes
+# term "npaaa": N P A A A;	# from Annexes
+# term "nnpnpna": N N P N P N A;	# from Annexes
+# term "npaapna": N P A A P N A;	# from Annexes, never matches
+# term "nvapn": N VLadj A P N;	# rare and noisy

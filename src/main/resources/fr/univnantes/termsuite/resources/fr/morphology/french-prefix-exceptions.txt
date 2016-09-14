@@ -1,0 +1,72 @@
+
+#EXCEPTION_PREF_A
+atout	[]
+
+#EXCEPTION_PREF_DÉ
+décomposition	[]
+déformation	[]
+dépendant	[]
+débit	[]
+
+#EXCEPTION_PREF_TRANS
+transformation	[]
+
+#EXCEPTION_PREF_RE
+reconnaissance	[]
+refraction	[]
+représentation	[]
+reproduction	[]
+revue	[]
+retour	[]
+
+#EXCEPTION_PREF_RÉ
+réaction	[]
+réactif	[]
+réactivité	[]
+réflexion	[]
+résolution	[]
+réel	[]
+
+#EXCEPTION_PREF_SUR=
+surface	[]
+
+
+#EXCEPTION_PREF_INTER
+interface	[]
+intersection	[]
+
+#EXCEPTION_PREF_PARA
+paragraphe	[]
+paraphrase	[]
+parasite	[]
+
+#EXCEPTION_PREF_PRO
+proposition	[]
+proposer	[]
+projet	[]
+profil	[]
+
+#EXCEPTION_PREF_PRÉ
+préposition	[]
+
+
+#EXCEPTION_PREF_IM
+imposer	[]
+imposé	[]
+imposant	[]
+important	[]
+
+#EXCEPTION_PREF_IN
+inversion	[]
+inverser	[]
+information	[]
+
+#EXCEPTION_PREF_MINI
+minimal	[]
+
+#EXCEPTION_PREF_AUTO
+automatique	[]
+autonome	[]
+
+#EXCEPTION_PREF_HYPO
+hypothèse	[]

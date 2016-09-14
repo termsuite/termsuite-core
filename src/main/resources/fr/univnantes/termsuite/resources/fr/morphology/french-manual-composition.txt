@@ -1,0 +1,10 @@
+#EXCEPTION_NATIVE
+parfois	[]
+partout	[]
+parti	[]
+rapide	[]
+paysage	[]
+image	[]
+avantage	[]
+
+

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<segments>
+  <segment type="initial" reverse="false" value='"' />
+  <segment type="initial" reverse="false" value="'" />
+  <segment type="initial" reverse="false" value="[" />
+  <segment type="initial" reverse="false" value="{" />
+  <segment type="initial" reverse="false" value="(" />
+  <segment type="initial" reverse="false" value="`" />
+  <segment type="initial" reverse="false" value="»" />
+  <segment type="initial" reverse="false" value="«" />
+  <segment type="initial" reverse="false" value="-" />
+  <segment type="final" reverse="true" value='"' />
+  <segment type="final" reverse="false" value="'" />
+  <segment type="final" reverse="true" value="-" />
+  <segment type="final" reverse="true" value="." />
+  <segment type="final" reverse="true" value="]" />
+  <segment type="final" reverse="true" value="}" />
+  <segment type="final" reverse="true" value="`" />
+  <segment type="final" reverse="true" value=")" />
+  <segment type="final" reverse="true" value="," />
+  <segment type="final" reverse="true" value=";" />
+  <segment type="final" reverse="true" value=":" />
+  <segment type="final" reverse="true" value="!" />
+  <segment type="final" reverse="true" value="?" />
+  <segment type="final" reverse="true" value="%" />
+  <segment type="final" reverse="true" value="»" />
+  <segment type="final" reverse="true" value="«" />
+  <segment type="initial" reverse="false" value="d'" />
+  <segment type="initial" reverse="false" value="c'" />
+  <segment type="initial" reverse="false" value="j'" />
+  <segment type="initial" reverse="false" value="l'" />
+  <segment type="initial" reverse="false" value="m'" />
+  <segment type="initial" reverse="false" value="n'" />
+  <segment type="initial" reverse="false" value="s'" />
+  <segment type="initial" reverse="false" value="t'" />
+  <segment type="initial" reverse="false" value="qu'" />
+  <segment type="initial" reverse="false" value="jusqu'" />
+  <segment type="initial" reverse="false" value="lorsqu'" />
+  <segment type="final" reverse="true" value="-t-elle" />
+  <segment type="final" reverse="true" value="-t-elles" />
+  <segment type="final" reverse="true" value="-t-il" />
+  <segment type="final" reverse="true" value="-t-ils" />
+  <segment type="final" reverse="true" value="-t-on" />
+  <segment type="final" reverse="true" value="-ce" />
+  <segment type="final" reverse="true" value="-elle" />
+  <segment type="final" reverse="true" value="-elles" />
+  <segment type="final" reverse="true" value="-il" />
+  <segment type="final" reverse="true" value="-ils" />
+  <segment type="final" reverse="true" value="-je" />
+  <segment type="final" reverse="true" value="-la" />
+  <segment type="final" reverse="true" value="-le" />
+  <segment type="final" reverse="true" value="-les" />
+  <segment type="final" reverse="true" value="-leur" />
+  <segment type="final" reverse="true" value="-lui" />
+  <segment type="final" reverse="true" value="-même" />
+  <segment type="final" reverse="true" value="-mêmes" />
+  <segment type="final" reverse="true" value="-m'" />
+  <segment type="final" reverse="true" value="-moi" />
+  <segment type="final" reverse="true" value="-nous" />
+  <segment type="final" reverse="true" value="-on" />
+  <segment type="final" reverse="true" value="-toi" />
+  <segment type="final" reverse="true" value="-tu" />
+  <segment type="final" reverse="true" value="-t'" />
+  <segment type="final" reverse="true" value="-vous" />
+  <segment type="final" reverse="true" value="-en" />
+  <segment type="final" reverse="true" value="-y" />
+  <segment type="final" reverse="true" value="-ci" />
+  <segment type="final" reverse="true" value="-là" />
+  <segment type="compound" reverse="false" value="ainsi qu'" />
+  <segment type="compound" reverse="false" value="ainsi que" />
+  <segment type="compound" reverse="false" value="c'est-à-dire" />
+  <segment type="compound" reverse="false" value="d'emblée" />
+  <segment type="compound" reverse="false" value="d'une part" />
+  <segment type="compound" reverse="false" value="d'autre part" />
+</segments>

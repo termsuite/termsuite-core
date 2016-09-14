@@ -1,0 +1,179 @@
+# [greek:aero]
+aero-
+# [greek:auto]
+auto-
+# [greek:bio]
+bio-
+-biont
+# [greek:cardio]
+kardio-
+# [greek:chromato]
+chromato-
+chromo-
+-chromat
+-chromie
+# [greek:chrono]
+chrono-
+# [greek:cinema]
+Kin-
+Kinemato-
+# [greek:cosmo]
+kosmo-
+-kosmos
+# [greek:crate]
+krate-
+-kratie
+# [greek:crypto]
+krypto-
+# [greek:dactylo]
+daktylo-
+-daktylie
+# [greek:demo]
+demo-
+# [greek:drome]
+-drom
+# [greek:electro]
+elektro-
+# [greek:geno]
+geno-
+# [greek:geo]
+geo-
+# [greek:gramme]
+-gramm
+# [greek:grapho]
+ghrapho-
+-graphie
+-graf
+-grafie
+# [greek:helio]
+helio-
+# [greek:hetero]
+hetero-
+# [greek:hippo]
+hippo-
+# [greek:histo]
+histo-
+# [greek:homo]
+homo-
+# [greek:hydro]
+hydro-
+# [greek:ide]
+-id
+# [greek:iso]
+iso-
+# [greek:kilo]
+kilo-
+# [greek:leuc]
+leuk- leuko-
+# [greek:litho]
+litho-
+-lith
+# [greek:lipo]
+lipo-
+# [greek:logo]
+log-
+logo-
+-log
+-loge
+# [greek:logie]
+-logie
+# [greek:lyse]
+-lyse
+-lyt
+# [greek:macro]
+makro-
+# [greek:mane]
+man-
+-manie
+# [greek:mega]
+mega-
+megalo-
+# [greek:metro]
+metro-
+-meter
+# [greek:micro]
+mikro-
+# [greek:mono]
+mono-
+# [greek:morpho]
+morpho-
+-morph
+# [greek:neo]
+neo-
+nea-
+# [greek:neuro]
+neuro-
+# [greek:nome]
+nomo-
+-nomie
+# [greek:ortho]
+ortho-
+# [greek:pan]
+pan-
+panto-
+# [greek:patho]
+patho-
+-path
+-pathie
+# [greek:pedo]
+pado-
+# [greek:phil]
+phil-
+philo-
+-philie
+-filie
+# [greek:phobe]
+-phob
+-phobie -fobe -fobie
+# [greek:phone]
+phon-
+fon- -phon -fon
+# [greek:photo]
+photo-
+foto-
+# [greek:physio]
+physio-
+# [greek:pole]
+-pol
+
+# [greek:poly]
+-poly
+# [greek:pseudo]
+pseud-
+pseudo-
+# [greek:psycho]
+psych-
+psycho-
+# [greek:pyro]
+pyro-
+# [greek:scope]
+-skop
+-skopie
+# [greek:tele]
+tele-
+# [greek:techno]
+techno-
+# [greek:therapie]
+-therapie
+# [greek:tomie]
+-tomie
+# [greek:topo]
+topo-
+-topie
+# [greek:typo]
+typo-
+-typ
+# [greek:zoo]
+zoo-
+# [latin:centi]
+zenti-
+# [latin:maxi]
+maxi-
+# [latin:milli]
+milli-
+# [latin:mini]
+mini-
+# [latin:multi]
+multi-
+# [latin:radio]
+radio-

@@ -1,0 +1,62 @@
+################################################################################
+# Copyright 2015 - CNRS (Centre National de Recherche Scientifique)
+#
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+#
+################################################################################
+
+import eu.project.ttc.types.TermSuiteTypeSystem;
+use eu.project.ttc.types.WordAnnotation;
+set inline = false;
+
+matcher P: [category=="preposition"];
+matcher V: [category=="verb"];
+matcher Vbe as V: [category=="verb" & lemma=="быть"];
+matcher A: [category=="adjective"];
+matcher Vp as A: [V & mood=="participle"];
+matcher Vpg as A: [V & mood=="participle" & case=="genitive"];
+matcher A2 as A: [A | Vp];
+matcher A3 as A: [A | category=="numeral"];
+matcher N: [category=="noun"];
+matcher Ng as N: [N & case=="genitive"];
+matcher Ag as A: [A & case=="genitive"];
+matcher C: [category=="conjunction"];
+matcher R: [category=="adverb"];
+
+term "n": N;
+term "a": A;
+term "r": R;
+term "an": A2 N;
+term "npn": N P N ;	# noisy
+term "aan": A A N ;
+term "acan": A C A N ;
+term "aacan": A A C A N ;
+term "ann": A N Ng ;
+term "nn": N Ng;
+term "nnn": N Ng Ng;
+term "nan": N Ag Ng;
+term "npan": N P A3 N;	# noisy
+# added
+term "nnnn": N Ng Ng Ng;
+term "nann": N Ag Ng Ng;
+term "nnan": N Ng Ag Ng;
+term "npann": N P A3 N N;	# noisy
+term "nva": N Vbe A2 ;
+
+# removed comparing to ruta:
+# N Vpg - never matches, I can find no examples

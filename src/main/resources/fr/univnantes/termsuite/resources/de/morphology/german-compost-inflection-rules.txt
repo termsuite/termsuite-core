@@ -1,0 +1,8 @@
+n, ; Achse - Achsen 
+en, ; Tür - Türen
+innen,in; Schülerin - Schülerinnen
+e, ; Betrieb - pl. Betriebe
+se,s; Ergebnis - Ergebnisse
+ungen,ung; Wicklungen - Wicklung 
+s, ; Betreiber - Betreibers
+es, ; umweltamt - umweltamtes

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mapping>
+  <map key="ABK" value="abbreviation" />
+  <map key="ABR" value="abbreviation" />
+  <map key="ADJ" value="adjective" />
+  <map key="ADV" value="adverb" />
+  <map key="DET:ART" value="article" />
+  <map key="DET:POS" value="determiner" />
+  <map key="INT" value="interjection" />
+  <map key="KON" value="conjunction" />
+  <map key="NAM" value="name" />
+  <map key="NOM" value="noun" />
+  <map key="NUM" value="numeral" />
+  <map key="PRO" value="pronoun" />
+  <map key="PRO:DEM" value="pronoun" />
+  <map key="PRO:IND" value="pronoun" />
+  <map key="PRO:PER" value="pronoun" />
+  <map key="PRO:POS" value="pronoun" />
+  <map key="PRO:REL" value="pronoun" />
+  <map key="PRP" value="adposition" />
+  <map key="PRP:det" value="adposition" />
+  <map key="PUN" value="punctuation" />
+  <map key="PUN:cit" value="punctuation" />
+  <map key="SENT" value="punctuation" />
+  <map key="SYM" value="symbol" />
+  <map key="VER:cond" value="verb" />
+  <map key="VER:futu" value="verb" />
+  <map key="VER:impe" value="verb" />
+  <map key="VER:impf" value="verb" />
+  <map key="VER:infi" value="verb" />
+  <map key="VER:pper" value="verb" />
+  <map key="VER:ppre" value="verb" />
+  <map key="VER:pres" value="verb" />
+  <map key="VER:simp" value="verb" />
+  <map key="VER:subi" value="verb" />
+  <map key="VER:subp" value="verb" />
+</mapping>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mapping>
+  <map key="VER:cond" value="present" />
+  <map key="VER:futu" value="future" />
+  <map key="VER:impe" value="present" />
+  <map key="VER:impf" value="imperfect" />
+  <map key="VER:infi" value="present" />
+  <map key="VER:pper" value="past" />
+  <map key="VER:ppre" value="present" />
+  <map key="VER:pres" value="present" />
+  <map key="VER:simp" value="past" />
+  <map key="VER:subi" value="imperfect" />
+  <map key="VER:subp" value="present" />
+</mapping>

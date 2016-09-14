@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mapping>
+  <map key="ADJWH" value="interrogative" />
+  <map key="DETWH" value="interrogative" />
+  <map key="PROWH" value="interrogative" />
+  <map key="PROREL" value="relative" />
+  <map key="P" value="preposition" />
+  <map key="CL" value="clitic" />
+  <map key="CLO" value="clitic" />
+  <map key="CLR" value="clitic" />
+  <map key="CLS" value="clitic" />
+</mapping>

@@ -1,0 +1,89 @@
+################################################################################
+# Copyright 2015 - CNRS (Centre National de Recherche Scientifique)
+#
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+#
+################################################################################
+
+import eu.project.ttc.types.TermSuiteTypeSystem;
+use eu.project.ttc.types.WordAnnotation;
+set inline = false;
+
+
+matcher N: [category=="noun"];
+matcher Nn as N: [N | category=="name"];
+matcher Nnn as N: [Nn | category=="numeral"];
+matcher R: [category=="adverb"];
+matcher P: [category=="adposition" & subCategory=="preposition"];
+matcher Pde as P: [P & lemma=="de"];
+matcher Pa as P: [P & lemma=="à"];
+matcher V: [category=="verb"];
+matcher Vinf as V: [category=="verb" & mood=="infinitive"];
+matcher Vbe as V: [category=="verb" & lemma=="être"];
+matcher A: [category=="adjective"];
+matcher Vpp as A: [V & mood=="participle" & tense=="past"];
+matcher A2 as A: [A | Vpp];
+matcher A3 as A: [A | category=="numeral"];
+matcher C as C: /^(et|ou)$/ ;
+matcher D as D: [(category=="determiner" | category=="article") & subCategory != "possessive"];
+matcher L1: [lemma=="axe" | lemma=="calage" | lemma=="chair" | lemma=="couleur" | lemma=="développement" | lemma=="état" | lemma=="face" | lemma=="genre" | lemma=="origine" | lemma=="pas" | lemma=="pâte" | lemma=="phase" | lemma=="type" | lemma=="vitesse" | lemma=="voie" ];
+matcher L2: [lemma=="cage" | lemma=="effacement" | lemma=="effet" | lemma=="fonction" | lemma=="voie"];
+matcher N1 as N: [N & L1];
+matcher N2 as N: [N & L2];
+matcher comma: /,/;
+matcher Og: /"|«/;
+matcher Fg: /"|»/;
+
+term "n": N;
+term "a": A;
+term "r": R;
+term "nn": N Nn;
+term "na": N A2 ;
+term "nra": N R+ A2;
+term "naa": N A2 A;
+term "naaa": N A2 A2 A;
+term "npn": N P ~D? N ;
+term "nnpn": N N P ~D? N;
+term "npnn": N P N1 Nnn;
+term "npnqnq": N P N1 ~Og Nnn ~Fg;
+term "naca": N A2 C A;
+term "naca+": N A comma A C A;
+term "npna": N P N A;
+term "npnaa": N P N A A;
+term "npan": N P A3 N;
+term "napn1": N A2 P N;
+term "napan":  N A P A3 N;
+term "napacan":  N A P A3 C A3 N;
+term "napna":  N A P N A3;
+term "dncdna": ~D N C ~D N A;
+term "dncdnpn": ~D N C ~D N P N ;
+term "npncpn": N P N C P N;
+term "npdncpdn": N P ~D N C P ~D N;
+term "npncpn": N P N C P N;
+term "npn,pncpn": N P N comma P N C P N;
+term "npnpn": N P N Pde Nn; # N P N2 Pde Nn;
+term "npnpna":  N P N P N A3;
+term "npnpan":  N P N P A3 N;
+term "npnpacan":  N P N P A3 C A3 N;
+term "nnca": N N C A; # éolienne bi- ou tripale
+#term "apn": A P ~D? N ; # sensible aux hormones
+term "nva": ~D? N Vbe A ;
+term "nvra": ~D? N Vbe R A ;
+
+# from Acabit
+term "npvinf": N Pa Vinf;

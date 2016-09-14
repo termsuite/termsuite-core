@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mapping>
+  <map key="DET:POS" value="possessive" />
+  <map key="PRO:DEM" value="demonstrative" />
+  <map key="PRO:PER" value="personal" />
+  <map key="PRO:IND" value="indefinite" />
+  <map key="PRO:POS" value="possessive" />
+  <map key="PRO:REL" value="relative" />
+  <map key="PRP" value="preposition" />
+  <map key="PRP:det" value="preposition" />
+  <map key="PUN:cit" value="citation" />
+  <map key="SENT" value="sentence" />
+</mapping>

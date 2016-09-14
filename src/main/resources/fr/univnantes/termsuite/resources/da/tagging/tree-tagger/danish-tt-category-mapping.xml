@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mapping>
+  <map key="CC" value="conjunction" />
+  <map key="CD" value="numerla" />
+  <map key="DT" value="determiner" />
+  <map key="FW" value="noun?" />
+  <map key="IN" value="adposition" />
+  <map key="JJ" value="adjective" />
+  <map key="JJR" value="adjective" />
+  <map key="JJS" value="adjective" />
+  <map key="MD" value="verb" />
+  <map key="NN" value="noun" />
+  <map key="NNS" value="noun" />
+  <map key="NP" value="noun" />
+  <map key="NPS" value="noun" />
+  <map key="PDT" value="determiner" />
+  <map key="PP" value="pronoun" />
+  <map key="PP$" value="pronoun" />
+  <map key="RB" value="adverb" />
+  <map key="RBR" value="adverb" />
+  <map key="RBS" value="adverb" />
+  <map key="RP" value="adverb" />
+  <map key="SYM" value="symbol" />
+  <map key="UH" value="interjection" />
+  <map key="VB" value="verb" />
+  <map key="VBD" value="verb" />
+  <map key="VBG" value="verb" />
+  <map key="VBN" value="verb" />
+  <map key="VBP" value="verb" />
+  <map key="VBZ" value="Verb" />
+  <map key="WDT" value="determiner" />
+  <map key="WP" value="pronoun" />
+  <map key="WP$" value="pronoun" />
+  <map key="WRB" value="adverb" />
+</mapping>

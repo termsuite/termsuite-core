@@ -3,7 +3,7 @@ package eu.project.ttc.tools;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
-import java.net.URI;
+import java.net.URL;
 import java.nio.charset.Charset;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -94,8 +94,8 @@ public class PreProcessor {
 					Lexer.PARAM_TYPE, "eu.project.ttc.types.WordAnnotation"
 				);
 		
-			URI jarURI = new URI("jar:"+resourceJar.toUri()+"!/");
-			String segmentBankURI = TermSuiteResource.SEGMENT_BANK.getUrl(jarURI, lang).toString();
+			URL jarURI = new URL("jar:"+resourceJar.toUri()+"!/");
+			String segmentBankURI = TermSuiteResource.SEGMENT_BANK.fromUrlPrefix(jarURI, lang).toString();
 
 			ExternalResourceDescription	segmentBank = ExternalResourceFactory.createExternalResourceDescription(
 					SegmentBankResource.class, 
@@ -118,7 +118,7 @@ public class PreProcessor {
 						TreeTaggerWrapper.PARAM_TT_HOME_DIRECTORY, treeTaggerHome
 					);
 				
-				URI taggerConfigURI = TermSuiteResource.TREETAGGER_CONFIG.getUrl(jarURI, lang, Tagger.TREE_TAGGER);
+				URL taggerConfigURI = TermSuiteResource.TREETAGGER_CONFIG.fromUrlPrefix(jarURI, lang, Tagger.TREE_TAGGER);
 				ExternalResourceFactory.createDependencyAndBind(
 						taggerAe,
 						TreeTaggerParameter.KEY_TT_PARAMETER, 

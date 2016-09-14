@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mapping>
+  <map key="CC" value="coordinating" />
+  <map key="CD" value="cardinal" />
+  <map key="IN" value="preposition" />
+  <map key="JJR" value="comparative" />
+  <map key="JJS" value="superlative" />
+  <map key="MD" value="modal" />
+  <map key="NN" value="common" />
+  <map key="NNS" value="common" />
+  <map key="NP" value="proper" />
+  <map key="NPS" value="proper" />
+  <map key="PP" value="personal" />
+  <map key="PP$" value="possessive" />
+  <map key="RBR" value="comparative" />
+  <map key="RBS" value="superlative" />
+  <map key="RP" value="particle" />
+  <map key="WP$" value="possessive" />
+</mapping>

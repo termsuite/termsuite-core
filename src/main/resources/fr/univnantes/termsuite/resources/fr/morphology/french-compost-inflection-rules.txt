@@ -1,0 +1,7 @@
+ique, ; centrique -centr
+iques, ; bad lemmatisation
+s, ;
+e, ;
+aux,al; originaux - original
+aux,au; escabeaux - escabeau
+aux,ail; coraux - corail

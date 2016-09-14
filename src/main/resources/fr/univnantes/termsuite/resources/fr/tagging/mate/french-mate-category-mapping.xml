@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mapping>
+  <map key="ADJ" value="adjective" />
+  <map key="ADJWH" value="adjective" />
+  <map key="ADV" value="adverb" />
+  <map key="ADVWH" value="adverb" />
+  <map key="CC" value="conjunction" />
+  <map key="CL" value="pronoun" />
+  <map key="CLO" value="pronoun" />
+  <map key="CLR" value="pronoun" />
+  <map key="CLS" value="pronoun" />
+  <map key="CS" value="conjunction" />
+  <map key="DET" value="determiner" />
+  <map key="DETWH" value="determiner" />
+  <map key="ET" value="foreign word" />
+  <map key="I" value="interjection" />
+  <map key="NC" value="noun" />
+  <map key="NPP" value="noun" />
+  <map key="P" value="adposition" />
+  <map key="P+D" value="preposition determiner" />
+  <map key="PONCT" value="punctuation" />
+  <map key="P+PRO" value="preposition pronoun" />
+  <map key="PREF" value="prefix" />
+  <map key="PRO" value="pronoun" />
+  <map key="PROREL" value="pronoun" />
+  <map key="PROWH" value="pronounw" />
+  <map key="V" value="verb" />
+  <map key="VIMP" value="verb" />
+  <map key="VINF" value="verb" />
+  <map key="VPP" value="verb" />
+  <map key="VPR" value="verb" />
+  <map key="VS" value="verb" />
+</mapping>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mapping>
+  <map key="VB" value="present" />
+  <map key="VBD" value="past" />
+  <map key="VBG" value="present" />
+  <map key="VBN" value="past" />
+  <map key="VBP" value="present" />
+  <map key="VBZ" value="present" />
+</mapping>

@@ -157,7 +157,6 @@ public class TermSuiteUtils {
 	 * Adds a path (jar or directory) to classpath of default Class loader
 	 * @param path
 	 */
-	@SuppressWarnings("resource")
 	public static void addToClasspath(String path) {
 		URLClassLoader urlClassLoader = null;
 		try {

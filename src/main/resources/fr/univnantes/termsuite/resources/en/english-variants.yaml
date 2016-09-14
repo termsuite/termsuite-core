@@ -1,0 +1,391 @@
+################################################################################
+# Copyright 2015 - CNRS (Centre National de Recherche Scientifique)
+#
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+#
+################################################################################
+
+#################################
+#  NN  #
+#################################
+
+
+# chemical analysis || chemical analysis of fuel
+"S-Ed-NN-PN":
+  source: N N
+  target: N N P N
+  rule: s[0]==t[0] && s[1]==t[1] && t[2]=="of"
+
+# wind speed - wind speed variation
+"S-Ed-NN-N":
+  source: N N
+  target: N N N
+  rule: s[0]==t[0] && s[1]==t[1]
+
+# Double emploi avec S-Eg-AN-(A|N)
+# operation cost - high operation(al) cost
+"S-EgD-(A|N)N-A|N":
+  source: N N
+  target: N N N, A N N, A A N
+  rule: s[0].stem==t[1].stem && s[1]==t[2]
+
+# Double emploi avec S-Eg-AN-(A|N)
+# wind turbine - horizontal axis wind turbine
+"S-EgD2-(A|N)N-A|N":
+  source: N N
+  target: N N N N, A N N N, A A N N
+  rule: s[0].stem==t[2].stem && s[1]==t[3]
+
+# ecologically sensitive area - sensitivity area
+"S-EgD-NN-R":
+  source: R A N
+  target: N N
+  rule: s[1].stem==t[0].stem && s[2]==t[1]
+
+
+
+# wind decrease || increase and decrease of wind
+"S-PEg-NN-NC":
+  source: N N
+  target: N C N P N
+  rule: s[0]==t[4] && s[1]==t[2] && t[3]=="of"
+
+
+# speed wind  || variation of wind speed
+"S-PEg-NN-NP":
+  source: N N
+  target: N P N N
+  rule: s[0]==t[4] && s[1]==t[3] && t[2]=="of"
+
+
+# turbine structure - turbine base structure
+"S-I-NN-(N|A)":
+  source: N N
+  target: N N N, N A N
+  rule: s[0]==t[0] && s[1]==t[2]
+
+
+# Savonius rotor - rotor of type Savonius; speed range - range of wind speed
+"S-PI-NN-PN":
+  source: N N
+  target: N P N N, N P A N
+  rule: s[0]==t[3] && ( s[1]==t[0] || s[1]==t[2] )
+
+
+# generator voltage || voltage and frequency of generator
+"S-PI-NN-CNP":
+  source: N N
+  target: N C N P N
+  rule: s[0]==t[4] && s[1]==t[0] && t[3]=="of"
+
+# axis wind turbine || vertical axis wind turbine
+# Important to allow the independance-based removal of N N N
+"S-EgD-NNN-A":
+  source: N N N
+  target: A N N N
+  rule: s[0]==t[1] && s[1]==t[2] && s[2]==t[3]
+
+#################################
+#  AN  #
+#################################
+
+# thyroïdal cancer - tyroid cancer
+"S-R1Eg-AN-N":
+  source: A N
+  target: N N
+  rule: s[0].stem==t[0].stem && s[1]==t[1]
+
+
+
+# inflammatory carcinoma - inflammatory carcinoma of the breast
+# does not match AN-ANPDN
+"S-Ed-AN-PN":
+  source: A N
+  target: A N P N
+  rule: s[0]==t[0] && s[1]==t[1] && t[2]=="of"
+
+
+
+#Double emploi avec S-Eg-(A|N)N-A|N
+# fishing tap - male fishing tap
+"S-Eg-AN-(A|N)":
+  source: A N
+  target: A A N, N A N
+  rule: s[1]==t[2] && s[0]==t[1]
+
+
+
+# extremely shallow water - shallow water
+"S-Eg-AN-R":
+  source: R A N
+  target: A N
+  rule: s[1]==t[0] && s[2]==t[1]
+
+
+# environmental impact - social and environmental impact
+"S-Eg-AN-AC":
+  source: A N
+  target: A C A N
+  rule: s[1]==t[3] && s[0]==t[2]
+
+
+# clean electricity - clean renewable electricity
+"S-I-AN-A":
+  source: A N
+  target: A A N
+  rule: s[1]==t[2] && s[0]==t[0]
+
+
+# social impact - social and environmental impact
+"S-I-AN-CA":
+  source: A N
+  target: A C A N
+  rule: s[1]==t[3] && s[0]==t[0]
+
+
+# axillary dissection - axillary lymph node dissection
+"S-I-AN-(N|A)N|AA":
+  source: A N
+  target: A N N N, A A A N, A A N N
+  rule: s[0]==t[0] && s[1]==t[3]
+
+
+
+#################################
+#  PREDICATION    #
+#################################
+
+# impact be significant || significant impact
+"S-PI-AN-V":
+  source: N V A
+  target: A N
+  rule: s[0]==t[1] && s[2]==t[0]
+# V: be
+
+
+#################################
+#  NPN  #
+#################################
+
+# level of sound - sound level, effect of rotation - rotational effect, airfoil with ice - iced airfoil, blade performance - performance of a blade
+# does not match NPDN-(A|N)N
+"S-PI-NN-P":
+  source: N P N
+  target: A N, N N
+  rule: s[0]==t[1] && s[2].stem==t[0].stem
+
+
+#variation preposition#
+"S-R2I-NPN-P":
+  source: N P N
+  target: N P N
+  rule: s[0]==t[0] && s[2]==t[2]
+
+
+
+# # NOT CORRECT : effect of angle || effect of angle of attack
+# "S-Ed-NPN-PN":
+#   source: N P N
+#   target: N P N P N
+#   rule: s[0]==t[0] && s[1]==t[1] && s[2]==t[2]
+
+
+# provision of ordinance || provision of ordinance or of license
+"S-Ed-NPN-CPN":
+  source: N P N
+  target: N P N C P N
+  rule: s[0]==t[0] && s[1]==t[1] && s[2]==t[2] && s[1]==t[4]
+
+
+# screening of project || preliminary screening of project
+"S-Eg-NPN-A":
+  source: N P N
+  target: A N P N
+  rule: s[0]==t[1] && s[1]==t[2] && s[2]==t[3]
+
+
+# bottom of rotation || top and bottom of rotation
+"S-Eg-NPN-NC":
+  source: N P N
+  target: N C N P N
+  rule: s[0]==t[2] && s[1]==t[3] && s[2]==t[4]
+
+
+# level of energy || level of local energy
+"S-I2-NPN-A":
+  source: N P N
+  target: N P A N
+  rule: s[0]==t[0] && s[1]==t[1] && s[2]==t[3]
+
+
+# provision of license || provision of ordinance or of license
+"S-I1-NPN-PNC":
+  source: N P N
+  target: N P N C P N
+  rule: s[0]==t[0] && s[1]==t[1] && s[2]==t[5] && s[1]==t[4]
+
+
+# DOES NOT MATCH on Wind Energy
+# production of energy - production and storage of energy
+"S-I1-NPN-CN":
+  source: N P N
+  target: N C N P N
+  rule: s[0]==t[0] && s[1]==t[1] && s[2]==t[4]
+
+
+
+#################################
+#  OTHERS  AAN, ANN  #
+#################################
+
+# Permutation entre les 2 A
+"S-P-AAN-A":
+  source: A A N
+  target: A A N
+  rule: s[2]==t[2] && s[0]==t[1] && s[1]==t[0]
+
+
+# Permutation entre les 2 N
+"S-P-ANN-N":
+  source: A N N
+  target: N A N
+  rule: s[2]==t[2] && s[0]==t[1] && s[1]==t[0]
+
+
+# invasive duct(al) carcinoma - invasive duct(al) breast carcinoma
+"S-I2-ANN-N":
+  source: A N N, A A N
+  target: A A N N, A A A N, A N N N
+  rule: s[0]==t[0] && s[1].stem==t[1].stem && s[2]==t[3]
+
+
+#################################
+#  MORPHOLOGICAL  #
+#################################
+
+# windmill - wind mill, rotor-blades - rotor blade
+"M-S-NN":
+  source: N [compound]
+  target: N N
+  rule: s[0][0]==t[0] && s[0][1]==t[1]
+
+#local tip-speed - local tip speed
+"M-S-(A|N)NN":
+  source: A N
+  target: A N N, N N N, A A N
+  rule: s[0]==t[0] && s[1][0]==t[1] && s[1][1]==t[2]
+
+# grid-connected - grid connection, right-sided - right side
+"M-SD-(N|A)N":
+  source: A [compound]
+  target: N N, A N
+  rule: s[0][0]==t[0] && s[0][1] == t[1]
+
+
+# hydropower - hydroelectric power, windfarm - windmill farm
+"M-I-EN-N|A":
+  source: N [compound]
+  target: N N, A N
+  rule: s[0][0]==t[0][0] && s[0][1] == t[1]
+
+
+# hydropower - hydro and nuclear power, turbine-blades - turbine and rotor blade
+"M-I-NN-CA":
+  source: N [compound]
+  target: N C A N, N C N N
+  rule: s[0][0]==t[0] && s[0][1] == t[3]
+
+
+
+# # VERY NOISY
+# # hydropower - nuclear and hydro power
+# "M-Eg-NN-NC":
+#   source: N [compound]
+#   target: N C A N, N C N N
+#   rule: s[0][0]==t[2] && s[0][1] == t[3]
+
+
+# DOES NOT MATCH
+# adjuvant chemotherapy - adjuvant drug therapy
+"M-R2I-ANN":
+  source: A N
+  target: A N N
+  rule: s[1].compound && s[0]==t[0] && s[1][1]==t[2] && s[1][0]!=t[1]
+
+
+# left-sided - left and right side
+"M-ID-AN-CA":
+  source: A [compound]
+  target: A C A N
+  rule: s[0][0]==t[0] && s[0][1] == t[3]
+
+
+# blade-element - element of blade
+# landowner  - ownership of land (A verifier que le stem de ownership est bien owner)
+"M-PI-NN-P":
+  source: N [compound]
+  target: N P N
+  rule: s[0][0]==t[2] && s[0][1]==t[0]
+# Normally the rule should apply on stem compoarison, but there is no stem for components yet.
+#  rule: s[0][0]==t[2] && s[0][1].stem==t[0].stem
+
+
+
+# # DOES NOT MATCH
+# # grid-connected - connected to grid
+# "M-PR2-APN":
+#   source: A [compound]
+#   target: A P N
+#   rule: s[0][0]==t[2] && s[0][1]==t[0]
+
+# DOES NOT MATCH
+# bronchogenic carcinoma - carcinoma of the lung
+# should also match AN-NPDN
+"M-IPR2-NPN":
+  source: A N
+  target: N P N
+  rule: s[0].compound && s[1]==t[0]  && s[0][0]=="broncho" && t[2]=="lung"
+
+
+# airflow - air mass flow
+"M-I-NN-N":
+  source: N [compound]
+  target: N N N
+  rule: s[0][0]==t[0] && s[0][1] == t[2]
+
+
+# high-risk - high familial risk
+"M-I-AN-N|A|R":
+  source: N, A [compound]
+  target: A A N, A N N, A R N
+  rule: s[0][0]==t[0] && s[0][1] == t[2]
+
+
+# clear cell carcinoma - clear cell adenocarcinoma
+"M-I2-(A|N)N-E":
+  source: N N N, A N N
+  target: N N N, A N N
+  rule: t[2].compound && s[0]==t[0] && s[1] == t[1] && s[2] == t[2][1]
+
+
+# DOES NOT MATCH
+# fixed-speed wind turbine - fixed-rotational speed turbine
+"M-R3I1-ANNN":
+  source: A N N
+  target: A N N
+  rule: s[0].compound && t[0].compound && s[0][0]==t[0][0] && s[0][1] == t[1] && s[2] == t[2]

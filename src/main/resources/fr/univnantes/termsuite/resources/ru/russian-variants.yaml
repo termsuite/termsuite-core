@@ -1,0 +1,244 @@
+################################################################################
+# Copyright 2015 - CNRS (Centre National de Recherche Scientifique)
+#
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+#
+################################################################################
+
+#################################
+#  NN  #
+#################################
+
+# DOES NOT MATCH
+"S-Ed-NN-CN":
+  source: N N C N
+  target: N N
+  rule: s[0]==t[0] && s[1]==t[1]
+
+
+# DOES NOT MATCH
+"S-Eg-NN-NC":
+  source: N N
+  target: N C N N
+  rule: s[0]==t[2] && s[1]==t[3]
+
+
+# генератор тепло || подземный генератор тепло
+"S-Eg-NN-A":
+  source: N N
+  target: A N N
+  rule: s[0]==t[1] && s[1]==t[2]
+
+
+
+# DOES NOT MATCH
+"S-I-NN-NC":
+  source: N N C N
+  target: N N
+  rule: s[0]==t[0] && s[3]==t[1]
+
+
+# NOISY
+# ротор Савониуса - ротор типа Савониуса
+"S-I-NN-N":
+  source: N N
+  target: N N N
+  rule: s[0]==t[0] && s[1]==t[2]
+
+
+# DOES NOT MATCH
+"S-I-NN-CN":
+  source: N N
+  target: N C N N
+  rule: s[0]==t[0] && s[1]==t[3]
+
+
+#################################
+#  AN  #
+#################################
+
+# DOES NOT MATCH
+"S-Ed-AN-CN":
+  source: A N C N
+  target: A N
+  rule: s[0]==t[0] && s[1]==t[1]
+
+
+# авиастроительный фирма - известный авиастроительный фирма
+"S-Eg-AN-A":
+  source: A N
+  target: A A N
+  rule: s[1]==t[2] && (s[0]==t[0] || s[0]==t[1])
+
+
+# автономный сеть - изолированный и автономный сеть
+"S-Eg-AN-AC":
+  source: A C A N
+  target: A N
+  rule: s[3]==t[1] && s[2]==t[0]
+
+
+# сельский предприятие || малый промышленный и сельский предприятие
+"S-Eg-AN-AAC":
+  source: A N
+  target: A A C A N
+  rule: s[1]==t[4] && s[0]==t[3]
+
+
+
+# международный организация || международный экологический организация
+"S-I-AN-A":
+  source: A N
+  target: A A N
+  rule: s[0]==t[0] && s[1]==t[2]
+
+
+
+
+# тепловой и электрический энергия || тепловой энергия
+"S-I-AN-CA":
+  source: A C A N
+  target: A N
+  rule: s[3]==t[1] && s[0]==t[0]
+
+
+
+# DOES NOT MATCH
+"S-I-AN-NC":
+  source: A N C N
+  target: A N
+  rule: s[0]==t[0] && s[3]==t[1]
+
+
+#################################
+#  PREDICATION    #
+#################################
+
+#
+"S-PI-AN-V":
+  source: N V A
+  target: A N
+  rule: s[0]==t[1] && s[2]==t[0]
+# V: быть
+
+
+# NOISY, RARE
+#  энергия ветра - ветровая энергия
+"S-P-AN":
+  source: N N
+  target: A N
+  rule: s[0]==t[1] && s[1].stem==t[0].stem
+
+
+
+#Plusieurs opérations#
+# бытовой отход - различный бытовой и промышленный отход
+"S-EgI-AN-A-CA":
+  source: A N
+  target: A A C A N
+  rule: s[1]==t[4] && s[0]==t[1]
+
+
+#################################
+#  MORPHOLOGICAL  #
+#################################
+
+# киловатт-час - киловатт час, электрогенератор - электро генератор
+"M-S-NN":
+  source: N [compound]
+  target: N N
+  rule: s[0][0]==t[0] && s[0][1]==t[1]
+
+
+# ветроресурс - ветровой ресурс
+"M-S-AN":
+  source: N [compound]
+  target: A N
+  rule: s[0][0]==t[0] && s[0][1]==t[1]
+
+
+#local tip-speed - local tip speed
+"M-S-(A|N)NN":
+  source: A N
+  target: A N N, N N N, A A N
+  rule: s[1][0]==t[1] && s[1][1]==t[2]
+
+# ветроресурс - ветроэнергетический ресурс
+"M-I-EN-A":
+  source: N
+  target: A N
+  rule: s[0].compound && t[0].compound && s[0][0]==t[0][0] && s[0][1]==t[1]
+
+
+# энергобаланс - баланс энергии
+"M-P-NN":
+  source: N [compound]
+  target: N N
+  rule: s[0][0]==t[1] && s[0][1]==t[0]
+
+
+# инсулинорезистентность - резистентность к инсулину
+"M-PI-NN-P":
+  source: N [compound]
+  target: N P N
+  rule: s[0][0]==t[2] && s[0][1]==t[0]
+
+
+# водоподъем - подъем уровня воды, энергопотребитель - потребитель электрической энергии
+"M-I-NN-A|N":
+  source: N [compound]
+  target: N N N, N A N
+  rule: s[0][0]==t[2] && s[0][1]==t[0]
+
+
+#################################
+#  OTHERS    #
+#################################
+
+# semantically routhly far relation
+# агрегат новый тип (нового типа) - новый агрегат
+"S-PR3-NAN":
+  source: N A N
+  target: A N
+  rule: s[0]==t[1] && s[1]==t[0]
+
+
+# альтернативный источник энергии - источник альтернативной энергии
+"S-P-ANN":
+  source: A N N
+  target: N A N
+  rule: s[0]==t[1] && s[1]==t[0] && s[2]==t[2]
+
+
+# #################################
+# #  PREFIXES  #
+# #################################
+#
+# # синхронный - асинхронный
+# "A-prefA":
+#   source: A
+#   target: A
+#   rule: t[0].compound && s[0]==t[0][1] #&& (t[0][0]=="а"||t[0][0]=="не")
+#
+#
+# # DOES NOT MATCH !!! min comp length = 3 caracters
+# # синхронный генератор - асинхронный генератор
+# "AN-prefAN":
+#   source: A N
+#   target: A N
+#   rule: s[1]==t[1] && t[0].compound && s[0]==t[0][1] && (t[0][0]=="а" || t[0][0]=="не")
