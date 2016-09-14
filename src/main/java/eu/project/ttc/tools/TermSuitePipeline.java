@@ -605,7 +605,7 @@ public class TermSuitePipeline {
 		try {
 			this.resourceUrlPrefix = Optional.of(new URL(urlPrefix));
 		} catch (MalformedURLException e) {
-			throw new TermSuitePipelineException(e);
+			throw new TermSuitePipelineException("Bad url: " + urlPrefix, e);
 		}
 		return this;
 	}

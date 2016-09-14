@@ -64,7 +64,7 @@ import eu.project.ttc.models.occstore.MemoryOccurrenceStore;
 import eu.project.ttc.test.unit.TestUtil;
 
 public class JSONTermIndexIOSpec {
-	private static final String jsonFile1 = "org/project/ttc/test/json/termIndex1.json";
+	public static final String jsonFile1 = "org/project/ttc/test/json/termIndex1.json";
 	
 	private TermIndex termIndex;
 	private Term term1;

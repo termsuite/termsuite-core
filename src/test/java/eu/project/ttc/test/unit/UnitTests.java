@@ -44,6 +44,7 @@ import eu.project.ttc.test.unit.resources.SuffixDerivationListSpec;
 import eu.project.ttc.test.unit.resources.SuffixDerivationSpec;
 import eu.project.ttc.test.unit.selectors.HasSingleWordSelectorSpec;
 import eu.project.ttc.test.unit.selectors.TermClassProvidersSpec;
+import eu.project.ttc.test.unit.tools.TermSuitePipelineSpec;
 import eu.project.ttc.test.unit.utils.OccurrenceBufferSpec;
 import eu.project.ttc.test.unit.utils.StringUtilsSpec;
 import eu.project.ttc.test.unit.utils.TermOccurrenceUtilsSpec;
@@ -82,7 +83,8 @@ import eu.project.ttc.utils.test.CompoundUtilsSpec;
 	DiacriticInsensitiveLevenshteinSpec.class,
 	GraphicalVariantGathererSpec.class,
 	CrossTableSpec.class, 
-	TermsuiteJsonCasSerializerDeserializerSpec.class
+	TermsuiteJsonCasSerializerDeserializerSpec.class,
+	TermSuitePipelineSpec.class
 //	TeiCollectionReaderSpec.class,
 	})
 public class UnitTests {

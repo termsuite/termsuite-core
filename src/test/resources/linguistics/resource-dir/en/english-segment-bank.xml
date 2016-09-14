@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<segments>
+  <segment type="initial" reverse="false" value='"' />
+  <segment type="initial" reverse="false" value="'" />
+  <segment type="final" reverse="true" value='"' />
+  <segment type="final" reverse="true" value="'" />
+  <segment type="initial" reverse="false" value="[" />
+  <segment type="initial" reverse="false" value="{" />
+  <segment type="initial" reverse="false" value="(" />
+  <segment type="initial" reverse="false" value="`" />
+  <segment type="initial" reverse="false" value="»" />
+  <segment type="initial" reverse="false" value="«" />
+  <segment type="initial" reverse="false" value="-" />
+  <segment type="final" reverse="true" value="-" />
+   <segment type="final" reverse="true" value="&amp;" />
+ <segment type="final" reverse="true" value="." />
+  <segment type="final" reverse="true" value="]" />
+  <segment type="final" reverse="true" value="}" />
+  <segment type="final" reverse="true" value="`" />
+  <segment type="final" reverse="true" value=")" />
+  <segment type="final" reverse="true" value="," />
+  <segment type="final" reverse="true" value=";" />
+  <segment type="final" reverse="true" value=":" />
+  <segment type="final" reverse="true" value="!" />
+  <segment type="final" reverse="true" value="?" />
+  <segment type="final" reverse="true" value="%" />
+  <segment type="final" reverse="true" value="»" />
+  <segment type="final" reverse="true" value="«" />
+  <segment type="final" reverse="true" value="'s" />
+  <segment type="final" reverse="true" value="'re" />
+  <segment type="final" reverse="true" value="'ve" />
+  <segment type="final" reverse="true" value="'d" />
+  <segment type="final" reverse="true" value="'m" />
+  <segment type="final" reverse="true" value="'em" />
+  <segment type="final" reverse="true" value="'ll" />
+  <segment type="final" reverse="true" value="n't" />
+</segments>
