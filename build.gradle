@@ -1,8 +1,21 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'org.standardout:bnd-platform:1.4.0'
+        // if using Gradle 1.x uncomment the following line
+//      classpath 'org.codehaus.groovy:groovy-backports-compat23:2.3+'
+    }
+}
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'maven'
 apply plugin: 'signing'
 apply plugin: 'maven-publish'
+apply plugin: 'org.standardout.bnd-platform'
+
 
 group = 'fr.univ-nantes.termsuite'
 archivesBaseName = 'termsuite-core'
@@ -43,6 +56,23 @@ task sourcesJar(type: Jar) {
 	classifier = 'sources'
 	from sourceSets.main.allSource
 }
+
+
+
+// Produces OSGi bundles and P2 update site 
+platform {
+    fetchSources = false
+    eclipseHome = new File('/home/cram-d/Apps/eclipse-neon')
+    bundle(project) {
+        bnd {
+	        symbolicName = "fr.univnantes.termsuite.core"
+	        bundleName = "TermSuite Core"
+	        version = "2.2.0"
+	        addQualifier = true
+        }
+    }
+}
+
 
 
 /*
@@ -238,6 +268,10 @@ jar {
 	from( configurations.runtime.collect { it.isDirectory() ? it : zipTree(it) } ) {
 		 exclude "META-INF/*"
     }
+	
+	exclude "**/lv/**"
+	exclude "**/zh/**"
+ 	exclude "**/da/**"
 
     // cannot exclude META-INF for groovy to run
 	from( configurations.runtime.findAll{it.getAbsolutePath().contains("org.codehaus.groovy")}.collect { it.isDirectory() ? it : zipTree(it) } ) {
