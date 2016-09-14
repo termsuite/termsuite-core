@@ -45,6 +45,11 @@ javadoc{
 	}
 }
 
+// Remove javadoc warnings
+tasks.withType(Javadoc) {
+  options.addStringOption('Xdoclint:none', '-quiet')
+}
+
 ////////////////////////////////////////////////////////////////// DEPENDENCIES
 
 task javadocJar(type: Jar) {
