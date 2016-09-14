@@ -6,3 +6,4 @@ developerEmail=theMail
 signing.keyId=YourKeyId
 signing.password=YourPublicKeyPassword
 signing.secretKeyRingFile=PathToYourKeyRingFile
+user.eclipse.home=/home/cram-d/Apps/eclipse-neon

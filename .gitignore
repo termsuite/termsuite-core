@@ -19,7 +19,7 @@ hs_err_pid*
 
 # Gradle
 .gradle/
-gradle.properties
+gradle-local.properties
 build/
 artifacts/
 /gradlew.bat

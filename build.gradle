@@ -1,13 +1,14 @@
 buildscript {
     repositories {
         jcenter()
+        mavenCentral()
     }
     dependencies {
         classpath 'org.standardout:bnd-platform:1.4.0'
-        // if using Gradle 1.x uncomment the following line
-//      classpath 'org.codehaus.groovy:groovy-backports-compat23:2.3+'
+        classpath "net.saliman:gradle-properties-plugin:1.4.5"
     }
 }
+
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
@@ -15,23 +16,12 @@ apply plugin: 'maven'
 apply plugin: 'signing'
 apply plugin: 'maven-publish'
 apply plugin: 'org.standardout.bnd-platform'
-
-
-group = 'fr.univ-nantes.termsuite'
-archivesBaseName = 'termsuite-core'
-version = '2.3-snapshot'
-
-project.ext.description = 'A Java UIMA-based toolbox for multilingual and efficient terminology extraction an multilingual term alignment'
-project.ext.organization = 'LINA CNRS UMR 6241 - Université de Nantes'
-project.ext.name = 'TermSuite'
-project.ext.url = 'https://github.com/termsuite/termsuite-core'
-project.ext.license = 'Apache 2'
-project.ext.licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-project.ext.jcasFile = 'src/main/resources/TermSuite_TS.xml'
+apply plugin: 'net.saliman.properties'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
 
 
 ///////////////////////////////////////////////////////////////// CONFIGURATION
@@ -50,7 +40,7 @@ tasks.withType(Javadoc) {
   options.addStringOption('Xdoclint:none', '-quiet')
 }
 
-////////////////////////////////////////////////////////////////// DEPENDENCIES
+////////////////////////////////////////////////////////////////// TASKS
 
 task javadocJar(type: Jar) {
 	classifier = 'javadoc'
@@ -63,35 +53,50 @@ task sourcesJar(type: Jar) {
 }
 
 
+//////////////////////////////////////////////////////////////////
+// JCASGEN
+// Author: Damien Raude-Morvan
+//
+// Generate UIMA type system
+//////////////////////////////////////////////////////////////////
+configurations {
+	prepare.extendsFrom(compile)
+}
+
+task jcasgen(type: JavaExec) {
+	description = 'Generate UIMA TS classes'
+	ext.srcFile = file("$projectDir/src/main/resources/TermSuite_TS.xml")
+	ext.outputDir = file("$projectDir/src/main/java")
+	inputs.file srcFile
+	outputs.dir outputDir
+	classpath configurations.prepare
+	// This ensures availability of type system imports
+	// however, assumes that files are in desc subfolder
+	systemProperty 'uima.datapath', "$projectDir/desc"
+	main = 'org.apache.uima.tools.jcasgen.Jg'
+	args = ['-jcasgeninput', srcFile, '-jcasgenoutput', outputDir]
+}
+
+// forces jcasgen before java compiles
+classes.dependsOn jcasgen
+
+// UIMA type system is needed for Java compile
+compileJava.source jcasgen.outputs, sourceSets.main.java
+
 
 // Produces OSGi bundles and P2 update site 
 platform {
     fetchSources = false
-    eclipseHome = new File('/home/cram-d/Apps/eclipse-neon')
+//    eclipseHome = new File(project.ext.user.eclipse.home)
     bundle(project) {
         bnd {
-	        symbolicName = "fr.univnantes.termsuite.core"
-	        bundleName = "TermSuite Core"
-	        version = "2.2.0"
-	        addQualifier = true
+	        symbolicName = getProperty("osgi.symbolicName")
+	        bundleName = getProperty("osgi.bundleName")
+	        version = getProperty("osgi.version")
+	        addQualifier = getProperty("osgi.addQualifier")
         }
     }
 }
-
-
-
-/*
- * Deactivate Java 8 doclint if Java version is 8
- * See : blog.joda.org/2014/02/turning-off-doclint-in-jdk-8-javadoc.html
- */
-if (JavaVersion.current().isJava8Compatible()) {
-	allprojects {
-	  tasks.withType(Javadoc) {
-		options.addStringOption('Xdoclint:none', '-quiet')
-	  }
-	}
-  }
-
 
 artifacts {
 	archives javadocJar, sourcesJar
@@ -117,53 +122,53 @@ repositories {
 publishing {
 	publications {
 		maven(MavenPublication) {
-			groupId group
-			artifactId archivesBaseName
-			version version
+			groupId getProperty("maven.groupId")
+			artifactId getProperty("maven.archivesBaseName")
+			version getProperty("version")
 
 			from components.java
 		}
 	}
 }
 
-if(hasProperty("ossrhUsername")) {
+if(hasProperty("ossrh.username")) {
   uploadArchives {
   	repositories {
   	  mavenDeployer {
     		beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
 
-      		repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
-      		  authentication(userName: ossrhUsername, password: ossrhPassword)
+      		repository(url: getProperty("oss.repository.release")) {
+      		  authentication(userName: getProperty("ossrh.username"), password: getProperty("ossrh.password"))
       		}
-      		snapshotRepository(url: "https://oss.sonatype.org/content/repositories/snapshots/") {
-      		  authentication(userName: ossrhUsername, password: ossrhPassword)
+      		snapshotRepository(url: getProperty("oss.repository.snapshot")) {
+      		  authentication(userName: getProperty("ossrh.username"), password: getProperty("ossrh.password"))
       		}
 
       		pom.project {
-      		  name project.ext.name
+      		  name getProperty("name")
       		  packaging 'jar'
       		  // optionally artifactId can be defined here
-      		  description project.ext.description
-      		  url project.ext.url
+      		  description getProperty("description")
+      		  url getProperty("url")
 
       		  scm {
-      			  connection 'scm:git:git@github.com:termsuite/termsuite-core.git'
-      			  developerConnection 'scm:git:git@github.com:termsuite/termsuite-core.git'
-      			  url 'git@github.com:termsuite/termsuite-core.git'
+      			  connection "scm:git:" + getProperty("termsuite.git.url")
+      			  developerConnection "scm:git:" + getProperty("termsuite.git.url")
+      			  url getProperty("termsuite.git.url")
       		  }
 
       		  licenses {
       			  license {
-      				  name 'The Apache License, Version 2.0'
-      				  url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+      				  name getProperty("license")
+      				  url getProperty("licenseUrl")
       			  }
       		  }
 
       		  developers {
       			  developer {
-      				  id developerId
-      				  name developerName
-      				  email developerEmail
+      				  id getProperty("developer.id")
+      				  name getProperty("developer.name")
+      				  email getProperty("developer.email")
       			  }
       		  }
       		}
@@ -175,9 +180,6 @@ if(hasProperty("ossrhUsername")) {
   logger.warn(msg)
 }
 
-configurations {
-	prepare.extendsFrom(compile)
-}
 
 dependencies {
 	// Test
@@ -285,8 +287,8 @@ jar {
 	// tune manifest
     manifest {
         attributes(
-			"Implementation-Title": project.ext.name,
-			"Implementation-Version": version,
+			"Implementation-Title": getProperty("name"),
+			"Implementation-Version": getProperty("version"),
             "Built-By": System.getProperty('user.name'),
             "Built-Date": new Date(),
             "Built-JDK": System.getProperty('java.version'),
@@ -301,29 +303,3 @@ clean.doLast {
 }
 
 
-//////////////////////////////////////////////////////////////////
-// JCASGEN
-// Author: Damien Raude-Morvan
-//
-// Generate UIMA type system
-//////////////////////////////////////////////////////////////////
-
-task jcasgen(type: JavaExec) {
-	description = 'Generate UIMA TS classes'
-	ext.srcFile = file("$projectDir/$project.jcasFile")
-	ext.outputDir = file("$projectDir/src/main/java")
-	inputs.file srcFile
-	outputs.dir outputDir
-	classpath configurations.prepare
-	// This ensures availability of type system imports
-	// however, assumes that files are in desc subfolder
-	systemProperty 'uima.datapath', "$projectDir/desc"
-	main = 'org.apache.uima.tools.jcasgen.Jg'
-	args = ['-jcasgeninput', srcFile, '-jcasgenoutput', outputDir]
-}
-
-// forces jcasgen before java compiles
-classes.dependsOn jcasgen
-
-// UIMA type system is needed for Java compile
-compileJava.source jcasgen.outputs, sourceSets.main.java
