@@ -6,6 +6,7 @@ buildscript {
     dependencies {
         classpath 'org.standardout:bnd-platform:1.4.0'
         classpath "net.saliman:gradle-properties-plugin:1.4.5"
+        classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:1+"
     }
 }
 
@@ -17,6 +18,7 @@ apply plugin: 'signing'
 apply plugin: 'maven-publish'
 apply plugin: 'org.standardout.bnd-platform'
 apply plugin: 'net.saliman.properties'
+apply plugin: 'com.jfrog.bintray'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -310,4 +312,28 @@ clean.doLast {
     println 'Cleaning typesystem generated sources.'
 }
 
-
+/*
+ * Upload to bintray. 
+ */
+bintray {
+	user = project.hasProperty('bintrayUser') ? project.property('bintrayUser') : System.getenv('BINTRAY_USER')
+	key = project.hasProperty('bintrayApiKey') ? project.property('bintrayApiKey') : System.getenv('BINTRAY_API_KEY')
+	publish = true
+	override = true
+	filesSpec {
+		from 'build/updatesite/'
+		into '.'
+	}
+	pkg {
+		repo = getProperty("termsuite.p2repo.name")
+		name = getProperty("termsuite.p2repo.pkgname")
+		desc = getProperty("termsuite.p2repo.description")
+        userOrg = getProperty("termsuite.bintray.org")
+        licenses = [getProperty("license")]
+		vcsUrl = getProperty("termsuite.git.url")
+		labels = getProperty("termsuite.p2repo.tags").split(",")
+		publicDownloadNumbers = false
+	}
+}
+//bintrayUpload.dependsOn updateSiteZip
+ 
