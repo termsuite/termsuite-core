@@ -48,12 +48,7 @@ import eu.project.ttc.models.TermIndex;
 public class FunctionalTests {
 	public static final String CORPUS_WE_PATH="eu/project/ttc/test/corpus/we/";
 	private static final String FUNCTION_TESTS_CONFIG = "termsuite-test.properties";
-	private static final String PROP_RESOURCES_PATH = "resources.path";
 	private static final String PROP_TREETAGGER_HOME_PATH = "treetagger.home.path";
-
-	public static String getResourcePath() {
-		return (String)getConfigProperty(PROP_RESOURCES_PATH);
-	}
 
 	private static Object getConfigProperty( String propName) {
 		InputStream is = FunctionalTests.class.getClassLoader().getResourceAsStream(FUNCTION_TESTS_CONFIG);
