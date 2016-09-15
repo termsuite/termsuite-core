@@ -32,6 +32,15 @@ The jar will then be found under ./build/libs.
 ~~~
 
 
-* Install TermSuite and run terminology extraction: [Getting started](http://termsuite.github.io/getting-started/) guide
-* User manual: [Documentation](http://termsuite.github.io/documentation/introduction/)
-* Official site: [TermSuite](http://termsuite.github.io/)
+ * Install TermSuite and run terminology extraction: [Getting started](http://termsuite.github.io/getting-started/) guide
+ * User manual: [Documentation](http://termsuite.github.io/documentation/introduction/)
+ * Official site: [TermSuite](http://termsuite.github.io/)
+
+
+### Run TermSuite functional tests
+
+ 1. `cp src/test/resources/termsuite-test.properties.sample src/test/resources/termsuite-test.properties`,
+ 2. In `termsuite-test.properties`, set the path to your local TreeTagger installation,
+ 3. Run `gradle cucumberTest` from command line, or launch the `FunctionalTests` test suite from your IDE's JUnit laucnher.
+  
+
