@@ -79,6 +79,7 @@ task jcasgen(type: JavaExec) {
 
 // forces jcasgen before java compiles
 classes.dependsOn jcasgen
+updateSiteZip.dependsOn clean, jar
 
 // UIMA type system is needed for Java compile
 compileJava.source jcasgen.outputs, sourceSets.main.java
@@ -87,13 +88,16 @@ compileJava.source jcasgen.outputs, sourceSets.main.java
 // Produces OSGi bundles and P2 update site 
 platform {
     fetchSources = false
-//    eclipseHome = new File(project.ext.user.eclipse.home)
+   	eclipseHome = new File(getProperty("user.eclipse.home"))
     bundle(project) {
         bnd {
 	        symbolicName = getProperty("osgi.symbolicName")
 	        bundleName = getProperty("osgi.bundleName")
 	        version = getProperty("osgi.version")
 	        addQualifier = getProperty("osgi.addQualifier")
+	        
+	        instruction "Import-Package", ""
+	        instruction "Export-Package", "eu.project.ttc.*,org.apache.uima.examples"
         }
     }
 }
@@ -122,8 +126,8 @@ repositories {
 publishing {
 	publications {
 		maven(MavenPublication) {
-			groupId getProperty("maven.groupId")
-			artifactId getProperty("maven.archivesBaseName")
+			groupId getProperty("group")
+			artifactId getProperty("name")
 			version getProperty("version")
 
 			from components.java
@@ -195,8 +199,12 @@ dependencies {
 	compile "com.fasterxml.jackson.core:jackson-databind:2.8.2"
 
 	// UIMA
-	// compile 'org.apache.uima:uimaj-core:2.6.0'
-	compile "org.apache.uima:uimafit-core:2.2.0"
+	/*
+	 * Warning: upgrading to uimafit-core:2.2.0 and uimaj-core:2.9.0
+	 * causes a ConcurrentModificationException in Lexer
+	 */
+	compile "org.apache.uima:uimaj-core:2.6.0"
+	compile "org.apache.uima:uimafit-core:2.1.0"
 
 
 	// Apache Common
