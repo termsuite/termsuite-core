@@ -121,7 +121,10 @@ artifacts {
 	archives javadocJar, sourcesJar
 }
 
-if(hasProperty("signing.keyId")) {
+if(hasProperty("signing.keyId") 
+	&& hasProperty("signing.secretKeyRingFile")
+	&& new File(getProperty("signing.secretKeyRingFile")).exists()
+	) {
 	// activate signing of artifacts, only if signing is configured properly
 	signing {
 		sign configurations.archives
@@ -321,7 +324,13 @@ clean.doLast {
 
 
 /*
- * Upload to bintray. 
+ * Upload the update site on bintray
+ * 
+ * WARNING: Not yet working due to issue on gradle-bintray-plugin:
+ * https://github.com/bintray/gradle-bintray-plugin/issues/142#issuecomment-247398758
+ * 
+ * Please use the curl (and OS-dependant) task uploadP2 instead.
+ * 
  */
 bintray {
 	user = project.hasProperty('bintrayUser') ? project.property('bintrayUser') : System.getenv('BINTRAY_USER')
@@ -347,14 +356,17 @@ bintray {
     	}
 	}
 }
-//bintrayUpload.dependsOn updateSiteZip
+bintrayUpload.dependsOn updateSiteZip
  
  
 /*
- *
+ * Upload the update-site on bintray.
+ * 
+ * WARNING: this task is OS-dependant. It must be suppressed when
+ *          the bintrayUpload task is debugged. 
  */
 task uploadP2(type: Exec) {
 	workingDir = "./"
  	commandLine "curl", "-T", "build/updatesite.zip", "-u$bintrayUser:$bintrayApiKey", "https://api.bintray.com/content/termsuite/p2/update-site/$version/updatesite.zip?publish=1&override=1&explode=1"
 }
- 
+bintrayUpload.dependsOn updateSiteZip
