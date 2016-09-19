@@ -131,16 +131,35 @@ public enum TermSuiteResource {
 	}
 	
 	public URL fromClasspath(Lang lang) {
-		String classpathPath = TermSuiteConstants.DEFAULT_RESOURCE_URL_PREFIX + getPath(lang);
-		URL url = getClass().getResource(classpathPath);
+		URL url = fromClassPathUnchecked(lang);
 		return checkUrl(url);
 	}
 
+	public URL fromClassPathUnchecked(Lang lang) {
+		String classpathPath = TermSuiteConstants.DEFAULT_RESOURCE_URL_PREFIX + getPath(lang);
+		URL url = getClass().getResource(classpathPath);
+		return url;
+	}
+
+
+	public boolean existsInClasspath(Lang lang, Tagger tagger) {
+		return fromClassPathUnchecked(lang, tagger) != null;
+	}
+	
+
+	public boolean exists(Lang lang) {
+		return fromClassPathUnchecked(lang) != null;
+	}
 
 	public URL fromClasspath(Lang lang, Tagger tagger) {
+		URL url = fromClassPathUnchecked(lang, tagger);
+		return checkUrl(url);
+	}
+
+	public URL fromClassPathUnchecked(Lang lang, Tagger tagger) {
 		String classpathPath =TermSuiteConstants.DEFAULT_RESOURCE_URL_PREFIX + getPath(lang, tagger);
 		URL url = getClass().getResource(classpathPath);
-		return checkUrl(url);
+		return url;
 	}
 
 	public URL fromUrlPrefix(URL prefix, Lang lang) {

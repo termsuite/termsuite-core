@@ -84,8 +84,17 @@ public class TermSuitePipelineSpec {
 		pipeline.setResourceDir(DIR_PATH);
 		runPipeline(pipeline);
 		// should not raise exception
+	}
+	
+	@Test
+	public void testLoadResourcesFromDirectoryWithMissingTrailingSlash() {
+		TermSuitePipeline pipeline = startPipeline();
+		pipeline.setResourceDir(DIR_PATH.substring(0, DIR_PATH.length() - 1));
+		runPipeline(pipeline);
+		// should not raise exception
 		
 	}
+
 
 	@Test
 	public void testLoadResourcesFromJarExceptionSimpleExistingFile() {

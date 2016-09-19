@@ -574,7 +574,10 @@ public class TermSuitePipeline {
 	public TermSuitePipeline setResourceDir(String resourceDir) {
 		Preconditions.checkArgument(new File(resourceDir).isDirectory(), 
 				"Not a directory: %s", resourceDir);
-		TermSuiteUtils.addToClasspath(resourceDir);
+		
+		if(!resourceDir.endsWith(File.separator))
+			resourceDir = resourceDir + File.separator;
+//		TermSuiteUtils.addToClasspath(resourceDir);
 		try {
 			this.resourceUrlPrefix = Optional.of(new URL("file:" + resourceDir));
 			LOGGER.info("Resource URL prefix is: {}", this.resourceUrlPrefix.get());
