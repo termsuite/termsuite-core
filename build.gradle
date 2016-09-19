@@ -99,6 +99,14 @@ platform {
     featureId=getProperty("termsuite.osgi.feature.id")
     featureName=getProperty("termsuite.osgi.feature.name")
     featureVersion=version
+    
+    /*
+     * TODO: set eclipseMirror property instead of
+     *  (or in addition to) eclipseHome in order to be 
+     *  able to run it from CI servers.
+     *
+     */
+     
    	eclipseHome = new File(getProperty("user.eclipse.home"))
     bundle(project) {
         bnd {
