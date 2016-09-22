@@ -20,6 +20,7 @@ import com.google.common.collect.Lists;
 
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.tools.TermSuitePipeline;
+import eu.project.ttc.tools.builders.internal.FileSystemHelper;
 import eu.project.ttc.utils.JCasUtils;
 
 public class TermSuitePreprocessor {

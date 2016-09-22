@@ -1,8 +1,10 @@
-package eu.project.ttc.tools.builders;
+package eu.project.ttc.tools.builders.internal;
 
 import java.nio.file.Path;
 
 import eu.project.ttc.engines.desc.Lang;
+import eu.project.ttc.tools.builders.CorpusException;
+import eu.project.ttc.tools.builders.Document;
 
 public class DocumentFactory {
 	

@@ -29,6 +29,8 @@ import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.readers.TermSuiteJsonCasDeserializer;
 import eu.project.ttc.tools.TermSuitePipeline;
+import eu.project.ttc.tools.builders.internal.FileSystemHelper;
+import eu.project.ttc.tools.builders.internal.PipelineUtils;
 import eu.project.ttc.utils.JCasUtils;
 
 /**

@@ -2,6 +2,7 @@ package eu.project.ttc.tools.builders;
 
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.tools.TermSuitePipeline;
+import eu.project.ttc.tools.builders.internal.PipelineUtils;
 
 public class TerminoFilterer {
 
