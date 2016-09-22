@@ -25,6 +25,8 @@ package eu.project.ttc.test.func;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Collections;
 import java.util.List;
 import java.util.Properties;
@@ -39,13 +41,22 @@ import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.test.func.tools.builders.TermSuitePreprocessorSpec;
+import eu.project.ttc.test.func.tools.builders.TerminoExtractorSpec;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
 	FrenchWindEnergySpec.class,
-	EnglishWindEnergySpec.class
+	EnglishWindEnergySpec.class,
+	TermSuitePreprocessorSpec.class,
+	TerminoExtractorSpec.class
 	})
 public class FunctionalTests {
+	
+
+	public static final Path CORPUS2_PATH=Paths.get("src", "test", "resources", "eu", "project", "ttc", "test", "corpus", "corpus2");
+	public static final Path CORPUS1_PATH=Paths.get("src", "test", "resources", "eu", "project", "ttc", "test", "corpus", "corpus1");
+	
 	public static final String CORPUS_WE_PATH="eu/project/ttc/test/corpus/we/";
 	private static final String FUNCTION_TESTS_CONFIG = "termsuite-test.properties";
 	private static final String PROP_TREETAGGER_HOME_PATH = "treetagger.home.path";

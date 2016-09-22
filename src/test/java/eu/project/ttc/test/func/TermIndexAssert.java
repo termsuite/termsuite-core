@@ -50,6 +50,38 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 		super(actual, TermIndexAssert.class);
 	}
 
+	public TermIndexAssert hasSize(int expected) {
+		if(actual.getTerms().size() != expected)
+			failWithMessage("Expected size was <%s>, but actual size is <%s>.", 
+					expected, actual.getTerms().size());
+		return this;
+	}
+
+	public TermIndexAssert containsTerm(String expectedTerm, int frequency) {
+		for(Term t:actual.getTerms()) {
+			if(t.getGroupingKey().equals(expectedTerm)) {
+				if(t.getFrequency() != frequency)
+					failWithMessage("Expected frequency for term %s was <%s>, but actually is: <%s>.",
+							expectedTerm,
+							frequency,
+							t.getFrequency());
+				return this;
+			}
+		}
+		failWithMessage("No such term <%s> found in term index.", expectedTerm);
+		return this;
+	}
+	
+	public TermIndexAssert containsTerm(String expectedTerm) {
+		for(Term t:actual.getTerms()) {
+			if(t.getGroupingKey().equals(expectedTerm))
+				return this;
+		}
+		
+		failWithMessage("No such term <%s> found in term index.", expectedTerm);
+		return this;
+	}
+	
 	public TermIndexAssert containsVariation(String baseGroupingKey, VariationType type, String variantGroupingKey) {
 		if(failToFindTerms(baseGroupingKey, variantGroupingKey))
 			return this;

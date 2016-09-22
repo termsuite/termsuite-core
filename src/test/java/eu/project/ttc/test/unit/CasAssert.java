@@ -36,6 +36,10 @@ import org.assertj.core.api.AbstractListAssert;
 import org.assertj.core.util.Lists;
 
 import com.google.common.base.Joiner;
+import com.google.common.base.Optional;
+
+import eu.project.ttc.types.SourceDocumentInformation;
+import eu.project.ttc.utils.JCasUtils;
 
 public class CasAssert extends AbstractAssert<CasAssert, JCas> {
 
@@ -115,6 +119,18 @@ public class CasAssert extends AbstractAssert<CasAssert, JCas> {
 						annotationClass.getSimpleName(),
 						a.getCoveredText()
 						);
+		return this;
+	}
+
+	public CasAssert hasUrl(String expected) {
+		Optional<SourceDocumentInformation> sdi = JCasUtils.getSourceDocumentAnnotation(actual);
+		if(sdi.isPresent()) {
+			if(sdi.get().getUri().equals(expected))
+				return this;
+			else 
+				failWithMessage("Expected SDI uri <%s>, but got <%s>", expected, sdi.get().getUri());
+		} else
+			failWithMessage("Expected cas to have SourceDocumentInformation annotation, but does not have it.");
 		return this;
 	}
 

@@ -150,7 +150,6 @@ import eu.project.ttc.types.TermOccAnnotation;
 import eu.project.ttc.types.WordAnnotation;
 import eu.project.ttc.utils.FileUtils;
 import eu.project.ttc.utils.OccurrenceBuffer;
-import eu.project.ttc.utils.TermSuiteUtils;
 import fr.free.rocheteau.jerome.engines.Stemmer;
 import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
 import fr.univnantes.lina.uima.ChineseSegmenterResourceHelper;
@@ -322,7 +321,7 @@ public class TermSuitePipeline {
 		runPipeline();
 		return this;
 	}
-
+	
 	private void runPipeline() {
 		try {
 			SimplePipeline.runPipeline(this.crDescription, createDescription());

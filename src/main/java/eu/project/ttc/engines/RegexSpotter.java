@@ -185,5 +185,4 @@ public class RegexSpotter extends TokenRegexAE {
 	protected void afterRuleProcessing(JCas jCas) {
 		flushOccurrenceBuffer(jCas);
 	}
-
 }

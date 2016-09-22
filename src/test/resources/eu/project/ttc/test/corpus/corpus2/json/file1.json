@@ -1,0 +1,132 @@
+{
+  "sdi" : {
+    "uri" : "/home/cram-d/git/termsuite-core/src/test/resources/eu/project/ttc/test/corpus/corpus1/file1.txt",
+    "off_in_s" : 0,
+    "document_index" : 0,
+    "nb_documents" : 0,
+    "document_size" : 0,
+    "cumul_doc_size" : 0,
+    "corpus_size" : 0,
+    "last_segment" : false,
+    "begin" : 0,
+    "end" : 44
+  },
+  "word_annotations" : [ {
+    "cat" : "article",
+    "lemma" : "le",
+    "stem" : "l'",
+    "tag" : "DET:ART",
+    "begin" : 0,
+    "end" : 2
+  }, {
+    "cat" : "noun",
+    "lemma" : "énergie",
+    "stem" : "énerg",
+    "tag" : "NOM",
+    "regexLabel" : "N",
+    "begin" : 2,
+    "end" : 9
+  }, {
+    "cat" : "adjective",
+    "lemma" : "éolien",
+    "stem" : "éolien",
+    "tag" : "ADJ",
+    "regexLabel" : "A",
+    "begin" : 10,
+    "end" : 18
+  }, {
+    "cat" : "verb",
+    "lemma" : "être",
+    "stem" : "est",
+    "tag" : "VER:pres",
+    "mood" : "indicative",
+    "tense" : "present",
+    "begin" : 19,
+    "end" : 22
+  }, {
+    "cat" : "article",
+    "lemma" : "le",
+    "stem" : "l'",
+    "tag" : "DET:ART",
+    "begin" : 23,
+    "end" : 25
+  }, {
+    "cat" : "noun",
+    "lemma" : "énergie",
+    "stem" : "énerg",
+    "tag" : "NOM",
+    "regexLabel" : "N",
+    "begin" : 25,
+    "end" : 32
+  }, {
+    "cat" : "adposition",
+    "lemma" : "de",
+    "stem" : "de",
+    "tag" : "PRP",
+    "scat" : "preposition",
+    "regexLabel" : "P",
+    "begin" : 33,
+    "end" : 35
+  }, {
+    "cat" : "noun",
+    "lemma" : "demain",
+    "stem" : "demain",
+    "tag" : "NOM",
+    "regexLabel" : "N",
+    "begin" : 36,
+    "end" : 42
+  }, {
+    "cat" : "punctuation",
+    "lemma" : ".",
+    "stem" : ".",
+    "tag" : "SENT",
+    "scat" : "sentence",
+    "begin" : 42,
+    "end" : 43
+  } ],
+  "term_occ_annotations" : [ {
+    "pattern" : "N A",
+    "spot_rule_name" : "na",
+    "term_key" : "na: énergie éolien",
+    "words" : [ [ 2, 9 ], [ 10, 18 ] ],
+    "begin" : 2,
+    "end" : 18
+  }, {
+    "pattern" : "N",
+    "spot_rule_name" : "n",
+    "term_key" : "n: énergie",
+    "words" : [ [ 2, 9 ] ],
+    "begin" : 2,
+    "end" : 9
+  }, {
+    "pattern" : "A",
+    "spot_rule_name" : "a",
+    "term_key" : "a: éolien",
+    "words" : [ [ 10, 18 ] ],
+    "begin" : 10,
+    "end" : 18
+  }, {
+    "pattern" : "N P N",
+    "spot_rule_name" : "npn",
+    "term_key" : "npn: énergie de demain",
+    "words" : [ [ 25, 32 ], [ 33, 35 ], [ 36, 42 ] ],
+    "begin" : 25,
+    "end" : 42
+  }, {
+    "pattern" : "N",
+    "spot_rule_name" : "n",
+    "term_key" : "n: énergie",
+    "words" : [ [ 25, 32 ] ],
+    "begin" : 25,
+    "end" : 32
+  }, {
+    "pattern" : "N",
+    "spot_rule_name" : "n",
+    "term_key" : "n: demain",
+    "words" : [ [ 36, 42 ] ],
+    "begin" : 36,
+    "end" : 42
+  } ],
+  "fixed_expressions" : [ ],
+  "covered_text" : "L'énergie éolienne est l'énergie de demain.\n"
+}

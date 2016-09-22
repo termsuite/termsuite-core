@@ -37,9 +37,8 @@ import eu.project.ttc.tools.cli.TermSuiteCLIUtils;
 public class TermSuitePipelineSpec {
 	
 
-	private static final String JAR_PATH = "./src/test/resources/linguistics/resources.jar";
-	private static final String DIR_PATH = "./src/test/resources/linguistics/resource-dir/";
-	private static final String URL = "file:./src/test/resources/linguistics/resource-dir/";
+	private static final String DIR_PATH = "./src/main/resources/fr/univnantes/termsuite/resources/";
+	private static final String URL = "file:./src/main/resources/fr/univnantes/termsuite/resources/";
 	
 	@Before
 	public void setup() {
@@ -72,7 +71,7 @@ public class TermSuitePipelineSpec {
 		thrown.expectMessage("Not a directory");
 
 		TermSuitePipeline pipeline = startPipeline();
-		pipeline.setResourceDir(JAR_PATH);
+		pipeline.setResourceDir(DIR_PATH + "ebgeb");
 		runPipeline(pipeline);
 		// should not raise exception
 		
@@ -131,9 +130,8 @@ public class TermSuitePipelineSpec {
 	}
 
 	@Test
-	public void testLoadResourcesFromJar() {
+	public void testLoadResourcesFromEmbeddedResources() {
 		TermSuitePipeline pipeline = startPipeline();
-		pipeline.setResourceJar(JAR_PATH);
 		runPipeline(pipeline);
 		// should not raise exception
 	}

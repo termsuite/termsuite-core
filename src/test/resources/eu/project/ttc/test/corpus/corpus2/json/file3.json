@@ -1,0 +1,132 @@
+{
+  "sdi" : {
+    "uri" : "/home/cram-d/git/termsuite-core/src/test/resources/eu/project/ttc/test/corpus/corpus1/dir1/file3.txt",
+    "off_in_s" : 0,
+    "document_index" : 0,
+    "nb_documents" : 0,
+    "document_size" : 0,
+    "cumul_doc_size" : 0,
+    "corpus_size" : 0,
+    "last_segment" : false,
+    "begin" : 0,
+    "end" : 44
+  },
+  "word_annotations" : [ {
+    "cat" : "article",
+    "lemma" : "le",
+    "stem" : "l'",
+    "tag" : "DET:ART",
+    "begin" : 0,
+    "end" : 2
+  }, {
+    "cat" : "noun",
+    "lemma" : "énergie",
+    "stem" : "énerg",
+    "tag" : "NOM",
+    "regexLabel" : "N",
+    "begin" : 2,
+    "end" : 9
+  }, {
+    "cat" : "adposition",
+    "lemma" : "du",
+    "stem" : "du",
+    "tag" : "PRP:det",
+    "scat" : "preposition",
+    "regexLabel" : "P",
+    "begin" : 10,
+    "end" : 12
+  }, {
+    "cat" : "noun",
+    "lemma" : "futur",
+    "stem" : "futur",
+    "tag" : "NOM",
+    "regexLabel" : "N",
+    "begin" : 13,
+    "end" : 18
+  }, {
+    "cat" : "verb",
+    "lemma" : "être",
+    "stem" : "ser",
+    "tag" : "VER:futu",
+    "mood" : "indicative",
+    "tense" : "future",
+    "begin" : 19,
+    "end" : 23
+  }, {
+    "cat" : "article",
+    "lemma" : "le",
+    "stem" : "l'",
+    "tag" : "DET:ART",
+    "begin" : 24,
+    "end" : 26
+  }, {
+    "cat" : "noun",
+    "lemma" : "énergie",
+    "stem" : "énerg",
+    "tag" : "NOM",
+    "regexLabel" : "N",
+    "begin" : 26,
+    "end" : 33
+  }, {
+    "cat" : "adjective",
+    "lemma" : "éolien",
+    "stem" : "éolien",
+    "tag" : "ADJ",
+    "regexLabel" : "A",
+    "begin" : 34,
+    "end" : 42
+  }, {
+    "cat" : "punctuation",
+    "lemma" : ".",
+    "stem" : ".",
+    "tag" : "SENT",
+    "scat" : "sentence",
+    "begin" : 42,
+    "end" : 43
+  } ],
+  "term_occ_annotations" : [ {
+    "pattern" : "N P N",
+    "spot_rule_name" : "npn",
+    "term_key" : "npn: énergie du futur",
+    "words" : [ [ 2, 9 ], [ 10, 12 ], [ 13, 18 ] ],
+    "begin" : 2,
+    "end" : 18
+  }, {
+    "pattern" : "N",
+    "spot_rule_name" : "n",
+    "term_key" : "n: énergie",
+    "words" : [ [ 2, 9 ] ],
+    "begin" : 2,
+    "end" : 9
+  }, {
+    "pattern" : "N",
+    "spot_rule_name" : "n",
+    "term_key" : "n: futur",
+    "words" : [ [ 13, 18 ] ],
+    "begin" : 13,
+    "end" : 18
+  }, {
+    "pattern" : "N A",
+    "spot_rule_name" : "na",
+    "term_key" : "na: énergie éolien",
+    "words" : [ [ 26, 33 ], [ 34, 42 ] ],
+    "begin" : 26,
+    "end" : 42
+  }, {
+    "pattern" : "N",
+    "spot_rule_name" : "n",
+    "term_key" : "n: énergie",
+    "words" : [ [ 26, 33 ] ],
+    "begin" : 26,
+    "end" : 33
+  }, {
+    "pattern" : "A",
+    "spot_rule_name" : "a",
+    "term_key" : "a: éolien",
+    "words" : [ [ 34, 42 ] ],
+    "begin" : 34,
+    "end" : 42
+  } ],
+  "fixed_expressions" : [ ],
+  "covered_text" : "L'énergie du futur sera l'énergie éolienne.\n"
+}

@@ -55,15 +55,15 @@ public class JCasUtils {
 		}
 	}
 	
-	public static void initJCasSDI(JCas jCas, String language, String text, boolean lastSegment) {
+	public static void initJCasSDI(JCas jCas, String language, String text, String uri) {
+		jCas.setDocumentText(text);
+		jCas.setDocumentLanguage(language);
 		SourceDocumentInformation sdi;
 		sdi = new SourceDocumentInformation(jCas);
-		jCas.setDocumentLanguage(language);
-		jCas.setDocumentText(text);
 		sdi.setBegin(0);
+		sdi.setUri(uri);
 		sdi.setEnd(text.length());
 		sdi.setOffsetInSource(0);
-		sdi.setLastSegment(lastSegment);
 		sdi.addToIndexes();
 	}
 

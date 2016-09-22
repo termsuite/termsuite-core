@@ -55,6 +55,7 @@ import static eu.project.ttc.readers.JsonCasConstants.F_WORDS;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.Charset;
 import java.util.List;
 import java.util.Objects;
 
@@ -86,6 +87,10 @@ public class TermSuiteJsonCasDeserializer {
     private static JsonToken token;
 
     public static void deserialize(InputStream inputStream, CAS cas) {
+    	deserialize(inputStream, cas, Charset.defaultCharset().name());
+    }
+
+    public static void deserialize(InputStream inputStream, CAS cas, String encoding) {
     	Preconditions.checkNotNull(inputStream, "Paramater input stream is null");
     	Preconditions.checkNotNull(inputStream, "Paramater CAS is null");
     	

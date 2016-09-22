@@ -196,8 +196,6 @@
   target: N P N
   rule: s[0]==t[0] && s[2]==t[2]
 
-
-
 # # NOT CORRECT : effect of angle || effect of angle of attack
 # "S-Ed-NPN-PN":
 #   source: N P N
