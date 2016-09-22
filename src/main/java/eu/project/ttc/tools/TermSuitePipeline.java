@@ -299,7 +299,10 @@ public class TermSuitePipeline {
 
 	public static TermSuitePipeline create(TermIndex termIndex) {
 		Preconditions.checkNotNull(termIndex.getName(), "The term index must have a name before it can be used in TermSuitePipeline");
-	
+		
+		if(!MemoryTermIndexManager.getInstance().containsTermIndex(termIndex.getName()))
+			MemoryTermIndexManager.getInstance().register(termIndex);
+		
 		TermSuitePipeline pipeline = create(termIndex.getLang().getCode());
 		pipeline.emptyCollection();
 		pipeline.setTermIndex(termIndex);

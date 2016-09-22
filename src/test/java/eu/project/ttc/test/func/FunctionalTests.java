@@ -54,6 +54,7 @@ import eu.project.ttc.test.func.tools.builders.TerminoExtractorSpec;
 public class FunctionalTests {
 	
 
+	public static final Path TERM_INDEX_1=Paths.get("src", "test", "resources", "org", "project", "ttc", "test", "json", "termIndex1.json");
 	public static final Path CORPUS2_PATH=Paths.get("src", "test", "resources", "eu", "project", "ttc", "test", "corpus", "corpus2");
 	public static final Path CORPUS1_PATH=Paths.get("src", "test", "resources", "eu", "project", "ttc", "test", "corpus", "corpus1");
 	

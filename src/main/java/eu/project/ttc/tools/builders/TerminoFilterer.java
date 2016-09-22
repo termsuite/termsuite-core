@@ -25,7 +25,8 @@ public class TerminoFilterer {
 
 
 	public TermIndex execute() {
-		TermSuitePipeline pipeline = TermSuitePipeline.create(termIndex);
+		TermSuitePipeline pipeline = TermSuitePipeline
+				.create(termIndex);
 		PipelineUtils.filter(pipeline, config);
 		pipeline.run();
 		return termIndex;

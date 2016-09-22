@@ -21,6 +21,8 @@
  *******************************************************************************/
 package eu.project.ttc.resources;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.util.Map;
 
 import org.slf4j.Logger;
@@ -48,9 +50,14 @@ public class MemoryTermIndexManager {
 	}
 	
 	public TermIndex getIndex(String indexName) {
-		if(!indexes.containsKey(indexName))
-			throw new IllegalStateException("No such term index: " + indexName);
-		return indexes.get(indexName);
+		try {
+			String name = URLDecoder.decode(indexName, "UTF-8");
+			if(!indexes.containsKey(name))
+				throw new IllegalStateException("No such term index: " + name);
+			return indexes.get(name);
+		} catch (UnsupportedEncodingException e) {
+			throw new RuntimeException(e);
+		}
 	}
 
 	public void register(TermIndex index) {
