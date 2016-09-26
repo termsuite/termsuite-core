@@ -23,6 +23,8 @@
 
 package eu.project.ttc.test.unit.io;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.tuple;
 import static org.junit.Assert.assertEquals;
 
 import org.apache.uima.resource.ResourceInitializationException;
@@ -35,8 +37,6 @@ import org.junit.rules.ExpectedException;
 import eu.project.ttc.engines.morpho.Segmentation;
 import eu.project.ttc.io.SegmentationParser;
 import fr.univnantes.julestar.uima.resources.ResourceFormatException;
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.tuple;
 
 public class SegmentationParserSpec {
 

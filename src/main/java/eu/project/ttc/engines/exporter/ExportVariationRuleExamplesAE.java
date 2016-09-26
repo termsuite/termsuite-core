@@ -1,4 +1,3 @@
-
 /*******************************************************************************
  * Copyright 2015-2016 - CNRS (Centre National de Recherche Scientifique)
  *
@@ -20,37 +19,23 @@
  * under the License.
  *
  *******************************************************************************/
+package eu.project.ttc.engines.exporter;
 
-package eu.project.ttc.models.index.io;
+import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
+import org.apache.uima.fit.descriptor.ExternalResource;
 
-public class IOOptions {
+import eu.project.ttc.engines.AbstractTermIndexExporter;
+import eu.project.ttc.resources.YamlVariantRules;
+import eu.project.ttc.termino.export.VariationRuleExamplesExporter;
 
-	private boolean withOccurrences = true;
-	protected boolean embedOccurrences = true;
-	private boolean withContexts = true;
-	
-	public IOOptions withOccurrences(boolean withOccurrences) {
-		this.withOccurrences = withOccurrences;
-		return this;
-	}
-	public IOOptions embedOccurrences(boolean embedOccurrences) {
-		this.embedOccurrences = embedOccurrences;
-		return this;
-	}
-	public IOOptions withContexts(boolean withContexts) {
-		this.withContexts = withContexts;
-		return this;
-	}
-	
-	
-	public boolean withOccurrences() {
-		return withOccurrences;
-	}
-	public boolean occurrencesEmbedded() {
-		return embedOccurrences;
-	}
-	public boolean withContexts() {
-		return withContexts;
-	}
+public class ExportVariationRuleExamplesAE extends AbstractTermIndexExporter {
 
+	public static final String YAML_VARIANT_RULES = "YamlVariantRules";
+	@ExternalResource(key = YAML_VARIANT_RULES, mandatory = true)
+	private YamlVariantRules yamlVariantRules;
+
+	@Override
+	public void collectionProcessComplete() throws AnalysisEngineProcessException {
+		VariationRuleExamplesExporter.export(termIndexResource.getTermIndex(), writer, yamlVariantRules);
+	}
 }

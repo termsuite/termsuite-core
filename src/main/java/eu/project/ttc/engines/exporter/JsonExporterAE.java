@@ -25,7 +25,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
-import java.util.TreeSet;
 
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
@@ -37,12 +36,11 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Preconditions;
 
+import eu.project.ttc.api.JSONOptions;
 import eu.project.ttc.engines.AbstractTermIndexExporter;
 import eu.project.ttc.models.OccurrenceStore;
-import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.index.JSONTermIndexIO;
-import eu.project.ttc.models.index.io.SaveOptions;
 
 /**
  * Exports a {@link TermIndex} in the tsv evaluation format.
@@ -50,9 +48,9 @@ import eu.project.ttc.models.index.io.SaveOptions;
  * @author Damien Cram
  *
  */
-public class JsonExporter extends AbstractTermIndexExporter {
+public class JsonExporterAE extends AbstractTermIndexExporter {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(JsonExporter.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(JsonExporterAE.class);
 
 	public static final String WITH_OCCURRENCE = "WithOccurrences";
 	@ConfigurationParameter(name=WITH_OCCURRENCE, mandatory=false, defaultValue="false")
@@ -92,7 +90,7 @@ public class JsonExporter extends AbstractTermIndexExporter {
 			LOGGER.info("Exporting {} terms to JSON file {}", this.termIndexResource.getTermIndex().getTerms().size(), this.toFilePath);
 			FileOutputStream fos = new FileOutputStream(toFile);
 			Writer writer2 = new OutputStreamWriter(fos, "UTF-8");
-			SaveOptions saveOptions = new SaveOptions();
+			JSONOptions saveOptions = new JSONOptions();
 			saveOptions.withOccurrences(withOccurrences);
 			saveOptions.withContexts(withContexts);
 			if(linkedMongoStore)
@@ -106,9 +104,4 @@ public class JsonExporter extends AbstractTermIndexExporter {
 		}
 	}
 	
-	@Override
-	protected void processAcceptedTerms(TreeSet<Term> acceptedTerms)
-			throws AnalysisEngineProcessException {
-	};
-
 }

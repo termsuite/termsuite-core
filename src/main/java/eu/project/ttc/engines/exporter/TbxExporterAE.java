@@ -1,4 +1,3 @@
-
 /*******************************************************************************
  * Copyright 2015-2016 - CNRS (Centre National de Recherche Scientifique)
  *
@@ -20,27 +19,24 @@
  * under the License.
  *
  *******************************************************************************/
+package eu.project.ttc.engines.exporter;
 
-package eu.project.ttc.readers;
+import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-
-import org.apache.uima.cas.CAS;
-import org.apache.uima.collection.CollectionException;
+import eu.project.ttc.engines.AbstractTermIndexExporter;
+import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.termino.export.TbxExporter;
 
 /**
- * Created by smeoni on 26/05/16.
+ * Exports a {@link TermIndex} in TSV format
+ * 
+ * @author Damien Cram
+ *
  */
-public class JsonCollectionReader extends AbstractTermSuiteCollectionReader{
-
-    @Override
-    protected void fillCas(CAS cas, File file) throws IOException, CollectionException {
-        TermSuiteJsonCasDeserializer.deserialize(new FileInputStream(file), cas);
-    }
-    @Override
-    protected String getDocumentText(String uri, String encoding) throws IOException {
-        throw new IllegalStateException("AbstractTermSuiteCollectionReader#getDocumentText() Should not be invoked on this Reader.");
-    }
+public class TbxExporterAE extends AbstractTermIndexExporter {
+	
+	@Override
+	public void collectionProcessComplete() throws AnalysisEngineProcessException {
+		TbxExporter.export(this.termIndexResource.getTermIndex(), writer, traverser);
+	}
 }

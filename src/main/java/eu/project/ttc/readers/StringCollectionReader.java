@@ -61,6 +61,8 @@ public class StringCollectionReader extends CollectionReader_ImplBase {
 	public void getNext(CAS cas) throws IOException, CollectionException {
 		LOGGER.info("Reading inline string of size " + text.length());
 		try {
+			cas.setDocumentText(this.text);
+			cas.setDocumentLanguage(mLanguage);
 			JCasUtils.initJCasSDI(cas.getJCas(), this.mLanguage, preparator.prepare(this.text), "http://inline.text/");
 			this.done  = true;
 		} catch (CASException e) {

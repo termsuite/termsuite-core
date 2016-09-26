@@ -63,6 +63,7 @@ import com.google.common.base.Splitter;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.Lists;
 
+import eu.project.ttc.api.JSONOptions;
 import eu.project.ttc.engines.BilingualAligner;
 import eu.project.ttc.engines.BilingualAligner.TranslationCandidate;
 import eu.project.ttc.metrics.Cosine;
@@ -72,7 +73,6 @@ import eu.project.ttc.metrics.SimilarityDistance;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.index.JSONTermIndexIO;
-import eu.project.ttc.models.index.io.LoadOptions;
 import eu.project.ttc.tools.TermSuiteAlignerBuilder;
 
 /**
@@ -297,7 +297,7 @@ public class TermSuiteAlignerCLI {
 			
 		}
 		LOGGER.info("loading source termino {}",line.getOptionValue(SOURCE_TERMINO));
-		LoadOptions loadOptions = new LoadOptions().withContexts(true);
+		JSONOptions loadOptions = new JSONOptions().withContexts(true);
 		sourceTermino = Optional.of(
 				JSONTermIndexIO.load(new FileReader(line.getOptionValue(SOURCE_TERMINO)), loadOptions)
 			);

@@ -1,4 +1,3 @@
-
 /*******************************************************************************
  * Copyright 2015-2016 - CNRS (Centre National de Recherche Scientifique)
  *
@@ -20,41 +19,18 @@
  * under the License.
  *
  *******************************************************************************/
+package eu.project.ttc.engines.exporter;
 
-package eu.project.ttc.models.index.io;
+import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 
-public class LoadOptions  {
-	private boolean metadataOnly = false;
-	public LoadOptions metadataOnly(boolean metadataOnly) {
-		this.metadataOnly = metadataOnly;
-		return this;
+import eu.project.ttc.engines.AbstractTermIndexExporter;
+import eu.project.ttc.termino.export.CompoundExporter;
+
+public class CompoundExporterAE extends AbstractTermIndexExporter {
+
+	@Override
+	public void collectionProcessComplete() throws AnalysisEngineProcessException {
+		CompoundExporter.export(termIndexResource.getTermIndex(), writer);
+
 	}
-	public boolean metadataOnly() {
-		return metadataOnly;
-	}
-	
-	
-	private IOOptions ioOptionsDelegate = new IOOptions();
-	public LoadOptions withOccurrences(boolean withOccurrences) {
-		ioOptionsDelegate.withOccurrences(withOccurrences);
-		return this;
-	}
-	public LoadOptions embedOccurrences(boolean embedOccurrences) {
-		ioOptionsDelegate.embedOccurrences(embedOccurrences);
-		return this;
-	}
-	public LoadOptions withContexts(boolean withContexts) {
-		ioOptionsDelegate.withContexts(withContexts);
-		return this;
-	}
-	public boolean withOccurrences() {
-		return ioOptionsDelegate.withOccurrences();
-	}
-	public boolean occurrencesEmbedded() {
-		return ioOptionsDelegate.occurrencesEmbedded();
-	}
-	public boolean withContexts() {
-		return ioOptionsDelegate.withContexts();
-	}
-	
 }

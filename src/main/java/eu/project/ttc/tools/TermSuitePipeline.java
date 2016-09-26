@@ -76,7 +76,6 @@ import eu.project.ttc.engines.TermOccAnnotationImporter;
 import eu.project.ttc.engines.TermSpecificityComputer;
 import eu.project.ttc.engines.TreeTaggerLemmaFixer;
 import eu.project.ttc.engines.cleaner.AbstractTermIndexCleaner;
-import eu.project.ttc.engines.cleaner.FilterRules;
 import eu.project.ttc.engines.cleaner.MaxSizeThresholdCleaner;
 import eu.project.ttc.engines.cleaner.TermIndexThresholdCleaner;
 import eu.project.ttc.engines.cleaner.TermIndexTopNCleaner;
@@ -84,17 +83,17 @@ import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.engines.desc.TermSuiteCollection;
 import eu.project.ttc.engines.desc.TermSuitePipelineException;
-import eu.project.ttc.engines.exporter.CompoundExporter;
-import eu.project.ttc.engines.exporter.EvalExporter;
-import eu.project.ttc.engines.exporter.ExportVariationRuleExamples;
+import eu.project.ttc.engines.exporter.CompoundExporterAE;
+import eu.project.ttc.engines.exporter.EvalExporterAE;
+import eu.project.ttc.engines.exporter.ExportVariationRuleExamplesAE;
 import eu.project.ttc.engines.exporter.JsonCasExporter;
-import eu.project.ttc.engines.exporter.JsonExporter;
+import eu.project.ttc.engines.exporter.JsonExporterAE;
 import eu.project.ttc.engines.exporter.SpotterTSVWriter;
-import eu.project.ttc.engines.exporter.TBXExporter;
 import eu.project.ttc.engines.exporter.TSVExporter;
+import eu.project.ttc.engines.exporter.TbxExporterAE;
 import eu.project.ttc.engines.exporter.TermsuiteJsonCasExporter;
-import eu.project.ttc.engines.exporter.VariantEvalExporter;
-import eu.project.ttc.engines.exporter.VariationExporter;
+import eu.project.ttc.engines.exporter.VariantEvalExporterAE;
+import eu.project.ttc.engines.exporter.VariationExporterAE;
 import eu.project.ttc.engines.exporter.XmiCasExporter;
 import eu.project.ttc.engines.morpho.CompostAE;
 import eu.project.ttc.engines.morpho.ManualCompositionSetter;
@@ -243,11 +242,6 @@ public class TermSuitePipeline {
 	 */
 	private Optional<Float> graphicalVariantSimilarityThreshold = Optional.absent();
 	
-	/*
-	 * Export Parameters
-	 */
-	private String exportFilteringRule = FilterRules.SpecificityThreshold.name();
-	private float exportFilteringThreshold = 0;
 	/* JSON */
 	private boolean exportJsonWithOccurrences = true;
 	private boolean exportJsonWithContext = false;
@@ -845,7 +839,7 @@ public class TermSuitePipeline {
 	public TermSuitePipeline haeExportVariationRuleExamples(String toFilePath) {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					ExportVariationRuleExamples.class, ExportVariationRuleExamples.TO_FILE_PATH, toFilePath);
+					ExportVariationRuleExamplesAE.class, ExportVariationRuleExamplesAE.TO_FILE_PATH, toFilePath);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 			ExternalResourceFactory.bindResource(ae, resSyntacticVariantRules());
 
@@ -866,8 +860,8 @@ public class TermSuitePipeline {
 	public TermSuitePipeline haeCompoundExporter(String toFilePath) {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					CompoundExporter.class, 
-					CompoundExporter.TO_FILE_PATH, 
+					CompoundExporterAE.class, 
+					CompoundExporterAE.TO_FILE_PATH, 
 					toFilePath);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 
@@ -881,9 +875,9 @@ public class TermSuitePipeline {
 		try {
 			String typeStrings = Joiner.on(",").join(vTypes);
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					VariationExporter.class, 
-					VariationExporter.TO_FILE_PATH, toFilePath,
-					VariationExporter.VARIATION_TYPES, typeStrings 
+					VariationExporterAE.class, 
+					VariationExporterAE.TO_FILE_PATH, toFilePath,
+					VariationExporterAE.VARIATION_TYPES, typeStrings 
 					);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 
@@ -897,11 +891,8 @@ public class TermSuitePipeline {
 	public TermSuitePipeline haeTbxExporter(String toFilePath) {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					TBXExporter.class, 
-					TBXExporter.FILTERING_RULE, exportFilteringRule,
-					TBXExporter.FILTERING_THRESHOLD, exportFilteringThreshold,
-					TBXExporter.TO_FILE_PATH, toFilePath,
-					TBXExporter.LANGUAGE, this.lang
+					TbxExporterAE.class, 
+					TbxExporterAE.TO_FILE_PATH, toFilePath
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 
@@ -914,11 +905,9 @@ public class TermSuitePipeline {
 	public TermSuitePipeline haeEvalExporter(String toFilePath, boolean withVariants) {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					EvalExporter.class, 
-					EvalExporter.FILTERING_RULE, FilterRules.SpecificityThreshold,
-					EvalExporter.FILTERING_THRESHOLD, 1.0f,
-					EvalExporter.TO_FILE_PATH, toFilePath,
-					EvalExporter.WITH_VARIANTS, withVariants
+					EvalExporterAE.class, 
+					EvalExporterAE.TO_FILE_PATH, toFilePath,
+					EvalExporterAE.WITH_VARIANTS, withVariants
 					
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
@@ -943,11 +932,11 @@ public class TermSuitePipeline {
 	public TermSuitePipeline haeJsonExporter(String toFilePath)  {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					JsonExporter.class, 
-					JsonExporter.TO_FILE_PATH, toFilePath,
-					JsonExporter.WITH_OCCURRENCE, exportJsonWithOccurrences,
-					JsonExporter.WITH_CONTEXTS, exportJsonWithContext,
-					JsonExporter.LINKED_MONGO_STORE, this.linkMongoStore
+					JsonExporterAE.class, 
+					JsonExporterAE.TO_FILE_PATH, toFilePath,
+					JsonExporterAE.WITH_OCCURRENCE, exportJsonWithOccurrences,
+					JsonExporterAE.WITH_CONTEXTS, exportJsonWithContext,
+					JsonExporterAE.LINKED_MONGO_STORE, this.linkMongoStore
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 
@@ -976,12 +965,10 @@ public class TermSuitePipeline {
 	public TermSuitePipeline haeVariantEvalExporter(String toFilePath, int topN, int maxVariantsPerTerm)  {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					VariantEvalExporter.class, 
-					VariantEvalExporter.FILTERING_RULE, eu.project.ttc.engines.cleaner.FilterRules.SpecificityThreshold,
-					VariantEvalExporter.FILTERING_THRESHOLD, 1.0f,
-					VariantEvalExporter.TO_FILE_PATH, toFilePath,
-					VariantEvalExporter.TOP_N, topN,
-					VariantEvalExporter.NB_VARIANTS_PER_TERM, maxVariantsPerTerm
+					VariantEvalExporterAE.class, 
+					VariantEvalExporterAE.TO_FILE_PATH, toFilePath,
+					VariantEvalExporterAE.TOP_N, topN,
+					VariantEvalExporterAE.NB_VARIANTS_PER_TERM, maxVariantsPerTerm
 				);
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
@@ -2000,15 +1987,6 @@ public class TermSuitePipeline {
 		}
 	}
 	
-	public TermSuitePipeline setExportFilteringRule(String exportFilteringRule) {
-		this.exportFilteringRule = exportFilteringRule;
-		return this;
-	}
-	public TermSuitePipeline setExportFilteringThreshold(float exportFilteringThreshold) {
-		this.exportFilteringThreshold = exportFilteringThreshold;
-		return this;
-	}
-
 	public TermSuitePipeline setTreeTaggerHome(String treeTaggerPath) {
 		this.treeTaggerPath = Optional.of(treeTaggerPath);
 		return this;
@@ -2360,7 +2338,7 @@ public class TermSuitePipeline {
 
 	/**
 	 * 
-	 * Configures the {@link JsonExporter} to not embed the occurrences 
+	 * Configures the {@link JsonExporterAE} to not embed the occurrences 
 	 * in the json file, but to link the mongodb occurrence store instead.
 	 * 
 	 * 

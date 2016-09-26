@@ -28,7 +28,6 @@ import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import eu.project.ttc.types.FixedExpression;
 import org.apache.uima.UIMAException;
 import org.apache.uima.cas.FSIterator;
 import org.apache.uima.fit.factory.JCasFactory;
@@ -44,6 +43,7 @@ import org.junit.rules.TemporaryFolder;
 import eu.project.ttc.readers.TermSuiteJsonCasDeserializer;
 import eu.project.ttc.readers.TermSuiteJsonCasSerializer;
 import eu.project.ttc.test.unit.TestUtil;
+import eu.project.ttc.types.FixedExpression;
 import eu.project.ttc.types.SourceDocumentInformation;
 import eu.project.ttc.types.TermOccAnnotation;
 import eu.project.ttc.types.WordAnnotation;

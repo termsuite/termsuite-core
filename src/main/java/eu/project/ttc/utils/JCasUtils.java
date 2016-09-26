@@ -56,8 +56,6 @@ public class JCasUtils {
 	}
 	
 	public static void initJCasSDI(JCas jCas, String language, String text, String uri) {
-		jCas.setDocumentText(text);
-		jCas.setDocumentLanguage(language);
 		SourceDocumentInformation sdi;
 		sdi = new SourceDocumentInformation(jCas);
 		sdi.setBegin(0);

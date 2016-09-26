@@ -1,4 +1,4 @@
-package eu.project.ttc.tools.builders;
+package eu.project.ttc.api;
 
 import static org.apache.uima.fit.factory.AnalysisEngineFactory.createEngineDescription;
 
@@ -20,7 +20,7 @@ import com.google.common.collect.Lists;
 
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.tools.TermSuitePipeline;
-import eu.project.ttc.tools.builders.internal.FileSystemHelper;
+import eu.project.ttc.tools.api.internal.FileSystemHelper;
 import eu.project.ttc.utils.JCasUtils;
 
 public class TermSuitePreprocessor {
@@ -121,12 +121,12 @@ public class TermSuitePreprocessor {
 					aae.process(cas);
 					return cas;
 				} catch (UIMAException e) {
-					throw new CorpusException(e);
+					throw new TermSuiteException(e);
 				}
 			});
 			
 		} catch (ResourceInitializationException e1) {
-			throw new CorpusException(e1);
+			throw new TermSuiteException(e1);
 		}
 
 	}

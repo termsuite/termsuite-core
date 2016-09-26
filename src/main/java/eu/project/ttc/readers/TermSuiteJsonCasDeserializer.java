@@ -59,7 +59,6 @@ import java.nio.charset.Charset;
 import java.util.List;
 import java.util.Objects;
 
-import eu.project.ttc.types.FixedExpression;
 import org.apache.uima.cas.CAS;
 import org.apache.uima.cas.CASException;
 import org.apache.uima.fit.util.JCasUtil;
@@ -73,6 +72,7 @@ import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
 import com.google.common.base.Preconditions;
 
+import eu.project.ttc.types.FixedExpression;
 import eu.project.ttc.types.SourceDocumentInformation;
 import eu.project.ttc.types.TermOccAnnotation;
 import eu.project.ttc.types.WordAnnotation;

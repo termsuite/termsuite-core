@@ -23,22 +23,58 @@
 
 package eu.project.ttc.readers;
 
-import com.fasterxml.jackson.core.JsonFactory;
-import com.fasterxml.jackson.core.JsonGenerator;
-import com.google.common.base.Joiner;
-import eu.project.ttc.types.FixedExpression;
-import eu.project.ttc.types.SourceDocumentInformation;
-import eu.project.ttc.types.WordAnnotation;
-import eu.project.ttc.types.TermOccAnnotation;
-import org.apache.uima.cas.*;
+import static eu.project.ttc.readers.JsonCasConstants.F_BEGIN;
+import static eu.project.ttc.readers.JsonCasConstants.F_CASE;
+import static eu.project.ttc.readers.JsonCasConstants.F_CATEGORY;
+import static eu.project.ttc.readers.JsonCasConstants.F_CORPUS_SIZE;
+import static eu.project.ttc.readers.JsonCasConstants.F_CUMULATED_DOCUMENT_SIZE;
+import static eu.project.ttc.readers.JsonCasConstants.F_DEGREE;
+import static eu.project.ttc.readers.JsonCasConstants.F_DOCUMENT_INDEX;
+import static eu.project.ttc.readers.JsonCasConstants.F_DOCUMENT_SIZE;
+import static eu.project.ttc.readers.JsonCasConstants.F_END;
+import static eu.project.ttc.readers.JsonCasConstants.F_FIXED_EXPRESSIONS;
+import static eu.project.ttc.readers.JsonCasConstants.F_FORMATION;
+import static eu.project.ttc.readers.JsonCasConstants.F_GENDER;
+import static eu.project.ttc.readers.JsonCasConstants.F_LABELS;
+import static eu.project.ttc.readers.JsonCasConstants.F_LAST_SEGMENT;
+import static eu.project.ttc.readers.JsonCasConstants.F_LEMMA;
+import static eu.project.ttc.readers.JsonCasConstants.F_MOOD;
+import static eu.project.ttc.readers.JsonCasConstants.F_NB_DOCUMENTS;
+import static eu.project.ttc.readers.JsonCasConstants.F_NUMBER;
+import static eu.project.ttc.readers.JsonCasConstants.F_OFFSET_IN_SOURCE;
+import static eu.project.ttc.readers.JsonCasConstants.F_PATTERN;
+import static eu.project.ttc.readers.JsonCasConstants.F_PERSON;
+import static eu.project.ttc.readers.JsonCasConstants.F_REGEX_LABEL;
+import static eu.project.ttc.readers.JsonCasConstants.F_SDI;
+import static eu.project.ttc.readers.JsonCasConstants.F_SPOTTING_RULE_NAME;
+import static eu.project.ttc.readers.JsonCasConstants.F_STEM;
+import static eu.project.ttc.readers.JsonCasConstants.F_SUB_CATEGORY;
+import static eu.project.ttc.readers.JsonCasConstants.F_TAG;
+import static eu.project.ttc.readers.JsonCasConstants.F_TENSE;
+import static eu.project.ttc.readers.JsonCasConstants.F_TERM_KEY;
+import static eu.project.ttc.readers.JsonCasConstants.F_TERM_OCC_ANNOTATIONS;
+import static eu.project.ttc.readers.JsonCasConstants.F_TEXT;
+import static eu.project.ttc.readers.JsonCasConstants.F_URI;
+import static eu.project.ttc.readers.JsonCasConstants.F_WORDS;
+import static eu.project.ttc.readers.JsonCasConstants.F_WORD_ANNOTATIONS;
+
+import java.io.IOException;
+import java.io.Writer;
+
+import org.apache.uima.cas.FSIterator;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.FSArray;
 import org.apache.uima.jcas.cas.StringArray;
 import org.apache.uima.jcas.tcas.Annotation;
 
-import java.io.*;
+import com.fasterxml.jackson.core.JsonFactory;
+import com.fasterxml.jackson.core.JsonGenerator;
+import com.google.common.base.Joiner;
 
-import static eu.project.ttc.readers.JsonCasConstants.*;
+import eu.project.ttc.types.FixedExpression;
+import eu.project.ttc.types.SourceDocumentInformation;
+import eu.project.ttc.types.TermOccAnnotation;
+import eu.project.ttc.types.WordAnnotation;
 
 /**
  * Created by smeoni on 27/05/16.

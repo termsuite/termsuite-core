@@ -1,34 +1,13 @@
-/*******************************************************************************
- * Copyright 2015-2016 - CNRS (Centre National de Recherche Scientifique)
- *
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- *
- *******************************************************************************/
-package eu.project.ttc.engines.exporter;
+package eu.project.ttc.termino.export;
 
 import java.io.IOException;
+import java.io.Writer;
 import java.math.RoundingMode;
 import java.text.NumberFormat;
 import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
-import java.util.TreeSet;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -40,10 +19,6 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
-import org.apache.uima.UimaContext;
-import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
-import org.apache.uima.fit.descriptor.ConfigurationParameter;
-import org.apache.uima.resource.ResourceInitializationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -55,7 +30,8 @@ import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import com.google.common.collect.Lists;
 
-import eu.project.ttc.engines.AbstractTermIndexExporter;
+import eu.project.ttc.api.TermSuiteException;
+import eu.project.ttc.api.Traverser;
 import eu.project.ttc.models.CompoundType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
@@ -63,17 +39,14 @@ import eu.project.ttc.models.TermOccurrence;
 import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.utils.TermSuiteUtils;
 
-/**
- * Exports a {@link TermIndex} in TSV format
- * 
- * @author Damien Cram
- *
- */
-public class TBXExporter extends AbstractTermIndexExporter {
-	private static final Logger LOGGER = LoggerFactory.getLogger(TBXExporter.class);
+public class TbxExporter {
 
+	private static final Logger LOGGER = LoggerFactory.getLogger(TbxExporter.class);
+	
+	
 	/** Prints float out numbers */
 	private static final NumberFormat NUMBER_FORMATTER = NumberFormat.getNumberInstance(Locale.US);
+
 
 	/** Prefix used in langset ids */
 	private static final String LANGSET_ID_PREFIX = "langset-";
@@ -83,49 +56,57 @@ public class TBXExporter extends AbstractTermIndexExporter {
 
 	/** Prefix used in langset ids */
 	private static final String TIG_ID_PREFIX = "term-";
-	
-	/*
-	 * Configuration parameters
-	 */
-	public static final String LANGUAGE = "Language";
-	@ConfigurationParameter(name=LANGUAGE, mandatory = true)
-	private String lang;
+
 	
 	/* The tbx document */
 	private Document document;
 
-	@Override
-	public void initialize(UimaContext context)
-			throws ResourceInitializationException {
-		super.initialize(context);
-		try {
-			prepareTBXDocument();
-		} catch (ParserConfigurationException e) {
-			throw new ResourceInitializationException(e);
-		}
+	private TermIndex termIndex;
+	
+	private Traverser traverser;
+
+	private Writer writer;
+	
+	private TbxExporter(TermIndex termIndex, Writer writer, Traverser traverser) {
 		NUMBER_FORMATTER.setMaximumFractionDigits(4);
 		NUMBER_FORMATTER.setMinimumFractionDigits(4);
 		NUMBER_FORMATTER.setRoundingMode(RoundingMode.UP);
 		NUMBER_FORMATTER.setGroupingUsed(false);
+		this.writer = writer;
+		this.termIndex = termIndex;
+		this.traverser = traverser;
 	}
-	
-	@Override
-	protected void processAcceptedTerms(TreeSet<Term> acceptedTerms)
-			throws AnalysisEngineProcessException {
+
+	private void doExport() {
 		try {
-			for(Term t: acceptedTerms) {
-	            addTermEntry(t, false);
-				for(TermVariation v:t.getVariations())
-	                addTermEntry(v.getVariant(), true);
+			prepareTBXDocument();
+			
+			try {
+				for(Term t: traverser.toList(termIndex)) {
+					addTermEntry(t, false);
+					for(TermVariation v:t.getVariations())
+						addTermEntry(v.getVariant(), true);
+				}
+				exportTBXDocument();
+			} catch (TransformerException | IOException e) {
+				LOGGER.error("An error occurred when exporting term index to file");
+				throw new TermSuiteException(e);
 			}
-			exportTBXDocument();
-		} catch (TransformerException | IOException e) {
-			LOGGER.error("An error occurred when exporting term index to file {}", this.toFilePath);
-			throw new AnalysisEngineProcessException(e);
+			
+		} catch (ParserConfigurationException e) {
+			throw new TermSuiteException(e);
 		}
 	}
+
+	public static void export(TermIndex termIndex, Writer writer) {
+		export(termIndex, writer, Traverser.createDefault());
+	}
+
+	public static void export(TermIndex termIndex, Writer writer, Traverser traverser) {
+		new TbxExporter(termIndex, writer, traverser).doExport();
+	}
 	
-	  /**
+	/**
      * Prepare the TBX document that will contain the terms.
      */
 	private void prepareTBXDocument() throws ParserConfigurationException {
@@ -189,7 +170,7 @@ public class TBXExporter extends AbstractTermIndexExporter {
 
         // Actually persist the file
 		DOMSource source = new DOMSource(document);
-		StreamResult result = new StreamResult(this.toFile);
+		StreamResult result = new StreamResult(this.writer);
 		transformer.transform(source, result);
 	}
     
@@ -237,7 +218,7 @@ public class TBXExporter extends AbstractTermIndexExporter {
 		body.appendChild(termEntry);
 		Element langSet = document.createElement("langSet");
 		langSet.setAttribute("xml:id", langsetId);
-		langSet.setAttribute("xml:lang", this.lang);
+		langSet.setAttribute("xml:lang", this.termIndex.getLang().getCode());
 		termEntry.appendChild(langSet);
 
 		for (TermVariation variation : term.getBases()) 
@@ -270,7 +251,7 @@ public class TBXExporter extends AbstractTermIndexExporter {
 		this.addNote(langSet, tig, "termComplexity",
 				this.getComplexity(term));
 		this.addDescrip(langSet, tig, "termSpecificity",
-				NUMBER_FORMATTER.format(termIndexResource.getTermIndex().getWRMeasure().getValue(term)));
+				NUMBER_FORMATTER.format(termIndex.getWRMeasure().getValue(term)));
 		this.addDescrip(langSet, tig, "nbOccurrences",
 				term.getFrequency());
 		this.addDescrip(langSet, tig, "relativeFrequency",
@@ -278,7 +259,7 @@ public class TBXExporter extends AbstractTermIndexExporter {
 		addDescrip(langSet, tig, "formList",
 					buildFormListJSON(term, formCounters.size()));
 		 this.addDescrip(langSet, tig, "domainSpecificity",
-				 termIndexResource.getTermIndex().getWRMeasure().getValue(term));
+				 termIndex.getWRMeasure().getValue(term));
 	}
 	
 	private void addDescrip(Element lang, Element element,

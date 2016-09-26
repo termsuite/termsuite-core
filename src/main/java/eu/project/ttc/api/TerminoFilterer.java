@@ -1,8 +1,8 @@
-package eu.project.ttc.tools.builders;
+package eu.project.ttc.api;
 
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.tools.TermSuitePipeline;
-import eu.project.ttc.tools.builders.internal.PipelineUtils;
+import eu.project.ttc.tools.api.internal.PipelineUtils;
 
 public class TerminoFilterer {
 

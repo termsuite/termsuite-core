@@ -11,11 +11,11 @@ import org.junit.Test;
 
 import com.google.common.collect.Lists;
 
+import eu.project.ttc.api.Document;
+import eu.project.ttc.api.TerminoExtractor;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.test.func.FunctionalTests;
-import eu.project.ttc.tools.builders.Document;
-import eu.project.ttc.tools.builders.TerminoExtractor;
 
 public class TerminoExtractorSpec {
 	

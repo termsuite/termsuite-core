@@ -42,6 +42,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 
+import eu.project.ttc.api.JSONOptions;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.Component;
 import eu.project.ttc.models.CompoundType;
@@ -57,9 +58,6 @@ import eu.project.ttc.models.TermWord;
 import eu.project.ttc.models.VariationType;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.models.WordBuilder;
-import eu.project.ttc.models.index.io.IOOptions;
-import eu.project.ttc.models.index.io.LoadOptions;
-import eu.project.ttc.models.index.io.SaveOptions;
 import eu.project.ttc.models.occstore.MemoryOccurrenceStore;
 import eu.project.ttc.models.occstore.MongoDBOccurrenceStore;
 
@@ -71,7 +69,6 @@ public class JSONTermIndexIO {
 	 * Error messages for parsing
 	 */
 	private static final String MSG_EXPECT_PROP_FOR_VAR = "Expecting %s property for term variation";
-	private static final String MSG_TERM_DOES_NOT_EXIST = "Error in term variation. Term %s is not present in the dump file. Make sure that terms are defined prior to variants.";
 	private static final String MSG_EXPECT_PROP_FOR_OCCURRENCE = "Expecting %s property for occurrence";
 	private static final String MSG_EXPECT_PROP_FOR_TERM_WORD = "Expecting %s property for term word";
 
@@ -140,7 +137,7 @@ public class JSONTermIndexIO {
 	 * @throws JsonParseException
 	 * @throws IOException
 	 */
-	public static TermIndex load(Reader reader, LoadOptions options) throws JsonParseException, IOException {
+	public static TermIndex load(Reader reader, JSONOptions options) throws JsonParseException, IOException {
 		TermIndex termIndex = null;
 		JsonFactory jsonFactory = new JsonFactory(); 
 		JsonParser jp = jsonFactory.createParser(reader); // or Stream, Reader
@@ -174,7 +171,6 @@ public class JSONTermIndexIO {
 		OccurrenceStore occurrenceStore = null;
 		
 		// useful var for debug
-		@SuppressWarnings("unused")
 		JsonToken tok;
 
 		while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
@@ -475,7 +471,7 @@ public class JSONTermIndexIO {
 		return termIndex;
 	}
 
-	public static void save(Writer writer, TermIndex termIndex, SaveOptions options) throws IOException {
+	public static void save(Writer writer, TermIndex termIndex, JSONOptions options) throws IOException {
 		JsonFactory jsonFactory = new JsonFactory(); // or, for data binding, org.codehaus.jackson.mapper.MappingJsonFactory 
 //		jsonFactory.configure(f, state)
 		JsonGenerator jg = jsonFactory.createGenerator(writer); // or Stream, Reader
@@ -499,7 +495,7 @@ public class JSONTermIndexIO {
 			jg.writeString(OCCURRENCE_STORAGE_MONGODB);
 			jg.writeFieldName(OCCURRENCE_MONGODB_STORE_URI);
 			jg.writeString(options.getMongoDBOccStore());
-		} else if(options.occurrencesEmbedded())
+		} else if(options.embeddedOccurrences())
 			jg.writeString(OCCURRENCE_STORAGE_EMBEDDED);
 		else
 			throw new IllegalStateException("Unknown storage mode");
@@ -591,7 +587,7 @@ public class JSONTermIndexIO {
 			jg.writeFieldName(SPOTTING_RULE);
 			jg.writeString(t.getSpottingRule());
 			
-			if(options.withOccurrences() && options.occurrencesEmbedded()) {
+			if(options.withOccurrences() && options.embeddedOccurrences()) {
 				jg.writeFieldName(OCCURRENCES);
 				jg.writeStartArray();
 				for(TermOccurrence termOcc:t.getOccurrences()) {

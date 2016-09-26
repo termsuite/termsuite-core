@@ -63,6 +63,9 @@ public enum TermProperty {
 	
 	static {
 		for(TermProperty p:TermProperty.values()) {
+			byNames.put(p.getShortName(), p);
+			byNames.put(p.getShortName().toLowerCase(), p);
+			byNames.put(p.getShortName().toUpperCase(), p);
 			byNames.put(p.getPropertyName(), p);
 			byNames.put(p.getPropertyName().toLowerCase(), p);
 			byNames.put(p.getPropertyName().toUpperCase(), p);

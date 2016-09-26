@@ -14,10 +14,10 @@ import org.junit.Test;
 
 import com.google.common.collect.Lists;
 
+import eu.project.ttc.api.Document;
+import eu.project.ttc.api.TermSuitePreprocessor;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.test.func.FunctionalTests;
-import eu.project.ttc.tools.builders.Document;
-import eu.project.ttc.tools.builders.TermSuitePreprocessor;
 import eu.project.ttc.types.TermOccAnnotation;
 import eu.project.ttc.types.WordAnnotation;
 

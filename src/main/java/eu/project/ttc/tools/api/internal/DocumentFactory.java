@@ -1,10 +1,10 @@
-package eu.project.ttc.tools.builders.internal;
+package eu.project.ttc.tools.api.internal;
 
 import java.nio.file.Path;
 
+import eu.project.ttc.api.Document;
+import eu.project.ttc.api.TermSuiteException;
 import eu.project.ttc.engines.desc.Lang;
-import eu.project.ttc.tools.builders.CorpusException;
-import eu.project.ttc.tools.builders.Document;
 
 public class DocumentFactory {
 	
@@ -16,7 +16,7 @@ public class DocumentFactory {
 					org.apache.commons.io.FileUtils.readFileToString(path.toFile())
 				);
 		} catch (Exception e) {
-			throw new CorpusException(e);
+			throw new TermSuiteException(e);
 		}
 	}
 

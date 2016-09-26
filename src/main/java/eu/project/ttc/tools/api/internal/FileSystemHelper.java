@@ -1,4 +1,4 @@
-package eu.project.ttc.tools.builders.internal;
+package eu.project.ttc.tools.api.internal;
 
 import java.io.IOException;
 import java.nio.file.FileSystems;
@@ -13,9 +13,9 @@ import org.apache.commons.io.FileUtils;
 
 import com.google.common.base.Preconditions;
 
+import eu.project.ttc.api.Document;
+import eu.project.ttc.api.TermSuiteException;
 import eu.project.ttc.engines.desc.Lang;
-import eu.project.ttc.tools.builders.CorpusException;
-import eu.project.ttc.tools.builders.Document;
 
 public class FileSystemHelper {
 	
@@ -27,7 +27,7 @@ public class FileSystemHelper {
 						path.toUri().getPath(), 
 						FileUtils.readFileToString(path.toFile(), encoding));
 			} catch (IOException e) {
-				throw new CorpusException("Unable to read file " + path, e);
+				throw new TermSuiteException("Unable to read file " + path, e);
 			}
 		};
 	}
@@ -51,7 +51,7 @@ public class FileSystemHelper {
 			}).map(pathMapper);
 			
 		} catch (IOException e) {
-			throw new CorpusException(e);
+			throw new TermSuiteException(e);
 		}
 	}
 }

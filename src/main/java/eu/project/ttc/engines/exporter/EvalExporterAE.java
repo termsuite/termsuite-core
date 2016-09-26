@@ -21,21 +21,12 @@
  *******************************************************************************/
 package eu.project.ttc.engines.exporter;
 
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.TreeSet;
-
-import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
-import org.apache.uima.resource.ResourceInitializationException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import eu.project.ttc.engines.AbstractTermIndexExporter;
-import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.TermVariation;
+import eu.project.ttc.termino.export.EvalExporter;
 
 /**
  * Exports a {@link TermIndex} in the tsv evaluation format.
@@ -43,46 +34,15 @@ import eu.project.ttc.models.TermVariation;
  * @author Damien Cram
  *
  */
-public class EvalExporter extends AbstractTermIndexExporter {
-	private static final Logger LOGGER = LoggerFactory.getLogger(EvalExporter.class);
+public class EvalExporterAE extends AbstractTermIndexExporter {
 
 	public static final String WITH_VARIANTS = "WithVariants";
 	@ConfigurationParameter(name=WITH_VARIANTS, mandatory=true)
 	private boolean withVariants;
 	
-	private FileWriter writer;
-
+	
 	@Override
-	public void initialize(UimaContext context)
-			throws ResourceInitializationException {
-		super.initialize(context);
-		try {
-			this.writer = new FileWriter(this.toFile, false);
-		} catch (IOException e) {
-			LOGGER.error("Unable to create FileWriter for file {}", this.toFile.getAbsolutePath());
-			throw new ResourceInitializationException(e);
-		}
-	}
-
-	@Override
-	protected void processAcceptedTerms(TreeSet<Term> acceptedTerms) throws AnalysisEngineProcessException {
-		try {
-			for(Term t: acceptedTerms) {
-				if(this.withVariants) {
-					for (TermVariation v : t.getVariations())
-							writer.write(v.getVariant().getGroupingKey() + "#");
-				}
-				writer.write(t.getGroupingKey());
-				writer.write("\t");
-				writer.write(Double.toString(termIndexResource.getTermIndex().getWRMeasure().getValue(t)));
-				writer.write("\n");
-			}
-			writer.flush();
-			writer.close();
-		} catch (IOException e) {
-			LOGGER.error("IO error. Unable to write to file {}", this.toFile.getAbsolutePath());
-			throw new AnalysisEngineProcessException(e);
-
-		}
+	public void collectionProcessComplete() throws AnalysisEngineProcessException {
+		EvalExporter.export(termIndexResource.getTermIndex(), writer, withVariants);
 	}
 }

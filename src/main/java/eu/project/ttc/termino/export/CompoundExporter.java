@@ -1,34 +1,12 @@
-/*******************************************************************************
- * Copyright 2015-2016 - CNRS (Centre National de Recherche Scientifique)
- *
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- *
- *******************************************************************************/
-package eu.project.ttc.engines.exporter;
+package eu.project.ttc.termino.export;
 
 import java.io.IOException;
+import java.io.Writer;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
-
-import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 
 import com.google.common.base.Joiner;
 import com.google.common.collect.ComparisonChain;
@@ -38,22 +16,33 @@ import com.google.common.collect.Maps;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
 
-import eu.project.ttc.engines.AbstractTermIndexExporter;
+import eu.project.ttc.api.TermSuiteException;
 import eu.project.ttc.models.Component;
 import eu.project.ttc.models.Term;
+import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.Word;
 
-public class CompoundExporter extends AbstractTermIndexExporter {
-
+public class CompoundExporter {
 	private static final String LINE_FORMAT = "%-30s %-10s %-35s %d\n";
 
-	@Override
-	protected void processAcceptedTerms(TreeSet<Term> acceptedTerms) throws AnalysisEngineProcessException {
-		
+	private TermIndex termIndex;
+	private Writer writer;
+	
+	private CompoundExporter(TermIndex termIndex, Writer writer) {
+		super();
+		this.termIndex = termIndex;
+		this.writer = writer;
+	}
+
+	public static void export(TermIndex termIndex, Writer writer) {
+		new CompoundExporter(termIndex, writer).doExport();
+	}
+
+	private void doExport() {
 		try {
 			Multimap<Word,Term> terms = HashMultimap.create();
 			Set<Word> compounds = Sets.newHashSet();
-			for(Term t:acceptedTerms) {
+			for(Term t:termIndex.getTerms()) {
 				Word w = t.getWords().get(0).getWord();
 				if(t.getWords().size() == 1 && w.isCompound()) {
 					compounds.add(w);
@@ -92,7 +81,7 @@ public class CompoundExporter extends AbstractTermIndexExporter {
 				));
 			}
 		} catch (IOException e) {
-			throw new AnalysisEngineProcessException(e);
+			throw new TermSuiteException(e);
 		}		
 	}
 }

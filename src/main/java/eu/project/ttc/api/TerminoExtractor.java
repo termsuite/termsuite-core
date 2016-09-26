@@ -1,4 +1,4 @@
-package eu.project.ttc.tools.builders;
+package eu.project.ttc.api;
 
 import static org.apache.uima.fit.factory.AnalysisEngineFactory.createEngineDescription;
 
@@ -29,8 +29,8 @@ import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.readers.TermSuiteJsonCasDeserializer;
 import eu.project.ttc.tools.TermSuitePipeline;
-import eu.project.ttc.tools.builders.internal.FileSystemHelper;
-import eu.project.ttc.tools.builders.internal.PipelineUtils;
+import eu.project.ttc.tools.api.internal.FileSystemHelper;
+import eu.project.ttc.tools.api.internal.PipelineUtils;
 import eu.project.ttc.utils.JCasUtils;
 
 /**
@@ -113,7 +113,7 @@ public class TerminoExtractor {
 						encoding);
 				return cas;
 			} catch (Exception e) {
-				throw new CorpusException("Unable to parse cas file " + path, e);
+				throw new TermSuiteException("Unable to parse cas file " + path, e);
 			}
 		};
 
@@ -133,7 +133,7 @@ public class TerminoExtractor {
 				XmiCasDeserializer.deserialize(new FileInputStream(path.toFile()), cas.getCas());
 				return cas;
 			} catch (Exception e) {
-				throw new CorpusException("Unable to parse cas file " + path, e);
+				throw new TermSuiteException("Unable to parse cas file " + path, e);
 			}
 		};
 
@@ -265,7 +265,7 @@ public class TerminoExtractor {
 					try {
 						aae.process(cas);
 					} catch (UIMAException e) {
-						throw new CorpusException(e);
+						throw new TermSuiteException(e);
 					}				
 				});
 			} else {
@@ -282,14 +282,14 @@ public class TerminoExtractor {
 								document.getUrl());
 						aae.process(cas);
 					} catch (UIMAException e) {
-						throw new CorpusException(e);
+						throw new TermSuiteException(e);
 					}
 				});
 			}
 			
 			aae.collectionProcessComplete();
 		} catch (ResourceInitializationException | AnalysisEngineProcessException e1) {
-			throw new CorpusException(e1);
+			throw new TermSuiteException(e1);
 		}
 
 		return pipeline.getTermIndex();

@@ -23,7 +23,12 @@
 
 package eu.project.ttc.engines.exporter;
 
-import eu.project.ttc.readers.TermSuiteJsonCasSerializer;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.jcas.JCas;
@@ -31,7 +36,7 @@ import org.apache.uima.resource.ResourceInitializationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.*;
+import eu.project.ttc.readers.TermSuiteJsonCasSerializer;
 
 /**
  * Created by Simon Meoni on 02/06/16.

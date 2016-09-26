@@ -1,7 +1,7 @@
-package eu.project.ttc.tools.builders.internal;
+package eu.project.ttc.tools.api.internal;
 
+import eu.project.ttc.api.TerminoFilterConfig;
 import eu.project.ttc.tools.TermSuitePipeline;
-import eu.project.ttc.tools.builders.TerminoFilterConfig;
 
 public class PipelineUtils {
 
