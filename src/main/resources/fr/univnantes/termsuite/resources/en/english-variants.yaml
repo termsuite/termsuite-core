@@ -387,3 +387,36 @@
   source: A N N
   target: A N N
   rule: s[0].compound && t[0].compound && s[0][0]==t[0][0] && s[0][1] == t[1] && s[2] == t[2]
+
+  
+  
+# With Prefixes
+"AN-prefAN":
+  source: A N
+  target: A N
+  rule: s[1]==t[1] && prefix(t[0], s[0])
+  
+"ANN-prefANN":
+  source: A N N
+  target: A N N
+  rule: s[1]==t[1] && s[2]==t[2] && prefix(t[0], s[0])
+
+"AAN-AprefAN":
+  source: A A N
+  target: A A N
+  rule: s[0]==t[0] && s[2]==t[2] && prefix(t[1], s[1])
+
+# With Derivates
+"S-PID-AN-P":
+  source: A N
+  target: N P N
+  rule: s[1]==t[2] && deriv("A N", s[0], t[0])
+
+
+"S-R2D-NN":
+  source: N N
+  target: A N
+  rule: s[1]==t[1] && deriv("A N", t[0], s[0])
+
+
+
