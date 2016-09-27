@@ -4,12 +4,12 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Preconditions;
 import com.google.common.base.Splitter;
-import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.Lists;
 
 import eu.project.ttc.engines.cleaner.TermProperty;
@@ -17,6 +17,11 @@ import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 
 public class Traverser {
+
+	private static final String ERR_EMPTY_STRING_NOT_ALLOWED = "Empty string not allowed";
+	private static final String ERR_TOO_MANY_ARGUMENTS = "Too many arguments: %s";
+	private static final String ERR_UNKNOWN_DIRECTION = "Unknown direction: ";
+
 	public static enum Direction {
 		ASC, DESC;
 		
@@ -27,7 +32,7 @@ public class Traverser {
 			case "desc":
 				return DESC;
 			default:
-				throw new IllegalArgumentException("Unknown direction: " + string);
+				throw new IllegalArgumentException(ERR_UNKNOWN_DIRECTION + string);
 			}
 		}
 		
@@ -48,9 +53,9 @@ public class Traverser {
 		
 		public static Ordering fromString(String string) {
 			List<String> strings = Splitter.on(" ").splitToList(string.trim());
-			Preconditions.checkArgument(strings.size() > 0, "Empty string not allowed");
-			Preconditions.checkArgument(strings.size() <= 2, "Too many arguments: %s", string);
-			TermProperty property = TermProperty.forName(strings.get(1));
+			Preconditions.checkArgument(strings.size() > 0, ERR_EMPTY_STRING_NOT_ALLOWED);
+			Preconditions.checkArgument(strings.size() <= 2, ERR_TOO_MANY_ARGUMENTS, string);
+			TermProperty property = TermProperty.forName(strings.get(0));
 			Direction direction = strings.size() == 2 ? Direction.fromString(strings.get(1)) : Direction.ASC;
 			return new Ordering(property, direction);
 		}
@@ -69,31 +74,43 @@ public class Traverser {
 		this.orderings = orderings;
 	}
 
-	public static Traverser createDefault() {
-		return new Traverser(Lists.newArrayList(
-				new Ordering(TermProperty.SPECIFICITY, Direction.DESC),
-				new Ordering(TermProperty.FREQUENCY, Direction.DESC)
-			));
+	private static final List<Ordering> DEFAULT_ORDERING = Lists.newArrayList(
+			new Ordering(TermProperty.RANK, Direction.ASC),
+			new Ordering(TermProperty.SPECIFICITY, Direction.DESC),
+			new Ordering(TermProperty.FREQUENCY, Direction.DESC),
+			new Ordering(TermProperty.GROUPING_KEY, Direction.ASC)
+			
+			);
+	
+	public static Traverser create() {
+		return new Traverser(DEFAULT_ORDERING);
 	}
 	
-	public static Traverser createFromString(String string) {
-		return create(
-				Splitter.on(",").splitToList(string).stream().map(str -> {
+	public static Traverser by(String string) {
+		Preconditions.checkArgument(!string.trim().isEmpty(), ERR_EMPTY_STRING_NOT_ALLOWED);
+		return by(
+				Splitter.on(",").splitToList(string).stream()
+				.filter(str -> {
+					Preconditions.checkArgument(!str.trim().isEmpty(), ERR_EMPTY_STRING_NOT_ALLOWED);
+					return true;
+				})
+				.map(str -> {
 						return Ordering.fromString(str);
-					}).iterator()
+					}).collect(Collectors.toList())
 			);
 	}
 
-	public static Traverser create(Iterator<Ordering>  orderings) {
-		return create(Lists.newArrayList(orderings));
+	public static Traverser by(Iterator<Ordering> orderings) {
+		return by(Lists.newArrayList(orderings));
 	}
 
-	public static Traverser create(List<Ordering> orderings) {
+	public static Traverser by(List<Ordering> orderings) {
+		orderings.addAll(DEFAULT_ORDERING);
 		return new Traverser(orderings);
 	}
 
-	public static Traverser create(Ordering... orderings) {
-		return create(Lists.newArrayList(orderings));
+	public static Traverser by(Ordering... orderings) {
+		return by(Lists.newArrayList(orderings));
 	}
 
 	
@@ -116,14 +133,14 @@ public class Traverser {
 		return new Comparator<Term>() {
 			@Override
 			public int compare(Term o1, Term o2) {
-				ComparisonChain chain = ComparisonChain.start();
 				for(Ordering ordering:orderings) {
-					if(ordering.direction == Direction.ASC)
-						chain.compare(ordering.property.getValue(termIndex, o1), ordering.property.getValue(termIndex, o2));
-					else 
-						chain.compare(ordering.property.getValue(termIndex, o2), ordering.property.getValue(termIndex, o1));
+					int compare = ordering.property.compare(termIndex, o1, o2);
+					if(compare < 0) 
+						return ordering.direction == Direction.ASC ? -1 : 1;
+					else if(compare > 0)
+						return ordering.direction == Direction.ASC ? 1 : -1;
 				}
-				return chain.result();
+				return 0;
 			}
 		};
 	}
@@ -132,5 +149,4 @@ public class Traverser {
 	public String toString() {
 		return Joiner.on(", ").join(orderings);
 	}
-	
 }
