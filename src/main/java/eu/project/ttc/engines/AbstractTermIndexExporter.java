@@ -88,9 +88,9 @@ public abstract class AbstractTermIndexExporter extends JCasAnnotator_ImplBase {
 		Preconditions.checkState(this.toFile.getAbsoluteFile().getParentFile().canWrite(), String.format("Cannot write to directory %s.", this.toFile.getAbsoluteFile().getParentFile().getPath()));
 		
 		if(traverserString != null)
-			this.traverser = Traverser.createFromString(traverserString);
+			this.traverser = Traverser.by(traverserString);
 		else
-			this.traverser = Traverser.createDefault();
+			this.traverser = Traverser.create();
 		
 		try {
 			this.writer = new FileWriter(toFile, false);

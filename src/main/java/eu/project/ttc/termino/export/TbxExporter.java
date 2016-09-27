@@ -99,7 +99,7 @@ public class TbxExporter {
 	}
 
 	public static void export(TermIndex termIndex, Writer writer) {
-		export(termIndex, writer, Traverser.createDefault());
+		export(termIndex, writer, Traverser.create());
 	}
 
 	public static void export(TermIndex termIndex, Writer writer, Traverser traverser) {

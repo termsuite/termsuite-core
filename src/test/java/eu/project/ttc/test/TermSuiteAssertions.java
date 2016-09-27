@@ -30,6 +30,7 @@ import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.test.func.TermAssert;
 import eu.project.ttc.test.func.TermIndexAssert;
 import eu.project.ttc.test.unit.CasAssert;
+import eu.project.ttc.test.unit.StringAssert;
 
 public class TermSuiteAssertions {
 
@@ -44,4 +45,9 @@ public class TermSuiteAssertions {
 	public static TermIndexAssert assertThat(TermIndex termIndex) {
 		return new TermIndexAssert(termIndex);
 	}
+	
+	public static StringAssert assertThat(String string) {
+		return new StringAssert(string);
+	}
+
 }

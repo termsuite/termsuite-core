@@ -25,6 +25,7 @@ import org.apache.uima.resource.ResourceManager;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 
+import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.readers.TermSuiteJsonCasDeserializer;
@@ -246,7 +247,8 @@ public class TerminoExtractor {
 				.aeSyntacticVariantGatherer()
 				.aeGraphicalVariantGatherer()
 				.aeExtensionDetector()
-				.aeScorer();
+				.aeScorer()
+				.aeRanker(TermProperty.SPECIFICITY, true);
 
 		if(postFilterConfig.isPresent()) 
 			PipelineUtils.filter(pipeline, postFilterConfig.get());

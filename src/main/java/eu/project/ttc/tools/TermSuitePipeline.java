@@ -89,7 +89,7 @@ import eu.project.ttc.engines.exporter.ExportVariationRuleExamplesAE;
 import eu.project.ttc.engines.exporter.JsonCasExporter;
 import eu.project.ttc.engines.exporter.JsonExporterAE;
 import eu.project.ttc.engines.exporter.SpotterTSVWriter;
-import eu.project.ttc.engines.exporter.TSVExporter;
+import eu.project.ttc.engines.exporter.TSVExporterAE;
 import eu.project.ttc.engines.exporter.TbxExporterAE;
 import eu.project.ttc.engines.exporter.TermsuiteJsonCasExporter;
 import eu.project.ttc.engines.exporter.VariantEvalExporterAE;
@@ -812,11 +812,11 @@ public class TermSuitePipeline {
 	public TermSuitePipeline haeTsvExporter(String toFilePath) {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					TSVExporter.class, 
-					TSVExporter.TO_FILE_PATH, toFilePath,
-					TSVExporter.TERM_PROPERTIES, this.tsvExportProperties,
-					TSVExporter.SHOW_HEADERS, tsvWithHeaders,
-					TSVExporter.SHOW_SCORES, tsvWithVariantScores
+					TSVExporterAE.class, 
+					TSVExporterAE.TO_FILE_PATH, toFilePath,
+					TSVExporterAE.TERM_PROPERTIES, this.tsvExportProperties,
+					TSVExporterAE.SHOW_HEADERS, tsvWithHeaders,
+					TSVExporterAE.SHOW_SCORES, tsvWithVariantScores
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 

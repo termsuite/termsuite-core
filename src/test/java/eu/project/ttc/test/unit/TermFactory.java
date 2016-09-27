@@ -28,6 +28,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.assertj.core.util.Lists;
+import org.mockito.Mockito;
 
 import com.google.common.base.Preconditions;
 
@@ -103,4 +104,12 @@ public class TermFactory {
 		word.setComposition(type, components);
 	}
 	
+	public static Term termMock(String groupingKey, int freq, int rank, double specificity) {
+		Term term = Mockito.mock(Term.class);
+		Mockito.when(term.getGroupingKey()).thenReturn(groupingKey);
+		Mockito.when(term.getFrequency()).thenReturn(freq);
+		Mockito.when(term.getRank()).thenReturn(rank);
+		Mockito.when(term.getSpecificity()).thenReturn(specificity);
+		return term;
+	}
 }
