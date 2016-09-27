@@ -1,5 +1,9 @@
 package eu.project.ttc.api;
 
+import java.util.List;
+
+import com.google.common.collect.Lists;
+
 import eu.project.ttc.engines.cleaner.TermProperty;
 
 public class TSVOptions {
@@ -7,7 +11,13 @@ public class TSVOptions {
 	private TermProperty[] properties = new TermProperty[] {TermProperty.GROUPING_KEY, TermProperty.FREQUENCY};
 	private boolean showHeaders = true;
 	private boolean showVariants = true;
+	private boolean showScores = false;
 	private boolean showRank = true;
+	
+	public TSVOptions setProperties(Iterable<TermProperty> properties) {
+		List<TermProperty> list = Lists.newArrayList(properties);
+		return setProperties((TermProperty[]) list.toArray()); 
+	}
 	
 	public TSVOptions setProperties(TermProperty... properties) {
 		this.properties = properties;
@@ -18,6 +28,15 @@ public class TSVOptions {
 		return showHeaders;
 	}
 
+	public TSVOptions setShowScores(boolean showScores) {
+		this.showScores = showScores;
+		return this;
+	}
+	
+	public boolean showScores() {
+		return showScores;
+	}
+	
 	public TSVOptions setShowHeaders(boolean showHeaders) {
 		this.showHeaders = showHeaders;
 		return this;

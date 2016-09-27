@@ -24,6 +24,8 @@ package eu.project.ttc.test.unit;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
+import eu.project.ttc.test.termino.export.TsvExporterSpec;
+import eu.project.ttc.test.unit.api.TraverserSpec;
 import eu.project.ttc.test.unit.engines.FixedExpressionSpotterSpec;
 import eu.project.ttc.test.unit.engines.GraphicalVariantGathererSpec;
 import eu.project.ttc.test.unit.engines.SyntacticTermGathererSpec;
@@ -84,6 +86,8 @@ import eu.project.ttc.utils.test.CompoundUtilsSpec;
 	GraphicalVariantGathererSpec.class,
 	CrossTableSpec.class, 
 	TermsuiteJsonCasSerializerDeserializerSpec.class,
+	TsvExporterSpec.class,
+	TraverserSpec.class,
 	TermSuitePipelineSpec.class
 //	TeiCollectionReaderSpec.class,
 	})

@@ -22,15 +22,12 @@
 package eu.project.ttc.engines.exporter;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.io.Writer;
 import java.nio.charset.Charset;
-import java.util.Collections;
 import java.util.List;
 
-import org.apache.commons.io.IOUtils;
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
@@ -38,18 +35,15 @@ import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.fit.descriptor.ExternalResource;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 
+import eu.project.ttc.api.TSVOptions;
 import eu.project.ttc.engines.cleaner.TermProperty;
-import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.resources.TermIndexResource;
-import eu.project.ttc.tools.utils.IndexerTSVBuilder;
+import eu.project.ttc.termino.export.TSVExporter;
 
 /**
  * Exports a {@link TermIndex} in TSV format.
@@ -57,8 +51,7 @@ import eu.project.ttc.tools.utils.IndexerTSVBuilder;
  * @author Damien Cram
  *
  */
-public class TSVExporter extends JCasAnnotator_ImplBase {
-	private static final Logger LOGGER = LoggerFactory.getLogger(TSVExporter.class);
+public class TSVExporterAE extends JCasAnnotator_ImplBase {
 	
 	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
 	private TermIndexResource termIndexResource;
@@ -85,31 +78,16 @@ public class TSVExporter extends JCasAnnotator_ImplBase {
 	 */
 
 	/* the tsv index */
-	private IndexerTSVBuilder tsv;
-	private OutputStreamWriter streamWriter = null;
 
-	
+	List<TermProperty> properties;
 	@Override
 	public void initialize(UimaContext context)
 			throws ResourceInitializationException {
 		super.initialize(context);
 		
-		try {
-			List<TermProperty> properties = Lists.newArrayList();
-			for(String propertyName:Splitter.on(",").splitToList(termPropertyList))
-				properties.add(TermProperty.forName(propertyName));
-			streamWriter = new OutputStreamWriter(
-				new FileOutputStream(new File(toFilePath)),
-				Charset.forName("UTF-8").newEncoder());
-			tsv = new IndexerTSVBuilder(
-					streamWriter,
-					properties,
-					showScores
-					);
-		} catch (FileNotFoundException e) {
-			LOGGER.error("Could not open a writer to file {}", this.toFilePath);
-			throw new ResourceInitializationException(e);
-		}
+		properties = Lists.newArrayList();
+		for(String propertyName:Splitter.on(",").splitToList(termPropertyList))
+			properties.add(TermProperty.forName(propertyName));
 	}
 
 	@Override
@@ -119,33 +97,16 @@ public class TSVExporter extends JCasAnnotator_ImplBase {
 	
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
-		TermIndex termIndex = termIndexResource.getTermIndex();
-		LOGGER.info("Exporting {} terms to TSV file {}", termIndex.getTerms().size(), this.toFilePath);
-		List<Term> sortedTerms = Lists.newArrayList(termIndex.getTerms());
-		Collections.sort(sortedTerms, TermProperty.RANK.getComparator(termIndex, false));
-		try {
-			if(showHeaders)
-				tsv.writeHeaders();
-				
-			for(Term t:sortedTerms) {
-				tsv.startTerm(termIndex, t, "");
-				for(TermVariation tv:t.getVariations()) {
-					tsv.addVariant(
-							termIndex, 
-							tv.getVariant(), 
-							String.format("%.2f", tv.getScore()));
-				}
-			}
-			tsv.close();
-		} catch (IOException e) {
-			LOGGER.error("Problem occurred while writing terms to tsv file.");
+		try (Writer writer = new OutputStreamWriter(
+				new FileOutputStream(new File(toFilePath)),
+				Charset.forName("UTF-8").newEncoder())) {
+			
+			TSVExporter.export(termIndexResource.getTermIndex(), writer, new TSVOptions()
+					.setShowHeaders(showHeaders)
+					.setProperties(properties));
+		} catch (Exception e) {
 			throw new AnalysisEngineProcessException(e);
 		}
 	}
 	
-	@Override
-	public void destroy() {
-		super.destroy();
-		IOUtils.closeQuietly(streamWriter);
-	}
 }
