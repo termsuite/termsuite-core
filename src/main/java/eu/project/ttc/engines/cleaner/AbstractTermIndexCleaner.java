@@ -37,6 +37,7 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.collect.Sets;
 
+import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermVariation;
@@ -59,6 +60,9 @@ public abstract class AbstractTermIndexCleaner extends JCasAnnotator_ImplBase {
 	public static final String CLEANING_PROPERTY="CleaningProperty";
 	@ConfigurationParameter(name=CLEANING_PROPERTY, mandatory=true)
 	protected TermProperty property;
+
+	@ExternalResource(key =TermHistoryResource.TERM_HISTORY, mandatory = true)
+	private TermHistoryResource historyResource;
 
 	
 	public static final String KEEP_VARIANTS="KeepVariants";
@@ -140,8 +144,15 @@ public abstract class AbstractTermIndexCleaner extends JCasAnnotator_ImplBase {
 		}
 		
 		// effectively remove terms
-		for(Term r:rem) 
+		for(Term r:rem) {
 			this.termIndexResource.getTermIndex().removeTerm(r);
+			
+			if(historyResource.getHistory().isWatched(r))
+				historyResource.getHistory().saveEvent(
+						r.getGroupingKey(), 
+						this.getClass(), 
+						"Term is removed from term index by cleaner AE <" + toString() + ">");
+		}
 		
 		termIndexResource.getTermIndex().cleanOrphanWords();
 	}

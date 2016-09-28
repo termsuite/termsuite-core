@@ -62,6 +62,11 @@ public class TermSuiteResourceManager {
 		return this.resources.containsKey(resourceName);
 	}
 
+
+	public Object remove(String resourceName) {
+		return this.resources.remove(resourceName);
+	}
+
 	public void clear() {
 		this.resources.clear();
 	}

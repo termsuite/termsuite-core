@@ -32,8 +32,6 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import org.apache.commons.lang.mutable.MutableInt;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Preconditions;
@@ -44,9 +42,10 @@ import com.google.common.collect.Maps;
 import eu.project.ttc.models.TermWord;
 import eu.project.ttc.types.TermOccAnnotation;
 import eu.project.ttc.types.WordAnnotation;
+import fr.univnantes.lina.uima.tkregex.LabelledAnnotation;
+import fr.univnantes.lina.uima.tkregex.RegexOccurrence;
 
 public class TermSuiteUtils {
-	private static final Logger LOGGER = LoggerFactory.getLogger(TermSuiteUtils.class);
 	private static final String GROUPING_KEY_FORMAT = "%s: %s";
 	public static final IndexingKey<String, String> KEY_ONE_FIRST_LETTERS = getNFirstLetterIndexingKey(1);
 	public static final IndexingKey<String, String> KEY_TWO_FIRST_LETTERS = getNFirstLetterIndexingKey(2);
@@ -113,10 +112,27 @@ public class TermSuiteUtils {
 		return toGroupingKey(patternSb, lemmas);
 	}
 
+	public static String toGroupingKey(RegexOccurrence occurrence) {
+		StringBuilder builder = new StringBuilder();
+		builder
+			.append(Joiner.on("").join(occurrence.getLabels()))
+			.append(TermSuiteConstants.COLONS)
+			.append(TermSuiteConstants.WHITESPACE);
+		
+		int i = 0;
+		for(LabelledAnnotation la:occurrence.getLabelledAnnotations()) {
+			if(i>= 1)
+				builder.append(TermSuiteConstants.WHITESPACE);
+			builder.append(((WordAnnotation) la.getAnnotation()).getLemma());
+			i++;
+		}
+		return builder.toString().toLowerCase();
+	}
+
 	private static String toGroupingKey(StringBuilder patternSb, List<String> lemmas) {
 		return String.format(GROUPING_KEY_FORMAT, 
 				patternSb.toString(), 
-				Joiner.on(TermSuiteConstants.WHITESPACE).join(lemmas));
+				Joiner.on(TermSuiteConstants.WHITESPACE).join(lemmas)).toLowerCase();
 	}
 	
 

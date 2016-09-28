@@ -40,6 +40,8 @@ public class TermSuiteConstants {
 	public static final String DIESE = "#";
 	public static final String LINE_BREAK = "\n";
 	public static final String TAB = "\t";
+	public static final String COLONS = ":";
+
 	
 	public static final String N = "N";
 	public static final String V = "V";

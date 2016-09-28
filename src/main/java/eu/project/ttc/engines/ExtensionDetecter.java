@@ -32,6 +32,7 @@ import org.apache.uima.jcas.JCas;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.index.CustomTermIndex;
 import eu.project.ttc.models.index.TermIndexes;
@@ -45,6 +46,9 @@ public class ExtensionDetecter extends JCasAnnotator_ImplBase {
 
 	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
 	private TermIndexResource termIndexResource;
+
+	@ExternalResource(key =TermHistoryResource.TERM_HISTORY, mandatory = true)
+	private TermHistoryResource historyResource;
 
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
@@ -76,16 +80,34 @@ public class ExtensionDetecter extends JCasAnnotator_ImplBase {
 				t1 = list.get(i);
 				for(int j = i+1; j< list.size(); j++) {
 					t2 = list.get(j);
-					if(TermUtils.isIncludedIn(t1, t2))
+					if(TermUtils.isIncludedIn(t1, t2)) {
 						t1.addExtension(t2);
-					else if(TermUtils.isIncludedIn(t2, t1))
+						watch(t1, t2);
+
+					} else if(TermUtils.isIncludedIn(t2, t1)) {
 						t2.addExtension(t1);
+						watch(t2, t1);
+					}
 				}
 			}
 		}
 		
 		//finalize
 		this.termIndexResource.getTermIndex().dropCustomIndex(gatheringKey);
+	}
+
+	private void watch(Term t1, Term t2) {
+		if(historyResource.getHistory().isWatched(t1.getGroupingKey()))
+			historyResource.getHistory().saveEvent(
+					t1.getGroupingKey(),
+					this.getClass(), 
+					"Term has a new extension: " + t2);
+
+		if(historyResource.getHistory().isWatched(t2.getGroupingKey()))
+			historyResource.getHistory().saveEvent(
+					t2.getGroupingKey(),
+					this.getClass(), 
+					"Term is the extension of " + t1);
 	}
 
 }

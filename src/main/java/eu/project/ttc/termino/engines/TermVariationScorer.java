@@ -36,6 +36,8 @@ import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
+import eu.project.ttc.history.TermHistory;
+import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.scored.ScoredModel;
 import eu.project.ttc.models.scored.ScoredTerm;
@@ -55,11 +57,17 @@ public class TermVariationScorer {
 
 	private VariantScorerConfig config;
 	
+	private TermHistory history;
+	
 	public TermVariationScorer(VariantScorerConfig config) {
 		super();
 		this.config = config;
 	}
 
+	public void setHistory(TermHistory history) {
+		this.history = history;
+	}
+	
 	private static Comparator<ScoredTerm> wrComparator = new Comparator<ScoredTerm>() {
 		@Override
 		public int compare(ScoredTerm o1, ScoredTerm o2) {
@@ -90,6 +98,11 @@ public class TermVariationScorer {
 		for(ScoredTerm t:scoredModel.getTerms()) {
 			rank ++;
 			t.setRank(rank);
+			if(history != null && history.isWatched(t.getTerm()))
+				history.saveEvent(
+						t.getTerm().getGroupingKey(), 
+						this.getClass(), 
+						"Set term rank: " + rank);
 		}
 		return scoredModel;
 		
@@ -125,10 +138,31 @@ public class TermVariationScorer {
 	private void filterTerms() {
 		Set<ScoredTerm> rem = Sets.newHashSet();
 		for(ScoredTerm st:scoredModel.getTerms()) {
-			if(StringUtils.getOrthographicScore(st.getTerm().getLemma()) < this.config.getOrthographicScoreTh())
+			if(StringUtils.getOrthographicScore(st.getTerm().getLemma()) < this.config.getOrthographicScoreTh()) {
 				rem.add(st);
-			else if(st.getTermIndependanceScore() < this.config.getTermIndependanceTh())
+				
+				if(history != null && history.isWatched(st.getTerm()))
+					history.saveEvent(
+							st.getTerm().getGroupingKey(), 
+							this.getClass(), 
+							String.format(
+									"Removing term because orthographic score <%.2f> is under threshhold <%.2f>.",
+									StringUtils.getOrthographicScore(st.getTerm().getLemma()),
+									this.config.getOrthographicScoreTh()));
+
+			}
+			else if(st.getTermIndependanceScore() < this.config.getTermIndependanceTh()) {
 				rem.add(st);
+				
+				if(history != null && history.isWatched(st.getTerm()))
+					history.saveEvent(
+							st.getTerm().getGroupingKey(), 
+							this.getClass(), 
+							String.format(
+									"Removing term because independence score <%.2f> is under threshhold <%.2f>.",
+									st.getTermIndependanceScore(),
+									this.config.getTermIndependanceTh()));
+			}
 		}
 		scoredModel.removeTerms(rem);
 	}
@@ -138,17 +172,61 @@ public class TermVariationScorer {
 		ScoredVariation v;
 		while(it.hasNext()) {
 			v = it.next();
-			if(v.getVariantIndependanceScore() < config.getVariantIndependanceTh()
-					|| v.getVariationScore() < config.getVariationScoreTh()
-					) {
+			Term variant = v.getTermVariation().getVariant();
+			Term base = v.getTermVariation().getBase();
+			
+			if(v.getVariantIndependanceScore() < config.getVariantIndependanceTh()) {
+				watchVariationRemoval(variant, base, 
+						"Removing variant <%s> because the variant independence score <%.2f> is under threshhold <%.2f>.",
+						v.getVariantIndependanceScore(), this.config.getVariantIndependanceTh());
+				watchVariationRemoval(base, variant, 
+						"Removed as variant of term <%s> because the variant independence score <%.2f> is under threshhold <%.2f>.",
+						v.getVariantIndependanceScore(), this.config.getVariantIndependanceTh());
+
 				it.remove();
-			}
-			else if(v.getExtensionAffix() != null) {
-				if(v.getExtensionGainScore() < config.getExtensionGainTh()
-						|| v.getExtensionSpecScore() < config.getExtensionSpecTh())
+			} else if(v.getVariationScore() < config.getVariationScoreTh()) {
+				watchVariationRemoval(variant, base, 
+						"Removing variant <%s> because the variation score <%.2f> is under threshhold <%.2f>.",
+						v.getVariationScore(), this.config.getVariationScoreTh());
+				watchVariationRemoval(base, variant, 
+						"Removed as variant of term <%s> because the variation score <%.2f> is under threshhold <%.2f>.",
+						v.getVariationScore(), this.config.getVariationScoreTh());
+				it.remove();
+			} else if(v.getExtensionAffix() != null) {
+				if(v.getExtensionGainScore() < config.getExtensionGainTh()) {
+					watchVariationRemoval(variant, base, 
+							"Removing variant <%s> because the extension gain score <%.2f> is under threshhold <%.2f>.",
+							v.getExtensionGainScore(), this.config.getExtensionGainTh());
+					watchVariationRemoval(base, variant, 
+							"Removing as variant of term <%s> because the extension gain score <%.2f> is under threshhold <%.2f>.",
+							v.getExtensionGainScore(), this.config.getExtensionGainTh());
+					
 					it.remove();
+				} else if(v.getExtensionSpecScore() < config.getExtensionSpecTh()) {
+					watchVariationRemoval(variant, base, 
+							"Removing variant <%s> because the extension specificity score <%.2f> is under threshhold <%.2f>.",
+							v.getExtensionGainScore(), this.config.getExtensionGainTh());
+					watchVariationRemoval(base, variant, 
+							"Removing as variant of term <%s> because the extension specificity score <%.2f> is under threshhold <%.2f>.",
+							v.getExtensionGainScore(), this.config.getExtensionGainTh());
+					
+					it.remove();
+				}
 			}
 		}
 		
+	}
+
+	private void watchVariationRemoval(Term variant, Term base, String msg, double score, double th) {
+		if(history != null && history.isWatched(base))
+			history.saveEvent(
+					base.getGroupingKey(), 
+					this.getClass(), 
+					String.format(
+							msg,
+							variant,
+							score,
+							th)
+					);
 	}
 }

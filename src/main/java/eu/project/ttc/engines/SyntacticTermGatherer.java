@@ -64,8 +64,10 @@ import com.google.common.collect.Lists;
 
 import eu.project.ttc.engines.variant.VariantRule;
 import eu.project.ttc.engines.variant.VariantRuleIndex;
+import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.models.VariationType;
 import eu.project.ttc.models.index.CustomIndexStats;
 import eu.project.ttc.models.index.CustomTermIndex;
@@ -92,6 +94,9 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 	public static final String YAML_VARIANT_RULES = "YamlVariantRules";
 	@ExternalResource(key = YAML_VARIANT_RULES, mandatory = true)
 	private YamlVariantRules yamlVariantRules;
+
+	@ExternalResource(key =TermHistoryResource.TERM_HISTORY, mandatory = true)
+	private TermHistoryResource historyResource;
 
 
 	private BigInteger totalComparisons = BigInteger.valueOf(0);
@@ -257,10 +262,26 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 //			target = aux;
 //		}
 		
-		source.addTermVariation(
+		TermVariation tv = source.addTermVariation(
 				target, 
 				matchingRule.getName().startsWith(M_PREFIX) ? VariationType.MORPHOLOGICAL : VariationType.SYNTACTICAL,
 				matchingRule.getName());
+		
+		watch(source, target, tv);
+	}
+
+	private void watch(Term source, Term target, TermVariation tv) {
+		if(historyResource.getHistory().isWatched(source.getGroupingKey()))
+			historyResource.getHistory().saveEvent(
+					source.getGroupingKey(),
+					this.getClass(), 
+					"Term has a new variation: " + tv);
+		
+		if(historyResource.getHistory().isWatched(target.getGroupingKey()))
+			historyResource.getHistory().saveEvent(
+					target.getGroupingKey(),
+					this.getClass(), 
+					"Term has a new variation base: " + tv);
 	}
 
 	private void checkFrequency(Term term) {

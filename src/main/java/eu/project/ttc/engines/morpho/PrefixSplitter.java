@@ -23,8 +23,6 @@
 
 package eu.project.ttc.engines.morpho;
 
-import java.util.Map;
-
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
@@ -33,8 +31,11 @@ import org.apache.uima.jcas.JCas;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.google.common.collect.Maps;
+import com.google.common.collect.HashMultimap;
+import com.google.common.collect.Multimap;
 
+import eu.project.ttc.history.TermHistory;
+import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.VariationType;
 import eu.project.ttc.models.Word;
@@ -53,7 +54,9 @@ public class PrefixSplitter extends JCasAnnotator_ImplBase {
 	@ExternalResource(key=PrefixTree.PREFIX_TREE, mandatory=true)
 	private PrefixTree prefixTree;
 
-	
+	@ExternalResource(key =TermHistoryResource.TERM_HISTORY, mandatory = true)
+	private TermHistoryResource historyResource;
+
 	public static final String CHECK_IF_MORPHO_EXTENSION_IS_IN_CORPUS = "CheckIfMorphoExtensionInCorpus";
 	@ConfigurationParameter(name=CHECK_IF_MORPHO_EXTENSION_IS_IN_CORPUS, mandatory=false, defaultValue = "true")
 	private boolean checkIfMorphoExtensionInCorpus;
@@ -66,7 +69,7 @@ public class PrefixSplitter extends JCasAnnotator_ImplBase {
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
 		LOGGER.info("Starting {}", TASK_NAME);
-		Map<String, Term> lemmaIndex = Maps.newHashMap();
+		Multimap<String, Term> lemmaIndex = HashMultimap.create();
 		int nb = 0;
 		String prefixExtension, lemma, pref;
 		for(Term swt:termIndexResource.getTermIndex().getTerms()) {
@@ -93,8 +96,10 @@ public class PrefixSplitter extends JCasAnnotator_ImplBase {
 							LOGGER.trace("Prefix extension: {} for word {} is not found in corpus. Aborting composition for this word.", prefixExtension, lemma);
 						continue;
 					} else {
-						Term target = lemmaIndex.get(prefixExtension);
-						swt.addTermVariation(target, VariationType.IS_PREFIX_OF, TermSuiteConstants.EMPTY_STRING);
+						for(Term target:lemmaIndex.get(prefixExtension)) {
+							watch(swt, target);
+							swt.addTermVariation(target, VariationType.IS_PREFIX_OF, TermSuiteConstants.EMPTY_STRING);
+						}
 					}
 				}
 				nb++;
@@ -103,5 +108,20 @@ public class PrefixSplitter extends JCasAnnotator_ImplBase {
 		LOGGER.debug("Number of words with prefix composition: {} out of {}", 
 				nb, 
 				termIndexResource.getTermIndex().getWords().size());
+	}
+
+	private void watch(Term swt, Term target) {
+		TermHistory history = historyResource.getHistory();
+		if(history.isWatched(swt.getGroupingKey()))
+			history.saveEvent(
+				swt.getGroupingKey(), 
+				this.getClass(), 
+				"Term is prefix of term " + target);
+		if(history.isWatched(target.getGroupingKey()))
+			history.saveEvent(
+					target.getGroupingKey(), 
+				this.getClass(), 
+				"Term has a new found prefix: " + swt);
+
 	}
 }

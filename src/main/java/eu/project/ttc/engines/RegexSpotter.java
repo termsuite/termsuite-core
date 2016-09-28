@@ -32,10 +32,13 @@ import org.apache.uima.jcas.cas.StringArray;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import eu.project.ttc.history.TermHistory;
+import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.resources.OccurrenceFilter;
 import eu.project.ttc.resources.TrueFilter;
 import eu.project.ttc.types.TermOccAnnotation;
 import eu.project.ttc.types.WordAnnotation;
+import eu.project.ttc.utils.JCasUtils;
 import eu.project.ttc.utils.OccurrenceBuffer;
 import eu.project.ttc.utils.TermSuiteConstants;
 import eu.project.ttc.utils.TermSuiteUtils;
@@ -78,6 +81,9 @@ public class RegexSpotter extends TokenRegexAE {
 	@ExternalResource(key =STOP_WORD_FILTER, mandatory = true)
 	private FilterResource stopWordFilter;
 	
+	@ExternalResource(key =TermHistoryResource.TERM_HISTORY, mandatory = true)
+	private TermHistoryResource historyResource;
+
 	
 	@Override
 	protected void beforeRuleProcessing(JCas jCas) {
@@ -86,23 +92,54 @@ public class RegexSpotter extends TokenRegexAE {
 	
 	private OccurrenceBuffer occurrenceBuffer;
 	
+	
 	@Override
 	public void ruleMatched(JCas jCas, RegexOccurrence occurrence) {
+		String groupingKey = TermSuiteUtils.toGroupingKey(occurrence);
+		TermHistory history = historyResource.getHistory();
+		
+		
 		/*
 		 * Do not keep the term if it has too many bad characters
 		 */
-		if(!termFilter.accept(occurrence))
+		if(!termFilter.accept(occurrence)) {
+			if(history.isWatched(groupingKey))
+				history.saveEvent(
+						groupingKey, 
+						RegexSpotter.class, String.format(
+								"[!] Term spotted at [%d,%d] in file %s but filtered out by %s",
+								occurrence.getBegin(), occurrence.getEnd(),
+								JCasUtils.getSourceDocumentAnnotation(jCas).get().getUri(),
+								termFilter.getClass()));
 			return;
+		}
 
 		/*
 		 * Do not keep the term if it is a stop word
 		 */
 		WordAnnotation wa = (WordAnnotation)occurrence.getLabelledAnnotations().get(0).getAnnotation();
-		if(occurrence.size() == 1 && stopWordFilter.getFilters().contains(wa.getCoveredText().toLowerCase()))
+		if((occurrence.size() == 1 && stopWordFilter.getFilters().contains(wa.getCoveredText().toLowerCase()))
+				|| (occurrence.size() == 1 && wa.getLemma() != null && stopWordFilter.getFilters().contains(wa.getLemma().toLowerCase()))) {
+			if(history.isWatched(groupingKey))
+				history.saveEvent(
+						groupingKey, 
+						RegexSpotter.class, String.format(
+								"[!] Term spotted at [%d,%d] in file %s but filtered out by stop word filter",
+								occurrence.getBegin(), occurrence.getEnd(),
+								JCasUtils.getSourceDocumentAnnotation(jCas).get().getUri(),
+								termFilter.getClass()));
+			
 			return;
-		if(occurrence.size() == 1 && wa.getLemma() != null && stopWordFilter.getFilters().contains(wa.getLemma().toLowerCase()))
-			return;
+		}
 		
+		if(history.isWatched(groupingKey))
+			history.saveEvent(
+					groupingKey, 
+					RegexSpotter.class, String.format("Term spotted at [%d,%d] in file %s",
+							occurrence.getBegin(), occurrence.getEnd(),
+							JCasUtils.getSourceDocumentAnnotation(jCas).get().getUri()));
+
+			
 		/*
 		 * Add the occurrence the buffer. Will be added to jCas if it is not filtered by any post processing strategy
 		 */
@@ -140,7 +177,7 @@ public class RegexSpotter extends TokenRegexAE {
 		}
 		
 		this.occurrenceBuffer.cleanBuffer();
-		for(RegexOccurrence occ:this.occurrenceBuffer)
+		for(RegexOccurrence occ:this.occurrenceBuffer) 
 			addOccurrenceToCas(jCas, occ);
 		this.occurrenceBuffer.clear();
 	}

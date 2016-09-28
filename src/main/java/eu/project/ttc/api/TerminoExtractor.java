@@ -27,6 +27,7 @@ import com.google.common.collect.Lists;
 
 import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
+import eu.project.ttc.history.TermHistory;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.readers.TermSuiteJsonCasDeserializer;
 import eu.project.ttc.tools.TermSuitePipeline;
@@ -215,6 +216,9 @@ public class TerminoExtractor {
 		TermSuitePipeline pipeline = TermSuitePipeline
 				.create(lang.getCode());
 		
+		if(history.isPresent())
+			pipeline.setHistory(history.get());
+		
 		if(customResourceDir.isPresent())
 			pipeline.setResourceDir(this.customResourceDir.get());
 		
@@ -262,6 +266,8 @@ public class TerminoExtractor {
 			// Instantiate AAE
 			final AnalysisEngine aae = UIMAFramework.produceAnalysisEngine(aaeDesc, resMgr, null);
 			
+			
+			
 			if(preprocessed) {
 				preprocessedCasStream.forEach(cas -> {
 					try {
@@ -295,5 +301,12 @@ public class TerminoExtractor {
 		}
 
 		return pipeline.getTermIndex();
+	}
+
+	private Optional<TermHistory> history = Optional.empty();
+	
+	public TerminoExtractor setWatcher(TermHistory history) {
+		this.history = Optional.of(history);
+		return this;
 	}
 }

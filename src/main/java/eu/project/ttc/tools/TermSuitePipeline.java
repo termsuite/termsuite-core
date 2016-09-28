@@ -101,6 +101,8 @@ import eu.project.ttc.engines.morpho.ManualPrefixSetter;
 import eu.project.ttc.engines.morpho.PrefixSplitter;
 import eu.project.ttc.engines.morpho.SuffixDerivationDetecter;
 import eu.project.ttc.engines.morpho.SuffixDerivationExceptionSetter;
+import eu.project.ttc.history.TermHistory;
+import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.metrics.LogLikelihood;
 import eu.project.ttc.models.OccurrenceStore;
 import eu.project.ttc.models.OccurrenceType;
@@ -195,6 +197,8 @@ public class TermSuitePipeline {
 	private CollectionReaderDescription crDescription;
 	private String pipelineObserverName;
 	private AggregateBuilder aggregateBuilder;
+	private String termHistoryResourceName = "PipelineHistory";
+
 	
 	/*
 	 * POS Tagger parameters
@@ -265,7 +269,11 @@ public class TermSuitePipeline {
 		this.lang = Lang.forName(lang);
 		this.aggregateBuilder = new AggregateBuilder();
 		this.pipelineObserverName = PipelineObserver.class.getSimpleName() + "-" + Thread.currentThread().getId() + "-" + System.currentTimeMillis();
+
 		TermSuiteResourceManager.getInstance().register(pipelineObserverName, new TermSuitePipelineObserver(2,1));
+		
+		this.termHistoryResourceName = TermHistory.class.getSimpleName() + "-" + Thread.currentThread().getId() + "-" + System.currentTimeMillis();
+		TermSuiteResourceManager.getInstance().register(termHistoryResourceName, new TermHistory());
 		
 		initUIMALogging();
 	}
@@ -627,8 +635,23 @@ public class TermSuitePipeline {
 			throw new TermSuitePipelineException(e);
 		}
 	}
-	
 
+	public TermSuitePipeline setHistory(TermHistory history) {
+		TermSuiteResourceManager.getInstance().remove(termHistoryResourceName);
+		TermSuiteResourceManager.getInstance().register(termHistoryResourceName, history);
+		return this;
+	}
+
+	public TermSuitePipeline watch(String... termKeys) {
+		TermHistory termHistory = (TermHistory)TermSuiteResourceManager.getInstance().get(termHistoryResourceName);
+		termHistory.addWatchedTerms(termKeys);
+		return this;
+	}
+
+	public String getHistoryResourceName() {
+		return termHistoryResourceName;
+	}
+		
 	public TermSuitePipeline aeWordTokenizer() {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
@@ -1228,7 +1251,9 @@ public class TermSuitePipeline {
 					mwtRules
 				);
 
-				
+			ExternalResourceFactory.bindResource(
+					ae, resHistory());
+
 	
 			ExternalResourceDescription allowedCharsRes = ExternalResourceFactory.createExternalResourceDescription(
 					CharacterFootprintTermFilter.class, 
@@ -1273,6 +1298,7 @@ public class TermSuitePipeline {
 					TermOccAnnotationImporter.KEEP_OCCURRENCES_IN_TERM_INDEX, spotWithOccurrences
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
+			ExternalResourceFactory.bindResource(ae, resHistory());
 
 			return aggregateAndReturn(ae, "TermOccAnnotation importer", 0);
 		} catch (Exception e) {
@@ -1305,6 +1331,7 @@ public class TermSuitePipeline {
 					prefixTreeRes
 				);
 
+			ExternalResourceFactory.bindResource(ae, resHistory());
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 			
@@ -1332,7 +1359,8 @@ public class TermSuitePipeline {
 				);
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			
+			ExternalResourceFactory.bindResource(ae, resHistory());
+
 			return aggregateAndReturn(ae, "Detecting suffix derivations prefixes", 0)
 						.aeSuffixDerivationException();
 		} catch(Exception e) {
@@ -1357,7 +1385,8 @@ public class TermSuitePipeline {
 				);
 
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			
+			ExternalResourceFactory.bindResource(ae, resHistory());
+
 			return aggregateAndReturn(ae, "Setting suffix derivation exceptions", 0);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
@@ -1411,7 +1440,8 @@ public class TermSuitePipeline {
 				);
 
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			
+			ExternalResourceFactory.bindResource(ae, resHistory());
+
 			return aggregateAndReturn(ae, "Setting prefix exceptions", 0);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
@@ -1582,6 +1612,17 @@ public class TermSuitePipeline {
 
 	}
 	
+	private ExternalResourceDescription termHistoryResource;
+	public ExternalResourceDescription resHistory() {
+		if(termHistoryResource == null) {
+			termHistoryResource = ExternalResourceFactory.createExternalResourceDescription(
+					TermHistoryResource.class, this.termHistoryResourceName);
+		}
+		return termHistoryResource;
+
+	}
+
+	
 	private ExternalResourceDescription syntacticVariantRules;
 	public ExternalResourceDescription resSyntacticVariantRules() {
 		if(syntacticVariantRules == null) {
@@ -1657,6 +1698,7 @@ public class TermSuitePipeline {
 				);
 			ExternalResourceFactory.bindResource(ae, resGeneralLanguage());
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
+			ExternalResourceFactory.bindResource(ae, resHistory());
 
 			return aggregateAndReturn(ae, "Computing term specificities", 0);
 		} catch(Exception e) {
@@ -1743,6 +1785,7 @@ public class TermSuitePipeline {
 			setPeriodic(isPeriodic, cleaningPeriod, ae);
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
+			ExternalResourceFactory.bindResource(ae, resHistory());
 
 			return aggregateAndReturn(ae, getNumberedTaskName("Cleaning"), 0);
 		} catch(Exception e) {
@@ -1825,6 +1868,7 @@ public class TermSuitePipeline {
 					);
 			setPeriodic(isPeriodic, cleaningPeriod, ae);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
+			ExternalResourceFactory.bindResource(ae, resHistory());
 
 			return aggregateAndReturn(ae, "Cleaning TermIndex. Keepings only top " + n + " terms on property " + property.toString().toLowerCase(), 0);
 		} catch(Exception e) {
@@ -1846,6 +1890,7 @@ public class TermSuitePipeline {
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 			ExternalResourceFactory.bindResource(ae, resObserver());
+			ExternalResourceFactory.bindResource(ae, resHistory());
 
 			return aggregateAndReturn(ae, GraphicalVariantGatherer.TASK_NAME, 1);
 		} catch(Exception e) {
@@ -1886,6 +1931,7 @@ public class TermSuitePipeline {
 			ExternalResourceFactory.bindResource(ae, resSyntacticVariantRules());
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 			ExternalResourceFactory.bindResource(ae, resObserver());
+			ExternalResourceFactory.bindResource(ae, resHistory());
 
 			return aggregateAndReturn(ae, SyntacticTermGatherer.TASK_NAME, 1);
 		} catch(Exception e) {
@@ -1907,6 +1953,7 @@ public class TermSuitePipeline {
 				);
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
+			ExternalResourceFactory.bindResource(ae, resHistory());
 
 			return aggregateAndReturn(ae, "Detecting term extensions", 1);
 		} catch(Exception e) {
@@ -1929,6 +1976,7 @@ public class TermSuitePipeline {
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 			ExternalResourceFactory.bindResource(ae, resObserver());
+			ExternalResourceFactory.bindResource(ae, resHistory());
 
 			return aggregateAndReturn(ae, ScorerAE.TASK_NAME, 1);
 		} catch(Exception e) {
@@ -1979,6 +2027,7 @@ public class TermSuitePipeline {
 				);
 				ExternalResourceFactory.bindResource(ae, resTermIndex());
 				ExternalResourceFactory.bindResource(ae, resObserver());
+				ExternalResourceFactory.bindResource(ae, resHistory());
 
 
 			return aggregateAndReturn(ae, Ranker.TASK_NAME, 1);
@@ -2101,6 +2150,8 @@ public class TermSuitePipeline {
 					neoClassicalPrefixesRes
 				);
 			
+			ExternalResourceFactory.bindResource(ae, resHistory());
+
 			
 			return aeManualCompositionSetter()
 					.aggregateAndReturn(ae, CompostAE.TASK_NAME, 2);

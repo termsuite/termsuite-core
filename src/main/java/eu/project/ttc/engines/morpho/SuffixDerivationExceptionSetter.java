@@ -32,6 +32,8 @@ import org.apache.uima.jcas.JCas;
 
 import com.google.common.collect.Lists;
 
+import eu.project.ttc.history.TermHistory;
+import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.models.VariationType;
@@ -45,6 +47,9 @@ public class SuffixDerivationExceptionSetter extends JCasAnnotator_ImplBase {
 
 	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
 	private TermIndexResource termIndexResource;
+
+	@ExternalResource(key =TermHistoryResource.TERM_HISTORY, mandatory = true)
+	private TermHistoryResource historyResource;
 
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
@@ -67,7 +72,26 @@ public class SuffixDerivationExceptionSetter extends JCasAnnotator_ImplBase {
 			}
 			for(TermVariation rem:toRem) {
 				rem.getBase().removeTermVariation(rem);
+				TermHistory history = historyResource.getHistory();
+				watch(rem, history);
+
 			}
 		}
+	}
+
+	private void watch(TermVariation rem, TermHistory history) {
+		if(history.isWatched(rem.getBase().getGroupingKey())) {
+			history.saveEvent(
+				rem.getBase().getGroupingKey(), 
+				this.getClass(), 
+				"Removing derivation into " + rem.getVariant());
+		}
+		if(history.isWatched(rem.getVariant().getGroupingKey())) {
+			history.saveEvent(
+				rem.getVariant().getGroupingKey(), 
+				this.getClass(), 
+				"Removed as derivate of " + rem.getBase());
+		}
+
 	}
 }

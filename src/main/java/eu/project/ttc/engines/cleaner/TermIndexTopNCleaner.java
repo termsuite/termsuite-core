@@ -56,4 +56,10 @@ public class TermIndexTopNCleaner extends AbstractTermIndexCleaner {
 				removedTerms.add(terms.get(index));
 		}
 	}
+	
+	@Override
+	public String toString() {
+		return String.format("TopNCleaner - keep top %d", property.getPropertyName(), topN);
+	}
+
 }

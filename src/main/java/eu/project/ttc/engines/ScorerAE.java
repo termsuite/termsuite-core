@@ -38,6 +38,7 @@ import org.slf4j.LoggerFactory;
 import com.google.common.base.Optional;
 import com.google.common.collect.Sets;
 
+import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermVariation;
@@ -60,6 +61,10 @@ public class ScorerAE extends JCasAnnotator_ImplBase {
 	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
 	private TermIndexResource termIndexResource;
 
+	@ExternalResource(key =TermHistoryResource.TERM_HISTORY, mandatory = true)
+	private TermHistoryResource historyResource;
+
+	
 	private Optional<SubTaskObserver> taskObserver = Optional.absent();
 
 	@Override
@@ -87,6 +92,7 @@ public class ScorerAE extends JCasAnnotator_ImplBase {
 		 * 1- compute scores
 		 */
 		logger.debug("Scorying");
+		variantScorer.setHistory(historyResource.getHistory());
 		ScoredModel scoredModel = variantScorer.score(termIndex);
 		
 		/*

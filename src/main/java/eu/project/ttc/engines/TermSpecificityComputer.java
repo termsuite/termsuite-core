@@ -30,6 +30,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import eu.project.ttc.engines.cleaner.TermProperty;
+import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.index.TermMeasure;
@@ -45,6 +47,10 @@ public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 	public static final String GENERAL_LANGUAGE_FREQUENCIES = "GeneralLanguageFrequencies";
 	@ExternalResource(key=GENERAL_LANGUAGE_FREQUENCIES, mandatory=true)
 	private GeneralLanguage generalLanguage;
+	
+	@ExternalResource(key =TermHistoryResource.TERM_HISTORY, mandatory = true)
+	private TermHistoryResource historyResource;
+
 	
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
@@ -82,17 +88,11 @@ public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 				totalCount+=term.getFrequency();
 			for(Term term:termIndex.getTerms()) {
 				double frequency = (1000 * (float)term.getFrequency()) / totalCount;
-//				double frequency = ((float)term.getAllOccurrences(2).size()) / totalCount;
 				double generalFrequency = generalLanguage.getNormalizedFrequency(term.getLemma());
 				if (generalFrequency != 0.0) {
-//					double wr = frequency / generalFrequency;
 					term.setFrequencyNorm(frequency);
 					term.setGeneralFrequencyNorm(generalFrequency);
 					term.setSpecificity(Math.log10(1 + frequency/generalFrequency));
-//					term.setWR((float)wr);
-//					term.setWRLog(Math.log10(1 + wr));
-//					if(wr>maxWR)
-//						maxWR = wr;
 				} else 
 					LOGGER.warn("GeneralFrequency resource returned 0.0 for the term " + term.getGroupingKey() + ". Ignoring this term.");
 			}
@@ -101,15 +101,27 @@ public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 				float generalTermFrequency = (float)generalLanguage.getFrequency(term.getLemma(), term.getPattern());
 				float normalizedGeneralTermFrequency = 1000*generalTermFrequency/generalLanguage.getNbCorpusWords();
 				float termFrequency = term.getFrequency();
-//				float termFrequency = term.getAllOccurrences(2).size();
 				float normalizedTermFrequency = (1000 * termFrequency)/termIndex.getWordAnnotationsNum();
 				term.setFrequencyNorm(normalizedTermFrequency);
 				term.setGeneralFrequencyNorm( normalizedGeneralTermFrequency);
-//				term.setWR(normalizedTermFrequency/normalizedGeneralTermFrequency);
 				term.setSpecificity(Math.log10(1 + normalizedTermFrequency/normalizedGeneralTermFrequency));
 				
+				watch(term);
 			}
 		}
+	}
+
+	private void watch(Term term) {
+		if(historyResource.getHistory().isWatched(term.getGroupingKey()))
+			historyResource.getHistory().saveEvent(
+					term.getGroupingKey(), 
+					this.getClass(), 
+					String.format("Specificity of term set to %.2f [%s=%d, %s=%.2f, %s=%.2f]", 
+							term.getSpecificity(),
+							TermProperty.FREQUENCY.getShortName(), term.getFrequency(),
+							TermProperty.FREQUENCY_NORM.getShortName(), term.getFrequencyNorm()*1000,
+							TermProperty.GENERAL_FREQUENCY_NORM.getShortName(), term.getGeneralFrequencyNorm()*1000
+						));
 	}
 
 }

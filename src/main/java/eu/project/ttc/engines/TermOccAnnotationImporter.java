@@ -33,11 +33,14 @@ import org.apache.uima.resource.ResourceInitializationException;
 
 import com.google.common.base.Optional;
 
+import eu.project.ttc.history.TermHistory;
+import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.types.SourceDocumentInformation;
 import eu.project.ttc.types.TermOccAnnotation;
 import eu.project.ttc.utils.JCasUtils;
+import eu.project.ttc.utils.TermSuiteUtils;
 
 /**
  * Imports all {@link TermOccAnnotation} to a {@link TermIndex}.
@@ -52,6 +55,8 @@ public class TermOccAnnotationImporter extends JCasAnnotator_ImplBase {
 	@ConfigurationParameter(name = KEEP_OCCURRENCES_IN_TERM_INDEX, mandatory = false, defaultValue = "true")
 	private boolean keepOccurrencesInTermIndex;
 
+	@ExternalResource(key =TermHistoryResource.TERM_HISTORY, mandatory = true)
+	private TermHistoryResource historyResource;
 
 	public void initialize(UimaContext context) throws ResourceInitializationException {
 		super.initialize(context);
@@ -65,6 +70,10 @@ public class TermOccAnnotationImporter extends JCasAnnotator_ImplBase {
 		TermOccAnnotation toa;
 		while(it.hasNext()) {
 			toa = (TermOccAnnotation) it.next();
+			String gKey = TermSuiteUtils.getGroupingKey(toa);
+			TermHistory history = historyResource.getHistory();
+			watch(gKey, history);
+	
 			this.termIndexResource.getTermIndex().addTermOccurrence(
 					toa, 
 					currentFileURI, 
@@ -72,5 +81,15 @@ public class TermOccAnnotationImporter extends JCasAnnotator_ImplBase {
 			
 		}
 		this.termIndexResource.getTermIndex().getOccurrenceStore().flush();
+	}
+
+	private void watch(String gKey, TermHistory history) {
+		if(history.isWatched(gKey)) {
+			if(this.termIndexResource.getTermIndex().getTermByGroupingKey(gKey) == null)
+				history.saveEvent(
+					gKey, 
+					this.getClass(), 
+					"Term added to TermIndex " + termIndexResource.getTermIndex().getName());
+		}
 	}
 }

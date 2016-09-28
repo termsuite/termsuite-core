@@ -38,6 +38,7 @@ import org.slf4j.LoggerFactory;
 import com.google.common.collect.Lists;
 
 import eu.project.ttc.engines.cleaner.TermProperty;
+import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.resources.ObserverResource;
 import eu.project.ttc.resources.TermIndexResource;
@@ -52,6 +53,10 @@ public class Ranker extends JCasAnnotator_ImplBase {
 	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
 	private TermIndexResource termIndexResource;
 
+	@ExternalResource(key =TermHistoryResource.TERM_HISTORY, mandatory = true)
+	private TermHistoryResource historyResource;
+
+	
 	public static final String RANKING_PROPERTY="RankingProperty";
 	@ConfigurationParameter(name=RANKING_PROPERTY, mandatory=true)
 	protected TermProperty rankingProperty;
@@ -74,7 +79,13 @@ public class Ranker extends JCasAnnotator_ImplBase {
 		List<Term> ranked = Lists.newArrayList(termIndexResource.getTermIndex().getTerms());
 		Comparator<Term> comparator = rankingProperty.getComparator(termIndexResource.getTermIndex(), reverse);
 		Collections.sort(ranked, comparator);
-		for(int index = 0; index < ranked.size(); index++) 
+		for(int index = 0; index < ranked.size(); index++) {
 			ranked.get(index).setRank(index + 1);
+			if(historyResource.getHistory().isWatched(ranked.get(index)))
+				historyResource.getHistory().saveEvent(
+						ranked.get(index).getGroupingKey(), 
+						this.getClass(), 
+						"Set term rank: " + (index+1));
+		}
 	}
 }

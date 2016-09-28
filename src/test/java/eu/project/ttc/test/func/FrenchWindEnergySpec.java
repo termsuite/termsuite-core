@@ -129,9 +129,9 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 		assertThat(termIndex.getTerms())
 			.extracting("groupingKey")
 			.contains(
-					"n: tourbillon",
-					"npn: givrage de pale"
+					"n: tourbillon"
 					)
+			.doesNotContain("npn: givrage de pale")
 			;
 	}
 
@@ -242,7 +242,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	public void testSyntacticalVariationsWithDerivatesSPIDNAP() {
 		assertThat(termIndex)
 			.asTermVariationsHavingObject("S-PID-NA-P")
-//			.hasSize(77)
+			.hasSize(77)
 			.extracting("base.groupingKey", "variant.groupingKey")
 			.contains(
 					

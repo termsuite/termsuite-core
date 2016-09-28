@@ -41,6 +41,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.math.IntMath;
 
 import eu.project.ttc.engines.desc.Lang;
+import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.metrics.DiacriticInsensitiveLevenshtein;
 import eu.project.ttc.metrics.EditDistance;
 import eu.project.ttc.models.Term;
@@ -76,6 +77,9 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
 	private TermIndexResource termIndexResource;
 	
+	@ExternalResource(key =TermHistoryResource.TERM_HISTORY, mandatory = true)
+	private TermHistoryResource historyResource;
+
 	public static final String LANG = "lang";
 	@ConfigurationParameter(name=LANG, mandatory=true)
 	private String lang;
@@ -209,6 +213,10 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 							t1.addTermVariation(t2, VariationType.GRAPHICAL, dist);
 						else
 							t2.addTermVariation(t1, VariationType.GRAPHICAL, dist);
+						
+						watch(t1, t2, dist);
+						watch(t2, t1, dist);
+
 					}
 				}
 			}
@@ -221,5 +229,13 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 		termIndex.dropCustomIndex(indexName);
 		
 		progressLoggerTimer.cancel();
+	}
+
+	private void watch(Term t1, Term t2, double dist) {
+		if(historyResource.getHistory().isWatched(t1.getGroupingKey()))
+			historyResource.getHistory().saveEvent(
+					t1.getGroupingKey(),
+					this.getClass(), 
+					"Term has a new graphical variant " + t2 + " (dist="+dist+")");
 	}
 }

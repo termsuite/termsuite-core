@@ -53,4 +53,9 @@ public class TermIndexThresholdCleaner extends AbstractTermIndexCleaner {
 				removedTerms.add(t);
 		}
 	}
+	
+	@Override
+	public String toString() {
+		return String.format("ThreshholdCleaner - %s over th %.2f", property.getPropertyName(), threshold);
+	}
 }

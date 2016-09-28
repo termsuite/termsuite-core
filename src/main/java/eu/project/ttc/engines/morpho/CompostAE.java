@@ -48,6 +48,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
 import eu.project.ttc.engines.cleaner.TermProperty;
+import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.metrics.EditDistance;
 import eu.project.ttc.metrics.Levenshtein;
 import eu.project.ttc.models.Component;
@@ -102,6 +103,10 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 	@ExternalResource(key=STOP_LIST, mandatory=true)
 	private SimpleWordSet stopList;
 
+	@ExternalResource(key =TermHistoryResource.TERM_HISTORY, mandatory = true)
+	private TermHistoryResource historyResource;
+
+	
 	public static final String ALPHA = "Alpha";
 	@ConfigurationParameter(name=ALPHA, mandatory=true)
 	private float alpha;
@@ -244,7 +249,7 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 						builder.setCompoundType(CompoundType.NATIVE);
 				}
 				builder.create();
-
+				
 				// log the word composition
 				if(LOGGER.isTraceEnabled()) {
 					List<String> componentStrings = Lists.newArrayList();

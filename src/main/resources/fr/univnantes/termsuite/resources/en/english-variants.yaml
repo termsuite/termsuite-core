@@ -418,5 +418,10 @@
   target: A N
   rule: s[1]==t[1] && deriv("A N", t[0], s[0])
 
+"S-R2D-NN1":
+  source: N N
+  target: A N
+  rule: s[1]==t[1] && deriv("N A", s[0], t[0])
+
 
 

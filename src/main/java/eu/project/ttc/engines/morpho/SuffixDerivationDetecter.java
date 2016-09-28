@@ -32,6 +32,8 @@ import org.apache.uima.jcas.JCas;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import eu.project.ttc.history.TermHistory;
+import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermWord;
@@ -54,6 +56,10 @@ public class SuffixDerivationDetecter extends JCasAnnotator_ImplBase {
 	@ExternalResource(key=SuffixDerivationList.SUFFIX_DERIVATIONS, mandatory=true)
 	private SuffixDerivationList suffixDerivationList;
 
+	@ExternalResource(key =TermHistoryResource.TERM_HISTORY, mandatory = true)
+	private TermHistoryResource historyResource;
+
+	
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
 		// do nothing
@@ -85,6 +91,9 @@ public class SuffixDerivationDetecter extends JCasAnnotator_ImplBase {
 							if(LOGGER.isTraceEnabled())
 								LOGGER.trace("Found derivation base: {} for derivate word {}", baseTerm, swt);
 							baseTerm.addTermVariation(swt, VariationType.DERIVES_INTO, suffixDerivation.getType());
+							
+							watch(swt, baseTerm);
+
 						}
 					}
 				}
@@ -96,5 +105,21 @@ public class SuffixDerivationDetecter extends JCasAnnotator_ImplBase {
 		LOGGER.debug("Number of derivations found: {} out of {} SWTs", 
 				nbDerivations, 
 				nbSwt);
+	}
+
+	private void watch(Term swt, Term baseTerm) {
+		TermHistory history = historyResource.getHistory();
+		if(history.isWatched(swt.getGroupingKey())) 
+			history.saveEvent(
+				swt.getGroupingKey(), 
+				this.getClass(), 
+				"Term is a derivate of term " + baseTerm);
+		
+		if(history.isWatched(baseTerm.getGroupingKey())) 
+			history.saveEvent(
+				baseTerm.getGroupingKey(), 
+				this.getClass(), 
+				"Term has a new found derivate: " + swt);
+
 	}
 }

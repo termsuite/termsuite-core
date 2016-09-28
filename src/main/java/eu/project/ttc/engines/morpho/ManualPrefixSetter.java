@@ -30,6 +30,10 @@ import org.apache.uima.jcas.JCas;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.collect.Lists;
+
+import eu.project.ttc.history.TermHistory;
+import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.models.VariationType;
@@ -47,6 +51,9 @@ public class ManualPrefixSetter extends JCasAnnotator_ImplBase {
 	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
 	private TermIndexResource termIndexResource;
 
+	@ExternalResource(key =TermHistoryResource.TERM_HISTORY, mandatory = true)
+	private TermHistoryResource historyResource;
+
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
 		// do nothing
@@ -62,14 +69,31 @@ public class ManualPrefixSetter extends JCasAnnotator_ImplBase {
 			segmentation = prefixExceptions.getSegmentation(word.getLemma());
 			if(segmentation != null) 
 				if(segmentation.size() <= 1) {
-					for(TermVariation tv:swt.getVariations(VariationType.IS_PREFIX_OF))
+					for(TermVariation tv:Lists.newArrayList(swt.getVariations(VariationType.IS_PREFIX_OF))) {
 						swt.removeTermVariation(tv);
+						watch(swt, tv);
+					}
 				} else {
 					LOGGER.warn("Ignoring prefix exception {}->{} since non-expty prefix exceptions are not allowed.",
 							word.getLemma(),
 							segmentation);
 				}
 		}
+	}
+
+	private void watch(Term swt, TermVariation tv) {
+		TermHistory history = historyResource.getHistory();
+		if(history.isWatched(swt.getGroupingKey()))
+			history.saveEvent(
+				swt.getGroupingKey(), 
+				this.getClass(), 
+				"Prefix variation of term " + tv.getVariant().getGroupingKey() + " removed");
+		if(history.isWatched(tv.getVariant().getGroupingKey()))
+			history.saveEvent(
+				tv.getVariant().getGroupingKey(), 
+				this.getClass(), 
+				"Prefix variation of term " + swt + " removed");
+
 	}
 
 }
