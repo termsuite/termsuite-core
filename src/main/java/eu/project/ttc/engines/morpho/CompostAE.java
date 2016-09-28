@@ -22,6 +22,7 @@
 package eu.project.ttc.engines.morpho;
 
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -209,7 +210,9 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 
 		
 		int observingStep = 100;
-		for(Word word:termIndexResource.getTermIndex().getWords()) {
+		for(Term swt:termIndexResource.getTermIndex().getTerms()) {
+			if(!swt.isSingleWord())
+				continue;
 			cnt.increment();
 			if(cnt.longValue()%observingStep == 0) {
 				observer.work(observingStep);
@@ -219,19 +222,40 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 			 * Do not do native morphology splitting 
 			 * if a composition already exists.
 			 */
+			Word word = swt.getWords().get(0).getWord();
 			if(word.isCompound())
 				continue;
 			
 			Map<Segmentation, Double> scores = computeScores(word.getLemma());
 			if(scores.size() > 0) {
-				float bestScore = 0;
-				Segmentation bestSegmentation = null;
-				for(Segmentation s:scores.keySet()) {
-					if(scores.get(s) > bestScore) {
-						bestScore = scores.get(s).floatValue();
-						bestSegmentation = s;
+
+				List<Segmentation> segmentations = Lists.newArrayList(scores.keySet());
+				
+				/*
+				 *  compare segmentations in a deterministic way.
+				 */
+				segmentations.sort(new Comparator<Segmentation>() {
+					@Override
+					public int compare(Segmentation o1, Segmentation o2) {
+						int comp = Double.compare(scores.get(o2), scores.get(o1));
+						if(comp != 0)
+							return comp;
+						comp = Integer.compare(o1.getSegments().size(), o2.getSegments().size());
+						if(comp != 0)
+							return comp;	
+						for(int i = 0; i< o1.getSegments().size(); i++) {
+							comp = Integer.compare(
+								o2.getSegments().get(i).getEnd(), 
+								o1.getSegments().get(i).getEnd()
+							);
+							if(comp != 0)
+								return comp;
+						}
+						return 0;
 					}
-				}
+				});
+				
+				Segmentation bestSegmentation = segmentations.get(0);
 				
 				// build the word component from segmentation
 				WordBuilder builder = new WordBuilder(word);
@@ -239,10 +263,10 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 				for(Segment seg:bestSegmentation.getSegments()) {
 					String lemma = segmentLemmaCache.getUnchecked(seg.getLemma());
 					builder.addComponent(
-							seg.getBegin(), 
-							seg.getEnd(), 
-							lemma
-							);
+						seg.getBegin(), 
+						seg.getEnd(), 
+						lemma
+					);
 					if(seg.isNeoclassical())
 						builder.setCompoundType(CompoundType.NEOCLASSICAL);
 					else
