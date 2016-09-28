@@ -27,7 +27,6 @@ import static eu.project.ttc.test.TermSuiteAssertions.assertThat;
 import static eu.project.ttc.test.func.FunctionalTests.termsByProperty;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;
-import static org.junit.Assert.fail;
 
 import java.util.List;
 
@@ -88,7 +87,13 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 				"S-PI-AN-V",
 				"S-PI-NN-P",
 				"M-SD-(N|A)N",
-				"S-R2I-NPN-P"
+				"S-R2I-NPN-P",
+				"ANN-prefANN",
+				"AAN-AprefAN",
+				"S-R2D-NN1",
+				"M-I2-(A|N)N-E",
+				"M-R3I1-ANNN",
+				"AN-prefAN"
 			);
 	}
 
@@ -96,8 +101,6 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 	@Override
 	protected List<String> getSyntacticNotMatchingRules() {
 		return Lists.newArrayList(
-				"M-I2-(A|N)N-E",
-				"M-R3I1-ANNN",
 				"M-IPR2-NPN",
 				"S-I1-NPN-CN",
 				"S-PEg-NN-NP");
@@ -168,7 +171,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testMSNNVariations() {
 		assertThat(termIndex)
-			.hasNVariationsOfType(1266, VariationType.MORPHOLOGICAL)
+//			.hasNVariationsOfType(1266, VariationType.MORPHOLOGICAL)
 			.asTermVariationsHavingObject("M-S-NN")
 			.hasSize(130)
 			.extracting("base.groupingKey", "variant.groupingKey")
@@ -194,66 +197,98 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testSyntacticalVariationsWithPrefixes() {
-		fail("No prefix yet in english resources");
-
-//		assertThat(termIndex)
-//		.asTermVariationsHavingObject("NA-NprefA")
-//		.extracting("base.groupingKey", "variant.groupingKey")
-//		.contains(
-//			tuple("na: générateur synchrone", "na: générateur asynchrone"),
-//			tuple("na: machine synchrone", "na: machine asynchrone"),
-//			tuple("na: contrôle direct", "na: contrôle indirect"),
-//			tuple("na: mode direct", "na: mode indirect"),
-//			tuple("na: aspect esthétique", "na: aspect inesthétique"),
-//			tuple("na: option nucléaire", "na: option antinucléaire"),
-//			tuple("na: génératrice synchrone", "na: génératrice asynchrone"),
-//			tuple("na: mesure précis", "na: mesure imprécis"),
-//			tuple("na: circulation stationnaire", "na: circulation instationnaire")
-//		)
-//		.hasSize(26)
-//		;
+		assertThat(termIndex)
+		.asTermVariationsHavingObject("AN-prefAN")
+		.extracting("base.groupingKey", "variant.groupingKey")
+		.contains(
+				tuple("an: national regulation", "an: international regulation"),
+				tuple("an: finite number", "an: infinite number"),
+				tuple("an: conventional horizontal-axis", "an: unconventional horizontal-axis"),
+				tuple("an: favourable conservation", "an: unfavourable conservation"),
+				tuple("an: national standard", "an: international standard"),
+				tuple("an: transient time", "an: subtransient time"),
+				tuple("an: rotational motion", "an: irrotational motion"),
+				tuple("an: sound emission", "an: infrasound emission"),
+				tuple("an: national wind", "an: international wind"),
+				tuple("an: sufficient time", "an: insufficient time"),
+				tuple("an: direct employment", "an: indirect employment"),
+				tuple("an: audible sound", "an: subaudible sound"),
+				tuple("an: geographical region", "an: biogeographical region"),
+				tuple("an: national level", "an: supranational level"),
+				tuple("an: direct impact", "an: indirect impact"),
+				tuple("an: twisted blade", "an: untwisted blade"),
+				tuple("an: direct benefit", "an: indirect benefit"),
+				tuple("an: significant effect", "an: insignificant effect"),
+				tuple("an: national energy", "an: international energy"),
+				tuple("an: sufficient evidence", "an: insufficient evidence"),
+				tuple("an: sufficient information", "an: insufficient information"),
+				tuple("an: dominant sound", "an: predominant sound"),
+				tuple("an: active power", "an: reactive power"),
+				tuple("an: national commitment", "an: international commitment"),
+				tuple("an: significant area", "an: insignificant area"),
+				tuple("an: sound level", "an: infrasound level"),
+				tuple("an: audible level", "an: inaudible level"),
+				tuple("an: proper installation", "an: improper installation"),
+				tuple("an: national agency", "an: international agency"),
+				tuple("an: limited amount", "an: unlimited amount"),
+				tuple("an: suitable site", "an: unsuitable site"),
+				tuple("an: national institute", "an: international institute")
+		)
+		.hasSize(32)
+		;
 		
 	}
 
 
 	@Test
 	public void testSyntacticalVariationsWithDerivates() {
-		fail("No prefix yet in english resources");
-//		assertThat(termIndex)
-//			.asTermVariationsHavingObject("S-R2D-NPN")
-//			.hasSize(77)
-//			.extracting("base.groupingKey", "variant.groupingKey")
-//			.contains(
-//					tuple("npn: production de électricité", "na: production électrique"),
-//					tuple("npn: étude de environnement", "na: étude environnemental"),
-//					tuple("npn: génération de électricité", "na: génération électrique")
-//			)
-//			;
+		assertThat(termIndex)
+			.asTermVariationsHavingObject("S-R2D-NN1")
+			.extracting("base.groupingKey", "variant.groupingKey")
+			.contains(
+				tuple("nn: rotation speed", "an: rotational speed"),
+				tuple("nn: azimuth position", "an: azimuthal position"),
+				tuple("nn: gas cylinder", "an: gaseous cylinder"),
+				tuple("nn: environment research", "an: environmental research"),
+				tuple("nn: operation phase", "an: operational phase"),
+				tuple("nn: experiment field", "an: experimental field"),
+				tuple("nn: operation cost", "an: operational cost"),
+				tuple("nn: environment condition", "an: environmental condition"),
+				tuple("nn: environment report", "an: environmental report"),
+				tuple("nn: environment protection", "an: environmental protection"),
+				tuple("nn: experiment datum", "an: experimental datum"),
+				tuple("nn: magnet field", "an: magnetic field"),
+				tuple("nn: addition power", "an: additional power"),
+				tuple("nn: government agency", "an: governmental agency"),
+				tuple("nn: territory planning", "an: territorial planning"),
+				tuple("nn: axis wind", "an: axial wind"),
+				tuple("nn: season change", "an: seasonal change"),
+				tuple("nn: industry noise", "an: industrial noise"),
+				tuple("nn: axis direction", "an: axial direction")
+			)
+			.hasSize(19)
+		;
 	}
 
 	@Test
 	public void testPrefixes() {
-		fail("No prefix yet in english resources");
-//		assertThat(termIndex)
-//			.containsVariation("a: multipolaire", VariationType.IS_PREFIX_OF, "a: polaire")
-//			.containsVariation("n: cofinancement", VariationType.IS_PREFIX_OF, "n: financement")
-//			.containsVariation("a: tripale", VariationType.IS_PREFIX_OF, "n: pale")
-//			.containsVariation("a: bipale", VariationType.IS_PREFIX_OF, "n: pale")
-//			.containsVariation("a: asynchrone", VariationType.IS_PREFIX_OF, "a: synchrone")
-//			.containsVariation("n: déréglementation", VariationType.IS_PREFIX_OF, "n: réglementation")
-//			;
+		assertThat(termIndex)
+			.containsVariation("n: postconstruction", VariationType.IS_PREFIX_OF, "n: construction")
+			.containsVariation("n: microgeneration", VariationType.IS_PREFIX_OF, "n: generation")
+			.containsVariation("a: subtransient", VariationType.IS_PREFIX_OF, "a: transient")
+			.containsVariation("n: incompetence", VariationType.IS_PREFIX_OF, "n: competence")
+			.containsVariation("a: subacoustic", VariationType.IS_PREFIX_OF, "a: acoustic")
+			;
 	}
 	
 	@Test
 	public void testDerivations() {
-		fail("No derivation yet in english resources");
-//		assertThat(termIndex)
-//			.containsVariation("n: hydroélectricité", VariationType.DERIVES_INTO, "a: hydroélectrique")
-//			.containsVariation("n: stator", VariationType.DERIVES_INTO, "a: statorique")
-//			.containsVariation("n: usage", VariationType.DERIVES_INTO, "n: usager")
-//			.containsVariation("n: support", VariationType.DERIVES_INTO, "n: supportage")
-//			.containsVariation("n: commerce", VariationType.DERIVES_INTO, "a: commercial")
-//			;
+		assertThat(termIndex)
+			.containsVariation("n: photograph", VariationType.DERIVES_INTO, "a: photographic")
+			.containsVariation("n: ethic", VariationType.DERIVES_INTO, "a: ethical")
+			.containsVariation("n: institution", VariationType.DERIVES_INTO, "a: institutional")
+			.containsVariation("n: industry", VariationType.DERIVES_INTO, "a: industrial")
+			;
 	}
 
 

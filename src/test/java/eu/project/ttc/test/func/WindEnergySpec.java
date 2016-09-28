@@ -26,6 +26,8 @@ package eu.project.ttc.test.func;
 import static eu.project.ttc.test.TermSuiteAssertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.List;
 
 import org.assertj.core.api.iterable.Extractor;
@@ -41,12 +43,16 @@ import com.google.common.cache.LoadingCache;
 import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.engines.desc.TermSuiteCollection;
+import eu.project.ttc.models.CompoundType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.Word;
 import eu.project.ttc.resources.MemoryTermIndexManager;
 import eu.project.ttc.tools.TermSuitePipeline;
 import eu.project.ttc.tools.utils.ControlFilesGenerator;
+import eu.project.ttc.utils.TermIndexUtils;
 
 public abstract class WindEnergySpec {
 
@@ -140,6 +146,20 @@ public abstract class WindEnergySpec {
 
 	@Test
 	public void weControlPrefixes() {
+		
+		try(FileWriter w = new FileWriter("prefixes-en.tsv")) {
+			for(TermVariation tv:TermIndexUtils.selectTermVariations(termIndex, VariationType.IS_PREFIX_OF)) {
+				w.write(String.format("%s\t%s\t%s%n",
+					tv.getBase(),	
+					tv.getVariant(),
+					VariationType.IS_PREFIX_OF)
+				);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		
 		assertThat(termIndex)
 			.asTermVariations(VariationType.IS_PREFIX_OF)
 			.extracting("base.groupingKey", "variant.groupingKey")
@@ -150,17 +170,46 @@ public abstract class WindEnergySpec {
 
 	@Test
 	public void weControlDerivates() {
+		
+		try(FileWriter w = new FileWriter("derivates-en.tsv")) {
+			for(TermVariation tv:TermIndexUtils.selectTermVariations(termIndex, VariationType.DERIVES_INTO)) {
+				w.write(String.format("%s\t%s\t%s\t%s%n",
+					tv.getBase(),	
+					tv.getVariant(),
+					VariationType.DERIVES_INTO,	
+					tv.getInfo())
+				);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
 		assertThat(termIndex)
 		.asTermVariations(VariationType.DERIVES_INTO)
 		.extracting("info", "base.groupingKey", "variant.groupingKey")
 		.containsOnly(
 				ControlFiles.derivateVariationTuples(lang, "we")
 		);
-
 	}
 
 	@Test
 	public void weCompounds() {
+		
+//		try(FileWriter w = new FileWriter("prefixes.tsv")) {
+//			for(Term term:termIndex.getTerms()) {
+//				if(term.isSingleWord() && term.isCompound()) {
+//					Word word = term.getWords().get(0).getWord();
+//					w.write(String.format("%s\t%s\t%s%n",
+//						term.getGroupingKey(),	
+//						word.getCompoundType().getShortName(),	
+//						ControlFilesGenerator.toCompoundString(term))
+//					);
+//				}
+//			}
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+		
 		assertThat(termIndex)
 			.asCompoundList()
 			.extracting(new Extractor<Term, Tuple>() {
