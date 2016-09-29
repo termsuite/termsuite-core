@@ -7,6 +7,7 @@ import java.nio.file.Path;
 import java.nio.file.PathMatcher;
 import java.nio.file.Paths;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import org.apache.commons.io.FileUtils;
@@ -17,7 +18,7 @@ import eu.project.ttc.api.Document;
 import eu.project.ttc.api.TermSuiteException;
 import eu.project.ttc.engines.desc.Lang;
 
-public class FileSystemHelper {
+public class FileSystemUtils {
 	
 	public static Function<Path, Document> pathToDocumentMapper(Lang lang, String encoding) {
 		return path -> {
@@ -32,15 +33,40 @@ public class FileSystemHelper {
 		};
 	}
 	
-	public static <T> Stream<T> pathWalker(String directory, String pattern,
-			Function<? super Path, T> pathMapper) {
-		Path directoryPath = Paths.get(directory);
+
+	public static long pathDocumentCount(String directory, String pattern) {
 		String glob = String.format("glob:%s", pattern);
 		
+		Path directoryPath = check(directory);
+		
+		final PathMatcher pathMatcher = FileSystems.getDefault().getPathMatcher(
+				glob);
+		
+		try {
+			return Files.walk(directoryPath).filter(path -> 
+				pathMatcher.matches(path) && path.toFile().isFile()
+			).collect(Collectors.counting());
+			
+		} catch (IOException e) {
+			throw new TermSuiteException(e);
+		}		
+	}
+
+
+	private static Path check(String directory) {
+		Path directoryPath = Paths.get(directory);
 		Preconditions.checkArgument(directoryPath.toFile().exists(),
 				"Directory %s does not exist", directory);
 		Preconditions.checkArgument(directoryPath.toFile().isDirectory(),
 				"Not a directory: %s", directory);
+		return directoryPath;
+	}
+			
+	public static <T> Stream<T> pathWalker(String directory, String pattern,
+			Function<? super Path, T> pathMapper) {
+		String glob = String.format("glob:%s", pattern);
+		
+		Path directoryPath = check(directory);
 		
 		final PathMatcher pathMatcher = FileSystems.getDefault().getPathMatcher(
 				glob);

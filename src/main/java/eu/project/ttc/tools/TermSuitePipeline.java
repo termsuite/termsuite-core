@@ -55,6 +55,7 @@ import com.google.common.collect.Maps;
 
 import eu.project.ttc.engines.CasStatCounter;
 import eu.project.ttc.engines.Contextualizer;
+import eu.project.ttc.engines.DocumentLogger;
 import eu.project.ttc.engines.EvalEngine;
 import eu.project.ttc.engines.ExtensionDetecter;
 import eu.project.ttc.engines.FixedExpressionSpotter;
@@ -1542,6 +1543,20 @@ public class TermSuitePipeline {
 				);
 
 			return aggregateAndReturn(ae, "Exporting annotations in TSV to " + toDirectoryPath, 0);
+		} catch(Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
+	}
+
+	public TermSuitePipeline aeDocumentLogger(long nbDocument)  {
+		
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					DocumentLogger.class,
+					DocumentLogger.NB_DOCUMENTS, nbDocument
+				);
+
+			return aggregateAndReturn(ae, "Document logging", 0);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
 		}

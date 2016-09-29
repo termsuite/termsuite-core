@@ -31,7 +31,7 @@ import eu.project.ttc.history.TermHistory;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.readers.TermSuiteJsonCasDeserializer;
 import eu.project.ttc.tools.TermSuitePipeline;
-import eu.project.ttc.tools.api.internal.FileSystemHelper;
+import eu.project.ttc.tools.api.internal.FileSystemUtils;
 import eu.project.ttc.tools.api.internal.PipelineUtils;
 import eu.project.ttc.utils.JCasUtils;
 
@@ -77,6 +77,11 @@ public class TerminoExtractor {
 	private boolean preprocessed = false;
 	
 	/*
+	 * The total number of documents
+	 */
+	private long nbDocuments = -1;
+	
+	/*
 	 * The input streams.
 	 */
 	// document stream when the input is not preprocessed
@@ -119,7 +124,11 @@ public class TerminoExtractor {
 			}
 		};
 
-		return fromPreprocessedDocumentStream(lang, FileSystemHelper.pathWalker(directory, "**/*.json", mapper));
+		return fromPreprocessedDocumentStream(
+				lang, 
+				FileSystemUtils.pathWalker(directory, "**/*.json", mapper),
+				FileSystemUtils.pathDocumentCount(directory, "**/*.json")
+			);
 		
 	}
 
@@ -139,27 +148,33 @@ public class TerminoExtractor {
 			}
 		};
 
-		return fromPreprocessedDocumentStream(lang, FileSystemHelper.pathWalker(directory, "**/*.xmi", mapper));
+		return fromPreprocessedDocumentStream(
+				lang, 
+				FileSystemUtils.pathWalker(directory, "**/*.xmi", mapper),
+				FileSystemUtils.pathDocumentCount(directory, "**/*.xmi")
+			);
 
 	}
 
-	public static TerminoExtractor fromPreprocessedDocumentStream(Lang lang, Stream<JCas> casStream) {
+	public static TerminoExtractor fromPreprocessedDocumentStream(Lang lang, Stream<JCas> casStream, long streamSize) {
 		TerminoExtractor extractor = new TerminoExtractor();
 		extractor.preprocessedCasStream = casStream;
+		extractor.nbDocuments = streamSize;
 		extractor.lang = lang;
 		extractor.preprocessed = true;
 		return extractor;
 	}
 
-	public static TerminoExtractor fromDocumentStream(Lang lang, Stream<Document> documentStream) {
+	public static TerminoExtractor fromDocumentStream(Lang lang, Stream<Document> documentStream, long streamSize) {
 		TerminoExtractor extractor = new TerminoExtractor();
 		extractor.documentStream = documentStream;
 		extractor.lang = lang;
+		extractor.nbDocuments = streamSize;
 		return extractor;
 	}
 	
 	public static TerminoExtractor fromDocumentCollection(Lang lang, Collection<Document> documents) {
-		return fromDocumentStream(lang, documents.stream());
+		return fromDocumentStream(lang, documents.stream(), documents.size());
 	}
 
 	public static TerminoExtractor fromTxtCorpus(Lang lang, String directory, String pattern) {
@@ -169,15 +184,19 @@ public class TerminoExtractor {
 	public static TerminoExtractor fromTxtCorpus(Lang lang, String directory, String pattern, String encoding) {
 		return fromDocumentStream(
 				lang, 
-				FileSystemHelper.pathWalker(
+				FileSystemUtils.pathWalker(
 						directory, 
 						pattern, 
-						FileSystemHelper.pathToDocumentMapper(lang, encoding)));
+						FileSystemUtils.pathToDocumentMapper(lang, encoding)),
+				FileSystemUtils.pathDocumentCount(directory, pattern));
 	}
 
 	
 	public static TerminoExtractor fromSinglePreprocessedDocument(Lang lang, JCas cas) {
-		return fromPreprocessedDocumentStream(lang, Lists.newArrayList(cas).stream());
+		return fromPreprocessedDocumentStream(
+				lang, 
+				Lists.newArrayList(cas).stream(),
+				1);
 	}
 
 	
@@ -244,7 +263,11 @@ public class TerminoExtractor {
 					contextualizerScope, 
 					contextualizerMode == ContextualizerMode.ON_ALL_TERMS ? true : false);
 		
-		pipeline.aeSpecificityComputer()
+		if(nbDocuments != -1)
+			pipeline.aeDocumentLogger(this.nbDocuments);
+		
+		pipeline
+				.aeSpecificityComputer()
 				.aeCompostSplitter()
 				.aePrefixSplitter()
 				.aeSuffixDerivationDetector()

@@ -20,7 +20,7 @@ import com.google.common.collect.Lists;
 
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.tools.TermSuitePipeline;
-import eu.project.ttc.tools.api.internal.FileSystemHelper;
+import eu.project.ttc.tools.api.internal.FileSystemUtils;
 import eu.project.ttc.utils.JCasUtils;
 
 public class TermSuitePreprocessor {
@@ -31,6 +31,7 @@ public class TermSuitePreprocessor {
 	
 	private String treeTaggerHome = null;
 
+	private long nbDocuments = -1;
 	
 	public static TermSuitePreprocessor fromTextString(Lang lang, String text) {
 		return fromSingleDocument(lang, new Document(lang, "file://inline.text", text));
@@ -40,15 +41,16 @@ public class TermSuitePreprocessor {
 		return fromDocumentCollection(lang, Lists.newArrayList(document));
 	}
 
-	public static TermSuitePreprocessor fromDocumentStream(Lang lang, Stream<Document> documentStream) {
+	public static TermSuitePreprocessor fromDocumentStream(Lang lang, Stream<Document> documentStream, long nbDocuments) {
 		TermSuitePreprocessor extractor = new TermSuitePreprocessor();
 		extractor.documentStream = documentStream;
 		extractor.lang = lang;
+		extractor.nbDocuments  = nbDocuments;
 		return extractor;
 	}
 	
 	public static TermSuitePreprocessor fromDocumentCollection(Lang lang, Collection<Document> documents) {
-		return fromDocumentStream(lang, documents.stream());
+		return fromDocumentStream(lang, documents.stream(), documents.size());
 	}
 
 	
@@ -74,10 +76,12 @@ public class TermSuitePreprocessor {
 	public static TermSuitePreprocessor fromTxtCorpus(Lang lang, String directory, String pattern, String encoding) {
 		return fromDocumentStream(
 				lang, 
-				FileSystemHelper.pathWalker(
+				FileSystemUtils.pathWalker(
 						directory, 
 						pattern, 
-						FileSystemHelper.pathToDocumentMapper(lang, encoding)));
+						FileSystemUtils.pathToDocumentMapper(lang, encoding)),
+				FileSystemUtils.pathDocumentCount(directory, pattern)
+			);
 	}
 
 	private TermSuitePreprocessor() {}
@@ -90,8 +94,12 @@ public class TermSuitePreprocessor {
 	public Stream<JCas> stream() {
 		Preconditions.checkState(treeTaggerHome != null, "TreeTagger home is null. Please use #setTreeTaggerHome()");
 
-		TermSuitePipeline pipeline = TermSuitePipeline.create(lang.getCode())
-				.aeWordTokenizer()
+		TermSuitePipeline pipeline = TermSuitePipeline.create(lang.getCode());
+		
+		if(nbDocuments != -1)
+			pipeline.aeDocumentLogger(nbDocuments);
+		
+		pipeline.aeWordTokenizer()
 				.setTreeTaggerHome(treeTaggerHome)
 				.aeTreeTagger()
 				.aeStemmer()
