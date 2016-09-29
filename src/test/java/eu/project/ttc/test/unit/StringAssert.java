@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.assertj.core.api.AbstractAssert;
 
+import com.google.common.base.Joiner;
 import com.google.common.base.Objects;
 import com.google.common.base.Splitter;
 
@@ -46,7 +47,7 @@ public class StringAssert extends AbstractAssert<StringAssert, String> {
 					lineNum,
 					expectedValues.length,
 					actualValues.length, 
-					actualValues
+					Joiner.on(",").join(actualValues)
 				);
 			return this;
 		}

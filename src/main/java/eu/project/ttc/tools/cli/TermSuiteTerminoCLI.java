@@ -56,6 +56,7 @@ import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 import org.apache.commons.cli.PosixParser;
+import org.apache.uima.UIMAException;
 import org.apache.uima.fit.factory.JCasFactory;
 import org.apache.uima.jcas.JCas;
 import org.slf4j.Logger;
@@ -144,14 +145,14 @@ public class TermSuiteTerminoCLI {
 	/*
 	 * Collection mode
 	 */
-	private static CollectionMode collectionMode = CollectionMode.FILESYSTEM;
+	private CollectionMode collectionMode = CollectionMode.FILESYSTEM;
 	
 	
 	/*
 	 * The mongo db options
 	 */
-	private static Optional<String> mongoStoreDBURL = Optional.absent();
-	private static boolean mongoStoreSoftLinked = false;
+	private Optional<String> mongoStoreDBURL = Optional.absent();
+	private boolean mongoStoreSoftLinked = false;
 
 	
 	/** Mate tagger parameter **/
@@ -212,79 +213,79 @@ public class TermSuiteTerminoCLI {
 	
 	
 	// tagger argument
-	private static Tagger tagger = Tagger.TreeTagger;
+	private Tagger tagger = Tagger.TreeTagger;
 
-    private static String resourcePack = null;
-    private static String corpusPath = null;
-    private static Lang language = null;
-    private static String encoding = "UTF-8";
+    private Optional<String> resourcePack = Optional.absent();
+    private String corpusPath = null;
+    private Lang language = null;
+    private String encoding = "UTF-8";
 //    private static String pipelineCRInputDirectory = null;
-    private static String taggerHome = "";
-    private static String inlineText = null;
-	private static TermSuiteCollection corpusType = TermSuiteCollection.TXT;
-	private static float graphicalSimilarityThreshold = 0.9f;
+    private String taggerHome = "";
+    private String inlineText = null;
+	private TermSuiteCollection corpusType = TermSuiteCollection.TXT;
+	private float graphicalSimilarityThreshold = 0.9f;
 
 	/*
 	 * Istex parameters
 	 */
-	private static Optional<String> istexAPIUrl = Optional.absent();
-	private static Optional<List<String>> istexIds = Optional.absent();
+	private Optional<String> istexAPIUrl = Optional.absent();
+	private Optional<List<String>> istexIds = Optional.absent();
 	
 	/*
 	 * contetxualizer
 	 */
-	private static boolean contextualize = false;
-	private static boolean contextualizeAllTerms = false;
-	private static boolean allowMWTInContexts = false;
-	private static int contextScope = 3;
+	private boolean contextualize = false;
+	private boolean contextualizeAllTerms = false;
+	private boolean allowMWTInContexts = false;
+	private int contextScope = 3;
 
 
 	/*
 	 * Cleaning parameters
 	 */
-	private static Optional<Float> cleaningThreshold = Optional.of(2f);
-	private static Optional<Integer> cleaningTopN = Optional.absent();
-	private static Optional<TermProperty> cleaningProperty = Optional.of(TermProperty.WR_LOG);
-	private static boolean keepVariantsWhileCleaning = true;
+	private Optional<Float> cleaningThreshold = Optional.of(2f);
+	private Optional<Integer> cleaningTopN = Optional.absent();
+	private Optional<TermProperty> cleaningProperty = Optional.of(TermProperty.WR_LOG);
+	private boolean keepVariantsWhileCleaning = true;
 	
 	/*
 	 * Max size periodic filtering
 	 */
-	private static Optional<TermProperty> periodicFilteringProperty = Optional.absent();
-	private static int maxSizeFilteringMaxSize = 20000;
+	private Optional<TermProperty> periodicFilteringProperty = Optional.absent();
+	private int maxSizeFilteringMaxSize = 20000;
 	
 	
 	/*
 	 * Spotter params
 	 */
-	private static boolean spotWithOccurrences = true;
+	private boolean spotWithOccurrences = true;
 	
 	
 	
 	/*
 	 * Export params
 	 */
-	private static Optional<String> tsvFile = Optional.absent();
-	private static Optional<TermProperty[]> tsvProperties = Optional.absent();
-	private static boolean tsvShowVariantScores = false;
+	private Optional<String> tsvFile = Optional.absent();
+	private Optional<TermProperty[]> tsvProperties = Optional.absent();
+	private boolean tsvShowVariantScores = false;
 	
-	private static Optional<String> jsonFile = Optional.absent();
-	private static Optional<String> tbxFile = Optional.absent();
+	private Optional<String> jsonFile = Optional.absent();
+	private Optional<String> tbxFile = Optional.absent();
 
-	private static Optional<String> jsonCasFile = Optional.absent();
+	private Optional<String> jsonCasFile = Optional.absent();
 	
 
 	/*
 	 *  compost params
 	 */
-	private static Optional<Float> compostAlpha = Optional.absent();
-	private static Optional<Float> compostBeta = Optional.absent();
-	private static Optional<Float> compostGamma = Optional.absent();
-	private static Optional<Float> compostDelta = Optional.absent();
-	private static Optional<Integer> compostMinComponentSize = Optional.absent();
-	private static Optional<Integer> compostMaxComponentNum = Optional.absent();
-	private static Optional<Float> compostSimilarityThreshold = Optional.of(1f);
-	private static Optional<Float> compostScoreThreshold = Optional.absent();
+	private Optional<Float> compostAlpha = Optional.absent();
+	private Optional<Float> compostBeta = Optional.absent();
+	private Optional<Float> compostGamma = Optional.absent();
+	private Optional<Float> compostDelta = Optional.absent();
+	private Optional<Integer> compostMinComponentSize = Optional.absent();
+	private Optional<Integer> compostMaxComponentNum = Optional.absent();
+	private Optional<Float> compostSimilarityThreshold = Optional.of(1f);
+	private Optional<Float> compostScoreThreshold = Optional.absent();
 
 	/*
 	 * Ouput and display params
@@ -298,7 +299,11 @@ public class TermSuiteTerminoCLI {
 	 *            Command line arguments
      * @throws UnsupportedEncodingException 
 	 */
-	public static void main(String[] args) throws UnsupportedEncodingException {
+	public static void main(String[] args) throws Exception {
+		new TermSuiteTerminoCLI().run(args);
+	}
+
+	private void run(String[] args) throws IOException, UIMAException, UnsupportedEncodingException {
 		File logDir = new File("logs");
 		if(!logDir.exists()) 
 			logDir.mkdir();
@@ -306,7 +311,6 @@ public class TermSuiteTerminoCLI {
 		TermSuiteCLIUtils.logToFile(logPath);
 		Stopwatch sw = Stopwatch.createStarted();
 		LOGGER.info("Logging to {}", logPath);
-		try {
 			
 			// usage
 			// java -DconfigFile=myPropertiesFileName -Xms1g  -Xmx2g -cp ttc-term-suite-1.3.jar eu.project.ttc.tools.cli.TermSuiteSpotterCLI
@@ -347,10 +351,12 @@ public class TermSuiteTerminoCLI {
 				}
 
 				// resource
-				if(resourcePack.endsWith(".jar"))
-					pipeline.setResourceJar(resourcePack);
-				else
-					pipeline.setResourceDir(resourcePack);
+				if(resourcePack.isPresent()) {
+					if(resourcePack.get().endsWith(".jar"))
+						pipeline.setResourceJar(resourcePack.get());
+					else
+						pipeline.setResourceDir(resourcePack.get());
+				}
 				
 				// mongodb
 				if(mongoStoreDBURL.isPresent())
@@ -407,16 +413,6 @@ public class TermSuiteTerminoCLI {
 				// graphical variant gathering
 				pipeline.setGraphicalVariantSimilarityThreshold(graphicalSimilarityThreshold);
 				pipeline.aeGraphicalVariantGatherer();
-				
-				// filtering
-				if(cleaningThreshold.isPresent()) {
-					pipeline.setKeepVariantsWhileCleaning(keepVariantsWhileCleaning);
-					pipeline.aeThresholdCleaner(
-							cleaningProperty.get(), cleaningThreshold.get());
-				} else if(cleaningTopN.isPresent()) {
-					pipeline.setKeepVariantsWhileCleaning(keepVariantsWhileCleaning);
-					pipeline.aeTopNCleaner(cleaningProperty.get(), cleaningTopN.get());
-				}
 
 				if(periodicFilteringProperty.isPresent())
 					pipeline.aeMaxSizeThresholdCleaner(periodicFilteringProperty.get(), maxSizeFilteringMaxSize);
@@ -433,6 +429,17 @@ public class TermSuiteTerminoCLI {
 					.aeScorer()
 					.aeRanker(TermProperty.SPECIFICITY, true);
 				
+				
+				// filtering
+				if(cleaningThreshold.isPresent()) {
+					pipeline.setKeepVariantsWhileCleaning(keepVariantsWhileCleaning);
+					pipeline.aeThresholdCleaner(
+							cleaningProperty.get(), cleaningThreshold.get());
+				} else if(cleaningTopN.isPresent()) {
+					pipeline.setKeepVariantsWhileCleaning(keepVariantsWhileCleaning);
+					pipeline.aeTopNCleaner(cleaningProperty.get(), cleaningTopN.get());
+				}
+
 				// stats
 				pipeline.haeCasStatCounter("at end of pipeline");
 
@@ -487,11 +494,6 @@ public class TermSuiteTerminoCLI {
 			} catch (ParseException e) {
 				TermSuiteCLIUtils.printUsage(e, USAGE, options); 
 			}
-
-		} catch (Exception e) {
-			e.printStackTrace(System.err);
-            LOGGER.error(e.getMessage());
-		}
 	}
 
 	private static Options declareOptions() {
@@ -763,7 +765,7 @@ public class TermSuiteTerminoCLI {
 		return options;
 	}
 
-	public static void readArguments(CommandLine line) throws IOException {
+	public void readArguments(CommandLine line) throws IOException {
 		
 
 		/*
@@ -799,7 +801,8 @@ public class TermSuiteTerminoCLI {
 					+ PATH_TO_CORPUS + ", --" 
 					+ ISTEX_API_URL + "  must be set.");
 
-		resourcePack = line.getOptionValue(PATH_TO_RESOURCE_PACK);
+		if(line.hasOption(PATH_TO_RESOURCE_PACK))
+			resourcePack = Optional.of(line.getOptionValue(PATH_TO_RESOURCE_PACK));
 		
 		if(line.hasOption(NO_OCCURRENCE))
 			spotWithOccurrences = false;
@@ -868,14 +871,27 @@ public class TermSuiteTerminoCLI {
 		if(line.hasOption(CONTEXT_SCOPE)) {
 			contextScope = Integer.parseInt(line.getOptionValue(CONTEXT_SCOPE));
 		}
-		
-		if(line.hasOption(CLEAN_THRESHOLD))
-			cleaningThreshold = Optional.of(Float.parseFloat(line.getOptionValue(CLEAN_THRESHOLD)));
 
-		if(line.hasOption(CLEAN_TOP_N)) 
+		Preconditions.checkArgument(
+				!(line.hasOption(CLEAN_TOP_N) && line.hasOption(CLEAN_THRESHOLD)),
+				"%s and %s cannot be set together", CLEAN_TOP_N, CLEAN_THRESHOLD); 
+
+		if(line.hasOption(CLEAN_THRESHOLD)) {
+			cleaningThreshold = Optional.of(Float.parseFloat(line.getOptionValue(CLEAN_THRESHOLD)));
+			cleaningTopN = Optional.absent();
+		}
+
+		if(line.hasOption(CLEAN_TOP_N)) {
 			cleaningTopN = Optional.of(Integer.parseInt(line.getOptionValue(CLEAN_TOP_N)));
+			cleaningThreshold = Optional.absent();
+		}
 
 		if(line.hasOption(CLEAN_PROPERTY)) {
+			Preconditions.checkArgument(
+					line.hasOption(CLEAN_TOP_N) || line.hasOption(CLEAN_THRESHOLD),
+					"One of %s or %s must be set together with %s",
+					CLEAN_TOP_N, CLEAN_THRESHOLD, CLEAN_PROPERTY);
+			
 			cleaningProperty = Optional.of(TermProperty.forName(line.getOptionValue(CLEAN_PROPERTY)));
 		}
 		

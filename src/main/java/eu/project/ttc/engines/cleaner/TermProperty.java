@@ -147,6 +147,7 @@ public enum TermProperty {
 		switch(this) {
 		case WR:
 			return (double)termIndex.getWRMeasure().getValue(t);
+		case SPECIFICITY:
 		case WR_LOG:
 			return (double)termIndex.getWRLogMeasure().getValue(t);
 		case WR_LOG_Z_SCORE:

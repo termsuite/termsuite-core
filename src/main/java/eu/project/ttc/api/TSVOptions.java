@@ -16,7 +16,7 @@ public class TSVOptions {
 	
 	public TSVOptions setProperties(Iterable<TermProperty> properties) {
 		List<TermProperty> list = Lists.newArrayList(properties);
-		return setProperties((TermProperty[]) list.toArray()); 
+		return setProperties(list.toArray(new TermProperty[list.size()])); 
 	}
 	
 	public TSVOptions setProperties(TermProperty... properties) {

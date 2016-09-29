@@ -44,6 +44,7 @@ import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.test.func.tools.builders.TermSuitePreprocessorSpec;
 import eu.project.ttc.test.func.tools.builders.TerminoExtractorSpec;
 import eu.project.ttc.test.func.tools.builders.TerminoFiltererSpec;
+import eu.project.ttc.tools.cli.TermSuiteTerminoCLI;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
@@ -51,6 +52,7 @@ import eu.project.ttc.test.func.tools.builders.TerminoFiltererSpec;
 	EnglishWindEnergySpec.class,
 	TermSuitePreprocessorSpec.class,
 	TerminoFiltererSpec.class,
+	TermSuiteTerminoCLI.class,
 	TerminoExtractorSpec.class
 	})
 public class FunctionalTests {
@@ -60,6 +62,7 @@ public class FunctionalTests {
 	public static final Path CORPUS2_PATH=Paths.get("src", "test", "resources", "eu", "project", "ttc", "test", "corpus", "corpus2");
 	public static final Path CORPUS1_PATH=Paths.get("src", "test", "resources", "eu", "project", "ttc", "test", "corpus", "corpus1");
 	
+	public static final String CORPUS_WESHORT_PATH="eu/project/ttc/test/corpus/weshort/";
 	public static final String CORPUS_WE_PATH="eu/project/ttc/test/corpus/we/";
 	private static final String FUNCTION_TESTS_CONFIG = "termsuite-test.properties";
 	private static final String PROP_TREETAGGER_HOME_PATH = "treetagger.home.path";
@@ -75,6 +78,10 @@ public class FunctionalTests {
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
+	}
+
+	public static String getCorpusWEShortPath(Lang lang) {
+		return "src/test/resources/" + CORPUS_WESHORT_PATH + lang.getName().toLowerCase() + "/txt/";
 	}
 
 	public static String getCorpusWEPath(Lang lang) {
