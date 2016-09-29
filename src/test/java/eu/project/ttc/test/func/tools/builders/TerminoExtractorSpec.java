@@ -77,7 +77,7 @@ public class TerminoExtractorSpec {
 
 	@Test
 	public void fromCustomDocumentStream() {
-		TermIndex termIndex = TerminoExtractor.fromDocumentStream(Lang.FR, documents.stream())
+		TermIndex termIndex = TerminoExtractor.fromDocumentStream(Lang.FR, documents.stream(), 2)
 			.setTreeTaggerHome(FunctionalTests.getTaggerPath())
 			.execute();
 		

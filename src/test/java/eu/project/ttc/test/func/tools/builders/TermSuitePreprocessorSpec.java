@@ -137,7 +137,7 @@ public class TermSuitePreprocessorSpec {
 	@Test
 	public void testPreprocessorFromDocumentStream() {
 		Iterator<JCas> it = TermSuitePreprocessor
-			.fromDocumentStream(lang, documents.stream())
+			.fromDocumentStream(lang, documents.stream(), 2)
 			.setTreeTaggerHome(FunctionalTests.getTaggerPath())
 			.stream().iterator();
 		
