@@ -37,6 +37,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import eu.project.ttc.engines.morpho.SuffixDerivationExceptionSetter;
+import eu.project.ttc.history.TermHistory;
+import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.VariationType;
 import eu.project.ttc.models.index.MemoryTermIndex;
@@ -44,6 +46,7 @@ import eu.project.ttc.resources.MemoryTermIndexManager;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.test.unit.Fixtures;
 import eu.project.ttc.test.unit.TermFactory;
+import eu.project.ttc.tools.TermSuiteResourceManager;
 import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
 
 public class SuffixDerivationExceptionSetterSpec {
@@ -88,6 +91,21 @@ public class SuffixDerivationExceptionSetterSpec {
 				SuffixDerivationExceptionSetter.class
 			);
 		
+
+		/*
+		 * The history resource
+		 */
+		String  historyResourceName = "Toto";
+		TermSuiteResourceManager.getInstance().clear();
+		TermSuiteResourceManager.getInstance().register(historyResourceName, new TermHistory());
+		ExternalResourceDescription historyResourceDesc = ExternalResourceFactory.createExternalResourceDescription(
+				TermHistoryResource.TERM_HISTORY,
+				TermHistoryResource.class, 
+				historyResourceName
+		);
+		ExternalResourceFactory.bindResource(aeDesc, historyResourceDesc);
+		
+
 
 		/*
 		 * The term index resource

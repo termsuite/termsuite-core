@@ -28,6 +28,7 @@ import eu.project.ttc.test.termino.export.TsvExporterSpec;
 import eu.project.ttc.test.unit.api.TraverserSpec;
 import eu.project.ttc.test.unit.engines.FixedExpressionSpotterSpec;
 import eu.project.ttc.test.unit.engines.GraphicalVariantGathererSpec;
+import eu.project.ttc.test.unit.engines.SuffixDerivationExceptionSetterSpec;
 import eu.project.ttc.test.unit.engines.SyntacticTermGathererSpec;
 import eu.project.ttc.test.unit.engines.TermClassifierSpec;
 import eu.project.ttc.test.unit.engines.morpho.SegmentationSpec;
@@ -79,6 +80,7 @@ import eu.project.ttc.utils.test.CompoundUtilsSpec;
 	PrefixTreeSpec.class,
 	SegmentationParserSpec.class,
 	SuffixDerivationListSpec.class,
+	SuffixDerivationExceptionSetterSpec.class,
 	SuffixDerivationSpec.class,
 	TermClassProvidersSpec.class,
 	HasSingleWordSelectorSpec.class,

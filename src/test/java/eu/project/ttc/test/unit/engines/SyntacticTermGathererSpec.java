@@ -38,6 +38,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import eu.project.ttc.engines.SyntacticTermGatherer;
+import eu.project.ttc.history.TermHistory;
+import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.VariationType;
 import eu.project.ttc.models.index.MemoryTermIndex;
@@ -46,6 +48,7 @@ import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.resources.YamlVariantRules;
 import eu.project.ttc.test.unit.Fixtures;
 import eu.project.ttc.test.unit.TermFactory;
+import eu.project.ttc.tools.TermSuiteResourceManager;
 
 public class SyntacticTermGathererSpec {
 	private MemoryTermIndex termIndex;
@@ -94,6 +97,9 @@ public class SyntacticTermGathererSpec {
 
 	private void makeAE() throws ResourceInitializationException, InvalidXMLException, ClassNotFoundException {
 		MemoryTermIndexManager manager = MemoryTermIndexManager.getInstance();
+		String historyResourceName = "history";
+		TermSuiteResourceManager.getInstance().clear();
+		TermSuiteResourceManager.getInstance().register(historyResourceName, new TermHistory());
 		manager.clear();
 		manager.register(termIndex);
 		AnalysisEngineDescription aeDesc = AnalysisEngineFactory.createEngineDescription(
@@ -101,6 +107,17 @@ public class SyntacticTermGathererSpec {
 			);
 		
 
+		/*
+		 * The history resource
+		 */
+		ExternalResourceDescription historyResourceDesc = ExternalResourceFactory.createExternalResourceDescription(
+				TermHistoryResource.TERM_HISTORY,
+				TermHistoryResource.class, 
+				historyResourceName
+		);
+		ExternalResourceFactory.bindResource(aeDesc, historyResourceDesc);
+
+		
 		/*
 		 * The term index resource
 		 */

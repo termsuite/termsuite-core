@@ -132,7 +132,7 @@ public class TermSuiteUtils {
 	private static String toGroupingKey(StringBuilder patternSb, List<String> lemmas) {
 		return String.format(GROUPING_KEY_FORMAT, 
 				patternSb.toString(), 
-				Joiner.on(TermSuiteConstants.WHITESPACE).join(lemmas)).toLowerCase();
+				Joiner.on(TermSuiteConstants.WHITESPACE).join(lemmas));
 	}
 	
 
