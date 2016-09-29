@@ -133,7 +133,6 @@ import eu.project.ttc.resources.GeneralLanguageResource;
 import eu.project.ttc.resources.ManualSegmentationResource;
 import eu.project.ttc.resources.MateLemmatizerModel;
 import eu.project.ttc.resources.MateTaggerModel;
-import eu.project.ttc.resources.MemoryTermIndexManager;
 import eu.project.ttc.resources.ObserverResource;
 import eu.project.ttc.resources.PrefixTree;
 import eu.project.ttc.resources.ReferenceTermList;
@@ -303,8 +302,8 @@ public class TermSuitePipeline {
 	public static TermSuitePipeline create(TermIndex termIndex) {
 		Preconditions.checkNotNull(termIndex.getName(), "The term index must have a name before it can be used in TermSuitePipeline");
 		
-		if(!MemoryTermIndexManager.getInstance().containsTermIndex(termIndex.getName()))
-			MemoryTermIndexManager.getInstance().register(termIndex);
+		if(!TermSuiteResourceManager.getInstance().contains(termIndex.getName()))
+			TermSuiteResourceManager.getInstance().register(termIndex.getName(), termIndex);
 		
 		TermSuitePipeline pipeline = create(termIndex.getLang().getCode());
 		pipeline.emptyCollection();
@@ -1607,11 +1606,11 @@ public class TermSuitePipeline {
 					TermIndexResource.class, 
 					termIndex.get().getName());
 			
-			MemoryTermIndexManager manager = MemoryTermIndexManager.getInstance();
+			TermSuiteResourceManager manager = TermSuiteResourceManager.getInstance();
 			
 			// register the term index if not in term index manager
-			if(!manager.containsTermIndex(termIndex.get().getName()))
-				manager.register(termIndex.get());
+			if(!manager.contains(termIndex.get().getName()))
+				manager.register(termIndex.get().getName(), termIndex.get());
 		}
 		return termIndexResourceDesc;
 		

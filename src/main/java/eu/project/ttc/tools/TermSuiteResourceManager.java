@@ -23,10 +23,15 @@
 
 package eu.project.ttc.tools;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.nio.charset.Charset;
 import java.util.Map;
 
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Maps;
+
+import eu.project.ttc.api.TermSuiteException;
 
 public class TermSuiteResourceManager {
 	private static TermSuiteResourceManager instance;
@@ -52,14 +57,22 @@ public class TermSuiteResourceManager {
 	
 	public Object get(String resourceName) {
 		Preconditions.checkArgument(
-				this.resources.containsKey(resourceName),
+				this.resources.containsKey(getDecodedName(resourceName)),
 				"No such resource: %s",
-				resourceName);
-		return this.resources.get(resourceName);
+				getDecodedName(resourceName));
+		return this.resources.get(getDecodedName(resourceName));
 	}
 
 	public boolean contains(String resourceName) {
-		return this.resources.containsKey(resourceName);
+			return this.resources.containsKey(getDecodedName(resourceName));
+	}
+
+	private String getDecodedName(String resourceName) {
+		try {
+			return URLDecoder.decode(resourceName, Charset.defaultCharset().name());
+		} catch (UnsupportedEncodingException e) {
+			throw new TermSuiteException(e);
+		}
 	}
 
 

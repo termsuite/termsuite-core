@@ -42,7 +42,6 @@ import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.VariationType;
 import eu.project.ttc.models.index.MemoryTermIndex;
-import eu.project.ttc.resources.MemoryTermIndexManager;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.test.unit.Fixtures;
 import eu.project.ttc.test.unit.TermFactory;
@@ -84,9 +83,10 @@ public class SuffixDerivationExceptionSetterSpec {
 
 
 	private void makeAE() throws ResourceInitializationException, InvalidXMLException, ClassNotFoundException {
-		MemoryTermIndexManager manager = MemoryTermIndexManager.getInstance();
+		TermSuiteResourceManager manager = TermSuiteResourceManager.getInstance();
 		manager.clear();
-		manager.register(termIndex);
+		manager.register(termIndex.getName(), termIndex);
+		
 		AnalysisEngineDescription aeDesc = AnalysisEngineFactory.createEngineDescription(
 				SuffixDerivationExceptionSetter.class
 			);
@@ -96,8 +96,7 @@ public class SuffixDerivationExceptionSetterSpec {
 		 * The history resource
 		 */
 		String  historyResourceName = "Toto";
-		TermSuiteResourceManager.getInstance().clear();
-		TermSuiteResourceManager.getInstance().register(historyResourceName, new TermHistory());
+		manager.register(historyResourceName, new TermHistory());
 		ExternalResourceDescription historyResourceDesc = ExternalResourceFactory.createExternalResourceDescription(
 				TermHistoryResource.TERM_HISTORY,
 				TermHistoryResource.class, 

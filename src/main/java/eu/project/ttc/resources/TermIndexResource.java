@@ -26,6 +26,7 @@ import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.resource.SharedResourceObject;
 
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.tools.TermSuiteResourceManager;
 
 public class TermIndexResource implements SharedResourceObject {
 	/**
@@ -37,7 +38,7 @@ public class TermIndexResource implements SharedResourceObject {
 	private TermIndex termIndex;
 	
 	public void load(DataResource arg0) throws ResourceInitializationException {
-		this.termIndex = MemoryTermIndexManager.getInstance().getIndex(arg0.getUri().toString());
+		this.termIndex = (TermIndex) TermSuiteResourceManager.getInstance().get(arg0.getUri().toString());
 	};
 	
 	public TermIndex getTermIndex() {

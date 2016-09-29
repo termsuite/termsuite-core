@@ -73,8 +73,8 @@ import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.engines.desc.TermSuiteCollection;
 import eu.project.ttc.models.OccurrenceType;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.resources.MemoryTermIndexManager;
 import eu.project.ttc.tools.TermSuitePipeline;
+import eu.project.ttc.tools.TermSuiteResourceManager;
 import eu.project.ttc.utils.FileUtils;
 import eu.project.ttc.utils.TermUtils;
 
@@ -471,14 +471,14 @@ public class TermSuiteTerminoCLI {
 	            	pipeline.run(cas);
 	            	System.err.flush();
 	            	System.out.println("Term index: ");
-					TermIndex index = MemoryTermIndexManager.getInstance().getIndex(termIndexName);
+					TermIndex index = (TermIndex)TermSuiteResourceManager.getInstance().get(termIndexName);
 	            	TermUtils.showIndex(index, System.out, watch);
 	            } else {
 	            	LOGGER.info("Running TermSuite pipeline in corpus mode");
 	            	pipeline.run();
 	            	if(watch.isPresent()) 
 	            		TermUtils.showIndex(
-	            				MemoryTermIndexManager.getInstance().getIndex(termIndexName), 
+	            				(TermIndex)TermSuiteResourceManager.getInstance().get(termIndexName), 
 	            				new PrintStream(System.err, true, "UTF-8"), 
 	            				watch);
 	            }

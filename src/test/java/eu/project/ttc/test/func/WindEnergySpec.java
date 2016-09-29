@@ -43,14 +43,12 @@ import com.google.common.cache.LoadingCache;
 import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.engines.desc.TermSuiteCollection;
-import eu.project.ttc.models.CompoundType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.models.VariationType;
-import eu.project.ttc.models.Word;
-import eu.project.ttc.resources.MemoryTermIndexManager;
 import eu.project.ttc.tools.TermSuitePipeline;
+import eu.project.ttc.tools.TermSuiteResourceManager;
 import eu.project.ttc.tools.utils.ControlFilesGenerator;
 import eu.project.ttc.utils.TermIndexUtils;
 
@@ -100,7 +98,9 @@ public abstract class WindEnergySpec {
 	}
 
 	protected static TermIndex runPipeline(Lang lang) {
-		MemoryTermIndexManager.getInstance().clear();
+		TermSuiteResourceManager manager = TermSuiteResourceManager.getInstance();
+		manager.clear();
+		
 		TermSuitePipeline pipeline = TermSuitePipeline.create(lang.getCode())
 			.setCollection(TermSuiteCollection.TXT, FunctionalTests.getCorpusWEPath(lang), "UTF-8")
 			.aeWordTokenizer()

@@ -42,7 +42,6 @@ import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.VariationType;
-import eu.project.ttc.resources.MemoryTermIndexManager;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.test.unit.Fixtures;
 import eu.project.ttc.test.unit.TermFactory;
@@ -67,10 +66,10 @@ public class GraphicalVariantGathererSpec {
 	
 	
 	private TermIndex termIndex() {
-		MemoryTermIndexManager manager = MemoryTermIndexManager.getInstance();
+		TermSuiteResourceManager manager = TermSuiteResourceManager.getInstance();
 		manager.clear();
 		TermIndex termIndex = Fixtures.emptyTermIndex();
-		manager.register(termIndex);
+		manager.register(termIndex.getName(), termIndex);
 		TermFactory termFactory = new TermFactory(termIndex);
 		tetetete = termFactory.create("N:tetetete|tetetete");
 		tetetetx = termFactory.create("N:tetetetx|tetetetx");
@@ -83,20 +82,18 @@ public class GraphicalVariantGathererSpec {
 
 
 	private AnalysisEngine makeAE(Lang lang, float similarityThreashhold) throws Exception {
+		TermSuiteResourceManager.getInstance().clear();
+
 		AnalysisEngineDescription aeDesc = AnalysisEngineFactory.createEngineDescription(
 				GraphicalVariantGatherer.class,
 				GraphicalVariantGatherer.LANG, lang.getCode(),
 				GraphicalVariantGatherer.SIMILARITY_THRESHOLD, similarityThreashhold
 			);
 		
-		
-		
-
 		/*
 		 * The history resource
 		 */
 		String  historyResourceName = "Toto";
-		TermSuiteResourceManager.getInstance().clear();
 		TermSuiteResourceManager.getInstance().register(historyResourceName, new TermHistory());
 		ExternalResourceDescription historyResourceDesc = ExternalResourceFactory.createExternalResourceDescription(
 				TermHistoryResource.TERM_HISTORY,
@@ -109,6 +106,7 @@ public class GraphicalVariantGathererSpec {
 		/*
 		 * The term index resource
 		 */
+		TermSuiteResourceManager.getInstance().register(this.termIndex.getName(), this.termIndex);
 		ExternalResourceDescription termIndexDesc = ExternalResourceFactory.createExternalResourceDescription(
 				TermIndexResource.TERM_INDEX,
 				TermIndexResource.class, 

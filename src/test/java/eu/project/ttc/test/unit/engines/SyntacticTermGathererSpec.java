@@ -43,7 +43,6 @@ import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.VariationType;
 import eu.project.ttc.models.index.MemoryTermIndex;
-import eu.project.ttc.resources.MemoryTermIndexManager;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.resources.YamlVariantRules;
 import eu.project.ttc.test.unit.Fixtures;
@@ -96,12 +95,11 @@ public class SyntacticTermGathererSpec {
 	}
 
 	private void makeAE() throws ResourceInitializationException, InvalidXMLException, ClassNotFoundException {
-		MemoryTermIndexManager manager = MemoryTermIndexManager.getInstance();
-		String historyResourceName = "history";
-		TermSuiteResourceManager.getInstance().clear();
-		TermSuiteResourceManager.getInstance().register(historyResourceName, new TermHistory());
+		TermSuiteResourceManager manager = TermSuiteResourceManager.getInstance();
 		manager.clear();
-		manager.register(termIndex);
+		String historyResourceName = "history";
+		TermSuiteResourceManager.getInstance().register(historyResourceName, new TermHistory());
+		manager.register(termIndex.getName(), termIndex);
 		AnalysisEngineDescription aeDesc = AnalysisEngineFactory.createEngineDescription(
 				SyntacticTermGatherer.class
 			);

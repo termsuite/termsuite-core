@@ -12,7 +12,6 @@ import eu.project.ttc.api.TerminoFilterConfig;
 import eu.project.ttc.api.TerminoFilterer;
 import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.resources.MemoryTermIndexManager;
 import eu.project.ttc.test.func.FunctionalTests;
 import eu.project.ttc.tools.TermSuiteResourceManager;
 
@@ -22,7 +21,6 @@ public class TerminoFiltererSpec {
 	@Before
 	public void setup() throws MalformedURLException {
 		TermSuiteResourceManager.getInstance().clear();
-		MemoryTermIndexManager.getInstance().clear();
 		termIndex1 = TermIndexIO.fromJson(FunctionalTests.TERM_INDEX_1.toUri().toURL());
 	}
 	

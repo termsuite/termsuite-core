@@ -43,12 +43,14 @@ import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.test.func.tools.builders.TermSuitePreprocessorSpec;
 import eu.project.ttc.test.func.tools.builders.TerminoExtractorSpec;
+import eu.project.ttc.test.func.tools.builders.TerminoFiltererSpec;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
 	FrenchWindEnergySpec.class,
 	EnglishWindEnergySpec.class,
 	TermSuitePreprocessorSpec.class,
+	TerminoFiltererSpec.class,
 	TerminoExtractorSpec.class
 	})
 public class FunctionalTests {

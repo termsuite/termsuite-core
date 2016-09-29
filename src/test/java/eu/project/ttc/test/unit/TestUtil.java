@@ -54,8 +54,8 @@ import com.google.common.collect.ObjectArrays;
 
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.readers.TeiToTxtSaxHandler;
-import eu.project.ttc.resources.MemoryTermIndexManager;
 import eu.project.ttc.resources.TermIndexResource;
+import eu.project.ttc.tools.TermSuiteResourceManager;
 import eu.project.ttc.types.TermOccAnnotation;
 import fr.univnantes.lina.uima.tkregex.RegexOccurrence;
 
@@ -143,7 +143,7 @@ public class TestUtil {
 	}
 	
 	public static AnalysisEngine createAE(TermIndex termIndex, Class<? extends AnalysisComponent> cls, Object... config) {
-		MemoryTermIndexManager manager = MemoryTermIndexManager.getInstance();
+		TermSuiteResourceManager manager = TermSuiteResourceManager.getInstance();
 		manager.clear();
 
 		ExternalResourceDescription termIndexResourceDesc = ExternalResourceFactory.createExternalResourceDescription(
@@ -151,7 +151,7 @@ public class TestUtil {
 				termIndex.getName());
 		
 		
-		manager.register(termIndex);
+		manager.register(termIndex.getName(), termIndex);
 		
 		Object[] config2 = ObjectArrays.concat(config, new Object[]{
 				TermIndexResource.TERM_INDEX, termIndexResourceDesc
