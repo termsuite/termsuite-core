@@ -12,13 +12,17 @@ import eu.project.ttc.api.TerminoFilterConfig;
 import eu.project.ttc.api.TerminoFilterer;
 import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.resources.MemoryTermIndexManager;
 import eu.project.ttc.test.func.FunctionalTests;
+import eu.project.ttc.tools.TermSuiteResourceManager;
 
 public class TerminoFiltererSpec {
 
 	TermIndex termIndex1;
 	@Before
 	public void setup() throws MalformedURLException {
+		TermSuiteResourceManager.getInstance().clear();
+		MemoryTermIndexManager.getInstance().clear();
 		termIndex1 = TermIndexIO.fromJson(FunctionalTests.TERM_INDEX_1.toUri().toURL());
 	}
 	
@@ -46,19 +50,19 @@ public class TerminoFiltererSpec {
 	public void test2() {
 		
 		assertThat(termIndex1)
-			.hasSize(3)
-			.containsTerm("a: word2")
-			.containsTerm("n: word1")
-			.containsTerm("na: word1 word2")
-			;
-
+		.hasSize(3)
+		.containsTerm("a: word2")
+		.containsTerm("n: word1")
+		.containsTerm("na: word1 word2")
+		;
+		
 		TerminoFilterer.create(termIndex1)
-			.configure(new TerminoFilterConfig().by(TermProperty.FREQUENCY).keepOverTh(10))
-			.execute();
-
+		.configure(new TerminoFilterConfig().by(TermProperty.FREQUENCY).keepOverTh(10))
+		.execute();
+		
 		assertThat(termIndex1)
-			.hasSize(0)
-			;
+		.hasSize(0)
+		;
 	}
 
 }
