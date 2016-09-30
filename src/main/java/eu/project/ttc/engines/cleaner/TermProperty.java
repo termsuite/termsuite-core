@@ -51,7 +51,7 @@ public enum TermProperty {
 	WR_LOG_Z_SCORE("wrLogZScore", "zscore", true, Double.class),
 	FREQUENCY("frequency", "f", false, Integer.class),
 	PILOT("pilot", "pilot", false, String.class),
-	LEMMA("lemma", "lemma", false, String.class),
+	LEMMA("lemma", "lm", false, String.class),
 	GROUPING_KEY("groupingKey", "gkey", false, String.class),
 	PATTERN("pattern", "p", false, String.class),
 	SPOTTING_RULE("spottingRule", "rule", false, String.class),
