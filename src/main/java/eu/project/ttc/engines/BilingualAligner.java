@@ -331,14 +331,12 @@ public class BilingualAligner {
 
 		
 		for(String candidateLemma:translations) {
-			for(Term candidateTerm:targetTerminoLemmaIndex.getTerms(candidateLemma)) {
-				if(candidateTerm.isContextVectorComputed())
-					dicoCandidates.add(
-						new TranslationCandidate(
-								candidateTerm, 
-								AlignmentMethod.DICTIONARY,
-								distance.getValue(translatedSourceVector, candidateTerm.getContextVector()))
-						);
+			for (Term candidateTerm : targetTerminoLemmaIndex.getTerms(candidateLemma)) {
+				if (candidateTerm.isContextVectorComputed())
+					dicoCandidates.add(new TranslationCandidate(candidateTerm, AlignmentMethod.DICTIONARY,
+							distance.getValue(translatedSourceVector, candidateTerm.getContextVector()),
+							Explanation.emptyExplanation()
+					));
 			}
 		}
 		
@@ -517,9 +515,9 @@ public class BilingualAligner {
 		private int rank=-1;
 		private double score;
 		
-		private TranslationCandidate(Term term, AlignmentMethod method, double score) {
-			this(term, method, score, Explanation.emptyExplanation());
-		}
+//		private TranslationCandidate(Term term, AlignmentMethod method, double score) {
+//			this(term, method, score, Explanation.emptyExplanation());
+//		}
 
 			
 		public void setScore(double score) {

@@ -6,6 +6,8 @@ import java.io.StringReader;
 import java.util.List;
 
 import org.assertj.core.api.AbstractAssert;
+import org.hamcrest.BaseDescription;
+import org.hamcrest.Matcher;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Objects;
@@ -86,5 +88,12 @@ public class StringAssert extends AbstractAssert<StringAssert, String> {
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
+	}
+
+	public StringAssert atLine(int i, Matcher<String> matcher) {
+		if(!matcher.matches(getLine(i)))
+			failWithMessage("Expected to match <%s> at line <%s>, but actual string is <%s>", matcher.toString(), i, getLine(i));
+
+		return this;
 	}
 }

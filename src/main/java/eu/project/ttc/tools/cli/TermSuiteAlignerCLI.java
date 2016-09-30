@@ -44,6 +44,7 @@ package eu.project.ttc.tools.cli;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
@@ -67,7 +68,6 @@ import eu.project.ttc.api.JSONOptions;
 import eu.project.ttc.engines.BilingualAligner;
 import eu.project.ttc.engines.BilingualAligner.TranslationCandidate;
 import eu.project.ttc.metrics.Cosine;
-import eu.project.ttc.metrics.Explanation;
 import eu.project.ttc.metrics.Jaccard;
 import eu.project.ttc.metrics.SimilarityDistance;
 import eu.project.ttc.models.Term;
@@ -95,7 +95,7 @@ public class TermSuiteAlignerCLI {
 	private static final String TARGET_TERMINO = "target-termino";
 	private static final String DICTIONARY = "dictionary";
 	private static final String DISTANCE = "distance";
-	private static final String SHOW_EXPLANATION = "show-explanation";
+	private static final String EXPLAIN = "explain";
 
 	// Parameter options
 	private static final String DISTANCE_COSINE = "cosine";
@@ -104,13 +104,13 @@ public class TermSuiteAlignerCLI {
 	
 	// values
 	
-	private static Optional<TermIndex> sourceTermino = Optional.absent();
-	private static Optional<TermIndex> targetTermino = Optional.absent();
-	private static String dicoPath;
-	private static int n = 10;
-	private static List<String> terms = Lists.newArrayList();
-	private static SimilarityDistance distance = new Cosine();
-	private static boolean showExplanation = false;
+	private Optional<TermIndex> sourceTermino = Optional.absent();
+	private Optional<TermIndex> targetTermino = Optional.absent();
+	private String dicoPath;
+	private int n = 10;
+	private List<String> terms = Lists.newArrayList();
+	private SimilarityDistance distance = new Cosine();
+	private boolean showExplanation = false;
 
 	
 	/**
@@ -121,6 +121,10 @@ public class TermSuiteAlignerCLI {
      * @throws UnsupportedEncodingException 
 	 */
 	public static void main(String[] args) throws UnsupportedEncodingException {
+		new TermSuiteAlignerCLI().run(args, System.out);
+	}
+
+	public void run(String[] args, PrintStream out) {
 		File logDir = new File("logs");
 		if(!logDir.exists()) 
 			logDir.mkdir();
@@ -142,7 +146,7 @@ public class TermSuiteAlignerCLI {
 			try {
 				// Parse and set CL options
 				CommandLine line = parser.parse(options, args, false);
-				readArguments(line);
+				readArguments(line, out);
 				TermSuiteCLIUtils.setGlobalLogLevel("info");
 				TermSuiteCLIUtils.logCommandLineOptions(line);
 				
@@ -161,20 +165,22 @@ public class TermSuiteAlignerCLI {
 								line.getOptionValue(SOURCE_TERMINO));
 					} else {
 						if(terms.size() > 1) {
-							System.out.println("---");
-							System.out.println(sourceTerm);
-							System.out.println("-");
+							out.println("---");
+							out.println(sourceTerm);
+							out.println("-");
 						}
-						for(TranslationCandidate candidate:aligner.alignDistributional(sourceTerm, n, 1)) {
+						for(TranslationCandidate candidate:aligner.align(sourceTerm, n, 1)) {
 							if(showExplanation)
-								System.out.format("%s\t%.3f\t%s\n",
+								out.format("%s\t%.3f\t%s\t%s\n",
 										candidate.getTerm(),
 										candidate.getScore(),
-										((Explanation)candidate.getExplanation()).getTopNFeatures());
+										candidate.getMethod(),
+										candidate.getExplanation().getText());
 							else
-								System.out.format("%s\t%.3f\n",
+								out.format("%s\t%.3f\t%s\n",
 									candidate.getTerm(),
-									candidate.getScore());
+									candidate.getScore(),
+									candidate.getMethod());
 						}
 					}
 				}
@@ -191,7 +197,7 @@ public class TermSuiteAlignerCLI {
 		}
 	}
 	
-	private static Term readSourceTerm(String term) {
+	private Term readSourceTerm(String term) {
 		for(Term t:sourceTermino.get().getTerms()) {
 			if(t.getGroupingKey().equals(term)
 					|| t.getPilot().equals(term)
@@ -203,7 +209,7 @@ public class TermSuiteAlignerCLI {
 		return null;
 	}
 
-	private static Options declareOptions() {
+	private Options declareOptions() {
 		Options options = new Options();
 		
 		options.addOption(TermSuiteCLIUtils.createOption(
@@ -258,7 +264,7 @@ public class TermSuiteAlignerCLI {
 
 		options.addOption(TermSuiteCLIUtils.createOption(
 				null, 
-				SHOW_EXPLANATION, 
+				EXPLAIN, 
 				false, 
 				"Shows for each aligned term the most influencial co-terms", 
 				false));
@@ -266,12 +272,12 @@ public class TermSuiteAlignerCLI {
 		return options;
 	}
 
-	public static void readArguments(CommandLine line) throws IOException {
+	public void readArguments(CommandLine line, PrintStream out) throws IOException {
 		if(!line.hasOption(TERM) && !line.hasOption(TERM_LIST)) {
 			String msg = String.format("ERROR: One option of --%s or --%s must be provided.", TERM, TERM_LIST);
 			LOGGER.error(msg);
 			System.err.flush();
-			System.out.flush();
+			out.flush();
 			System.err.println(msg);
 			System.exit(1);
 		}
@@ -307,7 +313,7 @@ public class TermSuiteAlignerCLI {
 			);
 		dicoPath = line.getOptionValue(DICTIONARY);
 
-		showExplanation = line.hasOption(SHOW_EXPLANATION);
+		showExplanation = line.hasOption(EXPLAIN);
 	}
 
 }

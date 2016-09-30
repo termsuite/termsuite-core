@@ -41,9 +41,13 @@ import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.test.func.tools.builders.BilingualAlignerSpec;
 import eu.project.ttc.test.func.tools.builders.TermSuitePreprocessorSpec;
 import eu.project.ttc.test.func.tools.builders.TerminoExtractorSpec;
 import eu.project.ttc.test.func.tools.builders.TerminoFiltererSpec;
+import eu.project.ttc.test.func.tools.cmd.TermSuiteAlignerCLISpec;
+import eu.project.ttc.test.func.tools.cmd.TermSuiteTerminoCLISpec;
+import eu.project.ttc.tools.cli.TermSuiteAlignerCLI;
 import eu.project.ttc.tools.cli.TermSuiteTerminoCLI;
 
 @RunWith(Suite.class)
@@ -52,7 +56,9 @@ import eu.project.ttc.tools.cli.TermSuiteTerminoCLI;
 	EnglishWindEnergySpec.class,
 	TermSuitePreprocessorSpec.class,
 	TerminoFiltererSpec.class,
-	TermSuiteTerminoCLI.class,
+	TermSuiteTerminoCLISpec.class,
+	TermSuiteAlignerCLISpec.class,
+	BilingualAlignerSpec.class,
 	TerminoExtractorSpec.class
 	})
 public class FunctionalTests {
