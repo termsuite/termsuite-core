@@ -2,14 +2,21 @@ package eu.project.ttc.api;
 
 import static org.apache.uima.fit.factory.AnalysisEngineFactory.createEngineDescription;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Writer;
 import java.nio.charset.Charset;
 import java.util.Collection;
+import java.util.Optional;
 import java.util.stream.Stream;
 
 import org.apache.uima.UIMAException;
 import org.apache.uima.UIMAFramework;
 import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
+import org.apache.uima.cas.impl.XmiCasSerializer;
 import org.apache.uima.fit.factory.JCasFactory;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
@@ -19,18 +26,29 @@ import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 
 import eu.project.ttc.engines.desc.Lang;
+import eu.project.ttc.readers.TermSuiteJsonCasSerializer;
 import eu.project.ttc.tools.TermSuitePipeline;
 import eu.project.ttc.tools.api.internal.FileSystemUtils;
+import eu.project.ttc.utils.FileUtils;
 import eu.project.ttc.utils.JCasUtils;
 
 public class TermSuitePreprocessor {
+	
+	public static enum OutputFormat{JSON,XMI}
 	
 	private Lang lang;
 
 	private Stream<Document> documentStream = null;
 	
+	private String inputDirectory = "/";
+
 	private String treeTaggerHome = null;
 
+	private String outputEncoding = Charset.defaultCharset().name();
+	
+	private Optional<String> outputDirectory = Optional.empty();
+	private OutputFormat outputFormat = OutputFormat.JSON;
+	
 	private long nbDocuments = -1;
 	
 	public static TermSuitePreprocessor fromTextString(Lang lang, String text) {
@@ -72,9 +90,17 @@ public class TermSuitePreprocessor {
 	public static TermSuitePreprocessor fromTxtCorpus(Lang lang, String directory, String pattern) {
 		return fromTxtCorpus(lang, directory, pattern, Charset.defaultCharset().name());
 	}
+	
+	public TermSuitePreprocessor toJson(String outputDirectory, String encoding) {
+		this.outputDirectory = Optional.of(outputDirectory);
+		this.outputEncoding = encoding;
+		
+		return this;
+	}
+
 
 	public static TermSuitePreprocessor fromTxtCorpus(Lang lang, String directory, String pattern, String encoding) {
-		return fromDocumentStream(
+		TermSuitePreprocessor preprocessor = fromDocumentStream(
 				lang, 
 				FileSystemUtils.pathWalker(
 						directory, 
@@ -82,6 +108,8 @@ public class TermSuitePreprocessor {
 						FileSystemUtils.pathToDocumentMapper(lang, encoding)),
 				FileSystemUtils.pathDocumentCount(directory, pattern)
 			);
+		preprocessor.inputDirectory = directory;
+		return preprocessor;
 	}
 
 	private TermSuitePreprocessor() {}
@@ -127,6 +155,11 @@ public class TermSuitePreprocessor {
 							document.getText(), 
 							document.getUrl());
 					aae.process(cas);
+					
+					
+					if(outputDirectory.isPresent())
+						exportCas(document, cas);
+					
 					return cas;
 				} catch (UIMAException e) {
 					throw new TermSuiteException(e);
@@ -138,7 +171,36 @@ public class TermSuitePreprocessor {
 		}
 
 	}
-	
-	
-	
+
+	private void exportCas(Document document, JCas cas) {
+		String toFilePath;
+		try {
+			toFilePath = FileUtils.replaceRootDir(
+					document.getUrl(), 
+					new File(inputDirectory).getCanonicalPath(), 
+					outputDirectory.get());
+			toFilePath = FileUtils.replaceExtensionWith(
+					toFilePath, 
+					this.outputFormat.toString().toLowerCase());
+			
+			new File(toFilePath).getParentFile().mkdirs();
+			
+			try(Writer writer = new FileWriter(toFilePath)) {
+				if(outputFormat == OutputFormat.JSON)
+					TermSuiteJsonCasSerializer.serialize(writer, cas);
+				if(outputFormat == OutputFormat.XMI)
+					XmiCasSerializer.serialize(cas.getCas(), 
+							cas.getTypeSystem(), 
+							new FileOutputStream(toFilePath));
+			} catch (Exception e) {
+				throw new TermSuiteException("Could not export cas to " + toFilePath + " for cas " + document.getUrl(),e);
+			}
+		} catch (IOException e1) {
+			throw new TermSuiteException("Could not export cas " + document.getUrl(),e1);
+		}
+	}
+
+	public void execute() {
+		stream().forEach(cas -> {});
+	}
 }

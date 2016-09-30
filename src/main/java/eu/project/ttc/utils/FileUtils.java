@@ -33,6 +33,7 @@ import java.util.List;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
+import com.google.common.base.Preconditions;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Iterables;
 import com.google.common.collect.Lists;
@@ -79,9 +80,37 @@ public class FileUtils {
 		}
 	}
 
+	public static String replaceRootDir(String fileUri, File oldRoot, File newRoot) throws IOException {
+		Preconditions.checkArgument(oldRoot.isDirectory());
+		String oldRootPath = oldRoot.getCanonicalPath();
+		Preconditions.checkArgument(fileUri.startsWith(oldRootPath),
+				"file path %s must start with the old root path %s", fileUri, oldRoot);
+		String newRootPath = newRoot.getCanonicalPath();
+		return replaceRootDir(fileUri, oldRootPath, newRootPath);
+	}
+
+
+	public static String replaceRootDir(String fileUri, String oldRootPath, String newRootPath) {
+		Preconditions.checkArgument(fileUri.startsWith(oldRootPath),
+				"file path %s must start with the old root path %s", fileUri, oldRootPath);
+
+		return fileUri.replaceFirst(oldRootPath, newRootPath);
+	}
+
 
 	public static String readFile(String path, Charset encoding) throws IOException {
 		byte[] encoded = Files.readAllBytes(Paths.get(path));
 		return new String(encoded, encoding);
+	}
+
+
+	public static String replaceExtensionWith(String toFilePath, String newExtension) {
+		String dirname = toFilePath.substring(0, toFilePath.lastIndexOf(File.separatorChar) + 1);
+		String filename = toFilePath.substring(toFilePath.lastIndexOf(File.separatorChar) + 1, toFilePath.length());
+		
+		String basename = filename.contains(".") ? filename.substring(0, filename.lastIndexOf('.') + 1) : (filename + ".");
+		
+		return Paths.get(dirname, basename + newExtension).toString();
+		
 	}
 }
