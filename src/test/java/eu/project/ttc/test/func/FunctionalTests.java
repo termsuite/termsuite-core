@@ -61,7 +61,10 @@ public class FunctionalTests {
 	public static final Path TERM_INDEX_1=Paths.get("src", "test", "resources", "org", "project", "ttc", "test", "json", "termIndex1.json");
 	public static final Path CORPUS2_PATH=Paths.get("src", "test", "resources", "eu", "project", "ttc", "test", "corpus", "corpus2");
 	public static final Path CORPUS1_PATH=Paths.get("src", "test", "resources", "eu", "project", "ttc", "test", "corpus", "corpus1");
-	
+	public static final Path TERMINO_WESHORT_PATH=Paths.get("src", "test", "resources", "eu", "project", "ttc", "test", "termino");
+	public static final Path DICO_PATH=Paths.get("src", "test", "resources", "eu", "project", "ttc", "test", "dico");
+
+			
 	public static final String CORPUS_WESHORT_PATH="eu/project/ttc/test/corpus/weshort/";
 	public static final String CORPUS_WE_PATH="eu/project/ttc/test/corpus/we/";
 	private static final String FUNCTION_TESTS_CONFIG = "termsuite-test.properties";
@@ -88,6 +91,17 @@ public class FunctionalTests {
 		return "src/test/resources/" + CORPUS_WE_PATH + lang.getName().toLowerCase() + "/txt/";
 	}
 
+	public static String getTerminoWEShortPath(Lang lang) {
+		return Paths.get(TERMINO_WESHORT_PATH.toString(), "we-short-" +  lang.getCode() + ".json").toString();
+		
+	}
+
+	public static String getDicoPath(Lang source, Lang target) {
+		String dicoFileName = String.format("%s-%s.txt", source.getCode(), target.getCode());
+		return Paths.get(DICO_PATH.toString(), dicoFileName).toString();
+		
+	}
+
 	public static String getTaggerPath() {
 		return (String)getConfigProperty(PROP_TREETAGGER_HOME_PATH);
 	}
@@ -97,4 +111,5 @@ public class FunctionalTests {
 		Collections.sort(terms, termProperty.getComparator(termIndex, desc));
 		return terms;
 	}
+
 }

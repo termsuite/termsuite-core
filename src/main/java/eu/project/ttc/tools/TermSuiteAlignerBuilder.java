@@ -32,6 +32,7 @@ import com.google.common.base.Preconditions;
 
 import eu.project.ttc.engines.BilingualAligner;
 import eu.project.ttc.metrics.Cosine;
+import eu.project.ttc.metrics.Jaccard;
 import eu.project.ttc.metrics.SimilarityDistance;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.resources.BilingualDictionary;
@@ -108,6 +109,14 @@ public class TermSuiteAlignerBuilder {
 			LOGGER.error("Could not create BilingualSWAligner due to io exception: %s", e.getMessage(), e);
 			throw new RuntimeException(e);
 		}
+	}
+	
+	public TermSuiteAlignerBuilder setDistanceCosine() {
+		return setDistance(new Cosine());
+	}
+	
+	public TermSuiteAlignerBuilder setDistanceJaccard() {
+		return setDistance(new Jaccard());
 	}
 	
 }

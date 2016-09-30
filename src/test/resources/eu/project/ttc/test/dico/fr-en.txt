@@ -1,0 +1,26 @@
+éoliennes	wind	farm
+éolienne	windmill
+éolienne	windpump
+éolienne	wind
+éolien	aeolian
+éolien	wind
+turbine	turbine
+hydroélectricité								hydroelectricity
+hydroélectricité								hydropower
+hydroélectrique	hydroelectric
+hydroélectrique	hydro
+énergie	backbone
+énergie	drive
+énergie	energy
+énergie	ginger
+énergie	input
+énergie	nervous	energy
+énergie	pizazz
+énergie	pizzazz
+énergie	power
+énergie	spirit
+énergie	vigor
+énergie	vigour
+énergie	vim
+rotor			rotor	arm
+rotor			rotor

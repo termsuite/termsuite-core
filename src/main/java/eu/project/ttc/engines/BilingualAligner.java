@@ -209,6 +209,7 @@ public class BilingualAligner {
 	 * @return
 	 */
 	public List<TranslationCandidate> align(Term sourceTerm, int nbCandidates, int minCandidateFrequency) {
+		Preconditions.checkNotNull(sourceTerm);
 		List<TranslationCandidate> mergedCandidates = Lists.newArrayList();
 		List<List<Term>> sourceLemmaSets = getSourceLemmaSets(sourceTerm);
 		for(List<Term> sourceLemmaSet:sourceLemmaSets) {
