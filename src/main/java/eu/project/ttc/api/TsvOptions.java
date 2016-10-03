@@ -6,7 +6,7 @@ import com.google.common.collect.Lists;
 
 import eu.project.ttc.engines.cleaner.TermProperty;
 
-public class TSVOptions {
+public class TsvOptions {
 	
 	private TermProperty[] properties = new TermProperty[] {TermProperty.GROUPING_KEY, TermProperty.FREQUENCY};
 	private boolean showHeaders = true;
@@ -14,12 +14,12 @@ public class TSVOptions {
 	private boolean showScores = false;
 	private boolean showRank = true;
 	
-	public TSVOptions setProperties(Iterable<TermProperty> properties) {
+	public TsvOptions setProperties(Iterable<TermProperty> properties) {
 		List<TermProperty> list = Lists.newArrayList(properties);
 		return setProperties(list.toArray(new TermProperty[list.size()])); 
 	}
 	
-	public TSVOptions setProperties(TermProperty... properties) {
+	public TsvOptions setProperties(TermProperty... properties) {
 		this.properties = properties;
 		return this;
 	}
@@ -28,7 +28,7 @@ public class TSVOptions {
 		return showHeaders;
 	}
 
-	public TSVOptions setShowScores(boolean showScores) {
+	public TsvOptions setShowScores(boolean showScores) {
 		this.showScores = showScores;
 		return this;
 	}
@@ -37,7 +37,7 @@ public class TSVOptions {
 		return showScores;
 	}
 	
-	public TSVOptions setShowHeaders(boolean showHeaders) {
+	public TsvOptions setShowHeaders(boolean showHeaders) {
 		this.showHeaders = showHeaders;
 		return this;
 	}
@@ -46,7 +46,7 @@ public class TSVOptions {
 		return showVariants;
 	}
 
-	public TSVOptions setShowVariants(boolean showVariants) {
+	public TsvOptions setShowVariants(boolean showVariants) {
 		this.showVariants = showVariants;
 		return this;
 	}
@@ -55,7 +55,7 @@ public class TSVOptions {
 		return showRank;
 	}
 
-	public TSVOptions setShowRank(boolean showRank) {
+	public TsvOptions setShowRank(boolean showRank) {
 		this.showRank = showRank;
 		return this;
 	}

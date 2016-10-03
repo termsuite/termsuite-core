@@ -36,11 +36,11 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Preconditions;
 
-import eu.project.ttc.api.JSONOptions;
+import eu.project.ttc.api.JsonOptions;
 import eu.project.ttc.engines.AbstractTermIndexExporter;
 import eu.project.ttc.models.OccurrenceStore;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.index.JSONTermIndexIO;
+import eu.project.ttc.models.index.JsonTermIndexIO;
 
 /**
  * Exports a {@link TermIndex} in the tsv evaluation format.
@@ -90,12 +90,12 @@ public class JsonExporterAE extends AbstractTermIndexExporter {
 			LOGGER.info("Exporting {} terms to JSON file {}", this.termIndexResource.getTermIndex().getTerms().size(), this.toFilePath);
 			FileOutputStream fos = new FileOutputStream(toFile);
 			Writer writer2 = new OutputStreamWriter(fos, "UTF-8");
-			JSONOptions saveOptions = new JSONOptions();
+			JsonOptions saveOptions = new JsonOptions();
 			saveOptions.withOccurrences(withOccurrences);
 			saveOptions.withContexts(withContexts);
 			if(linkedMongoStore)
 				saveOptions.mongoDBOccStoreURI(occurrenceStore.getUrl());
-			JSONTermIndexIO.save(writer2, this.termIndexResource.getTermIndex(), saveOptions);
+			JsonTermIndexIO.save(writer2, this.termIndexResource.getTermIndex(), saveOptions);
 			fos.flush();
 			fos.close();
 			writer2.close();

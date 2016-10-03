@@ -64,7 +64,7 @@ import com.google.common.base.Splitter;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.Lists;
 
-import eu.project.ttc.api.JSONOptions;
+import eu.project.ttc.api.JsonOptions;
 import eu.project.ttc.engines.BilingualAligner;
 import eu.project.ttc.engines.BilingualAligner.TranslationCandidate;
 import eu.project.ttc.metrics.Cosine;
@@ -72,7 +72,7 @@ import eu.project.ttc.metrics.Jaccard;
 import eu.project.ttc.metrics.SimilarityDistance;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.index.JSONTermIndexIO;
+import eu.project.ttc.models.index.JsonTermIndexIO;
 import eu.project.ttc.tools.TermSuiteAlignerBuilder;
 
 /**
@@ -303,13 +303,13 @@ public class TermSuiteAlignerCLI {
 			
 		}
 		LOGGER.info("loading source termino {}",line.getOptionValue(SOURCE_TERMINO));
-		JSONOptions loadOptions = new JSONOptions().withContexts(true);
+		JsonOptions loadOptions = new JsonOptions().withContexts(true);
 		sourceTermino = Optional.of(
-				JSONTermIndexIO.load(new FileReader(line.getOptionValue(SOURCE_TERMINO)), loadOptions)
+				JsonTermIndexIO.load(new FileReader(line.getOptionValue(SOURCE_TERMINO)), loadOptions)
 			);
 		LOGGER.info("loading target termino {}",line.getOptionValue(TARGET_TERMINO));
 		targetTermino = Optional.of(
-				JSONTermIndexIO.load(new FileReader(line.getOptionValue(TARGET_TERMINO)), loadOptions)
+				JsonTermIndexIO.load(new FileReader(line.getOptionValue(TARGET_TERMINO)), loadOptions)
 			);
 		dicoPath = line.getOptionValue(DICTIONARY);
 

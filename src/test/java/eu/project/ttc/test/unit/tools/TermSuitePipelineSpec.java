@@ -30,7 +30,7 @@ import org.junit.rules.ExpectedException;
 
 import eu.project.ttc.engines.desc.TermSuitePipelineException;
 import eu.project.ttc.engines.desc.TermSuiteResourceException;
-import eu.project.ttc.test.unit.io.JSONTermIndexIOSpec;
+import eu.project.ttc.test.unit.io.JsonTermIndexIOSpec;
 import eu.project.ttc.tools.TermSuitePipeline;
 import eu.project.ttc.tools.cli.TermSuiteCLIUtils;
 
@@ -101,7 +101,7 @@ public class TermSuitePipelineSpec {
 		thrown.expectMessage("Not a jar");
 		
 		TermSuitePipeline pipeline = startPipeline();
-		pipeline.setResourceJar(JSONTermIndexIOSpec.jsonFile1);
+		pipeline.setResourceJar(JsonTermIndexIOSpec.jsonFile1);
 		runPipeline(pipeline);
 	}
 

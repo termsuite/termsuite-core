@@ -42,7 +42,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 
-import eu.project.ttc.api.JSONOptions;
+import eu.project.ttc.api.JsonOptions;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.Component;
 import eu.project.ttc.models.CompoundType;
@@ -61,9 +61,9 @@ import eu.project.ttc.models.WordBuilder;
 import eu.project.ttc.models.occstore.MemoryOccurrenceStore;
 import eu.project.ttc.models.occstore.MongoDBOccurrenceStore;
 
-public class JSONTermIndexIO {
+public class JsonTermIndexIO {
 	
-	private static final Logger LOGGER = LoggerFactory.getLogger(JSONTermIndexIO.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(JsonTermIndexIO.class);
 	
 	/*
 	 * Error messages for parsing
@@ -137,7 +137,7 @@ public class JSONTermIndexIO {
 	 * @throws JsonParseException
 	 * @throws IOException
 	 */
-	public static TermIndex load(Reader reader, JSONOptions options) throws JsonParseException, IOException {
+	public static TermIndex load(Reader reader, JsonOptions options) throws JsonParseException, IOException {
 		TermIndex termIndex = null;
 		JsonFactory jsonFactory = new JsonFactory(); 
 		JsonParser jp = jsonFactory.createParser(reader); // or Stream, Reader
@@ -471,7 +471,7 @@ public class JSONTermIndexIO {
 		return termIndex;
 	}
 
-	public static void save(Writer writer, TermIndex termIndex, JSONOptions options) throws IOException {
+	public static void save(Writer writer, TermIndex termIndex, JsonOptions options) throws IOException {
 		JsonFactory jsonFactory = new JsonFactory(); // or, for data binding, org.codehaus.jackson.mapper.MappingJsonFactory 
 //		jsonFactory.configure(f, state)
 		JsonGenerator jg = jsonFactory.createGenerator(writer); // or Stream, Reader

@@ -32,7 +32,7 @@ import eu.project.ttc.test.unit.engines.SuffixDerivationExceptionSetterSpec;
 import eu.project.ttc.test.unit.engines.SyntacticTermGathererSpec;
 import eu.project.ttc.test.unit.engines.TermClassifierSpec;
 import eu.project.ttc.test.unit.engines.morpho.SegmentationSpec;
-import eu.project.ttc.test.unit.io.JSONTermIndexIOSpec;
+import eu.project.ttc.test.unit.io.JsonTermIndexIOSpec;
 import eu.project.ttc.test.unit.io.SegmentationParserSpec;
 import eu.project.ttc.test.unit.metrics.DiacriticInsensitiveLevenshteinSpec;
 import eu.project.ttc.test.unit.metrics.SimilarityDistanceSpec;
@@ -70,7 +70,7 @@ import eu.project.ttc.utils.test.CompoundUtilsSpec;
 	TermClassifierSpec.class,
 	OccurrenceBufferSpec.class,
 	SimilarityDistanceSpec.class,
-	JSONTermIndexIOSpec.class,
+	JsonTermIndexIOSpec.class,
 	ContextVectorSpec.class,
 	TermOccurrenceUtilsSpec.class,
 	CollectionUtilsSpec.class,

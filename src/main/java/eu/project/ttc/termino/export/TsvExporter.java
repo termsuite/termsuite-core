@@ -5,7 +5,7 @@ import java.io.Writer;
 
 import com.google.common.collect.Lists;
 
-import eu.project.ttc.api.TSVOptions;
+import eu.project.ttc.api.TsvOptions;
 import eu.project.ttc.api.TermSuiteException;
 import eu.project.ttc.api.Traverser;
 import eu.project.ttc.models.Term;
@@ -13,14 +13,14 @@ import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.tools.utils.IndexerTSVBuilder;
 
-public class TSVExporter {
+public class TsvExporter {
 	
 	private TermIndex termIndex;
 	private Writer writer;
-	private TSVOptions options;
+	private TsvOptions options;
 	private Traverser traverser;
 	
-	private TSVExporter(TermIndex termIndex, Writer writer, Traverser traverser, TSVOptions options) {
+	private TsvExporter(TermIndex termIndex, Writer writer, Traverser traverser, TsvOptions options) {
 		super();
 		this.termIndex = termIndex;
 		this.writer = writer;
@@ -29,16 +29,16 @@ public class TSVExporter {
 	}
 
 	public static void export(TermIndex termIndex, Writer writer) {
-		export(termIndex, writer, Traverser.create(), new TSVOptions());
+		export(termIndex, writer, Traverser.create(), new TsvOptions());
 	}
 
-	public static void export(TermIndex termIndex, Writer writer,  TSVOptions options) {
-		new TSVExporter(termIndex, writer, Traverser.create(), options).doExport();
+	public static void export(TermIndex termIndex, Writer writer,  TsvOptions options) {
+		new TsvExporter(termIndex, writer, Traverser.create(), options).doExport();
 	}
 
 	
-	public static void export(TermIndex termIndex, Writer writer, Traverser traverser, TSVOptions options) {
-		new TSVExporter(termIndex, writer, traverser, options).doExport();
+	public static void export(TermIndex termIndex, Writer writer, Traverser traverser, TsvOptions options) {
+		new TsvExporter(termIndex, writer, traverser, options).doExport();
 	}
 
 	private void doExport() {

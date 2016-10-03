@@ -28,6 +28,7 @@ import com.google.common.collect.Lists;
 import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.history.TermHistory;
+import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.readers.TermSuiteJsonCasDeserializer;
 import eu.project.ttc.tools.TermSuitePipeline;
@@ -75,6 +76,13 @@ public class TerminoExtractor {
 	 * true if the input is preprocessed, false otherwise.
 	 */
 	private boolean preprocessed = false;
+	
+	/*
+	 * The maximum number of terms allowed in memory. empty 
+	 * if maxSizeFiltering is deactivated.
+	 */
+	private Optional<Integer> maxSizeFilter = Optional.empty();
+	
 	
 	/*
 	 * The total number of documents
@@ -219,11 +227,64 @@ public class TerminoExtractor {
 		return this;
 	}
 	
+	/**
+	 * Filters the {@link TermIndex} before the term variant detection phase.
+	 * 
+	 * This early-stage filtering will result in missing several low-frequency variations
+	 * during the term variation detection but is often necessary 
+	 * when detecting variant takes too long.
+	 * 
+	 * @param filterConfig
+	 * 			The filtering configuration
+	 * @return
+	 * 			this {@link TerminoExtractor} launcher class
+	 * 
+	 * @see  #postFilter(TerminoFilterConfig)
+	 * 
+	 */
 	public TerminoExtractor preFilter(TerminoFilterConfig filterConfig) {
 		this.preFilterConfig = Optional.of(filterConfig);
 		return this;
 	}
 
+	
+	/**
+	 * 
+	 * Filters the {@link TermIndex} dynamically during the term spotting phase (RegexSpotter)
+	 * of terminology extraction by cleaning by frequency whenever the number of terms in-memory 
+	 * exceeds a max number of terms allowed.
+	 * 
+	 * 
+	 * @param maxTermIndexSize
+	 * 			the maximum number of {@link Term} instances allowed to be kept in memory 
+	 * 			during the terminology extraction process.
+	 * @return
+	 * 		this {@link TerminoExtractor} launcher class
+	 * 
+	 * @see TermSuitePipeline#aeMaxSizeThresholdCleaner(TermProperty, int)
+	 * 
+	 */
+	public TerminoExtractor dynamicMaxSizeFilter(int maxTermIndexSize) {
+		this.maxSizeFilter = Optional.of(maxTermIndexSize);
+		return this;
+	}
+
+	
+	
+	/**
+	 * Filters the {@link TermIndex} at the end of the pipeline,
+	 * i.e. after the term variant detection phase.
+	 * 
+	 * This filtering is loss-less when configured with {@link TerminoFilterConfig#keepVariants(true)}.
+	 * 
+	 * @param filterConfig
+	 * 			The filtering configuration
+	 * @return
+	 * 			this {@link TerminoExtractor} launcher class
+	 * 
+	 * @see  #preFilter(TerminoFilterConfig)
+	 * 
+	 */
 	public TerminoExtractor postFilter(TerminoFilterConfig filterConfig) {
 		this.postFilterConfig = Optional.of(filterConfig);
 		return this;
@@ -265,6 +326,9 @@ public class TerminoExtractor {
 		
 		if(nbDocuments != -1)
 			pipeline.aeDocumentLogger(this.nbDocuments);
+		
+		if(maxSizeFilter.isPresent());
+			pipeline.aeMaxSizeThresholdCleaner(TermProperty.FREQUENCY, maxSizeFilter.get());
 		
 		pipeline
 				.aeSpecificityComputer()

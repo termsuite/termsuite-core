@@ -10,11 +10,11 @@ import org.mockito.Mockito;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
-import eu.project.ttc.api.TSVOptions;
+import eu.project.ttc.api.TsvOptions;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermVariation;
-import eu.project.ttc.termino.export.TSVExporter;
+import eu.project.ttc.termino.export.TsvExporter;
 import eu.project.ttc.test.TermSuiteAssertions;
 import eu.project.ttc.test.unit.TermFactory;
 
@@ -52,7 +52,7 @@ public class TsvExporterSpec {
 	
 	@Test
 	public void testTsvExportNoScore() {
-		TSVExporter.export(termIndex, writer);
+		TsvExporter.export(termIndex, writer);
 		TermSuiteAssertions.assertThat(writer.toString())
 			.hasLineCount(5)
 			.tsvLineEquals(1, "#","type", "gkey", "f")
@@ -65,7 +65,7 @@ public class TsvExporterSpec {
 
 	@Test
 	public void testTsvExportWithScores() {
-		TSVExporter.export(termIndex, writer, new TSVOptions().setShowScores(true));
+		TsvExporter.export(termIndex, writer, new TsvOptions().setShowScores(true));
 		TermSuiteAssertions.assertThat(writer.toString())
 			.hasLineCount(5)
 			.tsvLineEquals(1, "#","type", "gkey", "f")
@@ -78,7 +78,7 @@ public class TsvExporterSpec {
 
 	@Test
 	public void testTsvExportNoHeaders() {
-		TSVExporter.export(termIndex, writer, new TSVOptions().setShowHeaders(false));
+		TsvExporter.export(termIndex, writer, new TsvOptions().setShowHeaders(false));
 		TermSuiteAssertions.assertThat(writer.toString())
 			.hasLineCount(4)
 			.tsvLineEquals(1, 1, "T", "t2", 2)
@@ -90,7 +90,7 @@ public class TsvExporterSpec {
 
 	@Test
 	public void testTsvExportNoVariant() {
-		TSVExporter.export(termIndex, writer, new TSVOptions().setShowVariants(false));
+		TsvExporter.export(termIndex, writer, new TsvOptions().setShowVariants(false));
 		TermSuiteAssertions.assertThat(writer.toString())
 			.hasLineCount(4)
 			.tsvLineEquals(1, "#","type", "gkey", "f")

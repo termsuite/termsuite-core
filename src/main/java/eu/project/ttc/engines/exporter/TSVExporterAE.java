@@ -39,11 +39,11 @@ import org.apache.uima.resource.ResourceInitializationException;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 
-import eu.project.ttc.api.TSVOptions;
+import eu.project.ttc.api.TsvOptions;
 import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.resources.TermIndexResource;
-import eu.project.ttc.termino.export.TSVExporter;
+import eu.project.ttc.termino.export.TsvExporter;
 
 /**
  * Exports a {@link TermIndex} in TSV format.
@@ -101,7 +101,7 @@ public class TSVExporterAE extends JCasAnnotator_ImplBase {
 				new FileOutputStream(new File(toFilePath)),
 				Charset.forName("UTF-8").newEncoder())) {
 			
-			TSVExporter.export(termIndexResource.getTermIndex(), writer, new TSVOptions()
+			TsvExporter.export(termIndexResource.getTermIndex(), writer, new TsvOptions()
 					.setShowHeaders(showHeaders)
 					.setProperties(properties));
 		} catch (Exception e) {
