@@ -46,7 +46,7 @@ public class TsvExporter {
 		IndexerTSVBuilder tsv = new IndexerTSVBuilder(
 				writer,
 				Lists.newArrayList(options.properties()),
-				options.showScores()
+				options.isShowScores()
 			);
 		
 		try {
@@ -56,7 +56,7 @@ public class TsvExporter {
 			for(Term t:traverser.toList(termIndex)) {
 				tsv.startTerm(termIndex, t, "");
 				
-				if(options.showVariants())
+				if(options.isShowVariants())
 					for(TermVariation tv:t.getVariations()) {
 						tsv.addVariant(
 								termIndex, 

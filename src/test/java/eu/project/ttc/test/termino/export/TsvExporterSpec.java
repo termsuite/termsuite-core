@@ -65,7 +65,7 @@ public class TsvExporterSpec {
 
 	@Test
 	public void testTsvExportWithScores() {
-		TsvExporter.export(termIndex, writer, new TsvOptions().setShowScores(true));
+		TsvExporter.export(termIndex, writer, new TsvOptions().showScores(true));
 		TermSuiteAssertions.assertThat(writer.toString())
 			.hasLineCount(5)
 			.tsvLineEquals(1, "#","type", "gkey", "f")
@@ -78,7 +78,7 @@ public class TsvExporterSpec {
 
 	@Test
 	public void testTsvExportNoHeaders() {
-		TsvExporter.export(termIndex, writer, new TsvOptions().setShowHeaders(false));
+		TsvExporter.export(termIndex, writer, new TsvOptions().showHeaders(false));
 		TermSuiteAssertions.assertThat(writer.toString())
 			.hasLineCount(4)
 			.tsvLineEquals(1, 1, "T", "t2", 2)

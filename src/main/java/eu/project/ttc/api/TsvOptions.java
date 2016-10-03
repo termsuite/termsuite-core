@@ -14,12 +14,12 @@ public class TsvOptions {
 	private boolean showScores = false;
 	private boolean showRank = true;
 	
-	public TsvOptions setProperties(Iterable<TermProperty> properties) {
+	public TsvOptions properties(Iterable<TermProperty> properties) {
 		List<TermProperty> list = Lists.newArrayList(properties);
-		return setProperties(list.toArray(new TermProperty[list.size()])); 
+		return properties(list.toArray(new TermProperty[list.size()])); 
 	}
 	
-	public TsvOptions setProperties(TermProperty... properties) {
+	public TsvOptions properties(TermProperty... properties) {
 		this.properties = properties;
 		return this;
 	}
@@ -28,21 +28,21 @@ public class TsvOptions {
 		return showHeaders;
 	}
 
-	public TsvOptions setShowScores(boolean showScores) {
+	public TsvOptions showScores(boolean showScores) {
 		this.showScores = showScores;
 		return this;
 	}
 	
-	public boolean showScores() {
+	public boolean isShowScores() {
 		return showScores;
 	}
 	
-	public TsvOptions setShowHeaders(boolean showHeaders) {
+	public TsvOptions showHeaders(boolean showHeaders) {
 		this.showHeaders = showHeaders;
 		return this;
 	}
 
-	public boolean showVariants() {
+	public boolean isShowVariants() {
 		return showVariants;
 	}
 
@@ -51,11 +51,11 @@ public class TsvOptions {
 		return this;
 	}
 
-	public boolean showRank() {
+	public boolean isShowRank() {
 		return showRank;
 	}
 
-	public TsvOptions setShowRank(boolean showRank) {
+	public TsvOptions showRank(boolean showRank) {
 		this.showRank = showRank;
 		return this;
 	}

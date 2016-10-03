@@ -15,7 +15,7 @@ public class JsonOptions {
 		return this;
 	}
 	
-	public boolean metadataOnly() {
+	public boolean isMetadataOnly() {
 		return metadataOnly;
 	}
 	
@@ -32,22 +32,26 @@ public class JsonOptions {
 		return this;
 	}
 	
+	public boolean isWithOccurrences() {
+		return withOccurrences;
+	}
+	
 	public boolean withOccurrences() {
 		return withOccurrences;
 	}
 	
-	public boolean embeddedOccurrences() {
+	public boolean isEmbeddedOccurrences() {
 		return embeddedOccurrences;
 	}
 	
-	public boolean withContexts() {
+	public boolean isWithContexts() {
 		return withContexts;
 	}
 
 	private Optional<String> mongoDBOccStore = Optional.absent();
 	
 	public JsonOptions mongoDBOccStoreURI(String mongoDBOccStoreURI) {
-		Preconditions.checkNotNull(mongoDBOccStore, "MongoDBUri must nopt be null");
+		Preconditions.checkNotNull(mongoDBOccStoreURI, "MongoDBUri must not be null");
 		this.mongoDBOccStore = Optional.of(mongoDBOccStoreURI);
 		this.embeddedOccurrences = false;
 		return this;

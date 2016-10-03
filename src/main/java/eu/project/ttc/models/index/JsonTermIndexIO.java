@@ -219,7 +219,7 @@ public class JsonTermIndexIO {
 				if(nbSpottedTerms != -1)
 					termIndex.setSpottedTermsNum(nbSpottedTerms);
 				
-				if(options.metadataOnly())
+				if(options.isMetadataOnly())
 					return termIndex;
 
 			} else if (WORDS.equals(fieldname)) {
@@ -377,7 +377,7 @@ public class JsonTermIndexIO {
 						LOGGER.warn("Error ignored, trying ton continue the loading of TermIndex");
 					}
 
-					if(options.withContexts())
+					if(options.isWithContexts())
 						contextVectors.put(currentTermId, currentContextVector);
 
 				}// end array of terms
@@ -446,7 +446,7 @@ public class JsonTermIndexIO {
 		}
 		jp.close();
 		
-		if(options.withContexts()) {
+		if(options.isWithContexts()) {
 			/*
 			 *  map term ids with terms in context vectors and
 			 *  set context vectors
@@ -495,7 +495,7 @@ public class JsonTermIndexIO {
 			jg.writeString(OCCURRENCE_STORAGE_MONGODB);
 			jg.writeFieldName(OCCURRENCE_MONGODB_STORE_URI);
 			jg.writeString(options.getMongoDBOccStore());
-		} else if(options.embeddedOccurrences())
+		} else if(options.isEmbeddedOccurrences())
 			jg.writeString(OCCURRENCE_STORAGE_EMBEDDED);
 		else
 			throw new IllegalStateException("Unknown storage mode");
@@ -587,7 +587,7 @@ public class JsonTermIndexIO {
 			jg.writeFieldName(SPOTTING_RULE);
 			jg.writeString(t.getSpottingRule());
 			
-			if(options.withOccurrences() && options.embeddedOccurrences()) {
+			if(options.withOccurrences() && options.isEmbeddedOccurrences()) {
 				jg.writeFieldName(OCCURRENCES);
 				jg.writeStartArray();
 				for(TermOccurrence termOcc:t.getOccurrences()) {
@@ -605,7 +605,7 @@ public class JsonTermIndexIO {
 				jg.writeEndArray();
 			}
 			
-			if(options.withContexts() && t.isContextVectorComputed()) {
+			if(options.isWithContexts() && t.isContextVectorComputed()) {
 				jg.writeFieldName(CONTEXT);
 				jg.writeStartObject();
 				
