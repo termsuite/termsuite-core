@@ -113,7 +113,7 @@ platform {
 	        symbolicName = getProperty("osgi.plugin.symbolicName")
 	        bundleName = getProperty("osgi.bundleName")
 	        version = getProperty("osgi.version")
-	        addQualifier = getProperty("osgi.addQualifier")
+	        addQualifier = version.endsWith('SNAPSHOT')
 	        
 	        instruction "Import-Package", ""
 	        instruction "Export-Package", "eu.project.ttc.*,org.apache.uima.examples"
@@ -375,6 +375,6 @@ bintrayUpload.dependsOn updateSiteZip
  */
 task uploadP2(type: Exec) {
 	workingDir = "./"
- 	commandLine "curl", "-T", "build/updatesite.zip", "-u$bintrayUser:$bintrayApiKey", "https://api.bintray.com/content/termsuite/p2/update-site/$version/updatesite.zip?publish=1&override=1&explode=1"
+ 	commandLine "curl", "-T", "build/updatesite.zip", "-u$bintrayUser:$bintrayApiKey", "https://api.bintray.com/content/termsuite/termsuite-ui/update-site/$version/updatesite.zip?publish=1&override=1&explode=1"
 }
-bintrayUpload.dependsOn updateSiteZip
+uploadP2.dependsOn updateSiteZip
