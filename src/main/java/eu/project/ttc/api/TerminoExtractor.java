@@ -327,7 +327,7 @@ public class TerminoExtractor {
 		if(nbDocuments != -1)
 			pipeline.aeDocumentLogger(this.nbDocuments);
 		
-		if(maxSizeFilter.isPresent());
+		if(maxSizeFilter.isPresent())
 			pipeline.aeMaxSizeThresholdCleaner(TermProperty.FREQUENCY, maxSizeFilter.get());
 		
 		pipeline
