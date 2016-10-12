@@ -96,8 +96,8 @@ compileJava.source jcasgen.outputs, sourceSets.main.java
 // Produces OSGi bundles and P2 update site 
 platform {
     fetchSources = false
-    featureId=getProperty("termsuite.osgi.feature.id")
-    featureName=getProperty("termsuite.osgi.feature.name")
+    featureId=project.getProperty("termsuite.osgi.feature.id")
+    featureName=project.getProperty("termsuite.osgi.feature.name")
     featureVersion=version
     
     /*
@@ -107,19 +107,19 @@ platform {
      *
      */
      
-   	eclipseHome = new File(getProperty("user.eclipse.home"))
+   	eclipseHome = new File(project.getProperty("user.eclipse.home"))
     bundle(project) {
         bnd {
-	        symbolicName = getProperty("osgi.plugin.symbolicName")
-	        bundleName = getProperty("osgi.bundleName")
-	        version = getProperty("osgi.version")
+	        symbolicName = project.getProperty("osgi.plugin.symbolicName")
+	        bundleName = project.getProperty("osgi.bundleName")
+	        version = project.getProperty("osgi.version")
 	        addQualifier = version.endsWith('SNAPSHOT')
 	        
 	        instruction "Import-Package", ""
 	        instruction "Export-Package", "eu.project.ttc.*,org.apache.uima.examples"
         }
     }
-    feature(id: getProperty("termsuite.thirdparty.osgi.feature.id"), name: getProperty("termsuite.thirdparty.osgi.feature.name"), version: version) {
+    feature(id: project.getProperty("termsuite.thirdparty.osgi.feature.id"), name: project.getProperty("termsuite.thirdparty.osgi.feature.name"), version: version) {
  		plugin "ch.qos.logback:logback-classic:1.1.7"
 		plugin "com.google.guava:guava:19.0"
     }
@@ -131,7 +131,7 @@ artifacts {
 
 if(hasProperty("signing.keyId") 
 	&& hasProperty("signing.secretKeyRingFile")
-	&& new File(getProperty("signing.secretKeyRingFile")).exists()
+	&& new File(project.getProperty("signing.secretKeyRingFile")).exists()
 	) {
 	// activate signing of artifacts, only if signing is configured properly
 	signing {
@@ -142,9 +142,9 @@ if(hasProperty("signing.keyId")
 publishing {
 	publications {
 		maven(MavenPublication) {
-			groupId getProperty("group")
-			artifactId getProperty("name")
-			version getProperty("version")
+			groupId project.getProperty("group")
+			artifactId project.getProperty("name")
+			version project.getProperty("version")
 
 			from components.java
 		}
@@ -157,38 +157,38 @@ if(hasProperty("ossrh.username")) {
   	  mavenDeployer {
     		beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
 
-      		repository(url: getProperty("oss.repository.release")) {
-      		  authentication(userName: getProperty("ossrh.username"), password: getProperty("ossrh.password"))
+      		repository(url: project.getProperty("oss.repository.release")) {
+      		  authentication(userName: project.getProperty("ossrh.username"), password: project.getProperty("ossrh.password"))
       		}
-      		snapshotRepository(url: getProperty("oss.repository.snapshot")) {
-      		  authentication(userName: getProperty("ossrh.username"), password: getProperty("ossrh.password"))
+      		snapshotRepository(url: project.getProperty("oss.repository.snapshot")) {
+      		  authentication(userName: project.getProperty("ossrh.username"), password: project.getProperty("ossrh.password"))
       		}
 
       		pom.project {
-      		  name getProperty("name")
+      		  name project.getProperty("name")
       		  packaging 'jar'
       		  // optionally artifactId can be defined here
-      		  description getProperty("description")
-      		  url getProperty("url")
+      		  description project.getProperty("description")
+      		  url project.getProperty("url")
 
       		  scm {
-      			  connection "scm:git:" + getProperty("termsuite.git.url")
-      			  developerConnection "scm:git:" + getProperty("termsuite.git.url")
-      			  url getProperty("termsuite.git.url")
+      			  connection "scm:git:" + project.getProperty("termsuite.git.url")
+      			  developerConnection "scm:git:" + project.getProperty("termsuite.git.url")
+      			  url project.getProperty("termsuite.git.url")
       		  }
 
       		  licenses {
       			  license {
-      				  name getProperty("license")
-      				  url getProperty("licenseUrl")
+      				  name project.getProperty("license")
+      				  url project.getProperty("licenseUrl")
       			  }
       		  }
 
       		  developers {
       			  developer {
-      				  id getProperty("developer.id")
-      				  name getProperty("developer.name")
-      				  email getProperty("developer.email")
+      				  id project.getProperty("developer.id")
+      				  name project.getProperty("developer.name")
+      				  email project.getProperty("developer.email")
       			  }
       		  }
       		}
@@ -309,10 +309,10 @@ jar {
 	}
 
 	// tune manifest
-    manifest {
+    manifest { 
         attributes(
-			"Implementation-Title": getProperty("name"),
-			"Implementation-Version": getProperty("version"),
+			"Implementation-Title": project.name,
+			"Implementation-Version": project.getProperty("version"),
             "Built-By": System.getProperty('user.name'),
             "Built-Date": new Date(),
             "Built-JDK": System.getProperty('java.version'),
@@ -350,13 +350,13 @@ bintray {
 		into '.'
 	}
 	pkg {
-		repo = getProperty("termsuite.p2repo.name")
-		name = getProperty("termsuite.p2repo.pkgname")
-		desc = getProperty("termsuite.p2repo.description")
-        userOrg = getProperty("termsuite.bintray.org")
-        licenses = [getProperty("license")]
-		vcsUrl = getProperty("termsuite.git.url")
-		labels = getProperty("termsuite.p2repo.tags").split(",")
+		repo = project.getProperty("termsuite.p2repo.name")
+		name = project.getProperty("termsuite.p2repo.pkgname")
+		desc = project.getProperty("termsuite.p2repo.description")
+        userOrg = project.getProperty("termsuite.bintray.org")
+        licenses = [project.getProperty("license")]
+		vcsUrl = project.getProperty("termsuite.git.url")
+		labels = project.getProperty("termsuite.p2repo.tags").split(",")
 		publicDownloadNumbers = false
 	    version {
         	name = version
