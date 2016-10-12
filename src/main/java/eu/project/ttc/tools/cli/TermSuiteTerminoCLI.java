@@ -300,203 +300,199 @@ public class TermSuiteTerminoCLI {
      * @throws UnsupportedEncodingException 
 	 */
 	public static void main(String[] args) throws Exception {
-		new TermSuiteTerminoCLI().run(args);
-	}
-
-	private void run(String[] args) throws IOException, UIMAException, UnsupportedEncodingException {
+		String logPath = Paths.get("logs", "termsuite-" + new SimpleDateFormat("yyyyMMdd-HHmmss").format(new Date()) +".log").toAbsolutePath().toString();
+		TermSuiteCLIUtils.logToFile(logPath);
 		File logDir = new File("logs");
 		if(!logDir.exists()) 
 			logDir.mkdir();
-		String logPath = Paths.get("logs", "termsuite-" + new SimpleDateFormat("yyyyMMdd-HHmmss").format(new Date()) +".log").toAbsolutePath().toString();
-		TermSuiteCLIUtils.logToFile(logPath);
-		Stopwatch sw = Stopwatch.createStarted();
 		LOGGER.info("Logging to {}", logPath);
-			
-			// usage
-			// java -DconfigFile=myPropertiesFileName -Xms1g  -Xmx2g -cp ttc-term-suite-1.3.jar eu.project.ttc.tools.cli.TermSuiteSpotterCLI
-			// if the option -DconfigFile is missing preferencesFileName is set to TermSuiteCLIUtils.USER_HOME+PREFERENCES_FILE_NAME
-			// create the command line parser
-			PosixParser parser = new PosixParser();
-
-			// create the Options
-			Options options = declareOptions();
-			
-			try {
-				// Parse and set CL options
-				CommandLine line = parser.parse(options, args, false);
-				readArguments(line);
-				if(line.hasOption(NO_LOGGING))
-					TermSuiteCLIUtils.disableLogging();
-				else if(line.hasOption(DEBUG))
-					TermSuiteCLIUtils.setGlobalLogLevel("debug");
-				else if(line.hasOption(TRACE))
-					TermSuiteCLIUtils.setGlobalLogLevel("trace");
-				else
-					TermSuiteCLIUtils.setGlobalLogLevel("info");
-
-				TermSuiteCLIUtils.logCommandLineOptions(line);
-				
-				TermSuitePipeline pipeline = TermSuitePipeline.create(language.getCode());
-				
-				switch(collectionMode) {
-				case INLINE_TEXT:
-					pipeline.setInlineString(inlineText);
-					break;
-				case FILESYSTEM:
-					pipeline.setCollection(corpusType, corpusPath, encoding);
-					break;
-				case ISTEX_API:
-					pipeline.setIstexCollection(istexAPIUrl.get(), istexIds.get());
-					break;
-				}
-
-				// resource
-				if(resourcePack.isPresent()) {
-					if(resourcePack.get().endsWith(".jar"))
-						pipeline.setResourceJar(resourcePack.get());
-					else
-						pipeline.setResourceDir(resourcePack.get());
-				}
-				
-				// mongodb
-				if(mongoStoreDBURL.isPresent())
-					pipeline.setMongoDBOccurrenceStore(mongoStoreDBURL.get());
-				
-				// tokenizer
-				pipeline.aeWordTokenizer();
-				
-				// tagger
-				if(tagger == Tagger.TreeTagger) 
-					pipeline.setTreeTaggerHome(taggerHome)
-						.aeTreeTagger();
-				else if(tagger == Tagger.Mate) 
-					pipeline.setMateModelPath(taggerHome)
-						.aeMateTaggerLemmatizer();
-				
-
-				// Filter urlsFilter
-				pipeline.aeUrlFilter();
-
-				// stemmer
-				pipeline.aeStemmer();
-				
-				// regex spotter
-				pipeline.setSpotWithOccurrences(spotWithOccurrences);
-				pipeline.aeRegexSpotter();
-
-				//export Json CAS spotter
-				if(jsonCasFile.isPresent())
-					pipeline.haeJsonCasExporter(jsonCasFile.get());
-				// filter stop words
-				pipeline.aeStopWordsFilter();
-
-				// specificity computer
-				pipeline.aeSpecificityComputer();
-
-					
-				// compost (morphology)
-				if(compostAlpha.isPresent()) 
-					pipeline.setCompostCoeffs(compostAlpha.get(), compostBeta.get(), compostGamma.get(), compostDelta.get());
-				if(compostMinComponentSize.isPresent()) 
-					pipeline.setCompostMinComponentSize(compostMinComponentSize.get());
-				if(compostMaxComponentNum.isPresent()) 
-					pipeline.setCompostMaxComponentNum(compostMaxComponentNum.get());
-				if(compostScoreThreshold.isPresent()) 
-					pipeline.setCompostScoreThreshold(compostScoreThreshold.get());
-				if(compostSimilarityThreshold.isPresent()) 
-					pipeline.setCompostSegmentSimilarityThreshold(compostSimilarityThreshold.get());
-				pipeline.aeCompostSplitter();
-				
-				// syntactic variant gathering
-				pipeline.aeSyntacticVariantGatherer();
-
-				// graphical variant gathering
-				pipeline.setGraphicalVariantSimilarityThreshold(graphicalSimilarityThreshold);
-				pipeline.aeGraphicalVariantGatherer();
-
-				if(periodicFilteringProperty.isPresent())
-					pipeline.aeMaxSizeThresholdCleaner(periodicFilteringProperty.get(), maxSizeFilteringMaxSize);
-				
-				// contextualize
-				if(contextualize) {
-					pipeline
-						.setContextualizeCoTermsType(allowMWTInContexts ? OccurrenceType.ALL : OccurrenceType.SINGLE_WORD)
-						.aeContextualizer(contextScope, contextualizeAllTerms);
-					
-				}
-				
-				pipeline.aeExtensionDetector()
-					.aeScorer()
-					.aeRanker(TermProperty.SPECIFICITY, true);
-				
-				
-				// filtering
-				if(cleaningThreshold.isPresent()) {
-					pipeline.setKeepVariantsWhileCleaning(keepVariantsWhileCleaning);
-					pipeline.aeThresholdCleaner(
-							cleaningProperty.get(), cleaningThreshold.get());
-				} else if(cleaningTopN.isPresent()) {
-					pipeline.setKeepVariantsWhileCleaning(keepVariantsWhileCleaning);
-					pipeline.aeTopNCleaner(cleaningProperty.get(), cleaningTopN.get());
-				}
-
-				// stats
-				pipeline.haeCasStatCounter("at end of pipeline");
-
-				
-				
-				// Export
-				if(tsvFile.isPresent())  {
-					if(tsvProperties.isPresent()) {
-						pipeline.setTsvExportProperties(tsvProperties.get());
-						pipeline.setTsvShowScores(tsvShowVariantScores);
-					} else 
-						pipeline.setTsvExportProperties(
-							TermProperty.PILOT,
-							TermProperty.FREQUENCY
-						);
-					pipeline.haeTsvExporter(tsvFile.get());
-
-				}
-				if(tbxFile.isPresent()) 
-					pipeline.haeTbxExporter(tbxFile.get());
-				if(jsonFile.isPresent())  {					
-					pipeline.setExportJsonWithContext(contextualize);
-					pipeline.setExportJsonWithOccurrences(true);
-					if(mongoStoreSoftLinked)
-						pipeline.linkMongoStore();
-					pipeline.haeJsonExporter(jsonFile.get());
-				}
-
-				// run the pipeline
-				final String termIndexName = "ScriptTermIndex_" + System.currentTimeMillis();
-	            if(collectionMode == CollectionMode.INLINE_TEXT) {
-	            	LOGGER.info("Running TermSuite pipeline (inline mode)");
-	            	JCas cas = JCasFactory.createJCas();
-	            	cas.setDocumentText(inlineText);
-	            	cas.setDocumentLanguage(language.getCode());
-	            	pipeline.run(cas);
-	            	System.err.flush();
-	            	System.out.println("Term index: ");
-					TermIndex index = (TermIndex)TermSuiteResourceManager.getInstance().get(termIndexName);
-	            	TermUtils.showIndex(index, System.out, watch);
-	            } else {
-	            	LOGGER.info("Running TermSuite pipeline in corpus mode");
-	            	pipeline.run();
-	            	if(watch.isPresent()) 
-	            		TermUtils.showIndex(
-	            				(TermIndex)TermSuiteResourceManager.getInstance().get(termIndexName), 
-	            				new PrintStream(System.err, true, "UTF-8"), 
-	            				watch);
-	            }
-	            LOGGER.info("Script executed in " + sw.toString());
-				
-			} catch (ParseException e) {
-				TermSuiteCLIUtils.printUsage(e, USAGE, options); 
-			}
+		TermSuiteTerminoCLI cli = new TermSuiteTerminoCLI();
+		cli.run(args);
 	}
 
-	private static Options declareOptions() {
+	private void run(String[] args) throws IOException, UIMAException, UnsupportedEncodingException {
+		Stopwatch sw = Stopwatch.createStarted();
+			
+
+		// create the Options
+		Options options = declareOptions();
+		
+		try {
+			// Parse and set CL options
+			CommandLine line = new PosixParser().parse(options, args, false);
+			readArguments(line);
+			if(line.hasOption(NO_LOGGING))
+				TermSuiteCLIUtils.disableLogging();
+			else if(line.hasOption(DEBUG))
+				TermSuiteCLIUtils.setGlobalLogLevel("debug");
+			else if(line.hasOption(TRACE))
+				TermSuiteCLIUtils.setGlobalLogLevel("trace");
+			else
+				TermSuiteCLIUtils.setGlobalLogLevel("info");
+
+			TermSuiteCLIUtils.logCommandLineOptions(line);
+			
+			TermSuitePipeline pipeline = TermSuitePipeline.create(language.getCode());
+			
+			switch(collectionMode) {
+			case INLINE_TEXT:
+				pipeline.setInlineString(inlineText);
+				break;
+			case FILESYSTEM:
+				pipeline.setCollection(corpusType, corpusPath, encoding);
+				break;
+			case ISTEX_API:
+				pipeline.setIstexCollection(istexAPIUrl.get(), istexIds.get());
+				break;
+			}
+
+			// resource
+			if(resourcePack.isPresent()) {
+				if(resourcePack.get().endsWith(".jar"))
+					pipeline.setResourceJar(resourcePack.get());
+				else
+					pipeline.setResourceDir(resourcePack.get());
+			}
+			
+			// mongodb
+			if(mongoStoreDBURL.isPresent())
+				pipeline.setMongoDBOccurrenceStore(mongoStoreDBURL.get());
+			
+			// tokenizer
+			pipeline.aeWordTokenizer();
+			
+			// tagger
+			if(tagger == Tagger.TreeTagger) 
+				pipeline.setTreeTaggerHome(taggerHome)
+					.aeTreeTagger();
+			else if(tagger == Tagger.Mate) 
+				pipeline.setMateModelPath(taggerHome)
+					.aeMateTaggerLemmatizer();
+			
+
+			// Filter urlsFilter
+			pipeline.aeUrlFilter();
+
+			// stemmer
+			pipeline.aeStemmer();
+			
+			// regex spotter
+			pipeline.setSpotWithOccurrences(spotWithOccurrences);
+			pipeline.aeRegexSpotter();
+
+			//export Json CAS spotter
+			if(jsonCasFile.isPresent())
+				pipeline.haeJsonCasExporter(jsonCasFile.get());
+			// filter stop words
+			pipeline.aeStopWordsFilter();
+
+			// specificity computer
+			pipeline.aeSpecificityComputer();
+
+				
+			// compost (morphology)
+			if(compostAlpha.isPresent()) 
+				pipeline.setCompostCoeffs(compostAlpha.get(), compostBeta.get(), compostGamma.get(), compostDelta.get());
+			if(compostMinComponentSize.isPresent()) 
+				pipeline.setCompostMinComponentSize(compostMinComponentSize.get());
+			if(compostMaxComponentNum.isPresent()) 
+				pipeline.setCompostMaxComponentNum(compostMaxComponentNum.get());
+			if(compostScoreThreshold.isPresent()) 
+				pipeline.setCompostScoreThreshold(compostScoreThreshold.get());
+			if(compostSimilarityThreshold.isPresent()) 
+				pipeline.setCompostSegmentSimilarityThreshold(compostSimilarityThreshold.get());
+			pipeline.aeCompostSplitter();
+			
+			// syntactic variant gathering
+			pipeline.aeSyntacticVariantGatherer();
+
+			// graphical variant gathering
+			pipeline.setGraphicalVariantSimilarityThreshold(graphicalSimilarityThreshold);
+			pipeline.aeGraphicalVariantGatherer();
+
+			if(periodicFilteringProperty.isPresent())
+				pipeline.aeMaxSizeThresholdCleaner(periodicFilteringProperty.get(), maxSizeFilteringMaxSize);
+			
+			// contextualize
+			if(contextualize) {
+				pipeline
+					.setContextualizeCoTermsType(allowMWTInContexts ? OccurrenceType.ALL : OccurrenceType.SINGLE_WORD)
+					.aeContextualizer(contextScope, contextualizeAllTerms);
+				
+			}
+			
+			pipeline.aeExtensionDetector()
+				.aeScorer()
+				.aeRanker(TermProperty.SPECIFICITY, true);
+			
+			
+			// filtering
+			if(cleaningThreshold.isPresent()) {
+				pipeline.setKeepVariantsWhileCleaning(keepVariantsWhileCleaning);
+				pipeline.aeThresholdCleaner(
+						cleaningProperty.get(), cleaningThreshold.get());
+			} else if(cleaningTopN.isPresent()) {
+				pipeline.setKeepVariantsWhileCleaning(keepVariantsWhileCleaning);
+				pipeline.aeTopNCleaner(cleaningProperty.get(), cleaningTopN.get());
+			}
+
+			// stats
+			pipeline.haeCasStatCounter("at end of pipeline");
+
+			
+			
+			// Export
+			if(tsvFile.isPresent())  {
+				if(tsvProperties.isPresent()) {
+					pipeline.setTsvExportProperties(tsvProperties.get());
+					pipeline.setTsvShowScores(tsvShowVariantScores);
+				} else 
+					pipeline.setTsvExportProperties(
+						TermProperty.PILOT,
+						TermProperty.FREQUENCY
+					);
+				pipeline.haeTsvExporter(tsvFile.get());
+
+			}
+			if(tbxFile.isPresent()) 
+				pipeline.haeTbxExporter(tbxFile.get());
+			if(jsonFile.isPresent())  {					
+				pipeline.setExportJsonWithContext(contextualize);
+				pipeline.setExportJsonWithOccurrences(true);
+				if(mongoStoreSoftLinked)
+					pipeline.linkMongoStore();
+				pipeline.haeJsonExporter(jsonFile.get());
+			}
+
+			// run the pipeline
+			final String termIndexName = "ScriptTermIndex_" + System.currentTimeMillis();
+            if(collectionMode == CollectionMode.INLINE_TEXT) {
+            	LOGGER.info("Running TermSuite pipeline (inline mode)");
+            	JCas cas = JCasFactory.createJCas();
+            	cas.setDocumentText(inlineText);
+            	cas.setDocumentLanguage(language.getCode());
+            	pipeline.run(cas);
+            	System.err.flush();
+            	System.out.println("Term index: ");
+				TermIndex index = (TermIndex)TermSuiteResourceManager.getInstance().get(termIndexName);
+            	TermUtils.showIndex(index, System.out, watch);
+            } else {
+            	LOGGER.info("Running TermSuite pipeline in corpus mode");
+            	pipeline.run();
+            	if(watch.isPresent()) 
+            		TermUtils.showIndex(
+            				(TermIndex)TermSuiteResourceManager.getInstance().get(termIndexName), 
+            				new PrintStream(System.err, true, "UTF-8"), 
+            				watch);
+            }
+            LOGGER.info("Script executed in " + sw.toString());
+			
+		} catch (ParseException e) {
+			TermSuiteCLIUtils.printUsage(e, USAGE, options); 
+		}
+	}
+
+	public Options declareOptions() {
 		Options options = new Options();
 		
 		options.addOption(TermSuiteCLIUtils.createOption(

@@ -57,7 +57,7 @@ public class ExtensionDetecter extends JCasAnnotator_ImplBase {
 	
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
-		LOGGER.info("Starting extension detection");
+		LOGGER.info("Detecting term extensions for TermIndex {}", this.termIndexResource.getTermIndex().getName());
 		
 		String gatheringKey = TermIndexes.WORD_COUPLE_LEMMA_LEMMA;
 		CustomTermIndex customIndex = this.termIndexResource.getTermIndex().createCustomIndex(

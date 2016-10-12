@@ -152,7 +152,7 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 	@Override
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
-		logger.info("Start graphical term gathering");
+		logger.info("Starting graphical term gathering for TermIndex {}", this.termIndexResource.getTermIndex().getName());
 		
 		
 		// create the index

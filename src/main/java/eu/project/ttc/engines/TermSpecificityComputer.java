@@ -65,7 +65,7 @@ public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 	@Override
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
-		LOGGER.info("Computing specificities and measures");
+		LOGGER.info("Computing specificities and measures for TermIndex {}", this.termIndexResource.getTermIndex().getName());
 		
 		computeSpecifities();
 		computeMeasures();

@@ -1681,7 +1681,9 @@ public class TermSuitePipeline {
 	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline emptyTermIndex(String name) {
-		this.termIndex = Optional.of(new MemoryTermIndex(name, this.lang, this.occurrenceStore));
+		MemoryTermIndex termIndex = new MemoryTermIndex(name, this.lang, this.occurrenceStore);
+		LOGGER.info("Creating TermIndex {}", termIndex.getName());
+		this.termIndex = Optional.of(termIndex);
 		return this;
 	}
 

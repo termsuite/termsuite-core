@@ -83,7 +83,7 @@ public class ScorerAE extends JCasAnnotator_ImplBase {
 	
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
-		logger.info("Starting " + TASK_NAME);
+		logger.info("Scorying terms for TermIndex {}", this.termIndexResource.getTermIndex().getName());
 		TermIndex termIndex = termIndexResource.getTermIndex();
 		VariantScorerConfig defaultScorerConfig = termIndex.getLang().getScorerConfig();
 		TermVariationScorer variantScorer = new TermVariationScorer(defaultScorerConfig);

@@ -114,7 +114,10 @@ public abstract class AbstractTermIndexCleaner extends JCasAnnotator_ImplBase {
 	@Override
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
-		logger.info("Cleaning TermIndex {} on property {}", termIndexResource.getTermIndex().getName(), this.property);
+		logger.info("Cleaning TermIndex {} on property {} - {}", 
+				termIndexResource.getTermIndex().getName(), 
+				this.property,
+				this.toString());
 		clean();
 	}
 

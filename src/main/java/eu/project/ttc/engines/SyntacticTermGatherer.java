@@ -137,7 +137,8 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 	@Override
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
-		LOGGER.info("Start syntactic term gathering");
+		LOGGER.info("Starting syntactic term gathering for TermIndex {}", this.termIndexResource.getTermIndex().getName());
+		
 		TermIndex termIndex = this.termIndexResource.getTermIndex();
 		
 		/*
@@ -156,7 +157,7 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 			// Display class sizes
 			Stopwatch sw1 = Stopwatch.createStarted();
 			int k = 0;
-			LOGGER.info("Biggest class is {}, size: {}", stats.getBiggestClass(), stats.getBiggestSize());
+			LOGGER.debug("Biggest class is {}, size: {}", stats.getBiggestClass(), stats.getBiggestSize());
 			
 			
 			int size;
@@ -165,7 +166,7 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 				size = stats.getSizeCounters().get(i).size();
 				totalComparisons = totalComparisons.add(BigInteger.valueOf(size * i*(i-1)));
 			}
-			LOGGER.info("Number of term pairs to test: " + totalComparisons);
+			LOGGER.debug("Number of term pairs to test: " + totalComparisons);
 			sw1.stop();
 			LOGGER.debug("Time to get the comparisons number: " + sw1.elapsed(TimeUnit.MILLISECONDS));
 			LOGGER.debug("Number of classes: " + k);

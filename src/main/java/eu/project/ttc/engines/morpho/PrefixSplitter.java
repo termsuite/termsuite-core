@@ -68,7 +68,7 @@ public class PrefixSplitter extends JCasAnnotator_ImplBase {
 	
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
-		LOGGER.info("Starting {}", TASK_NAME);
+		LOGGER.info("Starting {} for TermIndex {}", TASK_NAME, termIndexResource.getTermIndex().getName());
 		Multimap<String, Term> lemmaIndex = HashMultimap.create();
 		int nb = 0;
 		String prefixExtension, lemma, pref;

@@ -67,7 +67,7 @@ public class SuffixDerivationDetecter extends JCasAnnotator_ImplBase {
 	
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
-		LOGGER.info("Starting {}", TASK_NAME);
+		LOGGER.info("Starting {} for TermIndex {}", TASK_NAME, this.termIndexResource.getTermIndex().getName());
 		TermIndex termIndex = termIndexResource.getTermIndex();
 		CustomTermIndex lemmaIndex = termIndex.createCustomIndex(
 				LEMMA_INDEX, 

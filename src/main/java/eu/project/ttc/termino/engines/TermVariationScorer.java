@@ -88,7 +88,7 @@ public class TermVariationScorer {
 	};
 	
 	public ScoredModel score(TermIndex termIndex) {
-		LOGGER.info("Scorying term index {}", termIndex.getName());
+		LOGGER.debug("Scorying term index {}", termIndex.getName());
 
 		// Filter terms with bad orthgraph
 		doScoredModel(termIndex);
@@ -115,7 +115,7 @@ public class TermVariationScorer {
 		
 		int size = scoredModel.getTerms().size();
 		filterTerms();
-		LOGGER.info("Filtered {} terms out of {}", size - scoredModel.getTerms().size(), size);
+		LOGGER.debug("Filtered {} terms out of {}", size - scoredModel.getTerms().size(), size);
 		
 		int sizeBefore = 0;
 		int sizeAfter = 0;
@@ -131,7 +131,7 @@ public class TermVariationScorer {
 			t.setVariations(sv);
 		}
 		
-		LOGGER.info("Filtered {} variants out of {}", sizeBefore - sizeAfter, sizeBefore);
+		LOGGER.debug("Filtered {} variants out of {}", sizeBefore - sizeAfter, sizeBefore);
 		scoredModel.sort(wrComparator);
 	}
 

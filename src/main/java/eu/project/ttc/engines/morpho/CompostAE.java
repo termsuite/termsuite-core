@@ -187,7 +187,7 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 			throws AnalysisEngineProcessException {
 		SubTaskObserver observer = observerResource.getTaskObserver(TASK_NAME);
 		observer.setTotalTaskWork(termIndexResource.getTermIndex().getWords().size());
-		LOGGER.info("Starting morphology analysis");
+		LOGGER.info("Starting morphologyical compound detection for TermIndex {}", this.termIndexResource.getTermIndex().getName());
 		LOGGER.debug(this.toString());
 		wrMeasure = termIndexResource.getTermIndex().getWRMeasure();
 		swtLemmaIndex = termIndexResource.getTermIndex().getCustomIndex(TermIndexes.SINGLE_WORD_LEMMA);

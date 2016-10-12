@@ -75,7 +75,7 @@ public class Ranker extends JCasAnnotator_ImplBase {
 	
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
-		logger.info("Starting " + TASK_NAME);
+		logger.info("Ranking terms for TermIndex {}", termIndexResource.getTermIndex().getName());
 		List<Term> ranked = Lists.newArrayList(termIndexResource.getTermIndex().getTerms());
 		Comparator<Term> comparator = rankingProperty.getComparator(termIndexResource.getTermIndex(), reverse);
 		Collections.sort(ranked, comparator);
