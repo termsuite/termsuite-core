@@ -49,6 +49,9 @@ public class PrimaryOccurrenceDetector extends JCasAnnotator_ImplBase {
 		
 		TermIndex termIndex = this.termIndexResource.getTermIndex();
 		
+		if(termIndexResource.getTermIndex().getTerms().isEmpty())
+			return;
+
 		/*
 		 * 1- Create the occurrence index
 		 */

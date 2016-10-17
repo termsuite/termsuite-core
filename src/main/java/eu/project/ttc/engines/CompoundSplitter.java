@@ -70,6 +70,9 @@ public class CompoundSplitter extends JCasAnnotator_ImplBase {
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
 		this.getContext().getLogger().log(Level.INFO, "Detecting compounds");
+		if(termIndexResource.getTermIndex().getTerms().isEmpty())
+			return;
+
 		Iterator<Term> it = this.termIndexResource.getTermIndex().singleWordTermIterator();
 		while (it.hasNext()) {
 			Word word = it.next().firstWord().getWord();

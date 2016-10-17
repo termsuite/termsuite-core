@@ -141,6 +141,9 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 		
 		TermIndex termIndex = this.termIndexResource.getTermIndex();
 		
+		if(termIndexResource.getTermIndex().getTerms().isEmpty())
+			return;
+
 		/*
 		 * Prepare observer and indexes
 		 */

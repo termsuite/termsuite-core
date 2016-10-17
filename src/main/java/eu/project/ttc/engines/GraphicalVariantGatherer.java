@@ -154,7 +154,9 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 			throws AnalysisEngineProcessException {
 		logger.info("Starting graphical term gathering for TermIndex {}", this.termIndexResource.getTermIndex().getName());
 		
-		
+		if(termIndexResource.getTermIndex().getTerms().isEmpty())
+			return;
+
 		// create the index
 		String indexName = String.format("_%d_first_letters_", n);
 		final TermIndex termIndex = this.termIndexResource.getTermIndex();

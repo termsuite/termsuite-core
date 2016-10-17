@@ -119,6 +119,8 @@ public class Contextualizer extends JCasAnnotator_ImplBase {
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
 		LOGGER.info("Contextualizing");
+		if(termIndexResource.getTermIndex().getTerms().isEmpty())
+			return;
 
 		// 0- drop all context vectors
 		LOGGER.debug("0 - Drop all context vectors");

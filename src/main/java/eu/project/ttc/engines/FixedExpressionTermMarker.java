@@ -57,7 +57,9 @@ public class FixedExpressionTermMarker extends JCasAnnotator_ImplBase {
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
 		LOGGER.info("Start fixed expressions marker");
-		
+		if(termIndexResource.getTermIndex().getTerms().isEmpty())
+			return;
+
 		int cnt = 0;
 		for(Term t:termIndexResource.getTermIndex().getTerms()) {
 			boolean fixedExpression = fixedExpressionResource.containsLemma(t.getLemma());
