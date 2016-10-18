@@ -138,4 +138,9 @@ public class CustomTermIndexImpl implements CustomTermIndex {
 		
 	}
 
+	@Override
+	public boolean containsKey(String key) {
+		return !index.get(key).isEmpty();
+	}
+
 }
