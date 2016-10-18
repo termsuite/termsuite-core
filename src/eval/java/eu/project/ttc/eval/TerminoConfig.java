@@ -66,7 +66,7 @@ public class TerminoConfig {
 				.useContextualizer(scope, swtOnly ? ContextualizerMode.ON_SWT_TERMS : ContextualizerMode.ON_ALL_TERMS);
 		
 		if(frequencyTh > 1)
-			extractor.preFilter(new TerminoFilterConfig().by(TermProperty.FREQUENCY).keepOverTh(2));
+			extractor.preFilter(new TerminoFilterConfig().by(TermProperty.FREQUENCY).keepOverTh(frequencyTh));
 		
 		return extractor;
 	}

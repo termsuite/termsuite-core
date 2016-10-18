@@ -195,7 +195,11 @@ public class BilingualAligner {
 		Collections.sort(mergedCandidates);
 		
 
-		return sortTruncateNormalize(targetTermino, nbCandidates, mergedCandidates);
+		/*
+		 * 4- Sort, truncate, and normalize
+		 */
+		List<TranslationCandidate> sortedTruncateedNormalized = sortTruncateNormalize(targetTermino, nbCandidates, mergedCandidates);
+		return sortedTruncateedNormalized;
 	}
 	
 	
@@ -209,6 +213,8 @@ public class BilingualAligner {
 	 * @return
 	 */
 	public List<TranslationCandidate> align(Term sourceTerm, int nbCandidates, int minCandidateFrequency) {
+		if(sourceTerm.getGroupingKey().equals("npn: stockage de énergie"))
+			System.out.println(sourceTerm);
 		Preconditions.checkNotNull(sourceTerm);
 		List<TranslationCandidate> mergedCandidates = Lists.newArrayList();
 		List<List<Term>> sourceLemmaSets = getSourceLemmaSets(sourceTerm);
@@ -257,6 +263,12 @@ public class BilingualAligner {
 		List<Term> swtTerms = TermUtils.getSingleWordTerms(sourceTermino, sourceTerm);
 		List<List<Term>> sourceLemmaSets = Lists.newArrayList();
 		if(swtTerms.size() == 1) {
+			
+			if(sourceTerm.getWords().size() > 1) {
+				LOGGER.warn("Skipping alignment for term {}. Expected at least two inner swt terms, but got {}", sourceTerm, swtTerms);
+				return Lists.newArrayList();
+			}
+			
 			// sourceTerm is swtTerms.get(0);
 			if(sourceTerm.isCompound()) {
 				sourceLemmaSets.add(Lists.newArrayList(sourceTerm));
@@ -488,9 +500,9 @@ public class BilingualAligner {
 
 	public static enum AlignmentMethod {
 		DICTIONARY("dico", "dictionary"),
-		DISTRIBUTIONAL("distrib", "distributional"),
+		DISTRIBUTIONAL("dist", "distributional"),
 		COMPOSITIONAL("comp", "compositional"),
-		SEMI_DISTRIBUTIONAL("semi-dist", "semi-distributional");
+		SEMI_DISTRIBUTIONAL("s-dist", "semi-distributional");
 		
 		private String shortName;
 		private String longName;

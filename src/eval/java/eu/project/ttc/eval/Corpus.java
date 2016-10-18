@@ -23,7 +23,7 @@ public enum Corpus{
 	}
 
 
-	public Path getRef(TermType termType, Lang source, Lang target) {
+	public Path getRef(TermList termType, Lang source, Lang target) {
 		String type = termType.toString().toLowerCase();
 		return Paths.get("src", "eval", "resources", "refs", 
 				this.fullName,
@@ -33,23 +33,23 @@ public enum Corpus{
 	}
 	
 	public Path getMWTRef(Lang source, Lang target) {
-		return getRef(TermType.MWT, source, target);
+		return getRef(TermList.MWT, source, target);
 	}
 	
 	public Path getSWTRef(Lang source, Lang target) {
-		return getRef(TermType.SWT, source, target);		
+		return getRef(TermList.SWT, source, target);		
 	}
 
-	public boolean hasRef(TermType termType, Lang source, Lang target) {
+	public boolean hasRef(TermList termType, Lang source, Lang target) {
 		return getRef(termType, source, target).toFile().exists();
 	}
 
 	public boolean hasSWTRef(Lang source, Lang target) {
-		return hasRef(TermType.SWT, source, target);
+		return hasRef(TermList.SWT, source, target);
 	}
 
 	public boolean hasMWTRef(Lang source, Lang target) {
-		return hasRef(TermType.MWT, source, target);
+		return hasRef(TermList.MWT, source, target);
 	}
 	
 	public Path getRootDir() {

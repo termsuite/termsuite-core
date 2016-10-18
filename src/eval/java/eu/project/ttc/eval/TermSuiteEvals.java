@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Preconditions;
 
+import eu.project.ttc.api.JsonOptions;
 import eu.project.ttc.api.TermIndexIO;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.TermIndex;
@@ -31,11 +32,22 @@ public class TermSuiteEvals {
 	 * @return
 	 */
 	public static Path getTerminoDirectory() {
-		Path terminologies = getEvalOuputDirectory().resolve("terminologies");
-		if(!terminologies.toFile().exists())
-			terminologies.toFile().mkdirs();
-		return terminologies;
+		return getSubDir("terminologies");		
 	}
+	
+	
+	public static Path getAlignmentDirectory() {
+		return getSubDir("alignment");		
+	}
+
+
+	private static Path getSubDir(String other) {
+		Path alignmentDir = getEvalOuputDirectory().resolve(other);
+		if(!alignmentDir.toFile().exists())
+			alignmentDir.toFile().mkdirs();
+		return alignmentDir;
+	}
+
 
 	private static Object getCheckedProperty(String propertyName) {
 		Object configProperty = getConfigProperty(propertyName);
@@ -78,7 +90,7 @@ public class TermSuiteEvals {
 			LOGGER.info("Terminology {} not found in cache", getTerminologyFileName(lang, corpus, config));
 			TermIndex termIndex = config.toExtractor(lang, corpus).execute();
 			try(FileWriter writer = new FileWriter(path.toFile())){
-				TermIndexIO.toJson(termIndex, writer);
+				TermIndexIO.toJson(termIndex, writer, new JsonOptions().withOccurrences(false).withContexts(true));
 			} catch (IOException e) {
 				LOGGER.error("Could not create terminology {}", getTerminologyFileName(lang, corpus, config));
 				throw new RuntimeException(e);
@@ -91,10 +103,11 @@ public class TermSuiteEvals {
 	
 	
 	public static String getTerminologyFileName(Lang lang, Corpus corpus, TerminoConfig config) {
-		return String.format("%s-%s-th%s-%s.json", 
+		return String.format("%s-%s-th%s-scope%d-%s.json", 
 				corpus.getShortName(), 
 				lang.getCode(), 
 				Integer.toString(config.getFrequencyTh()), 
+				config.getScope(),
 				config.isSwtOnly() ? "swtonly" : "allterms");
 	}
 
@@ -116,6 +129,26 @@ public class TermSuiteEvals {
 	 */
 	public static Path getDictionaryPath(Lang sourceLang, Lang target) {
 		return getDictionariesPath().resolve(String.format("%s-%s.txt", sourceLang.getCode(), target.getCode()));
+	}
+
+	
+
+	public static String getRunName(Lang source, Lang target, Corpus corpus, TerminoConfig config) {
+		return String.format("alignment-results-%s-%s-%s-th%s-scope%d", 
+				corpus.getShortName(),
+				source.getCode(),
+				target.getCode(),
+				Integer.toString((int)config.getFrequencyTh()),
+				config.getScope()
+			);
+	}
+
+	public static boolean hasAnyRefForPair(Lang source, Lang target) {
+		for(Corpus corpus:Corpus.values())
+			for(TermList list:TermList.values())
+				if(corpus.hasRef(list, source, target))
+					return true;
+		return false;
 	}
 
 }

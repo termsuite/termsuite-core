@@ -40,31 +40,6 @@ public class Tsv2ColFile {
 	}
 
 	
-	public Stream<Term[]> termPairs(TermIndex sourceTermino, TermIndex targetTermino) throws IOException {
-		CustomTermIndex sourceLemmaIndex = sourceTermino.getCustomIndex(TermIndexes.LEMMA_LOWER_CASE);
-		CustomTermIndex targetLemmaIndex = targetTermino.getCustomIndex(TermIndexes.LEMMA_LOWER_CASE);
-		
-		return lines().filter(line -> {
-					if(!sourceLemmaIndex.containsKey(line[0])) {
-						LOGGER.warn("Ignoring ref line <{}> (source term not found in source terminology)", Joiner.on(" ").join(line));
-						return false;
-					}
-					if(!targetLemmaIndex.containsKey(line[1])) {
-						LOGGER.warn("Ignoring ref line <{}> (target term not found in source terminology)", Joiner.on(" ").join(line));
-						return false;
-					}
-					return true;
-				}).map(line -> {
-					List<Term> sources = sourceLemmaIndex.getTerms(line[0]);
-					Collections.sort(sources, TermProperty.FREQUENCY.getComparator(true));
-					List<Term> targets = targetLemmaIndex.getTerms(line[1]);
-					Collections.sort(targets, TermProperty.FREQUENCY.getComparator(true));
-					LOGGER.debug("Reading eval pair. Source: <{}>. Target: <{}>", sources.get(0), targets.get(0));
-
-					return new Term[]{sources.get(0), targets.get(0)};
-				});
-	}
-
 
 	public Stream<String[]> lines() throws IOException {
 		return Files.lines(path)
