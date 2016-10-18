@@ -41,7 +41,7 @@ import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.test.func.tools.builders.BilingualAlignerSpec;
+import eu.project.ttc.test.func.align.BilingualAlignerSpec;
 import eu.project.ttc.test.func.tools.builders.TermSuitePreprocessorSpec;
 import eu.project.ttc.test.func.tools.builders.TerminoExtractorSpec;
 import eu.project.ttc.test.func.tools.builders.TerminoFiltererSpec;

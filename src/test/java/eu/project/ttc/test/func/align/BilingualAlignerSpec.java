@@ -1,4 +1,4 @@
-package eu.project.ttc.test.func.tools.builders;
+package eu.project.ttc.test.func.align;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;
