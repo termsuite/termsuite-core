@@ -100,6 +100,18 @@ public class TerminoExtractor {
 	
 	
 	/*
+	 * 
+	 */
+	private boolean scoringEnabled = true;
+	
+	
+	/*
+	 * 
+	 */
+	private boolean variationDetectionEnabled = true;
+	
+	
+	/*
 	 * Filter properties
 	 */
 	private Optional<TerminoFilterConfig> postFilterConfig = Optional.empty();
@@ -161,7 +173,6 @@ public class TerminoExtractor {
 				FileSystemUtils.pathWalker(directory, "**/*.xmi", mapper),
 				FileSystemUtils.pathDocumentCount(directory, "**/*.xmi")
 			);
-
 	}
 
 	public static TerminoExtractor fromPreprocessedDocumentStream(Lang lang, Stream<JCas> casStream, long streamSize) {
@@ -207,7 +218,16 @@ public class TerminoExtractor {
 				1);
 	}
 
-	
+	public TerminoExtractor disableVariationDetection() {
+		this.variationDetectionEnabled = false;
+		return this;
+	}
+
+	public TerminoExtractor disableScoring() {
+		this.scoringEnabled = false;
+		return this;
+	}
+
 	public TerminoExtractor setTreeTaggerHome(String treeTaggerHome) {
 		this.treeTaggerHome = treeTaggerHome;
 		return this;
@@ -333,11 +353,17 @@ public class TerminoExtractor {
 		pipeline
 				.aeSpecificityComputer()
 				.aeCompostSplitter()
-				.aePrefixSplitter()
+				.aePrefixSplitter();
+		
+		if(variationDetectionEnabled)
+			pipeline
 				.aeSuffixDerivationDetector()
 				.aeSyntacticVariantGatherer()
-				.aeGraphicalVariantGatherer()
-				.aeExtensionDetector()
+				.aeGraphicalVariantGatherer();
+		
+		
+		if(scoringEnabled)
+			pipeline.aeExtensionDetector()
 				.aeScorer()
 				.aeRanker(TermProperty.SPECIFICITY, true);
 
