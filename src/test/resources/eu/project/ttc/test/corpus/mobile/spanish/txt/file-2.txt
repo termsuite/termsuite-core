@@ -1,0 +1,379 @@
+MobilePhoneTools.book Motorola Phone Tools
+Guía de inicio rápido Motorola Phone Tools - Guía de inicio rápido
+Índice
+Requisitos mínimos ...............................
+Antes de instalar Motorola Phone Tools.........
+Instalación de Motorola Phone Tools ............
+Instalación y configuración del dispositivo móvil
+Registro en línea ..................................
+Desinstalación de Motorola Phone Tools........
+Ventana principal de Motorola Phone Tools.....
+Panel de funciones de Motorola Phone Tools ..
+Información adicional .............................
+1            
+................................... 2
+................................... 3
+................................... 4
+.................................. 5
+................................... 7
+................................... 9
+..................................10
+..................................11
+..................................12 Motorola Phone Tools - Guía de inicio rápido
+Requisitos mínimos
+Motorola Phone Tools precisa Windows® 2000
+Para que Motorola Phone Tools funcione 
+dispone de los elementos siguientes:
+• Ordenador Pentium® II a 233 MHz , co
+(mediante un cable, puerto infrarrojo o 
+• Un puerto libre USB o serie si se usa u
+adaptador Bluetooth activo o un puerto
+• Disco duro local con 120 MB de espaci
+• Teléfono o dispositivo móvil compatible
+• La opción de datos y fax que debe solic
+operador de telefonía móvil (para pode
+mensajes electrónicos).
+• Las opciones de redes de datos de alta
+WCDMA) incluidas en el contrato susc
+móvil (para correo electrónico e Interne
+telefonía móvil); el servicio de datos de
+contrato y puede no estar disponible en
+Para obtener más información, póngas
+del servicio de telefonía inalámbrica.
+• Memoria activa mínima: 64 MB de RAM
+2                       
+, o XP.
+correctamente, compruebe que 
+nectado al teléfono móvil 
+adaptador Bluetooth).
+n cable para la conexión, un 
+ infrarrojo en funcionamiento.
+o libre.
+ con Motorola Phone Tools.
+itarse en el contrato con el 
+r enviar y recibir faxes y 
+ velocidad (GPRS, CDMA 1X y 
+rito con el operador de telefonía 
+t de alta velocidad en la red de 
+pende de la red y del tipo de 
+ ciertas áreas. 
+e en contacto con su operador 
+ con Windows® 2000 y XP. Motorola Phone Tools - Guía de inicio rápido
+Antes de instalar Motorola
+Capturas de ejemplo
+Las pantallas de ejemplo de este manual s
+Motorola Phone Tools en un entorno Windows
+puede cambiar si la aplicación se ejecuta e
+Windows. Sin embargo, esto no influye en el fun
+La imagen que ve podría ser diferente según el m
+Ayuda en línea
+Motorola Phone Tools dispone de una ayuda 
+que se puede acceder pulsando la opción de Ay
+los archivos de ayuda encontrará todo tipo de
+Motorola Phone Tools.
+Soporte técnico
+Encontrará información de soporte técnico dispo
+en el sitio web de BVRP Software en esta direcc
+http://www.bvrp.com/customers/motorola/
+Para obtener números de teléfono y direcciones
+enlace Contactos que hay en la parte superior d
+3            
+ Phone Tools
+on las que aparecen al utilizar 
+ XP. El aspecto de las pantallas 
+n otros sistemas operativos de 
+cionamiento del software.
+odelo del teléfono.
+en línea sensible al contexto a la 
+uda o la tecla F1 del teclado. En 
+ información sobre cómo utilizar 
+nible para Motorola Phone Tools
+ión: 
+ de correo electrónico, pulse en el 
+e la página web. Motorola Phone Tools - Guía de inicio rápido
+Instalación de Motorola Ph
+Importante
+Antes de conectar el dispositivo al ordenado
+Inicio de la instalación
+Para instalar Motorola Phone Tools en el disco
+programa en el dispositivo correspondiente. Al
+desde el CD-ROM, el proceso de instalación se 
+Si no, siga estas instrucciones:
+1. En el menú Inicio (en la barra de tareas),
+2. Seleccione la unidad de CD-ROM o escri
+unidad del CD-ROM).
+3. Para ejecutar el archivo, pulse el botón A
+Asistente de instalación
+Aparecerá un asistente de instalación que le orie
+proceso, y le solicitará información cuando sea 
+instalación, los archivos del programa se copia
+grupo para el programa. Este grupo contiene los
+Phone Tools a los que se puede acceder desd
+tareas).
+Una vez terminada la instalación, se abrirá a
+registro en línea (consulte Registro en línea, e
+registrarse para disponer de la garantía, asistenc
+En algunos sistemas operativos, una vez concl
+asistente de instalación le pedirá que reinicie el
+efectuados en el sistema entren en vigor.
+La casilla Agregar un acceso directo en el esc
+está marcada de forma predeterminada. Si pre
+Tools desde el menú Inicio en la barra de 
+mantiene marcada esa opción, el icono de ab
+acceso directo para abrir el programa:
+Motorola Phone Tools
+Cuando abra por primera vez el programa, se in
+Live Update y buscará actualizaciones de softw
+4                       
+one Tools
+r, hay que instalar el programa.
+ duro, introduzca el CD-ROM del 
+ instalar Motorola Phone Tools
+inicia de forma automática.
+ seleccione el comando Ejecutar.
+ba d:\boot\setup (donde D: es la 
+ceptar.
+ntará paso a paso durante todo el 
+necesaria. Durante el proceso de 
+n en el disco duro y se crea un 
+ iconos de la aplicación Motorola 
+e el menú Inicio (en la barra de 
+utomáticamente el asistente de 
+n la página 7). Es conveniente 
+ia técnica y mejoras gratuitas.
+uido el proceso de instalación, el 
+ ordenador para que los cambios 
+ritorio para iniciar el programa
+fiere empezar Motorola Phone 
+tareas, desmarque la casilla. Si 
+ajo se agrega al escritorio como 
+iciará automáticamente Motorola 
+are. Motorola Phone Tools - Guía de inicio rápido
+Instalación y configuració
+móvil
+Importante
+No conecte el teléfono o dispositivo móvil a
+asistente de instalación de Motorola Phone
+1. Seleccione su perfil de usuario.
+2. Normalmente, el software queda configur
+automáticamente con su teléfono o dispo
+automático. Sin embargo, si no se detec
+la ventana del Asistente de configurac
+3. En primer lugar, asegúrese de que su telé
+conectarlo, seleccione el tipo de conexió
+conectar el teléfono al ordenador.
+5            
+n del dispositivo 
+l PC hasta que se lo indique el 
+ Tools.
+ado para que funcione 
+sitivo móvil y este paso es 
+ta el tipo de conexión, aparecerá 
+ión del teléfono (vea abajo).
+fono está encendido y, antes de 
+n que vaya a utilizar para Motorola Phone Tools - Guía de inicio rápido
+4. Pulse Siguiente.
+5. Conecte el teléfono al ordenador. 
+El teléfono se detectará y configurará au
+abrirá al acabar el proceso de instalación
+6                       
+tomáticamente y la aplicación se 
+. Motorola Phone Tools - Guía de inicio rápido
+Registro en línea
+Para disponer de la garantía y gozar de la asiste
+de mejoras gratuitas, dése de alta en línea en n
+registro en línea se abre automáticamente al fina
+Importante
+Para asegurarse de que la aplicación se po
+Internet, compruebe antes que el acceso a 
+correctamente configurado.
+1. Puede elegir una de las opciones siguien
+• Regístrese inmediatamente pulsando e
+instrucciones para el registro en línea.
+• Si no desea registrarse en este momen
+más tarde....
+2. El Asistente muestra una ventana final co
+terminado.
+  - La casilla Ver Guía del usuario
+predeterminada. Si prefiere ver la
+desmarque la casilla. 
+- La casilla Ejecutar automática
+está marcada de forma predeterm
+aplicación más tarde, desmarque
+- La casilla Agregar un acceso d
+iniciar el programa está marcad
+prefiere abrir Motorola Phone Too
+barra de tareas, desmarque la ca
+7            
+ncia técnica de BVRP Software y 
+uestros servicios. El asistente de 
+l del proceso de instalación.
+drá conectar automáticamente a 
+Internet esté disponible y 
+tes:
+l botón Aceptar y siga las 
+to pulse el botón Registrarse 
+nfirmando que la instalación ha 
+ está marcada de forma 
+ Guía del usuario más tarde, 
+mente Motorola Phone Tools 
+inada. Si prefiere abrir la 
+ la casilla. 
+irecto en el escritorio para 
+a de forma predeterminada. Si 
+ls desde el menú Inicio en la 
+silla. Motorola Phone Tools - Guía de inicio rápido
+3. Para cerrar el Asistente de insta
+Tools, pulse el botón Finalizar.
+Si no consigue registrarse durante la instala
+otro momento seleccionando Menú > Ayud
+8                       
+lación de Motorola Phone 
+ción, puede hacerlo en cualquier 
+a > Registro en línea... Motorola Phone Tools - Guía de inicio rápido
+Desinstalación de Motoro
+1.  En la barra de tareas de Windows, despli
+Panel de control. 
+Se abrirá la ventana Panel de control.
+2.  En la lista, pulse dos veces en la opción 
+3.  Marque el grupo de programas de Motor
+su sistema operativo, pulse el botón Agr
+Quitar.
+4. Se iniciará el proceso de desinstalación y
+ordenador.
+Importante
+Este procedimiento no desinstala el controla
+tendrá que hacerlo manualmente desde el m
+Agregar o quitar programas.
+9            
+la Phone Tools
+egue el menú Inicio y seleccione 
+Agregar o quitar programas.
+ola Phone Tools y, en función de 
+egar o Quitar o Cambiar o 
+ el programa se borrará del 
+dor de la mochila Bluetooth. Eso 
+enú Inicio > Panel de control > Motorola Phone Tools - Guía de inicio rápido
+Ventana principal de Moto
+Con Motorola Phone Tools, puede compartir 
+PC y en el teléfono móvil. Cuando el móvil está
+realizar las siguientes operaciones:
+• Hacer y recibir llamadas.
+• Enviar y recibir mensajes de correo y S
+• Sincronizar los directorios telefónicos y
+• Iniciar una sesión de Internet*.
+• Enviar MMS*.
+• Transferir videoclips* del PC al teléfono
+• Enviar archivos* de música modificados
+* Nota:
+Algunas funciones de Motorola Phone Too
+para su teléfono o dispositivo móvil.
+Este icono indica la 
+intensidad de señal de 
+la red.
+Para seleccionar un 
+contacto y hacer una 
+llamada, pulse este 
+botón.
+Para hacer una 
+llamada: 
+- Utilice el teclado 
+numérico tal y como 
+haría con un teléfono 
+normal y corriente. 
+- Pulse el botón del 
+auricular verde.
+10                       
+rola Phone Tools
+la información almacenada en el 
+ conectado al ordenador, puede 
+MS.
+ los calendarios.
+ y viceversa.
+ del PC al teléfono.
+ls pueden no estar disponibles 
+Este icono indica la 
+carga de la batería.
+Si está conectado, aquí 
+aparecerá el nombre 
+del proveedor de 
+servicios.
+Para acceder a todas las 
+funciones y opciones de 
+configuración de 
+Motorola Phone Tools, 
+pulse este botón.
+Para colgar, pulse el 
+botón con el auricular 
+rojo. Motorola Phone Tools - Guía de inicio rápido
+Panel de funciones de Moto
+Este panel permite acceder a las siguientes func
+• Sincronización
+• Directorio telefónico
+• Calendario
+• Mensaje de texto
+• Mesa multimedia
+• Conexión a Internet
+Los iconos del panel de funciones se describen a
+Muestra la ayuda en línea. Minimiza Moicono en la b
+escritorio de
+11            
+rola Phone Tools 
+iones de Motorola Phone Tools:
+ continuación:
+torola Phone Tools y coloca el 
+andeja del sistema en el 
+l PC.
+Cierra Motorola Phone Tools.
+Sincroniza los directorios 
+telefónicos y el calendario.
+Muestra el Directorio 
+telefónico.
+Muestra el Calendario.
+Cierra la ventana Enviar 
+mensaje corto.
+Muestra la Mesa multimedia.Abre o cierra la conexión a 
+Internet predeterminada. Información adicional
+Teclas de método abreviado
+F1 Ayuda en línea
+F3 Bandeja de salida
+F4 Bandeja de entrada
+F5 Directorio telefónico
+F6 Configuración general
+F7 Calendario
+F8 Registro de transmisiones
+F9 Registro de recepciones
+F10 Menú
+F12 Intercambio de módem
+Documentación
+Encontrará documentación relativa a Motorola 
+BVRP en esta dirección: 
+http://www.bvrp.com/customers/motorola/
+Sitios web
+Visite regularmente nuestros sitios web para 
+nuestros productos y las mejoras disponibles: ht
+http://www.avanquest.com.
+Ventas
+Para obtener información sobre productos, ped
+distribuidores y puntos de venta, llámenos a éste
+También puede consultar los manuales del us
+disponibles en esta dirección:
+http://commerce.motorola.com/consumer/QWhtm
+Copyright y marcas comercial
+© Motorola, Inc. 2006  
+© Avanquest Software 2001-06. Reservados tod
+Motorola Phone Tools  es una marca comercia
+Todos los nombres de productos mencionados
+comerciales o marcas comerciales registradas,
+propietarios.Phone Tools en el sitio web de 
+leer las últimas noticias sobre 
+tp://www.motorola.com y  ir una ampliación o una lista de 
+ número: 800-331-6456.
+uario o las preguntas frecuentes 
+l/customer_service.html
+es
+os los derechos.
+l registrada de BVRP Software.
+ en este documento son marcas 
+ y pertenecen a sus respectivos Motorola Phone Tools - Guía de inicio rápido
+13

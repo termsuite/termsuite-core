@@ -1,0 +1,1290 @@
+Inhaltsverzeichnis
+
+Kapitel 2 Grundlagen............................................................................................................... 3
+2.1 Das ISO/OSI Referenzmodell .......................................................................................... 3
+2.2 LAN-Standards - IEEE 802.x Familie ............................................................................. 4
+2.3 Wired LAN (Kabelgebundene Lokale Netzwerke).......................................................... 5
+2.4 Medienzugriffsverfahren in LAN..................................................................................... 6
+2.4.1 Kollisionsfreies Verfahren ........................................................................................ 7
+2.4.1.1 Polling ................................................................................................................ 7
+2.4.1.2 TokenRing.......................................................................................................... 7
+2.4.2 CSMA........................................................................................................................ 7
+2.4.2.1 CSMA - Überblick ............................................................................................. 7
+2.4.2.2 CSMA/CD.......................................................................................................... 7
+2.4.2.3 Binär-Exponential-Back-Off-Funktion für CSMA/CD ..................................... 9
+2.5 Wireless LAN (Drahtlose Lokale Netzwerke) ............................................................... 10
+2.5.1 Wireless LAN Standard .......................................................................................... 10
+2.5.2 Bitübertragungsschicht in IEEE 802.11 - Überblick............................................... 10
+2.5.3 Netzwerk-Topologien.............................................................................................. 12
+2.5.3.1 Infrastrukturnetzwerk ....................................................................................... 13
+2.5.3.2 Ad-hoc-Netzwerk ............................................................................................. 14
+2.5.4 Netzwerkverwaltungen............................................................................................ 14
+2.5.5 Verschlüsselte Datenübertragung............................................................................ 15
+2.6 Drahtlose- vs. Kabelgebundene LANs........................................................................... 16
+2.7 Das NET (Network Emulation Testbed)........................................................................ 16
+2.7.1 Hardwareumgebung ................................................................................................ 16
+2.7.2 Emulationsstrategie ................................................................................................. 17
+
+Kapitel 4 Konzeption und Entwurf ...................................................................................... 35
+4.1 Architektur ..................................................................................................................... 35
+4.2 Emulation des Funkkanals ............................................................................................. 35
+4.2.1 Tunnelung................................................................................................................ 35
+4.2.2 Reichweite............................................................................................................... 36
+4.2.3 Signalausbreitungsverzögerung .............................................................................. 37
+4.3 Emulation der MAC-Schicht.......................................................................................... 37
+4.3.1 Netzwerktopologie, Medienzugriffsverfahren und optionale Funktionen in MAC 37
+-I-
+
+4.3.2 Rahmentypen und Rahmenformat........................................................................... 38
+4.3.3 BackOff-Funktion ................................................................................................... 42
+4.3.4 Trägererkennung ..................................................................................................... 44
+4.3.5 Granularität des Timers ........................................................................................... 45
+4.3.6 Interframe Space (IFS) ............................................................................................ 45
+4.4 Entwurf der WILEMU ................................................................................................... 47
+4.4.1 Definitionen von WILEMU-Zuständen und Lokalen Variablen ............................ 48
+4.4.2 Zustanddiagramme .................................................................................................. 48
+4.4.2.1 „IDLE“ ............................................................................................................. 48
+4.4.2.2 „Anschluss 1“................................................................................................... 52
+4.4.2.3 „CONTENTION“............................................................................................. 55
+4.4.2.4 „LISTENING“ ................................................................................................. 56
+4.4.2.5 „WAITING_CTS“ ........................................................................................... 57
+4.4.2.6 „WAITING_ACK“ .......................................................................................... 59
+4.4.2.7 „WAITING_DATA“........................................................................................ 60
+4.4.2.8 „RECEIVING_DATA“.................................................................................... 61
+4.4.2.9 „BROADCASTING“ ....................................................................................... 62
+4.4.2.10 „RECEIVING_BC“ ....................................................................................... 63
+
+Kapitel 5 Implementierung ................................................................................................... 65
+5.1 Architektur ..................................................................................................................... 65
+5.2 Funktionsweise............................................................................................................... 66
+5.2.1 Senden und Empfang .............................................................................................. 66
+5.2.2 Modulaktivierung und -deaktivierung..................................................................... 67
+5.2.3 Steuerung von WILEMU und Änderung von Parametern ...................................... 67
+5.3 Algorithmus.................................................................................................................... 68
+
+
+Kapitel 2 Grundlagen
+2.1 Das ISO/OSI Referenzmodell
+Um die Entwicklungskomplexität zu verringern und eine bessere Erweiterbarkeit zu gewährleisten,
+werden die modernen Netzwerke schichtweise organisiert. Untere Schicht bietet Dienste an obere
+Schicht und obere Schicht ist Dienstverbraucher der unteren Schicht. Sie kommunizieren sich durch
+Dienstzugangspunkt. Die n-te Schichte zwischen einer Station und einer fernen Station, die im
+gleichen Netz steht, kommunizieren miteinander nach Kommunikationsprotokoll. In solchen
+Kommunikationsprotokollen werden z.B. Funktionsweise und Datenformat definiert.
+Benutzer
+
+Benutzer
+
+Anwendungsschicht
+
+Darstellungsschicht
+
+Sitzungsschicht
+
+Transportschicht
+
+Vermittlungsschicht
+
+Sicherungsschicht
+
+Bitübertragungsschicht
+
+Protokoll
+DienstZugangspunkt
+Dienstanbieter
+
+Übertragungsmedium (Kanal)
+
+Abbildung 2-1 ISO/OSI Referenzmodell [tane97]
+Die ISO (International Standards Organisation) hat im Jahr 1983 eine OSI (Open System
+Interconnection) Referenzmodell veröffentlicht. Wie die Abbildung 2-1 zeigt, werden sieben
+Netzwerk-Schichten in ISO/OSI Modell definiert:
+
+Anwendungsschicht
+
+Darstellungsschicht
+
+Sitzungsschicht
+
+Transportschicht
+
+Vermittlungsschicht
+
+Sicherungsschicht
+
+Bitübertragungsschicht
+
+Anwendungsbezogene Dienste
+(z.B. WWW)
+Globale Datendarstellung
+(Abstrakte Syntax…)
+„Sitzung“ zwischen Prozessen
+(Resynchronisation nach unterbrochener Verbindung…)
+Kommunikation von Nachrichten zwischen Prozessen
+Kommunikation von Paketen zwischen Endsystemen
+(Routing, Adressierung, z.B. IP)
+Zuverlässige Übertragung von Rahmen
+(Fragmentierung, Fehlererkennung und -beseitigung,
+Flusskontrolle)
+Übertragung con Bitströmen
+Hardwareformat (Kabel, Stecker, Dose…)
+Signalformat (Spannung, Codierung..)
+
+Tabelle 2-1 Beschreibung der 7 Netzwerkschichten [roth01]
+
+Kapitel 2 Grundlagen
+
+2.2 LAN-Standards - IEEE 802.x Familie
+
+IEEE 802.2 LLC
+(Logical Link Control)
+802.1 Management
+
+802.10 Sicherheit
+
+Im Bereich der LANs (Lokale Netzwerke, vgl. Abschnitt 2.3 und 2.5) hat die IEEE (Institute for
+Electrical and Electronic Engineers) die wichtigsten Standards veröffentlicht, wie z.B. IEEE 802.3
+Ethernet, IEEE 802.5 Token-Ring in der IEEE 802.x Familie (siehe Abbildung 2-2). Neben dem
+Fortschritt der Technologie nimmt die IEEE 802.x-Familie weiter zu. Im Jahr 1997 wurde der IEEE
+802.11 Standard für Wireless LAN (Drahtlose Lokale Netzwerke) entstanden. Die Standardisierung
+bietet viele Vorteile für Entwicklung, Erweiterung und Anwendung.
+
+Bitübertragungsschicht
+nach ISO/OSI
+
+Abbildung 2-2 LAN Standards - IEEE 802.x Familie [IEEE 811]
+Durch Standardisierung ist der Einsatz der Hardware-Technik für die Entwicklung der oberen
+Software-Ebene transparent, wie z.B. bei den Entwicklungen im Bereich von Ethernet. Auf der Basis
+von Koaxialkabeln ist die Übertragungsrate bis zu 10 MBit/s. Die Übertragungsrate steigt in Ethernet
+auf 100 MBit/s mit Einsatz von Twisted-Pair-Verkabelung. Trotz dem Fortschritt der
+Übertragungstechnik bleiben die bereits bestehende Software und Infrastruktur unverändert und
+weiterhin verwendbar.
+Dank der Standardisierung können die unterschiedlichen Hardware- und Softwarehersteller vielfältige
+Produkte und Komponenten aufbauen. Die Erweiterung, Verwaltung und Integration sind dadurch
+vereinfacht.
+Das ISO/OSI Referenzmodell beschreibt die Schichtenstruktur grundsätzlich für Punkt-zu-PunktKommunikationen. In Bezug auf lokale Netzwerke wird ein Broadcast-fähiges Medium zur
+Datenübertragung in einem Netz verwendet. Damit die logischen Punkt-zu-Punkt-Kommunikationen
+auf ein zusammenbenutztes und freigegebenes Übertragungsmedium funktionieren, ist eine MACSchicht (Medienzugriffssteuerung) in die 2-te Schicht gesondert eingefügt, wie die Abbildung 2-2
+zeigt. Die Standards IEEE 802.3, 802.5 und 802.11 beschreiben die Bitübertragungsschichten und
+MAC-Schichten, entsprechend in Ethernet, Token-Ring und Wireless LAN. Die MAC-Schicht sorgt
+für die ordentlichen und reibungslosen Medienzugriffe, z.B. wer darf das Zugriffrecht haben und wann,
+wenn eine Kollision auftritt, wie soll es behandelt werden? Anschließend steht über der MAC-Schicht
+noch eine andere Teilschicht in der Sicherungsschicht nach ISO/OSI, nämlich die LLC-Schicht
+(Logische Verbindungssteuerung). Die LLC-Schicht übernimmt die übrigen Aufgaben in
+Sicherungsschicht nach ISO/OSI, wie z.B. Flusskontrolle. Für diese LLC-Teilschicht sind die
+Hardware, Netzwerktopologien, Medienzugriffsverfahren transparent. Die IEEE 802.2 bietet eine
+einheitliche Schnittstelle zwischen der Vermittlungsschicht und IEEE 802.x MAC-Schicht.
+
+
+Kapitel 2 Grundlagen
+Die Abbildung 2-3 zeigt den Pfad des allgemeinen Nachrichtentransports. Auf der Senderseite, nimmt
+die untere Schicht die Daten aus der oberen Schicht als ihre Nutzdaten und fügt einen entsprechenden
+Kopf. Danach schickt die die gesamte Nachricht nach unten. Umgekehrt, nach der Analyse des
+entsprechenden Kopfs, wird der Nachrichtenkopf auf der Empfängerseite schichtweise entfernt.
+
+Vermittlung
+
+Nutzdaten
+
+LLC Kopf
+
+MAC
+
+MAC Kopf
+
+Bitübertragung
+
+PHY Kopf
+
+Nutzdaten
+
+MAC
+
+Nutzdaten
+
+Bitstrom
+Übertragungsmedium (Kanal)
+
+Abbildung 2-3 Transportpfad
+
+2.3 Wired LAN (Kabelgebundene Lokale Netzwerke)
+Die kabelgebundenen lokalen Netzwerke unterscheiden sich von den Netzwerken anderer Arten, wie
+z.B. WAN (Wide Area Network) und MAN (Metropolitan Area Network) durch ihre
+Netzwerktopologien, verwendete Übertragungstechnik und die Entfernung.
+Kabelgebundene Lokale Netzwerke sind in einem gewissen räumlichen Bereich eingesetzt. Seine
+maximale Entfernung beschränkt sich auf einige Kilometer, z.B. in einem Gebäude, in Campus. Damit
+hat die Ausbreitungsdauer des Signals eine obere Grenze. Alle Teilnehmer in einem lokalen Netzwerk
+sind normalerweise mit einem zusammenbenutzten, freigegebenen Übertragungsmedium in Form von
+Bus oder Ring verbunden. Die Abbildung 2-4 zeigt zwei typische Netzwerktopologien.
+
+Abbildung 2-4 Typische Netzwerktopologien von LAN [tane97]
+Das in IEEE 802.3-Standard (vgl. Abschnitt 2.3) definierte Ethernet ist eine der am weitesten
+verwendeten LAN-Techniken. In Ethernet wird ein Koaxialkabel als Übertragungsmedium verwendet
+
+Kapitel 2 Grundlagen
+und die Übertragungsrate beträgt bis zu 10 MBit/s. Durch Einsatz von Twisted-Pair-Verkabelung kann
+die maximale Übertragungsrate 100 MBit/s erreicht werden. IEEE 802.5 Token-Ring ist ein RingTopologie-Netzwerk. Die typische Übertragungsrate in Token-Ring ist 4 MBit/s oder 16 MBit/s.
+Das gemeinsam benutzte Medium bietet einen Kommunikationskanal, sowohl für Broadcasting als
+auch für logische Punkt-zu-Punkt-Verbindungen. Jeder Netzwerkteilnehmer besitzt eine weltweit
+identische Hardware-Adresse (MAC-Adresse). Wenn eine Station eine Nachricht senden möchte, fügt
+sie zunächst die Adresseinformationen in den Rahmenkopf (MAC-Kopf, siehe Abbildung 2-4) der zu
+sendenden Nachricht. (Das Format des Rahmenkopfs ist in Abbildung 2-5 zu sehen.)
+
+Kennung des Rahmensanfangs
+1 byte
+
+Zieladresse
+
+Senderadresse
+
+6 bytes
+
+Größe der Nutzdaten
+
+6 bytes
+
+2 bytes
+
+Abbildung 2-5 Wichtige Bestandteile des MAC-Kopfs in Ethernet
+Alle anderen Stationen, die an das Netz gebunden sind, können alle auf Medium laufenden Rahmen
+hören. Nach der Analyse der Adresseinformation in dem Rahmenkopf entscheiden sich die Stationen,
+ob dieser Rahmen empfangen werden soll. So ist die logische Punkt-zu-Punkt-Verbindung auf der
+Empfängerseite realisiert. Auf der Senderseite ist es mit Hilfe von Medienzugriffssteuerungen
+realisiert worden
+
+2.4 Medienzugriffsverfahren in LAN
+Medienzugriffsverfahren
+
+Koordinierter Zugriff
+(kollisionsfrei)
+
+Eingeschränkte
+Konkurrenz
+
+Wahlfreier Zugriff
+(Kollision möglich)
+
+Adaptive
+Tree Walk
+Polling ………
+
+CDMA
+
+Kanal abhören
+
+Token
+
+CSMA
+
+CSMA/CD
+
+Kanal nicht abhören
+
+ALOHA
+
+..……..
+
+MACA
+
+...… MACAW
+
+Abbildung 2-6 Medienzugriffsverfahren [roth01]
+In LAN ist ein Medienzugriffsverfahren notwendig. Solches Verfahren ist zuständig für die exklusiven
+Kanalzugriffe und Kollisionsbeseitigung.
+
+Kapitel 2 Grundlagen
+2.4.1 Kollisionsfreies Verfahren
+2.4.1.1 Polling
+Das einfachste kollisionsfreie Medienzugriffsverfahren ist „Polling“. Wie die Abbildung 2-7 zeigt, ist
+ein Koordinator zuständig für die Zugriffssteuerung auf das Medium. Er verwaltet eine Polling-Liste,
+auf der alle Netzwerkteilnehmer eingetragen sind. Unter dem Befehl von Koordinator läuft ein
+„Polling“-Zeiger zyklisch in der Liste. Nach dem Ende einer Übertragung fragt der Koordinator dem
+Zeiger, welche die nächste Station in der Liste ist. Danach schickt der Koordinator eine Nachricht an
+die entsprechende Station, dass sie auf Medium zugreifen darf. Eine Station darf ihre Daten nur
+senden, wenn sie vom Koordinator aufgerufen wird.
+
+Koordinator
+
+Polling-Liste
+
+Abbildung 2-7 Polling-Verfahen
+2.4.1.2 TokenRing
+Ein anderes Beispiel für kollisionsfreies Verfahren, koordiniertes Zugriffsverfahren, ist der in IEEE
+802.5 definierte Token-Ring-Mechanismus. Wie die Abbildung 2-4 zeigt, läuft auf dem Ring ein
+„Token“. Eine Station darf Nachrichten senden, wenn sie „Token“ besitzt. Am Ende des Sendens setzt
+die Senderstation das „Token“ wieder frei, d.h. das „Token“ läuft wieder auf dem Ring und ist für
+andere Stationen verfügbar. Dadurch werden Kollisionen theoretisch nie auftreten, bzw. ein
+kollisionsfreier Übertragungskanal wird aufgebaut. Allerdings ist die Verwaltung von „Token“ sehr
+aufwendig. Die Hardware-, Software- oder Übertragungsfehler könnten dazu führen, dass das
+„Token“ nicht mehr verfügbar, beschädigt oder verdoppelt auf dem Ring läuft. Deswegen ist darüber
+hinaus ein effizienter „Token“-Verwaltungsmechanimus in Token-Ring erforderlich.
+
+2.4.2 CSMA
+2.4.2.1 CSMA - Überblick
+Das CSMA-Verfahren (Carrier Sense Multiple Access) ist eine Erweiterung von ALOHA [tane97].
+Der Hauptunterschied zwischen den Beiden ist: bei CSMA, vor dem Senden hört die Senderstation das
+Medium ab, falls das Medium im Augenblick frei ist, sendet sie ihre Rahmen auf Medium, wenn nicht
+wird das Senden sich verzögert. Dadurch wird die Kollisionswahrscheinlichkeit im Vergleich mit
+ALOHA dramatisch verringert. Es gibt viele Varianten von CSMA, 1-Persistentes-CSMA und PPersistentes-CSMA [roth01].
+
+2.4.2.2 CSMA/CD
+Das in IEEE 802.3-Ethernet beschriebene Verfahren zur Medienzugriffssteuerung ist der auf 1persistentem-CSMA basierende CSMA/CD-Mechanismus (CSMA mit Erkennung von Kollisionen).
+
+Kapitel 2 Grundlagen
+Nach den Regeln in CSMA, obwohl der Zustand der Kanalbelegung vor der Datenübertragung
+berücksichtigt wird, besteht noch Kollisionsgefahr. Beispielsweise wenn zwei weit entfernte Stationen
+gleichzeitig ihre Daten auf Medium senden möchten, sind die Kanalbelegungszustände bei beiden
+Stationen momentan als „frei“ erkannt worden. Wegen einer Signalausbreitungsverzögerung werden
+die zwei gesendete Rahmen in einem späteren Zeitpunkt in Kollision treffen. In Ethernet wird bei
+jedem Netzwerkteilnehmer ein analoges Gerät verwendet, das zur Erkennung von Kollision dient.
+Während des Sendens vergleicht das Erkennungsgerät der Senderstation ihre gesendeten Signale mit
+den auf Kanal laufenden Signalen, z.B. die Energie oder Impulsbreite der Signale. Wenn Kollision
+auftritt, kann das Erkennungsgerät das durch Kollision verursachte Geräusch detektieren und
+dementsprechend das Senden sofort abbrechen. Damit ist die unnötige Kanalnutzung erspart, da die
+Nachricht wegen Kollision sowieso beschädigt worden. Alleine aus diesem Grund ist CSMA/CD
+deutlich effizienter als normales CSMA Verfahren. Abbildung 2-8 veranschaulicht das Grundprinzip
+von CSMA/CD.
+Übertragungsdauer des Rahmens (soll)
+
+Tatsächliche Medienbelegungszeit
+
+Kollision erkannt bei A, wird das Senden sofort abgebrochen
+
+Anfangszeit der Kollision
+Verzögerung wegen Signalausbreitung
+
+Kollision erkannt bei B, wird das Senden sofort abgebrochen
+Tatsächliche Medienbelegungszeit
+
+Übertragungsdauer des Rahmens (soll)
+
+Abbildung 2-8 Grundprinzip des CSMA/CD
+Wie die Abbildung 2-9 zeigt, wenn das von A am t0 gesendete Rahmen sehr kurz wäre und eine
+Kollision in der Nähr von einer weit entfernten Senderstation B am t1 passieren sollte, ist der
+Sendvorgang bei A am t1 schon beendet, bevor das Geräusch an A ankam. D.h. die Kollision kann
+nicht mehr bei A erkannt werden.
+
+Kapitel 2 Grundlagen
+Tatort
+
+Entfernung von A bis Tatort ≈ maximale Entfernung in Ethernet
+
+Kollision
+
+Abbildung 2-9 Minimale Rahmensgröße in CSMA/CD
+Um dieses Problem zu lösen, ist eine minimale Rahmensgröße bei Ethernet definiert. Die Entfernung
+zwischen A und B sei die maximale Buslänge. Bei IEEE 802.3 Ethernet, ist die maximale Buslänge L
+2500 Meter mit maximal 4 Verstärkern, die Signalausbreitungsgeschwindigkeit V ca. 200 T KM/s und
+die Bitübertragungsrate B 10MBit/s. Daraus folgt die minimale Rahmensgröße ca. 64 Bytes(beträgt
+τ≈51.2 µs).
+In IEEE 802.3 Ethernet ist eine maximale Rahmensgröße (nur Nutzdaten) auf 1500 Bytes beschränkt,
+damit der Kanal für eine Station nicht zu lang belegt wird.
+2.4.2.3 Binär-Exponential-Back-Off-Funktion für CSMA/CD
+Durch Verwendung von wahlfreien Verfahren können Kollisionen auftreten. Um eine bessere
+Kanalnutzung und einen besseren Durchsatz zu erzielen, soll eine Station von den in Kollision
+beteiligten Senderstationen nach einer Kollision so schnell wie möglich das Zugriffsrecht auf Kanal
+bekommen und die Anderen die Übertragung nicht stören. Der Einsatz des Binär-Exponential-BackOff-Algorithmus kann diese Anforderung in CDMA/CD am besten erfüllen.
+
+Tabelle 2-2 Wartezeit nach Kollisionen (Binär-Exponential-Back-Off)
+Da in CSMA/CD keine zentrale Station zum Ordnen und Verteilen der Wartezeit für die in Kollision
+beteiligten Stationen eingesetzt ist, besteht hier keine globale Sicht auf Kanal. Wenn ein Rahmen zum
+ersten Mal an einer Kollision beteiligt ist, weiß deren Senderstation, dass es mindestens eine andere
+Station gibt, die gerade auch Rahmen sendet. So wartet sie eine diskrete Zeit von 0 bis τ ab, wird sie
+ihr Rahmen nach dem Ablauf der Wartezeit noch mal absenden. Die Zeitdauer τ ist ein Zeitschlitz wie
+es gerade in Abschnitt 2.4.2.2 erklärt ist. Wenn der Rahmen noch einmal in Kollision getroffen ist,
+wird das Intervall der Wartezeit verdoppelt, wie die Tabelle 2-1 zeigt.
+Um die unendliche Wiederholung des Zugriffsversuchs zu vermeiden, ist die maximale Anzahl der
+Wiederholung auf 16 beschränkt. Übrigens ist die obere Grenze des Intervalls auf 1023 (2^^10-1, also
+
+Kapitel 2 Grundlagen
+10 Wiederholungen) definiert, da die Wartezeit nach 10 Wiederholungen schon im Verhältnis von
+Datenübertragungen zu lang würde.
+
+2.5 Wireless LAN (Drahtlose Lokale Netzwerke)
+Die kabelgebundenen lokalen Netzwerke, wie z.B. Ethernet, sind sehr weit verbreitet dank seiner
+Zuverlässigkeit, Einfachheit, schnellerer Übertragungsrate und verfeinerter Technik und
+Anwendungen. Mobilität und Flexibilität sind die neuen Herausforderungen für die
+Informationstechnik im Bezug auf lokale Netzwerken.
+Die Eigenschaften der drahtlosen Netze unterscheiden sich wesentlichen von klassischen
+kabelgebundenen Netzen. Statt die Netzwerkteilnehmer durch Kabel miteinander anzubinden, ist
+Funkkanal in Wireless LAN zur Datenübertragung verwendet. Wegen der Unzuverlässigkeit des
+Funkkanals ist die Verlust- und Fehlerrate der Datenübertragung höher als die in kabelgebundenen
+Netzen. Die Anzahl von Netzwerkteilnehmern in Wireless LAN ist hoch dynamisch. Die Mobilität der
+Netzwerkteilnehmer verursacht auch eine dynamische Änderung von Netzwerktopologien und Partitionen.
+
+2.5.1 Wireless LAN Standard
+Wie in Abschnitt 2.2 erläutet, durch Standardisierung wird die Entwicklung beschleunigt und die
+Systemintegration und Verwaltung auch vereinfacht. Der Standard für Wireless LAN ist IEEE 802.11.
+Er wurde ursprünglich im Jahr 1997 von dem „Institute of Electronic and Electrical Engineers“ (IEEE)
+veröffentlicht. Wie der Name dieses Standards schon andeutet, gehört diese Spezifikation zu der
+Standard-Familie IEEE 802.x für lokale Netzwerke. Die IEEE 802.11 Standards beschreiben die
+Bitübertragungsschicht und MAC-Schicht, die speziell für die Übertragung in drahtlosen Netzwerken
+notwendig sind. Die MAC-Schicht bietet nach oben hin die gleiche Schnittstelle wie andere Mitglieder
+der IEEE 802.x Familie, wie die Abbildung 2-2 zeigt.
+
+2.5.2 Bitübertragungsschicht in IEEE 802.11 - Überblick
+Eine Erweiterung auf der Bitübertragungsschicht (PHY) des IEEE 802.11, nämlich der IEEE 802.11bStandard, wurde im September Jahr 1999 veröffentlicht. Die in IEEE 802.11b spezifizierte
+Bitübertragungsschicht unterstützt nun DSSS-Technologie (Direct Sequence Spread Spektrum) für
+hohe Übertragungsrate. Dadurch erreicht die Übertragungsrate 11 MBit/s, während im originalen
+IEEE 802.11 nur bis zu 2 MBit/s unterstützt ist. Tabelle 2-3 listet die Familiemitglieder in IEEE
+802.11 auf. Die Abbildung 2-10 veranschaulicht die Frequenzbänder im elektromagnetischen
+Spektrum als Referenz.
+Standard
+
+PHY-Technologie
+
+Basis-Frequenz
+
+Abbildung 2-10 Frequenzbänder im elektromagnetischen Spektrum [nemg01]
+Wie die Abbildung 2-11 zeigt, besteht die Bitübertragungsschicht aus zwei Teilschichten: PLCP und
+PMD. Die PLCP-Teilschicht stellt ein Signal zur Überwachung des Mediums zur Verfügung und
+bietet einen einheitlichen PHY-Dienstzugangspunkt unabhängig von der Übertragungstechnik an. Die
+PMD umfasst die Datenmodulation und Signalcodierung- und Decodierungsschemata.
+
+Abbildung 2-11 PHY-Architektur in IEEE 802.11 [IEEE811]
+Die in IEEE 802.11b definierte Übertragungstechnik FHSS und DSSS operieren im lizenzfreien
+elektromagnetischen Band mit 2.4GHz (2.4 bis 2.483GHz) Frequenz (RF). Dieses Band ist für ISM
+(industrielle, wissenschaftliche und medizinische)-Anwendungen reserviert und benötigt damit keine
+amtliche Genehmigung. Die Kerneigenschaft dieser SS (Spread Spektrum)-Technologie ist: sie
+benutzt einen größeren Frequenzbereich, als zur eigentlichen Datenübertragung benötigt wird. Diese
+Signalspreizung erfolgt beim Senden durch einen Code, der dem Empfänger bekannt sein muss, um
+die Daten entschlüsseln zu können [nemg01].
+In IEEE 802.11b DSSS wird das Frequenzband(von 2.4G Hz bis 2.483 GHz) in drei nicht
+überlappenden bzw. sieben überlappenden Kanälen unterteilt (In Europa, bis auf Frankreich und
+Spanien), die in Abbildung 2-12 und Abbildung 2-13 veranschaulicht sind.
+
+Kapitel 2 Grundlagen
+
+Abbildung 2-12 Europäische Kanalselektion- nicht überlappend [IEEE811b]
+
+Abbildung 2-13 Europäische Kanalselektion - überlappend [IEEE811b]
+In jedem DSSS-System wird ein Erkennungscode (PN-Code, Pseudo-Noise-Code) verwendet, damit
+die Signale von verschiedenen Systemen nicht durcheinander gestört werden. Unterschiedliche DSSSSysteme dürfen gleiche Codes benutzen, nur wenn deren Sende- und Empfangsbereiche sich nicht
+überschneiden. Wenn die Sende- und Empfangsbereiche von mehreren DSSS-Systemen sich
+überschneiden, kann nur die nicht-überlappende Kanalselektion eingesetzt werden (Abbildung 2-12),
+da die gleichen Codes von unterschiedlichen DSSS-Systemen sonst zur gegenseitigen Störung
+kommen können.
+
+Auf verschiedenen Übertragungsraten werden unterschiedliche Technologien für Signalmodulation
+eingesetzt, die Wirkung für Signalausbreitung haben. Wegen dieses technischen Eigenschaft ist die
+Reichweite des Signals auf höherer Übertragungsrate kürzer als es auf niedriger Übertragungsrate.
+Abbildung 2-14 zeigt diese Abhängigkeit.
+
+Reichweite [m]
+
+Abbildung 2-14 Übertragungsraten und Reichweiten in IEEE 802.11b [nemg01]
+
+2.5.3 Netzwerk-Topologien
+Während metallische oder optische Kabel in Kabelgebundenen LAN zur Datenübertragung dienen,
+wird der Funkkanal mit Hilfe von elektromagnetischen Wellen als Übertragungsmedium in Wireless
+LAN verwendet. Eine Zelle in IEEE 802.11 ist eine räumliche Region, innerhalb der Stationen
+(Netzwerkteilnehmer) unter Berücksichtigung ihrer jeweiligen Reichweiten untereinander
+
+Kapitel 2 Grundlagen
+kommunizieren können[das drahtlose Ethernet]. Der Begriff „Zelle“ wird in IEEE 802.11 als
+„BSS“ (Basic Service Set) bezeichnet. In einem BSS ist es nicht erforderlich, dass zwei
+Netzwerkteilnehmer direkt kommunizieren können. D.h., die Reichweiten zwei Stationen müssen
+nicht überlappend sein. Des Weiteren darf ein Teilnehmer zu mehreren BSS gehören. In IEEE 802.11
+sind zwei wichtige Netzwerk-Topologien definiert, das Ad-hoc- und Infrastrukturnetzwerk.
+2.5.3.1 Infrastrukturnetzwerk
+In Infrastrukturnetzwerk findet die Kommunikation grundsätzlich über APs (Access Points,
+Zugangspunkte) statt. In einem BSS befinden sich ein AP und beliebige Mobilstationen. Der AP ist
+ein Koordinator für Medienzugriffssteuerung und die Netzwerkverwaltung. D.h. alle Mobilstationen
+liegen innerhalb der Reichweite des APs und sind die Kommunikationen durch den AP geregelt. Es
+muss nicht unbedingt sein, dass die übertragenen Nachrichten über diesem AP übermittelt werden. Die
+Sendstation darf die Nachrichten auch direkt an die Empfangsstation senden, aber muss ein
+Medienzugriffsrecht vom AP erhalten. Ein Infrastrukturnetzwerk darf beliebige BSS und ein DS
+(Distributed System, Verteilungssystem) haben, wie die Abbildung 2-15 zeigt. Dann entspricht es
+einem ESS (Extended Service Set). Das DS kann ein Kabelgebundenes Netzwerk sein, wie z.B. IEEE
+802.3 Ethernet oder wiederum ein drahtloses System sein, z.B. Satellitensystem oder Richtfunksystem.
+Ein Infrastrukturnetzwerk aus zwei BSS und einem Richtfunksystem wird in Abbildung 2-16
+dargestellt. Der Nachrichtentransport zwischen verschiedenen BSS oder zwischen BSS und einem
+weiteren Kabelgebundenen Netzwerk wird durch die IEEE 802.1-Brücke (Bridging) ermöglicht (vgl.
+Abbildung 2-2 LAN Standards - IEEE 802.x Familie [IEEE 811]). Normalerweise funktioniert ein AP
+auch als eine Brücke.
+
+Abbildung 2-15 Infrastrukturnetzwerk mit Ethernet
+
+Kapitel 2 Grundlagen
+Richtantenne
+
+Abbildung 2-16 Infrastrukturnetzwerk mit Richtfunksystem
+
+2.5.3.2 Ad-hoc-Netzwerk
+Im Gegensatz zum Infrastrukturnetzwerk gibt es bei einem Ad-hoc-Netzwerk, auch Punk-zu-PunktNetzwerk genannt, keinen Zugangspunkt (AP). Ein Ad-hoc-Netzwerk besteht nur aus einem einzigen
+BSS. Im IEEE 802.11-Standard wird ein BSS in Ad-hoc-Netzwerktopologie als IBSS bezeichnet
+(Independent BSS, unabhängiges BSS). Alle Netzteilnehmer in einem IBSS können miteinander direkt
+kommunizieren, wenn sie gegenseitig in Reichweiten liegen, wie die Abbildung 2-17 zeigt.
+Broadcasting wird in Ad-hoc-Netzwerk unterstützt. Ein Netzwerkteilnehmer darf seine Nachricht über
+eine Broadcast-Adresse abschicken. Alle anderen Mobilstationen können diese Nachricht empfangen,
+wenn sie in Reichweite des Senders liegen.
+
+
+Abbildung 2-17 Ad-hoc-Netzwerke
+
+2.5.4 Netzwerkverwaltungen
+In Infrastrukturnetzwerk spielt der Zugangspunkt eine zentrale Rolle für die Verwaltung des
+Netzwerks. Der AP bietet einen Dienst zur Anmeldung und Abmeldung von Mobilgeräten. Der AP
+
+Kapitel 2 Grundlagen
+sendet periodisch einen Beacon-Rahmen (Management-Rahmen) per Broadcast aus. Der BeaconRahmen beinhaltet die wichtigen Informationen, wie z.B. BSS-Adresse, unterstützte Übertragungsrate
+usw. Wenn sich ein Mobilgerät an ein Netzwerk anmelden möchte, muss es für eine gewisse Zeit
+warten, um einen Beacon-Rahmen zu empfangen. Danach meldet es sich mit der im Beacon-Rahmen
+enthaltenen BSS-Adresse am AP an. Wenn das Mobilgerät mehrere Beacon-Rahmen aus
+verschiedenen BSS empfangen hat, wählt es einen günstigen AP aus, z.B. den mit der höheren
+Übertragungsrate. Stattdessen gibt es noch eine einfache Lösung, dass das Mobilgerät aktiv einen
+Anfrage-Rahmen per Broadcast absenden darf. Die APs, die diesen Anfrage-Rahmen empfangen
+haben, antworten mit einem Beacon-Rahmen. Danach kann sich das Mobilgerät entscheiden, an
+welchen AP es sich anmelden soll. Im Gegensatz zum Infrastrukturnetzwerk ist die Verwaltung eines
+Ad-hoc-Netzwerks eine völlig verteilte Lösung, da kein AP im Netzwerk existiert. Alle
+Netzwerkteilnehmer senden den Verwaltungsrahmen, geregelt jeweils durch einen zufälligen Timer.
+
+2.5.5 Verschlüsselte Datenübertragung
+Die Sicherheit im Bereich von Internet und Telekommunikation spielt eine immer größere Rolle, da
+die über das Netzwerk transportierten Nachrichten von unerwünschten Personen abgehört oder sogar
+manipuliert werden können. Im lokalen Netzwerk wird ein gemeinsam benutztes Medium zur
+Datenübertragung benutzt. Die auf dem Medium laufenden Daten kann jeder Netzwerkteilnehmer
+abhören. Besonders in Wireless LAN, ist der Übertragungskanal ein offenes Medium. Die gängigen
+Sicherheitsstrategien, die auf höheren Schichten funktionieren, können diese besondere Anforderung
+nicht erfüllen.
+Also Option spezifiziert das IEEE 802.11 Standard das WEP-Verfahren (Wired Equivalent Privacy),
+das die verschlüsselte Datenübertragung auf der niedrigen MAC-Ebene ermöglicht. Das Grundprinzip
+des WEP sieht wie die Abbildung 2-18 aus.
+
+Abbildung 2-18 Grundprinzip des WEP in IEEE 802.11
+In WEP wird ein gemeinsamer Schlüssel (Shared Key) zur Verschlüsselung und Entschlüsselung
+benutzt. Aus dem Schlüssel und einem IV (Initialisierungsvektor) wird ein Bytestrom mit Hilfe von
+einem Zufallzahlgenerator erzeugt. Danach wird der Klartext mit dem Bytestrom durch
+„XOR“ verknüpft [IEEE811]. WEP ist ein recht einfaches Verfahren. Wie dieser Schlüssel an die
+Benutzer verteilt wird, bleibt in IEEE 802.11 noch offen.
+
+Kapitel 2 Grundlagen
+
+2.6 Drahtlose- vs. Kabelgebundene LANs
+Die Eigenschaften der drahtlosen Netze unterscheiden sich wesentlichen von klassischen
+kabelgebundenen Netzen. In kabelgebundenen Netzen sind die Übertragungsleitungen normalerweise
+Twisted-Pair oder Glasfaser. Die Signale breiten sich entlang des Leiters aus, d.h. der Leiter gibt die
+Art der räumlichen Signalausbreitung vor. Die gewissen Abstrahlungseffekte sind gut
+vernachlässigbar, und die Dämpfung des Signals ist auch sehr niedrig. Wegen der Unzuverlässigkeit
+des Funkkanals ist die Verlust- und Fehlerrate der Datenübertragung in Wireless LAN höher als in
+kabelgebundenen Netze, da die Signalausbreitung in Funkkanal von vielen Faktoren abhängt:
+Strahlung, Antennentechnik, Gegenstände usw. Die Mobilität der Netzwerkteilnehmer verursacht eine
+dynamische Änderung von Netzwerktopologien und -Partitionen. Die Hauptunterschiede zwischen
+IEEE 802.11b Wireless LAN und IEEE 802.3 Ethernet sind in Tabelle 2-4 aufgelistet.
+
+Übertragungsmedium
+Übertragungsrate
+Verlust- und Fehlerrate
+Entfernung zwischen zwei
+Stationen
+Geschwindigkeit der
+Signalausbreitung
+Topologien
+Anzahle der Teilnehmern
+Sicherheit
+Max. Größe der Nutzdaten
+Min. Größe des Rahmens
+
+Tabelle 2-4 Unterschiede zwischen IEEE 802.11b und IEEE 802.3
+
+2.7 Das NET (Network Emulation Testbed)
+Das NET (Network Emulation Testbed) der Abteilung Verteilte Systeme an der Universität Stuttgart
+ist ein flexibel vernetzter Linux PC-Cluster mit 64 Knoten, in dem beliebige Netztopologien und deren
+Eigenschaften nachbildet werden können. Damit bietet das NET eine ideale Analyseumgebung für
+verteilte Anwendungen und Netzprotokolle [hero02].
+
+2.7.1 Hardwareumgebung
+Die Hardwareumgebung des NETs sieht wie die Abbildung 2-18 aus.
+
+Kapitel 2 Grundlagen
+
+Abbildung 2-19 Hardwareumgebung des NETs [hero02]
+Die knoten-PCs und ein Giga-Bit-Ethernet-Switch (Übertragungsrate 1000 MBit/s), mit dem die
+Knoten-PCs angebunden sind, bilden ein Emulationsnetzwerk. Durch die VLAN-Technologie
+(Virtuelle LANs) kann das gesamte Emulationsnetzwerk auf vielen Teilnetzwerken geteilt werden, die
+beliebige Netzwerktopologien haben dürfen. Ein Knoten-PC darf auch zu mehren VLANs definiert
+werden, da die virtuelle Verbindungen und deren Adressierungen durch das Betriebssystem des
+Knoten-PCs verwaltet werden können. Neben dem Emulationsnetzwerk ist ein Steuerungsnetzwerk
+vorhanden, das einen Steuerungs-PC und allen Knoten-PC durch ein Fast-Ethernet-Switch
+(Übertragungsrate 100 MBit/s) verbindet. Die zwei Netzwerke sind miteinander physisch getrennt, d.h.
+der Datenverkehr in Steuerungsnetzwerk stört die Datenkommunikationen in Emulationsnetzwerk
+nicht. Der Steuerung-PC dient zur Verwaltung von Knoten-PC und den Szenarien des
+Emulationsnetzwerks, sowie zur Emulationsverwaltung, wie z.B. die dynamischen Änderungen von
+Bandbreit.
+
+2.7.2 Emulationsstrategie
+Auf allen Knoten (Pentium 4 Prozessor mit 2.4 GHz) läuft Linux als Betriebssystem (Redhat Linux
+7.3 mit Kernel-Version 2.4). Für die Netzwerkemulationen ist eine Emulationsschicht in die
+Protokollstapel jedes Knoten-PCs gesondert eingefügt. Die Abbildung 2-20 zeigt, wo die
+Emulationsschicht in den Protokollstapel eingereift. [hero02]
+
+Kapitel 2 Grundlagen
+
+Abbildung 2-20 Protokollstruktur der Emulation für MAC-Protokoll
+Die Emulationssoftware funktioniert als Modul in Linux-Kernel. Die Änderung der Modulparameter
+während Laufzeit ist möglich. Diese Eigenschaft ist besonders nützlich für MANET-Emulation, da die
+Netzwerkeigenschaften sich ständig ändern können (z.B. Fehlerrate). Die dynamischen Änderungen
+von Parametern können sowohl manuell als auch per „Konfigurations-Daemon“ realisiert werden. Die
+Änderungen der Parameter werden vom Steuerungs-PC per UDP über das Verwaltungsnetzwerk zu
+allen in der Emulation beteiligten Knoten-PC geschickt. Nachdem der „Konfigurations-Daemon“ die
+Nachricht analysiert hat, greift er auf die Emulationssoftware (Linux-Modul) zu. So wird die
+dynamische Änderung von Parametern in NET unterstützt.
+
+Kapitel 4 Konzeption und Entwurf
+4.1 Architektur
+Für die Emulation von drahtlosen Netzwerken gibt es grundsätzlich zwei Verfahren: eine zentralisierte
+und eine verteilte Methode. Bei der zentralisierten Emulationsmethode verwaltet ein
+Kommunikations- und Emulationskoordinator die Verzögerung, Kollision und die Zugriffe aufs
+Medium. Wenn der Koordinator ausfällt, kann die gesamte Emulation nicht mehr durchführen (Single
+Point of Failure). Da der Koordinator den gesamten Datenverkehr verwaltet, ist die Skalierbarkeit bei
+der zentralisierten Emulationsmethode schlecht. Die oben genannten Nachteile bestehen in der
+verteilten Emulationsmethode nicht.
+Zur Emulation für Netzwerke mit gemeinsamem Funkmedium wird die verteilte Methode ausgewählt.
+Abgekürzt von WIreLess EMUlation ist „WILEMU“ die entwickelte Emulationssoftware. Durch die
+VLAN-Konfiguration können mehrere BSS emuliert werden. Ein VLAN entspricht einem BSS. In
+einem BSS gibt es mehrere Mobilstationen, die durch Instanzen von WILEMU repräsentiert werden.
+Die Instanzen unterscheiden sich durch verschiedene MAC-Adressen. Zur Vereinfachung wird eine
+Instanz von WILEMU in diesem Kapitel auch WILEMU genannt. Abbildung 2-20 zeigt, wie
+WILEMU im Kommunikationsstapel eingreift. Nach der Bearbeitung durch WILEMU, werden die
+Nachrichten an höhere Schicht geliefert bzw. mittels NET-Hardware über das kabelgebundenes
+Emulationsnetzwerk verschickt.
+
+4.2 Emulation des Funkkanals
+4.2.1 Tunnelung
+In NET-Emulationsumgebung wird ein Giga-Bit-Ethernet-Switch verwendet. Der Datenverkehr für
+Emulation geht über diesen Switch. Der Switch realisiert eine Stern-Netzwerktopologie und verwaltet
+eine Menge von Punkt-zu-Punkt Verbindungen. Jeder übertragene Rahmen wird durch den Switch
+analysiert und direkt ans Ziel geschickt. Da die Kollisionen durch Switch-Technologie verhindert
+werden und die Rahmen eventuell auch dazwischen gepuffert werden, ist diese Switch-Eigenschaft für
+die Emulation für Netze mit gemeinsamem Funkmedium unerwünscht. Um die Effekte dieser
+Eigenschaft zu beseitigen, muss jeder Rahmen, der über WILEMU übertragen wird, in einem
+Broadcasting-Ethernet-Rahmen getunnelt gesendet werden, wie die Abbildung 4-1 zeigt. Dabei wird
+der gesamte WILEMU-Rahmen als Nutzdaten eines Ethernet-Rahmens eingefügt.
+Gesamter MAC-Rahmen
+Ethernet-MAC-kopf
+
+Ethernet-Kopf mit
+1. Broadcasting-Adresse und
+2. Senderadresse des WILEMU-Rahmens
+
+WILEMU-Rahmen
+
+Abbildung 4-1 WILEMU-Rahmen muss getunnelt gesendet werden
+
+Prüfsumme
+
+Kapitel 4 Konzeption und Entwurf
+Dadurch können alle Netzwerkteilnehmer in einem VLAN (ein VLAN entspricht hier einem IBSS in
+Wireless LAN) den Rahmen empfangen. So ist die Eigenschaft des gemeinsamen Mediums
+wiederhergestellt.
+
+4.2.2 Reichweite
+Im Gegensatz zur idealen Umgebung, die in Abschnitt 3.2.1 definiert ist, können die Reichweiten der
+Mobilstationen in der Realität verschiedene Größen haben, da die Signalausbreitung durch viele
+Faktoren beeinflusst werden kann (vgl. Kapitel 2) und Sendestärke der Mobilstationen unterschiedlich
+sein können.
+Die Reichweite der Mobilstation wird in WILEMU durch die Fehlerrate realisiert. Nach der
+Konfiguration des Emulationsszenarios werden die Fehlerraten mittels des Steuerungsnetzwerks an
+den Mobilstationen übermittelt. Zu der ersten Version des WILEMUs besitzt die Fehlerrate nur zwei
+Extremwerte, 0 und 1 (100%).
+Die Fehlerrate ist eigentlich für die Verbindungsqualität gedacht. Jede Fehlerrate ist immer mit zwei
+Stationen gebunden. Als Beispiel betrachten wir diese Konfiguration, die in Abbildung 4-2 dargestellt
+ist. Die entsprechenden Fehlerraten sind in Tabelle 4-1 aufgelistet.
+
+Abbildung 4-2 Mobilstationen haben verschiedene Reichweiten
+Sender
+Empfänger
+Fehlerrate
+
+Tabelle 4-1 Verbindungsfehlerrate
+Die Signale aus A kann die Station B hören. Die Fehlerrate von A nach B beträgt 0, während die
+Fehlerrate von B nach A den Wert 1 hat. Da die Sendstation B eine kleine Reichweite besitzt, liegt die
+Empfangsstation A nicht innerhalb der Reichweite von B.
+In WILEMU verwaltet jede Mobilstation eine Fehlerrateliste. Die Fehlerrateliste beschreibt die
+Fehlerraten nur in Empfangsrichtung. In diesem Sinn sind die in der Liste eingetragenen Stationen die
+Sender dem Besitzer der Fehlerratelist. Die
+Tabelle 4-2 zeigt beispielsweise die Fehlerrateliste
+von Mobilstation B. Z.B. in der zweiten Zeile der Liste, haben die Signale aus C die Fehlerrate 1, d.h.
+
+Kapitel 4 Konzeption und Entwurf
+Station B kann keine Signale von Station C empfangen, da B außerhalb der Reichweite von C liegt
+und die Signale aus C verloren gehen werden.
+Sendstation
+
+Fehlerrate
+
+Tabelle 4-2 Fehlerrateliste bei Station B
+Die Fehlerrateliste realisiert die Beschreibung der Rechweiten von den Sendstationen. Nach den
+Regeln des CSMA/CA sendet eine Station ihre Nachricht, ohne die Fehlerrateliste zu berücksichtigen.
+Wenn eine Station einen Rahmen empfangen hat, muss sie zunächst überprüfen, ob ein Eintrag des
+Senders in der Fehlerrateliste des Empfängers steht. Falls nicht, oder der gefundene Eintrag Fehlerrate
+1 besitzt, muss der Rahmen weggeworfen werden, weil der Empfänger außerhalb der Reichweite des
+Senders liegt.
+
+4.2.3 Signalausbreitungsverzögerung
+Die Signalausbreitungsgeschwindigkeit in Wireless LAN ist die Lichtgeschwindigkeit. Nach der
+Spezifikation in IEEE 802.11 ist die Signalausbreitungsverzögerung sehr klein, siehe
+Tabelle 4-3.
+Übertragungsrate Maximale Entfernung
+
+Ausbreitungsverzögerung
+
+Tabelle 4-3 Signalausbreitungsverzögerung in IEEE 802.11
+In der Emulationsumgebung ist die Signalausbreitungsverzögerung länger als in realer Wireless LAN,
+da
+die Signalausbreitungsgeschwindigkeit in Ethernet relativ langsamer ist (etwa ⅔ von
+Lichtgeschwindigkeit) und extra eine interne Bearbeitungszeit benötigt wird. Wegen der kürzeren
+Entfernung zwischen Stationen in Emulationsnetzwerk in NET-Umgebung und der Granularität des
+Timers (10µs, vgl. Abschnitt 4.3.4 BackOff) nehmen wir an, dass die
+Signalausbreitungsverzögerungen in Emulationsumgebung und realer Umgebung gleich sind.
+Annahme1:
+Die Signalausbreitungsverzögerungen in Emulationsumgebung und realer Umgebung
+sind gleich.
+
+4.3 Emulation der MAC-Schicht
+4.3.1 Netzwerktopologie, Medienzugriffsverfahren und optionale Funktionen in MAC
+Topologie
+Zugriffsmethode
+
+Tabelle 4-4 Netzwerktopologie und Medienzugriffsverfahren
+
+Kapitel 4 Konzeption und Entwurf
+Ein Wireless LAN kann in Infrastruktur-Modus oder in Ad-hoc-Modus funktionieren. Die
+Grundlegende Medienzugriffsmethode in Wireless LAN ist die auf DCF basierende CSMA/CA. Die
+optionale Medienzugriffsmethode PCF benutzt auch die Basisregeln von DCF, wie es in Kapitel 3
+erläutet. Wie die Tabelle 4-4 zeigt, kann CSMA/CA sowohl in Infrastruktur-Modus als auch in Adhoc-Modus eingesetzt werden, während die PCF nur in Infrastruktur-Modus funktionieren kann.
+Da die Abteilung Verteilte Systeme der Universität Stuttgart höheren Bedarf an die Emulation für Adhoc-Netzwerke, muss die WILEMU Wireless LAN in Ad-hoc-Modus unterstützen. Für die Emulation
+werden CSMA/CA als Zugriffsmethode und Ad-hoc-Modus als Netzwerktopologie ausgewählt. Damit
+können die wichtigste Verhalten der MAC-Schicht emuliert, die Komplexität der Implementierung
+wegen der Zeitbeschränkung reduziert und die Anforderung der Abteilung erfüllt werden.
+Da das „Hidden Terminal“-Problem in Ad-hoc-Netzwerk vorkommen kann, muss neben dem
+Basismechanismus des CSMA/CA auch noch das RTS/CTS-Mechanismus eingesetzt werden.
+WILEMU muss vor dem Senden eines Rahmens entscheiden, ob der Rahmen die Broadcast-Adresse
+besitzt. Wenn ja, soll der CSMA- Basismechanismus verwendet werden.
+Aus den gleichen Gründen werden die optionalen Funktionen wie WEP (Abschnitt 2.5.5),
+Fragmentierung (Abschnitt 3.4) und Stromsparen (siehe [IEEE811]) in der ersten Version von
+WILEMU nicht unterstützt. Diese Diplomarbeit ist konzentriert auf der Medienzugriffsmethode in
+MAC-Schicht von IEEE 802.11.
+
+4.3.2 Rahmentypen und Rahmenformat
+Wie die Abbildung 4-3 zeigt, ist die MAC-Schicht nach ISO/OSI-Model eine Teilschicht der
+Sicherungsschicht. Zum Datenabsenden nimmt die IEEE 802.11 MAC-Schicht die Daten aus 802.11
+LLC als MAC-Nutzdaten über und fügt einen MAC-Kopf (siehe Abbildung 2-3) ein. Anschließend
+gibt sie die Daten an die unterliegende Bitübertragungsschicht. Die Dateneinheit der MAC-Schicht
+nennt sich Rahmen (Frame).
+In IEEE 802.11 werden die MAC-Rahmen in drei Kategorien definiert, nämlich Daten-Rahmen,
+Steurungs-Rahmen und Verwaltungs-Rahmen. Nach ihren Anwendungen unterscheiden sich die
+Rahmen beim Haupttyp weiter mit der Subtyp-Kennung (siehe Tabelle 4-5). Die genauen
+Bedeutungen des Haupttyps bzw. der Subtypen und deren Werte sind in [IEEE811] beschrieben.
+Typ
+Daten-Rahmen
+
+Steuerungs-Rahmen
+
+Verwaltungs-Rahmen
+
+Tabelle 4-5 Wichtige Datentypen und Subtypen in IEEE 802.11 [IEEE811]
+
+Kapitel 4 Konzeption und Entwurf
+Durch die Analyse von Typ und Subtyp kann die Mobilstation erkennen, was für einen Rahmen sie
+empfangen hat.
+Nach dem Auswahl von Netzwerktopologie und Medienzugriffsmethode werden in dem
+Emulationswerkzeug WILEMU nur zwei Typen unterstützt: Daten-Rahmen und Steuerungsrahmen.
+Da der Verwaltungsrahmen eher für die Stationsanmeldung und -Abmeldung, Authentifizierung und
+die Erkennung von Zelle verwenden, wird er in der Emulation weggelassen. Weil wir für Emulation
+kein PCF einsetzen wollen, werden die Subtypen, die in Daten-Rahmen und Steuerungsrahmen
+definiert und in PCF benutzt sind, auch weggelassen.
+
+Protokolltyp
+
+Tabelle 4-6 Rahmenstyp in der Emulation
+Da in WILEMU nur Daten-, ACK-, RTS- und CTS-Rahmen verwendet werden, werden die
+Rahmenstypen und Subtypen in der WILEMU nicht mehr kategorisiert. Sie sind einheitlich als
+Rahmenstypen definiert, wie die
+Tabelle 4-6 Rahmenstyp in der Emulation aufzeigt.
+Abbildung 4-3 zeigt das allgemeine Rahmenformat in IEEE 802.11 MAC.
+Sequenzkontrolle
+
+Sequenznummer
+
+Kontrollfeld
+
+Abbildung 4-3 Allgemeines Rahmenformat in IEEE 802.11 MAC [IEEE811],[nemg01]
+Ein MAC-Rahmen besteht aus drei Teilen: Rahmenkopf, Rahmenkörper und FCS (Frame Check
+Sequence). Das FCS beinhaltet ein 32-Bits-CRC (Cyclic Redundancy Code, Prüfsumme). Wie im
+übrigen Ethernet, wird die Prüfsumme zur Erkennung von Übertragungsfehler benutzt. Der
+Rahmenkörper entspricht den Nutzdaten, die von LLC-Schicht übernommen werden. Die maximale
+
+Kapitel 4 Konzeption und Entwurf
+Länge beträgt 2312 Bytes. Das Format des Rahmenkopfs sieht ganz anders aus als in Ethernet, da das
+IEEE 802.11 MAC verschiedene Medienzugriffsmethoden unterstützt. Am Anfang des Rahmenkopfs
+beträgt die Länge des Kontrollfelds 16 Bits. Die Bedeutungen des jeweiligen Feldes finden Sie in
+[IEEE811]. Die Informationen über Rahmenstyp sowie Subtyp werden in das Kontrollfeld eingetragen.
+Die genaue Beschreibung der einzelnen Felder in Kontrollfeld finden Sie in [IEEE811].
+Die Bedeutungen der vier Adressen-Felder in IEEE 802.11 sind in Tabelle 4-7 aufgelistet.
+
+Empfänger
+
+Zelle des Senders
+
+Zelle des
+Empfängers
+
+
+
+Der Rahmen wird
+nur innerhalb einer
+Zelle versendet.
+
+Der Rahmen wird
+vom AP aus dem DS
+an eine Station in
+der Zelle geschickt.
+
+Der Rahmen wird
+von einer Station
+aus einer Zelle an
+den AP zur
+Weiterleitung in DS
+versendet.
+
+Der Rahmen wird
+von einer Station in
+einer Zelle über AP
+an eine Station in
+einer anderen Zelle
+versendet.
+
+Tabelle 4-7 Adressenfelder in MAC-Kopf nach IEEE 802.11 [siko01]
+In der Emulation betrachten wir nur ein IBSS, da sich auf der physischen Ebene mehrere IBSS
+miteinander durch Raummultiplex oder Frequenzmultiplex nicht stören. In Tabelle 4-7 wird nur die
+Kombination in der ersten Spalte benutzt, da die Anderen nur in PCF vorkommen. Wenn mehrere
+IBSS emuliert werden sollten, kann die Erkennung von Zelle durch die entsprechende VLANKonfiguration realisiert werden. Deswegen wird die Zelladresse in Rahmenkopf nicht gebraucht, also
+das Feld „Adresse3“.
+In der Emulation wird der Feld „Prüfsumme“ am Ende jedes Rahmens nicht eingefügt, da die
+Erkennung von Übertragungsfehler durch die „CRC-Check“-Funktion von dem realen
+kabelgebundenen Netzwerk erledigt wird.
+Wie es in Abschnitt 4.3.1 angegeben wird, werden die Funktionen von Fragmentierung,
+Verschlüsselung und Stromsparen in der Emulation nicht unterstützt. Die entsprechenden Felder in
+Rahmenkopf dürfen auch weggelassen werden. Da es kein DS in Ad-hoc-Netzwerk existiert, enthält
+der Rahmenkopf kein „An DS“ und „Aus DS“.
+Das Feld „Dauer“ im Rahmenkopf ist die wichtigste Besonderheit in IEEE 802.11 MAC. „Dauer"
+enthält die voraussichtliche Zeitdauer der nachfolgenden Übertragung. Die Netzwerkteilnehmer, bis
+auf den Sender, empfangen einen Rahmen und entnehmen dementsprechend, dass sich eine
+Übertragung auf Kanal befindet, und das Medium wird für diesen Zeitraum reserviert (siehe folgende
+Kapitel).
+Dafür wird ein einheitliches Rahmenformat in der Emulation vereinbart, wie die Abbildung 4-4
+darstellt.
+
+Kapitel 4 Konzeption und Entwurf
+
+Abbildung 4-4 Allgemeines Rahmenformat in WILEMU
+Wobei, statt 2312 Bytes wird die maximale Länge der Nutzdaten auf 1500 Bytes reduziert, weil die
+Rahmen mittels Ethernet übertragen werden und die maximale Länge der Nutzdaten in Ethernet auf
+1500 Bytes beschränkt wird.
+Die Formate von ACK, RTS und CTS, die ursprünglich in IEEE 802.11 definiert sind, werden in
+Abbildung 3-9 dargestellt. Sie bestehen nur aus einem MAC-Kopf und einem FCS.
+ACK-Rahmen
+Rahmenkopf des ACKs
+
+Abbildung 4-5 Rahmensformate von ACK, RTS und CTS nach IEEE 802.11 [IEEE811]
+Zur Vereinfachung der Implementierung definieren wir die drei Steuerungs-Rahmen in einem
+einheitlichen Format. Wie auch im vereinfachten Format des Datenrahmens wird die Prüfsumme
+weggelassen. Aus diesem Format wird das Format des Steuerungsrahmens wie die Abbildung 3-9
+gebaut.
+
+Kapitel 4 Konzeption und Entwurf
+Steuerungs-Rahmen
+
+Adresse des Empfängers
+
+Adresse des Senders
+
+Abbildung 4-6 Format des Steuerungsrahmens in WILEMU
+
+4.3.3 BackOff-Funktion
+Wie bei CSMA/CD wird der Wettbewerb-Prozess durch die Binär-Exponential-BackOff-Funktion
+(vgl. Abschnitt 2.4.5) realisiert. Eine Zufallzahl für die BackOff-Wartezeit wird dadurch generiert.
+Allerdings sind die minimale und maximale Größen des Wettbewerb-Fensters (CW, Contention
+Window) in CSMA/CA anders als in CSMA/CD definiert, wie es in
+Abbildung 4-7 CW in
+CSMA/CA [IEEE811] dargestellt ist. Die entsprechenden Werte der BackOff-Wartezeit sind in
+Tabelle 4-8 aufgelistet.
+BackOff-Wartezeit = Zufallzahl X Zeitschlitz
+(Backoff Time)
+(Random) (aSlotTime)
+1. Zufallzahl ist durch BackOff-Funktion
+generiert. Das Intervall der Zufallzahl
+ist [0, CW].
+2. aSlotTime ist der Zeitschlitz in IEEE
+802.11, wie die τ in CSMA/CD.
+Allerdings ist der Zeitschlitz abhängig
+von verwendeter
+Bitübertragungstechnik.
+3. CWmin <= CW <= CWmax
+
+Abbildung 4-7 CW in CSMA/CA [IEEE811]
+Versuchsanzahl der
+erneuten Übertragung
+
+Tabelle 4-8 Werte der BackOff-Wartezeit in CSMA/CA
+
+Kapitel 4 Konzeption und Entwurf
+Der Wert des Zeitschlitzes (aSlotTime) ist abhängig von Bitübertragungstechnik und ist in Tabelle 4-8
+zu sehen.
+Bitübertragungstechnik
+
+Wert des Zeitschlitzes
+
+Tabelle 4-9 Werte der Zeitschlitz in CSMA/CA [IEEE811], [IEEE811b]
+Während des Wettbewerbs, wenn der Kanal wegen einer anderen Sendung als besetzt erkannt wird,
+wird der BackOff-Timer angehalten. Bei dem nächsten Wettbewerb wird der BackOff-Timer von dem
+letzten Stand an weiter abgezählt. Dabei wird die Zufallzahl nicht erneut generiert. Diese
+Vorgehensweise vermeidet, dass eine Sendstation wegen der Erkennung von Kanalbelegung zu lang
+warten muss. Es ist eine Besonderheit in CSMA/CA.
+Der Wert des CWs wird bei jedem erfolglosen Sendversuch exponentiell vergrößert. Erreicht das CW
+CWmax, bleibt es bei CWmax. Nach der erfolgreichen Sendung wird der CW-Wert bei der
+Sendstation auf CWmin zurückgesetzt. Folgende Situationen können zu einer erfolglosen Sendung
+führen:
+1. Der RTS- oder Daten-Rahmen ist durch eine andere Datenübertragung beschädigt worden,
+bzw. eine Kollision ist auftreten. Der Empfänger wird keine Bestätigung bzw. ein CTSRahmen zurückschicken.
+2. Während SIFS-Zeit ist der Kanal aus der Sicht des Empfängers als besetzt erkannt, der
+Empfänger hat keinen Zugriff auf Kanal.
+3. Obwohl der Empfänger einen CTS bzw. eine Bestätigung gesendet hat, ist der ACK-Rahmen
+in eine Kollision geraten. Daher wird der Sender nicht über die aktuelle Situation informiert.
+In der Emulation muss jede Station zwei lokale Variablen haben: „tw“ und „collosion“.
+tw:
+
+Wenn der BackOff-Timer angehalten wurde, wird die Verbleibende BackOffWartezeit in „tw“ gespeichert. Bei dem nächsten Wettbewerb wird dieser Wert
+als Anfangswert geholt und zählt der BackOff-Timer herunter.
+(tw: „Time to Wait“, Wartezeit, 64 Bit-Integer)
+
+collision:
+
+Bei jedem erfolglosen Sendeversuch wird sich der Wert des
+„collision“ erhöhen. Erreicht das „collision“ den maximalen Wert, wird eine
+Fehlermeldung an die höhere Schicht geliefert. Auf der Basis von
+„collision“ wird eine Zufallzahl für den Wettbewerb generiert.
+(collision: Anzahl des Sendversuchs, 32 Bit-Integer)
+
+Da der Zeitschlitz abhängig von Bitübertragungsschicht ist, soll der Wert des Zeitschlitzes als
+Parameter einstellbar sein.
+
+Kapitel 4 Konzeption und Entwurf
+4.3.4 Trägererkennung
+Die Trägererkennung in CSMA/CA besteht aus der physischen Erkennung und der virtuellen
+Erkennung. In NET-Umgebung (Emulationsumgebung unter kabelgebundenen LAN) ist die physische
+Trägererkennung nur teilweise realisierbar.
+Wie in Abschnitt 4.2.3 erläutet, sind die Signalausbreitungsverzögerungen in Emulationsumgebung
+und realer Umgebung vergleichbar. Damit nehmen wir weiter an:
+Annahme2:
+Der Zeitpunkt, zu dem die Emulationssoftware einen Rahmen empfangen hat, ist der
+Anfangzeitpunkt, ab dem der Kanal belegt ist.
+Wie die Abbildung 3-9 zeigt, wird eine Rahmensankunft bei Emulationssoftware erkannt, nur
+nachdem die NET-Hardware den Rahmen erfolgreichen empfangen hat. D.h. WILEMU empfängt nur
+fehlerfreie Rahmen. Wenn die NET-Hardware festgestellt hat, dass der Rahmen fehlerhaft ist, wird
+dieser Rahmen weggeworfen, und die Software (WILEMU), kann diese Kanalbelegung überhaupt
+nicht wahrnehmen.
+
+(mit Ethernet-Kopf und VLAN-Kopf)
+
+(mit Ethernet-Kopf und VLAN-Kopf)
+
+Abbildung 4-8 Vergleich der Übertragungsdauer
+Wie die Abbildung 4-8 zeigt, ist die Zeitdauer für die Übertragung eines Rahmens in der
+Emulationsumgebung wesentlich kürzer als es in realer Umgebung. Um die richtige Kanalbelegung zu
+emulieren, muss die Übertragungsdauer künstlich addiert werden, also der Zeitpunkt des Endes der
+Kanalbelegung = Anfang der Kanalbelegung + Übertragungsdauer des Rahmens in realer Umgebung.
+
+Kapitel 4 Konzeption und Entwurf
+In der Emulation wird der Kanalzustand durch die Variablen „tbs“ und „tbe“ emuliert.
+tbs:
+
+Anfangszeitpunkt der Kanalbelegung
+(tbs, „Time Busy Start“, 64 Bit-Integer)
+
+tbe:
+
+Zeitpunkt des Endes der Kanalbelegung
+(tbe, „Time Busy End“, 64 Bit-Integer)
+
+Damit kann auch die virtuelle Trägererkennung emuliert werden. Wenn die Stationen, die sich nicht an
+der Kommunikation beteiligen, also die Stationen außer Sender und Empfänger, einen Rahmen
+empfangen haben, werden ihre „tbs“ und „tbe“ so aktualisiert:
+tbs = Zeitpunkt der Rahmenankunft
+tbe = tbs + Übertragungsdauer in MAC-Kopf
+
+4.3.5 Granularität des Timers
+Wie die Tabelle 4-8 und Tabelle 4-9 zeigen, liegt die BackOff-Zeit im Mikrosekonden-Bereich. Das
+Emulationswerkzeug „WILEMU“ funktioniert als ein Linux-Modul und benutzt den Linux-KernelTimer. Die Takt-Periode dieses Timers (in Standard-Linux-Kernel, mit Version 2.4) beträgt 10
+Millisekunden. Mit diesem Granularität des Kernel-Timers kann der BackOff-Prozess in Wireless
+LAN überhaupt nicht emuliert werden, da die maximale BackOff-Wartezeit nur 13 ms ist (FHSS). In
+OFDM ist es sogar nur 2.3 ms. Mit einer Verfeinerung kann die Granularität des Timers bis zu 1 ms
+erreichen. Mit diesem Granularität ist die BackOff-Funktion immer noch nicht emulierbar, da die
+Kollisionen wesentlich häufiger als in realem Wireless LAN auftreten können. Dank der Arbeit von
+Robert Sauter ist ein APIC-Timer für die Emulation einsatzbereit. Der APIC-Timer verwendet den
+CPU-Takt. Mit diesem Timer ist die Granularität auf 10 µs verbessert. In dem Entwurf und späterer
+Implementierung wird dieser APIC-Timer eingesetzt.
+
+4.3.6 Interframe Space (IFS)
+Ansgenhend von dem originalen RTS/CTS Algorithmus, der in IEEE 802.11 spezifiziert wird, wartet
+der Sender nun auf den CTS-Rahmen, nachdem er den RTS-Rahmen gesendet hat. Wenn der Sender
+den Daten-Rahmen abgeschickt hat, wie bei RTS/CTS, erwartet er eine Bestätigung. Nach dem
+erfolgreichen Empfang von RTS- und Daten-Rahmen muss der Empfänger die entsprechende CTS
+bzw. die Bestätigung an den Sender zurucksenden. Eine komplette Sendung soll möglichst schnell
+abgeschlossen werden. Damit der Sender die CTS und ACK sofort erhalten kann, soll höhere Priorität
+der Sendstation beim Zugreifen auf Kanal und beim Absenden des CTS und ACKs gewährleistet
+werden. Um dies zu ermöglichen, sind in IEEE 802.11 Standard verschiedene lange Intervalle IFS
+(Interframe Space) zwischen dem Senden von Rahmen definiert. Sie sind in Abbildung 3-9 dargestellt.
+
+Kapitel 4 Konzeption und Entwurf
+
+Abbildung 4-9 IFS-Intervalle in IEEE 802.11 DCF [IEEE811]
+1. SIFS (Short IFS):
+SIFS ist vor dem Senden von CTS, Daten und ACK benutzt. SIFS ist das kleinste IFS. D.h. die
+Sendung von CTS und ACK hat höhere Priorität.
+2. DIFS (DCF IFS):
+DIFS ist vor dem Senden von RTS- oder Verwaltungsrahmen verwendet. Wenn der Rahmen
+mit Broadcasting-Adresse ist, muss der Sender eine DIFS abwarten, statt SIFS zu benutzen.
+3. EIFS (Extended IFS):
+EIFS ist ein spezielles IFS. Wenn eine Station einen fehlerhaften Rahmen empfangen hat, ist
+die in dem Rahmenkopf enthaltene Dauer nicht mehr lesbar oder hat sie einen anderen Wert,
+der viel zu groß ist. Nach der Fehlererkennung, wird der NAV-Wert bei dieser Station durch
+EIFS aktualisiert, statt der Wert in Rahmenkopf zu benutzen.
+Wie der Zeitschlitz, sind die IFS-Werte auch abhängig von der verwendeten Übertragungstechnik. Die
+Werte von den IFSs sind in
+Tabelle 4-10 aufgelistet.
+Bitübertragungstechnik
+
+Kapitel 4 Konzeption und Entwurf
+
+Abbildung 4-10 Zeitberechnung in IEEE 802.11 DCF [IEEE811]
+Die SIFS ist die Zeitdauer vom Zeitpunkt, zu dem ist das letzte Bit des RTS-Rahmens (oder DatenRahmen, CTS-Rahmen) angekommen ist, bis dem Zeitpunk, zu dem die Mobilstation anfängt, den
+nachfolgende Rahmen auf Medium zu senden.
+Wegen der Abhängigkeit zwischen Übertragungstechnik und der Größe des IFS, müssen die IFSs in
+der Emulation als Parameter einstellbar sein. Die IFS in CSMA/CA werden in WILEMU wie folgt
+betrachtet (vgl.
+Tabelle 4-10):
+
+Beschreibung
+Der minimale Wert des SIFS beträgt 10 µs. Im originalen CSMA/CAAlgorithmus wartete eine Station für SIFS-Zeit nach Erhalt von RTS.
+Durch den Einsatz von APIC-Timer (Granularität 10 µs) kann SIFS
+nicht realisiert werden. Zur Vereinfachung und auch wegen der
+Granularität des APIC-Timers wird ein CTS sofort abgeschickt, statt
+SIFS-Zeit abzuwarten. Die Kensequenzen werden im folgenden
+Kapitel diskutiert.
+Der minimale Wert des DIFS beträgt 26 µs. Durch den Einsatz von
+APIC-Timer kann DIFS realisiert werden.
+Die NET-Hardware liefert nur fehlerfreie Rahmen an WILEMU.
+
+Tabelle 4-11 IFS in WILEMU
+
+4.4 Entwurf der WILEMU
+Nach der detaillierten Analyse von CSMA/CA und den oben erläuteten Annahmen und
+Vereinfachungen ist die WILEMU grundsätzlich durch Zustandmaschinen gesteuert. In diesem
+Kapitel werden noch weitere Vereinfachungen erläutet.
+
+Kapitel 4 Konzeption und Entwurf
+4.4.1 Definitionen von WILEMU-Zuständen und Lokalen Variablen
+In WILEMU sind 9 Zustände definiert:
+
+Beschreibung
+Wert
+Ruhe-Zustand
+0
+Wettbewerb -Zustand oder beim Abwarten von DIFS
+1
+Station hat kein Zugriff auf Kanal, da der Kanal wegen einer
+2
+anderen Übertragung gesperrt ist.
+Station hat RTS abgesendet, nun wartet sie auf CTS.
+3
+Station hat Daten-Rahmen abgesendet, nun wartet sie auf
+4
+Bestätigung (ACK).
+Station hat CTS abgesendet, nun wartet sie auf dem Daten5
+Rahmen.
+Station empfängt gerade einen Daten-Rahmen.
+6
+Station ist beim Senden eines Rahmens mit Broadcast-Adresse.
+7
+Station empfängt gerade einen Daten-Rahmen mit Broadcast8
+Adresse.
+
+Tabelle 4-12 Definition der WILEMU-Zuständen
+Jede Station besitzt folgende lokalen Variablen:
+Variable
+Beschreibung
+Datenformat
+status
+Zustand der Station
+32 Bit-Integer
+t
+Lokale Zeit
+64 Bit-Integer
+tbs
+Anfangszeitpunkt des Kanalbelegung
+64 Bit-Integer
+tbe
+Zeitpunkt des Endes des Kanalbelegung
+64 Bit-Integer
+tw
+Verbleibende BackOff-Wartezeit
+64 Bit-Integer
+collision
+Anzahl der Sendversuchs
+32 Bit-Integer
+active
+Der gerade sendende oder empfangene Daten-Rahmen
+Zeiger
+lossratio_list Die Fehlerrateliste. Ein Eintrag davon ist ein Paar von MAC- Liste
+Adresse des Senders und der entsprechenden Fehlerrate.
+Z.B.:
+(00-50-56-C0-05-04, 1)
+(00-50-56-C0-05-2F, 0)
+
+Tabelle 4-13 Lokale Variablen in WILEMU
+Jede Station verwaltet außerdem noch einen Timer und eine Warteschlange. Die Warteschlange ist nur
+für das Senden benutzt und funktioniert nach FIFO-Regel. Der Timer steuert den Wettbewerb-Prozess
+und die verzögerte Datenlieferung. Die Benutzung und Funktionsweise werden in nachfolgenden
+Zustanddiagrammen erklärt.
+
+Kapitel 4 Konzeption und Entwurf
+
+Kapitel 4 Konzeption und Entwurf
+Erklärungen zum Zustand „IDLE“:
+1. Nach der Initialisierung ist eine Station zum Senden und Empfang bereit.
+2. Station hat einen Rahmen von der NET-Hardware bekommen, muss sie aber zuerst überprüfen,
+ob sie innerhalb der Reichweite des Senders liegt (vgl. Abschnitt 4.2.2). Wenn ja, ist dieser
+ein gültiger Rahmen. Ein Rahmenempfang darf gestartet werden (siehe Abbildung 4-15).
+Wenn nein, wird dieser Rahmen weggeworfen und der Zustand bleibt unverändert, da die
+Station diesen Rahmen in realer Umgebung nicht empfangen kann.
+3. Wenn WILEMU von einem Zustand außer „IDLE“ zum Ruhe-Zustand „IDLE“ übergehen
+will, muss sie zuerst die Warteschlange überprüfen. Wenn die Warteschlange nicht leer ist,
+fängt WILEMU an, den Rahmen zu senden. (siehe nachfolgende Diagramme)
+4. Nach Sendewunsch verweist die Variable „active“ auf den zu sendenden Rahmen. Wenn die
+maximale Anzahl des Sendversuchs (Nach jedem erfolglosen Sendversuch erhört sich der
+Wert der Variable „collision“.) erreicht wird, gibt WILEMU der höheren Schicht an, dass der
+Rahmen nicht mehr gesendet werden kann. Genau wie im originalen CSMA/CA-Algorithmus,
+muss der Kanalzustand danach geprüft werden, ob ein schneller Zugriff erlaubt ist (vgl.
+Abschnitt 3.2 und Abbildung 3-3).
+5. Wenn ein schneller Kanalzugriff nicht erlaubt ist, muss die Station um ein Zugriffsrecht
+konkurrieren. Wenn eine vorherige Sendung während des Wettbewerbs angehalten wurde, ist
+der alte Timerstand in „tw“ gespeichert, d.h. es noch „Verbleibende BackOff-Zeit gibt. Wenn
+der Wettbewerb erfolgreich abgeschlossen war, ist der Wert von „tw“ auf 0 gesetzt. Vor einem
+Wettbewerb muss zunächst der alte Timerstand überprüft werden. Wenn der Wert gleich 0 ist,
+heißt es, dass der alte BackOff-Timer abgelaufen war, muss eine neue BackOff-Wartezeit
+generiert werden. Ein Timer wird danach gestartet. Und geht die Station in WettbewerbZustand(„CONTENTION“, vgl. die Erklärungen zur Abbildung 4-15 und zum Zustand
+„CONTENTION“). Nicht wie es im originalen CSMA/CA, zur Vereinfachung, wird das
+Abwarten für DIFS in Wettbewerb integriert. Damit ist die Ablaufzeit die Summe von DIFS
+und der generierten BackOff-Zeit („tw“), wie die Abbildung 4-15 zeigt:
+tw = t2 - t1
+DIFS = t1 - t0
+T = tw + DIFS = t2 - t0 (Ablaufzeit)
+Wenn der Wettbewerb wegen einer Kanalbelegung angehalten werden würde, muss die
+verbleibende BackOff-Zeit in „tw“ gespeichert werden:
+Wobei „t“ ist der Zeitpunkt (lokale Zeit), in dem der Timer gestoppt wurde.
+Falls:
+1. Timer wurde während DIFS angehalten, also, t - t0 <=DIFS, dann tw =0
+2. Timer wurde während BackOff angehalten, also, t - t0 >DIFS, dann tw = T + t0 - t
+Wenn der Timer abgelaufen ist, dann tw =0.
+
+Kapitel 4 Konzeption und Entwurf
+
+BackOff-Zeit
+
+Ablaufzeit T
+
+Abbildung 4-12 Zeitdiagramm - „CONTENTION“
+6. Wenn ein schneller Kanalzugriff erlaubt ist, darf die Station mit dem Senden anfangen.
+Allerdings muss sie zunächst überprüfen, ob der Rahmen mit Broadcast-Adresse ist. Weil der
+RTS/CTS-Mechanismus das Broadcasting nicht unterstützt, soll dieser Daten-Rahmen, der
+eine Broadcast-Adresse als Zieladresse besitzt, sofort abgesendet werden. Anschließend
+müssen die Variablen „tbs“ und „tbe“ aktualisiert und ein Timer gestartet werden, wie die
+Abbildung 4-15 zeigt. Die in Rahmenkopf eingefügte „Dauer“ ist genau die
+Übertragungszeitdauer dieses Daten-Rahmens in realer Umgebung (vgl. die Erklärungen zur
+Abbildung 4-15 und zum Zustand „BROADCASTING“).
+
+Übertragungsdauer in realer Umgebung
+
+Übertragungsdauer in WILEMU
+
+Abbildung 4-13 Zeitdiagramm - „BROADCASTING“
+Wenn der Rahmen sich um ein „Unicast“-Rahmen handelt, muss zuerst ein RTS abgesendet
+werden. Wie die Abbildung 4-14 zeigt, wird gleichzeitig ein Timer gestartet. Die Ablaufzeit
+ist die Summe von SIFS und der realen Übertragungszeiten von RTS und CTS (vgl.
+Abbildung 4-8 und
+Tabelle 4-10). Dabei ist der Timer für die Erkennung von Ankunft
+und Kollision des CTS benutzt (vgl. die Erklärungen zur Abbildung 4-15 und zum Zustand
+„WAITING_CTS“).
+
+Kapitel 4 Konzeption und Entwurf
+
+Nun befindet eine Station im Zustand „IDLE“ und ist ein Rahmen nach der Reichweiteüberprüfung
+(nachschlagen in Fehlerrateliste) tatsächlich angekommen.
+Erklärungen zum Anschluss 1:
+1. Wenn der empfangende Rahmen ein Datenrahmen ist, müssen die Variablen „tbs“ und
+„tbe“ aktualisiert. Der Wert der „tbs“ ist der lokale Zeitpunkt, in dem der Rahmen
+angekommen ist.
+2. Wenn der Rahmen sich um einen Broadcast-Rahmen handelt, geht die Station sofort in die
+Empfangsphase, wie die Abbildung 4-16 zeigt. Da der Daten-Rahmen eine Länge bis zum
+1500 Bytes haben kann, darf die Übertragungsdauer in der Emulationsumgebung nicht
+vernahlässigen. Dabei ist die Ablaufzeit die Differenz von Übertragungsdauern in realer
+Umgebung („Dauer“ in Rahmenkopf) und in WILEMU:
+T = „Dauer“ - temu
+temu =Länge des Rahmens /Übertragunsrate in NET(1 GBit/s)
+
+Abbildung 4-16 Zeitdiagramm - „RECEIVING_BC“ (Empfang eines BroadcastRahmens)
+Wenn der Rahmen sich um ein „Unicast“-Datenrahmen handelt, geht die Station sofort in den
+Zustand „LISTENING“, wie die Abbildung 4-17 zeigt. Im Zustand „LISTENING“ hat Station
+kein Zugriff auf Medium.
+
+Kapitel 4 Konzeption und Entwurf
+Dabei unterscheiden sich zwei Situationen:
+
+WILEMU ist die Zielstation: Dieser Datenrahmen ist ein fehlerhafter oder verspäteter
+Datenrahmen, da WILEMU sich im Moment in Zustand „IDLE“ befindet und keine Daten
+angefordert hat. Da der Kanal wegen dieser Datenübertragung besetzt ist, geht WILEMU
+auch zum „LISTENING“-Zustand über.
+
+
+WILEMU ist keine Zielstation: Dieser Rahmen ist ein vorbeilaufender Rahmen für eine
+andere Station. WILEMU geht in den „LISTENING“-Zustand.
+
+3. Wenn WILEMU erkannt hat, dass dieser Rahmen ein RTS und sie die Zielstation ist, muss
+WILEMU diesen Rahmen empfangen. Wie die Abbildung 4-8 und Abbildung 4-15 gezeigt
+haben, ist die Übertragungsdauer des RTS in Emulationsumgebung sehr kurz. Zur
+Synchronisation und Erkennung von Kollision mit RTS sollte ein Timer mit Ablaufzeit von
+Übertragungsdauer des RTS in realer Umgebung gestartet werden. Obwohl der APIC-Timer
+eingesetzt wird, ist diese künstliche Verzögerung nicht realisierbar. Nach dem originalen
+CSMA/CA-Algorithmus muss die Station nach der Erhalt eines RTS einen CTS schicken.
+Dazwischen ist noch noch SIFS-Zeit abzuwarten. Wegen der begrenzten Timer-Auflösung ist
+das Abwarten auch nicht realisierbar (vgl. Tabelle 4-11). Die Nachbildung von CSMA/CA
+wird weiter vereinfacht:
+
+Vereinfachung
+
+Die Übertragungsdauer des Steuerungsrahmens wird in der Emulation
+auf der Empfangsseite ignoriert.
+Vor dem Senden von aufeinander folgenden Rahmen (RTS->CTS->DATA
+->ACK) wird kein SIFS gewartet.
+
+Konsequenzen
+
+Die Kanalbelegung bei Senden und Empfang des Steuerungsrahmens
+wird in der Emulation vernachlässigt, d.h. die Variablen „tbs“ und
+„tbe“ werden nicht aktualisiert.
+Für RTS, CTS und DATA beträgt die in Rahmenkopf eingefügte
+„Dauer“ die reale Übertragungsdauer des Daten-Rahmens.
+Für ACK beträgt die in Rahmenkopf eingefügte „Dauer“ 0.
+
+Abbildung 4-18 Zeitdiagramm - Empfang des RTS und Absenden von CTS
+
+Kapitel 4 Konzeption und Entwurf
+Wie die Abbildung 4-18 zeigt, nach der oben erklärten Vereinfachung, wird ein CTS sofort
+gesendet und ein Timer gleichzeitig gestartet.
+4. Wenn der Rahmen ein vorbeilaufender Steuerungsrahmen ist, geht die Station in den Zustand
+„LISTENING“ (vgl. Abbildung 4-17). Dabei ist die Ablaufzeit des Timers die „Dauer“ in
+MAC-Kopf. Alle anderen Rahmen (alle ACK und CTS an diese Station) werden weggeworfen.
+4.4.2.3 „CONTENTION“
+

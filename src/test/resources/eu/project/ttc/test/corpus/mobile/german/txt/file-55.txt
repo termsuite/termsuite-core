@@ -1,0 +1,144 @@
+Kundenmeinung :
+
+Die Kommunikationstechnik - Fibel ist sehr informativ und verständlich . Genau das habe ich schon seit langem gesucht . Endlich mal ein Buch , das kurz und bündig die moderne Informationstechnik beleuchtet .
+Kommunikationstechnik - Fibel
+
+jetzt bestellen !
+Das Buch zu dieser Webseite
+Netzwerktechnik - Fibel
+Kundenmeinung :
+
+Die Netzwerktechnik - Fibel ist sehr informativ und verständlich . Genau das habe ich schon seit langem gesucht .
+Netzwerktechnik - Fibel
+
+jetzt bestellen !
+Elektronik - Kompendium . de > Kommunikationstechnik
+Grundlagen Mobilfunk
+Generationen von Mobilfunksystemen
+Mobilfunksysteme der 1 . Generation ( 1G ) sind das A - , B - und das C - 450 des C - Netzes gewesen . Alle drei Netze haben die analoge Sprachübertragung auf der Funkschnittstelle zwischen Mobilfunktelefon und Basisstation gemeinsam . Mit GSM wurde erstmals ein digitales Übertragungsverfahren für die Sprachübertragung verwendet . Damit wurde die Kapazität der Funkschnittstelle besser ausgelastet . GSM entspricht deshalb einem Mobilfunksystem der 2 . Generation ( 2G ) . Auf dem Weg zum Mobilfunksystem der 3 . Generation ( 3G ) wurde für die Datenübertragung HSCSD und GPRS eingeführt , die auch unter 2 . 5G eingeordnet werden , als ein Zwischenschritt zwischen GSM ( 2G ) und UMTS ( 3G ) . In vielerlei Dokumentation wird EDGE bereits zur 3 . Generation gesehen , wenn auch dieser Datendienst in Verbindung mit GSM nicht an UMTS heranreicht . Eher wäre EDGE unter 2 . 75G einzuordnen . Hauptbestandteil von Mobilfunksystemen der 3 . Generation ( 3G ) sind Datendienste , wie z . B . Videotelefonie und der mobile breitbandige Internet - Zugang . Auf dem Weg zur 4 . Generation ( 4G ) von Mobilfunksystemen kommen noch mehrere Zwischenschritte mit HSPA , HSPA + ( 3 . 5G ) und LTE ( 3 . 9G ) . Die Zukunft der Mobilfunktechnik wird LTE Advanced ( 4G ) sein .
+Generation
+Technik
+Übertragung
+Bandbreite
+1G
+AMPS
+analog , leitungsvermittelt
+-
+2G
+GSM
+digital , leitungsvermittelt
+9 , 6 kBit / s
+2 . 5G
+HSCSD
+digital , leitungsvermittelt
+57 , 6 kBit / s
+GPRS
+digital , paketvermittelt
+115 kBit / s
+2 . 75G
+EDGE
+digital , paketvermittelt
+236 kBit / s
+3G
+UMTS
+digital , paketvermittelt
+384 kBit / s
+3 . 5G
+HSPA
+digital , paketvermittelt
+14 , 4 MBit / s
+3 . 9G
+LTE
+digital , paketvermittelt
+150 MBit / s
+4G
+LTE Advanced
+digital , paketvermittelt
+1 GBit / s
+Mobilfunknetze
+
+Die Mobilfunknetze entwickeln sich weltweit zu Multi - Mobilfunknetzen , die von GSM ( GPRS , EDGE ) über UMTS ( HSPA ) auch LTE beherrschen . Egal welches Mobilfunksystem , alle bestehen aus einigen elementaren Bestandteilen , die alle Systeme gemeinsam haben . Zum Beispiel das Mobilfunktelefon und die Basisstation . In den meisten Fällen ist dieser kleine Teil der Übertragungsstrecke zwischen Mobilfunktelefon und Basisstation die einzige Funkübertragungsstrecke . Die Übertragungsstrecke von der Basisstation zum Kernnetz wird als Backhaul bezeichnet und erfolgt über leitungsgebundene E1 / E3 - Verbindungen . Nur in ganz entlegenen Gebieten , wo weit und breit keine Kabel liegen oder deren Nutzung zu teuer ist , werden Richtfunkstrecken verwendet .
+
+Im Prinzip ist ein Mobilfunktelefon ein schnurloses Telefon , dessen Basisstation sich nicht in unmittelbarer Nähe befindet , sondern einige Kilometer weiter weg .
+
+Für den Betrieb der Mobilfunknetze sind in der Regel die Netzbetreiber verantwortlich . Die neigen jedoch dazu , den Betrieb ihrer Mobilfunknetze an die Mobilfunk - Ausrüster abzugeben . Die Ausrüster übernehmen dabei das komplette Netzmanagement .
+Mobilfunkzellen - Struktur der Mobilfunknetze
+Ein Mobilfunknetz ist in Zellen aufgeteilt . Der Durchmesser einer Zelle beträgt mehrere Kilometer . In jeder Zellen hat der Mobilfunknetzbetreiber eine oder mehrere Basisstationen aufgebaut .
+
+Bewegt sich ein Handy - Nutzer durch das Mobilfunknetz , dann bewegt er sich durch viele Zellen . Manchmal kommt es vor , dass er sich in einen Bereich einer Zelle bewegt , der sehr schlecht oder gar nicht mit Funkwellen von der Basisstation erreicht wird . Er befindet sich dann in einem Funkloch . Diese Funklöcher kommen sehr häufig vor . Was man in der Regel nicht merkt . Meistens sind diese Funklöcher ganz klein . Doch es gibt auch Funklächer , die ganze Landstriche überziehen .
+
+
+Das Handy strahlt seine Funkwellen in alle Richtungen aus . Bei den Basisstationen unterscheidet man zwischen der omnidirektionalen und der sektorisierten Basisstation .
+
+Die omnidirektionale Basisstation steht im Zentrum einer Funkzelle und strahlt ihre Funkwellen genau wie das Handy in alle Richtungen ( 360 ° Abstrahlwinkel der Antenne ) aus .
+
+Die sektorisierte Basisstation wird zur Erhöhung der Gesprächskapazität eingesetzt . Sie strahlt ihre Funkwellen nur in einem von drei Sektoren einer Funkzelle aus .
+
+Da der Mobilfunkkunde nicht immer innerhalb einer Zelle bleibt , kommt es vor , dass er sich an den Rand einer Funkzelle bewegt . Das Netz erkennt dann , wann es besser ist , eine neue Verbindung zu einer anderen Basisstation aufzunehmen . Das Netz entscheidet dann anhand der Verbindungsqualität , welche Basisstation für eine Verbindung besser geeignet ist .
+
+Die Verbindungsqualität zu den Basisstationen wird ständig geprüft . Bei Bedarf wird die Basisstation gewechselt . Dabei wird die Verbindung zur alten Basisstation erst abgebrochen , wenn die neue Verbindung steht . Der Handynutzer merkt davon nichts . Seine Sprach - und Datenverbindungen werden unterbrechungsfrei fortgeführt .
+Netzbetreiber und Service - Provider
+Der Netzbetreiber ist derjenige , der das Netz aufbaut , wartet und instand hält . In Deutschland sind das die Firmen T - Mobile , Vodafone , E - Plus und O2 .
+
+Den eigentlichen Anschluss an das Mobilfunknetz und den Kartenvertrag erhält man nicht zwangsläufig vom Netzbetreiber . Ein sogenannter Service - Provider kauft von den Netzbetreibern Minuten und Anschlüsse ( Rufnummern ) ein und schaltet die SIM - Karte frei und verschickt auch die monatliche Gebührenabrechnung .
+
+Durch die Mittler - bzw . Händlerfunktion zwischen Nutzer und Netzbetreiber entstehen sehr viel Tarife und Tarifoptionen , die auf unterschiedliche Kundenbedürfnisse zugeschnitten sind .
+
+Der Kunde kann sich so den für sich günstigsten Tarif heraussuchen . Die Auswahl an Tarifen der unterschiedlichsten Anbieter ist jedoch groß . Jeder Provider bietet seine Leistungen ( Sprache , Daten , SMS ) zu unterschiedlichen Preisen an . So kann eine Änderung des Kommunikationsverhaltens zu einer teureren Gebührenrechnung führen als ursprünglich geplant .
+SIM - Karte
+Die SIM - Karte ist eine Telefonkarte mit einem Chip , auf dem alle wichtigen Daten des Besitzers und seines Handys gespeichert sind ( z . B . das Telefonbuch ) . Jede Karte hat eine weltweit einmalige Kennung .
+
+Auf dem Chip befindet sich auch der vierstellige Sicherheitscode , die Personal Identity Number ( PIN ) . Sie schützt vor unberechtigten Zugriff auf das Handy . Sie hat mit dem Mobilfunknetz jedoch nichts zu tun .
+
+Die SIM - Karte kann von einem Mobiltelefon ausgebaut und in ein anderes eingebaut werden , so das die zugewiesene Rufnummer über ein anderes Mobiltelefon genutzt werden kann . Voraussetzung ist , dass das Gerät nicht per SIM - Lock gesperrt ist .
+
+Für das UMTS - Netz gibt es eine spezielle SIM - Karte , die U - SIM . Es ist eine verbesserte SIM - Karte mit mehr Speicherplatz und Funktionen .
+MultiSIM - Karte
+MultiSIM ist die Möglichkeit mit einem Mobilfunkvertrag mehrere SIM - Karten zu verwenden . Für alle SIM - Karten gilt der gleiche Vertrag und die gleiche Rufnummer . Mehrere SIM - Karten können in verschiedenen Geräten gleichzeitig genutzt werden . Während man mit dem Handy telefoniert , kann man gleichzeitig mit dem Notebook auf das Internet zugreifen . Oder man hat eine Karte im Handy und eine andere Karte im Autotelefon .
+
+Da alle SIM - Karten die gleiche Rufnummer haben , klingeln bei einem Anruf alle Geräte gleichzeitig . Bei abgehenden Telefonaten wird die gleiche Rufnummer übermittelt . Alle Geräte können sogar gleichzeitig genutzt werden . Was nicht geht , dass sich die Geräte untereinander gegenseitig anrufen .
+
+Je nach Mobilfunkbetreiber hat die MultiSIM - Karte eine andere Bezeichnung . Bei Bedarf muss man genauer nachfragen .
+Reichweite und Bandbreite im Vergleich
+Daten - und Sprachübertragung ( Telefonie ) sind die Hauptanwendungsgebiete der Mobilfunktechnik . Während bei der Telefonie die Anforderungen an die Bandbreite eher gering sind , spielt die Reichweite eine viel größere Rolle . Telefonieren mit Mobilfunktechnik heißt vor allem überall erreichbar zu sein und selber jederzeit telefonieren zu können . Da sind Abstriche bei der Sprachqualität kein Problem . Es lässt sich auch unter schlechten Empfangsbedingungen durchaus kommunizieren .
+
+
+Bei der Datenübertragung ist ungünstiger Netzempfang schlecht für die Übertragungsgeschwindigkeit . Ein schlechter Empfang führt zu einer höheren Fehlerrate . Ist die Datenübertragung gestört müssen defekte oder verlorene Daten erneut übertragen werden . Das geht zu Lasten der effektiven Übertragungsgeschwindigkeit . Zum Ausgleich wird die Übertragungsrate reduziert und somit auch die Fehlerrate . Aus diesem Grund schränkt man auch die Reichweite ( Funkausbreitung ) von Funksystemen für Datendienste ein und erhöht dadurch die Datenrate auf kurze Distanzen .
+
+Die Bandbreite und Reichweite von Mobilfunksystemen hängt unweigerlich zusammen . Will man viel Reichweite muss man die Bandbreite einschränken und aufgrund der Reichweite müssen sich viele Teilnehmer die Bandbreite teilen . Will man viel Bandbreite muss man die Reichweite reduzieren , damit weniger Störungen die Funkschnittstelle belasten und die Anzahl der erreichbaren Teilnehmer klein bleibt .
+Sprachqualität im Mobilfunk
+Viele unterschiedliche Faktoren haben auf die Sprachqualität im Mobilfunk Einfluss . Die verwendeten Hardwarekomponenten , wie Mikrofon , Hörkapsel , DSP und das Gehäusematerial und Gehäuseform spielen eine entscheidende Rolle . Und auch die Software im Mobilfunktelefon beeinflusst die Sprachqualität .
+
+Betrachtet man die Nutzungsumgebung eines Mobilfunktelefons , so wird es in der Regel in Umgebungen mit einer Vielzahl unterschiedlicher Geräuschkulissen eingesetzt . Jede Umgebung hat dabei ihr ganz eigenes Geräuschspektrum , das manchmal sehr laute Hintergrundgeräusche erzeugt . Mobilfunktelefone müssen in der Lage sein diese störenden Geräusche auszublenden oder stark zu unterdrücken . Je besser das gelingt , desto besser ist die Verständlichkeit der Sprache .
+
+Gleichzeitig wächst , bei der intensive Nutzung des Mobilfunks , die Forderung nach einer besseren und konstanteren Sprachqualität . Doch bessere Mikrofone und Hörkapseln , sowie die Optimierung des Gehäuses verteuern die Produkte .
+
+Durch die Miniaturisierung entsteht eine immer komplexere Elektronik . Denn die Elektronik muss das leisten , was die Akustik des Gehäuses nicht leisten kann . Das bedeutet , die Rechenleistung und somit auch der Energieverbrauch steigen .
+Weitere Mobilfunk - Grundlagen
+Die Geschichte des Mobilfunks
+Handy / Smartphone / Datenkarte
+Endgeräte für mobiles Internet
+Sprach - Codecs im Mobilfunk
+MVNO - Mobile Virtual Network Operator
+Roaming
+Handover
+Mobilfunktechnik
+C - 450 ( C - Netz in Deutschland )
+GSM - Global System for Mobile Communications
+HSCSD - High Speed Circuit Switched Data
+GPRS - General Packet Radio Service
+EDGE - Enhanced Data Rates for GSM Evolution
+UMTS - Universal Mobile Telecommunications System
+HSPA - Highspeed Paket Access
+HSPA + / HSPA Evolution
+LTE - Long Term Evolution
+LTE Advanced
+Mobilfunk - Dienste und Mobilfunk - Anwendungen
+SMS - Short Message Service
+MMS - Multimedia Messaging Service
+Datenübertragung im Mobilfunknetz
+Mobiles Internet
+WAP - Wirless Application Protocol
+PoC - Push - to - Talk over Cellular
+Handy - TV ( DVB - H / DMB / MBMS )
+LBS - Location Based Services

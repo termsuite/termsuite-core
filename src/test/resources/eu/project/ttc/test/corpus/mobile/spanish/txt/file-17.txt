@@ -1,0 +1,595 @@
+2Business04.p65 El negocio 3G en el mercado argentino
+El negocio 3G en el mercado argentino
+Patricia Li1
+RESUMEN
+En materia de comunicaciones móviles, el mundo, y ahora Argentina, recorren un
+claro camino de innovación hacia 3G que permite mejorar la experiencia de los usuarios
+mediante la oferta de mayor velocidad de transmisión, mayor calidad y más servicios. La
+gente depende cada vez más de su celular, creando nuevas oportunidades en comunicación,
+expresión y entretenimiento. Esto hace de 3G una necesidad para los operadores móviles
+locales y los consumidores finales, creando al mismo tiempo nuevos participantes en el
+modelo de negocio que se estudiarán en el presente trabajo.
+ABSTRACT
+In the evolution of mobile communications, the world, and now Argentina, follows a
+clear innovation path towards 3G that allows a better user experience through the offering
+of more transmission speed, higher quality and more services. People depend more and
+more on their cell phone, creating new opportunities in communication, expression
+and entertainment. This makes 3G a need to local mobile operators and end consumers,
+creating at the same time new participants in the business model that will be studied in
+the present work.
+JEL Classification: O33
+Keywords: 3G, mobile telephony, video call, mobile Internet, handsets, value added services.
+1. Graduada con Honores, MBA, Universidad de Palermo. Account Manager de ZTE Corporation. E-mail:
+patriciali@zte.com.cn
+Palermo Business Review | Nº 2 | 2008 |--------------------------------| 45 Patricia Li
+I. Introducción
+El concepto de telefonía móvil se concibió allá por 1947, con teléfonos analógicos (1G
+o primera generación) que enviaban información sobre ondas cuyas formas variaban de
+forma continua. Debido a la interferencia, las llamadas tenían una calidad altamente variable
+y de baja seguridad.
+La llegada de la segunda generación (2G) fue alrededor de 1990, y marca el cambio de
+protocolos de telefonía móvil analógica a digital. Estos protocolos digitales permitían más
+enlaces simultáneos en un mismo ancho de banda, la integración de otros servicios
+anteriormente independientes en la misma señal, y una mayor capacidad de envío de datos
+desde dispositivos de fax y módem.
+Uno de los protocolos 2G existentes es GSM (Global System for Mobile
+Communications), que fue la adoptada en Argentina como estándar para las comunicaciones
+móviles. GSM fue creado para los teléfonos móviles europeos, con la intención de
+desarrollar una normativa que fuera adoptada mundialmente. Sin embargo, con GSM la
+velocidad de transmisión de datos es de tan solo 9600 bps (bits por segundo). A modo de
+referencia, a esta velocidad, una canción en formato mp3 de 3 minutos precisaría 41
+minutos para descargarse.
+Dando un paso más en la velocidad de transmisión, llegamos a la tercera generación
+(3G) de la telefonía móvil, que permite ofrecer velocidades de descarga superiores a 3
+Mbps. Los servicios asociados con la tercera generación proporcionan la posibilidad de
+transferir voz (una llamada telefónica) y datos (como la descarga de programas, intercambio
+de correo electrónico y mensajería instantánea) simultáneamente a alta velocidad.
+La evolución de GSM en 3G es el estándar UMTS (Universal Mobile Telephone System),
+que se basa en la tecnología WCDMA (Wideband Code Division Multiple Access). Este es
+el estándar hasta ahora empleado en la Argentina. Asimismo, este estándar mejora aun
+más su velocidad de transmisión de datos mediante el uso de la tecnología HSDPA (High
+Speed Downlink Packet Access) que prevé velocidades de hasta 7.2 Mbps.
+Las 3 operadoras existentes en Argentina ya han lanzado 3G, primero Personal en
+mayo del 2007, luego Movistar, y por último Claro (en su momento CTI), en noviembre
+del 2007. Pero de la misma forma que 3G es de un atractivo extremo para las operadoras
+móviles, 3G también viene con diversos desafíos, e implica cambios profundos para el
+total del mercado de las  telecomunicaciones móviles. El alto costo y la escasez de oferta en
+terminales (modelos de celulares y placas de datos) hacen que poca gente esté dispuesta a
+hacer la inversión para pasarse a esta tecnología, cuyo éxito depende también en alta medida
+en la cantidad de suscriptores. Otro desafío a tener en cuenta es la accesibilidad y la oferta en
+servicios y contenidos, lo cual incrementa la incertidumbre de que los consumidores realmente
+deseen adquirir 3G en el corto plazo, por más que sea un tendencia inevitable en el futuro.
+El trabajo examinará la oportunidad de 3G en su totalidad, incluyendo el impacto que
+implicará la transformación al modelo de negocio de los operadores móviles. Se abordarán
+los desafíos que deberán enfrentarse para captar suscriptores, como así también se analizará
+las características principales de un modelo de negocio 3G exitoso, incluyendo la
+proposición de valor, la elección tecnológica, la adquisición de contenido, el bundling
+(paquetización) del servicio y la adopción esperada de 3G por el mercado.
+46 |--------------------------------| Palermo Business Review | Nº 2 | 2008 El negocio 3G en el mercado argentino
+II. Mercado Argentino de Telefonía Móvil
+2007: el año de los lanzamientos 3G en Argentina
+Personal dio el puntapié inicial al lanzar sus servicios sobre 3G, en mayo del 2007;
+luego le siguió Movistar, y en noviembre Claro (ex CTI), con una oferta comercial bien
+agresiva basada en una tarifa plana de $119 mensuales. Todos comenzaron a brindar
+velocidades de transmisión que alcanzan los 2 Mbps, con tecnologías UMTS/HSDPA,
+para utilizar mediante notebooks o teléfonos en áreas urbanas, como el área metropolitana
+de Buenos Aires (AMBA), Córdoba y Rosario. En la primera etapa, la cobertura de 3G
+apuntó a los grandes centros de la provincia de Buenos Aires. Pero, a lo largo de 2008, las
+redes cubrirán casi todas las capitales provinciales que hay en el país.
+Telefonía móvil: escenario 2008
+La telefonía móvil ha experimentado un crecimiento vertiginoso, casi exponencial en
+los últimos años. De una penetración de menos del 50% en el 2005, el 2007 cerró por
+arriba del 92%, y ya en el presente año se superó el 100%. De hecho, la cantidad de
+suscriptores móviles a marzo del 2008 era de 37.8 millones. Además de los factores
+intrínsecos de la industria, la macroeconomía ha sido un impulsor importante, sobre todo
+desde la gran crisis que sufrió el país allá por el 2001-2002. A partir de entonces, el
+aumento del empleo, el incremento del PBI en niveles mayores al 8% anual, una notable
+expansión del consumo, una fuerte competencia entre los operadores, el bajo precio relativo
+de los servicios móviles respecto de otros bienes y el acceso al crédito de consumo
+colaboraron en la adquisición de líneas y recambio de terminales.
+A lo largo del 2007, Claro fue continuamente achicando su distancia con el entonces
+líder en cantidad de clientes del sector, la española Movistar, (perteneciente al Grupo
+Telefónica), lo que le permitió situarse como nro. 1 por primera vez en el 2008, como se
+puede apreciar en el siguiente cuadro.
+Cuadro N° I: Suscriptores de Empresas de Telefonía Móvil
+Suscriptores Claro Movistar Personal
+2006 10.070.000 11.199.000 8.425.000
+2007 13.500.000 13.730.000 10.878.000
+2008 Est. 15.138.000 14.077.000 11.588.000
+Fuente: balances de las empresas
+Traducido en market share, sería la siguiente distribución:
+Palermo Business Review | Nº 2 | 2008 |--------------------------------| 47 Patricia Li
+Cuadro N° II: Market Share de Empresas de Telefonía Móvil
+Market Share Claro Movistar Personal
+2006 33,91% 37,71% 28,37%
+2007 35,43% 36,03% 28,55%
+2008 Est. 37,10% 34,50% 28,40%
+Fuente: balances de las empresas
+La penetración esperada del 106% para el 2008 habla de otra dinámica de mercado. Ya
+hemos superado la primera fase de crecimiento del negocio, basado netamente en volumen
+y cantidad de usuarios. Llegando al final de esta fase, el crecimiento se desacelera, los
+ingresos disminuyen y se entabla una competencia muy dura sobre una limitada cantidad
+de subscriptores. Tratando de evitar esta situación, las operadoras van en busca de la
+denominada 2da fase de crecimiento, la fase del crecimiento de valor. Esto se logra
+reteniendo y satisfaciendo mejor a clientes actuales, ofreciéndoles nuevos servicios que
+responden a nuevas necesidades, que a su vez necesiten del recambio de sus teléfonos
+actuales. Bajo este escenario, 3G cumple estos objetivos, y se torna en estrategia clave de
+las operadoras para hacer crecer su ARPU (Average Revenue per User, o sea, los ingresos
+promedios que recibe la operadora por cada usuario). El ARPU en el 2007 era de alrededor
+$35 por usuario. El siguiente gráfico muestra las 2 fases de crecimiento por las que pasan
+las operadoras:
+Gráfico N° I
+Fuente: elaboración propia
+De hecho, la participación de los servicios de valor agregado en el ARPU ya es del
+28%, de los cuales dos tercios corresponden a los mensajes cortos SMS. Precisamente,
+48 |--------------------------------| Palermo Business Review | Nº 2 | 2008 El negocio 3G en el mercado argentino
+con el lanzamiento de las redes 3G lo que se espera es que se puedan potenciar servicios
+como la videollamada, banda ancha móvil, fotoblogs, videologs y mayor flexibilidad en la
+descarga de música y video. Este movimiento hacia nuevos servicios permite el ingreso
+de jugadores de otros sectores, que encuentran en el mercado celular un terreno propicio
+para generar ingresos. Ejemplos de estos nuevos jugadores son las discográficas, los
+proveedores de contenidos audiovisuales y las empresas pertenecientes al mundo de Internet:
+Google, Yahoo y Microsoft, por mencionar algunas. El desafío apunta a construir un
+ecosistema equilibrado entre todas las partes. El siguiente es un ejemplo de las relaciones
+recíprocas que se entablan entre los diferentes actores:
+Gráfico N° II
+Fuente: elaboración propia
+Al analizar los modelos de consumo de contenido audiovisual y entretenimiento, será
+bueno recordar que quienes hoy rondan los 15 años nacieron en un entorno digital y saben
+bien cómo consumir entretenimiento en múltiples dispositivos aprovechando siempre
+aquellos que les permiten la mejor ecuación "value for money". Probablemente aprovechen
+bajar contenidos como música y video gratis por Internet, transferirlos por bluetooth a
+sus móviles y reproducirlos en su celular mientras se trasladen de un punto a otro. Porque
+también los dispositivos son cada vez más inteligentes y permiten más formas de
+transferencia de archivos.
+Por último, se espera un bajo nivel de churn (pérdida de clientes) entre operadores
+celulares debido a que una de las palancas fundamentales para darle impulso, la Portabilidad
+Palermo Business Review | Nº 2 | 2008 |--------------------------------| 49 Patricia Li
+Numérica, no está en la agenda del Gobierno. En el 2007 la que más invirtió fue CTI, $850
+millones, mientras que Movistar desembolsó $750 millones y Personal $700 millones. Las
+inversiones principales del 2008 apuntan a extender la red 3G al resto del país.
+III. Descripción de la Tecnología 3G
+Estándares de la tecnología 3G
+Las tecnologías 3G son la respuesta a la especificación IMT-2000 (International Mobile
+Telecommunications-2000) de la Unión Internacional de Telecomunicaciones. En Europa
+y Japón, se seleccionó el estándar UMTS (Universal Mobile Telephone System), basado
+en la tecnología W-CDMA. UMTS está gestionado por la organización 3GPP (Third
+Generation Partnership Project), también responsable definir las tecnologías GSM, GPRS
+y EDGE.
+El siguiente gráfico muestra los distintos estándares existentes para 3G y sus
+evoluciones:
+Gráfico N° III
+Fuente: Elaboración propia
+GSM: Global System for Mobile Communications
+GPRS: General Packet Radio Service
+EDGE: Enhanced Data Rates for GSM Evolution
+UMTS: Universal Mobile Telecommunications System
+WCDMA: Wideband Code Division Multiple Access
+HSDPA: High Speed Downlink Packet Access
+HSUPA: High Speed Uplink Packet Access
+LTE: Long Term Evolution
+Pero para entender el verdadero potencial de la tecnología 3G, en el siguiente cuadro
+vemos los tiempos requeridos para descargar una canción de 3 minutos en formato MP3
+con los distintos estándares. Con GSM (2G), se requeriría 41 minutos para completar
+esta tarea, mientras que con WCDMA (3G), solo son necesarios 12 segundos.
+50 |--------------------------------| Palermo Business Review | Nº 2 | 2008 El negocio 3G en el mercado argentino
+Gráfico N° IV:
+Tecnología Estándar Velocidad Tiempo requerido
+2G GSM 9,6 kbps 41 minutos
+2,5G GPRS 45,0 kbps 9 minutos
+3G WCDMA 2,0 Mbps 12 segundos
+Fuente: elaboración propia
+A continuación analizaremos los estándares 3G que se usan en nuestro país.
+WCDMA (Wideband Code Division Multiple Access):
+Es una tecnología móvil inalámbrica de tercera generación que aumenta las tasas de
+transmisión de datos de los sistemas GSM utilizando la interfaz aérea CDMA y por ello
+ofrece velocidades de datos mucho más altas en dispositivos inalámbricos móviles y
+portátiles que las ofrecidas hasta el momento. También es llamado UMTS (Universal
+Mobile Telecommunications System), y a los fines del presente trabajo, ambas
+denominaciones (WCDMA y UMTS) se usarán de forma intercambiable.
+WCDMA permite introducir muchos más usuarios a la red global del sistema, y además
+permite incrementar la velocidad a 2 Mbps por usuario móvil. Está siendo desarrollado
+por el 3GPP (3rd Generation Partnership Project), un proyecto a nivel internacional que
+se encarga de la investigación y definición de los estándares 3G y en el que colaboran
+agencias de investigación de diversos países, tales como: ETSI (Europa), ARIB/TTC
+(Japón), ANSI T-1 (USA), TTA (Korea) y CWTS (China). Para alcanzar la aceptación
+global, 3GPP va introduciendo UMTS por fases y versiones anuales.
+UMTS ofrece los siguientes beneficios:
+- Facilidad de uso y bajos costos: UMTS proporcionará servicios de uso fácil y
+adaptable para abordar las necesidades y preferencias de los usuarios, amplia gama
+de terminales para realizar fácil acceso a los distintos servicios, bajo costo de los
+servicios para asegurar un mercado masivo.
+- Nuevos y mejorados servicios: los usuarios exigirán a UMTS servicios de voz de
+alta calidad junto con servicios de datos e información. Las proyecciones muestran
+una base de abonados de servicios multimedia en fuerte crecimiento hacia el año
+2010, lo que posibilita también servicios multimedia de alta calidad en áreas carentes
+de estas posibilidades en la red fija, como zonas de difícil acceso.
+- Acceso rápido: La principal ventaja de UMTS sobre la segunda generación móvil
+(2G), es la capacidad de soportar altas velocidades de transmisión de datos de
+hasta 144 kbit/s sobre vehículos a gran velocidad, 384 kbit/s en espacios abiertos
+de extrarradios y 17.2 Mbit/s con baja movilidad (interior de edificios). Esta capacidad
+sumada al soporte inherente del Protocolo de Internet (IP), se combinan
+Palermo Business Review | Nº 2 | 2008 |--------------------------------| 51 Patricia Li
+poderosamente para prestar servicios multimedia interactivos y nuevas aplicaciones
+de banda ancha, tales como servicios de video telefonía y video conferencia.
+Resumiendo UMTS presenta las siguientes ventajas:
+- Compatible con las redes GMS.
+- UMTS utiliza la frecuencia de 2GHz y se podrá transmitir datos a 2Mbps.
+- UMTS integra transmisión de paquetes,  se dispondrá de conexión permanente a la
+red y se  facturará por volumen de datos en lugar de  tiempo.
+- El ancho de banda de las llamadas se asignarán de forma dinámica. 
+- El sistema está diseñado para que el usuario pueda utilizarlo  en todo el mundo,
+empleando redes terrestres o enlaces por satélite. 
+- Este sistema es compatible con GSM 900 y 1800.
+- El roaming es casi instantáneo. El usuario al cambiar de operador, continuará con
+sus servicios originales.
+3.5G - HSDPA (High Speed Downlink Packet Access):
+Es la optimización de la tecnología espectral UMTS/WCDMA, incluida en las
+especificaciones de 3GPP release 5 y consiste en un nuevo canal compartido en el
+enlace de bajada de datos que mejora significativamente la capacidad máxima de
+transferencia de información hasta alcanzar tasas de 14 Mbps. HSDPA provee tres
+veces más capacidad que WCDMA.
+A HSDPA también se la suele llamar 3.5G, y se considera el paso previo antes de la
+cuarta generación (4G), la futura integración de redes.
+Es totalmente compatible en sentido inverso con WCDMA y aplicaciones ricas en
+multimedia desarrolladas para WCDMA funcionarán con HSDPA. La mayoría de los
+proveedores UMTS dan soporte a HSDPA.
+IV. Funcionalidades y servicios de valor agregado 3G
+Los servicios de valor agregado serán cada vez de mayor importancia, ya que
+Argentina se destaca como un país de alto consumo de servicios de valor agregado
+en telefonía móvil. La estrella principal hoy en día son los mensajes de texto o SMS.
+El siguiente gráfico ilustra claramente este consumo en nuestro país, en comparación
+con otros países del mundo:
+52 |--------------------------------| Palermo Business Review | Nº 2 | 2008 El negocio 3G en el mercado argentino
+Gráfico N° V:
+Fuente: Wireless Intelligence / Informa Telecoms & media.
+Se destaca Argentina como uno de los países que más consume el servicio de mensajería
+del mundo. En comparación con Brasil, el 51% de la población allí no usa SMS. De
+hecho, Movistar Argentina informó a comienzos del 2008 que sus clientes envían un
+promedio de 3,5 millones de mensajes de texto internacionales por mes, comunicándose
+así con personas que viven en el exterior de una forma rápida, instantánea y económica.
+Los SVAs (servicios de valor agregado) han crecido significativamente a partir del
+2003. Hoy representan más del 28% de los ingresos totales por servicio.
+Las aplicaciones futuras más importantes son:
+1. Voz
+2. Email
+3. Mapping / LBS (Location Based Services)
+4. Noticias
+5. Clima
+6. Comedia
+7. Juegos
+8. Social networking
+9. Televisión
+a) Canales de TV en vivo
+b) Servicios de broadcast
+10. Transacciones de bolsa
+11. Monitoreo del hogar
+12. Cuidado y Salud - Monitoreo Cardíaco
+13. Identificación Personal - Acceso a Información
+14. Billetera Digital - Comercio Móvil
+15. Centro de Medios - Conectividad con otros dispositivos
+Palermo Business Review | Nº 2 | 2008 |--------------------------------| 53 Patricia Li
+Se espera que el aporte de la imagen de un valor que en muchos casos los usuarios
+estarían dispuestos a pagar.
+Ejemplos de Servicios 3G para el Mercado Residencial
+- Videomulticonferencias para grupos
+- Video IVR (Intelligent Voice Recognition): Autoservicio para usuarios con video
+- Campañas de marketing por medio de videollamadas salientes automáticas
+- Video Blog personal para usuarios
+- Video Dating
+- Video Ringback Tone
+- Video Mailbox
+Ejemplos de Servicios 3G Mercado Empresarial
+- Video Contact Centers
+- Videomulticonferencias empresariales
+- Video Anuncios
+- Video Mailbox: buzón de video integrado con el buzón de voz corporativo
+- Videovigilancia: cámaras accesibles desde el móvil 3G
+- Video anuncios clasificados
+- Video portal: acceso a contenidos pregrabados o en tiempo real de ocio, deportes,
+contenidos corporativos, entre otros.
+- Video mailbox: buzones personales para almacenar mensajes de voz o video
+- Video broadcasting
+V. Desafíos en el modelo de negocios 3G
+V.I Servicios
+La realidad es que para evitar la caída del ARPU (Average Revenue per User) hacen
+falta muchos más eventos por cliente para facturar lo mismo que antes.
+Gráfico N° VI:
+Fuente: elaboración propia
+54 |--------------------------------| Palermo Business Review | Nº 2 | 2008 El negocio 3G en el mercado argentino
+De hecho, se ha multiplicado por 6 la cantidad de eventos a facturar por cliente. En el
+2004 comenzó a utilizarse en forma masiva el SMS. Y del 2004 al 2005 se pasó de
+procesar 2 millones de registros de SMS salientes  diarios a más de 35  millones.
+Todos los nuevos servicios equivalen a un crecimiento exponencial en el tráfico de datos.
+Gráfico N° VII:
+Fuente: elaboración propia
+Esto sin nombrar los juegos en línea, gaming, comunidades sociales online, mobile
+TV, entre otros.
+Los servicios de datos que se están comenzando a ofrecer son todos de mucha demanda
+de tráfico. Algunas razones son:
+- En lugar de bajarse ringtones los usuarios comenzarán a bajar temas completos.
+- La publicación y bajada de videos se prevé que será de mucho uso.
+- Mensajería instantánea, como el SMS masivo, solo que se compartirán además
+fotos y videos.
+-  E-mail: ya todo el mundo usa correo electrónico y los usuarios van a exigir tener
+una tarifa plana para leer todos los mails que quieran.
+Todo esto generará un crecimiento en el volumen de datos muy grande, pero difícil de
+calcular en este momento, ya que también va a depender mucho de cuáles servicios
+terminen eligiendo los usuarios.
+Tras evaluar el escenario que se presenta para 3G, se identifican los siguientes factores
+que son claves para lograr que los usuarios y las economías de la región se beneficien de
+dicha tecnología:
+1. Es necesario educar a los usuarios respecto de los servicios, lo que implica un reto
+educativo para los proveedores del servicio.
+2. Contar con facilidades e incentivos para la implementación de redes y desarrollo de
+servicios. Esto implica mecanismos que incentiven la inversión de capital, correctos
+esquemas impositivos y limitar la burocracia en torno a la instalación de
+infraestructura para redes.
+Por otro lado, los teléfonos móviles, cada vez más sofisticados, pueden dar nuevas
+esperanzas a los operadores para aumentar sus ganancias a partir de la oferta de nuevos
+servicios avanzados de datos mediante la recepción de TV en el celular. Sin embargo, la
+alta complejidad de esta tecnología puede incrementar los costos de mantenimiento y
+soporte de este tipo de servicio.
+Palermo Business Review | Nº 2 | 2008 |--------------------------------| 55 Patricia Li
+Muchos creen que hay una gran posibilidad de negocios al integrar dos de las tecnologías
+preferenciales de los consumidores: el móvil y la TV. Sin embargo, cuanto mayor es la
+capacidad tecnológica que el celular puede ofrecer, mayor será la dificultad de control y
+gestión de estos dispositivos móviles por parte de los operadores. En este sentido, la TV
+por celular se destaca como una paradoja para los operadores móviles, donde la ganancia
+proveniente de nuevos servicios se contrarresta por los costos del mantenimiento de la
+red de servicios.
+La complejidad y los costos que implica la creación de servicios móviles están
+básicamente enfocados en la configuración de los aparatos móviles. Desde los simples
+SMS y servicios de voz hasta los avanzados servicios de multimedia y descarga de
+contenido, los servicios móviles de hoy requieren configuraciones complejas para una
+gestión eficaz de los dispositivos existentes en toda la red del operador, obligado a gestionar
+docenas de millones de dispositivos.
+Para superar la paradoja más reciente de las tecnologías móviles, los operadores están
+interesados en los mecanismos para mejorar la experiencia del usuario, buscando asegurar
+que los dispositivos móviles estén correctamente - y continuamente - configurados.
+En estas primeras experiencias 3G en América Latina, la clave para penetrar el mercado
+estará dada por la facilidad de uso. Habrá que educar a los usuarios en este cambio de
+paradigma desde el modelo tradicional (un teléfono es un aparato que sirve para hacer
+llamados) al modelo 3G (un dispositivo móvil es un aparato que, entre tantas otras
+funcionalidades, también sirve para hacer llamados).
+Por otro lado, otro gran desafío que enfrentarán las empresas es una posible
+incompatibilidad entre oferta y demanda de servicios 3G. El demandante natural de las
+nuevas aplicaciones es el público joven. Sin embargo, los aparatos compatibles con las
+redes de banda ancha arrancan en muchos casos en los $1.500. De esta forma, el precio
+seguramente será una significativa restricción para la masificación del servicio.
+En definitiva, no caben dudas de que la tecnología 3G es el futuro de los dispositivos
+móviles. En los países avanzados, las redes de alta velocidad ya se están convirtiendo en la
+tecnología más común. Sin embargo, el contexto latinoamericano impone desafíos para los
+que no siempre valen las recetas importadas de los mercados maduros. Por ahora, en esta
+fase de aprendizaje, las estrategias parece que se basarán en la famosa regla de prueba y error.
+V.II Terminales
+Una de las posibles barreras para llegar a las franjas de menor poder adquisitivo y a los
+jóvenes (uno de los targets más preciados de los operadores por su alta inclinación al uso
+de las nuevas tecnologías) es el precio de los terminales celulares y de las tarjetas de datos
+para notebooks. De todas maneras, se podría prever que si sigue el crédito de consumo y
+los operadores continúan sus agresivas políticas comerciales bajando significativamente
+los precios, la disponibilidad a pagar por un Terminal 3G no sería problema.
+Asimismo, el crecimiento en la venta de terminales está impulsado principalmente por:
+expansión de productos gama-baja, búsqueda de nuevos usuarios, profunda segmentación,
+upgrade de funcionalidades, llegada del negocio 3G y una nueva ronda de recambio de
+terminales.
+56 |--------------------------------| Palermo Business Review | Nº 2 | 2008 El negocio 3G en el mercado argentino
+Por el momento, los indicios de las tendencias mundiales son muy positivos. De hecho,
+en el siguiente gráfico se muestra cómo en Europa, después de 3 años del lanzamiento de
+la tecnología 3G en el mercado, los ingresos generados por las ventas de terminales 3G ya
+supera el de los terminales GSM.
+Gráfico VIII:
+Asimismo, es de esperarse que el costo de los dispositivos 3G caiga a medida que se
+incremente el volumen de las ventas.
+Gráfico IX:
+Fuente: página web de Telecom Personal
+Palermo Business Review | Nº 2 | 2008 |--------------------------------| 57 Patricia Li
+En el siguiente gráfico se observa la evolución del precio del chipset WCDMA, el
+componente más caro de un terminal 3G:
+Gráfico X:
+V.III Paquetización del servicio
+Otra de las variables claves es la forma en la que se comercializará el servicio. La
+tendencia es hacia el armado de paquetes comerciales de servicios, lo que se denomina
+paquetización o bundling. Bajo esta modalidad ya no cobra por eventos o descargas
+individuales, sino por conjunto de actividades o incluso tarifas planas ilimitadas para uso
+de un determinado servicio, como podría ser navegación por Internet a través de la
+tecnología 3G. El siguiente gráfico muestra esta tendencia en la forma de comercialización
+de distintos servicios de valor agregado en nuestro país, en donde los precios y formas de
+pago deben facilitar el acceso a los contenidos multimedia:
+Gráfico XI:
+58 |--------------------------------| Palermo Business Review | Nº 2 | 2008 El negocio 3G en el mercado argentino
+VI. Modelo de negocio
+El siguiente gráfico muestra el flujo de contenidos e ingresos en este negocio:
+Gráfico XII:
+RS: Revenue Sharing, modalidad de pago en el que se compraten los ingresos entre 2 o
+más grupos
+Fuente: elaboración propia sobre la base de reportes 2007 de Telecom Personal
+El contenido en sí llega a mano de las operadoras generalmente a través de intermediarios
+denominados Agregadores. Las operadoras luego lo comercializan a los usuarios, quienes
+pagan ya sea por descarga hecha o por suscripción diaria/semanal/mensual. El operador
+móvil se encarga del cobro, y luego de la distribución de parte de la ganancia a los
+agregadores y dueños de contenidos (revenue sharing).
+Esta asociación entre las partes es lo más beneficioso para todos. El operador móvil
+consigue de esta forma contenido innovador y actualizado. Por otro lado, el dueño del
+contenido consigue distribuir el mismo a gran cantidad de usuarios de forma rápida y con
+cobro asegurado. Al mismo tiempo, cada cual mantiene foco en su actividad principal, y
+el operador móvil no tiene que preocuparse en cómo crear contenido.
+El siguiente gráfico muestra la cadena de valor del negocio de contenidos:
+Palermo Business Review | Nº 2 | 2008 |--------------------------------| 59 Patricia Li
+Gráfico XIII:
+Fuente: elaboración propia sobre la base de reportes 2007 de Telecom Personal
+I. Creación y provisión del contenido: esta primera etapa se ocupa de la creación y
+gestión de marcas y autores, como así también de la gestión de derechos de autor
+y propiedad intelectual. Intervienen empresas como estudios de cine, productoras
+y señales de TV.
+II. Agregación y Paquetización: se prepara la publicación de contenido para su
+distribución, dándole el branding necesario por el agregador, y el formato óptimo
+para su consumo en un celular.
+III. Entrega y Transporte: se debe tener en cuenta factores como plataformas a
+emplearse, facturación de los servicios y el manejo de los derechos de autor.
+IV. CRM y Marketing: se debe asegurar la calidad del servicio, comunicación y
+promociones.
+V. Uso y consumo: en base a precios, terminales y disponibilidad.
+Por último, es muy importante contar con:
+- Existencia de contenidos de audio/video adaptados para móvil según su tiempo de
+uso y función de uso
+- Variedad y Calidad
+- Display
+- Tamaño de archivos
+- Memoria disponible
+- Compatibilidad de reproductor audio/video
+- DRM (Digital Rights Management)
+60 |--------------------------------| Palermo Business Review | Nº 2 | 2008 El negocio 3G en el mercado argentino
+VI.Predicciones de mercado
+Según un estudio de la consultora Informa Telecoms and Media, Latinoamérica y el
+Caribe contarían con aproximadamente 15,3 millones de suscriptores a 3G UMTS/HSDPA
+hacia fines del 2009.
+En el siguiente gráfico se observan las operadoras que ya han lanzando redes UMTS/
+HSPA en Latinoamérica y el Caribe, incluido Chile, Argentina, Uruguay, Paraguay y Brasil.
+Gráfico XIV:
+En lo que a Argentina se refiere, los usuarios 3G se aproximaron a los 20.000 usuarios
+a fin de 2007, el doble de lo pronosticado. Más allá de 3G en el móvil, se puede esperar
+que la gran batalla de 3G se de en la banda ancha o Internet móvil. Serán los sectores
+ABC1 quienes adquieran las tarjetas para conectar sus notebooks, bien para sustituir la
+banda ancha fija o para complementarla.
+Por último, y a más largo plazo, según proyecciones de Pyramid Research sobre el
+mercado argentino, entre el 2007 y 2010 las conexiones inalámbricas fijas tipo Wi-Fi
+pasarán de 29.000 a 45.000 puntos, así como los enlaces WiMax (estándar 802.16d)
+ascenderán de 13.000 a 41.000 puntos.
+En esos 3 años, además, las tecnologías 3G y 3.5G contabilizarán más de 1,13 millones
+de accesos.
+Palermo Business Review | Nº 2 | 2008 |--------------------------------| 61 Patricia Li
+Cuadro N° III: Proyecciones en enlaces wireless para Argentina
+Tecnología 2007 2010
+Accesos wireless fijos 29,000 45,000
+WiMax (802.16d) 13,000 41,000
+Otras tecnologías 5,000 7,000
+3G/3.5G 20.000 1,130,000
+Fuente: Pyramid Research
+Predicciones de Mercado de 3G para el 2010 a nivel mundial
+La organización 3G Americas, que une a operarios y vendedores inalámbricos de todo
+el continente, publicó una previsión de suscripciones globales a la banda ancha móvil.
+Según dicha entidad, la actual 3G llegará a 2012 con 1670 millones de suscriptores en
+todo el mundo. Según esta fuente, dominará la tecnología UMTS/HSDPA, derivada del
+GSM, con un 78% de los usuarios, o 1300 millones de clientes. En segundo lugar, estará
+Ev-Do (Evolution Data Optimizad), derivada del CDMA, con unos 230 millones de
+abonados. En la actualidad, los usuarios de celulares en todo el mundo - sumando todas
+las tecnologías - superan los 3120 millones. Según Nokia serán 5000 millones para 2015.
+VIII. Conclusiones
+La buena recepción tenida hasta el momento por la tecnología 3G en el país le augura
+un futuro envidiable en el mercado de telefonía móvil en la Argentina, con una población
+ávida de innovar, probar y empujar servicios de valor agregado, además de ser curiosa en
+materia de nuevas tecnologías. Esto lo demuestran además las estadísticas que posicionan
+al país de manera muy favorable en rankings de posesión de celular y uso de banda ancha,
+sobre todo comparado a países vecinos y en vías de desarrollo.
+3G se evidencia como una necesidad además no solo para los consumidores, sino
+también para los operadores, como forma de incrementar su ARPU y generar nuevos
+ingresos. Por suerte, las posibilidades de desarrollo en materia de aplicaciones móviles 3G
+de datos son innumerables.
+El móvil 3G se convertirá con seguridad en un dispositivo "ultra real", "todo uso".
+Comunidades enteras de millones de individuos podrán experimentar y compartir eventos
+justo cuando sucedan  donde estemos, no importa qué estemos haciendo - el móvil 3G
+estará allí presente, alertándonos en el momento en que algo suceda.
+62 |--------------------------------| Palermo Business Review | Nº 2 | 2008 El negocio 3G en el mercado argentino
+Referencias
+Convergencia Telemática, Atlas y Anuario de las Comunicaciones 2007 - Año XII Número
+144 Diciembre 2007
+Business News America, 2007 Year in Review & Outlook for 2008, LatAm Telecom
+Tomi T Ahonen, Timo Kasper & Sara Melko, "3G Marketing: New Strategic Partnerships",
+John Wiley & Sons, 2004
+Takeshi, Natsumo, "i-mode Strategy", John Wiley & Sons Inc. 2003
+Paavilainen, Jouni, "Mobile business strategies", Wireless Press & Addison-Wesley in
+partnership with IT Press 2001
+Website de Convergencia Research, http://www.convergencia.com.ar
+Website de Convergencia Latina, http://www.convergencialatina.com
+Website de 3G Americas, http://www.3gamericas.org
+Website de UMTS Forum, http://www.umtsforum.net
+Palermo Business Review | Nº 2 | 2008 |--------------------------------| 63 Patricia Li
+ANEXO I
+Estatus global redes 3G UMTS y HSDPA
+Al 6 de diciembre del 2007, según Informa Telecoms & Media:
+Cantidad de operadores con HSDPA en servicio: 167
+Cantidad de países con servicio HSDPA: 72
+Cantidad de redes planificadas o en deployment: 61
+Suscriptores Globales W-CDMA (incluyendo HSPA): 168.818.950
+Suscriptores Globales HSPA: 9.184.407
+Cantidad de redes WCDMA en servicio: 182  
+* HSPA: se refiere a la suma de las tecnologías HSDPA (High-speed Downlink Packet
+Access) y HSUPA (High-speed Uplink Packet Access).
+Las siguientes tablas se refieren al año 2007.
+Porcentaje de conexiones WCDMA / HSPA por región
+Región %  WCDMA %  HSPA
+Asia Pacífico 44% 58%
+Europa Occidental 48% 25%
+USA/Canada 3% 7%
+Medio Oriente 1% 5%
+Europa del Este 3% 2%
+África 1% 2%
+Top Ten Países Rankeados por penetración WCDMA
+Región %  WCDMA %  HSPA
+Japón 51% 1%
+Brunei Darussalam 32% 0%
+Singapore 31% 0%
+Luxemburgo 29% 0%
+Irlanda 28% 1%
+Hong Kong 28% 0%
+Italia 25% 1%
+Portugal 25% 1%
+Australia 18% 5%
+Taiwan 21% 0%
+64 |--------------------------------| Palermo Business Review | Nº 2 | 2008 El negocio 3G en el mercado argentino
+Top Ten Operadores Rankeados por conexiones de WCDMA
+Operadora Región Conexiones
+NTT DoCoMo Japón 41,279,431
+Softbank Mobile Japón 10,339,240
+3 Italia Italia 7,663,408
+Vodafone Italia Italia 6,516,907
+TIM Italia Italia 6,455,904
+Vodafone Alemania Alemania 5,180,468
+Vodafone España España 4,324,913
+SFR Francia 4,020,745
+AT&T USA 3,908,308
+3 UK United Kingdom 3,739,453
+Top Ten Operadores Rankeados por número de conexiones nuevas
+de WCDMA
+Operadora Región Conexiones
+NTT DoCoMo Japón 2,881,528
+Vodafone Italia Italia 1,193,604
+Softbank Mobile Japón 1,116,120
+AT&T USA 1,106,697
+Vodafone Alemania Alemania 981,599
+TIM Italia Italia 960,781
+Telefonica Móviles España 943,592
+Vodafone España España 747,223
+Orange Francia Francia 724,415
+Vodafone UK Reino Unido 619,986
+Palermo Business Review | Nº 2 | 2008 |--------------------------------| 65 Patricia Li
+Top Ten Operadores Rankeados por % de crec. trimestral en WCDMA
+Operadora Región %
+PT Natrindo Indonesia 1,493%
+Hutchison 3 Indonesia Indonesia 178%
+Go Mobile Malta 155%
+eMobile Japón 150%
+MobiNil Egipto 127%
+Tele2 Lithuania Lituania 127%
+Vodafone Egipto Egipto 119%
+Telkomsel Indonesia 115%
+Bouygues Francia Francia 114%
+Vodafone Fiji Fiji 79%
+Crecimiento Trimestral Regional WCDMA / HSPA
+Región % WCDMA % HSPA
+USA/Canada 41% 44%
+Europa del Este 28% 35%
+África 25% 28%
+Medio Oriente 21% 25%
+Europa Occidental 19% 50%
+Asia Pacífico 11% 71%
+Crecimiento Regional 2006-2007 WCDMA / HSPA
+Región % WCDMA % HSPA
+USA/Canada 487% 504%
+Europa del Este 260% 714%
+África 194% 599%
+Medio Oriente 133% 4,263%
+Europa Occidental 92% 664%
+Asia Pacífico 66% 3,072%
+66 |--------------------------------| Palermo Business Review | Nº 2 | 2008

@@ -1,0 +1,52 @@
+Kundenmeinung :
+
+Die Kommunikationstechnik - Fibel ist sehr informativ und verständlich . Genau das habe ich schon seit langem gesucht . Endlich mal ein Buch , das kurz und bündig die moderne Informationstechnik beleuchtet .
+Kommunikationstechnik - Fibel
+
+jetzt bestellen !
+Das Buch zu dieser Webseite
+Netzwerktechnik - Fibel
+Kundenmeinung :
+
+Die Netzwerktechnik - Fibel ist sehr informativ und verständlich . Genau das habe ich schon seit langem gesucht .
+Netzwerktechnik - Fibel
+
+jetzt bestellen !
+Elektronik - Kompendium . de > Kommunikationstechnik
+GPRS - General Packet Radio Service
+GPRS ist eine Mobilfunktechnik , um im GSM - Netz eine schnellere Datenübertragung zu ermöglichen . GPRS gehört zu den verbindungslosen , paketorientierten Übertragungstechniken . Im Gegensatz zu verbindungsorientierten Übertragungstechniken hat GPRS den Vorteil , dass die gesamte Bandbreite in einer Mobilfunkzelle von allen Teilnehmern darin genutzt werden kann . Was aber auch wieder ein Nachteil ist , weil sich die Teilnehmer innerhalb einer Funkzelle die Bandbreite für die reservierten GPRS - Datenkanäle teilen müssen . Die zur Verfügung stehende Bandbreite wird von den Teilnehmern nur dann genutzt , wenn Daten verschickt oder anfordert werden . Den fairen Zugriff auf die gesamte Bandbreite gewährleistet ein Protokoll .
+
+Theoretisch hat jede mobile Station ( Handy ) die Möglichkeit , soviel Bandbreite zu nutzen wie es für die aktuelle Übertragung braucht . Begrenzt wird das nur vom Netzbetreiber und dem Endgerät .
+Mit GPRS hat der Netzbetreiber die Möglichkeit die Funkkapazität besser auszuschöpfen und den Zugriff auf Datennetze dank IP - Technik zu vereinfachen , ohne den Kunden umständlich mit Modems ins Festnetz wählen zu lassen . Für den Anwender reduzieren sich die Kosten für den Zugriff auf die Datennetze . Er bekommt eine höhere Transferrate zur Verfügung gestellt und die Zugriffszeiten auf die Datendienste verkürzen sich . Im Mobilfunknetz ist der Netzbetreiber gleichzeitig der Internet - Provider . So ist für Sprach - und Datendienste nur ein Dienstleister der Ansprechpartner und die Abrechnung erfolgt über eine einzige Rechnung . GPRS beinhaltet Roaming - Funktionen , womit sich auch im Ausland GPRS nutzen lässt .
+Übertragungstechnik
+GPRS nutzt die Kanäle , die auch bei GSM für die leitungsorientierten Sprachverbindungen genutzt werden . Durch spezielle Kanalkodierungen ( Channelcoder ) ergeben sich Brutto - Datenraten von 9 . 050 , 13 . 400 , 15 . 600 und 21 . 400 Bit / s . Aufgrund eines Protokolls zwischen Mobilfunktelefon ( MS , Mobile Station ) und BTS / BSC ( BSS ) auf der Sicherungsschicht ( RLC , Radio Link Control ) reduziert sich die Datenrate . Theoretisch wären 171 , 2 kBit / s durch die Bündelung von 8 Kanälen möglich . So bleiben maximal 115 , 2 kBit / s für die Nutzdaten übrig . Da sich alle Teilnehmer einer Funkzelle die Bandbreite teilen , bleiben ca . 40 kBit / s übrig . Berücksichtigt man das vorhandene Mobilfunkgeräte , ergibt sich eine Übertragungsgeschwindigkeit , die an analoge Modems herankommt ( 33 , 6 bis 50 kBit / s ) . Außerdem hängt die Übertragungsgeschwindigkeit stark von der Qualität der Funkverbindung und der Anzahl der aktiven Nutzer ab . Je mehr Nutzer gleichzeitig Daten übertragen , desto weniger Bandbreite bleibt für den einzelnen Nutzer übrig .
+GPRS - Netzarchitektur
+Die Netzarchitektur von GSM basiert auf einer dezentral organisierten leitungsvermittelten Architektur . Paketvermittelte Dienste waren in den Mobilfunknetzen ursprünglich nicht vorgesehen und erforderten mit der Einführung von GPRS neue Netzelemente . Um die Einführungskosten gering zu halten und das vorhandene System nicht vollständig ersetzen zu müssen , wurden mit GPRS neue Netzelemente eingeführt . Parallel zum GSM - Netz wurde eine separate Struktur aufgebaut . Damit GSM und GPRS zusammenarbeiten konnten wurden bestehende GSM - Netzkomponenten um Zusatzfunktionen erweitert .
+Wie in der GSM - Netzarchitektur gibt es auch bei GPRS die Mobile Station ( MS ) . Sie ist das Mobilfunktelefon ( Handy ) . GPRS - Handys sind in drei Klassen eingeteilt . Geräte der Klasse A ermöglichen nicht den gleichzeitigen Betrieb von GSM - Telefonie und GPRS - Datendienst . Bei diesen Geräten muss man beim Einschalten bereits den gewünschten Dienst auswählen . Geräte der Klasse B ermöglichen das gleichzeitige Einbuchen von GSM und GPRS , aber nicht die gleichzeitige Nutzung beider Dienste . Geräte der Klasse C bieten beides . Gleichzeitiges Einbuchen und gleichzeitige Nutzung von Telefonie und Datenübertragung .
+
+Die Daten werden von der Mobile Station ( MS ) an die nächstgelegene Basisstation ( BTS ) übertragen . Die Basisstation und der Base Station Controller ( BSC ) sind für GPRS mit den neuen Channel - Kodierungen und der Signalisierung ausgerüstet . Außerdem ist der Controller für die GPRS - Kanalvergabe an die Endgeräte verantwortlich . In der BSC ist eine Packet Control Unit ( PCU ) eingebaut . Die PCU ist die Schnittstelle im BSC zum SGSN . Sie verarbeitet und überwacht die Datenpakete . Im Fehlerfall wird ein Paket nochmals angefordert .
+
+Von der PCU werden die Daten an den Serving GPRS Support Node ( SGSN ) geschickt . Der SGSN ist die Schaltzentrale für das Senden und Empfangen der Daten für die mobilen Endgeräte . Die Nutzdaten werden auf dem direkten Weg zwischen Base Station Controller und SGSN übertragen . Die zur Signalisierung notwendigen Daten werden ebenfalls zwischen PCU und SGSN ausgetauscht . Das Protokoll dafür ist BSSGP .
+
+Das SGSN ist über das GPRS Tunnel Protocol ( GTP ) mit dem Gateway GPRS Support Node ( GGSN ) verbunden . Das GGSN ist die Schnittstelle zu den Datennetzen wie dem Internet oder X . 25 ( Datex - P ) mit Adressierung und Protokollumsetzung . Für das Internet ist das GGSN der Router zu allen mobilen Teilnehmern . Über die HLR kann der GGSN den Standort eines mobilen Teilnehmers herausfinden und die Daten an das zuständige SGSN weiterleiten . Das SGSN hat auch eine Verbindung zum Short Message Gateway MSC ( SM - GMSC ) , um über GPRS übertragene SMS und MMS weiterzuleiten .
+
+Die Border Gateways ( BG ) sind die Übergänge zwischen zwei GPRS - Netzen von unterschiedlichen Betreibern . Im GPRS - Standard sind die Details der Funktionalität dieser Komponenten nicht definiert .
+Leistungsdaten von GPRS :
+theoretisch bis 171 , 2 kBit / s pro Nutzer möglich
+vorhandene Geräte bis max . 40 , 2 kBit / s im Downlink und 13 , 4 kBit / s im Uplink ( Werte aus der Praxis )
+gleichzeitige Übertragung von Sprache und Daten
+Anwender zahlt für die genutzte Bandbreite bzw . übertragene Datenmenge statt für die Verbindungszeit
+andauernde Verbindung zum GPRS - Netz möglich
+Verbindungsaufnahme für Datenübertragung entfällt
+Kanalbündelung von theoretisch max . 8 Kanälen
+paketvermitteltes Übertragungsverfahren
+Verfügbarkeit seit April 2001 in allen deutschen GSM - Mobilfunknetzen
+GSM - Technik
+GSM - Global System for Mobile Communications
+DCS - Digital Cellular System
+GSM - Netzarchitektur
+GSM - Übertragungstechnik
+Weitere verwandte Themen :
+Datenübertragung im Mobilfunknetz
+HSCSD - High Speed Circuit Switched Data
+UMTS - Universal Mobile Telecommunications System

@@ -1,0 +1,302 @@
+Microsoft Word - PID 289 - Grace Muwanga High Cost Of internet Connectivity In Africa: How Do We Achieve Mobile 
+Telephony Success Story? 
+ 
+G. M. Muwanga, Mbarara University 
+Email: muwangam@yahoo.co.uk 
+ 
+INTRODUCTION 
+ 
+The basic requirement for meaningful use of any web-based tools is to be able to have hassle-
+free access to the internet. Information and Communications Technologies (ICTs) can only serve 
+as effective tools of broad-based development and opportunity for all if all people in developing 
+countries can afford access to them (Khalil, 2003). However, underdeveloped or even complete 
+absence of telecommunications infrastructure is hampering use of ICTs in rural remote areas 
+(Mandioma et al., 2007; Adomi, 2005; CIPESA, 2005). Broadening the reach and affordability of 
+these technologies and services to rural Africa remains a complex and difficult challenge. This is 
+because terrestrial telecommunications infrastructure requires substantial investments that are 
+often unaffordable for the public sector and don't make economic sense to the private sector 
+(Songan, et al., 2004; Chatelain and Van Wyk, 2007; Fibre for Africa, 2007b; Hasson, 2008). Yet 
+affordable and reliable internet accessibility in poor rural areas will extend the attendant beneficial 
+impacts of ICTs. However, all this will depend on a number of key factors. These include (i) Low-
+cost, reliable communications infrastructure being built in rural areas. This goes hand in hand with 
+increased awareness of the value-added services brought about by internet connectivity, which 
+will in turn create the requisite demand and justify the massive financial and technological 
+investment. (ii) A supportive and effective legal and regulatory environment being created and 
+maintained, to ensure competitive markets for communication services (iii) Governments 
+providing incentives to private sector investment that lead to the expansion of affordable internet 
+accessibility to rural areas through a range of pro-active policy, regulatory and investment 
+measures, including public-private sector partnerships, where appropriate. The ultimate measure 
+of the value and impact of ICTs in development are the desired outcomes that have a bearing on 
+the Millennium Development Goals, i.e., reduction in poverty levels, thriving African economies, 
+reduced disease, increased literacy, etc.  
+ 
+COST OF INTERNATIONAL BANDWIDTH 
+ 
+Hesselmark (2003) compared cost of surfing the internet in different African countries and 
+observed that there was some inter-country variation. Some anecdotal reports maintain that 
+internet accessibility for an individual in Africa costs about 300 times compared to that in most 
+European countries. Mode of accessing internet largely determines cost of bandwidth. According 
+to AfrISPA (2007), the cheapest dedicated one megabyte of bandwidth in Kenya went for 
+US$4,000 (KSh280,000), compared to South Africa where one megabyte costs US$300 (KShs 
+21,000). This disparity came about because Kenya accesses bandwidth via satellite links, while 
+South Africa uses fibre optic cables, indicating that bandwidth via satellite is far more expensive 
+than wired bandwidth. Another example comes from Ghana. By 2004, a monthly half circuit 2Mg 
+(E1) bandwidth cost between US$4,000 and US$6,000 over satellite while the same bandwidth 
+cost US$12,000 over the SAT3 undersea cable which lands in Accra (Oskiakwan, 2007). This is 
+even ironic since, as noted above, bandwidth accessed via fibre optic cable should be far 
+cheaper than that accessed via satellite.  
+ 
+The situation in Uganda is such that due to high cost of bandwidth, some institutions can only 
+afford very low bandwidth. For example, Mbarara University pays US$2190 per month for a 
+bandwidth of 384 kbps. This translates into very slow and frustrating internet connectivity, and to 
+prevent slowing the system even further, many computers on university campus are not 
+connected to the internet.  This seems to be a problem that is common to many African countries 
+(Jensen, 2004; Adomi 2005; The Economist, 2007; Fibre for Africa, 2007a). Osiakwan (2007) suggested the existence of a cartel among various satellite operators since, despite liberalisation 
+and competition in some African countries, internet connectivity is still expensive. Yet in other 
+regions of the world where cut-throat competition is taking place, there has been an explosive 
+penetration of mobile telephony and broadband services, thus driving prices down (Frost and 
+Sullivan Report, 2008). According to CIPESA (2005), issues related to Internet Governance are 
+not the main hindrance to usage of internet in Africa, but rather due to (i) the technology currently 
+deployed being expensive (ii) cumbersome and expensive licensing procedures (iii) Internet 
+Service Providers (ISPs) profiteering from high charges for their services. Hesselmark (2003) 
+shares the same view. In addition, internet costs and accessibility may be dependent in part on 
+whether a country is landlocked or has direct access to an international fibre connection 
+(undersea cable landing site). The so-called 'monopoly' country (i.e., one with direct access to an 
+international fibre connection) sets the price, and other countries have to accept this price or use 
+an alternative, which is usually satellite (Fibre for Africa, 2007d, 2007e). As noted above, this is 
+still an expensive alternative. 
+ 
+INTERNET VIA SATELLITE 
+ 
+Because the 2G (second generation mobile phones) which depend on GSM (Global Service for 
+Mobile) technology could not support Internet very well, other technologies such as Wi-Fi 
+(Wireless fidelity), and Wi-Max (Worldwide Interoperability for Microwave Access) have come up 
+as strong viable alternatives to mobile telephony for accessing and distributing internet on the 
+African continent (Odufuwa, 2003). Combined with VSAT (Very Small Aperture Terminal - a 
+small satellite earth station), these technologies have  been used to provide internet connectivity 
+to great effect (Hegener, 2002; B-SPAN, 2004; CIPESA, 2005; Mandioma et al., 2007; Aghion, 
+2008; Hasson, 2008). Satellites will continue to beat all terrestrial infrastructure, anywhere on 
+earth, when it comes to broadcasting Internet files (Hegener, 2002), and they are extremely 
+effective in reaching places where volume of traffic would not justify a fibre connection (Fibre for 
+Africa, 2007c). Prices for end user hardware are coming down very rapidly, and more user 
+friendly ways of billing are reducing prices even further (Hegener, 2003; Jensen, 2004). 
+According to Jensen (2006), one way to boost access and usage of internet in Africa is opening 
+up markets to allow low-cost wireless and VSAT connections.  
+ 
+Broadband via satellite still remains more expensive compared to 'wired' broadband (through 
+fibre optic cable). In addition, accessing internet via satellite still requires deployment of certain 
+infrastructure, such as satellite dishes, by the end user. Satellite dishes are sold mainly by 
+International Telecom companies, implying that there is some capital flight from the continent 
+through this process. Moreover, the satellite dish is the single, most expensive item. This, 
+coupled with usually cumbersome licensing procedures, makes satellite connectivity a not very 
+attractive option for individual internet access in developing countries. Therefore, I argue that 
+mobile telephony devices remain the best option for distributing internet in Africa. 
+ 
+MOBILE TECHNOLOGIES AND THE INTERNET 
+ 
+The main underlying factor that led to explosive mobile telephony availability was the failure of 
+African government-owned telecommunication companies to provide cheap and efficient 
+telephone services, thus failing to satisfy the huge demand for communications' utilities on the 
+continent. The process by which Africa embraced the mobile phone was accelerated when 
+conditions for fair competition were created while at the same time technology allowed for 
+connection of thousands of people at lower costs (CIPESA, 2005). Probably these are some of 
+the factors have made mobile telephony in Africa relatively more successful. The phenomenal 
+mobile telephony take-up in Africa has surprised even the mobile phone service providers (Kinoti, 
+2006).  Thus Africa has got the highest growth rate of mobile phone connections in the world, and 
+the mobile phone has become the centre of the continent's connectivity successes (Butler, 2005; 
+CIPESA, 2005;). Gerster and Zimmermann (2003) concur, and go on to suggest that a 
+combination of mobile telephones and internet would seem to be an 'appropriate technology' for 
+Africa, given the high penetration of mobile phones and low internet penetration. Moreover, (Odufuwa, 2003) predicted that poor usability of mobile phones as internet access devices would 
+be sorted out once internet merged with, and converged into, mobile devices that supported both 
+cellular and WiMAX/Wi-Fi standards.  
+ 
+Mobile technologies tend to have an advantage over other technologies in that they overcome 
+most physical infrastructural barriers, this being a crucial factor in rural and remote settings where 
+the majority of Africans live. Further more, in developing countries, mobile, nomadic and 
+handheld technologies have the capacity to gather, store, deliver and enhance information in 
+ways that are quite unique compared to the situation in developed countries (Traxler, 2006). So, 
+is it possible to use existing mobile telephony infrastructure for distributing internet in Africa? I 
+would say yes. Mobile phones have provided an example of leapfrogging technology, whereby 
+emerging technologies have brought internet to the cell phone, thus obviating the need to own a 
+Personal Computer (PC) for connecting to the World Wide Web (WWW) (Butler, 2005). Perhaps 
+the inherent limitation of the 2G (second generation) mobile phones using GSM technology to 
+support broadband internet has been a great hindrance in this regard. But the situation is rapidly 
+changing with the evolution of 3G (third generation) mobile phones. 3G networks are 'wide area 
+cellular telephone networks' which, due to growing demands in network capacity, were designed 
+to incorporate high-speed internet access, among other things. They are able to support wide-
+area wireless voice telephony and broadband wireless data transfer, all in a mobile environment. 
+Already 4G (fourth generation) technologies, which are likely to incorporate global positioning 
+services (GPS), are being developed. The all-wireless broadband era is quickly approaching, and 
+4G will eliminate the gap between mobile and fixed broadband (Nortel, 2007).  
+ 
+SOME INFRASTRUCTURAL, POLICY AND REGULATORY ISSUES HINDERING CHEAP 
+INTERNET ACCESS  
+ 
+Regarding infrastructure, routing of local African traffic through international connections 
+significantly contributes to high cost of internet connectivity. It is estimated that this phenomenon 
+costs Africa about $400 million annually, this cost being largely passed on to the individual 
+consumer of internet services (Zuckerman and Osiakwan, 2006). This also represents a major 
+capital flight from the continent. Some governments, fearful of losing their control over the 
+national telephone network, are still reluctant to completely free their telecommunication services. 
+Hence, in some countries, state-owned inefficient telecom companies still maintain monopolies or 
+duopolies, thus stifling competition. In absence of fair competition, cost of services and tariffs are 
+arbitrarily high, leading to profiteering by these companies in exchange of mediocre services. In 
+certain instances, rules and regulations for licensing new ICT ventures are frustratingly slow and 
+laborious, leave alone having to work with outdated legislation. Due to corrupt tendencies, some 
+regulatory agencies may exhibit poor work ethic, leading to foot-dragging and incompetence. In 
+the developing world, some political leadership may prefer to preside over an ignorant population, 
+and hence would rather maintain the status-quo. Indeed some African governments regulate 
+access to the internet. On the other hand, some politicians, who are not ICT savvy and yet are 
+the decision-makers, may never appreciate the apparent connection between ICTs and national 
+development.   
+ 
+The proper approach to optimally harnessing ICTs for development and poverty reduction is to 
+deploy pro-active, competition-centered, market-friendly regulatory frameworks that support and 
+sustain both ICT investment and penetration (InfoDev, 2007). The current trend is for the public 
+sector, the private sector and civil society to enter partnership in development of ICT policies 
+(Adam et al., 2007, p.4). 
+ 
+CONCLUSION 
+ 
+In the above account, I have mentioned some alternatives for accessing and distributing internet 
+reasonably cheaply. These alternatives, i.e., combination of satellite and wireless internet 
+solutions, have been advocated for by various authors and, theoretically, they seem to offer a 
+quick fix to the teething problems associated with internet access in Africa. However, in my view, they can't offer a near-complete solution as long as they require certain infrastructure, such as a 
+satellite dish, and availability of a PC (or other form of computer) in order to hit the WWW. In 
+Africa, as indeed may be the case in other parts of the developing world, a sizable section of the 
+population owning a computer at individual level will take a few more decades to happen. In any 
+case, owning a laptop or a PC in order to access internet would not be necessary if appropriate 
+hand-held devices were made available cheaply. One reason why mobile telephony has had a 
+phenomenal penetration is fact that the phones have become cheaper and cheaper, to the extent 
+that many Africans, given their level of income, are able to purchase one. Obviously there is a 
+limit to how low prices can go, but there is no doubt low prices have contributed tremendously to 
+the almost ubiquitous mobile phones on the African continent. Satellite and wireless technologies, 
+where necessary, should only come in to provide the 'last mile' access to internet, but the final 
+end-user accessibility should be provided by a mobile handset. 
+ 
+In conclusion, I argue that if internet accessibility is to match availability of mobile telephony in 
+Africa, then the ultimate means of accessing internet should be convenient, appropriate and 
+reasonably cheap in the African context. In my view, the mobile computing devices are well 
+placed to satisfy these conditions. The convergence of mobile telephony with internet on one and 
+the same computing device is a welcome development. All that is required now is to put in place 
+policy and regulatory measures that will result in affordable internet accessibility from Internet 
+Service Providers (ISPs), and the technology that would lead to production of cheap mobile hand-
+held computing gadgets. Literature has got examples of cheap, robust computers designed 
+specifically for African conditions, such as the 'One Laptop Per Child' project. I suggest that 
+similar cheap, robust mobile hand-held devices be developed to deliver both internet and mobile 
+telephony to the African populace.     
+ 
+REFERENCES 
+ 
+1. Adam, L, James, T & Wanjira, A. M. (2007). Frequently Asked Questions about Multi-
+Stakeholder Partnerships in ICTs for Development. A guide for national ICT policy animators. 
+Published by the Association for Progressive Communications (APC) © 2007. 
+ 
+2. Adomi, E. E. (2005). Internet development and connectivity in Nigeria. Program: electronic 
+library and information systems, 39(3): 257-268.  Accessed 23 February, 2008 from: 
+http://www.emeraldinsight.com/Insight/ViewContentServlet;jsessionid=84F985AE64722A0F3AAB
+1A63CAC59823?Filename=Published/EmeraldFullTextArticle/Articles/2800390306.html. 
+ 
+3. AfrISPA (2007). Call centres set to benefit from cheaper bandwidth in Kenya. AfrISPA, 2007. 
+Accessed 15 March, 2008 from: http://www.afrispa.org/NewsDetail.asp?ItemID=43.  
+ 
+4. Aghion, D. (2008). Working without wires. ICT update, Issue 41.  Accessed 08 March, 2008 
+from: http://ictupdate.cta.int/en/regulars/q_a/working_without_wires  
+ 
+5. Butler, R. (2005). Cell phones may help "save" Africa. mongabay.com, 2005. Accessed 20 
+March, 2008 from: http://news.mongabay.com/2005/0712-rhett_butler.html  
+ 
+6. B-SPAN Video (2004). Wireless for Development: New Connectivity Solutions for Digital 
+Inclusion. Accessed 15 February, 2008 from: 
+http://info.worldbank.org/etools/bSPAN/presentationView.asp?EID=621&PID=1221  
+ 
+7. CIPESA (2005). ICANN, Internet governance and Africa. CIPESA ICT policy briefing series. 
+Accessed 19 February from: 
+http://www.wougnet.org/WSIS/docs/ICANN_Final_Brief4dissemination.pdf 
+ 
+8. Chatelain, D. & Van Wyk, B.J. (2007). WLAN over GSM for IP access in African rural areas. 
+Electronics Letters, March 2007 Vol. 43 No. 5, 61-62. 9. Fibre for Africa (2007a). Why affordable international bandwidth matters. Fibre for Africa - 
+opening up affordable bandwidth in Africa.  Accessed 04 March, 2008 from: 
+http://fibreforafrica.net/main.shtml?x=4051584&als[MYALIAS6]=Why%20affordable%20internatio
+nal%20bandwidth%20matters&als[select]=4051582.  
+ 
+10. Fibre for Africa (2007b). Financing infrastructure. Fibre for Africa - opening up affordable 
+bandwidth in Africa. Accessed 04 March, 2008 from: 
+http://fibreforafrica.net/main.shtml?x=4051585&als[MYALIAS6]=Financing%20infrastructure&als[
+select]=4051582.  
+11. Fibre for Africa (2007c). Satellite vs fibre: different costs for different things. Fibre for Africa - 
+opening up affordable bandwidth in Africa. Accessed 04 March, 2008 from: 
+http://fibreforafrica.net/main.shtml?x=4051583&als[MYALIAS6]=Satellite%20vs%20fibre:%20diffe
+rent%20costs%20for%20different%20things&als[select]=4051582.. 
+12. Fibre for Africa (2007d). What happens to landlocked countries? Fibre for Africa - opening up 
+affordable bandwidth in Africa. Accessed 04 March, 2008 from: 
+http://fibreforafrica.net/main.shtml?x=4075283&als[MYALIAS6]=What%20happens%20to%20lan
+dlocked%20countries?&als[select]=4051582.  
+13. Fibre for Africa (2007e). What about countries without a landing station? Fibre for Africa - 
+opening up affordable bandwidth in Africa. Available from: 
+http://fibreforafrica.net/main.shtml?x=4080619&als[MYALIAS6]=What%20about%20countries%2
+0without%20a%20landing%20station?&als[select]=4051582. Accessed 04 March, 2008. 
+14. Frost and Sullivan Report (2008). Mobile Telephony and Broadband Services Drive Market 
+Growth for the Colombian Telecommunication. Reuters, 14 January, 2008. Accessed 02 March, 
+2008 from: http://www.reuters.com/article/pressRelease/idUS147001+14-Jan-
+2008+BW20080114.  
+ 
+15. Gerster, R. and Zimmermann, S. (2003). Information and Communication Technologies 
+(ICTs) and Poverty Reduction in Sub Saharan Africa - A Learning Study (Synthesis). Accessed 
+13 March, 2008 from: http://www.gersterconsulting.ch/docs/Synthesis_report.pdf 
+ 
+16. Hasson, A. A. (2008). The access road. ICT Update, Issue 41. Accessed 08 March, 2008 
+from: http://ictupdate.cta.int/en/feature_articles/the_access_road.  
+ 
+17. Hegener, M. (2002). Internet via satellite in Africa - an overview of the op3tions available. 
+Advisory Note No. 6, January 2002. 'Read-Only' Microsoft Word document 
+ 
+18. Hegener, M. (2003). Can satellite technology bridge the digital divide? ICT 3Update, No 10, 
+2003.  Accessed 16 February, 2008 from: 
+http://ictupdate.cta.int/en/feature_articles/can_satellite_technology_bridge_the_digital_divide. 
+ 
+19. Hesselmark, O. (2003). Internet prices in Africa. A comparative study.  
+© Olof Hesselmark, Stockholm. 03-11-03. Accessed 24 February, 2008 from: 
+http://topics.developmentgateway.org/ict/rc/filedownload.do~itemId=358672.  
+ 
+20. InfoDev. (2007). Extending Information and Communications Technologies benefits to all. 
+Information for Development Program (2007). 
+ 
+21. Jensen, M. (2004). Q & A. Participating in the telecom policy dialogue. 
+ICT Update, No. 18, 2004. Accessed 23 February, 20008 from: 
+http://ictupdate.cta.int/en/regulars/q_a/q_a_participating_in_the_telecom_policy_dialogue. 22. Jensen, M. (2006). Africa speaks about ICT policy. OneWorld Africa, 
+2006. Accessed 01 March, 2008 from: http://africa.oneworld.net/article/view/137765/1/.  
+ 
+24. Khalil, M. (2003). In: The wireless Internet opportunity for developing countries. World Times, 
+Inc, 2003. (Ed. The Wireless Internet Institute).  Accessed 27 February, 2008 from:  
+http://www.infodev.org/files/1061_file_The_Wireless_Internet_Opportunity.pdf 
+25. Kinoti, K. (2006). Mobile telephony's promise of bridging the digital divide. Association for 
+Women's Rights for Development (AWID), 2006.  Accessed 13 February, 2008 from: 
+http://www.awid.org/go.php?stid=1620.  
+26. Mandioma, M.T., Krishna, G.S.V., Terzoli, A. & Muyingi, H. (2007). Deployment of WiMax for 
+telecommunications and internet access in Dwesa-Cwebe rural areas. Feb. 12-14, 2007 
+ICACT2007. Accessed 17 February, 2008 from: 
+http://www.ptithcm.edu.vn/ICACT%202007/pdf/tech/11C-03.pdf 
+ 
+27. Nortel (2007). Boost multimedia adoption with 4G mobile broadband. Position Paper. Nortel 
+Business Made Simple, 2007. Accessed 24 March, 2008 from: 
+http://www.nortel.com/solutions/4g/nn121221.pdf.  
+28. Odufuwa, F. (2003). Improving access via mobile telephony. Global Learning Group: 
+Education Development Center, Inc. (2003). Accessed 13 March, 2008 from: 
+http://www.edc.org/GLG/gkd/2003/Nov/0379.html.  
+29. Osiakwan, E. M. K. (2007). Is Africa in a digital quagmire? Accessed 26 March, 2008 from: 
+http://www.satsig.net/gispa-afrispa.htm.  
+ 
+30. Songan, P., Ab Hamid, K., Yeo, A., Gnaniah, J. & Zen, H. (2004). Community Informatics: 
+Challenges in Bridging the Digital Divide, Work with Computer Systems 2004. Accessed 13 
+February, 2008 from: http://www.unimas.my/ebario/eBarioOrig/output/056.pdf 
+ 
+31. Traxler, J. (2007). Educational information management systems. An example for developing 
+countries. In: Educational information management systems, p. 325 - 334. SpringerLink, 2007.  
+ 
+32. The Economist (2007). Africa and the internet. The digital gap. Accessed 12 February, 2008 
+from: http://www.economist.com/world/africa/displaystory.cfm?story_id=9990626 
+ 
+33. Zuckerman, E. & Oskiakwan, E. (2006). African internet infrastructure - opportunities and 
+challenges of reducing bandwidth cost on SAT3 and EASSy.  Accessed 12 March, 2008 from: 
+http://ethanzuckerman.com/ericatberkman.pdf.

@@ -1,0 +1,145 @@
+Microsoft Word - 31-01-17 Bidirectional Artificial Neural Networks for      
+Mobile-Phone Fraud Detection 
+ Andrej Krenker, Mojca Volk, Urban Sedlar, Janez Bešter, and Andrej Kos  
+ABSTRACT⎯We propose a system for mobile-phone fraud individual users. The acquired information allows us to predict 
+detection based on a bidirectional artificial neural network (bi- user behavior and compare it in real time with the monitored 
+ANN). The key advantage of such a system is the ability to real-life behavior. Previous works on predicting time series 
+detect fraud not only by offline processing of call detail records with a bi-ANN can be found in [7]-[9]. Although time series 
+(CDR), but also in real time. The core of the system is a bi-
+ANN that predicts the behavior of individual mobile-phone can be predicted with several other methods [10], we 
+users. We determined that the bi-ANN is capable of predicting concluded that, in the observed cases, prediction with a     
+complex time series (Call_Duration parameter) that are stored bi-ANN delivers better results. 
+in the CDR. 
+Keywords⎯Bidirectional artificial neural networks (bi- II. Detection Model 
+ANN), fraud detection, mobile telecommunications. 
+Most existing solutions [4]-[6] for detecting ICT fraud give 
+I. Introduction satisfactory results, but are limited to detecting only one type of 
+Fraud in information and communication technologies (ICT) fraud and provide fraud detection only by offline processing.  
+occurs whenever a perpetrator uses deception to receive ICT To overcome these two issues we propose a system that is 
+services free of charge or at a reduced rate [1]. ICT fraud is a able to detect changes in a user's behavior (see Fig. 1.) The first 
+global problem that by the estimation of the European benefit of our approach is that, by detecting changes in a user's 
+Communication Fraud Control Association represents behavior, any type of potential fraud can be identified. Another 
+approximately 5% of ICT revenue in developed countries [2] and benefit is the ability to monitor these changes in real time. The 
+in some countries even up to 20% [3]. ICT fraud is rising, and proposed model applies fraud detection in three steps: 
+with the increased migration of everyday activities into the cyber- monitoring the user, predicting the user's behavior, and 
+world, there is a vital need for more secure and trusted ICT  
+services. The areas in which ICT fraud occurs are extensive. For Bidirec tional User artificial neural 
+the purpose of simpler detection and prevention, these are divided network 
+into several groups according to their similarities. Different fraud 
+types and their detection methods can be found in [4]-[6].  Time: t0 to t1 User profile Predicted value
+In this study, we propose a model for mobile-phone fraud Time: t1 to t2
+detection based on bidirectional artificial neural networks    Time: t1 to t2 
+(bi-ANNs) that predict time series representing the behavior of Comparison 
+                                                               
+Manuscript received Aug. 12, 2008; revised Nov. 3, 2008; accepted Dec. 11, 2008. Triggering the Time: t1 to t2
+Andrej Krenker (phone: + 386 1 476 81 12, email: andrej.krenker@ltfe.org), Mojca Volk alarms 
+(email: mojca.volk@ltfe.org), Urban Sedlar (email: urban.sedlar@ltfe.org), Janez Bešter 
+(email: janez.bester@fe.uni-lj.si), and Andrej Kos (andrej.kos@fe.uni-lj.si) are with the Fig. 1. Proposed model for mobile-phone fraud detection. 
+Laboratory for Telecommunications, University of Ljubljana, Ljubljana, Slovenia.  
+92   Andrej Krenker et al. © 2009           ETRI Journal, Volume 31, Number 1, February 2009 Future prediction network 25706747, 170001, 3682978854
+Y_in y[0] y[1] y[2] y[3] Y_out  , 1, 1, 0, 1,0, 974406530, 974406530, 2004-12-13, 00:00:01, 0, 81037355531995, 
+BKIEVM, 19, BAMSTR, 26,, 0, 0, 7, 127, 0, 34, 7, 00:00:02, 
+00:00:00,,,0, 0, 0, 0, 0, 0, 0, 0,, i170001_20041212_0109.ama 
+Fig. 3. Sample of call detail record of randomly selected user.
+S[P] S[F]  
+ 
+Z_out Z_in number of neurons used in hidden layers. For each 
+Z[3] Z[2] Z[1] Z[0] combination of the above variables and input signal 
+Past prediction network (representing Call_Duration value in time), we preformed 10 
+simulations of the prediction procedure in Matlab. We 
+Many-to-many connections with weights adjusted in training 1 completed 1,728,000 simulations with different bi-ANN 
+Many-to-many connections with weights adjusted in training 2 
+Many-to-many connections without weight adjustment topologies and input time series. 
+One-to-one fixed connections Before we introduced input data to the bi-ANN, we pre-
+Static layer Dynamic layer processed it. We applied two different types of pre- (and post-) 
+Fig. 2. Bidirectional artificial neural network.  processing methods, one based on minimum and maximum 
+ values and the other based on standard deviation on all 3 data 
+comparing the predicted and monitored behavior. In the case of subsets, namely, the training subset, validation subset, and 
+notable discrepancy between the predicted and monitored testing subset. 
+behavior, the system triggers an alert. A study of the bi-ANN Next, we formed input time series of different lengths, starting 
+and its ability to predict time series is presented in the following at 50 samples and increasing the length by 50 up to 400 samples. 
+sections. After acquiring the resulting predicted time series, we divided 
+these into thirds, and each third was further divided into 5 equal 
+parts. We used different lengths of input and predicted time series 
+III. Bidirectional Artificial Neural Network to estimate the performance of each model with the average 
+In the proposed model, we use the bi-ANN architecture that relative variance (ARV) index [12]. ARV is defined as 
+was first described in [11]. Its use for prediction of time series 
+is described in [12]. Detailed descriptions of the bi-ANN can =
+1 ∑T { − }2 = eARV σ 2 x(t) xˆ(t ) ,  T 2t=1 σ       (1) T
+be found in [7], [9]-[12].  
+The bi-ANN model shown in Fig. 2 consists of two uni- where x(t) is the desired output series, xˆ(t)  is the actual 
+directional ANNs that are connected through dynamic neurons. output time series, σ 2  is the variance, T is the length of the 
+The upper ANN predicts future values, and the lower ANN time series, and e  is the total square error. The ARV values 
+predicts past values [10]. The architecture of the individual between 0 and 1 represent satisfactory prediction, and the 
+ANN is [1-N-N-1], where N is the number of the neurons in the smaller the value, the better the prediction. Values above 1 
+layers. In our model, we varied N from 1 to 7. represent unsatisfactory prediction. 
+IV. Methodology V. Results 
+We obtained anonymized call detail records (CDRs) for 200 Based on the obtained results, we have come to the 
+users from a Slovenian mobile operator. Our data set consisted following conclusions. The quality of prediction (the calculated 
+of 1,082,588 calls made in time span of 12 weeks with an ARV value) was not affected by the selection of users. The 
+average call duration of 72 s (minimal call duration was 1 s and study of pre- and post-processing methods showed that 
+maximum call duration was 6,682 s). A CDR holds 40 methods based on minimum and maximum values resulted in 
+different call parameters (see Fig. 3). For the purpose of better prediction. Different training scenarios ([10] and [13]) 
+analysis we observed the Call_Duration parameter.  did not affect prediction. However, the applied training 
+With our model, we attempted to predict the Call_Duration function did affect the quality of the prediction task: of the six 
+parameter using the following variables: users, data pre- and different training functions (trainlm, trainbfg, traincgb, traincgf, 
+post-processing methods, training scenarios, training functions, traincgp, trainb), two of them (trainb and traincgp) had a 
+lengths of input time series, time slots of the predicted time negative effect on prediction. We also tested and observed how 
+series, length of time slots of the predicted time series, and the lengths of the input time series and the predicted time series 
+ETRI Journal, Volume 31, Number 1, February 2009 Andrej Krenker et al.   93 90 References 
+Time series length  
+80 (from left to right) 
+[1] V. Blavette, Application of Intelligent Techniques to 
+50 100 150 200 
+70 250 300 350 400 Telecommunication Fraud Detection, http://www.eurescom.eu/ 
+60 public/projects/p1000-series/P1007/default.asp, May 2001. 
+50 [2] h71028.www7.hp.com/ERC/downloads/4AA0-8765ENW.pdf, 
+40 HP Fraud Management Systems (FMS) Solution, June 2005. 
+30 [3] R.J. Bolton and D.J. Hand, "Statistical Fraud Detection: A 
+Review," Statistical Science, vol. 3, 2002, pp. 235-255. 
+20
+[4] J. Hollmen, User Profiling and Classification for Fraud Detection 
+10
+in Mobile Communication Networks, PhD thesis, Helsinki 
+0
+0 1 2 3 4 5 6 7 University of Technology, Department of Cognitive and 
+Number of neurons  Computer Science and Engineering, Espoo, 2000. 
+Fig. 4. Combination of parameters resulting in 90% success rate.  [5] T. Fawcett and F. Provost, "Adaptive Fraud Detection," 
+ Datamining and Knowledge Discovery, vol. 1, 1997, pp. 1-28. 
+influenced prediction. We determined that longer input time [6] http://www.theregister.co.uk/2005/12/19/terror_phone_clone_scam/, 
+series and shorter predicted time series gave better results. The Dec. 2005. 
+number of neurons used in hidden layers had a major effect on [7] H. Wakuya, K. Shida, and J.M. Zurada, "Time series prediction 
+prediction. That is, the bi-ANNs with a larger number of by a neural network model based on bi-directional computation 
+neurons in hidden layers gave better prediction results. style: A study on generalization performance with the computer-
+However, using too many neurons in hidden layers and short generated time series 'Data Set D'," Systems and Computers in 
+input time series resulted in overtraining, which caused the Japan, vol. 34, no. 10, 2003, pp. 64-75. 
+prediction task to fail. In the case of adjusting variables    [8 ] H. Wakuya and K. Shida, "Bi-directionalization of Neural 
+individually, (see section IV) the percentage of correct Computing Architecture for Time Series Prediction. III: 
+predictions was below 50%. Application to Laser Intensity Time Record 'Data Set A'," Proc. 
+Next, we performed the measurements adjusting all variables INNS-IEEE, Int'l Joint Conf. on Neural Networks, 2001. 
+at once. The respective results led us to the following [9] H. Wakuya, K. Shida, and J.M. Zurada, "Bi-directionalization of 
+conclusion. The combination using ARV as a measure resulted Neural Computing Architecture for Time Series Prediction: 
+in a 90% success rate (see Fig. 4). By using a combination of Application to Computer Generated Series 'Data Set D'," 6th Int'l 
+five neurons in hidden layers and an input time series length of Conf. Soft Computing, 2000. 
+200 samples, the best prediction was achieved while using only [10] H. Wakuya and J.M. Zurada, "Bi-directional Computing 
+20% of the first third of the predicted time series. Architecture for time Series Prediction," Neural Networks, vol. 
+14, no. 9, 2001, pp. 1307-1321. 
+[11] H. Wakuya, R. Futami, and N. Hoshimiya, "A Bi-directional 
+VI. Conclusion Neural Network Model for Generation and Recognition of 
+In this paper, we presented a novel bi-ANN-based approach Temporal Patterns," Trans. the Institute of Electronics, 
+for generic mobile-phone fraud detection capable of detecting Information, and Communication Engineers, 1994, pp. 236-243. 
+fraud in real time. The analyses were accomplished using real- [12] H. Wakuya and J.M. Zurada, "Time Series Prediction by a Neural 
+life CDR data, obtained from a Slovenian mobile operator. The Network Model Based on the Bidirectional Computation Style," 
+focus of our study was to determine whether the bi-ANN is Proc. IEEE-INNS-ENNS Int'l Joint Conf. Neural Networks, vol. 
+capable of predicting time series that describe the behavior of a 2, 2002, pp. 225-230. 
+mobile-phone user. The overall finding of our study is that the [13] H. Wakuya and K. Shida, "Time Series Prediction with Neural 
+bi-ANN is capable of predicting these time series, resulting in Network Model Based on the Bi-directional Computation Style: 
+90% success rate in optimal configuration.  An Analytical Study and Its Estimation on Acquired Signal 
+In the study, we based the prediction on the Call_Duration Transformation," Trans. IEE Japan, vol. 122-C, no. 10, 2002, pp. 
+parameter in the CDRs. In the future, we intend to extend the 1794-1802.  
+prediction to other relevant parameters in order to create a 
+complete mobile phone fraud detection system. Additionally, 
+the ratio between the required prediction accuracy and its 
+consumption of time and resources has to be optimized. 
+94   Andrej Krenker et al. ETRI Journal, Volume 31, Number 1, February 2009 
+Success rate (%)

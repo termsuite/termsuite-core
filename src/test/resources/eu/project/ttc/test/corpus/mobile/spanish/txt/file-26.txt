@@ -1,0 +1,2752 @@
+GPRS: la nueva
+generación de
+telefonía móvil
+Noviembre 2001
+La llegada de GPRS puede permitir el despegue definitivo de los servicios
+móviles de datos. En el presente estudio, Havet Interactive pretende ofrecer una
+visión exhaustiva, objetiva y realista de las posibilidades actuales de GPRS,
+abordando múltiples aspectos de esta tecnología originalmente considerada
+como un puente transitorio entre GSM y UMTS.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Índice de contenidos
+0. Presentación (pag. 1)
+0.1 Objetivos (pag. 1)
+0.2 Metodología (pag. 2)
+1. Introducción   (pag. 4)
+1.1 Situación actual del mercado de las telecomunicaciones (pag. 5)
+2. El sistema GSM (pag. 13)
+2.1 Factores del éxito de GSM (pag. 15)
+2.2 La seguridad en GSM (pag. 15)
+2.3 Arquitectura de la red GSM (pag. 16)
+2.4 Servicios actuales de GSM (pag. 18)
+2.5 Servicios de datos: las limitaciones de GSM (pag. 21)
+2.6 WAP y GSM (pag. 22)
+3. El sistema GPRS (pag. 25)
+3.1 Conmutación orientada a circuitos y conmutación orientada
+a paquetes (pag. 25)
+3.2 Características de la tecnología GPRS (pag. 26)
+3.3 Limitaciones de GPRS (pag. 28)
+3.4 Arquitectura de la red GPRS (pag. 30)
+3.5 Dispositivos GPRS (pag. 32)
+3.5.1 Teléfonos móviles tradicionales (pag. 33)
+3.5.2 Teléfonos combinados (pag. 34)
+3.5.3 Terminales tipo ordenador personal de mano (pag. 35)
+3.5.4 Ordenadores portátiles (pag. 36)
+3.6 Tarificación en GPRS (pag. 37)
+3.7 Aplicaciones y servicios con GPRS (pag. 39)
+3.7.1 Aplicaciones y servicios iniciales (pag. 41)
+3.7.2 Aplicaciones y servicios a medio y largo plazo (pag. 44)
+3.8 EDGE: un paso más (pag. 47)
+3.9 Publicidad con GPRS (pag. 48)
+3.10 WAP sobre GPRS (pag. 50)
+3.11 Hacia la estandarización (pag. 50)
+3.12 Los usuarios ante GPRS (pag. 52)
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+4. M-commerce (pag. 56)
+4.1 Qué es m-commerce (pag. 56)
+4.2 Cómo funciona m-commerce (pag. 57)
+4.3 Ventajas del m-commerce (pag. 60)
+4.4 Situación actual del m-commerce: soluciones y
+perspectivas (pag. 61)
+4.5 Iniciativas (pag. 62)
+5. Evolución del sector de las comunicaciones móviles (pag. 64)
+5.1 Un nuevo negocio  para operadoras y fabricantes (pag. 65)
+5.2 Líneas generales de actuación (pag. 68)
+6.  Las empresas ante GPRS (pag. 70)
+6.1 Actitud de las empresas ante las soluciones móviles (pag. 71)
+6.2 Pasos para la implantación de soluciones móviles en
+empresas (pag. 75)
+7. Conclusiones (pag. 79)
+Anexos (pag. 81)
+Anexo I: Glosario inglés - español (pag. 81)
+Anexo II: Encuesta Internet móvil julio - agosto 2001 (pag. 86)
+Índice de gráficos
+Gráfico 1: Número de usuarios en el sector de las telecomunicaciones (pag. 4)
+Gráfico 2: Licencias UMTS en Europa (pag. 7)
+Gráfico 3: Evolución de la venta de terminales en España (pag. 9)
+Gráfico 4: Porcentaje de la utilización de WAP (pag. 11)
+Gráfico 5: Evolución del número de usuarios de GSM 1999 - 2001 (pag. 14)
+Gráfico 6: Usuarios de las tecnologías GSM (pag. 14)
+Gráfico 7: Niveles de seguridad en GSM (pag. 16)
+Gráfico 8: Arquitectura de la red GSM (pag. 18)
+Gráfico 9: Características del sistema GPRS (pag. 28)
+Gráfico 10: Velocidades de transmisión GSM - GPRS (pag. 29)
+Gráfico 11: Limitaciones del sistema GPRS (pag. 30)
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Gráfico 12: Funciones del GGSN (pag. 31)
+Gráfico 13: Funciones del SGSN (pag. 31)
+Gráfico 14: Tarifas GPRS de Amena (pag. 38)
+Gráfico 15: Precios orientativos de Telefónica Móviles para el
+servicios GPRS  (pag. 38)
+Gráfico 16: Formas de tarificación preferidas por los usuarios (pag. 39)
+Gráfico 17: Disponibilidad de servicios de datos en función de las velocidades
+de transmisión (pag. 40)
+Gráfico 18: Utilización del servicio SMS (pag. 43)
+Gráfico 19: Conocimiento por parte de los usuarios del servicio
+de localización (pag. 44)
+Gráfico 20: Valoración de los servicios de datos avanzados (pag. 47)
+Gráfico 21: Necesidad de más información sobre GPRS (pag. 53)
+Gráfico 22: Formas de pago preferidas por los usuarios para GPRS (pag. 54)
+Gráfico 23: Funcionamiento básico de una transacción móvil (pag. 59)
+Gráfico 24: Iniciativa MovilPay para m-commerce (pag. 63)
+Gráfico 25: Situación actual del negocio de los Servicios de
+datos móviles (pag. 64)
+Gráfico 26: Nuevos actores en el sector de las comunicaciones
+móviles (pag. 67)
+Gráfico 27: Beneficios de la implantación de soluciones móviles en
+las empresas (pag. 71)
+Gráfico 28: Motivos de las grandes empresas para no disponer de
+móviles WAP (pag. 72)
+Gráfico 29: Porcentaje de compañías con aplicaciones de
+Internet móvil (pag. 73)
+Gráfico 30: Uso de Internet en Pymes (pag. 74)
+Gráfico 31: Convergencia de tecnologías en las empresas (pag. 74)
+Gráfico 32: Buscar la sencillez en los proyectos (pag. 75)
+Gráfico 33: Modelo de aceleración de negocio para las soluciones móviles
+empresariales (pag. 77)
+Gráfico 34: Hipotético escenario de acceso a una Intranet (pag. 78)
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+0. Presentación
+0.1 Objetivos
+Vivimos en una época de constantes e inevitables avances tecnológicos y el
+sector de las telecomunicaciones móviles no es una excepción. Desde hace poco
+más de dos años, y a raíz de la salida al mercado del protocolo WAP que permitía
+por primera vez el acceso a Internet desde dispositivos móviles, los analistas del
+sector comenzaron una incesante carrera por mostrar a los usuarios las aplicaciones
+que estarían disponibles en un futuro próximo.
+Descarga de archivos de vídeo y audio, videoconferencia, incluso el poder salir
+a la calle provistos sólo de un dispositivo móvil (que actuaría como monedero,
+callejero, entre otras cosas) eran sólo algunos ejemplos de los inminentes cambios
+a los que estaba abocado el sector y que abría las expectativas de unos usuarios
+ávidos de poder aprovechar al máximo las capacidades de sus dispositivos
+móviles.
+Para muchos, UMTS sería la tecnología que posibilitaría esta revolución de las
+comunicaciones móviles, ofreciendo a los usuarios unos servicios apenas
+imaginables hace unos años y generando suculentos beneficios a las empresas
+del sector.
+Pero, como se ha podido comprobar en los últimos meses, UMTS tardará en
+llegar y cuando la infraestructura necesaria esté disponible y existan dispositivos
+preparados para ofrecerla, no podrá alcanzar las velocidades máximas prometidas
+en un principio.
+Ante esta situación todas las miradas recaen ahora en GPRS, una tecnología que
+en un principio iba a servir de puente entre GSM y UMTS pero que cada día
+cobra más importancia cuando hablamos de ofrecer servicios de datos a través
+del móvil.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 1 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+En este contexto Havet Interactive, como consultora estratégica independiente,
+detectó la necesidad de realizar un análisis sobre GPRS. Un análisis:
+- Profesional: Havet cuenta con un equipos de trabajo formado por expertos
+en el tratamiento y gestión de la información y en los últimos avances
+tecnológicos del sector de las telecomunicaciones.
+- Objetivo: alejado de cualquier visión subjetiva que pudiese desvirtuar
+los contenidos e ideas en él reflejados.
+- Exhaustivo: abarcando todos los aspectos que influirán en el despegue
+definitivo de los servicios móviles de datos.
+- Actualizado: en un sector donde los cambios y avances se suceden en
+cuestión de meses, es de vital importancia ofrecer los últimos datos
+disponibles.
+Los objetivos iniciales planteados por Havet en este estudio son los siguientes:
+1. Presentar situación actual del mercado de las telecomunicaciones.
+2. Ofrecer una visión general del éxito de GSM.
+3. Situar la tecnología GPRS en su contexto, analizando sus características
+básicas.
+4. Analizar cómo afectará la llegada de GPRS al negocio de las
+comunicaciones móviles.
+5. Calibrar la reacción y expectativas de los usuarios ante la llegada de
+GPRS.
+6. Analizar el impacto que GPRS tendrá en la forma de trabajar de las
+empresas.
+0.2 Metodología
+La elaboración del presente estudio, que comenzó en junio de 2001, se inició
+con un exhaustivo trabajo de recopilación y contrastación de fuentes. Si bien la
+literatura sobre el tema es muy extensa, también es baja la calidad y fiabilidad
+de muchos de los recursos consultados.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 2 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Asimismo, se planteó la necesidad de elaborar, paralelamente al estudio, una
+encuesta de opinión que permitiese conocer de primera mano qué uso dan los
+usuarios a sus teléfonos móviles y cuál es su grado de conocimiento y su actitud
+ante la llegada de las tecnologías emergentes como GPRS.
+A tal efecto, entre julio y agosto de 2001 se realizaron 600 entrevistas personales
+en las que se abarcaban los más variados perfiles de usuarios (estudiantes,
+empresarios, particulares, etc.)
+Finalmente, entrevistas con expertos de diversas empresas punteras del sector
+de las comunicaciones nos ha permitido contrastar diferentes opiniones y puntos
+de vistas sobre la evolución de GPRS.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 3 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+1. Introducción
+El incremento de usuarios de móviles en todo el mundo es un fenómeno
+generalizado, sobre todo en Europa, donde alcanza unas tasas medias de
+penetración superiores al 50%, sobrepasando con creces el número de usuarios
+de Internet. Las perspectivas de crecimiento se mantienen, incluso en 2001,
+aunque de forma mucho más moderada.
+Gráfico 1  Número de usuarios en el sector de las telecomunicaciones
+1200 Usuarios de teléfonos móviles
+Usuarios de Internet
+1000
+800
+600
+400
+200
+0
+1990         1992         1994           1996          1998           2000          2002
+ Años
+Fuente: International Telecommunications Union
+En 2002 habrá 400 millones más de usuarios de móviles que de Internet.
+A pesar de que los servicios de voz seguirán generando un alto porcentaje de
+los ingresos de operadoras de telecomunicaciones y fabricantes de móviles,
+ambos llevan dos años apostando fuerte por los servicios de datos móviles,
+aunque hasta el momento los resultados se pueden considerar, como mínimo,
+discretos.
+Durante cinco años todos los actores del sector de las comunicaciones móviles
+asistieron a un fuerte crecimiento tanto en el número de abonados como en el
+número de terminales vendidos. El factor determinante de este éxito ha sido la
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 4
+Millones de usuarios GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+tecnología digital GSM y los servicios que han ido surgiendo en torno a ella,
+dando un valor añadido a la utilización del teléfono móvil.
+Fruto de este éxito y del avance de nuevas tecnologías, como el protocolo WAP,
+analistas, operadoras y fabricantes anunciaron la inminente convergencia entre
+Internet y la telefonía móvil. Esto supondría un cambio radical en la forma de
+trabajo y comunicación de los usuarios, modificando los modelos de negocio
+y las relaciones entre empresas. Pero en la actualidad una serie de factores indican
+que esta convergencia, aunque inevitable, será más lenta de lo esperado.
+1.1 Situación actual del mercado de las telecomunicaciones
+Desde finales del año 2000 las operadoras de telecomunicaciones, después de
+invertir miles de millones en la obtención de licencias de UMTS han visto cómo
+la implantación de esta tecnología se retrasa cada vez más y tienen que buscar,
+en medio de enormes deudas, el modo de rentabilizar dichas inversiones.
+Los fabricantes de móviles ven cómo un mercado saturado de terminales ha
+supuesto un significativo frenazo a sus ventas.
+Tanto fabricantes como operadoras han asistido a la decepción que ha supuesto
+entre los usuarios la primera generación de servicios de datos móviles que tenían
+en el protocolo WAP su principal estandarte. Las causas de esta decepción se
+encuentran en parte en las carencias que GSM presenta en la transmisión de
+datos y en la precipitación por intentar vender una tecnología para la cual los
+usuarios no estaban preparados y no han sabido entender.
+A todos estos factores hay que añadir el periodo de desaceleración económica
+que está viviendo la economía mundial desde principios de 2001, agravada
+después de los acontecimietnos de Nueva York del mes de septiembre, lo que
+supone una coyuntura poco favorable para nuevas inversiones y desarrollos
+tecnológicos.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 5 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Las causas son:
+a) Desaceleración económica mundial
+La crisis que comenzó durante el tercer trimestre de 2000 y que
+afectó y sigue afectando a las empresas de Internet produjo el temido
+"efecto dominó". Así, a la crisis y cierres de empresas de la llamada
+Nueva Economía siguieron las grandes multinacionales, sobre todo
+las relacionadas con las nuevas tecnologías.
+En un principio, y gracias al auge del sector, las empresas de
+comunicaciones móviles no se vieron afectadas. Sin embargo, el
+descenso generalizado de las inversiones en el área de tecnología y
+las pérdidas y deudas acumuladas por operadoras y fabricantes han
+desencadenado estrictos planes de reestructuración orientados a
+paliar las reducciones de beneficios y las fuertes caídas de sus
+acciones en bolsa.
+Los despidos están afectando sustancialmente a los fabricantes de
+equipamientos para móviles debido, en gran parte, al frenazo
+producido en las ventas de terminales; asimismo las operadoras
+móviles europeas que obtuvieron licencias de UMTS también se
+están viendo fuertemente afectadas. Sin embargo, algunos especialistas
+opinan que esta ola de despidos que sacude al sector de las
+telecomunicciones es desproporcionada y causada sobre todo por la
+necesidad de obtener beneficios visibles para los inversores.
+b) Endeudamiento de las operadoras
+La euforia provocada por el volumen de negocio generado inicialmente
+por la telefonía móvil y por los crecimientos anuales, llevaron a las
+operadoras a lanzar los servicios WAP bajo GSM. Éstos no
+funcionaron como estaba previsto, pero existía una serie de tecnologías
+de transmisión que prometía mayores velocidades y una amplia
+gama de servicios móviles. GPRS sería la tecnología que serviría
+de puente entre GSM y UMTS, la tercera generación que
+revolucionaría el concepto de la telefonía móvil.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 6 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+"La empresa que no tenga UMTS está muerta". Ésta y otras
+afirmaciones similares se volvieron habituales entre los analistas del
+sector durante el año 2000 y principios de 2001. La fiebre por hacerse
+con licencias para operar con UMTS recorrió toda Europa. La
+mayoría de las principales operadoras europeas de telefonía móvil
+desembolsaron cantidades ingentes de dinero para hacerse con ellas.
+En marzo de 2000 las cuatro licencias de UMTS sacadas a concurso
+por el Ministerio de Fomento fueron adjudicadas a Telefónica
+Móviles, Airtel (ahora Vodafone), Amena y Xfera. El gobierno se
+embolsó 516,87 millones de euros (86.000 millones de pesetas),
+unas cifras ridículas en comparación con las desembolsadas por las
+operadoras en el resto de Europa.
+Como ejemplo, Telefónica Móviles pagó en marzo de 2000 un total
+de 21.750 millones por su licencia de UMTS en España, pero cinco
+meses más tarde desembolsó 800.000 millones de pesetas para
+obtener una licencia UMTS en Alemania junto con la finlandesa
+Sonera.
+Gráfico 2  Licencias UMTS en Europa
+PAÍSES GASTO
+Alemania 8,405 billones de pesetas.
+Austria 100.000 millones de pesetas.
+Bélgica 160.000 millones de pesetas.
+Dinamarca Concesión de cuatro licencias previstas para el tercer
+trimestre de 2001.
+España 25.000 millones por cada una de las cuatro licencias
+Finlandia Las licencias fueron gratuitas.
+Francia Cuatro licencias por valor de 824.000 millones de pesetas
+cada una.
+Grecia Tres licencias por un total de 74.400 millones de pesetas
+Holanda 445.000 millones de pesetas.
+Irlanda 382.688 millones de pesetas.
+Italia 11.800 millones de euros.
+Luxemburgo Concesión de 4 licenciasprevista para finales de 2001
+Noruega 17.000 millones de pesetas.
+Portugal 66.000 millones de pesetas.
+Reino Unido 6,4 billones de pesetas.
+Suecia 1,9 millones de pesetas por cada una de las cuatro licencias
+más el 0,15% de los ingresos hasta el año 2015.
+Suiza 34.110 millones de pesetas.
+Fuente: El País
+Las operadoras europeas se han visto obligadas a invertir ingentes cantidades
+de dinero para la obtención de licencias UMTS.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 7 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Pero ¿cuáles fueron las causas de esta fiebre? Principalmente las
+previsiones de beneficios resultantes de la implantación de esta
+tecnología. Las previsiones iniciales apuntaban a que en el año 2003
+habría en Europa unos 100 millones de usuarios de UMTS. Para
+2004 el 6,8% de los abonados españoles a telefonía móvil - unos
+dos millones de usuarios - lo serían para UMTS. La variedad y
+calidad de los servicios y aplicaciones que se generarían con UMTS,
+así como la rapidez de conexión (2 Mbps), prometían un mercado
+con un gran potencial, un gran negocio donde las operadoras verían
+compensadas las inversiones realizadas.
+La realidad es que tanto la infraestructura necesaria para montar las
+redes UMTS como el lanzamiento de los dispositivos adecuados se
+retrasa cada vez más y su comercialización no se espera hasta
+2003 - 2004 como mínimo. Inicialmente se orientarán a usuarios
+empresariales, mientras que la comercialización masiva comenzará
+a partir de 2004.
+Entre los años 2009 - 2012 las operadoras podrían empezar a obtener
+beneficios de esta tecnología siempre y cuando planifiquen con
+mucho cuidado sus políticas de precios y de subvenciones ya que
+el precio demasiado elevado tanto de dispositivos como de servicios
+podría disuadir a los usuarios de comenzar a utilizar esta tecnología
+y retrasarían más aún la obtención de beneficios.
+Las operadoras europeas se encuentran endeudadas y en una
+encrucijada. Por un lado han asistido a los discretos resultados de
+la primera generación de servicios móviles de datos, o lo que es lo
+mismo de WAP con tecnología GSM, y por otro ven cómo se aleja
+cada vez más la posibilidad de obtener rápidos beneficios con UMTS.
+Como dato representativo tenemos el reciente anuncio de Vodafone
+de iniciar el servicio UMTS a media potencia para reducir costes,
+alcanzándose unas velocidades iniciales de 64 Kbps y llegando a
+alcanzar en 2005 velocidades entre 144 Kbps y 384 Kbps.
+En este contexto, la solución a estos problemas se ha encontrado en
+GPRS, una evolución del sistema GSM que permitirá empezar a
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 8 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+ofrecer servicios de mayor calidad, a unas velocidades aceptables
+y con un desembolso menor para las operadoras. GPRS constituye
+así el paso intermedio entre GSM y UMTS, y lo que en un principio
+se entendía como una etapa de transición entre ambas tecnologías
+se ha convertido ya en toda una generación de telefonía móvil,
+la 2,5G.
+La disponibilidad de infraestructura y servicios es ya una realidad,
+y la comercialización masiva de los terminales se espera para los
+próximos meses.
+c) Saturación del mercado de la telefonía móvil
+El mercado de la telefonía móvil en España está alcanzando unos
+niveles máximos de saturación del mercado. La penetración actual
+es cercana al 70% aunque algunos especialistas opinan que se puede
+llegar a niveles del 80%.
+De los 423 millones de móviles que se vendieron en el año 2000,
+17 millones corresponden a las ventas en España. En el año 2001
+se prevé que la cifra de móviles vendidos en todo el mundo alcance
+los 450 millones.
+Gráfico 3  Evolución de la venta de terminales en España.
+18
+16
+14
+12
+10
+8
+6
+4
+2
+0
+1998             1999           2000             2001
+Años
+Fuente: Elaboración propia
+Se prevé para 2001 la primera caída en ventas de terminales en España desde 1998.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 9
+Millones de terminales GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Sin embargo, los datos de las ventas referidas al año 2001 indican
+un frenazo de las mismas. En el primer trimestre de 2001 se vendieron
+97 millones de teléfonos móviles en el mundo, pero el tercer trimestre
+reflejó la primera caída: 90 millones de móviles en comparación con
+los 98 vendidos en el mismo periodo del año 2000. Pese a todo se
+prevé que 2001 termine con un volumen de crecimiento pequeño o
+moderado.
+Esta tendencia es más clara en Europa ya que otros mercados
+mundiales como Asia y Oceanía cuentan todavía con un destacado
+potencial a desarrollar, y Estados Unidos se mantiene relativamente
+estable a pesar de la crisis económica.
+Estos datos no deben llevar a pensar, sin embargo, que los usuarios
+están dejando de lado la compra de terminales sino más bien que
+asistimos a una madurez del mercado de la telefonía móvil. Se está
+pasando de un mercado enfocado a nuevos usuarios y nuevos móviles
+a otro en el que los clientes sustituyen sus terminales cada año y
+medio, el término medio de la vida de un móvil, con la consiguiente
+ralentización de las ventas.
+Por otro lado los usuarios se encuentran a la espera del lanzamiento
+masivo de los teléfonos GPRS. Esta actitud no carece de lógica ya
+que no desean gastar dinero en móviles de gama alta que pueden
+suponer un desembolso de hasta 100.000 pesetas cuando los móviles
+GPRS superarán las prestaciones de los actuales.
+Esta saturación del mercado llevará tanto a fabricantes como a
+operadoras a replantearse sus modelos de negocio y sus estrategias
+con respecto a clientes y abonados. El objetivo ya no es conseguir
+un número de clientes elevado, sino fidelizarlos, ofreciendo servicios
+y aplicaciones atractivas.
+d) Decepción con la primera generación de Servicios Móviles de datos
+(WAP con GSM) WAP, esas siglas que durante 1999 y buena parte
+del año 2000 significaron el principio del acceso a Internet desde
+los teléfonos móviles GSM, no ha obtenido los resultados esperados.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 10 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Principalmente porque la tecnología GSM, a pesar de sus muchas
+virtudes, no es la más adecuada para facilitar este acceso. Técnicamente
+es un método ineficiente, lento y caro para ofrecer estos servicios.
+Cuando WAP salió al mercado los terminales no estaban preparados
+para soportar este protocolo. Los usuarios de Internet, acostumbrados
+a navegar desde un ordenador de sobremesa o portátil, encontraron
+la navegación a través de un móvil lenta y visualmente poco atractiva,
+a lo que había que añadir la escasez de servicios de utilidad y el alto
+coste de la conexión.
+Las operadoras y fabricantes lanzaron agresivas campañas de
+marketing en las que no supieron transmitir las diferencias entre
+navegar desde un PC a hacerlo desde un dispositivo móvil. Para los
+usuarios supuso comprobar de primera mano las limitaciones que
+los teléfonos móviles presentaban a la hora de navegar por Internet,
+lo que se convirtió en una experiencia cuando menos frustrante para
+muchos usuarios.
+En la actualidad es muy frecuente encontrar usuarios de teléfonos
+móviles que, aun teniendo dispositivos con la capacidad de acceder
+a servicios WAP, no lo han utilizado nunca.
+Gráfico 4  Porcentaje de la utilización de WAP
+3% 15%
+Solo llamadas (15%)
+Llamadas y mensajes (82%)
+WAP (3%)
+82%
+Fuente: Elaboración propia
+Actualmente sólo un 3% de los usuarios encuestados que poseen móvil
+utilizan el servicio WAP.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 11 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Sin embargo, y pese a estos factores adversos, el sector de las
+comunicaciones móviles se encuentra a la expectativa ante la inminente
+comercialización de dispositivos móviles dotados de
+tecnología GPRS.
+Operadores y fabricantes están asumiendo que GPRS no será la tecnología
+puente entre GSM y UMTS que muchos creían al principio, sino que
+puede tener una vida mucho mayor debido al retraso que está
+experimentando UMTS.
+GPRS dejará de ocupar ese papel secundario que le atribuyeron y puede
+suponer un cambio en el acceso a los servicios móviles de datos.
+Tecnologías emergentes como EDGE pueden contribuir al éxito de
+GPRS a la espera de la comercialización de los primeros dispositivos
+UMTS.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 12 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+2. El sistema GSM
+El éxito de los sistemas analógicos provocó un extraordinario aumento en el
+número de usuarios de telefonía móvil que superó las previsiones estimadas por
+las compañías. Los usuarios demandaban redes de comunicaciones más seguras,
+de mayor calidad en la recepción y que les permitiesen una mayor movilidad en
+las comunicaciones a través de edificios ciudades o países, pero para ello, las
+comunicaciones analógicas mostraban grandes limitaciones.
+La solución llegó con la digitalización y el actual sistema GSM, que nació como
+estándar internacional de comunicaciones digitales móviles en 1987 tras la firma
+por 13 países del MOU (Memorandum de comprensión). Con este tratado se
+acordó la construcción de un sistema de comunicaciones que operara en una
+banda de 900 Mhz. Así, GSM no sólo se convirtió en un estándar europeo, sino
+que se utiliza en gran parte del mundo.
+Con GSM la telefonía móvil ha ido desarrollándose hasta convertirse en una
+verdadera revolución tecnológica que ha cambiado la percepción de la telefonía
+y las comunicaciones del consumidor, llegando a ser, para muchos, un elemento
+imprescindible de su vida cotidiana, tanto personal como profesionalmente.
+Además de las altas prestaciones que ofrece GSM, la incorporación de los
+sistemas digitales redujo el coste de las redes, puesto que las estaciones base y
+las centrales de conmutación digitales son más económicas que las analógicas.
+En la actualidad GSM es utilizado por más de 200 operadores en 100 países y
+cuenta con una base de usuarios que supera los 500 millones. Esta cifra subraya
+su posición como el principal estándar móvil. En septiembre del año 2001 el
+66% de los usuarios de telefonía móvil utilizaban el sistema GSM, de los cuales
+el 65% se encuentra en Europa.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 13 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Gráfico 5  Evolución del número de usuarios de GSM 1999 - 2001
+600
+500
+400
+300
+200
+100
+0
+oct 99     jan 00     apr 00     jul 00     oct 00     dec 00     jan 01     apr 01     jul 01
+Trimestres
+Fuente: GSM Association
+En julio del 2001 el número de usuarios mundiales de GSM ascendía 564,6 millones.
+Dado que se trata de un estándar mundial, permite la utilización de estos servicios
+por toda Europa, así como en muchos países de Oceanía, Asia y África. En la
+actualidad se utiliza en 171 países y existen 400 redes mundiales de GSM.
+La familia de sistemas GSM incluye el GSM 900 y el GSM 1900 dependiendo
+de la banda de radio que se use. En Europa y Asia opera el GSM 900, mientras
+que en Estados Unidos lo hace el GSM 1900.
+Gráfico 6  Usuarios de las tecnologías GSM
+1% 7% 16% Usuarios GSM (1%)
+Usuarios GSM 900 (7%)
+Usuarios GSM 1800 (16%)
+Usuarios GSM 1900 (26%)
+Usuarios GSM 900/1800 (50%)
+50% 26%
+Fuente: GSM Association
+Los usuarios de GSM, lo son principalmente del sistema GSM 900, tecnología implantada
+principalmente en Europa.
+En la actualidad se está implementando un nuevo sistema GSM 1800 compatible
+con los dos anteriores.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 14
+Millones de usuarios GSM GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+2.1 Factores del éxito de GSM
+Han sido varios los factores que, combinados, han contribuido al éxito de GSM
+en los últimos años:
+1. Abarata y simplifica el uso de la telefonía móvil.
+2. Aceptación de carácter universal.
+3. Compatibilidad con las tecnologías actuales y futuras.
+4. Acceso a servicios de gran utilidad.
+5. Ofrece gran calidad de voz.
+6. Distinción de los tipos de datos y adecuación a cada uno de ellos.
+7. Permite el roaming internacional.
+8. Incorpora mecanismos de seguridad fiables.
+2.2 La seguridad en GSM
+La seguridad es uno de los elementos clave del éxito de GSM. Esta tecnología
+asegura la privacidad, integridad y confidencialidad de las llamadas efectuadas
+por los usuarios. Para ello incorpora Smart Cards que contienen la identificación
+personal del suscriptor e información del servicio.
+El elemento clave en la identificación del usuario es el módulo de identidad del
+suscriptor, más conocido como SIM. El SIM es una pequeña tarjeta con un chip
+impreso que va insertada dentro de cada terminal móvil y que, al contrario de
+otros sistemas celulares contiene toda la información del usuario. Este sistema
+permite ciertas ventajas; por ejemplo, si existe una avería en el móvil, el usuario
+no tiene por qué quedarse sin número de teléfono, ya que puede insertar el SIM
+en otro móvil y recibir llamadas a través de él. El SIM está protegido por una
+clave de acceso numérica de cuatro dígitos que es el PIN o número de identificación
+personal.
+Pero la seguridad de los sistemas GSM no queda ahí . De hecho hay una serie
+de sistemas de encriptación mediante algoritmos que protegen la confidencialidad
+de las comunicaciones.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 15 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Gráfico 7  Niveles de seguridad en GSM
+1. La autentificación de la señal
+2. La confidencialidad de los datos de señal
+    y del usuario
+3. La confidencialidad de la identidad del
+    suscriptor
+Fuente: Elaboración propia
+Con la tecnología GSM la seguridad en la transmisión de los datos está garantizada.
+2.3 Arquitectura de la red GSM
+Analizaremos a continuación las características técnicas fundamentales del
+sistema GSM, que se divide en tres niveles principales:
+a) Estación móvil (Mobile Station, MS): es el terminal del usuario dotado
+de la tarjeta SIM, tarjeta que identifica al usuario a través del IMSI como
+miembro de una red de telefonía celular concreta y permite utilizar los
+servicios correspondientes una vez identificados por dicha red. La tarjeta
+inteligente SIM que sigue las normas ISO, almacena los datos del usuario,
+lo que permite comunicarse independientemente del terminal que emplee.
+b) Estación Base (Base Station Subsystem, BSS): sistema encargado de
+controlar las comunicaciones de radio del terminal. Está en contacto con
+el sistema de red (NSS), a través del cual conecta al usuario del móvil
+con otros usuarios. Está compuesto de dos unidades:
+- Estación de transmisión (Base Transciever Station, BTS): se encarga
+de gestionar las comunicaciones por radio de las estaciones móviles.
+Proporciona un número de canales de radio a la zona a la que da
+servicio.
+- Controlador de la estación (Base Station Controller, BSC): gestiona
+los recursos de radio de una o varias estaciones de trasnmisión,
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 16 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+enlazándolas con el centro de conmutación de servicios móviles. La
+función primaria es el mantenimiento de la llamada, así como la
+adaptación de la velocidad del enlace de radio al estándar de 64 bps
+utilizado por la red.
+c) Sistema de Red (Network Subsystem, NSS): su componente principal
+es el Centro de Servicios Móviles (Mobile Services Switching Center
+MSC). Se encarga de todas las tareas informáticas: registra y verifica
+las comunicaciones. Actualiza la localización del usuario, gestiona los
+problemas de saturación, direcciona las llamadas, interconecta a los
+usuarios entre sí y con la red fija. Resumiendo, gestiona las comunicaciones
+entre los usuarios GSM y los usuarios de otras redes de
+telecomunicaciones. Dentro de la estructura del NSS hay una serie de
+subsistemas que se encargan de controlar diversas funciones del móvil:
+- Visitor Location Register (VLR): controla el tipo de conexiones que
+un terminal puede hacer.
+- Home Location Register (HLR): contiene la información sobre el
+cliente del servicio y la localización actual del terminal. Mediante
+el HLR se verifica si un usuario que se conecta dispone de un contrato
+de servicio.
+- Short Message System Center (SMSC): gestiona los mensajes de
+texto SMS.
+- Authentication Center (AC): garantiza la autenticación del usuario.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 17 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Gráfico 8  Arquitectura de la red GSM
+TRX BTS VLR HLR
+(transrecibidor) (Estación de (Visitor Location (Home Location
+Transmisión) Register) Register)
+MS BSC MSC
+(Estación móvil) (Controlador de (Centro de Serviciosla estación) móviles)
+BTS SMSC AUC
+(Estación de (Gestión de (Centro de
+Tarjeta SIM Transmisión) mensajes SMSR) autentificación)
+Fuente: Elaboración propia
+La arquitectura de la red GSM se divide en tres niveles: la estación móvil, la estación base
+y el sistema de red.
+2.4 Servicios actuales de GSM
+El éxito de GSM como un estándar abierto trajo consigo un mercado global y
+multi-proveedor para infraestructura, terminales y desarrollo de aplicaciones. En
+la actualidad GSM ofrece una amplia variedad de servicios y aplicaciones que
+pueden ser implementadas por los operadores en sus sistemas. No todos los
+servicios y prestaciones están implementados en todos los terminales GSM del
+mercado, pero sirven de referencia para corroborar la expansión de GSM desde
+su lanzamiento, cuando ofrecía básicamente servicios de voz (transmisión y
+recepción de llamadas).
+Los servicios descritos a continuación constituyen una selección representativa
+de los mismo, sin pretender abarcar todos los existentes.
+- EFR (Enhanced Full Rate): sistema a través del cual se aumenta la calidad
+de comunicación codificando la señal de voz .
+- Buzón de voz: servicio de contestador automático en el teléfono móvil
+que puede activarse en caso de tener desconectado el móvil o de estar
+fuera de cobertura.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 18 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+- Agenda electrónica: permite almacenar en el SIM una cantidad variable,
+según el modelo de terminal, de números de teléfono.
+- Reconocimiento de voz: permite elegir a través de la voz el número
+destinatario.
+- Llamadas de emergencia: servicio 112 para emergencias disponible
+incluso con el teclado bloqueado o sin disponer de tarjeta SIM.
+- Servicio de conferencia: también denominado llamada múltiple, permite
+mantener una comunicación simultánea con múltiples usuarios.
+- Roaming: posibilidad de usar el terminal y la tarjeta SIM en redes GSM
+de otros países.
+- CLIP (Calling Line Identification Presentation): permite ver en pantalla
+el número que nos está llamando.
+- CLIR (Calling Line Identification Restriction) impide que el número
+llamante sea visto por alguien anónimo.
+- Visualización de créditos / costes: la operadora facilita, a través de una
+llamada, el saldo disponible o el gasto efectuado.
+- Control del gasto: función que se ejecuta a través de la operadora, que
+calcula el gasto y restringe las llamadas al llegar al límite fijado por el
+propio usuario.
+- Llamada en espera: notificación de llamadas en espera y posibilidad de
+retener momentáneamente la comunicación y recuperarla posteriormente.
+- Desvío de llamada: permite el desvío automático de las llamadas hacia
+el buzón de voz, o hacia cualquier otro número de teléfono de una red
+de telefonía móvil o fija nacional.
+- Reenvío de llamadas para otro número: permite redirigir una llamada
+a una tercera persona.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 19 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+- Filtros de llamadas: posibilidad de impedir la recepción / transmisión
+de llamadas por parte de ciertos destinatarios designados por el usuario.
+- Vibración del móvil: sustituye a la señal acústica o luminosa para avisar
+al usuario de una llamada entrante.
+- Servicio de mensajes cortos (SMS): envío y recepción de mensajes de
+texto de hasta 160 caracteres.
+- Sistema T9: sistema de escritura de mensajes cortos que recurre a las
+palabras de un diccionario interno con sólo escribir las
+primeras letras.
+- Mensajes a grupos: permite crear una lista de distribución de mensajes
+SMS y enviar un mismo mensaje a varios destinatarios a la vez.
+- Chat: participación en tiempo real y mediante SMS en conversaciones
+con un gran número de usuarios.
+- Transmisión y recepción de datos y fax con velocidades de
+hasta 9,6 kbps.
+- WAP: acceso a información de Internet creada específicamente para
+dispositivos móviles.
+- Juego: juegos clásicos como el tetris, el buscaminas o el tres en raya son
+ya comunes en muchos modelos de móviles.
+- IrDA: Sistema de comunicación a través de señales infrarrojas que
+permite al móvil transmitir información a un ordenador o impresora.
+- GPS: tecnología basada en la localización por satélite, que permite estar
+localizable en cualquier lugar del mundo a través de dispositivos móviles.
+- Módem: el teléfono móvil puede actuar como un módem, conectándose
+al ordenador y enviando y recibiendo datos a 9.600 Bits por segundo.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 20 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Además de estos servicios y prestaciones los teléfonos GSM actuales
+pueden disponer de las más variadas funcionalidades: reloj, alarma
+horaria, saludos iniciales personalizables, ajustes estéticos de la pantalla,
+logos, melodías, etc. que aportan un valor añadido para los usuarios a
+la hora de utilizar los terminales móviles.
+2.5 Servicios de datos: las limitaciones de GSM
+La tecnología GSM fue diseñada en principio para utilizar básicamente servicios
+de voz. Hoy la mayoría de los servicios GSM están, de hecho, relacionados con
+la voz: llamadas en espera, servicios de conferencia, filtros de llamadas, etcétera.
+Sin embargo hemos visto cómo se han desarrollado multitud de servicios y
+aplicaciones de datos que confieren un valor añadido. La penetración de estos
+servicios no ha sido la esperada y en la actualidad no representan el volumen
+de ingresos previsto inicialmente por los operadores. Pese a ofrecer soluciones
+eficaces para la comunicación de datos sencillos, y pese al éxito de servicios
+como SMS, GSM muestra carencias cuando hablamos de servicios de datos
+avanzados como WAP, aplicaciones y servicios multimedia y utilización del
+móvil como módem.
+Los principales motivos por los que GSM muestra carencias a la hora de soportar
+servicios de datos avanzados son los siguientes:
+- Los terminales GSM operan mediante conmutación de circuitos. En este
+sistema de transmisión, cada llamada establece un circuito con el otro
+extremo y cuando la llamada concluye, dicho circuito se libera. Esta
+forma de transmisión de datos es extremadamente limitada en términos
+de capacidad.
+- No es posible el acceso directo a Internet al no soportar el protocolo IP.
+- Las limitaciones de coste y ancho de banda hacen que la velocidad
+máxima de transmisión de datos en GSM sea de 9,6 Kbps.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 21 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+- La tarificación de GSM por tiempo de conexión no es la más adecuada,
+debido sobre todo a la lentitud de las conexiones.
+2.6 WAP y GSM
+El Protocolo de Aplicaciones Inalámbricas apareció en 1999 como un estándar
+internacional que permitía por primera vez el acceso desde dispositivos móviles
+a contenidos y servicios de Internet a través de conexiones inalámbricas.
+El desarrollo de este protocolo fue promovido por empresas líderes del sector
+de las comunicaciones como Nokia, Ericsson, Motorola y Unwired Planet a los
+que se unieron más de 200 empresas de todo el mundo.
+WAP es un protocolo que permite a los móviles con tecnología GSM tener acceso
+a Internet y utilizar la red. Debido a la velocidad de transmisión (9,6 Kbps) y
+al interfaz del GSM la navegación no se realiza a través de las páginas HTML,
+sino que se utiliza el formato WML, lenguaje de marcas basado en XML y que
+está diseñado exclusivamente para esta tecnología. Este formato permite optimizar
+los ficheros de datos para poder ser transmitidos por redes GSM.
+Cuando WAP apareció en 1999 todos los actores del sector de las comunicaciones
+inalámbricas profetizaron la explosión del acceso a Internet a través de teléfonos
+móviles GSM dotados de tecnología WAP, pero hasta el momento las tasas de
+penetración de esta tecnología no están teniendo los resultados esperados.
+Su salida al mercado supuso los siguientes retos para fabricantes y operadoras:
+- Crear un nicho de mercado partiendo de cero.
+- Cambiar los hábitos de navegación de los internautas, ya que la navegación
+con WAP no permitía la inclusión de gráficos, animaciones, efectos
+multimedia ni grandes volúmenes de datos.
+- Ofrecer unos servicios útiles y adaptados a las peculiaridades y limitaciones
+de los dispositivos.
+Estos retos iniciales no se han llegado a alcanzar ya que pese a ofrecer una forma
+sencilla y práctica de acceso a Internet, existen una serie de limitaciones cuando
+hablamos de WAP bajo GSM:
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 22 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+a) Tiempo de acceso real a la información muy elevado.
+b) Alto coste de utilización.
+c) No admite elementos gráficos de calidad.
+d) Aplicaciones limitadas y de escaso valor añadido para el usuario.
+Conscientes de estas limitaciones, encontramos una característica fundamental
+que supone la mayor ventaja de WAP y un cambio en las hábitos de navegación
+tradicionales: la información a la que se accede es información en estado puro.
+El usuario accede a un sitio WAP con un propósito determinado, buscando
+información puntual y desaparecen todos aquellos aspectos que no son relevantes
+para el usuario (presentaciones flash, banners publicitarios, etc.).
+Por tanto, el eje fundamental del acceso a contenidos WAP desde los dispositivos
+móviles deben ser la utilidad de la información contenida en dichos sitios.
+Este concepto no consiguió transmitirse correctamente, lo que ha llevado a
+afirmar que WAP es un protocolo que no tiene cabida dentro de los nuevos
+sistemas de transmisión emergentes. Sin embargo, es innegable que la aparición
+de WAP fue el primer paso para acceder a servicios de datos avanzados y que
+supuso una nueva vía para acceder a la información y recuperarla a través del
+móvil. Una vía que como hemos visto posee sus limitaciones pero también
+enormes posibilidades.
+De todo lo dicho anteriormente se pueden extraer tres conclusiones:
+- El concepto de WAP es válido y su aparente fracaso se debe sobre todo
+a la bajas velocidades de acceso. Pero una de las características
+determinantes de WAP es su capacidad para adaptarse a los nuevos
+estándares de transmisión de datos que van surgiendo, en concreto GPRS.
+- Por otro lado, el éxito de GSM jugará un papel relevante en el futuro
+desarrollo de servicios móviles de datos, como cimiento para la
+construcción de infraestructura y la generación de ingresos a partir de
+los existentes servicios de Internet móvil mediante WAP y SMS. Su
+capacidad de itinerancia junto a una infraestructura abierta, convierten
+a GSM en la plataforma óptima sobre la que construir las futuras estrategias
+móviles.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 23 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+- Aumentar la velocidad de 9,6 Kbps adaptando la tecnología GSM a las
+limitaciones de la banda estrecha, introduciendo la conmutación de
+paquetes en las comunicaciones móviles. Esto lleva a hablar de GPRS,
+una evolución del sistema GSM y que permitirá desarrollar nuevos
+servicios más avanzados y atractivos para el usuario y mejorar los ya
+existentes.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 24 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+3. Qué es GPRS
+El GPRS, estándar introducido por ETSI, es un sistema que viene a complementar
+al GSM, permitiendo un mejor aprovechamiento de los recursos. El concepto
+principal que rige GPRS y que lo diferencia de GSM es la orientación a la
+conmutación de paquetes frente a la conmutación de circuitos.
+3.1 Conmutación orientada a circuitos y conmutación orientada
+a paquetes
+La diferencia principal la encontramos en la utilización de los recursos de red.
+El sistema de conmutación de circuitos está pensado para llamadas de voz.
+Al efectuar una llamada se reserva un canal de comunicación entre origen y
+destino. Una vez reservado, este canal permanecerá ocupado durante todo el
+tiempo que dure la conversación. En una llamada se ocupa todo el recurso de
+la conmutación.
+Este sistema es claramente ineficaz cuando nos referimos a la transmisión de
+datos. En Internet, por ejemplo, el tráfico de datos es a "ráfagas", es decir, se
+concentra en instantes determinados, permaneciendo el canal la mayor parte del
+tiempo vacío.
+En cambio en la conmutación de paquetes el canal de transmisión se requiere
+sólo cuando existe algo que transmitir o recibir. Esta transmisión se basa en
+dividir la información en pequeñas unidades llamadas paquetes. Estos paquetes
+son divididos y enviados de forma secuencial a través de los canales disponibles,
+permitiendo que varios usuarios compartan los mismos canales.
+Todos los paquetes, al llegar a su destino, vuelven a unirse formando el fichero
+en cuestión. No existe reserva previa de canales como ocurría con la técnica de
+conmutación de circuitos, con lo cual cuando un canal no esté transmitiendo
+datos puede ser utilizado por otro terminal. Esta técnica de conmutación de
+paquetes es la empleada en las redes de datos fijas como Internet.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 25 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Una vez que un paquete ha sido transmitido por el interfaz de radio, se vuelven
+a liberar los recursos de radio para que así puedan ser utilizados por algún otro
+usuario. Por ejemplo, al acceder a una página WAP, una conexión de paquetes
+únicamente usaría los recursos cuando se estuviera bajando una página, no
+cuando se estuviera efectuando la consulta, quedando libre el canal a partir de
+ese momento.
+Las ventajas de la técnica de conmutación de paquetes son:
+1. Mejora en la eficacia del uso de recursos, teniendo en cuenta las
+limitaciones del ancho de banda.
+2. Permite tarificar por volumen de datos intercambiado en lugar de por
+tiempo de conexión.
+3. La conexión es permanente.
+3.2 Características de la tecnología GPRS
+Las características enumeradas a continuación permiten mejorar y facilitar el
+acceso a servicios de datos desde dispositivos móviles.
+1. Compatibilidad con el sistema GSM. Las redes GPRS están basadas en
+GSM, así los terminales que vayan saliendo al mercado tendrán una
+capacidad dual GSM/GPRS.
+2. Permite la utilización de voz y datos a través del móvil.
+3. Mayor velocidad de transferencia de datos: puede alcanzar, en un marco
+ideal de transmisión, velocidades máximas teóricas de 171,2 Kbps.
+4. Permite que el terminal esté siempre conectado "always on". La percepción
+por parte del usuario será que el servicio GPRS está siempre disponible
+desde que conecta su terminal, ya que GPRS facilita conexiones
+instantáneas. Esta característica permite ahorrar el tiempo de conexión
+cada vez que se requiere una información.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 26 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+5. Soporta aplicaciones más robustas. El incremento de velocidad va
+directamente unido al tipo de aplicaciones que puede soportar. La baja
+velocidad de transmisión de datos del sistema de conmutación de circuitos
+limitado con el lento tiempo de conexión y la limitada longitud de los
+mensajes SMS hacían que las soluciones de aplicaciones móviles
+resultasen funcionalmente limitadas. El número de servicios de datos
+accesibles para dispositivos GPRS será mayor que con GSM, y una vez
+estén consolidadas las redes y aumenten las velocidades de transmisión,
+permitirá desarrollar nuevas aplicaciones que antes no eran posibles en
+servicios GSM.
+6. Facturación basada en volumen de datos transferidos, en lugar de tarifas
+basadas en tiempos de conexión.
+7. Soporta el protocolo IP: GPRS define un método de acceso a redes IP.
+Estas redes utilizan la conmutación de paquetes, lo que optimiza la
+utilización del espectro de radio disponible al no ser necesario que un
+canal de radio sea utilizado para la transmisión de un punto a otro.
+Los datos son divididos por paquetes, que son enviados separadamente.
+La información viaja a través de la red hasta llegar a su destino, y es
+reconstruida ahí y presentada en su forma original. Todas las partes que
+componen los datos están relacionadas unas con las otras, pero la forma
+en cómo viajan y son reagrupadas varía. Los paquetes viajan por las
+frecuencias disponibles, lo que permite que un número elevado de
+usuarios de GPRS pueda compartir el mismo ancho de banda. Esto
+permite al sistema GSM:
+a. Proporcionar velocidades de acceso a Internet e intranets.
+b. Mejora la eficacia de la red.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 27 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Gráfico 9  Características del sistema GPRS
+Compatibilidad con el sistema GSM
+Permite la utilización de voz y datos a través del móvil
+Mayor velocidad de transferencia de datos
+Soporta el protocolo IP
+Soporta aplicaciones más robustas
+Tarificación por volumen de datos
+Fuente: Elaboración propia
+Las características de GPRS posibilitan la creación de aplicaciones más robustas.
+3.3 Limitaciones y problemas de GPRS
+Las limitaciones existentes en la red impiden que las velocidades máximas de
+GPRS puedan ser alcanzadas.
+GPRS divide las frecuencias disponibles en timeslots o espacios de tiempo. Cada
+usuario tiene asignados ocho timeslots que tienen que ser compartidos con GSM.
+En condiciones óptimas de calidad, en las que fuese necesario realizar chequeos
+de error, cada timeslot proporcionaría 21,4 Kbps, con lo que los ocho timeslots
+juntos resultarían aproximádamente 171,2 Kbps.
+Los terminales GPRS y la red han de estar preparados para el uso de un
+determinado número de timeslots. De los ocho totales, los primeros GPRS
+soportarán de dos a 4 de bajada de datos y de uno a dos de subida.
+Las condiciones reales de calidad de señal de radio exigen cuatro modalidades
+o esquemas de codificación de datos en las especificaciones GPRS, que se
+diferencian en el nivel de chequeos de error necesarios. Los esquemas mayores,
+los más veloces, son los que realizan menos chequeos, por lo que sólo pueden
+usarse en unas condiciones óptimas de calidad de señal, las cuales son casi
+inviables. El resultado es que cada timeslot en el esquema de codificación más
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 28 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+viable que es el de dos, aporta sólo 13,4 Kbps en lugar de los 21,4 que serían
+posibles en condiciones óptimas, con lo cual los teléfonos que soporten dos slots
+para subida de datos tendrán una velocidad máxima de 28,6 Kbps y los que
+soporten tres 40,2 Kbps. La velocidad de los datos es mayor en el sentido
+ascendente de la línea que en el descendente.
+Estas velocidades son a nivel de enlace de radio. A esto habría que añadir los
+diferentes datos de control que utilizan los protocolos de comunicación, así como
+la posible congestión de la red.
+Para conseguir la velocidad máxima de 172,2 Kbps una operadora debería
+destinar todos los recursos a una única llamada GPRS, pero es improbable que
+un operador de servicios permita que todos los canales de transmisión sean
+usados por un solo usuario.
+Gráfico 10  Velocidades de transmisión GSM - GPRS
+GPRS max. real                              53,8 Kbps
+GPRS inicial              26,8 Kbps
+GPRS teórico                                                                                                 171,2 Kbps
+GSM    9,6 Kbps
+0                       50                    100                    150                    200
+Fuente: Elaboración propia
+La velocidad máxima real de GPRS no superará los 56 Kbps.
+Capacidad de celda limitada: GPRS impacta en la capacidad de servicio de las
+celdas existentes. Éstas están sólo limitadas a recursos de radio que pueden ser
+desarrollados para varios usos. El uso para un propósito imposibilita el uso
+simultáneo para otro propósito distinto. Por ejemplo, la voz y las llamadas GPRS
+usan los mismos recursos de servicios. La extensión del impacto depende del
+número de canales de acceso que estén reservados en exclusiva para el uso de
+GPRS.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 29 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Retrasos en el tránsito: el protocolo IP tiene inherente un problema, esto es, el
+hecho de que los paquetes viajen por separado utilizando caminos diferentes
+puede llevar a que se pierdan o se dañen durante la transmisión de datos mediante
+el enlace de radio. El resultado es la posibilidad de un retraso en el tránsito.
+No posee mecanismos de almacenamiento: Si un e-mail es enviado a un dispositivo
+GPRS y este no está conectado el mail se quedará en el servidor de correos y
+tendrá que volver a ser enviado cuando exista conexión. Se necesita conexión
+para poder recibir la información.
+Gráfico 11  Limitaciones del sistema GPRS
+Velocidades reales inferiores a las teóricas
+Capacidad de celda limitada
+Retrasos en el tránsito
+No posee mecanismos de almacenamiento
+Fuente: Elaboración propia
+3.4 Arquitectura de la red GPRS
+La arquitectura de red de GPRS está basada fundamentalmente en GSM. Los
+principales elementos que se introducen son:
+- Dos nodos de soporte GPRS: el nodo de conmutación (SGSN) y el de
+pasarela (GGSN) cuyas misiones son complementarias. En líneas generales
+el SGSN se encargará de la gestión de la movilidad y del mantenimiento
+del enlace lógico entre móvil y red. El GGSN es el que proporciona el
+acceso a las redes de datos basadas en IP.
+- Actualización de software a nivel de BTS (Estación de transmisión).
+- Nuevo hardware en el controlador de estación (BSC). Este hardware se
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 30 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+denomina PCU (Packet Unit Control /Unidad de Control de Paquetes)
+y es la encargada de manejar la comunicación de paquetes.
+- La red troncal GPRS o backbone basado en IP.
+La función principal del Gateway GPRS Support Node (GGSN) es la de actuar
+como pasarela entre la red troncal GPRS y las redes externas como IP. El GGSN
+es el elemento principal de la infraestructura de GPRS.
+Gráfico 12  Funciones del GGSN
+Traducir los paquetes que recibe desde el SGSN al formato
+de la red externa (IP)
+Traducir las direcciones IP en la dirección del móvil destino
+Realizar la autenticación
+Llevar a cabo la  tarificación
+Fuente: Elaboración propia
+El GGSN actúa de pasarela entre la red troncal GPRS y las redes externas.
+El Serving GPRS Support Node (SGSN) se encarga de la entrega de paquetes
+desde y hacia los móviles que están dentro de su área de servicio. Tiene asociado
+un Location Register similar al VLR.
+Gráfico 13  Funciones del SGSN
+El encaminamiento y transferencia
+de paquetes de datos
+La gestión de la movilidad
+La autenticación de usuarios
+La tarificación
+Fuente: Elaboración propia
+El SGSN se encarga de la entrega de paquetes entre los móviles.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 31 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Dentro de la arquitectura GPRS,  el tunneling es el concepto clave que rige la
+transmisión. Gracias al tunneling lo importante a la hora de transmitir información
+es la dirección final de destino independientemente del medio o ruta que siga
+esta información.
+El tunneling se basa en:
+1. Encapsulado de los datos con introducción de cabeceras de direcciones
+de destino y origen.
+2. Actualización de tablas de enrutamiento existentes (tanto en el SGSN
+y el GGSN).
+3. Asignación de una dirección IP al móvil.
+3.5 Dispositivos GPRS
+Hasta hace unos meses la política de los fabricantes de móviles era sacar al
+mercado aparatos pequeños y de escaso peso donde primaba el diseño,  pero
+con la llegada de GPRS esta tendencia se va a invertir. Los servicios a los que
+se accede desde dispositivos GPRS crean la necesidad de terminales con unas
+características especiales.
+Esto conlleva un profundo replanteamiento de los tipos de terminales que
+utilizaremos para las comunicaciones móviles,  produciéndose una segmentación
+del mercado,  con la aparición de dispositivos específicamente creados para
+aplicaciones concretas.
+Irán apareciendo terminales en el mercado con las siguientes características
+generales:
+1. Pantallas de mayor tamaño.
+2. Aparición de las pantallas en color, aunque en un principio estas pantallas
+seguirán siendo monocromo, lo que conllevará la generalización de la
+navegación por iconos.
+3. Capacidad dual para manejar voz y datos.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 32 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+4. Mayor capacidad de procesamiento.
+5. Incorporación de sistemas operativos más potentes y compatibles.
+Cobra especial importancia la utilidad que el usuario va a dar al terminal: ya sea
+para aplicaciones residenciales o empresariales. En este sentido encontraríamos
+teléfonos móviles similares a los actuales que dadas sus características no serían
+los más apropiados para un uso profesional de los mismos. PDAs, teléfonos
+combinados y ordenadores portátiles serían utilizados para aplicaciones
+empresariales.
+Por lo tanto, encontramos cuatro tipos principales de terminales GPRS:
+3.5.1 Teléfonos móviles tradicionales
+Terminales similares a los actuales que dispondrán de una capacidad
+dual al estar preparados para utilizar GSM para voz y mensajes cortos
+y GPRS para transmisión de datos. Estos teléfonos móviles tendrán una
+pantalla cada vez mayor para poder aprovechar mejor los nuevos servicios
+que irán apareciendo.
+Estos teléfonos son adecuados para aplicaciones residenciales sencillas
+en las que predominan los datos y textos de pequeño como por ejemplo
+consultas de información en páginas WAP o a través de mensajes SMS,
+aunque es previsible la progresiva incorporación de un mayor número
+de elementos gráficos.
+Pueden ser utilizados como módem para que tanto PDAs como
+ordenadores portátiles se conecten a la red.
+Los teléfonos móviles son los terminales que poseen en esta etapa inicial
+GPRS incorporado. Las características de esta tecnología hacen que
+encontremos distintitos tipos de teléfonos en función del uso simultáneo
+de voz y datos y en función de la velocidad que pueden soportar.
+Dependiendo del uso simultáneo de voz y datos, podemos encontrar tres
+tipos de terminales:
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 33 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Teléfonos de clase A: pueden enviar y recibir información y hablar
+simultáneamente.
+Teléfonos de clase B: pueden trabajar con voz y datos, pero no
+simultáneamente. Las llamadas de voz tendrán prioridad sobre las
+de datos quedando estas en espera cuando se produzca una llamada
+de voz. Cuando esta finalice se reanudará la transferencia de datos
+en el punto en el que quedó cortada.
+Teléfonos de clase C: estos teléfonos sólo podrán soportar servicios
+de datos, debiendo ser ajustados manualmente para que funcionen
+en modo voz o en modo datos. Serán los terminales más sencillos
+(GPRS de gama baja).
+En cuanto a la velocidad de transmisión, esta dependerá del número de
+slots disponibles, existiendo terminales 2+1, 3+1, 4+1.
+Terminales 2+1: dos slots de bajada de datos y uno de subida, con
+velocidades aproximadas de 28,6 Kbps de bajada y 13,4 Kbps de
+subida.
+Terminales 3+1: tres slots de bajada de datos y uno de subida, con
+velocidades aproximadas de 40,2 Kbps de bajada y 13,4 Kbps de
+subida.
+Terminales 4+1: cuatro slots de bajada de datos y uno de subida, con
+velocidades aproximadas de 53,6 Kbps de bajada y 13,4 Kbps de
+subida. Es posible configurar los slots de bajada y subida disponibles.
+Si un usuario prevé un mayor volumen de datos de subida puede
+configurar un teléfono 3+1 y convertirlo en 3+2.
+En un futuro próximo estarán disponibles teléfonos 4+2.
+3.5.2 Teléfonos combinados
+Enfocados principalmente a aplicaciones profesionales o comerciales,
+cuentan con visores mas grandes y teclados alfanuméricos o pantallas
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 34 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+táctiles. Además de soportar el formato WAP, en estos dispositivos
+pueden funcionar aplicaciones ofimáticas como procesadores de textos
+u hojas de cálculo ya que incluyen sistemas operativos que en muchos
+casos son versiones simplificadas de los existentes para ordenadores de
+sobremesa. Esto los hace adecuados para gestión de equipos de trabajo,
+recepción de faxes o correo electrónico empresarial.
+3.5.3 Terminales tipo ordenador personal de mano (PDA Personal Digital
+Assistant)
+Los ordenadores de mano nacieron como simples agendas electrónicas
+donde se podían organizar citas, tareas y almacenar los contactos
+personales y profesionales. El desarrollo experimentado por estos
+dispositivos permitió incluir nuevas prestaciones como acceso a Internet
+(utilizando navegadores offline) y la inclusión progresiva de sistemas
+operativos más potentes.
+El mercado al que se dirigen los PDAs es básicamente profesional o
+empresarial, ya que es un tipo de terminal muy adecuado para aplicaciones
+de correo electrónico, gestión personal y comercial. Otra característica
+es que tienen la capacidad de presentar la información en diversos
+formatos (WAP, HTML y Windows).
+El mercado de los ordenadores de mano es uno de los que está
+experimentando mayor crecimiento. Durante el año 2000 se vendieron
+9,4 millones de PDAs y según previsiones de Gartner e IDC el número
+de terminales vendidos en 2004 se situará en 30 millones.
+La tendencia es a que estos dispositivos integren las funciones de
+procesamiento de datos y servicios de voz, con la posibilidad de realizar
+llamadas telefónicas desde el mismo PDA. En la actualidad un PDA
+puede utilizar un teléfono GPRS como módem para el acceso a Internet,
+pero irán apareciendo en el mercado PDAs con GPRS incorporado lo
+que facilitará la convergencia de voz y datos en estos dispositivos.
+Uno de los principales problemas a los que se enfrentan los PDAs es a
+la amplia gama de modelos existentes en el mercado que lleva a
+dificultades a la hora de desarrollar aplicaciones y soluciones compatibles.
+Cada fabricante saca al mercado terminales con sistemas operativos
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 35 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+propios, con el consiguiente desaprovechamiento de las posibilidades
+de intercambio de información entre estos dispositivos.
+El elevado precio de los PDAs de gama alta y su enfoque hacia usuarios
+profesionales hacen que pese a las optimistas previsiones de crecimiento,
+sus tasas de penetración no sean elevadas, sobre todo entre usuarios
+residenciales.
+3.5.4 Ordenadores portátiles
+Es otro de los mercados que se encuentra en plena expansión en detrimento
+de los clásicos PCs u ordenadores de sobremesa. Las posibilidades
+inherentes de los ordenadores portátiles se ven aumentadas al compararlos
+con la disponibilidad de comunicaciones inalámbricas a velocidades
+comparables con las líneas fijas. En un primer momento pueden utilizar
+para su conexión inalámbrica un teléfono GPRS como módem, instalando
+en el ordenador un software suministrado junto con el teléfono. Más
+adelante podrán instalar tarjetas PCMCIA con capacidades de
+comunicación wireless.
+Es un dispositivo adecuado para acceder a las aplicaciones informáticas
+de la empresa y para la transferencia de ficheros.
+Encontramos, por tanto cuatro tipos de dispositivos que se beneficiarán de la
+implantación de la tecnología GPRS, cada uno de ellos adaptado a una serie de
+servicios y aplicaciones específicos aunque en principio pueden acceder a toda
+la gama de servicios disponibles con GPRS. Debido a esta segmentación de
+terminales, cobran especial importancia el conocimiento, personalización y
+asesoramiento del cliente, para poder ofrecer a cada usuario el terminal que
+mejor se adapte a sus necesidades.
+La tendencia del mercado es hacia la integración de los distintos tipos de
+terminales, como por ejemplo teléfonos móviles + PDAs, lo que permitiría la
+utilización simultánea tanto de aplicaciones profesionales como de servicios de
+entretenimiento. Esta tendencia ya es una realidad en varios modelos recientemente
+salidos al mercado.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 36 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+3.6 Tarificación en GPRS
+Con GPRS se pasa de cobrar por tiempo de conexión a hacerlo por volumen de
+datos descargados en el terminal. Los problemas para las operadoras surgen a
+la hora de enfocar el cobro de esta información.
+La principal característica de la tarificación en GPRS es que se cobran
+exclusivamente los paquetes a nivel IP, es decir cuando se establece conexión
+con redes externas a la red GPRS, cobrándose por el tráfico en las dos direcciones,
+datos enviados por el móvil a la red y datos recibidos por el móvil desde la red.
+La tecnología de conmutación de paquetes en la que se basa esta forma de
+tarificación presenta un inconveniente, al ser los datos subdivididos en paquetes,
+estos pueden ser dañados durante la transferencia o transmitidos por error y el
+usuario tendría que volver a pagar más veces por la misma cantidad de información
+al ser necesaria una nueva transferencia. Puede ocurrir que el móvil no envíe
+un acuse de recibo al servidor correspondiente y éste reenvie dos veces el paquete
+IP solicitado. En este caso se cobrarían los dos envíos.
+Por el contrario, si los problemas de transmisión ocurren a nivel de enlace de
+radio, es decir si el usuario pasa por un túnel o se encuentra en el metro y se
+corta la transmisión, no se cobra y hay que volver a enviar los paquetes.
+Ejemplos comunes de conexión serían: realizar un FTP y descargar una página
+WAP en el dispositivo:
+a. Si se abre un ftp hacia un servidor y se descarga un fichero, se cobrará
+por los paquetes de establecimiento de sesión y por los ficheros
+descargados.
+b. Si se establece una conexión con una página WAP, se cobrará el proceso
+de descarga de ficheros que componen el sitio WAP. Una vez descargado
+en el dispositivo, no se cobra por el tiempo que el usuario esté navegando
+por el mismo.
+Hasta el momento las operadoras, no han terminado de definir sus estrategias
+de tarificación con GPRS. A pesar de esto ya están ofreciendo las primeras
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 37 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+fórmulas de cobro a sus usuarios decantándose en estos primeros momentos por
+dos vías de tarificación:
+1. Por un lado ofrecen bonos mensuales con un número determinado de
+MB. Superado ese volumen se cobraría por cada Kbyte descargado.
+2. Otra opción es ofrecer tarifas diferenciando entre mercado doméstico
+y empresarial.
+Gráfico 14 Tarifas GPRS de Amena
+Bono 5.000 pesetas mensuales                   Consumo de volumen de datos de hasta 10 MB
+Una vez consumidos los 10 MB que contiene el bono, la tarificación será de 3 ptas / Kbyte
+Fuente: Amena
+Gráfico 15  Precios orientativos de Telefónica Móviles para el servicio GPRS
+Para mercado doméstico
+Volumen de datos
+transmitidos Precio
+(en Kbyte) al mes (en pts/Kbyte)
+Hasta 1.000 4
+De 1.001 a 2.000 3
+De 2.001 a 5.000 1,5
+De 5.000 a 10.000 0,75
+Más de 10.000 0,5
+Para empresas (mínimo) Para empresas (máximo)
+Capacidad Cuota Capacidad Cuota
+contratada mensual contratada mensual
+(en Kbits/seg) en pesetas (en Kbits/seg) en pesetas
+8 8.000 384 384.000
+16 16.000 512 512.000
+32 32.000 1.000 1.024.000
+48 48.000 1.500 1.536.000
+48 48.000 2.000 2.048.000
+Fuente: Expansión
+Otra solución que fue planteada para la tarificación fue adoptar el modelo de
+cobro que la operadora japonesa NTT DoCoMo utiliza para su servicio I-mode,
+el pago por contenidos descargados en el móvil. Sin embargo esta solución
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 38 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+tampoco sería la más adecuada ya que I-mode es una red cerrada con contenidos
+creados ex-profeso (melodías, logos), por lo que sería difícil cobrar por contenidos
+en una red global como es a la que se puede acceder con GPRS, y donde el
+usuario puede acceder a un gran número de contenidos.
+La falta de conocimiento de los usuarios sobre esta nueva forma de tarificación
+es otro de los problemas a los que se enfrentan las operadoras. Más de la mitad
+de los usuarios de móviles encuestados por Havet siguen prefiriendo una forma
+de tarificación por tiempo de conexión. La falta de políticas claras de información
+acerca de GPRS puede ser el motivo de esta falta de confianza hacia la tarificación
+por volumen de datos. Hay que tener en cuenta que para los usuarios, el uso de
+GPRS supone un cambio en los hábitos de utilización de su dispositivo móvil
+e implica un aumento del gasto medio mensual.
+Gráfico 16  Formas de tarificación preferidas por los usuarios
+36% 64%
+Por tiempo de conexión/pts/min (64%)
+Por volumen de información
+recibida/pts/Kb (36%)
+Fuente: Elaboración propia
+Fruto del desconocimiento, los usuarios siguen prefiriendo la tarificación por tiempo de conexión.
+3.7 Aplicaciones y servicios con GPRS
+Las características básicas de GPRS abren las posibilidades al desarrollo de
+aplicaciones mejores, más robustas y estandarizadas, a las que será posible
+acceder de forma inmediata y desde cualquier lugar con una mejora en las
+velocidades de acceso.
+La gama de teóricas aplicaciones a las que se podría acceder desde los dispositivos
+con tecnología GPRS es muy amplia, desde aplicaciones de ocio, hasta servicios
+orientados al ámbito empresarial y profesional. Este es realmente el eje fundamental
+de la tecnología GPRS y lo que los usuarios disfrutarán: servicios de calidad.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 39 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Sin embargo, GPRS presenta una serie de limitaciones que hacen que en la
+actualidad y ante la inminente salida al mercado de estos dispositivos, no sea
+posible ofrecer toda la gama de servicios inicialmente definidos.
+No hay que olvidar que pese al aumento de velocidad que se produce con GPRS,
+ésta nunca será mayor de 50 - 56 Kbps lo que supone un frenazo para la aparición
+inmediata de aplicaciones multimedia.
+Gráfico 17  Disponibilidad de servicios de datos en función de las
+            velocidades de transmisión
+4 G
+Videoconferencial
+3G Buzón de vídeo
+                                         Subastas TV a través
+2,5 G Banca electrónica       de móvil
+    Información
+            c  o   r p  o  r  a  t i v  a    l i m   i t a  d  a                  Catálogos
+                                                          m-comerce
+                       e-mail
+2 G Voz
+                                Transmisión
+              S    M      S                                            d   e    i m   á  g  e  n  e  s      Información
+  B   u
+   
+   z
+ 
+ ó
+   
+   n
+  
+   
+ 
+ d
+  
+  e
+  
+   
+ 
+ v
+  
+  o
+  
+  z
+                                     corporativa
+                                                          R   e  s  e  r v  a  s         completa
+      2000                       2001                 2002 - 2005             2006
+9,6 - 14,4 Kbps       30 - 384 Kbps    384 Kbps - 2 Mbps
+                               Velocidad de transmisión
+Fuente: BCG
+Con GPRS aumenta el número de aplicaciones que pueden ser ofrecidas a los usuarios.
+Encontramos, por tanto, una serie de aplicaciones que pueden ser ofrecidas en
+la actualidad a usuarios que posean dispositivos GPRS y que en gran medida
+serán una evolución y mejora de los servicios ofrecidos con GSM. Estas
+aplicaciones pueden ser divididas en dos grandes categorías:
+1. Destinadas a usuarios empresariales: la mayoría de los operadores
+apuestan por los usuarios empresariales como los primeros destinatarios
+de servicios y aplicaciones GPRS, demandando accesos a Intranets, e-
+mail y aplicaciones de agenda para la organización personal.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 40
+Generaciones de telefonía móvil GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+2. Destinadas a usuarios residenciales: con una mejora de los servicios
+actualmente ofrecidos con GSM destacando la evolución de los servicios
+de mensajería y de localización.
+3.7.1 Servicios y aplicaciones iniciales sobre GPRS
+Los usuarios podrán empezar a disfrutar en los próximos meses de mayor número
+de aplicaciones.
+- Aplicaciones WAP: la salida al mercado de la versión 2.0 del protocolo
+WAP facilitará el desarrollo de sitios WAP más avanzados y de mayor
+calidad. Los usuarios disfrutarán de un acceso entre dos y cuatro veces
+más rápido con una mejora sustancial en la navegación gracias a interfaz
+y pantallas más grandes, y es presumible la aparición de una mayor
+variedad de aplicaciones.
+- Acceso a correo electrónico corporativo: Acceso desde dispositivos
+móviles al sistema de correo electrónico que la empresa tenga implantado
+como Microsoft Mail, Outlook, Outlook Express, Microsoft Exchange
+y Lotus. El usuario podrá acceder a su correo, leerlo y contestarlo,
+existiendo una notificación debe incluir unas pocas líneas del correo, así
+como los detalles del remitente, la fecha y la hora, y el asunto.
+- Acceso a intranets: La primera etapa para posibilitar a los usuarios
+mantener el contacto con su oficina es a través de un acceso vía e-mail,
+fax y mail de voz, utilizando el sistema unificado de mensajes. Acceso
+a información del directorio personal como citas, listados de
+contactos, etc.
+- Acceso a correo electrónico de Internet: siempre que se utilicen cuentas
+de correo de Internet a través de sistemas de correo estándar que cumplan
+con las normas POP3 o IMAP4. Los usuarios pueden recibir un mensaje
+corto, y acceder al texto completo del mismo a través del propio teléfono.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 41 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+- Acceso a servicios de información práctica y servicios de directorio:
+mediante el acceso a páginas WAP o mediante sistemas de mensajería
+SMS/EMS se podrá acceder a servicios de páginas amarillas, páginas
+blancas, noticias, deportes, guías de restaurantes, así como a servicios
+de ocio (sorteos, horóscopos).
+- Servicios de Banking: incluyen desde repaso de balances, movimientos
+de dinero entre cuentas, pago de facturas o alerta de descubiertos hasta
+transacciones bursátiles. Se verán beneficiadas por el aumento de la
+velocidad y por la mejora de los sistemas de seguridad proporcionados
+por GPRS y WAP.
+- Comercio electrónico: compra y reservas de entradas de cines, teatros,
+conciertos, ofertas, subastas online.
+- Acceso a servicios de Chat: posibilidad de acceder a salas de conversación
+de Internet a partir de terminales móviles. Principalmente encontraremos
+aplicaciones de Chat basadas en SMS. No estar limitados por el número
+de caracteres que se transmiten. Chats interactivos, foros, tablones de
+anuncios.
+- EMS: supone la transición desde los SMS hasta los MMS (Multimedia
+Messaging Service). EMS está basado en los estándares de SMS por lo
+que su implantación es relativamente fácil, pero permite que los mensajes
+contengan animaciones, fotos, melodías y texto con formato.
+Los mensajes EMS pueden suponer la continuación del inmenso éxito
+que han supuesto los SMS en todo el mundo. Para muchos especialistas
+serán la clave del éxito de la nueva generación de servicios de datos. El
+EMS busca adaptarse a las actuales exigencias de un mercado con un
+gran volumen de mensajes interpersonales (más de 13.000 millones de
+mensajes SMS enviados, en todo el mundo, en el año 2001 ) con un
+desembolso tecnológico mínimo para las operadoras.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 42 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Gráfico 18  Utilización del servicio SMS
+7% 58%
+34%
+Entre 1-3 al día (58%)
+Entre 4-6 al día (34%)
+Más de 7 al día (7%)
+Fuente: Elaboración propia
+De los usuarios encuestados que usan el servicio SMS, el 34% envían entre cuatro y seis
+mensajes diarios.
+Una aplicación de este nuevo estándar de mensajería estaría relacionada
+con los logos y melodías. Los usuarios tendrían la posibilidad de
+descargarlos desde Internet y reenviarlos o personalizarlos a través de
+un pequeño software que llevarán incluidos los teléfonos.
+El desarrollo y expansión de los EMS dependerá de la salida al mercado
+de terminales equipados con el software adecuado.
+- Servicios de localización: Junto con los servicios de mensajería, el
+desarrollo de los servicios de localización supone una de las grandes
+esperanzas del sector en lo que al desarrollo de servicios móviles de
+datos se refiere. Proporcionan la capacidad de enlazar servicios de
+información independientemente de la localización del usuario. Obtener
+información útil (localización de calles mediante un mapa, restaurantes
+más cercanos). Ya están funcionando en España diversos servicios de
+localización basados en GSM. Muchos de ellos se ofrecerán mediante
+servicios de localización y posicionamiento. La utilización de esta función
+permite ofrecer al usuario información práctica de los alrededores de
+donde se encuentra en ese momento, como por ejemplo, farmacias,
+estaciones de servicio o cajeros, sin necesidad de que teclee los datos
+del lugar donde está.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 43 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Gráfico 19  Conocimiento por parte de los usuarios del servicio de localización
+46% 51%
+Sí, lo utilizo (3%)
+Sí, lo conozco pero
+no lo utilizo (51%)
+No, no lo conozco (46%)
+3%
+Fuente: Elaboración propia
+Sólo el 3% de los usuarios encuestados utiliza los servicios de localización
+- Imágenes estáticas: posibilidad de recibir y visualizar fotografías,
+postales, imágenes sacadas de cámaras digitales, imágenes fijas, como
+fotografías, postales, tarjetas de saludo y presentaciones pueden ser
+enviadas y recibidas. Será posible con GPRS mandar imágenes de una
+cámara digital, conectado al dispositivo de radio de GPRS, directamente
+a Internet. Ejemplo de uso: enviar mediante el dispositivo móvil la tarjeta
+de presentación de un empleado.
+La expansión de este servicio no está sujeta tanto a las velocidades de transmisión
+como a la aparición de terminales con pequeñas cámaras digitales incorporadas.
+3.7.2 Aplicaciones a medio y largo plazo
+Las siguientes aplicaciones necesitarán de un aumento del ancho de banda para
+poder ser ofrecidas a los usuarios. Mientras llega la tercera generación de servicios
+de datos, se hace necesaria la implantación de tecnologías como EDGE para
+ofrecer dichos servicios hasta la llegada de UMTS:
+- Juegos online: gran parte de los teléfonos existentes actualmente en el
+mercado llevan incorporados por defecto sencillos juegos como una
+parte más de sus funcionalidades. Gracias a la generalización de pantallas
+en color, la tarificación de datos que permiten estar siempre online, y
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 44 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+el aumento de las velocidades, se incrementará la complejidad de dichos
+juegos, pudiendo ser descargados en el móvil y permitiendo partidas
+multijugador.
+- Transferencia de documentos/ficheros: las velocidades iniciales de
+GPRS hacen que en la actualidad no sea posible ofrecer estos servicios
+con una calidad adecuada, por ejemplo, como ocurre con accesos a FTPs.
+Aplicaciones de transferencia de ficheros abarcan cualquier modo de
+bajar datos considerables sobre la red móvil. No importa la fuente o tipo
+de fichero que se está transfiriendo. Exige un servicio de datos móvil
+de velocidad alto como EDGE o UMTS para poder ejecutarse de modo
+satisfactorio. Se pueden utilizar métodos como FTP (File Tranfer Protocol
+/Protocolo de Transferencia de Ficheros), telnet o HTTP. El problema
+principal de la transferencia de ficheros es que los terminales GPRS no
+poseen capacidad de almacenamiento por lo que estos ficheros deberían
+ser reenviados a otros dispositivos como por ejemplo ordenadores
+portátiles para permitir su almacenamiento.
+- Imágenes móviles: posibilidad de descargar y visualizar clips de vídeo,
+mensajes de vídeo y preestreno de películas. Este modo es útil para
+reuniones aunque los participantes no estén en el mismo sitio.
+- Audio: envío de ficheros de voz y sonido. Posibilidad de transmitir short
+voice clips que ocupan archivos de gran tamaño. Por ejemplo, si los
+periodistas quieren mandar información a sus estaciones de radio, un
+móvil GSM no tiene la capacidad suficiente para transmitir una calidad
+suficiente de voz.
+- Aprendizaje online: requiere de la convergencia de otras aplicaciones
+como puede ser la transferencia de ficheros, descarga de ficheros de
+audio, vídeo e imagen e incluso servicios de videoconferencia.
+- Navegación geográfica: soluciones para sugerencia de itinerarios, guías
+de carretera, búsqueda de direcciones. Estas soluciones requieren pantallas
+en color y la posibilidad de ofrecer imágenes de gran calidad. Un ejemplo
+de estos servicios sería la posibilidad de visualizar en tiempo real el
+estado del tráfico en una carretera concreta.
+- Aplicaciones empresariales complejas: la aparición de terminales con
+mayor capacidad de procesamiento, equipados con el software adecuado
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 45 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+y con mayores velocidades de acceso permitirá ofrecer soluciones
+destinadas a mejorar la productividad en áreas como la gestión de flotas,
+la gestión de equipos comerciales, acceso íntegro a intranets corporativas
+y la compartición de documentos. Esto supondrá una combinación de
+aplicaciones que incluyan voz, texto e imágenes.
+- Desarrollo de aplicaciones sectoriales: destinadas a distintos sectores
+profesionales que tradicionalmente han realizado su trabajo fuera de la
+oficina, como pueden ser visitadores médicos, veterinarios, profesores.
+- Posicionamiento de vehículo: gracias a GPRS, cualquier persona con
+un móvil GPRS puede recibir su posición vía satélite y de este modo
+descubrir donde está. Las aplicaciones de posicionamiento de vehículo
+se pueden utilizar para comunicar varios servicios, incluyendo diagnóstico
+lejano de vehículo, ad-hoc, encuentros de coches robados y nuevas tarifas
+"flotadas" de coches alquilados. El servicio SMS es ideal para mandar
+información de posicionamiento GPS.
+Es evidente que con GPRS no se podrán ofrecer muchos de los servicios
+inicialmente diseñados, pero esto no tiene por qué suponer un frenazo para su
+éxito, muy al contrario, sólo creando una base sólida de servicio y aplicaciones
+de calidad (sin necesidad de que éstos sean multimedia) se podrá dar el paso a
+la siguiente generación de servicios.
+La implantación y conocimiento de los servicios de datos con GPRS requieren
+tiempo, por parte del sector de las comunicaciones móviles a la hora de perfilar
+sus estrategias.
+Hasta ahora el gran reto que se han impuesto la mayoría de las empresas del
+sector es sacar al mercado en el menor tiempo posible servicios y aplicaciones
+multimedia. Son innegable las ventajas que estos servicios supondrían para el
+usuario, pero en la actualidad hablar de servicios multimedia reales en Europa
+es crear falsas expectativas entre los usuarios ya que con GPRS no es posible
+ofrecer estos servicios con una calidad mínima aceptable.
+Finalmente, la valoración que los usuarios hacen de los servicios de datos móviles
+actuales y futuros queda reflejada en el siguiente gráfico
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 46 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Gráfico 20  Valoración de los servicios de datos avanzados
+Valoración alta
+Valoración media
+Valoración baja
+e-mail
+noticias
+juegos
+compra y abono
+productos/servicios
+localización de
+espacios
+reseva de
+billetes/entradas
+chat
+otros
+Fuente: Elaboración propia
+E-mail y localización de espacios son los servicios más valorados por los usuarios encuestados.
+3.8 EDGE: un paso más
+Hasta el momento poco se ha hablado de EDGE , pero la comercialización de
+esta tecnología supondría un importante paso adelante, permitiendo a las
+operadoras mayores velocidades de transmisión y un amplio abanico de contenidos
+multimedia. EDGE es una tecnología que facilita a las redes GSM la capacidad
+de suministrar servicios de telefonía móvil de tercera generación basados en IP
+y a unas velocidades reales de 384 Kbps.
+EDGE utiliza una técnica de modulación de frecuencias electromagnéticas que
+junto a evoluciones en el protocolo de radio permite a los operadores usar los
+espectros de frecuencias de GSM de manera más eficiente. EDGE utiliza un
+nuevo esquema de modulación para permitir a la especificación GSM soportar
+la transmisión de datos, servicios y aplicaciones multimedia a las velocidades
+antes mencionadas. Sería utilizado junto a GPRS, permitiendo un aprovechamiento
+máximo de las ventajas inherentes de GPRS.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 47 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Para las operadoras el impacto técnico de EDGE es muy pequeño, permitiendo
+una rápida implementación de las redes. La base instalada evoluciona incluyendo
+pequeños cambios a nivel de software y hardware, pero no se reemplaza ni se
+construye desde cero.
+Las operadoras tendrían la posibilidad real de ofrecer contenidos multimedia
+antes de la llegada de UMTS (transferencia de ficheros, servicios de video, EMS,
+voz sobre Internet), lo que supondría la primera experiencia real de las operadoras
+en este tipo de servicios. Esta amplia oferta de servicios aumentaría la satisfacción
+de los usuarios favoreciendo el consumo, lo que revertiría en mayores beneficios
+para las operadoras. Para aquellas operadoras que no disponen de licencias
+UMTS sería una forma barata y rápida de ofrecer dichos contenidos multimedia.
+Para los usuarios supondría la primera experiencia de acceso a servicios multimedia
+de calidad y a un bajo coste por BIT de información transmitido, aunque implicaría
+la necesidad de adquirir nuevos dispositivos con una mayor capacidad de
+almacenamiento.
+La necesidad de implantar EDGE es real debido a que GPRS no alcanza por si
+sólo las velocidades de transmisión requeridas para ofrecer servicios multimedia
+con un nivel óptimo de calidad y en general servicios de datos de tercera
+generación. El principal problema al que se enfrenta EDGE es el tiempo y el
+comportamiento de los usuarios ante los servicios GPRS. Finales del 2001
+coincide con el lanzamiento masivo de GPRS, principalmente enfocado a usuarios
+profesionales, pero si GPRS tiene éxito y se produce la implantación en ámbitos
+residenciales, EDGE jugaría un papel secundario ya que las operadoras podrían
+esperar a UMTS para comenzar a ofrecer servicios multimedia.
+3.9 Publicidad con GPRS
+La publicidad móvil es otro de los mercados que se verá beneficiado con la
+llegada de GPRS, permitiendo a las empresas una nueva forma de comunicación
+directa con el cliente, pudiendo ofrecerle en todo momento información actualizada
+y precisa de sus productos y servicios.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 48 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Los principales problemas a los que se enfrenta la publicidad móvil son:
+1. Usuarios remisos a verse inundados de publicidad.
+2. Cuándo y dónde será enviada esa información publicitaria.
+3. En qué formato se hará: vía WAP o mediante sistemas de mensajería.
+Varias encuestas realizadas por ARC Group , Windewire y Strategy Analystics
+respectivamente coinciden en afirmar que las mayores preocupaciones de los
+usuarios son la invasión de la privacidad y su envío indiscriminado.
+En este sentido la encuesta realizada por Havet indica que el sólo el 31% de los
+encuestados estaría dispuesto a recibir mensajes publicitarios en su móvil,
+aumentando esta cifra hasta el 56% si se obtuviese algún beneficio económico
+a cambio.
+Esta desconfianza por parte de los usuarios está llevando a un lento crecimiento
+de este mercado pese a las optimistas perspectivas de crecimiento que indican
+que en el 2005 los ingresos por publicidad inalámbrica podrían suponer el 33%
+de los obtenidos por las operadoras.
+Los pilares en los que se debe basar la publicidad inalámbrica:
+1. Desarrollo de estándares publicitarios tanto para SMS como para WAP.
+2. Personalización: conocimiento de los usuarios pudiendo ofrecerles en
+todo momento información adaptada a sus hobbys y necesidades.
+3. Consentimiento por parte del usuario: el recibir una serie de mensajes
+publicitarios cuando un usuario accede, por ejemplo, a un centro comercial,
+es útil siempre y cuando haya dado su autorización. El envío
+indiscriminado de publicidad supondría un rechazo por parte de los
+usuarios.
+4. Compensaciones como abaratamiento de los servicios.
+5. Protección de la privacidad del usuario.
+6. Interactividad con el cliente: existiendo la posibilidad inmediata de
+responder al mensaje o información recibido.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 49 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+3.10 WAP sobre GPRS
+Durante los últimos meses se han generalizado los comentarios que vaticinaban
+la "muerte de WAP" ante la inminente llegada de la tecnología GPRS o que
+afirmaban que GPRS sustituiría a WAP. Estas afirmaciones no son correctas por
+varias razones.
+En primer lugar WAP y GPRS son conceptos distintos. WAP es un protocolo
+que facilita el acceso a Internet a través de dispositivos móviles y una herramienta
+que permite a los desarrolladores la creación de aplicaciones. GPRS es un sistema
+de transmisión, que como hemos visto está basado en el actual GSM.
+WAP es totalmente independiente de la tecnología de acceso. A medida que la
+tecnología vaya evolucionando, irán desarrollándose nuevos servicios. Esto lleva
+a afirmar que la implantación de GPRS beneficiará a WAP y se convertirá en
+un elemento indispensable para su éxito.
+Con GPRS, el tiempo de establecimiento de conexión desaparece, además el
+paso de una página a la siguiente de un teléfono WAP lleva un tiempo similar
+al del HTML de un ordenador conectado a Internet vía módem. La cantidad de
+datos transferidos en estos dos casos es distinta, pero la información útil puede
+considerarse comparable, siendo la obtención de información vía WAP
+prácticamente inmediata.
+3.11 Hacia la estandarización
+La falta de estandarización, tanto de dispositivos como de aplicaciones, ha sido
+uno de los principales problemas que han impedido el despegue definitivo de
+los servicios avanzados de datos.
+La gran variedad de terminales en el sector con distintas versiones de WAP
+llevaba a los desarrolladores a crear aplicaciones sabiendo que no serían accesibles
+desde determinados dispositivos. La percepción por parte del usuario final era
+que, desde su terminal, no podía acceder a la totalidad de sitios WAP disponibles.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 50 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Un reciente estudio realizado en julio de 2001 por la consultora Argogroup en
+el que se analizaron 1.813 sitios WAP indica que casi la mitad de estas aplicaciones
+WAP no funcionaban en ningún teléfono, dejando patentes los problemas de
+interoperabilidad. Los resultados de este estudio también reflejaban un elevado
+aumento de la calidad de los servicios, aumento que se ve frenado por la gran
+variedad de terminales existentes en el mercado y el esfuerzo a realizar por parte
+de desarrolladores para crear aplicaciones que funcionen en tan variado número
+de aparatos.
+En este sentido están surgiendo iniciativas encaminadas a evitar la fragmentación
+del mercado y facilitar la creación de contenidos para Internet móvil independientes
+de los distintos tipos de terminales.
+Entre estas iniciativas destaca,  "M-services", creada por la GSM Association
+y apoyada por empresas como vodafone, Telefónica Móviles, Orange, Telekom,
+Telecom, Italia Mobile, Alcatel, Ericsson, Motorola, Nokia, Sagem, Samsung
+y Siemens entre otras, cuyo principal objetivo es definir una serie de estándares
+tanto en los dispositivos como en las aplicaciones que permita un rápido desarrollo
+de GPRS.
+En agosto de 2001 apareció la versión 2.0 del protocolo WAP, con el objetivo
+de facilitar el desarrollo de contenidos móviles estandarizados y que tengan
+mayor interactividad, mejorando la navegación desde dispositivos móviles.
+La clave de este protocolo es la elección de XHTML, que como lenguaje estándar
+facilitará a los desarrolladores la creación de aplicaciones WAP. Así WAP 2.0
+soporta animación, flujos de audio y vídeo, y descargas de ficheros musicales,
+pudiendo reproducir gráficos en color y pudiendo proporcionar información
+basada en la localización del usuario. WAP 2.0, además, mejora los niveles de
+seguridad de las versiones anteriores.
+WAP 2.0 ha recibido el apoyo de fabricantes de móviles como Ericsson, Nokia
+y Motorola, que se han comprometido ha desarrollar productos y contenidos
+basados en este nuevo estándar.
+La estandarización resultará beneficiosa para:
+1. Desarrolladores: podrán crear aplicaciones que funcionen en toda la
+gama de terminales existentes.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 51 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+2. Operadoras: sus servicios serán accesibles a un mayor número de usuarios,
+con la consiguiente generación de beneficios.
+3. Fabricantes: evitarán la fragmentación del mercado, fabricando terminales
+que puedan soportar un amplio número de aplicaciones.
+4. Usuarios: Podrán disfrutar de una amplia gama de servicios
+independientemente del terminal utilizado.
+3.12 Los usuarios ante GPRS
+Es una de las grandes incógnitas del sector, ¿cómo reaccionarán los usuarios
+ante la llegada de GPRS? Las grandes operadoras españolas están preparando
+el lanzamiento de las primeras campañas comerciales para este otoño con el
+objetivo de hacer que la comercialización masiva coincida con la campaña
+navideña del año 2001.
+Pero estas primeras campañas pueden adolecer de algo esencial: objetividad.
+Una objetividad necesaria para informar de lo que se puede o no se puede hacer
+con la tecnología GPRS. Los usuarios corren el riesgo de encontrarse con una
+tecnología que no conocen y sin saber qué uso dar a los servicios que ofrece.
+Otro punto importante es saber a qué público potencial irán dirigidas estas
+campañas. Hay que recordar que las primeras campañas comerciales de WAP
+fueron enfocadas para un público residencial, en cambio ahora las operadoras
+podrían enfocar sus primeras campañas a usuarios empresariales por diferentes
+motivos:
+1. Aunque la forma de tarificación por volumen de datos es más adecuada
+y flexible que por tiempo de conexión, inicialmente pueden resultar caras
+para los usuarios residenciales.
+2. Herramientas de gestión personal como acceso a intranets y sistemas de
+mensajería unificados (acceso a correo electrónico empresarial y
+notificaciones mediante SMS) son aplicaciones que pueden generar un
+alto valor añadido en un corto periodo de tiempo.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 52 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+3. Las empresas son una base idónea para probar el funcionamiento de los
+nuevos dispositivos y aplicaciones.
+Los datos de la encuesta realizada por Havet en este aspecto son muy significativos:
+un 71% de los encuestados no sabe lo que significa GPRS, de los cuales un 63%
+pensaba que faltaba información al respecto. Para un 34% el desconocimiento
+de esta tecnología era fruto de una falta de interés personal. Esto supone un
+conjunto bastante representativo que en un principio no querría utilizar GPRS.
+Es también evidente que hasta ahora no se han realizado campañas de información
+adecuadas para dar a conocer GPRS.
+Como se observa en el siguiente gráfico, un 82% de los encuestados opina que
+haría falta más información al respecto, considerando que las operadoras de
+telecomunicaciones son el medio más adecuado para ofrecer dicha información.
+Gráfico 21  Necesidad de más información sobre GPRS
+18% 82%
+Si (82%)
+No (18%)
+Fuente: Elaboración propia
+El lanzamiento de esta nueva tecnología implica variar los hábitos de conducta
+de los usuarios mediante una serie de acciones:
+- Realización de soluciones técnicas sencillas: Aplicaciones fáciles e
+intuitivas adaptadas a las velocidades de transmisión. Aplicaciones
+complejas y de gran peso pueden volver a suponer una experiencia
+frustrante al usuario. Las velocidades en GPRS, pese a aumentar no se
+pueden comparar en la actualidad con las de un ordenador de sobremesa.
+- Implantación progresiva: Los usuarios empresariales serán los primeros
+beneficiados por estas aplicaciones. Posteriormente usuarios residenciales,
+lo que implica sacar al mercado teléfonos y servicios más baratos. Intentar
+conseguir desde el primer momento un gran número de usuarios
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 53 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+residenciales puede suponer una saturación de las redes con la consiguiente
+disminución de la calidad del servicio.
+- Volver a educar a los usuarios: estamos hablando de nuevas formas de
+consultar y acceder a la información. Las operadoras deberían adaptar
+los servicios de atención al cliente, acostumbrados a vender voz y datos.
+- Tendencia a la personalización: conocimiento de los usuarios a los que
+van dirigidos para poder efectuar una segmentación de los grupos de
+usuarios, desarrollando aplicaciones a medida claramente diferenciadas.
+- Favorecer el aumento del ARPU: la implantación de GPRS conlleva un
+aumento del gasto. Al gasto por los servicios de voz habrá que añadirle
+los derivados de los servicios de datos suministrados por GPRS. Si el
+gasto medio de un usuario español de telefonía móvil se sitúa en la
+actualidad entre las 6.000 - 7.000 pesetas los servicios GRPS supondrán
+un aumento mínimo de 5.000 pesetas (Por ejemplo los bonos de Amena).
+Un usuario de GPRS podría aumentar más del doble su tarifa mensual
+por lo que se podría llegar a un ARPU de 12.000 - 13.000 pesetas
+mensuales.
+- Favorecer contratos frente a tarjetas prepago (mayores oportunidades de
+ofrecer servicios personalizados con un alto valor añadido). En España
+predominan las tarjetas prepago sobre los contratos, por lo que las
+operadoras deberían realizar un esfuerzo por invertir esta tendencia.
+Gráfico 22  Formas de pago preferidas por los usuarios para GPRS
+48%
+Prepago/tarjeta (52%)
+Postpago/contrato (48%)
+52%
+Fuente: Elaboración propia
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 54 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+4. M-commerce
+4.1 Qué es m-commerce
+Como viene siendo habitual, los términos que surgen para denominar las nuevas
+tecnologías y sus aplicaciones tienen en su nacimiento unas connotaciones
+generalmente confusas, hasta que el término se va asociando específicamente
+con lo que se desea designar.
+Con el neologismo m-commerce nos encontramos ante esta misma situación
+repetida en tantas ocasiones. Su utilización inadecuada nos hace presenciar
+artículos en los que se denomina de esta forma al acceso a Internet a través de
+dispositivos móviles, las posibilidades de acceder a una intranet desde un móvil
+o a cualquier otra aplicación del mercado de las aplicaciones móviles. Pero
+resulta de gran importancia ser riguroso en la elección del concepto y su
+significado para centrarnos en sus posibilidades reales.
+Así, se entiende por m-commerce (mobile commerce) el comercio electrónico
+móvil. Esto es, la posibilidad de realizar transacciones comerciales a través de
+un dispositivo móvil. En este proceso de comercio móvil están o pueden estar
+incluidos todos los pasos de una transacción comercial. En este proceso, es el
+pago el que presenta más problemas y el que genera  más quebraderos de cabeza
+en el objetivo por garantizar transacciones seguras y fiables.
+En este contexto, y en la lucha por sacar adelante una tecnología que promete
+mucho, se suceden las alianzas para homogeneizar las tecnologías y ofrecer
+servicios que cumplan con la calidad esperada.
+Según la consultora KPMG, se prevé que en 2004 se sustituirán buena parte de
+los pagos en efectivo, los teléfonos incluirán diferentes divisas, se podrán realizar
+operaciones como cargar las nóminas, y todo una abanico de servicios financieros
+como compra y venta de valores.
+Según estas previsiones, en pocos años podremos salir de casa provistos sólo
+de un dispositivo móvil con el que podremos efectuar todo tipo de pagos y
+micropagos.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 56 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+4.2 Cómo funciona m-commerce
+Su funcionamiento técnico es muy sencillo. La complejidad mayor de las
+tecnologías m-commerce radica actualmente en el número y variedad de actores
+implicados en el sistema.
+La situación actual, en la que el m-commerce se encuentra, es si cabe más
+compleja, ya que las funciones de estos actores, debido precisamente a este
+incipiente nacimiento de la tecnología, no están claramente definidas. Nos
+encontramos en una situación del mercado en la que se juntan muchos intereses.
+Fabricantes, operadores y agentes de pago (habitualmente bancos) compiten por
+situarse en el nuevo mercado.
+El método de pago es el requisito esencial para el despegue del m-commerce.
+En este sentido, un sistema de pago debe reunir los siguientes requisitos:
+- Ofrecer fiabilidad.
+- Generar confianza.
+- Facilidad de uso.
+- No resultar costoso.
+El desarrollo de sistemas de pago a través del móvil cambiará el concepto
+tradicional del teléfono como elemento únicamente de comunicación. Este
+cambio se producirá si la industria de las comunicaciones y la de los ordenadores
+establece una política coherente de alianzas para trabajar en este proceso de
+integración, como es el caso de Bluetooth.
+Permanecen latentes, sin embargo, posibles problemas de interoperabilidad y
+de fragmentación del mercado, que pueden frenar el desarrollo tanto de la
+tecnología como del uso de los dispositivos para efectuar pagos.
+Los  actores implicados en un proceso m-commerce son:
+- Fabricantes de equipos: la definición del tipo de implicación de los
+fabricantes en este proceso es quizá la más claramente delimitada. De
+momento, no han hecho incursiones en el ámbito de los demás actores.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 57 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+- Operadoras: aparece la nueva figura de las operadoras como únicos
+responsables del sistema de pago. Pueden acometer técnicamente sobre
+la base de los conocimientos y experiencia de sus servicios; pero tienen
+un punto débil, el tema estrictamente bancario: gestión de tarjetas, cash-
+flow, churn: frecuente cambio de usuarios de un operador a otro. Las
+operadoras de telefonía han sido, hasta el momento, las que han intentado
+abarcar otras funciones dentro de proceso de la tecnología de m-commerce,
+pudiéndose erigir tanto en socios como en competidores de los bancos
+en el proyecto del pago.
+- Reguladores: son los elementos de protección del usuario (en algunos
+casos los gobiernos). Para que los operadores móviles implementen sus
+estrategias de pago electrónico, en términos de que la tarjeta prepago
+pueda ser aceptada en otros lugares distintos del emisor, tienen que
+acogerse a la directiva europea EMI (Electronic Money Institution)
+Tambien existe la necesidad de creación de grupos de trabajo
+multidisciplinar para articular una normativa común al respecto.
+- Proveedores de servicios de entidades financieras: aparecen nuevas
+figuras frente a la tradicional del banco ante la creación de sistemas que
+permitan la transacción bancaria de pago en redes inalámbricas.
+Actualmente, la gran mayoría de los sistemas de pago m-commerce que
+existen en el mercado, corresponden a alianzas entre entidades financieras
+y operadores móviles.
+- Comercios: es fundamental que tanto los grandes como los pequeños
+comerciantes comiencen adaptar sus negocios para permitir los pagos
+a través del móvil, incluidos los micropagos, como pueden ser la compra
+de un periódico o de un refresco. Sin esta adaptación serían inútiles los
+esfuerzos realizados por los demás agentes. En cuanto al funcionamiento,
+es muy sencillo. El usuario simplemente necesita un teléfono móvil con
+código personal (PIN), y dependiendo de la plataforma de pago que
+utilice, se cargarán las transacciones realizadas a la tarjeta bancaria o
+directamente a la tarjeta telefónica. Ni siquiera hace falta que el teléfono
+tenga WAP, basta con el intercambio de SMS.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 58 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Gráfico 23  Funcionamiento básico de una transacción móvil
+3 consentimiento
+usuario comercio operador
+1 compra                              2 nº teléfono
+4 confirmación
+Fuente: Elaboración propia
+Los sistemas de seguridad se implementan en el terminal móvil y en la propia
+red; pero se enfrentan a una serie de inconvenientes:
+- Terminales pequeños.
+- Potencia de procesamiento limitado.
+- Baterías de vida limitada.
+Estas limitaciones de los terminales impiden que se puedan adaptar de forma
+inmediata a las diferentes tecnologías de criptografía. Será necesario desarrollar
+nuevos sistemas de encriptación especialmente adaptados a este entorno
+inalámbrico. La tecnología criptográfica que aparece con mejores perspectivas
+para el entorno m-commerce es ECC (Eliptic Curve Criptography).
+ECC se describe como una técnica de clave pública basada en la utilización de
+logaritmos y en un conjunto de números situados en una curva elíptica. Puede
+convertirse pronto en un estándar para los terminales móviles, ya que estos no
+requieren tamaños de clave muy grandes, y necesitan menos tiempo para el
+proceso de encriptación.
+Los sistemas de encriptación de m-commerce, además de presentar importantes
+prestaciones en términos de propiedades tecnológicas, tendrán que poder adaptarse
+a un entorno que se va a caracterizar por ser heterogéneo: buenas prestaciones
+en cuanto a interoperabilidad.
+El mecanismo de seguridad viene dado en estos momentos por WIM que identifica
+al comprador y que se suma al SIM que identifica al abonado y que se está
+utilizando habitualmente en los sistemas GSM. WIM es más avanzado ya que
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 59 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+además incluye un certificado digital que le permite firmar mediante un sistema
+de clave pública.
+4.3 Ventajas del m-commerce
+Las principales ventajas que presenta el comercio móvil son:
+- Confidencialidad y seguridad: El número de cuenta / tarjeta nunca es
+conocido por el comerciante  ni "viaja" a través de Internet, sino a través
+de la red GSM (de móviles). Se puede generar un alias numérico, de
+forma que el comerciante tampoco conozca el número de teléfono del
+usuario. Se utiliza el propio teléfono para identificar al titular y se
+confirma la transacción a través de un número secreto diferente al
+utilizado para activar el dispositivo.
+- Rapidez: la transacción es instantánea recibiendo tanto compradores
+como vendedores la confirmación de la transacción de manera inmediata.
+- Versatilidad: permite al cliente elegir la forma de pago más adecuada a
+sus necesidades. Cuenta corriente, tarjetas de crédito o con cargo a los
+recibos telefónicos y tarjetas de pago en el caso de que el usuario no
+esté interesado en facilitar sus datos bancarios.
+- Unifica pagos offline y online.
+El fin de este sistema es la sustitución de la tarjeta de crédito por el teléfono, y
+que las tarjetas de pago, tal como hoy se conocen, desaparezcan o se integren
+con la SIM del móvil.
+A pesar de estas ventajas, tanto usuarios como comercios siguen sin percibir los
+beneficios que podría reportarles utilizar estos medios de pago, debido sobre
+todo a la amplia implantación de métodos tradicionales como las tarjetas de
+crédito.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 60 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+4.4 Situación actual del m-commerce: soluciones y perspectivas
+Las posibilidades de futuro en lo que se refiere al pago por móvil son grandes
+en segmentos de mercado donde no se han instalado sistemas de pago tradicionales:
+comercios sin TPV, clientes jóvenes con móvil, pagos menores en determinadas
+profesiones (fontaneros, etc.), telecompras (pizzas, taxis, periódicos, etc.).
+El m-commerce se encuentra todavía en una fase embrionaria, pero el número
+de  móviles WAP en el mercado va en aumento al igual que los servicios que
+ofrecen dichos dispositivos y que irán encaminándose, cada vez más, hacia la
+personalización de contenidos.
+Sin embargo está teniendo unos comienzos difíciles. En enero de 2001 sólo el
+12% de los usuarios de telefonía móvil tenían previsto realizar compras a través
+de sus dispositivos, y sólo el 1% había efectuado compras a través de sus
+dispositivos, siendo Japón, con un 5%, el país que mayor porcentaje de
+transacciones presentaba a principios de 2001.
+En este contexto, las previsiones de mercado no son todavía muy optimistas.
+Menos de cuatro billones de compras y viajes serán realizados desde teléfonos
+móviles en Estados Unidos en 2006, lo cual representa menos del 2% de todas
+las transacciones online según Jupiter Media Metrix (JMM).
+Las posibles causas de la lenta adopción del m-commerce son:
+- Tecnológicas: los dispositivos inalámbricos son aún limitados y las redes
+no han alcanzado la velocidad esperada.
+- Usuarios: para JMM la razón principal es que los consumidores no tienen
+hábito de uso y no han convertido en una prioridad la compra a través
+de dispositivos móviles.
+La clave del éxito del comercio móvil está en la influencia sobre los usuarios
+de móviles con oportunas promociones y servicios basados en localización que
+lleguen hasta sus dispositivos inalámbricos.
+Los comerciantes que piensen que la adopción de m-commerce va a seguir
+patrones similares al e-commerce están muy equivocados. De acuerdo con JMM,
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 61 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+el comercio móvil va a estar dominado por el deseo de gratificación instantánea,
+lo cual ha constituido la rápida adopción del comercio online. Por lo tanto, los
+ingresos derivados del comercio móvil van a estar caracterizados por el tiempo
+que se ahorra en las compras.
+Surge la necesidad de crear un bien suficientemente atractivo, en la mayoría de
+los casos intangibles, para que el cliente se sienta motivado a pagar por su uso.
+Si a ello añadimos la facilidad de ofrecer al cliente un método de pago seguro
+y sobre todo sencillo, encontraremos las condiciones idóneas para construir
+proyectos transaccionales sobre una nueva plataforma.
+GPRS ayudará al despegue definitivo de este mercado en la medida que el uso
+de los nuevos servicios que proporciona, conjuntamente con las mejoras de
+velocidad y seguridad creará en los usuarios la necesidad de experimentar nuevas
+formas de interacción con sus dispositivos móviles.
+El m-commerce no es una excepción en el universo de las nuevas aplicaciones
+que irán surgiendo. Al igual que estas, necesitará tiempo para ser conocido y
+apreciado por los usuarios. Personalización, localización y familiaridad en el
+uso son ventajas con las que cuentan los servicios por móvil, y aseguran el
+triunfo de los celulares como dispositivo de consumo.
+Todo esto, teniendo en cuenta que los agentes implicados en el mercado establezcan
+las alianzas adecuadas y encaminen sus estrategias para conseguir plataformas
+y sistemas de pago estandarizadas que puedan ser utilizadas por el mayor número
+de usuarios.
+4.5 Iniciativas
+Los primeros iniciativas emprendidas por los distintos agentes implicados en el
+desarrollo de este mercado indican que se están adoptando las estrategias
+adecuadas para el despegue definitivo del sector.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 62 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+A modo ilustrativo destacamos Movilpay, Paybox y MeT.
+- Movilpay: Fruto de la unión de dos proyectos: Movilpago y Pagomóvil
+y tiene como objetivo crear una plataforma de pago estandarizada que
+contribuya al éxito del comercio móvil.
+Gráfico 24  Iniciativa MovilPay para m-commerce
+Iniciativa Movilpago Iniciativa Pagomovil
+BBVA BSCH
+Teléfonos Móviles Airtel
+Amena
+Iniciativa Movilpago
+Todas aquellas entidades  interesadas
+Banco Popular
+Banco Sabadell
+Caja Madrid
+Banesto
+Fuente: Elaboración propia
+La iniciativa Movilpay está abierta a todas aquellas entidades interesadas.
+- Paybox: Iniciativa alemana que comenzó a funcionar en el 2000 y que
+llegó a España en el 2001.
+El valor diferencial de Paybox, sustentada por una entidad bancaria,
+radica en su independencia.  Cualquier usuario de móvil con una cuenta
+bancaria o tarjeta, proceda de la entidad que proceda, puede utilizar
+Paybox por menos de 850 pesetas al año (5 euros).
+- MeT: En el ámbito de la seguridad en las transacciones destaca MeT.
+Labor conjunta iniciada por los fabricantes Ericsson, Motorola, Nokia,
+Panasonic, Siemens y Sony para la integración de la seguridad en los
+teléfonos móviles, encaminada hacia el desarrollo de un marco común
+para el desarrollo del sector.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 63 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+5. Evolución del sector de las comunicaciones móviles
+La información barajada en los últimos meses indica que el mercado de datos
+móviles moverá en el año 2010, alrededor de 110 billones de dólares. Según el
+Grupo ARC, para el 2005 habrá 1,.200 millones de usuarios de datos móviles.
+Es importante tener en cuenta que a pesar de que todo parece indicar que GPRS
+y 3G están destinadas a tener el mismo éxito que GSM, el marco de condiciones
+para su desarrollo será muy diferente, y los modelos de negocio desarrollados
+para GSM no serán aplicables para las próximas generaciones.
+Sin embargo, la situación actual de crisis e incertidumbre que vive la economía
+mundial, hace que tanto operadores como fabricantes estén más preocupados
+por controlar sus gastos, reduciendo inversiones y efectuando reestructuraciones
+de plantillas.
+Pese a los repetidos anuncios del inminente lanzamiento de campañas comerciales
+de GPRS, un peligroso silencio invade un sector que mira con preocupación la
+evolución bursátil y los evidentes síntomas de recesión que se están dando en
+el motor de la economía mundial, Estados Unidos.
+Durlacher refleja perfectamente en este gráfico la situación actual en la que se
+encuentra el negocio de los servicios móviles.
+Gráfico 25  Situación actual del negocio de los Servicios de datos móviles
+desencanto realidad
+de
+negocio
+crecimiento
+situación
+actual
+crecimiento
+realismo
+1998          1999          2000          2001          2002          2003          2004
+Años
+Fuente: Durlacher
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 64 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Durante los años 1999 y 2000, y después del crecimiento del sector de las
+telecomunicaciones, fruto del éxito de GSM, se crearon unas expectativas
+exageradas con respecto al negocio de los datos a través del móvil. El punto de
+inflexión se produjo durante 2001, cuando quedó de manifiesto que GSM no
+era el sistema más adecuado para ofrecer servicios de datos.
+Ahora, es el momento de que los principales agentes del sector se planteen
+realmente qué se puede y qué no se puede hacer con los servicios de datos y que
+comiencen a diseñar estrategias al respecto.
+Este es el escenario actual del sector de las comunicaciones móviles. Intentando
+dejar a un lado la evolución económica, y dados los índices de penetración
+actuales, la telefonía móvil por la voz va a crecer muy poco. Con la llegada de
+GPRS, puede comenzar una nueva época donde los móviles van a tener muchas
+más utilidades y hace falta la colaboración de todos los actores del sector para
+que el nuevo ciclo que comienza tenga tanto éxito como el anterior.
+El nuevo escenario emergente va a permitir redefinir el modelo de ingresos de
+las operadoras de telefonía móvil, de tal forma que las nuevas oportunidades de
+negocio se van a centrar en mayor medida en los negocios basados en datos que
+en la voz.
+5.1 Un nuevo negocio para operadoras y fabricantes
+La consultora británica Ovum ha estimado que un operador GSM puede desarrollar
+GPRS a través de su sistemas con un coste aproximado de 225 millones de
+dólares, utilizando el espectro existente y las licencias. Esto ofrece a los operadores,
+ante el retraso de UMTS, la oportunidad de comenzar a ofrecer servicios de
+datos avanzados y empezar a recuperar parte de las costosas inversiones realizadas.
+Este es el objetivo principal de los operadores, afrontar correctamente la llegada
+de GPRS con el fin de obtener los beneficios de la comunicación móvil de datos,
+y satisfacer las necesidades de unos usuarios deseosos de acceder y disfrutar de
+este tipo de servicios.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 65 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+GPRS supone una gran oportunidad para crear servicios de calidad y mejorar
+la imagen comercial; pero operadores y fabricantes, como actores tradicionales
+y consolidados del sector de las telecomunicaciones, no tienen ninguna referencia
+de cómo van a ser los primeros servicios de datos.
+La única referencia válida a este respecto es el servicio I-mode de la operadora
+japonesa NTT DoCoMo. Puede no ser una referencia válida, debido a las
+diferencias culturales y sociales existentes entre Japón y Europa. I-mode conforma
+un espacio cerrado de servicios, muy alejado del acceso universal que se pretende
+conseguir en Europa con Internet móvil.
+A pesar del éxito de I-mode, en Havet creemos que la apuesta realizada por las
+operadoras europeas es más ambiciosa que la japonesa, aunque presenta más
+riesgos. I-mode puede servir para demostrar que con una estrategia adecuada es
+posible el éxito de los servicios de datos en el móvil, incluso con unas velocidades
+muy bajas; pero Europa y Estado Unidos tendrán que crear su propia forma de
+hacer negocio y generar beneficios.
+Jorge Moreno, de Telefónica Móviles España, señala en declaraciones a
+Cinco Días "hasta ahora las operadoras manejábamos todos los hilos de los
+servicios móviles, pero esto ha cambiado. En el mundo que se abre de aplicaciones
+móviles, el número de servicios va a crecer muchísimo y se van a verticalizar.
+Surgirán nuevos actores. No podemos, ni sería sano, intentar tener todos los
+eslabones de la cadena de valor, que es muy larga".
+Por su parte, Miguel Ángel Rodríguez Palma, responsable de aplicaciones de
+Ericsson en España afirma: "los fabricantes de teléfonos y las operadoras sabemos
+mucho de voz, de cómo es una conversación, pero no sabemos de comercio
+electrónico, de juegos, de banca..."
+En este nuevo contexto, cobra un valor fundamental el papel de operadores y
+fabricantes, impulsando y ayudando financieramente a las nuevas empresas que
+vayan surgiendo con ideas buenas que añadan valor al móvil.
+Fruto de las características intrínsecas de los servicios de datos, se está produciendo
+un aumento del número de actores implicados en el negocio de las comunicaciones
+móviles. Pasamos de un mercado dominado por tres agentes, a otro muy distinto
+en el que aparecen nuevas figuras y cambian los roles de los tradicionales.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 66 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Gráfico 26  Nuevos actores en el sector de las comunicaciones móviles
+Negocio dominado por los servicios de voz Negocio dominado por los servicios de datos
+Negocio tradicional: actores Negocio datos: actores
+- Fabricantes de terminales - Industria de terminales
+- Fabricantes de infraestructura - Industria de la telefonía móvil
+- Operadores - Industria de plataformas de servicios
+- Operadores como proveedores de
+  servicios avanzados
+- Integradores de sistemas
+- Desarrolladores de aplicaciones
+- Integradores de contenidos
+- Proveedores de contenido
+Fuente: Elaboración propia
+Un negocio basado en los servicios de datos implica la aparición de nuevos actores.
+El valor fundamental de este nuevo mercado emergente son los servicios y las
+aplicaciones. En este sentido, operadores y fabricantes deberán enfocar sus
+estrategias a buscar y ofrecer aplicaciones que:
+1. Incentiven la compra de más terminales.
+2. Aumenten el tráfico telefónico.
+Precisamente, ahí será donde se fundamenten las estrategias de diferenciación
+de las distintas compañías, construyendo su ventaja competitiva sobre la diversidad
+y calidad de los distintos servicios suministrados.
+Durlacher y Arthur Andersen identifican claramente la nueva cadena de valor
+en el negocio de las comunicaciones móviles:
+1. Suministradores de plataformas tecnológicas (Windows CE, PalmOs,
+EPOC, Symbian).
+2. Suministradores de infraestructura (de equipos) (Motorola, Ericsson,
+siemens, Nokia y Lucent Technologies): GPRS, EDGE, UMTS...
+3. Suministradores de plataformas para las aplicaciones.
+4. Desarrolladores de aplicaciones basadas en las plataformas tecnológicas
+existentes y que funcionen en la infraestructura montada.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 67 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+5. Proveedores de contenidos: usando distintos canales de distribución
+para sus productos.
+6. Agregadores de contenidos.
+Las operadoras, pese al desconocimiento que tienen con respecto a la mejor
+manera de ofrecer servicios de datos, son las que proporcionan el acceso al
+medio, y conocen mejor que ningún otro el perfil de sus clientes, por lo que
+seguirán jugando un papel fundamental en este nuevo mercado:
+1. Son la llave de paso al amplio abanico de servicios y contenidos previsto.
+2. Disponen de una amplia base de clientes.
+3. Tienen la capacidad de facturar por servicios.
+4. Puertas entre redes móviles e Internet.
+5. Sistemas de facturación y de cuentas.
+6. Control de terminales y redes móviles.
+5.2 Líneas generales de actuación
+Estamos asistiendo a la formación de un incipiente mercado, fruto de la fusión
+de laindustria de las telecomunicaciones inalámbricas y la de Internet, que
+modificará las estrategias actuales de negocio, produciéndose una progresiva
+migración de los servicios de voz a los de datos.
+El proceso para desarrollar soluciones móviles es complejo. Un solo agente no
+puede realizar todo el desarrollo en solitario. Ninguno, ni siquiera los operadores
+móviles, tienen la capacidad de conocer la totalidad de los factores que entran
+en juego. Es necesario recurrir a acuerdos de colaboración y a estrategias
+innovadoras.
+Pero estas nuevas estrategias no significa que tenga que producirse una revolución
+que cambie los cimientos del mercado de las telecomunicaciones. Estos cimientos
+(operadores y fabricantes) están ya construidos, y se ha demostrado que son
+efectivos y pueden llegar a generar beneficios. La aparición de nuevos agentes
+producirá una migración progresiva hacia esas nuevas formas de hacer negocio;
+de hecho, ya se están dando los primeros pasos en ese sentido.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 68 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Por otro lado, ni operadores ni fabricantes pueden permitirse más errores como
+los producidos con WAP y con las licencias UMTS. Ya no disponen del elevado
+margen de maniobra que les dio el éxito de GSM. Ahora, es el momento de
+volver de nuevo por la senda de los beneficios, y esto será posible si todos
+colaboran en la correcta implantación y desarrollo de GPRS.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 69 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+6. Las empresas ante GPRS
+Ya hemos visto como la llegada de GPRS lleva implícito un cambio en los
+modelos de negocio establecidos en las comunicaciones móviles (nuevos actores,
+fusiones, alianzas, y sobre todo, el nuevo papel que jugarán los operadores de
+telecomunicaciones).
+Gran parte de las acciones que se emprendan desde el sector irán encaminadas
+a crear servicios y aplicaciones que generen un alto valor añadido para usuarios
+profesionales y empresariales.
+Pero, ¿cómo afectarán las nuevas generaciones de telefonía móvil a la forma de
+trabajar de las empresas?, ¿cómo debe ser la implantación de estas tecnologías?,
+ ¿qué costes tendrán que afrontar para hacer frente a estos cambios?
+Asistimos a una época en la que confluyen, por un lado, un periodo de
+desaceleración económica a escala mundial, acentuado por los últimos
+acontecimientos del 11 de septiembre del 2001, y por otro lado, la salida al
+mercado de la tecnología GPRS.
+Ante esta situación, muchas empresas se pueden encontrar en una encrucijada,
+ya que la mayoría están inmersas en planes de reducción de costes y
+reestructuración de plantillas. La ola de despidos que llevaba sacudiendo a la
+economía durante el año 2001 se ha visto endurecida en los últimos meses,
+afectando no sólo a las empresas tecnológicas sino a amplios sectores económicos
+y empresariales. ¿Qué pueden hacer las empresas ante la llegada de GPRS?
+¿Pueden los nuevos servicios de datos móviles reducir los costes y ayudar a
+generar beneficios en estos tiempos de crisis?
+La respuesta a estas preguntas es positiva. Las empresas, tanto grandes
+corporaciones como PYMES, tienen que estar dispuestas a realizar un esfuerzo
+a la hora de implantar soluciones móviles tanto para afrontar las necesidades de
+sus clientes, como para seguir siendo competitivas ante otras empresas. En última
+instancia, puede suponer volver a redefinir su modelo de negocio. Los problemas
+económicos actuales pueden llevar a una mayor cautela a la hora de realizar
+estas inversiones, pero nunca pararlas.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 70 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+La adopción de soluciones móviles por parte de las empresas supondrá:
+1. Bajo coste de implantación: la implantación de sistemas de datos móviles
+es barata en comparación con los actuales sistemas de información.
+2. Fácil integración con los sistemas de información existentes en la empresa:
+en este primer nivel están surgiendo aplicaciones móviles adaptados a
+los sistemas de correo y de organización personal más comunes en las
+empresas.
+3. Mayor flexibilidad para los trabajadores: consiguiendo que los mismos
+puedan realizar su trabajo desde cualquier lugar en el que se encuentren,
+accediendo a la información en tiempo real y mejorando así la
+productividad.
+4. Escalabilidad: desde las primeras aplicaciones, como acceso al correo
+corporativo irán surgiendo nuevas herramientas, cada vez más complejas,
+que se irán integrando en las ya existentes.
+Gráfico 27  Beneficios de la implantación de soluciones móviles en las empresas
+Bajo coste de implantación
+Integración con sistemas existentes
+Escalabilidad de las aplicaciones
+Aumento de la productividad de los trabajadores
+Fuente: Elaboración propia
+6.1 Actitud de las empresas ante las soluciones móviles
+Pero, ¿cuál es la actitud de las empresas ante la llegada de los nuevos servicios
+de datos?
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 71 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Según un estudio realizado por Cap Gemini Ernst & Young a 300 empresas
+europeas de más de 500 empleados, y publicado en junio de 2001, el 69% de
+las mismas disponen de dispositivos WAP, aunque reservados para altos directivos.
+Entre las empresas que no disponían de dispositivos WAP, las razones para no
+disponer de estos dispositivos eran las siguientes:
+Gráfico 28  Motivos de las grandes empresas para no disponer de móviles WAP
+No se necesitan 54%
+Alto coste 13%
+Baja transmisión 13%
+Falta de servicio 11%
+Seguridad 2%
+0%          10%          20%          30%          40%          50%          60%
+Fuente: Cap Gemini Ernst&Young
+Las razones para no disponer de dispositivos WAP coinciden con las limitaciones
+existentes con WAP y GSM.
+Es de esperar que con la llegada al mercado de GPRS, estas tendencias mostradas
+en la encuesta de Cap Gemini Erns & Young comiencen a invertirse hasta
+generalizar el uso de estos dispositivos y aplicaciones.
+Los dispositivos móviles adaptados para el acceso a servicios de datos no deben
+estar reservados a altos directivos de las empresas. El escenario ideal sería aquel
+en el que todos los empleados de una empresa tuvieran acceso a estos dispositivos.
+La falta de necesidad de estos dispositivos puede convertirse en una dinámica
+peligrosa si la aparición de nuevas aplicaciones no consiguen ofrecer una valor
+inmediato para los trabajadores.
+En cuanto a la velocidad de acceso, es obvio que GSM no ofrece unas velocidades
+de acceso aceptables, velocidades que se ven notablemente incrementadas con
+GPRS, aunque también es cierto que las aplicaciones empresariales no requieren
+un elevado ancho de banda ni la necesidad de incluir vídeo y audio.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 72 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+En el siguiente gráfico podemos observar como, pese a los problemas que
+presentan las aplicaciones móviles con GSM, el 34% de las compañías europeas
+encuestadas disponen ya de este tipo de aplicaciones implantadas:
+Gráfico 29 Porcentaje de compañías con aplicaciones de Internet móvil
+13% 34%
+Compañías con planes de implantación (53%)
+Compañías con planes implantados (34%)
+Compañías sin planes de implantación (13%)
+53%
+Fuente: Cap Gemini Ernst&Young
+El verdadero reto para operadores y fabricantes se encuentra en el 53% de
+compañías que no disponen de planes de implantación de soluciones móviles
+en sus empresas. Es de esperar que se produzca una migración de las empresas
+que ya tienen soluciones implantadas y la adopción de las nuevas soluciones
+basadas en GPRS por parte de las compañías que ya disponen de estos planes.
+Es lógico que las grandes corporaciones dispongan de más recursos a la hora
+de implantar soluciones móviles en sus negocios, sin embargo no hay que olvidar
+al sector de las PYMES, que suponen un porcentaje muy elevado de empresas,
+tanto en Europa como en España, y que pueden ver sus negocios beneficiados
+por la implantación de estas tecnologías.
+Actualmente, el problema radica en que muchas de las pequeñas y medianas
+empresas, sobre todo en España, se encuentran todavía inmersas en procesos de
+adaptación e implantación de Internet en sus negocios.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 73 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Gráfico 30  Uso de Internet en PYMES
+100%
+80%
+60%
+40%
+20%
+0%
+Pequeñas Medianas
+empresas empresas
+Fuente: Cisco Systems
+Ante esta situación, muchas empresas pueden pensar en terminar de implantar
+Internet en sus modelos de negocio, e incluso, esperar a rentabilizar esas
+inversiones antes de dar el salto hacia las tecnologías móviles.
+Un error bastante común, es pensar que las soluciones móviles vienen a sustituir
+a los sistemas empresariales ya existentes. Nada más lejos de la realidad, la
+implantación de tecnologías móviles no debe suponer un cambio traumático en
+las empresas, en todo caso, estas tecnologías vienen a complementar a las ya
+existentes, produciéndose una convergencia necesaria y beneficiosa entre ambas.
+Gráfico 31  Convergencia de tecnologías en la empresas
+Necesidad
+Aplicaciones móviles Internet móvil Sistemas de Internet
+Beneficio
+Fuente: Elaboración propia
+Las soluciones móviles pueden suponer, incluso, el primer acercamiento a las
+tecnologías para aquellas empresas que dispongan de menos recursos.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 74 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+6.2 Pasos para la implantación de soluciones móviles en empresas
+Como ocurre en todos los procesos de implantación de nuevas tecnologías no
+resulta fácil que de esta implantación surjan ventajas claras para la empresa. Sin
+embargo, la disponibilidad e inmediatez de las soluciones móviles hacen necesario
+encontrar una rentabilidad inmediata. Las empresas querrán obtener beneficios
+inmediatos a raiz de la adopción de tecnologías móviles.
+Las soluciones móviles para empresas deben  cumplir los siguientes requisitos:
+1. Fáciles de usar.
+2. Fiables.
+3. Integradas en los sistemas y plataformas tradicionales.
+La clave radica en avanzar al mismo ritmo que lo hace la tecnología. Si una
+empresa comienza implantando sistemas de acceso móvil a correo y agenda, la
+aparición de nuevas aplicaciones supondrá añadiduras a los sistemas ya implantados
+encontrando a usuarios acostumbrados a manejarlas y que necesitarán un menor
+tiempo de aprendizaje.
+Se hace necesario buscar la sencillez a la hora de implantar soluciones móviles:
+Gráfico 32  Buscar la sencillez en los proyectos
+Zona crítica
+Extensión
+Fuente: Elaboración propia
+Abordar proyectos demasiado extensos puede llevar a las empresas a una zona crítica que impida
+la obtención de beneficios y aumente los costes de implantación de soluciones móviles.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 75
+Complejidad GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Por lo tanto, los pasos a seguir por las empresas son los siguientes:
+- Vigilar el entorno: cada vez se hace más necesario que las empresas sean
+conscientes de los cambios tecnológicos que se están produciendo a su
+alrededor buscando señales que indiquen la necesidad de innovar. Estar
+preparadas para las oportunidades potenciales de innovación que puedan
+aparecer. De este modo la compañía estará siempre preparada para
+adaptarse a los cambios que deba afrontar.
+- Definición de la estrategia: los esfuerzos se deben poner sobre una
+estrategia concreta, planteando las siguientes preguntas con respecto a
+las soluciones móviles:
+1. Por qué es necesaria la solución.
+2. Cómo se va a utilizar.
+3. En qué contexto y hay además que saber medir los resultados.
+4. Qué beneficios reportará.
+Es lógico seleccionar previamente aquellas estrategias de implantación
+de soluciones móviles destinadas sobre todo a mejorar la competitividad
+en el mercado; pero no menos importantes son aquellas estrategias
+destinadas a:
+1. Mejorar la imagen de la empresa.
+2. Mejorar las relaciones con los clientes.
+3. Aumentar la productividad.
+4. Estimular la eficiencia de la empresa.
+En esta fase se debe dilucidar qué información es necesaria, quién la va
+a utilizar y qué calidad requiere. Hay que volver a pensar cómo presentar
+la información, pues los dispositivos móviles traen implícito un concepto
+distinto de usabilidad.
+- Capacitación: para poder llevar la estrategia elegida a la práctica, se
+debe realizar un proceso de selección y sobre todo de capacitación de
+todos los recursos que puedan considerarse necesarios. Dicha capacitación,
+puede implicar la compra directa de una tecnología más elaborada, la
+explotación de los resultados de una investigación ya existente, o bien,
+la realización de una costosa y larga búsqueda que permita conseguir
+los recursos necesarios.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 76 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+- Implantación: ¿cómo se va a construir?, ¿qué restricciones que van a
+surgir a la hora del desarrollo?
+Con respecto a las soluciones móviles es necesario tener en cuenta una
+serie de factores:
+1. Plataformas utilizadas en la empresas.
+2. Compatibilidad y estandarización de los dispositivos y sistemas
+móviles utilizados.
+3. Adaptación de contenidos tradicionales a las soluciones móviles.
+Es fundamental que todo el conjunto de detalles que componen esa fase
+se integre de forma coherente. Para lograrlo, se requiere contar con una
+organización adecuada que facilite una comunicación rápida y sencilla
+entre las distintas áreas que conforman la empresa. Aquí, más que nunca,
+se puede decir que el trabajo en equipo es esencial.
+- Aprendizaje e innovación continuos: nos encontramos en el estadio
+inicial de una nueva forma de hacer negocios. Las primeras soluciones
+móviles están siendo implantadas en las empresas y en poco tiempo
+podrán empezar a valorarse su utilización. A partir de este momento, se
+hace necesario revisar experiencias de éxito y fracaso como paso previo
+para nuevas innovaciones. Por eso, es imprescindible contar con un
+sistema de valoración permanente que permita asegurar una mejora
+continua dentro del proceso de cambio tecnológico en el ámbito de la
+movilidad.
+En definitiva, las soluciones móviles requieren un proceso continuo cuyos pasos
+principales quedan reflejados en el siguiente gráfico:
+Gráfico 33  Modelo de aceleración de negocio para las soluciones móviles empresariales
+Segmentación         Diferenciación          Arquitectura         Posicionamiento         Implementación
+ Fuente: Elaboración propia
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 77 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+En el siguiente gráfico se muestra cómo sería un acceso a la Intranet empresarial
+desde dispositivos móviles. En este caso un comercial de la empresa podría,
+desde su teléfono móvil o PDA, actualizar su agenda de contactos, consultar su
+correo e incluso efectuar un pedido.
+Gráfico 34 Hipotético escenario de acceso a una Intranet
+PROVEEDOR
+PRESENTACION FIREWALL DMZ GPRS
+XSL
+SERVIDOR WAP
+HTML
+DIRECCIONES DE
+XSL
+SESIONES SERVIDOR PDAXML 3.0
+WMML
+AUTENTIFICADAS (PALM PILOT)
+XSL
+SERVIDOR WEB
+PALM
+XML BACK END SOLUTION
+ALTERNATIVA B
+API PEDIDO/MERCANCIA/
+INTRANET FACTURACION/ WEB BROWSER
+ECONOMIA ALTERNATIVA A
+PALM PILOT
+TELEFONO WAP
+:
+Elaboración propia
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 78 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+7. Conclusiones
+En Havet Interactive creemos en el éxito de GPRS, y por consiguiente, de los
+servicios de datos a través del móvil. Este éxito, sin embargo, no será fruto de
+una revolución, sino de un avance lógico y sostenido, en el que será necesario
+evitar caer en las previsiones futuristas y en un excesivo optimismo que pueda
+llevar a los usuarios a la confusión sobre las posibilidades reales de los servicios
+de datos móviles.
+GPRS mejorará la calidad de los servicios de datos actuales y favorecerá la
+aparición de nuevas aplicaciones de gran valor añadido. Pero es aquí donde
+GPRS corre el peligro de suponer una nueva decepción para los usuarios que
+esperan empezar a utilizar casi de forma inmediata servicios y aplicaciones
+multimedia, algo que con GRPS no será posible.
+Es vital ofrecer una visión realista de los servicios y aplicaciones generados con
+GPRS, ya que en un principio la experiencia visual por parte de los usuarios
+será muy parecida a la que tenían con GSM.
+Por tanto, cobrarán especial relevancia las estrategias que en este sentido
+emprendan tanto fabricantes como operadoras móviles, pilares básicos del sector
+de las telecomunicaciones y que pese a la aparición de nuevos actores en el
+sector, seguirán manteniendo una posición privilegiada al estar en contacto
+directo con los clientes.
+En Havet Interactive detectamos las siguientes líneas de actuación para conseguir
+llegar a una masa crítica de usuarios que posibilite la llegada de beneficios al
+sector de las comunicaciones móviles:
+1. Conseguir que a corto plazo todos los terminales dispongan de la
+posibilidad de acceso a servicios avanzados de datos (incluidos los
+terminales GSM).
+2. Generalización del número de dispositivos equipados con GPRS. Durante
+meses hemos asistido a una falta de dispositivos adecuados para esta
+tecnología. Es de esperar una comercialización en masa en los próximos
+meses.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 79 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+3. Establecer una política de precios, tanto de dispositivos como de servicios,
+adecuada a las expectativas de los usuarios.
+4. Aparición de aplicaciones que generen un valor añadido para el usuario.
+Estas nuevas aplicaciones deberán ser estandarizadas para que sean
+accesibles desde el mayor número de dispositivos.
+5. Para los fabricantes y operadores se hace necesario un mayor conocimiento
+de las necesidades de sus clientes y unas adecuadas campañas de
+marketing e información sobre esta nueva tecnología.
+6. La educación de los usuarios, acostumbrados a utilizar básicamente
+servicios de voz, en el uso de estos nuevos servicios cobra un valor
+fundamental.
+7. En el ámbito empresarial, se hace necesario un replanteamiento de los
+modelos de negocio con estrategias de colaboración definidas que
+favorezcan actuaciones conjuntas y sincronizadas.
+Todas estas acciones irán encaminadas a contribuir al despegue definitivo de los
+servicios de datos a través del móvil, creando una base sólida de usuarios y los
+cimientos para ofrecer las tan esperadas aplicaciones multimedia.
+GPRS ha pasado de tener un papel secundario, a convertirse en la gran esperanza
+del sector de las comunicaciones móviles. Con un correcto enfoque en su
+implantación y desarrollo podremos asistir al comienzo de una nueva forma de
+acceder a la información. Un acceso universal que no estará limitado ni por el
+espacio ni por el tiempo.
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 80 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Anexo I: Glosario
+TÉRMINO
+Inglés
+Español
+ARPU
+Average Revenue Per User
+Ingreso medio por suscriptor
+AUC
+Authentication Center
+Centro de Autenticación del usuario
+BSC
+Base Station Controller
+Controlador de estación base (GSM)
+BSS
+Base Station System
+Sistema de estación base (GSM)
+BTS
+Base Transciever Station
+Estación de transmisión (GSM)
+CLIP
+Calling Line Identification Presentation
+Presentación de identificación de la llamada
+CLIR
+Calling Line Identification Restriction
+Restricción de identificación de la  llamada
+ECC
+Eliptic Curve Criptography
+Criptosistema de curva elíptica
+EDGE
+Enhanced Data Rates for GSM Evolution
+Sistema avanzado de datos para la evolución de GSM
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 81 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+EFR
+Enhanced Full Rate
+Sistema de codificación de voz
+EMS
+Enhanced Messaging Service
+Servicio de mensajería mejorado
+ETSI
+European Telecommunications Standard Institute
+Instituto Europeo de Normativa de Telecomunicaciones
+FTP
+File Transfer Protocol
+Protocolo de transferencia de ficheros
+GGSN
+Gateway GPRS Support Node
+Nodo de pasarela de GPRS
+GPRS
+General Packet Radio Service
+Paquete general de servicios de radio
+GPS
+Global Position System
+Sistema de posicionamiento global
+GSM
+Global System for Mobile Communications
+Sistema global para comunicaciones móviles
+HLR
+Home Locator Register
+Registro de localización de origen
+HTML
+Hypertext Markup Language
+Lenguaje de marcado de hipertexto
+HTTP
+Hypertext Tranfer Protocol
+Protocolo de transferencia de hipertexto
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 82 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+IMAP
+Internet Message Access Protocol
+Protocolo de acceso a mensajería en Internet
+IMSI
+International Mobile Subscriber Identity
+Identidad internacional de usuarios de móviles
+IP
+Internet Protocol
+Protocolo de Internet
+IrDA
+Infrared Data Association
+Asociación de datos infrarrojos
+MS
+Mobile Station
+Estación móvil
+MSC
+Mobile Services Switching Center
+Centro de servicios móviles
+MMS
+Multimedia Messaging Service
+Servicio de mensajes multimedia
+MOU
+Memorandum of Understanding
+Organización que regulariza el estándar GSM
+M-commerce
+Mobile Commerce
+Comercio electrónico móvil
+NSS
+Network Subsysyem
+Sistema de red
+PCMCIA
+Personal Computer Memory Card International Association
+Asociación Internacional de Tarjetas de Memoria para PC
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 83 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+PDA
+Personal Digital Assistant
+Asistente digital personal
+PIN
+Personal Identification  Service
+Servicio de Identificación Personal
+POP3
+Post Office Protocol 3
+Protocolo de correo para Internet
+SGSN
+Serving GPRS Support Node
+Nodo de conmutación de GPRS
+SIM
+Suscriber Identity Module
+Módulo de identificación del usuario
+SMS
+Short Message Service
+Servicio de mensajes cortos
+SMSC
+Short Message System Center
+Centro de mensajes
+UMTS
+Universal Mobile Telecommunications System
+Sistema Universal de Telecomunicaciones Móviles
+VLR
+Visitor Location Register
+Registro de visitantes
+WAP
+Wireless Application Protocol
+Protocolo de Aplicaciones de Telefonía Inalámbrica
+WIN
+Wireless Indentity Module
+Módulo de identificación móvil
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 84 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+WML
+Wireless Markup Language
+Lenguaje de marcado para Telefonía Inalámbrica
+XML
+Extensible Markup Language
+Lenguaje extensible de marcado
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 85 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Anexo II: Encuesta Internet móvil julio/agosto 2001
+Bloque 1. Identificación
+1. Edad
+14 - 19 (7%)
+5% 5% 7%
+14% 27% 20 - 25 (27%)
+26 - 35 (42%)
+35 - 45 (14%)
+46 - 55 (5%)
+42% 56 en adelante (5%)
+2. Sexo
+48% 52%
+Hombre (52%)
+Mujer (48%)
+3. Nivel de estudios
+Sin estudios (1%)
+4% 3% 1% 4% 16% Primarios (4%)
+Secundarios (16%)
+Formación profesional (13%)
+Universitarios (59%)
+13% Doctorado (4%)
+59%
+Otros (3%)
+Bloque 2. Utilización de dispositivos móviles
+4.Tiene teléfono móvil
+9% 91%
+Sí (91%)
+No (9%)
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 86 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+5. Utiliza el móvil para...
+41% 4% 55%
+Su trabajo (4%)
+Uso personal (55%)
+Ambos (41%)
+6. ¿Qué uso da a su teléfono móvil?
+82% 3% 15%
+Solo llamadas (15%)
+Llamadas y mensajes (82%)
+WAP (3%)
+7. Si utiliza WAP, ¿está satisfecho con los servicios que ofrece?
+7% 12%
+12% 22% Nada satisfecho (12%)
+Poco satisfecho (22%)
+Satisfecho (47%)
+Bastante satisfecho (12%)
+Muy satisfecho (7%)
+47%
+8. Si no esta satisfecho, indique la causa.
+8%
+18% 11% Servicios escasos (11%)18%
+Servicios de poca
+calidad (18%)
+Lentitud de
+funcionamiento (45%)
+Coste elevado (18%)
+45% Otros (8%)
+9.¿Tiene un ordenador de mano (PDA, Pocket PC, PalmPilot, etc.)?
+87% 13%
+Sí (13%)
+No (87%)
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 87 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+10. Utiliza el PDA para...
+61% 17 %
+Su trabajo (17%)
+Uso personal (22%)
+Ambos (61%)
+22%
+11. ¿Está satisfecho con el dispositivo PDA?
+21% 4% 10% Nada satisfecho (4%)
+Poco satisfecho (10%)
+Satisfecho (34%)
+Bastante satisfecho (31%)
+Muy satisfecho (21%)
+31% 34%
+12. Si no esta satisfecho, indique la causa.
+8% 23% Servicios escasos (23%)
+Servicios de poca
+calidad (23%)
+Lentitud en el
+funcionamiento (46%)
+46% 23% Otros (8%)
+13. ¿Piensa comprar o renovar su PDA en el próximo año?
+10%
+Sí (10%)
+No (90%)
+90%
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 88 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Bloque 3. Servicio SMS
+14. ¿Utiliza el servicio SMS?
+24% 76%
+Sí (76%)
+No (24%)
+15. Si utiliza el servicio de mensajería SMS, indique con qué frecuencia.
+7%
+34% 58%
+Entre 1-3 al día (58%)
+Entre 4-6 al día (34%)
+Más de 7 al día (7%)
+16. ¿Ha enviado algún mensaje SMSa través de un portal de Internet?
+42% 58%
+Sí (58%)
+No (42%)
+17. Si le odrecieran un servicio de calidad, estaría dispuesto:
+40% 29% A pagar por enviar mensajes
+SMS a través de Internet
+(mejorando la calidad de los
+servicios actuales) (29%)
+A pagar por recibir mensajes
+SMS con información de
+interés personalizada (31%)
+Ambos (40%)
+31%
+18. ¿Le interesaría recibir publicidad por SMS?
+31%
+Sí (31%)
+No (69%)
+69%
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 89 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+19. Y si recibiese a cambio algún beneficio económico, regalo... ¿estaría
+dispuesto?
+44% 56%
+Sí (56%)
+No (44%)
+20. ¿Conoce el servicio de localización o posicionamiento a través del cual
+puede recibir información sobre servicios cercanos a donde se encuentra?
+46% 51%
+Sí, lo conozco pero
+no lo utilizo (51%)
+Sí, lo utilizo (3%)
+No, no lo conozco (46%)
+3%
+Bloque 4. Internet móvil y GPRS
+21. ¿Sabe qué es Internet móvil?
+32% 58%
+Sí (58%)
+No (32%)
+22.¿Sabe lo qué es GPRS?
+71% 29%
+Sí (29%)
+No (71%)
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 90 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+23. Si no lo conoce, ¿cuál cre que es la causa de su desconocimiento
+sobre GPRS?
+3%
+63% 34% Falta de interés
+personal (34%)
+Falta de
+información (63%)
+Otros (3%)
+24. ¿Cómo ha llegado a conocer GPRS?
+14%
+8% 33% Contactos personales (33%)
+Medios de comunicación
+(incluido internet) (45%)
+Campañas de publicidad (8%)
+45% Otros (14%)
+25. ¿Cree que se necesita mas información sobre GPRS?
+18% 82%
+Sí (82%)
+No (18%)
+26. ¿Qué medio considera el más indicado para ofrecer esta información?
+51% 1% 36% Operadoras de telefonía
+móvil (36%)
+Fabricantes de móviles (12%)
+Medios de comunicación
+12% (incluido internet) (51%)
+Otros (1%)
+27. ¿Estaría dispuesto a comprar un teléfono GPRS?
+44% 56%
+Sí (56%)
+No (44%)
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 91 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+28. ¿Cuánto está dispuesto a pagar?
+5%
+21% 37% Hasta 20.000 ptas. (37%)
+Hasta 40.000 ptas. (37%)
+Hasta 80.000 ptas. (21%)
+Más de 80.000 ptas. (5%)
+37%
+29. Valore con valoración alta, media o baja, su interés por los nuevos Servicios
+de Internet Móvil a través de GPRS.
+Valoración alta
+Valoración media
+Valoración baja
+E-mail
+Noticias
+Juegos
+Compra y abono
+productos/servicios
+Localización de
+espacios
+Reseva de
+billetes/entradas
+Chat
+Otros
+30. En un futuro próximo podrá utilizar el móvil para efectuar pagos. ¿Confía
+en la seguridad de este servicio?
+43%
+Sí (57%)
+No (43%)
+57%
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 92 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+31. De las siguientes formas de tarificación, ¿cuál prefiere?
+36%
+Por tiempo de conexión
+(ptas/min) (64%)
+Por volumen de información
+recibida (ptas/Kb) (36%)
+64%
+32. ¿Y qué forma de pago eligiría?
+48%
+Prepago (tarjeta) (52%)
+Postpago (contrato) (48%)
+52%
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 93 GPRS: LA NUEVA GENERACIÓN DE TELEFONÍA MÓVIL
+Estudio elaborado por:
+trademark de Havet Interactive S.A.
+Para más información o para estudios personalizados:
+Francisco Arellano
+francisco@havet.es
+María Huidobro
+maria@havet.es
+Niklas Gustafson
+niklas@havet.es
+Natascha Novosel
+Teléfono: +34-914318480
+Fax: +34-915764922
+www.havet.es
+www.havetmobile.com
+Queremos agradecer la colaboración prestada en la realización de este
+informe a:
+Rafael Aguado Rodania Solutions
+Christian Cederholm Ericsson
+Christian Nyborg Ericsson
+Fredrick Junestrand, Xfera
+Tomás Díaz, Consultores de comunicación
+Versión digital (PDF) en www.havet.es
+© 2001 Havet Interactive S.A. Toda reproducción prohibida. 94

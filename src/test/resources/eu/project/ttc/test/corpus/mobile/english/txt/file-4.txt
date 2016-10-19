@@ -1,0 +1,156 @@
+
+
+
+
+
+Use of Mobile Phones in Language Learning: Developing Effective Instructional Materials
+
+
+
+
+
+
+Murat Saran
+Cankaya University, Turkey
+saran@cankaya.edu.trKursat Cagiltay
+METU, Turkey
+kursat@metu.edu.trGolge Seferoglu
+METU, Turkey
+golge@metu.edu.tr
+
+
+
+Abstract
+
+   With its widespread use and its features and functions such as mobility, reachability, localization, and personalization, mobile phone technology offers a great potential in learning environments. With this consideration, our first and foremost aim in this study has been to make use of this profound interest and potential, and contribute to the efforts to enhance existing educational practices, particularly in the developing regions of the world. Therefore, we developed instructional materials to be delivered through mobile phones operated in second generation GSM technology in order to improve English language learners' vocabulary acquisition. The multimedia messages in this study allowed students to see the definitions of words, example sentences, related visual representations, and pronunciations. After students finished reading multimedia messages, interactive short message service (SMS) quizzes for testing their learning were sent. This paper suggests some important points to consider while creating MMS content and a SMS quiz system for educational purposes.
+
+
+1. Introduction
+
+   Among all technological devices available in our era, mobile phones are the most popular ones, and they have an important place particularly in young people’s lives. In all over the world mobile phones outnumber personal computers [1]. With its widespread use and its features and functions such as mobility, reachability, localization, and personalization, mobile phone technology offers a great potential in learning environments. With this consideration, our first and foremost aim in this study has been to make use of this profound interest and potential, and contribute to the efforts to enhance existing educational practices, particularly in the developing regions of the world. Therefore, we developed instructional materials that can be used through mobile phones operated in second generation GSM technology that is widely available in developing world countries.
+   In this study, we wanted to develop effective instructional materials for mobile phones operated in second generation GSM technology. In order to achieve this aim, we have chosen English language vocabulary learning as the subject matter. Since the medium of instruction is English in a considerable number of universities in Turkey, many university students need to be proficient in the English language. However, these students state that they feel inadequate in expressing themselves in English and they report that they cannot use English after years of instruction. Instructors also complain that students can not cope with instruction in English and that they cannot follow lectures in English. 
+   A review of the relevant literature and studies exploring these students' language difficulties revealed that one important reason of this in adequacy lies in learners' low vocabulary knowledge. This understanding led us choose English vocabulary as the content to be delivered to students via mobile phones. 
+   We investigated the opinions of the students toward the use of mobile phones in language learning to discover effective ways of mobile phone technology integration into developing vocabulary knowledge. In this study, we used multimedia messages (MMS) via mobile phones for content delivery. The multimedia messages in this study allowed students to see the definitions of words, example sentences, related visual representations, and pronunciations. After students finished reading multimedia messages, we sent interactive short message service (SMS) quizzes for testing their learning. This paper suggests some important points to consider while creating MMS content and a SMS quiz system for educational purposes.
+
+
+2. Background
+
+   A review of the literature indicates that “motivation is an essential aspect of instruction” [2]. The push aspect of mobile phone technology may break the motivational barriers to learning for many students, and it may free the learner from studying in front of a computer screen. By the push aspect, we mean that the instructional materials will be sent to the students via mobile phones. They will be passive in the case of initiating their study or practice since they will not have to visit a WEB or WAP page in order to study or practice course contents. They will only read, listen, and reply by using their mobile phones. On the other hand, the web pages developed for the instructional purposes use the pull aspect of web technology. This requires learners to visit web pages to study the contents. However, most of the students are not willing to use these web sites to enhance their foreign language skills because of their lack of intrinsic motivation. 
+   In addition to a lack of intrinsic motivation, technology access is another barrier to study WEB or WAP page contents. Most of the students in the developing world do not have personnel computers. However, mobile phone ownership among these students is more common. The pre-study questionnaire distributed to all students in an English preparatory school of a university in Turkey supported this perspective. The analysis of this questionnaire showed that one hundred percent of the students in English preparatory school had at least one mobile phone. On the other hand, only 45 percent of the students had personal computers at home.
+   According to Laufer, 5.000 base words are considered a minimal requirement for understanding non-specialized English texts [3]. This implies that learners have to know a certain size of vocabulary so that they can comprehend a text comfortably. On the other hand, the classroom activities are not enough to promote vocabulary learning for most of the students [4]. This means that additional practice must be provided in other ways. Thornton and Houser stated, “mobile phones can help extend learner opportunities in meaningful ways” [5]. Therefore, the present study tried to find ways for supporting foreign language learning, particularly vocabulary acquisition by using mobile phones.
+   According to Attewell, “the amount of research explicitly exploring the use of mobile phones in education is still small, although there is an increasing amount of work-in-progress” [6]. Since the use of mobile phones in education is a very recent development, the use of mobile phones in learning environments poses new questions for instructors and instructional designers. For example, the issue of how learners respond to the idea of using mobile phones for educational purposes is one of these questions. Finding an answer to this question in order to explore the potential benefits of using mobile phones in education, and exploring how to develop effective instructional materials for mobile phones were the main concerns of this study. Because of space limitations, not all findings will be reported in this paper; we will mainly share our findings and experiences on the development of instructional materials for mobile phones.
+
+3. Development of the instructional materials for mobile phones
+
+   In our study, we had developed significant amount of content for mobile phones. These contents were sent to the students as multimedia messages (MMS) and short message service (SMS) quizzes via mobile phones. In this section, we will illustrate the instructional materials used in the study, and share our findings and suggestions on the development of instructional materials for mobile phones.
+
+3.1. Multimedia messages used in the study
+
+   The multimedia messages in this study allowed students to see the definitions of words, example sentences, related pictures, and pronunciations as shown in figure 1. The English words included in this study were selected from the contents of the regular classroom instruction since the aim of this study is to provide supplementary practice to regular classroom instruction. 
+Picture 1Picture 2Example sentenceDictionary definitionPicture 3AudioVisual representationPronunciationFigure 1. An example MMS
+   The size of the sample MMS is 30KB including the SMIL and sound file. The 3 pictures shown above in order from left to right are saved as an animated picture file which pauses 8 seconds between the 3 pictures. The duration of pauses can be adjusted depending on content of each message.
+
+3.2. Specific issues to consider while creating MMS content for mobile phones
+
+   We suggest that the ideal size of a message should be kept at 100K maximum including smil, audio, animated gif, etc. In cases where the message size exceeds 100K and the message is received by a low-capacity mobile phone, there may be a decrease in quality and you may run the risk of the phone not being able to download the message.
+   We suggest the following data types as listed in Table 1 should be used in making up the content of the MMS:
+Table 1. Recommended data types for content
+ContentRecommended data type(s)video3gppimage(animated) gif / jpegaudioamr / miditextplain
+   Images should have the following resolution:
+* Landscape- 320x240
+* Square- 240x240
+   We suggest that the image resolution and image size should be kept at 160x120 and 10KB in cases where there are more than one object images in the content. Table 2 displays the maximum number of slides (frames) for each animated gif content. 
+   The suggested message size is 100K. With higher resolutions, the number of frames will need to be adjusted.
+Table 2. Animated gif content
+Source 
+resolutionMMS size Maximum number of framesUp to 128x128100 K15 frames128x128 to 176x208100 K10 frames
+   Table 3 shows the recommended audio types with parameters. The suggested message size is 100K for audio content. 
+
+
+Table 3. Audio content parameters
+Audio formatMMS sizeAudio parametersAMR100 K12.2 Kbps, 8 KHz, 16 bpsMP3100 K64 Kbps, 32 KHz, 16 bps, stereoMP3  100 K – 300 K128 Kbps, 48 KHz, 16 bps, stereoAAC  100 K – 300 K128 Kbps, 48 KHz, 16 bps, stereo
+   The following suggestions are offered for the video format:
+* Duration should be maximum 30 seconds
+* Average bitrate should be 128kbps
+* Resolution: 176x144
+* Should support 15 frames per second
+* Preferred input format:
+o 3gp file format
+o Video codec: mpeg4
+o Audio codec: aac
+   A slide which only includes text should not exceed 6 lines. More lines will influence the other slides. Text on each slide should be limited to 18-30 words so that the user can scroll easily.
+   It is suggested that an MMS include a SMIL presentation in addition to the other content. Synchronized Multimedia Integration Language (SMIL) is a markup language for building time-based, streaming multimedia presentations that combine audio, video, images, and text. We suggest the following for SMIL presentations: 
+* SMIL standards should be followed (OMA1.1, OMA 1.2)
+* SMIL should have a reference to the content title/name
+* Region descriptions within the frame should not overlap
+* Every object in SMIL should be attached/related to an existing region
+* Every MMS/SMIL definition on each slide should be in accordance with OMA 
+* Every slide should include a layout and 2 region definitions. Regions may include image and text depending on the need
+* Every slide, if it includes more than one object, is limited with the following:
+o Image and text
+o Image and audio
+o Image, audio, and text
+o Audio and text
+o Video and text
+   We suggest that a SMIL should be composed of 7 slides maximum.
+
+3.3. SMS quizzes used in the study
+
+   The SMS quiz questions (see figure 2) were the multiple-choice questions requiring students to choose the correct answer and send their answers to the system via their mobile phones. Participants needed to answer a series of questions selected at random from a pool of questions. Immediate feedback on each answer was provided, thereby encouraging them to keep on answering in the shortest possible time.
+
+
+Figure 2. An example SMS quiz question.
+
+3.4. Suggestions for the SMS testing system
+
+   In this section, we share our suggestions regarding the development of SMS testing system for mobile phones. The followings are the main points to be considered while developing a SMS testing system:
+* Users might not be available to respond to the SMS quiz questions all the time. Therefore, a start SMS should be sent to ask whether a user is ready to start receiving test items. The user can either send a YES or NO response to this initial message. If the user is not ready, then s/he will not respond to this initial message. When the YES response is received from a user, the system starts to send the test items in the determined order. If no response is received within the time limit specified, then the system does not send any test items to that user.
+* Tests should be composed of any number of test items.
+* Tests should be started at any time of the day as identified by the administrator.
+* There may be more than one test sent in a day.
+* Test items should be of multiple choice type with 4 response options (A, B, C, D) A sample item is as follows:
+It seems that a successful scientists is full of ....................
+A. curiosity
+B. methodology
+C. objectivity
+D. carefully
+* Test items should be answered through 2 possible means:
+o Responding to the received SMS
+o Sending an SMS to the service number (e.g. 5530) provided. 
+* In order to respond to a test item, a message including the response (A, a, B, b, C, c, or D, d) should be sent to the system through one of the 2 means mentioned above.
+* All information regarding the recipients of the test items should be kept in a database. 
+* All users should receive different test questions randomly selected from the test item bank. The item bank should have all items classified according to their difficulty level as "easy", "moderate," or "difficult" The system should automatically select and send the test items based on the criteria set by the administrator.
+
+4. Implementation
+
+   The study was conducted during the Fall 2006 semester. The subjects of this study were 32 students attending the English Preparatory School of a university before they start their studies in their departments. A purposeful sample of students was selected based on the data collected through a pre-study questionnaire. This survey instrument included the items related to the demographic information about the students, their mobile phone ownership, and their use of mobile phones in their daily life, etc. This instrument was distributed to all students during the English proficiency exam conducted at the beginning of the academic year. The subjects were selected among the students who had MMS supported mobile phones. 16 students in the elementary level and 16 students in the pre-intermediate level formed the two experimental groups.  
+   The English words included in this study were selected from the contents of the regular classroom instruction since the aim of this study was providing supplementary practice to regular classroom instruction. There were three levels as beginner, elementary, and pre-intermediate at the English preparatory school. The elementary and pre-intermediate levels were included in this study. There were 120 English words for each level.
+   It was one of the aims of this study to find the most suitable scheduling for word delivery. Therefore, three multimedia messages were sent on different times in a day. Students’ responses to interview questions indicated that the most suitable times for MMS delivery were lecture breaks on school days. There were 10 weeks for the implementation phase. We sent 120 English words to each student.
+   An interview survey was developed to learn students’ opinions and recommendations about the use of mobile phones in foreign language education. 6 students in each experimental group were interviewed. Data from the interviews were compared with the computer logs keeping the information about the students’ responses to quiz questions. This log system is a service provided by mobile phone service provider.
+
+5. Results
+
+   Initial analyses of the collected data have indicated that students liked the use of mobile phones for their vocabulary learning. Students reported several positive aspects of this treatment during the interviews. 
+   All of the students provided positive feedback about the mobile learning application used in this study. The students stated that they enjoyed the instructional materials sent to their mobile phones during the experiment. All of the students stated that it would be better if their English language education were supported with instructional materials by mobile phones like the ones they used during the experiment. For example, one of the students who advocated the advantages of using this mobile learning application stated the following: “Visual presentations of the words in multimedia messages helped us to understand the words’ meanings easily. When I came across the same words in further reading, the visual representations helped me to remember the words' meanings”. 
+   The students mostly stated that the content itself and the organization of the content, especially visual representations of each word, were nice and interesting. One student said, “I found the text and audio-visuals in the multimedia messages supporting each other. Audio-visual materials were very valuable in drawing my interest and giving me a clear understanding about the English word that I was learning”. As another advantage of this treatment, one of the students stated, “I had the chance of repeating the content as many times as I wanted and this was an advantage of using mobile phones when compared with the other methods”. However, three of the students stated, the multimedia messages should include more example sentences showing the uses of the words in daily life. All of the participants indicated that they did not face any difficulties while using the mobile learning application and that it was easy-to-use since they were used to use SMS and MMS in their daily lives.
+
+
+6. Conclusion
+
+   This study extends the use of use mobile phones, which are already used for communication and entertainment all over the world, to education. Using mobile phones in educational settings will help learners be more motivated and will make it possible to overcome the difficulties teachers or parents experience in order to make learners start studying. Furthermore, learners will be able to use any previously wasted time (on the bus, on their way back and to school) on learning languages. 
+   In this study, we wanted to develop effective instructional materials for mobile phones operated in second generation GSM technology. We have chosen English language vocabulary learning as the content to be delivered via mobile phones. As mentioned earlier, The driving reason why we have chosen English vocabulary as the content in this study has been many learners' feeling inadequate in using English after years of instruction and their low vocabulary knowledge. The findings of this study demonstrated that using MMS and SMS in enhancing vocabulary knowledge is very effective. Therefore, the method used in this study can be of great help in improving the quality of teaching-learning processes in preparatory English language schools of English-medium universities. 
+   The method followed in this Project can be used on its own or integrated with traditional teaching methods in any subject area. The processes and results of this study may lead to other studies which may incorporate second generation GSM technology with teaching/learning processes in various subject matters in different parts of the world.
+
+7. References
+
+[1] M. Prensky, “What can you learn from a cell phone? Almost anything!”, Innovate 1, 2005.
+
+[2] S. M. Alessi, and S. R. Trollip, Multimedia for Learning (3rd Ed), Allyn & Bacon, Boston, 2001, p.27.
+
+[3] B. Laufer, “The Lexical Plight in Second Language Reading: Words You Don't Know, Words You Think You Know and Words You Can't Guess”, in J. Coady & T. Huckin (Eds.), Second Language Vocabulary Acquisition,  Cambridge University Press, New York, 1997, pp. 2-34.
+
+[4] S. Koren, “Vocabulary Instruction Through Hypertext: are There Advantages over Conventional Methods of Teaching?”, Teaching English as a Second or Foreign Language, 4(1), UC Berkeley, 1999.
+
+[5] P. Thornton, and C. Houser, “Using Mobile Phones in Education”, Proceedings of the 2nd IEEE International Workshop on Wireless and Mobile Technologies in Education (WMTE’04), 2004.
+
+[6] J. Attewell, “Mobile Technologies and Learning: A Technology Update and mlearning Project Summary”, Learning and Skills Development Agency, London, 2005

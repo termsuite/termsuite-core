@@ -1,0 +1,376 @@
+Rural Wireless Connectivity in Kenya along with Vodafone, KPTC launched Safaricom, a Global System for Mobile Communications (GSM). 
+Abstract Safaricom, as well as Enhanced Total Access 
+The topic that was discussed was to provide Communications (ETACs), continues to cover the 
+rural connectivity, mainly voice but also including most populated areas in Kenya.
+data communication, in Kenya. The most economical Choosing to help Kenya become connected 
+and logical method was to start connecting people was a logical choice. Kenya's people are clearly 
+locally through 802.11n with a base station in the interested in using a telecommunications system 
+center and then connected by landline to a router in because there is already one in place that is widely 
+each house. Regionally, hot air balloons would used. There are so many barriers with using this 
+provide service at a low price with large coverage. system, one of which is the tax that is placed on it. 
+Internationally, fiber optic cables will be the most Most people cannot afford this because 50% of the 
+viable way to connect Kenya to other countries. population is below the poverty line. Their current 
+This project will help Kenya's social system is inadequate and unreliable, and it is only 
+infrastructure, economy, and development. available in densely populated areas. A better 
+Introduction telecommunications system may help Kenya's 
+In thinking of technologies to use in Kenya, struggling economy.
+many factors have to be taken into account. One of Rural connectivity will greatly improve the lives of 
+the major obstacles is Kenya's geography. Kenya is Kenyans. Through the entire population being 
+an east African country that lies on the equator and connected, instead of just those in densely populated 
+shares a border the Indian Ocean.  Along with the areas, the entire nation will be connected to the rest 
+Great Rift Valley, there are several mountains and of the world. Connectivity will allow the people to 
+vast plains.  In the southwest region of the country is better educate themselves, foster economic growth, 
+the Lake Victoria Basin. The western highlands are and cultivate related infrastructure growth.   
+separated from the low plains that rise to the 
+highlands by the Great Rift Valley. There are low- Local
+lying plains to the east which lead to the coastal The initial part of connecting rural people is 
+region. These different geographical areas require to connect the community and unite it as a whole. 
+different technologies to provide efficient service.  The purpose of people-to-people connectivity is to 
+Kenya's people are just as diverse as the facilitate the transfer of information across a tribe and 
+natural features. With about forty different ethnic to provide information readily to every home. By 
+groups, a reliable telecommunications system is connecting at a small-scale and then working up to a 
+greatly needed. While some groups of people remain larger scale connection will be easier to handle and 
+stationary, some nomadic tribes still exist. The four organize. The central idea of local-to-local 
+major tribes include the Kikuyu people, the Maasai connection is by having a base-station that will be 
+tribe, the Samburu tribe, and the Turkana tribe. The connected by landlines to a router in each home. 
+Kikuyu people reside near Mount Kenya and are Each person in the home will then be able to connect 
+known for their farming.  The Maasai tribe is more to the router through a voice over Internet protocol 
+traditional than the Kikuyu people. They are nomadic (VoIP) phone. 
+herdsmen that do not believe an education is The various technologies that will be 
+important. They continue to farm for the sake of considered are 802.11 (WiFi), 802.16 (WiMax), 
+trading crops since they have no cash currency. The 802.20, Bluetooth, and 3G networks. 
+Samburu tribe is related to the Maasai tribe. They are 802.11 is currently used in common routers 
+semi-nomadic and live between Mount Kenya and for internet connectivity such as Linksys, D-Net, and 
+the desert. The Turkana tribe is a group of nomadic Netgear. It uses orthogonal frequency-division 
+pastoralists. They live in northern Kenya. A better multiplexing (OFDM), dividing frequencies and 
+telecommunications system would allow these arranging them orthogonal to each other or at right 
+different types of people to communicate with each angles to eliminate interference. By using this type of 
+other more readily. coding system, it can operate at high frequencies 
+Since the 1990's, Kenya has had a without too much noise. Within the 802.11 or WiFi 
+telecommunications system in place. Back then, the technology there are different frequencies or 
+Kenya Posts and Telecommunications Corporation versions. The earliest was the relatively primitive 
+(KPTC) controlled all service for cellular phones. 802.11 legacy. The two other main frequencies used 
+Private companies established full internet services in are 802.11b and g and 802.11a.
+1995, with strong objections from KPTC. In 1997, 802.11a was first introduced in 1999. It uses the 5 GHz frequencies at a realistic rate of 25 Mbit/sec and a maximum rate of 54 Mbit/sec. Kenya, but because of the suspension of further 
+Because of the high frequency wavelengths, less research and the cost of new technologies, it could be 
+interference occurs but the range is also greatly an expensive and time-consuming venture.
+reduced, only about ten meters. A great technology Bluetooth technology has already been 
+for homes and offices where there is little distance to widely used by simple household device such as for 
+span and many technologies also emitting hands-free cell phones. It uses the 2.45 GHz 
+wavelengths that could interfere, it is not viable for bandwidth at a low signal strength of only 1 miliwatt 
+rural local connectivity in Kenya. The distance is too to prevent interference with other household 
+short and can be unreliable at longer distances. appliances. The disadvantage is that this technology 
+The other branch of 802.11 are b and g. B has a very short range, a few rooms apart or 
+was first introduced in 1999. It uses complementary approximately 10m. This is the cheapest technology 
+code keying (CCK), a form of code division multiple available, but, because of its limited range and signal 
+access (CDMA). Operating using the 2.4 GHz strength, it cannot be used in Kenya. 
+wavelength, it has a realistic rate of 6.5 Mbit/sec and 3G refers to the next generation of cell 
+a maximum rate of 11 Mbit/sec and a range of phone technology.  Unlike the 802 protocols, the 
+approximately 30m. In June of 2003, a newer version main purpose of 3G is voice communication.  
+named 802.11g tried to make improvements upon However, because of the better data rates it is 
+802.11b. It can now operate at a realistic rate of 25 possible to transmit other types of information as 
+Mbit/sec and a maximum rate of 54Mbit/sec. well.  Data rates for 3G range from 100 kbps to 384 
+However, using the 2.4 GHz frequency creates kbps.  One of the main applications being promoted 
+interference with other technologies. Microwave by 3G providers is video capabilities.  Like previous 
+ovens, Bluetooth technology, and cordless phones cellular technology 3G uses frequency bands from 
+currently use the same frequency band. the licensed spectrum, frequencies purchased by the 
+The newest 802.11 connection is 802.11n. It provider.  WiFi (802.11) and its related technologies 
+is currently being developed and will be available in operate on unlicensed spectrums.  Another important 
+2007 with a range of up to 50m. Using multiple-input thing to note is that 3G allows the user to be mobile.  
+multiple-output (MIMO), 802.11n will have a WiFi (802.11) requires a stationary access point, as 
+realistic speed of 200 Mbit/sec and a maximum speed does WiMax (802.16).  A mobile version of WiMax 
+of 540 Mbit/sec. The disadvantages to this new (802.16e) and 802.20 are being developed to support 
+technology are that it still operates in the 2.4 GHz mobile access.  The range of 3G is 1-3 kilometers 
+frequency and could potentially be expensive because depending on terrain and line of sight.
+it will be a newer technology. 4G, a successor of 3G, is not projected to be 
+Overall 802.11a, b, and g are inexpensive available until at least 2008-2010.  However, it would 
+and can be bought in mass quantities for less than 10 offer greatly improved date rates of up to 1 Mb/s 
+USD apiece, but the range of each and the speed is while moving and up to 20 Mb/s stationary.  
+not great enough. 802.11n is the best candidate of all It is important to remember that 3G and 802 
+the 802.11 technologies but it may cost too much. are different types of technologies.  802 protocols are 
+802.16 or WiMax was first introduced in used primarily for data transfer and 3G is used for 
+2001. This technology includes 802.16a, b, and c that voice communication.  3G technology is not suited 
+operate on frequencies of 10-66 GHz. Using time for rural connectivity in Africa.  The overhead cost 
+division multiple access (TDMA), it has a range of and needed capital for base stations and infrastructure 
+up to 31 miles. The new 802.16e will be similar to would outweigh the return.
+the 802.20, another project undertaken by the IEEE. Overall, 802.20 would be the best option in 
+It can go up to 120 Mb/sec but the cost of each base- terms of technology to use. However, because of its 
+station on top of the individual router cost is between suspension and possibly high projected cost, 802.11n 
+10,000-20,000 USD. when available will provide sufficient service at an 
+802.20 is another new technology under affordable cost.
+development by the IEEE. The ballot was approved 
+in January of 2006 but will be under suspension from Regional
+June 8th, 2006 to October 1st, 2006 due to certain Another solution to rural connectivity 
+group reasons of competition and unfair research. It involves a new form of wireless communication 
+will operate on frequency bands below 3.5 GHz at a technology concerning floating aerial devices. These 
+maximum rate of 1 Mb/sec. Using OFDM, it will devices revolve around aircraft, balloons, and 
+have a range of up to 15 miles and withstand speeds airships suspended in the air at an altitude of 
+of up to 250 km/hour. This is probably the best approximately 100,000 feet. Instead of relaying 
+technology on the market for rural connectivity in signals between orbital satellites and their receivers 600 to 1200 miles apart, wireless transmitters Nevertheless, floating aerial devices are a viable and 
+attached to floating balloons will act as a relay point. efficient technology. 
+These high altitude platforms will act as a "low flying The deployment of the Balloons is still in its 
+satellite" and relay transmissions. developing stages. While recovery is relatively 
+ The advantages of high altitude platforms simple, with the balloon simply ejecting a parachute 
+are numerous. Located 20 miles above ground, these and slowly descending to the ground, and with 
+devices have direct lines of transmission. While tracking through an onboard GPS, launching is still 
+normal tower stations are built to be high above an issue. Currently, Space Data Corp, a pioneer in 
+ground, they are nowhere near the 20 miles altitude floating aerial devices, is attempting to secure a 
+of the floating platforms. This difference in altitude contract with the National Weather Service. The 
+allows the floating balloons to send and receive data proposition will ask the NWS to launch the balloons, 
+signals in straight lines. For example, if a tower is with SDC recovering the launched devices.
+overshadowed by a building or skyscraper taller than From both an economic and engineering standpoint, 
+it is, its broadcast potential would be significantly floating aerial devices is a viable option. "A recent 
+diminished. Furthermore, because the device is at an trial run in Phoenix, Arizona provided data that a 2 
+altitude lower than that of satellites, it can transmit watt transmitter on a high altitude platform was as 
+more efficiently. While a satellite has to send and effective as a 500-watt tower," says David Wu, 
+receive signals at a distance of 600 to 1200 miles President of Space Data Corp. These balloons would 
+above Earth, a floating aerial device only has to offer companies an inexpensive option to provide 
+perform the task at a distance of 20 miles above network service compared to building expensive 
+ground, allowing these platforms to have higher towers. This technology would not replace existing 
+bandwidths than their satellite counterparts.  towers but be implemented as a supplement to 
+These devices are also cost effective. existing stations. With the advent of these high 
+Floating balloons, running $300 a piece, are altitude platforms in the not too distant future, a 
+significantly less expensive than their satellite solution to rural connectivity is in the horizon.
+counterparts which can incur costs of $100 million 
+and tower stations which cost $12,000 and higher. International
+According to Marc Weingarten in "Up, Up and In terms of international connectivity, there 
+Away," "a carrier could activate dead zones at $300 are several options. Falling under the category of 
+per SkySite. For $15 million, 50,000 sites could guided media, international communications can be 
+cover 90% of the country. It would take $60 million carried by copper wire or optical fiber. In the 
+to construct 5000 towers to cover 20% of the United category of unguided media, the communications can 
+States."  be made by microwave radiation through satellite 
+In addition, each device also has an networks or directly through terrestrial microwave 
+impressive 350 mile range radius. This range easily antennas. 
+outclasses its WiFi competitors. WiMax, also known Optical fiber is a guided communications 
+as 802.16, has a maximum range of 50 miles in line medium where data is transmitted by pulses of light 
+of sight and 15 miles in non-line of sight through a glass or plastic cable. The type of fiber that 
+transmissions. is applicable for large applications is single mode 
+Though aerial devices provide many fiber, or fiber with a core diameter of less than 10μm. 
+advantages to rural connectivity, there are several Using single mode fiber, a transmission can be sent 
+drawbacks to this technology. Currently aerial up to 140 km without the use of an amplifier or 
+devices depend upon battery supply as its energy repeater. The cost of fiber is approximately $1000 per 
+source. The balloon requires redeployment every kilometer. This figure, however, does not account for 
+twenty-four hours to renew its energy supply. the cost of the intricate multiplexing equipment 
+Prospective engineers have envisioned running the needed at either end; neither does it account for the 
+device upon solar energy, but current solar cells are expensive repeaters needed at the end of each 
+unable to generate enough    solar energy to run the interval. This need for expensive equipment 
+platforms. Power will be especially weak during the represents one of the huge disadvantages of optical 
+winter, as solar energy collection is difficult. The fiber. Moreover, this equipment is difficult to 
+aerial device is still unfinished and is currently in maintain.
+development. In addition, the aerial device must be The older technology of data transmission 
+stationary to function at its full potential. Therefore, over copper wires does not suffer as extensively from 
+mechanisms are required to prevent the balloon from these disadvantages. Although copper wire does 
+drifting with air currents and during storms. experience signal attenuation, and therefore needs 
+amplifier equipment, the amplifier equipment is cheap. Multiplexing technology is also cheap, and the surface of the earth, it is cheaper to launch LEO 
+construction and maintenance of copper wire systems satellites and easier to build telecommunications 
+is simple and inexpensive. equipment that can overcome the signal attenuation 
+Another viable way of connecting caused by the atmosphere between the surface of the 
+telecommunications networks over long distances is Earth and a satellite in Low Earth orbit.
+microwave communication. Microwave is a term Communications between satellites and 
+used to refer to the band of electromagnetic radiation terrestrial networks are conducted through terrestrial 
+with frequencies between 300MHz and 300GHz. At antennas called very small aperture terminals (known 
+frequencies above 300GHz, the attenuation caused by as VSATs). When the satellite is in geosynchronous 
+absorption by the atmosphere becomes so dramatic orbit, the VSAT is a directed antenna that points at 
+that those frequencies are unusable for the satellite; aside from atmospheric attenuation, this 
+telecommunications. However, higher frequencies is an efficient solution. However, the motion of a 
+lend themselves to simple, cheap construction of Low Earth orbit satellite precludes the use of a 
+directional antennas. The microwave spectrum, directed antenna. Most current technologies that deals 
+therefore, is a good compromise for long distance with LEO satellites use omnidirectional antennas; 
+radio communications; the frequencies are low this is inefficient. New technology is emerging that 
+enough to suffer only tolerable attenuation in the uses phased array antennas, which would make the 
+atmosphere but high enough to allow the construction VSAT more efficient in terms of power consumption.
+of small, cheap antennas. Data can be sent between When analyzing the various technologies 
+two antennas placed on top of towers, each with a available for large-scale connectivity in Africa, both 
+parabolic dish focusing the electromagnetic radiation technical and economic activities must be taken into 
+into a signal directed at the other antenna. The range account. All four of the technologies mentioned are 
+of a typical terrestrial microwave antenna is feasible technically. However, the use of terrestrial 
+approximately 50 km. Distances longer than this can microwave antennas does not make sense when 
+be spanned by a chain of antennas. compared to the cost of optical fiber for long 
+A final option for long distance distances. Furthermore, optical fiber is technically 
+telecommunications utilizes satellites. Instead of superior, and quickly becoming economically 
+using a microwave antenna to communicate directly superior, to copper wire for long distance 
+with another terrestrial antenna, the signal is sent to a telecommunications. For developing nations, 
+satellite. The equipment required for a system is the launching a satellite into geosynchronous orbit is 
+same as that for terrestrial microwave links (an prohibitively expensive.
+antenna known as a VSAT, or very small aperture Low Earth orbit satellites are economically 
+terminal), with the added necessity of satellites. viable because any LEO satellite network is, of 
+Satellites used in telecommunications fall into two necessity, global; a network of LEO satellites 
+categories: geosynchronous satellites (known as developed in for use in the Americas, Europe and 
+GEO) and Low Earth orbit satellites (known as Asia would also provide coverage to Africa. 
+LEO). A geosynchronous satellite orbits the Earth at Connection plans in this LEO network would be 
+a distance of 35,786 km above the surface of the organized using demand assigned multiple access, as 
+Earth; at this distance, the period of the satellite's described in. This would allow major corporate users 
+orbit is equal to the period of rotation of the Earth. to access large amounts of bandwidth; however, it 
+Since a GEO satellite stays fixed in the sky, a would also allow users in poorer areas to pay only for 
+microwave antenna that communicates with it can the limited amount of bandwidth that they use. 
+have a directed signal. However, the disadvantage of Development would be easy even in the most remote 
+GEO satellites is the distance between the satellite areas given the presence of reliable electricity.  
+and the terrestrial antenna. Microwave radiation sent Optical fiber has advantages for large scale 
+between an antenna on the ground and a communications. Whereas a LEO network would be 
+geosynchronous satellite suffers dramatically from difficult to expand, optical fiber has enough 
+atmospheric attenuation; this necessitates expensive bandwidth that expansion is easy. Optical fiber 
+antennas that must have very powerful signals. The projects are already underway in Africa; one example 
+other option for satellite networks, the LEO satellite, is the East African Submarine Cable System.
+does not experience this disadvantage. The period of The technical difficulties involved in large-
+orbit of a LEO satellite is between one and two scale telecommunications connectivity are essentially 
+hours; a network of LEO satellites is therefore related to terrain. Flat areas are easily interconnected 
+required to provide continuous coverage to any with optical fiber. Mountainous areas, however, may 
+particular region of the Earth. Because the radius of a be better served by satellites. 
+Low Earth orbit is merely 200 to 1200 km above the The major challenge of international expansion with the immediate need for revenue; in 
+connectivity with Kenya is an economic one. general, taxes are affected by other factors and it is 
+Reliable telecommunications services of a reasonable difficult to isolate their interaction with 
+quality cannot be provided without a good telecommunications development.
+infrastructure. Major telecommunications providers 
+will not invest in major infrastructure developments Conclusion
+unless there is a clear demand. This demand is in the Rural connectivity can play a large role in a 
+form of a large, multinational corporation; private use lesser-developed nation such as Kenya. This design 
+does not qualify as a justification for investment for connecting the country achieves its goal by 
+except in large, urban areas. Thus, many argue that approaching the task one step at a time beginning 
+development of large-scale telecommunications in with local connectivity.
+rural Africa will be a slow process, with progress Locally, people would be connected through 
+made only as Africa is slowly industrialized. 802.11n routers. There will be a router in each 
+Other researchers, such as Parker in, argue household, which will provide service to the phones 
+that competitive development is a fundamentally at a range of about 50m, and each router is connected 
+flawed approach to rural development. Parker by copper wire or landline to a base station at the 
+suggests that rural development must be facilitated by center of the village. Although 802.11n will not be 
+the government, since large corporations have no available until 2007, it is the cheapest equipment that 
+incentive to develop services in regions with will provide enough speed and send enough amounts 
+relatively little demand. A good example of the of information for a local village in Kenya. Pre-
+success of this strategy is the deployment of 802.11n routers are available for 50 USD. 802.11n, 
+telephone service to Alaska in the 1970's. Claiming because it is another improved technology, should 
+that the minimum cost of a terrestrial antenna for a cost approximately 30 USD when mass-produced. If 
+satellite connection was $500,000, the large there are 34 million people in Kenya and only 59% 
+telecommunications company announced that it could live out side of the city, routers will cost a total of 75 
+not supply connections to rural communities due to million USD. If there were to be a base station for 
+issues of economic feasibility. The state government each 10km2 at a rate of $1000 for each station, it 
+found a different equipment vendor willing to supply would cost $58 million. This would be a total cost of 
+the equipment for only $50,000 for each station and about $133 million.
+applied for a permit with the FCC to install the Regionally, an aerial balloon would cover 
+equipment. The commercial telecommunications each base station. Using microwaves, it has direct 
+company quickly submitted a competing proposal; line of sight and is a high altitude platform. It can 
+the project ended up being very profitable for the cover a large range, 350 miles radius at a time. 
+telecommunications company. This case is support However, this technology needs to be replaced every 
+for government involvement in telecommunications 24 hours and is not anchored anywhere, meaning it is 
+development. While there is an argument that mobile and can cut off service eventually. There is 
+communications development is shaped by free low fuel efficiency as well, but each balloon only 
+market forces alone, analysts such as Parker contend costs $300. The actual technology can be sent up by 
+that government intervention is necessary to facilitate the National Weather Service and later servicing 
+rural communications development. costs will be cut. Given that Kenya has an area of 
+One facet of communications economics 582, 650 km2, it would take only one balloon to 
+that is completely controlled by the government is the cover the entire country Kenya. The main transmitter 
+tax placed on telecommunications. In 1991, Kenya will be located on the ground in the capital of Kenya, 
+placed a value added tax on telecommunications. Nairobi.
+This was an effort to increase tax revenue and to This main transmitter will be connected 
+create a tax system that would fluctuate with changes internationally via fiber optic cables. Copper wire has 
+in national income. Many African nations treat too little bandwidth and microwaves based on giant 
+telecommunications technology as a luxury item, and dishes are too expensive. Another option is to have 
+tax it accordingly. Kenya has lowered or waived the United States lend Kenya satellites, or to use 
+many of its taxes on telecommunications technology, them when they are not above the United States, for 
+but remaining taxes still hamper infrastructure connectivity. However, this solution would not help 
+development. It is easy to suggest that states like Kenya in the future and can only offer a short-term 
+Kenya should eliminate or cut drastically any taxes temporary solution. There is already a fiber optic ring 
+that are even minimally associated with development around Africa that has been installed but has not been 
+of telecommunications services. However, used. Faster and spanning longer distances without a 
+governments do need to balance the need for need of an amplifier or repeater, fiber optic cables can be laid for only $1000/km. Based on the fact that 
+it took approximately $100 million to wire Rutgers 
+onto the optic cable network, it is estimated that it 
+will take upwards of $200 million to wire all of 
+Kenya.
+This brings the grand total of this design to 
+approximately $333 million. Although this maybe a 
+big price tag, this design is aimed to bring 
+connectivity to all of Kenya and all the people in 
+Kenya. The best way to approach this task is to make 
+sure that if money and labor are to be sent to Kenya 
+to build such a network, the highest-performance and 
+more economical materials and technology should be 
+used to ensure a rapid growth in social infrastructure, 
+economy, and development.
+Acknowledgements
+We would like to thank first of all Kelvin 
+Baez, our project advisor for giving us Nokia phones 
+to test and giving us our first look on cellular 
+technology. The basic PowerPoint in the beginning 
+really helped build a good foundation for our 
+knowledge. 
+We would also like to thank Xiaoyu Wang, 
+our counselor advisor for always being in the 
+computer lab and helping with everything. We really 
+appreciate your suggestions when we got stuck 
+somewhere. 
+Thank you to all the counselors for staying 
+up late at night and making us sleep. You've given us 
+an opportunity to spend the summer with awesome 
+people from around New Jersey. We know summers 
+are hard to come by and we're glad you're taking the 
+time to spend it with Governor's School.
+Thank you to Anthony Welch, Dean Brown, 
+and Eileen ____? Along with the other coordinators 
+for getting sponsors and working with Rutgers to 
+keep this program running Without you, there 
+wouldn't be a program this year for us to go to.
+Thank you to the Governor's School 
+program of New Jersey for starting the program in 
+the beginning. It is a very enriching program that all 
+of us can say we've learned something new about 
+engineering and about other people.
+Thank you to all our friends, family, and 
+teachers for being there for us and supporting us. 
+Classes were stimulating and taught us so many new 
+things. Thanks to our families for driving us to the 
+program and encouraging us to learn. Without our 
+families, we would not have had such a hunger for 
+knowledge.
+And of course, thank you to all our other 
+friends here at Governor's School of Engineering and 
+Technology. It has been an amazing summer, good 
+luck in the future. References <http://en.wikipedia.org/wiki/Low_Earth_or
+"802.20".  Network World.  12 July 2006. bit>.  
+<http://www.networkworld.com/details/518  
+2.html?def> "Microwave". Wikipedia: the Free Encyclopedia. 14 
+July 2006. 17 July 2006. 
+Brewer, Eric A.  "Technology Insights for Rural <http://en.wikipedia.org/wiki/Microwave>
+Connectivity".  September 2005.  12 July 
+2006. Mills, Steve.  "Status of 802.20".  The Institute of 
+<http://arnic.info/workshop05/Brewer_Rura Electrical and Electronics Engineers, Inc. 
+lConnectivity_Sep05.pdf> 15 June 2006.  12 July 2006. 
+<http://grouper.ieee.org/groups/802/SASB
+"Geosynchronous satellite". Wikipedia: the Free %20802.20%20Suspension%20Announcem
+Encyclopedia. 12 July 2006. 17 July 2006. ent.pdf>
+<http://en.wikipedia.org/wiki/Geosynchrono
+us_satellite> Misra, Devendra K. Radio-Frequency and 
+Microwave Communication Circuits: 
+Hegener, Michael. "Internet via Satellite in Africa". Analysis and Design, Second Edition. John 
+Advisory Note No. 6, 2002. Wiley & Sons, 2004. 
+"IEEE 802.11".  Wikipedia Encyclopedia.  14 July Moses Kinyanjui Murithi and Eliud Dismas Moyi. 
+2006.  12 July 2006. "Tax reforms and revenue mobilization in 
+<http://en.wikipedia.org/wiki/IEEE_802.11 Kenya". AERC Research Paper 131. May 
+> 2003.
+"International undersea fiber optic cable promises Mureithi, Muriuki. "Africa ICT Policy Monitor 
+much needed bandwidth to East Africa but Project: Kenya". 
+specter of monopoly pricing threatens 
+project's benefits." News@Cisco. 31 May "Optical fiber". Wikipedia: the Free Encyclopedia. 
+2006. 14 July 2006. 17 July 2006.
+<http://newsroom.cisco.com/dlls/2006/ts_05 <http://en.wikipedia.org/wiki/Optical_fiber> 
+3106.html>.
+Parker, Edwin B. "Closing the digital divide in rural 
+"Kenya".  People and Culture.  11 July 2006. America". ©2000 Elsevier Science Ltd. All 
+<http://www.africaguide.com/country/kenya rights reserved.
+/culture.htm>
+Personal Communication, Susan Bailey. 17 July 
+"Kenya".  World Fact Book.  11 July 2006. 2006. 
+<http://www.uneca.org/aisi/nici/country_pro
+files/Documents_English/Kenyapub.en.doc
+>
+Layton, Julia and Franklin, Curt.  "Bluetooth 
+Operation".  How Bluetooth Works. 12 July 
+2006. 
+<http://electronics.howstuffworks.com/bluet
+ooth1.htm>
+Lehr, William and McKnight, Lee W.  "Wireless 
+Internet Access: 3G or WiFi?".  14 July 
+2006. 
+<http://tobasco.ctit.utwente.nl/~draaijer/wifi
+/3G%20vs%20WiFi.pdf>
+"Low Earth orbit". Wikipedia: the Free 
+Encyclopedia. 12 July 2006. 17 July 2006.

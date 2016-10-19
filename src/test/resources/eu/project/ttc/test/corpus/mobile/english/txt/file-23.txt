@@ -1,0 +1,334 @@
+Nairobi_2_2_4.PDF Service Level Agreement (SLA) and Global 
+QoS index for 3G networks 
+Villy Baek Iversen 
+COM Center,Technical University of Denmark
+vbi@com.dtu.dk
+Manfred Schneps-Schneppe 
+AbavaNet, Moscow, Russia
+ITU-BDT Regional Seminar on Fixed Mobile Convergence and Guidelines on the 
+smooth transition of existing mobile networks to IMT-2000 for Developing Countries 
+for Africa Region
+Nairobi, Kenya, 9-12 May 2005
+1 Outlook
+1. UMTS QoS issues and  Service level Agreements
+2. Parlay for SLA control
+3. Global QoS index
+4. "Gold-silver-bronze" QoS standard
+5. Best practice. New York experience
+6. Best practice. LRAIC approach for penalties
+7. Conclusion
+2 1.1 Service Level Agreement
+1. Service Level Agreement (SLA) - formal agreement 
+between two or more entities with the scope to 
+- assess service characteristics, 
+- responsibilities and 
+- priorities of every part.
+2. SLA may include compensations for an unreached
+level of quality as a economic issue of the contract.
+3 1.2 Introduction on QoS and SLA studies
+1. ITU-T Rec. E.860 "Framework of a service level agreement" (2002) -
+a framework for NGN interconnection studies
+2. ETSI Rec. ETR 138 (1997) - 9 QOS measures (incl. ISDN):
+- Fault report for access line per year,
+- Unsuccessful call ratio, 
+- Call set up time, 
+- Supply time for initial network connection, 
+- Percentage of orders completed on or before the date confirmed or contracted with the customer, 
+- Response time for operator service, 
+- Availability of card or coin operated public pay phones, 
+- Fault repair time, 
+- Service restoration.
+3. ETSI TIPHON project for IP telephony. "Gold-silver-bronze" approach:
+voice packet loss: < .5% for class 1 = gold, 
+.5% to 1% for class 2 = silver, 
+1% to 2% for class 3 = bronze.
+4 1.3  3GPP QoS Concept and Architecture 
+(3GPP TS 23.107 V5.1.0)
+UMTS
+TE MT UTRAN CN Iu CN TE
+EDGE Gateway
+NODE
+End-to-End Service
+TE/MT Local UMTS Bearer Service External Bearer
+Bearer Service Service
+Radio Access Bearer Service CN Bearer
+Service
+Radio Bearer Iu Bearer Backbone
+Service Service Bearer Service
+UTRA Physical
+FDD/TDD Bearer Service
+Service
+5 1.4 Multimedia Services
+� Real Time Communications
+� Voice
+� Text
+� Video
+� Non-Real Time Communications
+� audio download;
+� video download;
+� audio streaming;
+� video streaming;
+� general data files;
+� text messaging (e.g. SMS);
+� emails;
+� general web browsing;
+� multi-media messaging
+3GPP TR 22.941 V0.7.7
+3rd Generation Partnership Project; Technical Specification Group Services and System 
+Aspects; IP Based Multimedia Services Framework; Stage 0 (Release 5)
+6 1.5 Value ranges for UMTS Bearer Service Attributes
+Traffic class Conversational class Streaming class Interactive class Background 
+class
+Maximum bitrate < 2 048 < 2 048 < 2 048 < 2 048
+(kbps)
+Delivery order Yes/No Yes/No Yes/No Yes/No
+Maximum SDU size <=1 500 or 1 502 <=1 500 or 1 502 <=1 500 or 1 502 <=1 500 or 1 
+(octets) 502 
+SDU format RCP protocol RCP protocol
+information
+Delivery of Yes/No Yes/No) Yes/No Yes/No
+erroneous SDUs
+Residual BER 5*10-2, 10-2, 5*10-3, 10-3, 5*10-2, 10-2, 5*10-3, 4*10-3, 10-5, 6*10-8 4*10-3, 10-5, 
+10-4, 10-6 10-3, 10-4, 10-5, 10-6 6*10-8 
+SDU error ratio 10-2, 7*10-3, 10-3, 10-4, 10-1, 10-2, 7*10-3, 10- 10-3, 10-4, 10-6 10-3, 10-4, 10-
+10-5 3, 10-4, 10-5 6
+Transfer delay (ms) 100 - maximum value 250 - maximum 
+value
+Guaranteed bit rate < 2 048 < 2 04
+(kbps)
+Traffic handling 1,2,3
+priority
+Allocation/Retention 1,2,3 1,2,3 1,2,3 1,2,3
+priority
+7 1.6 IETF activities and 3GPP
+Quality of Service Enablers
+IETF Integrated Services (IntServ) and Resource Reservation Protocol (RSVP)
+Differentiated Services (DiffServ)
+Multiprotocol Label Switching (MPLS)
+QoS Management Enablers
+Service Level Agreements (SLAs)
+Common Open Policy Service (COPS) protocol
+Simple Network Management Protocol (SNMPv3)
+8 1.7 Quality of Service (QoS)
+ITU-T: The collective effort of service performance which determine the
+degree of satisfaction of a user of the service.
+• User Domain
+- Speed
+- Accuracy
+- Dependability
+• Reliability
+• Availability
+-  ... 
+• Provider Domain
+- Delay
+- Loss
+- Utilization
+-  ... 
+9 1.8 Service Level Agreement
+SLA is a result of negotiation between two entities which shows
+• service development
+• service access & delivery characteristics
+• service monitoring and management and
+• service economical perspective
+SLA Parts
+• QoA - QoS Agreement
+- QoA Objectives or Service Level 
+Specifications
+• TCA Traffic - Conditioning Agreement
+• Management and Monitoring
+• Reporting and Backup
+QoS: ITU-T:  The degree of conformance of the service delivered to a user by a 
+provider with an agreement between them.
+10 1.9 Service Level Specifications
+A SLS is a specific SLA and its SLO's to guarantee quality of
+service to the user
+• SLS are dependent on 
+network environment 
+but are independent of 
+underlying technology 
+and protocols.
+• On the other hand, 
+SLO's depend on the 
+underlying technology, 
+protocols and 
+implementation 
+schemes.
+11 1.10 SLA and QoS for Wireless Environments
+• QoS Support in the 2.5 and 3rd Generation Networks
+• QoS Criteria particular to wireless and mobility
+- Accessibility
+- Reliability
+- Connection time
+- Service interruptions or dropout due to scarce network resources
+- Network coverage
+- Roaming and Hand-Over performance
+- Speech quality
+- Data transfer rate
+- Inter-operability between different domains
+12 2.1 The Parlay/OSA API
+Application
+OSA API
+OSA Gateway
+SGSN MSC SSP S-CSCF PBX
+PLMN
+GSM/GPRS PSTN / ISDN
+PLMN
+Enterprise
+(CS) (CS)
+UMTS
+(PS/IMS)
+13 2.2 The Parlay/OSA Framework
+- control of access to the network
+- integrity management
+- discovery of network functionality
+Client Application
+1 2 2
+Enterprise
+4 Framework
+Call
+3 Control Mobility etc
+Operator
+Registered Services
+- Application subscription - SCF registration
+to services - support of multi-domain
+14 2.3 OPIUM Project as UMTS QoS Testbed ?
+OSA / Parlay OSA / Parlay OSA / Parlay
+OCSliAen /t Parlay Client OCSliAen /t Parlay
+Client Client
+OSA
+API OSA / Parlay OSA / Parlay OSA / Parlay
+Gateway Gateway Gateway
+UMTS UMTS UMTS
+China Spain Germany
+15 3.1. How to built the global SLA index
+1) We use a linear discriminant function LDF, in other words, a scalar 
+product of vectors  and :
+Q = W1X1 + W2X2 +   ...  +WnXn
+where  W1,  ... , Wn are unknown constants, and choose some threshold 
+value a that the decision rule is as follows
+decision D1 if Q < a
+decision D2 if Q > a
+2) For "gold-silver-bronze" standard - any service/network provider can be 
+correlated to one of three classes:
+Gold level     ("Really Great" - expensive)   if   Q < Q1,
+Silver level    ("Darn Good" - not so expensive) if  Q1 < Q < Q2, 
+Bronze level  ("Best Effort" - inexpensive)  if  Q2 < Q.
+16 3.2 Geometrical interpretation of classification 
+for two-dimensional case
+w1x1 + w2x2 = a
+x2
+D D21
+µ ∆=µ2-µ11
+µ2
+x
+(µ 11, w) (µ
+a 2
+, w)
+w
+Mahalanobis  distance M 2 = (m )T2 − m 1 ∑ (m 2 − m 1 )
+17 3.3 Scheme for SLA conflict resolution
+Density Acceptable Complaint zonerange
+of SLA values
+α = 5%
+Global SLA
+z index 0
+18 4.1 Quality optimisation scheme: 
+a) basic idea, b) penalty scheme
+A+B=
+Expenditure Total 
+Expenditure Expenditure A+B
+A
+A=Cost of
+service
+improvement B=Penalties B=Penalties
+z
+Objective Global SLA
+0
+q Global SLA
+level q index index
+b)
+a)
+19 4.2 "Gold-silver-bronze" penalty scheme
+Expen-
+diture ? ?st of service Silver 
+improvement penalties/at Gold-
+gold agreed missed
+penalties
+Bronze 
+penalties/
+at gold agreed
+Silver-missed penalties
+Global SLA index Q
+Gold Silver Bronze
+zone zone zone
+Q1 Q2
+20 5.1 Best Practice: "New York Telephone" Service 
+Standards
+The Telephone Service Standards of New York Telephone Company (Verizon NY now) 
+were adopted by the New York State Public Service Commission in 1973 and 
+revised in 1989 and 1991. 
+Measurement of service quality in four separate categories: 
+1) Maintenance Service, 
+2) Dial-Line Service, 
+3) Answer Time Performance, and 
+4) Installation Service. 
+These measurements are categorised into three levels: 
+1) Objective levels - the level of service that represents good quality service to consumers. 
+2) Weakspot levels to denote a level of service below which immediate analysis and
+corrective action may be required.
+3) Three or more of five consecutive months of weakspot results are usually considered as a 
+surveillance level failure
+21 5.2 Illustration to customer trouble report rate CTRR
+Relative Fully
+frequency acceptable Tolerable Unusable
+range range
+Surveillance 
+level =
+weakspot
+3 of 5 months
+Objective level = 4.2 Weakspot = 7
+22 5.3 NYT service standards
+Service element Objective level Weakspot
+level
+Maintenance service
+CTRR per 100 access lines 0.0 - 4.2 Over 7
+Missed repair appointments (%) 0.0 - 10.0 Over 15
+Out-of-service over 24 hours 0.0 - 20.0 Over 30
+Installation performance
+Installations within 5 days (%) 85 - 100 Below 70
+Installation appointments 0.0 - 3.0 Over 10
+Answering time performance (%)
+Business office - within 20 sec 90.0 - 100.0 Below 85
+"  ------- " - all positions busy 0.0 - 10.0 Over 15
+Repair service - within 20 sec 90.0 100.0 Below 85
+"  ------- " - all positions busy 12.0 - 16.0 Over 27
+23 5.4 Rebates to all Manhattan customers 
+relating CTRR
+Range of offices without penalties, %
+Target level 79% 81% 83% 85%
+Rebate (Mill) 1995 1997 1999 2001
+$5.0 78% 80 82 84%
+$6.0 77 79 81 83
+$7.0 76 78 80 82
+$8.0 75 77 79 81
+$10.0 74 76 78 80
+$12.0 73 75 77 79
+$15.0 72 74 76 78
+$25.0 <72 <74 <76 <78
+24 6 Best Practice: LRAIC approach for penalty scheme
+Long Run Average Incremental Costs (LRAIC) approach:
+1. The interconnection charges reflect the actual production costs (new 
+entrant operators should not pay for inefficiency, mis-investments, etc.)
+2. New entrant operators will be stimulated to invest in alternative 
+networks.
+3. To create consensus on the cost level among telecom operators.
+The SLA as the common target for LRAIC analysis - the border point between 
+bottom-up (new entrant estimate) and top-down (incumbent estimate): the 
+higher LRAIC estimates the higher penalties.
+25 7 Conclusion
+1. UMTS QoS issues  - a challenge for ITC
+2. Parlay for SLA control
+3. Revisited OPIUM Project as UMTS QoS and SLA Testbed
+4. Global QoS index and "Gold-silver-bronze" standard
+5. To develop LRAIC approach for penalties
+26

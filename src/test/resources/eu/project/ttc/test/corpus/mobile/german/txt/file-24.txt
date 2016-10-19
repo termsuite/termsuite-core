@@ -1,0 +1,117 @@
+Next Generation Mobile Networks (NGMN) ist ein Projekt von Mobilfunkfirmen und Mobilfunkausrüstern zur Entwicklung der nächsten Mobilfunkgeneration. Diese Generation wird auch als „„4G" (vierte Generation) bezeichnet.
+Inhaltsverzeichnis
+ [Verbergen] 
+
+    * 1 Einführung
+    * 2 4G "Fourth Generation"
+          o 2.1 4G
+          o 2.2 Umrüstung
+          o 2.3 4G-Eigenschaften
+                + 2.3.1 Sicherheit
+    * 3 Produktionsprozesse
+          o 3.1 Endgeräte
+          o 3.2 Netze
+          o 3.3 Dienste
+          o 3.4 Anwendungen
+          o 3.5 Der Produktionsprozess
+    * 4 Neuer Produktionsprozess
+    * 5 Literatur
+    * 6 Einzelnachweise
+    * 7 Weblinks
+
+Einführung [Bearbeiten]
+
+NGMN soll auf den bisherigen UMTS-Infrastrukturen aufsetzen und daher eine rasche und kostengünstige Erweiterung der bestehenden 3G-Mobilfunknetze darstellen. Einer der Vorteile gegenüber den bestehenden Netzen mit High Speed Packet Access (HSPA) ist die mit bis zu 100 Megabit pro Sekunde wesentlich höhere Geschwindigkeit. Weiterhin sollen die verwendeten Endgeräte permanent mit dem Internet verbunden sein können ("always on"). Dies soll durch eine effizientere Ausnutzung des zur Verfügung stehenden Frequenzspektrums möglich werden, was ebenfalls eine einfachere Netzwerkarchitektur ermöglichen und zu Latenzzeiten von ungefähr 10 Millisekunden führen soll. Die Netzwerkreichweite soll sich nicht verändern.
+
+NGMN basiert wie die Funktechniken WiMAX und Flash-OFDM auf OFDM. Im Unterschied zu den genannten Verfahren werden die Frequenzen bei NGMN jedoch adaptiv vergeben, also dem Nutzer im Abstand von bis zu 0,5 Millisekunden jeweils die Netzwerkressourcen zugewiesen, die dieser benötigt. Dadurch wird ein besseres Verzögerungsverhalten ermöglicht als in anderen OFDM-Systemen.
+
+Seit Anfang 2005 läuft die Standardisierung von NGMN durch das Standardisierungsgremium Third Generation Partnership Project (3GPP). Kommerziell einsetzbar soll die von dem Projekt vorangetriebene Technik im Jahre 2010 sein. Seit dem Jahr 2011 bieten die ersten Netzbetreiber entsprechende 4G / LTE Tarife an, zunächst jedoch nur auf dem Land, wo die so genannten "weißen Flecken" (DSL Versorgungslücken) abgedeckt werden müssen. Vodafone und die Deutsche Telekom veröffentlichen seit April 2011 Informationen über die mit LTE versorgten Gebiete in 4G Netzabdeckungskarten. [1]
+4G "Fourth Generation" [Bearbeiten]
+4G [Bearbeiten]
+
+Unter 4G versteht man die Nachfolgegeneration des Mobilfunkstandards 3G. Die "Next Generation Mobile Networks" (NGMN) ist ein Projekt aus Mobilfunkausrüstern und Mobilfunkbetreibern zur Entwicklung der nächsten Generation, die auch unter dem Namen Long Term Evolution (LTE) bekannt ist. Der aktuelle Mobilfunkstandard ist der 3G-Standard, welcher auf den 2G-, den 1G- und den 0G-Standard aufbaut. Der 0G- bis 2G-Standard führt von der Wurzel der Mobilkommunikation bis hin zum GSM-Standard, also den in Deutschland bekannten D- und E-Netzen. 3G sorgte um die Jahrtausendwende für viel Aufsehen in Deutschland, als durch die Versteigerung der UMTS-Lizenzen durch den Bund mehr als 50 Mrd. € eingenommen werden konnten. UMTS bietet die Möglichkeit, unter optimalen Bedingungen Daten mit bis zu 384 Kilobit pro Sekunde herunterzuladen. Interferenzen und Fehlerkorrekturen schmälern diese Geschwindigkeit zwar, jedoch sind inzwischen dank mehrerer Erweiterungen des Standards (HSDPA) weitaus höhere Geschwindigkeiten möglich. Eine hohe Datenrate ist für Dienste wie Videotelefonie und mobile Internetnutzung wichtig. Mit der Nachfolgegeneration 4G werden noch einmal deutlich höhere Datenraten zur Verfügung stehen.
+Umrüstung [Bearbeiten]
+
+Mobilfunknetze bestehen aus Funkzellen, den sogenannten Zellen, aus denen die Verbindungen aufgebaut werden. Wird ein Mobiltelefon oder ein anderes Gerät, wie zum Beispiel ein Laptop mit UMTS-Karte, eingeschaltet, so loggt sich dieses Gerät aufgrund der auf der SIM-Karte gespeicherten Daten über die Netzdatenbank in das Mobilfunknetz ein. Das Gerät loggt sich zunächst an einer lokalen Datenbank ein, die auch mehrere "Waben" umfassen kann. Ändert sich der Standort des Gerätes, so bemerkt dies die Software des mobilen Kommunikationsgerätes und loggt sich automatisch an der nächsten lokalen Vermittlungsstelle ein. Das Signalaufbauschema änderte sich in ihrem groben Aufbau auch nicht, als die Netze um die zur "Third Generation" zählende UMTS-Technologie erweitert wurden. Wenn die bestehenden Netze innerhalb der nächsten zehn Jahre, wie der Handyhersteller Nokia vermutet, auf 4G umgerüstet werden, wird auch hier das Grundschema beibehalten werden. Der Vorteil dieser Vorgehensweise: Es kann die bereits vorhandene Infrastruktur verwendet werden, die lediglich um die benötigten technischen Komponenten erweitert werden müssen. Das heißt also, dass man - vereinfacht gesprochen - einfach die 4G-Komponenten an die bereits vorhandenen Funkmasten installiert.
+
+NGMN soll auf den aktuell vorherrschenden Infrastrukturen der UMTS-Technologie aufsetzen, um so eine rasche und relativ kostengünstige Erweiterung vom 3G-Standard zum 4G-Standard zu erreichen. Einer der größten Vorteile gegenüber den aktuell bestehenden UMTS-Netzen ist die mit bis zu 100 Megabit pro Sekunde deutlich höhere Downloadrate. Endgeräte sollen im 4G-Standard permanent mit dem Internet verbunden sein können. Der Vorteil hierbei: Abhängig vom Mobilfunkanbieter könnte man permanent online mit einem Instant Messenger Videotelefonie betreiben. "Anytime-anywhere", also immer und überall mobile Kommunikation betreiben zu können, dafür soll 4G stehen. Primär soll das heißen: ortsunabhängiger drahtloser Breitband-Internetzugang. Multimedia Messaging Service (MMS), Video Chat, High Definition Radio (HD-Radio), mobile TV, High Definition TV content (HDTV), DVB und normales Telefonieren soll in diesem Netz möglich sein. Fachleute bezeichnen letztere Eigenschaft auch als "minimal service like voice and data".
+4G-Eigenschaften [Bearbeiten]
+
+    * 100 MBit/s1 Datenrate im Download,
+    * Bis zu 1 GBit/s1, wenn sich der User an einem fixen Standort zur nächsten Station (in der Regel ein Funkturm) befindet,
+    * Kompatibilität zu bereits vorhandenen Netzwerken (4G-Geräte sind also auch fähig, mit den älteren Technologien zu arbeiten, wie zum Beispiel GSM, UMTS, etc.),
+    * 50 MBit/s1 im Uplink,
+    * 20 MHz benötigte Frequenzbandbreite,
+    * Latenzzeiten von ≈ 10 ms,
+    * Qualitativ hochwertige Dienstleistungen wie Echtzeit-Audio, Hochgeschwindigkeits-Datenübertragung, HDTV-Videoinhalte, mobiles Fernsehen, etc.,
+    * höhere Spektrumeffizienz (geringere Kosten pro Datenvolumen)
+    * Modulation: OFDMA, downlink: QPSK/16QAM/64QAM, uplink: BPSK/QPSK/16QAM
+
+1 unter optimalen Bedingungen
+
+Gegenwärtig ist es bereits möglich, in den Genuss von so genannten Pre-4G-Technologien zu kommen. So bezeichnet man zum Beispiel UMTS Release8 als eine Vorstufe des kommenden 4G-Standards. UMTS Release8 ist eine Weiterentwicklung des bereits vorhandenen UMTS-Netzes inkl. den Release5-HSDPA- und Release6-HSUPA-Erweiterungen. Release8 zielt darauf ab, Kosten zu senken, eine höhere Erreichbarkeit und Sicherheit zu gewährleisten und die Geschwindigkeit im Netz zu erhöhen.
+Sicherheit [Bearbeiten]
+
+Um die Sicherheit auch im 4G-Netz zu gewährleisten, werden alle Endgeräte nur noch über Internet-Protokolle mit den lokalen Vermittlungsstellen kommunizieren. Erst das vollständig IP-basierte System bietet beste Qualität, Sicherheit und zudem die extrem hohen Up- bzw. Downloadraten. Der Vorteil dieser neuen Technologie liegt auch in der leichten Handhabung. 4G könnte das Potential haben, Festnetzanschlüsse überflüssig zu machen. Einen 4G-Router mit Verbindung zum 4G-Netz und einer Voice-over-IP-Funktion würde dann ausreichen. Festnetzinstallationen würden dem Kunden erspart bleiben.
+Produktionsprozesse [Bearbeiten]
+
+Um eine funktionierende Mobilkommunikation zu gewährleisten müssen Grundlagen in den folgenden vier Bereichen der Kommunikation gegeben sein:
+
+    * Endgeräte
+    * Netze
+    * Dienste
+    * Anwendungen
+
+Endgeräte [Bearbeiten]
+
+Hierbei sind im Wesentlichen mobile Telefone/Handys zu betrachten, da diese im Vergleich zu PDAs oder Notebooks vom größten Teil der Bevölkerung genutzt werden. Sie "zeichnen sich durch ihre geringe Größe, ihr geringes Gewicht und ihre Unabhängigkeit von Stromquellen aus. Sie sind somit portabel und lassen sich unterwegs sowie an unterschiedlichen Orten nutzen."
+
+Durch ihr geringes Gewicht und ihre geringe Größe ist es verständlich, dass sie im Vergleich zu Computern einige Nachteile aufweisen, wie etwa einen kleineren Bildschirm, weniger Speicherplatzkapazität, begrenztere Eingabemöglichkeiten, sowie begrenzte Leistung und Bandbreite bei der Netzanbindung. Die detaillierte Ausgestaltung der Handys variiert allerdings, da sie unterschiedliche Funktionen unterstützen (wie z. B. Kamera oder Mp3-Player).
+
+Die neueren Netbooks ohne mechanische Laufwerke verfügen jedoch ebenfalls über lange Betriebszeiten (bis zu 8 Stunden [2010]) ohne Stromquellen. Die 'Internet-Telefonie' oder VoIP (Voice over IP) eröffnet diesen Geräten eine eigene Stellung im Telefonmarkt insbesondere für Internationale Gespräche. Diese können hierbei teilweise unentgeltlich geführt werden.
+Netze [Bearbeiten]
+
+Zur Übertragung von Daten benötigt man Kommunikationsnetze. Diese können in drei Typen untergliedert werden: W-PAN, W-LAN und W-WAN. W-PAN (Wireless Personal Area Network) hat nur eine geringe Reichweite, so dass hier die Datenübertragung zwischen Endgeräten, wie z. B. mittels Infrarotschnittstellen oder Bluetooth, im Vordergrund steht. W-LAN (Wireless Local Area Networks) bietet eine Reichweite bis ca. 100 Meter, übertragen durch Funk- oder Lichtwellen, so dass man sich in einem begrenzten Raum frei bewegen kann. Mobilkommunikation im engeren Sinne beruht auf W-WAN (Wireless Wide Area Networks). Diese Netze haben eine Reichweite von ca. fünf Kilometern. Eine Basisstation deckt jeweils ein bestimmtes Gebiet per Funkwellen ab. Diese Stationen werden so errichtet, dass sie möglichst flächendeckend sind.
+Dienste [Bearbeiten]
+
+Dienste können in
+
+    * Trägerdienste - Datenübertragung zwischen Benutzer-Netz-Schnittstellen
+    * Teledienste - wie Sprach- und Datendienste und
+    * Zusatzdienste - ergänzende Dienste zu den Telediensten eingeteilt werden.
+
+Anwendungen [Bearbeiten]
+
+Im Gegensatz zu den inhaltsneutralen Telediensten stellen Anwendungen individuelle, informationsgeladene Inhalte dar. Einerseits existieren netzgebundene Anwendungen, wie abonnierte SMS-Services, andererseits aber auch lediglich die auf dem Endgerät laufenden Anwendungen wie Kalender, Spiele, etc. Bei der Medienproduktion für Mobilkommunikation sind diese Grundlagen von Beginn an zu beachten.
+Der Produktionsprozess [Bearbeiten]
+
+In der Vorproduktionsphase werden die spezifischen Inhalte und die Form der Distribution bestimmt. Zudem werden Entscheidungen über die Periodizität der Distribution und die Kommunikationsform getroffen. Im nächsten Schritt, der Produktionsphase, werden monomediale (also lediglich Textdaten) oder multimediale (Text, Musik, Bild) Inhalte und Anwendungen produziert. Mithilfe verschiedener Entwicklungswerkzeuge und Auszeichnungssprachen (wie z. B. XHTML, WML, iHTML oder cHTML) können diese gestaltet werden. Wichtig hierbei ist die spezielle Gestaltung für den Mobilfunk. Es gilt die Design-Richtlinien zu beachten:
+
+    * Gute Strukturierung des Dienstes
+    * Einfache und konsistente Navigation
+    * Schnelle Nutzung ermöglichen
+    * Feedback während der Interaktion
+    * Grafische Darstellung sinnvoll einsetzen
+    * Übersichtliches Layout
+    * Prägnanz des Textes
+    * Medienspezifisches Design
+
+In der Postproduktionsphase werden sowohl Evaluation als auch Nutzbarkeits-Tests durchgeführt. Um eine möglichst reelle Situation zu gestalten werden auch Feldversuche unternommen. Somit werden einerseits die Anwendungen und Inhalte optimiert, andererseits entstehen aber bereits neue Ideen für weitere Anwendungen. So wurde in Berlin bereits ein Feldversuch für 4G gestartet. Mobile Anwendungen lassen sich in folgenden Gruppen zusammenfassen:
+
+    * mobile Kommunikation (Kommunikationsformen auf Basis von SMS, MMS, EMS)
+    * mobile Information (mobiler Rundfunk, mobile Bildung, usw.)
+    * mobile Unterhaltung (Spiele, Musik, Logos)
+    * mobile Transaktion (Einkaufen, Banking, usw.)
+
+Abschließend erfolgt dann die Distribution.
+Neuer Produktionsprozess [Bearbeiten]
+
+Da die wichtigsten Anforderungen an die 4. Generation des Mobilfunks die Steigerung der Datenübertragungsrate sowie die globale Erreichbarkeit sind, müssen Anpassungen in verschiedenen Teilbereichen des Produktionsprozesses gemacht werden: den Endgeräten/Handys, dem Netzwerk - beides anzuordnen unter Distribution - und dem Content der Mobilfunkanbieter.
+
+Um der 4. Generation gerecht zu werden, müssen die Netze erweitert werden. Die Anzahl der Basisstationen muss erhöht werden, bzw. in ländlichen Gegenden werden Antennen mit Richtstrahlcharakter eingesetzt. Die heterogenen Netzwerke greifen dabei auf bewährte Technologien zurück und verbinden diese miteinander, so dass der Zugang zum Netzwerk unabhängig von verwendeter Zugangstechnologie ist und es möglich wird, zwischen den Netzen durch nahtlose Übergabemechanismen zu wandern. Hierbei spricht man auch von Netzkonvergenz.
+
+Das weitaus größere Veränderungspotential liegt in den Endgeräten und den entsprechenden Anwendungen. Die einzelnen Anwendungen müssen auf die Endgeräte angepasst werden, um überhaupt genutzt werden zu können. Daher stellt sich die Frage, welche neuen Anforderungen an die Handys gestellt werden müssen, bzw. welche Anwendungen erwünscht werden. Allerdings liegt hier eine Schwierigkeit in der Identifikation. So vermisste vor einigen Jahren niemand die Kamera an einem Handy, heutzutage ist sie aber bereits fast Standard.
+
+Die Steigerung der Datenübertragungsrate eröffnet Möglichkeiten, die der Nutzer noch nicht kennt. Welche Inhalte sollten demnach angeboten werden? Muss dementsprechend auch eine Entwicklung der Handys erfolgen? Die Erstellung des Inhalts wird kaum technische Veränderung mit sich bringen, lediglich die Datengröße wird sich verändern. Vermutlich werden Formate wie Wap vollständig durch HTML ersetzt bzw. werden neue Formate entwickelt werden. Es werden weitaus mehr multimediale Inhalte und Anwendungen erstellt als monomediale. Allerdings kann man durch technischen Fortschritt mehr Wert auf die Qualität legen. Bisher wurden Inhalte unter Beachtung der Design Guidelines für Mobilkommunikation erstellt. Erstellt man aber demnächst Geräte mit größerem Bildschirm und besserer Darstellungsqualität, so sollte man diese Guidelines anpassen. Damit einher muss auch die Verbesserung der Speicherkapazität gehen.
+
+So kann man nicht nur Fotos und kurze Filmausschnitte versenden sondern demnächst auch in Echtzeit Videotelefonie nutzen. Die einzelnen Endgeräte müssen je nach Anforderung angepasst werden.

@@ -1,0 +1,1510 @@
+MATHEMATICAL STRUCTURES.
+
+UNIT I  SET THEORY
+Set theory: set notations   basic set operations -  Venn diagram -  laws of set theory   
+principles of inclusion and exclusion -  partition -  minsets  mathematical induction. 
+12
+UNIT II  PROPOSITIONAL CALCULUS
+
+ Propositions -   Truth table-logical operators  Tautologies and contradiction- Logical 
+equivalences and implications- laws of logic  -  normal forms-     proofs in propositional 
+calculus- Direct proof- conditional conclusion  indirect proof- Inconsistent set of 
+premises.										12	
+				
+UNIT III PREDICATE CALCULUS
+Predicates- statement function  variables and quantifiers- Prdicate formulae- Free and 
+bound variables- The Universe of discourse- logical implications and equivalence for 
+quantified statements- Theory of inference of predicate calculus.			12
+
+UNIT IV RELATIONS AND FUNCTIONS
+Relations- Properties of relations- Equivalence relation- composition of relations- closure 
+operations on relations- Fuctions-Injective, surjective, bijective functions- composisition 
+of functions  inverse functions. 							12
+
+UNIT V FORMAL LANGUAGES AND AUTOMATA
+Four classes of gammars- Types of grammars-normal forms-Derivation trees- ambiguous 
+and unambiguous grammars- finite state automata(FSA)- nondeterministic finite state 
+automata(NFSA)- conversion of non-deterministic automata to deterministic finite state 
+automata. acceptance of a regular set by an FSA    construction  of a right linear grammar 
+from a finite automata.								12
+
+								L  : 45, T : 15, Total   60
+Reference Books:
+
+1.	Kenneth H.Rosen,  Discrete Mathematics and its Applications, Tata Mc Graw 
+Hill, Fourth Edition, 2002.
+2.	J.P.Tremblay and Manohar ,  Discrete Mathematical Structures with Applications 
+to computer Science , TMH ,1997.
+
+
+
+
+
+
+
+
+
+
+DESIGN AND ANALYSIS OF ALGORITHMS                                           L T P  M
+                                                                                                                             3  1 0  100
+UNIT  I	 INTRODUCTION                                                                                  
+Fundamentals of algorithmic problem solving  important problem types  Fundamentals 
+of the analysis of algorithm efficiency  analysis frame work  Asymptotic NOTATIONS 
+ Mathematical analysis for recursive and non-recursive algorithms.                              (9)
+UNIT  II	 DIVIDE AND CONQUER METHOD AND GREEDY METHOD  
+Divide and conquer methodology  Merge Sort  Quick Sort  Binary search  Binary 
+Tree Traversal  Multiplication of large integers- Strassen's matrix multiplication Greedy 
+method  Prim's algorithm  Kruskal's algorithm  Dijkstra's Algorithm.                     (9)
+UNIT  III	DYNAMIC PROGRAMMING                                                              
+Computing a binomial coefficient  Warshall's and Floyd's algorithm  Optimal binary 
+search tree  Knapsack problem  Memory functions.                                                     (9)
+UNIT  IV	 BACKTRACKING AND BRANCH AND BOUND                           
+Backtracking  N-Queens problem  Hamiltonian circuit problem  subset sum problem- 
+branch and bound  Assignment problem  Knapsack problem  Traveling salesman 
+problem.                                                                                                                             (9)
+UNIT  V	NP-HARD AND NP-COMPLETE PROBLEMS                                 
+P & NP, problems  NP- complete problems  Approximation algorithms for NP-hard 
+problems traveling salesman problem  Knapsack problem.                                            (9)
+                                                                                                            L:45 T:15 Total   60
+REFERENCES:
+1.	Anany Levitin Introduction to the design and Analysis of Algorithms Pearson 
+Edition 2003. 
+2.	Thomas H. Cormen, Charles E. Leiscrson, Ronald L. Rivest, Introduction to 
+algorithms Prentice Hall 1990. 
+
+
+
+                       OBJECT ORIENTED PROGRAMMING                        L T P M             
+                                                                                                                          4  0  0  100
+      
+UNIT I  		INTRODUCTION					          		     
+(12)
+Object-oriented paradigm, elements of object oriented programming  Merits and 
+demerits of OO methodology  C++ fundamentals  data types, operators and 
+expressions, control flow, arrays, strings, pointers and functions. 
+		
+UNIT II 		PROGRAMMING IN C++				       	     (12)
+Classes and objects  constructors and destructors, operator overloading  inheritance, 
+virtual functions and polymorphism 		
+				
+UNIT III 		FILE HANDLING					                 (12)
+C++ streams  console streams  console stream classes-formatted and unformatted 
+console I/O operations, manipulators - File streams - classes file modes file pointers and 
+manipulations file I/O  Exception handling 
+					
+UNIT IV 		JAVA INTRODUCTION				                 (12)
+An overview of Java, data types, variables and arrays, operators, control statements, 
+classes, objects, methods  Inheritance.
+
+UNIT V 		JAVA PROGRAMMING					     (12)	
+Packages and Interfaces, Exception handling, Multithreaded programming, Strings, Input 
+/Output.
+
+ 									Total : 60
+REFERENCES
+1.	Herbert Schildt, "the Java 2 : Complete Reference", Fourth edition, TMH, 2002 
+(Unit IV, Unit-V)(Chapters 1-11,13,17)
+2.	Ira Pohl, Object oriented programming using C++, Pearson Education Asia, 
+2003 
+3.	Bjarne Stroustrup, The C++ programming language, Addison Wesley, 2000
+4.	John R.Hubbard, Progranning with C++, Schaums outline series, TMH, 2003
+5.	H.M.Deitel, P.J.Deitel, Java : how to program, Fifth edition, Prentice Hall of 
+India private limited.
+6.	E.Balagurusamy  Object Oriented Programming with C++, TMH 2/e 
+
+
+
+                      DATABASE MANAGEMENT SYSTEMS		                 L T 
+P M
+4  0  0  100
+UNIT I	INTRODUCTION AND CONCEPTUAL MODELING	               
+(12)
+Introduction to File and Database systems- Database system structure  Data Models  
+Introduction to Network and Hierarchical Models  ER model  Relational Model  
+Relational Algebra and Calculus.
+UNIT II		RELATIONAL MODEL				          	   (12)
+SQL  Data definition- Queries in SQL- Updates- Views  Integrity and Security  
+Relational Database design  Functional dependences and Normalization for Relational 
+Databases (up to BCNF).
+UNIT III	DATA STORAGE AND QUERY PROCESSING	               (12)
+Record storage and Primary file organization- Secondary storage Devices- Operations on 
+Files- Heap File- Sorted Files- Hashing Techniques  Index Structure for files Different 
+types of Indexes- B-Tree - B+Tree  Query Processing.
+UNIT IV 	TRANSACTION MANAGEMENT				    (12)
+Transaction Processing  Introduction- Need for Concurrency control- Desirable 
+properties of Transaction- Schedule and Recoverability- Serializability and Schedules  
+Concurrency Control  Types of Locks- Two Phases locking- Deadlock- Time stamp 
+based concurrency control  Recovery Techniques  Concepts- Immediate Update- 
+Deferred Update - Shadow Paging.
+UNIT V		CURRENT TRENDS				               (12)
+Object Oriented Databases  Need for Complex Data types- OO data Model- Nested 
+relations- Complex Types- Inheritance Reference Types - Distributed databases- 
+Homogenous and Heterogenous- Distributed data Storage  XML  Structure of XML- 
+Data- XML Document- Schema- Querying and Transformation.  Data Mining and Data 
+Warehousing.  
+	Total : 60
+REFERENCES	
+1.	Abraham Silberschatz, Henry F. Korth and S. Sudarshan- Database System 
+Concepts, Fourth Edition, McGraw-Hill, 2002. 
+2.	Ramez Elmasri and Shamkant B. Navathe, Fundamental Database Systems, 
+Third Edition, Pearson Education, 2003.
+3.	Raghu Ramakrishnan, Database Management System, Tata McGraw-Hill 
+Publishing Company, 2003.
+4.	Hector GarciaMolina, Jeffrey D.Ullman and Jennifer Widom- Database System 
+Implementation- Pearson Education- 2000.
+
+ COMPUTER ARCHITECTURE			       L T P M  
+4  0  0  100
+
+UNIT I		BASIC STRUCTURE OF COMPUTERS			     
+(12)
+Functional units - Basic operational concepts - Bus structures - Software performance  
+Memory locations and addresses  Memory operations  Instruction and instruction 
+sequencing  Addressing modes  Assembly language  Basic I/O operations  Stacks 
+and queues.
+
+UNIT II		ARITHMETIC UNIT					     (12)
+Addition and subtraction of signed numbers  Design of fast adders  Multiplication of 
+positive numbers - Signed operand multiplication and fast multiplication  Integer 
+division  Floating point numbers and operations.
+
+UNIT III	BASIC PROCESSING UNIT			                             (12)
+Fundamental concepts  Execution of a complete instruction  Multiple bus organization 
+ Hardwired control  Microprogrammed control - Pipelining  Basic concepts  Data 
+hazards  Instruction hazards  Influence on Instruction sets  Data path and control 
+consideration  Superscalar operation.
+UNIT IV	MEMORY SYSTEM					                 (12)
+Basic concepts  Semiconductor RAMs - ROMs  Speed - size and cost  Cache 
+memories - Performance consideration  Virtual memory- Memory Management 
+requirements  Secondary storage.
+
+UNIT V	I/O ORGANIZATION				                            (12)	
+Accessing I/O devices  Interrupts  Direct Memory Access  Buses  Interface circuits  
+Standard I/O Interfaces (PCI, SCSI, USB).
+
+Total : 60
+REFERENCES
+1.	Carl Hamacher, Zvonko Vranesic and Safwat Zaky, 5th Edition Computer 
+Organization, McGraw-Hill, 2002.
+2.	William Stallings, Computer Organization and Architecture  Designing for 
+Performance, 6th Edition, Pearson Education, 2003. 
+3.	David A.Patterson and John L.Hennessy, Computer Organization and Design: 
+The hardware / software interface, 2nd Edition, Morgan Kaufmann, 2002.
+4.	John P.Hayes, Computer Architecture and Organization, 3rd Edition, McGraw 
+Hill, 1998.
+
+OPERATIONS RESEARCH
+
+UNIT I - LINEAR PROGRAMMING
+	
+      Mathematical formulation of Linear programming problem  Graphical solution  
+Simplex method  Artificial variable technique  Big M method  Two phase method   
+Duality Concept - Primal Dual Relationships. Simple problems.			        12
+
+
+UNIT  II APPLICATIONS OF LINEAR PROGRAMMING
+
+Mathematical formulation of transportation problem  methods for finding initial basic 
+feasible solution  optimal solution  degeneracy  maximizatio  transportation problem 
+Mathematical formulation of Assignment models  Hungarian algorithm  variants of the 
+assignments problems.        										       12
+
+UNIT  III NETWORK MODELS
+
+Network construction  Critical path method  Project Evaluation and Review Technique 
+- 
+Resource Analysis in Network Scheduling. 	                                                                12
+
+UNIT IV -   INVENTORY MODELS
+
+Types of inventories- costs involved in inventory models- Economic order quantity-
+Deterministic Inventory Models  Purchasing problem with no shortages- Production 
+problem with no shortages- purchasing problem with shortages- production problem with 
+shortages-EOQ problem with price breaks-  Simple problems.			        12
+
+UNIT  - V  QUEUING MODELS
+Characterization of Queuing models - Poisson Queues - (M/M/1): (FIFO/?/?),(M/M/1): 
+(FIFO/N/?) ,  ( M/M/C): (FIFO/?/?) , (M/M/C): (FIFO/N/?) models. Simple problems	                                                                                                                         
+12
+								    L  : 45, T : 15, Total   60	
+REFERENCES
+
+1.	 Operations Research, A.M.Natarajan,, P.Balasubramanie, A.Tamilarasi- Pearson 
+education  New Delhi, 2003.
+2.	Resource Management Techniques, V.Sundaresan, K.S.Ganapathy 
+Subramanian, K. Ganesan - A.R. Publications, Arpakkam-609 111.
+3.	Operations Research- an Introduction, Hamdy A.Taha,, Eight edition , Pearson 
+         Education, New  Delhi, 2008.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                MICROPROCESSOR AND INTERFACING             L  T   P   M
+                                                                                                                          3   1   0   100
+UNIT - I        8-BIT MICROPROCESSOR		      	                               
+8085 Architecture and Memory interfacing, interfacing I/O devices, Instruction set, 
+Addressing Modes, Assembly language programming, counters and time delays, 
+interrupts, timing diagram, Microprocessor applications.                                                 (9)
+
+UNIT  II	MICROCONTROLLER:			       	                               
+Intel 8031/8051 Architecture, Special Function Registers (SFR), I/O pins, ports and 
+circuits, Instruction set, Addressing Modes, Assembly Language Programming, Timer 
+and Counter Programming, Serial Communication, Connection to RS 232, Interrupts 
+Programming, External Memory interfacing, Introduction to 16 bit Microcontroller      (9)
+
+UNIT  III	80X86 PROCESSORS				    	
+8086 Architecture, Pin Configuration, 8086 Minimum and Maximum mode 
+configurations, Addressing modes, Basic Instructions, 8086 Interrupts, Assembly levels 
+programming. Introduction to 80186, 80286,80386, 80486 and Pentium processors.   (9)
+
+UNIT  IV	PERIPHERALS AND INTERFACING 	        	                               
+Serial and parallel I/O (8251 and 8255), Programmable DMA Controller (8257), 
+Programmable interrupt controller (8259), keyboard display controller (8279), ADC/DAC 
+interfacing. Inter integrated circuits interfacing (I2C standard).                    (9)
+
+UNIT  IV	UNIT MICROPROCESSOR BASED SYSTEMS DESIGN, 
+DIGITAL INTERFACING 			       				
+ Interfacing to alpha numeric displays, interfacing to liquid crystal display (LCD 16 x 2 
+line), high power Devices and Optical motor shaft encoders, stepper motor interfacing, 
+Analog interfacing and industrial control, microcomputer based smart scale, industrial 
+process control system, Robotics and Embedded control, DSP and Digital Filters.        (9)
+
+                 		                                           L : 45 T: 15  Total   60
+
+REFERENCES:
+1.	Ramesh S. Gaonkar, Microprocessor Architecture Programming and Applications 
+with 8085. Fourth edition, Penram International Publishing 2000.
+2.	Muhammad Ali Mazidi, Janice Gillispie Mazidi, The 8051 Microcontroller, and 
+Embedded Systems, Prentice Hall 2000.
+3.	Douglas V.Hall, Microprocessor and Interfacing, Programming and Hardware. 
+Tata McGraw Hill, Second Edition. 1999.
+4.	Kenneth J.Ayala., The 8051 Microcontroller Architecture Programming and 
+Applications, Penram International Publishing (India). 1996.
+5.	Ray A.K.Bhurchandi.K.M, Advanced Microprocessor and Peripherals, Tata 
+McGraw-Hill, 2002.
+           
+
+
+  JAVA PROGRAMMING                                   L T P   M
+                                                                                                                               3  1  0 100
+
+UNIT - I     JAVA BASICS-REVIEW				
+Java Streaming  Components and events handling  Threading concepts  Networking-
+features  Byte code interpretation  Media Techniques.                                                     (9)
+
+UNIT - II	JAVA DATA STRUCTURES	
+ Lists  Linear Structures  Ordered Structures  Sorting  Trees.                                      (9)                                   
+
+UNIT - III	ADVANCED NETWORKING AND BEANS			
+Client-Sever computing  Sockets  Content and Protocols handlers  Developing distributed 
+applications  RMI  Remote objects  Object serialization  Bean Concepts  Events in 
+Bean Box  Bean customization and persistence.                                                                 (9)
+
+UNIT - IV	 JAVA DATABASE PROGRAMMING	
+Connecting to Databases  JDBC principles  Databases access  Interacting  Database 
+search  Accessing Multimedia databases  Database support in Web applications.            (9)
+                                                                                                                                                                                 
+UNIT - V 	RELATED JAVA TECHNIQUES					       
+3D graphics  JAR file format and creation  Internationalization  Swing Programming  
+Advanced Java Scripting Techniques.                                                                                 (9)
+
+L : 45 T: 15  Total   60
+REFERENCES
+1.	Ken Arnold, James Gosling and David Holmes, The JAVA Programming 
+Language, 3rd edition, Tata Mc-Graw Hill,  2007
+2.	Elliotte Rusty Harold,  Java Network Programming, O'Reilly publishers, 2000 
+3.	Patrick Naughton, Complete Reference: Java2, 7th edition, Tata Mc-Graw Hill, 
+2003
+4.	H.M.Deitel, P.J.Deitel, Java : how to program, Fifth edition, Prentice Hall of 
+India private limited.2005
+
+
+
+                                     COMPUTER NETWORKS		                   L T P M	   
+		    4  0  0  100
+
+UNIT I		DATA COMMUNICATIONS				                 (12)
+Components  Direction of Data flow  networks  Components and Categories  types 
+of Connections  Topologies Protocols and Standards  ISO / OSI model  
+Transmission Media  Coaxial Cable  Fiber Optics  Line Coding  Modems  RS232 
+Interfacing sequences.
+
+UNIT II		DATA LINK LAYER					                 (12)
+Error  detection and correction  Parity  LRC  CRC  Hamming code  low Control 
+and Error control - stop and wait  go back-N ARQ  selective repeat ARQ- sliding 
+window  HDLC. - LAN - Ethernet IEEE 802.3 - IEEE 802.4 - IEEE 802.5 - IEEE 
+802.11  FDDI - SONET  Bridges.
+UNIT III		NETWORK LAYER					     (12)
+Internetworks  Packet Switching and Datagram approach  IP addressing methods  
+Subnetting  Routing  Distance Vector Routing  Link State Routing  Routers.
+
+UNIT IV		TRANSPORT LAYER					     (12)
+Duties of transport layer  Multiplexing  Demultiplexing  Sockets  User Datagram 
+Protocol (UDP)  Transmission Control Protocol (TCP)  Congestion Control  Quality 
+of services (QOS)  Integrated Services.
+
+UNIT V		APPLICATION LAYER						    (12)   
+Domain Name Space (DNS)  SMTP  FTP  HTTP - WWW  Security  Cryptography.
+		
+Total : 60
+REFERENCES
+1.	Behrouz A. Forouzan, Data communication and Networking, Tata McGraw-
+Hill, 2004.
+2.	James F. Kurose and Keith W. Ross, Computer Networking: A Top-Down 
+Approach Featuring the Internet, Pearson Education, 2003.
+3.	Andrew S. Tanenbaum, Computer Networks, PHI, Fourth Edition, 2003.
+4.	William Stallings, Data and Computer Communication, Sixth Edition, Pearson 
+Education, 2000.
+
+
+
+                                        SOFTWARE ENGINEERING                                  L T P M
+                                                                                                                              3  1  0  100
+UNIT - I          SOFTWARE PROCESS			           		                   
+Introduction S/W Engineering Paradigm   life cycle models (water fall, incremental, 
+spiral, WINWIN spiral, evolutionary, prototyping, object oriented) - system engineering  
+computer based system   verification  validation  life cycle process  development 
+process system engineering hierarchy.                                                                            (9)
+
+UNIT - II       SOFTWARE REQUIREMENTS				
+Functional and non-functional - user  system requirement engineering process  
+feasibility studies  requirements  elicitation  validation and management  software 
+prototyping  prototyping in the software process  rapid prototyping techniques  user 
+interface prototyping -S/W document. Analysis and modeling  data, functional and 
+behavioral models  structured analysis and data dictionary.                                           (9)                                                      
+
+UNIT - III          DESIGN CONCEPTS AND PRINCIPLES		
+Design process and concepts  modular design  design heuristic  design model and 
+document. Architectural design  software architecture  data design  architectural 
+design  transform and transaction mapping  user interface design  user interface 
+design principles. Real time systems - Real time software design  system design  real 
+time executives  data acquisition system - monitoring and control system. SCM  Need 
+for SCM  Version control  Introduction to SCM process  Software configuration 
+items.                                                                                                                                 (9)             
+
+UNIT - IV       TESTING						
+Taxonomy of software testing  levels  test activities  types of s/w test  black box 
+testing  testing boundary conditions  structural testing  test coverage criteria based on 
+data flow mechanisms  regression testing  testing in the large. S/W testing strategies  
+strategic approach and issues  - unit testing  integration testing  validation testing  
+system testing and debugging.                                                                                          (9)
+
+UNIT - V      SOFTWARE PROJECT MANAGEMENT			
+Measures and measurements  S/W complexity and science measure  size measure  data 
+and logic structure measure  information flow measure. Software cost estimation  
+function point models  COCOMO model- Delphi method.- Defining a Task Network  
+Scheduling  Earned Value Analysis  Error Tracking - Software changes  program 
+evolution dynamics  software maintenance  Architectural evolution. Taxonomy of 
+CASE tools.                                                                                                                       (9)
+												
+L : 45 T: 15  Total   60
+
+
+      REFERENCES:
+1.	Roger S.Pressman, Software engineering- A practitioner's Approach, McGraw-
+Hill International Edition, 6th edition, 2007.
+2.	Ian Sommerville, Software engineering, Pearson education Asia, 6th edition, 2001.
+3.	Pankaj Jalote- An Integrated Approach to Software Engineering, Springer Verlag, 
+1997.
+4.	James F Peters and Witold Pedryez, Software Engineering  An Engineering 
+Approach, John Wiley and Sons, New Delhi, 2000.
+5.	Ali Behforooz and Frederick J Hudson, Software Engineering Fundamentals, 
+Oxford University Press, Noida, 2003.
+
+
+
+
+
+
+
+                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                              WEB TECHNOLOGY                                 L T P M
+                                                                                                                           4 0 0  100
+UNIT  I	INTRODUCTION							       
+Internet Principles  Basic Web Concepts  Client/Server model  Retrieving data from 
+Internet  HTML and Scripting Languages  Standard Generalized Mark-up Language 
+Next Generation Internet  Protocols and applications.                                                  (12)
+
+UNIT  II	COMMON GATEWAY INTERFACE PROGRAMMING	       
+HTML forms   CGI Concepts  HTML tags Emulation  Server-Browser 
+communication  E-mail generation  CGI Client side Applets  CGI Server Side Applets 
+ Authorization and security.                                                                             (12)
+
+UNIT  III	SOCKET PROGRAMMING					       
+Streaming  Networking principles  sockets  protocol handlers  content handlers  
+multicasting  Remote Method Invocation  activation  Serialization - Marshal Streams.
+                                                                                                                                         (12)
+
+UNIT  IV	SERVER SIDE PROGRAMMING				
+Dynamic web content  cascading style sheets  DHTML  XML  - Server side includes - 
+communication  Active and Java Server Pages - Firewalls  proxy servers.            (12)
+
+UNIT  V	ONLINE APPLICATIONS						       
+Simple applications  On-line databases  monitoring user events  plug-ins  database 
+connectivity  Internet Information Systems - EDI application in business  Internet 
+commerce Customization of Internet commerce                                                          (12)
+
+   Total   60
+
+REFERENCES:
+1.	Rashim Mogha, Preetham.V.V.,  Java Web Services Programming, Wiley 
+Dreamtech, New Delhi, 2002.
+2.	Deitel , XML How to Program, first edition, Pearson Education, USA, 2002.
+3.	Jason Hunter, William Crawford, Java Servlet Programming, O' Reilly   
+Publications, USA, 1998.
+4.	Bhanu Pradhap,  Understanding Active Server Pages  , Cyber Tech  
+Publications ,New Delhi, 2001.
+5.	James Conard,Patrick Dengler,Brain Franics Et Al,  Introducing .NET , Shroff 
+Publishers, New Delhi, 2001.
+
+
+
+
+                                           EMBEDDED SYSTEMS                                        L T P  M
+                                                                                                                               3  1 0  100
+UNIT I	INTRODUCTION TO EMBEDDED SYSTEMS			 
+Definition and Classification  Overview of Processors and hardware units in an 
+embedded system  Software embedded into the system  Exemplary Embedded 
+Systems  Embedded Systems on a Chip (SoC) and the use of VLSI designed circuits                
+(9)
+UNIT II	DEVICES AND BUSES FOR DEVICES NETWORK	           	
+I/O Devices - Device I/O Types and Examples  Synchronous - Iso-synchronous and 
+Asynchronous Communications from Serial Devices - Examples of Internal Serial-
+Communication Devices  Parallel Port Devices - Sophisticated interfacing features in 
+Devices/Ports- Timer and Counting Devices - 12C', USB', CAN' and advanced I/O 
+Serial high speed buses- and advanced buses.                                                                  (9)
+
+UNIT III 	PROGRAMMING CONCEPTS		                      	       
+Programming in assembly language (ALP) vs. High Level Language - C Program 
+Elements, Macros and functions -Use of Pointers - Multiple function calls in a Cyclic 
+Order in the Main Function Pointers  Function Queues and Interrupt Service Routines 
+Queues Pointers Cross compiler  Optimization of memory codes.                              (9)
+UNIT IV 	REAL TIME OPERATING SYSTEMS  PART - 1                   	       
+Definitions Of Process, Tasks And Threads  Clear Cut Distinction Between Functions  
+Isrs And Tasks By Their Characteristics  Operating System Services- Device 
+Management  File System Organisation And Implementation  I/O Subsystems  
+Interrupt Routines Handling In RTOS, Real Time Operating Systems, Inter Process 
+Communication And Synchronisation  Remote Procedure Calls.                               (9)
+
+UNIT V  	REAL TIME OPERATING SYSTEMS  PART - 2 	           	       
+Study of Micro C/OS-II or Vx Works or Any other popular RTOS  RTOS System Level 
+Functions  Case Studies of Programming with RTOS  Understanding Case Definition 
+ Multiple Tasks and their functions  Creating a list of tasks  Functions and IPCs  
+Exemplary Coding Steps.                                                                                                (9)
+                                                                                    L: 45   T : 15   Total   60
+
+REFERENCES:
+1.	Rajkamal, Embedded Systems Architecture, Programming and Design, TATA 
+McGraw-Hill, First reprint Oct. 2003
+2.	Steve Heath, Embedded Systems Design, Second Edition-2003, Newnes, 
+3.	David E.Simon, An Embedded Software Primer, Pearson Education Asia, New 
+Delhi, 2004.
+4.	Wayne Wolf, Computers as Components; Principles of Embedded Computing 
+System Design  Harcourt India, Morgan Kaufman Publishers, New Delhi, 2006
+    
+                               PRINCIPLES OF MANAGEMENT                          L T P M
+                                                                                                                              4  0 0 100
+
+UNIT - I	HISTORICAL DEVELOPMENT			                           (12)
+Definition of Management  Science or Art  Management and Administration  
+Development of Management Thought  Contribution of Taylor and Fayol  Functions of 
+Management  Types of Business Organisation.
+UNIT - II	PLANNING							                (12)
+Nature & Purpose  Steps involved in Planning  Objectives  Setting Objectives  
+Process of Managing by Objectives  Strategies, Policies & Planning Premises- 
+Forecasting  Decision-making.
+Unit - III	ORGANISING						                 (12)	
+Nature and Purpose  Formal and informal organization  Organization Chart  Structure 
+and Process  Departmentation by difference strategies  Line and Staff authority  
+Benefits and Limitations  De-Centralization and Delegation of Authority  Staffing  
+Selection Process - Techniques  HRD  Managerial Effectiveness.
+UNIT - IV	DIRECTING							                
+(12)
+Scope  Human Factors  Creativity and Innovation  Harmonizing Objectives  
+Leadership  Types of Leadership Motivation  Hierarchy of needs  Motivation theories 
+ Motivational Techniques  Job Enrichment  Communication  Process of 
+Communication  Barriers and Breakdown  Effective Communication  Electronic 
+media in Communication.
+UNIT - V	CONTROLLING						                (12)
+System and process of Controlling  Requirements for effective control  The Budget as 
+Control Technique  Information Technology in Controlling  Use of computers in 
+handling the information  Productivity  Problems and Management  Control of 
+Overall Performance  Direct and Preventive Control  Reporting  The Global 
+Environment  Globalization and Liberalization  International Management and Global 
+theory of Management.
+									       Total : 60
+REFERENCES
+1.	Harold Kooritz & Heinz Weihrich Essentials of Management, Tata McGraw-
+Hill, 1998.
+2.	Joseph L Massie Essentials of Management, Prentice Hall of India, (Pearson) 
+Fourth Edition, 2003.
+3.	Tripathy PC And Reddy PN,  Principles of Management, Tata McGraw-Hill, 
+1999.
+4.	Decenzo David, Robbin Stephen A, Personnel and Human Reasons 
+Management, Prentice Hall of India, 1996
+                COMMUNICATION SWITCHING TECHNIQUES            L   T  P  M                              
+                                                                                                                             3   0  0  100
+
+
+UNIT  I 	COMPONENTS AND PRINCIPLES                                                   
+
+Block diagram of switching system  Pulse and DTMF Dialing  Signaling Tones  
+Strowger Switching with design examples  Principles of common control, cross bar 
+switching 	                                                                                                                  (9)	
+
+UNIT  II 	SPACE DIVISION AND TIME DIVISION SWITCHING                
+Stored program control  Centralized and distributed SPC, 2stage, 3 stage and N stage 
+networks, Time division time and space switching, Time multiplexed time and space 
+switching, combination switching 	                                                                              (9)	
+							
+UNIT  III	TRAFFIC ENGINEERING                                                                   
+Network traffic load and parameters, Grade of service and blocking probability, 
+Modeling switching systems, Blocking models and loss estimates, Delay models and 
+queue analysis 	                                                                                                       (9)	
+	           
+
+UNIT  IV	DIGITAL SUBSCRIBER ACCESS                                                      
+
+Integrated services digital network, High data rate digital subscriber loops, Digital loop 
+carrier systems, Fiber in the loop, Voice band modems                                                   (9)	
+					
+UNIT  V	CELLULAR WIRELESS NETWORKS                                              
+
+Principles of cellular networks, frequency reuse, Channel assignment strategies, Handoff 
+strategies, Cordless systems, Wireless local loop, Wireless application protocol 		
+BLUE TOOTH:Overview, Radio specification, Base band specification, Link manager 
+specification, logical link control and adaptation protocol 	                                           (9)	
+		      					
+Total 45
+
+REFERENCES:
+1.	Viswanathan.T., Telecommunication Switching System and Networks, Prentice 
+Hall, New Delhi, 2004.
+
+2.	William Stallings, Wireless Communication and Networks, second edition,  Pearson 
+Education, New Delhi, 2004.
+3.	John. C. Bellamy, Digital Telephony, John Wiley & Sons, Singapore, 2000. 
+4.	Behrouz Forouzan, Introduction to Data Communication and Networking, Tata 
+McGraw Hill, New York,1996. 
+
+ELECTIVES
+          MULTIMEDIA SYSTEMS                                                      L T P  M
+                                                                                                                         4 0 0  100    
+
+UNIT-I 	INTRODUCTION TO MULTIMEDIA				   (12)
+
+Introduction to making Multimedia- Multimedia Skills and training- Text: Using text in 
+Multimedia-Computer and Text- Font Editing and Design Tools- Hypermedia and 
+Hypertext
+
+UNIT - II 	MULTIMEDIA FILE HANDLING				   (12)
+
+Sound  Images  Animation - Video
+
+UNIT III 	DIGITAL VIDEO AND IMAGE COMPRESSION		   (12)
+
+Evaluating a compression system - Redundancy and visibility-Video compression 
+techniques-Standardization of an algorithm - The JPEG image compression standard-
+ITU T Standards - MPEG   motion video compression standard-DVI Technology.
+ 
+UNIT-IV  	HARDWARE, SOFTWARE AND MULTIMEDIA AUTHORING  
+                 	TOOLS								   (12)
+
+Multimedia Hardware: Macintosh and Windows production platforms-Hardware 
+Peripherels: Memory and Storage Devices, Input Devices, Output Devices, 
+Communication Devices .Basic Software Tools
+
+UNIT - V 	MULTIMEDIA AND INTERNET					     
+(12)
+
+Internetworking connections -Internet services -Tools for WWW - Designing WWW.
+
+Total : 60
+REFERENCES:
+
+1.	Multimedia: Making It Work, Tay Vaughan, 7th   Edition, Tata Mc-Graw Hill.
+       2008.
+2.	Multimedia Systems, John F.Koegel Buford, Pearson edition, 2003. (unit III).
+3.	Ranjan Parekh, Principles of Multimedia, TMH, 2006.
+      4.   Multimedia: Computing, Communication and applications, Ralf Steinmetz and  Klara 
+Nahrstedt, Pearson Edition, 2001.
+
+
+
+
+
+                                CLIENT SERVER COMPUTING			L T P M 
+									            4 0 0 100	
+		
+      
+UNIT  I INTRODUCTION
+Client Server Computing era, Real Client/Server, Fat Servers or fat clients, 2 tier Vs 3 tier, 
+Intergalactic client server, client server for different models, building blocks       (12)
+
+UNIT  II CLIENT/SERVER OPERATING SYSTEMS
+ Anatomy of Server programs, Server needs from OS, Server scalability, Client anatomy, 
+Client needs from OS, Client OS trends , MAC OS, Linux OS, Win OS, Server OS 
+trends , NetWare, Win 2000 Server, OS/2 warp server 	 	 		                 
+(12)
+
+UNIT  III CLIENT SERVER MIDDLEWARE
+ NOS Middleware, global directory services, X.500, LDAP, distributed time services, 
+distributed security services, RPC messaging and peer to peer , Sockets, NetWare, 
+NetBIOS, remote procedure call, messaging and queuing, MOM Vs RPC, Evolution of 
+the NOS, DCE , The enterprise NOS, the internet as NOS                                             
+(12)      
+
+UNIT - IVCLIENT SERVER TRANSACTION PROCESSING
+ACID Properties, Transaction Models, TP Monitor, TP Monitor and OS, TP Monitor and 
+Transaction Management, TP Monitor Client/ Server Interaction types, Transactional 
+RPC, Queues, TP Lite or TP Heavy, TP Lite versus TP Heavy  Managing Heterogeneous 
+networks, Process Management, client/server invocations, Performance
+           (12)
+
+UNIT  5 CLIENT SERVER AND INTERNET
+Client server and internet, Web client server, 3 tier client server web style, CGI , the 
+server side of web, CGI and State,  SQL database servers, Middleware and federated 
+databases, data warehouses, EIS/DSS to data mining, GroupWare Server , what is 
+GroupWare, components of GroupWare     	      	                                                     (12)
+							  			Total   60
+
+REFERENCES:
+1.	Robert Orfali, Dan Harkey & Jeri Edwards, Essential Client/Server Survival 
+Guide, second edition, John Wiley & Sons,  Singapore,  2003. 
+2.	James E. Goldman, Phillip T. Rawles, Julie R. Mariga, Client/Server Information 
+Systems, A Business Oriented Approach, John Wiley & Sons, Singapore, 2000. 
+3.	Eric J Johnson, A complete guide to Client / Server Computing, first edition, 
+Prentice Hall, New Delhi, 2001.
+4.	Smith & Guengerich, Client /Server Computing, Prentice Hall, New Delhi, 2002
+
+
+
+
+
+         FUNDAMENTALS OF DIGITAL SIGNAL PROCESSING               L T P   
+M
+                                                                                                                               4  0 0  100
+UNIT - I  	SIGNALS AND SYSTEMS 						       
+Basic elements of digital signal Processing Concept of frequency in continuous time and 
+discrete time signals  Sampling theorem Discrete time signals. Discrete time systems  
+Analysis of Linear time invariant systems Z transform Convolution and correlation. 
+(12)
+UNIT - II	FAST FOURIER TRANSFORMS				                   
+Introduction to DFT  Efficient computation of DFT Properties of DFT  FFT algorithms 
+ Radix-2 and Radix-4 FFT algorithms  Decimation in Time  Decimation in Frequency 
+algorithms Use of FFT algorithms in Linear Filtering and correlation.                                    
+(12)
+UNIT - III 	IIR FILTER DESIGN						 
+Structure of IIR  System Design of Discrete time IIR filter from continuous time filter  
+IIR filter design by Impulse Invariance. Bilinear transformation  Approximation 
+derivatives  Design of IIR filter in the Frequency domain.                                           (12)
+UNIT - IV	FIR FILTER DESIGN						       
+Symmetric & Antisymteric FIR filters  Linear phase filter  Windowing technique  
+Rectangular, Kaiser windows  Frequency sampling techniques  Structure for FIR 
+systems.                                                                                                                           (12)
+
+UNIT - V 	FINITE WORD LENGTH EFFECTS				       
+Quantization noise  derivation for quantization noise power  Fixed point and binary 
+floating point number representation  comparison  over flow error  truncation error  
+co-efficient quantization error  - limit cycle oscillation  signal scaling  analytical model 
+of sample and hold operations  Application of DSP  Model of Speech Wave Form  
+Vocoder.                                                                                                                         (12)
+                                                      Total   60
+
+	REFERENCES:
+1.	John G Proakis and Dimtris G Manolakis, Digital Signal Processing Principles, 
+Algorithms and Application, PHI/Pearson Education, 2000, 3rd Edition.
+2.	Alan V Oppenheim, Ronald W Schafer and John R Buck, Discrete Time Signal 
+Processing, PHI/Pearson Education, 2000, 2nd Edition.
+3.	Johny R.Johnson, Introduction to Digital Signal Processing, Prentice Hall of 
+India/Pearson Education, 2002.
+4.	Sanjit K.Mitra, Digital Signal Processing: A Computer  Based Approach, Tata 
+McGraw-Hill, 2001, Second Edition.
+
+
+                OBJECT ORIENTED ANALYSIS AND DESIGN                    L  T   P  M 
+                                                                                                                           4   0   0   100
+
+UNIT  I  INTRODUCTION								
+	
+Object model  Elements  Class and object  Nature of object/class  Relationship 
+among objects  Relationship among classes  Quality classes and objects. Classification 
+and Process - Classification  classical categorization Conceptual clustering.            (12)
+
+UNIT  II	ANALYSIS AND DESIGN							
+	
+Prototype theory  Analysis and design  Activities  Classical approaches  First 
+principles  The Micro development process  The Macro Development process.  UML 
+Notations  UML model  Introduction Use case  Usage Class diagrams  
+Perspectives.                                                                                                                    (12)
+
+UNIT  III	UML MODELS							                   
+Perspectives  Associations  Attributes  Operations  CRC cards  Usage  Interaction 
+diagrams  Sequence diagrams  Collaboration diagrams  Package diagrams  
+Concurrent state diagram  Activity diagram  Decomposing and activity  Domain 
+model  Specification model  System design  Detailed design  Coding                   (12)
+
+UNIT  IV   OBJECT ORIENTED TECHNIQUES
+	
+Object Oriented model traditional techniques - Current techniques - Approach to identify 
+attribute  Service  Method. Behaviour Specifications  Static behaviour specification 
+techniques Control  Documenting control.                                                                   (12)
+
+UNIT  V	STATIC AND DYNAMIC BEHAVIOR					
+Documenting static behaviour - Dynamic behaviour identification - Specification 
+techniques - Documenting - Event specifications - Identifying relationships.               (12)
+
+                                                                                   Total   60
+
+REFERENCES:
+         1. Martin Fowler, Kendall Scott, UML Distilled - Applying the standard object 
+modeling language, Addison Wesley, 1997.
+            2. Richard C Lee, William M Tepfenhart, UML and C++  - A practical guide to object 
+oriented development, PH, 1997.
+         3. Grady Booch, Object Oriented Analysis and Design with applications II Edition   
+Addison Wesley, 1994.
+        4.	James Martin & James J. Odell, Object Oriented Methods - A foundation, Prentice 
+Hall, 1997.
+                                        
+                                     
+                  SOFTWARE PROJECT MANAGEMENT                         L  T   P     M
+                                                                                                                            4   0   0  100
+                        
+UNIT - 1 INTRODUCTION TO SOFTWARE PROJECT MANAGEMENT 	   
+(12)
+Project Definition  Contract Management  Activities Covered by Software Project 
+Management  Overview Of Project Planning  Stepwise Project Planning.
+
+UNIT - 2 PROJECT EVALUATION 						    (12)
+Strategic Assessment  Technical Assessment  Cost Benefit Analysis  Cash Flow 
+Forecasting  Cost Benefit Evaluation Techniques  Risk Evaluation.  software effort 
+estimation
+
+UNIT - 3 ACTIVITY PLANNING 							    
+(12)
+Objectives  Project Schedule  Sequencing and Scheduling Activities  Network 
+Planning Models  Forward Pass  Backward Pass  Activity Float  Shortening Project 
+Duration  Activity on Arrow Networks  Risk Management  Nature Of Risk  Types 
+Of Risk  Managing Risk  Hazard Identification  Hazard Analysis  Risk Planning and 
+Control.
+
+UNIT - 4 MONITORING AND CONTROL 					    (12)
+Resource allocation  - identifying and scheduling resources  publishing resource and cost 
+schedule  scheduling sequence - Creating Framework  Collecting The Data  
+Visualizing Progress  Cost Monitoring  Earned Value  Priortizing Monitoring  
+Getting Project Back To Target  Change Control  Managing Contracts  Introduction  
+Types Of Contract  Stages In Contract Placement  Typical Terms Of A Contract  
+Contract Management  Acceptance.
+
+
+UNIT - 5 MANAGING PEOPLE AND ORGANIZING TEAMS	               (12)
+Introduction  Understanding Behavior  Organizational Behaviour - Selecting The Right 
+Person For The Job  Instruction In The Best Methods  Motivation  The Oldman  
+Hackman Job Characteristics Model  Working In Groups  Becoming A Team  
+Decision Making  Leadership  Organizational Structures  Stress  Health And Safety 
+ Case Studies.
+Total : 60
+
+REFERENCES:
+1.   Gopalaswamy Ramesh, Managing Globle Software Projects Tata McGraw Hill  
+Publishing Company Ltd, New Delhi, 2002
+2.	Bob Hughes and Mike Cotterell Software Project Management2nd edition, Tata  
+McGraw Hill Publishing Company Ltd., New Delhi, 2002.
+3.	Pressman, Roger,  Software Engineering ", A Practitioner's approach, 7th  edition, 
+Tata Mc-Graw Hill, 2006
+                 SERVICE ORIENTED ARCHITECTURE                     L T P    M
+                                                                                                                              4  0  0  100
+UNIT  I	     THE TECHNOLOGY OF ENTERPRISE SOA 
+                            
+The goal of loose coupling-Web services overview-Introducing Service oriented 
+Architecture: Enterprise architecture-The service oriented architecture                         (12)
+    			                                                       
+
+UNIT  II ENTERPRISE APPLICTION INTEGRATION AND B2B    
+COMMERCE                                                                                                                  
+
+EAI-web services in portals and software development-managing the supply chain-
+Building hubs-Partner to Partner-Government and scientific SOA                                (12)
+                                                   
+											           
+UNIT  III 	     REAL TIME OPERATIONS AND SECURITY: REAL TIME 
+OPERATIONS                                                                                                                
+
+Goal of the real time enterprise-Delivering real time with the SOA Real time virtual data 
+warehouse-business level agreements. SECURITY: Risk of loose coupling-layers of 
+SOA security-Solutions to SOA security 	                                                                 (12)                                                                   
+  				 			
+UNIT  IV 	     SOA MANAGEMENT SOLUTION AND SOA NETWORKS     
+
+Problems in the unmanaged SOA-web services management solutions-Managing the SOA 
+network-Securing the SOA network and solutions-SOA network management-Utility 
+computing in the SOA                                                                                         (12)	
+								                      
+UNIT  V 	     PEOPLE AND PROCESS OF ENTERPRISE SOA                      
+Exploring an SOA for titan-achieving consensus at titan-Grouping for SOA Training 
+success .Services discovery-Service creation-Selecting a platform-Forming an SOA plan 
+and proceed 	                                                                                                                 (12)                                                                                                                   
+		      						                                                                               
+
+Total 60
+REFERENCES:
+
+1.	Eric Pulier,Hugh Taylor,  Understanding Enterprise SOA, Dreamtech press, New    
+Delhi, 2005.
+2.	Chris Peiris and Dennis Mulder, Pro WCF Practical Microsoft SOA 
+implementation, Apress, Berkeley, CA, USA, 2007.
+3.	Greg Lomow, Eric Newcomer, Understanding SOA with Web Services, Pearson 
+Education, New Delhi, 2005.
+4.	Dan Woods, Thomas Mattern, Enterprise SOA: Designing it for Business 
+Innovation, Shroff publishers, 2006.
+ 
+             SIGNALS AND SYSTEMS                                                            L T P M
+                                                                                                                           4 0 0 100
+
+UNIT  I 	INTRODUCTION                                                                                  
+Representation and classification of continuous time (CT) and discrete time (DT) signals, 
+basic CT and DT signals, basic operations on CT and DT signals, description of CT and 
+DT systems 	                                                                                                                 (12)
+ 
+UNIT  II 	CONTINUOUS TIME SIGNALS AND SYSTEMS                  
+Linear time invariant (LTI) systems, convolution integral, causality and stability, CT 
+system representation by differential equations                                                              (12)
+
+UNIT  III	 FOURIER ANALYSIS OF THE CT, DT SIGNALS AND 
+SYSTEMS    
+Continuous Time Fourier Series (CTFS) and Fourier transform (CTFT), properties, inverse 
+CTFT, frequency domain characterization of linear time invariant systems Fourier series 
+representation of DT periodic signals (DTFS), properties, representation of DT aperiodic 
+signals by Discrete Time Fourier Transform (DTFT), Properties, inverse DTFT, frequency 
+response of systems characterized by difference equations 	     (12)
+	           
+UNIT  IV	SAMPLING AND RECONSTRUCTION OF SIGNALS                   
+Sampling theorem, effect of under sampling, aliasing error, sampling methods, impulse, 
+natural and flat top sampling, reconstruction of sampled signals, sample and hold, 
+decimation and interpolation, discrete time processing of CT signals 	                 (12)
+                        		
+UNIT  V 	DISCRETE TIME SIGNALS AND Z TRANSFORM                                                                                                                      
+Linear Shift Invariant (LSI) systems, convolution sum, causality and stability, DT system 
+representation by difference equations The WAP Architecture, Wireless Application 
+Environment, Wireless Markup Language, WAP Binary XML Content Format, WAP 
+Gateway, Wireless Gateway, Transcoding, InfoPyramid Framework, ProxiNet 
+Transcoding Gateway, Z transforms and its properties, inverse Z-transform, analysis of 
+LSI systems using Z-transform, stability and causality 	                                        (12)
+						           
+                                                                                                                                 Total 60
+REFERENCES:
+1.	Alan V Oppenhiem, Alan S Wilsky.,   and Hamid Nawab S., Signals and Systems, 
+second edition, Prentice Hall, New Delhi, 2005.
+2.	Simon Haykin and Barry Van Veen,  Signals and Systems, second edition, John 
+Wiley & Sons Inc., New York, 2003.
+3.	Ashok Ambardar, Introduction to Analog and Digital Signal Processing, second 
+edition, Thomson learning, New Delhi, 2004. 
+4.	Dimitris G Monalakis, John G Proakis, Digital Signal Processing, Principles, 
+Algorithms and   Applications, fourth edition, Pearson Education, New Delhi, 2006.
+
+
+
+
+                               NETWORK SECURITY                                           L  T   P  
+M
+                                                                                                                     4  0  0   100
+
+UNIT - I 	CONVENTIONAL AND MODERN ENCRYPTION		      
+
+Services  Attacks  Steganography - Classical Encryption Techniques  DES  
+Differential and Linear Cryptanalysis  Modes of operation   Encryption Algorithms 
+Triple DES  Blowfish  CAST128                                                                               (12)
+                                                                                                                                       
+UNIT  II 	PUBLIC KEY ENCRYPTION	
+				      
+Uniqueness  Number Theory concepts  Primality  Modular Arithmetic  Fermat & 
+Euler Theorem  Euclid Algorithm  RSA Algorithm  Elliptic Curve Cryptography  
+DiffieHellmanKeyExchange                                                                                           (12)
+                                                                                                                                        
+UNIT  III	AUTHENTICATION AND SECURITY PRACTICE
+		      
+Digests  Requirements  MAC  Hash function  Security of Hash and MAC  
+Birthday Attack  MD5  SHA  RIPEMD  Digital Signature Standard - 
+Authentication applications  Kerberos  Kerberos Encryption Techniques  PGP IP 
+Security Architecture Web security  SSL  TLS  SET                                                           
+(12)
+                                                        
+UNIT  IV	PUBLIC- KEY INFRASTRUCTURE				
+
+Legislation - Regulation and Guidelines, Non-repudiation - Certification Policies and 
+Practices- Public-Key Infrastructure Assessment and Accreditation                              (12)
+
+UNIT  V	SYSTEM SECURITY & STANDARDS	
+			
+Intruders and Intrusion  Viruses and Worms  OS Security  Firewalls  Design 
+Principles  Packet Filtering  Application gateways  Trusted systems  Counter 
+Measures. Blueprint for Security  Information Security Policy  Standards and Practices 
+ ISO 17799/BS 7799  NIST Models  VISA International Security Model  Design of 
+Security Architecture  Planning for Continuity.                                                            (12)
+
+Total   60
+
+REFERENCES
+
+1.William Stallings, Cryptography & Network Security, Pearson Education, 5th edition. 
+New  Delhi 2005. 
+2.Charlie Kaufman, Radia Perlman, Mike Speciner, Network Security, Private 
+Communication in a Public World, Prentice Hall of India, 1st edition, New Delhi, 
+2002. 
+3. Bruce Schneier, Niels Ferguson, Practical Cryptography, Wiley Dreamtech India Pvt 
+Ltd, 1st edition, New Delhi, 2003. 
+
+                                              DATA WAREHOUSING                                  L  T   P  M
+                                                                                                                             4  0  0   100
+UNIT -I 	INTRODUCTION TO DATA WAREHOUSING 		      
+
+Introduction , Definition and description , Need for Data Ware Housing, Need for 
+strategic information , Failures of past Decision Support Systems , OLTP vs DWH  
+DWH Requirements  Trends in DWH  DWH Framework, Information Systems 
+Framework (Zachman Framework)  Applications of DWH.                                        (12)
+
+UNIT  II 	DATA WAREHOUSING ARCHITECTURE & DESIGN	      
+ 
+Reference Architecture , Components of Reference Architecture  Data Ware House 
+Building Blocks  Implementation , Physical Design Process, DWH Deployment Process.
+DATABASE DESIGN : Dimensional Modeling , Basics , STAR Schema, Star Schema 
+keys , Advantages of STAR Schema.                                                                             (12)
+
+UNIT  III 	INTRODUCTION TO  DATA MINING			                   
+
+Data Mining Tasks  Data Mining Vs KDD  Issues in Data Mining  DM Metrics  
+Data Mining and Databases  Data Mining Architecture  Future Trends. Data Cleaning 
+ Data Transformation  Data Reduction.                                                                      (12)
+
+UNIT  IV 	DATA MINING PRIMITIVES &  LANGUAGES		       
+
+Data Mining primitives  Data Mining Query Languages. Association Rules  Mining 
+Single Dimensional Boolean Association Rules from Transactional Databases  Mining 
+Multi Dimensional Association from Data Ware Houses.                                             (12)
+
+UNIT  V 	CLASSIFICATION, PREDICTION  & CLUSTER ANALYSIS      
+
+Issues regarding classification and prediction  Decision Tree  Bayesian Classification  
+Classifier Accuracy. Types of Data  Partitioning Methods  Hierarchical Methods. 
+Mining Event Sequences  Visual DM  Text Mining  Web Mining.                         (12)
+
+                                                                                                       Total   60	
+REFERENCES:
+1. Paulraj Ponniah, Data WareHousing Fundamentals , John Wiley & Sons, 1st edition, 
+   2003.
+2. M.H.Dunham , Data Mining : Introductory and Advanced Topics, Prentice Hall , 
+    2003
+3. Arun k Pujari , Data Mining Techniques, University Press, 1st edition, New Delhi, 
+    2003.
+4. Mehmed Kantardzic, Data Mining Concepts , Methods and Algorithms , John Wiley 
+    & Sons , 1st edition, New Delhi, 2003.
+                                  WIRELESS TECHNOLOGY                                L  T   P  M
+                                                                                                                     4  0  0   100
+UNIT -I 	WIRELESS MEDIUM			   		                 
+	
+Air Interface Design  Radio propagation mechanism  Pathloss modeling and Signal 
+Coverage  Effect of Multipath and Doppler  Channel Measurement and Modelling  
+Simulation of Radio Channel                                                                                         (12)
+
+UNIT  II 	WIRELESS MEDIUM ACCESS	                                                     
+
+Fixed Assignment Access for Voice Networks  Random Access for Data  Networks  
+Integration of Voice and Data Traffic                                                                             (12)
+
+UNIT  III	WIRELESS NETWORK OPERATION			                 
+
+Wireless Network Topologies  Cellular Topology  Cell fundamentals  Signal to 
+Interference Ratio  Capacity Expansion  Mobility Management  Resources and Power 
+Management  Security in Wireless Networks.                                                              (12)
+
+UNIT  IV	WIRELESS WAN		                                                                 
+
+GSM and TDMA Technology  Mobile Environment  Communication in the 
+Infrastructure  CDMA Technology  IS95  IMT2000  Mobile Data Networks  
+CDPD Networks  GPRS  Mobile Application Protocol                                                         
+(12)
+ 
+UNIT  V	WIRELESS LANS AND HIPERLANS				     
+
+Introduction to wireless LANs  IEEE 802.11  WPAN IEEE 802.15  Wireless Home 
+Networking  Concepts of Bluetooth Technology  Wireless Geolocation.                  (12)
+  Total   60
+REFERENCES
+1. Kaveth Pahlavan, K.Prasanth Krishnamurthy, Principles of Wireless Networks
+ Pearson Education Asia, 1st edition, New Delhi, 2002
+2.  William Stallings, Wireless Communications and Networks, Prentice Hall, 2nd 
+ Edition, New Delhi, 2002. 
+3. Neeli Prasad, Anand Prasad, WLAN System & Wireless IP for Next Generation
+ Communications, Artech House, 1st edition, USA, 2002
+4. Assuncion Santamaria, Francisco Lopez-Hernandez, Wireless LAN Standards and 
+Applications, Artech House, 1st Edition, USA, 2001
+
+                   
+
+                                      UNIX INTERNALS                                                  L T P  M
+                                                                                                                              4  0  0  100
+
+UNIT  I	GENERAL OVERVIEW OF THE SYSTEM		                     
+History  System structure  User perspective  Operating system services  Assumptions 
+about hardware. Introduction to the Kernel : Architecture of the UNIX operating system 
+ Introduction to system concepts  Kernel data structures  System administration  
+Summary and Preview.                                                                        (12)
+
+UNIT  II		BUFFER CACHE 							
+Buffer headers  Structure of the buffer pool  Advantages and disadvantages of the 
+buffer cache. Internal representation of files : Inodes  Structure of a regular file  
+Directories  Conversion of a path name to an Inode  Super block  Other file types.(12)
+
+UNIT - III 	SYSTEM CALLS FOR FILE SYSTEM			     	
+Open  Read  Write  File and record locking  Adjusting the position of file I/O 
+LSEEK  Close  File creation  Creation of special files  Pipes  Dup  Mounting and 
+unmounting file systems                                                                                                  (12)
+
+UNIT - IV	THE STRUCTURE OF PROCESSES			                   
+Process states and transitions  Layout of system memory  The context of a process  
+Saving the context of a process.  Process Control: Process creation  Signals  Process 
+termination  Awaiting process termination  Invoking other programs  The shell  
+System boot and the INIT process.                                                                                 (12)
+
+UNIT - V	PROCESS SCHEDULING AND MEMORY MANAGEMENT 
+POLICIES		                                                                                                       
+Process Scheduling  Memory Management Policies : Swapping  A hybrid system with 
+swapping and demand paging. The I/O Subsystem : Driver Interfaces Disk Drivers-
+Terminal Drivers.                                                                                                           (12)
+ 	                                                                                                             Total   60	
+
+REFERENCES:
+1.Maurice J. Bach, The Design of the Unix Operating System, Prentice Hall of India, 
+2004.
+2.Vahalia, Unix Internals: The New Frontiers, Pearson Education Inc, 2003.
+
+                            MOBILE COMMUNICATION                                L T P M
+                                                                                                                           4 0 0 100	
+
+UNIT  I 	INTRODUCTION                                                                                   
+Mobile Communication, Mobile Computing, Mobile Computing Architecture, Mobile 
+Devices, Mobile System Networks, Data Dissemination, Mobility Management, Security. 
+Introduction to Cellular Systems, Global System for Mobile Communication (GSM), 
+General Packet Radio Services(GPRS) and their architectures                                      (12)
+
+UNIT  II 	WIRELESS MEDIUM ACCESS CONTROL                                     
+
+Interference in Cellular Systems, Frequency Management, Channel Assignment, Location 
+management in cellular networks, Medium Access Control, Introduction to CDMA based 
+systems, Spread Spectrum in CDMA systems, Coding Methods in CDMA          
+				      	
+UNIT  III 	 MOBILE IP NETWORK LAYER                                                      
+
+Mobile IP Protocol Overview, Route Optimization, Mobility support for IPV6, 
+Connectivity with 3G Networks, Packet Delivery and Handover Management, location 
+Management, Registration, Tunneling and Encapsulation, Route Optimization, Dynamic 
+Host Control protocol	                                                                                                     (12)
+
+UNIT  IV 	  MOBILE TRANSPORT LAYER                                                      
+
+Conventional TCP/IP protocols, Indirect TCP, Snooping TCP, Mobile TCP, Other 
+methods of TCP layer transmission for Mobile networks .  MOBILE OPERATING SYSTEMS- 
+Palm OS, Windows CE, Symbion OS, Linux for Mobile Devices                                         (12)
+
+UNIT  V	   DATA SYNCHRONIZATION    AND MOBILE INTERNET                                                      
+
+Synchronization, Synchronization software, Synchronization Protocols, SyncML  
+Synchronization Language for Mobile Computing, Synchronized Multimedia markup 
+Language . MOBILE  INTERNET- The WAP Architecture, Wireless Application 
+Environment, Wireless Markup Language, WAP Binary XML Content Format, WAP 
+Gateway, Wireless Gateway, Transcoding, InfoPyramid Framework, ProxiNet 
+Transcoding Gateway                                                                                                     (12)
+	
+Total 60
+REFERENCES:
+1.	Raj Kamal, Mobile Computing, Oxford University Press, New Delhi, 2007.
+2.	Jochen H. Schller, Mobile Communications, second edition, Pearson Education, 
+New Delhi, 2007.
+3.	Jon W. Mark, Weihua Zhuang, Wireless Communications and Networking, Prentice 
+Hall, New Delhi, 2007. 
+4.	Dharma Prakash Agarval, Qing , An Zeng, "Introduction to Wireless and Mobile 
+systems", Thomson Asia Pvt Ltd, Singapore, 2005.   
+
+                                           EXTREME PROGRAMMING                          L  T   P  M 
+                                                                                                                           4   0   0   100
+UNIT- I     INTRODUCTION
+
+Introducing C# - Understanding .Net: The C# environment  Overview of C# - Literals, 
+Variables and Data Types  Operators and Expressions.				     (12)
+
+
+UNIT II   DECISION MAKING
+
+Decision Making, Branching and Looping  if, ifelse, switch, ? : operators, while, 
+do, for, foreach and jump in loops, Methods in C# - declaring methods, the main method, 
+invoking methods, nesting methods, method parameters, pass by value and pass by 
+reference, output parameters, Variable argument lists  Overloading methods.	     (12)
+
+UNIT -III    ARRAYS
+
+Arrays  Creating an array, Variable size arrays, Array list class  Manipulating Strings  
+Structures, Nested Structures  Enumerations, Initialization, base types and type 
+conversion.										     (12)
+
+UNIT IV  CLASSES AND OBJECTS
+
+Classes and Objects  Definition, Creating objects, Constructors and destructors, 
+Nesting, Overloaded constructors, Inheritance and Polymorphism  classical, multilevel, 
+hierarchical inheritances, Subclass, Subclass constructors, Overriding methods, Abstract 
+Classes and Methods, Interfaces, Interfaces and Inheritance  Operator Overloading.  
+(12)
+
+UNIT -V   DELEGATES AND DECLARATION METHODS
+   
+Delegates  Declaration Methods, Initialization and Invocation, Multicast delegates, I/O 
+operations  Console Input/Output, Formatting, Errors and Exceptions, Type of Errors  
+Exceptions  Exception for debugging.						     (12)
+
+Total  60
+REFERENCES:
+       1.  E. Balagurusamy, Programming in C#, Tata Mc-Graw Hill Publishing Company,        
+            New Delhi, 2002.
+       2.  Selvi, T. A Text book on C# : A Systematic approach to object oriented    
+            programming, Pearson Education, Delhi, 2003.
+       3.  Lippman, C# Primer, 3rd Edition, Pearson Education, Delhi, 2002.
+       4.  Liberty, J. Programming C#, Second Edition, O'Reilly & Associates Inc.,     
+            California, 2002.
+       5.   Albahari, B. Prayton, P. and Marill, B. C# Essentials, O'Reilly & Associates Inc.,   
+            California, 2002.
+                                         OPEN SOURCE COMPUTING                                 L T P 
+M
+                                                                                                                                 4 0 0 100
+
+
+UNIT-I	INTRODUCTION                                                                                   
+Introduction of Open Sources  Need of Open Sources  Advantages and applications of 
+Open sources  Commercial aspects of Open source movement  	                             (12)
+					                                         
+UNIT-II 	OPEN SOURCE OS: LINUX                                                                
+
+Introduction  General Overview  Kernel Mode and user mode  Process  Advanced 
+concepts  Scheduling  Cloning  Signals	                                                                 (12)	      
+					                                                       
+UNIT-III 	SOLARIS                                                                                                 
+
+Fundamentals - The Solaris 8 Operating Environment Components - Accessing 
+Directories and Files - Using File Security - Creating Archive Files - Connecting 
+Remotely - Managing System Processes - Using the Korn Shell and the CDE	     (12)	  
+                                                                        
+UNIT-IV 	OPEN SOURCE DATABASE: MySQL                                               
+
+Introduction  SQL programs  Selection  Strings  Date and Time  Working with 
+metadata  Sequences  MySQL and web   	                                                                 (12)	
+	                                          
+UNIT-V 	OPEN SOURCE PROGRAMMING LANGUAGES: PHP                
+Introduction  Programming in web environment  Variables  Constants  Datatypes  
+Operators  Statements  Functions  Arrays  OOP  String manipulation  File 
+handling and data storage  PHP and SQL database  PHP connectivity  Debugging 
+and error handling  Security  Templates  Apache web server  Working with Web 
+Server  Configuring and using apache web services  Eclipse IDE platform                         
+(12)	                                                                             
+       				
+
+Total 60
+
+REFERENCES:
+1.	Remy Card, Eric Dumas, Frank Mevel, The Linux Kernel Book, second edition, 
+John  Wiley Publications, New York, 2003.
+2.	Darry, Gove,  Solaris Application Programming, first edition, Prentice Hall, New 
+Delhi, 2007.
+3.	Steve Suehring, MySQL Bible, first edition, John Wiley & Sons, New York, 2002.
+4.	Rasmus Lerdorf, Levtin Tatroe, Programming PHP, second edition, O'Relly 
+Publications, USA, 2002.
+5.	    Peter Wainwright, Professional Apache, third edition, Wrox Press, USA, 2002.
+
+
+                                   
+                                       
+                      MANAGEMENT   INFORMATION   SYSTEMS                L T P M
+                                                                                                                           4 0 0 100
+		 
+UNIT  I	INTRODUCTION
+
+Overview  Structure of MIS  Survey of Information System Technology  Hardware, 
+Software and Communication or Information  Storage and Retrieval of Data  
+Transactions Processing , Office Automation and Information Processing Control 
+Function.                                                                                                                         (12)
+
+UNIT  II 	CONCEPTIONAL FOUNDATIONS
+
+ Design making Process  Concept of Information  Human as Information Processors  
+System Concepts  Concepts of Planning and Control  Organizational Structure and 
+Management Concepts.	 	                             	                                         (12)
+
+UNIT  III	INFORMATION BASED SUPPORT SYSTEMS
+
+Support System for Planning , Control and Decision making  Support System for 
+Management for Knowledge work  Decision Support Systems.	                             (12)					                             		     (8)
+
+UNIT  IV 	INFORMATION SYSTEM REQUIREMENTS
+
+ Developing a long range Information System  Plan Strategies for the determination of 
+Information requirement  Database requirement  User interface requirements.         (12)				                             			     (9)
+
+UNIT  V	DEVELOPMENT,IMPLEMENTATION AND MANAGEMENT 
+OF INFORMATION SYSTEM RESOURCES
+
+Developing and Implementing Application Systems  Quality Assurance and Evaluation 
+of Information Systems  Organization and Management of the Information Resources  
+Further Development and their Organizational and Social Implications		            
+	                                                                                                                             (12)
+
+Total    60
+REFERENCES:
+1. Gordan B Davis and Megrette H Olson, "Management Information Systems", McGraw 
+Hill, 1997
+2. Murdick and Ross, "Information  System for Modern Management", Prentice Hall of 
+India, 1997.
+3. David Kroenke, "Management Information Systems", McGraw Hill International 
+Editions, 1989.
+
+
+                      ENTERPRISE RESOURCE PLANNING    	         L T P M
+                                                                                                                           4 0 0 100	
+	
+
+UNIT - 1 		INTRODUCTION					  	
+ERP: An Overview, Enterprise  An Overview, Benefits of ERP, ERP and Related 
+Technologies, Business Process Reengineering (BPR), Data Warehousing, Data Mining, 
+OLAP, SCM                                                                                                                    (12)
+
+UNIT - II  	ERP IMPLEMENTATION						
+ERP Implementation Lifecycle, Implementation Methodology, Hidden Costs, Organizing 
+the Implementation, Vendors, Consultants and Users, Contracts with Vendors, 
+Consultants and Employees, Project Management and Monitoring                               (12)
+
+UNIT - III  	THE BUSINESS MODULES					
+Business modules in an ERP Package, Finance, Manufacturing, Human Resources, Plant 
+Maintenance, Materials Management, Quality Management, Sales and Distribution    (12)
+
+UNIT - IV  	THE ERP MARKET						
+ERP Market Place, SAP AG, Peoplesoft, Baan, JD Edwards, Oracle, QAD, SSA        
+(12)
+UNIT - V  	ERP  PRESENT AND FUTURE					
+Turbo Charge the ERP System, EIA, ERP and e-Commerce, ERP and Internet, Future 
+Directions                                                                                                                        (12)
+	
+				                           Total   60
+	
+REFERENCES:	
+			
+1.	Alexis Leon, ERP Demystified, Tata McGraw Hill, New Delhi, 2000
+2.	Joseph A Brady, Ellen F Monk, Bret Wagner, Concepts in Enterprise Resource 
+Planning, Thompson Course Technology, USA, 2001.
+3.	Vinod Kumar Garg and Venkitakrishnan N K, Enterprise Resource Planning  
+Concepts and Practice, PHI, New Delhi, 2003
+
+
+
+
+
+
+                                            ADVANCED DBMS			                    L T P M 
+		4   0   0   100 
+
+UNIT -1 	DATABASE MANAGEMENT		            	               (12)
+Relational Data Model  SQL - Database Design - Entity-Relationship Model  
+Relational Normalization  Embedded SQL  Dynamic SQL  JDBC  ODBC.
+
+UNIT  2	 ADVANCED DATABASES					   (12)
+
+Object Databases - Conceptual Object Data Model  XML and Web Data  XML 
+Schema  Distributed Data bases  OLAP and Data Mining  ROLAP and MOLAP
+
+UNIT  3	QUERY AND TRANSACTION PROCESSING			     (12)
+
+Query Processing Basics  Heuristic Optimization  Cost, Size Estimation - Models of 
+Transactions  Architecture  Transaction Processing in a Centralized and Distributed 
+System  TP Monitor.
+
+UNIT  4 	IMPLEMENTING AND ISOLATION			                 (12)
+Schedules  Concurrency Control  Objects and Semantic Commutativity  Locking  
+Crash, Abort and Media Failure  Recovery  Atomic Termination  Distributed 
+Deadlock  Global Serialization  Replicated Databases  Distributed Transactions in 
+Real World.
+
+UNIT  5	 DATABASE DESIGN ISSUES			          		     (12)
+
+Security  Encryption  Digital Signatures  Authorization  Authenticated RPC - 
+Integrity - Consistency - Database Tuning - Optimization and Research Issues.
+
+	Total : 60
+
+REFERENCES:
+1.	Philip M. Lewis, Arthur Bernstein, Michael Kifer, Databases and Transaction  
+Processing: An Application-Oriented Approach, Addison-Wesley, 2002
+2.	R. Elmasri and S.B. Navathe, Fundamentals of Database Systems, 3rd Edition, 
+Addison Wesley, 2004
+3.	Abraham Silberschatz, Henry. F. Korth, S.Sudharsan, Database System Concepts, 4th 
+Edition., Tata McGraw Hill, 2004
+4.	Raghu Ramakrishnan & Johannes Gehrke, Database Management Systems, 3rd 
+Edition, TMH, 2003
+
+
+
+DISTRIBUTED OPERATING SYSTEMS                                                       L T P M 
+						4 0 0 100
+UNIT - I  	INTRODUCTION							(12)
+Fundamentals  evolution  System Models  Distributed operating System  Issues  
+Distributed Computing environment Message passing  Introduction  Features  Issues 
+ Synchronization  Buffering  Message  Encoding  Decoding  Process addressing  
+Failure Handling.									      
+
+UNIT - II	REMOTE PROCEDURE CALL					(12)
+Introduction  Model  Transparency  Implementation  Stub Generation  Messages  
+Marshaling  Arguments and results server Management  Parameter passing Semantics  - 
+Call Semantics  Communication Protocols  Complicated RPC's  Client  Server 
+Binding  Exception handling  Security Distributed shared Memory  Introduction  
+Architecture  Issues  Granularity Structure  Consistency Models  Replacement 
+Strategy  Thrashing.				        
+
+UNIT - III 	SYNCHRONIZATION						(12)
+Introduction  Clock Synchronization  Event ordering  Mutual Exclusion  Deadlock  
+Election Algorithms.					
+
+UNIT  IV 	RESOURCE MANAGEMENT					(12)
+Introduction  Features  Task Assignment approach  Load-Balancing Approach - Load 
+-Sharing Approach Process Management  Introduction  Process Migration  Threads.	
+							        
+
+UNIT  V 	DISTRIBUTED FILE SYSTEMS					(12)
+Introduction  Features  File Models  Accessing Models  Sharing Semantics  
+Caching Schemes  File Replication  Fault Tolerance  Atomic Transactions  Design 
+Principles Naming  Introduction  Features  Terminologies  Concepts.			
+							
+Total  : 60 
+REFERENCES
+1.	Pradeep K. Sinha, Distributed Operating Systems, Concepts and Design 
+Prentice Hall of India, New Delhi, 2001.
+2.	Andrew S. Tanenbaum Distributed Operating Systems, Pearson Education, 
+New Delhi, 2002
+3.	Mukesh Singhal and Nirajan G.Shivaratri Advanced Concepts in Operating 
+Systems, Tata McGraw Hill Publishing Company Ltd., New Delhi, 2001
+
+
+
+
+                                     DECISION SUPPORT SYSTEMS                               L T P M
+4  0  0  100
+
+
+UNIT  I 	DECISION-MAKING AND COMPUTERIZED SUPPORT
+Management Support Systems: An Overview, Decision Making, Systems, Modeling, and 
+Support. 	         			                 		                                         (12)
+
+UNIT  II	DECISION SUPPORT SYSTEMS
+ An Overview,  Data Management: Warehousing, Access, and Visualization ,  Modeling 
+and Analysis ,  Knowledge based Decision Support and Artificial Intelligence ,  User 
+Interface and Decision Visualization Applications ,  Constructing a Decision Support 
+System and DSS Research. 	       		         					    (12)
+
+UNIT  III	COLLABORATION, COMMUNICATION, AND ENTERPRISE 
+                         SUPPORT SYSTEMS
+Networked Decision Support: The Internet, Intranets, and Collaborative Technologies, 
+Group Decision Support Systems, Executive Information and Support Systems.	    (12)
+
+UNIT  IV 	FUNDAMENTALS OF EXPERT SYSTEMS AND INTELLIGENT 
+                        SYSTEMS
+Fundamentals of Expert Systems, Knowledge Acquisition and Validation, Knowledge 
+Representation, Inferences, Explanations, and Uncertainty, Building Expert Systems: 
+Process and Tools.				                                                                 (12)
+
+UNIT  V 	CUTTING-EDGE DECISION SUPPORT TECHNOLOGIES
+Neural Computing: The Basics,  Neural Computing Applications, Genetic Algorithms, 
+Fuzzy Logic, and Hybrid Intelligent Systems ,  Intelligent Agents and Creativity ,  
+Implementing and Integrating Management Support Systems ,  Organizational and 
+Societal Impacts of Management Support Systems.                                         	   (12)                
+
+Total : 60
+REFERENCES:
+1.	Efraim Turban, Jay E. Aronson, "Decision Support Systems and Intelligent Systems", 
+      Prentice Hall, New Delhi, 2004
+2.	George Marakas, "Decision Support Systems in the 21st Century", Prentice Hall, New 
+Delhi, 2003
+3.	Robert J Thierauf, "User Oriented Decision Support Systems", Prentice Hall, New 
+Delhi, 1998
+
+
+
+
+
+
+
+			IMAGE PROCESSING		                               L T P M
+4  0  0  100
+
+UNIT I 	DIGITAL IMAGE FUNDAMENTALS AND TRANSFORMS   	      12
+Elements of visual perception  Image sampling and quantization Basic relationship 
+between pixels  Basic geometric transformations-Introduction to Fourier Transform and 
+DFT  Properties of 2D Fourier Transform  FFT  Separable Image Transforms -Walsh  
+Hadamard  Discrete Cosine Transform, Haar, Slant  Karhunen  Loeve transforms.
+
+UNIT II 	IMAGE ENHANCEMENT TECHNIQUES	     	   		12
+Spatial Domain methods:  Basic grey level transformation  Histogram equalization  
+Image subtraction  Image averaging Spatial filtering: Smoothing, sharpening filters  
+Laplacian filters  Frequency domain filters : Smoothing  Sharpening filters  
+Homomorphic filtering.
+
+UNIT III  	IMAGE RESTORATION:				      			12
+Model of Image Degradation/restoration process  Noise models  Inverse filtering -Least 
+mean square filtering  Constrained least mean square filtering  Blind image restoration 
+ Pseudo inverse  Singular value decomposition.
+
+UNIT IV 	IMAGE COMPRESSION					              	12
+Lossless compression: Variable length coding  LZW coding  Bit plane coding- 
+predictive coding-DPCM.
+Lossy Compression: Transform coding  Wavelet coding  Basics of Image compression 
+standards: JPEG, MPEG,Basics of Vector quantization.
+
+UNIT V  	IMAGE SEGMENTATION AND REPRESENTATION	          		12
+Edge detection Thresholding - Region Based segmentation  Boundary representation: 
+chair codes- Polygonal approximation Boundary segments boundary descriptors: 
+Simple descriptors-Fourier descriptors - Regional descriptors Simple descriptors- Texture
+                                                                                                            Total : 60
+REFERENCES
+1.	Rafael C Gonzalez, Richard E Woods 2nd Edition, Digital Image Processing - 
+Pearson Education 2003.
+2.	William K Pratt, Digital Image Processing John Willey (2001)
+3.	Image Processing Analysis and Machine Vision  Millman Sonka, Vaclav hlavac, 
+Roger Boyle, Broos/colic, Thompson Learniy (1999).
+4.	A.K. Jain, PHI, New Delhi (1995)-Fundamentals of Digital Image Processing.
+5.	Chanda Dutta Magundar  Digital Image Processing and Applications, Prentice 
+Hall of India, 2000
+

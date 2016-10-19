@@ -1,0 +1,1214 @@
+Table des Matières
+
+Introduction Générale	- 1 -
+Chapitre I : Le Réseau GSM et Techniques  de déploiement d'une solution de couverture indoor
+Introduction	- 4 -
+I.1. Concept cellulaire	- 4 -
+I.2. Architecture du réseau	- 5 -
+I.2.1 Le sous-système radio	- 5 -
+I.2.2. Le sous-système réseau	- 5 -
+I.2.3. Le centre d'exploitation et de maintenance	- 6 -
+I.3. Planification d'un réseau GSM	- 7 -
+I.3.1. Les phases de la planification	- 7 -
+I.3.2. Résultat du processus de la planification	- 8 -
+I.4. Techniques de couverture indoor	- 9 -
+I.4.1. A partir des sites outdoor	- 9 -
+I.4.2. A partir des sites indoor	- 9 -
+a- Solution basée sur les répéteurs	- 10 -
+b- Distribution passive	- 10 -
+c- Distribution active	- 11 -
+d- Solution optique	- 11 -
+I.5. Principes de base des antennes	- 13 -
+I.5.1. Caractéristiques d'une antenne	- 13 -
+a- Diagramme de rayonnement	- 13 -
+b- Directivité (D)	- 14 -
+c- Aire équivalente d'une antenne (Ae)	- 15 -
+d- Polarisation et Gain	- 15 -
+e- PIRE	- 15 -
+I.5.2. Critères de sélection d'une antenne	- 16 -
+I.6. Conclusion	- 16 -
+Chapitre II : Les modèles de prédiction de propagation dans un milieu indoor
+Introduction	- 18 -
+II.1. La propagation radio	- 18 -
+II.2. La propagation en espace libre	- 19 -
+II.3. Les modèles de propagation indoor	- 19 -
+II.3.1. Les modèles empiriques	- 19 -
+II.3.1.1. Modèle d'affaiblissement Log - distance	- 19 -
+II.3.1.2. Modèle de SEIDEL	- 20 -
+II.3.2. Les modèles déterministes	- 20 -
+II.3.2.1. Modèle de lancer de rayons	- 20 -
+II.3.3. Les modèles semi déterministes	- 21 -
+II.3.3.1. Le parcours dominant pour les milieux indoor (IDP)	- 21 -
+II.4. Conclusion	- 28 -
+Chapitre III : Optimisation d'une solution de couverture Indoor
+Introduction	- 30 -
+III.1. Modélisation du problème	- 30 -
+III.1.1. Objectif du modèle	- 30 -
+III.1.1. Contraintes du modèle	- 32 -
+III.2. Algorithme d'optimisation : le recuit simulé	- 34 -
+III.2.1. Définition	- 34 -
+III.2.1. Description de la solution	- 38 -
+A - Détermination de la température initiale T0	- 39 -
+B- Tirage d'un voisinage	- 39 -
+C- Règle d'acceptation de Metropolis	- 40 -
+D- Changement de palier de température	- 40 -
+E- Décroissance de la température	- 40 -
+F- Arrêt du programme	- 40 -
+G- Synthèse	- 40 -
+III.3. Conclusion	- 41 -
+Chapitre IV : Implémentation et Résultats
+Introduction	- 43 -
+IV.1. Environnement de travail	- 43 -
+IV.2. Scène d'étude	- 43 -
+IV.3. Etat radio actuel	- 43 -
+IV.4. Différents antennes et feeders utilisés	- 44 -
+IV.5. Présentation de l'outil InPred	- 46 -
+IV.6. Mise en évidence du Ranking	- 47 -
+IV.7. Choix des positions candidates	- 48 -
+IV.8. Analyse des résultats et Interprétations	- 49 -
+IV.9. Affichage avec InPred	- 58 -
+IV.10. Temps de calcul	- 59 -
+IV.11. Conclusion	- 60 -
+Conclusion Générale et Perspectives	- 61 -
+Bibliographie	- 62 -
+ANNEXE	- 63 -
+
+
+Liste des Figures
+
+
+Figure I.1: (a) un motif élémentaire,    (b) un ensemble de motifs dans un réseau	- 4 -
+Figure I.2 : Architecture du réseau GSM	- 5 -
+Figure I.3 : Processus de la planification cellulaire	- 8 -
+Figure I.4 : Couverture indoor à partir des sites outdoor	- 9 -
+Figure I.5 : Couverture indoor à partir des répéteurs	- 10 -
+Figure I.6 : Distribution Passive	- 11 -
+Figure I.7 : Solution Optique.	- 12 -
+Figure I.8 : Diagramme de rayonnement d'une antenne sectorielle	- 14 -
+Figure II.1 : Représentation de la scène d'étude en 2D.	- 22 -
+Figure II.2 : Développement de l'arbre de structure.	- 22 -
+Figure II.3 : Combinaison de pièces pour la détermination du parcours dominant.	- 23 -
+Figure II.4 : Coins concaves et convexes de la pièce.	- 24 -
+Figure II.5 : détermination du parcours dominant à travers les coins convexes.	- 24 -
+Figure II.6 : Post-traitement du parcours dominant.	- 25 -
+Figure II.7 : Méthodologie de la détermination du parcours dominant.	- 25 -
+Figure II.8 : Optimisation du parcours Dominant.	- 26 -
+Figure II.9 : Scène de prédiction.	- 27 -
+Figure II.10 : Couverture de la scène avec 3 antennes	- 27 -
+Figure III.1 : Organigramme de l'algorithme du recuit simulé.	- 38 -
+Figure IV.1 : Couverture radio du local avant optimisation.	- 44 -
+Figure IV.2 : Antennes indoor	- 45 -
+(a) : Antenne omnidirectionnelle    (b) : Antenne directionnelle	- 45 -
+Figure IV.3 : Page d'acceuil d'InPred	- 46 -
+Figure IV.4 : Création d'un nouveau projet	- 47 -
+Figure IV.5 : Mise en évidence du Ranking	- 48 -
+Figure IV.6 : Positions candidates	- 49 -
+Figure IV.7 : Variation du taux de couverture en fonction du nombre d'itérations	- 50 -
+Figure IV.8 : Couverture du palmarium avec une seule antenne	- 52 -
+Figure IV.9 : Variation du taux de couverture en fonction du nombre d'itérations	- 53 -
+Figure IV.10 : Variation du taux de couverture en fonction du nombre d'itérations	- 54 -
+Figure IV.11 : Variation du taux de couverture en fonction du nombre d'itérations	- 55 -
+(Cas de 4 antennes)	- 55 -
+Figure IV.12 : Couverture du palmarium avec 4 antennes	- 58 -
+Figure IV.13 : Paramètres d'optimisation	- 59 -
+Figure IV.14 : Couverture radio assurée par 4 antennes	- 59 -
+ 
+
+
+Liste des Tableaux
+
+
+Tableau I. 1 : Comparaison entre différentes solutions de couverture indoor	- 13 -
+Tableau IV.1 : Pertes des différents feeders	- 45 -
+Tableau IV.2 : Cas d'une seule antenne	- 52 -
+Tableau IV.3: Cas de deux antennes	- 54 -
+Tableau IV.4 : Cas de trois antennes.	- 55 -
+Tableau IV.5 : Variation du taux de couverture en fonction du nombre d'itérations	 ......- 56 -Tableau IV.6 : Simulation  avec quatre antennes	- 56 -
+      
+
+
+Liste des abréviations
+
+
+      GSM: Global System for Mobile Communications
+      BTS : Base Transceiver Station
+      BSC : Base Station Controller
+      AuC: Authentication Center 
+      NSS : Network Switching Center 
+      MSC: Mobile Switching Center 
+      HLR: Home Location Register 
+      VLR: Visitor Location Register 
+      IMEI: International Mobile station Equipment Identity 
+      EIR:  Equipment Identity Register
+      OMC: Operation and Maintenance Center
+      IDP: Indoor Dominant Path.
+      LOS: Line Of Sight.
+      
+
+	
+
+Introduction Générale
+
+    La radiotéléphonie mobile connaît ces dernières années un développement sans précédent dans l'histoire des télécommunications. L'explosion de la demande dans ce secteur incite les opérateurs à déployer des réseaux de télécommunication mobile de plus en plus performants pour satisfaire la demande des consommateurs. 
+      Ainsi, le nombre d'utilisateurs sans cesse croissant a rendu urgent la nécessité d'assurer une couverture radioélectrique de bonne qualité. Lors du déploiement de tels réseaux, il a fallu mettre au point des modèles performants, capables de prédire la zone de couverture radioélectrique des différents émetteurs placés en des points stratégiques. Ensuite, il s'est avéré intéressant d'optimiser l'emplacement de ces émetteurs afin de maximiser la couverture radio. Or dans un milieu outdoor, la couverture est quasi-totale, le problème se perçoit alors dans les milieux indoor (intérieur des bâtiments). Dans ce contexte se situe notre projet de fin  d'études réalisé à Orascom Télecom Tunisie qui cherche à optimiser les couvertures en indoor. Cette optimisation consiste à déterminer le nombre et les gains d'antennes à utiliser, les feeders et les puissances d'émission pouvant assurer cet objectif tout en minimisant le coût. 
+      L'automatisation de cette tâche devient primordiale, et dans ce contexte l'objectif de notre projet est de développer un outil permettant de déterminer le nombre et l'emplacement des antennes. Notre outil utilise comme modèle de propagation l'IDP (Indoor Dominant Path) qui est un modèle destiné aux milieux indoor et dont le principe est de se focaliser uniquement sur le parcours dominant entre l'émetteur et le récepteur lors de la détermination de l'atténuation  du signal entre ces deux entités.
+      
+      A cet effet, l'ensemble de ce document est partagé en quatre grandes parties. La première propose un état de l'art du réseau GSM: concept cellulaire, architecture, planification, etc. ainsi que les différentes techniques de déploiement d'une solution de couverture indoor.
+      La deuxième partie propose de s'intéresser à différents modèles de prédiction de propagation dans un milieu indoor où nous détaillerons le modèle du parcours dominant et nous présentons des résultats de simulation réalisés avec ce modèle.
+      La troisième partie conduit une conception de la problématique de l'optimisation des emplacements des antennes dans un environnement intérieur. Nous commençons par une modélisation de la problématique, ensuite nous menons une résolution de la problématique en faisant recours à une méthode heuristique à savoir le recuit simulé.
+       Enfin, le dernier chapitre sera consacré à la présentation de l'outil ainsi que quelques résultats de simulation. 
+     
+     
+     
+   
+   Chapitre I  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+    Introduction
+       La révolution actuelle dans le domaine des télécommunications entraîne un essor considérable des réseaux mobiles. Le système GSM offre à ses abonnés la possibilité de communiquer librement sans les contraintes inhérentes au réseau fixe. Nous essayons dans ce premier chapitre de présenter cette technologie tout en mettant en oeuvre la nécessité de définir une stratégie de déploiement d'une solution de couverture indoor vu les problèmes de couverture constatés dans des environnements indoor et que chaque opérateur essaye de les éliminer en investissant en temps et en ressources pour élaborer des techniques diverses pour l'amélioration de la qualité de service et par conséquent satisfaire ses abonnés.
+I.1. Concept cellulaire
+      Le GSM (Global System for Mobile Communications) est la première norme de téléphonie cellulaire de seconde génération. Le principe de ce système est de diviser le territoire en de petites zones, appelées cellules, et de partager les fréquences radio entre celles-ci. Ainsi, chaque cellule est constituée d'une station de base (reliée au Réseau Téléphonique Commuté, RTC) à laquelle on associe un certain nombre de canaux de fréquences à bande étroite. Ces fréquences ne peuvent pas être utilisées dans les cellules adjacentes afin d'éviter les interférences. Ainsi, on définit des motifs, aussi appelés clusters, constitués de plusieurs cellules, dans lesquels chaque fréquence est utilisée une seule fois. La figure I.1 montre un tel motif, en guise d'exemple. 
+
+		Figure I.1: (a) un motif élémentaire,    (b) un ensemble de motifs dans un réseau 
+I.2. Architecture du réseau 
+L'architecture d'un réseau GSM peut être divisée en trois sous-systèmes: 
+1. Le sous-système radio contenant la station mobile, la station de base et son contrôleur. 
+2. Le sous-système réseau ou d'acheminement. 
+3. Le sous-système opérationnel ou d'exploitation et de maintenance.  
+Les éléments de l'architecture d'un réseau GSM sont repris sur le schéma de la figure I.2.
+
+Figure I.2 : Architecture du réseau GSM
+I.2.1 Le sous-système radio 
+      Le sous-système radio gère la transmission radio. Il est constitué de plusieurs entités dont le mobile, la station de base (BTS, Base Transceiver Station) et un contrôleur de station de base (BSC, Base Station Controller).   
+I.2.2. Le sous-système réseau
+      Le sous-système réseau, appelé Network Switching Center (NSS), joue un rôle essentiel dans un réseau mobile. Alors que le sous réseau radio gère l'accès radio, les éléments du NSS prennent en charge toutes les fonctions de contrôle et d'analyse d'informations contenues dans des bases de données nécessaires à l'établissement de connexions utilisant une ou plusieurs des fonctions suivantes: chiffrement, authentification ou roaming. 
+Le NSS est constitué de: 
+* Mobile Switching Center (MSC) : C'est la partie centrale du NSS. Il prend en charge l'établissement des communications de et vers les abonnés GSM. En plus de la commutation, il gère la mobilité et les fréquences et enregistre la localisation des abonnés visiteurs (VLR). 
+* Home Location Register (HLR) /Authentication Center (AuC):
+      Le HLR est la base de données nominale, unique dans le réseau et utilisée pour stocker les informations des abonnés du réseau : nom, numéro, droits d'accès, données de sécurité,.... et la localisation courante de l'abonné.
+      Lorsqu'un abonné passe une communication, l'opérateur doit pouvoir s'assurer qu'il ne s'agit pas d'un usurpateur. Le centre d'authentification (AuC) remplit cette fonction de protection des communications.
+* Visitor Location Register (VLR) : Ce sont les bases de données qui gèrent la mobilité des usagers : vérification des caractéristiques d'un abonné, transfert d'informations de localisation...Elle contient toutes les données des abonnés mobiles présents dans une zone géographique.
+* Equipment Identity Register (EIR)
+       Malgré les mécanismes introduits pour sécuriser l'accès au réseau et le contenu des communications, le téléphone mobile doit potentiellement pouvoir accueillir n'importe quelle carte SIM de n'importe quel réseau. Il est donc imaginable qu'un terminal puisse être utilisé par un voleur sans qu'il ne puisse être repéré. Pour combattre ce risque, chaque terminal reçoit un identifiant unique (International Mobile station Equipment Identity, IMEI) qui ne peut pas être modifié sans altérer le terminal. En fonction de données au sujet d'un terminal, un opérateur peut décider de refuser l'accès au réseau. 
+I.2.3. Le centre d'exploitation et de maintenance
+       Ce sous-système est entièrement dédié à l'administration du réseau par l'exploitant, à la fois en ce qui concerne l'administration commerciale, la gestion de la sécurité, la maintenance...
+      
+I.3. Planification d'un réseau GSM 
+      La planification d'un réseau cellulaire est un processus très délicat dont le résultat conditionne le succès de l'opérateur. En effet, un réseau mal planifié se traduira par une qualité d'appel médiocre, un taux de perte d'appels important, un taux de blocage (demande d'appel non satisfaites) élevé, etc. Il entraînera des coûts supplémentaires et des manques à gagner pour l'opérateur [1]. C'est l'étape donc qui précède l'implantation du système. Le but de cette étape est de prévoir un système convenablement optimisé, qui offre une communication de bonne qualité (taux de coupure, rapport signal sur bruit...) et a une grande capacité. Tout opérateur de télécommunication se trouve face à la problématique suivante : comment desservir le maximum d'abonnés mobiles avec une ressource limitée (le spectre de fréquences), et un média de communication difficilement contrôlable ?
+La planification cellulaire est un moyen qui permet au mobile de choisir une cellule particulière du réseau pour :
+* enregistrer les informations diffusées par le réseau aux mobiles,
+* être prêt à se connecter au réseau en cas de communication,
+* signaler ses mouvements au réseau,
+D'où la nécessité de l'écoute permanente des stations de base avoisinantes. L'opérateur doit donc pouvoir optimiser le réseau pour :
+* qu'il écoule le maximum de trafic (pour répondre à la demande des abonnés),
+*  satisfaire les contraintes de qualité de services (maximiser la qualité de service offerte, minimisation du taux de blocage, minimisation de l'interférence, éviter les trous de couverture...),
+*  minimiser les investissements (minimiser le nombre de stations de base à mettre en place pour réduire les coûts).
+I.3.1. Les phases de la planification 
+Le processus de planification du réseau passe par 3 étapes essentielles :
+1. Définition de la stratégie (la couverture, la qualité de service, la capacité du réseau) et du dimensionnement,
+2. Planification et implantation, cette étape inclut :
+* La planification de la couverture,
+* La sélection des sites,
+* La mesure de propagation,
+* Le calcul de couverture,
+* L'optimisation de la couverture.
+3. Optimisation et mesure :
+* Optimisation du réseau,
+* Mesure de qualité,
+* Analyse de performances (qualité, efficacité...),
+
+
+Figure I.3 : Processus de la planification cellulaire
+
+I.3.2. Résultat du processus de la planification 
+Le processus de planification cellulaire aboutit aux résultats suivants :
+* Un plan de stations de base (emplacement, capacité, puissance),
+* Un plan de fréquences (en utilisant un algorithme d'affectation de fréquences),
+* Un plan des équipements du réseau fixe (BSC, MSC),
+* Un réseau de connexion entre ces entités.
+	Il est à noter à ce stade que de nos jours, le réseau GSM connaît un grand succès et les services sont de plus en plus évolués et la couverture est quasi mondiale. Ce succès repose sur des règles d'ingénierie et un processus assez complexe. Par ailleurs, l'assurance d'une qualité de service qui répond aux attentes et aux exigences des abonnés reste le souci majeur des opérateurs de télécommunications ; la raison pour laquelle et après la couverture quasi-totale outdoor, les opérateurs concentrent leurs efforts sur la garantie d'une bonne couverture indoor. Dans ce qui suit, nous présentons alors différentes techniques permettant d'assurer une couverture indoor.
+I.4. Techniques de couverture indoor 
+      Assurer une couverture satisfaisante en environnement intérieur est fondamentale. Cette couverture indoor peut être assurée de deux manières différentes : 
+I.4.1. A partir des sites outdoor  
+	La couverture indoor peut être assurée à partir des sites localisés à l'extérieur du local à couvrir. En effet, si le trafic dans les locaux à couvrir n'est pas important et ne nécessite pas une capacité supplémentaire, nous pouvons appliquer cette solution. De même, nous pouvons faire recours à cette solution dans le cas où le propriétaire du local refuse l'installation des équipements des antennes et des câbles à l'intérieur du local. La figure I.4 illustre cette technique de couverture indoor à partir des sites outdoor.
+
+Figure I.4 : Couverture indoor à partir des sites outdoor 
+I.4.2. A partir des sites indoor
+	Le déploiement de ce genre de solution est intéressant pour l'amélioration de la qualité de communication notamment à l'intérieur des grands bâtiments tels que les centres commerciaux, les aéroports, les gares, les grands hôtels,... vu la grande diversité des matériaux de construction (béton, marbre, vitre renforcé...) et la forte densité des utilisateurs GSM.
+	En pratique, nous distinguons plusieurs types de solutions localisés en indoor et que l'opérateur choisit l'une ou l'autre selon le milieu à couvrir et suivant les contraintes à tenir en compte que nous détaillerons dans les paragraphes suivantes. 
+a- Solution basée sur les répéteurs
+
+		Un répéteur est un équipement passif qui assure la régénération du signal et son amplification. Le répéteur sélectif bidirectionnel permet l'amplification de un à quatre canaux GSM de 200 khz. Tout en aillant faible encombrement, faible coût, et facilité d'installation, le répéteur assure les caractéristiques électriques nécessaires au réseau. Par suite, le choix de cet équipement est conseillé dans le cas où la capacité des sites extérieurs suffit à supporter le trafic indoor [2].
+
+Figure I.5 : Couverture indoor à partir des répéteurs
+b- Distribution passive 
+	L'objectif de la distribution passive est d'assurer une bonne couverture en utilisant une seule station de base à laquelle sont connectés plusieurs antennes avec l'utilisation d'équipements passifs : câbles coaxiaux, diviseurs de puissance (splitters), coupleurs,...
+
+Figure I.6 : Distribution Passive
+
+      Il est à noter que cette solution assure une bonne couverture du local avec le minimum de coût, toutefois elle présente quelques limites:
+      - Le nombre d'antennes utilisé est limité vu les pertes associées aux câbles coaxiaux pour les distances assez élevées.
+      - La différence de distance maximale entre deux câbles coaxiaux qui séparent deux points rayonnants (émettant avec la même puissance) connectés avec la même station de base est limitée à 4 km afin d'éviter les problèmes d'interférence co-canal.
+c- Distribution active
+	Pour remédier aux problèmes de la distribution passive, la distribution active utilise des éléments actifs pour réduire les pertes tel que les répéteurs et les micro - BTSs
+d- Solution optique
+	Les éléments constitutifs de cette solution sont : 
+- Unité maîtresse qui a pour rôle la conversion du signal de la BTS en un signal optique et l'envoi vers les unités esclaves,
+- Unités esclaves : assurant la conversion du signal électrique en un signal optique et inversement.
+
+Figure I.7 : Solution Optique.
+
+      Le choix de cette solution est avantageux surtout dans le cas où on doit couvrir un ensemble de bâtiments nécessitant plusieurs antennes rayonnantes. En effet, l'utilisation de la fibre optique engendre des pertes minimes (0.4 dB/km. pour les fibres monomodes de 1310 nm) en le comparant avec celle des câbles coaxiaux et une transmission plus sécurisée vu l'immunité de ces fibres contre l'interférence électromagnétique. En plus, l'utilisation de cette solution est préférable en cas d'une extension du réseau dans la mesure où nous n'avons pas besoin de changer l'infrastructure existante.
+      
+Comparaison entre les différentes techniques
+      Chaque solution de couverture indoor précédemment décrit présente des avantages et des inconvénients. Dans ce qui suit nous montrons un tableau comparatif entre ces différentes techniques [2].
+Solutions
+
+Nature du local à couvrir
+Trafic
+Mobilité du trafic
+Ingénierie radio
+installation
+coût
+Basée sur les répéteurs 
+
+Espace de taille réduite
+Sans capacité supplémentaire
+
+-
+Facile
+Facile
+Faible
+Distribution passive
+Entreprises, aéroports, centres commerciaux,...
+Moyen
+Elevé en ajoutant des TRX au niveau du BTS
+Complexe, nécessité d'une optimisation des paramètres et des emplacements des équipements
+Difficile surtout pour les grands bâtiments
+Un peu élevé
+Distribution active
+Micro-BTS
+Bâtiments avec quelques étages
+Elevé et uniforme
+Pas de mobilité
+Très délicate vue l'existence de plusieurs cellules en indoor
+Facile
+Elevé pour les grands bâtiments (pertes de capacité)
+Distribution optique
+Bâtiments tel que le nombre d'étages dépasse 25
+Elevé
+Elevé
+Complexe
+Complexe
+Très élevé
+
+Tableau I. 1 : Comparaison entre différentes solutions de couverture indoor
+
+   La couverture radio dans un réseau radio mobile ne peut se faire sans recours à des équipements bien particuliers qui sont les antennes. Dans ce qui suit, nous essayons de définir les principes de bases des antennes.
+I.5. Principes de base des antennes 
+      Une antenne est la structure associée à l'interface entre l'onde émise (ou reçue) guidée dans l'émetteur (ou récepteur) et l'onde se propageant en espace libre. Par ailleurs, elle rayonne ou reçoit de l'énergie et assure donc une fonction de couplage de l'énergie entre l'espace libre et un équipement de guidage telle une ligne de transmission, un câble coaxial ou un guide d'onde.
+I.5.1. Caractéristiques d'une antenne
+      Une antenne est généralement caractérisée par son diagramme de rayonnement, sa directivité, une polarisation, son gain, sa puissance isotrope rayonnée équivalente (PIRE) et son rendement.
+a- Diagramme de rayonnement
+      L'IEEE définit le diagramme de rayonnement comme " la représentation graphique des propriétés de rayonnement de l'antenne en fonction des coordonnées spatiales "
+      - Intensité du rayonnement
+	- Puissance du champ
+	- Phase et polarisation
+
+Figure I.8 : Diagramme de rayonnement d'une antenne sectorielle
+      Dans les réseaux radio mobiles, deux coupes de la surface caractéristiques de rayonnement d'une antenne sont utilisées :
+      - le diagramme de rayonnement horizontal qui permet de déterminer la couverture que permettra d'assurer l'antenne.
+      - le diagramme de rayonnement vertical qui indiquera la directivité dans le plan vertical et sera utilisé pour déterminer l'orientation de l'antenne par rapport à la verticale (appelée « tilt »).
+      Notons qu'il existe plusieurs types d'antennes à savoir l'antenne isotrope, l'antenne directive et l'antenne omnidirectionnelle. La première antenne est une antenne théorique rayonnant de façon uniforme dans toutes les directions. Pour l'antenne directive, elle peut rayonner ou recevoir les ondes plus efficacement dans certaines directions que dans d'autres, par contre l'antenne omnidirectionnelle reçoit et émet les ondes dans toutes les directions.
+b- Directivité (D)
+      La directivité est le rapport entre la puissance rayonnée par l'antenne vers une direction donnée et celle d'une antenne de référence (isotrope). Notons qu'elle est exprimée en dBi et qu'elle indique la capacité de l'antenne à concentrer l'énergie dans des directions spécifiques.
+c- Aire équivalente d'une antenne (Ae)
+      L'aire équivalente d'une antenne est l'ouverture géométrique sur laquelle le champ électromagnétique n'est pas négligeable. Dans le cas d'une antenne directive, l'aire équivalente est égale à la portion de la surface plane proche de l'antenne, perpendiculaire à la direction de rayonnement maximum.
+d- Polarisation et Gain
+      L'orientation du champ électrique  détermine la polarisation de l'onde rayonnée par l'antenne.
+      - si l'antenne est placée horizontalement par rapport au sol, E est horizontal (pour une grande partie des directions de l'espace), l'antenne est dite à polarisation horizontale. Dans le cas où l'antenne est verticale, elle est dite à polarisation verticale.
+      Le gain d'une antenne est une caractéristique particulièrement importante qui représente le rapport entre l'intensité de rayonnement dans une direction donnée et celle d'un signal rayonné isotrope. Il est égal à 4 fois le rapport entre l'intensité moyenne de rayonnement par unité d'angle solide et la puissance totale fournie à l'antenne par la source.
+           et     (avec  : rendement)
+e- PIRE
+      La puissance isotrope rayonnée équivalente ou PIRE est définie comme la puissance nécessaire à fournir à une antenne isotrope pour obtenir la même puissance que celle fournie par l'antenne considérée et dans la direction considérée. La PIRE est donnée par le produit de la puissance P fournie à l'antenne par le gain isotrope  :
+           
+      Dans le cas général, c'est la direction principale de l'antenne dans laquelle le rayonnement est maximal qui est prise en compte pour déterminer la portée d'une antenne. Dans ce cas la valeur de la PIRE sera [1] : 
+          	
+I.5.2. Critères de sélection d'une antenne
+	Avant de choisir une antenne, il faut vérifier son diagramme de rayonnement dans les fréquences basses, centrales et supérieures de la bande, de même vérifier les lobes secondaires et zéros, la symétrie,... Ensuite, inspecter un échantillon : Intégrité physique, résistance à l'eau, type d'alimentation, réaliser des mesures,...
+I.6. Conclusion
+      
+      Dans ce premier chapitre, nous avons présentés différents aspects de la technologie GSM : concept cellulaire, architecture, planification du réseau, couverture radio, etc.
+       Dans le chapitre suivant, nous essayons d'étudier différents modèles de prédiction de propagation dans un milieu indoor dans la mesure où grâce à ces modèles que nous pouvons mesurer la couverture radio. 
+      
+   
+   Chapitre I I  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    
+    Introduction
+       L'ingénierie radio constitue l'un des aspects les plus importants lors du déploiement d'un réseau cellulaire dans la mesure où elle est responsable du niveau de qualité de service offert aux abonnés.
+      En environnement indoor, le signal subit différents affaiblissements pouvant atteindre 30 dB. En effet, la propagation dans ce milieu dépend de plusieurs caractéristiques à savoir les données architecturales des bâtiments, en d'autres termes les types de matériaux de construction utilisés, la taille des fenêtres, etc. Nous nous intéressons dans ce chapitre à présenter différents modèles de prédiction de propagation en environnement indoor ; là où nous détaillerons plus le modèle du parcours dominant pour les milieux indoor dans la mesure où notre projet se basera sur ce modèle pour le calcul de la couverture radio. Nous présentons ensuite quelques scénarios de simulation réalisés avec ce modèle.
+ II.1. La propagation radio 
+     
+       L'onde radioélectrique est sujette à de nombreuses irrégularités de température, d'humidité, de caractéristiques électromagnétiques, etc. En d'autres termes a des fluctuations en temps et en espace. Par ailleurs, quatre mécanismes de propagation une onde peut subir à savoir la diffusion, la réflexion, la réfraction et la diffraction. Il est à affirmer à ce stade que le média de communication est incontrôlable. En effet, trois types de variations du canal radio-mobile se dévoilent. Dans un premier lieu, on trouve les variations à grande échelle ou affaiblissement de parcours (Pathloss) qui sont des pertes de propagation dues à la distance parcourue par l'onde radio. Ensuite, on distingue l'effet de masque (Shadowing effect) qui se présente comme étant des atténuations de puissance du signal dues aux obstacles rencontrés. Le dernier type de variation du canal radio mobile est lié aux trajets multiples.
+      
+      Dans ce qui suit, nous présentons différents modèles de prédiction de propagation dans un milieu indoor mais nous rappelons précédemment la propagation en espace libre.
+      
+      
+      
+II.2. La propagation en espace libre 
+
+	La propagation en espace libre est un cas théorique qui, dans la pratique, n'est que rarement vérifié. En effet, il s'agit des cas où aucun obstacle n'est présent entre l'émetteur et le récepteur, on parle alors de visibilité directe qui est déterminée à partir des ellipsoïdes de Fresnel.
+L'équation de l'affaiblissement en espace libre est donnée par la formule suivante [4] :
+
+Avec     f : la fréquence exprimée en Mhz
+	  d : la distance entre l'émetteur et le récepteur, exprimée en Km.	
+
+      Le principe des modèles de propagation est de calculer l'atténuation en espace libre et y ajouter un facteur correctif. Nous nous intéressons dans ce qui suit à différents modèles de propagation mais nous nous limitons à ceux du milieu indoor dans la mesure où notre intérêt vise les environnements intérieur.
+II.3. Les modèles de propagation indoor 
+      
+      Les modèles de prédiction de propagation se subdivisent en trois grandes catégories. En premier lieu, nous trouvons les modèles empiriques qui sont des modèles se basant sur des statistiques. Ensuite, les modèles exactes qui sont des modèles se basant sur des équations mathématiques donc ils nécessitent beaucoup de temps de calcul et sont gourmands en espace mémoire. Le dernier modèle de prédiction de propagation est le modèle semi empirique qui représente un compromis entre les deux modèles précédemment évoqués, en d'autres termes c'est un modèle qui essaye de faire face à la complexité des modèles exactes et au manque de précision des modèles empiriques.
+      Nous présentons dans ce qui suit quelques modèles de prédiction de propagation dans un milieu indoor et nous mettons l'accent sur le modèle du parcours dominant pour les milieux indoor dans la mesure où nous nous basons sur ce modèle pour déterminer la couverture radio des antennes dans un environnement indoor.
+II.3.1. Les modèles empiriques
+II.3.1.1. Modèle d'affaiblissement Log - distance 
+
+      Selon ce modèle, l'affaiblissement dans un environnement indoor augmente en fonction de la distance qui sépare l'émetteur du récepteur et il est défini comme suit [4] : 
+      
+                
+      Avec :
+      -  : distance de référence généralement prise 1m.
+      - d : distance entre l'émetteur et le récepteur.
+      - n : facteur d'atténuation qui dépend du milieu de propagation.
+      - : généralement calculé par des mesures ou en appliquant les conditions de l'espace libre.
+II.3.1.2. Modèle de SEIDEL 
+
+      C'est un modèle qui permet d'estimer l'affaiblissement dans un environnement indoor formé par plusieurs étages. L'affaiblissement en dB est estimé à partir de l'équation suivante [4] :
+             	
+      Avec 
+      -  : distance de référence généralement prise 1m.
+      - d : distance entre l'émetteur et le récepteur.
+      -: coefficient appliqué pour les mesures faites au sein du même étage.
+      - FAF : coefficient qui peut être remplacé par un facteur qui tient en compte l'effet de la séparation des planchers multiples.
+      Il est à noter à ce stade que les modèles de propagation empiriques sont des formules mathématiques obtenues à partir de statistiques sur un très grand nombre de mesures coûteuses et longues pour différentes positions Emission/Réception. Ils manquent par conséquent de précision. Nous abordons dans ce qui suit les modèles déterministes qui sont caractérisés par une bonne précision mais en contre partie un temps de calcul excessif.
+II.3.2. Les modèles déterministes
+II.3.2.1. Modèle de lancer de rayons 
+
+      C'est une technique entièrement déterministe (basée sur une approche dérivée de l'optique géométrique) dont le principe est: 
+* Lancement à partir de l'émetteur, de lignes directrices (rayons) dans toutes les directions.
+* Rayons espacés régulièrement à partir de l'émetteur et tracés au fur et à mesure de leur propagation.
+* Trajets émetteur-récepteur recherchés.
+La condition d'arrêt est atteinte si:  
+* Puissance du rayon en dessous d'un seuil,
+* Rayon qui a quitté la zone de simulation,
+* Rayon qui a subit un nombre maximal de réflexions (5 à 10).
+
+	Le lancer de rayon prend en considération tous les trajets entre l'émetteur et le récepteur ce qui le rend coûteux en temps de calcul [5]. Un autre modèle s'avère intéressant tel que le parcours dominant (IDP) que nous proposons de le détailler dans ce qui suit.
+II.3.3. Les modèles semi déterministes
+II.3.3.1. Le parcours dominant pour les milieux indoor (IDP)
+
+      Le parcours dominant pour les milieux indoor (IDP : Indoor Dominant Path) est un modèle récemment découvert, qui s'intéresse à la détermination de la prédiction de propagation dans les milieux indoor dont le principe est de ne prendre en considération lors de la détermination de l'atténuation du signal que le parcours dominant entre l'émetteur et le récepteur et de ce fait le temps de calcul est proche de celui des modèles empiriques et loin de se rapprocher de celui du lancer de rayons [6]. Afin d'illustrer le principe de ce modèle, nous présentons dans ce qui suit les différentes étapes de son déroulement.
+      
+1. Développement d'un arbre de structure
+      
+      Le parcours dominant pour les milieux indoor considère une base de données qui doit comprendre une reproduction exacte de l'environnement à simuler, en d'autres termes, les informations relatives à chaque type de matériau figurant dans la scène ; ainsi cette description sollicite que toutes les pièces de la scène géographique sont vides. Et par conséquence, un arbre de structure sera développé à partir de cette base.
+      Le schéma suivant montre un exemple d'une scène d'étude en 2D que nous essayons par la suite de développer son arbre de structure [7].
+      
+      
+Figure II.1 : Représentation de la scène d'étude en 2D.
+      
+      Afin de pouvoir déterminer l'arbre de structure d'une scène bien déterminée, il faut numéroter chaque pièce par un numéro et chaque mur par un indice. Ensuite, la pièce contenant l'émetteur sera la racine de l'arbre. La première couche rassemble les différentes salles adjacentes à la racine. Concernant, la deuxième couche, elle reproduit les salles adjacentes à la première couche et ainsi de suite pour les autres couches. Il est à noter que les branches sortant de chaque couche vers une couche supérieure déchiffrent les indices des murs en commun entre les deux pièces. Enfin, nous mettons en évidence que, s'il existe plusieurs murs entre l'émetteur et la pièce adjacente, la pièce adjacente est compté n fois dans la couche inférieure de lŽarbre de structure que le nombre de murs commun[7]. La figure II.2 montre l'arbre de structure développée à partir de la scène précédemment représentée.
+      
+		Figure II.2 : Développement de l'arbre de structure. 
+      
+2. Détermination du parcours dominant
+      La détermination du parcours dominant peut se faire de deux manières : soit en utilisant l'arbre de structure soit en se basant sur la matrice de transition.
+a. L'arbre de structure
+      Le calcul du parcours entre l'émetteur et le récepteur est déterminé à partir de l'arbre de structure. En fait, il s'agit de déterminer à partir de cet arbre les différents chemins possibles entre l'émetteur et le récepteur (tout en mettant en évidence les obstacles franchis).
+      Si le récepteur se trouve dans la pièce i, il faut examiner seulement les branches de la pièce i, en d'autres termes, il s'agit de balayer en sens inverse l'arbre vers la racine (vers l'émetteur). Ensuite, combiner toutes les pièces parcourues entre l'émetteur et le récepteur en une seule pièce [7].
+      
+      
+Figure II.3 : Combinaison de pièces pour la détermination du parcours dominant.
+      
+      Les murs supprimés lors de la détermination du parcours dominant sont ceux donnés par les branches de l'arbre de structure lors du balayage en sens inverse (c'est-à-dire du récepteur vers l'émetteur).
+      Il est à noter que lors de la détermination du parcours dominant deux cas de figure se présentent :
+> Visibilité directe entre l'émetteur et le récepteur (LOS : Line Of Sight) : 
+      L'émetteur et le récepteur se trouvent dans la même pièce. La détermination du parcours dominant est simple puisque celui-ci correspond au rayon directe de l'émetteur vers le récepteur.
+> Absence de visibilité directe entre l'émetteur et le récepteur (NLOS : None Line Of Sight) : L'émetteur et le récepteur ne sont pas situés dans la même pièce. La détermination du parcours dominant suit la procédure décrite ci-dessus.
+      
+      Une fois la combinaison de pièce, pour la détermination du parcours dominant, est faite, il faut numéroter les coins de la pièce régénérée et les arranger dans deux listes (coins concaves et coins convexes). Il est à noter que les coins concaves ne sont pas pris en compte pour la détermination du parcours dominant. Par contre la recherche de ce parcours stimule que ce dernier doit passer par un ou plusieurs coins convexes (au minimum un seul coin) [7].
+       
+      
+Figure II.4 : Coins concaves et convexes de la pièce.
+      
+      Après le choix des coins adéquats parmi l'ensemble de coins candidats, générer deux autres arbres à partir de l'arbre de structure et on aura alors deux nouveaux arbres de structure (celui de l'émetteur et du récepteur). 
+      
+      
+      
+Figure II.5 : détermination du parcours dominant à travers les coins convexes.
+      
+      Ensuite, nous devons procéder par une comparaison des deux arbres couche par couche. Si dans la première couche, il existe plusieurs coins communs entre les deux arbres, prendre les numéros de ces noeuds et mettre fin à la comparaison. Si dans la couche une, aucun coin n'est en commun, il faut passer à la couche suivante dans les deux arbres. La comparaison se fait alors pour la deuxième couche avec la première et la deuxième couche de l'autre arbre (c'est-à-dire faire le balayage de l'arbre opposé à partir de la ième couche jusqu'à la première couche et réciproquement avec l'autre arbre).
+      
+      La recherche des coins ne s'arrête que si nous mettons en vigueur un ou plusieurs numéros de coins en commun dans les deux arbres. Enfin, les coordonnées obtenues du parcours dominant doivent être modifié pour que ce dernier devienne indépendant des localisations exactes des coins calculés à partir des arbres et les cordonnés des coins sont déplacés à l'intérieur de la pièce adjacente de telle sorte que les nouvelles coordonnés sont générés à partir de la base géographique de la scène [7]. La figure II.6 illustre la démarche expliquée ci-dessus.
+      
+			Figure II.6 : Post-traitement du parcours dominant.
+      
+b. Méthode de la matrice de transition 
+      La matrice de prédiction est produite à partir d'une base de données. Chaque point représente un carré en 2D. Ensuite, les transitions entre les points avoisinants sont déterminées et emmagasinées dans une matrice [7].
+       
+      				
+		Figure II.7 : Méthodologie de la détermination du parcours dominant.
+
+      Après la génération de la matrice de prédiction, la recherche du parcours dominant est faite à partir de la décision effectuée par l'analyse de la perte de transmission entre le point de départ et les points avoisinants. Ainsi, le test de décision est refait de nouveau pour le point survivant. C'est-à-dire, par exemple, le troisième test de décision est généré à partir de l'analyse faite pour le deuxième point et ainsi de suite tout en prenant en considération la transition avec la plus petite perte de transmission est choisie.
+      Une fois le chemin dominant est achevé, ce chemin est optimisé de telle sorte que ce dernier devient indépendant de la matrice de prédiction, le plus court et dont les changements angulaires de direction sont aussi réduits.
+      
+      
+      
+Figure II.8 : Optimisation du parcours Dominant.
+      
+3. Détermination de l'atténuation du parcours
+      L'atténuation du parcours (Pathloss) est donnée par l'équation suivante [8] : 
+      	
+      
+      Avec : 
+      	 n : facteur multiplicatif.
+      	 d : la longueur de chemin donné en mètre.
+      	 ? : facteur de guidage (waveguiding factor).
+      	 : Perte en dB en raison d'une interaction, à cause du changement de la 		direction de propagation.
+      	: L'angle entre l'ancienne direction et la nouvelle direction de propagation. 		En effet, la perte augmente linéairement avec l'angle, normalisé à 180°.
+          	 w : facteur qui peut être utilisé pour réduire le poids d'interactions.
+4. Simulation 
+      Afin de mieux illustrer la prédiction avec le parcours dominant pour les milieux indoor nous présentons une simulation réalisé avec Matlab 6.5 pour le premier étage du palmarium dont voici le plan et l'emplacement de trois antennes prévues pour assurer une couverture indoor.
+      
+Figure II.9 : Scène de prédiction.
+      
+      Et voici le résultat de la simulation de la prédiction de cette scène en utilisant contourf de Matlab 6.5.
+      
+      
+Figure II.10 : Couverture de la scène avec 3 antennes
+      
+      Nous constatons qu'avec le parcours dominant pour les milieux indoor, nous pouvons prévoir la couverture radio des différentes antennes installées mais il est à noter que la couverture n'est pas bonne dans la mesure où le niveau de champ désiré qui est supérieur ou égal à -85 dBm n'est atteint que dans une zone restreinte, ceci est dû en fait aux mauvais emplacements des antennes et nous amène alors à chercher à améliorer cette couverture en essayons d'optimiser les emplacements des antennes et par la suite améliorer la couverture radio.
+II.4. Conclusion
+      
+      Dans ce chapitre, nous avons abordé différents modèles de prédiction de propagation dans un milieu indoor là où nous avons détaillé le modèle du parcours dominant et présenté un résultat de simulation réalisé avec ce modèle.
+      Le problème de la planification Indoor est le fait de choisir le nombre, le type et l'emplacement des antennes. La minimisation du coût avec l'assurance d'un taux de couverture maximum est le souci de tous les opérateurs. Dans le prochain chapitre, nous abordons la méthodologie permettant de développer cette tâche.
+
+
+
+
+
+
+
+
+
+
+
+      
+   
+   ChapitreIII  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+    Introduction
+ 
+    Afin d'atteindre l'objectif de ce travail qui consiste à optimiser les emplacements des antennes dans un milieu indoor dans le but d'assurer une couverture radio globale, nous présentons dans ce chapitre notre conception de la problématique et nous abordons ensuite une description détaillée de la solution proposée.
+III.1. Modélisation du problème
+      
+      Nous avons décrit dans le premier chapitre quelques stratégies de déploiement d'une solution de couverture indoor, et nous avons mentionné que nous pouvons assurer une couverture indoor soit à partir des sites outdoor notamment dans le cas où le trafic dans les locaux à couvrir est faible, soit à partir des sites indoor. Notre projet s'intéresse à la deuxième technique, en d'autres termes étant donné un environnement indoor à couvrir à partir de micro stations de bases, quelles sont les positions optimales, le nombre et les types des antennes à installer afin d'assurer une couverture radio totale.
+      Le problème d'emplacement d'antennes consiste à trouver un ensemble d'emplacements pour les antennes à partir d'un ensemble de positions candidates et pour chaque position sélectionné le gain d'antenne, la puissance d'émission ainsi que le feeder associé.
+      Le choix de ces positions doit satisfaire un ensemble de contraintes et optimiser un certain nombre d'objectives. Notre problématique est une problématique de maximisation de la couverture, mais l'installation d'une antenne est chère pour un opérateur donc l'opérateur a pour objective de minimiser le nombre des antennes à installer et de ce fait pour chaque scène nous commençons par un nombre d'antennes minimal.
+III.1.1. Objectif du modèle
+
+      Nous essayons maintenant de donner une modélisation mathématique du problème, pour ce faire nous représentons la surface à couvrir par une matrice, en d'autres termes nous la décomposons en un ensemble de grilles selon des pas bien définis.
+
+* Soit la matrice qui représente le niveau de champ généré par l'antenne numéro i situé au point de coordonnées.
+
+* Soit  Couverture (,,,.....) = ()
+ 
+Avec M : nombre de lignes de la matrice et K : nombre de colonnes de la matrice.
+
+
+
+      1 si couverture 
+           	     0 sinon 
+
+Fonction objective :
+
+
+
+
+	     1 si     max
+	     0 sinon
+
+      Avec  : le niveau de champ de l'antenne numéro i au niveau du point de réception pq et N : nombre d'antennes.
+       Par ailleurs, nous voulons atteindre un seuil de couverture de -75 dBm. Ce seuil de couverture sera par la suite paramétrable dans l'application. En d'autres termes, l'utilisateur est libre dans son choix de ce seuil, selon le milieu indoor auquel il veut assurer une couverture totale, le planificateur décide du seuil soit -75 ou -85 dBm ou autres.
+      
+      Il est à noter que nous réalisons l'opérateur maximum entre les matrices des différentes antennes du fait que la somme détériore généralement le signal car nous additionnons des valeurs négatives, pour cela nous effectuons le maximum. En plus, une station mobile n'est connectée à un instant donné qu'à une seule antenne naturellement celle qui lui procure le maximum du niveau de champ.
+      
+III.1.1. Contraintes du modèle
+      Comme le coût d'installation d'une antenne est cher pour l'opérateur du réseau, en maximisant la couverture, il est primordial de minimiser le coût relatif à l'installation des antennes. En d'autres termes, il est intéressant de maximiser la couverture avec le nombre minimum d'antennes.
+      
+Avec : = 1 si l'antenne j est sélectionnée, 0 sinon,
+      I : nombre de positions candidates,
+      Et   : coût associé à l'installation de l'antenne j. Dans cette étude nous considérons que 
+      Concernant les interférences, il s'agit en fait d'une affaire du plan de fréquences, en effet il ne s'agit pas d'une tâche très complexe d'affecter des fréquences à ces antennes dans la mesure où leur nombre n'est pas assez élevé. Notons que la bande de fréquences GSM occupée par Tunisiana s'étend entre [63,124] :
+* les fréquences entre [63,101] sont allouées pour la bande TCH,
+* les fréquences entre [102,124] sont allouées pour la bande BCCH.
+      
+      Il est à noter qu'il existe d'autres contraintes mais qui sont en fait résolues par paramétrage au niveau de l'OMC. Ces paramètres sont essentiellement les paramètres de sélection/resélection (c1 et c2).
+      Le critère C1 est un paramètre vérifiant que la cellule sélectionnée est toujours parfaitement reçue et qu'elle ne subit pas un affaiblissement trop fort par rapport à d'autres cellules avoisinantes. Pour vérifier cette hypothèse, le critère C1 est composé de 2 parties. Une partie définissant les capacités du mobile et une autre celles de la BTS. 
+L'équation vérifie la liaison descendante et montante. Ce critère s'écrit comme suit [9] : 
+
+      Avec : RxLev : Niveau de champs reçu sur le canal BCCH en veille et en communication sur les canaux TCH, SACCH, SDCCH et FACCH (en dBm).
+      RX_Access_Min : Niveau minimum autorisé par la BTS pour que le mobile puisse s'accrocher à elle (en dBm).
+      Max_TXPWR_Max_CCH : Paramètre fixant la puissance à laquelle le mobile doit émettre lors de l'accès initial à une cellule. Si ce paramètre est supérieur à la classe de puissance du mobile, celui-ci émet à sa puissance maximale (30 dBm pour un 1W, 33 dBm pour un 2W et 39 dBm pour un 8W).
+      Max.mobile RF Power : Puissance maximal avec laquelle le mobile est capable d'émettre vers la BTS, ce paramètre est défini par la classe du mobile (30 dBm pour un 1W, 33 dBm pour un 2W et 39 dBm pour un 8W).
+      Max (X, 0) signifie que si X > 0 = X et si X<0 = 0
+      Le critère C2, appelé critère de re-sélection est implémenté en phase 2. Il a pour fonction de favoriser ou de défavoriser une cellule candidate à la re-sélection pendant un temps donné. Lorsqu'il est présent, le critère C2 remplace le critère C1 pour la re-sélection de cellule, le critère C1 fait partie de l'équation du critère C2 [9] : 
+- Si Penalty_Time < 31 (620s):
+      
+- Si Penalty_Time = 31 (620s):
+      
+Le Cell_Reselect_Offset est une valeur de l'offset permanent ajouté à C1 alors que le Temporary_Offset est un Offset temporaire servant à défavoriser une cellule le temps du penalty_Time qui est une durée pendant laquelle le Temporary_Offset va être appliqué et dans le but est de pouvoir défavoriser une cellule par rapport à une autre, afin d'éviter que le mobile ne la sélectionne alors que sa vitesse de déplacement va faire qu'il va effectuer une re-sélection dans un court laps de temps. En d'autres termes, le but du PENALTY_TIME, est de pouvoir défavoriser une cellule par rapport à une autre, afin d'éviter que le mobile ne la sélectionne alors qu'il est encore en dehors du local.
+      Un autre critère joue sur la re-sélection de cellules aussi bien avec les critères C1 que C2, c'est le Cell_Reselect_Hysteresis. Son but est d'éviter les effets "Ping-pong" entre deux cellules n'appartenant pas à la même zone de localisation. Si en veille la bascule entre deux cellules d'une même zone n'a aucune incidence sur le réseau, en revanche elle produit des échanges de signalisation entre le réseau et le mobile entre deux zones différentes. Le Cell_Reselect_Hysteresis va artificiellement déplacer la frontière entre deux cellules. Au lieu d'être centrée entre les deux dans le cas classique, la frontière va se trouver à l'extrême limite de la cellule courante. Ce procédé garantie un faible taux de re-sélection de la cellule précédente, évitant ainsi un trafic inutile; Mais c'est au détriment de l'optimisation de la re-sélection, car la bascule va se produire alors que le Rxlev aura déjà bien chuté. Le Cell_Reselect_Hysteresis n'existe que pour la re-sélection de cellules en veille, car lors d'une communication il y a de toute façon des échanges de signalisations à chaque changement de cellules, qu'elles soit dans la même zone ou non. La cellule courante va se voir attribuer un critère C1 et C2 augmenté de la valeur du Cell_Reselect_Hysteresis, de 2 à 14 dBm supplémentaire par pas de 2dBm. Dans le cadre de la re-sélection classique d'une cellule par un mobile, la bascule ne peut se faire que toutes les 5 secondes au minimum, avec deux cellules de zones différentes venant d'être re-sélectionné par le mobile, le temps d'attente avant re-sélection vers l'ancienne cellule est portée à 15 secondes mais reste à 5 secondes pour les cellules de la même zone.
+      Pour résoudre notre problématique, nous avons opté pour une méthode heuristique qui est le recuit simulé. En effet, le problème d'optimisation des emplacements des antennes dans un milieu indoor, le choix de puissances d'émission, des gains d'antennes et des types de feeders correspondants est un problème de type NP-complet qui ne peut être résolu en un nombre polynomial d'opérations. Il ne peut être résolu par une recherche exhaustive explorant toutes les solutions afin de trouver la meilleure. C'est pour cette raison qu'il est nécessaire d'avoir recours à des algorithmes heuristiques qui cherchent un optimum local en un temps polynomial. Nous présentons une petite étude comparative de quelques heuristiques ensuite, nous détaillons notre solution proposée pour la réalisation du projet.
+III.2. Algorithme d'optimisation : le recuit simulé
+III.2.1. Définition 
+      Il existe plusieurs familles d'algorithmes heuristiques qui n'assurent pas l'optimalité de la solution mais peuvent aboutir à une solution sous optimale [10] :
+* les algorithmes constructifs (algorithmes gloutons),
+* les algorithmes de recherche locale (descente de gradient, recuit simulé, recherche par tabou...),
+*  les algorithmes évolutifs (algorithmes génétiques, algorithmes fourmis, etc.),
+*  les algorithmes hybrides (qui utilisent des heuristiques dans les algorithmes évolutifs).
+      Il est à noter qu'il n'existe pas d'algorithme universel, optimum quelle que soit l'application. Mais, nous choisissons le recuit simulé du fait qu'il permet de s'échapper des minimums locaux, ceci n'est pas assuré par les algorithmes constructifs. Pour les algorithmes génétiques, ils sont très utilisés du fait de leur facilité d'implémentation mais ils nécessitent beaucoup de temps de calcul. En plus, le recuit simulé représente un algorithme d'amélioration par voisinage et présente l'avantage de la possibilité d'incorporation de nouvelles contraintes après coup dans le programme. En outre, il a donné de bons résultats dans des problèmes similaires [11] ce qui nous a encouragé à choisir cette heuristique.
+
+
+      L'algorithme du recuit simulé ("simulated annealing" en anglais) est une méthode probabiliste qui permet de résoudre des problèmes de minimisation du type [12] :
+            
+      Avec E une fonction d'un ensemble fini ? dans R, appelée fonction d'énergie. Dans le cas qui nous intéresse, la fonction d'énergie E correspond à la fonction de mesure du taux de couverture créé par une disposition d'antennes donné. 
+      Pour plus d'éclaircissement sur la méthode, voici l'origine du concept du recuit simulé : Le recuit simulé est une méthode d'optimisation qui permet de déterminer les meilleurs paramètres d'un modèle basé sur quelques données. Elle vient d'un principe de physique qui consiste à liquéfier un produit à très haute température pour ensuite le laisser refroidir très graduellement et l'amener à l'état solide. L'étape de refroidissement est très importante. Par exemple dans le cas de l'acier, si celui-ci est refroidi rapidement (trempé), le cristal résultant sera très imparfait et dans un état métastable, c'est-à-dire très dur mais aussi très fragile. Par opposé, en effectuant des recuits, c'est-à-dire un refroidissement par paliers, les défauts de la cristallisation seront éliminés et l'acier deviendra très malléable et peu cassant. 
+      Le processus de refroidissement graduel comporte une particularité très intéressante dans la résolution de problème d'optimisation. Au fur et à mesure que la température diminue, la probabilité de tomber dans un état métastable diminue.
+      
+      Les algorithmes de recuit simulé sont alors une forme d'algorithme probabiliste qui a pour but d'éviter les minimums locaux au profit d'un minimum le plus global possible. Par ailleurs, cette méthode suspend périodiquement le processus de minimisation dans l'espoir d'éviter un minimum local à un certain autre minimum qui est probablement le minimum global.
+      À chaque palier de température, le système peut changer vers un état pour lequel l'énergie est plus basse que l'état courant, c'est-à-dire si ?E? 0 ou plus haute que son état courant, dans ce cas, la probabilité de changement égal à exp(-?E/Température). Au départ, le paramètre de température étant élevé, la probabilité de changement sera aussi élevée, mais au fur et à mesure que la température sera diminuée, la probabilité de changement d'état vers une énergie plus élevée diminuera aussi. Cette procédure s'applique dans un certain nombre méthode de minimisation et il a été démontré, qu'il s'avère efficace dans la découverte du minimum global ou d'un minimum se rapprochant du minimum global.
+      Comme notre objectif est une maximisation, pour utiliser le recuit simulé il suffit de rendre notre fonction objectif une fonction de minimisation en introduisant un signe moins. Il s'agit de minimiser la sommation de : 
+      		
+      L'algorithme du recuit simulé commence par construire une solution au hasard. Il consiste ensuite en un certain nombre d'itérations d'une procédure de base, contrôlées par un paramètre T appelé la température. Ce paramètre part d'une valeur  (la température initiale) et baisse en cours d'exécution. A la nième itération de l'algorithme, la température vaut où est un nombre réel de l'intervalle [0,1[qui est un autre paramètre de l'algorithme. Cela revient donc à faire évoluer la température selon le schéma  à chaque itération de la procédure de base. L'algorithme du recuit simulé s'arrête lorsque la température est plus petite qu'une certaine valeur appelée la température finale. 
+      Nous donnons ci-dessous un descriptif en pseudo langage de l'algorithme du recuit simulé. (Avec N(s) : l'ensemble de voisinage).
+1. Sélectionner une solution initiale s
+      Sélectionner une température initiale t > 0  
+     2.  Sélectionner au hasard s' Î N(s);
+      		d = E(s')   E(s);
+      		           Si d < 0 
+      			      Alors s = s'
+      			 Sinon   x=random ([0,1]);
+      			             If x < exp (-d/t) alors s = s'
+3. Aller à l'étape 2 si la condition d'arrêt n'est pas vérifiée
+       	Actualiser la température t
+
+Les Paramètre de la recherche sont : 
+- Température initiale : choisit de façon à avoir 80% d'acceptation de descente au début
+-    Schéma de refroidissement :
+           	T (n+1) = ? * T (n)  avec un changement à un nombre fixe d'itérations ou bien un 	changement à un nombre fixe de descente ou de montée
+-     La condition d'arrêt est soit un nombre maximal d'itération, ou bien la température finale est atteint ou de même une convergence vers une solution. 
+      
+      Afin d'illustrer le fonctionnement du recuit simulé, la figure III.1 montre comment la méthode du recuit simulé transpose le procédé du recuit à la résolution d'un problème d'optimisation : la fonction objectif du problème, analogue à l'énergie d'un matériau, est alors minimisée, moyennant l'introduction d'une température fictive, qui est, dans ce cas un simple paramètre de contrôle de l'algorithme [10].
+
+      
+Figure III.1 : Organigramme de l'algorithme du recuit simulé.
+      
+III.2.1. Description de la solution  
+    
+      Afin de choisir les positions candidates, les surveys préliminaires qui sont des visites sur site aident le planificateur radio dans son choix. Ces positions candidates sont très utiles de point de vue pratique. En effet, nous ne devons pas installer par exemple une antenne à l'intérieur d'un magasin ou dans des emplacements similaires. Donc, la tâche initiale d'un planificateur radio consiste à chercher des emplacements pratiques. Cette phase permet de faire un classement des positions (" un ranking "), ceci nous aidera dans le choix de la solution initiale qui influencera le temps de convergence de l'algorithme. 
+      
+A - Détermination de la température initiale T0
+
+      Nous calculons la température initiale en procédant par 100 perturbations au hasard, ensuite nous évaluons la moyenne ?E des variations ?E correspondantes. 
+      Choisissons un taux initial d'acceptation taux0 des " perturbations dégradantes ", selon la qualité supposée de la configuration initiale. Si nous supposons que nous démarrons notre programme avec une qualité " médiocre "  c'est-à-dire une solution initiale aléatoire, nous commençons alors avec une haute température et nous affectons à taux0 une valeur de 0.5. Sinon, nous commençons à basse température et nous aurons taux0 = 0.2. 
+      Nous choisissons alors une valeur de taux0=0.2 dans la mesure où nous choisissons une solution initiale supposée « bonne » du fait que nous faisons un classement des positions candidates et nous choisissons alors dés le début la position avec un ranking maximum.
+Déduisons alors la valeur de T0 de la relation : Exp (-?E/T0)= taux0. Nous aurons alors : 
+
+      			
+ B- Tirage d'un voisinage
+
+      Nous commençons par une solution initiale. Ensuite, nous tirons aléatoirement une valeur entre 0 et 1. Comme, nous avons dans notre base cinq gains différents d'antennes, cinq types de feeders et trois puissances d'émission que nous pouvons utilisés et comme l'utilisateur choisira n positions candidates, nous décomposons le segment de [0 1]  en quatre tranches.
+Nous aurons : d'où. Si la valeur tirée est inférieure à 5x alors nous permutons dans la solution initiale le gain de l'antenne et afin de choisir lequel des cinq gains à considérer, nous tirons de nouveau une valeur entre 0 et 5, celle affichée correspond au gain à prendre en considération. 
+Dans le cas où la valeur tirée est comprise entre 5x et 10x, nous permutons le feeder.
+      Si nous tirons une valeur entre 5x et 13 x, le choix sera sur la puissance d'émission alors que si la valeur est supérieure à 13x, nous changeons une position candidate qui influencera plus la valeur du taux de couverture. 
+
+
+
+   C- Règle d'acceptation de Metropolis
+
+   Elle se met pratiquement en oeuvre de la manière suivante :
+      Si ?E>0, tirer un nombre r au hasard dans [0,1], et accepter la perturbation si 
+       r<exp (-?E/T), avec T désignant la température courante.
+  D- Changement de palier de température 
+
+  Peut s'opérer dès que l'une des 2 conditions suivantes est satisfaite au cours du palier de température :
+      	- 12.N perturbations acceptées ;
+      	- 100. N perturbations tentées,
+Avec : N désignant le nombre de degré de liberté (ou paramètres) du problème.
+  E- Décroissance de la température   
+
+   La décroissance de la température peut être effectuée selon la loi géométrique : 
+      			 
+      Avec : 		          
+F- Arrêt du programme
+
+ Il peut être opéré après 3 paliers de température successifs sans aucune acceptation et nécessairement dés que nous atteignons le taux de couverture rechercher.
+G- Synthèse
+      Notre vision de la solution à la problématique de l'optimisation commence par un nombre minimal d'antennes à savoir une seule antenne et une configuration initiale choisit de manière à ce qu'elle soit " bonne". En effet, elle est choisit avec la position qui possède un classement maximal dans la mesure où ceci influencera le temps de convergence du programme. Cette solution initiale est représentée par un gain d'antenne, une atténuation d'un feeder, une puissance d'émission et une position candidate.
+      Pour cette position d'émetteur, nous avons sa matrice de prédiction d'affaiblissement déterminée à travers le parcours dominant pour les milieux indoor (l'IDP). Nous cherchons ensuite pour cette configuration, la matrice de couverture en appliquant l'équation générale liant la puissance reçue  par la station mobile en fonction de la puissance émise par la station de base [3].
+      
+      Où ,et sont les pertes respectives introduites par le câble de la station de base, le coupleur émission et le duplexeur ; et désignent le gain des antennes station de base et mobile, l'atténuation dans l'espace et est la perte due au câble dans le mobile. Nous appliquons, ensuite pour cette matrice de couverture la fonction de la recherche du taux de couverture qui représente notre fonction d'énergie. 
+       Ensuite, nous effectuons différentes perturbations en terme de tirage de voisinage et application des différentes phases du recuit simulé jusqu'au avoir une couverture maximale avec une seule antenne sinon nous aurons recours à augmenter le nombre des antennes jusqu'au satisfaire notre objectif. Cette procédure nous permet de déterminer le nombre des antennes nécessaires à déployer pour une scène donnée, aussi bien, les gains des différentes antennes, les atténuations des feeders, les différentes puissances d'émission et permet de même d'indiquer les positions optimales des antennes.
+III.3. Conclusion
+
+      Nous avons commencé ce chapitre par une modélisation mathématique de la problématique. En effet, il s'agit de maximiser la couverture tout en minimisant le nombre des antennes à installer.
+      Nous avons également mené une description détaillée de la solution proposée à savoir le recuit simulé.
+      Pour pouvoir évaluer l'apport du recuit simulé dans la résolution de notre problématique, le chapitre suivant présentera les différents résultats.
+      
+   
+   ChapitreIV  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+Introduction
+       Nous présentons dans ce chapitre les résultats de différents scénarios. Ainsi qu'une comparaison entre la couverture radio sans optimisation et après optimisation sera traitée afin de percevoir l'apport de l'optimisation dans l'amélioration de la couverture radio.
+IV.1. Environnement de travail
+
+      Afin de réaliser nos simulations, nous avons choisi comme langage de programmation le Matlab 6.5 et Microsoft visual basic 6.0.
+      Les résultats de nos simulations seront donnés et discutés tout au long de ce chapitre.
+IV.2. Scène d'étude
+
+      Afin d'illustrer les performances et l'apport du recuit simulé dans l'optimisation de la couverture radio dans un milieu indoor, nous étudions un cas pratique qui est le centre commercial du palmarium situé à l'avenue Habib Bourguiba, Tunis. Ce centre est caractérisé par une forte charge de trafic.
+Le choix de ce local est basé sur plusieurs critères. En effet, des plaintes des abonnés mobiles de Tunisiana ont été déclarées. En plus, à travers des mesures de type drive test, nous avons constaté une discontinuité de la couverture.
+IV.3. Etat radio actuel
+
+      Selon la solution prévue à mettre en oeuvre, illustrée par la figure IV.1, qui est représentée par trois antennes, le taux de couverture dans le local du palmarium est de 62%, ce qui représente un taux faible par rapport à l'objectif souhaité qui est de 90% et aux besoins des abonnés mobiles.
+       
+
+Figure IV.1 : Couverture radio du local avant optimisation.
+
+      Le taux de couverture est mesuré en calculant le nombre de points de réception qui ont un niveau de champ supérieur ou égal à -85 dBm sur le nombre total des points de réception. Le résultat que nous avons eu est de 62%. Nous montrons dans ce qui suit comment le recuit simulé a permis de déterminer le nombre d'antennes nécessaires, qui apparaît loin de celui prévu par l'équipe radio, et nous montrons comment nous avons pu optimisé les emplacements de ces antennes, en générant quelles positions à considérer pour placer les antennes sélectionnées.
+      En plus de la détermination des nombres des antennes nécessaires à déployer dans le milieu indoor, leurs positions respectives permettant un taux de couverture maximal, nous sommes intéressés à la détermination des gains d'antennes à considérer, des types feeders et des puissances d'émission à tenir en compte. Pour cela, nous présentons dans ce qui suit, les principaux antennes et feeders déployés par le réseau de Tunisiana.
+IV.4. Différents antennes et feeders utilisés
+
+      Il existe différentes antennes utilisées en milieu indoor. Chacune présente un gain, un diagramme de rayonnement, une polarisation, etc.
+      Les antennes utilisées en milieu indoor diffèrent de ceux utilisées en milieu outdoor du fait qu'elles ne doivent pas toucher à l'esthétique du local. La figure IV.2 montre deux types d'antennes ; une antenne omnidirectionnelle et une autre directionnelle.
+      
+      
+
+Figure IV.2 : Antennes indoor
+(a) : Antenne omnidirectionnelle    (b) : Antenne directionnelle
+      
+	  Le feeder est le câble d'alimentation de l'antenne. Il existe différents feeders avec différentes pertes. Le tableau suivant représente les principaux feeders utilisés par Tunisiana et les atténuations correspondantes [15]. 
+
+Feeder
+Atténuation (dB)
+1/2"
+6.80
+1/4"
+13.2
+1-1/4"
+2.77
+5/8"
+2.25
+7/8"
+3.71
+
+Tableau IV.1 : Pertes des différents feeders
+
+
+      Vu la diversité des antennes et des feeders, nous avons développé une base de données sous Access qui contient les différentes antennes et feeders utilisés. Cette base nous sera utile lors du choix de l'antenne à déployer et du feeder à connecter (Annexe 2).
+      
+      Il est à noter qu'un feeder peut alimenter une ou plusieurs antennes. Dans le cas où il alimente plusieurs antennes, nous devons faire recours à un splitter. De ce fait, l'antenne peut être donc reliée directement à la station de base à travers un câble feeder ou bien à un splitter qui est connecté à son tour à un câble coaxial le raccordant à la BTS. 
+      A travers notre base, nous avons essayé de mettre en oeuvre les différentes caractéristiques des antennes (la polarisation, la position du connecteur, le diamètre, la hauteur, les diagrammes de rayonnement, etc.) et des feeders. Ainsi, une mise à jour de la liste contenue dans la base est possible. Cette base de données sera incorporée dans notre outil d'optimisation comme étant un élément essentiel dans le choix de l'antenne à déployer et du feeder à connecter.
+IV.5. Présentation de l'outil InPred
+
+      InPred (Indoor Predictions) est un outil de calcul de la prédiction de propagation radio dans un milieu indoor. Il prend en considération les paramètres des équipements radio notamment les caractéristiques des antennes. En outre, il permet à l'utilisateur la possibilité de l'importation de plans avec le serveur AutoCAD ou la saisie directement d'un plan à travers les menus présents dans InPred. Il  utilise comme moteur de calcul le parcours dominant pour les milieux indoor.
+* Etapes de création d'un projet 
+      Pour créer un nouveau projet, il suffit de lancer InPred dont voici la page de d'accueil (Figure IV.10). Ensuite, sélectionner soit un nouveau projet soit un projet déjà existant.
+      
+
+
+Figure IV.3 : Page d'accueil d'InPred
+
+
+
+
+Figure IV.4 : Création d'un nouveau projet
+
+      Une fois, nous avons choisit la création d'un nouveau projet, nous indiquons le nom du projet, dans notre cas 'kahlaoui_supcom' et l'emplacement où enregistrer le projet qui aura l'extension .idp.
+      Ensuite, une fois la saisie de la scène est faite avec l'AutoCAD, il suffit de faire l'import du plan à l'aide de Wizard implémenté au sein d'InPred.
+      Dans une deuxième phase, il faut paramétrer les options de la simulation à savoir notamment le pas de simulation qui conditionne le temps de calcul de la prédiction et ensuite lancer la prédiction.
+IV.6. Mise en évidence du Ranking
+
+      Au niveau d'InPred, nous avons essayé de mettre quelques fonctionnalités facilitant la tâche de l'optimisation. En d'autres termes, nous essayons de trouver des techniques permettant la rapidité de la phase de l'optimisation.
+      La méthode d'optimisation que nous avons choisi qui est le recuit simulé commence avec une configuration initiale. Or la configuration initiale influence le temps de convergence de l'algorithme, il est primordial alors d'essayer d'avoir une 'bonne' configuration initiale. Pour ce faire, nous avons essayé d'affecter aux positions que nous considérons meilleures dans la mesure où nous constatons qu'elles peuvent assurer une couverture meilleure que d'autres, un rang supérieur et donc notre solution commence avec la position ayant le rang supérieur. Pour notre cas, nous nous sommes limités à l'ordre trois.
+      
+      
+      La figure IV.8 illustre l'option Ranking au niveau des options de l'antenne.
+      
+      	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure IV.5 : Mise en évidence du Ranking
+
+      La figure IV.6 montre que le site Ant_1 présente un ranking de 2. Cette position d'antenne sera alors choisit dans le cas où nous n'aboutissons pas à un résultat optimal avec une seule antenne. En effet, lors de la solution initiale nous avons commencé avec la position possédant le rang maximal qui est 3 dans notre cas, donc le rang 2 sera le deuxième rang à choisir mais à condition que cette position ne soit pas la solution de la configuration précédente sinon, nous aurons la même position.
+IV.7. Choix des positions candidates
+
+      Comme la montre la figure IV.6, les positions candidates choisies, après un survey des ingénieurs de planification, sont des positions qui respectent le fait qu'elles doivent être accessibles. En d'autres termes, nous ne pouvons pas mettre une antenne, par exemple, dans un magasin. Si nous aurons une panne électrique ou autre et le local est fermé, nous aurons alors des problèmes au niveau de ce site et donc il faut tenir compte de l'accessibilité aux différents emplacements là où il faut installer une antenne. En outre, les positions choisies doivent à priori assurer une couverture maximale dans la mesure où nous devons les choisir dans des emplacements dégagés. Par ailleurs, il est préférable de respecter les conditions génie civil du milieu auquel nous cherchons une solution de maximisation de couverture. 
+      
+     
+
+Figure IV.6 : Positions candidates
+
+IV.8. Analyse des résultats et Interprétations 
+
+	Dans cette section,  nous allons présenter et analyser les différents résultats. En effet, à travers les positions candidates que nous avons choisi pour la scène du centre commercial du palmarium, on est amené à déterminer le nombre optimal d'antennes à prendre en considération et leurs positions respectives dans le but d'assurer une couverture radio totale, tout en présentant les différents gains, puissance d'émission et les atténuations des feeders à tenir en compte.
+      Nous avons commencé notre programme avec une température initiale de 0.2885 et nous avons fixé une température finale de 0.012. La première antenne sélectionnée est celle avec un rang maximum. Pour notre cas, c'est l'antenne située à la position 5 (Figure IV.6) que nous jugeons la meilleure position du point de vue assurance de couverture. La figure IV.7 montre la variation de l'énergie en fonction du nombre d'itérations pour le cas d'une configuration avec une seule antenne. Il est à noter que la fonction d'énergie représente la fonction de calcul du taux de couverture. Pour les autres paramètres à savoir le gain de l'antenne, l'atténuation du feeder et la puissance d'émission, ils sont choisis aléatoirement.  
+      
+Figure IV.7 : Variation du taux de couverture en fonction du nombre d'itérations
+(Cas d'une seule antenne)
+      
+      Nous constatons d'après la figure IV.7 que le taux de couverture initial assurée par une seule antenne est de 34% et nous remarquons que pendant les deux premiers paliers de température qui renferment 20 itérations le taux a légèrement augmenté. Ensuite, la courbe décroît pour atteindre un taux de 26% pendant l'itération 40 ; ceci est dû en fait au critère d'acceptation de métropolies, qui envisage d'accepter des solutions médiocres dans la recherche de la solution optimum. Par ailleurs, nous voyons que l'acceptation des valeurs de taux qui dégradent la fonction coût est remarquable à ce niveau c'est à dire pendant les premières itérations des premiers paliers de température. Par contre, lorsque la température diminue encore plus et donc nous nous rapprochons de la température finale, nous n'acceptons plus des solutions qui détériorent la solution courante.
+      
+      Il est à noter que dans la première phase, l'acceptation de 'mauvaises solutions' est plus importante afin d'explorer le maximum de voisinage. Dans une deuxième phase, nous admettons rarement les solutions non améliorantes de la solution courante. En effet, le paramètre température désigné dans l'algorithme du recuit simulé par T est une clé essentielle pour le mécanisme de diversification et d'intensification de recherche. Pour une valeur de température Žélevée, par le biais du critère de Metropolis, la probabilité d'accepter une solution ayant des qualités moins bonnes que celles de la solution courante sera importante. Ceci permet à l'algorithme de sauter les barrières (s'échapper des minima locaux) et par la suite de diversifier la recherche. En diminuant la température progressivement, le système aura la tendance de n'accepter que les solutions ayant des qualités meilleures que celles de la solution courante. Ceci permet alors d'intensifier la recherche autour de la solution courante.
+      L'algorithme optimal est celui qui réalise un compromis entre la diversification et l'intensification de recherche. Ceci est effectué via un choix judicieux de la température initiale, de la loi de refroidissement et de la longueur de la chaîne de Markov au bout de laquelle la température décroît. 
+Les paramètres de la simulation sont les suivants : 
+* Température initiale : Afin de déterminer cette température, nous avons généré aléatoirement 100 voisinages et nous avons évalué la variation de la fonction coût. Soit :
+      
+Sachant que la moyenne des variations de la fonction d'énergie  ?E=0.4 et que le taux initial choisit est : taux 0=0.25, la température initiale sera : 
+T0= 0.2885
+* Paramètre de refroidissement  
+La fonction linéaire de refroidissement est :
+
+Le paramètre  est égal à 0.82. Ce paramètre a été fixé par étude empirique.
+
+* Température finale : Nous avons fixé la température finale à 0. 012.
+
+Outre ces paramètres qui influencent la performance de l'algorithme, une fonction principale dans le recuit simulé est le tirage du voisinage qui présente un rôle primordial dans la résolution de la problématique. Comme le nombre de positions candidates est n=10, nous retrouvons la valeur du paramètre x qui intervient lors du choix de la variable à permuter dans la solution courante. 
+x=1/ (13+n) =1/23.
+
+Comme avec une seule antenne, nous n'avons pas pu aboutir à un taux de couverture de 90% et que la température finale est atteinte, le programme prend en considération alors deux antennes en gardant pour l'une des deux la dernière configuration obtenue avec une seule antenne. Nous présentons alors le résultat de la première configuration accompli par notre programme lors de l'exécution avec une seule antenne. 
+
+Paramètre
+Valeur
+Gain de l'antenne
+9 dBi
+Atténuation du feeder
+2.25 dB
+Puissance d'émission
+33 dBm
+Position choisie
+8
+Taux maximal
+36.8%
+
+
+
+
+
+
+
+Tableau IV.2 : Cas d'une seule antenne
+	
+	La figure IV.8 illustre la carte de couverture du palmarium assurée avec l'antenne choisie comme étant la solution optimale dans le cas de la couverture avec une seule antenne.
+
+
+Figure IV.8 : Couverture du palmarium avec une seule antenne
+
+
+   Nous remarquons que les points de réception qui ont un seuil de couverture <-85 dBm représente environ le 2/3 de la surface du local. En effet, seule la partie là où se trouve l'antenne est couverte avec un niveau de champ >=-85 dBm. Une seule antenne est alors insuffisante pour couvrir tout le local avec un niveau de champ satisfaisant.
+   
+   Nous présentons dans ce qui suit, la courbe décrivant la variation de la fonction coût en fonction du nombre d'itérations pour le cas de 2 antennes. (Figure IV.9)
+
+Figure IV.9 : Variation du taux de couverture en fonction du nombre d'itérations
+(Cas de 2 antennes)
+
+
+     	D'après la figure IV.9, le taux maximal atteint avec deux antennes est de 0.54. L'allure de cette courbe est très similaire à celle avec une seule antenne. En effet, c'est le même principe, ce qui diffère c'est le nombre d'itérations par palier puisque le nombre de degrés de liberté du problème a changé, et nous passons alors de quatre paramètres (qui sont un gain d'antenne, une atténuation feeder, une puissance d'émission et une position candidate) à huit paramètres, puisque le nombre d'antenne est doublé. 
+     La configuration obtenue avec deux antennes est la suivante : 
+     
+     
+     
+     
+     
+      
+     
+     Paramètre
+
+N°_Antenne
+Gain (dBi)
+Atténuation _ feeder (dB)
+Puissance_émission
+(dBm)
+Position
+1
+10
+2.25
+33
+2
+2
+10
+2.25
+33
+7
+
+Tableau IV.3: Cas de deux antennes
+
+      Nous constatons qu'une couverture globale ne peut pas être atteinte avec deux antennes, nous entamons de nouveau la procédure de recherche du nombre optimal d'antennes par l'ajout d'une nouvelle antenne. La courbe représentant la variation du taux de couverture en fonction du nombre d'itérations pour le cas de trois antennes est illustrée par la figure IV.10.
+      
+      
+Figure IV.10 : Variation du taux de couverture en fonction du nombre d'itérations
+(Cas de 3 antennes)
+
+      Selon la figure IV.10, la courbe commence à l'itération 0 avec un taux initial de 56% qui représente le taux de la comparaison des matrices de couverture de 3 antennes. Ensuite, elle croît avant d'atteindre une valeur minimale de 0.57 à l'itération 100 du premier palier de température. Nous constatons après que la courbe se stabilise et que nous n'admettons plus les décroissances qu'au niveau de l'itération 200  là où nous percevons  que la courbe décroît et ensuite croît constamment jusqu'à atteindre un taux maximal de ? 67%.
+      La configuration obtenue avec 3 antennes est la suivante :
+      
+          Paramètre
+N°_Antenne
+Gain (dBi)
+Atténuation _ feeder (dB)
+Puissance_émission
+(dBm)
+Position
+1
+2
+2.25
+33
+1
+2
+9
+6.8
+33
+5
+3
+10
+2.25
+33
+9
+
+Tableau IV.4 : Cas de trois antennes.
+	
+	Comme nous n'avons pas encore atteint notre but qui consiste à assurer une couverture supérieur ou égal à 90%, une quatrième antenne sera prise en considération lors de la recherche de la maximisation de la couverture et voici la variation du taux de couverture (pour quatre antennes) en fonction du nombre d'itérations illustrée par la figure IV.11.
+
+      
+Figure IV.11 : Variation du taux de couverture en fonction du nombre d'itérations
+(Cas de 4 antennes)
+
+      
+      La figure IV.11 montre que le nombre 4 est le nombre optimal satisfaisant la maximisation du taux de couverture. Ainsi, après 380 itérations, la convergence de l'algorithme est assurée et le taux de couverture atteint est de 95.3%. 
+      Nous constatons que l'algorithme converge avant que la température finale soit atteinte. En effet, l'indice de l'itération de convergence est de 380.
+      Nous présentons alors le tableau de différentes valeurs de taux de couverture en fonction du nombre d'itérations.
+Taux de couverture (%)
+indice d'itérations
+71
+0
+73.8
+40
+70.9
+80
+75
+100
+80
+120
+81
+160
+80.2
+200
+83.1
+240
+83.4
+280
+88
+320
+88.6
+340
+95.3
+380
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+Tableau IV.5 : Variation du taux de couverture en fonction du nombre d'itérations
+      
+      Dans le tableau IV.7, nous présentons les valeurs des différents paramètres obtenus avec le recuit simulé :  
+      
+   Paramètre 
+N°_Antenne
+Gain (dBi)
+Atténuation _ feeder (dB)
+Puissance_émission
+(dBm)
+Position
+1
+2
+6.8
+33
+1
+2
+2
+2.77
+33
+4
+3
+9
+2.77
+33
+7
+4
+2
+6.8
+33
+9
+
+      Tableau IV.6 : Simulation  avec quatre antennes
+      Ensuite, en se référant à notre base de données que nous avons développé contenant les différentes antennes et leurs différentes caractéristiques, nous déterminons l'antenne correspondante. En d'autres termes quels sont les autres caractéristiques de l'antenne.
+      Pour la première position, nous devons installer une antenne omnidirectionnelle dont le gain est de 2 dBi avec un feeder d'atténuation 6.8 dB et qui correspond à un feeder oe pouce. La puissance d'émission doit être 33dBm.
+      Au niveau de la deuxième position, nous devons avoir une antenne présentant un gain de 2 dBi, un feeder d'atténuation de 2.77 dB pour l'alimentation de l'antenne et pour la puissance d'émission nous devons avoir une puissance de 33 dBm.  Nous constatons à ce stade que la puissance d'émission choisit par le recuit simulé est la puissance maximale, en effet, la puissance influence la portée de l'antenne et par conséquent avec une puissance maximale, la portée est certainement maximale. Concernant la troisième antenne, elle présente un gain de 9 dBi, il s'agit de l'antenne KATHREIN 730677. Cette dernière doit être alimenter par un feeder présentant une atténuation de 2.77 dB. La dernière antenne est une antenne de 2 dBi à laquelle est branché un feeder de 6.8 dB d'atténuation.  
+      Il est à noter qu'afin de déterminer les coordonnées des différentes antennes à installer, il suffit de faire recours au fichier 'antenna.txt' situé dans le répertoire   "C:\MATLAB6p5\work" qui contient la liste des positions candidates et leurs cordonnées respectives.
+      La figure suivante montre les positions des 4 antennes et la carte de couverture assurée par ces différentes antennes pour le local du palmarium avec un taux de couverture obtenu de 95.3%.
+      
+Figure IV.12 : Couverture du palmarium avec 4 antennes
+IV.9. Affichage avec InPred
+
+      Afin de faciliter la tâche des ingénieurs d'optimisation de Tunisiana, nous avons intégré la phase d'optimisation dans le logiciel InPred ceci à travers un appel aux fonctions DLL (Dynamic link library) permettant l'interaction entre le Matlab et Microsoft Visual Basic.
+      Nous avons montré dans les paragraphes précédentes, qu'avec 10 positions candidates, un seuil de couverture que nous voulons satisfaire de -85 dBm, la nécessité du déploiement de 4 antennes afin d'assurer une couverture supérieur ou égal à 90% et que nous l'avons trouvé égal à 95.3%. La figure IV.13 montre les différents paramètres d'optimisation que l'utilisateur de notre outil aura la liberté de les choisir.
+      
+      
+Figure IV.13 : Paramètres d'optimisation
+      
+      Nous présentons à travers la figure IV.14 la couverture assurée par les 4 antennes résultantes de la simulation. 
+      
+      
+
+      
+      
+      
+              Figure IV.14 : Couverture radio assurée par 4 antennes
+
+Nous constatons à travers la figure IV.14 qu'avec quatre antennes la couverture est maximale. La valeur du taux de couverture est de 95.3%. Il est à noter que le Signal Strength Thresholds situé à droite de la carte de couverture du local indique une couleur pour chaque classe de niveau de champ.
+IV.10. Temps de calcul
+
+      Suite au bon paramétrage du recuit simulé en terme de détermination de la valeur de la température initiale, le paramètre de refroidissement et la température finale, nous avons remarqué que le temps de calcul qui dépend étroitement de la valeur de ces paramètres est rapide. En effet,  pour la scène de prédiction que nous avons choisi et qui est 60m x 60m, avec un pas de simulation de 1m et 10 positions candidates, le temps d'exécution était de 90 secondes.
+IV.11. Conclusion
+
+      Dans ce chapitre, nous avons essayé de présenter les différents résultats obtenus avec le recuit simulé. Nous sommes intéressés dans un premier temps à la présentation de la scène d'étude qui est le centre commercial du palmarium et nous avons montré son état radio actuel qui est caractérisé par 'une mauvaise' couverture. Ensuite, la deuxième partie de ce chapitre a été consacrée à la présentation de l'outil de l'optimisation à travers différentes  simulations et exposition des différents résultats obtenus tout en montrant la performance du recuit simulé de point de vue rapidité et satisfaction de l'objectif visé. 
+
+
+
+Conclusion Générale et Perspectives
+      Ces dernières années, la forte croissance des systèmes de communication par voie radioélectrique a conduit les opérateurs à densifier les réseaux. La portée d'un émetteur est ainsi passée de quelques kilomètres (macro-cellule) en zone suburbaine à quelques dizaines de mètres (pico-cellule) à l'intérieur des bâtiments. Il est alors apparu la nécessité d'étudier le comportement du canal de propagation dans des contextes indoor (intérieur des bâtiments) et d'améliorer la couverture radio à l'intérieur de ces environnements. L'objectif de ce projet est de développer un outil permettant d'améliorer la qualité de service dans les milieux indoor en maximisant la couverture radio, ceci en déterminant le nombre et les positions optimaux des antennes. Aussi bien décider des gains d'antennes, des types de feeders et des puissances d'émission à prendre en compte. 
+      Dans ce but, nous avons rappelé dans une première partie les notions de base d'un réseau GSM ainsi que les différentes techniques permettant le déploiement d'une solution de couverture indoor. 
+      Nous sommes intéressés par la suite à l'étude de différents modèles de prédiction de propagation dans un environnement intérieur et nous sommes concentrés sur le modèle du parcours dominant pour les milieux indoor en présentant un résultat de simulation réalisé avec ce modèle. Dans une troisième phase, nous avons mis l'accent sur la modélisation de la problématique et présenté la solution proposée basée sur le recuit simulé. 
+      Les différents résultats ont fait l'objet de la dernière partie en considérant comme scène d'étude le centre commercial du palmarium. Pour ce faire, nous avons évalué l'état actuel de la couverture du réseau Tunisiana dans ce local. Ensuite, nous avons déterminé le nombre optimal d'antennes à installer et leurs positions respectives. De même, nous avons développé une base de données pour pouvoir décider des gains des antennes à installer, des atténuations des feeders à prendre en compte et des puissances d'émission à mettre en oeuvre.
+      Pour conclure, notre outil d'optimisation des emplacements des antennes a permis de maximiser la couverture et nous a donné des résultats satisfaisants pour notre premier opérateur privé notamment avec la forte croissance du nombre des milieux indoor tel que les centres commerciaux, les aéroports, les foires, etc. qui nécessitent le déploiement d'une solution de couverture indoor optimisée.    
+      Concernant les perspectives de notre travail, nous pouvons entrevoir la migration de la solution proposée du milieu Indoor vers le milieu Outdoor. 
+      
+Bibliographie
+
+[1]   S. Tabbane, « Ingénierie des réseaux cellulaires », Hermès Science Publication, 2002
+
+[2]  S. Ben Romdhane, « La couverture Indoor d'un réseau GSM : Règles d'ingénierie et Etude de cas », Projet de Fin d'Etudes, Filière Ingénieurs en Télécommunications, promotion 2004
+ [3]  Xavier L., Philippe G., S Tabbane, "Réseaux GSM-DCS: des principes à la norme", Hermès Science Publication, Paris, 1997
+
+[4]  T.S.Rappaport, « Wireless communication : Principle and practice »,Prentice Hall PTR,Upper Saddle River,NJ,2002
+
+[5] Th.Fritsch, K.Tutschku, K.Leibnitz, "Field strength prediction by ray_tracing for adaptive base station positioning in mobile communication networks", Institute of Computer Science University of W_urzburg, August 1995.
+
+ [6] G. Woelfle, F.M. Landstorfer: Field strength prediction with dominant paths and neural networks for indoor mobile communications MIOP 1997, April 1997.
+
+[7]  G. Wölfle, F. M. Landstorfer, R. Gahleitner, & E. Bonek « Extensions to the field strength prediction technique based on dominant paths between transmitter and receiver in indoor wireless communications » 2nd European Personal and Mobile Communications Conference (EPMCC) ,1997
+
+[8] B.Khrouf, «Indoor prediction of propagation using dominant path: study and calibration », Publication, Juin2005
+
+[9]  S. Tabbane," Réseaux mobiles", Edition HERMES, Paris, 1997
+
+[10]  J.Dréo, A.Pétrowski, P.Siarry, E.Taillard, « Méta heuristiques pour l'optimisation difficile », Eyrolles, 2003.
+
+ [11] Imre Kocsis, Lóránt Farkas, Lajos Nagy, "3G Base Station positioning using simulated annealing", Budapest Hungary, 2000.
+
+[12] Cédric Buche, « Méta-Heuristiques pour l'optimisation » Laboratoire d'Ingénierie informatique, EA 2215 UBO/ENIB, BREST, 2000.
+
+[13] S.M. Allen, S. Hurley and R.M. Whitaker, "Automated Decision Technology for Network Design in Cellular Communication Systems", Proceedings of the 35th Hawaii International Conference on System Sciences - 2002
+
+[14] Andrej B.,Elitza M., Samantha R.,"Power-aware Base Station Positioning for Sensor Networks" University of California, Berkeley,CA 94720
+
+[15]  Document confidentiel d'un constructeur C1, 1999.
+
+ANNEXE
+Annexe 1  
+
+* Exemple d'une micro_BTS
+
+Alcatel Evolium" Micro-BTS A910
+
+Annexe 2  
+La figure suivante représente le schéma relationnel de la base de données des différentes antennes et feeders.
+      
+Feeder
+Numéro
+Fréquence
+Atténuation
+Type_câble
+
+Antenne
+Type_No
+Fréquence
+Gain
+Position du connecteur
+Entrée
+Impédance
+Polarisation
+Diamètre
+Hauteur
+Poids
+Diagramme Horizontal
+Diagramme Vertical
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				Schéma relationnel
+
+
+Le feeder est le câble d'alimentation de l'antenne, il peut, en passant à travers un splitter, alimenter plusieurs antennes. Et de ce fait une antenne peut être alimenté par un seul feeder est donc relié directement à la BTS ou bien relié par un feeder à un splitter qui à son tour relié à la BTS par un câble coaxial.
+
+
+Annexe 3 : 
+       - Exemple d'une antenne Indoor (Kathrein)
+
+
+Table des Matières
+
+
+
+
+ii
+
+
+Liste des Figures
+
+iii
+
+
+Liste des Tableaux
+
+iv
+
+
+Liste des abréviations
+
+- 16 -
+
+
+Introduction Générale
+
+GSM & Couverture Indoor
+
+Modèles de prédiction de propagation indoor
+
+
+
+
+- 28 -
+
+
+Optimisation 
+
+
+
+
+- 41 -
+
+
+Implémentation & Résultats 
+
+
+
+
+- 61 -
+
+
+Conclusion Générale & Perspectives 
+
+ Bibliographie
+
+- 62 -
+
+
+ANNEXE 
+
+- 64 -
+
+

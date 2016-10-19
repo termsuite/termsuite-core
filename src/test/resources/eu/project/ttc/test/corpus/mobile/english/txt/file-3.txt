@@ -1,0 +1,375 @@
+The Mobile Phone as the Globalizing Icon of the Early 21st Century st
+The Mobile Phone as the Globalizing Icon of the Early 21  Century
+Christine Satchell Supriya Singh
+RMIT University/Smart Internet Technology RMIT University/Smart Internet Technology
+Cooperative Research Centre Cooperative Research Centre
+GPO Box 2476V, Melbourne 3001, Australia GPO Box 2476V, Melbourne 3001, Australia
+christine.satchell@rmit.edu.au supriya.singh@rmit.edu.au
+Abstract
+This paper presents the findings from a qualitative study of mobile phones and youth culture in Melbourne,
+Australia. The focus is on how the social dynamic resulting from the use of such communications tools has created a
+paradigm shift that has changed the nature of inter-human relations. Mobile facilitated interaction is driving a
+fundamental change in social mores with respect to engagement and commitment, to notions of fluid time versus
+fixed time and ultimately to urban mobility. Connectivity is becoming central to what it means to have a social
+identity and users are responding to this by merging bits of data to create their 'ideal digital self' through which they
+communicate socially. This calls into question the nature of 'digital identity', indicating it is not only about how
+much information can be restricted, but rather, what is revealed. While the results are based on a localized study, it
+is proposed that this phenomenon is happening across societies and that mobile phones themselves are becoming the
+st
+globalizing icon of youth culture in the early 21  Century.
+1 Introduction
+In the early 21st century, Westernized young people are growing up in a time that sees a paradigm shift from post
+industrial to digital society. This results in a society that is not only obsessed with being in constant contact with
+each other but where the idea of interconnectivity actually defines the culture. Furthermore, mobile phones are
+having a unique impact on young users in that the artefacts themselves are becoming a force that shapes cultural
+flows (Satchell, 2004). This is supported by Myerson who stated, "The mobilization of the phone isn't really a
+technological process - it's cultural" (2001, p.7). When looking at the phenomenon of the mobile phone as a cultural
+artefact it can be seen that it has transcended its initial functionality as a communications device and has become a
+global defining symbol of the users' sense of style and taste. There are, of course, different nuances in use across
+cultures, such as the greater use of the mobile phone by young users to access the Internet in Japan (Ishi, 2004).
+More e-mails are sent in Japan via the mobile phone than the PC, though it is to fewer addresses. This mobile
+communication in Japan, as in Korea, enhances time spent and sociability with friends. Plant (2001) proposes that
+there are some broad distinctions that can be made at a global level. She argues that in the Asia Pacific, where open
+communication is already in place culturally, the mobile phone is more readily embraced. In China, where there is
+already much noise, users talking loudly into their phones are tolerated, whereas in other places in the world it is not
+accepted. In the United States, Plant finds that mobile phone use is at times, perceived like smoking, something not
+to be tolerated in a public place. Tjonng et al, in their study of mobile phone use in Australia and Singapore, argue
+that Singaporean youth are more likely to personalise their phone and be heavier users than Australian young people
+(2003). Ultimately though, it is the similarities which are notable (See Licoppe & Heurtin, 2001 for a study of
+French users; Taylor & Harper, 2002 for UK users). Pankarez notes, "a global youth culture is being driven by
+technology, rather than by fashion, music, and sport as in previous generations" (2002, p.1). While Gesser argues,
+"As they are used literally by everybody, cell phones create a new aspect in which all human beings are equal, i.e.
+irrespective of age, gender, cultural background, wealth, income or hierarchical position" (2004, p.6).
+The user study consisted of a qualitative analysis of 35 users living in Melbourne, Australia aged 18-30 (Satchell,
+2003). An open-ended interview method was used (Minichello, 1995). The data was analyzed using NUD*IST 4, a
+computer program for the analysis of qualitative data. The findings can best be thought of in terms of the four main themes that emerged from the user study.
+1. Archetypes
+2. Spontaneous social networks
+3. Connectivity and privacy
+4. Identity
+The first theme relates to distinct user archetypes that emerged from mobile phone driven sub-cultures. These
+archetypes, the nomad, iconic, updater and resistant user, provide metaphors for understanding the process through
+which technology and youth culture meet.
+The second theme looks at how young people are using their mobile phones for the spontaneous formation of social
+networks and examines the emerging hybrid of digital/real-time relationships, what Ito and Okabe (2003) call the
+'augmented fleshmeet'. This behavior has lead to the emergence of 'passive scheduling' as a form of social
+communication and as means for maintaining presence.
+The third theme reveals that the mobile phone is creating a generation of conflicted users trying to balance the need
+for connectivity with the desire to be at times, uncontactable. This results in users putting in place mechanisms to
+exercise more control over digitally constructed mobile space. The need to be able to convey meaning without real
+time interaction was the most commonly cited improvement that users wanted for their mobile phones.
+The fourth theme is concerned with how the social dynamic resulting from mobile phone interactions is driving the
+notion of identity, leading to a youth culture where connectivity itself has become a defining part of what it is to
+have a social identity. This results in a culture where interpreting or reading other peoples' digital identities provides
+a means of establishing what a person is like. This calls into question the nature of identity itself.
+2 Emerging User Archetypes as Metaphors
+Four distinct archetypes of users (Satchell, 2003) emerged from the mobile phone driven subcultures of youth culture:
+• Nomads
+• Iconic
+• Updaters
+• Resistants
+These archetypes provide useful metaphors for understanding youth culture and the central role technology plays in
+it. As Sawhney points out, "We have to accept the fact that although the use of metaphors is not a particularly
+elegant or sophisticated technique, it is perhaps the only conceptual tool that we have for understanding the
+development of a new technology" (1996, p.293). The archetypes will also be useful when translating the emerging
+themes from the user study into design (Cooper, 1999).
+2.1 Nomads
+The 26 nomadic users in the study were characterized by always being on the move between different groups and
+activities. Furthermore, they were nomadic in that unlike previous generations, they did not have centralized
+meeting places where they could get together. They were disconnected physically, leading fragmented lifestyles as
+discussed in Carroll et al (2002) and were often without a consistent home base. However, because they are
+connected virtually via their mobile phone handsets and networks, they can seamlessly map their own journeys
+through a continual series of activities and events. This is in keeping with Deleuze and Guttari's ideal of the nomad
+who is characterized by freedom of movement and is not constrained by time and space: "One can rise up at any
+point and move to any other" (1987, p.xiii). For these users, the handset becomes like a surrogate home base or
+virtual lounge room from where the nomad can maintain a continual virtual presence, summoning, or joining real
+and virtual groups at will. This is significant because it represents a paradigm shift in urban mobility, not seen since
+the car liberated a generation of teenagers on the 50s. 2.2 Iconic
+Thirty-three of the 35 users customized the look and/or sound of their mobile phones to reflect their taste and style.
+For these users the mobile phone has transcended its functionality as a communication device and has become an
+icon or status symbol. Hulme and Peters  (2001) draw on Baudrillard (1983) to look at the process  that enables the
+mobile artefact to be appropriated by youth culture as a defining icon for their generation.
+Jean Baudrillard notes goods have meanings that are generated within the system of signs and
+symbols, which engage the attention of the consumer. Consumption is never a process of a purchaser
+trying to satisfy a basic pre-given human need in response to biology. Mobile phones meet no
+biological need. Baudrillard sees the consumer as always actively creating a sense of identity, both
+individually and collectively. In this sense the mobile can create or reinforce identity, the status of
+the device is much more meaningful than the actual device itself (Hulme and Peters, 1983, p.2).
+Essentially, the mobile phone had become a free-floating signifier, where the meaning that is produced by the
+artefact has come unmoored from what it traditionally symbolizes (Barthes, 1977). Hence, the mobile phone no longer
+just represents communication. Rather it has become symbolic of the owner's status, social acceptance and
+popularity.
+Finally, it is significant that two users in the study deliberately shunned new developments in mobile phones in the
+favor of 'old school' or 'brick' models. "I don't want my technology shiny and new, I want it organic or at least a
+brick." (Nina, 18, Student)
+This choice of the mobile phone as the site for an anti-aesthetic statement, illustrated that whether it be in
+celebration or rejection of its form, the mobile has become an artefact for the expression of taste for every user in the
+study.
+2.3 Updaters
+Plant likens mobile driven phrases such as 'on my way" or "on the bus" to global dance tracks. She proposes that
+"Where are you?"  is the perfect mobile question and "On the mobile" is the perfect mobile answer (2001, p.29).
+This question is fundamental to mobile telephony, and distinguishes its difference from land line based
+communications by providing the possibility, that the caller could, indeed, be anywhere! This has not only created a
+need for users to position and re-position themselves at the start of every phone call, but given way to a culture of
+use where the dominant part of the message relates purely to the activity or location and no further information is
+supplied. This is the 'updater' - representing 26 users, (22 nomadic) for whom mobile phone ownership goes hand
+in hand with a need to regularly update others of their actions. This archetype highlights the way technology is
+allowing users to maintain virtual presence in each other lives, creating a new generation of 'always on' friends.
+This is also related to m-bogging, though it is also subtly different. Updaters only broadcast within a strictly walled
+network of users, while m-bloggers disseminate the digital account of their lives on the Internet.
+The updater places a lot of importance and derives much pleasure from documenting, circulating and consuming
+digital accounts of day-to-day experiences. This may best be thought of in Baudrillian terms of the 'hyper real' user,
+for whom the distance between the 'event' and its re-creation' has imploded (Baudrillard, 1995). Unlike
+Baudrillard's nightmare of a society reduced to a state of hyper-reality by images that seduce us into consuming, the
+'hyper real updaters' are using their technology to produce and share their own experiences. They are becoming
+active content producers rather than passive consumers of technology, using their own experiences to create new
+consensual meaning.
+Finally, mobile technology is rapidly converging with other technologies such as digital cameras and the Internet.
+This coupled with the advent of 3G networks and handsets sees 'updaters' creating increasingly sophisticated home
+produced multi-media content to share their experiences. 2.4 Resistant
+The archetype of the resistant user revealed that while 33 users expressed affection, attachment, and identification
+with their mobile phones, this did not translate into an unqualified embrace of a lifestyle generated by mobile
+technology. Twenty-six users indicated they had a love/hate dynamic with their mobile phones. These users are
+resistant to ubiquitous mobility, desiring connectivity but then not satisfying their need for being unreachable. This
+was encapsulated by one user's attempts to resist the mobile presence of her friends.
+I turn it down so I can't hear it ringing, but then I can see it flashing. I try and look away but I can still
+sense it and I just stop concentrating on what the person (I'm with) is saying. I usually even know who
+it will be on the other end - and they know that I know. Then they hang up, it stops flashing and I can
+go back to being part of the conversation. Then 30 seconds later it starts flashing again. After about
+five missed phone calls I actually start to worry, maybe it's some sort of emergency, so the next time it
+flashes I look at the screen to see who it is and sure enough it's the person I thought it was - just being
+demanding and wanting my attention right now. (Holly, 23, Student).
+For two of the participants, resistance to mobile phone ownership was purely financially driven. These two users
+rarely used their phones for social purposes; rather connectivity was inextricably lined with security. This resulted in
+the reluctant financing of a mobile phone as if it was a health or travel insurance policy; thus indicating social
+interaction is more important than security.
+3 Spontaneous Formation of Social Networks
+The use of mobile phones in the formation of fluid social interaction has accelerated urban mobility. Users once
+restrained by pre-made plans are now able to spontaneously traverse the city and suburbs, swarming between groups
+and activities. This mobile facilitated social networking has also seen the blurring of the boundaries between real
+and digital interaction and lead to the emergence of the act of scheduling as an activity in its own right.
+3.1 Mobile facilitated fluid interaction (swarming)
+Technology has increased my intimacy with my friends. It gives me the power to be part of the group
+whenever I want. I never turn my phone off. (Holly, 23, Student)
+Mobile phones provide a fluidity of interaction through access to a digital, networked, social world. For 26 users in
+the study, this resulted in a reality where technology and friendships are inseparable from each other. For these users
+the main reason to own a mobile phone is for the formation and maintenance of social networks. Long term plans
+are rarely made giving way to spontaneous encounters. Twenty-seven of the participants in the study rarely planed
+to meet up, rather they gathered spontaneously on a minute-by-minute basis. This was only achievable because of
+the user's mobile phones. "I couldn't live without it because then I would have no friends. I mean I would have
+friends but how would I find them?" (Lucie 18, Student)
+This sense of always being connected and immediately available has bought about a huge cultural shift.
+Connectivity frees users from the constraints of the need for a physical locale as the mobile phone becomes the
+user's virtual home base - "the one place that you can always find me." (Callum, 27, IT Consultant)
+3.2 Blurring the boundaries between real and virtual interaction: the 'augmented flesh
+meet'
+Twenty-two users who state that they are always connected with each other also have the ability to switch
+seamlessly between real and virtual environments. One user says,
+I will usually send a text saying that I am on my way, even when my friends would know that. Often
+we start our conversation (via text) before we physically hook up ... I don't mind how I catch up. I
+would probably prefer to catch up virtually because I can do so from the comfort of my place. But then
+again usually one sets up the other. (Andrew, 25, Musician) Furthermore, frequently a group of friends gathered in real life will be joined by via mobile, by someone that is
+known to the group. The incoming call or text then becomes a new focus for the conversation. This indicates that the
+mobile phone lends a new dynamic, opening the social space up to include those not present. Ito and Okabe call this
+the 'augmented flesh meet'.
+ ... mobile phones have become devices for augmenting the experience and properties of physically co-
+located encounters rather than simply detracting from them. Teens use mobile phones to bring in the
+presence of other friends who were not able to make it to the physical gathering, or to access
+information that is relevant to that particular time and place. The boundaries of a particular physical
+gathering, or flesh meet, are becoming extended through the use of mobile technologies, before,
+during, and after the actual encounter (Ito & Okabe, 2003, pp.17-18).
+It can be seen that rather than alienating other members of the group who are there physically as Plant suggested, the
+'augmented flesh meet' can create new sites for enforcing intimacy.
+3.3 Interaction only occurs in the context of regular face-to-face contact
+The high level of comfort users experienced moving between the virtual and real world of mobile facilitated
+interaction exists only in the context of pre-made, real life friendships. This makes mobile phone supported
+interaction very different to that of other virtual worlds, such as gaming or Internet communication, where, at least
+in some cases, users traverse time and space in order connect with people they have never meet in real life. Of the 22
+users who reveal that, there is an almost equal satisfaction to be got from virtual as there is from real life interaction,
+all point out that this communication is only with people that they see regularly in face-to-face situations.
+At least when I'm texting my friends (as opposed communicating with them on the Internet) my parents
+know that I'm not talking to people I don't know because nobody would use their mobile phone to talk to
+stranger. (Genevieve, 18, Student)
+This conception of the mobile phone as a private mode of communication provides users with a barrier between
+them and those outside their network.
+3.4 Scheduling - as an activity in itself: the aproximeeting
+The nature of mobile technology is such that it lends immediacy to the formation of social networks, and the
+outcome of this is that the act of scheduling itself becomes an important and pleasurable activity. So rather than just
+meeting a friend, the physical meeting is anticipated with a series of text messages and mobile phone calls.
+There is no such thing as an organized get together, or if there is the time and location will invariably
+change. Even something like going to the movies cannot happen without 20 text messages - three
+changes of cinema and five different possible movies. (Bart, 28, Sign Writer)
+Eighteen participants used what they consider 'dead time' to engage in scheduling. Definitions of dead time
+included being on public transport (17), waiting in queues (8), lectures (3), and driving (15). This was supported by
+Ito and Okabe who noted:
+The 'mobile text meet' happens in any location (although mostly in transit) and is unique in that "it is
+particularly amenable to filling even small 'communication voids', gaps in the day where one is not
+making interpersonal contact with others, particularly in settings such as public transportation where
+there are prohibitions on voice calls (Ito & Okabe, 2003, p.12).
+Rather than finding this type of interaction an intrusion, 22 users found the scheduling based dialogues rewarding.
+Even at work I'm constantly organizing to do things with my friends. I go back and forth between
+windows at work, its like work document, email, work document, text message, work document,
+mobile phone call. Then I leave work, double check my mobile messages, send a few texts. (Indigo,
+24, Event Manager) The intense mobile interaction is creating a new genre of social communication, with five users stating that they
+prefer the scheduling to meeting.
+Sometimes the actual meeting is not as good as the planning - and even when you do meet, you're
+too busy organizing to meet with another group of friends to pay attention to the people that you are
+with. (Manny, 23, Part Time Student)
+It can be seen that the 'aproximeeting' is significant in that it embodies a huge cultural shift, challenging traditional
+ideas of the nature of engagement and commitment.
+3.5 Maintaining virtual presence
+Ito and Okabe use the 'ambient virtual co-presence' to explain the way in which users maintain a continual presence
+in each other's lives via text messages.
+These messages are predicated on the sense of ambient accessibility, a shared virtual space that is
+generally available between a few friends or with a loved one. They do not require a deliberate
+"opening" of a channel of communication, but are based on the expectation that someone is in (virtual)
+'earshot' (Ito & Okabe, 2003, p.14).
+This was in keeping with 26 users in the study who report that there were times when they were so regularly
+exchanging scheduling orientated text messages, that they were providing a continual update of their day- to day
+activities. It is significant that that nature of the exchange is such that the message does not necessarily require a
+reply; rather it becomes a way for friends to maintain a presence in each other's lives. Their data revealed that this
+sort of communication is often of quite a mundane nature, like a sort of virtual 'small talk'.
+4 Control: Maintaining Boundaries of Virtual Spaces
+Mobile phones provide for users a sense of reassurance that connectivity gives. With this comes the consequence of
+vulnerability against which people try to protect themselves - this creates the seemingly contradictory dynamic of
+openness vs. isolation. Essentially, this results in the mobile phone creating a generation of conflicted users trying to
+balance the need for connectivity with the desire to be at times, uncontactable. This means that while users desire the
+fluidity of social interaction that mobile phones afford them, they also resent their intrusion in their lives and are
+seeking new ways to exert control over digital space, and reduce unnecessary contact. One of the ways in which they
+are doing this is to use their mobile phones to convey meaning.
+4.1 Connectivity versus contactability
+Plant talks of the culture of mobile phone users and labels them as 'innies'  'outies' or a combination of both (2001).
+This relates to the way users deal with an incoming call in a social setting in that people either leave the group to
+take the call, or stay where they, are or both. She states that "even a silent mobile can make its presence felt as
+though it were an addition to a social group, and many people feel that just the knowledge that a call might intervene
+tends to divert attention from those present at the time"(p. no?). This was a re-occurring problem for users in the
+study with 26 participants responding that their own mobile phone was a regular intruder in their life. Eighteen users
+responded to this problem by carefully policing the boundaries of the digital world. For example, not answering a
+call if they did not recognize the caller. "I would rather let it go to message bank then call whoever it is back even
+though it means I have to pay twice, once for the message bank call and then again to call the person back." (Bridget
+19, Student) Furthermore, 23 of the participants said that there were times when even if they recognized the caller
+they would rather let the phone deal with it and let it go through to message bank.
+It is significant that these complaints about mobile intrusions were mostly in regards to incoming calls; the less
+intrusive text message was only sited by three users as a source of annoyance. This indicates that users want to be
+able to use mobile phones to maintain a subtle, disembodied, presence in each other lives. Users want their
+connectivity tempered by a buffer, or protective zone that mediates the need for commitment to real time interaction. This was encapsulated by a participant in the study who explained that her ideal interaction with friends is improved
+through the barrier of technology.
+If I have a friend over, we will both sit here doing exactly the same thing except that then I have to
+make concessions as to what we do. I would prefer to have a friend online, then I could just keep them
+in a minimized window most of the time. (Lucie, 18, Student)
+4.2 Conveying meaning without communicating
+Twenty-four of the participants in the study agreed that even when a phone call is not answered the status of the
+phone itself reveals a lot about the current availability of the user. For example, a phone that is switched off
+indicates the person is not in social interaction mode. A phone that is turned off mid-ring indicates either that the
+person is engaged in an activity where it is not appropriate to talk, or may indicate a deliberate rejection of the caller.
+A phone that rings out or goes to voice mail is seen to mean that the person is willing to be contacted but cannot get
+to the phone at that particular moment. It is an indication to try again soon. One user stated,
+Sometimes it is nice to just go out of circulation. When I want to do that I just turn my phone off and
+people see that and can tell that I am not interested in catching up. The problem though, is
+sometimes my phone goes flat and I end up sending the 'out of circulation message' when really I
+am just out of battery. (Lucie, 18, Student)
+Twenty participants responded that they would like this concept of conveying meaning without having to directly
+communicate to be developed further. Currently the act of turning the ringer down or rejecting a call are unpleasant
+relative to the message we are trying to convey, and there is a need to fluidly be able to change between these states
+or modes.
+5 Identity
+The social dynamic resulting from mobile phone use has driven and redefined the notion of identity. Connectivity
+itself has become a defining part of what it is to have a social identity. An extension of this is that users' place a
+great deal of importance on constructing their own digital representations. This relates not just to what they say but
+the modality they choose to convey the message.
+5.1 Connectivity
+On a practical level the mobile phone facilitates communication - however, for 26 users in the study, mobile phone
+ownership also provides a sense of social and cultural identity, connectivity being an integral part of what it is to be
+st
+a social individual in the early 21  century.
+We are like bees who need to communicate. It is a defining part of what we are like. We need to
+communicate and will become even more like this as the technology improves. (Andrew, 25, IT Consultant)
+This urgency for connectivity in youth culture was noted by Ito and Okabe.
+While mobile phones have become a vehicle for youths to challenge the power-geometries of places
+such as the home, the classroom, and the street, they have also created new disciplines and power-
+geometries, the need to be continuously available to friends and lovers, and the need to always carry a
+functioning mobile device (Ito & Okabe, 2003, p.15).
+One participant in the study noted "there is just no excuse for not being contactable" (Andrew, 25, IT Consultant)
+embodying how connectivity is becoming 'perceived' as a fundamental day-to-day need. As Hulme and Peters
+explain, "The mobile has many functions, not only as a communicator but also as a signifier for
+identity ... Connectivity will not only influence their patterns of mobility but will also influence their identities and
+how they see themselves (2001, p.3). The natural extension of users' desire for connectivity was for 20 users, a fear of being disconnected. "I cannot bear
+to be out of the loop even for a minute." (Lucie, 18, Student) This was supported by the DoCoMo No.10 study
+(2001) which found that the main criticism young people have in regards to their mobile phone is that they are not
+able to offer truly ubiquitous mobility. The most desired improvement for the users in the DoCoMo study was that
+their phones could allow them to "call from anywhere" and have batteries that didn't need to be continuously
+recharged "so they wouldn't be stranded" (2001, p.1).
+5.2 Creating dynamic digital identities
+For 24 users in the study interpreting or reading other peoples' digital identities provided a means of identifying
+what the other person was like. As a user stated, "Their synthesized persona is quite revealing" (Callum, 27, IT
+Consultant). Furthermore, users indicated that they derive pleasure from creating a digital identity that reveals the
+persona they wish to convey. Users want to use technology to create certain types of identity that has certain
+characteristics that satisfy psychological needs and desires. This indicates that creating a digital identity is not only
+about how much information can be restricted but rather what is revealed.
+5.3 Choice of technology as an expression of identity
+The study reveals that for young people their choice of how they send and receive a communication message is one
+of the most potent means by which they can express their identity to their peers. For 24 users, the choice of
+technology could convey as much as the content of the message itself. "The way I use technology or bits of it is
+dictated by what and how I want to communicate things and how I want the message to get across" (Evan, 28,
+Environmental Scientist) Another stated, "The type of message you send says as much as what's in the message"
+(Callum, 27, IT, Consultant). For these 24 young people the use of different modes of technological communication
+is not just to facilitate different activities; their choice of the technology is an expression of their identity.
+Furthermore, because identity is mutiplicitous and shifting rather than singular and static, the way in which the users
+want to express themselves relates to the context of the exchange, the environment they are in and the nature of the
+relationship with the person with whom they are communicating.
+6 Conclusion
+It can be concluded from the study that mobile phone is the defining cultural icon for the digital generation: the one
+st
+item that young people can possess to represent their status as a participating member in early 21  century society.
+"If you want to assure yourself that you belong to the new century, this is the object to have in your hands"
+(Myerson, 2001, p.3).
+Mobile phones play a big part in helping young people achieve their social goals and this is a global rather than a
+local phenomena.
+As it responds to such deeply ingrained and universal social needs, it is no surprise to see the mobile
+phone expanding worldwide at breath-taking speed. In fact, there are reasons to assume that it would
+have been equally welcome in all human societies and cultures in the past: that is, under all imaginable
+specific cultural or socio-economic conditions (Gesser, 2004, p.3).
+This indicates that designers of future mobile devices will not only be creating an artefact that will have a functional
+purpose for the end user but one that will respond to a strong, unifying set of social and cultural expectations. References
+Barthes, R. (1977). Image-Music-Text (S. Heath, Trans.)  London: Fontana.
+Baudrillard, J. (1983). The Ecstasy of Communication. H Forster (Ed.) The Anti Aesthetic Essays on
+Post Modern Culture. Seattle: Bay Press.
+Baudrillard, J. (1995). The Gulf War did not Take Place (T. P. Parron. Trans.) New South Wales:
+Power Publications.
+Carroll, J., Howard, S., Vetere, F., Peck, J., & Murphy, J. (2002). Just what do the youth of today
+want? Technology appropriation by young people. Paper presented at the Proceedings of the
+35th Hawaii International Conference on System Sciences (HICSS-35) Maui, Hawaii.
+Cooper, A. (1999). The inmates are running the asylum. Indianapolis: SAMS.
+Deleuze, G., & Guattari, F. (1987). A Thousand Plateaus: Capitalism and Schizophrenia.
+Minneapolis: University of Minnesota Press.
+Gesser, H. (2004) Towards a Sociological Theory of the Mobile Phone. Retrieved Jan 17th, 2005
+from http://socio.ch/mobile/t_geser1.pdf
+Hulme, M., & Peters, S. (2001). Me, My Phone and I. The role of the mobile phone. Paper presented
+at the CHI 2002 Workshop, Seattle.
+Ishii, K. (2004). Internet use via mobile phone in Japan. Telecommunications Policy, 28(1), 43-58.
+Ito, M., & Okabe, D. (2003). Technosocial Situations: Emergent Structurings of Mobile Email Use.
+Retrieved May 27, 2004, from http://www.itofisher.com/PEOPLE/mito/mobileemail.pdf
+Licoppe, C., & Heurtin, J. P. (2001). Managing One\'s Availability to Telephone Communication
+Through Mobile Phones: A French Case Study of the Development Dynamics of Mobile Phone
+Use. J Personal Ubiquitous Comput., 5(2), 99-108.
+Myersen, G., (2001)  Heidegger, Habermas and the Mobile Phone (Postmodern Encounters)
+Cambridge: Icon Books Ltd
+Minichello, V., Aroni R., Timewell, E., Alexander, L. (1995). In-depth Interviewing: Researching
+People, 2nd ed. Melbourne: Longman.
+Pankraz, D. (2002). The Power of Teens Online. Retrieved January 27th, 2003 from
+http://www.brandchannel.com/papers_review.asp?sp_id=102
+Plant, S. (2001). On the mobile: The effects of mobile telephones on social and individual life.
+Motorola Inc. Retrieved July 17, 2004: http://www.motorola.com/mot/doc/0/234_MotDoc.pdf
+Satchell, C. (2003). The Swarm: Facilitating Fluidity and Control in Young People's Use of Mobile
+Phones.  In Proceedings of OzCHI 2003: New directions in interaction, information
+environments, media and technology. Brisbane, Australia.
+Satchell, C. 'Design, Mobile Phones and the Digital Generation'.  The Telecommunications Journal
+of Australia, Spring 2004.
+Sawhney, H. (1996). Information Superhighway: Metaphors as Midwives. Media, Culture and
+Society., Vol. 18: pp.291-314. Sage: London. Thousand Oaks: New Delhi.
+Sheryl, H., Weber, I., Strenberg, J. (2003) Mobile Youth Culture: Sharing Telephone Use in
+Australia and Singapore. Anzac Conference: Designing for Diversity.  Brisbane. July 2003
+Taylor, A. S., & Harper, R. (2002). Age-old practices in the 'new world': a study of gift-giving
+between teenage mobile phone users. Paper presented at the SIGCHI conference on Human
+factors in computing systems: Changing our world, changing ourselves, Minneapolis,
+Minnesota, USA.

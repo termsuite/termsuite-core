@@ -1,0 +1,805 @@
+Wireless Advertising Wireless Advertising 
+Hassim Mohamed Yunos, Jerry Gao, Ph.D. 
+Department of Computer Engineering 
+San Jose State University 
+San Jose, CA 95192-0180 
+Contacting email: jerrygao@email.sjsu.edu 
+ 
+Abstract 
+Wireless advertising is becoming a hot topic due to the fast development of wireless 
+networking and technology and significant increase of mobile device users. Recently, 
+eTForecasts1 and Global Mobile2 quoted that in year 2000 Mobile voice use, which has 
+468 million users, is surpassing 365 million wired Internet users. This makes wireless 
+advertising a new and hot marketing channel to reach the potential customers for 
+marketing. Company research like Windwire5 and SkyGo6 indicate that permission-based 
+alerts delivered to wireless phones capture consumer attention, drive action and build 
+brand awareness. This paper provides a tutorial of wireless advertising by discussing the 
+different perspectives of wireless advertising, including its needs, characteristics, 
+presentation formats, business issues and technical problems. Moreover, it presents an 
+overview of the existing business models, vendors and their products in wireless 
+advertising. In addition, the paper reports our survey results about the perspective users' 
+view on wireless advertising. Finally, the remarks of future challenges and solution are 
+given. 
+ 
+1.  Introduction 
+Wireless advertising is becoming a hot topic in the advertising and marketing community 
+due to the fast development of wireless networking technology and the significant 
+increase of mobile device users. According to eTForecasts1 and Global Mobile2, in the 
+year of 2000, there are 468 million mobile users. This number is much higher than the 
+number, 365 million, of Internet users in 2000. The Kelsey Group estimated that the U.S. 
+wireless advertising market would be $35 million in 20003. However, Jupiter Media 
+Metrix predicted that the market would be 600 million by 20034 while worldwide 
+ 1 wireless advertising market will be 6.5 billion. Company research like Windwire5 and 
+SkyGo6 indicated that permission-based alerts delivered to wireless phones capture the 
+attention of consumers, drive responding actions, and build brand awareness. Large 
+companies, such as Microsoft, Yahoo, AOL, have created a subsidiary to focus on this 
+market. 
+ 
+What is wireless advertising? Intuitively, wireless advertising refers to advertising and 
+marketing activities that deliver advertisements to mobile devices using wireless network 
+and mobile advertising solutions to promote the sales of goods and services, or build 
+brand awareness. Wireless advertising creates a new media channel to conduct product 
+and business advertising and marketing through mobile devices, such as mobile phone, 
+PDA and pocket PC. Besides promoting the sale of goods or service, wireless advertising 
+also increases product awareness and disseminating information. As shown in Figure 16, 
+currently United State has only 0.9% of the world's wireless Internet users while Asia has 
+close to 94% of the world's wireless Internet users. Part of the reason is because the 
+Internet infrastructure is well established in U.S., and the Internet-based web access has 
+been widely accepted by American. 
+  
+Source: http://www.eurotechnology.com/imode/faq-wap.html 
+ 
+Figure 1: The World's Wireless Internet Users 
+ 2 As outlined in Wireless Commerce: Marketing Issues and Possibilities8, wireless devices, 
+the platform behind wireless marketing, have three main characteristics over PC's and 
+other conventional platforms. 
+• Accessible - since a wireless device is becoming a personal device because it is 
+handy and portable, and available for use at all time. 
+• Personal - it carries the user's identity that can be used to track down to an 
+individual, unlike PC computers that only carry a household's identity. 
+• "Location Aware" - it is easy to track down where a user's physical location is as 
+long as the device is on and connected. This is very critical for conducting a user-
+oriented marketing and advertising. 
+ 
+The three characteristics provide unique features that do not exist in traditional and 
+current advertising media. Wireless advertisements can be highly targeted, flexible and 
+dynamic. The targeted audiences are vast, and they can search information, issue 
+inquiries, and make purchases at any mobile location. Some early applications of wireless 
+advertising in mobile commerce are local entertainment information, stock quote, dining 
+and restaurant reservation, and wireless coupon. 
+ 
+Since wireless advertising is one of hot topics in mobile commerce, people want to know 
+more about wireless advertising, including business models, advertisement formats and 
+presentation styles, technical issues and solutions, infrastructure systems, and standards. 
+Hence, we need a) tutorial papers discussing its basic concepts, issues and general 
+methods, b) research projects addressing technical problems and solutions, and c) 
+wireless advertising systems providing wireless advertising services. This paper provides 
+a tutorial of wireless advertising by discussing the different perspectives of wireless 
+advertising, including its needs, characteristics, presentation formats, business and 
+technical problems. Moreover, it presents an overview of the existing business models, 
+vendors and their products in wireless advertising. Furthermore, this paper reports our 
+survey results about the perspective users' view on wireless advertising. 
+ 
+ 3 Our paper is organized as follows. Section 2 discusses different types of wireless 
+advertisements. Section 3 presents the five different types of business models in wireless 
+advertising. In Section 4, existing wireless advertising approaches and techniques are 
+discussed. Section 5 addresses business and technical issues in wireless advertising. 
+Section 6 discusses four major vendors. In Section 7, we report our case study results on 
+user perceptions on wireless advertising based on a conducted survey. Finally, our 
+conclusion and remarks about future direction are given. 
+Table 1. Vindigo's Wireless Advertisements 
+  
+For Media Company - Vindigo offers a For Wireless Carries - Vindigo gives 
+fully hosted solution that enables wireless carriers a perfect solution for 
+publishers to extend their brands and generating user demand and encouraging 
+content to mobile users with ease. frequent use of wireless internet. 
+  
+For Directory Publishers - Vindigo For Hospital Providers - Vindigo allows 
+enables directory publishers to parlay their hotels to provide their guests with value-
+brands and advertising relationships into added service by offering branded ads. 
+the wireless arena. 
+  
+For Real Estate Firms - The Vindigo's For Field Technicians - Vindigo's 
+platform can support the entire home dynamically generated maps and 
+search phase of the real estate sales process directions will help field service engineers 
+by integrating location-based services with identify the precise location of service 
+contact management, process tracking, and needs and expedite the repair process. 
+open house scheduling. 
+ 4 2. Wireless Advertisement 
+Various kinds of wireless advertisements can be delivered to different types of mobile 
+devices, such as a mobile phone, PDA, or Pocket PC. Unlike traditional and Internet 
+advertisements, wireless ads have the limited screen size for display. In this section, we 
+present current existing wireless ads from a number of major business vendors in wireless 
+advertising. 
+• Vindigo's location-based application advertisements 
+Table 1 summaries different kinds of wireless ads provided by Vindigo. Vindigo is an 
+award-winning location-based service, available to anyone with a Palm OS, Pocket 
+PC device, or an Internet-enabled cell phone. Vindigo enables individuals on the 
+street to find the best and closest places to eat, shop, and play. In essence, Vindigo 
+software equips people with radar for the world around them. Table 1 displays 
+wireless ads on a mobile device for media companies, directory publishers, travel 
+agencies, real estate firms, wireless carries, as well as field supporters.  
+• SkyGo's advertisements 
+SkyGo delivers wireless ads to any mobile phone, PDA or pager. It supports a wide 
+range of operating systems and protocols for delivering phone ads (including WAP, 
+SMS, and iMode) and PDA ads (including Palm and Windows CE). Figure 2 shows 
+two SkeyGo's wireless ad examples on a phone and PDA. They demonstrated that 
+wireless advertising could be a very effective channel for brand building ads.   
+ 
+ 
+ Wireless Ads build brand 
+ effectively by compelling 
+concise messages within 
+ content. 
+ 
+ 
+Palm Ads build brand 
+ effectively with compelling 
+ concise messages 
+ 
+Figure 2. SkeyGo's Wireless Ad Samples 
+ 5 • Avantgo's channel-based advertisements 
+AvantGo's wireless users can access more than 1,000 premium channels from 
+wireless-enabled handhelds and smart phones. These channels provide an effective 
+mean to deliver wireless ads for various businesses, such as bank and finance, 
+entertainment, health care, publishers & media, retail shopping, sports, computer 
+technology, and travel. AvantGo provide two types of wireless advertising services. 
+• Wireless home page ads:  
+Advertisers can place wireless ads on the AvantGo's wireless home page to 
+achieve unsurpassed visibility with premier placement header and anchor ads. 
+They can easily achieve a high level of awareness, because this is the first page 
+for users to see when they access AvantGo's wireless service. Unlike typical web 
+pages with a multitude of ads, your message is showcased in a clean, uncluttered 
+environment. Figure 3 shows a wireless home page ad sample. 
+ 
+Source: http://www.avantgo.com/products/businesses/marketing_commerce/pdf/wireless_ad.pdf 
+Wireless Category Ad: Use high-visibility placement to boost click-through to ads for branding, 
+lead generation, promotions, and more! 
+ 
+Figure 3: Wireless Home Page Ad Sample 
+ 
+Source: http://www.avantgo.com/products/businesses/marketing_commerce/pdf/wireless_ad.pdf 
+Wireless Category Ad: Deliver your targeted message based on users' interests and geographical 
+location. 
+ 6 Figure 4: Wireless Category Ad Samples 
+• Wireless category ads  
+Advertisers may choose AvantGo's wireless category pages to place ads that 
+easily reach to the desired demographics using messages focused on 
+consumers who are browsing the channels within a specific interest category. 
+Figure 4 shows several Wireless Category AD samples. AvantGo's wireless 
+categories provide customers with well-classified advertisements that can be 
+found easily AvantGo's wireless categorized channels. Moreover, an 
+AvantGo's wireless category ad enables advertisers to target consumers who 
+registered in a particular geographical location. 
+ 
+3. Business Models In Wireless Advertising 
+A business model is a blueprint for a business that highlights the business strategy about 
+how to make revenue by specifying markets, products, customers, and where it is 
+positioned in the value chain. In this section, we summarized five different business 
+models for wireless advertising. Table 2 shows the comparisons. 
+• Voice-subsidized 
+This business model has an objective to provide competitive offerings and has no 
+intention to generate additional revenue. It allows wireless service providers to 
+support wireless Internet services (WSP??) and content using subscriber fees and 
+WSP resources only. This business model does not require any wireless ad 
+technology. 
+ 7 • Safe income & no upside revenue model 
+The objective of this business model is to subsidize acquisition of premier content to 
+elevate quality of wireless Internet offering. As for voice-subsidized business models, 
+this business model does not require any wireless ad technology. This business model 
+derives revenue not only from the subscriber fees, but also from the content 
+providers' placement fees. These placement fees are charged to content providers 
+desiring "top deck" placement or general distribution via the WSP's network. It also 
+refrains from taking a share of any revenue generated by the content providers as a 
+result of their ad distribution over the WSP network. 
+• Diversified revenue 
+The objective of this business model is to subsidize quality content and subscriber 
+fees to increase content quality and create a compelling offering that draws and 
+retains subscribers. This model has two ways to generate the revenue. The first is 
+from placement fees. The other is by receiving a share of advertising revenues and M-
+commerce fees, which are realized by the content and service providers directly using 
+the WSP's distribution channel in addition to subsidize subscriptions or the cost of 
+acquiring content fees. This business model has the added benefit of increasing 
+profitability, with minimal effort by the WSP as media sales. Another advantage of 
+this model is that it can subsidize either the cost of acquiring content or the discount 
+consumer services fees. The drawback of this model is that it requires WSP to have 
+its own wireless ad server or a sanctioned ad server for use by publishers. This server 
+has to be able to accurately track the ads served to the WSP subscribers based on 
+subscriber profiles or WSP restrictions. 
+• Media-dependent, outsource media sales revenue 
+The objective of this business model is to subsidize quality content and subscriber 
+fees to grow and retain the subscriber base, while generating significant revenue. This 
+model generates revenue wholly from a share of all advertising and M-commerce 
+revenue generated over the WSP distribution channel. Hence, it requires a greater 
+commitment to wireless advertising from WSPs. Media sales for a publisher's content 
+is an outsource task, and is largely the responsibility of the publisher. In this scenario, 
+WSPs must not only be able to track the ads served over their network to ensure 
+ 8 proper revenue sharing, but also may opt to control the number and frequency of ads 
+served to their wireless consumers based on subscriber profiles or WSP restrictions. 
+• Media-dependent, in-house media sales revenue 
+The objective of this model is to expand the carrier's business function to include 
+media sales, controlling and drawing revenue from the wireless Internet property. 
+This model is similar to the media-dependent, outsource media sales model. The only 
+difference is that it requires a WSP to create in-house media sales team devoted to 
+media sales, processing and services of wireless ads. The business model is fully 
+dependent on wireless advertising and m-commerce fees for wireless content 
+acquisition and subscriber access. It also requires a complete technology solution to 
+support wireless advertising in advertisement creation, management, services, such as 
+deliver, and measurement.  
+ 
+ Subscriber M-Commerce Content Advertising  
+Business Model  Fees Fees Placement Fees Revenue Partner Technology Requirement 
+Voice-subsidized      
+Wireless Internet Majority None None None None 
+Safe income,       
+No-upside revenue Majority None Majority None None 
+     • WSP  
+     • Sanctioned publisher Ad Serving 
+Diversified revenue  Share of Share of Share of Share of Solution 
+•  Outsource Media sales 
+•  Measurement Capability 
+     • WSP- sanctioned publisher 
+Media-dependent      • Ad Serving Solution 
+Outsource media  None Share of None Share of • Outsource Media sales  
+Sales revenue  • - Measurement Capability  
+     - Carrier Ad Serving Solution 
+Media-dependent      - Extensive In-house Media Sales 
+In-house media  None Majority None Majority - Campaign Management Interface 
+Sales revenue  
+ 
+Table 2. Business Models for Wireless Advertising 
+ 9 4. Existing Approaches and Techniques 
+Wireless advertising needs wireless networks, mobile technology and infrastructure, 
+systematic marketing and advertising solutions. Here, we discuss the existing approaches 
+and technologies supporting wireless advertising. 
+ 
+4.1. Wireless Data Access 
+Delivering wireless advertisements needs wireless data access methods, environments, 
+and platforms. 
+ 
+ Data Accessibility - There are two different data access methods push and pull. They 
+are different because they use different approaches to delivery data to the end users. 
+Push data refers to a data access approach in which wireless data are delivered a user's 
+mobile device without the user requests. In push data approach, the wireless data is 
+sent to mobile devices as a short burst of text. These short text messages, sometimes 
+called alerts, are frequently generated and delivered based on a user's profile or current 
+location. Pull data refers to a data access approach in which wireless data are delivered 
+to users upon their requests. A typical example of pull data is that a user accesses the 
+wireless Internet, and receives wireless ads when the user browses a specific page with 
+ads. Figure 5 (a) and 5(b) shows the available technology for data accessibility. Table 3 
+displays the visual and audio data access technologies in both pull and push 
+approaches. 
+ Data Environment - Wireless advertising currently supports visual and audio data 
+access. Visual data access is frequently used and most popular, it includes text and 
+sometime graphic images. Audio data access is the conversion of a text message to an 
+audio format. Ideally, wireless advertising could be supported with both visual and 
+audio data in the near future. 
+ Data Platform - Mobile phones and PDAs are the most commonly used mobile 
+devices. They have some drawbacks compared to the traditional PCs, such as smaller 
+user interface and screen size, less memory, limited graphic formats and power, and 
+slower data transfer rates. These limitations increase the difficulty of wireless 
+marketing and advertising in placing advertisements on a wireless platform. Unlike 
+ 10 online advertising, wireless advertising uses mobile devices as a new advertising 
+platform to deliver, display, and track wireless ads whenever they are displayed 
+anywhere anytime. 
+Source: http://www.avesair.com/flash/solutions/mobile_marketing/push.html 
+Source: http://www.avesair.com/flash/solutions/mobile_marketing/pull.html 
+  
+Figure 5(a): Push Technique Overview Figure 5(b): Pull Technique Overview 
+ 
+ Audio Access Visual Access 
+Push N/A WAP Alerts 
+SMS 
+Pull VXML WAP 
+Syncing 
+I-Mode 
+Table 3: Data Access Overview 
+ 
+4.2. Enabling Wireless Technologies  
+Standard and cost-effective wireless technology is the key to the success of wireless 
+advertising. Today, three major wireless technologies are being used worldwide. In 
+Japan, I-mode, based on C-HTML, is the most popular wireless technology. In Europe, 
+SMS is the popular protocol in the wireless community. In America, up to this time, 
+WAP is the popular choice and standard for wireless vendors and service businesses. 
+These technologies focused on special groups of users, and require particular mobile 
+devices and wireless environments. 
+ 11 • WAP - Wireless Application Protocol (WAP) is an open, global specification that 
+empowers mobile users with wireless devices to easily access and interact with 
+information and services instantly. WAP technology utilizes the WAP gateway and 
+WML/HDML language to translate a mobile web request into a traditional 
+HTML/HTTP request that the web server understands and vice versa. WAP plays as a 
+bridge between wireless network and Internet. It can be used as an information 
+channel between wireless devices and the Internet. 
+• SMS - Short Messaging Service (SMS) is a digital cellular network feature. It allows 
+users to send short text and numeric messages to and from digital cell phones using 
+cell phones and e-mail addresses based on public SMS messaging gateways over the 
+Internet. SMS is silent and discreet. This is become important when a silent 
+environment is required. Today, SMS applications include stock quotes, sports scores, 
+and news that can be delivered to mobile phones at regularly scheduled intervals. 
+Currently, there are approximately 16 billion SMS messages sent globally each 
+month. The majority of that traffic occurred in Western Europe and Asia. In North 
+America, most major cellular phone providers offer either one-way or two-way SMS 
+services to their subscribers. With one-way service, a user can receive messages; 
+while with two-way service, the user can receive and send messages with a cellular 
+phone. 
+• I-mode - I-mode provides a predominant wireless Internet service that offers wireless 
+web access and e-mail services through mobile phones. It was first introduced in 
+Japan by NTT DoCoMo and was patented. As of November 2000, I-mode had an 
+estimate of 10 million users roughly represent 60% of world's wireless Internet 
+users10. It uses C-HTML-based language and protocol to link wireless devices to 
+Internet. In Japan, I-mode users are not charged for the user connection time to a web 
+site or service, but they are charged according to the transmitted data volume. This is 
+different from typical western web services. 
+ 
+Besides the described technology, there are other technologies that are useful for wireless 
+advertising. The first is synching technology, which is a simple and popular method that 
+allows PDA users to store or cache the content on their PDA devices. Synching 
+ 12 technology does not require any wireless service because it only uses a computer system 
+and its Internet access to updated the stored information during synchronization time. 
+With this technology, wireless advertising service providers can offer downloadable 
+wireless ads, such as discount promotions, and coupons using a PDA device. Vindigo 
+currently allows its users to obtain up to date information on movies, dining and places to 
+visit for most major cities within the United State. 
+ 
+The other technology is Web clipping, which allows users to access the updated contents 
+dynamically through applications stored on mobile devices as well as wireless modems. 
+Web clipping supports PDA users to access the information content from web sites in a 
+tailored format on a palm platform. The displayed content on a PDA is a replica of the 
+content from a regular web site with fewer graphics. Unlike a regular web page, a tailored 
+page fits well in the limited PDA screen size. 
+ 
+5. Issues and Challenges in Wireless Advertising 
+Since wireless advertising is still in its early stage, there is a wide range of issues and 
+challenges that need to be look upon before it is widely accepted and used. We categorize 
+these issues into two groups: technical and business issues. In this section, we discuss the 
+identified issues and challenges in wireless advertising.  
+ 
+5.1. Business Issues 
+There are many business issues relating to wireless advertising. Understanding these 
+issues helps business people in setting up successful wireless advertising businesses and 
+services. In addition, acknowledging these issues at the forefront becomes critical in 
+business planning and solution delivery.  Learning the business problems, pioneers in this 
+industry may be able to keep a good position in the wireless advertising market. Here we 
+summarize some of basic business issues below. 
+• Cost - Wireless customers, advertisers, and wireless marketing vendors, and 
+advertising service agencies are faced with the cost issue. For customers, the current 
+cost of wireless devices and wireless Internet subscription are considered high. IDC 
+analyst Kevin Burden said that current wireless access for handholds is "too 
+ 13 expensive for what you are getting back". For advertising agents, the issue of cost is 
+apparent in the high financial requirements of industrial research and technology 
+placement. 
+• Push vs. pull - As we known, wireless advertisements are delivered the mobile users 
+using the Push or Pull approaches. For example, if a consumer's profile shows that he 
+(or she) enjoys watching movies, then current movie theater advertisements could be 
+pushed to the consumer's mobile device. But, the push ad delivery could be intrusive 
+to this customer, and causes an unfavorable effect on the buying habits of the 
+consumer. If however, the consumer pulls the information of all the movie theater 
+within certain radius from where he (or she) is. Hence, the pull ads are less intrusive 
+to the customer than the push ads, but it does carry a higher functional cost, and 
+requires more complicated systematic solutions because it is simple to broadcast 
+wireless ads without tracking their receptions. 
+• High business risk - Wireless marketing is still at the beginning of its growth cycle. 
+With a new market comes high uncertainty, which means high business risk and low 
+advertising revenue. This financial issue will create low investment research and 
+development that will make pioneer of this market to make the required progress to 
+success. Without research, company will be faced by a though choice between which 
+marketing model should be taken. 
+• Ad reception - Another business challenge of wireless advertising is determining 
+whether or not a pushed ad was ever received. Questions that arise include, whether 
+the mobile devices are on and connected? And whether the pushed ad is delivered to 
+the customer side?  On the upside, pushed wireless ads may be less expensive than 
+delivered pulled ads. Unlike traditional TV and radio ads that have become socially 
+accepted forms of intrusion, wireless ads delivered to personal mobile devices is still 
+thought as a form of intrusion.Privacy - When discussing consumer profiling, the 
+issue of privacy must be addressed. A law must be made to govern to what ad 
+agencies are allowed to request and share. The data, presented by The Yankee group9 
+during the WAA meeting, indicated that more than 50% of consumers have privacy 
+concerns over carrier's use of their personal profile and location information. 
+Additionally, wireless communication is still a very non-secure form of 
+ 14 communications.Ad pitch - There are several methods that advertising agencies will 
+attempt to sell to consumers. One is ad pitch based on wants and needs; this method 
+has been there for ages. It has been there in paper coupon, and wired online 
+advertising. In wireless advertising, we can also do ad pitch based on consumer 
+location. For example, delivery and display a list of all French restaurants within a 
+certain range from the current location of a consumer. 
+ 
+5.2. Technical Issues and Challenges 
+Except business issues, the pioneers in wireless advertising encountered a number of 
+technical problems. Here, they are summarized below. 
+• Smaller Screen Size - Given the constraint of the size of mobile devices, the user 
+interface of wireless devices is quite limited, and it cannot display information-rich 
+content in a useful way. Wireless advertising companies must figure out how to create 
+effective advertisements in small screen size. Another problem is the inconsistent 
+screen sizes among different types of mobile devices. For example, the screen size of 
+mobile phone is much smaller than the size of PDA screens. Advertising agents are 
+confronted with this dilemma when they generate and deliver wireless ads. This 
+problem cannot be solved easily until some standards are enforced on mobile device 
+manufactures, and defined in the wireless advertising community.  
+• Inconsistent Formatting - When deciding upon the presentation formats of wireless 
+advertisements, vendors must consider what kinds of formats are easily accepted on 
+the receiving end. For example, special fonts, colors, picture formats might not be 
+displayable on some wireless devices. 
+• Slow Download Speeds - As what faced by the wired Internet several years ago, 
+wireless Internet is facing the slow download speed due to the limitation of current 
+wireless backbone. This issue not only affects the users' acceptance of wireless ads, 
+but also reduces advertising performance because users might cancel, delete, or 
+ignore a wireless access page due to it's slow download of wireless ads. Several 
+technologies, such as 2.5G and 3G, are trying to address this issue, but unfortunately 
+until today these technologies are not available yet. Some analysts believe that they 
+will become available as early as 2003. 
+ 15 • Broad Spectrum of Technologies - Powerful players, such as Microsoft, Nokia, and 
+Phone.com are lining up to push wireless technologies and solutions in different 
+directions. As a result, wireless advertising agents are confronted with the dilemma 
+on deciding upon what technology to use. The industry is just now trying to develop 
+the means for pushing ads to mobile devices, and to create organizations to regulate 
+and standardize the industry. 
+• Standardization - Without standardization the industry will become too convoluted 
+and cutthroat to sustain itself. For time being, wireless advertising is lack of well-
+defined standards and regulations of advertising format, content, payment, and 
+transmission protocol. Without well-defined standards and regulations, it is very 
+difficult for major players, such as wireless advertising businesses, service providers, 
+and solutions vendors, to be successful. 
+ 
+6.  Major Players in Wireless Advertising 
+As shown in Table 5, there are a number of businesses and vendors focusing on the 
+wireless advertising market. In this section, we introduce several important major players 
+in wireless advertising. They are Vindigo, Skygo, Avantgo and Avesair. 
+ 
+Vendor Business Type URL Description 
+Avantgo Wireless Advertising Portal http://www.avantgo.com Among the largest mobile advertising portals. 
+Vindigo Wireless Advertising Portal http://www.vindigo.com Enables companies to deliver compelling, 
+comprehensive location-based information and 
+services to consumers, corporate customers, and 
+employees. 
+I3Mobile Wireless Advertising Portal http://www.i3mobile.com Pronto integrates the power of leading-edge 
+voice recognition technology and the concierge 
+service of a fine hotel, and turns any mobile 
+phone into a mobile personal assistant. 
+Infiniq Wireless Advertising Portal http://www.infiniq.com Do mobile surveys using handheld devices. 
+SkyGo Marketing Solution Provider http://www.skygo.com SkyGo provides everything for marketers; 
+advertising agencies and wireless carriers need 
+to make marketing effective on mobile devices.  
+Avesair Marketing Solution Provider http://www.avesair.com Avesair is the premier provider of carrier-class 
+mobile application software enabling mobile 
+operators and wireless networks to deliver a 
+full- range of decision-based services to 
+subscribers.  
+Advertising.com Marketing Solution Provider http://www.advertising.co On-line promotions including wireless 
+m advertising 
+Doubleclick Marketing Solution Provider http://www.doubleclick.co DoubleClick is in the business of making your 
+m/us marketing work better by providing a broad 
+range of technology, media, direct marketing, 
+email, and research solutions. 
+Profilium Marketing Solution Provider http://www.profilium.com Develop wireless infrastructure solutions for a 
+range of location-based services that enhance 
+the mobile lifestyle and generate substantial new 
+non-telecom revenues for wireless carriers. 
+ 16 Windwire Inc. Marketing Solution Provider http://www.windwire.com Mobile Advertiser Services bringing agencies 
+and advertisers together 
+GlobalDining Interactive Mobile Provider http://wap.globaldining.co Offers location-specific mobile restaurant 
+m directory and reservation network. 
+Sonata.com Interactive Mobile Provider http://www.sonata.com Provides interactive mobile solutions that 
+connect corporations and customer to the 
+relevant data, content and advertising over voice 
+or any web enabled device. 
+Upoc Mobile Market Service http://www.upoc.com A free service that enables you to exchange text 
+and voice messages with your friends and 
+receive up-to-the-minute info -- all on your 
+mobile phone or text pager. 
+Wireless Opinion Wireless Market Research http://www.wirelessopinio Allows opinion research by wireless and 
+n.com handheld devices. 
+Table 5. A List of Major Players in Wireless Marketing and Advertising 
+Vindigo 
+According to http://www.vindigo.com, Vindigo is focused on creating the industry's 
+leading technology platform for delivering location-based information and services - 
+widely considered to be the 'killer apps' of the mobile sector. Vindigo uses the Diversified 
+Revenue Model. Its objective is to subsidize quality contents and subscriber fees to 
+increase content quality and create a compelling offering that draws and retains 
+subscribers. Vindigo is the only mobile content and marketing platform available today 
+that has a track record of successful deploying robust location-based services with a 
+working advertising model for handheld devices. According to the global consultancy 
+Ovum, location based services will deliver $19.5 billion of revenue by 2006. Vindigo is 
+at the forefront of this industry. Vindigo's applications for Palm OS® and Pocket PC® 
+computers and for BREW® and WAP phones now have over half a million registered 
+users. Optimized for both wireless and mobile (i.e. portable but not 'connected') handheld 
+devices, Vindigo can help you to find out where to go and what to do in 20 major cities.  
+ 
+Vindigo's technology has been carefully designed to offer sophisticated functionality 
+along with an intuitive and pleasing user-interface. Vindigo proprietary client application 
+allows users to easily identify their locations within seconds. This method has the added 
+benefit of allowing users to search information based on where they will be - in addition 
+to their current location - and it avoids the most serious privacy concerns because users 
+give the location information. Since many users want to access their favorite features and 
+services even when they're not connected, current wireless devices are increasingly 
+equipped with caching and built-in memory. The Vindigo client software for PDAs, for 
+example, contains a complete mapping database, navigation algorithms, and an intelligent 
+ 17 ad server. Future successful mobile applications need to offer useful functionality offline, 
+understand how users have interacted with the application offline, and reconcile this 
+information immediately once users regain their connectivity. Vindigo's next-generation 
+client-server architecture has the attempt to meet this challenge by functioning well in 
+both real-time wireless and intermittently synchronized environments. 
+ 
+SkyGo 
+According to http://www.skygo.com, SkyGo is the wireless marketing pioneer, enabling 
+carriers, publishers and advertisers to enhance consumer relationships and generate new 
+revenue through wireless marketing and m-commerce. Skygo uses the Media-Dependent, 
+outsourced media sales, revenue model. Its objective is to subsidize content and 
+subscriber fees to grow and retains the subscriber base, while generating significant 
+revenue. SkyGo was founded to cultivate rewarding relationships between marketers and 
+mobile consumers via the wireless Internet. To shape the future of wireless marketing, 
+SkyGo provides technology, media and consulting to help companies effectively 
+communicate with mobile consumers. Today, SkyGo offers the technology platform and 
+services to deliver targeted marketing to mobile devices. This opens a new revenue 
+channel for advertisers to deliver the subsidized mobile content and services to 
+consumers in an interactive manner.  
+ 
+SkyGo makes marketing more effective on mobile devices by providing a broad range of 
+technology solutions and services. The SkyGo Mobile Advertising Platform™(SkyGo 
+MAP™) is a family of mobile marketing tools to help marketers and wireless carriers 
+cultivate rewarding relationships with mobile consumers while deepening brand 
+awareness, generating response and fostering customer loyalty. The SkyGo Mobile 
+Advertising Platform™ provides defines useful standards for wireless marketing. 
+ 
+AvantGo 
+AvantGo, Inc. (http://www.avantgo.com) was founded in 1996 to address the growing 
+need of companies of all sizes to mobilize their workforce. AvantGo's business model 
+complies with the Media-dependent, in-house media sales revenue model. Its objective is 
+ 18 to expand the carrier's business function to include media sales, controlling and drawing 
+revenue from the wireless Internet property. Its solutions is developed based on its 
+Dynamic Mobility Model™ designed to provide individuals with the most compelling 
+mobile user experience. This model supports the transitions between on-line and off-line 
+use sync, surf and push regardless of the challenges presented by multiple device 
+operating systems, wireless services and data access modes, while leveraging existing 
+open standards. The objective of AvantGo's solutions is to automate business processes 
+and improve the exchange of information between companies and their employees and 
+customers, resulting in improved business efficiencies and more effective customer 
+interactions.  
+ 
+AvantGo end-to-end mobile solutions enable mobile device users to operate with web 
+content on their mobile devices in an interactive manner while in an off-line mode. 
+AvantGo's solution includes a new mobile software platform for creating and deploying 
+enterprise applications, supporting customer relationship management (CRM), supply 
+chain management (SCM), and personal information management (PIM) using mobile 
+accesses. The core technology of AvantGo has patented for the technology used in 
+synchronizing information between a handheld device and a central computer. The 
+technology has a unique ability to support both the wireless and off-line synchronization 
+of content and applications to mobile devices, including those based on the Pocket PC, 
+Palm OS and RIM BlackBerry Wireless Handheld operating systems. 
+ 
+Similar to Vindigo, AvantGo is also a portal that provides up-to-date information upon hot 
+syncing with its website on the Palm PDA (Personal Digital Assistant). The difference between 
+Vindigo and AvantGo is simply a matter of scale. While AvantGo concentrates on generalities, 
+Vindigo focuses on specifics. AvantGo is best for newspaper/magazine sources such as CNN, 
+while Vindigo is a guidebook for specific places such as Frontline. Avantgo is great for 
+commutes on public transportation or waiting for someone to finish shopping. Vindigo is great 
+for doing something after the shopping trip. 
+ 
+Avesair 
+ 19 Avesair, Inc. (http://www.avesair.com), is one of leading provides for mobile marketing 
+and commerce.  Its products enable operators, marketers and content providers to deliver 
+and magnetize a range of targeting and decision-based services based on subscriber 
+preferences and contextual targeting. The business model of Avesair complies with the 
+Media-dependent, in-house media sales revenue model. In the past years, Avesair has 
+developed relationships with many of the industry's leading companies, including Nokia, 
+12snap, Enpocket, Profilium, and SignalSoft. Recently, Avesair acquired WindWire, one 
+of the industry's foremost suppliers of wireless media services, enhancing the company's 
+ability to service both North American and international customers. This adds the 
+WindWire's customers into its customer list, including AT&T Wireless, Go2Systems, 
+Mercedes-Benz, Volvo and Boston.com. In addition, Avesair holds a global board 
+member seat on the Mobile Marketing Association (MMA). 
+ 
+Avesair MATCH (Messaging And Targeting for Carriers and Handsets) is the premier 
+mobile marketing and commerce platform that enables mobile operators and distribution 
+channels to deliver and magnetize a full range of targeting and decision-based services. 
+MATCH brings together operators and marketers, and enables them to leverage the 
+unique aspects and network resources of the mobile market to effectively target and 
+deliver personalized customer programs. MATCH's platform is built around a core 
+decision engine that enables mobile operators and distribution channels to target, 
+schedule, deliver, track and report on highly targeted messages and promotions of any 
+media type to mobile devices. According to Avesair's posting information, the platform 
+has an open, scalable, and modular architecture integrating directly with the operator's 
+infrastructure. It obtains demographic and geographic data from subscriber databases, 
+such as declared and observed interests, and mined information from billing, such as call 
+history, and location. MATCH utilizes this data to target and deliver relevant messages 
+provided by a marketer, independently, or in content provided by a publisher. 
+ 
+ 
+ 
+7. Survey of Wireless Advertising 
+ 20 According to the market research, the largest user groups of wireless devices are business 
+people, young adults and teenagers. To find out the user interest and acceptance of 
+wireless advertising, we conduct a survey on wireless advertising on the campus of San 
+Jose State University. A formal survey sheet is handout to students to collect their 
+responses to our pre-defined questions regarding to wireless advertising.  
+P a r t i c i p a n t  P r o f i l e s
+( A g e  G r o u p ) ( G e n d e r ) ( P r o fe s s i o n )
+6 0 5 4
+5 0 4 3 4 0
+4 0
+2 7
+3 0
+2 0 1 41 0 1 2
+1 0 1
+0
+<=
+ 2
+0 
+21
+-3
+0
+31
+-4
+0
+al
+e
+al
+e
+M et
+in
+g
+Fe
+m
+St
+ud
+en
+t
+ne
+er
+in
+g
+ar
+k
+M
+En
+gi
+ Figure 6. The Distribution of The Participants 
+ 
+We have handout 70 survey sheets, and collected 67 validated survey results. Figure 6 
+shows the profile and distribution of the participants. Of the 67 participants, only 11 do 
+not own any wireless device. Most of the participants own a cell phone. Others have 
+either a Palm or PocketPC.  
+A d v e r t i s i n g  M o d e
+3 2 %
+P u l l  A d v e r t i s i n g
+P u s h  A d v e r t i s i n g
+6 8 %
+Figure 7. The User Preference of Advertising Mode for Delivery 
+Figure 7 displays the mobile user's preference on two different wireless advertising 
+delivery mechanisms. More than 68% of participants indicate that they are in favor of 
+Pull Advertising than Push Advertising. This suggests most mobile users may like to 
+retrieve mobile ads using the Pull Advertising mechanism instead of receiving mobile ads 
+through the Push Advertising mechanism. 
+ 21
+No. of participants P r e f e r r e d  A d v e r t i s e m e n t
+S a l e s  a n d  P r o m o t i o n
+1 5 % 2 5 % W i r e l e s s  C o u p o n s
+1 3 % P r o d u c t  I n f o
+D i n i n g  l o c a t i o n
+O t h e r
+2 0 % 2 7 %
+ Figure 8. The User Preference of Different Types of Advertisements 
+ 
+Figure 8 shows mobile users' preference on different types of wireless advertisements. 
+27% of participants love to receive wireless coupons, 25% choose sales and promotion, 
+and 20% like to see product information. As far as the presentation of mobile ads, 85% of 
+participants like colored mobile advertisements, 84% of them want to see the ads 
+presented in both text and graphic formats. 
+ 
+Ad v e rtis in g  D e liv e ry  M e th o d A d v e r t is in g  P a y e r
+1 0 %
+2 4 %
+5 1 % 4 %
+3 9 %
+7 2 %
+S usc rip tio n R e g is tra tio n O the r A d v e r t is e r Pu b lis h e r V e n d o r
+ Figure 9. Advertising Delivery Methods   Figure 10. User's View on Ad Payment 
+ 
+51% of participants prefer to receive wireless advertising through subscription 
+mechanism, and 39% choose to receive ads through registration. 72% participants like to 
+see free advertisements paid by advertisers. 24% of them believe wireless service 
+providers should pay their shares on wireless advertising. Only 4 percent of them think 
+wireless advertising publishers must cover the cost of advertising. 
+ 
+Based on the other collected survey data, we found that that 51% of participants would 
+like to purchase products through wireless advertisements, and 57% of them prefer to 
+ 22 receive location-based wireless advertisements, and 43% like to see mobile-based 
+advertisements. 
+ 
+8. Conclusion 
+It will be several years before wireless advertising is refined, standardized, and wholly 
+accepted by both the advertisers and consumers. During this time challenges that are yet 
+unseen will present themselves to the pioneers of this new media communication form. 
+As discussed on the technical issue one of the biggest limitations in wireless advertising 
+is slow data transfer rates. The 3G technology currently is viewed as the best candidate to 
+overcome this problem. Once this transfer rates is overcome several creative technology 
+such as wireless streaming, Enhanced message service (EMS), and multi media message 
+service (MMS) can be deployed to create a more attractive advertisement. The 
+improvement of the transfer rates combine with the platform improvement such as better 
+pixel on mobile devices and standardization of protocols, software, and formats, along 
+with regulated ethical considerations for consumer privacy will determine the success of 
+wireless advertising in the future. 
+ 
+For wireless advertising to be successfully accepted by business and consumers, the 
+Wireless Industry needs to resolve its many technical and business issues that are 
+plaguing the industry. There are two most important technical issues that the wireless 
+industry needs to resolve now. The first is to establish well-defined and acceptable 
+standards for wireless advertising. This includes the presentation style, screen size, 
+communication protocol, payment, privacy rules, delivery techniques, and performance 
+measurement. The other issue is the wireless backbone as well as advertising & 
+marketing systems.  A standardized wireless protocol like WAP will make it easier and 
+cheaper for business to establish a wireless presence.  A bigger standardize backbone will 
+improve customer satisfaction and improve the advertising content that is sent to a 
+customer like video streaming.  Customer wouldn't need to wait when downloading their 
+email and web content because of bulky advertising being sent over a small backbone. 
+ 
+ 23 The major business issues that the wireless Industry needs to resolve is how to deliver 
+wireless advertising to the customer. Business experiences with Internet advertising 
+cannot be transferred to wireless advertising because of mobile device technology 
+limitations and people's personal relationship to their device.  The Industry must 
+determine how to give customers the choice of being able to receive or not receive 
+advertisements, the control to easily bypass advertising contents, the ability to customize 
+or filter the type of advertising that they receive, and the feeling that the advertising is 
+beneficial to them. If the wireless industry can work to resolve these issues, wireless 
+advertising can become a very successful source of revenue for the industry. 
+ 
+9. References 
+[1]  eTForecasts (2000) Wireless Aims for Widespread Appeal. Retrieved February 25, 
+2002 from the World Wide Web: 
+http://cyberatlas.internet.com/markets/wireless/article/0,,10094_587701,00.html. 
+[2] Donaldson, Lufkin & Jenrette First-to-Wireless Report - Global Mobile. 
+[3] Ehmann C, Lain. (March, 2001). Early wireless advertising trials hint at some 
+workable models, but there are still no guarantees. Retrieved Feb 25, 2002 from the 
+World Wide Web: http://www.mbizcentral.com/magazine/story/archive/march 
+2001/04_ad1. 
+[4] allNetDevices Staff, (March 29, 2001). Wireless Commerce Revenue Coming Soon, 
+Retrieved Feb 25, 2002 from the World Wide Web: 
+http://www.internetnews.com/wireless/article/0,,10692_728371,00.html. 
+[5] WindWire,Inc. (December 27, 2000). First to Wireless Report. 
+[6] Skygo, Inc. (March 5, 2001). Skygo Study Illustrates Wireless Advertising Is An 
+Effective Branding And Direct Response Vehicle. Retrieved Feb 25, 2002 from the 
+World Wide Web: http://www.skygo.com/news/pr01_0305.html. 
+[7] Eurotechnology Japan K.K. (August 21, 2001) The unofficial independent imode 
+FAQ. Retrieved Feb 25, 2001 from the World Wide Web: 
+http://www.eurotechnology.com/imode/faq-wap.html. 
+[8] Kannan, P.K.; Chang, Ai-Mei; Whinston, Andrew. Wireless Commerce: Marketing 
+Issues and possibilities. Procedings of the 34th .???. 
+ 24 [9] Noonan M Kevin. (2001) Wireless Advertising: Where Are we Today? Retrieved Feb 
+20, 2002 from the World Wide Web: 
+http://www.waaglobal.org/WAAWirelessAdvPres.ppt. 
+[10] Wireless Application Protocol Forum Ltd. (July 12, 2001). WAP Architecture. 
+Retrieved Feb 20, 2001 from the World Wide Web: 
+http://www.wapforum.org/what/technical.htm. 
+[11] Avesair, Inc. Push Marketing. Retrieved March 9, 2002 from the World Wide Web: 
+http://www.avesair.com/flash/solutions/mobile_marketing/push.html. 
+[12] Avesair, Inc. Push Marketing. Retrieved March 9, 2002 from the World Wide Web: 
+http://www.avesair.com/flash/solutions/mobile_marketing/pull.html. 
+[13] Avesair, Inc. Avesair, beyond your wireless dream.  Retrieved March 5, 2002 from 
+the World Wide Web: http://www.avesair.com/flash/company/companyIntro.html. 
+[14] Saunders, Christopher.(April 30, 2001). Avesair Debuts Ad Offering for Wireless 
+Carriers. Retrieved March 5, 2002 from the World Wide Web: 
+http://www.internetnews.com/IAR/article/0,,12_755551,00.html 
+[15] Avantgo. (January 25, 2001). Avantgo Awarded First Patent. Retrieved Feb 27, 2002 
+from the World Wide Web: 
+http://www.wirelessdevnet.com/news/2002/25/news1.html. 
+[16] WirelessAdwatch. Profiles. Retrieved Mar 01, 2002 from the World Wide Web: 
+http://www.wirelessadwatch.com/profile/index.shtml. 
+[17] Skygo, Inc. (September 2001) Ideas & Strategies for Implementing Mobile 
+Marketing. Retrieved Mar 01, 2002 from the World Wide Web: 
+http://www.wirelessdevnet.com/library/default.html. 
+[18] Skygo, Inc. Defining Wireless Marketing. Retrieved Feb 25, 2002 from the World 
+Wide Web: http://www.skygo.com. 
+[19] Avesair, Inc. Avesair, beyond your wireless dream.  Retrieved March 5, 2002 from 
+the World Wide Web: http://www.avesair.com/flash/company/companyIntro.html. 
+[20] Avesiar, Inc. MATCH Architecture. Retrieved March 5, 2002 from the World Wide 
+Web: http://www.avesair.com/flash/solutions/match_architecture/index.html. 
+[21] Avantgo. (January 25, 2001). Avantgo Awarded First Patent. Retrieved Feb 27, 2002 
+from the World Wide Web: http://www.wirelessdevnet.com/news/2002/25/news1.html. 
+ 25 [22] Skygo, Inc. (September 2001) Ideas & Strategies for Implementing Mobile 
+Marketing. Retrieved Mar 01, 2002 from the World Wide Web: 
+http://www.wirelessdevnet.com/library/default.html. 
+[23] Skygo, Inc. Defining Wireless Marketing. Retrieved Feb 25, 2002 from the World 
+Wide Web: http://www.skygo.com. 
+[24] Vindigo, Inc. Technology. Retrieved Feb 25, 2002 from the World Wide Web: 
+http://vindigo.com/products/index.html. 
+ 
+ 26

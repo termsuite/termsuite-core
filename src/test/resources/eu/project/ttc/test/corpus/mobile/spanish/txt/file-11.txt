@@ -1,0 +1,1045 @@
+newsletter.qxp newsletter.qxp  22/03/2006  9:11  PÆgina 1
+VoIP: convergencia  y
+comoditización 
+Reflexiones sobre la comoditización de servicios de
+comunicaciones electrónicas y alternativas estratégicas.
+Telecomunicaciones www.msspain.com newsletter.qxp  22/03/2006  9:12  PÆgina 2
+S u m a r i o
+Aspectos de negocio 4 Aspectos técnicos 12
+Aspectos  funcionales18 Aspectos regulatorios20
+Reservados todos los derechos.
+Queda prohibida la reproducción, distribución, comunicación pública, transformación, total o parcial, gratuita u onerosa, por cualquier medio o
+procedimiento, sin la autorización previa y por escrito de Management Solutions.
+La información contenida en esta publicación es únicamente a título informativo. Management Solutions no se hace responsable del uso que de esta
+información puedan hacer terceras personas. Nadie puede hacer uso de este material salvo autorización expresa por parte de Management Solutions. newsletter.qxp  22/03/2006  9:12  PÆgina 3
+En el análisis de la evolución del sector de las telecomunicaciones que presentábamos hace
+ahora un año, se apuntaba como "guideline" la consolidación de la VoIP (Voice over IP). Dos
+hechos nos llevaban a extraer esta conclusión: Por una parte, las mejoras observadas en técnicas
+de compresión, que permiten obtener una mejor calidad de la voz; por otra, la realidad comercial
+materializada en la oferta de servicios basados en esta tecnología, no sólo por operadores
+alternativos de telecomunicaciones o proveedores de software, sino también por algunos
+incumbentes europeos.
+En la segunda mitad del pasado año la VoIP centraba la atención de los medios de comunicación,
+ocupando la primera página de diarios económicos internacionales. El 17 de septiembre de 2005,
+The Economist abría su portada con una invitación a descubrir "cómo Internet acabó con el
+negocio de la telefonía". Ya en su editorial, esta prestigiosa publicación calificaba la VoIP como
+una tecnología disruptiva de consecuencias aún mayores que la llegada del ordenador personal
+hace veinte años.
+Disruptiva o evolutiva, las recientes operaciones corporativas entre el sector de las
+telecomunicaciones y el de los negocios electrónicos han vuelto a poner de actualidad un
+servicio que, lejos de ser novedoso, ha venido centrando el interés de los agentes del sector
+durante los últimos años.
+Así, más allá de los efectos mediáticos que todas las operaciones de M&A provocan, las amenazas
+y oportunidades que este servicio presenta llevan años centrando la atención de operadores,
+fabricantes de hardware, factorías de software y reguladores.
+La posibilidad de transmitir voz por redes basadas en IP (Internet Protocol) abre una etapa
+fundamental en la convergencia entre las redes basadas en conmutación de circuitos, en las que
+se basaba la mayor parte de la RTPC (Red Telefónica Pública Conmutada), y la red de Internet.
+Este proceso de convergencia entre redes y servicios está provocando la aparición de
+oportunidades de negocio para operadores establecidos y entrantes, así como la necesidad de
+una respuesta de los reguladores a los interrogantes que éste presenta.
+El objetivo del presente documento es, por una parte, analizar los elementos que configuran esta
+nueva realidad de la VoIP (de negocio, técnicos y regulatorios) y, por otra compartir un conjunto de
+reflexiones sobre los efectos que la VoIP está teniendo en la actualidad y tendrá en el medio plazo
+en un mercado convergente con elevado riesgo de comoditización de la voz y la banda ancha.
+Management Solutions
+teleco@msspain.com
+P r e s en ta c i ón newsletter.qxp  22/03/2006  9:12  PÆgina 4
+¿Estamos ante el final del negocio de la
+voz como lo conocíamos hasta ahora? 
+¿Qué supone la llegada
+de esta realidad tecnológica?
+Aspectos de negocio
+VoIP en el mercado de la voz fija 
+y la banda ancha. 
+Convergencia y comoditización
+Se exponen a continuación algunas reflexiones que intentan convencional, el diagnóstico de esta última no sería muy
+contextualizar  las preguntas anteriores y arrojar, en la medida de esperanzador. Este entorno adverso encuentra sus orígenes en
+lo posible, luz sobre las mismas. dos factores:
+Estas reflexiones se centran en el mercado de la voz fija por ser   La transferencia de tráfico y recursos a la telefonía móvil.
+éste el que está experimentando en primer término los efectos   La evolución negativa de precios en tráfico.
+de la VoIP. No obstante, se recoge la realidad de terminales
+móviles que conmutan a terminales IP que son parte propulsora Tráfico en continuo descenso
+del fenómeno de convergencia no sólo en servicios sino también
+en plataformas. Así, en el medio plazo se espera una integración El año 2003 marcaba un punto de inflexión en la evolución del
+de los servicios de VoIP fijos y móviles sobre la oferta de tráfico cursado por las redes fijas, siendo el primer año en el que
+operadores de comunicaciones fijas que incorporen servicios dicho tráfico evolucionaba de forma negativa. Este
+móviles a su oferta comercial (oferta multi-play). comportamiento ha continuado durante 2004, con un descenso
+de más del 10% del tráfico total, del 8% en el caso del tráfico
+metropolitano y del 5% si consideramos el agregado neto del
+efecto de  migración de accesos de banda estrecha a banda
+El mercado de la voz convencional: ancha (Gráfico1).
+un mercado de salud frágil
+Y las expectativas no parecen muy positivas de mantenerse las
+Antes del protagonismo adquirido por la VoIP, el mercado de la condiciones actuales, descontando los posibles efectos de la
+4 voz convencional mostraba signos propios de un negocio VoIP. Durante el primer trimestre de 2005 se produjo un
+maduro en un sector extremadamente dinámico y competitivo descenso del 10% del tráfico comparado con el mismo trimestre
+como es el de las telecomunicaciones. del año anterior. 
+Así, antes de la llegada de la VoIP, la voz convencional mostraba La causa, al menos en gran parte, de este descenso del tráfico fijo
+síntomas que evidenciaban un frágil estado de salud. En un es posible encontrarla en la migración de minutos desde las
+entorno que permitiera aislar los efectos de la VoIP sobre la voz redes fijas hacia las móviles. El efecto sustitución entre redes fijas
+ManagementSolutions  -  VoIP : convergencia y comoditización newsletter.qxp  22/03/2006  9:12  PÆgina 5
+y móviles ha tiendo impacto tanto en el número de accesos fijos Evolución de precios
+como en los minutos cursados por los mismos.
+La evolución de precios desde la entrada en vigor en 2000 del
+En lo que a número de líneas se refiere, si bien éstas aumentan, lo price cap presenta una tendencia negativa. Este modelo de
+hacen de forma imperceptible (Gráfico2). El ratio de penetración fijación de precios tiene por objeto la regulación de los precios
+desciende por el aumento de población. Así, el aumento de la del servicio telefónico fijo y de las llamadas de fijo a móvil, así
+población por el fenómeno migratorio no se refleja en un como de aquellas líneas susceptibles de arrendamiento del
+aumento proporcional en el número de líneas fijas. operador dominante.
+Gráfico 1 Gráfico 2
+Tráfico medio por línea en servicio Líneas en servicio
+5
+Fuente: CMT Fuente: CMT e INE newsletter.qxp  22/03/2006  9:12  PÆgina 6
+Aunque ha sufrido diversas modificaciones - en la composición El mercado de los datos: 
+de las subcestas, de las cestas, en el factor de ajuste, etc., lo que un mercado con salud de hierro
+ha sido una constante a lo largo del periodo de aplicación ha sido
+su tendencia en la reducción de los precios del servicio telefónico En 2002,  los operadores de telefonía fija ingresaron prácticamente
+fijo en su variable de "tráfico". En el caso de los precios "no el doble por venta y alquiler de terminales que por provisión de
+tráfico" - principalmente cuota de abono - esta tendencia ha sido servicios de Internet. En la actualidad, el acceso a Internet de
+la contraria. En este sentido, el cambio de configuración del price banda ancha es el motor del crecimiento de los operadores fijos.
+cap más relevante se produjo en la fijación de precios para 2003.
+Para ese año, la Comisión Delegada del Gobierno para Asuntos El elemento que ha revolucionado el mercado es el "efecto
+Económicos (CDGAE) modificó el marco anterior al excluir de la contagio" de la tecnología IP desde las redes de transporte a las
+Cesta 1 la cuota de abono mensual de las líneas individuales e redes de acceso. La llegada masiva de las tecnologías IP hasta el
+incluirla en la Cesta 0, cuyo factor de ajuste para ese año fue -6 (lo terminal del abonado está en el origen de la revolución que está
+que suponía un aumento autorizado de las cuotas de abono sufriendo el mercado de la voz en particular y el de las
+mensual del 8%). comunicaciones electrónicas en general.
+En el marco de regulación de los precios para 2006 aprobado por El origen: un poco de historia
+la CDGAE, por primera vez desde 2000 el precio de la cuota de
+abono no experimenta una subida. También se mantiene el Identificar el motivo de la propagación de la tecnología IP desde
+precio del tráfico telefónico fijo, de manera que el precio de la las redes de transporte hasta las redes de acceso puede ser  útil
+cesta formada por las llamadas metropolitanas, provinciales, para poner en contexto sus efectos.
+interprovinciales, internacionales y de fijo a móvil no
+experimenta variaciones. Internet se convirtió a finales de los años 90 en uno de los
+elementos más dinamizadores y revolucionarios conocidos por el
+En este entorno de presión a la baja de los precios del tráfico y de sector de las telecomunicaciones desde su nacimiento. Su
+sustitución fijo-móvil, los operadores precisaban de algún consolidación en esos años supuso el nacimiento de nuevos
+servicio distinto a la voz que permitiera corregir la situación modelos de negocio, si bien es cierto que no todos con igual
+descrita. Así, los datos se convierten en la alternativa a la voz para fortuna, nuevas formas de comunicación, universalización de
+revalorizar las redes de los operadores. determinados servicios, etc. La creciente oferta de información y
+servicios disponibles en Internet fue acompañada por una también
+Gráfico 3 creciente demanda de los mismos que tenía su forma de expresión
+Minutos cursados por tipo de tráfico en una mayor demanda de accesos a Internet.
+La aparición de este fenómeno fue muy bien acogida por los
+operadores con red propia. El tráfico cursado por sus redes crecía
+de forma exponencial, ya fuese por tráfico inducido de otros ISPs o
+por el generado por ellos mismos en el desarrollo de sus
+actividades de acceso. Este tráfico era medido, tarificado y
+facturado por minutos. Así, el estancamiento del tráfico por voz se
+vio compensado por el creciente aumento de tráfico de acceso a
+Internet.
+Sobre este esquema básico de prestación del servicio surgieron
+diferentes modelos de comercialización (bonos, descuentos en
+llamadas, etc.), pero todos ellos basados en la unidad de medición
+"minuto".
+6 Estos modelos de comercialización basados en minutos se vieron
+alterados con la introducción de la tarifa plana (o semi-plana en sus
+momentos más incipientes). Una determinada franja horaria
+(coincidente con las horas valle de uso de la red en días laborables
+y la totalidad de los fines de semana) en la que no importaba el
+tiempo de conexión sino el inicio y fin de la misma. A partir de este
+Fuente: CMT momento la unidad "minuto" comenzó a ceder protagonismo. 
+ManagementSolutions  -  VoIP : convergencia y comoditización newsletter.qxp  22/03/2006  9:12  PÆgina 7
+las redes de transporte. Las centrales donde tenían lugar los
+grandes intercambios de tráfico comenzaron a migrar
+masivamente hacia tecnologías IP. Así, mientras que en 1999 tan
+sólo el 18% de los puertos de redes de datos eran puertos IP, en
+2004 suponían el 72% (Gráfico 6).
+Este proceso de transformación llegó a incidir incluso en la
+topología de la red telefónica. Así, la tradicional jerarquía de tres
+niveles y sus correspondientes secciones (primaria, secundaria y
+terciaria) dio lugar a una red con una jerarquía de dos niveles. Este
+cambio motivó el nacimiento de las centrales autónomas, de las
+que dependían directamente los abonados, interconectadas a
+través de un segundo nivel de centrales nodales que funcionaban
+en parejas y se interconectaban unas con otras.
+De esta forma, la demanda de más capacidad de las redes dio lugar
+a la evolución tecnológica de las redes de transporte. En la
+búsqueda de este aumento de capacidad, los operadores
+encontraron también la posibilidad de prestar nuevos servicios
+nacidos al calor de la nueva tecnología. Así, comenzaron a definirse
+las denominadas redes de nueva generación (NGN) basadas en
+tecnologías IP que permiten la transmisión no sólo de voz y datos,
+sino también de audio y vídeo a gran velocidad. La idea
+subyacente de estas redes es permitir que cualquier tipo de
+información pueda ser trasmitida mediante paquetes IP,
+estableciendo prioridades según la tipología del servicio para
+garantizar unas condiciones de calidad determinadas. En este
+Uno de los elementos que contribuyeron de manera más decisiva punto, la arquitectura de la red de transporte posibilitaba la
+al proceso de liberalización del sector de las telecomunicaciones ampliación del abanico de servicios a contenidos multimedia y su
+en España, y que tuvo un papel decisivo en la consolidación de integración con los tradicionales servicios de voz y datos, aunque
+esta modalidad comercial de acceso, fue la introducción de la aún tendrían que vencerse algunas limitaciones. 
+interconexión por capacidad. La modificación de la OIR (Oferta de
+Interconexión de Referencia) de agosto de 2001 supuso una
+Gráfico 4
+profunda redefinición de las condiciones de interconexión a Usuarios de Internet por tipo de acceso
+ofrecer por el incumbente. Así, a la introducción de la modalidad
+de interconexión por capacidad hay que sumar la posibilidad de
+revender tráfico y de compartir PdI (Punto de Interconexión) que
+introdujo esta modificación de la OIR. 
+El modelo de interconexión por capacidad posibilitó a los
+operadores entrantes asimilar sus estructuras de costes de red a la
+del incumbente, permitiéndoles aprovechar economías de escala
+que antes sólo estaban al alcance de este último.
+En este escenario, durante los últimos años de la década de los 90,
+el tráfico cursado por las redes de los operadores crecía a unos
+ratios tales que las redes comenzaron a presentar riesgo de 7
+saturación, identificándose problemas de gestión de accesos en
+horas punta.
+Ante este crecimiento de la demanda, y apoyándose en una
+tecnología en fase de consolidación, los operadores comenzaron
+un proceso de renovación de sus redes. Este proceso comenzó por Fuente: CMT newsletter.qxp  22/03/2006  9:12  PÆgina 8
+Gráfico 5
+Evolución del ADSL
+Fuente: CMT
+El presente: La tecnología DSL nace en los laboratorios de Bellcore el mismo
+Banda Ancha como producto de consumo año (1989) en el que el CCITT - hoy la UIT - opta por el protocolo
+ATM como mecanismo de transporte. Es la época de los grandes
+Tras la demanda de aumento de capacidad de las redes de despliegues de cable en los EE.UU. y momento en el que los
+transporte, la red de acceso tomó su relevo. Nuevos servicios y operadores establecidos comienzan a aspirar a proveer servicios
+contenidos que requieren de mayor velocidad elevan la audiovisuales sobre la red de cobre. El ADSL fue visto por las
+demanda de mayor capacidad de los equipos de acceso a la operadoras como la vía para revalorizar la planta instalada y
+red. "convertir en oro el cobre" de sus redes. 
+En un primer momento, la respuesta a esta demanda vino del Estos factores condicionaron definitivamente el hecho de que la
+acceso básico RDSI (Red Digital de Servicios Integrados). tendencia predominante fuera utilizar ATM como transporte y
+Desarrollada a principios de los 80, su objetivo era usar los pares como forma de establecer prioridades para los tráficos de tiempo
+de cobre del servicio telefónico existentes para transmitir dos real - audio y vídeo - a los que se quería dar prioridad. Éste fue
+canales de 64kbps que pudieran ser utilizados para voz y datos uno de los factores que llevó a definir como estándar en el
+en modo circuito más un canal de 16kbps para la transmisión de transporte de la señal del mercado mayorista GigADSL a la
+señalización. tecnología ATM.
+Esta primera respuesta al incremento de la demanda de la Si bien es cierto que las aplicaciones de vídeo han tardado más
+capacidad fue contenida en su despliegue, con el objetivo de no de 15 años en desarrollar técnicas de compresión que tuvieran
+impedir la explotación de otros servicios alternativos de líneas cabida en los caudales que proveían las redes de cobre, el
+alquiladas - como Ibermic,  que suponía una importante fuente aumento de la demanda de más capacidad de acceso ha sido el
+de ingresos para el operador incumbente. detonante del desarrollo de la tecnología de banda ancha en
+general, y del ADSL en particular.
+Pero al mismo tiempo que nacía RDSI, la tecnología ADSL
+(Asymmetric Digital Subscriber Line) terminaba de configurarse Así, en el momento actual, la Banda Ancha se ha convertido en un
+8 como tecnología de acceso y poco después era una oferta producto de consumo para el segmento residencial, casi decomercial real que en determinadas áreas fue considerada como necesidad para SOHO/PYMES y crítico para grandes corporaciones. 
+"canibalizadora" de la anterior. 
+Esta respuesta tecnológica al aumento de la demanda de
+Recordar los orígenes de esta tecnología permite poner en capacidad en el acceso ha puesto a disposición de los usuarios un
+contexto novedosos servicios audiovisuales comercializados en innumerable catálogo de productos multimedia entre los que se
+la actualidad sobre redes de nueva generación. se incluye la VoIP. 
+ManagementSolutions  -  VoIP : convergencia y comoditización newsletter.qxp  22/03/2006  9:12  PÆgina 9
+Gráfico 6 Gráfico 7
+Evolución Puertos por Tecnología 1999 Evolución Puertos por Tecnología 2004
+Otras
+VSAT
+X-25
+IP
+Frame-Relay
+ATM
+Fuente: CMT Fuente: CMT
+El futuro: convergencia y comoditización redes diferentes. La misma voz que anteriormente circulaba
+por la RTPC lo hace ahora por redes de datos basadas en el
+Parece cuanto menos paradójico calificar el futuro en términos protocolo IP.
+de convergencia, encontrándose este término casi en el mismo
+origen de las telecomunicaciones. No obstante, tal paradoja no 2. Movimientos corporativos, como los que han marcado el final
+existe sino que es constatación de la imposibilidad de disociar los de 2005, son exponente claro de esta convergencia entre
+términos convergencia y telecomunicaciones. agentes. La compra de Skype por parte de eBay constata la
+convergencia entre agentes que, a priori, se encuentran en
+En diciembre de 1997 la Comisión Europea publicaba el "Libro diferentes eslabones de la cadena de valor. Esta convergencia
+Verde sobre la Convergencia de los Sectores de podría haber quedado de manifiesto de una forma menos
+Telecomunicaciones, Medios de Comunicación y Tecnologías de evidente si finalmente se hubiera materializado la operación
+la Información". En este documento, la Comisión manifestaba la con alguno de los agentes que mostró interés en la misma y
+dificultad de definir el concepto "convergencia" habitualmente que estaban más próximos a Skype en la cadena de valor de
+expresado como: los servicios de comunicaciones electrónicas, como habría
+  "La capacidad de diferentes plataformas de red de sido el caso de Microsoft.
+transportar tipos de servicios esencialmente similares".
+3. VoIP móvil, terminales híbridos que conmutan
+  "La aproximación de dispositivos de consumo tales como el automáticamente entre redes UMTS y la red Wi-Fi del
+teléfono, la televisión y el ordenador personal". domicilio cuando ésta se detecta, etc. La convergencia en
+productos que son capaces de ofrecer voz sobre IP, vídeo y
+La convergencia puede darse, según el documento de la audio se encuentra en el tercer nivel de convergencia como
+Comisión, en cuatro niveles: uno de los futuros motores que, una vez cerrada la
+convergencia en el primer nivel, serán los auténticos motores
+1. Tecnologías y plataformas. de la difusión en el uso de la VoIP.  
+2. Agentes empresariales: alianzas y fusiones.
+3. Mercados de productos y servicios. 4. El principio de neutralidad tecnológica que rige el
+4. Regulación. Ordenamiento Jurídico de las comunicaciones electrónicas en 9
+Europa tras la aprobación del nuevo Marco es una muestra de
+El fenómeno de la VoIP es un exponente único de convergencia la necesaria convergencia regulatoria cuando ésta se produce
+en todos los niveles definidos por la Comisión. en el resto de niveles. Cualquier intento de frenar la
+1. La tecnología digital posibilita que los servicios de convergencia tecnológica por parte de la regulación se ha
+comunicación tradicionales puedan ofrecerse a través de demostrado inútil cada vez que se ha intentado. newsletter.qxp  22/03/2006  9:12  PÆgina 10
+A este fenómeno de convergencia consumada hay que sumar el rentables desde el inicio de la actividad para operadores
+riesgo de comoditización que se cierne sobre la voz y la banda alternativos y que incentivaran, en el medio plazo, la construcción
+ancha. de nuevas infraestructuras.
+Así, es latente el riesgo de que tanto la voz como la banda ancha No obstante, dicho equilibrio no ha sido perfecto y las
+terminen de presentar las características de un bien "commodity", inversiones de los nuevos operadores, hasta la fecha, se han
+no en el sentido de bien fungible, líquido, de fácil fijación de centrado en el transporte en detrimento del acceso. Así, en
+precios y fácil acceso y disponibilidad de la información, que son diciembre del pasado año, los bucles desagregados (totalmente o
+características más propias del contexto de los mercados compartidos) representaban poco más del 11%. Este aspecto
+organizados, sino en el sentido de servicio no diferenciable y evidencia la elevada dependencia de la red del incumbente para
+fácilmente intercambiable. la comercialización de la oferta de banda ancha de los
+operadores alternativos. No obstante, esta tendencia está
+La caracterización del servicio como "no diferenciable" implica la cambiando y los accesos desagregados mostraron un cambio de
+imposibilidad de determinar características (objetivas o tendencia en el mes de noviembre y en diciembre fueron en gran
+subjetivas) que permitan al demandante del servicio establecer parte los responsables del crecimiento mensual de líneas ADSL.
+una priorización bajo criterios distintos al precio para la Este crecimiento de bucles desagregados está afectando al valor
+satisfacción de su necesidad. de la voz, que se está convirtiendo en un bien complementario a
+la banda ancha, viéndose incluida en los paquetes comerciales de
+El carácter de "facilidad en el intercambio" hace referencia a dos los operadores que intentan potenciar los bucles desagregados
+aspectos: en primer lugar, la facilidad con la que el demandante regalando el tráfico nacional de voz. 
+tiene acceso a múltiples ofertas (lo que implica pluralidad de
+oferentes) de las que tiene información sin incurrir en costes y, en Esta compartición de las infraestructuras básicas necesarias para
+segundo lugar, la facilidad que tiene el demandante del servicio la prestación del servicio ha materializado el riesgo de
+para cambiar de oferente en la prestación del mismo (ausencia comoditización de la voz y potencia el de la banda ancha en
+de barreras a la intercambiabilidad de operadores). tanto en cuanto no es posible diferenciar de forma objetiva
+servicios que emplean las mismas infraestructuras básicas.
+Un análisis de la situación actual del sector evidencia la cada vez
+mayor presencia de ambas características, que convierten a la voz En este entorno, cabe preguntarse qué alternativas tienen los
+y la banda ancha en servicios con fuertes presiones en precios y operadores para gestionar el mencionado riesgo de
+reducción de márgenes. comoditización y sus consecuencias en precios y márgenes. 
+Si bien es cierto que son múltiples los factores que pueden ser ¿Cómo abordar el objetivo de diferenciación de los servicios?
+identificados como factores de riesgo (igualdad de condiciones
+en el acceso a las tecnologías, madurez tecnológica, etc.), el Las alternativas que se les presentan a los operadores se
+modelo regulatorio de compartición de infraestructuras se ha agrupan en dos grandes bloques.
+configurado como uno de los principales factores de riesgo. 
+1.  Diferenciación sobre criterios subjetivos, particularización de
+El citado modelo regulatorio tuvo que enfrentar en su origen la aspectos no asociados directamente al producto (precio,
+búsqueda del equilibrio entre dos objetivos: (1) permitir la características técnicas, operación del servicio, etc.) El
+entrada de nuevos operadores y (2) estimular la inversión de posicionamiento de la marca y la dotación y potenciación de
+éstos en redes alternativas. Favorecer el primero de los objetivos atributos de la misma es una herramienta que los operadores
+suponía paralizar las inversiones en nuevas infraestructuras, tanto tienen a su alcance para potenciar la diferenciación de sus
+por el incumbente (quien no tendría incentivo a la realización de servicios, dotando a su marca de unos atributos específicos o
+inversiones para su explotación por terceros sin retornos asociando sus identidades corporativas con valores percibidos
+equivalentes o próximos a mercado) como por los alternativos como diferenciales por el mercado.
+(que no encontrarían económicamente eficiente acometer
+2.  Diferenciación sobre criterios objetivos, particularización de
+10 inversiones pudiendo emplear las de un tercero). En cambio,primar el segundo de los objetivos suponía condicionar la aspectos asociados directamente al servicio.  En el desarrollo de
+entrada de nuevos operadores en un sector con elevados costes esta estrategia se pueden plantear tres posibles alternativas:
+hundidos y una estructura de costes en la que priman los de la
+red de acceso sobre los de la red de transporte.  Criterios operacionales: calidad en la prestación del servicio
+y atención al cliente son los pilares sobre los que construir
+En la búsqueda del equilibrio entre ambos objetivos se esta estrategia. Así, indicadores como tiempo de instalación
+conjugaron fórmulas que permitieran modelos de negocio de equipos, tiempo medio de provisión efectiva del servicio,
+ManagementSolutions  -  VoIP : convergencia y comoditización newsletter.qxp  22/03/2006  9:13  PÆgina 11
+volatilidad de la distribución de provisión (como indicador de diferencias entre operadores fijos y móviles. Así, la cadena de
+las observaciones que quedan por encima de la media en la valor de la telefonía móvil presenta menos eslabones y menos
+distribución), tiempo medio de resolución de incidencias y agentes por eslabón, estando el operador de la red próximo a
+volatilidad de su distribución, etc., son elementos que los servicios y muy involucrado en su desarrollo. Por el
+permiten valorar el grado de cumplimiento de las acciones contrario, la cadena de valor de las comunicaciones fijas
+definidas para la consecución de los objetivos operacionales presenta más eslabones, aumentado exponencialmente el
+fijados. número de agentes presentes en los mismos conforme se
+avanza en dicha cadena. En esta situación, el operador de la
+ Capacidad de acceso: velocidad como elemento red fija precisa de mayores esfuerzos para asociar a su red un
+diferenciador del servicio. La elección de esta alternativa servicio determinado. Esta posibilidad sólo es materializable
+requiere de mayores inversiones en infraestructuras que las bajo la premisa de propiedad del acceso, con las implicaciones
+anteriores y presenta un elemento a gestionar: el "potencial que la misma presenta.
+de diferenciación". En la medida en que no exista una relación
+lineal entre el megabit adicional de velocidad y la Diferenciación vía capacidad de acceso (velocidad) y servicios de
+diferenciación percibida por el cliente, se hace preciso valor añadido son las alternativas estratégicas que presentan
+identificar el "punto de saturación" a partir del cual los mayor potencial de diferenciación. No obstante, también son las
+incrementos marginales de velocidad presentan rendimientos que requieren de mayor aplicación de recursos, siendo los
+decrecientes de la capacidad de diferenciación del acceso. resultados de esta aplicación de elevada volatilidad. Asumiendo
+que la capacidad de generación de recursos de los operadores es
+ Nuevos servicios: mayor valor a la red. La brecha entre limitada, éstos afrontan la disyuntiva de aplicar sus recursos en el
+servicios y red distancia a los operadores de los servicios que desarrollo de nuevos servicios o en el aumento de la capacidad
+el cliente percibe como diferenciales. La asociación de del acceso ofertado. 
+servicios y red provoca una transferencia de valor de los
+primeros hacia la segunda, convirtiéndose ésta en una En esta situación, serán las curvas de utilidad de velocidad y
+alternativa para la diferenciación. servicios que presenten los demandantes las que guíen las
+decisiones de los operadores. Así, existirá un punto en el que la
+Esta alternativa es la que presenta mayores necesidades de utilidad marginal de la velocidad será menor que la utilidad
+inversión y mayor volatilidad de los resultados, pero también marginal de la aplicación de los mismos recursos en servicios. En
+permite una mayor diferenciación del servicio. En la ejecución ese "punto de saturación", los operadores deberán tener
+de esta alternativa, la materialización y gestión de alianzas se definidos aquellos servicios que faciliten la utilidad necesaria,
+constituye como una de las opciones más eficientes para los siendo esta definición el próximo reto a abordar por éstos en el
+operadores. El desarrollo de esta estrategia presenta medio plazo.
+Utilidad
+ALTERNATIVAS ESTRATÉGICAS DE COMPETENCIA EN
+Punto de saturación U(V1) y U(S1) representan las MERCADOS CON RIESGO DE COMODITIZACIÓN
+utilidades de velocidad y acceso
+que se obtienen como resultado + +
+de la aplicación del primer recurso.
+NUEVOS SERVICIOS
+Dado que U(V1) > U(S1) el primer
+recurso se aplicará para aumentar
+la velocidad ofrecido al usuario.
+DIF. OBJETIVA CAPACIDAD EN ACCESO
+U(V1)          U(Vn) Velocidad
+Utilidad
+Punto de saturación
+EXCELENCIA OPERACIONAL
+U(Vn)  representa el punto en el TIE
+MP
+O
+11
+que la utilidad marginal de la
+misma aplicación de recursos en
+velocidad es menor que la utilidad
+marginal de esa misma aplicación DIF. SUBJETIVA POSICIONAMIENTO DE MARCA
+en servicios.
+- -
+U(S1)          Servicios Fuente:  Elaboración propia.
+Inversión Requerida
+Volatilidad de resultado newsletter.qxp  22/03/2006  9:13  PÆgina 12
+Aspectostécnicos
+El análisis de cualquier servicio de comunicaciones electrónicas Hardware
+precisa de un entendimiento de la tecnología que lo soporta. 
+A continuación se exponen aquellos aspectos técnicos que son Red
+necesarios para comprender las implicaciones que en el negocio
+de la voz "tradicional"  pueda tener este servicio, sin abordar La descripción básica del servicio está contenida en su propia
+aspectos de excesiva complejidad técnica que no aporten luz al denominación. Voz sobre Protocolo Internet es la transmisión de
+objetivo último de estas reflexiones de negocio. voz empleando el protocolo Internet. Así, los elementos básicos
+de hardware que podemos encontrar en una comunicación de
+Divididos en dos grandes bloques - hardware y software - se VoIP no difieren de los que forman una red de comunicaciones IP
+exponen a continuación los pilares técnicos sobre los que se de datos: gateways, DNS's, gatekeepers, etc.
+presta la VoIP.
+Entre los elementos de red cabe destacar el gateway, cuya
+función principal es conectar la RTPC con la red IP (Cuadro 1).
+Junto a estos elementos de red se encuentran los terminales. Es
+aquí donde se presenta una aportación más diferencial de este
+servicio  y donde se encuentran dispositivos diseñados
+específicamente para la provisión del servicio. Los terminales
+VoIP pueden ser físicos o bien herramientas de software que
+convierten un ordenador personal en un teléfono IP.
+12
+Terminales físicos fijos
+Los terminales físicos fijos son teléfonos semejantes a los
+teléfonos analógicos tradicionales, basados en sistemas de
+procesamiento digital de señales (DSP) en tiempo real  y sistemas
+de comunicaciones en red1, heredados en muchos casos de las
+ManagementSolutions  -  VoIP : convergencia y comoditización newsletter.qxp  22/03/2006  9:13  PÆgina 13
+aplicaciones desarrolladas para los ordenadores. Estos equipos Terminales físicos móviles
+codifican digitalmente en tiempo real la señal de voz y la
+transportan usando redes de comunicaciones basadas en el 2006 será finalmente el año en el que los terminales móviles IP,
+protocolo IP. con tarjetas de red Wi-Fi integradas, serán una realidad comercial.
+El funcionamiento de estos terminales permite conexiones a las
+Muchos terminales VoIP disponen de varios conectores Ethernet nuevas redes inalámbricas y aprovechar las altas velocidades -
+integrados para la conexión a redes LAN, y se alimentan a través hasta 54 Mbps - que proporcionan las mismas.
+del cable de red por el que se conectan al hub, switch o router.
+Otra característica adicional de estos equipos es la asignación De esta forma, cuando el usuario dispone de cobertura en una
+dinámica de direcciones IP a través del protocolo DHCP, que WLAN, puede disponer del servicio de telefonía móvil de manera
+facilita la movilidad de los terminales. gratuita, si la llamada se realiza a cualquier otro terminal VoIP, o a
+coste muy reducido a cualquier otro terminal, utilizando servicios
+Estos terminales son capaces de ofrecer muchos de los servicios como SkypeOut o similares ofrecidos por compañías proveedoras
+de valor añadido y de aumento de la productividad que son de VoIP. Por contra, cuando no existe cobertura Wi-Fi, se utilizaría
+comúnmente utilizados en los entornos de comunicaciones el servicio celular, pagando por su uso, y el terminal se
+empresariales: integración de aplicaciones web, recepción de comportaría como un terminal GSM/CDMA estándar.
+noticias y notificaciones de eventos corporativos, obtención de
+información acerca de la presencia de otros usuarios, Con la extensión de los accesos WLAN corporativos o Wi-Fi en los
+herramientas de colaboración en tiempo real, etc. hogares y segmento SOHO, la VoIP convivirá con la telefonía
+móvil convencional en dichos entornos. En este sentido, recoger
+Sin embargo, también hay que apuntar la posibilidad de utilizar el el anuncio de grandes fabricantes de equipos informáticos como 13
+servicio básico de voz con los tradicionales terminales analógicos, Creative Labs o Netgear, que en colaboración con Skype,
+mediante el uso de adaptadores de telefonía analógica (ATA), o comenzarán a comercializar en 2006 teléfonos con dicho
+conectándolos directamente a los VoIP routers, que disponen de software ya integrado en el terminal con capacidades Wi-Fi. Estos
+tomas de conexión para teléfonos analógicos. terminales podrán operar en cualquier lugar con un punto de
+acceso inalámbrico a Internet, incluyendo la posibilidad de
+utilizar los servicios Skype Out y Skype In, que permiten llamar a
+1La mayoría de los terminales soportan diversos estándares de codificación de voz y redes convencionales y recibir llamadas desde la misma.
+de señalización. En la actualidad, las opciones de codificación de voz más extendidas
+están basadas en los CODECs G.711, G.723 y G.729, mientras que el protocolo de
+señalización y control de llamada predominante es SIP. newsletter.qxp  22/03/2006  9:13  PÆgina 14
+Cuadro 1
+Esquema básico de los elementos hardware que intervienen en una comunicación VoIP
+Con la adopción de nuevos protocolos como WiMAX, en los que al direccionamiento. Los dígitos identificados por el detector de
+una sola antena es capaz de cubrir áreas metropolitanas tono del DSP determinan el número destino de la comunicación
+completas, no es descartable en un medio plazo una cobertura a y se le asigna una dirección IP, estableciéndose una llamada si el
+niveles similares a los de la telefonía móvil actual y un uso masivo destino está libre. Al paquete se le añade una cabecera IP de 20
+de terminales IP. Este alto potencial de la tecnología WiMAX ha bytes con la dirección IP del gateway origen y del gateway
+fomentado el interés por tecnologías inalámbricas como LMDS, destino y una cabecera UDP de 8 bytes con los sockets de origen
+que en los últimos años había visto limitada sus expectativas de y de destino.
+crecimiento.
+Tras estas operaciones realizadas en el gateway de origen, los
+paquetes son enviados a través de la red hasta el gateway
+Software destino. Una vez allí, se eliminan las cabeceras IP y UDP y los
+paquetes son enviados al DSP donde se elimina la cabecera RTP
+El software, bien sea residente en el gateway o en el terminal, es para, finalmente, desensamblar el paquete liberando las tramas
+el elemento fundamental que hace posible la prestación del de voz (Cuadro 2).
+servicio. 
+Uno de los módulos fundamentales de software instalado en los
+La comunicación VoIP comienza por la digitalización de la señal terminales es el soporte a los distintos protocolos de red que
+analógica de la voz mediante técnicas PCM (Pulse Code
+Modulation). Esta digitalización se lleva a cabo en el DSP
+(Procesador Digital de Señal), que genera una ráfaga de bits que
+son analizados para la eliminación de silencios y ecos y para la
+detección de tono. 
+Una vez detectados los tonos de señalización, éstos se dirigen al
+CODEC donde la ráfaga PCM es comprimida y codificada.
+Las tramas generadas por el CODEC son enviadas al software de
+14 ensamblado de paquetes que genera los paquetes añadiendo a
+los mismos una cabecera de 12 bytes que corresponden al RTP.
+Estas cabeceras proporcionan un número de secuencia que se
+emplea como marca temporal de los paquetes.
+Desde el software de ensamblado, los paquetes son enviados al
+microprocesador del gateway donde, en primer lugar, se procede
+ManagementSolutions  -  VoIP : convergencia y comoditización newsletter.qxp  22/03/2006  9:13  PÆgina 15
+Cuadro 2
+Esquemas de tratamiento de la voz en un gateway
+intervienen en las conexiones VoIP. Sin ánimo de ser exhaustivos, el envío de los mensajes, al no implementar la retransmisión de
+y siguiendo la estructura del Modelo de Protocolos de Internet, los datagramas perdidos. Tampoco garantiza que estos paquetes
+podemos distinguir en cada nivel distintos protocolos utilizados lleguen en orden. Esto, que en principio lo hace inadecuado para
+en las comunicaciones VoIP (Cuadro 3). muchos servicios de Internet, lo hace más rápido y eficiente en
+aplicaciones en tiempo real, en las que el retardo de la señal es
+A nivel de red se utiliza el protocolo IP  que permite el un factor crítico. 
+intercambio de información en forma de paquetes entre dos
+terminales conectados a través de una red. El protocolo IP se El protocolo RTP (Real Time Protocol) es el estándar para la
+encarga de encaminar dichos paquetes a través de los routers y transmisión de tráfico sensible a los retardos a través de redes
+de gestionar la congestión que pudiera producirse en los basadas en el intercambio de paquetes. Se utiliza para etiquetar
+distintos segmentos de la red. con marcas de orden y marcas temporales los paquetes UDP. El
+campo de información de secuencia permite determinar si los
+En la capa de transporte se utilizan los protocolos UDP (User paquetes llegan en orden. Mediante el campo de marca
+Datagram Protocol)  y RTP/CRTP (Real Time Protocol/Compressed temporal, que contiene el tiempo exacto en el que fue enviado el
+Real Time Protocol). UDP es un protocolo orientado a la paquete, se puede determinar las variaciones de retardo (jitter).
+transmisión de mensajes cortos llamados datagramas. Una de las Cuando llega al receptor, esta información sirve para decidir si el
+características principales de este protocolo es que no garantiza paquete ha llegado a tiempo, dentro del orden esperado, o si ha
+sufrido retardo. 
+Cuadro 3 La parte de control de RTP recibe el nombre de RTCP (Real Time
+Modelo de protocolos de internet y protocolos usados en VoIP
+Control Protocol). Mediante este protocolo, los usuarios de VoIP
+pueden intercambiarse información acerca de la calidad de la
+llamada, para así adaptar la calidad de la señal transmitida. 
+5 APLICACIÓN H323, SIP, G.711, G.723.1, G.729, DHCP
+H.323 y SIP son los dos estándares más utilizados como
+protocolos  de señalización para el establecimiento y el control
+de las llamadas.
+4 TRANSPORTE UDP, RTP/CRTP, RTCP
+15
+H.323 es una especificación de la ITU-T para la transmisión de
+3 RED IP audio, vídeo y datos a través de redes IP. En concreto, el
+protocolo que utiliza para la señalización de llamadas es el H.225.
+El primer objetivo de este protocolo es la definición del formato y
+2 ENLACE Ethernet, Wi-Fi uso de los mensajes de señalización: establecimiento, control y
+terminación de llamada. Para ello, se establece un canal de newsletter.qxp  22/03/2006  9:13  PÆgina 16
+control seguro a través de la red. El intercambio de estos Limitaciones
+mensajes puede hacerse directamente entre los usuarios finales o
+través de un gatekeeper, que sirve de intermediario entre ellos. Calidad
+Por su parte, la IETF (Internet Engineering Task Force) ha La calidad de la voz sobre IP se ve afectada por dos factores
+desarrollado el protocolo SIP (Session Initiation Protocol) para el principales: la pérdida y el retardo de los paquetes.
+establecimiento, modificación y terminación de sesiones
+interactivas entre dos o más usuarios, que incluyan elementos La pérdida de paquetes hace que la voz se escuche entrecortada.
+multimedia como audio, vídeo y mensajería instantánea. El Por ejemplo, para el estándar ITU-T de codificación de voz  G.729,
+propósito de la IETF es proporcionar una arquitectura funcional, una pérdida de más de un 1% del total de los paquetes es
+de manera que el protocolo sea escalable y permita la percibida por el usuario como una comunicación no satisfactoria.
+incorporación de nuevas características, mediante el uso de
+cabeceras versátiles. SIP ofrece algunas ventajas frente a H.323 Por otra parte, el retardo de los paquetes también afecta a la
+como un establecimiento de llamadas más rápido y sencillo. comunicación. Actualmente, en la RTPC el retardo medio se
+encuentra entre los 6 ms. y los 40 ms. Según la recomendación
+Para la transformación de la señal de voz de formato analógico a ITU-T G.114, se establece un retardo máximo en la comunicación
+digital y viceversa se utilizan los denominados CODECs, de 150 ms., aceptándose valores de 250 ms. en el caso de
+abreviatura de COdificador-DECodificador. Estos programas comunicaciones transoceánicas o por satélite. Otro aspecto
+permiten la digitalización y compresión de la señal, para destacable es el de la fiabilidad que ofrece la RTPC, donde la
+adecuarla a la transmisión a través de redes de datos. disponibilidad del servicio llega a alcanzar cotas del 99,999%,
+según la ITU-T.
+En función de las características de la red y de la potencia de
+procesamiento necesaria, se hará preciso el uso de diversos Actualmente, en la red Internet la pérdida de paquetes en EE.UU.
+CODECs. Cuanto menores sean los recursos disponibles, tanto en y la UE toma valores que se encuentran dentro de los límites
+la red como en el terminal, menor será la calidad de la voz permitidos por los estándares de la ITU-T. Sin embargo, el retardo
+transmitida. medio se sitúa por encima de los 150 ms.
+En la actualidad, la mayoría de los CODECs utilizados en los Las soluciones que se pueden aportar para minimizar estas
+terminales son los estándares de la ITU-T, entre los que se limitaciones son diversas:
+pueden citar G.711, G.723 y G.729. Las diferencias 
+entre las diversas opciones radican en el flujo de salida de datos y  Aumento del ancho de banda: mejora del tiempo de retardo
+en la potencia de cálculo necesaria en el terminal. en aquellos tramos afectados por dicho incremento.
+ Uso de protocolos adecuados: debido a las características de la
+comunicación por voz, es recomendable utilizar el protocolo
+UDP, puesto que no retransmite los paquetes perdidos.
+También el uso del protocolo CRTP (Compressed Real Time
+Protocol) permite disminuir el ancho de banda necesario,
+comprimiendo las cabeceras de los protocolos IP/UDP.
+ Gestión de colas: cuando se encuentran en la cola de un
+servidor varios paquetes para ser entregados, el servidor
+puede priorizar aquellos etiquetados como VoIP. Esto se
+conoce como servicio diferenciado.
+ Formas de tráfico y políticas asociadas: consiste en limitar el
+16 ancho de banda y la prioridad de los paquetes, de acuerdo
+con su naturaleza.
+ Fragmentación e interleaving: mediante estas dos técnicas, se
+disminuye el efecto negativo de la pérdida y corrupción de
+paquetes. 
+ManagementSolutions  -  VoIP : convergencia y comoditización newsletter.qxp  22/03/2006  9:14  PÆgina 17
+ Uso de buffers: los efectos del retardo de los paquetes
+pueden disminuirse utilizando buffers que almacenan los
+paquetes para una reconstrucción más precisa conforme
+vayan llegando aquellos paquetes retrasados. Sin embargo, el
+retardo que sufren los paquetes cuando atraviesan la red
+puede no ser constante (efecto conocido como jitter), con lo
+que debe encontrarse un equilibrio entre el tamaño del
+buffer y el retardo deseado.
+Disponibilidad
+En este caso, la red Internet ofrece una disponibilidad que varía
+considerablemente según países. Así, la disponibilidad de la red
+en los países de la Unión Europea, EE.UU. y Japón se acerca a los
+valores de disponibilidad obtenidos en la RTPC, mientras que en
+el resto de áreas los tiempos de funcionamiento de los servidores
+deben mejorar para aproximarse a los valores de referencia que
+permitan considerarlos una alternativa fiable a la RTPC. 
+Por otra parte, es preciso tener en cuenta la limitación que
+supone la dependencia de la red eléctrica. En la RTPC, los
+terminales reciben la energía a través de la línea telefónica, lo
+que les garantiza su independencia de la red eléctrica. En el caso
+del equipamiento VoIP, la alimentación se consigue bien
+mediante conexión directa, bien a través del cable de red.
+Compatibilidad con servicios de emergencia
+Otro de los inconvenientes que presentan las llamadas de voz
+sobre VoIP es la incompatibilidad con los servicios de
+emergencia. Dichos servicios basan su eficiencia en la posibilidad
+de localizar geográficamente la procedencia de la llamada. En el
+caso de la telefonía fija, esto se consigue gracias a la numeración
+que presenta el terminal desde el que se emite la llamada. Por su
+parte, la telefonía móvil utiliza la celda desde la que transmite el
+terminal para obtener una localización aproximada del usuario.
+Con la tecnología VoIP, el dispositivo desde el que se efectúa la
+llamada no presenta un número correspondiente a la
+numeración de la telefonía fija tradicional, sino que obtiene una
+dirección IP dinámica, distinta en cada punto de conexión. Esto
+facilita el nomadismo del número de teléfono, pero también que
+no se pueda obtener información sobre la posición geográfica
+del terminal en un momento determinado.
+Aunque en la actualidad esta limitación sigue presente,
+diferentes compañías trabajan en la definición de mecanismos 17
+que permitan asociar una dirección IP a un número de la RTPC,  y
+la regulación contempla numeración fija para servicios VoIP. newsletter.qxp  22/03/2006  9:14  PÆgina 18
+¿Qué aporta el despliegue tecnológico
+descrito? 
+¿Cuáles son las ventajas funcionales?
+Aspectosfuncionales
+A continuación se muestran algunos de los valores diferenciales Solución multifuncional a bajo coste
+de la VoIP que hacen de este servicio una alternativa en muchos
+entornos a la tradicional RTPC. En la RTPC, las aplicaciones de valor añadido, como el buzón de
+voz, el traspaso y desvío de llamadas, la llamada a tres, etc., son
+Reducción de los costes facturadas según las tarifas telefónicas, o bien tarificadas como
+servicios adicionales. Sin embargo, en las comunicaciones VoIP
+Según el patrón de consumo, la VoIP puede suponer un todas estas aplicaciones y muchas otras no suponen un coste
+importante ahorro en la factura de los servicios de adicional para el usuario, al estar basadas en IP y no necesitar de
+telecomunicaciones. equipamiento adicional.
+En el caso de los usuarios corporativos, las llamadas entre Existen aplicaciones para VoIP que serían técnicamente muy
+distintas sedes conectadas a través de Redes Privadas Virtuales o costosas de implementar en la RTPC, como mostrar información
+circuitos dedicados no tienen coste. El efecto de este ahorro se ve sobre la presencia de una lista de contactos, o la integración de la
+multiplicado cuando las localizaciones de la compañía son de marcación con programas informáticos como los gestores de
+carácter global con elevado tráfico internacional. correo electrónico. Por último, los servicios VoIP abren nuevas
+posibilidades al comercio electrónico, como la integración de los
+A estos ahorros en tráfico es preciso sumar los ahorros derivados servicios de voz en la publicidad. 
+del alquiler y mantenimiento de centralitas telefónicas,
+gestionables de forma remota y multifuncionales, con el impacto Finalmente, el servicio de telefonía desde el ordenador aumenta
+que esto último conlleva en las economías de escala asociadas a la flexibilidad y la capacidad de movilidad de los empleados,
+18 la integración de dispositivos de gestión de red. tanto en cambios de localización temporales como
+permanentes.
+En el caso de los usuarios residenciales, los ahorros más
+importantes se presentan en las llamadas internacionales entre Fácil mantenimiento
+usuarios de softphones.
+La gestión de las redes de comunicaciones se hace de manera
+integrada, al existir una sola red utilizada para la transmisión
+ManagementSolutions  -  VoIP : convergencia y comoditización newsletter.qxp  22/03/2006  9:14  PÆgina 19
+Soporte a la movilidad
+Con el uso de softphones, todo ordenador con tarjeta de
+sonido, micrófono y acceso a la red se convierte en un teléfono.
+Con la extensión a los dispositivos inalámbricos, es posible
+recibir las llamadas tanto en un terminal fijo como en uno
+móvil.
+Empleados desplazados a otras oficinas pueden disponer de
+todos los servicios con los que cuentan en sus oficinas de
+origen, tan solo con conectar su ordenador portátil a la red
+corporativa. 
+Todas estas operaciones se realizan sin la necesidad de la
+intervención de los equipos de gestión y mantenimiento de red
+y servicios.
+Colaboración en tiempo real
+Con la adopción de los servicios VoIP, no sólo es posible realizar
+llamadas de voz, sino que también se facilita la integración de la
+videotelefonía y de las aplicaciones de mensajería instantánea.
+Por otra parte, con la migración a redes de comunicaciones
+basadas en el protocolo IP, surge la posibilidad de implementar
+nuevas aplicaciones en los terminales. Navegar por Internet o
+tanto de datos como de servicios de voz. Para facilitar su recibir noticias en tiempo real, información sobre la Bolsa, el
+gestión, existen herramientas que informan en tiempo real sobre tiempo, etc., son nuevos servicios que se pueden integrar en los
+el estado de las redes y de los enlaces, que facilitan el terminales telefónicos. 
+mantenimiento y la rápida solución de incidencias.
+Esta posibilidad de integración de servicios se debe a la
+Mejor uso de los recursos homogeneización de estándares. Tanto IP como UDP son
+actualmente los protocolos estándares en los que se basa la
+En la RTPC, cada usuario dispone de una línea. El alquiler de las transmisión de datos.
+líneas se paga por igual, independientemente del uso que se
+haga de ellas. Con la utilización de la VoIP, este coste adicional El protocolo de señalización SIP ha sido el elegido por la
+se diluye, al integrarse la red de telefonía en la de datos. industria como la principal herramienta para establecer,
+Adicionalmente, con el uso de VoIP, las necesidades de ancho gestionar y finalizar llamadas entre los terminales. 
+de banda pueden ser satisfechas conforme las necesidades
+crezcan. De esta forma, terminales diversos como PDAs, móviles,
+teléfonos de sobremesa o aplicaciones informáticas, pueden
+En la RTPC, cuando un usuario está realizando una llamada, interactuar de forma transparente mediante el uso de estos
+mantiene totalmente ocupada la línea. Sin embargo, el tiempo protocolos.
+que realmente transmite información es aproximadamente de
+un 10%-25%. El resto son tiempos de ocupación ineficiente de Gestión mejorada de la red
+la red.
+Las redes IP disponen de herramientas muy especializadas que
+permiten gestionar estas redes con gran precisión. Por tanto, en 19En la VoIP, la utilización de la red se reduce a los períodos en que
+se transmite o recibe voz, con lo que es posible una mayor las redes VoIP es posible encontrar y solucionar eventuales
+eficiencia en el uso del ancho de banda, posibilitando dar servicio congestiones de tráfico de manera rápida y eficiente gracias a
+a un mayor número de usuarios. Adicionalmente, el uso medio los mecanismos de balanceo de tráfico de los que disponen los
+de las redes de datos es aproximadamente de un 30%, con lo que protocolos de transporte. El control y mantenimiento de las
+es posible un mejor aprovechamiento de dichas redes. redes se puede hacer de forma local o remota. newsletter.qxp  22/03/2006  9:14  PÆgina 20
+Aspectosregulatorios
+El sector de las telecomunicaciones (o de las comunicaciones regulatorias puestas de manifiesto por la actual convergencia de
+electrónicas, como ha venido a llamarse desde la entrada en servicios, el Nuevo Marco Regulatorio estableció un conjunto de
+vigor del Nuevo Marco formulado por la Directiva 2002/21 - principios que inspiran la regulación de los servicios de
+Directiva Marco - y cuatro directivas específicas) ha sido comunicaciones electrónicas.
+tradicionalmente un sector regulado.
+Previamente a la entrada en vigor del Nuevo Marco, el análisis
+Las características económicas que marcan un mercado con regulatorio de los nuevos servicios se basaba en la valoración de
+elevados costes hundidos y conformado en sus orígenes como si los mismos respondían a las características de los ya existentes
+un monopolio natural, hacen necesaria la intervención de la y, por ende, si podría ser de aplicación la regulación vigente.
+regulación para, por un lado, garantizar la prestación del servicio
+bajo unas condiciones que garanticen al operador la rentabilidad Con el Nuevo Marco se instaura un conjunto de principios que
+ajustada a mercado, y, por otro, velar por un mercado eficiente y deben regir el sector de las comunicaciones electrónicas (un
+la protección de los derechos de los usuarios. concepto de mayor ámbito de cobertura que el de
+"telecomunicaciones") y sobre dichos principios generales se
+Si bien es cierto que estas notas no son exclusivas del sector de interpretan las nuevas realidades del mercado. Estos principios
+las telecomunicaciones, una característica está presente en este están definidos desde la necesaria generalidad que debe revestir
+sector de forma más destacada que en el resto de sectores todo principio y que garantiza así su aplicación para nuevos
+tradicionalmente regulados: su dinamismo. Cambios servicios no desarrollados hasta la fecha. El caso más claro de
+tecnológicos y de configuración de operadores y ofertas esta configuración general de los principios es el caso del
+convierten el papel del regulador de las comunicaciones principio de neutralidad tecnológica, como se expresa más
+20 electrónicas en un denodado esfuerzo para dar con su regulación adelante.
+respuestas a la cambiante realidad del mercado.
+Con el objetivo de presentar una visión global del tratamiento
+La consolidación de Internet, la universalización de algunos de regulatorio que de la VoIP han hecho las autoridades
+sus servicios, y la penetración alcanzada por sus tecnologías de regulatorias europeas (y por extensión, nacionales), a
+acceso, representa uno de los casos más ilustrativos de la realidad continuación se recoge un análisis del tratamiento regulatorio
+anteriormente descrita. Para dar respuesta a las necesidades previo y posterior a la entrada en vigor del Nuevo Marco.
+ManagementSolutions  -  VoIP : convergencia y comoditización newsletter.qxp  22/03/2006  9:15  PÆgina 21
+1990, p. 10) obligó a los Estados miembros, inicialmente, a poner
+fin a los derechos especiales y exclusivos de suministro de
+servicios de telecomunicaciones distintos de la telefonía vocal, de
+servicios por satélite y de radiocomunicaciones móviles y,
+posteriormente, estableció de manera gradual la plena
+competencia.
+El 20 de octubre de 1995, la Comisión Europea publicó una
+Comunicación al Parlamento Europeo y al Consejo sobre el
+estado y aplicación de la Directiva 90/388/CEE, relativa a la
+competencia en los mercados de servicios de
+telecomunicaciones (95/C 275/02, DO C 275, p. 2), en la que se
+exponía el enfoque de la Comisión en torno a la aplicación de la
+definición del artículo 1 de la Directiva 90/388/CEE. Conforme a
+dicho artículo, "se entenderá por servicio de telefonía vocal la
+explotación comercial para el público del transporte directo y de
+la conmutación de la voz en tiempo real desde y con destino a
+los terminales de la red pública conmutada, que permite a
+cualquier usuario utilizar el equipo conectado a su terminal para
+comunicar con otro terminal".
+La nueva realidad tecnológica y de servicios que permitió a
+finales de los 90 transmitir voz a través de Internet, abrió un
+nuevo campo por el que la Comisión debía adoptar un
+suplemento a la Comunicación de 1995 dedicado a estos
+servicios.
+Así surgió la Comunicación 98/C 6/04, que se refiere a los
+intercambios bidireccionales de comunicaciones vocales a través
+de Internet y que aborda dos cuestiones fundamentales de orden
+normativo: 
+La regulación bajo el antiguo marco
+1.  Determinar, atendiendo a la definición de telefonía vocal de
+El marco normativo anterior a la aprobación de la Directiva la Directiva 90/388/CEE, si debía considerarse que estos
+2002/21 y complementarias, establecía una distinción entre dos servicios ya estaban liberalizados en esta fase previa a la
+fenómenos distintos, la VoIP y la VoInternet, si bien la última completa liberalización que debía producirse en 1998 de los
+forma parte o está incluida en la primera. Esta misma distinción la servicios de telefonía vocal y de las infraestructuras de
+emplea la UIT en su Informe Final sobre telefonía IP de 9 de telecomunicaciones.
+marzo de 2001. En este sentido, el citado Informe indica que la
+"telefonía IP - término que puede ser utilizado de forma 2.  Precisar en qué medida deberían aplicarse a los servicios de
+intercambiable por el de VoIP -  se utiliza como un término comunicación vocal prestados a través de Internet los
+genérico para la prestación de servicios vocales, facsímil y elementos del marco normativo establecido para 1998
+servicios conexos, parcial o totalmente por redes basadas en IP aplicables a la prestación de servicios de telefonía vocal.
+con conmutación de paquetes", mientras que la telefonía
+Internet - o VoInternet - hace referencia a la VoIP transportada En su examen de la problemática de la telefonía de Internet, esta
+total o parcialmente por la red Internet. Comunicación se centra, especialmente, en las situaciones en que
+los usuarios conectan con Internet a través de terminales de la
+Este entorno conceptual es adaptado por la CMT, que denomina red (fija) pública conmutada para efectuar una comunicación, en
+VoIPweb al servicio de VoInternet y VoIPred al tráfico de voz VoIP. contraposición con, por ejemplo, las conexiones dedicadas u
+otros medios que no utilizan ese tipo de terminales. 
+En este marco conceptual, el análisis que realiza el regulador se
+centra en señalar cuándo la oferta del servicio de voz sobre IP Con arreglo a la definición de la telefonía vocal de la Directiva
+90/388/CEE, las comunicaciones vocales entre usuarios de 21(sea sobre Internet o no) tiene la consideración de telefonía vocal,
+y por tanto el servicio se asemeja a la telefonía fija tradicional. La Internet sólo pueden considerarse telefonía vocal si se cumplen
+calificación del servicio de una u otra naturaleza determinará la los siguientes criterios: 
+aplicación de una regulación específica.
+1) Las comunicaciones son objeto de explotación comercial 
+La Directiva 90/388/CEE, relativa a la competencia en los El término "comercial" debe entenderse en el sentido habitual de
+mercados de servicios de telecomunicaciones (DO L 192 de 24. 7. la palabra, es decir, que la transmisión de voz debe realizarse newsletter.qxp  22/03/2006  9:15  PÆgina 22
+como una actividad comercial aparte con ánimo de lucro. Por antiguo marco como el deber de conectar dos terminales de la
+consiguiente, no incluye el mero suministro técnico no comercial red telefónica pública conmutada al mismo tiempo. Estos
+de una conexión telefónica entre dos usuarios. terminales debían tener asignado un número de abonado del
+plan nacional de numeración telefónica.
+En el caso de Internet, mientras que el suministro de programas y
+visualizadores (con frecuencia preinstalados en los ordenadores Por consiguiente, si el acceso a Internet se obtenía mediante
+personales) que permiten a los usuarios de los mismos enviar y circuitos arrendados, el servicio no podría calificarse de telefonía
+recibir comunicaciones vocales tiene fines comerciales, en la vocal, aun cuando la llamada termine en la red pública
+mayoría de los casos la prestación comercial del servicio de conmutada, independientemente de si se conecta un teléfono o
+transporte de voz no es el objetivo principal de los proveedores un ordenador.
+de acceso, y la telefonía de Internet sólo es una prestación más
+del acceso a Internet elegido por el cliente por diversos motivos: Si el usuario de Internet sólo puede llamar a otros abonados de
+navegar, disponer de correo electrónico, extraer ficheros y datos, Internet cuyos ordenadores estén conectados por un módem y
+etc. En otros casos, el usuario adquiere los programas necesarios utilicen un programa informático compatible, tampoco se tratará
+por su cuenta, sin que se los facilite el proveedor de acceso al de un servicio de "telefonía vocal", porque no se cumple el
+que se abona. requisito de que "permita a cualquier usuario [. . .] comunicar con
+otro terminal". 
+Así, como en la mayoría de los casos las comunicaciones vocales
+no son más que una parte del servicio integral de Internet 4) Transporte directo y comunicación de voz en tiempo real 
+ofrecido al cliente, por regla general el servicio de voz por Habida cuenta de la técnica utilizada para las primeras
+Internet no cumple este primer criterio de la definición comunicaciones vocales entre usuarios de Internet y de la
+comunitaria de telefonía vocal. primera fase de desarrollo de la tecnología de Internet
+(fundamentalmente, ancho de banda y técnicas de compresión),
+Sólo si una organización comercializara un servicio de telefonía al principio no se podía considerar que la telefonía de Internet
+por Internet entre teléfonos dentro de la Unión Europea como tuviese lugar en tiempo real. Por lo general, el período de tiempo
+una forma alternativa de servicio de telefonía vocal, cabría que exigían el tratamiento y la transmisión de un terminal a otro
+considerar que lo explota con fines comerciales. todavía era en aquel momento tal que no podía considerarse que
+este servicio de voz tenía la misma calidad que un servicio
+De igual modo, en el caso de las comunicaciones vocales normal en tiempo real.
+efectuadas a partir de un ordenador personal, si la prestación de
+un servicio de llamadas externas ("dial out") a cualquier número Esta afirmación es válida independientemente de que la
+de teléfono se convirtiese en un elemento decisivo de la comunicación vocal se transmita vía Internet entre dos
+estrategia comercial de los prestadores de servicios, podría ordenadores, entre un ordenador y un teléfono conectado a la
+considerarse que suministran el servicio de transporte de voz con red pública conmutada o entre dos teléfonos. 
+fines comerciales.
+En resumen, la Comisión consideró que la definición de la
+2) Para el público telefonía vocal contenida en la Directiva 90/388/CEE, junto con los
+En el caso de los servicios de voz de ordenador a ordenador, precedentes existentes, ofrecía una correcta orientación para
+aunque sólo los usuarios que estén abonados a un prestador de valorar la situación reglamentaria de los servicios de
+servicios en Internet que facilite acceso a esa red y utilicen comunicación vocal de Internet en la fase previa a la liberalización.
+programas compatibles podrían usar Internet para llamarse entre
+sí, cabría aducir que el servicio se prestaría "al público", dado que La Comunicación de 1998 analizada anteriormente ya anunciaba
+estaría disponible para todos en las mismas condiciones. que debía revisarse su contenido antes del año 2000 "a la luz de
+los cambios tecnológicos y del mercado". Con este fin, la
+Igualmente, las comunicaciones vocales de ordenador a teléfono Comisión llevó a cabo durante el verano de 2000 una consulta
+y de teléfono a teléfono transmitidas vía Internet, en las que la pública. Este proceso se materializó en la Comunicación de la
+organización que ofrece el servicio se encarga de convertir la Comisión sobre la naturaleza de los servicios de voz en Internet
+22 señal cuando es preciso, cumplirían este criterio, ya que estos con arreglo al Derecho comunitario y, en particular a la Directiva
+servicios estarían disponibles para todos previo acuerdo 90/388/CEE (2000/C 369/03). 
+comercial con la organización en cuestión.
+Tras la consulta pública la Comisión llegó a la conclusión de que
+3) Entre terminales de la red pública conmutada con el marco normativo de la Directiva de servicios en vigor
+"Entre terminales de la red pública conmutada" se entendía en el (90/388/CEE) , no era necesario introducir cambios sustanciales
+ManagementSolutions  -  VoIP : convergencia y comoditización newsletter.qxp  22/03/2006  9:15  PÆgina 23
+Dado el carácter de "marco" de la nueva regulación (y la
+necesaria trasposición a los ordenamientos jurídicos nacionales) y
+el momento de consolidación en el que se encuentra el proceso
+de implantación en los distintos países europeos, la regulación
+que aborda la problemática asociada a la VoIP debe buscarse en
+los principios de dicho "marco".
+Principios generales
+El nuevo marco europeo de las comunicaciones electrónicas se
+basa en los siguientes principios básicos:
+1.  Mínima intervención, mediante el establecimiento de una
+regulación que habilite directamente para la prestación de
+servicios y fomento de la competencia efectiva desde el estímulo
+a la inversión en materia de infraestructuras y a la innovación.
+2. Neutralidad tecnológica, considerando las distintas
+tecnologías con capacidades adecuadas de transmisión. El
+principio de neutralidad tecnológica comenzó a consolidarse en
+la legislación europea con motivo de la revisión de 1999 sobre los
+en la Comunicación de 1998. La Comisión consideró que, en
+servicios de telecomunicaciones. El nuevo marco regulador
+general, la telefonía en Internet seguía sin ajustarse al concepto
+europeo de las comunicaciones electrónicas viene a materializar
+de "telefonía vocal" definido en el Art. 1 de la Directiva
+los principios de mínima intervención y de neutralidad
+90/388/CEE. 
+tecnológica. El primero de ellos tiene su referente normativo en
+la Directiva de Acceso (D. 2002/20/CE) en la que se establece la
+Esto significaba que, excepto en casos muy concretos en que se
+sustitución de las autorizaciones necesarias ex ante por un
+cumplían dichas condiciones, los Estados miembros debían
+sistema en el que debe primar la autorización general. Si bien es
+seguir permitiendo a los proveedores de acceso/servicios de
+cierto que el principio de neutralidad tecnológica no tiene un
+Internet ofrecer servicios de voz en Internet al amparo de las
+referente normativo tan claro como lo tiene el de mínima
+autorizaciones generales para la transmisión de datos y que no se
+intervención, dicho principio rige el nuevo marco normativo
+podía exigir la obtención de una licencia específica.
+como queda de manifiesto en la redacción de la Directiva Marco
+2002/21/CE. Así, esta Directiva recoge la "conveniencia de que la
+A la inversa, los servicios de comunicación vocal que cumplieran
+regulación sea tecnológicamente neutra", en el sentido de no
+las cuatro condiciones fijadas en la Directiva y, por consiguiente,
+imponer ni discriminar en favor de una determinada tecnología,
+pudieran sustituir a los servicios de telefonía vocal prestados por
+sino de garantizar que la prestación de servicios esté regulada de
+medios tradicionales debían ser considerados como telefonía
+forma homogénea y con independencia de la infraestructura de
+vocal y ser sometidos al régimen regulador pertinente, en
+comunicaciones mediante la cual se prestan estos servicios.
+consideración al principio de neutralidad tecnológica.
+El concepto de producto / servicio de
+La regulación bajo el nuevo marco comunicaciones electrónicas
+Para analizar cómo puede afectar el principio de neutralidad
+La situación bajo la Directiva 2002/21/CE y el nuevo tecnológica antes mencionado, se hace necesario definir qué
+marco regulador. Conclusiones a la consulta de la entiende la regulación europea por productos y servicios.
+CMT de 3 de febrero de 2005. 23
+Para este fin, resultan de utilidad las directrices de la Comisión
+El Nuevo Marco de las comunicaciones electrónicas está formado sobre el análisis del mercado y evaluación del peso significativo
+por la Directiva 2002/21/CE (Directiva Marco) y cuatro directivas en el mercado dentro del marco regulador comunitario de las
+adicionales (específicas). A estas directivas específicas es redes y los servicios de comunicaciones electrónicas (2002/C
+necesario sumar la Directiva 2002/77/CE que deroga la Directiva 165/03) de 11 de julio de 2002.
+90/388/CEE y refunde las modificaciones anteriores. newsletter.qxp  22/03/2006  9:15  PÆgina 24
+Estas directrices, que tienen por objetivo último aportar criterios - Interceptación de las comunicaciones electrónicas 
+a las ANR para la determinación de la existencia de peso - Servicios de emergencia
+significativo de mercado de un operador en un mercado de
+referencia, definen qué debe entenderse por servicio de
+comunicaciones electrónicas a estos efectos: "según Naturaleza del servicio: STDP o SCE
+jurisprudencia consolidada, el mercado de productos o servicios
+pertinente abarca todos los productos o servicios que son En una primera instancia de aplicación del principio de
+suficientemente intercambiables o sustituibles, no sólo por sus neutralidad tecnológica anteriormente expuesto, el
+características objetivas, en virtud de las cuales resultan tratamiento regulatorio de la VoIP y del STDP debería ser
+especialmente idóneos para satisfacer las necesidades constantes homogéneo en tanto en cuanto los "servicios prestados",
+de los consumidores, sus precios o su uso previsto, sino también también definidos anteriormente, fueran considerados iguales. 
+por las condiciones de competencia o la estructura de la oferta y
+la demanda en el mercado de que se trate. Los productos o De no ser así considerado, la VoIP sería enmarcada en la
+servicios que sólo son intercambiables entre sí en una medida categoría de "servicio de comunicación electrónica" (SCE) con
+limitada o relativa no forman parte del mismo Mercado. (..) La un marco de referencia regulatoria menos restrictivo que el
+intercambiabilidad de productos entre diferentes servicios de que es susceptible de aplicación al STDP.
+comunicaciones electrónicas será cada vez mayor gracias a la
+convergencia de las distintas tecnologías. El uso de sistemas Según se pone de manifiesto en las conclusiones de la CMT, la
+digitales conduce a una semejanza creciente en el rendimiento y posición mayoritaria de los que dieron contestación a la
+las características de los servicios de red que utilizan tecnologías consulta es que la VoIP no debe considerarse equiparable al
+diferentes. Por ejemplo, una red de conmutación de paquetes, STDP por contar la primera con características propias que
+como Internet, puede utilizarse para transmitir señales de voz aconsejan su categorización como SCE, que precisa
+digitalizadas en competencia con los servicios tradicionales de exclusivamente de interoperabilidad con los STDP para
+telefonía vocal". permitir comunicaciones con usuarios de ambos servicios. Esta
+necesidad de interoperabilidad precisaría numeración
+De esta descripción puede desprenderse que los servicios telefónica E.164 como único requisito, no siendo de aplicación
+telefónicos de voz a través de la RTPC son equiparables a los otras obligaciones que afectan al STDP con el objetivo de no
+servicios de VoIP / VoInternet siempre que exista una limitar el desarrollo y consolidación de la tecnología. 
+"intercambiabilidad de productos". Por tanto, el nuevo marco
+regulador asume el criterio de equivalencia funcional para la Entre las limitaciones o especificidades que permiten esta
+determinación de servicios. categorización está la necesidad de contar con un acceso a
+Internet de banda ancha, la ausencia de obligación de servicio
+universal, niveles de calidad, etc. Todos estos aspectos, a los
+Aspectos específicos: consulta de la CMT sobre VoIP que habría que sumar otros relativos a su soporte tecnológico,
+hacen para la Comisión que los usuarios no vean la VoIP como
+El 27 de mayo de 2004 la CMT formulaba una consulta pública un servicio sustituible del STDP. Así, y conforme a la
+sobre determinados aspectos de interés normativo para el servicio exposición de la definición de "producto/servicio" realizada
+de VoIP, publicando sus conclusiones el 3 de febrero de 2005. anteriormente, estaríamos ante dos servicios distintos en su
+tratamiento regulatoio.
+En una primera aproximación al debate regulatorio que surge
+en torno a la VoIP, la CMT identifica como aspecto a discernir,
+al igual que ocurría antes de la entrada en vigor del Nuevo
+Marco, cuándo la VoIP debe ser considerada "servicio
+telefónico disponible al público" (STDP), acepción incorporada
+por el Nuevo Marco para el análisis de la situación
+competencial de los mercados y que incluye tanto telefonía fija
+como móvil.
+24
+En la consulta formulada por la CMT se analizan los siguientes
+aspectos de interés para el tratamiento regulatorio de la VoIP:
+- Naturaleza del servicio: STDP o SCE
+- Numeración
+ManagementSolutions  -  VoIP : convergencia y comoditización newsletter.qxp  22/03/2006  9:15  PÆgina 25
+En este punto, y dadas las especificidades concurrentes en la VoIP  Segmento 51: "Numeración no geográfica atribuida para los
+que permiten su categorización como SCE, la CMT entiende servicios VN cuando los puntos de acceso estén dentro del
+preciso dotar de protección a los usuarios haciendo constar en territorio nacional sin más limitaciones". 
+los contratos de estos servicios las limitaciones que permiten
+distinguir a la VoIP como SCE y no como STDP. Dado que la posibilidad de conservar el número por cambio de
+operador (portabilidad) es una facilidad positiva en términos de
+Todos estos aspectos conducen, según la CMT, a considerar a la competencia de la que los usuarios han hecho amplio uso
+VoIP como SCE y regular un entorno de mínimos para no demostrando su eficacia, se exigirá a los operadores de este
+interferir en el proceso de desarrollo de la tecnología. nuevo servicio que la ofrezcan, de igual forma a como vienen
+haciendo en telefonía fija y móvil.
+Numeración
+Interceptación de las comunicaciones 
+Como se apuntaba anteriormente, el aspecto más crítico a
+determinar por el regulador para dar cumplimiento a las Otra de las cuestiones planteadas por la CMT en la consulta
+necesidades de interoperabilidad de la VoIP es la numeración. pública objeto de análisis, se centra en la necesidad o no de
+imponer a los proveedores de servicios de voz utilizando la
+La postura mayoritaria de quienes dieron respuesta a la consulta tecnología basada en conmutación de paquetes, la obligación
+respalda la atribución de numeración específica para este de interceptar las comunicaciones bajo requerimiento de la
+servicio. A este respecto, la CMT apunta la conveniencia de que autoridad conforme se recoge en el artículo 33 de la LGT
+dicha numeración específica sea tecnológicamente neutral y que 32/2003, donde se establece que: "los operadores deberán
+sean las características del servicio las que determinen la adoptar a su costa las medidas que se establezcan
+numeración específica. Entre estas características estarían la reglamentariamente para la ejecución de las interceptaciones
+posibilidad de nomadismo, necesidad de acceso de banda ancha dispuestas conforme a lo establecido en el artículo 579 de la Ley
+y la capacidad de combinar distintos servicios multimedia. De de Enjuiciamiento Criminal y en la Ley Orgánica 2/2002, de 6 de
+estas características es la de "nomadismo" la que mayor esfuerzo mayo, reguladora del control judicial previo del Centro Nacional
+normativo requiere. En este sentido, la Comisión es favorable a la de Inteligencia."
+asignación de numeraciones con nomadismo limitado (dentro
+del distrito telefónico) y de un desarrollo posterior de A este respecto, la CMT concluye que, a pesar de que se esté
+numeración específica que no sea identificable con tarifas avanzando en el terreno de la interceptación de las
+elevadas. comunicaciones, el legislador no debe forzar a los operadores a
+implantar en sus redes soluciones propietarias que sean muy
+Así, la Comisión marca dos acciones urgentes: costosas sino estandarizadas o, al menos, ampliamente
+aceptadas en la industria. Esto además redundaría, según la
+1. Atribución de un nuevo rango de numeración específica opinión de la Comisión, en una mayor eficacia de la
+para SCE de VoIP con reubicación de acceso (nomadismo). interceptación a nivel global. 
+2. Habilitación de la asignación y uso de numeración
+geográfica, limitando el nomadismo al ámbito del distrito Servicios de emergencia
+telefónico, para SCE de VoIP.
+La VoIP plantea la limitación de no identificar la posición
+Estas acciones se materializaron el 18 de agosto de 2005, día en geográfica del usuario sin intervención expresa de éste cuando
+que se publicó en el BOE la Resolución de la Secretaría de Estado se accede desde un punto de acceso distinto al habitual o
+de Telecomunicaciones y para la Sociedad de la Información conocido.
+(SETSI), por la que se atribuían recursos públicos de numeración
+para "servicios vocales nómadas VN". Esta asignación se En este punto,  la posición del sector, expresada a través de las
+encuentra distribuida en dos segmentos: respuestas recibidas a la consulta, es la de la interpretación flexible
+de la exigencia de identificación de la localización geográfica hasta 25
+ Segmento 8XY: "Numeración geográfica atribuida para la que la tecnología permita subsanar las actuales limitaciones.
+prestación de servicios VN. Se incluye como condición para la
+prestación de estos servicios con esta numeración que los A este respecto, las conclusiones de la CMT recogen la analogía con
+puntos de acceso al servicio se encuentren asociados al distrito este mismo requerimiento para la telefonía móvil, que sólo pudo
+telefónico al que corresponda la numeración utilizada". ser cumplido cuando el estado de la tecnología así lo permitió. newsletter.qxp  22/03/2006  9:15  PÆgina 26
+Glosario
+ADSL Asymmetric Digital Subscriber Line. Línea digital de LAN Local Area Network. Red de ordenadores que cubre
+alta velocidad que utiliza como soporte la línea de una pequeña área geográfica
+cobre usada para conectar al usuario a la RTPC LMDS Local Multipoint Distribution Service. Tecnología de
+ATA Adaptador de Telefonía Analógica. Dispositivo acceso inalámbrica de banda ancha vía radio
+utilizado para conectar uno o más terminales PCM Pulse Code Modulation. Representación digital de una
+analógicos estándar a una red VoIP señal analógica donde las muestras son
+ATM Asynchronous Transfer Mode. Protocolo que codifica proporcionales a la amplitud de la señal
+el tráfico de datos en celdas de longitud constante RDSI Red Digital de Servicios Integrados. Red que posibilita
+CDMA Code Division Multiple Access. Sistema de telefonía la transmisión digital simultánea de voz y datos a
+celular basado en la utilización de diferentes códigos través de la línea de cobre
+en cada canal RTCP Real Time Control Protocol. Protocolo de red que
+CODEC Conjunto de especificaciones para la codificación de proporciona información de control sobre un flujo de
+señales analógicas en digitales y viceversa datos RTP
+CRTP Compressed Real Time Protocol. Esquema de RTP Real Time Protocol. Protocolo que define un formato
+compresión diseñado para reducir las cabeceras de de paquete estándar para la transmisión de señales
+los protocolos IP/UDP/RTP en los datagramas de audio y vídeo a través de Internet
+DHCP Dynamic Host Configuration Protocol. Protocolo de SIP Session Initiation Protocol. Protocolo de señalización
+red mediante el cual el servidor proporciona al cliente para el establecimiento, modificación y terminación
+la información necesaria para su conexión a la red, así de sesiones interactivas multimedia entre usuarios de
+como una dirección IP redes IP
+DSP Digital Signal  Processing. Análisis y procesamiento de UDP User Datagram Protocol. Protocolo para el envío de
+señales de voz y vídeo para su conversión a formato datos basado en el uso de datagramas
+digital Wi-Fi Wireless Fidelity. Conjunto de estándares para redes
+GSM Global System for Mobile Communications. Estándar LAN inalámbricas basado en las especificaciones IEEE
+de telefonía móvil digital, basado en la multiplexación 802.11
+de los canales en el tiempo WiMAX Worldwide Interoperability for Microwave Access.
+IETF Internet Engineering Task Force. Organismo Estándar de transmisión inalámbrica de datos en un
+encargado de desarrollar y promocionar los área geográfica metropolitana
+estándares de Internet
+IP Internet Protocol. Protocolo utilizado para la
+26 transmisión de datos a través de redes basadas en el
+intercambio de paquetes
+ManagementSolutions  -  VoIP : convergencia y comoditización newsletter.qxp  22/03/2006  9:15  PÆgina 27
+Making things happen
+"Excelencia, compromiso, Management Solutions es una Firma internacional de
+conocimiento y dedicación son los consultoría centrada en el asesoramiento de negocio,
+pilares de nuestra forma de actuar...... riesgos, organización y procesos, tanto en sus componentes
+funcionales como en la implantación de sus tecnologías
+relacionadas.
+.......e indudablemente nuestro mayor
+motivo de orgullo" Para dar cobertura a estas necesidades, Management
+Solutions tiene estructuradas sus prácticas por sectores de
+actividad, con profesionales dedicados en exclusividad a las
+industrias que los integran.
+Nuestra práctica de Telecomunicaciones atesora un
+profundo conocimiento de la estructura actual del mercado,
+así como de los principales modelos de negocio
+implantados. Adicionalmente, el dinamismo propio del
+sector nos lleva a realizar una continua actividad de análisis
+de las novedades regulatorias, estratégicas y tecnológicas,
+con el objetivo de poder facilitar  a nuestros clientes el
+mejor camino para acometer sus retos.
+Si desea información adicional, puede contactar con:
+José Antonio Ortega Carrero
+Gerente responsable de la práctica de Telecomunicaciones
+de Management Solutions 
+jose.antonio.ortega.carrero@msspain.com
+Tel.  + 34 91 514 59 70 newsletter.qxp  22/03/2006  9:16  PÆgina 28
+Diseño y Maquetación
+Dpto. Marketing y Comunicación
+Management Solutions - España
+© Management Solutions. 2006
+Todos los derechos reservados
+www.msspain.com

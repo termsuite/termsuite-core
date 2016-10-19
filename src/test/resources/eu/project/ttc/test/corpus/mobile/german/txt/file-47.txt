@@ -1,0 +1,217 @@
+Email übers Handy - der
+Boom der Zukunft
+
+Kunde/Projekt:
+
+2024
+TIC The Internet Company AG, Rotkreuz
+
+Version/Datum:
+
+1.0
+2. März 2007
+
+Autor/Autoren:
+
+Aldo Britschgi
+aldo.britschgi@tic.ch
+
+business-kommunikation-whitepaper.pdf
+
+Seite 1/7
+
+1
+1 
+2 
+3 
+4 
+5 
+6 
+
+Inhaltsverzeichnis
+Inhaltsverzeichnis ............................................................................................................... 2 
+Einleitung .......................................................................................................................... 3 
+Unterwegs wie im Büro kommunizieren .................................................................................. 3 
+Hosted Exchange für Email ................................................................................................... 4 
+Email effizient bewirtschaften ............................................................................................... 6 
+Fazit ................................................................................................................................. 7 
+6.1.1 
+Weitere Informationen zu «Hosted Exchange» und «Mobile Kommunikation» von TIC ...... 7 
+
+business-kommunikation-whitepaper.pdf
+
+Seite 2/7
+
+2
+
+Einleitung
+
+Mobilität und Flexibilität prägen unseren Zeitgeist - entsprechend im Wandel ist die BusinessKommunikation. Denn ohne «Kommunikation» geht ziemlich nichts. Unternehmen sind bemüht, die Kommunikationsmöglichkeiten produktiver und kostengünstiger zu gestalten. Möglichkeiten dazu gibt es viele.
+Nach «food on the go» ist «working on the go» angesagt. Moderne Geschäftskommunikation findet mobil
+und standortunabhängig statt. Basis dazu bildet eine IP-basierende Datenverbindung, sprich ein InternetAnschluss, vorzüglich selbstverständlich mittels Drahtlos-Technologien wie WLAN (Wireless LAN). Erst
+wer online ist, kann von effizienten und kostengünstigen Kommunikationsmöglichkeiten profitieren, sei es
+für Telefonie, Instant Messaging oder die Bewirtschaftung klassischer Kommunikation wie Email, Fax usw.
+Überhaupt scheint sich ein simpler Internet-Zugang zur primären und wichtigsten Kommunikationsvoraussetzung zu entwickeln. Erfahrungen zeigen, dass ein Ausfall des herkömmlichen Telefons kaum mehr
+signifikante Auswirkungen mit sich bringt - funktioniert aber die Internet-Verbindung mal nicht, so ist die
+Hölle los, und in vielen Unternehmen werden komplette Abteilungen und Arbeitsprozesse schlichtweg
+stillgelegt. Entsprechende redundante Internet-Anbindungen und Backup-Szenarien sind gute Zukunftsinvestitionen.
+
+3
+
+Unterwegs wie im Büro
+kommunizieren
+
+Am einfachsten ist die Verbindung über den Laptop und WLAN.
+Solche Verbindungen sind aber längst nicht überall verfügbar. Da
+helfen mobile Datenkarten aus und erlauben weltweiten InternetZugang, wo ein Mobilfunksignal vorhanden ist. Mit solchen Funkkarten surft es sich mobil fast so bequem wie über einen Breitbandanschluss im Büro - selbstverständlich ebenfalls über eine
+drahtlose Verbindung, denn oft findet Teamarbeit ad hoc und
+flexibel statt. Mit Skype oder Messenger, also softwarebasierenden Instant-Messaging- und Telephonieprogrammen, telefoniert
+man gratis rund um die Welt oder tauscht Daten aus.
+Aber zugegeben, ein Notebook mitzuschleppen ist nicht jedermanns Sache. Um so wichtiger sind unkomplizierter Datenzugang
+und Vollzugriff auf Kommunikations- und Unternehmensdaten,
+ohne lästigen Gerätestart oder ähnlichem, einfach und sofort - so
+wie beim Telefonieren.
+Dies ist jetzt Realität, denn mit den Superhandys, den
+«Smartphones», ist jetzt alles möglich: Adressen und Termine
+verwalten, Emails samt Dateianhängen lesen, Emails verschicken, Memos aufnehmen - inzwischen gehören auch Fotos
+schiessen und versenden dazu -, und nicht zuletzt kann man
+mit einem solchen Alleskönner auch mobil telefonieren. Ein
+Smartphone ist die perfekte Kombination aus einem Handy
+und einem PDA (Personal Digital Assistant).
+
+business-kommunikation-whitepaper.pdf
+
+Seite 3/7
+
+Selbstverständlich sind Skype, Messenger und weitere Programme schon längst für Mobiltelefone verfügbar, das heisst, ein Natel stellt nicht mehr zwangsläufig nur eine GSM-Verbindung her. Stattdessen
+verbindet sich das Telefon über WLAN und führt somit das Telefonat über eine IP-basierende Software, beispielsweise eben über Skype, oder verbindet mit der firmeneigenen Voice-over-IP-(VoIP)Telefonanlage.
+
+4
+
+Hosted Exchange für Email
+
+In den letzten Jahren entwickelte sich «Email» zur wichtigsten Unternehmenskommunikation und stellt
+die klassische Telefonie sowie den Fax-Verkehr in den Schatten. Gleichzeitig stellt die Verarbeitung der
+Kommunikationsflut und von gefährlichen Spam-, Phishing- und Viren-Mails eine eigentliche Herausforderung dar. Unternehmen jeder Grösse, vor allem aber auch KMU, sichern sich mit einer Hosted-ExchangeLösung als Rückgrat der Unternehmenskommunikation entscheidende Wettbewerbsvorteile.
+Die Kommunikationsplattform Hosted Exchange bietet weit mehr als bloss Email. Die integrierten organisatorischen Dienste wie Agenda, Kontakte und Pendenzenlisten sind ideal in die EmailFunktionalitäten integriert, welche sich wiederum äusserst komfortabel mit modernen Mobiltelefonen
+bewirtschaften lassen. Mehr noch: Längst entwickelt sich Email zum absolut kritischen Kommunikationsfaktor. Unternehmen sind deshalb gut beraten, auf eine funktionierende Lösung zurückzugreifen.
+Umfassende Datensicherung (Backup und Restore), effizienter Viren- und Spam-Schutz, ausgeklügelte
+Antihacking-Vorsichtsmassnahmen und ein funktionierendes Disaster-Recovery gehören einfach dazu,
+zu vielfältig sind die heutigen Bedrohungen.
+Die Zukunft liegt bei den Smartphones im Package mit Hosted Exchange.
+Deshalb erfahren Managed Services, basierend auf Hosted Exchange, einen wahren Boom, denn die Lösungsanbieter verstehen, diese Herausforderungen zu meistern, und Endbenutzer profitieren von einer
+stets betriebsbereiten Kommunikationsplattform mit zukunftsgerichteten Services. Die neue SoftwareGeneration ab Mitte 2007 unterstützt zudem die integrierte VoIP-Kommunikation und fungiert so gleich
+noch als virtuelle Telefonzentrale, selbstverständlich ebenfalls standortunabhängig. Ob sich jemand vom
+Home Office, von unterwegs oder klassischerweise aus dem Büro einwählt, spielt keine Rolle mehr - die
+VoIP-Telefonverbindung, gesteuert über Outlook, ist von überallher gegeben.
+Checkliste: Business-Kommunikation
+•
+
+Festnetz-Telefonie. Moderne Telefonie-Anbieter verfügen über vorteilhafte und unternehmensfreundliche Tarife. Empfehlung: allenfalls den Anbieter wechseln, mittels «Pre-Selection» ist dies
+unkompliziert möglich. Denn es gibt keine Umstellung auf der bestehenden TelefonieInfrastruktur, die Gespräche werden einfach über einen günstigeren Telefonie-Anbieter geroutet.
+Zudem: Innovative Anbieter stellen standardmässig eine detaillierte Telefonabrechnung zu und
+ermöglichen die Online-Abfrage über ein Web-Portal.
+
+•
+
+IP-Telefonie. VoIP-Lösungen müssen sorgfältig abgewägt werden, da gut funktionierende VoIPLösungen entsprechende Hardware- und Netzwerkvoraussetzungen erfordern. Ein leistungsfähiger Internet-Anschluss mit Quality-of-Service (QoS) ist zwingend erforderlich. Vor allem inhouse
+
+business-kommunikation-whitepaper.pdf
+
+Seite 4/7
+
+machen VoIP-Installationen viel Sinn.
+
+•
+
+Instant Messaging. «Instant Messaging» ist so unmittelbar wie das Telefon, aber ohne lästige
+Arbeitsstörung - und so bequem wie Email, aber verzögerungsfrei. Typische Tools sind Skype,
+Messenger, ICQ und Yahoo-Messenger. Instant Messenger (IM) verwandelt das Unternehmen in
+ein einziges virtuelles Grossraumbüro, beseitigt räumliche Schranken und macht Teamwork sehr
+viel effektiver.
+
+•
+
+Mobil-Abonnement. Man sollte sicherstellen, dass man das richtige Abonnement hat und nicht
+zuviel bezahlt. TIC The Internet Company AG bietet für Unternehmenskunden optimierte Mobilabonnemente an. Diese sind für Vieltelefonierer und für den mobilen Datenaustausch ausgelegt,
+beispielsweise für die Email-Kommunikation mittels Hosted Exchange.
+
+•
+
+Mobil-Telefon. Heutige Smartphone-Geräte vereinen den Leistungsumfang eines Mobiltelefons
+mit dem eines PDA. Diese bieten alle Grundlagen zur mobilen Büro- und Datenkommunikation in
+einem Gerät. Moderne Geräte verfügen darüber hinaus noch über Digitalkameras und sogar über
+integrierte GPS-Empfänger. So wird das Smartphone zum Alleskönner.
+
+•
+
+Email. Email entwickelte sich innert wenigen Jahren zur wichtigsten Kommunikationsform überhaupt. Der Trend geht klar Richtung «Mobile», das heisst, die Email-Bewirtschaftung erfolgt
+standortunabhängig und jederzeit. Wichtig sind leitungsfähige Antispam- und Virenfilter, extrem
+hohe Server-Verfügbarkeit (Provider und Service Level Agreement beachten) und selbstverständlich der unkomplizierte sichere Zugriff von einem beliebigen Endgerät aus, beispielsweise
+Mobilephone, einem beliebigen PC usw.
+
+•
+
+Hosted Exchange. Mit Hosted Exchange erreichen Unternehmen grenzenlose Mobilität in ihrer
+Kommunikation und dank dem Managed-Services-Gedanken ein Maximum an Stabilität sowie
+Zuverlässigkeit. Verschiedene Anbieter offerieren Komplettpakete, und TIC The Internet Company AG verfügt mit dem «Virtual Office»-Ansatz traditionell über einen klaren Leistungsvorsprung.
+Überall und immer auf alle persönlichen Organisations-Daten Zugriff haben, Emails verschicken,
+Termine planen und Aufgaben koordinieren ist nun auf einfachste Weise möglich.
+
+business-kommunikation-whitepaper.pdf
+
+Seite 5/7
+
+•
+
+Internet-Zugang. Dieser ist das A und O für jegliche Geschäftskommunikation - man achte auf
+einen leistungsfähigen Provider, zuvorkommende Kundendienstleistungen und bestmögliche
+Konnektivität (SLA) inkl. Backup-Szenarien. Für mobile Anwendungen haben sich Mobile Cards
+bewährt, welche national und international WLAN oder Verbindungen, basierend auf der GSMInfrastruktur, gewährleisten.
+
+5
+
+Email effizient bewirtschaften
+Nebst den üppigen Features und den reichhaltigen Konfigurationsmöglichkeiten können Anwender bereits heute weltweit und absolut standortunabhängig auf ihre
+gesamte Mailbox zugreifen, wobei auch das Look-andFeel des Web-Logins praktisch identisch mit dem des
+Outlook Clients ist - über einen unabhängigen Webbrowser, versteht sich. Der Zugriff ist nicht nur mit
+Outlook 2003, sondern auch über Web Access, PDA
+(Personal Digital Assistent) und vor allem auch mit dem
+Mobiltelefon möglich, so dass Mitarbeitende jederzeit
+und ortsunabhängig sowohl über Emails als auch Organisationsdaten verfügen können.
+Trend: Die Email-Bewirtschaftung erfolgt standortunabhängig und jederzeit.
+
+Die Zukunft liegt deshalb bei den Smartphones im Package mit Hosted Exchange, welche die Eigenschaften
+von Mobiltelefon und PDA vereinen. Folglich werden
+Kontakte am einfachsten über den PC erfasst. Diese
+stehen dank permanenter Synchronisation umgehend
+auf dem Mobiltelefon zur Verfügung. Wer also ein Telefonat tätigen will, braucht bloss auf den entsprechenden
+Eintrag zu tippen. Spitzenreiter ist derzeit das S200 von Qtek, welches die Eigenschaften eines kleinen
+und leichten Telefons und auch sämtliche Bedürfnissen vom mobilen Büro in hervorragender Weise vereint. Dank Hosted Exchange ist der vollumfängliche Datenabgleich über mehrere drahtlose Übertragungsprotokolle wie GPRS, EDGE und WLAN weltweit gewährleistet. Wer öfters unterwegs ist und die Stifteingabe nicht wirklich mag, bedient sich eines grösseren Modells mit ausziehbarer Minitastatur. Inzwischen
+bieten zahlreiche Hardware-Produzenten Mobilgeräte mit Hosted-Exchange-Funktionalitäten an.
+
+business-kommunikation-whitepaper.pdf
+
+Seite 6/7
+
+6
+
+Fazit
+
+Festnetz-, Mobil- und Internet-Telefonie verschmelzen zusammen mit Email, die Mobilität nimmt ständig
+zu. Der Arbeitsstandort nimmt an Bedeutung ab, während die Effizienz der Mitarbeitenden spürbar steigt,
+dank uneingeschränktem Informationsabgleich rund um die Uhr. Dafür steigen die Anforderungen an den
+Umgang mit elektronischen Medien und an die persönliche Organisationsfähigkeit. Das Gesamtergebnis:
+Effizientere Mitarbeitende, besserer Kundenservice und höhere Produktivität - genau das, was heute jedes Unternehmen braucht.
+Festnetz-, Mobil- und Internet-Telefonie verschmelzen zusammen mit Email.
+6.1.1
+
+Weitere Informationen zu «Hosted Exchange» und «Mobile Kommunikation» von TIC
+
+www.tic.ch
+Die Anforderungen an die persönliche Organisationsfähigkeit nehmen zu.
+
+business-kommunikation-whitepaper.pdf
+
+Seite 7/7
+

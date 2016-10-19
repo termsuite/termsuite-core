@@ -1,0 +1,276 @@
+Microsoft Word - Redes inalámbricas ad hoca.doc Redes inalámbricas ad hoc 
+ 
+Resume 
+ 
+Una red ¨Ad hoc¨, consiste en un grupo de ordenadores que se comunican cada uno directamente con los otros a través de 
+las señales de radio si usar un punto de acceso. Las configuraciones ¨Ad hoc¨, son comunicaciones de tipo punto a punto. 
+Solamente  los ordenadores dentro de un rango de  transmisión definido pueden comunicarse entre ellos. La  tecnología es 
+utilizada en varios campos como en el ejercito, celulares y juegos de videos. En fin, en la tecnología ¨Ad hoc¨, cada terminal 
+de comunicación se comunica con sus compañeros para hacer una red ¨peer to peer¨. 
+ 
+Armando Mercado 
+Rafaelgil Berríos Figueroa 
+Paul Chan Ye 
+ 
+¿Qué es una red ad hoc? permitan ofrecer soluciones para problemas tales 
+ como topología dinámica y recursos de ancho de 
+También conocidas como MANET banda entre otros.  
+"Mobile ad hoc networks". AD HOC viene del  
+latín y se refiere a algo improvisado, mientras que Se pretende utilizar una topología 
+en comunicaciones el propósito de ad hoc es jerárquica la cual se puede lograr utilizando un 
+proporcionar flexibilidad y autonomía proceso conocido como ¨clustering¨; este es un 
+aprovechando los principios de auto-organización.  proceso en el cual los nodos de una red se 
+Una red móvil ad hoc es una red formada sin organizan en grupos llamados clusters. Que es la 
+ninguna administración central o no hay un nodo forma en la que los nodos en MANET se 
+central, sino que consta de nodos móviles que organizan. Sin embargo la mayoría de los estudios 
+usan una interface inalámbrica para enviar de técnicos sobre ¨clustering¨ en ad hoc o 
+paquetes de datos. Los ordenadores están en MANET asume el conocimiento sobre la posición 
+igualdad de condiciones. de los nodos. 
+  
+La conexión es establecida por la Las raíces de la formación de redes ad hoc se 
+duración de una sección. Los artefactos descubren pueden seguir hasta 1968, cuando se iniciaron los 
+otros artefactos cercanos o en rango para formar el trabajos en la red ALOHA (el objetivo de esta red 
+"network". Los artefactos pueden buscar nodos era conectar centros educativos en Hawái). 
+que están fuera del área de alcance conectándose  
+con otros artefactos que estén conectados a la red En 1973 en la PRnet (packet radio 
+y estén a su alcance. Las conexiones son posibles network red de paquetes de radio) una multi red 
+por múltiples nodos. de saltos múltiple. En este contexto, salto múltiple 
+ significa que los nodos cooperaban en la 
+Las redes ad hoc presentan cambios de retransmisión del tráfico en beneficio mutuo para 
+topología. Estos cambios son frecuentes debido a llegar a estaciones distantes que de otra manera 
+su movilidad. Estas características impiden la habría fuera de su alcance. 
+utilización de protocolos de encaminamiento. Y  
+esto crea nuevos retos de investigación que 
+Página 1 Redes inalámbricas ad hoc 
+ 
+Resume 
+ 
+Una red ¨Ad hoc¨, consiste en un grupo de ordenadores que se comunican cada uno directamente con los otros a través de 
+las señales de radio si usar un punto de acceso. Las configuraciones ¨Ad hoc¨, son comunicaciones de tipo punto a punto. 
+Solamente  los ordenadores dentro de un rango de  transmisión definido pueden comunicarse entre ellos. La  tecnología es 
+utilizada en varios campos como en el ejercito, celulares y juegos de videos. En fin, en la tecnología ¨Ad hoc¨, cada terminal 
+de comunicación se comunica con sus compañeros para hacer una red ¨peer to peer¨. 
+ 
+Armando Mercado 
+Rafaelgil Berríos Figueroa 
+Paul Chan Ye 
+ 
+Cuando se estaba desarrollando IEEE dispositivos de un usuario pueden tanto 
+802.11 un estándar para redes de área local interconectarse entre sí como conectarse a punto 
+inalámbrica (wireless local area network WLAN)  de información local por ejemplo, para consultar 
+el Instituto de Ingeniería Eléctrica y Electrónica actualizaciones de salidas de vuelos, cambios de 
+(Institute for Electrical and Electronic puerta, etc. Los dispositivos ad hoc pueden 
+Engineering IEEE) sustituyo el termino red de también retransmitir tráfico entre dispositivos que 
+paquetes de radio por el de red ad hoc.  estén fuera de su alcance. Por lo tanto, el 
+ escenario del aeropuerto contiene una mezcla de 
+Asociadas con las redes saltos múltiples saltos de radios simples y múltiples. 
+de las operaciones militares o de rescate a gran  
+escala y mediante la adopción de un  nuevo La comunicación inalámbrica, 
+nombre. empezando por los sistemas celulares del día 
+ presente, que se apoyan fuertemente en la 
+Hoy día, nuestra visión de la formación infraestructura: 
+de redes ad hoc incluye escenarios tales como los  
+que se representan en la Figura 1, 9 Estaciones bases 
+9 Ubicación central 
+9 Sistema 
+ 
+La Figura 2 representa este aspecto 
+bidimensional en lo que se relaciona con la 
+formación de redes ad hoc. 
+ 
+Figura 1 
+ 
+Donde las personas llevan dispositivos que 
+puedan conectarse en red en régimen ad hoc. Los  
+Página 2 Redes inalámbricas ad hoc 
+ 
+Resume 
+ 
+Una red ¨Ad hoc¨, consiste en un grupo de ordenadores que se comunican cada uno directamente con los otros a través de 
+las señales de radio si usar un punto de acceso. Las configuraciones ¨Ad hoc¨, son comunicaciones de tipo punto a punto. 
+Solamente  los ordenadores dentro de un rango de  transmisión definido pueden comunicarse entre ellos. La  tecnología es 
+utilizada en varios campos como en el ejercito, celulares y juegos de videos. En fin, en la tecnología ¨Ad hoc¨, cada terminal 
+de comunicación se comunica con sus compañeros para hacer una red ¨peer to peer¨. 
+ 
+Armando Mercado 
+Rafaelgil Berríos Figueroa 
+Paul Chan Ye 
+ 
+Figura 2  
+ A medida que aumenta la capacidad de 
+A medida que disminuimos la gestión ordenadores móviles de manera uniforme, 
+centralizada, o nos alejamos de ella, nos también se espera que crezca la necesidad de 
+encontramos moviéndonos en la dirección de una formación de redes ilimitadas. 
+operación ad hoc pura, que también puede ser  
+clasificada en términos de saltos simples o Las redes comerciales ad hoc se podrían 
+múltiples. usar en situaciones allí donde no se dispone de 
+ ninguna infraestructura (fija o celular). 
+Las tecnologías de radio, de acceso, y de  
+encaminamiento completamente descentralizada Ejemplos: 
+habilitadas por Bluetooth, el modo ad hoc IEEE  
+802.11, el modo sin estación PRnet, la red móvil • Operaciones de rescates en zonas 
+ad hoc (MANET), y los conceptos tales como la remotas 
+red de área personal (personal area network - • Cuando la cobertura local debe ser 
+PAN) o la comunicación PAN a PAN se adaptan desplegada rápidamente en un sitio de  
+más o menos enteramente al dominio ad hoc. construcción. 
+ • Acceso inalámbrico publico en zonas 
+Aplicaciones Típicas urbanas. 
+  
+Aplicaciones Militares, donde una Al nivel local, las redes ad hoc que enlazan 
+configuración de red descentralizada es una ordenadores portátiles o de mano (palmtop) 
+ventaja operativa o incluso una necesidad. podrían ser usadas para difundir y compartir 
+ información entre los participantes de una 
+En el sector comercial, los equipos para conferencia. 
+informática inalámbrica móvil no han estado  
+disponibles a un precio atractivo para los grandes Apropiada para aplicaciones de redes 
+mercados. domesticas, donde los dispositivos pueden 
+ comunicarse directamente para intercambiar 
+Página 3 Redes inalámbricas ad hoc 
+ 
+Resume 
+ 
+Una red ¨Ad hoc¨, consiste en un grupo de ordenadores que se comunican cada uno directamente con los otros a través de 
+las señales de radio si usar un punto de acceso. Las configuraciones ¨Ad hoc¨, son comunicaciones de tipo punto a punto. 
+Solamente  los ordenadores dentro de un rango de  transmisión definido pueden comunicarse entre ellos. La  tecnología es 
+utilizada en varios campos como en el ejercito, celulares y juegos de videos. En fin, en la tecnología ¨Ad hoc¨, cada terminal 
+de comunicación se comunica con sus compañeros para hacer una red ¨peer to peer¨. 
+ 
+Armando Mercado 
+Rafaelgil Berríos Figueroa 
+Paul Chan Ye 
+ 
+información, tal como audio/video, alarmas, y El sistema Bluetooth es tal vez la tecnología 
+actualizaciones de configuración. más prometedora en el contexto de formación de 
+ redes de área personal. 
+Aplicaciones de mayor alcance en este  
+contexto son las redes más o menos autónomas de Funciones típicas de la red ad hoc 
+robots domésticos interconectados que limpian,  
+lavan los platos, cortan el césped, realizan Seguridad 
+vigilancia de seguridad, y otras labores parecidas.  
+ La seguridad es un motivo de preocupación 
+Hay personas que han propuesto incluso en una red ad hoc. 
+redes de saltos múltiples ad hoc (denominadas  
+redes censoras) • ¿Cómo puede estar seguro un usuario de 
+ que nadie esta curioseando en el trafico 
+Ejemplo: mediante un nodo de reenvió? 
+• Monitorización medioambiental- donde • ¿Es el usuario del otro extremo realmente 
+las redes se podrían utilizar para predecir la persona que dice ser? 
+la polución del agua o para alertar con  
+tiempo de la aproximación de un Los servicios ad hoc no implican muchos 
+tsunami. problemas nuevos. 
+  
+Las redes ad hoc de corto alcance pueden Los requisitos relativos a la autentificación, la 
+simplificar la intercomunicación entre diversos confidencialidad, y la integridad o no repudio son 
+dispositivos móviles. los mismos que para otras muchas redes de 
+ comunicaciones públicas. 
+Ejemplo:  
+• Entre celular y una PDA En una red inalámbrica ad hoc, la confianza 
+ es un problema fundamental. 
+ 
+Página 4 Redes inalámbricas ad hoc 
+ 
+Resume 
+ 
+Una red ¨Ad hoc¨, consiste en un grupo de ordenadores que se comunican cada uno directamente con los otros a través de 
+las señales de radio si usar un punto de acceso. Las configuraciones ¨Ad hoc¨, son comunicaciones de tipo punto a punto. 
+Solamente  los ordenadores dentro de un rango de  transmisión definido pueden comunicarse entre ellos. La  tecnología es 
+utilizada en varios campos como en el ejercito, celulares y juegos de videos. En fin, en la tecnología ¨Ad hoc¨, cada terminal 
+de comunicación se comunica con sus compañeros para hacer una red ¨peer to peer¨. 
+ 
+Armando Mercado 
+Rafaelgil Berríos Figueroa 
+Paul Chan Ye 
+ 
+No podemos confiar en el medio, la  
+única elección que nos queda es usar la Funciones de movilidad 
+criptografía, lo que nos fuerza a confiar en las  
+claves criptográficas usadas. En una red ad hoc, pueden moverse los 
+ nodos del centro de la red o más bien, la totalidad 
+El método que se describe más abajo se de la red está basada en las idea del dispositivo 
+puede usar para distribuir relaciones de confianza que sirven al mismo tiempo tanto de 
+a toda una red ad hoc. encaminadores como de anfitriones. 
+  
+El método se basa en un procedimiento En una red ad hoc, la movilidad es 
+de clave pública y como ejemplo se usa una gestionada directamente por el algoritmo de 
+pequeña red ad hoc (figura 4-7). encaminamiento. 
+  
+ Otras Tecnologías ad hoc 
+Encaminamiento de redes ad hoc  
+ IEEE 802.11 
+Las redes móviles ad hoc el HiperLAN/2 
+encaminamiento de paquetes  entre cualquier par  
+de nodos llega a convertirse en una tarea Conclusión 
+comprometida, porque los nodos se pueden mover  
+de manera aleatoria dentro de la red. Hemos intentado hacer una recopilación 
+ de data de la formación de redes ad hoc 
+Un camino que se consideraba óptimo en principalmente desde el punto de vista técnico. 
+un punto dado del tiempo podría no funcionar en También hemos tratado de clarificar lo que 
+absoluto unos pocos momentos después. realmente es una red ad hoc y hemos visto que las 
+ definiciones varían. Además, las propiedades 
+Para escenarios bajo techo- el cierre de típicas de las redes ad hoc, tales como los 
+una puerta podría ser causa de que se algoritmos de encaminamiento y las implicaciones 
+interrumpiese un camino. de las capas de radio. La inherente 
+Página 5 Redes inalámbricas ad hoc 
+ 
+Resume 
+ 
+Una red ¨Ad hoc¨, consiste en un grupo de ordenadores que se comunican cada uno directamente con los otros a través de 
+las señales de radio si usar un punto de acceso. Las configuraciones ¨Ad hoc¨, son comunicaciones de tipo punto a punto. 
+Solamente  los ordenadores dentro de un rango de  transmisión definido pueden comunicarse entre ellos. La  tecnología es 
+utilizada en varios campos como en el ejercito, celulares y juegos de videos. En fin, en la tecnología ¨Ad hoc¨, cada terminal 
+de comunicación se comunica con sus compañeros para hacer una red ¨peer to peer¨. 
+ 
+Armando Mercado 
+Rafaelgil Berríos Figueroa 
+Paul Chan Ye 
+ 
+impredecibilidad en una red cuyos nodos se hoc usando menos puntos de acceso a LAN y 
+mueven plantea un reto a las funciones de potencialmente menos energía de transmisión. 
+encaminamiento y movilidad. En cualquier caso la  
+propiedad más atractiva de un modelo de Las funciones de la red ad hoc permitirán 
+formación de redes ad hoc es tal vez su también la interconexión de diferentes 
+independencia del control centralizado y, por lo dispositivos de usuarios para facilitar grupos de 
+tanto, el aumento de libertad y de flexibilidad que trabajos ad hoc más grandes. La capacidad 
+da al usuario. intrínseca de crear redes ad hoc genéricas a 
+Las redes ad hoc han sido mayormente pequeña escala, en dispositivos portátiles 
+usadas en el sector militar, donde poder establecer representa un área  enteramente nueva para futuras 
+una comunicación ad hoc es a menudo una aplicaciones basadas en ad hoc. 
+necesidad. Por otra parte, en el sector comercial,  
+los ejemplos exitosos de redes de radio ad hoc son  
+pocos hasta ahora. Las redes de área personal a  
+pequeña escala, como el Bluetooth que es una  
+tecnología de radio corto alcance están  
+estimulando la demanda de la operación ad hoc en  
+la búsqueda de la facilidad de uso y flexibilidad.  
+Las redes ad hoc Bluetooth, redes dispersa, harán  
+surgir todo un nuevo conjunto de aplicaciones  
+empresariales y de consumo para pequeños  
+dispositivos de usuario a baterías, tales como  
+teléfonos móviles, PDA, y ordenadores portátiles. Referencias 
+  
+Las formación de redes ad hoc es fácil de [1] Grupo de educación en ambientes virtuales 
+desplegar y se adaptaría estupendamente a, (EAV) 
+digamos, un entorno de oficina, donde los URL:http://eav.upb.edu.co/banco/files/03INTRO
+usuarios podrían configurar grupos de redes ad DUCCION.pdf 
+ 
+Página 6 Redes inalámbricas ad hoc 
+ 
+Resume 
+ 
+Una red ¨Ad hoc¨, consiste en un grupo de ordenadores que se comunican cada uno directamente con los otros a través de 
+las señales de radio si usar un punto de acceso. Las configuraciones ¨Ad hoc¨, son comunicaciones de tipo punto a punto. 
+Solamente  los ordenadores dentro de un rango de  transmisión definido pueden comunicarse entre ellos. La  tecnología es 
+utilizada en varios campos como en el ejercito, celulares y juegos de videos. En fin, en la tecnología ¨Ad hoc¨, cada terminal 
+de comunicación se comunica con sus compañeros para hacer una red ¨peer to peer¨. 
+ 
+Armando Mercado 
+Rafaelgil Berríos Figueroa 
+Paul Chan Ye 
+ 
+[2] Departamento Arquitectura de Computadoras 
+(DAC)  
+URL:http://research.ac.upc.edu/XARXES/CompN
+et/papers/paper_telecom_id.pdf 
+ 
+[3]  
+Página 7

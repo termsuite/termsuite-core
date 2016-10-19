@@ -1,0 +1,81 @@
+Als Funkdienst werden drahtlose Übermittlungen von Nachrichten mit Hilfe von elektromagnetischen Wellen bezeichnet, die durch einen gemeinsamen Verwendungszweck charakterisiert sind. Eine Kategorisierung verschiedener Funkdienste findet sowohl durch die Internationale Fernmeldeunion (ITU) als auch durch nationale Fernmeldebehörden statt.
+
+Im Gegensatz zu Rundfunk sind Funkdienste zunächst immer verbindungsorientierte Dienste, in denen beide Sendestellen senden und empfangen. Außerdem gibt es verbindungslose Zusatzdienste, die auch im Multicast oder Broadcast arbeiten.
+
+Verschiedenen Funkdiensten sind in internationaler Abstimmung verschiedene Frequenzbereiche im elektromagnetischen Spektrum zugeordnet. In Deutschland sind die Funkdienste in der Frequenzbereichszuweisungsplanverordnung (FreqBZPV) definiert. Die Funkdienste werden den Frequenzbereichen als primäre oder sekundäre Funkdienste zugeteilt. Dabei dürfen die sekundären Funkdienste keine Störungen der primären Funkdienste verursachen, müssen solche von diesen aber gegebenenfalls hinnehmen.
+
+Funkdienste sind unter anderem
+
+    * Amateurfunkdienst
+    * Fester Funkdienst
+    * Flugnavigationsfunkdienst
+    * Mobilfunkdienst
+    * Mobiler Flugfunkdienst
+    * Fester Flugfunkdienst
+    * Mobiler Landfunkdienst
+    * Mobiler Seefunkdienst
+    * Navigationsfunkdienst
+    * Nichtnavigatorischer Ortungsfunkdienst
+    * Ortungsfunkdienst
+    * Normalfrequenz- und Zeitzeichenfunkdienst
+    * Radioastronomiefunkdienst
+    * Seenavigationsfunkdienst
+    * Weltraumforschungsfunkdienst
+    * Wetterhilfenfunkdienst
+
+Neben den Funkdiensten gibt es auch noch sogenannte Funkanwendungen
+wie z. B. Jedermannfunk. Im Gegensatz zu Funkdiensten unterliegen
+Funkanwendungen keinem besonderen Schutz bei Störungen und
+Beeinträchtigungen.
+
+
+Freie Funknetze sind WLAN-basierte Funknetze, die nicht von kommerziellen Anbietern, sondern von Privatpersonen, Vereinen oder ähnlichen Organisationen angeboten werden. Demnach sind die Benutzer auch gleichzeitig die Betreiber der Computernetzwerke, die von einfachen Heimnetzwerken ausgehend Häuser, Stadtteile, Dörfer oder ganze Städte vernetzen können.
+Inhaltsverzeichnis
+ [Verbergen] 
+
+    * 1 Idee und Funktionsweise
+    * 2 Vision und Hintergründe
+    * 3 Geschichte
+    * 4 Verbreitung
+    * 5 Technik
+    * 6 Literatur
+    * 7 Siehe Auch
+    * 8 Weblinks
+    * 9 Einzelnachweise
+
+Idee und Funktionsweise [Bearbeiten]
+
+Jeder Nutzer im Freifunk-Netz stellt seinen WLAN-Router für den Datentransfer der anderen Teilnehmer zur Verfügung. Im Gegenzug kann er oder sie ebenfalls Daten, wie zum Beispiel Text, Musik und Filme über das interne Freifunk-Netz übertragen oder über von Teilnehmern eingerichtete Dienste im Netz chatten, telefonieren und gemeinsam Onlinegames spielen. Viele Teilnehmer stellen zudem ihren Internetzugang zur Verfügung und ermöglichen anderen den Zugang zum weltweiten Netz. Freifunk-Netze sind Selbstmach-Netze. Für den Aufbau nutzen Teilnehmer auf ihren WLAN-Routern spezielle Linuxdistributionen, z. B. die Freifunk-Firmware. Lokale Gruppen stellen die auf eigene Bedürfnisse angepasste Software dann auf ihren Websites zur Verfügung. In vielen Dörfern und Städten gibt es mittlerweile Freifunk-Gruppen und Zusammenkünfte, wo sich Interessierte treffen.
+Vision und Hintergründe [Bearbeiten]
+Picopeering erklärt: Der linke und rechte Teilnehmer liegen zu weit auseinander, um sich direkt miteinander zu verbinden. Dennoch können sie miteinander kommunizieren, da der Teilnehmer in der Mitte innerhalb beider Reichweiten liegt und so die Daten des linken Teilnehmers an den rechten weiterleiten kann.
+
+Die Freifunk-Community ist Teil einer globalen Bewegung für freie Infrastrukturen. Die Vision von Freifunk-Initiativen ist die Verbreitung freier Netzwerke, die Demokratisierung der Kommunikationsmedien und die Förderung lokaler Sozialstrukturen. Durch die Vernetzung ganzer Stadtteile, Dörfer und Regionen möchten die Initiativen der digitalen Kluft entgegenwirken und freie unabhängige Netzwerkstrukturen aufbauen. In diesen freien Netzen können zum Beispiel lizenzfreies Community-Radio, die Übertragung lokaler Ereignisse, private Tauschbörsen und die gemeinsame kostengünstige Nutzung eines Internetzugangs möglich werden. Der Austausch in den freien Netzen basiert dabei nicht auf kommerziellen Interessen, sondern auf dem freiwilligen Geben und Nehmen jedes Einzelnen im Netzwerk. Diese Idee wurde im Pico Peering Agreement[1] formuliert.
+
+Der anfängliche Beweggrund, Teil eines Freifunk-Netzes zu werden, ist meist das Bedürfnis, einen kostenlosen oder kostengünstigen Zugang zum Internet zu erhalten, gerade in Gebieten, in denen kein DSL verfügbar ist. Dies zu ermöglichen, ist jedoch nicht das Hauptziel der Freifunker. Sie sehen die Zukunft ihrer Anstrengungen vielmehr in der Möglichkeit, sich miteinander in freien Netzen verbinden zu können - ohne sich den Beschränkungen kommerzieller Anbieter unterordnen zu müssen.
+
+Die Verbreitung von selbstorganisierten freien Netzen ist auch der Versuch, das Prinzip freier Software auf freie „Netzwerk-Allmenden“ zu übertragen. In diesen sollen in Anlehnung an die mittelalterliche Allmende eine gemeinsame Nutzung von Netzwerkressourcen und verlustfrei kopierbarer Daten organisiert werden. Freiwillige arbeiten daher am Aufbau dieser eigenen Netze, stellen Internetzugänge zur Verfügung, bieten Informationsveranstaltungen an oder entwickeln freie und offene Software für die Freifunk-Netze. Auf lokaler Ebene stellen viele Freifunk-Initiativen bereits eine Alternative zu kommerziellen Netzwerkanbietern dar. Diese Freifunk-Netze bieten einen öffentlichen Raum in dem freie Inhalte, wie zum Beispiel die der Wikipedia verbreitet werden können.
+Geschichte [Bearbeiten]
+
+Im April 2000 versuchten Consume und free2air unabhängig voneinander in London die Einrichtung von freien Netzen. In den Workshops, Consume Clincs genannt, wurden Vereinbarungen getroffen und Regeln aufgestellt, welche die Kommunikation untereinander und überregional regeln sollten.
+
+Am 12. und 13. Oktober 2002 fand unter dem Titel "BerLon" in Berlin im bootlab ein Workshop über freie drahtlose Bürgernetze in Berlin und London im Rahmen der Konferenz Urban Drift statt. Dort trafen sich auch viele WLAN-Interessierte aus Berlin zum ersten Mal, unter ihnen Sven Wagner von der Berliner c-base und Jürgen Neumann.
+
+Ein Ergebnis der BerLon war eine Vereinbarung über Grundsätze und Annahmen zu freien Netzwerken. Diese wurden als Pico Peering Agreement festgehalten. Diese Vereinbarung beschreibt heute, wie in einem Freifunk-Netz der Transit von Daten über fremde Router organisiert ist.
+
+Noch während der BerLon vereinbarten einige der Anwesenden, künftig regelmäßige Treffen in Berlin zum Aufbau eines eigenen freien Funknetzwerks c-base abzuhalten. Unter dem Namen wavelöten finden seitdem mittwochs regelmäßige Treffen im c-base statt, die sich vor allem mit den praktischen Fragen zum Aufbau freier Funknetze beschäftigen.
+
+Parallel dazu initiierte Jürgen Neumann gemeinsam mit anderen ein deutschsprachiges Webportal unter dem Namen freifunk.net. Diese Website hat das Ziel, den Nutzen freier Netze einem breiten Publikum zu vermitteln, so dass möglichst viele zum Mitmachen animiert werden. Anfang 2003 ging die erste Version der Website online.
+
+Ein weiterer Meilenstein war die Entwicklung der freifunk.firmware von Sven-Ola Tücke und einer Vielzahl anderer OpenSource-Entwickler. Die praktische Umsetzung der Idee in Form einer leicht zu installierenden Software für preiswerte Zugangspunkte hat erheblich zum Erfolg der Initiative beigetragen.
+Verbreitung [Bearbeiten]
+Ausschnitt aus dem Berliner Freifunk-Netz[2]
+(Stand: 1. Januar 2007):
+Die roten Punkte sind die Knoten. Die Linien stellen die Verbindungen zwischen den einzelnen Teilnehmern dar (in blauer Schrift die jeweilige Verbindungsqualität). HNA bedeutet, dass dieser Knoten zusätzlich ein externes Netzwerk (zumeist Internet) zur Verfügung stellt.
+
+Die deutschsprachige Freifunk-Gemeinschaft ist Teil einer weltweiten Bewegung zur Etablierung von offenen und freien Systemen, insbesondere von freier Software und freien Infrastrukturen. Dies geschieht zum Teil in großen ländlichen Gebieten wie Djursland in Dänemark als auch in Städten mit nicht breitband-fähiger Telekommunikationsinfrastruktur wie einigen Gebieten in Berlin, Weimar, Leipzig, Rostock, Halle oder Dresden.
+
+Vergleichbare Überlegungen werden im Rahmen des Projekts der gemeinnützigen Gesellschaft "One Laptop per Child" bei der Entwicklung des 100-Dollar-Laptops angestellt. Demnach soll insbesondere in Entwicklungs- und Schwellenländer durch preiswerte Laptops, in Kombination mit einem integrierten WLAN-Sender, eine vollautomatische Vernetzung einzelner Dörfer oder Kommunen erfolgen. An dem Projekt haben bisher Länder wie Argentinien, Brasilien, Libyen, Nigeria, Ruanda, Thailand und Uruguay ihre Teilnahme erklärt.[3]
+Technik [Bearbeiten]
+Ein vermaschtes Netzwerk: Der rechte Knoten stellt den anderen zusätzlich Internet zur Verfügung, der linke ein lokales Radio
+
+Es werden mehrere Wireless Access Points miteinander verbunden und bilden ein Intranet, das unter anderem über einen Internetprovider mit dem Internet verbunden werden kann. Freifunk-Netze operieren meist auf Grundlage von Mesh-Routing-Protokollen als vermaschte, sich selbstständig aufbauende und konfigurierende Ad-hoc-Netzwerke. Zumeist werden Router mit aufgespielter Freifunk-Firmware verwendet, welche auf OpenWrt basiert und die Mesh-Protokolle OLSR beziehungsweise B.A.T.M.A.N. unterstützt. Diese Protokolle ermöglichen es den Teilnehmern des Netzwerks sich in großen Gebieten ohne eigenen Breitbandinternetzugang zu vernetzen. Zudem kann ein neuer Teilnehmer, ein so genannter Mesh Node, ohne großen technischen Aufwand Teil des bestehenden Netzes werden und dadurch dessen Reichweite vergrößern. Die meisten Projekte versuchen so eine freie und alternative Netz-Infrastruktur zusätzlich zur vorhandenen Netz-Infrastruktur der großen Internet Service Provider aufzubauen.

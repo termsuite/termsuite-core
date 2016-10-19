@@ -1,0 +1,755 @@
+Introduction	3
+Chapitre I	4
+Architecture et services de UMTS	4
+1.1. Introduction	4
+1.2. Les objectifs	4
+1.3. La couverture de l'UMTS	5
+1.4. Les fréquences	7
+1.4.1 L'organisation fréquentielle :	8
+1.4.2 L'organisation temporelle :	8
+1.5. Architecture du réseau UMTS	9
+1.5.1 Architecture en point de vue physique	9
+1.5.2 Architecture en point de vue fonctionnel	10
+Chapitre 2	12
+Le réseau coeur UMTS	12
+2.1. Architecture du réseau coeur	12
+2.1.1 Domaine à commutation de circuits	13
+2.1.2 Domaine à commutation de paquet :	13
+2.1.3 Les éléments communs	13
+2.2.1 Le protocoles utilisées par le domaine CS :	14
+2.2.2 Le protocoles utilisées par le domaine PS :	15
+2.3 Evolution du réseau coeur UMTS release 99 vers le tout IP	16
+Chapitre 3	17
+Le réseau d'accès  UTRAN	17
+3.1  Architecture de l'UTRAN	17
+3.1.1 Node B :	18
+3.1.2 Le RNC (Radio Network Controller)	18
+3.2 Macrodiversité en CDMA :	19
+3.4 Interface radio de l'UTRAN	20
+3.4.1 Les canaux	21
+3.4.2 Les interfaces logiques dans l'UTRAN	25
+CHAPITRE 4	28
+Architecture et mécanisme de QoS de bout en bout dans le réseau UMTS	28
+4.1  QoS dans les réseaux UMTS	29
+4.1.1 Architecture de la QoS dans les réseaux UMTS	29
+4.1.2 Le service support UMTS	30
+4.1.3 Les fonctions de gestion de QoS dans un réseau UMTS	32
+4.1.4 Les classes de QoS de l'UMTS	34
+4.1.5 Les attributs de QoS du service support UMTS	37
+4.2 La QoS dans le réseau IP	38
+4.2.1 Le modèle d'intégration des services IntServ	39
+4.2.2 Le modèle de  différenciation des services DiffServ	40
+Chapitre 5	41
+Intégration des  réseaux  UMTS /WLAN	41
+5.1 Introduction	41
+5.2 WLAN 802.11	41
+5.3 IP dans les réseaux 802.11 WLAN	42
+5.4 Architecture d'intégration :	42
+5.5 Modèle de Terminal :	44
+5.6 Réservation de ressource :	45
+5.7 La mobilité et le handover	46
+5.8 Conclusion :	47
+Conclusion générale :	49
+RÉFÉRENCES	50
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                               
+
+
+Introduction                                     
+               Le système de téléphonie cellulaire connaît un succès considérable, avec un nombre d'abonnés sans cesse croissant, le premier système sans fil a été inventé par Bell System, aux états unis, en 1940. Le 1er réseau cellulaire de type analogique, ayant pour nom AMPS (Advanced mobile phone system) a été mis en place à Chicago dès 1978 suivis par le système NMT (Nordic Mobile Telephone) en Europe en 1981, ces réseaux dit de première génération sont caractérisé par une modulation analogique et une méthode accès FDMA (Frequency Division Multiple Access).      
+      Les réseaux de deuxième génération ont fait ses débuts dans les années 1990 tel que le système  GSM (Global System for Mobile) en Europe, le system PDC au Japon et le système IS-95 au USA, ces systèmes sont caractérisés par des modulations numériques. Après les instances de normalisation se sont ensuite tournées vers un système unique du troisième génération de la téléphonie mobile, On peut définir la troisième génération comme un ensemble de technologies développées  dans le but de faire évoluer  les systèmes cellulaires de deuxième génération au niveau de la capacité et de la couverture ainsi que la qualité de service (QoS).  
+      Dans le premier chapitre on définit l'architecture générale des réseaux UMTS ainsi que ces objectifs. Tandis que  dans le deuxième chapitre on décrit  les différents éléments du réseau coeur ainsi que leurs fonctionnalités. Après on dans le troisième chapitre aborde le réseau d'accès  UTRAN (Universal Terrestrial Radio Access Network) qui représente la principale nouveauté par apport aux réseaux de deuxième génération.  Dans  le chapitre quatre  on  introduit le support de la qualité de service (QoS) dans les réseaux UMTS. Par la suite dans le chapitre cinq on aborde une intégration des réseaux UMTS et WLAN (Wirless Local Area Network) et on fini par une conclusion générale.
+
+
+
+
+
+
+
+
+Chapitre I
+ Architecture et services de UMTS 
+1.1. Introduction 
+      UMTS a été conçu comme le successeur de GSM et annonce le mouvement vers les réseaux de télécommunication de 3ème génération (3G). UMTS (Universal Mobile Télécommunications System) est une norme pour les télécommunications du « nouveau millénaire » définie par la WARC (World Administrative Radio Conférence) de l'ITU (International Télécommunications Institue). La technologie UMTS (dite technologie de 3e génération (3G)) représente l'évolution de la 2e génération vers la 3e génération, permettant de fournir aux utilisateurs une meilleures qualité de service quant aux télécommunications, notamment en ce qui concerne les services offerts et les vitesses de transfert. La WARC a, en fait, défini et normalisé le standard IMT-2000 (International Mobile Telecommunications-2000) dont fait partie la technologie UMTS. Cette technologie est au point de convergence d'Internet, de la téléphonie mobile et de la télévision.
+
+1.2. Les objectifs 
+      Le plupart des systèmes de deuxième génération sont incompatibles entres eux au niveau radio, par exemple entre le GSM et le PDC (Personal Digital Cellular) et le PHS (Personal Handyphone System) utilisés principalement au Japon. En raison de ces incompatibilités, les voyageurs tributaires de la norme de leur opérateur seront privés de leurs mobiles dans ces pays là. 
+      L'ITU a défini le concept d'IMT-2000, visant à rassembler les propositions des différents organismes de normalisation et de parvenir ainsi à définir une norme internationale. Plusieurs interfaces ont été envisagées, fondées sur la technologie CDMA (Code Division Multiple Access) et TDMA (Time Division Multiple Access). Déployer une technologie coûte cher pour un opérateur, et c'est dans cette optique que la définition de la 3G est placée sous la responsabilité de l'ITU. 
+L'ITU a défini les vitesses de transmission suivantes pour l'UMTS
+- 144 kbits/s en environnement extérieur, 
+- 384 kbits/s en environnement urbain extérieur, 
+- 2 Mbits/s proche de l'antenne d'émission de la cellule et en mobilité réduite.
+ Le déploiement demandera d'importants investissements, comme l'ont été ceux pour le réseau 2G. D'autre part, une compatibilité sera normalement assurée entre le GSM et l'UMTS. 
+
+1.3. La couverture de l'UMTS
+      L'UMTS utilise des fréquences plus élevées que les mobiles de 2G : les cellules des réseaux UMTS seront donc d'une taille proportionnellement plus petite. Dans un premier temps, la couverture se fera, normalement, par zones non contiguës ; seules les villes et les centres d'affaires seront équipés avec cette technologie, ceci en raison des contraintes liées à la taille des cellules. L'UMTS se développera sous la forme d'îlots et se déploiera progressivement avec l'installation de macro-cellules et des cellules rurales. Ainsi, si l'abonné sort de cet îlot, le réseau conventionnel GSM prendra le relais. 
+      L'ORNI (L'Ordonnance sur la protection contre le rayonnement non ionisant) a défini un seuil limite pour la puissance d'émission de chaque antenne, de plus, les émetteurs devront être capable de moduler leur puissance en fonction de la proximité du récepteur. Il faudra respecter les valeurs fournies par cette ordonnance pour installer des antennes supplémentaires sur les emplacements GSM :
+Rayon des cellules (env.)                        Hauteur d'antenne (env.)
+Pico-cellules 100 m                                 A l'intérieur des immeubles
+Micro-cellules 500 m                              5 m au -dessus du sol
+Macro-cellules 2 Km                                3 m au-dessus des toits
+Cellules rurales 8 Km                              30 m au-dessus du sol
+                                                                               
+
+Pico-cellules 
+      Environ 80 % des antennes seront des pico-cellules et des micro-cellules : le rayon de service est de quelques dizaines de mètres. L'utilisateur pour bénéficier d'un taux de transfert de 2 Mbits/s ne pourra pas se déplacer à plus de 10 km/h. Ces pico-cellules constitueront les plus grand nombre des cellules UMTS, et seront à la base du réseau (déployées surtout à l'intérieur d'une même entreprise)
+
+Micro-cellules
+      A peines visibles, la puissance de ces antennes sera plus élevée, cependant une bonne couverture ne pourra être assurée qu'avec le déploiement de macro-cellules. L'utilisateur pourra encore bénéficier d'un taux de transfert de 2 Mbits/s en mobilité réduite et de 384 Kbits/ en mobilité moyenne et une couverture de 500 m est simulée. Un peu plus puissantes que les précédentes, ces cellules permettront de faire le lien entre les pico-cellules (pour passer d'un pâté de maison à un autre)
+Macro-cellules
+      Le rayon des cellules est augmenté mais le taux de transfert est aussi diminué en conséquence. Le débit varie de 144 Kbits à 384 Kbits en fonction de la mobilité moyenne ou élevée (vitesse maximale du client : 120Km/h, les macro-cellules seront utilisées au sein d'une même localités reliant les micro-cellules).
+Cellules rurales
+      Une antenne peut couvrir un rayon de 8 Km mais le débit s'en retrouvé réduit à 144 Kbits, ces cellules serviront à relier les macro-cellules entre les localités.
+ 
+Figure 1.1  Les environnements définis dans les réseaux UMTS
+
+
+1.4. Les fréquences
+      Le WARC (World Administrative Radio Conférence) de l'ITU a défini les fréquences autours de 2 GHz pour les communications terrestres et satellites WCDMA. Un système à l'échelle mondiale nécessite des bandes de fréquences communes à tous les pays : cet objectif est partiellement atteint. C'est le cas en Europe et au Japon, par contre aux USA et au Canada le spectre est déjà utilisé pour les systèmes de 2 G. La figure (1.2) montre bien ce qu'il en est :
+Chaque pays gère l'exploitation du spectre électromagnétique à l'aide d'une licence ; un certain nombre de licences sont attribuées par pays, les opérateur intéressés par une certaine gamme de fréquence doivent acheter à l'état un droit d'exploitation pour pouvoir utiliser ces fréquences. Comme on l'a vu il n'y a pas si longtemps. 
+
+
+
+Figure 1.2 Spectre IMT 2000
+
+      Chaque pays gère l'exploitation du spectre électromagnétique à l'aide d'une licence, un certain nombre de licences sont attribuées par pays, les opérateur intéressés par une certaine gamme de fréquence doivent acheter à l'état un droit d'exploitation pour pouvoir utiliser ces fréquences.
+
+
+1.4.1 L'organisation fréquentielle :
+      Les bandes de fréquences allouées pour l'IMT 2000 sont 1885-2025 MHz et 2110-2200 MHz.
+L'UMTS propose la répartition suivante :
+
+Figure 1. 3 : Utilisation de la Bande de Fréquences pour l'UMTS
+
+      La division duplex dans les bandes dites   "appairées ", c'est à dire 2×60 MHz, est fréquentielle. L'écart duplex vaut 190 MHz. On utilise dans ces bandes un accès WCDMA.
+La division duplex dans les bandes dites   "non appairées  ", c'est à dire 35 MHz et 15 MHz, est temporelle. On utilise dans ces bandes un accès TD-CDMA. Les deux modes d'accès doivent être harmonisés pour favoriser la réalisation de terminaux bi-modes TDD / FDD à bas coûts.
+D'une manière générale, le mode FDD est bien adapté à tous les types de cellules, y compris aux grandes cellules, mais n'est pas très souple pour gérer des trafics asymétriques. Quant au mode TDD, il permet d'adapter le rapport de transmission montante/descendante en fonction de l'asymétrie du trafic, mais exige une synchronisation des stations de base et n'est pas bien adapté aux grandes cellules à cause des temps de garde trop importants.
+Les deux bandes restantes sont réservées à la composante satellitaire de l'UMTS, 
+1.4.2 L'organisation temporelle :
+           L'organisation temporelle de l'UMTS est basée sur une supertrame de 720 ms, comportant elle-même 72 trames de 10 ms. Chaque trame de 10 ms est divisée en 15 slots de 667 µs.
+                                 
+Figure 1.4 : Structure de trame de l'UMTS
+1.5. Architecture du réseau UMTS 
+      L'architecture générale d'un réseau UMTS est modélisée de deux point de vue : l'un physique et l'autre fonctionnel.
+Du point de vue physique, on utilise le concept de domaine pour parler des équipements qui composent le réseau et la façons dont ils sont délimités, du point de vue fonctionnel on parle de strate afin d'identifier les protocoles mis en oeuvre dans ces domaines pour qu'ils puissent communiquer entre eux.
+
+1.5.1 Architecture en point de vue physique 
+Le réseau UMTS est composé de trois domaines :
+L'équipement usager (UE : User Equipment)   c'est l'élément qui permet a l'abonné d'accéder au réseau, en utilisant le canal de propagation radio comme interface.
+L'équipement usager est composé de deux parties :
+La première partie est l'équipement mobile (ME Mobile Equipment), qui prend en charge la transmission radio de l'information et les procédures associées.
+La deuxième partie est  le module d'identité universel de l'abonner (USIM pour Universal Subscriber Identity Module)   qui contient toutes les données relatives.
+     
+Le réseau d'accès radio universel : Son rôle set la gestion de ressources radio, établissement, la maintenance et la libération des  canaux radio entre le terminal et le réseau coeur CN, il existe deux types d'accès radio, le réseau terrestre d'accès radio UTRAN (Universal Terrestrial Radio Access Network) et le réseau satellite d'accès radio SRAN (Satellite Radio Access Network)
+   
+Le réseau coeur (CN Core Network) : il prend en charge la connexion entre les différents réseaux d'accès radio d'une part et le réseau UMTS et les autres réseaux externes d'autre part.
+ 
+La figure 1.5 montre une architecture générale du réseau UMTS  en utilisant le réseau d'accès UTRAN
+
+Figure  1.5 :   Architecture générale du réseau UMTS
+     
+1.5.2 Architecture en point de vue fonctionnel 
+      Du point de vue fonctionnel la norme UMTS a défini un découpage en strates, lesquelles définissent la façon dont les trois domaines  communiquent entre eux (figure 1.6)
+
+
+Figure 1.6 : Le découpage en strates
+
+1.5.2.1 Strate d'accès (AS Access Stratum) : regroupe toutes les fonction UMTS liées au réseau d'accès tel que les fonctions de gestion des ressources radio et de handover.
+ 	 La strate d'accès comprend les protocoles qui gèrent les services support qui convoient l'information provenant de la strate non liée au réseau d'accès (NAS Non Access Stratum). 
+
+1.5.2.2 Strate de non accès (NAS Non Access Stratum) : regroupe l'ensemble de fonctions qui permet l'échange d'information entre le mobile et le réseau coeur, indépendamment du réseau d'accès radio, tel que les fonctions d'établissement d'appel qui correspond aux couches de protocole CC (call control) pour appels circuits et SM (Session Management) pour appels paquets et les fonctions de gestion de mobilité qui correspond aux protocole MM (Mobility Management) pour appels circuits et GMM (GPRS Mobility Management) pour appels paquet.  
+
+
+
+
+                                                                                                                                                               
+                                                                                                                                                              
+                                    
+                                                      
+
+
+
+
+
+
+
+
+
+
+Chapitre 2
+Le réseau coeur UMTS
+      Le réseau coeur (CN Core Network) est la partie du système UMTS chargée de la gestion des services souscrits par l'abonné. Il permet a celui-ci de communiquer a l'intérieur d'un même réseau de téléphonie mobile et assure l'interconnections de ce dernier avec des réseaux externes, fixes ou mobiles, numérique ou analogique. Il fournit enfin des logiciels qui permettent de maintenir la communication tout en garantissant la sécurité des échanges. 
+
+2.1. Architecture du réseau coeur 
+      Les éléments du réseau coeur sont répartis en trois groupes, le premier groupe est celui des éléments du domaine de commutation de circuit ; le deuxième est celui des élément du domaine de commutation du paquet  et le troisième celui des élément commun entre le domaine de commutation de circuit et du  commutation de paquet, (La figure 2.1).  
+      
+      
+Figure  2.1 :    Architecture du réseau coeur 
+
+2.1.1 Domaine à commutation de circuits  
+  	Ce domaine assure la connexion à un réseau RNIS (réseau numérique a intégration de service) et le réseau RTC (réseau téléphonique commuté), il es composé des élément suivant :
+      Le MSC : (Mobile Switching Center) est un commutateur qui assure l'interface avec le réseau coeur pour un mobile accédant aux services a commutation de circuit. Le MSC gère dans un domaine de commutation de circuit, la procédure d'attachement des abonnées, leur authentification, et la mise a jour de leur position dans le réseau et la sécurisation de l'accès au système.
+      Le VLR (Visitor Location Register) constitue une base de données dans la quelle sont enregistrées des informations sur la position de l'abonné et son déplacement dans la zone de localisation reliée à un ou plusieurs MSC.
+GMSC (Gateway MSC) est l'un des MSC du réseau qui assure l'interface avec les réseaux externes à commutation de circuits RTC ou RNIS.
+2.1.2 Domaine à commutation de paquet :	
+      Ce domaine assure le transfert des paquets vers le réseau IP, il est composé des éléments suivants :
+SGSN (Serving GPRS Support Node) : il joue le rôle d'un MSC/VLR pour le domaine de commutation de paquet, il assure principalement les procédures de routage et de transfert des données, les procédures d'attachement, de détachement, de localisation et les procédures d'authentification.      
+GGSN (Gateway GPRS Support Node) : c'est une passerelle vers les réseaux externes tel que Internet.    
+
+2.1.3 Les éléments communs  
+	Ce sont des éléments partagés par le domaine de commutation de paquet et le domaine de commutation de circuit, ces éléments sont :
+HLR (Home Location Register): est une base de données qui contient toutes les informations relatives aux abonnées. Pour chaque abonné le HLR  mémorise ces informations de souscription, son identité IMSI (International Mobile Station Identity) et son numéro d'appel MSISDN (Mobile Station International ISDN Number) 
+     
+EIR (Equipment Identity Register): est une base de données contenant la liste des mobiles interdits.   
+AuC (Authentication center): il contient des paramètres utilisés pour la gestion de la sécurité de l'accès au system, il contient pour chaque abonné une clef d'identification pour lui permettre        
+D'assurer  les fonctions d'authentification et de chiffrement.
+
+2.2 Les protocoles utilisées par le réseau coeur 
+      Dans l'architecture du domaine CS et du domaine PS de l'UMTS, on fait la distinction entre le « plan de contrôle » et le « plan usager ». Le premier est aussi appelé plan de commande ou de signalisation. Par le plan usager transitent les données générées de l'application telles que la parole, la vidéo, les messages courts.
+Les échanges des informations entre les éléments du réseau coeur et entre ce dernier et les réseaux externes respectent une série des règles appelées protocoles qui permettent de mettre en place un nombre de procédures pour permettre d'établissement et le maintien d'une communication.
+ 2.2.1 Le protocoles utilisées par le domaine CS : 
+      La figure (2.2) présente la structure en couches du réseau UMTS pour les appels circuit.
+La partie commutation de circuit CS du réseau coeur utilise le protocole de signalisation MAP (Mobile Application Part) qui est basée sur des couches de transport héritées des réseaux de  téléphonie fixe SS7 ( Signalling System n 7) : MTP, SCCP et TCAP
+MTP (Message Transfert Part) est une couche de protocole assurant le transfert fiable des informations des messages de signalisation des couches supérieures.
+SCCP (Signalling Connection Control Part) permet, par l'utilisation d'un system d'adressage global, l'échange de la signalisation au niveau international, par exemple entre deux réseaux différents.
+TCAP (Transaction Capability Application Part) est un protocole qui permet de gérer les transactions entre deux noeuds du réseau, indépendamment de la couche supérieure (MAP). 
+
+ 
+Figure 2.2  Les protocoles utilisés par le domaine CS 
+      
+2.2.2 Les protocoles utilisées par le domaine PS :
+      Le protocole GTP (GPRS Tunnel Protocol) fait partie à la fois de la pile protocolaire du plan usager et du plan de contrôle. Dans le plan usager UMTS, il est désigné par « GTP-U ». 
+pour le transport des paquets, GTP s'appuie sur les protocoles TCP( Transport Control Protocol) pour un transport fiable ou UDP ( User Datagram Protocol) pour un transport non fiable, et sur le protocole IP pour le routage des paquets (IPv4 ou IPv6).
+Le GTP joue un rôle semblable à celui de MAP dans le domaine CS.
+
+
+Figure  2.3  Les protocoles utilisés par le domaine CS 
+
+
+2.3 Evolution du réseau coeur UMTS release 99 vers le tout IP
+      La solution envisagée pour les phases futures de l'UMTS consiste à faire évoluer son architecture pour développer, un réseau s'appuyant entièrement sur le protocole IP. Dans cette architecture, plus besoin de réaliser la distinction des domaines de commutation de circuit et de commutation de paquet par ce que  les services temps réel et non temps réel seront traités simultanément en tant que services multimédias IP. La principale innovation de la release 5 et 6 apportée à l'architecture du réseau coeur UMTS de la release 99 est l'introduction d'un nouveau sous-système permettant de connecter le domaine PS à des réseaux IP proposant des services multimédias. Ce sous-système est appelé sous-système multimédia IP (IMS pour IP multimedia sub-system) [1]. L'IMS représente un pas décisif vers un réseau coeur tout IP car même le service de téléphonie desservi par le domaine de commutation de circuit CS peut être servi par ce sous-système suivant l'approche VoIP (voix sur IP). Dans l'IMS l'appelant signale à son correspondant sont souhait d'établir un appel multimédia, avec ou sans contraintes temps réel , à l'aide de SIP  ( Session Initiation Protocol )  qui est un protocole de signalisation proposé par l'IETF(Internet Engineering Task Force ) [10].
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Chapitre 3
+Le réseau d'accès  UTRAN
+
+      Lorsqu'on  compare un réseau GSM avec un réseau UMTS, le réseau d'accès radio universel désigné par le sigle UTRAN représente la principale innovation. L' UTRAN est en charge du contrôle et de la gestion des ressources radio et permet l'échange d'informations (données et signalisation) entre le terminal mobile et le réseau coeur.    
+3.1  Architecture de l'UTRAN 
+      L'architecture globale de l'UTRAN est présentée dans la figure 3.1
+
+
+
+Figure 3.1 Architecture global de l'UTRAN
+Le réseau UTRAN est composé d'un ensemble de RNS (Radio Network Subsystem) reliés au réseau coeur à travers l'interface Iu. Chaque RNS est constitué d'un contrôleur du réseau radio (RNC pour Radio Network Controller) et d'un ou plusieurs Node B (station de base) qu'il contrôle via l'interface « Iub ».
+3.1.1 Node B :    
+      Le Node B de l'UTRAN est équivalent à la BTS des réseaux GSM, son rôle principal est d'assurer les fonctions de réception et de transmission radio pour une ou plusieurs cellules de l'UTRAN 
+La norme UTRAN a spécifié un model logique du Node B  (Figure 3.2)
+
+Figure 3.2 Modèle logique du Node B
+Ce modèle logique est composé des éléments suivants
+Les contextes de communication qui représentent les ressources dédiées aux usagers du réseau supportés par le Node B, le contexte de communication comprend un ou plusieurs canaux de transport dédiés (DCH) ou commun(DSCH) 
+ Chaque Node B doit supporter un certain nombre des canaux de transport communs (RACH, FACH, PCH) 
+Le Node B Control Port est utilisé par le CRNC pour effectuer la configuration et l'initialisation des ressources supportées par Node B
+3.1.2 Le RNC (Radio Network Controller)   
+      Le RNC de l'UTRAN est équivalent à un BSC (base station controller) des réseaux GSM. Il assure principalement le routage des communications entre les Nodes B et le réseau coeur d'une part et le contrôle et la supervision du Node B d'autre part.
+Dans le cas ou une connexion entre un mobile et l'UTRAN utilise les ressources de plusieurs RNS, les RNC impliqués dans cette connexion auront les rôles logiques suivants :
+SRNC (Serving RNC) : représente pour un mobile le RNC qui gère a la fois l'interface Iu avec le réseau coeur et la signalisation   RANAP (RAN Application part).
+D-RNC (Drift RNC) : il achemine les flux des données et des signalisations du S-RNC vers le Node B  et vice versa 
+3.2 Macrodiversité en CDMA :
+      Dans un réseau UMTS, la couverture est assurée par des Nodes B  différents.
+Lorsque le mobile est en communication avec un Node B, qu'il se déplace et qu'un autre Node B  prend le relais, on dit qu'une procédure de handover a lieu.
+Soft handover : En général, pendant la procédure de handover, le mobile doit interrompre la communication avec une station de base avant d'en établir une autre avec une station de base différente. C'est le cas dans la plupart des systèmes basés sur le FDMA et le TDMA. Au contraire, dans un système CDMA ou les cellules voisines utilisent la même fréquence porteuse, le mobile peut conserver une liaison radio avec plusieurs stations de base simultanément.
+Comme il n'y a pas de rupture physique de la communication, ce type de handover est appelé soft handover. L'état où un mobile est en liaison avec deux stations de base ou plus est appelé macrodiversite.  
+      
+Figure 3.3  macrodiversité et soft handover
+
+
+3.4 Interface radio de l'UTRAN
+      La figure (3.4) présente l'architecture en couches de l'interface radio de l'UTRAN. Cette interface s'applique au trois premières couches du modèle OSI.         
+Figure 3.4 structure en couche de l'interface radio de l'UTRAN
+
+La première couche (couche physique) elle réalise les fonctions de codage de canal, entrelacement et la modulation.
+La couche 2 contient les protocoles qui assurent le transport fiable des données comme les protocoles PDCP, RLC, MAC et BMC 
+La couche RLC (Radio Link Control) réalise les fonctions de segmentation des paquets en des unités de tailles prédéterminées par la couche RRC
+La couche RRC (Radio Resource Control) gère la signalisation de connexion radio entre le mobile et l'UTRAN, établissement, libération et reconfiguration.
+La couche MAC (Medium Access Control) réalise les fonctions de multiplexage des données sur les canaux de transport.
+La couche PDCP (Paquet Data Convergence Protocol) à deux fonctions principales, la première est d'assuré l'indépendance des protocoles radio de l'UTRAN(en particulier les couches RLC et MAC), et la deuxième est la compression de l'entête du paquet de donnée pour permettre un usage plus efficace de ressource radio        
+3.4.1 Les canaux 
+      La norme UMTS a spécifié une grande variété des canaux de communication [4]  répartis en trois grandes classes : les canaux logiques, les canaux de transport et les canaux physiques, ces différent canaux ont été crées pour garantir l'indépendance entre les différents niveaux fonctionnels.
+3.4.1.1 Les canaux logiques : 
+      Correspondent aux différents types d'informations véhiculés par les protocoles radio de l'UTRAN. Les canaux radio sont répartis en deux groupes les canaux logiques de contrôle utilisés pour véhiculer les  informations du plan de contrôle et les canaux logiques de trafic, qui véhiculent les informations du plan usager.
+Les canaux logiques de contrôle 
+BCCH (Broadcast Control Channel)  utilisé pour diffusion d'informations de contrôle tel que les informations qui permettent à un mobile en veille d'accéder au réseau.
+CCCH (Common Control Channel)  utilisé au tout début de l'établissement de la communication pour l'échange des premiers messages de signalisation entre le mobile et le réseau.
+DCCH (Dedicated Control Channel) utilisé pour envoyer ou recevoir des informations de contrôle d'un mobile connecté au réseau, tel que la signalisation de la couche RRC de l'UTRAN et les couches MM,CC GMM et SM du réseau coeur.
+Les canaux logiques de trafic 
+DTCH (Dedicated Traffic Channel) utilisé  pour échanger des données usager avec un mobile connecté au réseau.
+CTCH (Common Traffic Channel) est un canal unidirectionnel utilisé par le réseau pour envoyer des données usager à un groupe de mobiles.
+3.4.1.2 Les canaux de transport :
+   Canal de transport dédié : Il existe un seul canal de transport dédié. Il est noté DCH (Dedicated channel) dans les spécifications de la série 25 de I'UTRA. Ce canal de transport dédié véhicule toutes les informations provenant des couches situées au-dessus de la couche physique et destinées à un utilisateur donné. Cela inclut aussi bien les données correspondant au service utilisé que des informations de contrôle issues des couches hautes. La nature des informations transmises n'est pas visible au niveau de la couche physique. Les données utilisateur et les données de contrôle ont ainsi traité exactement de la même manière. Naturellement, les paramètres de la couche physique établis par I'UTRAN peuvent varier pour les données utilisateur ou pour les informations de contrôle.
+Le canal de trafic TRCH (Traffic Channel) et le canal associé de contrôle ACCH (Associated
+Control Channel), utilisés en GSM, n'existent pas dans la couche physique de I'UTRA. Le canal de transport dédié véhicule depuis le terminal à la fois les données de service, comme les trames de voix, et les informations de contrôle, comme les commandes de handovers et les remontées de mesures. En WCDMA, un canal séparé de transport n'est pas nécessaire du fait de la capacité du système à supporter des débits variables et un multiplexage des services.
+Canaux de transport communs : Six types des canaux de transport communs ont été définis pour 1'UTRA. Ils présentent peu de différences par rapport à ceux définis pour les systèmes de deuxième génération. Notons que les canaux communs ne supportent pas le soft handover et que certains d'entre eux peuvent supporter le contrôle de puissance
+Broadcast Channel : Le canal BCH (Broadcast Channe/) ou canal de diffusion est un canal de transport utilisé pour transmettre des informations spécifiques au réseau d'accès ou à une cellule donnée. Les données les plus fréquemment nécessaires dans tout type de réseau mobile sont les codes d'accès aléatoires disponibles ou les slots d'accès disponibles au niveau de la cellule, ou encore, les méthodes de diversité en transmission utilisées avec d'autres canaux pour une cellule donnée. Le terminal ne peut pas s'inscrire dans une cellule s'il n'a pas la possibilité de décoder ce canal broadcast. C'est pour cela que la puissance de ce canal est généralement élevée afin qu'il puisse être capté par l'ensemble des utilisateurs de la cellule.
+Forward Access Channel : Le canal FACH (Forward Access Channel) est un canal de transport du sens descendant qui véhicule des informations de contrôle aux terminaux localisés dans une cellule donnée. C'est par exemple le cas après qu'un message de demande d'accès aléatoire (Random Access) a été reçu, de la part d'un terminal, par la station de base. Il est également possible de transmettre des données par paquet sur le canal FACH. Il peut y avoir plus d'un canal FACH par cellule. Un des canaux FACH doit cependant avoir un débit relativement faible afin qu'il puisse être reçu par l'ensemble des utilisateurs de la cellule. Lorsqu'il y a plus d'un canal FACH par cellule, les canaux FACH supplémentaires peuvent avoir un débit plus élevé. Le canal FACH n'utilise pas le contrôle de puissance et les messages transmis doivent comprendre des informations d'identification afin d'assurer leur correcte réception.
+Paging Channel : Le canal PCH (Paging Channel) est également un canal de transport du sens descendant assurant le transport des informations nécessaires à la procédure de paging lorsque le réseau souhaite initier une communication avec un terminal. Le plus simple exemple est le cas d'un appel voix vers un terminal le réseau transmet alors un message de paging grâce au canal PCH sur toutes les cellules de la zone de localisation où est sensé se trouver le terminal que le réseau d'accès souhaite joindre. Ce message de paging est alors transmis sur une ou plusieurs cellules, selon la configuration du système et celle des zones de localisation. Les terminaux doivent bien évidemment pouvoir recevoir l'information de paging dans toute la cellule. Notons que la configuration du canal de paging affecte directement la consommation d'énergie des terminaux en mode veille. Moins le récepteur du terminal a à écouter le canal PCH pour savoir si un message de paging lui est destiné, plus la batterie du terminal aura une durée de vie importante en mode veille.
+Random Access Channel : Le canal RACH (Random Access Channel) est un canal de transport du sens montant qui est utilisé pour transporter des informations de contrôle provenant du terminal, telles que les demandes d'établissement de connexion. Il peut être utilisé également pour transmettre une faible quantité de données par paquet du terminal vers le réseau. Pour un fonctionnement correct, le canal RACH doit bien évidemment être reçu par la station de base quelle que soit la localisation du terminal dans la cellule, cela implique que le débit utilisé sur ce canal doit être suffisamment faible, du moins pour les premières procédures d'accès et de contrôle.
+Common Packet Channel : Le canal CPCH (Common Packet Channel) est une extension du canal RACH qui permet de transmettre des données utilisateur par paquet dans le sens montant. Le canal correspondant sur le sens descendant est le canal FACH. Au niveau de la couche physique, la principale différence qui réside entre les canaux CPCH et RACH est que le premier utilise le contrôle de puissance, un mécanisme de détection de collision ainsi qu'une procédure de gestion d'état CPCH. La transmission sur le canal CPCH peut être maintenue sur un grand nombre de trames alors que celle s'appuyant sur le canal RACH ne peut excéder une ou deux trames.
+Downlink Shared Channel : Le canal DSCH (Downlink Shared Channel) est un canal de transport du sens descendant permettant de transporter des informations utilisateur ou des informations de contrôle dédiées. Il peut cependant être partagé par plusieurs utilisateurs. A certains égards, ce canal est similaire au canal FACH, mais le canal DSCH utilise le contrôle de puissance aussi bien qu'un débit qui peut varier d'une trame à l'autre. Le canal DSCH peut ne pas être reçu dans toute la cellule et peut utiliser les différentes méthodes de diversité de transmission utilisées par le canal associé DCH. Le canal DSCH est toujours associé à un canal DCH du sens descendant.
+
+Canaux de transports nécessaires : Les canaux RACH, FACH et PCH sont les trois canaux communs de transport nécessaires au bon fonctionnement du système. L'utilisation des canaux DSCH et CPCH reste, quant à elle, optionnelle.
+3.4.1.3Correspondance des canaux de transport et des canaux physiques
+      Les différents canaux de transport que nous venons d'aborder s'appuient sur différents canaux physiques. La correspondance entre ces canaux de transport et canaux physiques est donnée dans la Figure 3.5.
+
+
+Figure 3.5 : Correspondance des canaux de transport et des canaux physiques
+En plus des canaux de transport introduits plus haut, il existe des canaux physiques qui ne véhiculent que des informations propres aux procédures de la couche physique. Il s'agit des canaux SCH (Synchronisation Channel), CPICH (Common Pitot Channel) et AICH
+(Acquisition Indication Channel) qui ne sont pas visibles du point de vue des couches hautes mais qui sont cependant nécessaires au système et doivent être transmis par chaque station de base. Les autres canaux, CSICH (CPCH Status Indication Channel) et CD/CA-ICH (Collision
+Detection/Channel Assignement Indication Channel) ne sont nécessaires que si le canal
+CPCH est utilisé.
+Notons que le canal de transport DCH s'appuie sur deux canaux physiques. Le canal physique
+DPDCH (Dedicated Physical Data Channel) transporte les informations des couches hautes ainsi que les données utilisateur alors que le canal physique DPCCH (Dedicated Physical
+Control Channel) véhicule les informations de contrôle nécessaire à la couche physique. Ces deux canaux dédiés sont essentiels au support de débits variables au niveau de la couche physique. Le débit du canal DPCCH est par contre constant alors que celui du canal DPDCH peut varier d'une trame à l'autre.
+3.4.2 Les interfaces logiques dans l'UTRAN 
+
+La norme UTRAN défini quatre interfaces «Uu», « Iub » « Iur » et « Iu ».  
+Les structures des protocoles de ces interfaces ont été définies selon un unique modèle (Figure 3.6) cette structure repose sur le fait  que les couches et les plans sont logiquement indépendants les un des autres et qu'une partie de cette structure pourrait être modifiée sans modifiées les autre parties.    
+La structure des protocoles est constituée de deux couches principales : une couche radio (Radio Network Layer) et une couche de transport (Transport Network Layer)[3]  
+
+Figure 3.6 :    Modèle de protocole des interfaces UTRAN
+
+      L'interface Uu relie le terminal mobile au Node B par intermédiaire d'une liaison radio. La couche physique de l'interfaces Uu est basée sur la technique CDMA accès multiple a répartition en codes.
+L'interface Iub  permet de connecter le Node B au RNC et l'interface Iur est situe entre 2 RNC, et qui n'existait pas dans le GSM, elle est introduite pour permettre l'établissement de deux ou plusieurs chemins entre le réseau et un mobile via deux stations de base potentiellement différentes.
+L'interface Iu permet de connecter l'UTRAN au réseau coeur. C'est une double interface : une interface vers le domaine de commutation circuit du réseau coeur Iu-Cs et une vers le domaine de commutation  paquet  Iu-PS.  
+La figure (3.7) montre la structure protocolaires des interfaces Iu, Iur et Iub d'après la premier release de 3 GPP qui a choisi AAl2/ATM comme protocole de transport du plan usager des interfaces Iu-CS, Iur et Iub et AAl5/ATM pour l'interfaces Iu-PS 
+La release 5 de 3GPP a choisi le protocole IP comme protocole de transport pour ces interfaces 
+  
+                              (a) Iu-CS                                                               (b) Iu-PS             
+                          
+        (C)      Iub                                                     (d)         Iur
+    Figure 3.7  Structure des protocoles des interfaces Iu, Iub et Iur      
+       
+
+
+
+
+CHAPITRE 4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+Architecture et mécanisme de QoS de bout en bout dans le réseau UMTS
+         
+
+      
+      Durant ces dernières décennies, on assistait à une croissance très importante de deux secteurs technologiques : l'Internet et les communications mobiles sans fil. Selon l'Union Internationale des Télécommunications (ITU), il y a approximativement 600 millions d'utilisateurs d'Internet à la fin de l'année 2002. Une croissance de même ampleur a touché les réseaux cellulaires mobiles. Bien qu'ils aient tous les deux un succès remarquable auprès des usagers, ces deux technologies ont été souvent vues séparément l'une de l'autre. Ceci est dû principalement à leur nature différente : l'Internet a été conçu pour transporter du trafic de données alors que les réseaux cellulaires sans fil ont été initialement conçus pour transporter la voix. Ces dernières années, la frontière entre ces deux technologies commence à s'estomper, surtout avec l'introduction de plusieurs propositions pour les télécommunications mobiles internationales IMT-2000 dans l'ITU. Cela a conduit à l'apparition des systèmes réseautiques mobiles des prochaines générations qui sont supposés être des plates-formes multiservices supportant voix, vidéo et services de données à des hauts débits. L'évolution des réseaux mobiles dans le sens d'offrir cette multitude de services hybrides aux usagers mobiles n'a pas pu réussir sans l'introduction du support de la qualité de service (QoS). Dans ce chapitre, nous allons  donner un aperçu sur les spécifications de l'architecture de la QoS dans les réseaux troisième génération  UMTS, ainsi que les modèles de gestion de la QoS dans les réseaux IP.
+
+
+                                                             
+                     
+
+4.1  QoS dans les réseaux UMTS                                                                                    
+      L'introduction d'un nouveau réseau de coeur à commutation de paquets dans le système cellulaire assure, en plus de l'utilisation optimale des ressources, le transport des nouveaux services multimédia à faible coût. Mais, pour assurer le bon fonctionnement de ces services  émergents, il est indispensable de fournir une plate-forme de support de QoS dont l'architecture sera détaillée dans ce qui suit.
+4.1.1 Architecture de la QoS dans les réseaux UMTS
+  	La QoS n'est rien d'autre qu'un ensemble de besoins de service qui doivent être satisfaits par le réseau tout au long du transport des flux de trafic de la source à la destination. Généralement, les attributs de QoS sont définis en termes de débit binaire garanti, taux d'erreur binaire, délai et gigue. Souvent, la QoS s'effectue par allocation de ressources, ce qui va introduire la notion de gestion de ressources en utilisant des services support, des protocoles de réservation ainsi que des mécanismes de différenciation [6].
+Contrairement aux services de liaison de données qui sont généralement considérés point à point ou point à multipoint, les services réseau sont établis de bout en bout, c'est-à-dire, d'un équipement terminal (TE) à un autre. Le flot de communication de bout en bout de ces services réseaux  traverse différents types de réseaux offrant différents QoS à l'usager.
+ Pour assurer un certain niveau de QoS, des Bearer Service (BS) ou services support avec des paramètres et des fonctionnalités bien définis, doivent être établis entre la source et la destination d'un service réseau donné. Un service support doit avoir la capacité de fournir la QoS contractée entre un usager et un réseau ou entre un domaine réseau et un autre domaine réseau adjacent. Ceci est essentiellement réalisé par des mécanismes tels que le contrôle de signalisation, le transport sur le plan usager, et les différentes fonctionnalités de gestion de QoS. Une architecture en couches des services support est illustrée à la Figure 4.1, chaque service support d'une couche spécifique offre ces services particuliers en utilisant les services fournis par les couches inférieures.
+      
+      
+      
+                          
+Figure 4.1 Architecture fonctionnelle de la QoS UMTS
+4.1.2 Le service support UMTS
+      Le trafic d'un équipement terminal TE à un autre TE doit passer par différents supports de service du réseau. Le service de bout en bout de la couche application utilise une combinaison d'un ensemble de trois services support des couches inférieures : un service support local qui réside dans le TE/MT et qui définit ses capacités locales de QoS, un service support UMTS et un service support externe. Dans cette section, nous nous intéressons au service support UMTS vu que c'est la composante qui fournit la QoS UMTS. Le service support UMTS est constitué de deux sous-composantes : le service support d'accès radio ou Radio Access Bearer (RAB) et le service support du réseau de coeur ou Core Network Bearer (CNB). Les deux services utilisent des méthodes optimisées pour fournir le service support UMTS au dessus des topologies cellulaires respectives, en prenant en considération des aspects tel que la mobilité et le profil des usagers mobiles.
+      
+La QoS côté radio assurée par le service support d'accès radio (RAB)
+      Le RAB assure le transport confidentiel de la signalisation et des données usager entre le terminal mobile MT et le noeud périphérique du CN (interface Iu ou point d'interconnexion entre RNC et CN) avec une QoS conforme au service support UMTS négocié. Pour cela, il utilise des techniques spécifiques comme le contrôle de puissance ou le contrôle d'admission radio qui tiennent compte des différents profils de QoS (ensemble des attributs du service support UMTS). En plus, le service RAB est basé sur les caractéristiques spécifiques de l'interface radio et doit être maintenu tout au long du mouvement d'un terminal mobile. Pour supporter différents niveaux de protection contre les erreurs, le réseau d'accès terrestre UTRAN et le terminal mobile MT ont la capacité de segmenter et de réassembler des flots d'usagers en différents sous-flots à la demande du service support radio. Ce service support radio traite différemment les sous-flots d'un même flot usager, de manière à assurer les exigences en fiabilité spécifiques à chaque sous-flot. Ces exigences en fiabilité, tel que le format exact d'une unité de données de service (SDU), sont sujettes à une signalisation préalable avec l'UTRAN à la phase d'établissement du RAB en utilisant des attributs standardisés. Le service support Iu, en utilisant le service support physique, offre un transport entre UTRAN et CN avec différents autres services assurant une variété de niveaux de QoS.
+      
+La  QoS côté réseau assurée par le service support du réseau de coeur (CNB)
+      Le service support du réseau de coeur connecte le noeud périphérique du CN avec la passerelle du CN jusqu'au réseau externe. Le rôle de ce service est de contrôler et d'utiliser efficacement le réseau de coeur UMTS afin d'offrir le service support UMTS. De plus, une intégration suffisamment efficace est effectuée au niveau de toutes les couches existantes en chaque point de multiplexage traversé, c'est-à-dire dans chaque noeud UMTS du réseau de coeur. Le transfert asynchrone propre aux réseaux en mode paquet actuels perd la structure temporelle du flux et introduit un délai et une gigue aléatoires. Pour éviter les engorgements, problème important dans les réseaux à commutation de paquets, on augmente souvent la capacité des mémoires tampon au niveau des files des routeurs. Cette technique, utilisée dans les noeuds UMTS, peut toutefois introduire des retards inacceptables pour les applications en temps réel tel que la téléphonie sur IP. Cela nous conduit à la définition d'un système de gestion de la  QoS spécifique à un réseau UMTS et dont les différentes fonctions sont détaillées dans ce qui suit.
+4.1.3 Les fonctions de gestion de QoS dans un réseau UMTS
+      Pour assurer la prestation du service négocié au service support UMTS avec une QoS bien spécifique entre les points d'accès, le réseau UMTS offre différentes fonctionnalités de gestion classifiées en deux plans : le plan contrôle et le plan usager.
+Les fonctions de gestion de QoS dans le plan de contrôle
+Ces fonctions assurent l'établissement et la modification d'un service support UMTS en utilisant la signalisation et la négociation avec les services UMTS externes ainsi que l'établissement et la modification de tous les services internes avec les caractéristiques requises. Les fonctions de gestion de QoS du plan de contrôle englobent:
+- Le gestionnaire de service qui coordonne les fonctions du plan de contrôle (établissement, modification et maintenance du service). Il fournit toutes les fonctions de gestion de QoS du plan usager avec les attributs demandés. De plus, il peut interroger d'autres fonctions de contrôle pour recevoir la permission de fournir le service.
+- La fonction de translation qui effectue la conversion entre les attributs de QoS du service support UMTS et ceux des protocoles de contrôle des services du réseau externe (exemple : entre les attributs de service UMTS et les TSPEC de l'IETF). Elle peut aussi se charger de la conversion entre ses propres attributs de service et les attributs d'un service de couche inférieure qu'elle utilise (exemple : entre les attributs des services UMTS et attributs des classes ATM).
+- Le contrôle d'admission et de capacité qui maintient les informations concernant toutes les ressources disponibles d'une entité réseau ainsi que toutes les ressources allouées au service support UMTS. Il détermine pour chaque requête ou modification d'un service support UMTS si les ressources demandées peuvent être fournies par l'entité. Si c'est le cas, il les alloue au service support UMTS et assure leur maintien. De plus, cette fonction vérifie la capacité de l'entité réseau à fournir le service demandé. Le contrôle des ressources effectué par le contrôle d'admission supporte également la rétention de service.
+- Le contrôle de souscription qui vérifie les droits administratifs de l'usager d'un service support UMTS pour l'utilisation du service demandé avec les attributs de QoS spécifiées.
+      Les gestionnaires du service support UMTS dans le terminal mobile MT, dans le noeud périphérique du CN ainsi que dans la passerelle du CN s'échangent des données de signalisation à travers la fonction de translation et avec les instances du réseau externe afin d'établir ou de modifier un support de service UMTS. Par conséquent, la QoS contractée peut être fournie au service de bout en bout dans le réseau UMTS. 
+Les fonctions de gestion de QoS dans le plan usager
+Ces fonctions assurent la prestation de la  QoS négociée pour un service support UMTS en maintenant le trafic des données usager dans les limites définies par des attributs de QoS signalées à l'avance. Les fonctions de gestion de QoS du plan usager englobent.
+- La fonction d'association qui fournit à chaque unité de données un marquage spécifique au moment de son transfert par le service de support et lui permettant de recevoir la  QoS contractée
+- La fonction de classification qui attribue les unités de données aux différents services établies pour un terminal mobile MT selon leurs attributs de QoS relatifs. Le service support UMTS approprié est dérivé à partir de l'entête de l'unité de données ou à partir des caractéristiques du trafic des données.
+- Le gestionnaire de ressources qui partage et distribue les ressources disponibles aux différents services suivant leurs besoins en QoS. L'ordonnancement, la gestion de bande passante et le contrôle de puissance pour le support radio sont des exemples de gestion de ressources.	
+- Le conditionneur de trafic qui assure la conformité entre la QoS négociée pour un service et le trafic des unités de données correspondant. Le conditionnement du trafic est réalisé par des mécanismes de réglementation et/ou de mise en forme du trafic (policing et/ou shaping). La réglementation du trafic se fait en marquant les unités de données qui ne correspondent pas avec les attributs de QoS appropriés, et en les rejetant dans le cas de congestion. La mise en forme du trafic se fait en accord avec les attributs de la QoS contractée.
+
+
+
+
+
+
+
+
+4.1.4 Les classes de QoS de l'UMTS 
+      Le projet de partenariat de troisième génération (3GPP) définit quatre classes de QoS [1][6] pour l'UMTS : la classe conversationnelle, la classe d'écoulement ou à flux continu, la classe interactive et la classe d'arrière-plan. Le facteur distinctif principal de ces classes est la sensibilité du trafic aux délais. Les caractéristiques de ces classes sont définies au Tableau 4.1. La classe conversationnelle est conçue pour les trafics les plus sensibles aux délais, alors que la classe d'arrière-plan est la classe de trafic la moins sensible aux délais. La classe conversationnelle et la classe à flux continu sont généralement prévues pour acheminer un flux temps réel (dit non élastique) et le niveau de sensibilité au délai distingue entre les deux. En effet, les services conversationnels tel que la voix et la vidéo téléphonie sont les applications les plus sensibles aux délais et doivent être acheminés dans la classe conversationnelle. La classe interactive et la classe d'arrière-plan sont généralement utilisées pour les applications traditionnelles, dites élastiques, comme le WWW, le courrier électronique, Telnet et FTP. En raison des contraintes de délais moins strictes comparées aux classes conversationnelles et à flux continu, ces deux classes offrent un meilleur taux d'erreur en utilisant des mécanismes avancés de retransmissions et de codage de canal.
+La distinction entre classe interactive et classe d'arrière-plan assure un temps de réponse plus court pour les applications interactives tel que la navigation web. De plus, le trafic interactif a une plus haute priorité que celle du trafic d'arrière-plan au niveau des mécanismes d'ordonnancement, et les applications générant un trafic d'arrière-plan utilisent les ressources de transmission seulement si les applications interactives n'en ont pas besoin. Ceci est très important dans un environnement sans fil où la bande passante est très limitée.
+
+
+
+
+
+
+
+
+
+Type de trafic
+
+Délai de transmission
+
+Variation du délai
+
+Faible taux d'erreurs sur les bits
+
+Débit binaire garanti
+
+Exemple
+
+Conversationnel
+
+À flux continu
+
+
+Interactif
+
+
+D'arrière-plan
+
+Stricte
+
+Limité
+
+
+Limité
+
+
+Non
+
+Stricte
+
+Limité
+
+
+Non
+
+
+Non
+
+Non
+
+Non
+
+
+Oui
+
+
+Oui
+
+Oui
+
+Oui
+
+
+Non
+
+
+Non 
+
+
+VoIP, visioconférence, audioconférence
+
+Services de diffusion (audio, vidéo), actualités, sports
+
+Navigation sur le web, jeux, commerce mobile
+
+courrier électronique,SMS, téléchargements de BDs, transfert de mesures
+
+
+Tableau 4.1 : Classes de trafic UMTS
+
+La classe conversationnelle 
+      La voix téléphonique comme celle du GSM est le service d'utilisation le plus connu pour cette classe. Toutefois, avec l'émergence des services multimédia sur Internet, beaucoup d'autres nouvelles applications peuvent profiter de cette classe, comme la voix sur IP et la visioconférence. La conversation temps réel est souvent effectuée entre des paires de terminaux humains. C'est le seul schéma pour lequel les caractéristiques requises sont données exclusivement par la perception humaine. En effet, le délai maximal de transfert est sujet à la perception humaine de la conversation vidéo et audio. Par conséquent, la limite du délai de transfert pour cette classe est non seulement significativement basse mais aussi plus stricte que le délai d'aller-retour du trafic de la classe interactive.
+
+La classe à flux continu ou à écoulement 
+      Cette classe est prévue pour les flux temps réel audio ou vidéo. Généralement, un flux temps réel est transféré à l'intention d'une destination ayant une présence humaine et, contrairement à la classe conversationnelle dont le flux de données est bidirectionnel, le flux de données de la classe d'écoulement est unidirectionnel. Ce schéma de trafic est l'un des nouveaux venus dans les réseaux de communications soulevant un certain nombre de nouvelles exigences non seulement dans les réseaux de communication mais aussi dans les systèmes de télécommunications. La variation de délai d'un flux de bout en bout doit être limitée, afin de préserver la relation temporelle (variation) entre les entités de données du flux, malgré qu'il n'y ait aucune exigence sur le niveau exact du délai de transfert. Toutefois, comme le flux est temporellement aligné au bout récepteur (par des techniques de mise en mémoire tampon dans l'équipement usager), la plus haute variation de délai acceptable à travers le médium de transmission est donnée par la capacité de la fonction d'alignement temporel au niveau de l'application. Ainsi, la variation de délai acceptable est beaucoup plus importante que celle exigée par les limites de la perception humaine.
+
+La classe interactive 
+      Le schéma de cette classe s'applique lorsqu'une machine ou un usager humain lance une requête de données vers un équipement tel qu'un serveur web. Le trafic interactif est un autre schéma classique des communications de données caractérisé essentiellement par le délai d'aller-retour d'une requête réponse. Une autre caractéristique de ce genre de trafic est la transparence dans le transfert du contenu des paquets de données en assurant un taux d'erreur binaire (BER) très faible.
+
+La classe d'arrière-plan (background) 
+      Ce schéma s'applique quand l'usager ou encore une machine envoie et reçoit des fichiers de données en arrière-plan. Courriels, SMS, téléchargement de base de données et réception d'enregistrements de mesures sont quelques-uns des différents services qui peuvent être délivrés par la classe d'arrière-plan. Ce genre de trafic est caractérisé essentiellement par le fait que la destination n'est pas en attente d'une réponse jusqu'à un certain temps. Ce qui fait que le trafic de cette classe est le moins sensible aux délais. Toutefois, la transparence dans le transfert du contenu des paquets doit être assurée par des mécanismes de contrôle d'erreurs.
+4.1.5 Les attributs de QoS du service support UMTS 
+      Ces attributs décrivent le service fourni par le réseau UMTS à l'usager d'un service support UMTS. Un ensemble d'attributs de QoS ou encore un profil de QoS définit ce service. En effet, à l'établissement ou à la modification d'un service support, on doit tenir compte de la disponibilité de plusieurs profils de QoS: 
+- La classe de trafic (conversationnelle, à écoulement, interactive ou d'arrière plan) : le type d'application pour lequel le service support UMTS est optimisé.
+ - Le débit binaire maximal (en Kbps) : le nombre maximal de bits fournis par le réseau UMTS en un point du réseau tout au long d'une période de temps donnée, divisé par la durée de cette période.
+- Le débit binaire garanti (en Kbps) : le nombre garanti de bits fournis par le réseau UMTS en un point du réseau tout au long d'une période de temps donnée, divisé par la durée de cette période. Les attributs de délai et de fiabilité discutés  ne sont garantis que si le trafic n'excède pas le débit binaire garanti.
+- L'ordre de livraison (oui/non) : indique si le support UMTS doit livrer les SDU dans le bon ordre de séquence ou non.
+- La taille maximale du SDU (octets) : la taille maximale permise d'une unité de données de service.
+- Le taux d'erreur des SDU: indique la fraction de SDUs perdues ou erronées. Cet attribut n'est défini que pour le trafic conforme.
+- Le taux d'erreur binaire résiduel: indique le taux d'erreur binaire indétectable dans les SDUs livrées.
+- Livraison des SDUs erronées (oui/non/-) : indique si les SDUs erronées sont livrées ou rejetées.
+- Le délai de transfert (msec) : indique le délai maximal du 95ème% de la distribution du délai pour toutes les SDUs livrées durant la durée de vie du support de service (5% des SDUs livrées pendant cette durée peuvent ne pas satisfaire cette contrainte de délai maximal). Le délai d'une SDU est défini comme le temps écoulé entre la requête de transfert du SDU en un bout du réseau et sa livraison à l'autre bout du réseau.
+- La priorité de traitement du trafic: spécifie l'importance relative du traitement de toutes les SDUs appartenant à un support UMTS par rapport à ceux appartenant à d'autres supports.
+
+- La priorité d'allocation et de rétention: spécifie l'importance relative de l'allocation et de la rétention d'un support UMTS par rapport aux autres.
+-Le descripteur de statistiques sur la source (voix/inconnu) : spécifie les caractéristiques de la source des SDUs.
+Les attributs du support UMTS définis précédemment ainsi que leur pertinence pour chaque classe de trafic sont résumés au Tableau 4.2. Pour la classe conversationnelle et la classe à flux continu, malgré que le débit binaire de la source puisse varier, le trafic est supposé être relativement dépourvu de rafales excessives. De ce fait, il est significatif de garantir un délai de transfert pour chaque SDU. De plus, pour ces deux classes, l'information de format de SDU est utilisée dans le cas où le mode RLC (Radio Link Control) transparent est activé, ce qui permet de réduire les PDUs de leur entête. Pour la classe interactive, la priorité de traitement du trafic permet de différencier entre plusieurs qualités de service pour les services support de cette classe.
+
+Classe de trafic
+Trafic conversationnel
+Trafic 
+à flux continu
+Trafic interactif
+Trafic
+D'arrière plan
+Débit maximal
+X
+X
+X
+X
+Livraison dans le bon ordre
+X
+X
+X
+X
+Taille maximale d'une SDU
+X
+X
+X
+X
+Information de format de SDU
+X
+X
+
+
+Taux résiduel d'erreur sur les bits
+X
+X
+X
+X
+Remise des SDUs erronées
+X
+X
+X
+X
+Délai de transfert
+X
+X
+
+
+Délai binaire garanti
+X
+X
+
+
+Priorité de traitement du trafic
+
+
+X
+
+Priorité d'allocation/rétention
+X
+X
+X
+X
+          
+                          Tableau 4.2 : Attributs de QoS du service support UMTS  
+
+4.2 La QoS dans le réseau IP 
+
+      À sa naissance, le protocole IP a été conçu pour n'offrir aucune garantie de QoS, du fait qu'on attendait seulement qu'il donne un service best effort. Quand un lien est congestionné dans un réseau IP, les paquets qui font déborder les files des routeurs sont souvent rejetés. Comme le réseau traite les paquets de la même façon, n'importe quel flux peut être affecté par une congestion. Le service best effort avec sa simplicité et sa gratuité a facilité la croissance exponentielle de l'Internet vers un système global planétaire en popularisant des applications tel que le courrier électronique, la navigation Web et le transfert de fichiers. Toutefois, contrairement aux applications qui tolèrent une grande variation de délais ou des pertes de paquets, les nouvelles applications multimédia en récente émergence ont des besoins beaucoup plus stricts qui ne peuvent pas être satisfaits par ce service basé sur le concept «même service pour tous». De ce fait, une solution communément utilisée consiste à étendre les potentialités d'Internet avec des mécanismes de différenciation de services, dans le but d'offrir un niveau de service plus élevé aux applications qui en ont besoin en acceptant différents accords avec l'opérateur du réseau à des coûts plus ou moins élevés. Ces considérations ont conduit au développement rapide par l'IETF de deux standards pour assurer la QoS: le premier étant le modèle de services intégrés associé au protocole de réservation de ressources (IntServ/RSVP) et le deuxième le modèle des services différenciés (DiffServ). 
+
+4.2.1 Le modèle d'intégration des services IntServ
+
+ 	Le modèle IntServ [8] définit des mécanismes qui contrôlent le niveau de QoS fourni par le réseau à des applications nécessitant une garantie de service beaucoup plus stricte que celle fournie par le service best effort. L'architecture IntServ suppose que des mécanismes d'établissement de services sont utilisés explicitement pour transmettre les informations de QoS aux routeurs impliqués dans un chemin origine/destination. Ces mécanismes permettent à chaque flux de demander un niveau de QoS particulier, le protocole de réservation de ressources RSVP [9] étant le plus utilisé de ces mécanismes. Le RSVP établit et maintient un état logiciel entre les noeuds constituants le chemin emprunté par les paquets. Cet état logiciel est caractérisé par des messages périodiques de rafraîchissement envoyés le long du chemin pour maintenir l'état de réservation. Au niveau technique, la réservation de ressources par flux présente des difficultés d'implémentation et des limitations de déploiement. Le déploiement à grande échelle de RSVP se heurte à la difficulté de gérer un grand nombre d'utilisateurs (scalability). Plus il y a d'utilisateurs de IntServ/RSVP, plus il y a d'états à créer et maintenir pour des destinations différentes à chaque fois. Le coût introduit par la gestion des états et l'ordonnancement par flux peut entraîner une réduction considérable de leur performance.
+
+ 4.2.2 Le modèle de  différenciation des services DiffServ 
+
+      L'IETF a crée en 1997 le groupe DiffServ (Differentiated Services) qui bénéficie des travaux de IntServ et tente de dépasser les difficultés rencontrées dans le modèle intserv. Le modèle DiffServ [7] introduit la notion de l'agrégation des flux en quelques classes offrant des services spécifiques par agrégat (per Aggregate), il n'offre aucune garantie sur les flux individuels. Dans ce modèle il n'y a pas de réservation de ressources à travers les noeuds, tel que IntServ, mais un traitement différencié, appelé PHB (Per Hop Behavior) qui est basé sur la priorité par classe pour répondre à la QoS demandée. Autre que le best effort, deux services sont définis: Expédié (Expedited Forwarding) et assuré (Assured Forwarding). L'architecture générique pour un domaine DiffServ fait la distinction entre le système qui constitue le coeur du réseau (core) ou routeurs internes du domaine, et les systèmes réalisant l'accès aux réseaux terminaux (edge) ou routeurs de frontière du domaine. La fonction principale des routeurs constituant le coeur  consistent à acheminer les paquets aussi vite que possible selon la priorité de la classe du paquet, cette priorité est traduite par l'étiquette du champ DS (DiffServ) de l'en-tête IP. Les routeurs d'accès se chargent des fonctions de conditionnement, de contrôle d'intégrité et d'admission des paquets dans le réseau.
+
+
+
+
+
+Chapitre 5
+Intégration des  réseaux  UMTS /WLAN
+5.1 Introduction 
+      Le réseau UMTS offre au utilisateurs des services de transmission de la voix et les données mais avec un débit limité a 2 Mbps, la bande passante offerte aux utilisateurs est asymétrique selon qu'il y a un «upload » ou un « download », généralement un « download » est 2 à 3 fois plus rapide qu'un « upload ». Les opérateurs veulent combler ces inconvénients (notamment la faible limitation de débit) en maximisant les performances tout en réduisant les coûts.
+Le WLAN est un réseau offrant un débit pouvant atteindre 54 Mbps.
+La question naturelle qui se pose est : « peut-on intégrer les 2 réseaux WLAN et UMTS de sorte à exploiter les meilleurs services (les points forts) de chaque réseau.
+Plusieurs solutions sont possibles pour intégrer ces deux réseaux [10] [11].         
+
+5.2 WLAN 802.11 
+      Le standard IEEE 802.11 fonctionne en mode ad-hoc et en mode infrastructure. Dans le mode infrastructure, un point d'accès (AP) coordonne les transmissions entre les noeuds qu'ils lui sont attachés. Un point d'accès génère de façons périodique un « beacon » décrivant l'identifiant du réseau « ESSID » et l'identifiant de la cellule (adresse MAC du point d'accès) et d'autre informations.
+Dès qu'un EU « Equipment User » est allumé, il envoi une requête d'association au AP dont il est associé. Lorsque le EU passe à une nouvelle cellule dans le même réseau, en recevant un « beacon » qui contient l'identifiant de la nouvelle cellule, il envoi une requête de réassociation au nouveau AP qui contient l'adresse Mac de l'ancien AP, le nouveau AP utilise cette dernière pour récupérer le contexte d'information de l'ancien AP.
+La norme  802.11 défini deux fonctions MAC.
+Le PCF (Point Coordination Function) ou le point d'accès gère l'accès au réseau et Le DCF (Distributed Coordination Function)   ou l'accès au réseau est distribué, la technique utilise dans le DCF est le CSMA/CA 
+Ce protocole permet au noeud de retransmettre les données.
+
+5.3 IP dans les réseaux 802.11 WLAN
+      Plusieurs points d'accès (AP) peuvent être connectés via un réseau de routage IP pour construire un réseau IP WLAN comme il est montré sur la figure (5.1).
+Le point d'accès (AP) joue le rôle d'interface radio entre un ou plusieurs utilisateurs et le réseau WLAN, un utilisateur est connecté à un seul routeur d'accès (AR). Lorsqu'un utilisateur passe d'une cellule  à une autre sans changer le (AR), un handover intra-AR est exécuté, dans ce cas le AR coordonne et contrôle les échanges les deux points d'accès. Un handover inter-AR est exécuté lorsque la station change le routeur d'accès (RA). Dans ce cas le nouveau AR agit avec la station pour exécuter un handover IP.   
+
+	
+Figure 5.1 : réseau IP WLAN 
+
+5.4 Architecture d'intégration :  
+      Pour définir l'architecture d'intégration des deux réseaux UMTS et WLAN les points suivants doivent être abordé :
+1. le modèle de qualité de service QoS pour chacun des deux réseaux.
+2. comment assuré le routage des données entre les deux réseaux lorsque la gestion de mobilité est employée dans chaque type de réseau ? 
+  Dans le GPRS les données sont routées via un tunnel établit entre le GGSN et le SGSN  et    un autre tunnel entre le SGSN et le RNC, alors que dans le WLAN le protocole IP Mobile est employé pour la gestion de mobilité.
+3. comment choisir le meilleur point d'intégration lorsque plusieurs choix sont possibles ?
+Le WLAN peut être connecté au RNC, SGSN ou GGSN. Chacune de ces trois connexions a des avantages et des inconvénients.
+L'intégration des deux réseaux doit garantir les éléments suivants :
+* Un utilisateur du réseau WLAN peut utiliser le domaine PS du réseau UMTS pour la transmission des données sans passer par l'UTRAN et utilisé le domaine CS pour la transmission de la voix. Il peut établir et maintien les deux connexion simultanément.
+* Un utilisateur du WLAN peut augmenter les services des données le temps qu'il est connecté au WLAN et bénéficié de certaines  applications qui demande un grand débit  et que l'UMTS ne peut pas les assuré.
+* L'utilisateur dans le réseau UMTS utilise le sous système du réseau radio RNS UMTS pour le domaine de commutation de paquet (PS) et le domaine de commutation de circuit (CS).
+
+      L'idée fondamental pour cet architecture est que lorsque  l'utilisateur arrive a un secteur (cellule) ou le WLAN est assuré, la connexion PS (Paquet Switch) via UMTS RNS est démantelée et rétablie par le réseau WLAN, par contre la connexion au niveau de domaine de commutation de circuit reste toujours à travers le réseau UMTS. Pour réaliser cette architecture, il faut avoir un EU (Equipement Usager) qui fonctionne avec les deux réseaux c-à-d  un EU qui à deux interface, un pour l'UMTS et l'autre pour le WLAN et qu'ils peuvent être activées au même temps.
+
+
+ 
+Figure 5.2 : Architecture d'intégration 
+
+      Le RNC accomplit des taches spécifiques à la partie radio telle que la conversion des paquets à des trames et vice versa, contrôle des ressources radio et le contrôle du handover. 
+      Relier le WLAN à RNC exige la révision principale du protocole radio très complexe implémenté au niveau du RNC par ce que l'interface radio des deux réseaux est totalement différent.
+      Le WLAN peut être relié au GGSN qui semble simplifie le passage de l'UMTS vers WLAN par ce que le GGSN maintien seulement des contextes de session pour les connexions PS. Mais dans ce cas durant le handover vers UMTS, le SGSN doit recréer l'état de mobilité et rétablit des contexte PDP avec le GGSN et des contexte RAB (Radio Access Bearer) avec le RNC, ce sont les des informations que le GGSN n'a pas, par conséquent l'exécution du handover sera lente.
+      L'architecture d'intégration présentée sur la figure (5.2) montre un réseau WLAN connecté à un SGSN via le BR (Broder Routers). Une connexion via le réseau UMTS exige un échange de signalisation entre EU et le réseau pour établir et contrôlé la liaison. Le EU qui se trouve dans une cellule WLAN peut être connecté au deux réseau WLAN et UMTS simultanément à travers les différentes interfaces. La connexion UMTS est utilisée pour le service de voix. Cette connexion peut être utilisé aussi pour acheminer du trafic de signalisation du domaine PS.
+ 5.5 Modèle de Terminal :
+      La figure (5.3) montre l'architecture de la pile protocolaire d'un terminal Mobile équipé de deux interfaces, un pour UMTS et l'autre pour le WLAN pour permettre d'établir les deux connexions via les deux réseaux simultanément.
+Cette architecture suit la conception des modèles des couches internet. Le 802.11 WLAN contient la couche IEEE 802.2 LLC et 802.11 MAC et l'UMTS implémente les fonctions de plan de contrôle et le plan usager. Les fonctions implémentées au dessus de IP en UMTS sont des protocoles  d'encapsulation et de transfert du plan usager et des protocoles tel que  GMM/GM pour la gestion de mobilité et SM pour gestion de session et la couche RRC pour le contrôle des ressources radio.
+      Le protocole RSVP est un protocole de signalisation de QoS et de réservation de ressource, et le protocole LMM (Local Mobility Managment) pour la gestion de mobilité.
+
+
+figure 5.3 Modèle du terminal 
+
+5.6 Réservation de ressource :
+      Le GPRS est un réseau orienté connexion ou la session PS est établit avant la communication être le mobile et les noeuds de l'Internet, des connexions SGSN-EU et GGSN-SGSN sont établit pour chaque session PS.
+Le contexte PDP est utilisé pour établir la connexion et réserver les ressources dans le domaine PS.
+      Le RAB (Radio Access Bearer) est utilisé pour établir le canal radio et réserver les ressources radio entre le mobile et le RNC. La figure (5.4) montre l'activation du contexte PDP.
+      Le mobile communique avec le SGSN pour initialise l'activation du contexte PDP, le SGSN active  le contexte PDP avec le GGSN et le RAB avec SRNC, il envoi la requête « create PDP contexte » (CPC) au GGSN , il active RAB et après il envoi une réponse final au mobile.
+      Le chemin de communication d'un utilisateur du réseau WLAN reparti en deux, la première et le réseau GPRS  et l'autre est le réseau WLAN. La partie qui se trouve entre le SGSN et le BR  est considérée comme une partie du réseau UMTS-GPRS. Le chemin GPRS exige un contexte PDP pour toutes les sessions de données établies avec le réseau WLAN. Deux modes de QoS peuvent être utilisé au niveau des réseaux WLAN, IntServ ou DiffServ. Comme le contexte PDP, l'IntServ  exige qu'une connexion soit établie entre le EU et le BR (Broder Router) pour garantir la QoS dans le réseau WLAN. Dans la cas ou le réseau WLAN est basé sur le modèle DiffServ l'établissement d'une connexion ne sera plus exigée.
+	Dans le réseau WLAN le protocole « RSVP » peut être utilisé pour la réservation des ressources, l'EU envois le message RSVP Path au SGSN pour établir une nouvelle session qui initialise le contexte PDP qui lui correspond (RSVP).
+      L'EU maintien l'adresse de SGSN dans le contexte de mobilité. Les paramètres de sessions dans le message RSVP Path contiennent les paramètres qui définissent les services UMTS.
+Comme il est montré dans la figure (5.4) le SGSN négocie l'établissement d'une session avec le GGSN en utilisant le contexte PDP la réponse est dans le message RSVP Resv pour l'EU. Les messages RSVP peuvent être interprété et traité par le réseau WLAN pour la gestion de QoS par le déploiement des routeurs RSVP-aware dans le réseau. 
+	     Pour la gestion de QoS en utilisant DiffServ, seulement les routeurs bords (edge Routers) ont besoin d'être un RSVP-aware. 
+Si le réseau WLAN utilise le modèle de QoS IntServ, plusieurs routeurs deviennent des RSVP-aware utilisant RSVP pour réserver les ressources tout au long du chemin entre l'EU et le BR. 
+
+Figure 5.4 :   la procédure de réservation des ressources
+5.7 La mobilité et le handover 
+	Le contexte de mobilité dans GPRS relie aux mouvements des EUs dans le réseau UMTS est stocké dans le SGSN et dans l'EU lui-même. L'EU et quelques noeuds (routeurs d'accès AR) dans les réseaux WLAN maintient le contexte de mobilité relie aux mouvements des EUs dans le WLAN. Pour la gestion de mobilité et de handover, l'EU doit maintenir les deux contextes « contexte de mobilité GPRS » et « contexte de mobilité WLAN ».
+      Dans la figure (5.5), le contexte GPRS MM contient 3 états nommés par les étiquettes PMM et l'état WMM-connected. Le contexte est maintenu dans l'EU et le SGSN. Lorsque un EU est attaché au réseau GPRS on dit qu'il est dans l'état PMM-connected. Quand il passe à l'état de veille il transite vers l'état PMM-idle et il libère les ressources radio.
+      Lorsque le mobile exécute un handover vers le WLAN on dit qu'il est dans l'état  WMM-connected qui reflet la situation où le mobile est connecté au WLAN.
+      Le contexte WLAN LMM montré dans la figure (5.5) contient les détails des états reliés à la mobilité des EUs dans le WLAN. Il contient aussi deux états GPRS-attached et WLAN-attached. La transition du l'état GPRS-attached à l'état WLAN-attached est le résultat d'un handover inter-system de l'UMTS vers le WLAN.
+                               
+Figure 5.5 : l'état de mobilité maintenu par le SGSN et l'EU
+
+5.8 Conclusion :
+      Dans ce chapitre on a présenté une architecture d'intégration des deux réseaux UMTS et WLAN qui permet de garder une bonne QoS, cette architecture permet au EU de maintenir une connexion PS pour les données a travers le WLAN et une connexion CS pour la téléphonie a travers l'UMTS. On a présenté aussi un modèle de terminal avec double interface, WLAN et UMTS pour permettre d'avoir les deux connexions simultanément  ainsi qu'un modèle intserv pour gérer  la qualité de service.   
+
+
+Conclusion générale :
+      	
+      On a abordé dans ce travail le sujet de la qualité de service dans le réseau UMTS toute en passant par la présentation des différents éléments composants un tel réseau ainsi que les protocoles utilisés dans ce type de réseau.
+      Ces réseaux UMTS ont été abordés dans plusieurs études ces dernières années, notamment la qualité de services (QoS). Cependant sa tendance vers un réseau « tout IP » fait de lui un axe de recherche ouvert à plusieurs études, soit au niveau de la QoS ou au niveau de la gestion de la mobilité ; l'optimisation des ressources Radio ou même leur intégration avec d'autres réseaux hétérogènes.         
+      Cette étude nous a permet d'étudier une intégration des deux réseaux UMTS et WLAN. Une architecture qui permet d'avoir deux connexions via les deux réseaux simultanément. Une connexion pour la transmission de la voix en temps réel via UMTS et l'autre pour la transmission des données via le WLAN.
+      Le réseau WLAN est à la base utilisé pour des services de données best-effort, les recherches avenir seront orientées vers l'intégration et l'amélioration de la gestion de la qualité de service dans ces réseaux. Ainsi que l'étude de la gestion de  ressources radio. 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+RÉFÉRENCES
+
+
+[1] documentations de 3GPP   http://www.3gpp.org/
+[2]
+        Javier Sanchez, Mamadou Thioune    " UMTS ", 2004
+[3] Pierre Lescuyer   "UMTS les origines l'architecture, la norme " , juin 2002
+[4] Harri Holma & Antti Tosala   " les réseaux mobiles de troisième génération ", 2001 
+   [5] Rani Makké    "Qualité de service et Performances des protocoles de transport dans   l'UTRAN  " Thèse ENST Paris, 2003
+      [6]   "The specification TS 23.107 v.3.0.0 released by 3GPP specifies the UMTS QoS concept and architecture " 2002 
+        [7] S. Black, RFC 2475,"An Architecture for Differentiated Service", 1998.
+         [8] R. Braden, D. Clark, S. Shenker, ?RFC1633: Integrated Services in the Internet       Architecture: an Overview?, June 1994.
+ [9] J. Wroclawski, ?The Use of RSVP with IETF Integrated Services?, 1997
+
+ [10] M. Jaseemuddin,   "An Architecture for Integrating UMTS and WLAN Networks ", proceeding in the 8th IEEE ISSC, 2003.
+ [11] Shiao-Li Tsao and Chia-Ching Lin   "Design and evaluation of UMTS-WLAN interworking   strategies " IEEE, 2002 
+  [12] Vijay K. Varma, Sudha Ramesh, K. Daniel Wong, Jeffrey A. Friedhoffer   "Mobility      Management in Integrated UMTS/WLAN Networks "
+  [13] Site Web de l'IETF : http://www.ietf.org
+
+
+Etude de la Qualité de Service dans les réseaux UMTS
+
+
+
+
+
+49
+
+

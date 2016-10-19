@@ -1,0 +1,114 @@
+Bluetooth - Geschichte und Grundlagen
+
+Bei Bluetooth handelt es sich um einen offenen Nahstreckenfunkstandard mit einer Reichweite von 10 bis 100 Metern, der auf geringen Energieverbrauch und geringe Herstellungskosten ausgelegt ist. Bluetooth wurde bereits 1994 von Ericsson mit der Zielsetzung entwickelt, Geräte wie Mobiltelefone, Drucker, Notebooks etc. miteinander kabellos zu verbinden. Im Frühjahr 1998 schloss man sich mit anderen Industriepartnern wie Intel, IBM, Nokia, Toshiba usw. zur Bluetooth Special Interrest Group ( SIG ) zusammen, deren Ziel es war, eine kostengünstige Lösung für drahtlose Datenübertragung zu schaffen. Die Rechte am Markennamen „Bluetooth“ liegen ebenfalls bei der SIG, mittlerweile ist die Zahl der Mitglieder in der Bluetooth SIG auf über 2500 angewachsen. [ 5 ]
+
+Im Juli 1999 wurde dann die Spezifikation in der Version 1.0 fertig gestellt. Bluetooth hält seitdem Einzug in immer mehr Geräte. Weitere 2 Jahre dauerte es, bis schließlich 2001 die ersten Produkte auf den Massenmarkt kamen. Der Name Bluetooth stammt vom skandinavischen König Harald Blaatand (zu Deutsch: Blauzahn), der für seine hervorragenden Kommunikations- und Verhandlungsfähigkeiten bekannt war, z. B. vereinigte er Dänemark und Norwegen unter seiner Herrschaft. Ebenso soll Bluetooth die zahllosen Bereiche der Informationstechnik vereinen.
+
+Bluetooth nutzt den lizenzfreien Frequenzbereich zwischen 2,402 und 2,480 Gigahertz und ist somit kostenlos und ohne Anmeldung weltweit nutzbar. Dieser Frequenzbereich wird ISM-Band (Industrial, Scientific and Medical) genannt und wird nicht nur von Bluetooth sondern auch von Wireless LAN ( WLAN ), schnurlosen Telefonen oder Mikrowellenherden benutzt. Bluetooth ist besonders robust ausgelegt, um eventuelle Interferenzen von anderen Geräten auszugleichen. Als Modulation wird die Gaussian Frequency Shift Keying (GFSK) verwendet, die Übertragung erfolgt mit dem Fast Frequency Hopping Spread Spectrum-Verfahren (FHSS), bei dem 1600 mal pro Sekunde die Frequenz gewechselt wird, was Bluetooth relativ unempfindlich gegenüber Störstrahlung macht. Sollte ein Frequenzkonflikt auftreten, so ist die Übertragung nur 1/1600 Sekunde gestört, solange keine breitbandige Störfrequenz auftritt.
+
+Im Vergleich dazu: WLAN wechselt etwa 2,5-mal, schnurlose Telefone nach dem DECT-Standard nur einmal pro Sekunde die Frequenz.
+
+Die Sendeleistung eines Bluetooth-Endgeräts beträgt zwischen 1 und 100 mW. Es sind drei Spezifikationen im Standard definiert:
+
+Klasse Sendeleistung Reichweite
+
+    * Class 3 (dB0 Spezifikation) 1 mW 10 m Reichweite
+    * Class 2 (dB4 Spezifikation) 2,5 mW 10 - 20 m Reichweite
+    * Class 1 (dB20 Spezifikation) 100 mW bis 100 m Reichweite
+
+Damit Bluetooth auf mobilen Endgeräten sinnvoll eingesetzt werden
+kann, wurde es besonders Energiesparend konzipiert. Im Standby-Modus
+verbraucht Bluetooth deutlich unter 0,3 mA Leistung, bei
+Sprachübertragung zwischen 8 und 30 mA, bei der Datenübertragung
+zwischen 0,3 und 30 mA. Die Werte hängen im konkreten Fall von der
+Sendeleistung des Geräts und des Kommunikationspartners sowie von den
+Umgebungsvariablen (freie Sicht, Interferenzen, Stahlbeton etc.) ab.
+
+Bluetooth Grundlagen Teil 2
+
+Für Audio- und Sprachdaten gibt es im Bluetooth-Standard drei verschiedene Verfahren, die eine relativ hohe Qualität erreichen (etwa ISDN-Niveau). Damit eignet sich Bluetooth zum Beispiel auch zur drahtlosen Ansteuerung von Lautsprechern, Kopfhörern und Mikrofonen. Die Verfahren sind:
+
+    * 64-kBit/s-PCM-Format (Variante A-Law)
+    * 64-kBit/s-PCM-Format (Variante Micro-Law)
+    * CVSD-(Continuous Variable Slope Delta-)Modulation.
+
+Jedoch besteht in der Bluetooth-API (JABWT) keine Unterstützung für die direkte Audiodatenübertragung, deshalb wird auf diesen Bluetooth-Teilbereich nicht näher eingegangen, wir beschränken uns auf die Datenübertragung.
+
+ 
+
+Bluetooth bietet eine Übertragungsgeschwindigkeit von 1 MBit/s. Nach Abzug der Protokollinformationen bleiben 721 kbit/s für Nutzdaten. Wie bei allen Funknetzen nimmt die Übertragungsrate ab, je weiter die Kommunikationspartner sich voneinander entfernen.
+
+Bei asymmetrischer Übertragung können 721 kbit/s in eine Richtung und in die andere Richtung 57,6 kbit/s an maximalem Datendurchsatz erreicht werden. In der symmetrischen Variante können in beide Richtungen maximal 432,6 kbit/s übertragen werden. Für die Audio- und Sprachübertragung werden synchron 64 kbit/s genutzt, wobei der Standard bis zu drei gleichzeitig geöffneten Voice-Kanäle vorsieht.
+
+ 
+
+Zur Verbindung von Bluetooth-Geräten formen die Geräte eigene Kleinst-Funkzellen (sog. Pikonetze). Innerhalb eines solchen Pikonetzes ist Platz für acht aktive Bluetooth-Geräte, ein Gerät kann jedoch mehreren Pikozellen angehören. Ein Zusammenschluss mehrerer Pikonetze nennt man Scatternet. Innerhalb eines Pikonetzes arbeitet ein Gerät als Master, die anderen Geräte sind Slaves. Die Geräte werden durch ihre 48 Bit MAC adressiert.
+
+Bluetooth bietet vielseitige Anwendungsmöglichkeiten, z. B. schnurlose Sprachübertragung von Handy zu Headset, Datensynchronisation zwischen PC und Handy oder PDA, Nutzung des Bluetooth-Handys als GPRS-Modem am Laptop, drahtloser Bildtransfer von Digitalkamera auf den Desktoprechner, Austausch von Elektronischen Visitenkarten usw.
+
+Die Anforderungen an ein Bluetooth-Gerät für bestimmte Anwendungen sind von der Bluetooth-SIG in Form von “Profilen” definiert und standardisiert. Derzeit sind über 20 solcher Profile verabschiedet (siehe Tabelle), viele befinden sich noch in Entwicklung, weiterhin haben viele Hersteller “Spezialprofile” für ihre Produkte entwickelt.
+
+Übersicht über die Bluetooth-Profile
+
+Ein Teil dieser Profile ist als Basis zu sehen, die in fast jedem Bluetooth-Produkt zum Einsatz kommt Die vier gängigsten Profile sind das Generic Access Profile (GAP), das Serial Port Profile (SPP), das Service Discovery Application Profile (SDAP) und das Generic Object Exchange Profile (GOEP). Diese Profile können voneinander abhängen, d.h. z.B. GOEP basiert auf dem SPP, welches wiederum GAP benötigt. Ohne Generic-Access-Profil lässt sich kein anderes Profil starten, da es für die Zugriffsregelung verantwortlich ist. Andere Profile finden zusätzlich je nach Gerätetyp Anwendung, in den meisten Fällen verfügen die Endgeräte also über mehrere Profile, worunter zwangsläufig das Generic-Access-Profil ist.
+
+Neben den Profilen, die je nach Geräteklasse implementiert werden, basiert Bluetooth auf verschiedenen Protokollen, die sich in vier Kategorien aufteilen lassen:
+
+Kernprotokolle: SDP, L2CAP, LMP, BaseBand & Bluetooth Radio
+
+Kabel-Ersatz Protokolle: RFCOMM
+
+Telefonieprotokolle: AT-Kommandos und TCS BIN
+
+Aufgesetzte Protokolle: OBEX, WAE, WAP, UDP, TCP
+
+Mehr über den Bluetooth Protokoll Stack
+
+Bluetooth Protokoll Stack / HCI
+
+Der Bluetooth Protocol Stack ist in zwei Komponenten unterteilt, den Host (die Hardware) und den Controller (die Software). Außerdem gibt es das Host-Controller-Interface (HCI), welches die beiden Komponenten verbindet und so die Schnittstelle zwischen Hard- und Software bildet.
+
+Folgende Darstellung des Bluetooth Protokoll Stacks verdeutlicht das Zusammenspiel von HCI, Hardware und Software:
+
+bluetooth protokoll stack hci
+
+Bluetooth Radio legt die Spezifikation der Funkschnittstelle, also z. B. Frequenz und Sendeleistung für die physikalische Verbindung von Geräten fest.
+
+Das Baseband legt die Mechanismen für den Verbindungsaufbau und die Paketformate fest, ebenso erledigt dieses Protokoll das Frequency Hopping.
+
+Das Link Manager Protocol ( LMP ) ist für den Verbindungsaufbau, die Verwaltung der Verbindungen sowie die verschlüsselte Übertragung zuständig und ermöglicht die Überwachung der Verbindung.
+
+HCI - das Host Controller Interface ist die Schnittstelle zwischen Host und Controller.
+
+Das Logical Link Control and Adaption Protocol (L2CAP) ist die unterste Software-Schnittstelle und bietet die Möglichkeit, eigene Protokolle zu definieren. Alle weiteren Protokolle bauen auf L2CAP auf, wie aus der Grafik zu sehen ist, sind jedoch lediglich Datenverbindungen mit dem L2CAP möglich, für Sprachübertragungen muss auf das Baseband zurückgegriffen werden. L2CAP gehört zur Sicherungsschicht des OSI-Modells und ist damit für die Aufteilung der Daten in Pakete verantwortlich und übernimmt auch die Fehlerkorrektur.
+
+RFCOMM (Radio Frequency Communication Protocol) ist ein Protokoll zur Simulation eines drahtlosen, seriellen Anschlusses, so als wären zwei Geräte physikalisch über ein serielles Kabel miteinander verbunden.
+
+Das Object Exchange Protocol (OBEX) ist für den Austausch von Objekten, wie z.B. Dateien oder vCards gedacht und baut auf RFCOMM auf.
+
+SDP steht für Service Discovery Protocol, es wird verwendet um bestimmte Bluetooth-Services auf Geräten zu suchen, z. B. Audioübertragung, Druckdienste etc.
+
+TCS Binary (Telephony Control Protocol Specification) wird verwendet um Kontrollsignale für Audioservices zu versenden, z. B. wenn der Benutzer am Headset die Verbindung unterbricht oder ein weiterer, eingehender Anruf signalisiert wird.
+
+Das Wireless Access Protocol (WAP) dient zur Übertragung von WAP-Seiten, wie sie von Mobiltelefonen her bekannt sein dürften.
+
+Andere Protokolle wie TCP, UDP, PPP, IP werden als bekannt
+vorausgesetzt, auf sie wird hier nicht näher eingegangen.
+
+omplexe Mobile Anwendungen
+
+Trotz der immer geringeren Ausmaße und des abnehmendem Gewichts werden die mobilen Endgeräte immer leistungsfähiger.
+
+Fast ist die eigentliche Funktion der Geräte, das Telefonieren, zur Nebensache geworden. Kurzmitteilungen und Klingeltöne verschaffen den Mobilfunk-Providern astronomische Umsätze, MMS und UMTS-Flatrates sowie die Datenübertragung sollen diesen Trend fortsetzen.
+
+Mittlerweile verwaltet das Telefon unsere Kontaktdaten, erinnert uns an bevorstehende Termine und ermöglicht den ortsunabhängigen, drahtlosen Internetzugang.
+
+Die jüngste Entwicklung sind Farbdisplays, Funktionen zur Foto-, Video- und Audioaufzeichnung sowie die drahtlose Datenübertragung via Bluetooth und vereinzelt WLAN.
+
+Bluetooth ist eine Nahstreckenfunktechnik mit einer Reichweite von 10 bis 100 Metern, die zum Datenaustausch und der Synchronisierung der Mobil-Geräte untereinander, sowie mit dem Desktop Rechner zu Hause oder im Büro gedacht ist.
+
+Durch immer großzügigere Speicherausstattung und schnellere
+Prozessoren ist es heutzutage möglich, auch komplexe Anwendungen für
+Mobiltelefone zu entwickeln, welche sowohl von den Multimedia-, als
+auch von den Kommunikationsfähigkeiten der Geräte Gebrauch machen.
+

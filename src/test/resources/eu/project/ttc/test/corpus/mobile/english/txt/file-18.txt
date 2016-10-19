@@ -1,0 +1,245 @@
+untitled Mobile TV over 3G networks - Service and 
+enablers evolution
+Juan-Antonio Ibanez, Thorsten Lohmar, Dalibor Turina and Aurelie Zanin
+User interest in mobile TV services is growing thanks especially to the rates is now being introduced into terminals  
+rapidly (it is already widely supported in networks).  evolving multimedia capabilities of mobile terminals. Mobile opera-
+tors And initial deployments of MBMS began in  are thus eyeing mobile TV services both as a new source of revenue 
+2008, adding unique broadcast capabilities 
+and as a way of increasing customer loyalty. 
+Thi to 3G networks.s article looks at some key components of a mobile TV solution 
+that capitalizes on the capabilities of third-generation (3G) networks - in 
+particular Broadcast versus unicast, built-in support of unicast and broadcast transmission, which 
+fosters and sustains a strong uptake of service. There has been a lot of talk lately about 
+broadcast technologies being adequate en-
+ablers of mobile TV services. While this 
+might be partially valid for traditional TV, it 
+is evident - with the evolution of mobile TV 
+Drivers and challenges At present, mobile TV services are de- service through on-demand TV, podcast TV,  of 
+a mass-market mobile TV livered over unicast best-effort bearers. In and interactivity - that unicast bearers are  
+most cases, this form of delivery is adequate the true essential enablers.
+service provided there is suffi cient capacity in the The preferred solution for effi ciently deliv-
+Surveys show that end-users consider mobile network. Notwithstanding, a surge in the ering mobile TV services calls for a combina-
+TV to be one of the most interesting mobile volume of packet data traffi c is putting pres- tion of unicast and broadcast bearers. With 
+applications on offer. Mobile TV is often sure on the ability of networks to deliver unicast, operators can offer a broad selec-
+identifi ed with "linear TV" and scheduled delay-sensitive streaming services. For mobile tion of TV channels or content, even though 
+broadcast distribution, but the concept of TV services to succeed, a number of enablers only a limited number of users will view 
+TV and especially that of mobile TV is rap- must be put into place that maintain and most channels. By contrast, operators can 
+idly evolving to embrace on-demand TV as improve the quality of the end-user experi- boost system capacity by employing broad-
+well as podcast TV. ence. These enablers are cast capabilities to deliver the most popular 
+Market surveys and feedback from numer- • network capacity through proper dimen- channels in densely populated areas. The 
+ous test and commercial installations around sioning and enhanced technology; combined use of 3G unicast and broadcast 
+the world confi rm that users expect to be • improved QoS handling for streaming ser- capabilities enables operators to offer a vir-
+able to access TV content when and where vices (as compared with background inter- tually unlimited number of channels, as op-
+they want, for instance while they are com- active traffi c); and posed to pure broadcast solutions, which put 
+muting via bus or rail. • effi cient broadcast capabilities in 3G net- a hard limit (dictated by the amount of avail-
+As mobile TV gains ground among opera- works - for example, multimedia broad- able spectrum) on number of channels.
+tors and end-users, the need to deliver it in cast/multicast service (MBMS). In a nutshell, unicast can be used effi -
+a cost-effective way with guaranteed quality Ericsson, followed by other companies, is ciently 
+of service (QoS) becomes paramount. These introducing these enablers into its networks • to delivery a large number of niche TV 
+two aspects are equally important: cost- and terminals, and commercial deployments channels to individual end-users;
+effective delivery is a must in order for op- are set to begin in 2008. High-speed down- • to deliver on-demand TV;
+erators to maximize their revenues, just as link packet access (HSDPA), for instance, • to time-shift the delivery of linear TV 
+adequate quality of service is necessary to brings exceptional capacity to unicast. Simi- (pause/play, fast-forward, rewind);
+guarantee a satisfactory end-user experience. larly, streaming QoS with guaranteed bit • to deliver podcast TV to individual end-
+users; and.
+• to provide interactivity for, and facilitate 
+the personalization of, TV service.
+Likewise, broadcast techniques are best used 
+to effi ciently deliver popular TV channels to a 
+ TERMS AND ABBREVIATIONS large number of end-users in a given geographic 
+3G area and podcast TV to a large group of end- Third-generation mobile system MCCH MBMS control channel
+3GPP users. Third Generation Partnership MSK MBMS session key
+Therefore, although unicast remains a 
+ Project MTK MBMS traffi c key
+BM-SC Broadcast/multicast service center MUK MBMS user key fundamental component for delivering 
+DRM Digital rights management QoS Quality of service
+DVB evolved mobile TV services, the addition -H Digital video broadcasting - RNC Radio network controller
+of broadcast gives operators the most fl ex-
+ handheld SAP Service access protection
+ESG ible and cost-effective solution for providing  Electronic service guide SGSN Serving GPRS support node
+GBA Generic bootstrapping architecture SIM Subscriber identity module these services over a 3G network. In this 
+GGSN Gateway GPRS support node SMS Short message service context, the OMA BCAST standard plays 
+HSDPA High-speed downlink packet access UE User equipment (mobile terminal or  
+HTTP an important role by defi ning a framework  Hypertext transfer protocol  handset)
+MBMS for global interoperability of mobile broad- Multimedia broadcast/multicast  VoD Video on demand
+cast services 1.
+ service XML Extended markup language
+38 Ericsson Review No. 1, 2008
+Review108.indd   38 08-01-21   16.12.25 8]VccZa 6
+
+Figure 1
+Illustration of the MBMS enhanced 
+broadcast mode. In this example, the 
+RNC decides to distribute the content via 
+a point-to-multipoint radio bearer when 
+three or more users request the same TV 
+channel.
+MBMS - the 3G vice center (BM-SC), through the GGSN multipoint radio bearer, in which case the  broadcast 
+technology and SGSN, to each radio network control- terminal needs only "tune" to that radio ler (RNC) that serves the target area. The bearer; or 
+As explained above, operators need broadcast transport plane bearer carries the audio and • terminal needs to request a dedicated 
+technology to cope with a high penetration video components of the TV channel to the point-to-point radio bearer. No radio 
+of mobile TV services; the technical solution RNC. The RNC signals the availability bearer is established until a terminal has 
+over 3G networks is called MBMS (multi- of the TV channel on a common MBMS requested one (this way, unused radio re-
+media broadcast/multicast service). Other control channel (MCCH), which is always sources are conserved for other purposes). 
+wireless broadcast technologies also exist present in MBMS-enabled cells. When an When the number of point-to-point radio 
+(such as DVB-H) but are not covered in this end-user selects a TV channel, the terminal bearers for a given TV channel reaches a 
+article, whose focus is on the capabilities of a reads the MCCH information to determine predefi ned threshold, the RNC switches to a 
+3G network. whether or not the TV channel is available point-to-multipoint radio bearer and releases 
+The article Multimedia Broadcast/Multicast via MBMS in the cell. If the terminal does the point-to-point bearers (the threshold rep-
+in mobile networks presented MBMS in some not fi nd the TV channel on MCCH or there resents the breakeven point in terms of total 
+detail 2.  At the time of publication (January is no MCCH (for example, when an end-user cell power consumed by either transmission 
+2005), the 3GPP standard defi ned just two is roaming in another country), the terminal mode). After having switched to point-to-
+modes of transmission: broadcast and mul- can ask the TV server to send the content via multipoint mode, the RNC randomly trig-
+ticast. Toward the end of 2006, 3GPP intro- unicast. The availability of the unicast alter- gers terminals, inducing them to report their 
+duced a new "counting" mode for broadcast, native is indicated in the electronic service interest in the TV channel. This "recount-
+also commonly referred to as enhanced broad- guide (ESG). ing" procedure allows the RNC to reassess 
+cast. 3GPP designed the enhanced broadcast The information provided over MCCH in- the appropriate transmission mode as users 
+mode to better suit the characteristics of mo- dicates whether the move to other cells or stop watching the TV 
+bile TV services (in particular, fast channel • TV channel is delivered on a point-to- channel.
+switching) while achieving high spectrum 
+effi ciency. Below we provide an overview of 
+the enhanced broadcast mode. Readers who 
+what to learn more about the broadcast and BOX A, UNICAST, BROADCAST, POINT-TO-POINT, POINT-TO-MULTIPOINT
+multicast modes of MBMS should refer to 
+the Unicast refers to a particular case of end-to-end, point-to-point communication between a  aforementioned article.
+Figure 1 illustrates the principle of server and a client (or receiver). Broadcast communication is typically end-to-end, point-to- MBMS 
+multipoint communication between a server and multiple receivers. MBMS-enhanced broadcast 
+enhanced broadcast mode. A tree-like trans-
+mode extends this concept. It offers an end-to-end, point-to-multipoint communication service, 
+port plane bearer is established for each TV but may employ any combination of point-to-point or point-to-multipoint radio bearers to reach 
+channel from the broadcast/multicast ser- the actual receivers.
+Ericsson Review No. 1, 2008 39
+Review108.indd   39 08-01-21   16.12.26
+Service access pr :Votection principle.
+The RNC thus always employs the most or terminals about available services and how UEs what alternative bearers exist for each 
+favorable transmission mode, conserving un- they can access them. In the context of TV TV channel. The UEs select the most appro-
+used radio resources for other services. Note, services (such as linear TV, VoD, and podcast priate bearer in their current location, priori-
+however, that MBMS-enhanced broadcast TV) the service announcements take the form tizing broadcast bearers over unicast bearers 
+does not make "plain" broadcast mode ob- of an electronic service guide (ESG), which is when both options are available. The ESG is 
+solete. In some cases - for instance, where a an XML fi le with technical information that a key feature for offering mobile TV services 
+large number of end-users with a common receiving devices use to request, receive, de- that seamlessly integrate unicast and broad-
+interest are concentrated in a limited geo- crypt and render services. Ericsson promotes cast delivery. Note that the ESG solely refers 
+graphic area - MBMS broadcast (without the OMA BCAST standard, which defi nes a to the access technology; the type of radio 
+recounting) is the perfect solution. Typical service guide structure and describes ways of bearer used in broadcast mode is dictated by 
+examples are local broadcasts in sports arenas accessing it - for instance, by using a push the information provided over MCCH.
+or at exhibitions where targeted content can mechanism over a broadcast bearer or a uni-
+be distributed exclusively to the local audi- cast pull mechanism 3.
+ence. The MBMS service area concept defi nes The OMA BCAST ESG structure is made Service access and 
+the distribution area of an MBMS service up of numerous fragments. The core frag- content protection
+with the granularity of one cell, allowing op- ments contain the program guide - that is, 
+erators to defi ne precisely where content is to the information which is meaningful to end- After the broadcast client has received ac-
+be broadcasted. users, such as a list of TV channels and pro- cess information via the service announce-
+grams (previous, current, next) on each TV ment, the system cannot restrict reception of 
+Electronic service guide channel. The ESG also contains information the media stream. The media streams must 
+that is understood by the receiving applica- thus be encrypted to limit reception to those 
+MBMS service providers employ service an- tion but is not rendered to end-users. This people/devices who have subscribed to the 
+nouncements to inform user equipment (UE) includes the access fragments, which tell service. In other words, all receivers can re-
+ceive the media streams but only subscribing 
+clients can decrypt and render them. 
+An organized, layered hierarchy protects 
+access to the MBMS service as follows (Figure 
+2)4: Each broadcast media fl ow is encrypted 
+BOX B: PODCAST TV using an MBMS traffi c key (MTK). This key 
+is changed frequently and distributed, in-
+Podcast TV describes a service to which end-users subscribe to view some kind of video content terleaved, in the actual broadcast fl ow. The 
+on a regular basis or as it becomes available. The video clips are pushed to subscribers. They are 
+downloaded stored traffi c key is protected with an MBMS ses- in the background, without user intervention, and  in the terminal for off-line 
+viewing sion key (MSK), which is distributed via uni-. Examples include the last episode of a TV series, weather forecasts, news updates, and 
+so forth. cast. Only devices that have registered and 
+40 Ericsson Review No. 1, 2008
+Review108.indd   40 08-01-21   16.12.34 authenticated with the BM-SC may receive 
+the MSK. The MSK, in turn, is protected 
+against eavesdroppers by the MBMS user 
+key (MUK), which is derived from a shared 
+secret key (Ks'). This key is established dur-
+ing the authorization procedure, part of the 
+generic bootstrapping architecture (GBA) 5.  
+The actual media-protection keys change 
+frequently and may thus solely be decrypted 
+by registered devices. 
+The MUK and MSK are stored on the SIM 
+Britney will have a... Confirm: Boy Please wait, sending vote...
+card (more secure) or in device memory. 7dn EaZVhZ gZbZbWZg i]Vi XVhi^c\
+The OMA BCAST specifi <^ga V kdiZ Xdhih %#). cation delineates 
+th Vote Cancel Confirm Backe protection of service access and content 6.  
+Service access protection (SAP) is about lim-
+iting access to the service. Content protection 
+(also known as digital rights management, 
+DRM) 1 2 3 is about the management of received 
+content. Usage rights objects might restrict 
+how end-users use content. An end-user, for 
+example, might be able to record a mobile 
+TV session but will be prevented from for-
+warding it. The OMA BCAST SmartCard 
+profi le complies with and further extends the 
+3GPP MBMS access-protection scheme de- Figure 3
+scribed above. Example of voting interactivity sequence:
+(1) The device displays two alternatives. (2) After making a selection, the end-user is 
+Interactivity asked to confi rm the charge. (3) The vote is then sent. and 
+personalization
+Several TV programs contain "interactivity 
+features" that help integrate the audience 
+with the show they are watching. Popular 
+TV shows like "Big Brother" and "Ameri- BOX C, ARCHITECTURE FOR MOBILE TV OVER 3G
+can Idol" let the audience vote on its favor-
+ite contestants Figure 4 gives a simplifi ed view of a typical architecture for mobile TV over a 3G network.. Viewers typically cast their 
+The BM-SC is a logical entity defi ned by 3GPP. In practice, its functionality is split among several 
+votes via voice calls or premium SMS with physical components. The gray box roughly illustrates the distribution of BM-SC functionality.
+a keyword. The advantage of this approach 
+is that it reuses existing charging methods. The TV server is the fi rst contact point for the terminal and the central control unit of the mobile 
+The price of TV service. The ESG aggregator translates and combines program information from content  a vote depends on the num-
+ber dialed providers and inserts it into the ESG., and the charge is collected via a 
+phone bill. The media controller distributes content streams to UEs via unicast or broadcast. The encryptor 
+OMA BCAST takes interactivity one step encrypts the broadcast streams under the supervision of the service access protection (SAP) 
+further by function (Figure 2). Unicast streams do not require additional access protection because  specifying an interactivity enabler. 
+Interactivity standard 3G unicast security mechanisms already apply. with an end-user is triggered 
+by the reception of an interactivity media The broadcast controller establishes and releases MBMS bearers through the core and radio 
+document, which describes the interactiv- network.
+ity sequence (Figure 3). Interactivity media 
+documents may be sent The live encoder, podcast TV, and on-demand TV servers encode TV content in a format that is  via unicast or inter-
+leaved suitable for mobile devices and encapsulate it in applicable protocols for distribution. with broadcast fl ows and transmitted 
+to all listening devices. User feedback is then The interactivity server generates interactivity documents. The feedback collector processes 
+sent to the feedback collection server over a feedback from end-users.
+standard 3G unicast bearer (for example, via 
+HTTP Protocol names are mentioned for completeness. For further details, the reader is kindly referred  or SMS).
+Th to the following documentation from 3GPP:e interactive service content is distribut-
+• Multimedia Broadcast/Multicast Service (MBMS); Architecture and Functional Description 
+ed as a separate logical fl ow to receiving de- (3GPP TS 23.246).
+vices that then merge it into the actual pre- • Multimedia Broadcast/Multicast Service; Protocols and Codecs (3GPP TS 26.346).
+Ericsson Review No. 1, 2008 41
+Review108.indd   41 08-01-21   16.12.39
+Figure 4
+Simplifi ed view of architecture for mobile
+TV over a 3G network.
+sentation of the TV service. Therefore, one service guide (ESG) is a complete "content of legacy TV systems and Mobile TV trials 
+may personalize the interactive service ex- browser" that presents live, recorded and lo- have shown that users expect a large variety 
+perience. Users may browse the ESG, choose cally stored multimedia content by combin- of channels, but only a small set of channels 
+from a variety of interactive services and, by ing linear TV, on-demand and Podcast TV are especially popular at any given time.
+means of personal settings, specify how they into a unifi ed service offering. Thanks to its inherent fl exibility and ef-
+want the service to be displayed. MBMS is a technical extension to 3G net- fi ciency, MBMS is Ericsson's preferred choice 
+"Voting" is but one example of an interac- works: it reuses deployed infrastructure and of broadcast technology for Mobile TV as 
+tive service, and the interactivity enabler can spectrum. Moreover, Ericsson's implementa- well as any other service that must deliver 
+be used to realize other services, such as news tion of MBMS can be deployed as a software the same content to a large group of users in 
+tickers or chat applications, or to distribute upgrade. a 3G network.
+personalized or location-dependent adver- MBMS is used to boost capacity for trans- Interactivity and personalization are pow-
+tisements. mitting popular Mobile TV channels to large erful means of captivating an audience and 
+audiences. The radio network determines increasing TV viewing time. Mobile TV, 
+Conclusion whether it should employ point-to-point or with its natural integration of unicast and point-to-multipoint radio-transmission re- broadcast communication channels, intro-
+Mobile TV is often identifi ed with the "lin- sources. Mobile TV channels are thus solely duces entirely new ways of interacting with 
+ear TV" of legacy, fi xed TV networks, but broadcasted as needed. Integration with an audience and of creating a personalized 
+Ericsson's vision of Mobile TV also embrac- unicast makes it possible to offer a virtually TV experience. This new approach will 
+es the distribution of on-demand TV and unlimited number of Mobile TV channels become a key differentiator of Mobile TV 
+Podcast TV content. The client's electronic and on-demand content. Consumer studies offerings.
+REFERENCES
+1. Mobile Broadcast Services. Open Mobile Alliance, OMA-TS-BCAST_Services-V1_0
+2. Bakhuizen, M and Horn W.: Multimedia Broadcast/Multicast in mobile networks. Ericsson 
+Review, Vol. 82(2005):1, pp. 6-13
+3. Service Guide for Mobile Broadcast Services. Open Mobile Alliance, OMA-TS-BCAST_Service-
+Guide-V1_0
+4. Security of Multimedia Broadcast/Multicast Service (MBMS). 3GPP TS 33.246
+5. Generic Authentication Architecture (GAA); Generic Bootstrapping Architecture. 3GPP TS 
+33.220
+6. Service and Content Protection for Mobile Broadcast Services. Open Mobile Alliance, OMA-
+TS-BCAST_SvcCntProtection-V1_0
+42 Ericsson Review No. 1, 2008
+Review108.indd   42 08-01-21   16.12.43

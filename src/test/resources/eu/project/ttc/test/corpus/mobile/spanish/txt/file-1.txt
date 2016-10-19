@@ -1,0 +1,378 @@
+Microsoft Word - socioeconomia.doc EL PROCESO DE IMPLANTACIÓN DE LA TELEFONÍA MÓVIL 
+EN ESPAÑA 
+ 
+Antonio Pérez Yuste 
+Director de la EUIT de Telecomunicación 
+Universidad Politécnica de Madrid 
+ 
+Publicado en la Revista Antena del COITT. Septiembre 2002. 
+ 
+Dentro del mercado global de las telecomunicaciones, el sector más 
+relevante ha sido sin duda el de la telefonía móvil. No sólo por su fuerte 
+crecimiento económico, sino también porque ha representado el paradigma de 
+la liberalización de las telecomunicaciones y porque ha supuesto, junto a 
+Internet, el motor de cambio económico y social más importante de los últimos 
+tiempos. Este artículo muestra la génesis y el desarrollo de la telefonía en 
+España 
+ 
+La primera generación de telefonía móvil. El primer servicio de telefonía 
+móvil propiamente dicho utilizado en nuestro país, empezó a ofrecerlo la Compañía 
+Telefónica Nacional de España (CTNE) en 1976. Se llamaba Teléfono Automático en 
+Vehículos (TAV) y consistía en un rudimentario sistema que utilizaba las técnicas y 
+procedimientos de los equipos de radiotelefonía móvil privada de la época. Operaba 
+en la banda de 160 MHz y su zona de cobertura se reducía a las ciudades de Madrid y 
+Barcelona. 
+El sistema TAV se componía de un transceptor multicanal, con potencia de 
+transmisión y altura de antena suficientes como para asegurar la cobertura, y de una 
+serie de terminales receptores multicanales, muy pesados y poco funcionales, 
+necesariamente instalados a bordo de vehículos. 
+A pesar de lo novedoso del sistema TAV, el elevado precio de los terminales y 
+las escasas posibilidades de crecimiento de la red, frenaron significativamente la 
+demanda. El número de usuarios que utilizaron el servicio fue muy reducido, 
+limitándose casi exclusivamente al personal directivo de la propia CTNE y a los altos 
+cargos de la Administración Pública. 
+De la misma forma que sucedía entonces con el resto de servicios de 
+telecomunicación, la CTNE explotaba el servicio TAV en régimen de monopolio. Al 
+mismo tiempo, la propia Compañía era la única compradora tanto de los equipos 
+necesarios para la construcción de la red, como de los equipos terminales de usuario. 
+Esto hizo que el mercado de la telefonía móvil se fundamentara, desde un principio, en 
+un triple monopolio: la red soporte de las comunicaciones, la operación de los servicios 
+y el suministro de los aparatos terminales, tanto para su venta como para su alquiler. Y 
+así continuaría siéndolo durante algunos años más. 
+En este escenario de escaso aliciente, aconteció un hecho que cambiaría 
+radicalmente el panorama: la aparición comercial, en 1981, del sistema NMT (Nordic 
+Mobile Telephone) en los cuatro países nórdicos europeos. El sistema NMT se basaba 
+en un concepto teórico novedoso ideado por D.H. Ring, en 1947 y que había 
+desarrollado la AT&T durante la década de 1970: la "radiocomunicación celular". 
+ 1 La CTNE aprovechó la celebración del Mundial de Fútbol 1982 en España, 
+para poner en funcionamiento el primer sistema de telefonía móvil celular en nuestro 
+país. Lo llamó TMA-450 (Telefonía Móvil Automática) y fue derivado del estándar 
+NMT, dentro de la banda de 450 MHz. Su gran ventaja era que permitía un crecimiento 
+de la red mucho más sencillo que el sistema TAV, dada la propia filosofía de 
+funcionamiento de los sistemas celulares. 
+El TMA-450 fue todo un éxito. Los terminales de usuario, aún siendo todavía 
+aparatosos, eran más manejables y, lo que es más importante, eran más baratos. 
+Además, se desarrollaron equipos portátiles de gran tamaño, que se llevaban cogidos 
+con un asa a modo de maletín, lo que permitió continuar utilizando el teléfono móvil 
+fuera de los vehículos. 
+Poco después de que la Comisión Europea publicase el Libro Verde de las 
+Telecomunicaciones, las Cortes Generales aprobaron, el 18 de diciembre de 1987, la 
+Ley de Ordenación de las Telecomunicaciones (LOT), que poco o nada afectó a la 
+CTNE. Formalmente, normalizaba de jure una situación de facto, dando rango jurídico 
+al régimen de monopolio existente hasta esa fecha. De hecho, en la disposición 
+adicional segunda de la LOT se le encomendaba al Gobierno la formalización de un 
+nuevo contrato con la CTNE sometido a la Ley de Contratos del Estado, a la misma 
+LOT y al resto del ordenamiento jurídico nacional. Todo lo más, donde realmente se 
+notó la LOT fue en la obligación de liberalizar los terminales de usuario. 
+Durante la presidencia de Luis Solana al frente de la CTNE, la Compañía 
+empezó a perfilar su nuevo modelo empresarial. En junio de 1988 fue otorgada la 
+escritura de cambio de denominación social de la Compañía Telefónica Nacional de 
+España S.A. por la de Telefónica de España S.A; y ese mismo año se creó TS1 como 
+empresa filial para asumir el pujante negocio de los móviles. La todopoderosa 
+Compañía empezaba, de esta manera, a prepararse para los profundos cambios que 
+se avecindaban. 
+La cobertura del sistema TMA-450 llegó durante 1990 a las 50 provincias 
+españolas, superándose la cifra de los 54.700 abonados. Por entonces, ya 
+comenzaban a observarse los primeros síntomas de congestión del espectro 
+radioeléctrico en la banda de 450 MHz. 
+Debido a ello, Telefónica comenzó a estudiar la introducción en España de un 
+nuevo estándar de telefonía móvil celular que llevaba funcionando desde 1985 en 
+Gran Bretaña: el TACS (Total Access Communication System). 
+En 1990, TS1 lanzó el sistema TMA-900, derivado de la norma TACS, en la 
+banda de 900 MHz. El nuevo producto fue comercializado con el nombre de Moviline, 
+en un acertado intento de acercar la telefonía móvil al ciudadano, convirtiéndola en 
+algo familiar y ocultando la aparente complejidad que denotaban sus siglas técnicas. 
+Se inauguraba, de esta forma, una política comercial que más adelante adoptarían 
+otras compañías. 
+El aumento de la frecuencia de trabajo del TMA-900 tenía, de hecho, una gran 
+ventaja: disminuía el tamaño de las células, con la consiguiente reducción de la 
+potencia radiada; y también disminuía la longitud de onda, con la consiguiente 
+reducción del tamaño de los componentes. Como consecuencia de ambas cosas, se 
+dispuso de terminales más pequeños y más atractivos para el usuario, lo que trajo 
+consigo un aumento de la demanda y, por consiguiente, una disminución del precio de 
+los terminales que contribuyó, a su vez, a incrementar la demanda todavía más. 
+ 2 Evolución del mercado de la telefonía móvil en España 
+desde 1987 hasta 1994
+450
+400
+350
+300
+250
+200
+150
+100
+50
+0
+1987 1988 1989 1990 1991 1992 1993 1994
+Año
+ 
+Figura 1. Número de clientes de telefonía móvil en España (expresado en miles), desde 1987 
+hasta 1994. Fuente: Memorias anuales de Telefónica. Elaboración propia. 
+En paralelo con el despliegue de la telefonía móvil analógica en toda Europa, la 
+CEPT (Conférence Européenne des Administrations des Postes et 
+Telécommunications) creó en 1982 un grupo de trabajo denominado GSM (Groupe 
+Speciale Mobile), con el cometido de desarrollar las especificaciones de un sistema de 
+telefonía móvil público de ámbito paneuropeo, destinado a un mercado potencial que, 
+se estimaba entonces, superaría los 10 millones de usuarios en Europa para el año 
+2000. 
+El sistema propuesto, al cual el grupo redactor designó también por las siglas 
+GSM (Global System for Mobile communications), había de ser de tecnología digital, 
+con itinerancia internacional, gran capacidad de tráfico, utilización eficiente del 
+espectro, empleo de señalización digital, posibilidad de conexión con la RDSI y debía, 
+asimismo, garantizar la seguridad y la privacidad de las comunicaciones. 
+En septiembre de 1987, los 13 operadores europeos más importantes del 
+momento, entre los que se encontraba Telefónica, firmaron un Memorando de 
+Entendimiento, GSM/MoU, para continuar con el proyecto y lanzarlo el 1 de julio de 
+1991. El retraso en el desarrollo técnico y la necesidad de modificar algunas 
+especificaciones hicieron imposible alcanzar esta fecha, por lo que hubo de 
+posponerse su lanzamiento comercial un año más. 
+En España, Telefónica desarrolló en 1992 dos proyectos piloto: uno en 
+Barcelona, con motivo de los Juegos Olímpicos, y otro en Sevilla, coincidiendo con la 
+Exposición Universal y la celebración del V Centenario del descubrimiento de América. 
+Entretanto, el Ministerio de Obras Públicas y Transportes trabajaba en la modificación 
+de la LOT y en la ruptura del monopolio en el sector de la telefonía móvil. 
+La segunda generación de telefonía móvil. En 1992, la Comisión Europea 
+efectuó una revisión del sector de las telecomunicaciones enviando dos 
+comunicaciones al Consejo: en una de ellas se abordaba el problema de las tarifas y 
+ 3
+Número de clientes (en miles) su insuficiente evolución hacia un sistema más ligado a los costes, mientras que en la 
+otra se hacía un balance negativo de la liberalización producida hasta ese momento. 
+Por otra parte, las previsiones de penetración de la telefonía móvil en España 
+para 1992 estimaban que Telefónica debería haber alcanzado un nivel de usuarios 
+equivalente al 7% del mercado europeo comunitario, valor que no se consiguió en la 
+realidad. A la vista de esto y en contraste con la fuerte evolución del servicio en países 
+como Alemania e Italia, el Gobierno previó la conveniencia de introducir un segundo 
+operador de telefonía móvil como medio de incentivar el desarrollo acelerado del 
+servicio y, de paso, como un gesto de buenas intenciones en respuesta a las 
+exigencias liberalizadoras que llegaban desde Europa. 
+El nuevo ordenamiento jurídico del Estado español, al que afectaba de modo 
+fundamental su pertenencia a la Comunidad Europea, hacía imprescindible la 
+elaboración de un nuevo Contrato con Telefónica que revisara el de 1946. Así estaba 
+previsto en la disposición adicional segunda de la LOT y así se dispuso, finalmente, 
+mediante Resolución de 14 de enero de 1992 después de suscrito el Acuerdo por 
+ambas partes el 26 de noviembre de 1991. 
+Un aspecto importante del Contrato de 1992 era que la relación de los servicios 
+finales y portadores concedidos en régimen de monopolio quedaba sujeta a lo que 
+dispusiera la Normativa Comunitaria o, en su caso, la legislación española. En 
+aplicación de la misma, y de acuerdo con la modificación de la LOT de 3 de diciembre 
+de 1992, la relación de servicios finales que pasaba a prestar Telefónica se redujo al 
+servicio telefónico básico de carácter universal y al servicio de telefonía móvil, éste 
+último en monopolio sólo hasta el 31 de diciembre de 1993, según rezaba en la 
+disposición transitoria cuarta. 
+Ese mismo año de 1993, TS1, la filial de móviles de Telefónica, pasó a 
+denominarse Telefónica Servicios Móviles, iniciando su preparación para contender en 
+libertad de mercado con los operadores venideros. 
+Con todo y con ello, aún habría que esperar hasta el 26 septiembre de 1994, 
+para ver aprobado el pliego de cláusulas de explotación y de bases de adjudicación 
+del concurso para la concesión de una segunda licencia de telefonía móvil GSM. Poco 
+antes, el 1 de julio, un Real Decreto otorgaba a Telefónica de España la concesión de 
+un título habilitante para la prestación del servicio de telefonía móvil GSM 
+estableciendo, además, el reglamento técnico y de prestación del servicio de 
+telecomunicación de valor añadido de telefonía móvil automática. 
+Inicialmente hubo cinco consorcios interesados en conseguir la segunda 
+licencia GSM: Cometa, SRM, Sistelcom, Reditel y Airtel. Finalmente, se fusionaron 
+Cometa y SRM, por un lado, y Airtel, Sistelcom y Reditel, por otro. 
+El 14 de noviembre de 1994, Airtel-Sistelcom-Reditel presentaba su oferta al 
+concurso, y el 28 de diciembre de ese mismo año se hacía acreedor de la segunda 
+licencia. El consorcio, que pasaría a llamarse simplemente Airtel, tuvo que pagar 
+85.000 millones de pesetas por la licencia, exigencia que no se le hizo a Telefónica y 
+que sería la base de un posterior recurso. 
+El contrato con Airtel se aprobó y se firmó en diciembre de 1994; en julio de 
+1995 comenzó a operar Telefónica Móviles bajo la marca comercial Movistar; en 
+octubre de 1995 hizo lo propio Airtel; y en enero de 1996 Telefónica Servicios Móviles 
+consiguió su primer millón de clientes, sumados los de Moviline y los de Movistar. 
+ 4 Pasadas las Elecciones Generales de marzo de 1996, comenzó un trienio de 
+actuaciones conducentes a la plena liberalización de las infraestructuras y de los 
+servicios de telecomunicación. El camino elegido por el Gobierno Popular fue la 
+introducción del "duopolio" basado en dos empresas públicas: Telefónica y Retevisión, 
+su posterior privatización y, finalmente, la apertura total del mercado el 1 de diciembre 
+de 1998. 
+Al poco tiempo del cambio de Gobierno, el 7 de junio de 1996, se creó el 
+segundo operador global de telecomunicaciones, otorgando a la empresa pública 
+Retevisión un título habilitante para el servicio final de telefonía básica y para el 
+servicio portador que lo soporta. 
+También, en la misma fecha, se creó la Comisión del Mercado de las 
+Telecomunicaciones, como órgano gubernamental independiente encargado de velar 
+por las condiciones de competencia efectiva en el mercado, velar por la correcta 
+formación de los precios y ejercer de órgano arbitral en los conflictos que surgiesen en 
+adelante dentro del sector. 
+Una vez engendrado el "duopolio", el siguiente paso fue iniciar el proceso de 
+adjudicación de activos de ambas compañías. Así, el 18 de enero de 1997 se puso a 
+la venta el 20'9% de Telefónica, que estaba en manos del Estado, mediante la Oferta 
+Pública de Venta (OPV) más publicitada de todos los tiempos (en 1994 ya se había 
+privatizado un 12%). En el plazo de un mes Telefónica dejaría de ser, definitivamente, 
+una compañía pública. 
+Por su parte, el 11 de julio de 1997 se resolvió el concurso de privatización del 
+70% de Retevisión a favor del consorcio formado por el operador italiano STET 
+(Telecom Italia) y las eléctricas Endesa y Unión Fenosa, frente al consorcio Ópera 
+liderado por el Banco Central Hispano y los operadores France Telecom y Sprint. El 
+Estado conservaría el 30% restante hasta finales de 1998, fecha en que lo enajenó 
+mediante convocatoria restringida de ofertas. 
+Superada esta segunda fase, la estrategia pergeñada por el Gobierno pasaba, 
+necesariamente, por equilibrar las condiciones de servicio de Telefónica y de 
+Retevisión, lo que afectaba inevitablemente a la telefonía móvil. Para conseguirlo, se 
+convocó un nuevo concurso el 26 de febrero de 1998, para la concesión de tres 
+licencias en la modalidad DCS-1800 (Digital Cellular System), un sistema de 
+comunicaciones móviles muy similar a GSM, que trabaja en la banda de 1800 MHz y 
+que está diseñado específicamente para entornos microcelulares. 
+Inmediatamente después de aquello, se aprobó la Ley General de 
+Telecomunicaciones el 24 de abril y, unos meses después, se resolvió el concurso 
+para la concesión de la tercera licencia DCS-1800 el 24 de junio de 1998. Resultó 
+adjudicataria la compañía Retevisión Móvil (filial de la compañía Retevisión), que 
+pasaba de esta manera a explotar el servicio de telefonía móvil en competencia con 
+Telefónica Móviles y con Airtel. El consorcio Alas, participada mayoritariamente por 
+France Telecom, el Banco de Santander y Ferrovial, fue la gran derrotada al no 
+hacerse acreedora de ninguna licencia. 
+Poco después, el 16 de julio de 1998, se constituyó Retevisión Móvil como 
+sociedad anónima independiente con la participación mayoritaria en su accionariado 
+de Retevisión y de Telecom Italia; y el 24 de enero de 1999, la nueva compañía 
+empezó a prestar servicio en las 10 ciudades españolas más importantes bajo la 
+sugerente marca comercial de "Amena". 
+ 5 Para cuando esto sucedía Telefónica Móviles alcanzaba ya la cifra récord de 
+los cinco millones de clientes con un reparto, aproximado, de cuatro millones de 
+abonados en Movistar y un millón de abonados en Moviline. Airtel, por su parte, en las 
+mismas fechas superaba los dos millones de clientes. En su conjunto, la penetración 
+del móvil en España alcanzaba una cifra cercana al 18%. 
+Evolución del mercado de la telefonía móvil en España
+desde 1994 hasta 2001
+35
+30
+25
+20
+15
+10
+5
+0
+1994 1995 1996 1997 1998 1999 2000 2001
+Año
+ 
+Figura 2. Número de clientes de telefonía móvil en España (expresado en millones), desde 
+1994 hasta 2001. Fuente: Telefónica y CMT. Elaboración propia. 
+La tercera generación de telefonía móvil. Así las cosas, una vez iniciado el 
+año de 1999, dos hechos habían quedado suficientemente probados: uno, que las 
+comunicaciones móviles se encontraban en el origen del fortalecimiento económico de 
+España; y dos, que los servicios asociados a las mismas estaban transformando 
+profundamente las costumbres sociales y culturales de la población. De hecho, el 
+binomio Internet-Móviles empezaba a conformar una nueva forma de organización de 
+la economía y de la sociedad conocida con el nombre de "Sociedad de la Información". 
+El primer intento comercial de empezar a andar en esta dirección fue el servicio 
+de acceso a Internet desde el teléfono móvil convencional, basado en la tecnología 
+WAP (Wireless Application Protocol), lanzado por Telefónica Móviles el 1 de octubre 
+de 1999. En principio, el servicio WAP fue recibido con entusiasmo, aunque más tarde 
+se comprobaría que su principal inconveniente era el propio terminal y la pantalla del 
+mismo, cuyo diseño, según decían sus detractores, "sólo invitaba a hablar". 
+Por todo lo dicho, a nadie extrañó que sin haber amortizado las multimillonarias 
+inversiones realizadas con GSM en sus cinco años de existencia, la clase política 
+europea decidiera dar el salto a la tercera generación de telefonía móvil, haciendo 
+converger en terminales ultraligeros y multifuncionales los paradigmas de Internet y de 
+las comunicaciones móviles. El ambicioso nombre que se le dio a este revolucionario 
+sistema fue: UMTS (Universal Mobile Telecommunications System). 
+El 10 de noviembre de 1999 el Gobierno aprobó el pliego de cláusulas 
+administrativas particulares y de prescripciones técnicas y convocó el concurso 
+ 6
+Número de clientes (en millones) público, por procedimiento abierto, para el otorgamiento de cuatro licencias 
+individuales para establecer la red de telecomunicaciones y para explotar el servicio de 
+comunicaciones móviles UMTS. 
+Tras una tensa espera que coincidió con la campaña electoral del año 2000, el 
+lunes 13 de marzo, después del domingo de elecciones, se hizo público, no sin cierta 
+polémica, el fallo del concurso. Resultaron adjudicatarias la empresas: Telefónica 
+Móviles, Airtel Móvil, Retevisión Móvil y el consorcio Xfera Móviles, encabezado por 
+Vivendi-FCC, ACS, Mercapital y Sonera. 
+Los consorcios derrotados fueron Movi2, participado mayoritariamente por Uni2 
+Telecomunicaciones (a su vez, perteneciente al grupo France Telecom), Iberdrola, 
+Caja Madrid, Ferrovial y Multitel, y Movilweb 21, grupo dominado por Deutsche 
+Telekom, Jazztel y Abengoa. 
+El concurso estuvo envuelto en la polémica desde un principio, alimentado por 
+los fuertes intereses de los grupos que competían y por las acusaciones mutuas sobre 
+presuntas incompatibilidades en el accionariado de los concursantes. La resolución 
+final del concurso fue recurrida por dos de los integrantes del consorcio Movi2: Uni2 
+Telecomunicaciones y Ferrovial, argumentando falta de transparencia en la 
+convocatoria y parcialidad en la decisión final. Meses después, el primer recurso fue 
+desestimado y, poco más tarde, el segundo fue retirado. 
+Penetración de la telefonía móvil en la UE en 2001
+100
+90
+80
+70
+60
+50
+40
+30
+20
+10
+0
+ 
+Figura 3. Penetración de la telefonía móvil en los países de la UE en 2001 (en número de 
+abonados por cada 100 habitantes). Fuente: UIT. Elaboración propia. 
+El afán por entrar en el mercado del móvil y la crispación por no conseguirlo 
+estaba muy relacionado con un pastel que, entonces, se prometía muy apetitoso. De 
+un lado, la "espectacularidad" de las cifras reales: el número de usuarios de la 
+telefonía móvil en España alcanzaba los 15 millones a principios de 2000, casi un 38% 
+de penetración. Y de otro, la "clarividencia" de unas opiniones excesivamente 
+optimistas: se hablaba de doblar la cifra de abonados en cuestión de un año, de 
+convocar un concurso para la concesión de dos nuevas licencias DCS-1800 en el 
+ 7
+Luxemburgo
+Italia
+Austria
+Suecia
+Reino Unido
+Finlandia
+Portugal
+Grecia
+Bélgica
+Holanda
+Dinamarca
+Irlanda
+Alemania
+España
+Francia primer cuatrimestre del año 2001 y de tener funcionando los primeros terminales 
+UMTS en agosto de 2001. 
+Sin embargo, la cosa se torció y, permutando el dicho popular, sucedió que el 
+año 2000, año de bienes, dio paso al año 2001, año de nieves. No sólo en España, 
+también en toda Europa. Citaré algunos datos: 
+- En Europa: se quedó vacante el concurso UMTS en Francia; Sonera 
+devolvió la licencia UMTS en Noruega; BT puso a la venta su emblemática 
+sede en el corazón de la city londinense del Reino Unido; los resultados 
+económicos de Deutsche Telekom cayeron estrepitosamente en Alemania; y 
+se pospuso indefinidamente la concesión de licencias UMTS en Hungría. 
+- En España: Airtel, que en octubre cambió su nombre por el de Vodafone, 
+perdió cuota de mercado retornando a índices de tres años antes; Telecom 
+Italia se retiró de Auna; Alcatel anunció la venta de sus fábricas de Villaverde 
+(Madrid) y Vitoria; se pospuso indefinidamente la convocatoria de las dos 
+nuevas licencias de DCS-1800; y Xfera congeló sus operaciones y aplazó su 
+entrada en el mercado hasta el año 2003. 
+La perplejidad por lo hechos que se vivieron durante 2001 fue tal que casi 
+nadie se atrevía a hablar de crisis; a lo sumo, los más realistas hablaban de recesión 
+económica. Nadie daba crédito a lo que estaba ocurriendo. Parecía increíble que un 
+sector que, año tras año, había batido siempre las marcas impuestas por las 
+previsiones más optimistas y que parecía no tener techo, pudiera experimentar un 
+ajuste tan severo; que un sector cuyo incremento anual de clientes había conseguido 
+cifras tan espectaculares como la alcanzada en 1996, cuando se superaron los 
+doscientos puntos porcentuales de aumento respecto del año anterior, pudiera 
+experimentar una desaceleración tan profunda. 
+Pero la prolongación de esta situación hasta la fecha presente, ha obligado a 
+todo el sector de la telefonía móvil a reconocer la realidad de los hechos. Con la 
+perspectiva que da la historia vivida, ahora es fácil caer en la cuenta de que acelerar el 
+proceso político más allá del desarrollo tecnológico era un craso error. Tanto, que sólo 
+el tiempo nos dirá si el verdadero origen de la crisis actual no habrá que buscarlo en 
+las apresuradas decisiones que se tomaron con respecto a la tercera generación. 
+Así, por citar un ejemplo de la diferencia de política rectora que hubo entre 
+GSM y UMTS, decir que cuando se concedieron en España las licencias GSM a 
+Telefónica y Airtel, hacía dos años que se habían montado sendos sistemas 
+experimentales públicos en la Exposición Mundial de Sevilla y en los Juegos Olímpicos 
+de Barcelona. Mientras que cuando se concedieron las licencias UMTS en 2000, aún 
+no se había probado ni un solo sistema público. 
+Finalmente, y ya para terminar, destacar otro elemento que durante este último 
+año se ha hecho omnipresente y que, unido a la crisis económica del sector, ha 
+provocado una considerable incertidumbre. Se trata de la aparición de una importante 
+alarma social originada por la presencia masiva de antenas de telefonía móvil y su 
+posible influencia sobre la salud humana. No es despreciable, desde luego, la 
+ascendencia verosímil que este factor haya podido tener sobre la situación económica, 
+máxime cuando la presión social ha obligado a algunos Ayuntamientos a paralizar la 
+concesión de los permisos de obra para la instalación de las infraestructuras radiantes. 
+Sin duda, se trata de un fenómeno social muy interesante que bien merece una lectura 
+más pausada. Si el lector desea conocer más a fondo este fenómeno, puede acudir al 
+Informe Especial titulado: "La Percepción Social de los Campos Electromagnéticos", 
+publicado en la Revista Mundo Electrónico de julio de 2002. 
+ 8

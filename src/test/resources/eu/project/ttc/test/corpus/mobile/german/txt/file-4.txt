@@ -1,0 +1,920 @@
+Dr.-Ing. Martin H. Virnich
+
+EDGE - Eine neue Variante des GSM-Mobilfunks
+
+EDGE - Eine neue Variante des GSM-Mobilfunks
+Besonderheiten der Signalcharakteristik bei EDGE
+Dr.-Ing. Martin H. Virnich
+Ingenieurbüro für Baubiologie und Umweltmesstechnik
+Berufsverband Deutscher Baubiologen - VDB e.V.
+Dürerstraße 36, 41063 Mönchengladbach
+Tel: 02161 - 89 65 74
+Fax: 02161 - 89 87 53
+Virnich.Martin@t-online.de, www.baubiologie.net
+Veröffentlicht in: Tagungsband der 6. EMV-Tagung „Energieversorgung & Mobilfunk“ des
+Berufsverbandes Deutscher Baubiologen VDB e.V. am 23.-24.03.2007 in Fürth; www.baubiologie.net
+
+Einleitung
+Mobiltelefonieren ist mittlerweile zur alltäglichen Selbstverständlichkeit geworden. Statistisch gesehen verfügt
+heute jeder Deutsche - vom Baby bis zum Greis - über mindestens ein Mobiltelefon („Handy“). Dabei ist in
+weiten Teilen der Bevölkerung überraschend wenig Wissen über die technischen Zusammenhänge des Mobilfunks vorhanden. Zwar sind Abkürzungen wie „GSM 1 “ und „UMTS 2 “ vielfach nicht ganz unbekannt, aber das
+Kürzel „EDGE 3 “ hatte in der Vergangenheit kaum größeren Bekanntheitsgrad.
+Dies änderte sich im Herbst des Jahres 2006, als EDGE plötzlich in die Schlagzeilen geriet (siehe Abb. 1-1). Im
+bayerischen Passionsspielort Oberammergau hatten sich ab August Beschwerden über plötzlich aufgetretene gesundheitliche Symptome - wie extreme Schlafstörungen, Kopfschmerzen, Herzrasen, Bluthochdruck und viele
+weitere - rapide gemehrt.
+Der in Oberammergau ansässige Dipl.-Ing. (FH) Werner Funk registrierte anhand akustischer Analyse mit einem Breitbandempfänger 4 an der Mobilfunk-Basisstation von T-Mobile: „ ... konnte eine zusätzliche WLAN 5 ähnliche Modulationsfrequenz von ca. 10 Hz festgestellt werden. Die Vermutung, dass der neue ‚HandyKomfort' GPRS-EDGE (schnellere Datenübertragung / Internetzugang durch Bündelung von bis zu 8 Verkehrskanälen) in Betrieb gegangen ist, bestätigte eine Nachfrage beim T-Mobile Kundenservice.“ Gleichzeitig konstatierte er nach eigenen Messungen: „Gegenüber bereits früher durchgeführten Messungen wurde keine Erhöhung der Strahlungsflussdichte festgestellt“. ([1], hier dokumentiert in Anhang 1: Brief W. Funk vom
+15.11.2006).
+Die plötzlich aufgetretenen Beschwerden wurden somit in Zusammenhang gebracht mit der neuen GSMVariante EDGE, die der Netzbetreiber T-Mobile gerade in Bayern einführte. Seither steht die Aufrüstung der
+GSM-Basisstationen auf EDGE im Verdacht, die Ursache für die gesundheitlichen Beschwerden in der Bevölkerung zu sein, und von betroffener Seite wird dementsprechend der Stopp des EDGE-Ausbaus gefordert bzw.
+der Rückbau.
+Die bekannteste und unumstrittene biologische Wirkung von Hochfrequenzfeldern ist die Wärmewirkung, wie
+sie z.B. im Mikrowellenherd genutzt wird. Entscheidend für diese thermische Wirkung ist die Stärke der Felder.
+1
+2
+3
+4
+
+5
+
+GSM: Global System for Mobile Communications
+UMTS: Universal Mobile Telecommunications System
+EDGE: Enhanced Data Rates for GSM Evolution
+Breitbandempfänger: Empfänger, der nicht auf einen bestimmten Sender abgestimmt wird, sondern ein breites Band von
+Frequenzen empfängt und mittels Amplituden-Demodulator und Lautsprecher die Einhüllende des HF-Signals hörbar
+macht. Signale mit Frequenzmodulation (FM) können hiermit nicht hörbar gemacht werden.
+WLAN: Wireless Local Area Network, drahtloses Computernetzwerk, das meist für den Internetzugang benutzt wird.
+
+6. EMV-Tagung des VDB, 23.-24. März 2007 in Fürth
+www.baubiologie.net/docs/elektrosmog-EDGE-Signalcharakteristik.pdf
+
+115
+
+EDGE - Eine neue Variante des GSM-Mobilfunks
+
+Dr.-Ing. Martin H. Virnich
+
+Entsprechende Grenzwerte, die Schutz vor Gesundheitsschäden durch Wärmeeffekte bieten, sind in Deutschland in der 26. BImSchV (Sechsundzwanzigste Verordnung zur Durchführung des Bundes-Immissionsschutzgesetzes [2]) festgelegt. International gelten meist die Referenzwerte der ICNIRP (Internationale Strahlenschutzkommission), die identisch mit denen der 26. BImSchV sind.
+Zusätzlich zu den unumstrittenen thermischen Wirkungen der Hochfrequenz bei größeren Feldstärken bzw.
+Leistungsflussdichten (= Strahlungsdichten) wird seit Einführung der neuen digitalen Funkdienste, die Signale
+mit Pulscharakteristik verwenden - wie GSM-Mobilfunk, DECT-Schnurlostelefone und WLAN - immer häufiger über vielfältige nicht-thermische Wirkungen berichtet, die bei wesentlich niedrigeren Feldstärken auftreten,
+als sie in der 26. BImSchV festgelegt sind. Etliche Untersuchungen stellen fest, dass periodisch gepulste Strahlung gegenüber ungepulster ein besonderes biologisches Risiko darstellt, da hier bereits bei vergleichsweise
+niedrigen Feldstärken biologische Effekte auftreten, die bei ungepulster Strahlung nicht beobachtet werden.
+Dies gilt insbesondere für niedrige Pulsfrequenzen von wenigen Hertz bis einigen hundert Hertz.
+Zur vertieften Betrachtung der Signalcharakteristiken verschiedener digitaler Funkdienste und zum Thema „Pulsung“ sei hier auf [3] verwiesen.
+
+Abb. 1-1:
+
+Pressebeispiel zu EDGE in Oberammergau [4]
+
+Die Fragen, ob ein Funkdienst periodisch gepulste Signale aussendet oder nicht und wie die Charakteristik der
+Pulsung gestaltet ist, können daher für die Einschätzung des damit verbundenen biologischen bzw. gesundheitlichen Risikos von Bedeutung sein.
+
+116
+
+6. EMV-Tagung des VDB, 23.-24. März 2007 in Fürth
+www.baubiologie.net/docs/elektrosmog-EDGE-Signalcharakteristik.pdf
+
+Dr.-Ing. Martin H. Virnich
+
+EDGE - Eine neue Variante des GSM-Mobilfunks
+
+Im folgenden soll daher untersucht werden, in wie weit die GSM-Variante EDGE in ihrer Signalcharakteristik
+vom „klassischen“ GSM abweicht.
+
+GSM, die 2. Generation des Mobilfunks
+Grundprinzip des „klassischen“ GSM
+Nach der Ablösung der analogen Mobilfunksysteme der 1. Generation (A-, B-, C-Netz), die zunächst als exklusives „Autotelefon“ im wesentlichen der geschäftlichen Nutzung vorbehalten waren, hat der digitale GSMMobilfunk als System der 2. Generation nahezu weltweit allgemeine Verbreitung gefunden.
+Mittlerweile ist auch UMTS als Mobilfunksystem der 3. Generation in Betrieb. Zwischen GSM und UMTS gibt
+es als Übergangsschritte (unter Generation 2.5G oder 2+G zusammengefasst) verschiedene technische Standards, die anschließend im Kapitel „Übergangsgeneration 2.5G bzw. 2+G von GSM zu UMTS“ näher betrachtet werden.
+Bei GSM-Funkdiensten arbeiten Mobilteile („Handys“) und Basisstationen mit einer systembedingt periodisch
+gepulsten Strahlung, da das zur Verfügung stehende Frequenzspektrum nicht nur - wie in der Funktechnik allgemein üblich - in Frequenzkanäle aufgeteilt wird, sondern zusätzlich jeder Frequenzkanal noch in acht so genannte Zeitschlitze unterteilt wird. Dies bedeutet, dass einem Benutzer auf „seiner“ Frequenz nicht die gesamte
+Zeit zur Verfügung steht - wie dies bei den voraufgegangenen, analogen Techniken der Fall war -, sondern die
+Zeit „häppchenweise“ auf mehrere Benutzer verteilt wird. Die Aufteilung des Frequenzspektrums in Frequenzkanäle wird als FDMA (Frequency Division Multiple Access = Frequenzmultiplex) bezeichnet, die zusätzliche
+Aufteilung in Zeitschlitze als TDMA (Time Division Multiple Access = Zeitmultiplex). Durch diese Kombination von FDMA mit dem Zeitschlitzverfahren TDMA wird die spektrale Effizienz gesteigert, d.h. es können in
+einem begrenzten Frequenzbereich mehr Benutzer als bei reinem FDMA-Betrieb untergebracht werden, was bei
+der Vielzahl von Teilnehmern im Mobilfunk besonders wichtig ist. FDMA bzw. TDMA werden allgemein als
+Zugriffsverfahren bezeichnet, da sie die Art des Benutzerzugriffs auf einen Verkehrskanal 6 für Nutzdaten beschreiben. Ein Verkehrskanal wird bei GSM also durch die Kombination von Frequenzkanal und Zeitschlitz definiert.
+Acht Zeitschlitze bilden jeweils einen sogenannten GSM-Rahmen (TDMA-Rahmen). D.h. jeder achte Zeitschlitz steht dem gleichen Benutzer zur Verfügung; die sieben Zeitschlitze dazwischen werden anderen Benutzern zugeteilt. Die Länge eines GSM-Rahmens beträgt 4,615 ms (Millisekunden); hieraus resultiert die Pulsfrequenz eines GSM-Handys von 1 : 4,615 ms = 216,6 Hz (Hertz) oder ca. 217 Hz.
+6
+
+7
+
+8
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+0
+
+1
+
+2
+
+GSM-Rahmen, 4,615 ms
+Abb. 2-1:
+
+GSM-Rahmen (TDMA-Rahmen) mit 8 Zeitschlitzen; Rahmenlänge 4,615 ms; ein Zeitschlitz pro
+Benutzer
+
+Jedes Mobilteil nutzt für die Abwicklung des Telefonats also nur einen der acht zur Verfügung stehenden Zeitschlitze (siehe Abbildung 2-2 unten). Dafür ist es erforderlich, dass das Sprachsignal um den Faktor 8 komprimiert und nach der Funkübertragung am Empfangsort wieder um den gleichen Faktor 8 expandiert wird. Sonst
+gäbe es Lücken in der Übertragung.
+Die Basisstation dagegen muss bis zu 8 Mobilteile pro Frequenzkanal bedienen und daher ggf. in allen 8 Zeitschlitzen arbeiten (siehe Abbildung 2-2 oben). Die Dauer eines einzelnen Zeitschlitzes beträgt 4,615 : 8 ms =
+0,577 ms; die Pulsfrequenz eines voll ausgelasteten Frequenzkanals der Basisstation somit 8 x 216,6 Hz =
+1.733,33 Hz.
+
+6
+
+Ein Verkehrskanal wird in der GSM-Fachsprache als TCH (Traffic Channel) bezeichnet.
+
+6. EMV-Tagung des VDB, 23.-24. März 2007 in Fürth
+www.baubiologie.net/docs/elektrosmog-EDGE-Signalcharakteristik.pdf
+
+117
+
+EDGE - Eine neue Variante des GSM-Mobilfunks
+
+Dr.-Ing. Martin H. Virnich
+
+Zur Steuerung des Datenverkehrs benötigt die Basisstation spezielle Kanäle; es steht nicht das gesamte Volumen allein für die Übertragung der Nutzsignale (Sprache, Musik, Bilder, Dateien) zur Verfügung. Außerdem
+muss das Handy „seine“, d.h. die lokal stärkste Basisstation, bei der es eingebucht ist, jederzeit erkennen können. Dazu dient der Organisationskanal, sozusagen der Stamm-Frequenzkanal der Basisstation. Dieser sendet
+ständig - also auch wenn kein einziges Telefonat über die betreffende Basisstation geführt wird - „rund um die
+Uhr“ mit seiner maximalen Leistung in allen acht Zeitschlitzen. Damit nimmt er für die Handys vergleichsweise
+die Funktion eines „Leuchtturms“ wahr, an dem sich die Mobilteile orientieren können. I.d.R. werden zwei der
+acht Zeitschlitze des Organisationskanals zur Verwaltung und Steuerung des Funkverkehrs benötigt; die übrigen
+sechs können durch Teilnehmer mit Telefonaten oder Datenverkehr belegt werden. Wird diese Kapazität nicht
+durch Benutzer nachgefragt, so werden die „leeren“ Zeitschlitze mit Zufallssignalen gefüllt. Für die Verwaltung
+und Steuerung des Funkverkehrs gibt es eine ganze Reihe spezieller Kontroll- und Signalisierungskanäle 7 .
+Sind alle acht Zeitschlitze des Organisationskanals belegt, so kann die Basisstation auf einem zusätzlichen, lastabhängigen Verkehrskanal 8 mit einer anderen Frequenz bis zu acht weitere Zeitschlitze eröffnen. GSM 1800Basisstationen (E-Netz) verfügen typischerweise über diese beiden Kanäle. Bei GSM 900-Basisstationen
+(D-Netz) stehen zumeist noch ein dritter und ein vierter Frequenzkanal zur Verfügung, in Ballungsgebieten und
+Großstädten auch mehr. Alle zu einer Basisstation gehörenden Frequenzkanäle - also Organisationskanal und
+lastabhängige Verkehrskanäle - werden über die gleiche Antenne abgestrahlt. Pro Antenne einer Basisstation
+können somit im D-Netz typischerweise bis zu (4 ⋅ 8) - 2 = 30 Telefonate gleichzeitig abgewickelt werden. Sind
+am Mast - wie häufig vorzufinden - drei Sektorantennen unter jeweils 120° horizontal angebracht - so können
+an diesem Standort maximal 3 ⋅ 30 = 90 Telefonate gleichzeitig abgewickelt werden.
+
+Abb. 2-2:
+Prinzipdarstellung der Zeitschlitze und Pulsung des Organisationskanals einer GSMBasisstation (oben) ...
+
+... und von Mobilteilen (Handys) (unten);
+ein einzelner Zeitschlitz wird auch als
+„Burst“ bezeichnet.
+
+7
+
+8
+
+Wichtigster Signalisierungskanal ist der BCCH (Broadcast Control Channel). Hierüber informiert die Basisstation die
+Mobilteile bezüglich lokaler technischer Randbedingungen, wie die augenblickliche Position, den Netzbetreiber (z.B.
+D1 oder D2), Zugriffsparameter usw. Nicht ganz korrekt, aber weit verbreitet, wird die Bezeichnung BCCH gerne nicht
+nur für den einzelnen Signalisierungskanal (als Kombination von Frequenzkanal und Zeitschlitz) sondern für den gesamten Organisationskanal mit allen seinen 8 TCH-Zeitschlitzen verwendet.
+Ebenfalls nicht ganz korrekt, aber weit verbreitet, wird die Bezeichnung TCH gerne nicht nur für einen einzelnen Verkehrskanal (als Kombination von Frequenzkanal und Zeitschlitz) sondern für einen gesamten lastabhängigen Frequenzkanal mit allen seinen 8 TCH-Zeitschlitzen verwendet.
+
+118
+
+6. EMV-Tagung des VDB, 23.-24. März 2007 in Fürth
+www.baubiologie.net/docs/elektrosmog-EDGE-Signalcharakteristik.pdf
+
+Dr.-Ing. Martin H. Virnich
+
+Zeitachse: 5 ms, entspr. ca. einem GSM-Rahmen
+Abb. 2-3:
+
+EDGE - Eine neue Variante des GSM-Mobilfunks
+
+Zeitachse: 10 ms, entspr. ca. zwei GSM-Rahmen
+
+Mit dem Spektrumanalysator gemessene Signale des Organisationskanals einer GSM-Basisstation
+(links) und von einem Mobilteil (rechts); Darstellung des Zeitverlaufs in der Betriebsart „“Zero
+Span“
+
+Die lastabhängigen Verkehrskanäle sind häufig leistungsgeregelt, d.h. in jedem Zeitschlitz wird individuell angepasst nur mit derjenigen Leistung gesendet, die zur Aufrechterhaltung einer stabilen Verbindung erforderlich
+ist (so genanntes Power Control, Abbildung 2-4 unten).
+
+Abb. 2-4:
+
+Zeitschlitze und Pulsung von Organisationskanal (oben) und lastabhängigem Verkehrskanal mit
+Power Control (unten) einer GSM-Basisstation (Prinzipdarstellung)
+
+Die Mobilteile verkehren mit einer Basisstation, die die Telefonate bzw. Daten weiterleitet. Mobilteile und Basisstationen arbeiten in getrennten, eigens zugewiesenen Frequenzbändern im Frequenz-Duplex-Betrieb
+(Frequency Division Duplex = FDD). Im so genannten Uplink-Frequenzbereich senden die Mobilteile zu den
+Basisstationen, im Downlink-Frequenzbereich die Basisstationen zu den Mobilteilen. Der Abstand zwischen
+den Up- und Downlink-Frequenzen stellt den so genannten Duplexabstand dar.
+
+6. EMV-Tagung des VDB, 23.-24. März 2007 in Fürth
+www.baubiologie.net/docs/elektrosmog-EDGE-Signalcharakteristik.pdf
+
+119
+
+EDGE - Eine neue Variante des GSM-Mobilfunks
+
+Dr.-Ing. Martin H. Virnich
+
+Technische Daten zu GSM
+FDMA, Kanalraster 200 kHz
+TDMA, 8 Zeitschlitze zu je 0,577 ms = 4,615 ms GSM-Rahmenlänge, entsprechend 216,67 Hz
+Der Organisationskanal einer Basisstation sendet ständig mit voller Leistung in allen acht Zeitschlitzen; er ist
+periodisch gepulst mit f = 8 ⋅ 216,67 Hz = 1.733,33 Hz
+Die Mobilteile arbeiten periodisch gepulst mit 216,67 Hz (ca. 217 Hz) im sogenannten Full-Rate-Betrieb und
+108,33 Hz im Half-Rate-Betrieb (s.u.). Bei der Option DTX (Discontinuous Transmission, s.u.) in den Sprachpausen mit 2,083 Hz gepulst.
+GSM 900: D-Netz-Mobilfunk (D1/T-Mobile und D2/vodafone)
+Uplink (Mobilteil Basisstation)
+Unterband 890-915 MHz
+
+Downlink (Basisstation
+Oberband 935-960 MHz
+
+Mobilteil)
+
+Frequenzduplex mit Duplexabstand 45 MHz
+E-GSM (Extended GSM: E1/E-Plus und E2/O2)
+Uplink (Mobilteil Basisstation)
+Unterband 880-890 MHz
+
+Downlink (Basisstation
+Oberband 925-935 MHz
+
+Mobilteil)
+
+Frequenzduplex mit Duplexabstand 45 MHz
+GSM 1800 / E-Netz-Mobilfunk (E1/E-Plus und E2/O2)
+Uplink (Mobilteil Basisstation)
+Unterband 1.710-1.785 MHz
+
+Downlink (Basisstation Mobilteil)
+Oberband 1.805-1880 MHz
+
+Frequenzduplex mit Duplexabstand 95 MHz
+Full Rate (FR):
+Pulsfrequenz 216,67 Hz (ca. 217 Hz), allgemein übliches Verfahren.
+Half Rate (HR)
+Pulsfrequenz 216,67 Hz : 2 = 108,33 Hz. Half Rate verdoppelt die Kapazität bestehender Netze und verhindert
+die Gefahr der Überlastung. Dazu wird eine verstärkte Datenreduzierung der zu übertragenden Sprachsignale
+durchgeführt. Aufgrund dieser erhöhten Datenreduzierung ist es möglich, dass zwei Mobilstationen im Wechsel
+einen gemeinsamen Zeitkanal belegen, d. h. die beiden Mobilstationen senden abwechselnd im gleichen Zeitschlitz eines jeden zweiten TDMA-Rahmens. Dadurch halbiert sich die Frequenz der Pulsung von 216,67 Hz
+auf 108,33 Hz. Die Sprachqualität soll trotz der erhöhten Datenreduzierung nicht wesentlich schlechter als bei
+Full Rate sein.
+Die Basisstationen müssen auf Half Rate umgerüstet werden. Mit Half Rate arbeiten nur die D-Netz-Betreiber,
+insbesondere in Ballungszentren.
+Discontinuous Transmission (DTX):
+Pulsfrequenz 2,083 Hz in Sprachpausen und 216,67 Hz bei Sprachübertragung.
+Mit dem Leistungsmerkmal DTX sendet die Mobilstation in Sprachpausen (theoretisch ca. 50 % der Dauer eines
+Telefonats) nur alle 480 Millisekunden einen Impuls, entsprechend einer Pulsfrequenz von 2,083 Hz. Dieser
+Impuls dient zur Übertragung von Steuerungsdaten und zur Auffrischung des Hintergrundgeräusches.
+
+120
+
+6. EMV-Tagung des VDB, 23.-24. März 2007 in Fürth
+www.baubiologie.net/docs/elektrosmog-EDGE-Signalcharakteristik.pdf
+
+Dr.-Ing. Martin H. Virnich
+
+EDGE - Eine neue Variante des GSM-Mobilfunks
+
+Frequency Hopping
+FHMA (Frequency Hopping Multiple Access, Frequenzsprungverfahren):
+Viele Basisstationen der D-Netzbetreiber - aber längst nicht alle - setzen Frequency Hopping ein. Frequency
+Hopping basiert auf dem TDMA-Zeitschlitz-Verfahren, wobei zusätzlich noch von Zeitschlitz zu Zeitschlitz auf
+eine andere der zugeteilten Frequenzen gewechselt wird. Hierdurch werden Probleme mit Interferenzen verringert, die bei bestimmten Frequenzen zu Auslöschungseffekten des empfangenen Signals führen.
+Der Organisationskanal einer Basisstation springt nicht, sondern behält seine Frequenz unverändert bei, da sich
+die Mobilstationen auf ihn aufsynchronisieren bzw. auf ihm ihre Pegelmessungen vornehmen.
+
+Höhere GSM-Rahmenstukturen
+Wie oben ausgeführt, besteht ein GSM-Rahmen (TDMA-Rahmen) aus acht Zeitschlitzen. Die GSM-Rahmen
+selbst sind in Rahmenstrukturen höherer Ordnung eingebettet, die als Multirahmen, Superrahmen und Hyperrahmen bezeichnet werden.
+Beim Multirahmen wird ein 26er und ein 51er Multirahmen unterschieden. Der 26er Multirahmen umfasst
+26 GSM-Rahmen zu je 8 Zeitschlitzen und strukturiert die TCHs zur Nutzsignalübertragung. Seine Länge beträgt 26 ⋅ 4,615 ms = 120 ms. Sollten Periodizitäten im 26er-Multirahmen-Takt auftreten, so haben diese eine
+Frequenz von 1/120 ms = 8,33 Hz.
+Der 51er Multirahmen umfasst 51 GSM-Rahmen. Er strukturiert die verschiedenen Signalisierungskanäle und
+hat eine Länge von 51 ⋅ 4,615 ms = 235,4 ms. Sollten Periodizitäten im 51er-Multirahmen-Takt auftreten, so
+haben diese eine Frequenz von 1/235,4 ms = 4,25 Hz. Wird ein Signalisierungskanal innerhalb des 51er Multirahmens zwei Mal im gleichen zeitlichen Abstand gesendet, so ergibt sich wiederum die Wiederholfrequenz von
+8,33 Hz.
+Der nächst übergeordnete Rahmen - der Superrahmen - hat eine Länge von 26 ⋅ 51 = 1326 GSM-Rahmen und
+damit eine Dauer von 6,1 s.
+Die Periodizität von 8,33 Hz lässt sich bei vielen Basisstationen auf dem Organisationskanal finden. Dies geschieht dann, wenn im Rhythmus des 26er Multirahmens ein Zeitschlitz ausgelassen, d.h. nicht gesendet wird.
+
+Übergangsgeneration 2.5G bzw. 2+G von GSM zu UMTS
+Mit zunehmender Nachfrage nach Mobilfunk-Diensten durch die Benutzer und steigenden Ansprüchen an die
+Leistungsmerkmale wuchsen gleichermaßen der Kapazitätsbedarf (der durch den Aufbau zusätzlicher Basisstationen gedeckt wird) und die Ansprüche an die Übertragungsrate (nicht nur Übertragung von Sprache, sondern
+auch von Fotos, Musik und PC-Dateien/Datentransfer sowie Internetzugang per Handy) - dies bereits zu einer
+Zeit, als das UMTS-System noch nicht in Betrieb war. Infolgedessen wurden zwischen GSM (2G) und UMTS
+(3G) als „Übergangsgenerationen“ - entsprechend unter Generation 2.5G oder 2+G zusammengefasst - drei
+technische Standards entwickelt, die in Tabelle 3-1 mit ihren wesentlichen Merkmalen gegenüber gestellt sind.
+Alle Standards der 2.5-Übergangsgeneration arbeiten gemeinsam in den gleichen Frequenzbereichen, wie die
+originären GSM-Systeme (D- und E-Netz). Beliebig gemischter Betrieb zwischen den einzelnen 2,5 G-Standards auf einer Basisstation ist möglich.
+Bereits seit mehreren Jahren sind neben dem „klassischen“ GSM auch HSCSD- und GPRS-Dienste am Markt
+verfügbar, wobei GPRS bei weitem dominiert.
+T-Mobile hat seit dem Sommer 2006 als erster Netzbetreiber mit der Umrüstung seiner Basisstationen auf
+EDGE begonnen, mit dem Ziel einer flächendeckenden Versorgung. Während bei O2 zur Zeit (Frühjahr 2007)
+die Einführung von EDGE noch nicht geplant wird, ist dies bei E-Plus in der Planung; konkrete Einführungszeiten sind aber noch nicht festgelegt. Bei vodafone ist im Zuge des Austauschs alter Basisstationen gegen neue
+Stationen mit deutlich verringertem Energiebedarf auch die Einführung von EDGE vor allem in den ländlichen
+Gebieten geplant - offensichtlich um in den mit UMTS versorgten städtischen und Ballungsgebieten keine
+Konkurrenz für diesen immer noch wenig nachgefragten Funkdienst zu schaffen.
+6. EMV-Tagung des VDB, 23.-24. März 2007 in Fürth
+www.baubiologie.net/docs/elektrosmog-EDGE-Signalcharakteristik.pdf
+
+121
+
+EDGE - Eine neue Variante des GSM-Mobilfunks
+
+MobilfunkGeneration
+
+Dr.-Ing. Martin H. Virnich
+
+2G
+
+2.5G bzw. 2+G
+
+3G
+
+Techn. Standard
+
+GSM
+
+HSCSD
+
+GPRS
+
+EDGE
+
+UMTS-FDD
+
+UMTS-TDD
+
+Zugriffsverfahren
+
+TDMA
+
+TDMA
+
+TDMA
+
+TDMA
+
+WCDMA
+
+TD-CDMA
+
+ja
+
+ja
+
+ja
+
+ja
+
+nein*1
+
+ja
+
+Leitung
+
+Leitung
+
+Paket
+
+Paket
+
+Paket
+
+Paket
+1.920*4
+
+Periodische Pulsung
+Vermittlungsart
+
+9,6
+
+Datenrate* [kbit/s]
+Modulation
+
+57,6
+
+62,4
+
+384
+
+384*3
+1.920*4
+
+GMSK
+
+2
+
+GMSK
+
+GMSK
+
+8PSK
+
+QPSK
+
+QPSK
+
+UMTS-FDD
+2.110 - 2.170
+MHz
+
+UMTS-TDD
+1.900 - 2.025
+MHz
+
+GSM 900 inkl. E-GSM*5: 925 - 960 MHz
+GSM 1800: 1.805 -1.880 MHz
+
+Frequenzbereich der
+Basisstationen
+
+*1 Keine „klassische“ Pulsung wie bei GSM im Sinne eines Ein-/Ausschaltens, sondern ein komplexes Signalgemisch mit periodischen Komponenten von 100 Hz und Vielfachen, von 1,5 kHz und Vielfachen sowie 15 kHz.
+2
+* Die tatsächlich erreichbare Datenrate hängt stark von der Übertragungsqualität ab
+*3 Bewegliche Teilnehmer, mit Zellenwechsel (Handover)
+*4 Stationäre Teilnehmer, kein Zellenwechsel (Handover)
+*5 Bei E-GSM ist der „klassische“ Frequenzbereich von GSM 900 (935-960 MHz) um 10 MHz zu tieferen Frequenzen hin erweitert (925-935 MHz). Dieser Frequenzbereich wird seit 2006 von den Netzbetreibern E-Plus und O2
+genutzt, die vorher nur über Frequenzen im Bereich GSM 1800 verfügten.
+
+Tab. 3-1:
+
+Digitale Mobilfunkgenerationen von 2G bis 3G im Überblick
+
+HSCSD (High Speed Circuit Switched Data)
+(wird vom Netzbetreiber E-Plus auch als HSMD (High Speed Mobile Data) bezeichnet)
+HSCSD verwirklicht die einfachste Form zur Erhöhung der Übertragungsrate durch simple Bündelung von
+GSM-Zeitschlitzen; d.h. ein Benutzer belegt dann nicht nur einen, sondern mehrere Zeitschlitze im TDMARahmen (theoretisch wären alle acht Zeitschlitze möglich, in der Praxis zulässig sind maximal vier). Als maximale Datenübertragungsrate ergeben sich dann 4 x 9,6 kbit/s = 38,4 kbits/s; bei sehr guter Übertragungsqualität
+sind bis zu 4 x 14,4 kbit/s = 57,6 kbit/s möglich.
+
+6
+
+7
+
+8
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+0
+
+1
+
+2
+
+GSM-Rahmen
+Abb. 3-1:
+
+GSM-Rahmen mit Zeitschlitz-Bündelung; hier: Ein Benutzer belegt die drei Zeitschlitze 0, 1 und 2
+(grau).
+
+Die Übertragung erfolgt klassisch leitungsvermittelt (= Switched Circuit), d.h. der Teilnehmer muss sich einwählen, um die Verbindung herzustellen, und für die Zeitdauer der Verbindung steht ihm dann „sein“ Verkehrskanal die ganze Zeit alleine zur Verfügung. Abgerechnet wird nach der Dauer der Verbindung; unabhängig davon, wie intensiv diese Zeit zur Datenübertragung genutzt wurde und wie viele Daten innerhalb dieser Zeit geflossen sind.
+Ein bestehendes GSM-Netz kann ohne Hardwareänderungen an den Basisstationen, nur durch Aufspielen neuer
+Software, auf HSCSD aufgerüstet werden.
+
+122
+
+6. EMV-Tagung des VDB, 23.-24. März 2007 in Fürth
+www.baubiologie.net/docs/elektrosmog-EDGE-Signalcharakteristik.pdf
+
+Dr.-Ing. Martin H. Virnich
+
+EDGE - Eine neue Variante des GSM-Mobilfunks
+
+GPRS (General Packet Radio Service)
+GPRS arbeitet ebenfalls mit der Bündelung von Zeitschlitzen, um eine höhere Übertragungsrate zu erzielen.
+Außerdem können je nach geforderter Übertragungssicherheit vier unterschiedliche Fehlerkorrekturverfahren
+verwendet werden, die ebenfalls Einfluss auf die Übertragungsrate haben. Je größer die geforderte Übertragungssicherheit, um so aufwendiger das Korrekturverfahren und um so niedriger die Übertragungsrate. Pro
+GSM-Zeitschlitz sind bei GPRS je nach verwendetem Korrekturverfahren Übertragungsraten von 9,05 / 13,4 /
+15,6 oder maximal 21,4 kbit/s möglich, bei vier Zeitschlitzen dementsprechend 36,2 / 53,6 / 62,4 oder maximal
+85,6 kbit/s. Bei der höchsten Übertragungsrate wird allerdings auf eine Fehlerkorrektur völlig verzichtet. Dies
+kann bei der Übertragung von Musik oder Bewegtbildern ggf. in Kauf genommen werden, nicht aber bei der
+Übertragung von z.B. PC-Daten. Die tatsächlich erreichbaren Datenraten dürften in der Praxis bei ca. 50 - 60
+kbit/s liegen.
+Der entscheidende technische Fortschritt von GPRS ist allerdings in der Art der Vermittlung zu sehen. Statt
+einer permanenten, leitungsvermittelten Verbindung (= Switched Circuit) funkt der Teilnehmer hier nach Bedarf
+Datenpakete (paketvermittelte Übertragung = Packet Service). Die GSM-Kanäle werden nur nach Bedarf kurzzeitig für die Übertragung der Datenpakete verwendet, im gleichen Kanal nacheinander für unterschiedliche
+Teilnehmer, und doch ist jeder dauernd datenverbunden. Dieser „Always On“-Betrieb erlaubt die sofortige Signalisierung von E-Mails, SMS usw. Abgerechnet wird nach der Menge der übertragenen Daten. Aufgrund des
+Packet Service müssen bei GPRS häufiger Verbindungen zur Basisstation auf- und abgebaut werden als beim
+„klassischen“ GSM; dies sollte daher möglichst schnell geschehen können.
+Da zur Steuerung des Datenverkehrs das Internet-Protokoll (IP) verwendet wird, ist GPRS besonders für Anwendungen im Internet geeignet. Dabei entfallen die Beschränkungen der WAP-Handys (Wireless Application
+Protocol), die nur auf Webseiten in der eigens für WAP geschaffenen Internetsprache WML (Wireless-MarkupLanguage) zugreifen können. GPRS ermöglicht den Zugriff auf die üblichen HTML-Seiten.
+Zur Umrüstung eines Netzes auf GPRS sind auf Betreiberseite Investitionen in Hard- und Software erforderlich.
+
+a) Ein Teilnehmer benutzt einen GPRS-Dienst, er
+belegt in diesem Fall zwei Zeitschlitze.
+Abb. 3-2:
+
+b) Kein Teilnehmer auf dem lastabhängigen Verkehrskanal.
+
+Mit dem Spektrumanalysator gemessene Signale eines lastabhängigen Verkehrskanals einer GPRSfähigen Basisstation, mit Aktivität eines GPRS-Dienstes (links) und ohne aktuelle Aktivität des
+Kanals (rechts).
+
+6. EMV-Tagung des VDB, 23.-24. März 2007 in Fürth
+www.baubiologie.net/docs/elektrosmog-EDGE-Signalcharakteristik.pdf
+
+123
+
+EDGE - Eine neue Variante des GSM-Mobilfunks
+
+Dr.-Ing. Martin H. Virnich
+
+EDGE (Enhanced Data Rates for GSM Evolution)
+Bei EDGE wird eine höhere spektrale Effizienz erreicht, indem zusätzlich zur Bündelung von Zeitschlitzen die
+bei GSM, HSCSD und GPRS übliche 2-stufige GMSK-Modulation (Gaussian Minimum Shift Keying) durch eine 8PSK-basierte Phasenmodulation abgelöst wird (8-stufiges Phase Shift Keying). Anstatt nur ein Bit pro Zeichen lassen sich hiermit gleich drei Bit pro Zeichen übertragen (Abbildung 3-2). Dadurch wird pro Zeitschlitz
+eine Datenrate von 48 kbit/s erreicht, maximal bei Bündelung aller acht Zeitschlitze somit 384 kbit/s. Damit ist
+EDGE in vielen Fällen durchaus eine Alternative zu UMTS.
+Aufgrund der feiner abgestuften 8PSK-Modulation ist EDGE allerdings nicht so „robust“ wie die übrigen Standards mit GMSK-Modulation und stärker anfällig gegenüber Störungen. Zum Betrieb ist eine hohe Güte der
+Übertragungsstrecke erforderlich. Ist diese nicht gegeben, so wird automatisch auf GMSK-Modulation - mit
+ihrer geringeren Datenrate - „zurückgeschaltet“. EDGE-Signale werden außerdem nur gesendet, wenn vom
+Benutzer ein EDGE-Dienst angefordert wird, z.B. für Dateitransfer. Dazu benötigt er natürlich ein EDGEfähiges Mobilteil. Wird kein EDGE-Dienst angefordert, so verhält sich die Basisstation wie eine „ganz normale“
+GSM- bzw. HSCSD- oder GPRS-Basisstation.
+EDGE stellt somit eine Erweiterung von HSCSD oder GPRS mit einem effizienteren Modulationsverfahren dar.
+EDGE wird teilweise auch als „Evolved GSM“ bezeichnet. Die EDGE-Technik, verbunden mit HSCSD, wird
+als ECSD (Enhanced Circuit Switched Data) bezeichnet; verbunden mit GPRS als EGPRS (Enhanced GPRS).
+Für EDGE sind Investitionen in die Netz-Infrastruktur erforderlich, allerdings bei weitem nicht so umfangreich
+wie für UMTS.
+
+a) 2-stufige GMSK-Modulation (1 bit/Zeichen)
+Abb. 3-3:
+
+b) 8PSK-Modulation (3 bit/Zeichen)
+
+Vektor-/Phasendiagramm mit den mögliche Phasenzuständen pro Zeichen bei GMSK- und 8PSKModulation (aus [5])
+
+Die bei „klassischem“ GSM, HSCSD und GPRS verwendete „grobe“ GMSK-Modulation kennt nur zwei Zustände: Logisch „0“ und „1“ (zweistufig). Damit kann ein Bit pro Zeichen übertragen werden. Das so genannte
+Vektor- oder Phasendiagramm in Abbildung 3-3 a (links) zeigt die Lage der beiden Zustände in einer gemeinsamen Amplituden- und Phasendarstellung (Amplitude als Radius des Kreises, Phase als Winkel auf dem Kreisumfang). Demgegenüber ist bei der feiner abgestuften 8PSK-Modulation in Abbildung 3-3 b (rechts) die Übertragung von drei Bit pro Zeichen möglich, von (0, 0, 0) bis (1, 1, 1). Jede Wertekombination von drei Bits
+(= 1 Zeichen) entspricht dabei ihrer eigenen Position im Phasendiagramm. Es ist zu erkennen, dass die „Störabstände“ zwischen den einzelnen Zuständen nun deutlich kleiner geworden sind. Deshalb ist für diese Modulationsart eine höhere Übertragungsqualität (= geringe Störeinflüsse) erforderlich.
+Betrachten wir nun das Verhalten der Signale beim Übergang von einem Zeichen zum anderen - dies entspricht
+im Phasendiagramm dem Wechsel von einem Punkt auf den (GMSK) bzw. einen (8PSK) anderen. Der Wechsel
+zwischen den beiden Zuständen erfolgt bei der 2-stufigen GMSK-Modulation prinzipbedingt immer so, dass er
+auf dem Kreisumfang vollzogen wird, d.h. die Signalamplitude bleibt konstant (Abbildung 3-4 a, links). Dagegen kommt es bei der 8PSK-Modulation zu einer zusätzlichen Amplitudenmodulation im Zeitschlitz, da nun alle
+möglichen Übergänge von einem der acht Phasenzustände zu einem anderen auftreten können (Abb. 3-4 b).
+
+124
+
+6. EMV-Tagung des VDB, 23.-24. März 2007 in Fürth
+www.baubiologie.net/docs/elektrosmog-EDGE-Signalcharakteristik.pdf
+
+Dr.-Ing. Martin H. Virnich
+
+a) 2-stufige GMSK-Modulation (1 bit/Zeichen)
+Abb. 3-4:
+
+EDGE - Eine neue Variante des GSM-Mobilfunks
+
+b) 8PSK-Modulation (3 bit/Zeichen)
+
+Übergänge im Vektor-/Phasendiagramm von einem Zeichen zum anderen (aus [5])
+
+Das GSM-Signal (a, links) hat eine konstante Leistung, im Gegensatz zum EDGE-Signal (b, rechts). Die Bilder
+repräsentieren die Amplitude und die Phase des Hochfrequenzträgers zu jedem möglichen Zeitpunkt mit allen
+möglichen Übergängen zwischen den verschiedenen Phasenzuständen. Da die Amplitude des GSM-Signals
+konstant ist, ergibt die Darstellung einen Kreis.
+Der Amplitudenverlauf eines EDGE-Zeitschlitzes über der Zeit ist in Abbildung 3-5 a (links) dargestellt. Man
+erkennt deutlich die aufgrund der 8PSK-Modulation schwankende Amplitude. Die Amplitudenmodulation besteht aus einem unregelmäßigen Anteil, der vom Inhalt der übertragenen Daten abhängt und aus einem stets
+gleich wiederkehrenden Anteil in der Mitte des Zeitschlitzes, der zur Organisation der Datenübertragung dient.
+Denn der Signalinhalt innerhalb des Zeitschlitzes setzt sich zusammen aus Nutzdaten und Steuerungsinformationen. Für eine bestehende Verbindung stets gleiche Steuerungsdaten sind in der Mitte des Zeitschlitzes als so
+genannte Trainings-Sequenz angeordnet. Überlagert man eine Vielzahl von Zeitschlitzen mit einem entsprechenden Messgerät, so ergibt sich ein Verlauf wie in Abbildung 3-5 b. Da die Nutzdaten in jedem Zeitschlitz
+anders sind, ergibt sich in der Überlagerung ein der möglichen Schwankungsbreite der Amplitudenmodulation
+entsprechend breites Band. Da die Trainings-Sequenz aber stets die gleiche ist, ergibt sich in der Mitte des Zeitschlitzes ein stabiler, stets gleicher Amplitudenverlauf.
+
+a) „Blitzlicht“ eines Zeitschlitzes
+Abb. 3-5:
+
+b) Überlagerung mehrerer hundert Signale
+
+Amplitudenverlauf eines EDGE-Zeitschlitzes über der Zeit (aus [5])
+
+Bei Messungen mit dem Spektrumanalysator ist zu beachten, dass sich aufgrund der Amplitudenmodulation bei
+EDGE - anders als beim „klassischen“ GSM - die Messwerte mit dem Spitzenwert-Detektor (Max. Peak oder
+Pos. Peak) von denen mit dem Effektivwert-Detektor (RMS: Root Mean Square) unterscheiden. Der Spitzenwert
+bei EDGE liegt zwar höher als beim „klassischen“ GSM, der Effektivwert liegt jedoch in der gleichen Höhe
+bzw. sogar noch etwas niedriger, um die Senderendstufen durch die Amplitudenspitzen des EDGE-Signals nicht
+zu übersteuern.
+6. EMV-Tagung des VDB, 23.-24. März 2007 in Fürth
+www.baubiologie.net/docs/elektrosmog-EDGE-Signalcharakteristik.pdf
+
+125
+
+EDGE - Eine neue Variante des GSM-Mobilfunks
+
+Dr.-Ing. Martin H. Virnich
+
+a) Ein Teilnehmer benutzt einen EDGE-Dienst,
+er belegt in diesem Fall zwei Zeitschlitze; die Amplitudenmodulation der betreffenden Zeitschlitze und
+der erhöhte Spitzenwert sind deutlich zu erkennen.
+Abb. 3-6:
+
+b) Kein Teilnehmer benutzt einen EDGE-Dienst;
+es wird kein EDGE-Signal ausgesendet.
+
+Mit dem Spektrumanalysator gemessene Signale des Organisationskanals einer EDGE-fähigen
+Basisstation, mit (links) und ohne (rechts) aktuelle Aktivität eines EDGE-Dienstes.
+
+Aus den hier gemachten Ausführungen zur Technik von EDGE lässt sich kein Hinweis auf Signalperiodizitäten
+von ca. 10 Hz ableiten. Wenn solche Periodizitäten beim Umrüsten einer Basisstation auf EDGE beobachtet
+werden, so muss die Ursache eine andere, von EDGE unabhängige sein.
+
+Messungen in Oberammergau
+Am 26.12.2006 führten der Umweltmediziner des Landes Salzburg, Dr. Gerd Oberfeld, und der Ingenieur Manfred Haider gemeinsame Messungen in Oberammergau durch, die von Dr. Oberfeld in seinem Gutachten
+„Mobilfunk: Signalanalyse im Frequenzbereich GSM 900“ vom 15.1.2007 protokolliert wurden (siehe [6], hier
+dokumentiert in Anhang 2: Gutachten Dr. G. Oberfeld, Landessanitätsdirektion Salzburg, 15.01.2007). Ziel der
+Messungen war es explizit nicht, die Höhe der GSM-Immissionen zu ermitteln, sondern die Ursache für die von
+W. Funk in [1] beschriebene „zusätzliche WLAN-ähnliche Modulationsfrequenz von 10 Hz“ zu ergründen.
+Bei den Messungen mit dem Spektrumanalysator wurde zwar kein 10 Hz-Signal vorgefunden, wohl aber eine
+Periodizität von 8,3 Hz, die akustisch nur schwer von 10 Hz zu unterscheiden ist. Überraschend war, dass diese
+Periodizität nicht etwa auf dem Organisationskanal gefunden wurde, sondern auf den lastabhängigen Verkehrskanälen - die „paradoxerweise“ dann besonders deutlich zu erkennen war, wenn kein Verkehr über die Basisstation abgewickelt wurde. Dann sollten nämlich „klassischerweise“ die lastabhängigen Verkehrskanäle eigentlich
+gar nicht aktiv sein, sondern nur der Organisationskanal.
+Dr. Oberfeld stellte darüber hinaus fest, dass bei der Messung eines einzelnen „lastabhängigen“ Verkehrskanals
+(der nun gar nicht mehr lastabhängig war) das Signal nicht in rein periodischer Folge vorlag, sondern nur unregelmäßig und „unvollständig“. Erst die gemeinsame Messung aller zur Basisstation gehörigen „lastabhängigen“
+Verkehrskanäle führte zur lückenlosen periodischen Pulswiedergabe. Dies bedeutet, dass das Pulssignal mittels
+Frequency Hopping (s. o.) nacheinander auf die einzelnen „lastabhängigen“ Verkehrskanäle verteilt wird.
+Die Frequenz von 8,3 Hz passt exakt in die GSM-Rahmenstruktur und entspricht entweder einem belegten Zeitschlitz im 26er Multirahmen für Verkehrskanäle (Länge 120 ms = 1/8,3 Hz) oder zwei äquidistant belegten
+Zeitschlitzen im 51er Multirahmen für Signalisierungskanäle. Da das betreffende Signal auch nachweisbar war,
+
+126
+
+6. EMV-Tagung des VDB, 23.-24. März 2007 in Fürth
+www.baubiologie.net/docs/elektrosmog-EDGE-Signalcharakteristik.pdf
+
+Dr.-Ing. Martin H. Virnich
+
+EDGE - Eine neue Variante des GSM-Mobilfunks
+
+wenn die Basisstation ohne Nutzlast war, muss es sich um Signalisierungskanäle handeln. Diese werden aber
+„normalerweise“ auf einem lastabhängigen Verkehrskanal nur dann ausgestrahlt, wenn für diesen Verkehrskanal
+auch Nutzlast vorliegt.
+Die von Dr. Oberfeld und M. Haider festgestellten Untersuchungsergebnisse wurden vom Bayerischen Landesamt für Umwelt (LfU) bei eigenen, vom LfU am 1. Februar 2007 durchgeführten Messungen bestätigt: „Das
+vom LfU aufgenommene Signal reproduziert die Daten und Aussagen von Dr. Oberfeld (Salzburg), der dieses
+Signal bereits zuvor am 26. Dezember 2006 untersuchen konnte. Auch er kommt zu dem Schluss, dass ein Verkehrskanal permanent aktiv sein muss, der das Tackern erzeugt.“ ([7], S. 3, hier dokumentiert in Anhang 3: LfU
+„Elektromagnetische Felder von Mobilfunkbasisstationen in Oberammergau; Zusammenfassung von Untersuchungen des LfU“, 12.02.2007 [7]). Weiter führt das LfU aus: „Bei diesem Messtermin wurde auch die Zeitabhängigkeit der Verkehrskanäle ... untersucht. Es hat sich gezeigt, dass eine Periodizität von 8 1/3 Hz vorhanden ist. (Hervorhebung durch den Autor) Sie kann aus messtechnischen Gründen nur dann beobachtet werden,
+wenn kein anderweitiger Verkehr (Gespräche und insbesondere Daten) über die Verkehrskanäle abgewickelt
+wird. Diese Situation scheint zwar ungewöhnlich, da Gesprächskanäle meist vollständig abgeschaltet sind,
+solange keine Gespräche oder Daten übertragen werden, aber keineswegs ausgeschlossen, da der GSMStandard eine derartige Konfiguration durchaus erlaubt und ermöglicht. Das niederfrequente Signal wird zwar
+nicht von EDGE selbst erzeugt, tritt aber wohl (nach Angabe der Oberammergauer Bürger) seit der Umrüstung
+der T-Mobile-Station auf. Vermutlich wurde bei dieser Umstellung auch die GPRS-Konfiguration neu festgelegt. GPRS kennt (wie GSM zuvor auch schon) einen ‚Timing Advance', der den Abstand zwischen Basisstation
+und Mobilgerät bestimmen kann. Das Tackern resultiert daher, dass dieser Kontrollkanal als ‚Continuous
+Packet Timing Advance Channel' mit eben 8 1/3 Hz kontinuierlich gesendet wird.“ ([7], S. 2)
+Dass die niederfrequente Pulsung mit 8 1/3 Hz nicht vom EDGE-Betrieb herrührt, bestätigte ein Test: „Auf Bitten des LfU schaltete T-Mobile am 18. Dezember 2006 die EDGE-Funktion kurzzeitig ab. Das Tackern war
+- wie zu erwarten - weiterhin wahrzunehmen. Per Mikrofon und Soundkarte wurde das Audiosignal eines
+‚Elektrosmog-Spions' aufgezeichnet und die ‚Tackerfrequenz' zu 8 1/3 Hz bestimmt.“ ([7], S. 1)
+In weiteren Untersuchungen hat das LfU die Immissionen im Umfeld der betreffenden T-Mobile-Basisstation
+gemessen ([8], [9]) und dabei „eine in der Umgebung von Mobilfunkbasisstationen typische Feldsituation vorgefunden“. ([7], S. 1)
+Damit ist es äußerst unwahrscheinlich, dass die Höhe der Immissionen als primäre Ursache für die gesundheitlichen Beschwerden der Oberammergauer Bürger anzusehen ist. Vielmehr wird durch die Untersuchungsergebnisse die These gestützt, dass die Signalcharakteristik - hier die periodische Pulsung mit 8,3 Hz - einen wesentlichen Einflussfaktor darstellt. Diese Pulsung ist aber unabhängig von EDGE.
+
+Ein Signalisierungskanal wird unter die Lupe genommen: PTCCH
+Wie in Kapitel ‚Grundprinzip des „klassischen“ GSM' ausgeführt, werden von der Basisstation (und im Gegenzug auch vom Mobilteil) sowohl Nutzdaten als auch Steuerungs- und Kontrolldaten gesendet. Während für die
+Nutzdaten die „Traffic Channels“ (TCH) benutzt werden, erfolgt die Übertragung der Steuerungs- und Kontrolldaten in den Signalisierungskanälen.
+Einer der Signalisierungskanäle, welche die Basisstation individuell an das Mobilteil sendet, hat die Aufgabe
+des „Timing Advance“. Ohne diesen Kanal kann ein GSM-System nicht funktionieren. Grund dafür ist die zwar
+sehr große, aber doch endliche Ausbreitungsgeschwindigkeit der elektromagnetischen Welle (300.000 km/s).
+Das Signal eines Mobilteils, welches sich nahe an einer Basisstation befindet, kommt dort früher an als das Signal eines weiter entfernten. Damit die ankommenden Signale exakt in die Zeitschlitzstruktur auf der Empfangsseite der Basisstation passen und sich nicht gegenseitig stören, muss ein weiter entferntes Mobilteil entsprechend früher mit der Aussendung beginnen als ein nahes. Durch die Timing Advance-Information teilt die
+Basisstation dem Mobilteil mit, um wie viel früher es senden muss. Dazu erhält das Mobilteil eine Anweisung
+über den zeitlichen Versatz, der zwischen empfangener Information (Downlink-Zeitschlitz) und abzusendender
+Information (Uplink-Zeitschlitz) eingehalten werden muss.
+Diese Timing Advance (TA)-Information wird üblicherweise im Rahmen einer aktiven Verkehrsverbindung
+über einen zugeordneten Kontrollkanal (SACCH, Slow Associated Control Channel) übertragen. „Zugeordnet
+6. EMV-Tagung des VDB, 23.-24. März 2007 in Fürth
+www.baubiologie.net/docs/elektrosmog-EDGE-Signalcharakteristik.pdf
+
+127
+
+EDGE - Eine neue Variante des GSM-Mobilfunks
+
+Dr.-Ing. Martin H. Virnich
+
+(Associated)“ bedeutet, dass der Kontrollkanal nicht autark existiert, sondern anderen Kanälen, also einem
+Nutzkanal oder Signalisierungskanal zugeordnet ist. Existiert keine aktive Verkehrsverbindung, so existiert auch
+kein SACCH mit TA-Informationen - diese werden dann aber auch gar nicht benötigt bzw. es gibt sie gar nicht.
+Beim Auf- und Abbau einer Verkehrsverbindung muss jedes Mal die Zuordnung zum SACCH neu geschaffen
+bzw. wieder aufgelöst werden. Dies ist mit einem gewissen Zeitaufwand verbunden, der beim Aufbau von leitungsvermittelten Verbindungen nicht ins Gewicht fällt. Bei paketvermittelten Verbindungen jedoch, die viel
+häufiger auf- und abgebaut werden, ist dies ein unliebsamer Faktor. Hiervon ist GPRS betroffen.
+Nun lässt der GPRS-Standard wahlweise eine zweite Möglichkeit zur Übertragung der TA-Informationen zu.
+Hierzu bedient man sich eines eigenen „Packet Timing Advance Control Channel” (PTCCH), der in jedem
+26. GSM-Rahmen gesendet wird (zwei Mal pro 51er Multirahmen, entsprechend einer Frequenz von 8,3 Hz)
+und permanent aktiv ist - damit ist er schneller als ein SACCH, der jedes Mal neu zugeordnet werden muss. Je
+nach Parametrierung der Basisstation kann der PTCCH wahlweise auf dem Organisationskanal oder auf einem
+lastabhängigen Verkehrskanal realisiert werden. „Befindet er sich auf einem Gesprächskanal (= lastabhhängiger
+Verkehrskanal, Anm. des Verfassers) und werden zu einem Zeitpunkt gerade keine GPRS-Daten gesendet, dann
+lässt er sich isoliert wahrnehmen - wiederum ergibt sich eine Frequenz von 8 1/3 Hz. Während aktiver Datenverbindungen ist er ebenfalls vorhanden, wird aber von den durch Daten gefüllten Zeitschlitzen ‚überdeckt'.“
+([10], S. 9)
+
+Fazit
+Das in Oberammergau untersuchte - und mittlerweile in weiten Gegenden Bayerns bei GSM-Basisstationen von
+T-Mobile festzustellende - niederfrequente Pulssignal mit einer Pulsfrequenz von 8,3 Hz hat nichts mit der
+GSM-Variante EDGE zu tun.
+Es handelt sich vielmehr um eine Änderung der Basisstations-Parametrierung für GPRS, bei der für das
+„Timing Advance“ der Mobilteile von der Basisstation ständig ein „Packet Timing Advance Control Channel”
+(PTCCH-Signalisierungskanal) ausgesendet wird, und zwar nicht auf dem sowieso ständig aktiven Organisationskanal, sondern auf den „lastabhängigen“ Verkehrskanälen, die hierdurch auch ständig aktiv sind. Offensichtlich wird diese Änderung der GPRS-Parameter von T-Mobile gleichzeitig mit der Aufrüstung der Basisstationen auf EDGE vorgenommen.
+Die in Oberammergau zeitgleich zur Umrüstung der T-Mobile-Basisstaion aufgetretenen, massiven gesundheitlichen Beschwerden in der Bevölkerung sollten offiziellen Stellen dringender Anlass sein, den Verdacht eines
+kausalen Zusammenhangs intensiv und mit wissenschaftlicher Begleitung ergebnisoffen zu untersuchen - unabhängig von einem Hinweis auf die Unterschreitung gesetzlich geltender Grenzwerte. Einen konkreten Vorschlag
+hierzu hat Dr. Oberfeld in seinem Oberammergauer Gutachten vom 15.01.2007 ([6], S. 7) ausgearbeitet.
+So lange Hochfrequenzsignale mit Pulsstrukturen - insbesondere mit niedrigen Pulsfrequenzen - im Verdacht
+stehen, besondere biologische Wirkungen auslösen zu können, die bei ungepulsten Signalen so nicht auftreten,
+sollte die - insbesondere flächendeckende - Verwendung solcher Signale von der Betreiberseite aus Vorsorgegründen vermieden werden - zumal wenn es gleichwertige oder nahezu gleichwertige Alternativen gibt. Diese
+sind für GPRS vorhanden; sie wurden und werden bisher üblicherweise eingesetzt, wie viele seit langem in Betrieb befindliche GPRS-Basisstationen zeigen, die das in Oberammergau anzutreffende 8,3 Hz-Pulssignal nicht
+abstrahlen.
+Für den Fall GPRS bedeutet dies:
+•
+
+entweder auf die Verwendung des PTCCH-Signalisierungskanals ganz zu verzichten und das Timing
+Advance (TA) weiterhin mit einem zugeordneten Kontrollkanal (SACCH) abzuwickeln. Dann wird die
+TA-Information nur so lange gesendet, wie sie auch gebraucht wird, nämlich während der Dauer der Verbindung;
+
+•
+
+oder aber, wenn der PTCCH-Signalisierungskanal doch verwendet wird, ihn über den Organisationskanal
+abzuwickeln und nicht über die lastabhängigen Verkehrskanäle. Dann wird der für die TA-Information zuständige Signalisierungskanal zwar ständig ausgesendet, aber er führt zu keiner Veränderung auf der physikalischen Ebene, da er die Zeitschlitze des ohnehin ständig aktiven Organisationskanals mitnutzt.
+
+128
+
+6. EMV-Tagung des VDB, 23.-24. März 2007 in Fürth
+www.baubiologie.net/docs/elektrosmog-EDGE-Signalcharakteristik.pdf
+
+Dr.-Ing. Martin H. Virnich
+
+EDGE - Eine neue Variante des GSM-Mobilfunks
+
+Anhang
+Anhang 1: Brief W. Funk vom 15.11.2006 [1]
+
+6. EMV-Tagung des VDB, 23.-24. März 2007 in Fürth
+www.baubiologie.net/docs/elektrosmog-EDGE-Signalcharakteristik.pdf
+
+129
+
+EDGE - Eine neue Variante des GSM-Mobilfunks
+
+Dr.-Ing. Martin H. Virnich
+
+Anhang 2: Gutachten Dr. G. Oberfeld, Landessanitätsdirektion Salzburg, 15.01.2007 [6]
+
+130
+
+6. EMV-Tagung des VDB, 23.-24. März 2007 in Fürth
+www.baubiologie.net/docs/elektrosmog-EDGE-Signalcharakteristik.pdf
+
+Dr.-Ing. Martin H. Virnich
+
+6. EMV-Tagung des VDB, 23.-24. März 2007 in Fürth
+www.baubiologie.net/docs/elektrosmog-EDGE-Signalcharakteristik.pdf
+
+EDGE - Eine neue Variante des GSM-Mobilfunks
+
+131
+
+EDGE - Eine neue Variante des GSM-Mobilfunks
+
+132
+
+Dr.-Ing. Martin H. Virnich
+
+6. EMV-Tagung des VDB, 23.-24. März 2007 in Fürth
+www.baubiologie.net/docs/elektrosmog-EDGE-Signalcharakteristik.pdf
+
+Dr.-Ing. Martin H. Virnich
+
+6. EMV-Tagung des VDB, 23.-24. März 2007 in Fürth
+www.baubiologie.net/docs/elektrosmog-EDGE-Signalcharakteristik.pdf
+
+EDGE - Eine neue Variante des GSM-Mobilfunks
+
+133
+
+EDGE - Eine neue Variante des GSM-Mobilfunks
+
+134
+
+Dr.-Ing. Martin H. Virnich
+
+6. EMV-Tagung des VDB, 23.-24. März 2007 in Fürth
+www.baubiologie.net/docs/elektrosmog-EDGE-Signalcharakteristik.pdf
+
+Dr.-Ing. Martin H. Virnich
+
+6. EMV-Tagung des VDB, 23.-24. März 2007 in Fürth
+www.baubiologie.net/docs/elektrosmog-EDGE-Signalcharakteristik.pdf
+
+EDGE - Eine neue Variante des GSM-Mobilfunks
+
+135
+
+EDGE - Eine neue Variante des GSM-Mobilfunks
+
+136
+
+Dr.-Ing. Martin H. Virnich
+
+6. EMV-Tagung des VDB, 23.-24. März 2007 in Fürth
+www.baubiologie.net/docs/elektrosmog-EDGE-Signalcharakteristik.pdf
+
+Dr.-Ing. Martin H. Virnich
+
+EDGE - Eine neue Variante des GSM-Mobilfunks
+
+Anhang 3: LfU „Elektromagnetische Felder von Mobilfunkbasisstationen in Oberammergau; Zusammenfassung von Untersuchungen des LfU“, 12.02.2007 [7]
+
+6. EMV-Tagung des VDB, 23.-24. März 2007 in Fürth
+www.baubiologie.net/docs/elektrosmog-EDGE-Signalcharakteristik.pdf
+
+137
+
+EDGE - Eine neue Variante des GSM-Mobilfunks
+
+138
+
+Dr.-Ing. Martin H. Virnich
+
+6. EMV-Tagung des VDB, 23.-24. März 2007 in Fürth
+www.baubiologie.net/docs/elektrosmog-EDGE-Signalcharakteristik.pdf
+
+Dr.-Ing. Martin H. Virnich
+
+6. EMV-Tagung des VDB, 23.-24. März 2007 in Fürth
+www.baubiologie.net/docs/elektrosmog-EDGE-Signalcharakteristik.pdf
+
+EDGE - Eine neue Variante des GSM-Mobilfunks
+
+139
+
+EDGE - Eine neue Variante des GSM-Mobilfunks
+
+Dr.-Ing. Martin H. Virnich
+
+Literatur
+[1]
+
+Funk, Werner: Messung der hochfrequenten elektromagnetischen Belastung im Ammertal; Brief vom
+15.11.2006
+
+[2]
+
+26. Verordnung zur Durchführung des Bundes-Immissionsschutzgesetzes (Verordnung über elektromagnetische Felder - 26. BImSchV) vom 16.12.1996; in: VDB-Richtlinien Band 1 - Physikalische Untersuchungen, 2. Auflage 2006; Berufsverband Deutscher Baubiologen VDB e.V. (Hrsg.); Im Verlag des
+AnBUS e.V. Fürth, 2006; ISBN 3-3808428-6-X
+
+[3]
+
+Virnich, Martin H.: Wann ist Hochfrequenzstrahlung gepulst? Untersuchung von Pulseffekten im Zeitund im Frequenzbereich; in: „Energieversorgung & Mobilfunk“, Tagungsband der 5. EMV-Tagung des
+Berufsverbandes Deutscher Baubiologen VDB e.V., 22.-23. März 2006 in Stuttgart; Im Verlag des
+AnBUS e.V. Fürth, 2006, ISBN 3-9810359-1-7; S. 171-189
+
+[4]
+
+Garmisch-Partenkirchner Tagblatt vom 15.11.2006, Lokalteil Ammertal
+
+[5]
+
+Agilent Technologies: Measuring EDGE-Signals - New and Modified Techniques and Measurement
+Requirements, Application Note 1361
+
+[6]
+
+Oberfeld, Gerd (Landessanitätsdirektion Salzburg): Gutachten „Mobilfunk: Signalanalyse im Frequenzbereich GSM 900“ vom 15.1.2007
+
+[7]
+
+Bayerisches Landesamt für Umwelt (LfU): Elektromagnetische Felder von Mobilfunkbasisstationen in
+Oberammergau; Zusammenfassung von Untersuchungen des LfU; Augsburg,12.02.2007;
+www.bayern.de/lfu/laerm/emv/oberammergau/index.html (Dateiname: summary)
+
+[8]
+
+Bayerisches Landesamt für Umwelt (LfU): Elektromagnetische Felder (EMF) in Oberammergau, Ergebnis der Messungen vom 21.11.2006;
+www.bayern.de/lfu/laerm/emv/oberammergau/index.html (Dateiname: report1)
+
+[9]
+
+Bayerisches Landesamt für Umwelt (LfU): Überprüfung der Mobilfunkexposition bei einem Rundgang
+durch Oberammergau (01.12.2006);
+www.bayern.de/lfu/laerm/emv/oberammergau/index.html (Dateiname: report2)
+
+[10] Bayerisches Landesamt für Umwelt (LfU): Elektrosmog-Analyzer - Akustische Wiedergabe hochfrequenter elektromagnetischer Strahlung; Stand: 02.2007;
+www.bayern.de/lfu/laerm/emv/oberammergau/index.html (Dateiname: report3)
+
+140
+
+6. EMV-Tagung des VDB, 23.-24. März 2007 in Fürth
+www.baubiologie.net/docs/elektrosmog-EDGE-Signalcharakteristik.pdf
+

@@ -1,0 +1,86 @@
+Kundenmeinung :
+
+Die Kommunikationstechnik - Fibel ist sehr informativ und verständlich . Genau das habe ich schon seit langem gesucht . Endlich mal ein Buch , das kurz und bündig die moderne Informationstechnik beleuchtet .
+Kommunikationstechnik - Fibel
+
+jetzt bestellen !
+Das Buch zu dieser Webseite
+Netzwerktechnik - Fibel
+Kundenmeinung :
+
+Die Netzwerktechnik - Fibel ist sehr informativ und verständlich . Genau das habe ich schon seit langem gesucht .
+Netzwerktechnik - Fibel
+
+jetzt bestellen !
+Elektronik - Kompendium . de > Kommunikationstechnik
+LTE - Long Term Evolution
+Long Term Evolution , kurz LTE , ist die erste weltweit gültige Mobilfunktechnik für Nordamerika , Europa und Asien und Teil der Initiative IMT - Advanced , dem Nachfolger von IMT - 2000 , zu dem auch UMTS gehört . LTE ist eine Weiterentwicklung von UMTS und HSPA . Der damit einhergehende Entwicklungssprung ist mit dem von GSM auf UMTS vergleichbar . LTE wird als natürlicher Entwicklungsschritt nach UMTS gesehen .
+LTE wird die bisherigen GSM - , UMTS - und HSPA - Mobilfunknetze nicht ersetzen , sondern ergänzen . Es wird ein nahtloser Übergang von der UMTS - Technik zu LTE geben . Durch die weite Verbreitung von UMTS - und HSPA - Endgeräten werden beide Techniken mehrere Jahre koexistieren . Mit LTE entwickelt sich der Mobilfunk zunehmend zu einer Alternative zur Überbrückung der letzten Meile und damit als Alternative zu Kabelmodemtechnik und DSL .
+Bei LTE handelt es sich nicht , wie so oft zu lesen , um die vierte Mobilfunk - Generation ( 4G ) . Die Generation wird von der ITU - T festgelegt . Die Einteilung ist in einer Spezifikation festgelegt . Demnach ist LTE ein 3 . 9G - Mobilfunknetz . Der Grund , LTE setzt die 4G - Definition nicht vollständig um . Leider kam die Spezifikation erst nach dem sich jeder an die willkürliche Festlegung gewöhnt hat . Deshalb findet man immer wieder Aussagen , dass LTE 4G sei . Doch erst LTE Advanced entspricht der 4G - Definition .
+Gründe für LTE und warum LTE im Gegensatz zu UMTS kein technischer Flop wird
+Die Einführung innovativer und benutzerfreundlicher Mobiltelefone , wie z . B . das iPhone oder der Android - Smartphones , haben gezeigt , dass damit die Nutzung des mobilen Internets stark ansteigt . Aufgrund der Steigerungsrate der mobilen Datenübertragung ist für die Netzbetreiber absehbar , dass die Kapazitätsgrenzen ihrer HSPA - Netze spätestens 2012 erreicht sind . Die Erweiterung der Netzkapazität ist dann nur noch durch Zellteilung möglich . Dabei wird eine Zelle mit einer Basisstation in zwei Basisstationen aufgeteilt , was die Anzahl der Basisstationen erhöht aber auch sehr kostspielig ist .
+
+Eine Alternative ist , das bereits existierende Netz mit einer Mobilfunktechnik aufzurüsten , die die Netzkapazität deutlich erhöht . LTE ist diese Mobilfunktechnik . LTE erhöht die Kapazität gegenüber HSPA um Faktor 3 , 5 ( im gleichen Frequenzspektrum ) und gegenüber HSPA + um den Faktor 2 , 5 ( im gleichen Frequenzspektrum ) . Da die Kosten für eine neue Basisstation um das zehnfache einer Aufrüstung von LTE übersteigt , ist LTE für die Netzbetreiber um einiges attraktiver .
+
+Eine neue Technik ist auch aus anderen Gründen notwendig . Tests mit Mobilfunknutzern haben gezeigt , dass die Reaktionszeit des Netzes mit 60 ms als " langsam " empfunden wird . LTE mit 10 ms Reaktionszeit soll das Warten auf Daten reduzieren , so dass es für die iPhone - Generation akzeptabel ist . Denn was für den Mobiltelefonierer die Sprachqualität ist , das ist für den mobilen Internet - Surfer die Reaktionszeit auf Datenanforderungen . Zum Beispiel der Abruf von E - Mails oder Webseiten .
+
+Doch LTE wird nicht nur aufgrund der höheren Übertragungskapazität eingeführt , sondern auch weil der Betrieb um bis zu 70 % geringere Kosten verspricht . Schon aus diesem Grund ist LTE für die Mobilfunknetzbetreiber attraktiver als zum Beispiel WiMAX .
+
+Im Gegensatz zu UMTS besteht für LTE keine Gefahr ein technischer Flop zu werden . Bei LTE sitzen die Mobilfunknetzbetreiber mit im Standardisierungsgremium . Schon frühzeitig wurden Tests mit der neuen Technik gemacht , insbesondere um die Zeitdifferenz zwischen Netzaufrüstung und der Verfügbarkeit von Endgeräten zu reduzieren .
+Übertragungsrate in der LTE - Spezifikation
+Die Geschwindigkeitsangaben beziehen sich auf das theoretische Maximum .
+Spezifikation
+Downstream
+Upstream
+Leistung
+Anmerkung
+Normiert
+LTE Release 8
+172 , 8 MBit / s
+57 , 6 MBit / s
+16QAM , 2x2 MIMO , 20 MHz
+Netzelemente und Endgeräte
+2008
+LTE Release 9
+326 , 4 MBit / s
+86 , 4 MBit / s
+16QAM , 4x4 MIMO , 20 MHz
+MBMS
+2009
+LTE Release 10
+1 GBit / s
+500 MBit / s
+16QAM , 8x8 MIMO , 100 MHz
+LTE Advanced
+2011
+Übertragungsrate und Übertragungstechnik
+LTE steht vor allem für hohe Übertragungsraten und kurze Verbindungszeiten . Beides sind die Hauptkritikpunkte an GSM , UMTS und auch an HSPA . Prinzipbedingt sind alle Mobilfunktechniken langsamer und träger , als Übertragungstechniken für Leitungen und Kabel . Viele Anwendungen und in vielen Situationen ist man deshalb immer noch auf kabelgebundene Übertragungstechniken angewiesen . Mit LTE kommt man erstmals in die Nähe , was mit DSL oder Kabeltechnik schon lange möglich ist .
+
+Die Steigerung der Übertragungsrate soll vor allem durch bessere Modulationsverfahren , flexiblere Frequenznutzung und größere Kanalbandbreiten erreicht werden . LTE erreicht laut Spezifikation pro 20 - MHz - Band bis zu 300 MBit / s im Downlink und 75 MBit / s im Uplink . In Deutschland existieren jedoch keine Frequenzbereiche mit 20 MHz . Die Mobilfunknetzbetreiber verfügen im 800 - MHz - Band nur über 10 - MHz - Blöcke ( jeweils für Up - und Downlink ) und erreichen damit höchstens 150 MBit / s im Downlink .
+Die Realität sieht so aus , dass die Netzbetreiber pro Sektor einer Basisstation rund 50 bis 75 MBit / s bereitstellen ( Stand 2011 ) . Später ist bis zu 100 MBit / s im Downlink und bis zu 50 MBit / s im Uplink geplant . In der Praxis liegt die Übertragungsrate weit darunter . Je mehr Nutzer die Bandbreite gleichzeitig nutzen , desto geringer fällt die Übertragungsrate pro Teilnehmer aus . Es ist davon auszugehen , dass mehr als 2 bis 3 MBit / s pro Teilnehmer unter normalen Bedingungen kaum möglich ist .
+Angestrebt wird eine Latenzzeit von unter 10 ms . In der Praxis ist von einer Latenzzeit unter 30 ms die Rede . Damit verhält sich ein LTE - Anschluss in etwa wie ein DSL - Anschluss . Die verfügbare Bandbreite und die Antwortzeiten sind ähnlich .
+
+Eine kurze Latenzzeit ist eine notwendige Voraussetzung für die Virtualisierung mobiler Anwendungen . Das bedeutet , mobile Endgeräte laden und speichern ihre Daten im Netz .
+Mehr Informationen zur LTE - Übertragungstechnik
+Zu einer beeindruckenden Übertragungsrate von über 1 GBit / s kommt man , indem man mehrere 20 - MHz - Kanäle gleichzeitig nutzt ( Multi - Carrier - Technik ) und ein 4x4 - MIMO - System ( Multiple Input Multiple Output ) einsetzt . Diese Techniken werden in LTE Advanced eingesetzt . In der Praxis sind jedoch nur wenige Netzbetreiber in der Lage mehrere Kanäle zu bündeln . Die nutzbaren Frequenzbereiche sind ein knappes Gut und auf mehrere Netzbetreiber verteilt . Es ist davon auszugehen , dass andere Frequenzbereiche , die beispielsweise von GSM oder UMTS genutzt werden , irgendwann für LTE geräumt werden .
+Mehr Informationen über LTE Advanced
+LTE - Netzarchitektur
+Was sich bei HSPA + bereits angedeutet hat , soll nun mit LTE umgesetzt werden : Die Erhöhung der Übertragungskapazität durch Einsparung des Informationsaustauschs zwischen Basisstation und dem Kernnetz . Angestrebt wird eine einfache Integration in das bestehende Mobilfunknetz und eine einfache Architektur mit sich selbst konfigurierenden Basisstationen .
+
+Um den wachsenden Datenverkehr im Mobilfunknetz abwickeln zu können ist eine breitbandige Anbindung der Basisstationen an das Kernnetz erforderlich . Hierfür setzt man bevorzugt Richtfunk und Glasfaser ein .
+Mehr Informationen zur LTE - Netzarchitektur
+SON - Self - Organizing Network
+LTE in Deutschland
+LTE ist vollständig auf die Übertragung von Daten ausgerichtet . Deshalb gibt es für LTE spezielle Datentarife . Zur Einführung werden Sprachdienste keine Rolle spielen . Dafür sind GSM und UMTS technisch voll ausreichend . Erst später soll eine Migration der Sprachübertragung mit VoIP erfolgen .
+Während GSM und UMTS zuerst in Ballungsräumen zum Einsatz kamen und nach und nach die Netzabdeckung auch auf dem geringer besiedelten Land ausgeweitet wurde , startet LTE in Deutschland in ländlichen Gebieten mit Ortschaften unter 5 . 000 Einwohnern . Es handelt sich dabei um eine Vorgabe der Bundesnetzagentur , die bereits bei der Versteigerung der LTE - Frequenzen festgelegt war . Damit erhofft sich die Politik vom LTE - Netzausbau eine schnelle Versorgung der Breitband - unterversorgten Gebiete .
+Übersicht : LTE
+LTE - Netzarchitektur
+LTE - Übertragungstechnik
+SON - Self - Organizing Network
+MBMS - Multimedia Broadcast Multicast Service
+LTE Advanced
+Weitere verwandte Themen :
+HSPA - Highspeed Paket Access
+HSPA + / HSPA Evolution
+Long Term HSPA Evolution
+UMTS - Universal Mobile Telecommunications System

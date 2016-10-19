@@ -1,0 +1,666 @@
+Microsoft Word - 501-Sohel.doc The Analysis of Customer Loyalty in Bangladeshi Mobile Phone 
+Operator Industry 
+ 
+Mohammed Sohel Islam* 
+ 
+The purpose of this paper is to examine the relationship between switching cost, 
+corporate image, trust and customer loyalty. Several hypotheses are extracted from 
+the research framework and are tested using regression and correlation analysis. A 
+sample of 150 respondents (customers of mobile phone operator) was used and 
+convenience sampling method was conducted. The research finds that although all 
+the independent variables, switching cost, corporate image, and trust have certain 
+degree of relationship with the dependent variable, customer loyalty, only trust has 
+the strongest relationship with customer loyalty. The findings suggests that 
+mangers of these mobile operators should put more focus of building corporate 
+image and analyze more carefully the reason for customers to switch brands in this 
+industry in order to increase loyalty among these customers. 
+ 
+Keywords: Customer loyalty, Trust, Mobile phone operator, Switching cost, Corporate 
+image 
+ 
+Introduction 
+The number of mobile subscribers has been increased dramatically. Over the last two to 
+three years, the number of mobile subscribers in Bangladesh has been more than or close 
+to more than doubling on an annual basis. The subscriber base had reached 44 million by 
+mid-2008 and was continuing to grow at an annual rate in excess of 50%. And the strong 
+growth seemed likely to continue with the drive that has been developed on the back of 
+the government's deregulation process. The competitive environment has further 
+intensified due to the entry of new operators into the market 
+(www.totel.com.au/bangladesh-telecommunications-research.asp). The telecom regulator 
+also disclosed that addition of new subscribers raised the mobile penetration more than 
+25% of the country's population. Individually, Bangladesh's leading mobile operator, 
+Grameenphone, has 18.6 Million customers, Banglalink has 8.64 Million, AKTEL has 
+7.57 Million and Warid has 2.93 Million subscribers. On the other side, Citycell, 
+Bangladesh oldest mobile operator, has added 1.6 Million subscribers. The reasons 
+behind this growth rate during April 2008 was largely due to declining call rates, falling 
+prices of handsets and rising competition among operators. Consequently, the mobile 
+phones become cheaper and affordable for people in the country with the increase in 
+disposable income that improves the quality of life in Bangladesh. People are showing 
+interest in new technologies like Internet service on mobile phone. Besides, mobile 
+companies are also adding new technologies in their services as a result more and more 
+customers are buying mobile phones. (www.rncos.com/Blog/2008/07/Bangladesh-
+Telecom-Industry-Growing-at-Rapid-Pace.html).  
+__________ 
+ 
+*Independent University, Bangladesh. 83 Suhrawardy Avenue, Dhaka-1212, Bangladesh, 
+ Email: eehamtaj@yahoo.com, ph: 88-02-9884498 
+ 
+ 1 Thus it becomes a high concern for the companies to stay alive and win the market share 
+by making the customer more loyal to their firms. As competition increases, customers 
+bargaining power gets stronger, and building trust and image becomes more important, 
+companies should put more focus on factors affecting loyalty among consumers. For this 
+reason, the objective of the study is set to establish a frame work which will identify the 
+impact of customer loyalty of mobile phone operators through switching cost, corporate 
+image, and trust. Besides, in the context of Bangladesh, no research works has ever been 
+conducted in these mentioned areas. Therefore, it is obviously a commensurate step for 
+the researcher to examine the impact of switching cost, trust and corporate image on 
+customer loyalty in the mobile phone operator industry in Bangladesh. 
+ 
+The research model and hypotheses 
+Figure 1 presents the research model, which concerns the relationship of three 
+independent variables (switching cost, corporate image, and trust) with one dependent 
+variable (customer loyalty). . Each of these components is defined as follows and their 
+relationships are also portrayed in this section. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ • Switching cost 
+  
+ • Corporate image Customer loyalty 
+ 
+ • Trust 
+Figur e 1: Conceptual Framework of Research Variables and their Relationships 
+Switching Cost 
+Switching cost is defined as the cost that incurs when a consumer change one service 
+provider to another service provider (Porter, 1998). According to Jackson (1985), it is the 
+sum of economic, psychological and physical costs. Switching cost can be considered as 
+sunk cost that appears when customer changes his/her brand.  Examples are the costs of 
+closing an account with one bank and opening another with a competitor, the costs of 
+changing one's long-distance telephone service or the costs of changing one's GSM 
+service provider. It can happen for the lack of loyalty when a firm fails to satisfy and 
+anticipate its customer's expectations and perceptions. Switching cost is also defined as 
+the investment of time, money and effort that, in customers' perception, made it difficult 
+ 2 to switch (Gremler and Brown, 1996). In other words, it is the customer's estimate of the 
+personal loss or sacrifice in time, effort and money associated with the customer 
+changing to another service provider (Hellier, Rickard, Carr, and Geursen, 2002). 
+ Corporate image 
+First of all, image is defined as the perceptions of an organization reflected in the 
+associations held in consumer memory (Keller, 1993). In the service marketing literature 
+it is considered as an important factor in the overall evaluation of the service and the 
+company (Bitner, 1991; Grönroos, 1984; Gummesson and Grönroos, 1988). And Bitner 
+(1990) proposes corporate image as an important factor in the overall evaluation of a firm 
+and is argued to be what comes to the mind of a customer when they hear the name of a 
+firm (Nguyen, 2006). In another case, corporate image is described as the overall 
+impression made on the minds of the public about a firm (Barich & Kotler, 1991).   
+A firm has to devise strategies to get into customer mind. In other words, a company has 
+to anticipate the customer's cognition in various certain ways to get its corporate image.  
+Which is the result of a process (MacInnis & Price, 1987).  The process stems from ideas, 
+feelings and consumption experiences with a firm that are retrieved from memory and 
+transformed into mental images (Yuille & Catchpole, 1977).  Even though customers 
+have no information about the firm but they can get information from another sources 
+like the word of mouth, advertisements etc. which will influence the process of forming a 
+corporate image.  Fishbein and Ajzen (1975) argue that attitudes are functionally related 
+to behavioral intentions, which predict behavior.  Therefore, corporate image as an 
+attitude must be related with the consumer behavior.   
+Every customer has unique perceptions and expectations not only about the firm but also 
+about the service quality provided by the firms and customer's perceptions about this 
+service quality directly affect the perception of corporate image. Corporate image can be 
+treated as an outcome forms an accumulated attitude that is derived from experience 
+and/or direct or indirect market communication (Andreassen & Lindestad, 1998).  If the 
+service quality perceived by the customers as positive or negative, it then directly affects 
+its corporate image (Keller, 1993). 
+Trust 
+The concept trust has a wide range of use in many areas and has various definitions 
+(Lewicki et al., 1998). Trust has an impact on the vulnerability of the trustor (Bigley and 
+Pearce, 1998; Singh and Sirdeshmukh, 2000), because trust becomes irrelevant if there is 
+no vulnerability of the trustor upon the trustee. In business studies, trust has been found 
+to be important for building and maintaining long-term relationships ( Geyskens et al., 
+1996; Rousseau et al., 1998; Singh & Sirdeshmukh, 2000). 
+Lewis and Weigert (1985) argue that trust is not mere predictability but confidence in the 
+face of risk.  Trust not only can predict the quality of the service or talk about the other 
+important features associated with service but it also can negate the uncertainty involved 
+in purchasing certain service or product. So trust can build confidence among the 
+consumers. While there have been numerous conceptualizations of trust in the marketing 
+literature, one of the more popular is that offered by Morgan and Hunt (1994, p. 23): trust 
+exists "when one party has confidence in an exchange partner's reliability and integrity". 
+ 3 Similarly, Moorman et al. (1993, p. 82) define trust as "a willingness to rely on an 
+exchange partner in whom one has confidence". 
+ 
+Customer loyalty 
+ Customer loyalty is defined as "the degree to which a customer exhibits repeat 
+purchasing behavior from a service provider, possesses a positive attitudinal disposition 
+toward the provider, and considers using only this provider when a need for this service 
+arises" (Gremler and Brown, 1996, p. 173). It expresses an intended behavior related to the 
+service or the company. This includes the possibility of future renewal of service contracts, 
+how likely it is that the customer changes patronage, how likely the customer is to provide 
+positive word-of-mouth, or the likelihood of customers providing voice (Andreassen and 
+Lindestad, 1997). 
+Jones and Sasser (1995) state that customer loyalty is "a feeling of attachment to or 
+affection for a company's people, products, or services".  Customer loyalty is expressed 
+as an intended behavior regarding the service or the company. The loyalty and repurchase 
+intentions aspects of the taxonomy are most similar in nature. Oliver (1997), for example, 
+operationalizes action loyalty as repeat usage. Furthermore, Delgado-Ballester and 
+Munuera-Alema´n (2001) and Macintosh and Lockshin (1997) use repurchase intentions 
+as an element of loyalty in brand and store contexts respectively. 
+Relationship between Switching Costs and Customer Loyalty 
+ Switching cost presents a number of benefits on companies that have a direct effect on 
+customer loyalty. For example, it decreases customers' price sensitiveness and 
+satisfaction level (Fornell, 1992). When customers are expected to select form a number 
+of functionally identical brands, the presence of switching cost helps customers to build 
+brand loyalty (Klemperer, 1987a). In many other researches, it is found that switching 
+cost has a direct influence on customer sensitivity to price level and thus influences 
+customer loyalty (e.g. Eber, 1999; Jones et al., 2002; Bloemer et al., 1998; Burnham et 
+al., 2003; Feick et al., 2001). Fornell (1992) also argues that switching cost is one of 
+many factors that affect the relationship of customer satisfaction and customer loyalty. In 
+other research, it is found that switching cost has a moderator effect on customer loyalty 
+that is as switching cost increases, the satisfaction level decreases (Hauser et al., 1994). 
+Jones et al., (2000) found switching cost as the antecedent of loyalty for both business-to-
+business and business-to-consumer cases. In another research, it is proposed that high 
+switching barriers or lack of real alternatives might make the customers loyal 
+(Andreassen and Lindestad, 1997). 
+From these literature reviews, the following hypothesis proposes that there exists a 
+relationship between switching cost and customer loyalty. 
+  
+H1. There is a relationship between switching cost and customer loyalty. 
+ 
+Relationship between Corporate Image and Customer Loyalty 
+ 4 For both existing and new customers, corporate image is an extrinsic information cue 
+that may or may not influence customer loyalty (Lindestad and Andreassen, 1997). In a 
+similar research, it is found that consumers may be loyal to a firm or brand because it is 
+viewed as having a positive image among other consumers (Ball, Coelho, and Macha´s, 
+2003). When a consumer perceive that the firm is truly service oriented, then the firm 
+will have the power to enhance customers' perception of the firm's image and eventually 
+gain their loyalty. Thus to enhance customer loyalty, corporate image is considered as an 
+important factor and it is also found that corporate image has direct impact on and is 
+positively related to customer loyalty (Kandampully and Hu, 2007). Moreover, it is found 
+that customers' overall assessment of corporate image is deemed to influence customer 
+loyalty (Reynolds et al., 1974-1975). 
+In order to maintain market position, companies view favorable image as a critical aspect 
+that has been related to core aspects of organizational success such as customer patronage 
+(Granbois, 1981; Korgaonkar et al., 1985).   
+Corporate image depends on the physical and behavioral attributes of the firm, such as 
+the name of the corporation, architecture, products/services, and the communication skills 
+of the staffs.  Fishbein and Ajzen (1975) argue that attitudes and behavioral intentions has 
+functional relationship, which predict behavior.  Consequently, corporate image is 
+considered as an attitude that must affect behavioral intentions such as customer loyalty 
+(Johnson et al., 2001).  Nguyen and Leblanc (2001) demonstrate that in three business 
+sectors (telecommunication, retailing and education), corporate image and customer 
+loyalty are positively related. From these literature reviews, the following hypothesis 
+proposes that there exists a relationship between corporate image and customer loyalty. 
+ 
+H2. There is a relationship between corporate image and customer loyalty. 
+ 
+Relationship between Trust and Customer Loyalty 
+ Hart and Johnson (1999) mentioned that it is necessary to look for the variables that can 
+ensure a long-term customer commitment to a single provider. One of such variable is 
+trust. Gremler and Brown (1996) and Reichheld et al., 2000 proposed respectively that a 
+conceptual and important antecedent of customer loyalty is trust. In similar researches, 
+Garbarino and Johnson (1999) found trust as a driver of customer behavioral intentions 
+that might lead to customer loyalty and Ranaweera and Prabhu (2003) found in order to 
+maintain a long-term contractual relationship with the service provider, trust is likely to 
+be a strong driver of customer retention. To build relationship commitment and customer 
+loyalty, trust is found as one of the important factor (Morgan and Hunt, 1994, Moorman 
+et al., 1993, Sharma, 2003) and also it is a critical variable logically and experientially in 
+relationships (Moorman et al., 1993; Morgan and Hunt, 1994). Many other authors 
+supported the importance of trust in building customer loyalty (Lim et al. 1997; 
+Garbarino and Johnson, 1999; Chaudhuri and Holbrook, 2001; Singh and Sirdeshmukh, 
+2000; and Sirdeshmukh et al., 2002). It is a precondition for patronage behavior (Pavlou, 
+2003) and is needed to build long-term customer relationship relationships (Doney and 
+Cannon, 1997; Papadopoulou et al., 2001; Singh and Sirdeshmukh, 2000). In business 
+environment, to build and maintain long-term relationship, trust has been found to be a 
+ 5 very important factor (e.g. Geyskens et al., 1996; Rousseau et al., 1998; Singh and 
+Sirdeshmukh, 2000). Trust can reduce the perceived risk of using a service (Gambetta, 
+2000), it can therefore be considered as the consequence of positive evaluations of 
+services and an antecedent of customer loyalty. Moreover, Foster and Cadogan (2000) 
+also demonstrated that consumer trust in the company was an antecedent to attitudinal 
+loyalty. Garbarino and Johnson's (1999) research proposes that for relational oriented 
+customers, trust and commitment are key antecedents to loyalty. 
+Many have found a direct link (e.g. Bearden and Teel, 1983; Cronin and Taylor, 1992; 
+Oliver et al., 1997; Selnes, 1998), while others suggest that trust is the dominant 
+antecedent of repurchase intentions (e.g. Doney and Cannon, 1997). From these literature 
+reviews, the following hypothesis proposes that there exists a relationship between trust 
+and customer loyalty. 
+H3. There is a relationship between trust and customer loyalty. 
+ 
+Methodology 
+The apposite type of research design for this study is Ex Post Facto design where the 
+subtype used is survey to accomplish the research objectives. The central objective of 
+survey design is to search for relationships between variables. It usually depends upon the 
+use of a well-constructed questionnaire, which is used to collect data from the relevant 
+unit of analysis under study, usually, an individual (Davis & Cosenza, 1993). Thus this 
+research can depict the relationship(s) of certain variables of switching cost, corporate 
+image, trust and customer loyalty in the context of the customers of mobile phone 
+operators in Dkaka Metropolitan City, the capital city of Bangladesh.  
+The convenience sampling is one of the non-probability sampling designs that are being 
+used in this research. As its name implies, convenience sampling involves collecting 
+information from members of the population who are conveniently available to provide 
+this information (Sekaran, 1992).  The sampling units are both male and female mobile 
+phone operator customers of Dhaka city.  
+Primary data have been collected from 150 samples by the use of questionnaire. Data 
+collection has proceeded coding of 150 questionnaires into a symbolic form in SPSS 
+software. The data was summarized in the form of simple frequency and descriptive 
+statistics. As hypotheses have been tested to identify the relationship of certain variable 
+those are based on the scale of ordinal data in the questionnaire, Bivariate analysis 
+(Spearman's Rank Correlation test) has been used. 
+A reliability test for each hypothesis, which entails the relationship of a construct and a 
+dependent variable, has been conducted. The researcher has used semantic differential 
+scale to measure each of the independent and dependent variable. As this scale is based 
+on five points and is split into two halve, it is considered appropriate to test the reliability 
+of this scale. The value of the Chronbach's alpha has been estimated to test whether the 
+scales are reliable or not. A Chronbach's alpha value of between 0.5-0.6 indicates 
+sufficient reliability of the scale for the early stage of any research (Nunnaly, 1978), 
+although a coefficient of 0.7 or above is desirable (Hair et., 1998). Regression analysis 
+has also been done to show how much variability in dependent variable is caused by the 
+variability in independent variables. For lucidity, examining each hypothesis is 
+encompassed into three steps: Reliability analysis, correlation analysis and regression 
+analysis of the variables. 
+ 6 Analysis 
+The first analysis has been undertaken to test the reliability of the scale that measures the 
+dependent variable, customer loyalty that has been mentioned in the framework. The 
+reliability analysis of this dependent variable indicates an alpha value of 0.982. 
+Therefore, it can be inferred that the items that have been aggregated to measure the 
+dependent variable, customer loyalty, are reliable. 
+The Cronbach alpha values of reliability analysis for all the independent variables have 
+been shown in table 1. 
+Table 1: Independent variables and their corresponding Cronbach alpha values 
+Independent variables Cronbach alpha 
+Switching cost 0.692 
+Corporate image 0.916 
+Trust 0.916 
+ 
+The table above indicates that the Cronbach alpha values of the independent variables are 
+above 0.6. Therefore, it can be deduced that the three independent variables are reliable. 
+The "bivariate" correlation test with the value of Spearman's rho assists the researcher to 
+make inference regarding the relationship of the following variables (customer loyalty as 
+the dependent variable, and switching cost, corporate image and trust as the independent 
+variables).  
+It is imperative to set the cutting point of which to select the hypotheses. Thus, the 
+statistical notion implies the two conditions for accepting the hypotheses, if ρ ≠ 0 and, if 
+α < 0.05. 
+It can inferred from the following table that the α value (two-tail significance level test) 
+for all the hypotheses tested is found substantiated at the significant level lower than 0.05 
+(the actual α is 0.01). The ρ value for each of the hypotheses was found not to be equal to 
+zero (refer to Table 2). Thus, all the three hypotheses have been accepted. 
+ 
+Table 2: Significance value (α) and Correlation coefficient (ρ) of three hypotheses 
+ 
+Hypotheses Significance value (α) Correlation coefficient (ρ) 
+1 0.000 0.839 
+2 0.000 0.841 
+3 0.000 0.939 
+ 
+The value of R square from table 3 suggests that variability in the dependent variable, 
+customer loyalty cab be explained 89.2% by the variability in the independent variables, 
+trust, switching cost, corporate image. It means that the linear combination of 
+independent variables in the regression analysis predicts total variance of dependent 
+variable by 89.2%. 
+Table 3:  Linear regression (enter method) 
+Model R R Square Adjusted R Std. Error of 
+Square The Estimate 
+1 .945a .892 .890 .34716 
+ 7 a. Predictors: (Constant), trust, switchcost, corpimage 
+From table 4, step-wise regression analysis shows that only one independent variable, 
+trust mostly explain (88.2%) the variability in the dependent variable, customer loyalty. 
+This means that the variability of dependent variable is explained only 0.8% (89.1-88.3) 
+by the variability in the independent variable, switching cost and only 0.1% by the 
+variability in the other independent variable, corporate image. So it can be infer that trust 
+has more important role in this study than switching cost and corporate image in 
+explaining the variability of customer loyalty. 
+ 
+Table 4: Step wise regression 
+Model R R Square Adjusted R Square Std. Error of The stimate 
+1 .939a .883 .882 .36019 
+2 .944a .891 .890 .34755 
+a. Predictor: (constant), trust  
+b. Predictor: (constant), trust, switchcost  
+ 
+Assessment of the research hypotheses 
+Hypothesis 1 
+There is a relationship between switching cost and customer loyalty.  
+ 
+The result of correlation analysis illustrates that switching cost (r = 0.839, p<0.01) has a 
+positive, strong and significant relationship with customer loyalty in the context of 
+mobile phone operators in Bangladesh.  Thus, the result of the correlation analysis has 
+provided support for this hypothesis. 
+The result of stepwise regression depicts that switching cost has entered into the 
+regression equation, which indicates that switching cost is significantly associated with 
+customer loyalty in the context of mobile phone operators in Bangladesh. And switching 
+cost alone can explain 0.8% of the total changes in customer loyalty. Therefore, the result 
+of stepwise regression has provided support for the first hypothesis. 
+The positive explanation behind these findings is that the customers of mobile phone 
+operators in Bangladesh do have concern regarding the switching cost in showing their 
+loyalty towards the company. As many mobile phone operators are currently competing 
+with very competitive price and services, it gives the customers a very good chance to 
+shop around. The low price of the SIM card influences the customer to switch easily and 
+try all different brands. As a result, erecting high switching cost to retain the customer is 
+an ineffective tool in mobile phone operating business in Bangladesh. That is why the 
+variability in customer loyalty did not explained much by the variability in switching 
+cost. 
+ 
+Hypothesis 2 
+There is a relationship between corporate image and customer loyalty. 
+ 
+ 8 The result of correlation analysis illustrates that corporate image (r = 0.841, p<0.01) has a 
+positive, strong and significant relationship with customer loyalty in the context of 
+mobile phone operators in Bangladesh.  Thus, the result of the correlation analysis has 
+provided support for this hypothesis. 
+The result of stepwise regression depicts that corporate image has entered into the 
+regression equation, which indicates that corporate image is significantly associated with 
+customer loyalty in the context of mobile phone operators in Bangladesh. And corporate 
+image alone can explain 0.1% of the total changes in customer loyalty. Therefore, the 
+result of stepwise regression has provided support for the second hypothesis. 
+The positive explanation behind these findings is that corporate image has some influence 
+in building loyalty among mobile phone operator customers in Bangladesh. Corporate 
+image is the factor that is least concerned among the consumers, as a huge number of 
+customers of mobile phone operators in Bangladesh is less educated and unaware of the 
+companies' perceived image. Whether the company has stable condition or whether they 
+have social contribution are given least priority in choosing a particular brand. Rather the 
+customers prefer other objective criteria such as price, service, network coverage etc. in 
+choosing brands. That is why variability in customer loyalty was explained very less by 
+the variability of corporate image. 
+ 
+ 
+Hypothesis 3 
+There is a relationship between trust and customer loyalty. 
+ 
+The result of correlation analysis illustrates that trust (r = 0.939, p<0.01) has a positive, 
+very strong and significant relationship with customer loyalty in the context of mobile 
+phone operators in Bangladesh.  Thus, the result of the correlation analysis has provided 
+support for this hypothesis. 
+The result of stepwise regression depicts that trust has entered into the regression 
+equation, which indicates that trust is significantly associated with customer loyalty in the 
+context of mobile phone operators in Bangladesh. And trust alone can explain 88.3% of 
+the total changes in customer loyalty. Therefore, the result of stepwise regression has 
+provided support for this hypothesis. 
+The positive explanation behind these findings is that trust in the company plays a vital 
+role in building loyalty among the mobile phone operator customers in Bangladesh. As 
+there are many mobile phone operators currently operating in Bangladesh with very 
+competitive prices and services, Bangladeshi customers have a natural tendency of 
+choosing that operator that provides trustworthy services without any cheating or unfair 
+practices. It means they have to trust the company first to become loyal. Unfair practices, 
+cheating, unethical behavior etc all are very common and vivid pictures in Bangladesh, a 
+third world country. As a result Bangladeshi consumers are very serious in choosing 
+brands. Because the consumers perceive the companies might cheat on them, they always 
+look for recommendation from others regarding the trustworthiness of the company. That 
+is why it is found that trust plays the most important role among the consumers of mobile 
+phone operators to build loyalty. 
+ 9 Finally, the assessment of hypotheses reveals that the trust is the most important factor 
+among the others to build customer loyalty. Switching cost and corporate image also have 
+impact on customer loyalty but to a very insignificant degree. 
+  
+Managerial implications 
+The findings of this paper have implications for the manager of service firms. The 
+managers can use these results to make better marketing strategies in order to attract more 
+customers to the buy services. The mangers should consider factors that influence repeat 
+purchase that eventually lead to customer loyalty. 
+In the context of Bangladesh, it is important to build trust among the consumers 
+regarding the service provider. Consumer loyalty in Bangladesh depends strongly on 
+trust, it means if consumers trust the service provider, they become loyal to the brand and 
+to the company. That's why to build trust among consumer; the managers should devise 
+ways to build trust and should include these tactics in their marketing programs. 
+Likewise, switching cost and corporate image should also be put into consideration in an 
+attempt to make marketing strategies more competitive.  It is seen that consumer prefer 
+certain service provider for the its reputed image. So the managers should try to enhance 
+the image of the company in order to create a favorable attitude of the customers towards 
+the company, which will guide to customer loyalty. To enhance image, companies should 
+apply different promotional programs along with corporate social responsibility. As a 
+consequence, the customers perceive the company as a good company in the society. 
+Moreover, since services are intangible and based on performances, a better 
+understanding of the components of image promises to help management improve the 
+competitive performance of the firm. 
+ 
+In addition, switching cost is another factor that can lead to customer loyalty. Though in 
+the context of Bangladesh, variability in switching cost does not explain that much 
+variability in customer loyalty of mobile phone operator business, still the mangers of 
+these service providers should carefully consider switching cost factor. The managers 
+should increase the level of switching cost so that the consumer cannot switch easily to 
+other brands and eventually become loyal to the company. 
+The findings of the research not only help managers of mobile phone operators, but also 
+guide the managers of other service providing firms. Understanding the result delineate 
+the fact that several factors can have considerable effect on customer loyalty. 
+ Retention rate is a good indicator of customer loyalty. Increases in retention rates can 
+have a significant positive effect on market share (Fornell and Wernerfelt,1988), 
+(McGahan and Ghemawat, 1994) and (Rust and Zahorik ,1993). 
+Furthermore, studies by Blodgett et al. (1995), Colgate et al. (1996), Hallowell (1996), 
+Payne and Rickard (1997) and Rust et al. (1995) indicate that an increase in customer 
+retention can have a positive effect on a company's net operating cash flow and profit. To 
+have a strong competitive position in the market, the managers should carefully consider 
+these mentioned factors and also should dig out other important factors that make the 
+customer loyal to particular company that ultimately lead to profitability and growth. 
+ 
+ 
+ 
+ 
+ 10 Reference: 
+Andreassen, T.W. and Lindestad, B. (1998), "Customer loyalty and complex services", 
+International Journal of Service Industry Management, Vol. 9 No. 1, pp. 7-23. 
+ 
+Andreassen, T.W. and Lindestad, B. (1998), "Customer loyalty and complex services", 
+International Journal of Service Industry Management, Vol. 9 No. 1, pp. 7-23. 
+ 
+Barich, H. and Kotler, P. (1991), "A framework for marketing image management", 
+Sloan Management Review, Vol. 32 No. 2, pp. 94-104. 
+ 
+Bearden, W.O. and Teel, J.E. (1983), "Selected determinants of consumer satisfaction 
+and complaint reports", Journal of Marketing Research, Vol. 20, February, pp. 21-8. 
+ 
+Bitner, M.J. (1990), "Evaluating service encounters: the effects of physical surroundings 
+and employee responses", Journal of Marketing, Vol. 54, April, pp. 69-82. 
+ 
+Bitner, M.J. (1991), "The evolution of the services marketing mix and its relationship to 
+service quality", in Brown, S., Gummesson, E., Edvardsson, B. and Gustavsson, B., 
+Service Quality: A Multidisciplinary and Multinational Perspective, Lexington Books, 
+New York, NY, pp. 23-37. 
+ 
+Blodgett, J.G., Wakefield, K.L. and Barnes, J.H. (1995), "The effects of customer service 
+on consumer complaining behavior", Journal of Services Marketing, Vol. 9 No. 4, pp. 31-
+42. 
+ 
+Bloemer, J., Ruyter, K. and Wetzels, M. (1998), "On the relationship between perceived 
+service quality, service loyalty and switching costs", International Journal of Industry 
+Management, Vol. 9 No. 5, pp. 436-53. 
+ 
+Burnham, T.A., Frels, J.K. and Mahajan, V. (2003), "Consumer switching costs: a 
+typology, antecedents and consequences", Journal of The Academy of Marketing 
+Science, Vol. 31 No. 2, pp. 109-26. 
+ 
+Chaudhuri, A. and Holbrook, M.B. (2001), "The chain effects from brand trust and brand 
+affect to brand performance: the role of brand loyalty", Journal ofMarketing, Vol. 65, 
+April, pp. 31-93. 
+ 
+Colgate, M., Stewart, K. and Kinsella, R. (1996), "Customer defection: a study of the 
+student market in Ireland", International Journal of Bank Marketing, Vol. 14 No. 3, pp. 
+23-9. 
+ 
+Cronin, J.J. Jr and Taylor, S.A. (1992), "Measuring service quality: a reexamination and 
+extension", Journal of Marketing, Vol. 56 No. 3, pp. 55-68. 
+ 
+Doney, P.M. and Cannon, J.P. (1997), "An examination of the nature of trust in buyer 
+seller relationships", Journal of Marketing, Vol. 61, April, pp. 35-51. 
+ 11 Eber, N. (1999), "Switching costs and implicit contracts", Journal of Economics, Vol. 69 
+No. 2, pp. 159-71. 
+ 
+Feick, L., Lee, J. and Lee, J. (2001), "The impact of switching costs on the customer 
+satisfaction-loyalty link: mobile phone service in France", Journal of Services Marketing, 
+Vol. 15 No. 1, pp. 35-48. 
+ 
+Fishbein, M. and Ajzen, I. (1975), Belief, Attiude, Intention, and Behavior: An 
+Introducing to Theory and Research, Addison-Wesley, Reading, MA. 
+ 
+Fornell, C. (1992), "A national customer satisfaction barometer: the Swedish 
+experience", Journal of Marketing, Vol. 56 No. 1, pp. 6-21. 
+ 
+Fornell, C. and Wernefelt, B. (1988), "Model for customer complaint management", 
+Marketing Science, Vol. 7, Summer, pp. 271-86. 
+ 
+Foster, B.D. and Cadogan, J.W. (2000), "Relationship selling and customer loyalty: an 
+empirical investigation", Marketing Intelligence and Planning, Vol. 18 No. 4, pp. 185-99. 
+ 
+Gambetta, D. (2000), "Can we trust trust?", in Gambetta, D. (Ed.), Trust: Making and 
+Breaking Cooperative Relations, electronic edition, University of Oxford, Oxford 
+(originally published by Blackwell, Oxford), available at: 
+www.sociology.ox.ac.uk/papers/gambetta213-237.pdf (accessed 6 January 2002). 
+ 
+Garbarino, E. and Johnson, M.S. (1999), "The different roles of satisfaction, trust, and 
+commitment in customer relationships", Journal of Marketing, Vol. 63, pp. 70-87. 
+ 
+Geyskens, I., Steenkamp, J.E.M. and Kumar, N. (1998), "Generalisations about trust in 
+marketing channel relationships using meta-analysis", International Journal of Research 
+in Marketing, Vol. 15, pp. 223-48. 
+ 
+Gremler, D.D. and Brown, S.W. (1996), "Service loyalty: its nature, importance, and 
+implications", in Edvardsson, B., Brown, S.W., Johnston, R. and Scheuing, E. (Eds), 
+QUIS V: Advancing Service Quality: A Global Perspective, International Service Quality 
+Association, New York, NY, pp. 171-80. 
+ 
+Grönroos, C. (1984), "A service quality model and its marketing implications", European 
+Journal of Marketing, Vol. 18 No. 4, pp. 36-44. 
+ 
+Gummesson, E. and Grönroos, C. (1988), "Quality of services: lessons from the product 
+sector", in Surprenant, C. (Ed.), Add Value to Your Service, American Marketing 
+Association, Chicago, IL. 
+ 
+Hair, J.F., Anderson, R.E., Tatham, R.L. and Black, W.L. (1998), Multivariate Data 
+Analysis, Prentice-Hall, Upper Saddle River, NJ. 
+ 12 Hallowell, R. (1996), "The relationship of customer satisfaction, customer loyalty, and 
+profitability: an empirical study", International Journal of Services Industry Management, 
+Vol. 7 No. 4, pp. 27-42. 
+ 
+Hart, C. and Johnson, M. (1999), "Growing the trust relationship", Journal of Marketing 
+Management, Vol. 8 No. 1, pp. 8-19. 
+ 
+Hauser, J.R., Simester, D.I. and Wernerfelt, B. (1994), "Customer satisaction incentives", 
+Marketing Science, Vol. 13 No. 4, pp. 327-50. 
+ 
+Hellier, P.K., Geursen, G.M. and Carr, R.A. (2003), "Customer repurchase intention-A 
+general structural equation model", European Journal of Marketing, Vol. 37 No. 11/12, 
+pp. 1762-1800. 
+ 
+Jackson, B.B. (1985), Winning and Keeping Industrial Customers, Lexington Books, 
+Lexington, MA. 
+ 
+Johnson, M.D., Gustafsson, A., Andreassen, T.W., Lervik, L. and Cha, J. (2001), "The 
+evolution and future of national customer satisfaction index models", Journal of 
+Economic Pcychology, Vol. 22, pp. 217-45. 
+ 
+Jones, M.A., Beatty, S.E. and Mothersbaugh, D.V. (2000), "Switching barriers and 
+repurchase intentions in services", Journal of Retailing, Vol. 76 No. 2, pp. 259-74. 
+ 
+Jones, M.A., Beatty, S.E. and Mothersbaugh, D.V. (2002), "Why customers stay: 
+measuring the underlying dimensions of services switching costs and managing their 
+differential strategic outcomes", Journal of Business Research, Vol. 55, pp. 441-50. 
+ 
+Jones, T.O. and Sasser, W.E. (1995), "Why satisfied customers defect", Harvard 
+Business Review, November/December, pp. 88-99. 
+ 
+Kandampully, J. and Hu, H. (2007), " Do hoteliers need to manage image to retain loyal 
+customers?", International Journal of Contemporary Hospitality Management, Vol. 19 
+No. 6, pp. 435-443. 
+ 
+Keller, K. (1993), "Conceptualizing, measuring, and managing customer based equity", 
+Journal of Marketing, Vol. 1. 
+ 
+Klemperer, P. (1987), "Markets with consumer switching costs", The Quarterly Journal 
+of Economics, Vol. 102, pp. 376-94. 
+ 
+Korgaonkar, P.K., Lund, D. and Price, B. (1985), "A structural equations approach 
+toward examination of store attitude and store patronage behavior", Journal of Retailing, 
+Vol. 61 No. 2, pp. 39-60. 
+ 
+ 13 MacInnis, D.J. and Price, L.L. (1987), "The role of imagery in information processing: 
+review and extensions", Journal of Consumer Research, Vol. 13, pp. 473-91. 
+ 
+Macintosh, G. and Lockshin, L.S. (1997), "Retail relationships and store loyalty: a multi 
+level perspective", International Journal of Research in Marketing, Vol. 14, pp. 487-97. 
+ 
+McGahan, A.M. and Ghemawat, P. (1994), "Competition to retain customers", Marketing 
+Science, Vol. 13 No. 2, pp. 165-76. 
+ 
+Moorman, C., Gerald, Z. and Rohit, D. (1993), "Factors affecting trust in marketing 
+relationships", Journal of Marketing, Vol. 57 No. 1, pp. 81-101. 
+ 
+Morgan, R. and Hunt, S. (1994), "The commitment-trust theory of relationship 
+marketing", Journal of Marketing, Vol. 58 No. 3, p. 20. 
+ 
+Nguyen, N. (2006), "The collective impact of service workers and servicescape on the 
+corporate image formation", International Journal of Hospitality Management, Vol. 25 
+No. 2, pp. 227-44. 
+ 
+Nguyen, N. and Leblanc, G. (2001), "Corporate image and corporate reputation in 
+customers' retention decisions in services", Journal of Retailing and Consumer Services, 
+Vol. 8, pp. 227-36. 
+ 
+Oliver, R. (1997), Satisfaction: A Behavioral Perspective on the Consumer, McGraw-
+Hill, New York, NY. 
+ 
+Oliver, R. (1997a), Satisfaction: A Behavioral Perspective on the Consumer, 
+Irwin/McGraw-Hill, Boston, MA. 
+ 
+Oliver, R.L., Rust, R.T. and Varki, S. (1997), "Customer delight: foundations, findings, 
+and managerial insight", Journal of Retailing, Vol. 73 No. 3, pp. 311-36. 
+ 
+Payne, A. and Rickard, J. (1997), "Relationship marketing, customer retention and 
+service firm profitability", working paper, Cranfield School of Management, Cranfield. 
+ 
+Porter, M. (1998), Competitive Strategy: Techniques for Analyzing Industries and 
+Competitors, The Free Press, New York, NY. 
+ 
+Ranaweera, C. and Prabhu, J. (2003), "The influence of satisfaction, trust and switching 
+barriers on customer retention in a continuous purchasing setting", International Journal 
+of Service Industry Management, Vol. 14 No. 4, pp. 374-395. 
+ 
+Reichheld, F.F., Markey, R.G. Jr and Hopton, C. (2000), "E-customer loyalty - applying 
+the traditional rules of business for online success", European Business Journal, Vol. 12 
+No. 4, pp. 173-9. 
+ 
+ 14 Reynolds, F.D., Darden, W.R. and Martin, W.S. (1974-75), "Developing an image of the 
+store loyal customer", Journal of Retailing, Vol. 50 No. 4, pp. 73-84. 
+ 
+Rncos Industry research solution, Retrieve on 26.11.09 from 
+www.rncos.com/Blog/2008/07/Bangladesh-Telecom-Industry-Growing-at-Rapid 
+Pace.html  
+ 
+Rust, R.T. and Zahorik, A.J. (1993), "Customer satisfaction, customer retention and 
+market share", Journal of Retailing, Vol. 69 No. 2, pp. 193-215. 
+ 
+Rust, R.T., Zahorik, A.J. and Keiningham, T.L. (1995), "Return on quality (ROQ): 
+making service quality financially accountable", Journal of Marketing, Vol. 59 No. 2, pp. 
+58-70. 
+ 
+Selnes, F. (1998), "Antecedents and consequences of trust and satisfaction in buyer-seller 
+relationships", European Journal of Marketing, Vol. 32 No. 3, pp. 305-22. Nunnally, J.C. 
+(1978), Psychometric Theory, McGraw-Hill, New York, NY. 
+ 
+Sharma, N. (2003), "The role pure and quasi-moderators in services: an empirical 
+investigation of ongoing customer-service-provider relationships", Journal of Retailing 
+and Consumer Services, Vol. 10 No. 4, pp. 253-62. 
+ 
+Singh, J. and Sirdeshmukh, D. (2000), "Agency and trust mechanisms in consumer 
+satisfaction and loyalty judgments", Journal of the Academy of Marketing Science, Vol. 
+28 No. 1, pp. 150-67. 
+ 
+Sirdeshmukh, D., Singh, J. and Sabol, B. (2002), "Consumer trust, value, and loyalty in 
+relational exchanges", Journal of Marketing, Vol. 66, January, pp. 15-37. 
+ 
+Totel Pty Ltd., Retrieve on 26.11.09 from www.totel.com.au/bangladesh 
+telecommunications-research.asp 
+ 
+Yuille, J.C. and Catchpole, M.J. (1977), "The role of imagery in models of cognition", 
+Journal of Mental Imagery, Vol. 1, pp. 171-80. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 15 16

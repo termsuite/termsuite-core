@@ -1,0 +1,184 @@
+Quick Guide for Installing Nokia Connectivity Cable Drivers GUÍA RÁPIDA DE
+Instalación de los 
+Controladores para cable 
+de conectividad Nokia Contenido 
+1. Introducción ......................................................................................................................1 
+2. Requisitos..........................................................................................................................1 
+3. Instalación De Los Controladores Para Cable De Conectividad Nokia .......................2 
+3.1 Antes de la instalación..................................................................................................................2 
+3.2 Instalación de los Controladores para cable de conectividad Nokia............................................2 
+4. Resolución De Problemas................................................................................................3 
+5. Notas De Seguridad ..........................................................................................................6 1. INTRODUCCIÓN 
+En esta guía encontrará las instrucciones de instalación de los Controladores para cable de 
+conectividad Nokia, para los cables USB: DKU-2, CA-53, CA-70, DKE-2 y CA-101, así como 
+para el cable serie CA-42. Los controladores son necesarios si desea conectar un teléfono 
+móvil Nokia a una PC. 
+Para obtener más información sobre qué cable usar con el modelo de teléfono, consulte el 
+manual del usuario del teléfono. 
+ 
+Nota: Los controladores se instalan siempre para los modelos específicos de 
+ teléfono, no para un cable. Es por ello que puede que las versiones más antiguas 
+de los Controladores para cable de conectividad no sean compatibles con los 
+modelos de teléfono más recientes. 
+ 
+Nota: Para el correcto funcionamiento de las aplicaciones de PC Suite, 
+ asegúrese de utilizar siempre cables originales Nokia con Nokia PC Suite. Revise 
+la etiqueta del cable. 
+2. REQUISITOS 
+Para instalar los Controladores para cable de conectividad Nokia en su computadora deberá 
+tener: 
+• Un mínimo de 30 MB de espacio libre en el disco 
+• Uno de los siguientes sistemas operativos: 
+• Windows Vista ediciones de 32 y 64 bits  
+• Windows XP Professional edición x64 (Service Pack 2)  
+• Windows XP (Professional o Home Edition) (Service Pack 2 o posterior)  
+• Un puerto USB libre para conectar el cable 
+Las descargas de Windows SP están disponibles en las siguientes páginas Web de 
+Microsoft:  
+• Para Windows XP (Professional o Home Edition): 
+http://www.microsoft.com/windowsXP/downloads/default.mspx
+• Para Windows XP Professional edición de x64: 
+http://technet.microsoft.com/en-us/windowsserver/bb229701.aspx 
+1/6 3. INSTALACIÓN DE LOS CONTROLADORES PARA CABLE DE 
+CONECTIVIDAD NOKIA 
+3.1 Antes de la instalación 
+Si en su PC ya había instalado los Controladores para cable de conectividad Nokia, deberá 
+desinstalarlos manualmente. Para hacerlo: 
+1. Haga clic en Inicio > (Configuración) > Panel de control para abrir el Panel de 
+control. 
+2. Haga doble clic en Agregar o quitar programas.  
+Si no encuentra en la lista el Controlador para cable de conectividad Nokia o el 
+Controlador del cable DKU-2, significa que no tiene ninguna versión instalada y puede 
+seguir con la instalación de los Controladores para cable de conectividad Nokia. 
+3. En la lista, seleccione Controlador para cable de conectividad Nokia o Controlador del 
+cable DKU-2 y haga clic en Cambiar o quitar. 
+3.2 Instalación de los Controladores para cable de conectividad Nokia 
+Nota: No conecte el teléfono a la PC hasta que haya instalado los Controladores 
+ para cable de conectividad Nokia. 
+ 
+1. Para instalar los controladores del cable de conectividad Nokia, vaya a las páginas 
+Web de Soporte a productos de Nokia en 
+http://www.europe.nokia.com/nokia/0,8764,81912,00.html, guarde el archivo de 
+instalación que obtiene de la página Web y haga doble clic en él. La instalación se 
+iniciará.  
+2. Siga las instrucciones que aparecen en pantalla. Puede que el sistema le solicite 
+reiniciar la computadora durante la instalación. 
+3. Cuando la instalación finalice (y haya reiniciado la computadora si el sistema se lo ha 
+solicitado), conecte el cable entre el teléfono y la PC. 
+4. Windows comenzará a buscar los nuevos dispositivos de hardware necesarios para el 
+teléfono y el cable. Esto puede durar unos minutos. Se mostrará una notificación 
+cuando esté lista la instalación. 
+2/6 4. RESOLUCIÓN DE PROBLEMAS 
+Para obtener más información sobre resolución de problemas, vaya a las páginas Web de 
+Nokia PC Suite www.nokia.com/pcsuite y seleccione Search & solve (Buscar y 
+solucionar). 
+La conexión no funciona 
+Para volver a establecer la conexión, siga los siguientes pasos: 
+• Asegúrese de que el teléfono es compatible con el cable: consulte el manual del usuario 
+del teléfono. 
+• Reinicie el teléfono y la PC y, a continuación, intente volver a establecer la conexión. 
+• Si tiene otros dispositivos USB conectados a la PC, desconéctelos de la PC e intente 
+volver a establecer la conexión. Compruebe que no ha desconectado el mouse o el 
+teclado. 
+• Asegúrese de que el tipo de conexión esté activo en Nokia Connection Manager: Inicio 
+> (Configuración) Panel de control > Nokia Connection Manager. Para CA-42 el tipo 
+seleccionado debe ser "Cable serie" y para DKU-2, CA-53, CA-70, DKE-2 y CA-101 el 
+tipo debe ser "USB". 
+• Si utiliza un cable CA-42 asegúrese de que el puerto COM correcto está definido en 
+Nokia Connection Manager: Inicio > (Configuración) Panel de control > Nokia 
+Connection Manager > Configurar. 
+Si todos los pasos anteriores se han realizado sin problemas, compruebe que la instalación 
+es correcta. Para hacerlo: 
+1. Conecte el teléfono a la PC con el cable y espere hasta que Windows encuentre todo 
+el hardware nuevo. 
+2. Vaya a Panel de control > Sistema > Hardware > Administrador de dispositivos...  
+(Si va a utilizar Windows XP, utilice la Vista clásica del Panel de control.) 
+3. Haga clic en Wireless Communication Devices (Dispositivos de comunicación 
+inalámbrica). La instalación se ha realizado correctamente si los dispositivos de Nokia 
+están en la lista sin un signo de exclamación junto al icono. La lista debería incluir 
+dispositivos como "Nokia CA-42 USB Phone Parent" o "Nokia xxxx USB Phone 
+Parent" (los dígitos xxxx representan el número de modelo de cuatro cifras del 
+teléfono). El número de dispositivos en la lista puede variar dependiendo del modelo 
+del teléfono. 
+4. Haga clic en Módems.  La instalación se ha realizado correctamente si el "módem 
+Nokia xxxx" (los dígitos xxxx representan el número de modelo de cuatro cifras del 
+teléfono), está en la lista sin un signo de exclamación junto al icono. 
+3/6 Figura 1. Instalación correcta (los dígitos xxxx representan el número de 
+modelo de cuatro cifras del teléfono) 
+Tenga en cuenta que el número de dispositivos en la lista Wireless Communication Devices 
+(Dispositivos de comunicación inalámbrica) puede variar dependiendo del modelo del 
+teléfono. 
+5. La instalación no se ha realizado correctamente si los dispositivos Nokia no están en 
+la lista o están pero con un signo de exclamación. En este caso, desinstale los 
+controladores, reinicie la computadora y vuelva a instalarlos (consulte las 
+instrucciones de instalación en este documento). 
+ 
+Figura 2. Instalación incorrecta (los dígitos xxxx representan el número de 
+modelo de cuatro cifras del teléfono) 
+Problemas con el software de la tecnología inalámbrica Bluetooth 
+Muchos de los controladores y aplicaciones que la tecnología inalámbrica Bluetooth utiliza 
+reservan varios puertos COM que pueden interferir con la instalación de DKU-2/CA-42/CA-
+53/CA-70/DKE-2/CA-101. Si ya tiene instalado dicho software y la instalación del controlador 
+no se ha realizado correctamente (consulte las instrucciones descritas anteriormente sobre 
+cómo comprobar la instalación), siga los siguientes pasos: 
+1. Desinstale los Controladores para cable de conectividad Nokia. 
+2. Desinstale cualquier software de tecnología inalámbrica Bluetooth siguiendo las 
+instrucciones. 
+4/6 3. Vuelva a instalar los Controladores para cable de conectividad Nokia (para mayor 
+información, consulte el capítulo Instalación de Controladores para cable de 
+conectividad Nokia de este documento) y compruebe que la instalación se ha 
+realizado correctamente 
+4. Vuelva a instalar el software de la tecnología inalámbrica Bluetooth. 
+Conecté el cable antes de instalar los Controladores para cable de conectividad Nokia 
+y ahora la conexión no funciona 
+1. Conecte el teléfono a la PC. 
+2. Vaya a Panel de control > Sistema > Hardware > Administrador de dispositivos...  
+3. Haga clic en Wireless Communication Devices (Dispositivos de comunicación 
+inalámbrica).  
+4. Desinstale cualquier dispositivo desconocido (dispositivos con un signo de 
+interrogación o exclamación junto a él): haga clic con el botón derecho del mouse y 
+haga clic en Desinstalar, o seleccione el dispositivo y pulse Supr en el teclado.  
+ 
+Figura 3. Dispositivo desconocido (los dígitos xxxx representan el número de 
+modelo de cuatro cifras del teléfono) 
+5. Asegúrese de que los Controladores para cable de conectividad Nokia estén 
+instalados. 
+6. Desenchufe y vuelva a enchufar el cable. 
+7. Si esto no ayuda, vuelva a instalar los Controladores para cable de conectividad 
+Nokia y conecte el cable cuando haya finalizado la instalación. 
+5/6 5. NOTAS DE SEGURIDAD 
+ 
+Notas importantes de seguridad 
+ Todas las instrucciones de seguridad contenidas en el manual del usuario de su 
+teléfono y de la PC también deben aplicarse cuando se utilice este producto con 
+el teléfono. 
+Acuérdese de realizar copias de seguridad de todos los datos importantes para 
+protegerlos de posibles pérdidas o modificaciones. 
+Instale software únicamente desde fuentes que ofrezcan una protección 
+adecuada frente a software perjudicial. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Aviso legal 
+Copyright © 2003-2009 Nokia. Reservados todos los derechos. 
+Queda prohibida la reproducción, transferencia, distribución o almacenamiento de todo o parte del contenido de 
+este documento bajo cualquier forma sin el consentimiento previo y por escrito de Nokia. 
+Nokia y Nokia Connecting People son marcas registradas de Nokia Corporation. 
+Bluetooth is a registered trademark of Bluetooth SIG, Inc. 
+El resto de los productos y nombres de compañías aquí mencionados pueden ser marcas comerciales o 
+registradas de sus respectivos propietarios. 
+La información de esta guía se escribió para los Controladores del cable de conectividad Nokia. Nokia opera con 
+una política de desarrollo continuo y se reserva el derecho a realizar modificaciones y mejoras en cualquiera de 
+los productos descritos en este documento sin previo aviso. 
+Nokia no se responsabilizará bajo ninguna circunstancia de la pérdida de datos o ingresos ni de ningún daño 
+especial, incidental, consecuente o indirecto, independientemente de cuál sea su causa. 
+El contenido del presente documento se suministra tal cual. Salvo que así lo exija la ley aplicable, no se ofrece 
+ningún tipo de garantía, expresa o implícita, incluida, pero sin limitarse a, la garantía implícita de comerciabilidad 
+y adecuación a un fin particular con respecto a la exactitud, fiabilidad y contenido de este documento. Nokia se 
+reserva el derecho de revisar o retirar este documento en cualquier momento sin previo aviso. 
+6/6

@@ -1,0 +1,274 @@
+Sistema de Control y Supervisión remota basada en
+telefonía móvil GSM
+Carmina Boter;  Laia Sánchez;  J. L. Romeral
+Departament d'Enginyeria Electrònica.  Universitat Politécnica de Catalunya
+Colón 1, 08222 Terrassa (Barcelona).  Spain
+Tel.: +34  937398194,  Fax.: +34  937398016
+romeral@eel.upc.es
+Resumen emergencia,..) no puede confiarse en ningún margen
+La aplicación presentada tiene como finalidad controlar y preestablecido, En otras palabras, el sistema no es
+supervisar plantas aisladas desde cualquier punto remoto determinista.
+mediante un teléfono móvil, utilizando un módem GSM - La comunicación sólo podrá establecerse si existe
+conectado a un autómata programable o PLC. cobertura para la señal. Dado que ésta depende de la
+El sistema es capaz de realizar el control de la planta posición del operador y del estado de la red, no puede
+mediante el envío y la recepción de mensajes cortos de garantizarse el enlace permanentemente.
+texto, concretamente mensajes SMS (Short Message - El teléfono móvil utiliza batería, y ésta debe recargarse
+Service), los cuales podrán ser redireccionados a distintos periódicamente. Durante los tiempos de recarga, el
+números de teléfono, según los protocolos establecidos en operador permanece desconectado del sistema.
+la aplicación. Estos mensajes, prefijados o incorporando - Aunque no están definitivamente establecidos los
+variables de  estado, pueden considerarse como alarmas  si efectos fisiológicos de la telefonía móvil celular, la
+los genera automáticamente el PLC, o como respuestas a aplicación del principio recomendado de gestión de
+demandas de información desde el operador. riesgo "as low as reasonably achievable" puede llevar a
+una reducción de la potencia de los terminales y
+1. Introducción módems, dificultando la expansión de las aplicaciones
+Actualmente, la telefonía móvil está ganando terreno en el industriales sugeridas en este artículo.
+campo de las comunicaciones interpersonales, En cualquier caso, puede establecerse como campo general
+conjuntamente con aplicaciones basadas en Internet. El de aplicación la supervisión y seguimiento de plantas
+número de móviles que se comercializa aumenta remotas, y la posibilidad de actuación previa a la presencia
+continuamente, y la demanda de uso se centra física del operador.
+mayoritariamente en la recepción y envío de mensajes
+cortos, lo que ha propiciado la reducción de costes y la Así, el sistema permitirá (Fig. 1):
+mejora continua en los tiempos de recepción y - Enviar Órdenes desde el operador (parada/marcha,
+retransmisión de los mismos por parte de las compañías de cambio de consignas, etc), y recibir Respuesta de
+servicios. ejecución desde el PLC
+Por otra parte, la telefonía móvil presenta frente a otras -  Enviar Alarmas desde el PLC, y reconocerlas por
+alternativas de comunicación industriales algunas ventajas Confirmación desde el operador, modificando si
+ciertamente destacables: procede la secuencia de control.
+- No es necesaria una línea física de interconexión, lo que
+permite colocar la aplicación y el usuario en cualquier  MODEM PLC
+punto. Orden / Confirmación 
+- Siendo un adminículo de uso personal, el peso y el
+tamaño del móvil se reduce continuamente, lo que SMS 
+contribuye a su transportabilidad.
+- El precio del móvil es muy reducido, y además el USUARIO Respuesta / Alarma SISTEMA
+usuario ya lo ha amortizado con su uso personal, sin que
+repercuta en el coste final de la aplicación. Por su parte,
+el precio del módem, siendo ligeramente superior, Fig. 1.  Aplicaciones del sistema
+tampoco es significativo frente a los elementos típicos Tampoco debe descartarse la opción de, una vez conectado
+de un sistema automatizado. el sistema, utilizarlo no sólo para supervisión y control, sino
+Naturalmente, presenta también algunas desventajas: también para actualización y/o reparación del programa del
+- El sistema puede enviar y recibir mensajes y órdenes autómata, evitando desplazamientos superfluos de
+continuamente, pero cuando el tiempo de respuesta es programadores e integradores.
+un factor crítico (alarmas vitales, paradas de 2. Configuración del Sistema Rx   2 )  ( 2     Rx
+Los componentes del sistema descrito son (Fig.2) el Tx   3 ) ( 3     Tx
+Autómata Programable o PLC, el módem GSM y el móvil GND   5 ) ( 5     GND
+de usuario, además del PC que servirá para la programación
+y puesta a punto de todos los elementos. Fig.3  Conexión PLC - MODEM a tres hilos
+La comunicación entre PLC y MODEM se hace mediante
+conexión estándar RS-232 (Tabla I), por los puertos La Tabla II muestra la equivalencia entre las señales del
+disponibles a tal efecto  en ambos aparatos. conector estándar RS-2323 (25 pines) de la Tabla I, y losmás frecuentes conectores industriales DB9 de sólo 9 pines.
+  
+DB9 Señal DB25
+1 DCD 8
+2 RxD 3
+3 TxD 2
+   4 DTR 20
+5 GND/SG 7
+PLC 6 DSR 67 RTS 4
+RS-  232 Módem GSM Móvil Conector  RI 45 Conector DB9  GSM 8 CTS 5
+9 RI 22
+Fig. 2  Diagrama de bloques del sistema Tabla I1. Equivalencia entre conectores DB9 y DB25
+Número Señal Descripción La configuración típica del enlace PLC-MODEM podría ser
+1 Ground Tierra de protección la siguiente:
+2 TxD Transmisión de Datos Velocidad: 9600 baudiosData bits: 8 bits;  Stop Bits: 1
+3 RxD Recepción de Datos Paridad: ninguna; Control de flujo: ninguno
+4 RTS Petición de envío. Señal de
+salida controlada por el DTE El tiempo de respuesta del módem (señal CTS) a la
+5 CTS Habilitación de envío. Señal demanda de comunicación del PLC (señal RTS),
+de respuesta controlada por denominado 'tiempo de inversión', es característico de cada
+el DCE MODEM y debe ser tenido en cuenta al establecer elprograma de control del puerto en el autómata.
+6 DSR Confirmación de estado de La comunicación entre el usuario y el sistema se realiza vía
+módem operativo GSM (Global System for Mobile Comunications),
+7 GND Común de señal intercambiando información según norma ETSI GSM 7.07
+8 DCD Detección de portadora (AT Command Set for GSM Mobile Equipment), a unafrecuencia de 900MHz.
+15 TC Reloj de transmisión
+17 RC Reloj de recepción 2.1 MODEM GSM
+20 DTR Confirmación de estado de Un MODEM GSM no es más que un terminal celular
+Terminal (PLC) operativo semejante   a un teléfono móvil, pero sin teclado ni display.Por lo tanto, necesita darse de alta en algún operador, que le
+22 RI Indicador de recepción de proporcionará un número por contrato o tarjeta, y un
+llamada de línea número de Centro de Mensajes, para la recepción/envío de
+mensajes SMS. En esta aplicación se utiliza el MODEM
+WAVECOM [1].
+Tabla 1. Señales de enlace RS-2323 En cuanto al software de control o comandos del MODEM,
+El módem incorpora un puerto estándar en configuración la mayoría de ellos se ajustan a la norma Hayes [3],
+DCE (Data Communication Equipment), mientras que los comandos del tipo AT+, que tienen el formato general
+autómatas suelen disponer de puertos configurables, que siguiente:
+habrá que parametrizar para funcionamiento RS-232 en
+configuración DTE (Data Terminal Equipment).  Las AT+Comando = Dato <CR> <LF>
+señales  a utilizar son todas las indicadas en la Tabla I, o para escritura de configuración / envío de mensajes, y
+únicamente las tres primeras, dependiendo de si se pretende AT+Comando?  <CR> <LF>
+establecer contención hardware o no. En cualquier caso, el
+enlace entre ambos se realiza pin a pin, como muestra el para lectura de configuración / estados del MODEM.
+ejemplo de Fig. 3, realizado sobre conectores DB9. Como se puede observar, el fin de la transmisión queda
+       DTE  DCE identificado por los caracteres <CR> y <LF>, excepto enalgunos comandos especiales. Por ejemplo, para programar el MODEM con la - AT+CSMP = '1,167,0,0',  con el que se define el tipo
+configuración anterior, hay que enviarle los comandos de mensajes, que con los valores indicados serán
+indicados en la Tabla III. mensajes tipo SMS-SUBMIT, 24 horas máximas de
+AT+IPR=9600<CR><LF> 9600 bps retención de mensaje en el Servidor antes de hacerlo
+8 bits de datos llegar a destino, envío del mensaje como texto ASCII y
+AT+ICF=3,4<CR><LF> Sin paridad sin conversión a cadena binaria.
+1 bit de Stop - AT+CMEE, = 1, para habilitar la generación de
+Tabla III. Ejemplo de configuración del MODEM mensajes de error con el formato '+CMS/CME ERROR:<tipo de error>' desde el MODEM.
+- ATE0, para deshabilitar el eco de caracteres recibidos
+La configuración o parametrización inicial del MODEM desde el PLC en el MODEM.
+puede ser realizada desde el PLC,  o desde un PC con el - ATQ0, para habilitar el envío de los caracteres de
+software de control de puerto COM serie adecuado, por confirmación ('OK') o de error desde el MODEM
+ejemplo, Hyper Terminal (Fig. 4). En cualquier caso, los después de recibir un comando.
+parámetros de enlace RS-232 han de ser idénticos siempre - AT+CNMI=2,1,0,0,0.  Este comando define la gestión
+en ambas partes de la línea. de mensajes entrantes en el MODEM. En la aplicación,se ha optado por que el MODEM advierta al PLC que
+ha llegado un mensaje y está almacenado en una cierta
+posición de la memoria SIM.
+- AT&W, para grabar en memoria EPROM del MODEM
+Respuesta: la configuración actual.
+El módem pid  e el número de PIN - AT+CREG, para leer desde el MODEM el estado actual
+del operador con quien se tenga dada de alta la SIM,
+Introducimos PIN incluyendo la cobertura..
+Preguntamos por cobertura - AT+CMGS, comando esencial para el envío demensajes al MODEM, según la secuencia siguiente:
+Respuesta: 
+0: Registro de operadora desactivado Enviar al módem:
+AT+CMGS=699799315 (número de móvil)
+Fig. 4 Envío de PIN  y consulta de cobertura desde PC Respuesta 1ª módem: >
+Enviar al módem:Mensaje SMS <ctrl-Z>
+Existe un gran número de comandos AT con diferentes
+finalidades, para programación del puerto, envío de Respuesta 2ª módem: +CMGS: 188
+mensajes SMS, gestión de memoria de mensajes dentro de OK  (mensaje enviado)
+la tarjeta del MODEM, establecimiento de llamadas de voz,
+etc., aunque no todos son necesarios para la aplicación Muchos  de estos comandos son de tipo escritura/lectura, y
+propuesta. Ejemplos de comandos a utilizar, además de los enviados con un interrogante '?' responderán con la
+mostrados en la Tabla III,  son los siguientes: configuración/estados actuales del MODEM.
+- AT+CPIN = "código PIN", con el que  se envía al Algunos de estos comandos pueden ser parametrizados
+MODEM el PIN o Personal Identification Number de la inicialmente en el MODEM, y no es necesario enviarlos
+tarjeta SIM o Suscriber Identity Module para poder para cada enlace establecido.
+inicializar el Sistema
+- AT+CSCA = "Número del Centro Servidor de 2.2  Autómata Programable
+Mensajes", o  CSA (Service Centre Address) que indica La mayor parte de PLCs disponen de uno  o más puertos
+qué Servidor se utilizará para enviar el mensaje serie integrados en el cuerpo del autómata, o disponibles
+- AT+IFC = n1,n2, con el que se definen las señales  a como accesorios conectables a él. Las instrucciones de
+considerar en el enlace RS-232. Por ejemplo, n1,n2 =2,2 usuario permiten la manipulación de estos puertos para la
+indica al MODEM que las señales RTS (Request to recepción y envío de datos, una vez parametrizados
+Send)  y CTS (Clear to Send) serán necesarias para el correctamente con el software de programación
+control de la transmisión y recepción de datos. Los datos transmitidos/recibidos pueden estar codificados
+- AT+CMGF=n, con el que se define el modo texto o en diferentes formatos, siendo los más usuales los códigos
+PDU (cadena binaria) para la transmisión/recepción de ASCII y Hexadecimal. En concreto, los comandos y  datos
+mensajes. Por ejemplo, si se desea trabajar en ASCII, lo a enviar al MODEM deben ser previamente tratados en
+que facilita la manipulación de datos en el PLC, debe registros internos del autómata, hasta formar la secuencia
+hacerse n=1. completa 'comando AT + parámetro', según los ejemplos
+-  AT+CSCS ="PCCP437", para habilitar el alfabeto mostrados en la Tabla III.
+especial PCCP437, que incluye el carácter '@'. Así, la
+aplicación será capaz de enviar una dirección de correo En esta aplicación se utiliza el autómata IDEC IZUMI
+como encabezamiento del mensaje SMS, lo que Micro
+3 [3],  que dispone de un puerto serie adicional
+redirecciona el mismo a un servidor de correo además del puerto de programación, configurable como
+electrónico. puerto se usuario y gestionado con las instrucciones TXD yRXD, que permiten el envío y recepción de datos a través del mismo. En Fig. 5 se muestra la estructura y 3. Lectura del mensaje en registros del PLC, e
+programación de la instrucción TXD, siendo muy similar la identificación del mismo por comparación con una
+de la instrucción RXD. S1 es el dato a transmitir,   D1 es  el plantilla de órdenes predefinidas.
+registro o relé interno que advierte de que la transmisión se
+ha realizado correctamente, y D2 es el registro que informa 4. Atención de la orden, y generación de la secuencia de
+del estado actual de la transmisión: preparando, respuesta a transmitir.
+transmitiendo, o completada. Para la programación de la 5. Escritura de la secuencia en el MODEM, incluyendo el
+instrucción se abre una ventana de usuario en el software de número del teléfono móvil al que se llamará.
+programación del autómata, que permite la introducción de 6. Confirmación de envío desde el móvil, y paso al estado
+todos estos valores. de recepción (lectura).
+Cada  instrucción puede transmitir / recibir  hasta un Si el mensaje recibido es de Control y no de Supervisión, el
+máximo de 200 bytes. Todos los caracteres del teclado se PLC lo atenderá después de identificar la orden (punto 3)
+pueden enviar o recibir, ocupando 1 byte cada uno de ellos. devolviendo (puntos 4 y 5) un mensaje de confirmación de
+También pueden enviarse o recibirse datos en codificación orden ejecutada al usuario, por ejemplo, 'ORDEN OK'.
+hexadecimal Para el caso de emisión de Alarmas, el protocolo es:
+1. Preparación de la secuencia a transmitir, incluyendo o
+    no variables de proceso, tras la aparición de la alarma.
+2. Escritura del mensaje en el móvil, y confirmación de
+recepción por parte de éste.
+3. Paso del PLC al estado de recepción, y espera de la
+confirmación de lectura por parte del usuario.
+4. Recepción de la confirmación de usuario en el PLC, y
+activación de las siguientes opciones (según el tipo de
+alarma enviada):
+a. Paso al estado de Supervisión/Control , en espera de
+nuevas indicaciones por parte del usuario.
+b. Actuación directa sobre el proceso.
+Fig. 5.  Configuración de la instrucción TXD Ambos protocolos se han programado de forma que trascada escritura en el MODEM es necesario hacer una lectura
+del mismo, para comprobar que el comando ha sido
+Para la sincronización entre el PLC y el MODEM es correctamente atendido (respuesta 'OK'). Esta
+necesario interpretar correctamente el fin de cada comprobación asegura la robustez del sistema en el nivel
+transmisión. Para ello, al final de la mayoría de los básico de enlace, aunque no se ha introducido ningún
+comandos AT se debe enviar un CR (Carry Return) y un LF protocolo de identificación/corrección de errores:
+(Line Feed). Estos caracteres tienen su correspondiente desconexión del móvil llamado, o no recepción de la
+valor decimal:  CR = 13d ; LF = 10d., aunque también cabe respuesta de confirmación desde el mismo, órdenes de
+emplear su equivalente en hexadecimal debido a la usuario (mensajes) no identificables, etc., dado que esta
+posibilidad de incorporar esta codificación en las comprobación es muy dependiente de la aplicación final
+instrucciones TXD. En este caso, los códigos desarrollada.
+correspondientes son  CR  = 0Dh;   LF = 0Ah. Todos los comandos y datos enviados /recibidos por el
+Para indicar el final de texto de mensaje, carácter ctrl+Z, se puerto de enlace PLC-MODEM lo son codificando los
+envía su codificación en hexadecimal, que corresponde a caracteres ASCII en serie, tal y como deben aparecer en el
+1Ah. mensaje final.
+Los protocolos anteriores han sido programados en el
+autómata, mostrándose ahora como ejemplo la secuencia
+3. Descripción de la aplicación programada para la emisión de una alarma de proceso, que
+La aplicación desarrollada cubre dos opciones, consta de tres etapas transmisión-recepción:
+representadas esquemáticamente en Fig. 1:
+- Supervisión/Control  del proceso. ETAPA 1
+- Generación y envío de alarmas 1.1 Introducción del código PIN de la tarjeta SIM que estádentro del módem, mediante el envío del comando
+El protocolo de usuario para la Supervisión se establece AT+CPIN.
+como sigue: 1.2 Espera del 'OK'  de confirmación de que el módem ha
+1. Envío de un mensaje codificado al MODEM desde un procesado correctamente la orden o comando de
+teléfono móvil, demandando cierta información. identificación de tarjeta.
+2. Recepción en el MODEM, y re-envío al PLC, cuyo
+puerto permanecía en estado de lectura (es decir, La confirmación puede hacerse por lectura y comprobación
+esperando al ejecución de una instrucción RXD). de los caracteres 'OK', o simplemente comprobando que la recepción ha sido correcta (registro D2 de la instrucción
+RXD, ver apartado2.2, Fig. 5). Primer Scan  de PLC
+ETAPA 2
+2.1 Envío del comando AT+CMGS, por ejemplo, Inicializar registros
+AT+CMGS=699799314, número de llamada del
+MODEM. Comando
+2.2 Tras la confirmación de recepción, se espera recibir en AT+CPIN=2533
+el PLC el carácter ">", que significa que el MODEM
+está esperando el texto del mensaje a retransmitir.
+ETAPA 3 Esperar 20 s
+3.1 Generación y/o preparación de la secuencia a
+transmitir, con o sin variables de estado. Comando
+3.2 Envío del texto de alarma. Esta etapa, la que manda el AT+CSCA="+34656000311"
+mensaje, se podría considerar como la segunda fase del
+comando AT+CMGS.
+3.3 Comprobación de envío correcto. Para ello, se espera Comandos de configuración
+recibir desde el MODEM la secuencia
++ CMGS: nº de mensaje       AT+IPR= 9600
+OK       AT+ICF= 3,4
+      AT+IFC= 2,2
+La secuencia general de cada etapa, y por ende de toda la       AT+CMGF= 1
+aplicación, está esquemáticamente representada en Fig. 6.       AT+CSMP= 1,167,0,0      AT+CSCS= "PCCP437"
+      AT+CMEE= 1
+Inicializar Registros       ATE0      ATQ0
+      AT&CNMI= 2,1,0,0,0
+Enviar Comando / Datos Salvar parametrosAT&W
+Esperar respuesta CoberturaAT+CREG?
+Confirmar respuesta Fig.7 del MODEM
+Fig.6.  Secuencia de operación PLC - MODEM s
+La inicialización carga en los registros del PLC las Se ha prese ipios de operación
+constantes de la aplicación: para establ a distancia de unaplanta con  programable por
+- datos de configuración para enviar al MODEM medio de la
+- textos de mensajes constantes predefinidos, para El sistema  resulta sencillo de
+enviar al MODEM, o comparar con mensajes implementa  equipo de control
+recibidos, de mercado
+- la parte del mensaje de salida que incorporará La aplicac
+variables de estado del proceso. proceso qu
+La secuencia de inicialización del MODEM, que que cambia
+típicamente se realizará una única vez en la puesta en en el PLC.
+marcha, podría ser la representada en Fig. 7 (el  PIN y los
+números de teléfono son ejemplos).
+[1] http://w
+[2] http://w
+[3] http://w.  Secuencia de inicialización 
+5. Conclusione
+ntado en este trabajo los princ
+ecer una supervisión / control 
+trolada mediante un autómata
+ telefonía móvil celular.
+propuesto, de muy bajo coste,
+r sobre cualquier autómata o
+ con salida RS-232.
+ión descrita puede ser adaptada a cualquier
+e no exija tiempos de respuesta críticos, sin más
+r los protocolos de conversación programados
+Referencias
+ww.wavecom.com/showroom/bigframe.html
+ww.cellular.co.za/hayesat.htm#SMS Command Set
+ww.idec.com/usa/html/PLCs.html

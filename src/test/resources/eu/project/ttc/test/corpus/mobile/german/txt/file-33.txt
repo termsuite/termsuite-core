@@ -1,0 +1,177 @@
+Handy - Land: Wie funktioniert ein Mobiltelefon?
+Ausformulierter Vortrag - Ruedi Arnold - August 2001
+
+1 Einführung	2
+1.1  Telefon - Standards	2
+1 Folie - [Testbild / Begrüssung]	2
+2 Folie -Titelseite / Start	2
+3 Folie - Ziele	2
+4 Folie - Inhalt - Ablauf	2
+5 Folie - Kommunikation	2
+6 Folie - Festanschluss	2
+7 Folie - Schnurlos-Telefone	3
+8 Folie - Mobiltelefone	3
+9 Folie - Warum Standards?	3
+10 Folie - Standards sind Normen	3
+1.2 Vergleich Handy - Funkgerät	3
+11 Folie - Handy = Funkgerät?	4
+12 Folie - funken	4
+13 Folie - digital vs. analog	4
+14 Folie - DER Unterschied	4
+2 Handy - Land	5
+2.1 Aufbau Handy - Land	5
+15 Folie - Motivation: Wo bin ich?	5
+16 Folie - Handy Länder (Zellen)	5
+17 Folie - Die Verwaltung (BTS, BSC & MSC)	5
+18 Folie - Das Besuchsmeldeamt (VLR)	5
+19 Folie - Das Heimmeldeamt (HLR)	6
+20 Folie - Daten im Heimmeldeamt	6
+21 Folie - An- und Abmeldung	6
+22 Folie - Hier bin ich!	6
+23 Folie - internationale Verwaltung (GMSC)	6
+24 Folie - Handy suchen (Paging)	6
+2.2 Singende Handys	7
+25 Folie - Singende Handys (Senden)	7
+26 Folie - Kein Kanon (Interferenz)	7
+27 Folie - Begrenzte Anzahl Lieder (Frequenzen)	7
+28 Folie - Handy Land Übersicht	7
+29 Folie - Handy will singen	7
+2.3 Handy mobil	8
+30 Folie - Singendes Handy mobil	8
+31 Folie - Übergabe (Handover)	8
+32 Folie - Aktualisiserung: Nationalhymne (LA Identifikation)	8
+33 Folie - Reisebewilligungen (Roaming)	8
+3 Abschluss	9
+3.1 Ende & Zusammenfassung (GSM, Funk, Zellen)	9
+34 Folie - Ein Wort zu GSM	9
+35 Folie - noch mal Handy vs. Funk	9
+36 Folie - Zellen	9
+37 Folie - The End	10
+38 Folie - Nachwort (off-line)	10
+1 Einführung
+1.1 	Telefon - Standards
+1 Folie - [Testbild / Begrüssung]
+[Diese Folie nicht zeigen. Kann jedoch bei Verwendung eines Beamers als Testfolie verwendet werden.]
+2 Folie -Titelseite / Start
+[Begrüssung]
+„Wie funktioniert ein Mobiltelefon?“ Das Ziel meines Vortrages ist es, auf diese Frage ein paar Antworten zu geben. Wir werden dafür nicht technisch in die Tiefe gehen. Ich werde ihnen anhand von Analogien und Beispielen grundlegende Ideen moderner Mobiltechnologie aufzeigen.
+3 Folie - Ziele
+[Diese Folie evtl. nicht zeigen.]
+Die Ziele meines Vortrages können sie hier ablesen: Sie kennen zwei Gründe, warum bei GSM Zellen verwendet werden. Sie kennen die Begriffe Paging (Ausruf), Aktualisierung, Handover (Übergabe) und Roaming (Reisebewilligung). Im weiteren kennen sie den Zweck von Standards und sie kennen einen wichtigen Unterschied zwischen Handys und Funkgeräten.
+4 Folie - Inhalt - Ablauf
+[Diese Folie evtl. nicht zeigen.]
+Hier sehen sie kurz den Ablauf des Vortrages. Zuerst gibt es eine Einführung über Telephonsysteme und Standards, dann kommt der Schwerpunkt über Handy-Land und zum Schluss eine Zusammenfassung. [Diese Folie ist mehr zur Übersicht für den Vortragenden gedacht. Ich würde sie wohl weglassen.]
+5 Folie - Kommunikation
+Wir leben im sogenannten Informationszeitalter. Der Besitz von Information wird in der heutigen Zeit als wichtig eingestuft. Information wird ausgetauscht. Diesen Vorgang nennt man kommunizieren. Für uns Menschen ist das Telefon das individuelle Kommunikationsmittel Nummer eins geworden; wir telefonieren oft. Und seit ein paar Jahren auch mit einem mobilen Telefon. Rund die Hälfte der Schweizer Bevölkerung besitzt ein Natel. Deshalb sollte man wenigstens der Spur nach eine Ahnung hat, wie solche moderne Kommunikationstechnologie funktioniert. Das ist das Ziel dieses Vortrages.
+Zuerst beginne ich mit einem kurzen Überblick über gebräuchliche Telefon-Typen.
+6 Folie - Festanschluss
+Praktisch jede Wohnung hat heute wohl einen Telefonanschluss, einen sogenannten Festanschluss. Dieser ist, wie der Name schon sagt, fest, das heisst nicht mobil, sondern örtlich gebunden. Es gibt zwei Typen: das herkömmliche analoge System, und der neue digitale Standard ISDN. ISDN steht für Integrated Services Digital Network. Dieses digitale System bietet gegenüber dem alten, analogen System einige Möglichkeiten mehr, wie zum Beispiel: mehrere Anschlüsse über dasselbe Kabel, Funktionen wie „Anrufer erkennen“ oder bessere Datenübertragung bei Internet-Zugang.
+7 Folie - Schnurlos-Telefone
+Als mobilere Weiterentwicklung des Festanschlusses kann man Schnurlostelefone sehen. Diese sind in den letzten Jahren ziemlich populär geworden. Hier funken die sogenannte Basisstation und der Handapparat je als Funk-Sender und Empfänger hin und her. Die Reichweite beträgt maximal 1 km, in Gebäuden jedoch meist nur um die 50m. Fast alle in der Schweiz verwendeten Geräte sind nach dem sogenannten DECT-Standard gebaut. DECT steht für Digital Enhanced Cordless Telecommunications. Dieser Standard funktioniert in etwa ähnlich wie der Natel Standard GSM, auf welchen ich auf der nächsten Folie zu sprechen komme.
+8 Folie - Mobiltelefone
+Um überall kommunizieren zu können, braucht es ganz mobile Telefone. Und genau das sind Handys. [Pause] Diese Geräte sind frei bewegbar. In der Schweiz werde sie auch Natels, Nationale Autotelefone, genannt. Mittlerweile besteht ein recht flächendeckendes Netz von Sendern, sodass ein Handy fast überall empfangen und bedient werden kann. Wie das in etwa funktioniert, werden wir im folgenden sehen. Wie einigen von ihnen bekannt sein dürfte, heisst der Standard bei den Handys GSM, das steht für Global System for Mobile Communications. Auf GSM gehe ich nachher noch genauer ein.
+9 Folie - Warum Standards?
+Jetzt haben wir bereits drei technische Standards angetroffen, nämlich ISDN für digitale Telephonie, DECT für Schnurlostelefone und GSM für Mobiltelefone. Und auch sonst kennen wir viele Standards aus dem alltäglichen Leben, wie zum Beispiel VHS von Videos, den Konservendosen-Verschluss oder Brief- und Papierformate. Haben sie sich schon einmal überlegt, für was solche Standards eigentlich gut sind? Was bringen uns Standards?
+10 Folie - Standards sind Normen
+Zuerst wollen wir uns klar machen, was wir unter einem Standard verstehen: ein Standard ist eine klare Festlegung, eine Spezifikation. Ein Standard ist eine Norm, die breit, meist weltweit, akzeptiert ist. 
+Das Ziel von Standards ist Vereinheitlichung. Das heisst, es ist einmal und einheitlich festgelegt, wie etwas zu funktionieren hat oder zu bauen ist. Und das ist dann natürlich auch verbindlich. Denken sie zum Beispiel wieder an das VHS-Video Beispiel. Jede Firma auf der ganzen Welt kann nach dem VHS Standard Video-Kasetten und -Recorder herstellen und verkaufen. Und genau dasselbe ist natürlich auch möglich mit GSM als Handy-Standard! Deshalb können wir heute ein Ericson Handy im Swisscom- oder Orange-Netz verwenden. Stellen sie sich vor, jeder Anbieter hätte sein eigenes System. Dann müssten sie je ein spezielles Handy haben und sie könnten das Netz nicht wechseln. Und im Ausland würde sowieso gerade noch einmal ganz andere Systeme verwendet. So sähe es vielleicht ohne Standards und auf dem Handy Markt aus. Und vor GSM sah es auch fast so aus, deshalb war Einheitlichkeit eines der Hauptziele bei der Entwicklung des GSM-Standards.
+1.2 Vergleich Handy - Funkgerät
+Nun wollen wir uns genauer mit Mobiltechnologie beschäftigen. Hierzu schauen wir uns zuerst kurz das Funken, das Übertragen durch die Luft an und vergleichen das Handy mit einem Funkgerät.
+11 Folie - Handy = Funkgerät?
+Funkgeräte sind ja eigentlich recht ähnlich wie Handys. [Pause]
+Beide funken irgendwie durch die Luft und wir können reinsprechen. Aber gibt es Unterschiede? Was ist anders? Klar, beim Funkgeräte kann man keine Nummer eintippen. Ist das der einzige Unterschied?
+12 Folie - funken
+Grundsätzlich verwenden beide Funk-Technologie, das heisst sie senden durch die Luft. Und zwar senden sie sogenannte elektromagnetische Wellen. Das sind die gleichen Wellen, die auch beim Radio verwendet werden. Elektromagnetische Wellen breiten sich in der Luft aus, ohne dass wir sie sehen oder spüren. Genauer will ich hier nicht darauf eingehen. Wichtig ist jedoch, dass in verschiedenen Frequenzen gesendet wird. Dies ist auch wieder wie beim Radio, wo jeder Sender eine eigene Frequenz hat. So können wir verschiedene Stationen unterscheiden.
+13 Folie - digital vs. analog
+[Diese Folie kann weggelassen werden. Der Inhalt ist recht technisch und führt je nach Publikum zu weit.]
+Bisher haben wir also gesehen, dass elektromagnetische Wellen gefunkt werden. Nun muss natürlich unsere Information, egal ob es sich nun um Sprache, Musik oder Daten handelt, noch irgendwie der Welle mitgegeben werden. Das habe ich versucht, auf dieser Folie darzustellen. Eine Entwarnung: Diese Folie ist mit Abstand die technischste dieses Vortrages.
+Elektromagnetischen Wellen können grundsätzlich entweder als analoges oder als digitales Signal angeschaut werden. Werden analoge Signale verwendet, dann werden einfach die einzelnen Wellen verändert in Breite und Höhe. Sie können sich das vereinfacht etwa wie hier in der Graphik vorstellen: Wenn die Welle höher ist, ist es ein lauteres Geräusch, ist sie niedriger, ist es leiser. Und sind die Wellen schmal wie hier, dann ist es ein hoher Ton, sind sie breiter, ist es ein tiefer. Die Tonlage kann beliebige Werte annehmen. [Der Fachbegriff dazu: kontinuierlich.]
+Bei digitalen Signalen gibt es im Gegensatz dazu nur eine begrenzte Anzahl Stufen. Sie sehen das hier an der Rasterung. Die analogen Wellen oben können zum Beispiel von beliebiger Breite sein. Hier zum Beispiel genau so, aber sie könnte auch 1mm breiter sein. Bei digital geht das nicht. Da gibt es nur eine bestimmte Anzahl Werte. Das analoge Signal von oben könnte digital zum Beispiel so aussehen. Das wäre eine einfache Codierung. Eine Codierung ist eine Darstellungsart. Und wie sie sehen, geht recht viel Information verloren, zum Beispiel all diese kleinen Wellen hier sehen wir nicht mehr. In der Praxis wird natürlich die Codierung so gewählt, dass wir das nicht merken. Die Digitaltechnik bietet viele Möglichkeiten zur Verschlüsselung und zur Codierung von Signalen.
+Genauer will ich hier nicht darauf eingehen, das Thema ist zu umfangreich und zu komplex. Wichtig ist mir, dass sie eine Vorstellung haben, was analog und digital in etwa bedeutet.
+Abschliessend noch dies: moderne Mobiltelefone verwenden ausschliesslich digitale Signale, bei Funkgeräten wird beides verwendet.
+14 Folie - DER Unterschied
+Also, Funkgeräte und Handy senden beide elektromagnetische Wellen durch die Luft. Da sind sie sich gleich. Aber der grosse Unterschied ist, dass sich Funkgeräte direkt zufunken, von einem Gerät A zum Gerät B. Nicht aber die Handys. Dort funkt Handy C immer zuerst zu einem Sender, welcher das Signal einem andern Sender weiterleitet. Dieser sendet es dann dem Handy D weiter. Und für das Senden werden im allgemeinen verschiedene Frequenzen verwendet. Hier ist das mit Frequenz 1 und Frequenz 2 eingezeichnet. Warum das so ist und was für Konsequenzen das hat, werden wir im weiteren sehen.
+2 Handy - Land
+2.1 Aufbau Handy - Land
+15 Folie - Motivation: Wo bin ich?
+Jetzt wollen wir uns also näher mit der Handytechnologie befassen. Zum Einstieg eine Frage: Auf dem Display von Handys steht oft eine Ortsangabe, etwa ZUERICH CITY. Woher weiss das Handy wo es ist? Wie funktioniert das? [Pause]
+Um dieser Sache auf die Spur zu kommen, müssen wir uns mit dem Aufbau der Handy Welt auseinandersetzen.
+16 Folie - Handy Länder (Zellen)
+Handys halten sich grundsätzlich in Ländern auf. [Pause]
+Diese Länder werden beim GSM Standard - wie hier unten angegeben - Zellen genannt. Ich werde hier jedoch von nun an von Ländern als Analogie für Zellen sprechen. Zellen in GSM haben einen Radius von maximal 35 km. Sie sind also einiges kleiner als wirkliche Länder, wie die Schweiz zum Beispiel. Es werde noch mehr solche Begriffe auftauchen, für die unten auf der Folie jeweils der entsprechende GSM- oder allgemeine Mobiltechnologie-Ausdruck steht. Ich werde nicht jedes mal ausdrücklich darauf hinweisen. Ich verwende eigene Begriffe aus meiner Handy-Welt, weil ich denke, dass so die Grund-Konzepte und -Ideen einfacher verstanden werden können. Aber genug Einführung jetzt.
+Wie gesagt: Handy leben in Ländern, und ich stelle diese hier auf meinen Folien so dar.
+17 Folie - Die Verwaltung (BTS, BSC & MSC)
+In jedem Land gibt es eine Verwaltung. Sie wissen ja, ohne Bürokratie geht heute nichts mehr. [Pause]
+Sie ist DER Ansprechpartner für Handys. Handys kommunizieren nicht direkt untereinander, sondern immer nur via Verwaltung. Alles muss sozusagen offiziell sein.
+Die Verwaltung stelle ich hier so dar.
+18 Folie - Das Besuchsmeldeamt (VLR)
+Im weiteren gibt es ein Besuchsmeldeamt. [Pause]
+Das Besuchsmeldeamt ist in der Verwaltung untergebracht, ich stelle es hier so dar. Im Besuchsmeldeamt sind alle Handys eingetragen, die sich gerade in diesem Land befinden. Das Besuchsmeldeamt hat also immer eine aktuelle Liste der sich im Land befindlichen Handys. Zugang ist nur via Verwaltung möglich.
+Also hier weiss das Besuchsmeldeamt, dass dieses, dieses und die beiden Handys hier sich jetzt gerade in seinem Land aufhalten.
+19 Folie - Das Heimmeldeamt (HLR)
+Jedes Handy hat aber auch ein Heimatland. Und dort ist es im Heimmeldeamt eingetragen. Das ist quasi die Handy-Einwohnerkontrolle. Jedes Handy ist bei genau einem Land im Heimmeldeamt eingetragen. Ich stelle das hier so dar. 
+Im Heimmeldeamt sind alle wichtigen Informationen eingetragen.
+20 Folie - Daten im Heimmeldeamt
+Die wichtigen Daten im Heimmeldeamt sind: die Nummer des Handys zur Identifizierung. Der aktuelle Aufenthaltsort des Handys, sprich in welchem Land ist das Handy zur Zeit, bei welchem Besuchsmeldeamt ist es zur Zeit angemeldet. Und im weiteren die Rechte und Möglichkeiten eines Handys wie zum Beispiel Internetanschluss oder Visen für andere Länder. Und im Heimmeldeamt werden ebenfalls Daten zur Verschlüsselung und sicheren Identifizierung gespeichert. Also zum Beispiel ein vereinbarter Geheimcode mit der Verwaltung.
+Kurz: Das Heimmeldeamt ist die wichtigste Datensammlung über ein Handy, es besitzt viel Information. Im Heimmeldeamt ist alle Information zu und über ein Handy eingetragen.
+21 Folie - An- und Abmeldung
+Handys sind ja mobil, das heisst sie können sich bewegen. Da möchten sie natürlich gerne auch das Land wechseln können. Es kann ja gut vorkommen, dass sie über eine Landesgrenze reisen möchten. Um die Einträge im den entsprechenden Ämtern korrekt zu halten, passiert in einem solchen Fall das folgende:
+1. Das Handy wird beim Besuchsamt im neuen Land angemeldet. [next]
+2. Das Handy wird beim alten Besuchsamt abgemeldet. [next]
+3. Der Eintrag im Heimmeldeamt wird angepasst. Dies ist wichtig, denn der Eintrag über den aktuellen Aufenthaltsort des Handys soll ja weiterhin korrekt sein.
+22 Folie - Hier bin ich!
+Jeder Landwechsel wird also registriert und die entsprechenden Einträge bei den Ämtern geändert. Das Handy merkt so auch immer, wann es das Land wechselt. Deshalb weiss es, wo es sich zur Zeit befindet.
+23 Folie - internationale Verwaltung (GMSC)
+Als nächstes wollen wir schauen, was passiert wenn jemand ein bestimmtes Handy sucht. Dafür betrachten wir den Fall, dass vom Festland eine Nachricht für Handy X kommt. Die Verwaltung des Telefons vom Festland fragt zuerst die internationale Verwaltung, welches denn das Heimland des Handys X sei. Die internationale Verwaltung haben wir bisher nicht angeschaut, sie ist auf dieser Folie auch nicht eingezeichnet. Wichtig ist einfach, dass bei ihr das Heimland aller Handy erfragt werden kann. Denn sobald das Heimmeldeamt bekannt ist, kann dort nachgefragt werden, welches denn das aktuell besuchte Land von Handy X ist. Und somit wissen wir, in welchem Land Handy X zur Zeit ist.
+24 Folie - Handy suchen (Paging)
+Die Verwaltung von dem Land, in dem Handy X sich befindet, bekommt nun also die Mitteilung, dass Handy X eine Nachricht erhält. Diese Land weiss aber nicht genau, wo im Land sich Handy X befindet. Es weiss nur, dass Handy X irgendwo ist. Deshalb wird Handy X im ganzen Land ausgerufen. Handy X meldet sich darauf bei der Verwaltung und kann die Nachricht entgegen nehmen. Dieser Vorgang ist immer nötig, da die Verwaltung nie genau weiss, wo im Land sich ein Handy aufhält. In der Mobiltechnologie nennt man diese Vorgang Paging.
+2.2 Singende Handys
+[Handy: Rufton kurz erklingen lassen, dann neue Folie bringen.]
+25 Folie - Singende Handys (Senden)
+Handys singen bekanntlich gerne. [Pause]
+Das wissen wir alle.
+Und wir haben das soeben auch gehört.
+In meiner Handy Welt werde ich von nun an „singen“ als Analogie zu „senden“ verwenden.
+26 Folie - Kein Kanon (Interferenz)
+Die Handys singen zwar gerne. Aber wenn sie eines nicht ausstehen können, dann das Singen im Kanon. Das Problem: Wenn mehrere Handys das gleiche Lied singen, dann kann man nicht mehr genau herausfinden, wer jetzt was singt. Darum hassen die Handys Kanon. Und darum singen Handys ein Lied immer alleine.
+27 Folie - Begrenzte Anzahl Lieder (Frequenzen)
+Nun gibt es aber natürlich nicht unendlich viele Lieder, welche die Handys singen können. Das heisst, wir werden nie jedem Handy ein eigenes Lied fest zuteilen können. Deshalb teilen wir jedem Land eine bestimmte Anzahl Lieder zu. Hier zum Beispiel zehn verschiedene Lieder pro Land. Damit kann es innerhalb des Landes sicher nicht zu einem Kanon kommen. Denn nur ein Handy kann zu einem Zeitpunkt von einem Lieder-Blatt ablesen.
+Aber an der Grenze ist natürlich Kanon theoretisch immer noch möglich, wenn halt auf jeder Seite ein Handy gerade nahe an der Grenze steht und beide dasselbe Lied singen. Um auch hier Kanon auszuschliessen werden in anliegenden Ländern verschiedene Lieder-Sammlungen verwendet. Also hier in diesem Land zum Beispiel die Sammlung Lieder 1, und hier, im angrenzenden Land Lieder 2. So ist kein Kanon möglich. Aber hier drüben, in dem nicht angrenzenden Land kann jetzt zum Beispiel wieder die Sammlung Lieder 1 verwendet werden.
+Somit können Lieder wiederverwendet werden. Das selbe Lied kann also in vielen verschiedenen Ländern zur gleichen Zeit gesungen werden. Das ist natürlich sehr praktisch. Wichtig ist einfach, dass anliegende Länder verschiedene Lieder-Sammlungen verwenden.
+28 Folie - Handy Land Übersicht
+Die Kontrolle über die Lieder-Sammlung liegt, wie zu vermuten, auch bei der Verwaltung. Somit sieht jetzt unser Handy-Land wie folgt aus. Die Verwaltung hat neben Heim- und Besuchsmeldeamt auch noch die Lieder-Verwaltung angegliedert.
+29 Folie - Handy will singen
+Wenn nun also ein Handy singen möchte, muss es eben bei der Verwaltung ein Lied beantragen. Falls die Verwaltung freie Lieder hat, bekommt das Handy umgehend ein Lied zugeteilt und kann singen. Falls alle Lieder vergeben sind, ist eben kein Singen möglich. Wenn das Handy nicht mehr singen mag, dann gibt es das Lieder wieder ab, so dass ein anderes Handy später wieder dieses Lied verwenden kann. Diese Wiederbenutzung von Liedern ermöglicht es, eine sehr grosse Anzahl von Handys zu haben. Handys wollen ja nicht permanent singen. Es hätte auch zuwenig Lieder für alle. Handys wollen zu verschiedenen Zeiten singen, so verteilt sich das schön.
+2.3 Handy mobil
+30 Folie - Singendes Handy mobil
+Handys sind ja mobil. Und sie bewegen sich auch gerne. Wenn nun also ein Handy am Singen ist, will es natürlich bei einem Landwechsel weitersingen. Um dies zu ermöglichen, müssen sich an der Grenze die beiden Verwaltungen absprechen und organisieren. 
+Bis zur Grenze singt also das Handy ein Lied des aktuellen Landes. Dann an der Grenze gibt es dieses Lied ab und bekommt dafür vom neuen Land ein anderes Lied. Somit kann das Handy bei Landwechsel dauernd singen und ist glücklich.
+31 Folie - Übergabe (Handover)
+Dieser auf der letzten Folie beschriebene Vorgang heisst Übergabe. Wir schauen uns das hier noch einmal an. Zuerst ist das singende Handy also in diesem Land, und es bewegt sich gegen das Land hier. An der Grenze haben sich die Verwaltungen so abgesprochen, dass das Handy das alte Lied abgibt, und vom neuen Land sofort ein neues Lied bekommt. Dieser Vorgang muss sehr rasch erfolgen, da das Handy permanent singen will. Eine Randbemerkung: im aktuellen GSM-Standard passiert das in weniger als 60ms! Im weiteren merkt das Handy nichts von diesem Übergabevorgang. Es ist zufrieden, wenn es singen kann und singt sozusagen einfach „ab Blatt“, egal was für ein Lied. In der Fachsprache sagt man dazu, dass der Vorgang für das Handy transparent sei.
+Diese Transparenz, das Nichts-merken, ist natürlich für das Handy sehr angenehm Es kann sich so durch Länder bewegen, ohne sich um sein Lied oder die Gefahr eines Kanons zu kümmern. Das organisieren die entsprechenden Verwaltungen alles untereinander.
+32 Folie - Aktualisiserung: Nationalhymne (LA Identifikation)
+Nun kann es passieren, das ein viel reisendes Handy plötzlich nicht mehr weiss, wo es ist. Oder es erlitt Gedächtnisverlust. Woher soll es dann wissen, wo es sich befindet? Was passiert mit orientierungslosen Handys? [next]
+Die Antwort: Die Verwaltung eines Landes spielt periodisch die Nationalhymne des Landes ab. Diese ist natürlich eindeutig pro Land. Und somit kann das Handy feststellen, in welchem Land es sich zur Zeit befindet. Falls sich ein Handy gerade in einer Grenzregion befindet und mehrere Nationalhymnen hört, wählt es einfach die lauteste. Somit kann ein Handy immer wieder herausfinden, wo es sich zur Zeit befindet. Auch wenn es neu eingeschaltet wird oder alles vergas.
+33 Folie - Reisebewilligungen (Roaming)
+Wie auch in unserer Welt, ist bei den Handys freies Herumreisen in beliebige Länder nicht möglich. Um Missverständnisse zu vermeiden folgendes: Länder hier sind immer noch als Analogie zu GSM-Funkzellen gemeint. Also wenn Handy hier herumreisen durch verschiedene Länder, dann sind nicht wirkliche Länder wie die Schweiz oder Deutschland gemeint. Gemeint sind immer noch Zellen mit einem Radius von maximal 35km. 
+Also, herumreisende Handys bekommen nur ein Lied von einem Land, das mit dem Heimland ein Bündnis abgeschlossen hat. Solche Bündnisse werden abgeschlossen zwischen einzelnen Ländern.  Ganze Bündnisse können sich noch weiter zu noch grösseren Bündnissen zusammenschliessen. Dies ermöglicht freien Handy Verkehr und weites Reisen.
+3 Abschluss
+3.1 Ende & Zusammenfassung (GSM, Funk, Zellen)
+34 Folie - Ein Wort zu GSM
+Dieser letzte Teil über das Handy-Land war jetzt wie am Anfang gesagt eine Analogie zu GSM und moderner Mobilkommunikation. Ich versuchte, so einige der wichtigsten Konzepte, Begriffe und Funktionsweisen der Mobilkommunikation zu erläutern.
+An dieser Stelle noch kurz ein paar Informationen zu GSM, die mir hier noch wichtig scheinen. Der GSM Standard ist sehr umfangreich und komplex. Bereits der Entwurf umfasste mehr als 5000 Seiten. Es sind sehr viele Einheiten und Abläufe definiert. Ich habe hier nur ein paar der wichtigsten Aspekte herausgenommen. Gar nicht oder kaum behandelt habe ich unter anderem Bereiche wie Sicherheit, Verschlüsselung, Codierungen, SIM das Subscriber Identity Module, Zeitrahmen, oder SMS der Short Message Service und so weiter. In dieser Einführung ging es mir nicht darum, irgendwelche technische Detailfragen zu behandeln. Hier ging es mir viel mehr darum, einen Einblick in grundlegende Konzepte und Funktionsweisen zu geben.
+35 Folie - noch mal Handy vs. Funk
+Ganz am Anfang haben wir gesehen, dass Funkgeräte sich direkt zufunken. Handys jedoch funken immer nur bis zum nächsten Sender.  Und dann via einen anderen Sender, und mit einer anderen Frequenz, zu einem andern Handy. 
+Jetzt zum Schluss will ich noch einmal zeigen, warum das so ist, und was das für Konsequenzen für die Mobiltechnologie hat.
+36 Folie - Zellen
+Die Verwendung von Zellen in GSM ist vor allem notwendig, weil damit Frequenzen wiederverwendet werden können. Die Anzahl möglicher Frequenzen ist begrenzt. Und für die Benutzung durch Mobiltechnologie sind nur ein paar Frequenzbereiche reserviert. Daneben wird die Luft noch als Übertragungsmedium für viele andere Dinge benutzt, wie Radio, TV, Funk, sonstige militärische, staatliche und kommerzielle Spezialanwendungen und so weiter. 
+Wichtig ist, dass durch die Frequenzwiederverwendung eben viel mehr Handys gleichzeitig senden können. An vielen Orten kann sozusagen lokal die selbe Frequenz verwendet werden. Es muss einfach beachtet werden, dass keine Interferenzen, oder Kanon, wie ich es vorhin nannte, entstehen können.
+Und der andere gute Grund für die Verwendung von Zellen ist, dass Handys damit weniger Sende-Energie brauchen. Ein Handy muss immer nur den nächsten Sender anfunken können. Somit kann man Handys mit kleinen Akkus bauen. Mobile Geräte sollen ja möglichst kompakt sein. Da ist natürlich wenig benötigte Sende-Energie ein Vorteil.
+37 Folie - The End
+Jetzt haben wir also gesehen, warum die Verwendung von Zellen sinnvoll ist. Natürlich haben diese Zellen für die Mobiltechnologie einige Konsequenzen. Die Verwendung von Zellen bedingt eine Methode zur Lokalisierung und Registrierung von Handy, das war das mit den Meldeämtern. Oder die Geschichte mit der Übergabe, wenn ein sendendes Handy die Zelle wechselt. Oder das Problem mit dem Kanon und den verschiedenen Lieder-Sammlungen, die Interferenzen und verschiedenen Frequenzen entsprechen. Oder das mit der Nationalhymne und den Reise-Bündnissen.
+Ich hoffe, ich konnte ihnen mit diesem Vortrag einen Einblick in moderne Mobilkommunikation geben und etwas Verständnis schaffen.
+Besten Dank für ihre Aufmerksamkeit und viel Spass beim mobilen kommunizieren! ;-)
+38 Folie - Nachwort (off-line)
+[Diese Folie nicht zeigen!]
+Mehr technische Information zum Thema GSM und Mobiltechnologie finden sie beim zusätzlichen Material, das aus meinem Fachseminarvortrag stammt. Konkret hat es dort ein Powerpoint Dokument, welches ich zu meinem Vortrag über „Mobilitätsmanagement in GSM, GPRS und UMTS“ im Rahmen des Fachseminars „Mobile Computing“ im Mai 2001 an der ETH Zürich benutzte. Das andere, ein Word Dokument, ist eine kurze und zusammenfassende Ausarbeitung dazu.
+Für mehr Informationen zum Thema Mobilkommunikation empfehle ich das Buch „Mobilkommunikation - Techniken für das allgegenwärtige Internet“ von Jochen H. Schiller. Addison-Wesley, 2000, ISBN 3-827-31578-6. Dieses Buch war mir eine gute Hilfe und Einführung in dieses Gebiet. Vor allem schätzte ich die verständliche Sprache und die vielen guten Skizzen und Graphiken.

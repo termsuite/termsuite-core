@@ -1,0 +1,138 @@
+Kundenmeinung :
+
+Die Kommunikationstechnik - Fibel ist sehr informativ und verständlich . Genau das habe ich schon seit langem gesucht . Endlich mal ein Buch , das kurz und bündig die moderne Informationstechnik beleuchtet .
+Kommunikationstechnik - Fibel
+
+jetzt bestellen !
+Das Buch zu dieser Webseite
+Netzwerktechnik - Fibel
+Kundenmeinung :
+
+Die Netzwerktechnik - Fibel ist sehr informativ und verständlich . Genau das habe ich schon seit langem gesucht .
+Netzwerktechnik - Fibel
+
+jetzt bestellen !
+Elektronik - Kompendium . de > Kommunikationstechnik
+Die Geschichte des Mobilfunks
+Historische Entwicklungen in der Physik
+Die drahtlose Kommunikation zwischen zwei entfernten Punkten , also das was wir heute Mobilfunk oder mobile Kommunikation nennen , begann im Jahr 1879 mit der Vorführung des Phänomens der elektromagnetischen Wellen durch David Edward Hughes an der Akademie der Naturwissenschaften . Ein paar Jahre später reproduzierte der Physiker Heinrich Rudolf Hertz die Maxwell ' sche Theorie und damit die Beobachtungen von David Edward Hughes : Ein Oszillator erzeugte einen Funken , der in einem Empfänger in der Nähe wiederum eine Spannung erzeugte .
+
+Aus diesem physikalischen Phänomen heraus entstand auch der heutige Name der Funktechnik , obwohl heute von keinem Mobilfunkgerät Funken erzeugt werden .
+
+Im Jahr 1897 entwickelte Guglielmo Marconi das erste brauchbare System zur drahtlosen telegrafischen Übertragung ( Morsen ) . Schon 1901 gelang es Guglielmo Marconi die ersten Signale über den Atlantik zu übertragen . Ab dem damaligen Zeitpunkt wurden die ersten kommerziellen Funkgeräte für Militär und Schifffahrt gebaut und genutzt . 1910 erfand Robert von Lieben die erste Elektronenröhre mit Verstärkerwirkung , die zu kleineren und leichteren Geräten ohne funkenbildende Sender führte . 1935 gab es bereits das erste Autotelefon . Das Sende - und Empfangsgerät wurde damals im Kofferraum des Autos montiert und füllte diesen Platz vollständig aus .
+Mobilfunk in Deutschland - Analoge Mobilfunksysteme
+Die ersten Mobilfunknetze waren analoge Mobilfunksysteme , die ihren Ursprung im amerikanische Mobilfunkstandard Advanced Mobile Phone System ( AMPS ) haben . Er gehört zur ersten Generation ( 1G ) der Mobilfunknetze . Er hat mit N - AMPS und D - AMPS einige technologischen Erweiterungen erfahren .
+
+In Deutschland war es 1952 erstmals möglich von einem mobilen Endgerät aus einen Teilnehmer im Festnetz anzurufen . Es entstanden immer mehr lokale Funksysteme die nur eine Stadt versorgte . Die Verbindung ins Festnetz bzw . umgekehrt war nur über eine Handvermittlung möglich . Die Mobilfunkgeräte konnten nur in dem dazupassenden Netz genutzt werden . In einer anderen Stadt war das dann unter Umständen nicht mehr möglich , da dort ein anderes System installiert war .
+A - Netz
+Aus Umständen , der ersten Mobilfunkversuche , entstand 1958 das erste öffentliche Mobilfunknetz , das landesweit funktionierte . Dieses Mobilfunknetz wird als A - Netz bezeichnet und basierte auf einer handvermittelten Verbindungsaufnahme . Jede Basisstation war für jedes Funktelefon nutzbar .
+
+In den Funktelefonen waren noch Röhrenverstärker eingebaut . Die Geräte waren sehr groß und kosteten rund 15 . 000 DM . Während dem Telefonieren musste der Motor laufe , damit die Autobatterie nicht leer wurde .
+B - Netz
+1972 wurde das B - Netz in Deutschland , Österreich , Niederlande und Luxemburg eingeführt . Es unterstützte die vollautomatische Vermittlung von kommenden und gehenden Gesprächen , sowie Roaming zwischen den beteiligten Ländern . Man war kaum erreichbar , weil der Anrufer wissen musste , wo sich der Teilnehmer sich befindet . Um telefonieren zu können musste man sich mit einem Radio - ähnlichen Gerät eine freie Frequenz suchen , um das Fräulein vom Amt anrufen zu können , die einen dann mit dem gewünschten Teilnehmer verbinden konnte .
+
+Es gab nur wenige Funkstationen . Deshalb war es schwierig einen freien Funkkanal zu finden . Insbesondere in Ballungszentren . Um einen freien Funkkanal zu bekommen , musst man an einem Radio - ähnlichen Gerät den automatischen Suchlauf mit einer Taste auslösen . Man musste sehr lange warten und viel Geduld haben , bis eine Verbindung aufgebaut war .
+
+Für Anrufe ins Mobilfunknetz musste der Anrufer zwingend den Aufenthaltsort bzw . die Ortsvorwahl wissen mit der das Mobilfunkgerätes erreichbar werden konnte . Die Rufnummer setzte sich aus der Ortsrufnummer , der Vorwahl " 05 " und der Mobilfunknummer zusammen . Um einen Teilnehmer zu erreichen , hatte jeder Teilnehmer zusätzlich eine Eurosignal - Rufnummer .
+
+Insgesamt hatte das B - Netz 27 . 000 Teilnehmer . Die Grundgebühr war 270 Mark im Monat plus Funkkanalzuschlag .
+
+Der Frequenzbereich lag zwischen 148 und 163 MHz . Die Signale waren FM - moduliert . Die Gespräche waren nicht verschlüsselt . Mit einem normalen Funkempfänger konnte man alle Gespräche abhören .
+C - Netz
+Am 1 . Mai 1986 wurde dann das C - Netz in Deutschland eingeführt . Es beherrschte die automatische Weitervermittlung ( Handover ) eines Mobilgerätes zwischen den Funkzellen der Basisstationen . Die vollautomatische Mobilitätsverwaltung aktualisierte ständig den Standort des Mobilfunkgerätes , so dass eingehende Anrufe ohne manuelle Vermittlung an ihr Ziel weitergeleitet werden konnte .
+
+Die Benennung der Mobilfunknetze nach A , B , C und so weiter entspricht keiner besonderen Bedeutung . Es handelt sich um einen Zufall .
+
+Während das B - Netz eine länderübergreifende Mobilfunktechnik war , war das C - Netz nur auf Deutschland beschränkt . In den 80er Jahren entstanden in Europa sehr viele dieser zueinander inkompatiblen Mobilfunksysteme .
+Netz
+A - Netz
+B - Netz
+C - Netz
+Einführung
+1958
+1972
+1 . 5 . 1986
+Abschaltung
+1977
+2 . 1 . 1995
+31 . 12 . 2000
+Teilnehmer
+ca . 10500
+ca . 27000
+ca . 850000
+Frequenzen
+um 150 MHz bei 80 % Flächendeckung
+B1 148 , 40 - 149 , 14 MHz ( Downstream )
+
+B1 153 , 00 - 153 , 74 MHz ( Upstream )
+
+B2 157 , 60 - 158 , 34 MHz ( Downstream )
+
+B2 162 , 20 - 162 , 94 MHz ( Upstream )
+461 , 30 - 465 , 74 MHz ( Downstream )
+
+451 , 30 - 455 , 74 MHz ( Upstream )
+Besonderheiten
+manuelle Kanalsuche ,
+
+Verbindungsaufbau über Operator
+Roaming mit NL , LUX und A , direkter Verbindungsaufbau mit Netzkennzahlen
+propritäre Mobilfunktechnik von Siemens ( C - 450 ) ,
+
+vollautomatischer Verbindungsaufbau
+Die 2 . Generation der Mobilfunktechnik
+Die 2 . Generation ( 2G ) von Mobilfunknetzen basieren auf der DCS - Technik ( Digital Cellular System ) . Die Entwicklung der länderübergreifenden Standards DECT und GSM führten schließlich zum Durchbruch der schnurlosen Sprachübertragung und zur Entwicklung eines globalen digitalen Mobilfunknetzes .
+
+Im Jahr 1979 wurde bereits der Frequenzbereich um 900 MHz für ein neues Mobilfunksystem festgelegt . 1982 wurde ein Arbeitsgruppe vom CEPT ( Conférence Européenne des Postes et Télécommunications ) eingesetzt . Diese nannte sich " Groupe Spéciale Mobile " , kurz GSM , mit der Aufgabe ein europäisches Mobilfunksystem zu erarbeiten . Mit der weltweiten Verbreitung wurde aus GSM das " Global System für Mobile Communications " . Die GSM erarbeitete die Spezifikation , baute das Test - Netz auf und testet die ersten Prototypen . Im Jahr 1987 einigte man sich auf die digitale Technik , die mit leichten Änderungen in den D - Netzen eingesetzt wird . In einer Absichtserklärung haben sich dann 13 Netzbetreiber aus 12 europäischen Ländern geeinigt das neue Mobilfunktnetz in Betrieb zu nehmen . In einer dreijährigen Arbeit wurde die Spezifikation überarbeitet und aktulisiert . Es entstand ein 5 . 000 Seiten starkes Mammutwerk .
+
+1992 gingen 13 Netze in 7 Ländern an den Start . Darunter die beiden D - Netze ( D1 und D2 ) in Deutschland von T - Mobile ( ehemals T - Mobile ) und Vodafone ( ehemals Mannesmann Mobilfunk AG ) . Die GSM - Technik , zuverlässig und technisch ausgereift , verbreitete sich schnell erfolgreich über die ganze Welt . Ende 1993 hatten alle GSM - Mobilfunknetze über eine Millionen Teilnehmer . Ende 2000 sind es etwa 400 Millionen in 370 Netzen in mehr als 140 Ländern gewesen .
+
+1990 wurde zusätzlich zu 900 MHz der Frequenzbereich um 1800 MHz für GSM reserviert . Auf Basis der GSM - 900 - Spezifikation wurde DCS - 1800 ( Digital Cellular System 1800 ) entwickelt . Der neue Standard berücksichtigte die Besonderheiten der Frequenzen um 1800 MHz für den Mobilfunk .
+
+Die große Nachfrage der Kunden in Deutschland nach Mobilfunk - Produkten machte es erforderlich zwei weitere Netze auf Basis des DCS - 1800 - Standards freizugeben . Dazu startete im Sommer 1994 E - Plus mit einem dritten Mobilfunknetz in Deutschland . Am 1 . Oktober 1998 zog O2 ( ehemals Viag Interkom ) mit einem vierten Netz nach .
+
+Die große Konkurrenz unter den 4 Mobilfunkanbietern führte zu einem schnellen sinken der Preise für Mobilfunk - Telefonie und damit zum Durchbruch im Massenmarkt .
+Weiterentwicklung
+Seit dem Abschluss der Standardisierung im Jahr 1990 wurde GSM immer weiterentwickelt . So wurde nicht nur DCS - 1800 für die E - Netze entwickelt , sondern auch PCS - 1900 , die amerikanische Variante von GSM . PCS steht für Personal Communication System und arbeitet im Frequenzbereich um 1900 MHz . Das erste Netz ging im Mai 1997 in Betrieb .
+
+Im Jahr 1995 wurde die zweite Phase von GSM spezifiziert . Neben der Verbesserung der Sprachqualität wurden auch Leistungsmerkmale , wie z . B . Anklopfen und Faxübertragung hinzugefügt . In der anschließenden GSM - Phase - 2 + wurden jährlich neue Leistungsmerkmale und Verbesserungen verabschiedet . Dazu gehören auch Datendienste und intelligente Netzfunktionen . Bis ins Jahr 2000 umfasste die Spezifikation inzwischen ca . 10 . 000 Seiten .
+
+Mit der Einführung von GSM wurde erstmals auch das Thema Datenübertragung über Mobilfunk aufgegriffen . Prinzipiell war das möglich , aber mit einer sehr geringen Übertragungsrate verbunden . Schnell kam man auf die Idee , wie im ISDN mehrere Kanäle zu bündeln . Daraus entstand HSCSD und GPRS .
+
+Zum 1 . August 2000 wurde die GSM - Standardisierung dem 3GPP ( 3rd Generation Partnership Projects ) übergeben . 3GPP ist eine Kooperation zwischen verschiedenen Standardisierungsbehörden aus Europa , USA und Asien . Das Ziel dieser Kooperation ist die Standardisierung der Mobilfunksysteme der 3 . Generation ( 3G ) und somit dem bekannten UMTS .
+Die Zukunft des Mobilfunks
+Es gibt sehr viele Meinungen , wie die Zukunft des Mobilfunks aussehen und funktionieren wird . Eines ist jetzt schon sicher , es wird wesentlich komplexer und nicht einfach nur ein schnelleres Übertragungsverfahren bringen , wie es beim Wechsel von GSM auf UMTS war . Zwar spielen die Übertragungstechniken LTE und WiMAX auf der Netzzugangsseite eine große Rolle . Doch in der Hauptsache werden verschiedene Konzepte , technische Ansätze und auch Dienste und Anwendungen in die 4 . Generation ( 4G ) der Mobilfunktechnik einfließen . Die Grundidee ist ein weiterentwickeltes Mobilfunknetz , dessen Endgeräte dafür sorgen " always - online " zu sein .
+
+Die Nutzer haben gelernt , die Möglichkeiten des Internets zu nutzen . Das Internet , wie auch das Telefon , immer bei sich zu tragen , ist die zentrale Anforderung an das Mobilfunknetz der 4 . Generation . Das bedeutet , dass der Nutzer zu jeder Zeit und an jedem Ort mit dem Internet verbunden ist . Dieser Wunsch der Netzteilnehmer macht es erforderlich verschiedene Mobilfunktechniken in ein Netz zu integrieren . Denn kein Zugangsnetz kann diese Anforderungen alleine stemmen . Der Kunde hat dann die Möglichkeit mit einem Endgerät und einem Tarif Zugang zu allen Netzen zu bekommen , ohne dass er sich darum kümmern muss , welche Netze verfügbar sind . Das Endgerät sucht sich immer das beste zu empfangende Netz . Der Kunde merkt davon nichts . Netzbetreiber und auch Hersteller , die diese technologische Leistung nicht erbringen können , werden in Zukunft keine Rolle spielen .
+
+Um die unterschiedlichen Funktechniken zusammenzuführen , müssen die Zugangs - und Kernnetze der Netzbetreiber umgebaut werden . Die unterschiedlichen Funktechniken dienen dann als Zugangspunkte zum Kernnetz . Die Folge sind Netzzusammenschaltungen der Netzbetreiber . Über Kooperationen und Peerings wird den eigenen und fremden Kunden die bestmögliche Verfügbarkeit der Mobilfunknetze gewährleistet .
+Bereits jetzt ist klar , dass das Internet Protocol ( IP ) als Vermittlungstechnik eingesetzt wird . Aus Kostengründen und der Integrierbarkeit von Datendiensten wird kein Netzbetreiber darauf verzichten können . Sogar sprachbasierte Dienste , wie Telefonie , werden über das Internet Protocol abgewickelt . Das Ziel ist es zwischen Daten und Sprache keinen Unterschied mehr zu machen . Auf Basis eines Software - gesteuerten Netzes und des Internet Protocol ( IP ) werden bestimmte Dienste und Anwendungen fester Bestandteil der Mobilfunknetze . Dazu zählt auch Mobile Payment und Instant Messaging .
+
+Da sich Dienste und Anwendungen aus dem Internet wachsender Beliebtheit freuen , wird auch der Bedarf nach einem jederzeit und überall verfügbaren mobilen Datenzugang weiter zunehmen . Dies hat zur Folge , dass zukünftige Mobilfunknetze immer höhere Übertragungskapazitäten erreichen müssen .
+In der Zukunft spielen Verfahren zur Steigerung von Kapazitäten und Datenraten in Mobilfunknetzen eine große Rolle . Schon jetzt ist absehbar , dass optimierte Mehrantennenkonzepte und zellübergreifende Kooperationstechniken die Schlüsseltechnologien für die nächste Mobilfunkgeneration bilden .
+
+Um die spektrale Effizienz und die Leistungsfähigkeit der Mobilfunksystem zu verbessern wird an Weiterleitungs - und Interferenzreduktionsverfahren geforscht . Bisher müssen die theoretisch hergeleiteten Ergebnisse unter praktischen Bedingungen noch verifiziert werden .
+Digitale Dividende
+Im Zuge der Digitalisierung der terrestrischen TV - Ausstrahlung mit DVB - T ( digitales Fernsehen ) wurden Frequenzen im Bereich zwischen 790 und 862 MHz frei . Dank Kompression passen in einem alten TV - Kanal drei bis sechs Fernsehprogramme ( Standardauflösung ) . Dabei wurden Frequenzen eingespart . Man bezeichnet diese Frequenzen als digitale Dividende , die durch die Umstellung der terrestrischen TV - Ausstrahlung von analog auf digital ( DVB - T ) frei wurden . Es handelt sich dabei um einen Frequenzbereich von 72 MHz am oberen Ende des bisherigen UHF - Fernsehbandes III ( Kanäle 61 bis 69 ) .
+
+Das Frequenzspektrum unter 1000 MHz ist bei den Mobilfunknetzbetreibern besonders begehrt . Um ein großes Gebiet mit Mobilfunk abzudecken sind vergleichsweise wenige Sendemasten notwendig , im Vergleich zu den Frequenzbereichen um 1 , 8 und 2 , 6 GHz . Das bedeutet , dass in einem niedrigeren Frequenzbereich der Netzausbau mit geringeren Kosten verbunden ist . Höhere Frequenzbereich eignen sich eher für kleine Zellen in Städten und Ballungsgebieten .
+
+Der frei gewordene Frequenzbereich wird nun für den Ausbau von schnellen Internet - Anschlüssen auf dem Land genutzt . Ziel ist es , dass Internet - Anschlüsse mit mindestens 1 MBit / s flächendeckend in Deutschland zur Verfügung stehen . Die Frequenzen wurden von Mobilfunknetzbetreibern ersteiert . Die Nutzung der Frequenzen ist mit einer Ausbauverpflichtungen für die " weißen Flecken " belegt . Also für ländliche Gebiete , die bisher nicht mit Breitband versorgt sind .
+Mobilfunktechnik
+C - 450 ( C - Netz )
+GSM - Global System for Mobile Communications
+HSCSD - High Speed Circuit Switched Data
+GPRS - General Packet Radio Service
+EDGE - Enhanced Data Rates for GSM Evolution
+UMTS - Universal Mobile Telecommunications System
+HSPA - Highspeed Paket Access
+HSPA +
+LTE - Long Term Evolution
+Mobilfunk - Dienste und Mobilfunk - Anwendungen
+SMS - Short Message Service
+MMS - Multimedia Messaging Service
+Datenübertragung im Mobilfunknetz
+WAP - Wirless Application Protocol
+PoC - Push - to - Talk over Cellular
+Handy - TV ( DVB - H / DMB / MBMS )
+LBS - Location Based Services

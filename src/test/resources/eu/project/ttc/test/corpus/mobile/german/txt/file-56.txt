@@ -1,0 +1,92 @@
+Kundenmeinung :
+
+Die Kommunikationstechnik - Fibel ist sehr informativ und verständlich . Genau das habe ich schon seit langem gesucht . Endlich mal ein Buch , das kurz und bündig die moderne Informationstechnik beleuchtet .
+Kommunikationstechnik - Fibel
+
+jetzt bestellen !
+Das Buch zu dieser Webseite
+Netzwerktechnik - Fibel
+Kundenmeinung :
+
+Die Netzwerktechnik - Fibel ist sehr informativ und verständlich . Genau das habe ich schon seit langem gesucht .
+Netzwerktechnik - Fibel
+
+jetzt bestellen !
+Elektronik - Kompendium . de > Kommunikationstechnik
+WAP - Wireless Application Protocol
+WAP steht für Wireless Application Protocol . Es ist ein Sammlung von Protokollen und Spezifikationen , die die Übertragung und Darstellung von speziellen Inhalten auf kleinen mobilen Endgeräten übernimmt . Im Gegensatz zu Computern haben mobile Endgeräte nur eine knappe Ausstattung :
+kleines Display mit geringer Auflösung
+geringe Speicherkapazität
+geringe Rechenleistung
+geringe Übertragungskapazität im Mobilfunknetz
+kleine / eingeschränkte Bedienungselemente
+Das für die Entwicklung von WAP verantwortliche WAP - Forum hat besonderen Wert darauf gelegt , dass auch Geräte mit knappen Ressourcen und geringen Hardware - Voraussetzungen über WAP Zugang zu Diensten und Informationen haben können .
+
+Die Standardisierung von WAP durch das WAP - Forum erfolgte 1997 . Dem WAP - Forum gehören viele Hersteller aus der Mobilfunk - Branche an . Außerdem werden Kontakte zu anderen Standardisierungsorganisationen unterhalten . Z . B . dem ETSI im Mobilfunkbereich und dem W3C im Internet - Bereich .
+WML - Wireless Markup Language
+Aufgrund der kleinen Displays mobiler Endgeräte ist WML , die Wireless Markup Language , für die Darstellung der Informationen und Dienste verantwortlich . Diese Seitenbeschreibungssprache ist das Gegenstück von HTML ( Hypertext Markup Language ) im Internet - Bereich . WML hat mit HTML allerdings nur eine geringfügige Ähnlichkeit . WML ist von der Struktur so aufgebaut , dass es die Bedienung mobiler Engeräte erleichtert . Eine WML - Informationsseite wird als Deck ( Kartenstapel ) bezeichnet . Innerhalb eines Decks befinden sich eine oder mehrere Cards ( Karten ) . Zum mobilen Endgerät wird immer das Deck übertragen . Im Display wird aber nur eine Card angezeigt .
+
+WML stellt Befehle und Formatierungsmöglichkeiten bereit , die allerdings nicht von jedem WML - Browser unterstützt werden müssen :
+Gliederungselemente
+Tabellen
+Text - Formate ( dick , kursiv , unterstrichen )
+Verknüpfungen / Anker / Links
+Auswahllisten / Menüs / Formularelemente
+Bilder im WBMP - Format
+WMLScript ( mit Handy - Funktionen )
+Mit WML lassen sich durchaus interaktive Anwendungen erstellen . In Kombination mit WTA ( Wireless Telephony Applications ) steht eine programmierbare Schnittstelle zur Realisierung von Telefondiensten zu Verfügung . Beispielsweise um auf ein entfernt abgelegtes Telefonbuch zuzugreifen oder eine Telefonauskunft abzurufen .
+WML - Beispiel
+< ? xml version = " 1 . 0 " ? >
+
+< ! DOCTYPE wml PUBLIC " - / / WAPFORUM / / DTD WML 1 . 1 / / EN " " http : / / www . wapforum . org / DTD / wml _ 1 . 1 . xml " >
+
+< wml >
+
+< card id = " card1 " title = " Erste Karte " >
+
+< p > Erste Card im Deck < / p >
+
+< / card >
+
+< card id = " card2 " title = " Zweite Karte " >
+
+< p > Zweite Card im Deck < / p >
+
+< / card >
+
+< / wml >
+WML wird zwar im ASCII - Format geschrieben und gespeichert allerdings in einem kompakteren Binärformat an das mobile Endgerät geschickt .
+WAP - Netzarchitektur
+Auf dem mobilen Endgerät befindet sich eine Software , die WML darstellen kann und in der Lage ist über URLs adressierte Daten abzurufen . WAP ist nicht an einen bestimmten Mobilfunk - Standard gebunden . Als Trägerdienst oder Übertragungsnetzwerk kann GSM mit SMS , CSD , HSCSD oder GPRS dienen . Ebenso UMTS oder sogar DECT und andere zukünftige Netze sind möglich . WAP ist an dieser Stelle flexibel spezifiziert .
+
+
+Wo die Daten abgelegt werden und wie sie den Weg zum mobilen Endgerät finden , dazu gibt es mehrere Möglichkeiten . Im einfachsten Fall befinden sich die Daten auf einem speziellen WTA - Server , der direkt im oder am Mobilfunknetz angeschlossen ist . Die Daten werden dann als binäres WML zum Endgerät übertragen .
+
+Alternativ sind die Daten im Internet auf einem Webserver gespeichert . Evt . befinden sich die Daten dort im WML - Format oder werden im WML - Format ausgegeben . Die Daten nehmen ihren Weg zum WAP - Gateway ins Mobilfunknetz und werden dort in binäres WML konvertiert und an das Endgerät übermittelt . Liegen die Daten nicht in WML vor , sondern in HTML , so übernimmt ein HTML - Gateway die Umwandlung in WML , bevor die Daten an das WAP - Gateway geschickt werden . Die automatisierte Konvertierung von HTML nach WML hat jedoch einige Schwächen , da die Struktur von WML mit HTML nicht vereinbar ist .
+Typische WAP - Anwendungen
+Reiseführer
+Fahrplanauskunft der öffentlichen Verkehrsmittel
+Telefonauskunft
+Währungsrechner
+Nachrichtendienste
+Kalender
+Börsenkurse
+Routenplaner
+Verkehrsinformationen
+Marktentwicklung
+Als WAP aufkam , gab es noch keine farbigen Displays in den Handys . Für WAP wurde ein Endgerät mit einem WML - fähigen Browser benötigt . Lange Zeit wurde die Parole ausgerufen , dass speziell aufbereitete Inhalte abrufbar gemacht werden müssen . Statt , wie gewohnt Vollformat - Webseiten nur speziell für WAP aufbereitete Seiten . Damals erlebte man Datenübertragung im Mobilfunknetz im Schneckentempo , als teuer und mit kaum lieferbaren Endgeräten . Letztlich hat das den Markt in seiner Entwicklung behindert . In Japan dagegen hat i - mode einen ungeahnten Boom erlebt . Dort wurde der Service auch nur mit einer geringen monatlichen Gebühr belegt .
+i - mode
+i - mode ist im Gegensatz zu WAP ein geschlossenes System , bei dem die Inhalte über die i - mode - Zentrale abgerufen werden müssen . Da die Netzstruktur und die Inhalte durch den Netzbetreiber vorgegeben sind , handelt es sich dabei um ein qualitativ hochwertiges System .
+
+i - mode basiert auf auf einer Paketvermittlung mit 9 , 6 kBit / s und wird nach übertragenen Daten abgerechnet . Der Dienst wird über E - Plus ( in Deutschland ) angeboten und bietet folgende Möglichkeiten :
+Flugtickets und Konzertkarten reservieren
+Kontostand abrufen und Überweisungen tätigen
+E - Mails versenden und empfangen
+Zugriff auf das Internet
+i - mode stammt ursprünglich aus Japan . Aufgrund bestimmter kultureller Begebenheiten ist i - mode dort ein Renner . Aus mangelndem Interesse wurde i - mode von E - Plus in Deutschland wieder eingestellt .
+Weitere verwandte Themen :
+Datenübertragung im Mobilfunknetz
+GPRS - General Packet Radio Service
+EDGE - Enhanced Data Rates for GSM Evolution
+GSM - Global System for Mobile Communications
+UMTS - Universal Mobile Telecommunications System

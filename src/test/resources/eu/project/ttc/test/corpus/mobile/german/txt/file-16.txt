@@ -1,0 +1,50 @@
+Datenübertragung im GSM-Netz
+
+Die beiden ersten Verfahren zur Übertragung von Daten in einem GSM-Netz sind CSD (Circuit Switched Data) einem leitungsvermittelten Datenübertragungsverfahren und SMS (Short Message Service) dem paketvermittelten verbindungslosen Kurzmitteilungsdienst, beschränkt auf 160 Zeichen pro Mitteilung.
+CSD wurde bereits zu Anfang von GSM angeboten. Die Nutzdatenrate war auf maximal 9,6 kBit/s beschränkt. In der GSM-Phase-2 hat man die Geschwindigkeit der Datenübertragung auf 14,4 kBit/s erhöht und dabei auf die Fehlerkorrektur der Daten verzichtet. Dabei sank die Qualität der Verbindung.
+Durch die GSM-Phase-2+ wurde die Bündelung mehrerer Kanäle ermöglicht. Der Datendienst HSCSD (High Speed Circuit Switched Data) führt zu einer höheren Datenrate. Da beide Techniken leitungsvermittelte Übertragungsverfahren sind, erfolgt die Abrechnung auf Basis der Verbindungszeit. Für die klassische Anwendung des Internet-Zugangs ist das alles andere als optimal. Schnell etablierte sich GPRS (General Packet Radio Service), das nur eine virtuelle Verbindung aufbaut und auf Basis der übertragenen Datenmenge abgerechnet wird.
+
+    * CSD - Circuit Switched Data
+    * HSCSD - High Speed Circuit Switched Data
+    * GPRS - General Packet Radio Service
+    * EDGE - Enhanced Data Rates for GSM Evolution
+
+Datenübertragung mit UMTS-Netz
+
+Mit UMTS wurde erstmals ein Mobilfunkstandard eingeführt, der neben Sprache auch grundsätzliche schnelle Datenübertragungen zulässt. Eine Bruttodatenrate von 384 kBit/s ermöglicht eine Nettodatenrate von 360 kBit/s oder 45 kByte/s. Rund 10% der Bandbreite gehen bei UMTS für den Overhead verloren.
+UMTS ist im Vergleich zu DSL sehr träge. Beim Verbindungsaufbau dauert es recht lange. Wenn dann aber mal Daten fließen, dann geht es recht zügig. Die Downloads flutschen recht schnell. Am besten fühlt sich UMTS bei Vodafone an. Vodafone setzt auf kleinere Datenpakete. Kleinere Datenpakete haben bei der Übertragung eine höhere Priorität. Dafür dauert die Übertragung größerer Datenblöcke etwas länger.
+Ein weiterer Grund für die Verzögerung ist die Ramp-up-Zeit. Der UMTS-Nutzer ist zwar ständig mit dem Netz verbunden. Wenn aber gerade keine Daten übertragen werden, sinkt seine Priorität. Wenn wieder Datenverkehr ausgelöst wird, dann dauert es zwei bis drei Sekunden, bis die Daten beim Empfänger ankommen (Latenzzeit). Bei Vodafone liegt die Ramp-up-Zeit zwischen 800 bis 850 ms. Bei optimalen Verhältnissen erreicht man mit UMTS Latenzzeiten von 100 ms. In der Praxis zwischen 130 und 150 ms. Bei sporadischen Zugriffen und geringem Datenfluss sind es nur noch 250 bis 300 ms.
+Grundsätzlich vermindert ein schlechtes Empfangssignal den theoretischen Durchsatz von 45 kByte/s (Downstream) nur wenig. Dafür reichen ein oder zwei Balken von 5 Balken aus (Empfangsstärkeanzeige im Handy-Display). Die genaue Empfangsstärke bei Handys lässt sich nicht genau ablesen. Bei mehr als -98 dBm bricht die Datenrate ein.
+
+HSPA (High Speed Packet Access) und HSPA+ sind Weiterentwicklungen von UMTS. Mit HSPA und HSPA+ erzielt man im Vergleich zu UMTS höhere Datenraten mittels höherer Packungsdichte (höherwertige Modulationen) und mehreren räumlich getrennten Übertragungsströmen.
+
+    * UMTS - Universal Mobile Telecommunications System
+    * HSPA - Highspeed Paket Access
+    * HSPA+ / HSPA Evolution
+
+Datenübertragung im LTE-Netz
+
+Long Term Evolution, kurz LTE, ist die erste weltweit gültige Mobilfunktechnik für Nordamerika, Europa und Asien. LTE ist eine Weiterentwicklung von UMTS und HSPA. LTE ist vollständig auf die Übertragung von Daten ausgerichtet.
+
+    * LTE - Long Term Evolution
+    * LTE-Netzarchitektur
+    * UMTS-Übertragungstechnik
+    * LTE Advanced
+    * Long Term HSPA Evolution
+
+Latenzzeit, die Spaßbremse im Mobilfunknetz
+
+Die Latenzzeit ist die Laufzeit eines Datenpakets vom Sender zum Empfänger. Je nach Mobilfunknetz, Übertragungsverfahren, Endgerät und Standort kann die Latenz variieren. Anwendungen, die eine kurze Latenzzeit erwarten funktionieren im Mobilfunk eventuell nicht.
+Mangelhafte Darstellungsqualität von abgerufenen Bildern über GPRS/EDGE/UMTS/HSDPA
+
+Wer über einen Datentarif von T-Mobile, Vodafone oder E-Plus online geht, der wird vielleicht schon festgestellt haben, dass die Bilder im Browser pixeliger oder matschiger aussehen. Die abgerufenen Webseiten werden von den genannten Mobilfunkanbietern durch einen Proxy geschickt, der JPG- und GIF-Dateien zusätzlich komprimiert. Einerseits wird dadurch der Traffic reduziert, wodurch Geld gespart wird. Andererseits wird im einen oder anderen Fall die Darstellung sehr schlecht sein.
+Bei T-Mobile kann man den Proxy abstellen, indem man beim ersten Webseitenaufruf auf der Konfigrationsseite auswählt, ob man die Webseite komprimiert oder unkomprimiert abrufen möchte.
+Für Vodafone gibt es ein Tool mit dem namen High Performance Client, mit dem sich das Verhalten des Proxys steuern lässt. Das Programm funktioniert auch bei E-Plus.
+Einzig O2 komprimiert die übertragenen Webseiten nicht. Es leitet die abgerufenen Webseiten ohne Proxy direkt zum Empfänger.
+Dienste für die Datenübertragung
+
+    * SMS - Short Message Service
+    * MMS - Multimedia Messaging Service
+    * WAP - Wireless Application Protocol
+    * Push-to-Talk
+    * LBS - Location Based Services

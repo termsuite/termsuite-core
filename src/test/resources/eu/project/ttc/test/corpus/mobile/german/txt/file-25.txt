@@ -1,0 +1,250 @@
+Bluetooth (englische Aussprache ˈbluːtuːθ) ist ein in den 1990er-Jahren durch die Bluetooth Special Interest Group (SIG) entwickelter Industriestandard gemäß IEEE 802.15.1 für die Datenübertragung zwischen Geräten über kurze Distanz per Funktechnik (WPAN). Dabei sind verbindungslose sowie verbindungsbehaftete Übertragungen von Punkt zu Punkt und sogenannte Ad-hoc- oder Piconetze möglich.
+
+Die Funkverfahren (englisch wireless technology) für Bluetooth wurden ursprünglich in wesentlichen Teilen durch den niederländischen Professor Jaap Haartsen und den Schweden Dr. Sven Mattisson für Ericsson entwickelt. Andere Teile wurden vor allem von Nokia und Intel ergänzt. Bluetooth bildet dabei die Schnittstelle, über die sowohl mobile Kleingeräte wie Mobiltelefone und PDAs als auch Computer und Peripheriegeräte miteinander kommunizieren können. Hauptzweck von Bluetooth ist das Ersetzen von Kabelverbindungen zwischen Geräten.
+Inhaltsverzeichnis
+ [Verbergen] 
+
+    * 1 Technischer Hintergrund
+    * 2 Geschichte von Bluetooth
+    * 3 Aktueller Standard: Bluetooth 4.0
+    * 4 Ältere Bluetooth-Versionen
+    * 5 Klassen und Reichweite
+    * 6 Abhör- und Eindringsicherheit
+    * 7 Fehlerbehandlung
+    * 8 Systemarchitektur
+    * 9 Bluetooth-Basisband
+    * 10 Verbindungsaufbau
+    * 11 Bluetooth-Protokollarchitektur
+    * 12 Energiesparmodi
+    * 13 Protokollstapel Low Energy
+    * 14 Sicherheitsmodi
+    * 15 Bluetooth-Profile
+    * 16 Bluetooth am PC
+          o 16.1 Bluetooth-Anwendungen am Computer
+    * 17 Bluetooth am Mac
+    * 18 Bluetooth-Protokollstapel
+    * 19 Andere Anwendungen
+          o 19.1 Spielgeräte
+          o 19.2 Kommunikation
+          o 19.3 Industrie
+          o 19.4 Haustechnik
+          o 19.5 Medizintechnik
+    * 20 Siehe auch
+    * 21 Literatur
+    * 22 Weblinks
+    * 23 Einzelnachweise und Anmerkungen
+
+Technischer Hintergrund [Bearbeiten]
+
+Geräte nach den Standards der Bluetooth SIG senden als Short Range Devices(SRD) in einem lizenzfreien ISM-Band (Industrial, Scientific and Medical Band) zwischen 2,402 GHz und 2,480 GHz. Sie dürfen weltweit zulassungsfrei betrieben werden. Störungen können aber zum Beispiel durch WLANs, Schnurlostelefone oder Mikrowellenherde verursacht werden, die im gleichen Frequenzband arbeiten. Um Robustheit gegenüber Störungen zu erreichen, wird ein Frequenzsprungverfahren (Frequency Hopping) eingesetzt, bei dem das Frequenzband in 79 verschiedene Frequenzstufen im 1-MHz-Abstand eingeteilt wird, die bis zu 1.600-mal in der Sekunde gewechselt werden. Es gibt jedoch auch Pakettypen, bei denen die Frequenz nicht so oft gewechselt wird (Multislot-Pakete). Am unteren und oberen Ende gibt es jeweils ein Frequenzband als Sicherheitsband (Guard Band) zu benachbarten Frequenzbereichen. Theoretisch kann eine Datenübertragungsrate von 706,25 kbit/s beim Empfang bei gleichzeitigen 57,6 kbit/s beim Senden erreicht werden (asymmetrische Datenübertragung).
+
+Ab der Version 2.0 + EDR können Daten mit EDR (Enhanced Data Rate) maximal etwa dreimal so schnell übertragen werden, also mit rund 2,1 Mbit/s. Bereits ab Version 1.1 kann ein Bluetooth-Gerät gleichzeitig bis zu sieben Verbindungen aufrechterhalten, wobei sich die beteiligten Geräte die verfügbare Bandbreite teilen müssen (shared medium).
+
+Bluetooth unterstützt die Übertragung von Sprache und Daten. Allerdings können die meisten Geräte während der Übertragung von Sprache aufgrund der synchronen Verbindung lediglich drei Teilnehmer in einem Piconet verwalten.
+
+Eine Sicherung und eine Verschlüsselung der transportierten Daten sind ebenfalls möglich.
+Geschichte von Bluetooth [Bearbeiten]
+
+Schon seit den späten 1980ern gibt es verschiedene Bestrebungen, das Kabelgewirr rund um eine Computerinstallation durch Funkperipherie (z. B. Funktastaturen, Drucker mit Infrarotschnittstelle etc.) zu vermeiden. Verschiedene Unzulänglichkeiten (hoher Stromverbrauch, gegenseitige Störungen, usw.) und vor allem fehlende Standards verhinderten den Durchbruch dieser Anfänge.
+
+Damals war neben der Funktechnik die Infrarottechnik sehr beliebt, und es sah so aus, als ob sich letztere durchsetzen würde. Um ein herstellerübergreifendes Protokoll zu entwickeln, schlossen sich im August 1993 ca. 30 Unternehmen (darunter HP, IBM, Digital) zusammen und gründeten die Infrared Data Association (IrDA). Ziel war es, ein einheitliches Protokoll für die Datenübertragung per Infrarot zu schaffen. Zahlreiche Erkenntnisse aus der IrDA-Entwicklung flossen später auch in den neugewonnenen Bluetooth-Funkstandard ein.
+
+Doch hatte die IrDA-Technologie mit einem zentralen Nachteil zu kämpfen: der erforderliche Sichtkontakt zwischen Sender und Empfänger. Daher wurde 1994 die Firma Ericsson mit einer Machbarkeitsstudie beauftragt, die einen funkbasierten Ersatz für Kabelverbindungen finden sollte. Die Studie lieferte ein positives Ergebnis, und 1998 gründeten Ericsson, Nokia, IBM, Toshiba und Intel die Bluetooth Special Interest Group (SIG) zur Ausarbeitung eines Standards, der verbindliche Spezifikationen festlegte. Als erste finale Spezifikation veröffentlichte die SIG Version 1.0a im Juli 1999, Version 1.0b folgte im Dezember desselben Jahres. Erst im Februar 2001 wurde der Standard in der Version 1.1 vorgelegt. Dieser galt als die erste solide Basis für marktgerechte Produkte, da die Vorversionen eine Reihe von Ungenauigkeiten und Fehlern aufwiesen.
+
+Die Namensgebung "Bluetooth" ist eine Hommage an den im 10. Jahrhundert lebenden dänischen Wikingerkönig Harald Blauzahn, der für seine Kommunikationsfähigkeit weitbekannt war. Harald Blåtand hatte Dänemark weitgehend christianisiert und vereint. Der Name "Bluetooth" war ursprünglich ein Codename für die entwickelte Technologie, der später mangels guter Alternativen auch als Markenname verwendet wurde. Die Wahl eines skandinavischen Namensgebers erfolgte aufgrund der hohen Beteiligung der Firmen Ericsson und Nokia an der Bluetooth-Entwicklung.
+Aktueller Standard: Bluetooth 4.0 [Bearbeiten]
+
+Die Spezifikation 4.0 wurde am 17. Dezember 2009 verabschiedet. Mit diesem Standard wurde erstmals der Protokollstapel Low Energy verfügbar[1] und neue Profile zu Low Energy kamen seitdem laufend hinzu. Entsprechende Chips waren in kleinen Stückzahlen bereits ab dem 4.Quartal 2010 verfügbar, weitere Hinweise ließen mit Bluetooth 4.0 ausgestattete Mobiltelefone ab dem 1.Quartal 2011 erwarten. Im Juni 2011 schließlich waren Bluetooth-4.0-konforme Chips bereits von Atheros, CSR, Nordic Semiconductor,[2] Texas Instruments sowie Toshiba verfügbar.
+
+    * Mit Low Energy ist es möglich, innerhalb von weniger als fünf Millisekunden eine Übertragung aufzubauen und diese bis zu einer Entfernung von 100 Metern aufrechtzuerhalten.
+    * Der wichtigste Vorteil bei Einsatz von Bluetooth Low Energy in zahlreichen neuen Endgeräten ist die Reduzierung des Stromverbrauchs durch die kürzere Aufbauzeit für eine Übertragung.
+    * Der Standard 4.0 ist abwärtskompatibel zu allen Vorgänger-Versionen. Für Verbindungen mit den bisherigen Protokollen kommt eine verbesserte Fehlerkorrektur zum Einsatz, für das erforderliche Maß an Sicherheit soll eine AES-Verschlüsselung mit 128 Bit verwendet werden.
+
+Ankündigungen zur Verfügbarkeit von Endgeräten mit Bluetooth 4.0 blieben bis Mitte 2011 spekulativ und ohne Bestätigung der Lieferbarkeit.[3] Am 20. Juli 2011 veröffentlichte Apple Meldungen über erste Geräte mit Bluetooth 4.0.[4]
+
+    * Die aktuellen Apple MacBook Air 2011 und Mac mini 2011 unterstützen als erste Apple-Produkte Bluetooth 4.0. [5][6]
+
+    * Das am 4. Oktober 2011 angekündigte Apple iPhone 4S unterstützt nun ebenfalls Bluetooth 4.0. [7][8]
+
+Ältere Bluetooth-Versionen [Bearbeiten]
+
+Eine Auswahl wichtiger Eigenschaften der bisherigen Bluetooth-Versionen, die inzwischen allesamt nicht mehr der letzten Überarbeitung zur Version 4.0 vom Dezember 2009 (s.o.) entsprechen, sind:
+
+    * Bluetooth 1.0 und 1.0B
+
+    Enthielt Sicherheitsprobleme durch Bluetooth Hardware Device Address Transmission (BD_ADDR); maximale Datenübertragungsrate von 732,2 kbit/s
+
+    * Bluetooth 1.1
+
+    Indikator für die Signalstärke hinzugefügt Received Signal Strength Indication (RSSI); maximale Datenübertragungsrate von 732,2 kbit/s
+
+    * Bluetooth 1.2 (November 2003)
+
+    Weniger empfindlich gegen statische Störer (zum Beispiel WLAN) durch Adaptive Frequency-Hopping spread spectrum (AFH); neue Pakettypen für synchrone Übertragung (eSCO); maximale Datenübertragungsrate von 1 Mbit/s
+
+    * Bluetooth 2.0 + EDR (November 2004)
+
+    Etwa dreifache Datenübertragungsgeschwindigkeit durch Enhanced Data Rate (EDR) mit maximal 2,1 Mbit/s; abwärtskompatibel, d. h. es können gleichzeitig EDR- und Nicht-EDR-Verbindungen bedient werden.
+
+    * Bluetooth 2.1 + EDR (auch Lisbon Release genannt, August 2007)
+
+    Neue Features wie Secure Simple Pairing, Quality of Service.
+
+    * Bluetooth 3.0 + HS (auch Seattle Release genannt, April 2009)
+
+    Für diese Version ist die Unterstützung eines zusätzlichen Highspeed (HS)-Kanals auf Basis von WLAN und UWB verfügbar. Die Nutzung von WLAN ist dabei lokal deutlich eingeschränkt. Die Kommunikation funktioniert zwischen einzelnen Geräten (Peer-to-Peer) und nicht im Multicast. Dafür muss sich der Nutzer auch nicht anmelden, die L2CAP-Protokollschicht wurde erweitert, um neben dem Standard-Bluetooth-Kanal zusätzlich diesen Highspeed-Kanal zu unterstützen. Damit kann eine theoretische Übertragungsrate von 24 Mbit/s erreicht werden.
+    Bei UWB (Ultrabreitband) als physikalische Übertragungsart (basierend auf der Spezifikation ECMA-368) und WiMedia MAC als Protokollschicht waren bis zu 480 Mbit/s geplant. Auf dieser Spezifikation hätten auch andere Protokolle wie WUSB und IP aufgesetzt werden sollen.
+    Die Spezifikation wurde im Oktober 2009 aufgegeben.[9]
+
+    * Bluetooth 3.0 + EDR
+
+Klassen und Reichweite [Bearbeiten]
+Klasse    	Max. Leistung       	Max. Leistung        	Reichweite im Freien
+Klasse 1 	100 mW 	20 dBm 	ca. 100 m
+Klasse 2 	2,5 mW 	4 dBm 	ca. 10 m
+Klasse 3 	1 mW 	0 dBm 	ca. 1 m
+
+Die tatsächlich erzielbare Reichweite hängt neben der Sendeleistung von einer Vielzahl unterschiedlicher Parameter ab. Hierzu zählen beispielsweise die Empfindlichkeit eines Empfängers und die Bauformen der auf Funkkommunikationsstrecken eingesetzten Sende- und Empfangsantenne. Ebenso können Umgebungseigenschaften mehr oder minder schweren Einfluss auf die Reichweite ausüben, beispielsweise durch massive Hindernisse in Form von Mauern innerhalb der Funkkommunikationsstrecken. Auch die verschiedenen Datenpakettypen können durch deren unterschiedlichen Paketlängen und angewandten Sicherungsmechanismen Einfluss auf die erzielbare Reichweite ausüben.
+
+Des Weiteren plant die Bluetooth SIG die Alternate MAC/PHY-Bluetooth-Erweiterung; hierbei wird Bluetooth um die PHY- und MAC-Schicht der IEEE-802.11-Spezifikationen (WLAN-Standards) erweitert, um damit höhere Übertragungsraten über das weltweit verfügbare 2,45-GHz-ISM-Frequenzband zu ermöglichen.
+Abhör- und Eindringsicherheit [Bearbeiten]
+
+Abhörsicher oder sicher gegen unbefugtes Eindringen sind Bluetooth-Übertragungen nur dann, wenn sie als Verbindung mit mehrstufiger dynamischer Schlüsselvergabe betrieben werden. Bei statischer Schlüsselvergabe ist die Sicherheit eingeschränkt. Bei Übertragung des Schlüssels ist genau dieser Teil der Kommunikation besonders gefährdet, da erst der erfolgreiche Schlüsselaustausch eine Verbindung schützt. Bluetooth gilt nur dann nicht mehr als sicher, wenn der PIN-Code zu kurz gewählt ist (etwa 4 Dezimalziffern oder weniger). Die israelischen Forscher A. Wool und Y. Shaked beschrieben in ihrem Artikel vom Frühjahr 2005[10] ein Verfahren, mit dem Lauscher eine vorhandene, abhörsichere Verbindung unterbrechen und unter Umständen in eine neue Verbindung einbrechen können. Dieses Daten-Phishing beruht darauf, eine bestehende Verbindung durch entsprechende Störsignale zu unterbrechen und die Teilnehmer dazu zu bewegen, erneut eine authentifizierte Verbindung aufzubauen. Dabei müssen die Angegriffenen erneut ihre PIN bei den verwendeten Geräten eingeben. Die daraufhin stattfindende Authentifizierung mit Neuaushandlung des Verbindungsschlüssels kann dann mit einfach erhältlicher Spezialhardware abgehört und bei schlecht gewählter (weil zum Beispiel achtstellig-numerischer) PIN durch Ausprobieren geknackt werden. Dieser Brute-Force-Angriff kann durch FPGA-Boards weiter beschleunigt werden. Dies ist kein rein akademischer Angriff, und zum Beweis existiert ein frei zugängliches Programm Namens BTCrack.[11] Der Angreifer befindet sich nach erfolgreichem Angriff im Besitz des geheimen Verbindungsschlüssels und kann beliebige Verbindungen zu den angegriffenen Geräten aufbauen. Jedoch muss der Angreifer die Bluetooth-Adresse eines verbundenen Bluetooth-Moduls kennen. Dies kann, entgegen weitläufiger Meinungen, nicht durch den "Unsichtbarkeitsmodus" unterbunden werden.[12][13]
+
+Die Autoren räumen aber ein, dass dieser Angriff nur möglich ist, wenn der Angreifer die Möglichkeit hat, die Kommunikation während des Pairing-Prozesses abzuhören, der Angegriffene eine Neu-Authentifizierung vornimmt und er dabei eine zu kurze PIN verwendet. Für Geräte, die die Schlüssel permanent speichern, besteht demnach keine Gefahr, da nach Verbindungsstörungen oder manuellem erneuten Verbindungsaufbau keine erneute PIN-Authentifizierung ausgelöst wird, sondern auf den auf beiden Geräten gespeicherten Schlüssel zurückgegriffen wird. Als Schutz vor solchen Angriffen empfehlen die Autoren daher, Gegenstellen möglichst selten mit PIN-Eingabe anzumelden. Sicherer sei es, einmal erkannte Gegenstellen dauerhaft in den jeweiligen Authentifzierungslisten zu speichern und eine Reauthentifizierung per PIN zu deaktivieren. Außerdem sollten Benutzer-PINs mit deutlich mehr als acht Zeichen Länge verwenden, falls die verwendete Software dies gestattet. Das Bluetooth-Protokoll sieht bis zu 16 beliebige Zeichen (128 Bit) vor. Darüber hinaus sollte eine unerwartete Aufforderung zur erneuten Authentifizierung hellhörig machen und zur Vorsicht mahnen.
+Fehlerbehandlung [Bearbeiten]
+
+Bluetooth kennt bis zur Version 2.0 zwei elementare Arten der Fehlerbehandlung (sofern verwendet):
+
+   1. 1/3- und 2/3-FEC-Blockcodierung; ermöglicht Fehlerkorrektur beim Empfänger
+   2. ARQ (Automatic Repeat Request), ermöglicht Fehlererkennung beim Empfänger. Bei Fehlern wird das entsprechende Paket neu angefordert.
+
+Systemarchitektur [Bearbeiten]
+Scatternet (Master = rot, Slave = grün, geparkt = blau)
+
+Ein Bluetooth-Netzwerk (Piconet) kann bis zu 255 Teilnehmer umfassen, von denen acht Geräte gleichzeitig aktiv sein können (3-bit-adressiert) und 247 (8-bit-adressiert) währenddessen geparkt werden. Alle nicht aktiven Geräte können im Parkmodus die Synchronisation halten und auf Anfrage im Netz aktiviert werden. Das dynamische Piconetz besteht aus einem Master und bis zu sieben weiteren Teilnehmern (Slave). Der Master steuert die Kommunikation und vergibt Sendeslots an die Slaves (Zeitmultiplexverfahren). Ein Bluetooth-Gerät kann in mehreren Piconetzen angemeldet sein, allerdings nur in einem Netz als Master fungieren. Bis zu zehn Piconetze bilden ein Scatternet (von to scatter = ausstreuen), wobei die Teilnehmer untereinander in Kontakt treten können. Hierbei wird jedes Piconet durch eine unterschiedliche Frequency-Hopping-Folge identifiziert. Die Datenrate leidet in diesem Scatternet jedoch meist erheblich.
+
+Solche selbstorganisierende Funknetzwerke - Scatternet - werden proprietär implementiert, es ist bis heute keine allgemeine Lösung standardisiert. Dies ist dadurch begründet, dass kein Algorithmus definiert werden kann, der allen Anforderungen an ein Scatternet gleichzeitig gerecht wird und hinreichend schlank und damit schnell bleibt.
+Bluetooth-Basisband [Bearbeiten]
+
+Es werden zwei unterschiedliche physische Datenkanäle zur Verfügung gestellt. Die synchrone Datenübertragung ist zur Übertragung von Sprachdaten, mit einer Datenrate von 64 kbit/s gedacht. Dieses Verfahren heißt leitungsvermittelte oder synchrone Verbindung (Synchronous Connection-Oriented - SCO). Die andere Übertragungsform ist die Paketvermittlung oder asynchrone Verbindung (Asynchronous Connectionless - ACL), die ein speicherndes Verhalten des Übertragungsgerätes voraussetzt, wie bei der Internet-Technik. Alles außer Sprache wird über ACL übertragen, neben allen Arten von Daten insbesondere auch Musik. Das Bluetooth-Protokoll unterstützt einen asymmetrischen Datenkanal mit Datenraten in der Version 1.2 von maximal 732,2 kbit/s in eine Richtung und 57,6 kbit/s in die Gegenrichtung, oder eine symmetrische Datenverbindung mit 433,9 kbit/s in beide Richtungen. In der EDR-Version sind höhere Datenraten erzielbar.
+
+Bis zur Version 1.2 gibt es für die SCO-Übertragung nur HV1, HV2 und HV3 Pakete mit guter Fehlerkorrektur (HV1) bis zu keiner (HV3). Diese Pakete enthalten Audiodaten für 1,25 ms, 2·1,25 ms oder 3·1,25 ms und werden dementsprechend alle 1,25 ms, 2·1,25 ms und 3·1,25 ms gesendet. HV1 kann benutzt werden, wenn keine anderen Daten gesendet werden müssen. Allerdings hat diese Betriebsart den höchsten Stromverbrauch, so dass fast alle Geräte die HV3-Pakete nutzen. Dies hat den Vorteil, dass man nur ein Drittel der Bandbreite für Audio benötigt und den Rest der Bandbreite für ACL-Verbindungen zum selben oder zu anderen Geräten zur Verfügung stellen kann.
+
+Mit der Version 1.2 wurde ein erweiterter synchroner Übertragungsmodus (enhanced SCO, eSCO) eingeführt. Dazu wurden neue Pakettypen und eine flexiblere Einteilung der Übertragungsperiode eingeführt. Ebenso ermöglicht dies, andere Audio-Formate zu übertragen wie z. B. der SBC-Codec der auch in der HFP-Version 2.0 eingeführt werden soll.
+
+Werden gerade keine synchronen Datenpakete versandt, kann Bluetooth die asynchrone Übertragung anbieten. Hierüber werden alle Dienste, sowohl das Versenden von Nutzdatenpaketen als auch die Übermittlung von Steuerinformationen, zwischen zwei Bluetooth-Stationen abgewickelt.
+
+Bluetooth-Datenpakete bestehen aus einem 72-Bit-Zugriffscode, einem 54-Bit-Header sowie einem variablen Nutzdatenfeld von 0 Bit bis 2745 Bit (Pakettyp DH5) Länge. Für Bluetooth 2.0+EDR sind bis zu 8168 Bit Nutzdaten pro Paket (3-DH5) möglich.
+Verbindungsaufbau [Bearbeiten]
+
+Der Aufbau einer Verbindung erfolgt immer unter der Protokollarchitektur nach Bluetooth V2.1 usw.[14] (Neu ist ab Standard Bluetooth V3.0 und mit dem Protokoll Bluetooth V4.0 Low Energy ein verbindungsloser Betrieb in Sende- und Empfangsrichtung möglich).[15] Eine Verbindung kann von einem beliebigen Gerät ausgehen, das sich dadurch zum Master über die antwortenden Slaves erhebt.
+
+Sobald Bluetooth-Geräte in Betrieb gesetzt werden, identifizieren sich die einzelnen Bluetooth-Controller innerhalb von zwei Sekunden über eine individuelle und unverwechselbare 48 bit lange MAC-Adresse. Im Standby-Modus lauschen unverbundene Geräte in Abständen von bis zu 2,56 Sekunden nach Nachrichten (Scan Modus) und kontrollieren dabei 32 Hop-Frequenzen. Der Kontakt zu den Slaves wird durch eine Inquiry-Nachricht (von inquiry (engl.) = Erkundigung) und danach durch eine Page-Message (von to page (engl.) = (per Lautsprecher) ausrufen, message (engl.) = Nachricht) hergestellt, falls die Hardware-Adresse der Geräte unbekannt ist. Bei bekannter Adresse fällt der erste Schritt weg. Im Page-Zustand sendet der Master 16 identische Page-Telegramme auf 16 unterschiedlichen Hopping-Frequenzen, die für die Slaves bestimmt sind. Danach befinden sich die Stationen im Status Verbunden. Durchschnittlich wird eine Verbindungsaufnahme innerhalb des halben Scanintervalls, z. B. 2,56/2 Sekunden (1,28 Sekunden), erreicht.
+
+Findet der Master keinen Slave innerhalb einer eingestellten Zeit, so werden auf weiteren 16 Hopping-Frequenzen Page-Telegramme gesendet. Diese Gruppierung soll bei bekannter Slave Clock einen zügigen Verbindungsaufbau gewährleisten. Beim adaptiven Hopping werden die Frequenzen ausgelassen, die bereits durch andere Master belegt sind.
+
+Seit 2005 kann zum Verbindungsaufbau zweier Bluetooth-Geräte optional NFC genutzt werden. Dieses zusätzliche RF-Protokoll unterstützt Bluetooth insbesondere beim erstmaligen Pairing von Bluetooth-OBEX.
+Bluetooth-Protokollarchitektur [Bearbeiten]
+
+Die Bluetooth-Spezifikation wurde von der Bluetooth Special Interest Group (SIG) entwickelt. Diese beinhaltet Protokolle in einer hierarchischen Ordnung (Protokollstapel, engl. protocol stack), mit denen interaktive Dienste und Anwendungen möglich werden, die über mobile Funkverbindungen kommunizieren. Diese werden mit Hilfe von Funkmodulen hergestellt und sind verbindungslos oder verbindungsorientiert.
+
+Die Bluetooth Special Interest Group (SIG) hat zudem auch verschiedene Einsatzmodelle der Bluetooth-Technologie entworfen. Die Spezifikation beinhaltet eine Beschreibung der Protokolle, mit denen diese Einsatzmodelle implementiert werden können. Spezielle Zusammenstellungen nach diesen Modellen werden mit den Profilen benutzt.
+
+Mit Bluetooth low energy wird kein Energiesparmodus bezeichnet, sondern ein spezieller Protokollstapel, der sich vom zuvor bekannten Protokollstapel unterscheidet, diesen nicht ersetzt, aber neue Optionen für geringen Energieverbrauch eröffnet.
+Energiesparmodi [Bearbeiten]
+
+Wenn keine Daten zu übertragen sind, kann eine Verbindung zwischen einem Master und einem Slave in einen Energiesparmodus gebracht werden.
+
+Es existieren drei Energiesparmodi:
+
+    * HOLD,
+    * SNIFF und
+    * PARK.
+
+Der HOLD-Modus wird zur asynchronen Abwesenheit eingesetzt. Zum Beispiel kann ein Slave mitteilen, dass er ab einem gewissen Zeitpunkt für 200 ms nicht zuhört. Der Master adressiert dann den Slave für die angegebene Zeit nicht und der Slave hört dann auch nicht auf Master-Pakete. Beide Geräte können dann die Zeit für andere Aktivitäten nutzen (scanning, scatternet etc.).
+
+Der SNIFF-Modus (von to sniff (engl.) = schnüffeln) wird zur reduzierten periodischen Aktivität eingesetzt. Es kann z. B. ein Slave oder Master mitteilen, dass er nur noch alle 500 ms für einige Slots zuhört. Der SNIFF-Modus wird bei fast allen Geräten, die Energieverbrauch senken sollen, eingesetzt.
+
+Der PARK-Modus wird eingesetzt, um ein Gerät synchronisiert zu halten. Das Gerät kann aber nicht aktiv am Datenverkehr teilnehmen. Der Park-Modus wird zwar von fast allen Chipsätzen unterstützt, aber trotzdem kaum angewendet.
+
+Details zur Reduzierung des Energieverbrauchs zwecks geringerer Belastung kleiner Batterien sind bei allen bisherigen und neuen Modi von der jeweiligen Abstimmung von Master und Slave abhängig.
+Protokollstapel Low Energy [Bearbeiten]
+
+Mit Bluetooth low energy wird kein Energiesparmodus bezeichnet, sondern ein spezieller Protokollstapel (protocol stack).
+Sicherheitsmodi [Bearbeiten]
+
+Bluetooth besitzt folgende drei Sicherheitsstufen, von der unsichersten angefangen hin zur sichersten:
+
+    * Modus 1 (Non-Secure Mode): In diesem Modus gibt es keine Sicherheitsmechanismen. Die Geräte wechseln nur fortlaufend die Frequenz, um das Abhören zu erschweren.
+    * Modus 2 (Service-Level Enforced Security): In diesem Modus liegt es bei den benutzten Diensten, auf dem Application Layer Sicherheitsmechanismen durchzusetzen. Dienste können für alle Geräte offen sein, nur eine Authentifizierung vorsehen oder noch zusätzlich eine Autorisierung erfordern.[16]
+    * Modus 3 (Link-Level Enforced Security): In diesem Modus findet schon beim Verbindungsaufbau eine Authentifizierung auf dem Link Layer statt. Verschlüsselung ist optional.[17]
+
+Viele Mobiltelefone können per Bluetooth Daten übertragen. Böswillige Angreifer können unter Umständen per Bluetooth durch unvorsichtig konfigurierte Geräte oder fehlerhafte Implementierungen des Bluetooth-Protokolls in den Geräten hohen finanziellen Schaden durch den Anruf kostenpflichtiger Hotlines und SMS-Dienste verursachen, private Nutzerdaten lesen, Telefonbucheinträge schreiben und die Liste angerufener Nummern zwecks Vertuschung manipulieren. Allgemeine, geräteunabhängige DoS-Attacken auf Netzwerkprotokollebene sind mit einfachen Mitteln möglich (z. B. "Ping"-Anforderungen mit großen Paketen).[18]
+Bluetooth-Profile [Bearbeiten]
+→ Hauptartikel: Bluetooth-Profile
+
+Daten zwischen Bluetooth Geräten werden gemäß sogenannten Profilen ausgetauscht, die für die Steuerung bestimmter Dienste als Schicht über der Protokollschicht festgelegt sind. Sobald eine Bluetooth-Verbindung aufgebaut wird, wählen die Geräte das jeweils benutzte Profil aus und legen damit fest, welche Dienste sie für die jeweiligen anderen Partner zur Verfügung stellen müssen und welche Daten oder Befehle sie dazu benötigen. Ein Headset fordert beispielsweise von einem Bluetooth kompatiblen Mobiltelefon einen Audiokanal an und steuert über zusätzliche Datenkanäle die Lautstärkeeinstellung oder -regelung.
+Bluetooth am PC [Bearbeiten]
+Übertragung mehrerer Daten von einem Linux-PC (Ubuntu 9.04) auf ein Handy über Bluetooth.
+Übertragung mehrerer Daten von Windows XP auf ein Handy über Bluetooth
+
+Zum Betrieb von Bluetooth am PC ist spezielle Hardware erforderlich. Manche Computer (zumeist Notebooks) haben diese bereits integriert, ansonsten sind auch kleine, an der USB-Schnittstelle angeschlossene Geräte oder PCMCIA-Karten für diesen Zweck erhältlich. Im Weiteren spielt das verwendete Betriebssystem eine entscheidende Rolle. Unter Microsoft Windows ist es seit Windows XP SP2 dank des mitgelieferten Microsoft Bluetooth-Stacks nicht mehr zwingend erforderlich, einen speziellen Treiber zu installieren. Eine größere Auswahl an unterstützenden Profilen hat man jedoch mit den Bluetooth-Stacks anderer Hersteller. Auch aktuelle Linux-Distributionen und Apple-Macintosh-Modelle unterstützen Bluetooth durch eigene, jeweils zertifizierte Bluetooth-Stacks. Wer einen PC mit Bluetooth zur Verfügung hat, kann außerdem mit der passenden Software andere Bluetooth-Geräte in Reichweite aufspüren und, je nach Funktionsumfang der Software, eine detaillierte Auflistung der offenen Dienste einsehen. Solche Software wird als Bluetooth-Scanner bezeichnet.
+Bluetooth-Anwendungen am Computer [Bearbeiten]
+
+    * SCO-Audio: synchroner Headset-Betrieb (Skype, SIP usw.)
+    * AV- oder A2DP-Audio: HiFi-Musikwiedergabe geeignet zum Anschluss eines oder mehrerer Kopfhörer
+    * Mobiltelefon-Synchronisation (Kontakte, Musikdateien, mobiler Internet-Zugang, usw.)
+    * HID: Eingabegeräte wie Maus und Tastatur
+    * Motion Capturing: Übertragung von Bewegungsdaten an den Auswertungscomputer (z.B. Xsens MVN)
+
+Bluetooth am Mac [Bearbeiten]
+
+Am Mac wird Bluetooth über den Integrierten Bluetooth Assistenten gesteuert. Dieser ist in dem System Mac OS 10.x standardmäßig enthalten. Seit 2006 sind in allen Intel Macs standardmäßig Bluetoothmodule verbaut. Bei Power PC basierenden Macs konnte man das Modul nachrüsten.
+Bluetooth-Protokollstapel [Bearbeiten]
+
+Bluetooth-Protokollstapel sind Softwarepakete mit Treibern, die eine Verbindung mit Bluetoothgeräten ermöglichen und Dienste zur Verwendung unterschiedlicher Bluetooth-Profile enthalten. Welchen Stack man benutzen kann, hängt vom Treiber und vom verbauten Chip ab.
+
+Die bekanntesten Protokollstapel bzw. deren Hersteller sind:
+
+    * BlueSoleil von IVT
+    * Widcomm von Broadcom
+    * Toshiba[19]
+    * In The Hand
+    * Standard-Microsoft-Stack
+    * BlueFRITZ! von AVM (Entwicklung eingestellt)
+    * BlueZ (Standard unter Linux)
+    * Affix
+    * lwBT
+    * Stollmann
+
+Bluetooth-Stacks ist auch eine Bezeichnung für Softwarepakete, die für die Entwicklung von Java-Anwendungen mit Bluetooth-Funktionalität benötigt werden. Soll beispielsweise eine J2ME-Anwendung mit einem J2SE-Server kommunizieren können, wird neben einem Bluetooth-Treiber (s. o.) ein Bluetooth-Stack als Schnittstelle zwischen dem Treiber (z. B. Widcomm) und Java benötigt. Bluetooth-Stacks für Java sind beispielsweise:
+
+    * Avetana
+    * BlueCove
+
+Andere Anwendungen [Bearbeiten]
+Spielgeräte [Bearbeiten]
+
+Die Spielzeugindustrie verwendet diese Technik, um Puppen und Spielzeugtiere untereinander kommunizieren und interagieren zu lassen.
+
+Auch die Controller der Nintendo Wii und der PlayStation 3 nutzen Bluetooth zur Kommunikation mit der Konsole.
+Kommunikation [Bearbeiten]
+
+Bluetooth-Hotspots als Funkzelle ermöglichen einen schnurlosen Zugriff auf ein Netzwerk, wie das Internet oder ein Unternehmens-LAN.
+
+Audiogeräte ohne Bluetooth, insbesondere ältere Mobiltelefone und Festnetztelefone, können über einen angeschlossenen Adapter eingeschränkt um Bluetooth erweitert werden.
+Industrie [Bearbeiten]
+
+Aufgrund des eingesetzten adaptiven Frequenzsprungverfahrens (AFH) bietet Bluetooth eine sehr zuverlässige und störungsresistente Funkverbindung. Dieser Vorteil von Bluetooth gegenüber anderen Funktechnologien wurde frühzeitig von verschiedenen Herstellern für Automatisierungsprodukte (z. B. Phoenix Contact, WAGO Kontakttechnik GmbH & Co. KG, Schildknecht AG) erkannt. Daraufhin wurden Bluetooth basierende Industrieprodukte realisiert, die in verschiedensten Bereichen der Industrie eingesetzt werden, um kabellos zwischen verschiedenen Komponenten in Maschinen kommunizieren zu können. Mittlerweile hat die PROFIBUS Nutzerorganisation e. V. (PNO) Bluetooth neben WLAN als Trägertechnologie für kabellose Übertragung von PROFINET Datenpaketen definiert. Auch die Vereinigung CAN in Automation (CiA) plant die Spezifikation eines auf Bluetooth basierenden Systems für die kabellose Übertragung von CAN Telegrammen. Insgesamt untermauern die Standardisierungsbestrebungen die Tauglichkeit von Bluetooth für die industrielle Automation.
+Haustechnik [Bearbeiten]
+
+Im Bereich Hausautomation und Alarmsysteme gibt es Produkte, welche Bluetooth 2.0 nutzen.
+
+Eine weitere Anwendung ist Bluetooth als Schlüssel, wofür jedes bluetoothfähige Gerät als Schlüssel eingesetzt werden kann. Es ist hierfür keine weitere Software auf den Geräten (Mobiltelefone) notwendig.
+Medizintechnik [Bearbeiten]
+
+In der Orthopädietechnik wird Bluetooth zur Einstellung moderner Arm- und Beinprothesen verwendet. Einstellungen wie Standphasendämpfung und Maximallast lassen sich per Bluetooth vornehmen.
+
+Hörgeräte in höheren Preisklassen sind ebenfalls mit Bluetooth-Empfängern erhältlich. Damit lassen sich die Signale von Mobiltelefonen und Audio-Geräten selektiv ohne umgebungsbedingte Verzerrungen auf das Hörgerät übertragen.[20]
+

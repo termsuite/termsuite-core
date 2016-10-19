@@ -1,0 +1,88 @@
+Funktechnik, oder Funktechnologie, ist ein Begriff für die Methode, Signale aller Art mit Hilfe elektromagnetischer Wellen im Radiofrequenzbereich (Radiowellen) drahtlos zu übertragen.
+
+Anwendungen in Industrie und Medizin, die Hochfrequenz nur als Werkzeug einsetzen (wie z. B. Härte- und Schmelzöfen oder Therapiegeräte), verwenden dagegen in der Regel unmodulierte Radiowellen ohne aufgeprägte Informationen und werden deshalb nicht der Funktechnik zugeordnet.
+Inhaltsverzeichnis
+ [Verbergen] 
+
+    * 1 Geschichte und Begriffsherkunft
+    * 2 Allgemeines
+    * 3 Probleme und Störungen
+    * 4 Anwendungen
+    * 5 Siehe auch
+    * 6 Literatur
+    * 7 Weblinks
+
+Geschichte und Begriffsherkunft [Bearbeiten]
+
+Die Existenz von Radiowellen wurde 1864 von James Clerk Maxwell auf Grund theoretischer Überlegungen vorhergesagt und 1888 von Heinrich Hertz experimentell bestätigt. Der Name „Funk“ geht auf den Begriff Funke zurück. Die ersten Sender arbeiteten mit Funkenstrecken - durch die starken, oberwellenreichen Strom- und Spannungsimpulse entstanden hierbei auch die gewünschten Funkwellen. Die erste Funkverbindung gelang Guglielmo Marconi 1896 mit einem Knallfunkensender und dem Nachbau eines Empfängers von Alexander Stepanowitsch Popow über eine Entfernung von etwa 5 km. Diese Pioniere der Funktechnik gelten heute als die ersten Funkamateure.
+
+Diese primitive und heute unerwünschte Erzeugung von Funkwellen erlaubte nur Nachrichtenübermittlung durch Morsezeichen, beispielsweise von der Großfunkstelle Nauen zu den Schiffen der kaiserlichen Marine. Erst nach der Entdeckung der Oszillatorschaltungen mit konstanter Ausgangsleistung im Jahr 1913 konnten weitere Modulationsarten entwickelt werden, die die Übertragung von Ton, Bild und später auch Daten ermöglichten.
+Allgemeines [Bearbeiten]
+
+Die Funktechnik basiert auf der Tatsache, dass man ein Trägersignal (elektromagnetische Welle) - eine zunächst sinusförmige Wechselspannung konstanter Amplitude - mittels einer Modulationsart durch ein Nachrichtensignal gezielt verändern kann. Dabei wird beispielsweise die Frequenz oder die Amplitude der Wechselspannung im Rhythmus des Signals geändert. Die modulierte Welle wird über eine Antenne abgestrahlt und auf der Empfängerseite durch eine weitere Antenne empfangen. Durch Demodulation wird die ursprüngliche Nachricht wiedergewonnen und kann dann hörbar oder sichtbar (Fernsehen) gemacht oder anders weiterverarbeitet werden.
+
+Der Vorteil gegenüber konkurrierenden Übertragungsarten ist, dass
+
+    * es sehr viele unterschiedliche Trägerfrequenzen gibt, die sich gegenseitig nicht beeinflussen
+    * keine elektrischen Kabel verlegt werden müssen
+    * Sender und Empfänger sehr gut getarnt und u.U. kaum entdeckt werden können
+
+Nachteilig ist, dass
+
+    * man die Sendungen abhören kann, ohne entdeckt zu werden. Die Nutzung der übermittelten Daten kann aber durch Verschlüsselung erschwert werden
+    * die Kommunikation durch Störsender erschwert oder unmöglich gemacht werden kann
+    * der technische Aufwand erheblich ist, was aber durch Fortschritte der Mikroelektronik immer weniger ins Gewicht fällt
+    * im gesamten Ausbreitungsbereich jedes Frequenzband nur von einem einzigen Sender genutzt werden kann, sofern nicht Techniken wie Richtfunk oder Zeitmultiplex eingesetzt werden
+
+Beim Hörfunk und Fernsehen sendet ein Teilnehmer, der Radio- oder Fernsehsender, und alle anderen Teilnehmer auf diesem Kanal empfangen nur, ohne selbst zu senden. Die Übertragung ist unidirektional - sie geht nur in eine Richtung.
+
+Beim Sprechfunk oder beim Morsen senden mehrere Personen abwechselnd auf demselben Kanal (meist einer Frequenz oder einem Frequenzpaar), so dass Kommunikation in beide Richtungen möglich ist. Im Gegensatz zur unidirektionalen Übertragung (z. B. Rundfunk) ist so ein Informationsfluss in beiden Richtungen möglich.
+
+Neben Morsesignalen und Sprache werden auch stehende und bewegte Bilder, zum Beispiel Wettersatellitenbilder oder Fernsehen, und Daten aller Art übertragen.
+
+In der jüngeren Geschichte der Funktechnik werden häufig direkt von den Geräten Kommunikationsprotokolle wie GSM, UMTS (beides für Mobiltelefone), 802.11 (drahtloses Computernetzwerk) oder Bluetooth (drahtlose Kommunikation mit digitalen Peripheriegeräten) verwendet.
+
+Obwohl sich die Technik heutzutage stark von der von 1920 unterscheidet, erhielt sich der namensgebende Wortbestandteil Funk in Begriffen wie Rundfunk, Mobilfunk, Hörfunk usw. sowie im Firmennamen Telefunken bis heute.
+
+Eine neue Entwicklung der Funktechnik wurde durch extrem energiesparende Miniaturisierung möglich: batterielose Funktechnik für die Anwendung in Schaltern und Sensoren. Auch bei der Vernetzung verschiedenartiger Geräte wird die batterielose Funktechnik bereits eingesetzt. Die für den Sendeprozess erforderliche Energie wird dabei durch Energy Harvesting aus der Umgebung gewonnen (z. B. aus Tastendruck, Temperaturdifferenz, Licht oder Vibrationen).
+Reichweitenverbesserung mittels Relaisstation
+Probleme und Störungen [Bearbeiten]
+
+Da sich elektromagnetische Wellen physikalisch gesehen quasioptisch ausbreiten, werden Relaisstationen benötigt, wenn um den Erdball (Kugel) gefunkt werden soll. Diese Aufgabe übernehmen heutzutage z. B. Satelliten.
+
+Gase (Erdatmosphäre) können den Signalweg beeinträchtigen. Dabei kommt es zu einer Vielzahl von Effekten, die von der benutzten Frequenz, der Dichte des Gases, der Ionisation und der Schichtung im Signalweg abhängig ist. Eine Übertragung durch flüssige und feste Medien führt zu einer starken Dämpfung des Signals.
+
+Bei Frequenzen größer als etwa 100 MHz treten zunehmend Störungen durch Reflexionen an Mauerwerk, Metallbauwerken, Drähten oder Türmen auf. Die Reflexionen führen zu zeitlich versetztem Doppelempfang mit Signalverfälschungen und Gruppenlaufzeitverzerrungen. Es kommt zu teilweiser oder vollständiger Auslöschung gegenphasiger Signalanteile. Die Bewegungen von Sende- oder Empfangsantenne oder anderen Objekten im Signalweg kann die Übertragung beeinträchtigen (Anwendung beim Passivradar und in Radar-Bewegungsmeldern!). Es kommt zu Geisterbildern beim Fernsehempfang und zu Problemen bei der GPS-Nutzung.
+
+Effekte bei der drahtlosen Ausbreitung in der Erdatmosphäre
+
+    * Fading Schwund, sich stark verändernde Feldstärke
+    * Nahschwund
+    * Flatter-Fading Schwund mit schnell wechselnder Feldstärke
+    * Echo-Empfang („Geisterbilder“ durch verschiedene, durch Reflexion verursachte Empfangswege)
+    * selektiver Trägerschwund
+    * Mögel-Dellinger-Effekt, bzw. Sudden ionospheric disturbance
+    * Reflexion an der Ionosphäre
+    * Reflexion an der sporadischen E-Schicht
+    * Meteorscatter Streuung und Reflexion an ionisierten Meteoriten-Leuchtspuren
+    * Aurora Streuung und Reflexion an Nordlicht-Ionisationsschichten (siehe Polarlicht#Besonderheiten)
+    * Tropo-Ausbreitung: Reflexion und Tunnelung in Inversionsschichten (Überreichweite)
+    * Tagesdämpfung
+    * Maximum Usable Frequency (MUF) höchste nutzbare Frequenz, die noch an der Ionosphäre reflektiert wird
+
+Durch die Auswahl der Modulationsart und der Betriebsart lassen sich viele Störungen erheblich vermindern.
+Anwendungen [Bearbeiten]
+
+Es gibt zahlreiche Anwendungen der Funktechnik, siehe hierzu
+
+    * Funknetze
+    * Telemetrie
+    * Richtfunk
+    * Funkdienste
+    * Amateurfunk
+    * Betriebsfunk
+    * Funkfernsteuerung (Haustechnik, Forschung, Industrie und Modellbau)
+    * Rundfunk (terrestrischer Hörfunk und Fernsehen)
+    * Kommunikationssatelliten (Satellitenfernsehen, Telefon, Datenübertragung)
+    * Jedermannfunk (CB-Funk, SRD, PMR446, DMR446)
+    * RFID (radio frequency identification device, Funkchips)

@@ -1,0 +1,62 @@
+Wie entwickelte sich der digitale Mobilfunk in Deutschland?
+
+Heute ist der Mobilfunk eine weitverbreitete Technologie. Die Öffnung der Telefonmärkte in Deutschland und die Entwicklung immer günstigerer Endgeräte führte zu einem wahren Boom. Seit 2006 gibt es mehr Handys als Einwohner. Im Jahr 2010 kamen auf 82 Millionen Menschen über 107 Millionen Anschlüsse. Heute ersetzen bereits in jedem zehnten Haushalt Handys das Festnetztelefon. Dies entspricht mehr als neun Prozent aller deutschen Haushalte.
+
+Die Entwicklungsgeschichte der mobilen Kommunikation reicht zurück bis in die erste Hälfte des 20. Jahrhunderts. Bereits vor dem Start des sogenannten A-Netzes Ende der 50er Jahre wurde in Deutschland mobil telefoniert.
+
+Schon 1918 startete die Deutsche Reichsbahn erste Tests im Bereich der mobilen Telefonie. 1926 konnten Bahnreisende der 1. Klasse auf der Strecke Berlin-Hamburg erstmals aus dem fahrenden Zug heraus mobil telefonieren. Der erste wirkliche Mobilfunkdienst in Deutschland war der Seefunkdienst. Bis in die 50er Jahre wurden zudem verschiedene Funknetzsysteme wie Hafen-, Zug- und Stadtfunkdienste eingerichtet, die meist auf Langwellen-, später auf Mittelwellen-Funk basierten.
+Das A-Netz
+
+Im Jahre 1958 fasste die Deutsche Bundespost die bis dahin existierenden Funknetze zum "Öffentlichen, bewegten Landfunknetz (öbL) A" zusammen. Das bedeutete den Startschuss für das erste nationale Mobilfunknetz - das A-Netz. Ende der 50er Jahre war das A-Netz das größte öffentliche Mobilfunknetz der Welt. 1968 lag die Flächenabdeckung bei rund 80 Prozent. Es war also möglich, auf vier Fünfteln des Gebietes der alten Bundesrepublik mobil zu telefonieren.
+
+Der Mobilfunk blieb allerdings eine exklusive Kommunikationstechnik. Das A-Netz hatte nur etwa 10.500 Teilnehmer. Dies lag vor allem an den hohen Kosten für Endgeräte und Dienste. Allein für ein "Standardgerät" musste man zwischen 8.000 Mark und 15.000 Mark bei einer Grundgebühr von bis zu 270 Mark pro Monat zahlen. Im Vergleich dazu kostete ein fabrikneuer VW-Käfer damals rund 5.000 Mark. Im Übrigen waren die Geräte mit rund 16 Kilogramm, verglichen mit heutigen Standards, enorm schwer.
+Das B-Netz
+
+Als Nachfolger des A-Netzes startete 1972 das B-Netz. Die Nutzer des neuen Mobilfunknetzes waren nun nicht mehr auf die Vermittlung per Hand durch das "Fräulein vom Amt" angewiesen. Stattdessen konnten sie selbst wählen. Voraussetzung dafür war allerdings, dass sie den Aufenthaltsort des gewünschten Teilnehmers der entsprechenden Zone zuordnen konnten. 150 solcher Zonen gab es in der damaligen Bundesrepublik. Sie hatten einen Durchmesser bis zu 150 Kilometer. Über das B-Netz ließ sich erstmals auch im Ausland mobil telefonieren und zwar in den Niederlanden, in Österreich und Luxemburg.
+
+Obwohl das mobile Telefonieren auch beim B-Netz verhältnismäßig teuer blieb, wuchs die Zahl der Teilnehmer bis Ende der 70er Jahre stark. So stark, dass die Betreiber zusätzlich auf die Frequenzen des 1977 abgeschalteten A-Netzes zurückgreifen mussten. Als auch dies nicht mehr ausreichte, wurde ab 1986 bei einer Teilnehmerzahl von fast 27.000 Nutzern eine Aufnahmesperre verfügt. Zu diesem Zeitpunkt gab es als Alternative allerdings schon das neue, modernere C-Netz. Der Betrieb dieses Netzes wurde schließlich 1994 endgültig eingestellt.
+Das C-Netz
+
+Der Startschuss für das neue C-Netz fiel am 1. September 1985. Es sendete auf einer Funkfrequenz von 450 Megahertz und war das erste - zumindest teilweise - digitale Mobilfunknetz in Deutschland. Die Sprache wurde ebenso wie im A- und im B-Netz mittels analoger Funktechnik übertragen, die Vermittlungs- und Steuerinformationen waren aber bereits digital.
+
+Dadurch konnte nunmehr automatisch der genaue Aufenthaltsort eines Teilnehmers ermitteln werden. Dies war die Voraussetzung für die Einrichtung einer einheitlichen Vorwahl (0161-), über die es bundesweit möglich war, alle Teilnehmer des C-Netzes zu erreichen. Das Netz leistete auch erstmals den "Handover", die Weiterleitung der Gespräche, wenn sich der Mobilfunknutzer während des Telefonierens von einer Funkzelle zur nächsten bewegt.
+
+Mit dem C-Netz begann der Übergang vom reinen Autotelefon zum tragbaren Mobilfunktelefon. Dennoch waren die Endgeräte wesentlich größer als die heutigen Handys. Die monatliche Bereitstellungsgebühr beim C-Netz sank von anfangs 120 Mark auf nur 19 Mark ab. Das C-Netz hatte zeitweise bis zu 800.000 Kunden, womit es sich aber bereits an der Grenze seiner Kapazität bewegte. Im Jahr 2000 wurde der Betrieb des C-Netzes eingestellt.
+GSM
+
+Mitte 1992 begann in Deutschland das Zeitalter des digitalen "Global System for Mobile Communication" (GSM). Mit den so genannnten D- und E-Mobilfunknetzen startete diese zweite Mobilfunkgeneration (2G), wohingegen A-, B- und C-Netz gemeinsam als Mobilfunk der ersten Generation bezeichnet werden.
+
+Durch die D- und E-Mobilfunknetze wurde der breiten Bevölkerung in den 90er Jahren der Zugang zur mobilen Kommunikation ermöglicht. Die Mobiltelefone waren erstmals klein und handlich (der deutsche Begriff "Handy" für die mobilen Telefone leitete sich daraus ab). Sprachübermittlung in guter Qualität, Datendienste wie SMS, Fax oder Notebook-PC-Anbindungen und sogar die mobile Internetnutzung mit einer geringen Übertragungsrate wurden mit der weiteren Entwicklung der GSM-Technologie verfügbar. Der große Erfolg der zweiten Mobilfunkgeneration ermöglichte eine nahezu vollständige Netzabdeckung.
+
+Bereits im Juli 1991 wurde mit dem Probebetrieb begonnen. Im Sommer 1992 fiel schließlich der Startschuss für den regulären Betrieb der D-Netze. Bei den Endgeräten herrschte zunächst allerdings noch ein Mangel. Die ersten Gespräche wurden mit 8-Watt-Telefonen geführt, die fest ins Auto eingebaut waren. Erst ab Herbst 1992 gab es die ersten handlichen Geräte.
+
+Im Sommer 1994 startete das erste GSM-1800-Netz (E1) in Deutschland. GSM-1800 ist eine Variante des Mobilfunkstandards GSM 900. Es sendet im Frequenzbereich von 1710 bis 1880 MHz. Im Oktober 1998 folgte ein zweites E-Netz in Deutschland.
+
+Ab Mitte der 1990er Jahre war es möglich, über die GSM-Netze Faxe zu verschicken und Datenübertragungen per Handy abzuwickeln. 1995 wurde der Short Message Service (SMS) - also die digitale Übertragung von Textbotschaften - probeweise eingeführt. In kurzer Zeit entwickelte sich SMS zum meistgenutzten Handy-Dienst nach der Telefonie. Die Mobilfunktarife reduzierten sich 1996 spürbar. Die Grundgebühr fiel von 50 Mark auf knapp 30 Mark. Im folgenden Jahr wurden die Guthabenkarten (Prepaid-Card) eingeführt. Ende der 1990er Jahre konnten schließlich durch die Einführung der Sprachverbesserungs-Technik "Enhanced Fullrate" technische Mängel bei der Sprachübertragung beseitigt werden.
+GPRS: Daten werden mobil
+
+Nach der Sprache wurden auch die Daten mobil. Möglich machte dies der "General Packet Radio Service" (GPRS). Dies lässt sich am besten mit "allgemeiner Paketdatenfunk" übersetzen. Die GPRS-Technik trennt die Datenkommunikation von der Sprachkommunikation. Dieser Schritt ermöglichte die Schaffung direkter Schnittstellen zum Internet und eine enorme Beschleunigung der Datenströme. Die digitalisierten Daten werden im GPRS-System in kleine "Pakete" aufgeteilt. Jedes Paket erhält eine genaue Empfängeradresse und wird dann über die freien Kapazitäten der Mobilfunknetze zum Empfänger geschickt. Nur dieser kann anschließend die für ihn bestimmten Pakete wieder zusammensetzen und entschlüsseln. Diese Technik gleicht der Übertragungstechnik im Internet und ermöglicht eine bessere Ausnutzung der Kapazitäten und damit eine höhere Geschwindigkeit.
+UMTS
+
+Mit dem als dritte Mobilfunkgeneration (3G)  bezeichneten UMTS-Standard wurde eine völlig neue Mobilfunktechnik eingeführt. Sie erforderte den Aufbau von eigenständigen UMTS-Netzen und die Konstruktion neuer Handys, die zusätzlich zu GSM auch UMTS nutzen konnten.
+
+Die Funktionsweise von UMTS ist in einigen Punkten vergleichbar mit der von GPRS, mit dem Unterschied, dass auch die Sprache in Datenpaketen übermittelt wird. UMTS wird daher auch als Breitbandtechnik bezeichnet, was nichts anderes bedeutet, als dass für Daten und Sprache ein sehr großer Frequenzbereich zur Verfügung steht.
+
+Anders ausgedrückt: Wenn man sich Frequenzbereiche als Straßen vorstellt, dann muss für eine GSM-Mobilfunkverbindung immer eine komplette Spur (Frequenz) zwischen Sender und Empfängerzur Verfügung stehen.
+
+Bei UMTS ist das nicht nötig: Wie auf einer Rutschbahn "gleiten" die Daten zu "Paketen" verpackt neben- und durcheinander auf dem schnellsten Weg zum Ziel. Dort werden sie sortiert, entschlüsselt und wieder zu Sprache oder Daten zusammengesetzt. Codierungen sorgen dafür, dass jeder nur die für ihn bestimmten Daten entschlüsseln kann. Dieses Verfahren ist effizient und schnell. Der Nachteil: Wenn viele die "Rutschbahn" nutzen, wird es für alle etwas langsamer.
+
+Mit Datenkapazitäten von bis zu 384 kBit pro Sekunde erschließen sich bei UMTS neue Anwendungsfelder: Videokonferenzen, TV-Programme und der Zugriff auf Daten aus dem Internet machen das Handy zum digitalen Informationsmedium für unterwegs. UMTS ermöglicht die gleichzeitige Übertragung von Sprache und Daten. Es ist also möglich, während eines Gesprächs gleichzeitig im Internet zu surfen oder E-Mails zu empfangen oder zu schreiben.
+
+Die schnell wachsende Nutzung des mobilen Internets, die durch Smartphones, Tablet-PCs und neuartige Anwendungen angetrieben wird, lässt den Bedarf nach noch schnellerer und leistungsfähigerer Übertragung ständig wachsen. In den UMTS-Netzen wird inzwischen durch technische Weiterentwicklungen wie HSDPA (High Speed Downlink Packet Access) eine Übertragungsgeschwindigkeit von bis zu 7,2 Mbit/s ermöglicht.
+LTE
+
+Bei der LTE-Entwicklung ging es, neben der weiteren Steigerung der Übertragungsraten, auch um die Entwicklung eines weltweit einheitlichen Standards. Zahlreiche Optionen wurden in internationalen Gremien diskutiert, bis im September 2006 erstmalig eine simulierte LTE-Verbindung mit Live-Applikationen der Fachwelt vorführgeführt werden konnte. Zwei Monate später erfolgte in Hongkong die erste LTE-Demonstration in der Öffentlichkeit.
+Vorreiter Skandinavien
+
+Die ersten kommerziellen LTE-Netze starteten Ende 2009 in Stockholm und Oslo.  In Deutschland startete LTE mit der Versteigerung der LTE-Frequenzbänder durch die Bundesnetzagentur im Mai 2010.
+Digitale Dividende nützt ländlichem Raum
+
+Die LTE-Technologie soll insbesondere ländliche Gebiete über Mobilfunk mit schnellem Breitband-Internet versorgen. Der durch die Digitalisierung des Rundfunks frei gewordene Frequenzbereich 800 MHz, die sog. "Digitale Dividende", besitzt hervorragende physikalische Ausbreitungseigenschaften. Mit einer Basisstation können große Gebiete versorgt werden. Dieser Frequenzbereich eignet sich daher besonders gut für die funkgebundene Breitbandversorgung dünn besiedelter Bereiche. Für den LTE-Netzausbau hat die Bundesnetzagentur klare Regeln vorgegeben.
+
+Die höchste Priorität haben dabei Gemeinden ohne Breitbandanschluss (sog. "weiße Flecken") mit weniger als 5.000 Einwohnern. Erst wenn pro Bundesland 90 Prozent dieser Gemeinden versorgt sind, können auch dichter besiedelte Regionen erschlossen werden. So sollen schon bald alle "weißen Flecken" von der Breitbandkarte in Deutschland verschwunden sein.

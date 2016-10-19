@@ -1,0 +1,113 @@
+Mobilfunk und mobiles Internet verändern das menschliche Leben in epochaler Weise. Jeffrey Rayport skizziert im TR-Essay die sieben wichtigsten Trends.
+
+Das Handy ist der PC von heute. Die technische Leistungsfähigkeit eines Smartphones entspricht gar der von guten Alltagsrechnern vor zehn Jahren. Angesichts der Tatsache, dass heute Milliarden Menschen diese superkompakten Maschinen benutzen, kann man das Handy ohne Übertreibung als das neue Werkzeug Nr. 1 der Menschheit bezeichnen.
+
+Was daraus für Wirtschaft, Gesellschaft und Kultur folgt, können wir
+derzeit nur erahnen. Mobiltelefone zeichnen unsere Wege durch die
+physische Welt auf. Sie speichern unseren sozialen Austausch, unsere
+persönlichen Geschichten, unsere Vorlieben und Abneigungen, unseren
+Medien- und Warenkonsum.
+
+Fünf Milliarden Menschen besitzen derzeit ein Mobiltelefon. Zwei Drittel der Menschheit gewähren damit Einblick in ihr Leben in einer Art, die historisch ohne Vorläufer ist. Ganz gleich, ob man dies aus einer wirtschaftlichen oder einer Orwell'schen Perspektive betrachtet: Man kann es nicht auf die leichte Schulter nehmen.
+
+Ende der 1990er Jahre gab es eine sehr populäre Grafik: Sie zeigte, wie lange es dauerte, bis die großen Medientechnologien von mehr als der Hälfte der Bevölkerung genutzt wurden. Während Zeitung, Radio und Fernsehen Jahrzehnte brauchten, um diese Schwelle zu überschreiten, übersprang das Web sie in wenigen Jahren. Die Verbreitung des Web nimmt sich im Vergleich zur Nutzung der Smartphones allerdings bescheiden aus: Während erstere Haushalte erfasst, lässt sich letztere direkt auf Einzelpersonen beziehen. Und anders als das Web hat die Mobiltelefonie auch ärmere Länder durchdrungen, sie ist keine Veranstaltung reicher Industriestaaten. Man könnte auch sagen: Erst mobile Geräte haben den Zugang zur Computertechnik und zum Internet wirklich demokratisiert.
+
+Die schiere Zahl der Nutzer ist aber nur die halbe
+Geschichte. Mindestens ebenso verblüffend ist das atemberaubende
+Tempo, in dem sich der Wandel vollzieht. Das klassische Handy, das im
+Wesentlichen zum Telefonieren da war, weicht längst dem Smartphone mit
+seinen zahlreichen Funktionen. Die Zahl der Geräte, die sich in
+schnelle 3G- und nun auch 4G-Mobilfunknetze einwählen können, wächst
+nach wie vor rasant.
+
+Im Laufe des kommenden Jahres werden eine Milliarde Menschen Zugang zu
+3G-Netzen haben: in Japan sage und schreibe 98 Prozent der
+Mobilnutzer, in Korea immerhin 80 Prozent, während die USA mit 48
+Prozent und Großbritannien mit 38 Prozent im Mittelfeld liegen. In
+Ländern mit bislang geringem 3G-Angebot sind die Wachstumsraten enorm:
+In Russland hat sich die Zahl der Nutzer im vergangenen Jahr fast
+verdoppelt, in China gar mehr als verzehnfacht.
+
+Kein Unternehmen kann es sich heute mehr leisten, diese Entwicklung zu ignorieren. Auch wenn sie äußerst vielschichtig ist, lässt sie sich doch in sieben grundlegenden Veränderungen zusammenfassen.
+
+1. Entdeckungen in Sekundenschnelle
+
+Seit Urzeiten ist die menschliche Spezies auf ihre Fähigkeit angewiesen, überlebenswichtige Informationen zu entdecken: Wo in der Savanne trinken Gazellen, die man erlegen könnte, wo befindet sich das nächste Krankenhaus für eine Notoperation? In früheren Zeiten war die Informationsbeschaffung oft aufwändig. Mit dem „PageRank“-Algorithmus von Google, der 70 Prozent aller Online-Suchen beantwortet, hat sie sich drastisch beschleunigt: Google Instant liefert uns sogar Ergebnisse, während wir noch den Suchbegriff eintippen. Auf dem Smartphone hat diese Veränderung noch eine ganz andere Bedeutung als auf dem PC: Wir können Informationen nun an jedem Ort finden.
+
+Durch Ortungstechnologien, in Kombination mit Suchdiensten, funktioniert dieses Entdecken inwischen auch in zwei Richtungen. Mit Anwendungen wie Foursquare können Nutzer an realen Orten „einchecken“ und geben Freunden und Unternehmen so die Möglichkeit, sie zu entdecken. Start-ups wie Locately gehen noch weiter und zeichnen die Wege nach, die man im Auto oder beim Einkaufen zurücklegt.
+
+Dass das Entdecken keine Einbahnstraße mehr ist, hat Konsequenzen für
+die Wirtschaft. Verbraucher können mit Hilfe ihrer Handykameras und
+Apps wie Red Laser oder ShopSavvy den Strichcode von Produkten
+einlesen und sofort Preise verschiedener Anbieter vergleichen. Wenn
+sie sich für Amazon Prime angemeldet haben - einen Dienst, der gegen
+eine Gebühr eine Lieferung in zwei Tagen garantiert -, können sie,
+noch im Laden, ein Produkt online bei Amazon bestellen, wenn es dort
+billiger ist. 
+
+Sicher agiert Amazon hier als Trittbrettfahrer, zu Lasten des Einzelhandels. Die Verbraucher aber gewinnen: Preise, Angebot und Komfort, die dadurch möglich werden, waren ohne Smartphones undenkbar. Allein diese Entwicklung zwingt den Einzelhandel zu Veränderungen.
+
+2. Komprimierte Sprache
+
+Sich mit anderen zu verbinden, ist ein Wesenselement des Menschen. Als Email das Briefeschreiben ablöste, wurden die Verbindungen unmittelbarer, informeller und auch verkürzter. SMS hat diese Entwicklung noch einmal verstärkt. Laut einer Studie schreiben US-Teenager mehr als 100 Kurznachrichten im Monat. In Weltgegenden, in denen noch klassische Handys dominieren, ersetzt die SMS die Email. Zugleich ist sie eine billigere Alternative zum Telefonieren, und zum Einkaufen lässt sie sich auch nutzen.
+
+Soziale Netzwerke verändern unsere Verbindungen zu anderen noch weiter, indem sie unsere Nachrichten zu einer Art Telegramm verdichten, das in alle Welt hinausgeht. Die wichtigsten Netzwerke - Facebook, Myspace, Orkut, Bebo, CyWorld (Korea), Mixi (Japan), Tencent (China) - haben zusammen zwei Milliarden angemeldete Nutzer. Das ist knapp ein Drittel der Menschheit.
+
+Dank Smartphones werden soziale Netzwerke noch unwiderstehlicher, da wir mit ihnen Bilder und Notizen aus unserem Alltag in Echtzeit teilen können. Twitter verdankt seinen kometenhaften Aufstieg auch der Tatsache, dass die Kurznachrichten vom Handy verschickt werden können. Mit 140 Zeichen zwingt es zu einer geradezu drakonischen Verdichtung der Sprache. Die komprimierteste Form der Kommunikation ist der „Like“-Button von Facebook - mit einem Klick wird hier eine Aussage übermittelt.
+
+Sind diese Möglichkeiten schon im Web bestechend, entfalten sie ihre Macht erst recht auf den kleinen Displays von mobilen Geräten. Gibt es eine einfachere Möglichkeit für Markenfirmen, potenzielle Kunden zu finden, als durch ein Zurückverlinken zu ihnen mittels Like-Button? Schon beginnen Firmen, ihre Produkte über eine Sammlung von zahlreichen „Gefällt mir“-Klicks in sozialen Netzwerken zu vermarkten.
+
+3. Ausgelagertes Gedächtnis
+
+Der Mensch hat früh begonnen, Dinge in einem externen Gedächtnis abzulegen: Davon zeugen Höhlenmahlereien und Piktogramme an Felsen, die Nachfolgenden Informationen hinterließen. Daraus entwickelte sich die Schrift als wichtigstes Speichermedium, anfangs auf Steinen, dann auf Papyrus und nach Gutenberg schließlich als Papierdruck. Und heute? Die meisten von uns kennen nicht einmal mehr die Telefonnummer ihrer Freunde auswendig. Zahlenfolgen behalten wir nur, wenn sie nicht komplizierter sind als der Notruf „110“.
+
+Stattdessen lagern wir unser Gedächtnis auf unsere Maschinen aus. Google Maps legt Bookmarks für Orte an, an denen wir waren oder die wir noch aufsuchen wollen. Darin sind nicht nur die Orte selbst, sondern auch Kontexte gespeichert, etwa ob sie Einkaufen, Arbeiten oder Freunde betreffen. Kombiniert mit Cloud-basierten Datenspeichern auf entfernten Servern ermöglicht uns das mobile Internet ein Erinnern unbegrenzter Kapazität und Reichweite. Erste Unternehmen gehen gar dazu über, sämtliche mobilen Anwendungen und Datenbanken auf Cloud-basierte Server auszulagern.
+
+Zu diesem Prozess gehört auch das sofortige Knipsen mit der Handykamera. Nach einem Report des Pew Research Centers machen inzwischen 76 Prozent der US-Amerikaner ihre Fotos mit dem Handy - neun Prozent mehr als noch im vergangenen Jahr. Ein Drittel aller US-Amerikaner nimmt mit dem Handy auch Videos auf - ein Zuwachs um 50 Prozent gegenüber 2009. Auf die Server von Youtube werden pro Minute im Durchschnitt 35 Stunden Videomaterial hochgeladen.
+
+Ein Kritiker hat unsere Epoche „Das Ende des Vergessens“ genannt. Genauer wäre es wohl, sie als Epoche zu bezeichnen, in der wir radikal neue Wege des Erinnerns beschreiten. Indem wir Bedeutendes und Belangloses auf unseren mobilen Geräten abladen, machen wir unseren Kopf auch frei für neue Arten von Informationen. Dazu gehören komplexe soziale Verbindungen oder das Teilen von Information mit anderen. Die Auswirkungen dieser Entwicklung werden Psychologen und Soziologen, aber auch Politiker und Manager auf Jahre beschäftigen.
+
+4. Automatisierte Entscheidungen
+
+Als mündige Verbraucher glauben wir, dass wir selbst alles entscheiden. Als Geschäftsleute werden wir wiederum dafür bezahlt, intelligente Entscheidungen zu treffen. In Wirklichkeit entscheiden mobile Geräte bereits auf unzählige Arten für uns. Manchmal ist dies auch erwünscht: Die iPhone-App Yapta etwa checkt permanent Flugpreise und freie Plätze auf Strecken, die wir zuvor eingegeben haben, und informiert Vielflieger, wann der richtige Zeitpunkt für eine Buchung gekommen ist.
+
+Andere Entscheidungen hingegen laufen ohne unser Zutun ab. Das fängt damit an, mit welchen Diensten sich ein Smartphone in WLANs einwählen soll. Verwendet man Foursquare oder Venmo, „entscheidet“ das Gerät dann an realen Orten „selbstständig“, welche Produktangebote dem Nutzer übermittelt werden. Weil aus Datenschutzgründen immer mehr Online-Dienste ausdrücklich grünes Licht seitens des Nutzers einfordern - per „Opt-in“ -, werden wir es in Zukunft mit einer Mischung aus bewussten und unbewussten Entscheidungen zu tun haben.
+
+Nehmen wir das Beispiel der iPhone-App von Pandora. Welche Musik der Dienst streamt, hängt zunächst von den Informationen ab, die ein Nutzer am Anfang eingegeben hat. Im weiteren Verlauf kann er das System auf seinen individuellen Musikgeschmack „trainieren“, in dem er beim jeweils folgenden Stück auf den Button „Daumen rauf“ oder „Daumen runter“ klickt. Anscheinend hat der Nutzer die volle Kontrolle dabei. Nur: Wer sagt, dass das Entscheidungsmodul von Pandora immer frei von kommerziellen Interessen bleibt?
+
+Der Heilige Gral des Marketings ist das so genannte „Marken-Lock in“: Das ist dann der Fall, wenn ein Verbraucher einer Marke über sehr lange Zeit die Treue hält. Smartphones könnten der Schlüssel dazu sein: Denn zunehmend werden sie zum Wächter über Informationen und zum Kaufagenten für den Verbraucher.
+
+5. Die Macht der Gruppe
+
+Wir treffen normalerweise Entscheidungen in einem sozialen Kontext. Wir beeinflussen und überreden andere und sie uns. Deshalb galt im Marketing Mundpropaganda bisher als ein machtvolles Werkzeug, das man für kein Geld der Welt kaufen kann. Der Aufstieg der sozialen Netzwerke beschleunigt die Mundpropaganda nun in ungeahntem Maße, und einige Marketingexperten betrachten sie inzwischen sehr wohl als etwas, in das man Geld stecken sollte. Wohl aus diesem Grund finden sich auf Facebook mehr Anzeigen als auf irgendeiner anderen Seite im Web. Laut einer Analyse von Comscore entfallen auf Facebook inzwischen ein Viertel aller Online-Anzeigen.
+
+Durch mobile soziale Netzwerke wird der Einfluss von Gleichgesinnten noch größer. Apps wie Fashism versorgen modebewusste junge Frauen sehr viel effektiver mit Hinweisen als ein Haufen anonymer Klicks auf den Like-Button. Ein Beispiel: Eine Frau steht in einem Laden in der Ankleidekabine und überlegt, ob sie ein neues Kleid kaufen soll. Flugs lädt sie einen Schnappschuss des Stücks über die Fashism-App (oder über GoTryItOn or ModCloth) ins Netz und bekommt sofort von anderen aus der Community Rückmeldungen, ob ihr das Kleid steht. Marketing-Verantwortliche müssen angesichts dessen gründlich überdenken, wie sie die Wahrnehmung von Marken steuern wollen.
+
+In ähnlicher Weise können Smartphones auch soziale Bewegungen erschaffen. Gemeinsam mit der Café-Kette Starbucks hat Facebook begonnen, Spenden für Conservation International zu sammeln, einer Organisation, die sich für die Erhaltung der Biodiversität einsetzt. Für jeden Nutzer, der in einem Starbucks-Café die „Facebook Places“-Anwendung aufruft, spendet Starbucks einen Dollar an Conservation International (bis zu einem Maximum von insgesamt 75.000 Dollar).
+
+Mit GiveGiFi können Nutzer Freunden Geschenkgutscheine in Restaurants, Bars oder Geschäften hinterlassen. Tauchen die Freunde dort auf und sind dabei mit dem Ortungsdienst FourSquare verbunden, werden sie sofort über das Geschenk benachrichtigt. Über neue mobile Bezahldienste können Verbraucher andere wissen lassen, wann und wo sie etwas gekauft haben - was Freunde auf ein Produkt oder einen Laden aufmerksam machen kann. Unternehmen können mit Hilfe solcher Dienste Direktmarketing auf einmal mit realen Orten verbinden.
+
+6. Individuelle Markenbildung
+
+Wir gehen wie selbstverständlich davon aus, dass Kommunikation im Wesentlichen zwischen Menschen erfolgt. Marketing-Experten möchten uns aber glauben machen, dass auch Marken mit uns kommunizieren können. Jedenfalls liegt dieser Ansatz dem Konzept der „Marken-Persönlichkeit“ zugrunde. Wie aber verpasst man einer Marke eine soziale - und mehr noch: eine sozial glaubwürdige - „Stimme“, um an den Online-Gesprächen über Marken teilzunehmen? Darüber zerbrachen sich Marketing-Fachleute den Kopf, als Apple noch nicht schätzungsweise 120 Millionen iPhones und iPods verkauft hatte.
+
+Doch nun eröffnet das mobile Internet auch hier eine neue Dimension, weshalb inzwischen Milliarden Dollar in mobile Medien fließen. Skånemejeriet etwa, ein schwedischer Hersteller von Milchprodukten, setzt darauf, seine Produkte ihre eigenen Geschichten erzählen zu lassen. Es hat eine iPhone-App herausgebracht, in die Verbraucher einen Code auf dem Milchkarton eingeben können: Dafür erhalten sie dann Informationen über den örtlichen Bauernhof, der die Milch produziert hat. HarvestMark, ein US-Hersteller von Biolebensmitteln, hat sich mit der Einzelhandelskette Kroger zusammengetan, um eine ähnliche App zu entwickeln. Die Kunden sollen so die Möglichkeit bekommen, die Geschichte eines Markenprodukts kennenzulernen.
+
+7. Drahtlose Entwicklungshilfe
+
+In den vergangenen Jahren sind die Mobilfunknetze vor allem in Entwicklungsländern rasant gewachsen - mit Zuwachsraten, die viermal höher sind als in den westlichen Industrieländern. Genutzt werden hier aber noch kein Smartphones, sondern klassische Handys, mit denen man telefonieren und SMS schreiben kann.
+
+3G-Netze sind auch nicht nötig, um große, relevante Informationsmengen über Märkte, Ernten, Epidemien oder Umweltverschmutzung zu sammeln und aufzubereiten. Aus diesem Grund verkauft Nokia bis heute mehr Handys als alle anderen Hersteller. Weil seine Geräte erschwinglich sind, finden sie in Entwicklungsländern reißenden Absatz. In den Händen ihrer Nutzer verbinden sie nicht nur Menschen, sondern ermöglichen denen auch einen Zugang zu den Informationsquellen der Welt.
+
+Daraus ergeben sich vielfältige Geschäftsmodelle wie mobile Zahlungssysteme in Ländern, in denen die Menschen mehr Handys als Bankkonten haben. Weil Kleinunternehmer auch dort ein bargeldloses Zahlen für Waren und Dienstleistungen bevorzugen, boomen Systeme wie Mony (in Ecuador) oder M-Pesa (in Kenia) - und verändern allmählich die Wirtschaft dieser Länder. Auf der anderen Seite ermöglichen Handys, die Geldbeträge in „elektronischen Geldbörsen“ speichern, selbst den Ärmsten handy-vermittelte Mikrojobs. Die Bezahlung wird dann gleich aufs Handy transferiert.
+
+Kein Zweifel: Mobilfunk und mobiles Internet verändern die Menschheit. Sicher ist diese Technologie ein zweischneidiges Schwert. Auf der einen Seite verbindet sie uns Menschen als Spezies immer stärker miteinander. Sie stellt uns unvorstellbare Datenmengen zur Verfügung, die mit wenigen Klicks erreichbar sind - überall und kinderleicht. Und die Inhalte werden immer spannender.
+
+Auf der anderen Seite spionieren uns unsere mobilen Geräte immer mehr aus, dringen mehr denn je in unsere Privatsphäre ein. Sie verändern, wie wir uns erinnern, kürzen Entscheidungsprozesse ab, verdichten Kommunikation zu immer kompakteren Häppchen.
+
+Die Zukunft der mobilen Kommunikation ist auf eine gewisse Weise ernüchternd, auch wenn uns ihre Auguren unendliche Geschäftsmöglichkeiten weismachen wollen. Nie war die Computertechnik so persönlich, aber auch nie so allgegenwärtig wie heute. Handys und Smartphones leben gewissermaßen in unseren Taschen und wissen, wer wir sind - von Tag zu Tag genauer.
+
+Deshalb sollten wir aufpassen: Wir sollten die Geräte beobachten,
+während sie uns beobachten. Und wir sollten am Ball bleiben. Denn
+zusammen formen unsere Handys und Smartphones auf dramatische Weise
+auch die Zukunft der Wirtschaft.

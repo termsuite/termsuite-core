@@ -1,0 +1,429 @@
+Microsoft Word - Subsistemas Multimedia IP _IMS_ en 3GPP y 3GPP2.doc Subsistemas Multimedia IP (IMS) en 3GPP y 3GPP2 
+ 
+Rodrigo Lizana M., Student Member, IEEE 
+Departamento de Ingeniería Eléctrica 
+Universidad de Santiago de Chile 
+Julio, 2008 
+ 
+ 
+Resumen.- Este artículo provee una descripción de los Otras organizaciones han mostrado interés en la arquitectura 
+Subsistemas IP Multimedia (IMS) en términos de su IMS y la han incluido en redes fijas, tal como la ETSI y la 
+arquitectura, según los grupos de investigación 3GPP y ITU. Actualmente forma parte de las redes de próxima 
+3GPP2. Adicionalmente, se mencionan ciertos problemas de generación NGN. 
+escalabilidad.  
+A continuación se describe la arquitectura IMS según los 
+1. Introducción grupos 3GPP y 3GPP2, con una breve comparación entre 
+ ambas. Luego, se encontrará una descripción de los 
+En los últimos años, Internet ha experimentado una notable servidores de aplicación y los tipos existentes. En seguida, 
+expansión. En consecuencia, la demanda de servicios diversas problemáticas de escalabilidad pronosticadas. 
+multimedia basados en el protocolo de Internet, conocido Finalmente, las conclusiones obtenidas a lo largo de esta 
+como IP (Internet Protocol') ha aumentado. Los Subsistemas investigación. 
+Multimedia IP, que de ahora en adelante se denotarán como  
+IMS ('IP Multimedia Subsystems') surgieron por la necesidad 
+de integrar los servicios de transmisión de video, audio y 
+datos de alta velocidad, con las redes de telefonía móvil de 
+tercera generación 3G, en las que las sesiones de usuario 
+deben mantenerse si este se desplaza en distintas redes del 
+mismo proveedor, o bien, si quiere comunicarse utilizando 
+una red de otro proveedor ('roaming'). A esto se suma la 
+complejidad de transmitir paquetes IP en modo 'tunneling' 
+por toda la red 3G y el aún limitado ancho de banda 
+disponible para cumplir con altos estándares de calidad de 
+servicio. 
+El grupo 3GPP ('Third Generation Partnerhip Project') se 
+encarga de desarrollar las tecnologías 3G basadas en el 
+estándar GSM y GPRS, y definió IMS como parte de su 
+arquitectura de red [2]. Por otra parte, el grupo 3GPP2 se 
+encarga de desarrollar las tecnologías móviles 3G basadas en 
+CDMA2000 e IS-41 y también desarrolla el sistema IMS en 
+sus redes, basándose en el trabajo de 3GPP.  
+IMS consiste en una arquitectura genérica que soporta 
+servicios de comunicación sobre equipos que utilizan el   
+protocolo de inicio de sesión SIP mostrado en [3] ('Session Figura 1: Arquitectura conceptual de la red 3GPP. 
+Initiation Protocol'), para la señalización y la administración  
+de sesiones, además de los protocolos 'Diameter' y 
+'Megaco/H.248' para operaciones y manejo de recursos 
+multimedia respectivamente. Entre los elementos principales 2. IMS en 3GPP 
+de la arquitectura IMS se encuentran los servidores de  
+aplicación, quienes se encargan de ejecutar la lógica de los Las redes de telefonía móvil GSM y GPRS son la base de las 
+servicios multimedia, es decir, como se invocan los servicios, redes actuales 3G. Como se muestra en la figura 1, una red de 
+que señalización es requerida y como los servicios interactúan este tipo se caracteriza por dividir el núcleo de la red en dos 
+ente sí. dominios:  
+ 
+ 1 • Dominio de Circuitos Conmutados ('Circuit Switched Arquitectura IMS en 3GPP 
+Domain'): Heredado de la red GSM. Permitió el uso del  
+servicio de mensajes cortos (SMS). 
+• Como la figura 2 muestra, la arquitectura IMS en 3GPP  Domino de Paquetes Conmutados ('Packet Switched consta en la parte central de los servidores CSCF ('Call State 
+Domain'): Dada la necesidad de interactuar con Internet, Control Function') que usan el protocolo SIP. Estos se 
+surgió la red GPRS como evolución de la red GSM, dividen en: P-CSCF (Proxy CSCF), S-CSCF (Serving CSCF) 
+proveyendo conectividad IP básica a los usuarios móviles. e I-CSCF (Interrogating CSCF). Según la arquitectura NGN, 
+ estos servidores se encuentran en la capa de control: 
+Un sistema IMS se encuentra posicionado sobre el dominio  
+de los paquetes conmutados y es independiente del otro • P-CSCF: Es un servidor proxy SIP y es el primer contacto 
+dominio.  Para proveer servicios basados en el protocolo IP, de un equipo terminal con la plataforma IMS. Este acepta 
+este sistema debe cumplir con ciertos requisitos, que se todos los requerimientos SIP que se originan en el equipo 
+describen a continuación: terminal o van hacia él, los procesa internamente o los reenvía 
+ 
+• a otro servidor. También posee funciones de control y  Calidad de servicio negociable en el inicio y durante administración de recursos. Puede estar localizado en una red 
+sesiones multimedia. 
+• local o visitada.  Calidad de servicio "extremo a extremo" en servicios VoIP,  
+igual o mejor que en modalidad de transmisión de voz por • S-CSCF: Es un servidor SIP que siempre reside en la red 
+circuito conmutado. 
+• local del suscriptor y provee servicios de control de sesión.  Soporte en traspaso de celdas ('roaming'). 
+• Constituye el elemento central de la red IMS en el plano de la  Una o más aplicaciones multimedia por sesión. 
+• señalización. Crea un enlace entre la identidad pública del  Soporte para el funcionamiento con redes de circuito usuario (dirección SIP) y la dirección IP del terminal. Usa el 
+conmutado. protocolo 'Diameter' para interactuar con el HSS ('Home 
+• El acceso a los servicios debe ser independiente de la Subscriber Server') y extraer desde ahí la dirección IP o perfil 
+tecnología de acceso (WLAN, xDSL, GPRS, etc.). de usuario y vectores de autentificación que permiten la 
+• Soporte para la interacción con otras redes, por ejemplo, creación del enlace. Todos los mensajes SIP originados por el 
+con Internet. terminal o destinados hacia él pasan por el S-CSCF, aquí se 
+ procesan los mensajes y se determinan las tareas 
+Estos requerimientos muestran la tendencia de IMS: una subsiguientes a partir del contenido de estos. Tal como un 
+expansión que apunta a una integración de todos los servicios servidor proxy SIP, puede confiar los mensajes SIP a otros 
+basados en el protocolo IP, y que no se limita a las redes de servidores SIP o CSCFs. También puede interactuar con los 
+telefonía móvil. servidores de aplicación y reenviar mensajes SIP entre ellos. 
+  
+ • I-CSCF: Es un servidor proxy SIP que constituye el enlace 
+de la plataforma IMS con redes externas. Este selecciona un 
+S-CSCF para un usuario y traspasa los mensajes SIP entre 
+ellos. La selección del S-CSCF se basa en las capacidades 
+requeridas y las disponibles, y la topología de la red. También 
+puede ser usado para esconder información sobre la estructura 
+interna de la red, a través de la encriptación de parte de los 
+mensajes SIP. 
+ 
+En 3GPP, la plataforma IMS incluye muchas otras entidades 
+funcionales. El servidor HSS es la base de datos central que 
+contiene la información relacionada a un usuario. Si hay más 
+de un HSS en la red, un SLF ('Subscriber Location 
+Function') puede indicar la dirección del usuario a los 
+correspondientes servidores HSS. La MRF ('Multimedia 
+Resource Function') provee los recursos multimedia a la red 
+local y se divide en MRFC ('MRF Controller') y MRFP 
+('MRF Processor'), que se comunican entre si a través del 
+protocolo Megaco/H.248. El servidor SIP BGCP ('Breakout 
+Gateway Control Function') tiene la responsabilidad de 
+ escoger una red PSTN/CS ('Public Switched Telephone 
+ Network Communication Server') adecuada si la sesión así lo 
+Figura 2: Arquitectura funcional de IMS 3GPP. requiere. La interacción con la red de circuito conmutado 
+ 2 (CS) se realiza a través del MGCF ('Media Gateway Control CSCF realiza funciones de control basándose en el perfil de 
+Function') y MGW ('Media Gateway'). UE2. Si la sesión es autorizada, el S-CSCF envía la solicitud 
+ de invitación SIP al P-CSCF presente en la red visitada 2 
+(flujos 8 y 9). Luego de esto, el P-CSCF envía la solicitud a 
+UE2. De esta forma se completa el proceso de invitación SIP 
+a UE2. 
+ 
+Luego de que UE2 recibió la invitación, este envía un 
+mensaje de respuesta de oferta ('Offer Response Message') 
+según protocolo SDP. Este mensaje recorre el mismo camino 
+mencionado anteriormente. UE1 puede determinar los flujos  
+de comunicación ofrecidos y envía una confirmación de 
+respuesta. UE2 responde con un mensaje de reconocimiento 
+(ACK: 'Acknowledgement Response'). Después, UE1 puede 
+realizar procedimientos de reserva de recursos, para asegurar 
+calidad de servicio. UE2 es alertado con un tono de repique, y 
+al momento de aceptar la solicitud, UE1 envía un mensaje 
+SIP ACK, con lo que finaliza la etapa de configuración de la 
+llamada. En resumen, el procedimiento de conexión requiere 
+de dos etapas: 1) Búsqueda del camino de señalización, y 2) 
+Negociación de los recursos.  
+Un procedimiento de una etapa podría reducir los mensajes de 
+señalización y aumentar la escalabilidad de IMS. 
+  
+  
+Figura 3: Flujo de llamada IMS 3GPP extremo a extremo. 
+ 
+Proceso de señalización 
+ 
+En esta sección se describe el proceso de señalización en el 
+caso de dos usuarios que hacen uso de la plataforma IMS 
+utilizando 'roaming', ambos en redes distintas a las de sus 
+proveedores. La topología es mostrada en la figura 3. Las 
+líneas punteadas en los servidores I-CSCF significan que la 
+señalización es opcional, por lo que los flujos pueden pasar 
+sin ser considerados por ellos. En la figura, ambos equipos de 
+usuarios (UE: 'User Equipment') se encuentran en redes 
+ajenas y se han registrado a sus redes locales, por lo que en 
+este ejemplo son considerados. 
+ 
+Se asume que UE1, en la red visitada 1, desea establecer una 
+sesión IMS con UE2, en la red visitada 2. UE1 inicia la sesión 
+con una invitación SIP ('SIP Invite'), según protocolo SDP  
+('Session Description Protocol, IETF RFC 2327') a través del  
+P-CSCF en la red visitada 1 (flujo 1). El P-CSCF envía la Figura 4: Arquitectura funcional de IMS 3GPP2. 
+solicitud al S-CSCF asignado a UE1 (flujos 2 y 3), que realiza  
+procedimientos de control basándose en el perfil de UE1. 
+Usando parte de la información de dirección contenida en el 3. IMS en 3GPP2 
+mensaje de invitación SIP, el S-CSCF identifica el I-CSCF de  
+la red local 2 y le envía la solicitud de UE1 (flujos 4 y 5). El grupo 3GPP2 definió la plataforma IP MMD, que consta 
+Asumiendo que ambas redes locales están en distintos de IMS y un subsistema de paquetes de datos (PDS: 'Packet 
+dominios administrativos, el I-CSCF es requerido en la red Data Subsystem'). IP MMD fue diseñado para proveer 
+local 2 para ocultar información interna. Una vez recibida la servicios y conectividad IP "extremo a extremo" por medio 
+solicitud, el I-CSCF puede consultar al HSS por la ubicación de una red de núcleo PS. IMS está definido en MMD para dar 
+del S-CSCF (flujo 6) para luego enviársela (flujo 7). El S- soporte a las sesiones multimedia.  
+ 3 Diferencia 3GPP 3GPP2 ('Authentication, Authorization and Accounting') en un 
+Administración 'Tunneling' de capa 2 servidor y otras bases de datos. 
+de movilidad usando GPRS IP móvil • Servicios CAMEL: No hay servicios CAMEL 
+Versión IP Solo IPv6 IPv4 e IPv6 (opcional) ('Customized Aplications for Mobile Enhanced Logic') en 
+Tarjeta inteligente UICC R-UIM (opcional) 3GPP2. En contraste, 3GPP define la interfaz Si entre el HSS 
+Seguridad de y IP-SSF ('IP Multimedia Service Switching Function) que es 
+acceso Solo Ipsec Existen alternativas parte de CAMEL. 
+GGSN fija/PDSN GGSN nunca cambia PDSN cambia  
+Ubicación de P- GGSN y P-CSCF siempre PDSN y P-CSCF pueden Más detalles de 3GPP y 3GPP2 pueden ser encontrados en 
+CSCF en la misma red estar separados [5]. La tabla N º1 resume la comparación mencionada. 
+Posicionamiento -- PDE y servidor de posición  
+Base de datos HSS AAA y bases de datos 
+Servicios Interfaz Si entre HSS y 4. Servidores de aplicación (AS) 
+CAMEL IM-SSF -- 
+  
+Tabla 1: Comparación de IMS 3GPP e IMS/MMD 3GPP2. Como lo ilustra la figura 5, según la arquitectura NGN, de la 
+ que IMS es parte, los servidores CSCF son los elementos 
+La figura 4 ilustra en forma simplificada la arquitectura de principales de la capa de control (capa 2). La capa 3 es 
+IMS 3GPP2. Como IMS 3GPP, utiliza el protocolo SIP para denominada capa de servicio y se compone de los servidores 
+la señalización y la mayoría de sus componentes tienen la de aplicación (AS: 'Aplication Servers'). Los servidores de 
+misma funcionalidad, pero a pesar de sus similitudes,  se aplicación proveen servicios específicos a los usuarios 
+requieren cambios para desplegar IMS en redes 3GPP2. Los finales. Estos servicios comprenden juegos multi-usuario, 
+cambios se mencionan a continuación: videoconferencia, mensajería, servicios comunitarios y 
+ compartimiento de contenido. 
+• Administración de movilidad: En 3GPP2, IP móvil provee  
+movilidad para IMS. En 3GPP, la movilidad se alcanza con IMS define tres tipos de servidores de aplicación: Servidores 
+mecanismo 'tunneling' de capa 2, basado en GPRS. SIP, OSA y CAMEL. Los servidores SIP se comunican 
+• directamente con los S-CSCF a través del protocolo SIP. Los  Versión IP: 3GPP2 provee soporte para IPv4 e IPv6, servidores OSA cumplen la misma función, pero requieren el 
+mientras que 3GPP solo lo hace para IPv6. 
+• uso de un servidor SCS ('Service Capability Server') entre el  Tarjeta Inteligente: Cada terminal 3GPP es equipado con servidor OSA y el S-CSCF para traducir mensajes SIP. El 
+una tarjeta removible UICC ('Universal Integrated Circuit ambiente de servicio CAMEL, es un conjunto de mecanismos 
+Card') que almacena la configuración y los parámetros de que permiten al operador de la red entregar servicios 
+seguridad. En 3GPP2 una tarjeta opcional homóloga es específicos de operador a los usuarios, incluso cuando se 
+llamada R-UIM ('Removable User Identity Module'). 
+• encuentran haciendo 'roaming', a través de IP-SSF, que  Seguridad de acceso: 3GPP2 mejora la flexibilidad de la traduce las solicitudes CAMEL a solicitudes SIP. 
+seguridad de acceso. En 3GPP2 existen otros métodos de  
+seguridad, a diferencia de 3GPP con tan solo IPsec, en los Dependiendo de la implementación, un AS puede contener 
+que el UE y el servidor P-CSCF pueden negociar el una o más aplicaciones IMS. En ambos casos, el AS manipula 
+mecanismo de autentificación usando el acuerdo de seguridad e interpreta los mensajes SIP enviados por el S-CSCF para 
+SIP. 
+• enviar de vuelta una respuesta a través de este mismo  Ubicación de P-CSCF: En 3GPP este servidor se ubica servidor. 
+siempre junto al GGSN ('Gateway GPRS support node'), que  
+es el punto de ejecución de normas (PEP: 'Policy La arquitectura IMS permite al proveedor establecer 
+Enforcement Point') ambos en una red visitada o local. En diferentes aplicaciones en el mismo dominio. Diferentes ASs 
+3GPP2, el P-CSCF y el PDSN ('Packet Data Serving Node') pueden ser desplegados para diversas aplicaciones o grupos 
+no deben estar necesariamente en la misma red. 
+• de usuarios. El S-CSCF decide a cual servidor de aplicación  GGSN fija/PDSN: La asignación del GGSN en 3GPP envía una solicitud SIP, esta decisión se basa en información 
+nunca cambia, mientras que en 3GPP2 de puede cambiar de de filtro entregada por HSS. 
+PDSN, incluso durante una sesión.  
+• Posicionamiento: 3GPP2 posee la entidad determinante de Cuando el HSS transfiere la información y dirección de más 
+posición (PDE: 'Positioning Determinating Entity') y el de un AS, el S-CSCF debe contactar cada AS en el orden 
+servidor de posición, ambos para proveer la ubicación  provisto. El S-CSCF utiliza la primera respuesta de un AS 
+geográfica de la plataforma IMS 3GPP2. como entrada para el segundo y así sucesivamente. 
+• Base de datos: En 3GPP, HSS es la base de datos central  
+para los dominios de paquetes conmutados y circuitos El servidor de aplicación usa reglas de filtrado para decidir 
+conmutados. 3GPP2 separa las funciones AAA que aplicaciones serán servidas al usuario en la sesión. 
+Durante la ejecución del servicio, el servidor puede
+ 4 Figura 5: Arquitectura IMS y capas de red según NGN. 
+ 
+ 
+comunicarse con el HSS a través del protocolo 'Diameter' 
+para adquirir información adicional del suscriptor o aprender 5. Escalabilidad de IMS 
+de los cambios en el perfil de usuario. 
+  
+Los servidores de aplicación deben cumplir con los siguientes IMS fue diseñado para dar soporte amplio y complejo a los  
+requerimientos: servicios multimedia IP para un alto número de usuarios. A la 
+ vez, provee una arquitectura escalable independiente del nivel 
+• de tráfico, es decir, los servidores CSCF pueden ser asignados  Soporte para un amplio rango de servicios para usuarios dinámicamente a los usuarios. Los servidores son distribuidos 
+finales. 
+• de tal modo que la capacidad es extensible. Además, el  Rápido despliegue y creación del servicio. 
+• protocolo usado es SIP, que al ser basado en texto es fácil de  Configuración sencilla del servicio. 
+• depurar, pero el tamaño de los mensajes es grande. Más aún,  Evolución independiente entre servicios e infraestructura. 
+• existen numerosos nodos con extensas funcionalidades dentro  Soporte para ambientes multi-jugador. 
+• de IMS. Esto ocasiona un largo número de mensajes por lo  Acceso universal a los servicios. 
+ 5 que se procesan largos flujos de mensajes. En esta sección se intercambiar la información de carga sin introducir cabeceras 
+investigan potenciales problemas de escalabilidad de IMS. de señalización adicionales. También se deberían considerar 
+los tiempos de retardo por distancias geográficas. 
+Configuración CSCF y enrutamiento de 
+mensajes Calidad de Servicio (QoS) 
+Una de las primeras tareas para IMS es enrutar mensajes de  
+señalización para las sesiones multimedia IP. Las decisiones La arquitectura QoS ('Quality of Service') 3GPP y la 
+son tomadas por los servidores SIP, incluyendo los servidores arquitectura QoS extremo a extremo son especificadas en TS 
+de aplicación y los servidores CSCF. IMS posee un basto 23.107 y TS 23.207 respectivamente. Tanto para 3GPP como 
+número de este tipo de servidores para propósitos de balance para 3GPP2, el núcleo de la red utiliza DiffServ (IETF RFC 
+de carga e inclusión de redundancia. Reglas bien definidas 2475) como mecanismo principal de calidad de servicio. Una 
+para las decisiones de enrutamiento, podrían ayudar a los de las razones, es que es más escalable que IntServ. 3GPP 
+servidores SIP a reenviar los mensajes SIP a otros servidores adoptó la norma de calidad de servicio basada en COPS 
+más apropiados. Cuando existe un gran número de clientes ('Common Open Policy Service') definida por la IETF en 
+accediendo simultáneamente a los servicios IMS, el balance IETF RFC 2748. Los terminales también pueden hacer uso de 
+de carga, a través de varios servidores SIP, podría reducir SDP para describir sus sesiones multimedia. 
+problemas de escalabilidad.  
+ En IMS, el PDF en el P-CSCF sirve como punto de decisión 
+El primer punto de contacto en una red visitada es el servidor de norma (PDP: 'Policy Decisión Point') y el GGSN como 
+P-CSCF, este desempeña tareas proxy denominadas 'stateful' punto de ejecución (PEP: 'Policy Enforcement Point'). La 
+al reenviar requerimientos SIP desde o hacia el terminal. Para interfaz Go entre el PDF y el GGSN soporta la transferencia 
+el balance de carga, el P-CSCF puede escoger diferentes I- de información y las decisiones de la norma. Además, el PDF 
+CSCF para cada terminal. Por esta razón, considerando implementa SBLP ('Serviced-Based Local Policy'). En este 
+escalabilidad, el algoritmo de balance de carga debería ser modelo, el P-CSCF adhiere un token de autorización generado 
+crucial si la carga es pesada. El P-CSCF almacena por el PDF a la cabecera SIP y lo envía al terminal de usuario, 
+información de contacto de la red local del usuario durante los así el usuario usa este token para identificar sesione 
+procedimientos de registro, y más aún, puede mantener la multimedia y reservar los recursos. La figura 6 muestra este 
+información de cuenta y asociaciones de seguridad con el procedimiento implementado con SBLP. El UE describe los 
+terminal (tareas 'stateful'). Este comportamiento podría requerimientos de calidad de servicios según los atributos de 
+consumir más esfuerzo de procesamiento por parte del P- la red de acceso, en este caso UMTS, mediante SDP (flujo 1). 
+CSCF cuando se da soporte a un gran número de usuarios Luego se activa el contexto PDP con los atributos de calidad 
+IMS. de servicio (flujos 2 y 3). El GGSN, como PEP, negocia con el 
+ PDF usando mensajes COPS estándar (flujos 6 a 8). 
+El S-CSCF maneja el perfil de cada usuario y el estado de las Finalmente, el contexto PDP es creado, y los recurso 
+llamadas. Este servidor ocupa criterios de filtrado, los que son requeridos con reservados (flujos 9 y 10). 
+parte del perfil de usuario y representan la suscripción a los  
+servicios. El diseño de estos criterios debe ser cuidadoso y El modelo de autorización de medios puede presentar 
+considerar a la vez el balance de carga apropiado para asignar problemas de escalabilidad cuando se reciban miríadas de 
+distintos requerimientos SIP a los servidores de aplicación.  requerimientos. El PDF debe mantener información de 
+ facturación para identificar el token de autorización y la 
+Al contrario de los servidores P-CSCF y S-CSCF, el I-CSCF correspondiente calidad de servicio en el cuadro de diálogo 
+desempeña tareas proxy 'stateless', por lo que podría ser SIP. El GGSN usa el token para adquirir la información de 
+escalable para soportar un gran número de usuarios. El I- calidad de servicio y ejecutar los detallados parámetros de la 
+CSCF es el encargado de escoger los distintos servidores S- sesión multimedia. Adicionalmente, el GGSN funciona como 
+CSCF para sesiones de usuario provenientes de redes externas, router DiffServ en la frontera de la red. Para soportar calidad 
+por este hecho afecta la carga de estos servidores. de servicio extremo a extremo, los protocolos de negociación 
+ deberían ser escalables para un gran número de redes 
+A los problemas de escalabilidad al aumentar el número de heterogéneas. Como se dijo anteriormente, procedimientos de 
+usuarios, se suman los de escalabilidad por arquitectura una ronda ('one-round') combinados con búsqueda de rutas y 
+mencionados en 3GPP TS 23.218. Al desplegarse gran negociación de recursos, podrían reducir la cantidad de 
+número de servidores de aplicación y servidores S-CSCF, se procedimientos de señalización y aumentar la escalabilidad de 
+debe tener en cuenta los retardos en la señalización, en caso de la arquitectura IMS. 
+que muchos servidores se encuentren en una misma ruta.  
+ Investigación futura se focalizará específicamente en 
+En definitiva, es indispensable un algoritmo de enrutamiento contenidos, almacenamiento y cobro de las normas locales de 
+dinámico que esté conciente del nivel de carga ('load-aware nivel de servicio. En este momento, la calidad de servicio en 
+routing algorithm'). Investigación es requerida para medir e plataforma IMS está habilitada en el dominio de los paquetes 
+ 6 conmutados, y se ampliará al dominio de circuitos que provocaría serios problemas de escalabilidad por las 
+conmutados en una próxima versión (CSI: 'Circuit Switched operaciones tipo 'stateful' y el costo de computar tráfico 
+IMS'). agregado con IPsec ESP en modo túnel. 
+ 
+Seguridad Otro aspecto a considerar es la autentificación de dos etapas, 
+ dado que IMS es una red sobrepuesta en el dominio PS: 
+3GPP divide la seguridad en seguridad de acceso y seguridad autentificación GPRS y autentificación de nivel IMS. Lo 
+en el dominio de la red: mismo se considera en el caso de 3GPP2 MMD. Un 
+ procedimiento de autenticación que combine ambas etapas es 
+Para seguridad de acceso, los mensajes SIP entre el P-CSCF y propuesto en [7] para aumentar escalabilidad. 
+el terminal IMS son protegidos por dos asociaciones de  
+seguridad IPsec después de la autentificación y la autorización 
+en la etapa de registro. Adicionalmente, el S-CSCF usa el Servicios y aplicaciones 
+protocolo Diameter los vectores de autentificación desde el  
+HSS, y luego demanda al terminal IMS. Uno de los requerimientos de IMS es soportar rápidamente 
+ nuevas aplicaciones y servicios IP. OMA ('Open Mobile 
+Para seguridad en el dominio de la red, se implementan Alliance') está definiendo diversas estructuras de servicios y 
+puertas de enlace de seguridad en el borde del dominio de aplicaciones interoperables. Para ello, trabaja en conjunto con 
+seguridad ('SEGs: Security Gateways'). Tráfico entre 3GPP, 3GPP2 e IETF. Entre los servicios desarrollados por 
+dominios de seguridad atraviesa los respectivos SEGs. La OMA de acuerdo a los estándares 3G, se encuentran 'Push-to-
+interfaz es denominada Za y utiliza carga útil de seguridad talk', mensajería instantánea y 'presence service'. 
+encapsulada IPsec ('ESP: Encapsulated Security Payload') en  
+modo túnel. Autentificación y protección de integridad en esta IMS ofrece una estructura escalable para el desarrollo de 
+interfaz son obligatorias, y se recomienda encriptación. De nuevas aplicaciones y servicios. Primero, adopta servicios 
+esta forma, si el P-CSCF en una red visitada y el S-CSCF en la basados en IP, que son sencillos de incorporar como servicios 
+red local están en diferentes dominios de seguridad, se podrá multimedia IP. Segundo, IMS se focaliza en la señalización de 
+mantener la seguridad de la sesión. servicios multimedia IP usando SIP. Tercero, solo se 
+ especifican las capacidades y atributos de los servicios. 
+Proveedores de servicios pueden entregar servicios mejorados 
+rápidamente sin espera la de una estandarización. De todos 
+modos, la plataforma IMS actual no es suficientemente 
+escalable para dar soporte completo a servicios multimedia IP 
+de vendedores y redes independientes. Calidad de servicio 
+extremo a extremo es uno de los mayores desafíos cuando se 
+trata de interacción con servicios provistos por terceros. Se 
+espera que IMS pueda armonizar accesos fijos y móviles. 
+Diferentes servicios accedidos por distintos tipos de usuarios 
+pueden significar nuevos y variados requerimientos y 
+características. Un agente de servicio ('Service broker') es 
+esencial para coordinar los diversos servicios en el futuro, y es 
+también la clave de la escalabilidad de IMS y sus aplicaciones. 
+ 
+Existen aún muchas insuficiencias, no solo en la actual IMS, 
+sino que en SIP, SDP y otros protocolos IP. Los protocolos 
+actuales son, lamentablemente, complicados de operar con 
+redes 3G. Extensiones y mejoras son aún requeridas. OMA y 
+ otras organizaciones de estandarización continúan trabajando 
+ en la interoperabilidad de aplicaciones móviles. Se espera que 
+Figura 6: Proceso de reservación de recursos en 3GPP con IMS sea la base de los futuros servicios multimedia IP. La 
+SBLP. colaboración entre estándares celulares y de Internet es 
+ esencial. 
+Para seguridad de acceso, el P-CSCF y el S-CSCF 
+desempeñan transacciones tipo 'stateful' para establecer Redes de la próxima generación ('NGN: Next-
+asociaciones de seguridad. Esta naturaleza está directamente Generation Networks ') 
+vinculada con problemas de escalabilidad cuando una gran La ITU-T ('International Telecommunication Union - 
+cantidad de usuarios acceden a la red IMS. Por otra parte, la Telecommunication Standarization Sector') provee en la 
+seguridad en el dominio de la red agrega tráfico en el SEG, lo 
+ 7 recomendación Y.2001 la definición, principios y modelo de La naturaleza de los servidores P-CSCF y S-CSCF podría 
+desarrollo generales para NGN ([8] y [9]). A continuación, se limitar la escalabilidad para el número de usuarios. Para 
+mencionan las principales problemáticas definidas en dicha balance de carga y redundancia, IMS despliega normalmente 
+recomendación: múltiples servidores CSCF y servidores de aplicación. Muchos 
+ nodos involucrados en el camino de señalización podrían 
+• Transmisión en base a  paquetes provocar largo retardos. Un algoritmo de enrutamiento que 
+• Calidad de servicio disponible prevenga el nivel de carga y que considere el retardo de 
+• Independencia de servicio y transporte propagación es esencial para mejorar la escalabilidad de IMS. 
+• Movilidad generalizada  
+ IMS ocupa arquitectura 'DiffServ' para incrementar la 
+La arquitectura funcional NGN está basada en la arquitectura escalabilidad de la calidad de servicio. Existen problemas aún 
+IMS, a pesar de que se necesiten mejoras para soportar la para la negociación de recursos de dos pasos. Si bien 
+escalabilidad de numerosas redes de acceso heterogéneo. Si 'DiffServ' es más escalable que 'IntServ', la negociación de 
+bien IMS utiliza servicios basados en IP, no es completamente calidad de servicio en redes heterogéneas apunta a problemas 
+independiente de los sistemas de las redes adyacentes. La de soporte de escalabilidad de calidad de servicio extremo a 
+divergencia entre IMS 3GPP e IMS 3GPP2 es una ejemplo de extremo. 
+ello. Además, diferentes redes poseen distintas características  
+y capacidades. El problema de escalabilidad podría surgir La seguridad en IMS está dividida en dos ámbitos: seguridad 
+cuando la autorización de recursos y procedimientos de de acceso y seguridad en el dominio de la red. Los problemas 
+reserva envuelvan demasiadas redes heterogéneas. También, de escalabilidad en el caso de la seguridad de acceso 
+se debería tener en cuenta que distintas redes pueden utilizar provienen de asignar asociaciones de seguridad IPsec (SAs: 
+diferentes protocolos de manejo de movilidad. Por ejemplo, 'Security Associations') a cada usuario. En el otro caso, el 
+3GPP y 3GPP2 utilizan GMM ('GPRS mobility management') aumento de tráfico en las puertas de enlace de seguridad 
+y 'Mobile IP', respectivamente. El Traspaso de celdas sin (SEGs) también podría ocasionar problemas de escalabilidad. 
+ataduras es un problema crítico, no solo en NGN, sino que  
+también en IMS. Finalmente, se espera que NGN integre todas Como parte de las redes de la próxima generación, IMS 
+las redes fijas y móviles en una sola red totalmente basada en debería desarrollarse considerando todos los problemas de 
+IP. Las mejoras para IMS y NGN son aún substanciales, por lo escalabilidad existentes para integrar diversas redes 
+que 3GPP y 3GPP2 están trabajando en las mejoras requeridas heterogéneas y luego evolucionar para integrar redes IP 
+para que NGN opere con IMS. La IETF coopera con ambas incompatibles, y alcanzar así una completa red IP-NGN. 
+organizaciones para asegurar una apropiada evolución de IMS.  
+6. Conclusiones 7. Bibliografía 
+  
+La plataforma IMS fue diseñada para proveer conectividad IP [1] IP multimedia subsystems in 3GPP and 3GPP2: overview and 
+a las redes de telefonía móvil de tercera generación de la scalability issues. Agrawal, P.; Jui-Hung Yeh; Jyh-Cheng Chen; Tao Zhang; Communications Magazine, IEEE. Volume 46,  
+familia GSM/GPRS/UMTS (grupo 3GPP) y otorgar a los Issue 1,  Enero 2008 Page(s):138 - 145. 
+usuarios una amplia gama de servicios. Su funcionalidad [2] Technical Specification  Group Services and System Aspects; IP 
+llamó la atención de otras organizaciones, como 3GPP2, que Multimedia Subsystem (IMS), Stage 2 (Releaseb 7.5.0). Third 
+desarrolló su propia plataforma en base a IMS 3GPP. Generation Partnership Project. Septiembre 2006. 
+ [3] SIP: Session Initiation Protocol, IETF RFC 3261. M. Handley et 
+IMS se compone de diversos servidores que se comunican al. Junio 2002. http://www.ietf.org/rfc/rfc3261.txt 
+entre si haciendo uso del protocolo de inicio de sesión SIP, [4] IMS Application Servers: Roles, Requirements, and 
+intercambiando mensajes SIP, desde el P-CSCF (al que se Implementation Technologies. Khlifi, H.; Gregoire, J.-C.; 
+conecta un usuario con su terminal IMS) a los servidores de Internet  Computing, IEEE, Volume 12,  Issue 3,  May-June 2008 Page(s):40 - 51. 
+aplicación, que contienen servicios tales como: juegos multi- [5] J.-C. Chen and T. Zhang, IP-Based Next-Generation Wireless 
+usuario, transmisión de imágenes en tiempo real, video Networks, Wiley, Jan. 2004. 
+conferencia, VoIP, mensajería instantánea, etc. [6] NGN Architecture: Generic Principles, Functional Architecture, 
+ and implementation. K. Knightson, N. Morita, and T. Towle. 
+Actualmente forma parte de la arquitectura de las redes de IEEE Commun. Mag., vol. 43, Oct. 2005, pp. 49-56. 
+próxima generación, con el fin de integrar todos los servicios [7] Y.-B. Lin et al., "One-pass GPRS and  IMS 
+IP disponibles, y permitir la interacción de diversas redes AuthenticationProcedure for UMTS," IEEE JSAC, vol. 23, 
+heterogéneas y no heterogéneas.  June 2005, pp. 1233-39. 
+Pese a sus virtudes IMS presenta problemas de escalabilidad [8] ITU-T Rec. Y.2001, "General Overview of NGN." [9] ITU-T Rec. Y.2011, "General Principles and General Reference 
+en términos de configuración, seguridad y calidad de servicio Model for Next Generation Networks." 
+entre otras, por lo que investigación es requerida para facilitar 
+la transición a las redes NGN. 
+ 8 [10] K. Knightson, N. Morita, and T. Towle, "NGN Architecture: 
+Generic Principles, Functional Architecture, and 
+Implementation," IEEE Commun. Mag., vol. 43, Oct. 2005, 
+pp. 49-56. 
+ 
+8. Biografía 
+ 
+Rodrigo Lizana M. ingresa a la Universidad de Santiago de Chile el 
+año 2002 a la carrera de Ingeniería Civil en Electricidad. Durante 
+2006 y 2007 participa de un programa de intercambio a 
+Universidades Alemanas patrocinado por el Servicio Alemán de 
+Intercambio Académico (DAAD: 'Deutscher Akademischer 
+Austauch Dienst') cursando durante este período diversas asignaturas 
+en el Instituto de Telecomunicaciones, en la Facultad de 
+Electrotecnia de la Universidad Tecnológica de Dresden. 
+Actualmente, continúa con sus estudios de Ingeniería Civil en 
+Electricidad en la mención Sistemas Electrónicos y de 
+Telecomunicaciones, y en forma paralela pertenece al programa de 
+post-grado, para obtener el título de Magíster en Ciencias de la 
+Ingeniería. 
+ 
+ 9

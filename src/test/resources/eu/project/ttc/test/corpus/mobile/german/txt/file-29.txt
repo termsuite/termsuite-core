@@ -1,0 +1,93 @@
+Mobilfunk
+
+Mobilfunk ist die Sammelbezeichnung für den Betrieb von beweglichen Funkgeräten.
+
+Darunter fallen vor allem tragbare Telefone, (Mobiltelefone, siehe auch: Mobilfunknetz) und in Fahrzeuge eingebaute Wechselsprechgeräte (etwa Taxifunk). Es existieren jedoch viele weitere Anwendungsbereiche, wie zum Beispiel mobile Datenerfassung, Funkrufdienste, Telemetrie, See- und Binnenschifffahrtfunkdienste, Jedermannfunk und Amateurfunk, die nicht ortsgebunden sind.
+
+Das Gesprächsvolumen in Deutschland umfasst 91 Milliarden Minuten pro Jahr (Stand 2010) und hat damit einen Marktanteil von über 19%.[1]
+Mobilfunkmast in München
+Mobilfunkmasten auf Wohnhaus
+A-Netz Funktelefon (Hersteller: Fa. TeKaDe Nürnberg, 1963)
+Inhaltsverzeichnis
+
+Geschichte der Mobiltelefonie in Deutschland [Bearbeiten]
+Mobilfunk Deutschland[1][2][3] Jahr 	Millionen
+Teilnehmer 	Gesprächsvolumen
+in Milliarden Minuten 	Datenvolumen
+in Millionen GB 	SMS
+in Milliarden 	MMS
+in Milliarden
+abgehend 	ankommend
+1990 	000,3 					
+1992 	001,0
+1994 	002,5
+1996 	005,6 	00,1
+1998 	013,3 	01,0
+1999 	023 	03,6
+2000 	048 	11,4
+2001 	056 	17,1
+2002 	059 	18,4
+2003 	064 	35 	33 	19,0
+2004 	071 	38 	36 	19,7
+2005 	079 	43 	43 	00,2 	20,3
+2006 	085 	57 	53 	00,8 	20,1 	0,14
+2007 	097 	70 	61 	03,5 	23,1 	0,18
+2008 	107 	86 	71 	11,4 	27,8 	0,18
+2009 	108 	91 	78 	33,5 	34,4 	
+2010 	109 	101 	79 	65 	41,3 	
+
+Erste Zukunftsvorstellungen von "Taschentelephonen" mit denen jedermann "sich mit wem er will wird verbinden können, einerlei, wo er auch ist" wurden 1910 in dem Buch "Die Welt in 100 Jahren" publiziert [4]. Seit 1926 gab es einen Vorläufer des öffentlichen Mobilfunks in Deutschland, den Zugfunk in Form einer handvermittelten öffentlichen Sprechzelle im F-Zug Berlin - Hamburg. Seit 1950 gibt es in der Bundesrepublik Deutschland öffentliche Mobilfunknetze, sie waren nicht auf eine breite Vermarktung ausgelegt. Die Mobilfunknetze in Deutschland sind mit fortlaufenden Großbuchstaben benannt.
+
+    * Das analoge handvermittelte A-Netz wurde 1958 von der Deutschen Bundespost unter der Bezeichnung Öffentlich beweglicher Landfunk (ÖbL) eingeführt und existierte bis 1977 (etwa 10.500 Teilnehmer).
+    * Das analoge Selbstwählnetz B-Netz wurde 1972 eingeführt und war bis 2. Januar 1995 in Betrieb (ca. 27.000 Teilnehmer)
+    * Das analoge C-Netz war ein zellulares Mobilfunknetz der deutschen DeTeMobil (früher Deutsche Bundespost). Es war die dritte und gleichzeitig letzte analoge Generation des Mobilfunks in Deutschland mit ca. 850.000 Teilnehmern und vom 1. Mai 1986 bis zum 31. Dezember 2000 in Betrieb.
+    * Das erste digitale D-Netz in Deutschland wurde im Juli 1992 von der Telekom-Tochter DeTeMobil eingeführt.[5]
+    * Das erste digitale E-Netz in Deutschland wurde 1993 von E-Plus eingeführt.
+    * Die erste digitale nur auf GSM-R basierende Strecke (Schnellfahrstrecke Köln-Rhein/Main) der Deutschen Bahn wurde 2002 in Betrieb genommen.
+    * Die UMTS-Netze werden in Deutschland in den größeren Städten und Ballungszentren von allen Mobilfunkunternehmen angeboten.
+    * 2010 hat die Telekom Deutschland die erste Bodenstation der vierten Generation (LTE) in Deutschland in Betrieb genommen.[6]
+
+Die Mobilfunknetze im GSM-Standard wurden in Deutschland anfänglich in D-Netze (900 MHz) und E-Netze (1800 MHz) unterteilt; mittlerweile haben alle vier deutschen GSM-Netze aber auch (in geringerem Umfang) Frequenzen im jeweils anderen Band. E-Plus nutzt das E noch als Markenbestandteil, ebenso Vodafone das D in der Firmierung Vodafone D2 GmbH.
+Landfunknetze [Bearbeiten]
+
+Das "öffentlich bewegliche Landfunknetz" (Autotelefon, öffentlicher beweglicher Landfunkdienst, öbL) ist ein öffentliches Funknetz für Nachrichtenverbindungen von beweglichen Funkstellen untereinander und mit Endstellen des öffentlichen Fernsprechnetzes. Die in einem solchen Netz gebotenen Dienste heißen "öffentliche bewegliche Landfunkdienste".
+
+Mit dem Landfunknetz ist es möglich, über ein Autotelefon In- und Auslandsgespräche über das öffentliche Fernsprechnetz herzustellen: "Der Verbindungsaufbau von einem Teilnehmer des Fernsprechnetzes zum PKW-Teilnehmer erfolgt über die gewöhnlichen Vermittlungseinrichtungen, eine Überleitvermittlung (die in das Funknetz überleitet) sowie über diejenige Landfunkstelle, die dem PKW-Teilnehmer geographisch am nächsten liegt". Die Fahrzeuge müssen mit einer Sprechfunkanlage ausgerüstet sein und sich im Versorgungsbereich einer festen Landfunkstelle befinden.
+Satellitenkommunikation [Bearbeiten]
+
+Daneben existierten auch noch satellitengestützte Mobilfunknetze. Die Nutzung dieser Systeme, obwohl sie weltweit funktionieren, ist wegen unhandlicher und teurer Endgeräte und hoher Gesprächskosten nur in speziellen Bereichen sinnvoll. Es etabliert sich aber immer mehr durch bessere Technik und günstigere Preise dort, wo kein Festnetz oder terrestrisches Mobilfunknetz vorhanden ist, so etwa im Nahen Osten.
+Systematiken [Bearbeiten]
+Technische Systematiken [Bearbeiten]
+
+Grob unterschieden werden Einwegesystem (Simplex), Mehrwegesysteme (Halb-Duplex und Duplex) und Mehrbenutzersysteme (Multiplex). Bei Einwegesystemen ist nur der Empfang (Funkruf) oder seltener nur das Senden (Rundfunk, autonome Pegelstandsmelder der Wasserwirtschaft, Wetterstationen oder auch "Abhörwanzen") möglich. Bei Mehrwegesystemen kann das Endgerät sowohl senden als auch empfangen. Ist dies gleichzeitig möglich (wie bei Mobiltelefonen), so spricht man von Vollduplex.
+Nicht-öffentliche und öffentliche Mobilfunknetze [Bearbeiten]
+
+Mobilfunk unterteilt sich in einen öffentlichen und einen nicht öffentlichen Teil.
+
+Die Aufteilung in öffentliche und nichtöffentliche Funkdienste stammt noch aus der Zeit vor der Postreform I. Derzeit ist in Deutschland die Bundesnetzagentur für die Vergabe der Frequenzen und Genehmigung der Funklizenzen zuständig.
+
+Unter den nicht öffentlichen Mobilfunk fallen zum Beispiel der Flugfunk und der Betriebsfunk. Das Spektrum der Nutzer des Betriebsfunks reicht von der Polizei, der Feuerwehr und anderen Hilfsorganisationen (BOS-Funk = Behörden und Organisationen mit Sicherheitsaufgaben) über Verkehrsbetriebe (zum Beispiel Flugfunk) und Taxi-Unternehmen bis zu privaten Unternehmen, beispielsweise des Baugewerbes.
+
+Als CB-Funk (Citizens Band Radio, "Bürgerfrequenzband", Jedermann-Funk, Bürgerfunk) bezeichnet man einen Funk im 11-Meter-Band auf insgesamt 80 Kanälen 26,565 MHz bis 27,405 MHz. Die Reichweite liegt bei etwa 10-15 km bei der höchstzulässigen Ausgangsleistung. Der Betrieb von mobilen Anlagen (insbesondere in Kfz) ist in Deutschland seit 1975 genehmigungs- und gebührenfrei.
+
+Der Amateurfunk ist privater Funkverkehr, der das erfolgreiche Ablegen einer Prüfung voraussetzt, die zu einer staatlichen Genehmigung (Amateurfunkgenehmigung) führt. Jedem Funkamateur ist ein Rufzeichen zugeteilt. Die Frequenzen für Funkamateure sind international vereinbart. Insbesondere über Kurzwelle kann jeder Punkt der Erde erreicht werden. Auch ist die Verwendung von Amateurfunksatelliten möglich. Die Nutzung ist jedoch nur für rein private Zwecke erlaubt; das Austauschen von politischen Informationen oder der erwerbsmäßige Gebrauch ist zum Beispiel verboten. In den USA waren die ersten Funkamateure bereits 1911 aktiv, heute weltweit über eine Million, davon 78.000 in Deutschland (Stand 12/2003).
+
+Die öffentlichen Mobilfunknetze werden von Mobilfunkbetreibern zur Verfügung gestellt. Sie können von jedermann benutzt werden. Die öffentlichen Mobilfunknetze sind die Funktelefonnetze, die Funkrufnetze, das Rheinfunknetz und das Seefunknetz. Die Funktelefonie (drahtloses Fernsprechen, Funkfernsprechen) basiert auf dem Prinzip des Fernsprechens, welches folgende drei Schritte umfasst:
+
+   1. Signalumwandlung der vom Sprecher erzeugten Schallwellen über die Membranbewegungen in einem Mikrophon in ein elektrisches Signal;
+   2. elektrische Übertragung dieses Signals über eine Vermittlungseinrichtung zum zweiten Teilnehmer;
+   3. Rückwandlung des elektrischen Signals durch die Membranbewegungen in der Hörkapsel in Schallwellen.
+
+Die Übertragung der Fernsprechsignale kann oberirdisch über Freilandleitung, unterirdisch über Kabel, im Inlandsverkehr drahtlos über Richtfunkstrecken oder im Überseeverkehr drahtlos über Kommunikationssatelliten (Nachrichtensatelliten) erfolgen.
+Mobilfunk als gesellschaftliches Phänomen [Bearbeiten]
+
+Der Mobilfunk fand vor allem durch die GSM-Netze für Mobiltelefone (umgangssprachlich Handys) Mitte der 1990er Jahre starke Verbreitung. Dadurch wurde er zu einem gesellschaftlichen Phänomen ("Handy-Etikette").
+
+Für eine biologische Wirkung von Mobilfunkgeräten existieren keine Belege,[7] dennoch werden vor allem im esoterischen Umfeld mögliche Gesundheitsschädigungen behauptet.
+
+An Sendemasten, die oft aus technischen Gründen an exponierten Lagen aufgestellt werden und dadurch Einfluss auf das Landschaftsbild nehmen wird teilweise aus ästhetischen Gründen Kritik geübt.
+Wirtschaftlicher Faktor [Bearbeiten]
+
+Heute ist der Mobilfunk ein bedeutender wirtschaftlicher Faktor. Größtenteils private Mobilfunkgesellschaften konkurrieren um Marktanteile in einem - mittlerweile kaum noch wachsenden - Sektor. Die Mobilfunktechnik spielte eine besondere Rolle in der Entwicklung der New Economy und bei der Schaffung zahlreicher neuer Arbeitsplätze.
+
+Durch das Vermieten von Montageflächen für Mobilfunkantennen an geeigneten Bauwerken können Einnahmen erzielt werden. Auf diese Weise werden wenigstens teilweise die Kosten zum Unterhalt etwa historischer Sendetürme als technisches Denkmal gedeckt, wie beispielsweise beim Sendeturms des Senders Gleiwitz, des letzten bestehenden Holzsendeturms.

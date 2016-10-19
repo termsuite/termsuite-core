@@ -1,0 +1,119 @@
+M-Business: The base for creating competitive advantage. The case of Vodafone-Panafon 
+
+ ANDROULIDAKIS NIKOS      ANDROULIDAKIS IOSIF
+         Nottingham Business School      Network Operations Center
+         Nottingham Trent University         University of Ioannina
+               8, Fokeas str. Papagou	          Univ.Campus, Dourouti
+                      GREECE			        GREECE
+
+
+Abstract: It's a fact that with the 3rd generation network arrival, the potential services that can be provided through mobile devices will be numerous. The market will eventually start to work the potentials of mobile business. Mobile operators are the first to take advantage of these. The question is, how can they manage to create competitive advantage, in a very competitive environment, where the evolutions are rapid. This is the question that this research is aiming to answer. The answer to this question seems to come from the clients-subscribers of mobile operators, and their consumer behavior. The objective of this research is the consumer trends of mobile operator subscribers (and more specifically Vodafone subscribers). For example, which m-commerce services are they using or would like to use in the future through their mobile phones. The research method that was used was the structured survey research with a tick boxes questionnaire which was addressed to young Vodafone subscribers who live in Athens and are aged between 15 and 24.
+
+Key- Words: Mobile business, competitive advantage, opportunity, Internet, services- applications, 3rd generation 
+
+
+1 Introduction 
+The present paper investigates the way that mobile operators can achieve competitive advantage through mobile business services. 
+At this point, two definitions of mobile business would be useful:
+* Mobile Business or Mobile Commerce is any transaction with a monetary value that is conducted via a mobile telecommunications. [1]
+* Mobile Business or Mobile Commerce is the purchase and the sale of goods and services using wireless mobile devices, such as mobile phones and personal digital assistants (PDAs). [2]
+There is great potential for mobile devices and their use in business environments and as tools for trading and commerce. However, apart from the expected continuing developments in the device technologies and wireless infrastructures we believe a great deal of work is needed to enable application interoperation and provision of other services to mobile users through their mobile device proxies. Services such as: secure data transmission and exchange management; data backup and cache management; access to multiple databases and management information systems; and finally incorporation of contextual data, will all bee needed to enable the m-business phenomena. [3]
+The rapid proliferation of many new forms of mobile Internet devices is providing new opportunities for commerce transactions. Increasingly, these handheld devices are being designed for m-Commerce transactions, and m-Commerce is a natural extension and complement to the current Internet shopping experience that has seen rapid growth on the PC channel. [4]
+The present research gave answers to issues such as : will Greek young consumers use their mobile phones to make transactions, are they familiar with their mobile phones and the potential that the latter have,  are they interested in new technologies that their mobile operator can provide, are they ready to accept the  m-business evolution. This paper also tries to investigate the kind of services that the consumers want to use through their mobile phones.
+The objective of this research is the strategic positioning of Vodafone against the competition by applying pioneer services that will become very popular. The present period of time is crucial for all the mobile operators since it is transient, from 2.5 generation mobile networks to 3rd generation. The competition is already shrill and after the arrival of 3rd generation mobile phones it will be more shrill. So, the company that will be placed sooner and more efficiently than the others in m-business services, will create competitive advantage.
+ 
+
+
+2 M-business + competitive advantage
+In order to understand how mobile business can be the base for creating competitive advantage, it is useful to present a review of some important references that have been made in the past concerning this subject. It is also important to show the present mobile phone market size in Greece. 
+
+2.1 Bibliography review
+One of the main ways for a service providing company to get differentiated is by always supplying services that have higher quality than the competitors. The secret is to achieve the same or higher services' level than the one that the target market expects. The problem, in order to be differentiated, is that most of the innovations in services' area can very easily be copied. The company that conducts all the time researches and imports innovations in services' area, will gain many temporary advantages against the competition, and by gaining the pioneer company reputation, it can keep consumers that want the best. [5]
+M-business presents a new opportunity to enhance business agility. Rather than being at the intersection of E-business (or Internet) and Wireless Communications, which has been the traditional definition of the wireless Internet, it is a superset comprised of business process, electronic business, and wireless communications. It is as much about process as it is about technology. The combination of all of these areas creates powerful new synergies. [6]
+Mobile commerce is an ostentatiously fast-moving world where Internet time looks downright sluggish. The immediacy of mobile phone connection and the disposability of mobile devices combine with an impulsive, lifestyle-oriented usage relationship to create a market that expects rapid turnover of concepts, services and brands. Players across the board are actively looking to turn every feature of the mobile landscape into a time-to-market advantage. [7]
+Operators, such as Vodafone, TIM and Cosmote, are best positioned to benefit from the introduction of new m-commerce services, because they already own a billing relationship with the customer and they control the portal which is pre-set on the SIM card when it is distributed. The operator's intention is to position itself in a key role for mobile commerce by owning the portal and participating in the revenues accrued by services over its network. Those revenues will be significantly higher than the sheer increase in call minutes or volume, particularly as the incremental price per minute falls to zero. The mobile operator has the opportunity to become an ISP (Internet Service Provider) in the sense that the mobile network is going to be built on IP technology with UMTS and that the operator will provide a transport pipeline for content services. [1]
+Mobile operators cannot miss the emerging opportunities of mobile commerce. The margin from voice traffic is decreasing and the competition over basic network services becomes harder over time. Investments in third generation networks are massive and they have to find ways to cover the costs and justify the expenses. Mobile data services are expected to become reality as the customers want to have access to their e-mail, calendar and corporate data using mobile terminals. Additionally, it has been noticed that even the voice revenue increases as the customers begin to use mobile data services. Fixed Internet portals are built in order to increase customer loyalty and satisfaction by providing all services within a single environment. Also, mobile customers are following the same pattern. Therefore, mobile operators want to offer portal services which increase the air time and generate extra revenue from premium services. 
+There are four main strategies for mobile operators:
+1. develop own portal;
+2. license a portal from software developers;
+3. form strategic partnerships to provide portal services;
+4. act as a facilitator, concentrate on your core competency;
+       [8]
+       
+2.2 Market background
+Mobile communication networks started to be settled worldwide during 1980 decade, but the major development happened at early 1990s, when the digital cell systems arrived. In Europe, the entrance of the paneuropean digital GSM  (Global System for Mobile communications) contributed very much in the impressive spread of mobile telephony. The first GSM systems were installed in 1992 and up to today have attracted above 200 millions users in Europe. [9]
+In Greece the services of mobile telephony are provided since 1993 from two companies, PANAFON and STET HELLAS, while in 1998 the third network was placed from Cosmote and 2001 the fourth network from Q-Telecom. Today, the bigger share of market is shared equal among Cosmote and Vodafone (former Panafon) while TIM (former STET HELLAS) and Q-Telecom follow. The subscribers of these 4 mobile telephony networks that are activated in the country have exceeded the 11 millions. Indubitably this number proves that each Greek already has his mobile, however something like that does not happen actually, since many Greeks "maintain" 2 or even more active connections with contract and/or card. [9]
+Remarkable is the swift growth of mobile telephony market in Greece since its beginning, in July 1993. In late 1993 the penetration in the market was hardly 0,3% while in 1994, the subscribers of mobile telephony were hardly 167 thousands, something that is 1,5% in degree of penetration. Today this percentage is 70% with rise tendencies. In any case, although the penetration of mobile telephony is presented as continuously increasing, it tends to reach its maximum possible levels, something rendering imperative the need for growth of value added services within the next few years, opening the way for the growth of mobile commerce. [10]
+The following research was carried out in order to understand the tendencies and the opinions of consumers regarding the mobile commerce applications in Greece will become known. 
+
+
+3 The research
+The objective of this particular research is the consuming tendencies of mobile operators subscribers (more specifically Vodafone subscribers). In other words, what kind of services they use or they would like to use in the future via their mobile telephone. The research was conducted became with a tick box questionnaire which was addressed to young persons of age 15-24, residents of Athens, subscribers with contract in Vodafone company. The sample in which the questionnaires were finally given was 50 individuals, objectively impartial and individuals above in which the research could support itself without influencing the reliability of results. The research lasted almost three months (June-September). The distribution of questionnaires began the last week of July 2004 with two ways:
+delivery and collection questionnaires and on-line questionnaires. 70 questionnaires were totally dispatched because it was sure that some questionnaires would not be answered. The required supplemented questionnaires had been collected until the end of August 2004.
+First of all, the research showed that young persons aged 15 to 24 have been familiarized with the internet and might very easily be adapted in the new mobile business services, since the 88% of them use Internet via PC (from their house or from somewhere else) at least one to two times per week. 
+Hardly 56% of the sample have mobile telephone device with internet access possibility, result rather ominous for mobile business. The particular percentage was asked for the degree of information they had regarding the possibilities of their mobile telephone concerning the mobile business services, the frequency of use of such kind of services, if they consider these services  expensive or cheap as well as how functional they considers it is. The analysis of the answers showed that: 
+57% are enough or even very much informed regarding the possibilities of their mobile telephone concerning mobile business services,
+89% use such kind of services maximum one to two times during 15 days. Indicative of this tendency is the percentage of young persons that have never used such kind of applications (43%),
+64% answered that they consider internet access via mobile phone expensive or even very expensive(see Graphic 3.1). Hence, a reason for which the young persons do not use their mobile telephone in order to have access in the internet and in mobile business services is the big cost. 
+
+Graphic 3.1: Cost of internet access via mobile phone
+
+
+79% of the sample considers internet access process in mobile business  services enough functional up to normal.
+Young persons' most desirable mobile business applications are with order of priority (see Table 3.1):
+General information (news, time, cinema, theatre, bar etc.)
+Sending and receiving e-mail 
+Entertainment (games, music, ring tones, logos)
+
+
+
+
+
+
+
+Most desirable mobile business applications
+(1-Most desirable..7-Less desirable)
+APPLICATIONS
+Average
+General information
+2,72
+E-mail
+3,12
+Entertainment
+3,24
+Travel information
+3,72
+Products' purchase
+4,32
+Bank transactions
+5,12
+Chat
+5,76
+Table 3.1: Desirable mobile business applications
+
+The question that followed concerned whether the asked person would change mobile telephony company if another one was more evolved on mobile business issues. The result was that 56% answered that they are willing to seek for another more evolved company in case their company, in which they are subscribers, was not evolved in this sector. The percentage of affirmative answers is enough to give to the companies one big motive to accelerate their processes of development on m-business issues because it appears that the company which is permanently one step ahead of the others is the company that has achieved competitive advantage.
+Afterwards, the asked persons were called to classify the factors which they consider important in order to use mobile business services. The analysis of answers showed that the more important factors are the cost of access, the facility of use and the access-download speed. The next question concerned the transactions' safety via mobile telephone. 44% consider mobile transactions not very safe while a 8% consider them as not safe at all. That is to say that 52% of the sample would not deal via mobile for reasons of safety. (see Graphic 3.2)
+
+
+Graphic 3.2: Mobile transactions' safety degree 
+
+Mobile operators should become more activate in safety sector, providing safety feeling to the users otherwise the latter will not use mobile business services requiring transaction. This means loss of important income for the companies. Following, the sample was asked for the way of mobile transactions' refunding that would make them feel safe. 48% of the sample would debit his transactions in his mobile telephone number in order to be more safe and he would pay off via the monthly account. The percentage (40%) that answered that it would feel safe if it paid off its transactions with reimbursement was also big, while only 8% would give his credit card number via mobile.
+An interesting aspect of mobile business is the potential that mobile operators will have to get advertised or to advertise other companies through mobile telephones (mobile advertising-mobile publicity). Therefore, the sample was called to answer if it would be bothered to accept advertisements via mobile device with a reward of free time of speech or free of charge SMS or something similar. 68% answered that it would not be bothered. Interesting for mobile telephony companies, who can exploit this by making contract agreements with abundance of companies so that the latter advertise themselves in the screen of mobile telephones of the subscribers.
+Finally, the asked young persons answered that they would use mobile business services for entertainment (28%), facility (22%) and information (20%) while they would not use such type of services for reasons such as high cost (60%), lack of safety (56%) and low speed (16%).
+
+
+4. Conclusions
+Almost one hundred years since Ford introduced the Inside Out philosophy  with the eminent phrase "Produce cars as long as they are black. In our days this philosophy is not applied. Henceforth, the deep knowledge of market is necessarily (the philosophy of Outside In). During the last few years, more and more companies apply customer oriented policy. They adapt their strategy based to the customer's wishes. Mobile operators have also started to apply this policy. With datum, that the mobile business services will involve revolution in the market and will be the basic way of bringing profits to mobile telephony companies, a research focused in the wishes of consumer  regarding the particular services should be done. The company which will fill most conditions and will cover the wishes and the needs of customer, regarding mobile business, will automatically acquire competitive advantage.
+
+
+References:
+[1] Muller-Veerse, F., Mobile Commerce Report , Durlacher, 1999
+[2] http://www.whatis.com
+[3] Hawick, K.A., James, H.A., Middleware issues for mobile business and commerce, Published in WSEAS Conference on E-Activities, Singapore, December 2002, http://www.worldses.org
+[4]Milanovic, S., Mastorakis, N.E., Building a Strategic m-Commerce Services Platform Published in WSEAS Conference, Math2004, IMCCAS2004, ISA2004 and SOSM2004, Miami, Florida, April 21-23 2004, http://www.worldses.org
+[5] Kotler, P., Marketing Management, 9th Edition, Interbooks, Athens, 2000
+[6] Evans, N., Business Agility: Strategies for gaining competitive advantage through mobile business solutions, Prentice Hall Inc., New Jersey, 2002
+[7] May, P., Mobile Commerce, Cambridge University Press, Cambridge, 2001
+[8] Paavilainen, J., Mobile Business Strategies , Wireless Press, London, 2001
+[9] ICAP, Research for fixed and mobile telephony, 2001
+[10] MobiCom project, (2001), European Mobile Commerce Survey , AUEB

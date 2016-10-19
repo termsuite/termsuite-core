@@ -1,0 +1,3776 @@
+Mobile Kommunikation
+Kompatibilität von Bluetooth® Mobiltelefonen mit PCM/CDR-30
+in den Boxster/Cayman/911 Modellen
+
+Inhalt
+
+1.  ompatibilitätsliste Bluetooth®
+K
+Mobiltelefone
+
+2. Detaillierte Funktionsübersicht
+
+3.  inweis für die Anmeldung
+H
+von Bluetooth® Mobiltelefonen
+am CDR-30
+
+4.  inweis für die Anmeldung von
+H
+Bluetooth® Mobiltelefonen am PCM
+
+5. Häufig gestellte Fragen (FAQ)
+
+6. Glossar
+
+2
+
+1. Kompatibilitätsliste Bluetooth® Mobiltelefone
+
+1. Kompatibilitätsliste Bluetooth® Mobiltelefone
+Mit Einführung der Sportwagen Modelljahr 2011 erfolgt beim Telefonmodul eine automatische Erkennung und Umschaltung
+zwischen den Bluetooth® Handyprofilen SIM-Access Profile (SAP) bzw. Handsfree Profile (HFP).
+Hinweis: Bei 911 Carrera Modellen nur in Verbindung mit optionalem Navigationsmodul.
+
+Hersteller
+
+Modell
+
+Kompatibilität
+PCM/CDR-30 mit
+Handyvorbereitung
+
+Kompatibilität
+PCM mit
+Telefonmodul1)
+
+Apple
+
+iPhone 3G
+
+•
+
+•
+
+Apple
+
+iPhone 3GS
+
+•
+
+•
+
+BlackBerry®
+
+Curve™ 8900
+
+•
+
+•
+
+BlackBerry®
+
+Bold™ 9000
+
+•
+
+•
+
+BlackBerry®
+
+Storm™ 9500
+
+•
+
+•
+
+BlackBerry®
+
+Storm2™ 9520
+
+•
+
+•
+
+BlackBerry®
+
+Bold™ 9700
+
+•
+
+•
+
+Nokia
+
+5630 XpressMusic
+
+•
+
+•
+
+Nokia
+
+6700 Classic
+
+•
+
+•
+
+Stand 30.03.2010. Alle Angaben ohne Gewähr.
+1)
+
+Bluetooth ® HFP bei 911 Carrera Modellen nur in Verbindung mit optionalem Navigationsmodul.
+
+3
+
+• kompatibel
+
+1. Kompatibilitätsliste Bluetooth® Mobiltelefone
+
+Hersteller
+
+Modell
+
+Kompatibilität
+PCM/CDR-30 mit
+Handyvorbereitung
+
+Kompatibilität
+PCM mit
+Telefonmodul1)
+
+Nokia
+
+6710 Navigator
+
+•
+
+•
+
+Nokia
+
+7230
+
+•
+
+•
+
+Nokia
+
+E63
+
+•
+
+•
+
+Nokia
+
+E71
+
+•
+
+•
+
+Nokia
+
+E72
+
+•
+
+•
+
+Nokia
+
+E75
+
+•
+
+•
+
+Nokia
+
+N97 mini
+
+•
+
+•
+
+Nokia
+
+X3
+
+•
+
+•
+
+Sony Ericsson
+
+C510
+
+•
+
+•
+
+Stand 30.03.2010. Alle Angaben ohne Gewähr.
+1)
+
+Bluetooth ® HFP bei 911 Carrera Modellen nur in Verbindung mit optionalem Navigationsmodul.
+
+4
+
+• kompatibel
+
+1.  ompatibilitätsliste Bluetooth® Mobiltelefone
+K
+
+Hersteller
+
+Modell
+
+Kompatibilität
+PCM/CDR-30 mit
+Handyvorbereitung
+
+Kompatibilität
+PCM mit
+Telefonmodul1)
+
+Sony Ericsson
+
+C902
+
+•
+
+•
+
+Sony Ericsson
+
+C905
+
+•
+
+•
+
+Sony Ericsson
+
+W595
+
+•
+
+•
+
+Sony Ericsson
+
+W705
+
+•
+
+•
+
+Sony Ericsson
+
+W890i
+
+•
+
+•
+
+Sony Ericsson
+
+W910i
+
+•
+
+•
+
+Sony Ericsson
+
+W995
+
+•
+
+•
+
+Sony Ericsson
+
+Aino
+
+•
+
+•
+
+Sony Ericsson
+
+Yari
+
+•
+
+•
+
+Stand 30.03.2010. Alle Angaben ohne Gewähr.
+1)
+
+Bluetooth ® HFP bei 911 Carrera Modellen nur in Verbindung mit optionalem Navigationsmodul.
+
+5
+
+• kompatibel
+
+1.  ompatibilitätsliste Bluetooth® Mobiltelefone
+K
+
+Hersteller
+
+Modell
+
+Kompatibilität
+PCM/CDR-30 mit
+Handyvorbereitung
+
+Kompatibilität
+PCM mit
+Telefonmodul1)
+
+Sony Ericsson
+
+Elm
+
+•
+
+•
+
+Sony Ericsson
+
+Satio
+
+•
+
+•
+
+BlackBerry ®, RIM ®, Research In Motion ®, SureType ® sowie zugehörige Warenzeichen, Namen und Logos sind Eigentum von Research
+In Motion Limited und sind in den USA und anderen Ländern registriert und/oder werden dort verwendet. Verwendet unter Lizenz von
+Research In Motion Limited.
+Stand 30.03.2010. Alle Angaben ohne Gewähr.
+1)
+
+Bluetooth ® HFP bei 911 Carrera Modellen nur in Verbindung mit optionalem Navigationsmodul.
+6
+
+• kompatibel
+
+2. Detaillierte Funktionsübersicht
+
+2. Detaillierte Funktionsübersicht
+
+Sony Ericsson
+
+Sony Ericsson
+
+Sony Ericsson
+
+Nokia
+
+Nokia
+
+Nokia
+
+Nokia
+
+Nokia
+
+Nokia
+
+Nokia
+
+Nokia
+
+Nokia
+
+Nokia
+
+BlackBerry®
+
+BlackBerry®
+
+BlackBerry®
+
+BlackBerry®
+
+BlackBerry®
+
+Apple
+
+Apple
+
+Hersteller
+
+W705
+
+W595
+
+C905
+
+C902
+
+C510
+
+X3
+
+N97 mini
+
+E75
+
+E72
+
+E71
+
+E63
+
+7230
+
+6710 Navigator
+
+6700 Classic
+
+5630 XpressMusic
+
+9700 Bold™
+
+9520 Storm2™
+
+9500 Storm™
+
+9000 Bold™
+
+8900 Curve™
+
+iPhone 3GS
+
+iPhone 3G
+
+Modell
+
+R1FA035
+
+R1GA030
+
+R3EG004
+
+R1FA035
+
+R3EG004
+
+R1HA035
+
+110.48.125
+
+22.007
+
+300.21.012
+
+400.21.013
+
+6.90
+
+22.013
+
+10.50
+
+5.0.0.321
+
+5.0.0.306
+
+4.7.0.141
+
+5.0.0.411
+
+5.0.0.411
+
+3.1.3
+
+3.1.3
+
+4.11
+
+11.0.045
+
+Sony Ericsson
+
+Yari
+
+Aino
+
+W995
+
+R2AK006
+
+R7BA076
+
+R1BA049
+
+R7AA071
+
+R1HA036
+
+-
+
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+•1
+
+•
+
+•
+
+•
+
+•
+•
+
+•
+•
+
+•
+•
+
+•
+•
+
+•
+•
+
+•
+•
+
+•
+•
+
+•
+•
+
+•
+•
+
+-
+
+-
+
+•
+•
+•
+
+•
+•
+•
+•
+•
+•
+
+•
+•
+•
+•
+•
+•
+•
+
+•
+•
+•
+•
+•
+•
+•
+•
+
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+•
+•2
+•
+•
+•
+•
+•
+•
+•
+•
+
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+-
+
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+•3
+
+•4
+
+•4
+
+•3
+
+•3
+
+•
+•
+•
+
+•
+
+•
+
+•
+
+•
+
+•
+•
+
+•
+•
+-
+
+•
+
+•
+
+•
+
+•
+
+•
+
+•
+
+•1
+•
+•
+
+•1
+
+•1
+
+•1
+
+•1
+
+-
+
+-
+
+-
+
+-
+
+Externer SIM-Zugriff *
+
+•
+•
+
+•3
+
+-
+
+•
+•
+•
+•
+•
+•
+•
+•
+•*
+•*
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+•
+
+•
+
+•
+
+•
+•
+•
+
+•
+
+•
+
+•
+
+•
+
+•
+
+•
+
+•
+•
+-
+
+-
+
+-
+
+-
+
+•
+
+•
+
+•
+
+•
+•
+•
+
+•
+
+•
+
+•
+
+•
+
+•
+
+•
+
+•
+•
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+•
+•
+-
+
+•
+
+•
+
+•
+
+•
+
+•
+
+•
+
+•
+•
+•
+
+•
+
+•
+
+•
+
+•
+
+•3
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+-
+
+•
+
+•
+•
+
+-
+
+•
+•
+
+•
+
+•
+
+•
+
+•
+
+SMS-Download von SIM
+
+Telefonbuch und
+Anruflisten
+
+•1
+
+•
+
+•
+•
+•
+
+•
+
+•
+
+•
+
+•
+
+•
+
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+SIM-Telefonbuch
+
+Alle Angaben ohne Gewähr
+
+•
+
+Anmeldung vom Fahrzeug
+
+Automatischer
+Verbindungsaufbau
+(Auto-Connect)
+
+Telefonfunktionen
+
+•1
+
+•
+•
+•
+
+•
+
+•
+
+•
+
+•
+
+•
+
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Anruflisten
+
+Statusanzeige
+
+•1
+
+•
+
+•
+
+•
+
+•
+
+•
+
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Geräteeinträge
+
+Verbinden
+
+•1
+•
+•
+
+•
+
+•
+
+•
+
+•
+
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•9
+•9
+
+-
+
+•
+
+•
+
+•
+
+•
+
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•9
+•9
+
+-
+
+•
+
+•
+
+•
+
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•9
+•9
+
+Stand 30.03.2010
+
+•
+
+•
+
+•
+
+•
+•
+•
+•
+•
+•5
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+* = nur PCM
+
+•
+
+•
+
+•
+
+SIM-Einträge*
+
+•
+
+•
+
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+DTMF-Wähltöne
+
+•
+
+•
+
+•
+•
+
+Konferenz*
+
+•
+
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+•
+
+Zweiter Anruf/Makeln*
+
+•
+
+•
+•
+
+•
+
+Netzname
+
+•7
+
+•
+
+Signalqualität
+
+•
+
+•
+
+Registrierungsstatus
+
+Klingelton vom Handy
+(Inband Ringing)*
+
+•
+•
+
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Anmeldung vom Gerät
+
+Basistelefonie
+
+•
+•
+
+Anmeldung vom Fahrzeug
+
+Automatischer
+Verbindungsaufbau
+(Auto-Connect)
+
+Empfehlungsliste ECE 03/2010
+
+Sony Ericsson
+
+W890i
+
+Firmware-Stand
+
+Sony Ericsson
+
+11.020
+
+Sony Ericsson
+
+Sony Ericsson
+
+Elm
+
+W910i
+Empfehlungsliste ECER1FA035
+03/2010
+
+Sony Ericsson
+
+Satio
+
+Sony Ericsson
+
+Sony Ericsson
+
+Kompatibilität PCM
+mit PCM-Telefon
+
+- = nicht kompatibel/Funktion nicht unterstützt
+
+Sony Ericsson
+
+• = kompatibel/Funktion unterstützt
+
+Hinweise
+
+1 - BlackBerry® im Bluetooth®-Menü auf Wartemodus
+schalten
+7 - Probleme beim Umschalten in fremde Netze
+(Roaming)
+
+1 - BlackBerry® im Bluetooth®-Menü auf Wartemodus
+schalten
+
+1 - BlackBerry® im Bluetooth®-Menü auf Wartemodus
+schalten
+2 - Ablehnung von Zweitanrufen nicht unterstützt
+
+1 - BlackBerry® im Bluetooth®-Menü auf Wartemodus
+schalten
+
+1 - BlackBerry ®im Bluetooth®-Menü auf Wartemodus
+schalten
+
+3 - falscher Zeitstempel bei Übertragung von Anruflisten
+(GMT)
+
+3 - falscher Zeitstempel bei Übertragung von Anruflisten
+(GMT)
+
+4 - keine Anrufliste bei externem SIM-Zugriff sowie keine
+Zeitstempel in Anruflisten
+
+4 - keine Anrufliste bei externem SIM-Zugriff sowie keine
+Zeitstempel in Anruflisten
+
+3 - falscher Zeitstempel bei Übertragung von Anruflisten
+(GMT)
+
+3 - falscher Zeitstempel bei Übertragung von Anruflisten
+(GMT)
+
+3 - falscher Zeitstempel bei Übertragung von Anruflisten
+(GMT)
+
+5 - Telefon schließen beim Verbindungsaufbau
+
+9- Eingeschränkt bei aktivierten GSM/UMTS Roaming
+
+9- Eingeschränkt bei aktivierten GSM/UMTS Roaming
+
+7
+
+Kompatibilität PCM / CDR-30
+mit Handyvorbereitung
+
+3. Hinweise für die Anmeldung am CDR-30
+
+3. Hinweise für die Anmeldung von Bluetooth® Mobiltelefonen am CDR-30
+
+Voraussetzungen am CDR-30
+
+Hinweis: Da das CDR-30 maximal 5 Geräte in seine
+
+-  as CDR-30 ist mit keinem Mobiltelefon verbunden.
+D
+
+Liste aufnehmen kann, löschen Sie nicht mehr
+
+Bei Drücken der Taste "PHONE" erscheint der Hinweis
+
+benötigte Geräte aus der Liste, bevor Sie mit der
+
+"Kein Telefon verfügbar".
+
+Suche nach neuen Geräten beginnen.
+
+Voraussetzungen am Mobiltelefon
+
+D
+5.  as gewünschte Telefon aus der Suchliste des CDR-30
+
+-  ie Bluetooth® Funktion muss eingeschaltet sein.
+D
+
+auswählen. Der Benutzer wird nun aufgefordert, einen
+
+-  as Mobiltelefon muss für andere Geräte sichtbar sein.
+D
+
+vom CDR-30 vorgegebenen Bluetooth® Code auf
+
+Beide Einstellungen sind normalerweise im Bereich
+
+seinem Telefon einzugeben. Mit "OK" den vorgeschla-
+
+"Bluetooth Einstellungen" des Mobiltelefons zu finden.
+
+genen Code auf dem CDR-30 bestätigen. Mit Eingabe
+
+®
+
+des korrekten Codes auf dem Mobiltelefon ist die
+
+Hinweis: Einige Mobiltelefone (z. B. Motorola) können
+
+Anmeldung abgeschlossen.
+
+nur für eine definierte Zeit (z. B. 1 Minute) sichtbar
+gestellt werden. Wird die Anmeldung nicht in dieser
+
+Hinweis: Für die Eingabe hat der Benutzer 30 Sekun-
+
+Zeit abgeschlossen, muss sie unter Umständen
+
+d
+­ en Zeit. Wird die Anmeldung nicht in dieser Zeit
+
+wiederholt werden.
+
+abgeschlossen, muss sie unter Umständen wieder-
+
+Hinweis iPhone und BlackBerry : iPhone und
+®
+
+®
+
+holt werden.
+
+®
+
+BlackBerry Geräte können vom CDR-30 nicht
+®
+
+gefunden und angemeldet werden. Die Anmeldung
+
+Mobiltelefon
+
+muss deshalb vom iPhone bzw. BlackBerry selbst
+
+6.  ach der Anmeldung versucht das CDR-30, eine
+N
+
+®
+
+®
+
+gestartet werden (siehe Hinweise für die Anmeldung
+
+Verbindung zum angemeldeten Telefon aufzubauen.
+
+von iPhone und BlackBerry Geräten am CDR-30).
+
+Dieser Verbindungsaufbau muss bei einigen Telefonen
+
+®
+
+®
+
+explizit durch Drücken einer Taste bestätigt werden.
+
+Ablauf bei der Anmeldung
+CDR-30
+
+Hinweis: Normalerweise wird nun das angemeldete
+
+1. Taste "PHONE" drücken.
+
+Telefon mit jedem Fahrzeugstart automatisch
+
+2. Taste "SET" drücken.
+
+gesucht und verbunden. Bei einigen Mobiltelefonen
+
+3. Menüpunkt "Geräteliste" auswählen.
+
+(z. B. Nokia N- und E-Serie) muss hierzu jedoch das
+
+"
+4. Telefone suchen" auswählen. Es wird nach vorhandenen
+
+CDR-30 in der Geräteliste des Mobiltelefons
+
+Bluetooth Telefonen gesucht, die das Handsfree
+
+autorisiert werden.
+
+®
+
+Profile unterstützen. Nach dem Ende der Suche
+werden die verfügbaren Geräte in einer Liste dargestellt (max. 5 Geräte).
+
+8
+
+3. Hinweise für die Anmeldung am CDR-30
+
+3. Hinweise für die Anmeldung von BlackBerry® Geräten am CDR-30
+
+Voraussetzungen am CDR-30
+
+CDR-30
+
+-  as CDR-30 ist mit keinem Mobiltelefon verbunden.
+D
+
+7.  uf dem CDR-30 erscheint eine Ziffernleiste, über
+A
+
+Bei Drücken der Taste "PHONE" erscheint der Hinweis
+
+die ein vierstelliger Bluetooth® Code eingegeben
+
+"Kein Telefon verfügbar".
+
+werden und mit "OK" bestätigt werden muss.
+
+Voraussetzungen am BlackBerry®
+
+BlackBerry®
+
+-  ie Bluetooth® Funktion muss eingeschaltet sein.
+D
+
+8.  erselbe Bluetooth® Code muss jetzt auf dem
+D
+
+Das Einschalten der Bluetooth Funktion erfolgt
+
+BlackBerry ® eingegeben und mit "OK" ( ) bestätigt
+
+beim BlackBerry ® über "Anwendungen/Optionen/
+
+werden. Die Anmeldung ist damit beendet.
+
+®
+
+Bluetooth /Bluetooth aktivieren". Eine aktive
+®
+
+®
+
+Bluetooth® Funktion wird über ein Symbol im Status­
+
+Hinweis: Für die Eingabe hat der Benutzer 30 Sekun-
+
+bereich signalisiert.
+
+d
+­ en Zeit. Wird die Anmeldung nicht in dieser Zeit
+abgeschlossen, muss sie unter Umständen wieder-
+
+Hinweis: Der BlackBerry erscheint aufgrund einer
+
+holt werden. Wählen Sie dazu das "CDR-30" erneut
+
+höheren Sicherheitsstufe nicht in der Suchliste des
+
+aus der Suchliste.
+
+®
+
+CDR-30. Die Suche muss deshalb in diesem Fall vom
+Mobiltelefon selbst gestartet werden. Damit das
+
+9.  uf dem BlackBerry ® erscheint nun ein Fenster mit
+A
+
+CDR-30 vom BlackBerry ® gefunden werden kann,
+
+der Frage, ob die Verbindung zum CDR-30 herge-
+
+muss es in einen sichtbaren Modus versetzt werden.
+
+stellt werden soll. Beantworten Sie die Frage mit
+"Ja". Der BlackBerry ® wird jetzt mit dem CDR-30
+
+Ablauf bei der Anmeldung
+CDR-30
+
+verbunden.
+
+1. Taste "PHONE" drücken.
+
+Hinweis: Bei älteren Geräten muss unter Umständen
+
+2. Taste "SET" drücken.
+
+die Verbindung manuell hergestellt werden. Wählen
+
+3. Menüpunkt "Geräteliste" auswählen.
+
+Sie dazu in der Geräteliste "CDR-30/Verbinden".
+
+Das CDR-30 ist jetzt sichtbar für externe Geräte.
+10.  m Ihr CDR-30 auf dem BlackBerry ® zu autorisieU
+
+BlackBerry
+
+ren, wählen Sie "CDR-30/Geräteeigenschaften" und
+
+®
+
+4.  enüpunkt "Anwendungen/Optionen/Bluetooth "
+M
+
+stellen Sie den Punkt "Vertrauenswürdig" auf "Ja".
+
+®
+
+wählen.
+
+Das CDR-30 ist jetzt auf Ihrem BlackBerry ®
+
+5.  rackball drücken und "Vollständiges Menü/Gerät
+T
+
+autorisiert. Beim nächsten Fahrzeugstart wird Ihr
+
+hinzufügen” wählen. Der BlackBerry beginnt nun,
+
+Telefon automatisch mit dem CDR-30 verbunden.
+
+®
+
+Bluetooth Geräte in der Umgebung zu suchen.
+®
+
+6.  CDR-30" aus der Suchliste auf dem BlackBerry ®
+"
+auswählen. Es erscheint jetzt eine Anfrage auf dem
+CDR-30, die bestätigt werden muss.
+
+9
+
+3. Hinweise für die Anmeldung am CDR-30
+
+3. Hinweise für die Anmeldung des iPhone® am CDR-30
+
+Voraussetzungen am CDR-30
+
+CDR-30
+
+-  as CDR-30 ist mit keinem Mobiltelefon verbunden.
+D
+
+6.  uf dem CDR-30 erscheint eine Ziffernleiste, über
+A
+
+Bei Drücken der Taste "PHONE" erscheint der Hinweis
+
+die ein vierstelliger Bluetooth ® Code eingegeben
+
+"Kein Telefon verfügbar".
+
+werden und mit "OK" bestätigt werden muss.
+
+Voraussetzungen am iPhone®
+
+iPhone®
+
+-  ie Bluetooth® Funktion muss eingeschaltet sein. Das
+D
+Einschalten der Bluetooth Funktion erfolgt beim iPhone
+®
+
+7.  uf dem iPhone ® wird ein Ziffernfeld eingeblendet, auf
+A
+®
+
+dem derselbe Bluetooth® Code eingegeben und mit
+
+im Bluetooth® Einstellungsmenü. Dieses Menü erreicht
+
+"Verbinden" bestätigt werden muss. Die Anmeldung ist
+
+man über "Einstellungen/Allgemein/Bluetooth ".
+
+damit beendet.
+
+®
+
+- Eine aktive Bluetooth® Funktion wird über ein Symbol
+
+
+Hinweis: Für die Eingabe hat der Benutzer 30 Sekun-
+
+im Statusbereich signalisiert.
+
+d
+­ en Zeit. Wird die Anmeldung nicht in dieser Zeit
+
+Hinweis: Die Bluetooth Funktion im iPhone ist so
+
+abgeschlossen, muss sie unter Umständen wieder-
+
+ausgelegt, dass eine Gerätesuche normalerweise
+
+holt werden. Wählen Sie dazu das "CDR-30" erneut
+
+vom Mobiltelefon selbst gestartet werden muss.
+
+aus der Suchliste.
+
+®
+
+®
+
+Damit das CDR-30 vom iPhone gefunden werden
+®
+
+8.  as iPhone® baut jetzt selbständig eine Bluetooth®
+D
+
+kann, muss es in einen sichtbaren Modus versetzt
+
+Verbindung zum CDR-30 auf.
+
+werden.
+
+9. hr iPhone® ist jetzt mit dem CDR-30 verbunden.
+I
+
+Ablauf bei der Anmeldung
+CDR-30
+
+Beim nächsten Fahrzeugstart wird es automatisch
+mit dem CDR-30 verbunden.
+
+1. Taste "PHONE" drücken.
+2. Taste "SET" drücken.
+3. Menüpunkt "Geräteliste" auswählen.
+Das CDR-30 ist jetzt sichtbar für externe Geräte.
+
+iPhone®
+4.  enüpunkt "Einstellungen/Allgemein/Bluetooth®"
+M
+wählen. Das iPhone® beginnt nun automatisch,
+Bluetooth® Geräte in der Umgebung zu suchen.
+5.  CDR-30" aus der Suchliste auf dem iPhone ® aus­
+"
+wählen. Es erscheint jetzt eine Anfrage auf dem
+CDR-30, die bestätigt werden muss.
+
+10
+
+4. Hinweise für die Anmeldung am PCM
+
+4. Hinweise für die Anmeldung von Bluetooth® Mobiltelefonen am PCM
+
+Voraussetzungen am PCM
+
+Hinweis BlackBerry®: Während der Suche durch
+
+-  as PCM enthält die I-Nr. Handyvorbereitung oder
+D
+
+das PCM erscheint auf dem BlackBerry ® unter
+
+Telefonmodul (Hinweis: Verbindung mit HFP bei
+
+Umständen die Aufforderung, einen "Hauptschlüssel
+
+911 Carrera Modellen nur in Verbindung mit optionalem
+
+für PCM" einzugeben. Diese Aufforderung kann
+
+Navigationsmodul).
+
+ignoriert oder über die Zurück-Taste des Telefons
+
+-  ie Bluetooth Funktion am PCM ist eingeschaltet und
+D
+®
+
+abgebrochen werden (siehe Hinweise für die
+Anmeldung von BlackBerry ® am PCM).
+
+das PCM ist mit keinem Mobiltelefon verbunden. Bei
+Drücken der Taste "PHONE" erscheint der Menüpunkt
+
+3.  as gewünschte Telefon aus der Suchliste des PCM
+D
+
+"Telefon suchen".
+
+auswählen. Der Benutzer wird nun aufgefordert,
+
+Voraussetzungen am Mobiltelefon
+
+einen vom PCM vorgegebenen Bluetooth® Code
+
+-  ie Bluetooth Funktion muss eingeschaltet sein.
+D
+
+auf seinem Telefon einzugeben. Mit Eingabe des
+
+-  as Mobiltelefon muss für andere Geräte sichtbar sein.
+D
+
+korrekten Codes auf dem Mobiltelefon ist die
+
+-  ur PCM mit Telefonmodul: Für die Nutzung des
+N
+
+Anmeldung abgeschlossen.
+
+®
+
+Telefonmoduls per Bluetooth® muss möglicherweise
+am Mobiltelefon der externe SIM-Zugriff (SIM-Access
+
+Hinweis: Für die Eingabe hat der Benutzer 30 Sekun-
+
+Profile) aktiviert werden.
+
+d
+­ en Zeit. Wird die Anmeldung nicht in dieser Zeit
+
+Diese Einstellungen sind normalerweise im Bereich
+
+abgeschlossen, muss sie unter Umständen wieder-
+
+"Bluetooth® Einstellungen" des Mobiltelefons zu finden.
+
+holt werden.
+
+Hinweis: Einige Mobiltelefone können nur für eine
+
+Mobiltelefon
+
+definierte Zeit (z. B. 1 Minute) sichtbar gestellt
+
+4.  ach der Anmeldung versucht das PCM, eine VerbinN
+
+werden. Wird die Anmeldung nicht in dieser Zeit
+
+dung zum angemeldeten Telefon aufzubauen. Dieser
+
+abgeschlossen, muss sie unter Umständen wieder-
+
+Verbindungsaufbau muss bei einigen Telefonen explizit
+
+holt werden.
+
+durch Drücken einer Taste bestätigt werden.
+
+Hinweis iPhone : Das iPhone ist nur sichtbar,
+®
+
+5.  ei vielen Mobiltelefonen muss nach dem Verbindungs­
+B
+
+®
+
+wenn man sich im Bluetooth® Einstellungsmenü
+befindet. Dieses Menü erreicht man beim iPhone
+
+aufbau auch die Übertragung des Telefonbuchs am
+Telefon bestätigt werden. Es wird empfohlen, dem
+
+®
+
+über "Einstellungen/Allgemein/Bluetooth " (siehe
+
+PCM den Zugriff immer zu erlauben, wenn diese Option
+
+Hinweise für die Anmeldung von iPhone am PCM).
+
+am Telefon möglich ist.
+
+®
+
+®
+
+Ablauf bei der Anmeldung
+PCM
+
+Hinweis: Normalerweise wird nun das angemeldete
+
+1. Taste "PHONE" drücken.
+
+gesucht und verbunden. Bei einigen Mobiltelefonen
+
+2.  enüpunkt "Telefon suchen" auswählen und ggf. im
+M
+
+(z. B. Nokia N- und E-Serie) muss hierzu jedoch das
+
+Telefon mit jedem Fahrzeugstart automatisch
+
+nächsten Bildschirm den Menüpunkt "Neues Mobil­
+
+PCM in der Geräteliste des Mobiltelefons autorisiert
+
+telefon" auswählen. Es wird nach bisher unbekannten
+
+werden.
+
+Bluetooth Telefonen gesucht. Nach dem Ende der
+®
+
+Suche werden die verfügbaren Geräte in einer Liste
+dargestellt.
+
+11
+
+4. Hinweise für die Anmeldung am PCM
+
+4. Hinweise für die Anmeldung von BlackBerry® Geräten am PCM
+
+Voraussetzungen am PCM
+-  as PCM enthält die I-Nr. Handyvorbereitung oder
+D
+
+Ablauf bei der Anmeldung
+PCM
+
+Telefonmodul (Hinweis: Verbindung mit HFP bei
+
+1. Taste "PHONE" drücken.
+
+911 Carrera Modellen nur in Verbindung mit optionalem
+
+2.  enüpunkt "Telefon suchen" auswählen und ggf. im
+M
+nächsten Bildschirm den Menüpunkt "Neues Mobil­
+
+Navigationsmodul).
+-  ie Bluetooth Funktion am PCM ist eingeschaltet und
+D
+®
+
+telefon" auswählen. Es wird nach bisher unbekannten
+
+das PCM ist mit keinem Mobiltelefon verbunden. Bei
+
+Bluetooth® Telefonen gesucht. Nach dem Ende der
+
+Drücken der Taste "PHONE" erscheint der Menüpunkt
+
+Suche werden die verfügbaren Geräte in einer Liste
+
+"Telefon suchen".
+
+dargestellt.
+
+Voraussetzungen am BlackBerry®
+
+Hinweis: Während der Suche durch das PCM
+
+-  ie Bluetooth Funktion muss eingeschaltet sein.
+D
+
+erscheint auf dem BlackBerry ® unter Umständen die
+
+®
+
+Das Einschalten der Bluetooth® Funktion erfolgt
+
+Aufforderung, einen "Hauptschlüssel für PCM"
+
+beim BlackBerry über "Anwendungen/Optionen/
+
+einzugeben. Diese Aufforderung kann ignoriert oder
+
+Bluetooth®/Bluetooth® aktivieren". Eine aktive
+
+über die Zurück-Taste des Telefons abgebrochen
+
+Bluetooth Funktion wird über ein Symbol im Status­
+
+werden.
+
+®
+
+®
+
+bereich signalisiert.
+-  er BlackBerry ® muss für andere Geräte "erkennbar"
+D
+
+3.  as gewünschte Telefon aus der Suchliste des PCM
+D
+
+sein. Diese Einstellung findet man beim BlackBerry ®
+
+auswählen. Der Benutzer wird nun aufgefordert, einen
+
+über "Anwendungen/Optionen/Bluetooth /Gekoppelte
+
+vom PCM vorgegebenen Bluetooth® Code auf seinem
+
+Geräte/Vollständiges Menü/Optionen". Der Punkt
+
+Telefon einzugeben. Mit Eingabe des korrekten Codes
+
+"Erkennbar" muss auf "Ja" eingestellt werden.
+
+und Bestätigung durch "OK ( )" auf dem BlackBerry ®
+
+®
+
+ist die Anmeldung abgeschlossen.
+
+-  ür die automatische Übertragung des Telefonbuchs
+F
+vom BlackBerry in das PCM muss die Einstellung
+®
+
+"Adressbuchübertragung" auf "Alle Einträge" eingestellt
+sein. Diese Einstellung findet man beim BlackBerry
+
+Hinweis: Für die Eingabe hat der Benutzer 30 Sekund
+­ en Zeit. Wird die Anmeldung nicht in dieser Zeit
+
+®
+
+über "Anwendungen/Optionen/Bluetooth®/Gekoppelte
+
+abgeschlossen, muss sie unter Umständen wieder-
+
+Geräte/Vollständiges Menü/Optionen".
+
+holt werden.
+
+-  ur PCM mit Telefonmodul: Für die Nutzung des
+N
+Telefonmoduls per Bluetooth® muss möglicherweise
+
+4.  uf dem BlackBerry ® erscheint jetzt ein Fenster mit
+A
+
+am BlackBerry ® der externe SIM-Zugriff (SIM Access
+
+der Frage, ob die Verbindungsanfrage vom PCM
+
+Profile) aktiviert werden. Auch diese Einstellung
+
+akzeptiert werden soll. Beantworten Sie die Frage mit
+
+befindet sich unter "Anwendungen/Optionen/Bluetooth /
+
+"Ja" und bestätigen Sie den Punkt "Diese Frage nicht
+
+Gekoppelte Geräte/Vollständiges Menü/Optionen".
+
+mehr stellen" durch Setzen eines Hakens. Das PCM
+
+®
+
+-  m die Suche vom PCM zu beschleunigen und den
+U
+
+ist damit auf dem BlackBerry ® autorisiert. Der
+
+externen SIM Zugriff zu ermöglichen, gibt es bei
+
+BlackBerry ® wird jetzt mit jedem Fahrzeugstart
+
+neueren BlackBerry ® Geräten die Möglichkeit, einen
+
+automatisch gesucht und verbunden.
+
+Bereitschaftsmodus zu aktivieren. Diesen erreicht man
+unter "Anwendungen/Optionen/Bluetooth®/Gekoppelte
+Geräte/Vollständiges Menü/Gerät hinzufügen/Auf
+Gerät warten".
+
+12
+
+4. Hinweise für die Anmeldung am PCM
+
+4. Hinweise für die Anmeldung des iPhone® am PCM
+
+Voraussetzungen am PCM
+
+PCM
+
+-  as PCM enthält die I-Nr. Handyvorbereitung oder
+D
+
+4.  uf dem PCM erscheint ein Ziffernblock, über den ein
+A
+
+Telefonmodul (Hinweis: Verbindung mit HFP bei
+
+vierstelliger Bluetooth® Code eingegeben werden und
+
+911 Carrera Modellen nur in Verbindung mit optionalem
+
+mit "OK" bestätigt werden muss.
+
+Navigationsmodul).
+
+Phone®
+
+-  as PCM muss für andere Geräte sichtbar sein. Dazu
+D
+
+5.  uf dem iPhone ® wird ein Ziffernfeld eingeblendet, auf
+A
+
+muss die entsprechende Einstellung unter "PHONE/
+OPTION/SET PHONE/Bluetooth Einstellungen"
+
+dem derselbe Bluetooth® Code eingegeben und mit
+
+gesetzt sein.
+
+"Verbinden" bestätigt werden muss. Die Anmeldung ist
+
+®
+
+-  ie Bluetooth Funktion am PCM ist eingeschaltet und
+D
+®
+
+damit beendet.
+
+das PCM ist mit keinem Mobiltelefon verbunden. Bei
+Drücken der Taste "PHONE" erscheint der Menüpunkt
+
+Hinweis: Für die Eingabe hat der Benutzer 30 Sekun-
+
+"Telefon suchen". Dieser sollte hier nicht gedrückt
+
+d
+­ en Zeit. Wird die Anmeldung nicht in dieser Zeit
+
+werden.
+
+abgeschlossen, muss sie unter Umständen wiederholt werden. Wählen Sie dazu das "PCM" erneut aus
+
+Voraussetzungen am iPhone
+
+der Geräteliste auf dem iPhone ®.
+
+®
+
+-  ie Bluetooth® Funktion muss eingeschaltet sein. Zum
+D
+6.  as iPhone® baut jetzt selbständig eine Bluetooth®
+D
+
+Einschalten der Bluetooth® Funktion muss man sich
+beim iPhone® im Bluetooth® Einstellungsmenü befin-
+
+Verbindung zum PCM auf.
+7. hr iPhone® ist jetzt mit dem PCM verbunden. Beim
+I
+
+den. Dieses Menü erreicht man über "Einstellungen/
+Allgemein/Bluetooth®".
+
+nächsten Fahrzeugstart wird es automatisch mit dem
+
+-  ine aktive Bluetooth Funktion wird über ein Symbol
+E
+
+PCM verbunden.
+
+®
+
+im Statusbereich signalisiert.
+
+Hinweis: Die Bluetooth® Funktion im iPhone® ist so
+ausgelegt, dass eine Gerätesuche normalerweise
+vom iPhone ® selbst gestartet werden muss.
+
+Ablauf bei der Anmeldung
+PCM
+1.  aste "PHONE" drücken. Das PCM ist jetzt sichtbar für
+T
+externe Geräte.
+
+iPhone®
+2.  enüpunkt "Einstellungen/Allgemein/Bluetooth®"
+M
+wählen. Das iPhone® beginnt nun automatisch,
+Bluetooth® Geräte in der Umgebung zu suchen.
+3.  PCM" aus der Suchliste auf dem iPhone ® auswählen.
+"
+Es erscheint jetzt eine Anfrage auf dem PCM, die
+bestätigt werden muss.
+
+13
+
+5. Häufig gestellte Fragen (FAQ)
+
+5. Häufig gestellte Fragen zum Thema Bluetooth®
+
+Inhaltsverzeichnis
+
+Was sind die neuen Bluetooth® Funktionen im
+Boxster/Cayman/911 ab Modelljahr 2011?
+
+[1] Häufig gestellte Fragen zum Thema Bluetooth®
+
+[2]  äufig gestellte Fragen zur Handyvorbereitung
+H
+
+Bei den Sportwagen ab Modelljahr 2011 wurde in den
+
+(allgemein)
+[3]  äufig gestellte Fragen zum CDR-30 mit Handy­
+H
+vorbereitung
+[4]  äufig gestellte Fragen zum PCM mit Handy­
+H
+vorbereitung
+[5] Häufig gestellte Fragen zum PCM mit Telefonmodul
+
+[6]  äufig gestellte Fragen zur Übertragung von
+H
+Telefonbuch und Anruflisten - Bluetooth®
+Phonebook Access Profile (PBAP)
+
+Bluetooth® -Handyvorbereitung (Handsfree Profile) mit
+
+Umfang des PCM mit Telefonmodul die Funktionalität der
+aufgenommen. Beim Telefonmodul erfolgt eine automatische Erkennung und Umschaltung zwischen den
+Bluetooth® Handyprofilen SIM-Access Profile (SAP) bzw.
+Handsfree Profile (HFP). Hinweis: Bei 911 Carrera Modellen
+nur in Verbindung mit dem optionalen Navigations­ odul.
+m
+Der Sportwagen-Kunde erhält deshalb mit dem Telefonmodul eine Lösung, die ihm den maximal möglichen
+Funktionsumfang und Komfort bei gleichzeitiger Unterstützung einer großen Anzahl von Mobiltelefonen
+
+[1] Häufig gestellte Fragen zum Thema Bluetooth®
+
+
+(Verbindung mit HFP und SAP) bietet.
+
+Was ist Bluetooth®?
+zung von elektronischen Geräten über kurze Distanzen
+
+Welches Profil wird benutzt, wenn mein Telefon
+sowohl das SIM-Access Profile als auch das Handsfree
+Profile unterstützt?
+
+bis zu einer Entfernung von maximal 10 Metern. So
+
+Im Normalfall erkennt das PCM bereits bei der Suche
+
+können unter anderem mobile elektronische Geräte wie
+
+nach neuen Geräten, welche Möglichkeiten das Mobil­
+
+Mobiltelefone und PDAs (Personal Digital Assistants),
+
+telefon für die Anbindung an das PCM bietet. Unterstützt
+
+Bluetooth ist ein Industriestandard für die Funkvernet®
+
+ein Telefon das SIM-Access Profile, versucht das PCM
+
+aber auch PCs und Peripheriegeräte (z. B. Tastaturen)
+miteinander drahtlos kommunizieren, wobei Bluetooth
+
+dieses zu verbinden. Kommt die Verbindung nicht
+
+®
+
+als Schnittstelle fungiert.
+
+zustande oder wird dieses Profil nicht unterstützt,
+erfolgt eine Verbindung über das Handsfree Profile. Mit
+
+Ab wann wird die Bluetooth® Technologie in meinem
+Wunschmodell erhältlich sein?
+
+Einführung der Sportwagen Modelljahr 2011 erfolgt beim
+
+Die Bluetooth Technologie wird in allen Sportwagen-
+
+schaltung zwischen den Bluetooth® Handyprofilen
+
+Telefonmodul eine automatische Erkennung und Um-
+
+®
+
+Modellen angeboten. Für die Anbindung Ihres Mobil­
+
+SIM-Access Profile (SAP) bzw. Handsfree Profile (HFP).
+
+telefons per Bluetooth® ist eine Bestellung der Option
+
+Hinweis: Bei 911 Carrera-Modellen nur in Verbindung mit
+
+Handyvorbereitung (optional in Verbindung mit Radio
+
+dem optionalen Navigationsmodul. Auch beim Verbin-
+
+CDR-30 oder PCM) oder der Option Telefonmodul
+
+dungsaufbau nach dem Aufstarten des Systems sind
+
+(optional nur in Verbindung mit PCM) erforderlich.
+
+Situationen möglich, in denen eine Verbindung per
+SIM-Access Profile nicht herstellbar ist. Beispiele hierfür
+können ein aktives Gespräch oder die Deaktivierung des
+externen SIM-Zugriffs am Handy sein. Auch in diesen
+Fällen erfolgt die Verbindung über das Handsfree Profile
+(HFP-Modus). Der unterstützte Funktionsumfang entspricht in diesem Fall der Handyvorbereitung (keine SMS,
+kein Bluetooth® Headset). Auch der schnurlose Bedienhörer (optional, in Verbindung mit Telefonmodul) wird dann
+nicht unterstützt.
+
+14
+
+5. Häufig gestellte Fragen (FAQ)
+
+Wie erkenne ich, ob mein Mobiltelefon das
+SIM-Access Profile unterstützt?
+Die Information über die unterstützten Profile können
+
+Warum wird mein Mobiltelefon per Handsfree Profile
+verbunden, obwohl es auch das SIM-Access Profile
+unterstützt?
+
+Sie grundsätzlich der Bedienungsanleitung Ihres Mobil­­
+-
+
+Dafür kann es mehrere Ursachen geben:
+
+telefons entnehmen. Im PCM werden die vom Mobiltelefon
+
+1.  as System wurde mit einem aktiven Anruf gestartet.
+D
+
+gemeldeten Profile auch in der Geräteliste unter Geräte-
+
+Ein Verbinden per SIM-Access Profile ist technisch
+
+details aufgelistet. Ein weiteres Erkennungsmerkmal für
+
+nicht möglich. Nach Ende des Anrufs kann der
+
+das SIM-Access Profile ist die Länge des Bluetooth -
+
+Benutzer über "PHONE/OPTION/SET PHONE/
+
+Codes bei der Anmeldung des Geräts. Ein 16-stelliger
+
+Bluetooth®/Einstellungen/Geräteliste" manuell den
+
+®
+
+Code bei der Anmeldung zeigt an, dass das SIM-Access
+
+SIM-Zugriff auf das Mobiltelefon aktivieren.
+2.  er externe SIM-Zugriff auf dem Mobiltelefon wurde
+D
+
+Profile unterstützt wird. Allerdings muss bei vielen
+
+deaktiviert.
+
+Geräten zunächst der SIM-Zugriff erlaubt werden. Die
+entsprechende Einstellung ist entweder in den "Bluetooth-
+
+3.  ür das Telefon wurde aktiv der externe SIM-Zugriff
+F
+
+Einstellungen" des Mobiltelefons oder in einer eigenen
+
+am PCM ausgeschaltet. In diesem Fall wird auch
+
+Applikation im Bereich "Programme" o.Ä. vorzunehmen.
+
+beim nächsten Mal das Gerät per Handsfree Profile
+verbunden.
+
+Wie erkenne ich, ob mein Mobiltelefon per SIM-Access
+Profile oder per Handsfree Profile verbunden ist?
+
+4.  ird die Anmeldung von der Seite des Telefons
+W
+gestartet, kann die Verbindung nicht per SIM-Access
+
+Das Profil kann in der Bluetooth® Geräteliste ("PHONE/
+
+Profile aufgebaut werden. In diesem Fall wird immer
+
+OPTION/SET PHONE/Bluetooth Einstellungen/Geräte­
+
+über das Handsfree Profile verbunden.
+
+®
+
+liste") auf der Seite des verbundenen Gerätes unter dem
+Gerätenamen abgelesen werden.
+Weitere Unterschiede bestehen z. B. im Menü auf der
+"PHONE"-Seite. Hier ist der Menüpunkt "Mitteilungen" nur
+dann vorhanden, wenn eine Verbindung per SIM-Access
+Profile besteht.
+
+Ist der Bedienhörer (optional, in Verbindung mit
+Telefonmodul) benutzbar, wenn ein Mobiltelefon
+per Handsfree Profile verbunden ist?
+Beim Telefonmodul ist der schnurlose Bedienhörer
+(optional, in Verbindung mit Telefonmodul) nur benutzbar,
+wenn das Handy per SIM-Access Profile verbunden ist.
+Im anderen Fall wird dem Benutzer die Meldung angezeigt: "Bitte benutzen Sie das PCM oder Ihr Mobiltelefon".
+
+15
+
+5. Häufig gestellte Fragen (FAQ)
+
+[2]  äufig gestellte Fragen zur Handyvorbereitung
+H
+
+Warum spielt die Firmware des Mobiltelefons eine
+Rolle?
+
+(allgemein)
+
+Mit neuen Firmwareständen der Mobiltelefone werden
+
+Kann ich die Handyvorbereitung auch ohne
+Bluetooth®-fähiges Handy nutzen?
+
+häufig nicht nur neue Funktionen angeboten, sondern
+
+Nein, dies ist leider nicht möglich.
+
+Deshalb sollten Sie darauf achten, dass Sie eine
+
+auch Fehler aus alten Firmwareständen korrigiert.
+möglichst aktuelle Firmware auf Ihrem Telefon benutzen.
+
+Kann die Handyvorbereitung mit beliebigen
+Bluetooth®-fähigen Handys benutzt werden?
+
+Allerdings ist leider auch nicht auszuschließen, dass
+
+Entscheidend für die Kompatibilität des Mobiltelefons
+
+anders verhalten als zuvor.
+
+einzelne Funktionen sich mit einem neuen Firmwarestand
+
+zur Handyvorbereitung ist, dass Ihr Mobiltelefon das
+Bluetooth® Handsfree Profile (HFP) unterstützt.
+
+Was muss ich tun, damit sich mein Telefon mit dem
+Fahrzeug verbindet?
+
+Eine Übersicht von Porsche auf Kompatibilität geprüfter
+
+Für eine Verbindung des Telefons mit dem Fahrzeug
+
+Telefonmodelle finden Sie in der Mobiltelefon-Kompatibili-
+
+müssen die Geräte aus Sicherheitsgründen einen
+
+tätsliste unter www.porsche.com. Ist Ihr Mobiltelefon in
+
+einmaligen Anmeldevorgang durchlaufen. Hinweise zu
+
+dieser Liste nicht enthalten, kann es trotzdem einge-
+
+diesem Anmeldevorgang erhalten Sie in der Bedienungs-
+
+schränkt kompatibel sein.
+
+anleitung oder unter www.porsche.com. Ist ein Bluetooth®
+fähiges Handy am Fahrzeug angemeldet, wird es bei
+
+Wieso ergeben sich bei verschiedenen Mobiltelefonen
+Unterschiede in der Handhabung bzw. im Funktionsumfang?
+
+jeder Fahrt automatisch vom Fahrzeug gesucht und
+
+Die Umsetzung des Bluetooth® Standards ist bei
+
+und auch im Fahrzeug eingeschaltet sein muss. Für den
+
+verschiedenen Telefonherstellern und Modellen und
+
+Anmeldevorgang muss zusätzlich auch die Bluetooth®
+
+sogar bei verschiedenen Firmwareständen gleicher
+
+Sichtbarkeit am Telefon eingeschaltet sein. Wird die
+
+Telefonmodelle unterschiedlich gelöst. Daher kann es
+
+Anmeldung von Seiten des Mobiltelefons initiiert, muss
+
+vorkommen, dass das Verhalten Ihres Mobiltelefons im
+
+das CDR-30/PCM sichtbar sein. Dazu muss die entspre-
+
+Fahrzeug von dem anderer Mobiltelefone abweicht und
+
+chende Einstellung im Bereich Bluetooth ® Einstellungen
+
+dass Sie nicht alle Möglichkeiten Ihres CDR-30/PCM mit
+
+unter "PHONE/OPTION/SET PHONE" aktiviert werden
+
+Handyvorbereitung nutzen können. Den nutzbaren
+
+(nur PCM) und das CDR-30/PCM in der Bluetooth®
+
+Funktionsumfang der von Porsche empfohlenen Geräte
+
+Geräteliste stehen.
+
+verbunden. Wichtig sowohl bei der Anmeldung als auch
+im Betrieb ist, dass die Bluetooth® Funktion am Telefon
+
+können Sie der Mobiltelefon-Kompatibilitätsliste auf
+
+Kann ich die Sichtbarkeit des Mobiltelefons nach dem
+Anmeldevorgang wieder abstellen?
+
+www.porsche.com entnehmen.
+
+Ja. Die Sichtbarkeit ist nur für die Anmeldung notwendig,
+die vor der ersten Verbindung einmalig durchlaufen
+werden muss. Ist das Mobiltelefon am Fahrzeug angemeldet, kommen die nächsten Verbindungen auch ohne
+eingeschaltete Sichtbarkeit zustande. Die Sichtbarkeit
+kann unter "PHONE/OPTION/SET PHONE/Bluetooth®
+Einstellungen" ein- und ausgeschaltet werden.
+
+16
+
+5. Häufig gestellte Fragen (FAQ)
+
+Was kann ich tun, wenn sich das Telefon trotz
+eingeschalteter Bluetooth® Funktion und Sichtbarkeit
+nicht anmelden oder verbinden lässt?
+
+4. n sehr seltenen Fällen kann es vorkommen, dass die
+I
+Anmeldung auf einer der beiden Seiten verloren
+gegangen ist und die Geräte deshalb keine Verbindung
+
+Hierfür kann es mehrere Ursachen geben:
+
+aufbauen können. In diesem Fall löschen Sie den
+
+1.  ei einigen Telefonmodellen muss jede VerbindungsanB
+
+verbliebenen Eintrag auf dem Telefon oder im
+
+frage vom Fahrzeug durch einen Tastendruck bestätigt
+werden. Erfolgt diese Bestätigung nicht, kommt die
+
+Fahrzeug und führen Sie die Anmeldung neu aus.
+5.  ei einigen Telefonmodellen können die unterstützten
+B
+
+Verbindung nicht zustande. Diese Bestätigung bei
+
+Bluetooth® Profile durch den Benutzer markiert werden.
+
+jeder Fahrt kann dadurch vermieden werden, dass das
+
+Auch hier kann es vorkommen, dass die Markierung
+
+CDR-30/PCM in der Geräteliste des Mobiltelefons
+
+von Profilen verloren geht und die Verbindung deshalb
+
+autorisiert wird. Die Geräteliste erreicht man bei den
+
+nicht zustande kommt.
+
+meisten Telefonen über den Bereich Bluetooth
+
+®
+
+Kann ich ein zweites Telefon am Fahrzeug anmelden?
+
+Einstellungen.
+
+Ja. Sie sollten für die Anmeldung eines weiteren
+
+2.  s gibt Situationen, in denen das Mobiltelefon keine
+E
+Verbindung zulässt, weil es sich in einem irregulären
+
+Bluetooth® Telefons allerdings die Verbindung zu Ihrem
+
+Zustand befindet. Dieser Zustand kann häufig nur
+
+ersten Gerät beenden. Dafür können Sie z. B. die
+
+durch ein komplettes Aus- und Einschalten des
+
+Bluetooth® Funktion am ersten Gerät für die Zeit der
+
+Telefons oder kurzzeitiges Entfernen des Akkus
+
+Anmeldung des zweiten Geräts deaktivieren.
+
+korrigiert werden.
+ungünstiger äußerer Bedingungen nicht in der
+
+Brauche ich ein Cradle, um mein Telefon mit der
+Handyvorbereitung zu betreiben?
+
+Suchliste des PCM erscheint. In diesem Fall können
+
+Für die Funktion Ihres Bluetooth® Mobiltelefons mit der
+
+Sie den Anmeldevorgang auch vom Mobiltelefon
+
+Handyvorbereitung wird grundsätzlich keine Handyhalte-
+
+starten. Stellen Sie sicher, dass die Bluetooth
+
+rung (Cradle) benötigt. Trotzdem wird die Verwendung
+
+3.  s kann vorkommen, dass ein Mobiltelefon aufgrund
+E
+
+®
+
+Funktion am Telefon und am CDR-30/PCM eingeschal-
+
+einer Handyhalterung empfohlen, weil mit der externen
+
+tet ist. Achten Sie auch darauf, dass das CDR-30/PCM
+
+Fahrzeugantenne der Telefonempfang verbessert und
+
+sich in der Bluetooth® Geräteliste befindet, da es hier
+
+der Akku des Mobiltelefons über das Fahrzeug aufgela-
+
+für das Mobiltelefon sichtbar ist. Beim PCM muss
+
+den wird. Handyhalterungen sind im Zubehörhandel für
+
+darüber hinaus auch der entsprechende Menüpunkt im
+
+ausgewählte Telefonmodelle erhältlich.
+
+Bereich Bluetooth Einstellungen unter "PHONE/
+®
+
+OPTION/SET PHONE" aktiviert werden.
+
+17
+
+5. Häufig gestellte Fragen (FAQ)
+
+Was passiert, wenn sich mehr als ein Bluetooth®
+Telefon gleichzeitig im Fahrzeug befindet?
+Die Handyvorbereitung kann immer nur mit einem
+Telefon verbunden sein. Sie können aber bis zu 5 Geräte
+im Fahrzeug anmelden und dann aktiv zwischen diesen
+Geräten umschalten. Beim Einschalten des Systems wird
+automatisch nach dem zuletzt verbundenen Mobiltelefon
+gesucht. Wenn dieses Gerät nach 15 Sekunden nicht
+gefunden wird, sucht das System auch nach den anderen
+angemeldeten Telefonen.
+
+Können SMS-Nachrichten mit der Handyvorbereitung
+verschickt werden?
+Nein. Das Versenden von SMS-Nachrichten wird mit der
+Handyvorbereitung nicht unterstützt.
+
+Wie kann ich an mehr Informationen über den
+Anmeldevorgang und die Bedienung der Handy­
+vorbereitung gelangen?
+Genauere Informationen über die Bedienung der Handyvorbereitung erhalten Sie in der Bedienungsanleitung
+des CDR-30/PCM. Zusätzliche Hinweise zum Anmeldevorgang gibt es auch unter www.porsche.com.
+
+An wen kann ich mich bei Problemen mit Bluetooth®
+Telefonen wenden?
+Bei Fragen zu Ihrem Mobiltelefon wenden Sie sich bitte
+an den Händler oder Mobilfunk-Provider, über den Sie
+das Gerät bezogen haben. Es gelten ausschließlich die
+Bedingungen der entsprechenden Telefonhersteller.
+
+18
+
+5. Häufig gestellte Fragen (FAQ)
+
+[3]  äufig gestellte Fragen zum CDR-30 mit Handy­
+H
+vorbereitung
+Welche Funktionen werden bei der Verbindung über
+die Handyvorbereitung im CDR-30 unterstützt?
+Da der unterstützte Funktionsumfang zwischen verschiedenen Mobiltelefonen sehr stark variiert, beachten
+Sie bitte die für Ihre Fahrzeugausstattung und Ihr Mobil­
+telefon gültigen detaillierten Informationen in der
+Mobiltelefon-Kompatibilitätsliste auf www.porsche.com.
+Grundsätzlich werden von der Handyvorbereitung im
+CDR-30 folgende Funktionen unterstützt:
+-  nmeldung eines Mobiltelefons mit Suche vom
+A
+Fahrzeug oder vom Telefon
+-  utomatisches Verbinden eines angemeldeten Geräts
+a
+bei Systemstart
+-  asistelefonie (anrufen, Gespräche annehmen, führen
+B
+und beenden)	
+-  reisprechen über die Fahrzeuganlage
+F
+- Statusanzeigen wie Netzname und Signalqualität
+- Senden von DTMF-Tönen
+Die Bedeutung der Begriffe erfahren Sie im Glossar.
+
+19
+
+5. Häufig gestellte Fragen (FAQ)
+
+[4] Häufig gestellte Fragen zum PCM mit Handy­
+
+
+Warum kann ich den Klingelton im PCM nicht
+einstellen?
+
+vorbereitung
+Welche Funktionen werden bei der Verbindung über
+die Handyvorbereitung im PCM unterstützt?
+
+Diese Einstellung ist für alle Telefonmodelle deaktiviert,
+die ihren Klingelton zum PCM per Bluetooth® übertragen
+
+Da der mit Bluetooth® unterstützte Funktionsumfang
+
+können. Das PCM klingelt dann mit dem Klingelton des
+
+zwischen verschiedenen Mobiltelefonen sehr stark
+
+Handys. Der Klingelton kann in diesem Fall nicht am
+
+variiert, beachten Sie bitte die für Ihre Fahrzeugaus­
+
+PCM, sondern muss am Telefon eingestellt werden.
+
+stattung und Ihr Mobiltelefon gültigen detaillierten
+
+Warum klingelt mein PCM nicht bei einem eingehenden Anruf?
+
+Informationen in der Mobiltelefon-Kompatibilitätsliste
+auf www.porsche.com.
+
+Diese Situation kann entstehen, wenn Sie ein Telefon
+Grundsätzlich werden von der Handyvorbereitung im
+
+benutzen, welches den Klingelton per Bluetooth® zum
+
+PCM folgende Funktionen unterstützt:
+
+PCM überträgt. Haben Sie bei diesem Gerät das Profil
+
+-  nmeldung eines Mobiltelefons mit Suche vom
+A
+
+"lautlos" oder z. B. "Besprechung" eingestellt, klingelt
+weder Ihr Telefon noch das PCM.
+
+Fahrzeug oder vom Telefon
+-  utomatisches Verbinden eines angemeldeten Geräts
+a
+bei Systemstart
+-  asistelefonie (anrufen, Gespräche annehmen, führen
+B
+und beenden)	
+- Freisprechen über die Fahrzeuganlage
+- Statusanzeigen wie Netzname und Signalqualität
+- Übertragung der Telefonbucheinträge vom Mobiltelefon
+-  bertragung der Anruflisten vom Mobiltelefon
+Ü
+(Hinweis: Bei 911 Carrera Modellen nur in Verbindung
+mit optionalem Navigationsmodul)
+- Senden von DTMF-Tönen
+-  weiten Anruf starten und beenden, Umschalten und
+z
+Konferenzschaltung
+Die Bedeutung der Begriffe erfahren Sie im Glossar.
+
+20
+
+5. Häufig gestellte Fragen (FAQ)
+
+[5]  äufig gestellte Fragen zum PCM mit Telefonmodul
+H
+
+Ist der gleichzeitige Betrieb von 2 SIM-Karten
+möglich?
+
+Wie unterscheidet sich das PCM mit Telefonmodul
+von der Handyvorbereitung?
+
+Nein. Das PCM mit Telefonmodul nutzt entweder die im
+
+Das PCM mit Telefonmodul ist ein fest eingebautes
+
+eingelegt ist - die SIM-Karte eines über das Bluetooth®
+
+Autotelefon, welches zum Telefonieren eine SIM-Karte
+
+SIM-Access Profile angebundenen Mobiltelefons.
+
+PCM eingelegte SIM-Karte oder - wenn diese nicht
+
+benötigt. Diese SIM-Karte kann entweder direkt im PCM
+Bluetooth SIM-Access Profile zur Verfügung gestellt
+
+Welche Funktionen werden mit dem PCM mit Telefonmodul unterstützt?
+
+werden. Mit Einführung der Sportwagen Modelljahr 2011
+
+Grundsätzlich werden vom PCM mit Telefonmodul
+
+erfolgt beim Telefonmodul eine automatische Erkennung
+
+folgende Funktionen unterstützt:
+
+und Umschaltung zwischen den Bluetooth Handyprofilen
+
+-  asistelefonie (anrufen, Gespräche annehmen, führen
+B
+
+eingelegt werden oder von einem Mobiltelefon über das
+®
+
+®
+
+SIM-Access Profile (SAP) bzw. Handsfree Profile (HFP).
+
+und beenden)	
+
+Hinweis: Bei 911 Carrera Modellen nur in Verbindung mit
+
+-  reisprechen über die Fahrzeuganlage
+F
+
+dem optionalen Navigationsmodul. Der Sportwagen-
+
+-  tatusanzeigen wie Netzname und Signalqualität
+S
+
+Kunde erhält deshalb mit dem Telefonmodul eine Lösung,
+
+-  enden von DTMF-Tönen
+S
+
+die ihm den maximal möglichen Funktionsumfang
+
+-  weiten Anruf starten und beenden, Umschalten und
+z
+
+(Verbindung mit HFP und SAP) und Komfort, gleichzeitig
+
+Konferenzschaltung
+-  nmeldung eines Bluetooth® Mobiltelefons mit Suche
+A
+
+aber eine hohe Flexibilität bei der Auswahl seines
+Mobiltelefons bietet. Als Zusatzoption kann im Sportwagen mit dem Telefonmodul ein schnurloser Bedienhörer
+mit Display und eigener Tastatur bestellt werden, womit
+
+vom Fahrzeug
+-  utomatisches Verbinden eines angemeldeten Geräts
+a
+bei Systemstart
+-  bertragung der Telefonbucheinträge vom Mobiltelefon
+Ü
+
+diskrete Telefonate geführt und auch von der Rücksitzbank aus aufgebaut werden können. Im HFP-Modus
+
+(SIM-Karten-Einträge und Adressbucheinträge vom
+
+(abhängig vom Modell des Mobiltelefons) stehen der
+
+Gerät) oder von der eingelegten SIM-Karte
+-  bertragung der Anruflisten vom Mobiltelefon (Hinweis:
+Ü
+
+schnurlose Bedienhörer und die SMS-Funktion nicht zur
+
+Bei 911 Carrera Modellen nur in Verbindung mit
+
+Verfügung.
+
+optionalem Navigationsmodul)
+
+Mit welchen Handys kann man das PCM mit
+Telefonmodul betreiben?
+
+-  utzung des schnurlosen Bedienhörers zur Führung
+N
+von Gesprächen im Privatmodus (optional, in Verbin-
+
+Da das PCM mit Telefonmodul nach der Funktionserweiterung sowohl das Bluetooth SIM-Access Profile als
+
+dung mit Telefonmodul, nicht im HFP-Modus)
+-  utzung von Bluetooth® Headsets (nicht im HFPN
+
+®
+
+auch das Handsfree Profile unterstützt (Hinweis: Bei
+
+M
+­ odus)
+
+911 Carrera Modellen nur in Verbindung mit optionalem
+
+-  enden und Empfangen von SMS (nicht im HFP-Modus)
+S
+
+Navigationsmodul), können mit dieser Variante grundDie Bedeutung der Begriffe erfahren Sie im Glossar.
+
+sätzlich alle Mobiltelefone betrieben werden, die
+mindestens das Handsfree Profile enthalten. Der volle
+Funktionsumfang wie weiter unten beschrieben ist
+allerdings nur mit Telefonen erlebbar, die per SIM-Access
+Profile mit dem PCM verbunden sind.
+
+21
+
+5. Häufig gestellte Fragen (FAQ)
+
+Ist es möglich, während eines Telefonats den
+Zündschlüssel abzuziehen?
+Ja. Sie können während eines Gesprächs das Fahrzeug
+
+Warum wird meine Rufnummer übertragen, obwohl die
+Rufnummern-Übermittlung am Telefon ausgeschaltet
+ist?
+
+abstellen und den Zündschlüssel abziehen. Das PCM
+
+Die Einstellung der Rufnummern-Übermittlung ist
+
+bleibt eingeschaltet, bis das Telefonat aktiv von Ihnen
+
+geräteabhängig. Wenn Ihr Mobiltelefon per SIM-Access
+
+oder von der Gegenseite beendet wird. Wenn Ihr
+
+Profile mit dem PCM verbunden ist, benutzen Sie nur die
+
+Mobiltelefon über das Handsfree Profile mit dem
+
+SIM-Karte Ihres Handys. Das Telefonat selbst erfolgt
+
+PCM verbunden ist, können Sie beim Abstellen des
+
+über das PCM. Sie haben aber die Möglichkeit, die
+
+Fahrzeugs das Gespräch auf das Telefon übertragen und
+
+Rufnummern-Übermittlung auch im PCM zu deaktivieren
+
+außerhalb des Fahrzeugs weiterführen.
+
+("PHONE/OPTION/SET PHONE/Anrufeinstellungen").
+
+Kann mit dem schnurlosen Bedienhörer (optional,
+in Verbindung mit Telefonmodul) auch außerhalb des
+Fahrzeugs telefoniert werden?
+
+Ist es möglich, mit dem PCM mit Telefonmodul SMS
+zu versenden oder zu empfangen?
+
+Der schnurlose Bedienhörer des PCM mit Telefonmodul
+
+einer Verbindung über das SIM-Access Profile (SAP) mit
+
+ist für die Nutzung im Innenraum des Fahrzeugs kon­
+
+dem PCM mit Telefonmodul versendet und empfangen
+
+zipiert. Außerhalb des Fahrzeugs ist der Betrieb nur
+
+werden. Um das Erstellen von SMS zu vereinfachen,
+
+innerhalb eines kleinen Umkreises möglich, da immer
+
+können Sie dabei auf Vorlagen zugreifen, die auch
+
+eine Bluetooth® Verbindung zum Fahrzeug benötigt wird.
+
+Informationen aus der Navigation (z. B. Ankunftszeit
+
+Ja. SMS können in Abhängigkeit vom Mobiltelefon bei
+
+oder aktuelle Position) enthalten, wenn eine Navigations-
+
+Ist es möglich, das Telefonbuch in das PCM mit
+Telefonmodul zu übertragen?
+
+funktion im PCM vorhanden ist. Bei empfangenen SMS
+
+Ja. Die Telefonbucheinträge von einer im PCM eingeleg-
+
+übernommen und für eine Zielführung benutzt werden.
+
+können solche Positionsinformationen in die Navigation
+
+ten SIM-Karte oder von einem über Bluetooth verbunde®
+
+PCM übertragen. Die Übertragung der im Gerät gespei-
+
+Warum kann ich im Fahrzeug nicht alle SMS des
+Mobiltelefons sehen?
+
+cherten Einträge ist abhängig vom Funktionsumfang des
+
+Das Bluetooth® SIM-Access Profile, welches für die
+
+Mobiltelefons und vom jeweils aktiven Bluetooth Profil.
+
+Umsetzung der SMS-Funktion genutzt wird, erlaubt einen
+
+nen Mobiltelefon werden nach jedem Systemstart in das
+
+®
+
+Zugriff auf die SIM-Karte des verbundenen Mobiltelefons.
+Bitte beachten Sie auch hier, dass bei einigen Geräte­
+
+Deshalb sind im Fahrzeug nur die SMS sichtbar, die auf
+
+modellen die Anfrage vom PCM durch einen Tastendruck
+
+der SIM-Karte gespeichert sind.
+
+am Telefon bestätigt werden muss. Erfolgt diese
+Bestätigung nicht, wird das Telefonbuch nicht übertragen. Diese Bestätigung muss bei jeder Fahrt durchgeführt werden. Man kann sie aber dadurch vermeiden,
+dass man das PCM in der Geräteliste des Mobiltelefons
+autorisiert. Die Geräteliste erreicht man bei den meisten
+Telefonen über den Bereich "Bluetooth® Einstellungen".
+
+22
+
+5. Häufig gestellte Fragen (FAQ)
+
+Warum sehe ich im Fahrzeug empfangene SMS nach
+Trennen der SIM-Access-Verbindung nicht in meinem
+Handy?
+In Mobiltelefonen werden häufig nur die im Gerätespeicher abgelegten SMS angezeigt. In solchen Geräten
+sehen Sie die im Fahrzeug empfangenen SMS nicht in
+der Mitteilungsliste Ihres Handys, weil diese SMS-Nachrichten in jedem Fall auf der SIM-Karte abgelegt werden.
+
+Wenn ich im Fahrzeug eine SMS lösche, wird diese
+auch automatisch im Mobiltelefon gelöscht?
+Ja. Eine im PCM gelöschte SMS wird physikalisch auf
+der SIM-Karte des Mobiltelefons gelöscht.
+
+Ist es möglich, mit dem PCM mit Telefonmodul auch
+MMS zu empfangen?
+Nein. Die Funktion MMS wird vom PCM mit Telefonmodul
+nicht unterstützt.
+
+Was kann ich tun, wenn sich das Telefon trotz
+eingeschalteter Bluetooth® Funktion und Sichtbarkeit
+nicht anmelden oder verbinden lässt?
+Hierfür kann es mehrere Ursachen geben:
+1.  ei einigen Telefonmodellen muss jede VerbindungsanB
+frage vom Fahrzeug durch einen Tastendruck bestätigt
+werden. Erfolgt diese Bestätigung nicht, kommt die
+Verbindung nicht zustande. Diese Bestätigung bei
+jeder Fahrt kann dadurch vermieden werden, dass das
+PCM in der Geräteliste des Mobiltelefons autorisiert
+wird. Die Geräteliste erreicht man bei den meisten
+Telefonen über den Bereich "Bluetooth® Einstellungen".
+2. n sehr seltenen Fällen kann es vorkommen, dass die
+I
+Anmeldung auf einer der beiden Seiten verloren
+gegangen ist und die Geräte deshalb keine Verbindung
+aufbauen können. In diesem Fall löschen Sie den
+verbliebenen Eintrag auf dem Telefon oder im
+Fahrzeug und führen Sie die Anmeldung neu aus.
+
+23
+
+5. Häufig gestellte Fragen (FAQ)
+
+[6]  äufig gestellte Fragen zur Übertragung von
+H
+
+Warum wird mein Telefonbuch im Fahrzeug nicht
+richtig angezeigt?
+
+Telefonbuch und Anruflisten - Bluetooth
+Phonebook Access Profile (PBAP)
+
+®
+
+Die Übertragung und Anzeige des Telefonbuchs im
+PCM ist abhängig vom Verhalten Ihres Mobiltelefons.
+
+Ist ein Zugriff vom CDR-30 auf die im Mobiltelefon
+gespeicherten Telefonnummern und Anruflisten
+möglich?
+
+Bitte beachten Sie folgende Hinweise:
+
+Das CDR-30 unterstützt grundsätzlich keine automati-
+
+2.  ie maximale Anzahl der Nummern im Fahrzeug
+D
+
+1. m PCM werden nur Einträge angezeigt, die
+I
+mindestens eine Telefonnummer enthalten.
+
+sche Übertragung von Telefonbucheinträgen und
+
+ist bei Fahrzeugen mit PCM auf 2.500 beschränkt.
+
+Anruflisten aus dem Mobiltelefon. Sie haben aber
+
+Im CDR-30 können maximal 100 Einträge manuell
+
+trotzdem die Möglichkeit, einzelne Einträge oder auch
+
+gespeichert werden.
+
+die komplette Liste des Telefonbuchs Ihres Mobiltelefons
+
+3.  anche Mobiltelefone interpretieren die NamenseinM
+
+manuell auf Ihr CDR-30 zu übertragen. Aktivieren Sie den
+
+träge als "Vorname Nachname" bzw. "Nachname,
+
+Download-Betrieb des CDR-30, wählen Sie die gewünsch-
+
+Vorname". Dadurch kann die Sortierung des Telefon-
+
+ten Einträge auf Ihrem Telefon und übertragen Sie diese
+
+buchs im PCM von der Sortierung im Mobiltelefon
+
+per Bluetooth . Die Möglichkeit der Übertragung wird
+
+abweichen. Sie können diese Sortierung allerdings
+
+allerdings nicht von allen Telefonmodellen unterstützt.
+
+über die Funktion "PHONE/OPTION/SET PHONE-
+
+®
+
+T
+­ elbucheinstellungen-Sortierung" ändern und damit
+
+Ist ein Zugriff vom PCM auf die im Mobiltelefon
+gespeicherten Telefonnummern und Anruflisten
+möglich?
+
+in vielen Fällen das Problem lösen.
+4.  ei einigen Telefonmodellen wird pro Name nur eine
+B
+Nummer übertragen. In diesen Fällen fehlen häufig
+
+Der Zugriff auf das Telefonbuch und die Anruflisten des
+
+auch die Informationen zum Rufnummerntyp.
+
+Mobiltelefons ist abhängig von dessen Funktionsumfang.
+
+5.  uch bei der Benutzung von Sonderzeichen kann es
+A
+
+Einige Modelle übertragen beispielsweise die auf der
+
+bei manchen Mobiltelefonen zu Problemen bei der
+
+SIM-Karte gespeicherten Telefonbucheinträge nicht zum
+
+Übertragung der Daten kommen.
+
+PCM. Bei einigen Geräten ist auch ein Zugriff auf die im
+
+6.  öglicherweise erscheinen Einträge im PCM doppelt,
+M
+
+Gerät selbst gespeicherten Kontakte (Adressbuch) nicht
+
+wenn diese sowohl auf der SIM-Karte als auch im
+
+möglich. Andere übertragen diese Informationen, liefern
+
+Gerät gespeichert sind (SIM-Karten-Einträge sind auf
+
+aber nur eine Telefonnummer pro Name.
+
+manchen Mobiltelefonen nicht sichtbar im Telefonbuch). In diesem Fall können Sie die SIM-Karten-Einträ-
+
+Möglich ist auch, dass der Benutzer die Anfrage des
+
+ge über die Funktion "PHONE/OPTION/SET PHONE/
+
+PCM durch einen Tastendruck am Telefon bestätigen
+
+Telbucheinstellungen/Telefonbuchspeicher" ausblen-
+
+muss. Erfolgt diese Bestätigung nicht, werden weder
+
+den.
+
+Telefonbuch noch Anrufliste übertragen. Diese Bestäti-
+
+7.  s kann vorkommen, dass das Telefonbuch im PCM
+E
+
+gung muss bei jeder Fahrt durchgeführt werden. Man
+
+leer ist, weil das Mobiltelefon eine Übertragung von
+
+kann sie aber dadurch vermeiden, dass man das PCM
+
+Daten bestätigt, dann aber keine Datensätze schickt.
+
+in der Geräteliste des Mobiltelefons autorisiert. Die
+
+Für eine wiederholte Telefonbuchübertragung können
+
+Geräteliste erreicht man bei den meisten Telefonen
+
+Sie die Funktion "PHONE/OPTION/SET PHONE/
+
+über den Bereich "Bluetooth® Einstellungen".
+
+Telbucheinstellungen-Telefonbuch übertragen"
+benutzen.
+
+Hinweis: In den 911 Carrera Modellen ist die Übertragung
+von Anruflisten nur in Verbindung mit dem optionalen
+Navigationsmodul verfügbar.
+
+24
+
+5. Häufig gestellte Fragen (FAQ)
+
+Wie viele Telefonbucheinträge kann ich maximal in
+das PCM übertragen?
+
+Wie viele Einträge aus der Anrufliste des Mobil­
+telefons werden in das PCM übernommen?
+
+Der Telefonbuchspeicher des PCM kann maximal
+
+Das PCM übernimmt maximal 60 Einträge pro Anrufliste.
+
+2.500 Telefonnummern aufnehmen. Werden pro Eintrag
+
+Dabei werden Anrufe von oder zu derselben Telefon­
+
+mehrere Nummern gespeichert, ist die Anzahl der
+
+nummer immer zu einem Eintrag zusammengefasst.
+
+möglichen Telefonbucheinträge entsprechend geringer.
+Ist das Telefonbuch des Telefons größer, werden nur
+
+Hinweis: In den 911 Carrera Modellen ist die Übertragung
+
+die ersten 2.500 Nummern im PCM angezeigt.
+
+von Anruflisten nur in Verbindung mit dem optionalen
+Navigationsmodul verfügbar.
+
+Wie viele Telefonbucheinträge kann ich maximal in
+das CDR-30 übertragen?
+
+Warum gibt es in der Anrufliste Einträge mit und ohne
+Anrufzeitpunkte?
+
+Der Telefonbuchspeicher des CDR-30 kann maximal
+100 Einträge mit je 5 Telefonnummern aufnehmen. Ist
+die Anzahl der vom Mobiltelefon übertragenen Einträge
+
+Die Übertragung der Anrufzeitpunkte wird nicht von allen
+
+größer als 100, werden nicht alle Einträge im CDR-30 zur
+
+Mobiltelefonen unterstützt. Fehlt diese Information, wird
+
+Verfügung stehen.
+
+der Anruf nach der Übertragung vom Mobiltelefon in der
+PCM Liste ohne Zeitstempel dargestellt. Die Reihenfolge
+
+Kann ich die Einträge meines Telefonbuchs im
+Telefon vom Fahrzeug editieren oder ergänzen?
+
+der Anrufe wird durch die Übertragung vom Telefon
+
+Nein. Sie müssen die Einträge auf dem Telefon selbst
+
+hinzu, wird dieser mit der aktuellen PCM Zeit versehen
+
+bearbeiten. Ein geändertes Telefonbuch können Sie aber
+
+und erscheint an oberster Stelle in der Anrufliste des
+
+über die Funktion "Telbuch übertragen" zum Fahrzeug
+
+PCM.
+
+bestimmt. Kommt ein weiterer Anruf während der Fahrt
+
+schicken und dort sofort benutzen.
+Ist ein Mobiltelefon über das SIM-Access Profile verbun-
+
+Kann die automatische Übertragung des Telefon­ uchs
+b
+zum PCM vermieden werden?
+
+den, sind die Anrufe, die während des externen SIM-
+
+Ja. Das Telefonbuch und die Anruflisten werden nur dann
+
+und werden auch nicht auf diesem gespeichert.
+
+Zugriffs getätigt werden, dem Mobiltelefon nicht bekannt
+
+übertragen, wenn der Haken bei "Auto-Update" im Menü
+"PHONE/OPTION/SET PHONE/Telbucheinstellungen"
+
+Hinweis: In den 911 Carrera Modellen ist die Übertragung
+
+gesetzt ist. Mit der Funktion "Telefonbuch löschen"
+
+von Anruflisten nur in Verbindung mit dem optionalen
+
+können gespeicherte Telefonbuchdaten aus dem PCM
+
+Navigationsmodul verfügbar.
+
+auch wieder entfernt werden.
+Hinweis: In den 911 Carrera Modellen ist diese Funktion
+nur in Verbindung mit dem optionalen Navigationsmodul
+verfügbar.
+
+25
+
+6. Glossar
+
+6.  lossar
+G
+
+Anmeldung - Pairing
+
+PCs und Peripheriegeräte (z. B. Tastaturen) miteinander
+
+Für eine Verbindung zweier Bluetooth Geräte müssen
+
+drahtlos kommunizieren, wobei Bluetooth® als Schnitt-
+
+die Geräte aus Sicherheitsgründen einen einmaligen
+
+stelle fungiert.
+
+®
+
+Anmeldevorgang (Pairing) durchlaufen. Dafür wird auf
+einem der Geräte eine Bluetooth® Suche (Inquiry)
+
+Bluetooth® Handsfree Profile (HFP)
+
+angestoßen, bei der alle in Reichweite befindlichen
+
+Über das Bluetooth® Handsfree Profile (HFP) kann eine
+
+Geräte gefunden werden. Anhand der Geräteklasse wird
+
+vorhandene Audioanlage zum Freisprechen beim
+
+dann entschieden, ob das Gerät in der Liste angezeigt
+
+Telefonieren benutzt und das Telefon über eine vor­
+
+wird oder nicht. Nachdem das gewünschte Gerät
+
+handene Bedienlogik gesteuert werden. Das Bluetooth®
+
+ausgewählt wurde, muss auf beiden Seiten derselbe
+
+Handsfree Profile (HFP) kommt in der Option Handyvor-
+
+numerische Code (Passkey) eingegeben werden. War die
+
+bereitung zum Einsatz. Mit Einführung der Sportwagen
+
+Anmeldung erfolgreich, sind die Geräte berechtigt,
+
+Modelljahr 2011 erfolgt beim Telefonmodul eine automa-
+
+digitale Daten (Steuerdaten oder Nutzdaten wie Sprache/
+
+tische Erkennung und Umschaltung zwischen den
+
+Audio/Videodaten) auszutauschen, solange die Anmel-
+
+Bluetooth® Handyprofilen SIM-Access Profile (SAP) bzw.
+
+dung auf keinem der Geräte gelöscht worden ist.
+
+Handsfree Profile (HFP). Hinweis: Bei 911 Carrera Modellen
+m
+nur in Verbindung mit dem optionalen Navigations­ odul.
+
+Automatische Verbindung - Auto-Connect
+
+Typische Funktionen sind dabei Anrufen, Gespräche
+
+Sind zwei Geräte gegenseitig angemeldet und damit zum
+
+annehmen, führen und beenden sowie der Auf- und
+
+Datenaustausch berechtigt, kann eines der beiden
+
+Abbau der Audioverbindung. Das Bluetooth® Handsfree
+
+Geräte aus der Applikation heraus eine automatische
+
+Profile (HFP) definiert dabei, wie die Steuerung des
+
+Verbindungsanfrage senden, die vom zweiten Gerät
+
+Telefons zu erfolgen hat und die notwendigen Audiodaten
+
+automatisch beantwortet wird. Ein Beispiel wäre die
+
+übertragen werden. Die Umsetzung des Bluetooth®
+
+automatische Verbindung eines Bluetooth® Mobiltelefons
+
+Handsfree Profile (HFP) ist bei verschiedenen Telefonher-
+
+nach Start des Fahrzeugs. Damit die Anfrage vom
+
+stellern und Modellen und teilweise sogar bei verschiede-
+
+Mobiltelefon beantwortet werden kann, muss das
+
+nen Firmwareständen gleicher Telefonmodelle unter-
+
+anfragende System beim Mobiltelefon autorisiert sein.
+
+schiedlich gelöst. Daher kann es vorkommen, dass das
+Verhalten unterschiedlicher Mobiltelefone voneinander
+
+Autorisierung
+
+abweicht, obwohl alle auf Basis des Bluetooth® Hands-
+
+Für die automatische Herstellung einer Bluetooth ®
+
+free Profile (HFP) funktionieren.
+
+Verbindung muss das anfragende Gerät auf der Gegenseite autorisiert sein. Diese Autorisierung erfolgt bei
+
+Bluetooth® Phonebook Access Profile (PBAP)
+
+manchen Telefonen automatisch, bei anderen muss sie
+
+Das Bluetooth® Phonebook Access Profile (PBAP) dient
+
+durch den Benutzer in der Bluetooth® Geräteliste explizit
+
+der Übermittlung von Telefonbuchinhalten und Anruflisten
+
+durchgeführt werden.
+
+aus dem Mobiltelefon. Diese Übertragung erfolgt nach
+dem Aufbau einer Bluetooth® Verbindung zwischen dem
+
+Bluetooth
+
+PCM/CDR und dem Mobiltelefon. Die Übertragung der
+
+Bluetooth ist ein Industriestandard für die Funkvernet-
+
+Inhalte aus dem Telefon ist allerdings geräteabhängig. So
+
+zung von elektronischen Geräten über kurze Distanzen bis
+
+können Teile des Telefonbuchs (z. B. die Einträge von der
+
+zu einer Entfernung von maximal 10 Metern. So können
+
+SIM-Karte) fehlen, weil diese vom Telefon nicht mitgeteilt
+
+unter anderem mobile elektronische Geräte wie Mobilte-
+
+werden. Das Phonebook Access Profile (PBAP) wird nur
+
+lefone und PDAs (Personal Digital Assistants), aber auch
+
+von neueren Telefonmodellen unterstützt.
+
+®
+
+®
+
+26
+
+6. Glossar
+
+Bluetooth® SIM-Access Profile (SAP)
+
+Handyvorbereitung
+
+Über das Bluetooth SIM-Access Profile (SAP) können
+
+Die Handyvorbereitung (in Verbindung mit CDR-30 oder
+
+sowohl die Netzzugangsberechtigung als auch bestimm-
+
+PCM) ist eine typische Bluetooth® Freisprechanlage auf
+
+te Daten der SIM-Karte von einem Gerät auf ein anderes
+
+Basis des Bluetooth® Handsfree Profile (HFP).
+
+®
+
+übertragen werden. Ein typischer Anwendungsfall liegt
+im Fahrzeug vor, wo der Benutzer die SIM-Karte aus
+
+Grundsätzlich werden von der Bluetooth® Handyvorberei-
+
+seinem Mobiltelefon dafür nutzen kann, ein eingebautes
+
+tung folgende Funktionen unterstützt:
+
+Autotelefon zu betreiben. Mittels Bluetooth SIM-Access
+
+-  nmeldung eines Mobiltelefons mit Suche vom
+A
+
+®
+
+Profile (SAP) hat der Benutzer eines PCM mit eingebau-
+
+Fahrzeug oder vom Telefon
+
+tem Telefonmodul die Möglichkeit, das PCM mit Telefonmodul mit externer Fahrzeugantenne zu nutzen, ohne eine
+SIM-Karte in das PCM einlegen zu müssen. Er kann dann
+auch auf die Telefonbucheinträge und SMS-Nachrichten
+
+-  utomatisches Verbinden eines angemeldeten Geräts
+a
+bei Systemstart
+-  asistelefonie (anrufen, Gespräche annehmen, führen
+B
+und beenden)	
+
+von seiner SIM-Karte und - abhängig vom Funktionsum-
+
+-  reisprechen über die Fahrzeuganlage
+F
+
+fang des Mobiltelefons - auch auf die Einträge im Geräte-
+
+-  tatusanzeigen wie Netzname und Signalqualität
+S
+
+speicher zugreifen.
+Da der unterstützte Funktionsumfang zwischen verschieDas Bluetooth SIM-Access Profile (SAP) wird nur von
+
+denen Mobiltelefonen sehr stark variiert, beachten Sie
+
+einer eingeschränkten Anzahl an Telefonmodellen
+
+bitte die für Ihre Fahrzeugausstattung und Ihr Mobiltele-
+
+unterstützt.
+
+fon gültigen detaillierten Informationen in der Mobiltele-
+
+®
+
+fon-Kompatibilitätsliste auf www.porsche.com.
+
+Bluetooth Suche - Inquiry
+®
+
+Für die einmalige Anmeldung zweier Geräte muss eine
+
+Inband-Ringing
+
+Suche (Inquiry) von einer Seite angestoßen werden, die
+
+Einige Mobiltelefone sind in der Lage, ihren Klingelton
+
+mögliche Bluetooth Partner überhaupt erst identifiziert.
+
+per Bluetooth® ins Fahrzeug zu übertragen. Bei einem
+
+Nachdem die Geräte angemeldet sind, wird die Verbin-
+
+eingehenden Anruf wird in diesen Fällen das PCM nicht
+
+dung nicht mehr über die Suche, sondern über eine
+
+mit seinem eigenen, sondern mit dem im Telefon
+
+direkte Verbindungsanfrage (Connect) hergestellt.
+
+eingestellten Ton klingeln. Die Ruftoneinstellungen im
+
+®
+
+PCM sind in diesen Fällen nicht aktiv. Der Rufton kann
+
+DTMF
+
+ausschließlich über das Telefon eingestellt werden. Vom
+
+DTMF steht für Dual Tone Multiple Frequency. Dabei
+
+CDR-30 wird diese Funktion nicht unterstützt.
+
+handelt es sich um ein Tonwahlverfahren, bei dem z. B.
+während eines laufenden Gesprächs Steuerfunktionen
+
+Makeln/Konferenz
+
+durch Nachwählen von Ziffern (Steuern der Mailbox oder
+
+Während eines aktiven Gesprächs hat der Benutzer die
+
+eines Sprachservers) ausgeführt werden können.
+
+Möglichkeit, einen weiteren eingehenden Anruf anzunehmen und dann zwischen beiden Gesprächen hin und her
+zu wechseln (Makeln). Weiterhin kann er beide Gespräche
+zu einem Dreiergespräch (Konferenz) zusammenschalten. Diese Funktionen werden von vielen Mobiltelefonen
+unterstützt. Die Steuerung durch das PCM ist abhängig
+vom Bluetooth® Funktionsumfang des Mobiltelefons.
+Vom CDR-30 werden diese Funktionen nicht unterstützt.
+
+27
+
+6. Glossar
+
+PCM mit Telefonmodul
+
+Grundsätzlich werden vom PCM mit Telefonmodul
+
+Das PCM mit Telefonmodul ist ein fest eingebautes Auto­
+-
+
+folgende Funktionen unterstützt:
+
+telefon, welches zum Telefonieren eine SIM-Karte benötigt.
+
+-  asistelefonie (anrufen, Gespräche annehmen, führen
+B
+
+Diese SIM-Karte kann entweder direkt im PCM eingelegt
+oder von einem Mobiltelefon über das Blue­ ooth
+t
+
+und beenden)	
+- Freisprechen über die Fahrzeuganlage
+
+®
+
+SIM-Access Profile zur Verfügung gestellt werden. In der
+
+- Statusanzeigen wie Netzname und Signalqualität
+
+PCM Ausstattung mit Telefonmodul und Navigations­
+
+- Senden von DTMF-Tönen
+
+modul wird darüber hinaus auch der Freisprechbetrieb
+
+- Führen von Anruflisten
+
+inkl. Bedienmöglichkeiten über das Bluetooth Handsfree
+
+-  weiten Anruf starten und beenden, Umschalten
+z
+
+®
+
+Profile unterstützt. Mit Einführung der Sportwagen
+
+(Makeln) und Konferenzschaltung
+-  nmeldung eines Bluetooth® Mobiltelefons mit Suche
+A
+
+Modelljahr 2011 erfolgt beim Telefonmodul eine auto­
+
+vom Fahrzeug
+
+matische Erkennung und Umschaltung zwischen den
+Bluetooth Handyprofilen SIM-Access Profile (SAP) bzw.
+®
+
+Hands­ree Profile (HFP). Hinweis: Bei 911 Carrera Modellen
+f
+nur in Verbindung mit dem optionalen Navigations­ odul.
+m
+
+-  utomatisches Verbinden eines angemeldeten Geräts
+a
+bei Systemstart
+-  bertragung der Telefonbucheinträge vom Mobiltelefon
+Ü
+
+Die Anmeldung eines Mobiltelefons, das beide Profile für
+
+(SIM-Karten-Einträge und Adressbucheinträge vom
+
+die Verbindung zum Fahrzeug nutzen kann, erfolgt in
+
+Gerät) oder von der eingelegten SIM-Karte
+
+diesem Fall vorzugsweise über einen 16-stelligen
+
+-  utzung des schnurlosen Bedienhörers zur Führung
+N
+
+Bluetooth® Code für das höherwertige SIM-Access Profile.
+
+von Gesprächen im Privatmodus (nicht im HFP-Modus)
+
+Kommt die Verbindung über das SIM-Access Profile nicht
+
+- Nutzung von Bluetooth® Headsets (nicht im HFP-Modus)
+
+
+zustande, wird immer ersatzweise das Handsfree Profile
+
+- Senden und Empfangen von SMS (nicht im HFP-Modus)
+
+verbunden (HFP-Modus). In diesem Fall ist der unterstützte Funktionsumfang auf die Funktionalität der Handyvorbereitung reduziert (keine SMS, kein Bluetooth ® Headset).
+
+28
+
+6. Glossar
+
+Registrierungsstatus
+Mit Registrierungsstatus wird der aktuelle Zustand der
+Verbindung zu einem Mobilfunknetz bezeichnet. Ist das
+Telefon aktuell mit einem Mobilfunknetz verbunden, wird
+der Netzname angezeigt, wenn diese Information vom
+Telefon übertragen wird. Weitere mögliche Zustände sind
+"Netzsuche" oder "Registrierung fehlgeschlagen".
+
+Signalqualität
+Die Signalqualität ist ein Indikator für die generelle
+Empfangssituation des Mobiltelefons. Die Qualität eines
+Gesprächs kann damit allerdings nicht bewertet werden,
+da die einzelnen Sprachkanäle einer Mobilfunkzelle sich
+qualitativ deutlich unterscheiden. Ist das mit dem
+Fahrzeug verbundene Telefon aktuell in einem Mobilfunknetz eingebucht, wird die Signalqualität auf dem PCM/
+CDR-30 angezeigt, falls diese Information vom Telefon
+übertragen wird.
+
+SIM-Karte
+Um Zugang zu einem GSM-Netz zu erhalten, wird in
+jedem Fall eine SIM-Karte (SIM - Subscriber Identity
+Module) benötigt, die neben der Zugangsberechtigung
+zum GSM-Netz weitere persönliche Daten enthalten kann
+(Telefonbuch, SMS-Nachrichten). Der Zugang zum Netz
+und die persönlichen Daten sind über eine PIN-Nummer
+geschützt, die am Gerät eingegeben werden muss.
+
+29
+

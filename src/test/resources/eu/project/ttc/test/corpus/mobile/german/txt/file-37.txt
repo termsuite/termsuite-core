@@ -1,0 +1,47 @@
+PRESSEMITTEILUNG / DDP DIRECT Zunehmende Nutzung von Smartphones und Tablets soll bis 2015 weltweit zu 350 Prozent mehr Wi - Fi - Hotspots führen
+Einer Umfrage zufolge gibt es in Nordamerika und Asien / Pazifik schon heute mehr Verbindungen zu Wi - Fi - Hotspots durch Smartphones als durch Laptops
+( ddp direct ) Dem Bericht nach könnte die Zahl der weltweiten öffentlichen Wi - Fi - Hotspots zwischen 2011 und 2015 von 1 , 3 Millionen auf 5 , 8 Millionen steigen , was einer Zunahme um 350 Prozent entspräche . " Gemeinschafts - Hotspots " , in denen Nutzer ihren eigenen Wi - Fi - Zugangspunkt mit anderen teilen , sind hier nicht inbegriffen . Diese würden weltweit weitere 4 , 5 Millionen Hotspots ausmachen .
+Allein China Mobile plant , eine Million Hotspots aufzubauen . Und Japans KDDI beabsichtigt , seine 10 . 000 Wi - Fi - Hotspots innerhalb von sechs Monaten auf 100 . 000 aufzustocken . Die Umfrage hat gezeigt , dass sich dieses Wachstum auf drei Felder konzentrieren wird : großräumige " Hot - Zonen " im Freien ( z . B . Parks ) , lokale " Hot - Zonen " im Freien ( z . B . beliebte Touristenattraktionen ) und Verkehrsknotenpunkte ( z . B . Flughäfen ) .
+Die Ergebnisse zeigen auch , dass 58 Prozent der Betreiber - einschließlich 47 Prozent der Mobilfunkbetreiber - der Meinung sind , Wi - Fi - Hotspots seien für ihre Kunden sehr wichtig oder entscheidend , entlasteten vielgenutzte mobile Breitbandnetze und böten eine Plattform für Mehrwertdienste .
+Ein Schlüsselfaktor für den schnellen Ausbau von Wi - Fi - Hotspots ist die Zunahme des mobilen Datenverkehrs . Dem Bericht nach ist davon auszugehen , dass der weltweite mobile Datenverkehr bis 2014 auf 16 , 84 Millionen Terabytes ansteigen wird . Betreiber planen , dieses Wachstum vor allem über neue Preisstrategien und Wi - Fi - basierte Entlastungen zu steuern .
+Die Umfrage zeigte auch , dass die Zugriffe auf Wi - Fi - Hotspots durch Smartphones die durch Laptops schon bald überholen werden . Laptops repräsentieren heute weniger als die Hälfte ( 48 Prozent ) der Verbindungen zu Hotspots , Smartphones 36 und Tablets 10 Prozent . Im asiatisch - pazifischen Raum und in Nordamerika liegt der Hotspot - Zugriff durch Smartphones schon heute über dem durch Laptops . In Lateinamerika ist das Zugriffsverhältnis Smartphone / Laptop etwa gleich . Die Umfrageteilnehmer gehen nicht davon aus , dass sich Umsetzungen der LTE - Mobilfunk - Breitbandtechnik auf die weitere Verbreitung von Wi - Fi - Hotspots auswirken werden .
+Der Bericht weist ferner auf verschiedene Hürden hin , welche die Akzeptanz und Nutzung öffentlicher Wi - Fi - Hotspots derzeit noch erschweren . Genannt werden umständliche Authentifizierungsverfahren , die Kosten für den Zugang , die Erkennung verfügbarer Netze durch den Nutzer sowie Sicherheitsbedenken . Ein Betreiber aus Großbritannien berichtete kürzlich , dass nur 20 Prozent seiner Nutzer die ihnen zustehenden kostenlosen öffentlichen Hotspots auch nutzen würden .
+Allerdings macht der neue Bericht auch deutlich , dass einige dieser Probleme durch Hotspots der nächsten Generation ( NGH - Next Generation Hotspots ) , die derzeit international getestet werden , überwunden werden können . Diese Systeme ermöglichen es dem Nutzer , sich nahtlos zwischen Mobilfunk - und Wi - Fi - Netzen zu bewegen . Zur Authentifizierung dient die SIM - Karte des Handys , was Bedenken hinsichtlich der korrekten Authentifizierung , Netzwerkerkennung und Sicherheit ausräumen hilft . Darüber hinaus senken Betreiber die Zugangskosten , da sie als Teil ihrer Breitband - oder Mobilfunkpakete immer öfter auch einen öffentlichen Wi - Fi - Zugang anbieten .
+Chris Bruce , Vorsitzender der WBA und CEO von BT Openzone , erklärte : " Die Ergebnisse zeigen , dass uns bezogen auf öffentliche Wi - Fi - Angebote ein goldenes Zeitalter bevorsteht . Bei den Hotspots erwarten wir ein rasantes Wachstum . Festnetzbetreiber erweitern ihre Breitbanddienste über den Heimbereich und das Büro hinaus , und Wi - Fi kann vielgenutzte mobile Breitbandnetze unterstützen . Über Feldversuche mit Hotspots der nächsten Generation nehmen wir immer mehr der noch verbliebenen Hürden . Und wenn es gelingt , den Benutzern ein wirklich einfaches , sicheres Erlebnis zu bieten , wird die Akzeptanz der Hotspots weiter rasant zunehmen . "
+Die Ergebnisse basieren auf dem Feedback von 259 Experten für öffentliche Wi - Fi - Hotspots . Mehr als die Hälfte davon sind Betreiber mit großer geografischer Streuung , die alle Kontinente repräsentieren , sich aber auf entwickelte Märkte konzentrieren . Der komplette Bericht ist auf der Website der Wireless Broadband Alliance unter http : / / www . wballiance . com / resource - centre / global - developments - wifi - re port . html abrufbar .
+Anmerkung für Redaktionen
+Über die Wireless Broadband Alliance
+Ziel der 2003 gegründeten Wireless Broadband Alliance ( WBA ) ist es , Benutzern über die weltweite Umsetzung von Wi - Fi - Systemen der nächsten Generation ein äußerst attraktives Nutzererlebnis zu bieten . Erreichen wollen die WBA und ihre branchenführenden Mitglieder diesen Qualitätssprung durch technologische Innovation , Interoperabilität und robuste Sicherheitsstandards .
+Zu den Mitgliedern der WBA zählen heute große Festnetzbetreiber wie BT , NTT Communications , Comcast und Time Warner Cable , sieben der zehn führenden Mobilfunkbetreiber ( nach Umsatz ) sowie führende Technologiefirmen wie Cisco , Google und Intel . Diese Mitglieder bedienen heute über 390 Millionen Kunden und haben weltweit bislang mehr als 290 . 000 Hotspots installiert . Auch arbeiten sie mit internationalen Betreibern zusammen , um Innovationen zu fördern , nahtlose Konnektivität anzubieten und getätigte Investitionen in Netze zu optimieren . Im Vorstand der WBA sind AT & T , BT , Boingo , Cisco , Deutsche Telekom , KT , NTT DOCOMO , Orange France , True Internet und TMN / Portugal Telecom vertreten . www . wballiance . com
+Folgen Sie der Wireless Broadband Alliance auf Twitter :
+www . twitter . com / wballiance
+Die mit dieser Pressemitteilung verbundene Info - Grafik finden Sie unter : http : / / media3 . marketwire . com / docs / WBAinfographic . pdf
+Um das zu dieser Pressemitteilung gehörige Video zu sehen , klicken Sie bitte auf den folgenden Link : http : / / youtu . be / qrD - mXbQUHY
+Kontaktinformation : Temono für Wireless Broadband Alliance Stephanie Ross + 44 207 089 8896 wba @ temono . com
+Kontaktinformation : Temono für Wireless Broadband Alliance Stephanie Ross + 44 207 089 8896 wba @ temono . com
+= = = Pressekontakt = = =
+Herr Marketwire Client Services
+Marketwire 100 N . Sepulveda Boulevard , Suite 325 90245 El Segundo Vereinigte Staaten von Amerika
+EMail : intldesk @ marketwire . com Website : http : / / www . marketwire . com
+At Marketwire , we know communication .
+For nearly three decades , we ' ve played a pivotal role in connecting news makers and news consumers , and sharing information with audiences worldwide .
+The media landscape continues to shift at a frenetic pace . Messages , conversations and digital content travel the globe at breakneck speed , and today ' s real - time communications , enabled by social and mobile networks , require us to participate and respond with greater speed and agility than ever before . In an ever - changing world , Marketwires role remains as it has always been : To empower and advance communication .
+As technology advances and society adapts , Marketwire evolves in tandem , and even sets the pace for better , more innovative communications . We continuously ask ourselves what is possible , and strive to provide smart solutions that help our clients improve their communication efforts and realize the best possible return on investment .
+When it comes to communication , there is no one size fits all . But what is common to professionals across almost any discipline marketing , public relations , public affairs , advertising , investor relations , etc . is the need to engage and persuade audiences and measure success . Our expertise and insight help determine the best solution for our clients , and we take a customized approach to helping our clients surpass their goals . From Facebook to Factiva , and trade journals to Twitter , well connect you to the audiences and influencers that matter most . No matter where they are .
+Today , its the conversation that matters ; you need to reach the right audiences and create meaningful relationships that better your business and your brand .
+( Dies ist eine über ddp direct verbreitete Pressemitteilung . Für den Inhalt ist ausschließlich das herausgebende Unternehmen verantwortlich . )
+( END ) Dow Jones Newswires
+November 10 , 2011 02 : 40 ET ( 07 : 40 GMT )
+
+© 2011 Dow Jones News
+
+
+Sie erhalten auf FinanzNachrichten . de kostenlose Realtime - Aktienkurse von mit der Push - Technologie von
+Wie bewerten Sie die aktuell angezeigte Seite ? sehr gut 1 2 3 4 5 6 schlecht Problem melden
+Startseite • Nachrichten • Aktienkurse • Xetra - Orderbuch • Watchlist
+
+Ad hoc - Mitteilungen • Chartanalysen • Nachrichten Börsen • Aktien - Empfehlungen
+
+Branchen • Medien • Nachrichten - Archiv
+
+Impressum | AGB | Disclaimer • Presse •

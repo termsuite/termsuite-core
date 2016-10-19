@@ -1,0 +1,252 @@
+Microsoft Word - Mobile PC Controlling Turkish.doc Using SMS in Mobile Phone for Home Appliances Controlling  
+Through PC Parallel Port Interfacing 
+Fadhil T. Aula 
+e-mail: ftaula@engineer.com 
+University of Salahaddin, College of Engineering, Electrical Engineering Department  
+Erbil, Iraq 
+ 
+Keywords: Mobile phone, PC ports, Interfacing, Visual C++. 
+ 
+ABSTRACT homes of the nearest future will have ubiquitous  
+embedded computation [2]. 
+ This paper presents a system of the PC remote 
+Controlling   with the Mobile Telephone through 
+accessing PC remote control with small mobile device is a  the main PC ports; serial and parallel. Serial 
+port challenging topic of mobile/ubiquitous computing.  for transferring data from Mobile phone to PC 
+and Enabling users to use data and functions stored in/served  parallel port for interfacing PC with real time 
+controlling by their home/office PCs from anywhere with small  hardware. The system is implemented by 
+using mobile devices is beneficial because users can access the  the SMS (Short Message Service) as associated 
+with data/functions at any time they want without carrying  all modern mobile phone devices and mobile 
+telecommunication heavy notebook PCs. Further more, users cab control  networks. The software for whole 
+system applications they want to keep running even while they  is designed and implemented with KORAK 
+Telecom are out. Several systems and methods have been proposed  Network in Erbil City, Nokia mobile phone 
+device and developed for controlling remote PCs with mobile  and with ordinary type of PC that running 
+under phone;   Windows XP or compatible. The software for  
+system The system that employing for translating PC GUIs into  is divided into two parts; Mobile to PC through 
+serial mobile device UIs (screen sizes, input device, etc.)[3],  port is a general commercial program that 
+associated such system requires converting image data to text data  with the Nokia mobile devices, and second 
+which will be very expensive. The evaluation of the cell phone  access SMS file and control all parts of system is 
+designed from analog handset passing by PCs and WAP (Web -  by using Microsoft Visual C++ Ver. 6 . Such 
+idea enabled Phones)[4], which need continuously working  is quiet new and represents the ability of anyone 
+who and connecting with the internet networks. The system  has Mobile and PC to control remotely major 
+devices that uses the email enabled mobile devices [5]; require  in his/her home, office and etc.  
+Java enabled devices, because the systems use client Java 
+ 
+1 applets. Consequently, older model mobile devices that . INTRODUCTION 
+are email enabled but not Java enabled, cannot be used for 
+ 
+Nowadays this system.   , the communications becomes very simple, 
+fast    , interactive and more compact, that makes the global 
+as This paper represents a simple, practical and very low cast  a small village. So it is very easy of anyone to 
+s method which applies the SMS technique that already ubscribe in the local or global telecommunication 
+available in all types of mobile phone devices and 
+networks with individual mobile phone device. 
+provided with all modern mobile telecommunication 
+ 
+Mobile networks.  devices, such as mobile phones, are becoming 
+ 
+multipurpose devices. These devices are capable of 
+storing II. PC Interfacing System  data as well as running custom application. As 
+ 
+more people adopt these devices and begin to use them 
+f To make an ordinary home as a future and a smart home, or personal or business tasks, the need for controlling 
+access all appliances must be computerized controllable. To do  to the data stored within the devices will become 
+vital that, it's very preferable that using PC.  [1]. 
+ 
+ 
+With As the PCs are provided with input/ output ports, which  today's and tomorrow's wireless technologies, such 
+makes easily to interface PC with the real world control 
+as IEEE 802.11, Blue tooth and G3, mobile devices will 
+f applications. The interface is the combination of hardware requently be in close and interactive communication. 
+Ma and software embodies [6], the hardware is an electronic ny environments including offices, meeting rooms, 
+a circuit that matches with the PC's port protocol signal, utomobiles and class rooms already contains many 
+co and the software is the programming of the PC to manage mputers and computerized applications, and the smart all input/output signals from its ports, hence, the interface can be done by using two mobile phones, there is no so 
+hardware circuits.  conditions that both mobile phones must be the same 
+  types or versions. The only condition is, they must 
+In this paper, for the purpose of interfacing with the real support SMS inside the devices and can work with the 
+time control applications, the PC parallel port is used. network that provide the services of SMS. 
+Since the parallel port works well as hardware interfacing  
+[7]. The following figure depicts the proposed system that 
+  controlled remote PC.  
+The parallel port pins are TTL levels output (originally 
+derived by a 74LS374 octal latch). This means that they 
+put output 0 to 0.8 dc volt logically 0, and 2.4 to 5 dc volt 
+logically 1. According to the parallel port behaviors, there 
+are 8 bits for data input/output, which can produce 256 
+different control signal statuses [8].  
+ 
+The data bit signals can be managed by software that 
+applied for this purpose, the powerful software language 
+is C++ which can access the ports more efficiently than 
+other available computer program languages. As the Figure1. PC remote control system 
+whole project software here is written and implemented  
+through the use of Microsoft Visual C++ ver. 6. Inside the The block diagram of the system is shown in Fig. 2, 
+program by using the command _outp( ) which is a where the PC is read and receives the SMS from the 
+member in "conio.h" header file could be used to directly mobile phone that connected to it through serial port. 
+access all data port signals , for example the following Hence, according to the type of mobile phone that in use, 
+code;  the available software which comes with the type of 
+_outp ( 0x378, 0); mobile phones manufactures, which includes the 
+makes all data pins of parallel port to low logic (zero recognizable device software, reading, saving, and 
+output signal), and the following; managing the data of the mobile phone device inside the 
+_outp( 0x378 , 1); PC. Here, as the type of the mobile phone is Nokia, the 
+means to make the first bit high and low for the rest of general Nokia mobile phone which is the Oxygen product 
+bits.   software is used [11].    
+ 
+There are many ways could be used to control all home's 
+appliances by sending appropriate signals to the PC's 
+ports, parallel or serial. Then these signals inserted to the 
+interface hardware system that prepared, designed and 
+matches with the output signals, then depend on the 
+signal, the interface hardware control or manage one or 
+more of the home appliances. 
+ 
+The designed program will make the PC parallel port to 
+send signals which appear as approximately 5 volts at one 
+or more bits of eight data bits on the parallel port. These 
+volts will change the status of the interface hardware [9]. 
+In order to do that, there are many electronic circuits 
+which can be useful for this purpose, or one could build 
+its own electronic circuits. In most cases the general 
+Transistor is used as a switch mode operation and the Figure 2. The Block diagram of the remote PC control 
+mini contactors. As the interface system is directly system. 
+connected to the PC parallel port, it's at high degree  
+recommended to protect the PC and its ports from any As the mobile phone is recognized by the PC and it's 
+back feed misused, thus achieved by using any available received the SMS message from any other mobile phone, 
+type of buffering [10].    then its send the message to the PC. The PC read the 
+ message and put it in a temporary file.  
+III.   Remotely PC controlling System 
+ Searching inside the received SMS message for any 
+The goal is to control remote PC with a mobile phone available control words this is done by using the 
+device through using the SMS message services. Which appropriate program as prepared in this paper. Thus, the program is managing the SMS data and compares with (v) If the program found the acceptable codes, then 
+any available control words that the whole project is carry the words between these codes to compare 
+designed for.  them with a list of control words that the system is 
+ designed for controlling the corresponding home 
+The program in this project will continuously search appliances. 
+inside the receiving SMS for any probability of containing (vi)  The program through the parallel port send a 
+the control words, so if the control words are not found in suitable signal to there bit so as can be carry out by 
+the received message, the program will delete the entire the interface hardware that connected to the 
+message file, so as to prepare this file to receive a new parallel port and the home appliances.  
+SMS message that may send by the remote mobile phone (vii) After achieving the step (vi), the program again 
+at any time. reset the content of "Inbox.dat" file, and make it to 
+The comparison with available control words will be ready to receive a new message at any time. 
+achieved after the program has found the control words Hence, the program is return to first step to repeat 
+inside the message. Then, the program will prepare and the above procedure continually.   
+initialize the parallel port to send the proportional signal  
+to the interface hardware that designed in this project; this The flowchart for the program is shown in the following 
+signal will be proportional with the control appliance in figure. 
+the house with the SMS message that delivered by the PC  
+from the remote mobile phone.       
+ START
+  
+IV.   System algorithm and program Parallel Port 
+ Initializing
+  
+The system in this project is design to receive the SMS  
+from any mobile device to the mobile phone that directly  
+connected to the PC. This can be achieved by knowing  Receiving and 
+the Reading SMS  dial number of the phone that connected to the PC,  
+here  messages this phone may be any ordinary mobile phone that  
+has SMS capability. In order to prevent any occurrence of  
+SMS likelihood control words, the sending SMS that  
+contain  Not Available  control words should come between the specified  
+codes Control  that protocol between user of far mobile phone and  
+ Words?
+the mobile phone that connected to the PC.   
+  
+Aft  Available er the mobile phone which connected to the PC  
+receives the sent message, it sends this message to the PC.  Compare with available 
+Thus, the mobile phone program save this message to a  
+ control words
+file, this file works as temporary file and may known as   
+"Inbox.dat" which is a text file that any windows  
+operating system support this Convert the control word to  type of file.  
+suitable data output signal to 
+  
+Th  control appropriate devicese graphical user interface program is designed in this  
+project by using the Microsoft Visual Studio C++. This  
+program is responsible for manage the whole system as  Send the signal to interface 
+the following;  
+ circuits
+  
+(i) The program is using the internal system timer for  
+ No 
+continuously observing the received message from  
+ Quit ?
+mobile phone.  
+( Yes  ii) After the PC received the new message, the program  
+is read the entire file " Inbox.dat" .  
+ End
+(iii) Searching the entire message for acceptable codes   
+that matches between the two mobile phones and                      Figure 3. System flowchart  
+the user.  
+(iv) If there are no such codes, the program will delete 
+ 
+the content of the "Inbox.dat" file and prepared it 
+ 
+to receive a new message that may send at any 
+ 
+moment. V. (ii) The parallel port data rate is at high degree when  System testing 
+The proposed system that designed in this paper is tested compared with other ports. 
+in the Computer Laboratory in Electrical Engineering (iii) Making all home appliances controllable is very 
+Department/College of Engineering/ University of attractive by many house owners, office and so on. 
+Salahaddin.  (iv)   The system cost is in acceptable cost range, as 
+Where the PC under the test has the following properties; nowadays many houses have a PC, and anyone can 
+P1V, 2.8 GHz, 256 MB of RAM and operated under get a skill working with the PC.  
+windows XP. The type of the mobile phone that  
+connected with the PC is NOKIA ver 3220 that used There are many works have lefts for the future. That 
+serial data transfer. The remote mobile phone device may includes, using other methods that can be connected to 
+be any mobile phone devices. Where both mobile phones the PC as using normal telephone device, other features 
+are communicated in the KORAK telecommunication that came with modern mobile phones like G3 mobile 
+network.  communications which include image rather text 
+The common controlled appliances are ; PC Shutdown, based.  
+TV on/off, Light on/off . 
+ 
+     
+The V11. References  test is applied by sending the following SMS 
+message 1. S. Perelson and R. A. Botha " An Investigation Into  ; "pcshutdown", "lighton" and "tvoff". These 
+Control for Mobile Devices", ISSA 2004, 30 June - 
+words which are control words found to be as the 
+f 2 July 2004, Gallagher Estate, Johannesburg South ollowing shape in Inbox.dat," Oxygen Software SMS. 
+v3 Africa. . +9647504521507& & pcshutdown & & 
++964750001140 2. Brad A. Myers "Mobile Devices for Control ", the "," Oxygen Software SMS. v3. 
++9647504521507& Fourth Symposium on Human-Computer Interaction  & lighton & & +96475000114"and for Mobile Devices, Mobile HCT02, Pisa, Italy, Sept 
+"Oxygen Software SMS. v3. +9647504521507& & tvoff 
+& 18 - 20, 2002a, PP 1 -8.              & +96475000114" respectively. Where the Oxygen is 
+the 3. M. Ritala, T. Tieranta and J. Vanhala "Context  software that comes commercially with the NOKIA 
+Aware User Interface System for Smart Home 
+mobile phone device and the number (+9647504521507) 
+is Control", Tampere University of Technology, HOIT  the dial number of the phone that directly connected to 
+the Conference, Irvine, California, 2003.  PC. The control words are found between the codes 
+where 4. W. Mann and A. Helal "Smart Phones for the Elders:  here are the two double (&) characters.    For all 
+cases Boosting the Intelligence of Smart Homes", The  the system successfully do the processes without 
+any AAAAI workshop on Automation as Caregiver: The  notice or errors, only the simple problem that may 
+came Role of Intelligent Technology in Elder Care,  with mobile phone where in some cases the network 
+may Edmonton, Canada, July 2002.  be in busy status, otherwise there is no difficulty 
+noted 5. H. Okada and T. Asahi "User Interface . 
+Transformation Method for PC Remote Control with 
+ 
+Figure Small Mobile Devices", Human Computer  4. Depicts the graphical user interface program 
+where Interaction - INTERCAT03, M. Routerberg et  running and continuously observe the system.   
+al.(Eds), Published by IOS Press, © IFIP, 2003, pp. 
+ 
+V1 256-263.  . Conclusion and future works 
+6. P. An " PC Interfacing using Centronic, RS232 and 
+ 
+In Game Ports ", Newnes, Great Brittan, 1998.  this paper the SMS message between two mobile 
+phones 7. F. T. Aula and Dr. I. I. Hamarash " Interface  is presented that used to control remote PC.  
+Implementation of Parallel Port of PC for Testing 
+ 
+The Overcurrent Relays", Zanco Journal , University of  C++ language is successfully used to build the 
+software Salahaddin, Vol. (14), No. (2), pp. 5-14, 2002.  that manage the received data and controlled the 
+output of the PC. 8. M. M. Ali "The 80x86 IBM PC and Compatible 
+Since the software is worked on system operated under Computer", Second Edition, Prentice-Hall Inc., 
+Windows XP, this type of operating system lock the USA, 1998. 
+parallel port for any program that designed to using it. 9. B. A. Chubb," Build Your Own Universal Computer 
+This problem is solved by first making the port ready by Interface", Second Edition, McGraw-Hill Inc., USA, 
+using a proper DLL file that come with the initializing of 1997 
+the PC parallel port.  10. F. T. Aula "Implementation of PC Parallel Port in 
+The conclusion can be summarized in the following Overcurrent Relays Testing", Thesis in M.Sc in 
+points; Electrical Engineering, University of Salahaddin, 
+(i) Using the SMS message in mobile phone, which is 2002. 
+very famous by the mobile user, this make this 11. Oxygen Phone Manager Software for Nokia phones, 
+system be very effective and attractive method. Copyright © 2005 Oxygen Software. Figure 4.  Typical graphical user interface program of the SMS PC control system.

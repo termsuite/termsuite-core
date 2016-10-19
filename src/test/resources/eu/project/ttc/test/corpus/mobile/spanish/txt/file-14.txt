@@ -1,0 +1,2828 @@
+Microsoft Word - fr.doc INTERCONEXIÓN DE REDES TELEFÓNICAS EN MÉXICO: 
+SOLUCIÓN DE DISPUTAS Y BÚSQUEDA DE CONSENSOS 
+ 
+ 
+ 
+ISBN: 84-689-3023-7 
+Nº Registro: 05/50208 
+ 
+FERNANDO RAMÍREZ HERNÁNDEZ 
+fernando.ramirez@cide.edu 
+ 
+Para citar este libro puede utilizar el siguiente formato: 
+Ramírez Hernandez, F. (2005) Interconexión de redes telefónicas en méxico: solución de disputas 
+y búsqueda de consensos. Edición digital a texto completo accesible en 
+www.eumed.net/libros/2005/fr/ Agradecimientos 
+ 
+ 
+ 
+ En principio quiero agradecer al Centro de Investigación y Docencia Económicas A. 
+C. (CIDE), el privilegio de ser parte de su comunidad y de todo lo que ello implica: 
+aprendizaje, disciplina, esfuerzo y también amistad y diversión. 
+ 
+ Agradezco a todos los profesores de la institución que verdaderamente están 
+comprometidos con el proceso de enseñanza. En el caso de la tesina quiero reconocer y 
+agradecer los conocimientos, el tiempo, la paciencia y el apoyo de mi tutor Dr. Eugenio 
+Rivera, cuyos comentarios y enseñanzas son parte muy valiosa de este trabajo. De la misma 
+forma agradezco las enseñanzas y valiosos comentarios de la Dra. Judith Mariscal, 
+encargada de la revisión de la tesina, cuya contribución a la mejora de este trabajo fue muy 
+significativa. 
+ 
+ A las siguientes personas les agradezco el haber compartido conmigo sus 
+enseñanzas y su tiempo, tanto para sugerir y ampliar el contenido de la tesina como para 
+mejorarlo: Dr. Fernando Butler; Dr. Ernesto Piedras; Mtro. Francisco Javier Nuñez; Mtro. 
+Wilson Rojas; Lic. Adriana Herrera y Lic. Leticia Tarango; finalmente, a la oficina de 
+Relaciones Institucionales de Avantel, al personal de Alestra y al personal de Radio Móvil 
+Dipsa. Índice 
+  
+Introducción 
+i 
+  
+Agradecimientos vi 
+  
+  
+1. Aspectos teóricos de la interconexión 1 
+  
+¿Qué es la interconexión? 1 
+El interés por la interconexión 1 
+La importancia de regular la interconexión 2 
+Marco legal de la interconexión 4 
+Regulación del operador dominante 5 
+Negociaciones entre concesionarios 7 
+7 
+Enfoque de negociación comercial 
+Tarifas basadas en costos  9 
+9 
+Enfoque del modelo de costos 
+Mejores prácticas 15
+16
+Desagregación 
+Debate sobre las ventajas y desventajas de la desagregación 17
+20
+Resumen 
+  
+  
+2. Experiencia internacional en materia de interconexión 23
+  
+Marco legal internacional de la interconexión 23
+Regulación del operador dominante 27
+Negociaciones entre concesionarios 28
+Tarifas basadas en costos  30
+34
+Desagregación 
+35
+Resumen 
+  
+  
+3. Interconexión de redes telefónicas en México: resolución de disputas y 38
+búsqueda de consensos Geografía, demografía y desarrollo humano 38
+Desarrollo económico en los últimos 20 años 38
+Desarrollo del sector telecomunicaciones en los últimos 20 años 39
+Introducción de la competencia 41
+Larga distancia (LD) 41
+Telefonía local 44
+Telefonía móvil 47
+49
+Normatividad de la interconexión 
+La interconexión en la telefonía de fija local 51
+La interconexión en la telefonía de fija LD 52
+La interconexión en la telefonía móvil 64
+Temas relacionados con la interconexión en México 67
+Determinación de tarifas de interconexión 67
+Reglamento o Plan de Interconexión 70
+Regulación del operador dominante 71
+Negociaciones entre concesionarios 71
+Desagregación 72
+Opiniones sobre la relación entre la interconexión y la competencia en México 77
+  
+  
+Conclusiones generales  79
+  
+  
+Anexos  
+ 
+ 
+85
+Anexo 1. Resumen de los principales acuerdos de interconexión 
+Anexo 2 Línea del tiempo de la interconexión 86
+  
+  
+87
+Bibliografía 
+  
+  
+Cuadros  
+  
+Cuadro 1.1 Ventajas y desventajas de los diferentes métodos para fijar 13
+las tasas de interconexión 
+Cuadro 2. 1 Instituciones y procesos decisorios sobre la interconexión: la 26
+experiencia internacional 
+Cuadro 2.2 Métodos alternativos para establecer las tasas de  32 38
+Cuadro 3.1. Indicadores sociales de México 
+49
+Cuadro 3.2 Concesiones otorgadas 
+Cuadro 3.3 Red e inversión de las empresas telefónicas en México 76
+  
+  
+Gráficas  
+  
+Gráfica 3.1 Comparativo internacional de telefonía fija 40
+Gráfica 3.2 Comprativo internacional de telefonía móvil 41
+Gráfico 3.3 Participación de las nuevas empresas: LD nacional 43
+Gráfico 3.4 Participación de las nuevas empresas: LD internacional 44
+Gráfica 3.5 Tarifas de larga distancia en México 43
+Grafico 3.6 Participación de nuevos entrantes: líneas de acceso 46
+Gráfico 3.7 Tarifas de servicio local en México 46
+Gráfico 3.8 Tarifas de telefonía móvil en México 48
+Gráfico 3.9 Tarifas de interconexión en México y Estados Unidos 63
+Grafico 3.10 Tarifa de interconexión internacional (2000) 64
+Gráfico 3.11 Cargos por interconexión móvil en América Latina (Sistema El 65
+que Llama Paga) 
+Gráfico 3.12 Tarifas de interconexión móvil en México 67
+76
+Gráfico 3.13 Crecimiento de la red de fibra óptica en México 
+Gráfico 3.14 Comparación del porcentaje de digitalización de la planta 77
+telefónica Introducción 
+ 
+En los últimos veinte años el sector de las telecomunicaciones ha sufrido 
+importantes cambios, toda vez que a los avances tecnológicos han abierto la posibilidad a la 
+competencia en áreas como la telefonía, considerada tradicionalmente como un monopolio 
+natural y con características de red. 
+ 
+Para lograr la competencia y los beneficios que de ella emanan, en la industria de 
+las telecomunicaciones, es necesario facilitar la interconexión de  nuevas empresas a la red 
+de las empresas establecidas a fin de que puedan ofrecer sus servicios. Sin embargo, las 
+empresas establecidas no muestran ningún interés en proporcionar acceso libre a sus 
+competidores y utilizan su poder de mercado (sobre la red) para impedir, o al menos, 
+retrasar la entrada de nuevos agentes al mercado. El desequilibrio entre el operador 
+establecido y el nuevo operador implica que muchas de las cuestiones de la interconexión 
+no pueden dejarse por completo a la libre negociación entre estos. 
+ 
+Alrededor del mundo, en países desarrollados y en desarrollo, el tema de la 
+interconexión ha generado discusiones teóricas y prácticas. El tema es considerado 
+complejo y problemático, pues no sólo es necesario encontrar la solución al reto que 
+implica la convivencia de segmentos de mercado competitivos y monopólicos, sino, 
+además, tratar de conciliar intereses en conflicto. 
+ 
+Las posibles soluciones y respuestas generadas en las discusiones sobre el tema, si 
+bien han ayudado de forma notable a disminuir los conflictos presentes en las negociaciones de los acuerdos de interconexión, todavía están lejos de ser consideradas 
+como definitivas y mucho menos inobjetables. 
+ 
+En México, el asunto de la interconexión ha causado importantes problemas legales 
+entre las empresas y entre éstas y el regulador. El artículo 42 de la Ley Federal de 
+Telecomunicaciones señala que: 
+ 
+"(...) los concesionarios de redes públicas de telecomunicaciones deberán 
+interconectar sus redes, y a tal efecto suscribirán un convenio en un plazo no mayor de 60 
+días naturales contados a partir de que algunos de ellos lo solicite. Transcurrido dicho plazo 
+sin que las partes hayan celebrado el convenio, o antes si así lo solicitan ambas partes, la 
+Secretaría, dentro de los 60 días naturales siguientes, resolverá sobre las condiciones que no 
+haya podido convenirse." 
+ 
+Bajo este marco legal, hasta 2003 se habían celebrado cinco acuerdos de 
+interconexión entre empresas de larga distancia. Los tres primeros fueron bianuales y 
+derivados de una resolución de la Comisión Federal de Telecomunicaciones (Cofetel), 
+mientras que los dos últimos acuerdos fueron anuales y acordados por las propias empresas. 
+ 
+En las tres primeras negociaciones las empresas no alcanzaron ningún acuerdo y la 
+Cofetel estableció las condiciones de los contratos y los cargos de interconexión. Las 
+empresas se mostraron inconformes con tales resoluciones y en la mayoría de los casos se 
+ampararon para no cumplirlas, su principal argumento fueron que las decisiones del 
+regulador no eran del todo transparentes. En las dos negociaciones restantes, se lograron los acuerdos, pero según algunas 
+declaraciones de funcionarios gubernamentales y privados (involucrados), las empresas no 
+tuvieron otra opción que llegar a un acuerdo, ante la indiferencia que la Cofetel mostró sus 
+peticiones de intervenir y dar una solución a las controversias existentes. 
+ 
+Los resultados más visibles de ambas situaciones han sido la creciente desconfianza 
+hacia la capacidad del regulador y la duda persistente sobre la pertinencia del esquema legal 
+para encontrar soluciones adecuadas a los problemas generados por este asunto. 
+ 
+No todo ha sido negativo, a raíz de la privatización de Telmex y la entrada de 
+nuevas empresas al mercado de telefonía, se han tenido avances sustanciales, por ejemplo, 
+los cargos a los consumidores finales han disminuido, lo mismo que las tarifas de 
+interconexión, mientras que la red de óptica se ha incrementado. A pesar de ello, es posible 
+aseverar que el mercado mexicano de la telefonía todavía no está lo suficientemente 
+maduro como para asegurar que las fuerzas del mercado serán capaces por sí mismas de 
+generar mayor competencia. 
+ 
+El logro de una competencia efectiva en este mercado, requiere de manera 
+inmediata mejorar los mecanismos de intervención pública existentes, para lograr acuerdos 
+de interconexión que al mismo tiempo que faciliten la entrada de nuevas empresas al 
+mercado no atenten contra los derechos de Telmex. El interés por el estudio de los acuerdos de interconexión telefónica en México es 
+justificado por dos razones: la primera, la innegable importancia que ha adquirido el sector 
+de las telecomunicaciones para el crecimiento y desarrollo de cualquier país, y segundo, la 
+intervención e injerencia de un organismo público en este asunto. 
+ 
+Los objetivos del documento son el conocer sí el esquema legal vigente en México, 
+para lograr acuerdos de interconexión entre empresas, ha tenido un impacto significativo en 
+el desarrollo de la competencia en el mercado telefónico, e identificar cuál(es)  ha(n) sido 
+los principales factores que han obstaculizado tales acuerdos. 
+ 
+Para lograr estos objetivos, se investigaron las principales diferencias entre las 
+empresas para alcanzar acuerdos sin la intervención del regulador y la posibilidad de que 
+los arreglos alcanzados sin intervención del regulador puedan mantenerse en el largo plazo. 
+Con la finalidad de  comentar la pertinencia y posibilidades de crear un nuevo esquema de 
+acuerdos para la interconexión, a la luz de la revisión de las opiniones de las empresas y  
+autoridades involucradas. 
+ 
+El trabajo está dividido en cuatro partes. El primer capítulo incluye la 
+conceptualización de la interconexión y la problemática que da origen a la preocupación 
+por este tema. El capítulo contiene la discusión sobre temas como el marco legal, la 
+regulación del operador dominante, la fijación de las tarifas y la desagregación de redes. 
+ 
+En el segundo capítulo se exponen las experiencias de distintos países que han 
+encontrado respuestas relativamente exitosas a los problemas provocados por las negociaciones entre las nuevas empresas y el operador establecido, así como con la 
+intervención del regulador. 
+ 
+El capítulo tercero presenta la historia de los procesos de negociación de contratos 
+de interconexión entre las empresas mexicanas y los procesos legales que se han suscitado 
+al respecto. Así como las soluciones que se han dado y las opiniones de los distintos 
+agentes involucrados. 
+ 
+Finalmente, entre las principales conclusiones se tiene: i) que no hay una 
+herramienta única para solucionar los problemas generados por la interconexión de redes 
+telefónicas; ii) que considerar las experiencias de otros países podría ser de gran utilidad, 
+dado el éxito que muchos de ellos han alcanzado en los distintos temas que se relacionan 
+con la interconexión; iii) que en México la situación no dista considerablemente de lo que 
+ocurre en otras partes del mundo, pero que a diferencia de otros países, el regulador no ha 
+sido capaz de cumplir con las funciones que la LFT le confiere  con relación a este asunto. 1. Aspectos teóricos de la interconexión 
+ 
+¿Qué es la interconexión? 
+ 
+La interconexión es definida por la Unión Internacional de Telecomunicaciones 
+(ITU por sus siglas en inglés) como: "los arreglos técnicos y comerciales bajo los cuales los 
+proveedores conectan su equipo, redes y les dan a su clientes la posibilidad de tener acceso 
+a los clientes, los servicios y las redes de otros proveedores de servicios" (ITU, 1995: 15). 
+ 
+El interés por la interconexión 
+ 
+La interconexión es un factor central para determinar la estructura de mercado, la 
+viabilidad de los competidores y el éxito de los programas de desregulación. Desde el inicio 
+de la industria de las telecomunicaciones, la interconexión ha sido vital para asegurar la 
+conectividad de las redes, pero en los últimos años este factor se ha vuelto crítico debido al 
+desarrollo de múltiples tecnologías de comunicación -como la Internet, la telefonía móvil, 
+las redes inalámbricas, los sistemas satélitales- capaces de interactuar o converger unas con 
+otras y que al mismo tiempo han permitido la coexistencia de distintas empresas que 
+compiten por el mismo mercado (Noam, 2001). 
+ 
+Para J. Laffont y J. Tirole (2000: 98) "una política de interconexión inteligente es la 
+clave para el desarrollo de la competencia en la industria de las telecomunicaciones." La 
+estructura y nivel de interconexión tiene importantes implicaciones sobre las decisiones de inversión de los operadores, sobre los precios y el valor agregado de los servicios que 
+reciben los consumidores. En consecuencia, la agenda regulatoria ha pasado de preocuparse 
+únicamente por minimizar precios y vigilar los subsidios, a gestionar diversos asuntos 
+relacionados a la competencia y la entrada de nuevas empresas (Agrawal y Jasuja, 2003). 
+ 
+La importancia de regular la interconexión 
+ 
+La industria de las telecomunicaciones ha sufrido importantes cambios en las 
+últimas dos décadas. Dos de las fuerzas más significativas que dirigen estos cambios han 
+sido los esfuerzos para promover una competencia efectiva y la expansión global de los 
+servicios de telecomunicaciones por medio de la amplia difusión de la tecnología. Los 
+cambios han transformado la estructura de la propiedad, de la industria y de los mercados 
+en este sector; se ha pasado de la propiedad estatal a la privada y de una situación 
+monopolio natural a una de competencia. 
+ 
+Desafortunadamente, la aparición de la competencia en los mercados de las 
+telecomunicaciones no ha sido total, pues la tecnología no ha avanzado lo suficiente para 
+lograr un mercado completamente competitivo (Noam, 2001). En muchos casos, la 
+competencia depende de la posibilidad de acceder a insumos con características de 
+monopolio natural, por ejemplo, el acceso a la redes y la posibilidad de interconectarse a 
+estás (Economiades, 2003). E. Noam (2001: 15) señala que "el control de la interconexión 
+por cualquier organismo, ya sea gubernamental o privado, se ha convertido en la clave para el control del sistema las telecomunicaciones y su estructura de mercado." Así, el principal 
+argumento para regular el acceso a la interconexión es el poder de mercado y sus posibles 
+consecuencias sobre la estructura de mercado y los consumidores.1 
+ 
+Si las empresas dominantes, con mayor cantidad de clientes, no se interconectan con 
+los entrantes, estos no tendrán mucha oportunidad de atraer clientes porque no podrán 
+ponerlos en contacto con los del operador dominante. La experiencia ha mostrado que las 
+empresas dominantes no proveen el acceso a sus redes de manera voluntaria a sus 
+competidores y aunque lo hicieran, una regulación cuidadosa de la política de 
+interconexión, incluyendo los aspectos técnicos y de costos, puede ser necesaria para evitar 
+que los dominantes hagan uso su poder de mercado.2 
+ 
+El regulador tratará entre otras cosas de facilitar la interconexión entre el operador 
+dominante y el entrante; lograr los acuerdos no discriminatorios; fomentar tarifas basadas 
+en costos; establecer los términos y condiciones técnicas y comerciales de los acuerdos; 
+limitar el periodo de negociación; definir estándares de calidad e incluir las sanciones 
+correspondientes en caso de fallas y, establecer los mecanismos de solución de disputas 
+entre los operadores (Zouakia, 2000). 
+ 
+                                                          
+1 Esto bajo dos supuestos clave: 1) las telecomunicaciones son un servicio esencial para la sociedad y la 
+economía, y 2) la provisión monopólica de estos servicios es indeseable (Noam, 2001). 
+2 En un interesante y muy completo artículo C. Mattos (2003) se pregunta: ¿si siempre se requiere de una 
+política de interconexión activa? Señala que existe una importante discusión al respecto. Para algunos autores 
+como Noll y Owen (1995) la interconexión es un elemento clave para una política de telecomunicaciones pro 
+- competitiva, mientras que Mueller (1997) llama la atención sobre el riesgo de una política de interconexión 
+indiscriminada que puede resultar en ineficiencia. C. Mattos, "Interconnection Policy", en Nova Economía 
+Belo Horizonte, enero - junio de 2003. En resumen, para que la competencia sea exitosa los operadores deben tener la 
+oportunidad de acceder a todos los clientes, aún aquellos conectados a las redes de sus 
+competidores. 
+ 
+Marco legal de la interconexión 
+ 
+Para facilitar las negociaciones y el logro de acuerdos entre las empresas se ha 
+propuesto la creación de ciertos criterios generales que deben regir la interconexión. Los 
+procedimientos más utilizados son la creación de lineamientos generales y la publicación de 
+Reglas de Referencia de Interconexión (RIO por sus siglas en inglés). En el primer caso, los 
+reguladores establecen lineamientos generales que deben ser considerados como 
+requerimientos mínimos para lograr acuerdos de interconexión. Los lineamientos no son, en 
+la mayoría de los casos, detallados y dan a los operadores cierta flexibilidad para llevar a 
+cabo las negociaciones y dar forma al acuerdo que mejor les convenga (BDT/ Regulatory 
+Reform Unit- ITU, 2004). 
+ 
+Por su parte, las RIO contienen la información importante sobre cómo se proveerá 
+la interconexión y el esquema bajo el cual se llevarán a cabo las negociaciones, 
+especialmente si hay un operador dominante. En la mayoría de los casos, los acuerdos 
+logrados bajo las RIO son enviadas al regulador para su aprobación, en caso de que no las 
+apruebe, las reenviará a los operadores para que las modifiquen o hará las correcciones que 
+considere pertinentes. Las RIO ofrecen grandes ventajas a los nuevos operadores porque 
+llegan a las negociaciones con mayor información sobre los términos y condiciones de las 
+propuestas del operador dominante. Sin embargo, no debe perderse de vista que hay situaciones que no pueden ser 
+consideradas en los contratos por más completos que estos sean. Los acuerdos de 
+interconexión tienen diversas fuentes de costos de transacción, incluyendo aquellos 
+derivados a contratos incompletos, que son utilizados por el dominante para retrasar la 
+entrada de competidores, por ejemplo, existen un sinnúmero de contingencias no previstas 
+en el primer acuerdo entre los operadores y continuamente surgen nuevos problemas en las 
+negociaciones. En ambos casos, la introducción de nuevas tecnologías se mantiene como la 
+fuente más importante de contingencias (Mattos, 2003: 54 - 55). 
+ 
+Regulación del operador dominante 
+ 
+La inevitable interdependencia de los componentes de la red y el considerable poder 
+monopólico de los operadores establecidos hacen de las condiciones de mercado un 
+elemento fundamental en las negociaciones para lograr acuerdos de interconexión. 
+Generalmente, los operadores establecidos poseen la única red que da servicio a la totalidad 
+del mercado y proveen conexión directa a todos los clientes. Estos operadores no tienen 
+incentivos para facilitar la interconexión a los nuevos operadores, que a su vez no tienen 
+poder de mercado y prácticamente no pueden ofrecer nada al nuevo operador a la hora de 
+negociar (Melody, 1995). 
+ 
+El Banco Mundial (2001: III - 7) señala que "en principio, sólo las empresas con 
+posición dominante en el mercado son capaces de imponer condiciones de interconexión, 
+sin verse obstaculizadas por su competidores." Por lo cual, la entrada de un nuevo actor requiere, entre otras cosas, de "mecanismos que obliguen al operador establecido a negociar 
+y hacer una oferta al nuevo actor dentro de un plazo razonable. El operador establecido 
+puede estar muy interesado en utilizar tácticas dilatorias cuando negocia un acuerdo de 
+interconexión" (ITU, 1995: 27). 
+ 
+Autores como Noam (2001) y Gasmi (2002) han reconocido que con el paso del 
+tiempo y a medida que los mercados sean cada vez más abiertos, será posible 
+desreglamentar más acuerdos de interconexión, incluyendo los concertados con operadores 
+dominantes. No obstante, en el periodo de transición hacia la plena competencia habrá que 
+aplicar cierta dosis de reglamentación asimétrica para "equilibrar el juego" que por el 
+momento favorece a los operadores establecidos (Intven et al., 2001).  
+ 
+La ITU señala que "en las primeras etapas de competencia de servicios de red en 
+cualquier ciudad, el papel del regulador en los acuerdos de interconexión es crucial para 
+pasar exitosamente de un mercado monopólico a uno de competencia. La regulación pro - 
+activa en la interconexión es necesaria para que los mercados competitivos se establezcan y 
+continúen funcionando efectivamente" (BDT/Regulatory Reform Unit, 2003). De no ser 
+así, los arreglos de interconexión reflejarán el respectivo poder de mercado de los 
+operadores durante la negociación y podrán crear barreras artificiales a la entrada y moldear 
+las oportunidades competitivas para su propio beneficio. En resumen, el desequilibrio entre el operador establecido y el nuevo operador 
+implica que muchas de la cuestiones de la interconexión no puedan dejarse por completo a 
+la libre negociación entre estos. 
+ 
+Negociaciones entre concesionarios 
+Enfoque de negociación comercial 
+Bajo esta perspectiva la interconexión es completamente una negociación 
+comercial, sin ninguna regulación, entre los operadores. Los acuerdos de interconexión 
+están sujetos a las leyes comerciales y/o de competencia por lo que las disputas, 
+generalmente, se resuelven mediante largos y costosos litigios. Se ha venido reconociendo 
+que dejar las negociaciones por completo en manos de los operadores no es conveniente, 
+especialmente si la competencia está en sus primeras etapas (BTD/Regulatory Reform Unit 
+- ITU, 2003). De manera que si bien las negociaciones de los términos y condiciones de 
+interconexión entre operadores deben privilegiarse, también es necesario establecer fuertes 
+incentivos tanto para el entrante como para el operador establecido, para que logren los 
+acuerdos en condiciones equitativas y sin recurrir a litigios o a la intervención directa del 
+regulador (ver secciones 1 y 2). 
+ 
+En el caso de la telefonía celular, las prácticas regulatorias también favorecen la 
+negociación entre los operadores y la intervención del regulador como último recurso. Sin 
+embargo, la regulación directa de los cargos por terminación de llamadas está justificada porque en estos mercados claramente hay poder de mercado y no hay posibilidad de 
+competencia (Rogerson, 2000).3 
+La Federal Communications Commission (FCC; 2002) menciona una serie de 
+herramientas que los reguladores pueden usar para crear un ambiente que fomente los 
+acuerdos de interconexión y resuelva disputas, entre las que están: 
+ 
+a) Publicar los acuerdos de interconexión que han servido de referencia, especialmente 
+aquellos negociados con los operadores dominantes, con el fin de mejorar la calidad 
+de la información disponible en el mercado incrementando las posibilidades de 
+lograr acuerdos de interconexión. 
+b) Establecer un tiempo límite para la conclusión de las negociaciones de 
+interconexión, una vez finalizado dicho periodo el regulador intervendrá. 
+c) Establecer un conjunto de precios y otros términos que tendrán efecto en caso de 
+que el regulador intervenga y que deben fomentar los acuerdos entre operadores. 
+d) Pedir a cada operador involucrado hacer su mejor oferta (final) y entonces el 
+regulador tendrá que elegir una de ellas. Esto hace que el operador con más poder 
+de mercado haga una oferta razonable o de lo contrario se verá forzado a aceptar las 
+demandas del otro operador. 
+e) Fijar ciertas tarifas y términos de interconexión por parte del regulador. 
+f) Establecimiento de acuerdos supletorios, los cuales se aplicarán en caso de que 
+fallen las negociaciones. 
+                                                          
+3 La intervención del regulador puede ser ex ante o ex post a las negociaciones entre operadores. El primer 
+caso se presenta cuando el regulador decide establecer las principales condiciones de los acuerdos mientras 
+que la intervención ex post consiste en la intervención del regulador una vez que las partes han iniciado las 
+negociaciones. g) Establecer comités técnicos del sector o foros para definir los detalles de los 
+acuerdos de interconexión. 
+h) Nombrar mediadores o árbitros. 
+ 
+Tarifas basadas en costos  
+ 
+El establecimiento de tarifas es el aspecto más controvertido de la interconexión. E. 
+Noam (2002: 114) señala que "el establecimiento de cargos de interconexión puede ser 
+usado por los reguladores como una herramienta para financiar metas de políticas no 
+relacionadas, por los incumbentes para frustrar la interconexión y por los entrantes para 
+obtener subsidios. El reto para los reguladores es fijar un precio para un bien intermedio -
+interconexión- en una forma que fomente una entrada competitiva y evite una ineficiente." 
+ 
+De acuerdo con la ITU hay por lo menos cuatro diferentes enfoques para cobrar los 
+servicios de interconexión (bill and keep; price sharing; revenue sharing y el enfoque 
+basado en costos). Nos centramos únicamente en el enfoque basado en costos reconocido 
+por la Organización Mundial de Comercio (OMC), el Banco Mundial y la ITU, como el 
+método más eficiente para fijar las tarifas de interconexión y conjuntamente con la no 
+discriminación y la transparencia, como los principios básicos que deben regir cualquier 
+acuerdo de interconexión (ver cuadro 1.1 sobre ventajas y desventajas de los métodos para 
+fijar tarifas de interconexión). Enfoque del modelo de costos 
+ 
+Fijar las tarifas con base en sus costos tiene como objetivo evitar que un operador 
+establecido con posición dominante tenga incentivos para exigir un precio elevado por la 
+terminación de llamadas originadas en la red del nuevo operador. Al mismo tiempo, se 
+busca evitar que el operador dominante pague poco o nada por la terminación de llamadas 
+originadas en su red y terminadas en la red del nuevo operador (Intven et al., 2002). 
+ 
+Los enfoques del modelo son el histórico y el de costos futuros: 
+ 
+• Enfoque histórico (Backward Looking Cost). Se usan los costos "reales" en que 
+incurrió el operador para construir su red. Bajo este enfoque el costo total de 
+proveer el servicio, incluyendo los costos históricos y la depreciación de las 
+inversiones, es dividido entre el volumen de servicio proveído. El uso de este 
+método supone que el nuevo operador contribuye a cubrir el costo de los bienes 
+de capital determinado a partir del costo original de estos, tomando en cuenta 
+reglas de depreciación y una tasa de retorno. Los costos históricos por la compra 
+e instalaciones del equipo y los gastos en personal son determinados a través de 
+libros contables. 
+ 
+Este método ha sido criticado principalmente porque no existe un método 
+confiable para medir los costos basados en los libros contables pues no reflejan 
+los cambios en los costos actuales y futuros y en cambio pueden dar paso a ineficiencias operacionales o tecnológicas del propietario de la red por lo que los 
+costos resultantes estarán por encima del nivel óptimo. 
+ 
+• Enfoque de costos futuros (Forward Looking Cost o Long -Run Incremental 
+Cost (LRIC)). Se refieren a los costos que un operador hipotético usaría para 
+construir una red comparable a la existente. Las variaciones de los modelos 
+LRIC están basadas en el cálculo de los costos de proveer una unidad adicional 
+de servicio en el largo plazo e intentan identificar los costos en que se incurrirán 
+durante algún periodo real o empírico futuro a fin excluir costos excesivos en las 
+tarifas cobradas a los usuarios finales.  
+ 
+Para académicos como E. Noan (2002) y Laffont, y Tirole (2000) este enfoque 
+es el medio más eficiente para determinar el impacto de la interconexión del 
+nuevo operador sobre el costo del servicio del operador establecido porque tiene 
+el mérito de estimar los costos que se encontrarían en un mercado competitivo y 
+al mismo tiempo se podría compensar a los operadores.4 
+ 
+La metodología de costos futuros ha recibido duras críticas entre las que destacan las 
+siguientes: 
+ 
+                                                          
+4 Ver capítulo 4 de Laffont, J. y J. Tirole (2000), Competition in Telecommunications, The MIT Press, 
+Cambridge, MA, y capítulo 4 de E. Noam (2001), Interconnecting the Netwok of Networks, MIT Press, 
+Cambridge, MA. • Esta metodología no permite a los operadores que ofrecen la interconexión 
+recuperar todos los costos en que incurren para ofrecer el servicio por lo que los 
+reguladores generalmente permiten el cobro de un sobreprecio (mark up) a fin de 
+recuperar los costos comunes. Sin embargo, el uso del sobreprecio puede ocasionar 
+que los operadores establecidos obtengan beneficios en exceso sobre los costos de 
+capital (BDT/Regulatory Reform Unit -ITU, 2003).5 El sobreprecio carece de una 
+justificación teórica, es arbitrario y no es sustentable a largo plazo (Agrawal y 
+Jasuja, 2003: 14). 
+• El operador establecido no compite contra otros operadores reales, sino contra un 
+operador de red hipotético lo cual implica que el operador establecido no puede 
+realmente ser más eficiente que su competidor porque al momento de lograr el nivel 
+de éste, el modelo debe ser ajustado (Agrawal y Jasuja, 2003: 15). 
+• La última crítica es que los gastos realizados en la planta, el equipo, los contratos 
+laborales y otros costos históricos, no están considerados en los precios. Al respecto 
+autores como G. Sidak, J. Hausman y D. Spulber, en términos generales, han 
+señalado que fijar los precios utilizando el método basado en costos es incorrecto 
+porque no se reconoce que una proporción significativa de las redes de 
+telecomunicaciones son costos hundidos y concluyen que "el establecimiento de 
+                                                          
+5Las formas de fijar el sobreprecio son las siguientes: 
+• Sobreprecio constante. En este caso el mismo sobre precio es cobrado a todos los servicios sin 
+importar la diferencia entre el uso que hagan los servicios de las instalaciones comunes. 
+• La Regla Baumol - Willig (también se conoce como Efficient Component Pricing Rule) Esta regla 
+asigna un sobre precio sobre la base de los costos de oportunidad que el operador establecido habría 
+ganado si no hubiera tenido que prestar servicios al nuevo operador (Mattos, 2003: 60 - 69). 
+• La regla de precios Ramsey. El sobreprecio es fijado de manera inversamente proporcional a la 
+elasticidad precio de la demanda. Este método es difícil de aplicar debido a las imprecisiones debidas 
+a la estimación de las elasticidades (Mattos, 2003: 55-59). 
+Ver capítulos 2 y 3 de Laffont, J. y J. Tirole, Competition in Telecommunications, The MIT Press, 
+Cambridge, MA, 2000 y capítulo 4 de E. Noam, Interconnecting the Netwok of Networks, MIT Press, 
+Cambridge, MA, 2001. tarifas basadas en costos futuros crea desincentivos para la inversión (tanto del 
+incumbente como de las nueva empresas) y la innovación en las 
+telecomunicaciones." (Sidak y Spulber, 1998; Hausman y Sidak, 1999; Hausman, 
+2000 y 2001). 
+ 
+A pesar de estas criticas, la metodología de los costos futuros es más la utilizada 
+actualmente porque se considera que en comparación de la metodología de costos pasados, 
+contribuye a un régimen de interconexión más eficiente. Cuadro 1.1 Ventajas y desventajas de los diferentes métodos para fijar 
+las tasas de interconexión 
+Método Ventajas Desventajas 
+1. Taifas de interconexión basadas en • Sencillo de administrar. • El ofrecer un descuento al nuevo actor 
+los precios de usuario final aplicados ar arbitrariamente la 
+por el operador establecido • Protege al nuevo agente contra precios 
+supone evalu
+abusivos del operador establecido. cuantía del descuento a menos que 
+exista una referencia internacional, y/o 
+se utilice también uno de los demás 
+métodos enumerados. 
+2. Costes históricos (Backward • Los sistemas contables existentes pueden • La medida del coste no fiable: 
+Looking Cost) más tasa de proporcionar los datos necesarios. demasiado influida por convenciones 
+rentabilidad autorizada • Conceptos conocidos y entendibles, que contables, decisiones y tecnologías 
+Únicamente costos directo pueden facilitar las negociaciones. antiguas y por la inflación. 
+Coste directo más asignación del • Los sistemas contables existentes pueden • El proceso de asignación es complejo y 
+coste común ) proporcionar los datos necesarios, pero es supone una amplia dosis de 
+probable que sea más problemático que para apreciación subjetiva. 
+los costos directos. 
+3. Costos prospectivo (Forward • Basado en los costos y tecnología actuales. • Determina una menor recuperación de 
+Looking Cost) • Satisface criterios económicos para los costos fijos del operador 
+ identificar precios correctos que favorecen la establecido si se aplica de forma 
+generalizada. 
+Únicamente coste marginal directo entrada de actores económicamente 
+eficientes. 
+• Las categorías sin costos no se tienen en 
+cuenta por completamente depreciadas. 
+Costo marginal directo más • Basado en los costos y tecnología actuales. • El proceso de asignación es complejo y 
+asignación de costos comunes • Se tienen en cuenta todos los costos. supone una amplia dosis de 
+apreciación subjetiva. 
+4. Efficient Component Rule • Tiene en cuenta toda la serie de efectos de la • Puede ser difícil de calcular, por 
+(ECPR)/ Baumol - Willig interconexión en el operador establecido. ejemplo, tiene que deducir la 
+• Puede facilitar la negociación de la diferencia entre tráfico generado y 
+interconexión. Desde el punto de vista del desviado. 
+operador debe ser indiferente proporcionar • Si la fuerza del operador establecido en 
+el servicio al usuario final o a la entidad el mercado permite costos o beneficios  
+interconectada.(1) elevados, esto puede reflejarse en tasas 
+de interconexión ECPR a menos que se 
+realicen ajustes. 
+Tomado de ITU, La nueva función del Estado en una era de liberalización de la telecomunicaciones. Interconexión: 
+Cuestiones de Reglamentación, Informe del Cuarto Coloquio sobre Reglamentación celebrado en la sede de la UIT, 19 - 
+21 de abril de 1995. 
+(1) La teoría económica no contempla el valor estratégico del control contable. 
+ 
+En el caso de la telefonía móvil los cargos por interconexión también han generado 
+un gran debate.6 Al utilizar el sistema El que Recibe Paga (RPP por sus siglas en inglés) no 
+existen problemas por cargos de interconexión debido a que en la mayoría de los casos se 
+                                                          
+6 El crecimiento de la telefonía móvil alrededor del mundo ha hecho de la interconexión entre estos 
+operadores y los operadores fijos un asunto central para los reguladores, agencias multilaterales y académicos. 
+Existen tres tipos de interconexión móvil: móvil a fijo que no difiere de la interconexión entre operadores de 
+redes fijas; móvil a móvil donde los operadores móviles generalmente llegan a acuerdos basados en el 
+principio de senders keeps all; fijo a móvil la cual ha llamado la atención debido a los elevados cargos que no 
+están basados en costos, especialmente en países donde existe el Programa el que llama paga. usa el principio de sender keeps all. En cambio, cuando se utiliza el sistema El que Llama 
+Paga (CPP), el operador fijo paga un cargo generalmente muy elevado de interconexión al 
+operador móvil. Los operadores fijos recobran este gasto cobrando cargos elevados a sus 
+usuarios, lo que hace más costoso llamar a un usuario móvil que uno fijo. Además del cargo 
+por la interconexión, el operador fijo hace un cobro administrativo por facturación y 
+cobranza. 
+ 
+La ITU (2003) señala dos principales razones para que los cargos por interconexión 
+fijo a móvil se ubiquen por arriba de los costos: la terminación de la llamada se mantiene 
+como un monopolio -el usuario no puede elegir en que red terminar su llamada- por lo que 
+el operador móvil establece las tarifas sin presiones competitiva y los operadores fijos no 
+tienen incentivos para negociar tarifas de interconexión bajas. Además, no existe un 
+consenso sobre cuál es la mejor metodología de costos para fijar los cargos de 
+interconexión porque la interconexión fijo a móvil presenta características muy especiales 
+debido a la velocidad de inversión y al cambio tecnológico que dejan las tarifas obsoletas 
+en poco tiempo (Samarajiva y Melody, 2000: 21). 
+ 
+Mejores prácticas 
+ 
+Además de los enfoques propuestos por la ITU es pertinente añadir el enfoque de 
+las mejores prácticas (Benchmark) debido a que es un método pertinente para los 
+reguladores de países donde no existen antecedentes de competencia y donde los datos son 
+escasos o poco confiables (MacLeod y Ridder, 2000). Este enfoque consiste en que un 
+regulador observe un conjunto de precios usados en otros mercados de telecomunicaciones y desarrollar un marca de referencia con base en esas experiencias, pero cuando se utilizan 
+las mejores prácticas debe tenerse presente que su éxito es consecuencia de la combinación 
+de una serie de factores, por ejemplo (Global Internet Policy Initiative, 2002): 
+ 
+1. Es esencial que el regulador tenga la suficiente capacidad técnica, política e incluso 
+económica para implementar la política de interconexión. 
+2. El regulador debe reconocer que la interconexión es un primer paso para crear 
+competencia y que deberá ser complementado con otras políticas. 
+3. La política que se pretende aplicar debe ser diseñada considerando el contexto 
+existente. 
+4. El éxito de una política depende del apoyo político del más alto nivel que reconoce 
+la importancia de la interconexión como una herramienta para el desarrollo del 
+sector. 
+5. Finalmente debe reconocerse que las experiencias de otros países y reguladores son 
+valiosos y que pueden ser usadas siempre y cuando se cumpla con una serie de 
+condiciones como las antes descritas. 
+ 
+Desagregación 
+ 
+La desagregación se refiere a la posibilidad que tienen los operadores entrantes para 
+acceder a un sólo componente de la red, sin necesidad de adquirir otros como parte de un 
+paquete de interconexión (BDT/ Regulatory Reform Unit- ITU, 2003). El nivel de 
+desagregación está ampliamente ligado a las decisiones de interconexión y sin desagregación, las reglas de interconexión son inútiles (Laffont y Tirole, 2001). E. Noam 
+(2002: 171) ha argumentado que "la interconexión carece de sentido si no se hace 
+referencia al lugar donde ésta tiene lugar físicamente. Por lo tanto, los puntos de 
+interconexión son establecidos en varios puntos de la red, desagregándola." 
+ 
+Por el contrario, cuando los componentes de la red están agregados pueden 
+convertirse en una barrera de entrada ya que proporcionan al dominante las siguientes 
+ventajas: 
+ 
+• Obliga a los entrantes a comprar servicios que no necesitan para conseguir los que sí 
+les son necesarios. Esta es una preocupación constante para los nuevas empresas 
+debido a los costos que esa situación puede generar, pues el poder de mercado sobre 
+un elemento puede extenderse a otros al estar agregado. 
+• La agregación a nivel de menudeo contra un competidor, usando el poder de 
+mercado en la venta al por mayor, permite precios que extraen rentas. El elemento 
+competitivo es subsidiado por el precio del elemento monopólico. 
+• La agregación permite la discriminación de precios basada en la utilización entre los 
+usuarios. 
+ 
+Para el operador dominante la desagregación no sólo significa despojarse de 
+ventajas descritas, sino además dejar de ser el principal beneficiario de las eficiencias que 
+puedan existir en un segmento de mercado porque no puede evitar que sus competidores se 
+beneficien de éstas (Noam, 2002). La principal función de la desagregación es limitar el grado en que una empresa puede ejercer su poder monopólico al separar los elementos 
+competitivos de los que no lo son (Noam, 2001) y reducir las barreras técnicas y 
+económicas de entrada. 
+ 
+Los cuantiosos costos de capital que supone duplicar la red del operador 
+establecido constituyen un obstáculo a la entrada de nuevos operadores, que pueden no 
+estar dispuestos a financiar la construcción de redes completas, aunque sí a establecer 
+partes de tales redes. La posibilidad de combinar los elementos de red propios con los del 
+operador establecido aumenta la viabilidad comercial de la entrada de nuevos operadores en 
+muchos países y, por tanto, promueve la competencia (Invent et al., 2004). 
+ 
+Debate sobre las ventajas y desventajas de la desagregación 
+ 
+Entre las ventajas de la desagregación están: 
+• Promueve la competencia en servicio local e incentiva la aparición de nuevos 
+servicios de datos. 
+• Evita la duplicación de red. 
+• Asegura el cumplimiento del principio de no discriminación. 
+• Compartir costos de la red entre el operador establecido y los nuevos operadores. 
+• Acelera la introducción de los servicios de banda ancha. 
+ 
+En este sentido han surgido puntos de vista que sugieren que las ventajas antes 
+citadas no son tan ciertas y que la desagregación tiene importantes desventajas. J. Hausman y G. Sidak (1999) señalan que "la desagregación obligatoria en la industria de las 
+telecomunicaciones puede imponer costos sociales al distorsionar los incentivos tanto de 
+los incumbentes como de los entrantes." 
+ 
+La desagregación da como resultado un nivel de inversión menor tanto de los 
+incumbentes como de los entrantes. J. Hausman (2000: 2) afirma "que el incumbente 
+invertirá menos porque no logrará una tasa de ganancia suficiente para justificar sus 
+inversiones marginales debido a la derecho que representa la libertad de opción de sus 
+competidores. Los nuevos competidores, quienes reciben la 'libertad de opción', invertirán 
+menos en instalaciones básicas debido al subsidio que representa el derecho de libertad de 
+opción." 
+ 
+En concreto, la desagregación se considera una política incorrecta porque genera 
+incentivos que "han frenado el crecimiento de las redes en los países en que se ha 
+implantado y que ha contribuido a crear una competencia ficticia, ya que los entrantes se 
+convierten en meros revendedores."(Cleland, 2002). 
+ 
+Las desventajas de la desagregación son: 
+• El proceso de apertura del bucle es técnicamente complejo y requiere de un mucho 
+tiempo para su aplicación. 
+• Desincentiva la construcción de nuevas redes por parte de los operadores entrantes. 
+• Los operadores entrantes seguirían concentrándose sólo en nichos de alto consumo. • La apertura del bucle no garantiza el beneficio de la población de menores ingresos 
+o áreas rurales, el problema del mercado seguirá siendo la demanda. 
+• Desincentiva al operador incumbente, al permitir el alquiler de la red al costo, sin 
+considerar su rentabilidad o su valor estratégico. 
+• La desagregación del bucle local introduce un riesgo de operación capaz de 
+paralizar el servicio de toda la red (Kunigami, 2002). 
+ 
+Finalmente, algunos autores como Pindyck (2003) y May (2003), matizan sus 
+puntos de vista y señalan que si bien la desagregación es una política correcta es 
+necesario analizar de manera detallada la forma en que se ha implementado.7 
+ 
+Resumen 
+ 
+Los cambios en el sector de las telecomunicaciones en los últimos veinte años, han 
+posibilitado la competencia en algunos segmentos de un sector considerado 
+tradicionalmente como monopólico. Tal situación ha generado el estudio más profundo de 
+una serie de temas relacionados con las industrias de red y las posibilidades y condiciones 
+necesarias para introducir la competencia en estos mercados. 
+ 
+                                                          
+7 Existen dos ideas muy importantes que conviene rescatar. La primera es que la competencia en la 
+innovación es un proceso de largo plazo, pero una de las condiciones para que esto ocurra es permitir a los 
+entrantes la interconexión en el corto plazo. La segunda idea es que una política de interconexión demasiado 
+comprehensiva, requiere de una completa desagregación lo que puede minar la competencia en el largo plazo 
+porque los entrantes al tener la posibilidad de usar las instalaciones existentes no querrán construir su propia 
+red. Por lo tanto, una política de interconexión comprehensiva necesariamente desalentará la entrada basada 
+en construcción de red propia, pero alentará la entrada basada en la desagregación (Mattos, 2003). A lo largo del capítulo, se exploraron algunos aspectos teóricos sobre temas 
+ampliamente discutidos en el caso de la interconexión de redes de telefonía. Por ejemplo, es 
+claro que la tendencia mundial es favorecer las negociaciones de los acuerdos de 
+interconexión entre operadores y dejar la intervención del regulador como mecanismo de 
+última instancia. Sin embargo, debido a las características de monopolio natural de esta 
+industria no es posible en la competencia si no se regula al operador establecido que posee 
+los incentivos y los medios necesarios para evitar u obstruir toda posibilidad de 
+competencia. 
+ 
+Por su parte, las nuevas empresas no tienen nada que ofrecerle a la empresa 
+establecida. Por ello, se ha sugerido la posibilidad de crear marcos regulatorios que faciliten 
+la entrada de las nuevas empresas al impedir al operador establecido hacer uso de su poder 
+de mercado. Los reguladores han optado por expedir reglamentos, normas o lineamientos 
+que obliguen a los operadores establecidos a ceder parte de su infraestructura a sus 
+competidores o dicho de otro modo, para obligarlos a "ayudar" a aquellos que intentan 
+arrebatarles parte de su negocio. No resulta extraño que la mayoría de los dueños de la 
+redes encuentren todo tipo de razones procesales, legales y técnicas para demorar, en la 
+medida de lo posible, esta cesión y traten de impedir la entrada de las nuevas empresas. 
+ 
+Otros dos temas que generan polémica son: la determinación de tarifas de 
+interconexión y la desagregación. En el primer caso, la teoría indica que se deben favorecer 
+las tarifas basadas en costos para evitar ineficiencias y simular condiciones de mercados 
+competitivos. Sin embargo, pasar de lo teórico a lo práctico no ha sido tarea fácil porque 
+muchos de los elementos necesarios para aplicar las metodologías de tarifas basadas en costos son difíciles de cuantificar. Por lo tanto, la discusión sobre el mejor método para 
+fijar tarifas de interconexión no está completamente agotada y su solución depende en gran 
+parte del aprendizaje que adquieran los reguladores que aplican tales metodologías y de los 
+resultados que obtengan en términos de tarifas para los consumidores. 
+ 
+En el caso de la desagregación, la polémica se ha suscitado alrededor de los 
+incentivos que esta política genera a los operadores entrantes para invertir en la 
+construcción de su propia red. Mientras que para algunos el uso de la red del operador 
+dominante es solo transitoria, para otros, es una política que si bien facilita el acceso, no les 
+genera incentivos para construir su propia red. En la actualidad, se discuten y presentan 
+argumentos sobre el éxito o fracaso de está política. 
+ 
+Si bien a nivel teórico parece tenerse cierta claridad sobre cuáles son los aspectos 
+que deben considerarse para acotar el poder de mercado del operador establecido y facilitar 
+la competencia, así como sobre algunas herramientas para lograr tales fines, también parece 
+ser cierto que para los reguladores la situación luce muy complicada y genera importantes 
+retos que implican tener la capacidad y creatividad suficiente para diseñar políticas que 
+incluyan y concilien intereses francamente en conflicto. Finalmente, es importante señalar 
+que la aplicación de las políticas comentadas requiere de una buena dosis de análisis crítico 
+y de claridad en los objetivos que desean alcanzarse. 2. Experiencia internacional en materia de interconexión 
+ 
+Conocer la experiencia internacional es importante porque nos permite tener un 
+panorama sobre la evolución del tema de la interconexión en distintos contextos legales 
+e institucionales. Los ejemplos incluidos en el presente capítulo tienen como común 
+denominador una experiencia exitosa en alguno de los aspectos referentes a la 
+interconexión. El objetivo es saber cuál es la situación de México respecto a otros países 
+y obtener algunas lecciones provechosas que puedan contribuir a encontrar soluciones 
+alternativas a los retos que implica este tema. 
+ 
+Marco legal internacional de la interconexión 
+ 
+La Unión Internacional de Telecomunicaciones (ITU, 2002) ha señalado que ciento 
+seis países han establecido un marco regulatorio que ha tomado la forma de legislación, 
+provisiones en las licencias, ordenes ejecutivas, lineamientos o determinaciones, para dar 
+solución a los problemas generados por las negociaciones y para lograr acuerdos de 
+interconexión entre los operadores establecidos y los nuevos. Algunos ejemplos de estos 
+son: 
+ 
+En diciembre de 2001, la Autoridad Reguladora de Telecomunicaciones de la India 
+(TRAI) dio a conocer el Consultation Paper No. 2001/5 con título Issues Relating to 
+Interconnection Beetwen Acces Providers and National Long Distance Operators. En el 
+prefacio de dicha publicación se señala que entre los objetivos de tal consulta pública están: "desarrollar un Marco General para la Interconexión en el contexto de la entrada de 
+operadores privados de larga distancia nacional al mercado nacional de 
+telecomunicaciones, generar la discusión sobre los marcos de las acuerdos de interconexión 
+tal como fueron dados a conocer en la publicación de la ITU sobre regulación de la 
+interconexión y obtener los puntos de vista de los distintos operadores sobre su 
+aplicabilidad a la condiciones de la India, en parte o totalmente." (ITU, 2003d). 
+ 
+En 1998, Malasia promulgó la Ley de Comunicaciones y Multimedia (CMA), creó 
+la Comisión de Comunicaciones y Multimedia de Malasia (MCMC) y estableció un 
+régimen de acceso (en lugar de interconexión). Dicho régimen asegura que todos los 
+proveedores de servicios de red, de instalaciones de servicios y proveedores de servicios de 
+aplicación puedan tener acceso a las instalaciones y servicios necesarios en términos y 
+condiciones razonables a fin de inhibir las restricciones en la provisión de materias primas 
+para la prestación de servicios. En marzo de 2003, se creó el Malaysian Access Forum 
+Berhad (MAF), el cual se considera un mecanismo novedoso para la construcción de 
+consensos y auto - regulación.8. La función primaria del MAF consiste en hacer 
+recomendaciones a la MCMC para incluir o quitar instalaciones y servicios de la lista de 
+acceso y desarrollar y recomendar los códigos de acceso (ITU, 2003f). 
+ 
+En noviembre de 2002, la Comisión Reguladora de Telecomunicaciones (TRC) de 
+Jordania aprobó los "Lineamientos de Interconexión", los cuales guían a los operadores en 
+la realización de comités de interconexión, la provisión de servicios de interconexión, 
+                                                          
+8 El concepto de auto -regulación es importante en la experiencia de este país porque las empresas han 
+logrado importantes acuerdos sin la necesidad de intervención gubernamental. aspectos técnicos de interconexión y aspectos comerciales tales como los cargos, pagos y 
+facturación. La TRC estableció el Comité Guía de Interconexión (ISC) donde participan 
+personal de la TRC y de las diferentes empresas que operan en el país. El ISC establece 
+grupos de trabajo para: la asignación de licencias que deben estar sujetas a los 
+Lineamientos de Interconexión; la realización de las metodologías de cargos y costos para 
+las redes fijas y móviles; la revisión de los cambios a las licencias existentes; los términos 
+comerciales y técnicos de las referencias de propuesta de interconexión (RIO) y sus 
+aspectos legales (ITU, 2003e). 
+ 
+En Estados Unidos, la Federal Communications Commission (FCC) estableció un 
+conjunto de estándares incluyendo una metodología de precios para la interconexión basada 
+en el Costo Incremental Total de los Elementos de Largo Plazo (TELRIC), un mínimo de 
+elementos de la red que el incumbente debe desagregar y determinó las características 
+técnicas de los posibles puntos de interconexión. La FCC (2002) ha reconocido que la 
+mejor situación es que los operadores lleguen a acuerdos de interconexión por su propios 
+medios, sin la intervención del gobierno, pero que contar con "un buen marco regulatorio, 
+incrementa las probabilidades de que los operadores alcancen acuerdos por sus propios 
+medios en un tiempo pertinente." 
+ 
+El cuadro 2.1, muestra los posibles marcos de decisión sobre los procesos de 
+interconexión y ejemplos de algunos países. Cuadro 2. 1 Instituciones y procesos decisorios sobre la interconexión: 
+la experiencia internacional. 
+Alternativas utilizadas por los países 
+Alternativas 
+Australia Japón Filipinas Alemania Nueva Reino Estados Zelandia Unido Unidos México 
+1. Especificar normas         
+reglamentarias generales 
+2. Decidir desde el princi-pio las         
+condiciones de interconexión (para el 
+en casos específicos servicio 
+fijo) 
+3. Recurrir a la negociación         
+comercial entre las partes, con 
+intervención de la autoridad 
+reglamentadora si aquéllas no 
+se ponen de acuerdo 
+4. Confiar en la negociación         
+comercial entre las partes, 
+pero a reserva de la apro-
+bación del acuerdo 
+por la autoridad 
+reglamentadora 
+5. Solución de desacuerdos por         
+otras autoridades distintas de (Objetivo 
+la reglamentadora (por de la polí-
+ejemplo, tribunales, arbitraje) tica en 
+Nueva 
+Zelandia) 
+6. Consultas oficiosas         
+de la autoridad 
+reglamentadora 
+7.Desreglamentación total         
+Fuente. ITU, La nueva función del Estado en una era de liberalización de la telecomunicaciones. Interconexión: 
+Cuestiones de Reglamentación, Informe del Cuarto Coloquio sobre Reglamentación celebrado en la sede de la UIT, 19 - 
+21 de abril de 1995. Se agregó la columna sobre México. 
+ 
+ 
+En el contexto internacional se han creado grupos de trabajo para desarrollar 
+enfoques comunes. Por ejemplo, la directiva de interconexión de la Unión Europea, que 
+debe de ser incorporada en las leyes nacionales de los quince países miembros. Otros 
+ejemplos son la Asociación para la Cooperación Económica Asia - Pacífico (APEC), la 
+Comunicación de Telecomunicaciones Interamericana (CITEL) y la Asociación de 
+Reguladores de Telecomunicaciones del Sureste de África, quienes también están 
+trabajando en la armonización de sus reglas de interconexión. Esta situación parece indicar que cada vez más se reconoce la importancia de crear marcos regulatorios que incluyan 
+reglas que faciliten la interconexión y que sin dicho marco las negociaciones retrasan la 
+entrada de nuevos competidores. 
+ 
+Regulación del operador dominante 
+ 
+En los años ochenta y noventa, los organismos reguladores de Estados Unidos y 
+Canadá publicaron pautas detalladas sobre la mayoría de los aspectos de la interconexión 
+con operadores dominantes, lo que incluía tarifas de interconexión y condiciones técnicas. 
+En Estados Unidos se les pide a los operadores dominantes o proveedores más grandes 
+hacer públicas las tarifas de todos sus acuerdos de interconexión necesarios para brindar el 
+servicio interestatal. En estos casos, la FCC tiene la capacidad de rechazar tales tarifas si 
+considera que contienen "cargos, prácticas, clasificaciones y regulaciones" injustos o 
+irracionales (CITEL, 1999). 
+ 
+En Marruecos, el proceso de interconexión se fundamenta en el Artículo 8º de la 
+Ley 24 - 96 y el Decreto de Ley No 2-97-1025 de febrero de 1998. Esta normatividad 
+señala que los arreglos de interconexión son materia de negociación comercial sujetos a 
+algunos lineamientos generales establecidos en el Decreto de Interconexión. Los acuerdos 
+de interconexión deben ser enviados al regulador en un plazo máximo de 30 días hábiles a 
+partir de la fecha de conclusión de las negociaciones. Un hecho interesante es que el 
+Decreto señala procedimientos específicos para operadores con más del 20% del mercado. En el plano internacional el documento de la OMC (1996) en materia de 
+interconexión menciona la posibilidad de imponer obligaciones a los operadores 
+dominantes. De igual manera la propuesta de la Directiva de la Comisión de la Unión 
+Europea que sólo los operadores dominantes quedarán sujetos a las obligaciones 
+reglamentarias ex ante propuestas por la Comisión como la obligatoriedad de la 
+interconexión, la reventa y la coubicación, entre otras (OMC, 1996). 
+ 
+Negociaciones entre concesionarios 
+ 
+Desde 1987, Nueva Zelanda optó por un esquema de negociación comercial sin 
+intervención reguladora y eligió el uso de Ley de Comercio como medio para evitar 
+conductas anticompetitivas. En las negociaciones para fijar los cargos de interconexión, las 
+empresas Clear (MCI, Bell Canada y empresas locales) y Telecom New Zeland no llegaron 
+un acuerdo e iniciaron un proceso legal que duró más de seis años y tuvo un costo de US 
+$10 millones. Como resultado de esta experiencia, el gobierno neocelandés decidió 
+reformular su régimen regulatorio y en 2001 promulgó la Ley de Telecomunicaciones 
+mediante la cual se nombró un comisionado cuya principal función es decidir en materia de 
+interconexión y portabilidad de números (BDT/Regulatory Reform Unit - ITU, 2004). 
+ 
+En Australia, el procedimiento de interconexión da prioridad a las negociaciones 
+comerciales, pero la Trade Practices Act de 1974 da a la Australian Competition and 
+Consumer Commssion (ACCC) un papel importante para determinar si los términos y 
+condiciones de los acuerdos son razonables y arbitrar en las disputas que se presenten. En caso de ser requerido un árbitro decide si es necesaria o no de la intervención del regulador 
+cuando las partes no logran llegar a un acuerdo. 
+ 
+En Brasil, la Resolución No. 33 de la Anatel señala que las condiciones para la 
+interconexión a la red están sujetas a la libre negociación de las partes y que cualquier 
+conflicto que surja en relación con la aplicación e interpretación de las regulaciones será 
+resuelto por el regulador. El arbitraje de las condiciones de interconexión debe ser 
+manejado por la Junta de Arbitraje integrada por tres miembros designados por el 
+presidente de la Anatel. El proceso de arbitraje inicia con la petición dirigida al Presidente 
+de la Junta, una vez que ésta ha recibido la petición, se le indica al peticionario que envíe la 
+información y los documentos relacionados a la controversia dentro de un periodo de 10 
+días hábiles y la Junta realizará el proceso de arbitraje en los siguientes 15 días hábiles. La 
+Anatel puede imponer sanciones a los proveedores que no cumplan con las obligaciones 
+señaladas en los acuerdos de interconexión (ITU, 2001). 
+ 
+En Estados Unidos, los operadores locales incumbentes tienen la obligación de 
+negociar de "buena fe" con sus competidores. Las partes tienen el derecho, en cualquier 
+momento del proceso, de solicitar la intervención de la Comisión Estatal para solucionar 
+controversias, pero cuando los operadores no han logrado acuerdos después de 135 días de 
+iniciadas las negociaciones, es obligatorio que soliciten la intervención de la Comisión 
+Estatal. El arbitraje no puede ser mayor a 9 meses después de iniciadas las negociaciones, 
+además la FCC y algunas comisiones estatales han establecido procedimientos para 
+solucionar disputas de manera rápida. La FCC ha reconocido que este tipo de reglas son vitales para asegurar una competencia plena y justa, así como para proteger los intereses de 
+los consumidores (FCC, 2002). 
+ 
+En Guatemala, la Ley General de Telecomunicaciones ha establecido 
+procedimientos de arbitraje para el caso en el que las partes no lleguen a acuerdos en un 
+periodo de 40 días hábiles después de haber solicitado la interconexión, aunque las partes 
+puede acordar conjuntamente extender el periodo de negociación. En caso de que se 
+requerir el arbitraje, las partes deben enviar conjunta o separadamente la documentación de 
+los puntos de desacuerdo a la Superintendencia de Telecomunicaciones (SIT). La SIT 
+contrata a un experto para que ayude a solucionar el conflicto, el experto es elegido de una 
+lista preexistente elaborada por la propia SIT. El experto cuenta con 30 días hábiles para 
+enviar a la SIT una opinión sobre la forma de resolver el conflicto y después de esto la SIT 
+cuenta con 10 días hábiles para emitir una resolución (CITEL, 1999). 
+ 
+Tarifas basadas en costos  
+ 
+En Dinamarca, la National IT and Telecom Agency (NITA) usa el benchmark como 
+herramienta de revisión de sus tarifas al comparar los precios que cobra el operador 
+establecido con los cobrados en otros países, por ejemplo, Noruega y Suecia. En el 2000, la 
+NITA desarrolló un modelo Long Run Average Incremental Cost para fijar los cargos de 
+interconexión incluyendo los correspondientes al local loop. El uso del modelo requirió la 
+participación de la NITA, del operador establecido y del nuevo operador. El operador 
+establecido contribuyó creando un modelo que refleja sus costos a través de una metodología de costos históricos y el nuevo operador desarrolló un modelo de costos 
+futuros. Ambos modelos contribuyeron al diseño del modelo adoptado por NITA y a la 
+aceptación y credibilidad del modelo de costos (ITU, 2003c). 
+ 
+En los Estados Unidos, la FCC desarrolló una variante del LRIC llamado Total 
+Element Long Run Incremental Cost (TELRIC), este enfoque consiste en incluir el costo 
+incremental de agregar un elemento específico de la red en el largo plazo. El precio de un 
+elemento de la red incluye un costo futuro atribuido directamente a la provisión de servicios 
+que usan tal elemento, lo cual considera una tasa de retorno "razonable" sobre la inversión 
+más una parte "razonable" de costos futuros y costos comunes.9 
+ 
+En Canadá, el regulador adoptó un modelo LRIC como la base para establecer las 
+tarifas para servicios e instalaciones esenciales, incluyendo la interconexión a la red. Esta 
+metodología, conocida como Fase II, considera los costos futuros directos, indirectos y 
+comunes, todo basado en la tecnología existente más eficiente. Bajo este enfoque, los 
+costos fijos no son incluidos y por lo tanto, deben ser recobrados a través de un sobre 
+precio, el cual ha sido establecido a un 25% (ver cuadro 2.1 sobre la experiencia 
+internacional para fijar tarifas de interconexión). 
+ 
+ 
+ 
+ 
+                                                          
+9 Se recomienda la lectura de M. Falch, TELRIC - The way toward competition? A European point of view? 
+Review of Networks Economics, Vol. 1, Issue 2 - September 2002. Cuadro 2.2 Métodos alternativos para establecer las tasas de interconexión: la experiencia internacional 
+Método para establecer las tasas de interconexión 
+(no incluye el método para determinar las tasas de los enlaces 
+de interconexión física) 
+País 1 2 3 4 5 
+Basado en precios  Basado en costes  Basado en costes  Basado en ECPR/ Basado eb las 
+de usuario final históricos futuros /Baumol -Willig mejores 
+prácticas  
+  (1)   
+Australia (únicamente bucle 
+local)(1) 
+Canadá      
+Chile      
+Hong Kong      
+Japón      
+(antiguo sistema) (antiguo sistema) 
+Suecia      
+Nueva Zelanda (2)   (3)  
+Reino Unido  (4)    
+Estados Unidos       
+(precio máximo) 
+Marruecos      
+México   (5)   
+Fuente. ITU, La nueva función del Estado en una era de liberalización de la telecomunicaciones. 
+Interconexión: Cuestiones de Reglamentación, Informe del Cuarto Coloquio sobre Reglamentación 
+celebrado en la sede de la UIT, 19 - 21 de abril de 1995. Se agregaron las filas sobre México y Marruecos. 
+Notas: (1) "Costes marginales directamente imputables" (DAIC) para todos los elementos de la red 
+excepto los bucles locales (conocidos en Australia como Redes de Acceso del Cliente: CAN). Para 
+los CAN preexistentes, se utiliza un método de costes históricos basado en los de explotación y 
+mantenimiento de la CAN para el operador, distintos de los costes de capital y directamente imputables. El 
+principio de los DAIC vale para las determinaciones reglamentarias relativas a los incrementos marginales. 
+(2) Para la interconexión de la red de larga distancia del nuevo actor. 
+(3) Principio de la ECPR propuesto por Telecom NZ y aceptado por los tribunales (Consejo Privado) en 
+apelación. El asunto está aún sujeto a negociación comercial entre Telecom NZ 
+y Clear Communications. 
+(4)En la actualidad, las tasas de interconexión se basan en los costes históricos. Sin embargo, en su 
+documento de consulta "A Framework for Effective Competition" (1994), OFTEL ha manifestado 
+preferencia por pasar a las tasas basadas en los costes prospectivos. 
+(5) El documento denominado Resolución administrativa por la que la Secretaria de Comunicaciones y 
+Transportes establece que deberán considerarse los "Costos incrementales promedio de largo plazo de los 
+servicios de interconexión 
+ 
+Debido a la dificultad para implementar tarifas basadas en costos, en el caso de la 
+telefonía móvil, algunos países han recurrido a otros métodos. Por ejemplo, en Inglaterra 
+se usa el price cap para fijar tarifas de interconexión; en Bostwana se aplican modelos de benchmarking y, en Finlandia, los usuarios pagan una tarifa al operador local y otra al 
+móvil, el cargo por interconexión no existe (como en Singapur).10 
+ 
+En los países con el sistema El que Llama Paga (CPP) los elevados cargos que se 
+cobran por las llamadas de fijo a móvil se han convertido en una gran preocupación. Por 
+ejemplo, se señala que ordenar a los operadores fijos dominantes establecer tarifas de 
+interconexión basadas en costos, sin imponer al mismo tiempo algunas obligaciones a 
+los operadores móviles, tiene como resultado tarifas elevadas. En el 2000, el promedio 
+internacional de tarifas de interconexión de fijo a móvil en países con el sistema CPP fue 
+de US$0.138 por minuto y para llamadas de móvil a fijo de US$0.059, mientras que el 
+promedio para los países con sistema El que Recibe Paga (RPP) fue de US $0.056 
+(Samarajiava y Melody, 2003).11 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                          
+10 Los casos de China, Finlandia, India, México y algunos países africanos pueden verse en ITU Fixed -
+Mobile Interconnection Workshop, Ginebra, Septiembre 20 de 2000. 
+11 A principios de 2004 el AEI - Brookings Institution publicó un documento cuya finalidad es crear una base 
+de datos sobre asuntos relacionados con las telecomunicaciones y la electricidad en países en desarrollo. En el 
+caso de las telecomunicaciones la base de datos es de 164 variables, de las cuales 13 son sobre interconexión. 
+Wallsten, S., G. Clarke, L. Haggarty, R. Kaneshiro, R. Noll, M. Sherly, y L. Colin, "New Tools for Studying 
+Network Industry Reforms in Developing Countries: The Telecommunications and Electricity Regulation 
+Database" AEI - Brookings Joint Center Related Publication 04-05, Marzo de 2004. Disponible en 
+http://www.aei.brookings.org/files/telecom_reg_data.xls. Desagregación 
+ 
+En Brasil, el regulador ha condicionado la obtención de nuevas licencias por parte 
+de los incumbentes a condición de la apertura del bucle. Los nuevos concesionarios de 
+telefonía fija podrán entrar al mercado sólo si utilizan una combinación de tecnologías. 
+Mientras que en Argentina se espera que la desagregación reduzca el cuello de botella en la 
+última milla y la discusión se ha centrado en la elección de tarifas de alquiler de la red que 
+no generen distorsiones económicas. El Reglamento Nacional de Interconexión señala la 
+necesidad de conformar una comisión que elabore una lista de precios referenciales para la 
+coubicación y alquiler del bucle. Al margen de la polémica, el mercado ha crecido, 
+habiéndose realizado ya inversiones para implementar la telefonía fija inalámbrica. 
+ 
+En Estados Unidos, la Telecommunications Act de 1996 prescribe un mínimo de 
+puntos de interconexión, así como una lista de elementos de la red que deben ser 
+desagregados por el incumbente y que deben estar disponibles para sus competidores. Estos 
+elementos son: los dispositivos de interfase de la red, el local loop, switches local y tandem, 
+instalaciones de transmisión interoffice, señalización y base de datos de call - related, 
+sistemas de soporte de operación e información e instalaciones de asistencia de operadora y 
+directorio. 
+ 
+El tema de la desagregación está siendo sujeto de una gran controversia. K. Martín, 
+Comisionado de la FCC, señaló que para fomentar la competencia local "es importante 
+facilitar el que los nuevos entrantes tengan acceso a los elementos de red de los incumbentes que son esenciales para que presten sus servicios y entonces los consumidores 
+reciban los beneficios." (Martín, 2003). Pero, según, M. K. Powell, también Comisionado 
+de la FCC, la industria de las telecomunicaciones en Estados Unidos pasa por una de las 
+peores crisis de su historia, en parte porque el fomento de la competencia, a cualquier 
+precio, no ha resultado como se esperaba (Powell, 2002). 
+ 
+"En el otoño pasado la Comisión inició una revisión de la regulación sobre 
+desagregación de la red (...) Estamos a unos cuantos meses de finalizar esta tarea, la cual 
+será una excelente oportunidad de mejorar el fundamento regulatorio de la competencia." 
+(Powell, 2002). El comisionado recomienda impulsar la competencia basada en 
+construcción de redes propias - lo cual es un trade off respecto a la desagregación- sobre 
+todo para disminuir la dependencia de los nuevos operadores respecto a los incumbentes. 
+ 
+Resumen 
+ 
+La experiencia de varios países nos han permitido apreciar que la interconexión y 
+los temas relacionados a ella generan controversias y que la solución de las mismos no 
+se debe a un patrón mecánico, sino más bien a la combinación de distintas herramientas 
+y a su adecuación a los recursos legales, institucionales e incluso económicos de cada 
+país. El reglamento, norma o plan de interconexión parece ser una herramienta 
+bastante útil porque permite establecer ciertas condiciones mínimas para la negociación 
+entre empresas sin la necesidad de la intervención del regulador. Esta herramienta se 
+utiliza en países, con distinto grado de desarrollo, que la consideran útil porque facilita 
+los acuerdos de interconexión al fomentar la discusión entre los distintos agentes 
+involucrados directamente. 
+ 
+Una característica común de los reglamentos de interconexión alrededor del 
+mundo, es el enfoque de priorizar las negociaciones entre operadores, bajo el argumento 
+de que tienen mayor información y están mejor enterados de sus necesidades, pero al 
+mismo tiempo establecen las bases para que en caso de que las negociaciones fracasen, 
+el regulador intervenga de manera transparente y eficaz. 
+ 
+Ante la mayor capacidad de los operadores establecidos para negociar los 
+acuerdos de interconexión diversos países han optado por regular específicamente al 
+operador dominante para equilibrar las condiciones bajo las cuales se negocian los 
+acuerdos. En este sentido, los reguladores, de países desarrollados como en desarrollo, 
+coinciden en señalar que es conveniente contar con salvaguardas que fomenten la 
+competencia e impidan el uso del poder de mercado. 
+ 
+No establecer de manera precisa y clara, los plazos y las condiciones bajo las 
+cuales puede intervenir el regulador cuando los privados no lleguen a un acuerdo, es un error porque abre la posibilidad para que el agente con poder de mercado lo use y 
+también minan la credibilidad del regulador, pues constantemente será acusado de falta 
+de transparencia. Por ello, establecer cómo se dará la intervención del regulador cuando 
+es necesaria, es fundamental para el logro de acuerdos entre las empresas o bien para la 
+emisión de las resoluciones del regulador. 
+ 
+Otro tema en el que hay coincidencia entre reguladores y organismo multilaterales, 
+no así entre empresas y algunos académicos (ver capítulo uno), es el de las tarifas basadas 
+en costos. En general, los reguladores están de acuerdo en que las metodologías para fijar 
+las tarifas de interconexión más apropiadas son aquellas basadas en costos y la tendencia 
+mundial se ha orientado al uso de modelos de costos futuros. Sin embargo, en muchos 
+países que no se utiliza tal metodología porque no cuentan con la capacidad técnica, con los 
+datos necesarios, o simplemente porque todavía no lo consideran políticamente 
+conveniente. Sin embargo, al menos entre los reguladores y organismos multilaterales, este 
+es uno de los aspectos de mayor consenso. 
+ 
+Finalmente, en el caso de la desagregación es posible señalar que es una tendencia 
+creciente en varios países que han reconocido que el éxito de la política de interconexión 
+requiere de la desagregación de los elementos de la red. Sin embargo, hay países, como los 
+Estados Unidos, donde la política de desagregación está siendo sometida a una revisión 
+porque se considera que no ha dado los resultados esperados. Tanto a nivel teórico como 
+práctico el tema está siendo debatido de manera importante y no es posible llegar una conclusión definitiva, sino referirse a los beneficios y a los costos que implica su 
+instrumentación y decidir sobre su aplicación. 3. Interconexión de redes telefónicas en México: resolución de disputas y búsqueda de 
+consensos 
+ 
+Geografía, demografía y desarrollo humano 
+ 
+México es un país con una gran diversidad cultural, lingüística y étnica. Tiene un 
+territorio de 2 millones de kilómetros cuadrados, el cual esta dividido en 31 estados y una 
+capital federal. Su población es de cerca de 105 millones. El idioma oficial es el español y 
+el segundo más hablado es el inglés. Durante el 2003 se ubicó en el lugar 55 de 172 en el 
+Índice de Desarrollo Humano del Programa de Naciones Unidas para el Desarrollo 
+(PNUD). El cuadro 3.1 contiene información con los indicadores sociales básicos de 
+México. 
+Cuadro 3.1. Indicadores Sociales de México 
+Indicador 2002 
+Pobreza (% de la población que vive con 2 dólares 24.3 
+diarios según el PNUD ) 
+Población Urbana (porcentaje de la población total) 75 
+Acceso a agua potable (porcentaje de la población 88 
+total) 
+Tasa de alfabetismo en adultos (porcentaje) 92 
+Mortalidad Infantil (por cada 1000 nacidos vivos) 25 
+Esperanza de vida al nacer (años) 74 
+Fuente. Banco Mundial y PNUD, 2004. 
+ 
+Desarrollo económico en los últimos 20 años 
+ 
+De 1982 a la actualidad, la política económica se ha caracterizado por privilegiar los 
+mecanismos de mercado, por orientar la economía al mercado internacional y por una 
+disminución de la actividad económica gubernamental. Desde entonces se han dado 
+importantes procesos de privatización, apertura y liberalización comercial y desregulación.12 Para 2002 el Producto Interno Bruto (PIB) Real fue de US $637.2 billones 
+y el PIB per cápita fue de alrededor de US $5900. 
+ 
+Desarrollo del sector telecomunicaciones en los últimos 20 años 
+ 
+Durante los últimos 15 años el sector mexicano de las telecomunicaciones ha 
+experimentado varias reformas: la liberalización del sector; la privatización en 1990 de la 
+empresa estatal Teléfonos de México (Telmex); la promulgación de la Ley Federal de 
+Telecomunicaciones; la creación en 1995 del regulador sectorial, la Comisión Federal de 
+Telecomunicaciones (Cofetel) y la apertura en 1997 a la competencia en el servicio de larga 
+distancia.13 
+ 
+En los noventa el sector de las telecomunicaciones creció 5.6 veces más rápido que 
+la economía total. Durante el mismo periodo cerca de US $ 24 671 millones se han 
+invertido en la expansión de la red y modernización de la industria de las 
+telecomunicaciones. En 2002, contribuyó con 4% del PIB mientras que en 1990 lo hacía 
+con 1.1%. El crecimiento anual promedio del tráfico de larga distancia entre 1990 y 2003 
+fue de 11.7%, mientras que para el mismo periodo las líneas fijas aumentaron en 9% 
+anualmente y el número de líneas telefónicas públicas pasó de 92,073 en 1990 a 725,460 en 
+2003 (Cofetel y Telmex, 2003). 
+ 
+                                                          
+12 A pesar de la importancia de estos procesos es posible señalar que el momento clave fue la crisis de 1995 
+que provocó la caída del Producto Interno Bruto en 6%. Para salir de la crisis fue necesaria la ayuda de los 
+Estados Unidos mediante un préstamo urgente de 50 mil millones de dólares. 
+13 R. Escobar, "El cambio estructural de las telecomunicaciones y la inversión: el caso de México" en CEPAL 
+serie Reformas Económicas No. 17, Febrero de 1999. En 2003, México cuenta con alrededor de 15,683,264 líneas fijas, una teledensidad 
+de 15% y se realizan aproximadamente 26,494 millones de llamadas. También cuenta con 
+30,097,000 suscriptores de telefonía celular con una tasa de penetración de 26.7%. Entre 
+1990 y 2003, las poblaciones con servicio telefónico pasaron de 10,621 a 21,358 y según 
+datos de Telmex (2003), de los 105 millones de habitantes, 92 millones cuentan con acceso 
+al servicio telefónico (ver gráficas 3.1 y 3.2). 
+Gráfica 3.1 
+Comparativo Internacional de Telefonía Fija
+Líneas por cada 100 habitantes
+80
+70
+60 1999
+50 2001
+2003
+40
+30
+20
+10
+0
+México Chile Brasil España Estados Unidos Suecia
+Fuente: Cofetel Gráfico 3.2 
+Comparativo Internacional de Telefonía Móvil
+ Líneas por cada 100 habitantes
+100
+90 1999
+80 2001
+70 2003
+60
+50
+40
+30
+20
+10
+0
+México Chile Brasil España Estados Unidos Suecia
+Fuente: Cofetel
+ 
+Introducción de la competencia Larga distancia (LD) 
+ 
+La Modificación al Título de Concesión de Telmex (MTC) contemplaba un periodo 
+monopólico por 6 años, en el cual se tenían que balancear las tarifas entre los servicios 
+locales y de LD.14 Durante esta etapa Telmex cumplió con sus compromisos respecto a la 
+calidad de servicios y cobertura.15 Por ejemplo, entre 1989 y 1990, el número de 
+poblaciones urbanas con servicio telefónico creció en un 72%; la telefonía rural creció en 
+300% y para 2000 la digitalización de la red de telecomunicaciones era del 100%. 
+                                                          
+14 El objetivo del rebalanceo de tarifas era eliminar el subsidio cruzado del segmento de larga distancia al 
+local. 
+15 Para el periodo comprendido entre la fecha de entrada en vigor de la concesión y el 31 de diciembre de 
+1994, Telmex debía, entre otras cosas: 
+• Reducir a partir de 1995 el plazo máximo de espera para la instalación de una nueva línea en las ciudades 
+que contaban con servicio telefónico básico con conmutación automática. A partir de ese año el plazo 
+debía ser de 6 meses después de recibida la solicitud y disminuir en un mes por cada año sucesivo hasta 
+el año 2000, a partir del cual el plazo máximo debía ser de un mes.  
+• La densidad de la telefonía pública debía aumentar del 0.5 a 2 casetas públicas por cada mil habitantes en 
+1994 y a 5 por cada mil habitantes a más tardar el 31 de diciembre de 1998.  
+• Todas las comunidades arriba de 5,000 habitantes (de acuerdo con el Censo General de Población y 
+Vivienda de 1990 del INEGI) debían ser provistas con el servicio telefónico. 
+• Para 1994 debían sustituirse 500,000 líneas obsoletas y el nivel de digitalización debía llegar al 58%. Aunque el inicio del periodo competitivo estaba contemplado para enero de 1997, la 
+Resolución de Interconexión de la Cofetel de 1994 contenía algunas previsiones para 
+facilitar la entrada al mercado de las nuevas empresas: Telmex debía proveer interconexión 
+a los operadores en 60 puntos de su red en 1997 e incrementarlos a 200 para el 2000. En la 
+Resolución de Junio de 1996, la Cofetel estableció que la igualdad de acceso iniciaría en 
+abril de 1998 y que consistía en el proceso de preselección de operadores y en el acceso 
+llamada por llamada (el cual no se implemento debido a la falta de acuerdos entre 
+operadores para facturar y colectar los ingresos y costos). 
+ 
+Mientras que en 1997 había 10 empresas en el mercado (Alestra, Avantel, Amaritel, 
+Iusatel, Miditel, Nextel, Protel, Telinor, Telmex y Telnor) para 2003 existían 31 (Ver 
+cuadro 2). Es posible señalar que la estructura del mercado se ha mantenido concentrada, 
+ya que aunque con la entrada de nuevos competidores, la cuota del mercado de Telmex 
+disminuyó rápidamente de 100% a 70%, Telmex ha recuperado terreno en los últimos años 
+(ver gráficas 3.3. y 3.4). Gráfica 3.3 
+Participación de las Nuevas Empresas: LD Nacional 
+70% (minutos)
+60%
+1999
+50%
+2001
+40%
+30%
+20%
+10%
+0%
+Fuente: OECD Communications Outlook, 2001 y 2003
+ 
+Gráfico 3.4 
+Participación de nuevos entrantes: LD Internacional 2001
+(minutos)
+60%
+50%
+40%
+30%
+20%
+10%
+0%
+Fuente. OECD Communications Outlook, 2003
+ 
+En relación con las tarifas, la LFT permite que éstas sean determinadas libremente 
+por los operadores, no sin antes ser registradas ante la Cofetel antes de implementarse. Pero 
+esta situación es diferente para Telmex que está sujeta a la regulación de sus tarifas 
+mediante el Price Cap compuesto por una canasta que incluye servicios locales y de LD 
+Suecia Austria
+Austria
+Canadá
+Reino Unido
+Corea
+Corea
+Italia Dinamarca
+Holanda España
+México
+Finlandia
+Noruega
+Francia
+Luxemburgo
+Portugal Italia
+Francia México
+Hungría
+Noruega
+República Checa
+Reino Unido
+Islandia
+Suecia
+España nacional e internacional ajustados por un factor de productividad de 4.5% para el periodo 
+entre 1999 y 2002. La Cofetel autorizó a Telmex incrementar sus tarifas, sin embargo, la 
+empresa ha preferido no hacerlo (según sus competidores como práctica predatoria) y el 
+regulador inició un litigio contra la empresa argumentado que al no aumentar sus tarifas de 
+manera apropiada daña a la competencia (Torre, 2000). 
+ 
+Según Cofetel, las tarifas de LD nacional e internacional, entre 1996 y 2003, 
+cayeron en términos reales 72% y 70%, respectivamente (ver gráfico 3.5). 
+ 
+Gráfico 3.5 
+ 
+ Tarifas de Larga Distancia 
+ Indice de Tarifas Reales 1996 = 100
+ 
+ 
+ 120 Larga Distancia
+ 
+100 Nacional Larga Distancia
+80 Internacional 
+60  
+40  
+20  
+ 
+ 0
+ 1996 1997 1998 1999 2000 2001 2002 Jun-03
+ 
+ Fuente: Cofetel
+ 
+ 
+ 
+Telefonía local 
+ 
+Las reglas de competencia para el servicio local fueron publicadas en octubre de 
+1997, los principales aspectos de tales reglas son: establecer los mecanismos para facilitar 
+la interconexión, facilitar la interoperabilidad de las redes y la continuidad del servicio y el 
+uso de tarifas no discriminatorias. También se incluyeron aspectos referentes al Programa 
+Pesos El que Llama Paga (CPP, por sus siglas en inglés), se establecieron algunas obligaciones al 
+operador dominante en términos de información, tarifas y calidad del servicio y se dieron a 
+conocer los lineamientos para la consolidación del servicio local. 
+ 
+En el año 2003, existían 8 empresas autorizadas (incluyendo a Telmex y Telnor) 
+para operar redes de telefonía local alámbrica y 25 para ofrecer el servicio de manera 
+inalámbrica (ver cuadro 2). Entre 1999 y 2003, las nuevas empresas sólo han logrado 
+instalar 603 mil líneas, lo que significa el 3.5% del total de las líneas existentes en el país. 
+Tal porcentaje de mercado está repartido entre 13 empresas, pero tan sólo entre Axtel y 
+Maxcom suman 490 líneas telefónicas, es decir, el 80% de los clientes que tienen 
+contratado el servicio con los nuevos competidores. Axtel, con más de 350 mil líneas, es el 
+segundo operador de telefonía local después de Telmex, mientras que Maxcom tiene una 
+base superior a los 138 mil clientes, de los cuales sólo 20% son usuarios residenciales y el 
+restante 80% son empresas (ver gráfico 3.6). Gráfico 3.6 
+Participación de nuevos entrantes: líneas de acceso 
+(2003)
+25%
+20%
+15%
+10%
+5%
+0%
+Fuente: OECD Communications Outlook, 2003
+ 
+Según la Cofetel, las tarifas del servicio telefónico local fijo han disminuido 15% y 
+21% en el rubro residencial y comercial, respectivamente, durante el periodo 1997-2003 
+(ver gráfico 3.7). 
+ 
+Gráfico 3.7 
+Tarifas del Servicio de Tel efonía Fija
+ Indice de Tarifas Reales 1 997 = 100
+ 
+120
+ 
+100
+ 
+80
+ 
+60
+40 Servicio Local Res idencial
+20 Servicio Local Comercial 
+0  
+1997 1998 1999 2000 2001 2002 2003
+Nota: El servicio local residencial y comercial incluyen sus corres pondientes gastos de instalación, renta 
+básica mensual y servicio local medido.
+Fuente: Cofetel.
+Pesos
+Hungría
+Reino Unido
+Holanda
+Dinamarca
+Estados Unidos
+España
+Finlandia
+Canadá
+México
+Portugal
+Corea
+Italia
+Francia
+Noruega
+Suecia
+Bélgica Telefonía celular 
+ 
+Para la introducción del servicio de telefonía celular el país fue dividido en 9 
+regiones. En el mercado se identifican cuatro empresas principales: Telcel, Iusacell (que 
+ahora pertenece a uno de los socios mayoritarios de Unefon), Unefon y Telefónica Móvil 
+(antes Pegaso). En principio, la única empresa con licencia en las nueve regiones era 
+Telcel, empresa subsidiaria de Telmex,16 Iusacell operaba en cuatro de los nueve regiones, 
+mientras que Telefónica y Unefon iniciaron sus operaciones en algunas ciudades y poco a 
+poco han ido extendiendo su cobertura aunque de manera muy lenta y todavía limitada 
+respecto a Telcel (ver cuadro 2). 
+ 
+Desde sus inicios el mercado mexicano de telefonía celular se ha mantenido 
+altamente concentrado. Al inicio de la competencia Telcel tenía un porcentaje del mercado 
+de 70% y el restante 30% estaba en manos de Iusacell; sin embargo, la estrategia de esta 
+última empresa fue mantenerse en el sector de pospago y descuidó el sector de prepago, lo 
+que redujo su porción del mercado a cerca del 2%. En la actualidad, Telcel tiene cerca del 
+80% de los clientes del mercado celular y el restante 20% está repartido entre Iusacell, 
+Telefónica Móvil y Unefon.17  
+ 
+                                                          
+16 En 2001, Telcel (Radio Móvil Dipsa) pidió a la SCT ampliar su concesión para operar una red de 
+telecomunicaciones, la aplicación incluía el permiso para ofrecer servicios de LD celular tal como lo hace de 
+manera local. La LFT contemplaba que la Cofetel tendría que dar su aprobación. La Cofetel, aunque no era 
+necesario, pidió la opinión de la Comisión Federal de Competencia (CFC), la cual señaló que dados lo 
+antecedentes de dominancia de Telmex en el mercado de LD otorgar tal concesión empeoraría tal situación 
+porque permitiría a Telmex evadir la regulación al ofrecer a sus clientes servicios de LD por medio de Telcel. 
+La Cofetel decidió otorgar tal concesión imponiendo algunas condiciones que según la OCDE y el Banco 
+Interamericano de Desarrollo han resultado altamente ineficaces. (OCDE - BID, 2004) 
+17 Un funcionario de Telcel señaló "que a pesar de la concentración del mercado, este sí se puede catalogar 
+como un mercado en competencia porque las estrategias de los competidores para ganar mercado, 
+especialmente de Telefónica, son muy agresivas." (Entrevista) Las líneas celulares pasaron de 64 mil en 1990, a poco más 30 millones en 2004, es 
+decir, el doble de las líneas fijas(ver gráfico 3.2). Este crecimiento se acentuó a partir de 
+1999 debido a cuatro factores: la introducción del sistema de prepago en 1995, la 
+introducción en 1999 del sistema el que llama paga, la entrada de nuevos operadores en el 
+mercado y la mejora en la situación económica luego de la crisis de 1995 (Briceño, 2000: 
+8).18 Entre 1997 y 2003, las tarifas del servicio de telefonía móvil, en términos reales, se 
+han reducido en 58% por minuto para el servicio de pospago y 46% por minuto para el 
+servicio de prepago (ver gráfico 3.8). 
+Gráfico 3.8 
+ 
+Tarifas del Servicio de Telefonía Móvil
+  Indice de Tarifas reales  1997 = 100
+ 120
+100
+ 
+80
+ 
+60
+ 
+40
+Postpago  
+20 Prepago
+ 
+ 0
+ 1997 1998 1999 2000 2001 2002 2003
+ Nota: El minuto de postpago corresponde al minuto incluido en la renta mensual, y el minuto de prepago 
+ corresponde al minuto de salida. Las cifras de 2003 corresponden al mes de junio.
+ Fuente: Cofetel.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Cuadro 3.2 Concesiones Otorgadas 
+Servicio 1990-1995 1996-2000 2001-2003 Total a 2003 
+Servicio 26 33 15 74 
+                                                          
+18 Según los propios operadores un factor que ha contribuido al crecimiento de la demanda los son motivos de 
+seguridad y la posibilidad de estar comunicado en cualquier momento y lugar. 
+Pesos Telefónico 
+Local: 19 22 2 43 
+Alámbrico 2 17 14 8 
+Inalámbrico 2 0 18 25 
+Larga Distancia 7 11 13 31 
+                       Fuente: Cofetel 
+ 
+Normatividad de la interconexión 
+ 
+La MTC establece que Telmex tiene la obligación de "celebrar contratos de 
+interconexión con otros concesionarios de redes públicas de telecomunicaciones u 
+operadores de cualquier otros tipo de redes."19, también se señala que "las condiciones de 
+dichos contratos se negociarán entre Telmex y los operadores."20 Además, se establece que 
+si "después de un periodo que aparezca razonable a la Secretaría, Telmex y el operador no 
+hubieren llegado a un acuerdo de interconexión a solicitud de cualquiera de las partes, La 
+Secretaría determinará los términos de las condiciones que no hubiesen podido ser 
+convenidas entre Telmex y el operador."21 
+ 
+La MTC también señala que "a partir del 1º de enero de 1997, La Secretaría podrá 
+obligar a Telmex a permitir la interconexión de otras redes públicas de larga distancia en 
+una forma tal que el usuario pueda escoger por cual red básica cursará su tráfico. Antes del 
+1º de enero de 1994, Telmex previa consulta con la Secretaría, publicará una propuesta para 
+cumplir está condición. Dicha propuesta podrá ser objetada por cualquier parte interesada. 
+En caso de que Telmex y las partes interesadas no llegaren a un acuerdo, La Secretaría 
+decidirá entre las diversas propuestas antes del 1º de enero de 1994." 
+                                                          
+19 MTCT, Cap. 5, http://www.cft.gob.mx 
+20 MTCT, Cap. 5, http://www.cft.gob.mx 
+21 MTCT, Cap. 5, http://www.cft.gob.mx En tanto, el artículo 95 del Reglamento de Telecomunicaciones (RT) señala que "si 
+después de un periodo de 60 días, los concesionarios y en su caso permisionarios y 
+concesionarios no hubieren llegado a un acuerdo de interconexión, a solicitud de cualquiera 
+de las partes, la Secretaría determinará los términos de interconexión que no hubiesen 
+podido ser convenidos ( ... )." 
+ 
+Finalmente, el artículo 42 de la LFT establece que "los concesionarios de redes 
+públicas de telecomunicaciones deberán interconectar sus redes, y a tal efecto suscribirán 
+un convenio en un plazo no mayor de 60 días naturales contados a partir de que algunos de 
+ellos lo solicite. Transcurrido dicho plazo sin que las partes hayan celebrado el convenio, o 
+antes si así lo solicitan ambas partes, la Secretaría, dentro de los 60 días naturales 
+siguientes, resolverá sobre las condiciones que no haya podido convenirse." La LFT 
+también ordena que los cargos por dicha interconexión deberán ser no discriminatorios, 
+basados en los costos y deberán hacerse públicos.22 
+ 
+De los tres documentos, la MTC, el RT y la LFT, se puede destacar: i) la posibilidad 
+que se da a los particulares para que negocien los acuerdos y de que sólo en caso de que no 
+lleguen a un acuerdo intervenga el regulador, y ii) la carencia del proceso que será seguido 
+por la SCT para determinar la tarifa de interconexión cuando no haya acuerdos. Tampoco 
+se imponen medidas de transparencia y rendición de cuentas a la SCT para que haga 
+                                                          
+22 También, se establecieron algunas obligaciones en materia de interconexión en los Reglamentos de Servicio 
+Local y de Larga Distancia, pero tienen como base la normatividad descrita en el presente apartado. público dicho proceso. Una vez hechas estas consideraciones podemos preguntarnos ¿qué 
+ha sucedido con el tema de la interconexión a partir de la apertura a la competencia? 
+ 
+La interconexión en la telefonía de fija local 
+ 
+La Cofetel, en su Resolución de 1998, determinó que la tarifa de interconexión a 
+nivel local debía ser en base a cargos recíprocos. A principios de 1999 Cofetel modificó 
+esta situación al dividir la interconexión entre redes locales en aquella referente a los 
+operadores que ofrecen servicios residenciales y comerciales, y aquellos especializados en 
+servicios para empresas y corporativos cuya área de servicio es limitada. 
+ 
+La Cofetel permitió que los cargos entre Telmex y estos operadores fueran de US 
+$0.01. Mientras que para los cargos de interconexión entre Telmex y los operadores de 
+servicios residenciales y comerciales se optó por el sistema bill and kep. Sólo en caso de 
+existir desequilibrio en el tráfico entre los operadores el usuario de la red tendrá que hacer 
+pagos por concepto de interconexión. 
+ 
+Telmex ha establecido convenios de interconexión con los dos proveedores locales 
+más importantes Axtel y Maxcom. En ambos casos las negociaciones han sido poco 
+problemáticas, por ejemplo, Axtel y Telmex llegaron a un acuerdo de interconexión sin la 
+necesidad de la intervención de la Cofetel, el cual fue cuestionado Avantel que sugirió que 
+existe una la relación muy cercana entre Telmex y Axtel debido a la sociedad entre los 
+socios extranjeros de estos -SBC y Bell Canada- (Avantel, 2000). En el caso de Maxcom, el acuerdo de interconexión contempla la disminución 
+gradual del porcentaje de desequilibrio de tráfico que pasó de 40% en 1999 a 15% en 2000. 
+Además, se estableció que si el desequilibrio de tráfico entre Telmex y Maxcom excede 
+70% en un mes dado, el esquema de bill and keep no se aplicará (Briceño, 2000). 
+ 
+La interconexión en la telefonía de fija LD 
+ 
+A fin de facilitar la entrada de los nuevos operadores de LD y consciente de la 
+importancia de la interconexión para el desarrollo de la competencia, la SCT emitió en 
+junio de 1994 la "Resolución sobre el Plan de Interconexión con Redes Públicas de Larga 
+Distancia." Entre las puntos más relevantes están las siguientes obligaciones para Telmex: 
+interconectar a sus redes a todos los operadores, proveer a los nuevos operadores 
+interconexión de su red iniciando en 1997 con 60 puntos y aumentándolos gradualmente 
+hasta llegar a 200 en 2000 y fijar cargos no discriminatorios y basados en costos. También 
+se dio prioridad a la negociación de acuerdos entre las empresas y la posibilidad de que la 
+SCT resuelva sobre los asuntos no convenidos. 
+ 
+La primera negociación entre operadores se llevó a cabo en enero de 1996 sin lograr 
+acuerdos respecto al monto de la tarifas de interconexión.23 Se solicitó la intervención de 
+                                                          
+23 M. García Murillo y J. Pick, "Interconnection Regulation in Mexico", TCPR 2003, Agenda 2002, 
+Septiembre de 2002. L. Torre, "El Mercado Telefónico en México: Diez Años Después de la Privatización de 
+Telmex", Centro de Análisis y Difusión Económica (CADE), Documento de investigación No. 17, Agosto de 
+2000. OECD, "Background Report on Regulatory Reform in the Telecommunications Industry", OECD, 
+Marzo de 1999. SCT cuya resolución fue establecer la tarifa de interconexión para 1997 y 1998. Las tarifas 
+para ciudades con Centros de Tránsito Interurbano (CTI) fueron en 1997 de US $0.0257 y 
+en 1998 de US $0.0231, mientras que para ciudades con Centros con Capacidad de 
+Enrutamiento (CCE), pero no con CTI, fueron de US $0.0240 para 1997 y de US $0.0219 
+para 1998.24  
+ 
+Además se determinó que las nuevas empresas debían pagar 58% adicional por 
+concepto de terminación de tráfico de LD, por lo que en realidad, la tarifa que pagaban las 
+empresas en 1997 era de US $0.0536 y de US $0.0513. La SCT también señaló que la tarifa 
+para 1999 no debía ser mayor de US $0.0315 y que contrataría a un experto externo para 
+determinar los costos que debían pagar los competidores de Telmex para compensarla por 
+los gastos que realizó para la renovación de su infraestructura (Proyectos Especiales). 
+ 
+Sin embargo, las tarifas fijadas por la SCT provocaron la inconformidad tanto de 
+Telmex como sus competidores. Para los entrantes las tarifas por terminar las llamadas de 
+LD en la red de Telmex eran muy altas y no encontraban una razón que justificará el 
+sobrecargo del 58%. Telmex, por su parte, manifestó que los cargos cobrados por la 
+interconexión no eran suficientes para cubrir los costos en que había incurrido para otorgar 
+dicho servicio. 
+ 
+A pesar de la inconformidad mostrada por todos los operadores ante la resolución de 
+la SCT, Avantel (socio de MCI) firmó, en octubre de 1996, un acuerdo de interconexión 
+con Telmex, aunque posteriormente emprendió una serie de acciones legales para 
+                                                          
+24 La Comisión Federal de Telecomunicaciones entró en funciones a mediados de 1995. ampararse de las resoluciones de la recién creada Cofetel, al considerar que existía falta de 
+transparencia en la manera como se habían fijado las tarifas de interconexión y el 
+sobrecargo de 58%. 
+ 
+En febrero de 1997, la SCT recibió los resultados del experto que contrató 
+(Bellcore) para determinar los costos de actualización de la infraestructura de Telmex; sólo 
+que, los resultados se dieron a conocer hasta julio causando insatisfacción entre los 
+operadores. La cantidad que el experto definió oscilaba entre US $250 y 280 millones y la 
+decisión final de la Cofetel fue establecerla en US $422 millones, de los cuales el 15% se 
+dividieron entre las nueve compañías que solicitaron la interconexión de acuerdo con su 
+participación de mercado, el resto debía ser pagado por Telmex.25 
+ 
+En este clima conflictivo, las empresas con capital estadounidenses solicitaron la 
+intervención de las autoridades de su país en el asunto de la interconexión, la Federal 
+Communications Commission (FCC) indicó que las reglas de competencia en las 
+telecomunicaciones mexicanas eran transparentes, justas y equitativas al grado de permitir 
+que un periodo muy corto las nuevos operadores se adueñaran de una porción considerable 
+del mercado de LD.26 Tal postura dejó sin efecto, momentáneamente, las quejas de los 
+competidores de Telmex. 
+ 
+                                                          
+25 Según un funcionario de Alestra debido al desequilibrio de fuerzas entre las empresas, la principal 
+estrategia de los nuevos operadores para presionar a Telmex para que cediera a las demandas de estás fue no 
+pagarle sus adeudos.  
+26 FCC, Telmex / Sprint. Act for Global Authority to Operate as an International Switched Resale Carrier 
+Between the United States and International Points, Including Mexico, File No. ITC-97-127, 29 de octubre de 
+1997. A finales de 1997, Avantel inició un juicio contra la SCT quien desechó el reclamo 
+argumentando que estaba fuera de tiempo, pero mediante un amparo consiguió suspender 
+temporalmente el pago de la interconexión y de los proyectos especiales a Telmex. Avantel 
+también solicitó un amparo para evitar que Telmex la desconectara de su red ante la falta de 
+pagos.27 Según García y Pick (2002), en principio Telmex se mantuvo al margen de las 
+disputas legales entre el regulador y los nuevos operadores, pero ante la falta de pagos 
+asumió una postura legal más agresiva. Durante el proceso legal, los representantes de 
+Telmex, Avantel y Alestra intentaron llegar a un acuerdo sobre las tarifas de interconexión, 
+pero sus esfuerzos fueron en vano.28 
+ 
+Por otra parte, en diciembre de 1997 la Comisión Federal de Competencia (CFC) 
+"emitió una resolución preeliminar en la que señalaban que Telmex era un agente 
+económico con poder sustancial en los mercados relevantes de: telefonía básica local, 
+acceso, larga distancia nacional, transporte interurbano y larga distancia internacional."29 
+Tal resolución resolvió aplicar una regulación más estricta a Telmex. En septiembre de 
+2000, la Cofetel emitió su Resolución Final de Dominancia, en la que se imponían a 
+Telmex obligaciones en materia de tarifas, calidad del servicio y relacionadas con la 
+información que le soliciten las autoridades. Sin embargo, Telmex promovió y obtuvo un 
+                                                          
+27 En los primeros días de julio de 1998, Telmex suspendió los servicios de enlaces privados a Avantel, en 
+consecuencia dicha empresa denunció ante Cofetel a Telmex manifestando el sensible inconveniente que esta 
+acción provocaba para un gran número de sus clientes de larga distancia. La Cofetel intervinó a efecto de 
+lograr la reinstalación del servicio suspendido, y con ello causar el menor perjuicio posible a los usuarios de 
+dichos enlaces. La reinstalación del servicio ocurrió unas horas después en virtud del pago realizado por 
+Avantel de los adeudos que hasta ese momento existían por el uso de los enlaces de referencia. Boletín 
+Cofetel 38 /98 
+28 La principal explicación de la intensa lucha en el mercado de LD es el volumen total de tráfico 
+internacional, que por ejemplo en 2002 fue de 1,996,904,093 minutos salida y 5,940,082,841 minutos de 
+entrada, de los cuales 84% y 97%, respectivamente, fueron con los Estados Unidos. 
+29 J. Núñez, "El poder de mercado en la legislación de competencia económica", en Breviarios Jurídicos No. 
+10, Porrúa, México, 2003, pp. 37 - 38. amparo contra la resolución de CFC y por tanto, la resolución de la Cofetel quedó 
+invalidada. 
+ 
+En mayo de 2001, la CFC procedió a reponer el procedimiento contra Telmex, ante 
+lo cual la empresa interpuso un recurso de reconsideración que fue calificado por la CFC 
+como inatendible y ratificó su resolución de mayo de 2001. La empresa promovió un nuevo 
+juicio y en abril de 2004 se le otorgó un amparo que obliga a la CFC a emitir una nueva 
+resolución que deberá enfocarse al tema de la clasificación de los mercados y la 
+determinación de poder sustancial que a su vez será la base legal para que la Cofetel 
+también emita una nueva resolución respecto a la dominancia de Telmex.30 
+ 
+En julio de 1998, los nuevos operadores iniciaron un proceso de negociación con 
+Telmex para determinar las tarifas de interconexión para el periodo 1999-2000. No se 
+logró ningún acuerdo y de nuevo la SCT, por medio de la Cofetel, emitió una resolución el 
+27 de noviembre de 1998. Entre los elementos más importantes de dicho documento están: 
+la eliminación del sobrecargo de 58% y con ello, la reducción de la tarifa de interconexión 
+a US $0.026 por punta/minuto. Se contempló el cobro por parte de Telmex de un 
+sobrecargo por intento de llamadas no completadas de 5.7% sobre el total de minutos de 
+interconexión facturados mensualmente. Además, se incluyó el pago de US $422 millones 
+para proyectos especiales y la posibilidad de que los operadores pudieran entrar a las 
+instalaciones de Telmex a colocar su propio equipo. Sin embargo, Avantel permaneció 
+                                                          
+30 Un funcionario de la CFC señaló que en caso de que Telmex gané el juicio la situación de la CFC y de la 
+Cofetel sería muy difícil ya que no podrían emitir resoluciones en "fijo" porque el argumento actual de 
+Telmex es que las autoridades no han actualizado los datos que utilizaron en los argumentos en su contra 
+(Entrevista). renuente a firmar el acuerdo porque los US $422 millones que tenían que pagarse por los 
+Proyectos Especiales se habían convertido en US $700 debido a la inflación y a las tasas de 
+interés.31 
+ 
+En septiembre de 1999, Avantel inició otro proceso legal contra Telmex, el cual fue 
+apoyado por la FCC, quien recomendó a Telmex permitir a Avantel interconectar sus 
+líneas, de lo contrario podría poner en peligro la petición de la empresa mexicana para 
+ofrecer servicios de larga distancia en los Estados Unidos.32 En una resolución contra 
+Telmex, dada a conocer en enero de 2000, la FCC decidió imponerle una multa de US 
+$100,000 por la violación de la Sección 214 de su autorización para proveer servicios de 
+reventa a nivel internacional en Estados Unidos.33 En tal resolución se hace alusión a las 
+denuncias de Avantel y Alestra contra Telmex en el sentido de que esta última ha dejado de 
+proveerles circuitos y líneas privadas.34  
+                                                          
+31 En abril de 1998, Avantel obtuvo un amparo para suspender algunos pagos a Telmex relacionados a la 
+interconexión. Telmex se inconformó ante tal situación. En enero de 2000 un juez civil confirmó la 
+suspensión del pago de tarifas otorgada a Avantel con anterioridad, lo cuál no sólo era valido para las tarifas 
+2, 3 5 y 7 de la Resolución de 1998, sino que también suspendía el pago del sobrecargo del 58% contemplado 
+en la Resolución de 1996, el aumento en la tarifa de interconexión de US $ 0.01 y el sobrecargo de 5.7% por 
+intentos de llamadas no logradas. Otros empresas que promovieron amparos de este tipo fueron Miditel, 
+Alestra, y Marcatel. 
+32 En febrero de 1998, la FCC ya había manifestado su interés por la disminución de la tarifa de interconexión 
+en México, especialmente se señaló el interés por la rápida eliminación del componente del 58% sobre las 
+tarifas de interconexión. En respuesta la Cofetel manifestó que "ese sobrecargo, tal como lo expresa la 
+Resolución de abril de 1996, tiene una vigencia estrictamente transitoria y su reducción gradual coincide con 
+la disminución prevista, en el mismo ordenamiento, de la tarifa de interconexión. La pertinencia de su ajuste 
+anticipado, a la luz de las condiciones hoy prevalecientes en el mercado mexicano, además de no incidir en 
+forma alguna en la relación entre operadores mexicanos y estadounidenses, es una decisión exclusiva de los 
+concesionarios de México, y en su caso, de las propias autoridades mexicanas." FCC, Statement of chairman 
+William E. Kennard on the current dispute between Telmex and U.S. carriers, 25 de febrero de 1998 y  
+Boletín Cofetel 7/98. 
+33 FCC, Telmex International Ventures USA, Inc. Apparent Liability for Forfeiture, Archivo File No. EB-00-
+IH-0040, enero de 2000. 
+34 Ver FCC,  MCI WorldCom ex parte, re: Telmex International Ventures USA, Inc., File No. ITC-97-127, 
+August 16, 1999; FCC, MCI WorldCom ex parte, re: Telmex International Ventures USA, Inc., File No. ITC-
+97-127, September 2, 1999; FCC, MCI WorldCom ex parte re: Telmex International Ventures USA, Inc., File En agosto de 2000, la Representación de Comercio de los Estados Unidos (USTR) 
+pidió a la OMC realizar algunas consultas al Gobierno Mexicano respecto a sus 
+compromisos y obligaciones bajo el Acuerdo General de Comercio de Servicios (GATS). 
+Tres temas fueron los especialmente considerados como incumplimientos: la regulación al 
+operador dominante, las tarifas de interconexión y las tarifas de liquidación y reventa 
+simple internacional. Las platicas se llevaron a cabo en octubre del mismo año pero no 
+hubo avances, por lo que la USTR solicitó el establecimiento de un panel que tuvo lugar en 
+enero de 2001. 
+ 
+Al respecto el Presidente de la Cofetel Jorge Nicolín declaró: "Estamos en absoluto 
+cumplimiento de cualquiera de las obligaciones que nos impone la OMC al ser miembro de 
+ellos (...) La representación comercial de la Casa Blanca tiene un caso bastante débil en 
+contra de México, puesto que la apertura es un hecho y lo que estamos enfrentando es, 
+precisamente, una competencia férrea y no una ausencia de competencia, y por eso salen 
+[sobrando] este tipo de cuestionamientos y problemas." 35 
+ 
+                                                                                                                                                                                 
+No. ITC-97-127, October 20, 1999; FCC, AT&T ex parte, re: Telmex Ventures USA, Inc., File No. ITC-97-
+127, August 27, 1999; FCC, AT&T ex parte, re: Telmex Ventures USA, Inc., File No. ITC-97-127, October 
+20, 1999. 
+35 Ante los avances en la negociaciones entre operadores y la declaración de Telmex como operador 
+dominante el gobierno norteamericano desistió de su propuesta de llegar a un panel de controversias. Sin 
+embargo, en febrero de 2002, la USTR pidió el establecimiento de un panel de controversias para tratar la 
+naturaleza anti - competitiva del régimen de telecomunicaciones internacionales. El panel se instaló en agosto 
+de 2002 y finalmente en junio de 2004 los gobiernos de México y los Estados Unidos llegaron a un acuerdo 
+mediante el cual se puso fin a la disputa ante la OMC. El arreglo consistió en la adecuación de las reglas de 
+LD internacional y la liberalización parcial de este mercado . USTR, Dispute Settlement Update, Marzo de 
+2004 y USTR, Mexico - Measures Affecting Telecommunications Services, 2002 y Boletín de la Secretaría 
+de Economía No. 63, martes  1 de junio de 2004. En enero de 2000, iniciaron las negociaciones entre Telmex, Avantel y Alestra para 
+definir los cargos de interconexión para 2001.36 Pero las negociaciones fracasaron por lo 
+que la intervención de Cofetel fue necesaria. Para la determinación de las tarifas de 
+interconexión aplicables en 2001, la Cofetel desarrolló un modelo de costos con el apoyo 
+del grupo consultor NERA. Según J. Arredondo (2001), Comisionado de la Cofetel, "la 
+metodología y el modelo desarrollados son congruentes con la práctica internacional; el 
+modelo estima el costo incremental de largo plazo total por servicio (TSLRIC) en que 
+incurre Telmex por proporcionar el servicio de interconexión a otros concesionarios. Este 
+método permite identificar todos los costos, fijos y variables, directamente asignables a la 
+provisión del servicio de interconexión y que son adicionales a los costos asociados a la 
+oferta de otros servicios." 
+El organismo regulador fijó la tarifa de interconexión en US $0.0125 
+punta/minuto,37 también señaló que los nuevos operadores tendrían que pagar los montos 
+referentes a los Proyectos Especiales y se pidió a Telmex la desagregación de la tarifa del 
+servicio de interconexión de larga distancia, identificando en forma expresa las partes de la 
+tarifa que corresponden a cada una de las funciones o elementos de red que integran la 
+prestación de este servicio a fin de que los nuevos operadores no pagarán por servicios que 
+no utilizaban.38 Mientras que se mantuvo el sobrecargo por intento de llamadas no 
+                                                          
+36 Durante ese proceso los nuevos operadores se quejaron de que las tarifas que se cobraban a los usuarios 
+finales no les permitían cubrir sus costos, por lo que Avantel y Alestra decidieron aumentar sus tarifas en 
+14.16% esperando que Telmex hiciera lo mismo, lo cual no sucedió aun cuando la Cofetel le sugirió, de 
+manera oficial, hacerlo. 
+37 Aunque según la Resolución de 1998 la tarifa de interconexión debía ser de US $0.026, en la resolución 
+para fijar las tarifas de 2001 señala que para Avantel el costo desciende de US $0.0336 a US $0.0125. La 
+tarifa que se cobraba a Avantel, según Telmex, es mayor porque dicha empresa se dedica a cubrir el mercado 
+corporativo y por tanto, no se le puede otorgar una tarifa similar a la de las empresas que también cubren el 
+mercado residencial. Boletín Cofetel 39/ 2000. 
+38 Para emitir su resolución la Cofetel consideró: i) los costos en que se incurre por la prestación del servicio 
+de interconexión; por lo que la Cofetel desarrolló un modelo con el propósito de determinar los costos en que completadas de 5.7% que Telmex cobra el total de minutos de interconexión facturados 
+mensualmente. 
+ 
+A principios de 2000 se determinó que la tarifa de interconexión que las 
+empresas de LD debían pagar a Axtel sería la misma que a Telmex (US $0.026), pero 
+Axtel (así como Unefon y Maxcom) argumentó que este precio era muy bajo en 
+relación con los costos en que incurría, lo cual, no le permitía recuperar su inversión y 
+desincentivaba la construcción de infraestructura. Para esta empresa no era posible 
+comparar sus costos con los de Telmex debido a la diferencia de tamaño de sus redes.39  
+ 
+A fin de afianzar su posición funcionarios de Axtel se entrevistaron con W. 
+Kennard, Presidente de la FCC, a quien expusieron su postura respecto a las tarifas de 
+interconexión y su disposición para negociar con Alestra y Avantel. En ese momento se 
+inició una controversia entre Axtel y Avantel, mientras Axtel se pronunció por fijar una 
+tarifa de interconexión de US $ 0.058 que le permita invertir en la red, Avantel señaló, en el 
+documento "Aclaraciones en busca de consolidar la competencia en el mercado de 
+telecomunicaciones en México", que las comparaciones que realizaron los funcionarios de 
+Axtel entre la tarifa de interconexión en México y los Estados Unidos, la pretensión de 
+                                                                                                                                                                                 
+incurre Telmex/Telnor en la prestación del servicio de interconexión; ii) la evolución de las referencias 
+internacionales, en particular la observada en aquellos países con los que México mantiene los mayores flujos 
+comerciales, y iii) el crecimiento y desarrollo de los mercados de telecomunicaciones en el país. 
+39 El 17 de mayo de 2000 Avantel y la empresa Megacable firmaron un contrato de interconexión 
+estableciendo una tarifa de US $0.010. Axtel de cobrar tarifas de interconexión diferenciadas y sus argumentos sobre la necesidad 
+de elevar la tarifa de interconexión para poder expandir la red, eran totalmente erróneas.40 
+ 
+En julio de 2001 iniciaron las negociaciones para determinar la tarifa de 
+interconexión para el 2002.41 Telmex y Avantel cada una por su parte contrataron expertos 
+para determinar si las tarifas de interconexión eran comparables a las de otros países. 
+Telmex contrató a la firma Charles River Associates que señaló que la tarifa de 
+interconexión mexicana por terminación de llamadas era de US $0.032, la cual es menor a 
+la cobrada en los Estados Unidos de US $0.0343. Ante los resultados presentados por la 
+consultora, Avantel contrató a Pablo Spiller de la Universidad de California en Berkeley 
+quien aseveró que la firma consultora no había considerado la información de tarifas de 
+acceso actual sino una obsoleta (Murillo y Pick, 2002).42 
+ 
+Finalmente las tarifas se fijaron en US $0.0097 y el sobrecargo por intentó de 
+llamadas cayó de 5.27% a 2.85%. En el comunicado 01/2001 del 19 de diciembre de 2001 
+con título "Acuerdan empresas tarifas de interconexión que regirán 2002", el Presidente de 
+                                                          
+40 Este documento fue proporcionado por la Oficina de Relaciones Institucionales de Avantel. 
+41 En enero de 2001, por medio de un boletín Alestra: "Alestra, empresa mexicana de telecomunicaciones 
+propiedad de Alfa, BBVA-Bancomer y AT&T, anunció la ratificación, de un convenio firmado con Telmex, 
+el 29 de diciembre del 2000, mediante el que se resuelven diversas controversias entre las empresas." Entre 
+los diversos aspectos acordados se incluyen: reducción de la tarifa de interconexión LD-local, con una mayor 
+orientación a costos reales; pago de los adeudos pendientes entre las empresas; reducción en tarifas de reventa 
+(transporte interurbano); propuesta de nuevos criterios para regir el tráfico internacional; acuerdo de 
+interconexión local-local, acuerdo para asegurar calidad y entrega de servicios intermedios, desistimiento de 
+la mayoría de los procesos administrativos y judiciales existentes. 
+42 Por otra parte, los operadores entrantes presentaron un modelo de costos de interconexión cuyas 
+características a grandes rasgos son: estima el Costo Total Incremental Promedio de Largo Plazo, considera 
+las mejores prácticas internacionales, consistente con las prácticas de los principales socios comerciales de 
+México, toma en cuenta la topología real de la red nacional y considera el valor futuro de reemplazo de los 
+activos. Los resultados del modelo son para uso exclusivo de las empresas que pagaron por su elaboración y 
+por tanto, son confidenciales. la Cofetel señaló que en "un esfuerzo porque los concesionarios antepusieran el diálogo , la 
+cooperación y el consenso, el beneficio de la sociedad -a solicitud de Cofetel-, 
+recientemente reanudaron sus negociaciones."  
+ 
+Pero según el Dr. Fernando Butler, ex-funcionario de Cofetel, y un funcionario de 
+Alestra, calificar el acuerdo de "cooperativo y consensuado" es cuestionable. Además 
+coincidieron en señalar que "las empresa entrantes solicitaron a Telmex la interconexión, 
+que se iniciaron las negociaciones y que no se alcanzó ningún acuerdo. Por lo que, tal como 
+se establece en la LFT, se solicitó a Cofetel que emitiera una resolución sobre el asunto, 
+pero Cofetel simplemente ignoró la petición de las empresas entrantes. Ante tal situación, 
+las empresas no tuvieron otro remedio que negociar con Telmex y llegar a un arreglo (el 
+cual por ser entre privados es confidencial)."43 
+ 
+El funcionario de Alestra admitió que "el acuerdo refleja el poder de negociación de 
+Telmex y la inacción del regulador, ante esto último, las empresas prefirieron negociar con 
+Telmex para evitar largos litigios, asegurar la provisión de los servicios que requieren de 
+Telmex a tiempo y con la calidad necesaria y así poder concentrarse en sus actividades 
+comerciales." Por su parte, el Dr. Butler señaló que "el ignorar a los nuevos operadores 
+obedece a la estrategia del actual gobierno que se inclina por el aumento de la teledensidad 
+y la creación de infraestructura (Programa de Telecomunicaciones 2000 - 2006). Por lo 
+tanto, se busca asegurar la inversión de las empresas que invierten en la creación de red."44  
+ 
+                                                          
+43 Entrevista anónima con funcionario de Alestra. 
+44 En 2003, la tarifa de interconexión fue la misma que en 2002, renovándose los acuerdos de éste último año. El gráfico 3.9 muestra la evolución de la tarifa de interconexión en México y el 
+promedio de dicha tarifa para los Estados Unidos. Mientras que el gráfico 3.10 muestra las 
+tarifas de interconexión de otros países para el año 2000. 
+ 
+Gráfico 3.9 
+ 
+Tarifas de Interconexión en México y USA 
+1984 - 2 002
+10  
+Estados Unidos (Promedio) México
+8  
+6  
+4  
+ 
+2
+ 
+0
+ 
+G1
+98
+4
+ráfic1
+98
+5
+o 3.1
+98
+6
+10 1
+98
+7
+19
+88
+19
+89
+19
+90
+19
+91
+19
+92
+19
+93
+19
+94
+19
+95
+19
+96
+19
+97
+19
+98
+19
+99
+20
+00
+20
+01
+20
+02
+Fuente: Cofetel
+Tarifas de interconexión, marzo de 2000 (Centavos de USD)
+3 2.85 2.842.7 2.6
+2.5 2.352.18 2.2 2.22 2.23 2.26
+2.04
+2 1.85
+1.5 1.52
+1.5 1.19 1.26
+0.9
+1
+0.5
+0
+Fuente: OECD Reforma Regulatoria en México, 2000
+ 
+Centavos de dólar
+British Telecom
+Bell Canada
+Telia
+Telefonica
+Deustch Telekom
+KPN
+Promedio 
+Swisscom
+TeleDenmark
+Telecom Italia
+Bell Italia
+France Telecom
+Belgacom
+NTT
+Nymex  
+Telmex(1)
+Telmex(2) La interconexión en la telefonía móvil 
+ 
+Con la Resolución No P/271198/0282 de la Cofetel de noviembre de 1998, se 
+solucionaron las diferencias entre empresas por la tarifa de interconexión de fijo a móvil. 
+En dicha resolución se determinó que la tarifa por terminación de tráfico en la red celular 
+sería de US $0.18 ajustables por inflación y el inicio del sistema CPP en mayo de 1999. En 
+principio Telmex y Telcel se opusieron a la introducción del sistema el que llama paga, 
+pero en abril de 1999 la Cofetel anunció que había logrado acuerdos con los operadores 
+móviles para instrumentar el sistema. 
+ 
+Los concesionarios acordaron una tarifa de fijo a móvil de US $0.19, sin ajustes por 
+inflación y que el cargo que Telmex cobraría a sus suscriptores por la terminación de 
+llamadas en las redes de los operadores móviles sería US $0.262 que incluía un cargo de 
+$0.063 con la idea de que la tarifa fija a móvil debería ser suficiente para cubrir los costos 
+de interconexión y los gastos en que incurren los operadores fijos por facturación y 
+cobranza de las llamadas fijos a móviles (ver gráfico 3.11). 
+ 
+Gráfico 3. 11 Cargos por Interconexión en América Latina, 2001 
+Sistema El que Llama Paga 
+(Centavos de US$ por minuto)
+0.35 Fijo - Móvil
+0.3 Móvil Fijo 
+0.25
+0.2
+0.15
+0.1
+0.05
+0
+Fuente: OVUM y Apoyo Consultoria
+ 
+Durante las negociaciones que tuvieron lugar antes de fijar la tarifa Telmex había 
+argumentado que el cargo por facturación y cobranza debía ser elevado porque tenía que 
+absorber los cargos que sus clientes se negaban a pagar debido a la tarifa más alta entre fijo 
+a móvil. Para Telmex lo justo era apropiarse del 70% de la tarifa por llamadas a móvil, es 
+decir, US $0.135, mientras que lo operadores móviles proponían a Telmex darle el 11%, es 
+decir, US $0.022 por minuto. El cargo de interconexión que Telmex cobra por la 
+facturación cobranza es considerado elevado por los operadores móviles con excepción de 
+Telcel, que la consideraba apropiada. Ante la inconformidad de los operadores móviles la 
+Cofetel pidió a Telmex justificar el cargo de manera escrita y tomar una decisión en octubre 
+de 2000.45 
+ 
+                                                          
+45 El funcionario de Telcel señaló que "el cobro por administración, facturación y cobranza debe hacerse 
+porque el realizar estas funciones consume recursos de la empresa que lo hace. Dijo no saber si era un cargo 
+elevado o bajo pero que su existencia era necesaria." 
+Guatemala
+Venezuela
+Paraguay
+Nicaragua
+Chile
+Colombia
+Perú
+México
+Bolivia
+Argentina El funcionario de Telcel entrevistado aseguró que "a partir de la resolución de 1998 
+y del nacimiento del CPP, no ha habido disputas importantes entre los operadores móviles 
+por el tema de la interconexión. Por el contrario, señaló que los operadores han tenido 
+muchos acuerdos -que calificó de muy buenos- y que todos los concesionarios locales se 
+reúnen al menos dos veces por año para detallar principalmente aspectos de facturación y 
+cobranza." También señaló que desde su punto de vista, las empresas locales no tienen 
+interés en que se modifique o discuta la LFT o alguna normatividad.46 
+ 
+De acuerdo con la Cofetel, aunque los cargos de fijo a móvil se han mantenido sin 
+cambios nominales desde la introducción del programa el que llama paga en términos 
+reales se han reducido en aproximadamente en 22% (Peláez, 2003). Por su parte, el 
+funcionario de Telcel declaró que en términos reales las tarifas celulares son menores a las 
+nominales de $3.48 más IVA ($ 4) porque en las empresas otorgan muchos minutos de 
+manera gratuita (ver gráfica 3.12). 
+ 
+ 
+ 
+Gráfico 3.12 
+ Tarifas de Interconexión Móvil 
+(términos reales)
+ 2
+ 1.5
+ 
+ 1
+              0  .  5                                        
+46 Quizá la última gran discusión entre operadores móviles se debió al desacuerdo de interconexión 
+relacionado0 a la prestación del servicio de mensajes cortos. Este asunto se resolvió en octubre de 2003, la 
+Cofetel ordenó la interconexión de las redes a efecto de que los usuarios de distintas empresas puedan 
+completar dichos mensajes en u0n/0 
+5plazo que no exceda 60 días, también determinó que este servicio conduce 
+tráfico pú1b99
+9/0
+5
+lico1 9c9
+9/0
+8
+onm19u9
+9/1
+1
+tad2o00
+0/0
+2
+ por2 0l0o q2u0e0
+0/0
+8
+ le 2a00
+0/1
+1
+plic2a0 0
+1/0
+2
+el a2r0t0
+1/0
+5
+ícul2o00
+1/0
+8
+ 42 2d00
+1/1
+1
+e la2 0L0
+2/0
+2
+FT2 0y0
+2/0
+5
+ pro20p0
+2/0
+8
+uso2 0a0
+2/1
+1
+ las2 0e0
+3/0
+2
+mp2r0e0
+3/0
+5
+sas el esquema 
+bill and keep. 2
+00
+3/0
+8 p
+/
+Fuente: Cofetel
+Pesos Temas relacionados con la interconexión en México 
+ 
+Durante el 2001 se llevo a cabo la Conferencia Parlamentaria en Materia de 
+Telecomunicaciones donde los operadores y las autoridades presentaron sus propuestas 
+sobre las posibles modificaciones a la LFT. En el caso de la interconexión las posibles 
+reformas sugeridas fueron dirigidas tanto a aspectos técnicos como económicos. Según mi 
+punto de vista, los temas más importantes para las empresas son los siguientes: 
+ 
+Determinación de tarifas de interconexión 
+ 
+En la actualidad no existe una normatividad que obligue a Telmex a cobrar una 
+tarifa de interconexión basada en costos. La LFT en su artículo 63, párrafo segundo, dice 
+que "la regulación tarifaria que se aplique buscará que las tarifas de cada servicio, 
+capacidad o función, incluyendo las de interconexión, permitan recuperar, al menos, el 
+costo incremental promedio de largo plazo." 
+Mientras que la SCT en su Resolución de abril de 1996, estableció que para 
+determinar las tarifas de interconexión aplicables en 1999 las futuras negociaciones deberán 
+considerar, entre otras cosas, los "costos incrementales promedio de largo plazo de los 
+servicios de interconexión." Posteriormente, en su Resolución de noviembre de 1998 la 
+Cofetel reconoció que en México la tarifa de interconexión era "claramente superior al costo en que incurre Telmex en la prestación del servicio de interconexión, mismo que se 
+estima en alrededor de un centavo por dólar. Sin embargo, la tarifa al público del servicio 
+local residencial es aún insuficiente para recuperar los costos, por lo que se estimó 
+necesario mantener un elemento de contribución a la recuperación de los mismos."47 
+ 
+En 1999, la OECD (2000) aseguró que el nivel absoluto de los cargos de 
+interconexión en México era alto en relación con estándares internacionales, mientras que 
+la tarifa en México se situaba en US $0.0284, en Estados Unidos era de US $0.015 
+centavos y en Inglaterra de menos de US $0.01. La OECD (2000) señaló que si bien 
+México ha seguido la estrategia correcta de cobrar la interconexión por minuto, no ha 
+seguido una estrategia de estructurar los cargos de interconexión de acuerdo con los costos 
+fundamentales y que en cualquier lugar donde la estructura de precios no se relaciona con 
+los costos, el patrón de consumo se distorsiona y surgen oportunidades para conductas 
+anticompetitivas.48 
+ 
+En 2001, los nuevos operadores señalaron que "el mayor motivo de controversia 
+entre los operadores se ha derivado de la falta de acuerdos en los términos y condiciones de 
+los servicios de interconexión, se propone que con base en la experiencia internacional y 
+mediante un Reglamento de Interconexión, se establezcan las definiciones básicas, así 
+como una regulación específica de los servicios de interconexión de los operadores 
+                                                          
+47 SCT y Cofetel, "Apertura a la Competencia del Servicio Telefónico en México", Mayo de 1999, pp. 17 - 
+18. 
+48 Telmex envió una nota metodológica a la OCDE donde explica las razones por las que la metodología 
+empleada por esa organización resulta inadecuada. La empresa señaló que en marzo de 2003, le envió un 
+recordatorio para dar seguimiento al asunto que a la fecha no ha sido respondido. (Telmex, 2004). El ex 
+funcionario de Cofetel aseveró que las comparaciones de la OCDE eran incorrectas pues dicha organización 
+no sabía las características de los servicios que tomó como referentes. dominantes que controlan los recursos esenciales y un modelo CTIPLP (Costos 
+Incrementales Promedio de Largo Plazo), considerando la parte correspondiente de los 
+costos comunes que incluye el costo de capital para determinar las tarifas de cada servicio, 
+elemento, función y capacidad de su red" (SCT, 2001). 
+ 
+Al respecto Telmex aseveró que de acuerdo con el Profesor Jerry Hausman, la FCC 
+cometió un error al elegir al TELRIC (Costo Incremental de Largo Plazo del Elemento 
+Total) como estándar para fijar las tarifas de interconexión porque "conducirá a una baja 
+innovación, decrecerá la introducción de nuevos servicios y la inversión por debajo de 
+niveles económicamente eficientes" (J. Hausman, Microeconomics, Brookings Papers, 
+1997: 29. Citado en STC; 2001). Telmex continúa y apunta que la Cofetel en su resolución 
+P/EXT/111000/008 argumentó "debe señalárseles que desde un punto de vista económico, 
+es incorrecto establecer precios iguales a los CITLPS (costos incrementales totales de largo 
+plazo del servicio). Esto debido a que el establecimiento de precios a un nivel igual al 
+CITPLS da paso a ineficiencias y distorsiones económicas."49 
+ 
+Reglamento o Plan de Interconexión 
+ 
+Las empresas competidoras de Telmex se pronunciaron por la creación de un 
+Reglamento de Interconexión o Plan de Interconexión (en virtud de que la interconexión es 
+un asunto de interés público), mientras que Telmex únicamente se pronunció por modificar 
+el Reglamento de Telecomunicaciones. 
+                                                          
+49 Telmex además señala que existen por lo menos 17 documentos que regulan la interconexión, por lo cual 
+un Reglamento de Interconexión no es necesario. Empresas como Avantel y Alestra han expresado que la actual reglamentación 
+referente a la interconexión es insuficiente y que un Reglamento de Interconexión es un 
+instrumento fundamental para asegurar la interoperabilidad, eficiencia y calidad de la 
+prestación de servicios de interconexión. Además, se considera pertinente que tal 
+reglamento tenga las condiciones que deberán incluirse en los convenios de interconexión. 
+Al respecto Telmex aseguró que "está de acuerdo en que existen condiciones de 
+interconexión que tienen que detallarse más y que no es ley el documento apropiado para 
+hacerlo, sin embargo también considera que estos puntos finos bien podrían establecerse en 
+el Reglamento de Telecomunicaciones y no necesariamente creando un Reglamento 
+especial de interconexión" (SCT, 2001). 
+ 
+Regulación del operador dominante 
+ 
+Los nuevos operadores proponen medidas dirigidas a regular al operador dominante 
+o que controla recursos esenciales. "Los operadores dominantes tendrán la obligación de 
+otorgar los servicios de interconexión conforme las características, tiempos y 
+procedimientos definidos en el Reglamento de Interconexión para los mismos, a todos 
+aquellos concesionarios de redes públicas de telecomunicaciones que se lo soliciten" (SCT, 
+2001; Avantel et al., 2002). 
+ 
+Por su parte Telmex cree conveniente que en caso de un operador sea declarado con 
+poder sustancial en el mercado de interconexión se le imponga la regulación que 
+actualmente se le aplica a esta empresa. También admitió que la MTC contiene regulación asimétrica porque le impone obligaciones de cobertura, tarifas, calidad de servicio, 
+información, interconexión, competencia económica y sanciones, mientras que los títulos 
+de concesión de las otras empresas no contienen dichas obligaciones. Por lo cual señala que 
+"la determinación de poder sustancial de Telmex y la consecuente determinación de 
+obligaciones específicas, representaría únicamente un perjuicio para Telmex y un beneficio 
+para sus competidores sin que se alcancen los objetivos de mejores precios, mayor 
+cobertura, calidad y diversidad de los servicios." (Rodríguez, 2003) 
+ 
+Negociaciones entre concesionarios 
+ 
+Para mejorar el proceso de negociación de convenios entre concesionarios los 
+nuevos operadores proponen "acordar libremente los términos y condiciones bajo los cuales 
+se lleve a cabo la interconexión de sus redes; salvo las tarifas de los servicios de 
+interconexión del operador dominante que serán determinadas por la Cofetel. La Cofetel 
+estará facultada para resolver aquellos términos y condiciones que no se hayan acordado 
+entre los concesionarios" (SCT, 2001). Los plazos propuestos por los nuevos operadores 
+para llegar a acuerdos sin la intervención del regulador varían, algunos proponen disminuir 
+al plazo de 60 a 30 días hábiles; otros proponen que se mantenga el plazo pero que se 
+modifique el calendario para cada uno de los procesos que involucran las negociaciones. 
+Una propuesta poco viable es aquella que señala que las tarifas deberán ser siempre 
+establecidas por la Cofetel. 
+ 
+Desagregación Un aspecto que ha tenido especial importancia es la desagregación de los elementos 
+de la red. La LFT señala en la fracción II del artículo 43, que las partes deberán "permitir el 
+acceso de manera desagregada a servicios, capacidad y funciones de sus redes sobre bases 
+de tarifas no discriminatorias." Al respecto, las empresas que compiten con Telmex han 
+señalado que "aunque la ley vigente contempla algunos elementos de desagregación (i.e., 
+coubicación), los avances tecnológicos abren nuevas perspectivas y hoy en día es el caso 
+del bucle local. Para su instrumentación se requiere una intervención regulatoria muy 
+precisa y detallada, con una buena coordinación técnica entre los operadores, ya que el 
+operador dominante tiene fuertes incentivos a discriminar a sus competidores. La ley debe 
+contemplar la obligación de la autoridad de fijar plazos para iniciar y terminar su 
+instrumentación en todo el país, empezando por las áreas de mayor teledensidad." (Avantel 
+et al., 2002) 
+ 
+Por consiguiente, los nuevos operadores consideran necesario incluir en la LFT una 
+definición clara de los elementos a desagregar; permitir a los demás operadores acceso en 
+condiciones justas y equitativas, bajo los principios de eficiencia, transparencia y no 
+discriminación; impedir que Telmex incurra en prácticas anticompetitivas al ofrecer sus 
+servicios tanto al mayoreo como al menudeo; establecer un plazo claro para la 
+desagregación, y prever inclusive un mecanismo para responsabilizar al regulador en caso 
+de omisión o tardanza; en caso de controversia sobre la desagregación, elementos o 
+términos de la misma la ley debe establecer procedimientos al efectos (SCT, 2001 y 
+Avantel et al., 2002). Al respecto Telmex señala que "en función de los objetivos de fomento a la 
+creación de infraestructura, de más y mejores servicios, al crecimiento del acceso y la 
+conectividad, la Ley no debe hacer obligatoria la desagregación ya que ésta: no contribuye 
+al crecimiento de las redes ni de la teledensidad, y además actúa en detrimento de las 
+empresas que han invertido en infraestructura; promueve la reventa de los servicios 
+existentes inhibiendo el incentivo para crear nueva infraestructura por parte de todos los 
+concesionarios; de acuerdo a la experiencia internacional, la desagregación no ha 
+promovido ni la inversión ni la competencia; la desagregación promueve el "descreme", en 
+perjuicio de los usuarios de menores ingresos; la desagregación atenta contra el derecho de 
+propiedad privada establecido en la Constitución, al imponérsele la carga consistente en 
+pretender disponer unilateralmente de una parte de la red propia sin el consentimiento del 
+propietario y sin fundamento jurídico alguno, y en fijar la contraprestación que se deba 
+pagar por ello atendiendo exclusivamente a costos."50 (SCT, 2001) 
+ 
+Para Telmex existen dos tipos de competencia: la competencia natural y la 
+competencia artificial. La primera es resultado de la creación de infraestructura propia por 
+parte de cada operador participante en el mercado, lo que da como resultado el incremento 
+de la teledensidad y desarrollo del mercado. Mientras que la competencia artificial se 
+presenta cuando se obliga a un operador a ofrecer parte de su red bajo el concepto de 
+                                                          
+50 Telmex (STC, 2001) argumenta que "la desagregación es una formula confiscatoria (énfasis mío), y que 
+ha dado malos resultados en los Estados Unidos , ya que ha frenado el crecimiento de las redes en los países 
+en que se ha implantado (Cleland, 2001) y que ha contribuido a crear una competencia ficticia (énfasis 
+mío), ya que los entrantes se convierten en meros revendedores. El fijar las tarifas en Costos Incrementales 
+Promedio de Largo plazo (CTIPLP) es una forma de subsidiar a los entrantes, con lo cual nunca tendrán 
+incentivo alguno para construir una red." Telmex hace las siguientes citas: S. Cleland,, Octubre de 2001, 
+Telecom./Tech Policy: From Economic Propeller To Growth Anchor. Precursor Group Washington D. C. 
+www.precursogroup.com. Khan, Alfred. Whom the Ods Would Destroy, or How Not to Regulate. 2001. AEI-
+Brookings Joint Center for Regulatory Studies, Washington D. C. p. 7-10. desagregación, con precios iguales al costo incremental. Este tipo de competencia (es decir, 
+la desagregación) desalienta la inversión, frena el crecimiento de las redes, es destructiva y 
+genera incompetencia, pues significa subsidios a los nuevos operadores (Iglesias, 2003). 
+Telmex considera que es falso que exista infraestructura de telecomunicaciones que 
+no se pueda duplicarn México hay competidores locales entrantes, que han invertido en su 
+propia infraestructura, como es el caso de empresas como Maxcom (ver gráficas 13 y 14 y 
+cuadro 3.3). Por ejemplo, existen nuevas alternativas para acceder al cliente, como medios 
+inalámbricos fijos o moviles, la telefonía celular, el WLL, enlaces de microondas, trunking 
+y otros nuevos sistemas satelitalesredes alámbricas que pueden llegar al cliente para dotarle 
+servicios telefónicos o de banda ancha, como la TV por cable y la red de distribución de 
+energía eléctrica. Por ello, "la competencia local en México debe basarse en la construcción 
+de infraestructura propia por parte de los nuevos entrantes. Esta propuesta es perfectamente 
+posible ya que los operadores celulares del país, en doce años, cuentan ya con más líneas de 
+las que Telmex construyó en 100 años." (Iglesias, 2003) 
+ 
+Finalmente, es importante señalar, de acuerdo con el Dr. Fernando Butler, que los 
+objetivos del actual gobierno tienen como finalidad aumentar de la teledensidad por lo que 
+se ha buscado inutilizar a un de por sí ya débil regulador para asegurar a las empresas que 
+invierten en red que puedan recuperar su inversión en un periodo "aceptable" y por lo tanto 
+se trata de evitar la desagregación hasta ese momento. El Dr. Butler también comentó que 
+de haber sido políticamente posible, el actual gobierno hubiera desaparecido la Cofetel 
+porque los objetivos que persiguen son contradictorios. 51 
+                                                          
+51 Otro tema presente en la discusión es la portabilidad de número. Según el documento "Posición de las 
+Empresas Frente a Temas Relevantes en Materia de Telecomunicaciones" presentado conjuntamente por Cuadro 3.3 Red e inversión de las empresas telefónicas en México 
+Empresa Red de fibra óptica (kilómetros) Inversión 
+(US $) 
+Telmex 75 000l 24, 671,000 (1990 - 2003) 
+Avantel 8 000  1,282 
+Alestra 4 400 1043 
+Marcatel 2500 469 
+Miditel*  300 
+Iusatell  809 
+Investcom  383 
+Unicom  400 
+Cableados y Sistemas  156 
+Total 120, 000 (2003)** (2003) 
+Fuente. Diversos comunicados y páginas web de Telmex, Avantel, Alestra, y la SHCP. 
+*La inversión de Miditel corresponde al periodo 1996-2000 
+** Incluye red de operadores de LD y local 
+Estos son los planes de inversión que tenían algunas empresas cuando iniciaron sus operaciones. Sólo empresas como 
+Avantel, Alestra y Marcatel han podido cumplir sus planes. Otras como Iusatel ya no existen. 
+ 
+Gráfico 3.13 
+                                                                                                                                                                                 
+Avantel, Alestra, Axtel y Javier Lozano y Asociados S. C.: "La portabilidad es una herramienta fundamental 
+para fomentar la competencia local pues promueve que los usuarios puedan beneficiarse en diversidad, 
+calidad y precio. Además, su efectividad depende de la interoperatividad de redes y del adecuado intercambio 
+de información de los clientes, así como que la solución sea neutral para efectos de competencia. Por lo 
+anterior, se deben aplicar mecanismos de recuperación de los costos asociados, de forma tal que no se 
+obstruya el proceso de competencia, ni se inhiba a la demanda." El Dr. Fernando Butler señaló que "la 
+obligatoriedad de la portabilidad ya está contemplada en la LFT, pero que carece de importancia debido a las 
+limitantes tecnológicas que enfrentan las empresas para su instrumentación." A diferencia del documento 
+citado, el Dr. Butler considera que "la instrumentación de dicha política ha fracasado incluso en países como 
+los Estados Unidos. Además, en México existe una muy clara diferencia en la teledensidad de cada región de 
+país, por ejemplo, entre el DF y Chiapas, lo que dificulta tal política." (Entrevista). Crecimiento de la Red de Fibra Óptica en México
+140
+120
+Otros
+100 Telmex 40 45
+34.3
+80 29.9
+23.6
+60 9.3 13.6
+20.7
+40 74 75
+.1 68.2 72
+20 37.5 42.8 46.8
+51.6 54.6 62
+5.5 15.8
+0
+Fuente: Cofetel y Telmex
+ 
+ 
+ 
+ 
+ 
+ 
+Gráfico 3.14 
+Miles de Kilometros
+1992
+1993
+1994
+1995
+1996
+1997
+1998
+1999
+2000
+2001
+2002
+2003 Porcentaje de Digitalización de la Planta Telefónica (2001)
+105%
+100%
+95%
+90%
+85%
+80%
+75%
+México Brasil Estados Unidos Corea del Sur España
+Fuente: Telmex, 2003
+ 
+Opiniones sobre la relación entre la interconexión y la competencia en México  
+ 
+La apertura a la competencia en diversos servicios es una realidad, sin embargo, en 
+virtud del poder de mercado de Telmex dicho proceso se ha visto menguado. Los nuevos 
+operadores consideran que Telmex ha utilizado los servicios de interconexión como una 
+barrera de entrada:52 
+ 
+• Ha establecido una política de tarifas altas por los servicios de interconexión, 
+produciendo altos costos para sus competidores que los inhiben de ofrecer tarifas 
+más competitivas en los servicios finales, reduciendo márgenes financieros de 
+operación. El problema radica en que los elevados costos por interconexión reducen 
+                                                          
+52 Tomadas textualmente del documento Conferencia Parlamentaria en Materia de Telecomunicaciones, 
+"Acceso e interconexión", SCT, 2001. los márgenes de rentabilidad de los nuevos operadores y les impiden convertirse en 
+verdaderos competidores de Telmex (Zubirán, 2000). 
+• Ha impedido la apertura a la competencia en el servicio de Larga Distancia (LD) a 
+todas las áreas locales del país, cobrando altas tarifas para sus competidores por 
+originar o terminar llamadas en áreas atendidas monopólicamente. 
+• Ha impedido la eficiencia en la interconexión entre los múltiples concesionarios 
+entrantes al no permitir la interconexión cruzada en la coubicación, que evitaría la 
+construcción innecesaria de muchos kilómetros de red. 
+• Ha utilizado recursos para medir la calidad mediante promedios, a fin de poder 
+afectar la calidad individual de concesionarios particulares, sin incumplir en lo 
+general. Lo cual logra atendiendo con prontitud las entregas de infraestructura o 
+reparaciones que requiere el mismo o las empresas con Nexo Patrimonial, a la par 
+que retrasa las entregas o reparaciones a los demás concesionarios. 
+ 
+Conclusiones 
+ 
+En principio es posible señalar que la estructura de la industria de telefonía en 
+México es similar a la de muchos otros países, existe un operador establecido, que es 
+concesionario de la red de telefonía más extensa e importante del país y que ante la 
+posibilidad de competencia en algunos segmentos del mercado se ve obligado a dar acceso 
+a su red a sus competidores. Además, tal como lo señala la teoría y lo muestra la 
+experiencia internacional, Telmex, el operador mexicano más importante, no tiene ningún 
+incentivo para facilitar la entrada al mercado a las nuevas empresas, las cuales a su vez 
+tienen poco que ofrecerle. Por ello, la única manera de que Telmex proporcione acceso a los nuevos operadores es obligarla a hacerlo, pero a lo largo de los años, Telmex ha 
+utilizado medios legales para lograr su objetivo. 
+ 
+Es posible indicar que la situación antes descrita es racional en términos 
+económicos, lo que no ha sido racional en el caso mexicano, es el actuar del regulador, el 
+cual ha sido acusado de emitir resoluciones parciales y poco transparente e incluso de 
+ignorar las peticiones de las empresas para emitir una resolución sobre el asunto de 
+interconexión de conformidad como le corresponde hacerlo según la LFT. Al respecto, 
+mucho se ha argumentado que la falta de eficacia del regulador se debe a los huecos legales 
+de la LFT y otros instrumentos jurídicos que rigen al sector, lo cual puede ser cierto; mas 
+no hay excusas para que no cumpla con las funciones mínimas para las cuales fue creado, 
+por ejemplo, el decidir las tarifas de interconexión cuando las empresas no llegan a un 
+acuerdo. 
+ 
+Es importante no culpar a los mecanismos judiciales de la ineficacia del regulador y 
+del retraso del sector. Cuando cualquiera de las empresas siente que sus derechos han sido 
+afectados por una resolución de la autoridad y recurre al amparo, está en todo su derecho de 
+hacerlo, en todo caso es responsabilidad de las autoridades argumentar de manera correcta 
+y apegada a derecho sus resoluciones para que sean ratificadas por los tribunales. El culpar 
+al sistema judicial y exigir modificaciones al mismo, es un tema de mayor envergadura que 
+la interconexión entre operadores telefónicos. Por ahora es mejor crear leyes que se ajusten 
+a las características del sistema legal vigente y que puedan cumplirse o simplemente aplicar 
+las existentes. La experiencia internacional muestra que existen diversos caminos para lograr los 
+resultados deseados en materia de competencia y desarrollo del mercado de telefonía; el 
+insistir en uno que ha mostrado ser muy limitado, en lugar de promover el desarrollo del 
+sector, puede convertirse en una barrera, por una parte, porque no da los incentivos 
+jurídicos necesarios para que las empresas inviertan, y por otra, porque ya no corresponde a 
+los adelantos tecnológicos propios del sector. 
+ 
+Aunque las condiciones de poca cooperación en las negociaciones de acuerdos de 
+interconexión son las normales en términos de racionalidad económica, no está demás 
+señalar que no tienen porque ser las prevalecientes en todo momento. Por el contrario, el 
+papel de las empresas en varios casos presentados en el capítulo 2 ha sido cooperativo, lo 
+cual no implica que no compitan, simplemente que han optado por evitar largos y costosos 
+litigios y dedicarse exclusivamente a sus actividades comerciales. Cabe mencionar que en 
+estos países (como Singapur y Dinamarca, entre otros), las empresas emprendieron la 
+cooperación por su voluntad, y no como en México, porque no tuvieron otro remedio al ser 
+ignoradas por el regulador. 
+ 
+El comportamiento indiferente de la Cofetel respecto al tema de la interconexión y 
+otros, se debe, según algunos expertos, a que muchos de los objetivos de la LFT y del 
+propio regulador son distantes a las prioridades del actual gobierno y a las necesidades 
+mismas del sector de las telecomunicaciones y aunque desde hace tiempo se está discutiendo una reforma importante, esa parece una posibilidad muy lejana. Primero, 
+porque en términos políticos no parece ser un asunto prioritario, y segundo, porque parece 
+ser que los objetivos del gobierno en telefonía están centrados en la expansión de la red y el 
+incremento de la densidad telefónica, y no en términos de competencia; y finalmente, 
+porque es difícil que se den modificaciones radicales al papel de la Cofetel, la cual, al 
+menos en el mediano plazo, permanecerá muy limitada en sus funciones. 
+ 
+A pesar de todos los contratiempos y defectos presentados en los procesos de 
+negociación de acuerdos de interconexión y la intervención del regulador en este asunto, no 
+se puede negar que han habido avances importantes. Tanto en el caso de la telefonía celular 
+como local el tema de la interconexión han generado pocos problemas y han sido resueltos 
+a partir de la Resolución de la Cofetel de noviembre de 1998. En estos casos los operadores 
+han llegado a arreglos sin la necesidad de intervenciones del regulador y han podido evitar 
+largos litigios y peleas en las cortes. 
+ 
+Desafortunadamente ese no ha sido el caso de la telefonía de LD, donde las disputas 
+originadas por los acuerdos de interconexión, especialmente la fijación de tarifas y algunos 
+aspectos técnicos, han sido resueltos por el regulador en medio de grandes inconformidades 
+y dudas sobre la transparencia e imparcialidad de éste, lo que ha redundado en intensas 
+batallas en los tribunales por varios años y si bien algunas empresas han desistido de su 
+demandas judiciales, todavía no es posible decir que el problema está totalmente resuelto 
+porque aunque los nuevos operadores han realizado importantes inversiones para construir 
+su propia red local, todavía son dependientes de las red de Telmex para concluir sus llamadas ya que esta empresa posee cerca del 97% de las líneas locales en el país, de 
+manera que los nuevos operadores dedican gran parte de sus ingresos al pago de los 
+servicios de Telmex. 
+ 
+Algo innegable es la disminución de las tarifas de interconexión que las empresas 
+fijas y móviles pagan. En ambos casos, las tarifas mexicanas se encuentran en un nivel 
+competitivo respecto a las tarifas internacionales aunque se considera que todavía pueden 
+disminuir más. Pero, ¿cómo se puede explicar la disminución de tarifas en un contexto 
+altamente problemático? Aunque el regulador lo atribuye a varias de sus decisiones, es 
+importante considerar otros factores. Una parte puede deberse a los avances tecnológicos; 
+una más a la conclusión del periodo de rebalanceo de tarifas, no hay pretextos para hacer 
+sobrecargos injustificados; otra, a la presión de los organismos internacionales, y 
+finalmente, a que las empresas han optado por evitar la ineficacia e ineficiencia del 
+regulador y han preferido negociar con Telmex aún en condiciones desventajosas. 
+ 
+Sin embargo, el que las tarifas de interconexión -y a los usuarios finales- hayan 
+disminuido no quiere decir que la competencia sea plena. Todavía hay beneficios de la 
+competencia que no están lo suficientemente desarrollados, por ejemplo, los aspectos 
+relacionados con la calidad de los servicios y con la posibilidad de elegir entre varias redes 
+para cursar el tráfico de llamadas. Es importante tener en mente que la alta dependencia de 
+las nuevas empresas de la red de Telmex las pone en una situación vulnerable, lejos de ser 
+plena, la competencia todavía está en una etapa de maduración y por tanto, a pesar de sus 
+limitaciones, el regulador debe actuar con mayor determinación para solucionar los problemas que surgen alrededor de la negociación de los acuerdos de interconexión entre 
+los operadores. 
+ 
+Considero que la ambigüedad de las normas legales que rigen los procesos de 
+interconexión en nuestro país se ha convertido en una barrera de entrada y ha obstaculizado 
+una mayor competencia en el mercado telefónico local y de LD, a lo cual han contribuido la 
+lentitud, el poco compromiso y la falta de atribuciones del regulador sectorial al respecto. 
+Por lo tanto, el logro de una competencia efectiva en este mercado, requiere de manera 
+inmediata mejorar los mecanismos de intervención pública existentes para lograr acuerdos 
+de interconexión que al mismo tiempo que facilitan la entrada de nuevas empresas al 
+mercado no afecten los derechos de Telmex. 
+ 
+Respecto a la desagregación y la regulación del operador dominante, la situación 
+es complicada, si bien ha habido intentos por favorecer ambos temas, los alcances de los 
+mismos son mínimos. El futuro de estos temas y de los otros discutidos a lo largo del 
+capítulo es incierto porque están ampliamente ligados a cuestiones legales y técnicas que 
+están lejos de convertirse en conclusiones inobjetables, por el contrario, la discusión es 
+dinámica, altamente compleja y está más viva que nunca. Al igual que la interconexión, el 
+futuro de estos asuntos depende en cierta medida de las reformas que se puedan hacer a la 
+LFT y de las decisiones de los tribunales en materia de competencia y regulación del sector, 
+por lo que habrá que esperar qué sucede y seguir tratando de aportar ideas que contribuyan 
+al desarrollo de esta industria. Finalmente, es posible decir que la experiencia mexicana más que un fracaso puede 
+calificarse como una experiencia de contrastes. Son indudables los avances en creación de 
+red, pero los precios todavía son elevados. Es preocupante que el regulador no cumpla con 
+los principios básicos de transparencia, equidad y tarifas basadas en costos y aunque por el 
+momento el asunto parece estar resuelto, no es posible asegurar que lo estará por siempre, 
+en cualquier momento de negociaciones pueden surgir inconformidades y ser necesaria la 
+intervención del regulador. Por lo tanto, no se debe dar la espalda a una situación que exige 
+cambios continuos para adaptarse a la realidad del sector, tampoco podemos discutir 
+abiertamente temas más avanzados, si antes no hemos solucionado asuntos básicos como 
+éste. Anexo 1. Resumen de los acuerdos de interconexión Local - LD 
+ 
+Acuerdo de Resumen Fecha de inicio Fecha de conclusión 
+interconexión 
+Telmex - Avantel, Resolución de la Cofetel en abril de 
+Alestra, Marcatel, 1996. La tarifa de interconexión fue 
+Cableados y establecida en US$0.0257 y 
+Sistemas, Iusatel, US$0.0240 para 1997 y 1998, a lo 1 de enero de 1997 31 de diciembre de 1998
+Marcatel y Unicom. cual había que agregar un 
+sobrecargo de 58% por concepto de 
+tráfico internacional conmutado. 
+Telmex - Alestra La Cofetel resolvió el 27 de 
+noviembre de 1998, fijar la tarifa de 
+interconexión en US$ 0.026. 
+Se eliminó el sobrecargo de 58%. 1 de enero de 1999 31 de diciembre de 2000
+Se introdujo un sobrecargo de 5.7% 
+por intento de llamadas no 
+completadas. 
+Telmex Avantel La Cofetel fijó el cargo de 
+interconexión en US$0.0125 y se 1 de enero de 2001 31 de diciembre de 2001
+mantuvo el sobrecargo de 5.7%  
+Telmex - Alestra La Cofetel fijó el cargo de 
+interconexión en US$0.0125 y se 
+mantuvo el sobrecargo de 5.7%. 
+Alestra acordó con Telmex el pago 
+de los adeudos pendientes entre las 
+empresas; además, asegurar la 1 de enero de 2001 31 de diciembre de 2001
+calidad y entrega de servicios 
+intermedios y el desistimiento de la 
+mayoría de los procesos 
+administrativos y judiciales 
+existentes. 
+Telmex - Alestra, Por primera vez, las tarifas no se 
+Avantel ,Marcatel deben a una resolución de la Cofetel, 
+sino a un acuerdo "voluntario" entre 
+las empresas. 1 de enero de 2002 1 de diciembre de 2002 
+La tarifa se estableció en US$0.0097 
+y el sobrecargo de 5.7% disminuyó a 
+$2.85. 
+Telmex - Alestra Los acuerdos de interconexión se 
+negociaron bajo el marco del 
+acuerdo alcanzado el año anterior 1 de enero de 2003 31 de diciembre de 2003
+entre las empresas. 
+De acuerdo a la LFT, los acuerdos de interconexión entrarán en vigor inmediatamente después de que las 
+empresas lleguen a un acuerdo.  
+Las empresas acordaron que si al terminar el acuerdo de interconexión todavía no llegan a un nuevo acuerdo, 
+la interconexión se mantendrá los términos del acuerdo que finalizó. Anexo 2
+ 
+ Línea del tiempo de la interconexión entre operadores de LD México
+ 
+ 
+ Inicia competencia 
+ LD Resolución de la
+ Resolución Cofetel 
+ de la SCT octubre 2000
+abril de 96 enero - diciembre 2001 enero 1997 - diciembre 1998
+ En 2003 el acuerdose negoció sobre 
+ Se crea Resolución de la Acuerdo entre la base del 
+ la LFT Cofetel operadores acuerdo anteriordiciembre 2001
+ Privatización Resolución Junio 95 Se crea 27 de noviembre 98 enero - diciembre 2002 
+ de Telmex de la SCT la Cofetel enero 99 a diciembre 2000junio 94
+ 
+ 
+ 1990 1994 1995 1996 1997 1998 1999 2000 2001 2002 2003 2004
+ 
+ 
+ 
+ No hubo acuerdos. Acuerdos entre operadores 
+La Cofetel dictó consecuencia de la indiferencia
+ resoluciones. de Cofetel a las peticiones de los 
+ competidores de Telmex  para
+ dictar una nueva resolución
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+86 Bibliografía 
+ 
+ 
+Agrawal, B, y N. Jasuja (2003), "Interconnection Agreements in Telecommunications Business", Institute of 
+Management Calcutta. Tomado de http://www.papers.ssrn.com/sol?/papers.cfm?abstract_id=329580 
+ 
+Arellano, D., "Case Studies Methodology in Social Sciences. Elemental Basis", CIDE, Documento de 
+Trabajo DAP # 46, 1998. 
+ 
+Armstrong, M. y N. Roehrich, "Interconnection: No Single Solution", Communications Research Forum 
+2001. http://www.crf.dcita.gov.au/papers2001/ roehrich_armstrong.pdf 
+ 
+Arredondo, J. (2001), "Determinación de Tarifas de Interconexión en México: Problemas y Perspectivas", en 
+Connect 2001 Promoviendo la Conectividad de las Telecomunicaciones en Latinoamérica, Cofetel, 
+México, 2001. 
+ 
+Avantel, "Aclaraciones en busca de consolidar la competencia en el mercado de telecomunicaciones en 
+México", Documento proporcionado por la Oficina de Relaciones Institucionales de Avantel. 
+ 
+Avantel, Alestra, Axtel y Javier Lozano y Asociados S. C, "Posición de las empresas frente a temas relevantes 
+en materia de telecomunicaciones", México, 2002. http://www.netmedia.info/netmedia/ 
+enviar.php?type=2%26id=17  
+ 
+Ayub, A. (2001) "Creando condiciones para la expansión de la conectividad" en Connect 200. 
+Promoviendo la Conectividad de las Telecomunicaciones en Latinoamérica, Cofetel, México 
+ 
+Banco Mundial, "México a at glance", tomado de la página web del Banco Mundial. 
+ 
+Briseño, A. (2000), "Fixed - Mobile Interconnection. The case of Mexico", en ITU Fixed-Mobile 
+Interconnection Workshop, Geneva, 20 September 2000.  
+ 
+Cannock, G. y M. E. Kobayashi, "Comparación de Cargos de Interconexión Fijo - Móvil", Apoyo 
+Consultoría, Lima, Perú, 26 de junio de 2001. 
+ 
+CITEL, CITEL Guidelines and Practices for Interconeccion Regulation, CITEL - Inter - American 
+Telecommunication Commission, June 1999. 
+ 
+Cofetel, Boletín 38 /98. 
+ 
+Cofetel, Boletín l7/98. 
+ 
+Cofetel, Boletín 39/2000. 
+ 
+Cofetel, "Acuerdan Empresas Tarifas de Interconexión que Regirán 2002" comunicado 01/2001, 19 de 
+diciembre de 2001. Economiades, N. (2003), "Competition Policy in Network Industries: An Introduction", Stern School of 
+Bussines de la Universidad de Nueva York, 2003. 
+ 
+Escobar, "El Cambio Estructural de las Telecomunicaciones y la Inversión: el Caso de México" en CEPAL 
+Serie Reformas Económicas No. 17, Febrero de 1999. 
+ 
+Falch, M. (2002), "TELRIC - The Way Toward Competition? A European Point of View" Review of 
+Networks Economics, Vol. 1, Issue 2 - September 2002 
+ 
+FCC (2002), "Setting Up Interconnection Regimes: Reference for Regulators". Tomado de 
+ww.fcc.gov 
+ 
+FCC, Telmex / Sprint. Act for Global Authority to Operate as an International Switched Resale Carrier 
+Between the United States and International Points, Including Mexico, File No. ITC-97-127, 29 de 
+octubre de 1997. 
+ 
+FCC, Statement of Chairman William E. Kennard on the Current Dispute Between Telmex and U.S. carriers, 
+25 de febrero de 1998. 
+ 
+FCC, Telmex International Ventures USA, Inc. Apparent Liability for Forfeiture, Archivo File No. EB-00-IH-
+0040, enero de 2000. 
+ 
+FCC,  MCI WorldCom ex parte, re: Telmex International Ventures USA, Inc., File No. ITC-97-127, August 
+16, 1999. 
+ 
+FCC, MCI WorldCom ex parte, re: Telmex International Ventures USA, Inc., File No. ITC-97-127, 
+September 2, 1999;  
+ 
+FCC, MCI WorldCom ex parte re: Telmex International Ventures USA, Inc., File No. ITC-97-127, October 
+20, 1999. 
+ 
+FCC, AT&T ex parte, re: Telmex Ventures USA, Inc., File No. ITC-97-127, August 27, 1999. 
+ 
+FCC, AT&T ex parte, re: Telmex Ventures USA, Inc., File No. ITC-97-127, October 20, 1999. 
+ 
+García, M. y J. Pick (2002), "Interconnection Regulation in Mexico", TCPR 2003, Agenda 2002, September 
+2002.  
+ 
+Global Internet Policy Initiative, (2002), "Best Practices for Telecommunications Reform" 
+http://www.internetpolicy.net/practices/telecomreform.pdf 
+ 
+Hall, R., "Las tarifas de interconexión, elemento clave para la regulación del mercado." VI Seminario 
+AHCIET de Gestión Empresarial. 
+ 
+Hausman, J. (2001), "Regulation by TSLRIC: Economic Effects on Investment and Innovation", en 
+Competition and Regulation in Telecommunications. Examining Germany and America, Kluwer 
+Academic Publishers. 
+ 
+Hausman, J. (1998), "Regulated Cost and Prices in Telecommunications" en G. Madden y S. Savage (Eds.), 
+The International Handbook of Telecommunications Economics, Vol. II, 2000. 
+ 
+Hausman, J. y G. Sidak, "A Consumer - Welfare Approach to the Mandatory Unbundling of 
+Telecommunications Networks", en The Yale Law Journal, Vol. 109: 417 - 1999. 
+ 
+Iglesias, L. (Telmex), "Competencia y desagregación. El mercado de telecomunicaciones de México", IV 
+Foro de Regulación en Telecomunicaciones AHCIET, Perú, Mayo de 2003. Intven, Oliver y Sepúlveda, "Interconnection", Module 3, Telecommunications Regulation Handbook, 
+McCarthy Tétrault, disponible en el web de la ITU o del Banco Mundial. 
+ 
+ITU (2004), TREG Interconnection Self Training Modules, BDT/Regulatory Reform Unit - ITU. Disponible 
+en la página web de la ITU. 
+ 
+ITU (2003a), ITU Interconnection Regulation Self-Learning Materials BDT/Regulatory Reform Unit, 2003. 
+ 
+ITU (2003b), Botswana Mini Case Study 2003. Recent Experiencies in Interconecction Disputes, Tomado de 
+http://www.itu.int/ITU-D/treg/Case_Studies/index.html  
+ 
+ITU (2003c), Denmark Mini - Case Study 2003. Beyond Disputes and Towards Consensus Building, Tomado 
+de http://www.itu.int/ITU-D/treg/Case_Studies/index.html 
+ 
+ITU (2003d), India Mini - Case Study 2003. Dealing with Interconnection and Access deficit contributions in 
+a Multi - carries Environment, 2003. Tomado de http://www.itu.int/ITU-
+D/treg/Case_Studies/index.html  
+ 
+ITU (2003e), Jordan Mini - Case Study 2003. Dispute Resolution and Consensus Building in Interconnection, 
+Tomado de http://www.itu.int/ITU-D/treg/Case_Studies/index.html  
+ 
+ITU (2003f), Malaysia Mini - Case Study 2003. The Malaysian Access Forum as an Initiative in Self - 
+Regulation and Consensus Building, Tomado de http://www.itu.int/ITU-
+D/treg/Case_Studies/index.html  
+ 
+ITU (2002), Trends in Telecommunications Reform 2002. Effective Regulation, Ginebra.  
+  
+ITU (2001), Una reglamentación eficaz. Un estudio de caso. Brasil 2001, ITU 2001. 
+ 
+ITU (1995), La nueva función del Estado en una era de liberalización de las telecomunicaciones. 
+Interconexión: Cuestiones de Reglamentación, Informe del Cuarto Coloquio sobre Reglamentación 
+celebrado en la sede de la UIT, 19 - 21 de abril de 1995. 
+ 
+Kunigami, J (2002)., "OSIPTEL", en Foro de Regulación en Telecomunicaciones, AHCIET, mayo de 2002. 
+ 
+Laffont, J. y J. Tirole (2000), Competition in Telecommunications, The MIT Press, Cambridge, MA. 
+ 
+Ley Federal de Telecomunicaciones, México. 
+ 
+MacLeod, V. y J. Ridder, "Designing an Interconnect Model from Benchmark Principles", ITU Workshop on 
+Fixed-Mobile Interconnect ,Geneva, 21 September 2000 
+ 
+Martin, K., "Competition Issues in the Telecommunications Industry", The Committee on Commerce, 
+Science and Transportation United States Senate, Enero 14 de 2003. 
+ 
+Mattos, C. (2003), "Interconnection Policy", en Nova Economía Belo Horizonte, Enero - Junio de 2003. 
+ 
+May, R. (2003), "The FCC and Telecom Recovery: a Scorecard for Evaluating the New Unbundling Rules" 
+en Michigan State DCL Law Review, Vol. 3: 1 2003. 
+ 
+Melody, W. (1997), Telecom Reform-Principles, Policies, and Regulatory Practices, Schultz DocuCenter, 
+Dinamarca. Nicolín, J., "Opening the Telecommunications Market: the Mexican Experience", Tomado de 
+http://www.cft.gob.mx/html/1_cft/7_dis/disc_nic/art_280400_2.html. 
+ 
+Noam, E. (2002), "Interconnection Policy", Columbia Institute for Tele - Information - Columbia University 
+Graduate School of Business, 2002. Tomado de 
+http://www.citi.columbia.edu/elinoam/articles/intercon.htm (25/11/2003). 
+ 
+Noam, E. (2001), Interconnecting the Netwok of Networks, MIT Press, Cambridge, MA. 
+ 
+Núñez, J., "El Poder de Mercado en la Legislación de Competencia Económica", en Breviarios Jurídicos No. 
+10, Porrúa, México, 2003. 
+ 
+OECD, "Background Report on Regulatory Reform in the Telecommunication Industry", March 1999. 
+ 
+OECD - Inter - American Development Bank (2004), Competition Law and Policy in Mexico. A Peer Review. 
+ 
+Peláez, L. (Cofetel), "La Telefonía Móvil en México", Foro de Comunicaciones Móviles AHCIET, 16 de 
+octubre de 2003. 
+ 
+Petrazinni, B., "Fixed - Mobile Interconnection. Case Studies." Workshop on Fixed - Mobile 
+Interconnection, Geneva, September 2000. 
+ 
+Powell, M., Speech at Goldman Sachs Communicopia XI Conference, New York, 2 October 2002. 
+ 
+PNUD, Informe sobre Desarrollo Humano 2003, Tomado de la página web del PNUD. 
+ 
+Pyndick, R. (2003), "Mandatory Unbundling Irreversible Investment in Telecom Networks", MIT Sloan 
+School of Management, Working Paper 4452 - 03, December 2003. 
+ 
+Rodríguez, S., "Regulación Asimétrica: el Caso Telmex", en Seminario sobre Regulación y Competencia en 
+el Sector Telecomunicaciones, Comisión Federal de Competencia, México, septiembre de 2003. 
+ 
+Rogerson, D., "The Regulatory Context for Fixed Mobile Interconnection", Workshop on Fixed - Mobile 
+Interconnection, Geneva, September 2000. 
+ 
+Samarajiava, R. y W. Melody, "Fixed - Mobile Interconecction Workshop (Briefing Paper), ITU, September 
+2000. 
+ 
+SCT y Cofetel, "Apertura a la Competencia del Servicio Telefónico en México", mayo de 1999. 
+ 
+SCT, Conferencia Parlamentaria en Materia de Telecomunicaciones, "Acceso e interconexión, 2001. 
+ 
+SCT, Modificación al Titulo de Concesión de Teléfonos de México. 
+ 
+Sidak, G. y D. Spulber (1998), "Deregulation and Managed Competition in Network Industries" Yale Journal 
+on Regulation, Vol. 15, No. 1. 
+ 
+Srivastava, L. y S. Sinha, "Fixed Mobile Interconnection: The Case of India", en ITU  Fixed-Mobile 
+Interconnection Workshop, Geneva, 20 September 2000. 
+ 
+Telmex (2003), "Una Historia de Crecimiento por México", www.telmex.com 
+ 
+Torre, L., "El Mercado Telefónico en México: Diez Años Después de la Privatización de Telmex", Centro de 
+Análisis y Difusión Económica (CADE), Documento de investigación No. 17, agosto de 2000. Torre, L., "Las Disputas en el Mercado de Larga Distancia en México: ¿Evidencia de Captura Regulatoria?", 
+Centro de Análisis y Difusión Económica (CADE), México, 2000. 
+ 
+USTR, Dispute Settlement Update, marzo de 2004. 
+ 
+USTR, Mexico - Measures Affecting Telecommunications Services, 2002. 
+ 
+Wallsten, S., G. Clarke, L. Haggarty, R. Kaneshiro, R. Noll, M. Sherly, y L. Colin, "New Tools for Studying 
+Network Industry Reforms in Developing Countries: The Telecommunications and Electricity 
+Regulation Database" AEI - Brookings Joint Center Related Publication 04 - 05, March 2004. 
+ 
+Wirzenius, A., "Fixed Mobile Interconnection: The Finnish Case", en ITU Fixed-Mobile Interconnection 
+Workshop, Geneva, 20 September 2000. 
+ 
+Yan, X., "Fixed-Mobile Interconnection: The Case of China and Hong Kong SAR", en ITU Fixed-Mobile 
+Interconnection Workshop, Geneva, 20 September 2000. 
+ 
+Yin, R., Case Study Research. Design and Methods, Sage Publications, 1994. 
+ 
+Zouakia (2000), "Interconnection Issues and NRA Rol", Workshop on Fixed - Mobile Interconnection, 
+Geneva, 20 September 2000. 
+ 
+Zubirán, R., "La apertura a la competencia del servicio telefónico en México", Primer Encuentro 
+Internacional de Telecomunicaciones - Telecom. - CIDE, 2000.

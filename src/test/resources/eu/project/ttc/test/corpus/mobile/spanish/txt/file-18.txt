@@ -1,0 +1,120 @@
+Con guración Tarjeta Sierra Wireless 
+AirCard 875U para Tecnología 3.5G 
+de Entel PCS .00 ÍNDICE
+Con guración Tarjeta Sierra Wireless AirCard 875U
+para Tecnología 3.5G de Entel PCS
+ITEM SECCIÓN
+01 Introducción
+02 Instalación de software
+03 Instalación de SIM Card y tarjeta
+04 Con guración de la tarjeta
+05 Comenzar a navegar
+06 Estado de cobertura
+07 Cómo  nalizar la navegación
+08 Consideraciones de seguridad .01 INTRODUCCIÓN
+Se encuentra en tus manos el manual de con guración de la nueva tarjeta de datos Sierra 
+Wireless AirCard 875U con capacidad 3.5G. Esta tarjeta de datos te permitirá acceder 
+a la nueva tecnología 3.5G de Entel PCS que aumentará tu velocidad de conexión y te 
+entregará una mejor experiencia de navegación en Internet Móvil.
+Requerimientos técnicos para la instalación:
+•	 Sistema operativo Windows 2000, XP (Home o Professional) o Vista.
+•	 32 MB libres como mínimo en Disco Duro y 64 MB de RAM.
+•	 Microsoft Internet Explorer 5.5 o superior
+•	 Unidad de CD-Rom.
+•	 Puerto de Entrada USB
+Importante:
+No insertes la tarjeta de datos en tu notebook hasta que hayas instalado exitosamente el 
+software de instalación en tu equipo.
+.02 INSTALACIÓN DE SOFTWARE
+•	 Antes de instalar el software de la tarjeta de datos Sierra Wireless AirCard 875U se debe 
+desinstalar cualquier otro software asociado a otra tarjeta de datos y luego se debe reiniciar el 
+equipo.
+•	 Luego inserta el CD de instalación en el CD-ROM de tu notebook.
+•	 El programa de Instalación deberá comenzar a ejecutarse automáticamente. Si no lo hace, 
+ingresa al explorador de tu notebook y en el  acceso a CD-ROM haz clic en Setup.exe .02 INSTALACIÓN DE SOFTWARE
+•	 Se desplegará la ventana Sierra Wireless 3G Watcher.
+•	 Haz clic sobre notebook installation.
+ 
+•	 Cuando aparezca el mensaje de Warning (Advertencia) haz clic en notebook software 
+installation (XP, 2000).
+•	 En ese momento aparecerá el mensaje Bienvenido a Sierra Wireless 3G Watcher, allí deberás 
+hacer clic en Siguiente. .02 INSTALACIÓN DE SOFTWARE
+•	 Luego selecciona América del Norte y del Sur, Asía, África o Australia y haz clic en 
+Siguiente.
+•	 Lee el contrato de licencia de la tarjeta de datos.
+•	 Si lo aceptas selecciona Acepto los Términos del Contrato de Licencia y luego haz clic en 
+Siguiente.
+•	 Se mostrará la carpeta en la que se instalará el software de la tarjeta de datos. Si no deseas 
+cambiar la carpeta haz clic en Siguiente.
+•	  Selecciona el tipo de instalación para el software de la tarjeta de datos. Se recomienda 
+seleccionar Completa, luego haz clic en Siguiente. .02 INSTALACIÓN DE SOFTWARE
+•	 Finalmente haz clic en Instalar.
+•	 Terminada la instalación haz clic en Finalizar. Si aparece nuevamente el mensaje de 
+Bienvenida sólo haz clic en Cancelar.
+•	 Para terminar, en el Sierra Wireless 3G Watcher haz clic en Exit.
+•	 Reinicia tu notebook. .03 INSTALACIÓN DE SIM CARD Y TARJETA
+•	 Inserta la SIM Card en el dorso de la tarjeta Sierra Wireless AirCard 875U. Veri ca que la SIM 
+Card esté alojada completamente en el dispositivo.
+•	 Inserta la tarjeta en el Puerto USB de tu notebook. De ser necesario instálala junto a la Base 
+Extensora USB que viene incluida con la tarjeta.
+•	 El sistema operativo reconocerá la tarjeta e instalará los drivers necesarios. Luego indicará que 
+la tarjeta está lista para usarse.
+.04 CONFIGURACIÓN DE LA TARJETA
+•	 Automáticamente aparecerá el programa 3G Watcher, de no hacerlo haz clic sobre el icono 3G 
+Watcher.
+•	 Haz clic en Herramientas y selecciona Conexiones ...  .04 CONFIGURACIÓN DE LA TARJETA
+•	 Luego selecciona Per les y haz clic en Agregar Per l Nuevo.
+•	 Selecciona Per l WWAN e ingresa los siguientes datos:                                                                                                                         
+Nombre de per l:       Entel PCS 
+Nombre de usuario:   entelpcs
+Contraseña:                  entelpcs
+APN:                                imovil.entelpcs.cl
+Tipo de conexión:       Conexión Manual
+•	 Luego haz clic en Aceptar. .05 COMENZAR A NAVEGAR
+•	 Haz clic en el icono 3G Watcher en el escritorio de tu notebook.
+•	 En el 3G Watcher despliega la  echa que está al costado derecho de la pantalla de 
+visualización.
+•	 Selecciona WWAN -Entel PCS y luego haz clic sobre Conectar. La primera vez que trates de 
+conectarte a Internet Móvil mediante tu tarjeta de datos, a ésta le tomará entre 10 a 20 minutos el 
+efectuar la primera conexión a la red GPRS, EDGE o 3.5G. Las siguientes ocasiones será realizada 
+en forma automática. 
+•	 Nota: Para  nes de facturación el trá co real realizado es el que se encuentra registrado en la 
+página web de Entel PCS, sección Mi Entel PCS, a la que deberás acceder ingresando el número 
+asociado a tu plan de datos, el cual se encuentra en el sticker que recibiste durante el momento 
+de la venta.  Adicionalmente, 10 días después de contratado el servicio de Internet Móvil, recibirás 
+un SMS en el Buzón de Mensajes de tu Tarjeta de Datos indicando este mismo número. Para 
+acceder a Mi Entel PCS te deberás registrar primero en el portal web. .05 COMENZAR A NAVEGAR
+•	 En tu pantalla aparecerá el estatus de Conectando a Internet ... 
+•	 Cuando en la esquina inferior derecha de tu escritorio aparezca la señal de Conectado a Entel 
+PCS ya podrás comenzar a navegar.
+•	 Si la primera vez tu tarjeta de datos no accede en forma  automática a la red 3.5G, estando 
+dentro de una zona de cobertura, ingresa a Opciones en Herramientas y en Red cambia la 
+Banda de Frecuencia de Automática a Todas las WCDMA. Luego haz clic en Aceptar. Si sales 
+de la zona de cobertura 3.5G y deseas seguir navegando deberás regresar la con guración a 
+Automática. .06 ESTADO DE COBERTURA
+El tipo de cobertura de red disponible se indicará de acuerdo al icono que se muestra en 
+la esquina superior derecha del 3G Watcher.
+GPRS: Es la red de datos disponible más rápida que hay en tu zona de cobertura.
+EDGE: Es la red de datos disponible más rápida que hay en tu zona de cobertura.
+3G (UMTS - 3G):) Es la red de datos disponible más rápida que hay en tu zona de 
+cobertura.
+HS (HSDPA - 3.5G): Es la red de datos disponible más rápida que hay en tu zona de
+cobertura. .07 CÓMO FINALIZAR LA NAVEGACIÓN
+•	 Haz clic en Desconectar para  nalizar tu sesión de Internet Móvil.
+•	 Finalmente haz clic en el botón Salir. Se pedirá con rmar la salida, sólo haz clic en SI
+•	 Desconecta la tarjeta de datos Sierra Wireless AirCard 875U desde el administrador de 
+dispositivos y remuévela desde tu notebook, depositándola en la caja de seguridad.
+.08 CONSIDERACIONES DE SEGURIDAD
+•	 Evita exponer tu tarjeta de datos a altas temperaturas.
+•	 Mantén tu tarjeta de datos en un lugar seco y limpio.
+•	 Evita exponer tu tarjeta de datos en ambientes húmedos, líquidos o sumergirla en agua
+•	 No coloques ningún tipo de etiqueta en la antena, pues podrías alterar la sensibilidad y  
+recepción de la señal de la misma.
+•	 No se debe forzar el ingreso de la tarjeta en el espacio disponible en tu notebook.
+•	 No se debe forzar el ingreso de la SIM Card en el espacio disponible en la tarjeta.
+•	 No se debe aplicar presión en los extremos de la tarjeta.
+•	 Retira tu tarjeta de datos del equipo antes de transportarlo. www.entelpcs.cl
+El presente documento es de carácter referencial y tiene como propósito únicamente facilitar el 
+conocimiento de las funcionalidades descritas. En ningún caso debe ser considerado como un manual 
+o cial, por lo que Entel PCS no se hace responsable de posibles inexactitudes que pueda presentar el 
+contenido o consecuencias derivadas de su uso.

@@ -1,0 +1,4453 @@
+Sony Ericsson Mobile Communications AB Contenido
+Introducción..........................................................3 Mensajería...........................................................23
+Visión general de XPERIA™ X1..................................................3 SMS..........................................................................................23
+Símbolos de instrucciones.........................................................3 MMS.........................................................................................24
+Ayuda adicional..........................................................................3 Correo electrónico....................................................................25
+Tarjeta SIM y batería..................................................................3
+Correos electrónicos y citas de la empresa......27
+Carga de la batería.....................................................................3
+Sincronización del teléfono con Exchange Server...................27
+Tarjeta de memoria....................................................................4
+Trabajar con correos electrónico de la empresa......................27
+Encender y apagar el teléfono...................................................4
+Administrar solicitudes de reunión...........................................28
+Navegación................................................................................4
+Búsqueda de contactos en el Directorio de la organización. . .29
+Cerrar una aplicación.................................................................5
+Seguridad de correo electrónico..............................................29
+Iconos de estado........................................................................5
+Navegación por la Web......................................30
+Iluminaciones.............................................................................5
+Conexión a Internet..................................................................30
+Programas..................................................................................6
+Opciones del menú..................................................................30
+Configuración.............................................................................7
+Administración de Internet Explorer.........................................30
+Paneles..................................................................9
+Vínculos Web ..........................................................................30
+Vistas verticales y horizontales..................................................9
+Llamar mientras explora...........................................................31
+Elección de paneles...................................................................9
+Explorador Opera.....................................................................31
+Administración de paneles.......................................................10
+Conectarse..........................................................32
+Panel de peces en 3D..............................................................10
+Tecnología Bluetooth™............................................................32
+Panel de radio de XPERIA........................................................10
+Modos de Bluetooth™.............................................................32
+Panel Sony Ericsson................................................................11
+Asociación Bluetooth ™...........................................................32
+Panel Media Xperience............................................................13
+Conectar un manos libres Bluetooth™ o un auricular
+Panel de Google™...................................................................13
+estéreo.....................................................................................33
+Panel Microsoft Today.............................................................13
+Transfiera información mediante una conexión Bluetooth™...33
+Descarga de nuevos paneles...................................................13
+Wi-Fi (LAN inalámbrica)............................................................33
+Teléfono...............................................................14
+Windows Live Messenger........................................................34
+Uso del teléfono.......................................................................14
+Conexión compartida...............................................................34
+Redes.......................................................................................14
+Cámara................................................................35
+Cobertura de red......................................................................14
+Uso de la cámara.....................................................................35
+Roaming...................................................................................14
+Almacenamiento de fotografías y vídeos.................................35
+Configuraciones de red............................................................14
+Más funciones de la cámara....................................................35
+Realización de llamadas...........................................................14
+Iconos del visor de la cámara..................................................36
+Videoconferencia......................................................................15
+Visión general de la configuración de la cámara......................36
+Recibir llamadas.......................................................................15
+Más funciones del teléfono......................................................16
+Multimedia...........................................................37
+Imágenes..................................................................................37
+Configurar el teléfono.........................................16
+Música......................................................................................37
+Configuraciones básicas..........................................................16
+Vídeo........................................................................................38
+Personalización........................................................................16
+Transmisión de medios............................................................38
+Personalizar las configuraciones y los servicios del
+Windows Media® Player Mobile..............................................38
+teléfono....................................................................................17
+Sincronización de música y vídeo ...........................................39
+Protección del teléfono............................................................17
+Transferencia de contenido......................................................39
+Otras configuraciones..............................................................18
+Juegos......................................................................................39
+Sincronización.....................................................19
+GPS: servicios basados en ubicaciones...........40
+Antes de sincronizar.................................................................19
+Uso de A-GPS..........................................................................40
+Formas de sincronización........................................................19
+QuickGPS.................................................................................40
+Configuración de la sincronización..........................................19
+Google Maps™ para teléfonos móviles...................................40
+Iniciar la sincronización............................................................20
+Sincronización mediante una conexión Bluetooth...................20
+Administrar el teléfono........................................40
+Sincronización programada.....................................................20
+Instalación de aplicaciones......................................................40
+Cambiar la información que se va a sincronizar......................20
+Eliminar aplicaciones................................................................40
+Usar el Centro de dispositivos de Windows Mobile................20
+Ahorro de energía.....................................................................40
+Organizar PIM.....................................................21
+Información importante......................................41
+Contactos.................................................................................21
+Pautas para un uso seguro y eficiente: agregado....................41
+Administración de contactos...................................................21
+Declaration of Conformity for X1..............................................41
+Declaration of Conformity for X1a............................................41
+Ingresar y buscar información............................22
+FCC Statement.........................................................................41
+Ingreso de información............................................................22
+Industry Canada Statement.....................................................42
+Buscar información..................................................................23
+Índice...................................................................43
+1
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. 1. Restricciones: el software es información confidencial protegida por el derecho de
+Sony Ericsson /X1a 
+autor de Sun y el derecho a todas las copias está retenido por Sun y/o sus agentes.
+X1a: GSM 850/900/1800/1900 & UMTS I/II/V
+Los clientes no deben modificar, separar, desarmar, descifrar, extraer o alterar el
+Esta Guía del usuario es publicada por Sony Ericsson Mobile Communications AB o
+Software técnico. El software no debe ser arrendado, asignado ni debe someterse a
+su empresa afiliada local, sin garantía alguna. Sony Ericsson Mobile Communications
+sublicencias, en totalidad o en parte.
+AB se reserva el derecho a realizar las mejoras y cambios necesarios a esta guía del
+2. Leyes de Exportación: El software que incluye datos técnicos, está sujeto a las leyes
+usuario debido a errores tipográficos, imprecisiones de información actual o
+de control de exportación de EE. UU., incluida la Ley de administración de exportación
+mejoramiento de programas y/o equipos, en cualquier momento y sin previo aviso.
+de EE. UU. y sus leyes asociadas, y puede estar sujeto a las leyes de exportación e
+Sin embargo, dichos cambios se incorporarán en las nuevas ediciones de esta Guía
+importación de otros países. El cliente acepta cumplir estrictamente con estas leyes
+del usuario.
+y reconoce que es su responsabilidad obtener cualquier licencia para exportar, volver
+Todos los derechos reservados.
+a exportar o importar el software. El software no se puede descargar, ni exportar o
+©Sony Ericsson Mobile Communications AB, 2008
+volver a exportar (i) en, o a un ciudadano o residente de, Cuba, Irak, Irán, Coreo del
+Número de publicación: 1222-7265.3 Norte, Libia, Sudán, Siria (se debe revisar la lista con frecuencia) o cualquier país en
+el que EE. UU. tenga bienes embargados; o (ii) a cualquier persona de la lista del
+Tenga presente que:
+Departamento del Tesoro de EE. UU. de Naciones Designadas Especialmente o la
+algunos de los servicios de esta Guía del usuario no son admitidos por todas las redes.
+Lista de Órdenes de Denegación del Departamento de comercio de EE. UU. 3.
+Esto también se aplica al Número de emergencia internacional 112 de GSM.
+Derechos restringidos: el uso, la duplicación o la revelación por parte del gobierno de
+Comuníquese con el operador de red o el proveedor de servicios si tiene dudas sobre
+los Estados Unidos está sujeto a las restricciones conforme a lo estipulado en los
+si puede utilizar o no un determinado servicio.
+Derechos en las Cláusulas de Software de Computación y Datos Técnicos en DFARS
+Lea la Información importante antes de usar el teléfono.
+252.227-7013(c) (1) y FAR 52.227-19(c) (2) cuando corresponda.
+Su teléfono móvil puede descargar, almacenar y reenviar contenido adicional, como
+Derechos Restringidos: el uso, la duplicación o revelación por parte del gobierno de
+por ejemplo timbres. El uso de dicho contenido puede estar restringido o prohibido
+los Estados Unidos está sujeto a las restricciones conforme a lo estipulado en los
+por derechos de terceros, incluidos, entre otros, la restricción en conformidad con las
+Derechos en las Cláusulas de Software de Computación y Datos Técnicos en DFARS
+leyes de derecho de autor vigentes. Usted, y no Sony Ericsson, tendrá la
+252.227-7013(c) (1) (ii) y FAR 52.227-19(c) (2) cuando corresponda.
+responsabilidad absoluta por el contenido adicional que descargue o reenvíe desde
+Otros productos y nombres de empresas aquí mencionados pueden ser marcas
+su teléfono móvil. Antes de utilizar cualquier contenido adicional, asegúrese de contar
+comerciales de sus respectivos dueños.
+con la licencia o autorización correspondiente para el uso destinado. Sony Ericsson
+Se reserva cualquier derecho que no se haya reconocido expresamente en este
+no garantiza la precisión, integridad o calidad de ningún contenido adicional o
+documento.
+contenido de un tercero. Bajo ninguna circunstancia Sony Ericsson será responsable
+Todas las imágenes son sólo para ilustración y es posible que no representen el
+de forma alguna por el uso inadecuado del contenido adicional o contenido de un
+teléfono real.
+tercero.
+Esta Guía del usuario contiene imágenes de pantalla simuladas.
+Algunas funciones GPS usan Internet. Sony Ericsson no garantiza la exactitud de
+ninguno de los servicios de dirección incluidos, entre otros, los servicios de
+navegación vuelta a vuelta.
+Leyes de Exportación: este producto, incluyendo cualquier software o datos técnicos
+contenidos o que acompañen al producto, pueden estar sujetos a las leyes de control
+de exportación de EE.UU., incluida la Ley de administración de exportación de EE.UU.
+y sus leyes asociadas y el programa de sanciones de EE.UU. administrado por la
+Oficina de control de activos extranjeros del Departamento del tesoro de EE.UU. y
+además, puede estar sujeto a las leyes de exportación e importación de otros países.
+El usuario y el poseedor del producto aceptan cumplir estrictamente con estas leyes
+y reconocen que es su responsabilidad obtener cualquier licencia necesaria para
+exportar, volver a exportar o importar este producto. Este producto, sin limitación
+alguna, incluyendo el software que contiene, no se puede descargar, ni exportar o
+volver a exportar (i) en, o a un ciudadano o residente o a una entidad de Cuba, Irak,
+Irán, Corea del Norte, Sudán, Siria (se debe revisar la lista con frecuencia) o cualquier
+país en el que EE.UU. tenga bienes embargados; o (ii) a cualquier persona o entidad
+de la lista del Departamento del Tesoro de EE.UU. de Naciones Designadas
+Especialmente o (iii) a cualquier persona o entidad que aparezca en cualquier otra lista
+de prohibición de exportaciones que pueda mantener el gobierno de EE.UU.,
+incluyendo pero sin limitarse a la Lista de personas no autorizadas del Departamento
+de comercio de EE.UU o la Lista de entidades, o la Lista de sanciones de no
+proliferación del Departamento de estado de EE.UU.
+El teléfono admite los números de emergencia internacionales, por ejemplo, 112 y 911.
+Puede utilizar estos números normalmente para realizar llamadas de emergencia en
+cualquier país, tenga o no insertada la tarjeta SIM, si está dentro del alcance de una
+red 3G (UMTS) o GSM. En algunos países, también se pueden utilizar otros números
+de emergencia. Por lo tanto, su operador de red puede haber guardado números de
+emergencia locales adicionales en la tarjeta SIM.
+Bluetooth y los logotipos Bluetooth son marcas comerciales o marcas registradas de
+Bluetooth SIG Inc. y el uso de dichas marcas por Sony Ericsson es bajo licencia.
+Wi-Fi es una marca comercial o una marca registrada de Wi-Fi Alliance.
+El logotipo Liquid Identity (identidad líquida), XPERIA y X Panel son marcas
+comerciales o marcas registradas de SonyEricsson Mobile Communications AB.
+Sony es una marca comercial o una marca registrada de Sony Corporation.
+YouTube, Picasa, Gmail, Google™ y Google Maps™ son marcas comerciales o
+marcas registradas de Google, Inc.
+Wayfinder y Wayfinder Navigator son marcas comerciales o marcas registradas de
+Wayfinder Systems AB.
+Ericsson es una marca comercial o marca registrada de Telefonaktiebolaget LM
+Ericsson.
+Microsoft, ActiveSync, Windows, el logotipo Windows, Windows Live, PowerPoint,
+Excel, OneNote, Outlook y Vista son marcas comerciales o marcas registradas de
+Microsoft Corporation en Estados Unidos y/o en otros países.
+Este producto está protegido por determinados derechos de propiedad intelectual de
+Microsoft. Se prohíbe el uso o distribución de dicha tecnología fuera de este producto
+sin una licencia de Microsoft.
+Los propietarios de contenido usan la tecnología de administración de derechos
+digitales de Windows Media (WMDRM) para proteger su propiedad intelectual, incluso
+derechos de autor. Este dispositivo usa software WMDRM para acceder a contenido
+protegido por WMDRM. Si el software WMDRM no puede proteger el contenido, los
+propietarios del contenido pueden solicitar a Microsoft que inhabilite la capacidad del
+software para usar WMDRM para reproducir o copiar contenido protegido. La
+inhabilitación no afecta el contenido no protegido. Cuando descarga licencias para
+contenido protegido, acepta que Microsoft puede incluir una lista de inhabilitación con
+las licencias. Los propietarios de contenido pueden exigir que actualice WMDRM para
+acceder a su contenido. Si rechaza una actualización, no podrá acceder al contenido
+que requiera la actualización.
+Este producto está autorizado en virtud de las licencias en cartera de patentes
+MPEG-4 visual y AVC para uso personal y no comercial por un consumidor para (i)
+codificación de video de acuerdo con el estándar visual MPEG-4 ("video MPEG-4") o
+el estándar AVC ("video AVC") y/o (ii) decodificación de video MPEG-4 o AVC
+codificado por un consumidor dedicado a una actividad personal y no comercial y/o
+que se obtenga de un proveedor de videos autorizado por MPEG LA para proporcionar
+video MPEG-4 o AVC. No se otorga ninguna licencia para otro tipo de uso ni se la
+considerará implícita. Se puede obtener información adicional, incluso acerca de usos
+promocionales, internos y comerciales, en MPEG LA, LLC. Consulte http://
+www.mpegla.com. Tecnología de decodificación de audio MPEG Layer-3 autorizada
+por Fraunhofer IIS y Thomson.
+Java, JavaScript y las marcas comerciales y logotipos de Java son marcas
+comerciales o registradas de Sun Microsystems, Inc. en EE.UU. y otros países.
+Acuerdo de licencia de usuario para Sun Java Platform, Micro Edition.
+2
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. 20 Altavoz
+Introducción
+21 Soporte para correa
+Visión general de XPERIA™ X1
+Símbolos de instrucciones
+Los siguientes símbolos aparecen en la Guía del usuario:
+Nota
+Consejo
+> Puntee en elementos o use la tecla de navegación para
+desplazarse y seleccionar
+Ayuda adicional
+Usar la ayuda del teléfono
+•
+Puntee en  > Ayuda.
+Usar la Introducción
+•
+Puntee en  > Programas > Introducción.
+1 Tecla de encendido
+2 Conector para auricular de 3,5 mm
+Tarjeta SIM y batería
+3 Conector para cable USB
+Antes de comenzar a utilizar el teléfono, debe insertar la tarjeta
+SIM y la batería.
+4 Teclado
+Insertar la tarjeta SIM
+5 Joystick óptico/ENTER
+6 Teclas de selección
+7 Tecla llamar
+8 Tecla de panel XPERIA™ X1
+9 Lente de cámara frontal/para videoconferencia
+10 Altavoz para el oído
+11 Sensor de luz
+12 Pantalla táctil
+13 Tecla finalizar llamada
+14 Tecla aceptar
+1 Retire la tapa de la batería.
+2 Deslice la tarjeta SIM en su soporte con los contactos de color
+dorado hacia abajo.
+Insertar la batería
+1 Inserte la batería con el holograma de Sony Ericsson hacia
+arriba y los conectores uno frente al otro.
+2 Deslice la tapa de la batería en su lugar.
+15 Tecla de volumen
+Carga de la batería
+16 Luz de la cámara
+La batería del teléfono está parcialmente cargada al momento
+de la compra. Puede cargar el teléfono con el adaptador de
+17 Lente de la cámara
+corriente o una PC.
+18 Lápiz
+19 Tecla de la cámara
+Introducción 3
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. Encender y apagar el teléfono
+Encender el teléfono
+Cargar el teléfono con un adaptador de corriente
+Conecte el teléfono a un tomacorriente con el cable USB
+•
+incluido y el adaptador de corriente.
+Cargar el teléfono con un equipo
+1 Mantenga oprimida la tecla de encendido hasta que el
+Conecte el teléfono a un puerto USB del equipo con el cable
+•
+teléfono se inicie.
+USB incluido.
+2 La primera vez que encienda el teléfono, un asistente de Inicio
+rápido lo guía durante la configuración inicial.
+Tarjeta de memoria Apagar el teléfono
+1 Mantenga oprimida la tecla de encendido hasta que aparezca
+Insertar una tarjeta de memoria
+un mensaje.
+2 Para apagar, puntee en Sí.
+Encender el modo de suspensión
+Para apagar temporalmente la pantalla y cambiar el teléfono
+•
+al modo de suspensión, oprima la tecla de encendido.
+Apagar el modo de suspensión
+Para activar la pantalla, oprima la tecla de encendido. El
+•
+teléfono también se activa al abrir el teclado o al recibir una
+llamada o un mensaje.
+Activar o desactivar el Modo de vuelo
+•
+En el panel Sony Ericsson, puntee en  o .
+Navegación
+Puede moverse alrededor de la pantalla de las siguientes formas:
+El lápiz o el dedo en la pantalla táctil
+•
+La tecla de navegación multidireccional
+•
+El joystick óptico
+•
+1 Retire la tapa de la batería.
+2 Inserte la tarjeta de memoria con los contactos de color
+dorado hacia abajo.
+Uso de la pantalla táctil
+Retirar una tarjeta de memoria
+1 Retire la tapa de la batería.
+2 Oprima el borde de la tarjeta de memoria para soltarla y
+retirarla.
+Para resaltar o abrir un elemento, puntee en el elemento.
+•
+Para copiar, cambiar el nombre o enviar un archivo, puntee y
+•
+mantenga oprimido el archivo o la carpeta. Seleccione la
+acción preferida desde el cuadro de diálogo de opciones.
+4 Introducción
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. Para desplazarse, puntee la pantalla y deslícela hacia arriba 2 Marque la casilla de verificación si desea Para finalizar
+•
+o abajo. En algunas páginas, incluso puede deslizarse a los
+programas mantenga oprimida "X".
+costados.
+Para que la pantalla deje de desplazarse, puntee en la
+•
+Iconos de estado
+pantalla.
+Para activar la vista panorámica de una página, toque y
+•
+Puede puntear un icono en la barra de estado para obtener más
+mantenga oprimida la pantalla y, a continuación, arrastre el
+información o iniciar una aplicación.
+dedo.
+Para activar la vista panorámica continua, arrastre el dedo
+•
+hacia los límites exteriores de una página y mantenga
+oprimido. Saque el dedo para detener la vista panorámica.
+Uso de la tecla de navegación
+Usar la tecla de navegación
+Es posible que los siguientes iconos de estado aparezcan en la
+pantalla:
+GPRS disponible Función Wi-Fi
+habilitada
+HSDPA disponible Buscando una
+conexión Wi-Fi
+disponible
+EDGE disponible Wi-Fi conectado
+3G/UMTS disponible Intensidad de la
+Oprima la tecla de navegación hacia la izquierda, derecha,
+•
+señal
+arriba o abajo para moverse alrededor de la pantalla. Oprima
+el centro de la tecla de navegación para seleccionar un
+GPRS en uso No hay señal
+elemento.
+HSDPA en uso Teléfono apagado
+Uso del joystick óptico
+Puede mover el marcador resaltado en cualquier dirección al
+3G/UMTS en uso Llamada de voz
+deslizar el dedo sobre la tecla de navegación. En Internet
+en curso
+Explorer, mensajería y contactos, puede usar el joystick óptico
+para desplazarse.
+EDGE en uso Llamada retenida
+La conexión está activa Sonido activado
+La conexión no está activa Sonido
+desactivado
+Llamada perdida Batería
+cargándose
+Nuevo MMS entrante Batería llena
+Nuevo mensaje de texto. La batería está
+Notificación por SMS de un demasiado baja
+Activar o desactivar el joystick óptico
+correo de voz
+1
+Puntee  > Configuración > la ficha Sistema > Joystick
+Múltiples notificaciones. Auricular estéreo
+Puntee para ver todo Bluetooth
+óptico.
+detectado
+2 Marque o desmarque la casilla de verificación Activar joystick
+óptico.
+Administrador de tareas Sincronización en
+curso
+Desplazarse en lugar de resaltar
+1
+Puntee  > Configuración > la ficha Sistema > Joystick Roaming Bluetooth
+activado
+óptico.
+2 Marque la casilla de verificación Activar la función de
+Dejar de ejecutar el Auricular
+desplazamiento en Internet Explorer, mensajería y contactos.
+programa Bluetooth
+conectado
+Cerrar una aplicación
+Iluminaciones
+Si oprime  en cualquier ventana de la aplicación, cierra la
+El teléfono tiene cuatro luces que puede configurar para iluminar
+aplicación.
+y notificarle eventos.
+Cambiar la funcionalidad del botón X
+1
+Puntee  > Configuración > la ficha Sistema >
+Administrador de tareas > la ficha Botón.
+Introducción 5
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. Prioridad de iluminación
+Un evento de más alta prioridad anula a uno de prioridad más
+baja. Por ejemplo, la iluminación de llamada entrante aparece
+cuando recibe una llamada entrante (prioridad más alta), incluso
+si la batería se está cargando (prioridad más baja).
+Después de que vence el evento de más alta prioridad, es posible
+que vuelva a aparecer una iluminación para un evento de
+prioridad más baja. Por ejemplo, la iluminación de carga aparece
+después de que contesta la llamada entrante, si aún se está
+realizando la carga y no se produjo otro evento de prioridad (por
+ejemplo, correo electrónico recibido).
+Eventos en prioridad de iluminación
+Inicio (carga)
+Llamada entrante
+Mensaje instantáneo
+Establecer las iluminaciones
+MMS recibido
+•
+Puntee  > Configuración > la ficha Sistema > Iluminación.
+SMS recibido
+Acceder a una vista previa de iluminación
+Correo electrónico recibido
+1
+Puntee  > Configuración > la ficha Sistema > Iluminación.
+Panel (panel seleccionado)
+2 Seleccione un evento.
+Panel (botón oprimido)
+3 Punte Vista previa activada.
+Alarma/calendario
+No cargue el teléfono cuando acceda a la vista previa de una
+iluminación. Cuando la iluminación de carga está activada, la
+Batería baja
+función de vista previa no funciona.
+Correo de voz
+Patrón de iluminación
+Llamada perdida
+Todas las luces destellan al mismo tiempo, excepto cuando se
+Cargando/carga pendiente
+oprime el botón del panel y sólo destella la luz izquierda del
+botón.
+Evento Color Patrón
+Cambiar el tiempo de iluminación
+1
+Cargar Combinado Un destello largo,
+Puntee en  > Configuración > la ficha Personal > Sonidos
+repetido
+y notificaciones > la ficha Notificaciones.
+Batería baja Rojo Un destello corto,
+2 En la casilla Evento, seleccione un evento, por ejemplo
+repetido
+Teléfono: Llamada perdida.
+3 Seleccione Luz interm. durante.
+Panel (botón oprimido) Combinado Un destello largo,
+4 En la casilla Luz interm. durante, seleccione el tiempo que
+una vez
+desea que la luz parpadee.
+Panel (panel seleccionado) Combinado Un destello largo,
+Los tiempos de iluminación predeterminados están
+una vez
+configurados en cinco minutos para los siguientes eventos:
+• Mensajería instantánea
+Llamada perdida Combinado Dos destellos • Mensajería: Nuevo MMS
+cortos, repetido • Mensajería: Nuevo SMS
+• Teléfono: Llamada perdida
+Correo de voz Combinado Tres destellos • Teléfono: Correo de voz
+cortos, repetido • Recordatorios
+Alarma/calendario Violeta Tres destellos
+cortos, repetido
+Programas
+Correo electrónico recibido Violeta Un destello corto,
+En el teléfono puede encontrar los siguientes programas:
+repetido
+SMS recibido Azul Un destello corto,
+Programas del menú Inicio
+repetido
+Icono Descripción
+Mensaje instantáneo Azul Un destello corto,
+repetido
+Office Mobile: usar la serie completa de aplicaciones de
+Microsoft® Office para el teléfono.
+Llamada entrante Verde Tres destellos
+cortos, repetido
+ Excel® Mobile: crear nuevos libros
+o ver y editar libros de Excel.
+MMS recibido Azul Un destello corto,
+repetido
+ OneNote® Mobile: crear notas y
+recopilar información, todo en un
+Cargar Combinado Un destello largo,
+solo lugar.
+una vez
+ PowerPoint® Mobile: ver
+   
+diapositivas y presentaciones en
+PowerPoint.
+ Word Mobile: crear, ver y editar
+documentos de Word.
+6 Introducción
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. Calendario: llevar un registro de citas y crear solicitudes Administrador SIM: administrar contactos
+de reunión. almacenados en la tarjeta USIM/SIM. También puede
+copiar contenido USIM/SIM en los Contactos del
+Contactos: llevar un registro de amigos y colegas.
+teléfono.
+Transmisión de medios: transmitir vídeo en vivo o a
+Internet Explorer Mobile: explorar la Web y sitios WAP,
+pedido.
+así como descargar nuevos programas y archivos
+desde Internet.
+Tareas: llevar un registro de las tareas.
+Mensajería: enviar y recibir correos electrónicos,
+mensajes de texto y mensajes de imagen. Windows Live: usar esta versión móvil de Windows
+Live™ para buscar información en la Web. Inicie sesión
+Teléfono: realizar y recibir llamadas, alternar entre
+en la cuenta de Windows Live para acceder a los
+llamadas y configurar llamadas de conferencia.
+mensajes de Live Mail y enviar o recibir mensajes
+instantáneos en Live Messenger.
+Ayuda: ver los temas de Ayuda para la pantalla o el
+programa actual.
+Windows Media Player Mobile: reproducir archivos de
+audio y vídeo.
+Pantalla de programas
+Configuración
+Icono Descripción
+Puede ajustar las configuraciones del teléfono para que se
+Juegos: reproducir cualquiera de los cuatro juegos
+adapten a lo que desea.
+preinstalados: Astraware Sudoku, Bejeweled 2, Bubble
+Ver todas las configuraciones disponibles
+Breaker y Solitario.
+1
+Puntee  > Configuración.
+ActiveSync: sincronizar información entre el teléfono y
+una computadora o Exchange Server. 2 Puntee en Personal, Sistema, y en las fichas Conexiones
+ubicadas en el parte inferior de la pantalla e ingrese la
+Adobe Reader LE: ver archivos PDF (Formato de
+configuración.
+documento portátil) en el teléfono.
+Calculadora: realizar cálculos básicos como suma, Ficha Personal
+resta, multiplicación y división.
+Icono Descripción
+Calendario: llevar un registro de citas y crear solicitudes
+de reunión.
+Botones: asignar un programa o una función a un botón
+de hardware.
+Administrador de com.: administrar las conexiones del
+teléfono (incluida Wi-Fi y Bluetooth), desactivar todas
+Entrada: configurar opciones para cada uno de los
+las conexiones con el Modo de vuelo, encender o
+métodos de entrada.
+apagar el teléfono y activar o desactivar la función Direct
+Bloquear: configurar una contraseña para el teléfono.
+Push.
+Explorador de archivos: organizar y administrar
+Menús: configurar los programas que aparecerán en el
+archivos en el teléfono.
+menú Inicio.
+Introducción: leer cómo administrar funciones básicas,
+Datos del propietario: ingresar su información personal
+por ejemplo realizar una llamada, y cómo configurar la
+en el teléfono.
+fecha y hora, el correo electrónico, la contraseña, el
+auricular Bluetooth, la imagen de fondo y cómo
+Teléfono: personalizar las configuraciones del teléfono
+transferir música. Puntee los vínculos para ajustar las
+como el tono de timbre, configurar un número de PIN
+configuraciones para cada área.
+para la tarjeta USIM/SIM, y más.
+Google Maps: ver su ubicación actual, encontrar otras
+Sonidos y notificaciones: activar sonidos para eventos,
+ubicaciones y calcular rutas.
+notificaciones y más, y configurar el tipo de notificación
+para diferentes eventos.
+Handango InHand: ofrece descargas de software y
+juego para el teléfono.
+Hoy: personalizar la apariencia y la información que se
+verá en la pantalla Hoy.
+Conexión compartida: conectar el teléfono a Internet
+mediante una conexión de datos telefónica.
+Java: descargar e instalar aplicaciones Java en el
+Ficha Sistema
+teléfono, como juegos y herramientas.
+Icono Descripción
+Messenger: versión móvil de Windows Live™
+Messenger.
+Acerca de: ver información básica como la versión de
+Windows® Mobile y el tipo de procesador utilizado en
+Notas: crear notas escritas a mano o con el teclado,
+el teléfono. También puede especificar un nombre para
+dibujos y grabaciones de voz.
+el teléfono.
+Opera: explorador Opera Mobile que permite
+Certificados: ver información acerca de los certificados
+exploración completa de HTML.
+que se instalan en el teléfono.
+Imágenes y vídeo: ver, organizar y ordenar imágenes,
+Borrar almacenamiento: puntee este icono sólo
+GIF animados y archivos de vídeo en el teléfono o una
+cuando necesite borrar todos los datos y archivos de la
+tarjeta de memoria.
+memoria y restaurar el teléfono a la configuración de
+QuickGPS: descarga de datos satelitales por Internet
+fábrica predeterminada.
+mediante ActiveSync, Wi-Fi o GPRS para determinar
+Reloj y alarmas: configurar el reloj del teléfono en la
+rápidamente la posición GPS actual.
+fecha y hora locales o en la zona horaria del lugar en el
+Buscar: buscar contactos, datos y otra información en
+que se encuentre cuando está de viaje. Las alarmas
+el teléfono.
+Introducción 7
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. también pueden configurarse en días y horas
+Ficha de conexiones
+específicos de la semana.
+Icono Descripción
+Comentarios del usuario: mejorar Windows® Mobile
+mediante la participación en el Programa para la mejora
+Red avanzada: establecer conexiones avanzadas para
+de la experiencia del usuario.
+la Red
+Información de dispositivo: ver información sobre la
+Transferir: configurar el teléfono para que reciba
+versión de firmware, hardware, identidad y la
+transferencias entrantes de Bluetooth.
+Información de cliente.
+Bluetooth: activar Bluetooth, configurar el teléfono en el
+Cifrado: permitir el cifrado de los archivos de la tarjeta
+modo visible y buscar dispositivos Bluetooth.
+de memoria. Los archivos cifrados sólo se pueden leer
+en el teléfono.
+Administrador de com.: administrar las conexiones del
+teléfono (incluidas Wi-Fi, GPRS, Bluetooth y
+Informe de errores: activar o desactivar la función de
+ActiveSync), encender o apagar el teléfono, cambiar al
+informe de errores del teléfono. Cuando esta
+modo timbre/vibración y activar o desactivar la función
+característica está activada y se produce un error de
+Direct Push.
+programa, los datos técnicos sobre el estado del
+programa y el teléfono se registran en un archivo de
+Configuración de la conexión: configurar las
+texto y se entrega a Soporte técnico de Microsoft si
+conexiones de datos del teléfono, como GPRS, WAP y
+eligió enviarlo.
+MMS, dependiendo del operador de red detectado o
+seleccionado.
+GPS externo: configurar los puertos de comunicación
+GPS correspondientes, si se requiere. Es posible que
+Conexiones: configurar uno o más tipos de conexiones
+necesite hacerlo cuando en el teléfono haya programas
+de módem para el teléfono, como marcación telefónica,
+que acceden a los datos GPS o haya conectado un
+GPRS y más, de manera que el teléfono pueda
+receptor GPS al teléfono. Consulte la Ayuda para
+conectarse a Internet o a una red local privada.
+conocer detalles.
+Inscripción de dominio: cuando se inscribe en un
+Iluminación: activar o desactivar la iluminación para
+dominio conecta el teléfono a los recursos de la
+eventos como Cargando, Batería baja, Llamada
+empresa.
+perdida, Correo de voz, Alarma/calendario, Correo
+USB a PC: configurar una conexión serial USB entre el
+electrónico recibido, Llamada entrante y más.
+teléfono y la computadora cuando hay problemas para
+Bloqueo teclado: bloquear las teclas del teléfono
+conectar ActiveSync.
+excepto para la tecla ENCENDIDO cuando el teléfono
+Wi-Fi: buscar redes inalámbricas disponibles.
+esté en el modo de suspensión. Esto asegura que no
+encienda el teléfono accidentalmente y consuma
+energía innecesaria.
+LAN inalámbrica: ver información sobre la red
+inalámbrica activa y personalizar las configuraciones de
+Programas administrados: ver el historial de instalación
+Wi-Fi.
+para programas administrados en el teléfono.
+Memoria: verificar el estado de asignación de memoria
+del teléfono y la información de la tarjeta de memoria.
+También puede detener los programas que se están
+ejecutando actualmente.
+Micrófono AGC: ajustar automáticamente el volumen
+de la voz cuando esté grabando.
+Joystick óptico: activar o desactivar el joystick óptico,
+activar la función del cursor en Internet Explorer,
+Mensajería y Contactos. También puede configurar la
+sensibilidad de la pantalla.
+Energía: verificar la energía restante de la batería.
+También puede configurar el tiempo de espera para
+apagar la pantalla (cambiar el modo del teléfono a
+Suspensión) para ahorrar energía de la batería.
+Configuración regional: establecer la configuración
+regional que se usará, incluido el formato para mostrar
+números, monedas, fecha y hora en el teléfono.
+Quitar programas: quitar los programas que instaló en
+el teléfono.
+Pantalla: cambiar la orientación de la pantalla,
+recalibrarla o cambiar el tamaño del texto que contiene.
+Administrador de tareas: detener los programas en
+ejecución y configurar el botón  para finalizar
+programas inmediatamente cuando puntea el botón.
+Windows Update: vínculo al sitio Web de Microsoft y
+actualizar Windows® Mobile en el teléfono con los
+parches o arreglos más recientes.
+8 Introducción
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. Elección de paneles
+Paneles
+Los paneles son una nueva y emocionante característica de
+Abrir y cerrar vistas de paneles
+XPERIA X1. Son puntos de acceso de un toque para sus
+experiencias móviles favoritas. Puede organizarlos como desee
+y descargar nuevos paneles para el teléfono en
+www.sonyericsson.com/fun.
+Vistas verticales y horizontales
+Vistas verticales
+•
+Oprima .
+Vista de paneles
+Panel Media Panel Sony Vista de paneles
+Xperience Ericsson
+Vistas horizontales
+1 Panel
+2 Alternar a vista de tarjeta
+Panel Media Xperience
+3 Alternar a vista de configuración
+Vista de tarjeta
+Panel Sony Ericsson
+Vista de paneles
+Las funciones son las mismas tanto para la vista vertical como
+para la horizontal. La explicación de los paneles sólo se realizará
+en vista vertical.
+1 Cambiar a vista izquierda de tarjeta y vista de panel
+Paneles 9
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. 5Vista de configuración
+Puntee en  para volver a la vista de panel.
+Alternar entre paneles y aplicaciones
+•
+En un panel o una aplicación, oprima  para ir a la vista
+de panel.
+•
+En la vista de panel, oprima  para volver al panel usado
+con más frecuencia.
+En una aplicación que comenzó en el menú Inicio, oprima
+•
+ para volver al panel usado con más frecuencia.
+Panel de peces en 3D
+Este panel capta la atención y proporciona cierta información
+básica. Al puntear la pantalla puede influir en el comportamiento
+de los peces. Hay tres o cuatro peces, dependiendo del estado
+del teléfono. La hora y la fecha corresponden a la configuración
+del formato predeterminado de Windows. El pez seguirá el dedo
+y reaccionará a los punteos de la pantalla.
+1 Ubicación del panel fijo Microsoft Today.
+2 Posición ocupada por Panel 1 de Sony Ericsson, como un
+ejemplo
+3 Ubicación disponible para un panel
+4 Tecla de retorno
+5 Posición ocupada por Panel de radio XPERIA, como un
+ejemplo
+Administración de paneles
+Abrir un panel
+En una vista de panel o tarjeta, puntee en el panel.
+•
+1 Demekin. El pez se vuelve rojo cuando la batería tiene menos
+Cerrar un panel
+de un 10% de carga.
+•
+Oprima .
+2 Ranchu. El pez se vuelve dorado cuando hay un mensaje no
+leído.
+Agregar un panel
+1
+3 Wakin. El se vuelve plateado cuando el sonido está apagado.
+En la vista de panel, puntee en .
+2
+4 Ryukin. El pez aparece cuando hay una llamada perdida
+Puntee en  en una posición disponible.
+3 En la lista de desplazamiento, puntee en el panel que desea
+usar.
+Panel de radio de XPERIA
+4 Puntee Select.
+5
+Puntee en  para volver a la vista de panel.
+Con este panel directamente en su escritorio, puede controlar la
+radio FM.
+Reemplazar un panel
+1
+En la vista de panel, puntee en .
+2
+Puntee  en el panel que desea reemplazar.
+3
+Puntee  en el panel seleccionado.
+4 En la lista, puntee en el panel que desea usar.
+5 Puntee Select.
+6
+Puntee en  para volver a la vista de panel.
+Retirar un panel
+1
+En la vista de panel, puntee en .
+2
+Puntee  en el panel que desea eliminar.
+3
+Puntee  en el panel seleccionado.
+4 En la lista, puntee la opción No Panel.
+5 Puntee Select.
+6
+Puntee en  para volver a la vista de panel.
+Configurar, si la opción está disponible
+1 Estaciones preestablecidas. Se pueden almacenar seis
+1
+canales de radio distintos. Un punto en la esquina superior
+En la vista de panel, puntee en .
+izquierda de una tecla indica que es una tecla ocupada
+2
+Puntee  en el panel que desea configurar.
+2 Información del canal
+3
+Puntee  .
+3 Indicador de RDS
+4 Ingrese la configuración y puntee en Aceptar.
+10 Paneles
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. en Windows. Puntee en el reloj o calendario para ajustar la
+4 Indicador de estéreo/mono
+configuración
+5 Ajuste preciso. Toque para ajustar la sintonía con precisión
+3 Acceso directo a Mensajería. Se enciende cuando se recibe
+6 Buscar hacia abajo un mensaje. También muestra el número de mensajes no
+leídos
+7 Bajar volumen. Puntee y mantenga oprimido para bajar el
+volumen gradualmente 4 Acceso directo a la lista de llamadas. Se enciende cuando
+se pierde una llamada. También muestra el número de
+8 Salida de audio en los audífonos o el altavoz incorporado
+llamadas perdidas
+del teléfono
+5 Botones de conectividad
+9 Reloj, formato de 12 ó 24 horas
+6 Citas y accesos directos a Calendario. Para cada bloque se
+10 Frecuencia del canal de radio actual
+pueden mostrar dos citas. Los datos se obtienen de
+Calendario
+11 Buscar hacia arriba
+7 Tasks y accesos directos a Tasks. Se pueden mostrar dos
+12 Barra de nivel de volumen. Puntee y arrastre para ajustar el
+tareas para cada bloque. Los datos se obtienen de Tasks
+volumen
+8 Lector de Web Feeds. Se muestra el conjunto de Web Feeds
+13 Subir volumen. Puntee y mantenga oprimido para subir el
+volumen gradualmente
+9 Accesos directos para configurar aplicaciones y
+aplicaciones usadas recientemente
+14 Energía
+10 Actualiza el clima y Web Feeds
+11 Entradas de marcación rápida
+Almacenar un canal de radio actual
+1 En la barra de estaciones preestablecidas, puntee en una
+12 Aplicaciones usadas recientemente
+tecla desocupada.
+2 Puntee la tecla y manténgala oprimida durante más de 3
+13 Configuración
+segundos.
+Configurar
+Botones de conectividad
+1
+Oprima .
+2
+Modo de vuelo apagado
+Puntee  .
+3
+Puntee  en el panel de la radio.
+Modo de vuelo encendido. Wi-Fi, Bluetooth™ y el
+4
+transmisor y receptor del teléfono se desactivan. Los
+Puntee  en el panel de la radio resaltado.
+iconos correspondientes se atenúan.
+5 Ingrese la configuración y puntee en Aceptar.
+6 Wi-Fi encendido
+Puntee en  para volver a la vista de panel.
+Wi-Fi apagado
+Indicadores de RDS
+RDS significa "Sistema de datos por radio", y permite recibir
+Bluetooth encendido
+información adicional durante la recepción de programas de
+radio comunes. AF corresponde a la sigla de Frecuencia
+Bluetooth apagado
+alternativa. La radio se sintoniza en otra frecuencia que transmita
+la misma estación cuando la señal de radio recibida sea
+demasiado débil.
+Transmisor y receptor del teléfono activados
+Transmisor y receptor del teléfono desactivados
+Panel Sony Ericsson
+Este panel muestra la hora, el calendario, el tiempo y accesos
+Sonido activado
+directos útiles para controlar el teléfono y mostrar su estado.
+Puede configurar el panel para que se ajuste a sus necesidades.
+El panel está compuesto por varias aplicaciones pequeñas,
+Sonido desactivado
+llamadas widgets. Al puntear un widget, se inicia la aplicación
+subyacente. La ilustración del panel muestra un ejemplo de la
+Sólo alarma vibrante
+manera en que se puede configurar un panel.
+Diseño
+El panel se compone de diez bloques. Puede usar estos bloques
+para mostrar los widgets que elija. Algunos widgets ocupan más
+de un bloque, y puede configurar algunos widgets para que
+aparezcan en más de un lugar.
+1 Tiempo, fecha y temperatura. Corresponde a la primera
+ciudad (City 1) configurada en Options
+2 Reloj y calendario. Corresponde a la ciudad configurada en
+Options. El formato de fecha corresponde a lo configurado
+Paneles 11
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. Ficha de vínculos Web
+Bloques en la vista vertical
+1 Ubicación para vínculos Web. Algunas están predefinidas
+2 Bloques utilizados
+3 Cuadro para escribir direcciones de vínculos Web (URL).
+Puntee y mantenga oprimido para abrir un menú con
+opciones
+4 Seleccione el número de bloques que se mostrarán para los
+Bloques en la vista horizontal
+vínculos Web. Cada bloque muestra dos filas de un vínculo
+Web
+Configuración
+Configurar un vínculo Web preestablecido
+Configurar el panel de Sony Ericsson
+1 Puntee un vínculo preestablecido.
+Puntee Options.
+•
+2 Seleccione el número de bloques.
+Configurar un nuevo vínculo Web
+Ficha general
+1 Puntee en una ubicación.
+2 Seleccione Otros.
+3 Escriba la dirección de los vínculos Web (URL).
+4 Seleccione el número de bloques.
+Ficha iniciadora
+1 Bloques utilizados. Los números rojos indican que se han
+usado demasiados bloques
+2 Color. Tema de color para el panel
+3 Reloj y calendario. Disposición de reloj y calendario
+4 City 1. Puntee para seleccionar ciudades y países.
+1 Bloques utilizados
+Seleccione manualmente el horario de verano
+2 Seleccione el número de bloques para accesos directos a
+5 City 2. Puntee para seleccionar ciudades y países.
+aplicaciones, entradas de marcación rápida y programas
+Seleccione manualmente el horario de verano
+usados recientemente
+6 Intervalo de tiempo de actualización de Web Feeds. Los
+3 Programas usados recientemente
+Web Feeds se actualizan cuando el teléfono tiene una
+conexión a Internet y cuando se está utilizando Panel 1 de
+4 Mover el enfoque hacia arriba
+Sony Ericsson o Panel 2 de Sony Ericsson
+5 Área de iconos. Cada bloque de iconos está numerado.
+7 Botones de conectividad
+Resalte un icono y selecciónelo para abrir un menú con
+opciones
+8 Appointments. Seleccione el número de bloques para
+mostrar citas. 1 bloque muestra dos citas y 2 bloques
+6 Accesos directos a aplicaciones
+muestran cuatro citas. 0 significa que el widget de citas no
+7 Entradas de marcación rápida
+se muestra en absoluto
+8 Mover el enfoque hacia abajo
+9 Tasks. Seleccione el número de bloques para mostrar
+tareas. 1 bloque muestra dos tareas y 2 bloques muestran
+9 Establece accesos directos para archivos. Cuando se
+cuatro tareas. 0 significa que el widget de tareas no se
+puntea en el acceso directo, se inicia la aplicación
+muestra en absoluto
+correspondiente.
+10 Escala de temperatura. Celsius o Fahrenheit
+10 Establece entradas de marcación rápida
+12 Paneles
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. Establecer un acceso directo a una aplicación 3 En la ficha Paneles, elija el panel.
+4 Descargue el panel en el escritorio del equipo.
+1 En el área de iconos, puntee en una ubicación vacía.
+5 Conecte el teléfono al equipo.
+2 Puntee Set File Shortcut > +.
+6 Cuando se inicie Active Sync y tenga una conexión entre el
+3 Seleccione el archivo de la aplicación.
+teléfono y el equipo:
+Establecer una entrada de marcación rápida
+Si el archivo del panel tiene la extensión de archivo exe
+•
+1 En el área de iconos, puntee en una ubicación vacía. (ejecutable), haga doble en el icono del panel del escritorio
+2 del equipo.Puntee en Set Speed Dial > +.
+Si el archivo tiene la extensión CAB, copie el archivo del
+3 Seleccione una entrada. •
+panel en el teléfono y luego puntee el icono del archivo de
+panel en el teléfono.
+Panel Media Xperience
+Siga el procedimiento de configuración del panel para
+Con este panel, puede presentar diversos elementos multimedia,
+configurarlo en el teléfono. Consulte Elección de paneles en la
+como fotografías, clips de vídeo, música, etc. Puede mover los
+página 9.
+diferentes elementos con el dedo o con el lápiz. Para obtener
+Agregar un panel
+más información, consulte Multimedia.
+Siga las instrucciones en Elección de paneles.
+•
+Panel de Google™
+Panel de presentación de diapositivas
+Este panel brinda acceso a búsqueda, mapas, Picasa™,
+En el panel de presentación de diapositivas, puede mostrar
+calendario y Gmail™.
+imágenes que ha captado con la cámara.
+Debido a la configuración, es probable que algunos de los
+paneles se deban descargar .
+No todas las aplicaciones están disponibles en todos los idiomas.
+Panel Microsoft Today
+Este panel muestra información y accesos directos útiles.
+1 Imagen seleccionada
+2 Rotación de miniaturas
+Mover la rotación
+Deslícese a la derecha o izquierda en cualquier parte de la
+•
+pantalla.
+Seleccionar una imagen
+1 Hora y fecha. Acceso directo a Configuración > la ficha
+En la rotación, puntee en una imagen.
+•
+Sistema > Reloj y alarmas
+2 Introducción.
+Almacenamiento de imágenes
+En la memoria del teléfono: \My Documents\My pictures
+•
+3 Datos del propietario. Acceso directo a Configuración > la
+\Camera
+ficha Personal >Datos del propietario
+En la tarjeta de memoria: \Tarjeta de almacenamiento\DCIM
+•
+4 Mensajes no leídos. Acceso directo a Mensajería
+5 Tareas activas. Acceso directo a Tasks
+6 Citas activas. Acceso directo a Calendario
+7 Inicio de sesión de Windows Live
+8 Búsqueda en Windows Live
+9 Estado de bloqueo del dispositivo
+10 Tecla paraContactos
+11 Tecla paraCalendario
+Descarga de nuevos paneles
+Descargar un nuevo panel con el teléfono
+1 En el explorador de Internet, puntee en el favorito de la página
+Web de Sony Ericsson sin conexión.
+2 Puntee en el vínculo con el botón del panel.
+3 En la página Web Fun & Downloads, elija su panel.
+Descargar un nuevo panel con un equipo
+1 Verifique que Active Sync esté instalado en el equipo.
+2 Visite www.sonyericsson.com y seleccione Fun &
+Downloads.
+Paneles 13
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. 8 Correo de voz. Puntee y mantenga oprimido para acceder
+Teléfono
+al correo de voz
+9 Tecla Videoconferencia. Después de marcar, puntee esta
+Uso del teléfono
+tecla para realizar una videoconferencia
+Al igual que los teléfonos móviles estándares, puede usar el
+10 Configuración. Puntee para ingresar la configuración
+teléfono para realizar y recibir llamadas, y para llevar un registro
+de llamadas y mensajes. También puede realizar
+videoconferencias y marcar directamente desde Contactos o
+Realizar una llamada de voz con el teclado
+Historial de llamadas.
+1
+Oprima .
+Redes
+2
+Si el teclado no está visible, puntee Teclado o .
+3 Para ingresar el número de teléfono, comenzando con el
+código de área, puntee las teclas de número.
+Cobertura de red
+4
+Puntee .
+Para realizar o recibir una llamada de teléfono debe estar dentro
+del alcance de una red.
+Finalizar una llamada
+•
+Para finalizar una llamada en curso, oprima .
+Roaming
+Realizar una llamada internacional
+Cuando encienda el teléfono, automáticamente selecciona la red
+doméstica si está dentro del alcance. Si no está dentro del
+1
+Oprima .
+alcance, puede usar otra red que acepte el operador. Esto se
+2
+denomina roaming.
+Puntee y mantenga oprimido  hasta que aparezca
+el prefijo de llamada internacional+.
+3 Ingrese el código de país/región, el código de área (sin el cero
+Configuraciones de red
+inicial) y el número de teléfono.
+Puede configurar la forma en que el teléfono elige una red
+4
+Puntee .
+disponible cuando está fuera del área de cobertura del operador.
+Realizar una llamada de emergencia
+Ingresar las configuraciones de red
+1
+1
+Oprima .
+Oprima  y puntee .
+2 Para ver el teclado del teléfono, si no está en pantalla, puntee
+2 Puntee la ficha Red e ingrese las configuraciones.
+Teclado o .
+3 Marque el número de emergencia local, o bloquéelo en la
+Realización de llamadas
+tarjeta SIM, si está disponible.
+4
+Puntee .
+La pantalla del teléfono
+Por lo general, para las llamadas de emergencia no se necesita
+La pantalla del teléfono aparece si abre el Teléfono o si oprime
+tarjeta SIM o código SIM, pero pueden depender del operador.
+. Estas son algunas de las características de marcado:
+Comuníquese con el operador para obtener más información.
+Hacer una llamada de voz desde Contactos
+1
+Para abrir Contactos puntee en  o puntee en  >
+Contactos.
+2 Desplácese hasta el contacto que desea llamar.
+3 Puntee el contacto para ver todos los números de teléfono.
+4 Desplácese al número de teléfono que desea llamar y puntee
+en Llamar.
+Uso del Administrador SIM
+Con Administrador SIM puede ver el contenido de la tarjeta USIM/
+SIM, transferir entradas de contactos a Contactos en el teléfono,
+o realizar una llamada desde la tarjeta USIM/SIM.
+Llamar a un contacto USIM/SIM
+1
+Puntee en  > Administrador SIM y espere que se cargue
+el contenido.
+1 Último contacto al que llamó. Puntee para acceder al
+2 Si el Administrador SIM no está disponible en el menú Inicio,
+historial de llamadas correspondiente
+puntee en  > Contactos y luego puntee en Menú >
+2 Puntee y mantenga oprimido para ver el signo +, el prefijo
+Administrador SIM.
+de llamada internacional
+3 Desplácese hasta el contacto que desea llamar.
+4 Si el contacto tiene más de un número de teléfono, oprima
+3 Puntee para acceder a Contactos
+ para mostrar todos los números.
+4 Tecla Llamar. Después de marcar, puntee esta tecla para
+5 Puntee el número de teléfono que desea llamar o desplácese
+realizar la llamada
+hasta el número y puntee en Llamar.
+5 Marcado rápido. Puntee para acceder a las entradas de
+Marcado rápido
+El Historial de llamadas
+6 Historial de llamadas. Puntee para acceder a la información
+En el Historial de llamadas puede encontrar información de
+de llamada registrada
+llamadas, como tipo de llamada, número de teléfono, fecha, hora
+y duración de la llamada.
+7 Eliminar. Puntee para borrar cada dígito sucesivo de un
+número ingresado, o puntee y mantenga oprimido para
+borrar todo el número
+14 Teléfono
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. Abrir el Historial de llamadas
+Uso de los botones de control de videoconferencia
+1
+Oprima .
+2
+Puntee .
+Hacer una llamada desde Historial de llamadas
+1
+Oprima .
+2
+Puntee  .
+3 Desplácese por todas las llamadas o puntee Menú > Filtrar
+para buscar la entrada que desea.
+4 Puntee la entrada y Llamar.
+Marcado rápido
+Puede usar el Marcado rápido para marcar con mayor rapidez los
+contactos a los que llama con más frecuencia. Puede guardar
+números de marcación rápida en las posiciones 2 a 99 (la
+1 Cámara activada/desactivada. Puntee para detener o
+posición 1 está reservada para el correo de voz). Si, por ejemplo,
+reanudar el vínculo de vídeo saliente. Cuando se detenga,
+desea llamar al contacto que guardó en la posición 3, sólo
+aparece una imagen fija
+puntee y mantenga oprimida la tecla de número 3 en el teclado
+2 Micrófono activado/desactivado. Puntee para silenciar o
+del teléfono. Para llamar a un contacto almacenado en las
+activar el micrófono
+posiciones 10 a 99, punte la primera tecla de número y luego
+puntee y mantenga oprimida la segunda tecla de número. Antes
+3 Cambiar cámara. Puntee para alternar entre la cámara frontal
+de crear una entrada de Marcado rápido, el contacto ya debe
+y la principal
+estar en Contactos.
+4 Opciones de visualización de imagen. Puntee varias veces
+Crear una entrada de Marcado rápido
+para ver las opciones de visualización de imagen
+1
+Oprima .
+disponibles.
+2 Puntee en Menú > Marcado rápido .
+3 Puntee en Menú > Nuevo.
+Ingresar configuraciones de videoconferencia
+4 Puntee un contacto y seleccione el número de teléfono al que
+desea asignar la tecla de marcado rápido. 1 En la pantalla Teléfono, o durante una videoconferencia,
+5 En la casilla Ubicación, seleccione una posición disponible, puntee Menú > Opciones de videoconferencia.
+que se usará como el número de marcado rápido para este 2 En el menú emergente Mostrar imagen fija, seleccione una
+contacto. imagen que se muestre cuando detenga la cámara.
+3 En el menú emergente Preferencia pantalla vídeo, seleccione
+cómo desea que aparezcan los vínculos de vídeo en la
+Videoconferencia
+pantalla (también se puede controlar con los botones de
+control de la pantalla).
+Realizar una videoconferencia con el teclado del teléfono
+4 Marque o desmarque las casillas de verificación Opciones de
+1
+Oprima .
+cámara dependiendo de cómo desea usar las cámaras.
+5 Marque o desmarque las casillas de verificación Mostrar
+2 Si el teclado del teléfono no está visible, puntee Teclado o
+información dependiendo del tipo de información que desea
+ para que esté visible.
+mostrar durante una videoconferencia.
+3 Para ingresar el número de teléfono al que desea llamar,
+puntee las teclas en el teclado del teléfono.
+Recibir llamadas
+4
+Puntee .
+Responder una llamada de voz o vídeo
+Realizar una videoconferencia desde Contactos
+•
+Oprima .
+1
+Oprima .
+Rechazar una llamada con un tono de ocupado
+2
+Puntee en  para abrir Contactos.
+•
+Cuando reciba una llamada entrante, oprima .
+3 Desplácese hasta el contacto que desea llamar.
+4 Puntee la entrada para ver todos los números de teléfono.
+5 Desplácese hasta el número de teléfono que desea llamar.
+Rechazar llamadas con un mensaje de texto SMS
+6 Puntee en Menú > Videoconferencia .
+Esta característica significa que puede rechazar una llamada
+mediante el envío de un mensaje de texto SMS con contenido
+Realizar una videoconferencia desde Historial de llamadas
+predefinido a la persona que llama. Antes de usar esta
+1
+Oprima .
+característica, debe activarla.
+2
+Puntee en  y desplácese hasta la entrada que desea.
+Activar la característica Rechazar llamada con mensajes de
+texto
+3 Puntee en Menú > Videoconferencia .
+1
+Oprima .
+Configuraciones de videoconferencia
+2
+Puntee , o puntee Menú > Opciones, luego puntee
+Existen dos formas de cambiar la configuración de
+la ficha Avanzado.
+videoconferencia:
+3 Marque la casilla de verificación Rechazar llamada con
+Durante una videoconferencia, puede puntear en los botones
+•
+mensajes de texto.
+de control de la pantalla de videoconferencia para encender
+4 Ingrese el mensaje de texto que se debe enviar a la persona
+o apagar el micrófono, para controlar la presentación de la
+que llama cuando rechace una llamada.
+imagen y elegir la cámara que se usará.
+5 Puntee en aceptar.
+En la pantalla Teléfono, o durante una videoconferencia,
+•
+Rechazar una llamada con un mensaje de texto
+puede puntear en Menú > Opciones de videoconferencia para
+ingresar más configuraciones completas. Estas 1 Cuando reciba una llamada entrante, puntee Enviar texto.
+configuraciones se ingresan de preferencia antes de realizar
+2 Si fuese necesario, modifique el texto.
+una llamada.
+3 Puntee Enviar para enviar el mensaje de texto a la persona
+que llama.
+Teléfono 15
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. Más funciones del teléfono
+Configurar el teléfono
+Ajustar el volumen del altavoz durante una llamada
+1
+Configuraciones básicas
+Puntee en el icono de estado .
+2 Para mover el control deslizante de volumen de la pantalla al
+Datos del propietario
+nivel que desea, puntéelo y arrástrelo.
+3
+Cuando la información de propietario aparece en la pantalla Hoy,
+Puntee .
+es más fácil que recupere su teléfono si lo pierde.
+Ingresar información del propietario
+Marcación inteligente
+1
+Puntee en  >Configuración > la ficha Personal > Datos del
+El teléfono usa la característica Marcación inteligente, que
+facilita la marcación de números telefónicos. Cuando comienza
+propietario.
+a ingresar un número de teléfono o un nombre de contacto, el
+2 En la ficha Identificación, ingrese su información personal.
+teléfono automáticamente busca una coincidencia en
+Si no ve la información del propietario en la pantalla Hoy, puntee
+Contactos, o en la tarjeta SIM en el Historial de llamadas.
+Aparece una lista filtrada de números de teléfono o nombre de
+ > Configuración > la ficha Personal > Hoy. En la ficha
+contacto, desde la que puede seleccionar un número para
+Elementos, marque la casilla de verificación Info. del propietario y
+marcar. No se pueden ingresar configuraciones para esta
+seleccione Aceptar.
+característica.
+Mostrar la información del propietario cuando el teléfono
+esté encendido
+Llamada de conferencia
+1
+Puede iniciar una llamada de conferencia cuando tiene una
+Puntee en  >Configuración > la ficha Personal > Datos del
+llamada saliente y una llamada en espera, o una llamada entrante
+propietario.
+durante una llamada saliente.
+2 En la ficha Opciones, marque la casilla de verificación
+Configurar una llamada de conferencia Información de identificación.
+3 Si desea ver texto adicional, puntee la ficha Notas e ingrese
+1 Realice una llamada.
+el texto, por ejemplo, Recompensa si lo encuentra.
+2 Coloque la llamada en espera y realice una nueva llamada, o
+4 En la ficha Opciones, marque la casilla de verificación Notas
+acepte una nueva llamada entrante.
+y luego puntee Aceptar.
+3 Puntee Menú > Conferencia.
+Hora y fecha
+Agregar un contacto en Contactos después de una
+llamada
+Ajustar la hora o fecha
+Esta característica le permite guardar automáticamente un
+•
+Puntee  > Configuración > la ficha Sistema > Reloj y
+nuevo número de teléfono en Contactos después de una
+llamada. Antes de usar esta función, debe activarla.
+alarmas > la ficha Hora.
+Activar la característica Agregar nuevo número de teléfono
+Configurar la hora y la fecha para una ubicación diferente
+en los Contactos al final de la llamada
+1
+Puntee  > Configuración > ficha Sistema > Reloj y
+1
+Oprima .
+alarmas > ficha Hora.
+2
+2 Puntee Visita.
+Puntee , o puntee Menú > Opciones.
+3 Seleccione la zona horaria correcta y cambie la fecha y la
+3 Puntee la ficha Avanzado.
+hora.
+4 Marque la casilla de verificación Agregar nuevo número de
+teléfono en los Contactos al final de la llamada.
+Configuración regional
+5 Puntee en aceptar.
+En la configuración regional se especifica el estilo en que se
+muestran números, monedas, fechas y horas.
+Cambiar la configuración regional
+1
+Puntee en  >Configuración > la ficha Sistema >
+Configuración regional.
+2 En la ficha Región, seleccione la región de la lista.
+3 Para personalizar la configuración, puntee en las fichas
+correspondientes y seleccione las opciones que desea.
+Cuando cambia la región no cambia el idioma del Sistema
+operativo del teléfono.
+La región que selecciona determina las opciones que estarán
+disponibles en otras fichas.
+Personalización
+Personalizar la pantalla Hoy
+La pantalla Hoy muestra las próximas citas, las tareas activas y
+la información sobre mensajes entrantes. Puede personalizar lo
+que verá en la pantalla Hoy.
+Personalizar la pantalla Hoy
+1
+Puntee  > Configuración > la ficha Personal > Hoy.
+2 En la ficha Apariencia, seleccione el tema que desea para la
+imagen de fondo de la pantalla Hoy.
+16 Configurar el teléfono
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. 3 En la ficha Elementos, seleccione los elementos que desea Configurar el tono del teclado
+que aparezcan en la pantalla Hoy.
+1
+Puntee  > Configuración > la ficha Personal > la ficha
+Para cambiar el orden de los elementos que aparecen en la
+Teléfono > Teléfono.
+pantalla Hoy, puntee un elemento y puntee Subir o Bajar.
+2 En la lista Teclado, puntee la opción que desea.
+Usar una imagen de fondo personalizada
+1
+Servicios telefónicos
+Puntee  > Configuración > la ficha Personal > Hoy.
+El teléfono se puede vincular directamente a la red del teléfono
+2 Marque la casilla de verificación Usar esta foto como fondo y
+móvil, y permitirle acceder y cambiar las configuraciones de
+puntee en Examinar para ver una lista de archivos de imagen.
+distintos servicios telefónicos. Los servicios del teléfono pueden
+3 Puntee en el nombre del archivo de la imagen que desea usar.
+incluir Desviar llamada, Llamada en espera, Correo de voz y más.
+4 Puntee Aceptar.
+Puede comunicarse con el proveedor de servicios inalámbricos
+Configurar opciones para mostrar citas en la pantalla Hoy para conocer la disponibilidad de los servicios telefónicos para
+su teléfono.
+1
+Puntee  > Configuración > la ficha Personal > Hoy.
+Acceder y cambiar la configuración de los servicios
+2 Puntee en la ficha Elementos.
+telefónicos
+3 Seleccione Calendario y puntee en Opciones ... .
+1
+4 Puede realizar lo siguiente:
+Puntee  > Configuración > la ficha Personal > Teléfono >
+Seleccione Siguiente cita para mostrar sólo la próxima cita
+•
+la ficha Servicios.
+en el programa, o Próximas citas para mostrar varias citas.
+2 Seleccione el servicio que desea usar, luego puntee Mostrar
+Desmarque la casilla de verificación Mostrar eventos de
+•
+configuración....
+todo el día si no desea mostrar los eventos del día.
+3 Elija las opciones que desea, luego puntee Aceptar.
+Configurar opciones para mostrar tareas en la pantalla Hoy
+1
+Redes
+Puntee  > Configuración > la ficha Personal > Hoy.
+Puede ver las redes de teléfonos móviles que están disponibles
+2 Puntee en la ficha Elementos.
+y organizarlas en el orden en que desea que el teléfono acceda
+3 Seleccione Tasks y puntee en Opciones ... .
+a ellas. Por ejemplo, si la primera red preferida no está
+4 Puede realizar lo siguiente:
+disponible, el teléfono intentará acceder a la segunda red
+En Mostrar número de, marque las casillas de verificación
+•
+preferida.
+para el tipo de tareas que desea ver en la pantalla Hoy.
+En la lista Categoría, seleccione si mostrará sólo las tareas
+•
+Ver redes disponibles
+asignadas a una categoría específica o si mostrará todas
+1
+Puntee  > Configuración > la ficha Personal > Teléfono >
+las tareas.
+la ficha Red.
+2 En Selección de red, seleccione Manual. Luego aparece la lista
+Personalizar el menú Inicio
+de redes disponibles.
+Puede elegir los elementos que aparecerán en el menú Inicio.
+Configurar redes preferidas
+Personalizar el menú Inicio
+1
+Puntee  > Configuración > la ficha Personal > Teléfono >
+1
+Puntee  > Configuración > la ficha Personal > Menús.
+la ficha Red.
+2 Marque las casillas de verificación de los elementos que
+2 Puntee en Establecer redes y siga las instrucciones en la
+desea que aparezcan en el menú Inicio. Puede seleccionar
+pantalla para organizar las redes dependiendo de su
+hasta siete elementos.
+preferencia.
+3 Después de organizar las redes en el orden preferido, puntee
+Aceptar para volver a la ficha Red.
+Personalizar las configuraciones y los
+4 En la lista Selección de red, seleccione Automático.
+servicios del teléfono
+5 Puntee Aceptar.
+Puede personalizar las configuraciones del teléfono, como el tipo
+y el tono de timbre que se utilizarán para las llamadas entrantes,
+Protección del teléfono
+y el tono del teclado que se utilizará cuando ingrese números de
+teléfono. También puede configurar el teléfono para usar
+Puede proteger el teléfono del uso no autorizado o accidental
+servicios telefónicos, como Llamada en espera, Desviar llamada
+mediante la activación de bloqueos.
+y más.
+Activar el bloqueo de la tarjeta SIM
+Acceder a las configuraciones y los servicios del teléfono
+1
+Puntee  > Configuración > la ficha Personal > Teléfono >
+•
+Puntee  > Configuración > la ficha Personal > Teléfono.
+la ficha PIN/PIN2.
+2 Marque la casilla de verificación Requerir PIN al usar el
+teléfono.
+Configuraciones de timbre
+3 Puntee Aceptar.
+Cambiar el tipo y el tono de timbre para una llamada
+El PIN se lo entrega su operador de red.
+entrante
+1
+Puntee  > Configuración > la ficha Personal > Sonidos y
+Activar el bloqueo del teléfono
+1
+notificaciones > la ficha Notificaciones.
+Puntee  > Configuración > la ficha Personal > Bloquear.
+2 Seleccione Tipo de timbre.
+2 Marque la casilla de verificación Solicitar contraseña si el
+3 Seleccione Tono timbre.
+dispositivo lleva inactivo y puntee un tiempo.
+3 Seleccione Tipo de contraseña, confirme la contraseña y
+Tono del teclado
+puntee Aceptar.
+Puede cambiar el tono que escucha cuando ingresa un número
+Usar el bloqueo del teclado
+de teléfono en el teclado. Si está configurado en Tonos largos,
+1 Oprima el botón de encendido para apagar temporalmente la
+el tono se escucha continuamente durante el tiempo que se
+pantalla y cambiar el teléfono al modo de suspensión.
+oprima el número en el teclado. Use esta configuración si tiene
+problemas para completar tareas que usan los tonos del
+teléfono, por ejemplo para acceder a los mensajes de una
+máquina contestadora. Si está configurado en Tonos cortos, se
+escucha el tono sólo durante uno o dos segundos. Si está
+configurado en Apagado, no se escucha ningún tono.
+Configurar el teléfono 17
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. 2 Para reactivar el teléfono, oprima el botón de encendido. El Reasignar programas o accesos directos a los botones de
+teléfono también se reactiva al abrir el teclado o al recibir una programa
+llamada o un mensaje.
+1
+Puntee  > Configuración > la ficha Personal > Botones.
+De manera alternativa, puede bloquear las teclas al mantener
+2 En la ficha Botones de programa, aparece una lista de botones
+oprimido . Para desbloquear las teclas, puntee en
+y las asignaciones correspondientes.
+3 Puntee el botón que desea reasignar. Para ayudarle a
+Desbloquear.
+identificar los botones, hay números e iconos que
+representan la función original del botón.
+Número IMEI
+4 En la casilla Asignar un programa, puntee el programa o el
+Guarde una copia de su número de Identidad internacional de
+acceso directo que desea asignar.
+equipo móvil (IMEI, International Mobile Equipment Identity) en
+5 Puntee Aceptar.
+caso de que le roben el teléfono.
+Reasignar un botón de programa para alternar entre los
+Ver el número IMEI
+modos Vertical y Horizontal
+1
+Oprima .
+1
+Puntee  > Configuración > la ficha Personal > Botones.
+2
+Puntee .
+2 En la ficha Botones de programa, de la casilla Seleccionar un
+botón, puntee el botón que desea reasignar, por ejemplo,
+Tecla Izquierda.
+Cifrar datos en la tarjeta de almacenamiento
+3 En la casilla, Asignar un programa, seleccione Girar pantalla.
+1
+En la pantalla Hoy, puntee  > Configuración > la ficha
+4 Puntee Aceptar.
+Sistema > Cifrado.
+Ahora, puede usar el botón de programa izquierdo (botón de
+2 Marque la casilla de verificación Cifrar archivos colocados en
+hardware) para alternar entre los modos Vertical y Horizontal.
+tarjetas de almacenamiento.
+Tenga en cuenta de que ya no puede usarlo para controlar las
+• teclas de software correspondientes.Los archivos cifrados sólo se pueden leer en el teléfono que
+los cifra.
+• Los archivos cifrados se abren igual que cualquier otro
+Opciones para completar palabras
+archivo, siempre que use el teléfono que los cifró. No necesita
+Completar palabras le permite ingresar texto de manera más
+seguir ninguna acción adicional para leer estos archivos.
+rápida mediante la sugerencia de palabras cuando ingresa letras
+Si Cifrar archivos de las tarjetas de almacenamiento está
+con el teclado del hardware o los métodos de ingreso. Puede
+habilitado o lo habilitó anteriormente, haga copias de seguridad
+configurar el número de palabras sugeridas que se mostrará,
+de la tarjeta de almacenamiento antes de usar Borrar
+cuándo mostrar la lista de palabras y más.
+almacenamiento, reinicie o actualice el software del sistema
+Activar la completación de palabras
+ROM. De lo contrario, ya no podrá acceder a los archivos cifrados
+en la tarjeta de almacenamiento. Use ActiveSync o el Centro de
+1
+Puntee  > Configuración > la ficha Personal > Entrada > la
+dispositivos de Windows Mobile para transferir archivos entre la
+tarjeta de almacenamiento y el equipo. Después del
+ficha Completar palabra.
+procedimiento, copie los archivos nuevamente en la tarjeta de
+2 Asegúrese de que la casilla de verificación Sugerir palabra al
+almacenamiento.
+escribir texto esté marcada.
+3 De manera predeterminada, la lista de palabras sugeridas
+aparece cada vez que ingresa un espacio. Para que la lista
+Otras configuraciones
+de palabras aparezca después de ingresar las letras,
+seleccione el número de letras que desea que se ingresen
+Nombre del teléfono antes de ver la lista de palabras.
+4 De manera predeterminada, la lista de palabras sugeridas
+El nombre del teléfono se usa para identificar el teléfono en las
+muestra hasta cuatro palabras. Puede cambiar el número de
+siguientes situaciones:
+palabras para ver en la lista sugerida.
+Sincronización con un equipo
+•
+5 Asegúrese de que la casilla de verificación Habilitar la
+Conexión con una red
+•
+autocorrección esté marcada si desea que las palabras mal
+Restauración de información de una copia de seguridad
+•
+escritas se corrijan automáticamente.
+Si sincroniza varios teléfonos con el mismo equipo, cada teléfono
+La base de datos de palabras reconoce y agrega más palabras
+debe tener un nombre único.
+cuando ingresa palabras nuevas durante el ingreso de texto. Para
+eliminar las palabras agregadas y restablecer la base de datos a
+Cambiar el nombre de teléfono
+su estado original, puntee Borrar entradas almacem.
+1
+Puntee  > Configuración > la ficha Sistema > Acerca de.
+Alarmas y notificaciones
+2 Puntee en la ficha Id. del dispositivo.
+3 Ingrese un nombre.
+Configurar una alarma
+El nombre del teléfono debe comenzar con una letra, debe tener
+1
+Puntee  > Configuración > la ficha Sistema > Reloj y
+letras de la A hasta la Z, números del 0 al 9 y no puede incluir
+espacios. Use el guión bajo para separar palabras.
+alarmas > la ficha Alarmas.
+2 Puntee <Descripción> e ingrese un nombre para la alarma.
+3 Puntee el día de la semana para la alarma. Para seleccionar
+Configuraciones de pantalla
+varios días puntee cada día que desea.
+Aumentar o disminuir el tamaño del texto en la pantalla
+4 Puntee la hora para abrir un reloj y configure la hora para la
+1
+alarma.
+Puntee  > Configuración > la ficha Sistema > Pantalla > la
+5 Puntee el icono de alarma para especificar el tipo de alarma
+ficha Tamaño del texto.
+que desea. Puede elegir una luz destellante, un único sonido,
+2 Mueva el control deslizante para aumentar o disminuir el
+un sonido que se repite o una vibración.
+tamaño del texto.
+6 Si elige reproducir un sonido, puntee la lista junto a la casilla
+de verificación Reproducir sonido y puntee el sonido que
+Configuraciones de botón
+desea.
+Es posible que el teléfono incluya programas que ya están
+Elegir cómo recibir notificaciones de eventos o acciones
+asignados a los botones de hardware. Puede personalizar estos
+1
+Puntee  > Configuración > la ficha Personal > Sonidos y
+botones para abrir los programas que usa con frecuencia, o para
+crear ciertos accesos directos.
+notificaciones.
+2 En la ficha Sonidos, para elegir cómo recibir notificaciones,
+marque las casillas de verificación correspondientes.
+18 Configurar el teléfono
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. 3 En la ficha Notificaciones, en Evento, puntee un nombre de
+Sincronización
+evento y elija cómo desea recibir notificaciones marcando las
+casillas de verificación correspondientes. Puede elegir entre La sincronización de datos es una forma de mantener siempre
+varias opciones, como un sonido especial, un mensaje o una la información actualizada y llevarla en el teléfono, donde quiera
+luz destellante. que vaya. Puede sincronizar los siguientes tipos de información
+entre un equipo y el teléfono:
+Información de Microsoft® Outlook®, como por ejemplo,
+•
+correo electrónico, contactos, calendario, tareas y notas de
+Outlook
+Medios, como fotos, vídeos y música
+•
+Favoritos, que son los favoritos de páginas Web en Favorito
+•
+móvil
+Archivos, como documentos Microsoft® Office, archivos pdf
+•
+y más
+Antes de sincronizar
+Antes de sincronizar, necesita instalar y configurar el software de
+sincronización en la computadora. Si está usando Windows XP,
+primero debe instalar ActiveSync, consulte Instalar ActiveSync
+antes de configurar la sincronización. Si está usando Windows
+Vista es posible que no tenga que instalar ningún software, pero
+debe configurar la sincronización. Para obtener más información
+acerca de cómo ajustar la sincronización, consulte Configurar la
+sincronización en Windows XP y Configurar la sincronización en
+Windows Vista.
+Instalar ActiveSync
+1 Inserte el CD del software en la unidad de disco del equipo.
+2 ActiveSync está disponible en inglés y en varios otros
+idiomas. Seleccione el idioma que desea y haga clic en
+Siguiente.
+3 Haga clic en Configuración e instalación.
+4 Seleccione la casilla de verificación de ActiveSync y haga clic
+en Instalar.
+5 Lea los términos de la licencia y haga clic en Aceptar.
+6 Cuando se complete la instalación, haga clic en Listo.
+7 Haga clic en Cerrar para terminar la instalación.
+Formas de sincronización
+Después de instalar el software de sincronización en un equipo,
+puede sincronizar el teléfono con el equipo mediante uno de los
+siguientes métodos:
+Conexión USB: cuando conecta el cable USB entre el
+•
+teléfono y una computadora, el proceso de sincronización se
+inicia automáticamente.
+Conexión Bluetooth: primero debe configurar una asociación
+•
+Bluetooth entre el teléfono y el equipo antes de poder
+sincronizar información entre ellos. Para obtener más
+información acerca de cómo configurar una asociación
+Bluetooth, consulte Asociación Bluetooth ™. Para obtener
+más información acerca de cómo sincronizar mediante
+Bluetooth, consulte Sincronizar mediante un vínculo
+Bluetooth.
+Conexión inalámbrica: sincronizar con Exchange Server
+•
+mediante ActiveSync o el Centro de dispositivos de Windows
+Mobile.
+Trate de sincronizar frecuentemente para mantener la
+información actualizada en el teléfono y el equipo.
+Configuración de la sincronización
+Si el equipo usa Windows XP® u otro sistema operativo
+•
+compatible con Windows, debe usar Microsoft®
+ActiveSync® 4.5 o posterior. Encontrará Microsoft
+ActiveSync® en el CD que viene con el teléfono.
+Si el equipo usa Windows Vista®, debe usar el Centro de
+•
+dispositivos de Windows® Mobile, que es parte de Windows
+Vista.
+Configurar la sincronización en Windows XP
+1 Instale Microsoft ActiveSync® en el equipo desde el CD que
+viene con el teléfono.
+2 Conecte el teléfono al equipo con el cable USB que viene con
+el teléfono. El Asistente de configuración de sincronización
+se inicia automáticamente y lo guía para crear una asociación
+de sincronización.
+3 Haga clic en Siguiente en el equipo.
+Sincronización 19
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. 4 Para sincronizar el teléfono con el equipo, marque la casilla información de Outlook. Puede configurar con qué frecuencia se
+de verificación Sincronizar directamente con un servidor que sincronizará durante las horas pico (que por lo general se refieren
+a las horas de trabajo) cuando el volumen de correos electrónico
+ejecuta Microsoft Exchange y haga clic en Siguiente.
+5 es alto, así como las horas de mínima actividad cuando elSeleccione los tipos de información que desea sincronizar,
+volumen de correos electrónicos es bajo.
+luego haga clic en Siguiente.
+6 Haga clic en Finalizar.
+Configurar sincronización programada
+Configurar la sincronización en Windows Vista
+1
+Puntee en  > Programas > ActiveSync.
+1 Conecte el teléfono al equipo con el cable USB que viene con
+2 Puntee en Menú > Programación.
+el teléfono.
+3 Seleccione un intervalo de tiempo en la casilla Horas pico para
+2 El Centro de dispositivos de Windows® Mobile se inicia
+establecer la frecuencia con la que desea recibir correos
+automáticamente. Haga clic en Configurar su dispositivo.
+electrónicos.
+3 Seleccione los tipos de información que desea sincronizar.
+4 Seleccione un intervalo de tiempo en la casilla Horas de
+4 Ingrese un nombre para el teléfono y haga clic en
+mínima actividad.
+Configuración..
+5 Marque Enviar y recibir cuando haga clic en Enviar.
+6 Puntee Ajustar horas pico para que se adapten a la
+programación para configurar los días y las horas que
+Iniciar la sincronización
+corresponden a las horas pico y de mínima actividad.
+Iniciar la sincronización desde ActiveSync® en el equipo
+Para deshabilitar toda la sincronización programada, configure
+con un cable USB
+los valores en la casilla Horas picoy la casilla Horas de mínima
+Conecte el teléfono al equipo con el cable USB que viene con
+•
+actividad en Manualmente.
+el teléfono. ActiveSync® se abre automáticamente y la
+sincronización comienza.
+Cambiar la información que se va a
+Iniciar la sincronización desde el teléfono
+sincronizar
+1 Conecte el teléfono al equipo con el cable USB que viene con
+Puede cambiar los tipos de información y la cantidad de
+el teléfono.
+información que va a sincronizar para cada tipo en el teléfono o
+2
+Teléfono: puntee en  > Programas > ActiveSync.
+en una computadora. Siga los pasos a continuación para
+3 Teléfono: puntee Sincronizar.
+cambiar las configuraciones de sincronización en el teléfono.
+Iniciar la sincronización desde el Centro de dispositivos
+Antes de cambiar las configuraciones de sincronización en el
+Windows® Mobile en un equipo
+teléfono, debe desconectarlo de la computadora.
+1 Conecte el teléfono al equipo con el cable USB que viene con
+Cambiar la información que se va a sincronizar
+el teléfono.
+1 Puntee en Inicio > Programas > ActiveSync.
+2 Equipo: haga clic en Inicio > Todos programas > Centro de
+2 Puntee en Menú > Opciones.
+dispositivos de Windows Mobile.
+3 Seleccione la casilla de verificación para los elementos que
+3
+Equipo: haga clic en  en la parte inferior izquierda de la
+desea sincronizar.
+4 Para cambiar la configuración de sincronización para un tipo
+ventana del Centro de dispositivos de Windows® Mobile.
+de información, selecciónelo y puntee en Configuración. Esto
+le permite configurar el tamaño máximo de descarga,
+especificar el período de tiempo que se baja la información y
+Sincronización mediante una conexión
+más.
+Bluetooth
+Puede conectar y sincronizar el teléfono a un equipo mediante
+Usar el Centro de dispositivos de Windows
+una conexión Bluetooth.
+Mobile
+El equipo debe tener incorporada una funcionalidad Bluetooth, o
+de lo contrario deberá usar un adaptador o llave de Bluetooth
+En el Centro de dispositivos de Windows Mobile puede hacer lo
+junto a la computadora.
+siguiente:
+Sincronizar mediante un vínculo Bluetooth
+Acceder a la configuración de sincronización para verla y
+•
+1 Configure el Centro de dispositivos de Windows® Mobile o
+cambiarla
+ActiveSync en el equipo. Consulte la Ayuda del teléfono para
+Marcar y transferir fotografías desde el teléfono a la Galería
+•
+recibir instrucciones.
+de fotografías en el equipo con Windows Vista.
+2
+Sincronizar archivos de música y vídeo con Windows Media®
+•
+En el teléfono, puntee en  > Programas > ActiveSync.
+Player. Para obtener más información, consulte Windows
+3 Asegúrese de que la función de Bluetooth en el teléfono y la
+Media® Player Mobile
+computadora esté activada y en el modo visible. Para obtener
+Ver documentos y otros archivos en el teléfono
+•
+más información, consulte Activar la funcionalidad
+Ver la Ayuda del Centro de dispositivos de Windows Mobile para
+Bluetooth™ y configurar el teléfono en el modo visible.
+obtener más información.
+4 Puntee Menú > Conectar vía Bluetooth.
+5 Si es la primera vez que conecta este equipo con un vínculo
+Acceder a la configuración de sincronización con Windows
+Bluetooth, primero debe completar el asistente de Bluetooth
+Vista
+en el teléfono y configurar una asociación Bluetooth entre el
+1 Haga clic en Inicio > Todos los programas > Centro de
+teléfono y la computadora. Para obtener más información,
+dispositivos de Windows Mobile en el equipo con Windows
+consulte Asociación Bluetooth ™.
+Vista.
+Para ahorrar energía de la batería, apague la función Bluetooth
+2 Haga clic en Configuración del dispositivo móvil.
+cuando no la use.
+Marcar y transferir fotografías del teléfono
+1 Haga clic en Inicio > Todos los programas > Centro de
+Sincronización programada
+dispositivos de Windows Mobile en el equipo con Windows
+Vista.
+La sincronización programada le permite configurar horas
+2 Haga clic en Imágenes, Música y Vídeo > _nuevas imágenes/
+específicas en las que el teléfono debe conectarse y
+clips de vídeo están disponibles para la importación. Un
+sincronizarse con Exchange Server. Esta es una alternativa a
+asistente le guiará durante el proceso.
+Direct Push, donde todos los cambios y nuevos elementos se
+envían inmediatamente desde el teléfono a un equipo y desde
+un equipo al teléfono.
+Con la sincronización programada, puede establecer un
+programa regular para sincronizar los correos electrónicos y la
+20 Sincronización
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. Sincronizar archivos de música y vídeo con Windows Media
+Organizar PIM
+Player
+La Administración de información personal (PIM) incluye el
+1 Haga clic en Inicio > Todos los programas > Centro de
+manejo de contactos, calendarios, tareas y más.
+dispositivos de Windows Mobile en el equipo con Windows
+Vista.
+2 Haga clic en Imágenes, Música y Vídeo > Agregar medios al
+Contactos
+dispositivo desde Windows Media Player. Para obtener más
+información, consulte Windows Media® Player Mobile.
+Contactos es la libreta de direcciones y el almacenamiento de
+información para personas y negocios con los que establece
+Ver documentos y archivos en el teléfono
+comunicación. Hay tres tipos de contactos que puede crear en
+1 Haga clic en Inicio > Todos los programas > Centro de
+el teléfono:
+dispositivos de Windows Mobile en el equipo con Windows
+Contactos de Microsoft® Office Outlook®. Contactos que
+•
+Vista.
+se almacenan en el teléfono, que pueden crearse en el
+2 Haga clic en Administración de archivos > Examinar el
+teléfono o sincronizarse con la computadora o Exchange
+contenido del dispositivo.
+Server. Para cada contacto puede almacenar números de
+teléfono, direcciones de correo electrónico, nombres de
+mensajería instantánea (MI), direcciones del trabajo y la casa,
+e información como títulos del trabajo, cumpleaños, y mucho
+más. También puede agregar una imagen y asignar un tono
+de timbre a un contacto de Outlook.
+Contactos SIM. Contactos que se almacenan en la tarjeta
+•
+SIM. Para cada entrada sólo se puede almacenar el nombre
+y un número de teléfono.
+Contactos de Windows Live™. Contactos con los que se
+•
+comunica a través de Windows Live™ Messenger o MSN. Al
+igual que los contactos de Outlook, también puede ingresar
+información completa para un contacto de Windows Live.
+Para obtener más información, consulte Windows Live
+Messenger.
+También puede agregar contactos de Windows Live™ después
+de configurar Windows Live™ en el teléfono.
+Administración de contactos
+El teléfono le ofrece varias formas de almacenar y administrar
+números de teléfono y otra información de los contactos.
+Use Contactos para crear y guardar contactos en la memoria
+•
+del teléfono o la tarjeta SIM.
+Use Administrador SIM para almacenar y administrar
+•
+contactos SIM.
+Agregar un contacto de Outlook
+1 Puntee en Inicio > Contactos.
+2 Puntee en Nuevo, seleccione Contacto de Outlook e ingrese
+la información de contacto.
+3 En el campo Archivar como, elija la forma en que desea que
+el nombre del contacto aparezca en la lista de contacto.
+4 Para agregar una foto del contacto, puntee Seleccionar una
+foto ... , luego seleccione el archivo de imagen o puntee en
+Cámara para tomar una foto del contacto. Esta foto aparece
+en la pantalla del teléfono cuando recibe una llamada del
+contacto.
+5 Para asignar un tono de timbre al contacto, puntee en el
+campo Tono timbre, desplácese por la lista de tonos, luego
+seleccione el tono que desea.
+6 Para terminar, puntee en Aceptar.
+Si alguien que no está en su lista de contactos le llama, puede
+crear un contacto desde el Historial de llamadas punteando y
+manteniendo oprimido un número de teléfono, y luego
+punteando en Guardar en Contacto desde el menú de acceso
+directo.
+Organizar PIM 21
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. Usar Trazos naturales
+Ingresar y buscar información
+1 En un programa, puntee el icono de entrada en la parte
+inferior de la pantalla, puntee , y luego puntee Trazos
+Ingreso de información
+naturales.
+Para escribir texto y caracteres, puede usar:
+2 Ingrese caracteres, números y símbolos en el área de
+escritura designada:
+El teclado.
+•
+Para ingresar letras mayúsculas, escriba en el área ABC
+•
+El teclado en pantalla.
+•
+(izquierda) de la casilla.
+Características de reconocimiento de escritura a mano, como
+•
+Para ingresar letras minúsculas, escriba en el área abc
+•
+Trazos aprendidos, Trazos naturales o Transcriber.
+(centro) de la casilla.
+Para ingresar números, escriba en el área 123 (derecha) de
+•
+Uso del teclado
+la casilla.
+Para escribir letras minúsculas, oprima las teclas.
+• Para ingresar símbolos y puntuación, puntee en cualquiera
+•
+• de las áreas de la casilla y escriba el carácter que desea, o
+Para escribir una letra mayúscula, oprima  y, a
+puntee en  y seleccione desde el teclado de símbolos
+continuación, oprima la tecla de la letra que desea.
+Para escribir todo en letras mayúsculas, oprima dos veces
+• en pantalla.
+. Para volver a escribir todo en minúsculas, vuelva a
+Para recibir ayuda y ver demostraciones de escritura, puntee en
+ junto al área de escritura.
+oprimir .
+Para escribir caracteres con acento, oprima la tecla de la letra
+•
+Uso de Trazos aprendidos
+en primer lugar y, a continuación, oprima  hasta que
+Con Trazos aprendidos, usa una sola pulsación para escribir
+aparezca el carácter que desea.
+letras, números, símbolos y puntuación, que luego se convierten
+Para escribir un número o un símbolo (en azul en la parte
+•
+en texto escrito con el teclado.
+superior derecha de algunas teclas), oprima  y, a
+Los Trazos aprendidos están disponibles cuando puede ingresar
+continuación, oprima la tecla.
+texto.
+Para usar todas las teclas de números o símbolos, oprima
+•
+Usar Trazos aprendidos
+ dos veces.
+1 En un programa, puntee el icono de entrada en la parte
+•
+Para abrir el panel de símbolos, oprima .
+inferior de la pantalla, puntee , y luego puntee Trazos
+Para verificar las entradas o salir del programa en uso, oprima
+•
+aprendidos.
+.
+2 Ingrese caracteres, números y símbolos en el área de
+escritura designada:
+Para ingresar letras, escriba en el área abc (izquierda) de la
+•
+Uso del teclado en pantalla
+casilla.
+Para ingresar números, escriba en el área 123 (derecha) de
+• •
+En un programa, puntee en  en la parte inferior de la
+la casilla.
+pantalla. Si ve un icono de entrada distinto, puntee en el
+Para ingresar símbolos y puntuación, puntee en cualquiera
+•
+de las áreas de la casilla y escriba el carácter que desea, o
+icono, puntee en  a la derecha del icono de entrada y,
+puntee en  y seleccione desde el teclado de símbolos
+a continuación, puntee en Teclado.
+Para ingresar texto y números, puntee en las teclas del
+•
+en pantalla.
+teclado en pantalla.
+Para recibir ayuda y ver demostraciones de escritura, puntee en
+•
+Para ocultar el teclado en pantalla, puntee en 
+ junto al área de escritura.
+Ampliar el teclado en pantalla
+1 En un programa, puntee el icono de entrada en la parte
+Uso de Transcriber
+inferior de la pantalla, y puntee  junto al icono de
+Con Transcriber, puede escribir en cualquier parte de la pantalla,
+en cursiva, letra imprenta o una combinación de ambas. La
+entrada.
+escritura a mano se convertirá en texto escrito con el teclado.
+2 Puntee Opciones.
+Para obtener más información acerca del uso de Transcriber,
+3 En la lista Método de entrada, seleccione Teclado.
+puntee en  en la barra de herramientas de Transcriber.
+4 Puntee Teclas grandes, seleccione si desea usar gestos para
+algunas teclas, y luego puntee en aceptar.
+Usar Transcriber
+1 En un programa, puntee el icono de entrada en la parte
+Uso de las funciones de escritura manual
+inferior de la pantalla, puntee , y luego puntee
+En un programa, puntee en un icono de entrada en la parte
+•
+Transcriber.
+inferior de la pantalla, puntee en  y, a continuación,
+2 Puntee en aceptar para cerrar la pantalla de introducción de
+puntee en un método.
+Transcriber que aparece.
+Para recibir ayuda para escribir caracteres con Trazos
+•
+3 Escriba en cualquier parte de la pantalla con el lápiz. La
+aprendidos, Trazos naturales o Transcriber, puntee el signo de
+escritura manual se convertirá en texto después de que
+pregunta cerca del área de escritura.
+levante el lápiz de la pantalla.
+El reconocimiento de escritura no está disponible para todos los
+Para cambiar la configuración de Transcriber, por ejemplo, el
+idiomas.
+color de la tinta o los accesos directos, puntee en  en la barra
+de herramientas de Transcriber, seleccione en las tres fichas de
+Uso de Trazos naturales
+la parte inferior de la pantalla y realice los cambios.
+Con Trazos naturales, puede escribir letras individuales, números
+y puntuación, que luego se convierten en texto escrito con el
+Ver demostraciones de escritura de Transcriber
+teclado.
+1 En un programa, puntee el icono de entrada en la parte
+Los Trazos naturales están disponibles cuando puede ingresar
+inferior de la pantalla, puntee , y luego puntee
+texto.
+Transcriber.
+2
+Puntee  en la barra de herramientas de Transcriber.
+22 Ingresar y buscar información
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. 3 Puntee una letra, luego puntee en una de las formas de la
+Mensajería
+pantalla superior para acceder a una demostración.
+4 Para cerrar esta pantalla Formas de letras, puntee en Mensajería es donde se ubican los mensajes de texto (SMS),
+aceptar. mensajes multimedia (MMS) y correos electrónicos. Cuando
+recibe mensajes nuevos, puede abrirlos desde la pantalla Hoy.
+Para obtener información acerca del reconocimiento de escritura
+Sólo debe puntear el tipo de mensaje que desea abrir.
+y los gestos en Transcriber, puntee en  en la barra de
+Seleccionar una cuenta de mensajería
+herramientas de Transcriber.
+1
+Puntee  > Mensajería.
+Ingresar puntuación y símbolos con Transcriber.
+2 En el selector de cuenta, seleccione una cuenta.
+1 En un programa, puntee el icono de entrada en la parte
+Seleccionar una cuenta de mensajería de una lista de
+inferior de la pantalla, puntee , y luego puntee
+mensajes
+Transcriber.
+Puntee Menú > Ir a para cambiar a otros tipos de cuentas de
+•
+2
+Puntee en la barra de herramientas de Transcriber.
+mensajería.
+3 Seleccione la puntuación o los símbolos que necesita.
+Abrir un SMS o un MMS
+Para cambiar la posición del teclado, puntee y mantenga
+1
+Puntee en  > Mensajería > SMS / MMS.
+oprimida la barra de título, luego arrástrela a la ubicación
+deseada.
+2 Puntee en el SMS o MMS que desea.
+Navegar entre carpetas
+Uso del Panel de símbolos
+1
+Puntee en  > Mensajería > SMS / MMS.
+El Panel de símbolos proporciona una lista completa de símbolos
+comunes como paréntesis, llaves, símbolos de monedas, y más,
+2 Puntee Bandeja de entrada.
+así como signos de puntuación y caracteres especiales.
+3 Puntee en la carpeta que desea abrir.
+Usar el Panel de símbolos
+Ajustar configuraciones de cuenta de mensajes
+1 Para abrir el Panel de símbolos, puede:
+Puntee en Menú > Opciones en la pantalla del selector de
+•
+En un programa, puntee el icono de entrada en la parte
+•
+cuentas.
+inferior de la pantalla, puntee , y luego puntee Panel
+Ajustar configuraciones de cuenta de mensajes de una lista
+de mensajes
+de símbolos.
+•
+Puntee Menú > Herramientas > Opciones.
+•
+Oprima  en el teclado de hardware.
+2
+Para explorar las páginas de símbolos, puntee en  o 
+SMS
+en el Panel de símbolos.
+3 Puede enviar mensajes de texto cortos (SMS) de hasta 160Puntee un símbolo para seleccionarlo y cierre el Panel de
+caracteres de largo a otros teléfonos móviles. Para escribir de
+símbolos.
+manera rápida y fácil, puede usar el teclado deslizante para
+ingresar el mensaje.
+Uso de Notas para ingresar otros tipos de información
+Antes de utilizar SMS, debe contar con un número de centro de
+Con Notas, puede dibujar o escribir directamente en la pantalla
+servicio. El número lo entrega su proveedor de servicio y por lo
+y guardar notas con su propia escritura. También puede crear
+general se guarda en la tarjeta SIM durante el inicio. De no ser
+una grabación independiente (nota de voz) o puede agregar una
+así, comuníquese con su operador.
+grabación a una nota.
+Crear y enviar un mensaje de texto
+1
+Buscar información
+Puntee en  > Mensajería > SMS / MMS.
+Puede buscar archivos y otros elementos almacenados en el
+2 Puntee Menú > Nuevo > SMS.
+teléfono por nombre o palabras en el elemento. Por ejemplo,
+3 Ingrese el número de teléfono manualmente o puntee en
+puede buscar en correos electrónicos, notas, citas, contactos y
+Para: para agregar un número de teléfono desde Contactos.
+tareas, así como en la Ayuda en línea.
+4 Escriba el texto.
+5 Puntee Enviar.
+Buscar un archivo o un elemento
+1 Solicitar notificación de entrega cuando redacte un nuevo
+Puntee  > Programas > Buscar.
+mensaje
+2 En el campo Buscar, puede:
+1 Puntee Menú > Opciones de mensajes....
+Ingrese el nombre del archivo, la palabra o la información
+•
+2 Seleccione la casilla de verificación Solicitar notificación de
+que desea buscar.
+entrega de mensaje.
+En la lista desplegable, seleccione un elemento que haya
+•
+buscado anteriormente. Recibir siempre notificaciones de entrega
+3 En el campo Tipo, seleccione un tipo de dato.
+1 En la lista de mensaje de texto, puntee Menú > Herramientas
+4 Puntee Buscar.
+> Opciones.
+5 En la lista Resultados, puntee el elemento que desea abrir.
+2 Puntee SMS / MMS.
+3 Seleccione la casilla de verificación Solicitar notificación de
+entrega de mensaje.
+Recibir mensajes de texto
+Los mensajes de texto se reciben automáticamente cuando el
+teléfono está encendido. Cuando el teléfono está apagado, el
+proveedor de servicios inalámbricos guarda los mensajes de
+texto hasta la próxima vez que encienda el teléfono.
+Copiar mensajes de texto en la tarjeta SIM
+1
+Puntee  > Mensajería > SMS / MMS.
+2 En la lista de mensaje, seleccione el mensaje de texto que
+desea copiar.
+3 En la lista de conversación, seleccione el mensaje de texto
+que desea copiar.
+Mensajería 23
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. 4 Puntee Menú > Copiar a SIM.
+5 Ingresar información de contacto
+Copiar mensajes de texto desde la tarjeta SIM
+6 Ingresar una cita de calendario
+1
+Puntee  > Mensajería > SMS / MMS.
+2 En la lista de mensaje, seleccione el mensaje de texto que
+Para editar o eliminar una frase en la lista Mi texto, mantenga
+desea copiar.
+punteada una cadena, luego puntee Editar o Eliminar en el menú
+3 Puntee Copiar en el teléfono.
+de acceso directo. Para crear y agregar una nueva frase a la lista,
+puntee Nuevo.
+Los mensajes de texto que se almacenan en la tarjeta SIM se
+muestran automáticamente en la carpeta Buzón de entrada.
+Cuando los copia en el teléfono duplica los mensajes en la carpeta
+Agregue fotografías y clips de vídeo
+Buzón de entrada cuando la tarjeta SIM está en uso.
+Cuando puntee Insertar imagen/vídeo, puede tomar una foto o un
+clip de vídeo e insertarlo directamente en el mensaje multimedia.
+MMS
+Comando Función
+En un mensaje multimedia (MMS), puede incluir imágenes, vídeo
+y un clip de audio.
+Inicia la cámara para que pueda tomar una
+Puntee 
+• fotografíaTenga en cuenta de que MMS es un servicio que tiene costos
+y debe ser provisionado en la cuenta del teléfono móvil.
+Inicia la cámara de vídeo para que pueda tomar
+Puntee 
+Comuníquese con su proveedor de servicios inalámbricos
+un clip de vídeo
+para que MMS se incluya en su plan de llamadas.
+• Asegúrese de que el tamaño de los mensajes MMS que envía
+Sale de la selección y lo regresa al mensaje MMS
+Puntee 
+esté dentro de los límites permitidos por el proveedor de
+servicios inalámbricos.
+Creación y envío
+Agregue un clip de audio
+Crear y enviar un mensaje multimedia
+Puede agregar un clip de audio por cada diapositiva en el
+1
+Puntee en  > Mensajería > SMS / MMS.
+mensaje multimedia.
+2 Punteen Menú > Nuevo > MMS.
+Agregar un clip de audio
+3 Puntee una plantilla o en Personalizado para abrir un mensaje
+1 Puntee en Insertar audio.
+de imagen en blanco.
+2 Seleccione un archivo de audio.
+4 Ingrese el número de teléfono manualmente o puntee en
+Menú > Agregar destinatario para agregar un número desde
+Cuando haya seleccionado un archivo de audio, puede:
+Contactos o Historial de llamadas. •
+Puntee  para reproducir el clip de audio.
+5 Escriba un asunto.
+6
+Puntee en  para insertar una foto o un clip de vídeo. •
+Puntee  para hacer una pausa en la reproducción.
+7 Puntee en Insertar texto aquí para ingresar texto. •
+Puntee  para detener la reproducción.
+8 Puntee en Insertar audio para insertar audio.
+9 Puntee Enviar. • Puntee en Seleccionar para insertarlo en el mensaje.
+•
+Puntee en  para salir de la selección y volver al mensaje.
+Agregar más diapositivas
+• Para registrar un nuevo clip de audio y agregarlo al mensaje,
+•
+Puntee .
+puntee en . Se abre la ventana emergente Grabar.
+Cuando esté en una diapositiva, puede:
+• Puntee en Grabar para iniciar la grabación, y Detener para
+Puntear en  para acceder a una vista previa de la
+finalizar la grabación. Puntee en Reproducir para escuchar el
+clip de audio grabado, luego puntee en Agregar. Luego, el
+diapositiva.
+• nuevo clip de audio se inserta en el mensaje.
+Puntear en  para ir a la diapositiva anterior.
+•
+Puntear en  para ir a la diapositiva siguiente.
+Opciones durante la redacción
+Cuando redacte un mensaje multimedia, también puede hacer
+lo siguiente:
+Agregue texto
+Cuando puntea Insertar texto aquí en el mensaje multimedia,
+Comando Función
+aparece una ventana vacía donde puede ingresar texto. Puede
+realizar lo siguiente:
+Puntee Menú > Opciones > Fondo. Permite elegir un
+color de fondo
+Puntee Menú > Opciones > Distribución de Le permite elegir si
+colocar el texto
+texto.
+encima, abajo, a la
+izquierda o a la
+derecha de la foto o
+el clip de vídeo.
+Puntee Menú > Opciones > Opciones de Le permite
+especificar la hora
+envío.
+de envío, el
+vencimiento, la
+prioridad, la
+categoría y si desea
+un informe de
+entrega o un
+1 Ingresar su propio texto
+informe de lectura.
+2 Elegir entre palabras o frases comunes desde la lista Mi texto
+Puntee Menú > Datos adjuntos. Permite incluir una
+3 Incluir un vínculo a Favoritos
+tarjeta de contacto,
+una cita de
+4 Agregar un icono gestual
+calendario o un
+24 Mensajería
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. archivo como un 4 En la ficha Servidores, verifique si el dispositivo está
+dato adjunto previamente configurado con las configuraciones del servidor
+MMS.
+5 Si no hay configuraciones, puntee en Nuevo e ingrese la
+siguiente información, que puede obtener del otro proveedor
+de servicios inalámbricos:
+Ver y reproducir
+Nombre de usuario. Un nombre descriptivo, como el nombre
+•
+Ver un mensaje
+del proveedor de servicios inalámbricos.
+1
+ > Mensajería > SMS / MMS
+Puerta de enlace. Ubicación del servidor MMS, que por lo
+•
+general es una dirección IP.
+2 Puntee el mensaje.
+Número de puerto. Número de puerto HTTP utilizado para
+•
+3 En la lista de conversación, puntee el mensaje.
+conectarse el servidor MMS y para la transferencia de
+archivos.
+Cuando vea el mensaje:
+Dirección del servidor. Dirección URL del servidor donde se
+•
+Si el mensaje contiene más de una diapositiva, use los
+•
+almacenan los mensajes multimedia.
+controles de reproducción ,  y .
+Conectar vía. Seleccionar la conexión que usa el teléfono
+•
+para los mensajes multimedia.
+Si el mensaje contiene un dato adjunto, puntee Contenido
+•
+Límite de envío. Seleccionar el tamaño máximo del mensaje
+•
+para ver una lista de archivos incluidos en el mensaje.
+multimedia permitido por el proveedor de servicios
+En la pantalla Contenido de mensaje, puede hacer lo
+•
+inalámbricos.
+siguiente:
+Versión WAP. Seleccionar WAP 1.2 o WAP 2.0, dependiendo
+•
+Para guardar un archivo, selecciónelo y puntee en Menú >
+•
+del que esté utilizando el proveedor de servicios
+Guardar.
+inalámbricos.
+Para guardar el contenido de un archivo de texto en la lista
+•
+Mi texto, puntee en Menú > Guardar > Guardar en Mi texto. • Puede elegir descargar mensajes multimedia tanto en la red
+doméstica como en roaming, llevar un registro de los
+Para asociar una fotografía a uno de los contactos, puntee en
+•
+mensajes multimedia, solicitar un informe de entrega o de
+Menú > Asignar a contacto.
+lectura, configurar la resolución de las imágenes que envía, y
+Configurar una fotografía recibida como fondo de Hoy.
+•
+más.
+Configurar una fotografía recibida como fondo de Hoy • Si el teléfono ya tiene configurado los ajustes MMS,
+recomendamos que no modifique estas configuraciones. Si
+1 Abra el mensaje multimedia.
+cambia las configuraciones previamente establecidas, es
+2 Puntee en Contenido.
+posible que el teléfono no pueda enviar ni recibir mensajes
+3 Puntee en la fotografía y ábrala.
+multimedia.
+4 Puntee en Menú > Establecer como fondo. • Si agrega varios proveedores de servicios de mensajes MMS
+5 Configure el nivel de transparencia.
+en la pantalla Configuraciones, puede elegir uno como el
+6 Puntee en Listo.
+proveedor predeterminado.
+Responder un mensaje
+Configurar un proveedor de servicio MMS como el
+Puntee Menú > Responder > Responder o Responder a
+•
+proveedor predeterminado
+todos.
+1
+Puntee en  > Mensajería > SMS / MMS > Menú > Opciones
+Use Responder a todos para responder a todas las personas
+MMS > la ficha Servidores.
+incluidas en Para, Cc y Cco del mensaje.
+2 En la lista, seleccione el proveedor de servicios.
+3 Seleccione Establ. predeterminados.
+Bloquear un número de teléfono
+Si no desea recibir mensajes multimedia de un remitente
+específico, puede agregar el número de teléfono del remitente a
+Correo electrónico
+la Lista negra de MMS.
+Puede recibir su correo electrónico en el teléfono. Es posible que
+Bloquear un número de teléfono
+necesite la siguiente información de su administrador de red:
+1 Cuando reciba un nuevo mensaje multimedia, abra y vea el
+Dirección del servidor
+•
+mensaje.
+Nombre del dominio
+•
+2 Para evitar recibir nuevamente mensajes multimedia de este
+Nombre de usuario y contraseña
+•
+remitente, puntee en Menú > Mostrar  > Detalles de mensaje.
+3 En la pantalla Detalles de mensaje, puntee en Menú > Mostrar
+Antes de usar el correo electrónico
+detalles de contacto.
+Antes de enviar y recibir correos electrónicos, necesita
+4 Puntee en Menú > Guardar en Lista negra.
+configurar el menos una cuenta de correo en el teléfono. Puede
+5 Puntee en Listo.
+• configurar los siguientes tipos de cuentas de correo electrónico:Para ver los números en la lista negra, en la pantalla SMS \
+MMS, puntee en Menú  > Opciones de MMS > la ficha Lista
+Correo electrónico de Outlook que puede sincronizar con una
+•
+negra.
+• PC o Microsoft® Exchange Server de la empresaPara desbloquear un número de teléfono y permitir que el
+Cuenta de correo electrónico proporcionada por un ISP
+•
+remitente le envíe mensajes MMS, elimine el número de la
+(proveedor de Servicios Internet)
+Lista negra. Puntee y mantenga oprimido el número de
+Cuentas de correo electrónico basadas en la Web
+•
+teléfono en la Lista negra y luego puntee en Eliminar
+Cuenta de trabajo que puede acceder mediante una conexión
+•
+VPN (Red privada virtual)
+Cambiar las configuraciones de MMS
+Configurar el correo electrónico Microsoft® Outlook®
+La primera vez que encienda el teléfono, obtiene
+mediante Exchange Server de Microsoft®
+automáticamente las configuraciones de MMS del proveedor de
+1
+Puntee en  > Mensajería > Configurar correo.
+servicios inalámbricos. Si accidentalmente pierde las
+configuraciones preestablecidas, o si desea agregar otro
+2 Ingrese la dirección de correo electrónico y la contraseña,
+proveedor de servicio inalámbrico, puede configurar los ajustes
+seleccione la opción Guardar contraseña, luego puntee
+mientras redacta un mensaje multimedia.
+Siguiente.
+3 Seleccione Intentar obtener configuración correo
+Ajustar configuraciones MMS
+automáticamente desde Internet, luego puntee Siguiente.
+1
+Puntee en  > Mensajería > SMS / MMS.
+4 Si no puede encontrar configuraciones automáticas,
+seleccione Exchange server en la lista Proveedor de correo,
+2 Puntee en Menú > Opciones MMS.
+luego oprima Siguiente.
+3 En la ficha Preferencias, seleccione o borre las casillas de
+5 Vuelva a puntear Siguiente.
+verificación disponibles según sus necesidades.
+Mensajería 25
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. 6 Marque la casilla de verificación Detectar automáticamente Responder a un correo electrónico
+configuración Exchange Server, luego puntee Siguiente.
+1
+Puntee  > Mensajería.
+7 Si no se detecta la configuración del servidor, ingrésela
+manualmente y, a continuación, puntee en Siguiente. 2 Puntee la cuenta de correo electrónico y la carpeta que desea
+8 Ingrese el nombre de usuario, la contraseña y el dominio, abrir.
+luego puntee en Siguiente. 3 Puntee el correo electrónico que desea responder.
+9 Si se le pide, ingrese la dirección del servidor y, a 4 Puntee Menú > Responder > Responder.
+continuación, puntee en Siguiente. 5 Ingrese el texto y puntee Enviar.
+10 Seleccione los datos que desea sincronizar y, a continuación,
+Reenviar un correo electrónico
+seleccione Finalizar.
+1
+Puntee  > Mensajería.
+Algunas funciones del correo electrónico dependen de la versión
+de Microsoft® Exchange Server que se utiliza en su empresa.
+2 Puntee la cuenta de correo electrónico y la carpeta que desea
+Consulte a su administrador de red acerca de la disponibilidad de
+abrir.
+estas funciones.
+3 Desplácese hasta el correo electrónico que desea reenviar.
+4 Puntee Menú > Responder > Reenviar.
+Configurar manualmente una cuenta de correo electrónico
+5 Ingrese la dirección después de Para:, o puntee en Para: para
+de un tipo de común
+seleccionar la dirección de un contacto desde Contactos.
+1
+Puntee en  > Mensajería > Configurar correo.
+6 Puntee Enviar.
+2 Ingrese la dirección y la contraseña del correo electrónico.
+Buscar un correo electrónico
+Seleccione la opción Guardar contraseña, luego puntee
+1
+Puntee  > Mensajería.
+Siguiente.
+3 Seleccione Intentar obtener configuración correo
+2 Puntee la cuenta de correo electrónico y la carpeta que desea
+automáticamente desde Internet, luego puntee Siguiente.
+abrir.
+4 Si no puede encontrar configuraciones automáticas,
+3
+Puntee  para usar el teclado en pantalla, o deslice el
+seleccione una opción en la lista Proveedor de correo, luego
+puntee Siguiente.
+teclado hacia afuera.
+5 Ingrese su nombre y el nombre de la cuenta en pantalla, luego
+4 Escriba los primeros caracteres en el nombre del remitente o
+puntee Siguiente.
+en el asunto del mensaje que desea buscar.
+6 Si corresponde, ingrese la dirección del servidor de correo
+5 Si el mensaje que está buscando está en la carpeta
+entrante y el tipo de cuenta, luego puntee Siguiente.
+seleccionada, aparece en la lista filtrada que se muestra en
+7 Ingrese el nombre de usuario y la contraseña para la cuenta
+la pantalla.
+de correo electrónico, seleccione la opción Guardar
+contraseña, luego puntee Siguiente.
+Direct Push
+8 Puntee Config. servidor avanzada.
+La tecnología Direct Push le permite recibir correos electrónicos
+9 Seleccione Conexión de red, luego puntee Listo.
+nuevos en el teléfono tan pronto llegan a la Bandeja de entrada
+10 Ingrese la dirección del servidor de correo saliente, luego
+en Exchange Server de Microsoft®. Esta característica también
+puntee Siguiente.
+funciona con elementos tales como contactos, citas de
+11 Seleccione una opción de Enviar y recibir automáticamente,
+calendario y tareas.
+luego puntee Finalizar.
+Activar y desactivar Direct Push
+Manejo de mensajes de correo electrónico 1
+Puntee  > Configuración > la ficha Conexiones >
+Revisar correo electrónico nuevo
+Administrador de com..
+1
+2 Seleccione una opción para Microsoft Direct Push.
+Puntee en  > Mensajería.
+Las actualizaciones frecuentes pueden resultar caras y dependen
+2 Puntee en su cuenta de correo electrónico.
+del operador.
+3 Puntee Menú > Enviar y recibir.
+Ver datos adjuntos
+1
+Puntee en  > Mensajería.
+2 Puntee la cuenta de correo electrónico y la carpeta que desea
+abrir.
+3 Puntee el correo electrónico que contenga el dato adjunto
+que desea ver.
+4 Puntee el dato adjunto y espere que se descargue y aparezca
+en la pantalla.
+Escribir un nuevo correo electrónico
+1
+Puntee  > Mensajería.
+2 Puntee en la cuenta de correo electrónico que desea.
+3 Puntee Menú > Nuevo.
+4 Ingrese manualmente la dirección de correo electrónico, o
+puntee en Para: para agregar una dirección desde
+Contactos.
+5 Escriba el asunto.
+6 Ingrese el texto del mensaje.
+7 Para agregar datos adjuntos, puntee en Menú > Insertar y
+seleccione una opción.
+8 Puntee Enviar.
+Eliminar un correo electrónico
+1
+Puntee  > Mensajería.
+2 Puntee la cuenta de correo electrónico y la carpeta que desea
+abrir.
+3 Desplácese hasta el correo electrónico que desea eliminar.
+4 Puntee Eliminar.
+26 Mensajería
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. 2 Puntee en Sincronizar.
+Correos electrónicos y citas de la
+empresa
+Trabajar con correos electrónico de la
+empresa
+Sincronización del teléfono con Exchange
+Puede usar el teléfono para tener acceso instantáneo a los
+Server
+correos electrónicos del equipo y administrar los mensajes
+fácilmente. Puede usar muchas herramientas, por ejemplo,
+Para mantenerse al día de los correos electrónicos y los
+Direct Push, Fetch Mail, Búsqueda de correo remoto e
+programas de reunión cuando no está en la oficina, puede
+indicadores de correo electrónico, para administrar los correos
+conectar el teléfono a Internet de manera inalámbrica y
+en el teléfono.
+sincronizar esta información con Exchange Server de la
+empresa. También puede acceder en cualquier momento a la
+Algunas funciones de mensajería dependen de la versión de
+libreta de direcciones de la empresa. La empresa debe tener un
+Microsoft Exchange Server que se utiliza en la empresa. Consulte
+servidor de correo electrónico que ejecute Microsoft® Exchange
+a su administrador de red acerca de la disponibilidad de estas
+Server con Exchange ActiveSync.
+funciones.
+Configurar una conexión Exchange Server
+Sincronización automática a través de Direct Push
+Antes de iniciar la sincronización con, o acceder a la información
+Puede usar la tecnología Direct Push (función correo electrónico
+de, Exchange Server, necesita configurar una conexión
+push) para recibir correos electrónicos nuevos en el teléfono, tan
+Exchange Server en el teléfono. Es posible que necesite la
+pronto llegan a la Bandeja de entrada en Exchange Server. Esta
+siguiente información de su administrador de red:
+característica también funciona con elementos tales como
+contactos, calendario y tareas.
+Nombre de Exchange Server (debe ser el nombre del servidor
+•
+Outlook Web Access)
+Para que Direct Push funcione necesita una conexión GPRS en
+Nombre del dominio
+•
+el teléfono. También, primero necesita realizar una
+Nombre de usuario y contraseña que usa en la red
+•
+sincronización completa entre el teléfono y Exchange Server
+antes de activar Direct Push.
+Configurar una conexión Exchange Server
+Cuando ambas conexiones, GPRS y Wi-Fi, están encendidas al
+1
+Puntee  > Mensajería > Configurar correo.
+mismo tiempo, la característica Direct Push siempre preferirá la
+2 Ingrese la dirección de correo electrónico y puntee Siguiente.
+conexión Wi-Fi.
+3 Desmarque la casilla de verificación Intentar obtener
+La característica Direct Push funciona con el teléfono sólo si la
+configuración correo automáticamente desde Internet, luego
+empresa está utilizando Microsoft Exchange Server 2003 Service
+puntee Siguiente.
+Pack 2 (SP2) con Exchange ActiveSync o una versión superior.
+4 En la lista Proveedor de correo, seleccione Exchange server,
+Activar Direct Push con ActiveSync
+luego puntee Siguiente.
+5 Vuelva a puntear Siguiente.
+1
+Puntee en  > Programas > ActiveSync.
+6 Asegúrese de que la dirección de correo electrónico sea
+2 Puntee en Menú > Programación.
+correcta, luego puntee Siguiente.
+3 Seleccione Al recibir nuevos elementos en las casillas Horas
+7 En la casilla Dirección del servidor, ingrese el nombre de
+pico y Horas de mínima actividad.
+Exchange Server, luego puntee Siguiente.
+8 Ingrese el nombre de usuario, la contraseña y el dominio,
+Las actualizaciones frecuentes pueden ser costosas.
+luego puntee Siguiente.
+9 Marque las casillas de verificación para los tipos de
+Activar Direct Push con el Administrador de comunicación
+elementos de información que desea sincronizar con
+1
+Puntee  > Programas > Administrador de com..
+Exchange Server.
+10 Para cambiar la configuración de sincronización para un tipo
+2 Seleccione ACTIVADO para Microsoft Direct Push .
+de información, por ejemplo, Correo electrónico, seleccione
+Las actualizaciones frecuentes pueden ser costosas.
+el tipo de información y puntee Configuración.
+11 Puntee Finalizar. El teléfono inicia automáticamente la
+sincronización.
+Sincronización programada
+Si anteriormente sincronizó correos electrónicos con el equipo,
+Si no desea usar Direct Push, puede establecer un programa
+abra ActiveSync en el teléfono y puntee Menú > Agregar origen de
+regular para sincronizar el correo electrónico y la información de
+servidor para configurar una conexión Exchange Server. Cuando
+Outlook. Configure con qué frecuencia se sincronizará durante
+se le pida seleccionar los tipos de información para la
+las Horas pico (que por lo general se refieren a las horas de
+sincronización, primero necesita borrar la casilla de verificación
+trabajo) cuando el volumen de correos electrónico es alto, así
+Correo electrónico en el elemento Windows PC antes de poder
+como las Horas de mínima actividad cuando el volumen de
+seleccionar la casilla de verificación Correo electrónico en
+correos electrónico es bajo.
+Exchange Server.
+Configurar la programación para la sincronización
+Cambiar la configuración de Exchange Server
+1
+1 Puntee en  > Programas > ActiveSync.
+Puntee en  > Programas > ActiveSync.
+2 Puntee en Menú > Programación.
+2 Puntee en Menú > Configurar servidor.
+3 En la casilla Horas pico y Horas de mínima actividad,
+seleccione el intervalo de tiempo que necesite.
+Iniciar la sincronización
+4 Puntee en aceptar.
+Antes de comenzar la sincronización con Exchange Server,
+Para configurar los días y las horas que corresponden a las horas
+asegúrese de que el teléfono esté configurado con una conexión
+pico y las horas de mínima actividad, puntee horas pico en la
+de datos a Internet para que pueda realizar la sincronización de
+oración en la parte inferior de la pantalla.
+manera inalámbrica. El teléfono inicia automáticamente la
+sincronización cuando termina de configurar una conexión de
+Descarga instantánea a través de Fetch Mail
+Exchange Server.
+Con la característica Fetch Mail, puede descargar
+Si conecta el teléfono a un equipo de oficina mediante una
+inmediatamente un correo electrónico entero sin realizar una
+conexión USB o Bluetooth, puede usar esta conexión en el equipo
+acción completa de Enviar/recibir. Esto limita la descarga sólo al
+para acceder a la red y descargar correos electrónicos de Outlook
+y otra información en el teléfono. correo electrónico que desea y permite ahorrar costos de datos.
+Fetch Mail funciona en el teléfono sólo si la empresa está
+Inicie la sincronización manualmente
+utilizando Microsoft Exchange Server 2007 o superior.
+1
+Puntee en  > Programas > ActiveSync.
+Correos electrónicos y citas de la empresa 27
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. Descargar instantáneamente a través de Fetch Mail Enviar mensajes de respuesta automática de fuera de la
+oficina
+1
+Puntee  > Mensajería > Correo Outlook.
+1
+Puntee  > Mensajería > Correo Outlook.
+2 Puntee un correo electrónico para abrirlo.
+3 Si el correo electrónico sólo se descargó parcialmente, 2 Puntee Menú > Herramientas > Fuera de la oficina.
+desplácese hasta la parte inferior del mensaje, luego puntee 3 En la lista Actualmente estoy, seleccione Fuera de la oficina.
+Recibir el resto del mensaje. 4 Ingrese el mensaje de respuesta automática, luego puntee en
+4 Espere que el resto del cuerpo del mensaje se descargue.
+Listo.
+Puede modificar el tamaño máximo de la descarga inicial para la
+Ver un documento vinculado a un correo electrónico
+sincronización del correo electrónico.
+Cuando reciba un correo electrónico que contenga un vínculo a
+Cambiar el tamaño máximo de la descarga inicial para el
+un documento como un PDF o un documento de Microsoft®
+correo electrónico
+Office ubicado en SharePoint o un servidor de archivos interno,
+1 En ActiveSync del teléfono, puntee en Menú > Opciones.
+puede ver el documento en el teléfono.
+2 Puntee en Correo electrónico, luego puntee en Configuración.
+Sólo puede ver el documento si tiene una cuenta de Microsoft
+3 En la casilla Tamaño máximo de descarga, seleccione una
+Outlook que se sincronice con Microsoft Exchange Server 2007
+opción.
+o posterior. Exchange Server también debe configurarse para
+4 Puntee en aceptar.
+poder acceder a bibliotecas de documentos de SharePoint o
+servidores de archivos internos.
+Buscar correos electrónicos en Exchange Server
+Ver un documento vinculado a un correo electrónico
+Puede buscar en el buzón de correo de Microsoft Exchange
+1
+Server para acceder a los mensajes que no están disponibles en
+Puntee  > Mensajería.
+el teléfono. Los resultados de la búsqueda se descargan y
+2 Seleccione una cuenta de correo electrónico, luego abra un
+muestran en una carpeta de Resultados de búsqueda.
+mensaje con un vínculo a un documento SharePoint.
+La empresa debe usar Microsoft Exchange Server 2007 o
+3 Puntee el vínculo para abrir y ver el documento.
+superior.
+Administración de carpetas
+Buscar correos electrónicos en Exchange Server
+En el teléfono, puede seleccionar las carpetas que desea
+1
+Puntee  > Mensajería > Correo Outlook.
+sincronizar con Exchange Server. También puede crear
+2 Puntee Menú > Herramientas > Buscar en servidor.
+carpetas, cambiarles el nombre o eliminarlas fácilmente.
+3 En la casilla de texto Buscar, ingrese la palabra clave de
+Sincronizar carpetas
+búsqueda.
+1
+4 Elija el rango de fecha de los mensajes en los que realizará la
+Puntee  > Mensajería > Correo Outlook.
+búsqueda.
+2 Puntee Menú > Herramientas > Administrar carpetas.
+5 En la lista Buscar en, elija si buscar en el buzón de entrada o
+3 Marcar las casillas de verificación para las carpetas que
+sólo en el buzón de salida, o para buscar en todas las
+desea sincronizar.
+carpetas.
+4 Puntee en aceptar.
+6 Puntee Buscar.
+Puede puntear rápidamente una carpeta dos veces para mostrar
+las subcarpetas.
+Marcar mensaje
+Las marcas sirven como un recordatorio para realizar un
+seguimiento de temas o solicitudes importantes que se indican
+Administrar solicitudes de reunión
+en los mensajes. La característica Marcar mensajes, que es muy
+Cuando programe y envíe solicitudes de reunión desde el
+útil en el correo de Outlook de escritorio, también se puede
+teléfono, puede invitar asistentes a la reunión y comprobar el
+aplicar en Outlook Mobile del teléfono. Puede marcar mensajes
+estado para conocer su disponibilidad. Cuando reciba una
+recibidos en el teléfono.
+solicitud de reunión, acepte o rechace la solicitud para
+Las marcas están activadas sólo si los correos electrónicos están
+responder. La solicitud de reunión indica claramente si existen
+sincronizados con Microsoft Exchange Server 2007 o superior.
+conflictos o reuniones adyacentes.
+Las marcas están desactivadas u ocultas si los correos
+electrónicos están sincronizados con versiones anteriores de
+Responder una solicitud de reunión
+Microsoft Exchange Server.
+1
+Puntee  > Mensajería > Correo Outlook.
+Marcar o desmarcar un mensaje
+2 Puntee un correo electrónico de solicitud de reunión para
+1
+Puntee  > Mensajería > Correo Outlook.
+abrirla.
+3 Para verificar la disponibilidad en la hora de la reunión
+2 Puntee un mensaje para abrirlo.
+solicitada, puntee Ver calendario.
+3 Puntee Menú > Seguimiento y seleccione una de las
+4 Puntee Aceptar para responder y aceptar la solicitud de
+siguientes opciones:
+reunión, o puntee Menú > Rechazar si no puede asistir a la
+Establecer indicador: marque el mensaje con un indicador
+•
+reunión.
+rojo para indicar las necesidades de seguimiento.
+5 Elija si editará o no el correo electrónico de respuesta antes
+Completar indicador: marcar el mensaje con una marca de
+•
+de enviarlo, luego puntee aceptar.
+verificación para indicar que el asunto o la solicitud en el
+6 Una solicitud de reunión aceptada se agrega
+correo electrónico ya se completó.
+automáticamente como una cita en el Calendario en el
+Borrar indicador: elimine el indicador para desmarcar el
+•
+teléfono.
+mensaje.
+Si la hora de la reunión coincide con otras citas, aparece el
+Los recordatorios de correos electrónicos aparecen en el teléfono
+estado Conflicto de programación en la parte superior del correo
+si los mensajes se marcan con recordatorios y se sincronizan en
+electrónico.
+Exchange Server.
+Ver la lista de participantes de la reunión
+Respuesta automática de fuera de la oficina
+1
+Puntee en  > Calendario.
+Microsoft® Office Outlook® Mobile le permite recuperar y
+2 Puntee un elemento de cita para abrirlo, luego puntee en
+cambiar el estado de fuera de la oficina. Al igual que el Correo
+Asistentes.
+de Outlook de escritorio, Outlook Mobile envía automáticamente
+un mensaje de respuesta cuando no está disponible.
+Cuando vea una reunión que haya organizado, la lista muestra
+quién aceptó o rechazó la reunión si la empresa está usando
+Microsoft Exchange Server 2007 o superior.
+28 Correos electrónicos y citas de la empresa
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. Ver información de contacto de los asistentes Verificar la firma digital en un mensaje firmado que reciba
+1 En la lista de participantes a la reunión, puntee en el nombre 1
+Puntee  > Mensajería > Correo Outlook.
+de un asistente.
+2 Abra un correo electrónico de Outlook que tenga firma digital.
+2 Si el asistente no está en la lista de contactos, puntee en
+3 En la parte superior del mensaje, puntee en Ver estado de la
+Directorio de la organización para ver la información de
+firma.
+contacto.
+4 Puntee en Menú > Comprobar certificado.
+5 Para ver detalles del certificado en el mensaje, puntee en
+Menú > Ver certificado.
+Búsqueda de contactos en el Directorio de la
+organización
+Pueden existir muchas razones para que una firma digital no sea
+válida. Por ejemplo, el certificado del remitente puede estar
+Además de tener los contactos en el teléfono, puede acceder a
+vencido, puede haber sido revocado por la autoridad del
+la información de contacto desde el Directorio de la
+certificado o el servidor que verifica el certificado no está
+organización. Puede buscar utilizando la siguiente información
+disponible. Comuníquese con el remitente para informar el
+siempre que dicha información se incluya en el Directorio de la
+problema.
+organización: Nombre, Apellido, Nombre de correo electrónico,
+Firmar y cifre digitalmente todos los mensajes
+Nombre para mostrar, Dirección de correo electrónico o
+Ubicación de la oficina.
+1
+Puntee en  > Programas > ActiveSync.
+El acceso al Directorio de la organización sólo está disponible si
+2 Puntee en Menú > Opciones.
+la organización está ejecutando Microsoft Exchange Server 2003
+3 Seleccione el tipo de información de Correo electrónico y
+SP2 o superior, y ha completado la primera sincronización con
+puntee Configuraciones. En la pantalla Opciones sinc. correo,
+Exchange Server.
+puntee Avanzadas.
+Buscar contactos en el Directorio de la organización
+4 Seleccione una o ambas opciones a continuación:
+1 Sincronice con Exchange Server si no lo ha hecho
+Firmar todos los mensajes de correo salientes: firmar todos
+•
+anteriormente.
+los correos electrónicos salientes para que los
+2 Puede realizar lo siguiente:
+destinatarios puedan estar seguros de que los mensajes
+•
+los envió usted y que no se han alterado de manera alguna.
+Puntee en 　> Contactos > Menú > Directorio de la
+Cifrar todos los mensajes de correo salientes: cifrar todos los
+•
+organización.
+correos electrónicos salientes de manera que nadie más
+En un nuevo mensaje, puntee en Para:, o en Menú > Agregar
+•
+que los destinatarios indicados puedan ver el contenido.
+destinatario, luego puntee Directorio de la organización.
+5 Puntee Seleccionar certificado para seleccionar un certificado
+En una nueva solicitud de reunión, puntee Asistentes,
+•
+para firmar o cifrar correos electrónicos salientes.
+seleccione Agregar asistente requerido o Agregar asistente
+Debe tener un certificado válido para firmar y cifrar correctamente
+opcional, luego puntee en Directorio de la organización.
+los correos electrónicos.
+3 Ingrese parte del nombre del contacto o el nombre completo
+y puntee Buscar.
+4 En la lista de resultados de búsqueda, puntee un contacto Configurar permisos para un correo electrónico
+para seleccionarlo.
+Otra forma de proteger los correos electrónicos es enviar
+mensajes con permisos restringidos mediante Information
+Para guardar un contacto desde el Directorio de la organización
+Rights Management (IRM).
+al teléfono puede desplazarse al contacto y luego oprimir Menú
+> Guardar en Contactos.
+Esto sólo funciona con una cuenta de correo de Microsoft Outlook
+si la empresa está usando RMS Server SP1.
+Seguridad de correo electrónico Configurar permisos para un correo electrónico
+1
+Puntee  > Mensajería > Correo Outlook.
+Firmar y cifrar digitalmente los mensajes
+2 Puntee Menú > Nuevo para crear un nuevo mensaje.
+Windows Mobile® del teléfono protege los correos electrónicos
+3 Puntee en Menú > Opciones de mensaje.
+de Outlook mediante Extensiones seguras multipropósito al
+4 En la lista Permisos, seleccione una de las siguientes
+correo de Internet (S/MIME), que le permite firmar y cifrar
+opciones:
+digitalmente los mensajes.
+Acceso no restringido: permite que todos lean el mensaje.
+•
+No reenviar: evitar que el mensaje se reenvíe, imprima o
+•
+Cuando firma un mensaje digitalmente aplica el certificado con
+copie.
+la clave de autorización en el mensaje. Esto demuestra al
+5 Puntee en aceptar.
+destinatario que el mensaje es suyo y no de un impostor o
+hacker, y que el mensaje no ha sido alterado.
+Un mensaje protegido con IRM recibido en el teléfono sólo puede
+responderse o reenviarse si el mensaje lo permite.
+El cifrado protege la privacidad del mensaje mediante la
+conversión de un texto sin formato y que se puede leer en un
+texto cifrado (codificado). Sólo el destinatario con la clave de
+autorización puede descifrar el mensaje.
+El cifrado y las firmas digitales de S/MIME para dispositivos con
+Windows Mobile® están disponibles sólo con Exchange Server
+2003 SP2 o una versión posterior compatible con S/MIME. Si no
+está usando uno de estos productos, o no los ha sincronizado,
+estas opciones no estarán disponibles.
+Puede cifrar un mensaje con o sin un cerificado. Sin embargo,
+para leer un mensaje cifrado, necesita un certificado válido para
+descifrarlo.
+Firmar y cifrar individualmente un nuevo mensaje
+1
+Puntee  > Mensajería > Correo Outlook.
+2 Puntee Menú > Nuevo para crear un nuevo mensaje.
+3 Puntee en Menú > Opciones de mensaje.
+4 En la lista Seguridad, seleccione si sólo cifrará, si sólo firmará
+el mensaje, o ambos.
+5 Puntee en aceptar.
+Correos electrónicos y citas de la empresa 29
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. Ficha Memoria: liberar espacio de memoria configurando el
+•
+Navegación por la Web
+tiempo que los vínculos Web deben guardarse y
+eliminando archivos Web guardados.
+Ficha Seguridad: la configuración de seguridad le ayuda a
+•
+Conexión a Internet
+evitar páginas Web no seguras. Las cookies son archivos
+Puede conectarse a Internet mediante GPRS/HSPA o Wi-Fi.
+que guardan las páginas Web en el teléfono, que le
+Antes de conectarse a Internet por medio de GPRS/HSPA,
+permiten acceder a diferentes servicios en una página
+necesita la configuración de su proveedor de servicio. Por lo
+Web.
+general, la configuración se guarda en la tarjeta SIM durante el
+inicio. De no ser así, comuníquese con su operador.
+Administración de Internet Explorer
+Comenzar la exploración
+1
+Puntee en  > Internet Explorer.
+Zoom
+2 Ingrese la dirección Web en el campo de dirección y, a
+Acercar y alejar la vista en una página Web
+continuación, puntee en .
+1 En una página Web, puntee en Menú > Ver > Nivel de zoom.
+2 Seleccione una opción.
+Para activar la vista panorámica de una página, toque y mantenga
+Opciones del menú
+oprimida la pantalla y, a continuación, mueva el dedo o el lápiz.
+Puntee y mantenga oprimida la pantalla para abrir un menú con
+Cambiar la visualización de las páginas Web
+opciones útiles.
+1 En una página Web, puntee en Menú > Ver.
+El Menú en la parte inferior de la pantalla ofrece muchas opciones
+2 Seleccione una opción.
+para Internet Explorer.
+Alejar: ver una parte más amplia del sitio Web.
+•
+Favoritos
+Inicio: abrir la página de inicio.
+•
+Puede crear y editar Favoritos como vínculos rápidos a sus
+Barra de dirección: abrir un nuevo sitio Web. Escriba una
+•
+páginas Web preferidas.
+dirección Web en la barra de dirección resaltada.
+Agregar una página Web favorita
+Favoritos...: abrir una lista con favoritos en sus sitios Web
+•
+favoritos.
+1 En Internet Explorer puntee Menú > Agregar a Favoritos.
+Agregar a Favoritos: agregar un favorito para abrir un sitio Web
+•
+2 Escriba un nombre, una dirección y seleccione la carpeta
+en Favoritos. También puede crear subcarpetas para
+donde se guardará y, a continuación, puntee en Add.
+organizar los favoritos.
+Ir a una página Web favorita
+Adelante: volver a la página Web visitada anteriormente
+•
+1 En Internet Explorer puntee Menú > Favoritos....
+cuando usó el comando Atrás.
+2 Puntee en un favorito de la lista.
+Actualizar: volver a cargar el sitio Web actual.
+•
+Ver: abrir un submenú y seleccionar cómo ver las páginas
+•
+Web.
+Exploración de páginas Web visitadas anteriormente
+Editar: cortar, copiar o pegar el texto seleccionado.
+•
+Puede ver páginas Web que haya visitado en otras ocasiones.
+Herramientas: abrir un submenú donde puede especificar las
+•
+configuraciones para Internet Explorer.
+Explorar páginas Web visitadas anteriormente
+1 En Internet Explorer puntee en Menú > Herramientas >
+Historial.
+Ver opciones
+2 Puntee en el título de una página de la lista.
+Puede modificar la forma de ver páginas Web en Internet
+Explorer para minimizar el desplazamiento y aumentar la
+velocidad de descarga de las páginas.
+Personalización
+Nivel de zoom: seleccione un nivel de zoom que se ajuste al
+•
+Cambiar la página de inicio
+sitio Web actual.
+1 Vaya a una página Web.
+Una columna: organiza la página en una columna del ancho
+•
+2 Puntee en Menú > Herramientas > Opciones > la ficha
+de la pantalla. Esto significa que casi nunca tendrá que
+General.
+desplazarse horizontalmente. Normalmente, esta vista se
+3 Puntee Usar actual.
+descarga más rápidamente que otras.
+4 Puntee Aceptar.
+Ajustar a la ventana: mantiene un esquema similar a lo que se
+•
+Borrar el historial
+ve en un equipo de escritorio. Este modo reduce el tamaño
+de los elementos y organiza la página de manera que se
+1 En Internet Explorer puntee en Menú > Herramientas >
+pueda ver lo más posible sin tener que desplazarse
+Opciones > la ficha Memoria.
+horizontalmente.
+2 Puntee Borrar historial.
+Escritorio: mantiene el mismo esquema y tamaño que un
+•
+3 Puntee Aceptar.
+equipo de escritorio. Esto requiere desplazamiento horizontal
+Borrar cookies
+y vertical.
+1 En Internet Explorer puntee en Menú > Herramientas >
+Pantalla completa: este modo oculta la barra de menú y la
+•
+Opciones > la ficha Seguridad.
+barra de estado y utiliza toda la pantalla para mostrar la
+2 Puntee Borrar cookies.
+página Web.
+3 Puntee Aceptar.
+Mostrar imágenes: cancele esta opción para que la página
+•
+Web se descargue más rápidamente.
+Opciones de herramientas
+Vínculos Web 
+El menú Herramientas contiene configuraciones y opciones
+útiles para Internet Explorer.
+Puede suscribirse y descargar contenido actualizado con
+Historial: ver una lista de sitios Web recientemente abiertos.
+•
+frecuencia, como por ejemplo noticias, mediante vínculos Web.
+Seleccione un sitio de la lista para abrirlo.
+A través del panel Sony Ericsson se tiene acceso a los vínculos
+Enviar vínculo: use uno de los métodos de la lista para enviar
+•
+Web
+un vínculo al sitio Web actual a otro dispositivo.
+Propiedades: ver información sobre el sitio Web actual.
+•
+Opciones: especificar la configuración para Internet Explorer.
+•
+Ficha General: configurar la página Inicio (página de inicio)
+•
+y el conjunto de caracteres predeterminados utilizado por
+Internet Explorer.
+30 Navegación por la Web
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. Agregar un vínculo Web
+1 Botón actualizar o detener
+1 En Internet Explorer, vaya a una página Web con vínculos
+2 Campo de la dirección
+Web.
+3 Campo de búsqueda
+2 Escriba la dirección Web en el campo de dirección y, a
+continuación, puntee en Copiar.
+4 Campo de búsqueda en Google
+3 Vaya al Panel Sony Ericsson.
+4 Puntee en Options > la ficha Web Feeds.
+5 Acceso directo
+5 Puntee en la siguiente posición disponible.
+6 Barra de herramientas
+6 Para pegar la dirección Web en el campo de dirección en la
+parte superior de la pantalla puntee y mantenga oprimido, y
+7 Menú
+luego puntee en Paste.
+7 Seleccione el número de bloques del panel Sony Ericsson 8 Página principal
+para los vínculos Web. Cada bloque contiene dos filas.
+9 Nueva ficha
+8 Puntee Aceptar.
+10 Favoritos
+Ver vínculos Web
+1 En el panel Sony Ericsson, puntee en el vínculo Web que
+11 Página anterior
+desea.
+12 Botón de búsqueda en Google
+2 Elija la información que desea ver, luego puntee en Go to
+Site.
+13 Botón de búsqueda
+Actualizar vínculos Web
+14 Cerrar una ficha o ir a una página Web
+En el panel de Sony Ericsson, puntee en Update.
+•
+Programar la actualización de vínculos Web
+Comenzar la exploración con Opera
+1
+Puntee  > Programas > Explorador Opera.
+2 Escriba la dirección Web en el campo de dirección y luego
+puntee .
+Opciones del menú
+Puntee y mantenga oprimida la pantalla para abrir un menú con
+opciones comunes del explorador:
+Atrás: ir a la página anterior.
+•
+Recargar: recargar la página actual.
+•
+Agregar a favoritos: guardar la dirección Web como un
+•
+favorito.
+Modo horizontal: cambiar al modo horizontal.
+•
+1 En el panel de Sony Ericsson, puntee en Options > la ficha
+Guardar página: guardar la página actual.
+•
+General.
+Selección de texto activada: permite la selección de texto para
+•
+2 Seleccione una opción en Web Feeds Update Time.
+copiar texto desde una página Web.
+3 Puntee Aceptar.
+Selección de texto desactivada: desactiva la selección de texto
+•
+Las actualizaciones frecuentes pueden ser costosas.
+y vuelve al modo de desplazamiento normal.
+Buscar en página: buscar una palabra o frase específica en la
+•
+página actual.
+Llamar mientras explora • Puede puntear y mantener oprimidas imágenes, vínculos y
+selecciones para abrir menús con opciones.
+Hacer una llamada cuando explora • Puede usar el botón de volumen para acercar y alejar.
+•
+Oprima .
+Puede puntear  para obtener más opciones:
+Adelante: adelantar (disponible si ha ido a una página
+•
+Explorador Opera
+anterior).
+El explorador Opera es una alternativa a Internet Explorer.
+Configuración: configurar el explorador como desea.
+•
+Descargas: ver los archivos que descargó.
+•
+Información de la página: ver información acerca de la página
+•
+Web actual.
+Historial: ver el historial de exploración.
+•
+Páginas guardadas: ver las páginas Web guardadas.
+•
+Ayuda: abrir la ayuda.
+•
+Salir: salir del Explorador Opera.
+•
+Navegación por la Web 31
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. Iconos de la barra de herramientas
+Conectarse
+Los siguientes iconos pueden aparecer en la barra de
+herramientas. Puede puntearlos para:
+Tecnología Bluetooth™
+Icono Función
+La tecnología Bluetooth™ permite comunicaciones inalámbricas
+en distancias cortas. Los dispositivos con Bluetooth pueden
+Ir a la página anterior
+intercambiar información a una distancia de aproximadamente
+ocho metros sin necesitar conexión física.
+Ir a favoritos
+Modos de Bluetooth™
+Crear una nueva ficha
+La funcionalidad de Bluetooth™ del teléfono opera en tres
+modos diferentes:
+Ir a la página de inicio
+Activado: la funcionalidad Bluetooth está activada. El
+•
+Abrir un menú
+teléfono puede detectar otro dispositivo con Bluetooth, pero
+no puede detectar su teléfono.
+Desactivado: la funcionalidad Bluetooth está desactivada.
+•
+Aplicar
+No puede enviar ni recibir información mediante un vínculo
+Bluetooth. Desactive la funcionalidad Bluetooth cuando no la
+Cerrar
+utilice para ahorrar energía de la batería, o en lugares donde
+esté prohibido el uso de un dispositivo inalámbrico, como en
+un avión o en hospitales.
+Agregar un favorito para la página actual
+Visible: la funcionalidad Bluetooth se activa, y otros
+•
+dispositivos con Bluetooth pueden detectar el teléfono.
+Crear una carpeta para páginas guardadas
+De manera predeterminada, la funcionalidad Bluetooth está
+desactivada. Para que esté activada, enciéndala y luego apague
+Herramientas para manejar las carpetas de páginas
+el teléfono. La próxima vez que encienda el teléfono, la
+guardadas
+funcionalidad Bluetooth estará activada.
+Enviar un favorito para la página actual
+Activar la funcionalidad Bluetooth™ y configurar el teléfono
+en el modo visible
+Eliminar
+1
+Puntee en  > Configuración > la ficha Conexiones >
+Bluetooth™ > la ficha Modo.
+2 Marque las casillas de verificación Activar Bluetooth y Permitir
+que este dispositivo sea visible por otros dispositivos.
+3 Puntee Aceptar.
+Uso del explorador Opera
+Agregar un favorito para una página actual
+Asociación Bluetooth ™
+1
+Puntee .
+Una asociación Bluetooth™ es una relación que crea entre el
+2
+Puntee .
+teléfono y otro dispositivo con Bluetooth para intercambiar
+información de manera segura.
+3
+Puntee  > .
+Crear la asociación Bluetooth™
+Guardar una página Web
+1
+Puntee en  > Configuración > la ficha Conexiones >
+1 En la página Web actual, puntee y mantenga oprimida.
+Bluetooth™.
+2 Puntee Guardar página.
+2 En la ficha Dispositivos, puntee en Añadir nuevo dispositivo. El
+Crear una carpeta para páginas Web guardadas
+teléfono busca dispositivos Bluetooth y los muestra en la
+1
+casilla.
+Puntee  > Páginas guardadas.
+3 Puntee en el nombre del dispositivo que desea.
+2
+Puntee .
+4 Puntee Siguiente.
+5 Especifique un código de acceso para establecer una
+3 Póngale nombre a la carpeta.
+conexión segura. El código de acceso puede tener entre uno
+4
+Puntee  > .
+y 16 caracteres.
+6 Puntee Siguiente.
+Mover una página Web guardada a una carpeta
+7 Espere a que el dispositivo vinculado acepte la asociación. El
+1
+Puntee  > Páginas guardadas. receptor debe ingresar el mismo código de acceso que
+especificó.
+2 Puntee y mantenga oprimida una página guardada >
+8 Aparece el nombre del dispositivo vinculado. Puede editar e
+Modificar página guardada.
+ingresar un nuevo nombre.
+3 En la casilla Carpeta, seleccione la carpeta.
+9 Marque las casillas de verificación para los servicios que
+4
+Puntee  > .
+desea usar en el dispositivo vinculado.
+10 Puntee Finalizar.
+La creación de una asociación Bluetooth entre dos dispositivos
+es un proceso que se realiza una sola vez. Una vez que se crea la
+asociación, los dispositivos se reconocerán entre sí
+automáticamente cuando estén lo suficientemente cerca y tengan
+la función Bluetooth encendida. Por lo tanto, no es necesario
+volver a ingresar el código de acceso.
+Aceptar la asociación Bluetooth™
+1 Asegúrese de que la funcionalidad Bluetooth esté activada y
+el teléfono esté en el modo visible.
+2 Puntee Sí cuando se le pida establecer una asociación con el
+otro dispositivo.
+3 Ingrese un código de acceso (el mismo código que ingresa
+en el dispositivo que solicita la asociación) para establecer
+32 Conectarse
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. una conexión segura. El código de acceso debe tener entre 2 Cree una asociación Bluetooth, luego habilite el equipo para
+uno y 16 caracteres. que reciba transmisiones Bluetooth. Si el equipo tiene
+4 Puntee Siguiente. Windows Vista o Windows XP SP2 y el adaptador Bluetooth
+5 Puntee Finalizar. Ya puede intercambiar información con el del equipo es compatible con la versión de Windows, siga
+dispositivo vinculado. estas indicaciones:
+1 En el equipo, abra Dispositivos Bluetooth desde el Panel de
+Para cambiar el nombre de una asociación Bluetooth, puntee y
+control, luego haga clic en la ficha Opciones.
+mantenga oprimido el nombre de la asociación en la ficha
+2 Para Windows Vista, seleccione Permitir que los dispositivos
+Dispositivos de la pantalla de configuración de Bluetooth, luego
+Bluetooth encuentren esta computadora. Para Windows XP
+puntee Editar.
+SP2, seleccione Activar detección y Permitir que los
+Para eliminar el nombre de una asociación Bluetooth, puntee y
+dispositivos Bluetooth se conecten a esta computadora.
+mantenga oprimido el nombre de la asociación en la ficha
+3 Cree una asociación Bluetooth entre el equipo y la
+Dispositivos de la pantalla de configuración de Bluetooth, luego
+computadora. Para obtener más información, consulte
+puntee Eliminar.
+Asociación Bluetooth ™.
+4 En la ficha Opciones de Dispositivos Bluetooth, seleccione
+Mostrar el icono de Bluetooth en el área de notificación.
+Conectar un manos libres Bluetooth™ o un
+5 Para habilitar el equipo para que reciba transmisiones
+auricular estéreo
+Bluetooth, haga clic con el botón derecho en el icono de
+Bluetooth en el extremo inferior derecho de la pantalla del
+Para conversaciones con manos libres, puede usar con el
+equipo y seleccione Recibir un archivo.
+teléfono un auricular manos libres Bluetooth™ como un equipo
+3 Ahora está listo para transmitir. En el teléfono, seleccione un
+para auto. El teléfono también admite A2DP (Perfil de
+elemento para transmitir. El elemento puede ser una cita en
+distribución de audio avanzada), que significa que puede usar
+el calendario, una tarea, una tarjeta de contacto o un archivo.
+un auricular estéreo Bluetooth para conversaciones telefónicas
+4 Para transmitir un contacto, puntee en Menú > Enviar
+con manos libres y para escuchar música estéreo.
+contacto > Transferir. Para transmitir otros tipos de
+Conectar un manos libres Bluetooth™ o un auricular
+información, puntee en Menú > Transferir [tipo de elemento].
+estéreo
+5 Puntee en el nombre del dispositivo con el que desea hacer
+la transmisión.
+1 Asegúrese de que tanto el teléfono como el auricular
+6 Si transmite un elemento del calendario, una tarea o un
+Bluetooth™ estén encendidos y cerca el uno del otro, y que
+contacto al equipo y no se agrega automáticamente a
+el auricular esté visible. Consulte la documentación del
+Outlook, seleccione Archivo > Importar y exportar en Outlook
+fabricante para saber cómo configurar el auricular en el modo
+para importarlo.
+visible.
+2
+Puntee  > Configuración > la ficha Conexiones >
+La carpeta predeterminada en el equipo donde se almacenan los
+elementos transmitidos puede ser C:\Documents and Settings
+Bluetooth.
+\your_username\Mis documentos en Windows XP o C:\Users
+3 En la ficha Dispositivos, puntee en Añadir nuevo dispositivo. El
+\your_username\Mis documentos en Windows Vista.
+teléfono busca dispositivos Bluetooth y los muestra en la
+casilla.
+4 Puntee el nombre del auricular Bluetooth, luego puntee en
+Wi-Fi (LAN inalámbrica)
+Siguiente y el teléfono se vincula automáticamente con el
+Puede conectar su teléfono a una red inalámbrica para tener
+auricular Bluetooth.
+acceso a Internet. Puede conectarse en su hogar (red personal)
+5 Asegúrese de que la casilla de verificación Manos libres esté
+o en zonas de acceso público.
+marcada. Si el auricular es un auricular estéreo, asegúrese de
+que Estéreo inalámbrico esté marcado.
+Las redes personales normalmente están protegidas. Se
+•
+6 Puntee Finalizar. Cuando el auricular Bluetooth está
+requiere una frase o clave del propietario.
+conectado, el icono del auricular  aparece en la barra de
+Los lugares de acceso público no suelen tener protección,
+•
+pero a menudo se debe iniciar sesión en el servicio del
+título.
+operador para obtener acceso a Internet.
+Si hay un auricular Bluetooth desconectado, enciéndalo y repita
+Conectarse a una red inalámbrica
+los pasos 1 al 3 anteriores. Puntee y mantenga oprimido el
+1
+auricular estéreo Bluetooth y puntee en Estéreo inalámbrico.
+En el panel de Sony Ericsson, puntee en .
+Windows® Mobile intenta automáticamente con uno de los
+2 Seleccione una red y puntee en Aceptar.
+códigos de acceso preconfigurados (0000, 1111, 8888, 1234)
+Activar y desactivar Wi-Fi
+para vincular el auricular Bluetooth con el dispositivo. Si no
+resulta, debe ingresar manualmente el código de acceso incluido
+•
+En el panel Sony Ericsson, puntee en  o .
+con el auricular.
+El uso de Wi-Fi consume la energía de la batería. Desactive Wi-Fi
+cuando no lo utilice.
+Transfiera información mediante una
+Wi-Fi también se puede activar y desactivar en Administrador de
+conexión Bluetooth™
+com.
+Puede transferir información, como contactos, elementos de
+calendario y tareas, así como archivos desde el teléfono a la
+Configuración
+computadora o a otro dispositivo habilitado con Bluetooth™.
+Algunas configuraciones dependen de los parámetros de la red.
+Debe verificar con el administrador de red para obtener
+Si la computadora no tiene incorporada la característica
+información acerca de la configuración.
+Bluetooth, necesita conectar un adaptador o llave de Bluetooth a
+la computadora.
+Cambiar la configuración
+Recibir todas las transmisiones entrantes en el teléfono
+1
+Puntee  > Configuración > la ficha Conexiones > LAN
+1
+Puntee  > Configuración > la ficha Conexiones >
+inalámbrica.
+Transferir.
+2 Ingrese la nueva configuración y luego puntee en Aceptar.
+2 Asegúrese de que la casilla de verificación Recibir todas las
+transferencias entrantes por IR y Bluetooth esté marcada.
+Iconos de estado
+Transmitir información a un equipo
+Wi-Fi activado
+1 Active la funcionalidad Bluetooth™ del teléfono y configure
+el teléfono en el modo visible. Para obtener más información,
+consulte Activar la funcionalidad Bluetooth™ y configurar el
+Buscando una conexión Wi-Fi disponible
+teléfono en el modo visible.
+Conectarse 33
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. 2 Haga clic en Administrar conexiones de red y luego en Red
+Wi-Fi conectado
+de área personal, haga doble clic en Conexión de red
+Bluetooth.
+3 En el cuadro de diálogo Dispositivos de red de área
+personal de Bluetooth, seleccione el teléfono, luego haga
+Windows Live Messenger
+clic en Conectar.
+Puede comunicarse en línea con Windows Live Messenger con
+Para Windows XP SP2:
+su actual ID de Windows Live.
+1 Haga clic en Inicio > Configuración >Panel de control >
+Conexiones de red.
+Configurar Messenger
+2 Busque y haga clic en Conexión de red Bluetooth en la lista.
+1
+Puntee  > Programas > Messenger.
+3 En Tareas de red, haga clic Ver dispositivos de red
+Bluetooth.
+2 Puntee Iniciar sesión y siga las instrucciones.
+4 En el cuadro de diálogo Dispositivos de red de área
+personal de Bluetooth, seleccione el teléfono, luego haga
+Iniciar sesión en Messenger
+clic en Conectar.
+1
+Puntee  > Programas > Messenger.
+8 En la pantalla Conexión compartida del teléfono, marque
+Estado para verificar que el equipo se haya conectado
+2 Puntee Iniciar sesión.
+correctamente a Internet con el teléfono como un módem
+Enviar un mensaje instantáneo
+Bluetooth.
+1
+Puntee  > Programas > Messenger.
+Finalizar una conexión de Internet
+2 Seleccione un contacto en la lista, luego puntee Enviar MI.
+Puntee Desconectar en la pantalla de Conexión compartida.
+•
+3 Ingrese el mensaje, luego puntee Enviar.
+Conexión compartida
+La conexión compartida conecta una computadora a Internet
+mediante la conexión de datos del teléfono, como GPRS y
+EDGE. El teléfono funcionará como módem. Puede conectar el
+teléfono a una computadora mediante un cable USB o
+Bluetooth™.
+Antes de usar la conexión compartida, desconéctese del Centro
+de dispositivos de Windows Mobile o ActiveSync en la
+computadora. Además, asegúrese de que el teléfono tenga una
+tarjeta SIM instalada y una conexión GPRS o una conexión de
+módem de marcación telefónica.
+Uso del teléfono como un módem USB
+Para usar el teléfono como un módem USB, necesita un cable
+USB.
+Antes de usar el teléfono como un módem USB, necesita
+configurar en el quipo el Centro de dispositivos de Windows
+Mobile o Microsoft ActiveSync versión 4.5 o posterior.
+Configurar el teléfono como un módem USB
+1 Seleccione Inicio > Programas > Conexión compartida.
+2 En la lista Conexión de PC, seleccione USB.
+3 En la lista Conexión de red, seleccione el nombre de la
+conexión que usa el teléfono para conectarse a Internet.
+4 Conecte el cable USB entre el teléfono y el equipo.
+5 Puntee en Conectar.
+Uso del teléfono como un módem de Bluetooth™
+Puede conectar el teléfono a un equipo con Bluetooth™ o usar
+el teléfono como un módem para el equipo. Para que un equipo
+use la conexión de Internet del teléfono, debe activar la Conexión
+compartida en el teléfono, luego configurar una Red de área
+personal (PAN) de Bluetooth entre el equipo y el teléfono.
+Si el equipo no tiene incorporado la función Bluetooth, necesita
+conectar un adaptador o llave de Bluetooth al equipo.
+Activar una Conexión compartida y configurar una PAN
+1 Active la funcionalidad Bluetooth™ del teléfono y configúrela
+en el modo visible.
+2 Inicie una asociación Bluetooth desde el teléfono. Para
+obtener más información, consulte Crear la asociación
+Bluetooth™.
+3
+Puntee  > Programas > Conexión compartida.
+4 Seleccione PAN de Bluetooth como la Conexión de PC.
+5 En la lista Conexión de red, seleccione el nombre de la
+conexión que usa el teléfono para conectarse a Internet.
+6 Puntee Conectar.
+7 En el equipo, configure una Red de área personal (PAN) de
+Bluetooth con el teléfono
+Para Windows Vista:
+1 Haga clic en Inicio > Panel de control > Red e Internet > Red
+y centro para compartir.
+34 Conectarse
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. Ver fotografías y vídeos
+Cámara
+1
+Active la cámara y puntee .
+Puede tomar fotografías y grabar clips de vídeo con audio
+2
+mediante la cámara del teléfono. Encontrará fotos y clips de
+Desplácese al elemento mediante  o .
+vídeo guardados en el panel Media Xperience en Pictures y
+3
+Para ver un clip de vídeo, puntee en .
+Videos.
+Eliminar una fotografía o clip de vídeo
+Uso de la cámara
+1 Cuando haya tomado una fotografía o grabado un clip de
+vídeo, puntee .
+2
+Puntee .
+Cambiar la configuración
+1
+Active la cámara y puntee en  o .
+2
+Puntee en  y puntee un botón de la barra de herramientas.
+Ver información acerca de la configuración
+1
+Active la cámara y puntee en  o .
+2
+Puntee  y luego .
+3
+Puntee en una configuración y después puntee en .
+4
+Puntee en  para volver.
+Salir de la cámara
+•
+Puntee  hasta que salga de la cámara.
+1 Acercar o alejar
+La cámara se cierra automáticamente si no la usa durante dos
+minutos.
+2 Ver fotografías y clips de vídeo
+3 Modo de vídeo
+Almacenamiento de fotografías y vídeos
+4 Modo de fotografía
+Puede guardar sus fotografías y clips de vídeo en el teléfono o
+en la tarjeta de memoria.
+5 Activar la cámara/tomar fotografías/grabar clips de vídeo
+Establecer la ubicación de almacenamiento
+1
+Active la cámara, puntee  o .
+Activar la cámara
+•
+2
+Oprima el botón de cámara . Puntee  y luego .
+3
+Puntee .
+No grabe con una fuente de luz intensa de fondo. Use un soporte
+o el temporizador para evitar una imagen borrosa.
+4 Puntee Save To y seleccione una opción.
+Tomar una fotografía
+Ver archivos en el Explorador de archivos
+1
+Active la cámara y puntee .
+1
+Puntee en  > Programas > Expl. de archivos.
+2
+Oprima  hasta la mitad para usar el enfoque
+2 Seleccione la memoria del teléfono o la tarjeta de memoria,
+luego puntee la carpeta Mis imágenes o Mis vídeos.
+automático.
+3 Cuando el punto y el cuadro del enfoque están en verde,
+oprima el botón completamente para tomar la fotografía.
+Más funciones de la cámara
+Usar el zoom
+Con el enfoque táctil, puede ajustar la ubicación de enfoque que
+Oprima la tecla de volumen hacia arriba o abajo.
+•
+desee en el visor punteando en la pantalla antes de tomar la
+El zoom sólo está disponible cuando se toman fotografías cuyo
+fotografía.
+tamaño es inferior a 3MP.
+Ajustar el enfoque táctil
+Grabar un clip de vídeo
+1
+Active la cámara y puntee .
+1
+Active la cámara y puntee .
+2
+Puntee  y luego puntee el botón Enfoque en la barra de
+2
+Para usar el enfoque automático, oprima  hasta la
+herramientas.
+mitad hasta que el punto y el marco de enfoque sean verdes.
+3
+Puntee .
+3
+Para iniciar la grabación, oprima  completamente.
+4
+Puntee  para volver al visor.
+4
+Para detener la grabación, mantenga oprimido .
+5 Puntee en la pantalla para ajustar el enfoque. Para restablecer
+el enfoque, haga doble punteo en la pantalla.
+Enviar una fotografía o clip de vídeo
+6 Tome la fotografía.
+1
+Active la cámara y puntee .
+Encender la luz
+2
+1
+Puntee .
+Active la cámara y puntee en  o .
+3 Seleccione si desea enviar el elemento mediante Correo
+2
+Puntee en  y luego puntee en el botón de Luz en la barra
+electrónico o Mensaje de imagen.
+de herramientas.
+Ajustar el brillo
+3
+Puntee .
+Cuando use la cámara o la grabadora de vídeo, oprima la
+•
+4
+tecla de navegación hacia la izquierda o derecha para ajustar
+Puntee  para volver al visor.
+el brillo.
+Cámara 35
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. Iconos del visor de la cámara
+Shoot mode. Tomar una foto a la vez mediante
+ 
+Normal, o tomar una secuencia de fotos con
+En el visor de la cámara, los iconos muestran la configuración
+Multi-shot
+actual.
+Visor de la cámara fotográfica
+ Cámara de vídeo
+La barra superior muestra:
+Icono Descripción
+Scenes. Auto o Night mode
+ 
+Número de fotografías restantes que puede tomar
+•
+Tamaño de la imagen (resolución)
+•
+Focus. Las configuraciones predefinidas de
+  
+Ubicación donde se guardan las fotografías (memoria del
+•
+enfoque, incluyen Auto, Macro e Infinite
+teléfono o tarjeta de memoria)
+Light de fotografía encendida o apagada
+ 
+La barra inferior muestra:
+Shoot mode. Normal o Picture message, donde
+ 
+se ajusta la duración, el tamaño y la calidad de
+los clips para que quepan en un mensaje
+Shoot mode
+•
+multimedia.
+Scenes
+•
+Focus
+•
+White balance
+•
+Ingresar más configuraciones de cámara
+Light
+•
+1
+Self-timer(dos a diez segundos) Active la cámara y puntee en  o .
+•
+2
+Puntee  y luego .
+Visor de la cámara de vídeo
+3 Seleccione General, Fotografía o Vídeo e ingrese las
+La barra superior muestra:
+configuraciones.
+Grabación de sonido del vídeo activada/desactivada
+•
+Ubicación donde se guardan los clips de vídeo (memoria del
+•
+teléfono o tarjeta de memoria)
+Shoot mode
+•
+Estado de la grabación
+•
+Tiempo restante (cuando no está grabando) o tiempo
+•
+grabado (cuando está grabando)
+La barra inferior muestra:
+Shoot mode
+•
+Scenes
+•
+Focus
+•
+White balance
+•
+Light
+•
+Self-timer(dos a 10 segundos)
+•
+Visión general de la configuración de la
+cámara
+Ir a la configuración
+1
+Active la cámara y puntee en  o .
+2
+Puntee en  para ver un menú de las configuraciones más
+comunes.
+ Cámara fotográfica
+Icono Descripción
+Scenes. Las configuraciones predefinidas para
+  
+fotografías corrientes, incluyen Auto, Portrait,
+Landscape, Twilight, Sports y Document
+  
+Focus. Las configuraciones predefinidas de
+ 
+enfoque, incluyen Touch, Auto, Macro e Infinite
+ 
+Cámara Light apagada o encendida
+ 
+36 Cámara
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. Ir a la imagen anterior
+Multimedia
+Puede abrir el panel Media Xperience para explorar y usar
+Iniciar una presentación con imágenes en la carpeta
+archivos de medios como imágenes, música y vídeo. Los
+actual
+archivos de medios de la carpeta Mis documentos en el teléfono
+y en la tarjeta de memoria se incluyen en el panel Media
+Ir a la imagen siguiente
+Xperience.
+Eliminar la imagen actual
+Imágenes
+Puede usar Imágenes en el panel Media Xperience para ver sus
+fotografías e imágenes. Las imágenes se pueden capturar con
+Eliminar una fotografía de la barra de herramientas del visor
+la cámara del teléfono, se pueden recibir de otros dispositivos o
+de fotografías
+transferirse al teléfono con el administrador de archivos, y se
+1 En el panel Media Xperience puntee en Pictures > Camera
+pueden almacenar en Mis imágenes del Explorador de archivos.
+album.
+2 Puntee un álbum.
+3 Puntee una foto para abrirla.
+4
+Puntee  para eliminar la fotografía.
+Ver una presentación de diapositivas
+1 En el panel Media Xperience puntee en Pictures > Camera
+album.
+2 Puntee un álbum y después una fotografía.
+3
+Puntee en  para iniciar la presentación.
+Música
+Reproducir música
+Las imágenes se ordenan en tres categorías:
+1 En el panel Media Xperience puntee en Music.
+Últimas fotografías: imágenes capturadas o recientemente
+•
+2 Explore una pista por Artista, Álbum, Pista o Lista de
+recibidas.
+reproducción.
+Álbum de la cámara: fotografías almacenadas en Mis
+•
+3 Puntee en una pista para reproducirla.
+imágenes\Cámara o en las subcarpetas. Las fotos se
+Cuando reproduce archivos WMA, se usa automáticamente
+muestran en álbumes en orden cronológico.
+Windows Media Player.
+Imágenes: imágenes almacenadas en la carpeta Mis
+•
+imágenes.
+Detener la reproducción de música
+•
+Algunas opciones de menú están disponibles cuando se resalta
+En el reproductor de música, puntee en .
+una imagen.
+Avanzar rápido o retroceder
+Ver una imagen
+•
+En el reproductor de música, puntee  o .
+1 En el panel Media Xperience, puntee Imágenes.
+2 Puntee una categoría para ver el contenido.
+3 Puntee una imagen para abrirla. Moverse entre pistas
+•
+Eliminar una imagen En el reproductor de música, puntee  o .
+1 En el panel Media Xperience, puntee Imágenes.
+Cambiar el volumen
+2 Puntee una categoría y resalte una imagen.
+3 Puntee Menú > Eliminar imagen.
+Oprima la tecla de volumen hacia arriba o abajo.
+•
+La imagen se eliminará permanentemente de la memoria, no sólo
+Usar el reproductor de música de fondo
+del visor.
+1
+Cuando escuche música, puntee en .
+Mostrar información de una imagen
+2 Seleccione una aplicación.
+1 En el panel Media Xperience, puntee Imágenes.
+3
+Oprima  para volver al reproductor de música.
+2 Puntee una categoría y resalte una imagen.
+3 Puntee en Menú > Información .
+Aparecen el título, la fecha de creación y el tamaño.
+Listas de reproducción
+Puede crear listas de reproducción para organizar su música.
+Barra de herramientas del visor de imágenes
+Las pistas se pueden agregar a más de una lista de
+La barra de herramientas está disponible cuando se abre una
+reproducción. La eliminación de una lista de reproducción, o de
+imagen. Para ver la barra de herramientas puede puntear la
+una pista de una lista de reproducción, no elimina la pista de la
+imagen. Puede volver a puntearla para ocultarla.
+memoria, sólo la referencia a la pista.
+Crear una lista de reproducción
+Icono Función
+1 En el panel Media Xperience, puntee en Music > Playlists >
+Mostrar el título de la imagen, la fecha de creación y el
+Create new playlist.
+tamaño
+2 Ingrese un nombre y puntee en Ok.
+Agregar una pista a una lista de reproducción
+Acercar. Usar el lápiz para acceder a una vista
+panorámica de la imagen
+1 En el panel Media Xperience desplácese a una pista.
+2 Puntee Menu > Add track to playlist.
+Girar. Seleccione  y luego puntee y mantenga
+3 Puntee en una lista de reproducción.
+oprimida la imagen, y gírela. Cuando suelte la fotografía,
+Agregar un álbum a una lista de reproducción
+ésta se ajusta al ángulo de 90 grados más cercano
+1 En el panel Media Xperience, desplácese a un álbum.
+2 Puntee Menu > Add album to playlist.
+Volver al menú anterior
+3 Puntee en una lista de reproducción.
+Multimedia 37
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. Agregar un artista a una lista de reproducción El programa Transmisión de medios le permite reproducir
+archivos 3GP y MPEG-4. También permite la reproducción de
+1 En el panel Media Xperience, desplácese a un artista.
+archivos SDP (Protocolo de descripción de sesión).
+2 Puntee Menu > Add artist to playlist.
+3 Puntee en una lista de reproducción.
+Acceder al contenido de transmisión mediante un
+explorador
+Eliminar pistas de una lista de reproducción
+1 Puntee Inicio > Internet Explorer o Inicio > Opera Browser
+1 En el panel Media Xperience, puntee Música > Listas de
+2 En la barra de direcciones, ingrese la dirección URL de la
+reproducción.
+página Web que contiene el vínculo RTSP al archivo *.3gp,
+2 Puntee en una lista de reproducción.
+*.mp4, o *.sdp que desea.
+3 Desplácese a una pista.
+3 En la página Web, puntee el vínculo RTSP.
+4 Puntee Menu > Eliminar de la lista.
+4 La Transmisión de medios se abre automáticamente e inicia
+la reproducción del archivo. Durante la reproducción, use los
+Manos libres portátil estéreo
+controles del botón para reproducir/hacer una pausa, acercar
+o alejar, ajustar el volumen del sonido y más.
+Usar el manos libres
+Conecte el manos libres portátil. La música se detiene
+•
+Transmitir archivos de medios directamente en el
+cuando recibe una llamada y se reanuda cuando la llamada
+Reproductor de transmisión de medios
+termina.
+La transmisión de medios sólo admite vínculos RTSP cuando
+transmite archivos *.3gp y *.mp4 directamente en el programa.
+Vídeo
+Antes de iniciar el programa Transmisión de medios, asegúrese
+de que esté conectado a Internet.
+Reproducir un vídeo
+1 Puntee en Inicio > Programas > Transmisión de medios.
+1 En el panel Media Xperience puntee Vídeos.
+2 En el programa, puntee Conectar.
+2 Puntee en Vídeos y desplácese hasta un vídeo.
+3 En la barra de dirección, ingrese la dirección del sitio rtsp://.
+3 Puntee en un clip para reproducirlo.
+4 Puntee en Conectar.
+Cuando reproduce archivos WMV o ASF, se usa
+5 La Transmisión de medios comienza a reproducir el archivo.
+automáticamente Windows Media Player.
+Durante la reproducción, use los controles del botón para
+reproducir/hacer una pausa, acercar o alejar, ajustar el
+Controles del reproductor de vídeo
+volumen del sonido y más.
+Puntee en la pantalla para hacer una pausa en el vídeo y acceder
+a los siguientes controles:
+Windows Media® Player Mobile
+Puede usar Windows Media® Player Mobile para reproducir
+archivos de audio y vídeo digitales almacenados en el teléfono
+o en una red, como en un sitio Web.
+Abrir Windows Media Player Mobile
+•
+Puntee  > Programas > Windows Media.
+Cuando puntea  cierra Windows Media® Player. Para
+cambiar la configuración y dejar que la música siga
+reproduciéndose, puntee  > Configuración > la ficha
+Sistema > Administrador de tareas > la ficha Botón y marque la
+casilla de verificación Para finalizar programas mantenga oprimida
+1 Marcador de escala de tiempo. Puntee en la escala de
+"X".
+tiempo para ir a cualquier parte del clip de vídeo.
+2 Tiempo transcurrido
+Controles de Windows Media®
+3 Cerrar el reproductor de vídeo
+4 Bajar volumen
+5 Silenciar sonido
+6 Retroceder
+7 Reanudar reproducción
+8 Avanzar rápido
+9 Subir volumen
+10 Cambiar el tamaño del vídeo entre tamaño original y
+pantalla completa
+11 Tiempo total
+1 Puntee y arrastre para pasar a cualquier parte del vídeo o
+audio
+Transmisión de medios
+Transmisión de medios le permite transmitir contenido de
+2 Visite WindowsMedia.com
+medios de transmisión en vivo o a pedido desde la Web. El
+3 Pantalla completa
+contenido de medios se envía en una transmisión continua al
+teléfono y se reproduce junto con el audio cuando se recibe.
+4 Silenciar/activar sonido
+Cuando abre vínculos a transmisión de contenido de medios, por
+5 Subir volumen
+ejemplo, YouTube™, en Opera o Internet Explorer, se abre
+automáticamente la aplicación de transmisión de contenido de
+6 Bajar volumen
+medios y comienza a reproducir el contenido.
+7 Ir al principio del archivo actual o al archivo anterior
+38 Multimedia
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. Juegos
+8 Reproducir/pausa
+9 Ir al siguiente archivo
+Jugar una partida
+En el panel Media Xperience, puntee Games y puntee un
+•
+juego.
+Sincronización de música y vídeo
+Cuando conecta el teléfono a un equipo a través del cable USB,
+el contenido de medios, por ejemplo, los archivos MP3, se
+sincronizan automáticamente de acuerdo a la forma en que haya
+configurado la sincronización. El panel Media Xperience muestra
+archivos de medios ubicados en las siguientes ubicaciones del
+teléfono:
+/My Documents/My Music/
+•
+/My Documents/My Videos/
+•
+La tarjeta de memoria
+•
+/My Documents/My pictures
+•
+/My Documents
+•
+Puede sincronizar contenido de medios que se encuentra en
+estas ubicaciones con un equipo, y tener acceso a éste en el
+panel Media Xperience. Debe definir que la sincronización sea a
+través de Windows Media Player en un equipo, aunque
+reproduzca música y vídeos mediante el panel Media Xperience
+en el teléfono.
+Configurar la sincronización
+1 Equipo: instale Windows Media Player versión 11 (funciona
+con Windows XP o posterior).
+2 Equipo: configure la sincronización como se describe en la
+Guía rápida de introducción de XPERIA™ X1. Asegúrese de
+seleccionar los elementos de medios o los tipos de
+información que desea sincronizar.
+3
+Teléfono: si usa ActiveSync, puntee  > Programas >
+ActiveSync > Menú > Opciones, y seleccione la casilla
+Medios.
+4 Teléfono: puntee Aceptar.
+Sincronizar música y vídeo
+1 Equipo: abra Windows Media Player y conecte el teléfono al
+equipo mediante el cable USB.
+2 En el Asistente para instalación de dispositivos, seleccione
+Sí, buscar en el equipo ahora (solamente si anteriormente no
+ha buscado medios en el equipo).
+3 Cuando vea el teléfono o la tarjeta de memoria, haga clic en
+Finalizar.
+4 En el panel izquierdo de Windows Media Player, haga clic con
+el botón secundario en el nombre del teléfono/tarjeta de
+memoria y, a continuación, haga clic en Configurar
+sincronización.
+5 En el cuadro de diálogo de instalación de dispositivos,
+seleccione Sincronizar este dispositivo automáticamente.
+6 Seleccione las listas de reproducción que desea sincronizar
+entre el equipo y el teléfono y haga clic en Agregar.
+7 Haga clic en Finalizar. Comienza la sincronización.
+La próxima vez que conecte el teléfono al equipo mientras se
+está ejecutando Windows Media Player, la sincronización
+comenzará automáticamente.
+Transferencia de contenido
+Puede copiar archivos entre el teléfono y un equipo.
+Si el equipo usa Windows XP® u otro sistema operativo
+•
+compatible con Windows, debe usar Microsoft®
+ActiveSync® 4.5 o posterior. Encontrará Microsoft®
+ActiveSync® en el CD que viene con el teléfono.
+Si el equipo usa Windows Vista®, debe usar el Centro de
+•
+dispositivos de Windows® Mobile, que es parte de Windows
+Vista.
+Copiar archivos entre el teléfono y un equipo
+1 Conecte el teléfono al equipo.
+2 Equipo con Active Sync: haga clic en Explorar en ActiveSync.
+Equipo con Centro de dispositivos de Windows Mobile:
+haga clic en Administración de archivos > Examinar el
+contenido del dispositivo.
+3 Equipo: copie archivos o carpetas entre los dispositivos
+mediante los procedimientos estándar de Windows.
+Multimedia 39
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. GPS: servicios basados en Administrar el teléfono
+ubicaciones
+Instalación de aplicaciones
+Su teléfono cuenta con un receptor A-GPS que utiliza señales
+satelitales para calcular su ubicación.
+Puede instalar programas adicionales para el teléfono. Los
+programas deben ser compatibles con el teléfono, lo que
+significa que deben ser compatibles con Windows Mobile
+Uso de A-GPS
+versión 6.1.
+Cuando utilice funciones que requieran que el receptor A-GPS
+Instalar una aplicación
+encuentre su ubicación, asegúrese de tener una vista despejada
+1 Primero, descargue el programa en el equipo.
+del cielo. Si el receptor A-GPS no encuentra su ubicación
+2 Si el archivo del programa está en formato comprimido,
+después de unos minutos, debe moverse a otro lugar.
+como .zip, primero extraiga el archivo.
+3 Lea las instrucciones de instalación o la documentación que
+se incluye con el programa. Muchos programas ofrecen
+QuickGPS
+instrucciones especiales de instalación.
+QuickGPS le permite descargar información de intervalos y de
+4 Conecte el teléfono al equipo, de preferencia con el cable
+posición satelital actual desde un servidor en lugar de los
+USB.
+satélites. Esto acelera el tiempo necesario para determinar una
+5 Haga doble clic en el archivo de programa (generalmente en
+posición GPS.
+formato .exe). Si está en formato .cab, copie el archivo en el
+dispositivo y haga clic en el archivo desde el dispositivo para
+Usar QuickGPS
+iniciar la instalación.
+1
+Puntee en  > Programas > QuickGPS.
+2 Puntee Descargar.
+Eliminar aplicaciones
+Puede eliminar programas que ha instalado. Sin embargo, no
+Google Maps™ para teléfonos móviles
+puede eliminar los programas que se incluyen en el teléfono.
+Google Maps™ le permite ver su ubicación actual, encontrar
+Eliminar una aplicación
+otras ubicaciones y calcular rutas.
+1 Puntee Inicio > Configuración > la ficha Sistema > Quitar
+Cuando inicia Google Maps, se muestra su ubicación
+programas.
+aproximada mediante información proveniente de torres de
+2 En la lista Programas en la memoria de almacenamiento,
+telefonía móvil. Cuando el receptor GPS encuentra su ubicación,
+seleccione el programa que desea eliminar y puntee Eliminar.
+la ubicación GPS reemplaza la ubicación aproximada.
+3 Puntee en Sí. Si aparece otro mensaje de confirmación,
+vuelva a puntear Sí.
+Usar Google Maps
+•
+Puntee en  > Programas > Google Maps.
+Ahorro de energía
+Ver ayuda sobre Google Maps
+Es posible que algunas funciones y aplicaciones consuman
+En Google Maps, puntee en Menú > Ayuda.
+•
+mucha energía. Para mejorar el rendimiento de la batería cierre
+las aplicaciones que se están ejecutando en segundo plano y
+desactive las funciones que no necesita. Además, la iluminación,
+la transmisión y las imágenes animadas consumen energía,
+como por ejemplo algunos tipos antiguos de tarjetas SIM.
+Deshabilitar la iluminación
+1 En el Menú principal, seleccione Inicio > Configuración > la
+ficha Sistema > Iluminación.
+2 Desmarque Deshabilitar iluminación.
+Disminuir el brillo
+1 En el Menú principal, puntee Inicio > Configuración > la ficha
+Sistemas > Energía >la ficha Luz de fondo.
+2 Disminuya el brillo con el control deslizante.
+Usar apagado automático
+1 En el Menú principal, puntee Inicio > Configuración > la ficha
+Sistemas > Energía >la ficha Avanzado.
+2 Marque las casillas de verificación y reduzca el tiempo para
+que se apaguen las diferentes funciones.
+Apagar las conexiones
+1 En el Menú principal, puntee en Inicio > Configuraciones > la
+ficha Conexiones > Administrador de com..
+2 Apagar las conexiones que no necesita.
+Bluetooth, Wi-Fi, Microsoft Direct Push y las conexiones de
+datos consumen mucha energía.
+40 GPS: servicios basados en ubicaciones
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. Declaration of Conformity for X1
+Información importante
+We, Sony Ericsson Mobile Communications AB of
+Nya Vattentornet
+Pautas para un uso seguro y eficiente:
+agregado
+SE-221 88 Lund, Sweden
+Para un rendimiento óptimo, debe usar el producto Sony
+declare under our sole responsibility that our product
+Ericsson en temperaturas entre los -10°C (+14°F) y +45°C
+Sony Ericsson type AAD-3880001-BV
+(113°F).
+and in combination with our accessories, to which this
+La batería sólo debe ser reemplazada por baterías aprobadas
+declaration relates is in conformity with the appropriate
+por Sony Ericsson y deben cumplir con el estándar IEEE 1725.
+standards EN 301 511:V9.0.2, EN 301 908-1:V2.2.1, EN 301
+908-2:V2.2.1, EN 300 328:V1.7.1, EN 300 440-1:V1.7.1, EN 300
+440-2:V1.1.2, EN 301 489-7:V1.3.1, EN 301 489-17:V1.2.1, EN
+301 489-24:V1.3.1, EN 301 489-3:V1.4.1, EN 60 950-1:2006
+following the provisions of, Radio Equipment and
+Telecommunication Terminal Equipment directive 1999/5/EC.
+Lund, June 2008
+Shoji Nemoto,
+Head of Product Business Group GSM/UMTS
+Cumplimos con los requisitos de la Directiva R&TTE - Normas
+sobre equipos de terminales de radio y telecomunicaciones
+(1999/5/EC).
+Declaration of Conformity for X1a
+We, Sony Ericsson Mobile Communications AB of
+Nya Vattentornet
+SE-221 88 Lund, Sweden
+declare under our sole responsibility that our product
+Sony Ericsson type AAD-3880002-BV
+and in combination with our accessories, to which this
+declaration relates is in conformity with the appropriate
+standards EN 301 511:V9.0.2, EN 301 908-1:V2.2.1, EN 301
+908-2:V2.2.1, EN 300 328:V1.7.1, EN 300 440-1:V1.7.1, EN 300
+440-2:V1.1.2, EN 301 489-7:V1.3.1, EN 301 489-17:V1.2.1, EN
+301 489-24:V1.3.1, EN 301 489-3:V1.4.1, EN 60 950-1:2006
+following the provisions of, Radio Equipment and
+Telecommunication Terminal Equipment directive 1999/5/EC.
+Lund, June 2008
+Shoji Nemoto,
+Head of Product Business Group GSM/UMTS
+Cumplimos con los requisitos de la Directiva R&TTE - Normas
+sobre equipos de terminales de radio y telecomunicaciones
+(1999/5/EC).
+FCC Statement
+Este dispositivo cumple con lo establecido en la sección
+15 de las normas de la FCC. El funcionamiento está
+sujeto a las siguientes dos condiciones: (1) This device
+may not cause harmful interference, and (2) This device must
+accept any interference received, including interference that may
+cause undesired operation.
+Todo cambio o modificación no aprobada específicamente por
+SonyEricsson puede anular la autoridad del usuario para operar
+el equipo.
+Este equipo se ha probado y se ha demostrado que cumple con
+los límites para un dispositivo digital clase B, según la parte 15
+Información importante 41
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. de las normas de la FCC. Estos límites están destinados a
+proporcionar una protección razonable contra interferencia
+dañina en una instalación residencial. Este equipo genera
+energía de radiofrecuencia, la usa y puede irradiarla, y si no se
+instala y se usa según las instrucciones, puede provocar
+interferencia dañina a las comunicaciones de radio. Sin
+embargo, no existe garantía de que no se produzca interferencia
+en una instalación en particular.
+Si este equipo provoca interferencia dañina a la recepción de
+radio o televisión, la cual se puede determinar encendiendo y
+apagando el equipo, se insta al usuario a intentar corregir la
+interferencia mediante una o más de las siguientes medidas:
+Reorientar o reubicar la antena receptora.
+•
+Aumentar la separación entre el equipo y el receptor.
+•
+Conectar el equipo a una toma de corriente en un circuito
+•
+diferente al cual está conectado el receptor.
+Pedir ayuda al distribuidor o a un técnico de radio o TV
+•
+experimentado.
+Industry Canada Statement
+This device complies with RSS-210 of Industry Canada.
+Operation is subject to the following two conditions: (1) this
+device may not cause interference, and (2) this device must
+accept any interference, including interference that may cause
+undesired operation of the device.
+Este aparato digital clase B cumple con ICES-003 canadiense.
+Cet appareil numérique de la classe B est conforme à la norme
+NMB-003 du Canada.
+42 Información importante
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado. Índice
+A
+Mensajería
+ActiveSync® ............................................................................19
+correo electrónico ...........................................................25
+Alarmas ...................................................................................18
+SMS y MMS ....................................................................23
+Modo de suspensión .................................................................4
+B
+Multimedia
+Batería .......................................................................................3
+cámara ............................................................................35
+Bluetooth .................................................................................32
+juegos ..............................................................................39
+asociación .......................................................................32
+sincronización de música y vídeo ...................................39
+conectar un auricular ......................................................33
+transferencia de contenido .............................................39
+módem ............................................................................34
+transmisión de medios ....................................................38
+modos .............................................................................32
+Windows Media® Player Mobile .....................................38
+transferir información ......................................................33
+N
+C
+Número IMEI ...........................................................................18
+Cámara ....................................................................................35
+almacenamiento ..............................................................35
+P
+configuración ...................................................................36
+Paneles ......................................................................................9
+más características .........................................................35
+administración .................................................................10
+uso de la cámara .............................................................35
+descargar nuevos ............................................................13
+ver ...................................................................................37
+elegir ..................................................................................9
+Cargar ........................................................................................3
+Pantalla del teléfono ................................................................14
+Completar palabras .................................................................18
+Pantalla táctil .............................................................................4
+Configuraciones de videoconferencia .....................................15
+programada
+Controles del reproductor de vídeo ........................................38
+sincronización .................................................................20
+Correo electrónico ...................................................................25
+R
+antes de usar ...................................................................25
+Rechazar una llamada
+buscar un mensaje ..........................................................26
+con un mensaje de texto SMS ........................................15
+configurar manualmente .................................................26
+con un tono de ocupado .................................................15
+configurar una cuenta Microsoft® Outlook® ..................25
+Red
+direct push ......................................................................26
+cobertura .........................................................................14
+escribir un nuevo correo electrónico ...............................26
+configuración ...................................................................14
+reenviar un mensaje ........................................................26
+Roaming ..................................................................................14
+responder un mensaje .....................................................26
+S
+D
+Sincronización .........................................................................19
+Descarga instantánea ..............................................................27
+configuración ...................................................................19
+Direct Push ..............................................................................26
+iniciar ...............................................................................20
+mediante de una conexión Bluetooth .............................20
+E
+Encendido/apagado ..................................................................4 SMS .........................................................................................23
+F T
+Fetch Mail ................................................................................27 Tarjeta de memoria ...................................................................4
+Tarjeta SIM ................................................................................3
+G
+Tecla de navegación .................................................................5
+Google Maps™ .......................................................................40
+Teclado ....................................................................................22
+GPS .........................................................................................40
+Transmisión de medios ...........................................................38
+A-GPS .............................................................................40
+QuickGPS ........................................................................40
+V
+ver datos adjuntos ...................................................................26
+I
+Videoconferencia
+Iconos de estado .......................................................................5
+botones de control ..........................................................15
+Iluminaciones ............................................................................5
+con el teclado ..................................................................15
+configuración ...................................................................15
+J
+llamar desde Contactos ..................................................15
+Joystick .....................................................................................5
+llamar desde Historial de llamadas .................................15
+Juegos .....................................................................................39
+W
+L
+Web
+Listas de reproducción ............................................................37
+conexión ..........................................................................30
+Llamada de conferencia ..........................................................16
+exploración páginas Web visitadas anteriormente .........30
+configuración ...................................................................16
+favoritos ...........................................................................30
+Llamadas .................................................................................14
+opciones de visualización ...............................................30
+finalizar una llamada ........................................................14
+vínculos Web ...................................................................30
+llamada de voz, con el teclado .......................................14
+zoom ...............................................................................30
+llamada internacional ......................................................14
+Wi-Fi ........................................................................................33
+Windows Live Messenger .......................................................34
+M
+Windows Media® Player Mobile .............................................38
+Marcación inteligente ..............................................................16
+Marcado rápido .......................................................................15
+crear una entrada de Marcado rápido ............................15
+Índice 43
+Ésta es una versión de Internet de esta publicación. © Imprimir sólo para uso privado.

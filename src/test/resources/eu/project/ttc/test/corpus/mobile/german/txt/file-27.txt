@@ -1,0 +1,136 @@
+Ein Funknetz ist ein Netzwerk, in welchem Informationen mittels elektromagnetischer Wellen übertragen werden. Es ist ein leitungsloses Telekommunikationssystem, in dem die Methoden der Funktechnik genutzt werden.
+
+In der Anwendung gibt es eine grobe Unterscheidung nach:
+
+   1. gerichtete Kommunikation
+   2. ungerichtete Verfahren
+   3. unidirektionale Übertragung (nur in einer Richtung, das heißt Teilnehmer im Funknetz enthalten entweder nur einen Empfänger oder nur einen Sender; siehe auch Rundfunk) und bidirektionale Übertragung (jeder Teilnehmer im Funknetz enthält sowohl einen Empfänger als auch einen Sender).
+   4. digitale und nicht-digitale Übertragung
+
+Funknetzplanung in der DDR
+Inhaltsverzeichnis
+ [Verbergen] 
+
+    * 1 Gerichtete Kommunikation
+          o 1.1 Laser-Strecke
+          o 1.2 Richtfunk
+          o 1.3 Satelliten-Direktfunk
+    * 2 Ungerichtete Kommunikation
+          o 2.1 Terrestrischer Rundfunk
+          o 2.2 Nichtöffentlicher Landfunkdienst
+          o 2.3 Kommerzieller Funk
+          o 2.4 Zeitzeichendienste
+          o 2.5 Amateurfunk
+          o 2.6 Satelliten-Rundfunk
+          o 2.7 Mobilfunk
+          o 2.8 Lokale Netzwerke
+                + 2.8.1 WPAN
+                + 2.8.2 WLAN
+                + 2.8.3 WMAN
+                + 2.8.4 Weitere Netzwerke
+    * 3 Probleme und Störungen
+          o 3.1 Hidden Station und Exposed Station
+    * 4 Lösungen
+    * 5 Siehe auch
+    * 6 Literatur
+    * 7 Weblinks
+
+Gerichtete Kommunikation [Bearbeiten]
+
+Bei einer gerichteten Kommunikation werden die Daten gebündelt entlang einer gewünschten Strecke gesendet. Die Sende- und Empfangsantennen müssen exakt aufeinander ausgerichtet sein. Vielfach werden aber auch Reflexionsflächen benutzt, die ähnlich einem Spiegel den gerichteten Strahl umlenken, um beispielsweise Täler zu erreichen. Die Antennen müssen eine ausgeprägte Richtcharakteristik besitzen (zum Beispiel Parabolantennen, Hornstrahler). Gründe für die gerichtete Kommunikation sind unter anderem: Störungsarmut, größere Abhörsicherheit, weniger Gleichkanalstörungen, geringerer Sendeleistungsverbrauch, mehrfache Nutzung der gleichen Frequenz.
+Laser-Strecke [Bearbeiten]
+
+Die drahtlose Kommunikation über Laser wird Optischer Richtfunk genannt.
+Richtfunk [Bearbeiten]
+
+    * Beispiele: GSM-Netz (Abis-Schnittstelle zwischen BTS und BSC)
+
+Satelliten-Direktfunk [Bearbeiten]
+
+    * Beispiele: Übertragung von Telefongesprächen innerhalb eines Telefonnetzes, Fernsehsignale zwischen TV-Stationen
+
+Ungerichtete Kommunikation [Bearbeiten]
+Terrestrischer Rundfunk [Bearbeiten]
+
+Beispiele: terrestrisches Fernsehen, Hörfunk im Bereich der Langwelle, Mittelwelle, Kurzwelle und Ultrakurzwelle
+Nichtöffentlicher Landfunkdienst [Bearbeiten]
+
+    * BOS-Dienste (z.B. Polizei, Feuerwehr, Rettungsdienst usw.) verwenden zur Kommunikation analoge Funknetze mit Wellenlängen im 2-m- und 4-m-Bereich (BOS-Funk). Der Einsatz digitaler Funknetze nach dem TETRA-Standard ist in Planung, nachdem sich dieses gegen die Konkurrenzprojekte Tetrapol und BOS-GSM durchgesetzt hat. Die BOS sollen bis 2013 mit digitalem Funk in ganz Deutschland ausgestattet sein. In der Stadt und im Landkreis Aachen arbeitet man bereits im Wirkbetrieb, nachdem dieses System einen grenzüberschreitenden Probebetrieb durchlaufen hat. Mit dieser Technik können Bilder und Pläne per Funk übertragen werden. Bei der Fußball-Weltmeisterschaft 2006 wurde die Technik in drei Austragungsorten getestet.
+
+    * Übertragung von Befehlen an U-Boote im Längstwellenbereich, zum Beispiel über den Sender DHO38
+    * CB-Funk
+
+Kommerzieller Funk [Bearbeiten]
+
+Betriebe nutzen für den Flottenfunk typisch Frequenzen im 70-cm-Bereich und den Chekker-Dienst. Auch der Seefunk ist ein Funknetz.
+Zeitzeichendienste [Bearbeiten]
+
+An einigen Standorten werden leistungsstarke Sender genau definierter Frequenz betrieben, die im Dauerbetrieb Zeitzeichen senden. Sowohl Sendefrequenz als auch Takt der Zeitzeichen werden von Atomuhren gesteuert. Diese Signale werden beispielsweise von Funkweckern empfangen und korrigieren die Anzeige der eingebauten Uhr. Beispiele sind DCF77, MSF, usw.
+Amateurfunk [Bearbeiten]
+
+Privatleute ohne kommerzielle Interessen dürfen ebenfalls Funkstellen auf dafür frei gehaltenen Frequenzbereichen betreiben und werden dann als Funkamateure bezeichnet. Voraussetzung ist eine Prüfung bei der Zulassungbehörde, nach deren Bestehen dem Betreffenden ein international eindeutiges Rufzeichen zugeteilt wird. Erlaubte Betriebsarten sind Morsen, Sprechfunk, Übermittlung von Fernsehbildern und digitale Datenübertragung. Funknetze im Amateurfunkdienst sind z.B. das Packet Radio-Netz, bei dem die Teilnehmer Nachrichten über vernetzte Relaisstationen oder Digipeater austauschen und auch z.B. auch Endgeräten wie modifizierten Funkmeldeempfängern zugänglich machen. Weitere Einzelheiten werden in Amateurfunkdienst beschrieben.
+
+In Not- und Katastrophenfällen schließen sich Funkamateure zusammen, um zusätzliche Kommunikationswege bereitzustellen - Notfunk. Oft werden dann Relaisstationen mit eigener Stromversorgung für die lokale Kommunikation oder Amateurbänder im Kurzwellenbereich zum Überbrücken größerer Entfernungen genutzt.
+Satelliten-Rundfunk [Bearbeiten]
+
+Interkontinental werden Funknetze durch die Verwendung von geostationären Satelliten ermöglicht, die als Reflektor und Verstärker fungieren. Auch darüber lassen sich Computernetzwerke und Telefonieanwendungen (z. B. Iridium) oder Satelliten-Fernsehen realisieren.
+Mobilfunk [Bearbeiten]
+
+    * Beispiele: GSM, UMTS
+
+Im Hausgebrauch findet sich mittlerweile häufig die Verwendung von Schnurlostelefonen nach dem DECT-Standard.
+Lokale Netzwerke [Bearbeiten]
+
+In der EDV teilt man insbesondere bidirektionale Funknetze nach ihrer Reichweite ein:
+
+    * Funknetze für den unmittelbaren Umkreis einer Person (engl. wireless personal area network, Abk. WPAN)
+    * lokale Funknetze (engl. wireless local area network IEEE 802.11, Abk. WLAN)
+    * Stadtfunknetze (engl. wireless metropolitan area network IEEE 802.16, Abk. WMAN)
+    * Weitverkehrsfunknetze (engl. wireless wide area network, Abk. WWAN)
+
+Obwohl diese Einteilung etwas willkürlich und auch nicht exakt definiert ist, haben doch die Funknetze innerhalb jeder Gruppe neben der Reichweite weitere Gemeinsamkeiten bezüglich Datenrate, Leistungsaufnahme, Mobilität der Teilnehmer und Kosten für Teilnehmergeräte, was die Einteilung sinnvoll erscheinen lässt. Angestrebt werden eine große Reichweite, eine hohe Datenrate, eine geringe Leistungsaufnahme und geringe Kosten sowie eine hohe Mobilität, das heißt, die Verbindung zum Funknetz kann aufrechterhalten werden, wenn sich der Teilnehmer bewegt. In der Praxis verhindern die Gesetze der Physik, dass alle Ziele gleichzeitig erreicht werden.
+WPAN [Bearbeiten]
+
+Wireless Personal Area Networks (WPAN) sind hauptsächlich zur Funkverbindung von tragbaren Geräten mit eigener Stromversorgung gedacht. Hierzu gehören beispielsweise PDAs, Laptops, Mobiltelefone, Funktastaturen und -mäuse als auch Funkkopfhörer, Freisprecheinrichtungen oder Spezialanwendungen wie Lego-Roboter. Dem Anwendungszweck entsprechend, sind eine geringe Leistungsaufnahme (und damit eine lange Batterie-/Akkulebensdauer) sowie ein geringer Preis für die Teilnehmergeräte wichtig. Dafür werden eine geringe Reichweite (0,2 m bis 10 m), eine geringere Datenrate (im Allgemeinen weniger als 4 Mbit/s) und eine geringe Mobilität der Teilnehmer in Kauf genommen. Als führende Technik hat sich Bluetooth durchgesetzt. Dieser Standard verdrängt damit die Infrarotdatenübertragung, welche vor Bluetooth Funkverbindungen mit sehr geringer Reichweite realisierte.
+WLAN [Bearbeiten]
+
+Wireless Local Area Networks (WLAN) dienen dazu, mobile Geräte wie beispielsweise Notebooks direkt (Ad-hoc-Netz) oder über einen gemeinsamen Zugriffsknoten (Infrastruktur-Netz) zu verbinden. Soll das WLAN mit weiteren Netzen verknüpft werden, so wird in der Regel der Zugriffsknoten mit einem Gateway/Router verbunden. Das Hauptaugenmerk bei WLANs liegt auf einer hohen Datenrate (2008: 11 Mbit/s bis theoretisch 300 Mbit/s). Auch die Reichweite ist in der Regel größer als bei WPANs (100 m bis 300 m), dafür sind die Leistungsaufnahme und der Preis höher. Teilnehmer können sich innerhalb eines WLANs meist ohne Verbindungsabbruch bewegen (höhere Mobilität als in WPANs). Der wichtigste WLAN-Standard ist IEEE 802.11.
+WMAN [Bearbeiten]
+
+Wireless Metropolitan Area Networks (WMAN) sind die größte Form eines Funknetzes, bei dem sich die beteiligten Zugangsknoten über eine Stadt oder eine Region verteilt befinden. Idealerweise sind die Standorte der Funkzugangsknoten so aufgestellt, dass sich die Funkausleuchtungszonen leicht überlappen. Dadurch kann ein Nutzer ein möglichst engmaschiges Funknetz ohne Funklöcher nutzen.
+
+Funktechniken wie "Meshing" (Vermaschen) mit einem dynamischen Routing leisten dabei gute Dienste, um solchen Ansprüchen gerecht zu werden. In Deutschland gibt es bereits einige WMANs von kommerziellen und privaten Betreibern.
+
+Siehe auch: WirelessHART
+Weitere Netzwerke [Bearbeiten]
+
+Beispiele: Bluetooth, WIMAX, WISA.
+Probleme und Störungen [Bearbeiten]
+Hidden Station und Exposed Station [Bearbeiten]
+
+Ein allgemeines Problem bei Rechnernetzen ist die Zerstörung von Nachrichten durch Kollisionen. Diese können entstehen, wenn mehrere Rechner zur gleichen Zeit eine Nachricht senden. Um Kollisionen erkennen zu können, hört eine Station in der Regel ihre eigene Nachricht ab.
+Diese Problematik verschärft sich bei Funknetzen, da es hier vorkommen kann, dass sich, aufgrund beschränkter Sendereichweiten, nicht alle Kommunikationspartner wirklich verstehen können. Diese Tatsache kann aus dem Hidden-Station- bzw. Exposed-Station-Problem resultieren.
+
+Beim Hidden-Station-Problem gibt es zwei Sender, die sich gegenseitig nicht verstehen und einen Empfänger, der innerhalb der Reichweite beider Sender ist. Wenn nun beide Sender zur gleichen Zeit an den Empfänger senden wollen, so kollidiert die Nachricht beim Empfänger, ohne dass die Sender dies bemerken.
+
+Beim Exposed-Station-Problem liegen zwei Sender jeweils innerhalb ihrer Reichweiten, wobei beide Sender an einen Empfänger senden, der nicht in der Reichweite des jeweils anderen Senders liegt. Beide Empfänger können jeweils ungehindert ihren Kommunikationspartner verstehen. Je ein Sender bremst jedoch den anderen aus. Durch das Zugriffsverfahren wird das Medium als belegt erkannt und die Station verzögert den Sendeversuch, jedoch hätte das Signal bei Aussendung den Empfänger problemlos erreicht. Der eine Sender ist der Kommunikation des anderen ausgesetzt.
+Lösungen [Bearbeiten]
+
+    * ALOHA siehe dort
+    * RTS/CTS-Schema
+
+Eine Lösung für diese Probleme ist das RTS/CTS-Schema.
+
+   1. Der Sender sendet an den Empfänger ein RTS-Paket (Request To Send), in dem er dem Empfänger die Größe der Nachricht, die er versenden will, mitteilt
+   2. Empfängt der Empfänger ein RTS für sich und hat zuvor kein anderes RTS empfangen, so sendet er ein CTS-Paket (Clear To Send) an den Sender. Wenn der Empfänger zuvor ein anderes RTS empfangen hat, so wartet er mit dem Senden des CTS, bis die andere Übertragung beendet ist.
+   3. Empfängt der Sender das CTS, beginnt er mit der Übertragung der Nutzdaten
+
+Das Exposed-Station-Problem kann nur bedingt durch RTS/CTS gelöst
+werden. Die des Datenverkehrs der anderen Station ausgesetzte Station
+wird das RTS Frame empfangen jedoch nicht die dazu gehörende
+Bestätigung (CTS). Ebenso fehlen die positiven Bestätigungen für den
+Empfang der Daten. Daraus kann eine Station schließen, dass sie zwar
+im Empfangsbereich eines weiteren Senders ist, jedoch nicht den
+eigentlichen Empfänger der Daten beeinflusst. Sie könnte also senden
+ohne den Empfänger zu stören. Dies geht vor allem deshalb, weil es bei
+günstigen Funkempfängern keine Kollisionserkennung gibt.

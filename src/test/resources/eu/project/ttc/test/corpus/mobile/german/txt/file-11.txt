@@ -1,0 +1,342 @@
+p e r p e t u u m 10 | 2007
+
+REVOLUTIONÄR
+
+E N T S C H E I D U N G S H I L F E F U N K S TA N D A R D S -
+WELCHES FUNKSYSTEM WANN EINSETZEN?
+Funksysteme bieten im Vergleich zu drahtgebundenen Systemen höchste Flexibilität und großen
+Komfort in der Gebäudeinstallation. Am Markt ist eine Vielzahl unterschiedlicher Systeme verfügbar.
+Immer häufiger werden Systemintegratoren, Elektroplaner, Architekten und private Hausbesitzer mit der
+”Qual der Wahl” konfrontiert. Der folgende Artikel beleuchtet eine Übersicht der etablierten Funktechnologien mit den wichtigsten Leistungsparametern.
+Von Armin Anders, Leiter Produktmarketing, und Frank Schmidt, Forschungsleiter, EnOcean GmbH
+
+Eine systematische Analyse der individuellen Systemanforderungen an Leistungsfähigkeit, Kosten
+und Flexibilität des gewünschten Funksystems engt
+die Auswahl schnell ein.
+Sehen wir uns die wichtigsten Entscheidungskriterien
+näher an:
+
+ENTSCHEIDUNG 1:
+GROSSE ODER KLEINE DATENMENGEN?
+Sollen bewegte Bilder per Funk übertragen,
+Computer drahtlos vernetzt oder ein Drucker
+kabellos betrieben werden? Dann wird ein Funksystem gebraucht mit hoher Datenrate, das große
+
+EnOcean
+
+Z-Wave /
+KNX-RF
+
+ZigBee
+(802.15.4)
+
+Frequenz (MHz)
+
+868
+
+868
+
+868
+
+Datenrate (KB/s)
+
+125
+
+9,6 / 20
+
+Minimale Tele-
+
+0,6
+
+ZigBee
+(802.15.4)
+
+Bluetooth
+(802.15.1)
+
+WLAN
+(802.11)
+
+2400
+
+2400
+
+2400
+
+20
+
+250
+
+720
+
+20
+
+30
+
+4
+
+0,7
+
+n.a.
+
+gering
+
+gering
+
+gering
+
+mittel
+
+hoch
+
+gering
+
+gering
+
+gering
+
+hoch
+
+hoch
+
+hoch
+
+sehr gering
+
+mittel
+
+mittel
+
+gering
+
+sehr gering
+
+hoch
+
+nein
+
+nein
+
+nein
+
+nein
+
+nein
+
+gut
+
+n.a.
+
+gut
+
+gut
+
+weniger gut
+
+11000 - 54000
+
+grammlänge (ms)
+Energiebedarf
+
+extrem gering
+
+(inkl. Start-up)
+Grundbelastung
+Frequenzband
+Risiko einer
+Datenkollision
+Batterielose Funk-
+
+ja
+
+sender möglich?
+Lebenszyklus-
+
+sehr gut
+
+kosten (LCC)
+Optimale Lösung für wartungsfreie
+folgende Aufgaben
+
+batterie-
+
+batterie-
+
+batterie-
+
+Computer-
+
+Computerver-
+
+batterielose
+
+betriebene
+
+betriebene
+
+betriebene
+
+vernetzung
+
+netzung (Web,
+
+Funksensor-
+
+Funksensor-
+
+Funksensor-
+
+Funksensor-
+
+mit Druckern
+
+E-Mail, Video)
+
+systeme
+
+systeme
+
+systeme
+
+systeme
+
+und PDAs
+
+Übersicht etablierter Funksysteme
+
+4
+
+p e r p e t u u m 10 | 2007
+
+REVOLUTIONÄR
+
+Datenmengen in kurzer Zeit übertragen kann. Die
+Funkstandards WLAN oder Bluetooth bieten diese
+Leistungsfähigkeit - allerdings um den Preis eines
+hohen Energiebedarfs. Sie eignen sich also nicht
+für einen Batteriebetrieb über längere Zeit. Die
+meisten Automatisierungsfunktionen im Gebäude
+erfordern dagegen lediglich kurzzeitige Übertragung von jeweils wenigen Informationen per Funk.
+Das Schalten von Licht und Geräten, die Bedienung
+von Jalousien und vor allem die Übertragung der
+Informationen von Funksensoren wie Klima-,
+Positions- oder Rauchmeldern gehören dazu. Wenn
+also ein niedriger Energiebedarf Priorität hat, dann
+gilt es zur weiteren Einschränkung der verbliebenen
+Kandidaten eine weitere Entscheidung zu treffen:
+ENTSCHEIDUNG 2:
+VIELE GLEICHZEITIG SENDENDE GERÄTE
+MÖGLICH?
+Wenn Störungen bei der Kommunikation auftreten,
+sind sie fast ausschließlich auf Interferenzen mit
+Funksendern in unmittelbarer Nähe zurückzuführen, die im gleichen Frequenzbereich arbeiten.
+Dies kann in der Praxis bei hoher Funkdichte zu
+einer deutlichen Verzögerung der Übertragungszeit
+
+oder gar zum Datenverlust führen.
+Sicherheit gegen andere Funksender bei gleichzeitig schneller Systemreaktionszeit erreicht man
+durch Nutzung eines wenig belasteten Frequenzbands. Die stark zunehmende drahtlose Vernetzung von PCs, Druckern und sonstigen Geräten
+der Informationstechnik findet im weltweit lizenzfreien 2.4-GHz-Frequenzbereich statt. Deswegen
+ist für eine flächendeckende und zuverlässige
+Gebäudeautomation beispielsweise das 868MHz
+Band besser geeignet. Es ist in Europa ebenfalls
+lizenzfrei und erlaubt generell keine Dauersender,
+sondern nur sehr kurze Sendeimpulse. Aufgrund
+physikalischer Gesetze ist die Reichweite und Materialdurchdringung von Wänden oder Möbeln bei
+868-MHz-Funkwellen außerdem doppelt so gut wie
+bei 2.4 GHz - bei gleicher Sendeleistung.
+Demgemäß werden bei einem 2.4GHz-System in
+der Fläche etwa viermal mehr Empfangsknoten
+benötigt. Dies erhöht die Kosten eines 2.4GHzSystems gegenüber einem 868-MHz-System.
+Sicherheit gegen Kollisionen von systemeigenen
+Funktelegrammen ist mit zunehmender Senderanzahl wichtig. Die von mehreren Sendern gleich5
+
+p e r p e t u u m 10 | 2007
+
+REVOLUTIONÄR
+
+EnOcean easyfit-Universal-Schaltereinsatz für 55 mm x 55 mm Rahmensysteme mit energieautarkem Funk-Sendemodul PTM 200.
+
+zeitig ausgesendeten Funkdaten können in der
+Nähe eines Empfängers „kollidieren“ und dann im
+Empfänger nicht ausgewertet werden. In einer
+kleinen Installation entstehen dadurch weniger
+Probleme, solange der Funkkanal durch eine relativ
+geringe Anzahl von Funksensoren und Funkschaltern nie überlastet wird. Bei größeren Installationen
+aber treffen sehr viele Funkkomponenten auf engem
+Raum zusammen. Es ist daher entscheidend, ein
+Funksystem zu wählen, das ein robustes Verhalten
+bezüglich Datenkollisionen aufweist. Eine wirkungsvolle Maßnahme besteht darin, die Funkübertragungen jeweils sehr kurz zu gestalten. Extrem kurze
+Funktelegramme von nur rund einer tausendstel
+Sekunde und eine intelligente Strategie der mehrfachen Wiederholung bei jedem Sendevorgang
+sorgen beim EnOcean-Funkstandard für exzellente
+Kollisionsfestigkeit und schützen vor sporadischen
+und periodischen Funkstörern. So werden bis zu
+500 eng benachbarte Sender, die alle einmal pro
+Minute senden, zu mehr als 99,9% empfangen.
+
+6
+
+ENTSCHEIDUNG 3:
+BATTERIEN UNERWÜNSCHT?
+Falls die durch den Batteriewechsel notwendige
+Wartung der Funksensoren und Funkschalter entweder nachteilig, nicht gewünscht oder gar unakzeptabel ist - es geht auch ohne Batterien! Gegenwärtig ist die EnOcean GmbH der einzige Technologie-Anbieter für solche Produkte. Möglich wird
+dies durch einen extrem geringen Energiebedarf.
+Nur etwa 0,12 µWs benötigt das Funkprotokoll,
+um ein Bit Information über 300 Meter im Freiraum
+sicher zu übertragen. Ein batterieloser Funkschalter verbraucht für einen vollständigen Funkbefehl
+eine Energie von etwa 50 µWs - etwa um Faktor
+100 weniger im Vergleich zu marktüblichen batteriebetriebenen Funkschaltern. Ein konventioneller
+Funkschalter würde daher, betrieben mit einem
+elektrodynamischen Energiegenerator, eine rund
+100-fach höhere Betätigungskraft benötigen und
+ein konventioneller Wohnraum-Funkfühler eine rund
+100-fach größere Solarzelle.
+
+p e r p e t u u m 10 | 2007
+
+REVOLUTIONÄR
+
+Solarbetriebenes Raumbediengerät und Tür/Fensterkontakt
+
+ENTSCHEIDUNG 4:
+INTEROPERABILITÄT GEWÜNSCHT?
+Von allen Funkstandards bietet die batterielose
+EnOcean-Funktechnologie das größte Endgerätespektrum für die Gebäudeautomatisierung. Bisher
+haben etwa 50 Hersteller ein Produktangebot mit
+über 200 kompatiblen Geräten geschaffen. Rund
+200.000 Geräte sind im Feld und haben über die
+vergangenen drei Jahre in tausenden von Gebäuden ihre Robustheit und Zuverlässigkeit bewiesen.
+Die Geräte der verschiedenen Hersteller arbeiten
+dabei über eine gemeinsame Funkschnittstelle
+zusammen. So können beispielsweise die Signale
+von Funkschaltern der Firmen Osram, Zumtobel,
+Bticino oder Peha, von Raumthermostaten der
+Firmen Thermokon, Stuhl Regeltechnik oder Omnio
+und von Funkempfängern der Firmen ABB,
+Siemens, Wago, Beckhoff, Wieland oder Phönix
+Contact empfangen werden. Gateways erlauben
+die Integration in alle gängigen Gebäudebussysteme wie EIB/KNX, LON, TCP/IP, BACnet etc.
+Universelle und spezifische Schaltereinsätze erlauben die Integration in Schalterprogramme aller in
+Deutschland etablierter Installationsmaterialher-
+
+steller. Unterschiedlichsten Anforderungen an Design
+oder Geschmack ist damit Rechnung getragen.
+Neben den unidirektional arbeitenden Schaltern
+und Sensoren sind auch bidirektionale Funkmodule
+erhältlich, mit denen u.a. intelligente Netzwerke
+realisierbar sind.
+FAZIT
+Funksysteme sind in der Gebäudeinstallation mittlerweile etabliert. Kein Funksystem jedoch kann die
+verschiedenen Anforderungen gleichermaßen gut
+erfüllen. Für Anwendungen mit hohem Datenaufkommen sind die Funkstandards WLAN und Bluetooth
+geeignet. Die flexible Steuerung von Gebäudefunktionen oder Erfassung von Sensordaten weckt den
+Bedarf für kabellose Sensoren oder Schalter.
+Batterien sind hier oft nicht erwünscht oder die
+Gerätewartung ist nicht akzeptabel. EnOcean ist
+der einzige Standard, der die Realisierung batterieloser Funksysteme erlaubt.
+Mit dieser Technologie lassen sich wartungsfreie
+Systeme auch für große Gebäude mit vielen hundert Sendegeräten in einer Funkzelle realisieren.
+
+7
+

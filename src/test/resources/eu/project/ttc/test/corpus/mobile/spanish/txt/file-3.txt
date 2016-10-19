@@ -1,0 +1,685 @@
+Microsoft Word - martínez 5 v1 mem.doc Inmaculada Martínez                                                                   El desarrollo de la telefonía móvil como  
+                                                                                                                    plataforma mediática 
+EL DESARROLLO DE LA TELEFONÍA MÓVIL COMO 
+PLATAFORMA MEDIÁTICA 
+ 
+Autores: 
+Inmaculada J. Martínez Juan Miguel Aguado 
+Departamento de Información y Departamento de Información y 
+Documentación Documentación 
+Facultad de Comunicación y Facultad de Comunicación y 
+Documentación Documentación 
+Universidad de Murcia Universidad de Murcia 
+Campus de Espinardo s/n Campus de Espinardo s/n 
+30100 Espinardo  - Murcia 30100 Espinardo  - Murcia 
+España España 
+inmartin@um.es jmaguado@um.es 
+Tel. 0034 968 398781 Tel. 0034 968 363850 
+     Fax. 0034 968 367141 Fax. 0034 968 367141 
+ 
+Resumen: 
+En el marco del estudio sobre el impacto social de las tecnologías digitales, la telefonía 
+móvil ha presentado tradicionalmente un interés secundario que contrasta, no obstante, 
+con la rapidez, amplitud e intensidad de su implantación. A pesar de ser una tecnología 
+desarrollada e implantada desde el mercado, su uso masivo ha dado lugar a notables 
+transformaciones económicas y sociales. La relevancia y extensión de esas 
+transformaciones permite hablar de la telefonía móvil como plataforma mediática 
+caracterizada por la translocalidad (la posibilidad de estar conectado en un 
+desplazamiento a través de amplios espacios o de trayectorias completas) y la 
+integración convergente de formatos y servicios (Internet, TV) en un metadispositivo 
+digital de comunicación y acceso. Sobre la base de las prospectivas de mercado y del 
+incipiente interés en el análisis socioeconómico del fenómeno móvil, proponemos en 
+este artículo un recorrido panorámico por sus implicaciones, centrándonos en los 
+desarrollos tecnológicos, los modelos de negocio e implantación y la diversificación de 
+servicios. 
+Palabras clave: 
+Telefonía móvil, Sociedad de la Información, comunicación translocal, mediatización, 
+metadispositivo. 
+Abstract: 
+Within the frame of the studies on the social impact of digital technologies, mobile 
+telephony has traditionally shown a secondary interest, which contrasts with the speed, 
+extension and intensity of its social penetration. Despite being (unlike the Internet) a 
+market related technology in its designing and development, the massive use of mobile 
+telephony produces deep socio-economic transformations that allow speaking of a 
+'mediatisation process'. The milestones of such evolution are identified as translocal 
+communication (the possibility of being connected while moving in a wide area or in 
+large trajectories) and the integration of data formats and services in a digital 'meta-
+device' for an always-on communication and access. On the basis of market prospective 
+and the emergent interest on the socioeconomic analysis of mobile telephony, this paper 
+HOLOGRAMÁTICA - Facultad de Ciencias Sociales - UNLZ - Año III, Número 5, V1 (2006), pp. 21-39 21
+www.hologramatica.com.ar o www.unlz.edu.ar/sociales/hologramatica 
+ISSN 1668-5024 Inmaculada Martínez                                                                   El desarrollo de la telefonía móvil como  
+                                                                                                                    plataforma mediática 
+poses a panoramic approach through its implications, especially considering the 
+transformations operated in technologies, business models and service diversification. 
+ 
+Keywords: 
+Mobile telephony, Information Society, translocal communication, mediatisation, meta-
+device.  
+ 
+ 
+ 
+HOLOGRAMÁTICA - Facultad de Ciencias Sociales - UNLZ - Año III, Número 5, V1 (2006), pp. 21-39 22
+www.hologramatica.com.ar o www.unlz.edu.ar/sociales/hologramatica 
+ISSN 1668-5024 Inmaculada Martínez                                                                   El desarrollo de la telefonía móvil como  
+                                                                                                                    plataforma mediática 
+1. Introducción: una tecnología a la sombra del mercado 
+Pese a la condición periférica del lugar de la telefonía móvil en los grandes discursos 
+sobre la era digital, pocos desarrollos tecnológicos pueden presumir de una 
+implantación tan global y vertiginosa. Bastan algunos números a título de inventario:  
+A finales de 2001, 933 millones de personas utilizaban ya la telefonía móvil en todo 
+el mundo. Ese año el segmento de la telefonía móvil superaba no sólo al total de 
+usuarios de telefonía fija, sino que por primera vez el número total de teléfonos móviles 
+es ya mayor que el de receptores de televisión (Katz y Aarhus, 2002:4). A principios del 
+siglo XXI la implantación de la telefonía móvil en más de 100 países supera ya a la 
+conectividad vía ordenador (World Telecommunication Development Report 2002). 
+Entre 2001 y 2003 el incremento de líneas se aproxima al 50 %, alcanzándose un total 
+de 1290 millones de usuarios (Fundación Auna, 2004). A finales de 2005 el 24 % de la 
+población mundial tendrá móvil (Geser, 2004). España no es una excepción: 
+actualmente, un 95 % de la población (39 millones de un total de 42) está abonada a 
+servicios de telefonía móvil mientras que sólo un 43 % utiliza habitualmente el PC, un 
+29 % dispone de acceso a Internet y un 14 % dispone de conexión ADSL o similar 
+(Fundación Aúna, 2005a). 
+La penetración de la telefonía móvil no es, sin embargo, una cuestión meramente 
+cuantitativa. La telefonía móvil ha supuesto una radical transformación en los ritos 
+sociales de la interacción (Geser, 2004), en la administración de los tiempos cotidianos, 
+en los procesos de gestión de las dinámicas grupales y organizacionales y en la gestión 
+de las fronteras e interconexiones entre diferentes ámbitos personales (trabajo, ocio, 
+familia, grupos primarios) (Katz & Aarhus, 2002). También ha supuesto una notable 
+incidencia transformadora en el consumo de ocio, en la gestión de la identidad 
+individual e incluso en la canalización de respuestas e iniciativas sociales de tipo 
+piramidal (Sampedro, 2005). 
+El importante peso específico de la inversión necesaria en infraestructuras mantiene 
+a la telefonía móvil atada a los requerimientos de un mercado que, sin embargo, en más 
+de una ocasión ha contemplado cómo un servicio de valor relativo desataba una nueva 
+rutina de uso y abría las expectativas de implantación de nuevos servicios. La 
+caracterización de los usuarios incipientes en el origen de las respectivas tecnologías 
+HOLOGRAMÁTICA - Facultad de Ciencias Sociales - UNLZ - Año III, Número 5, V1 (2006), pp. 21-39 23
+www.hologramatica.com.ar o www.unlz.edu.ar/sociales/hologramatica 
+ISSN 1668-5024 Inmaculada Martínez                                                                   El desarrollo de la telefonía móvil como  
+                                                                                                                    plataforma mediática 
+ilustra las diferencias entre la revolución digital de Internet y la revolución digital de la 
+telefonía móvil. Mientras los usuarios originarios de Internet fueron élites intelectuales 
+tecnológicamente formadas, los usuarios originarios de la telefonía móvil serían élites 
+económicas tecnológicamente dispuestas. El sesgo instrumental de la telefonía móvil, 
+vinculado a un cierto matiz de estatus socioeconómico, marcaría el arranque de la 
+implantación social del móvil. Podemos, pues, definir a Internet como una tecnología 
+de origen social masificada a través del mercado, por oposición a la telefonía móvil, 
+entendida como una tecnología comercial masificada a través de su uso social. 
+Tanto los desarrollos de estándares tecnológicos como la fuerte implantación social 
+en relación al uso cotidiano, la portabilidad y la identidad individual han hecho del 
+teléfono móvil el dispositivo idóneo para aglutinar buena parte de los usos que 
+caracterizan a la Sociedad de la Información, convirtiéndolo en un metadispositivo (un 
+dispositivo englobador de dispositivos digitales) y sentando las bases para una 
+verdadera integración de opciones y servicios que constituye la base del proceso de 
+mediatización de la telefonía móvil. 
+Junto con la integración de formatos, el otro rasgo definitorio es, precisamente, la 
+movilidad. En las condiciones tradicionales las sociedades humanas se han enfrentado a 
+dos grandes obstáculos para la comunicación: la distancia y el movimiento (Geser, 
+2004). Los desarrollos tecnológicos en comunicación a lo largo de la historia se han 
+centrado esencialmente en solventar el problema de la distancia (Innis, 1995; Aguado, 
+2001); la telefonía móvil incide de forma decisiva en el problema del movimiento. A 
+través de ella se hace posible el paso de las comunicaciones interlocales a las 
+comunicaciones translocales (Geser, 2004), donde la conectividad no depende ya del 
+lugar, sino de la persona, y donde la accesibilidad deja de ser discontinua a ser continua 
+(conectividad always on). De ahí la importancia del móvil como dispositivo personal, 
+como un complemento insustituible del sujeto social. 
+En los epígrafes siguientes abordaremos de forma panorámica las principales 
+características de la transformación propiciada por la mediatización de la telefonía 
+móvil desde el punto de vista de sus dos ejes constitutivos (la integración funcional y la 
+translocalidad).  
+ 
+HOLOGRAMÁTICA - Facultad de Ciencias Sociales - UNLZ - Año III, Número 5, V1 (2006), pp. 21-39 24
+www.hologramatica.com.ar o www.unlz.edu.ar/sociales/hologramatica 
+ISSN 1668-5024 Inmaculada Martínez                                                                   El desarrollo de la telefonía móvil como  
+                                                                                                                    plataforma mediática 
+2. Hacia un metadispositivo digital de gestión de datos y acceso a contenidos 
+A diferencia de Internet, la telefonía móvil surge como una tecnología de voz 
+operada desde un modelo de negocio de provisión de servicios integrado por 
+operadoras, fabricantes, productores de contenido y mediadores. Dicho modelo implica 
+una centralización jerárquica de la gestión y la inversión en infraestructuras que, a su 
+vez, somete la innovación a la rentabilidad, aunque garantizando unos estándares de 
+calidad y seguridad.  
+La digitalización de la telefonía móvil supondría un despegue cualitativo respecto de 
+esos estándares de calidad. Liberada de los límites de la tecnología analógica, las 
+compañías operadoras centrarán su estrategia en cuatro ejes que, a la postre, supondrán 
+la clave de su implantación masiva en el mercado: 
+a) Reducción de los costes para el usuario final (tarifas y terminales) 
+b) Mejora de la calidad de los terminales (inicialmente, reducción de tamaño e 
+incremento de autonomía; posteriormente, diversificación instrumental) 
+c) Ampliación de cobertura y seguridad 
+d) Diversificación de servicios 
+Si bien la digitalización resulta decisiva en las perspectivas de negocio de la 
+telefonía móvil (literalmente, la sacan de un callejón sin salida), será la diversificación 
+instrumental (respecto de los terminales) y de servicios (respecto del acceso) la que, de 
+manera un tanto inopinada, extraiga a la telefonía móvil del ámbito estricto de la 
+tecnología de voz para convertirla en una tecnología de acceso a datos, iniciando así su 
+proceso de mediatización. 
+En este sentido, la implantación de los mensajes cortos (SMS) constituye un hito 
+sociológico y comercial que sólo recientemente empieza a ser estudiado (Fortunati, 
+2000; Eldridge y Grinter, 2001) y que ha sido señalado como epítome de oportunidad de 
+negocio sobrevenida (Mattinen, 2000; Telefónica Móviles, 2004). Desde su 
+implantación en 1994, el SMS ha alcanzado una penetración de entre el 70 y el 90 % 
+entre los usuarios jóvenes (de 14 a 30 años) (Mattinen, 2002). A las condiciones de 
+ahorro en los costes de la comunicación (limita el tiempo de conexión al momento del 
+envío), seguridad de destino (más del 90 % de los mensajes personales son respondidos 
+inmediatamente o en un lapso de tiempo breve) y discreción (el nivel de interferencia en 
+HOLOGRAMÁTICA - Facultad de Ciencias Sociales - UNLZ - Año III, Número 5, V1 (2006), pp. 21-39 25
+www.hologramatica.com.ar o www.unlz.edu.ar/sociales/hologramatica 
+ISSN 1668-5024 Inmaculada Martínez                                                                   El desarrollo de la telefonía móvil como  
+                                                                                                                    plataforma mediática 
+la vida cotidiana es menor que el de la conversación), el SMS añade dos componentes 
+clave: de un lado, la configuración de su uso como 'conector emocional' (uso 
+generalizado del SMS en grupos primarios como prueba de proximidad emocional y/o 
+afectiva) (Eldridge y Grinter, 2001; Lasen, 2002); por otro, su versatilidad como 
+'conector institucional' (canal de comunicación comercial, empresarial-organizacional, 
+etc.) (Fortunati, 2000). 
+Dada su versatilidad funcional, la importancia del SMS en la evolución de la 
+telefonía móvil puede resumirse en cuatro factores: 
+a) Supone un salto cualitativo de la diversificación de la oferta (diferencias de 
+tarifas en función de los perfiles de cliente) a la diversificación del servicio. 
+b) Implica una ruptura en la concepción de la tecnología: Paso de la transmisión de 
+voz a la transmisión de datos. El cambio, además, afecta a la propia concepción 
+del terminal, que con la inclusión de calendarios y agendas rudimentarios 
+empieza a perfilarse como un dispositivo personal de gestión de datos. 
+c) Supone una diversificación en el uso (mensajes personales, alarmas y avisos, 
+información y gestión de eventos, etc.) y una transformación de los estándares y 
+rutinas comunicativos de los usuarios (contextos y normas de uso, nuevos 
+lenguajes, etc.). 
+d) Abre la puerta a una concepción del teléfono móvil como dispositivo de acceso a 
+contenidos y publicidad (paso de la conectividad interindividual a la 
+conectividad medio/usuario) que constituye la precondición necesaria del m-
+commerce (comercio vía móvil). 
+La implantación masiva del SMS, por tanto, constituye el punto de inflexión de la 
+telefonía móvil por el que ésta pasa a ser una tecnología de transmisión y acceso a 
+datos. En este sentido, la propia evolución tecnológica y de uso del SMS se plantea 
+como un correlato de la evolución de la telefonía móvil en cuanto a aplicaciones y 
+servicios:  
+• Por una parte, el incremento y diversificación de formatos de datos demanda un 
+desarrollo coherente de estándares tecnológicos de intercambio: el EMS 
+(Enhanced Messaging Service) añade al envío de texto la posibilidad de transmitir 
+imágenes, animaciones y sonidos en soporte SMS para GSM y GPRS; y, a partir 
+HOLOGRAMÁTICA - Facultad de Ciencias Sociales - UNLZ - Año III, Número 5, V1 (2006), pp. 21-39 26
+www.hologramatica.com.ar o www.unlz.edu.ar/sociales/hologramatica 
+ISSN 1668-5024 Inmaculada Martínez                                                                   El desarrollo de la telefonía móvil como  
+                                                                                                                    plataforma mediática 
+de 2002, el MMS (Multimedia Messaging Service) hace posible el envío de datos 
+en forma de imágenes (JPEG), vídeo (MPEG), sonido (MP3, MIDI) y 
+aplicaciones (JAVA) para GPRS y 3G. Finalmente, a partir de los estándares 3G, 
+3.5 G e iMode, el IMS incorpora la transmisión de datos en formato IP, 
+planteando el horizonte de una creciente compatibilidad con los estándares de 
+Internet. 
+• Paralelamente, los terminales diversifican su funcionalidad instrumental, dejando 
+de ser teléfonos en sentido estricto para incorporar funciones de agenda-
+organizador, cámara fotográfica y de vídeo, consola de videojuego, reproductor de 
+música, tarjeta-monedero, TPVM (Terminal de Punto de Venta Móvil), además de 
+otras funciones menores que aportan valor añadido. 
+Se perfila así la doble línea de evolución de la telefonía móvil, centrada, de un lado 
+en el servicio (la conectividad y el acceso a contenidos), y de otro, en el terminal como 
+conjunto de herramientas (multifuncionalidad del dispositivo). En la figura 1 
+planteamos de modo resumido las implicaciones y desarrollos de esa doble línea de 
+evolución. 
+HOLOGRAMÁTICA - Facultad de Ciencias Sociales - UNLZ - Año III, Número 5, V1 (2006), pp. 21-39 27
+www.hologramatica.com.ar o www.unlz.edu.ar/sociales/hologramatica 
+ISSN 1668-5024 Inmaculada Martínez                                                                   El desarrollo de la telefonía móvil como  
+                                                                                                                    plataforma mediática 
+  
+SERVICIOS HERRAMIENTAS 
+  
+(compañías operadoras + productores de (productores de tecnologías: 
+contenidos + proveedores de servicios) terminales+estándares) 
+ 
+ 
+    
+VOZ DATOS PORTABILIDAD 
+ 
+Compatibilidad entre tamaño, peso y 
+diversidad de prestaciones 
+ 
+ 
+CONECTIVIDAD 
+ 
+   AUTONOMÍA 
+VARIABLE  FUNCIÓN   
+  Compatibilidad entre tiempo de autonomía, 
+Calidad Comunicación tiempo de recarga y diversidad de 
+Continuidad Acceso prestaciones 
+Cobertura Transacciones  
+Coste (M-Commerce) 
+ 
+MULTIFUNCIONALIDAD 
+  
+CONTENIDOS    
+  CAPACIDADES APLICACIONES 
+   (Hardware) (Software) 
+FORMATO  FUNCIÓN  Teléfono Organizador 
+  Cámara Imagen 
+Sonido Información Audio/Vídeo/TV Vídeo/Audio/TV 
+Imagen fija Entretenimiento Memoria portátil Proceso textos 
+Vídeo Personalización Consola Email/MMS/IMS 
+Aplicaciones Publicidad/MKT Conectividad con Internet 
+ m-commerce otros dispositivos Juegos 
+Seguridad Seguridad 
+ Tarjeta-monedero 
+Figura 1: Principales línea de evolución de la 
+telefonía móvil 
+(fuente: Elaboración propia) 
+ 
+Conviene aquí subrayar el papel central de la coordinación entre la diversificación 
+instrumental del terminal móvil y la diversificación de servicios emergente a raíz de la 
+introducción del acceso a contenidos vía teléfono móvil. En este sentido, la irrupción de 
+los contenidos en el móvil supone el catalizador de las actuales perspectivas de futuro 
+de la telefonía móvil como agente de la Sociedad de la Información, marcando la línea 
+de convergencia con Internet y, convirtiéndola, de hecho, en el complemento 
+potenciador de iniciativas comerciales y de servicio en vías de  desarrollo en entornos 
+Web (por ejemplo, el m-commerce respecto del e-commerce y la mTV respecto de la 
+iTV). 
+HOLOGRAMÁTICA - Facultad de Ciencias Sociales - UNLZ - Año III, Número 5, V1 (2006), pp. 21-39 28
+www.hologramatica.com.ar o www.unlz.edu.ar/sociales/hologramatica 
+ISSN 1668-5024 Inmaculada Martínez                                                                   El desarrollo de la telefonía móvil como  
+                                                                                                                    plataforma mediática 
+Debemos, no obstante, ser conscientes de que el peso específico de estos aspectos en 
+las cifras de negocio todavía es escaso (en torno a un 20% del total en España) y que 
+depende, en cualquier caso, de un fuerte esfuerzo inversor por parte de las operadoras 
+así como del diseño de un modelo de negocio que permita un equilibrio entre 
+compatibilidad y adaptabilidad entre los proveedores de acceso y los proveedores de 
+contenidos (CMT, 2005). 
+ 
+3. La mediatización del móvil: estrategias y servicios 
+La irrupción de los contenidos impone la exigencia del desarrollo de estándares 
+tecnológicos capaces de soportar lo que, comenzando como un proceso de integración 
+funcional y de formatos, termina siendo una convergencia explícita con los modelos y 
+aplicaciones desarrollados en Internet. Este desarrollo de la conectividad móvil respecto 
+del acceso a contenidos plantea importantes líneas de innovación y adaptación.  
+En primer lugar, en las estrategias de las empresas y los modelos de negocio del 
+sector, caracterizadas de modo dominante por: 
+ 
+a) La personalización 
+La personalización es uno de los principales valores añadidos de las tecnologías 
+digitales que, en el caso del móvil, se ve reforzado por la portabilidad y el 
+carácter fuertemente personal del dispositivo. Estos rasgos hacen especialmente 
+atractivo el móvil para el desarrollo de estrategias de comercialización de 
+productos y/o servicios y como soporte de comunicación comercial e 
+institucional. 
+ 
+b) Las alianzas estratégicas 
+Como en otros sectores de la economía digital, las empresas se enfrentan a la 
+encrucijada de desarrollar secciones especializadas en la producción de 
+contenidos, subcontratar proveedores al efecto o forjar alianzas que permitan 
+optimizar los costes de inversión y minimizar los de promoción e imagen. Entre 
+ejemplos del primer caso, cabe mencionar el lanzamiento de Disney Mobile (un 
+HOLOGRAMÁTICA - Facultad de Ciencias Sociales - UNLZ - Año III, Número 5, V1 (2006), pp. 21-39 29
+www.hologramatica.com.ar o www.unlz.edu.ar/sociales/hologramatica 
+ISSN 1668-5024 Inmaculada Martínez                                                                   El desarrollo de la telefonía móvil como  
+                                                                                                                    plataforma mediática 
+operador móvil virtual dedicado al aprovechamiento de la potencia de Disney 
+como productor/distribuidor de contenidos). Como ejemplo de la última opción, 
+cabe mencionar las alianzas entre Nokia y Loudeye o entre Ericsson y Telia-
+Sonera para el acceso a música en formato MP3; o las alianzas entre Vodafone y 
+FOX para el desarrollo y distribución de series de televisión diseñadas para el 
+móvil. 
+ 
+c) La adaptación de la oferta a la segmentación de los públicos 
+La ampliación de los segmentos de clientes es crucial para el mantenimiento del 
+volumen de negocio en un contexto de creciente competencia y de fuertes 
+inversiones. Paralelamente, en la medida en que los consumidores buscan 
+aplicaciones más que estándares tecnológicos, la adaptación a la demanda 
+específica supone un aspecto central de la evolución del mercado de la telefonía 
+móvil. El lanzamiento de terminales e interfaces diseñadas para públicos 
+determinados en función de la edad (interfaces y terminales simplificados para 
+personas mayores, o paquetes de seguridad con localizador y limitador de 
+llamadas para niños), constituye un buen ejemplo de ello.  
+ 
+d) La conectividad con otros dispositivos y la compatibilidad de formatos 
+El móvil no puede ser un dispositivo aislado, ni siquiera en su desarrollo como 
+integrador de otros dispositivos (cámara, organizador, gestor de datos, etc.). La 
+demanda sobre aplicaciones y contenidos es también, implícitamente, una 
+demanda sobre la 'traducibilidad' de esos contenidos a otros formatos y sobre su 
+'transmisibilidad' a otros dispositivos (PC, impresora, TV, consola, terminal de 
+venta, cajero automático bancario, etc.).  
+ 
+En segundo lugar, la innovación y la adaptación en el ámbito de las comunicaciones 
+móviles implican a empresas no relacionadas con el sector, pero que pueden desarrollar 
+secciones de negocio en ese ámbito, planteando cambios sustanciales en sus productos, 
+herramientas y procedimientos. Algunos ejemplos relevantes desde la perspectiva del 
+impacto de la telefonía digital en la Sociedad de la Información son: 
+HOLOGRAMÁTICA - Facultad de Ciencias Sociales - UNLZ - Año III, Número 5, V1 (2006), pp. 21-39 30
+www.hologramatica.com.ar o www.unlz.edu.ar/sociales/hologramatica 
+ISSN 1668-5024 Inmaculada Martínez                                                                   El desarrollo de la telefonía móvil como  
+                                                                                                                    plataforma mediática 
+ 
+a) Periodismo móvil 
+La conectividad always on y la mensajería multimedia ofrecen una plataforma 
+para la constitución del móvil como un sub-medio de información (un canal 
+específico vinculado a un medio reconocido) dotado de una capacidad de 
+actualización e inmediatez equivalentes a la de Internet, pero de mayor alcance 
+dada su portabilidad permanente y su capacidad de combinar noticias con 
+alarmas o avisos (WAN, 2004). El periodismo móvil sacrifica sin duda 
+profundidad y detalle a cambio de una mayor tasa de alcance e inmediatez. 
+La evolución en este sentido arranca de los servicios de envío de titulares y 
+resultados deportivos en tiempo real vía SMS y de su posterior enriquecimiento 
+con formatos multimedia (envío de portadas de prensa, infográficos interactivos, 
+vídeos informativos, etc.) (Castelló y Aviá, 2004). Las perspectivas de desarrollo 
+aparecen perfiladas por la doble convergencia de la telefonía móvil con Internet 
+(acceso a prensa digital) y con la TV (video streaming e informativos de TV en 
+tiempo real). La convergencia del dispositivo móvil con la radio digital (audio 
+streaming) es sin duda tecnológicamente más accesible que la TV, pero 
+permanece aún pendiente de estudio y desarrollo como iniciativa de negocio 
+dependiente del éxito de la radio digital (CMT, 2005) y de la distribución de 
+contenidos audio vía móvil (MP3). 
+Presumiblemente, el desarrollo del periodismo móvil planteará innovaciones en 
+los formatos y géneros periodísticos equivalentes a las que actualmente tienen 
+lugar en el medio Internet, básicamente articulados desde la máxima de los 
+contenidos móviles por antonomasia: think small. Por otro lado, el medio móvil 
+permite un contexto de gestión de contenidos altamente adaptado a las 
+expectativas y necesidades del usuario (personalización), ofreciendo un 
+horizonte de coordinación entre contenidos informativos y publicitarios 
+previsiblemente superior en eficacia al implementado en Internet (WAN, 2004). 
+En este sentido, el desarrollo de los moblogs (blogs móviles) pone ya de 
+manifiesto el valor concedido por los bloggers a la instantaneidad y la 
+translocalidad de la telefonía móvil.  
+HOLOGRAMÁTICA - Facultad de Ciencias Sociales - UNLZ - Año III, Número 5, V1 (2006), pp. 21-39 31
+www.hologramatica.com.ar o www.unlz.edu.ar/sociales/hologramatica 
+ISSN 1668-5024 Inmaculada Martínez                                                                   El desarrollo de la telefonía móvil como  
+                                                                                                                    plataforma mediática 
+Finalmente, la ubicuidad y la portabilidad del móvil unida a la mejora en la 
+calidad de sus prestaciones lo postulan no sólo como un canal de difusión, sino 
+también como una herramienta de captación de información (en formatos audio, 
+video e imagen) que puede mostrarse útil en determinadas circunstancias 
+informativas. Así, por ejemplo, TVE ha firmado recientemente un contrato de 
+desarrollo para una tecnología de transmisión y gestión de imágenes TV en 
+tiempo real de móvil a receptor vía centro de emisión. También empieza a 
+observarse el uso de imágenes amateurs (fotografía o vídeo tomados con 
+dispositivos móviles) como recurso informativo. 
+ 
+b) Entretenimiento móvil 
+El concepto de entretenimiento adquiere un significado diferente en el entorno 
+móvil. Conviene, en este contexto, tener en cuenta dos factores: En primer lugar, 
+sus condiciones físicas (tamaño del terminal y de la pantalla, tipo de interfaz, 
+autonomía) imponen unos tiempos de atención limitados y unas condiciones de 
+percepción e interacción específicas. En segundo lugar, sus condiciones de uso 
+imponen también unos tiempos limitados (desplazamiento vinculado a la 
+portabilidad, etc.). Además, el móvil compite con dificultad con otros factores 
+externos de atención (interrupciones del entorno) en períodos largos de tiempo. 
+En consecuencia, a diferencia del ocio móvil de interacción social (SMS y Chat), 
+el ocio móvil vinculado a contenidos (entretenimiento) impone formatos 
+pequeños, susceptibles de fragmentación, almacenamiento, recuperación y 
+serialización, utilizables en lapsos cortos de tiempo (de no más de 20-30 
+minutos)  y ligados a condiciones de desplazamiento y gestión de 'tiempos 
+muertos' (Lasen, 2002). 
+A estas condiciones de miniaturización debe circunscribirse la adaptación de la 
+convergencia entre móvil, Internet y TV, planteando formatos específicos en 
+tiempo y en recursos expresivos (en el caso de la TV y el video, por ejemplo, 
+incremento de primeros planos y supresión de planos largos, acortamiento y 
+aceleración de secuencias; en el caso de formatos WWW, limitación del 
+scrolling de texto e imagen y ampliación del árbol de pantallas). 
+HOLOGRAMÁTICA - Facultad de Ciencias Sociales - UNLZ - Año III, Número 5, V1 (2006), pp. 21-39 32
+www.hologramatica.com.ar o www.unlz.edu.ar/sociales/hologramatica 
+ISSN 1668-5024 Inmaculada Martínez                                                                   El desarrollo de la telefonía móvil como  
+                                                                                                                    plataforma mediática 
+Mención aparte merece la aparición de una clase específica de ocio móvil de 
+interacción social vinculada a contenidos que involucra el potencial 
+personalizador del móvil como elemento productor de identidad y socialización. 
+Más allá del aspecto del terminal, algunos contenidos vía móvil (clips de vídeo y 
+de sonido, mensajes ocurrentes, chistes, etc.) son consumidos no sólo por sí 
+mismos, sino para ser mostrados, intercambiados y comentados. Se trata, junto 
+con los contenidos producidos por los propios usuarios (imágenes y vídeos) de 
+contenidos catalizadores de interacción social in situ, que dependen directamente 
+de la relevancia del móvil como elemento aglutinador de redes sociales. 
+Por lo demás el horizonte del entretenimiento móvil engloba de forma específica 
+las posibilidades combinadas de Internet, la TV y la videoconsola (vídeos, 
+imágenes, blogs, series, canciones, tonos, juegos, etc.) junto con los usos de ocio 
+vinculados a la propia capacidad de producir y distribuir contenidos que los 
+dispositivos ofrecen a los usuarios. 
+ 
+c) Marketing y publicidad móvil 
+Sobre la base de la versatilidad funcional del SMS, el móvil presenta ya unos 
+rasgos sobradamente atractivos como canal de difusión publicitaria: elevada 
+implantación (los segmentos de población que más utilizan el SMS son los más 
+dispuestos al consumo), ubicuidad, inmediatez, seguridad de destino (el 94 % de 
+los usuarios lee los mensajes de texto) y carácter fuertemente personalizado 
+(Kopomaa, 2000). A estos rasgos genéricos de la telefonía móvil, los servicios 
+de mensajería (SMS y MMS) aportan otros valores considerables: Interactividad 
+(el mismo canal usado para llegar al cliente, puede ser usado para recibir feed-
+back), conveniencia (acceso al cliente en el momento oportuno), localización 
+(posibilidad de personalizar el lugar donde es recibido el mensaje, como 
+mensajes de promoción en tiendas y grandes superficies), rapidez y 
+adaptabilidad (tiempo y coste reducidos de puesta en marcha de campañas) 
+(Haghirian et al., 2005). 
+La implantación del MMS incrementa las potencialidades del móvil como 
+herramienta de marketing, permitiendo un mayor impacto del mensaje (cuñas de 
+HOLOGRAMÁTICA - Facultad de Ciencias Sociales - UNLZ - Año III, Número 5, V1 (2006), pp. 21-39 33
+www.hologramatica.com.ar o www.unlz.edu.ar/sociales/hologramatica 
+ISSN 1668-5024 Inmaculada Martínez                                                                   El desarrollo de la telefonía móvil como  
+                                                                                                                    plataforma mediática 
+sonido, mensajes con enlaces, vídeos e imágenes) y una mayor funcionalidad en 
+la gestión de datos del cliente (geolocalización, diversificación de las 
+herramientas de fidelización como el CRM, etc.). 
+Una característica relevante del marketing móvil es su coordinación con 
+formatos de marketing-online y off-line, permitiendo crear un entorno global de 
+relaciones con el cliente, del que constituye un buen ejemplo la campaña del 
+Movimiento Coca-Cola (IPMark, 2004). La versatilidad del m-Marketing 
+permite la puesta en marcha tanto de campañas Pull (donde el primer contacto 
+tiene lugar por el usuario a través de algún tipo de reclamo externo, como 
+concursos, sorteos, premios directos, descuentos, promociones o pruebas de 
+producto) como de campañas Push (envío de mensaje al cliente) o mixtas. 
+Permite además articular formatos diferentes de campaña, de entre los que 
+destaca, por las características de personalización que ofrece el móvil y su 
+compatibilidad con entornos on-line, la organización de comunidades de 
+usuarios en torno a actividades y servicios gratuitos (concursos, juegos, alertas, 
+pruebas, etc) (Haghirian et al., 2005). El m-Marketing ofrece, además, la 
+posibilidad de vincular los mensajes publicitarios a otros tipos de contenido 
+móvil (información y entretenimiento) y a la propia terminal telefónica 
+(personalización de marca y vinculación a estilos de vida). 
+ 
+d) Comercio móvil 
+El m-Commerce define la adquisición por compra de productos o servicios a 
+través de un terminal móvil. Aunque se perfila como la segunda generación del 
+e-Commerce, el comercio móvil debe todavía superar importantes dificultades 
+para su plena implantación (seguridad, disposición y alfabetización de los 
+usuarios, desarrollo de estándares tecnológicos, etc.). El m-Commerce comienza 
+a desarrollarse como una variante menor del e-Commerce a través de la 
+implantación del protocolo WAP (Wireless Application Protocol) en GPRS 
+(Rettie, 2001). En última instancia, el desarrollo del m-Commerce depende de la 
+posibilidad de configuración (y de la aceptación) del teléfono móvil como punto 
+de venta virtual, lo que implica, por un lado, el desarrollo de entornos e 
+HOLOGRAMÁTICA - Facultad de Ciencias Sociales - UNLZ - Año III, Número 5, V1 (2006), pp. 21-39 34
+www.hologramatica.com.ar o www.unlz.edu.ar/sociales/hologramatica 
+ISSN 1668-5024 Inmaculada Martínez                                                                   El desarrollo de la telefonía móvil como  
+                                                                                                                    plataforma mediática 
+interfaces que permitan el acceso a la información sobre los productos de una 
+forma eficaz, agradable y funcional (m-Merchandising) y, por otro, la 
+configuración del móvil como TPV (terminal de punto de venta) (Martínez, 
+2005).  
+Actualmente el diseño de estrategias de comercio móvil se dirige a la 
+explotación de segmentos de mercado muy específicos, como la venta de billetes 
+y la realización de reservas (Mobile Ticketing), los servicios financieros (Mobile 
+Banking) y los servicios de acceso a información. Junto con la seguridad, el 
+principal escollo en la implementación del comercio móvil es sin duda la 
+operacionalización del terminal como medio de pago, lo cual implica su 
+conectividad con dispositivos externos (en Japón, por ejemplo, se utiliza la 
+conexión Bluetooth para el cargo directo de la transacción) (Schutz, 2001a). En 
+cualquier caso, las barreras de desarrollo y la escasa receptividad de los usuarios 
+hacen que el m-Commerce esté todavía muy lejos de la funcionalidad del 
+comercio on-line (Schultz, 2001b). En este sentido, el papel alfabetizador del 
+marketing móvil se presenta como crucial. 
+ 
+4. Conclusiones: rasgos generales de la mediatización móvil 
+El resultado de lo esbozado hasta aquí apunta a la configuración de la telefonía 
+móvil como fenómeno singular de conectividad global continua en cuanto a 
+posibilidades de intercambio comunicativo. Esa condición es, precisamente, la que 
+aproxima crecientemente la funcionalidad del terminal móvil a la del PC, añadiendo la 
+portabilidad de dispositivos integrados (cámara, organizador, tarjeta de pago, TV, 
+reproductor de música, consola de juegos, etc.). 
+En función de su fuerte implantación y de su condición estrechamente vinculada a la 
+persona, el desarrollo de la telefonía móvil permite en más de un sentido hablar de una 
+segunda revolución digital (simultánea y convergente con la de Internet) caracterizada 
+por la translocalidad (comunicación en trayectorias de desplazamiento y, por tanto, 
+independiente del lugar) y la integración (coordinación de aplicaciones, funciones y 
+servicios en un metadispositivo digital de comunicación y acceso). 
+La irrupción de contenidos y la convergencia con los formatos y estándares de 
+HOLOGRAMÁTICA - Facultad de Ciencias Sociales - UNLZ - Año III, Número 5, V1 (2006), pp. 21-39 35
+www.hologramatica.com.ar o www.unlz.edu.ar/sociales/hologramatica 
+ISSN 1668-5024 Inmaculada Martínez                                                                   El desarrollo de la telefonía móvil como  
+                                                                                                                    plataforma mediática 
+Internet han favorecido, en primer lugar, una profunda transformación de los modelos 
+de negocio y, en segundo lugar, una creciente implicación de sectores socioeconómicos 
+inicialmente no vinculados con el sector a partir de los cuales puede hablarse de un 
+proceso de mediatización de la telefonía móvil: de un lado, personalización, 
+establecimiento de alianzas estratégicas dentro y fuera del sector, adaptación de la oferta 
+a una creciente segmentación de los públicos y la mejora de la conectividad entre 
+dispositivos y la compatibilidad entre formatos; de otro, el desarrollo desigual del 
+periodismo móvil, el entretenimiento móvil, el marketing y la publicidad móviles y el 
+comercio móvil.  
+La consolidación del móvil como metadispositivo digital ha inaugurado o extendido, 
+además, nuevos usos por parte del usuario que involucran a otros sectores de la 
+economía digital (fotografía y vídeo digital, productores de software, mediadores de 
+contenidos, etc.). 
+La diversificación de contenidos y funciones que tiene lugar en torno al móvil en los 
+últimos cinco años permite así anticipar una amplia red de implicaciones no sólo 
+respecto de las aplicaciones tecnológicas, los formatos de contenido o los modelos de 
+negocio, sino, precisamente por su requisito de rentabilidad y penetración, también de 
+implicaciones sociales y culturales que, de hecho, ya están transformando nuestra vida 
+cotidiana. 
+ 
+ 
+BIBLIOGRAFíA: 
+AGAR, J. (2003): Constant Touch: A Global History of the Mobile Phone. London, 
+Icon Press. 
+AGUADO, J. M., 2001, "El medio y la mnemoteca: la periodicidad informativa y la 
+construcción del tiempo social", en GALDÓN, G. (coord.), Introducción a la 
+comunicación y a la información, Barcelona, Ariel, pp. 255-272. 
+ARAUJO DE SOUZA, A. (2004): From Multiuser Environments as (Virtual) Spaces to 
+(Hybrid) Spaces as Multiuser Environments: Nomadic Technology Devices and 
+Hybrid Communication Places. Tesis Doctoral inédita, presentada en la Universidad 
+Federal de Río de Janeiro.  
+AUSTRALIAN PHYSHOLOGICAL SOCIETY (2004): Psychosocial aspects of mobile 
+phone use mong adolescents. URL: 
+http://www.psychology.org.au/news/mobilephoneresearchreport.pdf 
+BEATON, J. & WAJCMAN, J. (Eds) (2004): "The Impact of the Mobile Telephony in 
+Australia" en Australian Mobile Telephony Conference. September 2004.  
+HOLOGRAMÁTICA - Facultad de Ciencias Sociales - UNLZ - Año III, Número 5, V1 (2006), pp. 21-39 36
+www.hologramatica.com.ar o www.unlz.edu.ar/sociales/hologramatica 
+ISSN 1668-5024 Inmaculada Martínez                                                                   El desarrollo de la telefonía móvil como  
+                                                                                                                    plataforma mediática 
+BROWN, B.; HARPER, R. & GREEN, N. (Eds.) (2001): Wireless World: Social, 
+Cultural and Interactional Issues in Mobile Communication and Computing. Berlin, 
+Springer Verlag. 
+CASTELLÓ, E. y AVIÁ, M. (2004): "Periodismo vía MMS: el caso de "El día en cinco 
+imagines" de La Vanguardia" EN ZER, nº 16. Universidad del País Vasco. 
+CASTELLS, M., 1997; La era de la información. Economía, sociedad y cultura. Vol 1. 
+La Sociedad Red. Madrid, Alianza. 
+CASTELLS, M.; FERNANDEZ ARDEVOL, M.; LICHUAN, J. & SEY, A. (2004); 
+The Mobile Communication Society. A Cross-Cultural Analysis of the Available 
+Evidence on the Social Use of Wireless Communication Technology. Annenberg 
+Research Network. 
+CMT (COMISIÓN DEL MERCADO DE LAS TELECOMUNICACIONES) (2005): 
+Informe del sector de la telefonía móvil en España, 2004. Madrid, CMT. 
+DE KERCKHOVE, D. (1999): Inteligencias en conexión. Barcelona, Gedisa. 
+ELDRIDGE, M. & GRINTER, R. (2001): "Studding Text Messaging in Teenagers". 
+Position Paper for CHI 2001, Workshop nr. 1: Mobile Communications: 
+Understanding User, Adoption and Design, Colorado. 
+http://www.cs.colorado.edu/~palen/chi_workshop/papers/EldridgeGrinter.pdf 
+FORTUNATI, L. (2000): "The Mobile Phone: New Social Categories and Relations". 
+University of Trieste.  
+http://www.telenor.no/fou/prosjekter/Fremtidens_Brukere/seminarer/mobilpresentasjon
+er/Proceedings%20_FoU%20notat_.pdf 
+FUNDACIÓN AUNA (2003): "El futuro del acceso a Internet: ¿3G o WiFi?" Serie 
+Análisis y Prospectiva. Enero de 2003, Madrid. 
+FUNDACIÓN AUNA (2004): "Las alternativas en el futuro de la telefonía móvil". 
+Serie Análisis y Prospectiva. Enero de 2004, Madrid. 
+FUNDACIÓN AUNA (2005a): Informe e-España 2005. Fundación Auna. Madrid. 
+FUNDACIÓN AUNA (2005b): "El marketing on-line: presente y futuro". Serie 
+Análisis y Prospectiva. Mayo de 2005, Madrid. 
+GESER, H. (2004): "Towards a Sociological Theory of the Mobile Phone". 
+Sociological Institute. University of Zurich (http://socio.ch/mobile/t_geser1.pdf 
+GEISLER, C. et. Al. (2001): "The Social Transformation of the Boundary between 
+Work and Life", by IT Gone Mobile. Rensselaer Polytechnic Institute, New York. 
+http://www.rpi.edu/~geislc/Mobile/border.htm 
+GRANT, D. & KIESLER, S. (2001): "Blurring the boundaries: cell phones, mobility 
+and the line between work and personal life". En: Brown, B. / Green, N. / Harper, R. 
+(Eds): Wireless World. Social and Interactional Issues in Mobile Communication 
+and Computing, Berlin, Springer-Verlag, pp. 121-132. 
+HAGGIRIAN, P.; MADLBERGER, M & TANUSKOVA, A. (2005): "Increasing 
+Advertising Value of Mobile Marketing- An Empirical Study of Antecedents" en 
+Proceedings of the 38th Hawaii International Conference on System Sciences. IEEE, 
+2005. 
+HADDON, L. (2000): "The Social Consequences of Mobile Telephony: Framing". 
+Oslo.Http://www.telenor.no/fou/prosjekter/Fremtidens_Brukere/seminarer/mobilpres
+entasjoner/Proceedings%20_FoU%20notat_.pdf 
+INNIS, H. A. (1995): The Bias of Communication. University of Toronto Press. 
+IPMARK (2004): "Movimiento Coca-Cola: la importancia del teléfono celular como 
+herramienta de marketing", en IPMark, 624, 1-15 de julio de 2004. 
+HOLOGRAMÁTICA - Facultad de Ciencias Sociales - UNLZ - Año III, Número 5, V1 (2006), pp. 21-39 37
+www.hologramatica.com.ar o www.unlz.edu.ar/sociales/hologramatica 
+ISSN 1668-5024 Inmaculada Martínez                                                                   El desarrollo de la telefonía móvil como  
+                                                                                                                    plataforma mediática 
+KATZ, E. & AARHUS, M. (2002): Perpetual Contact: Mobile Communication, Private 
+Talk, Public Performance. Cambridge. Cambridge University Press. 
+KOPOMAA, T. (2000): The City in Your Pocket: Birth of the Mobile Information 
+Society. Helsinki University Press. 
+LASEN, A. (2002): "A comparative Study of Mobile Phone Use in London, Madrid 
+and Paris". Digital World Research Centre. University of Surrey.          
+http://www.surrey.ac.uk/dwrc/Publications/CompStudy.pdf 
+LING, R. (2000): "The Impact of the Mobile Telephone on Four Established Social 
+Institutions". Presented at the ISSEI2000 Conference of the International Society for 
+the Study of European Ideas, Bergen Norway, 14 - 18 August. 
+MARTÍNEZ, I.J. (2005): La comunicación en el punto de venta: Estrategias de 
+comunicación en el comercio real y on-line. ESIC, Madrid. 
+MATTINEN, M. (2002): The Messaging Portfolio. Radiolinja, Sweden. 
+PÉREZ YUSTE, A. (2002): "El proceso de implantación de la telefonía móvil en 
+España" en Revista Antena. Nº 27. Madrid, COITT. 
+RETTIE, R. et Al. (2001): "M-Commerce: The Role of SMS Text Messages", en 
+COTIM 2001 Proceedings. From E-Commerce to M-Commerce. Rhode Island, 2001. 
+RIFKIN, J., 2000, La era del acceso. La revolución de la nueva economía, Barcelona, 
+Paidós. 
+ROOS, J. P. (1993): "Sociology of Cellular Telephone: The Nordic Model". En 
+Telecommunications Policy, Vol. 17, Nr 6, August. 
+SAMPEDRO, V. (2005): 13-M: Multitudes on-line. Catarata, Madrid. 
+SCHULTZ, B. (2001a): "The transformation of M-Commerce" en Network World, 
+Special Issue on M-Commerce 
+http://www.networkworld.com/ecomm2001/mcom/mcom.html 
+SCHULTZ, B. (2001b): "The fallacy of M-Commerce" en Network World, Special 
+Issue on M-Commerce 
+http://www.networkworld.com/ecomm2001/mcom/mcom.html 
+TELEFÓNICA MÓVILES (2004): Desarrollo del mercado de telefonía móvil y su 
+contribución a la mejora de la productividad en España. Madrid, Fundación 
+Telefónica. 
+VV.AA. (2002): World Telecommunication Development Report 2002. International 
+Telecommunication Union (ITU). 
+(WAN) WORLD ASSOCIATION OF NEWSPAPERS (2004): Shaping the Future of 
+the Newspaper. The Mobile Opportunity. WAN. 2004. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+HOLOGRAMÁTICA - Facultad de Ciencias Sociales - UNLZ - Año III, Número 5, V1 (2006), pp. 21-39 38
+www.hologramatica.com.ar o www.unlz.edu.ar/sociales/hologramatica 
+ISSN 1668-5024 Inmaculada Martínez                                                                   El desarrollo de la telefonía móvil como  
+                                                                                                                    plataforma mediática 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+HOLOGRAMÁTICA - Facultad de Ciencias Sociales - UNLZ - Año III, Número 5, V1 (2006), pp. 21-39 39
+www.hologramatica.com.ar o www.unlz.edu.ar/sociales/hologramatica 
+ISSN 1668-5024

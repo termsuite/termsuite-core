@@ -1,0 +1,610 @@
+An Evaluation of In-Building
+Wireless Coverage
+June 2007
+900 East Hamilton Avenue • Suite 230 • San Jose • California • 95008 • t 408.583.0011 • f 408.583.0031
+www. infonet ics.com • Silicon Valley, CA • Boston, MA • London, UK Copyright © 2007 by Infonetics Research, Inc.
+Entire contents copyrighted by Infonetics Research, Inc. Unauthorized redistribution,
+electronic or otherwise, without prior written approval of Infonetics Research, Inc., is
+prohibited by law. Requests for permission to copy or distribute should be made to
+Infonetics Research, Inc.
+ii Copyright © 2007 by Infonetics Research, Inc. All rights reserved. Reproduction is prohibited. An Evaluation of In-Building Wireless Coverage
+Table of Contents
+I. The Rise of Mobile Data and Smartphone
+Use ...................................................................1
+II. Why In-Building Coverage is Essential.........2
+III. In-Building Coverage Challenges..................5
+IV. High-Level Technology Comparison.............7
+A. Active and Passive Distributed Antenna Systems ..............................7
+B. Picocells and Femtocells..........................................................................10
+C. Voice over IP over Wireless LAN..........................................................12
+V. Integration of Multiple Technologies ............14
+VI. Public vs Private Mobile Networks................15
+VII. Conclusions ....................................................17
+Appendix
+References.........................................................................................................18
+Copyright © 2007 by Infonetics Research, Inc. All rights reserved. Reproduction is prohibited. iii Infonetics Research, Inc.
+List of Exhibits
+Exhibit 1 Voice Technologies Used....................2
+Exhibit 2 Mobility Strategy ..................................4
+Exhibit 3 Active Distributed Antenna System ...8
+Exhibit 4 Strategy for VoIP over WLAN..............13
+iv Copyright © 2007 by Infonetics Research, Inc. All rights reserved. Reproduction is prohibited. An Evaluation of In-Building Wireless Coverage
+I. The Rise of Mobile Data and
+Smartphone Use
+Mobile phones have been a global phenomenon for over a decade now, with
+worldwide mobile subscribers now over 2 billion. In developed countries, 3G
+networks started widespread rollout several years ago, offering broadband-like
+speeds of 1M and above to the handset. Though cellular data services are still
+largely based on simple communications such as e-mail or SMS, 3G adoption is
+increasingly driven by the need for high speed data, for instance using a 3G
+network card inserted into a laptop.
+According to the January 2007 edition of our biannual Mobile and WiFi Phones and
+Subscribers worldwide market share and forecast service, total mobile service
+subscribers reached 2.5B in 2006, with 7% of these being 3G subscribers. The total
+figure is forecast to reach 3.6B by 2010, with 11% being 3G users. In developed
+markets such as North America, Western Europe and parts of Asia-Pacific such
+as Japan, South Korea and Hong Kong the proportion of 3G users is much
+higher.
+3G adoption is being increasingly driven by the need for high speed data-using
+a 3G network card inserted into a laptop, for instance-as well as new content-
+rich multimedia services, including high quality streaming video, fast downloads
+of high resolution images and other large files, and interactive services and
+applications such as advanced gaming.
+In many organizations, mobile phones, smartphones, and other cellular devices
+are becoming primary communication devices-employees move around
+throughout the day attending meetings, and large organizations often host
+visiting customers or employees. In our study published in October 2006, User
+Plans for Wireless LANs and Mobility: North America 2006, we interviewed 240 IT
+and network managers from small, medium, and large organizations across a
+range of vertical sectors about their use of wireless technologies and mobile
+services.
+Exhibit 1 below shows that cellular is the most popular voice call technology,
+second only to desk-based land-line phones (which decline in usage from 2006 to
+Copyright © 2007 by Infonetics Research, Inc. All rights reserved. Reproduction is prohibited. 1 Infonetics Research, Inc.
+2008), with the percentage of organizations using cellular services rising to 65%
+by 2008. Employees need to be constantly connected while they are mobile, but
+lack of coverage impedes cellular phone use.
+Exhibit 1 Voice Technologies Used
+Traditional 75%
+telephony 84%
+Cellular services 65%61%
+Pure IP PBX 32%21%
+Hybrid IP PBX 28%19%
+Hosted VoIP 26%13%
+2008
+VoIP over 26% 2006
+wireless LAN 12%
+0% 20% 40% 60% 80% 100%
+Percent of VoWLAN Respondents
+Source: User Plans for Wireless LANs and Mobility: North America 2006, Infonetics Research
+II. Why In-Building Coverage is
+Essential
+Mobile connections rely on coverage from macrocells, which are deployed on
+masts or high buildings to provide coverage to an area of several kilometers.
+When a mobile subscriber is inside a building, however, building materials such
+as concrete and steel attenuate (weaken) cellular signals-although coverage
+from the macrocell does penetrate the building, the signal strength is reduced
+and can be nonexistent in some areas.
+2 Copyright © 2007 by Infonetics Research, Inc. All rights reserved. Reproduction is prohibited.
+Technologies An Evaluation of In-Building Wireless Coverage
+In many locations within a building, the cellular signal quality may also be
+degraded because of conflicting signals from multiple macrocells. (This can be
+especially problematic in high-rise buildings.) In addition, because macrocells
+provide coverage for a wide area that may house numerous high user-density
+buildings, there could be capacity limitations in any given building due to
+demand from other users in the area. This can lead to longer call setup times, and
+calls being blocked or even dropped altogether.
+Mobile operators are investing significantly on network upgrades for 3G
+services. In the 4Q06 edition of our Radio Access Network Equipment and
+Subscribers quarterly worldwide market share and forecast service, we tracked
+the W-CDMA radio access network equipment market-including NodeBs and
+radio network controllers at $8.3B in 2006, rising to $12.2B by 2010.
+Unless mobile operators reinforce macrocellular investment with an effective in-
+building coverage strategy, they will inhibit their opportunities to grow their 3G
+subscriber base and generate next-generation service revenue for high speed
+services. Rising deployment of 3G-based data services will require wireless
+operators to boost coverage in large commercial and multi-tenant buildings
+because of the need to provide low latency, high speed access networks for 3G
+services.
+In addition, sole-tenant enterprises and multi-tenant building owners are
+increasingly choosing to deploy their own in-building coverage solutions to
+facilitate employee or tenant communications.
+Copyright © 2007 by Infonetics Research, Inc. All rights reserved. Reproduction is prohibited. 3 Infonetics Research, Inc.
+In User Plans for Wireless LANs and Mobility: North America 2006, we asked survey
+respondents to choose from a series of possible mobility strategies those that
+describe the approaches their organization is taking. Exhibit 2 below shows that
+using cellular services for mobile voice on-site is rated by 50%. Using cellular
+services for data on-site, a strategy for 26%, is likely to grow over the next few
+years, driven by the desire to carry a single device for both voice and data as far
+as possible.
+Exhibit 2 Mobility Strategy
+Use wireless LAN for data access
+in-building, no outdoor wireless data access 70%
+Use cellular services for mobile voice off-site 63%
+Use public WiFi hotspot services off-site 57%
+Evolving to converged wired/wireless local
+area network 53%
+Use cellular services for mobile voice on-site 50%
+Use wireless LAN for data access indoors
+and outdoors on-site 47%
+Use cellular services for data access off-site 46%
+Build wireless mesh network across part of
+site or whole campus 35%
+Use wireless LAN for VoIP 30%
+Use cellular services for data access on-site 26%
+Use WiMAX services for connectivity or
+data access 20%
+Use a cellular device with enhanced enterprise
+PBX features extended for mobile voice 19%
+0% 20% 40% 60% 80%
+Percent of Respondents
+Source: User Plans for Wireless LANs and Mobility: North America 2006, Infonetics Research
+3G services are not necessarily voice-oriented, and as such tend to be used in a
+pedestrian or stationary mode (users, though wireless, are mostly static). This
+reinforces the need for pervasive coverage, as the user does not want to have to
+move around to achieve a reliable connection to the network.
+4 Copyright © 2007 by Infonetics Research, Inc. All rights reserved. Reproduction is prohibited.
+Strategies An Evaluation of In-Building Wireless Coverage
+In-building coverage is crucial to user acceptance of 3G services, because a high
+proportion of cellular traffic originates from inside buildings. Despite many
+cellular users being frustrated with less-than-perfect coverage inside buildings,
+more and more people continue to choose cellular as their sole form of
+telecommunication.
+This creates a quality of service need, because simply providing coverage in itself
+is not enough-the coverage must deliver high performance in terms of capacity
+and consistency, not just availability.
+III. In-Building Coverage Challenges
+Macrocellular radio signals attenuate as they pass through the fabric of a
+building, resulting in dead zones, where there is no coverage at all or only
+intermittent coverage, so the primary challenge is to provide consistent, robust
+signal strength throughout the building to maximize the performance of
+handsets and devices attached to the network.
+To achieve this, there are several key considerations. It is necessary to determine
+exactly where the coverage is weak-it may be in several isolated areas or across
+the building or campus. Also, interference can be a significant problem, often
+caused by electronic instruments located within the building. Not all in-building
+wireless systems offer control over the amount of radio energy delivered at each
+internal antenna; however, some can control this energy, limiting interference
+and loss of signal strength.
+The first step is to do a professional site survey, identifying coverage deficiencies,
+determining the impact of outside interference, and outlining the amount and
+type of equipment needed to establish a robust link budget (measurement of the
+quality of the network connection) throughout the building.
+Technical choices for in-building systems range from a simple band-aid that will
+fix a coverage issue in a specific area, to a complete, campus-wide, multi-
+technology architecture. Aside from technical considerations, deployment of in-
+building wireless coverage can be disruptive and expensive, depending on the
+choice of system. Systems vary in their scalability (a consideration if future
+expansion is planned)-some may not be flexible when it comes to being
+Copyright © 2007 by Infonetics Research, Inc. All rights reserved. Reproduction is prohibited. 5 Infonetics Research, Inc.
+upgraded to enable future services to be delivered. Some only need upgrades to
+centralized electronics, and others require fundamental alterations to antennas.
+While indoor coverage is a challenge for all cellular services, supporting
+pervasive 3G services indoors is even more challenging. Most 3G services, such
+as HSDPA and EV-DO, are currently being offered in higher frequencies, so
+operators can re-utilize the lower, cellular frequencies to support high-QAM W-
+CDMA based protocols. Also, newly available spectrum is mostly in higher
+frequencies, with the trend being a shift from 800/900Mhz to 1800/1900 to
+2100Mhz. These higher frequencies are more easily attenuated by building
+materials. This can be a greater challenge for multi-level buildings, and it is not
+feasible-or sometimes legal-for operators to simply ratchet up the power to
+overcome signal dissipation.
+Fundamentally, there is a need for a better link budget to support data
+applications. (The link budget represents the relationship between power
+transmitted and signal strength, and is reduced as the data rate goes up.) HSDPA
+in particular suffers from poor in-building penetration, and brings an additional
+challenge for coverage, namely the reduction of the link budget.
+Finally, it is increasingly important that improving cell phone coverage in an
+office complex is achieved with an appropriate commercial arrangement for the
+mobile operator and the user organization. Several business models exist
+specifying which party bears the cost of that infrastructure:
+  Operator pays: the operator will deploy an in-building solution in
+exchange for a commitment of x number of handsets for x number of
+years; this is by far the most common arrangement
+  Shared cost #1: the operator and user organization share the costs of the
+solution; the user organization allows access to its existing in-building
+cable infrastructure (fiber, for instance), and the operator pays for the
+system hardware and the RF source
+  Shared cost #2: if the user organization is unwilling or unable to commit
+to the necessary number of handsets required for the operator to pay for
+the entire solution, the user organization could pay for a portion of it
+  User organization pays: if the user organization requires a solution for
+multiple operators, it will generally have to bear the costs of the entire
+solution
+6 Copyright © 2007 by Infonetics Research, Inc. All rights reserved. Reproduction is prohibited. An Evaluation of In-Building Wireless Coverage
+IV. High-Level Technology Comparison
+A. Active and Passive Distributed Antenna Systems
+Distributed antenna systems (DASs) have one primary advantage in that they are
+based on technology that is proven as scalable: the mobile network itself. These
+systems operate by using one centralized radio source-and extending its signal
+to multiple antennas deployed at specific points within a building.
+Some DASs use large coaxial cable to distribute the signal through a facility.
+These systems are considered passive because they do not use managed
+electronics in the distribution network. They are generally used for small
+coverage applications where the length of a coaxial cable run is not an issue.
+Length is an issue because the signal in a passive system attenuates over longer
+cable runs, leading to inconsistent signal strength and making system
+engineering difficult. Each antenna's coverage area will vary depending on the
+length of coax to which it is attached, which could mean that the whole system
+will need re-engineering if more capacity or coverage areas are added. In
+addition, passive DAS is often expensive and time-consuming to install because
+of the specialist requirements of installing heavy coaxial cable.
+Copyright © 2007 by Infonetics Research, Inc. All rights reserved. Reproduction is prohibited. 7 Infonetics Research, Inc.
+Active distributed antenna systems use Cat-5/CATV and fiber cabling and
+combine active electronic hubs, fiber optics, and active radio access units to
+distribute the signal from a single, centrally located radio source, as shown in
+Exhibit 3 below.
+Exhibit 3 Active Distributed Antenna System
+RAUs
+(up to 8 per 
+Expansion hubs expansion hub)
+(up to 4 per main hub)
+Main hub
+to & from base 
+station/repeater
+fiber optic cable
+up to
+6km single-mode fiber
+1.5km multi-mode fiber Cat-5/6 ScTP cableup to 100 meters
+(170 meters with Cat-5/6 directional or 
+extender) omni antenna
+Because the signal does not degrade, it has the same strength at every antenna
+point, regardless of the distance from the central radio. Since every antenna is
+simply an extension of the centralized radio source, there is no interference
+among antennas and no limit on the number of antennas that can be deployed
+within a building, or where they can be located. The signal consistency means
+there is no need to traffic engineer the system at the individual antenna level to
+deliver pervasive coverage for high user-density areas.
+Some active DAS systems support optimum signal strength throughout the
+interiors of buildings that span hundreds of thousands of square feet. To increase
+capacity, additional radios can be added to the macro base station. DAS antennas
+themselves are relatively small and inexpensive, and can deliver maximum
+8 Copyright © 2007 by Infonetics Research, Inc. All rights reserved. Reproduction is prohibited. An Evaluation of In-Building Wireless Coverage
+output power to support voice and high speed data. Also, active DAS uses
+standard cabling to connect hubs to RAUs and remote antennas, reducing
+deployment costs and time when compared with passive DAS-unlike passive
+systems that require specialized cable installation, regular IT staff can easily roll
+out the infrastructure with commonly used wiring.
+Sizing is another criterion for delivering effective in-building wireless coverage;
+the size of the building, the capacity of the base stations (number of radio
+channels), the number of services (cellular operators, WiFi, WiMAX, public
+safety, etc.), and the quality of the signal-the average signal strength
+throughout the building-must all be factored in.
+Historically, in-building wireless systems were deployed using large half-inch
+coaxial cables. Because RF signals attenuate as they pass through the cable, the
+longer the coax run, the weaker the signal coming from the antenna. Though it is
+possible improve the performance of passive cable to an extent by using a larger
+diameter cable, this is often impractical.
+Adding active amplifiers in the system boosts the signal in both directions.
+Placing the amplifier next to the antenna has been imperative, due to:
+  The introduction of services at higher frequencies, particularly AWS
+spectrum in North America and UMTS in Europe and Asia
+  Data-specific protocols like HSDPA and EV-DO, which require a much
+more robust link budget to deliver their advertised data rates
+However, placing an amplifier behind 150 meters of coax has significant impact
+on HSDPA being delivered in the UMTS (2.1GHz) band, so the ultimate iteration
+of active system technology places the amplifiers at the end of Ethernet type
+cabling (fiber and Cat-5) so cable attenuation essentially disappears as an issue.
+A middle ground solution also exists-hybrid fiber/coax systems. These systems
+offer some of the advantages of active systems (and are generally classified as
+active systems because they use electronics), in that they have a fiber link
+(connecting the head-end unit with the remote unit), which provides good
+performance and extra reach.
+Conversely, hybrid fiber/coax systems still have many of the drawbacks of
+passive systems, because they use coax cabling to distribute the RF signal from
+Copyright © 2007 by Infonetics Research, Inc. All rights reserved. Reproduction is prohibited. 9 Infonetics Research, Inc.
+their remote units (generally placed in wiring closets) to the antennas in the
+ceilings. This means that the final amplifier in the system is located some
+distance from the antenna point, and the coax used to get to that antenna
+introduces performance issues such as signal loss and uplink noise.
+Both active and passive DAS can support multiple carriers in a single antenna
+system, with a straightforward centralized or hub electronics upgrade required
+to support new carriers or services. Deployment of multi-carrier distributed
+antenna systems is being driven by the need for dual 2G/3G support, multi-
+tenant and enterprise demands, so it is an increasingly important capability to
+support.
+Historically, passive DAS systems based on RF over coaxial cable dominated the
+market, but this has changed rapidly. Now, active systems using RF over fiber
+and Cat-5/CATV cable are leading the market because they offer a more
+economical, better performing alternative, and are also much more flexible in
+terms of meeting future needs, such as more operators, more channels, high
+bandwidth for data applications, etc.
+B. Picocells and Femtocells
+Picocells are a small form factor base transceiver station with a range of several
+hundred feet that can be deployed to create in-building cellular coverage where
+macrocell signal strength is insufficient to support high user-density. IP-based
+picocells support a flat 3G network architecture by integrating multiple network
+elements-including radio network controller functions-into a single device. To
+increase in-building system capacity with picocells, it may be necessary to add
+more radio resources at every picocell location in the building to support more
+users-a costly and time-consuming undertaking.
+Femtocells are smaller home base stations that allow wireless users to
+communicate across any IP access network using a standard mobile handset.
+Some of the potential benefits of using femtocells for indoor coverage include:
+the ability to provide capacity that scales in line with subscriber demand, a
+reduced requirement to deploy additional macrocells to support indoor users,
+and an operational expenditure requirement that is kept in check by IP backhaul
+paid for by the customer.
+10 Copyright © 2007 by Infonetics Research, Inc. All rights reserved. Reproduction is prohibited. An Evaluation of In-Building Wireless Coverage
+To provide adequate coverage in large buildings, it might be necessary to use
+multiple picocells or femtocells. However, because each cell uses the same
+frequency, a large area within the building will receive multiple picocell or
+femtocell signals with similar signal strengths, causing local interference issues
+and prohibiting high data rates.
+Each picocell or femtocell requires backhaul connectivity. Femtocells enable
+mobile operators to route traffic through the IP network and significantly reduce
+opex requirements for backhaul, and at the same time reduce the load on the BSC
+or RNC-susceptible failure points in the mobile access network. However, the
+location of a picocell or femtocell may be determined by the need for backhaul
+connectivity for each cell, and may not be the optimal location to provide the best
+coverage. In contrast, DAS installations place the radio source in a convenient
+location for backhaul-typically the communications room or data center-and
+the antennas may be placed as needed for optimum coverage.
+The management of multiple small radio base stations in a network could create
+interference issues with the macro network, and this problem is not helped by
+the fact that femtocells are currently proprietary.
+Both technical and economic challenges must be overcome before femtocells can
+be widely deployed. On the radio access side, equipment suppliers still need to
+prove that these devices can coexist with the macro network without negatively
+affecting its performance. Integration with core network infrastructure is also
+critical, yet there is uncertainty about how best to achieve this
+In summary, picocells and femtocells are:
+  Newer technologies that reduce the complexity of the components that
+need to be installed
+  Architected for small spaces like homes or small offices, not for large
+enterprise buildings or campuses
+  Single band, single operator
+  Not really scalable building blocks
+In the future, it is highly likely that picocells will be used in combination with
+DAS systems to cover larger venues
+Copyright © 2007 by Infonetics Research, Inc. All rights reserved. Reproduction is prohibited. 11 Infonetics Research, Inc.
+C. Voice over IP over Wireless LAN
+VoIP is an increasingly significant application driver for wireless LAN adoption,
+as voice capability cements the case for mobile networking; the reverse is also
+true: voice becomes a more powerful tool when enabled across a wireless
+platform, and this potential symbiosis has generated much interest and activity
+in the VoIP over wireless LAN (VoWLAN) space, with IP PBX, wireless LAN
+infrastructure, and IP handset vendors all pitching in to build out the wireless
+VoIP ecosystem.
+In User Plans for Wireless LANs and Mobility: North America 2006, we asked survey
+respondents intending to deploy voice over wireless LAN (VoWLAN) to choose
+among a list of strategies the ones that best describe their approach to VoIP over
+their wireless LAN. Exhibit 4 shows that the top two responses are cautious:
+evaluate it but continue using cellular, or eventually deploy it to replicate the
+user's VoIP profile across both the wired or wireless LAN. Many respondents
+still regard VoIP as a future technology, an attractive idea but not ready for
+prime time-and in the meantime cellular, albeit more expensive (in terms of
+"air-time" charges), works fine. (Please see chart, next page.)
+12 Copyright © 2007 by Infonetics Research, Inc. All rights reserved. Reproduction is prohibited. An Evaluation of In-Building Wireless Coverage
+Exhibit 4 Strategy for VoIP over WLAN
+Evaluate VoWLAN but continue
+using cellular for voice 79%
+Deploy unified wired/WLAN architecture to
+enable user's VoIP profile 70%
+Use cellular services for voice on-site in
+addition to VoWLAN 69%
+Use VoWLAN on-site but cellular
+services for voice off-site 69%
+Trial VoWLAN in selected sites or groups 67%
+Use VoWLAN to extend voice connectivity 67%
+Deploy VoWLAN to reduce cellular
+voice service charges 49%
+Deploy VoWLAN as part of general
+network overhaul 48%
+Use a cellular device with enhanced
+PBX features and VoWLAN 44%
+Deploy VoWLAN in greenfield situations 43%
+Deploy VoIP concurrent with WLAN roll-out 41%
+0% 20% 40% 60% 80%
+Percent of VoWLAN LAN Respondents
+Source: User Plans for Wireless LANs & Mobility, North America 2006, Infonetics Research
+It is worth noting that VoWLAN is not free of charge (though many
+organizations perceive it to be), as it incurs significant deployment and
+management costs. In addition, VoWLAN requires the replacement of the
+handset, either with a single-mode WiFi-only device, or a dual-mode
+WiFi/cellular handset. Neither of these are cheap options, particularly when
+having to supply many hundreds of employees with new phones.
+Upgrading an existing data-centric WLAN infrastructure to support voice
+requires four to five times as many access points as originally deployed,
+significantly impacting total cost of ownership for wireless VoIP.
+Copyright © 2007 by Infonetics Research, Inc. All rights reserved. Reproduction is prohibited. 13
+Strategies Infonetics Research, Inc.
+On the handset side, user organizations have two choices for in-building wireless
+VoIP:
+  Single mode WiFi-only phones; this means keeping cellular phones for
+wide area communication, which in turn means employees have to carry
+two phones
+  Dual-mode WiFi/cellular phones: these are currently very expensive with
+limited handset choices, and it is unclear when volumes will be sufficient
+to drive costs down to parity with mobile phone prices
+End-user organizations certainly question whether or not WLAN architectures
+are ready to fully support VoIP, which is not what they were designed for.
+VoWLAN is not standardized. Also, VoWLAN has not proven that it has
+overcome the scalability challenges of only supporting a dozen or so users per
+access point, and though protocols are being developed, there is currently no
+QoS guarantee, so calls are subject to drop-out, and roaming does not always
+work seamlessly. Because 802.11 uses unlicensed spectrum, interference can be a
+problem and can be subject to contention issues if there are multiple users or
+networks-or microwave ovens-in the same vicinity.
+VoWLAN represents two technologies-VoIP and WLAN-that are still
+maturing and converging. End-users are beginning to understand that they need
+a harmonious deployment of both technologies to leverage the full benefits of
+each. It is likely that the technical challenges faced by VoWLAN will be
+overcome in the future, but it is not yet a challenger to cellular as the primary
+mobile voice technology used by organizations today.
+V. Integration of Multiple Technologies
+Active DAS uses electronics to deliver wireless signals from an RF source
+through hubs in the campus communications center, and from there via fiber to
+expansion hubs in each building, which are linked via standard Cat-5/CATV
+cabling to the remote antennas. On a fundamental level, they represent a
+combination of wireless and wired technologies. The RF source could be a
+standard base station, a microcell, a repeater/BDA, or on some occasions a
+picocell.
+14 Copyright © 2007 by Infonetics Research, Inc. All rights reserved. Reproduction is prohibited. An Evaluation of In-Building Wireless Coverage
+But the technology integration can be taken farther. Some active DAS systems are
+a good example of how multiple technologies can be integrated to deliver
+improved in-building wireless coverage, because they support multi-frequency
+coverage-such as GSM and W-CDMA frequencies-and can be upgraded to
+improve capacity, coverage, or support future services without changing antenna
+placements. By supporting multiple frequencies in a single in-building system,
+building or facilities owners can support multiple carriers, and tenants retain a
+choice of service provider.
+DAS can also be combined with picocells, leveraging the benefits of each, to
+provide an in-building solution that delivers the highest performance and lowest
+interference while minimizing network integration requirements. The active DAS
+system enables a higher load of the picocell by expanding its coverage area. If the
+building is modestly sized, and the macrocellular signal is not dominant within
+the building, a single standalone picocell base station would be adequate to
+provide pervasive coverage. However, buildings of several thousand square feet
+would require a higher output power of the pico base station, which could result
+in interference with macrocellular signals. Using an active DAS in combination
+with a picocell addresses this problem, because the DAS effectively distributes
+the picocell's radio signal throughout the facility without requiring higher output
+power.
+VI. Public vs Private Mobile Networks
+There are multiple markets for in-building wireless solutions, including private
+buildings and campuses, public buildings, and facilities such as subway stations.
+Mobile operators are leading efforts with building owners, suppliers, and
+enterprises to unlock the in-building market-a major strategic change from only
+a few years ago.
+Providing in-building coverage is not just a technology issue but a business
+issue. Although the value proposition for improving in-building coverage for
+tenants is well understood, the revenue model for the mobile operator has not
+been as clear. Mobile operators often face an increasing tightening of their capital
+expenditures and must evaluate every potential installation from an ROI
+perspective. They may have different strategies for providing coverage to a
+Copyright © 2007 by Infonetics Research, Inc. All rights reserved. Reproduction is prohibited. 15 Infonetics Research, Inc.
+particular building or facility, but all mobile operators base their evaluations on
+the same fundamental criteria-reducing risk of churn.
+Generally, operators fund the equipment and installation costs in return for the
+promise of an extensive, extended service contract. The main thrust is to prevent
+a significant customer from going to a competitor, and therefore the ROI is
+analyzed against the cost of reacquiring that customer. However, operators will
+demand some type of monogamy, and will exclude other operators from
+deploying equipment for the duration of the contract.
+By deploying capacity indoors, where it is most needed, mobile operators are in
+effect extending the public network into the private domain. They share or
+absorb the cost of deploying the in-building coverage system and retain
+responsibility for operations and maintenance. In the immediate term, they gain
+greater flexibility to introduce disruptive pricing and bundling strategies,
+allowing them to accelerate capture of wireline voice minutes and increase the
+number of subscribers and the revenue from the building tenants. Over the
+longer term, there is the opportunity to develop revenue from high speed 3G
+services, potentially selling upgraded mobile devices to the customer, and lock-in
+usage for outdoors also.
+Multi-carrier coverage solutions allow for improved coverage within large
+buildings and across-campuses without tying the resident enterprise or
+organization to one particular cellular operator. For large public facilities such as
+airports or convention centers, there is a clear benefit for the operator in
+providing pervasive, multi-carrier in-building coverage-there is a constant flow
+of people, many of whom will use their mobile devices to communicate. This
+potentially generates significant revenue that is worth the investment. Usually
+such facilities are carrier-neutral, so in such circumstances an active DAS system
+is a logical solution.
+When deployed appropriately, in-building coverage is more about providing for
+people, rather than physical space. By providing better coverage inside a
+building where there is high use density and thus high demand, the operator
+could be offsetting the need to boost coverage at the macro level, which would be
+a more expensive means of making provision for the high traffic volumes
+generated by a user base concentrated in a specific location.
+16 Copyright © 2007 by Infonetics Research, Inc. All rights reserved. Reproduction is prohibited. An Evaluation of In-Building Wireless Coverage
+In terms of owner-funded coverage systems, the building owner can offer a
+tangible amenity to tenants and/or employees while retaining full control over
+which carriers and services are offered.
+VII. Conclusions
+  Mobile phones are the most widely used wireless connection, and the
+number of applications is increasing rapidly; users are becoming more
+reliant on their mobile device, not just for voice, but for an increasing range
+of data applications; in addition, the value of voice over mobile has
+increased; high value individuals (corporate executives, doctors, technical
+specialists, etc.) need to remain in contact with their colleagues and maintain
+mobility
+  In-building wireless coverage is often poor; macrocellular radio signals
+attenuate as they pass through the fabric of a building, resulting in dead
+zones, where there is no coverage at all or only intermittent coverage
+  Despite the buzz about VoWLAN and dual-mode phones, cellular extension
+is still the main technology used to improve indoor mobile coverage
+  Active and passive DAS can support multiple carriers in a single antenna
+system, with a straightforward centralized or hub electronics upgrade
+required to support new carriers or services
+  Active distributed antenna systems, which use Cat-5 or fiber cabling,
+combine active electronic hubs, fiber optics, and active radio access units to
+distribute the signal from a single, centrally located radio source, and then
+propagate it through multiple remote antennas throughout the building;
+active systems offer clear advantages for larger buildings, campus
+environments and for the distribution of new, data-centric protocols such as
+EV-DO and HSDPA
+  Picocells or femtocells can also improve in-building mobile coverage, but for
+larger buildings it might be necessary to use multiple picocells or femtocells;
+because each cell uses the same frequency, multiple cell signals with similar
+signal strengths will be produced, causing local interference issues and
+prohibiting high data rates; these are effective single-unit solutions, but they
+are not good building blocks for wide-area deployments
+Copyright © 2007 by Infonetics Research, Inc. All rights reserved. Reproduction is prohibited. 17 Infonetics Research, Inc.
+  DAS can be combined with picocells, leveraging the benefits of each, to
+provide an in-building solution that delivers the highest performance and
+lowest interference while minimizing network integration requirements;
+however, this may not be appropriate for all installations; mixing picocells
+does not work on passive DAS because picocells have insufficient power to
+effectively drive a passive DAS
+  By enhancing in-building cellular performance, mobile operators can
+persuade some enterprises NOT to use VoIP over wireless LAN in the future
+  The need to improve the quality and reliability of indoor voice and data
+connections will drive mobile operators to invest heavily in systems that
+boost wireless coverage within large commercial buildings and multi-tenant
+dwellings, to protect against churn by major customers
+  Multi-carrier coverage solutions allow for improved coverage within large
+buildings and across-campuses without tying the resident enterprise or
+organization to one particular cellular operator
+Appendix: References
+  Mobile and WiFi Phones and Subscribers worldwide market share and forecast,
+Infonetics Research's biannual service tracking unit shipments and revenue
+for mobile phones, and single-mode (WiFi only) and dual-mode
+(WiFi/cellular) VoIP handsets, and mobile subscribers
+  User Plans for Wireless LANs and Mobility: North America 2006, for which
+Infonetics Research interviewed 240 small, medium, and large organizations
+about their adoption plans for deploying wireless LANs by August 2006,
+published October 2006
+  Radio Access Network Equipment and Subscribers, Infonetics Research's
+quarterly worldwide market share and forecast service tracking unit
+shipments and revenue for RAN equipment, including base transceiver
+stations, NodeBs, base station controllers, and radio network controllers
+18 Copyright © 2007 by Infonetics Research, Inc. All rights reserved. Reproduction is prohibited. About Infonetics Research
+Infonetics Research (www.infonetics.com) is the premier international market research and
+consulting firm specializing in data networking and telecom. We provide a complete view of the
+market through constant interaction with equipment manufacturers, service providers, end-users,
+chip and component manufacturers, sales channels, and the financial community. We offer
+quarterly market share and forecasting, end-user survey research, service provider survey
+research, and service provider capex analysis. We are respected in the industry for being
+objective and accurate and for delivering on time all the time.
+Services
+! Market Share, Market Size & Forecasts
+! End-User & Service Provider Survey Research
+! Service Provider Capex Analysis & Forecasts
+! Consulting, Retainers & Quick Consults
+! Webinar, Conference & Event Speaking
+! Custom Demand-Side & Brand Market Research
+! Custom Market Size & Forecasts
+! Technology and White Papers
+! Competitive Analysis & Due Diligence
+Coverage Areas
+! Broadband & IPTV
+! Enterprise Voice & Data
+! Network Security
+! Service Provider Capex
+! Service Provider Optical, Metro E, Routing & Switching
+! Service Provider VoIP, IMS & FMC
+! Total Telecom & Datacom
+! Wireless & FMC
+Contact Information
+US Headquarters Boston Metro Office London Office
+900 East Hamilton Ave #230 3 Baldwin Green Common #307 P.O. Box 672
+Campbell, CA 95008 Woburn, MA 01801 Orpington, Kent BR6 6WS
+United States United States United Kingdom
+t +1 408.583.0011 t +1 781.933.9649 t + 44 1689.851.618
+f +1 408.583.0031 f +1 781.933.9659 f + 44 1689.851.618
+Sales
+Larry Howard, Vice President
+larry@infonetics.com
+t +1 408.583.3335
+f +1 408. 583.0031

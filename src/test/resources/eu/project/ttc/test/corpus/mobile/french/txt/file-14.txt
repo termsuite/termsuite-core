@@ -1,0 +1,6787 @@
+FRANÇAIS
+
+LG Electronics France
+Service Clients
+Paris Nord II - 117 avenue des Nations
+BP 59372 Villep inte
+95942 Roissy CDG cedex
+Les heures d'ouverture : du lundi au vendredi de
+8h à 20h sauf jours fériés
+
+www.lg.com/fr
+A pleine puissance, l'écoute prolongée du
+haut-parleur ou de l'oreillette peut endommager
+l'oreille de l'utilisateur. Ce produit est conforme à :
+- l'arrêté du 8 novembre 2005 portant
+application de l'article L. 5232- 1 du code de la
+santé publique relatif aux baladeurs musicaux
+- à la norme NF EN 50332-1:2000
+- à la norme NF EN 50332-2:2003
+Le niveau de pression accoustique du téléphone portable de
+marque LG, type LG-P500 est compatible entre autre avec
+les kits piétons LG et le casque Bluetooth™ HBS-250, en
+accord avec la norme EN 50332-1.
+Le niveau de tension maximale de sortie est conforme à la
+norme EN 50332-2.
+De plus, cet appareil est conforme à l'article 2 de l'Arrêté du
+8 novembre 2005 relatif aux baladeurs musicaux.
+Cet Arrêté est en application avec le droit français, article
+L.5232-1 extrait du 'Code de la santé publique' relatif aux
+baladeurs musicaux.
+
+Guide de l'utilisateur
+
+LG-P500
+Un guide d'utilisation vidéo est également disponible
+sur le site www.mylg.fr
+P/N : MMBB0393907 (1.0) G
+
+www.lg.com
+
+Félicitations ! Vous venez de faire l'acquisition du LGP500, un téléphone portable sophistiqué et compact
+conçu par LG pour tirer parti des toutes dernières
+technologies de communication mobile numérique.
+
+Wi-Fi
+(WLAN)
+
+Recyclage de votre ancien téléphone
+1 Ce symbole, représentant une poubelle sur roulettes barrée d'une croix,
+signifie que le produit est couvert par la directive européenne 2002/96/
+EC.
+2 Les éléments électriques et électroniques doivent être jetés séparément,
+dans les vide-ordures prévus à cet effet par votre municipalité ou être
+rapportés dans un magasin de téléphonie mobile.
+3 Le recyclage de votre téléphone dans une poubelle appropriée ou dans
+un magasin de téléphonie mobile aidera à réduire les risques pour l'
+environnement et votre santé.
+4 For detailed information about disposal of your old appliance, please
+contact your local waste disposal authority, waste disposal service, or
+the store where you purchased the product.
+
+Ce périphérique est conçu pour une
+utilisation dans tous les pays européens.
+En Europe, le WLAN peut être utilisé
+à l'intérieur sans aucune restriction. En
+revanche, il est impossible de l'utiliser à
+l'extérieur en France, en Russie et en Ukraine.
+
+Bluetooth QD ID B016768
+
+LG-P500 Guide de l'utilisateur
+Ce guide va vous aider à vous
+familiariser avec votre téléphone.
+Pour obtenir plus d'informations,
+consultez le site www.lg.com.
+
+• Selon l'opérateur et la version du logiciel
+que vous utilisez, il est possible que
+certaines informations contenues dans
+ce manuel ne s'appliquent pas à votre
+téléphone.
+• Dans la mesure où son écran tactile est
+utilisé comme clavier, ce téléphone n'est
+pas recommandé pour les personnes
+malvoyantes.
+• Copyright ©2010 LG Electronics, Inc.
+Tous droits réservés. LG et le logo LG sont
+des marques déposées de LG Group et de
+ses structures annexes. Toutes les autres
+marques commerciales appartiennent à
+leurs propriétaires respectifs.
+• Google™, Google Maps™, Google
+Mail™, YouTube™, Google Talk™ and
+Android Market™ sont des marques
+commerciales de Google, Inc.
+
+Sommaire
+Avertissement .........................6
+Présentation du téléphone....18
+Installation de la carte SIM et de
+la batterie ............................20
+Installation de la carte
+mémoire..............................22
+Formatage de la carte
+mémoire..............................24
+Votre écran d'accueil ............25
+Conseils d'utilisation de l'écran
+tactile ..................................25
+Remarque ...........................25
+Capteur de proximité ............25
+Verrouillage du téléphone .....26
+Écran de déverrouillage ........27
+Accueil ...............................27
+Ajout de gadgets à votre écran
+d'accueil .............................28
+Retour à une application
+récemment utilisée...............29
+Clavier visuel .......................31
+Saisie de texte .....................32
+Mode Abc ............................32
+Mode 123 ...........................32
+Saisie des lettres accentuées 33
+Exemple ..............................33
+
+2
+
+Configuration d'un compte
+Google...................................34
+Création de votre compte
+Google ................................34
+Connexion à votre compte
+Google ................................34
+Appels ...................................37
+Émission d'un appel .............37
+Appel des contacts...............37
+Réponse à un appel et rejet d'un
+appel...................................37
+Réglage du volume pendant
+l'appel .................................38
+Émettre un second appel ......38
+Affichage des journaux d'appel .
+39
+Paramètres d'appel ..............39
+Contacts................................40
+Recherche d'un contact........40
+Ajout d'un nouveau contact ..40
+Contacts préférés.................40
+Messages/E-mail ..................42
+Messages ............................42
+Envoi d'un message .............42
+Boîte classée ......................43
+Utilisation des émoticônes ....43
+
+M
+m
+O
+m
+L
+R
+M
+s
+C
+m
+U
+c
+A
+c
+R
+A
+té
+A
+s
+S
+v
+
+App
+F
+U
+p
+P
+L
+
+34
+
+34
+
+34
+
+37
+37
+37
+'un
+37
+
+38
+38
+el .
+
+39
+
+40
+40
+40
+40
+
+42
+42
+42
+43
+43
+
+Modification des paramètres de
+message .............................43
+Ouverture de l'application Email et de l'écran Comptes ...44
+Lecture de messages ...........45
+Réponse à un message ........45
+Marquage d'un message à
+suivre ..................................46
+Composition et envoi d'un email ....................................46
+Utilisation des dossiers de
+comptes ..............................48
+Ajout et modification de
+comptes de messagerie .......48
+Réseaux sociaux .................49
+Ajout d'un compte sur votre
+téléphone ............................49
+Affichage et mise à jour de votre
+statut .................................50
+Suppression de comptes sur
+votre téléphone ....................50
+Appareil photo ......................51
+Familiarisation avec le viseur 51
+Utilisation du mode de mise au
+point ...................................52
+Prise de vue rapide .............52
+Lorsque la photo est prise ....53
+
+Utilisation des paramètres
+avancés...............................53
+Visualisation des photos
+enregistrées ........................56
+Caméra vidéo........................57
+Familiarisation avec le viseur 57
+Enregistrement d'une vidéo
+rapide .................................58
+Après avoir enregistré une
+vidéo ...................................58
+Utilisation des paramètres
+avancés...............................59
+Visualisation des vidéos
+enregistrées ........................60
+Vos photos et vidéos .............61
+Réglage du volume lors de la
+lecture d'une vidéo...............61
+Définition d'une photo comme
+papier peint .........................61
+Multimédia............................62
+Mode d'affichage .................62
+Vue chronologique ...............62
+Menu d'options Mes images .63
+Envoi d'une photo ................63
+Envoi d'une vidéo .................63
+Utilisation d'une image .........63
+
+3
+
+Sommaire
+Création d'un diaporama ......64
+Afficher les informations de
+votre photo ..........................64
+Transfert de fichiers depuis un
+périphérique de stockage
+USB ....................................64
+Musique ..............................65
+Lecture d'une chanson .........65
+Utilisation de la radio ............66
+Recherche de stations ..........66
+Réinitialisation des stations ...67
+Écoute de la radio ................67
+Applications Google ..............68
+Google Maps™ ...................68
+Market™ ............................69
+Google Mail™ .....................69
+Google Talk™......................70
+Utilitaires ..............................71
+Réglage des alarmes ............71
+Utilisation de la calculatrice ..71
+Ajout d'un événement à
+l'Agenda..............................71
+Modification de l'affichage
+l'Agenda..............................72
+ThinkFree Office...................72
+Dictaphone ..........................73
+
+4
+
+Enregistrement d'un son ou
+d'une voix............................73
+Envoi du mémo vocal ...........74
+Le Web ..................................75
+Navigateur ...........................75
+Utilisation des options...........75
+Ajout et ouverture de favoris .76
+Modification des paramètres
+du navigateur Web ...............76
+Paramètres ...........................77
+Connexions sans fil ..............77
+Son .....................................77
+Ecran ..................................77
+Lieu et sécurité ...................77
+Applications .........................79
+Synchro. des données ..........79
+Confidentialité ......................79
+Carte SD et mémoire ............79
+Recherche ...........................80
+Date et heure.......................80
+Par. régionaux et texte ..........80
+Accessibilité ........................80
+Saisie et sortie vocales .........80
+À propos du téléphone .........80
+
+WiP
+
+Mis
+M
+D
+Do
+
+Acc
+
+À li
+télé
+Dé
+
+Rec
+util
+
+73
+74
+
+75
+75
+75
+76
+
+76
+
+77
+77
+77
+77
+77
+79
+79
+79
+79
+80
+80
+80
+80
+80
+80
+
+Wi-Fi .....................................81
+Partage de connexion USB ...81
+Mise à jour logicielle.............83
+Mise à jour du logiciel ..........83
+....83
+DivX Mobile
+Données techniques .............85
+Accessoires ..........................86
+À lire avant d'utiliser le
+téléphone mobile ! ................87
+Dépannage............................91
+Recommandations pour une
+utilisation sûre et efficace ...94
+
+5
+
+Avertissement
+En cas de problème avec votre
+téléphone, consultez cette
+section avant d'amener votre
+téléphone pour le faire réparer
+ou d'appeler l'assistance
+clientèle.
+
+accédez à l'application que
+vous souhaitez désinstaller et
+sélectionnez-la.
+3 Appuyez sur Désinstaller,
+puis sur OK pour désinstaller
+l'application de votre choix.
+
+1. Mémoire téléphone
+
+2. Optimisation de
+l'autonomie de la
+batterie
+
+Lorsqu'il reste moins de 10 %
+d'espace disponible dans la
+mémoire du téléphone, ce
+dernier ne peut plus recevoir
+de nouveaux messages. Vous
+devez alors vérifier l'état de la
+mémoire de votre téléphone et
+supprimer certaines données (des
+applications ou des messages,
+par exemple) pour libérer de
+l'espace.
+Gestion d'une application
+1 Dans l'écran d'accueil,
+appuyez sur l'onglet
+Applications et sélectionnez
+Paramètres > Applications >
+Gérer les applications.
+2 Lorsque toutes les
+applications sont affichées,
+6
+
+Vous pouvez prolonger
+l'autonomie de la batterie entre
+les charges en désactivant
+les fonctions dont l'exécution
+en tâche de fond n'est pas
+nécessaire. Vous pouvez
+également contrôler le niveau
+de la batterie utilisé par les
+ressources système et les
+applications.
+Prolongation de l'autonomie de
+la batterie
+- Désactivez les
+radiocommunications dont
+vous n'avez pas besoin. Si
+vous n'utilisez pas les fonctions
+Wi-Fi, Bluetooth et GPS,
+
+d
+-R
+l'
+d
+-D
+a
+a
+G
+et
+-C
+vo
+p
+d
+Vér
+de
+1
+
+A
+
+2
+
+et
+
+er
+
+e
+
+de
+
+ons
+
+désactivez-les.
+- Réduisez la luminosité de
+l'écran et définissez un délai
+de mise en veille plus court.
+- Désactivez la synchronisation
+automatique de diverses
+applications, notamment
+Google Mail™, Google Agenda
+et Google Contacts.
+- Certaines applications que
+vous avez téléchargées
+peuvent diminuer l'autonomie
+de la batterie.
+Vérification du niveau de charge
+de la batterie
+1 Dans l'écran d'accueil,
+appuyez sur l'onglet
+Applications et sélectionnez
+Paramètres > À propos du
+téléphone > État.
+2 L'état de la batterie (charge
+et décharge) et le niveau
+(exprimé en pourcentage)
+sont affichés en haut de
+l'écran.
+
+Vérification et contrôle des
+ressources utilisées par la
+batterie
+1 Dans l'écran d'accueil,
+appuyez sur l'onglet
+Applications et sélectionnez
+Paramètres > À propos du
+téléphone > Utilisation de la
+batterie.
+2 L'autonomie de la batterie est
+affichée en haut de l'écran.
+Grâce à cette indication,
+vous pouvez vérifier si vous
+êtes branché à une source
+d'alimentation, connaître
+le temps d'utilisation sans
+source d'alimentation et la
+durée d'autonomie de la
+batterie lors de la dernière
+utilisation. Les applications
+et services nécessitant un
+fonctionnement avec batterie
+sont répertoriés à l'écran
+et classés dans l'ordre
+décroissant en fonction des
+ressources utilisées.
+7
+
+Avertissement
+3. Installation d'un
+système d'exploitation
+Open Source
+Si vous installez un système
+d'exploitation Open Source
+sur votre téléphone et que
+vous n'utilisez pas le système
+fourni par le fabricant, cela
+risque de provoquer des
+dysfonctionnements.
+AVERTISSEMENT : Si vous
+installez et utilisez un système
+d'exploitation autre que celui
+fourni par le fabricant, votre
+téléphone ne sera plus couvert
+par la garantie.
+
+AVERTISSEMENT : Pour
+protéger votre téléphone et
+les données personnelles
+qu'il contient, téléchargez
+des applications uniquement
+depuis des sources sécurisées,
+telles qu'Android Market™. Si
+certaines applications ne sont
+pas installées correctement
+sur votre téléphone, il se peut
+que ce dernier ne fonctionne
+pas normalement ou qu'une
+erreur grave se produise.
+Vous devrez alors désinstaller
+ces applications et supprimer
+l'ensemble des données et
+paramètres du téléphone.
+
+4. Utilisation du schéma
+de déverrouillage
+Définissez le schéma de
+déverrouillage pour sécuriser
+le téléphone. Grâce à cette
+option, vous pouvez afficher
+une série d'écrans qui vous
+aidera à dessiner un schéma de
+déverrouillage de l'écran.
+8
+
+d
+d
+q
+s
+S
+in
+v
+à
+d
+s
+d
+M
+u
+p
+3
+
+Si v
+sch
+cod
+Si v
+sur
+mo
+les
+la s
+"Ou
+télé
+
+,
+
+a
+
+de
+
+AVERTISSEMENT : Lors
+de l'utilisation du Schéma de
+déverrouillage, il est essentiel
+que vous vous souveniez du
+schéma que vous avez défini.
+Si vous utilisez un schéma
+incorrect 5 fois consécutives,
+vous ne pourrez pas accéder
+à votre téléphone. Vous
+disposez de 5 chances pour
+saisir le bon Schéma de
+déverrouillage, Code PIN ou
+Mot de passe. Si vous avez
+utilisé vos 5 chances, vous
+pouvez réessayer au bout de
+30 secondes.
+
+Si vous avez oublié votre
+schéma de déverrouillage, votre
+code PIN ou votre mot de passe :
+Si vous vous êtes connecté
+sur votre compte Google sur le
+mobile et que vous avez saisi
+les identifiants erronés 5 fois à
+la suite, appuyez sur le bouton
+"Oublié". Pour déverrouiller le
+téléphone, vous devez ensuite
+
+vous connecter à l'aide de votre
+compte Google.
+Si vous n'avez pas créé de
+compte Google sur le téléphone
+ou si vous l'avez oublié, il vous
+faut rétablir les paramètres
+d'usine.
+Attention : Si vous effectuez
+une réinitialisation, toutes
+les applications et données
+utilisateur sont supprimées.
+Veillez à sauvegarder vos
+données importantes avant
+d'effectuer une réinitialisation.
+1 Éteignez votre téléphone.
+2 Maintenez les touches
+suivantes enfoncées pendant
+plus de 10 secondes :
+touche de volume + touche
+Précédent + touche MarcheArrêt/verrouillage.
+3 Lorsque le téléphone
+s'allume, relâchez ces
+touches.
+
+9
+
+Avertissement
+5. Utilisation du mode
+sécurisé et de
+la réinitialisation
+matérielle
+Utilisation du mode sécurisé
+* Résolution d'un
+dysfonctionnement du
+téléphone
+1 Éteignez votre téléphone
+portable et rallumez-le.
+Pendant que votre téléphone
+redémarre, appuyez sur la
+touche Menu et maintenezla enfoncée lorsque le logo
+Android s'affiche. Votre
+téléphone redémarre alors,
+puis affiche l'écran d'accueil
+et le message « Safe mode »
+(Mode sécurisé) dans l'angle
+inférieur gauche.
+2 Sélectionnez Paramètres >
+Applications >Gérer les
+applications, choisissez
+l'application, puis sélectionnez
+une icône Désinstaller.
+
+10
+
+3 Après avoir désinstallé
+l'application, éteignez et
+redémarrez votre téléphone.
+* Utilisation de la réinitialisation
+matérielle (réinitialisation
+d'usine)
+Si la procédure précédente ne
+permet pas de restaurer les
+paramètres d'origine de votre
+téléphone, utilisez la fonction de
+réinitialisation matérielle.
+Si vous allumez le téléphone
+en appuyant simultanément
+sur les touches Marche-Arrêt
++ Accueil + Diminuer le volume
+pendant 10 secondes, le
+téléphone s'allume et effectue
+sur-le-champ une réinitialisation
+d'usine.
+Notez qu'une fois la
+réinitialisation matérielle
+effectuée, toutes les données
+et applications figurant sur votre
+téléphone sont effacées. Cette
+opération ne peut pas être
+annulée.
+
+S
+ré
+to
+d
+s
+s
+im
+u
+
+6.
+
+Pou
+sur
+acc
+aus
+san
+libr
+se
+D'a
+ma
+fon
+con
+con
+Dés
+lors
+de
+bat
+
+.
+
+n
+
+e
+
+de
+
+e
+
+e
+on
+
+tre
+e
+
+AVERTISSEMENT
+Si vous effectuez une
+réinitialisation matérielle,
+toutes les applications et
+données utilisateur seront
+supprimées. Veillez à
+sauvegarder vos données
+importantes avant d'effectuer
+une réinitialisation matérielle.
+
+6. Connexion aux
+réseaux Wi-Fi
+Pour utiliser la fonction Wi-Fi
+sur votre téléphone, vous devez
+accéder à une borne Wi-Fi,
+aussi appelée « point d'accès
+sans fil ». Certaines bornes sont
+libres d'accès et permettent de
+se connecter en toute simplicité.
+D'autres bornes Wi-Fi sont
+masquées ou appellent d'autres
+fonctions de sécurité. Pour s'y
+connecter, le téléphone doit être
+configuré.
+Désactivez la fonction Wi-Fi
+lorsque vous ne l'utilisez pas afin
+de prolonger l'autonomie de la
+batterie.
+
+Activation de la fonction Wi-Fi
+et connexion à un réseau Wi-Fi
+1 Dans l'écran d'accueil,
+appuyez sur l'onglet
+Applications et sélectionnez
+Paramètres > Connexions
+sans fil > Paramètres Wi-Fi.
+2 Appuyez sur Wi-Fi pour
+activer cette fonction et lancer
+la recherche des réseaux WiFi disponibles.
+- La liste des réseaux Wi-Fi
+disponibles s'affiche. Une
+icône de verrouillage permet
+d'identifier les réseaux
+sécurisés.
+3 Appuyez sur un réseau pour
+établir la connexion.
+- Si le réseau est ouvert,
+un message vous invite à
+confirmer votre choix en
+appuyant sur Se connecter.
+- Si le réseau est sécurisé, vous
+êtes invité à saisir un mot de
+passe ou d'autres identifiants
+de connexion. (Contactez votre
+administrateur réseau pour
+11
+plus de détails.)
+
+Avertissement
+4 Dans la barre d'état,
+différentes icônes indiquent
+l'état du réseau Wi-Fi.
+
+7. Utilisation d'une carte
+Micro SD
+Les images, les fichiers
+musicaux et vidéo peuvent être
+enregistrés sur la mémoire
+externe uniquement.
+Avant d'utiliser l'appareil photo
+intégré, vous devez insérer une
+carte mémoire MicroSD dans
+votre téléphone.
+Si vous n'insérez pas de carte
+mémoire, vous ne pourrez pas
+enregistrer vos photos et vidéos.
+REMARQUE : Les applications
+peuvent être enregistrées
+uniquement sur la mémoire
+interne du téléphone.
+
+12
+
+AVERTISSEMENT :
+N'insérez pas et ne retirez pas
+la carte mémoire lorsque le
+téléphone est allumé. Vous
+risqueriez d'endommager
+la carte mémoire ainsi que
+votre téléphone et d'altérer les
+données stockées sur la carte
+mémoire. Pour retirer la carte
+mémoire en toute sécurité,
+sélectionnez Écran d'Accueil >
+Paramètres des applications >
+Carte SD et stockage sur le
+téléphone > Retirer la carte SD.
+
+8. Lancement et
+changement
+d'applications
+Exécuter plusieurs tâches à
+la fois est un véritable jeu
+d'enfant avec Android : les
+applications ouvertes continuent
+de fonctionner même lorsqu'un
+autre programme est lancé.
+Plus besoin de quitter une
+application avant d'en ouvrir
+une autre. Vous pouvez utiliser
+plusieurs applications en cours
+
+d'e
+pro
+gèr
+inte
+en
+l'ut
+app
+des
+Arr
+d'u
+1
+
+A
+
+2 A
+
+AS
+ap
+ut
+-
+
+nt
+n
+
+r
+s
+
+d'exécution et passer d'un
+programme à un autre. Android
+gère chaque application en les
+interrompant et en les lançant
+en fonction des besoins de
+l'utilisateur pour éviter que les
+applications en veille sollicitent
+des ressources inutilement.
+Arrêt d'une application en cours
+d'utilisation
+1 Dans l'écran d'accueil,
+appuyez sur l'onglet
+Applications et sélectionnez
+Paramètres > Applications >
+Gérer les applications.
+2 Accédez à l'application de
+votre choix, puis appuyez sur
+Forcer l'arrêt pour cesser
+d'utiliser ce programme.
+ASTUCE Retour aux
+applications récemment
+utilisées
+- Maintenez l'appui sur
+la touche Accueil ; un
+écran s'affiche ensuite,
+répertoriant les applications
+utilisées récemment.
+
+9. Copiez LG PC Suite
+depuis une Carte SD
+LG PC Suite IV est un logiciel qui
+facilite la connexion entre votre
+mobile et votre PC grâce à un
+câble USB. Vous pourrez ainsi
+utiliser les fonctionalités de votre
+téléphone sur votre PC.
+Fonctions principales de LG PC
+Suite IV
+• Créez, éditez et effacez les
+données de votre mobile.
+• Synchronisez les données
+entre un PC et un téléphone
+'Contacts, Calendrier,
+Messages SMS, Favoris,
+Appels).
+• Transférez vos photos, vidéos
+et musiques facilement en
+faisant glisser simplement les
+fichiers entre le PC et le Mobile
+grâce à votre souris.
+• Transférez vos messages sur
+votre PC depuis votre Mobile.
+• Utilisez votre téléphone comme
+Modem.
+13
+
+Avertissement
+• Mettez à jour le logiciel sans
+perdre vos données.
+Installer LG PC Suite depuis la
+carte Micro SD
+1 Insérez votre carte Micro SD
+(il se peut qu'elle soit déjà
+insérée)
+2 Avant de connecter le câble
+USB, assurez vous que seul le
+mode Stockage de Masse est
+activé sur votre mobile (Dans
+le menu des applications,
+choisissez Paramètres>Carte
+SD et mémoire, puis
+sélectionnez Stockage de
+masse.
+3 Connectez votre mobile à
+votre PC grâce au câble USB.
+4 • Dans la barre de status
+faites glisser l'icône USB.
+• Choisissez USB Connecté et
+Monter.
+• Vous pouvez visualiser le
+contenu du stockage de
+masse sur votre PC et
+transférez les fichiers.
+14
+
+5 • Copiez le dossier LG PC
+Suite sur votre PC depuis le
+mode stockage de masse.
+• Exécutez le fichier 'LG
+installer.exe" sur votre PC et
+suivez les instructions".
+* Lorsque l'installation de LG PC
+Suite IV est complétée, désactivez
+de mode Stockage de Masse, et
+passez au mode LG PC Suite IV
+NOTE: N'effacez aucun autre
+fichier d'installation de votre
+carte mémoire, cela pourrait
+endommager l'application
+préinstallée sur votre mobile.
+
+10. Connexion du
+téléphone à un
+ordinateur via USB
+REMARQUE : Pour synchroniser
+votre téléphone et votre PC à
+l'aide du câble USB, vous devez
+installer le programme LG PC
+Suite sur votre PC. Vous pouvez
+télécharger ce programme sur
+le site Web LG (www.lg.com).
+Rendez-vous sur http://www.
+
+lg.c
+rég
+lang
+con
+Co
+sur
+sim
+PC
+
+Le
+pas
+sui
+-
+
+Le
+Sui
+une
+inst
+1
+
+le
+e.
+
+C et
+
+C
+vez
+et
+V
+
+r
+
+ez
+
+z
+
+lg.com, puis sélectionnez votre
+région, votre pays et votre
+langue. Pour plus d'informations,
+consultez le site Web LG.
+Comme PC Suite est embarquée
+sur la SD Card, vous pouvez
+simplement la copier sur votre
+PC.
+
+Le modèle LG-P500 ne prend
+pas en charge les éléments
+suivants :
+- Connexion PC via Bluetooth
+- LG Air Sync (Web Sync, RClick)
+- OSP (On Screen Phone)
+- Agenda des tâches
+- Mémo
+- Application Java
+Le guide d'utilisateur de PC
+Suite IV s'affiche dans le menu
+une fois le logiciel PC Suite IV
+installé.
+1 Utilisez le câble USB fourni
+avec votre téléphone pour
+connecter le téléphone à un
+port USB de votre ordinateur.
+
+Vous recevez alors une
+notification qui vous avertit
+que le câble USB est bien
+branché.
+2 Ouvrez la barre de notification
+et appuyez sur Connecté avec
+un câble USB.
+3 Appuyez sur Activer le
+périphérique de sockage
+USB pour confirmer le
+transfert des fichiers entre
+la carte microSD de votre
+téléphone et l'ordinateur.
+Lorsque le téléphone est
+connecté en tant que
+périphérique de stockage USB,
+vous recevez une notification.
+La carte microSD de votre
+téléphone est considérée
+comme un périphérique sur
+votre ordinateur. Vous pouvez
+désormais copier des fichiers
+depuis et vers votre carte
+microSD.
+
+15
+
+Avertissement
+11. Déblocage de l'écran
+lors de la connexion
+de données
+Lors de la connexion de données,
+l'écran s'éteint si vous n'y
+touchez pas pendant un certain
+temps. Pour rallumer votre écran
+LCD, il vous suffit de le toucher.
+
+Remarque : Lors de la
+désinstallation de PC Suite IV,
+les pilotes USB et Bluetooth
+ne sont pas automatiquement
+supprimés. Par conséquent,
+vous devez les désinstaller
+manuellement.
+ASTUCE ! Pour utiliser de
+nouveau une carte microSD sur
+votre téléphone, ouvrez la barre
+de notification et appuyez sur
+« Désactiver le périphérique de
+stockage USB ».
+
+Pendant ce transfert, vous ne
+pouvez pas accéder à la carte
+microSD depuis le téléphone ;
+il est donc impossible d'utiliser
+des applications qui dépendent
+de la carte microSD, comme
+16
+
+l'appareil photo, la galerie et la
+musique.
+Pour déconnecter le téléphone
+de l'ordinateur, suivez avec
+attention les instructions de votre
+ordinateur pour déconnecter
+correctement les périphériques
+USB, afin d'éviter de perdre des
+informations sur la carte.
+1 Déconnectez en toute sécurité
+le périphérique USB de votre
+ordinateur.
+2 Ouvrez la barre de notification
+et appuyez sur Eteindre le
+périphérique de stockage.
+3 Appuyez sur Désactiver le
+périphérique de sockage
+USB dans la boîte de dialogue
+qui s'ouvre.
+
+12. Maintien du téléphone
+à la verticale
+Tenez le téléphone à la verticale,
+comme tout autre téléphone
+ordinaire.
+Lorsque vous passez ou
+recevez un appel, ou lorsque
+
+vou
+don
+télé
+où
+pou
+com
+
+13
+
+Si l
+rép
+l'éc
+Ret
+pla
+le p
+le c
+
+14
+
+Vei
+ent
+car
+sur
+
+a
+
+e
+
+otre
+
+s
+es
+
+rité
+e
+on
+
+gue
+
+ne
+
+e,
+
+vous envoyez ou recevez des
+données, évitez de tenir le
+téléphone par le bas, à l'endroit
+où l'antenne se trouve. Cela
+pourrait affecter la qualité de la
+communication.
+
+13. Écran bloqué
+Si le téléphone cesse de
+répondre à vos pressions sur
+l'écran ou si l'écran se bloque :
+Retirez la batterie, remettez-la en
+place et allumez le téléphone. Si
+le problème persiste, contactez
+le centre de services.
+
+14. Ne connectez pas
+votre téléphone à
+l'ordinateur lors de sa
+mise sous tension/
+hors tension.
+Veillez à débrancher le câble
+entre le téléphone et l'ordinateur,
+car des erreurs peuvent exister
+sur votre ordinateur.
+
+17
+
+Présentation du téléphone
+Pour activer le téléphone, maintenez la touche Marche-Arrêt enfoncée
+pendant 3 secondes. Pour désactiver le téléphone, maintenez la touche
+Marche-Arrêt enfoncée pendant 3 secondes et appuyez sur Éteindre.
+Écouteur
+Fenêtre du capteur
+
+Touche Accueil
+- Permet de revenir à
+l'écran d'accueil à
+partir de n'importe
+quel écran.
+Touche Menu
+- Permet de visualiser
+les options disponibles.
+
+Touche Marche-Arrêt/Verrouillage
+- Permet d'allumer ou d'éteindre
+votre téléphone ; pour ce
+faire, appuyez sur la touche et
+maintenez-la enfoncée.
+- Éteint l'écran et verrouille l'appareil.
+
+Touche Retour
+- Permet de revenir à l'écran
+précédent.
+Touche Rechercher
+- Permet d'effectuer des recherches
+sur le Web et dans les données de
+votre téléphone.
+
+AVERTISSEMENT : Le fait de poser un objet lourd ou de s'asseoir sur
+le téléphone risque d'endommager l'écran LCD et les fonctionnalités
+de l'écran tactile. Évitez de couvrir le film de protection situé sur le
+capteur de proximité de l'écran LCD. Cela risquerait de provoquer des
+dysfonctionnements au niveau du capteur.
+ASTUCE ! Appuyez sur la touche Menu lorsque vous sélectionnez une
+application pour vérifier les options disponibles.
+ASTUCE ! Le LG-P500 ne prend pas en charge la visiophonie.
+ASTUCE ! Si le LG-P500 rencontre des erreurs en cours d'utilisation ou si vous
+ne pouvez pas l'activer, enlevez la batterie, remettez-la en place et rallumez le
+téléphone au bout de 5 secondes.
+
+18
+
+Con
+stér
+
+Tou
+- Su
+de
+so
+- Pe
+ré
+- Lo
+pi
+in
+
+Pr
+m
+
+Len
+l'ap
+
+Em
+de
+mé
+Mic
+
+age
+
+areil.
+
+Connecteur du casque
+stéréo
+
+Touche
+Marche-Arrêt/
+Verrouillage
+
+Touches de volume
+- Sur l'écran d'accueil : permet
+de régler le volume de la
+sonnerie.
+- Pendant un appel : permet de
+régler le volume des écouteurs.
+- Lors de la lecture d'une
+piste : contrôle le volume sans
+interruption.
+Prise du chargeur/du câble
+micro-USB
+
+Microphone
+
+hes
+s de
+
+une
+
+ous
+z le
+
+Lentille de
+l'appareil photo
+Emplacement
+de carte
+mémoire
+Micro SD
+
+Cache arrière
+
+Batterie
+
+Logement de
+carte SIM
+
+19
+
+Présentation du téléphone
+Installation de la carte
+SIM et de la batterie
+Avant de pouvoir commencer
+à découvrir votre nouveau
+téléphone, vous devez le
+configurer. Pour installer la carte
+SIM et la batterie :
+1 Pour retirer le cache de
+la façade arrière, tenez
+fermement le téléphone
+dans votre main. Appuyez
+fermement sur le cache de la
+façade arrière avec le pouce
+de l'autre main. Pour finir,
+soulevez le couvercle de la
+batterie avec votre index.
+
+3
+
+2 Faites glisser la carte SIM
+dans le logement approprié.
+Assurez-vous que la zone de
+contact dorée de la carte est
+bien orientée vers le bas.
+
+20
+
+4
+
+.
+de
+st
+
+3 Insérez la batterie dans son
+logement en alignant ses
+contacts dorés avec ceux du
+téléphone
+
+Chargement de la
+batterie.
+Faites glisser le couvercle du
+connecteur du chargeur situé
+sur le côté du LG-P500. Insérez
+le chargeur, puis branchez-le sur
+une prise murale. Laissez le LGP500 en charge jusqu'à ce que
+s'affiche.
+
+4 Replacez le cache de la
+façade arrière du téléphone.
+
+21
+
+Présentation du téléphone
+REMARQUE : Pour optimiser la
+durée de vie de la batterie, celle-ci
+doit être chargée complètement à
+la première utilisation.
+REMARQUE : Le LG-P500 est doté
+d'une antenne interne. Veillez à ne
+pas érafler ni endommager cette
+zone à l'arrière du téléphone,
+sous peine de détériorer les
+performances.
+
+Installation de la carte
+mémoire
+Pour stocker des fichiers
+multimédia, par exemple des
+images prises avec l'appareil
+photo intégré, vous devez insérer
+une carte mémoire dans votre
+téléphone.
+Pour insérer une carte mémoire :
+REMARQUE : Le LG-P500 prend
+en charge les cartes mémoire
+allant jusqu'à 32 Go.
+
+1 Avant d'insérer ou de retirer
+une carte mémoire, éteignez
+le téléphone. Retirez la façade
+arrière.
+22
+
+2 Ouvrez le taquet protégeant
+l'emplacement, puis insérez
+la carte mémoire dans son
+logement. Assurez-vous que
+la zone de contact dorée de
+la carte est bien orientée vers
+le bas.
+
+3 Abaissez le taquet de
+protection.
+
+t
+z
+
+e
+e
+ers
+
+AVERTISSEMENT
+N'insérez pas et ne retirez
+pas la carte mémoire lorsque
+le téléphone est allumé. Vous
+risqueriez d'endommager la
+carte mémoire ainsi que votre
+téléphone et d'altérer les
+données stockées sur la carte
+mémoire.
+
+23
+
+Présentation du téléphone
+Formatage de la carte
+mémoire
+Votre carte mémoire est peutêtre déjà formatée. Si ce n'est
+pas le cas, vous devez le faire
+avant de pouvoir l'utiliser.
+AVERTISSEMENT : Lors du
+formatage de la carte mémoire,
+tout son contenu est effacé.
+
+1 Sur l'écran d'accueil, appuyez
+sur l'onglet Applications
+pour ouvrir le menu des
+applications.
+2 Faites défiler le menu et
+appuyez sur Paramètres.
+3 Accédez à Carte SD et
+mémoire.
+4 Désactivez la carte SD.
+5 Appuyez sur Formater la
+carte SD, puis confirmez votre
+choix.
+6 Si vous avez activé le
+verrouillage par schéma,
+dessinez le schéma
+correspondant et sélectionnez
+Tout effacer.
+24
+
+Vo
+
+La carte est alors formatée et
+prête à l'emploi.
+
+Co
+l'é
+
+REMARQUE : Si votre carte
+mémoire contient des données,
+la structure des dossiers peut
+être modifiée après le formatage
+suite à la suppression de tous les
+fichiers.
+
+Voi
+vou
+télé
+App
+me
+app
+cor
+App
+pou
+ou
+de
+cor
+Glis
+sur
+déf
+dép
+Eff
+déf
+dép
+l'éc
+glis
+
+ASTUCE !
+Si votre carte mémoire est déjà
+activée, vous pouvez la formater
+en procédant comme suit.
+Appuyez sur Applications >
+Paramètres > Carte SD et
+mémoire > Formater la carte SD.
+
+Votre écran d'accueil
+et
+
+,
+
+e
+es
+
+er
+
+D.
+
+Conseils d'utilisation de
+l'écran tactile
+Voici quelques astuces pour
+vous familiariser avec votre
+téléphone.
+Appuyer : pour sélectionner un
+menu/une option ou ouvrir une
+application, appuyez sur l'icône
+correspondante.
+Appuyer de façon prolongée :
+pour ouvrir un menu d'options
+ou déplacer un objet, appuyez
+de façon prolongée sur l'icône
+correspondante.
+Glisser : faites glisser votre doigt
+sur l'écran tactile pour faire
+défiler une liste ou effectuer un
+déplacement lent.
+Effleurement : pour faire
+défiler une liste ou effectuer un
+déplacement rapide, cliquez sur
+l'écran tactile (faites rapidement
+glisser l'icône et relâchez-la).
+
+Remarque
+Pour sélectionner un élément,
+appuyez sur le centre de
+l'icône.
+• N'exercez pas une pression
+trop forte sur l'écran tactile ;
+celui-ci est suffisamment
+sensible pour détecter une
+pression légère et sûre.
+• Appuyez du bout du doigt sur
+l'option souhaitée. Veillez à
+ne pas appuyer sur d'autres
+touches.
+•
+
+Capteur de proximité
+Au cours de la réception ou de
+l'émission d'appels, ce capteur
+détecte la présence d'objets
+lorsque le téléphone est à
+proximité de l'oreille, et désactive
+le rétroéclairage et verrouille
+le clavier tactile de manière
+automatique. Cela permet à
+la batterie de fonctionner plus
+longtemps et empêche le
+dysfonctionnement du clavier
+25
+
+Votre écran d'accueil
+tactile grâce au verrouillage
+automatique des touches
+pendant les appels.
+
+Verrouillage du téléphone
+Lorsque vous n'utilisez pas
+le LG-P500, appuyez sur la
+touche Marche/Arrêt pour
+verrouiller votre appareil. Cela
+permet de prévenir les pressions
+accidentelles et d'économiser la
+batterie.
+De plus, lorsque vous n'utilisez
+pas votre téléphone, au bout
+d'un instant l'écran d'accueil (ou
+autre écran affiché) est remplacé
+par l'écran de verrouillage afin
+de préserver la batterie.
+- Si un programme est ouvert
+lors de cette manipulation,
+il se pourrait qu'il continue
+d'être actif même en mode
+Verrouillage. Il est conseillé de
+fermer tous les programmes
+avant d'appliquer le mode
+Verrouillage afin de ne pas
+entraîner de surcoûts (liés, par
+exemple, à un appel vocal, à
+26
+
+un accès Internet ou à une
+transmission de données).
+Paramétrage d'un schéma
+de déverrouillage : vous avez
+la possibilité de dessiner un
+schéma de déverrouillage
+personnalisé en reliant quatre
+points minimum.
+Si vous définissez un schéma,
+l'écran du téléphone se
+verrouillera. Pour déverrouiller
+l'écran, reproduisez le schéma
+que vous avez dessiné.
+Attention : Lorsque vous
+dessiner un schéma de
+déverrouillage, vous devez
+d'abord créer votre compte
+Google mail.
+Attention : Si vous faites plus
+de 5 erreurs de suite dans
+le schéma, vous ne pourrez
+plus déverrouiller le téléphone.
+Dans ce cas, il se peut que vos
+informations personnelles et vos
+données téléchargées soient
+supprimées.
+
+Éc
+
+Lor
+LG
+de
+vot
+pou
+
+Mo
+Sur
+app
+qu'
+vou
+de
+sim
+dro
+
+Pou
+app
+
+Écran de déverrouillage
+Lorsque vous n'utilisez pas votre
+LG-P500, celui-ci affiche l'écran
+de verrouillage. Faites glisser
+votre doigt de gauche à droite
+pour déverrouiller l'écran.
+
+Accueil
+
+a
+
+.
+s
+os
+
+Accueil, Précédent ou MarcheArrêt. L'écran de verrouillage
+s'affiche. Appuyez sur l'icône
+de verrouillage et faites glisser
+votre doigt vers la droite pour
+déverrouiller l'écran d'accueil.
+Le dernier écran sur lequel vous
+avez travaillé s'ouvre.
+
+Mode Silencieux
+Sur la barre de notification,
+pour
+appuyez sur l'icône
+. Ou si
+qu'elle devienne
+vous n'utilisez pas le schéma
+de déverrouillage, faites tout
+vers la
+simplement glisser
+droite.
+
+Pour réactiver votre téléphone,
+appuyez sur la touche Menu,
+
+Il vous suffit de déplacer votre
+doigt vers la gauche ou vers la
+droite pour les afficher.
+Vous pouvez également
+personnaliser chaque volet
+au moyen de widgets ou de
+raccourcis vers vos applications,
+dossiers et fonds d'écran
+préférés.
+REMARQUE : Les fonds d'écran
+peuvent varier en fonction des
+fournisseurs.
+
+Sur votre écran d'accueil LG,
+des touches de raccourci sont
+affichées en bas de l'écran.
+Les touches de raccourci vous
+permettent d'accéder d'une
+simple pression aux fonctions
+
+27
+
+Votre écran d'accueil
+que vous utilisez le plus.
+Appuyez sur l'icône
+Téléphone pour afficher le
+pavé de numérotation tactile
+permettant d'émettre un appel.
+Utilisez cette touche pour
+ouvrir la liste des contacts.
+Appuyez sur l'onglet
+Applications en bas de l'écran.
+Toutes les applications installées
+sur votre téléphone s'affichent.
+Appuyez sur l'icône de
+Message pour accéder au menu
+de la messagerie.
+Ce menu vous permet de créer
+un nouveau message.
+Appuyez sur cette touche
+pour ouvrir le site de Google.
+
+28
+
+Ajout de gadgets à votre
+écran d'accueil
+Vous pouvez personnaliser votre
+écran d'accueil en y ajoutant
+des raccourcis, des widgets
+ou des dossiers. Pour plus de
+commodité dans l'utilisation
+de votre téléphone, ajoutez vos
+widgets préférés sur l'écran
+d'accueil.
+1 Sur l'écran d'accueil,
+appuyez sur la touche Menu
+et sélectionnez Ajouter.
+Ou exercez une pression
+prolongée sur la partie vierge
+de l'écran d'accueil.
+2 Dans le menu Ajouter à
+l'écran d'accueil, appuyez sur
+le type d'élément à ajouter.
+3 Par exemple, sélectionnez
+Dossiers dans la liste en
+appuyant dessus.
+4 Une nouvelle icône de
+dossier apparaît sur l'écran
+d'accueil. Faites-la glisser
+sur le volet de votre choix à
+l'emplacement souhaité et
+
+AST
+icô
+d'a
+la p
+vou
+d'a
+AST
+une
+l'éc
+pre
+de
+sup
+ver
+AST
+sup
+pré
+peu
+l'éc
+
+re
+
+re
+
+s
+
+u
+
+ge
+
+sur
+
+relâchez votre pression sur
+l'écran.
+ASTUCE ! Pour ajouter une
+icône d'application à l'écran
+d'accueil, appuyez et maintenez
+la pression sur l'application que
+vous souhaitez ajouter à l'écran
+d'accueil.
+ASTUCE ! Pour supprimer
+une icône d'application sur
+l'écran d'accueil, effectuez une
+pression prolongée sur l'icône
+de raccourci que vous souhaitez
+supprimer et faites-la glisser
+vers
+.
+ASTUCE ! Vous ne pouvez pas
+supprimer les applications
+préchargées (seules leurs icônes
+peuvent être supprimées de
+l'écran).
+
+Retour à une application
+récemment utilisée
+1 Appuyez sur la touche
+Accueil et maintenez-la
+enfoncée. L'écran affiche
+une fenêtre contextuelle avec
+les dernières applications
+utilisées.
+2 Appuyez sur une icône
+pour ouvrir l'application
+correspondante. Ou appuyez
+sur Retour pour revenir à
+l'application en cours.
+
+Barre de notification
+La barre de notification s'affiche
+en haut de l'écran.
+
+Wi-Fi Bluetooth GPS Connexion Sonnerie
+3G
+
+à
+29
+
+Votre écran d'accueil
+Le tableau ci-dessous explique
+la signification des icônes
+susceptibles d'apparaître dans la
+barre d'état.
+
+Appuyez sur la barre de
+notification et avec le doigt,
+développez-la vers le bas. Sur
+l'écran d'accueil, appuyez sur
+la touche Menu et sélectionnez
+Notifications. Ici, vous pouvez
+vérifier et gérer l'état des
+fonctions Wi-Fi, Bluetooth et GPS
+ainsi que les autres notifications.
+
+Affichage de la barre
+d'état
+La barre d'état regroupe
+plusieurs icônes fournissant
+des informations telles que la
+puissance du signal, l'arrivée de
+nouveaux messages, le niveau
+de charge de la batterie et
+les connexions de données et
+Bluetooth actives.
+
+[Barre d'état]
+Icône Description
+Pas de carte SIM
+Aucun signal
+La fonction Wi-Fi est
+activée et la connexion
+assurée
+Casque avec fil
+Transfert d'appel
+Appel en attente
+Haut-parleur
+Mode Muet
+Appel manqué
+Bluetooth activé
+Bluetooth connecté
+
+30
+
+Icô
+
+e
+
+s la
+
+n
+
+Icône Description
+Avertissement système
+Alarme
+Nouveau message vocal
+Mode Avion
+Silencieux
+Vibration
+Pas de carte SD
+Batterie chargée
+Batterie en charge
+Données entrantes
+Données sortantes
+Données entrantes et
+sortantes
+USB vers PC
+Télécharger
+
+Icône Description
+GPS activé
+
+Clavier visuel
+Saisissez votre texte à l'aide du
+clavier visuel. Le clavier visuel
+s'affiche automatiquement sur
+l'écran pour que vous saisissiez
+votre texte. Pour afficher le
+clavier manuellement, appuyez
+simplement sur le champ Texte
+que vous souhaitez compléter.
+Clavier Qwerty (clavier du
+téléphone)
+Touche Maj : appuyez une
+fois pour que la lettre suivante
+s'inscrive en majuscule. Appuyez
+deux fois pour ne saisir que des
+majuscules.
+Touche XT9 : active et
+désactive le mode XT9.
+Touche Réglage
+
+Charger
+GPS en acquisition
+31
+
+Votre écran d'accueil
+Touche de chiffres et
+symboles : permet de basculer
+entre les numéros, symboles et
+saisie de texte. majuscules.
+Touche Entrée
+permet de faire disparaître
+le clavier de l'écran.
+Touche Supprimer
+permet de déplacer les
+curseurs entre les lettres.
+
+Saisie de texte
+Clavier
+permet de basculer entre les
+claviers de chiffres, de symboles
+et de lettres.
+Utilisez
+pour alterner
+minuscules et majuscules. Le
+cercle de couleur du bouton
+vous indique si la saisie en
+majuscule est verrouillée (vert)
+ou activée pour le prochain
+caractère uniquement (orange).
+Pour entrer un espace, appuyez
+sur
+.
+32
+
+ASTUCE ! Pour alterner entre le
+clavier Qwerty et le clavier de
+téléphone, appuyez sur et
+choisissez parmi les dispositions
+du clavier.
+
+Sa
+ac
+
+Ce mode vous permet de saisir
+des lettres en appuyant une,
+deux, trois ou quatre fois sur la
+touche correspondant à la lettre
+désirée, jusqu'à ce que celle-ci
+apparaisse.
+
+Lor
+Fra
+lan
+pou
+spé
+(pa
+Lor
+dis
+sur
+le c
+app
+
+Mode 123
+
+Ex
+
+Mode Abc
+
+Ce mode vous permet de saisir
+plus rapidement des chiffres
+dans un message texte (un
+numéro de téléphone, par
+exemple). Appuyez sur les
+touches correspondant aux
+chiffres souhaités avant de
+revenir manuellement au mode
+de saisie de texte approprié.
+
+Pou
+faç
+«a
+Apr
+«a
+de
+fait
+ou
+car
+
+e
+
+ns
+
+r
+
+a
+re
+ci
+
+r
+
+e
+
+Saisie des lettres
+accentuées
+Lorsque vous sélectionnez
+Français ou Espagnol comme
+langue de saisie de texte, vous
+pouvez saisir les caractères
+spéciaux français ou espagnol
+(par ex., « à »).
+Lorsque la lettre correspondante
+disparaît, appuyez plusieurs fois
+sur la touche, jusqu'à ce que
+le caractère accentué souhaité
+apparaisse.
+
+Exemple
+Pour insérer « à », appuyez de
+façon prolongée sur la touche
+« a ».
+Après disparition de la lettre
+« a... », conservez la pression
+de votre doigt sur l'écran et
+faites-le glisser vers la gauche
+ou la droite pour sélectionner le
+caractère souhaité.
+
+33
+
+Configuration d'un compte Google
+La première fois que vous ouvrez
+l'application Google sur votre
+téléphone, il vous est demandé
+de vous connecter à l'aide de
+votre compte Google. Si vous
+n'avez pas de compte Google,
+un message vous invite à en
+créer un.
+
+Création de votre compte
+Google
+1 Sur l'écran d'accueil, appuyez
+sur l'onglet Applications
+pour ouvrir le menu des
+applications.
+2 Appuyez sur Google mail,
+puis sur Suivant > Créer
+pour ouvrir l'assistant de
+configuration de Google
+Mail™.
+3 Appuyez sur un champ de
+texte pour ouvrir le clavier
+tactile et saisissez votre nom
+ainsi qu'un nom d'utilisateur
+pour votre compte Google.
+Lors de la saisie du texte,
+vous pouvez passer au champ
+suivant en appuyant sur
+34
+
+Suivant sur le clavier.
+4 Après avoir saisi vos nom et
+nom d'utilisateur, appuyez
+sur Suivant. Votre téléphone
+communique avec les
+serveurs Google et vérifie
+que le nom d'utilisateur est
+disponible.
+5 Saisissez votre mot de passe
+une première fois, puis une
+deuxième fois. Puis suivez
+les instructions et entrez
+les informations requises et
+facultatives concernant le
+compte. Patientez pendant la
+création de votre compte par
+le serveur.
+
+Connexion à votre
+compte Google
+1 Saisissez votre adresse e-mail
+et votre mot de passe, puis
+appuyez sur Se connecter.
+Attendez la connexion.
+2 Lorsque la connexion est
+établie, vous pouvez utiliser
+la messagerie Google Mail™
+
+3
+
+Lor
+vou
+Ma
+And
+Ma
+télé
+d'A
+sau
+les
+des
+sur
+
+IMP
+•C
+te
+fo
+p
+
+mail
+
+et bénéficier des services
+Google sur votre téléphone.
+3 Une fois votre compte
+Google configuré sur votre
+téléphone, ce dernier sera
+automatiquement synchronisé
+sur le Web avec votre
+compte Google. (En fonction
+de vos paramètres de
+synchronisation.)
+Lorsque la connexion est établie,
+vous pouvez utiliser Google
+Mail™, Google Calendar,
+Android Market™ et Google
+Map™ ;
+télécharger des applications
+d'Android Market™ ;
+sauvegarder vos paramètres sur
+les serveurs Google et profiter
+des autres services de Google
+sur votre téléphone.
+
+™
+
+IMPORTANT
+• Certaines applications
+telles que le Calendrier ne
+fonctionnent qu'avec le
+premier compte Google que
+
+t
+
+e
+
+se
+
+t
+
+la
+ar
+
+vous avez ajouté. Si vous
+prévoyez d'utiliser plus d'un
+compte Google sur votre
+téléphone, assurez-vous de
+bien vous connecter avec le
+compte que vous avez choisi.
+Lors de la connexion, vos
+contacts, vos messages Google
+mail, vos événements et les
+autres informations liées à ces
+applications ou services Web
+sont synchronisés avec votre
+téléphone. Si vous ne vous
+connectez pas à un compte
+Google lors de la configuration
+du téléphone, vous devrez
+vous connecter ou créer un
+compte Google lorsque vous
+utiliserez pour la première fois
+une application nécessitant
+un compte Google (Google
+mail ou Android Market™, par
+exemple).
+• Si vous souhaitez utiliser la
+fonction de sauvegarde pour
+établir les paramètres de ce
+téléphone depuis un autre
+35
+
+Configuration d'un compte Google
+
+Ap
+
+téléphone prenant en charge
+Android 2.0 ou une version
+ultérieure, vous devez vous
+connecter à un compte Google
+lors de la configuration. Si
+vous ne vous connectez pas
+lors de la configuration, vos
+paramètres ne seront pas
+rétablis.
+• Si vous disposez d'un
+compte professionnel lié à
+votre entreprise ou à une
+organisation, contactez le
+service informatique concerné
+pour connaître les dispositions
+à prendre pour se connecter.
+
+Ém
+
+1 A
+2
+
+3 A
+4
+
+A
++
+in
+fa
+
+Ap
+
+1 A
+
+2 A
+
+36
+
+Appels
+Émission d'un appel
+1 Appuyez sur
+pour ouvrir
+le clavier.
+2 Saisissez le numéro sur
+le clavier. Pour effacer un
+chiffre, appuyez sur l'icône
+Effacer
+.
+3 Appuyez sur l'icône Appeler
+pour émettre l'appel.
+4 Pour mettre fin à un appel,
+appuyez sur Raccrocher .
+ASTUCE : Pour saisir le signe
++ au début d'un numéro
+international, appuyez de
+façon prolongée sur
+.
+
+Appel des contacts
+pour ouvrir
+1 Appuyez sur
+votre liste de contacts.
+2 Après avoir appuyé sur
+Rechercher, parcourez votre
+liste de contacts ou saisissez
+l'initiale (ou les premières
+lettres) du contact que vous
+souhaitez appeler.
+
+3 Dans la liste, appuyez sur le
+contact que vous souhaitez
+appeler.
+
+Réponse à un appel et
+rejet d'un appel
+Avec l'écran verrouillé
+Lorsque votre téléphone sonne,
+faites glisser l'icône Répondre
+vers la droite.
+Faites glisser l'icône Refuser
+vers la gauche pour rejeter
+l'appel entrant. Faites glisser la
+barre de message d'excuse du
+bas si vous voulez envoyer un tel
+message. Si l'appelant vous est
+inconnu, cette barre de message
+d'excuse n'est pas disponible.
+Avec l'écran déverrouillé
+Lorsque le téléphone sonne,
+appuyez sur l'icône Répondre
+. Appuyez sur l'icône Refuser
+pour rejeter un appel
+entrant.
+
+37
+
+Appels
+Appuyez sur la barre de
+message d'excuse du bas si
+vous voulez envoyer un tel
+message. Si l'appelant vous est
+inconnu, cette barre de message
+d'excuse n'est pas disponible.
+
+Réglage du volume
+pendant l'appel
+Pour régler le volume au cours
+d'un appel, utilisez le bouton de
+volume haut/bas, situé sur le
+côté droit du téléphone.
+
+Émettre un second appel
+1 Pendant votre appel initial,
+puis sur la touche .
+Ensuite, sélectionnez le
+numéro à appeler.
+2 Composez le numéro ou
+recherchez-le dans vos
+contacts.
+3 Appuyez sur l'icône Appeler
+pour émettre l'appel.
+
+38
+
+4 Les deux appels s'affichent
+sur l'écran d'appel. L'appel
+initial est verrouillé et mis en
+attente.
+pour
+5 Appuyez sur
+basculer entre les appels.
+Ou appuyez sur
+pour
+organiser un appel de
+conférence téléphonique.
+6 Pour mettre fin aux appels
+actifs, appuyez sur Fin
+d'appel. S'il n'y a aucun
+appel actif, cette fonction
+annule la Mise en attente.
+Pour mettre fin à tous les
+appels simultanément,
+appuyez sur la touche Menu
+et sélectionnez Mettre fin à
+tous les appels.
+Remarque : Vous serez facturé
+pour chaque appel émis.
+
+Aff
+d'a
+
+Sur
+sur
+App
+Une
+app
+abs
+
+A
+d
+h
+la
+le
+
+A
+to
+le
+su
+e
+
+n
+
+u
+à
+
+Affichage des journaux
+d'appel
+Sur l'écran d'accueil, appuyez
+sur
+et choisissez l'onglet
+Appels.
+Une liste complète de tous les
+appels émis, reçus et appels en
+absence est affichée.
+ASTUCE : Pour afficher les
+détails de chaque appel (date,
+heure et durée), appuyez sur
+la ligne correspondante dans
+le journal des appels.
+
+Paramètres d'appel
+Vous pouvez configurer les
+paramètres d'appel, tels que
+le transfert d'appel et autres
+fonctions particulières proposées
+par votre opérateur.
+1 Faites défiler le menu et
+appuyez sur Paramètres.
+2 Appuyez sur Paramètres
+d'appel.
+
+ASTUCE : Appuyez sur la
+touche Menu, puis sur Effacer
+le journal d'appels pour
+supprimer tous les éléments
+enregistrés.
+
+39
+
+Contacts
+Vous avez la possibilité d'ajouter
+des contacts sur votre téléphone
+et de les synchroniser avec
+ceux de votre compte Google
+ou d'autres comptes prenant en
+charge la synchronisation des
+contacts.
+
+Recherche d'un contact
+Vous pouvez rechercher un
+contact des deux façons
+suivantes :
+Sur l'écran d'accueil
+1 Dans l'écran d'accueil,
+pour ouvrir
+appuyez sur
+votre liste de contacts.
+2 Appuyez sur Rechercher et
+saisissez le nom du contact à
+l'aide du clavier.
+
+Ajout d'un nouveau
+contact
+1 Dans l'écran d'accueil,
+appuyez sur
+, puis
+saisissez le nom du nouveau
+contact. Appuyez ensuite sur
+la touche Menu, sur Créer un
+40
+
+nouveau contact.
+2 Pour associer une image au
+nouveau contact, appuyez sur
+. Sélectionnez Prendre
+une photo ou Choisir dans la
+galerie.
+3 Sélectionnez le type du
+contact en appuyant sur
+.
+4 Appuyez sur une catégorie
+d'informations de contact
+et saisissez les données
+relatives à votre contact.
+5 Touchez Terminé.
+
+Contacts préférés
+Permet de classer dans les
+favoris les contacts que vous
+appelez fréquemment.
+Ajout d'un contact à vos favoris
+1 Dans l'écran d'accueil,
+appuyez sur
+pour ouvrir
+votre liste de contacts.
+2 Appuyez sur un contact pour
+afficher les informations le
+concernant.
+3 Appuyez sur l'étoile affichée
+
+Sup
+vot
+1
+
+2 A
+
+3 A
+
+u
+sur
+la
+
+.
+
+à droite du nom du contact.
+L'étoile prend la couleur or.
+Suppression d'un contact de
+votre liste de favoris
+1 Dans l'écran d'accueil,
+pour ouvrir
+appuyez sur
+votre liste de contacts.
+2 Appuyez sur l'onglet Favoris
+et sélectionnez un contact
+pour afficher les informations
+le concernant.
+3 Appuyez sur l'étoile dorée
+à droite du nom du contact.
+L'étoile devient grise et le
+contact est supprimé de vos
+favoris.
+
+ris
+
+rir
+
+ur
+
+e
+41
+
+Messages/E-mail
+Messages
+Le téléphone LG-P500 réunit les
+fonctions SMS et MMS dans un
+menu intuitif et convivial.
+
+Envoi d'un message
+1 Appuyez sur l'icône
+de
+l'écran d'accueil, puis sur
+Nouveau message pour
+ouvrir un message vierge.
+2 Saisissez le nom ou le
+numéro d'appel du contact
+dans le champ À. Au fur et à
+mesure que vous saisissez le
+nom du contact, les contacts
+correspondants s'affichent.
+Vous pouvez appuyer sur l'un
+des destinataires proposés.
+Vous pouvez ajouter plusieurs
+contacts.
+REMARQUE : Il vous sera
+facturé un message pour
+chaque destinataire auquel
+vous envoyez ce message.
+3 Composez votre message.
+
+42
+
+4 Appuyez sur la touche
+Menu pour ouvrir le menu
+des options. Sélectionnez
+l'une des options suivantes :
+Appeler, Ajouter un objet,
+Pièce jointe, Envoyer, Insérer
+une émoticône, Supprimer,
+Modèles, Tous les fils et
+Ajouter aux contacts.
+5 Appuyez sur Envoyer pour
+envoyer votre message.
+6 L'écran des messages
+s'ouvre et affiche le message
+après votre nom. Les
+réponses apparaissent sur
+l'écran. Au fur et à mesure
+que vous consultez les
+messages et en envoyez
+d'autres, un fil de discussion
+se crée.
+AVERTISSEMENT : La
+limite de 160 caractères peut
+varier d'un pays à l'autre,
+selon la méthode de codage
+du SMS et de la langue.
+
+u
+c
+à
+a
+M
+c
+
+REM
+rec
+com
+vou
+
+Bo
+
+Les
+éch
+per
+dan
+ave
+l'hi
+
+Ut
+ém
+
+Éga
+agr
+Lor
+me
+
+:
+
+rer
+,
+
+AVERTISSEMENT : Si
+une image, une vidéo ou un
+contenu audio est ajouté
+à un SMS, celui-ci est
+automatiquement converti en
+MMS et vous êtes facturé en
+conséquence.
+REMARQUE : Lorsque vous
+recevez un SMS pendant une
+communication, une sonnerie
+vous en avertit.
+
+ge
+
+Boîte classée
+
+n
+
+Les messages (SMS et MMS)
+échangés avec une autre
+personne peuvent être affichés
+dans l'ordre chronologique. Vous
+avez ainsi facilement accès à
+l'historique de vos conversations.
+
+Utilisation des
+émoticônes
+
+Menu et choisissez Insérer une
+émoticône.
+
+Modification des
+paramètres de message
+Les paramètres de message
+du LG-P500 sont prédéfinis, de
+sorte que vous puissiez envoyer
+des messages immédiatement.
+Vous pouvez toutefois modifier
+les paramètres en fonction de
+vos préférences.
+AVERTISSEMENT :
+Dans ce mode, le client
+MMS assiste l'utilisateur
+dans la création et l'envoi
+de messages présentant
+du contenu de type Core
+MM Content Domain.
+L'utilisateur est guidé par le
+biais de boîtes de dialogue
+d'avertissement.
+
+Égayez vos messages en les
+agrémentant d'émoticônes.
+Lorsque vous rédigez un
+message, appuyez sur la touche
+43
+
+Messages/E-mail
+Ouverture de l'application Écran Comptes
+E-mail et de l'écran
+L'écran Comptes affiche une
+liste contenant votre boîte de
+Comptes
+Vous pouvez vous servir de
+l'application E-mail pour lire des
+e-mails provenant de services
+de messagerie autres que
+Google mail. L'application E-mail
+prend en charge les types de
+comptes suivants : POP3, IMAP
+et Exchange.
+Ouverture de l'application E-mail
+Dans l'écran d'accueil,
+appuyez sur E-mail.
+La première fois que vous ouvrez
+l'application E-mail, un assistant
+de configuration s'affiche pour
+vous aider à ajouter un compte
+de messagerie.
+Une fois la configuration initiale
+terminée, l'application E-mail
+affiche le contenu de votre
+boîte de réception (si vous ne
+possédez qu'un seul compte)
+ou l'écran Comptes (si vous
+possédez plusieurs comptes).
+44
+
+réception combinée et tous vos
+comptes de messagerie.
+1 Ouvrez l'application E-mail.
+Si vous ne vous trouvez
+pas dans l'écran Comptes,
+appuyez sur la touche Menu,
+puis sur Comptes.
+2 Sélectionnez le fournisseur de
+messagerie.
+- Appuyez sur l'écran pour
+ouvrir votre boîte de réception
+combinée, qui contient les
+messages envoyés à tous vos
+comptes.
+- Appuyez sur l'écran
+pour ouvrir la liste contenant
+uniquement vos messages
+suivis.
+- Appuyez sur l'icône de
+dossier pour ouvrir les dossiers
+du compte.
+Vous pouvez appuyer sur un
+compte pour consulter sa
+boîte de réception. Le compte
+
+ser
+me
+
+Ouv
+réc
+Si v
+l'ap
+et l
+plu
+affi
+à to
+de
+
+1 A
+2 A
+
+Seu
+reç
+télé
+Pou
+
+servant par défaut à l'envoi des
+messages est coché.
+
+s
+
+u,
+de
+
+r
+
+s
+
+Ouverture de la boîte de
+réception combinée
+Si vous avez configuré
+l'application E-mail pour l'envoi
+et la réception de messages de
+plusieurs comptes, vous pouvez
+afficher les messages envoyés
+à tous les comptes dans la boîte
+de réception combinée.
+1 Appuyez sur E-mail.
+2 Appuyez sur Boîte de
+réception combinée (dans
+l'écran Comptes). Les
+messages figurant dans la
+boîte de réception combinée
+s'affichent en différentes
+couleurs, indiquées sur la
+gauche, correspondant à
+celles de vos comptes dans
+l'écran Comptes.
+Seuls les derniers e-mails
+reçus par vos comptes sont
+téléchargés sur le téléphone.
+Pour télécharger des messages
+
+antérieurs, appuyez sur Charger
+plus de messages au bas de la
+liste des e-mails.
+
+Lecture de messages
+Appuyez sur le message à lire.
+En plus du message, l'écran
+qui s'affiche contient diverses
+informations, notamment
+l'expéditeur et la date d'envoi du
+message.
+Appuyez sur l'indicateur d'état
+pour ouvrir la fonction Contact
+rapide.
+
+Réponse à un message
+Vous pouvez répondre à un
+message, le transférer et même
+le supprimer.
+Marquage d'un message comme
+non lu
+Vous pouvez configurer
+un message de sorte qu'il
+apparaisse comme non lu, par
+exemple pour vous rappeler de
+le relire ultérieurement.
+45
+
+Messages/E-mail
+Pendant la lecture d'un
+message, appuyez sur la
+touche Menu, puis sur
+Marquer comme non lu.
+Suppression d'un message
+Pendant la lecture d'un
+message, appuyez sur le
+bouton Supprimer.
+OU
+Pendant la lecture d'un
+message, appuyez sur la
+touche Menu, puis sur
+Supprimer.
+Pour plusieurs types de comptes,
+les messages supprimés sont
+transférés dans un dossier
+Corbeille. Au cas où vous les
+auriez supprimés par erreur,
+vous avez toujours la possibilité
+de les récupérer.
+
+Marquage d'un message
+à suivre
+Vous pouvez ajouter une étoile
+aux messages importants pour
+en faciliter le suivi.
+46
+
+Marquage d'un message à suivre
+Pendant la lecture d'un
+message, appuyez sur l'étoile
+figurant dans son en-tête.
+OU
+Dans la liste des messages
+d'un dossier, appuyez sur
+l'étoile d'un message. L'étoile
+prend la couleur or
+.
+
+2
+
+Annulation du suivi d'un message
+Appuyez de nouveau sur
+l'étoile.
+
+3 A
+
+Affichage des messages à suivre
+Appuyez sur Marqués d'une
+étoile.
+Le dossier contenant les
+messages à suivre s'affiche.
+
+4
+5 A
+
+Composition et envoi
+d'un e-mail
+Composition et envoi d'un
+message
+1 Dans l'application E-mail,
+appuyez sur la touche Menu,
+puis sur Nouveau message.
+
+6 A
+
+vre
+
+le
+te.
+
+ile
+
+age
+
+re
+e
+
+.
+
+u,
+e.
+
+2 Saisissez l'adresse du
+destinataire auquel adresser
+le message. Au fur et à
+mesure que vous saisissez
+l'adresse, les adresses
+correspondantes figurant
+dans vos contacts vous sont
+proposées. Si vous ajoutez
+plusieurs adresses, séparezles par des virgules.
+3 Appuyez sur la touche Menu,
+puis sur Ajouter Cc/CCi
+pour pouvoir envoyer une
+copie carbone ou une copie
+carbone invisible à d'autres
+contacts/adresses e-mail.
+4 Rédigez le texte du message.
+5 Appuyez sur la touche Menu,
+puis sur Pièce jointe pour
+accompagner le message
+d'une photo.
+6 Appuyez sur le bouton
+Envoyer.
+Si vous n'êtes pas prêt à
+envoyer le message, appuyez
+sur le bouton Enregistrer pour
+
+l'enregistrer dans le dossier
+Brouillons. Dans le dossier
+Brouillons, appuyez sur le
+brouillon d'un message pour
+le reprendre. Un message est
+également enregistré en tant
+que brouillon si vous appuyez
+sur la touche Précédent
+avant de l'envoyer. Appuyez
+sur le bouton Annuler
+pour annuler et effacer
+un message, y compris
+un brouillon enregistré. Si
+vous n'êtes pas connecté
+à un réseau (par exemple,
+si vous travaillez en mode
+Avion), les messages sont
+stockés dans la boîte d'envoi
+jusqu'à ce que vous vous
+connectiez de nouveau à un
+réseau. Si elle contient des
+messages en attente, la boîte
+d'envoi s'affiche dans l'écran
+Comptes.
+Notez que les messages envoyés
+via un compte Exchange ne se
+trouvent pas sur le téléphone,
+47
+
+Messages/E-mail
+mais sur le serveur Exchange.
+Pour afficher les messages
+envoyés figurant dans le dossier
+Éléments Envoyés (ou portant
+le libellé correspondant), vous
+devez en général ouvrir le
+dossier/libellé Éléments envoyés
+et sélectionner Actualiser dans le
+menu des options.
+
+Utilisation des dossiers
+de comptes
+Tous les comptes possèdent
+des dossiers Boîte de réception,
+Boîte d'envoi, Éléments
+envoyés et Brouillons. Selon les
+fonctions prises en charge par le
+fournisseur de services de votre
+compte, il existe peut-être aussi
+d'autres dossiers.
+
+Ajout et modification de
+comptes de messagerie
+Ajout d'un compte de messagerie
+1 Appuyez sur la touche Menu,
+puis sur Ajouter un compte.
+48
+
+2 Appuyez sur le bouton
+Suivant. Au besoin, cela
+permet également de définir
+les paramètres d'un compte
+de messagerie.
+3 Saisissez le nom du compte,
+indiquez comment afficher
+votre nom dans les messages
+sortants, puis appuyez sur le
+bouton Terminé.
+Modification des paramètres d'un
+compte
+1 Ouvrez l'écran Comptes.
+2 Appuyez de façon prolongée
+sur le compte dont vous
+souhaitez modifier les
+paramètres. Dans le menu
+qui s'affiche, appuyez sur
+Paramètres du compte.
+Suppression d'un compte de
+messagerie
+1 Ouvrez l'écran Comptes.
+2 Appuyez de façon prolongée
+sur le compte à supprimer.
+
+3
+
+4
+
+Ré
+
+Vot
+nav
+soc
+blo
+lign
+vot
+pho
+à jo
+tem
+Vou
+com
+vot
+pas
+pou
+en
+
+r
+e
+
+e,
+
+ges
+e
+un
+
+e
+
+e
+
+3 Dans le menu qui s'affiche,
+appuyez sur Supprimer le
+compte.
+4 Dans la boîte de dialogue,
+appuyez sur le bouton OK
+pour confirmer la suppression
+du compte.
+
+REMARQUE : L'utilisation de
+services en ligne peut entraîner
+des frais supplémentaires. Vérifiez
+le coût des données auprès de
+votre opérateur.
+
+Réseaux sociaux
+
+1 Dans l'écran d'accueil,
+choisissez l'application SNS
+(site de réseau social) à
+utiliser.
+2 Si vous ne possédez pas
+encore de compte, appuyez
+sur Inscription et indiquez les
+informations nécessaires.
+3 Saisissez l'adresse e-mail et
+le mot de passe que vous
+avez configurés sur votre
+communauté, puis appuyez
+sur Se connecter.
+4 Patientez pendant que les
+informations sont vérifiées
+auprès de la communauté.
+
+Votre téléphone vous permet de
+naviguer sur les sites de réseaux
+sociaux et de gérer votre microblog sur des communautés en
+ligne. Vous pouvez mettre à jour
+votre statut actuel, charger des
+photos et visualiser les mises
+à jour de statut de vos amis en
+temps réel.
+Vous pouvez ajouter vos
+comptes Facebook, Twitter sur
+votre téléphone. Si vous n'avez
+pas encore de compte, vous
+pouvez consulter ces sites pour
+en créer un.
+
+Ajout d'un compte sur
+votre téléphone
+
+49
+
+Messages/E-mail
+5 Vérifiez que votre
+communauté est ACTIVÉE.
+En appuyant sur votre
+communauté sociale, vous
+pouvez visualiser son statut
+actuel.
+ASTUCE : Si vous ajoutez
+un gadget de réseau social
+sur votre écran d'accueil, ce
+gadget affiche votre statut
+lorsque votre téléphone reçoit
+des mises à jour du réseau.
+Vous pouvez également
+accéder directement à la
+communauté sociale de votre
+choix en appuyant sur le
+gadget correspondant.
+
+Affichage et mise à jour
+de votre statut
+1 Sélectionnez la communauté
+à laquelle vous souhaitez
+accéder.
+2 Vous pouvez visualiser
+le statut actuel de votre
+communauté sociale.
+50
+
+Ap
+3 Vous pouvez mettre à jour
+votre statut en ajoutant des
+commentaires ou charger des
+photos.
+
+Fa
+
+REMARQUE : Cette fonction
+dépend des services du réseau.
+ASTUCE ! Vous ne pouvez utiliser
+des informations sur vos amis
+que dans les sites de réseaux
+sociaux ou synchroniser toutes
+les données aux contacts.
+
+Suppression de comptes
+sur votre téléphone
+Choisissez Paramètres >
+Comptes et synchro.
+Sélectionnez le compte à
+supprimer, puis appuyez sur
+Supprimer le compte.
+
+R
+u
+p
+
+Appareil photo
+Familiarisation avec le viseur
+
+des
+
+.
+
+er
+
+es
+
+Luminosité : permet de définir et contrôler le volume de lumière
+entrant dans l'image. Faites défiler l'indicateur de luminosité le long
+de la barre, vers le signe « - » pour un niveau de luminosité plus
+faible ou vers le signe « + » pour un niveau de luminosité plus élevé.
+Zoom : permet d'effectuer un zoom avant ou arrière. Vous pouvez
+également utiliser les touches de volume situées sur le côté.
+Mode Vidéo : faites glisser cette
+icône vers le bas pour passer au
+mode Vidéo.
+Prendre une photo
+Galerie : permet d'accéder à vos
+photos depuis le mode Appareil
+photo. Il vous suffit d'appuyer
+sur cette icône et votre galerie
+s'affiche à l'écran.
+
+Paramètres : appuyez sur cette icône
+pour ouvrir le menu de paramétrage.
+Reportez-vous à la section Utiliser les
+paramètres avancés.
+
+Mise au point : appuyez sur cette icône pour ouvrir le menu d'options.
+Reportez-vous à la section Utilisation du mode de mise au point.
+Mode scène : choisissez entre Auto, Portrait, Paysage, Sports, Nuit
+et Crépuscule.
+REMARQUE : Avant de prendre une photo, vous devez d'abord insérer
+une carte mémoire. Sans insérer de carte mémoire, vous ne pourrez
+pas prendre de photo ni enregistrer les photos que vous prenez.
+
+51
+
+Appareil photo
+ASTUCE : Pour que l'écran du
+viseur soit moins encombré,
+toutes les options de raccourcis
+peuvent être désactivées. Il vous
+suffit d'appuyer une fois sur
+le centre du viseur. Pour faire
+réapparaître les options, appuyez
+de nouveau sur l'écran.
+
+Utilisation du mode de
+mise au point
+Vous pouvez sélectionner
+les options de mise au point
+suivantes :
+Mise au point auto : permet de
+régler l'appareil photo pour une
+mise au point automatique.
+Macro : permet de prendre de
+très gros plans. Si vous essayez
+de prendre une photo en gros
+plan mais que le cadre de mise
+au point reste rouge, essayez
+d'activer le mode Macro.
+Recherche des visages : si vous
+sélectionnez Recherche des
+visages, votre appareil photo
+détecte les visages et effectue
+52
+
+automatiquement la mise au
+point lorsque vous prenez une
+photo.
+REMARQUE : Le zoom n'est
+pas pris en charge par le mode
+Recherche des visages.
+
+Manuel : permet de régler
+l'appareil photo pour une mise
+au point manuelle.
+
+Prise de vue rapide
+1 Choisissez l'application
+Appareil Photo.
+2 Tenez le téléphone à
+l'horizontale et dirigez
+l'objectif vers le sujet que
+vous voulez photographier.
+3 Maintenez légèrement
+enfoncé le déclencheur ;
+un cadre de mise au point
+apparaît alors au centre de
+l'écran du viseur.
+4 Placez le téléphone de façon
+à voir le sujet dans le cadre
+de mise au point.
+
+5
+
+6
+
+Lo
+pri
+
+Vot
+
+Env
+
+REM
+de
+dép
+frai
+
+Dé
+com
+
+Ren
+
+e
+
+n
+e
+
+5 Lorsque le cadre de mise au
+point devient vert, l'appareil
+photo a effectué la mise au
+point.
+6 Relâchez le déclencheur.
+
+Lorsque la photo est
+prise
+Votre photo s'affiche à l'écran.
+Envoyer Appuyez pour partager
+votre photo via
+Bluetooth, e-mail,
+Facebook, Google mail,
+messagerie, Picasa ou
+Twitter.
+REMARQUE : Le téléchargement
+de MMS lors de vos
+déplacements peut entraîner des
+frais supplémentaires.
+
+Appuyez pour utiliser
+l'image comme icône
+de Contact ou Fond
+d'écran.
+Renommer Permet de modifier
+le nom de l'image
+sélectionnée.
+Définir
+comme
+
+Permet de supprimer
+l'image.
+Permet de prendre
+immédiatement une autre
+photo. Votre photo actuelle
+est enregistrée.
+Permet d'afficher une
+galerie des photos
+enregistrées.
+
+Utilisation des
+paramètres avancés
+Dans le viseur, appuyez sur
+pour ouvrir toutes les options
+avancées.
+Vous pouvez modifier les
+paramètres de l'appareil photo
+en faisant tourner la molette.
+Après avoir sélectionné l'option,
+appuyez sur la touche Précédent.
+Taille de l'image : permet
+de définir la taille (en pixels)
+de la photo que vous prenez.
+Sélectionnez une valeur de pixel
+parmi les options numériques
+suivantes : 3M (2048 x 1536),
+2M (1600 x 1200), 1M
+53
+
+Appareil photo
+(1280 x 960), VGA (640 x 480),
+QVGA (320 x 240).
+ISO : la valeur ISO permet de
+définir la sensibilité du capteur
+de lumière de l'appareil photo.
+Plus la valeur ISO est élevée,
+plus la sensibilité de l'appareil
+photo augmente. Cette
+caractéristique est utile s'il fait
+sombre et que vous ne pouvez
+pas utiliser le flash. Sélectionnez
+parmi les valeurs ISO suivantes :
+Automatique, 400, 200 et 100.
+Balance blancs : choisissez
+entre Automatique,
+Incandescent, Soleil,
+Fluorescent et Nuageux.
+Effet de couleur ; définissez
+une tonalité pour votre nouvelle
+photo.
+Lorsque vous avez fait votre
+sélection, utilisez la touche
+Précédent pour fermer le menu
+des tons. Vous êtes prêt à
+prendre une photo.
+
+54
+
+REMARQUE : après avoir pris
+une photo en couleur, vous
+pouvez la transposer en noir et
+blanc ou en sépia, mais vous
+ne pouvez pas transformer une
+photo noir et blanc ou sépia en
+photo couleur.
+Minuteur : le minuteur vous
+permet de définir un intervalle
+de temps après avoir appuyé
+sur le déclencheur. Sélectionnez
+Désactivé, 3 secondes,
+5 secondes ou 10 secondes. Le
+minuteur est très utile si vous
+voulez figurer sur une photo.
+Mode de prise de vue :
+choisissez entre Normal, Prise
+de vue en cont., Prise de vue
+Beauté, Prise de vue artistique,
+Effet visage et Manga.
+Qualité d'image : choisissez
+entre Super fin, Fin et Normal.
+Plus la qualité est fine et plus
+la photo est nette, En revanche,
+la taille du fichier augmente en
+conséquence, ce qui signifie que
+la mémoire pourra stocker moins
+de photos.
+
+Vis
+la V
+vou
+aut
+Son
+des
+Em
+opt
+de
+de
+pho
+trou
+me
+de
+les
+blo
+géo
+s'a
+
+REM
+dis
+GP
+
+Réi
+réin
+par
+
+e,
+
+Visualisation : si vous activez
+la Visualisation, la photo que
+vous venez de prendre s'affiche
+automatiquement.
+Son prise vue : sélectionnez l'un
+des quatre sons de prise de vue.
+Emplacement : activez cette
+option pour utiliser les services
+de localisation géographique
+de votre téléphone. Prenez des
+photos à l'endroit où vous vous
+trouvez, puis étiquetez-les en
+mentionnant les informations
+de lieu. Si vous téléchargez
+les images étiquetées sur un
+blog qui prend en charge le
+géoétiquetage, les images
+s'afficheront sur une carte.
+
+.
+
+REMARQUE : Cette fonction est
+disponible uniquement lorsque le
+GPS est activé.
+
+t
+
+e
+n
+
+ez
+
+Le
+
+e
+
+e,
+n
+ue
+ins
+
+Réinitialiser
+: permet de
+réinitialiser tous les paramètres
+par défaut de l'appareil photo.
+
+: appuyez sur cette touche
+lorsque vous souhaitez connaître
+le mode de fonctionnement de
+cette option. Elle vous présente
+un guide rapide.
+ASTUCE : Lorsque vous quittez
+la fonction appareil photo, les
+valeurs par défaut de tous vos
+paramètres sont rétablies, à
+l'exception de la taille et de
+la qualité de l'image. Tout
+paramètre personnalisé,
+tel que les tons de couleur
+ou ISO, doit être réinitialisé.
+Vérifiez-les avant de prendre
+votre prochaine photo.
+ASTUCE : Le menu des
+réglages est superposé au
+viseur. Ainsi, lorsque vous
+modifiez des éléments de
+couleur ou de qualité de
+l'image, vous avez un aperçu
+de l'image modifiée derrière le
+menu des réglages.
+
+55
+
+Appareil photo
+Visualisation des photos
+enregistrées
+1 Vous pouvez accéder à vos
+photos enregistrées depuis le
+mode Appareil photo. Appuyez
+simplement sur , puis sur
+l'écran pour que Diaporama
+et Menu s'affichent.
+ASTUCE : Cliquez à
+gauche ou à droite pour
+afficher d'autres photos ou
+vidéos.
+
+: appuyez sur cette touche
+pour lancer le diaporama.
+: appuyez sur cette touche
+pour partager le contenu
+ou le supprimer.
+Appuyez sur Plus pour afficher
+davantage d'options.
+Détail : permet d'obtenir
+des informations sur le
+contenu.
+Définir comme : permet
+de définir comme icône de
+contact ou fond d'écran.
+56
+
+Ca
+Rogner : permet de rogner
+votre photo. Déplacez
+votre doigt sur l'écran pour
+sélectionner la zone.
+Rotation : permet
+d'effectuer une rotation
+vers la gauche ou la droite
+
+Fa
+
+Caméra vidéo
+
+ner
+
+our
+
+te
+
+Familiarisation avec le viseur
+Luminosité : permet de définir et contrôler le volume de lumière
+entrant dans la Vidéo. Faites glisser l'indicateur de luminosité le long
+de la barre, vers le signe « - » pour un niveau de luminosité plus faible
+ou vers le signe « + » pour un niveau de luminosité plus élevé.
+Zoom : permet d'effectuer un zoom avant ou arrière. Vous pouvez
+également utiliser les touches de volume situées sur le côté. Vous pouvez
+utiliser la fonction zoom avant de commencer à enregistrer une vidéo. Il
+n'est pas possible de contrôler la fonction zoom pendant l'enregistrement.
+Mode Appareil Photo : faites
+glisser cette icône vers le haut pour
+activer le mode Appareil Photo.
+Lancer enreg.
+
+Paramètres : appuyez sur cette
+icône pour ouvrir le menu de
+paramétrage. Reportez-vous à la
+section Utiliser les paramètres
+avancés.
+
+Galerie : permet d'accéder à vos
+photos et vidéos enregistrées
+depuis le mode Appareil photo.
+Il vous suffit d'appuyer sur cette
+icône et votre galerie s'affiche à
+l'écran.
+
+Mode scène : permet de régler l'appareil photo pour qu'il s'adapte à
+l'environnement. Choisissez parmi les modes Automatique, Portrait,
+Paysage, Sports, Crépuscule et Nuit.
+Taille vidéo : permet de définir la taille (en pixels) de la vidéo que vous
+enregistrez. Sélectionnez le format d'image vidéo : VGA (640 x 480),
+QVGA (320 x 240) ou QCIF (176 x 144).
+
+57
+
+Caméra vidéo
+Enregistrement d'une
+vidéo rapide
+
+Après avoir enregistré
+une vidéo
+
+1 Ensuite, faites glisser le
+déclencheur vers le bas,
+l'icône
+s'affichera alors.
+2 Le viseur de la caméra vidéo
+s'affiche à l'écran.
+3 Maintenez le téléphone
+à l'horizontale et dirigez
+l'objectif vers le sujet de la
+vidéo.
+4 Appuyez sur le déclencheur
+une fois pour démarrer
+l'enregistrement.
+5 REC s'affiche dans la partie
+inférieure du viseur, avec un
+minuteur qui indique la durée
+de votre vidéo.
+à l'écran pour
+6 Touchez
+mettre fin à l'enregistrement.
+
+Une image fixe représentant la
+vidéo prise s'affiche à l'écran.
+Lecture Permet de lire la vidéo.
+Envoyer Permet de partager
+votre vidéo via
+Bluetooth, e-mail,
+Google Mail™, MMS
+ou YouTube™.
+
+58
+
+REMARQUE : Le téléchargement
+de MMS lors de vos
+déplacements peut entraîner des
+frais supplémentaires.
+
+Permet de modifier
+le nom de la vidéo
+sélectionnée.
+Permet de filmer une autre
+vidéo immédiatement.
+Votre vidéo actuelle est
+enregistrée.
+Permet de supprimer la
+vidéo que vous venez de
+prendre. Pour confirmer,
+appuyez sur Oui. Le viseur
+réapparaît.
+
+Renommer
+
+Ut
+pa
+
+Da
+pou
+ava
+Rég
+la c
+tou
+sél
+la t
+Bal
+des
+un
+bla
+que
+rég
+des
+dét
+lum
+Cho
+Inc
+Flu
+
+a
+o.
+
+S
+
+t
+
+es
+
+re
+
+r
+
+Permet d'accéder au lecteur
+multimédia et d'afficher les
+vidéos enregistrées.
+
+Utilisation des
+paramètres avancés
+Dans le viseur, appuyez sur
+pour ouvrir toutes les options
+avancées.
+Réglez les paramètres de
+la caméra vidéo en faisant
+tourner la molette. Après avoir
+sélectionné l'option, appuyez sur
+la touche Précédent.
+Balance blancs : la balance
+des blancs permet de donner
+un aspect réaliste aux parties
+blanches de votre vidéo. Pour
+que votre appareil puisse
+régler correctement la balance
+des blancs, vous devez
+déterminer les conditions de
+lumière de l'environnement.
+Choisissez entre Automatique,
+Incandescent, Soleil,
+Fluorescent et Nuageux.
+
+Effet de couleur : permet de
+choisir une tonalité pour votre
+nouvelle vue.
+Durée : permet de définir une
+limite de durée pour votre
+vidéo. Vous pouvez choisir entre
+Normal et MMS pour limiter
+la taille d'envoi maximale à
+celle d'un message MMS. Si
+vous choisissez MMS, vous
+pouvez enregistrer une vidéo de
+300 Ko. De plus, vous pouvez
+uniquement choisir QVGA et
+QCIF dans ce mode.
+ASTUCE : Si vous choisissez
+la durée MMS, la qualité vidéo
+sera définie sur QCIF, ce qui
+vous permettra de filmer des
+vidéos plus longues.
+
+Qualité vidéo : choisissez entre
+Super fin, Fin et Normal.
+
+59
+
+Caméra vidéo
+Voix : choisissez Silencieux
+pour enregistrer une vidéo sans
+le son.
+Visualisation : si vous choisissez
+cette option, la vidéo que vous
+venez d'enregistrer s'affichera
+automatiquement.
+Réinitialiser
+: permet de
+réinitialiser tous les réglages de
+la caméra vidéo.
+: appuyez sur cette touche
+lorsque vous souhaitez connaître
+le mode de fonctionnement de
+cette option. Elle vous présente
+un guide rapide.
+ASTUCE : Lorsque vous filmez
+une vidéo en couleur, vous
+pouvez ensuite la transposer
+en noir et blanc ou en sépia,
+mais vous ne pouvez pas faire
+passer une vidéo en noir et
+blanc ou sépia à la couleur.
+
+60
+
+Vo
+Visualisation des vidéos
+enregistrées
+
+Ré
+de
+
+1 Dans le viseur, appuyez sur
+.
+2 Votre galerie s'affiche à
+l'écran.
+3 Appuyez sur une vidéo
+une fois pour l'afficher
+au premier plan dans la
+galerie. La lecture se lance
+automatiquement.
+
+Pou
+d'u
+util
+situ
+télé
+
+Dé
+co
+
+1 A
+
+2
+3
+
+s
+
+Vos photos et vidéos
+Réglage du volume lors
+de la lecture d'une vidéo
+Pour régler le volume audio
+d'une vidéo en cours de lecture,
+utilisez les touches de volume
+situées sur le côté gauche du
+téléphone.
+
+Définition d'une photo
+comme papier peint
+1 Appuyez sur la photo que
+vous voulez définir comme
+fond d'écran pour l'ouvrir.
+2 Touchez l'écran pour accéder
+aux options.
+3 Touchez Utiliser comme
+, puis appuyez sur
+Sélectionner.
+
+61
+
+Multimédia
+Vous pouvez enregistrer des
+fichiers multimédias sur une carte
+mémoire pour accéder facilement
+à toutes vos images et vidéos.
+Appuyez sur l'onglet
+Applications, puis sélectionnez
+Galerie. Vous pouvez ouvrir
+une liste de barres catalogues
+contenant l'ensemble de vos
+fichiers multimédias.
+REMARQUE : N'oubliez
+pas d'insérer une carte mémoire
+dans le téléphone pour pouvoir
+enregistrer vos photos et
+accéder à vos images. Sans
+carte mémoire, le téléphone ne
+pourra pas afficher de photo ou
+de vidéo sans les images Picasa
+se trouvant dans votre album
+Picasa.
+
+Mode d'affichage
+Appuyez sur Galerie pour passer
+à l'affichage des dossiers.
+Si vous appuyez sur un dossier,
+l'affichage passe en mode Vue
+grille. Si vous appuyez sur une
+photo, l'affichage passe en mode
+Vue complète.
+
+Me
+im
+
+Sél
+app
+pou
+dis
+
+En
+1
+
+Vue chronologique
+La galerie du LG-P500 affiche
+les photos et vidéos sous
+forme chronologique. En mode
+Vue grille, faites glisser le
+curseur
+vers la droite.
+La date à laquelle vous avez
+pris les photos s'affiche, en
+commençant par la plus récente.
+Si vous sélectionnez une date
+particulière, toutes les photos
+prises ce jour-là s'affichent sur
+fond blanc.
+
+2
+
+3
+
+AST
+d'u
+par
+vou
+ave
+
+62
+
+ser
+
+r,
+e
+e
+ode
+
+e
+
+e
+
+nte.
+
+r
+
+Menu d'options Mes
+images
+Sélectionnez une photo, puis
+appuyez de façon prolongée
+pour afficher les options
+disponibles.
+
+Envoi d'une photo
+1 Pour envoyer une photo,
+appuyez de façon prolongée
+sur la photo de votre choix.
+2 Sélectionnez Partager.
+Choisissez l'une des options
+suivantes : Bluetooth, E-mail,
+Google Mail™, SMS/MMS,
+SNS ou Picasa.
+3 Si vous choisissez E-mail,
+Google Mail™ ou SMS/MMS,
+la photo est jointe à un
+message. Vous pouvez ensuite
+rédiger et envoyer ce message
+normalement.
+ASTUCE : Si vous disposez
+d'un compte SNS et qu'il est
+paramétré sur votre téléphone,
+vous pouvez partager vos photos
+avec votre communauté SNS.
+
+Envoi d'une vidéo
+1 Pour envoyer une vidéo,
+appuyez de façon prolongée
+sur la vidéo de votre choix.
+2 Sélectionnez Partager.
+Choisissez l'une des options
+suivantes : Bluetooth, E-mail,
+Google Mail™, SMS/MMS ou
+YouTube™.
+3 Si vous choisissez E-mail,
+Google Mail™ ou SMS/MMS,
+la vidéo est jointe à un
+message. Vous pouvez ensuite
+rédiger et envoyer ce message
+normalement.
+
+Utilisation d'une image
+Choisissez les images à utiliser
+en tant que fond d'écran ou pour
+identifier les appelants.
+1 Appuyez de façon prolongée
+sur une photo, puis
+sélectionnez Définir comme.
+2 Choisissez l'option Icône de
+contact ou Fond d'écran.
+
+63
+
+Multimédia
+Création d'un diaporama
+En mode Vue complète, vous
+pouvez créer un diaporama pour
+éviter d'avoir à ouvrir et à fermer
+chaque photo individuellement.
+1 Appuyez de façon prolongée
+sur une photo, puis
+sélectionnez Diaporama.
+
+Afficher les informations
+de votre photo
+Vous pouvez afficher les
+informations associées à une
+photo, notamment le nom, la
+date, l'heure, la taille et le type.
+1 Touch Menu > More >
+Details.
+
+Transfert de fichiers
+depuis un périphérique
+de stockage USB
+Transfert de fichiers par le biais
+de périphériques USB
+1 Connectez le téléphone LGP500 à un ordinateur à l'aide
+d'un câble USB.
+64
+
+2 Si vous n'avez pas installé
+le pilote LG Android Platform
+Driver sur l'ordinateur, vous
+devez modifier les paramètres
+manuellement. Choisissez
+Paramètres > Carte SD et
+mémoire > Mode clé USB
+(stockage de masse).
+3 Appuyez sur Activer le
+périphérique de stockage
+USB.
+4 Vous pouvez afficher le
+contenu du stockage de
+masse sur votre PC et
+transférer des fichiers.
+REMARQUE : Vous devez d'abord
+installer une carte SD. Sans
+carte SD, vous ne pouvez pas
+utiliser le stockage de masse
+USB.
+REMARQUE : Si vous avez installé
+le pilote LG Android Platform
+Driver, une fenêtre proposant
+l'option Activer le périphérique
+de stockage USB s'affiche
+directement.
+
+Mu
+
+Le
+équ
+qui
+mo
+au
+Mu
+
+Le
+1
+
+A
+
+2 A
+3
+4
+5
+
+6 A
+
+Pou
+d'é
+
+m
+
+res
+
+rd
+
+llé
+
+Musique
+Le téléphone LG-P500 est
+équipé d'un lecteur audio intégré
+qui vous permet d'écouter vos
+morceaux préférés. Pour accéder
+au lecteur audio, appuyez sur
+Musique.
+
+Lecture d'une chanson
+1 Dans l'écran d'accueil,
+appuyez sur l'onglet
+Applications et sélectionnez
+Musique.
+2 Appuyez sur Chansons.
+3 Sélectionnez la chanson que
+vous souhaitez lire.
+4 Touchez
+pour mettre la
+chanson sur pause.
+5 Touchez
+pour passer à la
+chanson suivante.
+6 Appuyez sur
+pour revenir
+à la première partie de la
+chanson. Appuyez deux fois
+sur
+pour revenir à la
+chanson précédente.
+Pour changer le volume en cours
+d'écoute, utilisez les touches de
+
+réglage du volume situées sur le
+côté droit du téléphone.
+Appuyez de façon prolongée
+sur une chanson de la liste. Les
+options Lire, Ajouter à la playlist,
+Supprimer et Rechercher
+s'affichent.
+REMARQUE : Les contenus
+musicaux peuvent être protégés
+par des traités internationaux,
+ainsi que par les législations
+nationales en vigueur en matière
+de copyright.
+Par conséquent, la copie ou
+la reproduction d'un contenu
+musical peut être soumise à
+l'obtention d'autorisations ou de
+licences particulières.
+Dans certains pays, la législation
+en vigueur interdit la copie à
+usage privé de tout contenu
+protégé par un copyright. Avant
+de télécharger ou de copier
+le fichier, veuillez prendre
+connaissance de la législation
+en vigueur dans votre pays
+concernant l'utilisation d'un tel
+65
+
+Multimédia
+contenu.
+
+Utilisation de la radio
+Votre téléphone LG-P500
+possède une radio FM intégrée
+qui vous permet d'écouter vos
+stations de radio préférées lors
+de vos déplacements.
+REMARQUE : Pour écouter la
+radio, vous devez brancher votre
+casque. Insérez-le dans la prise
+casque.
+
+Recherche de stations
+Vous pouvez régler des
+stations de radio en les
+recherchant manuellement ou
+automatiquement. Elles sont
+alors associées à un numéro de
+canal spécifique. Vous n'aurez
+donc plus à les régler par la
+suite.
+Vous pouvez stocker jusqu'à
+48 stations sur votre téléphone.
+
+66
+
+Lancement d'une recherche
+automatique
+1 Dans l'écran d'accueil,
+appuyez sur l'onglet
+Applications et sélectionnez
+Radio FM.
+2 Appuyez sur la touche
+Menu, puis sur Recherche
+automatique.
+3 S'il existe des stations
+préréglées, le message
+Réinitialiser les chaînes et
+lancer la recherche auto ?
+s'affiche. Si vous choisissez
+OK, toutes les stations
+préréglées sont effacées et
+la recherche automatique
+commence.
+4 Si vous souhaitez arrêter
+la recherche automatique,
+appuyez sur Interrompre.
+Seuls les canaux analysés
+avant interruption de la
+recherche seront enregistrés.
+
+REM
+éga
+l'aid
+
+Ré
+sta
+
+1 A
+
+Éc
+
+1 A
+
+A
+la
+le
+o
+
+z
+
+z
+
+REMARQUE : Vous pouvez
+également sélectionner un canal à
+l'aide de la molette affichée.
+
+Réinitialisation des
+stations
+
+AVERTISSEMENT :
+Si vous branchez un casque
+non conçu pour la réception
+radio, celle-ci peut s'avérer
+médiocre.
+
+1 Appuyez sur la touche Menu
+et choisissez Réinitialiser ce
+canal pour réinitialiser le cana
+actuel, ou bien choisissez
+Réinitialiser tous les canaux
+pour réinitialiser tous les
+canaux.
+
+Écoute de la radio
+1 Appuyez sur Écouter via pour
+pouvoir définir le haut-parleur
+ou le casque avec fil afin
+d'écouter la radio.
+ASTUCE : Pour améliorer
+la réception radio, déployez
+le cordon du casque qui fait
+office d'antenne radio.
+
+és.
+
+67
+
+Applications Google
+1 Vous devez d'abord définir
+un compte Google. Saisissez
+votre nom d'utilisateur et
+votre mot de passe.
+2 Une fois connecté, les
+contacts, les e-mails et
+l'agenda de votre compte
+Google sont synchronisés
+automatiquement avec votre
+LG-P500.
+ASTUCE ! Si vous changez de
+compte Google après connexion
+ou si vous souhaitez vous
+déconnecter, procédez comme
+suit : Menu > Paramètres >
+Applications > Gérer les
+applications > Applications
+Google > Effacer les données.
+
+Google Maps™
+Ce menu vous permet d'afficher
+votre positionnement actuel
+et l'état de la circulation, et
+d'obtenir l'itinéraire de votre
+destination. Le LG-P500 doit
+être connecté à un réseau Wi-Fi
+ou 3G/GPRS.
+68
+
+REMARQUE : Google Maps™ ne
+couvre pas toutes les villes ni tous
+les pays.
+
+Appuyez sur la touche Menu
+pour utiliser les options.
+Rechercher
+: permet
+d'indiquer l'emplacement
+recherché.
+Directions
+: itinéraire vers
+l'emplacement indiqué. Appuyez
+sur pour saisir des données.
+Choisissez Contacts, Indiquer sur
+la carte ou Ma position.
+Couches
+: permet de choisir
+la vue Trafic, Satellite ou Relief.
+Appuyez sur Latitude pour voir le
+lieu où se trouvent les contacts
+de votre compte Google.
+Ma position
+: indique sur
+la carte le lieu où vous vous
+trouvez actuellement.
+Activer Latitude
+: permet
+de partager votre position avec
+les amis que vous choisissez et
+avec vos contacts Google.
+
+Plu
+une
+em
+plu
+
+REM
+Vie
+app
+sur
+ce
+
+Ma
+
+And
+de
+des
+app
+vou
+Ma
+le m
+pou
+télé
+l'on
+Vou
+com
+util
+app
+pou
+com
+
+e
+ous
+
+ez
+s.
+sur
+
+sir
+f.
+r le
+s
+
+c
+et
+
+Plus
+: permet d'effacer
+une carte, de localiser des
+emplacements favoris et bien
+plus encore.
+REMARQUE : En mode Street
+View pour un emplacement,
+appuyez sur la touche Menu puis
+sur Mode boussole pour activer
+ce mode.
+
+Market™
+Android Market™ vous permet
+de télécharger des jeux et
+des applications utiles. Les
+applications et les jeux que
+vous installez à partir d'Android
+Market™ apparaissent dans
+le menu du LG-P500. Vous
+pouvez visualiser les applications
+téléchargées en appuyant sur
+l'onglet Téléchargements.
+Vous pouvez consulter les
+commentaires d'autres
+utilisateurs au sujet d'une
+application ou bien vous
+pouvez publier vos propres
+commentaires.
+
+1 Sélectionnez une catégorie
+à parcourir à partir
+d'Applications et de Jeux.
+Ainsi, vous avez accès aux
+listes Top payants, Top
+gratuits et Nouveautés.
+2 Choisissez une application à
+installer.
+REMARQUE : Pour arrêter un
+jeu, utilisez la touche Accueil ou
+Précédent. Cela vous permet de
+revenir à l'écran d'accueil. Vous
+pouvez aussi utiliser la touche
+Menu du jeu.
+
+Google Mail™
+L'application Google Mail™ est
+paramétrée lors de la première
+configuration de votre téléphone.
+Selon vos paramètres de
+synchronisation, l'application
+Google Mail™ de votre
+téléphone est automatiquement
+synchronisée avec votre compte
+Google Mail™ en ligne. La
+liste des messages de la boîte
+de réception constitue votre
+affichage Google Mail™ par
+
+69
+
+Applications Google
+défaut.
+Appuyez sur la touche Menu,
+puis sur Actualiser pour envoyer
+ou recevoir de nouveaux e-mails
+et pour synchroniser vos emails avec votre compte Google
+Mail™ en ligne. La touche
+Menu vous permet de composer
+un e-mail, ainsi que d'utiliser
+les options Ajouter un compte,
+Libellés, Rechercher et Plus.
+
+Google Talk™
+Google Talk™ est le service
+de messagerie instantanée
+de Google. Il vous permet de
+communiquer avec d'autres
+personnes utilisant également
+Google Talk™.
+Appuyez sur la touche Menu
+pour voir les options disponibles.
+Tous les amis
+: permet
+d'inviter tous vos amis à
+communiquer.
+Ajouter un ami
+: permet
+d'inviter à discuter.
+70
+
+Ut
+Rechercher
+: permet de
+rechercher tous les chats
+incluant les mots ou phrases
+saisis.
+Déconnexion
+: permet de
+quitter le chat. Lorsque vous
+appuyez sur l'icône Talk sur
+l'écran d'accueil, vous êtes
+connecté automatiquement
+si vous avez activé l'option
+Connexion automatique.
+Paramètres
+: permet de
+définir des indicateurs, des
+notifications, etc.
+Plus
+: permet de fermer
+tous les chats et de visualiser
+les listes de contacts bloqués et
+d'invitations.
+
+Ré
+1
+
+2
+3
+
+4
+
+5 A
+
+et
+
+Utilitaires
+Réglage des alarmes
+1 Sur l'écran d'accueil, appuyez
+sur l'onglet Applications et
+sélectionnez Horloge.
+2 Pour ajouter une alarme,
+appuyez sur .
+3 Définissez l'heure et appuyez
+sur
+pour activer l'alarme.
+Une fois l'heure définie, le LGP500 vous indiquera le temps
+restant avant que l'alarme ne
+se déclenche.
+4 Définissez les options Répéter,
+Sonneries ou Vibreur et
+donnez un nom à l'alarme.
+Touchez Terminé.
+5 Appuyez sur la touche Menu
+pour ajouter une alarme ou
+définissez la durée de l'option
+Répéter après ou le volume
+de l'alarme à partir des
+paramètres.
+
+Utilisation de la
+calculatrice
+1 Sur l'écran d'accueil, appuyez
+sur l'onglet Applications et
+sélectionnez Calculatrice.
+2 Saisissez les nombres à l'aide
+des touches numériques.
+3 Pour les calculs simples,
+appuyez sur la fonction voulue
+(+, -, x ou ÷), suivie de =.
+4 Pour des calculs plus
+complexes, appuyez sur la
+touche Menu, appuyez sur
+Avancé, puis choisissez sin,
+cos, tan, log, etc.
+
+Ajout d'un événement à
+l'Agenda
+1 Sur l'écran d'accueil, appuyez
+sur l'onglet Applications et
+sélectionnez Agenda.
+2 Pour utiliser l'Agenda, vous
+devez d'abord créer un
+compte Google.
+
+71
+
+Utilitaires
+3 Pour consulter l'événement,
+appuyez sur la date.
+Maintenez la pression si vous
+souhaitez ajouter un Nouvel
+événement. Appuyez ensuite
+sur Nouvel événement.
+4 Appuyez sur Objet, puis
+saisissez le nom de
+l'événement. Vérifiez la date,
+puis saisissez l'heure de
+début de l'événement.
+5 Vous pouvez également
+appuyer sur Lieu pour saisir
+un emplacement.
+6 Si vous souhaitez ajouter
+une note à votre événement,
+appuyez sur Description et
+saisissez les informations
+voulues.
+7 Si vous souhaitez que
+l'alarme se répète, définissez
+Répétition et Rappels, si
+nécessaire.
+
+72
+
+8 Appuyez sur Terminé pour
+enregistrer l'événement dans
+l'Agenda. Un carré coloré
+dans l'Agenda marque les
+jours pour lesquels des
+événements sont définis. Une
+alarme sonnera à l'heure de
+début de l'événement pour
+vous aider à vous organiser.
+
+1
+
+Modification de
+l'affichage l'Agenda
+
+un
+cal
+Dos
+
+1 Sur l'écran d'accueil, appuyez
+sur l'onglet Applications et
+sélectionnez Agenda. Appuyez
+sur la touche Menu.
+2 Sélectionnez un jour, ou bien
+la vue semaine ou mois pour
+l'affichage l'Agenda.
+
+ThinkFree Office
+ThinkFree Office vous permet
+seulement de lire des documents
+car les fonctions de modification
+ne sont pas disponibles. Les
+formats de fichiers pris en
+charge sont PDF, texte, Microsoft
+Word, Excel et PowerPoint.
+
+App
+
+d'a
+No
+
+de
+Thi
+
+me
+
+d'o
+suj
+
+ns
+
+ne
+e
+
+r.
+
+yez
+
+yez
+
+n
+ur
+
+nts
+on
+
+1 Maintenez l'appui sur un
+fichier pour disposer des
+options Ouvrir, Télécharger,
+Renommer, Déplacer,
+Copier, Supprimer, Envoyer
+et Propriétés. Ces options
+dépendent du type de fichier.
+
+Dictaphone
+
+Appui sur la touche Menu
+Nouveau : permet d'ajouter
+un document, une Feuille de
+calcul, une Présentation ou un
+Dossier.
+Actualiser : permet
+d'actualiser les données.
+Trier : permet de classer par
+Nom, Date ou Taille.
+Préférences : permet
+de définir les paramètres de
+ThinkFree Office.
+Mettre à jour : permet de
+mettre à jour ThinkFree Office.
+À propos de : permet
+d'obtenir plus d'informations au
+sujet de ThinkFree Office.
+
+1 Sur l'écran d'accueil, appuyez
+sur l'onglet Applications et
+sélectionnez Dictaphone.
+pour lancer
+2 Appuyez sur
+l'enregistrement.
+pour
+3 Appuyez sur
+arrêter l'enregistrement.
+4 Appuyez sur la touche Menu
+et sélectionnez Définir
+comme pour définir en tant
+que Sonnerie du téléphone.
+
+Le dictaphone vous permet
+d'enregistrer des mémos vocaux
+ou autres fichiers audio.
+
+Enregistrement d'un son ou
+d'une voix
+
+REMARQUE : Appuyez sur
+Accéder à la liste pour accéder à
+votre album. Vous pouvez écouter
+l'enregistrement.
+
+oft
+73
+
+Utilitaires
+
+Le
+
+Envoi du mémo vocal
+
+Na
+
+1 Une fois l'enregistrement
+terminé, vous pouvez envoyer
+le clip audio en appuyant
+sur la touche Menu, puis
+Partager.
+2 Choisissez entre Bluetooth, Email, Google Mail™ et SMS/
+MMS. Si vous sélectionnez
+E-mail, Google Mail™ ou
+SMS/MMS, l'enregistrement
+vocal sera ajouté au message
+que vous pourrez rédiger et
+envoyer normalement.
+
+Le
+rap
+de
+de
+bie
+sur
+cel
+que
+
+REM
+con
+vou
+des
+son
+des
+fou
+
+Ut
+
+App
+pou
+
+74
+
+Le Web
+Navigateur
+Le Navigateur vous donne accès
+rapidement à un univers coloré
+de jeux, musique, d'informations,
+de sports, divertissement et
+bien plus encore, directement
+sur votre téléphone mobile. Tout
+cela, où que vous soyez et quels
+que soient vos centres d'intérêts.
+REMARQUE : Lorsque vous vous
+connectez à ces services et que
+vous téléchargez du contenu,
+des frais supplémentaires vous
+sont facturés. Vérifiez le coût
+des données auprès de votre
+fournisseur réseau.
+
+Utilisation des options
+Appuyez sur la touche Menu
+pour voir les options.
+Nouvelle fenêtre : permet
+d'ouvrir une nouvelle
+fenêtre.
+Favori : Ajouter/Afficher un
+favori, affiche les Sites les
+plus visités et l'Historique.
+
+Fenêtre : permet d'afficher
+toutes vos fenêtres
+ouvertes.
+Actualiser : permet
+d'actualiser la page Web.
+Suivant : permet d'accéder
+à la page suivant celle
+en cours de consultation.
+Il s'agit de la possibilité
+inverse à celle offerte par
+la touche Précédent, qui
+permet d'aller à la page
+précédente.
+Plus
+• Ajouter un favori : permet
+de marquer la page Web
+actuelle comme favori.
+• Rechercher sur la page :
+si vous indiquez une lettre
+ou un mot, toutes les
+données similaires sur la
+page Web sont signalées.
+
+75
+
+Le Web
+Sélectionner le texte :
+appuyez sur les lignes
+à copier pour les
+sélectionner. Appuyez
+de façon prolongée sur
+une zone de saisie pour
+pouvoir y coller votre
+sélection.
+• Infos sur la page : permet
+d'afficher les informations
+relatives à la page Web.
+• Partager la page : permet
+d'envoyer la page Web.
+• Téléchargements : permet
+d'afficher l'historique de
+téléchargement.
+• Paramètres : permet de
+définir les paramètres du
+navigateur.
+ASTUCE ! Pour revenir à la page
+Web précédente, appuyez sur la
+touche Précédent.
+•
+
+76
+
+Pa
+Ajout et ouverture de
+favoris
+1 Appuyez sur la touche Menu
+et sélectionnez Favoris.
+2 Appuyez sur un favori, entrez
+un nom pour celui-ci, suivi de
+son URL.
+3 Pour accéder au favori, il
+vous suffit d'appuyer dessus.
+Vous serez alors connecté à
+la page correspondant à ce
+favori.
+
+Modification des
+paramètres du navigateur
+Web
+Appuyez sur la touche Menu
+puis sélectionnez Plus >
+Paramètres.
+
+Co
+
+Cet
+gér
+Blu
+per
+des
+Avi
+Mo
+du
+con
+dés
+
+So
+
+Per
+par
+déf
+pou
+fon
+hap
+
+Ec
+
+Lum
+lum
+Rot
+de
+l'or
+pivo
+
+u
+
+ez
+de
+
+s.
+à
+
+eur
+
+Paramètres
+Connexions sans fil
+Cette fonction permet de
+gérer les connexions Wi-Fi et
+Bluetooth. De plus, elle vous
+permet également de définir
+des réseaux mobiles et le mode
+Avion.
+Mode Avion : après activation
+du mode Avion, toutes les
+connexions sans fil sont
+désactivées.
+
+Son
+Permet de régler le son, les
+paramètres de notification par
+défaut et le mode Vibreur. Vous
+pouvez également gérer les
+fonctions sonores et le retour
+haptique.
+
+Ecran
+Luminosité : permet de régler la
+luminosité de l'écran.
+Rotation auto écran : permet
+de régler automatiquement
+l'orientation lorsque vous faites
+pivoter le téléphone.
+
+Animation : permet d'afficher
+une animation.
+Mise en veille de l'écran :
+permet de régler le délai de mise
+en veille de l'écran.
+
+Lieu et sécurité
+Utiliser réseaux sans fil : si
+vous cochez la case Utiliser
+réseaux sans fil, votre téléphone
+déterminera votre position
+approximative à l'aide des
+réseaux mobiles et Wi-Fi. Quand
+vous cochez cette option, vous
+autorisez Google à enregistrer
+votre positionnement pour vos
+recherches Google.
+Utiliser les satellites GPS : si
+vous cochez la case Utiliser les
+satellites GPS, votre téléphone
+déterminera votre position selon
+les rues.
+
+77
+
+Paramètres
+Verrouillage de l'écran : permet
+d'accroître la sécurité de
+votre téléphone. Grâce à cette
+option, vous pouvez afficher
+une série d'écrans qui vous
+aidera à dessiner un schéma
+de déverrouillage de l'écran.
+Vous pouvez définir un code PIN
+ou un Mot de passe à la place
+du schéma, ou bien ne choisir
+Aucune de ces options.
+Lorsque vous allumez votre
+téléphone ou déverrouillez
+l'écran, il vous est demandé
+de tracer votre schéma de
+déverrouillage.
+
+Configurer blocage SIM : permet
+de configurer le blocage de la
+carte SIM ou de modifier le code
+PIN de la carte SIM.
+
+78
+
+Mots de passe visibles :
+sélectionnez cette option pour
+que les mots de passe soient
+visibles lors de leur saisie, ou
+bien désélectionnez-la pour
+les masquer au cours de cette
+même saisie.
+Administrateurs : permet
+d'ajouter au moins un
+administrateur.
+Utiliser des identifiants
+sécurisés : permet d'accéder
+aux certificats de sécurité.
+Installer depuis la carte SD :
+permet d'installer des certificats
+cryptés à partir de la carte SD.
+Définir le mot de passe :
+permet de définir/modifier le
+mot de passe du stockage des
+identifiants.
+Effacer le stockage : Effacer
+le contenu du stockage des
+identifiants et réinitialiser le mot
+de passe
+
+Ap
+
+Vou
+app
+rac
+Sou
+par
+d'a
+d'A
+Gér
+per
+app
+Ser
+rég
+opé
+Dév
+déf
+dév
+
+Sy
+
+Syn
+de
+syn
+Con
+com
+
+e
+
+ts
+.
+
+s
+
+ot
+
+Applications
+
+Confidentialité
+
+Vous pouvez gérer les
+applications et configurer les
+raccourcis de lancement rapide.
+Sources inconnues : paramètres
+par défaut pour l'installation
+d'applications ne provenant pas
+d'Android Market.
+Gérer les applications :
+permet de gérer et supprimer les
+applications installées.
+Services opérationnels : vérifiez
+régulièrement les services
+opérationnels
+Développement : permet de
+définir les options pour le
+développement de l'application.
+
+Cette option permet de
+sauvegarder les données et
+paramètres d'application.
+Si vous activez l'option
+Restaurer automatiquement, les
+paramètres sauvegardés seront
+restaurés après réinstallation.
+De plus, l'option Réinit.
+valeurs d'usine est également
+disponible. Cette option doit
+être utilisée avec précaution car
+elle efface toutes les données
+personnelles.
+
+Synchro. des données
+Synchronisation des données
+de l'arrière-plan actif ou
+synchronisation automatique.
+Consultation ou ajout de
+comptes.
+
+Carte SD et mémoire
+Vérifiez le volume d'espace
+disponible sur la carte SD.
+Appuyez sur Désactiver la
+carte SD pour la retirer en toute
+sécurité. Vous pouvez utiliser
+l'option Formater la carte SD si
+vous souhaitez supprimer toutes
+les données qu'elle contient.
+
+79
+
+Paramètres
+
+W
+
+Recherche
+
+Accessibilité
+
+Appuyez sur Recherche Google
+afin de pouvoir définir les
+paramètres de la recherche
+Google.
+Définissez précisément les
+éléments recherchés pour des
+résultats de recherche optimaux.
+Choisissez parmi les options
+Web, Applications, Contacts,
+Rechercher dans les messages,
+Musique ou Twitter.
+
+Les paramètres d'Accessibilité
+permettent de configurer tout
+module d'accessibilité installé
+sur votre téléphone.
+Remarque : Des modules
+complémentaires sont
+nécessaires pour rendre
+disponibles ces paramètres.
+
+Saisie et sortie vocales
+
+Permet de définir la date,
+l'heure, le fuseau horaire et le
+format de date et heure.
+
+L'option Paramètres de la
+synthèse vocale permet de
+configurer le synthétiseur vocal
+Android en vue d'utilisation par
+des applications prenant en
+charge cette fonction.
+
+Par. régionaux et texte
+
+À propos du téléphone
+
+Permet de définir la langue et les
+paramètres régionaux ainsi que
+les options de saisie de texte et de
+correction automatique.
+
+Permet d'afficher les
+informations légales et de vérifier
+l'état du téléphone ainsi que la
+version du logiciel.
+
+Date et heure
+
+80
+
+Le
+Inte
+zon
+d'a
+Ave
+san
+
+Act
+
+Sur
+bar
+sur
+Àp
+Par
+fil e
+
+Co
+
+Cho
+auq
+sym
+pas
+
+AST
+Si v
+cou
+une
+que
+
+é
+
+al
+r
+
+fier
+a
+
+Wi-Fi
+Le Wi-Fi permet d'accéder à
+Internet en haut-débit dans la
+zone de couverture d'un point
+d'accès (PA).
+Avec le Wi-Fi, surfez sur Internet
+sans fil ni surcoût.
+
+Activation du Wi-Fi
+Sur l'écran d'accueil, ouvrez la
+barre de notification et appuyez
+sur
+pour l'activer.
+À partir du Menu, sélectionnez
+Paramètres > Paramètres sans
+fil et réseau > Wi-Fi .
+
+Connexion au Wi-Fi
+Choisissez le réseau Wi-Fi
+auquel se connecter. Si le
+symbole
+s'affiche, un mot de
+passe de connexion est requis.
+ASTUCE :
+Si vous êtes hors zone de
+couverture Wi-Fi et choisissez
+une connexion 3G, il est possible
+que des surcoûts s'appliquent.
+
+Partage de
+connexion USB
+Vous pouvez partager la
+connexion Internet de votre
+téléphone avec votre ordinateur.
+Partagez la connexion de votre
+téléphone avec votre ordinateur
+via un câble USB.
+Paramètres > Paramètres
+sans fil et réseau > Partage
+de connexion et point
+d'accès mobile > Partage de
+connexion USB
+Pour obtenir plus d'informations
+concernant le partage de
+connexion USB, cliquez sur Aide
+
+Partage de connexion Wi-Fi
+Permet d'utiliser votre LG-P500
+comme point d'accès Wi-Fi
+mobile.
+Paramètres > Paramètres
+sans fil et réseau > Partage
+de connexion et point d'accès
+mobile > Point d'accès Wi-Fi
+mobile.
+81
+
+Wi-Fi
+
+M
+
+ASTUCE :
+Si votre téléphone passe en
+mode Veille, y compris lorsqu'il
+est connecté à un réseau Wi-Fi,
+la connexion Wi-Fi se désactive
+automatiquement.
+Dans ce cas, si votre téléphone
+dispose d'un accès au réseau
+3G, il est possible qu'il se
+connecte automatiquement
+au réseau 3G, engendrant
+éventuellement un surcoût.
+
+Mi
+
+REMARQUE : Le LG-P500 prend
+en charge les protocoles de
+sécurité WEP, WPA/WPA2-PSK
+et 802.1x . Si votre fournisseur de
+services ou administrateur réseau
+Wi-Fi définit le cryptage pour la
+sécurité du réseau, remplissez le
+code dans la fenêtre contextuelle.
+Si le cryptage n'est pas défini,
+cette fenêtre contextuelle ne
+s'affichera pas. Vous pouvez
+obtenir la clé auprès de votre
+opérateur Wi-Fi ou de votre
+administrateur réseau.
+
+82
+
+Mis
+Mo
+Pou
+l'ut
+con
+http
+http
+ind
+vot
+Cet
+me
+vot
+la v
+Inte
+cen
+La
+du
+l'at
+l'ut
+dur
+vou
+inst
+s'a
+de
+le c
+
+Mise à jour logicielle
+Mise à jour du logiciel
+Mise à jour du logiciel LG
+Mobile Phone à partir d'Internet
+Pour plus d'informations sur
+l'utilisation de cette fonction,
+consultez le site Web
+http://update.lgmobile.com ou
+http://www.lg.com/common/
+index.jsp → et sélectionnez
+votre pays et votre langue.
+Cette fonction vous permet de
+mettre à jour le micrologiciel de
+votre téléphone et de télécharger
+la version la plus récente depuis
+Internet, sans faire appel à un
+centre de services.
+La mise à jour du micrologiciel
+du téléphone mobile requiert
+l'attention complète de
+l'utilisateur pendant toute la
+durée du processus. Assurezvous de bien lire toutes les
+instructions et remarques qui
+s'affichent à chaque étape avant
+de continuer. Attention : enlever
+le câble USB ou la batterie
+
+durant la mise à jour logicielle
+peut gravement endommager
+votre téléphone mobile.
+
+DivX Mobile
+À PROPOS DES VIDÉOS DIVX :
+DivX® est un format de vidéo
+numérique créé par DivX,
+Inc. Votre téléphone est un
+périphérique officiellement
+certifié par DivX (DivX Certified®),
+ce qui vous permet de lire des
+vidéos DivX. Rendez-vous sur
+www.divx.com pour trouver plus
+d'informations ainsi que des
+utilitaires permettant de convertir
+vos fichiers au format DivX.
+À PROPOS DE LA VIDÉO
+À LA DEMANDE DIVX : ce
+périphérique DivX Certified®
+doit être enregistré pour pouvoir
+lire des vidéos à la demande
+DivX. Pour obtenir le code
+d'enregistrement, accédez à la
+section DivX VOD du menu de
+configuration du périphérique.
+Rendez-vous sur vod.divx.com
+83
+
+Mise à jour logicielle
+
+Do
+
+pour savoir comment enregistrer
+votre téléphone.
+Certification DivX Certified®
+pour la lecture de vidéos DivX®
+jusqu'à 320 x 240.
+DivX®, DivX Certified® et leurs
+logos respectifs sont des
+marques déposées de DivX,
+Inc. et leur utilisation est régie
+par une licence.
+
+Tem
+Ma
+Min
+
+84
+
+Données techniques
+Températures ambiantes
+Max : +55 °C (en décharge), +45 °C (en charge)
+Min : -10 °C
+Déclaration de conformité
+Coordonnées du fournisseur
+Nom
+LG Electronics Inc
+Adresse
+LG Electronics Inc. LG Twin Towers 20,
+Yeouido-dong, Yeongdeungpo-gu, Seoul, Korea 150-721
+
+Détails du produit
+Nom du produit
+GSM 850 / E-GSM 900 / DCS 1800 / PCS 1900 Quad Band and WCDMA Terminal Equipment
+Modèle
+LG-P500
+Nom commercial
+LG
+
+Normes applicables
+R&TTE Directive 1999/5/EC
+EN 301 489-01 V1.8.1, EN 301 489-07 V1.3.1
+EN 301 489-17 V2.1.1, EN 301 489-19 V1.2.1 , EN 301 489-24 V1.4.1
+EN 301 511 V9.0.2
+EN 301 908-1 V3.2.1 EN 301 908-2 V3.2.1,
+EN 300 328 V1.7.1
+EN 50360:2001/EN62209-1:2006
+EN 60950-1 : 2006
+
+Informations supplémentaires
+La conformité aux normes ci-dessus est vérifiée par le BABT (organisme de contrôle).
+BABT, Forsyth House, Churchfield Road, Walton-on-Thames, Surrey, KT12 2TD, United Kingdom
+Notified Body Identification Number : 0168
+
+Déclaration
+Je déclare par la présente que
+les produits et appareils mentionnés ci-dessus sont
+conformes aux standards et aux dispositions des
+directives mentionnées ci-dessus.
+
+Nom
+
+Date de publication
+
+Doo Haeng Lee/Directeur
+
+September. 03 , 2010
+
+LG Electronics Inc. - EU Representative
+Veluwezoom 15, 1327 AE Almere, The Netherlands
+Signature du représentant
+
+85
+
+Accessoires
+
+À
+
+Les accessoires suivants sont fournis avec votre LG-P500. (Les
+articles décrits cidessous peuvent être offerts en option.)
+
+En
+fic
+su
+
+Chargeur
+
+Câble de données
+Permet de raccorder
+et de synchroniser
+le LG-P500 à votre
+ordinateur.
+
+Batterie
+
+Guide de l'
+utilisateur
+Pour en savoir plus
+sur votre LG-P500.
+
+Casque
+d'écoute
+stéréo
+
+Micro SD
+
+REMARQUE :
+• Utilisez toujours des accessoires d'origine LG.
+• L'utilisation d'autres accessoires pourrait annuler la garantie.
+• Les accessoires peuvent varier selon la région.
+
+86
+
+Con
+l'or
+US
+App
+l'éc
+glis
+Con
+US
+de
+dos
+Si v
+pilo
+sur
+le c
+Pou
+rep
+« Tr
+pér
+ma
+
+Enr
+ou
+sur
+télé
+
+À lire avant d'utiliser le téléphone mobile !
+Enregistrement de
+fichiers musicaux/vidéo
+sur le téléphone
+Connectez votre téléphone à
+l'ordinateur à l'aide du câble
+USB.
+Appuyez sur la barre d'état sur
+l'écran d'accueil et faites-la
+glisser vers le bas. Sélectionnez
+Connecté avec un câble
+USB > Activer le périphérique
+de stockage USB > Ouvrir le
+dossier pour voir les fichiers.
+Si vous n'avez pas installé le
+pilote LG Android Platform Driver
+sur votre ordinateur, vous devez
+le configurer manuellement.
+Pour plus d'informations,
+reportez-vous à la rubrique
+« Transfert de fichiers à l'aide de
+périphériques de stockage de
+masse ».
+
+- Vous souhaitez peut-être
+copier ou supprimer des
+fichiers à partir de l'ordinateur
+sur le stockage amovible du
+téléphone à l'aide d'un lecteur
+de cartes
+- En la présence d'un fichier
+vidéo avec fichier de soustitres (fichier .smi ou .srt
+portant un nom identique que
+le fichier vidéo), placez-les
+dans le même dossier pour
+que les sous-titres s'affichent
+automatiquement lors de la
+lecture du fichier vidéo.
+- Lors du téléchargement de
+fichiers musicaux ou vidéo,
+les droits d'auteurs doivent
+être respectés. Notez que tout
+fichier corrompu ou présentant
+une extension non valide risque
+d'endommager le téléphone.
+
+Enregistrez les fichiers musicaux
+ou vidéo à partir de l'ordinateur
+sur le stockage amovible du
+téléphone.
+87
+
+À lire avant d'utiliser le téléphone mobile !
+Lecture de fichiers
+musicaux/vidéo sur le
+téléphone
+Lecture de fichiers musicaux
+Accédez au fichier voulu et
+sélectionnez-le pour la lecture.
+Lecture des fichiers vidéo
+Accédez au fichier voulu et
+sélectionnez-le pour la lecture.
+
+Déplacement de contacts
+d'un ancien téléphone
+vers le téléphone actuel
+Exportez vos contacts dans
+un fichier CSV à partir de
+votre ancien téléphone vers
+l'ordinateur à l'aide d'un
+programme de synchronisation
+PC.
+1 Téléchargez le programme
+Mobile Sync for Android sur le
+site www.lg.com et installezle sur l'ordinateur. Exécutez
+le programme et connectez
+votre téléphone mobile
+Android à l'ordinateur par
+88
+
+câble USB.
+2 Sélectionnez l'icône Contacts.
+Allez à Menu > Fichier >
+Importer et sélectionnez le
+fichier CSV enregistré sur
+l'ordinateur.
+3 Si les champs dans le fichier
+CSV importé sont différents
+de ceux de Mobile Sync for
+Android, vous devez mapper
+les champs. Après mappage
+des champs, cliquez sur OK.
+Ensuite, les contacts sont
+ajoutés à Mobile Sync for
+Android.
+4 Si la connexion du téléphone
+LG-P500 (par câble USB)
+est détectée par Mobile
+Sync for Android, cliquez
+sur « Synchroniser » ou
+sur « Synchroniser les
+contacts » pour synchroniser
+les contacts enregistrés sur
+votre ordinateur avec votre
+téléphone et les enregistrer.
+
+En
+de
+Blu
+
+Env
+Blu
+des
+en
+cor
+le m
+nor
+télé
+*E
+l'
+sé
+C
+sé
+a
+e
+R
+c
+l'
+d
+
+cts.
+
+er
+
+er
+e
+K.
+
+ne
+
+er
+r
+
+.
+
+Envoi de données
+depuis votre téléphone
+Bluetooth
+Envoi de données via
+Bluetooth : permet d'envoyer
+des données via Bluetooth
+en exécutant une application
+correspondante, et non depuis
+le menu Bluetooth, comme il est
+normalement d'usage sur les
+téléphones mobiles.
+* Envoi d'images : exécutez
+l'application Galerie et
+sélectionnez Image > Menu.
+Cliquez sur Partager et
+sélectionnez Bluetooth >
+assurez-vous que le Bluetooth
+est activé et sélectionnez
+Rechercher des appareils >
+choisissez dans la liste
+l'appareil auquel envoyer des
+données.
+
+* Export de contacts : exécutez
+l'application Contacts. Appuyez
+sur l'adresse vers laquelle
+exporter. Appuyez sur Menu.
+Sélectionnez Partager >
+Bluetooth. Vérifiez si le Bluetooth
+est activé et sélectionnez
+Rechercher des appareils.
+Choisissez dans la liste l'appareil
+auquel envoyer des données.
+* Envoi de plusieurs contacts :
+exécutez l'application
+Contacts. Pour sélectionner
+plusieurs contacts, appuyez
+sur la touche Menu, puis
+sur Sélection multiple.
+Sélectionnez les contacts à
+envoyer ou appuyez sur la
+touche Menu, puis sur Tout
+sélect. > Partager > Bluetooth
+> Tout sélect.. Sélectionnez
+Partager > Bluetooth. Vérifiez
+si le Bluetooth est activé et
+sélectionnez Rechercher des
+appareils. Choisissez dans la
+liste l'appareil auquel envoyer
+des données.
+89
+
+À lire avant d'utiliser le téléphone mobile !
+* Connexion au FTP (seul
+le serveur FTP est pris en
+charge sur ce téléphone) :
+sélectionnez « Paramètres » >
+« Connexions sans fil » >
+« Paramètres Bluetooth ».
+Ensuite, sélectionnez la case
+« Identifiable » et recherchez
+d'autres périphériques.
+Accédez au service voulu et
+ouvrez la connexion au serveur
+FTP.
+ASTUCE : Il s'agit de la version
+Bluetooth 2.1 EDR, certifiée par
+Bluetooth SIG. L'appareil est
+donc compatible avec les autres
+appareils certifiés Bluetooth SIG.
+- Si vous souhaitez rechercher
+ce téléphone à partir
+d'autres appareils, accédez à
+« Paramètres » > « Connexions
+sans fil » > « Paramètres
+Bluetooth ».
+Ensuite, cochez la case
+« Identifiable ».
+
+90
+
+La case est décochée au bout
+de 120 secondes.
+- Profils pris en charge : SDAP,
+HFP, HSP, OPP, PBAP (serveur),
+FTP (serveur), A2DP, AVRCP
+et DUN.
+
+Dé
+
+Ce
+pou
+néc
+fac
+
+M
+
+Er
+
+Au
+co
+ré
+
+Co
+co
+
+Im
+d'
+fo
+
+P,
+r),
+
+Dépannage
+Ce chapitre répertorie quelques-uns des problèmes que vous
+pouvez rencontrer en utilisant votre téléphone. Certains d'entre eux
+nécessitent que vous appeliez votre opérateur, mais vous pouvez
+facilement en résoudre la plupart par vous-même.
+Message
+
+Causes
+possibles
+
+Solutions possibles
+
+Erreur SIM
+
+Aucune carte
+SIM n'est insérée
+dans le téléphone,
+ou cette dernière
+est insérée de
+façon incorrecte.
+
+Vérifiez que la carte SIM est correctement
+insérée.
+
+Aucune
+connexion
+réseau
+
+Signal faible.
+Hors réseau GSM.
+
+Rapprochez-vous d'une fenêtre ou d'une
+zone en plein air. Consultez la carte de
+couverture de votre opérateur.
+
+Codes non
+concordants
+
+Pour changer de
+code de sécurité,
+vous devez
+confirmer le
+nouveau code en
+le saisissant une
+deuxième fois.
+
+Contactez votre fournisseur de services.
+
+Impossible
+d'activer la
+fonction
+
+Non pris en
+charge par le
+fournisseur de
+services ou
+enregistrement
+requis.
+
+Contactez votre fournisseur de services.
+
+91
+
+Dépannage
+Message
+
+Causes
+possibles
+
+Solutions possibles
+
+Appels
+indisponibles
+
+Erreur de
+numérotation
+Nouvelle carte
+SIM insérée, limite
+de facturation
+atteinte
+
+Nouveau réseau non autorisé. Vérifiez les
+nouvelles restrictions. Contactez votre
+fournisseur de services ou redéfinissez
+votre limite de facturation à l'aide du
+code PIN 2.
+
+Impossible
+d'allumer le
+téléphone
+
+La pression sur la
+touche Marche/
+Arrêt n'est pas
+assez longue
+Batterie
+déchargée.
+Les contacts de
+la batterie sont
+sales.
+
+Appuyez sur la touche Marche/Arrêt
+pendant au moins deux secondes.
+
+M
+
+Er
+ch
+
+Laissez le chargeur connecté pendant
+une durée plus longue.
+Nettoyez les contacts.
+
+Pe
+ré
+
+Nu
+au
+
+92
+
+Message
+
+Causes
+possibles
+
+Solutions possibles
+
+La batterie est
+totalement vide.
+
+Rechargez la batterie.
+
+La température
+ambiante est
+en dehors de la
+plage autorisée.
+
+Vérifiez que la température est
+appropriée, patientez un instant, puis
+rechargez votre batterie.
+
+Problème de
+contact.
+
+Vérifiez l'alimentation et la connexion
+du téléphone. Vérifiez les contacts de la
+batterie et nettoyez-les si nécessaire.
+
+Pas de tension
+dans la prise.
+
+Utilisez une autre prise ou vérifiez la
+tension.
+
+Chargeur
+défectueux.
+
+Si le chargeur ne chauffe pas, remplacezle.
+
+Chargeur
+incorrect.
+
+N'utilisez que des accessoires de marque
+LG.
+
+Batterie
+défectueuse.
+
+Remplacez la batterie.
+
+Perte de
+réseau
+
+Signal trop faible.
+
+Reconnexion automatique à un autre
+fournisseur de services.
+
+Numéro non
+autorisé
+
+La fonction
+Numéro fixe est
+activée.
+
+Vérifier les réglages.
+
+s
+
+Erreur de
+chargement
+
+93
+
+Recommandations pour une utilisation sûre
+et efficace
+Veuillez lire ces recommandations.
+Leur non-respect peut s'avérer
+dangereux, voire illégal.
+
+Exposition aux
+radiofréquences
+CET APPAREIL EST CONFORME
+À LARÉGLEMENTATION
+INTERNATIONALE EN MATIÈRE
+D'EXPOSITION AUX ONDES
+RADIO.
+Votre téléphone portable est
+un émetteurrécepteur radio.
+Il a été conçu et fabriqué
+de manière à respecter les
+limites recommandées par les
+directives internationales (ICNIRP)
+en matière d'exposition aux
+fréquences radioélectriques.
+Ces limites font partie d'un
+ensemble de directives et
+déterminent les niveaux
+autorisés d'énergie FR pour la
+population. Ces directives ont
+été établies par des organismes
+scientifiques indépendants à
+partir d'évaluations complètes
+et régulières issues d'études
+scientifiques.
+94
+
+Les recommandations relatives
+à l'exposition aux ondes radio
+utilisent une unité de mesure
+appelée DAS (débit d'absorption
+spécifique). La limite DAS fixée
+dans les directives internationales
+est de 2,0 W/kg*.Lors des tests
+visant à déterminer le DAS, le
+téléphone est utilisé dans des
+positions de fonctionnement
+standard et fonctionne à son
+niveau de puissance certifié le
+plus élevé dans toutes les bandes
+de fréquences testées. Bien que
+le taux d'absorption spécifique
+soit déterminé sur le niveau de
+puissance certifié le plus élevé, le
+taux d'absorption spécifique réel
+du téléphone en fonctionnement
+peut être largement inférieur à la
+valeur maximale. Cela est dû au
+fait que le téléphone est conçu
+pour fonctionner à différents
+niveaux de puissance de manière
+à n'utiliser que la puissance
+dont il a besoin pour accéder au
+réseau. En principe, plus vous
+êtes proche d'une antenne relais,
+plus la puissance de sortie est
+faible. Avant d'être commercialisé,
+
+tou
+être
+àg
+dire
+Cet
+de
+la s
+l'en
+pré
+La
+enr
+lors
+vér
+déf
+nive
+W/
+Cet
+dire
+aux
+lors
+pos
+nive
+dist
+cor
+Lor
+ou
+fins
+con
+et d
+min
+
+e
+
+n
+
+es
+s
+
+des
+e
+
+le
+el
+nt
+la
+u
+
+ère
+
+u
+
+ais,
+sé,
+
+tout modèle de téléphone doit
+être soumis à des tests visant
+à garantir sa conformité à la
+directive européenne R&TTE.
+Cette directive impose le respect
+de règles strictes afin de garantir
+la sécurité des utilisateurs et de
+l'ensemble de la population, et
+prévenir tout risque sanitaire.
+La valeur DAS la plus élevée
+enregistrée pour ce modèle
+lors des tests effectués afin de
+vérifier sa conformité aux normes
+définies pour une utilisation au
+niveau de l'oreille est de 0.927
+W/kg.
+Cet appareil est conforme aux
+directives en matière d'exposition
+aux fréquences radioélectriques
+lorsqu'il est utilisé soit dans sa
+position normale, c.-à-d. au
+niveau de l'oreille, soit à une
+distance minimale de 1,5 cm du
+corps.
+Lorsqu'un étui, un clip ceinture
+ou un support est utilisé à des
+fins de transport, il ne doit pas
+contenir de parties métalliques
+et doit garantir une distance
+minimale de 1,5 cm entre le
+
+produit et le corps. Pour pouvoir
+transmettre des fichiers de
+données ou des messages, cet
+appareil requiert une connexion
+de qualité au réseau. Dans
+certains cas, la transmission
+de fichiers de données ou de
+messages peut être retardée
+jusqu'à ce qu'une telle connexion
+soit possible. Veillez à bien
+suivre les instructions relatives
+à la distance de séparation
+pour l'établissement de la
+transmission.
+La valeur DAS la plus élevée
+enregistrée pour ce modèle
+lors des tests effectués afin de
+vérifier sa conformité aux normes
+définies pour une utilisation au
+niveau du corps est de 0.699
+W/kg.
+* La limite DAS applicable aux
+équipements mobiles utilisés
+par le public est de 2,0 watts/
+kilogramme (W/kg) en moyenne
+sur dix grammes de tissu
+cellulaire.
+
+95
+
+Recommandations pour une utilisation sûre
+et efficace
+Ces directives comprennent des
+marges de sécurité destinées
+à assurer une protection
+supplémentaire pour les
+consommateurs et à prendre en
+compte toute variation de mesure.
+Les valeurs DAS peuvent varier
+selon les normes de présentation
+des informations en vigueur dans
+les différents pays et selon la
+bande de réseau utilisée.
+Pour connaître les valeurs DAS
+autorisées dans les autres pays,
+veuillez consulter la rubrique des
+informations relatives aux produits
+sur le site www. lg.com.
+
+Mesures touchant à la
+sécurité
+•
+
+96
+
+Dans certains lieux ou
+situations tels que les avions,
+les hôpitaux, les stations
+services, et les garages
+professionnels, l'usage du
+téléphone est interdit. Il est
+donc impératif de respecter
+strictement les consignes de
+sécurité propres à chacune
+
+de ces situations et d'éteindre
+votre téléphone lorsque cela
+est requis.
+• Par ailleurs, pour éviter les
+risques d'interférences, les
+personnes porteuses d'implants
+électroniques (stimulateurs
+cardiaques, pompes à insuline,
+neurostimulateurs...) doivent
+conserver une distance de 15
+cm entre le mobile et l'implant
+et ne l'utiliser que du côté
+opposé au côté où celui-ci est
+situé.
+• Téléphoner en conduisant,
+même avec des équipements
+qui ne sont pas interdits
+par la réglementation, est
+dangereux. Cela augmente le
+risque d'accident provenant
+de la distraction créée par la
+conversation elle même. Aussi
+est-il interdit de téléphoner en
+conduisant et l'utilisation d'un
+kit mains-libres ne doit pas être
+considéré comme une solution.
+
+En
+
+U
+b
+ac
+ce
+ut
+d
+d
+d
+to
+ap
+
+N
+té
+'a
+u
+• Te
+d
+q
+o
+•N
+à
+c
+o
+•N
+•N
+té
+m
+•
+
+re
+
+re
+
+Entretien et réparation
+AVERTISSEMENT:
+Utilisez uniquement des
+batteries, chargeurs et
+accessoires agréés pour
+ce modèle de téléphone.L'
+utilisation de tout autre type
+de batterie, de chargeur et
+d'accessoire peut s'avérer
+dangereuse et peut annuler
+tout accord ou garantie
+applicable au téléphone.
+
+nts
+
+ne,
+
+5
+ant
+
+st
+
+s
+
+e
+
+si
+en
+n
+être
+on.
+
+Ne démontez pas votre
+téléphone. Si une réparation s
+'avère nécessaire, confiez-le à
+un technicien qualifié.
+• Tenez votre téléphone éloigné
+des appareils électriques, tels
+que téléviseurs, postes radio et
+ordinateurs personnels.
+• Ne placez pas votre téléphone
+à proximité de sources de
+chaleur, telles qu'un radiateur
+ou une cuisinière.
+• Ne le faites pas tomber.
+• Ne soumettez pas votre
+téléphone à des vibrations
+mécaniques ou à des chocs.
+•
+
+Éteignez votre téléphone dans
+les zones où des règlements
+spéciaux l'exigent. Par
+exemple, n'utilisez pas votre
+téléphone dans les hôpitaux,
+car celui-ci pourrait perturber
+le bon fonctionnement des
+équipements médicaux
+sensibles.
+• Si vos mains sont mouillées,
+évitez tout contact avec le
+téléphone lorsqu'il est en cours
+de charge.Ceci peut provoquer
+un choc électrique et
+endommager votre téléphone.
+• Ne mettez pas un téléphone en
+charge à proximité de matières
+infl ammables. En eff et, il
+pourrait chauff er et déclencher
+un incendie.
+• Pour nettoyer l'extérieur du
+combiné, utilisez un chiff on
+sec. N'utilisez pas de solvant,
+tel que du benzène, un diluant
+ou de l'alcool.
+• Ne rechargez pas votre
+téléphone lorsqu'il est posé sur
+du tissu.
+•
+
+97
+
+Recommandations pour une utilisation sûre
+et efficace
+Rechargez votre téléphone
+dans une zone bien ventilée.
+• N'exposez pas le téléphone à
+de la fumée ou de la poussière
+en quantité excessive.
+• Ne placez votre téléphone à
+proximité de cartes de crédit
+ou de titres de transport, car
+il pourrait altérer les données
+des bandes magnétiques.
+• Ne touchez pas l'écran avec
+un objet pointu qui risquerait d'
+endommager votre téléphone.
+• Ne mettez pas votre téléphone
+en contact avec des liquides
+ou des éléments humides.
+• Utilisez les accessoires tels que
+les oreillettes avec précaution.
+Ne manipulez pas l'antenne
+inutilement.
+• N'utilisez pas votre téléphone
+ou ses accessoires dans des
+endroits humides tels que
+piscines, serres, solariums
+ou environnements tropicaux.
+Ceux-ci risquent de l'
+endommager et d'annuler la
+garantie.
+•
+
+98
+
+Fonctionnement optimal
+du téléphone
+Appareils électroniques et
+médicaux Tous les téléphones
+portables peuvent provoquer des
+interférences pouvant aff ecter
+les performances des appareils
+électroniques.
+• N'utilisez pas votre téléphone
+à proximité d'équipements
+médicaux sans autorisation.
+Demandez l'avis de votre
+médecin afin de déterminer
+si le fonctionnement
+de votre téléphone est
+susceptible d'interférer avec
+le fonctionnement de votre
+appareil médical.
+• Les téléphones portables
+peuvent nuire au bon
+fonctionnement de certaines
+prothèses auditives.
+• Pour les porteurs d'implants
+électroniques, des précautions
+sont à prendre: utilisez le
+téléphone sur le côté opposé à
+l'implant.
+
+•
+
+D
+p
+fo
+ra
+
+St
+
+Les
+car
+de
+min
+un
+stim
+évit
+der
+télé
+àv
+ne
+poc
+
+Hô
+
+Éte
+lors
+dan
+éta
+typ
+pro
+ave
+sen
+
+re
+
+al
+
+es
+r
+s
+
+e
+
+ns
+
+éà
+
+•
+
+Des interférences mineures
+peuvent perturber le bon
+fonctionnement des téléviseurs,
+radios, ordinateurs, etc.
+
+Stimulateurs cardiaques
+Les fabricants de stimulateurs
+cardiaques recommandent
+de maintenir une distance
+minimale de 15 cm entre
+un téléphone portable et un
+stimulateur cardiaque afin d'
+éviter toute interférence avec ce
+dernier. Pour ce faire, utilisez le
+téléphone sur l'oreille opposée
+à votre stimulateur cardiaque et
+ne le transportez pas dans une
+poche de chemise.
+
+Hôpitaux
+Éteignez votre appareil sans fil
+lorsque cela vous est demandé
+dans les hôpitaux, cliniques et
+établissements de santé ; ce
+type d'appareil peut en eff et
+provoquer des interférences
+avec des équipements médicaux
+sensibles.
+
+Sécurité au volant
+Vérifiez les lois et règlements en
+vigueur en matière d'utilisation
+des téléphones portables dans la
+zone où vous conduisez.
+• Ne tenez pas le téléphone
+dans votre main alors que vous
+conduisez.
+• Concentrer toute votre attention
+sur la conduite.
+• Utilisez un kit mains libres, si
+disponible.
+• Si les conditions de conduite le
+permettent, quittez la route et
+garez-vous avant d'émettre ou
+de recevoir un appel.
+• Les radiofréquences peuvent
+aff ecter certains systèmes
+électroniques de votre
+véhicule motorisé, tels que le
+système audio stéréo ou les
+équipements de sécurité.
+• Lorsque votre véhicule est
+équipé d'un airbag, ne gênez
+pas son déclenchement
+avec un équipement sans fil
+portable ou fixe. Il risquerait
+de l'empêcher de s'ouvrir ou
+provoquer de graves blessures
+en raison de performances
+99
+inadéquates.
+
+Recommandations pour une utilisation sûre
+et efficace
+•
+
+Lorsque vous écoutez de la
+musique en extérieur, veuillez
+vous assurer que le volume n
+'est pas trop élevé de façon
+à bien entendre ce qu'il se
+passe autour de vous. Ceci est
+particulièrement important à
+proximité des routes.
+
+Nuisances auditives
+Afin de protéger vos capacités
+auditives, n'exposez pas votre
+ouïe à de hauts volumes sonores
+pendant de longues périodes.
+Nous vous recommandons de ne
+pas enir l'appareil près de votre
+oreille lorsque le mode mains
+libres est activé. Pendant les
+communications ou lorsque vous
+écoutez de la musique, réglez le
+volume à un niveau raisonnable.
+REMARQUE: Une pression
+
+sonore trop élevée provenant
+de vos oreillettes pourrait
+entraîner une perte de votre
+acuité auditive.
+
+100
+
+Parties en verre
+Certaines parties de votre
+téléphone portable sont en verre.
+Ce verre pourrait se briser en cas
+de chute sur une surface dure
+ou d'impact considérable. Le cas
+échéant, évitez de toucher ou
+de retirer le verre brisé.N'utilisez
+plus votre téléphone portable
+jusqu'à ce que ce verre soit
+remplacé par un fournisseur de
+service agréé.
+
+Zone de déminage
+N'utilisez pas votre téléphone
+lorsque des opérations de
+dynamitage sont en cours.
+Respectez les restrictions, les
+règlements et les lois en vigueur.
+
+Zones à atmosphère
+explosive
+N'utilisez pas votre téléphone
+dans une station-service.
+• N'utilisez pas votre téléphone
+à proximité de carburant ou de
+produits chimiques.
+•
+
+•
+
+N
+s
+d
+d
+m
+v
+p
+
+Da
+
+Les
+gén
+les
+•É
+d
+•N
+a
+
+En
+
+Con
+dan
+por
+télé
+piè
+risq
+
+Ap
+
+Il e
+d'u
+dis
+de
+
+re
+
+rre.
+cas
+
+cas
+
+ez
+
+e
+
+eur.
+
+e
+
+e
+de
+
+•
+
+Ne transportez pas et ne
+stockez pas de produits
+dangereux, de liquides ou
+de gaz inflammables dans le
+même compartiment de votre
+voiture que votre téléphone
+portable et ses accessoires.
+
+Dans un avion
+Les appareils sans fil peuvent
+générer des interférences dans
+les avions.
+• Éteignez votre téléphone avant
+d'embarquer dans un avion.
+• Ne l'utilisez pas au sol sans
+autorisation de l'équipage.
+
+Enfants
+Conservez votre téléphone
+dans un endroit sûr, hors de la
+portée des jeunes enfants. Votre
+téléphone comprend des petites
+pièces qui peuvent présenter un
+risque de suffocation.
+
+Appels d'urgence
+Il est possible que les numéros
+d'urgence ne soient pas
+disponibles sur tous les réseaux
+de téléphonie mobile. Vous
+
+ne devez donc pas dépendre
+uniquement de votre téléphone
+portable pour émettre un appel
+d'urgence. Renseignez-vous
+auprès de votre opérateur.
+
+Informations sur la
+batterie et précautions d'
+usage
+Il n'est pas nécessaire de
+décharger complètement
+la batterie avant de la
+recharger. Contrairement
+aux autres batteries, elle n
+'a pas d'effet mémoire
+pouvant compromettre ses
+performances.
+• Utilisez uniquement les
+batteries et chargeurs LG. Les
+chargeurs LG sont conçus pour
+optimiser la durée de vie de
+votre batterie.
+• Ne démontez pas et ne
+courtcircuitez pas la batterie.
+• Les contacts métalliques de la
+batterie doivent toujours rester
+propres.
+• Procédez au remplacement de
+la batterie lorsque celle-ci n'
+offre plus des performances
+101
+•
+
+Recommandations pour une utilisation sûre
+et efficace
+acceptables. La batterie
+peut être rechargée des
+centaines de fois avant qu
+'un remplacement ne soit
+nécessaire.
+• Rechargez la batterie en cas
+de non-utilisation prolongée
+afin d'optimiser sa durée d'
+utilisation.
+• N'exposez pas le chargeur de
+la batterie au rayonnement
+direct du soleil. Ne l'utilisez pas
+non plus dans des lieux très
+humides, tels qu'une salle de
+bains.
+• Le remplacement de la batterie
+par un modèle inadapté risque
+d'entraîner une explosion de
+cette dernière.
+• Le remplacement de la batterie
+par un modèle inadapté risque
+d'entraîner une explosion de
+cette dernière.
+• Respectez les instructions du
+fabricant relatives au recyclage
+des batteries usagées. Veuillez
+recycler autant que faire se
+peut. Ne vous en débarrassez
+pas avec les déchets
+102
+
+ménagers.
+• Si la batterie est hors d'usage,
+veuillez la rapporter au service
+après-vente ou au revendeur
+LG Electronics agréé le plus
+proche.
+• Débranchez systématiquement
+le chargeur de la prise murale
+orsque le chargement de la
+batterie est terminé pour éviter
+qu'il ne consomme inutilement
+de l'énergie.
+• La durée de vie réelle de
+la batterie dépend de la
+configuration du réseau, des
+paramètres du produit, de l'
+utilisation, de la batterie et des
+conditions extérieures.
+
+Conditions d'utilisation
+pour réduire le niveau
+d'exposition du
+consommateur aux
+rayonnements
+• Téléphonez
+
+dans de bonnes
+conditions de réception
+pour diminuer la quantité de
+rayonnements. Pour ce faire,
+
+é
+p
+d
+vo
+• Té
+c
+u
+ré
+•U
+v
+d
+e
+g
+
+Pr
+pré
+co
+
+É
+le
+le
+d
+v
+c
+•L
+'i
+(s
+d
+d
+m
+•
+
+re
+
+ge,
+ce
+r
+
+ent
+le
+
+ter
+ent
+
+es
+
+évitez de téléphoner dans les
+parking souterrains, lors de
+déplacements en train ou en
+voiture.
+• Téléphonez quand le téléphone
+capte au mieux (affichage d'
+un maximum de barettes de
+réception de réseau).
+• Utilisez un kit main libre tout en
+veillant à éloigner le téléphone
+du ventre pour les femmes
+enceintes et des parties
+génitales pour les adolescents.
+
+utiliser que du côté opposé au
+côté où celui-ci est situé.
+• Utilisez un kit piéton (oreillettes)
+le plus souvent possible,
+notamment en cas d'usage
+fréquent ou prolongé du
+téléphone mobile.
+• Éloignez votre téléphone
+mobile du ventre chez les
+femmes enceintes ou du bas
+du ventre chez les enfants et
+adolescents.
+
+Précautions d'usage
+préconisées par notre
+constructeur
+Évitez de téléphoner dans
+les parking souterrains,
+les ascenseurs, lors de
+déplacements en train, en
+voiture ou dans un secteur mal
+couvert par le réseau.
+• Les personnes porteuses d
+'implants électroniques
+(stimulateurs cardiaques...)
+doivent conserver une distance
+de 15 centimètres entre le
+mobile et l'implant et ne l'
+•
+
+103
+

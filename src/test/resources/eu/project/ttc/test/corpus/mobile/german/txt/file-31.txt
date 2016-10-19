@@ -1,0 +1,555 @@
+Bluetooth - Die Grundlagen
+Im Gegensatz zum Wireless LAN handelt es sich bei Bluetooth um eine Nahbereichsfunktechnologie für kleine Übertragungsstrecken bis ca. 10 m, die sich in Geräte integrieren lässt. Man spricht hier von dem Personal Area Network (PAN), wobei sowohl herkömmliche Daten, als auch Sprachinformationen übertragen werden können.
+
+Was ist Bluetooth?
+
+ 
+Bluetooth bietet die Möglichkeit der drahtlosen Datenübertragung.
+
+ 
+
+Im Gegensatz zum Wireless LAN handelt es sich bei Bluetooth um eine Nahbereichsfunktechnologie für kleine Übertragungsstrecken bis ca. 10 m, die sich in Geräte integrieren lässt. Man spricht hier von dem Personal Area Network (PAN), wobei sowohl herkömmliche Daten, als auch Sprachinformationen übertragen werden können.
+
+ 
+
+Drahtlose Kommunikation 
+
+Bluetooth erfüllt die drahtlose Anbindung von Peripherien, bei der man völlig losgelöst von Kabeln und der sonst üblichen Schnittstellenvielfalt ist. Somit ist das primäre Einsatzgebiet von Bluetooth mit der Infrarot-Lösung IrDA vergleichbar.
+Im Gegensatz zu IrDA benötigt man mit Bluetooth für den Datenaustausch zwischen den Geräten keine direkte Sichtverbindung bzw. Ausrichtung. Die Funkwellen durchdringen problemlos Aktentaschen, Schreibtischschubladen oder Trennwände.
+Der Grundsatz von Bluetooth, der für die Entwickler im Vordergrund stand, war die Funkanbindung von mobilen oder feststehenden Geräten über geringe Distanzen, um die Kabelanbindung zu ersetzen, wobei dies über eine robuste, wenig komplexe und kostengünstige Lösung erfolgen soll. Die eigentliche Bluetooth-Hardware ist somit sehr kompakt und zeichnet sich durch eine geringe Leistungsaufnahme aus, so dass sich Bluetooth in portable Geräte wie beispielsweise PDAs oder Handys problemlos implementieren lässt.
+
+ 
+
+Das Anwendungsfeld von Bluetooth ist theoretisch unbegrenzt und sehr vielfältig.
+
+ 
+
+Es gibt bereits heute eine Vielzahl an Geräten, die über ein Bluetooth- Interface verfügen. Das Interface  stellt eine Multifunktionsschnittstelle für die drahtlose Anbindung bereit.
+Die neuesten PCs, Notebooks oder PDAs verfügen bereits über ein Bluetooth-Interface und zunehmend kommen weitere Peripherien auf den Markt, die sich via Bluetooth anbinden und ansprechen lassen. Sollte an einem PC oder Notebook kein Bluetooth-Interface vorhanden sein, so können diese seit neuestem auch über einen Bluetooth-Adapter für USB oder PCMCIA nachgerüstet werden.
+
+ 
+
+Mobiltelefone
+Die neuesten Handy-Generationen verfügen ebenfalls über ein Bluetooth-Interface, über das entweder ein drahtloser Datenaustausch erfolgen kann oder die schnurlose Anbindung von Headsets ermöglicht wird, also Sprache übertragen werden kann.
+
+ 
+
+Sprach- und Audiodaten
+Für die Übertragung von Sprach- und Audiodaten bietet Bluetooth drei verschiedene Verfahren, die qualitativ mit ISDN und in einem Fall sogar mit modernen MP3-Playern vergleichbar sind. Damit eignet sich Bluetooth beispielsweise auch zur drahtlosen Ansteuerung von Lautsprechern und Kopfhörern. 
+
+   1. Das 64-kBit/s-PCM-Format (Variante A-Law)
+   2. Das 64-kBit/s-PCM-Format (Variante µ-Law)
+   3. Der CVSD-CODEC (Continuous Variable Slope Delta Modulation) der mittels Delta-Modulation Sprachdaten überträgt.
+
+Digitale Kameras
+Für digitale Kameras bietet Bluetooth den drahtlosen Bildtransfer zu einem PC oder Notebook, wodurch die Bildübertragung durch das Wechseln von Speichermedien entfällt.
+
+ 
+
+Webpads
+Dem Webpad steht eine Internet-Bridge gegenüber, wobei die Kommunikation zwischen den beiden Geräten drahtlos über Bluetooth erfolgt. Der Anwender erhält dadurch eine komfortable Lösung zum Surfen im Internet und kann sich dabei innerhalb eines bestimmten Radius frei bewegen.
+
+ 
+
+Drucker
+Was die typischen Peripherien betrifft, so sind beispielsweise bereits Drucker mit Bluetooth-Schnittstelle auf dem Markt erhältlich, die so eine komfortable und schnurlose Anbindung zum PC, Notebook oder PDA bieten.
+
+
+Anwendungen außerhalb der Datenkommunikation
+Beispielsweise Autoreifen, bei denen sich im Reifen eine elektronische Einheit befindet, die den aktuellen Luftdruck misst. Die Einheit verfügt über ein Bluetooth-Interface, über das diese den Luftdruck oder die Warnmeldungen nach außen bekannt geben kann. Nähert sich der Autofahrer seinem Wagen, so bekommt dieser auf sein Handy eine Warnmeldung mitgeteilt, sollte der Luftdruck zu niedrig oder der Reifen platt sein.
+
+
+Bluetooth-Historie
+
+ 
+
+Im Jahr 1994 initiierte die Firma Ericsson eine Studie mit dem Ziel, eine kostengünstige und Strom sparende Lösung für die drahtlose Anbindung zwischen Mobiltelefonen und deren Zubehör zu finden. Schnell wurde offensichtlich, dass es einen breiten Markt für derartige drahtlose Lösungen gibt. Die Historie von Bluetooth begann letztendlich 1998, als sich fünf Unternehmen (Ericsson, Nokia, IBM, Intel und Toshiba) zusammenfanden und die Bluetooth Special Interest Group, kurz SIG, gründeten. Mittlerweile sind mehr als 2000 Unternehmen Mitglied dieses Konsortiums, wobei sich zwischenzeitlich namhafte Firmen wie BMW, Lucent und Motorola in der SIG eingefunden haben. Ziel der Bluetooth SIG war es, eine Spezifikation zu erarbeiten, die den drahtlosen Datenaustausch im Nahbereich ermöglicht. Hierbei lag der Schwerpunkt auf der Entwicklung einer kompakten und kostengünstigen Lösung, die auf den Massenmarkt abzielt und sich in PCs, PDAs oder sonstige Geräte problemlos integrieren lässt. Der Name Bluetooth wurde übrigens von einigen an der Entwicklung beteiligten Ingenieuren gewählt, die Fans von Harald Blåtand (Blauzahn) waren. Harald Blauzahn war im 10. Jahrhundert Wikingerkönig von Dänemark und hatte das Land mit Norwegen vereint. Die Namensfinder assoziierten die Vereinigung mit der nahtlosen Integration von Peripheriegeräten, die durch Bluetooth letztendlich ermöglicht werden soll. Die Bluetooth SIG veröffentlichte 1999 die erste Bluetooth-Spezifikation mit der Version 1.0. Erste Bluetooth-Geräte kamen im Jahr 2000 in Stückzahlen auf den Markt. Im Jahr 2001 folgte dann eine überarbeitete Spezifikation mit der Version 1.1, die heute die Grundlage für die Funktionsbeschreibung von Bluetooth darstellt. Mittlerweile ist auch das IEEE auf Bluetooth aufmerksam geworden und arbeitet derzeit an einem mit Bluetooth kompatiblen Standard, der als 802.15-Standard verabschiedet werden soll. Dabei soll der untere Bereich von Bluetooth, der im OSIReferenzmodel in etwa mit der Bitübertragungsschicht vergleichbar ist, spezifiziert werden, damit dieser sich in die übrigen 802-Standards einordnen kann.
+
+
+Bluetooth-Netzwerkformen
+
+ 
+
+Punkt-zu-Punkt und Punkt-zu-Multipunkt-Verbindungen
+
+Bluetooth unterstützt Punkt-zu-Punkt- und Punkt-zu-Multipunkt-Verbindungen. Bluetooth-Geräte, die zueinander in Reichweite stehen, können eigenständig eine Kommunikationsverbindung aufbauen, ohne dass ein administrativer Eingriff notwendig ist.
+
+ 
+
+ 
+
+Piconet-Mono-Slave-Modus
+Die einfachste Form der Kommunikationsverbindung ist das Piconet, räumlich betrachtet entspricht es einem kleinen Netzwerk. Innerhalb des Piconets übernimmt ein Bluetooth-Gerät die Rolle des Masters und das andere die Rolle als Slave. Grundsätzlich kann jedes Bluetooth-Gerät die Rolle des Masters oder die des Slaves übernehmen. Die Rolle des Masters entspricht also keiner festen Zuteilung bestimmter Bluetooth-Geräte, sondern wird generell von dem Gerät übernommen, das den Aufbau eines Piconets initiiert hat. Somit erfolgt die Rollenzuteilung zufällig und kann gegebenenfalls während einer laufenden Verbindung getauscht werden. Solange sich innerhalb eines Piconets nur ein Master und ein Slave gegenüberstehen, arbeitet Bluetooth im sogenannten Mono-Slave-Modus.
+
+ 
+Piconet-Multi-Slave-Modus
+Es können bis zu sechs zusätzliche aktive Bluetooth-Geräte innerhalb eines Piconets als Slave aufgenommen werden. Sind mehr als ein aktiver Slave innerhalb des Piconets vorhanden, so arbeitet Bluetooth im Multi-Slave-Modus. In diesem Fall wird der Kanal auf mehrere Slaves aufgeteilt. Die Kommunikation innerhalb des Piconets erfolgt grundsätzlich über den Master, eine direkte Verbindung zwischen den Slaves ist generell nicht möglich. Neben den sieben aktiven Slaves können noch zusätzlich bis zu 255 passive Slaves in einem Piconet vorhanden sein. Diese Slaves sind quasi geparkt und nehmen nicht aktiv an der laufenden Kommunikation teil, sie horchen lediglich die Daten des Masters ab, um sich beispielsweise zeitlich mit diesem zu synchronisieren.
+
+ 
+
+Scatternet
+Mehrere Piconets können nebeneinander innerhalb derselben oder überlappenden Reichweite koexistieren und ein sogenanntes Scatternet bilden. Dabei stehen die Bluetooth-Geräte der verschiedenen Piconets indirekt mit den übrigen Teilnehmern über die jeweiligen Master in Verbindung und können über ihren Master Daten austauschen. Jedes Piconet darf nur einen Master haben, wohingegen die Slaves an verschiedenen Piconets partizipieren können. Entweder erfolgt die Kommunikation über den jeweiligen Master, der im benachbarten Piconet als Slave fungiert, oder ein Slave hat eine Angehörigkeit zu zwei Piconets. Ein Scatternet zeichnet sich also durch zwei oder mehrere Piconets aus, die zueinander in Interaktion stehen. Dabei kann es von Bluetooth- Geräten gefordert sein, in einem Piconet als Slave zu fungieren und im anderem Piconet als Master, damit diese Scatternet-fähig sind. Scatternetfähige Geräte müssen also in der Lage sein, zwischen der Rolle des Slaves und Masters umschalten zu können, ohne Datenpakete zu verlieren. Hierbei muss man aber berücksichtigen, dass heute noch nicht alle Bluetooth-Geräte diese Fähigkeit besitzen. Praktische Anwendungsbeispiele für die Scatternet-Fähigkeit sind GSM-Handys, die in einem Scatternet als Master für ein Headset und als Slave zu einem Laptop fungieren. Ein GPRS-fähiges Handy könnte als Slave mit zwei Geräten arbeiten, z.B. einem PDA und einem Laptop, um von diesen beiden Daten zu empfangen.
+
+
+Übertragungsverfahren
+
+ 
+
+Bluetooth arbeitet, wie WLAN, im lizenz- und genehmigungsfreien 2,4-GHz-ISM-Band.
+Das Frequenzband (2,4 bis 2,4835 GHz) ist innerhalb Europas, mit Ausnahme von Frankreich und Spanien, in 79 Kanäle mit je 1 MHz Bandbreite aufgeteilt. Die Center-Frequenzen der 79 Kanäle liegen bei 2,402 bis 2,48 GHz. In den übrigen Ländern wird das 2,4-GHz-Frequenzband ausschließlich in 23 Kanäle aufgeteilt.
+
+ 
+
+Sendeleistung 
+
+Die Sendeleistung ist in drei Klassen unterteilt:
+
+    * Klasse 1 mit 100 mW (20 dBm)
+    * Klasse 2 mit 2,5 mW (4 dBm)
+    * Klasse 3 mit 1 mW (0 dBm)  
+
+Bei Verwendung der 1. Klasse muss eine automatische Anpassung der Sendeleistung implementiert werden.
+
+
+   
+
+Heutige Bluetooth-Lösungen arbeiten in der Regel mit einer Sendeleistung von 1 mW und die Empfänger haben eine Empfindlichkeit von -70 dBm, wodurch eine Reichweite zwischen 10 cm und 10 m erzielt werden kann. Die höheren Sendeleistungen sind für zukünftige Lösungen vorgesehen, bei denen größere Distanzen überbrückt werden sollen. So verspricht die 2. Klasse Reichweiten von etwa 50 m und die 1. Klasse Reichweiten von 100 m, wobei beide Klassen einen deutlich höheren Stromverbrauch aufweisen und für Geräte wie Handys oder PDAs eher ungeeignet sind. Als Übertragungsverfahren wird bei Bluetooth das FHSS-Verfahren angewendet. Hierbei wechselt man jedoch bereits alle 625 µs, also 1600-mal pro Sekunde die Frequenz (Fast Frequency Hopping) nach einem komplexen Muster. Auf diese Weise ist Bluetooth sehr robust gegenüber Störungen und einem unbefugten Zugriff.
+ 
+Bei Bluetooth wird als Übertragungsverfahren die FHSS-Technologie angewandt, bei der die Systeme während der Übertragung alle 625 µs von Kanal zu Kanal wechseln. (Fast Frequency Hopping)
+
+ 
+
+FHSS-Verfahren
+Bei dem FHSS-Verfahren, das im 802.11-Standard Anwendung findet, wird das vorhandene Frequenzband in 79 Unterbänder aufgeteilt, wobei jedes Unterband eine Bandbreite von 1 MHz hat. Jedes Unterband stellt einen Kanal bereit, der von den Systemen im Wechsel verwendet wird. Die Stationen senden also nicht dauerhaft auf einem Kanal, sondern wechseln während der Datenübertragung ständig den Kanal. Dabei wird über eine so genannte Hopping-Sequenz festgelegt, welcher Kanal in welcher Reihenfolge belegt wird. Korrespondierende Sender und Empfänger benutzen dieselbe Hopping- Sequenz, damit sie im selben Rhythmus zwischen den Kanälen springen, was so einen Datenaustausch zwischen diesen Systemen ermöglicht. Die zeitliche Dauer, die die zusammenhängenden Systeme auf einem Kanal verbleiben,  sowie der Abstand zwischen den einzelnen Kanälen wird ebenfalls regional festgeschrieben. Für den europäischen Raum wurde festgelegt, dass die Systeme einen Kanal für die maximale Dauer von 400 ms belegen dürfen und dass der Abstand zwischen den aufeinander folgenden Kanälen mindestens 6 MHz betragen muss. Demnach erfolgen in einer Sekunde mindestens 2,5 Kanalwechsel. Die Reihenfolge, in welcher die 79 zur Verfügung stehenden Kanäle genutzt werden, wird über eine 79-stellige Hopping-Sequenz festgelegt, die letztendlich einem Hüpfmuster entspricht.
+
+ 
+
+FHSS-Abgrenzung
+Systeme, die untereinander Daten austauschen möchten, müssen also dieselbe Hopping-Sequenz verwenden. Damit eine Abgrenzung unterschiedlicher Systeme möglich ist, sind im 802.11-Standard drei verschiedene Hopping-Sequenzen festgelegt. Auf diese Weise wird ein unabhängiger und störungsfreier Betrieb innerhalb eines Empfangsbereichs gewährleistet und es können verschiedene Systeme betrieben werden. Falls zwei unabhängige Systeme dennoch zur selben Zeit einen Kanal gleichzeitig belegen, tritt eine Kollision auf, durch die es zu einem Datenverlust kommt, der von der MAC-Schicht abgefangen werden muss. Durch die unterschiedlichen Hopping-Sequenzen wird jedoch sichergestellt, dass die Kollision nur kurzzeitig auftreten kann und sich nach dem nächsten Kanalwechsel auf jeden Fall wieder  auflöst. Durch die Nutzung der verschiedenen Hopping-Sequenzen können bis zu dreizehn unabhängige Systeme innerhalb eines Empfangsbereichs betrieben werden, ohne dass merkliche Performanceeinbußen durch Kollisionen zu erwarten sind. Als Modulationsverfahren wird bei den FHSS-Systemen die Frequenzmodulation angewendet. Dabei wird die Frequenz der elektromagnetischen Welle verändert, um die zu übertragende Information darzustellen. In Abhängigkeit der zu erzielenden Datenrate wird entweder die 2GFSK-Modulation (2-Level Gaussian Frequency Shift Keying, zwei Zustände) oder die 4GFSK-Modulation (4-Level Gaussian Frequency Shift Keying, vier Zustände) angewendet. Da man mit einer Symbolrate von 1 MSymbol/s arbeitet, ermöglicht erstere eine Datenrate von 1 MBit/s (1 MSymbol/ s x 1 Bit/Symbol) und letztere eine Datenrate von 2 MBit/s (1 MSymbol/s x 2 Bit/Symbol).
+
+ 
+
+Hopping-Sequenzen
+
+ 
+
+Insgesamt sind für das FHSS-Verfahren zehn unterschiedliche Hopping- Sequenzen in der Bluetooth-Spezifikation definiert.
+
+ 
+
+Fünf sind für die 79-stellige Hopping-Sequenz und weitere fünf für die 23-stellige Hopping-Sequenz vorgesehen. Für den europäischen Raum sind ausschließlich die 79-stelligen Hopping-Sequenzen maßgebend. Die Hopping-Sequenzen sind so gewählt, dass im Mittel alle 79 Kanäle im Wechsel gleichmäßig belegt werden.
+ 
+Jedes Bluetooth-Gerät verfügt über eine eindeutige Bluetooth Device Address (BD_ADDR). Das ist eine eindeutige Hardware- Adresse eines Bluetooth-Gerätes, vergleichbar mit der MAC-Adresse einer Netzwerkkomponente.
+ 
+Diese Hardwareadresse hat eine Länge von 48 Bits und ist in drei Bereiche unterteilt:
+
+    * LAP (Lower Address Part) mit 24 Bit Länge
+    * UAP (Upper Address Part) mit 8 Bit Länge
+    * NAP (Non Significant Address Part) mit 16 Bit Länge 
+
+Über die Bluetooth-Geräte-Adresse des Masters wird die Hopping-Sequenz ausgewählt. Damit korrespondierende Geräte miteinander kommunizieren können, müssen diese dieselbe Hopping-Sequenz verwenden. Da die Slaves die Adresse des Masters kennen, verwenden diese dieselbe Hopping-Sequenz, wodurch die Voraussetzung für eine Verständigung erfüllt ist. Eine Abgrenzung zu benachbarten Piconets ist ebenfalls sichergestellt, da diese über einen Master mit einer anderen Bluetooth-Geräte-Adresse verfügen.
+
+
+Bluetooth-Verfahren
+
+ 
+
+Bluetooth-Modulationsverfahren und Zugriffsverfahren
+
+ 
+
+Bluetooth-Modulationsverfahren
+Für die Darstellung der zu übertragenden Informationen wird die 2GFSK-Modulation verwendet, die eine Bruttodatenrate von 1 MBit/s bereitstellt. Die Datenrate von 1 MBit/s wird erzielt, da pro Zeiteinheit eine Information von 1 Bit dargestellt werden kann und Bluetooth mit einer Symbolrate von 1 MSymbol/s arbeitet. Eine logische Eins wird hierbei über eine positive Frequenz-Deviation von 115 KHz dargestellt, und eine Null durch eine negative Frequenz-Deviation. Die Nettodatenrate ist bei Bluetooth vom Format der verwendeten Pakete und vom Übertragungsverfahren abhängig.
+ 
+Zugriffsverfahren 
+
+Bei der Kommunikation stehen sich jeweils ein Master und ein oder mehrere Slaves gegenüber. Aufgabe des Masters ist es, den Datenaustausch innerhalb des Piconets zu kontrollieren beziehungsweise zu steuern. Der Datenaustausch erfolgt im Halbduplexbetrieb, wobei als Zugriffsverfahren ein Time-Division-Duplex-Verfahren (TDD) mit einer Slotlänge von 625 µs angewendet wird (siehe Abbildung).
+
+Die Daten werden als Pakete übertragen, wobei bei der Paketübertragung, je nach Pakettyp, entweder ein Slot oder fünf Slots belegt werden können.
+
+ 
+Slots
+
+ 
+
+Bei den Slots wird zwischen dem Master-to-Slave-Slot und dem Slave-to-Master-Slot unterschieden.
+
+ 
+
+Während des Master-to-Slave-Slots sendet der Master die Pakete zum Slave und während des Slave- to-Master-Slots kann einer der Slaves Daten zum Master senden. Sollte das Piconet im Multi-Slave-Modus arbeiten, so darf immer nur der Slave im Slave-to-Master-Slot Pakete versenden, der zuvor im Master-to-Slave-Slot adressiert wurde. Broadcast-Pakete werden generell von den Slaves nicht beantwortet.
+Die Slots werden von 0 bis 227-1 durchnummeriert, wodurch 227 verschiedene Slots nummeriert werden können. Die geraden Slots entsprechen dabei den Master-to-Slave-Slots und die ungeraden den Slave-to-Master-Slots.
+Jedes Bluetooth-Gerät verfügt über eine interne Taktquelle. Damit die Kommunikation innerhalb der vorgesehen Slots erfolgen kann, ist eine zeitliche Synchronisation zwischen Master und Slave notwendig. Der Master gibt innerhalb seines Piconets die zeitliche Synchronisation vor. Dazu wird während des ersten Verbindungsaufbaus vom Master zum Slave ein FHS-Paket (Frequency Hopping Synchronisation) ausgesandt, über das eine zeitliche Synchronisation zwischen Master und Slave erfolgen kann. Diese wird mit jedem Paket, das vom Master an die Slaves übertragen wird, aktualisiert. 
+ 
+
+Verbindungstypen
+
+ 
+
+Bluetooth unterstützt zwei verschiedene Verbindungstypen, eine ACL-Verbindung (Asynchronous Connection-Less) und eine SCO-Verbindung (Synchronous Connection-Oriented).
+
+ 
+
+ACL-Verbindung (Asynchronous Connection-Less)
+
+Eine ACL-Verbindung stellt eine Punkt-zu-Multipunkt-Verbindung zwischen dem Master und allen Slaves eines Piconets dar. Innerhalb der Slots, die nicht für die SCO-Verbindungen reserviert sind, kann der Master mit allen Slaves Daten austauschen.
+
+Die ACL-Verbindung entspricht einer paketorientierten Verbindung zwischen dem Master und allen Slaves, die sich innerhalb des Piconets befinden. Hierbei kommen synchrone und asynchrone Verbindungen in Frage, wobei zwischen dem Master und einem Slave maximal eine ACL-Verbindung existieren kann. Für die meisten ACL-Pakete ist eine wiederholte Übertragung vorgesehen, um bei einer schlechten Verbindung eine Datenintegrität zu gewährleisten. ACL-Pakete, die nicht an einen speziellen Slave adressiert sind, werden als Broadcast-Paket gedeutet und deren Inhalt von allen Slaves gelesen.
+ 
+SCO-Verbindung (Synchronous Connection-Oriented)
+Die SCO-Verbindung ist innerhalb eines Piconets eine Punkt-zu-Punkt-Verbindung zwischen einem  Master und einem Slave, wobei reservierte Slots innerhalb eines bestimmten Intervalls belegt werden. Auf diese Weise wird gewährleistet, dass keine anderen Dienste einen Zeitschlitz belegen können und Verzögerungen verursachen könnten, die beispielsweise bei einer Sprachübertragung inakzeptabel wären. Ein Master kann bis zu drei SCO-Verbindungen zu einem oder verschiedenen Slaves unterstützen, wohingegen ein Slave drei SCO-Verbindungen eines Masters oder zwei SCO-Verbindung von unterschiedlichen Mastern bedienen kann. Die SCO-Pakete werden niemals wiederholt ausgesendet. 
+
+
+Logische Kanäle und Bandbreiten
+
+ 
+
+Fünf logische Kanäle für den Informationsaustausch
+ 
+Kanäle
+Bei den Bluetooth-Systemen ist der Informationsaustausch in fünf logische Kanäle unterteilt:
+
+    * LC Control (Link Control)
+    * LM Control (Link Manager Control)
+    * UA Data (User Asynchronous Data)
+    * UI Data (User Isochronous Data)
+    * US Data (User Synchronous Data) 
+
+Die beiden Kanäle LC Control und LM Control dienen der Steuerung auf der Ebene des Link Control Levels und Link Manager Levels, wobei die Informationen für LC Control innerhalb der Paket-Header übertragen werden und die Informationen von LM Control innerhalb des Datenteils. Die restlichen drei Kanäle dienen der eigentlichen Datenübertragung.
+ 
+Bandbreite
+Bluetooth überträgt die Daten entweder symmetrisch mit 433,9 KBit/s in beiden Richtungen oder asymmetrisch mit unterschiedlichen Bandbreiten für den Down- und Upstream.
+Die unterschiedlichen Datenraten werden über bestimmte Kanäle bereitgestellt, wobei eine Verbindung entweder leitungs- oder paketorientiert sein kann. Bluetooth kann den Anwendungen entweder einen asynchronen Datenkanal oder bis zu drei simultane synchrone Sprachkanäle zur Verfügung stellen. Es besteht jedoch auch die Möglichkeit, einen asynchronen Datenkanal mit einem synchronen Sprachkanal zu kombinieren.
+Ein Sprachkanal kann eine Bandbreite von 64 KBit/s in beiden Richtungen bereitstellen. Der asynchrone Datenkanal kann in zwei unterschiedlichen Varianten zum Einsatz kommen. In der asymmetrischen Ausführung liefert er einen Downstream mit einer Bandbreite von 723,2 KBit/s und einen Upstream mit 57,6 KBit/s. Diese Ausführung lässt sich beispielsweise zum Surfen nutzen, bei dem man via ADSL sowieso einen Downstream mit hoher Bandbreite und einen Upstream mit geringer Bandbreite bereitgestellt bekommt.
+In der symmetrischen Variante stellt der asynchrone Datenkanal eine Bandbreite von 433,9 KBit/s in beiden Richtungen bereit. Diese Variante eignet sich beispielsweise für Netzwerkanwendungen. 
+
+Bluetooth-Pakettypen
+
+ 
+
+ 
+
+Bei Bluetooth sind verschiedene Pakettypen definiert, die über das Netzwerk übertragen werden können.
+
+ 
+
+Der generelle Paketaufbau sieht drei Bereiche vor:
+
+    * einen 72 Bit langen Bereich für einen Access Code
+    * einen 54 Bit langen Header und
+    * einen 0 bis 2745 Bit langen Bereich für Nutzdaten.
+
+Die Pakete können in drei Varianten genutzt werden: nur Access Code, Access Code und Header, sowie das vollständige Paket mit allen drei Bereichen. Über eine bestimmte Bitfolge innerhalb des Access Codes, die als Präambel bezeichnet wird, kann der Empfänger den Beginn eines Paketes erkennen. Des Weiteren wird durch den Access Code der Betriebsmodus angezeigt, über den verschiedene Prozeduren gekennzeichnet werden können. Dabei kann die Länge des Headers zwischen 68 oder 72 Bits variieren. Der Header definiert den Pakettyp und enthält Felder zur Flusskontrolle. Außerdem beinhaltet der Header eine 3 Bit lange Active Member Adddress (AM_Address). Über diese Adresse können die Pakete an bestimmte Slaves eines Piconets adressiert werden, wobei der Inhalt 000 (keine bestimmte Adressierung) für die Broadcast-Pakete vorbehalten ist. Der Inhalt des Headers ist über eine 8 Bit lange HEC (Header Error Check) abgesichert, mit der empfangsseitig Übertragungsfehler innerhalb des Headers erkannt werden können.
+
+ 
+
+Nach dem Header folgt der Bereich für die Nutzdaten, in dem die Daten in Abhängigkeit des Pakettyps unterschiedlich organisiert werden.
+
+Insgesamt stehen drei verschiedene Pakettypen zur Verfügung:
+
+    * DM-Pakete (Data Medium Rate)
+    * DH-Pakete (Data High Rate)
+    * HV-Pakete (High Quality Voice) 
+
+Fehlerkorrektur
+
+ 
+
+Für die Fehlerkorrektur sind bei Bluetooth insgesamt drei verschiedene Verfahren vorgesehen
+
+ 
+
+1/3 FEC
+Das Ziel, das sich hinter den FEC-Verfahren verbirgt, ist das Bestreben, eine wiederholte Aussendung der Pakete möglichst zu vermeiden. Wobei man natürlich berücksichtigen muss, dass bei einer guten Verbindungsqualität, bei der eigentlich keine Übertragungsfehler zu erwarten sind, das FEC-Verfahren einen unnötigen Overhead generieren kann. Deshalb ist in Bluetooth ein Verfahren implementiert, durch das innerhalb der Nutzdaten das FEC-Verfahren dynamisch verwendet oder auf die Verwendung verzichtet werden kann, um den Datendurchsatz zu erhöhen. Generell gilt jedoch, dass der Header grundsätzlich über eine 1/3 FEC-Rate gesichert wird. Bei der 1/3 FEC-Rate wird jedes Bit einfach dreimal wiederholt übertragen, wodurch sich eine Redundanz der zu übertragenden Bits ergibt und 1-Bit- Fehler korrigiert werden können.
+
+ 
+
+2/3 FEC (Forward Error Correction)
+Die 2/3 FEC-Rate basiert auf einem (10/15) Hamming-Code, bei dem eine Konvertierung aus 10 Bit in 15 Bit erfolgt. Durch die Konvertierung können 1-Bit-Fehler korrigiert und alle 2-Bit-Fehler erkannt werden.
+ 
+ARQ (Automatic Repeat Request)
+ARQ steht für eine automatische und wiederholte Anforderung fehlerhafter Daten. Hierdurch werden die Daten wiederholt übertragen, bis beim Sender eine Empfangsbestätigung eintrifft und dieser von einer erfolgreichen Datenübertragung ausgehen kann. Die Empfangsbestätigung wird vom Empfänger ausgesendet, sobald dieser über die CRC (Cyclic Redundancy Check) eine fehlerfreie Datenübertragung feststellen konnte. Die CRC dient allgemein der Fehlererkennung innerhalb des Nutzdatenbereiches, wobei eine Checksumme über die Nutzdaten errechnet wird, die dann mit dem Paket übertragen wird. Der Empfänger führt ebenfalls eine Checksummenberechnung über die Nutzdaten durch, sollte dieses Ergebnis mit der CRC im Datenteil abweichen, so kann der Empfänger auf diese Weise Übertragungsfehler erkennen. Innerhalb eines Piconets, in dem sich mehrere Slaves befinden, wird für jeden Slave ein unabhängiges ARQ-Protokoll gefahren, damit unabhängig auf Übertragungsfehler jeder Slave-Verbindung reagiert werden kann. 
+
+
+Paketvarianten
+
+ 
+
+Die verschiedenen Bluetooth-Pakettypen.
+ 
+DM1
+Das DM1-Paket ist ausschließlich für den Datentransport vorbehalten. Der Datenteil kann eine Länge von bis zu 18 Bytes haben, wobei dieser einen 1 Byte langen Header und eine 2 Bytes lange CRC beinhaltet. Die DM1-Pakete belegen bei der Übertragung lediglich einen Slot. Der Datenteil und die CRC sind mit einer 2/3 FEC-Rate abgesichert. Bei der 2/3 FECRate werden jedem 10 Bit langen Segment 5 Paritätsbits hinzugefügt, wobei gegebenenfalls hinter die CRC Nullen gesetzt werden, damit die Anzahl der Bits ein Vielfaches von 10 darstellt. 
+
+ 
+
+DH1
+DH1-Pakete sind ähnlich aufgebaut wie das DM1- Paket, hier werden die Daten nicht über eine FEC-Rate abgesichert. Dadurch kann ein DH1-Paket bis zu 28 Bytes beinhalten, wobei 1 Byte für Header und 2 Bytes für die CRC verwendet werden. Für die Übertragung wird ebenfalls ein Slot benötigt. 
+
+ 
+
+DM3
+Das DM3-Paket entspricht einem DM1-Paket mit verlängertem Nutzdatenbereich, in dem bis zu 123 Bytes transportiert werden können, wobei 2 Bytes für den Header und 2 Bytes für die CRC benötigt werden. Die Übertragung eines DM3- Paketes kann bis zu drei Slots beanspruchen. Falls ein DM3-Paket gesendet oder empfangen wird, wird der Kanal über die Dauer von drei Slots nicht geändert
+
+ 
+
+DH3
+Ein DH3-Paket ist vergleichbar mit dem DM3-Paket, wobei hier auf die FEC-Absicherung verzichtet wird. Deshalb können bei einem DH3-Paket bis zu 185 Bytes Nutzdaten übertragen werden, wobei wieder 2 Bytes für den Header und 2 Bytes für die CRC abzuziehen sind. Bei der Übertragung eines DH3-Paketes erfolgt ebenfalls kein Kanalwechsel für die Dauer von drei Slots.
+
+ 
+
+DM5
+DM5 entspricht einem DM1-Paket mit verlängertem Datenteil, mit dem bis zu 341 Bytes an Nutzdaten, abzüglich eines 2 Bytes langen Headers und einer 2 Bytes langen CRC, übertragen werden können. Bei der Übertragung der DM5-Pakete werden bis zu 5 Slots beansprucht. Sobald ein DM5-Paket übertragen wird, findet für die Dauer von 5 Slots kein Kanalwechsel statt.
+
+ 
+
+DH5
+Das DH5-Paket ist vergleichbar mit dem DM5-Paket, nur dass hier wieder, zu Gunsten der Datenlänge, auf die FEC-Absicherung verzichtet wurde. Hierdurch können bis zu 341 Bytes Nutzdaten, abzüglich 2 Bytes Header und 2 Bytes CRC, übertragen werden.
+ 
+AUX1
+Beim AUX1-Paket handelt es sich um einen Pakettyp, der mit dem DM1 vergleichbar ist. Hier wird jedoch auf die CRC verzichtet, wodurch bis zu 30 Bytes an Nutzdaten, abzüglich 1 Byte Header, übertragen werden können.
+
+ 
+
+Bevor die Pakete ausgesendet werden, durchlaufen der Header und der Nutzdatenbereich einen Scrambler. Der Scrambler sorgt dafür, dass eine lange Folge von Nullen oder Einsen vermieden wird, damit ein Anstieg des Gleichspannungsanteils verhindert wird. Das Scrambling wird durchgeführt, nachdem die Prozesse der FEC-Rate durchlaufen wurden.
+
+
+Acknowledgement
+
+ 
+
+SEQN-Bit
+Da bei einem drahtlosen Datenaustausch Übertragungsfehler nicht ausgeschlossen werden können, sind bei Bluetooth entsprechende Fehlererkennungs- und Fehlerbehebungsverfahren (CRC, FEC und ARQ) implementiert. Werden Übertragungsfehler erkannt, so werden diese in den meisten Fällen durch eine wiederholte Übertragung der Pakete ausgeglichen. Eine wiederholte Übertragung eines Pakets kann an dem SEQN-Bit erkannt werden, welches Bestandteil des Headers ist. Bei einem normalen Datenfluss wechselt das SEQN-Bit jedes Mal zwischen Null und Eins. 
+Wird hingegen im Fehlerfall ein Paket wiederholt übertragen, da das ACK ausgeblieben ist, verharrt das SEQN-Bit auf demselben Status. Daraufhin kann der Empfänger erkennen, dass es sich um eine wiederholte Übertragung eines Paketes handeln muss. So kann der Empfänger das Paket gegebenenfalls verwerfen, falls das Paket doch fehlerfrei übertragen werden konnte und nur das ACK ausgeblieben ist, das den Sender veranlasste, das Paket erneut auszusenden. Dieses Verfahren kann jedoch nur bei DM-, DH- oder DV-Paketen greifen, da diese Pakettypen ausschließlich über ein CRC-Verfahren verfügen, über das ein Fehler erkannt werden und sendeseitig eine Entscheidung für das Aussenden des ACK getroffen werden kann. 
+
+
+Buffer
+
+ 
+
+Damit eine möglichst verzögerungsfreie Übertragung der Daten möglich ist, sind bei den Bluetooth-Transceivern verschiedene Buffer implementiert. 
+
+Grundsätzlich ist ein separater Buffer für die ACLPakete und SCO-Pakete vorhanden. Zudem verfügt ein Master sendeseitig für jeden Slave über einen eignen ACL-Buffer und über einen oder mehrere SCO-Buffer. Jeder Sendebuffer basiert dabei auf zwei FIFOs (First In First Out), wobei ein Buffer für die aktuelle Daten-Übertragung vorbehalten ist und der andere Buffer für das Nachladen der neuen Daten.
+ 
+Empfangsseitig sind ebenfalls separate Buffer für die ACL- und SCO-Pakete vorhanden. Hierbei wird  jedoch auf dem Master ausschließlich ein ACL-Buffer für alle Slaves vorbehalten. Für die SCO-Pakete werden auf dem Master unter Umständen mehrere Empfangsbuffer bereitgestellt, falls das Datenaufkommen dies erfordert. Da bei dem Master empfangsseitig der Buffer voll laufen kann, ist eine Flusskontrolle notwendig, damit ein Überlauf des Buffers vermieden wird. Falls Daten nicht mehr empfangen werden können, wird der Slave aufgefordert, keine neuen Daten zu senden. Um den gewünschten Status für das Flowcontrol kenntlich machen zu können, ist im Header ein Bit vorgesehen. Jedoch kann über das Flowcontrol-Verfahren nur Einfluss auf die ACL-Pakete genommen werden. Link-Control-Informationen und SCO-Pakete werden weiterhin empfangen, auch wenn der Master signalisiert hat, dass er keine weiteren Daten empfangen kann. 
+
+ 
+
+ 
+
+Bluetooth-Betriebsmodi
+
+ 
+
+Die Betriebsmodi und deren Phasen 
+
+Bluetooth-Geräte haben primär zwei Betriebsmodi, den Ruhezustand "Standby" und den aktiven Zustand "Connection".
+Des Weiteren sind die  Betriebsmodi zusätzlich in sieben untergeordnete Phasen, Page, Page_Scan, Inquiry, Inquiry_Scan, Master_Response, Slave_Response und Inquiry_ Response unterteilt, die dazu dienen, die Slaves in ein Piconet aufzunehmen.
+ 
+ 
+ 
+
+
+Defaultmodus 
+
+Der Defaultbetriebsmodus der Bluetooth-Geräte ist der Standby-Modus, bei dem die Geräte nur eine geringe Stromaufnahme haben. Vom Standby-Modus aus kann ein Bluetooth-Gerät in den Page-Modus übergehen, falls die Adressen der Teilnehmer bekannt sind. Während des Page-Modus sendet der Master in regelmäßigen Abständen eine Page-Nachricht (ID-Paket) aus und fordert damit die Slaves auf, sich mit dem Master zu verbinden. Da die ID-Pakete sehr klein sind, kann der Master diese Pakete 2-mal innerhalb des Master-to-Slave-Slots aussenden. Der Master sendet die ID-Pakete auf 16 von 32 zugewiesenen Hopping-Sequenzen (Kanäle) aus und wartet daraufhin 2,56 Sekunden auf Antwort eines Slaves. Ein Gerät, das sich im Standby-Modus befindet, geht alle 1,28 Sekunden in einen Empfangsmodus über, um nach anderen Geräten zu horchen. Durchschnittlich sollte innerhalb von 0,64 Sekunden eine Antwort eines Gerätes erfolgen, falls sich ein Gerät in der Reichweite des Masters befindet. Empfängt ein neuer Slave das ID-Paket und bestätigt dieses im folgenden Slave-to-Master-Slot, so wird der Master daraufhin im nächsten Master-to-Slave-Slot mit einem FHS-Paket antworten, wodurch eine zeitliche Synchronisation zwischen dem Master und dem Slave erfolgt. Zudem erhält der Slave eine AM_Address zugeteilt, damit dieser innerhalb des Piconets angesprochen werden kann. Sobald der Slave das FHS-Paket bestätigt hat, ist der Verbindungsaufbau abgeschlossen, worauf der eigentliche Datenaustausch beginnen kann.
+ 
+Falls die Adressen der Teilnehmer unbekannt sind, wird vor dem Page-Modus der Inquiry-Modus durchlaufen. Dies soll zum gegenseitigen Auffinden der Bluetooth-Geräte dienen, die sich zum ersten Mal begegnen und deren Adressen deshalb unbekannt sind. Der Inquiry-Modus basiert auf zwei Zuständen (Inquiry und Inquiry_Scan), die nach einem bestimmten Zeit- und Frequenz-Schema von jedem Bluetooth-Gerät durchlaufen werden. Während der Inquiry-Phase wird eine kurze Suchnachricht (ID-Paket) nacheinander auf 32 dafür festgelegten Frequenzen ausgesendet. Im Inquiry_ Scan wird auf denselben 32 Frequenzen nach einem möglichen ID-Paket für jeweils 1,28 Sekunden gelauscht. Ziel dabei ist es, dass sich zwei Geräte auf demselben Kanal irgendwann gegenüberstehen, die Nachricht des anderen empfangen und somit in Kenntnis des Gegenübers gelangen können. Je nachdem, in welchem Zustand sich die jeweiligen Teilnehmer zum Zeitpunkt des ersten Kontakts befunden haben, werden die Rolle des Masters und Slaves verteilt. Erwischt ein Bluetooth-Gerät die ausgesendete Abfrage, so antwortet dieses mit einer längeren Nachricht und wird somit zum Slave.
+
+ 
+
+Stromsparmodi
+
+ 
+
+Vier verschiedene Modi 
+
+Nachdem ein Bluetooth-Gerät in einem Piconet aufgenommen ist, kann über vier Betriebsmodi bestimmt werden, inwiefern es an der Kommunikation teilnimmt. Der Leistungsverbrauch ist dabei wesentlich vom Betriebsmodus abhängig. Da es sich bei Bluetooth-Geräten in der Regel um mobile Systeme handelt, ist man natürlich bestrebt, einen Betriebsmodus einzunehmen, der stromsparender ist, falls keine Kommunikation über einen bestimmten Zeitraum stattfindet.
+ 
+Folgende Betriebsmodi können eingenommen werden: 
+
+ 
+
+Aktive-Modus
+In diesem Betriebszustand tauscht ein Bluetooth-Gerät Pakete mit der Gegenstelle aus, wobei ACL- und SCO-Verbindungen zur Anwendung kommen können. Diesen Betriebsmodus nehmen alle normal verbundenen Geräte ein, wobei innerhalb eines Piconets die Anzahl auf sieben Slaves begrenzt ist. 
+
+ 
+
+Park-Modus
+Dieser Modus wird von Bluetooth-Geräten eingenommen, die nicht an der aktuellen Kommunikation  teilnehmen müssen und während dieser Zeit die Stromaufnahme reduzieren möchten. In diesem Betriebsmodus horchen die Slaves lediglich nach Paketen des Masters, um sich zeitlich mit diesen synchronisieren zu können. Geht ein Slave in den Park-Modus über, so gibt er seine Mitgliedsadresse ab, die er für die aktive Verbindung innerhalb des Piconets erhalten hat. Der Slave erhält für die Dauer des Park-Modus eine 8 Bit lange PM_ADDR (Park Member Address) zugeteilt, über die der Slave später wieder in den Aktive-Modus überführt werden kann. Durch den Park-Modus kann somit die magische Grenze von sieben Slaves umgangen werden, wodurch sich bis zu 255 zusätzliche Slaves innerhalb eines Piconets aufhalten können. 
+
+ 
+
+Sniff-Modus
+Dieser Modus verhilft dem Slave, Strom zu sparen, da dieser nicht ständig auf Pakete des Masters reagieren muss. Im normalen Betriebsmodus, dem Aktive-Modus, müssen die Slaves regelmäßig auf Aufforderung vom Master reagieren und diesem gewisse Antwort-Pakete senden, obwohl eigentlich keine Kommunikation stattfindet. Innerhalb des Sniff-Modus akzeptiert der Master, dass auf bestimmte Pakete keine Antworten seitens des Slaves erfolgen - der Master verhält sich während dieses Modus etwas geduldiger und wartet länger auf Reaktionen des Slaves. 
+
+ 
+
+Hold-Modus
+Während dieses Modus werden nur SCO-Verbindungen aufrecht gehalten, die ACL-Verbindungen werden hingegen eingestellt. Unabhängig vom Betriebsmodus findet ständig eine Synchronisation zwischen dem Master und den Slaves statt. Ein Slave, der sich im Park- oder Sniff- Modus befindet, wird dazu in periodischen Abständen in den Empfangsmodus wechseln, damit dieser Pakete vom Master empfangen kann und sich zeitlich neu synchronisieren kann.
+
+
+Bluetooth-Protokollstapel
+
+ 
+
+Unterschiedliche Übertragungswege
+
+Bluetooth zeichnet sich neben der drahtlosen Datenübertragung dadurch aus, dass es für verschiedene Anwendungsfälle unterschiedliche Übertragungswege bereitstellt. Dies wird durch einen Protokollstapel ermöglicht, der auf verschiedenen Ebenen eine Vielzahl von Protokollen anbietet.
+Die unterste Ebene im Bluetooth-Protokollstapel stellt das Bluetooth-Radio dar, das dem Funkteil von Bluetooth entspricht. Auf dem Radio sitzt das Baseband, das eine Schnittstelle zu den höheren Protokollen bereitstellt und über das beispielsweise ein Eingriff auf die Kanalwahl und die Steuerung der Sende-/Empfangsroutinen vorgenommen werden kann. Auf die Baseband-Schnittstelle sind zwei Protokolle (LMP und L2CAP) mit unterschiedlichen Funktionen und Aufgaben aufgesetzt.
+
+ 
+
+LMP-Link Manager Protocol
+LMP übernimmt Aufgaben wie den Verbindungsauf- und Verbindungsabbau, Sicherheitsfunktionen wie Authentifizierung, Autorisierung und Verschlüsselung. Zudem kann LMP auf die Kommunikation steuernd zugreifen, so dass beispielsweise ein Slave über LMP-Kommandos vom Aktiven-Modus in den Park-Modus oder umgekehrt überführt werden kann.
+
+ 
+
+L2CAP-Logical Link and Control Adaptation Protocol
+Das L2CAP stellt mehrere logische Kanäle bereit, über die die Datenübertragung, mit Ausnahme der Sprachanwendungen, erfolgt. Sprachanwendungen, wie z. B. Headsets, gehen direkt an das Baseband. Längere Nachrichten können durch  das L2CAP gegebenenfalls in mehrere Fragmente unterteilt und übertragen werden. L2CAP unterstützt zudem das Multiplexing von Protokollen und Datenströmen höherer Schichten. Dazu können mehrere logische Kanäle zwischen zwei L2CAP-Endpunkten bereitgestellt werden. Anwendungen, die von L2CAP Gebrauch machen, haben die Möglichkeit, als Peers zu kommunizieren. Auf das L2CAP ist ein weiteres Protokoll aufgesetzt, das als RFCOMM bezeichnet wird.
+
+ 
+
+RFCOMM
+Dieses Protokoll bietet eine Anlehnung an die zur seriellen Kommunikation via Kabel verwendeten COM-Ports. Die Integration dieser Schnittstelle bietet Anwendungsentwicklern die vereinfachte Portierung bereits bestehender Anwendungen auf Bluetooth-basierender Hardware. Aufbauend auf dem bestehenden ETSI TS 01.10 Standard für serielle Kommunikation ist dieses Protokoll in erster Linie aus Gründen der Abwärtskompatibilität vorhanden. RFCOMM bietet Signalkompatibilität zu RS-232-Schnittstellen und erlaubt das Multiplexing von bis zu 60 seriellen Ports. Hierauf kann über herkömmliche AT-Befehle zugegriffen und z. B. eine Telefon- oder Faxverbindung aufgebaut werden. Über eine weitere PPP-Schicht kann auch die Anbindung ans Internet erfolgen.
+
+ 
+
+OBEX-Object Exchange Protocol
+Das ebenfalls auf L2CAP aufgesetzte OBEX bietet ein Modell zum Daten- und Objektaustausch, wie beispielsweise für den elektronischen Austausch von Visitenkarten, Memos oder Termindaten. OBEX kam erstmalig für die Infrarotlösung IrDA zum Einsatz und wurde für Bluetooth übernommen. Dieses Protokoll wird von vielen Betriebssystemen wie z.B. Microsoft Windows CE oder PalmOS unterstützt und bietet somit den plattformunabhängigen Informationsaustausch.
+
+
+TCS BIN-Telephony Control Protocol Binary
+Zudem ist noch ein weiteres Protokoll auf L2CAP aufgesetzt, das als TCS BIN bezeichnet wird. TCS BIN entspricht einer Steuerungsschicht für Telefonie-Anwendungen, die Funktionen zur Anrufkontrolle bereitstellt. Das Host Controller Interface (HCI) stellt eine Kommandoschnittstelle bereit, über die ein Zugriff auf die Baseband-Funktionen erfolgen kann. HCI entspricht einer standardisierten Schnittstelle, über die man beispielsweise über ein Windows-Betriebssystem auf das Bluetooth-Gerät steuernd zugreifen kann.
+
+ 
+
+SDP-Service Discovery Protocol
+Ein weiterer wichtiger Bestandteil der Bluetooth-Spezifikation ist das sogenannte Service Discovery Protocol (SDP). Dieses Protokoll ermöglicht das Erkennen und Abfragen von Informationen über die von anderen Bluetooth-Geräten angebotenen Dienste. Während diese Dienste in traditionellen, statischen Netzwerken vom Administrator konfiguriert werden müssen, besteht bei den Bluetooth-Geräten der Bedarf, die angebotenen Dienste dynamisch zu erkennen. Das Bluetooth-SDP verwendet dabei so genannte Universal Unique Identifiers (UUID), die einen Dienst eindeutig charakterisieren. Sie enthalten sowohl Informationen über die Klasse des Dienstes (z.B. Drucken, E-Mail-Server, LAN) als auch spezifische Attribute. Durch das Bereitstellen der Dienst-Informationen werden zwei grundsätzliche Formen des Service Discovery ermöglicht. Zum einen kann ein Client durch ein Service Browsing eine Anfrage nach vorhandenen Diensten einer gewissen Klasse aussenden und darauf unter den erhaltenen Angeboten einen Dienst auswählen. Andererseits kann ein Client, falls dieser bereits die UUID des gewünschten Services kennt, das Vorhandensein des Angebots überprüfen. 
+
+ 
+
+Bluetooth-Profile
+
+ 
+
+Die verschiedenen Bluetooth-Profile
+
+Um die Interoperabilität zwischen den verschiedenen Bluetooth-Geräten sicherzustellen, darf sich Bluetooth nicht auf die Definition der grundlegenden Datenübertragung beschränken. Denn sobald konkrete Inhalte zwischen den Geräten übertragen werden sollen, müssen auch der Ablauf und die Struktur der Kommunikation festgeschrieben werden. Sonst reden die Geräte aneinander vorbei und ein sinnvoller Informationsaustausch wäre unmöglich.
+ 
+Bluetooth definiert deshalb eine Reihe so genannter Profile, die den Aufbau und den Inhalt einer bestimmten Kommunikation in Abhängigkeit der zugrunde liegenden Anwendung festlegen. Ein typisches Beispiel ist der elektronische Austausch von Visitenkarten. Der Austausch kann nur gelingen, wenn sich die in Verbindung stehenden Geräte an ein vorgegebenes Format halten und dadurch genau erkennen können, was im übermittelten Datenstrom den Namen, Vornamen oder die Adresse eines Kontakts darstellt. Genau das ist die Aufgabe der Profile, die dadurch eine gemeinsame Basis für alle Arten von Bluetooth- Geräten schaffen, die einen bestimmten Dienst anbieten oder nutzen möchten. Die Anforderungen an ein Bluetooth-Gerät sind in Abhängigkeit der Anwendungen von der Bluetooth-SIG in verschiedenen Profilen definiert und standardisiert. Ein Teil dieser Profile ist als Basis zu sehen (Generic Access Profile), die in fast jedem Bluetooth-Gerät zum Einsatz kommt.
+
+ 
+
+Andere Profile finden zusätzlich je nach Gerätetyp Anwendung:  
+
+ 
+
+ 
+
+Bluetooth-Sicherheit
+
+ 
+
+Sicherung vor Lauschangriffen 
+
+Da drahtlose Übertragungsstrecken einfacher zu belauschen sind als drahtgebundene, sieht die Bluetooth-Spezifikation neben dem FHSS-Verfahren eine Absicherung über eine symmetrische Verschlüsselung vor. Was die Gefahr des Abhörens betrifft, so muss man jedoch bei Bluetooth gegenüber den WLANs relativieren, dass die erzielbaren Reichweiten bedeutend geringer sind und somit die Anzahl der potenziellen Lauscher weitaus kleiner ist.
+Die einfachste Möglichkeit für das Abschotten von Bluetooth-Netzen ist die Drosselung der Sendeleistung, hierdurch reduziert sich die Reichweite und somit die Möglichkeit des Mitlauschens. Es gibt typische Anwendungsfälle, bei denen man sowieso mit Reichweiten von 1 m auskommt, wie beispielsweise die Verbindung zwischen einem Headset und dem Handy, in diesem Fall kann man problemlos die Sendeleistung drosseln.
+ 
+Bluetooth sieht drei Sicherheitsmodi (Security Mode 1 bis 3) vor:
+
+    * Modus 1
+      Entspricht keiner Sicherheit. Hier gibt es jedoch auch Anwendungsfälle, bei denen eine Verschlüsselung der Daten ein Hindernis darstellen würde, z.B. der elektronische Austausch von Visitenkarten.
+       
+    * Modus 2
+      Entspricht einer Sicherheit auf Dienstebene. Hier müssen die höheren Übertragungsprotokolle oder Anwendungen eine Authentifizierung und Datenverschlüsselung durchführen, nachdem eine Verbindung aufgebaut ist. Diese Variante bietet die höchste Flexibilität, ist jedoch in der Regel mit einem hohen Implementierungsaufwand verbunden.
+       
+    * Modus 3
+      Entspricht einer Sicherheit auf Verbindungsebene, hierbei wird vom LMP eine gesicherte Verbindung aufgebaut. Diese Architektur ist in etwa vergleichbar mit WEP bei WLANs. 
+
+Modus 3
+Die eigentliche Bluetooth-Sicherheit wird also über den dritten Modus bereitgestellt, die im Wesentlichen aus einer Authentifizierung und Datenverschlüsselung besteht.
+ 
+Wie bei WLANs verwendet Bluetooth für die Authentifizierung ein Challenge-Response-Verfahren, damit eine Gegenstelle ihre Identität unter Beweis stellen kann. Hierbei stehen sich ein Antragsteller (Claiment) und ein Prüfer (Verifier) gegenüber. Der als Shared-Key verwendete Schlüssel wird nicht übertragen. Der Antragsteller erstellt mit Hilfe eines Crypto-Algorithmus E1, dem geheimen Schlüssel und einer Zufallszahl einen Wert. Dieser Wert wird zusammen mit der Zufallszahl an den Prüfer übertragen, der dieselbe Berechnung durchführt. Kommt dieser zum selben Ergebnis, so kann er von der richtigen Identität ausgehen und die Authentifizierung ist erfolgreich. Bei einer fehlerhaften Authentifizierung kann der Antragsteller erst wieder nach einer bestimmten Wartezeit einen erneuten Authentifizierungsversuch durchführen. Die Rollenverteilung ist nicht festgelegt, so kann entweder der Master oder der Slave die Rolle des Prüfers übernehmen.
+ 
+Vor der eigentlichen Authentifizierung muss jedoch der geheime Schlüssel ausgetauscht werden. Dies geschieht während der so genannten Pairing-Phase, diese Phase entspricht dem ersten Kennen lernen zweier Geräte. Während dieser Phase wird ein Initialisierungsprozess durchlaufen. Hierbei wird auf beiden Seiten ein Initialisierungsschlüssel aus einer Zufallszahl, der jeweiligen Hardware-Adresse und einer Geheimzahl (PIN) erzeugt. Durch eine PIN kann der erstmalige Verbindungsaufbau von einer Benutzereingabe abhängig gemacht werden. Diese muss dazu vom Benutzer über ein Interface eingegeben werden oder kann durch eine Konfiguration im Gerät vorher fest abgespeichert werden. Es gibt jedoch auch Varianten, bei denen die PIN vom Gerätehersteller festgelegt wird und in einem EEPROM des Bluetooth-Gerätes dauerhaft abgespeichert wird.
+ 
+Über den Initialisierungsschlüssel kann der erstmalige Verbindungsaufbau erfolgen und eine gesicherte Verbindung aufgebaut werden. Über diese gesicherte Verbindung kann dann auch der geheime Schlüssel übertragen werden. Ist die Übertragung erfolgt, wird der Initialisierungsschlüssel auf beiden Seiten gelöscht. Der spätere Verbindungsaufbau wird dann nur noch über den geheimen Schlüssel durchgeführt.
+ 
+Bei der Verschlüsselung der Daten kommt der Stromchiffrierer E0 zum
+Einsatz, der bei jedem Paket erneut initialisiert wird. In den meisten
+Fällen werden nur die Pakete einer Punkt-zu-Punkt-Verbindung
+verschlüsselt, da ausschließlich diese über einen gemeinsamen
+Schlüssel verfügen. Nur wenn ein gemeinsamer Schlüssel für den Master
+und alle Slaves definiert wurde, können auch die Broadcast-Pakete
+verschlüsselt werden.
+
+Wireless LAN - Die Grundlagen
+
+WLANs decken den Bereich ab, bei dem Daten über größere Distanzen zwischen PCs oder Notebooks drahtlos ausgetauscht werden sollen.
+Wireless-LAN-Lösungen bieten die Möglichkeit, die Produktivität zu steigern und Kosten zu sparen. Die mobilen Mitarbeiter haben die Möglichkeit, sich mit ihrem Notebook im gesamten Gebäude bzw. Firmengelände frei zu bewegen, ohne dass diese die Verbindung zum Netzwerk verlieren.
+
+    * Auf diese Weise ist ein drahtloser Zugriff auf vorhandene Netzwerkressourcen möglich, E-Mails können beispielsweise unabhängig vom Standort empfangen bzw. versendet werden. 
+    * Außendienstmitarbeiter benötigen keine festen Arbeitsplätze mit Netzwerkanschluss mehr, sondern können sich innerhalb der Firma von jedem beliebigen Platz aus im Netzwerk anmelden und Daten austauschen.
+    * Temporäre Arbeitsgruppen auf Kongressen, Messen, Workshops oder während Meetings lassen sich auf einfachste Art und Weise kurzfristig realisieren, da man durch den Einsatz eines WLANs auf eine Verkabelung verzichten kann. 
+    * Prozesse, bei denen die Mobilität eine unverzichtbare Voraussetzung darstellt, wie beispielsweise Inventuren und Lagerverwaltung, lassen sich durch WLAN-Lösungen umsetzen.
+    * Gebäude, die unter Denkmalschutz stehen, bei denen eine herkömmliche Netzwerkverkabelung undenkbar ist, lassen sich über WLAN-Lösungen vernetzen, so dass diese Immobilien problemlos gewerblich genutzt werden können.
+    * Durch WLAN-Lösungen lassen sich Gebäude auf einem Firmengelände oder Campus miteinander drahtlos verbinden, wodurch keine kostspieligen Standleitungen mehr benötigt werden.
+    * Generell erhält man eine hohe Kostenersparnis, da man auf herkömmliche Verkabelung verzichten kann, die bislang einen großen Kostenanteil innerhalb der Netzwerkinfrastruktur darstellte.
+    * Aber auch im privaten Bereich bieten WLAN-Lösungen entscheidende Vorteile. So lässt es sich beispielsweise vom Sofa aus bequem surfen oder man kann im Garten E-Mails abrufen und beantworten.
+
+Bereits 1997 wurde der Erfolgskurs für Wireless Ethernet geebnet, indem man für die Verabschiedung eines international anerkannten Standards sorgte, wobei vom IEEE der 802.11-Standard ins Leben gerufen wurde, der einen MAC- und PHY-Layer für den drahtlosen Datenaustausch beschreibt.
+Neben einer Funklösung im 2,4-GHz-Band beinhaltet der 802.11-Standard eine optische Lösung. Mit beiden Lösungen wird jeweils eine Datenübertragung von 1 und 2 MBit/s ermöglicht. Die optische Lösung wurde allerdings in der Praxis nie in Produkte umgesetzt.
+
+Anders sieht es bei der Funklösung aus: in diesem Bereich haben viele Hersteller Produkte entwickelt und auf den Markt gebracht. Als Übertragungsverfahren wird bei der Funklösung das FHSS- (Frequency Hopping Spread Spectrum) und das DSSS-Verfahren (Direct Sequence Spread Spectrum) im Standard definiert (mehr dazu in einem späteren Kapitel).
+
+
+WLAN-Historie
+
+ 
+
+Die Idee von Funknetzwerken ist eigentlich nicht neu und ein relativ alter Hut. Denn betrachtet man die Historie von Ethernet, der heute am weitesten verbreiteten drahtgebundenen LAN-Technologie, so muss man feststellen, dass deren Entwicklung auf einem experimentellen Funknetzwerk namens Aloha basiert. Aloha wurde in den sechziger Jahren an der Universität von Hawaii entwickelt und sollte einen Datenaustausch zwischen den Hawaii-Inseln ermöglichen. Anfang der neunziger Jahre folgten dann die ersten kommerziellen Funklösungen für den LAN-Bereich. Diese Systeme hatten jedoch zwei gravierende Nachteile: Zum einen konnten diese Systeme nur geringe Distanzen und Datenraten erzielen. Zum anderen waren es rein proprietäre Lösungen, d.h., wollte man ein Funknetzwerk aufbauen, so konnte man nur auf Produkte eines einzelnen Herstellers zurückgreifen. Letztendlich waren einheitliche Standards nötig, um letzteres aus dem Weg zu schaffen und eine breite Marktakzeptanz für WLANs zu erzielen.
+
+
+Standen anfänglich HIPERLAN (High Performance Radio LAN) und Wireless Ethernet in den Startlöchern, um sich als professionelle WLAN-Lösungen zu behaupten, so hat sich letztendlich Wireless Ethernet als dominierende Funklösung für den LANBereich durchgesetzt und HIPERLAN in den Schatten gestellt. Beim HIPERLAN handelt es sich um eine europäische Lösung, die 1996 in der EN 300 652 Norm definiert wurde und in der Grundversion im 5-GHz-Band eine Datenrate von bis zu 20 MBit/s ermöglicht. Wireless Ethernet basiert ebenfalls auf einem international anerkannten Standard, der jedoch vom IEEE (Institute of Electrical and Electronics Engineers) veröffentlicht wurde. Ein Missverständnis gilt es jedoch vorweg aus der Welt zu schaffen: bei Wireless Ethernet handelt es sich nicht um eine Ethernet-Variante, bei der man einfach das Kabel weggelassen hat, sondern um einen eigenen Standard. Wobei in diesem Standard der Begriff Ethernet noch nicht einmal verwendet wird, um die Technologie zu beschreiben. Es hat sich jedoch in der Netzwerkbranche allgemein eingebürgert, von Wireless Ethernet zu sprechen, da die Technologie in der Regel dazu verwendet wird, ein bestehendes Ethernet-Netzwerk zu erweitern.
+
+
+IEEE - Institute of Electrical and Electronics Engineers
+
+ 
+
+IEEE-802.11b
+
+Ähnlich wie im drahtgebundenen LAN-Bereich war man natürlich bestrebt, die Datenrate zu erhöhen. Demnach wurde bereits 1999 der bestehende 802.11-Standard durch den 802.11b-Standard erweitert, wodurch zusätzlich eine Datenrate von 5,5 und 11 MBit/s im 2,4-GHz-Band realisiert werden konnte. Hierbei wurde als Übertragungsverfahren ausschließlich nur noch das DSSS-Verfahren genutzt.
+
+
+IEEE-802.11a
+
+Des Weiteren wurde 1999 eine Erweiterung durch den 802.11a-Standard vollzogen, womit im 5-GHz-Band Datenraten von 6, 9, 12, 18, 24, 36 und 54 MBit/s technisch realisierbar wurden. Als Übertragungsverfahren wurde das OFDM-Verfahren (Ortogonal Frequency Division Multiplexing) eingeführt. Lösungen auf Basis des 802.11a-Standards durften jedoch bislang in Europa nicht betrieben werden und waren nur dem amerikanischen Markt vorbehalten. Dies lag in der Tatsache begründet, dass in Europa das 5-GHz-Band für andere Dienste genutzt wird und man Kollisionen mit diesen Systemen vermeiden wollte.
+
+
+IEEE-802.11h
+
+Letztendlich waren bei der Lösung des 802.11a-Standards zwei Anpassungen notwendig, um dennoch eine störungsfreie Zusammenarbeit zu gewährleisten und somit eine Zulassung für den europäischen Raum zu erhalten. Dies waren zum einen eine automatische Kanalwahl und zum anderen eine automatische Anpassung der Sendeleistung, die jeweils in Abhängigkeit der Kanalnutzung greifen müssen. Die automatische Kanalwahl soll sicherstellen, dass von den Systemen nur freie Kanäle belegt werden. Über die Anpassung der Sendeleistung soll zudem dafür gesorgt werden, dass nur mit der Sendeleistung gearbeitet wird, die für eine fehlerfreie Datenübertragung erforderlich ist. Diese geforderten Anpassungen erfolgen letztendlich zukünftig durch die Ergänzungen nach dem 802.11h-Standard, wodurch zwei Verfahren, Dynamic Channel/Frequency Selection, kurz DCS/DFS, und Transmit Power Control, kurz TPC, eingeführt werden.
+
+ 
+IEEE-802.11g
+
+Zukünftig dürfte auch die Entwicklung des 802.11g-Standards interessant sein. Hierbei handelt es sich um eine Lösung im 2,4-GHz-Band, die über das OFDM-Verfahren ebenfalls eine Datenrate von 6 bis 54 MBit/s zulässt. Vorteil hierbei ist, dass eine sanfte Migration auf die höheren Datenraten erfolgen kann, da man beispielsweise auf bestehende Antennentechnik, die speziell für 2,4 GHz ausgelegt ist, zurückgreifen kann und eine Abwärtskompatibilität zu den bestehenden Systemen im 2,4-GHz-Band (802.11 und 802.11b) vorhanden ist. Die Abwärtskompatibilität wird erzielt, indem man, zeitlich betrachtet, den Mediumzugriff für die herkömmliche Datenübertragung nach dem DSSS-Verfahren und nach dem neuen OFDM-Verfahren aufteilt. Somit können beide Systeme gemeinsam betrieben werden. Hierbei wird sichergestellt, dass beide Systeme beim Mediumzugriff zum Zug kommen und ihre Daten übertragen können.
+
+ 
+
+Gebühren- und Lizenzfrei
+
+Der wesentliche Vorteil von WLANs liegt in der Tatsache, dass diese als nichtöffentliche Einrichtungen betrachtet werden und innerhalb der ISM-Bänder (Industrial/Scientifical/Medical) arbeiten. Bei den ISM-Bändern handelt es sich um Frequenzbänder, die weltweit für einen gebühren- und genehmigungsfreien Betrieb für industrielle, wissenschaftliche und medizinische Anwendungen freigegeben sind. Die Verwendung der ISM-Bänder unterliegt allgemein nur einer Beschränkung in der maximal zulässigen Sendeleistung, damit Störungen bzw. Beeinflussungen zwischen benachbarten Systemen minimiert werden. WLANs nutzen letztendlich die ISM Bänder im 2,4-GHz-Band (802.11b/g) und 5-GHz- Band (802.11a/h).  
+Die genutzten Frequenzbänder sind wiederum von nationalen Regulierungsbehörden in bestimmte Unterbänder unterteilt, die jeweils die einzelnen Kanäle bilden, wobei die Aufteilung der genutzten Frequenzbereiche von Nation zu Nation variieren kann.
+
+ 
+
+ETSI - European Telecommunications Standards Institute
+
+ 
+
+Für den europäischen Raum ist für die Aufteilung der Frequenzbereiche das ETSI (European Telecommunications Standards Institute) zuständig. Das ETSI hat dazu die ETS 300 328 Norm veröffentlicht, die die technischen Voraussetzungen und Zulassungskriterien für Datenfunksysteme und die Aufteilung der Frequenzbänder festlegt, wobei es für ganz Europa, mit der Ausnahme von Frankreich und Spanien, eine einheitliche Regelung gibt. 
+ 
+Für die Hersteller von WLAN-Produkten heißt dies, dass die Produkte die in der ETS 300 328 Norm beschriebenen Kriterien  einhalten müssen und dies durch ein entsprechendes Prüfzeugnis nachgewiesen werden muss, das von zugelassenen Testlabors oder, beispielsweise in Deutschland, vom Bundesamt für Post und Telekommunikation (BAPT) erstellt werden kann. Sind diese Voraussetzungen erfüllt, so dürfen die WLAN-Produkte innerhalb Europas eingesetzt werden. Durch die Nutzung der ISM-Bänder fallen für den Betreiber eines WLANs keinerlei Betriebsgebühren an und für das Errichten sind keine Genehmigungsverfahren notwendig. Ausschließlich bei einer grundstücksübergreifenden Einrichtung muss eine formlose, schriftliche Mitteilung an das Referat 122 des BAPTs eingereicht werden.
+
+

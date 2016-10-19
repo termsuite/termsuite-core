@@ -1,0 +1,144 @@
+Microsoft Word - CURSO Reparacion de Móviles.doc CURSO de Reparación de Telefonía Móvil 
+PROGRAMA COMPLETO.- 
+Comunicaciones. 
+ 
+Repaso de los conceptos básicos de la Electrónica de comunicaciones. Componentes SMD 
+utilizados en telefonía móvil y su identificación (resistencias, condensadores, bobinas, diodos, 
+transistores, c.i.). Circuitos Amplificadores RF y AF, Filtros, Demoduladores, Conversores A/D y D/A, 
+Mezcladores, Alimentación Conmutada y Carga de Batería. Diagrama de bloques que compone un 
+teléfono móvil, funciones de cada etapa.  
+Introducción a las Redes Telefónicas Públicas Móviles. Conceptos 
+de Red PLMN - GSM. Sistemas celulares y sin hilos. Asignación de 
+frecuencias al Sistema GSM para toda Europa. Características técnicas 
+del Sistema GSM. Necesidades de optimizar el uso de la banda de 
+frecuencias GSM: 
+ 
+a).- Reutilización de frecuencias. Sistema Celular. Células hexagonales. 
+Antenas celulares. Patrón celular 3/9. Traspaso e itinerancia (Handover 
+y Roaming). 
+ 
+ b).- Técnicas de Acceso Múltiple: FDMA y TDMA. Modulación GSMK. 
+Multiplexación temporal (TDM). Time Slot. Ráfagas, tramas, 
+multitramas, supratramas e hipertramas. Canales físicos y lógicos. 
+Canales de tráfico y comunes. Conversión analógico-digital. 
+Arquitectura funcional de la red GSM. Estación Móvil. Sistema de 
+Estación Base. Centro de Conmutación Móviles. Registro General de 
+Abonados HLR. Registro de Abonados Itinerantes VLR. Unidades 
+funcionales de Seguridad AuC y EIR. Centro de Operaciones y 
+Mantenimiento 
+ 
+Identidades y números de abonado y de red. Identificación del 
+Cliente IMSI, TMSI, LMSI. Numeración Estaciones Móviles MSISDN, 
+MSRN. Identificación del Equipo Móvil IMEI, IMISV. Identificación de 
+MSC/VLR, HLR. Autentificación. Tarjeta SIM, estructura interna, 
+funcionamiento; PIN y PUK. Establecimiento de una conexión y traspaso 
+de llamada. Mensajería GSM: SMS. Seguridad: Identificación, 
+Autentificación y Cifrado A3, A5 y A8. Lista Blanca, Lista Gris y Lista 
+ Negra (móviles desaparecidos). 
+Tecnologías de las Comunicaciones de Tercera Generación (3G): 
+la UMTS, envío y recepción de vídeos y datos en banda ancha con 
+acceso a Internet a velocidad superior (384 Kbps) que la Adsl básica. La 
+tarjeta USIM dual Vodafone Mobile Conect 3G. Legislación vigente en materia de protección de terminales móviles 
+desaparecidos y cambios de IMEI; de protección al usuario / 
+consumidor en materia de garantía en las reparaciones de los 
+servicios técnicos y de garantía en la venta de bienes de consumo. 
+Taller de Practica. Plataformas de Reparación. 
+Clases Prácticas desde el primer día.  
+¡¡ AHORA TAMBIEN APRENDERÁS A REPARAR LOS 
+ BB5,MOTOROLAS V3, V360 ...  Y ACTUALES  !! 
+ 
+Utilización de las herramientas profesionales: El Multímetro 
+Digital. El Osciloscopio. El Frecuencímetro Digital. El Programador de 
+memorias Flash y Eeprom. El soldador de aire caliente y de contacto 
+para componentes SMD y BGA (Reboulding). El Microscopio directo y 
+el microscopio con cámara digital por TFT 17". Herramientas 
+manuales para telefonía móvil. 
+Utilización del Software de Servicio para Diagnóstico y 
+ Reparación de Nokia Wintesla y Phoenix. (Testear el display, buzzer, teclado, circuitos de Radio Frecuencia (Hagar) , 
+Circuitos de Alimentación y Carga de Batería (CCONT, CHAP), 
+Audio (COBBA), etc) . 
+ Introducción a la reparación: Apertura de teléfonos móviles, 
+descargas electrostáticas. Sustitución de displays y teclados. Cambio 
+de LED's de colores, micrófonos, altavoz y vibradores. Cambio de 
+componentes SMD y BGA. Recuperación de baterías 'muertas'. 
+Técnicas de soldadura de circuitos integrados BGA y SMD y de 
+componentes subminiatura. Video: Sustitución del módulo Bluetooth; 
+Video: reboulding; Video: desmontar / montar un Terminal móvil. 
+Prácticas de sustitución de componentes reales en placas bases de 
+ teléfonos móviles. Clonación de SIM. Copia de seguridad de Agenda y datos. 
+ 
+Reparación II: Estudio técnico de las diferentes etapas que 
+componen un teléfono móvil, análisis de averías típicas de cada 
+bloque y métodos de detección y reparación. Sistema de localización 
+de averías de software y hardware. Estudio de diagramas y esquemas 
+de teléfonos actuales: Alcatel, Ericson, Nokia, Motorola, Panasonic, 
+Samsung, etc. Identificación de las principales funciones de los 
+componentes de la placa base en las marcas y modelos de estudio. 
+Práctica de flasheo de memoria, leer y cambiar códigos e idiomas, 
+verificación de contenidos y modificación de códigos de liberación de 
+los terminales móviles, programación de memorias Flash y EEprom. 
+Activación del menú de Ingeniería de algunos móviles. Localización de 
+ averías típicas en los diversos modelos de móviles, sustitución de los 
+chips Power Amplifier, Antenna Swich, Módulo del Power Supply, 
+Memorias Ram, Flash y EEprom. Reparación III: Localización de averías con el Osciloscopio y 
+visualización de las diversas señales presentes en la placa base de un 
+teléfono móvil. Verificación de averías con el Multímetro Digital y 
+medición de las tensiones de referencia para la localización de 
+averías. Medidas con el Frecuencímetro Digital de la frecuencia del 
+cristal de oscilación y efectos de su variación en el Sintetizador de 
+Frecuencias-PLL. Comprobación con el Frecuencímetro del Canal de 
+Autenticación de la SIM y su pase al canal de espera. 
+ 
+ Objetivo del Curso.  
+La Formación que se imparte en este Curso está orientada a capacitar 
+al alumno para que pueda ser un profesional Técnico en Reparación 
+de Telefonía Móvil, que sea capaz de localizar y reparar cualquier tipo 
+de avería que pueda surgir en cualquier terminal, tanto actual como 
+futuro. Al finalizar el Curso, el alumno no solo va a ser capaz de 
+reparar las averías típicas de determinadas marcas y modelos de 
+móviles sino que estará preparado para comprender, analizar y seguir 
+ un método deductivo de localización de averías que le permita una 
+ rápida solución del problema, sea cual sea la marca o modelo de 
+teléfono móvil, para ello la formación incluye el manejo de las 
+herramientas profesionales propias de esta especialidad y el 
+instrumental necesario como Osciloscópio, Frecuencímetro, 
+Multitester, etc. Muchos de los alumnos que han estudiado con 
+nuestros Cursos son actualmente Técnicos del SAT oficial de marcas 
+como Siemens, Nokia o Ericsson. 
+ 
+Materiales del Curso. 
+(Se entrega al alumno sin costo alguno)  
+• 1 Manual de Introducción a la Electrónica Básica de Comunicaciones, con identificación 
+de componentes SMD utilizados en telefonía móvil: condensadores, resistencias, bobinas, 
+diodos, Led's, transistores y c. integrados BGA.  
+• 1 Manual de Utilización de Intrumentos de Laborarorio, Multímetro, Osciloscópio, 
+Frecuencímetro para señales GSM, Fuentes de Alimentación, etc de uso en la reparación de 
+móviles.  
+• 1 Manual sobre Telefonía Móvil Digital GSM/GPRS/UMTS, expone el funcionamiento de la 
+Tecnología GSM, Sistemas celulares de antenas, la modulación GSMK, la arquitectura funcional 
+de la red GSM, la identificación del abonado por la SIM y del terminal por el IMEI, el 
+funcionamiento del GPRS y las tecnologías de tercera generación UMTS.  
+• 3 Manuales de Reparaciones de Averías e Identificación de componentes dañados, a 
+todo color con esquemas de las placas bases de los móviles: Nokia, Motorola, Ericsson, 
+Samsung, Siemens, Panasonic, Philips, etc etc.  
+• 2 CD's con Esquemas de Servicio Técnico y Diagnóstico de Averías, de las diversas 
+marcas de móviles, despiece y desmontaje, Manuales de Usuarios, etc.  
+• 2 CD's con Programas Flasher / Unloock, para utilización del SAT.  
+• 1 Colección de Esquemas de Teléfonos Móviles, a tamaño 45x60 cm, (en color y B/N) 
+para estudio y localización de averías e identificación de componentes. 
+• TRES MESES DE ASISTENCIA TÉCNICA GRATUITA y acceso gratuito a nuestro Servidor 
+donde encontrarás utilidades, actualizaciones flashes, trucos, esquemas y manuales técnicos oficiales de cada marca, tablas de averías, notas técnicas de nuestro SAT, 
+nuevas Web's donde adquirir repuestos de Móviles, etc.  
+ 
+DIPLOMA del Curso. 
+ 
+Los alumnos del Curso recibirán el Diploma de asistencia, con refrendo del contenido 
+estudiado. 
+ 
+  
+ 
+Centro acreditado por la:   
+ 
+ 
+ 
+(ver en: www.anced.es)

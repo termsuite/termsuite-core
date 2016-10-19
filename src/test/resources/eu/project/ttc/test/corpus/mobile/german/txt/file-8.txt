@@ -1,0 +1,2915 @@
+Industrial Wireless LAN
+I-Features, Anwendungen, Beispiele
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Zielsetzung:
+Dieses White Papier erklärt die Technologie Industrial Wireless LAN und ihre
+Besonderheiten im Vergleich zu Wireless LAN nach IEEE 802.11. Des weiteren
+werden Anwendungen und Beispiele für den Einsatz im industriellen Bereich
+aufgezeigt. Eine Beschreibung der heute verfügbaren Produkte und der zukünftigen
+Produkte und Technologien rundet das Papier ab.
+Hinweis:
+Wireless LAN auf Basis des Standards IEEE 802.11und
+Weitere Funktechnologien
+werden in einem separaten White Paper erklärt
+
+Stand der Informationen in diesem White Paper: Herbst 2004
+
+Dieses Symbol kennzeichnet die Hinweise auf SIMATIC NET Produkte oder
+spezielle SIMATIC NET Lösungen
+
+Herausgeber
+SIEMENS AG
+Bereich: Automatisierungs- und Antriebstechnik
+Geschäftszweig: Industrielle Kommunikation SIMATIC NET
+Postfach 4848
+90327 Nürnberg
+Weitere Unterstützung:
+Bei weiteren Fragen wenden Sie sich bitte an Ihren Siemens-Ansprechpartner in den
+für Sie zuständigen Vertretungen und Geschäftsstellen.
+Sie finden SIMATIC NET auch im Internet unter
+
+http://www.siemens.com/simatic-net
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 2 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Zielsetzung:................................................................................................................................ 2
+Einführung ................................................................................................................................ 4
+Zuverlässig......................................................................................................................................... 4
+Robuste Bauart.................................................................................................................................. 5
+Datensicherheit.................................................................................................................................. 5
+
+Industrial Wireless LAN ........................................................................................................... 7
+I-Features (Industry-Features) ........................................................................................................ 7
+Robuste Bauform und Anschlusstechnik ...................................................................................... 20
+Beeinflussung durch andere Funktechnologien ........................................................................... 23
+Sicherheitsgerichtete Signale bei Industrial Wireless LAN ........................................................ 25
+
+Anwendungsgebiete eines Industrial Wireless LANs in der Automatisierungstechnik ....... 29
+Anwendungen.................................................................................................................................. 29
+Beispiele ........................................................................................................................................... 32
+
+Industrial Wireless LAN Produkte von SIMATIC NET........................................................ 37
+Access Point SCALANCE W788-1PRO ....................................................................................... 37
+Dual Access Point SCALANCE W788-2PRO .............................................................................. 38
+Ethernet Client Module SCALANCE W744-1PRO .................................................................... 38
+PC Card CP 7515 ............................................................................................................................ 39
+PCMCIA Card CP 1515 ................................................................................................................. 40
+Power Supply PS791-1PRO ........................................................................................................... 41
+FC Modular Outlet Power Insert .................................................................................................. 41
+Zubehör............................................................................................................................................ 42
+
+Zukünftige Produkte von SIMATIC NET.............................................................................. 43
+Industrial Wireless LAN FR .......................................................................................................... 45
+Anwendungen von Industrial Wireless LAN FR ......................................................................... 46
+SCALANCE W788-1PRO FR........................................................................................................ 47
+SCALANCE W788-2PRO FR........................................................................................................ 48
+Ethernet Client Module SCALANCE W744-1PRO FR .............................................................. 48
+IWLAN/PB Link PN IO ................................................................................................................. 49
+IWLAN RCoax Cable..................................................................................................................... 50
+Antennen.......................................................................................................................................... 51
+
+Glossar ..................................................................................................................................... 52
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 3 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Einführung
+Drahtlose Netze erfreuen sich großer Beliebtheit. Sie
+ermöglichen eine hohe Flexibilität, was bei Installation und
+Betrieb einer Anlage einen Kostenvorteil mit sich bringt.
+Deshalb finden sie sich in vielen Bereichen, wie z.B.
+• Fertigungs- und Prozessautomatisierung
+• Nahrungs- und Genussbranche
+• Lager/Logistik
+• Transport (Bahn/Straße)
+• Kranbau
+Durch den drahtlosen Anschluss an das Kommunikationsnetz
+werden viele Anwendungen mit bewegten Geräten überhaupt
+erst möglich oder deutlich effizienter realisiert. So entfallen
+verschleißbehaftete Schleppketten und Schleifringe. Bewegte
+Fahrzeuge sind bei der Datenkommunikation nicht mehr an fest
+verlegte Spuren gebunden, die nur mit großem Aufwand
+veränderbar sind.
+In einem Funknetz stehen die Produktions- und Servicedaten
+an nahezu jedem beliebigen Ort im Unternehmen zur
+Verfügung. Sie können gleichzeitig erfasst und verändert
+werden. Bei Inbetriebsetzungsarbeiten beobachtet der
+Verantwortliche vor Ort direkt seine anlagenweit ausgelösten
+Aktionen.
+Zuverlässig
+Im industriellen Einsatz ist die Betriebssicherheit von
+besonderer Bedeutung. Sie erfordert die Verwendung von sehr
+zuverlässigen Produkten, die Mechanismen zur Unterstützung
+von Echtzeit (garantierte Übertragungszeiten) und Deterministik
+(vorhersagbarer Datenverkehr) zur Verfügung stellen. Damit
+können z.B. speicherprogrammierbare Steuerung (SPS) auch
+in kritischen Situationen sicher ihre Daten übertragen. Die
+Funk-Standards aus der IEEE Arbeitsgruppe 802.11 (auf die
+sich das Wi-Fi Siegel bezieht) bieten hier nur begrenzte
+Möglichkeiten. Es ist vielmehr so, dass die Methoden des
+Standards IEEE 802.11 eine gute Basis bereitstellen, die für
+den industriellen Einsatz optimiert werden können. Dies wird
+mit den I-Features von Industrial Wireless LAN in den
+Produkten von SIMATIC NET realisiert. Diese Features sind
+eine Erweiterung von IEEE 802.11 und voll kompatibel, d.h.
+Geräte, die IEEE 802.11 (und z.B. das Wi-Fi Siegel besitzen)
+genügen sind in einem Industrial Wireless LAN Funkfeld
+einsetzbar.
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 4 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Neben dem Einsatz von zuverlässigen Produkten wird
+Betriebssicherheit durch ein optimal geplantes und installiertes
+Funkfeld erzielt. Ein Messprotokoll mit den Feldstärkewerten
+des zukünftigen Funknetzes gibt dem Kunden die Sicherheit
+auch gegen dynamische Störungen gerüstet zu sein. So muss
+eine Reserve vorhanden sein, wenn z.B. ein bewegter
+Gabelstapler mit großen metallischen Behältern das Funkfeld
+durch Reflektionen und Abschattung verändert.
+Robuste Bauart
+Neben der Eigenschaft „Zuverlässig“ ist eine robuste Bauart
+eine wichtige Anforderung des industriellen Kunden. Dies
+schlägt sich nieder in Gehäusen, die staub- und wasserdicht
+sind. Damit können Geräte dezentral ohne Schaltschrank
+aufgebaut werden und erlauben so eine maximale Flexibilität.
+Diese Flexibilität in der Montage hat aber noch einen weiteren
+wichtigen Aspekt. Im Regelfall ist der für die Montage
+einfachste Ort (z.B. Schaltschrank) nicht der funktechnisch
+optimalste. Man denke nur daran, dass ein Schaltschrank ein
+Faradayscher-Käfig ist und die Funkwellen „gefangen“ hält.
+Man kann zwar eine abgesetzte Antenne auf das Dach des
+Schaltschranks montieren, muss aber beachten, dass die
+Koaxialkabel, welche Antenne und Gerät verbinden, wertvolle
+Sendeleistung abdämpfen. Nicht so, wenn auf dieses
+Koaxialkabel für Zusatzantennen verzichtet werden kann, da
+der funktechnisch optimale Ort gewählt wird und zudem die im
+Lieferumfang enthaltenen Antennen verwendet werden können.
+Datensicherheit
+Die Frage nach dem Maß an Sicherheit wird oft von den
+Security Policies der Unternehmen vorgegeben, welche
+eindeutige Regeln vorsehen.
+In jedem Fall ist auf die Verschlüsselung der gesendeten Daten
+zu achten, da bei Funkübertragung der Datenverkehr mit
+Richtantennen verfolgt werden kann. Es reicht aber nicht aus
+nur die Daten zu verschlüsseln. Schon bevor überhaupt
+Datenverkehr stattfindet, muss sichergestellt sein, dass auch
+die richtigen Partner an der Kommunikation teilnehmen. Die
+Frage „Wer bist du“ wird in geeigneten AuthenticationProtokollen abgewickelt. Zusätzlich kann bei dieser Frage auch
+gleich festgelegt werden, „Was darf ich“ (Authorisation).
+Wie auch immer die Security-Lösung aussehen wird, wichtig ist,
+dass Produkte zum Einsatz kommen die standardisiert sind und
+keine proprietären (anbieterspezifischen) Verfahren beinhalten.
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 5 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Je offener eine Security Lösung publiziert wird, desto schneller
+werden auch mögliche Lücken durch Hacker aufgespürt. Ein
+offener Standard vereint somit Investitionsschutz
+(Interoperabilität mit verschiedenen Anbietern) und ein hohes
+Maß an Datensicherheit. Im Gegensatz zu anderen Anbietern
+(z.B. Cisco´s LEAP Protokoll) verwendet Industrial Wireless
+LAN nur Mechanismen, die auch im Standard der IEEE und
+den Festlegungen der WECA (z.B. WPA) genau definiert sind.
+Aus diesem Grund sind nicht in diesem White Paper
+Informationen zu diesem Thema zu finden, sondern sind
+Bestandteil des separaten White Papers zum Standard IEEE
+802.11.
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 6 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Industrial Wireless LAN
+Industrial Wireless LAN von SIMATIC NET bietet neben der
+Datenkommunikation nach dem Standard IEEE 802.11 eine
+Vielzahl von Erweiterungen (I-Features), die für den
+industriellen Kunden von großem Nutzen sind.
+I-Features (Industry-Features)
+Wenn Funk im industriellen Umfeld in Produktion und Fertigung
+zum Einsatz kommt, dann wird der Zuverlässigkeit des
+Funkkanals eine große Bedeutung beigemessen. Anders als im
+Consumer Umfeld erzeugen Stillstandzeiten von Maschinen
+hohe Folgekosten. Um die Betriebssicherheit zu steigern stellt
+das Industrial Wireless LAN von SIMATIC NET zusätzliche
+Funktionen zur Verfügung.
+Antennen Diversity - Betrieb mit 2 Antennen
+Wird Funk im produktiven Bereich einer Anlage verwendet,
+sollten auch Diversity-Antennen eingesetzt werden. Mit diesem
+Verfahren kann in einer funktechnisch „schwierigen“
+Umgebung, in der Reflexionen und Mehrwegeempfang die
+Wellenausbreitung stören, eine deutlich zuverlässigere
+Funkverbindung realisiert werden. Die Verwendung von
+Antennen-Diversity wird sehr einfach erkannt, weil für eine
+Funkkarte zwei Antennen zur Verfügung stehen. Der
+Empfänger kann damit die Information aus zwei verschiedenen
+Antennen auswerten und beim Empfang dynamisch die
+bessere Antenne auswählen Beim Senden wählt die Diversity
+nach einer vorgegebenen Anzahl an Fehlversuchen
+automatisch die andere Antenne für weitere Sendeversuche.
+Überwachung des Funkkanals
+im Standard IEEE 802.11 ist die Überwachung der Qualität der
+Funkstrecke nicht gefordert. Dieser Faktor bestimmt aber die
+Zuverlässigkeit maßgeblich. Soll ein mobiles Gerät eine
+Maschine diagnostizieren oder überwachen (bei einem
+vergleichsweise langsamen Prozess), so ist es wichtig, dass die
+Leitebene die Information hat, ob das Gerät überhaupt noch in
+der Lage ist diesen Auftrag auszuführen.
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 7 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Abbildung 1: Überwachung des Funkanales zwischen
+einem Internet Pad, der sich vom Ort A zum Ort B bewegt
+und sich aus dem Funkfeld des Access Point raus bewegt
+Verliert beispielsweise das Internet Pad MOBIC wie in
+Abbildung 1 den Funkkontakt, so ist es wichtig, dass die
+Steuerung in der Leitebene diese Information bekommt und die
+Kontrolle des Prozesses übernimmt. Dieser Fall kann eintreten,
+wenn der Funkkanal schwer gestört wird oder sich der Client
+einfach aus dem Funkfeld hinausbewegt (in Abbildung 1 ist das
+Ort B) und keine Funkverbindung mehr hat. Der Access Point
+muss dann z.B. eine SNMP-Meldung an das
+Netzwerkmanagement-System absetzen oder eine E-Mail
+senden. Optional kann in der Steuerung auch ein
+Softwarebaustein eingesetzt werden um den Status des Client
+zyklisch abzufragen.
+Bei Industrial Wireless LAN werden gleich zwei Verfahren zur
+Verfügung gestellt, mit denen eine derartige Überwachung des
+Funkkanals realisiert wird.
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 8 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Link Check
+Mit Link-Check werden, wenn keine Kommunikation stattfindet,
+vom Benutzer einstellbar zyklisch Telegramme an den
+Teilnehmer gesandt, um dessen Anwesenheit im Funknetz zu
+prüfen. Dieses Verfahren „kostet“ etwas Performance, gibt aber
+ein hohes Maß an Betriebssicherheit.
+IP-Alive
+Mit IP-Alive werden die im Umfeld der Automatisierungstechnik
+sehr verbreiteten zyklischen Kommunikationsverbindungen
+überwacht. Es wird dabei für ausgewählte IP-Verbindungen
+überwacht, ob zu den durch die Zykluszeit vorgegebenen
+Zeitpunkten auch tatsächlich Pakete ausgetauscht werden. Bei
+ausbleiben können, wie bei dem Link Check Mechanismus
+auch, auf verschiedene Wege Fehler gemeldet werden (FehlerLED, Log-File, E-Mail,SNMP-Trap). Die Meldewege kann der
+Anwender beliebig konfigurieren.
+Deterministik, Echtzeit
+Grundsätzlich bietet Wireless LAN nach IEEE 802.11 eine
+leistungsfähige Funkverbindung, die für viele Anwendungen im
+Office- und Homebereich direkt eingesetzt werden kann. Leider
+bietet der Standard keine Unterstützung für Anwendungen, die
+Bedarf an Echtzeit und Deterministik haben. Wireless LAN nach
+dem Standard IEEE 802.11 ist ein "shared medium", bei dem
+sich alle Teilnehmer den Zugriff auf das gemeinsame Medium
+teilen müssen. Dieser Zugriff erfolgt zwar geregelt, aber nicht
+eindeutig vorhersagbar.
+Reservierung der Datenrate
+Mit diesem Verfahren eröffnet Industrial Wireless LAN die
+Möglichkeit, daß für ausgewählte Teilnehmer (Clients) sowohl
+eine garantierte minimale Datenrate als auch eine „worst case“
+Übertragungszeit sichergestellt wird. (Quality of Service, QoS).
+Diese Parameter werden vorab vereinbart.
+Beispiel 1: Zyklischer Datenverkehr
+Soll in einer Automatisierungs-Anwendung sichergestellt
+werden, dass ein Teilnehmer alle 50 ms ein Paket mit 64 Bytes
+über das Industrial Wireless LAN Funkfeld zur zentralen
+Steuerung versenden kann, so sind folgende Parameter zu
+konfigurieren:
+1. Übertragungszeit (Response Time)
+Kleiner 50 ms, damit sich keine Daten am Teilnehmer
+„anstauen“. Schließlich muss nach 50 ms das letzte Bit vom
+vorherigen Paket übertragen sein, so dass das nächste 64
+Bytes Paket übergeben werden kann.
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 9 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+2. Datenrate (Bandwidth)
+Sollen 64 Bytes in 50 ms übertragen werden, so ist eine
+Datenrate von mindestens (64 Bytes x 8 Bit) / 50 ms = 10,24
+kBit/s einzustellen.
+Mit diesen beiden Einstellung wird sichergestellt, dass der
+Funkkanal kein „Flaschenhals“ im System ist und der zyklische
+Datenverkehr des Teilnehmers nahtlos an die zentrale
+Steuerung weitergegeben werden kann.
+Beispiel 2: Übertragung von Files
+Steht am Teilnehmer ein File der Größe 1 Mbyte zur
+Übertragung an, so kann mit den folgenden Einstellungen eine
+vorhersagbare Übertragungsdauer erzielt werden:
+1. Übertragungszeit (Response Time)
+Da eine Übertragungsdauer im Bereich von Sekunden zu
+erwarten ist, fällt die Latenzzeit des Funkkanals nicht sonderlich
+ins Gewicht. Eine Zeit von 500 ms kann hier gewählt werden.
+2. Datenrate (Bandwidth)
+Wird eine Datenrate von 500 kBit/s eingestellt, so wird das
+gesamte File in (1 Mbytes x 8 Bit) / 500 kBit/s = 16 s
+übertragen.
+Dass einzelne Pakete hier theoretisch eine Latenzzeit von bis
+zu 500 ms haben könnten fällt hierbei nicht ins Gewicht.
+Folgende Randbedingungen sind bei der Reservierung der
+Datenrate zu beachten:
+1. Bei der Einstellung Datenrate wird von der Nettodatenrate
+der Ethernet-Verbindung ausgegangen. Der ProtokollOverhaed durch die Funkübertragung braucht nicht beachtet
+zu werden.
+2. Beim Hand Over eines Funk-Teilnehmers in eine andere
+Funkzelle nimmt ein Teilnehmer die Attribute
+Übertragungszeit und Datenrate nur dann mit, wenn er auf
+dem neuen AP ebenfalls als „Critical Client“ (wichtiger
+Teilnehmer) konfiguriert ist. Allerdings kommt es genau zum
+Zeitpunkt des Übertritts von der einen Zelle zur nächsten zu
+Verzögerungen, da der Teilnehmer stark damit beschäftigt
+ist, sich beim nächsten Access Point anzumelden. Diese
+Phase kann bis zu mehrere 100 ms beanspruchen. In dieser
+Zeit findet auch kein produktiver Datenverkehr statt. Mit
+einer zukünftigen Weiterentwicklung von Industrial Wireless
+LAN wird diese Eigenschaft verbessert, wodurch Hand Over
+Zeiten unter 20 ms möglich werden.
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 10 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+3. Wird einem wichtigen Funk-Teilnehmer Übertragungszeit
+und Datenrate zugeteilt, so bedeutet dies nicht, dass bei
+einem Funkfeld, das nur teilweise ausgelastet ist, ihm nicht
+eine höhere Performance zuteil wird.
+Besipiel: Ein einziger Teilnehmer in einem 2,4 GHz, 54
+Mbit/s Funkfeld mit den Attributen 100 ms und 500 kBit/s.
+Dieser Teilnehmer bekommt natürlich die gesamte
+Bandbreite des Funkkanals zur Verfügung gestellt, wenn
+keine weiteren Teilnehmer sich im Funkfeld befinden.
+4. Zyklischer Datenverkehr ist in beide
+Kommunikationsrichtungen möglich: Sowohl vom
+Teilnehmer zum Access Point (upstream) als auch vom
+Access Point zum Teilnehmer (downstream).
+5. Vergleichbare Verfahren anderer Hersteller bieten lediglich
+eine Priorisierung von Datenströmen einer Kategorie. So
+kann dort z.B. der gesamte Sprachverkehr bevorzugt
+werden. Eine Priorisierung pro Gerät kann dort nicht erreicht
+werden. Zudem bieten diese Verfahren in vielen Fällen nur
+eine Priorisierung in Richtung Teilnehmer (downstream).
+
+Abbildung 2: Durch die Reservierung von Zeitschlitzen für
+Teilnehmer mit zeitkritischen Daten ist auch die
+Übertragung von Produktivkommunikation problemlos
+möglich
+Zur Verdeutlichung des obigen Verfahrens stelle man sich
+einen Access Point vor, bei dem 6 Teilnehmer angemeldet sind
+(Abbildung 2, Client 1 bis Client 6). Erfordert eine Anwendung,
+dass Teilnehmer 1, 2 und 3 (z.B. mobile Steuerungen) über das
+Industrial Wireless LAN Funknetz an das Fabriknetz
+angebunden sind, muss sichergestellt sein, dass diese
+Steuerungen zu festen, zyklisch wiederkehrenden Zeitpunkten
+eine Statusmeldung absetzen können. Dies gelingt nur, wenn
+ein Zusatzmechanismus zur Festlegung der
+Sendeberechtigung zur Verfügung steht. Mit der Reservierung
+der Datenrate von SIMATIC NET haben im obigen Beispiel in
+der ersten Phase die Client 1 bis 3 die Möglichkeit auf den
+Access Point zuzugreifen, obwohl Client 4 und 5 offenbar große
+Files zu übertragen haben. Daran schließt sich eine Periode an,
+in der alle anderen Teilnehmer nach den üblichen Regeln dran
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 11 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+sind. In Abbildung 2 ist es erst Client 5 und dann Client 6.
+Daran schließt sich wieder die Phase in der die Teilnehmer mit
+reservierter Datenrate Zugriff auf den Access Point bekommen.
+In der schematischen Darstellung von Abbildung 2 ist auch gut
+zu sehen, dass Client 4 ein „Opfer“ des Zugriffverfahrens von
+IEEE 802.11 ist. Da er kein vorab vereinbarter Teilnehmer mit
+zugesicherter Performance ist (QoS), muss er warten, bis Client
+5 und 6 ihre Daten übertragen haben.
+In Abbildung 2 ist auch gut zu sehen, dass innerhalb eines
+Industrial Wireless LAN sowohl standardkonformer Wireless
+LAN Funkverkehr, als auch priorisierter stattfindet. Es muss
+betont werden, dass jedes IEEE 802.11 konforme Gerät in den
+priorisierten Funkverkehr aufgenommen werden kann und
+keineswegs nur Client-Produkte von SIMATIC NET verwendet
+werden müssen. Findet innerhalb der Funkzelle eines Access
+Points sowohl IEEE 802.11 Funkverkehr als auch priorisierter
+statt, so muss beachtet werden, dass die Performance des
+Standardverkehrs überproportional abnimmt, da der priorisierte
+Datenverkehr für seine Administrierung Bandbreite erfordert. In
+einer Analyse der ComConsult wurde dieses Verhalten
+überprüft.
+(http://intra1.nbgm.siemens.de/extern/spiegeln/net/html_00/ftp/p
+rodukte/2004_07_ComConsult_Siemens_IWLAN.pdf)
+Forced Roaming
+Der Standrad IEEE 802.11 legt keineswegs fest, dass ein
+Access Point über Ethernet an das drahtgebundene Netz
+angeschlossen wird. Mehr noch - es ist nicht einmal festgelegt
+dass ein drahtgebundenes Netz überhaupt zur Verfügung
+stehen muss. Somit bemerkt ein Teilnehmer im Funkfeld nicht
+sofort, ob die drahtgebundene Schnittstelle möglicherweise
+gestört oder unterbrochen ist. Solch ein Fehler hat
+weitreichende Konsequenzen, wenn man als Teilnehmer eine
+mobile Steuerung hat, die wichtige Prozessdaten zur Leitwarte
+senden muss.
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 12 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Abbildung 3: Forced Roaming eines Teilnehmers bei
+Unterbrechung der drahtgebundenen Schnittstelle am
+angemeldeten Access Point
+Wird in Abbildung 3 die drahtgebundene Schnittstelle am
+Access Point 1 unterbrochen, so erkennt dieser den Fehler und
+schaltet sein Funkfeld automatisch ab (Voraussetzung:
+Benutzer hat diese Option im Web-Interface des Access Point 1
+gewählt). Ist das Funkfeld redundant aufgebaut (überlappende
+Funkzellen), so roamed der Teilnehmer automatisch zum
+nächsten verfügbaren Access Point 2. Ohne diesen
+Mechanismus hätte die mobile Steuerung keine Möglichkeit, die
+Verbindung zum Leitrechner aufrecht zu erhalten.
+Hinweis: Dieser Mechanismus ist nicht mit dem RedundancyMode zu verwechseln. Dortiger Unterschied
+• Punkt-zu-Punkt Verbindung
+• Dual Access Point
+• Umschaltung von einer Funkkarte zur anderen innerhalb
+eines Dual Access Points
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 13 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Storm Threshold
+In Kommunikationsnetzen wird eine nicht unbeträchtliche
+Netzlast durch Multicasts und Broadcasts (Nachrichten alle
+Teilnehmer) erzeugt. Nehmen solche Nachrichten überhand, so
+besteht die Gefahr, dass der produktive Datenverkehr
+„gebremst“ wird. Diesem Problem in einem
+Kommunikationsnetz wird nicht durch das Industrial Wireless
+LAN Funkfeld begegnet, sondern muss in den Geräten selbst
+abgefangen werden. Dazu bieten die Produkte von SCALANCE
+W die Option „Storm Threshold“ um eine Überlast zu vermeiden
+und den Multicast/Broadcast Verkehr auf einen maximalen Wert
+zu beschränken.
+Events
+Ein wesentlicher Kostentreiber bei Anlagen im industriellen
+Umfeld sind Aufwände durch Service und Instandhaltung. Hier
+besteht großes Potential zur Einsparung, wenn Fehlverhalten
+von Geräten und deren Ursachen rechtzeitig erkannt werden.
+Neben Fehlern ist es aber auch hilfreich, wenn wichtige Schritte
+bei der Konfiguration protokolliert werden und zur späteren
+Kontrolle zur Verfügung stehen.
+•
+•
+•
+•
+•
+•
+•
+
+Kaltstart/Warmstart
+Verbindung zum Ethernet
+Fehler bei Authentication (Wer bin ich, Wer meldet sich
+an)
+Energieversorgung
+Überwachung Funkverbindung
+Reservierung der Datenrate möglich/nicht möglich
+Redundancy Mode
+
+Abbildung 4: Aufzählung von Fehlerzuständen und
+Ereignissen, die von SCALANCE W Produkten erkannt
+werden
+Aus unserer Sicht ist es nicht ausreichend den Fehler und
+Status zu erkennen, sondern es müssen auch entsprechende
+Reaktionen ausgelöst werden. Bei den Produkten von
+SCALANCE W stehen hier Mechanismen wie
+• Fehleranzeige (LED) am Gerät
+• versenden einer Email
+• SNMP-Trap
+• protokollieren in einen später auslesbaren Speicher
+zur Verfügung. Alle Fehlermeldewege sind an/abschaltbar,
+abgesehen von wenigen schwerwiegenden Fehlern die immer
+protokolliert und an der Fehler LED signalisiert werden.
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 14 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Wizards
+Ein System ist nur so zuverlässig, wie es tatsächlich durch den
+Inbetriebsetzer konfiguriert wurde. Die besten Mechanismen
+helfen nicht, wenn die Parametrierung und Projektierung
+schwierig ist und nur von Experten bewältigt werden kann. Dies
+trifft besonders auf die Einstellungen zur Datensicherheit
+(Security) zu. Leider hat sich hier die Standardisierung sehr
+schnell bewegt, so dass die aktuellen Mechanismen noch nicht
+überall ausreichend bekannt sind.
+In einer solchen Situation ist es wichtig, dass die Kunden mit
+Online-Hilfen und Wizards unterstützt werden. Führt ein
+Benutzer die vorgeschlagenen Einstellungen des BasicWizards und Security-Wizards bei den Produkten von
+SCALANCE W in der angegebenen Reihenfolge durch, so kann
+er sicher sein, dass sein Industrial Wireless LAN Funkfeld eine
+entsprechende Qualität aufweist und kein zu konfiguriender
+Parameter vergessen wurde.
+Wireless Distribution System, WDS
+Soll in einer Anlage ein Industrial Wireless LAN Funknetz
+nachgerüstet werden, so ist es manchmal nicht möglich die
+Access Points über Ethernet zu verbinden, um eine
+Kommunikation über Funkzellen hinweg zu ermöglichen.
+Mögliche Gründe:
+• Temporäre Aufbauten zur Inbetriebsetzung
+• Kabelkanäle nicht erweiterbar oder nicht vorhanden
+• Verlegung im Freifeld schwierig (z.B. Sandgrube)
+In einem solchen Fall können die Access Points ohne
+Verwendung von Draht in der Betriebsart Wireless Distribution
+System verwendet werden.
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 15 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Abbildung 5: Obwohl die Access Points nicht über Draht
+verbunden sind, ist es möglich, dass die beiden Teilnehmer
+(Laptop und Steuerung) miteinander kommunizieren
+In der Betriebsart WDS ist es wichtig, dass jeweils ein Access
+Point seine Nachbarn „sieht“ (sonst wäre die Kette
+unterbrochen!). Dazu kann es notwendig werden, statt der
+mitgelieferten Antennen, spezielle abgesetzte Antennen
+einzusetzen.
+Wie in Abbildung 5 zu sehen ist können in dieser Betriebsart
+Teilnehmer sehr wohl am Funkbetrieb teilnehmen. Daraus
+ergibt sich eine wichtige Eigenschaft, nämlich, dass sich
+Teilnehmer und Access Points die gesamte zur Verfügung
+stehende Datenrate teilen müssen. Diese Situation wird
+dadurch verschärft, dass bei WDS zu beachten ist, dass ALLE
+Access Points und Teilnehmer auf demselben Funkkanal
+arbeiten (z.B. 802.11g und Kanal 1, 2,4 GHz mit 54 Mbit/s).
+Diese Einschränkung hat natürlich Konsequenzen für die
+Anwendungen. So sollten solche vermieden werden, in denen
+eine hohe Datenrate für viele Teilnehmer von Bedeutung ist
+(z.B. Hotspot auf einem Messegelände). In Anwendungen
+hingegen, wo Steuerungen (einige 100 kBit/s) oder HMI (einige
+Mbit/s) auf das Funknetz zugreifen und eher selten große
+Dateien zur Projektierung runterladen, ist ein Flaschenhals
+nicht zu erwarten.
+Die Performance der Funkinfrastruktur in Abbildung 5 kann
+verbessert werden, wenn Dual Access Points (SCALANCE
+W788-2PRO) eingesetzt werden (siehe Abbildung 6). Dann
+kann nämlich die eine Funkkarte zum Aufbau der
+Funkinfrastruktur (Backbone) verwendet werden und die andere
+Funkkarte stellt den Teilnehmern am Ort des Dual Access
+Points ein Funkfeld zur Verfügung mit dem sie auf diese
+Funkinfrastruktur zugreifen. Auch hier ist zu beachten, dass
+möglicherweise spezielle abgesetzte Antennen zum Einsatz
+kommen müssen.
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 16 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Abbildung 6: Wireless Distribution System mit Dual Access
+Points zur Steigerung der Performance des Funkfeldes
+Eine andere nützliche Anwendung von WDS stellt sich dar,
+wenn mehrere abgelegene Anlagenteile miteinander verbunden
+werden müssen. Dies können z.B. mehrere Schiffsdocks sein,
+die auf dem Gelände einer Werft drahtlos verbunden werden
+müssen, da die Verlegung von Leitungen nicht gewünscht ist.
+
+Abbildung 7: WDS bei der drahtlosen Vernetzung von 4
+Anlagenteilen
+Ein zentraler Access Point und jeweils eine Funkkarte der 4
+Dual Access Points realisieren ein WDS. Der zentrale Access
+Point dient gleichzeitig als Schnittstelle zum drahtgebundenen
+Netz. Wie auch schon in Abbildung 6 realisieren die Dual
+Access Points am Ort ihrer Montage ein „lokales“ Funknetz, das
+die jeweiligen Teilnehmer zur drahtlosen Anbindung
+verwenden. Somit stellt WDS wieder das Rückgrat (Backbone)
+der Funkinfrastruktur.
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 17 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Bridge Betrieb, Redundancy Mode
+Im industriellen Umfeld ist häufig der Fall anzutreffen, dass ein
+entfernter Anlagenteil mit dem Kommunikationsnetz über eine
+Punkt-zu-Punkt Verbindung angeschlossen ist. Für diesen Fall
+bieten die Produkte von SCALANCE W die Möglichkeit im
+Bridge Betrieb - ein Spezialfall eines Wireless Distribution
+Systems - zu arbeiten. Es kommen hier oft gerichtete Antennen
+zum Einsatz, so dass die Wellenausbreitung für die Punkt-zuPunkt Verbindung optimiert ist. Für die Anbindung des
+entfernten Anlagenteiles steht die volle Bandbreite von Wireless
+LAN zur Verfügung, wenn nur die Richtfunkstrecke genutzt
+wird.
+
+Abbildung 8: Bridge Betrieb zwischen 2 Anlagenteilen. Zur
+Steigerung der Zuverlässigkeit kommt hier Redundancy
+Mode zum Einsatz
+In Abbildung 8 sind die beiden Kommunikationsnetze zu
+verbinden (Hinweis: Mit Kommunikationsnetz ist ein großes
+Netz gemeint, in dem viele Teilnehmer zu finden sind. Aus
+Gründen der Übersicht wurde in dem einen Netz nur eine
+Steuerung eingezeichnet). Dazu werden zwei Access Points
+von SCALANCE W eingesetzt. In deren Funkfeld sind für den
+Fall einer Richtfunkverbindung keine weiteren Teilnehmer
+einbindbar.
+Redundancy Mode
+Die Funkverbindung in Abbildung 8 verbindet zwei wichtige
+Teile einer Anlage. Über dieses Rückgrat (Backbone) werden
+folglich wichtige Daten transportiert. Eine Störung in der
+Funkverbindung hätte weitreichende Folgen für die
+Gesamtanlage. Das I-Feature von SCALANCE W, das hier zum
+Einsatz kommt, sorgt dafür, dass die Datenkommunikation nicht
+nur über eine Funkkarte abgewickelt wird, sondern derselbe
+Datenstrom zusätzlich über eine zweite Funkkarte geführt
+werden kann. In dieser Betriebsart muss natürlich ein Dual
+Access Point zum Einsatz kommen (SCALANCE W788-2PRO).
+Die Zuverlässigkeit der Datenübertragung wird offensichtlich,
+wenn man sich vorstellt dass die eine Funkkarte im 2,4 GHz
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 18 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Band arbeitet und die andere im 5 GHz Band (beachte
+länderspezifisch erlaubte Sendeleistungen). Es ist aber gar
+nicht notwendig gleich in ein anderes Frequenzband zu
+wechseln. Schon bei der Verwendung von Kanal 1 und Kanal
+11 bei 2,4 GHz sind die Datenströme funktechnisch so weit
+voneinander entfernt, dass es kaum eine Störung gibt, die
+gleichzeitig in beiden Kanälen ein Problem verursacht. Es ist zu
+betonen, dass dieses Verfahren vollkommen transparent für die
+Anwendung abläuft und die Access Points untereinander
+aushandeln, welche Funkkarte aktuell aktiv und welche im „Hot
+Standby“ Moodus operiert. Im Falle einer Störung werden
+Umschaltzeit von 20 ms bis 25 ms erreicht. In einer Analyse der
+ComConsult wurde dieses Verhalten überprüft.
+(http://intra1.nbgm.siemens.de/extern/spiegeln/net/html_00/ftp/p
+rodukte/2004_07_ComConsult_Siemens_IWLAN.pdf)
+Redundante Funkinfrastruktur, Spanning Tree (ST)
+Um Schutz gegen Ausfall einer Funkinfrastruktur zu haben und
+die Zuverlässigkeit eines Funknetzes noch weiter zu steigern,
+bietet sich die Möglichkeit statt der bekannten Stern-Topologie
+eine Ring-Topologie zu verwenden. Solch eine Struktur kann
+auch verwendet werden, um in gefährdeten Bereichen ein
+drahtgebundenes Netz mit einem Funknetz abzusichern.
+
+Abbildung 9: Aufbau einer Ring-Struktur mit WDS zum
+gesteigerten Schutz vor Ausfall des Funknetzes unter
+Verwendung des Spanning Tree Algorithmus
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 19 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Abbildung 9 stellt letztlich eine Weiterentwicklung der Struktur
+aus Abbildung 6 dar. Der Unterschied besteht darin, dass in
+Abbildung 9 der Ring am letzten Dual Access Point
+geschlossen wird. Zur Vermeidung von Schleifen in einer
+solchen Funkinfrastruktur wird der Spanning Tree Algorithmus
+eingesetzt.
+So kann in Abbildung 9 grundsätzlich als Pfad der Daten aus
+dem drahtgebundenen Netz in Zelle 2 über den Dual Access
+Point bei Zelle 1 gewählt werden. Tritt aber auf der WDS
+Verbindung zwischen den Dual Access Points an Zelle 1 und
+Zelle 2 eine starke Störung auf, so sorgt der ST Mechanismus
+dafür, dass das Funknetz sich selbsttätig einen neuen Weg
+sucht. Im Bild oben wird das der Weg über die Dual Access
+Points an Zelle 3 und 4 sein - ein redundantes Funknetz ist
+realisiert. Eine genaue Analyse des Zeitverhaltens eines
+solchen Systems kann in einer Analyse der ComConsult
+gefunden werden.
+(http://intra1.nbgm.siemens.de/extern/spiegeln/net/html_00/ftp/p
+rodukte/2004_07_ComConsult_Siemens_IWLAN.pdf)
+Robuste Bauform und Anschlusstechnik
+Funkgeräte für den industriellen Gebrauch zeichnen sich nicht
+nur durch hohe Qualität und Zuverlässigkeit im Funkkanal aus,
+sondern auch durch eine robuste Bauform und einer
+ergänzenden Lösung für die Anschlusstechnik.
+Metallgehäuse
+Für Funkprodukte ist Robustheit durch ein Metallgehäuse und
+hohe Schutzart (z.B. IP65) besonders wichtig. Im Regelfall ist
+der für die Montage einfachste Ort nicht der funktechnisch
+optimalste. So ist ein Schaltschrank ein Faradayscher-Käfig der
+die Funkwellen „gefangen“ hält. Abhilfe schafft dann nur eine
+abgesetzte Antenne, die z.B. auf das Dach des Schaltschranks
+montiert wird. Leider bedämpft die Koaxialleitung, welche die
+Antenne und das Gerät verbinden, die empfindlichen
+Funksignale und wertvolle Antennenleistung geht so verloren,
+womit auch eine bestimmte Menge an Zuverlässigkeit verloren
+geht. Besser ist es, wenn auf die Zuleitung für Zusatzantennen
+verzichtet werden kann, weil das Gerät selbst am funktechnisch
+optimalen Ort montiert ist und die im Lieferumfang enthaltenen
+Antennen verwendet werden können. Das spart auch Geld.
+Die robuste Bauform ist nicht nur aus Sicht einer für den
+Funkkanal optimalen Platzierung erforderlich, sondern dient
+auch zum Erhalt der Gerätefunktion im harten Industriealltag.
+Dies schlägt sich nieder in Gehäusen, die staub- und
+wasserdicht sind bis hin zur Schutzart IP65. Damit können
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 20 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Geräte dezentral ohne Schaltschrank aufgebaut werden und
+erlauben so eine maximale Flexibilität.
+Erweiterter Temperaturbereich
+Kommt zu diesem definierten Schutz gegen Staub und Wasser
+noch eine erweiterte thermische Widerstandsfähigkeit hinzu
+durch einen erhöhten Temperaturbereich, so sind die Produkte
+auch im Außenbereich einsetzbar. Erweiterter
+Temperaturbereich ist nicht nur im Außenbereich von
+Bedeutung, da schon bei der Montage unter dem Dach der
+Werkshalle oder in ungeheizten Logistikbereichen starker
+thermischer Stress auftritt.
+Kondenswasser
+Eine besondere Bedeutung kommt dem Schutz vor Feuchtigkeit
+in Zusammenhang mit Betrieb bei negativen Temperaturen zu.
+Bietet nämlich ein Gerät „nur“ einen Schutz gegen negative
+Temperaturen, so ist noch längst nicht Schutz vor
+Kondenswasser sichergestellt. Fällt die Temperatur z.B. beim
+Öffnen eines Tors in der Werkshalle unter Null Grad Celsius, so
+kondensiert die Feuchtigkeit der warmen Luft aus der
+Werkshalle sofort am und im Gerät. Ist das Gerät aber so
+gekapselt, dass Feuchtigkeit gar nicht eintreten kann, besteht
+diese Gefahr nicht.
+Zusammenfassend kann gesagt werden, dass hier nur
+Produkte eingesetzt werden können, die betriebsbereit bei
+negativen Temperaturen sind und gleichzeitig eine hohe
+Schutzart (z.B. IP 65) bieten.
+Vibration und Schock
+Neben der Bauform ist eine Härtung gegen Vibrationen und
+Schockbelastung notwendig, die im Test nachgewiesen wird.
+Dies ist umso wichtiger, da Funk sehr oft im Zusammenhang
+mit bewegten Geräten verwendet wird. Sicherlich wird damit
+nicht jeder mechanischen Belastung getrotzt, doch bietet ein
+solcher Test deutlich mehr Betriebssicherheit als es Officeoder Homeprodukte tun, bei denen oftmals der Preis die
+entscheidende Rolle spielt. Die Produkte von SCALANCE W
+werden hier speziellen SIMATIC Umweltprüfungen unterzogen.
+Die mechanische Belastung durch drehende oder bewegte
+Maschinenteile betrifft aber nicht nur das Gerät selbst. Es ist
+wichtig darauf zu achten, dass die eingesetzten Steckverbinder
+eine Verschraubung oder Verriegelung aufweisen, denn ein
+Ausfall der Funktion durch gelöste Stecker und Buchsen zieht
+hohe Folgekosten nach sich. Bei den Produkten von
+SCALANCE W sind hier besondere Vorkehrungen getroffen
+worden.
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 21 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Abbildung 10: Verriegelung des Hybrid Steckers
+Industrielle Zulassungen
+Die Product Line Industrial Wireless LAN von SIMATIC NET
+zeichnet nicht nur die robuste Bauart aus. Selbstverständlich
+werden industrielle Zulassungen wie EMV (Elektromagnetische
+Verträglichkeit), FM (Factory Mutual), UL (Underwriters
+Laboratories) und ATEX Zulassungen für den Einsatz in der
+Petrochemie und explosionsgeschützten Bereichen mitgeliefert.
+Beim Einsatz in Lackierereien muss das Augenmerk auf
+Freiheit von Silikon gerichtet werden. Zur Vermeidung giftiger
+Dämpfe bei Brand dürfen keine Halogene, weder in Gerät noch
+Leitung vorhanden sein.
+Liefern die Produkte diese Eigenschaften und Zulassungen
+bereits mit, so ist dies für den Kunden ein wichtiger Faktor bei
+der Vermeidung von Zusatzkosten.
+Power-over-Ethernet
+Zu einem Access Point müssen neben der Stromversorgung
+auch Ethernet-Datenleitungen geführt werden. Um hier mit
+einer Leitung auszukommen und die Aufwände bei der
+Installation gering zu halten, hat die Arbeitsgruppe IEEE
+802.3af den Standard Power-over-Ethernet definiert. 802.3af
+sieht zwei Optionen vor:
+•
+•
+
+Energie wird auf die Datenleitung moduliert. Hier kommt
+man mit 4 Adern aus (Phantomspeisung)
+In einer Leitung werden 4 Adern mit Energie und 4 Adern
+mit Daten belegt. In diesem Fall ist eine Leitung mit 8
+Adern notwendig.
+
+Leider sieht der Standard IEEE 802.3af (der aus dem OfficeBereich kommt) den Einsatz von Spannungen unter 30V DC
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 22 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+nicht vor. Dies ist für den Anwender in der Automatisierung
+nachteilig, denn dort trifft man im Allgemeinen ein 24V DCEnergienetz und auch Geräte mit 24 V DC Energieversorgung
+an.
+
+Abbildung 11: Energie und Daten über eine Leitung zur
+einfachen Installation eines Access Points, sogar bei 24 V
+DC
+SIMATIC NET bietet eine komplette Lösung (incl. Leitungen),
+damit auch Kunden mit 24 V DC Versorgungs-Spannung in den
+Genuss der einfachen Installation über eine Leitung kommen.
+Man lehnt sich dabei an die Option von 802.3af an, bei der
+Energie und Daten über 8 Adern geführt werden. Dies wird
+durch das FC Modular Outlet Power Insert ermöglicht, das
+Energie und Daten auf diese eine Leitung zusammenführt.
+Neben dieser Betriebsart unterstützt SCALANCE W natürlich
+auch den Standard IEEE 802.3af mit beiden Optionen.
+Beeinflussung durch andere Funktechnologien
+Bei der Diskussion der Beeinflussung durch andere
+Funktechnologien wird im Folgenden der Augenmerk auf die
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 23 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+drei am Markt erfolgreichsten (nach verkauften Stückzahlen)
+gerichtet: GSM, Wireless LAN und Bluetooth.
+GSM ist dabei unkritisch, da durch das zu lizenzierende
+Frequenzband keine regulären Störungen zu erwarten sind
+(GSM900: 880..915 MHz und 925..960 MHz, GSM1800:
+1710..1785 MHz und 1805..1880 MHz). Zudem sind in den
+verwendeten Frequenzbändern keine anderen Dienste als GSM
+erlaubt. (Hinweis: Wireless LAN verwendet den
+Frequenzbereich bei 2,4 Ghz und 5 GHz). Diese Situation ist
+bei Wireless LAN und Bluetooth anders, da beide das
+lizenzfreie ISM-Band bei 2,4 GHz verwenden.
+Zunächst ist festzustellen, dass sowohl das Frequency Hopping
+Verfahren (FHSS) von Bluetooth als auch das Direct Sequence
+Spread Spectrum (DSSS)-Modulationsverfahren von Wireless
+LAN robust gegen Störungen sind. Frequency Hopping setzt
+dabei auf eine sehr schnelle Änderung der Sendefrequenz und
+„entkommt“ so möglichen Störungen auf einer bestimmten
+Frequenz. Bei DSSS verwendet man starke Redundanz durch
+ein aufgespreiztes Frequenzspektrum und hofft durch diese
+„Breite“ eine schmalbandige Störung zu kompensieren.
+(Hinweis: Breitbandige Störungen, die gleich einen ganzen
+Frequenzbereich betreffen, sind bei Mikrowellen selten). Bei der
+schnellen Änderung der Sendefrequenz von Bluetooth kann es
+durchaus passieren, dass eine verwendete Frequenz im
+Bereich des Bandes von Wireless LAN liegt. Eine Störung tritt
+aber nur dann auf, wenn die Sendeleistung des Bluetooth
+Gerätes stark genug ist und die Redundanzmechanismen von
+Wireless LAN den Fehler nicht mehr korrigieren können. Somit
+ist bei diesen Betrachtungen die räumliche Nähe zwischen dem
+Bluetooth Sender und dem WLAN Empfänger entscheidend.
+Hier ist zu beachten, dass die üblichen Bluetooth Class 2/3
+Sender mit 1mW Sendeleistung nur bei unmittelbarer Nähe
+zum Wireless LAN Teilnehmer echte Performance Probleme
+bereiten.
+Im Folgenden wird gezeigt, dass normalerweise in einer Anlage
+eher selten gleichzeitig ein Bluetooth und ein Wireless LAN
+Funknetz zum Einsatz kommen. Der Betreiber hat mit einem
+doppelten Investment kaum Vorteile, da viele Anwendungen
+der einen Technologie durchaus auch von der anderen gelöst
+werden können. Natürlich ist die Lösung dann nicht funktional
+optimal, doch ausreichend, um den hohen Aufwand eines
+zweiten Funknetzes einzusparen.
+Damit reduziert sich die Frage nach Störung auf ungewollte
+Einstrahlung, z.B. durch Mobiltelefone mit aktiver Bluetooth
+Schnittstelle. An dieser Stelle sind aber auch die
+Anlagenbetreiber selbst zur Regulierung aufgefordert. Genauso
+wie heute in Fabrikhallen klare Richtlinien zur Verteilung der
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 24 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Fertigungsfläche oder Kabeltrassenführung bzw. IPAdressvergabe existieren, wird in Zukunft eine Verwaltung der
+aktiven Funksysteme nötig werden, wo eben nicht mehr
+beliebige Systeme nebeneinander installiert werden dürfen.
+Die friedliche Koexistenz der beiden Technologien wird aber
+nicht nur auf den Betreiber abgewälzt. So sind positive Ansätze
+in den neuen Spezifikationen von Bluetooth enthalten. Hier
+werden Verfahren implementiert, die bereits benutzte
+Frequenzen meiden und somit eine Störung von Wireless LAN
+unterbleibt. Bluetooth erleidet damit auch keine Einbuße bei der
+Performance, da das Frequence Hopping Verfahren FHSS
+diese Frequenzen einfach auslässt und sich auf die unbelegten
+konzentriert.
+Bei Wireless LAN sind ähnliche Mechanismen im Standard
+IEEE 802.11h implementiert. Dort ist festgelegt, dass ein
+Funknetz zunächst das ganze Frequenzband nach bereits
+vorhandenen Sendern abscannen muss (Dynamic Frequency
+Selection, DFS), bevor es zu senden beginnt. Zudem muss ein
+Sender seine Sendeleistung kontrollieren (Transmit Power
+Control, TPC), sodass vermieden wird, dass ein „leiser“
+Teilnehmer durch das starke Signal „überschrieen“ wird.
+Der einfachste Weg von Wireless LAN einer Kollision mit
+Bluetooth aus dem Weg zu gehen, ist der Schritt in das 5 GHz
+Band. Dort sind keine Bluetooth Geräte vorhanden.
+Sicherheitsgerichtete Signale bei Industrial Wireless LAN
+Die Übermittlung von sicherheitsgerichteten Signalen bei
+Industrial Wireless LAN betrachtet Produkte wie Notaustaster,
+deren Integration in ein Funknetz besondere Anforderungen an
+den Funkkanal stellt. Zudem werden Produkte mit dieser
+Qualität einer besonderen Zertifizierung von
+Berufsgenossenschaften (BG) unterzogen. Um eine einheitliche
+Regelung für alle Berufsgenossenschaften zu finden, muss die
+BIA (www.bia.de) in Aktion treten. Die BIA hat damit die
+Funktion einer Dachorganisation.
+Trennung oder Integration
+Werden sicherheitsgerichtete Signale über ein Funknetz
+übermittelt, stellt sich grundsätzlich die Frage, ob diese Signale
+ein reserviertes Netz verwenden müssen oder zusammen mit
+dem operativen Datenverkehr übertragen werden können.
+Die Realisierung einer eigenständigen Infrastruktur ist ein
+traditioneller Ansatz und hat folgende Vorteile:
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 25 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+•
+•
+•
+•
+•
+
+Oktober 2004
+
+Reduzierte Buslast
+System geringer Komplexität
+Vereinfachte Fehlersuche
+Verfügbarkeit der Anlage
+Vereinfachte Zertifizierung
+
+Abbildung 12: Trennung von sicherheitsgerichteten Daten
+(gestrichelte Linie) und operativer Kommunikation
+(durchgezogene Linie)
+Die Vorteile eines separaten Netzes liegen in der geringen
+Komplexität, können aber durchaus auch mit einem integrierten
+Konzept realisiert werden. Ertüchtigt man ein Funknetz derart,
+dass es neben den operativen Daten auch die
+sicherheitsgerichteten Signale übermitteln kann, so eröffnet
+sich eine neue Dimension von Kundennutzen:
+• Verringerung des Planungs- und
+Projektierungsaufwandes
+• Senkung der Installations- und Inbetriebnahme Kosten
+• Einheitliche Bedienung
+• Reduzierter Aufwand für Infrastruktur
+• Höhere Flexibilität
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 26 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Abbildung 13: Sicherheitsgerichtete Daten (gestrichelte
+Linie) und operativer Kommunikation (durchgezogene
+Linie) in einem Netz
+Ein integriertes Funknetz stellt natürlich eine enorme
+Herausforderung an die technische Realisierung und erfordert
+auch eine Ertüchtigung des Industrial Ethernet (Safety on
+Industrial Ethernet). Der große Nutzen liegt in der einheitlichen
+Behandlung der Kommunikation. Dies bringt einen deutlich
+reduzierten Aufwand bei den Lebenszykluskosten.
+Sicherheitsnormen
+Das Risikopotential einer Anlage wird unter anderem in den
+Normen EN 1050 und EN 292 analysiert. Unter
+Berücksichtigung des festgelegten Risikos beschreibt dann EN
+954-1 die allgemeinen Gestaltungsleitsätze von
+sicherheitsbezogenen Steuerungsteilen und teilt diese in
+unterschiedliche Kategorien auf. Diese Einteilung reicht von der
+einfachsten Kategorie B bis zur hochwertigen Kategorie 4.
+DIN V 19250 hingegen betrachtet grundlegend die Sicherheit
+für MSR-Schutzeinrichtungen. Auch diese werden unter
+Berücksichtigung des festgelegten Risikos in unterschiedliche
+Stufen von AK1 bis AK8 klassifiziert. Demgegenüber liefert die
+DIN 19251 Anforderungen und Maßnahmen zur gesicherten
+Funktion je nach Klasse. Auch DIN V VDE 0801 sowie die
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 27 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Änderung A1 sind zu beachten. Sie definieren die Grundsätze
+für Rechner in Systemen mit Sicherheitsaufgaben. Da der
+Begriff Rechner hier allgemein zu verstehen ist, gilt diese Norm
+auch für Microcontroller Systeme.
+IEC 61508
+Eine relativ neue Norm ist IEC 61508. Sie berücksichtigt die
+funktionale Sicherheit von elektrischen, elektronischen sowie
+programmierbar elektronischen Sicherheitssystemen und
+gliedert sie in "Safety Integrity Level" von SIL 1 bis SIL 4. Die
+noch gültigen Normen DIN V 19251 und DIN V VDE 0801
+werden in ihr berücksichtigt. Nicht außer Acht lassen darf man
+natürlich die allgemein gültigen Normen für elektrische
+Sicherheit wie EN 60204-1 oder DIN VDE 0110, sowie die
+europäische Maschinenrichtlinie (98/37/EG) und die EMV
+Normen.
+Sicherer Funk mit Industrial Wireless LAN
+Die Entwicklung von drahtlosen Übertragungsmechanismen für
+sicherheitsgerichtete Signale eröffnet zusätzlichen
+Kundenutzen z.B. bei Programmierhandgeräten für CNC
+Maschinen oder Roboter. Wird die sichere Kommunikation
+durch ein Protokoll in der Applikationsebene von Sender und
+Empfänger überprüft, ist das eigentliche FunkÜbertragungsmedium und dessen Ankopplung an Sender und
+Empfänger für die Sicherheitstechnik von untergeordneter
+Bedeutung. (Man spricht dann von einem „grey channel“). Ein
+derartiges Protokoll wird für PROFINET in 2005 zur Verfügung
+stehen. Wird es verwendet, muss „nur“ noch Sorge getragen
+werden, dass der Kommunikationskanal eine entsprechende
+Zuverlässigkeit aufweist. Aus Sicherheitsaspekten ist es
+akzeptabel, dass eine fehlersichere Anwendung regelmäßig in
+den sicheren Zustand schaltet, nur weil der Funkkanal
+unbeständig ist. Aus Kundensicht ist so ein System aber
+unbrauchbar.
+Mit den I-Features von Industrial Wireless LAN sind
+umfangreiche Mechanismen zur Verfügung gestellt, die es
+erlauben zuverlässige Funksysteme aufzubauen. Zusammen
+mit einem sicheren Protokoll für PROFINET können dann auch
+fehlersichere Funkverbindungen realisiert werden.
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 28 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Anwendungsgebiete eines Industrial Wireless LANs in der
+Automatisierungstechnik
+
+Anwendungen
+Anwendungen gibt es überall dort, wo Mehrwert durch Mobilität
+und Flexibilität erzeugt wird. Dies ist bei allen Prozessen der
+Fall, wo Bewegung im Spiel ist. Durch diese Mobilität können
+Arbeitsprozesse neu gestaltet und neuartige Lösungen realisiert
+werden. Die reine Substitution von ruhenden Leitungen bietet
+im Normalfall nicht genügend Nutzen, außer es werden
+temporäre Installationen betrachtet oder Neuinstallationen, wo
+großer Aufwand bei der Trassenführung betrieben werden
+muss. Typische Anwendungen mit geforderter Mobilität und
+Flexibilität:
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Fahrerlose Transportsysteme
+Einschienen-Hängebahnen
+Verschiebetische
+Bewegte und rotierende Maschinen: Substitution von
+Schleppketten, Schleifkontakten und Schleifringen
+Kräne
+Fördertechnik
+Mobiler Service/Diagnose mit Handheld und Laptop
+Mobiles Bedienen und Beobachten
+Schnelle Vernetzung einzelner Fertigungsbereiche /
+Maschineninseln in der Inbetriebsetzungs-Phase
+Mobile Datenerfassung in Lager und Logistik.
+
+In der Automatisierungstechnik bieten sich viele
+Einsatzmöglichkeiten, bei der die drahtlose Kommunikation
+zwischen einzelnen Teilnehmern einen Nutzen für den
+Anwender bringt.
+
+•
+
+Kommunikation mit mobilen Teilnehmern, mobile
+Datenerfassung
+Der Anwender kann durch mobile, industrietaugliche Internet
+Pads wie dem MOBIC (Mobile Industrial Communicator) von
+SIMATIC NET Daten in allen Fertigungs- und Lagerbereichen
+erfassen und der zentralen Datenverarbeitung zuführen. Dabei
+sind die eingesetzten mobilen Handhelds nicht mehr einer
+Maschine oder einem Prozess zugeordnet, sondern einem
+Benutzer. Der Bedarf an eingesetzten Geräten reduziert sich
+erheblich.
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 29 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Zudem entfällt das aufwändige und fehlerträchtige Übertragen
+der Daten von Papier in den zentralen Datenbestand. Mit einem
+durchgängigen Konzept zur Datenerfassung lassen sich
+erhebliche Kosten einsparen, besonders an den Schnittstellen,
+wo die Übergabe der Daten in der Wertschöpfungskette von
+einem Prozessschritt an den nächsten erfolgt.
+
+•
+
+Mobiler Service und Diagnose
+
+Im Fehlerfall kann das Servicepersonal an Ort und Stelle das
+Problem analysieren und über das drahtlos angebundene
+Internet Pad MOBIC zielgerichtete Informationen zur schnellen
+Behebung einsehen. Der Ersatzteilbestand im Lager kann
+direkt überprüft werden und wenn nötig können Ersatzteile
+online bestellt werden.
+Diagnose bezieht sich aber nicht nur auf den Fehlerfall. Auch
+operative Daten wie Füllstände oder die Auslastung von
+Maschinen kann durch das Personal schnell und sicher
+diagnostiziert werden.
+
+Abbildung 14: Industrial Wireless LAN in der
+Automatisierungstechnik
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 30 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+•
+
+Oktober 2004
+
+Kommunikation mit mobilen Teilnehmern und mobile
+Inbetriebsetzung (IBS)
+
+Die IBS-Phase kann durch den Einsatz mobiler Kommunikation
+erheblich vereinfacht und verkürzt werden, was eine deutliche
+Kosteneinsparung zur Folge hat. Das IBS-Personal überwacht
+durch die drahtlos angebundenen Servicegeräte Einstellungen
+an Maschinen und greift bei Problemfällen sofort ein. Die
+Mitarbeiter verwenden die ihnen vertrauten Geräte, wie dem
+Field PG, weil diese durch standardisierte Schnittstellen
+(PCMCIA Funkkarte) mit in das Funknetz aufgenommen
+werden können.
+
+•
+
+Flexible Fertigung in zeitlich begrenzten Konfigurationen
+und Kommunikation mit abgesetzten Einheiten
+
+Montagestraßen dürfen heute keine starren Einheiten sein, die
+nur mit großem Aufwand auf neue Einsätze umgerüstet werden
+können. Besonders in der Automobil-Fertigung unterliegen
+Fabriklayouts mitunter einer schnellen Änderung. Eine flexible
+Fertigung erlaubt es, Kundenwünsche schnell und ohne große
+Umrüstzeiten zu realisieren. Über die drahtlose
+Datenvernetzung sind Fertigungseinheiten schnell und ohne
+großen Anschlussaufwand in das Datennetz eingebunden.
+Zudem können Testaufbauten schnell und ohne großen
+Aufwand realisiert werden.
+Ein Industrial Wireless LAN Funknetz erlaubt außerdem die
+kostengünstige Anbindung von abgesetzten Maschinen und
+Steuerungen, die an sehr unzugänglichen Orten installiert sind.
+Damit wird aufwändige Verkabelung vermieden.
+Beachte: Funk hat den Vorzug gegenüber Kabel nur dort, wo
+eine bestehende Kabeltrasse nicht verwendet werden
+kann (z.B. Daten und Energie darf nicht gemeinsam
+verlegt werden)
+wo eine Kabeltrasse neu einzurichten ist
+Daten über öffentliche Straßen oder Gewässer hinweg
+geführt werden müssen
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 31 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+• Kommunikation mit bewegten Teilnehmern
+Die Anbindung von beweglichen Geräten an das Datennetz ist
+mit erheblichem Aufwand verbunden. Der drahtlose Anschluss
+spart bei Einschienen-Hängebahnen (EHB) die komplette
+Schienenführung für die Daten und vermeidet bei Fahrerlosen
+Transport-Systemen (FTS) Systeme mit Schleifkontakten, die
+leicht verschmutzen und hohen Aufwand bei der Wartung
+erzeugen. Zudem können in beiden Anwendungen die
+Fahrwege einfach verändert werden, was eine hohe Flexibilität
+mit sich bringt.
+Bei der Einbindung von rotierenden Geräten in ein Datennetz
+wird Verschleiß an den Schleifringen vermieden. Derselbe
+Vorteil trifft auch bei der Substitution von Schleppketten zu.
+
+Beispiele
+Lokaler Service und Diagnose auf dem Firmengelände
+Anwendung
+Das Firmengelände ist eine räumlich ausgedehnte Fläche (10
+m bis mehrere 100 m), vorwiegend mit Innenbereichen, aber
+auch Außenanlagen. Die Umgebungsbedingungen erfordern oft
+eine erhöhte Schutzart für die Produkte, wenn keine Montage in
+Schaltschränken erfolgt. Die zu beobachtenden Maschinen sind
+Teil einer umfangreichen Fertigungs- oder Prozessanlage und
+stehen in starker Abhängigkeit zueinander, sodass das
+Ergebnis der einen Maschine den Betrieb der anderen
+beeinflusst. Zum Datenaustausch von der Leitebene (Control
+Level) bis zur Feldebene (Field Level) ist ein
+Kommunikationsnetz (z.B. Ethernet) installiert, das einen
+zuverlässigen Datenaustausch sicherstellt.
+Für lokalen Service (Fehlerbeseitigung vor Ort, Programm
+upload, Daten download, Firmware update, Inbetriebsetzung,
+Projektierung) muss der Zugriff auf den Prozess unter lokaler
+Beobachtung stehen. Er erfolgt mit einem mobilen Gerät, das
+einen Wirkbereich von einigen Metern Entfernung von der
+Maschine hat. Zur Diagnose (Prozessvisualisierung,
+Beobachtung von operativen Daten) muss der Prozess nicht
+unbedingt unter direkter lokaler Beobachtung stehen, so dass
+der Wirkbereich eines mobilen Gerätes zwischen einigen
+Metern bis hin zu mehreren 100 m betragen kann.
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 32 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Abbildung 15: Mobic in der Fertigungsautomatisierung bei
+einem Serviceeinsatz
+Lösung
+Für einen großen Kundennutzen ist es notwendig, dass das
+Funknetz nicht nur Servicearbeiten im lokalen Umfeld (einige
+Meter) der Maschine überträgt, sondern auch
+Diagnosefunktionen in einem umfassenden Wirkbereich
+ausführbar sind. Zu Diagnosezwecken oder zur Visualisierung
+von Prozessdaten ist eine ausreichende Datenrate wichtig, da
+auch komplexe Daten visualisiert werden. Deshalb ist zur
+Diagnose von einem Gerät mit großem Display (Laptop,
+Internet Pad) auszugehen. Die Übertragung der Daten muss
+mit sehr zuverlässigen Kommunikationsgeräten durchgeführt
+werden. Dies betrifft sowohl die Bauform als auch die
+Kommunikationstechnologien. Da mit den Handhelds auch
+Mobiles bedient wird, ist darauf zu achten, dass deren
+mögliches unzulässiges Verlassen des Funkfeldes schnell an
+den Prozess berichtet wird, damit dieser in einem AutomatikBetrieb weiterfahren kann.
+Aus diesen Gründen (Reichweite, Datenrate, Zuverlässigkeit)
+ist der Einsatz eines Industrial Wireless LAN in dieser
+Anwendung zu empfehlen. Zudem unterstützt das bei Wireless
+LAN standardisierte Roaming den nahtlosen Einsatz auf großen
+Flächen, da unterbrechungsfrei von einem Access Point
+(Basisstation) zum andern übergeben wird.
+Die Kosten für die Installation eines Funknetzes, aber auch für
+die Anschaffung mobiler Endgeräte verteilen sich am
+Firmengelände auf viele Maschinen im Datennetz, die
+diagnostiziert werden können.
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 33 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Datenaustausch zwischen einer abgesetzten Steuerung
+und einem Datennetz auf dem Firmengelände
+Anwendung
+Zwischen einer abgesetzten Steuerung oder Maschine und
+dem drahtgebundenen Datennetz (z.B. Ethernet) auf dem
+Firmengelände erfolgt der Austausch von Informationen, wobei
+die Entfernungen höchstens mehrere 100m betragen. Der
+Anschluss an das Datennetz erfolgt nicht durch Kabel, weil
+entweder keine Kabeltrassen vorhanden sind oder das
+Datenkabel nicht in die vorhandene Trasse gelegt werden darf.
+Schnell wechselnde Fabriklayouts oder häufige Montage von
+Testaufbauten erhöhen den Nutzen für den Aufbau eines
+Funknetzes. Über das Funknetz werden nicht nur operative
+Daten übermittelt sondern auch Alarmmeldungen oder die
+Anforderung zur Wartung. Sowohl die abgesetzte Einheit als
+auch das drahtgebundene Datennetz benötigen eine
+Funkschnittstelle.
+Lösung
+Bei dieser Anwendung ist der sichere Datentransfer über eine
+Entfernung notwendig, die normalerweise deutlich über 10m
+liegt, aber auf dem Firmengelände mehrere Hundert Meter nicht
+überschreitet. Das Funknetz muss robust gegen Störungen und
+Reflexionen im industriellen Umfeld sein. Außerdem darf die
+Nettodatenrate bei kurzen Datenpaketen, welche in den
+Kommunikationsprotokollen der Automatisierungstechnik der
+Regelfall sind, nicht zu klein werden. Da die Steuerung durch
+Alarmmeldungen über kritische Zustände in der Anlage
+informiert, ist sicherzustellen, dass sie zu jedem Zeitpunkt die
+Kommunikationsinfrastruktur belegen darf. Dazu sind geeignete
+Technologien zu verwenden
+Aus diesen beiden Gründen (Reichweite, Datenrate,
+garantierter Zugriff auf das Funknetz) ist der Einsatz eines
+Industrial Wireless LAN in dieser Anwendung sinnvoll. Die
+vergleichsweise hohe Datenrate bietet die Möglichkeit innerhalb
+dieses Funknetzes auch noch mobile Handhelds einzusetzen.
+Damit reduzieren sich die anteiligen Infrastrukturkosten für die
+abgesetzte Steuerung. Durch das Verfahren „Reservierung der
+Datenrate“ kann die Steuerung zu jedem Zeitpunkt eine
+Alarmmeldung absetzen, selbst wenn andere mobile Handhelds
+im selben Funknetz kommunizieren.
+Die Infrastrukturkosten für ein Funknetz sind besonders dann
+von Bedeutung, wenn nur eine einzelne abgesetzte Steuerung
+angebunden wird. In diesem Fall ist der Kundennutzen
+gegenüber einer drahtgebundenen Lösung zu prüfen.
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 34 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Fördertechnik
+Anwendung
+In Logistik und Materialwirtschaft werden heute Fahrzeuge
+eingesetzt, die sich ohne einen Fahrer fortbewegen. Die
+Bewegung erfolgt dabei entweder längs einer Induktionsschleife
+im Boden (FTS) oder entlang einer Führungsschiene oberhalb
+der zu transportierenden Güter (EHB). Die Daten werden
+entweder induktiv, optisch oder mit Schleifkontakt übertragen
+und verbinden eine mobile Steuerung mit einer fest installierten
+zentralen Einheit. Die Energie wird entweder in Batterien
+mitgeführt, über Schleifkontakt zugeführt oder induktiv
+übertragen. Der Wirkbereich einer derartigen Anlage erstreckt
+sich oft auf mehrere 100 Meter.
+
+Abbildung 16: Fahrerloses Transport System (FTS)
+
+Lösung
+Da eine zentrale Einheit vorhanden ist, die den Datenaustausch
+mit den Steuerungen auf den mobilen Fahrzeugen realisiert, ist
+ein lokales Funknetz notwendig, das Punkt-zu-Multipunkt
+Verbindungen ermöglicht. Eine ausreichende Reichweite muss
+bereitgestellt werden. Da viele mobile Teilnehmer im Funknetz
+vorhanden sind, ist außerdem eine entsprechende
+Nettodatenrate notwendig. Auf den bewegten Fahrzeugen
+kommen Steuerungen zum Einsatz, die oft eine Ethernet
+Schnittstelle besitzen. Deshalb muss der Anbieter von
+Funkprodukten auch hier geeignete Produkte anbieten.
+Ein Industrial Wireless LAN bietet neben der geforderten
+Reichweite und Datenrate die Möglichkeit Punkt-zu-Multipunkt
+Verbindungen aufzubauen. In einem derartigen Funknetz,
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 35 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+welches den nahtlosen und unterbrechungsfreien Einsatz auf
+großen Flächen ermöglicht, werden Teilnehmer von einem
+Access Point (Basisstation) zum andern übergeben (Roaming).
+Der Anwendungsfall Fördertechnik ist eine sehr typische
+Anwendung für Wireless LAN.
+Der Ersatz von störanfälligen Schleifkontakten und optischen
+Verbindungen bringt dem Kunden einen sehr großen Nutzen
+und lässt die vergleichsweise geringen Kosten für
+Funkinfrastruktur in den Hintergrund treten.
+
+Kopplung der Datennetze (Ethernet) von entfernten
+Anlagen (viele 100 Meter bis zu Kilometer)
+Anwendung
+Die Verbindung der Datennetze von zwei Anlagenteilen bringt
+große Schwierigkeiten mit sich, wenn z.B. öffentliche Gelände,
+Straßen, Eisenbahntraßen oder Gewässer zu überwinden sind.
+Ein Kundennutzen durch eine drahtlose Kopplung ist aber auch
+dann gegeben, wenn die Verbindung nur temporär oder zu
+Testzwecken erfolgt.
+
+Lösung
+In dieser Anwendung kommen die Vorteile von Industrial
+Wireless LAN gut zur Geltung, da Reichweite und Datenrate
+gefragt sind. Um große Entfernungen zu überwinden, sind
+gerichtete Antennen notwendig, die im Außenbereich auf
+Masten oder Dächern installiert werden. Um nicht unnötig lange
+Antennenleitungen verwenden zu müssen, ist es sinnvoll
+Geräte zu verwenden, die den Witterungseinflüssen
+(Temperatur, Wasser) widerstehen. Industrial Wireless LAN
+bietet in dieser Anwendung die Betriebsart Redundancy Mode,
+womit die Daten zwischen den beiden Anlagenteilen mit
+besonders hoher Zuverlässigkeit übertragen werden. Dies ist
+wichtig, da das Funknetz die einzige Verbindung zwischen den
+beiden Bereichen ist.
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 36 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Industrial Wireless LAN Produkte von SIMATIC NET
+SIMATIC NET bietet zum Aufbau eines drahtlosen
+Industrienetzes die folgenden Produkte an:
+
+Access Point SCALANCE W788-1PRO
+Industrietauglicher Access Point zum Aufbau eines Funknetzes
+(Infrastruktur) und zum Anschluss an das drahtgebundene
+Datennetz (Ethernet)
+
+Abbildung 17: Access Point SCALANCE W788-1PRO
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Sehr zuverlässig durch Reservierung der Datenrate und
+zyklische Überwachung der Verbindung (IWLAN)
+Wireless LAN 802.11b/g und 802.11a mit bis zu 54
+Mbit/s bei 2,4 GHz und 5 GHz
+Forced Roaming bei Drahtbruch der Ethernet-Leitung
+(Option)
+Wireless Distribution System (WDS) für Punkt-zu-Punkt
+Verbindungen
+Schutzart IP65, robustes Metallgehäuse
+Betriebstemp. -20°C ... +60°C resistent gegen Betauung
+Redundante Stromversorgung DC 19 - 57 V und Powerover-Ethernet, sogar bei DC 24 V
+10/100 Mbit/s Ethernet-Port für Anschluss an das
+drahtgebundene Netz
+Fortschrittliche Datensicherheit durch WPA und
+Verschlüsselung mit AES
+
+Seite 37 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+•
+•
+•
+
+Oktober 2004
+
+C-PLUG (configuration plug) Wechselmedium zum
+schnellen Gerätetausch ohne Programmiergerät
+Integration in Step7/NCM PC
+PROFINET?
+
+Dual Access Point SCALANCE W788-2PRO
+Industrietauglicher Dual Access Point mit zwei getrennten
+Funkkarten zum Aufbau eines hochwertigen Funknetzes
+(Infrastruktur) und zum Anschluss an das drahtgebundene
+Datennetz (Ethernet)
+
+Abbildung 18: Dual Access Point SCALANCE W788-2PRO
+Identisch mit SCALANCE W788-1PRO, plus:
+• Zweite Funkkarte für Wireless LAN 802.11b/g und
+802.11a
+• 2x R-SMA Anschlüsse für abgesetzte Antennen
+• Redundanz-Modus für sehr zuverlässige Punkt-zu-Punkt
+Verbindung durch zwei getrennte Funkkarten
+Ethernet Client Module SCALANCE W744-1PRO
+Industrietauglicher Ethernet Adapter zur Anbindung eines
+Teilnehmers (mit Ethernet Anschluss) an ein Industrial Wireless
+LAN Funknetz
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 38 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Abbildung 19: Ethernet Client Module SCALANCE W7441PRO
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Sehr zuverlässig durch Reservierung der Datenrate und
+zyklische Überwachung der Verbindung (IWLAN)
+Wireless LAN 802. 11b/g und 802.11a mit bis zu 54
+Mbit/s bei 2,4 GHz und 5 GHz
+Schutzart IP65, robustes Metallgehäuse
+Betriebstemp. -20°C ... +60°C resistent gegen Betauung
+Redundante Spannungsversorgung DC 19 - 57 V und
+Power-over-Ethernet, sogar bei DC 24 V
+10/100 Mbit/s Ethernet-Port für Anschluss an Endgeräte
+mit Ethernet-Port
+Fortschrittliche Datensicherheit durch WPA und
+Verschlüsselung mit AES
+C-PLUG (configuration plug) Wechselmedium zum
+Schnellen Gerätetausch ohne Programmiergerät
+Integration in Step7/NCM PC
+PROFINET?
+
+PC Card CP 7515
+PC Card (32 Bit Cardbus) mit eingebauten Antennen zur
+Anbindung eines Teilnehmers (z.B. Field PG) an ein Industrial
+Wireless LAN Funknetz
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 39 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Abbildung 20: PC Card CP 7515
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Sehr zuverlässig durch Reservierung der Datenrate und
+zyklische Überwachung der Verbindung (IWLAN)
+Wireless LAN 802. 11b/g und 802.11a mit bis zu 54
+Mbit/s bei 2,4 GHz und 5 GHz
+PC Card mit 32-Bit Cardbus Interface
+Schutzart IP20
+Betriebstemperatur 0°C ... +55°C
+Fortschrittliche Datensicherheit durch WPA und
+Verschlüsselung mit AES
+Installation und Wartung mit Management-Tool für
+Windows 2000, XP
+Integration in Step7 /NCM PC
+PROFINET?
+
+PCMCIA Card CP 1515
+PCMCIA Card (16 Bit) mit eingebauten Antennen zur
+Anbindung von MOBIC T8 an ein Industrial Wireless LAN
+Funknetz
+
+Abbildung 21: PCMCIA Card CP 1515
+•
+•
+•
+•
+•
+•
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Sehr zuverlässig durch Reservierung der Datenrate und
+zyklische Überwachung der Verbindung (IWLAN)
+Wireless LAN 802. 11b mit bis zu 11 Mbit/s bei 2,4 GHz
+PCMCIA Card zum Einbau im MOBIC T8
+Schutzart IP20
+Betriebstemperatur 0°C ... +55°C
+Datensicherheit durch WEP
+Seite 40 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+•
+
+Oktober 2004
+
+Integration in Step7 /NCM PC
+
+Power Supply PS791-1PRO
+AC 90…265 V Netzteil in Schutzart IP65 zur freien Montage
+oder direkten Montage an SCALANCE W-700
+
+Abbildung 22: Power Supply PS791-1PRO
+•
+•
+•
+•
+•
+•
+•
+
+10 W AC/DC Netzteil (AC 90 - 265 V / DC 24 V (±7%))
+Passt perfekt zu SCALANCE W-700
+Schutzart IP65, robustes Metallgehäuse
+Betriebstemperatur -20°C ... +60°C mit Schutz vor
+Kondensation und Betauung
+Feldkonfektionierbare Stecker mit hohem Schutz gegen
+Schock und Vibration
+Power M12 Plug pro für DC 24 V (Ausgang)
+AC Power 3+PE Cable Connector (Eingang)
+
+FC Modular Outlet Power Insert
+Power Insert zur Zusammenfassung von Energie (DC 24 V)
+und Ethernet auf einer 8 adrigen Leitung
+
+Abbildung 23: FC Modular Outlet Power Insert
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 41 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+•
+•
+•
+•
+•
+•
+•
+•
+
+Oktober 2004
+
+Energie und Daten über eine Leitung
+Eingang: DC 18 - 57 V und 10/100 Mbit/s Ethernet Port
+RJ 45
+Ausgang: Energie und Ethernet über 8-adrige Leitung
+Passt perfekt zu SCALANCE W-700
+Schneid-/Klemmtechnik für 8-adriges IE Hybid Cable 2x2
++ 0,34
+Robustes Metallgehäuse mit Staubschutz
+Wand- oder Hutschinenmontage innerhalb oder
+außerhalb des Schaltschrankes (IP40).
+Vorzüglicher EMV-Schutz durch Metallgehäuse
+
+Zubehör
+
+Abbildung 24: Zubehör (Antennen, Blitzschutz, Leitungen,
+Stecker)
+• Omni-Directional Antenna
+ANT 795-4MR: 2,4 GHz und 5 GHz, 4 dBi, R-SMA, direkt
+am Gehäuse montiert
+ANT 795-6MR: 2,4 GHz und 5 GHz, 3 dBi, R-SMA,
+5 m Antennenleitung, Montage an Mast oder Wand
+• Directed Antenna
+ANT 793-8DR: 5,7 GHz, R-SMA, 15 dBi, 20°, 5 m
+Antennenleitung, Montage an Mast oder Wand, nur USA
+und Kanada
+• Antenna Extension Cable FRNC, 5m
+• Blitzschutz-Element LP798-1PRO
+• IP67 Hybrid-Steckverbinder
+• Power M12 Cable Connector pro (IP65)
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 42 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+•
+
+Oktober 2004
+
+Antennen-Abschlusswiderstand TI795-1R,
+falls nur eine Antenne angeschlossen ist
+(Lieferumfang von 795-6MR und 793-8DR)
+
+Zukünftige Produkte von SIMATIC NET
+Hinweis zu diesem Kapitel:
+Sämtliche Produkt- und Technologiebeschreibungen
+stellen den vorläufigen Funktionsumfang dar und können
+Veränderungen unterliegen. Insbesondere sind die Namen
+von Produkten und Technologien als vorläufige Arbeitstitel
+zu verstehen.
+Die Industrial Wireless LAN Produkte von SIMATIC NET
+eröffnen dem anspruchsvollen Industriekunden die Vorteile der
+drahtlosen Welt für Anwendungen, in denen Mobilität und
+Flexibilität gefragt sind. Industrial Wireless LAN bedient sich
+dabei der Standard-Mechanismen von IEEE 82.11.
+Besonders gut lässt sich diese Vorgehensweise am I-Feature
+Link Check erkennen. Dort prüft der Access Point unter
+Verwendung von 802.11-konformen Datenpaketen, ob der
+Teilnehmer noch im Funkfeld ist.
+Ein anderes Beispiel ist das I-Feature Reservierung der
+Datenrate. Jeder 802.11-konforme Teilnehmer kann an diesem
+Verfahren teilnehmen. Zudem werden Geräte, die nicht daran
+teilnehmen, exakt genauso behandelt, wie sie es von einem
+802.11-konformen Funkfeld gewohnt sind.
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 43 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Abbildung 25: Positionierung von Wireless LAN, Industrial
+Wireless LAN und IWLAN FR
+Beim industriellen Einsatz von Wireless LAN gibt es nun
+Anforderungen, die nicht umsetzbar sind, wenn man auf 100%Kompatibilität (wie Industrial Wireless LAN) mit IEEE 802.11
+besteht. Dazu gehört z.B. die Forderung nach sehr schnellen
+hand-over Zeiten, wenn ein Teilnehmer von einer Funkzelle zur
+nächsten roamed. Diese Anforderung tritt besonders häufig in
+Anwendungen auf, wo Teilnehmer mit erhöhter
+Geschwindigkeit bewegt werden.
+So legt ein Fahrzeug in einem fahrerlosen Transportsystem
+immerhin 5 m ohne Zugriff auf die Funkkommunikation zurück,
+wenn es mit 10 m/s bewegt wird und für eine Zeit von 500 ms
+mit dem hand-over zur nächsten Funkzelle beschäftigt ist.
+Ein anderes Beispiel ist die PROFINET IO Kommunikation, die
+es mit einer Fehlermeldung quittiert, wenn ein Teilnehmer mit
+zyklischen Datenverkehr dreimal keine Antwort geben kann,
+weil er mit dem hand-over von eine Funkzelle zur nächsten
+beschäftigt ist.
+Sind solche hohen Anforderungen zu erfüllen, so müssen
+Erweiterungen an der Technologie vorgenommen werden, die
+nicht mehr mit dem Standard verträglich sind. Ein solches
+Vorgehen hat zwei wichtige Vorteile:
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 44 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+1. Derart geschlossene Systeme bieten ein hohes Maß an
+Datensicherheit, da Standard-Teilnehmer keinen Zugriff
+auf den Funkkanal mehr haben
+2. Da Standard Wireless LAN Hardware Produkte die Basis
+sind, wird die Abhängigkeit von einzelnen Anbietern
+reduziert.
+Industrial Wireless LAN FR
+Diese Technologie ist eine Erweiterung von Industrial Wireless
+LAN und bietet dem Kunden Echtzeit-Funkkommunikation,
+selbst wenn sich Teilnehmer über Funkzellen hinweg bewegen
+(roamen) und Übertragungszeiten im Bereich von 10 ms - 100
+ms gefordert sind. Wie bei Industrial Wireless LAN gewohnt ist
+auch in diesem Funkfeld die Kommunikation vorhersagbar
+(Deterministik). Es ist wichtig zu wissen, dass in einem
+Industrial Wireless LAN Funkfeld mit dem Attribut FR keine
+802.11-konformen Teilnehmer betrieben werden können.
+Sollen solche Teilnehmer auch in die Funkkommunikation
+aufgenommen werden, so kann dies mit einem „SchattenFunkfeld“ realisiert werden, wobei der Dual Access Point
+SCALANCE W788-2PRO von großem Nutzen ist, wenn die
+eine Funkkarte das Industrial Wireless LAN Funkfeld realisiert
+und die andere im FR-Modus arbeitet.
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 45 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Abbildung 26: Aufbau eines „Schatten-Funknetzes“ zum
+Betrieb von Wireless LAN Teilnehmern in einem Industrial
+Wireless LAN FR Funkfeld
+
+Anwendungen von Industrial Wireless LAN FR
+Bei Einschienen-Hängebahnen kommt immer stärker
+PROFINET IO1 zum Einsatz, da der dortige zyklische
+Datenverkehr sehr gut die Steuerung der bewegten Gehänge
+unterstützt. Um die Probleme durch Verschleiß der
+Schleifkontakte zu vermeiden, wird bei dieser Anwendung
+verstärkt auf berührungslosen Kontakt gesetzt. Um zyklisch
+Kommunikationsdaten mit festen Antwortzeiten zu übertragen,
+ist es notwendig, dass das Funknetz diese Performance auch
+unterstützt. Hier kann die Performance von Industrial Wireless
+LAN FR optimal genutzt werden.
+
+Abbildung 27: Einschienen-Hängebahn, heute noch mit
+Schleifkontakten zur Übertragung der Fahrwagesteuerung
+an die Gehänge, in Zukunft berührungslos mit Industrial
+Wireless LAN FR
+Grundsätzlich wird Industrial Wireless LAN FR überall dort
+eingesetzt, wo vergleichsweise schnell bewegte Teilnehmer
+
+1
+
+Unterstützung der PROFINET Echtzeit Eigenschaft RT
+Copyright © Siemens AG 2004
+All Rights reserved
+Seite 46 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+eine starke Bindung an das Funknetz benötigen und schnelle
+hand-over Zeiten von einer Funkzelle zur nächsten gefragt sind.
+SCALANCE W788-1PRO FR
+Industrietauglicher Access Point zum Aufbau eines Funknetzes
+(Infrastruktur) und zum Anschluss an das drahtgebundene
+Datennetz (Ethernet). Wahlweise Unterstützung von FastRoaming.
+
+Abbildung 28: Access Point SCALANCE W788-1PRO FR
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Sehr kurze hand-over Zeiten zur Unterstützung von
+bewegten Teilnehmern beim Roaming (IWLAN FR)
+IEEE 802.11h zum Betrieb mit erhöhten
+Sendeleistungen in Europa bei 5 GHz
+Sehr zuverlässig durch Reservierung der Datenrate und
+zyklische Überwachung der Verbindung (IWLAN)
+Wireless LAN 802. 11b/g und 802.11a mit bis zu 54
+Mbit/s bei 2,4 GHz und 5 GHz
+Forced Roaming bei Drahtbruch der Ethernet-Leitung
+(Option)
+Wireless Distribution System (WDS) für Punkt-zu-Punkt
+Verbindungen
+Schutzart IP65, robustes Metallgehäuse
+Betriebstemp. -20°C ... +60°C resistent gegen Betauung
+Redundante Stromversorgung DC 19 - 57 V und Powerover-Ethernet, sogar bei DC 24 V
+10/100 Mbit/s Ethernet-Port für Anschluss an das
+drahtgebundene Netz
+Fortschrittliche Datensicherheit durch WPA und
+Verschlüsselung mit AES
+C-PLUG (configuration plug) Wechselmedium zum
+schnellen Gerätetausch ohne Programmiergerät
+Integration in Step7/NCM PC
+
+Seite 47 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+SCALANCE W788-2PRO FR
+Industrietauglicher Dual Access Point mit zwei getrennten
+Funkkarten zum Aufbau eines hochwertigen Funknetzes
+(Infrastruktur) und zum Anschluss an das drahtgebundene
+Datennetz (Ethernet). Wahlweise Unterstützung von FastRoaming getrennt für jede einzelne Funkkarte.
+
+Abbildung 29: Dual Access Point SCALANCE
+W788-2PRO FR
+Identisch mit SCALANCE W788-1PRO FR, plus:
+• Zweite Funkkarte für Wireless LAN 802.11b/g und
+802.11a
+• 2x R-SMA Anschlüsse für abgesetzte Antennen
+• Redundanz-Modus für sehr zuverlässige Punkt-zu-Punkt
+Verbindung durch zwei getrennte Funkkarten
+
+Ethernet Client Module SCALANCE W744-1PRO FR
+Industrietauglicher Ethernet Adapter zur Anbindung eines
+Teilnehmers (mit Ethernet Anschluss) an ein Industrial Wireless
+LAN FR Funknetz. Wahlweise Unterstützung von FastRoaming.
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 48 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Abbildung 30: Ethernet Client Module SCALANCE
+W744-1PRO FR
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Sehr kurze hand-over Zeiten zur Unterstützung von
+bewegten Teilnehmern beim roaming (IWLAN FR)
+Logische Unterstützung von bis zu 8 IP-Adressen
+IEEE 802.11h zum Betrieb mit erhöhten
+Sendeleistungen in Europa bei 5 GHz
+Sehr zuverlässig durch Reservierung der Datenrate und
+zyklische Überwachung der Verbindung (IWLAN)
+Wireless LAN 802. 11b/g und 802.11a mit bis zu 54
+Mbit/s bei 2,4 GHz und 5 GHz
+Schutzart IP65, robustes Metallgehäuse
+Betriebstemp. -20°C ... +60°C resistent gegen Betauung
+Redundante Spannungsversorgung DC 19 - 57 V und
+Power-over-Ethernet, sogar bei DC 24 V
+10/100 Mbit/s Ethernet-Port für Anschluss an Endgeräte
+mit Ethernet-Port
+Fortschrittliche Datensicherheit durch WPA und
+Verschlüsselung mit AES
+C-PLUG (configuration plug) Wechselmedium zum
+Schnellen Gerätetausch ohne Programmiergerät
+Integration in Step7/NCM PC
+
+IWLAN/PB Link PN IO
+Netzübergang zwischen Industrial Wireless LAN und
+PROFIBUS mit PROFINET IO Funktionalität. Wahlweise
+Unterstützung von Fast-Roaming.
+
+Abbildung 31: IWLAN/PB Link PN IO
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 49 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Oktober 2004
+
+Sehr kurze hand-over Zeiten zur Unterstützung von
+bewegten Teilnehmern beim Roaming (IWLAN FR)
+Sehr zuverlässig durch Reservierung der Datenrate und
+zyklische Überwachung der Verbindung (IWLAN)
+PB Master Interface zur flexiblen Einbindung von
+Feldgeräten in eine IWLAN Funkinfrastruktur
+Anschluss einer IWLAN Antenne oder alternativ einer
+Antenne zum Betrieb mit RCoax Cable (Leckwellenleiter)
+C-PLUG (configuration plug) Wechselmedium für
+Projektierungsdaten zum schnellen Gerätetausch ohne
+Programmiergerät
+PROFINET Kommunikation (IO Proxy)
+Wireless LAN 802. 11b/g und 802.11a mit bis zu 54
+Mbit/s bei 2,4 GHz und 5 GHz
+IEEE 802. 11h zum Betrieb mit erhöhten
+Sendeleistungen in Europa bei 5 GHz
+Schutzart IP20 zur Montage auf Hutschiene im
+Schaltschrank
+Fortschrittliche Datensicherheit durch WPA und
+Verschlüsselung mit AES
+
+Hinweis: Das Gerät ist nicht geeignet zur Kopplung von
+PROFIBUS Netzen, wohl aber für die Ankopplung von
+herkömmlichen PROFIBUS-DP-Slaves an den Ethernet
+Control-Level.
+Kundennutzen in der Anwendung Einschienen-Hängebahn:
+• Einbindung von PROFIBUS Feldgeräten in ein Industrial
+Wireless LAN Funknetz (Investitionsschutz)
+• Bauform: optimal montierbar bei EHB, zusammen mit
+Fahrwagensteuerung ET 200 S
+• Sehr flexibel einsetzbar durch Anschluss von IWLAN
+Antennen oder alternativ Antenne für RCoax Leitung
+IWLAN RCoax Cable
+Koaxialleitung mit definierten Schlitzen zur kontrollierten Ab/Einstrahlung eines Industrial Wireless LAN Funkfeldes im
+Nahbereich für Anwendungen mit berührungslosem Kontakt
+
+Abbildung 32: IWLAN RCoax Cable
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 50 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+•
+•
+•
+•
+•
+
+Oktober 2004
+
+Zuverlässige Funkverbindung
+Kontrolliertes Funkfeld
+Hohe Einsatzflexibilität
+Einfache Montage
+Optimaler Anschluss an SCALANCE W-700
+
+Kundennutzen in der Anwendung Einschienen-Hängebahn:
+• Drahtlose und damit verschleißfreie Datenübertragung
+zu mobilen Kommunikationspartnern
+• Berührungslose Technologie als Ersatz für Schleifleiter
+
+Antennen
+•
+•
+•
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Richtantenne (60°) für 2,4GHz zur Erweiterung und
+Optimierung der Funkverbindung
+Planarantenne (180°) für 2,4GHz und 5GHz zur
+Erweiterung und Optimierung der Funkverbindung
+Fahrzeugantenne (omnidirektional) für 2,4GHz und
+5GHz zur Erweiterung und Optimierung der
+Funkverbindung, besonders bei Fahrerlose TransportSystemen
+
+Seite 51 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Glossar
+
+2G
+
+Digitale Mobilfunknetze der zweiten Generation, z.B. GSM
+
+3G
+
+Digitale Mobilfunknetze der dritten Generation, z.B. UMTS
+Vereinzelt ist auch der Begriff 2.5G anzutreffen. In diesem
+Fall sind die Erweiterungen von GSM gemeint (EDGE,
+GPRS)
+
+IEC 61508
+
+Norm zur funktionalen Sicherheit (neu)
+
+EN 954-1
+
+Norm zur funktionalen Sicherheit (alt)
+
+Access Point
+
+Mit Access Points werden WLAN Funknetze aufgebaut.
+Zusätzlich binden sie das drahtgebundene Datennetz an.
+
+ACK
+
+Acknowledge
+Signal im Handshake Protokoll zur Vermeidung des Hidden
+Node Problems
+
+ACL
+
+Access Control List
+Liste mit MAC Adressen, die zum Zugriff auf das Funknetz
+berechtigt sind
+
+Ad-hoc-Netz
+
+Funknetz zwischen einzelnen Geräten (Point-to-point)
+
+AES
+
+Advanced Encryption Standard
+Neuer Standard zur Kryptographie von Daten in WLANs
+
+Antennen Diversity
+
+Verfahren, bei dem ein Funkempfänger mit zwei Antennen
+ausgerüstet wird und aus zwei empfangenen Signalen das
+bessere auswählen kann
+
+Antennengewinn
+
+Durch geeignete Bauform erzielte Verbesserung (passiv!) der
+Antenne im Vergleich zu einem isotropen Strahler
+
+ATM
+
+Asynchronous Transfer Mode
+Drahtgebundenes Netz, das besonders im Backbone für
+grosse Entfernungen mit hohen Datenraten eingesetzt wird
+
+Authentication
+
+Zugangskontrolle in Kommunikationsnetzen (Wer bin ich?)
+zur Steigerung der Datensicherheit (Security)
+
+Authorisation
+
+Verteilung von Berechtigungen in Kommunikationsnetzen
+(Was darf ich?) zur Steigerung der Datensicherheit (Security)
+
+BG
+
+Berufsgenossenschaft
+
+BHG
+
+Bedienhandgerät
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 52 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+BPSK
+
+Binary phase shift keying
+Modulationsverfahren bei WLAN
+
+BQTF
+
+Bluetooth Qualification Test Facility
+Einrichtung zur Überwachung der Interoperabilität der
+Produkte verschiedener Anbieter
+
+BSS
+
+Basic Service Set
+WLAN Funknetz mit Zugriff auf die Infrastruktur über einen
+einzigen Zugangspunkt (Access Point)
+
+CCK
+
+Complementary code keying
+Modulationsverfahren bei WLAN
+
+CDMA
+
+Code Division Multiplex
+Code gesteuertes Zugriffsverfahren
+
+CF
+
+Compact Flash
+
+CFP
+
+Contention free period
+Zeitraum, in dem der Zugriff durch den Access Point verwaltet
+ist (zur Unterstützung von zeitkritischen Diensten)
+
+CP
+
+Contention Period
+Zeitraum, in dem der Zugriff nach CSMA/CA geregelt wird
+(zur Unterstützung von zeitkritischen Diensten)
+
+CP
+
+Communication Processor
+
+CSMA/CA
+
+Carrier Sense Multiple Access with Collision Avoidance,
+Zugriffsverfahren eines drahtlosen IEEE 802.11-Funknetzes
+
+CSMA/CD
+
+Carrier Sense Multiple Access with Collision Detection,
+Zugriffsverfahren eines drahtgebunden Ethernet-Netzes
+
+CTS
+
+Clear to send
+Signal im Handshake Protokoll zur Vermeidung des Hidden
+Node Problems
+
+DDE
+
+Dynamic Data Exchange
+Dynamischer Datenaustausch
+
+DCF
+
+Discrete coordinated function
+Normales Zugriffsverfahren bei 802.11 im Gegensatz zu PCF
+
+DECT
+
+Digital Enhanced Cordless Telecommunications,
+Europäischer Standard für Sprach- und Datenkommunikation
+
+DFS
+
+Dynamic Frequency Selection
+Dynamische Frequenzwahl im 5GHz-Band
+
+DFÜ
+
+Datenfernübertragung
+
+Diversity
+
+Funkempfänger mit zwei Antennen zur Auswahl des besten
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 53 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Signales
+Downstream
+
+Kommunikation vom Access Point zum Teilnehmer (Client)
+
+DSSS
+
+Direct Sequence Spread Spectrum,
+Spreizbandübertragungsverfahren (IEEE 802.11b)
+
+EDGE
+
+Enhanced Data Rates for Global Systems for Mobile
+Communications Evolution
+Weiterentwicklung von GSM mit Datenraten bis zu 384kBit/s
+für Video und Wireless Internet Anwendungen
+
+EHB
+
+Elekto-Hängebahn
+
+EIRP
+
+Equivalent isotropic radiated power
+Die Sendeleistung die man einem isotropen Strahler zuführen
+müsste, damit dieser effektiv die gleiche Leistung abstrahlt,
+wie eine andere Antenne in einer bestimmten Richtung. Ein
+isotroper Strahler ist eine theoretische Antenne, die in alle
+Richtungen gleichmäßig (isotrop) abstrahlt und als unendlich
+klein angenommen wird.
+
+ESM
+
+Electrical Switch Module
+
+ESS
+
+Extended Service Set
+Funknetz, bestehend aus mehreren überlappenden Basic
+Service Sets (BSS)
+
+ETSI
+
+European Telecommunication Standard Institute
+Europäische Standardisierungsorganisation.
+
+Ex
+
+Abkürzung für explosionsgeschützt
+
+Fall back
+
+Schrittweise Reduzierung der Datenrate bei schlechten
+Empfangsbedingungen zum Erhalt der Verbindung
+
+FDMA
+
+Frequency Division Multiplex Access
+Frequenz gesteuertes Zugriffsverfahren
+
+FEC
+
+Forward Error Correction
+Ergänzung der Nutzdaten mit redundanten Bits für eine hohe
+Unempfindlichkeit des Signals gegen Störungen
+
+FHSS
+
+Frequency Hopping Spread Spectrum
+Frequenzsprung-Spreizbandübertragungsverfahren, das bei
+802.11b und Bluetooth verwendet wird.
+
+FTEG
+
+Gesetz über Funkanlagen und
+Telekommunikatiosendeinrichtungen in Deutschland
+
+FTS
+
+Fahrerloses Transport-System
+
+GFSK
+
+Gaussian Phase Shift Keying
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 54 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Modulationsverfahren bei 802.11
+GPRS
+
+General Packet Radio Service
+Erweiterung von GSM zur paketorientierten
+Datenkommunikation bis max. 170kBit/s.
+
+GSM
+
+Global System for Mobile Communications
+Digitaler Telefondienste, basierend auf Frequenzen im
+Bereich 900MHz, 1800MHz und 1900MHz
+
+GSM-R
+
+GSM für den Zugverkehr bei hohen Geschwindigkeiten
+
+Hand-over
+
+Mechanismus zur Übergabe eines Teilnehmers von einer
+Funkzelle zur nächsten. Der Begriff wird häufig im selben
+Zusammenhang wie Roaming verwendet.
+
+Handshake
+
+Quittungsverfahren, um eine Verbindung zwischen
+kommunikationsbereiten Stationen aufzubauen.
+
+Hidden node problem Zwei Teilnehmer sind in einer Funkzelle so angeordnet, dass
+sie außerhalb ihrer eigenen Reichweite liegen. Beim
+gleichzeitigen Zugriff auf das Medium entstehen Kollisionen
+HIPERLAN
+
+High Performance Radio LAN
+Funknetz im 5GHz-Band
+
+Home RF
+
+Standard zur drahtlosen Kommunikation zwischen PCs und
+Consumer-Geräten im Heimbereich.
+
+HSCSD
+
+High Speed Circuit Switched Data
+GSM Funknetz für höhere Datenraten
+
+IAPP
+
+Inter Access Point Protocol
+Protokoll zur Kommunikation zwischen den APs
+
+IBSS
+
+Independant Basic Service Set
+Ad-hoc-Netz zum spontanen und einfachen Aufbau von
+Funkverbindungen ohne Funkinfrastruktur
+
+IE
+
+Industrial Ethernet
+
+IEEE
+
+Institute of Electrical and Electronics Engineers
+
+IEEE 802.11
+
+Standard für Funknetze im 2,4GHz-Band mit
+Übertragungsraten bis 2MBit/s.
+
+IEEE 802.11a
+
+Standard für Funknetze im 5GHz-Band mit
+Übertragungsraten bis 54MBit/s.
+
+IEEE 802.11b
+
+Standard für Funknetze im 2,4GHz-Band mit
+Übertragungsraten bis 11MBit/s
+
+IEEE 802.11g
+
+Standard für Funknetze im 2,4 GHz-Band mit
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 55 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Übertragungsraten bis 54MBit/s
+IEEE 802.11h
+
+Standard für Funknetze im 5 GHz-Band mit
+Übertragungsraten bis 54MBit/s. Standard für den
+europäischen Kontinent; Bedingung DFS/TPC
+
+IEEE 802.11i
+
+Sicherheitsstandard, das den veralteten Standard WEP
+ablöst; Es beinhaltet u.a. das Verschlüsselungsverfahren AES
+
+IEEE 802.3af
+
+Standard, der das Power-over-Ethernet (PoE) definiert
+
+IP
+
+Internet Protocol
+Sammlung von Programmroutinen, auf die das TCP-Protokoll
+zugreift
+
+IP 20
+
+Geräteschutzklasse
+
+IP 65
+
+Geräteschutzklasse
+
+IPsec
+
+Internet Protocol Security
+Offener Standard zur Erhöhung der Datensicherheit in IPNetzen
+
+IrDA
+
+Infrared Data Association
+Datenkommunikation mit Infrarot im Kurzstreckenbereich
+
+IS
+
+Intrinsically Safe (Explosionsgschützt)
+
+ISM-Band
+
+Industrial, Scientific and Medical-Band
+Frequenzband zur lizenzfreien Nutzung
+
+ISO
+
+International Organization for Standardization
+
+Kerberos
+
+Sicherheitssystem zur Verschlüsselung sensibler Daten
+
+LWL
+
+Lichtwellenleiter
+Übertragungsmedium für optische Netze.
+
+Mehrwegausbreitung Reflektionen einer Funkwelle an unterschiedlichen
+Gegenständen des Raums. Dadurch kommt die Funkwelle
+mit unterschiedlicher Intensität und Laufzeit am Empfänger an
+MIC
+
+Message Integrity Protocol
+Verfahren zur Erhöhung der Vertrauenswürdigkeit der Daten
+bei WLAN
+
+Mini PCI
+
+Spezielle Bauform von WLAN Funkkarten zur direkten
+Integration in Produkte
+
+MSS
+
+Mobile Satellite Service
+Satellitenfunk innerhalb von UMTS
+
+OFDM
+
+Orthogonal Frequency Division Multiplex
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 56 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Modulationsverfahren bei 802.11a
+OFDM/CCK
+
+Orthogonal Frequency Division Multiplex/complimentary code
+keying
+Modulationsverfahren bei 802.11a
+
+PAN
+
+Personal Area Network
+Netz für Geräte in geringer räumlicher Entfernung.
+
+PC Card
+
+Spezielle Bauform für WLAN Funkkarten (PCMCIA)
+
+PCF
+
+Point coordinated function
+Zugriffsverfahren zur Unterstützung von zeitkritischen
+Diensten bei WLAN
+
+PCMCIA
+
+Spezielle Bauform für WLAN Funkkarten
+
+PDA
+
+Personal Digital Assisatant
+Mobiles Endgerät
+
+Piconetz
+
+Netzstruktur bei Bluetooth, in der bis zu 8 Teilnehmer
+organisiert sind
+
+QAM
+
+Quadrature amplitude modulation
+
+QPSK
+
+Quadrature phase shift keying
+
+QoS
+
+Quality of Service
+Sammelbegriff für verschiedene Güten von Diensten
+
+R&TTE
+
+Radio and Telecommunications Terminal Equipment Directive
+Anweisung der EU für Telekommunikations Endgeräte
+
+RADIUS
+
+Remote Authentification Dial - In User Service
+für sichere Kommunikationsnetze
+
+RCM
+
+Radio Client Module (Ethernet Adapter, Ethernet Client)
+
+RegTP
+
+Regulierungsbehörde für die Telekommunikation in
+Deutschland
+
+RLM
+
+Radio Link Module (Access Point)
+
+Roaming
+
+Freie Bewegung von Wireless LAN Teilnehmern auch über
+die Grenzen der Funkzelle eines Access Points hinaus. Der
+Teilnehmer kann ohne merkliche Unterbrechung von einer
+Funkzelle in die nächste wechseln (siehe auch hand-over)
+
+RT
+
+Real Time (Echt-Zeit)
+
+RTS
+
+Request to send
+Signal beim Handshake Protokoll zur Vermeidung des Hidden
+Node Problems
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 57 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Scatternetz
+
+Netzstruktur bei Bluetooth, in der mehrere Piconetze
+organisiert sind
+
+SIG
+
+Special Interest Group
+Nutzerorganisation für Bluetooth
+
+SNMP
+
+Simple Network Management Protocol,
+Standardisiertes Protokoll zum Transport von
+Netzwerkmanagement Informationen
+
+SSID
+
+Service Set Identifier Address
+Name des Funknetzes bei WLAN
+
+TDMA
+
+Time Division Multiplex Access
+Zeitschlitz gesteuertes Zugriffsverfahren
+
+TKIP
+
+Temporal Key Integrity Protocol
+Verfahren zum zyklischen Wechsel der Schlüssel bei WLAN
+
+TPC
+
+Transmission Power Control
+Automatische Regelung der Sendeleistung im 5GHz-Band
+
+UMTS
+
+Universal Mobile Telecommunications System
+Mobilfunk zur mobilen Sprach-, Audio-, Bild-, Video- und
+Datenkommunikation
+
+UNII
+
+Unlicensed National Information Infrastructure
+Name des 5GHz-Bandes in der amerikanischen Literatur
+
+Upstream
+
+Kommunikation vom Teilnehmer (Client) zum Access Point
+
+URAN
+
+UMTS Radio Access Network
+Funknetz von UMTS
+
+UTRAN
+
+UMTS Terrestial Radio Access Network
+Ergestützter Teil des UMTS Funknetzes
+
+WCDMA
+
+Wideband CDMA
+Modulationsverfahren für hohe Datenraten
+
+WDS
+
+Wireless Distribution System
+Richtfunkstrecken zur Kopplung der Zugangspunkte für ein
+Extended Service Set (ESS)
+
+Web Pad
+
+Tragbares Gerät in DIN-A4-Größe mit Touchscreen zur
+Internetnutzung
+
+WECA
+
+Wireless Ethernet Compatibility Alliance
+Vereinigung Wireless LAN Produkthersteller, die durch Test
+eine Kompatibilität ihrer Produkte gewährleisten.
+
+WEP
+
+Wired Equivalent Privacy
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 58 von 59
+
+SIMATIC NET White Paper E.0.1.
+Industrial Wireless LAN - I-Features, Anwendungen, Beispiele
+
+Oktober 2004
+
+Verschlüsselungsverfahren bei WLAN (veraltet)
+Wi-Fi Siegel
+
+Wireless Fidelity
+Siegel der WECA, um kompatible und getestete Produkte zu
+kennzeichnen.
+
+Wired LAN
+
+Drahtgebundenes Netz
+
+Wireless LAN
+
+Drahtloses Netz
+
+WLAN
+
+Wireless LAN (hier: IEEE 802.11)
+
+WLANA
+
+The Wireless LAN Association
+Firmenkonsortium von Wireless LAN Anbietern zur
+Verbreitung der Wireless LAN Technik.
+
+WPA
+
+Wireless Protected Access
+Ein von der WECA vorläufiges Sicherheitsverfahren, das die
+bestehenden Sicherheitslücken von WEP schließt. Dabei wird
+das Verschlüsselungsverfahren AES verwendet. Es wird von
+IEEE 802.11i abgelöst.
+
+Copyright © Siemens AG 2004
+All Rights reserved
+
+Seite 59 von 59
+

@@ -1,0 +1,144 @@
+%!PS-Adobe-3.0 Predicting Interpersonal Relationship  
+based on Mobile Communication Patterns 
+Jumin, Chi Hyungeun, Jo  Jung-hee, Ryu 
+Graduate School of Culture Technology, KAIST 
+Daejeon, Korea 
+{ zziju, acid, and junghee.ryu@kaist.ac.kr}
+ABSTRACT SYSTEM DESIGN 
+In this poster we propose a method to measure the intimacy Defining Intimacy Factors 
+scores of interpersonal relationships (IR) using mobile Eagle et al.[3] identified a 'Friend' based on certain patterns 
+communication data. We draw on previous literature to such as 'proximity on Saturday night' or 'proximity outside 
+define communication factors that affect intimacy. Using work.' This contextual information showed a significant 
+these factors, we implemented a pattern-based intimacy degree of matching with friend predictions. Avrahami and 
+prediction method. We found 33 communication patterns, Hudson[2] revealed that many instant message (IM) 
+and the correlation of the predicted intimacy based on those communication characteristics were affected by the 
+patterns to the self-reported intimacy was 0.61 (p<0.01). relationships between users and their buddies; such 
+Using this method, we can automatically predict IR. characteristics include communication length, frequency, and 
+Author Keywords interval. Moreover, through IM, Hu et al.[5] showed a 
+Mobile, Communication, Interpersonal Relationship, Intimacy positive correlation between the amount of IM use and 
+intimacy. The following characteristics were extracted from 
+ACM Classification Keywords the above studies: Frequency (the number of 
+J.4 SOCIAL AND BEHAVIORAL SCIENCES, Sociology; communications), Intensity (communication duration), and 
+H.4 INFORMATION SYSTEMS APPLICATIONS, H.4.3 Time and Day (the time at which communication occurred). 
+Communications Applications We also added two more characteristics which are applicable 
+General Terms in the mobile communication environment: Directivity (the 
+Human Factors person who mostly initiated the communication between user 
+and his/her partner), and Channel (tendency to choose 
+INTRODUCTION between calls or SMS). 
+With various communication media such as mobile phones 
+and email, people establish and manage many relationships. Calculating Factors 
+However, it is not easy to manage IR because relationship The data obtained from the user-partner pairs, each 
+changes are neither instant nor easily recognizable. There containing six factors, were used in calculations as shown in 
+have been studies that have tried to predict IR using Tables 1 and 2. All logs are transformed into session-based 
+communications media. So far, predicting binary-choice data. Each call is regarded as one session. In the case of 
+relationship (e.g. 'work' or 'social') showed an accuracy of SMSs, a chunk of SMSs is regarded as one session if no call 
+80% [2, 3]. On the other hand, predicting a three-category has been made in between and every interval between the 
+choice relationship showed an accuracy of 50.2% [2]. SMSs is shorter than a given threshold. Each user has a 
+However, categorizing IR in general suffers from a lack of different threshold, which is calculated by clustering the SMS 
+distinct concepts. Fiske [4], a social psychologist, is one of intervals into two classes, 'short' and 'long', by k-means 
+several researchers who have attempted to categorize clustering and taking the border value. Each SMS was 
+human relationships; Fiske generalized human relationships calculated as 60 seconds. Note that the two factors 
+into 4 categories. Although this is an excellent 
+Table 1.Calculating method (frequency, intensity, and time) 
+categorization of human relationships, it is less helpful for 
+Factors Statistical Representative Values 
+use with prediction systems because the resulting 
+Frequency Number of sessions 
+correlations of two categories are high [4]. To avoid the Intensity Duration of the longest session 
+unclear nature of categorization schemes, we used intimacy Starting time of the latest midnight session 
+measuring tools [1, 6].  Using intimacy measuring surveys Time The time was coded between 1 (=2AM, the midnight) 
+and -1 (=2PM) 
+and mobile communication history, we present a method for 
+Table 2.Calculating method (day, directivity, and channel) 
+predicting relative intimate relationships among people. 
+AA  BB  
+ 
+Factors A B 
+ 
+Day # of Holiday sessions # of Workday sessions 
+Copyright is held by the author/owner(s). 
+Directivity # of In sessions # of Out sessions 
+CSCW 2010,  February 6-10, 2010, Savannah, Georgia, USA. 
+Channel # of Call sessions # of SMS sessions 
+ACM  978-1-60558-795-0/10/02. 
+ 
+ 
+487 (Frequency, Intensity) are log-transformed to more closely fit in Table 3.The test to decide the thresholds of conditions 
+the normal distribution. Pearson r 0.90 0.85 0.80 0.75 0.70 0.65 0.60 
+IOS SD   0.70 0.79 0.94 0.98 0.98 
+Setting up the reference MSIS SD   0.78 0.87 0.95 0.99 1.00 
+We collected mobile communication logs of 14 South Korean N=5 0 0 7 10 16 14 16 
+people over a period of one month. These include text This test results is to figure out the threshold of intimacy SD and Pearson 
+R. When all conditions were satisfied, the values of Pearson R 0.8 and its 
+messages and call logs (Males: 8, Females: 6, Mean age: 27.4, corresponding intimacy SD were ultimately chosen. 
+Age standard deviation (SD): 2.6, Total number of logs: 7939). 
+We selected 15 partners, on average, for each user to collect the EVALUATION & DISCUSSION 
+intimacy levels of each partner via questionnaire surveys. We For the evaluation, one-month logs of mobile communication 
+used the Inclusion of Other in the Self Scale (IOS)[1] and the from 10 Korean people were used (Males: 5, Females: 5, Mean 
+Miller Social Intimacy Scale (MSIS)[6]. These scales provide age: 28.4, Age SD: 2.9, Total number of logs: 5345). We 
+quantitative measures of intimacy which can be used to selected approximately 15 partners for each user and the users 
+m were given an intimacy survey to answer. For each of the  feaosure  initim a←cy of  an6y r eltatoions h4ip. :Th e intimacy scores and 
+all the factors from the log were standardized within respect to predefined patterns, the Centroid values for each factor were 
+e ac hF use r←, to co mp enstathe foer  incdivoidumal dibfferienncesa, atndi oto nsu seod afs  thie  refpraesecntattivoe vraslue . fEvreroy temst da taasetl hlad  ftoa bec tors 
+compare the factors on the same scale.  classified to the most similar pattern (the most similar Pearson 
+  sort F R to the representative pattern) among the predefined patterns, 
+Pattern Clustering and each of the classified data was given the Centroid value of 
+We extracted intimacy patterns from the reference set, which 
+  for each f in F: intimacy according to the corresponding pattern. As Table 4 
+consists of pairs of six intimacy factors and corresponding 
+shows, compared to the correlation of frequency and self-
+intimacy scores, through following clustering process (Figure 1 
+    C ← agglomerativeClrueposrtetd eintrimiacny, ogur (mRethode shfoewedr heighner corerelaStiones wti)th with 
+describes the pseudo-code of this method). When defining the 
+self-reported intimacy values. We also presented results from 
+p at te rns , s om e  canv bea derfinieda bby alll ethe: fa cftor s, whereas some pattern closely matched datasets, which showed high similarity 
+patterns can only be defined by some of the factors. For this 
+to the representative patterns. 
+re a so n,  w e n ardrowiesd tthae nnumcbere of: f acPtorse fraomr ssix oto nfou r R 
+while making a combination of factors. A pattern should be Table 4.Prediction Results  
+s at isf ied  b ase d  onm the efoltlohwinog thdree: c ocndoitionms: Ppearslone Rt e linkage Pearson R (p<0.01) Case 
+among clustered pairs should be greater than the threshold, the IOS MSIS 
+'Pattern closely matched R>0.85, N = 65 0.576 0.607 
+in ti m acy   SD   witshint oa pclusWter shhouled nbe :lo wder itshant athen ce >da ta Tonlyp' caesea rsoRn> 0.75, N = 109 0.541 0.588 
+threshold, and a pattern should consist of more than five user- 'Pattern -Intimacy' case (All data, N = 159) 0.478 0.496 
+p ar tn er  pafiros orf d aeta afor ca hrelia bcle  piattnern . CTo d:e termine the 'Frequency - Intimacy' case (All data) 0.399 0.433 
+threshold of the intimacy SD and Pearson R between factors, an 
+D ue to the fact that data were limited to mobile communication 
+e m pi rica l me th od cwa.s rused m(Tabole 3v). Ien t(hed enda, 3t3a pa ttterhns at have 'Euclidean distance>T
+histories, the effect of other communication media were not euclid
+' from the nearest 
+were derived. 
+considered which might not be sufficient enough to derive 
+data) 
+stable results; nevertheless, our proposed method could yield 
+more practical mobile communication patterns than from a 
+       if (|c| >= 5 && (TIOSSD -SD(IOS(c)))+ (TMSISSD - SD(MSIS(c)))> 0: 
+frequency based simple prediction method. This method could 
+          Patterns.push(c) also help people to manage their IR, with information obtained 
+semi-automatically from their mobile communication logs. 
+          ReferenceSet.remREFoERvENCeE(S data in c) 
+1. Aron, A., Aron, E, and Smollan, D. Inclusion of Other in the Self 
+Scale and the Structure of Interpersonal Closeness. Personality and 
+       end if 
+Social Psychology, 63, 4(1992)  
+2. Avrahami, D., Hudson, S.E. Communication Characteristics of 
+    end for 
+Instant Messaging: Effects and Predictions of Interpersonal 
+Relationships. In Proc. CSCW, ACM Press(2006), 505-514  
+  end for 
+3. Eagle, N., Pentland, A., and Lazer, D. Inferring Social Network 
+Structure Using Mobile Phone Data. In PNAS (2007) 
+end for 
+4. Haslam, N.  and Fiske, A. P. Relational Models Theory: A 
+ Confirmatory Factor Analysis Personal Relationships. Personal 
+Figure 1. F and C are the arrays that contain the combinations of factors and Relationships,  6, 2(1999), 241-250 
+the clusters of user-partner pairs from the Reference Set, respectively. In detail, 5. Hu, Y., Wood, J. F., Smith, V., and Westbrook, N. Friendships 
+|F| (the number of combinations) becomes 1 with i=6, 6 with i=5, and 15 with through IM: Examining the Relationship between Instant Messaging 
+i=4. In the process of sorting F, the combination that has the factors of higher 
+and Intimacy. Computer-Mediated Communication, 2004 
+correlations with intimacy scores in the reference set than other combinations 
+was sorted to front. Teuclid: the data (a user-partner pair) that are apart from the 6. Miller,R. and Lefcourt,H. The Assessment of Social Intimacy. 
+nearest one by more than 1.5 in Euclidean distance. Tpearson: Threshold of Personality Assessment, 46, 5(1982), 514-518 
+Pearson R, TIOSSD: Threshold of IOS SD (0.70), TMSISSD: Threshold of MSIS  
+SD (0.78) 
+488

@@ -1,0 +1,1497 @@
+Teléfono Móvil Digital 
+GSM Banda-Dual GPRS  
+Guía de Usuario  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Este manual es aplicable al Teléfono Móvil modelo Vodafone Indie Copyright © 2009 by ZTE Corporation 
+Todos los derechos reservados. 
+Ninguna parte de esta publicación se puede extraer, reproducir, traducir o 
+utilizar en cualquier forma o por ningún medios, electrónico o mecánico, 
+incluyendo la fotocopia y microfilm, sin el previo permiso escrito de ZTE 
+Corporation. 
+ZTE Corporation se reserva el derecho de hacer modificaciones en errores de 
+la impresión o actualización de especificaciones en este manual sin previo 
+aviso. 
+ 
+Versión 1.0, Abril 2009 Tabla De Contenido 
+Antes De Su Uso.......................................................................................... 1 
+Introducción............................................................................................... 1 
+Instrucciones de Seguridad ....................................................................... 1 
+Advertencias y Precauciones de Seguridad............................................... 2 
+Descripción de partes ................................................................................ 7 
+Apariencia........................................................................................... 7 
+Definición de Teclado.......................................................................... 8 
+Descripción de atajos en la pantalla táctil ........................................... 9 
+Descripción De Iconos En La Barra De Estado................................... 9 
+Insertar y Remover la Tarjeta SIM.............................................................10 
+Insertar y Retirar la Tarjeta de Memoria ....................................................10 
+Batería......................................................................................................11 
+Retirar la Batería................................................................................11 
+Instalación de Batería ........................................................................12 
+Cargando la batería del teléfono........................................................12 
+Encendido y Apagado...............................................................................13 
+Acceso al Menú Principal...........................................................................15 
+Utilizando las teclas de navegación..........................................................15 
+Usando el lápiz táctil.................................................................................15 
+Comunicación.............................................................................................16 
+Llamadas..................................................................................................16 
+Realizar una llamada .........................................................................16 
+Llamadas De Emergencia..................................................................17 
+Contestar Llamadas...........................................................................17 
+Ajuste de Volúmen.............................................................................17 
+Manos Libres .....................................................................................17 
+Opciones de Llamadas ......................................................................17 Mensajes ..................................................................................................18 
+SMS...................................................................................................18 
+MMS ..................................................................................................20 
+Buzón de voz .....................................................................................23 
+Mensaje de difusión...........................................................................23 
+Contactos .................................................................................................24 
+Búsqueda Rápida ..............................................................................24 
+Búsqueda de Contacto ......................................................................24 
+Añadir un Nuevo Contacto.................................................................24 
+Grupos de Llamadas..........................................................................25 
+Copiar Todo .......................................................................................25 
+Borrar Todas las Entradas..................................................................26 
+Memoria Preferencial.........................................................................26 
+Información........................................................................................26 
+Llamadas..................................................................................................27 
+Entretenimiento ..........................................................................................28 
+Música ......................................................................................................28 
+Reproductor de Audio ........................................................................28 
+Radio FM ...........................................................................................29 
+Grabador de Sonido...........................................................................30 
+Juegos......................................................................................................30 
+Vídeo........................................................................................................30 
+Cámara..............................................................................................30 
+Reproductor de Vídeo........................................................................32 
+Álbum ................................................................................................32 
+Grabador de Vídeo ............................................................................33 
+Vodafone Live!..........................................................................................34 
+Aplicaciones ...............................................................................................35 
+Configuración ...........................................................................................35 
+Calibración del lápiz...........................................................................35 Perfiles de Usuario ............................................................................35 
+Configuración de Teléfono .................................................................35 
+Configuración de Llamadas ...............................................................37 
+Configuración Red .............................................................................39 
+Configuración de Seguridad...............................................................39 
+Restaurar Configuración De Fábrica..................................................42 
+Organizador..............................................................................................42 
+Calendario .........................................................................................42 
+Alarma ...............................................................................................42 
+Calculadora .......................................................................................42 
+Cronómetro........................................................................................43 
+Conversor ..........................................................................................44 
+Hora Internacional .............................................................................44 
+Archivos....................................................................................................44 
+Conectividad.............................................................................................45 
+Servicios Vodafone (STK)..................................................................45 
+Vodafone Live! ...................................................................................45 
+Bluetooth ...........................................................................................46 
+Cuenta de datos ................................................................................49 
+Contador GPRS.................................................................................49 
+Conexión con el PC....................................................................................50 
+Tarjetas de Memoria .................................................................................50 
+Cámara Web ............................................................................................50 
+Método de Introducción de Datos .............................................................51 
+Descripción General .................................................................................51 
+Definición del Teclado...............................................................................51 
+Descripción de Métodos de Introducción de Información..........................52 
+Método de Escritura Manual ..............................................................52 
+Método de Texto Predictivo................................................................52 
+Método de Inserción de Números ......................................................52 Método de Inserción de Símbolos......................................................53 
+Apéndice .....................................................................................................54 
+Acceso directo ..........................................................................................54 
+Limpieza y Mantenimiento ........................................................................54 
+Información de salud y de seguridad ........................................................56 
+Certificación e Información SAR ........................................................56 
+Uso de Seguridad ..............................................................................57 
+Limitación de exposición a campos de Radio Frecuencias (RF) ........57 
+Declaración de cumplimiento de RoHS ....................................................58 
+Eliminación de su viejo dispositivo............................................................59 
+Declaración de Conformidad ....................................................................60 
+Análisis de Fallos .......................................................................................62 Vodafone Indie                                                   
+ 
+Antes De Su Uso 
+Introducción 
+Gracias por escoger el modelo de teléfono móvil Vodafone Indie, GSM GPRS 
+Banda Dual Digital (referenciado como "teléfono móvil" en este manual). 
+Para garantizar que su teléfono móvil esté siempre en su mejor condición, por 
+favor, lea este manual detenidamente y guárdelo para usarlo para su futura 
+referencia.  
+Las fotos incluidas en ésta guía de usuario se utilizan solamente para 
+demostrar las funciones del teléfono móvil, así que quizás sean diferentes de 
+lo que usted ve en su teléfono móvil. Por favor, referirse a su teléfono móvil si 
+hay algunas diferencias.  
+Instrucciones de Seguridad 
+Si su teléfono móvil es robado o extraviado, notifique a su proveedor de 
+servicio de inmediato para prevenir que otros abusen de su línea. Para 
+proteger su teléfono móvil contra su uso indebido, tome las siguientes 
+medidas de precaución: 
+z Introduzca un código PIN y modifique su código de seguridad cada cierto 
+tiempo.  
+z Mantenga su teléfono móvil en un lugar seguro para evitar sustracciones. 
+ 
+ 
+1 Vodafone Indie                                                   
+Advertencias y Precauciones de Seguridad 
+Precauciones para el uso de su teléfono móvil 
+ Seguridad de tránsito 
+z Preste atención a la seguridad de tránsito y siga todas las leyes locales de 
+tránsito relevantes cuando conduce su vehículo.  
+ Interferencia 
+z No utilice su teléfono móvil cerca de una señal débil o de dispositivos 
+electrónicos de alta precisión. Interferencia de las ondas de radio puede 
+causar la mala operación de un dispositivo electrónico u otros problemas. 
+Preste especial atención cuando usted utiliza su teléfono móvil cerca de 
+audífono, marcapasos y/o otros dispositivos electrónicos médicos, alarma 
+de incendios, puertas automáticas y/o otros equipos de radio control 
+automáticos. Para obtener más información sobre la influencia causada 
+por el teléfono móvil en los marcapasos u otros dispositivos electrónicos 
+médicos por favor, consulte al fabricante o a su distribuidor local.  
+z No use su teléfono móvil cerca de su televisor, radio o equipo automático 
+de su oficina, para evitar mutua interferencia. 
+ En Aviones 
+z Apague su teléfono móvil en aviones donde está prohibida su opera 
+ración. Su teléfono móvil podría afectar la operación correcta de los 
+dispositivos electrónicos de la nave. Debido a estas razones, por favor 
+siga las regulaciones relevantes cuando opera con su teléfono móvil en un 
+avión. 
+2 Vodafone Indie                                                   
+ En Hospitales 
+z Apague su teléfono móvil en hospitales donde está prohibido su uso. El 
+teléfono móvil puede afectar la operación normal de equipos médicos, por 
+esta razón, por favor siga las regulaciones relevantes cuando use su 
+teléfono móvil en un hospital.  
+ En Estaciones de Servicio de Gasolina 
+z No use su teléfono móvil en estaciones de gasolina. Apague su teléfono 
+móvil cerca de líquidos o químicos inflamables. 
+ Impermeabilidad y/o Resistencia al Agua 
+z Mantenga su unidad alejada del agua. Esto puede causar recalentamiento, 
+fuga eléctrica o fallos si el agua o cualquier otro líquido penetra dentro de 
+su teléfono móvil.  
+ Desensamblaje 
+z No desarme o manipule su teléfono móvil, esto podría causar daños, fuga 
+eléctrica o fallo total del circuito.  
+ Antena 
+z No usar su teléfono móvil si su antena está dañada pues esto podría 
+ocasionar daños ó lesiones físicas. 
+ 
+3 Vodafone Indie                                                   
+ Mantenga su teléfono móvil alejado de niños 
+z Mantenga su teléfono móvil alejado de los niños, estos pueden sufrir 
+lesiones físicas si se usa como juguete.  
+ Accesorios Originales 
+z Use solo accesorios originales o aprobados por el fabricante. El uso de 
+accesorios no originales podrían afectar el funcionamiento de su unidad 
+además de violar la garantía, las regulaciones nacionales o causar daños 
+corporales.  
+ Áreas de Explosión 
+z Por favor seguir estrictamente las leyes y regulaciones relevantes. 
+Apague su teléfono móvil cerca de áreas de explosión. 
+ Llamadas De Emergencia 
+z Asegúrese de que su teléfono móvil esté en modo encendido y en una 
+área de cobertura de servicio. Introduzca el número de emergencia y 
+presione la tecla de "Envío" para llamar. Informe a éste personal donde se 
+encuentra y no corte la comunicación sin permiso. 
+Precauciones para el uso de la batería 
+z Coloque la batería en un lugar fresco y ventilado donde no le dé luz solar 
+directa.  
+z La vida de la batería es usualmente limitada, llega a ser más corta y más 
+corta después de que la batería se cargue una y otra vez. Si la carga falla 
+4 Vodafone Indie                                                   
+varias veces, esto indica que la batería está usada y se aconseja un 
+reemplazo.  
+z Deseche las baterías usadas en lugares designados de acuerdo con las 
+regulaciones específicas en vez de desechar sus baterías en la basura 
+residencial normal. 
+z No arroje las baterías usadas al fuego, podría causar incendio o 
+explosión. 
+z No presione con mucha fuerza al instalar las baterías pues esto podría 
+ocasionar derrames, sobrecalentamiento, explosión o fuego.  
+z No manipular la batería, pues esto causaría fuga de líquidos contenidos 
+en las baterías, causando riesgo de fuego o explosión.  
+z Si la batería se recalienta, puede cambiar de color, deformarse durante el 
+curso de su uso, carga o almacenaje, deje de usarla inmediatamente y 
+remplácela.  
+z Mantenga la batería alejada de la humedad para prevenir 
+sobrecalentamiento, ignición espontánea o erosión.  
+z No deje la batería expuesta directamente a la luz del sol, dentro de un 
+auto o lugar de altas temperaturas pues podría causar derrames, 
+sobrecalentamiento. Esto puede afectar el rendimiento de la batería y 
+acortar su vida. 
+z No cargue la batería por un tiempo continuo de más de 24 horas. 
+ Nota: 
+Si se daña la batería, por favor evite entrar en contacto con los 
+materiales de ella. Si su piel ha sido expuesta a estos materiales, 
+enjuague su piel con agua corriente y busque ayuda médica si es 
+ necesario.  
+5 Vodafone Indie                                                   
+Precauciones para el uso del cargador 
+z Use el cargador entre 110VAC y 220VAC. Usar un voltaje mas allá de ese 
+rango podría causar derrames, fuego o daños al teléfono y cargador.  
+z No haga cortocircuito al cargador pues este puede causar una descarga 
+eléctrica y otros daños.  
+z No cargue la batería bajo luz directa del sol, cerca de humedad, polvo, 
+vibraciones, televisores, radios (esto podría afectar la imagen o el sonido). 
+z No utilice el cargador si se daña el cable de alimentación porque esto 
+podría causar fuego o descarga eléctrica. 
+z No colocar envases de agua cerca del cargador de su teléfono para evitar 
+salpicaduras de agua. Si el agua o cualquier otra clase de líquido salpica 
+en el cargador, quitar inmediatamente el cargador del enchufe para evitar 
+recalentamiento, fuego, descarga eléctrica u otros fallos. 
+z No manipular el cargador porque esto podría causar lesiones corporales, 
+descargas eléctricas, daños e incendios. 
+z No colocar objetos pesados sobre los cables de alimentación o reparar los 
+cables de alimentación pues esto podría causar descargas eléctricas o 
+fuego.  
+z Retire el cargador del enchufe de la pared antes de efectuar limpieza y 
+mantenimiento.  
+z Retire adecuadamente el cargador en vez de tirar el cable para quitarlo 
+del enchufe, pues esto podría causar daños, descargas eléctricas o fuego.  
+6 Vodafone Indie                                                   
+Descripción de partes 
+Apariencia 
+ 
+ 
+ 
+  
+ 
+7 Vodafone Indie                                                   
+Definición de Teclado 
+Mueve el cursor de izquierda a derecha. 
+Tecla 
+Izquierda/De En Stand by, presione tecla izquierda para ingresar 
+recha "Escribir Mensaje", presione tecla derecha para 
+ingresar a "Buzón de Entrada". 
+Mueve el cursor arriba/abajo. 
+Tecla Mueve el cursor Arriba/Abajo para seleccionar 
+Arriba/Abajo opciones de menú: En Stand by, presione tecla arriba 
+ingresa a "Reproductor de Música", presione tecla 
+abajo ingresa a "Perfiles de Usuario". 
+Tecla de 
+Navegación En modo Stand by, presione esta tecla para ingresar a 
+Izquierda "menú"; si mantiene presionado se bloquea el teclado.
+Tecla de 
+Navegación En modo Stand by, Presione esta tecla para ingresar a 
+derecha "contactos". 
+Marcar un número o recibir llamadas entrantes. 
+Tecla de 
+Envió En modo Stand by, Presione esta tecla para ingresar a 
+"registro de llamadas". 
+Finalizar o rechazar llamadas entrantes. 
+Mantenga esta tecla presionada para encender/apagar 
+el teléfono móvil. 
+Tecla de 
+Finalizar En modo Stand by, Presione esta tecla para apagar 
+música de fondo. 
+En otros modos presionar esta tecla para retornar a 
+modo Stand by.  
+Teclas de 
+lado Ajuste de Volúmen. 
+Teclas En modo Stand by, presione esta tecla para ingresar al 
+Instantáneas interfaz de vista previa de fotos. Presione la tecla otras ves para la toma de fotografías.  
+8 Vodafone Indie                                                   
+Descripción de atajos en la pantalla táctil  
+En el modo Stand-By, haga clic   para insertar la lista de atajos. 
+Descripción De Iconos En La Barra De Estado 
+Icono Descripciones Icono Descripciones 
+ Intensidad de señal de red  Capacidad de batería 
+ SMS no Leídos  MMS no Leídos 
+ Reenvió de Llamadas  En Uso 
+ Manos libres  Alarma Activada 
+ Exterior  Reunión 
+ Vuelo  Silencio 
+ Definido por si Mismo  Bluetooth activado 
+ Modo Itinerante  GPRS  
+ MP3   Radio FM activado 
+ Cronómetro encendido  Mensajes de voz sin escuchar 
+ Nota: 
+En este manual de usuario "presionar" significa presionar la 
+tecla y soltarla. Mantener significa presionar y mantener 
+presionado por 2 segundos o más; "clic" significa hacer clic en 
+el icono deseado en la pantalla táctil con el lápiz del teléfono 
+ móvil. 
+9 Vodafone Indie                                                   
+Insertar y Remover la Tarjeta SIM 
+Inserte una tarjeta SIM valida en su teléfono móvil antes de su uso. Toda la 
+información con respecto a la conexión de red y contactos SIM se guarda en 
+la tarjeta SIM. Para evitar la pérdida y/o el daño de la información guardada 
+en la  tarjeta SIM, por favor no toque la superficie de metal y ponga la tarjeta 
+SIM alejada de fuentes de electricidad o de magnetismo.  
+1. Apague su teléfono móvil, retire la batería y desconecte la unidad de 
+cualquier alimentador de poder externo.  
+2. Inserte su tarjeta SIM en su ranura como se indica en la figura de abajo.  
+ 
+3. Apague su teléfono móvil y retire la batería antes de insertar su tarjeta 
+SIM. 
+4. Siga los pasos inversos para retirar la tarjeta SIM. 
+Insertar y Retirar la Tarjeta de Memoria 
+Apague su teléfono móvil, retire la batería y desconecte la unidad de cualquier 
+alimentador de poder externo.  
+1. Abra el clip en la dirección de la flecha como se muestra en el diagrama.  
+2. Inserte la tarjeta de memoria Micro-SD en la hendidura. 
+3. Cierre el clip. 
+4. Asegure el clip en la dirección de la flecha que se muestra. 
+10 Vodafone Indie                                                   
+          
+5. Siga los pasos inversos para retirar la tarjeta de memoria. Apague su 
+teléfono móvil y retire la tarjeta SIM antes de retirar la tarjeta de memoria.  
+Batería 
+La batería se puede usar después de removerla de la caja de empaque. Para 
+asegurarse de que su batería tenga una vida larga, se aconseja que este 
+descargada totalmente antes de volverla a cargar. Haga esto las tres primeras 
+veces de recarga.  
+Retirar la Batería 
+Siga los pasos detallados a continuación para retirar la batería:  
+1. Deslice la tapa de la batería en la dirección de la flecha del diagrama y 
+retire la tapa.  
+2. Mover la batería en la dirección que indica la flecha y saque la batería.  
+     
+ Nota: 
+Apague su teléfono móvil antes de retirar la batería, de lo 
+ contrario, su teléfono móvil podría sufrir daños. 
+11 Vodafone Indie                                                   
+Instalación de Batería 
+Siga los pasos indicados a continuación para la instalación de la batería:  
+1. Alinee los puntos de contacto de la batería en la dirección de la flecha 
+según lo demostrado, e inserte la batería en la ranura.  
+2. Coloque la tapa de la batería y empuje la misma hasta que se inserte en 
+el teléfono suavemente para cerrarlo, según indica la flecha de la imagen. 
+     
+Cargando la batería del teléfono 
+ 
+1. Retire la cubierta de la interfaz USB en el lado derecho de su teléfono 
+móvil e inserte el cable mini-USB del cargador.  
+2. Conecte el cargador a un enchufe de electricidad AC. Cuando se encienda 
+el teléfono móvil, la barra de capacidad de batería en la parte izquierda 
+superior de la pantalla se pondrá en movimiento indicando que está en 
+proceso de carga. Cuando su teléfono móvil este apagado, el indicador de 
+carga aparecerá en la pantalla durante el proceso de recarga. 
+3. Si el teléfono móvil se utiliza excesivamente sin suficiente capacidad, el 
+indicador de carga no aparecerá inmediatamente en la pantalla del 
+12 Vodafone Indie                                                   
+teléfono cuando se inicie la carga y el teléfono solo se podrá encender 
+después de algunos minutos de iniciada la carga.  
+4. Generalmente toma un promedio de dos horas y media (2 1/2 Horas) para 
+completar el ciclo de cargado. Durante este proceso es normal que el 
+teléfono móvil, batería y cargador se calienten lo cual es normal.  
+5. Por favor desconectar el cargador de su teléfono móvil del enchufe una 
+vez haya completado la carga.  
+ Nota: 
+Coloque su unidad en un lugar ventilado con temperaturas 
+normales durante el proceso de carga. Solo use el cargador 
+original o uno aprobado por el fabricante. Usar cualquier otro 
+tipo de cargador no original puede ser peligroso y viola las 
+condiciones de la garantía. Cargue su teléfono móvil cuando se 
+apague automáticamente o su indicador de carga 
+ automáticamente le indique la necesidad de carga.  
+Encendido y Apagado  
+Presione y mantenga la presión de la tecla roja (finalizar) hasta que aparezca 
+la animación de encendido y/o apagado.  
+Cuando encienda su teléfono móvil, el sistema chequeara automáticamente si 
+se ha insertado una tarjeta SIM o si es usable o no. La siguiente información 
+será desplegada en la pantalla: 
+ Ingrese su Código de Bloqueo: En caso de que haya programado uno. 
+ Ingrese Su Código PIN: En caso de que haya programado un código 
+PIN para su tarjeta SIM. 
+13 Vodafone Indie                                                   
+ Nota: 
+Su tarjeta SIM se bloqueara si usted ingresa el PIN incorrecto 
+por tres veces consecutivas. Para desbloquear su tarjeta  SIM  
+necesitara su código PUK. El código PIN será proporcionado a 
+usted con el código PUK junto con su tarjeta SIM. De no ser 
+este el caso póngase en contacto con su proveedor de servicios. 
+El código PIN de fábrica generalmente es 1234. Por favor 
+ reemplazarlo con su propio #  PIN lo más pronto posible.  
+ Búsqueda: El teléfono móvil buscara Una red disponible.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+14 Vodafone Indie                                                   
+Acceso al Menú Principal  
+Usted puede entrar en el men ú principal a través de dos métodos:  
+ Pulse la tecla  OK o la tecla izuq ierda.  
+ Deslizar el dedo o lápiz tcá til en la pantalla de abajo hacia arriba.  
+Encontrar á cuatro iconos en la pantalla. Haga clic  auq í para entrar en el 
+sitio Comunicación, haga clic  para entrar en Entretenimiento, haga clic 
+ para entrar en Aplicaciones, y haga clic  para volver a la pantalla de 
+espera.  
+Utilizando las teclas de navegación  
+Presione la tecla izuq ierdad/ erecha para entrar C" omunicación,"  
+E" ntretenimiento " o A" plicaciones,"  para cambiar en el men.ú  Pulse el 
+arribaa/ bajo para seleccionar los submensú , pulse tecla derecha para salir del 
+submen ú actual, pulse la tecla apagar/encender para volver a la pantalla 
+inactiva.  
+Usando el lápiz táctil 
+Deslizar el dedo o lápiz tcá til en la pantalla de izquierda a derecha.  
+Despusé  de que el teclado esté bloqueado, puede desblouq earlo presionando 
+la tecla izquierda y la tecla derecha, o deslizamiento, de izquierda a derecha 
+sobre el icono  con el dedo o lpá iz tcá til. 
+ 51 Vodafone Indie                                                   
+Comunicación 
+Llamadas 
+Realizar una llamada 
+Marcación directa 
+En modo de Stand by, haga clic en cualquier lugar en blanco de la pantalla 
+táctil con el lápiz para desplegar el teclado de marcación. Haga clic en las 
+teclas numéricas del número a llamar y después clic  para iniciar la 
+llamada. 
+Marcación de contactos 
+1. En modo de Stand by, haga clic en cualquier lugar en blanco de la pantalla 
+táctil con el lápiz para desplegar el teclado de marcación. 
+2. Clic en  para entrar en "Contactos" seleccionar un número luego 
+presione  para realizar la llamada directamente. 
+Guardar número 
+En la interfaz de marcación, introduzca un número de teléfono del contacto, 
+haga clic en "Opciones" para guardar como nueva entrada, o guardar en la 
+entrada existente. 
+Marcación de llamadas internacionales 
+Para marcar una llamada internacional, haga clic  en forma continua 
+hasta que "+" aparece en la pantalla. Esto le permitirá marcar una llamada 
+internacional. 
+16 Vodafone Indie                                                   
+Llamadas De Emergencia 
+Se pueden hacer llamadas de emergencia sin tarjeta SIM si se encuentra 
+dentro de un área con cobertura de red.  
+Contestar Llamadas 
+Uso de auriculares para contestar 
+Si los auriculares están conectados, puede presionar cualquier tecla para 
+contestar una llamada.  
+Ajuste de Volúmen 
+1. Durante la conversación, presione las teclas de los costados para ajustar 
+el volúmen de la voz. 
+2. En Stand by, presione las teclas de los costados para ajustar el volúmen 
+de las teclas.  
+Manos Libres  
+1. Durante la conversación, presione tecla "Manos Libres" para acceder al 
+modo manos libres.  
+2. Presione la tecla "Teléfono" para volver al modo normal.  
+Opciones de Llamadas 
+Durante la conversación, presione "Opción" para ingresar al menú. Allí se 
+puede ver las siguientes opciones: "En espera", "Finalizar", "Llamada nueva", 
+"Contactos", "Mensaje", "Grabadora de Sonido", "Desactivar sonido", "Activar 
+sonido", "DTMF", "Mostrar teclado". Puede seleccionar "Conferencia" para 
+realizar las siguientes operaciones: "Intercambiar", "Conferencia", "Transferir", 
+"Finalizar una" o "Finalizar todas". 
+17 Vodafone Indie                                                   
+ Nota: 
+La opción de menú marcada con "*" aparece solo bajo 
+condiciones especificas. Llamadas de conferencia requieren 
+ soporte de la red.  
+Mensajes 
+SMS 
+Su teléfono móvil soporta Enhanced Message Service (EMS), lo que le 
+permite insertar fotos, animación, sonido, etc. o el uso de plantillas para crear 
+mensajes cortos.  
+Escribir Mensajes 
+1. Entrar en "Escribir Mensaje" para editar mensajes cortos. 
+2. Presione "Opción" para seleccionar: 
+ Solo enviar: Al seleccionar esta opción muestra un campo vacío a 
+rellenar con el destinatario al que se desea enviar dicho mensaje. 
+ Guardar y Enviar: Opera de la misma manera que solo envió pero el 
+mensaje será guardado en el Buzón de Salida después de ser 
+enviado.  
+ Enviar por Grupo: Puede enviar un mensaje a todos los integrantes 
+de un grupo.  
+ Insertar >>: Permite seleccionar lo siguiente: "Número Agenda", 
+"Nombre Agenda", Insertar favorito" y "Insertar objeto". 
+ Guardar como borrador: Guardar el mensaje en la bandeja de 
+borradores.  
+ Salir 
+18 Vodafone Indie                                                   
+ Nota: 
+Los centros SMS de ciertas ciudades y regiones no soportan 
+mensajes conteniendo más de 160 letras en ingles. Solo los 
+teléfonos móviles con función EMS son capaces de 
+recibir/enviar iconos estáticos, iconos móviles y archivos de 
+ música.  
+Ver mensajes 
+ Seleccionar "Bandeja de entrada" para ver mensajes recibidos. 
+ Seleccionar "Bandeja de salida" para ver mensajes enviados y 
+guardados. 
+ Seleccionar "Borradores" para ver mensajes no enviados. 
+Borrar Mensajes 
+Puede seleccionar "Borrar Bandeja de Entrada", "Borrar Bandeja de Salida", 
+"Borrar Borradores" o "Borrar todas". 
+Configuración 
+Antes de usar la función de mensajes, usted necesita hacer los ajustes 
+relevantes para su configuración:  
+ Configuración de Perfiles: Por favor contacte a su proveedor para 
+obtener el número del centro de servicio. Acceda a "Configuración de 
+Perfiles" y seleccione un perfil. Elija "Editar" para ajustar "Nombres de 
+Perfiles", "Direcciones SC", "Periodo de Validez" y "Tipo de mensaje". 
+ 
+19 Vodafone Indie                                                   
+ Nota: 
+Las funciones "Período de Validez", "Fax" y "Pagina" 
+ requieren de soporte de red. 
+ Configuración General: Seleccione Activar/Desactivar "Informe de 
+Entrega" y "Ruta Respuesta". Cuando la función de Informe de entrega 
+esta activada, el centro SMS le dará un reporte de status sin importar 
+si la otra parte recibió su mensaje o no. De esta forma usted 
+convenientemente sabrá si la otra persona recibió su mensaje o no.  
+ Estado de memoria: Despliega el espacio de la memoria para SMS 
+en la tarjeta SIM o Teléfono.  
+ Almacenamiento Preferencial: Seleccione "SIM" o "Teléfono" como 
+el sitio preferencial de almacenamiento para SMS.  
+Contador de SMS  
+Usted puede visualizar el número de mensajes "Enviados" y "Recibidos".  
+MMS 
+MMS indica Servicio de Mensajes Multimedia que se muestra en la función 
+multimedia y permite a los usuarios enviar mensajes que incluyen objetos 
+multimedia (texto, imágenes, audio, etc.).  
+ Nota: 
+MMS requiere soporte de red por eso asegúrese que su tarjeta 
+SIM soporte el servicio de MMS antes de su uso, o sino consulte 
+con su proveedor de servicios. Asegúrese de completar las 
+siguientes operaciones antes de enviar MMS: ha programado el 
+20 Vodafone Indie                                                   
+número del centro de servicio; ya completo la configuración 
+WAP. Si su MMS es muy grande, tal vez el teléfono móvil no sea 
+ capaz de enviar o recibir el mensaje.  
+Su teléfono móvil soporta MMS, después de los ajustes necesarios, usted 
+podrá enviar y recibir MMS. 
+Escribir Mensajes 
+1. Acceder a "escribir mensajes" para editar: 
+ Para: Puede seleccionar "Añadir número" o "Añadir correo". 
+ Cc: Si la red soporta esta función, usted puede añadir más recipientes, 
+la operación es la misma que la anterior.  
+ Cco: Si su proveedor de servicio se lo permite puede añadir más 
+recipientes. La operación es la misma que la anterior.  
+ Asunto: El asunto puede ser vacío. 
+ Editar contenido: En el compositor MMS, usted puede editar 
+contenidos. Presione "Opción" para seleccionar "Listo", "Método de 
+introducción", "Añadir Imagen", "Añadir Audio", "Añadir Vídeo", "Añadir 
+adjunto", "Añadir diapositiva antes", "Añadir diapositiva después", 
+"Añadir texto favorito", "Tiempo de diapositivas", "Vista previa". 
+2. Después de la edición puede seleccionar "Solo Enviar", "Guardar y enviar", 
+"Guardar en borrador", "Opciones de Envió" o "Salir". 
+Ver mensajes 
+ Seleccionar "Bandeja de entrada" para ver mensajes recibidos. 
+ Seleccionar "Bandeja de salida" para ver mensajes enviados y 
+guardados. 
+ Seleccionar "Borradores" para ver mensajes no enviados. 
+21 Vodafone Indie                                                   
+Plantillas 
+Su unidad guarda 2 mensajes de multimedia predeterminados. Presione 
+"Opción" para seleccionar "Vista", "Escribir Mensaje", o "Propiedades". 
+Configuración de Mensajes 
+Antes de usar la función de MMS, debe de ejecutar unos ajustes necesarios 
+en su configuración. 
+Componer 
+Podría ajustar  "Modo de Creación", "Cambiar Tamaño De Imagen" y "Firma 
+Automática". 
+Enviar 
+Debería fijar "Periodo de Validez", "Reporte de Entrega", "Leer Reporte", 
+"Prioridad", "Tiempo de diapositiva" y "Tiempo de Entrega". 
+Recuperar 
+Puede definir "la red local", "Roaming", "Leer Informe" y "Informe de entrega". 
+Filtro 
+Puede programar "Anónimo" y "Publicidad". 
+Perfil de servidor 
+En general la configuración por defecto será la de Vodafone. 
+Estado de memoria 
+Puede chequear el estado de la memoria. 
+ 
+22 Vodafone Indie                                                   
+ Nota: 
+El uso del "Informe de Entrega" y "Anónimos" depende de los 
+servicios que brinda su proveedor en la red. Para más detalles 
+consulte con su proveedor de servicio. Su teléfono móvil tiene 
+reservado un espacio usable para guardar MMS. Se puede 
+llenar todo este espacio si guarda muchos mensajes multimedia. 
+Si su teléfono le informa que la memoria está llena debe de 
+borrar algunos de los mensajes y cerciórese de que siempre 
+ tenga espacio para recibir mensajes. 
+Buzón de voz 
+Cuando no es capaz de contestar una llamada, puede dejar que la otra 
+persona deje un mensaje para usted por medio de un buzón de voz. Después 
+puede acceder al buzón de voz y escuchar los mensajes que le dejaron.  
+Puede programar hasta dos números de buzón de voz.  
+En el modo de Stand By, haga clic en cualquier espacio de la pantalla para 
+que se despliegue la pantalla de marcación. Presione la tecla "1" para marcar 
+el número de buzón de voz que ya tiene programado en esa tecla.  
+ Nota: 
+Asegurase de solicitar este servicio antes de su uso pues 
+ requiere soporte de la red.  
+Mensaje de difusión  
+El mensaje de difusión indica el mensaje público enviado por el operador de 
+red. A través de mensajes de difusión, usted podría recibir la información 
+sobre el tiempo, taxis, hospitales, etc.  
+23 Vodafone Indie                                                   
+ Nota 
+Los mensajes de difusión necesitan ser soportados por el 
+servicio que brinda el proveedor de red. Para información 
+ pertinente, por favor consulte con su proveedor local.  
+Contactos 
+En esta función puede guardar la siguiente información de los contactos: 
+Nombre, Número, Número de casa, etc. Los números pueden ser guardados 
+en la tarjeta SIM o en la memoria de su teléfono.  
+En modo Stand by, use el lápiz táctil para ingresar al menú principal en 
+"Contactos" y allí elegir de las siguientes funciones: 
+Búsqueda Rápida 
+Use el lápiz táctil y haga clic en la primera letra del contacto deseado en la 
+pantalla para iniciar una búsqueda rápida o ver todos los contactos de su 
+agenda.  
+Búsqueda de Contacto 
+Introduzca el nombre, presione búsqueda para encontrar la entrada 
+correspondiente.  
+Añadir un Nuevo Contacto 
+Puede añadir una nueva entrada a su "Tarjeta SIM" o a la memoria de su 
+"teléfono móvil". 
+Si quiere añadir un nuevo contacto a su tarjeta SIM solo necesita introducir el 
+"Nombre" y el "Número".  
+24 Vodafone Indie                                                   
+Si quiere añadir un nuevo contacto a su teléfono, aparte de "Nombre", 
+"Número", "Número de Casa", etc., necesita editar lo siguiente:  
+Grupos de Llamadas 
+Añadir el número de teléfono a diferentes grupos de contactos. 
+Asociar Fotos 
+Incorporar una foto personalizada para el contacto actual. Seleccione la foto 
+elegida desde el teléfono o tarjeta micro-SD, la cual tendrá una vista previa. 
+Asociar Sonidos 
+Seleccione el tono ó melodía elegido desde el "teléfono" o "tarjeta micro-SD".  
+Grupos de Llamadas 
+Su teléfono móvil soporta las funciones de Grupo de Llamantes Amigos 
+lo que le permite seleccionar "Ver Miembro", "Tono de Timbre de grupo", "Foto 
+de Grupo", "Añadir miembro", "Eliminar miembro", "Renombrar" o "Eliminar 
+todos".  
+ Nota: 
+Solo debería añadir o borrar números que estén guardados en 
+ la memoria del "teléfono móvil". 
+Copiar Todo 
+Seleccionar desde "tarjeta SIM" para copiar todos los contactos de su tarjeta 
+SIM a su teléfono móvil o seleccionar lo contrario, Copia todos los contactos 
+de su teléfono a su tarjeta SIM.  
+25 Vodafone Indie                                                   
+ Nota: 
+Al copiar de su teléfono a su tarjeta SIM, solo se copiarán el 
+ nombre y el número.  
+Borrar Todas las Entradas 
+Seleccione "desde SIM" borrar todas las entradas guardadas en su tarjeta, y 
+seleccione "Desde teléfono" para borrar todas las entradas guardadas en su 
+teléfono. 
+Memoria Preferencial 
+Puede configurar un punto de almacenaje preferencial para sus números.  
+Información 
+Número de Propio 
+Puede guardar 2 números como números Propios si esto es soportado por su 
+proveedor de red. 
+ Nota: 
+Cualquier cambio que provenga del uso de esta función no 
+ afectara a los números guardados en su tarjeta SIM. 
+Estado de Memoria de su Tarjeta SIM 
+Puede chequear el estado de las dos memorias, de teléfono y de tarjeta SIM. 
+26 Vodafone Indie                                                   
+Llamadas 
+"Llamadas Perdidas", "Llamadas Realizadas", y "Llamadas Recibidas" en el 
+registro de llamadas. Si los registros están llenos los registros más antiguos 
+serán remplazados por los más recientes.  
+En modo de Stand By, presione la Tecla OK para ingresar al menú principal y 
+luego seleccione "Llamadas".  
+27 Vodafone Indie                                                   
+Entretenimiento 
+Música 
+Reproductor de Audio 
+1. Para acceder ir a Menú Reproductor de audio y seleccionar la 
+softkey "Opción" para seleccionar "Configuración": 
+ Lista de reproducción: Seleccionar el archivo de "teléfono" o "tarjeta 
+de memoria". 
+ Música de Fondo: Seleccionar "Activar" o "Desactivar" Función. 
+ Pantalla de letras: Seleccionar "Activar" o "Desactivar" Función. 
+ Repetir: Seleccionar "Activar" o "Desactivar" "una", o "todas".  
+ Aleatorio: Seleccionar "Activar" o "Desactivar". 
+ Ecualizador: Seleccionar "Normal", "Clásica", "Rock", "Bass", "Danza 
+Pop", o "Treble".  
+ Salida estéreo BT: Seleccionar "Activar" o "Desactivar". 
+ Auriculares estéreos BT: Seleccionar "Activar" o "Desactivar". 
+2. "Presionar"  "Lista de reproducción" para ver la lista de archivos en 
+el teléfono o en la tarjeta de memoria.  
+3. Presionar "Opción"  "Play" para reproducir el archivo de audio 
+elegido.  
+ Nota: 
+Los archivos de audio deben ser guardados en la carpeta "Mí 
+ Música" de la tarjeta de memoria del teléfono.  
+28 Vodafone Indie                                                   
+Seleccione un archivo de audio y presione "Opción" "Reproducir":  
+ Presione la tecla de navegación arriba para ingresar en "Configuración 
+de Reproductor", presione "Tecla abajo" para ver su lista de canciones, 
+después presione tecla OK para pausa/seguir.  
+ Presione teclas de costado para ajustar volúmen.  
+ Presione Tecla Derecha para reproducir el siguiente archive y Tecla 
+Izquierda para reproducir archive previo. 
+También puede efectuar las operaciones usando el lápiz:  
+ Clic  para reproducción. 
+ Clic  pausa. 
+ Clic  ajustar volúmen. 
+ Clic  para escuchar la siguiente pista; clic  para escuchar la 
+canción anterior. 
+ Clic  para cambiar el modo de repetición. 
+ Clic  para ingresar al menú de configuración. 
+ Nota: 
+ Por favor seleccionar volúmen medio al escuchar música.  
+Radio FM 
+ Nota: 
+Es posible que su teléfono móvil no soporte esta función, solo se 
+podrá escuchar la radio si los auriculares están conectados a la 
+ unidad. 
+29 Vodafone Indie                                                   
+ Lista de Canales: Edita hasta 9 canales. 
+ Entrada Manual: Introduce manualmente un canal.  
+ Preestablecer búsqueda automática: Busca canales 
+automáticamente.  
+ Configuración: Después puede accionar las siguientes opciones 
+"Música de Fondo", "Altavoz", "Formato de Grabación" y "Guardar 
+Grabaciones". 
+ Almacenamiento Grabac.: Grabar el canal actual.  
+Grabador de Sonido 
+Los archivos grabados serán guardados en este menú. Presione "Opción" 
+para seleccionar:  
+ Almacenamiento Grabac.: Grabar el canal actual.  
+ Formato de archivo: Permite seleccionar entre varios tipos de 
+archivos.  
+Juegos 
+Su teléfono móvil le provee un juego. Acceda al menú y vea as instrucciones 
+de operación.  
+Vídeo 
+Cámara 
+1. Seleccionar "Cámara" para acceder al interfaz de vista previa, luego 
+presione "Opción": 
+ Álbum: Ingrese Álbum par ver las fotos que acaba de tomar.  
+30 Vodafone Indie                                                   
+ Ajustes de Cámara: Ajuste "Sonido de Diafragma", "EV", "Banding", 
+"Cronometro de lapso", y "Fotos Continuas". 
+ Configuración de Imágenes: Ajuste "tamaño de imagen" y "Calidad 
+de imagen". 
+ Balance de Blancos: Seleccione "Auto", "Luz del Día", "Tungsteno", 
+"Fluorescente", "Nublado", o "Incandescente". 
+ Modo de Escena: Seleccione "Auto" o "Noche". 
+ Configuración de efectos: Seleccione "Normal", "Escala de Grises", 
+"Sepia" "Sepia Verde", "Sepia Azul", "Invertir Color", "Invertir Grises " o 
+"Contraste". 
+ Memoria: Seleccione "Teléfono" o "Tarjeta de Memoria". 
+ Restaurar Configuración de Fabrica: Restaura a la configuración de 
+fabrica.  
+2. Presione "Tecla OK" para tomar fotos después de hacer los ajustes 
+anteriores: 
+En el interfaz de vista previa, puede realizar las siguientes operaciones con el 
+lápiz:  
+ Clic  para ajustar parámetros EV; 
+ Clic  para ajustar el enfoque de la cámara; 
+ Clic FX para cambiar los efectos especiales; 
+ Clic  para retardar el tiempo del obturador; 
+ Clic  para elegir "toma de fotos continua."; 
+ Clic  ajustar "calidad de imagen"; 
+ Clic  ajustar "tamaño de imagen"; 
+ Clic  para completar "Captura" y preguntar "Guardar Imagen".  
+31 Vodafone Indie                                                   
+ Nota: 
+El enfoque de la cámara no puede ser ajustado cuando el 
+ tamaño de la imagen esta puesto al máximo.  
+Reproductor de Vídeo 
+Seleccionar "Reproductor de Vídeo" para acceder a la lista de archivos de 
+vídeo guardados en la memoria. Presione Tecla arriba/abajo para seleccionar 
+el archivo a reproducir, luego presione "Opción" o use el lápiz para 
+seleccionar Vídeo. Puede realiza las siguientes operaciones: "Play", 
+"Adelanto", "Cambiar de Nombre", "Borrar", "Borrar todos los archivos", 
+"Ordenar", "Memoria". 
+Seleccionar vídeo y presionar "Opciones" para ajustar: 
+Seleccionar vídeo y puede realizar las siguientes operaciones con el lápiz: 
+ Clic  o "Play" para reproducir un vídeo. 
+ Clic  o "Pausa" para pausar la reproducción. 
+ Clic  para controlar el proceso de reproducción.  
+ Clic "Stop" para detener la reproducción. 
+ Clic  para capturar imagen. 
+ Clic "Atrás" para regresar al interfaz previo. 
+Álbum 
+Seleccionar "Álbum" para visualizar las fotos tomadas u otras fotos guardadas 
+en la memoria.  
+32 Vodafone Indie                                                   
+ Nota: 
+Se puede visualizar las fotos en el "Álbum" cuando han sido 
+guardadas en la carpeta de fotos de su teléfono o tarjeta de 
+ memoria.  
+Grabador de Vídeo 
+1. Seleccionar "Grabador de Vídeo" para acceder a la interfaz de vista 
+previa, Luego presione "Opción" para llevar a cabo las siguientes 
+operaciones:  
+ Función Reproducción: Ingresar a "Reproductor de Vídeo"  para 
+visualizar los vídeos grabados. 
+ Configuración de Grabador de Vídeo: Ajustar "Balance de Blanco", 
+"EV", "Modo de Noche" y "Bandung". 
+ Ajuste De Vídeo: Ajuste "Calidad de Vídeo", "Grabación de Audio" y 
+"Formato".  
+ Ajuste de Efectos: Seleccione "Normal", "Escala e Grises", "Sepia", 
+"Verde Sepia", "Azul Sepia", "Invertir Colores", "Invertir Gris" o 
+"Contraste". 
+ Restaurar Configuración: Restaura configuración de fabrica. 
+2. Después de los ajustes anteriores presione OK para grabar vídeos.  
+Bajo el interfaz de grabación de vídeos puede usar su lápiz de contacto para 
+realizar las siguientes operaciones:  
+ Clic  para grabar vídeo Nuevo. 
+ Clic  para pausa. 
+33 Vodafone Indie                                                   
+ Clic "Stop" detener grabado. 
+ Presione "atrás" para regresar al interfaz previo. 
+ Nota: 
+Se puede visualizar los vídeos desde "Reproductor de Vídeos" o 
+desde la carpeta de "Vídeo" en "Administrador de archivos" 
+ de su teléfono o tarjeta de memoria.  
+Vodafone Live! 
+Puede visitar la página de inicio. Si no modifica el página WAP, la web por 
+defecto será usada. 
+34 Vodafone Indie                                                   
+Aplicaciones 
+Configuración 
+Calibración del lápiz  
+Si usted considera que su teléfono móvil no responde correctamente después 
+de utilizar el lápiz táctil para hacer clic en las opciones o iconos, debe calibrar 
+la pantalla táctil. Haga clic  con el lápiz táctil hasta que la calibración se ha 
+completado. Si la calibración no es todavía precisa, asegurándose de hacer 
+clic en el centro de cada vez, usted debe referirse a la restauración de la 
+configuración de fábrica. 
+Perfiles de Usuario 
+Su teléfono móvil le proporciona múltiples perfiles, que permite que usted 
+realice ajustes personalizados a: "Aviso a llamada entrante", "Alarma", "Aviso 
+de mensaje", "Tono del teclado", "Tono de aviso" y "Activar volúmen" según 
+sus diversas necesidades. Los perfiles opcionales incluyen "Normal", 
+"Silencio", "Reunión", "Exterior", "Vuelo" y también le permite crear sus 
+propios perfiles con detalles particulares.  
+Presione "Opción" y seleccione "Activar" para empezar a usar el perfil 
+seleccionado.  
+Configuración de Teléfono 
+Característica de pantalla 
+Bajo esta selección se pueden hacer los siguientes ajustes "Fondo de 
+imagen", "Fecha", Hora", "Nombre de Operador", "Teclado designado", y 
+"Atajos de escritorio". 
+35 Vodafone Indie                                                   
+Vibración de tecla 
+Usted puede "Activar" o "Desactivar" esta función. Cuando esta función esta 
+"activada", su teléfono móvil vibrara al momento de que presione una tecla o 
+haga clic en un Icono.  
+Luz de de fondo de LCD 
+Puede programar la duración e intensidad de la luz de fondo de la pantalla 
+LCD. 
+Hora y Fecha 
+Puede ajustar la "Fecha", "Tiempo" y "Formato de Fecha".  
+Encen/Apag. Energía progr.  
+Usted puede editar hasta 4 grupos de tiempos de Encendido/Apagado pre 
+programado. Presione "Editar" para ajustar "Estado", "Tipo" y "Tiempo".  
+ Nota: 
+Los tiempos que se programen tienen que ser diferentes para 
+ evitar conflictos. 
+Bloqueo auto. teclado 
+Para impedir operaciones no deseadas resultantes de presionar teclas por 
+accidente o error.  
+Presione "Tecla deslizante Izquierda" y "Tecla deslizante Derecha", o deslice 
+su dedo o lápiz por la pantalla de izquierda a derecha para desbloquear el 
+teclado.  
+ 
+36 Vodafone Indie                                                   
+Modo Ahorro de Energía 
+Usted puede activar y desactivar la función de ahorro de energía.  
+Idioma 
+Usted puede programar el lenguaje de su teléfono móvil. Puede fijar el idioma 
+como "Español", "Francés" o "Ingles". 
+Escribir a mano  
+Puede ajustar "Velocidad del lápiz" y "Color de lápiz". 
+Actualización auto. fecha y hora 
+Presione "Tecla OK" para activar o desactivar esta función.  
+Configuración de Llamadas 
+Llamada en Espera 
+Después que esta función esta activada, el sistema le informara si hay otra 
+llamada entrante. Por favor contacta con su proveedor de servicio para más 
+detalles.  
+Desvío de Llamadas 
+Esta función le permite desviar una llamada entrante a otro número 
+designado.  
+ Nota: 
+Esta función requiere soporte de la red por eso por favor 
+ contacte con su proveedor de servicio para más detalles. 
+37 Vodafone Indie                                                   
+Se puede seleccionar: "Desviar llamadas de voz", "Desviar si 
+ocupado", "Desviar si no hay respuesta", "Desviar si no accesible", "Desviar 
+llamadas de datos" ó "Cancelar desvíos".  
+Si no necesita esta función puede seleccionar la opción "Cancelar  desvíos". 
+Marcación Rápida 
+ Permitir marcación rápida: Activar o desactivar esta función. 
+ Definir número: Es posible editar 8 números de teléfonos para las 
+teclas numéricas del 2~9. En modo Stand By, presione y mantenga las 
+teclas numéricas 2~9 para el marcado de los números 
+correspondientes.  
+Definir tecla de repuesta 
+Puede programar la "Tecla de Envió" o "Cualquier Tecla" para responder las 
+llamadas entrantes.  
+Lista Negra 
+Puede editar la Lista Negra. Después de seleccionar "On" bajo la función de 
+Modo, las llamadas entrantes de los números en la lista negra, serán 
+rechazadas.  
+Marcación auto. 
+Esta función puede ser Activada/Desactivada por usted. Si la otra persona no 
+responde su llamada y selecciona activar la función, su teléfono móvil volverá 
+a marcar el número automáticamente después de un tiempo. Marcara el 
+número automáticamente hasta 10 veces. 
+ 
+38 Vodafone Indie                                                   
+Configuración Red 
+Selección de Red 
+La función de selección de red cuenta con tres modos: "Búsqueda nueva", 
+"Seleccionar red" y "Modo de selección". En "Modo de Selección", usted 
+puede elegir entre las opciones de "Automático" o "Manual". 
+Conexión GPRS  
+Presione tecla de "OK" para cambiar entre las opciones de "Cuando es 
+Necesario" o "Siempre". 
+Configuración de Seguridad  
+Bloqueo de SIM  
+ Si "Bloqueo de SIM" esta "Apagado", seleccione "Encender" para 
+ingresar código PIN para desbloquear su tarjeta SIM. Necesita 
+ingresar el código correcto para desbloquear su tarjeta SIM cuando 
+encienda su teléfono móvil la siguiente vez.  
+ Si "Bloqueo de SIM" esta activado "Encendido", seleccione "Apagado" 
+para cancelar esta protección.  
+ Nota: 
+Su tarjeta SIM será bloqueada si introduce tres veces 
+consecutivas de forma errónea el número PIN. En caso de que 
+esto suceda necesitara el código PUK para desbloquear su 
+tarjeta SIM.  
+El código PIN, código PUK y tarjeta SIM pueden ser provistas 
+todas juntas, en caso de no ser así, póngase en contacto con su 
+proveedor de servicio de red. El PIN  de fábrica usualmente es 
+39 Vodafone Indie                                                   
+1234. Por favor cambiar de código de seguridad a la mayor 
+ brevedad posible. 
+Bloqueo de teléfono 
+La función de bloqueo de teléfono podría proteger y prevenir el uso ilegal de 
+su teléfono móvil.  
+ Seleccionar "Encendido" para ingresar la contraseña. Necesita 
+introducir la contraseña correcta para desbloquear el teléfono la 
+siguiente vez.  
+ Seleccionar "Apagar" para cancelar la protección.  
+ Nota: 
+La contraseña por defecto es 0000. Por favor Cambie a su 
+ propia contraseña lo antes posible. 
+Restricción de Llamadas 
+ Nota: 
+Contacte a su proveedor de servicio para detalles pues algunos 
+proveedores pueden no ofrecer el servicio de restricción de 
+llamadas. Al aplicar para este servicio, recibirá un código de 
+cuatro dígitos de parte de su proveedor para activar este 
+ servicio.  
+Presione "Restricción de Llamadas" para seleccionar las siguientes opciones:  
+ Todas las Llamadas Salientes: Seleccionar "Activar/Desactivar o 
+Estado de solicitud". 
+40 Vodafone Indie                                                   
+ Llamadas Internacionales: Mismos pasos que el anterior. 
+ Internacionales Excepto PLMN propia: Mismos pasos que el 
+anterior. 
+ Todas las Llamadas Entrantes: Mismos pasos que el anterior. 
+ Modo Itinerante (Roaming): Mismos pasos que el anterior. 
+ Cancelar todas: Introducir la contraseña para cancelar la restricción 
+de llamadas.  
+ Cambio de contr. restricción: Introduzca contraseña antigua e 
+introduzca una nueva.  
+Marcación Fija 
+Si su tarjeta SIM soporta esta función, solo los números elegidos podrán ser 
+marcados desde su teléfono móvil una vez activada esta función. Su teléfono 
+móvil solo permitirá la marcación de los números incluidos en la lista de 
+números permitidos.  
+ Nota: 
+Se necesita introducir el código PIN2 para activar o desactivar 
+la función de marcación fija. Contacte a su proveedor de 
+servicio para obtener el código. Unas vez que la función de 
+marcación fija es activada, solo los números que introduzca en 
+la lista de Marcación Fija serán desplegados en la lista de 
+ contactos de su teléfono móvil.  
+Cambiar Contraseña 
+Usted puede cambiar el "PIN1", "PIN2" y "Contraseña de bloqueo de 
+teléfono". 
+41 Vodafone Indie                                                   
+ Nota: 
+La longitud de su contraseña tiene que ser de más de 4 dígitos y 
+ menos de 8 dígitos.  
+Restaurar Configuración De Fábrica 
+Acceda a "Restaurar Configuración de Fábrica". Tiene que introducir el código 
+de desbloqueo correcto y después presionar "OK" para Restaurar 
+Configuración de Fábrica. 
+Organizador 
+Calendario 
+Seleccione "Calendario" y se desplegara el Calendario del mes actual en la 
+pantalla, la fecha del día será marcada por un recuadro de color especial. 
+Puede presionar las teclas de navegación o hacer un clic en las flechas de 
+dirección que aparecen en la pantalla para navegar por las fechas y la 
+información de la pantalla cambiara como consecuencia.  
+Alarma 
+Su teléfono móvil puede ser programado con hasta 8 alarmas y a su vez 
+soporta alarmas apagadas.  
+Calculadora 
+Su teléfono móvil está provisto de una calculadora para hacer cálculos 
+simples. Puede sumar, restar, multiplicar o dividir, así como también puede 
+seleccionar M+, M-, MR, y MC para hacer operaciones relevantes. 
+42 Vodafone Indie                                                   
+Descripción de  M+, M-, MR y MC 
+ MR: Leer los datos guardados en la memoria. 
+ MC: Borrar los datos de la memoria. 
+ M+: Sumar los datos nuevos a los datos guardados en la memoria y 
+guardar los resultados en la memoria actual.  
+ M-: Restar los nuevos datos de las sumas guardadas en la memoria. Y 
+guardar el resultado en la memoria.  
+ Nota: 
+La calculadora está limitada a precisiones por eso podría 
+ generar errores.  
+Cronómetro  
+Cronómetro Típico 
+Se puede seleccionar "Tiempo Dividido", "Tiempo por fase" o "Ver registro". 
+Tiempo N-way  
+Pulse 4 diferentes teclas de navegación para grabar los diferentes plazos, 
+respectivamente. 
+ Nota:  
+Presione la tecla de navegación izquierda para detener la 
+medida del tiempo, presione y mantenga la tecla para borrar 
+ todos los record.  
+43 Vodafone Indie                                                   
+Conversor 
+Conversor de unidades 
+Su teléfono móvil está provisto con funciones de conversión de unidades de 
+medidas de peso y longitud. Introduzca el valor a convertir como: Kilos a 
+Libras, de Kilos a Onzas, de Kilómetros a Millas y de Metros a Yardas.  
+Convertidor de divisas 
+Su teléfono móvil está provisto con funciones básicas referentes a la 
+conversión de Monedas.  
+Hora Internacional 
+Presione la tecla de navegación Izquierda/derecha para visualizar las horas 
+en diferentes ciudades del mundo.  
+Archivos 
+Entre en "Archivos" para mostrar "Teléfono" y "Tarjeta de memoria". El Total y 
+el espacio de memoria libre será mostrado en la parte superior de la pantalla. 
+Presione "Opciones" para seleccionar: 
+ Abrir: Lista los directorios y archivos bajo el directorio raíz. 
+ Crear Carpeta: Crea una nueva carpeta y edita el nombre de la 
+misma. 
+ Formatear: Formatear la memoria seleccionada. Esto borrará todos 
+los archivos guardados en la memoria seleccionada. 
+44 Vodafone Indie                                                   
+Conectividad 
+Servicios Vodafone (STK)  
+Los servicios de tarjeta STK son servicios de valor añadido ofrecidos por su 
+proveedor de servicios de red.  
+Su teléfono móvil soporta servicios STK. Si su tarjeta SIM y su proveedor de 
+red no soportan este servicio, esta función no puede ser usada.  
+Vodafone Live! 
+Su teléfono móvil soporta Wireless Application Protocol (WAP). 
+Usted tiene acceso a los servicios proporcionados por su proveedor de red. 
+Le permite obtener información sobre noticias, previsiones meteorológicas, 
+los vuelos de líneas aéreas, etc. Estos servicios están especialmente 
+diseñados para el teléfono móvil, y son proporcionadas por el proveedor WAP. 
+ Nota: 
+El servicio WAP requiere soporte de red. Por favor, consulte con 
+su operador de red o proveedor de servicios para obtener más 
+información sobre la usabilidad y la tarifa para el servicio WAP. 
+Su proveedor de servicios le dará instrucciones sobre cómo 
+ utilizar este servicio. 
+ Página de inicio: Se puede visitar la página de inicio.  Si no tiene 
+preestablecido un sitio WAP, el fabricante incluirá uno por defecto. 
+ Favoritos: Seleccionar "Favoritos" en pantalla y a continuación la 
+tecla "Opción", muestra lo siguiente submenú: "Ir a", "Editar", "Enviar", 
+"Eliminar", "Eliminar Todo" o "Añadir favorito". 
+45 Vodafone Indie                                                   
+ Nota: 
+Antes de su uso, por favor asegúrese de que su lista de 
+marcadores no está vacía. Para evitar esto, algunas páginas 
+ WAP han sido predefinidas para usted en su teléfono móvil. 
+ Páginas Recientes: Muestra las últimas páginas que se han visitado. 
+ Páginas sin conexión: Las páginas guardadas en el teléfono móvil se 
+pueden ver sin conexión durante un período. 
+ Introducir dirección: Introducir dirección URL y pulse "Aceptar" para 
+terminar. A continuación puede visitar el sitio WAP. 
+ Bandeja de entrada: Compruebe la información de servicio enviado 
+por su proveedor de servicios. 
+ Configuración: Se puede seleccionar "Opciones del navegador", 
+"Mensajes de servicio", "Borrar Caché", "Borrar cookies" o 
+"Certificados de confianza". 
+Bluetooth 
+La función Bluetooth le permite la comunicación y el intercambio de datos con 
+otros dispositivos Bluetooth, y escuchar música o hablar por medio del modo 
+manos libres por medio de los auriculares Bluetooth.  
+No tiene que poner los dispositivos juntos ya que su teléfono móvil y otros 
+dispositivos Bluetooth se comunican por medio de ondas de radio. Trate de 
+asegurarse que la distancia entre dispositivos no sobrepase los 10 metros. A 
+una distancia más larga, la conexión puede sufrir interferencias por obstáculos u 
+otros dispositivos electrónicos.  
+ 
+46 Vodafone Indie                                                   
+Activar 
+Activar/Desactivar la función de Bluetooth. Usted puede ver el icono de 
+Bluetooth en la barra de status cuando esta activado. 
+Consultar dispositivo de Audio 
+Búsqueda de auriculares Bluetooth, etc. 
+Mi Dispositivo 
+En "Mi Dispositivo", se puede visualizar los dispositivos que encontró en su 
+última búsqueda. Si no hay ningún dispositivo Bluetooth, el mensaje de 
+"Vació" será desplegado.  
+1. Presione "Opción" "Consultar nuevo dispositivo" para buscar 
+dispositivos nuevos.  
+2. Seleccione un dispositivo después que su equipo realice una búsqueda de 
+dispositivos Bluetooth, después elija "Conectar" para conectar su teléfono 
+con el dispositivo.  
+3. Durante el proceso de conexión introduzca su clave secreta para que se 
+complete la conexión exitosamente.  
+4. Una vez conectado, ya se puede comunicar con el otro dispositivo.  
+ Nota: 
+Algunos dispositivos tales como auriculares Bluetooth, podrían 
+tener un código de seguridad fijo "0000". Necesitará introducir 
+esta clave para que su teléfono se pueda conectar con estos 
+ dispositivos.  
+ 
+47 Vodafone Indie                                                   
+Dispositivo Activo 
+Bajo "Dispositivos activos", usted puede visualizar los dispositivos Bluetooth 
+conectados exitosamente. 
+Configuración 
+Efectuar los siguientes ajustes para la función de Bluetooth:  
+ Visibilidad: Activar/Desactivar esta función. Si elije desactivar, otros 
+dispositivos con Bluetooth no podrán buscar su teléfono móvil.  
+ Cambiar Nombre de Dispositivo: Cuando otros dispositivos 
+Bluetooth realizan una búsqueda se mostrará el nuevo nombre de su 
+teléfono móvil.  
+ Autenticación: Activar/Desactivar esta función. 
+ Ruta de Audio: Seleccionar "Mantener teléfono" o "Reenviar a 
+auriculares BT".  
+ Configuración FTP: Seleccionar "Carpeta compartida" o "Derechos 
+de acceso". 
+Acerca de 
+Puede averiguar más información relevante relacionada a la función 
+Bluetooth. 
+ Nota: 
+Si la tarjeta de memoria no está insertada en su equipo, los 
+archivos recibidos serán guardados automáticamente en la 
+ carpeta de su teléfono móvil.  
+48 Vodafone Indie                                                   
+Cuenta de datos 
+Datos de GSM 
+En "Catos de GSM, la lista de datos de cuentas se muestra. Seleccione una 
+cuenta, pulse "Editar" para editar los siguientes temas: "Nombre de cuenta", 
+"Número", "Nombre de usuario", "Contraseña", "Tipo de línea", "Velocidad", 
+"DNS".  
+GPRS 
+En la "GPRS", la lista de datos de cuentas se muestra Seleccione una cuenta, 
+pulse "Editar" para editar los siguientes temas: "Nombre de cuenta", "APN", 
+"Nombre de usuario", "Contraseña", "Tipo autent". 
+Contador GPRS 
+Compruebe el flujo de datos sobre el uso de la red GPRS. Puede ver "Último 
+enviado", "Último Recibido", "Todo enviado", "Todo recibido" o "Restablecer 
+contador". 
+49 Vodafone Indie                                                   
+Conexión con el PC 
+Tarjetas de Memoria 
+La tarjeta de memoria indica que su teléfono móvil cuenta con más  
+capacidad de almacenaje de datos.  
+ Cuando apague su teléfono móvil, conéctelo con su PC por medio del 
+cable de datos USB. De este modo su teléfono móvil puede ser usado 
+como un disco de datos.  
+ Al encender su teléfono móvil, conéctelo con su PC por medio del 
+cable de datos USB. Si la tarjeta de memoria esta insertada, puede 
+seleccionar la función de almacenaje masivo. 
+Cámara Web 
+Su teléfono móvil soporta el uso de cámara Web, por tanto puede ser usado 
+como una cámara Web USB.  
+ Al encender su teléfono móvil, conéctelo con su PC por medio del 
+cable de datos USB. En este caso, su teléfono móvil mostrara 
+"Webcam".  
+ Seleccione "Webcam", presione "OK", y un interfaz de pantalla entera 
+aparecerá. Esto indica que su teléfono móvil ya puede ser usado como 
+una cámara Web. 
+ Su computadora detectará nuevos dispositivos de vídeo. Hasta ese 
+momento puede usar su cámara como una cámara Web. 
+ Presione la tecla de "Encendido/Apagado" o directamente desconecte 
+el cable USB para salir de la función de cámara.  
+50 Vodafone Indie                                                   
+Método de Introducción de Datos 
+Descripción General 
+Su teléfono móvil soporta la función de método de escritura a mano. Este 
+método incluye la entrada de: eZi EN, eZi en, eZi ES, eZi es, eZi FR, eZi fr, 
+ABC, abc, Es ABC, Es abc, Fr ABC, Fr abc método de entrada, 123 y la 
+entrada del método de símbolos. 
+Bajo la función de método de escritura, es posible introducir la información de 
+las dos siguientes maneras: 
+ Usando el lápiz 
+ Haciendo clic en el teclado virtual 
+Definición del Teclado 
+Teclado Virtual 
+Bajo interfaz de edición, haga clic en el icono en el fondo de la pantalla para 
+cambiar el método de entrada. Usted podría utilizar el lápiz para entrar 
+manualmente o para hacer clic en el teclado numérico virtual a introducir. En 
+este caso, el método de introducción actual aparecerá en la esquina izquierda 
+de arriba de la pantalla. 
+Teclado General 
+ Tecla de Navegación Izquierda: Generalmente usada para 
+confirmar. 
+ Tecla de Navegación Derecha: Generalmente usada para espacio o 
+borrar.  
+ Teclas de Navegación (izq/der/arriba/abajo): Usadas generalmente 
+para mover el cursor, seleccionar las opciones de menú o seleccionar 
+caracteres a ingresar.  
+51 Vodafone Indie                                                   
+Descripción de Métodos de Introducción de Información 
+Método de Escritura Manual 
+Adoptando métodos avanzados de tecnología reconocimiento de caracteres, 
+su teléfono móvil soporta el reconocimiento de escritura de números y letras. 
+Puede hacer clic en la barra superior del interfaz de edición para cambiar los 
+modos de ingreso de caracteres. Una vez que elija el método de ingreso de 
+caracteres, puede usar el lápiz  para escribir mensajes. Una vez escritas 
+manualmente y después de una pausa, los caracteres reconocidos serán 
+desplegados en la pantalla para su selección.  
+Método de Texto Predictivo 
+El método de texto predictivo incluye método de inserción es y método de 
+inserción ES. 
+1. Inserta letras en español.  
+2. Clic en la letra correspondiente para insertarr la palabra deseada. Haga 
+clic en la pantalla para mover el cursor.  
+3. Clic  para espacio. 
+4. Clic  para borrar la última entrada. 
+5. Clic  para insertar símbolos Europeos. 
+6. Clic  cambiar entre letras mayúsculas y letras minúsculas.  
+Método de Inserción de Números 
+1. Clic en el número correspondiente en la pantalla para insertar el número 
+deseado.  
+52 Vodafone Indie                                                   
+2. Clic  para espacio. 
+3. Clic  para borrar la última entrada. 
+Método de Inserción de Símbolos 
+Clic  Para desplegar el teclado virtual y seleccione el símbolo 
+correspondiente.  
+53 Vodafone Indie                                                   
+Apéndice 
+Acceso directo 
+Bloquear el Teclado 
+En modo Stand by, Mantenga presionada la "Tecla de Navegación Izquierda" 
+para rápidamente bloquear el teclado. 
+Desbloquear el Teclado 
+En modo Stand by, Mantenga presionada la "Tecla de Navegación Izquierda" 
+y "Tecla de Navegación Derecha", o deslice su dedo sobre la pantalla táctil de 
+izquierda a derecha para desbloquear el teclado. 
+Acceso directos al modo Stand by y Configuración  
+Puede programar 8 iconos en la pantalla Stand by como "Llamar", "Buzón de 
+Entrada", "Perfil de Usuario", "Alarma", "Calendario", etc. 
+Limpieza y Mantenimiento  
+z Por favor mantenga su teléfono móvil bien cuidado pues ha sido diseñado 
+y fabricado delicadamente. Los consejos siguientes ayudan a extender la 
+vida de su teléfono móvil.  
+z Limpie su teléfono móvil, batería y cargador con un paño suave y seco. 
+z No limpie su unidad con líquidos abrasivos tales como: alcohol, bencina, etc. 
+z Limpie la clavija de vez en cuando pues una clavija sucia podría causar 
+una mala conexión, fallo de energía o falla al cargarlo. 
+z Nunca presione las teclas con agujas, lapiceros o objetos punzantes para 
+evaden la causa de daños o mala operación. 
+54 Vodafone Indie                                                   
+z Mantenga objetos pequeños de metal lejos del auricular. El auricular es 
+magnético y por eso magnetiza objetos de ese tipo.  
+z Mantenga su teléfono móvil seco, lejos de la lluvia, humedad o cualquier 
+otro líquido que pueda corroer los circuitos interiores.  
+z No use y ponga su teléfono móvil en un ambiente polvoriento o sucio 
+porque esto podría dañar los componentes telefónicos.  
+z No guarde su teléfono móvil cerca de altas-temperaturas  porque podría 
+acortar la vida de su dispositivo electrónico, dañar la batería, torcer o 
+derretir algunas partes plásticas. 
+z No guarde su teléfono móvil en un lugar dónde la temperatura es 
+demasiado baja, porque vapor de agua se formaría dentro del teléfono 
+cuando la temperatura suba a nivel normal que dañaría PCB del teléfono. 
+z No ponga su teléfono móvil con dispositivos caloríficos (horno, microonda, 
+tostador o radiador) porque el recalentamiento podría resultar en una 
+explosión.  
+z El color de la etiqueta impermeable en el teléfono cambiará si el teléfono o 
+la batería se moja. En este caso, la garantía se volvería nula aun cuando 
+el período de la garantía no haya expirado.  
+z Por favor envíe su teléfono móvil al centro de servicio más cercano para 
+su inspección si hay algo malo con su teléfono móvil, batería o accesorios. 
+El personal de centro de servicio le proporcionará la ayuda necesaria. 
+ 
+ 
+55 Vodafone Indie                                                   
+Información de salud y de seguridad 
+Certificación e Información SAR 
+EETS  MEOD  OL ES  AASUJT  A LAS AP ATU S EITN NRACIONAEL  SAP RA 
+LA EXPOSICAIÓN  LAS ONDAS DE RADIO.  
+Su telfé ono móvil es un radiotransmi sor y un receptor. Se diseña para no 
+exceder los límites para la exposición a las ondas de radio recomendadas por 
+las pautas internacionales. Las pautas fueron desarrolladas por la organización 
+científica independiente ICIN RP e incluyen los mrá genes diseñados para 
+asegurar la protección de todas las personas, sin importar edad y salud.  
+Estas pautas utilizan una unidad de medida conocida como tasa específica de 
+absorción, o SAR. El límite del SAR para los dispositivos móviles es .2  0 Wgk/  
+y el valor más alto de SAR para este dispositivo cuando y cuando se puso a 
+prueba la cabeza fue 1.04 W / kg (9 00 M), .0 396 W / Kg (1800 M), y cuando 
+fue probado en cuerpo era de .1  45 gKW/  9(  00 M,)  .0 344  gKW/   0081 ( M.) 1  
+Mientras uq e los dispositivos móviles ofrecen una gama de funciones, pueden 
+ser utilizados en otras posiciones, por ejemplo respecto al cuerpo según lo 
+descrito en esta guía del usuario.  
+Como el SAR se mide utilizando la energía de transmisión msá  alta del 
+dispositivo, el SAR real de este dispositivo mientras que está en  
+funcionamiento est á típicamente debajo de los niveles antes indicados.  Esto 
+debe a los cambios automáticos del nivel de la energía del dispositivo 
+asegurarle el uso del nivel mínimo reuq erido de energía para alcanzar la red. 
+La Organización Mundial de la Salud ha indicado que la información científica 
+del presente no indica la necesidad de ninguna precauciones especial para el 
+uso de dispositivos móviles.  
+1 . Estas pruebas fueron llevadas a cabo en cumplimiento del estná dar IEC P9T0226 -.1  
+ 65 Vodafone Indie                                                   
+Uso de Seguridad 
+Información de seguridad importante con respecto a la frecuencia de la radio 
+(RF) y la exposición a la radiación.  
+Para asegurar la complacencia con las pautas sobre exposición a RF, el 
+teléfono debe usarse con un mínimo de separación de 1.5 centímetros del 
+cuerpo.  
+La falta de observación de estas instrucciones podría resultar en una 
+exposición a RF que excede los límites de la pauta pertinentes. 
+Limitación de exposición a campos de Radio Frecuencias (RF)  
+Para individuos preocupados en limitar su exposición a campos de 
+frecuencias radiales, la Organización Mundial de la Salud (WHO) provee los 
+siguientes consejos:  
+Medidas Precaucionarías: La presente información científica no indica la 
+necesidad de precauciones especiales a tomar para el uso de teléfonos 
+móviles, Si a individuos les concierne este aspecto, ellos pueden elegir limitar 
+el nivel de exposición de ellos y sus hijos a las ondas RF, limitando la duración 
+de las llamadas o usando los dispositivos manos libres para mantener los 
+equipos alejados de su cabeza y cuerpo.  
+Información adicional relacionada a este tema puede ser obtenida de la 
+página Web de WHO en http://www.who.int/peh-emf WHO hoja de hechos 
+193: Junio 2000. 
+ 
+ 
+57 Vodafone Indie                                                   
+Declaración de cumplimiento de RoHS 
+Para reducir al mínimo el impacto medio ambiental y asumir una mayor 
+responsabilidad con el planeta en el que vivimos, este documento deberá 
+servir como una declaración oficial de que los Vodafone Indie fabricados por 
+ZTE Corporation se encuentran en cumplimiento con la Directiva 2002/95/CE 
+del Parlamento Europeo - RoHS (Restricción de Sustancias Peligrosas) con 
+respecto a las sustancias siguientes:  
+(1) Promo (Pb) 
+(2) Mercurio (Hg) 
+(3) Cadmio (Cd) 
+(4) Cromo hexavalente (Cr (VI)) 
+(5) Bifenil polibrominado (PBB's) 
+(6) Éter difenil polibrominado (PBDE's) 
+(Este cumplimiento está documentado por declaración escrita de todos 
+nuestros fabricantes, asegurando que cualquier nivel de residuo potencial de 
+contaminación de los listados arriba están por debajo del nivel máximo 
+establecido por la EU 2002/95/EC, o están exentos de su aplicación.)  
+Los terminales Vodafone Indie fabricados por ZTE CORPORATION, cumple 
+con los requisitos de la EU 2002/95/EC. 
+ 
+ 
+ 
+ 
+58 Vodafone Indie                                                   
+Eliminación de su viejo dispositivo 
+1. Cuando esta imagen tachada está asociada a un producto 
+significa que el producto está cubierto por la Directiva 
+Europea 2002/96/CE. 
+2. Todos los productos eléctricos y electrónicos deberán 
+eliminarse de forma separada de los residuos municipales a 
+través de instalaciones de recogida designados y 
+nombrados por el gobierno o las autoridades locales. 
+3. La correcta eliminación de su viejo dispositivo ayudará a 
+evitar posibles consecuencias negativas para el medio 
+ambiente y la salud humana. 
+Para consultar el Manual de Reciclaje de este producto basado en la Directiva 
+WEEE, por favor, envíe un correo electrónico a weee@zte.com.cn, o visite el 
+sitio Web más abajo para descargar el documento: 
+http://ensupport.zte.com.cn. 
+ 
+ 
+ 
+59 Vodafone Indie                                                   
+Declaración de Conformidad  
+A continuación se incluye la declaración de conformidad original del teléfono 
+móvil Vodafone Indie: 
+Por la presente se declara que el siguiente producto: 
+Tipo de producto: GSM Dual-band Digital Mobile Phone 
+Modelo No.: ZTE-G X761 
+CE No.: 0682  
+cumple con los requisitos esenciales de protección de la Directiva de bajo 
+voltaje 2006/95/EC (anterior 73/23/EEC), Directiva de compatibilidad 
+electromagnética 2004/108/EC (anterior 89/336/EEC), Directiva de 
+equipamientos de radio y telecomunicación (Directiva EC 1999/05/EC) y sus 
+anexos. 
+Esta declaración aplica a todos los dispositivos producidos de forma idéntica 
+a las muestras entregadas para testing/evaluación. 
+Afirmación de cumplimiento del producto con los requisitos relativos a la 
+Directiva de bajo voltaje 2006/95/EC (anterior 73/23/EEC), Directiva de 
+compatibilidad electromagnética 2004/108/EC (anterior 89/336/EEC), 
+Directiva de equipamientos de radio y telecomunicación 1999/05/EC y sus 
+anexos fue llevada a cabo por siguiendo los siguientes estándares: 
+Essential Requirement Applied Specifications/Standards 
+Art.3.1(a) Health EN50360, EN50361 
+Art.3.1(a) Safety EN60950-1 
+Art.3.1(b) EMC EN301489-1, EN301489-7 
+Art.3.2 Radio EN301511 
+60 Vodafone Indie                                                   
+Esta declaración es responsabilidad del fabricante:  
+ZTE Corporation 
+ZTE Plaza, Keji Road South, Hi-Tech, Industrial Park, 
+Nanshan District,Shenzhen, Guangdong, 518057, P.R.China 
+Persona con firma autorizada por la empresa: 
+Xu feng           Quality Director Of ZTE Corporation 
+ Nombre en mayúsculas & puesto en la empresa  
+Shenzhen, 10 Jan. 2009                   
+Lugar & fecha                  Firma legalmente autorizada 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+61 Vodafone Indie                                                   
+Análisis de Fallos 
+Síntomas Causas Posibles Soluciones 
+Incapaz Capacidad de 
+encender el Batería Inadecuada 
+Cargar la Batería 
+teléfono Mal Contacto Volver a Instalar la Batería 
+Apagado Capacidad de 
+automático Batería seriamente Cargar la Batería Afectada 
+Disminución en el 
+Tiempo de desempeño de la bat Reemplazar la Batería 
+Stand By 
+Inadecuado Baja señal de Red Apague su teléfono ya que no hay señal 
+Incapaz de Baja señal de Red Moverse a una mejor zona 
+Conectarse a Área Fuera de Asegúrese que se encuentra en 
+la red  Servicio una área de cobertura de Red 
+Corte de 
+llamada Baja señal de Red Moverse a una mejor zona 
+No timbra en 
+llamadas En función "Silencio " 
+Ingrese otro perfil de usuario sin 
+Mute o chequear el volúmen de 
+entrantes o mínimo volúmen timbrado. 
+Tarjeta SIM 
+Solicita bloqueada debido al 
+ingrese código ingreso de código Contacte a su proveedor de 
+PUK PIN errado por 3 servicio 
+veces. 
+Su teléfono no 
+Incapaz de soporta el formato de 
+visualizar las fotos, o el tamaño Cambie el tamaño o formato de 
+algunas fotos  de las fotos es muy las fotos 
+grande.  
+62

@@ -1,0 +1,2015 @@
+GSM Systemstruktur
+Kurzfassung
+29 Seiten
+
+INHALT
+1
+
+Übersicht............................................................................................................2
+
+2
+
+Grundlagen des Zellularfunks..........................................................................3
+
+2.1
+2.2
+2.3
+3
+3.1
+3.2
+3.3
+3.4
+4
+4.1
+4.1.1
+4.1.2
+4.1.3
+4.1.4
+4.2
+
+Netzaufbau .....................................................................................................3
+Multiplexverfahren...........................................................................................5
+Struktur der GSM-Funkschnittstelle Um ...........................................................6
+Systemarchitektur...........................................................................................10
+Mobile Station (MS) ......................................................................................11
+GSM Radio Access Network GERAN (Base Station Subsystem BSS).........13
+Core Network CN (Switching Subsystem SSS) ............................................15
+Operation and Maintenance Subsystem (OSS) ............................................18
+GSM - Funktionsprinzip ..................................................................................19
+Wegedurchschaltung ....................................................................................20
+Einbuchen ins Netz...................................................................................20
+Aktivverbindung ........................................................................................21
+Passivverbindung .....................................................................................22
+Handover ..................................................................................................22
+Signalisierung ...............................................................................................23
+
+5
+
+Kontrollfragen .................................................................................................24
+
+6
+
+Bilder und Tabellen.........................................................................................25
+
+7
+
+Abkürzungen und Begriffe .............................................................................26
+
+8
+
+Literatur ...........................................................................................................29
+
+26 KZF GSM Systemstruktur g.doc
+
+Kurzfassung
+1
+
+GSM Systemstruktur
+
+Übersicht
+
+Unter Mobilfunk versteht man die Übertragung von Nachrichten jeglicher Art zwischen zwei
+oder mehreren Stationen, von denen zumindest eine beweglich ist. Diese Definition schließt
+die Bereiche Rundfunk und Fernsehen aus.
+Die Technologie des Mobilfunks hat eine Tradition von über 70 Jahren. Bereits 1926 führte
+die Deutsche Bahn auf der Strecke Berlin - Hamburg erste erfolgreiche Versuche durch. Da
+die Mobilfunkeinrichtungen damals aber noch schwere und teure Geräte darstellten, wurden
+sie nur auf sehr aufwendigen Fahrzeugen, wie Schiffen, verwendet. Erst als die Mobilfunkapparate kleiner wurden, bestand die Möglichkeit, sie privat einzusetzen. Erste Benutzer waren
+Rettung, Polizei und Militär.
+Während in den 80er Jahren in Europa, Japan und den USA die ersten kommerziellen, analogen Mobilfunksysteme, hauptsächlich im 450 und 900 MHz Band aufgebaut wurden, gründete die CEPT (Conference Européenne des Administrations des Postes et Telecommunications - Europäische Konferenz für das Post- und Fernmeldewesen) im Jahr 1982 die Arbeitsgruppe „Groupe Special Mobile“ und beauftragte sie mit der Spezifikation eines öffentlichen
+digitalen Mobilkommunikationssystems für Europa. Dieses System sollte im 900-MHz-Band
+arbeiten, das 1978 von der World Administrative Radio Conference für diesen Zweck reserviert worden war.
+Im September 1987 einigten sich 13 europäische Staaten auf das paneuropäische digitale
+Mobilfunknetz GSM (Global System for Mobile Communication). Auch in Japan (JDC) und
+den USA (D-AMPS) wurden digitale Systeme errichtet. Die GSM-Technologie ist mit einem
+Marktanteil von über 65 Prozent die führende Technologie im weltweiten Mobilfunkmarkt. Die
+USA haben sich, im Gegensatz zu Japan entschlossen, neben D-AMPS auch den europäischen GSM-Standard einzusetzen. Die Zahl der Mobilfunkteilnehmer beträgt weltweit bereits
+über 430 Millionen (Ende 1999) und ist weiter im Steigen.
+Im Jänner 1998 einigte sich die Telekomindustrie auf einen weltweiten Standard, der unter
+dem Begriff UMTS (Universal Mobile Telecommunications System) die unterschiedlichen
+kontinentalen Mobilfunksysteme zusammenführen und in Folge ablösen sollte. Wesentlichste
+Merkmale des neuen Standards sind größere Kapazitäten für eine große Anzahl von Kunden
+und größere Datenmengen, die mobile Multimediageräte und den Zugang zum Internet ermöglichen.
+Quelle: Computerwelt11 03.05.2004
+Im Februar 2004, also etwa zwölf Jahre nach dem Start der ersten GSM-Netze überstieg die Anzahl der GSM-Nutzer eine Milliarde. Nach von der GSM Association (GSMA) veröffentlichten
+Zahlen wird GSM gegenwärtig in über 200 Ländern von fast einem Sechstel der Weltbevölkerung verwendet, wobei rund 80 Prozent aller Neukunden der Mobiltelefonie GSM-Nutzer
+sind. 2003 konnte GSM weltweit mit rund 180 Mio. Neukunden mehr Nutzer hinzugewinnen
+als es insgesamt Kunden der rivalisierenden CDMA-Technik (code-division multiple access)
+gibt. Das bedeutet im Vergleich zu 2002 einen Zuwachs von 23 Prozent.
+
+Schlüsselwörter
+Frequenz-Mehrfachverwendung, zellulares Netzstruktur, Location Registration, Location Update, Authentication, Interrogation, Paging und Paging Response, Handover, Roaming
+POEL © TELEKOMMUNIKATION 2007
+
+Seite 2
+
+Kurzfassung
+
+GSM Systemstruktur
+
+2
+
+Grundlagen des Zellularfunks
+
+2.1
+
+Netzaufbau
+
+Klassische Mobilfunknetze in denen versucht wird, durch eine hohe Sendeleistung der Basisstationen einen großen Bereich abzudecken, können aufgrund der benutzten Bandbreite
+nur eine begrenzte Teilnehmerzahl bedienen. Die schlechte Ausnutzung des Frequenzspektrums in solchen Funknetzen und die steigende Anzahl von Mobilfunkteilnehmern, die diese
+Systeme nicht mehr bewältigen konnten, führten zur Entwicklung und Einführung zellularer
+Netze.
+Der verfügbare Frequenzvorrat ist auch in zellularen Netzen beschränkt, kann aber durch
+mehrmalige Wiederverwendung vermehrt werden. Durch diese Methode ist es möglich die
+Telnehmer-Anschlusskapazität des Mobilnetzes stark zu erhöhen. Die Mehrfachverwendung
+der Frequenzen führt zu geringen Sendeleistungen und zu einer zellenförmigen Netzstruktur.
+7 Zellen Cluster
+
+ZWETTL
+
+F3
+
+F4
+
+LINZ
+
+F2
+
+F1
+
+WELS
+
+VÖCKLABRUCK
+
+F3
+
+3 Zellen Cluster
+
+F4
+
+F7
+
+SALZBURG
+
+F2
+
+F1
+
+F5
+
+WIEN
+
+ST. PÖLTEN
+
+F5
+
+AMSTETTEN
+
+F6
+STEYR
+F3
+
+MISTELBACH
+
+HOLLABRUNN
+
+KREMS
+
+F3
+
+F2
+
+F4
+F1
+
+EISENSTADT
+
+F5
+WR. NEUSTADT
+
+F4
+
+F7
+
+F6
+
+LIEZEN
+DORNBIRN
+
+F1
+
+F3
+
+F2
+
+F3
+
+F2
+
+WÖRGL
+
+F2
+
+F3
+
+F1
+
+FELDKIRCH
+
+F7
+
+F6
+
+BISCHOFSHOFEN
+ZELL/SEE
+
+BRUCK/MUR
+F1 F5 F3
+LEOBEN
+
+F2
+
+LANDECK
+F1 F3
+
+F2
+
+F7
+
+F1
+
+F6
+
+WOLFSBERG
+
+F3
+
+F2
+
+F4
+HARTBERG
+
+INNSBRUCK
+
+F1
+
+F3
+
+F2
+
+F2
+
+F1
+
+F5
+
+GRAZ
+
+F7 FÜRSTENFELD
+F6
+LIENZ
+
+SPITTAL
+
+F3
+VILLACH
+
+Bild 1
+
+KLAGENFURT
+
+Beispiele zellularer Netzstrukturen
+
+Zellulare Funknetze beruhen auf der Einteilung der gesamten Netzfläche in sog. Funkzellen,
+die jeweils von einer Basisstation versorgt werden. Jede Basisstation darf in der Regel nur
+einen Teil der verfügbaren Frequenzkanäle nutzen, welche zur Vermeidung von Störungen
+durch angrenzende Zellen erst in einem ausreichend großen Abstand wieder verwendet werden dürfen.
+Vorteile und Eigenschaften einer zellularen Netzstruktur
+• (1) in zellularen Netzen ist es möglich durch geringe Sendeleistung die den Basisstationen zugeordneten Frequenzen in einem „fest definierten“ Bereich, der sog. Funkzelle
+zu verwenden.
+o Nach Einhaltung eines Schutzabstandes können diese Frequenzen nochmals
+benützt werden.
+o Allgemein werden die Zellen idealisiert als regelmäßige Sechsecke dargestellt,
+was aber durch topographische und umgebungsbedingte Umstände nur annähernd den wirklichen Gegebenheiten entspricht. Im Realfall sind die Funkzellen
+in ihrer äußeren Form sehr unregelmäßig und überlappen einander außerdem
+planungsgemäß um ca. 10 - 15 %‚ damit Mobilstationen im Randbereich einer
+Zelle die Wahlmöglichkeit zwischen verschiedenen Basisstationen haben.
+• Zur Vereinfachung der Netzplanung werden mehrere nebeneinander liegende Zellen
+zu einem Cluster zusammengefasst, wobei die verwendeten Frequenzen je Cluster
+nur einmal verwendet werden dürfen.
+POEL © TELEKOMMUNIKATION 2007
+
+Seite 3
+
+Kurzfassung
+
+GSM Systemstruktur
+
+o Je größer die Zahl der Zellen pro Cluster ist, desto größer ist auch der Sicherheitsabstand (Frequenzwiederholabstand) zwischen gleichen Frequenzen und
+desto geringer wird die im Mobilnetz insgesamt verfügbare Anzahl der Gesprächskanäle.
+o Je niedriger die Zahl der Zellen pro Cluster ist, desto mehr Frequenzen (Funkkanäle) können pro Zelle für das gesamte Mobilfunksystem bei gegebenem
+Frequenzband eingesetzt werden. Da die Frequenzen dadurch jedoch in geringerer Entfernung wiederholt eingesetzt werden, können die Gleichkanalstörungen 1 größer werden.
+• Für GSM wurden zwei Frequenzbänder standardisiert, eines im 900 MHz-Bereich
+- max. Zellenradius = 35 km - und ein weiteres im 1800 MHz.Bereich - Max. Zellenradius = 8 km.
+• In Gebieten mit hohem Verkehrsaufkommen werden die maximalen Zellenradien -
+35 km für GSM 900 und 8 km für GSM 1800 - nicht ausgenützt um die FrequenzWiederverwendung und damit die Gesprächskapazität des Netzes zu erhöhen.
+Multilayer-Netzstruktur
+Um die verfügbaren Funkkanäle optimal auslasten zu können weisen Mobilfunknetze heute
+in Bereichen mit hohem Verkehrsaufkommen (Innenstadt, Messe u.ä.) eine MultilayerStruktur auf - siehe auch „Base Tranceiver Station“ Seite 12 - die aus folgenden Ebenen besteht:
+• Pico-Zellen (Bereich von mehreren 10 Metern),
+• Mikro-Zellen (Bereich von mehreren 100 Metern) und
+• Makro-Zellen (Bereich von mehreren 1000 Metern).
+Layer 3
+Makro-Zelle
+km-Bereich
+über dem Dach, alle
+etwa in der
+gleichen Höhe
+
+Layer 2
+Mikro-Zelle
+100m-Bereich
+an Hauswänden, alle
+etwa in der gleichen Höhe
+
+Layer 1
+Pico-Zelle
+10m-Bereich
+in Räumen
+
+Bild 2
+
+Makroantenne
+
+Bild 3
+
+Multilayer-Netzstruktur
+
+Makroantenne
+
+Mikroantenne
+
+Pico-Antenne
+
+Ausführungsformen von Sende- und Empfangsantennen
+
+1
+
+Als Gleichkanalstörung bezeichnet man die Störeinflüsse benachbarter Verbindungen (Zellen) die auf derselben Frequenz arbeiten.
+POEL © TELEKOMMUNIKATION 2007
+
+Seite 4
+
+Kurzfassung
+
+GSM Systemstruktur
+
+Die Funkausleuchtung der Zellen ist stark von der Geometrie der Umgebung der Basisstation
+abhängig.
+Der Aufbau eines Verbindungsweges erfolgt immer über die Zellen der untersten Ebene 2 . Ist
+die Verbindungskapazität einer Zelle erschöpft oder liegt der Empfangspegel unterhalb des
+Zulässigen, wird die Verbindung über eine Zelle der darüber liegenden Ebene aufgebaut.
+Durch ihre flächenmäßig größere Ausdehnung nehmen die Zellen einer höheren Ebene den
+nicht mehr verarbeitbaren, also überlaufenden Verkehr mehrerer Zellen der unteren Ebene
+auf.
+
+2.2
+
+Multiplexverfahren
+
+Wie in der Festnetztechnik werden die Ressourcen zur Durchschaltung eines Verbindungsweges aus Kostengründen immer mehrfach ausgenützt. Bei Funksystemen unterscheidet
+man im Wesentlichen folgende Verfahren:
+• Frequency Division Multiplexing (FDM, Frequenzmultiplex),
+• Time Division Multiplexing
+(TDM, Zeitmultiplex),
+• Code Division Multiplexing
+(CDM, Codemultiplex),
+• Space Division Multiplexing
+(SDM, Raummultiplex).
+Neben diesen Multiplexverfahren zur Vielfachnutzung der Kapazität eines Übertragungsmediums durch viele Kommunikationsbeziehungen gibt es Zugriffsverfahren zu den jeweiligen
+Kanälen, z.B. Frequency Division Multiple Access (FDMA) oder Time Division Multiple Access (TDMA). Diese Zugriffsverfahren sind als Schicht 2 Protokolle entsprechend dem
+ISO/OSI-Referenzmodell nur Bezeichner für die jeweilige Klasse von Protokollen und sind in
+jedem System speziell festgelegt.
+Frequenzmultiplex - FDM
+(2) Beim Frequenzmultiplexverfahren wird das für das Funksystem zur Verfügung stehende
+Spektrum in mehrere Frequenzbänder unterteilt, die gleichzeitig genutzt werden können. Jedes Frequenzband wird als physikalischer Kanal gesehen, welcher jeweils zwei oder mehr
+Stationen zur Kommunikation zugewiesen wird. Jede Station kann mit der vollen verfügbaren
+Übertragungsrate des Frequenzbandes, senden bzw. empfangen.
+Eine Einteilung des Frequenzspektrums in Frequenzbänder wird erreicht, indem man unterschiedliche Trägerfrequenzen mit den jeweils zu übertragenden Nachrichten moduliert. Empfangsseitig erfolgt die Trennung der Signale durch entsprechende Filterung. Da reale Filter
+nur eine endliche Flankensteilheit aufweisen, sind Schutzbänder (Guard Bands) nötig, um
+Interferenzen (Übersprechen) zu vermeiden.
+Öffentliche Mobilfunksysteme, wie z.B. GSM oder Bündelfunksysteme wenden das Frequenzmultiplexverfahren an.
+Zeitmultiplex - TDM
+(3) Die Kapazität eines FDM-Kanals ist u.U. größer, als für eine Kommunikationsbeziehung
+erforderlich. In solchen Fällen wird der Frequenzkanal abwechselnd mehreren Kommunikationsbeziehungen zuteilen. Dieser Methode führt zum Zeitmultiplexverfahren, bei dem ein
+Funkkanal in seiner gesamten Bandbreite genutzt wird, aber in Zeitschlitze (Slots) unterteilt
+wird, die jeder Station periodisch für die Dauer der Verbindung fest zugewiesen werden. In
+2
+
+unterste Ebene = Pico-Zelle
+
+POEL © TELEKOMMUNIKATION 2007
+
+Seite 5
+
+Kurzfassung
+
+GSM Systemstruktur
+
+einem Slot kann die übertragende Station eine bestimmte Anzahl Datenbits unterbringen. Die
+Folge der durch eine Station genutzten Slots bildet einen Zeitkanal.
+Das TDM-Verfahren erfordert für den Zugang zum Übertragungsmedium einen Multiplexer
+bzw. empfangsseitig einen Demultiplexer, die zueinander genau synchron arbeiten müssen,
+damit die übertragenen Nachrichten den richtigen Zeitkanälen zugeordnet werden. Ähnlich
+wie beim FDM-Verfahren muss auch in TDM-Systemen eine Schutzzeit (Guard Time), jetzt
+zwischen den einzelnen Slots, vorgesehen werden, um Synchronisationsfehler und Signallaufzeitunterschiede und damit Interferenzen der Signale zu vermeiden. Diese Schutzzeit
+verhindert die Realisierung beliebig kurzer Zeitschlitze und reduziert somit die theoretisch
+mögliche Kapazitätsausnutzung.
+Öffentliche Mobilfunksysteme, wie z.B. GSM wenden das Zeitmultiplexverfahren neben dem
+Frequenzmultiplexverfahren an.
+Das GSM-Mobilfunksystem unterscheidet mehrere Standards, wie GSM 900, GSM (DCS)
+1800 und GSM 1900. Bei GSM 900 beträgt der maximale Funkzellenradius 35km, dieser
+Standard ist sowohl für den Einsatz in urbanen als auch in ländlichen Gebieten vorgesehen.
+Bei GSM 1800 (1900) beträgt der maximale Funkzellenradius 8km, dieser Standard wurde
+für Gebiet mit hohem Teilnehmeraufkommen entwickelt. Die geringe Sendeleistung öffnet
+besonders kleinen „Mobilen Endgeräten“ den Einsatz.
+
+2.3
+
+Struktur der GSM-Funkschnittstelle Um
+
+(4) In GSM-PLMNs steht jeweils ein bestimmter Frequenzbereich im 900 MHz-Band (Zellenradius = max. 35 km) und im 1800 MHz-Band (Zellenradius = max. 8 km) für die Funkübertragung zur Verfügung. Dieser Frequenzbereich ist in zwei Teilbänder aufgeteilt, nämlich
+• UPLINK (UL) für die Funkübertragung von der MS zur BTS und
+• DOWNLINK (DL) für die Funkübertragung von der BTS zur MS.
+
+GSM 900 & GSM 1800
+Teilfrequenzband 1
+
+TeifrequenzbandBandbreite je 200 kHz
+
+Gesamtband
+Uplink oder Downlink
+GSM 900: 35 MHz
+GSM 1800: 75 MHz
+
+Zeitrahmen 4,615 ms
+
+GSM 900: Teilfrequenzband 174
+GSM 1800: Teilfrequenzband 374
+
+Zeitschlitz
+
+0 1
+
+2
+
+3 4 5
+
+6
+
+7
+
+Speech Channels
+(Nutzkanäle)
+Common
+Signalling
+Channel
+
+Bild 4
+
+Prinzipielle Struktur der Funkschnittstelle
+
+Auf der GSM-Funkschnittstelle wird eine Kombination von Frequenz- und Zeitmultiplex wie
+folgt eingesetzt:
+POEL © TELEKOMMUNIKATION 2007
+
+Seite 6
+
+Kurzfassung
+•
+
+•
+
+GSM Systemstruktur
+
+Frequenzmultiplex: Jeder Nachrichtenrichtung (Uplink / Downlink) wird die Hälfte der
+Gesamt-Bandbreite zugeordnet. Uplink- und Downlinkband werden weiter in je 200
+kHz breite Teilfrequenzbänder unterteilt, wobei jeder Basisstation mindestens ein Teilfrequenzband zugeteilt wird.
+Zeitmultiplex: jedes Teilfrequenzband wird weiter in 8 Kanäle unterteilt, die in einem
+Zeitrahmen von 4,6 ms zusammengefasst sind.
+
+ursprüngliches GSM 900 Extended GSM 900
+UPLINK
+890 und 915 MHz
+880 und 915 MHz
+DOWNLINK
+935 und 960 MHz
+925 und 960 MHz
+Teilfrequenzbänder
+125
+175
+Bandbreite
+200 kHz
+200 kHz
+Tabelle 1 GSM - Frequenzbereiche
+
+GSM 1800
+1710 und 1785 MHz
+1805 und 1880 MHz
+375
+200 kHz
+
+Die Funkschnittstellen des GSM 900 und des GSM 1800 sind nach genau den gleichen Prinzipien aufgebaut. Sowohl das untere Teilband UPLINK (Unterband) als auch das obere Teilband DOWNLINK (Oberband) sind in Träger (Carrier = C) oder Radio Frequency Channels
+(RFC) von 200 kHz Bandbreite unterteilt. Als Modulationsverfahren wird GMSK - Gaußsches
+Minimun Shift Keying - eingesetzt.
+Es sind folgende Frequenzbänder verfügbar:
+• GSM 900 mit 25 MHz Breite ergibt 124 Teilfrequenzbänder à 200 kHz
+• Extended GSM mit 35 MHz Breite ergibt 174 Teilfrequenzbänder à 200 kHz - in Österreich nicht in Verwendung!
+• GSM 1800 mit 75 MHz Breite ergibt 374 Teilfrequenzbänder à 200 kHz
+Die Radio Frequency Channels (RFC) werden z.B. bei GSM 900 3 von 1 bis 124 nummeriert
+und nur mit der absoluten HF Kanalnummer (absolute radio frequency channel number,
+ARFCN) bezeichnet. Dabei findet die absolute Frequenz selbst gar keine Anwendung mehr,
+lässt sich jedoch über folgende Formeln berechnen:
+Uplink:
+Ful(n) = 890 MHz + 0,2 MHz * n
+Downlink Fdl(n) = Ful(n) +45 MHz
+n = ARFCN, 1 < n < 124
+Um andere Funkdienste nicht zu stören sollen die Frequenzen mit den Kanalnummern 1 und
+125 nicht verwendet werden; bei dieser Einschränkung sind jedoch länderspezifische Ausnahmen zugelassen.
+
+3
+
+die Variante Extended GSM wird derzeit von keinem der österr. Netzbetreiber unterstützt. Die Regulierungsbehörde rtr bereitet aber derzeit das Vergabeverfahren zu GSM (E-GSM - 870/915 - 876/921 MHz, GSM-1800)
+vor, wobei die Vergabe der Frequenzen für Herbst 2004 vorgesehen ist.
+POEL © TELEKOMMUNIKATION 2007
+
+Seite 7
+
+Kurzfassung
+
+GSM Systemstruktur
+890 MHz
+
+GSM
+900
+
+UPLINK
+
+915 MHz
+
+935 MHz
+
+DOWNLINK
+
+960 MHz
+
+C1
+
+C122 C123 C124
+
+C1
+
+C122 C123 C124
+
+200 kHz
+
+200 kHz 200 kHz 200 kHz
+
+200 kHz
+
+200 kHz 200 kHz 200 kHz
+
+25 MHz
+
+880 MHz
+
+UPLINK
+
+extended
+GSM C975
+200 kHz
+900
+
+20 MHz
+
+890 MHz
+
+25 MHz
+
+925 MHz
+
+C1023
+
+C975
+
+200 kHz
+
+200 kHz
+
+10 MHz
+
+1710 MHz
+
+GSM
+1800
+
+935 MHz
+
+C1023
+200 kHz
+10 MHz
+
+UPLINK
+
+1785 MHz
+
+1805 MHz
+
+C512
+
+C866 C867 C868
+
+C512
+
+200 kHz
+
+200 kHz
+
+200 kHz
+
+75 MHz
+
+Bild 5
+
+(Stand: 26.04.2006
+
+Bild 6
+
+DOWNLINK
+
+200 kHz
+
+200 kHz
+20 MHz
+
+DOWNLINK
+
+1880 MHz
+
+C866 C867 C868
+200 kHz
+
+200 kHz
+
+200 kHz
+
+75 MHz
+
+GSM-Frequenzbereiche
+
+Quelle: www.rtr.at)
+
+Aufteilung der Frequenzbänder auf die österr. Netzbetreiber
+
+Das Zeitmultiplexverfahren (TDMA)
+(5) Bedenkt man, dass GSM-Netze einen Kanalabstand von 200 kHz verwenden, so ist dies
+im Gegensatz zu analogen Netzen mit einem Kanalabstand von 12,5 kHz bis 30 kHz sehr
+reichlich bemessen. Um die Frequenzausnützung analoger Netze zu erreichen, wird dieses
+„Frequenzspektrum“ bei GSM noch weiter aufgeteilt. Da im Frequenzbereich bereits eine
+Aufteilung durchgeführt wurde, wird daher noch eine Aufteilung des Zeitbereichs durchgeführt. Analog zum Frequenzmultiplex bezeichnet man diese Aufteilung als Zeitmultiplexverfahren (time division multiple access, TDMA).
+
+POEL © TELEKOMMUNIKATION 2007
+
+Seite 8
+
+Kurzfassung
+
+GSM Systemstruktur
+4,615 ms
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+time slot
+data bits
+3
+
+57
+
+training
+1
+
+26
+
+data bits
+1
+
+57
+
+3
+
+toggle bit
+tail bit
+burst 148 bit
+time slot 156,25 bit
+0,577 ms
+
+timeslot: 0,577 ms = 156,25 bit burst: 0,5465 ms = 148 bit training: 0,096 ms = 26 bit
+data bits: 2x0,2105 ms = 2x57 bit
+
+Bild 7
+
+Aufbau eines TDMA-Rahmens (incl. Normal Burst)
+
+Damit dies ohne Kollisionen verläuft, wird, wie oben gezeigt, eine Einteilung in 8 Zeitschlitze
+(0..7) vorgenommen. Jeder Teilnehmer erhält dabei einen Zeitschlitz (timeslot) zugeordnet.
+Nach 7 Zeitschlitzen darf der Teilnehmer wieder senden. Außerhalb eines zugewiesenen
+Zeitschlitzes darf absolut nichts gesendet werden, um andere Teilnehmer nicht zu stören.
+Dieses Einschalten für einen Zeitschlitz mit anschließendem Ausschalten nennt man Pulsoder Burstbetrieb (burst für „plötzlich erscheinen"). Bis zu 8 Verbindungen, davon eine ausschließlich für die Signalisierung, können so im GSM-Netz auf eine einzelne Frequenz
+zugreifen.
+Dadurch, dass immer nur in jedem achten Zeitschlitz gesendet wird, reduziert sich die effektive Sendeleistung ebenfalls um den Faktor 8. Acht Zeitschlitze werden zu einem „TDMARahmen" zusammengefasst. Jeder Zeitschlitz hat eine Länge von 577 µs und jeder TDMARahmen von 4,615 ms (8 • 577 µs).
+Der in den Layer-3-Nachrichten enthaltene Parameter Timing Advance - TA - erlaubt es die
+Signal-Laufdauer um bis zu 63 Bit zu verkürzen und damit eine Veränderung der Schleifenlaufzeit BTS - MS - BTS durch Standortveränderung der MS zu kompensieren.
+
+POEL © TELEKOMMUNIKATION 2007
+
+Seite 9
+
+Kurzfassung
+3
+
+GSM Systemstruktur
+
+Systemarchitektur
+
+(6) Ein GSM-PLMN (Public Land Mobile Network) besteht generell aus drei Teilsystemen:
+• GSM Radio Access Network GERAN
+auch Base Station Subsystem (BSS) genannt, entspricht dem Access Network (Lokalnetz) eines Festnetzes
+• GSM Core Network CN
+auch Switching Subsystem (SSS) genannt, entspricht dem Fernnetz eines Festnetzes
+• Operation and Maintenance Subsystem (OMS)
+entspricht dem OAM- bzw. TMN-Netz eines Festnetzes und wird wie dort zur Bedienung, Wartung und Verwaltung der Netzkomponenten und der Teilnehmerrufnummern, ihrer Dienste und Zusatzdienste eingesetzt.
+PSTN
+
+ISDN
+AC
+
+HLR EIR
+VLR
+
+VLR
+MSC
+
+Core Network
+CN
+
+Radio
+Access
+Network BTS
+
+PSDN
+
+MSC
+
+TCE
+
+GERAN
+
+BSC
+
+O
+S
+S
+
+GSM
+PLMN
+
+Operation
+Administration
+Maintenance
+
+MS
+
+GERAN
+AC
+MSC
+BTS
+TCE
+
+GSM Radio Access NW
+Authentication Center
+Mobile Switching Center
+Base Transceiver Station
+Transcoding and Rate
+Adaption Unit
+
+CN
+HLR
+VLR
+MS
+PSTN
+
+Bild 8
+
+GSM Core Network
+Home Location Register
+Visitor Location Register
+Mobile Station
+Public Switched Telephone
+Network
+
+OSS OAM Subsystem
+EIR Equipment Identification Reg.
+BSC Base Station Controller
+PLMN Public Land Mobile Network
+PSDN Public Switched Data
+Network
+
+GSM-Systemarchitektur
+
+(7) Zwischen dem BSS und den anderen GSM-Netzkomponenten sind verschiedene Schnittstellen festgelegt worden, die den Informationsaustausch zwischen Teilnehmer und GSMNetz bzw. anderen Netzen und zwischen BSS und Betreiber- bzw. Vermittlungsteilsystem
+regeln.
+Schnittstelle O
+
+MS
+
+Zeichengabe
+var. Bitraten
+
+Zeichengabe LAPD
+var. Bitraten
+
+Zeichengabe ZGV7
+64 kbit/s
+
+Operation
+Administration
+Maintenance
+Schnittstelle C
+Zeichengabe ZGV7
+64 kbit/s
+
+BTS
+TCE
+
+BSC
+Nutzkanal
+Full Rate
+22,8 kbit/s
+
+Nutzkanal
+16 kbit/s
+
+Nutzkanal
+16 kbit/s
+
+Nutzkanal
+64 kbit/s
+
+Luftschnittstelle
+Um
+
+Schnittstelle
+Abis
+2 Mbit/s
+
+Schnittstelle
+Asub
+2 Mbit/s - PCM30
+
+Schnittstelle
+A
+2 Mbit/s - PCM30
+
+HLR
+Schnittstelle D
+
+VLR
+
+Zeichengabe
+ZGV7
+64 kbit/s
+
+VLR
+
+MSC
+
+Nutzkanal
+64 kbit/s
+
+GMSC
+
+Schnittstelle B
+
+O
+S
+S
+
+Schnittstelle
+E
+2 Mbit/s - PCM30
+zu anderen
+Netzen
+
+Bild 9
+POEL © TELEKOMMUNIKATION 2007
+
+Schnittstellen im GSM
+Seite 10
+
+Kurzfassung
+•
+
+•
+
+•
+
+3.1
+
+GSM Systemstruktur
+
+Um-Schnittstelle (BTS - MS)
+Zum mobilen Teilnehmer besteht die sog. Um-Schnittstelle.
+Sie ist durch spezifische Parameter der digitalen Funkübertragung, wie GMSKModulation, Datenrate, Lage der Trägerfrequenzen im 900-MHz-Band, Kanalraster
+usw., gekennzeichnet.
+Sprachdaten werden mit 13kbit/s (oder 12,2kbit/s beim EFR-Modus) übertragen und
+entsprechend mit 9,8kbit/s (bzw. 10,6kbit/s bei EFR) kanalkodiert, um die Sprachdaten
+zu schützen. Da das menschliche Gehör geringe Fehler durch seine Trägheit nicht registrieren kann, sind Sprachdaten wesentlich unempfindlicher gegenüber Störungen
+als EDV-Daten, wodurch EDV-Daten nach besseren „Schutzmechanismen“ verlangen.
+A-Schnittstelle
+(MSC - TCE)
+Zum Festnetz des GSM-Netzes ist das BSS über die A-Schnittstelle mit MSCs verbunden. Die A-Schnittstelle ist durch spezifische, digitale Übertragungsparameter gekennzeichnet, zu denen u.a. PCM (Puls Code Modulation), eine Datenrate von 64
+kbit/s und eine Bandbreite von 4 kHz gehören.
+O-Schnittstelle
+Die Netzverfügbarkeit und -qualität wird vom Netzüberwachungs- und Wartungszentrum des GSM-Betreibers über eine O-Schnittstelle ermittelt, mit der ein direkter Zugriff
+auf BSS-Einheiten besteht.
+
+Mobile Station (MS)
+
+(8) Die GSM-Mobilfunkstation - MS, das sog. Handy, führt den Informationsaustausch über
+die Luftschnittstelle von und zur Base Tranceiver Station durch. Sie besteht aus:
+• „Mobile Equipment - ME“, den für die Funkschnittstelle spezifischen Hardware- und
+Softwarekomponenten die durch eine vom Hersteller vergebene, weltweit eindeutige
+Mobilgerätekennungsnummer die Equipment Identity EI gekennzeichnet sind und
+• Subscriber Identity Module (SIM), der alle teilnehmerspezifischen Informationen enthält.
+Das Subscriber Identity Module SIM hat die Funktion eines Schlüssels, einmal aus
+dem Endgerät entfernt, kann dieses, soweit das Netz es erlaubt, z.B. nur mehr für Notrufe verwendet werden. Mit Hilfe des SIM kann sich ein Teilnehmer über jede beliebige Mobilstation im Netz identifizieren und somit das Funkgerät personalisieren.
+Für die Verwaltung einer Mobilstation innerhalb des GSM-Netzes sind folgende wichtige Daten auf der SIM gespeichert:
+• International Mobile Station Identity (IMSI),
+sie ist die System (GSM) interne Teilnehmerkennung; sie ist öffentlich nicht bekannt
+und besteht aus MCC 4 +MNC 5 +MSIN 6
+• Temporary Mobile Station Identity (TMSI),
+sie ist jene Teilnehmerkennung unter welcher eine Mobilstation im besuchten VLR
+verwaltet wird und besteht aus 4 Oktetten mit Netzbetreiber individueller Struktur
+
+4
+
+MCC = Mobile Country Code
+MNC = Mobile Network Code
+6
+MSIN = Teilnehmeridentität im HLR
+5
+
+POEL © TELEKOMMUNIKATION 2007
+
+Seite 11
+
+Kurzfassung
+•
+•
+•
+
+GSM Systemstruktur
+
+Local Area Identity (LAI),
+sie kennzeichnet eine Gruppe zusammengehöriger Zellen und besteht aus
+MCC+MNC+LAC 7
+teilnehmerindividueller Schlüssel (Ki)
+Algorithmen zur Überprüfung der Netzugangsberechtigung und zur FunkkanalVerschlüsselung (A3, A5, A8)
+
+EFR
+
+300 - 3400
+Hz
+
+D
+
+8000 x 13 bit je Sekunde
+(nicht komprimiert)
+
+D
+
+Sprachencoder
+
+Comfort
+Noise
+Function
+
+Sprachdecoder
+
+A
+
+Kanalcodierer
+
+Kanaldecoder
+
+Modulator
+"Bruttodatenrate" 22,8 kbit/s
+
+A
+
+alle 20 ms ein Rahmen mit
+260 bit (entspricht 12,2 kbit/s)
+
+Voice
+Activity
+Detection
+
+Demodulator
+
+4000 Hz
+
+Extrapolation
+
+EFR…Enhanced Full Rate Codec
+
+Bild 10
+
+Blockdiagramm eines „Mobile Equipments“
+
+Enhanced Full Rate bietet eine bessere Sprachqualität, sofern das Handy diesen moderneren Sprachkompressions-Standard unterstützt. Fast alle am Markt erhältlichen GSM-Handys
+unterstützen EFR - bei einigen Handys muss bzw. kann der EFR-Modus manuell aktiviert
+bzw. deaktiviert werden. Viele Handys sind bereits fix für EFR-Sprachqualität eingestellt. Der
+Nachteil von EFR ist, dass das Handy für diesen Kodierungsstandard etwas mehr Akkuenergie verbraucht. Wer also EFR deaktiviert, hat eine längere Akku-Standzeit - allerdings auch
+eine etwas schlechtere Sprachqualität. Der neue Enhanced Full Rate CODEC von GSM benützt für die Kompression das ACELP-Verfahren (Algebraic Code Excitation Linear Prediction). EFR-Sprache hat eine Übertragungsrate von 12,2kbit/s. Das ältere Sprachkompressionsverfahren von GSM verwendet das LPC-RPE-Verfahren (Linear Prediction Coding with
+Regular Pulse Excitation) und benötigt eine Datenrate von 13kbit/s. Da LPC-RPE das ältere
+Verfahren ist, wurden in diesem Sprachkompressionsverfahren noch nicht modernen Algorithmen verwendet, die die menschliche Sprache optimal komprimieren können. Deswegen
+ist trotz höherer Datenrate die Sprachqualität von LPC-RPE qualitativ nicht so gut wie die von
+EFR.
+Die Spezifikation GSM 06.60 beschreibt sowohl das Mapping zwischen Eingabeblöcken von
+jeweils 160 Sprachproben (in 13-bit-PCM) zu codierten Ausgabeblöcken von 244 bit als auch
+die Umwandlung von codierten Eingabeblöcken zu je 244 bit in Blöcke bestehend aus je 160
+Sprachproben (in 13-bit-PCM). Die Abtastrate beträgt 8000 Sprachproben pro Sekunde, und
+7
+
+LAC = Local Area Code
+
+POEL © TELEKOMMUNIKATION 2007
+
+Seite 12
+
+Kurzfassung
+
+GSM Systemstruktur
+
+führt zu einer Bitrate für den verschlüsselten Bitstrom von 12,2 kbit/s. Das Kodierverfahren
+ist, die sog. Algebraic Code Excited Linear Prediction (ACELP).
+Die Spezifikation beschreibt aber auch die Umwandlung zwischen A-Gesetz-PCM und 13-bitPCM.
+Mobilfunkstationen können in Fahrzeugen installiert oder als portable/handportable Geräte
+ausgeführt sein und sind entsprechend der zulässigen Sendeleistung in fünf Klassen unterteilt:
+GSM 900
+GSM 1800
+max. zul. Senmax. zul. SenKlasse
+Gerätetyp
+Gerätetyp
+deleistung [W]
+deleistung [W]
+fest eingebaut od.
+1
+20
+1
+handportabel
+portabel
+fest eingebaut od.
+2
+8
+0,25
+handportabel
+portabel
+3
+5
+handportabel
+—
+—
+4
+2
+handportabel
+—
+—
+5
+0,8
+handportabel
+—
+—
+Tabelle 2 Geräteleistungen
+
+3.2
+
+GSM Radio Access Network GERAN (Base Station Subsystem BSS)
+
+(9) Ein GSM Radio Access Network GERAN 8 (Base Station Subsystem) besteht aus:
+• BTS (Base Transceiver Station)
+• BSC (Base Station Controller)
+incl. TCE (Transcoding Equipment, Transcoder)
+Bedingt durch die begrenzte Sendeleistung der Base Transceiver Stations die nur ein bestimmtes geographisches Gebiet im Netz versorgen können, entstehen Funkzellen, in denen
+sich der mobile Teilnehmer frei bewegen und dabei kommunizieren kann. Die Größe der einzelnen Zellen ist von einer Reihe von Parametern abhängig, zu denen u.a. die charakteristische Wellenausbreitung, die örtliche Morphologie und die regional zu erwartende Teilnehmerdichte gehören. Das GERAN entspricht hierarchisch gesehen, einer Lokalvermittlungsstelle in der Lokalnetzebene eines ISDN.
+Base Transceiver Station - BTS
+Base Transceiver Station BTS (Basisstation) setzt die Signale der Funkstrecke in elektrische
+Signale mit je 16 kbit/s um. Sie besteht je eingesetztem Teilfrequenzband aus:
+• Sende- und Empfangsanlage und zugehörigen Antennen
+Je nach Antennentyp versorgt sie eine oder mehrere Zellen, so können z.B. Sektorantennen
+drei im Winkel von 120° zueinander angeordnete Zellen bedienen. Ihre Sendeleistung ist in
+acht Klassen unterteilt:
+
+8
+
+GERAN…GSM/EDGE Radio Access Network; wird auch für GPRS-fähige Access Networks verwendet.
+
+POEL © TELEKOMMUNIKATION 2007
+
+Seite 13
+
+Kurzfassung
+Klasse
+1
+2
+
+GSM Systemstruktur
+
+max. Sende- Klasse max. Sendemax. SendeKlasse
+leistung [W]
+leistung [W]
+leistung [W]
+320
+3
+80
+5
+20
+160
+4
+40
+6
+10
+
+Klasse
+7
+8
+
+max. Sendeleistung [W]
+5
+2,5
+
+Tabelle 3 Sendeleistungen
+
+Makroantenne
+
+Bild 11
+
+Makroantenne
+
+Mikroantenne
+
+Pico-Antenne
+Ausführungsformen von Sende- und Empfangsantennen
+
+Base Station Controller - BSC
+
+Koppelnetz
+Traffic
+
+Traffic
+
+Channels
+
+Channels
+
+ZGV7
+
+Steuerung
+
+Link
+Interface
+
+TCE
+
+PCM 30
+
+Link
+Interface
+
+BSC
+PCM 30
+
+BTS
+
+LAPD
+
+O
+S
+S
+
+Bild 12
+
+POEL © TELEKOMMUNIKATION 2007
+
+Blockdiagramm des BSC
+
+Seite 14
+
+Kurzfassung
+
+GSM Systemstruktur
+
+(10) Der BSC besteht aus einem Koppelnetz mit Steuerung und zwei Leitungsschnittstellen.
+Er ist die Steuer- und Kontrolleinheit des BSSs und hat folgende Aufgaben durchzuführen:
+• Verwalten der Funkschnittstelle
+• Reservieren, Zuteilen und Freigeben von Funkkanälen
+• Durchführen eines Handover
+• Suchen angerufener Teilnehmer mittels Paging
+• Übertragen verbindungsbezogener Nutz- bzw. Signalisierdaten von/zur MSC.
+Transcoding Equipment - TCE
+
+Vocoder
+
+64 kbit/s
+
+Speech Channel
+16 kbit/s
+
+ZGV7 Signalling Channel
+64 kbit/s
+
+Bild 13
+
+PCM30
+Strecke
+
+BSC
+
+Strecke
+
+Speech Channel
+
+2 Mbit/s
+PCM-Schnittstelle
+
+PCM30
+
+2 Mbit/s
+PCM-Schnittstelle
+
+MSC
+
+TCE
+
+Blockdiagramm des TCE
+
+(11) Das TCE ist vom Systemkonzept her Bestandteil des BSC wird jedoch häufig in einer
+MSC aufgestellt, da sie als „Schnittstelle“ für die Anpassung der Übertragungsrate der Nutzkanäle zwischen MSC und BSC (A- und der Asub Schnittstelle) von 64 kbit/s auf 13 kbit/s zuständig ist. Die Durchschaltung der zentralen Zeichengabekanäle erfolgt ohne Datenreduktion. Die TCE komprimiert die von der A-Schnittstelle kommenden Nutzdaten von 64kbit/s auf
+16kbit/s wodurch über die Asub-Schnittstelle die 4-fache Menge an Nutzkanälen transportiert
+werden kann.
+Wichtige Merkmale der TCE sind:
+• gute Nachbildung der Kurvenform im Sprachband von 300...3400 Hz mit 64 kbit/s
+• Low Bitrate Waveform Coding: Nachbildung der Kurvenform mit <16kbit/s)
+• Vocoding: Übertragen wird „was ähnlich klingt“, Nachbildung der menschlichen
+Spracherzeugung, (Bitraten theoretisch bis auf 5,3 kbit/s senkbar)
+• Erkennen von Fax, Modem und MFV da kein mehrmaliges Codieren/Decodieren zulässig ist
+
+3.3
+
+Core Network CN (Switching Subsystem SSS)
+
+Vermittlungstechnische bzw. netzorientierte Funktionen werden im Core Network bzw. vermittlungstechnischen Teilsystem (Switching Subsystem, SSS) durchgeführt. Das CN bildet
+ein Übergangsnetz zwischen dem Mobilnetz und den öffentlichen Partnernetzen (z.B. Telefonnetz 9 , ISDN 10 , Datennetz 11 ).
+Bestandteile des Core Networks CN sind:
+• Mobilvermittlungsstellen (Mobile Services Switching Center, MSC) mit der Besucherdatei (Visitor Location Register, VLR)
+• Heimatdatei (Home Location Register, HLR)
+9
+
+Public Switched Telephone Network, PSTN
+Integrated Services Digital Network
+11
+Public Switched Data Network, PSDN
+10
+
+POEL © TELEKOMMUNIKATION 2007
+
+Seite 15
+
+Kurzfassung
+
+GSM Systemstruktur
+
+• das für die Teilnehmerverwaltung erforderliche Authentication Center (AC)
+• Equipment Identity Register (EIR).
+Mobile Services Switching Center - MSC
+PCM 30
+
+NIF
+SP
+
+KN
+
+NIF
+
+PCM 30
+
+IWU
+
+Rechner- Steuerung
+Visitor Location Register
+Bild 14
+
+Blockdiagramm einer Mobilvermittlungsstelle MSC
+
+(12) Das MSC ist eine ISDN-Transitvermittlungsstelle ergänzt mit der sog. Inter Working Unit
+IWU und speziellen Softwaremodulen für die Mobilkommunikation.
+Eine MSC führt u.a. folgende Aufgaben durch:
+• Verbindungsaufbau innerhalb des Mobilnetzes und zu anderen Netzen (PSTN, ISDN,
+PSDN)
+• Verbinden verschiedener Netzeinheiten mit den Basisstationssystemen
+• Aufzeichnen der zur Abrechnung erforderlichen Verbindungsdaten
+• Einspielen von Anzeigetexten
+Die Interworking-Einheit IWU beinhalten ein Modem welches akustische Daten in Binärdaten
+umwandelt und umgekehrt, damit über die für Sprachkommunikation vorgesehene Luftschnittstelle auch Daten übertragen werden können.
+Visitor Location Register - VLR
+(13) Jeder MSC ist eine Besucherdatei, das VLR, zugeordnet. Das VLR dient zur Verwaltung
+jener Teilnehmer, die sich im Zuständigkeitsbereich dieser MSC aufhalten.
+Durchquert ein Mobilteilnehmer mehrere Aufenthaltszonen einer MSC, werden auch die Teilnehmerdaten im VLR durch einen speziellen Dialog laufend aktualisiert. Entsprechendes gilt
+beim Wechsel des MSC-Zuständigkeitsbereiches.
+Verlässt ein Teilnehmer seinen aktuellen VLR-Bereich, werden seine Daten gelöscht.
+Das VLR erfüllt u.a. folgende Funktionen:
+• Organisation der Teilnehmerdaten wie z.B. die vereinbarten Dienste
+• Verwalten der Teilnehmernummern wie z.B. MSISDN, IMSI, TMSI
+• Verwalten der Aufenthaltszone LAI
+• Bereitstellen der Schlüssel zu Verschlüsselung
+• Bereitstellen den Mobile Station Roaming Number MSRN bei Passivverbindungen
+damit ein Nutzkanal von der MSC des A-Teilnehmers zur besuchten MSC (= MSC des
+B-Teilnehmers) geschaltet werden kann
+Home Location Register - HLR
+(14) Das Home Location Register, auch Heimatdatei genannt, ist die zentrale Datenbank eines Mobilnetzes und enthält die Daten aller in diesem Netz registrierten Teilnehmer. Meistens ist das HLR bei einer Mobilvermittlungsstelle (MSC) des GSM-Netzes angeordnet. Je
+GSM-Netz ist logisch nur ein HLR notwendig, aus verwaltungstechnischen Gründen kann es
+POEL © TELEKOMMUNIKATION 2007
+Seite 16
+
+Kurzfassung
+
+GSM Systemstruktur
+
+aber auch mehrere geben. Jeder mobile Teilnehmer und dessen Daten sind in nur einer
+Heimatdatei registriert.
+Das Home Location Register speichert die für die Gesprächsabwicklung erforderlichen statischen und dynamischen Kundendaten. Dazu gehören:
+• Zugriffsberechtigungen wie
+o Rufnummer- MSISDN
+o MS-Identitätsnummer - IMSI und
+o persönlichen (Authentifizierungs) Schlüssel - Ki
+• Dienste-Berechtigungen
+• Zusatzdienste
+• Aufenthaltsbereich des Teilnehmers
+o Signalisierungsadresse des VLR - VLRid
+Verlässt der Teilnehmer seinen momentanen Aufenthaltsbereich und wechselt
+dabei die für ihn zuständige MSC, erfolgt im HLR eine sofortige Aktualisierung.
+
+HLR
+Teilnehmerdaten
+
+B-Rufnummer
+
+Teilnehmer-Daten
+MSRN-Anfrage
+Tln-Daten-Anfrage
+MSRN
+
+Signalisierungsverbindungen
+
+MSRN
+
+VLR
+MSC
+
+PSTN
+
+Nutzverbindung
+
+MSC
+
+Nutzverbindung
+
+Bild 15
+
+Prinzipielle Aufgabe des HLR bei einer kommenden Verbindung
+
+Authentication Center - AC
+(15) Um den Missbrauch von GSM-Verbindungen zu unterbinden wurden, da die Funkschnittstelle für Zugriffe überaus anfällig ist, besondere Maßnahmen zum Schutz der Teilnehmeridentität, der Nutzung seiner Berechtigung und seiner Mobilkommunikation gegen
+Abhören über die Funkschnittstelle getroffen. Die dafür erforderliche Daten, sog. Triples, werden im AC mittels des teilnehmerindividuellen Schlüssels Ki, einer Zufallszahl - RAND - und
+den Algorithmen A3 und A8 erzeugt und dem VLR bzw. Mobilgerät je Verbindung zur Verfügung gestellt.
+Visitor Location
+Register
+
+Authentication Center
+
+AC
+
+RAND
+RAND + Ki + A3 = Kc
+RAND + Ki + A8 = SRES
+
+SIM Karte
+RAND
+
+Triples
+Triples
+
+Bild 16
+
+VLR
+
+Authentication
+SRES
+
+IMSI
+Ki
+A3
+A8
+
+SIM
+
+Aufgabe des Authentication Centers
+
+Equipment Identity Register - EIR
+Das EIR ist die zentrale Gerätedatenbank und dient zur Speicherung der International Mobile
+Equipment Identity, IMEI und entsprechender Besitzerkennungen. Das EIR kann im Rahmen
+POEL © TELEKOMMUNIKATION 2007
+
+Seite 17
+
+Kurzfassung
+
+GSM Systemstruktur
+
+einer Überprüfung der Netzzugangsberechtigung - Authentifizierung - abgefragt werden und
+die Berechtigungsprüfung beeinflussen.
+Das EIR kann z.B. folgende Informationen enthalten:
+• eine (weiße) Liste, mit den IMEIs aller „gültigen“ Handys,
+• eine (schwarze) Liste mit den IMEIs gestohlener oder gesperrter Handys für die kein
+Netzzugang mehr bereitgestellt wird,
+• eine (graue) Liste mit den IMEIs von Geräten mit nicht mehr kompatibler Hardware
+und/oder Software, so wie für Geräte mit Funktionsstörungen, für die keine Dienste
+mehr bereitgestellt werden.
+
+3.4
+
+Operation and Maintenance Subsystem (OSS)
+
+Das OSS steuert, überwacht und wartet als zentrale Stelle eines GSM-Netzes alle vermittlungs-, funk- und betriebstechnischen Einrichtungen und damit die Dienstgüte des Netzes.
+Es besteht aus einem oder mehreren Operation & Maintenance Centers (OMC) welche in der
+Regel über die standardisierte O-Schnittstelle (eine X.25-Schnittstelle) mit den Netzelementen BTS, BSC, MSC, VLR und HLR verbunden sind. Es erhält alle Alarmmeldungen über
+aufgetretene Fehler wie Hardware-Ausfälle, Stromausfall, Einbruch, etc.
+Das Operation und Maintenance Subsystem OSS des GSM umfasst also alle für Betrieb und
+Wartung wichtigen Funktionen, welche in drei Aufgabengebiete unterteilt werden können:
+• Mobilendgeräteverwaltung (Mobile Equipment Administration)
+• Teilnehmerverwaltung (Subscriber Data Management)
+• Netzbetrieb und Wartung (Network Operation and Maintenance)
+Mobile-Equipment Administration
+Die Verwaltung mobiler Endgeräte durch das OSS betrifft nur Informationen bzgl. Besitzerund Endgeräteidentität - Endgerätemobilität samt Roaming, Routing und Paging werden im
+SSS koordiniert.
+Mittels dieser Funktion können z.B. gestohlene oder fehlerhafte Endgeräte gesucht werden.
+
+POEL © TELEKOMMUNIKATION 2007
+
+Seite 18
+
+Kurzfassung
+
+GSM Systemstruktur
+
+Subscriber Data Management
+Darunter versteht man die Verwaltung der Teilnehmer und Endgeräte, so wie die Entgeltabrechnung.
+Die Teilnehmerdaten sind im HLR gespeichert und werden dort verwaltet; datensicherheitsspezifische Informationen liegen im AC. Das HLR kann einen eingeschränkten Zugang für
+Elemente fremder Netze vorsehen, um z.B. an verschiedenen Orten gespeicherte Daten
+konsistent halten zu können und Dienstanbietern den Zugriff auf Tarif- und Dienstdaten zu
+ermöglichen. Die Teilnehmerverwaltung kann aufgrund der im HLR gespeicherten persönlichen Daten den GSM-Benutzer authentizieren und ihm die entsprechenden dienstabhängigen Entgelte zuweisen (Call Charging).
+Network Operation and Maintenance
+Darunter versteht man die Möglichkeit über Operatorkommandos Eingriffe ins System vorzunehmen sobald die Netzverwaltung durch Alarm über unvorhergesehene Vorkommnisse im
+Netz informiert wird, ferner fallen darunter die Ermittlung statistischer Daten über den Zustand und die Auslastung der Netzelemente.
+Zum Netzmanagement und zur Abwicklung von Wartungsaufgaben wird ein spezielles Netz
+zur Verbindung von OMC und Netzelementen verwendet. Dieses Netz beruht auf dem von
+ITU-T entwickelten Konzept des TMN (Telecommunication Management Network). Das TMN
+bildet ein integriertes Netz mit eigenen Datenbanken, das dem Betreiber Überwachungs-,
+Steuerungs- und andere Eingriffsmöglichkeiten bietet. Es hat Verbindungen mit definierten
+Schnittstellen zu den Netzelementen des Nutznetzes und zu den Arbeitsplatzrechnern des
+Betreiberpersonals.
+Die TMN-Funktionen sind ähnlich wie die Netzelementfunktionen im OSI-Referenzmodell in
+einzelne Schichten gegliedert:
+• Business Management: kontrolliert die Interaktion zwischen Netz und Diensten und
+stellt Informationen zur weiteren Dienst- und Netzentwicklung zur Verfügung;
+• Service Management: dient der Abwicklung aller vertraglichen Aspekte eines Dienstes
+zwischen Anbieter und Kunden;
+• Network Management: unterstützt alle Netzelemente und ermöglicht das Aktivieren
+von Funktionen gleichartiger Elemente eines Netzes;
+• Network Element Management: ermöglicht den Zugriff auf einzelne Netzelemente.
+
+4
+
+GSM - Funktionsprinzip
+
+Mit Hilfe des Mobilfunks können Fernsprechverbindung zwischen mobilen Endgeräten (Mobile Stations MS) und ortsfesten oder anderen mobilen Endgeräten hergestellt werden. Mobile
+Endgeräte können sich in Fahrzeugen, Schiffen oder Zügen befinden, aber natürlich auch in
+Form sog. Mobiles oder Handys an vielen anderen Stellen benützt werden. Ein Mobilfunknetz
+besteht neben dem Mobilteil, das sind die über Funkstrecken angeschlossenen mobilen
+Endgeräte, aus einem Festnetzteil bestehend aus mehreren GSM Radio Access Networks
+(GERAN, Sende- und Empfangssysteme) und einem Core Network CN mit Vermittlungsstellen (MSC = Mobil-Vermittlungsstellen). Die MSCs bieten neben der Verbindung untereinander auch einen Übergang zum Festnetz, wo mit herkömmlichen Übertragungsverfahren die
+Verbindung zu Festnetzteilnehmern oder anderen Mobilfunknetzen hergestellt wird.
+
+POEL © TELEKOMMUNIKATION 2007
+
+Seite 19
+
+Kurzfassung
+
+GSM Systemstruktur
+
+PSTN/ISDN
+GERAN
+
+GERAN
+Mobilnetz A
+
+Mobilnetz B
+
+GERAN
+
+GERAN
+
+CN
+
+CN
+
+GERAN
+
+GERAN
+
+GERAN
+
+GERAN
+
+GERAN…GSM Radio Access Network
+CN………Core Network
+
+Bild 17
+
+PSTN…Public Switched Telephone Network
+ISDN….Integrated Services Digital Network
+
+Funktionsprinzip Blockschaltbild:
+zum Core NW
+TCE
+
+BSC
+1
+
+TCE
+Base Station Controller
+
+BSC
+x
+Festnetz-Verbindungen
+
+3
+
+Funkschnittstelle
+zum ME
+
+1
+1
+2
+
+2
+
+3
+1
+
+Bild 18
+
+3
+
+Base Transceiver Stations
+(Zellenstruktur)
+
+Komponenten des GSM Radio Access Networks GERAN
+
+4.1
+
+Wegedurchschaltung
+
+4.1.1
+
+Einbuchen ins Netz
+
+(16) Sobald ein Mobilteilnehmer sein Endgerät einschaltet laufen vor dem Einbuchen ins
+Netz zunächst gerätespezifische Prüfsequenzen ab und anschließend die netzbezogenen
+Vorgänge der Location Registration. Um eine Location Registration und damit das Einbuchen
+ins Netz positiv abschließen zu können, wird eine Authentication 12 durchgeführt durch welche die Zugangsberechtigung der SIM-Karte zum Mobilnetz überprüft wird.
+
+12
+
+Eine Authentifizierung des Endgerätes wird außer bei der Inbetriebnahme (Einschalten) auch vor jedem Gesprächsaufbau durchgeführt.
+POEL © TELEKOMMUNIKATION 2007
+
+Seite 20
+
+Kurzfassung
+
+GSM Systemstruktur
+
+Wechselt der Teilnehmer nach dem Einschalten der MS seinen Aufenthaltsbereich ohne dabei ein Gespräch zu führen, so wird der Aufenthaltsbereich mittels eines Location Update 13
+aktualisiert. -Dieser Location Update wird immer dann ausgelöst, wenn die auf der SIM-Karte
+gespeicherte LAI von der im Broadcast Channel der gegenwärtig günstigsten Zelle empfangenen LAI abweicht.
+Beim Abschalten der MS wird ein Flag (Detach Flag) im VLR gesetzt. das z.B. für ein Weiterleiten ankommender Verbindungswünsche bei „Abwesenheit“ des mobilen Benutzers verwendet werden kann. Beim Einbuchen oder durch eine beliebige andere Aktivität des mobilen Benutzers wird dieses Flag wieder zurückgesetzt.
+
+4.1.2
+
+Aktivverbindung
+
+Um ein Aktivgespräch (Mobile Originated Call MOC) zu führen wählt der Mobilteilnehmer an
+seinem Endgerät eine Teilnehmernummer und drückt die Verbindungstaste. Dadurch fordert
+die MS die Bereitstellung einer Nutzkanalverbindung an worauf das VLR die Authentication
+durchführt, eine neue TMSI zuweist, und die Berechtigung des Teilnehmers für den gewünschten Dienst (subscription check) prüft. Ist die Berechtigungsprüfung des Teilnehmers
+für den gewünschten Dienst erfolgreich, wird ihm ein Nutzkanal auf der Luftschnittstelle zugewiesen, und das MSC baut die Nutzkanalverbindung vom BSC zum B-Teilnehmer auf. Das
+HLR ist an einem Mobile Originated CalI nicht beteiligt.
+Zur Zuteilung eines Nutzkanals sind ca. 14 Meldungen zwischen Mobilstation und Basisstation notwendig, der dafür notwendige Zeitaufwand beträgt etwa 2 Sekunden.
+
+13
+
+Achtung: der Update des Aufenthaltsbereiches während eines Gespräches wird als Handover bezeichnet.
+
+POEL © TELEKOMMUNIKATION 2007
+
+Seite 21
+
+Kurzfassung
+4.1.3
+
+GSM Systemstruktur
+
+Passivverbindung
+
+Bei einer Passivverbindung (Mobile Terminated Call MTC) ist vor der Verbindungsdurchschaltung der Aufenthaltsort des B-Teilnehmers mittels Interrogation und Paging festzustellen.
+Interrogation
+(17) Sobald die MSISDN von einem z.B. PSTN-Teilnehmer gewählt wird, führt die Ziffernbewertung im PSTN zum Aufbau einer Nutzkanalverbindung von der Ursprungs-VSt zum MSC,
+welches den Zugang zum Ziel-PLMN darstellt - diese MSC wird als Gateway-MSC bezeichnet.
+Um die Nutzkanalverbindung zu jener MSC durchzuschalten in deren Bereich sich der Mobilteilnehmer gerade aufhält benötigt die Gateway-MSC eine zusätzliche Leitweginformation.
+Diese Leitweginformation heißt Mobile Station Roaming Number (MSRN) und ist eine Ziffernkombination, die in ihrer Struktur einer MSISDN entspricht, d.h. sie besteht aus CC, NDC
+und einer individuellen Nummer, die in diesem Fall jedoch weder ein HLR noch einen Teilnehmer kennzeichnet sondern bei der Ziffernauswertung immer zum (damit assoziierten)
+besuchten MSC (MSC des B-Teilnehmers) führt.
+Man erhält die MSRN durch die sog. Interrogation an das HLR 14 welches mit der dort gespeicherten Signalisierungsadresse des besuchten VLR diese abfragt und die erhaltene
+MSRN an die Gateway MSC weiterleitet.
+Paging
+Da die MSC nur die Location Area vom letzten Location Update kennt, muss zunächst die
+aktuelle Zelle bestimmt werden. Dazu beauftragt die MSC alle BSC, die diese Location Area
+bedienen, über einen CCCH eine Suchmeldung auszusenden. Dieser Vorgang heißt Paging.
+Die MS antwortet aus der aktuellen Zelle mit einer ”Paging Response”, die über die BSC zur
+MSC gelangt. Nach einer erneuten Authentication und der Vergabe einer neuen TMSI durch
+das VLR, wird der Verbindungsaufbau zur MS vervollständigt.
+
+4.1.4
+
+Handover
+
+Wechselt eine MS während einer bestehenden Verbindung in eine andere Zelle, so übernimmt die BTS der neuen Zelle die Funkversorgung ohne Unterbrechung der Verbindung.
+Dieser Prozess heißt Handover.
+Ein Handover besteht grundsätzlich aus vier Phasen:
+• Phase 1: die BSC entscheidet, dass ein Handover notwendig ist.
+• Phase 2: zur bestehenden Verbindung wird eine zweite parallel aufgebaut.
+• Phase 3: die MS schaltet zur neuen Verbindung um.
+• Phase 4: die ursprüngliche Verbindung wird ausgelöst.
+
+14
+
+Die Gateway-MSC identifiziert das HLR durch die HLR-Nummer welche Bestandteil der empfangenen
+MSISDN ist.
+
+POEL © TELEKOMMUNIKATION 2007
+
+Seite 22
+
+Kurzfassung
+4.2
+
+GSM Systemstruktur
+
+Signalisierung
+
+GSM arbeitet verbindungsorientiert, d.h. es gibt drei Verbindungsabschnitte, die entsprechend den Eigenschaften eines zellularen Mobilfunknetzes erweitert, bzw. modifiziert sind.
+• Verbindungsaufbau,
+• Informationsaustausch und
+• Verbindungsabbau
+Wie im ISDN-Festnetz ist auch in Mobilnetzen für einen Verbindungsauf- oder abbau der
+Austausch entsprechender Informationen zwischen den Netzelementen des GSMFestnetzteils so wie den Mobilstationen (MS) und den Elementen des Festnetzteils erforderlich. Für diesen Informationsaustausch, die sog. Signalisierung, werden den Verbindungsabschnitten entsprechend spezielle Signalisierungsverfahren eingesetzt.
+(18) GSM verwendet für die Signalisierung im Festnetzteil das ZentralkanalZeichengabeverfahren ZGV7 und zur Signalisierung auf der Luftschnittstelle Um ein dem
+ISDN D-Kanalprotokoll ähnliches Verfahren welches über sog. Steuerkanäle abgewickelt
+wird. Ausgenommen dem zur Gruppe der DCCH gehörenden FACCH der für die Abwicklung
+des Handover dem Traffic Channel entnommen wird, befinden sich alle anderen Steuerkanäle im Zeitschlitz Null eines TDMA-Rahmens. Je nach Aufgabe, gibt es drei Gruppen von
+Steuerkanälen:
+• BCCH
+(Broadcast Channel)
+• CCCH
+(Common Control Channel)
+• DCCH
+(Dedicated Control Channel)
+BCCH
+Sind nur DOWNLINK gerichtete Steuerkanäle zur Verbreitung zellenspezifischer Informationen, zur Synchronisation auf die Hyperrahmenstruktur, Frequenzkorrektur,...
+CCCH
+Sind Steuerkanäle, die von allen MS genutzt werden und z.B. zur Anforderung und Bereitstellung von DCCH dienen.
+DCCH
+Sind Steuerkanäle, die einer MS für eine bestimmte Transaktion - z.B. Verbindungsaufbau zugewiesen werden, solange kein Nutzkanal bereitgestellt wird.
+
+POEL © TELEKOMMUNIKATION 2007
+
+Seite 23
+
+Kurzfassung
+5
+
+GSM Systemstruktur
+
+Kontrollfragen
+
+1. Nennen Sie die wesentlichen Eigenschaften eines zellularen Mobilfunksystems.
+2. Beschreiben Sie das Prinzip des Frequenzmultiplex.
+3. Beschreiben Sie das Prinzip des Zeitmultiplex.
+4. Beschreiben Sie die prinzipielle Struktur der Funkschnittstelle.
+5. Beschreiben Sie den Aufbau eines TDMA-Rahmens.
+6. Zeichnen und beschreiben Sie das Blockdiagramm eines GSM-Netzes.
+7. Nennen und beschreiben Sie die Schnittstellen in einem GSM-Netz.
+8. Beschreiben Sie die Eigenschaften einer Mobile Station.
+9. Welche Aufgaben haben die Komponenten des GSM Radio Access Networks GERAN
+(Base Station Subsystems)?
+10. Zeichnen Sie das Blockdiagramm eines BSC und beschreiben Sie die Grundaufgaben
+der Funktionsblöcke.
+11. Zeichnen Sie das Blockdiagramm der Transcoding Einrichtung und beschreiben Sie die
+Grundaufgaben der Funktionsblöcke.
+12. Zeichnen Sie das Blockdiagramm eines MSC und beschreiben Sie die Grundaufgaben
+der Funktionsblöcke.
+13. Welche Aufgaben werden durch das VLR erledigt?
+14. Welche Aufgaben werden durch das HLR erledigt?
+15. Welche Aufgaben werden durch das AC durchgeführt?
+16. Was verstehen Sie unter „Einbuchen ins Netz“ und welche grundlegenden Aktivitäten
+werden dabei durchgeführt?
+17. Welche speziellen Abläufe werden bei einem Mobile Terminating Call durchgeführt?
+18. Welche Arten von Steuerkanälen kennen Sie und wofür werden sie eingesetzt?
+
+POEL © TELEKOMMUNIKATION 2007
+
+Seite 24
+
+Kurzfassung
+6
+Bild 1
+Bild 2
+Bild 3
+Bild 4
+Bild 5
+Bild 6
+Bild 7
+Bild 8
+Bild 9
+Bild 10
+Bild 11
+Bild 12
+Bild 13
+Bild 14
+Bild 15
+Bild 16
+Bild 17
+Bild 18
+
+GSM Systemstruktur
+
+Bilder und Tabellen
+Beispiele zellularer Netzstrukturen ........................................................................... 3
+Multilayer-Netzstruktur.............................................................................................. 4
+Ausführungsformen von Sende- und Empfangsantennen ........................................ 4
+Prinzipielle Struktur der Funkschnittstelle ................................................................. 6
+GSM-Frequenzbereiche ........................................................................................... 8
+Aufteilung der Frequenzbänder auf die österr. Netzbetreiber ................................... 8
+Aufbau eines TDMA-Rahmens (incl. Normal Burst) ................................................. 9
+GSM-Systemarchitektur.......................................................................................... 10
+Schnittstellen im GSM ............................................................................................ 10
+Blockdiagramm eines „Mobile Equipments“............................................................ 12
+Ausführungsformen von Sende- und Empfangsantennen ...................................... 14
+Blockdiagramm des BSC........................................................................................ 14
+Blockdiagramm des TCE ........................................................................................ 15
+Blockdiagramm einer Mobilvermittlungsstelle MSC................................................ 16
+Prinzipielle Aufgabe des HLR bei einer kommenden Verbindung .......................... 17
+Aufgabe des Authentication Centers ...................................................................... 17
+Funktionsprinzip Blockschaltbild:............................................................................ 20
+Komponenten des GSM Radio Access Networks GERAN ..................................... 20
+
+Tabelle 1 GSM - Frequenzbereiche ......................................................................................... 7
+Tabelle 2 Geräteleistungen .................................................................................................... 13
+Tabelle 3 Sendeleistungen..................................................................................................... 14
+
+POEL © TELEKOMMUNIKATION 2007
+
+Seite 25
+
+Kurzfassung
+7
+
+GSM Systemstruktur
+
+Abkürzungen und Begriffe
+
+Abkürzungen
+AC....................Authentication Center
+ACCH...............Associated Control Channels
+AMPS...............American (Advanced) Mobile Phone System
+ARFCN ............Kanalnummer, absolute radio frequency channel number,
+AuC..................Authentification Center
+BACCS ............Billing and Customer Care Systems
+BCH .................Broadcast Channel
+BSC .................Base Station Controller
+BSS .................Base Station System
+BTS..................Base Transeiver Station
+CCCH ..............Common Control Channels
+CDM.................Code Division Multiplexing, Codemultiplex
+CDMA ..............Code Division Multiplex Access
+CEPT ...............Conference Européenne des Administrations des Postes et Telecommunications, Europäische Konferenz für das Post- und Fernmeldewesen
+DCCH ..............Dedicated Control Channels
+DCS .................Digital Communication System
+DECT ...............Digital Enhanced Cordless Telephone
+EI .....................Equipment Identity
+EIR...................Equipment Identity (Identification) Register
+ETSI.................European Telecommunications Institute
+FDM .................Frequency Division Multiplexing, Frequenzmultiplex
+FDMA...............Frequency Division Multiple Access
+GPRS...............General Packed Radio Services
+GSM ................Global System for Mobile Communication
+HLR .................Home Location Register
+HON.................Handover Number
+HPMLN ............Home Public Land Mobile Network
+HSCSD ............High-Speed Circuit-Switched Data
+IMEI .................International Mobile Equipment Identity
+IMSI .................International Mobile Station (Subscriber) Identity
+ISDN ................Integrated Services Digital Network
+ISO ..................International Standards Organization
+ITU ...................International Telecommunications Union
+IVPN ................International VPN
+Kc ....................cipher key
+LAC..................Location Area Code
+LAI ...................Location Area Identity
+LEO .................Low Earth Orbit
+LMSI ................Local Mobile Subscriber Identity
+MCC.................Mobile Country Code
+MNC.................Mobile National Code
+MOC ................Mobile Originating Call
+MoU .................Memorandum of Understanding
+MS ...................Mobile Station
+MSC.................Mobile Services Switching Center
+POEL © TELEKOMMUNIKATION 2007
+
+Seite 26
+
+Kurzfassung
+
+GSM Systemstruktur
+
+MSISDN...........Mobile Station International ISDN Number
+MSRN ..............Mobile Station Roaming Number
+MTC .................Mobile Terminating Call
+OMC ................Operation and Maintenance Center
+OMS ................Operation and Maintenance Subsystem
+OSI ..................Open Systems Interconnection
+OSS .................Operation & Maintenance Subsystem
+PCN .................Personal Communications Network
+PCS .................Personal Communications System
+PHS .................Personal Hand-phone System
+PIN...................Personal Identification Number
+PLMN...............Public Land Mobile Network
+PSDN...............Public Switched Data Network
+PSTN ...............Public Switched Telephone Network
+PUK .................Personal unblocking Key
+RAND...............Random Number, Zufallszahl
+RFC .................Radio Frequency Channel
+RSS .................Radio Subsystem
+SDM.................Space Division Multiplexing, Raummultiplex
+SIM ..................Subscriber Identity Module
+SRES ...............signed response
+SSS .................Switching Subsystem
+TA ....................Timing Advance
+TACS ...............Total Access Communications System
+TCDMA ............Time CDMA
+TDM .................Time Division Multiplexing, Zeitmultiplex
+TDMA...............Time Division Multiple Access
+TMN .................Telecommunication Management Network
+TMSI ................Temporary Mobile Station Identity
+TCE .................Transcoding and Rate Adaption Unit
+UMTS...............Universal Mobile Telecommunication System
+UTRA ...............UMTS Terrestrial Radio Access
+VAS .................Value added Service
+VLR..................Visitor Location Register
+VPMLN ............Visited Public Land Mobile Network
+VPN .................Virtual Private Network
+WAP ................Wireless Application Protocoll
+WCDMA...........Wideband CDMA
+
+POEL © TELEKOMMUNIKATION 2007
+
+Seite 27
+
+Kurzfassung
+
+GSM Systemstruktur
+
+Begriffe
+Call Center
+Dienstleistungseinheit, die operatorgestützte Sprachdienste, wie z.B. Hot- oder Servicelines,
+auf Grundlage des Sprachtelefondienstes anbieten.
+Dual Mode
+Handy-Technologie, die es ermöglicht, verschiedene Kommunikationssysteme in ein Gerät
+zu integrieren, z.B. Handy, Schnurlostelefon und Festnetz.
+Multi Band
+Handy-Technologie, die das Telefonieren mit einem Handy in verschiedenen Frequenzbereichen (900, 1800 und 1900 MHz) ermöglicht.
+GSM (Global System for Mobile Communication)
+Europäischer Mobilfunkstandard, der in den Frequenzbereichen 900, 1800 und 1900 MHz
+operiert und auch auf anderen Kontinenten eingesetzt wird. Weltweit der verbreitetste Mobilfunkstandard.
+Handover
+Leistungsmerkmal zellularer und satellitengestützter Mobilfunknetze, das ein automatisches
+unterbrechungsfreies Weiterreichen bestehender Verbindungen von einer Sendestation zur
+nächsten realisiert.
+IN (Intelligent Network)
+Kommunikationsnetz, das eine Trennung von Verbindungssteuerung und Diensteunterstützung vorsieht.
+Makrozelle
+Mobilfunkstation mit einem Versorgungsbereich von einigen Kilometern.
+Mikrozelle
+Mobilfunkstation mit einem Versorgungsbereich von einigen 100 Metern. Wird vor allem in
+Städten und zur Versorgung von Gebäuden eingesetzt.
+Roaming
+Bezeichnung für die Erreichbarkeit in fremden GSM-Mobilfunknetzen unter der gleichen Rufnummer.
+SIM (Subscriber Identity Module)
+Miniaturisierte Chipkarte für Mobiltelefonanschlüsse. Dient zur Identifikation des Teilnehmers.
+SMS (Short Message Service)
+Kurznachrichtendienst, der in der mobilen Kommunikation zur Übertragung kurzer alphanumerischer Daten dient.
+UMTS (Universal Mobile Telecommunication System)
+Neuer, weltweit einheitlicher Mobilfunkstandard, der die verschiedenen kontinentalen Mobilfunkstandards integriert. Wesentlichste Leistungsmerkmale sind größere Kapazitäten und
+größere Datenmengen, die auch den Einsatz von mobilen Multimediageräten ermöglichen.
+POEL © TELEKOMMUNIKATION 2007
+
+Seite 28
+
+Kurzfassung
+
+GSM Systemstruktur
+
+Dual Band
+Handy-Technologie, die das Telefonieren mit einem Handy in zwei Frequenz-bereichen (900
+und 1800 MHz) ermöglicht
+EFR (Enhanced Full Rate)
+neue Technik der Sprachcodierung, ermöglicht GSM-Telefonieren in Festnetzqualität
+
+8
+
+Literatur
+
+[1]
+
+Ulrich Freyer, Nachrichtenübertragungstechnik, 3. Auflage, Carl Hanser Verlag, 1994,
+ISBN 3-446-17724-8
+
+[2]
+
+Taschenbuch der Telekommunikation 1999, Fachbuchverlag Leipzig
+
+[3]
+
+Bernhard Walke, Mobilfunknetze und ihre Protokolle, Band 1, Teubner Verlag, 1998,
+ISBN 3-519-06430-8
+
+[4]
+
+Siegmund Redl, GSM Technik und Messpraxis; Netzeigenschaften, 2. Auflage, Franzis
+Verlag, 1995, ISBN 3-7723-4852-1
+
+[5]
+
+Bernhard Walke, Marc Peter Althoff, Peter Seidenberg, UMTS - Ein Kurs, 2. Auflage,
+J. Schlembach Fachverlag, 2002, ISBN 3-935340-22-2
+
+POEL © TELEKOMMUNIKATION 2007
+
+Seite 29
+

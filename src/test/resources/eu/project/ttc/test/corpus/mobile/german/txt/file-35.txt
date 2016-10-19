@@ -1,0 +1,208 @@
+Alles über Bluetooth
+
+Wie die Funktechnik Bluetooth funktioniert und wie unterschiedliche Geräte kabellos Kontakt miteinander aufnehmen, verrät Ihnen dieser Ratgeber.
+Inhalt: Alles über Bluetooth
+
+    * 1. Begriffserklärung: Bluetooth
+    * 2. Geschwindigkeit und Reichweite
+    * 3. Bluetooth-Verbindung und Sicherheit
+    * 4. Versionen und Profile
+
+Die winzigen Bluetooth-Chips passen auch in kleinste Geräte.
+
+Die winzigen Bluetooth-Chips passen auch in kleinste Geräte.
+An einem PC finden sich rund 25 Kabel-Schnittstellen in unterschiedlichen Varianten - dagegen wirkt das Lianengewirr im Amazonas-Dschungel übersichtlich. Komplett abschaffen lässt sich der Strippen-Stress zwar nicht, Bluetooth bringt aber Linderung: Die im Vergleich zu WLAN energiesparende Funkverbindung ersetzt Kabel auf kurze Distanz, beispielsweise bei Tastaturen und Mäuse. Durchgesetzt hat sich die Technik bislang vor allem in kleinen Geräten für unterwegs: Mit einem Bluetooth-Headset bleibt das Handy bei einem Anruf in der Tasche. Sie nehmen das Telefonat direkt am Kopfhörer an.
+
+ Test: Die besten Smartphones
+
+Was ist Bluetooth?
+
+Bluetooth ist eine Funktechnik zur Datenübertragung. Die Geräte haben dafür einen winzigen Mikrochip samt Sende- und Empfangseinheit. Darüber hinaus benötigen die Geräte nur noch die passende Software, die den Datentransfer steuert. Damit sich Bluetooth-Geräte gegenseitig eindeutig erkennen und andere Funkverbindungen nicht stören, hat jedes einzelne eine einmalige, 48 Bit lange Seriennummer. 
+
+ Handy-Ratgeber: Kostenlos zum eigenen Klingelton
+
+Welche Geräte nutzen Bluetooth?
+
+Bluetooth-Technik nutzen heute viele unterschiedliche Geräte, vor allem PCs, Notebooks und Handys sowie deren Zubehör. Viele Beispiele finden Sie in der nachfolgenden Übersicht.
+Geräte mit Bluetooth
+Samsung S8500 Wave © COMPUTER BILD
+Samsung N150 Eliah © Samsung
+Navigon 4310 max © COMPUTER BILD
+Philips SPF 7008 © Philips
+Per Funk kommunizieren
+14 Produkte
+Was bedeutet der Name Bluetooth?
+Er entstand bei einem Treffen zwischen einem Intel- und einem
+Ericsson-Ingenieur im Jahr 1997 in einer kanadischen Bar. Er verweist
+auf den Wikinger-König Harald Blaatand (wörtlich übersetzt "Blauzahn",
+englisch "bluetooth"). So wie König Blauzahn einst weite Teile
+Dänemarks und Norwegens einte, sollte die Funktechnik die Computer-
+und Telekommunikations-Welt zusammenführen und eine Vielzahl
+unterschiedlicher Anschlüsse ablösen. 
+
+Geschwindigkeit und Reichweite
+Geschwindigkeit und Reichweite Damit Funkstörungen die Datenübertragung nicht dauerhaft unterbrechen, wechseln Bluetooth- Geräte ständig den Funkkanal.
+
+Damit Funkstörungen die Datenübertragung nicht dauerhaft unterbrechen, wechseln Bluetooth- Geräte ständig den Funkkanal.
+Wie schnell ist die Übertragung?
+Bluetooth erreicht nur einen Bruchteil des Tempos von WLAN-Funknetzwerken. Für ein paar Fotos oder MP3-Dateien reicht die Geschwindigkeit aber aus. Das Tempo hängt von der Bluetooth-Version ab:
+
+    * Bluetooth 1.0/1.1/1.2: Die erste Version von Bluetooth schaffte maximal 723 kbps, also ungefähr so viel wie ein DSL-Anschluss der ersten Generation mit 768 kbps. Für schnurlose Verbindungen zwischen Kleinstgeräten, die nur wenige Daten austauschen müssen, reicht diese Technik aber völlig.
+    * Bluetooth 2.0/2.1: Für die zweite Bluetooth-Version haben die Entwickler die Geschwindigkeit auf 2,1 Mbps verdreifacht. 
+
+
+Wie groß ist die Reichweite?
+Unabhängig von der Version gibt es Bluetooth in drei Geräteklassen, die unterschiedliche Distanzen überbrücken.
+Bluetooth-Reichweite
+Klasse 1 ...
+
+... sendet mit 100 Milliwatt und kommt auf bis zu 100 Meter Reichweite. Viele Bluetooth-USB-Sticks arbeiten mit dieser Technik, beispielsweise der "Belkin Bluetooth USB Adapter".
+Klasse 2 ...
+
+... funkt mit 10 Milliwatt und erreicht bis zu 50 Meter. Sie kommt ebenfalls bei Bluetooth-USB-Sticks zum Einsatz, zum Beispiel im extrem kleinen "Nano Bluetooth Adapter" von Hama.
+Klasse 3
+
+Um den Stromverbrauch zu minimieren, funken viele Bluetooth-Geräte in der Klasse 3 mit einem Milliwatt, was maximal zehn Meter weit reicht. Vorteil: Es stehen fast immer freie Übertragungskanäle zur Verfügung und die Geräte stören nicht gegenseitig.
+zurück
+1 von 3
+weiter
+Wie bei jeder Funktechnik dämpfen auch bei Bluetooth Mauern oder Wände aus Stahlbeton sowie größere Metallgegenstände die Funkwellen und verringern die Reichweite.
+
+Kann die Funkübertragung gestört werden?
+Bluetooth-Geräte funken auf dem ISM-Band, das auch andere Gerätearten nutzen, beispielsweise Funknetzwerke (WLAN) und die Mikrowelle in der Küche. Dennoch funktioniert die Bluetooth-Maus auch dann, wenn in der Küche das Essen brutzelt. Denn Bluetooth ist recht störungsfest und lässt sich von Mikrowelle und WLAN kaum aus dem Tritt bringen. Dazu verwendet Bluetooth ein spezielles Frequenzsprung-Verfahren. Weil die Geräte bis zu 1600-mal pro Sekunde die Frequenz wechseln, kommt es extrem selten zu Störungen. So können sich bis zu acht Bluetooth-Geräte zu einem Netzwerk ("Piconet" oder "Picozelle") verbinden. Zudem sind bis zu zehn Picozellen am gleichen Ort möglich. Jedes Bluetooth- Gerät kann dabei gleichzeitig mehreren Picozellen angehören.
+
+
+Bluetooth-Verbindung und Sicherheit
+Wie nehmen Bluetooth-Geräte Kontakt auf?
+Das funktioniert in fast allen Fällen problemlos. Am einfachsten geht' mit der neuesten Bluetooth-Version 2.1: Wenn sich zwei Geräte in direkter Nachbarschaft befinden, erfolgt der Austausch der Sicherheitsschlüssel mit einem einfachen Tastendruck. Das erspart die Eingabe einer PIN. Einmal erkannte Bluetooth-Geräte kann ein Gerät in einer Liste speichern. Die Geräte sind dann gekoppelt und stellen automatisch eine Verbindung her, wenn sie in Funkreichweite sind. Das tun sie so lange, bis einer der Benutzer auf seinem Gerät die Verbindung aus der Liste der Bluetooth-Geräte löscht. Im Folgenden lesen Sie mehr zu den älteren Bluetooth-Versionen.
+Bluetooth-Versionen
+
+Bluetooth 1.1: Hierfür wurde Bluetooth kaum verändert. Die Geräte können die Signalstärke des Funksignals übermitteln.
+
+Bluetooth 1.2: Diese Version verwendet ein verbessertes Verfahren beim Funkkanalwechsel. Das sorgt für eine stabilere Funkverbindung zwischen den Geräten.
+
+Bluetooth 2.0: Für diese Version wurde das Datenübertragungstempo verdreifacht. Sie trägt auch die Zusatzbezeichnung "EDR" (Extended Data Rate, auf Deutsch "erhöhte Datenrate").
+
+Bluetooth 2.1: Geräte mit dieser Technik lassen sich einfacher miteinander verbinden. Eine Automatik ersetzt die Eingabe des Sicherheitscodes.
+zurück
+1 von 4
+weiter
+Klappt die Verbindung per Bluetooth immer?
+In den meisten Fällen ja. Nur selten verstehen sich zwei Bluetooth-Geräte nicht auf Anhieb. Bei manchen Handys müssen Sie beispielsweise eine vom Hersteller mitgelieferte Software auf dem PC installieren, bevor Sie mit Notebook und Handy über das Mobilfunknetz ins Internet gehen können.
+
+Wie abhörsicher ist Bluetooth?
+Die Verschlüsselung von Bluetooth wurde zwar inzwischen teilweise geknackt - die PIN lässt sich beispielsweise bei der Übertragung abhören, wenn sie weniger als acht Zeichen hat. Doch mit diesen Tipps können Sie sich schützen.
+So klappt eine sichere Bluetooth-Verbindung
+
+Verbindung bestätigen: Einige Bluetooth-Geräte können neue
+Bluetooth-Verbindungen auch automatisch aufbauen. Diese eigentlich als
+Komfortfunktion gedachte Automatik sollten Sie auf jeden Fall
+abschalten und jede neue Bluetooth- Verbindung einzeln bestätigen. 
+
+So klappt eine sichere Bluetooth-Verbindung
+
+Verbindung bestätigen: Einige Bluetooth-Geräte können neue Bluetooth-Verbindungen auch automatisch aufbauen. Diese eigentlich als Komfortfunktion gedachte Automatik sollten Sie auf jeden Fall abschalten und jede neue Bluetooth- Verbindung einzeln bestätigen.
+
+Geräte-Koppelung: Speichern Sie die gewünschte Bluetooth-Verbindung in
+der Bluetooth-Geräteliste. Bei diesem sogenannten Pairing werden die
+Schlüssel für die Datenübertragung im Gerät gespeichert. Einmal
+gekoppelt, nehmen die Geräte automatisch Verbindung auf, sobald sie in
+Funkreichweite sind. Die erneute Eingabe der PIN entfällt
+dadurch. Zudem lässt sich so die Verbindung nicht mehr abhören. 
+
+Versionen und Profile
+So unterscheiden sich die Bluetooth-Versionen
+
+Nach der ursprünglichen Version Bluetooth 1.0 wurde die Funktechnik viermal überarbeitet:
+
+    * Bluetooth 1.1: Hierfür wurde Bluetooth kaum verändert. Die Geräte können die Signalstärke des Funksignals übermitteln.
+    * Bluetooth 1.2: Diese Version verwendet ein verbessertes Verfahren beim Funkkanalwechsel. Das sorgt für eine stabilere Funkverbindung zwischen den Geräten.
+    * Bluetooth 2.0: Für diese Version wurde das Datenübertragungstempo verdreifacht. Sie trägt auch die Zusatzbezeichnung "EDR" (Extended Data Rate, auf Deutsch "erhöhte Datenrate").
+    * Bluetooth 2.1: Geräte mit dieser Technik lassen sich einfacher miteinander verbinden. Eine Automatik ersetzt die Eingabe des Sicherheitscodes.
+
+Die verschiedenen Bluetooth-Varianten sind abwärtskompatibel, neuere Geräte können auch mit älteren zusammenarbeiten. Neue Funktionen und das höhere Tempo ab Version 2.0 lassen sich aber nur nutzen, wenn beide Geräte diese Technik beherrschen.
+
+Die wichtigsten Bluetooth-Profile im Überblick
+
+Bluetooth verbindet eine Vielzahl unterschiedlicher Geräte meist problemlos miteinander. Den Datenaustausch zwischen den einzelnen Geräten steuern dabei sogenannte Profile. Sie arbeiten ähnlich wie ein Treiber beim PC und legen fest, welche Funktionen eines Geräts sich per Bluetooth nutzen lassen und wie die Datenübertragung gesteuert wird. Es gibt mehr als 25 Profile, beispielsweise "HFP" für Freisprechgarnituren oder "SAP" für den Zugriff auf die SIM-Karte des Handys. Die wichtigsten Profile finden Sie in der Übersicht.
+Bluetooth-Profile
+Advanced Audio Distribution Profile (A2DP)
+
+Zur Übermittlung von Audiosignalen in Stereoqualität. Zu finden bei: Kopfhörern, MP3-Spielern, Freisprechgarnituren.
+Audio/Video Remote Control Profile (AVRCP)
+
+Zur Fernsteuerung von Fernsehern, HiFi- und anderen Geräten. Zu finden bei: Taschencomputern.
+Basic Imaging Profile (BIP)
+
+Zur Übertragung von Bilddaten. Zu finden bei: Handys, Digitalkameras, Druckern.
+Basic Printing Profile (BPP)
+
+Zur Übertragung von Text zum Drucken. Zu finden bei: Handys, Taschencomputern, Druckern.
+Common ISDN Access Profile (CIP)
+
+Zum Herstellen von ISDN-Verbindungen. Zu finden bei: Notebooks, PCs, ISDN-Anlagen.
+Cordless Telephony Profile (CTP)
+
+Für schnurlose Telefone, auch für Gespräche übers Internet. Zu finden bei: Notebooks, PCs, schnurlosen Telefonen.
+Dial-up Networking Profile (DUN)
+
+Erlaubt den Zugriff aufs Internet. Zu finden bei: Notebooks, PCs, Handys.
+Fax Profile (FAX)
+
+Stellt eine Faxverbindung her. Zu finden bei: Notebooks, PCs, Handys
+File Transfer Profile (FTP)
+
+Zur Übertragung von Daten von und auf FTP-Server. Zu finden bei: Notebooks, PCs, Handys.
+General Audio/Video Distribution Profile (GAVDP)
+
+Zur Übermittlung von Audio- und Videosignalen. Zu finden bei: Kopfhörern, MP3-Spielern, Lautsprechern.
+Generic Object Exchange Profile (GOEP)
+
+Zum Übertragen von Daten auf andere Geräte. Zu finden bei: Notebooks, PCs, Handys.
+Hands-Free Profile (HFP)
+
+Zum Steuern von Freisprechgarnituren. Zu finden bei: Handys, Freisprecheinrichtungen für Autos.
+Hard Copy Cable Replacement Profile (HCRP)
+
+Besseres Verfahren zum Drucken. Zu finden bei: PCs, Notebooks, Druckern.
+Headset Profile (HSP)
+
+Zur Sprachausgabe per Freisprechgarnitur. Zu finden bei: Handys, PCs, Freisprecheinrichtungen.
+Human Interface Device Profile (HID)
+
+Zur Regelung des Datenaustauschs von Eingabegeräten. Zu finden bei: PCs, Tastaturen, Mäusen.
+Intercom Profile (ICP)
+
+Stellt direkte Sprachverbindungen her. Zu finden bei: Handys, PCs, schnurlosen Telefonen.
+Object Push Profile (OPP)
+
+Zum Austausch von Kontakt- und Termininfos. Zu finden bei: Notebooks, PCs, Handys.
+Personal Area Networking Profile (PAN)
+
+Regelt die Vernetzung von Geräten. Zu finden bei: Notebooks, PCs, Handys.
+Serial Port Profile (SPP)
+
+Verbindet Geräte über virtuelle serielle Anschlüsse. Zu finden bei: Notebooks, PCs.
+Service Discovery Application Profile (SDAP)
+
+Übermittelt die eigenen verfügbaren Profile. Zu finden bei: Notebooks, PCs, Handys.
+SIM Access Profile (SAP)
+
+Für Zugriffe auf die SIM-Karte im Handy. Zu finden bei: Freisprecheinrichtungen im Auto.
+Synchronization Profile (SYNCH)
+
+Regelt, wie Daten abgeglichen werden. Zu finden bei: Notebooks, PCs, Handys
+Video Distribution Profile (VDP)
+
+Zur Übermittlung von Videosignalen. Zu finden bei: PCs, mobilen Videospielern, Camcordern.
+zurück
+1 von 23
+weiter
+Welche Profile ein Bluetooth-Gerät versteht, steht meist in den
+technischen Daten. Bei einigen Bluetooth-Geräten lassen sich auch neue
+Profile hinzufügen. Die gibt es beispielsweise über die Internetseite
+des Herstellers. Ist die Funkverbindung aufgebaut, tauschen die Geräte
+ihre Profile aus und legen damit fest, wie sie die Daten
+übertragen. Eine Freisprechgarnitur fordert beispielsweise von einem
+Bluetooth-Handy einen Tonkanal an und steuert über zusätzliche
+Datenkanäle die Lautstärkeregelung.

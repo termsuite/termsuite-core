@@ -1,0 +1,88 @@
+Kundenmeinung :
+
+Die Kommunikationstechnik - Fibel ist sehr informativ und verständlich . Genau das habe ich schon seit langem gesucht . Endlich mal ein Buch , das kurz und bündig die moderne Informationstechnik beleuchtet .
+Kommunikationstechnik - Fibel
+
+jetzt bestellen !
+Das Buch zu dieser Webseite
+Netzwerktechnik - Fibel
+Kundenmeinung :
+
+Die Netzwerktechnik - Fibel ist sehr informativ und verständlich . Genau das habe ich schon seit langem gesucht .
+Netzwerktechnik - Fibel
+
+jetzt bestellen !
+Elektronik - Kompendium . de > Kommunikationstechnik
+GSM - Global System for Mobile Communications
+1982 wurde vom CEPT eine Arbeitsgruppe mit dem Namen Groupe Spéciale Mobile ins Leben gerufen , mit der Aufgabe eine Spezifikation für ein europäisches Mobilfunksystem zu erarbeiten . Nachdem die Zuständigkeit für GSM mehrmals wechselte und die Spezifikation weltweiten Erfolg hatte , wurde aus GSM die Bezeichnung Global System for Mobile Communications bzw . zu Deutsch Globales System für mobile Kommunikation .
+
+GSM sollte alle analogen Mobilfunknetze ersetzen . Im Jahr 1987 fiel dann auch die Entscheidung zu Gunsten der digitalen Technik . Im Sommer 1992 gingen die ersten GSM - Mobilfunknetze im Frequenzbereich um 900 MHz an den Start . Etwas später kam dann die Technik für ein GSM - 1800 im Frequenzbereich um 1800 MHz hinzu , das unter der Bezeichnung DCS - 1800 bekannt ist .
+
+Im Laufe der Zeit wurde GSM ständig weiterentwickelt . Es handelt sich also um einen kontinuierlichen Standardisierungsprozess . Im Jahr 2000 wurde GSM an das 3GPP übergeben , die für die IMT - 2000 - Spezifikationen verantwortlich sind , zu denen auch UMTS dazugehört .
+GSM in Deutschland
+Einrichtungsbeginn :
+1991 ( Probebetrieb ) , Start im Sommer 1992
+Einsatzgebiet :
+Deutschland , europaweites Roaming
+Übertragung :
+Sprache und Signaldaten digital
+Endkapazität :
+ca . 10 Millionen Teilnehmer
+Standard :
+GSM - 900
+Technische Merkmale
+Übertragungsverfahren :
+TDMA ( Time Division Multiple Access )
+Frequenzbereich ( Oberband ) :
+935 . . . 960 MHz
+Frequenzbereich ( Unterband ) :
+890 . . . 915 MHz
+Kanalabstand :
+250 kHz
+Kanäle pro Cluster :
+100 ( durch Zeitmultiplex sind auf jedem Kanal 8 Verbindungen / Gespräche möglich )
+GSM - Systeme und Frequenzbereiche
+System
+Name
+Frequenzen
+Einsatz
+GSM - 900
+Global System for Mobile Communications
+890 . . . 915 MHz ( Uplink )
+
+935 . . . 960 MHz ( Downlink )
+D - Netze in Deutschland
+GSM - R
+Global System for Mobile Communications
+876 . . . 880 MHz ( Uplink )
+
+921 . . . 925 MHz ( Downlink )
+Bahnfunk
+DCS - 1800
+Digital Communication System
+1710 . . . 1785 MHz ( Uplink )
+
+1805 . . . 1880 MHz ( Downlink )
+E - Netze in Deutschland
+PCS - 1900
+Personal Communication System
+1850 . . . 1910 MHz ( Uplink )
+
+1930 . . . 1990 MHz ( Downlink )
+Netze in den USA
+GSM - 900 - Systeme funken in den Hauptfrequenzbändern 890 bis 915 MHz ( Upload ) und 935 bis 960 MHz ( Downlink ) . Diese Frequenzen werden von den D - Netzen in Deutschland genutzt . Zusätzlich dazu gibt es die Erweiterungs - Frequenzbänder 880 bis 890 MHz und 925 bis 935 MHz . Für den Bahnfunk GSM - R sind die Frequenzen 876 bis 880 MHz und 921 bis 925 MHz reserviert .
+
+Die DCS - 1800 - Systeme funken in Frequenzbändern 1710 bis 1785 MHz und 1805 bis 1880 MHz . Diese Frequenzen werden von den E - Netzen in Deutschland genutzt . Im Jahr 1999 haben die beiden D - Netz - Betreiber zusätzliche Frequenzbereiche für DCS - 1800 erworben um Engpässe in den GSM - 900 - Frequenzbereichen auszugleichen und in Gegenden mit hoher Mobilfunklast mehr Kapazität zur Verfügung zu haben .
+
+Da es sich bei GSM - 900 und DCS - 1800 , bedingt durch die unterschiedlichen Frequenzbereiche , um unterschiedliche Techniken handelt , sind Dualband - Handys für die Nutzung beider Frequenzbereiche nötig . In der Regel sind alle in Deutschland verkauften GSM - fähigen Handys auch Dualband - fähig .
+Datenübertragung im GSM - Mobilfunknetz
+Das GSM - Mobilfunknetz eignet sich grundsätzlich nicht zur Datenübertragung . Die Übertragungsraten sind zu niedrig , da die Übertragungstechnik und das Modulationsverfahren auf die Übertragung von Sprache ausgelegt ist . GSM sieht zwar ein Verfahren für eine leitungsvermittelte Datenübertragung vor , es ist allerdings nicht besonders schnell .
+
+Zur Verbesserung der Datenübertragung über GSM wurden verschiedene Verfahren eingeführt . Z . B . das Verbindungsprotokoll X . 75 zur Beschleunigung des Verbindungsaufbaus . Es ist bereits als ISDN - Verbindungsprotokoll bekannt . Weiterhin das digitale Datenformat V . 110 , das aber nur zögerlich von den Netzbetreibern umgesetzt wurde . Im GSM - Standard wurde mit V . 42bis eine Datenkompression nur für die Luftschnittstelle zwischen Mobilfunktelefon ( MS ) und Basisstation ( BTS ) eingeführt . Alle diese Verfahren waren gut gemeint , brachten aber nur punktuelle Verbesserungen . Die grundlegenden Nachteile , der auf Sprache ausgelegten Übertragung waren dadurch nicht auszugleichen .
+
+Im Zeitalter des Internets und der uneingeschränkten Mobilität wurden dem Mobilfunkstandard GSM Erweiterungen hinzugefügt , die die Übertragungsraten bei der Datenübertragung erhöhen sollen . Die beiden Standards sind HSCSD , GPRS und EDGE . Die konsequente Weiterentwicklung der mobilen Datenübertragung ist UMTS mit HSPA und HSPA + . In Zukunft sollen LTE und LTE Advanced folgen .
+Datenübertragung im Mobilfunknetz
+CSD - Circuit Switched Data
+HSCSD - High Speed Circuit Switched Data
+GPRS - General Packet Radio Service
+EDGE - Enhanced Data Rates for GSM Evolution

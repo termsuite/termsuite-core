@@ -1,0 +1,381 @@
+Where's that Phone?: Geolocating
+IP Addresses on 3G Networks
+Mahesh Balakrishnan Iqbal Mohomed Venugopalan
+maheshba@microsoft.com iqbal@microsoft.com Ramasubramanian
+rama@microsoft.com
+Microsoft Research Silicon Valley
+Mountain View, CA 94043
+ABSTRACT
+Cell phones connected to high-speed 3G networks constitute
+an increasingly important class of clients on the Internet.
+From the viewpoint of the servers they connect to, such de-
+vices are virtually indistinguishable from conventional end-
+hosts. In this study, we examine the IP addresses seen by
+Internet servers for cell phone clients and make two obser-
+vations. First, individual cell phones can expose different IP
+addresses to servers within time spans of a few minutes, ren-
+dering IP-based user identification and blocking inadequate.
+Second, cell phone IP addresses do not embed geographical
+information at reasonable fidelity, reducing the effectiveness
+of commercial geolocation tools used by websites for fraud
+detection, server selection and content customization. In ad- Figure 1: Answers to IP → Location queries pro-
+dition to these two observations, we show that application- vided by seven geolocation services; the actual cell
+level latencies between cell phones and Internet servers can phone is in Mountain View, CA.
+differ greatly depending on the location of the cell phone,
+but do not vary much at a given location over short time
+spans; as a result, they provide fine-grained location infor-
+mation that IPs do not. running fully functional browsers that display standard con-
+tent with high fidelity. As with any wired host, a cell phone
+exposes limited information to Internet servers in the form
+Categories and Subject Descriptors of a User-Agent tag and an IP address.
+C.2.5 [Computer Systems Organization]: Local and In this paper, we examine the properties of the IP ad-
+Wide-Area Networks-Internet ; C.1.3 [Computer Systems dresses exposed by cell phones to servers on the Internet;
+Organization]: Other Architecture Styles-Cellular Archi- these IPs typically belong to application and network-level
+tecture proxies within the carrier's network. Websites widely use IP
+addresses to identify end-hosts - for example, to prevent re-
+peated voting on polls, or to prevent malicious activity. In
+General Terms addition, they often attempt to geolocate clients using IP ad-
+Measurement dresses, using commercial services that map IPs to physical
+locations. Geolocation enables websites to implement more
+sophisticated functionality such as fraud detection, content
+1. INTRODUCTION customization and proximal server selection. IP-based iden-
+Smartphones connected to high-speed 3G networks are an tification and geolocation are known to work extremely well
+increasingly important class of clients on the Internet. From for wired end-hosts despite the prevalence of Network Ad-
+the viewpoint of the websites they visit, such devices are vir- dress Translation (NAT) boxes and dynamic IP addresses
+tually indistinguishable from conventional wired end-hosts, [6].
+Unfortunately, IP-based geolocation does not work well
+for cell phones. The graphic in Figure 1 shows the results of
+self-localization queries executed at seven different geoloca-
+Permission to make digital or hard copies of all or part of this work for tion services by a cell phone in Mountain View, California.
+personal or classroom use is granted without fee provided that copies are The query results from five of the services are not even lo-
+not made or distributed for profit or commercial advantage and that copies calized to the same US state; later in this paper we'll see
+bear this notice and the full citation on the first page. To copy otherwise, to that the most accurate service shown does not work well
+republish, to post on servers or to redistribute to lists, requires prior specific for other locations. In this study, we show that the reasons
+permission and/or a fee.
+IMC'09, November 4-6, 2009, Chicago, Illinois, USA. for geolocation inaccuracy are two-fold. First, cell phone
+Copyright 2009 ACM 978-1-60558-770-7/09/11 ...$10.00. IPs are ephemeral, changing rapidly across HTTP requests 3333333333322222222222...........111111111115555555555601234567890...........00000000000...........1000000000003:00 14:00 15:00 1W6:0a0ll C17lo:c0k0 T1i8m:0e0 19:00 20:00 21:00 3333333333322222222222...........111111111115555555555601234567890...........00000000000...........1000000000008:00 19:00 20:00 2W1:0a0ll C22lo:c0k0 T2i3m:0e0 00:00 01:00 02:00
+Figure 2: IPs sampled at 1-minute intervals on an HTC Touch Cruise (Left) and an Apple iPhone (Right)
+on the AT&T network, with radio resets every 30 minutes: all IPs were in the 32.152/13 range. The 16-bit
+prefix stays constant between resets and the 13-bit prefix across resets.
+- as a result, each queried service in Figure 1 observes a 2. HOWSTICKYARECELLPHONE IPAD-
+different IP address for the same device, even though the DRESSES?
+queries are executed in quick succession within a span of
+five to ten minutes. Second, IP addresses for cell phones To study the persistence of IP addresses on mobile devices,
+are itinerant - similar IPs can be exposed to a server by we ran an experiment on two different devices at Mountain
+devices at geographically distant locations. In other words, View, CA on the AT&T 3G network: an HTC Touch Cruise
+IP addresses do not intrinsically embed fine-grained infor- (P3650) running Windows Mobile Professional 6.1 and an
+mation on the location of mobile end-hosts. Consequently, Apple 3G iPhone. On each device, we periodically visited
+IP-based geolocation is reduced to guesswork and different a webpage at intervals of one minute and logged the IP ad-
+services produce vastly divergent answers for the same IP dress at the server. Every 30 minutes, we turned the radio
+address. on the device off, waited for 1 to 2 minutes, and turned it
+To verify these two observations, we use two different back on. We continued logging IPs in this fashion over a two
+sources of data. The first dataset is a collection of 1656 day period. We would like to reiterate that these were IP
+IP addresses obtained on the AT&T network by two differ- addresses observed by the server on requests made by the de-
+ent devices in Mountain View. We use this dataset to show vices; locally, the devices reported non-routable 10/8 prefix
+cell phone IP addresses changing across requests spaced just addresses that did not change and were not seen externally.
+1 minute apart, albeit in constrained patterns and within Figure 2 shows 7-hour traces from this experiment. The
+specific ranges. The second dataset is a collection of 1299 devices exposed a different IP address on every visit to the
+AT&T IP addresses obtained from the logs of a service lo- webpage, even though these visits were only separated by a
+cated in Redmond, Washington, belonging to devices pri- minute each. Interestingly, within each 30 minute interval
+marily located in the Seattle area. We compare the Moun- between radio resets, the IPs exhibited the same 16-bit pre-
+tain View and Redmond datasets to illustrate that the range fix (for example, 32.154.x.x); however, when the radio was
+of observed cell phone addresses is nearly identical in two switched off and back on, the IPs moved to a different 16-bit
+different geographic regions. Essentially, we show that IP prefix (for example, from 32.154.x.x to 32.158.x.x). Addi-
+addresses do not embed enough locality information to dis- tionally, we only saw IPs in the range 32.152/13, indicating
+tinguish between these two regions. that in addition to the first 8 bits of the IP address (which
+In addition to making a strong case against IP-based iden- are generic to AT&T properties), 5 more bits of the second
+tification and geolocation, we examine the possibility of us- octet are also static.
+ing application-level latency measurements to geolocate cell To determine whether our experience with transient IPs
+phones. Our findings are that latencies on 3G networks are was specific to these two devices, we conducted a small study
+high compared to wired networks but exhibit low tempo- across multiple devices. We hosted a test website consisting
+ral variability at any given location. We show that certain of a form and two time-triggered auto-refreshes, designed
+cities that exhibit the same IP ranges on the AT&T network to make a user interaction last for three to four minutes.
+- such as Mountain View, Seattle and Albuquerque - can be The server logs IPs at four points during the interaction -
+distinguished from each other via application-level latency once when the user first accesses the webpage, again when
+measurements. a button on the form is pressed, and twice more when the
+The remainder of this paper is organized as follows: Sec- page subsequently auto-refreshes after timeouts that last 30
+tion 2 shows that IPs are ephemeral, Section 3 shows that seconds and 120 seconds, respectively. Our purpose was to
+they are itinerant and Section 4 examines latency charac- access this website from different devices and observe if their
+teristics for 3G cell phones. Section 5 outlines related work IP addresses changed within the very short time span on this
+and Section 6 concludes the paper. interaction.
+We tested 22 devices on this webpage, spanning 12 dis-
+tinct device types - see Table 1 for the list of device types.
+Interestingly, 11 out of the 22 devices - and 8 of the 12
+IP Address
+IP Address distinct device types - experienced IP changes during their Device Network IP Changed?
+interaction. The devices were geographically dispersed, with iPhone AT&T Yes and No*
+9 devices in the Bay Area and the rest in Seattle (3 devices), Samsung Blackjack AT&T Yes
+Chicago (2), Atlanta (2), Albuquerque (1), Ithaca (4) and HTC Touch Cruise AT&T Yes
+Germany (1); of these locations, we saw IP changes in the Nokia E71 AT&T Yes
+Bay Area, Seattle, Albuquerque and Ithaca. BlackBerry 8310 AT&T Yes
+Table 1 shows that we obtained variable results on iPhones. BlackBerry 8820 AT&T No
+We had physical access to three iPhones in Mountain View, HTC Tilt AT&T Yes
+of which two exhibited the behavior shown in Figure 2, BlackBerry 8330 Verizon Yes
+changing IPs every minute and changing prefixes across ra- Samsung SCH-i770 Verizon No
+dio resets. The third did not change IPs between resets, but HTC Touch Diamond Sprint No
+changed prefixes across resets. As Table 1 states, we ran 7
+Palm Centro Sprint No
+other iPhones through the short 4-minute website test, and
+two of them (located in Albuquerque and Seattle) changed BlackBerry 8900 TMobile Yes
+IPs in this time span. Further experiments on these two iPhone TMobile** No
+iPhones showed that they exhibited the behavior shown in *Of 10 tested iPhones, 4 changed IP and 6 did not.
+Figure 2. **Located in Germany; all others were in the US.
+Why do some iPhones change IP addresses rapidly while
+others do not? While we have not been able to conclusively
+answer this question, we did factor out three important vari- Table 1: Devices tested for ephemeral IPs
+ables. First, we eliminated the possibility of an anomalous
+cell tower by checking for IP changes from multiple cells in
+the Bay Area; in all cases, the iPhone continued to change 3. GEOGRAPHICAL LOCALITY
+IPs. Second, we swapped SIM cards between an IP-changing An important use of IP addresses on the modern Internet
+iPhone and the non-changing one; both iPhones retained is geolocation, where IPs are translated to physical locations.
+their behavior, indicating that the phenomenon is specific Geolocation is used by Internet services for a number of rea-
+to devices and not SIM cards. Third, we tested a single sons, including server selection and content customization.
+iPhone from multiple cities; the device continued to change We focus on the case where geolocation must be performed
+IPs, ruling out region-specific behavior. without the client's active participation. This is a require-
+While most of the devices we tested were on the AT&T ment for uses such as fraud detection, where a site can raise a
+network, we did experiment with devices on four other major red flag if a user's profile lists a certain geographical address
+networks - Sprint (2 phones and 1 USB modem), Verizon but her login IPs indicate different locations. Additionally,
+(2 devices), TMobile US (1 device) and TMobile Germany we assume that the Internet server does not have access to
+(1 device). Of these, none of the Sprint devices changed IP, the ISP's information on cell phone locations - such infor-
+one of the Verizon devices changed IP and the sole TMobile mation is usually not disclosed to third parties by ISPs.
+US device changed IP. As a result, we do not believe IP A large number of websites routinely geolocate end-hosts
+address ephemerality to be exclusive to AT&T's network; under these constraints by using commercial geolocation ser-
+however, we did not test on enough devices on any single vices that maintain large databases with mappings from
+network to determine ISP-specific behavior. IP addresses to locations. These databases are generated
+GSM-based networks typically use APN types to provide through common sources such as whois databases and tracer-
+different IP addressing and connectivity requirements. Cer- oute information, as well as proprietary analytics. For wired
+tain APN types enable static IPs and inbound connections, networks such as residential broadband hosts, the quality of
+ruling out IP address changes. For APNs that provide dy- geolocation is typically very good despite the presence of
+namic IPs and do not allow inbound connections, it is possi- dynamic addresses and NAT boxes [6].
+ble that the frequency of IP address change is determined by Clearly, ephemeral IPs do not pose a challenge for geoloca-
+APN parameters. More fundamentally, the need to prevent tion if they exhibit geographic locality - it does not matter
+IP address space exhaustion is likely to push providers to- to the geolocation service that a device obtains different IP
+wards NAT and proxy mechanisms to handle large numbers addresses within a single session, as long as all these IPs are
+of end devices. Network-level proxies can leverage ephemeral restricted to devices in the same geographical area. In this
+IPs to minimize long-lived client routing state, discarding section, we aim to test if IPs obtained on the same network
+each IP mapping as soon as the TCP connection is broken at different locations occupy different portions of the address
+down. We believe that the IP address change seen in our space. We do so by comparing the Mountain View dataset
+study is evidence of such mechanisms within ISPs. described in the last section to a dataset of IPs collected on
+The implications of IP address ephemerality on mobile the same network (AT&T) at a different location.
+phones are extensive. In particular, many websites use IP- We obtained this second dataset of IP addresses from
+based blacklisting to restrict user access to content [6]. An the webserver of an internal service at Microsoft's Redmond
+ironic example that we encountered during this study is a campus. This service has 80 users who periodically log in
+popular commercial IP analytics website that uses IP-based and upload data - once a user connects to the service, the
+blocking to enforce a limit on its demo interface, allowing device sends data every 4 seconds. Almost all of the users
+users to lookup only a limited number of addresses per day. of this service were located in the Seattle area, with a small
+Using a cell phone, we were able to easily bypass this limit fraction on other Microsoft campuses. The webserver had
+(although we must clarify that we only did this as a proof logs with IP addresses for a period of 51 days, spanning late
+of concept and did not abuse the ability). March, April and early May of 2009. In total, the dataset 4321123430000000002.128.0.0 32.144.0.0 I3P2 .A1d6d0r.e0sM.0sou3nR2ta.e1idn7m 6V.o0ien.w0d 32.192.0.0 answers for a single device. To better quantify the accu-racy of such services, we decided to run geolocation queriesagainst a single service for the 1656 IPs in the MountainView dataset, as well as the 1218 IPs in the AT&T portionof the Redmond dataset within the 32.152/13 range (we willdiscuss the results for the other IPs in this dataset sepa-rately). We chose the service that consistently gave us thebest responses for the ad-hoc queries shown in Figure 1.Figure 4 shows how the service performs on the two datasets- for each IP address in either dataset, we use the serviceto obtain a latitude and longitude, and then compute thedistance between this coordinate and the actual location ofthe dataset (Mountain View or Redmond). At first glance,
+the service seems to be surprisingly accurate for the Moun-
+Figure 3: IP distributions on the AT&T network: tain View dataset - nearly 65% of the addresses geolocate
+93.76% of the IPs in the Redmond (Top) dataset to within 200 miles of Mountain View. However, it performs
+and 100% in the Mountain View (Bottom) dataset extremely poorly for the Seattle dataset. Closer examina-
+are in the 32.152/13 range. tion reveals that the service is returning an almost identical
+distribution of coordinates for both datasets, with a heavy
+incidence of Californian locations; the two large spikes in
+contained 1526 total unique IPs. each graph correspond to the major urban centers in Cali-
+Our first observation was that IP addresses in this Red- fornia.
+mond dataset rarely changed within sessions; we attribute Table 2 shows the distribution of locations returned by
+this to the 4 second interval between requests within each the service across states, for both datasets. The entry for
+session, which is too short a time frame for the IP to change. "None" indicates responses where the service was unable to
+The breakdown of devices in the dataset is heavily skewed determine the exact location of the IP within the US, and
+towards AT&T; around 1311 of the 1526 IPs (or 85.91%) instead returned blank values for the city/state fields and
+are on the AT&T network, out of which 1299 IPs are in a generic coordinate in the center of the US. The answers
+the 32.x.x.x range, and 12 IPs are in the [209.183.32.0, for both Mountain View and Redmond are distributed over
+209.183.63.255] range. For the rest of our discussion, we exactly six states on and near the west coast.
+focus on the 1299 AT&T IPs in the 32.x.x.x range, which When we run the same experiment on the 81 other IPs
+constitute 85.12% of all the recorded IP addresses in the from the Redmond dataset in the 32/8 IP range but out-
+dataset. side the 32.152/13 range, the service no longer restricts its
+Figure 3 shows a comparison of IP address distributions answers to the six states shown in Table 2. Instead, the dis-
+for this subset of the Redmond dataset with the Moun- tribution of answers has 71.6% in California, 16% with no
+tain View dataset. All the addresses in the Mountain View state-level information, 4.9% in New York, and one IP each
+dataset lie within the 32.152/13 range (i.e., between 32.152.0.0 in Alaska, Indiana, Michigan, Ohio and Georgia.
+and 32.159.255.255). In the Redmond dataset, 1218 ad- Importantly, these results do not necessarily reflect the ac-
+dresses (93.76%) are in this range. Of the remainder: curacy of the underlying techniques used by geolocation ser-
+· 69 / 1299 (5.31%) are in [32.168.0.0, 32.184.255.255] vices, such as the use of network-level traceroute probes [9].
+· 6 / 1299 (0.46%) are in [32.144.0.0, 32.151.255.255] We have only shown that passive IP-based lookups that rely
+· 6 / 1299 (0.46%) are in [32.128.0.0, 32.143.255.255] on the stationarity of existing IP to location mappings are
+As we can see from Figure 3, the ranges occupied by the not accurate for 3G phones. It is entirely possible that the
+Mountain View and Redmond datasets are nearly identical, mappings returned by the geolocation service were accurate
+showing conclusively that the 16-bit prefix of the IP ad- at the time of measurement. If this is indeed the case, it
+dress does not embed fine-grained locality information: i.e., is intriguing to note that the distribution in Figure 4 would
+an Internet server cannot determine whether a cell phone be representative of the actual distribution of users on the
+is in Seattle or Mountain View on the basis of the prefix west coast. Interestingly, an updated distribution could be
+alone. We saw further corroboration of this conclusion in obtained at any time by simply executing a series of geolo-
+the 20-device study mentioned in Section 2 - the device in cation queries for a single phone at long enough intervals
+Albuquerque had a 32.159 prefix, similar to Mountain View that the IP address changes on each attempt.
+and Seattle, while we saw the 32.136 prefix both in Chicago
+and Ithaca. Further experimentation with the device in Al- 4. LATENCY-BASED GEOLOCATION
+buquerque showed that it obtained addresses in the same Thus far, we showed that the IP address exposed by a
+range as Mountain View and Seattle. Of course, it is still cell phone over a 3G network does not embed locality in-
+possible to locate phones at very coarse granularity based formation at reasonable granularity. Now, we examine the
+on the prefix - to determine if the user is closer to the east applicability of other techniques in the positioning literature
+coast or the west, for instance. that do not depend on the IP address. A number of these
+techniques assume the active participation of the end-host
+3.1 Geolocation Accuracy in Practice being located, running client software on the end-host; we
+If our conclusions are correct, IP-based geolocation ser- rule these out since we focused on the setting of an Internet
+vices should be unable to locate cell phones accurately. Fig- server attempting to locate a conventional cell phone access-
+ure 1 illustrated that different services give very different ing content via a browser. In any case, most cell phones are
+Percentage of IPs Bay Area   Los A
+ 100
+ 8
+ 6
+ 000
+ 240
+ 0
+ 0  200 Mn ig4le e0 s l0 e  f sr o  mPo Mrtloaunnd 600  t8a0in0 Vie 1w0, 0C0A Portland MilesB faroy m  A   r R e e a d  m Loo 100 80 60 4 2 000 1200  1400  0  200  400  600  800  1ns0 d0A,0 nWgeAles 1200  1400  1600
+Figure 4: Accuracy of a geolocation service: Cumulative distribution of error between actual location of IP
+and the reported location, for the Mountain View dataset (L) and the Redmond dataset (R).
+Mountain View Redmond network positioning. In particular, the IP address exposed
+State Dataset Dataset by the cell phone cannot be pinged, ruling out network-level
+CA 92.51% 93.10% measurements from the server to the cell phone. As a result,
+OR 3.14% 0.99% the server is forced to use application-level measurements;
+WA 2.11% 2.05% for example, by asking the browser to request an image in
+NV 0.84% 0.74% the HTML page and measuring the round-trip time (RTT)
+None 0.66% 2.46% before the request for the image arrives back at the server.
+UT 0.48% 0.24% To test if the application-level latency to an Internet server
+AZ 0.24% 0.41% could be used to provide any information about the location
+of the cell phone, we first measured the latency from an
+Table 2: Distribution of answers given by a geoloca- iPhone in Mountain View to a webserver located on the east
+tion service for the Mountain View dataset and the coast. The ping round-trip time between these two locations
+32.152/13 range of the Redmond dataset. on a wired network was 90 milliseconds; we measured this by
+pinging the server from a laptop connected to a WiFi access
+point that led into a residential broadband network. On
+ 100 iLPaiPPhpiohntnoogepn W  eH the iPhone, we measured two different sets of latencies: thelatency to the server via the 3G network, and the latency to 8000 HiTTFTTi: PP9  0WW miiFFsii the server via the WiFi access point. In both cases, the RTTwas measured and logged at the server through the HTML
+ 600 trick described. We measured the latencies by loading a
+webpage with the embedded graphic at 1-minute intervals.
+ Figure 5 shows these measurements and makes two im-
+portant points. First, RTTs on the iPhone's 3G end-to-end
+ 240000 path are very high at an average of 395 milliseconds, around
+200 milliseconds higher than RTTs on the iPhone's WiFi
+ 0 end-to-end path. Second, RTTs on the iPhone's 3G end-to-
+ 0  10  20P HeTr c3Te0Pn t3aG 4g0e o f5 M0ea 6su0rem 7e0nts 80  90  100 end path exhibit low variability compared to the iPhone'sWiFi path: 90% of the 3G measurements are within 16% (63
+milliseconds) of the average. In fact, they also vary less than
+Figure 5: RTT measurements between Mountain RTTs on the laptop's WiFi path; this indicates the variance
+View and Toronto. might due to the WiFi/residential network, rather than dif-
+ferences in the iPhone's 3G and WiFi network stacks.
+To further determine if application-level latencies could be
+equipped with GPS functionality, providing a trivial option used to pinpoint the location of clients, we obtained 200 RTT
+if the cell phone can in fact participate actively. measurements each for iPhones on the 3G network from dif-
+Of particular interest are network positioning schemes that ferent cities: Mountain View, Seattle and Albuquerque. Fig-
+use latency measurements to locate end-hosts. While net- ure 6 shows the results of this experiment. The RTT dis-
+work positioning does not directly provide a physical coor- tribution for each city is very narrow and isolated from the
+dinate for the end-host, it can provide a model for network others. We could observe no correlation within each dis-
+latencies between the end-host and internet servers, which tribution between an RTT and the IP address occupied by
+is sufficient for certain uses such as server selection. Also, the phone for the corresponding request - all prefixes from
+geolocation of end-hosts can be achieved by combining net- 32.152 to 32.159 had equivalent RTT distributions.
+work positioning information with the geographic locations However, Figure 6 comes with a major caveat - we ob-
+of a few well-known nodes. served very different RTT distributions for Seattle on dif-
+However, cell phones pose challenges for latency-based ferent days. All the measurements in the figure were taken
+RTT in Milliseconds Percentage of IPs
+Percentage of IPs host of successful techniques for geolocating Internet end-
+ 5 Mo hosts without the use of GPS devices. Several commercial
+services [1, 2, 3] can locate an end host with reasonable ac-
+ AulbnutaqiSunee Vraqiteutlwee
+curacy, using publicly available databases that map domain
+names and IP addresses to geographical locations and other
+ 34000
+proprietary mechanisms. Several network-level techniques
+further enhance the accuracy of geolocation. IP2Geo [9]
+ 2
+uses end-to-end latency and traceroute information to pin-
+point geographic location. Octant [12] enables accurate ge-
+ 100
+olocation by solving a system of geometric constraints.
+The most effective technique known to geolocate a cell-
+ 0
+ 200  400 RT 6T0 i0n Millise 8co0n0ds  1000  1200 phone is through the Global Positioning System (GPS) [7].However, several techniques have been proposed to enable
+geolocation indoors and on cell phones not equipped with
+Figure 6: Distribution of Application-Level RTTs a GPS receiver. The Google Location Service uses the cell
+between a server in Toronto and iPhones in Moun- tower ID reported by the phone to locate it, conjunction with
+tain View, Seattle and Albuquerque. cell tower IDs reported by other, GPS-equipped phones [4].
+More fine-grained geolocation can be obtained by track-
+ing the strength of the radio signals received by the phone
+from different cell towers, as shown by Varshavsky et al. [11]
+in a contiguous 12-hour period spanning May 10th and May
+for GSM-based cell phones. Their technique is inspired by
+11th. In measurements earlier that week, we observed vastly
+other indoor localization systems built for different radio
+different RTTs for Seattle: a distribution centered around
+environments, namely ActiveBadge [8], Cricket [10], and
+an average of 340 milliseconds, nearly 250 milliseconds lower
+RADAR [5] for Infrared, Ultrasonic, and WiFi radios re-
+than the average of the distribution for Seattle shown in Fig-
+spectively.
+ure 6. In contrast, we did not measure any latency shifts for
+Mountain View, despite taking measurements periodically
+for over a week. Importantly, the earlier distribution for 6. CONCLUSION
+Seattle was also very narrow and easily distinguishable from Modern cell phones are first-class clients on the Internet,
+the Mountain View and Albuquerque distributions. providing functionality to users equivalent to wired end-
+Consequently, while latencies exhibit extremely low vari- hosts. In this paper, we studied the IP addresses exposed by
+ance over short time periods, initial results seem to indicate cell phones on 3G networks to Internet servers. We showed
+that they shift massively over longer time periods. Further that IPs can vary on short time scales on a single device, and
+investigation is required to pinpoint the extent of these fluc- that they contain very little information about the locality
+tuations and their underlying reasons. However, our find- of the device; cell phones hundreds of miles apart share the
+ings indicate that application-level latencies can be used to same IP address space. These properties of cell phone IPs
+distinguish cities that share the same IP range. make IP-based user identification and geolocation almost
+Together, the phenomenon of itinerant IPs and the latency impossible, hampering the ability of websites to blacklist
+measurements in this section possibly indicate infrastructure users, display localized content, optimize performance and
+sharing across a broad area; for example, the west coast detect fraud. We also showed that application-level laten-
+might have its own set of network-level proxies to which cies between cell phones and Internet servers are high but
+connections are load-balanced, with a different set of proxies exhibit low temporal variance, and can be used to distin-
+for the east coast. This notion is supported by the fact that guish between locations where the phones expose identical
+we see much higher latencies to Toronto from Albuquerque IP ranges.
+and Seattle when compared to Mountain View, even though
+the former two are closer in geographic distance. Also, the Acknowledgments
+variation in latencies for Seattle across days could possibly
+We would like to thank our shepherd, Alberto Lopez Toledo,
+be explained by coarse-grained load-balancing across proxies
+as well as the anonymous reviewers of this paper. Vinay
+in different regions.
+Gupta, Kabita Mahapatra and Shailu Mishra at Microsoft
+provided us with traces and information on the state-of-the-
+5. RELATED WORK art in cell phone geolocation. We would also like to thank
+the numerous people who volunteered their time and their
+We are not aware of any other study to measure the sta-
+phones for our experiments.
+tionarity of IP addresses of smartphones. For end-hosts on
+the traditional Internet, Casado et al. study the stationar-
+ity and opacity of client IP addresses in [6]. Their study
+found that IP addresses remained stationary over a long
+period of time (upto two weeks for 72% of the end hosts)
+despite DHCP reallocation and that networks behind NATs 7. REFERENCES
+are typically small; mostly they consisted of two hosts, and [1] http://www.ip2location.com.
+in 99% of the instances had ten hosts or less. In a different [2] http://www.maxmind.com.
+study [13], Xie et al. found that more than 65% of dynamic [3] http://www.quova.com.
+addresses remain unchanged for at least a day. [4] http://googlemobile.blogspot.com/2008/06/google-
+This stationarity of Internet IP addresses has led to a enables-location-aware.html.
+Percentage of Measurements [5] P. V. Bahl and V. N. Padmanabhan. RADAR: An
+in-building RF-based user location and tracking
+system. In INFOCOM 2000, Tel-Aviv, Israel.
+[6] M. Casado and M. J. Freedman. Peering through the
+shroud: The effect of edge opacity on IP-based client
+identification. In NSDI 2007: Fourth Usenix
+Symposium on Networked Systems Design and
+Implementation, Cambridge, MA.
+[7] B. Hofmann-Wellenhof, H. Lichtenegger, and
+J. Collins. Global Positioning System: Theory and
+Practice. Springer-Verlag, 3 edition, 2001.
+[8] A. Hopper, A. Harter, and T. Blackie. The active
+badge system. In Proc of the INTERCHI Conference,
+Amsterdam, The Netherlands, 1993.
+[9] V. N. Padmanabhan and L. Subramanian. An
+investigation of geographic mapping techniques for
+Internet hosts. In ACM SIGCOMM 2001, San Diego,
+CA.
+[10] N. B. Priyantha, A. Chakraborty, and
+H. Balakrishnan. The Cricket location-support system.
+In MobiCom 2000: ACM International Conference on
+Mobile Computing and Networking, Boston, MA.
+[11] A. Varshavsky, E. de Lara, A. LaMarca, J. Hightower,
+and V. Otsason. Gsm indoor localization. Pervasive
+and Mobile Computing Journal (PMC), 3(6):698-720,
+2007.
+[12] B. Wong, I. Stoyanov, and E. G. Sirer. Octant: A
+comprehensive framework for the geolocalization of
+Internet hosts. In NSDI 2007: Fourth Usenix
+Symposium on Networked Systems Design and
+Implementation, Camdbridge, MA.
+[13] Y. Xie, F. Yu, K. Achan, E. Gillum, M. Goldszmidt,
+and T. Wobber. How dynamic are ip addresses? In
+ACM SIGCOMM 2007, Kyoto, Japan.

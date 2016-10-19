@@ -1,0 +1,918 @@
+Evolución de redes 3G Evolución de redes 3G
+Transmisión de Datos                     B2.4: Evolución de redes 3G 1 ¿Por qué aparece HSDPA (3.5G)?
+3GPP inició el concepto de "all IP" mejorando la red core y 
+introduciendo nuevos bloques como IMS. Pero para mejorar la 
+capacidad general de la red, el esfuerzo de desarrollo también 
+debe estar focalizado en mejorar el acceso y el interfaz aire => 
+"evolución UTRAN"
+- Las mejoras de UTRAN y su interfaz aire comenzaron en Release 4.
+- En Release 5, 3GPP especificó HSDPA, para gestionar los picos de 
+alto tráfico de los usuarios (mayor throughput, reducción de los 
+retardos, absorber picos). No tiene impactos en CORE, salvo los 
+cambios para absorber las tasas mayores de datos.
+- Permite tasas de hasta 3.6 Mbps (Móviles de categoría 6) y hasta 
+14.4 Mbps de pico (móviles categoría 10) y mejora la cobertura de 
+UMTS R'99.
+Ventaja HSDPA: Fácil y rápida de integrar con WCDMA de 
+R'99.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 2 Características HSDPA
+Consigue su mejora usando técnicas similares a las que usa 
+EDGE para mejorar GPRS.
+Características principales: 
+• Nuevo canal de transporte compartido HS-DSCH.
+• Fast Scheduling (despacho rápido)
+• AMC (Modulación y codificación adaptativa) 
+• Retransmisión híbrida HARQ (Hybrid Automatic 
+ReQuest): Mecanismo de retransmisión de mensajes en 
+caso de error.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 3 Canales compartidos HS-DSCH (I)
+HSDPA utiliza un nuevo canal de transporte denominado HS-DSCH (High 
+Speed Downlink Shared Channels). Este canal es semejante al canal 
+DSCH del WCDMA y permite que los recursos puedan ser compartidos 
+por todos los usuarios de un mismo sector.
+• La  trama de 10 ms del  WCDMA se divide en 5 subframes de 2 ms, 
+también llamadas intervalo de tiempo de transmisión (TTI) => es como 
+si hubiera 5 canales multiplexados en el tiempo, de 2ms cada uno.
+• Los canales HS-DSCH del HSDPA (subframe de 2 ms) se multiplexan 
+por código. 
+- Se puede emplear un máximo de 15 códigos paralelos en el canal 
+HS-DSCH, que pueden ser designados para un usuario durante un 
+intervalo de transmisión de tiempo (TTI), o pueden ser divididos 
+entre varios usuarios. WCDMA: 15 slot x 0.67 ms= 10 ms
+HSDPA: 5 TTI x 2 ms = 10 ms
+Transmisión de Datos                     B2.4: Evolución de redes 3G 4 Canales compartidos HS-DSCH (II)
+Transmisión de Datos                     B2.4: Evolución de redes 3G 5 Fast Scheduling ("despacho rápido")
+En relación con las subtramas (TTI) del HS-DSCH:
+•Las condiciones radio varían aleatoriamente para los 
+distintos usuarios, el mecanismo de "fast scheduling" 
+permite asignar canales en cada microintervalo TTI a los 
+usuarios que tengan las mejores condiciones radio.
+•Junto con la siguiente funcionalidad, AMC, se determina 
+además a qué tasa binaria.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 6 AMC (Modulación y codificación 
+adaptativa)
+ HScDonPdAi cuiosan elas sr a2d mioo sdounl abcuioenneass ,d 1e 6W CDMA: QPSK y si las esquema de Modulación y QAM. Utiliza un con una idea parecida a la Cimodpilfeicmaecinótna dAad aepnt aEtDivGaE (.AMC) 
+- Duseapne nddisietinndtoos d ees qlause cmoansd idceio ncoes del radio canal, se (baja la redundanc iya
+dificación de canal 
+condiciones radio)   dceo nmfoordmuela cmióenjo. ran las 
+- Eesl qpuroecmeaso para seleccionar la modulación óptima y el coordinac idóen  ccoodni feicla dceió "nf asset  lslecvhae dau clianbgo" muy en 
+Transmisión de Datos                     B2.4: Evolución de redes 3G 7 Retransmisión híbrida HARQ
+3) Fast Hybrid Automatic Repeat Request (Fast Hybrid ARQ).
+- "Hybrid": Combina la repetición de los datos de tx 
+para incrementar la probabilidad de éxito.
+- "Fast": Los mecanismos de corrección de errores se 
+implementan en el NodoB (igual que los de scheduling 
+y adaptación del enlace) => en GPRS/EDGE se 
+realizaban en la BSC.
+La gestión y respuesta en tiempo real a las variaciones radio en el 
+NodoB reduce los retardos y mejora el througput general.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 8 Clases de terminales (capacidad HSDPA)
+En 2007 estarán disponibles terminales de 7.2 Mbps
+Transmisión de Datos                     B2.4: Evolución de redes 3G 9 HSUPA (High Speed Uplink Packet Access)
+• Vendría a ser el 3.75G
+• Mejora el funcionamiento del los canales dedicados en el 
+uplink
+- Permite incrementar la velocidad en el uplink hasta 5.76 
+Mbps
+- Con HSDPA, sólo se mejoró el canal downlink (para 
+aumentar la tasa en servicios asimétricos, como la 
+navegación web).
+- Con HSUPA, se mejora el canal ascendente para la 
+adaptación a los servicios multimedia.
+• Con la mejora de eficiencia espectral y la reducción de la 
+latencia que dan HSDPA/HSUPA, los operadores son capaces de 
+proporcionar accesos que faciliten servicios tales como VoIP.
+• Puede usarse de manera conjunta o aislada de HSDPA.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 10 Cambios en HSUPA
+HSUPA consigue la mejora en el uplink gracias a :
+• Un canal físico dedicado (E-DCH, enhanced dedicated channel)
+• Intervalo de tiempo de transmisión TTI menor (similar a 
+HSDPA, aunque no es obligatorio que el móvil soporte 2ms). 
+Uso de entre 1 y 4 códigos.
+•  Fast scheduling (reserva más eficiente de los recursos radio).
+•  Fast Hybrid ARQ: Mejora la eficiencia (errores de procesado).
+Transmisión de Datos                     B2.4: Evolución de redes 3G 11 Comparativa tasas binarias
+Transmisión de Datos                     B2.4: Evolución de redes 3G 12 Comparativa latencia
+Transmisión de Datos                     B2.4: Evolución de redes 3G 13 Beyond 3G
+Transmisión de Datos                     B2.4: Evolución de redes 3G 14 Objetivos en acceso de B3G
+Hay 2 principales objetivos en las nuevas técnicas de acceso 
+B3G:
+1) Conseguir excelentes tasas binarias:
+•Situación de movilidad: V > 100 Mbps
+•Situación estacionaria : V > 1 Gbps
+2) Favorecer redes donde el mismo terminal pueda 
+engancharse en los distintos accesos con transiciones 
+suaves entre ellos.
+Hay dos tecnologías que están evolucionando para permitir las 
+altas tasas de acceso y la evolución compatible de redes celulares 
+y wireless: MIMO y OFDM.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 15 MIMO (Multiple-Input Multiple-Output)(I)
+• MIMO aprovecha fenómenos físicos como la propagación 
+multicamino para incrementar la tasa de transmisión y reducir 
+la tasa de error. 
+• MIMO aumenta la eficiencia espectral de un sistema de 
+comunicación inalámbrica por medio de la multiplexación 
+espacial.
+• No es una tecnología nueva, se desarrollo en los años 90 para 
+los sistemas WLAN.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 16 MIMO (II)
+Tener múltiples antenas en emisor y receptor permite llevar 
+a cabo la siguiente idea:
+Terminal Estación
+Transmisión de Datos                     B2.4: Evolución de redes 3G 17 OFDM (Orthogonal Frequency Division 
+Multiplexing)
+• Tecnología de espectro ensanchado que distribuye los datos 
+a lo largo de un número variado de portadoras con una 
+separación adecuada entre ellas => enviar la información 
+modulando en QAM o en PSK un conjunto de portadoras de 
+diferente frecuencia.
+• Divide el ancho de banda en multitud de canales más 
+estrechos. Las portadoras de cada canal son ortogonales 
+entre sí (el espectro de cada portadora tiene un cero en el 
+centro de la frecuencia correspondiente al resto de las 
+portadoras) => no interferencia entre las portadoras.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 18 OFDM (II)
+• No es una tecnología nueva (usado Wifi, Wimax, ADSL).
+• Mejoras:
+- Modulación muy robusta frente al multitrayecto, los 
+desvanecimientos selectivos en frecuencia y frente a las 
+interferencias de RF (funciona mejor que QPSK y n-QAM en 
+entornos multitrayecto).
+- Las distintas señales con distintos retardos y amplitudes que 
+llegan al receptor contribuyen positivamente a la recepción.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 19 Tecnologías de acceso: Tasa binaria vs 
+movilidad
+Las comunicaciones celulares futuras podrán estar basadas en:
+•Combinación de OFDM y MIMO
+•Combinación de MIMO y CDMA 
+•Combinación de OFDM y CDMA (ejemplo: A cada portadora se le asigna un 
+dato y todos los datos del mismo usuario se multiplican por el mismo código, 
+diferente para cada usuario).
+Transmisión de Datos                     B2.4: Evolución de redes 3G 20 IMS
+Transmisión de Datos                     B2.4: Evolución de redes 3G 21 Expectativas inclumplidas de UMTS
+Además de
+•  Inmadurez tecnológica (inconsistencias en las especificaciones 
+del 3GPP) =>Presión creada por las expectativas económicas 
+de UMTS que forzó el desarrollo acelerado de los estándares.
+• Crisis en el sector => imposibilidad de amortizar las 
+inversiones en licencias por no disponibilidad de las tecnología.
+Existe otro factor clave para entender porqué las expectativas no 
+se han cumplido:
+• Falta de demanda por parte de los usuarios. 
+- En R99, la novedad era la conexión de alta velocidad (hasta 
+384kbps), videoconferencia por CS y mayor capacidad para 
+mensajería multimedia. Sin embargo, los servicios más 
+usados por los usuarios continuaban siendo los tradicionales 
+(voz y SMS)
+Surge la necesidad de crear un elemento impulsor de UMTS para 
+atraer a millones de usuarios potenciales
+Transmisión de Datos                     B2.4: Evolución de redes 3G 22 IMS: IP Multimedia Subsystem
+• El dominio PS visto hasta ahora proporcionaba acceso a Internet, e 
+incluso servicios avanzados (Ej: se puede instalar un cliente de VoIP 
+sobre un terminal 3G para establecer llamadas)
+• IMS (IP Multimedia subsystem) es la pieza clave de la arquitectura 3G. 
+Es un sistema de control de sesión que puede proporcionar acceso 
+celular ubicuo sobre conmutación de paquetes (CP) para todos los 
+servicios que proporciona Internet.
+- Permite usar las tecnologías celulares para proporcionar ubicuidad 
+en el acceso y tecnologías de internet para ofrecer servicios más 
+atractivos.
+- Facilita todos los servicios sólo empleando conmutación de paquetes 
+(no CS)
+• Las tecnologías IP sobre las que se basa IMS (SIP para el control de 
+sesiones e IPv6 para el transporte de red) hacen posible el desarrollo 
+rápido de servicios y la reducción de costes de operación e 
+infraestructura (cualidades del mundo Internet)
+El acceso a usuarios de Internet ofrece millones de posibles destinatarios IMS
+Transmisión de Datos                     B2.4: Evolución de redes 3G 23 ¿Por qué necesitamos IMS?
+IMS facilita:
+• Sesiones IP multimedia compuestas por flujos y contenidos 
+multimedia diversos, con un nivel adecuado de QoS para cada 
+contenido.
+• Tarificación: Conseguir tarificar de forma apropiada. Una 
+videoconferencia puede ser interesante que se tarifique por tiempo en 
+vez de por bytes. IMS permite ofrecer información del servicio que usa 
+el usuario para que el operador tarifique en consecuencia.
+• Servicios integrados:
+- Usar servicios desarrollados por terceras partes que se integren con 
+otros ya existentes (Ej: Sobre los sms, integrar un servicio text-to-
+speech para invidentes).
+- Define interfaces estándar para ser usados por los desarrolladores 
+de servicios.
+- Comunicación orientada a sesión de un usuario a otro/s usuario/s o 
+de un usuario a 1 servicio. (Ej: Un usuario IMS - Un usuario de 
+Internet)
+• Identificador de usuarios con "nombres", no con números de teléfono.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 24 Requerimientos IMS
+• Soportar el establecimiento de sesiones multimedia IP
+• Mecanismo para negociar la QoS, que hace uso de la 
+arquitectura de QoS de UMTS.
+• Interworking con Internet y las redes de conmutación de 
+circuitos (CS)
+• Soporte de roaming
+• Soporte de creación rápida de servicios sin estandarización.
+- La estandarización en las redes 3G ha supuesto una ralentización en 
+la introducción de servicios.
+- Incompatibilidades con las soluciones propietarias.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 25 Evolución en el modelo de ingresos
+Transmisión de Datos                     B2.4: Evolución de redes 3G 26 Evolución del modelo de red (I)
+IMS <> All-IP: All-IP se refiere a un completo set de tecnologías (IP 
+en core, red de transporte, RAN). IMS es una solución en sí misma 
+que supone sólo paso hacia la arquitectura all-IP.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 27 Evolución del modelo de red (II)
+Arquitectura de red basada en un modelo de capas (horizontal), 
+que permite una orientación a los servicios.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 28 Posibilidad de de nuevos servicios (I)
+ Servicios de valor añadido
+ Video bajo demanda
+ PoC (PTT over Cellular)
+ Mensajería instantánea y 
+presencia
+ Mensajería multimedia
+ Juegos (multiusuario)
+ Grupos PoC
+ Vídeo y texto en tiempo real
+ Soluciones de empresa
+ IP Centrex
+ Video conferencia
+ VPMN
+ Pizarras electrónicas, SMS & Chat Juegos
+compartición de archivos...
+ Convergencia de servicios con 
+redes tradicionales
+  VCC
+  SCI Video conferencia Trabajo on-line 
+  M-BOX ...  (datos)
+Transmisión de Datos                     B2.4: Evolución de redes 3G 29 Posibilidad de nuevos servicios (II)
+•Soporte conferences
+•Soporte streaming
+•Soporte Presence
+•Soporte PoC
+•Soporte chat (multimedia)
+• (...)
+Transmisión de Datos                     B2.4: Evolución de redes 3G 30 Independiente del acceso (en teoría)
+LTE 3GPP2 Accesos 
+HSPA+ MDN radio no-3GPP
+Accesos HSPA
+802.11
+radio para 
+paquetes TD-
+802.x
+SCDMA IMS
+definidos en 
+3GPP WCDMA DSL
+EDGE Cable Accesos fijos
+GPRS
+Transmisión de Datos                     B2.4: Evolución de redes 3G 31 Organizaciones involucradas en IMS
+CSI VCC Presence GLMS PoC Messaging Multimedia Multimedia MultimediaTelephony Telephony Telephony
+3GPP trabaja muy 
+en línea con IETF 
+en el uso de SIP
+Acceso celular a IMS IP Acceso cable a IMS
+Acceso WLAN a IMS
+Mobile Residential
+Transmisión de Datos                     B2.4: Evolución de redes 3G 32 Qué permite y qué no, IMS
+• IMS no define las aplicaciones o servicios que se pueden 
+ofrecer al usuario final.
+• IMS define la infraestructura y capacidades del servicio 
+que operadores o proveedores de servicio pueden emplear para 
+construir sus aplicaciones y ofertas de servicios.
+- IMS implementará el plano de control de los servicios IP 
+multimedia, mientras que 3G GPRS proporciona las funciones del 
+plano de transporte o usuario y la conectividad IP.
+Grupos de servicios finales:
+• Los heredados: Llamadas básicas, sms, mensajería multimedia, 
+e-mail...
+• Los multimedia avanzados: Videoconferencia, audioconferencia, 
+videoconferencia para personas sordas, vídeo y texto en tiempo 
+real, difusión de TV o radio, vídeo bajo demanda, chat 
+multimedia y mensajería instantánea, videojuegos 
+multiusuario, servicio push-to-talk...
+Transmisión de Datos                     B2.4: Evolución de redes 3G 33 Evolución de R4 a R5
+•Evolución R4 a R5: El interfaz entre IMS y la red CS se controla con la MGW.
+•El UE se comunica directamente con el subsistema IMS usando GPRS 
+(conectado directamente al GGSN).
+•El flujo de datos correspondiente a la señalización se envía de forma 
+separada al flujo de datos.
+•El flujo de señalización será transferido vía IMS y los datos de usuario 
+se  enviarán sin atravesar el subsistema IMS.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 34 Conexión a otras redes
+Cada operador IMS se conecta con otros para permitir servicios multimedia entre 
+usuarios de distintas redes.
+Las conexiones a Internet permitien MMS, VoIP, video telephony entre móviles y 
+usuarios fijos.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 35 Ej: Sesiones multimedia peer-to-peer
+Transmisión de Datos                     B2.4: Evolución de redes 3G 36 Tecnologías principales para IMS
+• Control de sesión realizado por el protocolo de control de 
+llamada IMS basado en SIP (Sesion Initiation Protocol) y SDP.
+- Se han añadido al protocolo extensiones para adaptarlo al entorno 
+móvil y a las redes de pago 3G.
+- SIP aporta las funciones para registro, establecimiento, liberación y 
+mantenimiento de las sesiones IMS.
+- Los mensajes de SDP (Session Description Protocol) se transfieren 
+en los mensajes SIP. Al describir la sesión, los usuarios origen/final 
+pueden indicar sus capacidades multimedia y definir el tipo de 
+sesión que quieren mantener. 
+- Se negocia la QoS.
+• Transporte de red con IPv6: QoS y seguridad, mayor espacio 
+de direccionamiento, transmisión peer-to-peer.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 37 Control de la llamada en VoIP. 
+Alternativas
+En una red telefónica convencional, se usa SS7 para el control de las 
+llamadas (se establece un circuito para el flujo de datos)
+En un dominio IP, cambia el concepto. Dos aproximaciones para el 
+control de la voz sobre IP:
+- Usar SS7 sin modificar, pero transportarlos sobre la red IP de forma 
+transparente. En este caso aparece un nuevo protocolo de 
+transporte SCTP (stream control transmission protocol) en vez de 
+TCP/UDP. Esta configuración se denomina sigtran y la ventaja es 
+que permite usar el software  SS7 con ligeras modificaciones.
+- Reemplazar los protocolos de control de llamada totalmente, 
+con protocolos optimizados para el entorno IP. Distintas propuestas: 
+H.323, SIP (session initiation protocol) o BICC. 
+Como algunas redes usaran SS7, otras sigtran y otras H.323, 
+SIP o BICC, es necesario que estos protocolos interfuncionen 
+entre sí.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 38 Arquitectura IMS
+Entrada de Media Resorce 
+señalización Function: Sólo 
+de llamadas necesario para 
+de otras redes conferences
+Conexión a 
+redes CS
+Proxy de 
+entrada de 
+cualquier 
+conexión IMS
+Servicios de valor 
+añadido IMS (ej: vídeo 
+on demand). No 
+obligatorio
+Transmisión de Datos                     B2.4: Evolución de redes 3G 39 Nodo principal :CSCF
+La transferencia de datos entre 
+usuarios IMS se organiza en sesiones. 
+El CSCF (call state control function) es 
+responsable del control de la sesión 
+(usando SIP) y de las siguientes 
+funciones:
+•Autenticación del usuario
+•Enrutamiento de la llamada
+Establecimiento de QoS en la red IP
+• Control y generación de los 
+registros de tarificación CDRs (call 
+detail records)
+Se definen tres tipos de nodos CSCF, 
+y cada red tendrá múltiples CSCFs de 
+cada tipo (control de carga, fiabilidad):
+• P-CSCF / S-CSCF / I-CSCF. 
+Transmisión de Datos                     B2.4: Evolución de redes 3G 40 Tipos de nodos CSCF (I)
+El nodo CSCF (Call State Control Function) es un servidor SIP con funciones 
+de proxy con 3 roles principales en IMS:
+• El proxy CSCF (P-CSCF), punto de contacto con el sistema IMS y que 
+recibe la señalización desde el terminal. Siempre en la red donde está el 
+móvil (home o visitada) 
+•El interrogating CSCF (I-CSCF), se encuentra en la frontera del 
+sistema IMS. Es punto de entrada de señalización externa y ayuda a 
+otros nodos a determinar el siguiente salto de los mensajes SIP : camino 
+para la señalización.
+•El serving CSCF (S-CSCF). Proxy y servidor registrar. Cada usuario 
+registrado en IMS tiene asignado un S-CSCF, que enruta sus sesiones, 
+registra/autentica al abonado  y proporciona los servicios. Genera 
+registros de tarificación.
+•Si el usuario marca un n úmero de teléfono en vez de un SIP URI 
+(Uniform Resource Identifier), el S-CSCF hace el servicio de 
+"traducción". 
+En el registro, el P-CSCF se ayuda del I-CSCF para determinar el S-
+CSCF que sirve a cada usuario. 
+Transmisión de Datos                     B2.4: Evolución de redes 3G 41 Ubicación de los nodos CSCF
+P-CSCF en la red home o visitada, el I-CSCF y el S-CSCF siempre en la red 
+home... ¿por qué?
+El tráfico generado por un usuario de Francia que esté haciendo roaming 
+en India y quiera llamar a Indonesia, se enrutará así:
+• La señalización a través del I-CSCF y del S-CSCF de Francia. El P-CSCF 
+sí estará en la red visitada de India.
+•El tráfico de usuario se transmitirá entre los GGSNs de India e 
+Indonesia.
+Poco óptimo para el enrutamiento, pero facilita la tarificación del 
+tráfico originado por los propios usuarios cuando están en 
+roaming.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 42 Funciones de registro y proxy
+Con SIP, el usuario Epi
+• puede tener varios user agent, 
+puede estar alcanzable en su 
+teléfono IP y en otra aplicación 
+wireless
+•puede tener configurado el 
+servicio para recibir mensajes 
+SIP en el teléfono de 8:00h a 
+15:00h y en la aplicación por la 
+tarde.
+Si el registrar actúa también como proxy y recibe un mensaje SIP para el AoR de Epi, 
+decidirá hacia dónde es mejor encaminarlo.
+• AoR en IMS sería como MSISDN (Mobile Subscriber ISDN Number) en GSM.
+En IMS, el S-CSCF es la entidad que tiene las funciones de proxy y de registrar. 
+Las identidades se registran de forma conjunta en el registro inicial.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 43 Conexión IMS redes externas CS (I)
+MGCF y MGW proporcionan una conexión 
+entre IMS y las redes externas CS (ISDN, 
+GSM).
+•MGCF (Media Gateway Control Function) 
+controla la MGW y hace de interfaz con S-
+SCSF usando SIP. El control de la 
+señalización de la llamada (SS7/ISUP) 
+se redirige desde la gateway de 
+señalización de la red CS a la MGCF 
+usando sigtran. La MGCF transladará los 
+mensajes entre SIP e ISUP para dar 
+interworking.
+•IM-MGW (IP Multimedia Media Gateway) 
+implementa el plano de usuario para el 
+interfuncionamiento de IMS con la redes 
+de circuitos (ej: transcodifica flujos IMS 
+sobre IP a datos de usuario).
+Transmisión de Datos                     B2.4: Evolución de redes 3G 44 Conexión IMS redes externas CS (II)
+Sip 
+gateway
+R4 MSC server
+R99 MSC
+R4 CS-MGW
+Sip  
+gateway      MSC
+Transmisión de Datos                     B2.4: Evolución de redes 3G 45 Conexión IMS redes externas CS (III)
+•BGCF (Breakout gateway control 
+function). Funcionalidad de 
+enrutamiento basada en números de 
+teléfono para PSTN o PLMN (CS 
+breakout point). 
+•El S-CSCF redirige a la BGCF las 
+llamadas con destino CS, y desde 
+aquí se canalizan a la MGCF 
+apropiada, para:
+• Seleccionar la red adecuada 
+con la que interfuncionar en el 
+dominio CS. 
+•Seleccionar la gateway 
+PSTN/CS apropiada para 
+interfuncionar si está en la 
+misma red donde se encuentra 
+la BGCF.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 46 Otros nodos en la arquitectura
+Otros nodos de relevancia:
+1) El Home Subscriber Server (HSS), 
+hereda las funciones del HLR+AUC. Almacena 
+y gestiona el perfil del servicio IMS del 
+abonado, claves de seguridad y vectores de 
+autenticación, registra el estado de los 
+abonados, el nodo S-CSCF con el que el 
+abonado se registra...
+2)Application Server (AS): Proporciona 
+servicios de valor añadido a un usuario. Ej: 
+Servicio de video streaming (video on 
+demand), servicios de correo ...
+3) MRF (Multimedia Resource Function). 
+Se separa en 2 componentes al igual que la 
+MSC en R4: MRF control (MRFC) y MRF 
+processor (MRFP). 
+•Conferencias de vídeo/voz (conferencing 
+bridge), anuncios multimedia, procesa 
+streams (ej: transcodificación audio)...
+Transmisión de Datos                     B2.4: Evolución de redes 3G 47 Prerequisitos servicio IMS
+1) Tener contratado el servicio 
+IMS.
+2) Que el terminal consiga una 
+IP: GPRS (PDP context), ADSL, 
+WLAN...
+3)Descubrir la dirección IP del 
+P-CSCF que actuara de proxy 
+de entrada.  Será el nodo por el 
+que pasará toda la señalización 
+IMS del terminal.
+4) Registro SIP del terminal 
+IMS.
+•El procedimiento de registro permite a la red IMS localizar al 
+usuario. Durante el proceso también se autentica al usuario y se 
+autoriza el establecimiento de sesiones.
+•En los ejemplos siguientes asumimos que IMS está implementado 
+sobre una estructura GPRS.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 48 Procedimiento de registro (I)
+1) Antes de establecer el 
+contexto PDP, UE y la red 
+establecen una conexión radio 
+RRC. El SGSN averiguará la 
+dirección del GGSN en la red 1)
+(DNS). 2)
+Si el subscriptor está autorizado 3) 4)
+en el servicio IMS, en el 
+establecimiento del contexto 
+aparecen nuevos parámetros: El 2) Cuando el UE conoce la dirección del P-
+UE pide la dirección P-CSCF (si CSCF, envía un mensaje SIP REGISTER al P-
+no está preconfigurada en la CSCF (identidad privada, identidades públicas 
+ISIM) a registrar para uso posterior)
+3) El P-CSCF necesita averiguar la mejor ruta 
+para alcanzar al S-CSCF. El I-CSCF pregunta 
+al HSS (en el ejemplo, se supone que están 
+en la misma entidad física).
+4) Conseguida la dirección del S-CSCF, se 
+enrutará el mensaje REGISTER al S-CSCF
+Transmisión de Datos                     B2.4: Evolución de redes 3G 49 Procedimiento de registro (II)
+5) Basándose en la identidad del 
+mensaje REGISTER, el S-CSCF puede 
+obtener los datos de autenticación del 
+HSS (hasta ahora, el S-CSCF sólo sabe 
+que "alguien" se ha conectado con una 
+IP válida): "vectores de autenticación" 
+(*).
+6) El S-CSCF propone un desafío al UE, 5)
+enviado en un mensaje 401 6)
+UNAUTHORIZED (números aleatorios, 
+claves para el cifrado..)
+8) 7)
+7) El UE calcula la respuesta y el S-CSCF la 
+(*): Algoritmo de 
+autorización/autenticación por compara con la que esperaba.
+desafío: IMS AKA (IMS 
+Authentication and Key 8) Si coinciden, el usuario es autenticado (se 
+Agreement) envía un SIP 200 OK)
+Transmisión de Datos                     B2.4: Evolución de redes 3G 50 Procedimiento de registro (III)
+9) Se ejecuta el proceso "suscripción 
+IMS". Se establece cuanto tiempo va 
+a durar el registro (por defecto, 
+600.000 seg => 7 días).
+10)  Se hace entre UE y S-CSCF. El 
+S-CSCF indica al HSS que el registro 
+ha tenido éxito y descarga la 
+suscripción IMS del usuario. 
+•Perfil de servicio asociado a la 
+identidad.
+• Puede provocar que los 
+mensajes SIP se enruten a 
+servidores de aplicación 9)
+• Se indica al HSS que éste será 
+el S-CSCF que sirva al UE.
+11 y 12) Se informa la UE y al P- 11) 10)
+CSCF de las identidades que se han 
+registrado (¿fallo de red?)
+12)
+Transmisión de Datos                     B2.4: Evolución de redes 3G 51 Procedimiento de registro (VI)
+Además del P-CSCF o del UE, otro nodo que podría querer una 
+suscripción del estado de registro de un usuario podría ser un 
+servidor de aplicación.
+•Ejemplo: Un servidor de aplicación que ofrezca un mensaje de 
+bienvenida al usuario cuando encienda el terminal IMS. Cuando 
+el usuario se conecte a la red IMS el servidor de aplicación será 
+informado y enviará un mensaje instantáneo al usuario.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 52 Establecimiento de sesión
+• Una vez que el usuario se ha registrado en IMS, puede acceder a 
+los servicios IP multimedia.
+•Para establecer una videoconferencia con otro usuario IMS, se 
+intercambia info de señalización con SIP y SDP para establecer 
+la sesión.
+• Se contactará con el nodo destino
+•Se negociarán los parámetros de sesión.
+•Se activarán los recursos GPRS necesarios para soportar la 
+sesión multimedia.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 53 Establecimiento de sesión (I)
+Uea y Ueb ya han llevado a cabo 
+el registro y están disponibles el 2)
+uno hacia el otro. Uea contacta a 
+Ueb (para videoconferencia) 1) 3) 3)
+1) Se inicia la sesión con petición 
+SIP INVITE. La cabecera indica 2 2) El I-CSCF contacta con el HSS para 
+identidades públicas (A y B). En averiguar dónde se registró la identidad 
+el mensaje se añade el mensaje pública del Ueb (en qué S-CSCF)
+SDP que describe las 
+características de la sesión 
+multimedia  (medios, tasa binaria 3) Una vez localizado, se envía el INVITE 
+de cada medio, protocolos a usar, al S-CSCF del Ueb que a su vez lo envía al 
+codecs...): "first SDP offer" P-CSCF del Ueb. 
+El P-CSCF envía el mensaje al S-
+CSCF del Uea.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 54 Establecimiento de sesión (II)
+4) El terminal destino envía mensaje de 
+progreso de sesión (183 Session 
+Progress) => añade mensaje SDP con la 
+respuesta del nodo destino al 
+ofrecimiento de los parámetros del nodo 
+origen (pueden haber sido modificados 4)
+según las características del 
+terminal/usuario): "first SDP answer". 5)
+ Se recibe la dirección Ipb y la secuencia 
+de enrutamiento. 6)
+5)  Terminal origen envía PRACK como respuesta al "progreso de sesión", con la oferta 
+SDP final ("second SDP offer"), definiendo codecs para cada medio aceptado.
+6) Ueb reconoce el PRACK con SIP 200 OK, asintiendo así al acuerdo de medios y 
+codificaciones ("second SDP answer").
+Transmisión de Datos                     B2.4: Evolución de redes 3G 55 Establecimiento de sesión (III)
+Cuando ambas partes conocen y han 
+acordado medios y codecs, se reservan 
+los recursos.
+7) Se establece un PDP context para 
+datos: definiciones de QoS en el plano de 
+usuario (también se puede ampliar el 
+usado para la señalización). 
+8) Uea envía SIP UPDATE para indicar si 7)
+éxito de la reserva de recursos y si se 
+han cumplido los requerimientos ("third 7)
+SDP offer") 8)
+9) Ueb envía 200OK si su reserva de 9)
+recursos también fue exitosa ("third SDP 
+answer"). 10)
+10) Ueb indica a Uea de que está 
+avisando a su usuario sobre una sesión 
+multimedia entrante. 11)
+11) Cuando el usuario B descuelga, Ueb 
+envía 200OK para indicar que el plano de 
+usuario se ha abierto.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 56 Establecimiento de sesión (IV)
+- El S-CSCF es responsable de las decisiones de enrutamiento para sesiones 
+que empiezan y acaban en el móvil. Cuando le llega una petición desde el P-
+CSCF, decide:
+•Contactar con un AS/ Seguir sesión IMS/ Romper con otros dominios CS 
+o IP. 
+Transmisión de Datos                     B2.4: Evolución de redes 3G 57 Mapeo de los atributos de QoS
+Las políticas de QoS en IMS se 
+centralizan en una entidad que 
+está en el P-CSCF (PDF: policy 
+decision function).
+La QoS no se basa sólo en los 
+recursos disponibles, también en 
+si nos interesa o no reservar ese 
+BW para un usuario en concreto.
+• En la red CORE de la QoS se 
+encargará el SGSN.
+•En la red RAN, la RNC.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 58 Sesión y liberación de conexión
+Ejemplo de cómo se establece 
+la sesión en el plano de usuario 
+a través de distintos equipos.
+Liberación de la conexión por Ueb. 
+Al enviarse SIP BYE, se cierra el 
+plano de usuario y se liberan los 
+PDP context. Al asentir con 
+200OK, los CSCF limpian la tablas 
+de direcciones de la sesión 
+multimedia.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 59 IMS interworking con CS
+•Cuando el S-CSCF analiza que el destino de SIP INVITE está en la red CS, dirige el 
+mensaje a la BGCF.
+•La BGCF decide donde se produce la ruptura a la red CS (cuál es la MGCF a la que 
+redirigir el mensaje).
+• La MGCF redirige el mensaje a la red CS a través de la SGW y ambas hacen la 
+conversión de protocolos necesaria entre SIP y SS7. También controla la IMS-MGW para 
+el establecimiento de la sesión en el plano de usuario.
+•Cuando los datos se transfieren, la IMS-MGW convierte la voz CS en un stream RTP y 
+viceversa.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 60 Ejemplo de sesión con RTP
+Streaming (sin SIP): RTSP para la Sesión multimedia (con SIP): SDP en 
+señalización inicial, RTP/RTCP para la señalización inicial, RTP/RTCP 
+el flujo de datos y su control para el flujo de datos y su control
+Transmisión de Datos                     B2.4: Evolución de redes 3G 61 Servidores de aplicación
+En estas redes habrá varios servidores de aplicaciones (AS), especializados en 
+proporcionar servicios e implementados sobre distintas tecnologías (Java, SIP 
+servlets, SIP CGI...).
+Desde el punto de vista de SIP, un AS puede actuar como un user agent 
+(originante/terminante), un servidor proxy, un redirect server (por ejemplo, 
+para los redireccionamientos de llamadas), o un SIP B2BUA (Back-to-Back User 
+Agent). 
+•Un AS a veces actúa como SIP proxy server y otras como SIP User Agent, 
+dependiendo del servicio que proporcione. 
+•Si el AS decide no proporcinar un servicio, actúa como SIP proxy server. 
+El S-CSCF recibe el SIP request y continua con el proceso.
+•Si el AS no va a proporcionar un servicio, no registra la ruta y se queda 
+fuera del camino de señalización una vez que la transacción SIP se 
+completa.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 62 SA como user agente (terminante)
+Ej: Presencia
+Transmisión de Datos                     B2.4: Evolución de redes 3G 63 SA como user agente (originante)
+Ej: Servicio despertador
+Transmisión de Datos                     B2.4: Evolución de redes 3G 64 SA como back-to-back user agent 
+(B2BUA)
+Servidores B2BUA: 2 user agent conectados con por una lógica específica del 
+servicio.
+Ej: Servicio de prepago: El servidor de prepago primero verifica que el usuario 
+tiene suficiente crédito para pagar la sesión (si no, rechaza la llamada). Si 
+tiene crédito, procede con la llamada. Una vez que se establece la sesión,si el 
+usuario agota el crédito, el B2BUA enviará un "BYE request"  a cada una de 
+las partes involucradas para tirar la llamada.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 65 Mensajería instantánea
+• Muy ligada al servicio de presencia (saber 
+cuando un usuario está conectado)
+• Hay de 2 tipos:
+• Pager-mode: Modelo parecido al de los 
+SMS. Se usa el cuerpo del mensaje del 
+método MESSAGE. Tiene el problema de 
+que puede congestionar los proxis (=> 
+restricciones en los tamaños de paquetes)
+•Session-based: Se envía el mensaje como 
+parte de una sesión  (establecida en 
+general con petición SIP INVITE). En vez 
+de usarse el protocolo RTP, se usa el 
+protocolo MSRP (Message Session Relay 
+Protocol). Este protocolo no usa UDP como 
+capa de transporte al no tener control de 
+congestión.
+Mensaje instantáneo sobre 
+TCP
+Transmisión de Datos                     B2.4: Evolución de redes 3G 66 Estado actual IMS
+ IMS definido en R5 y R6 del 3GPP.
+•R5: arquitectura y entidades funcionales (y operativa básica)
+•R6: Completa y amplía el concepto de servicios IP multimedia
+•Interfuncionamiento con CS y con las redes IP multimedia.
+•Servicio de conferencias con múltiples participantes.
+•Especificación del servicio de mensajería IMS
+•Especificación del servicio de presencia de IMS.
+•Optimización del acceso (interdependencia, altas tasas binarias... 
+Aspectos vistos en temas anteriores).
+Líneas de trabajo:
+•CSI (Combinational Services): Complementar los servicios CS con IMS
+•VCC (Voice Call Continuity): Handovers de voz entre IMS y las CS 
+bearers. 
+•Definición de servicios multimedia
+•Mejora de la calidad IMS :Establecimientos de sesión más rápidos, 
+mejorar la calidad de voz y performance en general.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 67 Evolución de futuro
+VCC: Voice call continuity
+CSI: CS bearer & IMS sesion
+Transmisión de Datos                     B2.4: Evolución de redes 3G 68 FMC: Convergencia Fijo-móvil
+•La estandarización de la actividad VCC (Voice Call 
+Continuity) define cómo soporta la tecnología IMS la voz sobre IP 
+y sobre móvil de manera unificada.
+•Las mejoras de IMS para soportar accesos fijos se incluyen 
+en R7 del 3GPP
+•A la espera de móviles e infraestructura, algunos operadores 
+pueden elegir soluciones intermedias como UMA (UMA - 
+Unlicensed Mobile Access, tecnología de acceso móvil sin 
+licencia), que se centran en la convergencia fijo-móvil más que en 
+la evolución all-ip.
+•Las operadoras pueden dar servicios rentables mediante la 
+explotación de recursos Wi-Fi y GSM a la vez que 
+proporcionan cobertura en el interior de edificios y hogares
+Transmisión de Datos                     B2.4: Evolución de redes 3G 69 UMA
+•UMA facilita la integración de redes móviles y wifi (soportado en 
+R6 según 3GPP).
+•La solución añade un controlador (UNC, UMA Network 
+Controller), que conecta con los equipos GSM/GPRS a través de 
+los interfaces Gb y A.  De esta forma se integra GSM/GPRS con 
+redes wireless de área local.
+• Gestiona pagings, handovers...
+Cellular Ac cess Network
+Private  
+UMA Network
+BSC
+enabled 
+dual Mobile
+mode Core
+handset Network
+IP Access GANC
+Network
+Generic Access Network
+Transmisión de Datos                     B2.4: Evolución de redes 3G 70 UMA. Ventajas y desventajas
+UMA, ¿solución a medio plazo?
+•Ventajas
+• Capacidades del sistema GSM se mejoran por la 
+desaparición de la carga de la red móvil (reducir congestión)
+•Mejora cobertura indoor.
+• La tecnología proporciona un puente a los servicios de 
+transmisión de datos fijo-móvil, (aunque más para SOHO que 
+para grandes empresas).
+•Desventajas
+•No asegura QoS
+• Solución de tarificación poco madura.
+•Handover entre UMTS y WiFi no soportado todavía. 
+•No adopta SIP
+Transmisión de Datos                     B2.4: Evolución de redes 3G 71 VCC
+3GPP define la importancia de 
+VCC en R6-R7 para completar los 
+requerimientos de continuidad de 
+servicio entre distintos accesos.
+•Se añade un servidor de 
+aplicación VCC a la red IMS 
+(handover bidireccional GSM-Wifi)
+•Permite roaming y handover 
+entre IMS y dominio CS y el 
+terminal puede acceder a servicios 
+de voz o servicios IMS con 
+distintos accesos.
+• Inicialmente sólo HO a CS 2G, y Access controller
+conmutación entre distintos tipos 
+de redes de acceso, CDMA, 
+wimax...)
+Transmisión de Datos                     B2.4: Evolución de redes 3G 72 ¿UMA o VCC?
+UMA si ... 
+•Se busca usar VoIP sobre WiFi
+•Los clientes son particulares, no business
+•Tarifas suficientemente atractivas para los usuarios 
+para invertir e instalar los nuevos equipos. 
+•Solución vertical.
+VCC si ... 
+•No es crítico dar el servicio en 2007 (no disponible)
+•Usuario objetivos: Business & particulares
+•Se planea usar IMS en el futuro.
+•Solución horizontal.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 73 Servicios, aplicaciones, 
+plataformas
+Transmisión de Datos                     B2.4: Evolución de redes 3G 74 Portales móviles
+ El continuo cambio en la tecnología móvil no ha permitido 
+disponer de un marco de estandarización cerrado => se ha 
+forzado el ofertar contenidos y servicios que había que rehacer 
+según la tecnología y dispositivo de acceso.
+• Se busca disponer de portales que reduzcan la duplicidad:
+• Contenidos multimedia de distintas versiones para adaptarse a 
+los diferentes dispositivos de acceso.
+•Identificar de forma centralizada al usuario y dispositivo para el 
+filtrado de contenidos, servicios y la adaptación.
+• Separar la lógica de estructura de la lógica de presentación.
+• En la lógica de estructura se puede proporcionar la 
+información a la capa de presentación en XML, y el nivel de 
+presentación puede generar el lenguaje de marcado  
+correspondiente en función del dispositivo de acceso.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 75 Entornos de presentación de aplicaciones 
+inalámbricas
+• Wireless Application Protocol o WAP (protocolo de aplicaciones 
+inalámbricas) especifica un entorno de aplicación y de un conjunto 
+de protocolos de comunicaciones para normalizar el modo en que los 
+dispositivos inalámbricos acceden a servicios de internet por un 
+móvil (para su presentación en el mismo).
+• Versión 1 de WAP (1999): Lenguaje de presentación de 
+contenidos, WML. Pila de protocolos no compatible con la de 
+Internet. 
+•WAP 2.0  está presente en los teléfonos móviles de nueva 
+generación (a partir de 2004). Usa HTTP y TCP.
+•i-mode: Surge en 1999. Entorno de aplicaciones con objetivos 
+similares a WAP (éxito inicial en Japón). Optimiza la gestión del 
+correo, presentación multimedia...
+Transmisión de Datos                     B2.4: Evolución de redes 3G 76 Lenguajes de marcado
+• Los terminales móviles disponen de un micronavegador para la solicitud de 
+páginas.
+•Las peticiones en las distintas tecnologías de acceso móvil (WAP/ i-mode) se 
+realizan bajo el protocolo HTTP.
+• En el caso de WAP las páginas se descargan codificadas y el navegador 
+del móvil las interpreta -> la gateway de WAP es el equipo que actúa 
+de traductor WAP <-> HTTP.
+• Lenguajes de marcado:
+• WML (Wireless Markup Language): Basado en XML. No hay un 
+estándar definido para los navegadores. Obsoleto.
+•CHTML (Compact HTML): HTML simplificado (poca memoria, poca 
+capacidad de proceso, display pequeño, colores reducidos...), diseñado 
+según las recomendaciones del W3C.
+•I-HTML: Usado en i-mode (DoCoMo), ampliación de CHTML para facilitar 
+las imágenes en color, animaciones, texto con efectos..
+•XHTML Mobile Profile: Extensión de XHTML adaptado a terminales wap 
+2.0. Soporta CSS.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 77 Adaptación de contenidos al terminal
+• Cualquier contenido debería verse óptimamente con independencia del 
+dispositivo/terminal o acceso utilizado.
+• Un sistema de "transcoding" permite adaptar o recodificar el contenido al 
+formato correcto antes de que sea servido al terminal destino.
+•La diversidad de formatos y contenidos (texto, audio, imagen, vídeo) 
+implica:
+• Identificar el dispositivo
+• Características del terminal destino (información asociada a los 
+dispositivos).
+•Aplicar la conversión y servir el contenido.
+Políticas de gestión de contenidos para evitar la carga de los 
+sistemas (reducir el número de transformaciones en tiempo 
+real...)
+Transmisión de Datos                     B2.4: Evolución de redes 3G 78 Diferencias respecto portales web
+•  Reducido tamaño de las pantallas => necesaria estructura de 
+árbol por áreas temáticas y control sobre la vuelta atrás.
+•  Facilitar la usabilidad: Servicio de "favoritos", buscador 
+accesible, historial de navegación...
+• Presentación ajustada a cada tipo de terminal.
+•No se soportan todos los formatos multimedia => conversión de 
+formatos.
+•Resultados obtenidos ante una consulta, paginados.
+•Los servicios que se deseen tener disponibles para todos los 
+terminales probablemente requerirán distintos lenguajes de 
+marcado.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 79 Plataformas para terminales móviles
+Aumentar capacidad de proceso, incorporación de nuevos 
+dispositivos en terminales, nuevas  aplicaciones y servicios => 
+nuevos sistemas operativos y/o plataformas de ejecución.
+Sistemas operativos:
+• SO Symbian (propiedad consorcio de fabricantes).
+•Windows Mobile (de Microsoft). Se usa en PDAs (pocket PCs) 
+y en los teléfonos (Smartphones).
+•SO PalmOS (propiedad de Palm). Usado en las PDAs y en 
+algunos modelos de teléfonos.
+•Linux. Creciente importancia en PDAs y sistemas empotrados.
+Plataformas:
+•J2ME (Java 2 Micro Edition). No es SO, es plataforma de 
+ejecución sobre <> SO para ejecutar aplicaciones escritas en 
+Java.
+•JavaCard. Similar a J2ME, se ejecuta en la SIM.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 80 Conclusiones
+•En la red CORE, IMS aparece para proporcionar servicios 
+multimedia extremo a extremo, con gestión de la QoS y la tarifación 
+y permitiendo una fácil integración de servicios.
+• Se basa en el uso de SIP
+• En las redes de acceso, se busca el interfuncionamiento entre 
+accesos fijos y móviles.
+• También se busca mejorar la calidad de servicio (tasas y 
+retardos) : HSDPA, HSUPA y tecnologías próximas en redes 
+móviles como MIMO o OFDM.
+• Toma relevancia el desarrollo de aplicaciones móviles y 
+contenidos, además del desarrollo de servicios en red.
+• Convergencia de los intereses Telco tradicionales con el área 
+lT.
+Transmisión de Datos                     B2.4: Evolución de redes 3G 81

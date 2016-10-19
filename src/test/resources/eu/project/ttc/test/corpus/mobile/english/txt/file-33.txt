@@ -1,0 +1,354 @@
+WCDMA-Technology For 3g Cellular Systems
+lll/@@lllllél ¤ TE©lHllll©l.©©)Yl F@&l @(5 @Ehl.lU  &3l7§TEll'll§
+Pradipta Biswas
+Roll No. ()4IT6()()7
+M. Tech. (IT)
+School of Information Technology
+Indian Institute of Technology, Kharagpur
+ABSTRACT
+W-CDMA (Wideband Code-Division Multiple Access), an ITU standard derived from Code Division
+Multiple Access, is o]j'Zcially known as IM T-2000 direct spread. W-CDMA is a third-generation mobile
+wireless technology that promises much higher data speeds to mobile and portable wireless devices than
+commonly ofered in today 's market, The present seminar discusses the applicability of WCDMA system
+with respect to 3 G mobile system. The reason for the popularity of spread spectrum technique is addressed
+and the evolution of WCDMA over CDMA is also pointed out. The protocol architecture of WCDMA,
+WCDMA network architecture and the compatibilty of existing GSM system with WCDMA system are also
+discussed in brief
+Keywords: Code Division Multiple Access, Wideband Code Division Multiple Access, Protocol
+architecture, Radio Access Network, Global System Miobile
+1 Introduction
+There has been a tremendous growth in wireless communication technology over the past
+decade. The significant increase in subscribers and traffic, new bandwidth consuming
+applications such as gaming, music down loading and video streaming will place new
+demands on capacity. The answer to the capacity demand is the provision of new
+spectrum and the development of a new technology - Wideband CDMA or hereinafter
+referred to as WCDMA.
+WCDMA was developed in order to create a global standard for real time multimedia
+services that ensured international roaming. With the support of ITU (International
+Telecommunication Union) a specific spectrum was allocated - 2GHz for 3G telecom
+systems. The work was later taken over by the 3GPP (3rd Generation Partnership
+Project), which is now the WCDMA specification body with delegates from all over the
+world.
+2 What is 3G System
+UMTS (Universal Mobile Telecommunications System) is a so-called "third-generation
+(3G)," broadband, packet-based transmission of text, digitized voice, video, and
+multimedia at data rates up to and possibly higher than 2 megabits per second (Mbps),
+offering a consistent set of services to mobile computer and phone users no matter where
+they are located in the world. Based on the GSM communication standard, UMTS,
+endorsed by major standards bodies and manufacturers, is the planned standard for
+Pradipta Biswas M. Tech., SIT, IIT KGP
+
+WCDMA-Technology For 3g Cellular Systems
+mobile users around the world by 2002. Once UMTS is fully implemented, computer and
+phone users can be constantly attached to the Internet as they travel and, as they roaming
+service, have the same set of capabilities no matter where they travel to. Users will have
+access through a combination of terrestrial wireless and satellite transmissions. Until
+UMTS is fully implemented, users can have multi-mode devices that switch to the
+currently available technology where UMTS is not yet available.
+T Wired Terminal
+
+Eggs.: or Building Stationary   Vehicle
+Indoors Outdoors
+Fig l. 3G System Overview
+Today's cellular telephone systems are mainly circuit-switched, with connections always
+dependent on circuit availability. Packet-switched connection, using the Internet Protocol
+(Internet Protocol), means that a virtual connection is always available to any other end
+point in the network. It will also make it possible to provide new services, such as
+alternative billing methods (pay-per-bit, pay-per-session, flat rate, asymmetric bandwidth,
+and others). The higher bandwidth of UMTS also promises new services, such as video
+conferencing. UMTS promises to realize the Virtual Home Environment in which a
+roaming user can have the same services to which the user is accustomed when at home
+or in the office, through a combination of transparent terrestrial and satellite connections.
+UMTS is a network consisting of two main elements connected over a standard interface,
+called Iu. These two elements are:
+UTRAN (UMTS Terrestrial Radio Access Network). This is composed of Node B which
+is equivalent to the GSM BTS and the Radio Network Controller (RNC) which is
+equivalent to the GSM BSC. A novelty with the UTRAN concept is the existence of a
+new modulation scheme: the Frequency Division Duplex (FDD) and W-CDMA. This
+mode offers the highest efficiency within a single system whatever the conditions-wide
+area, urban, indoor coverage from outdoor, indoor, and so on. One carrier use 5 Mhz.
+The Core Network. This is the equivalent of the GSM NSS. There are two options for
+the implementation of 3G and the evolution of the GSM Core Network:
+ATM based architecture: this R'99 architecture may reuses in some cases the two-domain
+architecture of GSM/GPRS, with:
+Iu-PS (Packet Switched) interface instead of Gb on the packet domain.
+Iu-CS (Circuit Switched) interface instead of A on the circuit domain.
+Transport Independent and multimedia architecture: this R'00 architecture is in line with
+2 Pradipta Biswas M. Tech., SIT, IIT KGP
+
+WCDMA-Technology For 3g Cellular Systems
+the Next Generation Networks architecture and introduces separation of control and user
+planes. It also integrates multimedia capabilities.
+3 Spread Spectrum System
+• It is a kind of modulation system in which the modulated (spread spectrum) signal
+bandwidth is much greater than the message signal bandwidth
+• The spectral spreading is performed by a code that is independent of the message
+signal. The same code is used at receiver to despread the received signal and to
+recover the message signal.
+3.1 Benefits of Spread Spectrum System
+• It is very secure, without knowing the chip code it is nearly impossible to
+intercept.
+• A large number of codes can support a large number of users
+• As a large bandwidth is used the system is less prone to distortion
+• Since the power is distributed in a large bandwidth so the power spectral density
+goes below to noise level so it is resistant to jamming and remain invisible to
+unintended users.
+• It provides asynchronous multiple access
+3.2 Different Spread Spectrum Systems
+3.2.1 Direct Sequence Spread Spectrum
+In direct sequence spread spectrum, the stream of information to be transmitted is divided
+into small pieces, each of which is allocated across to a frequency channel across the
+spectrum. A data signal at the point of transmission is combined with a higher data-rate
+bit sequence (also known as a chipping code) that divides the data according to a
+spreading ratio. The redundant chipping code helps the signal resist interference and also
+enables the original data to be recovered if data bits are damaged during transmission.
+3.2.2. Frequency Hoping
+In an FH-CDMA system, a transmitter "hops" between available frequencies according to
+a specified algorithm, which can be either random or preplanned. The transmitter
+operates in synchronization with a receiver, which remains tuned to the same center
+3 Pradipta Biswas M. Tech., SIT, IIT KGP
+
+WCDMA-Technology For 3 g Cellular Systems
+frequency as the transmitter. A short burst of data is transmitted on a narrowband. Then,
+the transmitter tunes to another frequency and transmits again. The receiver thus is
+capable of hopping its frequency over a given bandwidth several times a second,
+transmitting on one frequency for a certain period of time, then hopping to another
+frequency and transmitting again. Frequency hopping requires a much wider bandwidth
+than is needed to transmit the same information using only one carrier frequency. The
+Near-Far problem of DS/SS is avoided here. FH-CDMA devices use less power and are
+generally cheaper, but the performance of DS-CDMA systems is usually better and more
+reliable. The biggest advantage of frequency hopping lies in the coexistence of several
+access points in the same area, something not possible with direct sequence.
+3.2.3 Hybrid System: DS/(F)FH
+The DSfFFH Spread Spectrum technique is a combination of direct-sequence and
+frequency-hopping. One data bit is divided over a number of (let NPH) frequency-hop
+channel (carrier frequencies). In each frequency-hop channel one complete PN-code of
+length N is added to the data signal (in figure, NFH is taken to be 5).
+. daia bii period
+  frequency hop period
+carrieri new-¤¤¤e1'        
+carrier 2     lei-eeede z l    
+carrier 3   new-Cade za      
+carrier 4       'Pr·1-wee ai l  
+carrier 5         new-cena 5 l
+Fig 2. Example of DS/(F)FH System
+As the FH-sequence and the PN-codes are coupled, an address is a combination of an FH-
+sequence and NPH PN-codes. To bound the hit-chance (the chance that two users share
+the same frequency channel in the same time) the frequency-hop sequences are chosen in
+such a way that two transmitters with different FH-sequences share at most two
+frequencies at the same time (timeshift is random).
+4 Pradipta Biswas M. Tech., SIT, IIT KGP
+
+WCDMA-Technology For 3g Cellular Systems
+4 Code Division Multiple Access
+CDMA is a form of multiplexing, which allows numerous signals to occupy a single
+transmission channel, optimizing the use of available bandwidth. The technology is used
+in ultra-high-frequency (UHF) cellular telephone systems in the 800-MHz and 1.9-GHz
+bands.
+CDMA employs analog-to-digital conversion (ADC) in combination with spread
+spectrum technology. Audio input is first digitized into binary elements. The frequency of
+the transmitted signal is then made to vary according to a defined pattern (code), so it can
+be intercepted only by a receiver whose frequency response is programmed with the same
+code, so it follows exactly along with the transmitter frequency. There are trillions of
+possible frequency-sequencing codes; this enhances privacy and makes cloning difficult.
+·|·,.,,.,,,,,H_-N,. cnnnrmn Rncnlumr
+Fig 3. CDMA Procedure
+5 WCDMA
+The original CDMA standard, also known as CDMA One and still common in cellular
+telephones in the U.S., offers a transmission speed of only up to 14.4 Kbps in its single
+channel form and up to 115 Kbps in an eight-channel form. The next version of CDMA,
+CDMA2000, also known as IMT-CDMA Multi-Carrier or 1xRTT, can support mobile
+data communications at speeds ranging from 144 Kbps to 2 Mbps.
+In CDMAOne and CDMA2000, a 1.25 MHz wide radio signal is multiplied by a
+spreading signal (which is a pseudo-noise code sequence) with a higher rate than the data
+rate of the message. The resultant signal appears as seemingly random, but if the intended
+recipient has the right code, this process is reversed and the original signal is extracted.
+Uses of unique codes mean that the same frequency is repeated in all cells, which is
+commonly referred to as a frequency re-use of 1.
+WCDMA is a step further in the CDMA technology. It uses a 5 MHz wide radio signal
+and a chip rate of
+5 Pradipta Biswas M. Tech., SIT, IIT KGP
+
+WCDMA-Technology For 3g Cellular Systems
+3.84 Mcps, which is about three times higher than the chip rate of CDMA2000 (1.22
+Mcps).
+The main benefits of a wideband carrier with a higher chiprate are:
+• Support for higher bit rates
+• Higher spectrum efficiency thanks to improved trunking efficiency (i.e. a better
+statistical averaging)
+• Higher QoS
+Further, experience from second-generation systems like GSM and cdmaOne has enabled
+improvements to be incorporated in WCDMA. Focus has also been put on ensuring that
+as much as possible of WCDMA operators' investments in GSM equipment can be re-
+used. Examples are the re-use and evolution of the core network, the focus on co-siting
+and the support of GSM handover. In order to use GSM handover the subscribers need
+dual mode handsets.
+6 WCDMA Protocol Architecture
+` Radio Access Bearer `
+L3/RRG L3/RRG
+cl? Signaling radio bearer #
+L2/RLG L2/RLC L2/RLG L2/RLO
+\ : Logical channel   \
+L2/MAC l.21lvlAc
+`   Tran sport channel @39 `
+L1/Pl-IY L1/Pl-IY
+V Physical channel
+·€1§$
+Fig 4. WCDMA Protocol Architecture
+The Physical Layer (Layer l) offers T ranspert Channels to the MAC layer. There are
+different types of transport channels with different characteristics of the transmission.
+Common transport channels can be shared by multiple handsets (e. g. FACH, RACH,
+DSCH, BCH, PCH). Dedicated transport channels (DCH) are assigned to only one
+handset at a time. The transmission functions of the physical layer include channel coding
+and interleaving, multiplexing of transport channels, mapping to physical channels,
+spreading, modulation and power amplification, with corresponding functions for
+reception. The following is the physical layer frame structure of WCDMA.
+6 Pradipta Biswas M. Tech., SIT, IIT KGP
+
+WCDMA-Technology For 3g Cellular Systems
+ 
+Fig 5. WCDMA Frame Structure
+A frequency and a code characterize a physical channel. The specifications include two
+modes: the FDD mode (Frequency Division Duplex) and the TDD mode (Time Division
+Duplex). The FDD mode is the mainstream mode that operators are now deploying in
+WCDMA. The TDD mode may eventually be deployed as well, as a complement to the
+FDD mode.
+The Medium Access Control (MAC) protocol (Layer 2) offers logical channels to the
+layers above. The logical channels are distinguished by the different type of information
+they carry. The main two types are,
+a. Dedicated channel -reserved for a single user only.
+Support fast power control and soft handover.
+b. Common channel- can be used by any user at any time.
+Don't support soft handover but some support fast power control.
+Here is a complete mapping of different transport channels to physical channels.
+7 Pradipta Biswas M. Tech., SIT, IIT KGP
+
+WCDMA-Technology For 3g Cellular Systems
+Transport Chanttel Physical Channel
+(ULfDL) Dedicated channel DCH Dedicated physical data cltatmel DPDCH
+Dedicated physical control cltatmel DPCCH
+(UL) Random access channel RACH Physical tattdotn access channel PRACH
+(UL) Cotntnott packet channel CPCH Physical common packet channel PCPCH
+(DL) B1`O&dCEiSI Cl1H1].t1Cl BCH Primary common control physical channel P-CCPCH
+(DL) l:O1'WEil`Cl HCCESS Cllitmtcl FACH Secottdaty common control physical channel S-CCPCH
+(DL) Paging channel PCH
+(DL) Downlink shared chatntel DSCH Physical downlink shared chatmel PDSCH
+Synchronisation channel SCH
+Comtnott pilot chattttel CPICH
+Signaling nnvsicni channels Acquisition indication channel AICH
+Pagittg indication channel PICH
+CPCI-I Status indication cltatmel C SICH
+Collision detection.=`Cltan.nel assignment indicator channel
+CDJC A-ICH
+Table l, Mapping from Transport to Physical Channels
+The MAC layer performs scheduling and mapping of logical channel data onto the
+transport channels provided by the physical layer. Also, for common transport channels,
+the MAC layer adds addressing information to distinguish data flows intended for dif-
+ferent handsets. One major difference to GSM is the possibility to dynamically switch
+one logical channel (data flow) onto different transport channel types, e. g. based on the
+activity of the subscriber. This is called channel type switching.
+The Radio Link Control (RLC) protocol (Layer 2) operates in one of three modes:
+transparent, unacknowledged or acknowledged mode. It performs segmentation/re-
+assembly functions and, in acknowledged mode, provides an assured mode delivery ser-
+vice by use of retransmission. RLC provides a service both for the RRC signaling (the
+Signaling Radio Bearer) and for the user data transfer (the Radio Access Bearer).
+The Radio Resource Control (RRC) protocol (Layer 3) provides control of the handset
+from the RNC. It includes functions to control radio bearers, physical channels, mapping
+of the different channel types, handover, measurement and other mobility procedures.
+Because of the flexibility of the WCDMA radio interface, this is a fairly complex
+protocol.
+8 Pradipta Biswas M. Tech., SIT, IIT KGP
+
+WCDMA-Technology For 3g Cellular Systems
+7 WCDMA System Overview
+7.1 Radio Access Network (RAN) Architecture
+The main purpose of the WCDMA Radio Access Network is to provide a connection
+between the handset and the core network and to isolate all the radio issues from the core
+network. The advantage is one core network supporting multiple access technologies.
+The WCDMA Radio Access Network consists of two types of nodes:
+a. Radio Base Station (Node B)
+The Radio Base Station handles the radio transmission and reception to/from the handset
+over the radio interface (Uu). It is controlled from the Radio Network Controller via the
+Iub interface. One Radio Base Station can handle one or more cells.
+b. Radio Network Controller (RNC)
+The Radio Network Controller is the node that controls all WCDMA Radio Access
+Network functions. It connects the WCDMA Radio Access Network to the
+
+.3   Handset
+Fig 6. Transport network
+core network via the lu interface. There are two distinct roles for the RNC, to serve and to
+control. The Serving RNC has overall control of the handset that is connected to
+WCDMA Radio Access Network. It controls the connection on the lu interface for the
+handset and it terminates several protocols in the contact between the handset and the
+WCDMA Radio Access Network.
+The Controlling RNC has the overall control of a particular set of cells, and their
+associated base stations. When a handset must use resources in a cell not controlled by its
+Serving RNC, the Serving RNC must ask the Controlling RNC for those resources. This
+request is made via the Iur interface, which connects the RNCs with each other. In this
+case, the Controlling RNC is also said to be a Drift RNC for this particular handset. This
+9 Pradipta Biswas M. Tech., SIT, IIT KGP
+
+WCDMA-Technology For 3g Cellular Systems
+kind of operation is primarily needed to be able to provide soft handover throughout the
+network.
+7.1.1 Radio Access Bearers
+The main service offered by WCDMA RAN is the Radio Access Bearer (RAB). To
+establish a call connection between the handset and the base station a RAB is needed. Its
+characteristics are different depending on what kind of service/information to be
+transported.
+The RAB carries the subscriber data between the handset and the core network. It is
+composed of one or more Radio Access Bearers between the handset and the Serving
+RNC, and one lu bearer between the Serving RNC and the core network.
+3GPP has defined four different quality classes of Radio Access Bearers:
+• Conversational (used for e.g. voice telephony)
+- low delay, strict ordering
+• Streaming (used for e.g. watching a video clip)
+- moderate delay, strict ordering
+• Interactive (used for e. g. web surfing)
+- moderate delay
+• Background (used for e. g. file transfer)
+- no delay requirement
+Both the Conversational and Streaming RABs require a certain reservation of resources
+in the network, and are primarily meant for real-time services. They differ mainly in that
+the Streaming RAB tolerates a higher delay, appropriate for one-way real-time services.
+The Interactive and Background RABs are so called 'best effort', i.e. no resources are
+reserved and the throughput depends on the load in the cell. The only difference is that
+the Interactive RAB provides a priority mechanism.
+The RAB is characterized by certain Quality of Service (QoS) parameters, such as bit rate
+and delay. The core network will select a RAB with appropriate QoS based on the service
+request from the subscriber, and ask the RNC to provide such a RAB.
+7.2. Transports in WCDMA Radio Access Network
+The WCDMA Radio Access Network nodes communicate with each other over a
+transport network. The 3GPP specification provides a very clear split between radio
+related (WCDMA) functionality and the transport technology, meaning that there is no
+particular bias to any technology. The transport network is initially based on ATM, but IP
+will soon be included as an option.
+l() Pradipta Biswas M. Tech., SIT, IIT KGP
+
+WCDMA-Technology For 3g Cellular Systems
+lub lur lu
+Radio Network FEBS   Controlling l Senring   Core
+Layer (BNI.) : FlN(:i l FINE: , Network
+; Uniting I ;
+  FINC; E  
+Transport Network
+Layer (TNI.) Transport Network,
+A`I'NI (ur in future IP)
+Fig 7. Transport network
+8 Hand-Over between WCDMA and GSM system
+9 Abbreviations
+CDMA Code Division Multiple Access GSM BSS GSM Base Station Subsystem
+WCDMA Wideband Code Division Multiple Access GSM BSC GSM Base Station Controller
+cdmaOne Code Division Multiple Access GSM BTS GSM Base Transceiver Station
+as specified in IS-95 TDMA Time Division Multiple Access
+SSZMA Code Division Multiple Access RNC Radio Network Controller
+as specified in IS-2000 RAB Radio Access Bearer
+ITU International Telecommunication Union QoS Quality of Service
+3GPP 3rd Generation Partnership Project FDD Frequency Division Duplex
+Mcps Mega chips per second TDD Time Division Duplex
+GSM Global System for Mobile Communication MAC Medium Access Control
+RBS Radio Base Station RLC Radio Link Control
+Node B Radio Base Station RRC Radio Resource Control
+RAN Radio Access Network IP Internet Protocol
+ll Pradipta Biswas M. Tech., SIT, IIT KGP
+

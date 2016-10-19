@@ -1,0 +1,3270 @@
+Inhaltsverzeichnis
+Lieferumfang
+
+7
+
+Sicherheitshinweise
+
+8
+
+Elektrische Geräte nicht in Kinderhände
+
+8
+
+Explosionsgefährdete Bereiche
+
+8
+
+Das Gerät sicher aufstellen
+
+8
+
+Netzteil
+
+9
+
+Netzanschluss zugänglich lassen
+
+9
+
+Gewitter/Nichtgebrauch
+
+10
+
+Sicher mit Akkus umgehen
+
+10
+
+Niemals selbst reparieren
+
+11
+
+Was ist DECT?
+
+12
+
+Geschichte
+
+12
+
+Verbreitung
+
+13
+
+Geräteübersicht
+
+14
+
+Mobilteile
+
+14
+
+Ladestation
+
+14
+
+Basisstation mit Anrufbeantworter
+
+14
+
+Anschlüsse auf der Rückseite
+
+14
+
+Vorderseite
+
+15
+
+Vorbereitung
+
+16
+
+Aufstellen
+
+16
+
+Akku in das Mobilteil einlegen
+
+16
+
+Netzteil an die Basisstation anschließen
+
+17
+
+Netzteil an die Ladestation anschließen
+
+18
+
+1
+
+Akku laden
+
+19
+
+Akku in der Basisstation laden
+
+19
+
+Akku in der Ladestation laden
+
+20
+
+Basisstation an das Telefonnetz anschließen
+
+21
+
+Das Display
+
+22
+
+Grunddisplay
+
+22
+
+Displaysprache
+
+23
+
+Akkuanzeige
+
+23
+
+Weitere Anzeigen im Display
+
+24
+
+Telefonieren
+
+25
+
+Grundfunktionen
+
+25
+
+Mobilteil ein- und ausschalten
+
+25
+
+Anruf entgegennehmen
+
+25
+
+Hörerlautstärke ändern
+
+26
+
+Gespräch beenden
+
+26
+
+Internen Anruf tätigen
+
+26
+
+Externen Anruf tätigen
+
+27
+
+Weitere Funktionen
+
+28
+
+Freisprechmodus (Frei sprechen)
+
+28
+
+Rechte-Taste
+
+28
+
+Rückfragetaste
+
+29
+
+INFO-Taste
+
+30
+
+Tastensperre
+
+30
+
+Rufton ausschalten
+
+30
+
+Telefon stummschalten
+
+31
+
+Rufnummernanzeige
+
+31
+
+2
+
+Anrufliste
+
+31
+
+Wahlwiederholung
+
+32
+
+Mit mehreren Gesprächspartnern telefonieren
+
+33
+
+Anrufe weiter vermitteln
+
+34
+
+Makeln und Telefonkonferenz führen
+
+34
+
+Mobilteil rufen
+
+35
+
+Telefon über Menü einstellen
+
+36
+
+Hauptmenü aufrufen
+
+36
+
+Im Menü navigieren
+
+37
+
+Menüpunkt anwählen
+
+37
+
+Steuertasten
+
+37
+
+ln den Telefonmodus wechseln
+
+37
+
+SMS nutzen
+
+38
+
+Voraussetzungen
+
+38
+
+Anmeldung bei der Telekom
+
+39
+
+Menü „SMS“
+
+39
+
+SMS schreiben
+
+40
+
+SMS mit den Zifferntasten schreiben
+
+40
+
+Optionen für geschriebene SMS
+
+42
+
+SMS unterbrechen
+
+43
+
+Eingangsliste (SMS lesen)
+
+44
+
+Eingegangene SMS lesen
+
+44
+
+SMS im Eingangsverzeichnis
+
+44
+
+SMS-Speicher
+
+45
+
+Optionen für gelesene Nachrichten
+
+45
+
+Ausgangsliste
+
+46
+
+3
+
+Gespeicherten Eintrag öffnen
+
+46
+
+Vorlage
+
+47
+
+Einstellungen
+
+48
+
+SMS-Center auswählen
+
+48
+
+SMS-Sende-Center auswählen
+
+49
+
+SMS-Alarm auswählen
+
+49
+
+Anrufbeantworter
+
+50
+
+Aus- und Einschalten
+
+50
+
+Einstellungen im Menü „Anrufbeantworter“
+
+51
+
+AB-Modus
+
+51
+
+Ansagetexte
+
+52
+
+Antwortverzögerung
+
+53
+
+Aufnahme-Zeit
+
+54
+
+Fernabfrage
+
+54
+
+Fernabfrage-PIN ändern
+
+54
+
+Anzeigen an der Basisstation
+
+55
+
+Nachrichten abhören
+
+56
+
+Nachrichten an der Basistation abhören
+
+56
+
+Nachrichten vom Mobilteil abhören
+
+57
+
+Nachrichten von einem anderen Telefonanschluss aus abhören
+
+57
+
+Nachrichten löschen
+
+59
+
+Nachrichten an der Basisstation löschen
+
+59
+
+Nachrichten vom Mobilteil aus löschen
+
+60
+
+Mithören
+
+61
+
+An der Basisstation mithören
+
+61
+
+Am Mobilteil mithören
+
+61
+
+4
+
+Anruf nach Mithören entgegennehmen
+
+61
+
+Weitere Einstellungen im Telefon-Menü
+
+62
+
+Menü „Audio“
+
+62
+
+Tonruf
+
+62
+
+Hinweistöne
+
+63
+
+Menü „Einstellungen“, Untermenü „Mobilteil“
+
+63
+
+Direktruf
+
+63
+
+Basis auswählen
+
+64
+
+Display
+
+64
+
+Sprache
+
+65
+
+Direktannahme
+
+65
+
+Mobilteil anmelden
+
+65
+
+Mobilteil abmelden
+
+66
+
+Rücksetzen
+
+67
+
+Menü „Einstellungen“, Untermenü „Basis“
+
+67
+
+Tonruf
+
+67
+
+Mobilteil-Priorität
+
+68
+
+Wahlverfahren
+
+69
+
+Flash-Zeit
+
+69
+
+System-PIN ändern
+
+70
+
+Amtskennziffer
+
+70
+
+ECO Mode
+
+71
+
+Rücksetzen
+
+71
+
+Datum und Zeit einstellen
+
+72
+
+Alarm
+
+73
+
+Telefonbuch
+
+74
+
+5
+
+Neuer Eintrag
+
+74
+
+Telefonbucheintrag ändern
+
+75
+
+Telefonbucheintrag ansehen
+
+75
+
+Telefonbucheinträge kopieren
+
+75
+
+Kopieren
+
+76
+
+Alle kopieren
+
+76
+
+Telefonbucheinträge löschen
+
+76
+
+Eintrag löschen
+
+76
+
+Alle löschen
+
+77
+
+Telefonbuch-Speicher
+
+77
+
+Anrufgruppe ändern
+
+77
+
+Schnellwahl
+
+78
+
+Anrufen
+
+78
+
+Internes Telefonbuch
+
+79
+
+Verfügbare Zeichen
+
+80
+
+Wenn Störungen auftreten
+
+81
+
+Werkseinstellungen
+
+84
+
+Werkseinstellungen am Mobilteil
+
+84
+
+Werkseinstellungen an der Basisstation
+
+84
+
+Weitere Werkseinstellungen
+
+85
+
+Reinigung
+
+86
+
+Entsorgung
+
+86
+
+Verpackung
+
+86
+
+Gerät
+
+86
+
+Batterien
+
+86
+
+Technische Daten
+
+87
+
+6
+
+83877 DE Aldi N RC1 Content.fm Seite 7 Donnerstag, 7. August 2008 2:49 14
+
+Lieferumfang
+ACHTUNG!
+Lassen Sie kleine Kinder nicht mit Folie spielen.
+Es besteht Erstickungsgefahr!
+Entfernen Sie sämtliches Verpackungsmaterial, auch die
+Folien auf den Displays der Basisstation und der Mobilteile.
+Vergewissern Sie sich beim Auspacken, dass folgende
+Teile mitgeliefert wurden:
+
+1. 4 x Mobilteil
+
+5. Telefonkabel
+
+2. Basisstation
+
+6. 4 x NiMH-Akkublock
+
+3. Netzteil für die Basistation
+
+7. Bedienungsanleitung und
+Garantiedokumente (ohne Abb.)
+
+4. 3 xLadestation mit Netzteil
+
+7
+
+83877 DE Aldi N RC1 Content.fm Seite 8 Donnerstag, 7. August 2008 2:49 14
+
+Sicherheitshinweise
+Zu dieser Anleitung
+Lesen Sie vor Inbetriebnahme die Anleitung aufmerksam
+durch. Beachten Sie die Warnungen auf dem Gerät und in
+der Bedienungsanleitung.
+Bewahren Sie die Bedienungsanleitung immer in Reichweite auf. Wenn
+Sie das Gerät verkaufen oder weitergeben, händigen Sie unbedingt auch
+diese Anleitung und den Garantieschein aus.
+
+Elektrische Geräte nicht in Kinderhände
+Kinder erkennen nicht die Gefahren, die beim Umgang
+mit Elektrogeräten entstehen können. Lassen Sie Kinder
+deshalb niemals unbeaufsichtigt elektrische Geräte benutzen.
+Akkus können bei Verschlucken lebensgefährlich sein. Bewahren Sie deshalb das Mobilteil, Akkus oder Akkublock
+für Kleinkinder unerreichbar auf. Wurde ein Akku verschluckt, muss sofort medizinische Hilfe in Anspruch genommen werden.
+Halten Sie auch die Verpackungs- und Displayschutzfolien von Kindern fern. Es besteht Erstickungsgefahr.
+
+Explosionsgefährdete Bereiche
+Verwenden Sie das Mobilteil niemals in explosionsgefährdeter Umgebung, z. B. in einer Lackiererei, oder wenn in
+der Umgebung Gas austritt.
+
+Das Gerät sicher aufstellen
+Stellen Sie die Basisstation bzw. Ladestation auf eine feste, ebene Oberfläche.
+Stellen Sie die Basisstation bzw. Ladestation gegen Herunterfallen geschützt auf.
+
+8
+
+83877 DE Aldi N RC1 Content.fm Seite 9 Donnerstag, 7. August 2008 2:49 14
+
+Es dürfen keine direkten Wärmequellen (z. B. Heizungen)
+auf Basisstation, Ladestation und Mobilteil wirken.
+Es darf kein direktes Sonnenlicht auf die Geräte treffen.
+Der Kontakt mit Feuchtigkeit, Wasser oder Spritzwasser
+muss vermieden werden.
+Die Geräte sind ist nicht für die Benutzung in Räumen mit
+hoher Luftfeuchtigkeit geeignet (z. B. Badezimmer).
+Stellen Sie die Basisstation bzw. Ladestation nicht in unmittelbarer Nähe von anderen Elektrogeräten (z. B. Fernseher oder Mikrowellengerät) auf.
+Stellen Sie die Basisstation bzw. Ladestation nicht in unmittelbare Nähe von offenen Brandquellen (z. B. brennende Kerzen).
+Warten Sie mit dem Anschluss des Netzteils, wenn das Gerät von einem kalten in einen warmen Raum gebracht
+wird. Das dabei entstehende Kondenswasser kann das Gerät unter Umständen zerstören. Wenn das Gerät Zimmertemperatur erreicht hat, kann es gefahrlos in Betrieb genommen werden.
+
+Netzteil
+Ladestation und Basisstation haben unterschiedliche Netzteile. Achten Sie beim Anschluss darauf, dass Sie diese
+nicht vertauschen. Verwenden Sie nur die mitgelieferten
+Netzteile. Die Netzteile dürfen nur in trockenen Räumen
+verwendet werden.
+
+Netzanschluss zugänglich lassen
+Schließen Sie die Basisstation bzw. Ladestation nur an eine
+gut erreichbare Steckdose (230 V ~ 50 Hz) an, die sich in
+der Nähe des Aufstellortes befindet. Lassen Sie die Steckdose freizugänglich, damit der Stecker ungehindert abgezogen werden kann.
+
+9
+
+83877 DE Aldi N RC1 Content.fm Seite 10 Donnerstag, 7. August 2008 2:49 14
+
+Ziehen Sie das Netzkabel stets am Stecker aus der Steckdose, ziehen Sie nicht am Kabel.
+Knicken oder quetschen Sie das Netzkabel nicht.
+Stellen Sie das Mobilteil nie ohne Batteriefachdeckel in die
+Basisstation oder Ladestation.
+
+Gewitter/Nichtgebrauch
+Bei längerer Abwesenheit oder bei Gewitter ziehen Sie die
+Netzadapter aus der Steckdose und das Telefonkabel von
+der Basisstation ab.
+Nehmen Sie bei längerem Nichtgebrauch auch unbedingt den Akku aus dem Mobilteil, um ein Auslaufen zu
+vermeiden. Ein ausgelaufener Akku kann das Mobilteil
+beschädigen.
+
+Sicher mit Akkus umgehen
+Für das Mobilteil benötigen Sie einen Akkublock. Beachten Sie hierzu folgende Hinweise:
+- Halten Sie Akkus von Kindern fern.
+- Werfen Sie Akkus nicht ins Feuer, schließen Sie sie
+nicht kurz und nehmen Sie sie nicht auseinander.
+- Beachten Sie beim Einlegen des Akkublocks die Polarität (+/-).
+- Wenn Sie das Gerät längere Zeit nicht verwenden,
+nehmen Sie den Akkublock heraus.
+- Entfernen Sie erschöpfte Akkus umgehend aus dem
+Gerät! Es besteht erhöhte Auslaufgefahr!
+- Setzen Sie Akkus niemals übermäßiger Wärme, wie direkter Sonneneinstrahlung, Feuer oder dergleichen
+aus. Legen Sie das Gerät z. B. nicht auf Heizkörpern ab!
+Es besteht erhöhte Auslaufgefahr!
+
+10
+
+83877 DE Aldi N RC1 Content.fm Seite 11 Donnerstag, 7. August 2008 2:49 14
+
+- Nehmen Sie einen ausgelaufene Akku sofort aus dem
+Gerät. Reinigen Sie die Kontakte, bevor Sie einen
+neuen Akku einlegen. Es besteht Verätzungsgefahr
+durch Batteriesäure!
+- Sollte Batteriesäure ausgelaufen sein, vermeiden Sie
+unbedingt den Kontakt mit Haut, Augen und Schleimhäuten! Ausgelaufene Batterieflüssigkeit kann Hautausschlag verursachen. Falls die Säure doch mit Haut
+in Kontakt gekommen ist, spülen Sie die betroffenen
+Stellen sofort mit reichlich klarem Wasser und suchen
+Sie umgehend einen Arzt auf.
+
+Niemals selbst reparieren
+Ziehen Sie bei Beschädigungen der Netzadapter, der Anschlussleitungen oder der Basisstation bzw. Ladestation
+sofort den Netzadapter aus der Steckdose.
+Versuchen Sie auf keinen Fall, die Geräte selber zu öffnen
+und/oder zu reparieren. Es besteht die Gefahr eines elektrischen Schlags. Wenden Sie sich im Störungsfall an das
+Medion Service Center oder eine andere geeignete Fachwerkstatt.
+Wenn die Anschlussleitung dieses Geräts beschädigt
+wird, muss der Netzadapter verschrottet und durch einen
+Netzadapter des gleichen Typs ersetzt werden, um Gefährdungen zu vermeiden. Wenden Sie sich in diesem Fall
+an das Medion Service Center.
+
+11
+
+83877 DE Aldi N RC1 Content.fm Seite 12 Donnerstag, 7. August 2008 2:49 14
+
+Was ist DECT?
+DECT (Digital European Cordless Telecommunication) ist
+der Standard für schnurlose digitale Telefone und schnurlose Telekommunikationsanlagen, der von der europäischen Standardisierungsbehörde ETSI (Europäisches Institut für Telekommunikationsnormen) definiert wurde.
+Heutzutage ist DECT hauptsächlich für Schnurlostelefone
+im Privatbereich in Gebrauch, obwohl DECT sehr viel
+mehr kann.
+
+Geschichte
+Im Jahre 1988 stand das neugegründete European Telecommunications Standards Institute (ETSI) vor der Aufgabe, einen europäischen Standard für digitale Schnurlostelefone zu definieren. Es gab bereits einen britischen
+(CT2) und einen schwedischen Standard (CT3), doch die
+ETSI entschied sich zur Schaffung eines komplett neuen
+Standards, der viel weiter gehen sollte. Dies war die Geburtsstunde von DECT.
+Im Juni 1991 gingen die wichtigsten Teile des Standards in
+die Phase der öffentlichen Kommentierung und bereits
+1992 gab es die ersten DECT-Geräte im Handel.
+Einen weiteren Schub bekam DECT 1994 durch die Definition des Generic Access Profil (GAP), das es ermöglichte,
+dass Geräte verschiedener Hersteller miteinander kombiniert werden konnten. Heutzutage sind alle DECT-Geräte
+überwiegend GAP-kompatibel.
+Die Arbeit an DECT geht dabei immer weiter. Ständig werden neue Erweiterungen bei der ETSI definiert.
+
+12
+
+83877 DE Aldi N RC1 Content.fm Seite 13 Donnerstag, 7. August 2008 2:49 14
+
+DECT beschreibt ein Mobilfunksystem, dessen fester Teil
+aus einer oder mehreren Basisstationen besteht. Das Gegenüber hierzu ist die Mobilstation. Es ist möglich, mehrere Mobilstationen zu verwenden, also z. B. mehrere
+Schnurlostelefone innerhalb einer Wohnung oder eines
+Büros.
+Es ist auch möglich, mehrere Basisstationen in einem festen Mobilfunksystem zu verwenden, so dass eine größere Fläche (Gebäudekomplex) versorgt werden kann,
+oder mehrere Gespräche gleichzeitig geführt werden
+können. Die Basisstationen werden dann durch eine internes Steuermodul (Fixed Part Controller) gesteuert.
+
+Verbreitung
+DECT wurde als europäischer Standard für Schnurlostelefone definiert.
+Inzwischen hat sich die Welt geändert: Neben Sprache
+werden heutzutage auch zunehmend Daten übertragen,
+sowohl im Bürobereich als auch zu Hause.
+Gleichzeitig trat DECT aber auch seinen Siegeszug rund
+um die Welt an: Nicht nur in Europa, sondern auch auf
+anderen Kontinenten wurde DECT aufgrund seiner Universalität akzeptiert. Die Regulierungsbehörden von Australien, Hongkong, China und den USA (unter dem Namen PWT) standardisierten DECT für ihre Gebiete,
+teilweise in anderen Frequenzbereichen. Inzwischen sind
+DECT-Varianten in über 100 Ländern im Einsatz.
+
+13
+
+83877 DE Aldi N RC1 Content.fm Seite 14 Donnerstag, 7. August 2008 2:49 14
+
+Geräteübersicht
+Mobilteile
+Die Übersicht über die Bedienelemente des Mobilteils finden Sie auf der Innenseite des Umschlages.
+
+Ladestation
+1. Ladeschale
+2. Anschluss für das Netzadapterkabel
+3. Kabelhalter für Netzadapterkabel
+
+Basisstation mit Anrufbeantworter
+Anschlüsse auf der Rückseite
+1. Anschluss für das Telefonkabel
+(Westernstecker RJ11)
+2. Anschluss für das Netzadapterkabel
+3. Kabelhalter für Netzadapterkabel
+
+14
+
+83877 DE Aldi N RC1 Content.fm Seite 15 Donnerstag, 7. August 2008 2:49 14
+
+Vorderseite
+
+4. Anruf-Anzeige: Blinkt wenn das
+Telelfon klingelt
+5. SMS-Anzeige:
+Zeigt eingegangene SMS an
+6. Kontroll-Anzeige:
+Leuchtet, wenn das Gerät eingeschaltet ist
+7. Ladeschale
+8. Löschtaste:
+Löscht Nachrichten auf dem Anrufbeantworter
+9. Ein-/Aus-Schalter:
+Schaltet den Anrufbeantworter
+ein oder aus
+10.Sprungtaste rückwärts: Springt
+zur vorherigen Nachricht
+
+11.Lautstärke der Basisstation
+verringern
+12.Sprungtaste vorwärts: Springt
+zur nächsten Nachricht
+13.Stopp: Stopt die Wiedergabe
+14.Play: Startet die Wiedergabe von
+Nachrichten
+15.Lautstärke der Basisstation
+erhöhen
+16.Ruftaste (“Pagingtaste“):
+Löst Rufsignal am Mobilteil aus
+17.Display: Zeigt Informationen
+zum Anrufbeantworter an
+18.Lautsprecher
+
+15
+
+83877 DE Aldi N RC1 Content.fm Seite 16 Donnerstag, 7. August 2008 2:49 14
+
+Vorbereitung
+Aufstellen
+Stellen Sie die Basisstation auf eine ebene, feste Oberfläche.
+Einige aggressive Möbellacke können die Gummifüße
+der Basisstation angreifen. Stellen Sie die Basisstation
+ggfs. auf eine Unterlage.
+Stellen Sie die Basisstation in einer praktischen Arbeitshöhe und gegen Herunterfallen gesichert auf.
+Stellen Sie die Basisstation in der Nähe einer Steckdose
+und einer Telefonanschluss-Dose auf.
+Vermeiden Sie den Kontakt der Geräte mit Feuchtigkeit
+oder Flüssigkeiten.
+Stellen Sie die Basisstation nicht in unmittelbare Nähe
+anderer Elektrogeräte (z. B. Fernsehern).
+
+Akku in das Mobilteil einlegen
+Für das Mobilteil wird ein Nickel-Metallhydrid-Akkublock
+mitgeliefert.
+ACHTUNG!
+Benutzen Sie im Mobilteil nur einen Nickel-Metallhydrid-Akku
+des mitgelieferten Typs (NiMH).
+Die Garantie des Geräts erlischt, wenn Sie einen anderen Akku
+einlegen. Das Mobilteil könnte beschädigt werden.
+Schieben Sie den Batteriefachdeckel auf der Rückseite
+des Mobilteils nach unten ab.
+
+16
+
+83877 DE Aldi N RC1 Content.fm Seite 17 Donnerstag, 7. August 2008 2:49 14
+
+Legen Sie den Akkublock neben das Batteriefach und
+stecken Sie den Stecker in die Steckerbuchse. Achten
+Sie darauf, dass das rote Kabel sich auf der linken Seite
+und das schwarze Kabel auf der rechten Seite befindet.
+Setzen Sie den Akkublock wie im Batteriefach dargestellt richtig ein.
+Setzen Sie den Batteriefachdeckel wieder auf das Batteriefach und schieben Sie ihn zu.
+
+Netzteil an die Basisstation anschließen
+ACHTUNG!
+Verwenden Sie zum Anschluss des Basisteils nur den Netzadapter für die Basisstation, Modell Nr.: ITE G060060D31.
+Auf dem Netzteil befindet sich ein Typenschild mit den entsprechenden Angaben.
+Verbinden Sie den Stecker des Netzadapterkabels mit
+dem rechten Anschluss an der Basisstation.
+Sichern Sie den Stecker gegen Herausfallen, indem Sie
+das Kabel hinter der Kabelhalterung herführen.
+
+Stecken Sie den Netzstecker des Netzadapters in eine
+leicht zugängliche Netzsteckdose.
+Der Anrufbeantworter schaltet sich ein.
+
+17
+
+83877 DE Aldi N RC1 Content.fm Seite 18 Donnerstag, 7. August 2008 2:49 14
+
+Netzteil an die Ladestation anschließen
+ACHTUNG!
+Verwenden Sie zum Anschluss des Basisteils nur den Netzadapter für die Basisstation, Modell Nr.: ITE G060030D22.
+Auf dem Netzteil befindet sich ein Typenschild mit den entsprechenden Angaben.
+Verbinden Sie den Stecker des Netzadapterkabels mit
+dem Anschluss der Ladestation.
+Sichern Sie den Stecker gegen Herausfallen, indem Sie
+das Kabel hinter der Kabelhalterung herführen.
+
+Stecken Sie den
+Netzstecker des Netzadapters in eine leicht zugängliche Netzsteckdose.
+
+18
+
+83877 DE Aldi N RC1 Content.fm Seite 19 Donnerstag, 7. August 2008 2:49 14
+
+Akku laden
+ACHTUNG!
+Schließen Sie die Basisstation erst ans Telefonnetz an, wenn das
+Mobilteil vollständig aufgeladen ist. Ansonsten erreicht der Akku
+nicht seine volle Leistung.
+Die Ladezeit beträgt ca.14 Stunden.
+Unterbrechen Sie den Ladevorgang nicht, da sonst die Leistung
+des Akkus dauerhaft verringert werden kann.
+Stellen Sie das Mobilteil nie ohne Batteriefachdeckel in die Basisbzw. Ladestation.
+Sie können das Mobilteil ständig in der Basisbzw. Ladestation belassen. So sichern Sie den
+maximalen Ladezustand.
+Die Leistung des Akkus reicht für 10 Stunden Gespräch oder 100 Stunden Bereitschaftsbetrieb
+aus. Anschließend muss der Akku neu aufgeladen werden.
+
+Akku in der Basisstation laden
+Während der Akku aufgeladen wird, können Sie
+mit dem Mobilteil noch nicht telefonieren. Schließen Sie die Basisstation deshalb erst nach dem
+vollständigen Aufladen des Mobilteils an das Telefonnetz an.
+Setzen Sie das Mobilteil in die Ladeschale der Basisstation und laden Sie den Akku.
+Ein Piepton signalisiert, dass das Mobilteil richtig in der
+Schale sitzt.
+
+19
+
+83877 DE Aldi N RC1 Content.fm Seite 20 Donnerstag, 7. August 2008 2:49 14
+
+Im Display erscheint oben rechts das Batteriesymbol,
+wenn der Akku geladen wird.
+
+Akku in der Ladestation laden
+Während der Akku aufgeladen wird, können Sie
+mit dem Mobilteil noch nicht telefonieren.
+Setzen Sie das Mobilteil in die Ladestation und laden
+Sie den Akku.
+Ein Piepton signalisiert, dass das Mobilteil richtig in der
+Schale sitzt.
+
+20
+
+83877 DE Aldi N RC1 Content.fm Seite 21 Donnerstag, 7. August 2008 2:49 14
+
+Wenn oben rechts im Display das Batteriesymbol erscheint, wird der Akku geladen.
+Nach Abschluss des Ladevorgangs erkennt die Basisstation das Mobilteil.
+Falls die Basisstation das Mobilteil nicht automatisch erkennen sollte, können Sie es auch manuell an der Basisstation anmelden, siehe “Mobilteil anmelden” auf
+Seite 67.
+
+Basisstation an das Telefonnetz anschließen
+ACHTUNG!
+Schließen Sie die Basisstation erst ans Telefonnetz an, wenn das
+Mobilteil vollständig aufgeladen ist. Ansonsten erreicht der Akku
+nicht seine volle Leistung.
+Stecken Sie den Western-Stecker des mitgelieferten Telefonkabels in die linke Buchse auf der Rückseite der
+Basisstation.
+
+Stecken Sie den anderen Stecker des Telefonkabels in
+die Telefonsteckdose in der Wand.
+
+21
+
+83877 DE Aldi N RC1 Content.fm Seite 22 Donnerstag, 7. August 2008 2:49 14
+
+Das Display
+Grunddisplay
+Im Auslieferungszustand stellt sich das Display folgendermaßen dar:
+
+22
+
+83877 DE Aldi N RC1 Content.fm Seite 23 Donnerstag, 7. August 2008 2:49 14
+
+Displaysprache
+Im Auslieferungszustand ist die Displaysprache deutsch.
+Sie können die Displaysprache auch auf Englisch und Türkisch einstellen; siehe Seite 67.
+
+Akkuanzeige
+Das Symbol für den Akku ist in fünf Felder aufgeteilt. Die
+Füllungsfarbe zeigt den jeweiligen Füllungszustand des
+Akkus an (voll, 3/4, 1/2, 1/4 und leer).
+Wenn der Akku leer oder fast leer ist, erscheint das Akkusymbol (1/4, oder leer) und das Mobilteil muss in die Basisstation gestellt werden, damit der Akku geladen werden kann.
+
+23
+
+83877 DE Aldi N RC1 Content.fm Seite 24 Donnerstag, 7. August 2008 2:49 14
+
+Weitere Anzeigen im Display
+Folgende weitere grafische Anzeigen sind möglich.
+
+Aus, wenn das Mobilteil außer Reichweite oder nicht angemeldet ist. Blinkt bei geringer Reichweite.
+Neue SMS. Blinkt, wenn das Postfach voll ist. Aus, wenn
+alle SMS gelesen wurden.
+Zeigt an, wenn ein Anruf verpasst wurde. Aus, wenn der
+letzte verpasste Anrufer gelesen wurde.
+Neue Nachricht auf dem Anrufbeantworter. Blinkt, wenn
+der Speicher voll ist. Aus bei keiner neuen Nachricht.
+An, wenn die Freisprecheinrichtung benutzt wird.
+An, wenn der Alarm aktiviert ist. Blinkt bei Alarm. Aus,
+wenn der Alarm nicht aktiviert ist.
+An, wenn der Anrufer abgeschaltet wurde.
+Tastensperre ist aktiviert.
+
+24
+
+83877 DE Aldi N RC1 Content.fm Seite 25 Donnerstag, 7. August 2008 2:49 14
+
+Telefonieren
+Grundfunktionen
+Mobilteil ein- und ausschalten
+Wenn das Mobilteil nicht in der Basisstation steht, können
+Sie es ausschalten.
+Um das Mobilteil auszuschalten, halten Sie die Hörertaste für einige Sekunden gedrückt. Im Display erscheint „Mobilteil aus“.
+Bestätigen Sie mit der linken Steuertaste mit „Ja“. Das
+Mobilteil ist nun abgeschaltet.
+Um das Mobilteil wieder einzuschalten, drücken Sie
+die Hörertaste kurz. Nach kurzer Zeit ist die Standardanzeige wieder im Display zu sehen.
+Sie können das Mobilteil auch einschalten, indem Sie es
+zurück in die Basisstation stellen.
+
+Anruf entgegennehmen
+Wenn ein Anruf eingeht, hören Sie den Rufton. Im Display
+wird das Hörersymbol angezeigt und die Rufnummer des
+Anrufers oder die Kenn-Nummer eines anderen angeschlossenen Mobilteils.
+HINWEIS: Diese Rufnummernanzeige kann nach
+Netzanbieter und Art des Telefonanschlusses abweichen oder nicht verfügbar sein.
+Um einen Anruf entgegen zu nehmen, wenn das Mobilteil in der Ladeschale steht, gehen Sie wie folgt vor:
+Heben Sie das Mobilteil aus der Ladeschale oder drücken Sie die Lautsprecherstaste, um das Telefon in den
+Freisprech-Modus zu schalten.
+
+25
+
+83877 DE Aldi N RC1 Content.fm Seite 26 Donnerstag, 7. August 2008 2:49 14
+
+Um den Anruf entgegen zu nehmen, wenn das Mobilteil nicht in der Ladeschale steht, drücken Sie die Gesprächstaste.
+HINWEIS: Sie können das Mobilteil so einstellen,
+dass Sie zum Entgegennehmen eines Anrufs immer die Gesprächstaste drücken müssen (siehe
+Seite 67).
+
+Hörerlautstärke ändern
+Drücken Sie während eines Gesprächs die Pfeiltaste
+oder
+. Im Display erscheint die Anzeige
+„Hörerlautstärke“ mit fünf Stufen.
+Wählen Sie mit den Pfeiltasten
+fünf Stufen.
+
+oder
+
+eine der
+
+Nach Beenden des Gesprächs wird die eingestellte
+Stufe übernommen.
+
+Gespräch beenden
+Um einen Anruf zu beenden, drücken Sie die HörerTaste oder stellen das Mobilteil in die Ladeschale.
+Nachdem Sie aufgelegt haben, wird die Dauer des letzten
+Gesprächs angezeigt. Nach kurzer Zeit wechselt das Display zur Normalanzeige.
+
+Internen Anruf tätigen
+Sie können von Ihrem Mobilteil alle anderen Mobilteile
+derselben Basisstation anrufen, ohne Gebühren zu bezahlen.
+Drücken Sie die linke Steuertaste für „Intern“.
+Im Display werden alle anderen Mobilteile, die an der Basisstation registriert sind, angezeigt.
+
+26
+
+83877 DE Aldi N RC1 Content.fm Seite 27 Donnerstag, 7. August 2008 2:49 14
+
+Wählen Sie das gewünschte Mobilteil mit den Tasten
+links
+oder rechts
+aus und drücken Sie die
+rechte Steuertaste „OK“.
+Das gewünschte Mobilteil wird jetzt gerufen.
+Um das Gespräch zu beenden, drücken Sie die Hörertaste.
+
+Externen Anruf tätigen
+Nehmen Sie das Mobilteil aus der Ladeschale.
+Geben Sie jetzt die gewünschte Rufnummer mit den
+Zifferntasten ein.
+Drücken Sie die Gesprächstaste. Die Nummer wird gewählt.
+
+Aus dem Telefonbuch wählen
+Zur Einrichtung des Telefonbuchs siehe Seite 77.
+Öffnen Sie das Telefonbuch mit der linken Taste
+
+.
+
+Wählen Sie den gewünschten Teilnehmer aus und bestätigen Sie mit „Hörertaste“.
+
+Schnellwahlwahl
+Für Teilnehmer, die im Telefonbuch gespeichert sind,
+können Sie eine Kurzwahlnummer vergeben (Zifferntasten, 2 bis 9). Vgl. Sie dazu “Schnellwahl” auf Seite 81.
+Halten Sie die entsprechende Zifferntaste etwas länger
+gedrückt, um die Rufnummer zu wählen.
+
+27
+
+83877 DE Aldi N RC1 Content.fm Seite 28 Donnerstag, 7. August 2008 2:49 14
+
+Weitere Funktionen
+Freisprechmodus (Frei sprechen)
+Im Freisprechmodus können Sie telefonieren, ohne das
+Mobilteil in der Hand halten zu müssen.
+Drücken Sie während des Gesprächs die Freisprechtaste. Im Display erscheint das Freisprechsymbol.
+Sie können jetzt über den Lautsprecher am Mobilteil telefonieren.
+Um die Lautstärke anzupassen, drücken Sie im Freisprechmodus die Pfeiltaste
+oder
+. Im Display
+erscheint die Anzeige „Hörerlautstärke“ mit fünf Stufen.
+Wählen Sie mit den Pfeiltasten
+oder
+eine der
+fünf Stufen. Die jeweils eingestellte Stufe ist markiert
+und wird übernommen.
+Um wieder in den normalen Telefonmodus zu
+wechseln, drücken Sie erneut die Freisprechtaste. Das
+Freisprechsymbol erlischt und der Lautsprecher wird
+ausgeschaltet.
+
+Rechte-Taste
+Die rechte Taste
+
+öffnet ein Menü mit drei Einträgen:
+
+„Anrufliste“ Wählen Sie „Anruf“ mit den Pfeiltasten
+oder
+an und drücken Sie die rechte Steuertaste „OK“. Wenn kein Anruf gespeichert ist, erscheint
+im Display „Liste leer“. Sie können dann unter „Einstellungen“festlegen, ob „Alle Anrufe“ gespeichert
+werden sollen oder nur unbeantwortete Anrufe. Sie
+können auch den Anrufl.-Alarm „Ein“ oder „Aus“
+schalten. Bei eingeschaltetem Anruflisten-Alarm erklingt alle 60 Sekunden ein Piepton, wenn ein Anruf in
+
+28
+
+83877 DE Aldi N RC1 Content.fm Seite 29 Donnerstag, 7. August 2008 2:49 14
+
+Abwesenheit eingegangen ist. Bestätigen Sie danach
+durch drücken der Taste „OK“
+„Nachrichtenliste“ Wählen Sie „Nachr“ mit den Pfeiltasten
+oder
+an und drücken Sie die rechte
+Steuertaste „OK“. Sie können jetzt alle neuen und alten Nachrichten abhören.
+„SMS“ Wählen Sie „SMS“ mit den Pfeiltasten
+oder
+an und drücken Sie die rechte Steuertaste „OK“.
+Wenn keine SMS gespeichert wurde erscheint im Display „Keine SMS“.
+
+Rückfragetaste
+Die R-Taste hat nur eine Funktion, wenn Ihr Telefon an
+eine Telefonanlage angeschlossen ist.
+Die R-Taste unterbricht die Leitungsverbindung für einige
+Millisekunden. Die Länge der Unterbrechung wird mit
+der Funktion Flash-Zeit (siehe Seite 72) eingestellt. Durch
+diese Unterbrechung wird der Vermittlungsstelle signalisiert, dass es sich bei den folgenden Tönen im Mehrfrequenzwahl-Verfahren um Kommandos an die Vermittlungsstelle handelt.
+Typische Anwendungen für die R-Taste sind z. B. Anklopfen, Rückfragen, Makeln, Dreierkonferenz mit mindestens zwei externen Teilnehmern.
+
+29
+
+83877 DE Aldi N RC1 Content.fm Seite 30 Donnerstag, 7. August 2008 2:49 14
+
+Bitte beachten Sie jedoch, dass diese Funktionen
+von Ihrem Telefonanbieter (nicht vom Telefon)
+realisiert werden. Erkundigen Sie sich bei Ihrem
+Netzbetreiber, welche Funktionen Sie mit der RTaste ausführen können. Fragen Sie auch nach
+den genauen Tastenkombinationen für die verschiedenen R-Tasten-Funktionen (z. B.: „Anklopfenden annehmen“, „Anklopfenden abweisen“,
+„Zwischen zwei Verbindungen hin- und herschalten“ etc).
+
+INFO-Taste
+Drücken Sie die INFO-Taste, um die zehn wichtigsten Telefonnummern aufzurufen, auf die alle Mobilteile zugreifen können.
+
+Tastensperre
+Um ein versehentliches Wählen zu verhindern, wenn Sie
+das Mobilteil bei sich tragen, können Sie die Tastensperre
+einschalten. Dies ist nicht während eines Gesprächs möglich.
+Halten Sie die Raute-Taste gedrückt, bis „Tastensperre“ im Display angezeigt wird. Es erscheint das
+Symbol für die Tastensperre.
+Wenn die Tastensperre eingeschaltet ist, können
+Sie die Notrufnummern 110 und 112 weiterhin
+nutzen.
+Auch können Sie weiterhin Anrufe entgegennehmen.
+Um die Tastensperre wieder auszuschalten, halten Sie
+wiederum die Raute-Taste gedrückt, bis „Tasten-
+
+30
+
+83877 DE Aldi N RC1 Content.fm Seite 31 Donnerstag, 7. August 2008 2:49 14
+
+sperre ausgeschaltet“ im Display erscheint und das
+Symbol für die Tastensperre erlischt.
+
+Rufton ausschalten
+Um den Rufton auszuschalten, drücken und halten Sie
+die Sterntaste.
+Es ertönt ein Signal und im Display erscheint die Meldung
+„Tonruf aus“.
+Um den Rufton wieder einzuschalten, drücken und
+halten Sie die Sterntaste.
+Es ertönt ein Signal und im Display erscheint die Meldung
+„Tonruf ein“.
+
+Telefon stummschalten
+Um das Telefon Stummzuschalten, drücken Sie während eines Gesprächs die linke Pfeiltaste
+.
+Im Display wird „Mikrofon aus“ angezeigt. Der Gesprächspartner kann Sie jetzt nicht mehr hören.
+Um die Stummschaltung zu beenden, drücken Sie
+wieder die linke Pfeiltaste
+.
+
+Rufnummernanzeige
+Sie können im Display die Rufnummer eines Anrufers sehen, wenn Sie selbst bei der Telekom die CLIP-Funktion
+beauftragt haben und der Anrufer ebenfalls über einen
+Telefonanschluss mit CLIP-Funktion verfügt und er seine
+Rufnummer nicht unterdrückt.
+Abhängig von Ihrem Netzbetreiber können Sie ebenfalls
+Ihre Telefonnummer unterdrücken. Falls Sie dies wünschen, erkundigen Sie sich bitte bei Ihrem Netzbetreiber,
+wie Sie dazu verfahren müssen.
+
+31
+
+83877 DE Aldi N RC1 Content.fm Seite 32 Donnerstag, 7. August 2008 2:49 14
+
+Anrufliste
+Anrufe werden nur dann in die Anrufliste gespeichert,
+- wenn der Anrufbeantworter nicht aufnimmt;
+- wenn das Telefon des Anrufers über das Leistungsmerkmal CLIP verfügt (die Nummer des
+Anrufers im Display zu sehen ist).
+Im Display erscheint das Symbol für entgangene Anrufe,
+wenn neue Einträge in der Anrufliste gespeichert sind.
+Es können bis zu 40 Einträge in die Anrufliste aufgenommen werden.
+Drücken Sie im Ruhezustand die Pfeiltaste
+
+Calls.
+
+Wenn keine Anrufe gespeichert sind, wird im Display „Liste leer“ angezeigt.
+Wenn neue Anrufe eingegangen sind, erhalten Sie über
+„Option“ folgende Möglichkeiten:
+- „Details“: Rufnummeranzeige, Zeitangabe und Datum werden angezeigt.
+- „Lösche“: Löscht den ausgewählten Eintrag aus der
+Anrufliste.
+- „Alle löschen“: Löscht alle Rufnummern der Anrufliste.
+- „Nummer anrufen“: Hier öffnen Sie mit der rechten
+Steuertaste „OK“und dann „Option“ drei Möglichkeiten, eine andere Nummer auszuwählen, und zwar:
+- aus dem Telefonbuch,
+- aus der Wahlwiederholung,
+- aus der Anrufliste.
+- „Einstellungen“: Anrufart, Anrufl.-Alarm können hier
+eingestellt werden.
+
+32
+
+83877 DE Aldi N RC1 Content.fm Seite 33 Donnerstag, 7. August 2008 2:49 14
+
+- „Nummer speichern“: Sie können die Rufnummer
+unter einem Namen im Telefonbuch speichern.
+- Wählen Sie die gewünschte Option und drücken Sie
+die rechte Steuertaste „OK“.
+
+Wahlwiederholung
+In der Wahlwiederholungs-Liste sind die letzten 20
+Rufnummern (mit maximal 24 Stellen) gespeichert, die
+Sie gewählt haben.
+Drücken Sie die Pfeiltaste
+
+auf.
+
+Im Display werden die letzten gewählten Rufnummern
+angezeigt. Wenn keine Rufnummern gespeichert sind,
+wird im Display „Liste leer“ angezeigt.
+Wählen Sie die gewünschte Rufnummer mit den Pfeiltasten
+oder
+.
+Um diese Rufnummer zu wählen, drücken Sie die Gesprächstaste.
+Wenn Sie mit der rechten Steuertaste „Option“ bestätigen, haben Sie noch weitere Möglichkeiten:
+- „Lösche“: löscht den ausgewählten Eintrag aus der
+Wahlwiederholungs-Liste.
+- „Alle löschen“: löscht alle Rufnummern der Wahlwiederholungs-Liste.
+- „Nummer anrufen“: Hier öffnen Sie mit der rechten
+Steuertaste „OK“und dann „Option“ drei Möglichkeiten, eine andere Nummer auszuwählen, und zwar:
+- aus dem Telefonbuch,
+- aus der Wahlwiederholung,
+- aus der Anrufliste.
+- „Nummer speichern“: Sie können die Rufnummer
+unter einem Namen im Telefonbuch speichern.
+
+33
+
+83877 DE Aldi N RC1 Content.fm Seite 34 Donnerstag, 7. August 2008 2:49 14
+
+Wählen Sie die gewünschte Option und drücken Sie
+die rechte Steuertaste „OK“.
+
+Mit mehreren Gesprächspartnern telefonieren
+HINWEIS: Die folgenden Funktionen sind nur verfügbar, wenn mindestens ein zusätzliches, GAPfähiges Mobilteil an der Basisstation angemeldet
+ist.
+
+Anrufe weiter vermitteln
+Sie können ein Gespräch entgegennehmen und danach
+an ein zusätzliches, GAP-fähiges Mobilteil derselben Basisstation weiter vermitteln.
+Drücken Sie während des Gesprächs die linke Steuertaste für „Intern“.
+Im Display werden „Intern-Anruf“ und die Nummern an
+Ihrer Basisstation angemeldeten Mobilteile angezeigt.
+Mit der linken
+oder der rechten
+Taste wählen
+Sie das gewünschte Mobilteil aus und bestätigen dann
+mit der rechten Steuertaste „OK“.
+Am angerufenen Mobilteil hören Sie jetzt den Rufton.
+Wenn die Person am anderen Mobilteil das Gespräch entgegen nimmt, können Sie mit dieser ein internes Gespräch führen.
+Im Display des eigenen Mobilteils haben Sie jetzt die Optionen „Konf.“ (für „Konferenz“) und „Makeln“.
+Um das Gespräch zu vermitteln, drücken Sie die HörerTaste oder stellen Ihr Mobilteil in die Ladeschale.
+Der Anrufer ist jetzt mit der Person am anderen Mobilteil
+verbunden.
+
+34
+
+83877 DE Aldi N RC1 Content.fm Seite 35 Donnerstag, 7. August 2008 2:49 14
+
+Makeln und Telefonkonferenz führen
+Wenn ein zweites Mobilteil das Gespräch wie oben beschrieben entgegennimmt, können Sie zwischen den drei
+Teilnehmern makeln oder eine Telefonkonferenz führen.
+
+Makeln
+Drücken Sie die rechte Steuertaste für „Makeln“. Sie
+wechseln damit zwischen der Verbindung mit dem Anrufer und der Person am anderen Mobilteil.
+
+Telefonkonferenz
+Eine Telefonkonferenz ist zwischen einem externen und
+zwei internen Teilnehmern möglich.
+Drücken Sie die linke Steuertaste für „Konf.“. Jetzt sind
+alle Teilnehmer in das Gespräch einbezogen.
+Im Display wechselt die Anzeige von „Konf.“ zu „Einzel“. Wenn Sie wiederum die linke Steuertaste drücken,
+führen Sie wieder ein Einzelgespräch mit dem ursprünglichen Gesprächspartner.
+Jeder einzelne Teilnehmer kann sich von der Telefonkonferenz trennen, indem er die Hörertaste drückt (auflegt). Die anderen Gesprächsteilnehmer können dann
+die Telefonkonferenz weiter führen.
+Derjenige Teilnehmer, der die Konferenz begonnen
+hat, kann die Konferenz beenden, indem er die Hörertaste drückt (auflegt). Die Verbindungen zu allen Partnern werden dann beendet.
+
+Mobilteil rufen
+Wenn Sie das Mobilteil von der Basisstation rufen oder
+es suchen wollen, drücken Sie die Ruftaste an der Basisstation.
+
+35
+
+83877 DE Aldi N RC1 Content.fm Seite 36 Donnerstag, 7. August 2008 2:49 14
+
+An den Mobilteilen wird ein Rufsignal ausgelöst und es
+erscheint die Anzeige „Paging“.
+Stoppen Sie das Rufsignal mit der Hörertaste.
+
+36
+
+83877 DE Aldi N RC1 Content.fm Seite 37 Donnerstag, 7. August 2008 2:49 14
+
+Telefon über Menü einstellen
+Sie können im Menü verschiedene Funktionen des Telefons aufrufen sowie Einstellungen vornehmen.
+
+Hauptmenü aufrufen
+Im Grunddisplay des Telefons steht unten rechts der Eintrag „Menü“. Wenn dieser Eintrag nicht angezeigt wird,
+drücken Sie so oft die linke Steuertaste („Zurück“), bis
+„Menü“ erscheint.
+Um das Hauptmenü zu öffnen, drücken Sie die rechte
+Steuertaste.
+Das Hauptmenü enthält vier Einträge mit grafischen Symbolen. Die Menüpunkte sind folgendermaßen verteilt:
+
+SMS: Seite 39
+Anrufbeantworter:
+Seite 51
+Audio: Seite 64
+Einstellungen: Seite 65
+(Mobilteil) und (Basis)
+Seite 69
+
+37
+
+83877 DE Aldi N RC1 Content.fm Seite 38 Donnerstag, 7. August 2008 2:49 14
+
+Im Menü navigieren
+Menüpunkt anwählen
+Benutzen Sie die Pfeiltasten, um einen Menüpunkt anzuwählen.
+Öffnen Sie den Menüpunkt mit der rechten Steuertaste („OK“).
+Die meisten Menüpunkte enthalten weitere Untermenüs
+in Listenform.
+Benutzen Sie die Pfeiltasten
+oder
+Menüpunkt in einer Liste anzuwählen.
+
+, um einen
+
+Wenn am unteren Menürand ein oder zwei kleine Pfeile
+zu sehen sind, enthält das Menü noch weitere Punkte, die
+mit den Pfeiltasten
+oder
+angesteuert werden
+können.
+Mit der linken Steuertaste („Zurück“) kommen Sie jeweils einen Schritt oder eine Ebene zurück.
+
+Steuertasten
+Links und rechts in der untersten Displayzeile erscheinen
+wechselnde Befehle, die vom aktuellen Menü oder der
+aktuellen Bearbeitung abhängig sind.
+Mit den Steuertasten aktivieren Sie den jeweils sichtbaren Befehl.
+
+ln den Telefonmodus wechseln
+Um direkt in den normalen Telefonmodus zurück zu
+gelangen, drücken Sie die Hörertaste.
+
+38
+
+83877 DE Aldi N RC1 Content.fm Seite 39 Donnerstag, 7. August 2008 2:49 14
+
+SMS nutzen
+Sie können mit Ihrem Telefon kurze Textnachrichten
+(„SMS“ für „Short Message Service“) lesen, schreiben,
+speichern, versenden und editieren.
+SMS werden über SMS-Centren ausgetauscht. Um SMS
+senden und empfangen zu können, benötigen Sie die
+Rufnummer des SMS-Centers Ihres Netzanbieters.
+
+Voraussetzungen
+Damit Sie SMS senden und empfangen können, müssen
+folgende Voraussetzungen erfüllt sein:
+- An Ihrem Telefonanschluss müssen die Leistungsmerkmale „Rufnummernanzeige“ (CLIP) und „Rufübermittlung“ von Ihrem Netzbetreiber freigeschaltet sein.
+- Um eine SMS zu senden, muss die Rufnummer des
+SMS-Centers Ihres Netzbetreibers in Ihrem Mobiltelefon eingetragen sein.
+- Um eine SMS empfangen zu können, müssen Sie Ihre
+Rufnummer beim SMS-Center Ihres Netzbetreibers registrieren lassen. Diese Anmeldung geschieht mit einer kostenfreien SMS.
+Die notwendigen Verfahren und Informationen unterscheiden sich je nach Netzbetreiber.
+Erkundigen Sie sich bitte bei Ihrem Netzbetreiber, wie
+Sie Ihr Telefon für das Senden und Empfangen von
+SMS anmelden und ob Sie besondere Einstellungen
+vornehmen müssen.
+Wir empfehlen Ihnen, den Netzbetreiber auch nach
+folgenden Informationen zu fragen:
+
+39
+
+83877 DE Aldi N RC1 Content.fm Seite 40 Donnerstag, 7. August 2008 2:49 14
+
+- welche Kosten für das Senden und Empfangen von
+SMS anfallen;
+- zu welchen Mobilfunkbetreibern Sie SMS senden können;
+- von welchen Mobilfunkbetreibern Sie SMS
+empfangen können;
+- welche Funktionen Ihr Netzanbieter beim SMS-Service
+bietet.
+
+Anmeldung bei der Telekom
+Für den Netzbetreiber Telekom melden Sie sich folgendermaßen an:
+Schreiben Sie eine SMS mit dem Text „ANMELD“;
+Senden Sie diese SMS an die Rufnummer: 8888.
+Wenn Sie sich von diesem Netzbetreiber abmelden möchten, schreiben Sie ein Mail mit dem Text „ABMELD“.
+(Die Kosten für SMS erfragen Sie bitte bei Ihrem Netzbetreiber.)
+
+Menü „SMS“
+Wählen Sie im Hauptmenü den Punkt „SMS“ und öffnen Sie ihn mit der rechten Steuertaste „OK“.
+Es erscheinen folgende Optionen:
+- „SMS schreiben“
+- „Eingangsliste“
+- „Ausgangsliste“
+- „Vorlage“
+- „Einstellungen“
+Wählen Sie die gewünschte Option mit einer Pfeiltaste und drücken Sie die rechte Steuertaste „OK“.
+
+40
+
+83877 DE Aldi N RC1 Content.fm Seite 41 Donnerstag, 7. August 2008 2:49 14
+
+SMS schreiben
+Wählen Sie im Menü „SMS“ die Option „SMS schreiben“ und drücken Sie die rechte Steuertaste „OK“.
+Eine SMS kann maximal 160 Zeichen lang sein.
+
+SMS mit den Zifferntasten schreiben
+Schreiben Sie Ihre SMS mit den Zifferntasten.
+Jede Zifferntaste ist zur Eingabe mehrerer Buchstaben
+vorgesehen.
+In der untersten Zeile des Displays werden die bei der gedrückten Taste verfügbaren Zeichen angezeigt. Dies sind
+wesentlich mehr Zeichen, als auf den Tasten aufgedruckt
+sind (Sonderzeichen, Satzzeichen).
+Eine Tabelle der verfübaren Zeichen pro Zifferntaste finden Sie auf Seite 83.
+In der obersten Zeile werden die verwendeten Zeichen
+gezählt (z. B. „145“: 15 Zeichen sind verbraucht von
+160).
+Um zwischen den einzelnen Buchstaben zu wechseln,
+drücken Sie die Taste mehrfach.
+Wenn der gewünschte Buchstabe markiert ist, drücken
+Sie die nächste Taste oder warten Sie kurze Zeit.
+Nach etwa zwei Sekunden erlischt die Anzeige der Zeichen.
+Um den nächsten Buchstaben zu schreiben, drücken
+Sie jetzt die nächste Taste.
+Wenn Sie zweimal hinter einander dieselbe Taste drücken müssen (z. B. bei „Freunde“ die Taste „3“ für „d“
+und „e“), gehen Sie wie folgt vor:
+
+41
+
+83877 DE Aldi N RC1 Content.fm Seite 42 Donnerstag, 7. August 2008 2:49 14
+
+Geben Sie den ersten Buchstaben ein.
+Warten Sie, bis die Anzeige der Buchstaben in der untersten Displayanzeige erlischt.
+Drücken Sie dann erneut die Taste. Der nächste Buchstabe wird jetzt an den Text angehängt.
+Wenn Sie ein Leerzeichen eingeben wollen, drücken
+Sie die „1“.
+Um zwischen Groß- und Kleinschreibung zu
+wechseln, drücken Sie die Rautetaste einmal (die Anzeige wechselt von „abc“ zu „ABC“).
+Um Ziffern einzugeben, drücken Sie die Zifferntasten
+solange, bis die gewünschte Ziffer erscheint.
+Um den Buchstaben links von der Einfügemarke zu löschen, drücken Sie die linke Steuertaste „Lösche“.
+Um den gesamten Text zu löschen, halten Sie die linke
+Steuertaste „Lösche“ gedrückt, bis die Anzeige des
+Textes erlischt.
+Mit den Tasten
+und
+bewegen Sie die Einfügemarke an eine andere Stelle des Texts;
+mit den Pfeiltasten
+oder
+. gehen Sie an den
+Textanfang bzw. das Textende.
+
+42
+
+83877 DE Aldi N RC1 Content.fm Seite 43 Donnerstag, 7. August 2008 2:49 14
+
+Optionen für geschriebene SMS
+Wenn Sie die SMS geschrieben haben, stehen Ihnen
+folgende Optionen zur Verfügung:
+- „Senden“
+- „Speichern“
+- „Vorlage“
+Wählen Sie die gewünschte Option mit einer Pfeiltaste und drücken Sie die rechte Steuertaste „OK“.
+
+Senden an
+Wenn Sie eine SMS speichern möchten, müssen
+Sie das vor Eingabe der Rufnummer tun (s. nächster Abschnitt).
+Um die SMS zu versenden, geben Sie die Rufnummer
+des Empfängers ein.
+Unter „Option“ können Sie auch eine Rufnummer aus
+dem Telefonbuch, der Wahlwiederholung und der Anrufliste auswählen.
+Wählen Sie den Eintrag „Senden“ und drücken Sie die
+rechte Steuertaste „OK“.
+Während die SMS gesendet wird, wird „Sende
+SMS“ im Display angezeigt. Schlägt die Versendung fehl, erscheint „SMS-Sendefehler“. Der
+Grund kann u.a. Netzprobleme beim Empfangen
+oder Senden sein. Bei einer unbekannten oder nicht übermittelbaren Nummer kommt eine Rückmeldung des
+Netzbetreiber als SMS mit der Nachricht, konnte nicht zugestellt werden. Die Zielrufnummer war nicht erreichbar.
+
+43
+
+83877 DE Aldi N RC1 Content.fm Seite 44 Donnerstag, 7. August 2008 2:49 14
+
+Speichern
+Sie können eine SMS speichern, z. B., um sie später zu
+versenden.
+Sie können bis zu 30 SMS speichern. Eine gespeicherte
+SMS finden Sie im SMS-Menü, Punkt „SMS-Ausgangsliste“, unter dem Namen „Speich.“. Die gespeicherten
+SMS werden chronologisch mit laufenden Nummern abgelegt (z. B. „5/12“: fünfte von zwölf gespeicherten
+SMS).
+Hier können Sie die SMS mit der rechten Steuertaste
+(„Ändern“) öffnen und weiterbearbeiten.
+
+Vorlage auswählen
+Es sind vier Textvorlagen vorhanden. Durch Drücken der
+rechten Speichertaste wird die gewählte Vorlage automatische in die SMS eingesetzt.
+Sie können die Vorlagen auch nach Ihren Wünschen verändern; siehe Seite 48.
+
+SMS unterbrechen
+Wenn ein Anruf eingeht, während Sie eine SMS schreiben, wird diese SMS automatisch gespeichert. Nach dem
+Gespräch können Sie diese SMS weiter bearbeiten.
+
+44
+
+83877 DE Aldi N RC1 Content.fm Seite 45 Donnerstag, 7. August 2008 2:49 14
+
+Eingangsliste (SMS lesen)
+Eingegangene SMS lesen
+Eine eingegangene SMS wird am Mobilteil durch die Meldung „Neue SMS“ sowie mit einem Ton und einem Symbol im Display angezeigt.
+Wenn Sie die SMS lesen wollen, drücken Sie die rechte
+Taste
+. Wählen Sie im Display den Eintrag „SMS
+1Neu“ und drücken die rechte Steuertaste „OK“ und
+bestätigen Sie mit der rechten Steuertaste „Lesen“.
+Wenn die Nachricht zu lang für das Display ist, drücken Sie die Pfeiltaste Pfeiltasten
+, um den
+restlichen Text anzuzeigen.
+Wenn mehrere SMS eingegangen sind, erscheint die
+jüngste zuerst. Die anderen SMS werden im Eingangsverzeichnis abgelegt.
+Wenn Sie die SMS später lesen wollen, drücken Sie die
+linke Steuertaste „Zurück“. In diesem Fall wird im Display an Stelle des Datums und der Uhrzeit das Symbol
+für neue Nachricht angezeigt. Die neue Nachricht wird
+im Eingangsverzeichnis gespeichert.
+
+SMS im Eingangsverzeichnis
+Wählen Sie im Menü „SMS“ die Option „Eingangsliste“ und drücken Sie die rechte Steuertaste „OK“.
+Im Display werden alle empfangenen SMS nach Datum
+und Uhrzeit sortiert angezeigt.
+Wählen Sie die gewünschte SMS mit einer Pfeiltaste
+und drücken Sie die rechte Steuertaste „Lesen“.
+Der Text der markierten Nachricht wird jetzt angezeigt.
+
+45
+
+83877 DE Aldi N RC1 Content.fm Seite 46 Donnerstag, 7. August 2008 2:49 14
+
+SMS-Speicher
+Der SMS-Speicher kann 30 Nachrichten aufnehmen. Nachrichten im
+SMS-Speicher sind SMS und E-Mails im Eingangsverzeichnis und in der
+Ausgangsliste.
+Wenn der Speicher mit einer neu eingegangenen SMS gefüllt wird, erscheint die Nachricht „Speicher voll!“ im Display. Löschen Sie einige
+Nachrichten, um weitere SMS oder E-Mails bekommen bzw. speichern
+zu können.
+
+Optionen für gelesene Nachrichten
+Während die SMS im Display angezeigt wird, können Sie
+mit der rechten Steuertaste folgende Optionen aufrufen:
+- „Antworten“: Sie können eine Antwort an den Absender schicken, ohne dessen Rufnummer eingeben zu
+müssen.
+- „Weiterleiten“: Sie können die erhaltene Nachricht an
+eine andere Rufnummer senden.
+- „Nr.anrufen“: Öffnet die Rufnummer.
+- „Lösche“: Sie können die gewählte Nachricht löschen.
+- „Alle löschen“: Sie können alle Nachrichten im Eingangsverzeichnis löschen.
+- „Nummer auswählen“: Sie können den Absender der
+Nachricht direkt anrufen.
+- „Nummer speichern“: Sie können die Rufnummer
+des Absenders im Telefonbuch speichern.
+Um die Optionen aufzurufen, drücken Sie die rechte
+Steuertaste „Optionen“.
+
+46
+
+83877 DE Aldi N RC1 Content.fm Seite 47 Donnerstag, 7. August 2008 2:49 14
+
+Ausgangsliste
+Wählen Sie im Menü „SMS“ die Option „Ausgangsliste“ und drücken Sie die rechte Steuertaste „OK“.
+In der Ausgangsliste sind folgende SMS und E-Mails abgelegt:
+- Nachrichten, die gezielt gespeichert wurden (Status
+„Speich“);
+- Nachrichten, die gesendet wurden (Status „Ges“);
+- Nachrichten, die nicht gesendet werden konnten (Status „Fehl“).
+
+Gespeicherten Eintrag öffnen
+Sie sehen z. B. den Eintrag „Speich 1/8“.
+Wählen Sie mit den Pfeiltasten die anderen gespeicherten SMS oder E-Mails (2/8, 3/8 usw.) aus.
+Aktivieren Sie „Ändern“ mit der rechten Steuertaste,
+um die ausgewählte Meldung zu öffnen.
+Es stehen jetzt weitere Optionen zur Verfügung, drücken
+Sie die rechte Steuertaste „Option“:
+- Senden:
+Um die SMS zu versenden, geben Sie die Rufnummer
+des Empfängers ein. Unter „Option“ können Sie auch
+eine Rufnummer aus dem Telefonbuch, der Wahlwiederholung und der Anrufliste auswählen. Wählen Sie
+den Eintrag „Senden“ und drücken Sie die rechte
+Steuertaste „OK“.
+- Speichern:
+Bestätigen Sie mit „OK“ und die SMS wird erneut gespeichert.
+
+47
+
+83877 DE Aldi N RC1 Content.fm Seite 48 Donnerstag, 7. August 2008 2:49 14
+
+- Vorlage:
+Bestätigen Sie mit „OK“ und wählen Sie eine Vorlage
+aus, die Sie verwenden möchten. Drücken Sie anschließenden die rechte Steuertaste „OK“, um die Vorlage zu übernehmen.
+- Lösche:
+Bestätigen Sie mit „OK“, um die Meldung zu löschen.
+- Alle löschen:
+Bestätigen Sie mit „OK“, um alle Meldungen zu löschen.
+
+Vorlage
+Wählen Sie im Menü „SMS“ die Option „Vorlage“ und
+drücken Sie die rechte Steuertaste „OK“.
+Wählen Sie mit den Pfeiltasten eine der vier Vorlagen
+aus.
+Um die Vorlagen zu bearbeiten, bestätigen Sie „OK“.
+
+Vorlage ändern
+Um die Vorlage zu ändern, wählen Sie „Vorlage ändern“ aus und bestätigen Sie „OK“.
+Der Text erscheint. Ändern Sie den Text nach Ihren
+Wünschen. Bitte beachten Sie, dass eine Vorlage maximal 19 Zeichen umfassen kann.
+
+Vorlage löschen
+Um die Vorlage zu löschen, wählen Sie „Vorlage löschen“ aus und bestätigen Sie „OK“.
+Beantworten Sie die anschließende Sicherheitsabfrage
+mit der rechten Steuertaste („Ja“).
+In der Vorlagenliste erscheint der Eintrag „Leer“, den
+Sie weiter bearbeiten können.
+
+48
+
+83877 DE Aldi N RC1 Content.fm Seite 49 Donnerstag, 7. August 2008 2:49 14
+
+Einstellungen
+Wählen Sie im Menü „SMS“ die Option „Einstellungen“ und drücken Sie die rechte Steuertaste „OK“.
+Sie können zwischen folgenden Optionen wählen:
+- „SMS-Center“
+- „SMS-Sende-Center“
+- „SMS-Alarm“
+
+SMS-Center auswählen
+Unter dem Eintrag „SMS-Center“ wählen Sie das SMSCenter des Netzbetreibers, über den Sie SMS empfangen
+und senden möchten. Damit das Mobilteil eingehende
+Nachrichten als SMS erkennt, muss die Rufnummer des
+Service-Centers im Mobilteil eingegeben werden.
+Wählen Sie die Option „SMS-Center“ und drücken
+Sie die rechte Steuertaste „OK“.
+Im Display werden vier Speicherplätze für Rufnummern
+für vier SMS-Center verschiedener Anbieter angezeigt.
+Um die Telefonnummer eines SMS-Centers anzusehen
+oder zu ändern, wählen Sie den entsprechenden Speicherplatz und drücken Sie die rechte Steuertaste
+„OK“.
+Sie können jetzt die Rufnummer Ihres SMS-Centers mit
+den Zifferntasten eingeben oder ändern.
+Benutzen Sie die linke Steuertaste („Lösche“), um die
+letzte Eingabe zu löschen.
+
+49
+
+83877 DE Aldi N RC1 Content.fm Seite 50 Donnerstag, 7. August 2008 2:49 14
+
+Für den Speicherplatz „SMS-Center 1“ ist die
+Nummer des SMS-Empfangscenters der Telekom voreingestellt: 0193010.
+Sie können also ohne weitere Voreinstellung
+SMS, die über den Netzbetreiber Telekom gesendet werden, empfangen.
+Wenn Sie einen anderen Netzbetreiber für das Versenden
+von SMS einsetzen möchten, erkundigen Sie sich bitte
+nach dessen Nummer für das Empfangscenter.
+Um das Untermenü zu verlassen, drücken Sie die linke
+Steuertaste „Zurück“.
+
+SMS-Sende-Center auswählen
+Wenn Sie unter „SMS-Center auswählen“ mehrere Netzbetreiber eingegeben haben, können Sie hier ein Center
+für die SMS-Versendung auswählen.
+Wählen Sie die Option „SMS-Sende-Center“ und drücken Sie die rechte Steuertaste „OK“.
+Es erscheinen so viele SMS-Center, wie unter „SMS-Center auswählen“ eingerichtet sind.
+Wählen Sie mit den Pfeiltasten das gewünschte SendeCenter und und drücken Sie die rechte Steuertaste
+„OK“.
+
+SMS-Alarm auswählen
+Hier können Sie wählen ob der SMS-Alarm eingeschaltet
+werden soll oder nicht. Wählen Sie dazu „EIN“ oder
+„AUS“ aus und bestätigen Sie mit der rechten Steuertaste
+„OK“.
+
+50
+
+83877 DE Aldi N RC1 Content.fm Seite 51 Donnerstag, 7. August 2008 2:49 14
+
+Anrufbeantworter
+Mit dem Anrufbeantworter können Sie in Ihrer
+Abwesenheit eingehende Anrufe aufzeichnen oder dem
+Anrufer eine Nachricht übermitteln.
+Der Anrufbeantworter fügt jeder Nachricht automatisch
+das Datum und die Uhrzeit hinzu. Daher müssen Sie Datum und Uhrzeit einstellen, um den Anrufbeantworter
+richtig nutzen zu können. Wenn Sie Datum und Uhrzeit
+nicht eingestellt haben, erscheint im Display der Basisstation „- -“ . Die Angaben von Datum und Uhrzeit bei den
+Nachrichten sind in diesem Fall falsch. Stellen sie Datum
+und Uhrzeit am Mobilteil ein.
+
+Aus- und Einschalten
+Um den Anrufbeantworter ein- oder auszuschalten,
+drücken Sie die Ein-/Aus-Taste an der Basisstation.
+- Bei ausgeschaltetem Anrufbeantworter zeigt das Display: „- -“, ggf. abwechselnd mit der Anzahl neuer
+Nachrichten.
+- Bei eingeschaltetem Anrufbeantworter zeigt das Display die Anzahl der gespeicherten Nachrichten; im
+Auslieferungszustand: „0“.
+Um den Anrufbeantworter mit dem Mobilteil auszuschalten, gehen Sie wie folgt vor:
+Wählen Sie das Menü „Anrufbeantworter“.
+Wählen Sie das Untermenü „Anrufb. ein/aus“.
+
+51
+
+83877 DE Aldi N RC1 Content.fm Seite 52 Donnerstag, 7. August 2008 2:49 14
+
+Um den Anrufbeantworter auszuschalten, wählen Sie
+die Option „Aus“ und drücken die rechte Steuertaste
+„OK“.
+Der Anrufbeantworter ist jetzt ausgeschaltet.
+Um den Anrufbeantworter wieder einzuschalten, wählen Sie die Option „Ein“ und drücken die rechte Steuertaste „OK“.
+
+Einstellungen im Menü „Anrufbeantworter“
+Öffnen Sie im Hauptmenü das Menü „Anrufbeantworter“.
+Wählen Sie dort den Punkt „Einstellungen“ an und
+bestätigen Sie mit „OK“.
+
+AB-Modus
+Wählen Sie „Mit Aufz.“ oder „Ohne Aufz“ aus.
+- „Mit Aufz.“: der Anrufbeantworter beantwortet den
+Anruf und zeichnet Nachrichten auf;
+- „Ohne Aufz.“: der Anrufbeantworter beantwortet
+den Anruf, ohne eine Nachricht aufzuzeichnen.
+Wählen Sie die gewünschte Einstellung und bestätigen Sie mit „OK“.
+
+52
+
+83877 DE Aldi N RC1 Content.fm Seite 53 Donnerstag, 7. August 2008 2:49 14
+
+Ansagetexte
+Ansage aufnehmen
+Sie können für jeden Beantwortungs-Modus (s. o.) eine
+Ansage aufzeichnen. Diese Ansagen können bis zu eine
+Minute lang sein.
+Wählen Sie „Neue Ansage“ an und bestätigen Sie mit
+„OK“.
+Wählen Sie die Option „Mit Aufz.“ oder „Ohne Aufz.“
+und bestätigen Sie mit „OK“.
+Sie werden nun aufgefordert, nach dem Signalton Ihre
+Ansage aufzusprechen.
+Sprechen Sie den Text in normaler Lautstärke in das
+Mikrofon des Mobilteils.
+Bestätigen Sie „Speich“.
+Zur Kontrolle wird Ihre Ansage nach dem Ende der Aufnahme wiederholt.
+Wenn eine eigene Ansage aufgenommen wurde,
+wird bei einem Anruf automatisch diese Ansage
+(und nicht die voreingestellte) wiedergegeben.
+
+Ansage hören
+Für jeden Beantwortungs-Modus (s. o.) ist eine Antwort
+bereits voreingestellt. So hören Sie die Antworten ab:
+Wählen Sie im Menü „Anrufbeantworter“ den Eintrag „Ansagetexte“ an und bestätigen Sie mit „OK“.
+Wählen Sie „Ansage hören“ an und bestätigen Sie mit
+„OK“.
+Wählen Sie die Option „Mit Aufz.“ oder „Ohne Aufz.“
+und bestätigen Sie mit „OK“.
+
+53
+
+83877 DE Aldi N RC1 Content.fm Seite 54 Donnerstag, 7. August 2008 2:49 14
+
+Antwortverzögerung
+Sie können die Anzahl der Rufsignale einstellen, nach denen der Anrufbeantworter eingeschaltet wird. Sie können
+zwischen 2, 4, 6 und 8 Rufsignalen und dem „Sparmodus“ wählen.
+Wählen Sie im Menü „Einstellungen“ den Eintrag
+„Verzögerung“ an.
+Wählen Sie die gewünschte Anzahl der Rufsignale
+oder den Sparmodus und bestätigen Sie mit „OK“.
+
+Sparmodus
+Im Sparmodus können Sie beim Abhören des Anrufbeantworters von außen Verbindungskosten vermeiden. Im
+Sparmodus schaltet sich der Anrufbeantworter beim ERSTEN Anrufer nach vier Rufsignalen ein. Bei jedem weiteren Anruf schaltet sich der Anrufbeantworter schon beim
+ersten Rufsignal ein. Um Ihre persönlichen Nachrichten
+von außerhalb abzuhören und einzustellen, lesen Sie
+auch das Kapitel Fernabfrage Seite 55.
+Um zu prüfen, ob neue Nachrichten vorhanden sind, gehen Sie wie folgt vor:
+Rufen Sie Ihren Anschluss von außerhalb an.
+Wenn neue Nachrichten aufgezeichnet wurden, schaltet sich der Anrufbeantworter nach dem ersten Rufsignal ein.
+Wenn Sie das zweite Rufsignal hören, bedeutet das,
+dass keine neuen Nachrichten für Sie aufgezeichnet
+wurden.
+Legen Sie in diesem Fall sofort auf. Der Anrufbeantworter würde nach dem fünften Rufsignal einschalten.
+
+54
+
+83877 DE Aldi N RC1 Content.fm Seite 55 Donnerstag, 7. August 2008 2:49 14
+
+Aufnahme-Zeit
+Sie können einstellen, wie lang die Nachricht auf dem Anrufbeantworter sein darf. Voreingestellt sind 60 Sekunden. Die Gesamtaufnahmezeit beträgt 15 Minuten.
+Wählen Sie im Menü „Einstellungen“ den Eintrag
+„Aufnahmezeit“ an.
+Wählen Sie „30 Sek.“, „60 Sek.“, „180 Sek.“ und bestätigen Sie mit „OK“.
+
+Fernabfrage
+Sie können die Fernabfrage aktivieren, um aufgezeichnete
+Gespräche von einem anderen Telefon aus anzuhören.
+Wählen Sie im Menü „Anrufbeantworter“ den Eintrag
+„Fernabfrage“ an und bestätigen Sie mit „OK“.
+Wählen Sie „Ein“ oder „Aus“ an und bestätigen Sie mit
+„OK“.
+
+Fernabfrage-PIN ändern
+Die PIN ist ein Kennwort und dient dazu, die Fernabfrage
+Ihres Anrufbeantworters durch fremde Personen zu verhindern. Werkseitig ist die PIN auf „0000“ eingestellt.
+Diese PIN ist nicht mit der System-PIN (siehe Seite 73)
+identisch.
+Wählen Sie im Menü „AB-Einstellungen“ den Eintrag
+„Fernabfr-PIN neu“ an und bestätigen Sie mit „OK“.
+Geben Sie die aktuelle Fernabfrage-PIN ein und bestätigen Sie mit „OK“.
+Geben Sie dann die vierstellige neue PIN ein. Nach der
+Bestätigung mit „OK“ werden Sie aufgefordert, die Eingabe zu wiederholen. Bestätigen Sie auch hier mit
+„OK“.
+
+55
+
+83877 DE Aldi N RC1 Content.fm Seite 56 Donnerstag, 7. August 2008 2:49 14
+
+Anzeigen an der Basisstation
+Im Display der Basisstation werden wichtige Informationen zum Status Ihres Anrufbeantworters angezeigt.
+Anzeige
+
+Bedeutung
+
+leer
+
+Das Basisteil ist nicht richtig an das Stromnetz angeschlossen.
+
+--
+
+Der Anrufbeantworter ist ausgeschaltet.
+
+0-XX
+
+Der Anrufbeantworter ist eingeschaltet.
+„XX“: Anzahl der gespeicherten Nachrichten
+
+1-XX (blinkt)
+
+Anrufbeantworter ist eingeschaltet, es ist mindestens
+eine neue Nachricht vorhanden.
+
+1-XX/Ao
+
+Der Anrufbeantworter ist eingeschaltet, der Beantwortungs-Modus ist auf „nur Antworten“ eingestellt.
+
+rA (blinkt)
+
+Anrufbeantworter wird von einem Mobilteil oder externem Telefon bedient.
+
+E (blinkt)
+
+Allgemeine Fehlermeldung.
+
+F (blinkt)
+
+Der Speicher ist voll.
+
+56
+
+83877 DE Aldi N RC1 Content.fm Seite 57 Donnerstag, 7. August 2008 2:49 14
+
+Nachrichten abhören
+Der Anrufbeantworter unterscheidet zwischen bereits abgehörten („alten“) Nachrichten und Nachrichten, die
+noch nicht abgehört wurden („neue Nachrichten“).
+Wenn auf dem Anrufbeantworter neue Nachrichten aufgezeichnet sind, erscheint im Display das Symbol für den
+Anrufbeantworter und „Neue Nachricht“. Im Display der
+Basisstation blinkt die Anzahl der gespeicherten Nachrichten.
+Wenn Sie Nachrichten abhören, werden immer zuerst die
+neuen Nachrichten wiedergegeben.
+
+Nachrichten an der Basistation abhören
+Um Nachrichten abzuhören, drücken Sie die
+Wiedergabetaste an der Basisstation.
+Die aufgezeichneten Nachrichten werden jetzt wiedergegeben.
+Um die Wiedergabe zu beenden, drücken Sie wiederum die Stopp-Taste.
+Die Wiedergabe wird beendet.
+Um eine Nachricht zu überspringen, drücken Sie die
+Sprungtaste „Nächste Nachricht“.
+Um eine Nachricht erneut abzuhören oder die vorherige Nachricht abzuhören, drücken Sie die Taste
+„Vorherige Nachricht“.
+Um die Lautstärke während der Wiedergabe zu ändern, drücken Sie die Tasten + oder - an der
+Basisstation.
+
+57
+
+83877 DE Aldi N RC1 Content.fm Seite 58 Donnerstag, 7. August 2008 2:49 14
+
+Nachrichten vom Mobilteil abhören
+Wählen Sie im Menü „Anrufbeantworter“ den Eintrag „Nachr.Hören“ an und bestätigen Sie mit „OK“.
+Es erscheinen die neuen und alten Nachrichten.
+Wählen Sie eine Nachricht an und bestätigen Sie mit
+„OK“.
+Die auf dem Anrufbeantworter gespeicherten neuen
+Nachrichten werden wiedergegeben.
+Wenn das Display Ihres Mobilteiles „Nicht verfügbar“
+anzeigt, wird der Anrufbeantworter gerade von einer anderen Person benutzt.
+Um eine Nachricht zu überspringen, drücken Sie die
+rechte Taste
+oder die Zifferntaste 6.
+Um an den Anfang der aktuellen Nachricht zu springen, drücken Sie die Taste links
+für „Vorher“ oder
+drücken Sie die Zifferntaste 4 einmal.
+Um die vorherige Nachricht abzuhören, drücken Sie
+die Taste links
+für „Vorher“ oder die Zifferntaste 4
+zweimal kurz hintereinander.
+Um eine Nachricht zu löschen, drücken Sie die Zifferntaste 5.
+Um die Wiedergabe zu beenden, drücken Sie die Hörertaste.
+
+Nachrichten von einem anderen
+Telefonanschluss aus abhören
+Sie können die Nachrichten auf Ihrem Anrufbeantworter
+auch von einem anderen Anschluss, wie z. B. einem Mobiltelefon oder einer Telefonzelle, abhören.
+
+58
+
+83877 DE Aldi N RC1 Content.fm Seite 59 Donnerstag, 7. August 2008 2:49 14
+
+Gehen Sie dazu wie folgt vor:
+Wählen Sie die Rufnummer Ihres Anschlusses.
+Wenn Ihr Anrufbeantworter eingeschaltet wird, drücken Sie die Stern-Taste am Telefon.
+Sie hören die Ansage „Bitte geben Sie Ihre PIN ein“.
+Geben Sie jetzt Ihre Fernabfrage-PIN mit den Zifferntasten ein.
+Wenn Sie neue Nachrichten haben, hören Sie die Ansage
+„Sie haben X neue Nachrichten“ („X“ steht hier für die
+Anzahl). Wenn Sie keine neuen Nachrichten haben, hören Sie die Ansage „Sie haben keine neuen Nachrichten“.
+Um den Anrufbeantworter zu bedienen, benutzen Sie die
+Zifferntasten des Telefons.
+Taste
+
+Funktion
+
+1
+
+Akustisches Hauptmenü aufrufen: Die Funktionen der Zifferntasten werden angesagt
+
+2
+
+Alle Nachrichten wiedergeben
+
+3
+
+Nur neue Nachrichten wiedergeben
+
+4 einmal drücken
+
+Nachricht wiederholen
+
+5
+
+Aktuelle Nachricht löschen
+
+6
+
+Nachricht überspringen und nächste Nachricht
+wiedergeben
+
+7
+
+Beantwortungs-Modus auf „Ohne Aufzeichnung“ umstellen
+
+8
+
+Ansage wiedergeben
+
+9
+
+Ansage aufzeichnen
+
+0
+
+Anrufbeantworter aus
+
+59
+
+83877 DE Aldi N RC1 Content.fm Seite 60 Donnerstag, 7. August 2008 2:49 14
+
+Wenn Sie 15 Sekunden lang keine Eingabe machen, wird
+die Verbindung automatisch unterbrochen.
+Wenn keine neuen Anrufe eingegangen sind,
+können Sie die Gebühren für die Abfrage
+vermeiden, wenn der Anrufbeantworter in den
+Sparmodus geschaltet ist (siehe Kapitel „Antwortverzögerung“, auf Seite 54).
+
+Anrufbeantworter von einem externen Anschluss einschalten
+Sie können den Anrufbeantworter auch von einem externen Telefonanschluss einschalten.
+Wählen Sie Ihre Rufnummer.
+Warten Sie bis zum 10. Rufsignal ab. Sie hören die Ansage: „Bitte geben Sie Ihren Fernabfrage-Code
+ein.“
+Geben Sie den vierstelligen Code ein. Der Anrufbeantworter wird eingeschaltet. Liegt eine neue Nachricht
+vor, wird sie jetzt wiedergegeben.
+Anschließend werden die Einstellungen des Hauptmenüs (siehe vorherige Seite) abgefragt. Die Änderungen
+müssen mit dem angegebenen Tasten bestätig werden
+Um den Anrufbeantworter einzuschalten, drücken Sie
+die Taste „0“.
+
+Nachrichten löschen
+Sie können nur Nachrichten löschen, die Sie bereits abgehört haben („alte Nachrichten“).
+
+60
+
+83877 DE Aldi N RC1 Content.fm Seite 61 Donnerstag, 7. August 2008 2:49 14
+
+Nachrichten an der Basisstation löschen
+Um eine Nachricht zu löschen, drücken Sie während
+der Wiedergabe die Taste „Löschen“ an der Basisstation.
+Um alle Nachrichten gleichzeitig zu löschen, gehen Sie
+wie folgt vor:
+Beenden Sie die Wiedergabe mit der Stopp-Taste.
+Drücken Sie die Taste „Löschen“ an der Basisstation.
+Sie hören die Ansage „Um alle Nachrichten zu löschen,
+drücken Sie die Löschtaste“.
+Drücken Sie jetzt erneut die Taste „Löschen“.
+Sie hören jetzt die Ansage „Alle alten Nachrichten wurden gelöscht“. Im Display wird die Zahl der neuen Nachrichten angezeigt.
+
+Nachrichten vom Mobilteil aus löschen
+Wählen Sie im Menü „Anrufbeantworter“ den Eintrag „Nachr.löschen“ an und bestätigen Sie mit
+„OK“.
+Wenn das Display Ihres Mobilteiles „Nicht verfügbar“
+anzeigt, wird der Anrufbeantworter gerade von einer anderen Person benutzt.
+Wählen Sie die Option „Alle Nachr. löschen“ und
+drücken Sie die rechte Steuertaste „OK“.
+Um die Nachricht vom Mobilteil oder einem externen
+Telefon zu löschen, drücken Sie die Zifferntaste 5.
+Sie hören die Ansage „Nachricht wurde gelöscht“. Die
+folgende Nachricht wird wiedergegeben. Im Display wird
+die Nummer der nächsten Nachricht angezeigt.
+
+61
+
+83877 DE Aldi N RC1 Content.fm Seite 62 Donnerstag, 7. August 2008 2:49 14
+
+Um alle Nachrichten gleichzeitig zu löschen, gehen Sie
+wie folgt vor:
+Um die Wiedergabe zu beenden, drücken Sie die
+rechte Steuertaste.
+Wählen Sie im Menü „Anrufbeantworter“ das Untermenü „Alle Nachrichten löschen“.
+Im Display wird „Alle Nachrichten löschen?“ angezeigt.
+Um alle alten Nachrichten zu löschen, drücken Sie die
+rechte Steuertaste „Lösche“.
+Wenn Sie die alten Nachrichten nicht löschen wollen,
+drücken Sie die linke Steuertaste „Speich“.
+
+Mithören
+Mit der Funktion „Mithören“ können Sie einen Anruf mithören, ohne die Aufzeichnung der Nachricht auf dem Anrufbeantworter zu unterbrechen. Diese Funktion ist z. B.
+hilfreich, wenn Sie zuerst hören wollen, wer der Anrufer
+ist. Sie können auch einen Anruf entgegennehmen, wenn
+der Anrufbeantworter bereits aufzeichnet.
+
+An der Basisstation mithören
+Um einen Anruf mitzuhören, drücken Sie die Laustärketaste + oder -, bis Sie den Anrufer hören können.
+
+Am Mobilteil mithören
+Wenn eine Aufnahme aufgezeichnet wird, erscheint im
+Display des Mobilteils der Eintrag „Mithören“.
+Um einen Anruf mitzuhören, drücken Sie die rechte
+Steuertaste „Ja“.
+
+62
+
+83877 DE Aldi N RC1 Content.fm Seite 63 Donnerstag, 7. August 2008 2:49 14
+
+Anruf nach Mithören entgegennehmen
+Um den Anruf entgegenzunehmen, drücken Sie die
+Gesprächstaste am Mobilteil.
+Sie können jetzt mit dem Anrufer sprechen und die
+Aufzeichnung am Anrufbeantworter wird beendet.
+
+63
+
+83877 DE Aldi N RC1 Content.fm Seite 64 Donnerstag, 7. August 2008 2:49 14
+
+Weitere Einstellungen im Telefon-Menü
+Menü „Audio“
+Öffnen Sie im Hauptmenü den Eintrag „Audio“ durch Bestätigung von „OK“.
+
+Tonruf
+Sie können die Rufmelodie für das Mobilteil festlegen, die
+bei externen Anrufen oder internen Anrufen ertönt. So
+können Sie bereits am Rufsignal erkennen, ob der Anrufer
+von außerhalb anruft oder an derselben Basisstation
+registriert ist.
+Bestätigen Sie im Menü „Audio“ den Eintrag „Tonruf“
+mit „OK“.
+Der Eintrag „Melodie“ für den Tonruf ist aktiv. Wählen
+Sie mit den Tasten
+oder
+eine von 15 Melodien
+(polyphonen Klingeltönen) für den externen Anruf.
+Wenn die Tonruf-Lautstärke auf „Aus“ steht, können Sie
+die Melodien nicht hören.
+Gehen Sie mit der Pfeiltaste
+tern“.
+
+auf „Melodie für In-
+
+Wählen Sie mit den Tasten
+oder
+Melodien für den internen Anruf.
+Gehen Sie mit der Pfeiltaste
+
+eine von 15
+
+auf „Tonruf-Lautst.“.
+
+Wählen Sie mit den Tasten
+oder
+eine von fünf
+Lautstärkepegeln oder wählen Sie „Aus“, wenn kein
+Tonruf erklingen soll.
+Sie können den Tonruf auch durch langen Druck auf die
+Sterntaste aus- und wieder einschalten.
+
+64
+
+83877 DE Aldi N RC1 Content.fm Seite 65 Donnerstag, 7. August 2008 2:49 14
+
+Für den Fall, dass Sie den Tonruf ausgeschaltet haben,
+können Sie im folgenden Menüpunkt „Ruhe“ wählen,
+ob kein Signal („Aus“), oder ob ein kurzer Beepton
+(„Beep“) ertönen soll.
+
+Hinweistöne
+Bestätigen Sie im Menü „Audio“ den Eintrag
+„Hinweistöne“ mit „OK“.
+Für jede der folgenden Funktionen können Sie wählen,
+ob kein Signalton erklingen soll („Aus“), oder ob Sie einen leisen oder lauten Signalton hören möchten:
+„Tastenton“: Signalton „Ein“ oder „Aus“ bei jedem
+Tastendruck.
+„Quittungston“: Signalton „Ein“ oder „Aus“.
+„Akku leer“: Signalton, „Ein“ oder „Aus“, wenn der
+Akku fast leer ist.
+„Reichweite“: Signalton, „Ein“ oder „Aus“, wenn das
+Mobilteil die Reichweite der Basisstation verlässt.
+
+Menü „Einstellungen“, Untermenü „Mobilteil“
+Wählen Sie im Menü „Einstellungen“ den Eintrag
+„MT-Einstellungen“ mit „OK“.
+
+Direktruf
+Beim Direktruf, auch „Babyruf“ genannt, führt das Drücken einer beliebigen Taste (mit Ausnahme der rechten
+Steuertaste) zur Wahl einer bestimmten, vorher gespeicherten Nummer.
+Bestätigen Sie im Untermenü „Mobilteil“ den Eintrag
+„Direktruf“ mit „OK“.
+
+65
+
+83877 DE Aldi N RC1 Content.fm Seite 66 Donnerstag, 7. August 2008 2:49 14
+
+Geben Sie mit den Zifferntasten die vierstellige System-PIN ein und bestätigen Sie mit „OK“.
+Im Lieferzustand ist die System-PIN: „0000“. Zum Ändern der PIN: Seite 73.
+Wählen Sie „Direktruf ein“.
+Geben Sie mit den Zifferntasten die Rufnummer ein,
+die bei jedem Tastendruck gewählt werden soll.
+Nach der Bestätigung mit „OK“ erscheint im Display der
+Eintrag „Direktruf“.
+Der Eintrag „Menü“ ist durch den Eintrag „Option“ ersetzt. Durch Drücken der rechten Steuertaste kommen
+Sie direkt in das Menü „Direktruf“, wo Sie den Direktruf
+wieder ausschalten können.
+
+Basis auswählen
+Um den Empfangsbereich des Mobilteils zu erhöhen,
+können Sie es an bis zu vier Basisstationen registrieren. So
+bauen Sie eine „Wabenstruktur“ mit Basisstationen in Ihrem Empfangsbereich auf.
+Bestätigen Sie im Menü „Einstellungen“, Untermenü
+„MT-Einstellungen“ den Eintrag „Wähle Basis“ mit
+„OK“.
+Wählen Sie die gewünschte Basis und bestätigen Sie
+mit „OK“.
+
+Display
+Bestätigen Sie im Menü „Display“ den Eintrag mit
+„OK“.
+Wählen Sie mit den Pfeiltasten
+oder
+Kontrast
+und wählen Sie die gewünschte Stärke von 1 - 8 aus.
+Bestätigen Sie mit „OK“.
+
+66
+
+83877 DE Aldi N RC1 Content.fm Seite 67 Donnerstag, 7. August 2008 2:49 14
+
+Wählen Sie mit den Pfeiltasten
+oder
+MobilteilName und geben den gewünschten Namen mit den
+Zifferntasten ein.
+Bestätigen Sie mit „OK“.
+
+Sprache
+Bestätigen Sie im Menü „Einstellungen“, Untermenü
+„Mobilteil“ den Eintrag „Sprache“ mit „OK“.
+Wählen Sie die gewünschte Sprache Englisch, Deutsch
+oder Türkisch, und bestätigen Sie mit „OK“.
+Die Sprache stellt sich unmittelbar um.
+
+Direktannahme
+Wenn die Direktannahme aktiviert ist, können Sie ein Gespräch beim Abheben des Mobilteils aus der Basisstation
+entgegen nehmen, ohne die Gesprächstaste zu drücken.
+Damit Gespräche nur durch Drücken der Sprechtaste des
+Mobilteils entgegen genommen werden können, wählen
+Sie die Option „Direktannahme Aus“.
+Bestätigen Sie im Menü „Einstellungen“, Untermenü
+„MT-Einstellungen“ den Eintrag „Direktannahme“
+mit „OK“.
+Wählen Sie „Aus“ oder „Ein“ und bestätigen Sie mit
+„OK“.
+Wenn Sie „Aus“ wählen, müssen Sie bei einem ankommenden Gespräch die Gesprächstaste drücken.
+
+Mobilteil anmelden
+Vor Anmelden des Mobilteils drücken Sie die „Find“
+Taste an der Basis und halten Sie für ca. 10 Sekunden
+gedrückt. Nach Ertönen des Signaltons lassen Sie die
+Taste wieder los.
+
+67
+
+83877 DE Aldi N RC1 Content.fm Seite 68 Donnerstag, 7. August 2008 2:49 14
+
+Bestätigen Sie im Menü „Einstellungen“, Untermenü
+„MT-Einstellungen“ den Eintrag „MT anmelden“ mit
+„OK“.
+Es werden vier Basisstationen angeboten. Im Auslieferungzustand ist die erste belegt.
+Wählen Sie eine freie Basisstation und bestätigen Sie
+mit „OK“.
+Geben Sie mit den Zifferntasten die System-PIN ein und
+bestätigen Sie mit „OK“.
+Im Lieferzustand ist die System-PIN: „0000“. Zum Ändern
+der PIN: Seite 73.
+Wenn die Anmeldung erfolgreich war, erscheint im Display die interne Nummer des Mobilteils.
+Ist die Basis zu weit vom Mobilteil entfernt, erscheint die
+Meldung „Keine Basis“.
+Zusätzliche Mobilteile können Sie über
+www.medionshop.de oder über die Bestell-Hotline 09001777744 (0,24 Euro/Min. aus dem deutschen Festnetz der
+Telekom, abweichende Mobilfunkpreise möglich) bestellen.
+Sie haben auch die Möglichkeit, andere DECT-GAP Telefone an der Basis anzumelden. Richten Sie sich nach der jeweiligen Herstelleranleitung.
+
+Mobilteil abmelden
+Bestätigen Sie im Menü „Einstellungen“, Untermenü
+„MT-Einstellungen“, den Eintrag „MT abmelden“ mit
+„OK“.
+Geben Sie mit den Zifferntasten die System-PIN ein und
+bestätigen Sie mit „OK“.
+
+68
+
+83877 DE Aldi N RC1 Content.fm Seite 69 Donnerstag, 7. August 2008 2:49 14
+
+Wählen Sie das Mobilteil aus, das abgemeldet werden
+soll.
+Bestätigen Sie mit der linken Steuertaste („Ja“), um das
+Mobilteil wirklich abzumelden.
+
+Rücksetzen
+Mit dieser Funktion setzen Sie sämtliche individuell vorgenommenen Einstellungen des Mobilteils wieder auf
+den Auslieferungszustand zurück.
+Bestätigen Sie im Menü „Einstellungen“, Untermenü
+„MT-Einstellungen“, den Eintrag „MT-Reset“ mit
+„OK“.
+Bestätigen Sie die Sicherheitsabfrage mit der linken
+Steuertaste („Ja“).
+Die Werkseinstellungen des Mobilteils finden Sie auf
+Seite 87.
+
+Menü „Einstellungen“, Untermenü „Basis“
+Wählen Sie im Menü „Einstellungen“ den Eintrag
+„Basis einst.“ mit „OK“.
+
+Tonruf
+Mit dieser Funktion wählen Sie das Rufsignal an der Basisstation aus. Sie können zwischen fünf Rufsignalen wählen.
+Bestätigen Sie im Menü „Einstellungen“, Untermenü
+„Basis einst.“, den Eintrag „Tonruf“ mit „OK“.
+
+Tonruf-Melodie
+Wählen Sie den Eintrag „Tonruf-Melodie“ mit den
+Pfeiltasten
+oder
+.
+
+69
+
+83877 DE Aldi N RC1 Content.fm Seite 70 Donnerstag, 7. August 2008 2:49 14
+
+Wählen Sie nun einen von fünf Tonrufen mit den Tasten
+oder
+.
+Bestätigen Sie mit „OK“.
+
+Tonruf-Lautstärke
+Wählen Sie den Eintrag „Tonruf-Lautstärke“ mit den
+Pfeiltasten
+oder
+.
+Wählen Sie „Aus“ oder eine von fünf Lautstärken mit
+den Tasten
+oder
+.
+Bestätigen Sie mit „OK“.
+
+Mobilteil-Priorität
+Wenn an der Basisstation mehrere Mobilteile registriert
+sind, können Sie hier bestimmen, ob alle Mobilteile
+gleichzeitig oder ob die Mobilteile nacheinander klingeln
+sollen.
+Bestätigen Sie im Menü „Einstellungen“, Untermenü
+„Basis einst.“, den Eintrag „MT-Priorität“ mit „OK“.
+
+Alle Mobilteile
+Bestätigen Sie den Eintrag „Alle Mobilteile“ mit „OK“.
+Bei einem ankommenden Anruf klingeln alle Mobilteile
+gleichzeitig.
+
+Mobilteil auswählen
+Bestätigen Sie den Eintrag „MT auswählen“ mit „OK“.
+Wählen Sie mit den Tasten
+oder
+aus und bestätigen Sie mit „OK“.
+
+ein Mobilteil
+
+Legen Sie im nächsten Schritt die Verzögerung fest,
+nach der das Mobilteil klingeln soll: 2, 4, 6 oder 8 Rufsignale oder „Sparmodus“.
+
+70
+
+83877 DE Aldi N RC1 Content.fm Seite 71 Donnerstag, 7. August 2008 2:49 14
+
+Bestätigen Sie mit „OK“ und legen Sie gegebenenfalls
+auch für weitere Mobilteile eine Ruf-Verzögerung fest.
+
+71
+
+83877 DE Aldi N RC1 Content.fm Seite 72 Donnerstag, 7. August 2008 2:49 14
+
+Wahlverfahren
+Hier können Sie Ihr Telefon an das Wahlverfahren Ihres
+Netzbetreibers anpassen. Sie können zwischen Tonwahl
+und Impulswahl auswählen. Die Werkseinstellung ist
+„Tonwahl“. Das ist das heutzutage gebräuchliche Wahlverfahren. Die Impulswahl kann bei einigen älteren Telefonanlagen notwendig sein.
+Erkundigen Sie sich bei Ihrem Netzbetreiber, welches
+Wahlverfahren an Ihrem Anschluss erforderlich ist.
+Bestätigen Sie im Menü „Einstellungen“, Untermenü
+„Basis einst.“, den Eintrag „Wahlverfahren“ mit
+„OK“. Die Einstellung „Tonwahl (MFV)“ ist markiert.
+Wenn Sie das Wahlverfahren ändern wollen, wählen Sie
+„Impulswahl“ und bestätigen Sie mit „OK“.
+
+Flash-Zeit
+Hier können Sie Ihr Telefon an die Vorgaben Ihres Netzbetreibers oder Ihrer Nebenstellenanlage anpassen. Sie können die Flash-Zeit in folgenden Stufen einstellen:
+80 ms,100 ms,120 ms,180 ms, 250 ms, 300 ms, 600 ms,
+800 ms.
+Fragen Sie Ihren Netzbetreiber oder lesen Sie in der Bedienungsanleitung Ihrer Telefonanlage, welche Einstellung
+an Ihrem Anschluss erforderlich ist.
+Bestätigen Sie im Menü „Einstellungen“, Untermenü
+„Basis einst.“, den Eintrag „Flash-Zeit“ mit „OK“.
+Wenn Sie den voreingestellten Wert ändern wollen,
+wählen Sie mit den Tasten
+oder
+eine andere
+Flash-Zeit aus und bestätigen Sie mit „OK“.
+Ältere Telefonanlagen benötigen typischerweise 80 ms.
+
+72
+
+83877 DE Aldi N RC1 Content.fm Seite 73 Donnerstag, 7. August 2008 2:49 14
+
+System-PIN ändern
+Bestimmte Einstellungen können nur verändert werden,
+nachdem Sie die PIN (persönliches Kennwort) eingegeben haben. Werkseitig ist die PIN „0000“ voreingestellt.
+Mit diesem Untermenü können Sie selbst eine beliebige
+vierstellige PIN vorgeben.
+Bitte beachten Sie, dass die System-PIN auch für
+das Rücksetzen (Reset) benötigt wird. Die SystemPIN selbst wird nicht in den Lieferzustand zurückgesetzt. Notieren Sie sich also eine neue SystemPIN und heben Sie sie an einem sicheren Ort auf.
+Wenn Sie die neue System-PIN dennoch vergessen haben sollten, wenden Sie sich bitte an unseren Kundendienst.
+Bestätigen Sie im Menü „Einstellungen“, Untermenü
+„Basis einst.“, den Eintrag „System-PIN“ mit „OK“.
+Geben Sie die alte PIN mit den Zifferntasten ein und
+bestätigen Sie mit „OK“.
+Geben Sie eine selbstgewählte, vierstellige PIN ein und
+bestätigen Sie mit „OK“.
+Wiederholen Sie Eingabe der neuen PIN und bestätigen Sie mit „OK“. Die System-PIN ist nun geändert.
+
+Amtskennziffer
+Die Amtskennziffer wird nur benötigt, wenn Sie das Telefon an einer Telefonanlage betreiben. Für externe Gespräche muss dann in der Regel eine Amtskennziffer vorweg gewählt werden.
+Stellen Sie fest, welche Amtskennziffer für Ihre Telefonanlage benötigt wird.
+
+73
+
+83877 DE Aldi N RC1 Content.fm Seite 74 Donnerstag, 7. August 2008 2:49 14
+
+Bestätigen Sie im Menü „Einstellungen“, Untermenü
+„Basis einst.“, den Eintrag „Amtskennziffer“ mit
+„OK“.
+Geben Sie die Amtskennziffer Ihrer Telefonanlage ein
+und bestätigen Sie mit „OK“.
+Wenn Ihr Telefon die Amtskennziffer am Anfang der Telefonnummer erkennt, fügt es nach der Amtskennziffer
+beim Wählen automatisch eine Pause ein.
+
+ECO Mode
+Die Einstellung ECO Mode ermöglicht einen strahlungsarmen Betrieb während eines Gesprächs. Die Strahlungsreduzierung hängt von der Entfernung des Mobilteils zur
+Basis ab.
+Um den ECO Mode zu aktivieren, gehen Sie wie folgt vor:
+Bestätigen Sie im Menü „Einstellungen“, Untermenü
+„Basis einst.“, den Eintrag „ECO Mode“ mit „OK“.
+Wählen Sie nun mit den Tasten
+„Nein“ aus.
+
+oder
+
+„Ja“ oder
+
+Bestätigen Sie mit „OK“.
+
+Rücksetzen
+Mit dieser Funktion setzen Sie sämtliche individuell vorgenommenen Einstellungen an der Basisstation - mit
+Ausnahme der System-PIN - wieder auf den Auslieferungszustand zurück.
+Bestätigen Sie im Menü „Einstellungen“, Untermenü
+„Basis einst.“, den Eintrag „System Reset“ mit „OK“.
+Geben Sie die PIN mit den Zifferntasten ein und bestätigen Sie mit „OK“.
+
+74
+
+83877 DE Aldi N RC1 Content.fm Seite 75 Donnerstag, 7. August 2008 2:49 14
+
+Bestätigen Sie die Sicherheitsabfrage mit der linken
+Steuertaste („Ja“).
+Die Werkseinstellungen der Basis finden Sie auf Seite 87.
+
+Datum und Zeit einstellen
+Datum und Uhrzeit müssen neu eingegeben
+werden, wenn die Basisstation vom Stromnetz
+getrennt war.
+Die Einstellung von Zeit und Datum ist wichtig
+für diverse andere Funktion, wie etwa den Anrufbeantworter, den Alarm, die SMS- und E-MailVersendung u. a. m.
+Bestätigen Sie im Menü „Einstellungen“, Untermenü
+„Zeit/Alarm“, mit „OK“.
+Bestätigen Sie den Eintrag „Datum/Zeit“ mit „OK“.
+Das Zeitformat ist ausgewählt.
+Wählen Sie mit den Tasten
+24-Stunden-Format.
+Gehen Sie mit der Pfeiltaste
+Geben Sie mit den Tasten
+Datumsformat ein.
+Gehen Sie mit der Pfeiltaste
+
+oder
+
+das 12- oder
+
+auf das Datumsformat.
+oder
+
+das aktuelle
+
+auf die Zeit eingeben.
+
+Geben Sie mit den Zifferntasten die aktuelle Zeit ein.
+Gehen Sie mit der Pfeiltaste
+
+auf das Datum eingeben.
+
+Geben Sie mit den Zifferntasten das aktuelle Datum ein.
+Schließen Sie die Eingaben mit „OK“.
+
+75
+
+83877 DE Aldi N RC1 Content.fm Seite 76 Donnerstag, 7. August 2008 2:49 14
+
+Alarm
+In diesem Menüpunkt können Sie einen Alarm für eine bestimmte Zeit einstellen.
+Bestätigen Sie im Menü „Einstellungen“, Untermenü
+„Zeit/Alarm“, mit „OK“.
+Bestätigen Sie den Eintrag „Alarm“ mit „OK“. „Zeit
+einstellen“: Die Zeit ist aktiviert. Geben Sie mit den Zifferntasten die gewünschte Zeit ein
+Gehen Sie mit der Pfeiltaste
+
+auf „Alarm ein/aus“ .
+
+Wählen Sie mit den Tasten
+„Einmal“ oder „Täglich“ aus.
+
+oder
+
+„Aus“ oder
+
+Gehen Sie mit der Pfeiltaste
+
+auf „Tonruf-Melodie“.
+
+Wählen Sie unter „Melodie-Auswahl“ mit den Tasten
+oder
+eine von 15 Melodien für das akustische
+Signal.
+Bestätigen Sie „OK“. Das Alarm-Symbol erscheint nach
+Verlassen des Menüs im Display.
+
+Alarm ausstellen
+Wenn der Alarm ertönt, blinkt das Symbol im Display und
+es erscheint die Meldung „<<<Alarm!>>>“.
+Um den Alarm auszustellen, bestätigen Sie „Stop“ mit
+der rechten Steuertaste.
+
+76
+
+83877 DE Aldi N RC1 Content.fm Seite 77 Donnerstag, 7. August 2008 2:49 14
+
+Telefonbuch
+Im Telefonbuch können Sie bis zu 200 Rufnummern speichern. Die Rufnummer können bis zu 24 Zeichen umfassen, die Namen bis zu 15 Zeichen. Sie können den Eintrag
+einer Rufgruppe zuordnen. Für zehn Einträge können Sie
+eine Zifferntaste als Kurzwahl zuordnen.
+Wählen Sie mit der linken Taste
+buch“.
+Es erscheint das Telefonbuch.
+
+das „Telefon-
+
+Bestätigen Sie „Option“. Es öffnet sich das Telefonbuch-Menü.
+
+Neuer Eintrag
+Wählen Sie im Telefonbuch-Menü den Eintrag „Neuen
+Eintrag“ und bestätigen Sie mit „OK“.
+Geben Sie mit den Zifferntasten den Namen ein. Die
+Eingabe funktioniert wie beim Schreiben von SMS
+(siehe “SMS schreiben” auf Seite 41).
+Eine Tabelle der verfügbaren Zeichen pro Zifferntaste finden Sie auf Seite 83.
+Gehen Sie mit der Pfeiltaste
+auf den nächsten Eintrag „Nummer“ und geben Sie die Telefonnummer
+ein.
+Bewegen Sie die Einfügemarke mit der Pfeiltaste
+nach unten. Es öffnet sich das Feld für die Gruppenauswahl.
+Wählen Sie mit den Pfeiltasten
+und
+eine Anrufgruppe aus, der Sie den Eintrag zuordnen möchten:
+„Keine“, „Familie“, „Geschäftlich“, „Freunde“,
+
+77
+
+83877 DE Aldi N RC1 Content.fm Seite 78 Donnerstag, 7. August 2008 2:49 14
+
+„Dienstleister“, „VIP“ oder „Andere“. Für diese
+Gruppen können Sie verschiedene Ruftöne einrichten
+(siehe “Anrufgruppe ändern” auf Seite 80).
+
+Telefonbucheintrag ändern
+Öffnen Sie das Telefonbuch und wählen Sie den Eintrag an, den Sie ändern möchten. Bestätigen Sie „Option“.
+Wählen Sie im Telefonbuch-Menü den Eintrag „Eintrag ändern“ und bestätigen Sie mit „OK“.
+Wählen Sie mit der Pfeiltaste
+ändern möchten.
+
+den Punkt an, den Sie
+
+Wenn Sie mehrere Punkte ändern, bestätigen Sie erst
+am Ende aller Eingaben mit „OK“.
+
+Telefonbucheintrag ansehen
+Öffnen Sie das Telefonbuch und wählen Sie den Eintrag an, den Sie ansehen möchten. Bestätigen Sie „Option“.
+Wählen Sie im Telefonbuch-Menü den Eintrag „Ansehen“ und bestätigen Sie mit „OK“.
+Scrollen Sie mit der Pfeiltaste
+gen zu dem Eintrag.
+
+durch alle Eintragun-
+
+Sie können keine Änderungen vornehmen.
+
+Telefonbucheinträge kopieren
+Wenn mehrere Mobilteile an derselben Basisstation angemeldet sind, können Sie alle oder einzelne Telefonbucheinträge von einem Mobilteil auf ein anderes kopieren.
+
+78
+
+83877 DE Aldi N RC1 Content.fm Seite 79 Donnerstag, 7. August 2008 2:49 14
+
+Kopieren
+Öffnen Sie das Telefonbuch und wählen Sie den Eintrag an, den Sie kopieren möchten. Bestätigen Sie
+„Option“.
+Wählen Sie im Telefonbuch-Menü den Eintrag „Kopieren“ und bestätigen Sie mit „OK“.
+Wählen Sie das gewünschte Mobilteil aus und bestätigen Sie mit „OK“.
+
+Alle kopieren
+Öffnen Sie das Telefonbuch und bestätigen Sie „Option“.
+Wählen Sie im Telefonbuch-Menü den Eintrag „Alle
+kopieren“ und bestätigen Sie mit „OK“.
+Wählen Sie das gewünschte Mobilteil aus und bestätigen Sie mit „OK“.
+Nach Abschluss des Kopiervorgangs geht das Empfangsmobilteil in den Ruhezustand.
+
+Telefonbucheinträge löschen
+Eintrag löschen
+Öffnen Sie das Telefonbuch und wählen Sie den Eintrag an, den Sie löschen möchten. Bestätigen Sie „Option“.
+Wählen Sie im Telefonbuch-Menü den Eintrag „Lösche
+Eintrag“ und bestätigen Sie mit „OK“.
+Bestätigen Sie die Sicherheitsabfrage mit der rechten
+Steuertaste („Ja“).
+
+79
+
+83877 DE Aldi N RC1 Content.fm Seite 80 Donnerstag, 7. August 2008 2:49 14
+
+Alle löschen
+Öffnen Sie das Telefonbuch und bestätigen Sie „Option“.
+Wählen Sie im Telefonbuch-Menü den Eintrag „Alle
+löschen“ und bestätigen Sie mit „OK“.
+Bestätigen Sie die Sicherheitsabfrage mit der rechten
+Steuertaste („Ja“). Das Telefonbuch ist jetzt leer.
+
+Telefonbuch-Speicher
+Im Telefonbuch können 200 Teilnehmer mit je einer
+Nummer gespeichert werden.
+Öffnen Sie das Telefonbuch und bestätigen Sie „Option“.
+Wählen Sie im Telefonbuch-Menü den Eintrag „Speicherbeleg.“ und bestätigen Sie mit „OK“.
+Es erscheinen die freien Speicherplätze; z. B. 168/200:
+168 Speicherplätze sind frei; 32 sind vergeben.
+
+Anrufgruppe ändern
+Hier können Sie jeder Anrufgruppe eine eigene TonrufMelodie zuweisen.
+Öffnen Sie das Telefonbuch und bestätigen Sie „Option“.
+Wählen Sie im Telefonbuch-Menü den Eintrag
+„Gruppe ändern“ und bestätigen Sie mit „OK“. Es erscheinen die Anruf-Gruppen.
+Wählen Sie die Gruppe aus, um die Gruppe umzubennen oder deren Tonruf-Melodie zu ändern, und bestätigen Sie mit „OK“.
+
+80
+
+83877 DE Aldi N RC1 Content.fm Seite 81 Donnerstag, 7. August 2008 2:49 14
+
+Um die Gruppe umzubenennen, wählen Sie „Gr. umbennnen“ aus, geben einen neuen Namen ein und bestätigen mit „OK“. Es erscheint und ertönt die aktuelle Melodie.
+Um die Melodie zu ändern, wählen Sie „Tonruf-Melodie“ aus und bestätigen mit „OK“. Es erscheint und ertönt die aktuelle Melodie.
+Wählen Sie mit den Pfeiltasten
+und
+eine andere Melodie und bestätigen Sie mit „OK“.
+
+Schnellwahl
+Öffnen Sie das Telefonbuch und bestätigen Sie „Option“.
+Um die Schnellwahl zu aktivieren, wählen Sie
+„Schnellwahl“ aus und bestätigen Sie mit „OK“. Es erscheinen die aktuellen Tasten für die Schnellwahlbelegung.
+Wählen Sie mit den Pfeiltasten
+aus und drücken „OK“.
+
+und
+
+eine Taste
+
+Der Mobilteilname und die Nummer werden automatisch übernommen. Gehen Sie auf „Option“. Hier können Sie den Eintrag ändern oder löschen.
+Bestätigen Sie mit „OK“.
+
+Anrufen
+Öffnen Sie das Telefonbuch und wählen Sie den Teilnehmer an, den Sie anrufen möchten.
+Drücken Sie die Gesprächstaste. Die Nummer wird gewählt.
+
+81
+
+83877 DE Aldi N RC1 Content.fm Seite 82 Donnerstag, 7. August 2008 2:49 14
+
+Internes Telefonbuch
+Ihr Telefon enthält ein zweites Telefonbuch, dessen Einträge automatisch an allen Mobilteilen erscheinen, die an
+derselben Basisstation angeschlossen sind. Hier können
+Sie den Namen und eine Telefonnummer von zehn Teilnehmern speichern.
+Mit der INFO-Taste öffnen Sie ein Menü mit den wichtigsten zehn Teilnehmer Einträgen.
+Wählen Sie einen Speicherplatz („leer“) an und bestätigen Sie „Option“.
+
+Neuer Eintrag
+Um neue Einträge zu machen, bestätigen Sie „Eintrag
+ändern“ mit „OK“.
+Geben Sie mit den Zifferntasten den Namen ein.
+Gehen Sie mit der Pfeiltaste
+
+auf „Nummer“.
+
+Geben Sie mit den Zifferntasten die Telefonnummer
+ein.
+Bestätigen Sie mit „OK“.
+
+Nummer auswählen
+Wenn bereits ein Name eingetragen ist, können Sie den
+Eintrag markieren und mit „Option“ bestätigen. Sie
+können nun zwischen „Details“, „Lösche Eintrag“,
+„Eintrag ändern“ und “Alle löschen“ wählen und mit
+„OK“ bestätigen.
+
+Eintrag löschen
+Um neue Einträge zu löschen, wählen Sie den Eintrag
+an und bestätigen Sie „Lösche Eintrag“ mit „OK“.
+
+82
+
+83877 DE Aldi N RC1 Content.fm Seite 83 Donnerstag, 7. August 2008 2:49 14
+
+Verfügbare Zeichen
+Die folgende Tabelle zeigt die verfügbaren Zeichen, die
+Sie beim Schreiben von SMS oder für Telefonbucheinträge verwenden können:
+
+Taste Zeichen Großschreibung
+
+Zeichen Kleinschreibung
+
+1
+
+[Leerzeichen] 1 £ $ ¥ @ & /
+()<=>%
+
+[Leerzeichen] 1 £ $ ¥ @ & /
+()<=>%
+
+2
+
+ABC2ÅÀÁÂÃÄÆÇ
+
+abc2åàáâãäæç
+
+3
+
+DEF3ÈÉÊËÐ
+
+def3èéêëð
+
+4
+
+GHI4
+
+ghi4
+
+5
+
+JKL5Λ
+
+jkl5Λ
+
+6
+
+MNO6ÖÒÓÔ ÕØÑ
+
+mno6öòóô õøñ
+
+7
+
+PQRS7ßșΠΘΣ
+
+pqrs7ßșΠΘΣ
+
+8
+
+TUV8ÜÙÚÛ
+
+tuv8üùúû
+
+IÌÍÎÏΓ
+
+iìíîïΓ
+
+9
+
+WXYZ9ΩΞΨ
+
+wxyz9ΩΞΨ
+
+0
+
+.,?!0+-:¿¡";_#*
+
+.,?!0+-:¿¡";_#*
+
+*
+
+Umschaltung: Kleinschreibung/Großschreibung/Ziffern
+
+#
+
+[Leerzeichen] . , # *
+
+[Leerzeichen] . , # *
+
+83
+
+83877 DE Aldi N RC1 Content.fm Seite 84 Donnerstag, 7. August 2008 2:49 14
+
+Wenn Störungen auftreten
+Bei einer Störung des Geräts prüfen Sie bitte zunächst, ob
+Sie das Problem mit Hilfe der folgenden Übersicht selbst
+beheben können.
+Versuchen Sie auf keinen Fall, die Geräte selbst zu reparieren. Wenn eine Reparatur notwendig ist, wenden Sie sich
+bitte an unser Service Center oder eine andere geeignete
+Fachwerkstatt.
+Bei allen Problemen
+
+Überprüfen Sie, ob Netz- und Telefonkabel
+richtig eingesteckt sind (siehe Seite 17 und
+Seite 21).
+Überprüfen Sie das Telefon zunächst an einer
+anderen Telefonsteckdose.
+Überprüfen Sie mit der Batterieanzeige, ob der
+Akku geladen ist.
+Überprüfen Sie, ob das Mobilteil richtig registriert ist (siehe Seite 67).
+Überprüfen Sie, ob sich das Mobilteil in Reichweite der Basisstation befindet.
+
+Keine Anzeige im Display des Mobilteils
+
+Überprüfen Sie, ob das Mobilteil eingeschaltet
+ist (siehe Seite 25).
+Überprüfen Sie, ob der Akku geladen und polrichtig eingelegt ist (siehe Seite 17).
+
+Kein Freizeichen
+
+Überprüfen Sie, ob die Basisstation richtig
+angeschlossen ist (siehe Seite 17 und Seite 21).
+Überprüfen Sie, ob das Mobilteil eingeschaltet,
+geladen, richtig registriert und in Reichweite
+der Basisstation ist.
+
+84
+
+83877 DE Aldi N RC1 Content.fm Seite 85 Donnerstag, 7. August 2008 2:49 14
+
+Im Display des Mobilteils wird „Reichweite“!“ angezeigt
+
+Überprüfen Sie, ob die Basisstation richtig
+angeschlossen ist (siehe Seite 17 und Seite 21).
+Überprüfen Sie, ob sich das Mobilteil in Reichweite der Basisstation befindet.
+Überprüfen Sie, ob das Mobilteil an der gewünschten Basisstation angemeldet ist (siehe
+Seite 67).
+Überprüfen Sie, ob der Akku geladen und polrichtig eingelegt ist (siehe Seite 17).
+
+Kein Rufton an Mobilteil Überprüfen Sie, ob die Basisstation richtig
+oder Basisstation
+angeschlossen ist (siehe Seite 17, und Seite 21).
+Überprüfen Sie, ob die Lautstärke des Ruftons
+nicht abgeschaltet ist (siehe Seite 31).
+Überprüfen Sie, ob sich das Mobilteil in Reichweite der Basisstation befindet.
+Überprüfen Sie, ob dere Akku geladen und polrichtig eingelegt ist (siehe Seite 17).
+Im Display der Basisstation erscheint „- -“
+
+Anrufbeantworter ist ausgeschaltet. (siehe
+Seite 51).
+
+Ihr Gesprächspartner
+Überprüfen Sie, ob das Mikrophon eingeschalkann Sie nicht verstehen tet ist und die Stummschaltung ausgeschaltet
+ist (siehe Seite 31).
+Sie können nicht angerufen werden
+
+Überprüfen Sie, ob Sie auf die Sprechtaste gedrückt haben, ob das Zeichen „Telefonhörer“
+im Display angezeigt wird und ob Sie beim Abheben ein Freizeichen hören.
+Überprüfen Sie, ob ein anderes Telefon an der
+Telefonsteckdose funktioniert oder ob Ihr Telefon in einer anderen Telefonsteckdose funktioniert (siehe Seite 21).
+
+85
+
+83877 DE Aldi N RC1 Content.fm Seite 86 Donnerstag, 7. August 2008 2:49 14
+
+Es gibt Interferenzen mit Überprüfen Sie, ob sich die Basisstation direkt
+anderen Geräten
+neben einem anderen elektrischen Gerät befindet (z. B. anderes Telefon oder Faxgerät, Fernseher oder Mikrowelle). Stellen Sie das Telefon
+an einem anderen Ort auf.
+
+86
+
+83877 DE Aldi N RC1 Content.fm Seite 87 Donnerstag, 7. August 2008 2:49 14
+
+Werkseinstellungen
+Werkseinstellungen am Mobilteil
+Einstellung
+
+Optionen
+
+Werkseinstellung
+
+Ruftöne extern
+
+15 Ruftöne; 5 x normal,
+10 x polyphon
+
+Melodie 1
+
+Ruftöne intern
+
+15 Ruftöne; 5 x normal,
+10 x polyphon
+
+Melodie 2
+
+Rufton-Lautstärke
+
+5 Stufen und aus
+
+Stufe 5
+
+Hörer-Lautstärke
+
+Lautstärke in 5 Stufen
+
+Lautstärke Stufe 3
+
+Tastenschutz
+
+Ein/Aus
+
+Aus
+
+Autoantwort
+
+Ein/Aus
+
+Ein
+
+Display-Kontrast
+
+8 Stufen
+
+Stufe 5
+
+Tastaturtöne
+
+Ein/Aus
+
+Ein
+
+Sprache
+
+Deutsch/Englisch/Türkisch
+
+Deutsch
+
+Werkseinstellungen an der Basisstation
+Einstellung
+
+Optionen
+
+Werkseinstellung
+
+Ruftöne
+
+5 versch. Ruftöne
+
+Melodie 1
+
+Rufton-Lautstärke
+
+5 Stufen und aus
+
+Stufe 1
+
+Wahlverfahren
+
+Impulswahl/Tonwahl
+
+Tonwahl
+
+System-PIN
+
+-
+
+0000
+
+Priorität Mobilteil
+
+Alle/Ein Mobilteil
+
+Alle
+
+87
+
+83877 DE Aldi N RC1 Content.fm Seite 88 Donnerstag, 7. August 2008 2:49 14
+
+Weitere Werkseinstellungen
+Einstellung
+
+Optionen
+
+Werkseinstellung
+
+Alarmmelodie
+
+5 normale, 10 polyphone Ruftöne
+
+Melodie 1
+
+Alarm bei neuen
+Nachrichten auf Anrufbeantworter
+
+An/Aus
+
+Aus
+
+Zahl der Ruftöne,
+bevor der Anrufbeantworter eingeschaltet wird.
+
+2 / 4 / 6 / 8 Ruftöne oder
+Sparmodus
+
+Sparmodus
+
+88
+
+83877 DE Aldi N RC1 Content.fm Seite 89 Donnerstag, 7. August 2008 2:49 14
+
+Reinigung
+Vor der Reinigung ziehen Sie bitte den Netzadapter aus
+der Steckdose. Für die Reinigung verwenden Sie ein trockenes, weiches Tuch. Vermeiden Sie den Gebrauch von
+chemischen Lösungs- und Reinigungsmitteln, weil diese
+die Oberfläche und/oder Beschriftungen des Geräts beschädigen können.
+
+Entsorgung
+Verpackung
+Ihr DECT-Telefon befindet sich zum Schutz vor Transportschäden in einer Verpackung. Verpackungen sind Rohmaterialien und können wiederverwertet oder dem Recycling-Kreislauf zugeführt werden.
+
+Gerät
+Werfen Sie das DECT-Telefon am Ende seiner Lebenszeit
+keinesfalls in den normalen Hausmüll. Erkundigen Sie
+sich nach Möglichkeiten einer umweltgerechten Entsorgung.
+
+Batterien
+Verbrauchte Batterien gehören nicht in den Hausmüll.
+Die Batterien müssen bei einer Sammelstelle für Altbatterien abgegeben werden.
+
+89
+
+83877 DE Aldi N RC1 Content.fm Seite 90 Donnerstag, 7. August 2008 2:49 14
+
+Technische Daten
+Abmessung (B x T x H)
+Basisstation ohne Mobilteil
+Ladestation ohne Mobilteil
+
+ca. 150 x 100 x 70 mm
+ca. 70 x 85 x 50 mm
+
+Akku Pack für Mobilteil
+
+Typ NiMh 2,4 V, 600 mAh
+
+Standard
+
+DECT/GAP
+ca. 300 m Reichweite
+
+Netzadapter Basisstation
+
+Eingang: 230 V ~ 50 Hz, 60 mA
+Ausgang: 6 V
+
+600 mA, 3,6 VA
+
+Modell Nr.: ITE G060060D31
+Netzadapter Ladestation
+
+Eingang: 230 V ~ 50 Hz,45 mA
+Ausgang: 6 V
+
+300 mA, 1,8 VA
+
+Modell Nr.: ITE G060030D22
+Ladezeit
+
+ca. 16 Stunden bei vollständiger
+Entladung
+
+Bereitschaftsbetrieb
+
+ca. 100 Stunden
+
+Technische Änderungen vorbehalten!
+
+Konformitätsinformation
+Hiermit erklärt die MEDION AG, dass sich das DECT Telefon in Übereinstimmung mit den grundlegenden Anforderungen und den anderen relevanten Vorschriften der
+Richtlinie R&TTE 1999/5/EG befindet.
+Vollständige Konformitätserklärungen sind erhältlich unter www.medion.com/conformity.
+
+90
+
+83877 DE Aldi N RC1 Content.fm Seite 91 Donnerstag, 7. August 2008 2:49 14
+
+Stichwortverzeichnis
+CLIP
+Abkürzung für „Calling Line Identification Presentation“.
+Anzeige der Rufnummer des Anrufers. Der Telefonanschluss muss dafür freigeschaltet sein.
+
+DECT
+Abkürzung für „Digital European Cordless Telecommunication“. Europäischer Standard für schnurlose digitale Telefone und schnurlose Telekommunikationsanlagen.
+Zwischen mehreren Mobilteilen können kostenfreie interne Gespräche geführt werden. Ein weiterer Vorteil ist
+die erhöhte Abhörsicherheit.
+
+Freisprechen
+Ermöglicht freihändiges Telefonieren bei Telefonen mit
+eingebautem Mikrofon und Lautsprecher.
+
+GAP
+Abkürzung für „Generic Access Profile“. Funkprotokoll,
+über das schnurlose Telefone in DECT-Systemen mit der
+Basisstation Kontakt halten. Mobilteile in GAP-Technologie können herstellerunabhängig an allen Feststationen
+mit GAP-Schnittstelle betrieben werden. Die Übertragungsrate beträgt 9.600 bit/s.
+
+Hook-Flash
+siehe R-Taste.
+
+Interngespräche
+Kostenfreie Verbindung zwischen Endgeräten einer Telekommunikationsanlage.
+
+91
+
+83877 DE Aldi N RC1 Content.fm Seite 92 Donnerstag, 7. August 2008 2:49 14
+
+Makeln
+Leistung im T-Net, im T-ISDN und bei Telekommunikationsanlagen. Makeln erlaubt, zwischen zwei externen
+bzw. internen Gesprächspartnern hin- und herzuschalten, ohne dass der wartende Teilnehmer mithören kann.
+
+MFV
+Abkürzung für Mehrfrequenzwahlverfahren. Signalisierungsverfahren im T-Net. Dabei werden die Wahlsignale
+als Kombination von Tönen übertragen (Tonwahl). Mit
+MFV lassen sich auch Informationen z. B. zu Cityruf übertragen oder Anrufbeantworter Fernabfragen. Zur Nutzung der Komfortleistungen im T-Net wird zusätzlich die
+R-Taste mit Hook-Flash benötigt.
+
+Mikrofonstummschaltung
+Taste zum Abschalten des Mikrofons. Der Gesprächspartner am Telefon kann dann die im Raum geführten Rückfragen nicht mithören.
+
+Multi-Link-Funktion
+An einer Feststation können mehrere schnurlose Mobilteile innerhalb des Aktionsradius an verschiedenen Orten
+eingesetzt werden.
+
+Paging
+Bei schnurlosen Telefonen wird ein akustisches Signal
+von der Feststation zum Mobilteil gesendet. Innerhalb
+der Reichweite der Telefone können mit dieser Funktion
+z. B. verlegte Geräte gesucht werden.
+
+92
+
+83877 DE Aldi N RC1 Content.fm Seite 93 Donnerstag, 7. August 2008 2:49 14
+
+PIN
+Abkürzung für persönliche Identifikationsnummer. Dient
+als Schutz vor unberechtigter Benutzung.
+
+R-Taste
+Telefone, die mit der R-Taste (Rückfragetaste) ausgestattet sind, eignen sich auch für den Anschluss an Telekommunikationsanlagen. Bei modernen Telefonen löst die RTaste die Hook-Flash-Funktion aus: Die Leitungsverbindung wird für 170 - 310 ms unterbrochen und es wird
+der Vermittlungsstelle signalisiert, dass es sich bei den folgenden MFV-Tönen um Kommandos an die Vermittlungsstelle handelt. Diese Funktion ist für die Nutzung
+von Leistungen wie Rückfragen/Makeln und Dreierkonferenz mit mindestens zwei externen Teilnehmern erforderlich.
+
+Rufnummernanzeige
+siehe CLIP.
+
+SMS - Short Message Service
+Telekommunikationsdienst zur Übertragung von Textnachrichten, der zuerst für den GSM-Mobilfunk entwickelt wurde und nun auch im Festnetz verfügbar ist.
+Die erste Short Message (Kurznachricht) des Short Message Service (SMS) wurde im Dezember 1992 von einem
+PC an ein Mobiltelefon im Britischen Vodafone-Netz gesendet, also etwa ein Jahr nach der Einführung des GSMStandards für Mobiltelefone in Europa (1991).
+
+93
+
+83877 DE Aldi N RC1 Content.fm Seite 94 Donnerstag, 7. August 2008 2:49 14
+
+TAE
+Abkürzung für Telekommunikationsanschlusseinheit. In
+Deutschland übliche Steckdosen zum Anschluss analoger
+Telekommunikationsgeräte an das T-Net. Bei den TAESteckern und TAE-Steckdosen wird zwischen F- und NCodierung unterschieden. F-Codierung: F bedeutet Fernsprechen. Diese Stecker sind an Telefonen angebracht. NCodierung: N bedeutet Nichtfernsprechen. Diese Stecker
+sind an Zusatzgeräten wie z. B. Faxgeräten, Modems und
+Anrufbeantwortern angebracht. Es stehen verschiedene
+Ausführungen zur Verfügung. Am häufigsten findet die
+Dreifach-TAE (NFN) Anwendung, an der ein Telefon und
+zwei Zusatzgeräte angeschlossen werden können.
+
+Tonwahl
+siehe MFV.
+
+Western Stecker RJ11
+Ursprünglich in den USA verwendetes Steckerformat,
+welches mittlerweile auch in Europa zum Standard für
+Telefonanschlüsse geworden ist.
+
+94
+

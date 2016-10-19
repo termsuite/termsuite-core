@@ -1,0 +1,613 @@
+﻿Hindawi Publishing Corporation
+EURASIP Iournal on Wireless Communications and Networking
+Volume 2011, Article ID 176393, 12 pages
+doi:10.1155/2011/176393
+Research Article
+O O O
+A Secure and Robust Connectnvity Architecture for
+O O O
+Smart Devices and Applncatnons
+Taeshik Shon} Kyusuk Han,2 Iames I. (long hyuk) Park} Young-Sik Ieong,4
+and Yang Sun Lees
+1 Convergence S/WLaborator)4 DMC Re§D Centen Samsung Electronics, Suwon 442-600, Republic of Korea
+2Department oflnformation and Communication Engineering KAISZ Daeieon 305-701, Republic ofKorea
+3Department ofComputer Science and Engineering Seoul National University ofScience and Technology
+172 Gongreung 2-dong Nowon-gu, Seoul 139-742, Republic ofKorea
+4Department of Computer Engineering Wonkwang University Jeonbuk 570-749, Republic of Korea
+5Department oflnformation and Communication Engineering Chosun Universit)4 375 Seosuk-dong Dong-gu,
+Gwangju 501-759, Republic ofKorea
+Correspondence should be addressed to Yang Sun Lee, yslee48@gmail.com
+Received 31 May 2010; Accepted 2 August 2010
+Academic Editor: Damien Sauveron
+Copyright © 2011 Taeshik Shon et al. This is an open access article distributed under the Creative Commons Attribution License,
+which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.
+Convergence environments and technologies are urgently coming close to our life with various wireless communications and
+smart devices in order to provide many benefits such as connectivity, usability, mobility, portability, and flexibility as well as lower
+installation and maintenance costs. Convergence has brought important change not only in the way we live but also in the way
+we think. It is the progress towards the attempt to create and to evolve new valuable services through the device convergence
+and fusion of in-home, office, and various environments around the personal mobile apparatus. Based on the dynamic trends of
+convergence, it is widely argued that the increased requirements on secure and robust connectivity between a variety of mobile
+devices and their applications provide us the era of real pervasive computing environment. Thus, in this paper, we present a
+novel connectivity architecture using RF4CE-(Radio Frequency for Consumer Electronics-) based wireless zero-configuration and
+enhanced key agreement approach. We analyze the security and performance of our proposed approach by the development of the
+prototype H/W and the construction of a testbed with CE and mobile devices.
+I. open media platforms. Open platform convergence services
+between devices evolve into D2S (Device-to-Solution) in the
+Nowadays, various smart devices and their applications are existing D2D (Device-to-Device), and also evolve into M2M
+rapidly increasing according to the smart grid environment (Machine-to-Machine), that is all things' convergence, based
+based on the interlocking and controlling of in-home smart on interaction with devices that are not the simple coupling
+appliances. It means that the rapid and explosive increase between device-to-device and device-to-solution [1-4]. As
+of the mobile device like smartphone and tablet PC will the convergence technologies of next generation wireless
+have a big impact on human life more and more. The networks and smart devices are rapidly emerging, secure and
+enlargement of the mobile devices based on wired and easy connection between various mobile devices has become
+wireless mobile communication technologies becomes one a primary concern and a mandatory requirement in order
+of the important factors that brings into various and new to ensure dependable, secure communications and simple
+convergence services, and then promotes it. Such recent connectivity services under mobile and wireless network
+trends request the innovative paradigm about the various environment to end users. In this sense, IEEE 802.15.4
+convergence services satisfying the individualized desire and technologies are presented, as one of the representative
+consequently brings into the new converged services and convergence connectivity technologies, and favored to be
+
+2 EURASIP Iournal on Wireless Communications and Networking
+_ _ secure and robust connectivity architecture based on RF4CE
+End user applications . . .
+for smart devices and applications.
+Home 0 X 01 Home o X 02 promos This paper is organized as follows. In Section 2, we deal
+CERC HID I I I vendor Speeifie with the introduction of RF4CE and security issues of the
+existing techniques. In Section 3, the proposed approaches
+RF4CE ¤€tW0Yl<l¤Y€Y are presented such as the ad hoc and infrastructure con-
+figuration and advanced pairing method. In Section 4, the
+EEE 802-l5-4MAC and PHY actual system implementation and experiment are illus-
+trated. Discussion about the proposed approach is explained
+FIGURE li RMCE Protocol areliiieerare· in Section 5. Finally, we draw a conclusion of this paper in
+Section 6.
+2. Background
+applied to diversified mobile devices and their WPAN
+environments. In last March 2009, a principal electronics 4 2·l· Overview 
+corn (Panasonic) Philips) samsung Electronics) and SONY) one of the defacto WPAN standard technologies determined
+aiid zigbee Alliance agreed to found tbe Rpricp (Radio iii Mardi 2009 by rlie repreaeiirarive eleerrie lieiiie appli-
+Frequency {ot- Constnnct Elccttonics) Consortium which is ances enterprises including Panasonic, Samsung Electronics,
+based on the existing IEEE 802.15.4 radio frequency [5-7]. SON! and Philips
+Thus, the be one ofthe best candidates 
+to fulfill the requirement for connecting heterogeneous 
+mobile devices as well as various CE devices. In the security the
+aspect, the link key generation scheme through exchanging Aa showh lh Figure l>
+key seeds is supported between the RF4CE enabled devices layer tuhetloh ef the
+in order to provide reliable communication. However, the 
+ Provided by RF4CE standat-d has a ynlnctahihty power consumption, nondirectional function including the
+hkc Man-in-thc-Mjdd]c (MITM) attack that kcy sccd Value LCD back lighting interference avoidance, and bi-directional
+can be cxnoscd to thc third Patty because thc kcy sccd communication. In case of the network layer in RF4CE,
+is exchanged as a plaintext, and a third party can acquire lt has the llght'Welght stltletllle lh eohaPallsoh Wlth the
+and naasqnct-adc key sccds to gcnctatc link cnctyntton preexistence ZigBee. Generally the RF4CE topology consists
+kcy_ Bcsidcst thc schcntc also has thc Vulnerability of kcy of 2 branch types) nodes as called a target and controller. The
+seed retransmission and interception. In case key seeds are 
+ by a network attack hkc Dog (Dcnia] ofPAN coordinator similar with ZigBee network. In case of a
+additional sccd retransmission is tcquncd because ntaadntunt controller node, it can search the network coordinated by the
+255 seeds should always be successively reassembled to Works
+generate a link key between nodes for secure communication. 
+In case of Bluetooth, it has the risk of guessing of a PIN
+(Personal Identification Number) and the exposure of a 2.2. Connectivity Security Issues. The use of interoperation
+random number according to a security mode [8, 9]. between various consumer electronics, for examples, T\L Set-
+In this paper, we first address the RF4CE-based zero top box and DVD players, and portable IT devices such
+configuration in order to provide easy control and contents as mobile terminals and net-book is highly increasing. The
+sharing for a smart digital home device and applications. We network connectivity among CE and portable IT devices
+then propose RF4CE-based enhanced key agreement using are strongly needed primarily because they have various
+certificate-based mutual authentication to prevent cloned or wireless interfaces. Any service on top of the connectivity,
+comprised devices from joining RF4CE network and two- for example, content sharing service between devices is
+phase key seed distribution to provide efficient and robust impossible without easy set up of network connection
+key seed exchange. between digital devices. Not much easy set up of network
+The first contribution of this paper is that the proposed connection is recognized as industry standard. In Wi-Fi
+zero-configuration approach provides energy efficient, sim- alliance [10], Wireless Protected Setup (WPS) provides easy
+ple, and easy configuration method to various devices during set up between AP (Access Point) and IT device with Wi-
+their connectivity control and data sharing. The second Fi interface. By using WPA/WPA2 security module, it near-
+contribution is that the proposed RF4CE-based enhanced automatically configures secure connectivity between IT
+key agreement protocol providesadevice identification anda device and AP (Access Point) as long as two devices are
+forgery prevention using mutual device authentication, and certified as Wi-Fi Protected Setup. However, although many
+generates a like encryption key without using all 255 key options including PBC (Push Button Configuration) and
+seeds which have the possibility of information disclosure PIN (Personal Identification Number) modes are available
+to the third party, and resolves the vulnerability that key for WPS, it is only good for connectivity between AP
+seed information is exposed to the third party by applying and IT device, namely AP infrastructure mode and does
+fundamental key seed encryption. Finally we present a novel not support ad hoc mode. A technical working group for
+
+EURASIP Iournal on Wireless Communications and Networking 3
+Application
+Mobile
+terminal
+FIGURE 2: Overall environment of zero configuration approach.
+extension of WPS is hence ro ressin in Wi-Fi alliance service, and media rocessin multimedia latforms. In 15 ,
+P S 3 P S P
+[10-13]. the authors presented RF4CE-based remote control frame-
+RF4CE can provide the basic security functionalities work, however, it does not describe security analysis and
+such as frame encryption and data authentication in MAC performance analysis to address the proposed architecture's
+layer because it is based on IEEE 802.15.4 specification. superiority. Some researches [16, 17] showed the multimedia
+In the network layer of RF4CE, it first generates 128 bits processing platform based on p2p network and PTP/IP. In
+link encryption key and stores the key in the pairing table addition, sensor network platforms are suggested to show
+after finishing the pairing process, and then the encryption the applications using various connectivities in [17, 18].
+key 1S utilized for secure data transmission. In the process However, such researches cannot provide enough security
+of distributing the key seeds, it establishes secure channel aspect and robustness.
+between nodes. At this time, a controller and target node first
+performs the pairing process, and then checks the security
+capability option of the pairing request node. In case the 3' Proposed Approach
+COH€SPO1]d€n[ node Supports the Sccurlty _funCUOn' a key In this section, we present novel connectivity architecture
+seed d1str1but1on process is performed. During the key seed ~ · ( ( · ~
+_ _ _ _ with zeroconfiguration and advanced pairing approach
+d1str1but1on, the key seed values of the maximum n are · ( ·
+_ _ based on RF4CE. The zero-configuration approach 1S
+delivered to a controller and then the same secret key 1S ~ d · ~ ( ·
+_ _ _ _ require to provide simple and easy connection between
+generated 1n an end-to-end. At this time, the maximum n ~ · ~ · · ~
+_ _ various W1-F1 supported devices. And the proposed pairing
+of the transmitted key seed value 1S 255. In each node, the ~ ~ ·
+_ _ scheme is good alternative for complementing the vulnera-
+key seed value 1S reassembled through the XOR operation · · · · ~ (
+_ _ b1l1t1es of the existing RF4CE key agreement scheme.
+and then generates the link encryption key [6, 7, 12, 14].
+However, the key seed values have the vulnerabilities such
+as data interception, masquerading, and denial-of-service 3·r· Mode· We first
+by the third party as well as MITM attack because of Show
+being transmitted to the plaintext state without providing 
+an encryption or any security functions. Therefore, the key of the 
+seed wiretappingbymalicious users should be fundamentally The 
+prevented, and a solution for forgery of seed value itself and can be
+a sequence number of a key seed frame is required, too. 
+In order to prevent DoS attack, it is necessary to support and
+tolerant and resilient capability to prepare for interrupting In order to provide zero-configuration functionalities,
+the normal key seed distribution and secret key generation. each device should have multi-RF (RF4CE and Wireless
+There is the protection method of the key seed value through interface like Wi-Fi) zero-configuration core modules, and
+an encryption by using a predistributed master key as a its application component. In this environment, a mobile
+simple solution for solving this problem between nodes. terminal (user) can make a connection between TV and PC
+However, there remains still security issues like a node as well as their turning on and off using RF4CE interface,
+capture and distribution the master key safely. and then remote control and contents sharing services can
+Recently several researches related to connectivity and be provided by simple Wi-Fi zero configuration. In Wi-
+control platform such as universal control, home sensor Fi zero configuration, the proposed approach can support
+
+4 EURASIP Iournal on Wireless Communications and Networking
+Application \ Application
+Zero-config I Zero-conf1g
+module U 
+Mobileterminal
+I. Establishing RF4CE connection,
+and then sharing zero-configuration information
+m RF4CE connection
+- - - Wi-Fi connection
+FIGURE 3: Ad hoc connection mode in zero configuration approach.
+both infrastructure mode based on Access Point and ad In case of secure communication, secret key seed values can
+hoc mode connection. The zero-configuration architecture be shared if each corresponding devices are configured as
+capabilities can be performed by the distinguished features security enabled. After constructing RF4CE control channel
+of RF4CE such as NLOS (No Line-Of-Sight or field of vision like bold line of Figure 3, a mobile terminal distributes ad-
+limitations) feature, bidirectional capability reliable com- hoc connection information such as private IP, SSID, security
+munications, power consumption, and true interoperability material, XML profile, and so on, to already existing RF4CE
+between vendors' products. In aspects of our implementa- pairs. Each RF4CE connected devices establish Wi-Fi ad-hoc
+tion, we assume that the architecture has RF4CE and Wi- connection as illustrated in the dotted line of Figure 3.
+Fi RF interface. Thus, it can perform energy efficient power Infrastructure connection mode is described in Figure 4.
+control, Wi-Fi zero configuration and exchanging control In infrastructure mode, we assume that there exists Wi-Fi
+command by RF4CE and high-speed data transmission by access point device and at least one device has a preconnected
+Wi-Fi. The zero-configuration module supports lower layer's Wi-Fi connectivity. The preexisted Wi-Fi connection is
+RF interfaces, zero-configuration component, and RF inter- described as the double-dotted line of Figure 4. The overall
+face controller. In other words, the zero-configuration core environment is the same as ad hoc connection mode,
+module performs RF interface control and management, however, access point is added. Basically, in infrastructure
+and zero configuration of Wi-Fi network based on RF4CE mode, the discovery and pairing procedure to establish
+control channel. Application components have a variety of RF4CE network is performed as ad hoc mode. RF4CE
+application service profiles to provide remote control service, control channel is illustrated as the bold line in Figure 4.
+energy efficient power control, and content sharing. If more During RF4CE network establishment, a user's mobile
+application profiles are added on our devices, they can work terminal collects an existing Wi-Fi connectivity from the
+with other devices using the same application profile based rest of devices in RF4CE network, and then requests the
+on the zero-configuration architecture. Wi-Fi connection information to the device with Wi-Fi
+As we already mentioned about two kinds of Zero con- connectivity. After getting Wi-Fi connection information,
+figuration modes, there are two connection modes like AP the mobile terminal distributes the Wi-Fi information such
+and ad hoe for Wi-Fi zero configurations using RF4CE. The as SSID, authentication mode, security key XML pronle, and
+proposed architecture can support ad hoc and Infrastructure so on, to the devices connected by RF4CE. Finally the device
+modes when a device requires making a connection with   1 Wi-Fi 
+other devices with Wi-Fi. connection, which is illustrated in the dotted line in Figure 4.
+Ad hoc connection mode is described in Figure 3. In If all members me
+ad hoc mods) thcrc is no acccss Point dcvicc and only W1-F1 zero configuration data will be delivered by secure
+exist RF4CE-based mobile and CE devices. For explanation, 
+we assume that there are mobile terminals, PC, and TV
+devices. First, a mobile terminal tries to establish RF4CE 3.2. Advanced Pairing. In this section, we propose advanced
+network performing device discovery and pairing procedure. pairing approach based on RF4CE key agreement scheme.
+
+EURASIP Iournal on Wireless Communications and Networking 5
+Application \
+Zero-config
+module
+Mobile terminal
+2. Obtaining AP connection info from PC using RF4CE, and then
+sharing the AP connection information between MT and TV
+- RF4CE connection
+if- Wi-Ei connection
+= = = Existing Wi-Fi connection
+FIGURE 4: Infrastructure connection mode in zero-configuration approach.
+We first present a mutual authentication process between Mobileterminul pgjpxgund so {mth
+devices entering RF4CE network is performed to provide  (target device)
+enhanced RF4CE key agreement with two-phase key seed Request
+distribution based on a certificate like Mobile WiMAX [1]. In . , .
+_ _ _ Veylfy Target s certificate
+the device authentication of the IEEE 802.16 standard called Certificate
+Mobile WiMAX, it prepared for a forgery attack like a cloned 
+SS by using a certificate applied in the manufacturing process Verify
+[19-21]. In other words, we concentrate on the authentica-
+tion of the devices itself however, it can verify whether a
+device participating in the RF4CE pairing process is normally
+manufactured or not. It also decreases the possibility of a FIGURE 5; Mutual authentication) key puyumutem
+masquerading attack in which a compromised controller or
+target participates in key seed allocation process.
+As shown in Figure 5, a controller and target node
+providing a certificate each other perform a mutual authen- that the controller is a node requesting a pairing to target
+tication process before the pairing process starts. First, the through the hash value and signature verification, and then
+controller receiving the target certificate confirms whether it finishes all mutual authentication process.
+the certificate is provided from an authenticated target After finishing mutual authentication process, the pro-
+through the verification process of CA (Certificate Author- posed connectivity architecture performs two-phase key seed
+ity) signature, and then the controller delivers its own distribution. Basically after distributing 255 seed values in
+certificate, UID (Unique ID) and SEK_R (Seed Encryption the existing method, these values were performed XOR
+Key Random number) values which are used during key seed operation to generate the link encryption key of 128 bits.
+distribution. The UID and SEK.R is a kind of a random However, the existing method have some problems such as
+number selected arbitrarily and they are encrypted by target's key seeds are sent to a node as a plaintext and all key seed
+public key with the signature of a controller after applying values (maximum 255 seeds) should be guaranteed their
+hash-function. The UID value is used as an argument at the successful transmission each time without loss. Therefore,
+key seed allocation process and the SEK_R is used in selecting in this paper, we propose two-phase key seed distribution
+a key seed encryption function. In a target side, the target approaches called quick and main mode. In case of quick
+certificate is verified, and then the UID value, SEK_R and mode, it can provide DoS resilient capability because it
+a controller's signature are decrypted by the target°s private does not need to send maximum 255 key seeds every time.
+key. In addition, the target verifies the controller°s signature And a main mode can provide the confidentiality of the
+to calculate the hash value of UID and SEK.R for confirming key seed values using all different seed encryption keys.
+UID and SEK.R values. Therefore, the target authenticates Current RF4CE standard does not provide any protection
+
+6 EURASIP Iournal on Wireless Communications and Networking
+during key seed distribution, while our protocol provides function. For the generation of the SEK,,, we can use (2) or
+the secure protection for the initial key seed distribution. (3) with the enumerated SEK.R of 254 bits. If the nth bit
+In the pairing phase (Figure 5), controller device can verify of SEK.R is 0, the FsEK() function of (2) is applied to make
+target's certificate and obtain the public key of the target. SEK,, of nth key seed value. If not, (3) is used. The distributed
+Anyone who eavesdrop the communication cannot know or all key seeds are not only encrypted by using all different
+modify SEK.R since SEK_R is encrypted with accompanying encryption keys, but also cause more computation and time
+hashed value. The message from controller device can be cost to guess a SEK, even in case a special key is exposed by
+easily authenticated by target's private key, while previous the third party. Thus, the main mode can reduce the threat
+methods do not provide the message authentication in this of key exposure and forgery due to the key seed transmission
+phase. of plaintext status:
+First, the proposed quick mode is performed with the
+procedure as described in Figure 6. A target node delivers 
+randomly generated N seeds (N S 255) to the controller. 
+In each side, the controller and target can select the same
+n (n S N) seeds among   seeds, and then they are used 
+for generating the same link encryption key. In order to '
+select n seeds, each node utilizes the random selection mask SEK,
+function which generates a random number with the size of
+255 bits using the address and the UID previously shared 
+in the authentication procedure and IV assignment process, . .
+separately. For example, the bit string of generated 255 bits 
+becomes a In other 5EKn : (3)
+words, each 0 or 1 of nth bit can be applied to a simple
+masking scheme to decide the transmission of a key seed Encryptedseedu 
+value. In addition, we can transmit the only selected n key
+seeds by the masking result to a controller as a modified quick (Figure 7)> 
+mode. The former quick mode is a key seed distribution SEK1
+method to provide the tolerance against DoS or intercept 
+attack in comparison with the existing solution because it 
+makes it difficult for attackers to know which seeds are used
+for key generation. V\/hen compared to a maximum 255 key
+seed transmissions of the existing key seed distribution, the putativn of is
+mudjucd quick mudc is a Way tu focus Ou thc uausuussjuu randomly chosen by the controller device, and transmitted
+efficiency because of distributing only selected n key seeds.  
+Therefore, the quick mode brings the effect of reducing SEK-R is i
+the computation time since a link encryption key can be breaks is based
+generated by using few numbers of seeds. In addition, there 
+is the advantage to make difficult for guessing a link key such
+Party protocols require intermediate entities such as base station,
+In quick mode (Figure 6), the communication overhead is While 
+reduced to n (S255) times communications while 
+standard requires 255 times communications. In order to
+generate the shared key using quick mode, an adversary 4_ Experimental and Implementation Results
+should know n seeds that are randomly selected in 255
+seeds. Also, the selection of n seeds needs the shared UID 4.1. Implementation 0f Connectivity Architecture. In order to
+that is securely transmitted in the pairing phase (Figure 5). confirm the feasibility of the proposed zero configuration
+Thus, our protocol provides more efficiency in key seed and advanced pairing approach in the connectivity archi-
+distribution than current standard without threaten the tecture, we implemented the prototype H/W module with
+security. zero configuration and advanced pairing functionalities for
+In case of the main mode, the proposed main mode mobile terminal and PC system. As described in the previous
+is performed with the procedure as described in Figure 7. section, the approaches are supported by RF4CE based on
+All key seeds up to 255 are transmitted to a node like the IEEE 802.15.4 for all CE appliances and IT devices. In
+RF4CE standard, however, all seed values are encrypted by order to confirm and evaluate the feasibility of the proposed
+using all different SEK (seed encryption key) in order to RF4CE-based zero-configuration and advanced key agree-
+solve the problem of key seed distribution as a plaintext. ment system, we fabricated prototypes of RF4CE evaluation
+We can calculate each seed encryption key by following board shown in Figure 8. We implemented the RF4CE zero-
+equations. First, the SEK1 for encrypting the initial key seed configuration with ad hoc and infrastructure mode, and
+value is derived by (1) using UID, I Il and SEK.R of the the improved RF4CE key agreement protocol with mutual
+mutual authentication procedure as the arguments of FgEK() authentication and two-phase key seed distribution on the
+
+EURASIP Iournal on Wireless Communications and Networking 7
+Mobile terminal p(j_ TV; and SO forth
+(controller device) (target device)
+Security setup
+-Mode: quick
+Random Selection mask -Key func: random selection mask Random Selection mask
+Seed 1
+Select n seeds Generate 255
+among N seeds I seeds
+Seed N
+(N I 255)
+Computing the
+link key link keV
+FIGURE 6: Key seed distribution-quick mode.
+Mobile terminal PC, TV and
+(controller device) (target device)
+Security setup Generate 255
+seeds
+- Mode
+Computing the Computing the
+link key link key
+FIGURE 7: Key seed distributi0n-main mode.
+RF4CE test board. In Figure 8, it shows two kinds of RF4CE used a small-size model with one-chip solution for a mobile
+prototypes such as upper figure is RF4CE prototype with terminal (e.g., Omnia phone) and a common model with
+MG2455 RF4CE module [20] and lower figure is the layout enough size for multifunctional usage such as ZigBee and
+of RF4CE prototype board. The specifications of the RF4CE other IEEE 802.15.4-based simple applications (PCI board or
+evaluation board are shown in Table 1. MG2455 consists USB board).
+of 2.4 GHZ RF transceiver, baseband modem, H/W MAC, Figure 9 is a real mobile phone with connectivity archi-
+8051 MCU, and flash memory. Moreover, it has timer, UART tecture module in our testbed. In order to make a testbed,
+peripheral, and normal I/O pins. Specifically the MG2455 we used Samsung Omnia phone (SCH-M490) and the
+provides a few enhanced features as follows: Scalable Data prototype module is embedded as a type of small PCB in a
+Rate (250 kbps for ZigBee, 500 kbps and 1Mbps for private battery case.
+applications), Voice Codec Support, High RF RX/TX Power, Figure I0 is a prototype for PC system and it describes
+96 KB Embedded Flash Memory for Program Space, and a variety of a built-in type of the prototype modules. It can
+Power Management Scheme with Deep Sleep Mode Support be installed by PCI extension board or USB connecter board
+(under I {4A). Thus, we implemented H/W modules with according to the type of PC system. For instance, in case
+IEEE 802.15.4 PHY/MAC as various types in order to be of note-pc type, the prototype module can be installed as
+applied to mobile terminal and PC system. Specifically, we an USB connection type extension board because it cannot
+
+8 EURASIP Iournal on Wireless Communications and Networking
+TABLE 1: Specification of RF4CE prototype board.
+Board size 30 x 29 [mm2]
+General features
+MCU Enhanced 8-bit 8051 (hardwired MAC and AES-128)
+P/N MG2455-F48 (Radiopulse)
+Memory 96 KB flash memory
+8 KB SRAM
+Etc. 16 Mhz crystal, 12-bit A/D, D/A converter
+Processor! Radio Frequency range 2400-2483.5 [MHz]
+Data rate 250 kbps/500Kbps/1Mbps
+
+Transmit power _ _ _
+(Rx Sens1t1v1ty -95 dBm)
+Antenna Chip antenna
+. 28 mA @ RF mode
+Current consumption
+. 1uA @ Deep Sleep mode
+Miscellaneous
+Power supply 1.5V alkaline battery (X2) (AA Size)
+RF connector SMA type RF connector
+TABLE 2: Energy consumption for contents sharing scenario.
+TV status query Contents list query Contents delivery Total energy
+(times) (times) (1 Mbytes) consumption (mA)
+RF4CE + W"F' Wlth 2 (RF4CE) 2 (RF4CE) 447 (win) 97,991.8
+Zero-configuration
+Wi-Fi only 2 2 447 98,769.0
+Bluetooth + Wi-Fi 2 (BT) 2 (BT) 447 (Wi-Fi) 98,121.0
+have a PCI slot like desktop PC. The prototype for PC sharing controller between TV and PC. Users can control TV
+system consists of chipcon's CC2420 as a radio chip (2.4 GHz and PC by using their own mobile terminal, remotely and
+Frequency 250 Kbps, 0 dBm Output power), TI MSP430 16- freely.
+bit RISC architecture with 12-bit A/ D, and D/A converter On the other hand, the testbed of a simple RF4CE
+as a microcontrol unit. Moreover, 116 Kb flash memories network for validating the fundamental functionalities of the
+and 8Kb RAM is installed as an internal memory and the proposed enhanced RF4CE key agreement system has been
+board size of core module is 60 >< 32 mm. Figure 10 presents constructed in our laboratory. As shown in Figure 11(b),
+various built-in type of the prototype module in PC system. the RF4CE testbed is composed of two PCs as a controller
+Figure 10(a) shows that the prototype module is connected and target simulator, and the simulators are connected with
+by USB extension board to note-pc. In case of normal RF4CE prototype boards, separately. A discovery or pairing
+desktop PC, the module is installed by PCI slot as illustrated request packet from a controller node is sent to the target
+in Figure 10(c). During debug and test, it is connected to the node, and then it is delivered to the simulator program using
+development machine by USB port as shown in Figure 10(b). USB interface through UART serial socket. Thus, we can see
+that PC simulator is connected to RF4CE devices with USB-
+4.2. Experimental and Demonstration of Connectivity Archi and then Each node Commumcatcs on
+tecture. In this section we constructed two testbed for zero- IEEE 802-15-4 Standard
+configuration approach and advanced pairing approach like
+Figures 11(a) and 11(b). First, the testbed of a RF4CE-based 5. Discussion of Secure and Reliable
+wireless zero-configuration in connectivity architecture for Connectivity Architecture
+Smart and Easy Control of CE devices in order to validate the
+core functionalities with implemented zero-configuration Based on the proposed zero-configuration approach, we
+modules has been created in our laboratory. As described in analyzed energy consumption for contents sharing between
+Figure 11(a), the zero-configuration testbed consists of TV devices using different types of wireless technologies, that is,
+(Samsung LED TV 8000), two Mobile terminals (Samsung RF4CE, Wi-Fi, and Bluetooth. We applied multimedia con-
+Omnia phone SCH-M490), and Note-PC (Samsung SENS tents sharing to them separately. For each of these types, we
+P50). Each device has RF4CE-based zero-configuration measured the amount of energy consumed and Table 2 shows
+module and Wi-Fi interface. The two mobile terminals have the comparison results. We retrieved TV status 2 times and a
+the same application, however, it can be work for twofold: list of contents in PC 2 times, and then issues a data sharing
+one is only for TV control, the other is for showing contents command. In order to measure the energy consumption, we
+
+EURASIP Iournal on Wireless Communications and Networking 9
+TABLE 3: Security analysis and comparisons.
+Existing RF4CE Bluetooth Proposed System
+Feature None ECDH(Mode4) PKC*.
+Al1Il'l€HIi€8Ii0H Storage cost None Max204S bits Max204S bits
+Computation cost None 3E** 3E* *
+Feature Packet level Packet level Packet level and quick mode
+IHI€gfiIY Storage cost 255*80 bytes *** $255* 80 bytes
+Computation cost 255 times *** $255 times
+Feature None (Plaintext) None (Plaintext) Main mode
+Confidentiality Storage cost None None 128 bits
+Computation cost None None <E
+* Public Key Cryptosystem; * *E denotes the exponentiation; *** BT does not use key seed distribution scheme.
+
+(a) Prototype of the proposed module for Omnia (left) and its Debugging Board (right)
+TTA 20Pconnector MAX3232
+socket
+
+(b) Layout of the prototype and its debugging board
+FIGURE 8: The Prototype of the connectivity architecture.
+transmit I Mbyte-size content from PC to TV and measure real life and we are going to use a control unit to remotely
+the amount of energy consumed using the current con- control them. As demonstrated in this section, multimedia
+sumption model in [22]. In the case of zero-con{iguration control communications in using such various converged
+approach, RF4CE works for multimedia system control and multimedia services also requires a nonnegligible amount of
+Wi-Fi is used for delivering the content and the same con- energy. In this sense, the proposed low-power RF4CE-based
+figuration is applied to Bluetooth. But for the case of Wi-Fi, zero-conhguration architecture can play a key role delivering
+only Wi-Fi is used for both remote control and data sharing. a new device control experience with the users in the new
+Based on this experiment result, we claim that the RF4CE- environment of multimedia converged services
+based zero-conliguration is more suitable to multimedia Moreover, we analyze our proposed approach in aspects
+system control and contents sharing than the other solutions. of the security of authentication, integrity confidentiality
+In multimedia communications, energy is mostly con- and the cost for computation and communication. We also
+sumed while devices exchange data and multimedia com- analyze the feasibility of our protocol against the known
+munications have not been much used for control. The attacks. And then, we compare our proposed system with
+age of various converged multimedia services is on its the existing RF4CE key agreement and Bluetooth pairing
+way and furthermore various hardware devices for these process. In Table 3, we tabulate the functional features
+services are being developed. In light of this, sooner or between the existing RF4CE, Bluetooth, and the proposed
+later, these services and devices will be common in our system according to above-discussed security analysis.
+
+10 EURASIP Iournal on Wireless Communications and Networking
+
+FIGURE 9: Mobile Phone (Omnia) and its embedded prototype module.
+)
+FIGURE 10: Installed zero-configuration modules for PC extension (USB connection and PCI extension).
+(i) Authentication. VVhile the existing RF4CE standard does not guarantee the security against modification or loss of the
+not consider any authentication method for the pairing and key seeds considering the integrity of transmitting max 255
+the key seed distribution, the proposed approach employs the number of key seeds. Instead, the proposed protocol provides
+authentication scheme that is used for the wireless network the higher level of integrity than the previous methods by
+standards such as IEEE 802.16. Applying our approach, two choosing n number of key seeds randomly from max 255
+entities in RF4CE communication can mutually authenticate key seeds in quick mode. Note that we do not consider the
+each other during initial pairing with the preinstalled integrity and confidentiality of key seeds of Bluetooth that
+certificate issued by CA. Thus, the proposed approach does not use the key seed distribution. Thus, the existing
+is secure against not only the unauthorized device from RF4CE supportapacket/frame level integrity function by the
+attaching any authorized devices, but also any malicious standard specification. And the proposed approach decreases
+entity from compromising or forging the node. In case of the the threat of the packet loss/ interception and storage size
+Bluetooth, the PIN (Security mode 2, 3) or ECDH (Security (under 255*80 bytes) by providing selective transmission of
+mode 4) are deployed for the mutual authentication. Our key seeds.
+proposed protocol has the additional computation cost
+of three eXPoueutratrouS for $uPPortrug PKC (Public KeY (iii} Confidentiality: The main mode of our proposed proto-
+CrYPto$YStem) as Same as the ECDH ($ecurrtY mode 4) of col provides the high level of confidentiality in comparison
+Bluetooth- In case of the comPutotrou co$t> our ProPo$eu with the previous methods that key seeds are transmitted
+oPProach has the comPutotrou cost of three eXPoueutrattou$ in plain text during the key seed distribution, since every
+due to the public key operation in the mutual authentication key seed is encrypted by different keys using 128 bits AES
+Procedure- rt means the Publrc keV oPerotrou is PreVarleu algorithm. In case of Bluetooth, it still has the vulnerability
+against other security operations. Thus, the authentication that [N_RAND for generating Link Key is transnaitted in a
+row in Table 1 only has the computation cost and it shows Plain text 
+the same level of burden compare to the cost of Bluetooth
+ 6. Conclusion
+(ii} Integrity. Integrity of key seeds shared among the In this paper, we proposed a novel RF4CE-based zero-
+nodes in RF4CE networks is guaranteed by FCS (Frame configuration and advanced pairing approach for a novel
+Check Sum) initially supported by RF4CE MAC Frame connectivity architecture of various CE and IT devices and
+and MIC (Message Integrity Code) provided to packet in applications. Deploying the proposed architecture enable
+Network layer (NWK). Bluetooth also supports similar level users to control a variety of devices and share data, and
+of packet integrity. However, the previous methods could save the power consumption in comparison with the existing
+
+EURASIP Iournal on Wireless Communications and Networking 11
+_ _ { _ Z Target simulator
+Digital T\' ( media server)
+Smartphone
+(smart controller t , `
+(a) Zero-configuration testbed (left) (b) Advanced pairing testbed (right)
+FIGURE 11: Testbed setup for the demonstration experiment (TV-Phone-PC).
+Wi-Fi-based zero-configuration methods since 
+zero configuration is working on IEEE 802.15.4 standard 
+technology. In case of advanced pairing, the novel approach  Communications Magazine, vol.
+to enhance RF4CE key agreement 1S presented according
+. 42, no. 6, pp. 140-146, 2004.
+to these recent convergence trends. Our improved key a _
+. . [2] E. Callaway, P. Gorday, L. Hester et al., Home networking
+agreement approach supports the mutual authentication . . .
+. . . . . with IEEE 802.15.4: a developing standard for low-rate wire-
+using RF4CE device certification in order to resolve the threat,
+o counterfeited or cloned devices. The quick mode of the Vol 40 no 8 PP 70_77 2002
+proposed key seed distribution increases the possibility of tat K Gin, S{_H{ Yang, E Yao, and X{ Lu, (ta ZtgB€€_bas€d
+the Secure generation ot a lmk e""YPU'm key agamsi [he home automation system," IEEE Transactions on Consumer
+disclosure to the third party and the DoS attack by providing Electronics, VOL 55, nO_ 2, pp 422_450, 2009_
+the transmission of the selected key seeds. Key selection building automation
+rnlornrotron rs only shared hetween the prnred nodes- The 
+main mode solves the vulnerability of plaintext transmission jeg, VOL 16, n0_ 2, pp_ 14.19, 2005
+through enerypting ell trensnntted seeds with different 
+In order to verify the zero-configuration and advanced 
+Pallllag npproneh in the connectivity 6] ZigBee Alliance, "RF4CE Standard Specification," Release 1.0,
+mented the prototype's networking stack and its various March 2009.
+prototypes H/W such as Samsung°s "Omnia" dongle for [7] IEEE STD 802.15.4-2006, "Part 15.4: Wireless Medium Access
+a mobile terminal and PC/note-PC side dongles. We pre- Control (MAC) and Physical Layer (PHY) Specifications for
+sented the implementation results with various verification LOW-Rate Wireless Personal Area Network? September 2006-
+scenarios using Omnia terminal, LED T\L and Note PC. [8] Bluetooth Special Interest Group, "Bluetooth Core Specifica-
+The experimental scenarios demonstrated that the proposed tion v3-0 + High Speed  Release l-0, April 2009-
+architecture enables to construct a simple and easy control [9] K. Scarfone and I. Padgette, Guide to Bluetooth Security, NIST
+for an efficient smart home network between various devices. Speeirll Publication 800-l2l, 2008-
+Moreover, we verified the feasibility and compared with [10] Wi-Fi alliance, "Wi-Fi Protected Setup Specification Version
+the existing solutions of the proposed approach through 1-0h3'Deeernher 2006-
+analyzing security of Authentication, Integrity, Confidential- llll lEEE STD $02-l5-4-2006, "Pnrt l5-41 Wireless Medium Access
+ity and Known Attacks. From the various security analysis Control (MAC) and  Layer (PHY)  liar
+and real implementation, We can Say that the Proposed Low-RateW1reless Personal Area Network, September 2006.
+RE4CE key agreenaenr approach rs more robust than any [12] P. Baronti, P. Pillai, V W C. Chook, S. Chessa, A. Gotta, and
+other previous schemes and works efficiently with RF4CE Y·  Wlreless sensm Hetwerksi a SUYVSY aa the state
+nodes. Therefore, to the best of my knowledge, these results gf the are 
+show the potential to bridge the convergence environments Ommumia IME YO: 
+with smart devices and applications to our life using the 
+proposed connectivity architecture with RF4CE-based Wi-Fi Zero CCH  [14] N. Sastry and D. Wagner, "Secur1ty considerations for IEEE
+802.15.4 networks," in Proceedings of the ACM Workshop on
+Wireless Security (WiSe '04), pp. 32-42, October 2004.
+_ _ _ [15] B. Koo, T. Ahn, ]. In, Y Park, and T. Shon, "R-URC: RF4CE-
+Thls reseereh was SuPP0¥ted hy the Bnsre $erenee» Reseereh based universal remote control framework using smartphone,"
+Program through the National Research Foundation of Korea in Prgcccdings ef the Inteynutignul Ceeferenee 0,, Compute-
+(NRF) funded by the Ministry of Education, Science and tional Science and Its Applications (ICCSA '10), pp. 311-314,
+Technology (2010-0017023). 2010.
+
+12 EURASIP Iournal on Wireless Communications and Networking
+[16] B. Qureshi, G. Min, D. Kouvatsos, and M. Ilyas, 'ZAn adaptive
+content sharing protocol for P2P mobile social networks,"
+in Proceedings of the 24th IEEE International Conference on
+Advanced Information Networking and Applications Workshops
+(WAINA '10), pp. 413-418, 2010.
+[17] P. Corcoran, 'Architecture for a home media network based
+on PTP-IP connectivity techniques," in Proceedings ofthe 26th
+IEEE International Conference on Consumer Electronics, The
+Mobile Consumer (ICCE '08), pp. 1-2, Ianuary 2008.
+[18] P. William and S. Ravi, 'ZAn internet overlay architecture for
+global scale wireless sensor networks," in Proceedings of the
+I/Wreless Telecommunications Symposium (WTS '10), pp. 1-6,
+2010.
+[19] IEEE Std 802.16-2004, "IEEE Standard for Local and
+Metropolitan Area Networks Part 16: Air Interface for Fixed
+Broadband Wireless Access Systems," IEEE, 2004.
+[20] IEEE Std 802.16e-2005, "IEEE Standard for Local and
+Metropolitan Area Networks Part 16: Air Interface for Fixed
+Broadband Wireless Access Systems, Amendment 2: Physical
+and Medium Access Control Layers for Combined Fixed
+and Mobile Operation in Licensed Bands and Corrigendum,"
+IEEE, 2005.
+[21] Airspan Networks, "Mobile WiMAX security," Release 1.0,
+September 2007.
+[22] ].-S. Lee, Y-W. Su, and C.-C. Shen, ZA comparative study of
+wireless protocols: bluetooth, UWB, ZigBee, and Wi-Fi," in
+Proceedings ofthe 33rd Annual Conference ofthe IEEE Industrial
+Electronics Society (IECON '07), pp. 46-51, November 2007.
+
+H Ch `
+The 2011 European Signal Processing Conference (EUSlPCO-2011) is theCHC)
+nineteenth in a series of conferences promoted by the European Association for Gmeml Chuh
+Signal Processing (EURASIP,   This year edition will take place Ana L Perez-Neira (UPC)
+in Barcelona, capital city of Catalonia (Spain), and will be jointly organized by the
+Centre Tecnologic de Telecomunicacions de Catalunya (CTTC) and the Carles Antén-HMG (CTTC)
+Universitat Politecnica de Catalunya (UPC). Terhnieul Pmgmm Chuir
+EUSlPCO-2011 will focus on key aspects of signal processing theory and(CTTC) _
+applications as listed below. Acceptance of submissions will be based on quality,  
+relevance and originality. Accepted papers will be published in the EUSIPCO(UpC)
+proceedings and presented during the conference. Paper submissions, proposals Plemry Tulks
+for tutorials and proposals for special sessions are invited in, but not limited to, Ferran Marques (UPC)
+the following areas of interest. Yfmina Elder <T€¤h¤i¤¤>
+SpeciulSessin1rs
+Areas of Interest
+• Audio and electro-acoustics. Matshngtsslm (KTH)
+· · · · · · · Fiuuuces
+• Design, implementation, and applications of signal processing systems. Montserrat Néjar (UPC)
+• Multrmedra signal processing and coding. _
+• Image and multidimensional signal processing. 
+• Signal detection and estimation. (Hong Kgng UST)
+• Sensor array and multi-channel signal processing. Beatrice Pesquet-Popescu (ENST)
+• Sensor fusion in networked systems. Publicity
+• Signal processing for communications. (CTTC)
+• Medical imaging and image analysis. Mmm Navam) (CHC)
+• Non-stationary, non-linear and non-Gaussian signal processing.  (UPC)
+l l Carles Fernandez (CTTC)
+Submlssmns rnrziistririz Linisnn sr Exhibits
+Procedures to submit a paper and proposals for special sessions and tutorials will  
+be detailed at . Submitted papers must be camera-ready, no Albert Sitja (CTTC)
+more than 5 pages long, and conforming to the standard specified on the
+EUSIPCO 2011 web site. First authors who are registered students can participate ]u Liu (Shandong University-China)
+in the best student paper competition.
+Tarnas Szrranyr (SZTAKI -Hungary)
+Rich Stern (CMU-USA)
+Important Deadlines; Ricardo L. de Queiroz (UNB-Brazil)
+Proposals for special sessions 15 Dec 2010 V
+Proposals for tutorials 18 Feb 2011    
+Electronic submission of full a ers 21 Feb 2011 1 ~ it     
+EURASIP Notrfrcatron of acceptance 23 May 2011 
+Submission of camera-ready papers 6 ]un 2011 ne wntrnn
+Webpage:
+
+

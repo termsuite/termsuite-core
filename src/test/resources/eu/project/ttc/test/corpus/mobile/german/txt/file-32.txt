@@ -1,0 +1,659 @@
+Nachrichtentechnisches
+Praktikum
+3. Versuch: Mobilfunk
+
+Institut für Nachrichtentechnik
+Technische Universität Braunschweig
+
+Nachrichtentechnisches Praktikum: Mobilfunk
+
+3
+
+1 Einleitung
+GSM (Global System for Mobile Communications) ist heutzutage das meist
+verwendete digitale Mobilfunksystem (ca. 1,55 Milliarden Nutzer weltweit - dies
+entspricht etwa 78% aller Mobilfunknutzer der Welt) in rund 200 Ländern mit 670
+verschiedenen GSM-Netzen. Schon im Jahre 1987 wurde zwischen 13 europäischen
+Ländern vereinbart, ein digitales Mobilfunksystem aufzubauen. Die gesetzten Ziele
+dieses Systems waren unter anderen: ein breites Sprach- und Dienstangebote,
+Kompatibilität zu den Festnetzen z.B. ISDN, sowie europaweite Erreichbarkeit und
+Vermittlung. Es wird als ein Mobilfunksystem der 2. Generation (2G) bezeichnet und
+trotz der Einführung von UMTS (3G) weiterentwickelt (z.B. GPRS, HSCSD und
+EDGE). Weitere Optimierungen des GSM-Systems werden im Rahmen von
+Forschungsarbeiten auch in diesem Institut durchgeführt.
+Im Institut für Nachrichtentechnik (IfN) steht zu Lehrzwecken ein Mobilfunkmessgerät
+von Rhode&Schwarz zur Verfügung und soll im Rahmen des Nachrichtentechnischen Praktikums dazu dienen, einen Einblick in die wesentlichen Bestandteile
+und Funktionalitäten dieses Systems zu geben. Die errungenen Kenntnisse können
+mit den Vorlesungsangeboten "Grundlagen des Mobilfunks", "Planung terrestrischer
+Funknetze" und "Modellierung und Simulation von Mobilfunksystemen" weiterhin
+vertieft werden.
+Im Folgenden werden zunächst die wichtigsten Grundlagen zu Architektur und
+Übertragungstechnik erläutert. Zu Beginn des Versuches werden hierzu einige
+Fragen gestellt, deshalb sollte dieser Teil sorgfältig gelesen und verstanden werden.
+In den folgenden Kapiteln wird der Versuchsaufbau, -vorbereitung und -durchführung
+erklärt. Diese Kapitel sollten ebenfalls sorgfältig gelesen werden, um eine zügige
+Durchführung des Versuches zu gewährleisten.
+Es stehen mehrere Mobiltelefone zur Verfügung, welche für diesen Versuch
+verwendet werden können. Allerdings bietet dieser Versuch auch die Möglichkeit die
+eigenen Geräte im Vergleich zu testen. Dazu wird zwischen allen getesteten Geräten
+ein Ranking erstellt.
+
+
+
+Nachrichtentechnisches Praktikum: Mobilfunk
+
+2 Grundlagen
+2.1 Die GSM-Systemarchitektur
+In Abbildung 1 ist eine Übersicht des GSM-Systems dargestellt. Es besteht aus zwei
+wesentlichen Bestandteilen: die fest installierte Infrastruktur - das
+Netz im
+eigentlichen Sinn - und die Mobilteilnehmer, welche über die Funkschnittstelle die
+Dienste des Netzes nutzen und kommunizieren. Die Nutzer können sich in dem
+Versorgungsgebiet des GSM-Netzes frei bewegen, welches aus einer Vielzahl von
+Zellen zusammengesetzt ist.
+Dieser Versuch stellt die komplette Funktionalität eines Base Station Controllers
+(BSC) zur verfügen. Im Folgenden werden die einzelnen Bestandteile und die
+wesentlichen Funktionalitäten des GSM-Netzes vorgestellt.
+
+Nachrichtentechnisches Praktikum: Mobilfunk
+
+Das GSM-System kann in die folgenden Sub-Systeme eingeteilt werden,
+schematisch in Abbildung 2 dargestellt:
+
+
+Radio Subsystem - Funkteilsystem (Mobile Station (MS) und Base Station
+Subsystem (BSS))
+Network and Switching Subsystem (NSS) - Vermittlungsteilsystem
+Operation Subsystem (OSS) - Betreiberteilsystem
+
+Das Base Station Subsystem, das Network and Switching Subsystem und das
+Operation Subsystem bilden dabei die fest installierte Infrastruktur.
+
+Abbildung 2: Sub-Systeme von GSM
+
+2.1.1 Mobile Station (MS)
+Die Mobile Station bezeichnet die gesamte physikalische Ausrüstung des
+Teilnehmers und besteht aus zwei wesentlichen Teilen: Dem Endgerät (Handy) und
+einer Subscriber Identity Module (SIM, bekannt als SIM-Karte). In jedem Endgerät ist
+eine IMEI-Nummer (International Mobile Equipment Identity) gespeichert, über die
+jedes Handy eindeutig identifiziert werden kann. Das SIM beinhaltet alle
+nutzerspezifischen Details, unter anderen die für uns nicht sichtbare IMSI-Nummer
+(International Mobile Subscriber Identity) mit der das System den Abonnenten
+identifizieren kann. Diese Nummer wird vom Netzbetreiber intern vergeben und
+besteht aus drei Komponenten:
+
+Nachrichtentechnisches Praktikum: Mobilfunk
+
+
+Die Mobile Subscriber Identification Number (MSIN), die bis zu zehn Stellen
+lang sein kann. Sie bestimmt eindeutig einen Teilnehmer innerhalb des
+Netzwerks.
+
+Neben der IMSI gibt es auch noch die uns bekannte offizielle Rufnummer, die
+MSISDN (Mobile Station International ISDN Number).
+
+2.1.2 Base Station Subsystem (BSS)
+Das BSS ist die Funkkomponente des GSM-Netzes. Sie ermöglicht die
+Kommunikation mit den Mobilteilnehmern in einem bestimmten Zellbereich des GSMNetzes. Außerdem stellt es die Funkkanäle für Signalisierung und Nutzverkehr zur
+Verfügung und erledigt die Fehlerschutzcodierung und -decodierung für die
+Funkkanäle.
+Das BSS beinhaltet:
+
+Base Transceiver Station (BTS)
+Die BTS beinhaltet die Funkkomponenten (Sende- und Empfangsanlagen
+einschließlich Antennen) die für die Funkverbindung mit der MS verantwortlich
+sind. Die Reichweite liegt theoretisch bei 37.8km, fällt aber in der Praxis je
+nach Geländesituation aufgrund von Ausbreitungsdämpfung deutlich geringer
+aus. Je nach Antennentypen können ein oder mehrere (i.A. 3) Zellen durch
+eine BTS versorgt werden.
+
+Base Station Controller (BSC)
+Eine BSC kontrolliert eine oder mehrere BTS und wirkt als
+Digitalverarbeitungsschnittstelle zum Rest des Netzes. Die Hauptfunktion
+besteht darin Funkkanäle und Kontrollnachrichten von oder zu (Uplink bzw.
+Downlink) der MS zu organisieren. Außerdem steuert das BSC
+Handovermechanismen, d.h. die Übergabe von Mobilteilnehmern innerhalb
+einer oder zwischen zwei Zellen auf einen anderen Funkkanal (siehe Abschnitt
+2.2.5). Eine weitere Aufgabe ist die Steuerung von Funkrufen (Paging). Der
+BSC ist über das MSC mit dem Network and Switching Subsystem verbunden.
+
+2.1.3 Network and Switching Subsystem (NSS)
+Das NSS besteht aus dem Mobile Switching Center und den Datenbanken, welche
+zur Vermittlung und Diensterbringung notwendigen Daten speichern. Die
+Bestandteile des NSS sind im Einzelnen:
+
+Nachrichtentechnisches Praktikum: Mobilfunk
+
+Mobile Switching Center (MSC)
+Ein MSC ist der Vermittlungsknoten des GSM-Netzes und erfüllt alle
+vermittlungstechnischen Funktionen eines Festnetzvermittlungsknotens. Es
+liefert verschiedene Funktionen für die Handhabung von Abonnenten wie
+Registrierung, Identifikation, Handover und Location-Update (siehe Abschnitt
+2.2.5).
+
+Home Location Register (HLR)
+Diese Datenbank ist für die Teilnehmerregistrierung und -lokalisierung
+verantwortlich. Sie ist das Heimatregister, das von jedem Teilnehmer die IMSI
+und seine MSISDN-Rufnummer registriert, der in seinem Netz "beheimatet"
+ist. Zu den gespeicherten Daten gehört neben festen Einträgen, wie
+abonnierte Dienste und Berechtigungen, vor allem auch ein Verweis auf den
+aktuellen Aufenthaltsort einer Mobilstation (Location Area, siehe Abschnitt
+2.2.5). Das HLR wird zur Suche von registrierten Teilnehmern für eingehende
+Rufe verwendet.
+
+Visited Location Register (VLR)
+Das Besucherregister verwaltet die Daten aller Mobilteilnehmer, die sich
+momentan im Verwaltungsbereich des zughörigen MSC aufhalten. Beim
+Location Update startet ein MS jeweils eine Registrierungsprozedur. Das
+zuständige MSC leitet dabei die Identität der MS und ihre momentane Local
+Area Identity (LAI) and das VLR weiter, die die Daten bei sich einträgt und so
+die MS registriert. Das HLR wird nun über den neuen Aufenthaltsort informiert,
+um die Suche nach Teilnehmern für eingehende Rufe zu ermöglichen.
+
+2.1.4 Operation Subsystem (OSS)
+Der laufende Netzbetrieb wird mit dem Operation Subsystem gesteuert und gewartet.
+Steuerfunktionen des Netzes werden vom Operation and Maintenance Center (OMC)
+überwacht und ausgelöst. Zu den Funktionen gehören:
+
+Verwaltung von Teilnehmern, Endgeräten und kommerzieller
+(Abrechnung)
+Sicherheitsmanagement (z.B. Verlust, Diebstahl: Sperrung des SIM)
+Netzfunktionen, Netzbetrieb und Performance Management
+Wartungsarbeit
+
+Betrieb
+
+Nachrichtentechnisches Praktikum: Mobilfunk
+
+
+
+2.2 GSM-Technik
+2.2.1 Funkschnittstelle
+Die International Telecommunication Union (ITU), welche die Vergabe der
+Funkfrequenzen überwacht, hat für den GSM-Standard zwei Frequenzbänder
+festgelegt. Für GSM-900 sind die Bereiche 890-915 MHz für den Uplink (MS zu
+BTS), sowie 935 - 960 MHz für den Downlink (BTS zu MS) vorgesehen. Für GSM1800 wurden für Uplink und Downlink die Bänder 1710-1785 MHz bzw. 1805-1880
+MHz bereitgestellt.
+Mehrfachzugriff
+Beim Funkkanal handelt es sich um ein von vielen Teilnehmern gemeinsam
+genutztes Übertragungsmedium. Die Mobilstationen "konkurrieren" um die
+Ressource Frequenz, um ihre Daten übertragen zu können. Ohne eine zusätzliche
+Regelung des gleichzeitigen Zugriffs vieler Benutzer käme es zwangsläufig zu
+Kollisionen, was für eine verbindungsorientierte Kommunikation äußerst unerwünscht
+wäre. Zur Vermeidung solcher Kollisionen, kommen bei GSM zwei Multiplexverfahren
+kombiniert zum Einsatz: FDMA und TDMA.
+Frequency Division Multiple Access (FDMA)
+Beim FDMA wird das Frequenzband in gleich große Frequenzbereiche zerlegt, so
+dass die Gesprächsverbindung auf unterschiedlichen Frequenzen geführt wird. Ein
+GSM-Band von 25 MHz Bandbreite ist in 124 einzelne FDM-Kanäle (bei GSM 900)
+mit jeweils 200 KHz Bandbreite unterteilt.
+Time Division Multiple Access (TDMA)
+Hierbei teilen sich alle Teilnehmer dieselbe Frequenz, benutzen aber nur einen
+zugewiesenen Zeitschlitz als Verbindung. TDMA ist ein sehr aufwendiges Verfahren,
+da es eine hochgenaue Synchronisation zwischen Sender und Empfänger benötigt.
+Im GSM wird als Kombination dieser beiden Verfahren einer Mobile Station exklusiv
+für die Zeit eines Zeitschlitzes (Timeslot) eine Frequenz zugewiesen (siehe
+Abbildung 3).
+Jeder der 124 Kanäle mit jeweils 200 KHz Bandbreite ist in 8 Zeitschlitze unterteilt.
+Also bildet die Kombination aus Zeitschlitzfolge und Frequenz, die eine MS
+zugewiesen bekommt, den physikalischen Kanal eines TDMA Systems.
+
+Nachrichtentechnisches Praktikum: Mobilfunk
+
+
+Eine Abfolge von acht Zeitschlitzen wird auch TDMA-Rahmen (Abbildung 4) genannt
+und dauert 4,615 ms. Daraus folgt, daß ein Zeitschlitz ca. 0,577 ms dauert. Die pro
+Zeitschlitz übertragene Datenmenge wird als Daten-Burst bezeichnet. Ein solcher
+Burst beinhaltet im GSM-System immer 156,25 Bit (1 Bit = 3,692 µs) - Abbildung 5.
+Die Datenmenge eines Bursts und deren Übertragungszeit lassen auf eine Datenrate
+von ca. 271 Kbit/s schließen, was durch die verwendete Modulation (GMSK)
+festgelegt ist.
+
+
+
+Nachrichtentechnisches Praktikum: Mobilfunk
+Funkkanäle
+Eine Beschreibung des Funkkanals in GSM gliedert sich in 3 Ebenen:
+
+Physischer Kanal: Kennzeichnung durch die Angabe der Frequenzen und
+Zeitschlitze
+
+
+Transportkanal: Charakterisierung des Funkkanals hinsichtlich des Formats
+für die Übertragung der Informationen
+
+
+Logischer Kanal: Kennzeichnung durch die Art der Information (z.B.
+Nutzdaten, Steuerungsdaten) die er überträgt, bzw. durch die Aufgaben, die
+durch den logischen Kanal wahrgenommen werden.
+
+Unser Testgerät kann zwei verschiedene Transportkanäle simulieren (s. Abb. 6):
+
+Normal Burst: Dieser wird verwendet um Informationen von Verkehrs- und
+Steuerkanälen zu übertragen. Die einzelnen Bursts sind durch die sog. Guard
+Period getrennt (8,25 Bit bzw. 30,46 µs). Die Tail-Bits füllen die Zeitperiode aus,
+in der die Sendeleistung zu Beginn und am Ende eines Bursts hoch- bzw.
+heruntergetastet wird und daher für eine korrekte Datenübertragung nicht zur
+Verfügung steht. Die Stealing-Flags geben an, ob der Burst Nutzdaten oder
+Signalisierung-Informationen beinhaltet. Die Trainings-Sequenz besteht aus
+vordefinierten Bitmustern, die für die Kanalschätzung und Synchronisation
+relevant sind. Es sind 8 verschiedene Trainings-Sequenzen definiert, mit denen
+bis zu 16µs ausgeglichen werden können
+Access Burst: Der AB dient der Verbindungsaufnahme einer MS mit einer BTS.
+Der "Zugriffs-Burst" wird für wahlfreien Vielfachzugriff auf dem RACH (Random
+Access Channel, siehe Abschnitt 2.2.2) verwendet. Wesentlich ist, dass der AB
+eine viel größere Guard Period als die übrigen Bursts besitzt (68,25 Bit
+gegenüber 8,25 Bits), um Kollisionen auf dem RACH durch nicht synchronisierte
+MS´s zu verringern. Das ergibt eine Schutzzeit von mindestens 233 µs. Dieser
+Wert ist im Standard als maximaler Schutzabstand festgelegt, dies führt zu einem
+maximalen Zellenradius von 35km. Die Trainingssequenz ist der BTS bekannt
+und ermöglicht ihr dadurch das Entdecken des AB´s. Die Datenbits beinhalten
+Informationen der MS.
+
+Abbildung 6 zeigt die Struktur der beiden Arten von Bursts. Neben den oben
+genannten Arten von Bursts werden noch Dummy Bursts, Synchronisation Bursts
+und Frequency Correction Bursts verwendet. Wozu dienen diese ?
+
+Nachrichtentechnisches Praktikum: Mobilfunk
+
+2.2.2 Logische Kanäle
+Traffic Channel (TCH)
+Der Traffic Channel überträgt Nutzerinformationen zwischen Teilnehmern, wie
+Sprach- und Datenpackete. Er besteht aus einem Multirahmen mit einer Länge von
+ca. 120 ms, zusammengesetzt aus 26 einzelnen TDMA-Rahmen. Von den 26
+Rahmen werden 24 für den Nutzverkehr und einer für den Slow Associated Control
+Channel (SACCH, siehe unten) genutzt. Der übrige Rahmen ist zur Zeit ungenutzt.
+Damit die Mobilstation nicht gleichzeitig empfangen und senden muß (einfachere
+Elektronik), sind der Uplink und Downlink des TCHs mit einer Periode von 3 Bursts
+zeitlich getrennt.
+Je nach Art des Dienstes (Sprache, Kurzmitteilung, etc.) können unterschiedliche
+Übertragungsraten bereitgestellt werden. Bei einem Full-Rate TCH wird eine
+Bruttodatenrate von 22.8 Kbit/s angeboten, wovon 13 Kbit/s für die
+Sprachinfromationen und der Rest zum Fehlerschutz verwendet werden. Für Daten
+können 12, 6 oder 3.6 Kbit/s angeboten werden.
+Control Channels
+Die Control Channels werden benutzt, um Signalisierungsinformationen zwischen
+Basisstation und Mobilstation auszutauschen. Im inaktiven Zustand (idle mode)
+werden Signalisierungen vorgenommen um eine Verbindung auszubauen. Während
+einer aktiven Verbindung (dedicated mode) werden unter anderen Informationen
+über umliegende Basisstationen ausgetauscht, die für den Handover-Prozeß benötigt
+werden (siehe Kap. 2.2.5).
+ Broadcast Control Channel (BCCH):
+ein logischer Broadcastkanal, in dem die BTS Informationen in der Zelle
+ausstrahlt, wie z.B. BTS Identifikation und Frequenzbelegung.
+ Frequency Correction Channel (FCCH) und Synchronisation Channel (SCH):
+werden benutzt, um die Mobilstation mit der Zeitschlitzstruktur der Zelle
+zu synchronisieren. Es werden pro Zelle genau ein FCCH und ein SCH
+im Zeitschlitz 0 gesendet.
+ Random Access Channel (RACH)
+der (Uplink-)Kanal (Slotted Aloha), auf dem das Telefon der BTS seinen
+Verbindungswunsch mitteilt.
+ Paging Channel (PCH):
+wird benutzt, um einer Mobilstation mitzuteilen, daß ein Anruf ankommt.
+ Slow associated Control Channel (SACCH):
+ein jedem Übertragungskanal zugeordneter Signalisierungskanal, auf
+dem z.B. Meßwerte (Uplink) oder Timing Advance (siehe unten)
+(Downlink) übertragen werden
+
+
+Nachrichtentechnisches Praktikum: Mobilfunk
+2.2.3 Fehlerschutzmechanismen
+
+Da bei der Sprachübertragung per Funk die Bitfehlerhäufigkeit sehr hoch ist wird
+beim GSM-System ein erheblicher Aufwand zur Sicherung der Daten gegen
+Übertragungsfehler betrieben.
+Bei einer Nutzdatenrate von 13kbit/s werden 260 Bit pro Sprachrahmen übertragen.
+Diese 260 Bit werden nun durch die Kanalkodierung - also Zugabe von Redundanz
+für Fehlerschutzmechanismen - sukzessive auf 456 Bits aufgestockt, um auf die
+Bruttodatenrate eines Zeitschlitzes von 22,8kbit/s zu kommen.
+Zuerst werden die Daten entsprechend ihrer relevanten Wichtigkeit in drei Klassen
+aufgeteilt. Dazu werden die 260 Bits in 50 sehr wichtige Klasse1a-Bit, in 132 wichtige
+Klasse1b-Bit und in 78 weniger wichtige Klasse2-Bits eingeteilt.
+(50 Bits + 3 CRC-Bits) + 132 Bits + 78 Bits
+Klasse 1a
+
+Klasse 1b
+
+Klasse 2
+
+Im nächsten Schritt wird für die 50 sehr wichtigen Klasse1a-Bit eine 3 Bit große CRCPrüfsumme (Cyclic Redundancy Check) berechnet und diesen 50 Bits angehängt.
+Die wichtigsten 185 bit (1a + CRC + 1b Bits) werden zusammengefasst und mit vier
+Tail-Bits zu 189 Bits aufgefüllt. Diese werden mit Faltungscodierung (r=1/2) zu 378
+Bit umkodiert und zusammen mit den Klasse 2 Bits ergeben sich 456 Bits.
+Die Frame Error Rate, die wir später kontrollieren, wird damit wie folgt berechnet:
+
+FER=
+
+Blöcke mit inkorrektem CRC
+×100 [%]
+Gesamtzahl gesendeter Blöcke
+
+2.2.4 Timing Advance
+Die Funkwellen zischen Endgerät und Basisstation haben eine distanzabhängige
+Ausbreitungsverzögerung. Beim Senden von Bursts muß nun eine Zeitsynchronisation stattfinden, so daß die Datenpakete im korrekten Empfangszeitschlitz am Empfänger ankommen.
+Der Wert TA gibt die Anzahl der Bit-Zeiten (3,692 µs) an, die der Sendeburst
+"vorverlegt" werden muß, damit er im korrekten Zeitschlitz des Empfängers eintrifft.
+Der Wert wird von der BTS ermittelt und dem Mobiltelefon vorgegeben. Die BTS mißt
+dabei die Schleifenlaufzeit (Round Trip Propagation Delay) in Vielfachen der Dauer
+eines Bits.
+
+Nachrichtentechnisches Praktikum: Mobilfunk
+
+13
+
+Der Wert TA01 entspricht bei reflexionsfreiem Übertragungsweg einer ungefähren
+Entfernung von 554 m zur Basisstation. TA kann Werte von 0-63 annehmen und
+entspricht damit Werten von 0 - 233µs. Der oberste Wert (233 µs) ist das maximale
+Schutzintervall für den Round-Trip-Delay (BTS->MS->BTS) welcher im Standard
+festgelegt ist und führt zu einer maximale Größe einer Zelle von 35km.
+Mit dem gemessenen TA-Wert kann man auch die Entfernung von der MS zur BTS
+abschätzen. Die Genauigkeit ist ca. 1km, da die Messung einen maximalen Fehler
+von ±0,5 Bit hat.
+
+(c ist die Funkwellenausbreitungsgeschwindigkeit und t Bit die Dauer eines Bits)
+
+2.2.5 Handover & Location Update
+Handover
+Ein Handover ist eine automatische Gesprächsübergabe zwischen verschiedenen
+Funkzellen. Ein Handover wird ausgelöst, um einerseits die Verbindungsqualität zu
+erhöhen oder andererseits die Netzlast auf die Zellen gleichmäßig zu verteilen, um
+die Güte des gesamtes Netzes zu optimieren.
+Man unterscheidet zwischen:
+
+
+
+Intracell-HO: Aus administrativen Gründen oder auch wegen der Kanalqualität
+bekommt eine MS innerhalb derselben Zelle einen neuen Kanal zugewiesen.
+Dies wird lokal vom BSC entschieden und durchgeführt
+Intercell-HO: Verbindung einer MS wird über Zellgrenze hinweg einer neuen BTS
+zugewiesen. Entscheidung wird aufgrund von Meßdaten der MS/BSC getroffen.
+Meist erfolgt der HO dann, wenn eine hohe Bitfehlerrate aufgrund schwacher
+Empfangsfeldstärke und schlechter Kanalqualität festgestellt wird (z.B. am
+Zellrand).
+
+Location-Area & Location-Update
+In einer Location-Area werden mehreren Zellen zusammengefaßt, die man als eine
+geographische Einheit im VLR verwaltet. Beim Aufsuchen von Mobilfunkteilnehmern
+werden nun, statt jede Zelle, nur die Location-Areas abgesucht. Dies spart
+erheblichen Signalisierungsaufwand.
+Man spricht von einem Location-Update, wenn der Teilnehmer die Location-Area
+wechselt. Das Location-Update entspricht einer Aktualisierung des Aufenthaltsortes
+im VLR bzw. HLR. Manchmal wird diese Prozedur auch in einem sich periodisch
+wiederholenden Zeitintervall durchgeführt (etwa 2 Stunden; abhängig von den vom
+Netzbetreiber gewählten Einstellungen).
+
+Nachrichtentechnisches Praktikum: Mobilfunk
+
+14
+
+3 Versuchsaufbau
+Für den Versuch benutzen wir das Messgerät CMD-55 von Rohde & Schwarz. Es
+verfügt über alle Elemente zur Ausführung von wichtigen GSM (900, 1800 und 1900)
+Messungen. Hiermit ist es möglich, das Mobiltelefon auf korrekte Sendeleistung,
+Zeitschlitzdynamik, Verbindungsaufbau, Spektrumsanalysen und Bitfehlerraten hin
+zu überprüfen. Mit dem CMD-55 ist eine Messempfindlichkeit von -10 bis +37 dBm
+und eine Ausgangsleistung von -37dBm (vgl. Anhang A) gegeben.
+Der vor uns aufgebaute Versuch (Abbildung 7) stellt ein komplettes "Base Station
+Subsystem" dar. Es enthält alle Übermittlungs- und Funkübertragungseinrichtungen,
+die zur Verbindung der Mobilteilnehmer mit dem "Network and Switching Subsystem"
+notwendig sind. Eine detaillierte Beschreibung der Ein- und Ausgänge des
+Testgeräts finden sie im Anhang A.2.
+
+Abbildung 7
+
+Es wird eine abgeschirmte Meßkammer verwendet, um äußere Einflüsse zu
+vermeiden. Die Meßkammer CMU-Z11 von Rohde & Schwarz ist mit einer
+empfindlichen Antenne und einer eingebauten Handyhalterung versehen. Die
+Innenraumdämpfung zwischen Handy- und Meßantenne beträgt ca. 7dB. Die
+Dämpfung des HF-Kabels beträgt ca. 0,2dB.
+Für die Versuche steht ein Mobiltelefon als Referenzgerät zur Verfügung (Motorola
+TP P7389). Dieses ist mit einer speziellen SIM-Karte ausgestattet, welches einen
+Schleifenbetrieb für den Versuch 3 (Bitfehlermessung) zulässt. Für die ersten beiden
+Versuche können auch ihre eigenen Mobiltelefone verwendet werden.
+An das Messgerät kann auch ein Drucker angeschlossen werden, um Screenshots
+der Messergebnisse zu drucken.
+
+Nachrichtentechnisches Praktikum: Mobilfunk
+
+15
+
+4 Versuchsvorbereitung
+Bevor sie beginnen, sorgen sie bitte
+dafür, daß bei den Meßvorgängen das
+HF-Kabel richtig angeschlossen und
+verschraubt und die Meßkammer richtig
+geschlossen ist, um Fremdeinwirkung zu
+vermeiden. Achten Sie auch darauf, dass der
+EXT. ATTENTUATION-Wert auf ca. 7 dB
+eingestellt ist, um die Signaldämpfung durch Luft
+von Sender- zu Empfänger in der Meßkammer
+zu berücksichtigen. Für die Einstellung dafür
+drücken sie bitte den Softkey EXT. ATT.
+Hinweis:
+Zum Drucken des Screenshots betätigen Sie bitte den Softkey HARD COPY. Als
+Drucker muss im Konfigurationsmenu "Laser Jet II" eingestellt sein.
+Zum Wechseln des Netzwerkes zwischen GSM 900 und GSM 1800 betätigen Sie
+NETWORK TYPE im Hauptmenü.
+
+4.1 MANUAL TEST
+Nach der Auswahl von "Manual Test"
+wechselt der CMD die Anzeige und
+sendet nach einigen Sekunden einen
+Control Channel. Dieser Kanal überträgt
+u.a. einen BCCH. Die Informationen die
+vom CMD auf dem Control Channel
+übertragen
+werden,
+fordern
+das
+Mobiltelefon auf nach dem Einschalten
+eine "Location Update" - Prozedur
+durchzuführen.
+Hiermit
+wird
+die
+Basisstation informiert, daß jetzt ein
+bestimmtes Mobiltelefon eingeschaltet
+wurde und bereit ist, Gespräche durchzuführen.
+Falls das Gerät keinen LocationUpdate ausführt, schalten Sie es
+bitte aus und wieder ein, damit
+sich das Gerät neu in unsere
+simulierte Zelle einloggen kann. Alternativ
+"erzwingen" Sie am Besten ein LocationUpdate indem sie in dem Untermenü
+NETWORK den Wert für LOC. AREA
+verändern.
+Mit dem Softkey ↑MENU UP geht's
+wieder zurück zum Bildschirm MOBILE
+TEST.
+
+Nachrichtentechnisches Praktikum: Mobilfunk
+
+16
+
+Hat das Gerät sich erfolgreich in die Zelle eingeloggt, werden ihnen die
+gerätespezifischen Daten wie IMSI, IMEI (siehe oben) und Power Class
+angezeigt. Jedes Gerät gehört zu einer bestimmten Leistungsklasse, die die
+maximale Ausgangsleistung des Gerätes festlegt (vgl. Anhang A.1):
+Power Class 1=43 dBm, PC 2=39 dBm, PC 3=37 dBm, PC 4=33 dBm, PC
+5=29 dBm.
+
+4.2 CALL ESTABLISHED
+Bauen Sie jetzt bitte eine Verbindung auf, indem Sie den Softkey
+CALL TO MOBILE drücken und den Ruf abnehmen oder vom
+Telefon selbst eine beliebige Nummer wählen.
+Nach erfolgreichem Verbindungsaufbau
+befinden Sie sich nun im CALL
+ESTABLISHED - Menü. Von hier aus
+werden die meisten Tests mit dem CMD55 durchgeführt. Hier sehen Sie auch die
+wichtigsten Meßwerte des Endgeräts. Der
+momentan eingestellte RF-Kanal und der
+verwendete Zeitschlitz werden zusammen
+mit den Sendermessungen des Phasenund Frequenzfehlers angezeigt. Sollte ein
+Messergebnis außerhalb der Toleranz
+liegen, wird dieses sofort invers angezeigt. Ebenfalls werden die vom
+Mobiltelefon
+gemeldete
+(Reported)
+sowie
+die
+gemessene
+Durchschnittsleistung (Meas. Avg.) angezeigt.
+MS Receiver Reports
+GSM-Mobiltelefone messen zyklisch
+die Signalstärke- und Qualität
+mehrerer
+nahe
+gelegener
+Basisstationen.
+Die
+Messwerte
+werden in den so genannten
+"Measurement Reports" regelmäßig
+zur aktiven Basisstation gesendet.
+Die wichtigsten Werte sind die der
+gerade für das Gespräch benutzte
+Basisstationen. Die Tabelle rechts
+zeigt die Klasseneinteilungen nach
+der GSM-Spezifikation.
+
+Abbildung 8
+
+Nachrichtentechnisches Praktikum: Mobilfunk
+
+17
+
+5 Versuchsdurchführung
+5.1 Phasen- und Frequenzfehler
+Die GSM-Mobiltelefone müssen sich auf die Sendefrequenz der Basisstation
+synchronisieren. Der CMD-55 mißt deshalb den Frequenzfehler und nicht die
+absolute Sendefrequenz. Der Phasenfehler wird ermittelt, indem der erwartete und
+der gemessene HF-Phasenverlauf verglichen werden. GSM spezifiziert dabei den
+Maximal- (Peak) als auch den Durchschnittsfehler (RMS, root-mean-square) je Burst.
+Der GSM Standard legt dafür folgende Toleranzen fest:
+ Frequenzfehler:
+±115 Hz bei GSM-900 und ±230 Hz bei GSM-1800
+ RMS Phasenfehler:
+maximal 5° Abweichung
+ Peak Phasenfehler:
+maximal 20° Abweichung
+Im Menü PHASE FREQ. werden der aktuelle, der durchschnittliche, der maximal
+Phasen- und der Frequenzfehler, bezogen auf eine spezifizierte Anzahl von Bursts,
+dargestellt. Diese Anzahl kann im Konfigurationsmenü (Softkey CONFIG) der
+Phasen- und Frequenzfehlermessung eingestellt werden. Die grafische Anzeige
+kann sowohl im Oszilloskopbetrieb für den Phasenfehler als auch im
+Balkendiagramm erfolgen.
+Im Konfigurationsmenü ist es möglich verschiedene Meßmöglichkeiten auszuwählen:
+ Continuously
+Die Messung läuft weiter, unabhängig davon, ob die Toleranzen eingehalten
+werden.
+ Stop
+Der Test wird angehalten, sobald eine Messung außerhalb des
+Toleranzbereiches liegt
+ Single Shot
+Die Messung wird genau noch einmal wiederholt, sobald der Softkey PHASE
+FREQ. gedrückt wird.
+
+Messen Sie für die ausgewählten Mobiltelefontypen den Frequenzfehler,
+RMS-Phasenfehler und Peak-Phasenfehler jeweils für GSM 900 und
+GSM 1800. Notieren Sie die Meßwerte in Tabelle 6.1 und entscheiden Sie
+ob die Mobiltelefone dem GSM-Standard entsprechen. Stellen sie dabei
+eine ausreichend große Anzahl von Bursts ein (CONFIG - NO. OF
+BURSTS - ↑MENU UP).
+
+Nachrichtentechnisches Praktikum: Mobilfunk
+
+18
+
+5.2 Power Ramp - Messung
+Wie in Abschnitt 2.2.1 erläutert wurde, teilen sich mehrere Nutzer unter Verwendung
+von TDMA einen Frequenzbereich. Um Interferenzstörungen zu vermeiden, wird die
+Sendeleistung eines Nutzers während seiner inaktiven Phase heruntergefahren. Zum
+Beginn "seines" Zeitschlitzes muss dann die Sendeleistung wieder hochgetaktet
+werden. Dies kann nicht in unendlich kleiner Zeit geschehen (siehe Abbildung 9). Da
+sich zwangläufig die Zeitbereiche überscheiden, wurden einerseits die Tail-Bits als
+Schutz eingefügt, andererseits wurden Grenzen definiert die während des Erhöhen
+bzw. Erniedrigen der Sendeleistung eingehalten werden müssen. Dieser Versuch
+untersucht das Verhalten des Mobiltelefons in dessen Zeitschlitz.
+
+-70
+
+Abbildung 9
+Drücken sie bitte den Softkey POWER RAMP um die Kurve anzuzeigen.
+Die Leistungsrampe (Abbildung 9) wird mit einer Dynamik von ca. 75 dB gemessen
+und dargestellt. Die Toleranzen entsprechen den Werten, die in den GSMSpezifikationen definiert sind. Die grafisch dargestellte Toleranzmaske darf von der
+Messkurve nicht unter- oder überschritten werden. Ist dies der Fall, wird invers
+angezeigt.
+In dem Untermenü DISPLAY RANGE, kann -mit Hilfe des Rades- der angezeigte
+Ausschnitt verändert werden. Der Leistungsverlauf über der Zeit kann über mehrere
+Bursts gemittelt gemessen werden. Wählen sie dazu im Untermenü DISPLAY MODE
+den Modus MAX. (Maximum). Wahlweise können auch die minimalen oder
+durchschnittlichen Ergebnisse angezeigt werden (MIN/AVG HOLD).
+
+Nachrichtentechnisches Praktikum: Mobilfunk
+
+19
+
+Im Textteil finden Sie den Frequenzkanal, auf dem die Messung erfolgt, sowie die
+gemessene Zeit (Auflösung 0,25 Bit), mit der das Mobile zu spät (positiv) oder zu früh
+(negativ) antwortet, angezeigt (Timing Error). MARKER zeigt den Wert für die
+aktuelle Cursorposition (schwarzes Dreieck) an. Bei BURSTS OUT OF TOL. wird der
+Prozentsatz der Bursts angezeigt, die während des Mittlungszeitraumes außerhalb
+der Toleranz lagen.
+Kontrollieren Sie nun die Meßkurve, ob diese im "Toleranzschlauch" liegt.
+Notieren Sie die durchschnittliche Burst Power und die Zeitverzögerung
+des Signals. Schalten Sie auf DISPLAY MODE: MAXIMUM und betrachten
+Sie die RISING EDGE. Überprüfen Sie, ob die Messkurve innerhalb der
+Guard Period-Zeit wirklich unter -70dB absinkt. Ändern sie den BURST MODE (links
+oben) zu ACCESS BURST und vergleichen Sie die Werte.
+Drucken Sie bitte die Screenshots für Rising Edge für jedes der Mobiltelefontypen
+jeweils für GSM-900 und GSM-1800. Vergleichen Sie die Kurven, entscheiden Sie
+welches Mobiltelefon dem Standard am besten entspricht.
+
+Nachrichtentechnisches Praktikum: Mobilfunk
+
+20
+
+5.3 Bitfehlerratenmessung
+Die Sprachbits die im GSM-System übertragen werden, sind, wie im Kapitel 2.2.3
+beschrieben, in Klassen unterteilt. Klasse II Bits haben keinen Fehlerschutz und
+erzeugen deshalb auch rasch Übertragungsfehler. Klasse Ib Bits besitzen einen
+gewissen Fehlerschutz und die Klasse Ia Bits sind sehr gut geschützt. Die Bits werden
+in Sprachrahmen (Frames) von 260 Bits (ohne Fehlerschutzbits) übertragen. Das
+Mobiltelefon selbst kann Fehler der Klasse Ia Bits erkennen, damit einen kompletten
+Sprachrahmen für fehlerhaft, damit für ungültig erklären, und dies dem CMD mitteilen.
+Das Verhältnis von guten zu ungültigen Frames wird FER = Frame Erasure Rate
+(Rahmenfehlerrate) genannt.
+In diesem Praktikumsversuch wird eine spezielle
+Test-SIM-Karte von Rhode&Schwarz verwendet,
+um die Empfindlichkeit (BER = Bit Error Rate) in
+einem Schleifenbetrieb einzuschalten. In dieser
+Betriebsart werden die vom CMD gesendeten
+Bits vom Mobiltelefon empfangen und sofort
+zurückgesendet. Der CMD kann damit die Bits
+vergleichen und das Verhältnis korrekte /
+fehlerhafte Bits in Prozent berechnen (siehe
+Tabelle A.1).
+Unser vorgefertigter Testablauf (TEST 6) sendet eine bestimmte Anzahl von Frames
+mit einer bestimmten Anzahl von Bits der verschiedenen Klassen. Die Bits
+entsprechen den "Samples", die gesendet werden sollen. Es kann bei einem
+bestimmten (niedrigen) HF-Pegel akzeptiert werden, dass eine bestimmte Anzahl von
+Frames oder Bits fehlerhaft sind. Diese fehlerhaften Samples nennt man "Events".
+Im Vergleich zu TEST 6 benutzen sie bitte den Continuous Test CONT BER MEAS.,
+stellen sie dabei eine möglichst große Anzahl von Frames (AVERAGE) ein. Der
+Meßmodus MEAS. MODE sollte auf RBER eingestellt sein.
+Drücken sie jetzt bitte den Softkey BER TEST und schalten ins Menü SING.
+MEAS. Zur Messung lassen wir hier mit den verschiedenen
+Dämpfungsgliedern den voreingestellten TEST 6 ablaufen.
+Vergleichen Sie die zugehörigen RxLev und RxQual aus dem Hauptmenü (2x
+MENU UP) mit der Tabelle aus Kap. 4.2. Notieren Sie diese in der Tabelle 6.2.
+Um verschiedene Sendeleistungen zu testen, passen Site bitte die jeweiligen
+Werte gegeben in Tabelle 6.2 an. Dazu drücken Sie die Taste CONFIG, dann
+wählen Sie dort den TEST 6 aus und stellen die jeweilige Sendeleistung ein
+(used Timeslot). Mit MENU UP gelangen Sie wieder in den Test zurück.
+Notieren sie die Bitfehler-Meßwerte für das gegebene Mobiltelefon für GSM900 und GSM-1800. Tragen Sie diese in die Tabelle 6.2 ein und erstellen Sie
+daraus ein Diagramme in der Grafik.
+
+EXT. ATT.: 8 dB (Dämpfung des Kabels)
+Controll Channel: RF Level -80dBm
+Traffic Channel: RF Level -90 dBm (used Timeslot)
+Traffic Channel: RF Level -20 dB (unused Timeslot)

@@ -1,0 +1,365 @@
+Microsoft Word - Journal of Intelligence Systems, Vol. 1, Issue 1, 2010, pp-01-06 
+ 
+AUTOMATIC RESPONSE SYSTEM USING SMS 
+ 
+RAJESH K. RAI AND KALPANA RAI 
+Department of Computer Engineering, S.C.O.E, .University of Pune, India 
+ 
+Abstract- Technology is booming in every area around us, whether it is in the field of 
+business trade, computer, telecom or any other area. In education system lot of trends and 
+competitions are emerging for the career and betterment of the students. Now a days many 
+types of value added services (VAS) and various response systems and public response 
+systems are available and running successfully around us. These value added services 
+always adds remarkable values to the industry. Likewise here is a solution for the betterment 
+of students and the faculties even for the parent and guardian of the students, that they can 
+access information in a easier way from every corner of the world. An Interactive response 
+system is been developed for fetching information over mobile by means of GPRS services, 
+in the form of SMS, relevant information regarding students Exams registration, attendance, 
+their daily activities in the college, on the cost of mere negligible charges. These interactive 
+response systems will definitely going to be an asset for the institution and its students and 
+faculties. This software deals with the SMS based applications. In this software an interactive 
+database management system has been implemented by which the parent and guardian can 
+get student's information using SMS service. As every mobile is having the capability of to an 
+from SMSing,this makes the beauty part of this software as every mobile subscriber can 
+benefit from this facility & thus saves precious time .At the same time this a very cost effective 
+way to know about the current information of students. Finally, it may be emphasized that this 
+system is public friendly & easy to use. 
+1. Introduction  
+Short Message Service (SMS) in wireless In addition, the system facilitates 
+systems provides the capability of limited- communication between the school and 
+size data messages to subscriber's the home, and encourages collaboration. 
+cellular phone. And the development of Finally, it supports the teachers in 
+value added services based upon the analyzing the students, and performs both 
+GSM standard is becoming increasingly formative and summative evaluation of 
+important to both network operators and lessons. 
+the subscribers to such networks. This 
+project Today wireless technologies such as  outlines a wireless service system 
+capable GPRS, new 3G networks and different  of providing real time information 
+of WLAN technologies are rapidly being  the student information of the college. 
+The developed and deployed providing  system allows a user to the service to 
+receive wireless access to the Internet in a much  student information on demand. 
+Primarily larger scale than before. At the same time,  by means of short messages 
+delivered new mobile platforms like PDAs, advanced  to their GSM mobile phone. 
+mobile phones and wearable computers 
+The various questionnaires for the are becoming more and more common. 
+stakeholders prepared by the Together it will mean that the Internet will 
+school/college staff and the author were be accessible from anywhere, on a wide 
+successfully administered through the variety of different platforms and 
+system. The system supports a connection technologies. A user should be 
+consultative style of decision-making that able to expect to access the same 
+enables the stakeholders to contribute applications and services that are 
+their views. The server can compile the available on a fixed, connected PC from a 
+responses, and then present the results to mobile connected unit 
+all. Hence, the school/college leaders can 
+make timely and informed decisions that Short message service is a mechanism of 
+improve the college's programmers.           delivery of short messages over the 
+mobile networks. It is a store and forward 
+ 
+1 
+Copyright © 2010, Bioinfo Publications,  
+Journal of Intelligence Systems, Vol. 1, Issue 1, 2010 AUTOMATIC RESPONSE SYSTEM USING SMS 
+ 
+way of transmitting messages to and from The way for sending SMS messages from 
+mobiles. The message (text only) from the a computer through a mobile phone or 
+sending mobile is stored in a central short GSM/GPRS modem has a major limitation 
+message center (SMS) which then that is the SMS sending rate is too low. If 
+forwards it to the destination mobile. This you need a high SMS sending rate, 
+means that in the case that the recipient is obtaining a direct connection to the SMS 
+not available; the short message is stored center (SMSC) or SMS gateway of a 
+and can be sent later. Each short wireless carrier is necessary. The 
+message can be no longer than 160 connection may be made through the 
+characters. These characters can be text Internet, X.25 or dial-up. If you cannot get 
+(alphanumeric) or binary Non-Text Short a direct connection to the SMSC or SMS 
+messages. An interesting feature of SMS gateway of a wireless carrier, another 
+is return receipts. This means that the choice is to get a connection to the SMS 
+sender, if wishes, can get a small gateway of an SMS service provider, 
+message notifying if the short message which will forward SMS messages towards 
+was delivered to the intended recipient. a suitable SMSC. 
+Since SMS used signaling channel as 
+opposed to dedicated channels, these 4. Connection to the SMS Center or 
+messages can be sent/received SMS Gateway of a Wireless Carrier 
+simultaneously with the voice/data/fax 
+service over a GSM network. SMS It can be difficult for small businesses or 
+supports national and international individual application developers to obtain 
+roaming. This means that you can send a direct connection to the SMSC or SMS 
+short messages to any other GSM mobile gateway of a wireless carrier since a 
+user around the world. With the PCS wireless carrier may only provide such 
+networks based on all the three 
+t service to those who have huge SMS echnologies, GSM, CDMA and TDMA traffic. Buying SMS messages in bulk 
+supporting SMS, SMS is more or less a means the total fee will be very high 
+universal mobile data service.  (although the fee per SMS message will 
+be low). 
+2. Major Drawback of Sending SMS 
+Messages through a Mobile Phone or 
+GSM/GPRS Besides, the information about the service  Modem  (for example, cost of the service, protocols 
+supported, network coverage) is usually 
+Using a mobile phone or GSM/GPRS not stated clearly on a wireless carrier's 
+modem to send SMS messages has a web site. This is because the wireless 
+major drawback that is the SMS sending carrier staff wants to know more about 
+rate is too low. Only 6-10 SMS messages your SMS messaging application, such as 
+can be sent per minute (when the "SMS its nature and traffic requirement, before 
+over GSM" mode is used). The offering a price and providing further 
+performance is not affected by the information to you. To decide which 
+connection between the computer and the wireless carrier's service plan is the best, 
+mobile phone or GSM/GPRS modem (i.e. you have to discuss with the sales staff of 
+the SMS sending rate is about the same each wireless carriers. This is troublesome 
+no matter the mobile phone or if you just want to send a small number of 
+GSM/GPRS modem is connected to the SMS messages. (Of course if you need to 
+computer through a serial cable, USB send a large amount of SMS messages, 
+cable, Bluetooth link or infrared link) and say one million SMS messages per month, 
+does not depend on whether a mobile negotiating with the wireless carrier staff 
+phone or GSM/GPRS modem is used (i.e. for a more favorable agreement is a 
+the SMS sending rate is about the same necessary step.) 
+no matter a mobile phone or a 
+GSM/GPRS modem is used). The 
+d A more convenient way to send SMS etermining factor for the SMS sending messages is to use the SMS connectivity 
+rate is the wireless network. service of an SMS service provider, which 
+is described in the next section. SMS 
+3. Sending SMS Messages from a stands for Short Message Service. It is a 
+Computer through a Connection to the technology that enables the sending and 
+SMS Gateway of a Wireless Carrier  receiving of messages between mobile 
+2 
+Journal of Intelligence Systems, Vol. 1, Issue 1, 2010 RAJESH K. RAI AND KALPANA RAI 
+ 
+phones. SMS first appeared in Europe in framework and sits on top of Connected 
+1992. It was included in the GSM (Global Limited Device Configuration, a set of 
+System for Mobile Communications) lower level programming interfaces. MIDP 
+standards right at the beginning. Later it 
+was developed under the Java Community 
+was ported to wireless technologies like 
+CDMA Process as JSR 37 (MIDP 1.0) and JSR  and TDMA. The GSM and SMS 
+standards 118 (MIDP 2.0). The first MIDP devices  were originally developed by 
+ETSI. were models i80s and i50sx from  ETSI is the abbreviation for 
+European Telecommunications Standards Motorola, launched in April 2001. 
+Institute. Now the 3GPP (Third Generation 
+Partnership Project) is responsible for the 6.2 MIDlet 
+development and maintenance of the 
+GSM and SMS standards. A MIDlet is a Java program for embedded 
+devices, more specifically the Java ME 
+5. Problem Statement virtual machine. Generally, these are 
+Th games and applications that run on a cell e very existence of rapid progress of 
+human phone. Basically midlets are the  is due to emerging new ways of 
+gathering application created for mbile devices this  & distribution of information. As 
+the application is developed in java to mobile  quantity of data that needs to be 
+stored retrieved & progressed in a edition using java classes. Various games 
+management & information system grows and other applications are been regularly 
+throughout the world, there arises a need 
+f developed by the organizations these or automation. Here we are taking the 
+a days.but the mobile should be java rea of acquiring general information 
+related enabled.  to students of college. Such as his 
+attendance in the college with current 
+date 6.3. Mobile Information Device toolkit , current percentage of presents with 
+the name etc. One of the oldest methods 
+is A MIDlet requires a device that  to go to institute & ask with the 
+respective implements at least Java ME, CLDC and  faculty of the subject for that 
+particular information regarding the daily MIDP to run. Like other Java programs, 
+attendance, this concept is much more MIDlets have a "compile once, run 
+interesting for the parents and the anywhere" potential. MIDlet distributions 
+guardians of the students as many time 
+th main file is a .jar file, but MIDlet ey are not aware of the actual curriculum 
+of distributions can also consist of a .jad file  their student in the college, for this they 
+will containing the location of and describing  be informed after the completion of 
+session the contents of the .jar file. The  about the students or the 
+institution will provide a performance implementation of a MIDlet may or may 
+report about the student to their parents by not require the presence of a .jad file. A 
+mail. The drawback of this approach is the 
+q MIDlet has to fulfill the following ueue & wandering from one department 
+to requirements in order to run on a mobile  another in which user has to spend his 
+precious phone: The main class needs to be a  time. Also if college will provide 
+all subclass of  the desired information regarding the 
+students javax.microedition.midlet.MIDlet. The  it has to engage several 
+manpower for the accomplishment of this MIDlet needs to be packed inside a .jar file 
+task and consequently looses time and (e.g. by using the jar-tool). The .jar file 
+money.   needs to be pre-verified by using a 
+6. Toolkit and preverifier. In some cases, the .jar file  Technologies  
+needs to be signed by the mobile phone's 
+6.1 carrier. These midlets are basically  Mobile Information Device Profile 
+(MIDP) developed using J2ME tool used for  
+developing applications running on mobile 
+MIDP is a specification published for the device.  
+use of Java on embedded devices such as 
+mobile 6.4. Java Platform, Micro Edition (J2ME)  phones and PDAs. MIDP is part of 
+the Java Platform, Micro Edition (Java ME) 
+Copyright © 2010, Bioinfo Publications,  
+Journal of Intelligence Systems, Vol. 1, Issue 1, 2010 AUTOMATIC RESPONSE SYSTEM USING SMS 
+ 
+In (which is hosted on Application Server),  computing, the Java Platform, Micro 
+Edition Application running on server retrieves the  or Java ME (previously known as 
+Java message from the midlet application  2 Platform, Micro Edition or J2ME) is 
+a method then the data retrieve methods  specification of a subset of the Java 
+pl fires a Query through Transaction atform aimed at providing a certified processor and retrieve desired data. The 
+collection of Java APIs for the desired information, which we get, is in the 
+development of software for small, form of a text string. This string is then 
+resource formatted in a systematic form by a result -constrained devices such as cell 
+phones method and sent back to the midlet , PDAs and set-top boxes. Java 
+ME application on the mobile device. Now rest  was designed by Sun Microsystems 
+task will be looking after by the MIDP 
+and is a replacement for a similar application. Finally the downloaded 
+technology, Personal Java. Originally information from the server is converted in 
+developed under the Java Community to the form of message and displayed on 
+Process as JSR 68, the different flavors of the screen of the mobile. 
+Java ME have evolved in separate JSRs. 
+Sun   provides a reference implementation 
+of the specification, but has tended not to 
+provide free binary implementations of its 
+Java ME runtime environment for mobile 
+devices, rather relying on third parties to 
+provide their own. Java ME has become a 
+popular option for creating games for cell 
+phones, as they can be emulated on a PC 
+ 
+during the development stage and easily 
+uploaded Application server running Remote  mobile  to phones. This contrasts with 
+the web services and GPRS enabled java  difficulty of developing, testing, and 
+loadi application  ng games for other special gaming Fig 1- Architecture for Automatic Response System 
+platforms such as those made by 
+Nintendo, Sony, Microsoft, and others, as 8. Use Case Diagram for Interactive 
+expensive system-specific hardware and Response System Using SMS 
+kits are required. Java ME devices 
+implement In this system we have actors like (as  a profile. The most common of 
+these shown in fig 4.3 below ) java enabled  are the Mobile Information Device 
+P mobile responsible for the interaction with rofile aimed at mobile devices, such as the use case named send message, 
+cell phones, and the Personal Profile another actor named server used for 
+aimed at consumer products and extraction of instruction carried out  by the 
+embedded usecase processing of messages this  devices like Set-top boxes and 
+PDAs usecase process the incomming message . 
+for further querry execution which will 
+7 extract the desired information from the . Architecture Description 
+database. Use Case diagram for 
+As Interactive Response System through  shown in fig 4.2 Remote Mobile 
+initiates SMS.  a Data Request is made form a 
+GPRS enabled mobile Device. Message 
+sent over GPRS link over the air (OTA) is 
+then captured by the Midlet application 
+then http connection method is activated 
+and a connection is established with the 
+server on wireless local area network. 
+Device Message then read by Java Mobile 
+Application (midlet) running on Mobile 
+Device and suitable decoding (formatting) 
+of   message is done After Message is 
+decoded to suitable format, message is 
+sent Fig 2- Use case Diagram for SMS  to Java Messaging Service Queue 
+4 
+Journal of Intelligence Systems, Vol. 1, Issue 1, 2010 RAJESH K. RAI AND KALPANA RAI 
+ 
+In this process other two use cases are communication service for mobile devices 
+also involved retrieve search identifier and that allows data to be sent and received 
+search  and finally the outcome is across a mobile telephone network. GPRS 
+converted into the form of SMS and sent 
+t is a step towards 3G(third generation) and o the mobile device with the help of 
+receive is often referred to as 2.5G. GPRS is  message.   
+packet switched technology using this 
+Conclusion Higher connection speeds are attainable 
+at around 56-118 kbps, a vast 
+As if now we are very much aquainted with 
+(GSM) improvement on circuit switched networks  Global System for Mobile 
+communications of 9.6 kbps. By combining standard GSM  is the most popular 
+standard time slots theoretical speeds of 171.2 kbps  for mobile phones in the world. 
+Its are attainable. However in the very short  promoter, the GSM Association, 
+estimates that 82% of the global mobile term, speeds of 20-50 kbps are more 
+market uses the standard. GSM is used by realistic. 
+over 2 billion people across more than 212 
+countries and territories. Its ubiquity GPRS is an always-on service. There is 
+makes international roaming very common 
+b no need to dial up like you have to send etween mobile phone operators, enabling 
+subscribers something on a home PC for instance.  to use their phones in many 
+parts This feature is not unique to GPRS but is  of the world. GSM differs from its 
+predecessors an important standard that will no doubt be  in that both signaling and 
+speech channels are digital call quality, a key feature for migration to 3G. It makes 
+and so is considered a second generation services instantaneously available to a 
+(2G) mobile phone system. This has also device. 
+meant that data communication was built 
+into the system using the 3rd Generation As we have discussed above about data 
+Partnership Project (3GPP). sending over GSM service is quite slaky 
+Th and slow and full of errors also as it is e key advantage of GSM systems to based on circuit switching. Hence Due to 
+consumers has been better voice quality its high-speed connection and always-on 
+and low-cost alternatives to making calls, connectivity GPRS enables full Internet 
+such applications and services such as video  as the Short message service (SMS, 
+also conferencing straight to your desktop or  called "text messaging"). The 
+advantage mobile device. Users are able to explore  for network operators has been 
+the the Internet or their own corporate  ease of deploying equipment from any 
+networks more efficiently than they could 
+vendors that implement the standard. Like when using GSM. There is often no need 
+other cellular standards, GSM allows to redevelop existing applications.  
+network operators to offer roaming 
+ 
+services GSM network providers do not have to  so that subscribers can use their 
+phones start from scratch to deploy GPRS. GPRS  on GSM networks all over the 
+world is an upgrade to the existing network that .the major drawback of GSM 
+t sits along side the GSM network. This echnology that it is totally based on circuit makes it easier to deploy, there is little or 
+switching methodology; here we can only no downtime of the existing GSM network 
+get better voice quality rather than the while the implementation takes place, 
+data that we want to transfer on the most updates are software so they can be 
+device administered remotely and it allows GSM . Other than this the connection is 
+totally providers to add value to their business at  dedicated between two devices (like 
+mobile relatively small costs. The GSM network  devices).GPRS is the technology 
+th still provides voice and the GPRS network rough which we can achieve multicasting handles data, because of this voice and 
+means same information or data can be data can be sent and received at the same 
+sent simultaneously over the Air on time. 
+different As we have discussed in detail about the  devices at the same time.  
+current technology, which we are 
+Moreover regarding GPRS (General supposed to develop, will going to be very  
+Packet helpful in the present scenario of  Radio Service) it is a packet based 
+Copyright © 2010, Bioinfo Publications,  
+Journal of Intelligence Systems, Vol. 1, Issue 1, 2010 AUTOMATIC RESPONSE SYSTEM USING SMS 
+ 
+education system as we are heading [11] Avenoglu B. Using Mobile 
+towards Communication Tools In Web Based  the third generation of the 
+information Instruction, http://www.cag.lcs.mit.edu/  technology. [12] Robson R. (2004)  "Mobile 
+The Learning and Handheld Devices in  above proposed and developed 
+application the Classroom," www.eduworks.com  is a mobile application for 
+adding values to an institution. This 
+application can only run on the cell phone 
+having GPRS enabled services with them. 
+This application can further be enhanced 
+by adding various features to it like we can 
+send and receive various information 
+regarding students on a cell over the air 
+(OTA). Even a student can view their 
+assignments on the mobile phone by just 
+using certain services that can be availed 
+from the server. 
+References  
+[1] Cepa V., Mezini M. (2005)  
+Proceedings of the 38th Hawaii 
+International Conference on 
+System Sciences,  35-41. 
+[2] J2ME The complete reference for 
+J2ME,by TATA  McGRAW HILL 
+Publication, first Edition. 
+[3] McConnell D. A., Steer D. N., 
+Owens K. D., Knott J. R., Van 
+Horn S., Borowski W., Dick J., 
+Foos A., Malone M., McGrew H., 
+Greer L. and Heaney P. J. (2006) , 
+"Using Conceptests to Assess 
+Journal of Geoscience Education, 
+54, 61-68. 
+[4] Bishop A. L., Dinkins R. K. and 
+Dominick J. L. (2003) EDUCAUSE 
+Quarterly, 26,  50-53. 
+[5] Freeman M. and Blayney P. 
+(2005) Proceedings of the 11th 
+Australasian Teaching Economics 
+Conference, 34-38. 
+[6] Sheng H., Nah F. F.-H. and Siau 
+K. (2005) Eleventh Americas 
+Conference on Information 
+Systems, Omaha, 51-56. 
+[7] Schwabe G., Göth C. and 
+Frohberg D. (2005) Proceedings 
+of the Fourth International 
+Conference on Mobile Business. 
+Sydney, Australia: IEEE Computer 
+Society, 227-234. 
+[8] Stone A., Brigg J. (2002)  IEEE 
+Computer Society, 111-119, Craig 
+Smith Issue Date:August 2002 
+[9] William C.Y.Lee.  Mobile Cellular 
+Telecommunications &, TATA 
+McGRAW HILL, Second Edition. 
+[10] Lawton G. (2002) IEEE Computer, 
+35, 70-79. 
+6 
+Journal of Intelligence Systems, Vol. 1, Issue 1, 2010

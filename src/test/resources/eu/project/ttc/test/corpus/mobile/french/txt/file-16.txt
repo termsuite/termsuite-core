@@ -1,0 +1,1486 @@
+Institut de la Francophonie pour l'informatique 
+ 
+ 
+ 
+ 
+ 
+ 
+Rapport final 
+ 
+Travail Personnel Encadré 
+Sujet : 
+ 
+Système d'exploitation pour les mobiles 
+ 
+Encadrement : Nguyen Hong Quang (IFI) 
+Étudiant : Nguyen Tien Thinh 
+Promotion : 14 
+ 
+ 
+Hanoi, Juillet 2009 
+1 Remerciements 
+ 
+Je tiens à remercier mon encadreur, M.NGUYEN Hong Quang, professeur  à l'Institut de 
+la francophonie pour l'informatique pour son disponibilité et ses conseils, son orientation et 
+surtout son aide. Il m'a toujours aide dans les moments difficiles et m'a guide dans la bonne 
+direction dans mon travail.  
+Je remercie aussi  le corps enseignant de l'IFI pour les cours qu'ils nous ont dispensés.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2 TABLE DE MATIERE 
+ 
+TABLE DE MATIERE ....................................................................................................................................... 3 
+CHAPITRE 1. INTRODUCTION ....................................................................................................................... 5 
+1.1. CONTEXTE ......................................................................................................................................... 5 
+1.2. PROBLEME A RESOUDRE ................................................................................................................... 5 
+1.2.1. Travail théorique ........................................................................................................................ 5 
+1.2.2. Travail pratique ........................................................................................................................... 6 
+1.3. LES MOTS-CLEFS ................................................................................................................................ 6 
+1.4. RESULTAT ATTENDUS ......................................................................................................................... 7 
+1.5. CONTENU DU RAPPORT .................................................................................................................... 8 
+CHAPITRE 2. ETAT DE L'ART - LES SE POUR LES MOBILES ............................................................................. 9 
+2.1. BlackBerry ......................................................................................................................................... 9 
+2.2. PalmOS ............................................................................................................................................ 10 
+2.3. Symbian ........................................................................................................................................... 10 
+2.4. Ubuntu MID Edition ........................................................................................................................ 11 
+2.5. Windows Mobile ............................................................................................................................. 12 
+2.6. Android ............................................................................................................................................ 13 
+Tableau de comparaison entre les plateformes ..................................................................................... 14 
+CHAPITRE 3. DEVELOPPEMENT D'UNE APPLICATION SUR ANDROID ........................................................ 17 
+3.1. POURQUOI NOUS AVONS CHOISI ANDROID ? ................................................................................ 17 
+3.2. QU'EST-CE QU'ON VEUT FAIRE PRECISEMENT ? ............................................................................. 18 
+3.2.1.  Pourquoi nous avons décidé de développer ce logiciel? ........................................................ 18 
+3.2.2. Résultats espérés à la fin .......................................................................................................... 18 
+3.3. LES OUTILS ET LES DONNES AUXILIAIRES ........................................................................................ 18 
+3.3.1. Sources et types des outils qui seront nécessaires .................................................................. 18 
+3.3.2. Sources et types des données qui seront utilisés .................................................................... 19 
+3.4. ANDROID - UNE NOUVELLE PLATEFORME PUISSANTE, MODERNE ET OUVERTE .......................... 19 
+3.4.1. Architecture d'Android ............................................................................................................. 19 
+3.4.2. Les composants principaux d'une application ......................................................................... 21 
+3.4.3. Cycle de vie d'une activité (Activity Lifecycle) .......................................................................... 22 
+3.4.4. Développement d'une application sur Android ....................................................................... 25 
+CHAPITRE 4. CONCEPTION ET IMPLEMENTATION ..................................................................................... 27 
+4.1. LA SPECIFICATION D'ANDROID QUIZZES (dans le point de vue de génie logiciel) ........................... 27 
+4.1.1. Introduction au notre programme ........................................................................................... 27 
+4.1.2. Liste des activités ..................................................................................................................... 28 
+4.1.3. Cas d'utilisation ........................................................................................................................ 28 
+4.1.4. Diagramme d'activité ............................................................................................................... 33 
+4.1.5. Diagramme de classe ............................................................................................................... 34 
+3 4.2. IMPLEMENTATION ........................................................................................................................... 35 
+4.2.1. Architecture de « Android Quizzes » ........................................................................................ 35 
+4.2.2. Les librairies de programmation utilisée .................................................................................. 38 
+4.2.3. La norme GIFT .......................................................................................................................... 38 
+CHAPITRE 5. EXPERIMENTATION ET ANALYSE DES RESULTATS ................................................................... 41 
+5.1. EXPRIMENTATION DES FONCTIONS DE «ANDROID QUIZZES» ........................................................ 41 
+5.2. ANALYSE DES RESULTATS ................................................................................................................. 47 
+CHAPITRE 6. CONCLUSIONS ET PERSPECTIVES .......................................................................................... 49 
+6.1. CONCLUSIONS ................................................................................................................................. 49 
+6.2. PERSPECTIVES ................................................................................................................................. 49 
+REFERENCES ............................................................................................................................................... 50 
+LA PARTIE THEORIQUE ........................................................................................................................... 50 
+LA PARTIE PRATIQUE .............................................................................................................................. 51 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+4 SYSTEME D'EXPLOITATION POUR LES MOBILES 
+ 
+CHAPITRE 1. INTRODUCTION 
+ 
+1.1. CONTEXTE  
+Depuis quelques années, les équipements mobiles sont de plus en plus complexes et 
+robustes. Les appareils mobiles deviennent une combinaison de la technologie informatique et 
+de la technologie du téléphone mobile. Dans l'avenir, les mobiles peuvent remplacer 
+généralement le rôle de l'ordinateur portable. C'est pour quoi, les systèmes d'exploitation pour 
+les mobiles (SE) de plus en plus deviennent importants, particulièrement pour les fournisseurs, 
+les développeurs et les éditeurs d'application pour les mobiles. 
+Grâce à la capacité mobile et le développement des équipements mobiles, on peut 
+déployer les services pour les sociétés base sur la technologie du téléphone mobile. 
+Actuellement, il existe plusieurs SEs pour les mobiles comme Windows Mobile, Palm OS, 
+Symbian, BlackBerry qui sont les systèmes propriétaires. De plus, il y a les plateformes libres ou 
+code source ouvert comme Moblin.org, Ubuntu MID Edition, Android, etc. Chaque type de SE 
+est souvent approprie à quelques modèles concrets des mobiles. Cependant, chaque type de SE 
+a des avantages et des limitations. Il est donc très difficile de choisir la plateforme répondant 
+bien à l'objectif d'une société ou à une personne. 
+En 2007, Google et Open Handset Alliance (un consortium de plusieurs entreprises dont 
+le but est de développer des normes ouvertes pour les appareils de téléphonie mobile) ont  
+annoncé une nouvelle plateforme pour les mobiles qui s'appelle Android qui a fait un grand 
+éclat. De plus, en 2008, Android est devenu une plateforme ouverte et open source. 
+Le travail à effectuer dans ce TPE se situe dans le domaine de réseaux sans fil et mobiles, c'est 
+précisément le système d'exploitation pour les mobiles. Dans mon sujet, je vais faire une étude 
+comparative entre ces plateformes. Ensuite, je vais continuer étudier Android pour développer 
+une petite application sur cette plateforme. Mon sujet est donc un sujet de recherche appliqué. 
+ 
+1.2. PROBLEME A RESOUDRE 
+1.2.1. Travail théorique 
+ Etudier généralement les systèmes d'exploitation pour les mobiles: Windows Mobile, 
+Palm OS, BlackBerry, Symbian, Ubuntu MID Edition, Android. 
+ Proposer les critères pour comparer entre eux: 
+o Caractéristiques  
+o Les applications tierces 
+5 o Les applications principales  
+o Multimédia 
+o Synchronisation avec l'ordinateur  
+o Langage de programmation 
+o Compatibilité avec Office  
+o IDE (environnement de développement intégré) 
+o Courriel 
+o Environnement de l'ordinateur 
+o Etudier profondément le système d'exploitation Android 
+1.2.2. Travail pratique 
+ Étudier le système d'exploitation Android, installer et configurer l'émulateur d'Android 
+o Les caractéristiques, l'architecture d'Android 
+o Cadre de l'application (en anglais Application Framework) 
+o Android SDK 
+o Emulateur 
+ Développer une petite application sur cette plateforme 
+o Etudier l'outil pour développer l'application sur Android 
+o Etudier les APIs (Application Program Interface) pour développer l'application sur 
+Android 
+ 
+1.3. LES MOTS-CLEFS 
+Système d'exploitation : 
+« Le système d'exploitation (SE, en anglais Operating System ou OS) est un ensemble de 
+programmes responsables de la liaison entre les ressources matérielles d'un ordinateur et les 
+applications informatiques de l'utilisateur (traitement de texte, jeu vidéo, etc.). Il fournit aux  
+programmes applicatifs des points d'entrée génériques pour les périphériques. » 1 
+ Le SE contrôle les opérations d'un machine (l'ordinateur, appareil mobile, PDA, etc.) 
+ Les logiciels ne peuvent fonctionner sans un système d'exploitation. 
+ Il offre les services pour communiquer entre machine et les utilisateurs. 
+ Rôles du système d'exploitation : 
+o Gestion du processeur 
+o Gestion de l'exécution des applications 
+o Gestion de la mémoire vive  
+o Gestion des droits 
+                                                          
+1
+ Wikipedia 
+2
+  http://docs.moodle.org/en/GIFT 
+6 o Gestion des entrées/sorties 
+o Gestion des fichiers 
+o Gestion des informations 
+Système d'exploitation pour les mobiles : 
+ Les systèmes d'exploitation pour les mobiles sont des systèmes d'exploitation prévus 
+pour fonctionner sur les mobiles. 
+ Les appareils mobiles sont les appareils à ressources limitées ou faibles. C'est pourquoi, 
+on doit adapter SE à leurs limites. 
+ Le système d'exploitation pour les mobiles détermine les caractéristiques, la 
+performance et la sécurité, en fournissant des API pour déployer et gérer les 
+applications (la fonction principale des mobiles, c'est communication entre eux par les 
+services comme : téléphone, SMS, MMS, etc.) 
+Les applications tierces : Les applications qui ne sont pas développés par le producteur 
+d'équipement et le producteur du SE. 
+Android SDK (Android Software Develogamepment Kit) : Le Kit de développement logiciel 
+pour la plateforme Android. Le Kit vous fournit les outils et les API nécessaires pour commencer 
+à développer des applications pour la plateforme en utilisant le langage de programmation 
+Java. 
+Emulateur : C'est un appareil mobile virtuel qui fonctionne sur l'ordinateur. L'émulateur 
+permet aux développeurs de développer, tester et évaluer des applications Android sans l'aide 
+d'un appareil physique. 
+Smartphone, PDA : Les types de téléphone mobile.  
+ Les services principaux 
+o Gestion du temps 
+o Gestion de tâches 
+o Gestion de contacts 
+o Navigateur web 
+o Courriel 
+o Lecteur de MP3, d'images, de vidéo 
+o Bureautique 
+ Ils ont la capacité extensible. C'est-à-dire, on peut installer des applications 
+additionnelles sur l'appareil.  
+ 
+1.4. RESULTAT ATTENDUS 
+  Les connaissances sur les plateformes : 
+o Les bases de connaissances sur les équipements mobiles, un vue globale sur le 
+7 o système d'exploitation pour les mobiles. 
+o Les connaissances globales sur les avantages et les limitations de chaque 
+plateforme. 
+o Proposer les critères pour comparer entre ces plateformes. 
+ Sur la plateforme Android : 
+o Comprendre les caractéristiques et l'architecture d'Android 
+o Comprendre la méthode et le cycle pour développer les applications sur Android 
+o Développer une petite application sur Android 
+ 
+1.5. CONTENU DU RAPPORT 
+Notre rapport se compose 6 chapitres. 
+ Chapitre 1 : Dans ce chapitre, nous allons présenter le contexte et l'objectif de mon 
+travail et quelques notions utilisées.   
+ Chapitre 2 : Nous allons parler des caractéristiques, les avantages et les inconvénients 
+de chaque plateforme. Nous allons aussi donner un tableau de comparaison entre des 
+plateformes. 
+ Chapitre 3 : C'est le chapitre de l'état de l'art. Dans ce chapitre, nous allons expliquer le 
+raison de choix de la plateforme Android, l'introduction à notre programme et les outils 
+et les donnes auxiliaires. Nous allons aussi introduire plus détaille à la plateforme 
+Android : l'architecture, les composants principaux d'une application. Nous allons aussi 
+présenter le cycle de vie d'une activité.   
+  Chapitre 4 : C'est l'implémentation. Nous allons présenter la spécification, l'exigence, 
+les diagrammes de classe et diagramme des activités de notre logiciel.  
+ Chapitre 5 : C'est le chapitre d'expérimentation et d'analyse des résultats. 
+ En fin, C'est le chapitre de la perspective et de la conclusion.  
+ Il existe encore le chapitre auxiliaire, c'est les références.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+8 CHAPITRE 2. ETAT DE L'ART - LES SE POUR LES MOBILES  
+ 
+Dans cette partie, nous présenterons les caractéristiques, les avantages, les 
+inconvénients de chaque plateforme. Ensuite, nous présenterons le tableau de comparaison 
+entre les plateformes.  
+ 
+2.1. BlackBerry 
+BlackBerry a été créé par Research In Motion (RIM), une société Canadienne. Il est une 
+plateforme très populaire particulièrement dans Amérique du Nord. Selon un rapport de la 
+société Gartner, dans le marché des États-Unis, BlackBerry a maintenu le rang No1 avec  42 
+pour cent de marche. Mais cette plateforme seulement marche sur les appareils du BlackBerry.  
+Au commencement, BlackBerry est développé pour le businessman. Il y a donc des 
+applications pour le business comme : les messages électronique, les messages PIN, les 
+messages texte (SMS), les messages MMS, le BlackBerry Messenger, le web navigateur, la 
+tâche, le mémo, etc. BlackBerry fournit le service de messagerie électronique pour les sociétés, 
+les entreprises en utilisant BlackBerry Enterprise Server. De plus, le fournisseur offre aux 
+abonnés des fonctions push de messagerie et d'accès mobile pratique à du contenu Internet 
+pour leurs terminaux. Il soutient aussi la technologie de la pièce jointe qui soutiens beaucoup 
+de types de pièce jointe comme les fichiers avec les extensions .zip, .html, .doc, .dot, .ppt, .pdf, 
+etc. C'est pourquoi son service de messagerie électronique est plus meilleur que les autres 
+plateformes. D'autre part, le système de messagerie électronique est plus sûr que les autres. 
+Maintenant, Blackberry est supporté dans beaucoup pays. Alors, l'utilisateur peut accéder au 
+système de courriel de son société dans ses pays via la technologie du roaming. C'est pourquoi 
+BlackBerry est " Standard d'or " pour la messagerie électronique. 
+Maintenant, BlackBerry devient de plus en plus populaire dans le monde. Il non 
+seulement retient les bons caractéristiques mais encore offre les fonctionnalités pour les 
+consommateurs comme le multimédia (l'appareil photo, le camera, etc.), la carte Média, etc.  
+En général, malgré qu'il y a plusieurs applications tierces pour Blackberry mais le 
+nombre d'applications tierces est moins que les applications pour Palm OS, Microsoft et 
+Symbian. 
+En termes d'utilisation, la molette, le clavier QWERTY et l'interface d'utilisateur sont les 
+excellents appareils pour faciliter d'utiliser le système de courriel. 
+La technologie BlackBerry Connect permet les appareils qui marche sur les autres 
+plateformes comme Symbian OS, Palm OS et Windows Mobile peuvent connectent avec 
+BlackBerry Enterprise Server et BlackBerry Internet Server pour fournir les services comme la 
+synchronisation de la messagerie électronique, le visionnement de l'attachement, etc.. 
+9 En conclusion, généralement pour les sociétés, BlackBerry est optimal pour les grands 
+déploiements, mais pour les moyens ou les petits déploiements on peut choisir les autres 
+plateformes. 
+ 
+2.2. PalmOS 
+Palm OS est développé par la société Palm. En général, Palm OS est logique, intuitif et 
+simple. En détaille, Palm OS est facile d'utiliser et simple d'apprendre. Il optimise les étapes 
+pour naviguer entre les écrans et choisir les applications. Par exemple, pour lancer un 
+programme, appuyez sur son icône. Quand on passe à une autre application, cette application 
+se termine. 
+Le système de messagerie électronique est ouvert, c'est-a-dire, il peut fonctionner 
+ensemble avec le système du courriel de fournisseurs. Il peut aussi synchroniser avec Microsoft 
+Exchange Server. 
+Palm a le plus d'applications tierces. Il y a de plus 20.000 applications tierces pour 
+élargir la fonctionnalité des appareils. Alors, dans quelques cas, on doit utilise les applications 
+tierces pour fonctionner quelques services comme regarder la vidéo, la TV, ou travailler avec 
+Office. 
+Pour les versions précédentes (5.0 et plus tard), il y a un inconvénient ce qu'il est mono 
+tâche. C'est-a-dire, le système d'exploitation ne peut gérer qu'une seule tâche en même temps 
+tandis que les autres plateformes sont multitâches. Mais Palm OS version 6.0 est multitâche. 
+De plus, la nouvelle version offre plusieurs améliorations comme la communication, la 
+multimédia, la synchronisation, etc. Tandis qu'il retient encoure les bons caractéristiques dans 
+les versions précédentes. Alors, il n'y a pas plusieurs sociétés qui choisissent Palm OS pour 
+déployer les services de sociétés. Mais pour les consommateurs, il est un bon choix. 
+En conclusion, Palm OS est facile d'utilisation. Il y a beaucoup de applications tierces. 
+Palm OS est un bon choix pour les consommateurs mais non pas les sociétés. 
+ 
+ 2.3. Symbian 
+Symbian est développé par la société Symbian. Selon la société Gartner, Symbian a 
+commandé 57 pour cent des ventes globales à des utilisateurs finaux au cours du deuxième  
+trimestre, en 2008 dans le marché des systèmes d'exploitation pour les Smartphones. Malgré 
+que Symbian soit le leader mondial du système d'exploitation pour les Smartphones, il n'existe 
+pas presque en Etats-Unis. Parce que, il y a peu d'appareils sous Symbian qui soutient de CDMA 
+qui est la technologie principale de la transmission de la voix en Etats-Unis. 
+Grâce à l'indépendance entre les composants du Symbian, il y a trois types de couche de 
+l'interface de l'utilisateur principales (UI layer ou middleware ou intergiciel du SE Symbian), ce 
+10 sont : S60 qui est développé par Nokia, UIQ par Sonny Ericsson et MOAP par NTT DoCoMo. 
+Alors, il y a plusieurs applications différentes qui sont développé sous 3 intergiciels ci-dessus. 
+ Pour le système de messagerie électronique, Symbian est soutenu par plusieurs 
+systèmes de messagerie électronique comme BlackBerry (via BlackBerry Connect) et Microsoft 
+(via Exchange ActiveSync), etc. 
+Pour l'utilisation, Symbian est plus facile que Windows Mobile mais plus difficile que 
+Palm OS. Mais ça dépend de chaque appareil. Il y a aussi plusieurs applications tierces (environ 
+5.500 applications). 
+En effet, Nokia qui est le plus grand manufacture de téléphone dans le monde est le 
+principal actionnaire de Symbian. C'est pourquoi Nokia utilise la plateforme Symbian pour ses 
+Smartphones. Cela garantit la position du Symbian dans marché des systèmes d'exploitation 
+pour les Smartphones. Mais au rapport de la société Gartner, depuis quelques années le part 
+de marche de Symbian diminue à cause de concurrence avec d'autres plateformes. 
+Symbian est extrêmement puissance, offrant OS de soutien au niveau de la plupart des 
+fonctionnalités que vous trouverez dans Palm, Windows Mobile et BlackBerry. Il offre une 
+plateforme flexible, c'est-a-dire, les manufactures peuvent ajouter facilement ses technologies, 
+ses infrastructures à la plateforme Symbian. De plus, il est soutenu par les grandes 
+manufactures de l'industrie mobile comme Nokia, Sony Ericsson, Motorola, NTT DoCoMo, 
+Renesas, etc. Alors, Symbian est bon choix pour les sociétés. 
+En janvier 2008, Nokia a annonce des plans pour transformer Symbian en une 
+plateforme en code source ouverte. Selon le calendrier de lancement du Symbian, le code 
+source sera lancé en juin 2010. Il sera publié sous la licence « la Licence publique Eclipse 1.0. 
+»(EPL 1.0). Grâce au ses caractéristiques, nous croyons que Symbian deviendra un majeur 
+compétiteur de l'Android dans l'avenir.  
+En conclusion, Symbian est puissance et très populaire particulièrement en Europe. Il 
+est un bon choix pour les consommateurs et les sociétés grâce au ses appareils - Nokia. 
+ 
+2.4. Ubuntu MID Edition 
+Ubuntu MID Edition est développé par la communauté Ubuntu. Il est parrainé par les 
+sociétés Canonical et Intel. Les MIDs (Mobile Internet Device) sont les appareils qu'on peut 
+mettre entre téléphone portable et l'ordinateur. D'autre part, les MIDs peuvent être les 
+terminaux mobiles multimédia dotés ou non de fonctions de téléphonie. MIDs est créée sous 
+l'idée de «mini - l'ordinateur portable ». L'usage principal des MIDs est le navigateur Internet 
+en mobilité. Comme Android, grâce au noyau Linux, Ubuntu MID Edition est sûr. 
+Ubuntu MID Edition est un projet en code source ouvert. Il est très souple et  
+ersonnalisable, permettant la différenciation des produits. Selon l'introduction du produit de la 
+11 communauté Ubuntu, il est simple d'utilisation. Il peut intégrer avec les réseaux mobiles 
+sociaux et les sites web 2.0. Il soutient aussi des variétés d'application de Web 2.0 comme le 
+navigateur Web, la messagerie électrique, le camera, le VoIP, le Messagerie instantanée, le 
+GPS, le blog, la TV, les jeux électriques, etc. Pour la technologie de communication, il soutient 
+Wi-Fi, 3G, Bluetooth, GPS et WiMAX. Particulièrement, il a la grande capacité de stockage (de 2 
+Go à 8 Go de Flash, ou 256/512 Mo de stockage du disque). 
+Maintenant, Ubuntu MID Edition est utilisé dans quelques modèles de appareils 
+utilisant une plate-forme Intel Atom, ou McCaslin comme Samsung Q1 Ultra, HTC Shift, Nokia 
+N800 web tablette. 
+En conclusion, Ubuntu MID Edition transfère l'expérience d'Internet sous l'ordinateur 
+aux MIDs. En général, Ubuntu MID Edition est une plateforme pour les MIDs mais n'est pas 
+pour le téléphone portable. 
+ 
+2.5. Windows Mobile 
+Windows Mobile est développé par la corporation Microsoft. Alors, Windows Mobile a 
+la capacité de fonctionnement des logiciels sur « Windows » (seulement Windows), compatible 
+avec tous les logiciels de « Windows ». 
+Windows Mobile soutient beaucoup de types d'audio, vidéo. Il soutient aussi la capacité 
+de télécharger, de jouer les chansons et de regarder le TV en ligne. Grâce a les caractères, dans 
+le domaine loisir, il est le plus bon. 
+La messagerie électronique du Windows Mobile n'est pas bon que Blackberry mais il a 
+le perspective du succès. Au lieu d'un modèle push de la messagerie électronique comme 
+BlackBerry, Windows Mobile fait appel à un genre de « fast-pull », qui récupère les données 
+rapidement au lieu de l'avoir poussé à l'appareil. De plus, il est moins sécurité que Blackberry. 
+En ternes d'application, il a plus d'applications tierces que Symbian, BlackBerry mais 
+moins d'applications tierces que Palm OS. Il utilise la même collection de l'APIs avec Windows, 
+il est facile de développer application pour le développeur de Microsoft, d'exécuter pour les « 
+applications de Microsoft » mais il n'est pas bon pour les autres applications, les développeurs. 
+Dans la nouvelle version (comme version 6), Windows Mobile a amélioré la capacité de 
+connexion, de fonctionnement ensemble avec les autres appareils, et de compatibilité avec 
+Office. Il a intégré plusieurs applications pour communication comme Windows Live, hotMail, 
+Messenger, etc. 
+Maintenant, dans le monde il y a plusieurs appareils qui marchent sur Windows Mobile 
+comme quelques modèles du Palm Treo pro, Motorola, Samsung, AT&T, T-Mobile, etc. Mais 
+Nokia qui est le leader mondial du combiné téléphonique n'utilise pas Windows Mobile comme 
+le SE pour les appareils. 
+12 En conclusion, grâce au de la popularité de Microsoft, Windows Mobile est supporté par 
+beaucoup de sociétés. Alors, il y a variété d'applications pour Windows Mobile, et il marche 
+bien pour les applications de Windows. 
+ 
+2.6. Android 
+Android est développé par l'Open Handset Aliance. Android a été annonce en 2007. De 
+plus, en 2008, il est devenu une plateforme en code source ouverte. Selon Google qui est un 
+majeur distributeur, Android est une plateforme puissant, moderne, sécurité et ouverte.  
+Android est basé sur le noyau Linux et utilise plateforme java pour les applications. 
+Android est gratuit et complète ouverte. C'est-à-dire, le code source et les APIs sont ouvertes. 
+Alors, les développeurs obtiennent la permission d'intégrer, d'agrandir et de replacer les 
+composants existants. De plus, il n'a pas des distinctions entre les applications natives et les 
+applications qui sont développés par les développeurs parce qu'ils accèdent aux mêmes APIs. 
+L'utilisateur peut donc personnaliser facilement son appareil. La plateforme est très flexible. On 
+peut adapter les applications aux besoins du client ou le remplacer entièrement. En raison de 
+flexibilité et de variété de l'application, il est difficile de choisir la meilleure application.  
+En termes d'application, Android est intégré plusieurs services de Google pour accéder 
+rapidement aux services d'internet comme Gmail, YouTube, Google Talk, Google Calendar et 
+Google Maps.  
+En novembre 2007, le SDK . Le SDK offre complètement les APIs 
+pour développer l'application sur Android. On a lancé aussi les documentations, les outils pour 
+développement d'application. Tous cela avec le défi de développement d'Android ont promû 
+les développeurs. 
+Maintenant, dans le monde il y a peu de modèles d'appareils qui marchent sur Android 
+(T-Mobile G1, Kogan Agora, I7500 Galaxy). C'est pourquoi presque tous les développeurs 
+doivent développer les applications sur l'émulateur. Mais ces applications peut ne marche bien 
+sur l'appareil réel. C'est d'autre difficulté. 
+En conclusion, malgré qu'il y ait plusieurs difficultés nous croyons que l'Android peut 
+faire concurrence aux autres plateformes. 
+ 
+Après examiner les caractéristiques, les avantages et les inconvénients, nous trouvons que pour 
+nous Android est la plus intéressant. C'est pourquoi nous allons faire une étude plus approfondi 
+à Android. 
+13 Tableau de comparaison entre les plateformes 
+ 
+Mobile plate- Blackberry Palm OS Symbian Windows Mobile Ubuntu Mobile Internet Device (MID) Edition Android 
+forme 
+ 
+Société RIM Palm Symbian Microsoft Ubuntu communauté (Canonical Ltd et Intel) Open Handset Aliance 
+ "Standard d'or" pour courriel logique, intuitif, simple Les  manufactures peuvent ajouter  Compatibilité avec tous les Ubuntu MID Edition est très souple et - code source ouvert 
+facilement  ses  technologies, ses logiciels de « Windows » personnalisable, permettant la différenciation des - APIs ouvert 
+infrastructures à la plateforme  Puissance produits.  
+Caractéristiques  Multitâches  utilisation simple et facile  Multitâches - capacité  de fonctionnement des  Utilisation simple o La plate-forme basée sur Linux 2.6.25 pour ARM 
+  Bien intégration avec autres  écran tactile  non support CDMA, seulement  GSM logiciels sur « Windows »  Petite taille/ facteur de forme (Acorn RISC Machine) 
+plateformes  mono tâche  Beaucoup de fonctions (seulement Windows), la  QWERTY clavier - clavier numérique virtuel ou o Logiciels : 
+ Déploiement  facile pour  navigation facile  caractéristique prédominant compatibilité avec tous les logiciels physique  Supporte le système du fichier FAT32 
+une société   Beaucoup des applications tierces de « Windows »  Un écran tactile de 4 à 7 pouces  Supporte TCP/IP (TCP, UDP, etc.) 
+ Gestion facile  USB v2.0, Bluetooth v2.0, WLAN, - multi tâche : robuste  Pouvoir intégrer avec les réseaux mobiles o Minimum de 128 Mo RAM et 256 Mo de 
+ La vie de la batterie plus IrDA & serial - « smartdial » sociaux et les sitewebs 2.0 mémoire flash 
+longue  TCP, IPv4, IPv6, MSCHAP v2, PPP   Wi-Fi, 3G, Bluetooth, GPS, WiMAX o 802.11 b / g Wi-Fi 
+ Facteur de forme est petit  Wi-Fi intégré  Stockage: 2GB to 8GB Flash ou stockage du o USB 2.0 
+et clavier maniable  disque, 256MB+ /512MB+ o Bluetooth 2.0 EDR (Enhanced Data Rate) 
+ Sécurité haute sans menace  OpenGL 3D o Stockage amovible 
+d'application coquine, virus,  Gestion d'utilisation en utilisant le Java, le Flash, o D'affichage: 
+etc. l'AJAX ; le HTML, Clutter, Python avec GTK, C/C++ - résolution HVGA 
+ avec GTK et Java - 16 bits de couleurs 
+- écran tactile 
+ PDF 
+o Clavier 
+ La vie de la batterie est longue 
+- QWERTY 
+- 5-directions de navigation 
+- Appareil photo 
+o Notifications 
+- LEDs 
+- Vibration 
+o Radio et la fonctionnalité de téléphonie 
+- GPRS, EDGE, UMTS, HSDPA 
+- Roaming internationale, SMS, MMS 
+- Des services pour la téléphonie : l'appel en 
+attente, conférence  téléphonique 
+- USSD  
+- RIL (Reference Radio Interface Layer) 
+Applications Utiliser facilement quelques  Calendrier carnet d'adresses, gestion du temps, - calendrier les fonctions de téléphonie ordinaire: contrôle   Les fonctions de téléphonie ordinaire: contrôle  
+principales applications simples comme :  De plus en plus variété SMS, téléphone, Calendrier, - gestion de la tâche d'appel, etc. d'appel, conférences téléphoniques  ...  
+ carnet d'adresses, gestion du  Calculatrice ... - Internet Explorer Mobile   Navigateur Web (supporte le HTML et XHTML) 
+temps, SMS, téléphone, - ...  Réveil, calendrier, Caméra, Contacts, messagerie 
+14 Calendrier, Bloc-notes, Tâches,  instantanée, MMS, Voice Dialer, GoogleSearch 
+Calculatrice, Gestion de mots 
+de passe 
+courriel  Blackberry UI  permet  VersaMail: via  POP3, IMAP  POP3, IMAP  Supporte les protocoles : POP3, IMAP4,  SMTP. 
+accéder courriel Bluetooth, Wi-Fi, POP3,  Lotus Notes  L'amélioration des  
+rapidement et facilement. IMAP, VPN (virtual  Microsoft Exchange fonctionnalités de connexion à 
+ Recevoir/envoyer courriel private network)  Pouvoir supporter les solutions du Microsoft Exchange Server, 
+ Mieux supporter le  Microsoft Exchange courriel de BlackBerry et technologie "fast-pull " 
+courriel avec  Microsoft.  Il ne fournit pas une résolution 
+l'attachement  de sécurité de bout en bout 
+ Encryptage de courriel: (tandis qu'il existe dans 
+DES, AES BackBerry) 
+ TLS encrypté automatique  Encryptage: DES, AES 
+ "Push mail technology"  Accès courriel a distance 
+ 
+Multimédia  Capacité enregistrable - Haute résolution d'écran  vidéo de lecture et  « plus bon » que les autres,  Un lecteur multimédia intégré pour la  Lecteur de multimédia  permet de gérer, 
+  vidéo de lecture encastré: - Bon qualité d'audio d'enregistrement, audio de lecture supporte beaucoup de types de conférence du Voix et vidéo d'importer la lecture de contenu qui a été 
+support plusieurs de - Jouer avec l'application et d'enregistrement mais audio, vidéo.  USB, un appareil photo numérique intégré, le encodé sous diverses formes. 
+types tierce  dépendre chaque MID  Télécharger et jouer les chansons microphone, l'écouteur, haut-parleur  Audio: La sortie audio (mono et stéréo), 64 kbps 
+ Caméras intégrés  les interfaces codec d'audio et en ligne  audio 
+vidéo compatible avec OpenMax  TV en ligne  Soutenir les formats : MPEG-4, 
+IL 1.0 H.264, MP3, AAC, AMR, JPEG, PNG, GIF. 
+Synchronization  Synchronisation des (sous Windows plateforme  - Microsoft Outlook   
+(entre un contacts, des mémos, des et Mac plateforme) : - Missing Sync(Mac OS) 
+téléphone tâches, en utilisant : - Outlook  
+portable et un  Outlook - Palm desktop 
+l'ordinateur)  Lotus Notes  
+ Mac OS: IIA's PocketMac 
+pour Blackberry 
+Compatibilité Documents To Go DataViz Documents To Go : Supporter complètement mais Supporter complètement   
+avec Office ne pas robuste mais peut dépendre de chaque MID 
+ supporter PDF 
+Applications  Il n'y a pas beaucoup de Il y a beaucoup Avoir plus 5,500 applications tierces - Symbian, BlackBerry  <Windows Variétés des applications de Web 2.0 comme: Android été supporté par Android communauté et 
+tierces bibliothèque de logiciels d'applications tierces (plus  Mobile < Palm  OS navigateur, courriel, média, camera, VoIP, GPS, blog, Open Handset Aliance 
+ tiers 29,000 applications) - Variété TV, Jeux électriques, contacts, etc.  
+ <  Palm OS et Microsoft et  
+Symbian 
+ Environ centaine des 
+applications tires 
+Langage de Java C/C++ C++,  Java, OPL C++,  C#/VB Shell,  C/C++, Python, Java Java 
+programmation    
+ 
+IDE + SDK  Blackberry  JDE (Java  CodeWarrior,  GCC  Nokia Carbide C++ (basé sur  Visual Tools v4 (gratuit)  Eclipse - Eclipse (Android SDK pour Windows, Mac OS X 
+15 Development  The Palm OS Software Eclipse)  Visual Studio 2005 Standard  Netbeans (Intel) et Linux (i386)) 
+Environment), "plugin" Development Kit (SDK)  Express (gratuit), Dev Edition  Visual Studio Pro   ...  - IntelliJ 
+sous  Visual Studio et     - NetBeans (android plugin) 
+Eclipse  
+ BlackBerry MDS Studio 
+avec  BlackBerry MDS 
+Runtime 
+Environnement Windows/Mac OS Windows/Mac/Linux Windows  Windows/Mac OS/Linux Ubuntu Windows /Linux 
+  
+Les appareils Blackberry Pearl, Blackberry Palm Centro, Palm Treo Nokia E62, Nokia 9210, Sony Ericsson Palm Treo pro, Samsung Saga, AT&T  T-Mobile G1, Kogan Agora, SamSung I7500 Galaxy 
+ 8820, etc.  755p, etc.  P800, P900, P910, Motorola A925, etc. BlackJack II, T-Mobile Shadow, HTC 
+FUZE, LG Incite, etc.   
+16 CHAPITRE 3. DEVELOPPEMENT D'UNE APPLICATION SUR ANDROID  
+ 
+Dans ce chapitre, nous allons présenter les raisons du choix d'Android, les connaissances 
+sur Android et les outils, les données auxiliaires pour créer une application dans la partie 
+pratique.   
+3.1. POURQUOI NOUS AVONS CHOISI ANDROID ? 
+Dans la partie théorique, nous avons étudié les connaissances générales sur plusieurs 
+plateformes. Nous avons donné les caractéristiques, les avantages et les limitations de chaque 
+plateforme. Nous avons présenté aussi le tableau de comparaison entre les plateformes. Dans 
+la partie pratique, nous avons choisi la plateforme Andoird pour faire une étude approfondie et 
+pour développer une application simple. Il y a quelques raisons de mon choix : 
+- Android est une nouvelle plateforme en code source ouverte. De plus, selon Google qui 
+est un majeur distributeur, Android est une plateforme puissante, moderne, sûre et 
+ouverte. Grâce à l'ouverture du code source et des APIs, les développeurs obtiennent la 
+permission d'intégrer, d'agrandir et de replacer les composants existants. Les utilisateurs 
+peuvent adapter les applications à leur besoin.    
+ 
+Figure 1. Ouverture  de l'Android 
+- Android est basé sur le noyau Linux. Alors, il y a plusieurs avantages comme une grande 
+mémoire, la gestion de processus, le modèle de sécurité, le soutien de bibliothèque 
+partagé, etc. 
+- Le SDK de l'Android offre complètement les APIs pour développer l'application sur 
+Android. 
+- Grâce au « Android Developer Challenge » que Google fournira 10 millions de dollars en 
+prix - aucune condition pour les applications sur la plateforme Android, les développeurs 
+ont eu l'opportunité de gagner beaucoup d'argent.  
+ 
+17 3.2. QU'EST-CE QU'ON VEUT FAIRE PRECISEMENT ? 
+ Précisément, dans la partie pratique, nous allons faire : 
+- Étudier le système d'exploitation Android, installer et configurer le système de 
+développement et l'émulateur d'Android sur Ubuntu. 
+- Étudier les outils pour développer l'application sur Android. 
+- Étudier les APIs (Application Program Interface) pour développer l'application sur 
+Android.  
+- Développer une application qui s'appelle "Android Quizzes" qui aide les utilisateurs à se 
+vérifier leur niveau dans un domaine concret. 
+Les fonctions de «Android Quizzes » : 
+ Sélectionner un quiz dans la banque de quiz local.  
+ Importer des quiz qui sont stocké dans un server à distance sous la norme GIFT.   
+ Exécuter,  afficher le résultat et les rapports. 
+ Gérer des quiz.  
+3.2.1.  Pourquoi nous avons décidé de développer ce logiciel? 
+Maintenant, il existe plusieurs applications sous la plateforme Android. Mais nous trouvons 
+qu'il non seulement manque les applications d'éducation sous la plateforme Android mais 
+encore dans la plupart des plateformes. Aujourd'hui au Vietnam, les élèves doivent participer 
+au baccalauréat. Dans cet examen on utilise les types de question comme choix multiple. Notre 
+logiciel les aide donc à vérifier leur niveau de connaissance à tout moment et n'importe où. 
+C'est pour quoi notre logiciel peut être une solution dans l'apprentissage mobile au Vietnam. 
+Nous croyons que dans le futur proche, l'apprentissage mobile sera populaire pour non 
+seulement les élèves mais encore les sociétés. On pourra donc utiliser notre logiciel dans 
+l'apprentissage mobile. Mais en raison de la nouveauté de notre logiciel, il existe aussi les 
+risques.  
+3.2.2. Résultats espérés à la fin 
+Dans la partie pratique, nous espérons que : 
+- Nous pourrons comprendre globalement l'architecture de l'Android, les APIs, les outils 
+pour développer l'application sous Android. 
+- Nous finirons la première version de notre logiciel. 
+ 
+3.3. LES OUTILS ET LES DONNES AUXILIAIRES  
+3.3.1. Sources et types des outils qui seront nécessaires 
+Pour développer une application sur Android, nous utiliserons la plateforme Eclipse et JDT 
+plugin. En détails :  
+- Eclipse 3.3 (Europa) ou 3.4 (Ganymede) sous Ubuntu 
+18 - Eclipse JDT plugin  
+- Dalvik Debug Monitor Service (DDMS) 
+- Android Development Tools (ADT) 
+- Eclipse WST (facultatif, pour Android Editors)  
+- JDK 5 ou JDK 6 
+- Non compatible avec Gnu Compiler pour Java (gcj)  
+Nous utiliserons aussi l'émulateur d'Android comme un appareil virtuel pour développer 
+l'application. L'émulateur qui est un appareil mobile virtuel qui fonctionne sur l'ordinateur 
+permet aux développeurs de développer, tester et évaluer des applications Android sans l'aide 
+d'un appareil physique. L'émulateur de Android imite tous les types de matériel et de logiciel 
+principal d'un appareil mobile, sauf qu'il ne peut pas recevoir, appeler l'appel réel.    
+A côté les outils, nous ne pouvons pas aborder le SDK du Android. Le SDK est une collection 
+d'APIs qui fournissent les procédures disponibles, les fonctions pour faciliter le processus du 
+développement d'une application sur Android.  
+3.3.2. Sources et types des données qui seront utilisés 
+Nous avons utilisé l'internet pour chercher le code source de notre logiciel en Java mais 
+nous n'avons pas trouvé. Nous devons donc développer notre application depuis le 
+commencement jusqu'à la fin.  
+Pour tester des fonctions de notre logiciel, nous utiliserons quelques questions du ministère 
+Vietnamien de l'éducation et de la formation pour le baccalauréat. Cela est possible parce que 
+nous avons eu ces questions. 
+ 
+3.4. ANDROID - UNE NOUVELLE PLATEFORME PUISSANTE, MODERNE ET OUVERTE 
+Android est ensemble de pile de logiciel qui se compose 4 parties : 
+ SE (Système d'exploitation) 
+ Intergiciel (Middleware) 
+ Les applications principales 
+ Ensemble des APIs    
+3.4.1. Architecture d'Android 
+L'architecture de l'Android se compose 4 couches. Ce sont le noyau Linux, les 
+bibliothèques et le moteur d'exécution Android, le Cadre de l'application et le couche 
+d'applications. 
+Linux Kernel 
+Android est basé sur le noyau Linux (2.6.24). Alors, il y a plusieurs avantages comme 
+grand mémoire, gestion de processus, modèle de sécurité, soutien de bibliothèque partagé, 
+19 etc. il fournit les drivers pour communiquer entre les hardwares et leurs logiciels. De plus il y a 
+les parties d'augmentation comme la gestion d'énergie.  
+ 
+ 
+Figure 2. Architecture de l'Android 
+Bibliothèque  
+C'est une collections de plusieurs bibliothèques qui basé sur C /C++ comme : 
+- Bionic : C'est une bibliothèque qui implémente la bibliothèque Libc - Bibliothèque de la 
+fonctionnalité : WebKit navigateur pour web navigateur ; Media Framework pour soutenir 
+vidéo, audio normal ; SQLite pour stoker de données, etc. 
+- HAL (Hardware Abstraction Libraries) pour séparer entre le hardware et la plateforme 
+logique. 
+Moteur d'exécution d'Android (Android Runtime)  
+Moteur d'exécution d'Android se compose les bibliothèques du coeur, la machine 
+virtuelle Dalvik. Les bibliothèques du coeur pour Java fournissent des puissances, des simples 
+pour développer la plateforme. La machine virtuelle Dalvik fournit un environnement qui peut 
+fonctionner sur un CPU limité et dans les situations de faible énergie. Il utilise le format du 
+fichier .DEX pour optimiser les ressources comme CPU, RAM, et pour l'application portable. 
+Pour les fichiers .jar, le système utilise un outil intégré pour convertir "byte code" .jar en .dex.  
+ 
+Figure 3. Conversation d'un fichier .java à un fichier .dex 
+20 Carde de l'application (Application Framework)  
+Carde de l'application (Application Framework) fournit les services principaux pour la 
+plateforme Android et les services principaux pour accéder à API du hardware au bas niveau. 
+Les Applications 
+Ce sont les applications qui marchent sous la plateforme Android comme: le réveil, la 
+calculatrice, le calendrier, la caméra, les contacts, etc. Toutes les applications sont développées 
+par Java. Nous pouvons trouver que tous les composants de l'Android sont ouverts. Cela 
+garantit l'ouverture de l'Android. 
+3.4.2. Les composants principaux d'une application 
+Une application Android se compose une collection des composants. Il y a 4  
+composants principaux : 
+ 
+Figure 4. Les composants principaux d'une application Android 
+Activity 
+La plupart des applications se compose plusieurs écrans. Chaque écran peut être réalisé 
+par une activité. Si un nouvel écran ouvre, le système utilise une pile d'histoire pour stocker les 
+écrans précédents et pouvoir reprendre l'état précédent ou enlever cet état. 
+Broadcast Intent Receiver 
+On peut utilise Broadcast Intent Receiver pour exécuter les réactions sur les 
+événements extérieurs. Par exemple, l'application exécutera automatiquement si une 
+Broadcast Receiver est éveillé (trigger).  
+Service 
+Une Service est utilisé pour réaliser l'application en arrière-plan. C'est-à-dire, cet 
+application peut marcher quand d'autre application est en train d'exécuter comme les services 
+de lecture de musique. 
+Content Provider 
+Content Provider fournit des méthodes pour stocker ou rendre de données. Il permet 
+partager des données entre les applications via les fichiers, ou une base de données de SQLite. 
+21 Dépend chaque application, elle peut avoir tous les composants en dessus ou non. Mais elle 
+sera crée par ces composants. 
+3.4.3. Cycle de vie d'une activité (Activity Lifecycle) 
+Pour développer d'une application sur Android, on doit comprendre le cycle de vie d'une 
+activité. Le cycle de vie d'une activité est exprimé par la figure suivant (Figure 5. Le cycle de vie 
+d'une activité). 
+- L'état Active/courant (Running) : C'est un état que l'activité marche en avant-plan. Dans 
+ce cas, cette activité est actif ou de la course. On peut dire que cette activité ait la 
+concentration (focus). 
+- L'état Paused (il est en pause) : Cette activité est visible mais il a perdu de se concentrer.  
+- L'état Stopped : Cette activité n'est pas visible. Si une activité est complètement 
+masquée par une autre activité, il est arrêté. Il conserve tous les états membres et de 
+l'information, cependant il n'est plus visible pour l'utilisateur que sa fenêtre est cachée 
+et il sera souvent tués par le système lorsque la mémoire est nécessaire ailleurs. 
+- L'état Dead : Cette activité a terminé ou il n'a jamais été démarré. Si une activité est en 
+pause ou arrêtée, le système peut chuter l'activité de la mémoire, soit par lui 
+demandant de se terminer, ou tout simplement tuer le processus. Quand il est affiché 
+de nouveau à l'utilisateur, il doit être redémarré et restauré à son état antérieur. 
+Il existe trois boucles principales: 
+ La durée de vie d'une activité se passe entre le premier appel à OnCreate () par l'appel  à 
+onDestroy (). Une activité met en place tous les états globaux dans la méthode onCreate 
+() et libère toutes les ressources restantes à onDestroy ().  
+ La durée de vie visible d'une activité se passe entre un appel à onStart () jusqu'à ce 
+qu'un appel correspondant à onStop (). Dans ce temps, l'utilisateur peut voir l'activité 
+sur l'écran, même si elle n'est pas à l'avant et à l'interaction avec l'utilisateur. Entre ces 
+deux méthodes, les ressources qui sont nécessaires pour montrer l'activité de 
+l'utilisateur sont conservées.   
+ La durée de vie d'une activité en avant-plan se passe entre un appel à onResume () 
+jusqu'à ce qu'un appel correspondant à onPause (). Dans ce temps, l'activité est en face 
+de toutes les autres activités et d'interagir avec l'utilisateur. Une activité peut souvent 
+changer son état  entre l'état de reprise et l'état en pause.  
+ 
+ 
+ 
+ 
+ 
+22 Voici le cycle de vie d'une activité 
+ 
+Figure 6. Le cycle de vie d'une activité 
+ 
+Exemple : 
+Pour mieux comprendre le cycle de vie d'une activité, nous donnons un exemple 
+suivant. 
+Dans cet exemple, on suppose qu'un utilisateur parle à son ami via son téléphone portable. 
+Dans ce moment, il demande aussi au navigateur de chercher son figure dans son album de 
+Picasa et de l'envoyer à son ami via le courriel et reprendre cette conversation.  Dans ce cas, il y 
+a 4 applications différents et 4 processus différents courants. Mais à partir du point de vue de 
+l'utilisateur, toutes les activités ne sont pas importantes. Android gère le CPU et l'utilisation de 
+la mémoire elle-même. Il signifie que l'utilisateur peut traverser les applications avant et en 
+arrière sans penser à la mémoire et à des processus exécutés.  
+23 Figure 7. Une pile d'application 
+ 
+Voici les ordres d'exécution des applications et des processus correspondants.  
+ 
+ 
+ 
+24 Figure 8. Les étapes d'une pile d'application 
+ 
+3.4.4. Développement d'une application sur Android 
+Voici quelques étapes principales dans le processus de développement d'une application sur 
+Android : 
+ Faire la conception de la base de données. 
+ Créer des classes pour représenter les données physiques (couche Mapping) et pour 
+définir des actions comme : supprimer, ajouter, modifier des données.  
+ Dessiner des interfaces en les fichiers XML ou  en codage : 
+o Les vues (View) : Text, Edit, List, Image, Web, Map, etc. 
+o Les arrangements (layout) : Frame, Linear, Relative, Table, Absolute 
+25 Choisir des arrangements (layout) : Les layouts sont les ressources qui indiquent les 
+interfaces des activités. On utilise les fichiers XML pour exprimer les interfaces. Mais il 
+existe d'autre technique pour dessiner l'interface. Dans cette technique, on programme 
+directement les composants graphiques en utilisant le codage.   
+ Organiser des ressources: les constantes globales (string.xml), les icônes, les images, 
+etc.  
+ Créer et mettre à jour le fichier de configuration : AndroidManifest.xml.  
+AndroidManifest.xml (configuration de l'application)  est utilisé pour stocker les 
+dispositions (settings) globales comme les permissions de l'application, les activités, les 
+filtres de l'intention.  
+ 
+Figure 9. Une application sur android 
+ Créer des activités (Créer les classes pour exécuter les fonctions avec la base de 
+données (ajouter, supprimer, modifier, mettre à jour, etc.) :  
+o Chaque activité peut correspondre avec un écran ou une fonction de cette 
+application.  
+o Il existe quelques activités qui s'occupent des méthodes pour communiquer 
+avec la base de données (Couche Mapping). 
+o Les Intents sont utilisées pour orienter des activités (CALL, ACTION_MAIN, 
+ACTION_VIEW, etc).  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+26 CHAPITRE 4. CONCEPTION ET IMPLEMENTATION 
+ 
+Dans la partie pratique, nous devons programmer une application sur Android. Selon le 
+point de vue de génie logiciel, nous devons donc faire quelques activités  comme : l'étude 
+préalable, l'étude technique, liste des activités, le diagramme des activités, cas d'utilisation, etc.  
+ 
+4.1. LA SPECIFICATION D'ANDROID QUIZZES (dans le point de vue de génie logiciel) 
+4.1.1. Introduction au notre programme 
+Le but du projet a pour développer une application qui marche sur la plateforme 
+Android  pour organiser des quiz et pour aider les utilisateurs à vérifier leur niveau. 
+Caractéristiques des utilisateurs : Utilisateurs utilisent leur téléphone portable qui est installé 
+notre logiciel pour sélectionner  une liste des quiz et jouer avec eux.   
+Contraintes de développement 
+ Fonctions : les fonctions qui sont définis dans la version 1  
+ Temps : dans le temps du TPE 
+ Limitation des ressources : limitation du mémoire interne du téléphone portable 
+Moyens logiciels 
+ L'environnement de développement Eclipse sous Ubuntu 
+ Le SDK de l'Android 
+ Emulateur 
+ ADT 
+Risque  
+ Il manque des connaissances sur la programmation mobile 
+ Il y a plusieurs APIs que nous devons examiner 
+ On peut tester seulement sous un émulateur 
+Fonction du logiciel 
+Notre logiciel permet: 
+ Organiser un test : Sélectionner un quiz dans la banque de quiz  qui est classifié en trois 
+niveaux difficultés : facile, moyen,  et difficile. 
+ Importer les fichiers de quiz sous norme standard comme : GIFT, IMS QTI,  HotPotatoes, 
+etc. 
+ Exécuter, afficher le résultat et les rapports. 
+ Gérer des quiz. 
+27 Supporter les questions qui comprennent les composants multimédias. 
+Notre logiciel marche en mode hors ligne. Tous les quiz ont donc stockés dans la base de 
+données locale.  Mais on peut connecter avec des serveurs à distance pour importer des quiz.  
+ En raison de limitation de temps dans la partie pratique, nous allons développer une 
+application très simple. Mais nous allons continuer compléter ce logiciel après finir le travail du 
+TPE.  
+En détails, dans cette étape, nous allons développer notre application avec les fonctions 
+essentielles (version 1) :  
+ Supporter seulement les questions de texte sans multimédia. 
+ Sélectionner un quiz dans la banque de quiz locale.  
+ Importer des quiz qui sont stocké dans des serveurs à distance.   
+ Exécuter,  afficher le résultat et les rapports. 
+ Gérer des quiz.  
+4.1.2. Liste des activités 
+ 
+ 
+Figure 10. Liste d'activités de notre programme 
+4.1.3. Cas d'utilisation 
+ 
+ 
+28 Figure 11. Cas d'utilisation 
+ 
+Les cas d'utilisations suivants représentent l'ensemble des besoins et des exigences que 
+notre application doit respecter. Ces cas d'utilisations sont regroupés en modules. 
+Quizzes  
+ 
+Figure 12. Cas d'utilisation -Quizzes 
+Organiser un quiz 
+UC1 : Organiser un quiz/ sélectionner un quiz  
+ 
+Nom UC1. Organiser un quiz/ sélectionner un quiz 
+Résumé Utilisateur sélectionne un quiz dans la liste des quiz local pour 
+organiser un test. 
+Acteur Utilisateur 
+29 Pré-conditions Il existe au moins un quiz dans la banque locale.  
+Evènements de base Utilisateur clique sur le fileur pour sélectionner la catégorie et le 
+quiz. 
+Utilisateur affirme ses choix. 
+Evènements Si utilisateur ne choisit pas la catégorie et le quiz, le système 
+alternatifs affichera un message.  
+Post conditions Le système organise et affiche les questions dans ce quiz pour 
+commencer le test. 
+ 
+Sélectionner les réponses 
+UC2 : Sélectionner les réponses 
+ 
+ Nom UC2 : sélectionner les réponses 
+Résumé Utilisateur sélectionne les réponses de chaque question dans ce 
+test. 
+Acteur Utilisateur 
+Pré-conditions Un test a été créé  
+Evènements de base Utilisateur clique sur la réponse qu'il choisit. 
+Utilisateur affirme ses choix. 
+Evènements Si utilisateur ne choisit pas une réponse parmi les réponses, le 
+alternatifs système considère que la réponse de cette question soit incorrect.  
+Post conditions Le système organise des réponses  pour calculer le résultat.  
+ 
+Voir le résultat résume  
+UC3 : Voir le résultat résumé 
+Nom UC3 : Voir le résultat résumé 
+Résumé Le système affiche le résultat du test. 
+Acteur Utilisateur 
+Pré-conditions Utilisateur a fini ses choix. 
+Evènements de base Utilisateur clique sur le lien de voir le résultat. 
+Le système affichera les informations : le nombre de question, le 
+nombre de réponse correct, incorrect. 
+Evènements  
+alternatifs 
+Post conditions Le système affiche le résultat résumé 
+ 
+Voir le résultat détaillé 
+UC4 : Voir le résultat détaillé 
+Nom UC4 : Voir le résultat détaillé 
+30 Résumé Le système affiche le résultat détaillé  du test. 
+Acteur Utilisateur 
+Pré-conditions Utilisateur a fini ses choix et voir le résultat résumé. 
+Evènements de base Utilisateur clique sur le lien de voir le résultat. 
+Pour chaque question, le système affichera sa question et ses 
+réponses, la correcte réponse et la réponse de l'utilisateur.  De plus, 
+il affichera l'information de rétroaction.  
+Evènements  
+alternatifs 
+Post conditions Le système affiche le résultat détaillé   
+ 
+Importer des Quiz 
+ 
+Figure 13. Cas d'utilisation -Importer des quiz 
+Sélectionner l'adresse de serveur de base de données 
+UC5 : Sélectionner l'adresse de serveur de base de données 
+ 
+Nom UC5 : Sélectionner l'adresse de serveur de base de données 
+Résumé Utilisateur sélectionne un serveur de base de données pour 
+importer des quiz.  
+Acteur L'administrateur 
+Pré-conditions Il existe les adresses des serveurs. 
+Evènements de base Administrateur sélectionne un serveur dans la liste des serveurs 
+S'il l'administrateur affirme cet action, le système connecte sur  ce 
+serveur. 
+Evènements Administrateur peut annuler cette action. 
+alternatifs 
+Post conditions Retourner le résultat : le système va faire la connexion ver le serveur 
+31 Vérifier le statut de connexion 
+UC6 : Vérifier le statut de connexion 
+ 
+Nom UC10 : Vérifier le statut de connexion 
+Résumé Le système vérifie le statut de connexion.  
+Acteur L'administrateur 
+Pré-conditions Une adresse de serveur est entrée. 
+Evènements de base L'administrateur indique le système qu'exécute la fonction : Vérifier 
+le statut de connexion. 
+Le système répond à cette demande en affichant un dialogue 
+progressive. 
+Si cette connexion est succès, le système affichera un écran de 
+choisir les fichiers importés.  
+Si cette connexion n'est pas succès, le système affichera un 
+dialogue : essayer d'autres adresses ou non ? 
+Evènements Administrateur peut annuler cette action. 
+alternatifs 
+Post conditions Retourner le résultat : connexion est succès ou non  
+ 
+Importer un quiz 
+UC7 : Importer un quiz 
+Nom UC11 : Importer un quiz 
+Résumé Administrateur importe un quiz qui est stockés dans un fichier sous 
+la norme standard : GIFT et est comprimé sous norme .Zip dans un 
+serveur à distance.  
+Acteur Administrateur 
+Pré-conditions Il existe un quiz dans ce serveur. 
+La connexion entre le serveur et le téléphone portable est établie. 
+Evènements de base Importer un quiz : 
+Le système affiche une liste de catégories  et une liste de leurs quiz.   
+Administrateur choisit un quiz.  
+Administrateur affirme cette action. 
+Le système importe de base de données ce quiz et affiche un 
+message du résultat. 
+Evènements Le système affichera un message d'erreur s'il y a une erreur pendant 
+alternatifs l'importation ou le format de ce fichier est invalide.  
+Administrateur peut annuler cette action.   
+Post conditions Des nouvelles questions, de nouvelle quiz dans la base de données 
+32 Gérer des quiz  
+Supprimer un quiz : UC8 : Supprimer un quiz 
+Nom UC8 : Supprimer un quiz 
+Résumé Administrateur supprime un quiz.  
+Acteur Administrateur 
+Pré-conditions Il existe au moins un quiz dans la base de données. 
+Evènements de base L'administrateur indique que le système exécute la fonction : 
+Supprimer un Quiz : 
+Administrateur choisit le menu : supprimer un quiz. 
+Le système répond à cette action en affichant un dialogue pour 
+donner une question que l'utilisateur veut vraiment exécuter cette 
+action ou non. 
+Administrateur affirme cette action. 
+Le système supprime ce quiz 
+Evènements Administrateur peut annuler cette action.   
+alternatifs 
+Post conditions Supprimer un quiz et met à jour la base de données. 
+ 
+4.1.4. Diagramme d'activité 
+L'activité principale 
+ 
+ 
+Figure 14. Diagramme d'activité principale 
+33 Importer un quiz 
+ 
+Figure 15. Diagramme d'activité - Importer un Quiz 
+4.1.5. Diagramme de classe 
+ 
+Figure 16. Le diagramme de classe 
+34 4.2. IMPLEMENTATION 
+4.2.1. Architecture de « Android Quizzes » 
+Notre application se compose 4 couches. Voici les fonctions principales de ces couches : 
+- Couche  Application : La   couche  Application  
+représente   l'interface de l'utilisateur. Elle interagit 
+directement avec les utilisateurs. 
+- Couche Entreprise : La  couche Entreprise  regroupe  
+les  objets   communs  et   structurants  pour   toutes   les   
+applications,   et   garantit  l'intégrité des données. Elle 
+correspond à la partie fonctionnelle de l'application. Elle 
+fournit des services pour répondre aux requêtes du client. 
+- Couche Mapping : La couche Mapping transforme la 
+représentation physique des données en une 
+représentation Objet en tenant compte du langage de 
+programmation. 
+ 
+Figure 17. L'architecture de l'application 
+- Couche Physique : La couche Physique correspond à la structure physique des données (la 
+base de données). 
+Voici les couches dans notre programme :  
+ Couche Physique : Pour stocker des données, Android fournit 4 techniques : « Shared 
+Preferences », « Files », « SQLite Databases », « Content Providers ».  
+Dans notre programme, on utilise le mécanisme « Content Providers »  pour stocker et 
+retirer de données.   
+-  « Content Providers » : un « Content Providers » est un composant  facultatif 
+d'une application qui  expose les accès en lecture/écriture aux données privées de 
+cette application sous une restriction. Il utilise les syntaxes, le mécanisme standard 
+pour demander et renvoyer de données. Vous pouvez contrôler l'accès à un 
+« Content Providers » en utilisant les permissions standard du système.  
+ 
+Figure 18. Fournisseur de contenu et données physique 
+35 - Couche Mapping : mapping entre les tableaux physiques avec les classes. 
+ 
+public static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/quiz"); 
+public static final String CONTENT_TYPE = "vnd.android.cursor.dir/vnd.google.quiz"; 
+  public static final String CONTENT_ITEM_TYPE = 
+"vnd.android.cursor.item/vnd.google.quiz"; 
+  public static final String DEFAULT_SORT_ORDER = "_id ASC"; 
+  public static final String TITLE = "title"; 
+  public static final String QUESTION = "question"; 
+  public static final String RESPONSE1 = "response1"; 
+ 
+- Couche Entreprise :  
+Elle se compose des classe pour faire des fonctionnalités principales comme:  
+o Établir la connexion,  
+o Retirer les quiz aux fichiers sous norme GIFT,  
+o Importer des quiz, 
+o Supprimer un quiz et tous les quiz dans une catégorie. 
+- Implémentation de GUI :  
+Il existe 2 méthodes pour faire le GUI : on peut utiliser le fichier .XML ou utiliser 
+directement le codage. S'il on utilise le fichier .XML, on peut se référer les composants 
+dans fichier .XML par le référence : @id/name_for_component 
+La plupart de ressources de GUI peut se trouver dans les répertoires: 
+o res/layout 
+o res/values 
+Les éléments principaux d'UI:  
+ Layout : FrameLayout, LinearLayout, RelativeLayout, TableLayout, 
+AbsoluteLayout 
+ Views : TextView, EditText, ListView, ImageView, MapView, WebView 
+ 
+<TextView 
+  android:id="@+id/id_select_category" 
+  android:layout_width="wrap_content" 
+  android:layout_height="wrap_content" 
+  android:textSize="15sp" 
+  android:text="@string/select_category" 
+  android:layout_x="30px" 
+  android:layout_y="80px" 
+                     > 
+</TextView> 
+36 <Spinner android:id="@+id/sp_category" 
+         android:layout_width="150px" 
+         android:layout_height="wrap_content" 
+         android:textStyle="bold" 
+         android:textSize="17sp" 
+         android:drawSelectorOnTop="true" 
+         android:prompt="@string/tx_select_category" 
+         android:layout_x="170px" 
+                                     android:layout_y="70px"    
+       />      
+ 
+sCategory = (Spinner) findViewById(R.id.sp_category); 
+ArrayAdapter<String> adapterCategory = new ArrayAdapter<String>(this, 
+    android.R.layout.simple_spinner_item); 
+adapterCategory 
+.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); 
+sCategory.setAdapter(adapterCategory); 
+ 
+Et voici ce texte et fileur : 
+ 
+Figure 19. Texte et fileur 
+Manipulation de l'événement  sous Android (Event Handling in Android) 
+Il y a quelques méthodes pour la manipulation de l'événement. Mais la méthode simple 
+est la méthode qui utilise l'auditeur de l'événement (event listener) pour l'écouter de 
+l'interaction de l'utilisateur. Un auditeur de l'événement est une interface de classe View qui 
+contient des méthodes de callback. Ces méthodes seront appelées par le cadre de l'application 
+de l'Android quand le View qui a été enregistré est déclenchée par l'interaction de l'utilisateur. 
+ 
+public class SelectQuiz extends Activity implements View.OnClickListener, 
+AdapterView.OnItemSelectedListener { 
+      ...  
+     sCategory = (Spinner) findViewById(R.id.sp_category); 
+     sCategory.setOnItemSelectedListener(this); 
+             ...  
+public void onItemSelected(AdapterView<?> arg0, View arg1,  int arg2,long arg3) { 
+  // TODO Auto-generated method stub 
+ ...     
+     } 
+} 
+ 
+37 4.2.2. Les librairies de programmation utilisée  
+Pour développer notre programme, nous avons utilisé les librairies d'Android et les 
+librairies de Java.  Voici les librairies : 
+Les librairies de l'Android :  
+ android.content : Il fournit des classes pour accéder et traiter des données sous Android 
+comme : android.content.ContentProvider, android.content.Intent, etc. 
+ android.app: C'est une ensemble des classes d'encapsulation application de l'Android 
+en haut niveau comme : android.app.Activity, android.app.Dialog, etc. 
+ android.view : Il fournit des classes qui exposent l'interface utilisateur de base et gèrent 
+l'interaction avec l'utilisateur comme : android.view.Menu, android.view.View, etc.  
+ android.widget : Il contient des éléments d'UI comme  le bouton-poussoir 
+(android.widget.RadioButton), fileur (spinner- android.widget.Spinner), adaptateur 
+(adapter - android.widget.AdapterView)  
+ android.net : Il fournit des classes pour travailler avec le réseau : android.net.Uri, 
+android.net.http, etc.  
+ android.database : Il contient des classes pour explorer des données retournées par un 
+fournisseur de contenu (content provider) : android.database.Cursor.   
+Les librairies de Java :  
+ java.io : Il fournit des fonctions du système d'entrée et de sortie et du système de 
+fichiers : java.io.BufferedReader, java.io.InputStream, etc. 
+ Java.net : Il fournit des classes pour implémenter des applications en réseau : 
+java.net.HttpURLConnection, java.net.URLConnection, etc.  
+ Java.util : Nous avons travaille avec les classes de collection : java.util.List, java.util.Map, 
+etc. 
+4.2.3. La norme GIFT   
+Dans les serveurs de base de données, chaque quiz est stocké dans un fichier sous 
+norme GIFT. GIFT permet le fournisseur de services de test de créer facilement des questions 
+en utilisant plusieurs outils qui soutiennent cette norme (Moodle).   
+La norme GIFT (General Import Format Template) est proposée par la communauté 
+Moodle, et est adopté par plusieurs plateformes de l'apprentissage en ligne comme une norme 
+de stockage de question2.    
+Nous avons choisi GIFT parce que GIFT est bonne, ouvert et assez simple.  
+Voici les instructions générales d'un fichier GIFT : 
+ Au moins une ligne vierge doit être laissée entre chaque question.  
+                                                          
+2
+  http://docs.moodle.org/en/GIFT 
+38 Dans la forme simple, la question vient en premier, puis les réponses sont mises entre 
+crochets, avec un signe égal indiquant la bonne réponse (s) et le tilde de mauvaises 
+réponses. A Nombre signe insérer une réponse.  
+ Les symboles de format 
+   
+Symbole Utilisation  Symbole Utilisation 
+// Commentaire ::Titre:: Titre 
+Commencement de la 
+{ } Après la dernière réponse  
+réponse 
+= La réponse correcte # Rétroaction/ commentaire 
+~ La réponse incorrecte 
+  
+ 
+On peut décrire  la question numérique, la question « matching » et le poids des réponses : 
+ 
+Symbole  utilisation  Symbole  utilisation 
+{#  Commencer la question numérique  :  Rangée de la question numérique 
+->  Matching  %50%  poids 50%    
+ 
+//line commentaire  
+::Titre de la question:: 
+Question { 
+=réponse correcte 
+~réponse incorrect 1 
+# rétroaction pour la réponse incorrecte 1 
+~réponse incorrect 2 
+# rétroaction pour la réponse incorrecte 2 
+~réponse incorrect 3 
+# rétroaction pour la réponse incorrecte 3 
+} 
+ 
+Question {=réponse correcte ~réponse incorrect 1 ~réponse incorrect 2 ~réponse 
+incorrect 3} 
+ 
+Voici une question : 
+Do all the Activities and Services of an application run in a single 
+process?{=yes, by default ~ yes, declare by user ~No, multi process} 
+39 Figure 20. Une question 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+40 CHAPITRE 5. EXPERIMENTATION ET ANALYSE DES RESULTATS 
+ 
+Pour expérimenter notre logiciel, nous avons créé les serveurs de base de données à 
+distance. Chaque serveur stocke des auiz en catégories.  Les quiz sont stockés sous forme GIFT. 
+Les quiz peuvent être crée par les outils de création de question comme : HotPotatoes, Moodle, 
+ect.  
+Nous avons utilisé des questions dans l'examen de  baccalauréat comme les questions 
+d'échantillons.   
+Pour faciliter de l'utilisation, on a fixé trois serveurs correspondant 3 adresses : 
+ http://el.edu.net.vn/questionbank/category.html 
+ http://ocw.vn/questionbank/category.html 
+ http://115.84.178.65/questionbank/category.html 
+ 
+ 
+Figure 21. Sélection des serveurs 
+De plus, notre logiciel permet l'utilisateur d'entrer l'adresse d'autres  serveurs de base de 
+données.  Chaque quiz est stocké dans un fichier sous norme GIFT. De plus, ce fichier est 
+comprimé sous norme ZIP pour économiser  la charge de la transmission des données entre 
+client et serveur.  
+ 
+5.1. EXPRIMENTATION DES FONCTIONS DE «ANDROID QUIZZES» 
+Les fonctions principales de notre programme sont: 
+ Organiser un test 
+ Gérer des quiz 
+ Importer des quiz qui sont stockés dans les serveurs à distance.  
+Nous avons testé ce logiciel, voici les résultats qui sont expliqués par les écrans. 
+ 
+ 
+ 
+ 
+41 Voici l'écran principale de ce logiciel 
+ 
+ 
+Figure 22. L'écran principal de ce logiciel 
+Organiser un test 
+- Il y a 2 façons pour organiser un test:  
+o A partir de l'écran principal, on sélectionne la catégorie et le quiz qu'on veut 
+pour faire le test. Cliquer sur «Ok » pour commencer ce test.  
+o Dans l'écran de gestion de quiz, sélectionner un quiz. 
+ 
+  
+Figure 23. Organiser un test (1) Figure 24. Organiser un test (2) 
+Faire le test 
+ 
+Figure 25. Liste des questions dans un quiz 
+Tout d'abord notre programme liste toutes les questions dans ce quiz.  On peut appuyer sur le 
+menu et sélectionner «Start » pour commencer ce Quiz.  
+42 Figure 26. Commencer un quiz 
+On peut commencer rapidement de faire ce quiz en cliquant sur une question. Dans ce cas, on 
+va faire ce quiz à partir de cette question.  
+  
+Figure 27. Faire un test 
+Les étapes de test 
+ 
+ 
+Figure 28. Les étapes de test 
+43 Quad l'utilisateur fini  un quiz, il peut supprimer ce quiz s'il trouve que ce quiz n'est pas encore 
+utile. 
+ 
+Importer des quiz  
+On peut faire la fonction en 2 façons : 
+ Dans l'écran principal, on sélectionne le menu «Import quiz» pour  importer des 
+quiz.  
+ A partir de l'écran de gestion de quiz, on sélectionne le menu « Import Quiz » 
+ 
+  
+Figure 29. Importer un quiz 
+En suite, on va selectionne le serveur de base de quiz 
+ 
+ 
+ Figure 30. Sélection des serveurs 
+ 
+Notre programme va se connecter à ce serveur et établir une connexion si cette 
+connexion est réussie. Par contre, elle lance un dialogue de l'erreur. Dans ce cas, on peut 
+essayer avec autres serveurs. 
+ 
+ 
+ Figure 31. Connexion entre client et serveur 
+  
+44 Si la connexion est établie, on peut choisir des catégories et des quiz pour importer. 
+ 
+  
+Figure 32. Choix de catégorie et de quiz 
+Si l'importation est réussi, le système affiche une dialogue de confirmer : continuer ou non  
+ 
+Figure 33. Importation réussi 
+Si ce quiz est déjà existé dans la base de données locale, notre logiciel annonce un dialogue 
+suivant. Dans ce cas, cette action est annulée.    
+ 
+Figure 34. Le quiz existé  
+Voici les nouveaux quiz qui sont listes dans la catégorie correspondante.  
+ 
+Figure 35. Liste des quiz 
+Gérer des Quiz 
+Cette version de notre programme organise des quiz en trois catégories : English, French et 
+Android.  
+45 Figure 36. Gérer des quiz 
+On a les fonctions principales suivantes : 
+ Supprimer tous les quiz dans une catégorie, 
+ Supprimer un quiz, 
+ Gérer l'état de quiz. 
+Pour gérer bien les quiz, on a défini 3 états : « New », « Testing », et « Done ». 
+ New : C'est l'état d'un quiz qui a été importé dans la base de données locale mais n'est 
+pas commencé.   
+ Testing : C'est l'état qu'un quiz est en traine de tester. 
+ Done : C'est l'état que l'utilisateur a déjà fait ce quiz et a vu le résultat détaillé.  
+ 
+Figure 37. Etats de quiz 
+Notre logiciel existe une fonction supplémentaire : Rédiger le titre de question. Pour mieux 
+organiser des questions, on peut modifier le titre. 
+ 
+ 
+ 
+Figure 38. Rédiger le titre 
+46 5.2. ANALYSE DES RESULTATS 
+Comme nous avons expliqué, notre programme fonctionne bien.  Toute la fonction dans 
+la spécification de ce projet marche bien sous l'émulateur de l'Android. Mais nous ne sommes 
+pas assuré qu'elle puisse être bien marcher sur un téléphone portable réel.  
+De plus, elle existe quelques limitations : 
+ Maintenant, notre logiciel supporte seulement le questionnaire à choix multiple. Mais 
+en effet, il existe plusieurs types de question comme : Vrai/Faux question, la question 
+numérique, etc. 
+ Elle supporte seulement la norme de question GIFT tandis qu'il existe les autres normes 
+très populaires au monde comme IMS QTI, Blackboard, etc. 
+ En raison de l'émulateur d'Android, il existe quelques erreurs d'affichage des mots 
+Vietnamiens.  
+ Notre logiciel ne peut que marcher avec les questions sans multimédia. On ne peut pas 
+faire les examens de compréhension orale avec ce logiciel. 
+Pour tester la performance de notre programme, nous avons testé avec les quiz qui ont les 
+différences questions.  
+Voici le tableau  de comparaison :  
+ 
+Quiz Nombre Capacité Importer Lister toutes Commencer voir le résultat 
+questions (KB) (ms) les questions ce quiz détaillé  
+(ms) (ms) (ms) 
+Grammar_ 18961 5.53 18903 35948 23564 19345 
+Quiz 
+Grammar_ 250 15.8 455 830 587 542 
+Advance     
+  
+Grammar_ 50 3.21 337 468 315 258 
+Beginner     
+ 
+Selon le tableau, le quiz Grammar_Quiz a le nombre de question très grande (18961) 
+tandis que la capacité est assez petite. Le temps nécessaire  pour importer ce quiz dans la base 
+de données locale est assez haut. De plus, le temps nécessaire pour lister toutes les questions 
+dans ce quiz, le temps de commencer ce quiz et le temps de voir  le résultat détaillé ne sont pas 
+acceptable. Dans ce cas, notre logiciel marche lentement. En détaillé, l'usage de CPU est que : 
+com.android.androidquizzes: 81% = 50% user + 30% kernel !  
+47 Par contre, avec un quiz normal (le nombre de questions est 250 ou 50), notre logiciel 
+marche bien. Le temps d'exécution est assez vite.   
+Alors, notre logiciel peut fonctionner dans les cas normaux.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+48 CHAPITRE 6. CONCLUSIONS ET PERSPECTIVES 
+ 
+6.1. CONCLUSIONS 
+Pour mois, ce sujet du TPE est très intéressant. Parce que : 
+ Dans mon TPE, j'ai étudié généralement les systèmes d'exploitation pour les mobiles 
+comme: Windows Mobile, Palm OS, BlackBerry, Symbian, Ubuntu MID Edition, Android. 
+Le résultat de mon travail est le tableau de comparaison entre eux. J'ai donné aussi des 
+avantages et des limitations de chaque plateforme. En effet, il existe encore autres 
+plateformes comme : Windows CE, iPhone, Moblin, Access Linux Platform, DoJa, LiMo 
+Platform,  etc. Dans cette liste,  iPhone et Moblin sont assez célèbres et populaires.  
+ J'ai étudié profondément le système d'exploitation Android et développé l'application 
+«Android Quizzes» sur Android.  
+ Les fonctions générales  d'Android Quizzes : 
+o  Organiser un test,  
+o Importer des fichiers de quiz sous norme standard (GIFT), 
+o Exécuter, afficher le résultat et les rapports, 
+o Gérer des quiz. 
+ Notre logiciel fonctionne bien mais elle est simple. Pour le lancer au marché, on doit 
+l'améliorer et l'ajouter autres fonctions supplémentaires.   
+ La plateforme Android est une plateforme assez intéressante mais pour développer une 
+application utile sur Android, on doit consacrer le temps pour comprendre l'architecture 
+de l'Android, les composants principaux d'une application et les librairies, etc. 
+ 
+6.2. PERSPECTIVES 
+Suggestions pour ce module : 
+Pour ce qui continuera mon TPE dans l'année prochaine, il reste encore des travaux : 
+- Développer les modules qui permettent à notre programme de travailler avec autres 
+types de questions et autres normes. 
+-  Intégrer multimédia dans la question. 
+- Le modèle de partage des quiz entre les utilisateurs. 
+- Corriger l'erreur de l'affichage les fonts Vietnamiens. 
+- Installer et tester ce logiciel sur un téléphone portable réel.    
+ 
+ 
+ 
+49 REFERENCES 
+LA PARTIE THEORIQUE 
+ 
+Références scientifiques 
+[1] F. Troni, R. Cozza, Personal Digital Assistants: Overview, université de Michigan, août 
+2003,  
+www.bus.umicah.edu/KresgePublic/Journals/Gartner/research/90700/90774/90774.pdf 
+[2] C. Haseman, Android Essentials, Gravity Mobile, FirstPress, jul 2008 
+[3] J. Chen, An Introduction to Android, Developer Advocate Google I/O 2008, 
+http://sites.google.com/site/io/an-introduction-to-android 
+[4] D. Morrill, Inside the Android Application Framework, Google Inc,  
+http://sites.google.com/site/io/inside-the-android-application-framework 
+[5] P. Brady, Anatomy & Physiology of an Android, Google Inc, 
+http://sites.google.com/site/io/anatomy--physiology-of-an-android 
+[6] D. Bornstein, Android - Dalvik VM Internals, Google Inc, 
+http://sites.google.com/site/io/dalvik-vm-internals 
+[7] M. Schmall, J. Hiller, Android for Java Developers, Deutsche Telekom AG 
+http://www.java-forum-stuttgart.dejfs2008folienA7.pdf 
+[8] G. Bong, A Developer's perspective on Google Android, Barcamp Malaysia, 2008,  
+http://www.scribd.com/doc/4446529/Google-Android-A-developers-perspective 
+[9] B. Morris, The Symbian OS Architecture Source book, John Wiley & Sons, Ltd, 
+http://www.ebooks-space.com/ebook/441/The-Symbian-OS-Architecture-Sourcebook%3A-Design-
+andEvolution-of-a-Mobile-Phone-OS.html 
+ 
+Références autres 
+[10] R. Broida, CNET's quick guide to handheld operating systems, CNET Reviews, 
+http://reviews.cnet.com/4520-11309_7-6624304-1.html?tag=rb_content;rb_mtx 
+[11] SearchMobileComputing.com, Mobile operating systems: Which mobile device platform fits your 
+strategy ?,  
+http://searchmobilecomputing.techtarget.com/generic/0,295582,sid40_gci1196452,00.html 
+[12] Palm InforCenter , Palm OS 6 Cobalt Overview: The Palm OS Future, 
+http://www.palminfocenter.com/news/6568/palm-os-6-cobalt-overview-the-palm-os-future/ 
+[13] Gartner Inc, Gartner Says Worldwide Smartphone Sales Grew 29 Percent in First Quarter of 2008, 
+http://www.gartner.com/it/page.jsp?id=688116 
+[14] Research In Motion, Guide de l'utilisateur- Blackberry Mail,  
+[15] SymbianPress, Symbian OS v9.5 product sheet, 
+http://www.symbian.com/japan/files/rx/file8929.pdf 
+50 [16] PC ToDay, Introducing the Symbian Mobile Platform, , 
+http://www.pctoday.com/editorial/article.asp?article=articles%2F2007%2Ft0508%2F11t08%2F11t08.as
+p 
+[17] Gartner Inc, Gartner Says Worldwide Smartphone Sales Grew 16 Per Cent in Second Quarter of 
+2008, http://www.gartner.com/it/page.jsp?id=754112 
+[18] N. Asakawa, Symbian Describes Roadmap to Open-source Platform, Nikkei Electronics,  
+http://techon.nikkeibp.co.jp/english/NEWS_EN/20081121/161591/ 
+[19] Ubuntu MID Edition, http://www.ubuntu.com/products/mobile 
+[20] Operating Systems, BlackBerry,   http://na.blackberry.com/eng/devices/enabled/os.jsp 
+[21] Microsoft, Windows Mobile 6- Product Reference Guide 
+ 
+LA PARTIE PRATIQUE 
+ 
+[22] Android-Open source project,  http://source.android.com/ 
+[23] Android Developper,  http://developer.android.com/index.html 
+[24] Android-An Open Handset Alliance Project, http://code.google.com/android/documentation.html 
+[25] J.F. DiMarzio, Android™ A Programmer's Guide, McGraw-Hill, juillet 2008, 
+http://www.mhprofessional.com/product.php?isbn=0071599886&cat=112 
+[26] R. Meier, Professional Android™ Application Development, Wiley Publishing, Inc., 
+http://www.amazon.com/Professional-Android-Application-Development-Programmer/dp/0470344717 
+[27] SQLite, http://www.sqlite.org/docs.html 
+[28] Java API,  http://java.sun.com/j2se/1.4.2/docs/api/index.html 
+[29] La norme GiFT, http://docs.moodle.org/en/GIFT_format 
+  
+ 
+  
+51

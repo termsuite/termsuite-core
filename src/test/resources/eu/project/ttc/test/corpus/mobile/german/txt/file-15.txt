@@ -1,0 +1,3760 @@
+Unlicensed Mobile Access
+1. Über das Internet Telefonieren
+Bei der Sprachübertragung mittels technischer Nachrichtenmittel wurde Ende der
+achtziger Jahre des vorigen Jahrhunderts im Zusammenhang mit dem ISDN die
+Digitalisierung eingeführt [A0].
+Neben der Digitalisierung der Sprache kam beim ISDN eine ausgefeilte Signalisation
+im sogenannten D-Kanal zur Anwendung.
+Diese Signalisation war auch Vorbild für den digitalen Mobilfunk, hier werden die
+Signalkanäle Dm-Kanäle genannt. Michel MOULY und Marie-Bernadette PAUTET
+bezeichneten ISDN als „Godfather of GSM“ [B1].
+In den 80iger Jahren entstand aus dem ARPA-Net ein internationales Rechnernetz
+das auf den Protokollen TCP/IP basierte. Dieses Netz wurde durch Einführung des
+von Tim Berner-Lee im Forschungszentrum für Teilchenphysik in Cern 1990
+erfundenen Browsers zum World Wide Web.
+Bereits in den 80iger Jahren wurde an den Hochschulen daran geforscht Sprache
+unter Verwendung des TCP/IP Protokolls über Datenkanäle, das Ethernet und das
+Internet, zu übertragen. Im Jahre 1995 wurde Voice over IP (VoIP) erstmalig von der
+Israelischen Fa. VocalTec öffentlich vorgeführt. In den letzen 18 Jahren entstanden
+mit den Standards H.323 und SIP vor allem Alternativen zum ISDN durch die IPTelefonie [C0].
+Mittlerweile ist es möglich, kostenlose Internet-Telefonanschlüsse zu benutzen, wie
+sie z.B. von „sipgate“ zur Verfügung gestellt werden, um mit Partnern über das
+Internet zu kommunizieren. Sipgate gestattet auch, über ein geringes Entgelt, auf
+Festnetz und Mobilfunkanschlüsse zuzugreifen. Die Endgeräte für die
+Videotelephonie sind Clienten die auf der Windowsoberfläche residieren, oder
+Hardphones z.B. der Fa GRANDSTREAM. Es ist auch möglich mit dazu
+eingerichteten Mobiltelefonen z.B. einem Nokia E65 über WLAN und Sipgate einen
+Mobilfunkpartner anzurufen. Im letztgenannten Fall verbinden Registrar und Proxy
+von sipgate das E65 wie ein Festnetztelefon mit dem Mobilfunknetz.
+Es wäre wünschenswert das Mobiltelefon über das WLAN direkt mit dem Mobile
+Core Network zu verbinden. Diesem Problem widmete sich die UMA Alliance.
+Die UMA Alliance entwickelte die Technologie UMA (Unlicensed Mobile Access) mit
+dem Ziel, unlizenzierte Teile des Frequenzspektrums ( das Internet) für den
+Mobilfunk nutzbar zu machen und ein nahtloses Roaming von WLAN zu den
+klassischen GSM- und UMTS-Mobilfunknetzen zu ermöglichen
+
+1
+
+2. Vom Unlicensed Mobile Access zum Generic Access Network
+Die ersten UMA Spezifikationen (R1.0.0.) wurden im September 2004 veröffentlicht.
+Nach dieser Erstveröffentlichung wurden diese UMA Spezifikationen der 3GPP
+Organisation, als Teil des 3GPP Themas „ Generic Access to A/Gb interfaces“,
+übergeben.
+
+Bild 1: Die Rolle des GANC (UNC) bei der Kopplung einer TCP/IP Verbindung mit dem MCN
+
+Am 8.April 2005 genehmigte die Leitung des 3rd Generation Partnership Projekt
+(3GPP) die Aufnahme der Spezifikation für „Generic Access to A/Gb interfaces“ in
+das 3GPP Release 6 (3GPP TS 43.318)
+Bei der Übergabe an 3GPP wurden gegenüber den Spezifikationen des UMA
+Protokoll und der UMA Architektur nur triviale Änderungen in der Terminologie
+vorgenommen .
+Was vorher als UMA bezeichnet wurde, heißt unter 3GPP nun Generic Access
+Network oder GAN. Der UMA Network Controller (UNC) wird nunmehr als Generic
+Access Network Controller oder GANC bezeichnet.
+Wie aus Bild 1 hervorgeht spielt der GANC offenbart die Rolle des BSC im GERAN
+.Während der Base Station Controller über das A-bis Interface mit den BTS
+verbunden ist [B0], existieren drei Varianten der Anbindung des GANC an die
+Nutzerumgebung.
+Variante 1 besteht in der Verwendung eines Mobiles, das außer dem GSMBetriebssystem noch eine WiFi Komponente enthält, Während das Interface mit dem
+2
+
+das Mobile über die Luftschnittstelle kommuniziert als Um-Interface bezeichnet
+wird, heißt das letztere,. das es gestattet über einen WLAN-Hotspot und das Internet
+mit dem GANC und damit mit dem Mobile Core Network Verbindung aufzunehmen,
+Up-Interface.
+Variante 2 sieht die Einrichtung einer Mini-BTS vor. Mit einer derartigen Femto-Cells
+genannten Einrichtung stellen Unternehmen eigene UMTS-Zugangspunkte als
+Internet-Access-Points bereit, über die Daten mit normalen Mobiles gesendet und
+empfangen werden können.
+Variante 3 wird durch einen PC gebildet, auf dem ein UMA/GAN-Taugliches
+Softmobile installiert ist, mit dem über das Internet und das Mobilfunknetz
+kommuniziert werden kann.
+In allen drei Fällen stellt der GANC eine Bücke zwischen WiFi und Cellular-Network
+dar. Eine Besonderheit gegenüber dem BSC besteht darin, dass der GANC ein
+Security Gateway (SEGW) enthält, das den Abschluss eines secure remote access
+tunnels zur Mobilstation bildet. Der Tunnel gestattet wechselseitige Authentication,
+Verschlüsselung und garantiert Datenintegrität sowohl für Signalisierung als auch
+für Sprach und Daten-Verkehr.
+
+3. Wie greift das Mobile über das Internet auf den GANC zu
+Der gesamte Verkehr über das Up-Interface wird über einen IP-Security (IPsec)
+Tunnel abgewickelt. Dieser Tunnel wird im Ergebnis der Authentication Procedure
+zwischen Mobile und GANC aufgebaut.
+Von den Mobilfunkanbietern in Deutschland scheint allein Vodafone einen GANC zu
+betreiben. Wer den Dienst Vodafone Zuhause beauftragt hat, kann sich den Clienten
+Vodafone IP Phone Pro auf seinen PC laden und mit ihm wie mit einem Mobile über
+das Mobilfunknetz von Vodafone kommunizieren. Mit dem Tracetool Wireshark
+wurde die Verbindungsaufnahme von Vodafone IP Phone Pro mit dem GANC
+registriert. Einen Ausschnitt aus diesem Trace zeigt Bild 2. Die Zeilen werden über
+das Transport Layer Security Version 1 (TLSv1) Protokoll verschlüsselt.
+
+No. Time Source
+216
+217
+220
+221
+222
+223
+
+12.657480
+12.728466
+12.781210
+12.794908
+12.859062
+12.859530
+
+Destination
+192.168.178.23
+139.7.154.7
+139.7.154.7
+192.168.178.23
+139.7.154.7
+192.168.178.23
+
+Protocol
+139.7.154.7
+192.168.178.23
+192.168.178.23
+139.7.154.7
+192.168.178.23
+139.7.154.7
+
+Info
+TLSv1
+TLSv1
+TLSv1
+TLSv1
+TLSv1
+TLSv1
+
+Client Hello
+Server Hello, Certificate,
+Server Key Exchange
+Client Key Exchange, Change Cipher Spec, Encrypted Handshake Message
+Change Cipher Spec, Encrypted Handshake Message
+Application Data
+
+Bild 2: Ausschnitt aus einem Trace der Verbindungsaufnahme eines Vodafone IP Phone Pro mit dem
+GANC
+
+Die Behauptung, dass es sich bei der IP-Nummer 139.7.154.7 um den GANC von
+Vodafone handelt, lässt sich wie folgt verifizieren:
+
+3
+
+Ein Mobiltelefon mit einer SIM-Karte von Vodafone wird über das dazugehörige USBKabel an einen PC angeschlossen. Mit dem USB-Modem des Mobiles wird eine
+Internetverbindung aufgebaut. Sämtliche Zugriffe auf das Internet verlaufen jetzt
+über die Mobilfunkstrecke. Nun startet man ein Traceroute zu einen fernen Server.
+Im Beispiel ist das amsel.informatik.hu-berlin.de. Aus dem Traceroute-Verlauf in
+Bild3, Zeile 2 geht hervor, dass der Server die IP-Nummer 139.7.127.6 besitzt.. Ein
+Klasse B Netz mit der Nummer 139.7.0.0
+
+Bild 3: Traceroute über das Vodafonenetz zur Informatik
+
+Ein Server aus diesem Netz besitzt, wie aus Bild 2 hervorgeht die IP-Nummer
+(139.7.154.7) des Kommunikationsendpunktes im Trace aus Bild 2.
+Betrachten wir nun die Architektur der Steuerkanäle auf der UP-Schnittstelle der
+Circuit Switched (CS) Domäne (Bild4)
+
+Bild 4: Architektur der Control-Ebene entsprechend ETSI TS 143 318 V7.5.0 (2008-07)
+
+4
+
+Betrachten wir die in Bild 4 dargestellten Schichten.
+- IPSec ESP wurde bereits im Zusammenhang mit den Bildern 2 und 3 erörtert..
+Ist der Tunnel eingerichtet, so werden über Remote IP und TCP die
+Meldungen der darüber gelegenen Schichten übertragen.[C0]
+- GA-RC besteht aus den Discovery messages und den Registration messages.
+- Die GA-CSR Meldungen sind Meldungen für den Verbindungsaufbau, die
+Verschlüsselung, den Aufbau des Verkehrskanals, den Abbau der Kanäle, für das
+Handover, für Paging und verschiedene andere Zwecke.
+- In die Meldungen UPLINK/DOWNLINK DIRECT TRANSFER lassen sich die aus
+dem GSM [B0] bekannten CC/SS/SMS/MM Meldunge einpacken.
+
+4. Prozeduren für die Entdeckung des GANC
+In der ETSI TS 144 318 V7.5.0 (2008-01) „Mobile GAN interface layer 3 specifikation“
+werden im Abschnitt 5 die „Elementary procedures for GANC Discovery“
+beschrieben.
+
+Bild 5: Discovery Procedure gemäß TS 144 318 V7.5.0 (2008-01)
+
+Die Aufgabe dieser Prozedur besteht darin, es dem Netzwerk zu erlauben der MS
+einen Default Global Access Network Controller (GANC) zuzuweisen.
+Diese Zuweisung besteht aus der IP-Adresse oder dem FQDN des GANC-SEGW
+(Security Gateway) und der IP-Adresse oder des Fully Qualified Domain Name des
+Default GANC. Beide sind erforderlich für die Registrierungs- Procedure.
+Solange der Default GANC im Netzwerk verfügbar ist braucht das Mobile die
+Discovery Procedure kein zweites Mal auszuführen
+In den zur Verfügung stehenden Tracen des vom Operator ORANGE/Fr realisierten
+UMA/GAN Projektes wurden keine DISCOVERY Meldungen gefunden, Es wird
+angenommen, dass die Angaben zum GANC in den Mobiles gespeichert waren.
+
+5
+
+5. Prozeduren für die Registrierung des Mobiles im Netz
+Nach der „Entdeckung“ des Default GANC, erfolgt die Prozedur der Registrierung
+zwischen Mobile und dem GANC.
+Ein Teil der Registrierungsprozedur besteht darin, dass das Mobile den GANC mit
+Angaben über die zur Zeit aktuelle Verbindung des Mobiles versorgt. Demgegenüber
+informiert der GANC das Mobile über die „GSM Systeminformation“, die im GANMode abgehört werden. Die Registrierung erfolgt über den Ipsec Tunnel.
+
+Bild 6: Registration Procedure gemäß TS 144 318 V7.5.0 (2008-01)
+
+5.1 Die Meldung GA-RC REGISTER REQUEST
+Nachstehend ist der Inhalt einer Meldung GA-RC REGISTER REQUEST dargestellt.
+Man liest u.A. nachstehende Eigenschaften des Mobiles ab:
+- Zur Registrierung nennt das Mobile seine IMSI.
+- Classmark des Mobiles sind GERAN aber nicht UTRAN Verträglichkeit,
+der Zugriff erfolgt über WLAN 802.11
+- Die MAC-Adressen des Mobiles und des AccessPoints werden gemeldet
+- Die im Mobile gespeicherte Location Area wird gemeldet und die Nummer der
+Livebox (des Hotspots)
+
+_____[ 26 ]___[ 96933 ]___[ UP ]___[ GAN ]_____________
+00
+00
+01
+0d
+
+4b
+03
+00
+01
+
+01
+07
+06
+4c
+
+10
+00
+01
+69
+
+01
+00
+00
+76
+
+08
+16
+04
+65
+
+29
+41
+02
+62
+
+0000000001001011
+
+80
+bc
+5c
+6f
+
+10
+c8
+ed
+78
+
+09
+22
+05
+2d
+
+00
+60
+05
+34
+
+04
+07
+02
+36
+
+28
+00
+f8
+37
+
+57
+00
+10
+38
+
+02
+0e
+24
+44
+
+01
+59
+01
+01
+
+00
+0f
+29
+00
+
+07
+61
+01
+00
+
+02 12
+ce 11
+01 3d
+00
+
+Length = 75
+
+:Protocol Discriminator
+01 0000---- Skip Indicator
+----0001 GA-RC and Generic Access Circuit Switched Resource
+:Message type
+10 00010000 GA-RC REGISTER REQUEST
+:IMSI
+
+6
+
+01
+08
+29
+80
+10
+09
+00
+04
+28
+57
+
+00000001
+00001000
+00101001
+10000000
+00010000
+00001001
+00000000
+00000100
+00101000
+01010111
+
+IMSI
+length = 8
+41
+128
+16
+9
+0
+4
+40
+87
+
+02
+01
+00
+
+00000010
+00000001
+00000000
+
+GAN Release Indicator
+length = 1
+0
+
+07
+02
+12
+
+00000111 GAN Classmark
+00000010 length = 2
+00------ Spare
+--0----- The MS is not UTRAN Capable
+---1---- The MS is GERAN Capable
+:Type of Generic access
+----0010 WLAN 802.11
+00 000000-- spare
+------0- The MS does not support PS handover to/from GAN mode
+-------0 RTP Redundancy not supported
+:Radio Identity
+03 00000011 AP Radio Identity
+07 00000111 length = 7
+00 0000---- spare
+----0000 IEEE MAC-address format
+00 00000000 take hex
+16 00010110 take hex
+41 01000001 take hex
+bc 10111100 take hex
+c8 11001000 take hex
+22 00100010 tale hex
+60
+07
+00
+00
+0e
+59
+0f
+61
+ce
+
+01100000
+00000111
+0000-------0000
+00000000
+00001110
+01011001
+00001111
+01100001
+11001110
+
+MS Radio Identity
+length = 7
+spare
+IEEE MAC-address format
+take hex
+take hex
+take hex
+take hex
+take hex
+tale hex
+
+11
+01
+00
+
+00010001
+00000001
+-----000
+
+GSM RR/ UTRAN RRC State
+length = 1
+GSM RR is in IDLE state.
+
+06
+01
+00
+
+00000110
+00000001
+00000000
+
+Coverage Indication
+length = 1
+Normal Service in the GERAN/UTRAN
+
+04
+02
+5c
+ed
+
+00000100
+00000010
+01011100
+11101101
+
+GERAN Cell Identity
+length = 2
+ID-Value 1
+ID-Value 2
+
+05
+05
+02
+
+00000101
+00000101
+----0010
+0000-------1000
+
+Location Area Identification
+length = 5
+Mobile CC digit 1
+: 2
+Mobile CC digit 2
+: 0
+Mobile CC digit 3
+: 8
+
+10
+
+1111-------0000
+0001----
+
+Mobile NC digit 3
+Mobile NC digit 1
+Mobile NC digit 2
+
+24
+01
+
+00100100
+00000001
+
+Loc. area code (LAC) = ID of MSC (hex)
+Loc. area code (LAC) = ID of BSC (hex)
+
+29
+01
+01
+
+00101001
+00000001
+00000001
+
+Routing Area Code
+length = 1
+RAC
+
+f8
+
+: 15
+: 0
+: 1
+
+7
+
+3d
+0d
+01
+4c
+69
+76
+65
+62
+6f
+78
+2d
+34
+36
+37
+38
+
+00111101
+00001101
+----0001
+01001100
+01101001
+01110110
+01100101
+01100010
+01101111
+01111000
+00101101
+00110100
+00110110
+00110111
+00111000
+
+Geographic Location
+length = 13
+Ellipsoid point with uncertainty Circle
+:
+L
+:
+i
+:
+v
+:
+e
+:
+b
+:
+o
+:
+x
+:
+:
+4
+:
+6
+:
+7
+:
+8
+
+Bild 7: Trace der Meldung GA-RC REGISTER REQUEST aufgenommen mit einem SAGEM OT560
+
+5.2 Die Meldung GA-RC REGISTER ACCEPT
+Wie in Bild 8 dargestellt, wird In der Meldung GA-RC REGISTER ACCEPT dem
+Mobile u.A. mitgeteilt:
+- Die Local Area ID des momentanen Standorts.
+- Die Eigenschaften des GAN-Control.Channels insbesondere:
+Der Time Out Wert für das periodische Updating in 6 Min Schritten,
+die Möglichkeit der GPRS-Übertragung.,
+die Bevorzugung von GERAN für den Notruf,
+ein eventuelles Gesperrtsein von Access Control Klassen
+- Die Timer:
+TU3906 für den Keep alive Mechanismus
+TU3910 wird gestellt wenn MS „roves out“. „Rove in“ nach Timerablauf
+TU3920 maximale Zeit bis Abbruch des Handover zu GAN Prozedur
+TU4001 Minimale Zeit vor Deaktivierung eines untätigen GA-Paket Kanals
+TU4003 Zeit wie oft es erlaubt ist, Fluss Steuer Nachrichten zu senden
+
+_____[ 25 ]___[ 96943 ]___[ DOWN ]___[ GAN ]_____________
+00 33 01 11
+05 00 00 17
+81 0e 2b 02
+
+04 02 da 72
+02 00 1e 16
+00 5a 3c 02
+
+05 05 02 f8
+02 00 64 13
+00 01 2c 01
+
+10 75 03 0e
+01 02 25 02
+01 00 00
+
+06 e6 3c 01
+00 32 0d 02
+
+:UMA
+0000000000110011
+
+Length = 51
+
+:Protocol Discriminator
+01 0000---- Skip Indicator
+----0001 GA-RC and Generic Access Circuit Switched Resource
+:Message type
+11 00010001 GA-RC
+
+REGISTER
+
+ACCEPT
+
+04
+02
+da
+72
+
+00000100
+00000010
+11011010
+01110010
+
+Cell Identity
+length=2
+CI Value
+CI Value
+
+05
+05
+02
+
+00000101
+00000101
+----0010
+0000-------1000
+
+Location Area identification
+length=5
+Mobile CC digit 1
+: 2
+Mobile CC digit 2
+: 0
+Mobile CC digit 3
+: 8
+
+f8
+
+8
+
+10
+
+1111-------0000
+0001----
+
+Mobile NC digit 3
+Mobile NC digit 1
+Mobile NC digit 2
+
+75
+03
+
+01110101
+00000011
+
+Loc. area code (LAC) = ID of MSC (hex)
+Loc. area code (LAC) = ID of BSC (hex)
+
+0e
+06
+e6
+
+: 15
+: 0
+: 1
+
+00001110
+00000110
+1-------1-------1-------0-------01-------1-------0
+3c 00111100
+01 00000001
+05 00-------0-------0---sending
+----0-------1-------0-------1
+00 00000000
+00 00000000
+
+GAN Control Channel Description
+length=6
+MSC is Release '99 onwards
+MSs
+in the cell shall apply IMSI attach and detach procedure.
+Network supports dual transfer mode
+GPRS available
+Network Mode of Operation II
+Early Classmark Sending is forbidden
+spare
+T3212 timeout value
+Routing Area Code
+spare
+The network does not support PS handover between GERAN/UTRAN mode and GAN mode.
+UTRAN classmark change message shall not be sent with the Early classmark
+
+17
+02
+00
+1e
+
+00010111
+00000010
+00000000
+00011110
+
+TU3910 Timer
+length=2
+TU3910 Timer Value MSB
+TU3910 Timer Value LSB
+
+16
+02
+00
+64
+
+00010110
+00000010
+00000000
+01100100
+
+TU3906 Timer
+length=2
+TU3906 Timer Value MSB
+TU3906 Timer Value LSB
+
+13
+01
+02
+
+00010011
+00000001
+----0010
+
+GAN Band
+length=1
+GSM 1800 is supported
+
+25
+02
+00
+32
+
+00100101
+00000010
+00000000
+00110010
+
+TU3920 Timer
+length=2
+TU3920 Timer Value MSB
+TU3920 Timer Value LSB
+
+0d
+02
+81
+0e
+
+00001101
+00000010
+10-------000-------001
+00001110
+
+GAN Cell Description
+length=2
+BCCH ARFCN high part
+NCC
+BCC
+BCCH ARFCN low part
+
+2b
+02
+00
+5a
+
+00101011
+00000010
+00000000
+01011010
+
+TU4001 Timer
+length=2
+TU4001 Timer Value MSB
+TU4001 Timer Value LSB
+
+3c
+02
+00
+01
+
+00111100
+00000010
+00000000
+00000001
+
+TU4003 Timer
+length=2
+TU4003 Timer Value MSB
+TU4003 Timer Value LSB
+
+2c
+01
+01
+
+00101100
+00000001
+000000-------01
+
+Location Status
+length=1
+spare
+MS location unknown
+
+The network does not support packet flow context procedures.
+Call Re-establishment not allowed in the cell
+GERAN/UTRAN is preferred for Emergency calls
+SGSN is Release '99 onwards
+Access Control Class 15 to 08
+Access Control Class 07 to 00
+
+Bild 8: Trace der Meldung GA-RC REGISTER ACCEPT aufgenommen mit einem SAGEM OT560
+
+9
+
+5.3 Die Meldung GA-RC REGISTER REJECT
+Für die Meldung GA-RC REGISTER REJECT besitzt der Verfasser kein
+Tracebeispiel. Aus der Technical Spezification ETSI TS 144 318 V7.5.0 Abschnitt
+10.1.8 geht jedoch hervor, dass die Meldung nur ein Pflicht Information Element
+besitzt, das ist Register Reject Cause. Danach können folgende Gründe für die
+Zurückweisung vorliegen
+0 Network Congestion
+1 AP not allowed
+2 Location not allowed
+3 Invalid GANC
+4 Geo Location not known
+5 IMSI not allowed
+6 Unspecified
+7 GANC-SEGW certificate not valid
+8 EAP_SIM authentication failed
+9 TCP establishment failed
+10 Redirection
+11 EAP-AKA Authentication failed
+5.4 Die Meldung GA-RC REGISTER REDIRECT
+Der GANC kann diese Meldung verwenden, wenn das Mobile zu einem anderen
+GANC umgeleitet werden muss.
+_____[ 4873 ]___[ 167825 ]___[ DOWN ]___[ GAN ]_____________
+00
+6e
+45
+b1
+
+3b
+67
+2e
+00
+
+01 12
+65 2e
+4f 52
+00
+
+0a 14 73 67
+66 72 62 1d
+41 4e 47 45
+
+77 2e 6d 6f
+48 42 53 43
+46 52 41 4e
+
+62 69 6c 65
+30 32 2e 4d
+43 45 2e 46
+
+2e 6f 72 61
+4f 42 49 4c
+52 67 02 36
+
+:UMA
+0000000000111011
+
+Length = 59
+
+:Protocol discriminator
+01 0000---- Skip Indicator
+----0001 GA-RC and Generic Access Circuit Switched Resource
+:Message type
+12 00010010 GA-RC REGISTER REDIRECT
+:IP Address
+:Fully Qualified Domain/Host Name
+0a 00001010 Serving GAN-SEGW FQDN
+14 00010100 length = 20
+73 01110011 :
+s
+67 01100111 :
+g
+77 01110111 :
+w
+2e 00101110 :
+.
+6d 01101101 :
+m
+6f 01101111 :
+o
+62 01100010 :
+b
+69 01101001 :
+i
+6c 01101100 :
+l
+65 01100101 :
+e
+2e 00101110 :
+.
+6f 01101111 :
+o
+72 01110010 :
+r
+61 01100001 :
+a
+6e 01101110 :
+n
+67 01100111 :
+g
+65 01100101 :
+e
+
+10
+
+2e 00101110 :
+.
+66 01100110 :
+f
+72 01110010 :
+r
+:IP Address
+:Fully Qualified Domain/Host Name
+62 01100010 ServingGANC FQDN
+1d 00011101 length = 29
+48 01001000 :
+H
+42 01000010 :
+B
+53 01010011 :
+S
+43 01000011 :
+C
+30 00110000 :
+0
+32 00110010 :
+2
+2e 00101110 :
+.
+4d 01001101 :
+M
+4f 01001111 :
+O
+42 01000010 :
+B
+49 01001001 :
+I
+4c 01001100 :
+L
+45 01000101 :
+E
+2e 00101110 :
+.
+4f 01001111 :
+O
+52 01010010 :
+R
+41 01000001 :
+A
+4e 01001110 :
+N
+47 01000111 :
+G
+45 01000101 :
+E
+46 01000110 :
+F
+52 01010010 :
+R
+41 01000001 :
+A
+4e 01001110 :
+N
+43 01000011 :
+C
+45 01000101 :
+E
+2e 00101110 :
+.
+46 01000110 :
+F
+52 01010010 :
+R
+:Communication port
+67 01100111 Serving GANC TCP port number
+02 00000010 length
+0011011010110001 14001
+
+Bild 9: Trace der Meldung GA-RC REGISTER REDIRECT aufgenommen mit einem SAGEM OT560
+
+5.5 Die Meldung GA-RC DEREGISTER
+Erhält ein GANC eine derartige Meldung, so entfernt er alle Contexte die sich auf
+dieses Mobile beziehen. Ein Mobile das diese Meldung vom GANC erhält löscht alle
+GA-RC, GA-CSR und GA-PSR Resource. Siehe auch nachstehenden Trace.
+.
+_____[ 27 ]___[ 92133 ]___[ UP ]___[ GAN ]_____________
+00 05 01 14
+
+15 01 06 00
+
+00
+
+:UMA
+0000000000000101
+
+Length = 5
+
+:Protokolldiscriminator
+01 0000---- Skip Indicator
+----0001 GA-RC and Generic Access Circuit Switched Resource
+:Message type
+14 00010100 URR DEREGISTER
+15 00010101 Register Reject Cause IEI
+01 00000001 length = 1
+06 00000110 Unspecified
+
+Bild 10: Trace der Meldung GA-RC DEREGISTER aufgenommen mit einem SAGEM OT560
+
+11
+
+6. Elementare Prozeduren für die Circuit Switched (CS) Domäne
+6.1 Der GA-CSR Verbindungsaufbau
+Wie in Bild 11 dargestellt, befindet sich das Mobile nach der Registrierung im GACRS IDLE Mode. Wenn die oberen Schichten den Übergang in den DEDICATED
+Mode anfordern, sendet das Mobile einen GA-CSR REQUEST zum Netz
+
+Bild 11: Erfolgreiche Initiierung einer GA-CSR Verbindung
+
+Das Netz antwortet mit GA-CSR REQUEST ACCEPT, siehe Bild12.
+_____[ 540 ]___[ 81801 ]___[ UP ]___[ GAN ]_____________
+00 05 01 80
+
+32 01 e0 00
+
+0000000000000101
+
+00
+
+Length = 5
+
+:Protokolldiscriminator
+01 0000---- SkipIndicator
+----0001 GA-RC and Generic Access Circuit Switched Resource
+:Messagetype
+80 10000000
+32 00110010
+01 00000001
+e0 11100000
+
+GA-CSR REQUEST
+Establishment Cause
+length=1
+Originating speech call and TCH/F is needed
+
+_____[ 539 ]___[ 81925 ]___[ DOWN ]___[ GAN ]_____________
+00 02 01 81
+
+00 00
+
+0000000000000010
+
+Length = 2
+
+:Protokolldiscriminator
+01 0000---- SkipIndicator
+----0001 GA-RC and Generic Access Circuit Switched Resource
+:Message type
+81 10000001 GA-CSR REQUEST ACCEPT
+
+Bild 12: Trace der Meldungen GA-CSR REQUES und GA-CSR REQUEST ACCEPT
+
+12
+
+Der gesamte Ablauf der Verbindungsaufnahme des Mobiles mit dem Mobile Core
+Network über den GANC ist in Bild 13 dargestellt.
+
+Bild 13: Ablauf einer Verbindungsaufnahme des Mobiles über den GANC
+
+6.2 Die Meldungen des Non Access Stratums im Verbindungsaufbau
+Nachdem das Netz den GA.CSR REQUEST akzeptiert hat, folgt eine UPLINK
+DIRECT TRANSFER Message vom Mobile zum Netz. Das ist eine NAS (Non Access
+Stratum) Message, in die aus dem GSM bekannte Meldungen (hier CM SERVICE
+REQUEST) eingepackt werden (siehe Bild 14). Die Mehrzahl der zwischen Mobile
+und GANC ausgetauschten Meldungen gehören dazu. Siehe auch Bild 4 die oberen
+beiden Lagen.
+_____[ 538 ]___[ 81925 ]___[ UP ]___[ GAN ]_____________
+00 14 01 70
+01 00 00 00
+
+1a 0d 05 24
+
+0000000000010100
+
+01 03 50 18
+
+82 05 f4 22
+
+00 5a 29 31
+
+Length = 20
+
+:Protokolldiscriminator
+01 0000---- SkipIndicator
+----0001 GA-RC and Generic Access Circuit Switched Resource
+:Messagetype
+70 01110000
+
+GA-CSR UPLINK DIRECT TRANSFER
+
+1a
+
+00011010
+
+NAS-Message
+
+0d
+05
+
+00001101
+0-------000-------0101
+00------
+
+Length= 13
+direction from
+TransactionID
+Protocol Discrim.
+SendSequenceNumber
+
+:
+:
+:
+:
+
+--100100
+
+MESSAGE TYPE
+
+: CM SERVICE REQUEST
+
+0-------000-------0001
+
+spare
+: 0
+value for the ciphering key sequence number = 0
+Requ.service type
+: Mobile originating call establishment, or packet mode
+connection establishment
+
+24
+
+01
+
+: Mobile Station Classmark 2
+03 00000011 length
+
+originating site
+0
+mobility management messages non GPRS
+0
+
+: 3
+
+13
+
+50
+
+0---------1-------0-------000
+
+1 spare
+: 0
+"Controlled Early Classmark Sending" option is implemented in the MS
+Encryp.Algor. A5_1 : available
+RF power capability : Class 1
+
+18
+
+0-------0-------01-------1-------0-------0-------0
+
+1 spare bit
+: 0
+pseudo-synch.capab. : not present
+SS Screening Indic. : phase 2 error handling
+Mobile station supports mobile terminated point to point SMS
+no VoiceBroadcastService (VBS) capability or no notifications wanted
+no VoiceGroupCallService (VGCS) capability or no notifications wanted
+The MS does not support the E-GSM or R-GSM band
+
+82
+
+1-------0-------0-------0-------0-------0-------1-------0
+
+The MS does support any options that are indicated in CM3
+1 spare bit
+: 0
+LocationServiceValueAdded Capability not supported
+1 spare bit
+: 0
+SoLSA Capability
+: not supported
+Network initiated MO CM connection request not supported.
+encryp.algorith.A5/3: available
+encryp.algorith.A5/2: not available
+
+: Mobile identity
+05
+
+00000101
+
+length
+
+: 5
+
+f4
+
+----0-------100
+1111---00100010
+00000000
+01011010
+00101001
+
+No. of ID digits
+Type of identity
+Identity Digit 1
+Identity Digit 2,3
+Identity Digit 4,5
+Identity Digit 6,7
+Identity Digit 8,9
+
+: even
+: TMSI/P-TMSI
+: 95
+: take hex value
+: take hex value
+: take hex value
+: take hex value
+
+22
+00
+5a
+29
+
+Bild 14: CM SERVICE REQUEST als NAS Message verpackt.
+
+Das Netz verlangt nun als nächstes, auch als NAS Message verpackt, die
+Authentication vom Mobile.
+
+_____[ 537 ]___[ 81997 ]___[ DOWN ]___[ GAN ]_____________
+00 29 01 72
+2d 76 9c 66
+e8 c5 a9 00
+
+1a 25 05 12
+f6 20 10 43
+00
+
+0000000000101001
+
+00 b0 52 49
+90 a6 7f 58
+
+f5 6a 9c 1c
+e8 00 00 6c
+
+8e fc 29 40
+73 58 f3 3c
+
+Length = 41
+
+:Protokolldiscriminator
+01 0000---- SkipIndicator
+----0001 GA-RC and Generic Access Circuit Switched Resource
+:Messagetype
+72 01110010
+
+GA-CSR DOWNLINK DIRECT TRANSFER
+
+1a
+
+00011010
+
+NAS-Message
+
+25
+05
+
+00100101
+0-------000-------0101
+00------
+
+Length= 37
+direction from
+TransactionID
+Protocol Discrim.
+SendSequenceNumber
+
+:
+:
+:
+:
+
+--010010
+
+MESSAGE TYPE
+
+: AUTHENTICATION REQUEST
+
+0000-------0-------000
+
+Spare
+Spare
+Ciph.Key Seq. Numb. : 0
+
+12
+
+00
+
+: Authentication parameter RAND
+b0 10110000 Parameter 1
+52 01010010 Parameter 2
+
+originating site
+0
+mobility management messages non GPRS
+0
+
+: 176
+: 82
+
+14
+
+49
+f5
+6a
+9c
+1c
+8e
+fc
+29
+40
+2d
+76
+9c
+66
+f6
+
+01001001
+11110101
+01101010
+10011100
+00011100
+10001110
+11111100
+00101001
+01000000
+00101101
+01110110
+10011100
+01100110
+11110110
+
+Parameter
+Parameter
+Parameter
+Parameter
+Parameter
+Parameter
+Parameter
+Parameter
+Parameter
+Parameter
+Parameter
+Parameter
+Parameter
+Parameter
+
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+
+:
+:
+:
+:
+:
+:
+:
+:
+:
+:
+:
+:
+:
+:
+
+73
+245
+106
+156
+28
+142
+252
+41
+64
+45
+118
+156
+102
+246
+
+20
+10
+43
+90
+a6
+7f
+58
+e8
+00
+00
+6c
+73
+58
+f3
+3c
+e8
+c5
+a9
+
+00100000
+00010000
+01000011
+10010000
+10100110
+01111111
+01011000
+11101000
+00000000
+00000000
+01101100
+01110011
+01011000
+11110011
+00111100
+11101000
+11000101
+10101001
+
+Authentication parameter AUTN
+Length=16
+Parameter 1
+: 67
+Parameter 2
+: 144
+Parameter 3
+: 166
+Parameter 4
+: 127
+Parameter 5
+: 88
+Parameter 6
+: 232
+Parameter 7
+: 0
+Parameter 8
+: 0
+Parameter 9
+: 108
+Parameter 10
+: 115
+Parameter 11
+: 88
+Parameter 12
+: 243
+Parameter 13
+: 60
+Parameter 14
+: 232
+Parameter 15
+: 197
+Parameter 16
+: 169
+
+Bild 15: AUTHENTICATION REQUEST als NAS Message verpackt.
+
+Die Antwort auf den AUTHENTICATION REQUEST ist in Bild 16 dargestellt.
+_____[ 536 ]___[ 82012 ]___[ UP ]___[ GAN ]_____________
+00 0d 01 70
+
+1a 06 05 54
+
+0000000000001101
+
+2b 67 fa 31
+
+31 01 00 00
+
+00
+
+Length = 13
+
+:Protokolldiscriminator
+01 0000---- Skip Indicator
+----0001 GA-RC and Generic Access Circuit Switched Resource
+:Message type
+70 01110000 GA-CSR UPLINK DIRECT TRANSFER
+1a
+
+00011010
+
+NAS-Message
+
+06
+05
+
+00000110
+0-------000-------0101
+01------
+
+Length= 6
+direction from
+TransactionID
+Protocol Discrim.
+SendSequenceNumber
+
+:
+:
+:
+:
+
+--010100
+
+MESSAGE TYPE
+
+: AUTHENTICATION RESPONSE
+
+54
+
+: Authentication Parameter SRES
+2b 00101011 Parameter 1
+67 01100111 Parameter 2
+fa 11111010 Parameter 3
+31 00110001 Parameter 4
+
+:
+:
+:
+:
+
+originating site
+0
+mobility management messages non GPRS
+1
+
+43
+103
+250
+49
+
+Bild 16: AUTHENTICATION RESPONSE als NAS Message verpackt
+
+Die Verschlüsselung erfolgt (siehe Abschnitt 6.3).wieder mit speziellen Meldungen
+des GAN. Es folgen die klassischen, bereits aus dem ISDN bekannten Meldungen
+SETUP und Call PROCEEDING.
+15
+
+_____[ 533 ]___[ 82025 ]___[ UP ]___[ GAN ]_____________
+00 16 01 70
+f8 31 01 00
+
+1a 0f 03 85
+00 00
+
+0000000000010110
+
+04 06 60 04
+
+02 00 05 81
+
+5e 03 81 88
+
+Length = 22
+
+:Protokolldiscriminator
+01 0000---- Skip Indicator
+----0001 GA-RC and Generic Access Circuit Switched Resource
+:Message type
+70 01110000 GA-CSR UPLINK DIRECT TRANSFER
+1a
+
+00011010
+
+NAS-Message
+
+0f
+03
+
+00001111
+0-------000-------0011
+10------
+
+Length= 15
+direction from
+TransactionID
+Protocol Discrim.
+SendSequenceNumber
+
+:
+:
+:
+:
+
+--000101
+
+MESSAGE TYPE
+
+: SETUP
+
+00000100
+00000110
+0-------
+
+INFORMATION ELEMENT : Bearer capability
+length
+: 6
+Extension
+: 0
+
+-11-------0-------0-------000
+0-------0-------00-------0100
+0-------0-------00-------0010
+0-------0-------00-------0000
+-0-------00-------0--------01-------00-------00-------001
+
+Radio Channel Req. : dual rate support MS/full rate preferred
+Coding Standard
+: GSM standard coding
+Transfer Mode
+: Circuit Mode
+Info Transfer Cap. : speech
+Extension
+: 0
+Coding
+: octet used for extension of inf. transf. capab.
+Spare
+: 00
+speech Veers. indic. : GSM full rate speech version 3
+Extension
+: 0
+Coding
+: octet used for extension of inf. transf. capab.
+Spare
+: 00
+speech Vers. indic. : GSM full rate speech version 2
+Extension
+: 0
+Coding
+: octet used for extension of inf. transf. capab.
+Spare
+: 00
+speech Vers. indic. : GSM full rate speech version 1
+Compression
+: data compression not possible
+Structure
+: service data unit integrity
+Duplex Mode
+: half duplex
+Negot. of Int.
+: No meaning is associated with this value.
+Extension
+: 1
+Access ID
+: octet identifier
+Rate Adaptation
+: no rate adaption
+Signalling Acc.Prot : I.440/450
+
+85
+
+04
+06
+60
+
+04
+
+02
+
+00
+
+05
+
+81
+
+5e
+03
+81
+
+01011110
+00000011
+1-------000-------0001
+88..f8
+
+INFORMATION ELEMENT
+length
+Extension
+Type of number
+Numb. plan id.
+number
+
+:
+:
+:
+:
+:
+:
+
+originating site
+0
+Call control and call related SS messages
+0
+
+CalledPartyBCDNumber
+3
+1
+unknown
+ISDN/telephony. numb. plan (Rec. E.164/E.163) _
+888
+
+Bild 17: SETUP als NAS Message verpackt
+
+Die dem SETUP folgende Meldung CALL PROCEEDING besteht lediglich aus dem
+Namen der Meldung.
+Die jetzt folgenden GA-CSR Meldungen, die den Kanal aktivieren, sollen im
+Abschnitt 6.3 erklärt werden.
+Es folgen nun, als NAS Messages eingekleidet, die aus ISDN und GSM bekannten
+Meldungen:
+PROGRESS, CONNECT, CONNECT ACKNOWLEDGE, DISCONNECT, RELEASE,
+RELEASE COMPLETE.
+
+16
+
+6.3 Weitere beim Verbindungsaufbau beteiligten GA-CSR Meldungen
+Im GSM weist das Netz dem Mobile in der Meldung CIPHERING MODE COMMAND
+nur den Algorithmus zu und die Forderung die IMEISV einzuschließen. Im GAN wird
+zusätzlich noch der RAND zugewiesen, mit dem der Schlüssel erzeugt werden muss.
+_____[ 535 ]___[ 82024 ]___[ DOWN ]___[ GAN ]_____________
+00 1a 01 20
+20 97 99 02
+
+1e 01 01 2d
+28 40 eb a5
+
+0000000000011010
+
+01 01 2e 10
+00 00
+
+b0 ce bd 8c
+
+2a 0b 8d d9
+
+Length = 26
+
+:Protokolldiscriminator
+01 0000---- Skip Indicator
+----0001 GA-RC and Generic Access Circuit Switched Resource
+:Message type
+20 00100000
+1e 00011110
+01 00000001
+01 -------1
+----0000000---2d 00101101
+01 00000001
+01 -------1
+00000002e 00101110
+10 00010000
+b0 10110000
+ce 11001110
+bd 10111101
+8c 10001100
+2a 00101010
+0b 00001011
+8d 10001101
+d9 11011001
+20 00100000
+97 10010111
+99 10011001
+02 00000010
+28 00101000
+40 01000000
+eb 11101011
+a5 10100101
+
+GA-CSR CIPHERING MODE COMMAND
+Cipher Mode Settings IEI
+length = 1
+start ciphering
+cipher with algorithm A5/1
+spare
+Cipher Response IE
+length = 1
+IMEISV shall be included
+spare
+Ciphering Command RAND IEI
+length = 16
+RAND Value
+RAND Value
+RAND Value
+RAND Value
+RAND Value
+RAND Value
+RAND Value
+RAND Value
+RAND Value
+RAND Value
+RAND Value
+RAND Value
+RAND Value
+RAND Value
+RAND Value
+RAND Value
+
+Bild 18: Die GAN Meldung CIPHERING MODE COMMAND
+
+Im GSM enthält die Quittung nur das Informationselement Mobile Identity. Beim
+GAN ist zusätzlich noch der MAC-Header angegeben
+_____[ 534 ]___[ 82024 ]___[ UP ]___[ GAN ]_____________
+00 1b 01 21
+33 15 77 02
+
+2f 0c 1c a4
+81 12 96 02
+
+0000000000011011
+
+57 fa f0 3c
+f1 00 00
+
+c1 76 68 a3
+
+27 96 01 09
+
+Length = 27
+
+:Protokolldiscriminator
+01 0000---- Skip Indicator
+----0001 GA-RC and Generic Access Circuit Switched Resource
+:Message type
+21 00100001 GA-CSR CIPHERING MODE COMPLETE
+
+17
+
+2f
+0c
+1c
+a4
+57
+fa
+f0
+3c
+c1
+76
+68
+a3
+27
+96
+
+00101111
+00001100
+00011100
+10100100
+01010111
+11111010
+11110000
+00111100
+11000001
+01110110
+01101000
+10100011
+00100111
+10010110
+
+Ciphering Command MAC IEI
+length = 12
+MAC value part
+MAC value part
+MAC value part
+MAC value part
+MAC value part
+MAC value part
+MAC value part
+MAC value part
+MAC value part
+MAC value part
+MAC value part
+MAC value part
+
+01
+09
+33
+15
+77
+02
+81
+12
+96
+02
+f1
+
+00000001
+00001001
+00110011
+00010101
+01110111
+00000010
+10000001
+00010010
+10010110
+00000010
+11110001
+
+MobileEquipmentIdentity
+length = 9
+take hex value
+take hex value
+take hex value
+take hex value
+take hex value
+take hex value
+take hex value
+take hex value
+take hex value
+
+Bild 19: Die GAN Meldung CIPHERING MODE COMPLETE
+
+Anders als im GSM muss im GAN zusätzlich zum SETUP noch ein Verkehrskanal
+definiert werden. Mit GA-CSR ACTIVATE CHANNEL teilt das Netz dem Mobile mit,
+dass die Sprachproben, wie im GSM, in 20 ms Länge übertragen werden. Das
+Mobile erfährt die IP-Adresse und die RTP bzw. RTCP Ports
+_____[ 531 ]___[ 82154 ]___[ DOWN ]___[ GAN ]_____________
+00 1a 01 30
+d6 36 01 62
+
+1b 01 41 35
+37 02 28 80
+
+0000000000011010
+
+01 14 61 05
+00 00
+
+21 0a a3 24
+
+8a 68 02 5e
+
+Length = 26
+
+:Protokolldiscriminator
+01 0000---- Skip Indicator
+----0001 GA-RC and Generic Access Circuit Switched Resource
+:Message type
+30 00110000 GA-CSR ACTIVATE CHANNEL
+1b
+01
+41
+
+00011011
+00000001
+01000001
+
+Channel Mode
+length=1
+speech full rate or half rate version 3
+
+35
+01
+14
+
+00110101
+00000001
+00010100
+
+Sample Size
+length=1
+20ms of CS payload included in each RTP/UDP packet
+
+61
+05
+21
+0a
+a3
+24
+8a
+
+01100001
+00000101
+00100001
+00001010
+10100011
+00100100
+10001010
+
+IP address IEI
+length=5
+IPv4 address
+10
+163
+36
+138
+
+68
+02
+
+01101000 Real Time Protocol UDP Port
+00000010 2
+0101111011010110 Communication Port=24278
+
+18
+
+36
+01
+62
+
+00110110
+00000001
+01100010
+
+Payload Type
+length=1
+Type=98
+
+37
+02
+
+00110111 Real Time Control Protocol UDP Port
+00000010 2
+0010100010000000 Communication Port=10368
+
+Bild 20: Die GAN Meldung GA-CSR ACTIVATE CHANNEL
+
+In der Meldung GA-CSR ACTIVATE CHANNEL ACKNOWLEDGE teilt die MS dem
+Netz mit welcher RTCP UTP Port bei der Kommunikation mit dem Mobile zu
+verwenden ist
+_____[ 530 ]___[ 82155 ]___[ UP ]___[ GAN ]_____________
+00 10 01 31
+
+68 02 10 b8
+
+0000000000010000
+
+35 01 14 36
+
+01 62 69 02
+
+10 b9 00 00
+
+Length = 16
+
+:Protokolldiscriminator
+01 0000---- Skip Indicator
+----0001 GA-RC and Generic Access Circuit Switched Resource
+:Message type
+31 00110001 GA-CSR ACTIVATE CHANNEL ACKNOWLEDGE
+68
+02
+
+01101000 Real Time Protocol UDP Port
+00000010 2
+0001000010111000 Communication Port=4280
+
+35
+01
+14
+
+00110101
+00000001
+00010100
+
+Sample Size
+length=1
+20ms of CS payload included in each RTP/UDP packet
+
+36
+01
+62
+
+00110110
+00000001
+01100010
+
+Payload Type
+length=1
+Type=98
+
+69
+02
+
+01101001 Real Time Control Protocol UDP Port
+00000010 2
+0001000010111001 Communication Port=4281
+
+Bild 21: Die GAN Meldung GA-CSR ACTIVATE CHANNEL
+
+Die Meldung GA-CSR ACTIVATE CHANNEL COMPLETE besteht nur aus dem
+Namen.
+GA-CSR RELEASE und RELEASE COMPLETE sind nahezu GSM identisch und lösen den
+IP-Kanal auf
+
+7. Handover zwischen GAN und GSM
+7.1 Umschalten von GAN zu GSM
+Es wir zunächst ein Beispiel gezeigt, in dem sich ein Mobile im GAN-Mode befindet,
+aber parallel dazu Systeminformationen auf dem Funkkanal abhört. Das Mobile stellt
+fest, dass die Empfangsbedingungen auf dem Funkkanal günstiger sind als im WLAN
+und informiert das Netz über diesen Zustand in einer GA-CSR: HANDOVER
+INFORMATION. Das Netz sendet über GAN-Kanal das GACSR: HANDOVER
+
+19
+
+COMMAND und die Meldung PHYSIKAL INFORMATION bereits über den Slow
+Dedicated Control Channel.
+
+Bild 22: Ausschnitt aus einem Trace mit SAGEM OT560.
+
+In der Meldung GA-CSR HANDOVER INFORMATION übergibt das Mobile dem Netz
+die z.Zt. empfangenen Sender und deren Feldstärke. Der GANC entscheidet über
+das Handover,
+
+_____[ 1823 ]___[ 75289 ]___[ UP ]___[ GAN ]_____________
+00
+36
+ee
+13
+
+3f
+02
+15
+12
+
+01
+f8
+02
+10
+
+53
+10
+f8
+11
+
+0f
+24
+10
+09
+
+32
+01
+24
+00
+
+00 02
+5c ed
+01 7e
+00
+
+0000000000111111
+
+f8 10 24 01
+02 f8 10 24
+07 02 f8 10
+
+13 ab 02 f8
+01 13 a9 02
+24 01 33 ab
+
+10 24 01 ee
+f8 10 24 01
+6a 07 24 1f
+
+Length = 63
+
+:Protokolldiscriminator
+01 0000---- Skip Indicator
+----0001 GA-RC and Generic Access Circuit Switched Resource
+:Message type
+53 01010011 GA-CSR HANDOVER INFORMATION
+:GERAN Cell Identifier List
+0f 00001111 GERAN Cell Identifier List
+32 00110010 length=50
+00 0000---- spare
+----0000 The whole Cell Global Identification, CGI, is used to identify the cell.
+:Cell 0
+02 ----0010 MCC dig1=2
+0000---- MCC dig2=0
+f8 ----1000 MCC dig3=8
+1111---- MNC dig3=F
+10 ----0000 MNC dig1=0
+0001---- MNC dig2=1
+0010010000000001 LAC=9217
+0001001110101011 CI=5035
+:Cell 1
+02 ----0010 MCC dig1=2
+0000---- MCC dig2=0
+f8 ----1000 MCC dig3=8
+1111---- MNC dig3=F
+10 ----0000 MNC dig1=0
+0001---- MNC dig2=1
+0010010000000001 LAC=9217
+1110111000110110 CI=60982
+:Cell 2
+02 ----0010 MCC dig1=2
+0000---- MCC dig2=0
+f8 ----1000 MCC dig3=8
+
+20
+
+1111---- MNC dig3=F
+----0000 MNC dig1=0
+0001---- MNC dig2=1
+0010010000000001 LAC=9217
+0101110011101101 CI=23789
+:Cell 3
+02 ----0010 MCC dig1=2
+0000---- MCC dig2=0
+f8 ----1000 MCC dig3=8
+1111---- MNC dig3=F
+10 ----0000 MNC dig1=0
+0001---- MNC dig2=1
+0010010000000001 LAC=9217
+0001001110101001 CI=5033
+:Cell 4
+02 ----0010 MCC dig1=2
+0000---- MCC dig2=0
+f8 ----1000 MCC dig3=8
+1111---- MNC dig3=F
+10 ----0000 MNC dig1=0
+0001---- MNC dig2=1
+0010010000000001 LAC=9217
+1110111000010101 CI=60949
+:Cell 5
+02 ----0010 MCC dig1=2
+0000---- MCC dig2=0
+f8 ----1000 MCC dig3=8
+1111---- MNC dig3=F
+10 ----0000 MNC dig1=0
+0001---- MNC dig2=1
+0010010000000001 LAC=9217
+0111111000000111 CI=32263
+:Cell 6
+02 ----0010 MCC dig1=2
+0000---- MCC dig2=0
+f8 ----1000 MCC dig3=8
+1111---- MNC dig3=F
+10 ----0000 MNC dig1=0
+0001---- MNC dig2=1
+0010010000000001 LAC=9217
+0011001110101011 CI=13227
+10
+
+:GERAN Received Signal Level List
+6a
+07
+24
+1f
+13
+12
+10
+11
+09
+
+01101010
+00000111
+00100100
+00011111
+00010011
+00010010
+00010000
+00010001
+00001001
+
+GERANReceivedSignalLevelList
+length=7
+RX-Level Cell 0= 36
+RX-Level Cell 1= 31
+RX-Level Cell 2= 19
+RX-Level Cell 3= 18
+RX-Level Cell 4= 16
+RX-Level Cell 5= 17
+RX-Level Cell 6= 9
+
+Bild 23: Die Meldung GA-CSR HANDOVER INFORMATION
+Die Pflichtelemente der obenstehenden Meldung wurden nach den Vorgaben der
+Dokumentation ts_144 318 V7.5.0 übersetzt. Sie entsprechen den Festlegungen für
+die Handover Meldung im GSM. Für die als Optional oder Conditional angegebenen
+Informationselemente konnten keine Entsprechungen im Rohtrace gefunden
+werden.
+_____[ 1822 ]___[ 75391 ]___[ DOWN ]___[ GAN ]_____________
+00 21 01 54
+2f a7 00 00
+
+20 1d 06 2b
+00 00 00 91
+
+0000000000100001
+
+05 16 0e b1
+03 05 3a a4
+
+7a 22 05 63
+00 00 00 00
+
+41 69 01 04
+00
+
+Length = 33
+
+:Protokolldiscriminator
+01 0000---- Skip Indicator
+
+21
+
+----0001
+
+GA-RC and Generic Access Circuit Switched Resource
+
+:Message type
+54 01010100 GA-CSR HANDOVER COMMAND
+20 00100000 Handover From GAN Command
+1d 00011101 length=29
+:Cell Description
+06 --000--- PLMN Colour Code NCC: 0
+-----110 BS Colour code BCC : 6
+00------ BCCH ARFCN high part: 0
+2b 00101011 BCCH ARFCN low part : 43
+:Channel Description 2
+05 00000--- Channel type and TDMA offset = TCH/F + FACCH/F+SACCH/M
+-----101 Timslot number
+: 5
+16
+0e
+
+000-------1-------0110
+00-------001110
+
+Training sequ. code : 0
+Hopping Channel
+MAIO high part
+MAIO low part
+Hopping Sequence Nr.: HSN = 14
+
+: Handover Reference
+b1 10110001 Handover refer. val.: 177
+: Power Command and Access Type
+7a 0------- Sending of Handover access is mandatory
+---11010 Power Level
+: 26
+
+Bild 24: Die Meldung GA-CSR HANDOVER COMMAND
+
+Aus Bild 22 geht hervor, dass die Meldungen PHYSICAL INFORMATIOM und
+HANDOVER COMPLETE bereits auf dem Funkkanal übertragen werden.
+Die Freigabe der GAN-Verbindung erfolg etwas später an der Zeitmarke 75484.
+7.2 Umschalten von GSM zu GAN
+Das Handover von GSM zu GAN erfolgt, wie Bild 25 zeigt, analog zum Handover von
+GAN zu GSM.
+
+Bild 25: Ausschnitt aus einem Trace mit SAGEM OT560
+
+22
+
+An der Zeitmarke 85760 meldet das Mobile dem Netz Messergebnisse, aus denen
+hervorgeht, dass die Empfangsfeldstärke niedrig ist. Das Netz reagiert mit der
+Meldung RR. HANDOVER COMMAND
+_____[ 1385 ]___[ 85847 ]___[ UP ]___[ GAN ]_____________
+00 16 01 50
+03 02 20 80
+
+1a 12 06 2b
+00 00
+
+0000000000010110
+
+81 0e 08 02
+
+0e 41 00 d2
+
+63 41 7d 0e
+
+Length = 22
+
+:Protokolldiscriminator
+01 0000---- SkipIndicator
+----0001 GA-RC and Generic Access Circuit Switched Resource
+:Message type
+50 01010000 GA-CSR HANDOVER ACCESS
+1a
+12
+06
+2b
+
+00011010
+00010010
+0-------000-------0110
+00101011
+
+L3 message IE
+length=18
+direction from
+TransactionID
+Protocol Discrim.
+MESSAGE TYPE
+
+:
+:
+:
+:
+
+: Cell description
+81 --000--- PLMN Colour Code NCC:
+-----001 BS Colour code BCC :
+10------ BCCH ARFCN high part:
+0e 00001110 BCCH ARFCN low part :
+
+originating site
+0
+radio resource management messages
+HANDOVER COMMAND
+0
+1
+2
+14
+
+: Channel Description 2
+08 00001--- Channel type and TDMA offset = TCH/F + ACCHs
+-----000 Timslot number
+: 0
+02
+0e
+
+000-------000-------10
+00001110
+
+Training sequ. code :
+Single channel
+:
+Sgl RF chan.high prt:
+abs.RFchan. low part:
+
+0
+RF single channel
+2
+14
+
+: Handover Reference
+41 01000001 Handover refer. val.: 65
+: Power Command and Access Type
+00 0------- Sending of Handover access is mandatory
+-00----- spare
+---00000 Power Level
+: 0
+d2
+
+63
+41
+
+1101-------0-------0-------10
+01100011
+01000001
+
+INFORMATION ELEMENT : Synchronization indication
+Out of range timing advance is ignored _
+Mobile Time Difference IE shall not be included in the HANDOVER COMPL. msg
+Synchron.indication : Pre-synchronized
+Channel Mode 1
+speech full rate or half rate version 3
+
+7d
+0e
+
+01111101
+00001110
+
+INFORMATION ELEMENT : Timing Advance
+TA=14 x 48/13 ms
+
+03
+02
+20
+
+00000011
+00000010
+001-------0-------0-------0-------00
+10000000
+
+INFORMATION ELEMENT : Multirate speech configuration
+length = 2
+Multirate speech version
+NSCB
+ICMI
+spare
+Start mode
+Set of AMR codec modes
+
+80
+
+Bild 26: Die Meldung GA-CSR HANDOVER ACCESS
+
+In der Meldung HANDOVER ACCESS wiederholt das Mobile diesen Befehl als
+Bestätigung. Ein Handover bedeutet, dass der Sprachkanal umgeschaltet wird. Im
+GAN-Mode muss dazu ein Kanal aktivier werden.
+23
+
+An der Zeitmarke 86261 sendet das Netz daher die Meldung GA-CSR: ACTIVATE
+CHANNEL, die bereits im Bild 20 dargestellt wurde. Das Mobile antwortet mit GACSR: ACTIVATE CHANNEL ACK.
+Das Netz schließt den Vorgang mit GA-CSR: ACTIVATE CHANNEL COMPLETE
+ab. Daraufhin kann das Mobile dann mit GA-CSR: HANDOVER COMPLETE
+antworten. Wie aus Bild 25 zu erkennen ist, besitzt die letztgenannte Meldung kein
+Informationselement.
+7.3 Weitere Meldungen im Handoverprozess
+Es ist möglich, dass sich das Mobile im GAN-Mode befindet, das Netz aber feststellt
+dass die GAN Verbindung nicht mehr optimal ist. Das Netz sendet daher zum Mobile
+die Meldung GA-CSR UPLINK QUALITY INDICATION.
+_____[ 1294 ]___[ 117067 ]___[ DOWN ]___[ GAN ]_____________
+00 05 01 52
+
+21 01 04 00
+
+0000000000000101
+
+00
+
+Length = 5
+
+:Protokolldiscriminator
+01 0000---- SkipIndicator
+----0001 GA-RC and Generic Access Circuit Switched Resource
+:Message type
+52 01010010 GA-CSR UPLINK QUALITY INDICATION
+21
+01
+04
+
+00100001
+00000001
+0000-------0100
+
+UL Quality Indication IE
+length = 0
+Spare
+Undetermined problem
+
+Bild 26: Die Meldung GA-CSR UPLINK QUALITY INDICATION
+
+Das Informationselement UPLINK QUALITY INDICATION kann, wie nachstehend
+dargestellt vier Werte annehmen:
+0000 Quality ok
+0001 Radio problem
+0010 Network problem
+0100 Undetermined problem
+
+Eine weiter Meldung, die in den, dem Verfasser zur Verfügung stehenden, Tracen
+nicht vorkommt ist GA-CSR HANDOVER FAILURE. Gründe dafür sind wie folgt:
+00000000
+00000001
+00000010
+00000011
+00000100
+00000101
+00000110
+00001000
+00001001
+00001010
+00001011
+00001100
+01000001
+01011111
+01100000
+01100001
+01100011
+01100100
+01100101
+01101111
+
+Normal event
+Abnormal release, unspecified
+Abnormal release, channel unacceptable
+Abnormal release, timer expired
+Abnormal release, no activity on the radio path
+Preemptive release
+UTRAN configuration unknown
+Handover impossible, timing advance out of range
+Channel mode unacceptable
+Frequency not implemented
+Originator or talker leaving group call area
+Lower layer failure
+Call already cleared
+Semantically incorrect message
+Invalid mandatory information
+Message type non-existent or not implemented
+Message type not compatible with protocol state
+Conditional IE error
+No cell allocation available
+Protocol error unspecified
+
+24
+
+7.4 Zusätzliche Meldungen für das Unlicensed Radio Resources management
+Wenn das Mobile die GA-RC REGISTER ACCEPT Meldung empfängt (siehe
+Abschnitt 5.2), dann wird u.A. der Timer TU3906 angestoßen und damit der GA-CR
+Keep Alive Mechanismus in Gang gesetzt. Das Mobile schickt die Meldung Keep
+Alive zum GANC im Sinne von „Bitte nicht ausschalten“. Wenn der Timer abläuft ,
+wird die Meldung erneut zum GANC gesendet und der Timer erneut gestartet. Erst
+wenn das Mobile die TCP-Verbindung abbaut, wird der Timer TU3906 angehalten.
+
+Bild 27: Ausschnitt aus einem Trace mit SAGEM OT560 mit Meldung KEEP ALIVE
+
+Aus Bild 27 erkennt man, dass GA-RC KEEP ALIVE kein Informationselemt enthält.
+In Table 10.1.1 der Recommendation „3GPP TS 44.318 version 7.5.0 Release 7
+findet man außerdem die im Folgenden aufgeführten Meldungen.
+GA-CSR PAGING REQUEST und GA-CSR PAGING RESPONSE
+Beide wurden in den zur Verfügung stehenden Tracen nicht gefunden. Die PagingInformationen wurden hier über den Funkkanal abgewickelt. Für den Fall, dass das
+Mobile nur über unzureichenden Funkkontakt verfügt, muss das Paging aber über
+den GANC erfolgen. Das Gleiche gilt für das Erfragen der technischen Eigenschaften
+des Mobiles durch das Netz
+GA-CSR CLASSMARK ENQUIRY und GA-CSR CLASSMARK CHANGE
+Wenn das Mobile ein unerwartetes oder falsches Informationselement diagnostiziert,
+wird die Meldung ignoriert und die Meldung GA-CSR STATUS gesendet
+Wenn das Mobile nicht in der Lage ist gleichzeitig CS und PS Dienste abzuwickeln
+dann muss beim Übergang des Mobile in den dedicated Mode die Datenübertragung
+durch die Meldung GA-CSR GPRS SUSPENSION REQUEST angehalten werden.
+Nach der erfolgreichen Wiederherstellung einer TCP-Verbindung sendet das Mobile
+die Meldung GA-RC SYNCHRONIZATION INFORMATION zum GANC
+Eine GA-RC CELL BROADCAST INFO kann auf Anforderung vom GANC zum
+Mobile gesendet werden.
+
+25
+
+8. Elementare Prozeduren für die Packet Switched (PS) Domäne
+Im Abschnitt 10.2 der Recommendation 3GPP TS 44.318 version 7.5.0 Release 7
+Sind die in Bild 28 Aufgeführten Meldungen definiert.
+GA-PSR TC Management messages: Reference
+
+Transport Layer used
+
+GA-PSR-ACTIVATE-UTC-REQ
+GA-PSR-ACTIVATE-UTC-ACK
+GA-PSR-DEACTIVATE-UTC-REQ
+GA-PSR-DEACTIVATE-UTC-ACK
+
+10.2.1
+10.2.2
+10.2.3
+10.2.4
+
+TCP
+TCP
+TCP
+TCP
+
+GPRS Tunnelling messages:
+
+Reference
+
+GA-PSR-DATA
+GA-PSR-UNITDATA
+
+10.2.5
+10.2.6
+
+GAN Specific Signalling messages:
+
+Reference
+
+GA-PSR-PS-PAGE
+GA-PSR-DFC-REQ
+GA-PSR-UFC-REQ
+GA-PSR-STATUS
+GA-PSR HANDOVER COMPLETE
+GA-PSR UPLINK QUALITY INDICATION
+GA-PSR HANDOVER INFORMATION
+GA-PSR HANDOVER COMMAND
+GA-PSR HANDOVER CONTINUE
+GA-PSR HANDOVER FAILURE
+
+10.2.7
+10.2.9
+10.2.8
+10.2.10
+10.2.11
+10.2.12
+10.2.13
+10.2.14
+10.2.15
+10.2.16
+
+TCP
+UDP
+
+TCP
+UDP
+UDP
+TCP
+TCP
+TCP
+TCP
+TCP
+TCP
+TCP
+
+Bild 28: Table 10.2.1: Messages for Generic Access Radio Link Control management
+
+In den, dem Autor zur Verfügung stehenden Traces sind weder Transport Channel
+(TC) Meldungen, noch GAN Specific Signalling Messages enthalten. Von den GPRS
+Tunnelling messages sind nur die in Bild 28 rot eingezeichnetem GA-PSR-DATA
+Messages mit einer Struktur entsprechend der Vorschrift enthalten. Für die GA-PSRUNITDATA hat der Operator Orange die Struktur geändert.
+Wie im Folgenden gezeigt wird, werden die Steuerungsaufgaben durch eine
+Mischung von GA-RC, GA-CSR und GA-PSR gelöst.
+Nachstehend ist ein Trace, aufgezeichnet mit einem Trace-Mobile SAGEM OT560,
+dargestellt der in der genannten Abfolge von GA-RC, GA-CSR und GA-PSR
+Meldungen enthält.
+
+26
+
+Bild 29: Ausschnitt aus einem Trace mit SAGEM OT560 mit GA-PSR Meldungen
+
+Da Bild 29 die Namen einer Reihe von Meldungen nicht explizit enthält, ist zur
+Erklärung Bild 30 beigefügt.
+96901
+96933
+96943
+96946
+96946
+96954
+96972
+96972
+97029
+97044
+97056
+97056
+97069
+97069
+97143
+97144
+97145
+
+Down
+Up
+Down
+UP
+Down
+Up
+Down
+UP
+Down
+UP
+Down
+UP
+Down
+UP
+Down
+Down
+UP
+
+RR: PAGING REQUEST TYPE 1
+GA-RC : REGISTER REQUEST
+GA-RC : REGISTER ACCEPT
+GA-CSR : REQUEST
+GA-CSR : REQUEST ACCEPT
+GA-CSR : UPLINK DIRECT TRANSFER
+GA-CSR : DOWNLINK DIRECT TRANSFER
+GA-CSR : UPLINK DIRECT TRANSFER
+GA-CSR : DOWNLINK DIRECT TRANSFER
+GA-CSR : UPLINK DIRECT TRANSFER
+GA-CSR : CIPHERING MODE COMMAND
+GA-CSR : CIPHERING MODE COMPLETE
+GA-CSR : DOWNLINK DIRECT TRANSFER
+GA-CSR : UPLINK DIRECT TRANSFER
+GA-CSR : DOWNLINK DIRECT TRANSFER
+GA-CSR : RELEASE
+GA-CSR : RELEASE COMPLETE
+
+(LOCATION UPDATING REQUEST)
+(IDENTITY REQUEST)
+(IDENTITY RESPONSE)
+(AUTHENTICATION REQUEST)
+(AUTHENTICATION RESPONSE)
+(TMSI REALLOCATION COMMAND)
+(TMSI REALLOCATION COMPLETE)
+(LOCATION UPDATING ACCEPT)
+
+27
+
+97146
+97146
+97146
+97276
+97276
+97276
+97276
+97407
+97408
+97408
+97422
+97422
+97422
+97435
+97435
+97435
+97435
+97543
+97543
+97543
+97543
+97543
+97543
+97557
+97557
+97557
+
+UP
+UP
+UP
+Down
+Down
+UP
+UP
+Down
+Down
+Down
+UP
+UP
+UP
+Down
+Down
+UP
+UP
+Down
+Down
+Down
+UP
+UP
+UP
+Down
+Down
+Down
+
+NAS
+LLC:
+GAN:
+GAN:
+LLC:
+LLC
+GAN
+GAN
+LLC
+NAS
+NAS
+LLC
+GAN
+GAN:
+LLC:
+LLC
+GAN
+GAN
+LLC
+NAS
+NAS
+LLC
+GAN
+GAN
+LLC
+NAS
+
+ROUTING AREA UPDATE REQUEST
+ROUTING AREA UPDATE REQUEST
+ROUTING AREA UPDATE REQUEST
+XID
+XID
+XID
+XID
+AUTHENTICATION AND CIPHERING REQUEST
+AUTHENTICATION AND CIPHERING REQUEST
+AUTHENTICATION AND CIPHERING REQUEST
+AUTHENTICATION AND CIPHERING RESPONSE
+AUTHENTICATION AND CIPHERING RESPONSE
+AUTHENTICATION AND CIPHERING RESPONSE
+XID
+XID
+XID
+XID
+ROUTING AREA UPDATE ACCEPT
+ROUTING AREA UPDATE ACCEPT
+ROUTING AREA UPDATE ACCEPT
+ROUTING AREA UPDATE COMPLETE
+ROUTING AREA UPDATE COMPLETE
+ROUTING AREA UPDATE COMPLETE
+GMM INFORMATION
+GMM INFORMATION
+GMM INFORMATION
+
+(NAS-Message)
+(LLC-Control-Frame)
+(GA-PSR-DATA)
+(GA-PSR-DATA)
+(LLC-Control-Frame)
+(LLC-Control-Frame)
+(GA-PSR-DATA)
+(GA-PSR-DATA)
+(LLC-Control-Frame)
+(NAS-Message)
+(NAS-Message)
+(LLC-Control-Frame)
+(GA-PSR-DATA)
+(GA-PSR-DATA)
+(LLC-Control-Frame)
+(LLC-Control-Frame)
+(GA-PSR-DATA)
+(GA-PSR-DATA)
+(LLC-Control-Frame)
+(NAS-Message)
+(NAS-Message)
+(LLC-Control-Frame)
+(GAPSR-DATA)
+(GAPSR-DATA)
+(LLC-Control-Frame)
+(NAS-Message)
+
+Bild 30: Namen der Meldungen des in Bild 28 dargestellten Traceauschnittes
+
+Der Leser der Lektion IP-GPRS-EDGE [C0], weiß, dass die Datenübertragung über
+die Funkstrecke mit Hilfe des RLC-Protokolls erfolgt. Die IP-Pakete werden mit dem
+SNDC-Protokoll konvertiert und an LLC- Rahmen übergeben. Der Inhalt der LLCRahmen wird mittel RLC-Protokoll segmentiert über die Funkstrecke übertragen.
+Bei der Übertragung über das Wireless LAN müssen die Pakete nicht zerlegt werden.
+Wie aus den Bildern 29 und 30 zu erkennen ist, wird eine NAS-Message an den LLCRahmen übergeben und dieser mit einer GA-PSR-DATA-Message über das Internet
+transportiert.
+Die Art wie das bewerkstelligt wird, ist in den Bildern 31 bis 33 dargestellt.
+
+_____[ 28 ]___[ 97422 ]___[ UP ]___[ NAS ]_____________
+08 13 01 22
+
+b2 a2 fb fd
+
+23 09 33 15
+
+77 02 81 12
+
+96 02 f1
+
+08
+
+0-------000-------1000
+
+direction from
+TransactionID
+Protocol Discrim.
+
+: originating site
+: 0
+: GPRS mobility management messages
+
+13
+
+00010011
+
+MESSAGE TYPE
+
+: AUTHENTICATION AND CIPHERING RESPONSE
+
+01
+
+0000-------0001
+
+spare half octet
+A&C reference number value = 1
+
+: Authentication parameter SRES
+22
+b2
+a2
+fb
+fd
+
+00100010
+10110010
+10100010
+11111011
+11111101
+
+INFORMATION ELEMENT : Authentication parameter SRES
+SRES value octet 2
+SRES value octet 3
+SRES value octet 4
+SRES value octet 5
+
+23
+
+00100011
+
+INFORMATION ELEMENT : Mobile Identity
+
+28
+
+09
+33
+15
+77
+02
+81
+12
+96
+02
+f1
+
+00001001
+0011-------0-------011
+0001-------0101
+0111-------0111
+0000-------0010
+1000-------0001
+0001-------0010
+1001-------0110
+0000-------0010
+1111-------0001
+
+length of Mob. ident.:
+Identity Digit 1
+:
+No. of ID digits
+:
+Type of identity
+:
+Identity Digit 2
+:
+Identity Digit 3
+:
+Identity Digit 4
+:
+Identity Digit 5
+:
+Identity Digit 6
+:
+Identity Digit 7
+:
+Identity Digit 8
+:
+Identity Digit 9
+:
+Identity Digit 10
+:
+Identity Digit 11
+:
+Identity Digit 12
+:
+Identity Digit 13
+:
+Identity Digit 14
+:
+Identity Digit 15
+:
+Identity Digit 16
+:
+Identity Digit 17
+:
+
+9
+147
+even
+IMEISV
+1
+5
+7
+7
+0
+2
+8
+1
+1
+2
+9
+6
+0
+2
+15
+1
+
+Bild 31: NAS Message AUTHENTICATION AND CIPHERING RESPONSE
+
+Die NAS-Meldung AUTHENTICATION AND CIPHERING RESPONSE (Bild 31),
+wird in einen LLC-Rahmen eingefügt (Bild 32).
+_____[ 27 ]___[ 97422 ]___[ UP ]___[ LLC ]_____________
+01 c0 01 08
+02 f1 03 42
+01
+
+c0
+01
+
+13 01 22 b2
+a7 e8
+
+0-------0-------00-------0001
+110-------00-------000
+000000-------0-------1
+
+a2 fb fd 23
+
+09 33 15 77
+
+02 81 12 96
+
+LLC Frame
+Response/SGSN or Command/Mobile
+spare
+SAPI GPRS Mobility Management
+LLC-UIformat
+Spare
+Transmitter unconfirmed Sequenz number high N(U) = 0
+Transmitter unconfirmed Sequenz number low N(U) = 0
+Encryption funktion bit
+Protected Mode Bit
+
+: GMM Command
+08
+
+0-------000-------1000
+
+direction from
+TransactionID
+Protocol Discrim.
+
+: originating site
+: 0
+: GPRS mobility management messages
+
+13
+
+00010011
+
+MESSAGE TYPE
+
+: AUTHENTICATION AND CIPHERING RESPONSE
+
+01
+
+0000-------0001
+
+spare half octet
+A&C reference number value = 1
+
+: Authentication parameter SRES
+22
+
+00100010
+
+INFORMATION ELEMENT : Authentication parameter SRES
+
+b2
+a2
+fb
+fd
+
+10110010
+10100010
+11111011
+11111101
+
+SRES
+SRES
+SRES
+SRES
+
+23
+
+00100011
+
+INFORMATION ELEMENT : Mobile Identity
+
+09
+33
+
+00001001
+0011-------0-------011
+
+length of Mob. ident.:
+Identity Digit 1
+:
+No. of ID digits
+:
+Type of identity
+:
+
+0000----
+
+Identity Digit 6
+
+15
+77
+02
+
+0001-------0101
+0111-------0111
+
+value
+value
+value
+value
+
+Identity
+Identity
+Identity
+Identity
+
+octet
+octet
+octet
+octet
+
+2
+3
+4
+5
+
+Digit
+Digit
+Digit
+Digit
+
+2
+3
+4
+5
+
+9
+147
+even
+IMEISV
+
+:
+:
+:
+:
+
+1
+5
+7
+7
+
+: 0
+
+29
+
+81
+12
+96
+02
+f1
+
+----0010
+1000-------0001
+0001-------0010
+1001-------0110
+0000-------0010
+1111-------0001
+
+Identity
+Identity
+Identity
+Identity
+Identity
+Identity
+Identity
+Identity
+Identity
+Identity
+Identity
+
+Digit
+Digit
+Digit
+Digit
+Digit
+Digit
+Digit
+Digit
+Digit
+Digit
+Digit
+
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+
+:
+:
+:
+:
+:
+:
+:
+:
+:
+:
+:
+
+2
+8
+1
+1
+2
+9
+6
+0
+2
+15
+1
+
+Bild 32: LLC Message AUTHENTICATION AND CIPHERING RESPONSE
+
+Der LLC-Rahmen schließlich wird, in einer GA-PSR-Data Message, über das Internet
+übertragen.(Bild 33)
+_____[ 26 ]___[ 97422 ]___[ UP ]___[ GAN ]_____________
+00 26 02 01
+01 22 b2 a2
+00 00
+
+8e 9d aa 02
+fb fd 23 09
+
+0000000000100110
+
+26 03 02 80
+33 15 77 02
+
+20 39 19 01
+81 12 96 02
+
+c0 01 08 13
+f1 42 a7 e8
+
+Length = 38
+
+:Protokolldiscriminator
+02 0000---- SkipIndicator
+----0010 Generic Access Packet Switched Resource
+:MESSAGE TYPE
+01 00000001 GA-PSR-DATA
+8e
+9d
+aa
+02
+
+10001110
+10011101
+10101010
+00000010
+
+TLLI
+TLLI
+TLLI
+TLLI
+
+26
+03
+02
+
+80
+20
+
+00100110
+00000011
+0-------0-------00-------0010
+10000000
+00100000
+
+Requested QoS
+length=3
+spare
+RLC-Mode
+Radio Priority
+Peak_Throughput_Class
+data
+data
+
+39
+19
+
+00111001
+00011001
+
+LLC-PDU
+length = 25
+
+01
+
+0-------0-------00-------0001
+110-------00-------000
+000000-------0-------1
+
+LLC Frame
+Response/SGSN or Command/Mobile
+spare
+SAPI GPRS Mobility Management
+LLC-UIformat
+Spare
+Transmitter unconfirmed Sequenz number high N(U) = 0
+Transmitter unconfirmed Sequenz number low N(U) = 0
+Encryption funktion bit
+Protected Mode Bit
+
+c0
+01
+
+: GMM Command
+08
+
+0-------000-------1000
+
+direction from
+TransactionID
+Protocol Discrim.
+
+: originating site
+: 0
+: GPRS mobility management messages
+
+13
+
+00010011
+
+MESSAGE TYPE
+
+: AUTHENTICATION AND CIPHERING RESPONSE
+
+01
+
+0000-------0001
+
+spare half octet
+A&C reference number value = 1
+
+: Authentication parameter SRES
+22
+
+00100010
+
+INFORMATION ELEMENT : Authentication parameter SRES
+
+30
+
+b2
+a2
+fb
+fd
+
+10110010
+10100010
+11111011
+11111101
+
+SRES
+SRES
+SRES
+SRES
+
+23
+
+00100011
+
+INFORMATION ELEMENT : Mobile Identity
+
+09
+33
+
+00001001
+0011-------0-------011
+0001-------0101
+0111-------0111
+0000-------0010
+1000-------0001
+0001-------0010
+1001-------0110
+0000-------0010
+1111-------0001
+
+length of Mob. ident.:
+Identity Digit 1
+:
+No. of ID digits
+:
+Type of identity
+:
+Identity Digit 2
+:
+Identity Digit 3
+:
+Identity Digit 4
+:
+Identity Digit 5
+:
+Identity Digit 6
+:
+Identity Digit 7
+:
+Identity Digit 8
+:
+Identity Digit 9
+:
+Identity Digit 10
+:
+Identity Digit 11
+:
+Identity Digit 12
+:
+Identity Digit 13
+:
+Identity Digit 14
+:
+Identity Digit 15
+:
+Identity Digit 16
+:
+Identity Digit 17
+:
+
+42
+a7
+
+01000010
+10100111
+
+Packet Flow ISD
+Packet Flow ISD
+
+e8
+
+1-------1-------10----
+
+Other Frame
+Command/SGSN or Response/Mobile
+spare
+
+15
+77
+02
+81
+12
+96
+02
+f1
+
+value
+value
+value
+value
+
+octet
+octet
+octet
+octet
+
+2
+3
+4
+5
+
+9
+147
+even
+IMEISV
+1
+5
+7
+7
+0
+2
+8
+1
+1
+2
+9
+6
+0
+2
+15
+1
+
+Bild 33: GAN-PSR-DATA Rahmen mit eingebetteter LLC Message AUTHENTICATION AND
+CIPHERING RESPONSE
+
+Der beschriebene Mechanismus ist noch einmal graphisch in Bild 34 dargestellt . Es
+wird die Verwandtschaft der Übertragungsmethoden im GPRS, EDGE und GAN
+offensichtlich
+
+Bild 34: Methode der Schachtelung von Informationen im GAN-Service
+
+Von den im Bild 28 verzeichneten Meldungen stehen weiter keine als Beispiel zur
+Verfügung. Der Mechanismus der Datenübertragung ist der in Bild 34 beschriebene.
+Wie aus dem Traceausschnitt Bild 35 zur Verfügung steht sind die GA-PSR
+Meldungen vom Operator Orange modifiziert worden und lassen sich nicht mit den in
+der Recommendation ts_144318v070500p festgelegten Regeln übersetzen.
+31
+
+Bild 35: Datenübertragungssequenz aus einem mit dem SAGEM OT560 aufgezeichneten Trace.
+
+Auf dem GSM World Congress im Februar 2009 in Barcelona beabsichtigt SAGEM
+das Trace-Mobile OT8xx vorzustellen. Dieses Gerät soll u.a. die Aufzeichnung von
+WiFi Traces gestatten. Es wird angenommen, dass es reine UMA/GAN Meldungen
+dekodieren kann, im Gegensatz zum OT560, das, wie wir gesehen haben einige
+proprietäre Züge enthält.
+
+32
+
+9. Welche UMA/GAN Dienste stehen in deutschen Mobilfunknetzen
+zur Verfügung
+9.1 UMA/GAN Ansatz beim Operator Vodafone
+Es wäre wünschenswert den beschriebenen Dienst in Deutschland in
+Anspruch nehmen zu können.
+Aus nebenstehender
+Darstellung geht hervor,
+dass der deutsche
+Operator T-mobile nur in
+den USA diesen Dienst
+anbietet in Deutschland
+leider nicht.
+Der hier nicht
+verzeichnete Operator
+Vodafone bietet
+allerdings einen Dienst
+mit Namen Vodafone IP
+Phone Pro an. Um ihn zu
+nutzen, muss man
+Vodafone Zuhause
+beauftragen, Man lädt
+sich diesen Clienten auf
+den PC und besitzt dann
+eine UMA-enabledSoftmobile. Es bleibt zu
+wünschen, dass
+Vodafone bald die
+nächsten Schritte folgen
+lässt.
+
+Bild 36: Operatoren und Länder in denen der Dienst UMA/GAN zur Verfügung steht
+
+9.2 Der Versuch der Fa. etelon
+Die Fa. etelon hatte im Jahr 2007 den Dienst wifon propagiert. Da wifon Ähnlichkeit
+mit UMA versprach, hatte sich der Autor zur Teilnahme entschlossen und als
+Zubehör eine FRITZ!Box Fon WLAN 7170 und ein Nokia E65 erhalten. Es war
+zunächst möglich, das Nokia E65 für Sipgate zu programmieren und Gespräche über
+WLAN und Sipgate zu führen.
+33
+
+Anfang 2008 wurde von etelon ein Modul geliefert, (powered by M5T) das ebenfalls
+die Kommunikation per VoIP über die Fritzbox ermöglicht, zusätzlich jedoch, wenn
+die Umgebung der Box verlassen wird (die WiFi-Feldstärke zu klein ist), auf die
+Mobilfunkverbindung umschalten soll.
+Ein Gespräch mit dem Entwickler ergab, dass das Modul nicht gemäß UMARecommendation programmiert ist und auch nicht vorgesehen ist, dass das
+Gespräch über Mobilfunk rückwärts in der Nähe von WiFon (der FritzBox) auf VoIP
+umschaltet.
+9.3 Einbeziehung von UMTS
+Der Chiphersteller ST-NXP Wireless, eine Firma, die über 120 Millionen EDGE ChipSets hergestellt hat, kündigte einen neuen UMA Chip-Set an . Dieser 7210
+genannte Chip-Set vereinigt die 3G-Fähigkeit mit der Unterstützung von Unlicensed
+Mobile Access.
+Den Nutzern eines damit ausgerüsteten Mobiles ist es erlaubt, im Internet große
+Datenmengen zu bewegen und gleichzeitig zwischen WiFi und Funkverbindung
+umzuschalten.
+
+10. Literatur
+A) ISDN
+[A0] www2.informatik.hu-berlin.de/~goeller, DerISDNDKANAL
+
+[A1] Göller, J.: Der ISDN-D-Kanal im Dialog. 2. überarbeitete Auflage, 1999,
+Duderstadt, EPV- Verlag, inkl. CD mit Tracetool ISDNView, ISBN 3-924544-80-8
+Englische Ausgabe:
+ISDN-D-Channel in Dialoque EPV-Best.-Nr.: NA442
+Türkische Ausgabe
+Karsilikli Konusmalarla ISDN D-Kanali, Herausgegeben von Fa. Onsoft, Berlin
+[A2] Göller, J.: ISDNprof-CBT, Der ISDN-D-Kanal transparent Vollversion-I, CD-ROM
+mit Tracetool ISDNView, Duderstadt, EPV-Verlag, ISBN 3-924544-87-5
+[A3] Göller, J.: ISDNprof-USB, Der ISDN-D-Kanal transparent Vollversion-II, mit Messkopf
+W@tchUSB der Fa. Onsoft, CD-ROM mit Tracetool ISDNView, Duderstadt, EPV-Verlag
+
+[A4] Siegmund, G.: Grundlagen der Vermittlungstechnik .2. überarbeitete Auflage.
+Heidelberg,
+R.v. Decker's Verlag, 1993
+[A5] Kanbach, A. und Körber, A.: ISDN - Die Technik. 2. überarbeitete Auflage.
+Heidelberg, Hüthig Verlag, 1991
+
+34
+
+[A6] Gora, W.: ASN.1, Abstract Syntax Notation One. 3., aktualisierte Auflage.
+Bergheim, Datacom - Verlag, 1992
+[A7] Steedmann, Douglas.: ASN,1, The Tutorial & Reference, Reprinted with
+corrections1993, TECHNOLOGY APPRAISALS UK. ISBN 1 871802 06 7
+B) GSM
+[B0] www2.informatik.hu-berlin.de/~goeller, DieGSMDmKanäle
+
+[B1] Michel MOULY und Marie-Bernadette PAUTET: The GSM System for Mobile
+Communication, , Verlag CELL &SYS, ISBN 2-9507190-0-7
+
+C) IP,GPRS und EDGE
+[C0] www2.informatik.hu-berlin.de/~goeller, IP-GPRS-EDGE
+D) Voice over IP
+[D1] Göller, J: Voice over IP transparent, Telefonieren über das Internet. CD-ROM
+mit Experimentalvortrag und Übungen, Duderstadt, EPV-Verlag, ISBN 978-3936318-66-1
+[D2] Ted Wallingford, Switching to VoIP, Published by O' Reilly Media, Inc, ISBN-10:
+0-596-00868-6, ISBN-13: 978-0-596-00868-0
+
+35
+

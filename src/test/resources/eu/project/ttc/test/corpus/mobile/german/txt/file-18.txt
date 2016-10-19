@@ -1,0 +1,81 @@
+Vorgeschichte
+
+      Bereits im Jahre 1918 unternahm die Deutsche Reichsbahn im Raum Berlin Versuche mit  Funktelefongesprächen aus fahrenden Zügen. Im Jahre 1926 wurde dann auf der Strecke Berlin-Hamburg den Fahrgästen der ersten Klasse ein Funktelefondienst angeboten. Die Antennen im Zug bestanden aus auf den Wagendächern längs gespannten Drähten, als ortsfeste Sende- und Empfangsantennen dienten die entlang der Eisenbahnstrecken verlaufenden Telegrafenleitungen. (siehe hierzu auch den Artikel "Fernsprechverkehr mit fahrenden D-Zügen"
+      In den 30er- und 40er Jahren wurden dann verschiedene Versuche im Mittelwellen- und Kurzwellenbereich durchgeführt.
+      Das weltweit erste Mobilfunknetz gab es in den USA im Jahre 1946.
+      Nach der Entwicklung der UKW-Technik in Deutschland nach dem Krieg wurden dann Anfang der 50er-Jahre in verschiedenen Regionen Deutschlands lokale Netze aufgebaut, wie der Hafen- oder Rhein-Funk oder der Stadtfunk-Dienst.
+
+A-Netz
+
+      Das erste richtige Mobilfunknetz in Deutschland war das 1
+
+            Autolefon aus den 50er Jahren
+      958 von der Bundespost eingeführte A-Netz. Es war ein analoges Netz, das rein handvermittelt arbeitete. Die Gesprächsverbindung wird vom "Fräulein vom Amt" handvermittelt und muss abgebrochen werden, sobald man den Funkbereich einer  Landfunkstelle verlässt. Im benachbarten Funkbereich kann das Gespräch dann wieder aufgenommen werden.  Auslandsgespräche waren nicht möglich.
+      Das A-Netz arbeitete im 150 MHz-Frequenzbereich.
+      Durch die Kosten des Mobilfunks blieb das Telefonieren unterwegs ein Privileg der Wohlbetuchten und derer, die es beruflich nutzten, wie z.B. Politiker, Unternehmer und Angehörige bestimmter Berufsgruppen. Trotzdem war das A-Netz seinerzeit das größte flächendeckende Mobilfunknetz der Welt. Die Hardware war noch sehr klobig, sie basierte auf Röhrentechnik - es wurde noch der halbe Kofferraum benötigt. Die Kosten für ein Gerät lagen bei 8.000.- bis 15.000.- Mark.
+
+      Der monatliche Grundpreis betrug anfangs 66.- DM später 270.- DM. Hinzu kamen zusätzliche Gebühren für die Funkverkehrsbereiche
+      Die höchste Teilnehmerzahl lag knapp über 10.000.
+      1977 wurde der Betrieb endgültig eingestellt.
+
+B-Netz
+
+      1972 ging das technisch wesentlich fortschrittlichere B-Netz in Betrieb. Hiermit war erstmals Selbstwählverkehr in beiden Richtungen möglich. Der Nachteil war allerdings,  dass der Anrufer wissen musste, in welchem Vorwahlbereich sich der Mobilteilnehmer aufhielt (z.B. 0611-05-Rufnummer für einen Teilnehmer der sich im Bereich Frankfurt aufhielt).
+      Zunächst gab es 16.000 Teilnehmer, nach Erweiterung der Funkkanäle waren dann bis zu 27.000 Teilnehmer im B-Netz.
+      Es war sogar im begrenzten Rahmen Roaming möglich, in den Nachbarländern Österreich, Niederlande, Luxemburg
+      Der Frequenzbereich war auch hier im 150 MHz-Band
+      Der monatliche Grundpreis betrug anfangs 270.- DM später 120.- DM
+      Der Preis eines Autotelefons betrug ca. 12.000.- DM
+      Ende 1994 ging das B-Netz außer Betrieb.
+      In Österreich startete das B-Netz 1974
+
+C-Netz
+
+      Das C-Netz startete in Deutschland 1985, in Österreich schon im November 1984. Hiermit war man erstmals im ganzen Bundesgebiet unter einer Rufnummer erreichbar, ohne Region-Vorwahl. Gleichzeitig wurden in anderen Ländern ähnliche Systeme eingeführt, die aber meist nicht kompatibel waren.
+      Der Hauptunterschied zum bisherigen B-Netz war, dass es sich un ein zellulares System handelt. Durch die Vielzahl von Basisstationen waren geringere Sendeleistungen erforderlich, dies bedeutete geringeren Stromverbrauch, weniger erforderliche Akkukapazität und somit kleinere Geräte.
+      Außer den festeingebauten Autotelefonen gab es auch bald tragbare Geräte (das erste kam 1987 von Siemens), etwa in der Größe eines Kofferradios und schließlich sogar Handys.
+      Endlich konnten auch Datenverbindungen über DATEX und Faxverbindungen hergestellt werden, allerdings nur mit einer geringen Datenübertragungsrate von 2400 bit/s
+      Der Frequenzbereich war im 450 MHz-Band
+      Die maximale Teilnehmerzahl Mitte 1993 betrug 803.000.
+      Der Monatsgrundpreis betrug anfangs 120.- später 19.- DM
+      Das C-Netz wurde in Deutschland zum Jahresende 2000 abgeschaltet.
+
+Pager
+
+      Diejenigen, die sich kein Mobiltelefon anschaffen wollten, halfen der mobilen Kommunikation mit sogenannten Pagern auf die Sprünge. Beim Paging werden kurze Informationen an einen sehr kleinen, leichten Empfänger verschickt, der beim Empfang piepst.  Die ersten Geräte für den professionellen Bereich waren Eurosignal und City-Ruf. Später gab es Geräte, die sich vorwiegend an eine jugendliche Klientel richtete, so wie heute die Prepaid-Karten, unter den Namen Scall und Quix.
+
+GSM
+
+      Bereits 1982 trafen sich Vertreter von Telekommunikationsunternehmen aus 26 europäischen Ländern. Daraus resultierte die Gründung der Groupe Spécial Mobile (GSM) mit dem Ziel, Spezifikationen für ein europaweites Mobilkommunikationsnetz festzulegen. Als Technik wurde ein digitales Netz vorgesehen, dies bietet die Möglichkeit zu besserer Sprachqualität und weiteren Features. Der vorgesehene Frequenzbereich lag bei 900 Mhz.
+      1991 wurde anlässlich der in Genf stattfindenden ITU-Messe Telecom ein GSM-Pilotnetz erfolgreich vorgestellt. 1992 schließlich wurde GSM offiziell eingeführt und 1993 gab es bereits 36 GSM-Netze in 22 Ländern. 1999 gab es 239 GSM-Netze in 108 Ländern weltweit.
+
+D-Netz
+
+      In Deutschland startete GSM mit dem D-Netz. Mit dem D-Netz gab es zum ersten Mal im deutschen Telekommunikationsmarkt Konkurrenz, da zwei Anbieter - die Deutsche Telekom und Mannesmann-mobil zeitgleich mit zwei parallelen Netzen, D1 und D2 in Betrieb gingen. Nach einer etwa 1-jährigen Versuchsfase starte der Betrieb Mitte 1992. In Österreich startete die GSM-Technik im Dezember 1993 unter der Bezeichnung "E-Netz"
+      Anfangs waren die Netzkapazitäten für jeweils 4 Millionen Teilnehmer geplant, nach mehrfachem Ausbau der Kapazitäten sind inzwischen (Stand Ende 2001) jeweils rund 22 Millionen Teilnehmer  in den beiden D-Netzen (siehe auch Teilnehmerzahlen).
+
+E-Netz
+
+      1994 wurde die Lizenz für ein weiteres Netz in Deutschland erteilt, dessen Technik auf dem GSM-Standard basierte, allerdings im Frequenzbereich 1800 Mhz arbeitete.
+      Ende 1998 schließlich ging der vierte Deutsche Mobilfunkanbieter,VIAG Interkom (inzwischen O2), mit dem E2-Netz an den Start.
+      Im Dezember 2001 starte mit Quam der fünfte Anbieter.
+
+      Insgesamt sind jetzt Mitte 2002 etwa 56 Millionen Teilnehmer in einem der GSM-Netze erreichbar.
+
+Telefonie International
+
+      Mit dem GSM-Standard gab es endlich einen Standard für mobile Telefonie, der weltweit eingeführt wurde. Insgesamt kann man in über 110 Ländern damit telefonieren.  Dadurch ist das mobile Telefonieren fast rund um den Globus möglich
+
+Und die Zukunft?
+
+      Im Sommer des letzten Jahres fand die Versteigerung von UMTS-Lizenzen statt. Ab dem Jahre 2002 werden die ersten Kunden mit UMTS noch schneller Daten empfangen können. Bis zu einer einigermaßen flächendeckenden Versorgung dauert es aber sicher noch bis 2005. Ob UMTS ein solcher Erfolg wird wie GSM, kann niemand voraus sagen. Da man aber noch Anfang der 80er-Jahre von eimem Mobilfunkbedarf von max. 100.000 Nutzern ausging und die D-Netze auch zunächst für max. 4 Mio Nutzer vorgesehen waren und inzwischen 10mal soviele Leute mobil telefonieren, ist davon auszugehen, dass spätestens nach den ersten Preissenkungen UMTS auch boomen wird. Auf jeden Fall werden Internet und Telefonie weiter zusammen wachsen, der Anteil der mobilen Datenübertragungen wird sicher deutlich ansteigen.
+
+	
+	
+
+Weitere Seiten zum Thema "Telefonhistorie":
+
+    * Einen Überblick über die Entwicklung des Handy mit Bildern und Daten gibt die Seite  Handygeschichte
+    * Das Handy wird 20. Denn es ist älter als GSM. Motorola war einer der Pioniere: mehr
+    * Verschiedene ältere Handys gibt es auch zu bewundern in meiner Handysammlung
+    * Interessante Artikel zur Entwicklung der Telefontechnik, bis zurück zu den 20er-Jahren gibt es im Kapitel "Historische Telefontechnik" 

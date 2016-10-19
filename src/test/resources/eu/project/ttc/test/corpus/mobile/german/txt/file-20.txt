@@ -1,0 +1,189 @@
+Wie sind Funkzellen und Mobilfunknetze beschaffen?
+
+Mobilfunknetze sind die Grundlage der mobilen Kommunikation. Sie bilden gewissermaßen die Basisinfrastruktur, die das Telefonieren mit dem Handy ermöglicht. Die Mobilfunkbetreiber haben die Netze mittlerweile so gut ausgebaut, dass die Menschen die moderne Mobilfunktechnik nahezu überall in Deutschland nutzen können. Heute sind eine hohe Qualität der Sprach- und Datenübermittlung sowie ausreichend vorhandene Übertragungskapazitäten zum Standard geworden.
+
+Netzwerk-Managementzentrum
+
+In Deutschland gibt es vier Mobilfunknetze, die auf der Basis des GSM-Standards (Global System for Mobile Communications) betrieben werden. Für die UMTS-Technologie (Universal Mobile Telecommunications System) wurden ebenfalls vier Mobilfunknetze errichtet. Sowohl GSM-Netze als auch UMTS-Netze verfügen über die gleiche Struktur.
+
+Jedes Mobilfunknetz ist geografisch in viele aneinandergrenzende Gebiete unterteilt - die so genannten Funkzellen. Man spricht daher auch vom zellularen Aufbau der Netze. Die Aufteilung in Funkzellen von begrenzter Größe ermöglicht es, die beschränkte Anzahl verfügbarer Funkkanäle optimal zu nutzen. Denn die Menge an verfügbaren Funkfrequenzen ist beim Mobilfunk durch die staatliche Lizenzvergabe stark begrenzt. In einem Mobilfunknetz werden daher dieselben Frequenzen (bei GSM) bzw. Codes (bei UMTS) in ausreichendem räumlichen Abstand wieder verwendet.
+Funkzellen und ihre Beschaffenheit
+
+Die einzelnen Funkzellen sind in der Regel wabenförmig und erstrecken sich über das gesamte Bundesgebiet. Sie verfügen über unterschiedliche Größen. So reicht der Durchmesser der Zellen von unter 100 Metern in Innenstädten, wo sie unter Umständen nur ein paar Häuser oder einen U-Bahnhof versorgen, bis zu mehreren Kilometern auf dem Land.
+
+Jede dieser Funkzellen wird von einer fest installierten Sende- und Empfangsanlage versorgt - der so genannten Mobilfunkbasisstation. Die Basisstationen bilden gewissermaßen die Knotenpunkte der Mobilfunknetze. Alle Netzbetreiber in Deutschland nutzen derzeit rund 50.000 Basisstationen. Im Rahmen der ersten Ausbaustufe der UMTS-Netze werden etwa 15.000 weitere Basisstationen hinzukommen.
+
+Während sich die Zellgrößen bei GSM nicht verändern, haben die Mobilfunkzellen bei UMTS eine andere Charakteristik: Sie „atmen“. Ihre räumliche Ausdehnung ist abhängig von der Zahl der Teilnehmer, die in einer Zelle mobil telefonieren. Eine stärkere Nutzung verkleinert dementsprechend die nutzbare Zelle.
+Anforderungen an die Struktur von Mobilfunknetzen
+
+In der Praxis leitet sich die Zellenstruktur aus den zahlreichen Einzelanforderungen ab, die an ein modernes Mobilfunknetz gestellt werden. Dies sind zum Beispiel eine ausreichende Übertragungskapazität, die hohe Qualität der Sprach- und Daten-Übertragung bei geringen Fehlerraten und eine flächendeckende Nutzbarkeit, die möglichst auch die Versorgung innerhalb von Gebäuden umfasst.
+
+MobilfunkbasisstationJeder Sender einer Mobilfunkzelle kann im Übrigen nur eine begrenzte Anzahl an Nutzern versorgen. Der in den vergangenen Jahren ständig gestiegene Bedarf an Übertragungskapazitäten hat dazu geführt, dass die Betreiber die Zahl der Mobilfunksender und damit auch der Funkzellen erhöht haben. Dadurch ist es möglich, die im Netz zur Verfügung stehenden Frequenzen (bei GSM) bzw. Codes (bei UMTS) häufiger wieder zu verwenden. Funkzellen, in denen die gleichen Frequenzen bzw. Codes zum Einsatz kommen, müssen allerdings genügend weit voneinander entfernt sein, damit es nicht zu gegenseitigen Störungen, so genannten Interferenzen, kommt.Angepasst an die örtliche Nachfrage werden innerhalb eines Mobilfunknetzes große und kleine Zellen zusammengefügt. Auf diese Weise können etwa so genannte Hochlastgebiete wie Innenstadtbereiche, Flughäfen oder Bahnhöfe gezielter und effizienter versorgt werden. Beim Zuschnitt der Zellen ist zudem zu berücksichtigen, dass die Auslastung, über den Tag, die Woche oder das Jahr gesehen, zum Teil sehr stark schwankt.
+
+Kleinere Funkzellen können darüber hinaus auch die Übertragungsqualität verbessern. Wenn die Zellen geografisch eng begrenzt sind, wird die Möglichkeit verringert, dass es zu Abschwächungen und Ablenkungen des Funksignals kommt. Natürliche Hindernisse oder Gebäude, aber auch Witterungseinflüsse können daher verhältnismäßig schnell zu so genannten Abschattungen führen, durch die die Informationsübermittlung gestört wird.
+
+
+Wie funktioniert der Übertragungsweg beim Mobilfunk?
+
+Beim ersten Hinsehen scheint der Übertragungsweg beim mobilen Telefonieren unkompliziert zu sein: Die digitalen Funksignale werden von einem Handy zum anderen oder aber vom Handy zum Festnetztelefon gesendet. In der Praxis allerdings durchlaufen die Gespräche und Daten eine Reihe von Zwischenstationen, bevor sie beim Empfänger ankommen. Der Übertragungsweg beim Mobilfunk beinhaltet die Strecke vom Mobiltelefon zur Mobilfunksendeanlage derjenigen Funkzelle, in der sich der jeweilige Handy-Nutzer befindet. Von dort müssen die Informationen - zum Teil über große Entfernungen - zu der Mobilfunkzelle weitergeleitet werden, in der sich der Empfänger aufhält. Dies erfolgt über Funkvermittlungsstellen.
+Funkvermittlungsstellen
+
+Die Mobilfunkbasisstation nimmt das Funksignal eines Handys und damit die zu vermittelnde Information über ihre Empfangsantenne auf. Dann gibt sie diese über herkömmliche Kabelverbindungen oder über Richtfunk an die Funkvermittlungsstelle, das Mobile Service Center, weiter. Hier werden die Gespräche vermittelt und der gesamte Gesprächsablauf vom Ruf bis zum Gesprächsende gesteuert. Auch Dienste wie die Rufweiterleitung, Anklopfen oder Mehrfachgespräche führt das Mobile Service Center aus. Dazu gehört auch das Erfassen der Rechnungsdaten.
+
+Bei der Funkvermittlungsstelle wird das Gespräch entweder an das herkömmliche Festnetz oder an eine andere Funkvermittlungsstelle übergeben, die das Gespräch an die nächstgelegene Basisstation weiterleitet, von wo es das Empfänger-Handy erreicht.
+Der Übertragungsweg beim Mobilfunk
+
+Richtfunkstrecken
+
+Die Datenübertragung zwischen den Basisstationen und den Funkvermittlungsstellen erfolgt entweder über Kabelverbindungen oder über Richtfunkstrecken. Mit Hilfe des Richtfunks lassen sich Signale im Gigahertz-Bereich senden und empfangen. Das geschieht mit kreisförmigen Parabolantennen. Gesendet wird im Mikrowellenbereich zwischen 2 GHz und 60 GHz. Da bei Richtfunkstrecken immer eine direkte Sichtverbindung erforderlich ist, werden die Daten oft über so genannte Richtfunkrelais weitergeleitet, die häufig gemeinsam mit Basisstationen auf einem Dach montiert sind. Die Richtfunkrelais empfangen und verstärken die Mikrowellensignale und senden sie dann weiter zum nächsten Relais. Hierbei sind die maximalen Entfernungen frequenzabhängig. Bei Frequenzen von 2 GHz können sie zwischen 40 km und 100 km liegen. Bei höheren Frequenzen verringert sich die Reichweite und liegt bei 10 GHz bei maximal 30 km.
+Handover
+
+Genauso wie die Handys mobil sind, so wird auch der mobile Übertragungsweg dynamisch angepasst. Das heißt die Strecke der Informationsübermittlung verändert sich je nach Standort von Sender und Empfänger. Wechselt ein Mobilfunkteilnehmer während eines Gesprächs die Funkzelle, schaltet das System automatisch auf die angrenzende Funkzelle um (Handover) und beendet die Verbindung zur alten, ohne dass der Handy-Nutzer etwas davon bemerkt.
+
+Um zu entscheiden, wann eine Weitergabe einer Verbindung erforderlich ist, wird die Übertragungsqualität gemessen. Der Zellenwechsel wird dann eingeleitet, wenn ein bestimmter Schwellenwert unterschritten ist beziehungsweise ein Wechsel der Funkzelle eine Verbesserung der Übertragungsqualität erwarten lässt.
+Anhang: 
+application/pdf iconGrafik Wie funktioniert ein Mobilfunknetz?
+
+
+Diese Website durchsuchen:
+Studie Risiko EMF LTE FAQ Mobilfunkurteile Technik Immissionskontrolle Kinder & Jugendliche Gesundheit Mobile Gesellschaft Politik Recht Branchenentwicklung Jugend forscht Sonderpreis Mobilfunk Wirtschaft SAR-Werte Forschungsergebnisse Mobilfunknutzung
+Über uns
+Hier erfahren Sie mehr über die Organisation und die Projekte des Informations­zentrums Mobilfunk e. V.
+Kontakt
+Haben Sie Fragen zum Mobilfunk? Treten Sie mit uns in Kontakt.
+Presse
+Hier finden Sie unsere Pressemitteilungen und umfangreiche aktuelle Infor­mationen.
+Broschüren
+Hier können Sie unsere Broschüren und unser Infomaterial kostenfrei bestellen.
+Übersicht
+
+    * Geschichte des Mobilfunks
+    * Funktionsweise
+          o Übertragungsweg
+          o Mobilfunksendeanlagen
+          o Funkzellen & Netze
+          o Funkwellen
+          o Frequenzen
+          o GSM
+          o GPRS
+          o UMTS
+          o LTE
+    * Sicherheitsmaßnahmen
+    * Netzplanung & Netzaufbau
+    * Feldsimulation
+    * FAQ
+
+Standortdatenbank der Bundes­netzagentur
+
+Die Datenbank informiert über Funkanlagen und Sendestandorte
+Testen Sie Ihr Wissen: Mobilfunk & Gesundheit
+
+Was bedeutet Pulsung? Wie wird der Grenzwert für Handys angegeben? Testen Sie Ihr Wissen, um festzustellen, bei welchen Themen Sie noch Informationsbedarf haben!
+Feldsimulation
+
+Anwendung zur Darstellung elektromagnetischer Felder von Mobilfunkantennen
+Verwandte Artikel
+Was bedeuten "gepulste Felder"?
+
+Handys des weltweit verbreitetsten Mobilfunkstandards GSM fassen Zeitspannen von 4,615 Millisekunden (ms) eines Gespräches zusammen und senden diese Sprachpakete komprimiert in nur einem Achtel der Zeit (0,577 ms) per Funkwellen an die Basisstation. 
+Was verbirgt sich hinter dem Mobilfunkstandard GPRS?
+
+Die Abkürzungen GPRS und EDGE stehen für Mobilfunktechnologien, mit denen die GSM-Mobilfunknetze in der Übergangsphase zur dritten Mobilfunkgeneration UMTS für die mobile Datenübertragung ausgebaut wurden. Sie stellten also keine neuen Mobilfunkstandards, sondern Erweiterungen von GSM dar. 
+Wie funktioniert ein Mobilfunknetz?
+
+Um mit einem Handy telefonieren oder Daten übertragen zu können, ist ein Mobilfunknetz erforderlich. Ein solches Netz ist in Funkzellen unterteilt. Jede Funkzelle wird durch eine Basisstation (= Sende- und Empfangsstation) "versorgt". 
+Technik
+Startseite › Technik › Funktionsweise › Mobilfunksendeanlagen
+Wie funktionieren Mobilfunksendeanlagen?
+
+Mobilfunksendeanlagen - die sogenannten Basisstationen - sind die Knotenpunkte der Mobilfunknetze. Jede Basisstation versorgt ein eng begrenztes Gebiet - die Funkzelle - mit Empfang. Die vier Netzbetreiber, die für Deutschland jeweils entsprechende Mobilfunklizenzen erworben haben, betreiben derzeit rund 62.000 solcher Mobilfunkbasisstationen. Damit versorgen sie die über 84 Millionen Mobilfunknutzer im gesamten Bundesgebiet.
+
+Mobilfunkbasisstationen sind Sende- und Empfangsanlagen, die mit sehr niedrigen Sendeleistungen zwischen zehn und 50 Watt arbeiten. 
+
+Noch viel geringer, nämlich maximal zwei Watt, ist die Sendeleistung der Handys. Da Handys, um ein Gespräch aufbauen zu können, immer die Verbindung zu einer Mobilfunkbasisstation halten müssen, werden die Basisstationen bevorzugt dort gebaut, wo viele Nutzer telefonieren oder Datendienste nutzen möchten. Die größte Zahl der Sendeanlagen wurde daher in Städten und Gemeinden errichtet, weil die Menschen nicht nur unterwegs, sondern auch in ihren Wohnungen, Werkstätten und Büros häufig mobil telefonieren möchten. Die Gebiete, die die Basisstationen versorgen, verfügen über unterschiedliche Größen. Der Durchmesser einer Funkzelle reicht beim GSM-System von wenigen 100 Metern in Innenstädten bis zu mehreren Kilometern auf dem Land. Zellen für den neuen Mobilfunkstandard UMTS sind wegen der niedrigeren Leistung der UMTS-Sendeanlagen meist deutlich kleiner. Bei günstigen Sende- und Empfangsbedingungen verringert sich die Leistungsabgabe von Handys und Basisstationen auf ein Minimum.
+Sendeleistungen
+
+Die typische Sendeleistung einer Basisstationsantenne beträgt zwischen 10 Watt und 50 Watt. Mobilfunkbasisstationen senden dementsprechend mit nur einem Bruchteil der Leistung von Hörfunk- und TV-Sendern, die bis zu mehreren 100.000 Watt betragen kann. Auch der neue digitale Rundfunk DVBT (Digital Video Broadcasting-Terrestrial), der in vielen Regionen inzwischen die analogen TV-Programme abgelöst hat, sendet mit größeren Sendeleistungen als Mobilfunkanlagen. Im Übrigen wurden in den vergangenen Jahren die technischen Voraussetzungen geschaffen, die Sendeleistung je Gespräch bei gleich bleibender Übertragungsqualität zunehmend zu verringern.
+Automatische Leistungskontrolle
+
+Gemessen an den früheren analogen Mobilfunknetzen ist die Sendeleistung von Basisstationen und Handys immer mehr gesunken. Der Grund sind einerseits die wesentlich engmaschigeren Netze, die niedrige Sendeleistungen erfordern und andererseits die Technik der automatischen Leistungsreduzierung über die Handy und Basisstation verfügen. Sowohl das Handy als auch die Basisstation senden nur so stark, wie es jeweils nötig ist, um eine Sprach- oder Datenverbindung bei gleich bleibend guter Qualität aufrechtzuerhalten. Die Basisstation ermittelt laufend die geringste mögliche Sendeleistung, die für eine funktionierende Verbindung zum Handy benötigt wird. Auch das Handy passt seine Leistung der Qualität der Verbindung an und kommt so bei guter Netzversorgung mit einem Bruchteil der maximalen Sendeleistung aus. Der Grund ist nicht etwa Sparsamkeit, sondern die Tatsache, dass zu starke Sender die Verbindungsqualität benachbarter Anlagen beeinträchtigen könnten. Ein positiver Nebeneffekt: Bei guter Verbindungsqualität verbrauchen Handys weniger Strom und die Akkuladung hält länger.
+Die Elemente einer Basisstation
+
+Jede Mobilfunk-Basisstation besteht aus mehreren Bauelementen. Meist handelt es sich um stabförmige, senkrechte Kästen, die die empfindlichen Antennen im Inneren vor Witterungseinflüssen schützen. Daneben gibt es häufig noch trommelähnliche Richtfunkantennen. Diese dienen nicht zur Versorgung von Handys, sondern stellen die Verbindungen zu benachbarten Sendeanlagen oder einer Vermittlungszentrale her. Sie ersetzen damit die Anbindung über ein Telekommunikationskabel. Das eigentliche „Herz“ einer Basisstation schlägt im Inneren eines größeren Metallschranks, der entweder auch auf dem Dach, dem Dachboden oder - meist bei Mobilfunkmasten - auch auf dem Erdboden steht. Er enthält die Steuerungs- und Sendeelektronik und die Stromversorgung.
+Antenneneigenschaften
+
+Mobilfunkantennen besitzen eine ausgeprägte Richtcharakteristik. Die Antennen senden überwiegend in der horizontalen Richtung. Diese wird beim Mobilfunk als Hauptsenderichtung bezeichnet. Die Bündelung des Funksignals lässt sich mit dem Lichtkegel eines Leuchtturms vergleichen. Der Hauptbereich der Energieabgabe, der so genannte Öffnungswinkel einer Antenne, beträgt dabei normalerweise in der Senkrechten etwa fünf bis zehn Grad. Häufig ist die Antenne zudem um etwa minus fünf Grad leicht nach unten geneigt. Dadurch wird eine gezieltere Versorgung der Funkzelle erreicht. Zugleich vermindert sich die Leistungsabgabe an weiter entfernte Funkzellen, die mit der gleichen Trägerfrequenz arbeiten. Auf diese Weise werden Gleichkanalstörungen vermieden.
+
+ 
+
+Typischerweise verfügt eine Basisstation über drei Antennen, die jeweils eine Funkzelle versorgen. Diese drei Sektorbereiche liegen direkt nebeneinander, sodass eine 360-Grad-Rundumabdeckung erzielt wird. Anders als die eigentlichen Mobilfunkantennen, die einen fächerförmigen Sektor mit Empfang versorgen, senden die runden Richtfunkantennen die Signale in einem engen Bündel zielgenau auf eine weit entfernte Antenne. Dafür benötigen sie Sichtkontakt zur Partnerantenne und kommen mit extrem geringen Sendeleistungen aus, weshalb es für sie meist auch keinen Sicherheitsabstand gibt.
+ 
+
+Diese Website durchsuchen:
+Branchenentwicklung Recht SAR-Werte Mobilfunknutzung Politik EMF Studie LTE Immissionskontrolle Wirtschaft Mobile Gesellschaft Risiko Kinder & Jugendliche Gesundheit FAQ Technik Sonderpreis Mobilfunk Mobilfunkurteile Forschungsergebnisse Jugend forscht
+Über uns
+Hier erfahren Sie mehr über die Organisation und die Projekte des Informations­zentrums Mobilfunk e. V.
+Kontakt
+Haben Sie Fragen zum Mobilfunk? Treten Sie mit uns in Kontakt.
+Presse
+Hier finden Sie unsere Pressemitteilungen und umfangreiche aktuelle Infor­mationen.
+Broschüren
+Hier können Sie unsere Broschüren und unser Infomaterial kostenfrei bestellen.
+Übersicht
+
+    * Geschichte des Mobilfunks
+    * Funktionsweise
+    * Sicherheitsmaßnahmen
+    * Netzplanung & Netzaufbau
+    * Feldsimulation
+    * FAQ
+
+Standortdatenbank der Bundes­netzagentur
+
+Die Datenbank informiert über Funkanlagen und Sendestandorte
+Feldsimulation
+
+Anwendung zur Darstellung elektromagnetischer Felder von Mobilfunkantennen
+Testen Sie Ihr Wissen: Mobilfunk & Gesundheit
+
+Was bedeutet Pulsung? Wie wird der Grenzwert für Handys angegeben? Testen Sie Ihr Wissen, um festzustellen, bei welchen Themen Sie noch Informationsbedarf haben!
+Verwandte Artikel
+Was bedeuten "gepulste Felder"?
+
+Handys des weltweit verbreitetsten Mobilfunkstandards GSM fassen Zeitspannen von 4,615 Millisekunden (ms) eines Gespräches zusammen und senden diese Sprachpakete komprimiert in nur einem Achtel der Zeit (0,577 ms) per Funkwellen an die Basisstation. 
+Wie informieren die Mobilfunkbetreiber die Öffentlichkeit über die von ihnen geplanten Maßnahmen zum Aus- und Aufbau ihrer Mobilfunknetze?
+
+Im Juli 2001 haben die deutschen Mobilfunkbetreiber zusammen mit den kommunalen Spitzenverbänden - dem Deutschen Städtetag, dem Deutschen Landkreistag und dem Deutschen Städte- und Gemeindebund - eine Vereinbarung getroffen, die den Informationsaustausch und die Beteiligung der Kommunen beim Ausbau der Mobilfunknetze vorsieht. 
+Was verbirgt sich hinter dem Mobilfunkstandard GPRS?
+
+Die Abkürzungen GPRS und EDGE stehen für Mobilfunktechnologien, mit denen die GSM-Mobilfunknetze in der Übergangsphase zur dritten Mobilfunkgeneration UMTS für die mobile Datenübertragung ausgebaut wurden. Sie stellten also keine neuen Mobilfunkstandards, sondern Erweiterungen von GSM dar. 
+Technik
+Startseite › Technik › Netzplanung & Netzaufbau
+Wie werden Mobilfunknetze geplant und aufgebaut?
+
+Fast jeder in Deutschland besitzt heute ein Mobilfunktelefon. Genutzt werden die Handys oder Smartphones längst nicht mehr ausschließlich zum Telefonieren oder zum Versenden von SMS-Kurznachrichten, sondern immer stärker zur Datenübertragung und als mobiler Internetzugang. Um mit Mobiltelefonen ortsunabhängig - insbesondere in Notfällen - erreichbar zu sein und jederzeit Nachrichten senden und empfangen zu können, bedarf es einer umfassenden Infrastruktur. Wie wird ein Mobilfunknetz geplant und aufgebaut? Welche technischen Rahmenbedingungen sind dabei zu beachten?
+
+Bereits in jedem vierten der knapp über 40 Millionen Privathaushalte in Deutschland ersetzen Mobiltelefone vollständig das Festnetz. Mit rund 110 Millionen Handyverträgen übersteigt zudem die Zahl der ausgegebenen SIM-Karten deutlich die Einwohnerzahl der Bundesrepublik. Neben der Telefonie spielt der mobile Internetzugang heute eine immer größere Rolle. Um diese weiter wachsenden Nachfrage nach einer qualitativ hochwertigen Netzversorgung Rechnung tragen zu können, müssen die Mobilfunkbetreiber umfassend in ihre Netze investieren. Ihre Planung und ihr kontinuierlicher der Ausbau erfordern eine ausgeklügelte Planung, die zwischen Betreibern und Kommunen abgestimmt wird.
+Installation einer Mobilfunkbasisstation
+
+Die Mobilfunknetze bestehen aus wabenartigen Funkzellen. Die Funkzellen werden von Mobilfunkbasisstationen versorgt. Sie bilden gewissermaßen die Knotenpunkte der Netze. Bei der Planung der Mobilfunk-Standorte geht es darum herauszufinden, wie die einzelnen Funkzellen geschnitten sein müssen, um eine optimale Versorgung für Handys, Smartphones, Pads oder Tablet-PCs zu erzielen, mit denen die Nutzer ins Internet gehen oder telefonieren. Letztlich geht es also um die Frage, wo überall Basisstationen zu errichten sind. Darüber hinaus müssen die Mobilfunkbetreiber auch die bestehenden Netze laufend verbessern. Dafür ist ebenfalls eine anspruchsvolle Funknetzplanung erforderlich. Ziel ist es, die stetig steigende Zahl der Nutzer mit ihren vielen verschiedenen mobilen Endgeräten optimal zu versorgen.
+Anforderungen bei der Planung von Mobilfunknetzen
+
+Aus diesen Rahmenbedingungen leiten sich auch die konkreten Anforderungen ab, die bei Planung und Aufbau der Netze zu beachten sind: Es muss eine flächendeckende Nutzbarkeit des Netzes garantiert sein. Die Qualität der Übertragung von Sprache und Daten sollte gleich bleibend hoch sein. Es müssen immer ausreichende Kapazitäten für alle möglichen Nutzer zur Verfügung stehen. Die Kunden erwarten dabei auch eine gute Versorgung innerhalb von Gebäuden.
+
+Bei der Funknetzplanung ist zudem zu beachten, dass die nebeneinander liegenden Funkzellen eine möglichst gleichmäßige Struktur besitzen und genau aufeinander abgestimmt sind. Der Grund hierfür ist die Tatsache, dass die Änderung der Eigenschaften einer Funkzelle automatisch funktechnische Folgen für ihre Nachbarzellen hat. Innerhalb eines Netzes werden große und kleine Zellen gemischt, um gezielt etwa so genannte Hochlastgebiete wie Innenstädte, Flughäfen oder Bahnhöfe zu versorgen.
+Einflussgrößen bei der Funknetzplanung
+
+Entscheidend bei der Planung von Mobilfunknetzen ist die Berechnung der Ausbreitung der elektromagnetischen Wellen, die die Grundlage der Funkübertragung sind. Im Gegensatz zu Radio- und Fernsehsendern haben die Mobilfunkantennen der GSM- und UMTS-Netze wegen der engen geografischen Begrenzung der Funkzellen nur sehr geringe Antennenhöhen. Daher ist es erforderlich, bei der Planung eines Standortes mit sehr viel mehr Genauigkeit vorzugehen, als es bei Rundfunksendern der Fall ist.
+
+Bei der Funknetzplanung sind darüber hinaus noch weitere Einflussgrößen zu berücksichtigen. Die Funksignale können durch natürliche Hindernisse oder Gebäude, aber auch durch Witterungseinflüsse abgeschwächt oder abgelenkt werden. Auch die zum Teil sehr unterschiedliche Auslastung eines Netzes muss für den Zeitraum eines Tages, einer Woche sowie eines Jahres berechnet werden. Für den Bereich der mobilen Telekommunikation sind dafür Computermodelle entwickelt worden. Sie können die Funkausbreitung beispielsweise in Abhängigkeit von der Geländeform und der Bebauung simulieren und darstellen.
+
+Bei der Planung einer einzelnen Basisstation legen die Funknetzplaner zunächst einen so genannten Suchkreis fest. Dieser berücksichtigt die geografischen Bedingungen vor Ort. Bereits in dieser frühen Phase der Planung wird auch die Kommune über die Planungen unterrichtet. Anschließend überprüfen die Netzbetreiber, ob - und wenn ja, welche - Bauwerke innerhalb des berechneten Suchkreises liegen. Besonders geeignet für die Errichtung eines Mobilfunksenders sind hohe Türme, Schornsteine oder Gebäude. Gelegentlich folgt eine besondere funktechnische Messung an dem betreffenden Standort. Dadurch lässt sich abschließend klären, ob alle Sende- und Empfangsanforderungen erfüllt sind.
+
+Haben die Funkplaner in Abstimmung mit der Kommune den geeigneten Standort der Basisstation einer bestimmten Funkzelle festgelegt, kann mit dem Aufbau begonnen werden. Zunächst aber wird ein Vertrag mit dem Gebäudeeigentümer über Miethöhe und Mietdauer für die Basisstation abgeschlossen. Im Anschluss entwirft ein Architekt den Bauplan. Aus ihm geht hervor, wie die Antennen montiert werden und wo die Technikbox für die Elektronik steht. Darüber hinaus sind die relevanten Bestimmungen aus Baurecht, Denkmalschutz und Naturschutz zu beachten.
+
+Schließlich beantragt der Netzbetreiber bei der unabhängigen Bundesnetzagentur für Elektrizität, Gas, Telekommunikation, Post und Eisenbahnen (Bundesnetzagentur) die so genannte Standortbescheinigung, um die Basisstation in Betrieb nehmen zu können. Aus den Bauplänen und anhand der technischen Daten errechnet die Bundesnetzagentur die Sicherheitsabstände für die Anlage. Diese und die Details zur Antennenkonstruktion werden in der Standortbescheinigung aufgeführt.
+
+Liegt dieses Dokument vor, übermittelt es der jeweilige Netzbetreiber der Kommune und der zuständigen örtlichen Umweltbehörde. Frühestens zwei Wochen später kann er die neue Basisstation in Betrieb nehmen. Zunächst aber muss die Technik installiert werden. Danach wird ein Probelauf mit weiteren funktechnischen Messungen durchgeführt. Erst nach dem erfolgreichen Abschluss aller Tests geht die Basisstation dann endgültig ans Netz. Alle Sendeanlagen und aktuelle Messwerte werden in der öffentlichen Standortdatenbank der Bundesnetzagentur (http://emf2.bundesnetzagentur.de/) angezeigt.
+
+Für Kommunen besteht darüber hinaus die Möglichkeit, nach vorheriger Anmeldung zusätzliche Informationen zu den installierten Funksystemen und den Sicherheitsabständen einzusehen.

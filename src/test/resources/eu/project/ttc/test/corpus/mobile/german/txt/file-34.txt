@@ -1,0 +1,149 @@
+Mobilitätsmanagement
+in GSM, GPRS und UMTS
+
+
+
+Ruedi Arnold
+
+0 Zusammenfassung:
+Die Ziele des Vortrages:
+Übersicht über einige wichtige Mobiltechnologien: Motivation und Einsatz
+Verständnis für das Mobilitätsmanagement und für Probleme der Mobilkommunikation (z.B. Lokalisierung, Handover)
+Möglichkeiten der Zukunft der mobilen Kommunikation skizzieren
+
+In dieser Ausarbeitung gehe ich zuerst auf die Architektur des verbindungsorientierten GSM ein. (Abkürzungen sind am Schluss dieses Dokumentes, auf Seite 8 ausgeschrieben aufgelistet.) GSM ist ein sehr umfangreicher Standard. Hier erkläre ich vor allem kurz das Konzept von Zellen und berichte dann über die wichtigsten funktionalen Einheiten wie MS, MSC oder HLR und VLR. Basierend auf diesen Grundlagen werden dann Fragen des Mobilitätsmanagements behandelt. Speziell gehe ich dann auf Handover (das Weiterreichen einer aktiven Netzverbindung beim Wechsel des Netzzugangspunktes) und Registrierung (Anmeldung beim GSM Netz) und Lokalisierung (up-dating der aktuellen Position eines Handys) ein.
+Im nächsten Teil behandle ich dann das paketorientierte GPRS und dessen Architektur, die auf GSM aufbaut. Und dann folgt eine kurze Beschreibung einiger Kernaspekte des Mobilitätsmanagements in GPRS, namentlich Attach/Detach, Sessions - PDP context und Lokalisierung.
+Im letzten Teil geht es schliesslich um UMTS. Es ist wichtig zu verstehen, dass GSM und GPRS wichtige Schritte auf dem evolutionären Weg der Entwicklung hin zu UMTS sind. Hier gibt es wieder eine kurze Übersicht der Architektur und dann wird auf ein paar mobilitäts-relevante und interessante Aspekte wie CDMA und Zellhierarchien eingegangen.
+
+
+Copyright Notice:
+Die Abbildunge der GSM Architektur wurde [leicht verändert] übernommen aus den Unterlagen zur Vorlesung "Mobile Communications" von Jochen H. Schiller, Freie Universität Berlin, 2001.
+http://www.inf.fu-berlin.de/inst/ag-tech/mobile_communications.htm
+
+0 Zusammenfassung:	1
+1 Die 1. Generation der mobilen Kommunikation [Folie 6]	3
+1.1 Analoges System zur Sprachübertragung	3
+1.2 Kompatibilität - das grosse Problem	3
+2 GSM - 2. Generation [Folien 7, 11-26]	3
+2.1 Groupe Spéciale Mobile	3
+2.2 Global System for Mobile Communications	3
+2.3 Architektur - Zellen	4
+2.4 Mobilitätsmanagement	4
+2.4.1 Handover	5
+2.4.2 Registrierung	5
+2.4.3 Aktualisierung	5
+3 GPRS - Generation 2.5 [Folien 8, 28-38]	5
+3.1 Architektur - Erweiterung von GSM	5
+3.2 Mobilitätsmanagement	5
+3.2.1 Attach/Detach	5
+3.2.2 Sessions - PDP context	6
+3.2.3 Lokalisierung	6
+4 UMTS - 3. Generation [Folien 9, 40-45]	6
+4.1 Universal System for Mobile Telecommunications	6
+4.2 UTRAN / CDMA	6
+4.3 Architektur	6
+4.4 Mobilitätsmanagement	7
+5 Abkürzungen	8
+6 Hauptreferenzen	8
+
+
+1 Die 1. Generation der mobilen Kommunikation [Folie 6]
+1.1 Analoges System zur Sprachübertragung
+Als sogenannte erste Generation bezeichnet man üblicherweise mobile analoge Kommunikations-Systeme. Die Vertreter dieser Technologie-Generation waren typischerweise ausschliesslich für Sprachübertragung konzipiert.
+Als früher Vertreter ist hier das deutsche A-Netz (1958) zu nennen, das permanent weiterentwickelt wurde und jetzt als C-Netz in der Endphase seiner Verwendung steht. Für Nordeuropa ist NMT (Nordic Moblie Telephone, 1981) der wichtige Vertreter, und in den USA AMPS (Advanced Mobile Phone Standard, 1983), das auch heute noch weit verbreitet ist und dort 1998 noch mehr als 80% des Marktes ausmachte.
+1.2 Kompatibilität - das grosse Problem
+In den Achtzigerjahren gab es alleine in Europa sieben verschiede Standards zur mobilen Kommunikation, was zumeist eine Einschränkung der Verfügbarkeit von diesen Services auf ein Gebiet, zum Beispiel auf einen Staat bedeutete. 
+2 GSM - 2. Generation [Folien 7, 11-26]
+2.1 Groupe Spéciale Mobile
+Um bei der neuen Generation digitaler Kommunikation nicht wieder dieselben Kompatibilitätsprobleme wie bei den analogen Netzen zu bekommen, wurde 1982 vom ETSI die Groupe Spéciale Mobile gegründet. Das primäre Ziel war die Schaffung eines mobilen Telefonsystems, das europaweit und mit ISDN und herkömmlichen Analognetzen kompatibel ist.
+2.2 Global System for Mobile Communications
+GSM bietet eine mobile Kommunikation über einen verbindungsorientierten Funkweg. In auf- und ab-Richtung werden verschiedene Frequenzen verwendet. Die für GSM zugelassenen und am meisten verwendeten Frequenzenbänder sind um 900 MHz und um 1800 MHz. Es werden sowohl Sprach- als auch Datendienste (bis 9.6 kbit/s) angeboten. Der ganze Datenaustausch ist in eine komplexe Zeitrahmenstruktur (TDMA) eingebettet, wobei darin zwischen getrennten Daten- und Kontrollkanälen unterschieden wird.
+GSM ist ein sehr komplexer Standard, bereits der Entwurf umfasste mehr als 5000 Seiten. Insgesamt sind sehr viele funktionale Einheiten und diverse Services definiert.
+2.3 Architektur - Zellen
+Grundsätzlich verwendet GSM eine Zellstruktur, das heisst, das Einzugsgebiet eines Anbieters ist geographisch in sogenannte Zellen unterteilt. Die dadurch erreichte Lokalität hat vor allem zwei Vorteile gegenüber „weltweiten Funkgeräten“: 
+a) Es sind viel mehr Benutzer möglich, da die Frequenzen wiederverwendet werden können und nicht weltweit eindeutig sind. Dadurch ergibt sich weniger Interferenz.
+b) Die Mobilstation (z.B. ein Handy) braucht viel weniger Sendeenergie, da sie bloss bis zum nächstgelegen Empfänger senden muss. Geringerer Energieverbrauch ist speziell im Mobilmarkt ein sehr wichtiges Kriterium, da die Geräte leicht und kompakt sein sollen.
+
+Die GSM Architektur sieht schematisch und etwas vereinfacht wie folgt aus:
+
+MSC
+Mobile Services
+Switching Center
+GMSC
+Gateway MSC
+VLR
+Visitor Location Register
+HLR
+Home Location Register
+BSC
+Base Station Controler
+BTS
+Base Transceiver Station
+MS
+Mobile Subscriber
+
+
+[Vergleiche dazu die 
+Folien 16ff]
+
+
+Die BTS sind die eigentlichen Sender / Empfänger einer Zelle, mit ihnen interagieren die MS. Ein BSC verwaltet mehrere BTS und übernimmt die Funksteuerung. Ein MSC wiederum verwaltet mehrere BSC und hat ein VLR zugeteilt. Das GMSC ist verantwortlich für die Kommunikation mit dem Festnetz. Zwischen den MSC und GMSC ist das HLR eingebettet.
+2.4 Mobilitätsmanagement
+Für das Mobilitätsmanagement sind das VLR und das HLR von sehr grosser Bedeutung. Die beiden sind eigentlich als Datenbanken zu verstehen. Jede MS ist genau einmal in einem HLR registriert. Dort sind alle Teilnehmerdaten gespeichert. Die Telefonnummer einer MS identifiziert das dazugehörige HLR. Im HLR ist stets der aktuelle Aufenthaltsort einer MS eingetragen.
+Im VLR sind jeweils alle sich im Einzugsgebiet einer MSC befindlichen MS eingetragen.
+2.4.1 Handover
+Unter diesem Begriff versteht man das Weiterreichen einer aktiven Netzverbindung beim Wechsel des Netzzugangspunktes. Bei GSM wird ein Handy zu jeder Zeit von genau einem Sender (von einer BTS) bedient. Falls jetzt wegen Verlassens der entsprechenden Zelle oder aus anderem Grund die Verbindung einem Handover unterzogen werden muss, geschieht dies für den Benutzer transparent. Das heisst konkret, dass dieser Wechsel sehr genau synchronisiert ist und in weniger als 60 ms vollzogen werden muss.
+Der Zeitpunkt eines Handovers wird vom BSC festgelegt, und ist beeinflusst von den periodischen Messungen der Signalqualität in auf- und ab-Richtung.
+2.4.2 Registrierung
+Wenn eine MS neu eingeschaltet wird, dann ermittelt sie zunächst den Träger mit der stärksten Leistung. Dem zugehörigen MSC/VLR schickt sie dann einen Antrag um „location update“. Darauf wird der HLR Eintrag aktualisiert, ein allfälliger Eintrag in einem alten VLR wird gelöscht und die Nutzerdaten werden vom HLR ins neue VLR kopiert und der MS der Vorgang bestätigt. Diesen ganzen Vorgang nennt man Registrierung.
+2.4.3 Aktualisierung
+Den Prozess der Verfolgung der aktuellen Position einer MS nennt man Aktualisierung. Die BTS senden periodisch eine Identifikation ihres BSC Gebiets aus. Sobald eine MS nun feststellt, dass sie sich in einem neuen BSC Gebiet befindet, sendet sie denselben „location updating request“ wie bei einer Registrierung aus.
+Zusammenfassend kann damit gesagt werden, dass dem GSM-Netz die (ungefähre) Position eines eingeschalteten Handy jederzeit bekannt ist.
+3 GPRS - Generation 2.5 [Folien 8, 28-38]
+General Packet Radio Service (GPRS) ist eine Erweiterung von GSM, und bietet, wie der Name schon sagt, einen paketorientierten Datendienst an. Die Grundidee ist, dass bei Bedarf mehrere Zeitschlitze zum Senden verwendet werden können, anstatt je genau einer in auf- und ab-Richtung. Damit ist asynchroner Datenverkehr möglich.
+3.1 Architektur - Erweiterung von GSM
+Wie auf Folie 30 zu sehen ist, besteht die Erweiterung von GSM einerseits aus dem Hinzufügen eines GR (GPRS Register) zum HLR. Andererseits werden neu SGSN (Serving GPRS Support Node) und GGSN (Gateway GPRS Support Node) verwendet, die in der Funktions-Hierarchie in etwa MSC respektive GMSC bei GSM entsprechen.
+3.2 Mobilitätsmanagement
+3.2.1 Attach/Detach
+Falls eine MS einen GPRS Service benutzen will, muss sie sich bei einem SGSN zuerst dafür registrieren. Diesen Vorgang nennt man Attach. Er ist ähnlich wie die Registrierung in GSM, jedoch grundsätzlich unabhängig von GSM-Verbindungsaufbau und -Registrierung.
+Die Abmeldung (Loslösung von GPRS) wird analog Detach genannt.
+3.2.2 Sessions - PDP context
+Nach erfolgreichem Attach kann eine MS bei der SGSN eine PDP beantragen. Diese Zustandsdaten nennt man PDP-Context. Dieser enthält den verwendeten Adresstyp, die PDP (meist IP) Adresse von MS und GGSN und die verlangte Qualität. Wie das Routing in GPRS vor sich geht, ist auf Folie 35 zu sehen. Als Beispiel werden hier IP-Packete von einem Internet-PC via GGSN, SGSN und BSC zur MS geleitet.
+3.2.3 Lokalisierung
+Das Mobilitätsmanagement in GPRS geschieht auf 2 Stufen:
+a) Mikro Mobilitätsmanagement: Das SGSN ist zuständig und verfolgt die aktuelle Routing Area der MS. Die MS sendet gegenbenfalls einen „routing area request“. Dieser Vorgang ist ähnlich zur Aktualisierung in GSM, und es ist keine Änderung im HLR oder GGSN nötig.
+b) Makro Mobilitätsmanagement: Darunter versteht man die Verfolgung der aktuellen SGSN. Diese Information wird gespeichert in HLR, VLR und GGSN.
+4 UMTS - 3. Generation [Folien 9, 40-45]
+4.1 Universal System for Mobile Telecommunications
+UMTS soll ein weltweiter Standard werden, der diverse Sprach- und Datendienste unterstützt. So soll UMTS voll Internet-kompatibel und unter anderem sowohl paket- als auch verbindungsorientierte Dienste anbieten. Der Weg hin zu UMTS ist eine Evolution, bei der GSM eine zentrale Rolle spielt. Verbesserungen und Erweiterungen zu GSM wie GPRS, HSCSD oder EDGE sind als Vorstufen oder erste Versuche von UMTS Technologie zu sehen. Die Grundidee von UMTS ist meiner Meinung nach, dass verschiedene Standards einfach wieder unter einem Hut zusammengefasst und beschrieben werden.
+4.2 UTRAN / CDMA
+Eine wesentliche Neuerung von UMTS gegenüber von GSM wird das neue Funksystem UTRAN (UMTS Terrestrial Radio Access) welches mehrere Funksubsysteme enthält.
+Speziell interessant für das Mobilitätsmanagement ist hier die Verwendung von CDMA. Hierbei ist es möglich, dass eine MS eine Menge (ein „active set“) von aktiven Sendestation haben kann, die verschiedene Spreading Codes verwenden. Die MS decodiert sich die entsprechenden Daten einfach von einem Sender heraus. Dies ermöglicht dann einen sogenannten Soft-Handover. Das heisst, die Synchronisation zwischen MS und Sender muss nicht mehr so exakt sein wie bei GSM, sie müssen nicht mehr zur genau gleichen Zeit umschalten.
+4.3 Architektur
+Die UMTS Grundarchitektur ist auf der Folie 41 dargestellt. Hier sehen wir, wie das GSM Funksubsystem und UTRAN parallel verwendet werden und zusammen das Zugriffsnetzwerk ausmachen. Dahinter folgen die auf GSM (verbindungsorientiert) und GPRS (paketorientiert) basierenden Einheiten des UMTS Kernnetzwerkes. Das „E-“ bei den Namen steht jeweils für „Extended“.
+Im weiteren verwendet UMTS eine Zellhierarchie, um verschiedenen Anforderungen wie Datenrate und mögliche Bewegungsgeschwindigkeit zu erfüllen. Zellen können hier auch überlappend oder sogar ganz in einer grösseren eingeschlossen sein. Dies gibt unter anderem bei einem Handover wieder ganz neue Probleme. Wenn wir uns zum Beispiel durch eine grosse Zelle mit vielen enthaltenen Subzellen bewegen, möchten wir nicht jedes Mal, wenn wir in eine neue Subzelle kommen, einen Handover durchführen müssen, sondern immer bei der grossen Zelle bleiben.
+4.4 Mobilitätsmanagement
+UMTS baut im ersten Schritt (Evolution!) sehr stark auf GSM und GPRS auf. Deshalb werden für das Mobilitätsmanagement auch ähnliche Konzepte und Ideen verwendet wie bei GSM und GPRS. Als wichtige Erweiterung ist aber die Möglichkeit von Soft-Handover zu sehen und es ergeben sich auch einige neue Probleme, wie zum Beispiel das Handover bei überlappenden Zellen.
+
+5 Abkürzungen
+AMPS 		Advanced Mobile Phone Standard
+BSC		Base Station Controler
+BTS		Base Transceiver Station
+CDMA		Code Division Multiple Access
+EDGE		Enhanced Data Rates for GSM Evolution
+ETSI 		European Telecommunications Standards Institute
+GMSC		Gateway MSC
+GPRS		General Packet Radio Service
+GR		GPRS Register
+GSM		Global System for Mobile Communications
+HSCSD	High Speed Circuit Switched Data
+HLR		Home Location Register
+ISDN		Integrated Services Digital Network
+MS		Mobile Station (auch: Mobile Subscriber)
+MSC		Mobile Services Switching Center
+NMT 		Nordic Mobile Telephone
+PDP		Packet Data Protocol
+TDMA		Time Division Multiple Acces
+UMTS		Universal System for Mobile Telecommunications
+UTRAN	UMTS Terrestrial Radio Access
+VLR		Visitor Location Register

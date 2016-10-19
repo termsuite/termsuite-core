@@ -1,0 +1,669 @@
+Communications Infrastructure and Services Availability in Australia 2008
+
+© Commonwealth of Australia 2008
+This work is copyright. Apart from any use as permitted under the Copyright Act 1968, no part may be reproduced by any process without prior written permission from the Commonwealth. Requests and inquiries concerning reproduction and rights should be addressed to the Manager, Communications and Publishing, Australian Communications and Media Authority, PO Box 13112 Law Courts, Melbourne Vic 8010.
+ISBN 0 642 78353 5
+Published by the Australian Communications and Media Authority
+Canberra Office
+Purple Building, Benjamin Offices 
+Chan Street, Belconnen
+PO Box 78, 
+Belconnen ACT 2616
+Tel: 02 6219 5555
+Fax: 02 6219 5200
+Melbourne Office
+Level 44, Melbourne Central Tower 
+360 Elizabeth Street, Melbourne
+PO Box 13112 Law Courts
+Melbourne VIC 8010
+Tel: 03 9963 6800
+Fax: 03 9963 6899
+TTY: 03 9963 6948
+Sydney Office
+Level 15, Tower 1 Darling Park 
+201 Sussex Street, Sydney
+PO Box Q500 
+Queen Victoria Building NSW 1230
+Tel: 02 9334 7700, 1800 226 667
+Fax: 02 9334 7799
+
+Contents
+
+Executive summary	i
+Introduction	ii
+About this report	ii
+Information and sources	ii
+Feedback	iii
+Chapter 1: Broadband services	1
+Digital subscriber line (DSL)	2
+Wireless broadband	10
+Hybrid fibre coaxial cable (HFC)	11
+Fibre to the kerb (FTTK)	12
+Fibre to the home (FTTH) or building	12
+Satellite broadband	13
+Backhaul transmission networks	14
+International connections	14
+Government programs and initiatives to improve broadband availability	14
+Internet take-up	15
+Internet use	16
+Chapter 2: Mobile voice and data services	19
+Mobile telecommunications infrastructure	19
+GSM mobile networks	19
+3G mobile networks	19
+Government initiatives to improve mobile availability	21
+Mobile take-up	21
+Mobile use	22
+Chapter 3: Fixed voice services	28
+Fixed voice availability	28
+Government initiatives and programs to ensure fixed voice service availability	28
+Fixed line take-up	29
+Appendix A:	31
+Telecommunications network architecture	31
+Glossary	33
+
+
+Executive summary
+In 2008 consumers can access a broad range of communications services and benefit from increased infrastructure deployment.
+Digital subscriber line (DSL) is the primary broadband service and internet service providers (ISPs) are increasingly using their own infrastructure in telephone exchange buildings to provide DSL rather than reselling wholesale DSL. Consumers are also adopting wireless broadband rapidly.
+Broadband connection speeds are rising; this is predominantly the result of evolution from ADSL1 to ADSL2+ services.
+Mobile services are evolving from second generation (2G) to third generation (3G) mobile; 3G offers many advanced services which are also available on broadband. The combined footprint of mobile services has not increased but the take-up of mobile phones increased beyond one for each person in Australia during the year.
+Fixed voice remains a large part of consumers' communications services spend. Alternatives to the standard telephone service (STS) for making fixed voice calls are slowly emerging. During the year voice over internet protocol (VoIP) has become more widely available although take-up is still relatively low. VoIP take-up has been stimulated by ISPs offering a traditional handset, a local number and other features in conjunction with their VoIP services.
+
+Introduction
+ABOUT THIS REPORT
+This is the second annual joint report issued by the Australian Communications and Media Authority (ACMA) and the Australian Competition and Consumer Commission (ACCC). The report is issued as part of a program of cooperation to minimise overlap in industry information collection and reporting between the two agencies. 
+The examination of infrastructure and service take-up undertaken in this report is intended to provide an overview of communications infrastructure and service availability across Australia in residential and small business retail markets. Telecommunication pricing is examined separately in the ACCC reporting series, Telecommunications Competitive Safeguards and the Changes in the Prices Paid for Telecommunications Services.
+Maps included in this report use colour to represent the availability of infrastructure and service provision. Grey-scale printing may make it difficult to accurately interpret these maps and it is recommended that this report should be printed in full colour or viewed on a computer screen.
+INFORMATION AND SOURCES
+Information for this report was obtained directly from major telecommunications carriers and carriage service providers (CSPs) on the service types and geographic areas served by them as part of an annual data request by ACMA (referred to as the 'ACMA data request' throughout the report). Carriers and CSPs were selected to participate in the data collection arrangements on the basis of providing networks supplying access to fixed voice, payphone, mobile or data services.
+Other sources of data included:
+* data provided by Telstra for public release in conjunction with the Telstra Customer Access Network Record Keeping and Reporting Rules 2007 (Telstra CAN RKR data);
+* the Australian Bureau of Statistics (ABS) Internet Activity in Australia survey;1
+* carrier licensing and numbering allocation information available to ACMA;
+* the examination of data provided to the Audit of Telecommunications Infrastructure Assets - Record Keeping Rules 2007 and published in ACCC decisions over the year; 
+* reports purchased by ACMA;
+* publicly available information on government funding initiatives; and
+* news articles and media information about commercial initiatives, actions, network coverage and service take-up obtained from publicly available sources such as company websites and public announcements.
+FEEDBACK
+ACMA and the ACCC welcome comments on aspects of the report, including the comprehensiveness of the information provided and the report's style. ACMA and the ACCC would also like to hear from service providers who have not been included in the report and are willing to provide information about network coverage and availability of services for future reports. Comments about the report should be sent by email to market.analysis@acma.gov.au or communications.enquiries@accc.gov.au.
+
+Chapter 1: Broadband services
+Depending on their location, Australian consumers have access to a range of broadband services including, digital subscriber line (DSL), hybrid fibre coaxial (HFC), wireless broadband, fibre to the kerb (FTTK), satellite and optical fibre. This chapter discusses the availability of broadband services, the rollout of new broadband infrastructure and consumer take-up of broadband services. The chapter also examines take-up and use of internet services.
+In June 2008, Australia had a total of 5.7 million active broadband internet subscribers, an increase of 1.1 million over the year.2 DSL is the most common broadband service (70 per cent of broadband services) followed by wireless broadband (14 per cent). The remaining 16 per cent of broadband services consists of HFC, FTTK, satellite and other broadband. 
+DSL is offered over the copper network and is either offered by:
+* the network owner as a wholesale or retail service (53 per cent of broadband services); or
+* other ISPs using unbundled lines (17 per cent of broadband services). 
+To offer DSL over an unbundled line an ISP uses the Telstra copper plus its own infrastructure in the exchange building. An unbundled service is either an unbundled local loop service (ULLS) or a line sharing service (LSS).3
+Broadband growth and service share by technology type are graphed in Figure 1.
+Figure 1: Broadband service share and per cent of yearly increase
+
+Source: ABS data, Telstra CAN RKR data and industry sources.
+One notable feature of broadband over the year from June 2007 to June 2008 has been the composition of broadband growth:
+* wireless broadband surged to make up 47 per cent of new broadband connections;4 and
+* DSL is increasingly being provided on unbundled lines. Of the 1.1 million new broadband services, 33 per cent5 were DSL offered on unbundled lines and only 9 per cent were network owner wholesale and retail services. There were more than one million unbundled services in operation, by 30 September 2008.6
+Broadband access speeds increased during the year. Subscribers with download connections of 1.5 Mbps or greater increased to 3.1 million (43 per cent of all subscribers) by June 2008 from 2.5 million (36 per cent) at December 2007.7 The increase appears to have been largely driven by the evolution of DSL from ADSL1 to ADSL2+ (which offers much faster broadband speeds, particularly for customers within 1.5 km of the telephone exchange). 
+DIGITAL SUBSCRIBER LINE (DSL)
+DSL continues to be the dominant broadband service (70 per cent of broadband8). The most common form of DSL is asynchronous DSL (ADSL) which makes use of the Telstra copper phone network. In past years, ISPs have mainly resold a wholesale DSL service from Telstra. Two alternatives, collectively known as unbundled services, have recently grown. These are line sharing service (LSS) and unbundled local loop service (ULLS). To make use of these services, access seekers (ISPs other than Telstra) use the Telstra copper line to provide DSL from their own infrastructure installed in individual telephone exchange buildings.
+Take-up of unbundled services increased by 412,000 to 950,000 over the year to June 2008 and had further increased to 1.04 million by 30 September 2008.9 The growth in unbundled services was mainly driven by ULLS, as can be seen in Figure 2.
+Figure 2: Take-up of unbundled services
+
+Source: Telstra CAN RKR.
+In addition to connecting new DSL customers on unbundled services, as reported in Figure 1, access seekers are also migrating DSL customers from wholesale to unbundled services.10 Figure 3 shows that while Telstra's retail fixed broadband line share has remained fairly constant, wholesale line share is declining as ULLS and LSS increase.
+Figure 3: Fixed broadband line share11
+
+
+The continued take-up of unbundled services is supporting facilities-based competition in exchanges. Access seekers are investing to connect their own digital subscriber line access multiplexers (DSLAMS) and multiple service access nodes (MSANs) to ULLS and LSS lines. Offering DSL on unbundled lines has allowed ISPs to supply end users with higher quality products such as ADSL2+.
+The measurement used by the ACCC to assess access seeker investment at exchanges is the number of DSLAM sites. Telstra provides a quarterly report to the ACCC which records the number of access seekers taking up unbundled services at each of its exchanges. This information indicates how many DSLAM sites have been taken up at each exchange. Each DSLAM site may consist of a number of DSLAMs or MSANs (as individual access seekers may install multiple DSLAMs and/or MSANS to accommodate demand) and demonstrates that the initial investment in obtaining backhaul connection to the DSLAM site, leasing floor space in the exchange building from Telstra and servicing the DSLAM site with power has been made.
+Access seekers are steadily increasing their footprint of DSLAM sites by 5 per cent per quarter (an annualised rate of 23 per cent). This is shown in Figure 4.
+Figure 4: DSLAM sites taken up by access seekers and Telstra
+
+Source: Telstra CAN RKR and public websites.
+Outside Telstra's DSL network, the most extensive rollouts of DSLAMs sites have emerged from iiNet, Optus, PowerTel, Primus and TPG. 
+At 30 June 2008, there were 2,757 out of 5,069 exchange service areas (ESAs) where DSL had been enabled (98 per cent of homes and businesses are located in these ESAs12). However, there are customers within these ESAs who are not able to access DSL because they are either:
+* located too far from the exchange, the ACCC estimates that 89 per cent of homes and businesses are close enough to an exchange to obtain a DSL service;13
+* have a technology block such as large pair gain system (LPGS) on their line; or
+* are not connected to a copper phone line.
+Quality of service for DSL is limited by:
+* distance from the exchange-the DSL signal attenuates as it travels further from the exchange;
+* line quality-some copper lines are inadequate for DSL connection; 
+* external interference, such as from tramlines; and/or
+* asymmetry-ADSL offers much slower speeds for sending information to the internet (uploading) than for obtaining information from the internet (downloading). Upload speed is particularly important for user generated content websites such as Facebook and YouTube.
+Quality of service for DSL is improved by creating smaller access networks. This reduces the length of copper between the end user and the DSLAM.
+Facilities-based competition at the exchange is concentrated in the capital cities of Adelaide, Brisbane, Canberra, Melbourne, Perth and Sydney. 
+Table 1 displays the availability and number of competing DSLAM sites at exchange locations. Access seekers are clustering in some exchanges rather than expanding into new exchanges; the number of exchanges with two DSLAM sites (Telstra plus one access seeker) has fallen over the period from January 2007 to September 2008 from 163 to 148 while the number with five or more has increased from 154 to 245. 
+Table 1: Number of DSLAM sites (including Telstra)
+Number of infrastructure providers
+Number of exchanges 
+31 January 2007
+Number of exchanges 
+30 September 2008
+No DSLAM site
+2,638
+2,315
+One DSLAM site
+1,973
+2,221
+Two DSLAM site
+163
+148
+Three DSLAM sites
+80
+82
+Four DSLAM sites
+62
+58
+Five or more DSLAM sites
+154
+245
+Source: service provider websites, the previous report and the Telstra CAN RKR.
+ESAs vary greatly in customer number, almost half the ESAs in Australia do not contain a DSLAM site but these ESAs only serve two per cent of the population. The 521 ESAs with more than one DSLAM site are in the very heavily populated metropolitan areas (ULLS bands 1 and 2). There are 602 ESAs in ULLS bands 1 and 2 and these contain over 7 million customers (services in operation, SIOs). In November 2008 the ACCC published on its website take-up information for DSL and unbundled services as well as SIO information disaggregated by ULLS band.14
+The distribution of ADSL enabled exchanges is mapped in Figure 6.
+ADSL2+ infrastructure
+At September 2008, there were 1,403 exchanges enabled with ADSL2+, compared with 412 at 31 January 2007. ADSL2+ services are now available in nearly all metropolitan exchanges.
+ADSL2+ services can provide download speeds of up to 24 Mbps although speeds greater than 12 Mbps are only available within 1.5 km of the exchange. Analysis conducted by the ACCC has found that 48 per cent of the population live within 1.5 km of an ADSL2+ enabled exchange.15
+The distribution of ADSL2+ enabled exchanges is mapped in Figure 7.
+Figure 5: Number of ADSL and ADSL2+ enabled exchanges, 23 September 2008
+
+Source: Telstra CAN RKR and provider websites. Metro is ULLS bands 1 and 2. Non metro is ULLS bands 3 and 4.
+
+Figure 6: Availability of ADSL services, September 2008
+
+Source: service provider websites.
+Figure 7: Availability of ADSL2+ services, September 2008
+
+Source: service provider websites.
+WIRELESS BROADBAND
+There are two platforms of wireless broadband available in 2008. The first, fixed wireless, uses an air interface as an alternative to other access media (such as copper or fibre) to connect a broadband service. The second, mobile wireless, connects broadband customers using the 3G mobile phone network. Mobile wireless is examined in detail in Chapter 3 of this report.
+Quality of service on both platforms of wireless broadband is limited by:
+* contention-there is limited spectrum available for all users served by each radio transmitter/receiver.
+* radio frequency interference-this is particularly the case when services are offered in unlicensed spectrum.
+* distance-radio signals attenuate; this is particularly the case with higher frequencies.
+Quality of service limitations for wireless broadband can be overcome by creating smaller access networks (or mobile cells). Smaller access networks require more base stations.
+Figure 8: Fixed wireless broadband
+
+Fixed wireless plays an important role in providing broadband in Australia. There are 225 companies providing fixed wireless broadband services in Australia, with three-quarters providing services to regional areas, the majority in Queensland.16 
+The Australian Bureau of Statistics (ABS) reports that wireless broadband increased nearly 90 per cent in six months, with over 809,000 subscribers at the end of June 2008, compared with 433,000 subscribers at the end of December 2007. (The ABS includes some mobile wireless broadband where the connection is to wireless modem or laptop but excludes connection to mobile phones). 17
+The increasing growth in wireless broadband services can be seen in a services share analysis of the ABS internet activity survey data.18 Figure 9 demonstrates increasing broadband share of wireless services. The increase in wireless broadband reported by the ABS is due to:
+* the upgrade of mobile networks to 3G which allow mobile wireless broadband access via mobile data cards and USB modems; as well as
+* reduced prices and increased bandwidth for wireless broadband access plans.19 
+Figure 9: Broadband services share
+
+*** Excludes mobile phone data packages.
+Source: ABS20 
+HYBRID FIBRE COAXIAL CABLE (HFC)
+Hybrid fibre coaxial (HFC, also known as cable), uses optical fibre plus coaxial cable to provide broadband, pay television and voice services. Optical fibre forms the backbone within the access network and coaxial cable runs from fibre nodes to customers' premises. HFC currently available in Australia can provide bandwidth of 30 Mbps and new technology, including data over cable service interface specification version 3 (DOCSIS 3.0), offers much higher speeds.
+HFC is a contested network where a number of customers share each coaxial cable. Quality of service falls as the number of users increase. As the coaxial cable is shielded, high speed connections are possible over reasonable large access networks.
+Quality of service on HFC can be improved by segmenting the coaxial section so that fewer end users are contesting the same coaxial cable. This requires the deployment of more fibre into the access network.
+There are two major HFC networks in Australia, operated by Telstra and Optus. Telstra's network passes 2.5 million homes in Adelaide, Brisbane, the Gold Coast, Melbourne, Perth and Sydney. Optus' network passes 1.4 million homes in Brisbane, Melbourne and Sydney. There is a considerable degree of overlap between these networks and combined coverage is 2.6 million homes. Telstra and Optus offer pay television and broadband services on HFC and Optus also offers a voice service.
+Neighbourhood Cable uses its HFC network to provide broadband, pay television and voice in Ballarat, Geelong and Mildura. TransACT acquired Neighbourhood Cable in January 2008.
+FIBRE TO THE KERB (FTTK)
+In Canberra, TransACT offers a fibre to the kerb (FTTK) network. In this network architecture optical fibre is taken within 300 metres of the home, from there very high speed DSL (VDSL) is used to provide broadband, pay television and voice services. Each optical fibre cable services a small area of around 45 to 65 end-users.
+FIBRE TO THE HOME (FTTH) OR BUILDING
+Optical fibre connections to the home or building are not widely available in 2008. Some businesses can connect to optical fibre in commercial centres (this is called fibre to the building) and there are also some trials of fibre for residential customers and small businesses (called fibre to the home, FTTH or fibre to the premise, FTTP). 
+When legacy copper infrastructure is not available, such as in new housing estates, optical fibre is the preferred access medium as it offers very high speed connection. FTTH is offered on gigabit capable passive optical network (GPON). This is a contested platform where a number of houses share the same fibre connection.21 
+An FTTH voice service cannot receive remote power through a telephone line so battery backup in the home is required to maintain a connection when there is a power outage.
+The ACCC is currently examining the presence of fibre to the building in CBD areas and has published findings in its decision, Telstra's PSTN Originating Access exemption applications - CBD and Metro areas, Draft Decision and Proposed Class Exemption, September 2008. 
+Limited FTTH schemes have been planned or commenced in several states, usually in new land developments. These include:
+* Telstra is working with developers on the Velocity project to provide FTTH into some new housing developments.
+* The Queensland Government has initiated Project Vista, which plans to bring a 100 Mbps FTTH service to Brisbane. On 30 June 2008, the Queensland Government announced that it had signed an agreement with Ergon Energy to construct an optical fibre link built into new high voltage power lines on the Fraser Coast to boost broadband connections for the region. 
+* The Victorian Government has developed the Aurora project, which aims to deliver FTTH broadband services to approximately 8,000 residents in the Aurora estate in Melbourne's northern suburbs. Residents will be offered voice telephony, data and video services over the network, including pay television, free to air television and the video on demand (VOD) services.22 
+* The Tasmanian Government is pursuing the TasCOLT project, which is a pilot project with aerial fibre cabling using new-generation passive optical networking technology.
+* In May 2007, TransACT announced the rollout of an FTTH to 1,000 homes in the Forde, which will provide download speeds up to 30 Mbps and upload speeds of 10 Mbps.23
+Fibre to the home and building is nascent in Australian and indeed only 14 countries have more than one per cent take-up, shown in Figure 10.
+Figure 10: Worldwide economies with highest penetration of FTTH / Building + LAN
+
+Source: the Fiber-to-the-Home Council, February 2008.
+SATELLITE BROADBAND
+Satellite broadband services provide 100 per cent coverage of Australia's land area. In July 2008, there were around 48 satellite broadband service providers operating in Australia, with most being regional ISPs that resell satellite broadband to regional, rural and remote customers.24
+Satellite broadband services are used as a last resort in rural and remote areas where alternative infrastructure is unavailable. Satellite broadband requires expensive customer premise equipment (including a satellite dish), is more expensive than other access technologies25 (this is driven by the cost of transponder space on the satellite used to relay data from the ISP to the customer), suffers from increased packet latency (the internet takes longer to respond) and unreliable in wet weather.26
+BACKHAUL TRANSMISSION NETWORKS
+Backhaul transmission networks connect the central point of an access network (such as telephone exchange, HFC hub or mobile tower) to the rest of the network. Backhaul transmission is provided on either optical fibre or microwave.
+Telstra and Optus operate extensive backhaul transmission networks. Other providers including AAPT, Amcom, Ergon, Nextgen, PIPE Networks, Primus, QLD Rail and Soul operate backhaul networks in metropolitan and regional areas across Australia. While some routes are served by three or more operators, many routes are served by Telstra alone.
+The ACCC has recently examined data provided in response to the Infrastructure Audit27 in its draft decision on Telstra's domestic transmission capacity service exemption application published in September 2008. This examination has found that backhaul competition exists in a number of capital-regional routes and within many inter-exchange routes, particularly in metropolitan areas in Melbourne and Sydney. Telstra remains the only backhaul provider on other routes.
+INTERNATIONAL CONNECTIONS
+Australian broadband and voice services are connected to the rest of the world by submarine optical fibre cable and satellite links. Australia's use of submarine optical fibre cable has been growing rapidly in recent years as consumers and business increase their uptake of broadband. Submarine optical fibre capacity increased by 300 per cent in the 12 months to June 2008.
+GOVERNMENT PROGRAMS AND INITIATIVES TO IMPROVE BROADBAND AVAILABILITY
+The Australian Government has implemented several initiatives to improve the availability of telecommunications services in Australia including: 
+* Clever networks-this program involves the rollout of broadband infrastructure and services to regional, rural and remote areas of Australia. The Clever Networks program has two distinct roles: delivering innovative services and broadband development. 
+The Innovative Service Delivery element co-funds 26 projects that deliver improved services in the priority sectors of health, education, government and community services and emergency services. During 2008-09, Building on Broadband projects will leverage suitable successful Innovative Services Delivery initiatives by extending their results into other jurisdictions and service sectors.
+The Broadband Development Network element co-funds broadband project managers for each state and 16 project officers across Australia to assist in improving skills, capabilities and business practices in underserved communities.
+* The Australian Broadband Guarantee-this initiative offers financial assistance to registered ISPs to supply metro-comparable broadband services to residential and small business premises where such services would not otherwise be available. The provision of the Australian Broadband Guarantee was extended by the Minister for Broadband, Communications and the Digital Economy while the Government continues to implement its broader broadband policy agenda. 
+* National Broadband Network-the Australian Government released the National Broadband Network Request for Proposals (RFP) on 11 April 2008. This set out a number of objectives for the National Broadband Network including deployment of a network which is able to offer broadband services with a minimum 12 Mbps dedicated downlink transmission speed over each connection provided to a premise, and that the network covers 98 per cent of Australian homes and businesses. Other objectives include that the network is rolled out and made operational progressively over five years using fibre to the node (FTTN) or FTTP and is able to support high quality voice, data and video services and symmetric applications such as high-definition video-conferencing. 
+INTERNET TAKE-UP
+According to the ABS there were 7.2 million active internet subscribers in Australia at the end of June 2008. This comprised 6.2 million households, and one million business and government subscribers.28
+Consumers continue to migrate to broadband services-at June 2008 there were 5.7 million broadband subscribers (a 31 per cent increase from 4.3 million in March 2007) and 1.57 million dial-up subscribers (a 25 per cent decrease from 2.1 million in March 2007). Broadband subscribers now comprise over three-quarters of Australia's internet subscribers-78 per cent at June 2008. These subscribers are being serviced by more than 438 internet service providers (ISPs).29 
+Figure 11: Internet take-up by access technology, 30 June 2008
+
+Source: ABS, 8153.0 - Internet Activity, Australia, June 2008.30
+Internet speeds
+The ABS has identified a shift towards the adoption of higher download speeds, with 3.10 million subscribers using a 1.5 Mbps or greater service, compared with 2.52 million subscribers at June 2008, an increase of 25 per cent in the last six months.31 By June 2008 there were 43 per cent of subscribers with a service greater than 1.5 Mbps. ISPs have upgraded many of their DSLAMs from ADSL1 to ADSL2+ over the year and this has been responsible for much of the increased speed reported.
+Table 2: Internet subscribers by bandwidth of connection, June 2008
+Total internet subscribers
+Number of subscribers (000)
+June 2008
+ per cent of subscribers
+Less than 256 kbps
+1,581
+22
+256 kbps to less than 512 kbps
+1,588
+22
+512 kbps to less than 1.5 Mbps
+963
+13
+1.5 Mbps to less than 8 Mbps
+1,444
+20
+8 Mbps to less than 24 Mbps
+1,390
+19
+24 Mbps or greater
+262
+4
+All subscribers
+7,228
+100
+Source: ABS, 8153.0 - Internet Activity, Australia, June 2008.
+
+While internet speeds are often quoted for the access network only, the connection speed that an end user experiences is determined by the slowest link in the end to end connection. The slowest link can often be the remote content server (the website). The ACCC, in January 2007, published a guide to reported broadband speeds in the report, Broadband internet speed claims and the Trade Practices Act-Information paper, 2007.32
+INTERNET USE 
+Australian internet subscribers are increasing their online content use. ABS figures show the volume of data downloaded in Australia has grown; at June 2008, 55,434 million megabytes were downloaded compared to 42,079 million megabytes in March 2007, representing an increase of 32 per cent.
+According to a survey commissioned by ACMA,33 at June 2008, 52 per cent of Australian households accessed the internet eight or more times in the last week, 36 per cent accessed the internet one to seven times in the last week and only 11 per cent accessed the internet less than once a week. 
+The most common use of the internet was for general information searching (95 per cent), followed by accessing news and weather information (70 per cent) and e-commerce and banking (68 per cent). 
+Figure 12: Selected online activities of internet households
+
+Source: ACMA-commissioned research, June 2008 (n = 1,346).
+The Australian business community has long identified the advantages of using the internet as a form of communication channel for business, with 97 per cent of small and medium enterprises (SMEs) having an internet connection. Of those SMEs connected, 94 per cent use broadband and 52 per cent currently own a 3G mobile phone with internet access. 
+The internet enables businesses to look for information about products and services (89 per cent) and to obtain reference information or research data (84 per cent). Customers are able to access immediate information about products and services and to compare services across businesses and markets.
+Figure 13: Selected online activities undertaken by SMEs
+
+Source: ACMA-commissioned research from Sensis Business Index, May 2008 (n  = 1,769).
+
+Chapter 2: Mobile voice and data services
+MOBILE TELECOMMUNICATIONS INFRASTRUCTURE
+At 30 June 2008 there were four mobile carriers operating six mobile networks in Australia. Table 3 summarises the mobile networks in operation.
+Table 3: Mobile networks, 30 June 2008
+
+Telstra
+'3'
+Optus 
+Vodafone
+3G
+(*
+(*
+((shared infrastructure)(
+GSM
+(
+
+(
+(
+*	Note: Telstra continues to share infrastructure through its joint venture with '3' and also operates its own 3G network (850 MHz)-the 'Next G network-independent of the joint venture. Telstra closed its CDMA network in April 2008.
+Mobile services are provided to Australian consumers using GSM and W-CDMA (3G networks). Telstra also operated a CDMA network which was closed in April 2008 and now provides coverage on its Next G network. 
+GSM MOBILE NETWORKS
+GSM mobile networks are owned and operated by Optus, Telstra and Vodafone, and these carriers report that they provide coverage to 96 per cent of the Australian population. While GSM networks were primarily designed for voice carriage, they have evolved to be able to transmit data, albeit at lower data rates than 3G networks. GSM is capable of transmitting data using technologies such as general packet radio service (GPRS) and enhanced data rates for GSM evolution (EDGE).
+Coverage of GSM is mapped in Figure 16 and Figure 17. 
+3G MOBILE NETWORKS
+3G networks are reported to provide coverage to 99 per cent of Australians and all 3G networks are upgraded or in the process of being upgraded to the high speed downlink packet access (HSDPA34) protocol. HSDPA increases the download speed capabilities of W-CDMA networks and, depending on network configuration, 3G networks in Australia can provide peak download speeds of up to 14.4 Mbps and upload speeds of up to 1.9 Mbps.35
+Coverage of 3G is mapped in Figure 18 and Figure 19.
+3G networks are designed to provide both voice and data services to end-users and differ from GSM networks in that they provide higher bandwidth data services, allowing consumers' access to a new range of content and applications.
+Quality of service for 3G data services is limited by the factors discussed in the wireless broadband section. Limitations such as spectrum allocation, cell size and distance can be resolved with the construction of additional base stations.
+These 3G networks can provide access to data and the internet through:
+* a mobile handset;
+* a mobile handset functioning as a modem for a laptop or personal computer (plugged into the laptop or PC); or
+* a data card that is inserted into a laptop or PC.
+Hutchison
+Hutchison was the first service provider to offer a 3G service in Australia, launching its '3' service in 2003. It has a 50/50 ownership arrangement with Telstra, with the two companies sharing the network, and operates in Adelaide, Brisbane, Canberra, the Gold Coast, Melbourne, Perth and Sydney.
+In March 2007, the network was upgraded to the HSDPA protocol, allowing typical download speeds ranging from 600 kbps to 1.5 Mbps, with a theoretical maximum of 3.6 Mbps.36 Hutchison has also announced an upgrade to the network to reach maximum speeds of 7.2 Mbps and provide 3G services to 96 per cent of the population, up from 56 per cent available at the end of June 2008. This will include additional network build in areas with the highest levels of roaming, such as the Central Coast and Newcastle in NSW and the Mornington Peninsula in Victoria and a roaming arrangement on parts of Telstra's 850 MHz network.37
+Optus
+Optus launched its 3G network in October 2005 in a joint infrastructure-sharing arrangement with Vodafone. The joint network covers metropolitan areas in Adelaide, Brisbane, Canberra, the Gold Coast, Melbourne, Perth and Sydney.
+In January 2007, Optus announced plans to build a new 3G mobile network to extend coverage outside of Australia's capital cities and into rural areas, replicating the coverage of Optus' existing GSM (2G) national mobile network, with reported coverage of 96 per cent of the population.38 
+In May 2008, Optus announced it would expand 3G coverage to reach 98 per cent of the population, with a target completion of December 2009. Optus reports that this network upgrade will deliver broadband speeds of up to 7.2 Mbps and that it plans to increase to speeds of up to 28 Mbps from late 2009. Optus also reports that it will also work with strategic partners to make the network capable of up to 42 Mbps by mid 2010.39
+Optus will own this new network (without joint ownership by Vodafone or other partners), but will continue to jointly own and operate its existing 3G network in metropolitan areas with Vodafone. 
+Telstra
+Telstra currently operates two separate 3G networks; the network jointly owned with Hutchison and its Next G network. Telstra launched its Next G network in October 2006. Telstra reports that network initially provided coverage to 98 per cent of the Australian population, and that coverage had reached 99 per cent by June 2008.40 
+The Telstra Next G network is capable of providing network speeds of up to 14.4 Mbps in the downlink and 1.9 Mbps in the uplink. Telstra is trialling enhanced HSDPA technology to deliver peak network download speeds of 21 Mbps in 2008 and up to 42 Mbps in 2009.41
+Vodafone
+Vodafone launched its 3G network in October 2005 in a joint infrastructure-sharing arrangement with Optus. The joint network covers metropolitan areas in Adelaide, Brisbane, Canberra, the Gold Coast, Melbourne, Perth and Sydney. In October 2006, Vodafone announced that it had activated HSDPA on the network, increasing download speeds for Vodafone customers to up to 1.8 Mbps (up from 384 kbps). 
+In December 2007, Vodafone announced plans to upgrade its 2G network to 3G HSDPA by the end of 2008 to provide high-speed coverage to 95 per cent of the Australian population. Vodafone will continue its 3G joint-venture with Optus in metropolitan areas.42
+GOVERNMENT INITIATIVES TO IMPROVE MOBILE AVAILABILITY 
+The Australian Government has a number of initiatives to facilitate the rollout of mobile services in Australia. These include: 
+* Mobile Connect-this program is designed to assist in funding construction of infrastructure that will improve access to mobile phone services in Australia. The program is focused on extending coverage to priority locations in regional, rural and remote areas which have no existing mobile coverage, or selected stretches of highways with no existing mobile coverage. Applications for funding closed on 31 July 2008.
+* Satellite Phone Subsidy Scheme-this is an initiative to help people living or working in the most remote parts of Australia purchase satellite mobile phones. The Scheme provides support to people who live or work in areas beyond 3G or GSM terrestrial mobile coverage. The subsidy is for the purchase of a satellite mobile phone and does not cover any ongoing bills, charges or the ongoing service of the service provider. The Scheme was enhanced as part of the 2005 Connect Australia package and the closing date for the Scheme was extended from June 2007 to June 2009.
+MOBILE TAKE-UP
+There were 22.12 million mobile phone services in operation at 30 June 2008, up from 21.36 million the year before, an increase of four per cent.43 This equates to more than one mobile phone service in operation for every person in Australia. Of these, 8.55 million were 3G mobile services, an increase of 88 per cent from 4.56 million at 30 June 2007. This increase is partially explained by the closure of Telstra's CDMA network and the migration of subscribers onto the Next G network. 
+A 3G mobile subscription does not necessarily denote 3G data use; all mobile operators offer voice-only plans on their 3G mobile networks. 
+Pre-paid and post-paid services
+There were 9.99 million pre-paid and 11.81 million post-paid mobile phone services at 30 June 2008. Post-paid mobile phone services increased by 11 per cent in the 12 months to June 2008, this growth reflects an increasing trend for mobile operators to provide incentives to consumers to encourage them to subscribe to post-paid services, particularly 3G services. Incentives include free handsets, loans to pay for handsets and reduced data charges.
+Table 4: Number of mobile phone services in Australia (million)
+
+2005-06
+2006-07*
+2007-08*
+Pre-paid
+9.7
+10.15
+9.99
+Post-paid
+9.6
+10.65
+11.81
+Total
+19.3
+20.80
+21.80
+*	Does not include Telstra, Vodafone or Hutchison '3' wholesale services. Therefore totals do not equate to those quoted elsewhere in this report.
+MOBILE USE
+SMS and ringtones are the most common non-voice application for mobile phones in Australia. Consumers have a growing interest in new services and applications; mobile handsets are being developed to facilitate increased use of applications such as cameras, multimedia messaging service (MMS) and mobile internet. While these applications are becoming increasingly common on handsets, they are not utilised by all consumers, as shown in Figure 13. Around 60 per cent of consumers have mobile internet enabled phones, however only 27 per cent actually report using this service. 
+Figure 14: Mobile device capabilities and usage
+
+Source: Nielsen's Online Australian Internet and Technology Report 2008, Australian adults aged 16 plus who use the internet and use a mobile (n = 851).
+The most popular activities by the consumers using an internet-enabled device to access the internet were buying ringtones, wallpapers and screensavers (42 per cent), followed by email (40 per cent), news and weather information (37 per cent) and local search (36 per cent). Activities such as watching video clips, mobile television, mobile online auctions and mobile VoIP remain niche services (13 per cent, 11 per cent, six per cent and one per cent use respectively). 
+Increasing numbers of consumers are participating in internet mobile activities. One area of particular growth is map and directions services; 39 per cent of consumers expect to use these services during the 12 months to June 2009.
+Figure 15: Mobile internet activities
+
+Source: Nielsen's Online Australian Internet and Technology Report 2008, Australian adults aged 16 plus who use the internet and use a mobile (n = 851). 
+Figure 16: Combined GSM coverage for all carriers except Telstra44, June 2008
+
+Source: ACMA data request to carriers.
+Figure 17: Telstra GSM coverage, June 2008
+
+Source: ACMA data request to carriers.
+Figure 18: Combined 3G coverage for all carriers except Telstra, June 2008
+
+Source: ACMA data request to carriers.
+Figure 19: Telstra 3G coverage, June 2008
+
+Source: ACMA data request to carriers.
+
+Chapter 3: Fixed voice services
+FIXED VOICE AVAILABILITY
+There are 413 voice service providers operating in Australia.45 Of these, 210 are offering services over the conventional fixed-line network (PSTN), and 268 operate in the VoIP market including service providers, resellers and systems integrators (with 106 companies providing both PSTN and VoIP services).
+Voice remains the most common telecommunications service on fixed lines in Australia. Even in areas where DSL is widely available, the majority of lines are voice-only. In metropolitan areas (ULLS bands 1 and 2) Telstra reports over 4.5 million voice-only lines compared with 3.0 million DSL lines (including ULLS and LSS).46 While some customers may not be able to access DSL services, many are choosing to retain a voice-only service. Customers may:
+* have access to a broadband service using an alternative infrastructure platform such as HFC or wireless;
+* access the internet using dial-up or integrated services digital network (ISDN) technology;
+* have an obstruction which makes the line unserviceable for DSL (such as a pair-gain device);
+* have an additional line (SIO) over which they access the internet using either DSL, dialup or ISDN technology; or 
+* elect not to have any broadband service.
+GOVERNMENT INITIATIVES AND PROGRAMS TO ENSURE FIXED VOICE SERVICE AVAILABILITY
+Universal service obligation
+The universal service obligation (USO) requires Telstra to ensure that standard telephone services are reasonably accessible to all people in Australia on an equitable basis wherever they reside or carry on business. While the USO is generally supplied on a fixed-line standard telephone service, it may be provided by other means, for example, by a mobile, satellite or wireless local loop service if it is impractical to provide a fixed line service. 
+The USO also ensures that all people in Australia have reasonable access, on an equitable basis, to an STS, voice equivalent services for people with disabilities, payphones, prescribed carriage services and digital data services.
+Extended zones
+The extended zones agreement is a $150 million contract between the Commonwealth and Telstra for the provision of improved telecommunication services to customers living in the Telstra extended charging zones, which are located in the remotest parts of Australia. Under the agreement, which commenced in July 2001 and operates for a period of 10 years, Telstra is required to provide: 
+* un-timed calls at the local call rate in the extended zones;
+* enhanced services, including the offer of an always-on internet access service, improved dial-up access speeds and improved timeframes for the connection of new services in the extended zone; or
+* an upgrade of the telephone network in the extended zone. 
+FIXED LINE TAKE-UP
+Eight carriage service providers (CSPs)-AAPT, PowerTel, Neighbourhood Cable, Optus, Primus, Soul, Telstra and TransACT-provided information about the supply of the STS. These CSPs supplied the vast majority of residential and business STSs in 2007-08. Based on this information, ACMA estimates that there were approximately 11.00 million fixed-line telephone services in operation at June 2008, this indicates fixed lines have remained relatively stable since June 2007. 
+There has been an increase in retail (own network) lines from 8.69 million to 9.40 million over 2007-08. This can be explained by the trend for CSPs to supply services using ULLS, which allows them to install MSANs in Telstra exchanges and offer voice and broadband services over copper lines without relying on Telstra wholesale services. This has resulted in a significant decline in Telstra wholesale lines, which decreased by 24 per cent in 2007-08, and a significant increase in ULLS lines, from 239,000 at June 2007 to 527,000 at June 2008.47 (Access seekers have also used an increasing number of LSS but the LSS retains a Telstra voice service on the copper line so this increase will not correspond to a decline in the number of Telstra SIOs).
+Overall, the Telstra figures are consistent with past trends; both residential and business lines have increased slightly and wholesale lines have continued to decrease. 
+Table 5: Number of fixed-line telephone services in operation (million), 2005-06 to 2007-08
+All CSPs
+2005-06
+2006-07
+2007-08
+Retail (own network)
+8.75
+8.69
+9.40
+Wholesale
+2.50
+2.23
+1.60
+Total
+11.25
+10.92
+11.00
+Telstra services only
+2005-06
+2006-07
+2007-08
+Residential (retail)
+5.46
+5.53
+5.56
+Business (retail)
+2.32
+2.25
+2.31
+Wholesale
+2.16
+1.98
+1.50
+Total
+9.94
+9.76
+9.36
+Source: ACMA annual industry data request.
+VoIP market
+While specific VoIP providers were not included in ACMA's data request to industry, an ACMA commissioned survey indicates that 17 per cent of broadband internet users use a VoIP service at home with a further 23 per cent planning to take up the service in the next 12 months. 
+It is difficult to quantify the number of VoIP users; however data from Nielsen Online, show that at April 2008 there were one million unique visitors to VoIP sites that month.48 VoIP providers are also reporting increased take-up of services:
+* Engin reported 68,000 active subscribers (88,000 subscribers in total) at the end of June 2008, an increase of nine per cent from June 2007.49 
+* MyNetPhone reported over 60,000 subscribers at the end of June 2008; an increase of 71 per cent from June 2007.50
+At December 2007, 47 per cent of ISPs were offering VoIP services as part of a broadband internet package to residential and small to medium businesses in Australia. Many ISPS offer a VoIP service with additional features such as connection to a tradition phone handset and a local phone number. These VoIP services are often marketed in conjunction with naked DSL. VoIP represent a small percentage of all voice customers but it is a growing area of the market, iiNet, for example, reports that it has added 25,000 customers to its naked DSL product over the nine months since the product's release in November 2007.51 
+Payphones
+At 30 June 2008, 49 per cent of payphones were operated by Telstra. The remaining 51 per cent were privately operated payphones provided by telecommunications companies, such as TriTel Australia Pty Ltd (the second largest provider of payphones), or other businesses, such as hotels, clubs and convenience stores. 
+During 2007-08, the total number of payphones (both Telstra-operated and privately operated) in Australia fell by 10 per cent (or 4,748 payphones) to 45,411. This included a decrease of 12 per cent (or 3,136) to 22,177 in the number of Telstra-operated payphones; and a decrease of eight per cent (or 1,580) to 17,904 in the number of Telstra-operated payphone sites (some sites have more than one payphone). There was also a decrease of seven per cent (or 1,612) in the number of privately operated payphones in 2007-08 to 22,130 payphones. 
+
+Appendix A: 
+TELECOMMUNICATIONS NETWORK ARCHITECTURE
+Telecommunications networks consist of many access networks linked together by a core (transmission or backhaul) network.
+Access networks
+Access networks are a connection between each end-user and an access node, commonly known as an exchange or switching point52, by way of an access medium.
+Core networks
+Core networks provide the transmission link from the access node to a major network node that aggregates and interconnects traffic from a number of exchange or switching points.
+Telecommunications media
+A range of media are used in access and core (transmission) telecommunications networks, namely:
+* copper wires;
+* optical fibre;
+* coaxial cable;
+* radio (wireless); and
+* satellite.
+Factors influencing the choice of access and transmission media include service type, subscriber location and density, traffic volume and type, topography and legacy issues such as the technology available at the time when the network was deployed. 
+The three main access and transmission media are explained below:
+Copper wires
+The copper network is the traditional means for connecting end user premises, and copper forms the basis of the PSTN, which is used to carry voice and data. Copper wires can be used to carry traffic at high speeds through the use of ISDN and DSL technology.
+The largest access network in Australia is Telstra's customer access network (CAN), which generally uses copper-based local loops to connect subscribers to more than 5,000 local exchanges across Australia. 
+Copper access has been the predominant technology used to provide the STS to Australian residential customers, and the copper access network is used by Telstra as the principal access network for delivery of the USO.
+Optical fibre
+Optical fibre uses light waves for the transmission of all forms of telecommunications traffic, permitting the carriage of traffic at very high speeds with little interference. At the local access network level, it is used for transmission between network nodes and switches, and also for access to the premises of high-volume business subscribers and multi-storey office buildings.
+Optical fibre forms the basis for all major backhaul networks in Australia and is also used in access networks to shorten the length of copper or coaxial cable required to connect end-users. Optical fibre is used in the access network in HFC, FTTK, and FTTN for example. Fibre is also extended all the way to the end-user in services such as FTTH and fibre to the building. 
+Radio (wireless and microwave)
+Wireless broadband is offered over fixed wireless and mobile wireless:
+* Fixed wireless has evolved out of extensions of fixed services (such as internet). The access network is provided by means of a radio channel (air interface) using point-to-point or point-to-multipoint technology; and
+* Mobile wireless has evolved from mobile phone technology. The access network is provided by means of a radio channel (air interface) using cellular topology which offers roaming from interconnected regions of service.
+Voice can also be offered on both of these platforms. The largest is mobile wireless (mobile phone) technology but many isolated homes are connected using a fixed wireless service such as high capacity digital radio concentrator system (HCRC).
+Wireless backhaul is also in use. Microwave is a wireless service that is used to provide backhaul in some cases where required data rates are not high or there is a geographical obstruction (such as to an island). Microwave is also the platform used to connect satellite services.
+
+Glossary
+
+2G
+second generation mobile telecommunications
+Digital mobile telecommunications services that provide voice communications and relatively low transmission rate for data (principally evolved GSM and CDMA platforms in Australia).
+3G
+third generation mobile telecommunications
+Third generation mobile technology that supports high-speed data capacities and is intended for other applications in addition to voice. It supports applications such as full-motion video, video-conferencing and full internet access.53 The main standards for 3G mobile are UMTS (W-CDMA) and CDMA2000.
+access seeker
+Access seeker is defined in s. 152AG of the Trade Practices Act 1974.
+access network
+The part of a telecommunications network that allows end-users to connect to a local switch, base station, node or exchange. 
+ADSL
+asymmetric digital subscriber line
+A modem technology that converts twisted-pair telephone lines into access paths for multimedia and high-speed data communications. The bit rates transmitted in both directions are different.54 The downstream data rate (data downloaded by user) is much higher than the upstream data rate. Recent enhancements to ADSL include ADSL2, and ADSL2+. See also DSL.
+ADSL2
+ADSL2 increases data rates available through ADSL, as well as extending the reach from the exchange to the subscriber. It has maximum data rates of 12 Mbps downstream and 3.5 Mbps upstream.
+ADSL2+
+ADSL2+ provides better performance than traditional ADSL technology. ADSL2+ can be configured for different applications, such as maximum performance to the user, maximum performance from the user or maximum reach.55 ADSL2+ services are capable of download speeds of up to 24 Mbps.
+bandwidth
+(1) In data communications, the maximum data transmission rate, measured in bits per second.
+(2) In radiocommunications, the amount of radiofrequency spectrum used by a service, measured in Hertz.
+broadband
+Broadband is the general term used for any type of 'always on' high data rate connection. The bandwidth (data rate) is relative to narrowband and not universally agreed upon. In this report, broadband refers to an always on internet connection with an access data rate equal to or greater than 256 kbps.56
+carrier
+The holder of a telecommunications carrier licence in force under the Telecommunications Act 1997.
+contested service
+A service where the access medium is shared between more than one end user. For example a single coaxial cable may pass a number of homes and many wireless customers may share a radio channel.
+CDMA
+code division multiple access
+CDMA is a digital mobile standard that separates subscriber calls from one another by code. It is a 'spread spectrum' technology, which means that it spreads the information contained in a particular signal of interest over a large bandwidth.57
+CSP
+carriage service provider
+Person supplying or proposing to supply certain carriage services, including a commercial entity acquiring telecommunications capacity or services from a carrier for resale to a third party. Internet and pay television service providers fall within the definition of carriage service providers under the Telecommunications Act 1997.
+data rate
+The volume of data that is able to be transmitted over a period of time. Data rates are usually measured in bits per second.
+dial-up subscribers
+Subscribers who connect to the internet via modem and dial-up software utilising the PSTN, including ISDN connections that require the user to dial-up.
+DSL
+digital subscriber line
+Transmission technique that provides high-speed digital data transmission over copper local loop. It describes several technologies including ADSL, ADSL2, ADSL2+, SDSL, SHDSL, HDSL and VDSL. It makes use of a range of spectrum on twisted pair cables running between the local exchange and subscriber (local loop). See also ADSL.
+DSLAM
+digital subscriber line access multiplexer
+A device located in an exchange required to connect a subscriber to a DSL service.
+DSLAM site
+A DSLAM site is an exchange where Telstra has reported that an access seeker has take up a ULLS and/or LSS or where Telstra has activated DSL. Each additional access seeker taking up a ULLS and/or LSS is counted as an additional DSLAM site at that exchange. Each DSLAM site may consist of a number of DSLAMs and/or MSANs and demonstrate that the initial investment in obtaining backhaul connection to the DSLAM site, leasing floor space in the exchange building from Telstra (if an access seeker) and servicing the DSLAM site with power has been made.
+exchange
+Traditionally the network node where various numbers and types of communication lines were switched by the telecommunications network operator at the exchange building. These buildings now house network switches, the main distribution frame (MDF) which organises the copper lines and many other network elements such as DSLAMS.
+EDGE
+enhanced data rates for GSM evolution
+An extension to the 2G work which allowed data services on mobile phone and laptops.
+GPON 
+gigabit capable passive optical network
+An optical fibre network where a number of end users are served on the same fibre. The shared peak capacity for all traffic is 2.4 Gbps.
+GPRS 
+general packet radio service
+A 2.5G wireless technology within the evolved GSM platform providing packet switched data and data rates up to 171 kbps.
+GSM
+global system for mobile communication
+A European digital cellular network standard. Telstra, Optus and Vodafone currently operate GSM networks in the 900 and 1800 MHz band. The standard employs time division multiple access technology.
+HFC cable
+hybrid fibre coaxial cable
+This consists of optical fibre on main routes, supplemented by coaxial cable closer to a customer's premises. Also known as cable.
+HSDPA
+high speed downlink packet access
+An enhancement to WCDMA technology that increases the spectral efficiency by adding additional channels and applying different modulation and coding techniques.
+ISDN
+integrated services digital network
+Technology that enables digital transmission of voice and data over the PSTN. Provides transmission of voice and data at up to 128 kbps.
+ISP
+internet service provider
+Service provider offering internet access to the public or another service provider.
+kbps
+kilobits per second
+A data communications transmission rate of 1,000 bits per second.
+Mbps
+megabits per second
+A data communications transmission rate of one million bits per second. 
+MMS
+multimedia messaging service
+An extension of SMS to allow communication of images, audio, video and rich text.
+MSAN
+multiple service access node
+An extension of DSLAM technology to also offer a voice service by adding a customer access module (CAM) to the DSLAM.
+LSS
+line spectrum sharing
+The LSS involves an access provider providing a voiceband PSTN service to an end-user, whilst providing access to another carrier (the access seeker) to simultaneously provide services to the same end-user over the high-frequency portion of the unconditioned local loop. Access seekers typically use the LSS together with there own network equipment to supply DSL services to end-users.
+pay television
+subscription television service
+Service providing access, for a fee, to television channels transmitted using HFC, FTTK, satellite or terrestrial microwave.
+PSTN
+public switched telecommunications network
+Originally this term referred to circuit switched telephony where each call had a dedicated path allocated to it through the network. The PSTN is now provided with a digital core network. 
+satellite
+A wireless receiver/transmitter that operates in orbit around the earth and acts as a microwave relay station, receiving signals sent from a ground-based station, amplifying them, and retransmitting them on a different frequency to another ground-based station. Satellites can be used for high-speed transmission of computer data, even where the most basic utilities are lacking such as regional and remote locations.
+SMS
+short message service
+A mobile telecommunications data transmission service that allows users to send short text messages to each other using the mobile phone keypad.
+STS
+standard telephone service 
+A telecommunications service that connects customers to the PSTN.
+ULLS
+unconditioned local loop service
+The ULLS involves the use of unconditioned cable, primarily copper pairs, between end users and a telephone exchange. The ULLS essentially gives an access seeker the use of the copper pair without any dial tone or carriage service. This allows the access seeker to use the ULLS in conjunction with its own equipment in an exchange to provide a range of services, including traditional voice services and high speed internet access, to end-users connected to that exchange.
+unbundled services
+See ULLS and LSS.
+USO
+universal service obligation
+Obligation under the Telecommunications Consumer Protection and Service Standards Act 1999 to ensure standard telephone services, payphones and prescribed carriage services are reasonably accessible to all people in Australia on an equitable basis, wherever they reside or carry on business.
+VoIP
+voice over internet protocol
+A protocol for transmitting voice over packet-switched data networks. Also called IP telephony and voice over DSL (VoDSL).
+wireless broadband
+Where the access element of the broadband network is provided by means of air interface (this does not include wireless LANs within the home). Wireless may be fixed (to a wireless modem, including wireless local loop WLL), or mobile (to a mobile handset or laptop).
+
+1 ABS, 8153.0 - Internet Activity, Australia, June 2008
+2 The ABS did not publish a broadband take-up figure for June 2007. Broadband take up at June 2007 was estimated in this report using the closest data points to June 2007 along with company annual report and Telstra CAN RKR information.
+3 There is further information on ULLS and LSS in the Glossary.
+4 The ABS did not publish broadband take-up for June 2007 and so the growth figure was estimated using the data points on either side of this date along with company annual report information.
+5 Total ULLS and LSS take-up over the year was adjusted in this estimate to take account of churn from wholesale DSL to ULLS and LSS as this churn would not represent an additional broadband connection. ULLS have also been used to provide voice-only although analysis of carrier data indicates that ULLS net additions are for DSL.
+6 Telstra CAN RKR data, available on the ACCC website
+7 ABS, 8153.0 - Internet Activity, Australia, June 2008
+8 ABS, 8153.0 - Internet Activity, Australia, June 2008
+9 Telstra CAN RKR data, available on the ACCC website
+10 Growth in DSL on ULLS and LSS has been greater than indicated by the 33 per cent share of new broadband connections reported in Figure 1. This figure has removed estimated churn from wholesale DSL to DSL on unbundled lines.
+11 Telstra retail and wholesale line share includes Telstra HFC and Telstra DSL because published data for retail shares do not distinguish between these platforms.
+12 Calculation conducted using publicly available DSL information and the geocoded national address file (GNAF).
+13 The analysis was conducted using, the geocoded national addresses file (GNAF), Telstra network maps purchased from MapInfo in the ExchangeInfo product and publicly available information on ADSL locations. The threshold for distance from the exchange used in the analysis was 3.4 km (this is a straight-line, also called radial, distance). End users within 3.4 km of an exchange may still have too much copper line between their premise and the exchange to be able to obtain a broadband service. Also new specifications extend DSL reach in some instances.
+14 This information is available on the ACCC website at: www.accc.gov.au
+15 The analysis was conducted using, the Geocoded national addresses file (GNAF), Telstra network maps purchased from MapInfo in the ExchangeInfo product and publicly available information on ADSL2+ locations. Some end users within 1.5 km of an exchange may still have too much copper line between their premise and the exchange to be able to obtain a 12 Mpbs service. Other barriers to service also exist as was discussed with regard to all DSL above. 
+16 Market Clarity Database provided to ACMA, June 2008.
+17 ABS, 8153.0 - Internet Activity, Australia, June 2008
+18 ABS, 8153.0 - Internet Activity, Australia, June 2008
+19 ABS, 8153.0 - Internet Activity, Australia, June 2008
+20 ABS, 8153.0 - Internet Activity, Australia, June 2008
+21 In 2003 a subsidiary of Western Power, Bright Communications trailed blown fibre with dedicated fibre links to homes in Perth. (Bright now focuses on the business and government telecommunications market, www.brightonline.com.au/about.html).
+22 www.mmv.vic.gov.au, May 2007
+23 TransACT media release, Forde logs on to Australia's fastest internet connection, 11 May 2007.
+24 Market Clarity Database provided to ACMA, July 2008
+25 There may be rare exceptions.
+26In the spectrum allocated for satellite microwave links can be vulnerable to signal attenuation in heavy cloud cover and rain.
+27 ACCC, Audit of Telecommunications Infrastructure Audit - Record-Keeping-Rule 2007, 19 December 2007
+28 ABS, 8153.0 - Internet Activity, Australia, June 2008
+29 ABS, 8153.0 - Internet Activity, Australia, June 2008
+30 Other broadband includes ISDN, satellite, cable and other non dial-up technologies. This category is referred to as other non dial-up by the ABS.
+31 ABS, 8153.0 - Internet Activity, Australia, June 2008
+32 www.accc.gov.au/content/index.phtml/itemId/779405
+33 Results from the 2008 ACMA consumer survey are to be released in the fourth quarter of 2008.
+34 HSDPA provides high capacity data connections to mobile devices.
+35 The ACCC has recently expressed concern about coverage and speed claims made by internet and mobile phone providers. See for example, Broadband internet speed claims and the Trade Practices Act-Information paper, 2007 www.accc.gov.au/content/index.phtml/itemId/779405 and ACCC Media release, MR 328/07, December 2007 (www.accc.gov.au/content/index.phtml/itemId/805361/fromItemId/2332
+36 Zdnet.com.au, Hutch 3G speed upgrade goes nationwide, 27 March 2007
+37 Hutchison press release, 3 Continues Strong Growth Path & Expanding to 96% 3G Coverage, 19 August 2008
+38 Optus media release, Optus announces bold expansion of its 3G mobile network across national footprint, 30 January 2007 and www.cnet.com.au, Optus extends 3G mobile to rural Australia, 30 January 2007
+39 Optus press release, Optus sets new milestone with the expansion of mobile network coverage to 98 per cent, 7 May 2008
+40 Telstra ASX announcement, Preliminary final report for the year ended 30 June 2008, 13 August 2008
+41 Telstra press release, Telstra and Ericsson continue to break the speed barrier, 14 July 2008
+42 Vodafone press release, Vodafone to build national mobile broadband network, 11 December 2007
+43 ACMA annual industry data request. (This excludes satellite services.)
+44 Telstra requested that ACMA separately map its mobile coverage in this report.
+45 Market Clarity VoIP Database provided to ACMA, April 2007-includes 37 calling card service providers.
+46 Data proved by Telstra in response to the Telstra CAN RKR and published on the ACCC website.
+47 Telstra media release to ASX, 13 August 2008.
+48 Nielsen Online, Netview Home & Work Panel, 2008.
+49 Media release to ASX, 5 August 2008.
+50 Media release to ASX, 28 August 2008.
+51 Accessed at, www.iinet.net.au/about/media/iiNet-National-Naked-Survey-FINAL.pdf
+52 The term 'exchange' can lead to confusion because it implies that switching is undertaken at that location. This is not necessarily the case-switching may actually occur at different points. 'Exchange' is commonly used to refer to a building in which telecommunications equipment forming the local concentrators, local switching, trunk switching, access seeker DSLAMs and inter-exchange transmission equipment is accommodated.
+53 Australian Mobile Telecommunications Association (AMTA) www.amta.org.au
+54 International Telecommunication Union (ITU) www.itu.int
+55 www.ericsson.com
+56 Data rate used by the Organisation for Economic Cooperation and Development (OECD)
+57 Australian Mobile Telecommunications Association (AMTA) www.amta.org.au
+---------------
+
+------------------------------------------------------------
+
+---------------
+
+------------------------------------------------------------
+
+ii							Australian Communications and Media Authority
+
+	
+
+
+
+	
+
+Communications Infrastructure and Services Availability in Australia 2008	iii
+
+Communications Infrastructure and Services Availability in Australia 2008	35
+

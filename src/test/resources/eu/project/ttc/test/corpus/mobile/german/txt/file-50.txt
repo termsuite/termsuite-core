@@ -1,0 +1,6096 @@
+GT-S5570
+
+Benutzerhandbuch
+
+Dieses Handbuch
+verwenden
+Vielen Dank für den Erwerb dieses Samsung-Mobilgeräts.
+Dieses Gerät, das auf der herausragenden Technologie und
+den hohen Standards von Samsung beruht, bietet Ihnen
+mobile Kommunikation und Unterhaltung in hoher Qualität.
+Dieses Benutzerhandbuch wurde speziell entwickelt, um Sie
+Schritt für Schritt durch die Funktionen und Optionen Ihres
+Geräts zu führen.
+
+Lesen Sie den folgenden Abschnitt
+zuerst
+•	 Lesen Sie alle Sicherheitshinweise und dieses
+
+Benutzerhandbuch vor der Verwendung des Geräts
+aufmerksam durch, um seine sichere und sachgemäße
+Verwendung zu gewährleisten.
+
+2
+
+Dieses Handbuch verwenden
+
+•	 Die Beschreibungen in diesem Handbuch beziehen sich
+auf die Standardeinstellungen Ihres Geräts.
+
+•	 Bilder und Bildschirmdarstellungen in diesem
+
+Benutzerhandbuch können vom Erscheinungsbild des
+tatsächlichen Produkts abweichen.
+•	 Der Inhalt in diesem Benutzerhandbuch kann vom
+Produkt oder von Software, die von Dienstanbietern
+oder Netzbetreibern bereitgestellt wird, abweichen.
+Änderungen des Inhalts dieses Benutzerhandbuchs sind
+ohne vorherige Ankündigung vorbehalten. Unter
+www.samsungmobile.com finden Sie die aktuelle Version
+des Benutzerhandbuchs.
+•	 Die verfügbaren Funktionen und zusätzliche Dienste
+können sich je nach Gerät, Software und Netzbetreiber
+unterscheiden.
+•	 Der Aufbau und die Bereitstellung dieses
+Benutzerhandbuchs beruhen auf dem Betriebssystem
+Google Android und können abhängig vom
+Betriebssystem des Benutzers abweichen.
+
+•	 Anwendungen und ihre Funktionen können sich je nach
+
+Land, Region oder Hardwarespezifikationen unterscheiden.
+Samsung ist nicht haftbar für Leistungsprobleme, die durch
+Anwendungen von Drittanbietern verursacht werden.
+•	 Samsung ist nicht haftbar für Leistungsprobleme
+und Inkompatibilitäten, die durch Bearbeitung der
+Registrierungseinstellungen durch den Benutzer
+verursacht werden.
+•	 Auf www.samsungmobile.com haben Sie die Möglichkeit,
+die Software des Mobilgeräts zu aktualisieren.
+•	 Tonquellen, Hintergrundbilder und Bilder in diesem Gerät
+unterliegen einer Lizenzvereinbarung für eingeschränkte
+Nutzung zwischen Samsung und ihren jeweiligen
+Eigentümern. Das Extrahieren und Verwenden dieser
+Materialien für gewerbliche oder andere Zwecke stellt
+eine Verletzung der Urheberrechtsgesetze dar. Samsung
+ist nicht haftbar für derartige Verletzungen des Copyright
+durch den Benutzer.
+•	 Bewahren Sie dieses Handbuch zum späteren
+Nachschlagen auf.
+
+Anweisungssymbole
+Machen Sie sich zuerst mit den Symbolen vertraut, die in
+diesem Handbuch verwendet werden:
+Warnung - Situationen, in denen Sie oder andere
+verletzt werden könnten
+Achtung - Situationen, in denen Ihr Gerät oder
+andere Geräte beschädigt werden könnten
+Hinweis - Hinweise, Tipps zur Verwendung oder
+Zusatzinformationen
+
+►
+
+Siehe - verweist auf Seiten mit zugehörigen
+Informationen, z. B.: ► S. 12 (bedeutet „siehe Seite
+12“)
+
+Dieses Handbuch verwenden
+
+3
+
+→
+
+[
+
+Gefolgt von - gibt die Reihenfolge der Optionen
+oder Menüs an, die Sie für die Durchführung
+eines Schritts auswählen müssen, z. B.: Öffnen
+Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Einstellungen → Telefoninfo aus (dies
+bedeutet Einstellungen und dann Telefoninfo)
+]
+
+Viereckige Klammern - verweisen auf
+Gerätetasten, z. B.: [ ] (steht für die Ein-/Aus-/
+Sperrtaste)
+
+Copyright
+Copyright © 2011 Samsung Electronics
+Dieses Benutzerhandbuch ist durch internationale
+Urheberrechtsgesetze geschützt.
+Kein Teil dieses Benutzerhandbuchs darf ohne die
+vorherige schriftliche Genehmigung von Samsung
+Electronics in irgendeiner Form oder durch irgendwelche
+Mittel, elektronisch oder mechanisch, einschließlich von
+Fotokopieren, Aufzeichnen oder Speichern in einem
+Informationsspeicher- und -abrufsystem, reproduziert,
+verteilt, übersetzt oder übertragen werden.
+
+Marken
+
+•	 SAMSUNG und das SAMSUNG-Logo sind eingetragene
+Marken von Samsung Electronics.
+
+•	 Das Android-Logo, Google Search™, Google Maps™,
+
+Google Mail™, YouTube™, Android Market™ und Google
+Talk™ sind Marken von Google, Inc.
+
+4
+
+Dieses Handbuch verwenden
+
+•	
+
+und
+sind Marken von SRS Labs, Inc. Die CS
+Headphone- und WOW-Technologien werden in Lizenz von
+SRS Labs, Inc. verwendet.
+•	 Bluetooth® ist weltweit eine eingetragene Marke von
+Bluetooth SIG, Inc.
+•	 Oracle und Java sind eingetragene Marken von Oracle und/
+oder ihrer Partnerunternehmen. Andere Namen können
+Marken ihrer jeweiligen Eigentümer sein.
+•	 Wi-Fi®, das Logo Wi-Fi CERTIFIED und das Wi-Fi-Logo sind
+eingetragene Marken der Wi-Fi Alliance.
+•	 Alle anderen Marken und Urheberrechte sind das
+Eigentum ihrer jeweiligen Eigentümer.
+
+Dieses Handbuch verwenden
+
+5
+
+Inhalt
+Zusammenbauen .................................... 10
+Auspacken ...............................................................
+SIM- oder USIM-Karte und Akku einsetzen .....
+Akku laden . .............................................................
+Speicherkarte einsetzen (optional) ...................
+Trageriemen anbringen (optional) ....................
+
+10
+10
+12
+14
+17
+
+Erste Schritte ............................................ 18
+Gerät ein- und ausschalten . ................................ 18
+Mit dem Gerät vertraut machen . ....................... 18
+Touchscreen verwenden ...................................... 22
+
+6
+
+Inhalt
+
+Touchscreen und Tasten sperren und
+entsperren ...............................................................
+Mit dem Standby-Bildschirm vertraut
+machen .....................................................................
+Anwendungen aufrufen .......................................
+Gerät anpassen .......................................................
+Text eingeben .........................................................
+Anwendungen von Android Market
+herunterladen .........................................................
+Dateien aus dem Internet herunterladen ........
+Daten synchronisieren . ........................................
+
+23
+23
+26
+28
+31
+35
+36
+36
+
+Kommunikation ....................................... 38
+
+Persönliches . ............................................ 67
+
+Anrufen . ...................................................................
+Nachrichten .............................................................
+Google Mail .............................................................
+E-Mail ........................................................................
+Talk . ...........................................................................
+Social Hub ................................................................
+
+Kontakte ...................................................................
+Kalender ...................................................................
+Memo ........................................................................
+Sprachmemo . .........................................................
+
+38
+42
+44
+46
+48
+49
+
+Unterhaltung ............................................ 50
+Kamera . ....................................................................
+Galerie . .....................................................................
+Musik .........................................................................
+UKW-Radio . .............................................................
+
+50
+58
+60
+63
+
+67
+71
+72
+72
+
+Internet . .................................................... 74
+Internet .....................................................................
+Maps ..........................................................................
+Latitude ....................................................................
+Places ........................................................................
+Navigation ...............................................................
+Suche . .......................................................................
+
+Inhalt
+
+74
+77
+79
+79
+80
+81
+
+7
+
+YouTube . ..................................................................
+News und Wetter ....................................................
+Samsung Apps ........................................................
+Market . .....................................................................
+
+81
+82
+83
+84
+
+Verbindungen .......................................... 85
+Bluetooth .................................................................
+WLAN ........................................................................
+Mobiler Zugangspunkt . .......................................
+USB-Tethering .........................................................
+PC-Verbindungen ..................................................
+VPN-Verbindungen ...............................................
+
+8
+
+Inhalt
+
+85
+87
+88
+89
+90
+91
+
+Tools ........................................................... 93
+Uhr .............................................................................
+Rechner . ...................................................................
+Eigene Dateien .......................................................
+Quickoffice . .............................................................
+SIM-Toolkit ...............................................................
+Task-Manager .........................................................
+Sprachsuche ............................................................
+
+93
+94
+94
+95
+95
+96
+96
+
+Einstellungen ........................................... 97
+Einstellungsmenü aufrufen ................................. 97
+Drahtlos und Netzwerk ........................................ 97
+Anrufeinstellungen ............................................... 99
+
+Ton ........................................................................... 100
+Anzeige . ................................................................. 100
+Standort und Sicherheit ..................................... 102
+Anwendungen ...................................................... 103
+Konten und Synchronisierung . ........................ 104
+Datenschutz .......................................................... 104
+SD-Karten- & Telefonspeicher ........................... 104
+Suche . ..................................................................... 104
+Sprache und Tastatur .......................................... 105
+Spracheingabe & -ausgabe ............................... 107
+Eingabehilfe .......................................................... 108
+Datum und Uhrzeit .............................................. 108
+Telefoninfo ............................................................. 109
+
+Rat und Hilfe bei Problemen ............... 110
+Sicherheitshinweise .............................. 116
+Index ........................................................ 126
+
+Inhalt
+
+9
+
+Zusammenbauen
+Auspacken
+Vergewissern Sie sich, dass der Produktkarton die folgenden
+Artikel enthält:
+•	 Mobilgerät
+•	 Akku
+•	 Reiseadapter (Ladegerät)
+•	 Benutzerhandbuch
+Verwenden Sie nur von Samsung zugelassene
+Software. Raubkopien und illegale Software können
+Schäden und Fehlfunktionen verursachen, die nicht
+von der Herstellergarantie abgedeckt sind.
+
+10 Zusammenbauen
+
+•	 Die mit dem Gerät mitgelieferten Artikel können
+
+sich unterscheiden, je nachdem welche Software
+und welches Zubehör in Ihrer Region erhältlich sind
+oder von Ihrem Netzbetreiber angeboten werden.
+•	 Bei Ihrem örtlichen Samsung-Händler können Sie
+zusätzliche Zubehörteile erwerben.
+•	 Die mitgelieferten Zubehörteile erbringen in
+Verbindung mit dem Gerät die optimale Leistung.
+•	 Andere als die mitgelieferten Zubehörteile sind
+unter Umständen nicht mit dem Gerät kompatibel.
+
+SIM- oder USIM-Karte und Akku
+einsetzen
+Wenn Sie einen Mobilfunkdienst abonnieren, erhalten
+Sie eine SIM-Karte (Subscriber Identity Module) mit
+Abonnementdaten, z. B. mit Ihrer PIN (Personal Identification
+Number) und optionalen Diensten. Wenn Sie UMTS- oder
+HSDPA-Dienste nutzen möchten, benötigen Sie eine USIMKarte (Universal Subscriber Identity Module).
+
+So setzen Sie die SIM- oder USIM-Karte und den Akku ein:
+
+1	 Falls das Gerät eingeschaltet ist, halten Sie die Taste
+2	
+
+3	 Setzen Sie die SIM- oder USIM-Karte ein.
+
+[ ] gedrückt und wählen Sie dann Ausschalten aus, um
+es auszuschalten.
+Entfernen Sie die rückwärtige Abdeckung.
+
+•	 Setzen Sie die SIM- oder USIM-Karte mit den
+
+Achten Sie beim Abnehmen der rückwärtigen
+Abdeckung auf Ihre Fingernägel, damit Sie sich nicht
+verletzen.
+
+goldfarbenen Kontakten nach unten in das Gerät
+ein.
+•	 Wenn Sie keine SIM- oder USIM-Karte einsetzen,
+können Sie nur die netzunabhängigen Dienste und
+einige Menüs des Geräts nutzen.
+
+Zusammenbauen
+
+11
+
+4	 Setzen Sie den Akku ein.
+
+5	 Bringen Sie die rückwärtige Abdeckung wieder an.
+
+Akku laden
+Bevor Sie das Gerät zum ersten Mal verwenden, müssen Sie
+den Akku laden.
+Sie können das Gerät mit dem mitgelieferten Reiseadapter
+aufladen oder es zum Aufladen mithilfe eines PCDatenkabels mit einem Computer verbinden.
+Verwenden Sie nur von Samsung zugelassene
+Kabel und Ladegeräte. Nicht zugelassene Kabel
+und Ladegeräte können dazu führen, dass der Akku
+explodiert oder Schäden am Gerät entstehen.
+Wenn der Akku schwach ist, gibt das Gerät einen
+Warnton aus und zeigt eine entsprechende
+Warnmeldung auf dem Display an. Außerdem ist das
+Akkusymbol
+leer. Wenn der Akku zu schwach wird,
+schaltet sich das Gerät automatisch aus. Laden Sie den
+Akku umgehend auf, um das Gerät weiter nutzen zu
+können.
+
+12 Zusammenbauen
+
+››Mit Reiseadapter aufladen
+
+1	 Öffnen Sie die Abdeckung der oben am Gerät
+2	
+
+befindlichen Multifunktionsbuchse.
+Stecken Sie den kleinen Stecker des Reiseadapters in die
+Multifunktionsbuchse.
+
+Falsches Anschließen des Reiseadapters kann zu
+schweren Schäden am Gerät führen. Schäden durch
+unsachgemäße Verwendung sind von der Garantie
+nicht abgedeckt.
+
+3	 Stecken Sie den großen Stecker des Reiseadapters in eine
+Netzsteckdose.
+•	 Sie können das Gerät verwenden, während es
+aufgeladen wird. In diesem Fall kann das Aufladen
+des Akkus jedoch länger dauern.
+•	 Während das Gerät geladen wird, können
+aufgrund einer instabilen Stromversorgung
+Funktionsstörungen des Touchscreens auftreten.
+Sollte dies vorkommen, trennen Sie den
+Reiseadapter vom Gerät ab.
+•	 Beim Aufladen kann sich das Gerät erwärmen.
+Dies ist normal und hat keine Auswirkung
+auf die Lebensdauer des Geräts oder seine
+Leistungsfähigkeit.
+•	 Falls das Gerät nicht richtig geladen wird, bringen
+Sie es zusammen mit dem Ladegerät in ein
+Samsung-Kundendienstzentrum.
+
+Zusammenbauen
+
+13
+
+4	 Wenn der Akku komplett geladen ist (das Akkusymbol
+
+bewegt sich nicht mehr), trennen Sie den Reiseadapter
+erst vom Gerät und dann von der Netzsteckdose ab.
+Entnehmen Sie den Akku nicht, bevor Sie den
+Reiseadapter abgetrennt haben. Andernfalls kann das
+Gerät beschädigt werden.
+Trennen Sie den Reiseadapter vom Netz, wenn
+Sie ihn nicht benutzen, um Energie zu sparen. Der
+Reiseadapter verfügt über keinen Ein/Aus-Schalter.
+Daher müssen Sie ihn von der Netzsteckdose trennen,
+um die Spannungsversorgung zu unterbrechen.
+Während der Verwendung sollte sich der Reiseadapter
+in der Nähe der Netzsteckdose befinden.
+
+››Über PC-Datenkabel aufladen
+
+Stellen Sie vor dem Aufladen sicher, dass der PC eingeschaltet
+ist.
+
+1	 Öffnen Sie die Abdeckung der oben am Gerät
+befindlichen Multifunktionsbuchse.
+
+14 Zusammenbauen
+
+2	 Stecken Sie das eine Ende (Micro-USB) des PCDatenkabels in die Multifunktionsbuchse.
+
+3	 Schließen Sie das andere Ende des PC-Datenkabels am
+USB-Anschluss eines PC an.
+Abhängig vom verwendeten PC-Datenkabel kann
+es einen Moment dauern, bis der Aufladevorgang
+beginnt.
+
+4	 Wenn der Akku komplett geladen ist (das Akkusymbol
+
+bewegt sich nicht mehr), trennen Sie das PC-Datenkabel
+erst vom Gerät und dann vom PC ab.
+
+Speicherkarte einsetzen (optional)
+Um zusätzliche Multimedia-Dateien zu speichern, müssen
+Sie eine Speicherkarte einsetzen. Das Gerät unterstützt
+microSD™- oder microSDHC™-Speicherkarten mit
+einer maximalen Kapazität von 32 GB (abhängig vom
+Speicherkartenhersteller und -typ).
+
+Samsung nutzt für Speicherkarten die zugelassenen
+Branchenstandards. Es ist jedoch möglich, dass
+Speicherkarten bestimmter Hersteller nicht vollständig
+mit dem Gerät kompatibel sind. Die Verwendung
+einer inkompatiblen Speicherkarte kann das Gerät,
+die Speicherkarte und die auf der Karte gespeicherten
+Daten beschädigen.
+
+1	 Öffnen Sie die Abdeckung des Speicherkarteneinschubs
+an der Seite des Geräts.
+
+2	 Setzen Sie eine Speicherkarte mit den goldfarbenen
+Kontakten nach unten ein.
+
+•	 Das Gerät unterstützt nur die FAT-Dateistruktur für
+
+Speicherkarten. Wenn Sie eine Speicherkarte in das
+Gerät einsetzen, die mit einer anderen Dateistruktur
+formatiert wurde, fordert das Gerät Sie zur
+Formatierung dieser Speicherkarte auf.
+•	 Häufiges Speichern und Löschen von Daten
+verringert die Lebensdauer von Speicherkarten.
+•	 Wenn Sie eine Speicherkarte in das Gerät einsetzen,
+erscheint das Dateiverzeichnis der Speicherkarte im
+Ordner „sdcard“.
+
+3	 Schieben Sie die Speicherkarte in den
+
+Speicherkarteneinschub, bis sie einrastet.
+
+4	 Schließen Sie die Abdeckung des
+Speicherkarteneinschubs.
+
+Zusammenbauen
+
+15
+
+››Speicherkarte entnehmen
+
+Bevor Sie eine Speicherkarte entnehmen, müssen Sie sie zum
+sicheren Entfernen vom Gerät deinstallieren.
+
+1	 Wählen Sie im Standby-Betrieb
+
+→ Einstellungen
+→ SD-Karte und Telefonspeicher → SD-Karte
+deinstallieren → OK aus.
+
+2	 Öffnen Sie die Abdeckung des Speicherkarteneinschubs
+an der Seite des Geräts.
+
+3	 Drücken Sie die Speicherkarte vorsichtig hinein, bis sie
+sich aus dem Gerät löst.
+
+4	 Ziehen Sie die Speicherkarte aus dem
+Speicherkarteneinschub.
+
+5	 Schließen Sie die Abdeckung des
+
+Speicherkarteneinschubs.
+Entfernen Sie niemals eine Speicherkarte aus dem
+Gerät, während Daten von der Karte gelesen oder
+darauf gespeichert werden. Andernfalls kann
+es zu Datenverlusten und/oder Schäden an der
+Speicherkarte oder am Gerät kommen.
+
+16 Zusammenbauen
+
+››Speicherkarte formatieren
+
+Wenn Sie die Speicherkarte auf einem PC formatieren, kann
+es sein, dass sie anschließend nicht mehr mit dem Gerät
+kompatibel ist. Formatieren Sie die Speicherkarte nur im
+Gerät.
+Wählen Sie im Standby-Betrieb → Einstellungen →
+SD-Karte und Telefonspeicher → SD-Karte deinstallieren
+→ SD-Karte formatieren → SD-Karte formatieren → Alles
+löschen aus.
+Erstellen Sie vor dem Formatieren der Speicherkarte
+unbedingt eine Sicherungskopie aller wichtigen
+Daten, die im Gerät gespeichert sind. Die
+Herstellergarantie deckt keine Datenverluste ab, die
+durch Anwenderaktionen verursacht werden.
+
+Trageriemen anbringen (optional)
+1	 Entfernen Sie die rückwärtige Abdeckung.
+2	 Führen Sie einen Trageriemen durch den Schlitz und
+haken Sie ihn über den kleinen Vorsprung ein.
+
+3	 Bringen Sie die rückwärtige Abdeckung wieder an.
+
+Zusammenbauen
+
+17
+
+Erste Schritte
+Gerät ein- und ausschalten
+So schalten Sie das Gerät ein:
+
+1	 Halten Sie [ ] gedrückt.
+2	 Folgen Sie nach dem erstmaligen Einschalten des
+
+Geräts den Bildschirmhinweisen, um es für den Betrieb
+einzurichten.
+
+Mit dem Gerät vertraut machen
+
+››Aufbau des Geräts
+Abstandssensor
+Lautstärketaste
+Touchscreen
+
+Um Ihr Gerät auszuschalten, halten Sie [ ] gedrückt und
+wählen Sie Ausschalten.
+
+StartbildschirmTaste
+
+•	 Befolgen Sie alle Warnungen und Anweisungen
+
+offizieller Personen in Bereichen, in denen drahtlose
+Geräte verboten sind, z. B. in Flugzeugen und
+Krankenhäusern.
+•	 Wenn Sie nur die netzunabhängigen Dienste des
+Geräts verwenden möchten, schalten Sie in den
+Offline-Modus. Halten Sie [ ] gedrückt, und wählen
+Sie Offline-Modus aus.
+
+18 Erste Schritte
+
+Hörer
+
+Zurück-Taste
+Menütaste
+
+Mikrofon
+
+››Tasten
+Taste
+Headsetbuchse
+
+Multifunktionsbuchse
+Kameraobjektiv
+
+Ein-/Aus-/
+Sperrtaste
+
+Speicherkarteneinschub
+
+Rückwärtige
+Abdeckung
+
+Funktion
+Ein-/
+Ausschalten/
+Sperren
+
+Menü
+
+Interne Antenne
+
+Startseite
+
+Lautsprecher
+
+Zurück
+
+Einschalten des Geräts
+(drücken und halten); Aufrufen
+der Schnellmenüs (drücken
+und halten); Sperren des
+Touchscreens.
+Öffnen einer Liste aller
+verfügbaren Optionen auf dem
+aktuellen Bildschirm; Öffnen der
+Schnellsuchleiste (drücken und
+halten).
+Rückkehr zum StandbyBildschirm; Öffnen der
+Liste der zuletzt genutzten
+Anwendungen (drücken und
+halten).
+Rückkehr zum vorherigen
+Bildschirm.
+Erste Schritte
+
+19
+
+Taste
+
+Funktion
+Lautstärke
+
+Gerätelautstärke anpassen.
+
+››Anzeigesymbole
+
+Die auf dem Display angezeigten Symbole hängen
+vom jeweiligen Land oder Netzbetreiber ab.
+
+Symbol
+
+Definition
+Kein Signal
+Signalstärke
+Mit GPRS-Netz verbunden
+Mit EDGE-Netz verbunden
+Mit UMTS-Netz verbunden
+
+20 Erste Schritte
+
+Symbol
+
+Definition
+WLAN aktiviert
+Bluetooth aktiviert
+Bluetooth-Headset angeschlossen
+GPS aktiviert
+Laufender Anruf
+Gehaltener Anruf
+Lautsprecher aktiviert
+Anruf in Abwesenheit
+Mit dem Internet synchronisiert
+Daten werden hochgeladen
+Daten werden heruntergeladen
+
+Symbol
+
+Definition
+
+Symbol
+
+Definition
+
+Anrufumleitung aktiviert
+
+Roaming (außerhalb des normalen
+Netzempfangsbereichs)
+
+Mit PC verbunden
+
+Stumm-Modus aktiviert
+
+USB-Tethering aktiviert
+
+Offline-Modus aktiviert
+
+Mobile AP aktiviert
+
+Vibrationsmodus aktiviert
+
+Keine SIM- oder USIM-Karte
+
+Musik wird wiedergegeben
+
+Neue SMS oder MMS
+
+Musikwiedergabe angehalten
+
+Neue E-Mail-Nachricht
+
+UKW-Radio im Hintergrund eingeschaltet
+
+Neue Sprachnachricht
+
+Fehler aufgetreten oder Vorsicht erforderlich
+
+Alarm aktiviert
+Ereignisbenachrichtigung
+
+Akkuladung
+10:00
+
+Aktuelle Uhrzeit
+
+Erste Schritte
+
+21
+
+Touchscreen verwenden
+Mit dem Touchscreen des Geräts können Sie ganz einfach
+Elemente auswählen oder Funktionen ausführen. In diesem
+Abschnitt lernen Sie die grundlegenden Aktionen zur
+Verwendung des Touchscreens kennen.
+•	 Verwenden Sie keine scharfen Gegenstände, um ein
+Zerkratzen des Touchscreens zu vermeiden.
+•	 Achten Sie darauf, dass der Touchscreen nicht
+mit anderen elektrischen Geräten in Kontakt
+kommt. Elektrostatische Entladungen können
+Fehlfunktionen des Touchscreens verursachen.
+•	 Achten Sie darauf, dass der Touchscreen nicht mit
+Wasser in Kontakt kommt. Durch Feuchtigkeit oder
+Kontakt mit Wasser können Fehlfunktionen des
+Touchscreens verursacht werden.
+
+22 Erste Schritte
+
+•	 Für die optimale Nutzung des Touchscreens sollten
+
+Sie die Schutzfolie vor der Verwendung des Geräts
+vom Display entfernen.
+•	 Der Touchscreen verfügt über eine Schicht, die
+geringe elektrische Ladungen erkennt, wie sie vom
+menschlichen Körper abgegeben werden. Tippen
+Sie für optimale Leistung mit der Fingerspitze
+auf den Touchscreen. Der Touchscreen reagiert
+nicht, wenn mit spitzen Gegenständen wie einem
+Eingabestift oder Bleistift darauf getippt wird.
+Bedienen Sie den Touchscreen mit folgenden Aktionen:
+•	 Tippen: Berühren Sie ein Menü, eine Option oder
+eine Anwendung einmal mit dem Finger, um es/sie
+auszuwählen oder zu starten.
+•	 Tippen und halten: Tippen Sie länger als 2 Sekunden auf
+ein Element, um eine Popupliste mit Optionen zu öffnen.
+•	 Ziehen: Tippen Sie auf ein Element und ziehen Sie es mit
+dem Finger nach oben, unten, links oder rechts, um es in
+einer Liste zu verschieben.
+
+•	 Ziehen und ablegen: Tippen Sie auf ein Element und lassen
+
+Sie Ihren Finger darauf, ziehen Sie dann Ihren Finger, um
+das Element zu bewegen.
+•	 Zweimal tippen: Tippen Sie zweimal schnell mit Ihrem
+Finger, um angezeigte Fotos oder Webseiten zu vergrößern
+oder zu verkleinern.
+•	 Das Gerät schaltet den Touchscreen aus, wenn Sie
+ihn für eine bestimmte Zeit nicht verwenden.
+•	 Sie können die Displaybeleuchtungsdauer
+anpassen. Öffnen Sie im Standby-Betrieb die
+Anwendungsliste und wählen Sie Einstellungen →
+Anzeige → Display-Timeout aus.
+
+Touchscreen und Tasten sperren und
+entsperren
+Sie können den Touchscreen und die Tasten sperren, um eine
+unerwünschte Betätigung des Geräts zu verhindern.
+Drücken Sie zum Sperren [ ]. Aktivieren Sie zum Aufheben
+der Sperre das Display und ziehen Sie bis zum Punkt nach
+rechts.
+
+Mit dem Standby-Bildschirm
+vertraut machen
+Wenn sich das Gerät im Standby-Betrieb befindet, wird
+der Standby-Bildschirm angezeigt. Auf dem StandbyBildschirm können Sie den Status des Geräts überprüfen und
+Anwendungen aufrufen.
+Der Standby-Bildschirm verfügt über mehrere
+Anzeigeflächen. Blättern Sie nach links oder rechts zu einer
+Anzeige des Standby-Bildschirms.
+
+››Elemente zum Standby-Bildschirm
+hinzufügen
+
+Sie können den Standby-Bildschirm anpassen, indem
+Sie Schnellzugriffe für Anwendungen oder Elemente in
+Anwendungen, Widgets oder Ordner hinzufügen. So fügen
+Sie dem Standby-Bildschirm Elemente hinzu:
+
+1	 Drücken Sie [
+
+] → Hinzufügen oder tippen Sie auf den
+leeren Bereich auf dem Standby-Bildschirm und halten
+Sie den Finger darauf.
+Erste Schritte
+
+23
+
+2	 Wählen Sie die Elementkategorie → ein Element aus:
+•	 Widgets: Fügen Sie Widgets hinzu. Widgets sind
+
+kleine Anwendungen, die nützliche Funktionen
+und Informationen auf dem Standby-Bildschirm
+bereitstellen.
+•	 Schnellzugriffe: Fügen Sie Schnellzugriffe für Elemente
+wie Anwendungen, Lesezeichen und Kontakte hinzu.
+•	 Ordner: Erstellen Sie einen neuen Ordner oder fügen
+Sie Ordner für Ihre Kontakte hinzu.
+•	 Hintergrundbilder: Legen Sie ein Hintergrundbild fest.
+Die verfügbaren Elemente können je nach aktuellem
+Standby-Bildschirmmodus unterschiedlich sein.
+
+››Elemente auf dem Standby-Bildschirm
+verschieben
+
+1	 Tippen Sie auf das zu verschiebende Element und halten
+Sie den Finger darauf, bis es grau angezeigt wird.
+
+2	 Ziehen Sie das Element an die gewünschte Position.
+24 Erste Schritte
+
+››Elemente vom Standby-Bildschirm
+entfernen
+
+1	 Tippen Sie auf das zu entfernende Element und halten Sie
+2	
+3	
+
+den Finger darauf.
+Der Papierkorb wird unten auf dem Standby-Bildschirm
+angezeigt.
+Ziehen Sie das Element in den Papierkorb.
+Lassen Sie das Element los, wenn es rot angezeigt wird.
+
+››Schnellzugriffanzeige verwenden
+
+Tippen Sie im Standby-Betrieb oder während der
+Verwendung einer Anwendung auf das Anzeigesymbolfeld
+und ziehen Sie Ihren Finger nach unten, um die
+Schnellzugriffanzeige aufzurufen. Sie können
+Drahtlosverbindungsfunktionen aktivieren und deaktivieren
+und eine Liste von Benachrichtigungen wie Nachrichten,
+Anrufe, Ereignisse oder Verarbeitungsstatus aufrufen. Um die
+Liste auszublenden, ziehen Sie den unteren Rand der Liste
+nach oben.
+
+In der Schnellzugriffanzeige stehen Ihnen die folgenden
+Optionen zur Verfügung:
+•	 WLAN: Aktivieren oder Deaktivieren der WLANVerbindungsfunktion. ► S. 87
+•	 B/T: Aktivieren oder Deaktivieren der Funktion für
+drahtlose Bluetooth-Verbindung. ► S. 85
+•	 GPS: Aktivieren oder Deaktivieren der GPS-Funktion.
+•	 Stumm: Aktivieren oder Deaktivieren des Stumm-Modus.
+•	 Automat. Ausrichten: Aktivieren oder Deaktivieren der
+automatischen Ausrichtungsfunktion.
+Die verfügbaren Optionen hängen vom jeweiligen
+Netzbetreiber oder von der Region ab.
+
+1	 Drücken Sie im Standby-Betrieb [
+2	
+
+››Anzeigeflächen zum Standby-Bildschirm
+hinzufügen oder entfernen
+
+Sie können dem Standby-Bildschirm auf Wunsch
+Anzeigeflächen zum Anordnen von Widgets hinzufügen oder
+Anzeigeflächen entfernen.
+
+3	
+
+] → Bearbeiten.
+Sie können auch zwei Finger auf den Bildschirm
+setzen und sie zusammen bewegen, um in den
+Bearbeitungsmodus zu wechseln.
+Verwenden Sie zum Hinzufügen oder Entfernen von
+Anzeigeflächen die folgenden Funktionen:
+•	 Tippen Sie zum Entfernen einer Anzeigefläche auf
+die Miniaturansicht der jeweiligen Anzeigefläche,
+halten Sie den Finger darauf und ziehen Sie sie in den
+Papierkorb unten auf dem Bildschirm.
+•	 Wählen Sie zum Hinzufügen einer neuen Anzeigefläche
+aus.
+•	 Tippen Sie zum Ändern der Reihenfolge der
+Anzeigeflächen auf die Miniaturansicht einer
+Anzeigefläche, halten Sie den Finger darauf und ziehen
+Sie sie an die gewünschte Position.
+Drücken Sie anschließend [ ].
+
+Erste Schritte
+
+25
+
+Anwendungen aufrufen
+So rufen Sie die Anwendungen des Geräts auf:
+
+1	 Wählen Sie im Standby-Betrieb
+2	
+3	
+
+aus, um die
+Anwendungsliste aufzurufen.
+Blättern Sie nach links oder rechts zu einem anderen
+Anwendungsbildschirm.
+Wählen Sie eine Anwendung aus.
+•	 Zur Nutzung von Anwendungen, die von Google
+bereitgestellt werden, benötigen Sie ein GoogleKonto. Wenn Sie nicht über ein Google-Konto
+verfügen, richten Sie ein Google-Konto ein.
+•	 Sie können einen Schnellzugriff für eine Anwendung
+hinzufügen, indem Sie das Anwendungssymbol
+in der Anwendungsliste antippen und den Finger
+darauf halten. Sie können das Symbol an eine
+beliebige Position auf dem Standby-Bildschirm
+verschieben.
+
+26 Erste Schritte
+
+4	 Drücken Sie [
+
+], um zum vorherigen Bildschirm
+zurückzukehren. Drücken Sie die Starttaste, um zum
+Standby-Bildschirm zurückzukehren.
+Das Gerät verfügt über einen eingebauten
+Bewegungssensor, der seine Ausrichtung erkennt.
+Wenn Sie das Gerät während der Verwendung einiger
+Funktionen drehen, wechselt die Anzeige automatisch
+zur Querformatansicht. Wenn Sie die Anzeige
+so einstellen möchten, dass sie ihre Ausrichtung
+beibehält, wählen Sie Einstellungen → Anzeige →
+Bildschirm automatisch drehen aus.
+
+››Anwendungen anordnen
+
+Sie können die Anwendungen in der Anwendungsliste
+neu anordnen, indem Sie ihre Reihenfolge ändern oder
+sie entsprechend Ihrer Vorlieben und Anforderungen in
+Kategorien gruppieren.
+
+1	 Drücken Sie in der Anwendungsliste [ ] → Bearbeiten.
+2	 Tippen Sie auf eine Anwendung und halten Sie sie.
+
+3	 Ziehen Sie das Anwendungssymbol an die gewünschte
+4	
+
+Position.
+Sie können ein Anwendungssymbol in eine andere
+Hauptmenüanzeige verschieben.
+Drücken Sie [ ] → Speichern.
+
+So ändern Sie die Reihenfolge der Hauptmenüanzeigen:
+
+1	 Legen Sie in der Anwendungsliste zwei Finger auf das
+2	
+
+Display und bewegen Sie sie zusammen.
+Tippen Sie auf die Miniaturansicht einer Anzeige, halten
+Sie sie und ziehen Sie sie an die gewünschte Position.
+
+››Kürzlich verwendete Anwendungen
+aufrufen
+
+1	 Drücken und halten Sie die Starttaste, um die Liste der
+zuletzt verwendeten Anwendungen zu öffnen.
+
+››Task-Manager verwenden
+
+Das Gerät ist multitaskingfähig. Es kann mehrere
+Anwendungen gleichzeitig ausführen. Multitasking kann
+jedoch zu Abstürzen, Stehenbleiben, Speicherproblemen
+oder erhöhtem Energieverbrauch führen. Um derartige
+Probleme zu vermeiden, sollten Sie nicht mehr benötigte
+Programme mit dem Task-Manager beenden.
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+2	
+
+wählen Sie Task-Manager → Aktive Anwendungen aus.
+Die Liste aller gegenwärtig auf dem Gerät ausgeführten
+Anwendungen wird angezeigt.
+Wählen Sie zum Schließen einer Anwendung Beenden
+aus.
+Wählen Sie zum Schließen aller aktiven Anwendungen
+Beenden aus.
+
+2	 Wählen Sie die gewünschte Anwendung aus.
+
+Erste Schritte
+
+27
+
+Gerät anpassen
+Nutzen Sie das Gerät optimal, indem Sie es an Ihre Vorlieben
+anpassen.
+
+››Uhrzeit und Datum einstellen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Einstellungen → Datum und Uhrzeit aus.
+
+2	 Stellen Sie die Uhrzeit und das Datum ein und ändern Sie
+weitere Optionen.
+
+››Tastenton ein- und ausschalten
+
+Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Einstellungen → Ton → Hörbare Auswahl aus.
+
+››Klingeltonlautstärke anpassen
+
+Drücken Sie zum Anpassen der Klingeltonlautstärke die
+Lautstärketaste nach oben oder unten.
+
+28 Erste Schritte
+
+››In den Stumm-Modus wechseln
+
+Um das Gerät stummzuschalten oder die Stummschaltung
+aufzuheben, führen Sie einen der folgenden Schritte aus:
+•	 Öffnen Sie im Standby-Betrieb die Anwendungsliste,
+wählen Sie → Tastatur aus und tippen Sie auf und
+halten Sie den Finger darauf.
+•	 Öffnen Sie die Schnellzugriffanzeige oben auf dem
+Bildschirm und wählen Sie Stumm aus.
+•	 Halten Sie [ ] gedrückt und wählen Sie Stumm-Modus
+aus.
+
+››Klingelton ändern
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+2	
+
+wählen Sie Einstellungen → Ton → Telefonklingelton
+aus.
+Wählen Sie in der Liste einen Klingelton und dann OK aus.
+
+››Animation zum Wechseln zwischen
+Fenstern aktivieren
+
+Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Einstellungen → Anzeige → Animation→
+Einige Animationen oder Alle Animationen aus.
+
+››Hintergrundbild für Standby-Bildschirm
+auswählen
+
+1	 Drücken Sie im Standby-Betrieb [
+→ eine Option.
+
+] → Hintergrundbild
+
+2	 Wählen Sie ein Bild aus.
+3	 Wählen Sie Speichern, Hintergrundbild festlegen oder
+
+Hintergrund festlegen aus.
+Samsung ist nicht verantwortlich für die Verwendung
+von Standardbildern oder Hintergrundbildern, die auf
+dem Gerät bereitgestellt werden.
+
+››Display-Helligkeit anpassen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Einstellungen → Anzeige → Helligkeit aus.
+
+2	 Passen Sie die Helligkeit mit dem Schieberegler an.
+3	 Wählen Sie OK aus.
+
+Je heller Sie das Display einstellen, desto schneller
+erschöpft sich die Akkuleistung des Geräts.
+
+››Bildschirmsperre einstellen
+
+Sie können den Touchscreen mit einem Entsperrmuster oder
+Passwort sperren, um zu verhindern, dass andere Personen
+das Gerät ohne Ihre Erlaubnis verwenden.
+•	 Nachdem Sie eine Bildschirmsperre eingestellt
+haben, werden Sie bei jedem Einschalten oder
+Entsperren des Touchscreens zur Eingabe eines
+Entsperrcodes aufgefordert.
+•	 Sollten Sie Ihre PIN oder Ihr Passwort vergessen
+haben, wenden Sie sich mit dem Gerät an
+ein Samsung-Kundendienstzentrum, um es
+zurücksetzen zu lassen.
+•	 Samsung übernimmt keine Haftung für den
+Verlust von Sicherheitscodes, den Verlust privater
+Informationen oder für andere Schäden, die durch
+illegale Software verursacht werden.
+Erste Schritte 29
+
+Entsperrmuster einstellen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste, und
+2	
+3	
+4	
+5	
+6	
+
+wählen Sie Einstellungen → Standort und Sicherheit →
+Bildschirmsperre aktiv. → Muster aus.
+Beachten Sie die angezeigten Anweisungen und
+Musterbeispiele und wählen Sie Weiter aus (falls
+erforderlich).
+Zeichnen Sie ein Muster, indem Sie mindestens vier
+Punkte mit Ihrem Finger verbinden.
+Wählen Sie Fortf. aus.
+Zeichnen Sie zum Bestätigen erneut ein Muster.
+Wählen Sie Bestät. aus.
+
+PIN-Entsperrcode einstellen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste, und
+2	
+3	
+
+Entsperr-Passwort einstellen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste, und
+2	
+3	
+
+30 Erste Schritte
+
+wählen Sie Einstellungen → Standort und Sicherheit →
+Bildschirmsperre aktiv. → PIN aus.
+Geben Sie eine neue PIN (numerisch) ein und wählen Sie
+Fortf. aus.
+Geben Sie die PIN erneut ein und wählen Sie OK aus.
+
+wählen Sie Einstellungen → Standort und Sicherheit →
+Bildschirmsperre aktiv. → Kennwort aus.
+Geben Sie ein neues Passwort (alphanumerisch) ein und
+wählen Sie OK aus.
+Geben Sie das Passwort erneut ein und wählen Sie OK
+aus.
+
+››SIM- oder USIM-Karte sperren
+
+Sie können das Gerät sperren, indem Sie die mit der SIModer USIM-Karte mitgelieferte PIN aktivieren.
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+2	
+
+wählen Sie Einstellungen → Standort und Sicherheit →
+SIM-Kartensperre einrichten → SIM-Karte sperren aus.
+Geben Sie die PIN ein und wählen Sie OK aus.
+
+Wenn die PIN-Sperre aktiviert ist, müssen Sie die PIN jedes
+Mal eingeben, wenn Sie das Gerät einschalten.
+•	 Wenn Sie die PIN mehrfach falsch eingeben, wird
+die SIM- oder USIM-Karte gesperrt. In diesem Fall
+müssen Sie einen PIN-Entsperrcode (PUK) eingeben,
+um die SIM- oder USIM-Karte zu entsperren.
+•	 Sollte die SIM- oder USIM-Karte gesperrt sein, weil
+Sie eine falsche PUK eingegeben haben, müssen Sie
+die Karte von Ihrem Netzbetreiber freigeben lassen.
+
+Text eingeben
+Sie können Text eingeben, indem Sie Zeichen auf dem
+virtuellen Tastenfeld auswählen oder von Hand auf dem
+Bildschirm schreiben.
+In einigen Sprachen ist es nicht möglich, Text
+einzugeben. Zum Eingeben von Text sollten Sie die
+Schreibsprache in eine der unterstützten Sprachen
+ändern. ► S. 105
+
+››Tastaturtyp ändern
+
+Sie können den Tastaturtyp ändern. Halten Sie das
+Texteingabefeld gedrückt und wählen Sie Eingabemethode
+→ einen Tastaturtyp (Swype- oder Samsung-Tastatur) aus.
+
+››Text mit der Swype-Tastatur eingeben
+
+1	 Wählen Sie den ersten Buchstaben eines Worts aus und
+ziehen Sie Ihren Finger zum zweiten Buchstaben, ohne
+den Finger vom Bildschirm zu nehmen.
+
+Erste Schritte
+
+31
+
+2	 Bleiben Sie für einen Moment auf dem zweiten
+3	
+
+Buchstaben und ziehen Sie Ihren Finger dann zum
+nächsten Zeichen.
+Fahren Sie damit bis zum Ende des Worts fort.
+
+Sie können auch folgende Tasten verwenden:
+
+1
+2
+3
+
+Nummer
+
+4
+5
+6
+
+Funktion
+
+2
+
+Zwischen Groß- und Kleinschreibung
+wechseln.
+Zwischen Symbolmodus und ABC/ZiffernModus umschalten.
+
+3
+
+Leerzeichen einfügen.
+
+4
+
+Zeichen löschen.
+
+5
+
+Neue Zeile beginnen.
+
+1
+
+4	 Nehmen Sie den Finger vom letzten Buchstaben. Das
+5	
+
+Wort wird in das Texteingabefeld eingefügt.
+Wiederholen Sie die Schritte 1 bis 4, um den Text
+einzugeben.
+Tippen und halten Sie jede Taste, um weitere Zeichen
+einzugeben.
+
+32 Erste Schritte
+
+Nummer
+
+2	 Geben Sie den Text mit den jeweiligen alphanumerischen
+
+Funktion
+Text mittels Sprache eingeben; Dieses
+Symbol wird nur angezeigt, wenn Sie die
+Spracheingabefunktion für die SamsungTastatur aktivieren.
+Je nach ausgewählter Eingabesprache
+ist diese Funktion u. U. nicht verfügbar.
+
+6
+
+Tasten oder durch Schreiben auf dem Bildschirm ein.
+
+Sie können auch folgende Tasten verwenden:
+
+1
+2
+
+•	 Drücken Sie zum Ausblenden der Swype-Tastatur
+[
+
+3
+
+].
+
+•	 Tippen Sie zum Anzeigen von Hilfeinformationen
+zur Verwendung der Swype-Tastatur auf
+halten Sie den Finger darauf.
+
+und
+
+››Text mit der Samsung-Tastatur eingeben
+1	 Wählen Sie
+
+→ Hochformat-Tastaturtypen und dann
+eine Texteingabemethode aus.
+Sie können eine der Tasteneingabemethoden (QWERTY
+oder herkömmliche Tastatur) oder HandschriftEingabemethoden auswählen.
+
+Nummer
+1
+2
+
+4
+5
+6
+7
+
+Funktion
+Zwischen Groß- und Kleinschreibung
+wechseln.
+Zwischen Ziffern-/Symbolmodus und ABCModus umschalten.
+
+Erste Schritte
+
+33
+
+Nummer
+
+Funktion
+
+3
+
+Text mittels Sprache eingeben; Dieses
+Symbol wird nur angezeigt, wenn Sie die
+Spracheingabefunktion für die SamsungTastatur aktivieren.
+Je nach ausgewählter Eingabesprache
+ist diese Funktion u. U. nicht verfügbar.
+
+4
+
+Eingabe löschen.
+
+5
+
+Neue Zeile beginnen.
+
+6
+
+7
+
+Tastatureinstellungen aufrufen;
+Texteingabemethode ändern (tippen und
+halten).
+Leerzeichen einfügen; Punkt einfügen
+(doppelt tippen); Eingabesprache ändern
+(nach links oder rechts blättern).
+Die Funktionen dieser Taste können
+abhängig vom Netzanbieter variieren.
+
+34 Erste Schritte
+
+Wenn Sie Tastaturen zur Texteingabe aus dem Internet
+heruntergeladen haben, können Sie den Tastaturtyp
+ändern. Tippen Sie auf das Texteingabefeld, halten Sie
+den Finger darauf und wählen Sie Eingabemethode
+→ einen Tastaturtyp aus.
+
+››Text kopieren und einfügen
+
+Bei der Texteingabe können Sie die Kopier- und
+Einfügefunktion verwenden, um Text in anderen
+Anwendungen zu nutzen.
+
+1	 Setzen Sie den Cursor auf den Anfangspunkt.
+2	 Tippen Sie auf das Texteingabefeld halten Sie es.
+3	 Wählen Sie in der Optionsliste Text auswählen aus.
+4	 Tippen Sie auf den Endpunkt.
+5	 Tippen Sie auf den markierten Text und halten Sie ihn.
+6	 Wählen Sie Kopieren aus, um den Text in die
+
+Zwischenablage zu kopieren, oder Ausschn., um den Text
+auszuschneiden und in die Zwischenablage einzufügen.
+
+7	 Tippen Sie auf das Texteingabefeld in einer anderen
+8	
+
+Anwendung und halten Sie es.
+Wählen Sie Einf. aus, um den Text aus der
+Zwischenablage in das Textfeld einzufügen.
+
+Anwendungen von Android Market
+herunterladen
+Ihr Gerät basiert auf der Android-Plattform und seine
+Funktionen lassen sich durch die Installation zusätzlicher
+Anwendungen erweitern. Android Market bietet Ihnen
+eine einfache und schnelle Möglichkeit zum Erwerben von
+Spielen und Mobilanwendungen.
+•	 Diese Funktion ist je nach Region oder Netzbetreiber
+u. U. nicht verfügbar.
+•	 Das Gerät speichert Benutzerdateien von
+heruntergeladenen Anwendungen im internen
+Speicher.
+
+››Anwendung installieren
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Market aus.
+
+2	 Wählen Sie Akzeptieren aus, wenn die allgemeinen
+Geschäftsbedingungen (AGB) angezeigt werden.
+
+3	 Wählen Sie eine Elementkategorie → ein Element aus.
+4	 Wählen Sie Installieren (für kostenlose Elemente) oder
+Kaufen aus.
+Wählen Sie bei der Auswahl Installieren anschließend
+OK aus, um das Element sofort herunterzuladen.
+Wenn Sie Kaufen auswählen, müssen Sie Ihre
+Kreditkartendaten eingeben. Folgen Sie den
+Anweisungen auf dem Bildschirm.
+
+››Anwendung deinstallieren
+
+1	 Wählen Sie auf der Startseite von Android Market Meine
+Apps aus.
+
+2	 Wählen Sie das Element aus, das Sie löschen möchten.
+3	 Wählen Sie Deinstallieren → OK aus.
+Erste Schritte
+
+35
+
+Dateien aus dem Internet
+herunterladen
+Wenn Sie Dateien oder Webanwendungen aus dem
+Internet herunterladen, werden diese vom Gerät auf einer
+Speicherkarte gespeichert.
+Aus dem Internet heruntergeladene Dateien können
+Viren enthalten, die dem Gerät schaden. Um dieses
+Risiko zu minimieren, sollten Sie nur Dateien aus
+vertrauenswürdigen Quellen herunterladen.
+Einige Multimedia-Dateien enthalten Digital Rights
+Management zum Schutz der Urheberrechte. Dieser
+Schutz kann Sie am Herunterladen, Kopieren, Ändern
+oder Übertragen einiger Dateien hindern.
+So laden Sie Dateien aus dem Internet herunter:
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Internet aus.
+
+36 Erste Schritte
+
+2	 Suchen Sie nach der gewünschten Datei oder
+Anwendung und laden Sie sie herunter.
+
+Zum Installieren von Anwendungen, die Sie von anderen
+Webseiten als Android Market heruntergeladen haben,
+müssen Sie Einstellungen → Anwendungen →
+Unbekannte Quellen auswählen.
+
+Daten synchronisieren
+Sie können Daten mit verschiedenen Webservern
+synchronisieren und Ihre Daten sichern und wiederherstellen.
+Nach der Synchronisierung bleibt das Gerät mit dem Internet
+verbunden. Falls im Internet eine Änderung vorgenommen
+wird, werden die aktualisierten Daten auf dem Gerät
+angezeigt und automatisch synchronisiert (und umgekehrt).
+Diese Funktion ist je nach Region oder Netzbetreiber
+u. U. nicht verfügbar.
+
+››Serverkonto einrichten
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste
+2	
+3	
+
+und wählen Sie Einstellungen → Konten und
+Synchronisierung aus.
+Wählen Sie Konto hinzufügen → einen Kontotyp aus.
+Befolgen Sie die Anweisungen auf dem Bildschirm, um
+die Einrichtung des Kontos durchzuführen.
+Geben Sie für Online-Community-Dienste wie Facebook
+und MySpace Ihren Benutzernamen und Ihr Passwort ein
+und wählen Sie Anmelden aus.
+
+››Automatische Synchronisierung aktivieren
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste
+2	
+
+und wählen Sie Einstellungen → Konten und
+Synchronisierung aus.
+Wählen Sie Automatisch synchronisieren aus.
+
+3	 Wählen Sie ein Konto aus.
+4	 Wählen Sie die Anwendungen aus, die Sie
+synchronisieren möchten.
+
+Um Anwendungen von der automatischen Synchronisierung
+auszuschließen, deaktivieren Sie die Kontrollkästchen neben
+den betreffenden Anwendungen.
+
+››Daten manuell synchronisieren
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste
+2	
+3	
+
+und wählen Sie Einstellungen → Konten und
+Synchronisierung aus.
+Wählen Sie ein Konto aus.
+Drücken Sie [ ] → Jetzt synchronisieren. Das Gerät
+beginnt, die ausgewählten Daten zu synchronisieren.
+
+Erste Schritte
+
+37
+
+Kommunikation
+Anrufen
+In diesem Abschnitt werden die Verwendung von
+Anruffunktionen wie das Tätigen und Entgegennehmen
+von Anrufen, die Verwendung von Optionen, die während
+eines Anrufs verfügbar sind, sowie die Konfiguration und
+Verwendung anrufbezogener Funktionen beschrieben.
+
+››Anrufe tätigen und entgegennehmen
+
+Zum Tätigen, Entgegennehmen, Beenden oder Abweisen
+von Anrufen können Sie die Tasten oder den Touchscreen
+verwenden.
+Wenn Sie das Gerät nahe an Ihr Gesicht halten, wird
+der Touchscreen automatisch ausgeschaltet und
+gesperrt, um versehentliche Eingaben zu verhindern.
+
+Anruf tätigen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste,
+2	
+3	
+
+wählen Sie → Tastatur aus und geben Sie eine
+Ortsvorwahl und eine Telefonnummer ein.
+Wählen Sie aus, um einen Anruf zu tätigen.
+Wählen Sie zum Beenden des Anrufs Beenden aus.
+•	 Im Telefonbuch können Sie Nummern speichern, die
+Sie häufig wählen. ► S. 67
+•	 Wählen Sie zum schnellen Aufrufen der Anrufliste
+und zur Wahlwiederholung von kürzlich gewählten
+Nummern → Protok.
+
+Anruf entgegennehmen
+
+1	 Bei einem eingehenden Anruf ziehen Sie
+
+nach rechts,
+bis der Punkt erreicht ist.
+Wenn das Gerät klingelt, drücken Sie die
+Lautstärketaste, um den Klingelton stumm zu schalten.
+
+2	 Wählen Sie zum Beenden des Anrufs Beenden aus.
+38 Kommunikation
+
+Anruf abweisen
+
+•	 Um einen Anruf abzuweisen, drücken und halten Sie die
+
+Wenn ein Anruf eingeht, ziehen Sie bis zum Punkt nach
+links. Der Anrufer hört daraufhin das Besetztzeichen.
+
+•	 Um während eines Gesprächs einen Anruf zu halten oder
+
+Internationale Nummer anrufen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste,
+2	
+
+wählen Sie → Tastatur aus und tippen Sie 0 und
+halten Sie den Finger darauf, um das Zeichen +
+einzufügen.
+Geben Sie die vollständige Nummer ein, die Sie
+wählen möchten (Landesvorwahl, Ortsvorwahl und
+Telefonnummer), und wählen Sie anschließend aus,
+um die Nummer zu wählen.
+
+››Headset verwenden
+
+Wenn Sie ein Headset an das Gerät anschließen, können
+Sie es zum Entgegennehmen und Steuern von Anrufen
+verwenden:
+•	 Um einen Anruf entgegenzunehmen, drücken Sie die
+Headset-Taste.
+
+Headset-Taste.
+
+einen gehaltenen Anruf fortzusetzen, drücken und halten
+Sie die Headset-Taste.
+•	 Um einen Anruf zu beenden, drücken Sie die HeadsetTaste.
+
+››Optionen während eines Anrufs
+verwenden
+
+Während eines Anrufs können Sie folgende Optionen
+verwenden:
+•	 Drücken Sie die Lautstärketaste nach oben oder unten, um
+die Anruflautstärke anzupassen.
+•	 Wählen Sie Halten aus, um ein Gespräch zu halten. Wählen
+Sie Abrufen aus, um einen gehaltenen Anruf fortzusetzen.
+•	 Wählen Sie Anruf hinzufügen aus und wählen Sie dann
+eine neue Nummer, um einen zweiten Anruf zu tätigen.
+
+Kommunikation
+
+39
+
+•	 Ziehen Sie
+
+bis zum Punkt nach rechts, wenn
+ein Anklopfton ertönt, um einen zweiten Anruf
+entgegenzunehmen. Sie werden gefragt, ob der erste
+Anruf beendet oder gehalten werden soll. Um diese
+Funktion nutzen zu können, müssen Sie den Anklopfdienst
+abonnieren.
+•	 Wählen Sie zum Öffnen der Wählanzeige Wählfeld aus.
+•	 Wählen Sie Headset aus, um den anderen Teilnehmer über
+ein Bluetooth-Headset zu hören und mit ihm zu sprechen.
+•	 Wählen Sie Stummschalten, um das Mikrofon
+auszuschalten, damit der andere Teilnehmer Sie nicht
+hören kann.
+•	 Wählen Sie zum Aktivieren der Freisprechfunktion
+Lautsprecher aus.
+In lauten Umgebungen kann es manchmal
+schwierig sein, Anrufer über die Lautsprecher-/
+Freisprechfunktion zu hören. Verwenden Sie in diesem
+Fall den normalen Telefonmodus.
+
+•	 Wählen Sie Tauschen aus, um zwischen den beiden
+Anrufen zu wechseln.
+
+40 Kommunikation
+
+•	 Um eine Konferenzschaltung einzurichten, tätigen Sie
+
+einen zweiten Anruf oder nehmen Sie einen zweiten
+Anruf entgegen und wählen Sie Konferenz aus, wenn die
+Verbindung mit dem zweiten Teilnehmer hergestellt ist. Sie
+müssen einen Konferenzschaltungsdienst abonnieren, um
+diese Funktion verwenden zu können.
+
+››Unbeantwortete Anrufe anzeigen und
+zugehörige Nummern wählen
+
+Das Gerät zeigt unbeantwortete Anrufe an. Wenn Sie die
+Nummer eines unbeantworteten Anrufs wählen möchten,
+öffnen Sie die Schnellzugriffanzeige und wählen Sie die
+Benachrichtigung für den unbeantworteten Anruf aus.
+
+››Zusätzliche Funktionen verwenden
+
+Sie können zahlreiche andere anrufbezogene Funktionen
+wie den FDN-Modus (feste Rufnummern) oder die
+Anrufumleitung verwenden.
+
+FDN-Modus mit festen Rufnummern verwenden
+Im FDN-Modus beschränkt das Gerät ausgehende Anrufe
+auf Nummern, die in der FDN-Liste gespeichert sind. So
+aktivieren Sie den FDN-Modus:
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Einstellungen → Anrufeinstellungen →
+Rufumleitung aus.
+Wählen Sie eine Bedingung aus.
+Geben Sie die Nummer ein, an die Anrufe weitergeleitet
+werden sollen, und wählen Sie Aktivieren aus.
+Die Einstellungen werden an das Netzwerk übertragen.
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+
+2	
+3	
+
+2	
+
+Anklopfen einstellen
+
+3	
+
+wählen Sie Einstellungen → Anrufeinstellungen →
+Feste Rufnummern → FDN aktivieren aus.
+Geben Sie die mit der SIM- oder USIM-Karte gelieferte
+PIN2 ein, und wählen Sie OK aus.
+Wählen Sie FDN-Liste aus und fügen Sie Kontakte hinzu,
+die im FDN-Modus verwendet werden sollen.
+
+Rufumleitung einstellen
+Mit der Rufumleitungsfunktion können Sie eingehende
+Anrufe an eine von Ihnen angegebene andere Rufnummer
+umleiten. Sie können diese Funktion separat für verschiedene
+Bedingungen einstellen, unter denen Sie Anrufe nicht
+entgegennehmen können, z. B. wenn Sie bereits telefonieren
+oder sich außerhalb des Netzempfangsbereichs befinden.
+
+Anklopfen ist eine Netzfunktion, durch die Sie auf einen
+eingehenden Anruf während eines Gesprächs hingewiesen
+werden.
+Öffnen Sie im Standby-Betrieb die Anwendungsliste
+und wählen Sie Einstellungen → Anrufeinstellungen
+→ Zusätzliche Einstellungen → Anklopfen aus. Die
+Einstellungen werden an das Netzwerk übertragen.
+
+Kommunikation
+
+41
+
+››Anruflisten anzeigen
+
+Sie können nach Typ gefilterte Protokolle Ihrer Anrufe
+anzeigen.
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie
+
+2	 Drücken Sie [
+
+→ Protok. aus.
+
+] → Anzeige → eine Option, um die
+Anruflisten zu sortieren.
+Über die Anrufliste können Sie einen Anruf tätigen
+oder eine Nachricht direkt an einen Kontakt senden,
+indem Sie über den Kontakt nach links oder rechts
+streichen.
+
+3	 Wählen Sie ein Protokoll bzw. eine Liste aus, um die
+
+zugehörigen Details anzuzeigen.
+In der Detailansicht können Sie die Nummer wählen,
+eine Nachricht an die Nummer senden oder die
+Nummer dem Telefonbuch hinzufügen.
+
+42 Kommunikation
+
+Nachrichten
+In diesem Abschnitt erfahren Sie, wie Sie Textnachrichten
+(SMS) oder Multimedia-Nachrichten (MMS) erstellen und
+versenden und wie Sie gesendete oder empfangene
+Nachrichten anzeigen und verwalten.
+Wenn Sie sich außerhalb Ihres Heimatnetzes
+befinden, können durch das Senden und Empfangen
+von Nachrichten zusätzliche Gebühren anfallen.
+Einzelheiten teilt Ihnen Ihr Netzbetreiber auf Anfrage
+mit.
+
+››Textnachricht (SMS) senden
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste, und
+2	
+
+wählen Sie → Neue Nachricht aus.
+Wählen Sie Kontakte aus.
+Durch Auswahl einer anderen Option können Sie manuell
+eine Nummer eingeben oder eine Nummer aus den
+Protokollen oder Kontaktgruppen auswählen.
+
+3	 Wählen Sie die gewünschten Kontakte und dann
+
+3	 Wählen Sie die gewünschten Kontakte und dann
+
+4	
+
+4	 Wählen Sie Zum Verfassen tippen aus und geben Sie
+
+5	
+
+Hinzufüg. aus.
+Wählen Sie Zum Verfassen tippen aus, und geben Sie
+den Nachrichtentext ein.
+Drücken Sie zum Einfügen von Emoticons [ ] → Smiley
+einfügen.
+Wählen Sie Senden aus, um die Nachricht zu senden.
+
+››Multimedia-Nachricht (MMS) senden
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie
+
+→ Neue Nachricht aus.
+
+2	 Wählen Sie Kontakte aus.
+
+Durch Auswahl einer anderen Option können Sie manuell
+eine Nummer eingeben oder eine Nummer aus den
+Protokollen oder Kontaktgruppen auswählen.
+Wenn Sie eine E-Mail-Adresse eingeben, wandelt das
+Gerät die Nachricht in eine MMS um.
+
+Hinzufüg. aus.
+
+5	
+6	
+7	
+
+den Nachrichtentext ein.
+Drücken Sie zum Einfügen von Emoticons [ ] → Smiley
+einfügen.
+→ eine Option und fügen Sie dann ein
+Wählen Sie
+Element hinzu.
+Sie können eine Datei in der Liste auswählen oder ein
+Foto, ein Video oder eine Audiodatei neu erstellen.
+Drücken Sie [ ] → Betreff hinzufügen und fügen Sie
+einen Betreff für die Nachricht hinzu.
+Wählen Sie Senden aus, um die Nachricht zu senden.
+
+››SMS oder MMS anzeigen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie aus.
+Die Nachrichten sind nach Kontakten in NachrichtenThreads gruppiert (z. B. einem Messenger).
+Kommunikation
+
+43
+
+2	 Wählen Sie einen Kontakt aus.
+3	 Wählen Sie eine SMS oder MMS aus dem NachrichtenThread aus.
+
+››Mailbox abhören
+
+Wenn Sie das Gerät so eingerichtet haben, dass
+unbeantwortete Anrufe an die Mailbox weitergeleitet
+werden, können Ihnen Anrufer eine Sprachnachricht
+hinterlassen, wenn Sie eingehende Anrufe nicht
+entgegennehmen. So rufen Sie Ihre Mailbox auf und hören
+Sprachnachrichten ab:
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste,
+2	
+
+wählen Sie → Tastatur aus und tippen Sie 1 und
+halten Sie den Finger darauf.
+Folgen Sie den Anweisungen des Mailbox-Servers.
+Sie müssen die Nummer des Mailbox-Servers
+speichern, bevor Sie auf den Server zugreifen. Die
+Nummer erhalten Sie von Ihrem Netzbetreiber.
+
+Google Mail
+
+Sie können neue E-Mail-Nachrichten von Google Mail™ in
+Ihren Posteingang abrufen. Wenn Sie diese Anwendung
+aufrufen, wird der Posteingang angezeigt. In der Titelleiste
+wird die Gesamtanzahl der ungelesenen Nachrichten
+fett formatiert angezeigt. Wenn Sie eine Nachricht
+gekennzeichnet haben, erscheint die Kennzeichnung in
+einem farbigen Rechteck über der Nachricht.
+•	 Diese Funktion ist je nach Region oder Netzbetreiber
+u. U. nicht verfügbar.
+•	 Die Bezeichnung des Google Mail-Menüs kann je
+nach Netzbetreiber auf dem Gerät anders lauten.
+
+››E-Mail-Nachricht senden
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Google Mail aus.
+
+2	 Drücken Sie [ ] → E-Mail schreiben.
+3	 Geben Sie im Empfängerfeld einen Namen oder eine
+Adresse ein.
+
+44 Kommunikation
+
+4	 Geben Sie einen Betreff und eine Nachricht ein.
+5	 Drücken Sie zum Anhängen einer Bilddatei [ ] →
+6	
+
+Anhang → eine Datei.
+aus, um die Nachricht zu senden.
+Wählen Sie
+
+››E-Mail-Nachrichten anzeigen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Google Mail aus.
+
+2	 Wählen Sie eine E-Mail-Nachricht aus.
+In der Nachrichtenansicht stehen Ihnen folgende Optionen
+zur Verfügung:
+•	 Wählen Sie
+aus, um die Nachricht zu beantworten.
+•	 Wählen Sie → Allen antw. aus, um die Nachricht zu
+beantworten und die Antwort an alle Empfänger zu
+senden.
+•	 Wählen Sie → Weiterleiten aus, um die Nachricht an
+andere Personen weiterzuleiten.
+•	 Wählen Sie aus, um die Nachricht mit einem Stern zu
+versehen.
+
+•	 Wählen Sie Vorschau aus, um einen Anhang anzuzeigen.
+
+Wählen Sie Herunterladen aus, um den Anhang auf dem
+Gerät zu speichern.
+•	 Wählen Sie Archiv. aus, um die Nachricht zu archivieren.
+•	 Wählen Sie Löschen aus, um die Nachricht zu löschen.
+•	 Wählen Sie
+oder
+aus, um zur vorherigen oder
+nächsten Nachricht zu wechseln.
+
+››E-Mails mit Kennzeichnungen verwalten
+
+Sie können Ihre E-Mails verwalten, indem Sie sie
+kennzeichnen oder wichtige Nachrichten mit einem
+Sternsymbol markieren. Sie können Nachrichten mit einem
+Kennzeichnungsfilter sortieren.
+
+Nachricht mit einer Kennzeichnung markieren
+
+1	 Halten Sie eine Nachricht im Posteingang gedrückt.
+2	 Wählen Sie Labels ändern aus.
+3	 Wählen Sie die gewünschte Kennzeichnung und dann
+OK aus.
+
+Kommunikation
+
+45
+
+Nachricht mit einem Sternsymbol markieren
+
+1	 Halten Sie eine Nachricht im Posteingang gedrückt.
+2	 Wählen Sie Markieren aus. Das Sternsymbol neben der
+Nachricht wird aktiviert.
+
+3	 Wählen Sie Weiter (für allgemeine E-Mail-Konten) oder
+4	
+
+Manuelles Einr. (für andere geschäftliche E-Mail-Konten)
+aus.
+Folgen Sie den Anweisungen auf dem Bildschirm.
+
+1	 Drücken Sie im Posteingang [ ] → Zu den Labels.
+2	 Wählen Sie die Kennzeichnung der Nachrichten aus, die
+
+Wenn Sie mit dem Einrichten des E-Mail-Kontos fertig sind,
+werden E-Mail-Nachrichten auf das Gerät heruntergeladen.
+Wenn Sie mehr als zwei Konten erstellt haben, können Sie
+zwischen E-Mail-Konten wechseln. Drücken Sie
+[ ] → Konten und wählen Sie das Konto aus, für das Sie
+Nachrichten abrufen möchten.
+
+E-Mail
+
+››E-Mail-Nachricht senden
+
+Nachrichten filtern
+
+Sie anzeigen möchten.
+
+In diesem Abschnitt erfahren Sie, wie Sie E-Mail-Nachrichten
+über Ihr privates oder geschäftliches E-Mail-Konto senden
+und anzeigen.
+
+››E-Mail-Konto einrichten
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+2	
+
+wählen Sie E-Mail aus.
+Geben Sie Ihre E-Mail-Adresse und Ihr Passwort ein.
+
+46 Kommunikation
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie E-Mail → ein E-Mail-Konto.
+
+2	 Drücken Sie [ ] → Verfassen.
+3	 Wählen Sie Kontakte aus.
+
+Durch Auswahl einer anderen Option können Sie manuell
+eine E-Mail-Adresse eingeben oder eine E-Mail-Adresse
+aus den Protokollen oder Kontaktgruppen auswählen.
+
+4	 Wählen Sie das Feld „Cc/Bcc“ aus, um weitere Empfänger
+5	
+6	
+7	
+8	
+
+hinzuzufügen.
+Wählen Sie das Feld „Betreff“ aus, um einen Betreff
+einzugeben.
+Wählen Sie das Texteingabefeld aus und geben Sie den
+E-Mail-Text ein.
+Wählen Sie Anhängen aus und fügen Sie eine Datei
+hinzu.
+Sie können eine Datei in der Liste auswählen oder ein
+Foto, ein Video oder eine Audiodatei neu erstellen.
+Wählen Sie Senden aus, um die Nachricht zu senden.
+Wenn Sie offline oder außerhalb Ihres
+Netzempfangsbereichs sind, bleibt die Nachricht in
+der Nachrichten-Threadliste, bis Sie wieder online und
+in Ihrem Netzempfangsbereich sind.
+
+››E-Mail-Nachricht anzeigen
+
+Wenn Sie ein E-Mail-Konto öffnen, können Sie bereits
+abgerufene E-Mails offline lesen oder eine Verbindung
+mit dem E-Mail-Server herstellen, um neue Nachrichten
+anzuzeigen. Nach dem Abrufen der E-Mail-Nachrichten
+können Sie diese offline lesen.
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+
+wählen Sie E-Mail → ein E-Mail-Konto.
+] → Aktualis., um die Nachrichtenliste zu
+aktualisieren.
+Wählen Sie eine E-Mail-Nachricht aus.
+
+2	 Drücken Sie [
+3	
+
+In der Nachrichtenansicht stehen Ihnen folgende Optionen
+zur Verfügung:
+•	 Drücken Sie [ ] → Antworten, um die Nachricht zu
+beantworten.
+•	 Drücken Sie [ ] → Weiterleiten, um die Nachricht an
+andere Personen weiterzuleiten.
+
+Kommunikation
+
+47
+
+•	 Drücken Sie [
+•	 Drücken Sie [
+
+] → Löschen, um die Nachricht zu löschen.
+] → Verschieben in, um die Nachricht in
+einen anderen Ordner zu verschieben.
+•	 Drücken Sie [ ] → Bilder anzeigen, um Bilder aus der
+Nachricht zu laden.
+•	 Um einen Anhang anzuzeigen, wählen Sie das
+Anhangselement aus. Wählen Sie aus, um den Anhang
+auf der Speicherkarte zu speichern.
+
+Talk
+
+In diesem Abschnitt erfahren Sie, wie Sie über Google Talk™
+mit Verwandten oder Freunden chatten.
+Diese Funktion ist je nach Region oder Netzbetreiber
+u. U. nicht verfügbar.
+
+››Freunde zur Freundesliste hinzufügen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Talk aus.
+
+48 Kommunikation
+
+2	
+3	
+
+In der Freundesliste sehen Sie alle Google Talk-Kontakte
+in einer Übersicht.
+Drücken Sie [ ] → Freunde hinzufügen.
+Geben Sie die E-Mail-Adresse des Freundes ein und
+wählen Sie Einladung senden aus.
+
+Wenn der Freund die Einladung annimmt, wird er der
+Freundesliste hinzugefügt.
+
+››Chat beginnen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Talk aus.
+
+2	 Wählen Sie einen Freund in der Freundesliste aus. Das
+Chat-Fenster wird geöffnet.
+
+3	 Geben Sie Ihre Nachricht ein und wählen Sie Senden aus.
+Drücken Sie zum Einfügen von Emoticons [
+Optionen → Smiley einfügen.
+
+]→
+
+4	 Drücken Sie [
+5	
+
+] → Chat wechseln, um zwischen aktiven
+Chats zu wechseln.
+Drücken Sie [ ] → Chat beenden, um den Chat zu
+beenden.
+
+Social Hub
+
+In diesem Abschnitt erfahren Sie, wie Sie auf Social Hub™
+zugreifen, die integrierte Kommunikationsanwendung
+für Social Network Service (SNS), E-Mail,
+Nachrichten, Sofortnachrichten (IM), Kontakte oder
+Kalenderinformationen. Besuchen Sie
+socialhub.samsungmobile.com, um weitere Details zu
+erfahren.
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Social Hub aus.
+
+2	 Nun können Sie die von Social Hub bereitgestellten
+Inhalte lesen und verwenden.
+
+Kommunikation
+
+49
+
+Unterhaltung
+
+››Fotografieren
+
+Kamera
+
+2	 Drehen Sie das Gerät entgegen dem Uhrzeigersinn (nach
+
+In diesem Abschnitt erfahren Sie, wie Sie Fotos und Videos
+aufnehmen und anzeigen. Sie können Fotos mit einer
+Auflösung von max. 2048 x 1536 Pixeln (3,2 Megapixel)
+und Videos mit einer Auflösung von max. 320 x 240 Pixeln
+aufnehmen.
+Bevor Sie die Kamera verwenden können, müssen Sie eine
+Speicherkarte einsetzen.
+•	 Die Kamera-Bedienoberfläche wird nur in der
+Querformatansicht angezeigt.
+•	 Tippen Sie auf das Display, um Symbole im Sucher
+anzuzeigen oder auszublenden.
+•	 Die Kamera schaltet sich automatisch aus, wenn sie
+für einen bestimmten Zeitraum nicht verwendet
+wird.
+•	 Je nach Motiv und Aufnahmebedingungen kann die
+Speicherkapazität unterschiedlich sein.
+50 Unterhaltung
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Kamera aus.
+
+links) in die Querformatansicht.
+
+3	 Richten Sie das Objektiv auf das gewünschte Motiv und
+nehmen Sie ggf. Einstellungen vor.
+1
+2
+3
+4
+5
+
+6
+7
+8
+
+Nummer
+
+Funktion
+
+1
+
+Kamerastatus und Einstellungen
+überprüfen.
+•	 : Auflösung
+•	 : Belichtungsmesser-Typ
+•	 : Anzahl der Fotos, die Sie aufnehmen
+können (je nach verfügbarem Speicher)
+•	 : Speicherort
+
+2
+
+Aufnahmemodus ändern.
+
+3
+
+Szenenmodus ändern.
+
+4
+
+Helligkeit anpassen.
+
+5
+
+Kameraeinstellungen ändern.
+
+6
+
+Zur Videokamera umschalten.
+
+7
+
+Fotografieren.
+
+8
+
+4	 Drücken Sie die Lautstärketaste, um die Anzeige zu
+vergrößern oder zu verkleinern.
+aus, um ein Foto aufzunehmen.
+Das Foto wird automatisch gespeichert.
+
+Zuletzt aufgenommenes Foto anzeigen.
+
+5	 Wählen Sie
+
+Wählen Sie nach dem Fotografieren aus, um die
+aufgenommenen Fotos anzuzeigen.
+•	 Blättern Sie nach links oder rechts, um weitere Fotos
+anzuzeigen.
+•	 Tippen Sie auf das Display und wählen Sie oder aus,
+um die Anzeige zu vergrößern oder zu verkleinern. Zum
+Vergrößern oder Verkleinern können Sie auch zweimal auf
+das Display tippen.
+•	 Wählen Sie Senden via aus, um ein Foto zu verschicken.
+•	 Wählen Sie Einst. als aus, um ein Foto als Hintergrundbild
+oder als ID-Bild für einen Kontakt festzulegen.
+•	 Wählen Sie Löschen aus, um ein Foto zu löschen.
+
+Unterhaltung
+
+51
+
+››Mit voreingestellten Optionen für
+
+verschiedene Szenen fotografieren
+
+Die Kamera verfügt über vordefinierte Einstellungen für
+verschiedene Szenen. Dadurch können Sie einfach den
+passenden Modus für die jeweiligen Aufnahmebedingungen
+und Motive wählen.
+Wählen Sie z. B. zum Fotografieren in der Nacht den
+Nachtmodus aus, in dem längere Belichtungszeiten
+verwendet werden.
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Kamera aus.
+
+2	 Drehen Sie das Gerät entgegen dem Uhrzeigersinn (nach
+links) in die Querformatansicht.
+
+→ eine Szene.
+3	 Wählen Sie
+4	 Nehmen Sie die gewünschten Einstellungen vor.
+5	 Wählen Sie aus, um ein Foto aufzunehmen.
+
+52 Unterhaltung
+
+››Fotos im Smile-Modus aufnehmen
+
+Die Kamera kann die Gesichter von Personen erkennen
+und Sie dabei unterstützen, ein lächelndes Gesicht zu
+fotografieren.
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Kamera aus.
+
+2	 Drehen Sie das Gerät entgegen dem Uhrzeigersinn (nach
+links) in die Querformatansicht.
+
+3	 Wählen Sie → Lächeln aus.
+4	 Nehmen Sie die gewünschten Einstellungen vor.
+5	 Wählen Sie aus.
+6	 Richten Sie das Kameraobjektiv auf das Motiv.
+
+Das Gerät erkennt Personen auf einem Bild und
+erkennt, ob sie lächeln. Wenn eine Person lächelt, wird
+automatisch fotografiert.
+
+››Fotoserie aufnehmen
+
+Sie können mühelos eine Fotoserie eines sich bewegenden
+Motivs aufnehmen. Diese Funktion eignet sich ideal,
+um spielende Kinder oder eine Sportveranstaltung zu
+fotografieren.
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+2	
+3	
+4	
+5	
+
+wählen Sie Kamera aus.
+Drehen Sie das Gerät entgegen dem Uhrzeigersinn (nach
+links) in die Querformatansicht.
+→ Serie aus.
+Wählen Sie
+Nehmen Sie die gewünschten Einstellungen vor.
+Tippen Sie auf
+und halten Sie den Finger darauf. Die
+Kamera nimmt Fotos auf, bis Sie die Taste loslassen.
+
+››Panoramafoto aufnehmen
+
+Im Panorama-Aufnahmemodus können Sie breite
+Panoramafotos aufnehmen. Dieser Modus eignet sich ideal
+für Landschaftsaufnahmen.
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Kamera aus.
+
+2	 Drehen Sie das Gerät entgegen dem Uhrzeigersinn (nach
+links) in die Querformatansicht.
+
+3	 Wählen Sie → Panorama aus.
+4	 Nehmen Sie die gewünschten Einstellungen vor.
+5	 Wählen Sie aus, um das erste Foto aufzunehmen.
+6	 Bewegen Sie das Gerät langsam in eine Richtung und
+
+7	
+
+richten Sie den grünen Rahmen mit dem Sucher aus.
+Wenn Sie den grünen Rahmen mit dem Sucher
+ausgerichtet haben, nimmt die Kamera automatisch das
+nächste Foto auf.
+Wiederholen Sie Schritt 6, um die PanoramafotoAufnahme abzuschließen.
+Unterhaltung
+
+53
+
+››Kombiniertes Foto aufnehmen
+
+Sie können zwei Fotos mit demselben Hintergrund machen
+und dann die linke und rechte Hälfte der Fotos zu einem
+Foto kombinieren. Diese Funktion ist praktisch, wenn Sie sich
+mit einer anderen Person zusammen fotografieren lassen
+möchten, aber niemand zugegen ist, um das Foto für Sie zu
+machen.
+Das Vorschaubild wird in diesem Modus vergrößert
+angezeigt, die Dateien werden aber mit normaler
+Bildqualität gespeichert und beibehalten.
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Kamera aus.
+
+2	 Drehen Sie das Gerät entgegen dem Uhrzeigersinn (nach
+3	
+4	
+5	
+
+links) in die Querformatansicht.
+→ Coupling Shot.
+Wählen Sie
+Nehmen Sie die gewünschten Einstellungen vor.
+Tippen Sie auf die linke oder rechte Seite, je nachdem, wo
+Sie das erste Foto aufnehmen möchten.
+
+54 Unterhaltung
+
+6	 Wählen Sie aus, um das erste Foto aufzunehmen.
+7	 Nehmen Sie falls erforderlich die gewünschten
+
+Einstellungen für das zweite Foto vor.
+, um das zweite Foto aufzunehmen.
+Das Gerät fasst die Hälfte des ersten Fotos und die andere
+Hälfte des zweiten Fotos automatisch zu einem Foto
+zusammen.
+
+8	 Wählen Sie
+
+››Kameraeinstellungen anpassen
+Wählen Sie vor dem Fotografieren
+folgenden Optionen aufzurufen:
+
+→
+
+aus, um die
+
+Option
+
+Funktion
+
+Selbstauslöser
+
+Zeitraum auswählen, nach dem die
+Kamera ein Foto aufnimmt.
+
+Auflösung
+
+Auflösungsoption ändern.
+
+Weißabgleich
+
+Farbausgleich an die Lichtbedingungen
+anpassen.
+
+Option
+
+Funktion
+
+Effekte
+
+Spezialeffekte wie Sepia oder Schwarz/
+Weiß anwenden.
+
+Messung
+
+Belichtungsmesser-Typ auswählen.
+
+Bildqualität
+
+Qualität der Fotos einstellen.
+
+Anpassen
+
+Kontrast, Sättigung und Schärfe
+anpassen.
+
+Wählen Sie vor dem Fotografieren → aus, um die
+folgenden Einstellungen aufzurufen:
+Einstellung
+Hilfslinien
+Überprüfen
+
+Einstellung
+
+GPSEinbindung
+
+Auslöser-Ton
+
+Funktion
+Hilfslinien in der Vorschauansicht
+anzeigen.
+Anzeige des aufgenommenen Bilds
+einstellen.
+
+Zurücksetzen
+
+Funktion
+Kamera einstellen, um den Fotos
+Standortinformationen hinzuzufügen.
+Um die GPS-Signale zu verbessern,
+sollten Sie nicht an Orten
+fotografieren, an denen das
+Signal behindert werden kann,
+z. B. zwischen Gebäuden oder in
+tiefliegenden Gebieten oder bei
+schlechten Wetterbedingungen.
+Auslöser-Ton des Kameraauslösers beim
+Fotografieren einstellen.
+Menüs und Aufnahmeoptionen
+zurücksetzen.
+
+Unterhaltung
+
+55
+
+››Video aufnehmen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+2	
+3	
+4	
+
+wählen Sie Kamera aus.
+Drehen Sie das Gerät entgegen dem Uhrzeigersinn (nach
+links) in die Querformatansicht.
+aus, um in den Videokameramodus zu
+Wählen Sie
+wechseln.
+Richten Sie das Objektiv auf das gewünschte Motiv und
+nehmen Sie ggf. Einstellungen vor.
+1
+2
+
+3
+4
+
+56 Unterhaltung
+
+5
+6
+7
+
+Nummer
+
+1
+
+2
+
+Funktion
+Status und Einstellungen der Videokamera
+überprüfen.
+•	 : Auflösung
+•	
+: Länge des Videos, das
+aufgenommen werden kann (je nach
+verfügbarem Speicher)
+•	 : Speicherort
+Aufnahmemodus ändern (zum Anfügen
+an eine MMS oder zum normalen
+Speichern).
+
+3
+
+Helligkeit anpassen.
+
+4
+
+Videokameraeinstellungen ändern.
+
+5
+
+Zur Kamera wechseln.
+
+6
+
+Video aufnehmen .
+
+7
+
+Zuletzt aufgenommenes Video anzeigen.
+
+5	 Drücken Sie die Lautstärketaste, um die Anzeige zu
+6	
+7	
+
+vergrößern oder zu verkleinern.
+Wählen Sie aus, um die Aufnahme zu starten.
+Wählen Sie aus, um die Aufnahme anzuhalten.
+Das Video wird automatisch gespeichert.
+Unter Umständen kann die Kamera keine
+Videos auf eine Speicherkarte mit niedriger
+Übertragungsgeschwindigkeit aufnehmen.
+
+Wählen Sie nach dem Aufzeichnen eines Videos aus, um
+die aufgenommenen Videos anzuzeigen.
+•	 Blättern Sie nach links oder rechts, um weitere Videos
+anzuzeigen.
+•	 Wählen Sie Senden via aus, um ein Video zu verschicken.
+•	 Wählen Sie Start aus, um ein Video wiederzugeben.
+•	 Wählen Sie Löschen aus, um ein Video zu löschen.
+
+››Videokameraeinstellungen anpassen
+
+Wählen Sie vor der Videoaufnahme
+folgenden Optionen aufzurufen:
+
+→
+
+aus, um die
+
+Option
+
+Funktion
+
+Selbstauslöser
+
+Zeitraum auswählen, nach dem die
+Kamera die Videoaufnahme startet.
+
+Auflösung
+
+Auflösungsoption ändern.
+
+Weißabgleich
+Effekte
+
+Farbausgleich an die
+Lichtbedingungen anpassen.
+Spezialeffekte wie Sepia oder
+Schwarz/Weiß anwenden.
+
+Videoqualität
+
+Videoqualität einstellen.
+
+Anpassen
+
+Kontrast, Sättigung und Schärfe
+anpassen.
+
+Unterhaltung
+
+57
+
+Wählen Sie vor dem Aufnehmen eines Videos
+die folgenden Einstellungen aufzurufen:
+
+→
+
+aus, um
+
+Einstellung
+
+Funktion
+
+Hilfslinien
+
+Hilfslinien in der Vorschauansicht
+anzeigen.
+
+Audioaufnahme
+
+Aufnahmeton ein- oder ausschalten.
+
+Überprüfen
+Zurücksetzen
+
+Anzeige des aufgenommenen Videos
+einstellen.
+Menüs und Aufnahmeoptionen
+zurücksetzen.
+
+Galerie
+In diesem Abschnitt erfahren Sie, wie Sie Fotos anzeigen und
+Videos wiedergeben, die auf der Speicherkarte gespeichert
+sind.
+
+58 Unterhaltung
+
+››Unterstützte Dateiformate
+Typ
+
+Format
+
+Bild
+Video
+
+Erweiterung: bmp, gif, jpg, png, wbmp,
+agif
+•	 Erweiterung: 3gp, mp4
+•	 Codec: MPEG4, H.263, H.264
+
+•	 Einige Dateiformate werden abhängig von der auf
+dem Gerät installierten Software nicht unterstützt.
+
+•	 Wenn die Dateigröße den verfügbaren Speicher
+
+übersteigt, kann beim Öffnen von Dateien ein Fehler
+auftreten.
+
+››Foto anzeigen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Galerie aus.
+
+2	 Wählen Sie einen Ordner aus.
+
+3	 Wählen Sie oben rechts auf dem Bildschirm
+4	
+
+oder
+aus, um den Anzeigemodus zu ändern.
+Wählen Sie ein Foto (ohne Symbol) aus, das angezeigt
+werden soll.
+
+Beim Anzeigen eines Fotos stehen Ihnen folgende Optionen
+zur Verfügung:
+•	 Blättern Sie nach links oder rechts, um weitere Fotos
+anzuzeigen.
+•	 Wählen Sie oder aus, um die Anzeige zu vergrößern
+oder zu verkleinern. Sie können auch mit zwei Fingern
+auf das Display tippen und die Finger spreizen (zum
+Verkleinern bewegen Sie die Finger näher zusammen).
+•	 Wählen Sie Diashow aus, um eine Diashow mit Bildern
+im ausgewählten Ordner zu starten. Tippen Sie auf das
+Display, um die Diashow anzuhalten.
+
+››Video wiedergeben
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Galerie aus.
+
+2	 Wählen Sie ein Video (mit dem Symbol
+3	
+4	
+
+) aus, das
+wiedergegeben werden soll.
+Drehen Sie das Gerät entgegen dem Uhrzeigersinn (nach
+links) in die Querformatansicht.
+Steuern Sie die Wiedergabe mit den virtuellen Tasten.
+
+››Bilder und Videos für andere Benutzer
+freigeben
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Galerie aus.
+
+2	 Wählen Sie einen Ordner aus.
+3	 Wählen Sie eine Bild- oder Videodatei aus.
+4	 Drücken Sie [ ] → Gemeinsam → eine Freigabeoption.
+Unterhaltung
+
+59
+
+Musik
+In diesem Abschnitt erfahren Sie, wie Sie Ihre Lieblingsmusik
+unterwegs mit dem MP3-Player wiedergeben. Der MP3Player unterstützt die folgenden Dateiformate: mp3, ogg, aac.
+Bevor Sie den MP3-Player verwenden können, müssen Sie
+eine Speicherkarte einsetzen.
+•	 Außerdem können Sie Musikdateien in den
+folgenden Formaten wiedergeben, wenn Sie sie
+über Eigene Dateien, aus Multimedia-Nachrichten
+oder im Webbrowser öffnen: mid, xmf, rtttl, imy, rtx,
+ota, amr, wav, mxmf.
+•	 Einige Dateiformate werden abhängig von der auf
+dem Gerät installierten Software nicht unterstützt.
+•	 Wenn die Dateigröße den verfügbaren Speicher
+übersteigt, kann beim Öffnen von Dateien ein Fehler
+auftreten.
+
+60 Unterhaltung
+
+››Musikdateien zur Speicherkarte
+hinzufügen
+
+Übertragen Sie zuerst Dateien auf die Speicherkarte:
+•	 Herunterladen aus dem mobilen Web. ► S. 74
+•	 Herunterladen von einem PC mit der optionalen
+Anwendung „Samsung Kies“. ► S. 90
+•	 Empfang über Bluetooth. ► S. 86
+•	 Kopieren auf die Speicherkarte. ► S. 90
+
+››Musik wiedergeben
+
+Nach der Übertragung von Musikdateien auf das Gerät oder
+die Speicherkarte:
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Musik aus.
+
+2	 Wählen Sie eine Musikkategorie → eine Musikdatei aus.
+
+3	 Steuern Sie die Wiedergabe mithilfe der folgenden Tasten:
+
+1
+2
+3
+
+1
+
+Funktion
+
+3
+
+4
+5
+6
+
+Nummer
+
+Nummer
+
+7
+
+Funktion
+Wiedergabe unterbrechen. Wählen Sie
+zum Fortsetzen der Wiedergabe aus.
+
+Zum Anfang des aktuellen oder eines
+anderen vorherigen Titels zurückspringen,
+in einer Datei rückwärts spulen (tippen
+und halten).
+Durch Ziehen der Leiste zu einem Punkt in
+der Datei wechseln.
+
+4
+
+Wiedergabeliste öffnen.
+
+5
+
+Zufallswiedergabemodus aktivieren.
+
+2
+
+6
+
+7
+
+Wiederholungsmodus ändern (aus,
+einen Titel wiederholen oder alle Titel
+wiederholen).
+Zum Anfang des nächsten oder eines
+anderen folgenden Titels springen, in
+einer Datei vorwärts spulen (tippen und
+halten).
+
+Unterhaltung
+
+61
+
+•	 Sie können die Wiedergabe mit einem Headset
+
+steuern: Drücken Sie die Headset-Taste, um die
+Wiedergabe zu starten oder anzuhalten. Sie können
+die Headset-Taste auch drücken und halten, um den
+MP3-Player zu starten.
+•	 Mit SRS CS Headphone™ können Sie bei
+der Wiedergabe von Mehrkanalinhalten wie
+DVD-Spielfilmen einen beeindruckenden
+5.1-Surroundklang mit normalen Ohr- oder
+Kopfhörern genießen.
+•	 WOW HD™ sorgt für eine erhebliche
+Klangverbesserung und liefert Ihnen einen
+dynamischen 3D-Musikgenuss mit satten tiefen
+Bässen und brillanten klaren Höhen.
+
+››Wiedergabeliste erstellen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Musik aus.
+
+2	 Wählen Sie eine Kategorie → eine Musikdatei aus.
+62 Unterhaltung
+
+3	 Drücken Sie [
+→ Neu.
+
+] → Zu Wiedergabeliste hinzufügen
+
+4	 Geben Sie einen Titel für die neue Wiedergabeliste ein
+und wählen Sie Speichern aus.
+
+5	 Um der Wiedergabeliste weitere Musikdateien
+
+hinzuzufügen, geben Sie eine Datei wieder und drücken
+Sie [ ] → Zu Wiedergabeliste hinzufügen → die neue
+Wiedergabeliste.
+
+››Party-Zufallswiedergabefunktion
+verwenden
+
+Wenn Sie die Party-Zufallswiedergabefunktion aktivieren,
+gibt das Gerät zufällig ausgewählte Musikdateien wieder.
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Musik aus.
+
+2	 Drücken Sie [ ] → Party-Zufallswiedergabe.
+3	 Drücken Sie zum Aktivieren oder Deaktivieren der
+Party-Zufallswiedergabefunktion [
+Zufallswiedergabe aus.
+
+] → Party-
+
+››MP3-Player-Einstellungen anpassen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+2	
+3	
+4	
+
+wählen Sie Musik aus.
+Wählen Sie eine Kategorie → eine Musikdatei aus.
+Drücken Sie [ ] → Einstellungen.
+Ändern Sie die folgenden Einstellungen, um den MP3Player individuell anzupassen:
+Option
+
+Funktion
+
+5.1-Kanal
+
+5.1-Kanal-Surround-Soundsystem
+aktivieren oder deaktivieren, wenn
+ein Headset angeschlossen ist.
+
+Equalizer
+
+Standard-Equalizertyp auswählen.
+
+UKW-Radio
+In diesem Abschnitt erfahren Sie, wie Sie mit dem UKW-Radio
+Musik und Nachrichten hören. Um UKW-Radio zu hören,
+müssen Sie ein Headset anschließen, das als Radioantenne
+dient.
+
+››UKW-Radio hören
+
+1	 Schließen Sie ein Headset an das Gerät an.
+2	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+
+wählen Sie UKW-Radio aus.
+Das UKW-Radio sucht und speichert verfügbare Sender
+automatisch.
+Wenn Sie das UKW-Radio zum ersten Mal einschalten,
+werden Sie aufgefordert, den automatischen
+Sendersuchlauf zu starten.
+
+Unterhaltung
+
+63
+
+3	 Bedienen Sie das UKW-Radio mithilfe der folgenden
+Tasten:
+
+Nummer
+
+Funktion
+
+4
+
+5
+
+2
+3
+
+3
+
+4
+
+Nummer
+
+Funktion
+
+1
+
+UKW-Radio ausschalten. Wählen Sie
+aus, um das UKW-Radio einzuschalten.
+
+2
+
+Frequenz ändern.
+
+64 Unterhaltung
+
+Nach einem verfügbaren Radiosender
+suchen.
+Aktuellen Radiosender zur Favoritenliste
+hinzufügen.
+
+5
+
+1
+
+Lautstärke einstellen.
+
+3
+
+››Radiosender automatisch speichern
+
+1	 Schließen Sie ein Headset an das Gerät an.
+2	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie UKW-Radio aus.
+] → Scannen → eine Scanoption.
+Das UKW-Radio sucht und speichert verfügbare Sender
+automatisch.
+
+3	 Drücken Sie [
+
+››Radiosender zur Favoritenliste hinzufügen
+1	 Schließen Sie ein Headset an das Gerät an.
+2	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+3	
+4	
+5	
+
+wählen Sie UKW-Radio aus.
+aus, um das UKW-Radio einzuschalten.
+Wählen Sie
+Blättern Sie zum gewünschten Sender.
+Wählen Sie
+aus, um den Sender der Favoritenliste
+hinzuzufügen.
+Sie können einen Namen für einen Radiosender
+hinzufügen oder einen Radiosender entfernen. Tippen
+Sie dazu auf einen Radiosender in der Favoritenliste,
+halten Sie den Finger darauf und wählen Sie
+Entfernen oder Um-benennen aus.
+
+››UKW-Radio-Einstellungen anpassen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie UKW-Radio aus.
+
+2	 Drücken Sie [ ] → Einstellungen.
+3	 Ändern Sie die folgenden Einstellungen, um das UKWRadio individuell anzupassen:
+Option
+
+Funktion
+
+REGION
+
+Wählen Sie Ihre Region aus.
+
+Hintergrundmusik
+
+Legen Sie fest, ob das UKWRadio während der Verwendung
+anderer Anwendungen im
+Hintergrund laufen soll. Wenn
+diese Funktion aktiviert ist,
+können Sie das UKW-Radio
+über die Schnellzugriffanzeige
+bedienen.
+
+Unterhaltung
+
+65
+
+Option
+
+Sender-ID
+anzeigen
+
+Alternative
+Frequenz
+UKW-Auto aus
+
+66 Unterhaltung
+
+Funktion
+Legen Sie fest, ob die Sender-ID
+auf dem UKW-Radio-Bildschirm
+angezeigt wird. Sender-IDs
+sind nur für Radiosender
+verfügbar, die diese Information
+bereitstellen.
+Legen Sie fest, ob das UKW-Radio
+bei schwachem Signal versuchen
+soll, einen anderen Radiosender
+zu finden.
+Das UKW-Radio wird nach
+einer vorgegebenen Zeitdauer
+automatisch ausgeschaltet.
+
+Persönliches
+Kontakte
+In diesem Abschnitt erfahren Sie, wie Sie eine Liste Ihrer
+persönlichen oder geschäftlichen Kontakte erstellen und
+verwalten. Sie können u. a. Namen, Mobiltelefonnummern,
+Festnetznummern, E-Mail-Adressen und Geburtstage für Ihre
+Kontakte speichern.
+
+››Kontakt erstellen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+2	
+3	
+4	
+5	
+
+wählen Sie aus.
+Wählen Sie aus.
+Wählen Sie einen Speicherort aus.
+Wenn Sie über mehrere Konten verfügen, wählen Sie das
+Konto aus, dem Sie den Kontakt hinzufügen möchten.
+Geben Sie die Kontaktinformationen ein.
+Wählen Sie Speichern, um den Kontakt zu speichern.
+
+Sie können auch in der Wählanzeige einen Kontakt erstellen.
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie
+
+→ Tastatur aus.
+
+2	 Geben Sie eine Telefonnummer ein.
+3	 Wählen Sie Zu Telefonbuch hinzufügen →
+4	 Wählen Sie einen Speicherort aus.
+5	
+6	
+
+aus.
+
+Wenn Sie über mehrere Konten verfügen, wählen Sie das
+Konto aus, dem Sie den Kontakt hinzufügen möchten.
+Geben Sie die Kontaktinformationen ein.
+Wählen Sie Speichern, um den Kontakt zu speichern.
+
+››Kontakte suchen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie
+
+aus.
+
+2	 Blättern Sie in der Kontaktliste nach oben oder unten.
+3	 Wählen Sie den Namen eines Kontakts aus.
+Persönliches
+
+67
+
+Sobald Sie den Kontakt gefunden haben, können Sie:
+•	 den Kontakt anrufen, indem Sie eine Nummer wählen.
+•	 eine Nachricht senden, indem Sie Nachricht auswählen.
+•	 eine E-Mail senden, indem Sie eine E-Mail-Adresse
+auswählen.
+•	 die Kontaktdaten bearbeiten, indem Sie [ ] →
+Bearbeiten drücken.
+
+››Kurzwahlnummer festlegen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie
+
+aus.
+
+2	 Drücken Sie [ ] → Optionen → Kurzwahl.
+3	 Wählen Sie eine Speicherplatznummer → einen Kontakt
+aus.
+Sie können diese Nummer einfach wählen, indem
+Sie die Speicherplatznummer auf der Wählanzeige
+berührt halten.
+
+››Eigene Visitenkarte erstellen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie
+
+Sie können Ihre Visitenkarte versenden, indem Sie sie
+an eine Nachricht oder E-Mail anhängen oder sie über
+die drahtlose Bluetooth-Funktion übertragen.
+
+››Kontakte aus Ihren Community-Konten
+abrufen
+
+Sie können die Liste von Community-Websitekonten
+anzeigen und ein Konto auswählen, um Ihren
+Telefonkontakten einen Kontakt von der Website
+hinzuzufügen.
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie
+
+68 Persönliches
+
+aus.
+
+2	 Drücken Sie [ ] → Eigenes Profil.
+3	 Geben Sie Ihre persönlichen Daten ein.
+4	 Wählen Sie Speichern.
+
+aus.
+
+2	 Drücken Sie [ ] → Freunde abrufen.
+3	 Wählen Sie ein Konto aus.
+
+2	 Drücken Sie [
+
+Indem Sie Kontaktgruppen erstellen, können Sie mehrere
+Kontakte verwalten und Nachrichten oder E-Mails an eine
+ganze Gruppe senden. Erstellen Sie zunächst eine Gruppe.
+
+So kopieren Sie Kontakte von Ihrem Gerät auf die SIM- oder
+USIM-Karte:
+
+››Gruppe von Kontakten erstellen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+2	
+3	
+4	
+
+wählen Sie → Gruppen aus.
+Drücken Sie [ ] → Erstellen.
+Geben Sie einen Namen für die Gruppe ein und wählen
+Sie einen Klingelton für die Gruppe aus.
+Wählen Sie Speichern.
+
+››Kontakte kopieren
+
+So kopieren Sie Kontakte von der SIM- oder USIM-Karte auf
+Ihr Gerät:
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie
+
+aus.
+
+3	
+
+] → Importieren/Exportieren → Von
+SIM-Karte importieren.
+Wählen Sie die zu kopierenden Kontakte und dann
+Importieren aus.
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie
+
+aus.
+] → Importieren/Exportieren → Auf
+SIM-Karte exportieren.
+Wählen Sie die zu kopierenden Kontakte und dann
+Exportieren → Ja aus.
+
+2	 Drücken Sie [
+3	
+
+››Kontakte importieren oder exportieren
+
+So importieren Sie Kontaktdateien (im vcf-Format) von einer
+Speicherkarte auf das Gerät:
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie
+
+aus.
+
+Persönliches
+
+69
+
+2	 Drücken Sie [
+3	
+4	
+5	
+
+] → Importieren/Exportieren → Von
+SD-Karte importieren.
+Wählen Sie einen Speicherort aus.
+Wenn Sie über mehrere Konten verfügen, wählen Sie das
+Konto aus, dem Sie den Kontakt hinzufügen möchten.
+Wählen Sie eine Option zum Importieren einer einzelnen,
+mehrerer oder sämtlicher Kontaktdateien und dann OK
+aus.
+Wählen Sie die zu importierenden Kontaktdateien und
+dann OK aus.
+
+››Kommunikationsprotokoll anzeigen
+
+Sie können das Kommunikationsprotokoll für Anrufe,
+Nachrichten, E-Mails oder SNS-Threads anzeigen.
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie
+
+→ Verlauf aus.
+
+2	 Wählen Sie ein Element aus, das Sie anzeigen möchten.
+
+››Aktivitäten in sozialen Netzwerken
+anzeigen
+
+So exportieren Sie Kontakte vom Gerät auf eine
+Speicherkarte:
+
+Sie können die neuesten Aktivitäten von Kontakten bei
+sozialen Netzwerken wie Facebook, MySpace und Twitter
+anzeigen.
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+
+2	
+
+2	 Wählen Sie ein Element aus, das Sie anzeigen möchten.
+
+3	
+
+wählen Sie aus.
+Drücken Sie [ ] → Importieren/Exportieren → Auf
+SD-Karte exportieren.
+Wählen Sie zum Bestätigen Ja aus.
+
+70 Persönliches
+
+wählen Sie
+
+→ Aktivitäten aus.
+
+Kalender
+In diesem Abschnitt erfahren Sie, wie Sie tägliche,
+wöchentliche oder monatliche Ereignisse einrichten und
+verwalten und wie Sie Alarme einstellen, die Sie an wichtige
+Ereignisse erinnern.
+
+››Ereignis erstellen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+2	
+3	
+4	
+
+wählen Sie Kalender aus.
+Drücken Sie [ ] → Optionen → Erstellen.
+Geben Sie das Ereignis mit den gewünschten Details ein.
+Wählen Sie Fertig aus.
+
+››Ereignisse anzeigen
+
+So ändern Sie die Kalenderansicht:
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+2	
+
+wählen Sie Kalender aus.
+Drücken Sie [ ] und wählen Sie Tag, Woche oder
+Monat aus.
+
+So zeigen Sie Ereignisse für ein bestimmtes Datum an:
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Kalender aus.
+
+2	 Wählen Sie ein Datum im Kalender aus.
+3	
+
+Drücken Sie zum Auswählen des heutigen Datums
+[ ] → Heute.
+Wählen Sie ein Ereignis aus, um die zugehörigen Details
+anzuzeigen.
+
+››Ereigniserinnerung ausschalten
+
+Wenn Sie einen Alarm für ein Kalenderereignis einstellen,
+wird das Alarmsymbol zur angegebenen Zeit angezeigt.
+
+1	 Öffnen Sie die Schnellzugriffanzeige oben auf dem
+Bildschirm.
+
+2	 Wählen Sie eine Erinnerung aus, um weitere Details zum
+betreffenden Ereignis anzuzeigen.
+
+3	 Um die Erinnerung vorübergehend oder dauerhaft
+
+auszuschalten, wählen Sie Schlummern für alle oder
+Alle verwerfen aus.
+Persönliches
+
+71
+
+Memo
+In diesem Abschnitt erfahren Sie, wie Sie wichtige
+Informationen speichern und zu einem späteren Zeitpunkt
+anzeigen.
+
+››Memo erstellen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Memo aus.
+
+2	 Wählen Sie Memo er. aus oder drücken Sie [
+3	
+4	
+5	
+6	
+
+]→
+Erstellen.
+Geben Sie den Memotext ein.
+Drücken Sie [ ], um die Tastatur auszublenden.
+Wählen Sie eine Farbe aus, um die Hintergrundfarbe zu
+ändern.
+Wählen Sie Speichern.
+
+››Memos anzeigen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Memo aus.
+
+2	 Wählen Sie ein Memo aus, um die zugehörigen Details
+anzuzeigen.
+Sie können das Memo versenden, indem Sie es
+antippen, halten und Senden per → eine Option
+auswählen.
+
+Sprachmemo
+In diesem Abschnitt erfahren Sie, wie Sie die
+Sprachmemofunktion des Geräts nutzen.
+Bevor Sie Sprachmemos aufnehmen können, müssen Sie
+eine Speicherkarte einsetzen.
+
+››Sprachmemo aufnehmen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Sprachmemo aus.
+
+72 Persönliches
+
+2	 Wählen Sie Aufnahme aus, um die Aufnahme zu starten.
+3	 Sprechen Sie in das Mikrofon.
+4	 Wenn Sie Ihr Memo aufgenommen haben, wählen Sie
+5	
+
+Stopp aus.
+Das Memo wird automatisch gespeichert.
+Wählen Sie zum Aufnehmen weiterer Sprachmemos am
+unteren Bildschirmrand Aufzeichnen aus.
+
+››Sprachmemo wiedergeben
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Sprachmemo aus.
+
+2	 Wählen Sie Liste aus.
+3	 Wählen Sie das Sprachmemo aus, das Sie wiedergeben
+möchten.
+Sie können das Sprachmemo an andere senden,
+indem Sie [ ] → Gemeinsam nutzen drücken.
+
+Persönliches
+
+73
+
+Internet
+Internetdienste erfordern eine Datenverbindung.
+Informationen zur optimalen Datenverbindung erhalten Sie
+von Ihrem Netzbetreiber.
+
+Internet
+In diesem Abschnitt erfahren Sie, wie Sie Ihre bevorzugten
+Webseiten aufrufen und Favoriten erstellen.
+•	 Beachten Sie, dass bei der Nutzung des Internets
+und beim Herunterladen von Medien zusätzliche
+Gebühren anfallen können. Einzelheiten teilt Ihnen
+Ihr Netzbetreiber auf Anfrage mit.
+•	 Je nach Netzbetreiber kann das Webbrowser-Menü
+anders bezeichnet sein.
+•	 Die verfügbaren Symbole variieren abhängig vom
+Netzbetreiber oder von der Region.
+
+74 Internet
+
+››Webseiten durchsuchen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+
+2	
+
+wählen Sie Internet aus, um eine Startseite aufzurufen.
+Wählen Sie zum Aufrufen einer bestimmten Webseite
+das URL-Eingabefeld aus, geben Sie die Webadresse der
+Webseite ein und wählen Sie aus.
+Navigieren Sie in den Webseiten mithilfe der folgenden
+Tasten:
+1
+
+2
+
+Nummer
+1
+2
+
+Funktion
+Adresse (URL) der gewünschten Webseite
+eingeben.
+Liste mit gespeicherten Favoriten,
+häufig besuchten Seiten und aktuellem
+Internetverlauf öffnen.
+
+Je nach Region oder Netzbetreiber kann die
+Darstellung dieses Bildschirms variieren.
+Beim Navigieren auf einer Webseite stehen Ihnen folgende
+Optionen zur Verfügung:
+•	 Tippen Sie zum Vergrößern oder Verkleinern zweimal
+auf das Display. Sie können auch den Zweifinger-Zoom
+verwenden: Setzen Sie zwei Finger auf das Display und
+bewegen Sie sie langsam zusammen oder auseinander.
+•	 Drücken Sie zum Öffnen eines neuen Fensters [ ] →
+Neues Fenster.
+•	 Drücken Sie zum Anzeigen der aktiven Fenster [ ] →
+Fenster. Sie können mehrere Seiten öffnen und beliebig
+zwischen ihnen wechseln.
+
+•	 Drücken Sie [
+
+] → Aktualis., um die aktuelle Internetseite
+zu aktualisieren.
+•	 Wählen Sie [ ] → Vorwärts aus, um zur nächsten Seite im
+Verlauf zu wechseln.
+•	 Drücken Sie [ ] → Lesezeichen hinz., um die aktuelle
+Webseite als Favoriten zu speichern.
+•	 Drücken Sie [ ] → Optionen → Schnellz. für Start hinz.,
+um dem Standby-Bildschirm einen Schnellzugriff für die
+aktuelle Webseite hinzuzufügen.
+•	 Drücken Sie [ ] → Optionen → RSS-Feeds hinzufügen,
+um den RSS-Feed hinzuzufügen.
+•	 Drücken Sie [ ] → Optionen → Auf Seite finden, um auf
+der Webseite nach Text zu suchen.
+•	 Drücken Sie [ ] → Optionen → Seiteninfo, um Details
+zur Webseite anzuzeigen.
+•	 Drücken Sie [ ] → Optionen → Seite freigeben, um die
+Webadresse (URL) der Webseite zu verschicken.
+
+Internet
+
+75
+
+•	 Drücken Sie [
+
+] → Optionen → Downloads, um den
+Download-Verlauf anzuzeigen.
+•	 Drücken Sie [ ] → Optionen → Einstellungen, um die
+Browsereinstellungen anzupassen.
+
+››Bevorzugte Webseiten als Favoriten
+speichern
+
+Wenn Sie die Adresse (URL) der Webseite kennen, können
+Sie manuell einen Favoriten hinzufügen. So fügen Sie einen
+Favoriten hinzu:
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Internet aus.
+
+2	 Wählen Sie → Favoriten aus.
+3	 Wählen Sie Hinzufügen aus oder drücken Sie [
+4	
+5	
+
+]→
+Zuletzt angezeigte Seite als Lesezeichen festlegen.
+Geben Sie einen Seitentitel und eine Internetadresse ein.
+Wählen Sie OK aus.
+
+76 Internet
+
+Wenn Sie einen Favoriten in der Favoritenliste antippen und
+den Finger darauf halten, stehen Ihnen folgende Optionen
+zur Verfügung:
+•	 Wählen Sie Öffnen aus, um die Webseite im aktuellen
+Fenster zu öffnen.
+•	 Wählen Sie In neu. Fenster öff. aus, um die Webseite in
+einem neuen Fenster zu öffnen.
+•	 Wählen Sie Favorit bearbeiten, um die Details eines
+Favoriten zu bearbeiten.
+•	 Wählen Sie Schnellz. für Start hinz. aus, um den FavoritenSchnellzugriff dem Standby-Bildschirm hinzuzufügen.
+•	 Wählen Sie Link freigeben aus, um die Webadresse der
+Webseite zu verschicken.
+•	 Wählen Sie Link-URL kop. aus, um die Webadresse der
+Webseite zu kopieren.
+•	 Wählen Sie Lesezeichen löschen aus, um den Favoriten
+zu löschen.
+•	 Wählen Sie Als Startseite festlegen aus, um die Webseite
+als Startseite für den Browser zu verwenden.
+
+››Häufig besuchte Seiten oder aktuellen
+
+•	 zwischen Gebäuden, in Tunneln, unterirdischen Passagen
+
+1	
+
+•	 bei schlechtem Wetter
+•	 in der Nähe von Hochspannungsleitungen oder
+
+2	
+3	
+
+Verlauf aufrufen
+
+Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Internet aus.
+Wählen Sie → Häufig besucht oder Verlauf aus.
+Wählen Sie eine Webseite aus, die Sie aufrufen möchten.
+Über das Sternsymbol auf der rechten Seite können
+Sie eine Webseite zur Favoritenliste hinzufügen.
+
+Maps
+
+In diesem Abschnitt erfahren Sie, wie Sie mit Google Maps™
+Ihre Position finden, auf der Karte nach Straßen, Städten und
+Ländern suchen und Wegbeschreibungen abrufen.
+Unter den folgenden Bedingungen kann der Empfang von
+GPS-Signalen eingeschränkt sein:
+
+oder in Gebäuden
+
+elektromagnetischen Feldern
+Während der Verwendung der GPS-Funktionen darf
+die interne Antenne nicht berührt oder mit den
+Händen oder anderen Gegenständen abgedeckt
+werden.
+Diese Funktion ist je nach Region oder Netzbetreiber
+u. U. nicht verfügbar.
+
+››Positionsbestimmungsdienste für die
+Nutzung mit Google Maps aktivieren
+
+Sie müssen Positionsbestimmungsdienste aktivieren, um
+Ihren Standort zu finden und die Karte zu durchsuchen.
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Einstellungen → Standort und Sicherheit
+aus.
+Internet
+
+77
+
+2	 Passen Sie die folgenden Einstellungen an, um die
+Standortdienste zu aktivieren:
+Option
+Drahtlosnetze
+verwenden
+GPS-Satelliten
+verwenden
+
+Funktion
+Bei Auswahl dieser Einstellung
+werden WLAN-Netze und/oder
+mobile Netzwerke verwendet, um
+Ihren Standort zu ermitteln.
+Bei Auswahl dieser Einstellung
+werden GPS-Satelliten verwendet,
+um Ihren Standort zu ermitteln.
+
+››Nach einem bestimmten Ort suchen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+2	
+3	
+
+wählen Sie Maps aus.
+Die Karte zeigt Ihre aktuelle Position an.
+Wenn Sie diese Anwendung zum ersten Mal starten,
+müssen Sie zum Bestätigen OK auswählen.
+Drücken Sie [ ] → Suchen oder wählen Sie aus.
+
+78 Internet
+
+4	 Geben Sie ein Stichwort für den Standort ein und wählen
+
+Sie aus.
+•	 Wählen Sie aus, um einen Standort per
+Spracheingabe zu suchen.
+•	 Wählen Sie
+oder
+aus, um die Anzeige zu
+vergrößern oder zu verkleinern.
+•	 Wählen Sie aus, um der Karte Ebenen hinzuzufügen.
+•	 Wählen Sie aus, um Ihren aktuellen Standort
+anzuzeigen.
+Wählen Sie den Ballon für den Namen des Standorts
+und dann → aus, um den Standort zu markieren.
+
+››Wegbeschreibung zu einem bestimmten
+Ziel abrufen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Maps aus.
+
+2	 Drücken Sie [ ] → Route.
+3	 Geben Sie die Adressen des Start- und des Zielorts ein.
+
+4	
+5	
+6	
+7	
+
+Wählen Sie → Kontakte oder Punkt auf der Karte aus,
+um eine Adresse aus der Kontaktliste einzugeben oder
+den Standort auf der Karte anzuzeigen.
+Wählen Sie eine Fortbewegungsart (Auto, Bus oder zu
+Fuß) und wählen Sie Los aus.
+Wählen Sie eine Route aus, um die zugehörigen Details
+anzuzeigen (falls erforderlich).
+Wählen Sie Auf Karte anzeigen aus.
+Drücken Sie [ ] → Karte leeren, wenn Sie fertig sind.
+
+Latitude
+In diesem Abschnitt erfahren Sie, wie Sie über Google
+Latitude™ Ihren Standort Freunden mitteilen und den
+Standort von Freunden anzeigen können.
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Latitude aus.
+Das Gerät verbindet sich automatisch mit Latitude.
+
+2	 Drücken Sie [
+3	
+
+4	
+
+] → Freunde hinzufügen → Aus
+Kontakten wählen oder Über E-Mail-Adresse
+hinzufügen.
+Wählen Sie Freunde aus, die Sie hinzufügen möchten,
+oder geben Sie eine E-Mail-Adresse ein und wählen Sie
+Freunde hinzufügen → Ja aus.
+Wenn der Freund die Einladung annimmt, können Sie
+Standorte übermitteln.
+Drücken Sie [ ] → Kartenansicht.
+Die Standorte Ihrer Freunde werden auf der Karte mit
+ihren Fotos gekennzeichnet.
+
+Places
+In diesem Abschnitt erfahren Sie, wie Sie einen Ort in Ihrer
+Nähe finden.
+Diese Funktion ist je nach Region oder Netzbetreiber
+u. U. nicht verfügbar.
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Places aus.
+
+Internet
+
+79
+
+2	 Wählen Sie eine Kategorie aus.
+3	
+
+Das Gerät sucht nach Orten im Umkreis Ihres Standorts,
+die mit der Kategorie in Beziehung stehen.
+Wählen Sie einen Ortsnamen aus, um die zugehörigen
+Details anzuzeigen.
+Wählen Sie aus, um den Ort auf der Karte anzuzeigen.
+
+Navigation
+In diesem Abschnitt erfahren Sie, wie Sie das GPSNavigationssystem verwenden, um ein Ziel mithilfe der
+Sprachführung zu finden und anzuzeigen.
+Diese Funktion ist je nach Region oder Netzbetreiber
+u. U. nicht verfügbar.
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Navigation aus.
+
+80 Internet
+
+2	 Wenn Sie diese Anwendung zum ersten Mal starten,
+müssen Sie zum Bestätigen Annehmen auswählen.
+
+3	 Geben Sie das Ziel mit einer der folgenden Methoden ein:
+•	 Ziel einsprechen: Sagen Sie Ihr Ziel laut an, z. B.
+„Navigieren zu Ziel“.
+
+•	 Ziel eintippen: Geben Sie das Ziel über die virtuelle
+Tastatur ein.
+
+•	 Kontakte: Wählen Sie das Ziel aus den Adressen Ihrer
+Kontakte aus.
+
+•	 Markierte Orte: Wählen Sie das Ziel in der Liste der
+markierten Orte aus.
+
+4	 Wählen Sie Installieren aus, um die sprachgeführte
+Navigation zu verwenden.
+
+5	 Drücken Sie zum Beenden der Navigation [
+Navigation beenden.
+
+]→
+
+Suche
+
+2	 Wenn Sie diese Anwendung zum ersten Mal starten,
+
+Sie können nach Anwendungen im Gerät und bestimmten
+Daten im Internet suchen.
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+
+3	 Wählen Sie ein Video in der Liste aus.
+4	 Drehen Sie das Gerät entgegen dem Uhrzeigersinn (nach
+
+2	
+
+5	 Steuern Sie die Wiedergabe mithilfe der folgenden Tasten:
+
+3	
+
+wählen Sie Suche.
+Geben Sie einen Buchstaben oder ein Wort der gesuchten
+Daten ein.
+Wählen Sie den Namen des Elements aus, das Sie
+aufrufen möchten.
+
+YouTube
+In diesem Abschnitt erfahren Sie, wie Sie Videos auf YouTube
+anzeigen und hochladen.
+Diese Funktion ist je nach Region oder Netzbetreiber
+u. U. nicht verfügbar.
+
+››Videos wiedergeben
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie YouTube aus.
+
+müssen Sie zur Bestätigung Akzeptieren auswählen.
+
+links) in die Querformatansicht.
+
+2
+
+1
+
+Nummer
+
+Funktion
+
+1
+
+Durch Ziehen der Leiste zu einem Punkt in
+der Datei wechseln.
+
+2
+
+Anzeigequalität ändern.
+Internet
+
+81
+
+››Videos hochladen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+2	
+3	
+4	
+5	
+6	
+
+wählen Sie YouTube aus.
+Drücken Sie [ ] → Hochladen und wählen Sie ein Video
+aus. Fahren Sie mit Schritt 8 fort.
+Wenn Sie neue Videos hochladen möchten, wählen Sie
+aus, um die Kamera einzuschalten.
+Drehen Sie das Gerät entgegen dem Uhrzeigersinn (nach
+links) in die Querformatansicht.
+Richten Sie das Objektiv auf das gewünschte Motiv und
+nehmen Sie ggf. Einstellungen vor.
+Wählen Sie aus, um die Aufnahme zu starten.
+Wählen Sie aus, um die Aufnahme anzuhalten.
+
+7	 Wählen Sie Speichern aus, um das aufgenommene Video
+hochzuladen.
+
+8	 Geben Sie Ihren Benutzernamen und Ihr Passwort ein
+und wählen Sie Anmelden aus.
+
+News und Wetter
+In diesem Abschnitt erfahren Sie, wie Sie
+Wetterinformationen anzeigen und aktuelle Nachrichten und
+andere Nachrichtenartikel lesen.
+
+››Wetterinformationen anzeigen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie News und Wetter aus.
+
+2	 Wählen Sie oben auf dem Bildschirm Google Weather
+aus.
+Das Gerät ermittelt den gegenwärtigen Standort und
+zeigt Wetterinformationen an.
+
+82 Internet
+
+Sie können den Standort ändern, um die
+Wetterinformationen einer anderen Region
+anzuzeigen. Drücken Sie [ ] → Einstellungen →
+Google Weather-Einstellungen und deaktivieren Sie
+Standort verwenden. Wählen Sie dann in Standort
+festlegen einen Standort aus.
+
+››Nachrichten lesen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie News und Wetter aus.
+
+2	 Wählen Sie oben auf dem Bildschirm ein
+Nachrichtenthema aus.
+
+3	 Wählen Sie einen Artikel aus, den Sie anzeigen möchten.
+Drücken Sie [ ] → Einstellungen → Google
+News-Einstellungen → Themen auswählen, um
+Nachrichtenthemen hinzuzufügen.
+
+Samsung Apps
+Mit Samsung Apps können Sie einfach und schnell
+eine Vielzahl von Anwendungen direkt auf das Gerät
+herunterladen. Samsung Apps bietet Ihnen sofortigen
+Zugang zu einer großen Auswahl von Anwendungen für
+Mobilgeräte, z. B. Spiele, Nachrichten, Informationen, mobile
+Vernetzungsdienste, Navigation, gesundheitsbezogene
+Anwendungen und mehr.
+Mit den voll optimierten Anwendungen von Samsung Apps
+können Sie Ihr Gerät „smarter“ machen. Entdecken Sie die
+verblüffenden Anwendungen und bereichern Sie Ihr mobiles
+Leben.
+•	 Je nach Region oder Netzbetreiber steht diese
+Funktion u. U. nicht zur Verfügung.
+•	 Weitere Informationen finden Sie auf
+www.samsungapps.com.
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Samsung Apps aus.
+
+2	 Suchen Sie nach Anwendungen, die Sie nutzen möchten,
+und laden Sie sie herunter.
+
+Internet
+
+83
+
+Market
+Sie können Spiele, Klingeltöne und andere Anwendungen
+von Android Market herunterladen.
+Diese Funktion ist je nach Region oder Netzbetreiber
+u. U. nicht verfügbar.
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Market aus.
+
+2	 Suchen Sie nach einer Datei und laden Sie sie auf Ihr
+Gerät herunter. ► S. 35
+
+84 Internet
+
+Verbindungen
+
+•	 Samsung ist nicht für den Verlust, das Abhören oder
+
+den Missbrauch von Daten verantwortlich, die mit
+der drahtlosen Bluetooth-Funktion gesendet oder
+empfangen werden.
+•	 Stellen Sie stets sicher, dass Sie Daten nur mit
+Geräten weitergeben und empfangen, die
+vertrauenswürdig und ordnungsgemäß abgesichert
+sind. Wenn sich Hindernisse zwischen den Geräten
+befinden, kann sich die maximal mögliche
+Entfernung reduzieren.
+•	 Einige Geräte, insbesondere solche, die nicht
+von Bluetooth SIG getestet oder zugelassen
+wurden, sind möglicherweise nicht mit dem Gerät
+kompatibel.
+
+Bluetooth
+Bluetooth ist eine drahtlose Kommunikationstechnologie mit
+kurzer Reichweite, mit der sich über Entfernungen von ca.
+10 Metern Daten und Informationen kontaktfrei austauschen
+lassen.
+Sie müssen die Geräte für eine Bluetooth-Übertragung nicht
+aufeinander ausrichten. Wenn die Geräte sich innerhalb
+des Nutzungsbereichs befinden, können Informationen
+zwischen ihnen ausgetauscht werden, auch wenn sie sich in
+verschiedenen Räumen befinden.
+
+››Drahtlose Bluetooth-Funktion aktivieren
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste,
+2	
+
+und wählen Sie Einstellungen → Drahtlos und
+Netzwerk → Bluetooth-Einstellungen aus.
+Wählen Sie Bluetooth, um die drahtlose BluetoothFunktion zu aktivieren.
+
+Verbindungen
+
+85
+
+››Andere Bluetooth-fähige Geräte finden
+
+››Daten über die drahtlose Bluetooth-
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste, und
+
+1	 Wählen Sie eine Datei oder ein Element (z. B. einen
+
+2	
+3	
+
+2	
+
+und koppeln
+
+wählen Sie Einstellungen → Drahtlos und Netzwerk →
+Bluetooth-Einstellungen → Geräte suchen aus.
+Wählen Sie ein Gerät aus.
+Geben Sie eine PIN für die drahtlose Bluetooth-Funktion
+oder die Bluetooth-PIN des anderen Geräts (falls
+vorhanden) ein und wählen Sie OK aus. Stattdessen
+können Sie auch Annahme auswählen, um die PIN
+zwischen Ihrem und dem anderen Gerät zuzuordnen.
+Wenn der Besitzer des anderen Geräts dieselbe PIN
+eingibt oder die Verbindung annimmt, ist die Kopplung
+abgeschlossen. Nach einer erfolgreichen Kopplung sucht
+das Gerät automatisch nach verfügbaren Diensten.
+Einige Geräte, insbesondere Headsets oder KfzFreisprecheinrichtungen, haben eventuell eine feste
+Bluetooth-PIN wie 0000. Wenn das andere Gerät eine
+PIN hat, müssen Sie diese eingeben.
+
+86 Verbindungen
+
+Funktion senden
+
+3	
+
+Kontakt, ein Memo oder eine Mediendatei) in einer
+Anwendung oder in Eigene Dateien aus.
+Drücken Sie [ ] → Gemeinsam nutzen, Senden per
+oder Visitenkarte senden per → Bluetooth.
+Suchen Sie nach einem Bluetooth-fähigen Gerät und
+koppeln Sie es.
+
+››Daten über die drahtlose BluetoothFunktion empfangen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste, und
+wählen Sie Einstellungen → Drahtlos und Netzwerk →
+Bluetooth-Einstellungen → Sichtbar aus.
+Ihr Gerät ist 120 Sekunden lang für andere BluetoothGeräte sichtbar.
+
+2	 Wenn Sie dazu aufgefordert werden, geben Sie die PIN für
+3	
+
+die drahtlose Bluetooth-Funktion ein und wählen Sie OK
+aus (falls erforderlich).
+Wählen Sie Annahme aus, um zu bestätigen, dass Sie
+Daten vom anderen Gerät empfangen möchten (falls
+erforderlich).
+Empfangene Daten werden im Bluetooth-Ordner
+gespeichert.
+
+WLAN
+In diesem Abschnitt erfahren Sie, wie Sie die drahtlosen
+Netzfunktionen des Geräts verwenden, um eine Verbindung
+mit einem drahtlosen lokalen Netzwerk (WLAN) herzustellen,
+das mit dem Standard IEEE 802.11 b/g/n kompatibel ist.
+Sie können eine Verbindung mit dem Internet oder anderen
+Netzgeräten herstellen, wenn ein Zugangspunkt oder ein
+drahtloser Hotspot verfügbar ist.
+
+Dieses Gerät verwendet eine nicht harmonisierte
+Frequenz und ist für den Einsatz in allen europäischen
+Ländern geeignet. Die WLAN-Funktion darf innerhalb
+der EU ohne Einschränkung in Gebäuden genutzt
+werden, in Frankreich jedoch nicht außerhalb von
+Gebäuden.
+
+››WLAN-Funktion aktivieren
+
+Öffnen Sie im Standby-Betrieb die Anwendungsliste, und
+wählen Sie Einstellungen → Drahtlos und Netzwerk →
+WLAN-Einstellungen → WLAN aus.
+Ein aktives WLAN, das im Hintergrund ausgeführt wird,
+verbraucht Akkuleistung. Um den Akku zu schonen,
+sollten Sie das WLAN nur aktivieren, wenn Sie es
+benötigen.
+
+Verbindungen
+
+87
+
+››WLAN finden und Verbindung herstellen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste, und
+2	
+3	
+4	
+
+wählen Sie Einstellungen → Drahtlos und Netzwerk →
+WLAN-Einstellungen aus.
+Das Gerät sucht automatisch nach verfügbaren WLANs.
+Wählen Sie unter WLAN-Netze ein Netzwerk aus.
+Geben Sie ein Passwort für das Netzwerk ein (falls
+erforderlich).
+Wählen Sie Verb. aus.
+
+››WLAN manuell hinzufügen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste, und
+2	
+
+wählen Sie Einstellungen → Drahtlos und Netzwerk →
+WLAN-Einstellungen → WLAN hinzufügen aus.
+Geben Sie die SSID für das Netzwerk ein und wählen Sie
+den Sicherheitstyp aus.
+
+88 Verbindungen
+
+3	 Legen Sie die Sicherheitseinstellungen entsprechend
+dem ausgewählten Sicherheitstyp fest.
+
+4	 Wählen Sie Speichern.
+
+Mobiler Zugangspunkt
+Sie können das Gerät als drahtlosen Zugangspunkt
+für PCs und andere Geräte einrichten und die mobile
+Netzverbindung des Geräts über die WLAN-Funktion für
+andere Geräte freigeben.
+
+››Funktion Mobiler Zugangspunkt
+aktivieren
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+2	
+
+wählen Sie Einstellungen → Drahtlos und Netzwerk →
+Tethering und mobiler Hotspot aus.
+Wählen Sie Mobiler Zugangspunkt, um die Funktion für
+den mobilen Zugangspunkt zu aktivieren.
+
+3	 Wählen Sie Mobile AP-Einstellungen → Mobile AP
+
+konfigurieren aus, um die Funktion für den mobilen
+Zugangspunkt individuell anzupassen:
+Option
+
+Funktion
+
+Netz-SSID
+
+Anzeigen und Bearbeiten des
+Gerätenamens, der externen
+Geräten angezeigt wird.
+
+Sicherheit
+
+Auswählen des Sicherheitstyps.
+
+4	 Wenn Sie fertig sind, wählen Sie Speichern.
+5	 Suchen Sie auf einem anderen Gerät in der Liste der
+
+verfügbaren Verbindungen nach dem Namen Ihres
+Geräts und stellen Sie die Verbindung mit dem Netzwerk
+her.
+
+USB-Tethering
+Sie können das Gerät als ein drahtloses Modem für PCs
+festlegen, um die mobile Netzverbindung des Geräts über
+USB zugänglich zu machen.
+
+1	 Verbinden Sie die Multifunktionsbuchse am Gerät über
+ein PC-Datenkabel mit einem PC.
+
+2	 Öffnen Sie im Standby-Betrieb die Anwendungsliste, und
+3	
+
+wählen Sie Einstellungen → Drahtlos und Netzwerk →
+Tethering und mobiler Hotspot aus.
+Wählen Sie USB-Tethering aus, um die USB-TetheringFunktion zu aktivieren.
+Das Gerät gibt die mobile Netzwerkverbindung für den
+PC frei.
+Deaktivieren Sie das Kontrollkästchen neben USBTethering, um die Freigabe der Netzwerkverbindung zu
+beenden.
+Das Verfahren zum Freigeben der
+Netzwerkverbindung kann je nach Betriebssystem
+des PCs unterschiedlich sein.
+Verbindungen
+
+89
+
+PC-Verbindungen
+In diesem Abschnitt erfahren Sie, wie Sie Ihr Gerät über ein
+PC-Datenkabel in verschiedenen USB-Verbindungsmodi
+mit einem PC verbinden. Wenn Sie das Gerät an einen PC
+anschließen, können Sie Daten direkt vom und auf das Gerät
+übertragen und das Programm Samsung Kies verwenden.
+
+››Mit Samsung Kies verbinden
+
+Stellen Sie sicher, dass Samsung Kies auf dem PC installiert ist.
+Sie können das Programm von der Samsung-Webseite
+(www.samsungmobile.com) herunterladen.
+
+1	 Verbinden Sie die Multifunktionsbuchse am Gerät über
+ein PC-Datenkabel mit einem PC.
+Samsung Kies wird automatisch gestartet.
+Falls Samsung Kies nicht automatisch gestartet wird,
+doppelklicken Sie auf dem PC auf das Samsung KiesSymbol.
+2	 Kopieren Sie Dateien vom PC auf das Telefon.
+In der Hilfe zu Samsung Kies finden Sie weitere
+Informationen.
+90 Verbindungen
+
+››Als Massenspeichergerät verbinden
+
+Sie können das Gerät als Wechseldatenträger an einen PC
+anschließen und auf das Dateiverzeichnis zugreifen. Wenn Sie
+eine Speicherkarte in das Gerät einsetzen, können Sie auch
+das Dateiverzeichnis der Speicherkarte aufrufen, indem Sie
+das Gerät als Speicherkartenleser nutzen.
+Das Dateiverzeichnis der Speicherkarte wird als
+Wechseldatenträger separat vom internen Speicher
+angezeigt.
+
+1	 Wenn Sie Dateien von einer Speicherkarte oder auf eine
+2	
+3	
+4	
+5	
+6	
+
+Speicherkarte übertragen möchten, setzen Sie eine
+Speicherkarte in das Gerät ein.
+Verbinden Sie die Multifunktionsbuchse am Gerät über
+ein PC-Datenkabel mit einem PC.
+Öffnen Sie die Schnellzugriffanzeige.
+Wählen Sie USB verbunden → USB-Speicher verbinden
+→ OK aus.
+Öffnen Sie den Ordner, um Dateien anzuzeigen.
+Kopieren Sie Dateien vom PC auf die Speicherkarte.
+
+7	 Wählen Sie, wenn Sie fertig sind, USB-Speicher
+
+ausschalten aus.
+Klicken Sie zum Trennen des Geräts vom PC in der
+Windows-Taskleiste auf das USB-Gerätesymbol und
+dann auf die Option zum sicheren Entfernen des
+Massenspeichergeräts. Trennen Sie dann das PCDatenkabel vom PC ab. Andernfalls können auf der
+Speicherkarte gespeicherte Daten verloren gehen
+oder die Speicherkarte beschädigt werden.
+
+››VPN-Verbindungen einrichten
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste, und
+2	
+3	
+
+wählen Sie Einstellungen → Drahtlos und Netzwerk →
+VPN-Einstellungen → VPN hinzufügen aus.
+Wählen Sie einen VPN-Typ aus.
+Passen Sie die Verbindungsinformationen an.
+Die verfügbaren Optionen können je nach VPN-Typ
+variieren.
+
+VPN-Verbindungen
+
+Option
+
+Sie können virtuelle private Netzwerke (VPN) erstellen und
+über ein öffentliches Netzwerk wie das Internet eine sichere
+Verbindung mit Ihrem privaten Netzwerk herstellen.
+Ihr Gerät sollte bereits für den Internetzugang
+konfiguriert sein. Ist der Internetzugang
+nicht problemlos möglich, müssen Sie die
+Verbindungen bearbeiten. Wenden Sie sich an Ihren
+Netzbetreiber, wenn Sie nicht sicher sind, welche
+Verbindungsinformationen Sie eingeben sollen.
+
+VPN-Name
+VPN-Server
+festlegen
+Verschlüsselung
+aktivieren
+IPsec Pre-shared
+Key festlegen
+
+Funktion
+Geben Sie den Namen des VPNServers ein.
+Geben Sie die IP-Adresse des VPNServers ein.
+Legen Sie fest, dass die
+Verbindung mit dem VPN-Server
+verschlüsselt werden soll.
+Geben Sie einen vorinstallierten
+Schlüssel ein.
+Verbindungen
+
+91
+
+Option
+L2TP-Geheimnis
+aktivieren
+L2TP-Geheimnis
+festlegen
+
+Benutzerzertifikat
+festlegen
+
+CA-Zertifikat
+festlegen
+
+92 Verbindungen
+
+Funktion
+Legen Sie fest, dass das geheime
+L2TP-Passwort verwendet werden
+soll.
+Geben Sie das geheime L2TPPasswort ein.
+Wählen Sie ein Benutzerzertifikat
+aus, das vom VPN-Server
+verwendet wird, um Sie zu
+identifizieren. Zertifikate
+können vom VPN-Server
+importiert oder aus dem Internet
+heruntergeladen werden.
+Wählen Sie ein Zertifizierungsstellenzertifikat (CA) aus, das vom
+VPN-Server verwendet wird, um
+Sie zu identifizieren. Zertifikate
+können vom VPN-Server
+importiert oder aus dem Internet
+heruntergeladen werden.
+
+Option
+
+Funktion
+
+DNSSuchdomänen
+
+Geben Sie die Adresse des
+Domänennamenservers (DNS)
+ein.
+
+››Verbindung mit einem privaten Netzwerk
+herstellen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste, und
+2	
+3	
+
+wählen Sie Einstellungen → Drahtlos und Netzwerk →
+VPN-Einstellungen aus.
+Wählen Sie ein privates Netzwerk aus, mit dem Sie eine
+Verbindung herstellen möchten.
+Geben Sie den Benutzernamen und das Passwort ein, und
+wählen Sie Verb. aus.
+
+Tools
+Uhr
+In diesem Abschnitt erfahren Sie, wie Sie die Uhrenanzeige
+auf dem Startbildschirm verwenden und Alarme für wichtige
+Ereignisse einstellen und kontrollieren.
+
+››Uhrenanzeige verwenden
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+2	
+
+wählen Sie Uhr aus.
+Während der Uhrenanzeige stehen die folgenden
+Funktionen zur Verfügung:
+•	 Wählen Sie aus, um einen Alarm einzurichten oder
+zu löschen.
+•	 Wählen Sie aus, um die Galerie zu öffnen.
+
+•	 Wählen Sie
+•	 Wählen Sie
+
+aus, um den MP3-Player zu starten.
+aus, um zum Standby-Bildschirm
+zurückzukehren.
+
+››Neuen Alarm einstellen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Uhr aus.
+→ Alarm hinzufügen, oder drücken Sie
+[ ] → Alarm hinzufügen.
+Stellen Sie die Alarmdetails ein.
+Wenn Sie fertig sind, wählen Sie OK aus.
+
+2	 Wählen Sie
+3	
+4	
+
+››Alarm stoppen
+
+Wenn der Alarm ertönt:
+•	 Wählen Sie Ablehnen aus, um den Alarm zu stoppen.
+•	 Wählen Sie Erinnern aus, um den Alarm nach einer
+vorgegebenen Zeit zu wiederholen.
+
+Tools
+
+93
+
+Rechner
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+
+In diesem Abschnitt erfahren Sie, wie Sie mathematische
+Berechnungen wie mit einem Taschenrechner oder
+Tischrechner direkt auf dem Gerät ausführen.
+
+2	 Wählen Sie einen Ordner aus.
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+2	
+3	
+
+wählen Sie Rechner aus.
+Verwenden Sie die Tasten, die dem Rechnerdisplay
+entsprechen, um grundlegende mathematische
+Operationen durchzuführen.
+Drücken Sie [ ] → Erweiterter Bereich, um den
+wissenschaftlichen Taschenrechner zu verwenden.
+
+Eigene Dateien
+In diesem Abschnitt erfahren Sie, wie Sie schnell und einfach
+auf alle auf einer Speicherkarte abgelegten Bilder, Videos,
+Musik- und Audiodateien sowie andere Dateitypen zugreifen.
+
+94 Tools
+
+wählen Sie Eigene Dateien aus.
+
+•	 Wählen Sie Hoch aus, um im Dateiverzeichnis um eine
+Menüebene nach oben zu wechseln.
+
+•	 Wählen Sie Startseite aus, um zum Startverzeichnis
+zurückzukehren.
+
+3	 Wählen Sie die zu öffnende Datei aus.
+Drücken Sie in einem Ordner [ ], um die folgenden
+Optionen zu verwenden:
+•	 Wählen Sie Gemeinsam nutzen aus, um eine Datei als
+MMS- oder E-Mail-Nachricht oder über die drahtlose
+Bluetooth-Funktion zu senden.
+•	 Wählen Sie Ordner erstellen aus, um einen neuen Ordner
+zu erstellen.
+•	 Wählen Sie Löschen aus, um Dateien oder Ordner zu
+löschen.
+•	 Wählen Sie Ans. von aus, um den Ansichtsmodus zu
+ändern.
+
+•	 Wählen Sie Sortieren nach aus, um Dateien oder Ordner
+
+zu sortieren.
+•	 Wählen Sie Optionen aus, um weitere Dateifunktionen wie
+Verschieben, Kopieren oder Umbenennen zu verwenden.
+
+Quickoffice
+In diesem Abschnitt erfahren Sie, wie Sie Word-, Excel-,
+PowerPoint- und pdf-Dateien auf der Speicherkarte anzeigen.
+
+››Ein Quickoffice-Dokument öffnen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Quickoffice aus.
+
+2	 Wählen Sie ein Quickoffice-Programm.
+3	 Wählen Sie SD-Karte → eine Dokumentdatei.
+
+Zum Erstellen und Bearbeiten von Word-, Excel- und
+PowerPoint-Dateien richten Sie ein Quickoffice-Konto
+ein, und erwerben Sie eine Lizenz.
+
+››Quickoffice aktualisieren
+
+Sie können Programmaktualisierungen, neue QuickofficeProdukte oder Sonderangebote herunterladen.
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Quickoffice aus.
+
+2	 Wählen Sie UPDATE aus.
+
+SIM-Toolkit
+Nutzen Sie diverse Zusatzdienste, die Ihnen Ihr Netzbetreiber
+bereitstellt. Die Verfügbarkeit und die Bezeichnung dieses
+Menüs ist abhängig von der eingesetzten SIM- oder USIMKarte.
+Öffnen Sie im Standby-Betrieb Anwendungsliste und wählen
+Sie SIM-Toolkit aus.
+
+Tools
+
+95
+
+Task-Manager
+
+Sprachsuche
+
+Mit dem Task-Manager können Sie aktive Anwendungen, die
+Paketgröße von Anwendungen und Speicherinformationen
+anzeigen sowie den RAM-Speicher überwachen.
+
+In diesem Abschnitt erfahren Sie, wie Sie die
+Sprachbefehlfunktion zum Wählen einer Nummer, Senden
+einer Nachricht oder Suchen nach Orten und Informationen
+per Spracheingabe verwenden.
+Diese Funktion ist je nach Region oder Netzbetreiber
+u. U. nicht verfügbar.
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Task-Manager aus.
+
+2	 Folgende Optionen sind verfügbar:
+
+•	 Aktive Anwendungen: Zeigt eine Liste aller
+
+Anwendungen an, die gegenwärtig auf dem Gerät
+ausgeführt werden.
+•	 Paket: Zeigt die Paketgröße aller auf dem Gerät
+installierten Anwendungen an.
+•	 RAM: Überprüfen und verwalten Sie den RAM-Speicher
+für das Gerät.
+•	 Übersicht: Zeigt den belegten und verfügbaren
+Speicherplatz auf dem Gerät und der Speicherkarte an.
+•	 Hilfe: Zeigt Hilfeinformationen zum Verlängern der
+Akku-Nutzungsdauer an.
+
+96 Tools
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+wählen Sie Sprachsuche aus.
+
+2	 Wählen Sie Jetzt sprechen aus.
+3	 Sprechen Sie einen Befehl in das Mikrofon.
+
+Wählen Sie auf dem Hilfebildschirm Video ansehen
+aus, um die Videoübung zu sehen.
+
+Einstellungen
+
+››WLAN-Einstellungen
+
+Einstellungsmenü aufrufen
+wählen Sie Einstellungen aus.
+
+werden Sie vom Gerät benachrichtigt, wenn ein offenes
+Netzwerk verfügbar ist.
+•	 WLAN hinzufügen: Dient zum manuellen Hinzufügen von
+WLAN-Zugangspunkten.
+
+aus.
+
+››Bluetooth-Einstellungen
+
+1	 Öffnen Sie im Standby-Betrieb die Anwendungsliste und
+2	 Wählen Sie eine Einstellungskategorie und eine Option
+
+Drahtlos und Netzwerk
+Sie können die Einstellungen für drahtlose
+Netzwerkverbindungen ändern.
+
+››Offline-Modus
+
+Deaktiviert alle drahtlosen Funktionen des Geräts. In diesem
+Fall können nur netzunabhängige Dienste verwendet
+werden.
+
+•	 WLAN: Schaltet die WLAN-Funktion ein oder aus. ► S. 87
+•	 Netzbenachrichtigung: Bei Auswahl dieser Einstellung
+
+•	 Bluetooth: Schaltet die drahtlose Bluetooth-Funktion ein
+oder aus. ► S. 85
+
+•	 Gerätename: Dient zum Festlegen eines BluetoothNamens für das Gerät.
+
+•	 Sichtbar: Bei Auswahl dieser Einstellung ist das Gerät für
+andere Bluetooth-Geräte sichtbar.
+
+•	 Geräte suchen: Sucht nach verfügbaren BluetoothGeräten.
+
+Einstellungen
+
+97
+
+››Tethering und mobiler Hotspot
+
+•	 USB-Tethering: Aktiviert die Funktion für USB-Tethering,
+
+durch die die mobile Netzwerkverbindung des Geräts über
+USB für PCs verfügbar gemacht wird. Wenn das Gerät mit
+einem PC verbunden ist, wird es als drahtloses Modem für
+den PC verwendet. ► S. 89
+•	 Mobiler Zugangspunkt: Aktivieren Sie die Funktion für
+mobilen Zugangspunkt, um die mobile Netzverbindung
+des Geräts über die WLAN-Funktion für PCs oder andere
+Geräte verfügbar zu machen. ► S. 88
+•	 Mobile AP-Einstellungen: Ändern der Einstellungen zum
+Anpassen der Funktion für mobilen Zugangspunkt.
+
+››VPN-Einstellungen
+
+Dient zum Einrichten und Verwalten von virtuellen privaten
+Netzen (VPNs). ► S. 91
+
+98 Einstellungen
+
+››Mobile Netzwerke
+
+•	 Paketdaten verwenden: Lässt die Verwendung von
+
+paketvermittelten Datennetzen für Netzwerkdienste zu.
+
+•	 Daten-Roaming: Bei Auswahl dieser Einstellung stellt das
+
+Gerät eine Verbindung mit einem anderen Netz her, wenn
+Sie sich im Ausland befinden oder Ihr Heimatnetz nicht
+verfügbar ist.
+•	 Zugangspunktnamen: Dient zum Einrichten von
+Zugangspunktnamen (APN).
+•	 Nur 2G-Netze verwenden: Bei Auswahl dieser Einstellung
+stellt das Gerät nur mit 2G-Netzen eine Verbindung her.
+•	 Netzbetreiber: Dient zum Suchen nach verfügbaren
+Netzen und Auswählen eines Roaming-Netzes.
+
+Anrufeinstellungen
+
+››Mailboxnummer
+
+Sie können die Einstellungen für die Anruffunktionen
+anpassen.
+
+Dient zum Eingeben der Mailboxnummer. Diese Nummer
+erhalten Sie von Ihrem Netzbetreiber.
+
+››Feste Rufnummern
+
+››Rufumleitung
+
+•	 FDN aktivieren: Aktiviert oder deaktiviert den FDN-
+
+Modus, in dem ausgehende Anrufe auf die in der FDN-Liste
+gespeicherten Rufnummern beschränkt werden. Die
+mit der SIM- oder USIM-Karte bereitgestellte PIN2 muss
+eingegeben werden.
+•	 PIN2 ändern: Dient zum Ändern der PIN2, durch die die
+primäre PIN geschützt wird.
+•	 FDN-Liste: Dient zum Einrichten einer Kontaktliste für den
+FDN-Modus.
+
+››Mailboxdienst
+
+Dient zum Umleiten eingehender Anrufe an eine andere
+Nummer.
+
+››Zusätzliche Einstellungen
+
+•	 Anruferkennung: Bei Auswahl dieser Einstellung wird Ihre
+
+Anrufer-ID bei ausgehenden Anrufen für andere Parteien
+angezeigt.
+•	 Anklopfen: Bei Auswahl dieser Einstellung werden Sie
+während eines Gesprächs über weitere eingehende Anrufe
+benachrichtigt.
+
+Wählt den Mailbox-Dienst Ihres Netzbetreibers aus. Sie
+können auch andere Mailbox-Dienste auswählen, wenn Sie
+entsprechende Anwendungen herunterladen.
+Einstellungen
+
+99
+
+Ton
+Sie können die Einstellungen für verschiedene Töne des
+Geräts ändern.
+•	 Stumm-Modus: Aktiviert den Stumm-Modus, in dem mit
+Ausnahme von Medientönen und Alarm-Klingeltönen alle
+Töne deaktiviert sind.
+•	 Vibrieren: Dient zum Festlegen von Ereignissen, bei denen
+das Gerät vibrieren soll.
+•	 Lautstärke: Dient zum Einstellen der Lautstärke
+für Anrufklingeltöne, Musik und Videos, Alarmtöne,
+Systemtöne und Benachrichtigungstöne.
+•	 Telefonklingelton: Dient zum Auswählen eines
+Klingeltons für eingehende Anrufe.
+•	 Klingelton für Benachrichtigungen: Dient zum
+Auswählen eines Klingeltons für Ereignisse wie eingehende
+Nachrichten und unbeantwortete Anrufe.
+•	 Hörbare Tastentöne: Bei Auswahl dieser Einstellung
+gibt das Gerät einen Ton aus, wenn Sie Tasten auf der
+Wählanzeige berühren.
+
+100 Einstellungen
+
+•	 Hörbare Auswahl: Bei Auswahl dieser Einstellung gibt
+
+das Gerät einen Ton aus, wenn Sie eine Anwendung oder
+Option auswählen.
+•	 Bildschirmsperr-Sounds: Bei Auswahl dieser Einstellung
+gibt das Gerät einen Ton aus, wenn Sie den Touchscreen
+sperren oder entsperren.
+
+Anzeige
+Sie können die Einstellungen für das Display ändern.
+•	 Hintergrundbilder:
+-- Home-Hintergrund: Dient zum Auswählen eines
+Hintergrundbilds für den Standby-Bildschirm.
+-- Sperre-Hintergrund: Dient zum Auswählen eines
+Hintergrundbilds für die Bildschirmsperre.
+
+•	 Schriftstil: Ändern Sie die Schriftart für den Displaytext. Sie
+können Schriftarten von Android Market herunterladen,
+indem Sie Schriftarten online abrufen wählen.
+•	 Helligkeit: Dient zum Einstellen der Helligkeit des Displays.
+•	 Bildschirm automatisch drehen: Legt fest, ob die Anzeige
+automatisch gedreht wird, wenn das Gerät gedreht wird.
+•	 Animation: Bei Auswahl dieser Einstellung wird eine
+Animation angezeigt, wenn Sie zwischen Fenstern
+wechseln.
+•	 Display-Timeout: Dient zum Einstellen des Zeitraums,
+nach dem die Displaybeleuchtung des Displays
+ausgeschaltet wird.
+•	 Horizontale Kalibrierung: Kalibriert den
+geomagnetischen Sensor, wenn vom Kompass oder
+von einer Augmented-Reality-Anwendung falsche
+Informationen angezeigt werden.
+
+•	 Halten Sie Touchscreen oder Tastatur während der
+Kalibrierung in aufrechter Position.
+
+•	 Die Kalibrierung kann je nach Standort oder
+
+abhängig von anderen Umständen einige Minuten
+dauern.
+•	 Die Kalibrierung ist in Bereichen mit starken
+magnetischen Feldern ggf. nicht möglich. Sollte die
+Kalibrierung fehlschlagen, versuchen Sie es erneut in
+einer anderen Umgebung.
+•	 Betreten Sie nach der Kalibrierung einen Bereich mit
+einem starken magnetischen Feld, versucht Ihr Gerät
+automatisch den geomagnetischen Sensor neu zu
+kalibrieren.
+•	 Der geomagnetische Sensor Ihres Geräts unterstützt
+die Sicht von oben nicht, die die Himmelsrichtungen
+festlegt. Daher können beim Messen von Winkeln
+kleine Fehler auftreten und Karten verkehrt herum
+angezeigt werden.
+
+Einstellungen
+
+101
+
+Standort und Sicherheit
+Sie können Einstellungen für die Sicherung des Geräts und
+der SIM- oder USIM-Karte und die GPS-Funktion ändern.
+•	 Drahtlosnetze verwenden: Bei Auswahl dieser Einstellung
+werden WLAN-Netze und/oder mobile Netzwerke
+verwendet, um Ihren Standort zu ermitteln.
+•	 GPS-Satelliten verwenden: Bei Auswahl dieser Einstellung
+werden GPS-Satelliten verwendet, um Ihren Standort zu
+ermitteln.
+•	 Bildschirmsperre aktiv.: Dient zum Festlegen des
+Sicherheitscodes für das Entsperren. Wenn Sie den
+Sicherheitscode eingestellt haben, ändert sich diese Option
+in Bildschirmsperre ändern.
+-- Ohne: Deaktiviert die Bildschirmsperre.
+-- Muster: Dient zum Festlegen eines Entsperrmusters für
+das Entsperren des Bildschirms.
+-- PIN: Dient zum Festlegen einer PIN (numerisch) für das
+Entsperren des Bildschirms.
+-- Kennwort: Dient zum Festlegen eines Passworts
+(alphanumerisch) für das Entsperren des Bildschirms.
+
+102 Einstellungen
+
+•	 SIM-Kartensperre einrichten:
+-- SIM-Karte sperren: Aktiviert oder deaktiviert die PIN-
+
+Sperrfunktion (Eingabe einer PIN vor der Verwendung
+des Geräts).
+-- SIM-PIN ändern: Dient zum Ändern der PIN für den
+Zugriff auf SIM- oder USIM-Daten.
+•	 Sichtbare Passwörter: Bei Auswahl dieser Einstellung wird
+das Passwort bei der Eingabe angezeigt.
+•	 Geräteadministratoren wählen: Zeigt die auf dem
+Gerät installierten Geräteadministratoren an. Sie können
+Geräteadministratoren aktivieren, um neue Richtlinien auf
+das Gerät anzuwenden.
+•	 Sichere Berechtigungen verwenden: Bei Auswahl
+dieser Einstellung wird die Verwendung verschiedener
+Anwendungen durch Zertifikate und Berechtigungen
+gesichert.
+•	 Von SD-Karte installieren: Dient zum Installieren von
+verschlüsselten Zertifikaten, die auf einer Speicherkarte
+gespeichert sind.
+
+•	 Passwort festlegen: Dient zum Erstellen und Bestätigen
+
+eines Passworts für das Aufrufen von Berechtigungen.
+•	 Speicher löschen: Löscht die Berechtigungen vom Gerät
+und setzt das Passwort zurück.
+
+Anwendungen
+Sie können die Einstellungen zur Verwaltung installierter
+Programme ändern.
+•	 Unbekannte Quellen: Bei Auswahl dieser Einstellung
+können Anwendungen aus jeder Quelle heruntergeladen
+werden. Wenn Sie diese Option nicht auswählen, können
+Sie nur Anwendungen von Android Market herunterladen.
+•	 Anwendungen verwalten: Öffnet die Liste der auf dem
+Gerät installierten Anwendungen und ermöglicht Ihnen
+das Überprüfen der Anwendungsinformationen.
+•	 Laufende Dienste: Dient zum Anzeigen und Verwalten der
+verwendeten Dienste.
+
+•	 Entwicklung:
+-- USB-Debugging: Diese Option dient der
+
+Anwendungsentwicklung. Wenn das Gerät über ein
+PC-Datenkabel mit einem PC verbunden wird, wird der
+USB-Debuggingmodus aktiviert und Samsung Kies wird
+automatisch gestartet.
+-- Wach bleiben: Bei Auswahl dieser Einstellung bleibt
+das Display des Geräts während des Aufladevorgangs
+eingeschaltet.
+-- Pseudostandorte zulassen: Lässt zu, dass simulierte
+Standort- und Servicedaten zu Testzwecken an einen
+Location Manager-Dienst gesendet werden. Diese
+Option dient der Anwendungsentwicklung.
+•	 Samsung Apps: Dient zum Auswählen einer
+Netzwerkverbindung (WLAN oder paketvermitteltes
+Datennetz), die zum Empfangen von Aktualisierungsbenac
+hrichtigungen von Samsung Apps verwendet wird.
+Diese Funktion ist je nach Region oder Netzbetreiber
+u. U. nicht verfügbar.
+
+Einstellungen
+
+103
+
+Konten und Synchronisierung
+Sie können die Einstellungen für die automatische
+Synchronisierungsfunktion ändern oder Konten für die
+Synchronisierung verwalten.
+•	 Hintergrunddaten: Wählen Sie diese Einstellung aus,
+um die automatische Synchronisierungsfunktion zu
+verwenden. Die automatische Synchronisierung wird im
+Hintergrund ausgeführt, ohne Anwendungen zu öffnen.
+•	 Automatisch synchronisieren: Bei Auswahl dieser
+Einstellung werden Kontakt-, Kalender- und E-Mail-Daten
+automatisch synchronisiert.
+
+Datenschutz
+Sie können die Einstellungen für die Verwaltung Ihrer
+Einstellungen und Daten ändern.
+•	 Meine Daten sichern: Dient zum Sichern der
+Geräteeinstellungen auf dem Google-Server.
+
+104 Einstellungen
+
+•	 Automatisch wiederherst.: Bei Auswahl dieser Einstellung
+werden die gesicherten Daten von Anwendungen
+wiederhergestellt, wenn diese auf dem Gerät installiert
+werden.
+•	 Auf Werkszustand zurücksetzen: Ihre Einstellungen
+werden auf die Standardwerte ab Werk zurückgesetzt und
+alle Ihre Daten werden gelöscht.
+
+SD-Karten- & Telefonspeicher
+Sie können die Speicherinformationen für Speicherkarten
+und Ihr Gerät überprüfen und eine Speicherkarte
+formatieren.
+
+Suche
+Sie können die Einstellungen für die Google-Suche ändern.
+•	 Einstellungen der Google-Suche:
+-- Webvorschläge anzeigen: Bei Auswahl dieser
+Einstellung werden beim Eingeben eines Suchbegriffs
+Vorschläge angezeigt.
+
+-- Für Google freigeben: Bei Auswahl dieser Einstellung
+
+wird Ihr aktueller Standort für die Google-Suche und
+andere Google-Dienste verwendet.
+-- Suchverlauf: Bei Auswahl dieser Einstellung wird der
+Suchverlauf Ihres Google-Kontos angezeigt.
+-- Suchverlauf verwalten: Dient zum Verwalten des
+Suchverlaufs Ihres Google-Kontos.
+•	 Durchsuchbare Elemente: Dient zum Auswählen der
+Elemente, die Sie in die Suche einbeziehen möchten.
+•	 Verknüpfungen löschen: Löscht die Informationen
+vorhergehender Suchvorgänge.
+
+Sprache und Tastatur
+Sie können die Einstellungen für die Texteingabe ändern.
+
+››Sprache auswählen
+
+Dient zum Festlegen einer Anzeigesprache für alle Menüs
+und Anwendungen.
+
+››Swype
+
+•	 Sprache: Dient zum Festlegen einer Sprache für die
+
+Texteingabe.
+In einigen Sprachen ist es nicht möglich, Text
+einzugeben. Zum Eingeben von Text sollten Sie die
+Schreibsprache in eine der unterstützten Sprachen
+ändern.
+
+•	 Worterkennung: Bei Auswahl dieser Einstellung werden
+entsprechend der Eingabe Wortvorschläge angezeigt.
+
+•	 Audio-Feedback: Bei Auswahl dieser Einstellung wird
+
+ein Ton ausgegeben, wenn keine alternativen Wörter für
+Ihre Eingabe verfügbar sind und Sie zweimal auf ein Wort
+tippen.
+•	 Tippanz. aktivieren: Bei Auswahl dieser Einstellung
+werden Sie durch ein Blinken der Tippanzeige darauf
+aufmerksam gemacht, dass Hilfe verfügbar ist.
+•	 Auto. Leerstellen: Bei Auswahl dieser Einstellung wird
+automatisch ein Leerzeichen zwischen Wörtern eingefügt.
+
+Einstellungen
+
+105
+
+•	 Auto. Großbuchstabe: Bei Auswahl dieser Einstellung wird
+der erste Buchstabe nach einem Satzzeichen wie Punkt,
+Frage- oder Ausrufezeichen automatisch groß geschrieben.
+•	 Komplette Spur anzeigen: Stellt ein, dass die Spur beim
+Ziehen auf der Tastatur angezeigt wird.
+•	 Wortauswahl-Fenster: Hiermit legen Sie fest, wie häufig
+die Wortliste angezeigt wird.
+•	 Geschwindig/Genauig: Hiermit legen Sie das Verhältnis
+zwischen Geschwindigkeit und Genauigkeit fest.
+•	 Hilfe zu Swype: Zeigt Hilfeinformationen für die SwypeTastatur an.
+•	 Lehrgang: In der Übung lernen Sie, wie Sie Text schneller
+mit der Swype-Tastatur eingeben.
+•	 Version: Zeigt Versionsinformationen an.
+
+106 Einstellungen
+
+››Samsung-Tastatur
+
+•	 Hochformat-Tastaturtypen: Dient zum Festlegen
+
+der Standardeingabemethode, z. B. QWERTY-Tastatur,
+herkömmliche Tastatur oder Handschrifteingabe.
+•	 Eingabesprachen: Dient zum Festlegen der Sprachen für
+die Texteingabe.
+In einigen Sprachen ist es nicht möglich, Text
+einzugeben. Zum Eingeben von Text sollten Sie die
+Schreibsprache in eine der unterstützten Sprachen
+ändern.
+
+•	 XT9: Aktiviert den XT9-Modus für die Texteingabe im
+Texterkennungsmodus.
+
+•	 XT9 erweiterte Einstellungen: Dient zum Aktivieren der
+
+erweiterten Funktionen des XT9-Modus (z. B. automatische
+Vervollständigung, automatische Korrektur oder
+automatische Ersetzung) und Einrichten einer eigenen
+Wortliste.
+
+•	 Tastaturwechsel: Aktiviert oder deaktiviert die
+
+Tastaturwechselfunktion für den Texteingabemodus. Sie
+können zwischen den Eingabemethoden wechseln, indem
+Sie auf der Tastatur nach links oder rechts blättern.
+•	 Automatische Großschreibung: Bei Auswahl dieser
+Einstellung wird der erste Buchstabe nach einem
+Satzzeichen wie Punkt, Frage- oder Ausrufezeichen
+automatisch groß geschrieben.
+•	 Handschrifteinstellungen: Dient zum Anpassen der
+Erkennungszeit für den Handschriftmodus.
+•	 Spracheingabe: Aktiviert die Spracheingabefunktion,
+mit der Sie Text mittels Sprache auf der Samsung-Tastatur
+eingeben können.
+•	 Automatischer Punkt: Bei Auswahl dieser Einstellung fügt
+das Gerät einen Punkt als Satzendezeichen ein, wenn Sie
+zweimal auf die Leertaste tippen.
+•	 Übung: In der Übung lernen Sie, wie Sie Text mit der
+Samsung-Tastatur eingeben.
+
+Spracheingabe & -ausgabe
+Sie können die Einstellungen für die Spracherkennung und
+die Text-zu-Sprache-Funktion ändern.
+
+››Spracherkennungseinstellungen
+
+•	 Sprache: Dient zum Festlegen einer Sprache für die
+Google-Spracherkennung.
+
+•	 SafeSearch: Dient zum Herausfiltern von nicht
+
+jugendfreiem Text und/oder Bildmaterial aus Ergebnissen
+der Sprachsuche.
+•	 Beleidigungen sperren: Bei Auswahl dieser Einstellung
+werden anstößige Wörter, die das Gerät in Ergebnissen der
+Sprachsuche erkennt, ausgeblendet.
+•	 Hinweise einblenden: Bei Auswahl dieser Einstellung
+werden Begriff- oder Wortgruppenvorschläge für die
+Sprachsuchfunktion angezeigt.
+
+Einstellungen
+
+107
+
+››Text-zu-Sprache-Einstellungen
+
+•	 Ein Beispiel anhören: Dient zum Anhören eines Beispiels
+
+des gesprochenen Texts. Installieren Sie Sprachdaten zur
+Verwendung der Text-zu-Sprache-Funktion.
+•	 Immer meine Einstellungen verwenden: Bei
+Auswahl dieser Einstellung werden anstelle der
+Standardeinstellungen die Einstellungen verwendet, die
+Sie in Anwendungen festlegen.
+•	 Standard-Engine: Dient zum Festlegen des
+Sprachsynthese-Moduls für gesprochenen Text.
+•	 Sprachdaten installieren: Dient zum Herunterladen
+und Installieren von Sprachdaten für die Text-zu-SpracheFunktion.
+•	 Sprechrate: Dient zum Festlegen einer Geschwindigkeit
+für die Text-zu-Sprache-Funktion.
+•	 Sprache: Dient zum Festlegen einer Sprache für die Textzu-Sprache-Funktion.
+•	 Engines: Zeigt die von Android Market heruntergeladenen
+Text-zu-Sprache-Module an.
+
+108 Einstellungen
+
+Eingabehilfe
+Sie können die Einstellungen für Eingabehilfe-Funktionen
+ändern.
+•	 Eingabehilfe: Aktiviert eine heruntergeladene
+Eingabehilfe-Anwendung wie Talkback oder Kickback, die
+Sprach-, Melodie- oder Vibrationsfeedback bietet.
+•	 Ein/Aus beendet Anrufe: Bei Auswahl dieser Einstellung
+werden Anrufe beendet, wenn Sie [ ] drücken.
+
+Datum und Uhrzeit
+Die folgenden Einstellungen sind für die Anzeige der Uhrzeit
+und des Datums auf dem Gerät verfügbar:
+•	 Automatisch: Bei Auswahl dieser Einstellung wird die
+Uhrzeit automatisch aktualisiert, wenn Sie in andere
+Zeitzonen reisen.
+•	 Datum einstellen: Dient zum manuellen Einstellen des
+aktuellen Datums.
+
+•	 Zeitzone auswählen: Dient zum Einstellen der
+Heimatzeitzone.
+
+•	 Zeit fest.: Dient zum manuellen Einstellen der Uhrzeit.
+•	 24-Stundenformat verwenden: Bei Auswahl dieser
+
+Einstellung wird die Uhrzeit im 24-Stunden-Format
+angezeigt.
+•	 Datumsformat auswählen: Dient zum Auswählen eines
+Datumsformats.
+
+Telefoninfo
+Zeigt Informationen zum Gerät an und ermöglicht es Ihnen,
+den Status des Geräts zu überprüfen und sich mit der
+Verwendung des Geräts vertraut zu machen.
+
+Einstellungen
+
+109
+
+Rat und Hilfe bei
+Problemen
+Beim Einschalten oder während der Verwendung
+des Telefons werden Sie zur Eingabe eines der
+folgenden Codes aufgefordert:
+Code
+
+Wenn die Telefonsperrfunktion aktiviert
+ist, müssen Sie das Passwort eingeben, das
+Sie für das Telefon eingestellt haben.
+
+PIN
+
+Versuchen Sie Folgendes, um das Problem
+zu beheben:
+
+Passwort
+
+Code
+
+PUK
+
+PIN2
+
+110 Rat und Hilfe bei Problemen
+
+Versuchen Sie Folgendes, um das Problem
+zu beheben:
+Wenn Sie das Telefon zum ersten Mal
+verwenden oder die PIN-Anforderung
+aktiviert ist, müssen Sie die mit der SIModer USIM-Karte gelieferte PIN eingeben.
+Sie können diese Funktion deaktivieren,
+indem Sie das Menü SIM-Karte sperren
+verwenden.
+Ihre SIM- oder USIM-Karte ist gesperrt,
+üblicherweise aufgrund einer
+mehrmaligen Falscheingabe Ihrer PIN. Sie
+müssen nun den von Ihrem Netzbetreiber
+zur Verfügung gestellten PUK-Code
+eingeben.
+Wenn Sie auf ein Menü zugreifen, für das
+der PIN2-Code erforderlich ist, müssen Sie
+den zur SIM- oder USIM-Karte gehörenden
+PIN2-Code eingeben. Wenden Sie sich für
+Einzelheiten an Ihren Netzbetreiber.
+
+Das Telefon zeigt "Service nicht verfügbar" oder
+"Netzfehler" an
+•	 Wenn Sie sich in Bereichen mit schwachen Signalen oder
+
+schlechtem Empfang befinden, können Sie den Empfang
+verlieren. Begeben Sie sich an einen anderen Ort und
+versuchen Sie es erneut.
+•	 Einige Optionen können Sie nur aufrufen, wenn Sie sie
+abonniert haben. Einzelheiten teilt Ihnen Ihr Netzbetreiber
+mit.
+
+Der Touchscreen reagiert langsam oder falsch
+Wenn das Telefon über einen Touchscreen verfügt und dieser
+nicht richtig reagiert, versuchen Sie Folgendes:
+•	 Entfernen Sie Schutzabdeckungen vom Touchscreen, falls
+vorhanden. Schutzabdeckungen können verhindern, dass
+das Telefon Ihre Eingaben erkennt, und werden nicht für
+Telefone mit Touchscreen empfohlen.
+•	 Beim Tippen auf den Touchscreen müssen Ihre Hände
+sauber und trocken sein.
+
+•	 Starten Sie das Telefon neu, um temporäre Softwarefehler
+zurückzusetzen.
+
+•	 Aktualisieren Sie die Telefon-Software zur neuesten Version.
+•	 Wenn der Touchscreen zerkratzt oder beschädigt ist,
+wenden Sie sich an ein Samsung-Kundendienstzentrum.
+
+Gerät stürzt ab oder funktioniert nicht mehr
+richtig
+Wenn das Gerät nicht mehr reagiert oder "hängt", kann es
+erforderlich sein, Programme zu schließen oder das Gerät
+zurückzusetzen, damit es wieder funktioniert. Wenn das
+Gerät noch arbeitet, aber ein Programm nicht mehr reagiert,
+schließen Sie das Programm mit dem Task-Manager. Reagiert
+das Gerät nicht mehr, halten Sie [ ] und die StartbildschirmTaste gleichzeitig mindestens 8-10 Sekunden gedrückt. Das
+Gerät startet automatisch neu.
+Falls das Problem fortbesteht, führen Sie eine Rückstellung
+auf die Werkseinstellungen durch. Öffnen Sie im StandbyBetrieb die Liste der Anwendungen und wählen Sie
+Einstellungen → Datenschutz → Auf Werkszustand
+zurücksetzen → Telefon zurücksetzen → Alles löschen.
+Rat und Hilfe bei Problemen 111
+
+Anrufe werden unterbrochen
+
+•	 Vergewissern Sie sich, dass Sie die eingehende
+
+Wenn Sie sich in Bereichen mit schwachen Signalen
+oder schlechtem Empfang befinden, können Sie die
+Netzverbindung verlieren. Begeben Sie sich an einen
+anderen Ort und versuchen Sie es erneut.
+
+Der andere Teilnehmer kann Sie während eines
+Gesprächs nicht hören
+
+Ausgehende Anrufe werden nicht verbunden
+
+Telefonnummer nicht mit einer Anrufsperre belegt haben.
+
+•	 Vergewissern Sie sich, dass das eingebaute Mikrofon nicht
+abgedeckt ist.
+
+•	 Vergewissern Sie sich, dass Sie die Wähltaste gedrückt
+
+•	 Vergewissern Sie sich, dass das Mikrofon sich in der Nähe
+
+•	 Vergewissern Sie sich, dass Sie auf das richtige
+
+•	 Wenn Sie ein Headset verwenden, stellen Sie sicher, dass es
+
+haben.
+
+Mobiltelefonnetz zugegriffen haben.
+
+•	 Vergewissern Sie sich, dass Sie diese Telefonnummer, die
+Sie anrufen möchten, nicht mit einer Anrufsperre belegt
+haben.
+
+Eingehende Anrufe werden nicht verbunden
+•	 Vergewissern Sie sich, dass das Telefon eingeschaltet ist.
+•	 Vergewissern Sie sich, dass Sie auf das richtige
+Mobiltelefonnetz zugegriffen haben.
+
+112 Rat und Hilfe bei Problemen
+
+Ihres Mundes befindet.
+
+richtig angeschlossen ist.
+
+Schlechte Tonqualität
+•	 Vergewissern Sie sich, dass Sie die interne Antenne des
+Telefons nicht blockieren.
+
+•	 Wenn Sie sich in Bereichen mit schwachen Signalen oder
+
+schlechtem Empfang befinden, können Sie den Empfang
+verlieren. Begeben Sie sich an einen anderen Ort und
+versuchen Sie es erneut.
+
+Beim Wählen von Kontakten wird der Anruf nicht
+verbunden
+•	 Vergewissern Sie sich, dass die richtige Rufnummer in der
+Kontaktliste gespeichert ist.
+
+•	 Wenn sich der Akku nicht mehr vollständig laden lässt,
+entsorgen Sie den alten Akku (gemäß den lokalen
+Anweisungen für ordnungsgemäße Entsorgung) und
+ersetzen Sie ihn durch einen neuen.
+
+•	 Falls erforderlich, geben Sie die Rufnummer erneut ein und
+
+Das Telefon wird heiß
+
+Das Telefon piept und das Akkusymbol blinkt
+
+Wenn Sie Anwendungen verwenden, die mehr Leistung
+verbrauchen, oder Anwendungen im Telefon für längere Zeit
+verwenden, kann das Telefon heiß werden. Das ist normal
+und hat keine Auswirkung auf die Nutzungsdauer des
+Telefons oder seine Leistungsfähigkeit.
+
+speichern Sie sie neu.
+•	 Vergewissern Sie sich, dass Sie die Telefonnummer des
+Kontakts nicht mit einer Anrufsperre belegt haben.
+
+Der Akku ist schwach. Laden Sie den Akku auf oder tauschen
+Sie ihn aus, um das Telefon weiter zu verwenden.
+
+Der Akku wird nicht richtig aufgeladen oder das
+Telefon schaltet sich aus
+•	 Die Akkukontakte können schmutzig sein. Wischen Sie die
+
+goldfarbenen Kontakte mit einem sauberen, weichen Tuch
+ab und versuchen Sie den Akku erneut zu laden.
+
+Beim Einschalten der Kamera werden
+Fehlermeldungen angezeigt
+Dieses Samsung-Mobiltelefon muss für die Verwendung
+der Kameraanwendung über eine ausreichende Speicherund Akkukapazität verfügen. Wenn beim Einschalten der
+Kamera Fehlermeldungen angezeigt werden, versuchen Sie
+Folgendes:
+•	 Laden Sie den Akku oder ersetzen Sie ihn durch einen voll
+aufgeladenen Akku.
+Rat und Hilfe bei Problemen 113
+
+•	 Vergrößern Sie die Speicherkapazität, indem Sie Dateien
+auf einen PC übertragen oder vom Telefon löschen.
+•	 Starten Sie das Telefon neu. Wenn Sie immer noch
+Probleme mit der Kamera haben, nachdem Sie diese
+Ratschläge ausprobiert haben, wenden Sie sich an ein
+Samsung-Kundendienstzentrum.
+
+Beim Einschalten des UKW-Radios werden
+Fehlermeldungen angezeigt
+Das UKW-Radio dieses Samsung-Mobiltelefons nutzt
+das Kabel des Headsets als Antenne. Wenn kein Headset
+angeschlossen ist, kann das UKW-Radio keine Sender
+empfangen. Vergewissern Sie sich, dass das Headset richtig
+angeschlossen ist, wenn Sie das UKW-Radio verwenden
+möchten. Suchen und speichern Sie anschließend die
+verfügbaren Radiosender.
+
+114 Rat und Hilfe bei Problemen
+
+Wenn das UKW-Radio nach der Durchführung dieser
+Schritte immer noch nicht funktioniert, versuchen Sie, den
+gewünschten Sender mit einem anderen Radioempfänger
+zu empfangen. Kann der Sender mit einem anderen
+Empfänger empfangen werden, kann eine Reparatur des
+Telefons erforderlich sein. Wenden Sie sich an ein SamsungKundendienstzentrum.
+
+Beim Öffnen von Musikdateien werden
+Fehlermeldungen angezeigt
+Einige Musikdateien lassen sich aus verschiedenen Gründen
+unter Umständen nicht auf dem Samsung-Mobiltelefon
+wiedergeben. Wenn beim Öffnen von Musikdateien im
+Telefon Fehlermeldungen angezeigt werden, versuchen Sie
+Folgendes:
+•	 Vergrößern Sie die Speicherkapazität, indem Sie Dateien
+auf einen PC übertragen oder vom Telefon löschen.
+
+•	 Vergewissern Sie sich, dass die Musikdatei nicht DRM-
+
+geschützt (Digital Rights Management) ist. Ist die Datei
+DRM-geschützt, besorgen Sie sich die erforderliche Lizenz
+oder den Schlüssel zur Wiedergabe der Datei.
+•	 Vergewissern Sie sich, dass das Telefon den Dateityp
+unterstützt.
+
+Wenn das Gerät an einen PC angeschlossen wird,
+wird die Verbindung nicht hergestellt
+•	 Vergewissern Sie sich, dass das verwendete PC-Datenkabel
+mit dem Telefon kompatibel ist.
+
+•	 Vergewissern Sie sich, dass die richtigen Treiber im PC
+installiert sind und aktualisiert wurden.
+
+Ein Bluetooth-Gerät wird nicht gefunden
+•	 Vergewissern Sie sich, dass die drahtlose BluetoothFunktion des Telefons aktiviert ist.
+
+•	 Vergewissern Sie sich, dass die drahtlose Bluetooth-
+
+Funktion des Geräts, mit dem Sie eine Verbindung
+herstellen möchten, aktiviert ist.
+•	 Das Telefon und das andere Bluetooth-Gerät müssen sich
+innerhalb des maximalen Bluetooth-Bereichs (10 Meter)
+befinden.
+Wenn das Problem durch die obigen Ratschläge nicht
+behoben werden kann, wenden Sie sich an ein SamsungKundendienstzentrum.
+Rat und Hilfe bei Problemen
+
+115
+
+Sicherheitshinweise
+
+Laden Sie den Akku nicht mit Ladegeräten, die nicht vom
+Hersteller zugelassen sind.
+
+Lesen Sie die nachstehenden Informationen vollständig durch, bevor Sie das
+Gerät verwenden, um Verletzungen Ihrer eigenen Person und anderer sowie
+Schäden am Gerät zu vermeiden.
+
+Bei dem Gerät können Fehlfunktionen auftreten und Sie setzen sich einem
+erhöhten Risiko aus, einen Stromschlag zu erleiden.
+
+Warnung: Vermeidung von elektrischen
+Schlägen, Feuer und Explosionen
+Verwenden Sie keine beschädigten Netzkabel oder Stecker und
+keine lockeren Netzsteckdosen.
+Berühren Sie das Netzkabel nicht mit nassen Händen und
+trennen Sie das Ladegerät nicht durch Ziehen am Kabel ab.
+Das Netzkabel darf nicht gebogen oder beschädigt werden.
+Verwenden Sie das Gerät nicht während des Ladevorgangs und
+berühren Sie das Gerät nicht mit nassen Händen.
+Schließen Sie das Ladegerät und den Akku nicht kurz.
+Lassen Sie das Ladegerät und den Akku nicht fallen und
+schützen Sie diese Teile vor Erschütterungen.
+
+116 Sicherheitshinweise
+
+Verwenden Sie Ihr Gerät nicht während eines Gewitters.
+
+Verwenden Sie keinen beschädigten oder leckenden LithiumIon-Akku (Li-Ion).
+Wenden Sie sich für die sichere Entsorgung von Li-Ion-Akkus an das nächste
+Kundendienstzentrum.
+
+Behandeln und entsorgen Sie Akkus und Ladegeräte mit
+Sorgfalt.
+
+•	 Verwenden Sie nur von Samsung zugelassene Akkus und Ladegeräte, die
+
+speziell für das Gerät ausgelegt sind. Inkompatible Akkus und Ladegeräte
+können schwere Verletzungen oder Schäden am Gerät verursachen.
+•	 Werfen Sie Akkus oder Geräte niemals ins Feuer. Entsorgen Sie verbrauchte
+Akkus oder Geräte entsprechend den geltenden örtlichen Bestimmungen.
+•	 Legen Sie weder Akkus noch das Gerät auf oder in ein Heizgerät wie z.B. eine
+Mikrowelle, einen Ofen oder einen Heizkörper. Die Akkus können dadurch
+überhitzen und explodieren!
+•	 Zerdrücken oder zerstechen Sie den Akku nicht. Vermeiden Sie es, den Akku
+hohem Druck auszusetzen, der zu einem internen Kurzschluss und einer
+Überhitzung führen kann.
+
+Schutz von Gerät, Akkus und Ladegeräten vor Beschädigung.
+
+Verwenden Sie das Gerät nicht in der Nähe anderer
+elektronischer Geräte.
+
+Temperaturen aus.
+•	 Extreme Temperaturen können Verformungen des Geräts verursachen und
+verringern die Ladekapazität und Nutzungsdauer des Geräts und der Akkus.
+•	 Verhindern Sie versehentlichen Kontakt der Anschlussklemmen von Akkus
+mit Metallteilen, da auf diese Weise eine stromführende Verbindung
+hergestellt werden kann, die zu kurzfristiger oder dauerhafter Beschädigung
+des Akkus führen kann.
+•	 Verwenden Sie niemals ein beschädigtes Ladegerät oder einen beschädigten
+Akku.
+
+Die meisten elektronischen Geräte arbeiten mit Hochfrequenzsignalen. Dieses
+Gerät kann andere elektronische Geräte stören.
+
+•	 Setzen Sie das Gerät und Akkus nicht sehr niedrigen oder sehr hohen
+
+Achtung: Befolgen Sie alle Sicherheitswarnungen
+und Vorschriften bei der Verwendung des Geräts
+in Bereichen mit eingeschränkter Nutzung.
+Schalten Sie das Gerät aus, wo seine Verwendung verboten ist.
+Erfüllen Sie alle Vorschriften, die die Verwendung von Mobilgeräten in
+bestimmten Bereichen einschränken.
+
+Verwenden Sie das Gerät nicht in der Nähe eines
+Schrittmachers.
+
+•	 Verwenden Sie das Gerät nicht innerhalb eines Abstands von 15 cm zu einem
+Schrittmacher, da dieses Gerät einen Schrittmacher stören kann.
+
+•	 Wenn Sie das Gerät verwenden halten Sie einen Mindestabstand von 15 cm
+zum Schrittmacher ein.
+
+•	 Um mögliche Störungen eines Schrittmachers zu minimieren, verwenden Sie
+das Gerät an der gegenüberliegenden Körperseite des Schrittmachers.
+
+Verwenden Sie das Gerät nicht in einem Krankenhaus oder
+in der Nähe medizinischer Gerät, die durch Hochfrequenzen
+gestört werden können.
+Wenn Sie selbst medizinische Geräte verwenden, wenden Sie sich an den
+Hersteller dieser Geräte, um die Störfestigkeit dieser Geräte gegenüber
+Hochfrequenzen zu gewährleisten.
+
+Sicherheitshinweise
+
+117
+
+Wenn Sie ein Hörgerät verwenden, wenden Sie sich an den
+Hersteller für Informationen über Funkstörungen.
+
+Elektronische Vorrichtungen in Kraftfahrzeugen können durch
+die Funkfrequenz des Geräts gestört werden.
+
+Einige Hörgeräte können durch die Hochfrequenzen dieses Geräts gestört
+werden. Wenden Sie sich an den Hersteller, um die Sicherheit Ihres Hörgeräts
+zu gewährleisten.
+
+Die elektronischen Vorrichtungen in Ihrem Fahrzeug können durch die
+Funkfrequenz des Geräts gestört werden. Wenden Sie sich für weitere
+Informationen an den Hersteller.
+
+Schalten Sie das Gerät in explosionsgefährdeten Umgebungen
+aus.
+
+•	 Schalten Sie das Gerät in explosionsgefährdeten Umgebungen aus, anstatt
+den Akku zu entnehmen.
+
+•	 Befolgen Sie in explosionsgefährdeten Umgebungen immer sämtliche
+Vorschriften, Anweisungen und Hinweisschilder.
+
+•	 Verwenden Sie das Gerät nicht an einer Zapfsäule (Tankstelle), in der Nähe
+von Treibstoffen, Chemikalien oder in Sprengbereichen.
+
+•	 Lagern und transportieren Sie entzündliche Flüssigkeiten, Gase oder
+
+Sprengstoffe nicht am selben Ort, an dem sich das Gerät mit Zubehör
+befindet.
+
+Schalten Sie das Gerät in einem Flugzeug aus.
+Die Verwendung des Geräts in Flugzeugen ist verboten. Dieses Gerät kann die
+elektronischen Navigationsinstrumente von Flugzeugen stören.
+
+118 Sicherheitshinweise
+
+Befolgen Sie alle Sicherheitswarnungen und
+Vorschriften hinsichtlich der Nutzung von
+Mobilgeräten beim Autofahren.
+Im Verkehr ist das sichere Fahren des Fahrzeugs vorrangig. Verwenden Sie das
+Mobilgerät niemals beim Fahren, wenn es gesetzlich verboten ist. Verhalten
+Sie sich zu Ihrer Sicherheit und der Sicherheit anderer verkehrsgerecht und
+beachten Sie die folgenden Hinweise:
+•	 Verwenden Sie eine Freisprecheinrichtung.
+•	 Machen Sie sich mit dem Gerät und seine Funktionen wie Kurzwahl und
+Wahlwiederholung vertraut. Diese Funktionen reduzieren die Zeit, die zum
+Tätigen und Entgegennehmen von Anrufen mit dem Mobilgerät erforderlich
+ist.
+•	 Ordnen Sie das Gerät in Reichweite an. Sie sollten das drahtlose Gerät
+erreichen können, ohne Ihren Blick von der Straße zu nehmen. Sollte ein
+Anruf zu einem unpassenden Zeitpunkt eingehen, lassen Sie ihn von der
+Mailbox beantworten.
+
+•	 Lassen Sie die Person, mit der Sie sprechen, wissen, dass Sie ein Fahrzeug
+
+lenken. Führen Sie keine Gespräche bei starkem Verkehr oder gefährlichen
+Wetterbedingungen. Regen, Graupel, Schnee, Eis und starker Verkehr können
+gefährlich sein.
+•	 Machen Sie sich keine Notizen und schlagen Sie keine Telefonnummern nach.
+Aufschreiben von Informationen oder Blättern im Adressbuch beansprucht
+Ihre Aufmerksamkeit, so dass sicheres Fahren nicht mehr gewährleistet ist.
+•	 Wählen Sie überlegt und beachten Sie den Verkehr. Tätigen Sie Anrufe,
+während Sie stehen oder bevor Sie sich in den Verkehr einfädeln. Stoppen
+Sie das Fahrzeug, um Anrufe zu tätigen. Wenn Sie beim Fahren einen Anruf
+tätigen müssen, wählen Sie jeweils nur wenige Ziffern und prüfen Sie
+zwischendurch die Straße und Spiegel.
+•	 Führen Sie keine aufreibenden oder emotionalen Gespräche, die Sie ablenken
+können. Machen Sie Ihren Gesprächspartner darauf aufmerksam, dass Sie ein
+Fahrzeug lenken, und führen Sie keine Gespräche, die Ihre Aufmerksamkeit
+von der Straße ablenken können.
+•	 Nutzung des Geräts, um Hilfe zu rufen Wählen Sie bei Feuer, Verkehrsunfällen
+oder medizinischen Notfällen die zutreffende Notrufnummer.
+•	 Verwenden Sie das Gerät, um anderen in Notfällen zu helfen. Wenn Sie einen
+Verkehrsunfall, ein Verbrechen oder einen Notfall, in dem Lebensgefahr
+besteht, sehen, rufen Sie die zutreffende Notrufnummer an.
+
+•	 Rufen Sie gegebenenfalls einen Pannendienst oder einen anderen
+
+Spezialdienst. Wenn Sie ein liegen gebliebenes Fahrzeug sehen, das
+keine Gefahr darstellt, ein defektes Verkehrssignal, einen geringfügigen
+Verkehrsunfall ohne Personenverletzungen oder ein Fahrzeug, von dem
+Sie wissen, dass es gestohlen wurde, rufen Sie einen Pannendienst oder die
+zuständige Behörde an.
+
+Richtige Pflege und Nutzung des Mobilgeräts
+Halten Sie das Gerät trocken.
+
+•	 Feuchtigkeit und Flüssigkeiten aller Art können Teile des Geräts oder
+elektronische Schaltkreise beschädigen.
+
+•	 Sollte das Gerät nass geworden sein, entnehmen Sie den Akku, ohne das
+
+Gerät einzuschalten. Trocknen Sie das Gerät mit einem Tuch und bringen Sie
+es zu einem Kundendienstzentrum.
+•	 Durch Flüssigkeit wird die Farbe des Etiketts verändert, das Wasserschäden
+im Gerät anzeigt. Wasser beschädigt das Gerät und kann zum Erlöschen der
+Herstellergarantie führen.
+
+Bewahren Sie das Gerät nicht an staubigen und schmutzigen
+Plätzen auf.
+Durch Staub können Fehlfunktionen des Geräts verursacht werden.
+
+Sicherheitshinweise
+
+119
+
+Legen Sie das Gerät nicht auf schräge Flächen.
+Das Gerät kann durch Herunterfallen beschädigt werden.
+
+Bewahren Sie das Gerät nicht an heißen oder kalten Plätzen auf.
+Verwenden Sie das Gerät bei -20 bis 50 °C.
+
+•	 Das Gerät kann explodieren, wenn es in einem geschlossenen Fahrzeug
+
+gelassen wird, da die Temperatur in Fahrzeugen bis zu 80 °C erreichen kann.
+
+•	 Setzen Sie das Gerät nicht über längere Zeit direkter Sonnenbestrahlung aus
+(wie auf dem Armaturenbrett eines Fahrzeugs).
+•	 Bewahren Sie den Akku bei 0 bis 40 °C auf.
+
+Bewahren Sie das Gerät nicht zusammen mit
+Metallgegenständen wie Münzen, Schlüssel und Schmuck auf.
+
+•	 Das Gerät kann sich verformen oder Schäden davontragen.
+•	 Wenn die Akkukontakte mit Metallgegenständen in Kontakt kommen, kann
+ein Feuer verursacht werden.
+
+Bringen Sie das Gerät nicht in die Nähe magnetischer Felder.
+
+•	 Durch Magnetfelder können Fehlfunktionen des Geräts oder Entladen des
+Akkus verursacht werden.
+
+•	 Karten mit Magnetstreifen wie Kreditkarten, Telefonkarten, Reisepässe und
+Bordkarten können durch Magnetfelder beschädigt werden.
+
+•	 Verwenden Sie keine Taschen oder Accessoires mit Magnetverschlüssen
+
+und bringen Sie das Gerät nicht für längere Zeit mit magnetischen Feldern
+in Kontakt.
+
+Bewahren Sie das Gerät nicht in der Nähe von Heizungen,
+Mikrowellengeräten, Kochvorrichtungen oder
+Hochdruckbehältern auf.
+
+•	 Der Akku kann undicht werden.
+•	 Das Gerät kann sich überhitzen und ein Feuer verursachen.
+
+Lassen Sie das Gerät nicht fallen und setzen Sie es keinen
+Erschütterungen aus.
+
+•	 Der Bildschirm des Geräts kann beschädigt werden.
+•	 Durch Biegen oder Verformen können das Gerät oder Teile davon beschädigt
+werden.
+
+Verwenden Sie keinen Blitz nahe der Augen von Menschen
+oder Tieren.
+Durch Verwenden eines Blitzes in der Nähe von Augen können ein
+vorübergehender Sichtverlust oder Schäden an den Augen verursacht werden.
+
+Gewährleistung der maximale Nutzungsdauer des Akkus und
+des Ladegeräts.
+
+•	 Lassen Sie einen Akku nie länger als eine Woche am Ladegerät, da ein
+Überladen die Lebensdauer des Akkus verkürzt.
+
+120 Sicherheitshinweise
+
+•	 Mit der Zeit entladen sich unbenutzte Akkus und müssen vor Gebrauch
+
+erneut geladen werden.
+•	 Bitte beachten Sie, dass der Akku erst nach mehrmaligem, vollständigem
+Entladen und Laden die volle Kapazität erreicht.
+•	 Trennen Sie Ladegeräte von der Stromquelle, wenn sie nicht verwendet
+werden.
+•	 Verwenden Sie die Akkus nur für den vorgesehenen Zweck.
+
+Verwenden Sie nur vom Hersteller zugelassene Akkus,
+Ladegeräte, Zubehör und Teile.
+
+•	 Vermeiden Sie Kontakt mit der eingebauten Antenne des Geräts. Durch
+
+Berühren der Antenne kann die Verbindungsqualität beeinträchtigt oder die
+Übertragung von mehr Funkfrequenzen als erforderlich verursacht werden.
+•	 Halten Sie das Gerät entspannt, drücken Sie die Tasten nur leicht, verwenden
+Sie Spezialfunktionen, die die Anzahl der zu betätigenden Tasten verringern
+(wie z. B. Vorlagen und Texterkennung), und machen Sie regelmäßig Pausen.
+
+Schützen Sie Ihr Gehör
+
+•	 Durch laute Töne über längere Zeit können Gehörschäden
+verursacht werden.
+
+•	 Die Verwendung von Akkus oder Ladegeräten von Drittanbietern kann die
+
+•	 Laute Töne beim Lenken eines Fahrzeugs können Sie ablenken
+
+•	 Samsung ist nicht haftbar für die Sicherheit des Benutzers, wenn Zubehör
+
+•	 Verringern Sie vor dem Anschließen der Ohrhörer an eine
+
+Nutzungsdauer des Geräts verkürzen oder Fehlfunktionen verursachen.
+und Teile verwendet werden, die nicht von Samsung zugelassen sind.
+
+Nicht auf das Gerät oder den Akku beißen oder daran saugen
+
+•	 Dadurch kann das Gerät beschädigt oder eine Explosion verursacht werden.
+•	 Wenn das Gerät von Kindern benutzt wird, achten Sie auf die sachgemäße
+Verwendung.
+
+Sprechen in das Gerät:
+
+•	 Halten Sie das Gerät aufrecht wie bei einem herkömmlichen Telefon.
+•	 Sprechen Sie direkt in das Mikrofon.
+
+und einen Unfall verursachen.
+
+Audioquelle immer die Lautstärke und verwenden Sie nur
+die minimale Lautstärkeneinstellung, die zum Hören des
+Gesprächs oder der Musik erforderlich ist.
+
+Geben Sie Obacht, wenn Sie das Gerät beim Gehen oder Laufen
+verwenden.
+Achten Sie immer auf Ihre Umgebung, um sich und andere nicht zu verletzen.
+
+Tragen Sie das Gerät nicht in der Gesäßtasche oder an der
+Hüfte.
+Sie können sich verletzen oder das Gerät beschädigen, wenn Sie fallen.
+
+Sicherheitshinweise
+
+121
+
+Zerlegen, modifizieren oder reparieren Sie das Gerät nicht.
+
+Verwenden Sie das Gerät nicht, wenn das Display gesprungen
+oder zerbrochen ist.
+
+der Herstellergarantie führen. Lassen Sie das Gerät in einem SamsungKundendienstzentrum warten.
+•	 Bauen Sie den Akku nicht auseinander und stechen Sie nicht hinein, weil
+dadurch eine Explosion oder ein Feuer verursacht werden können.
+
+Zerbrochenes Glas oder Kunststoff kann Verletzungen an Händen und Gesicht
+verursachen. Lassen Sie das Gerät von einem Samsung-Kundendienstzentrum
+reparieren.
+
+•	 Veränderungen oder Modifizierungen am Gerät können zum Erlöschen
+
+Das Gerät weder mit Farbe anmalen noch mit Aufklebern
+bekleben.
+Farbe und Aufkleber können bewegliche Teile verstopfen oder behindern und
+dadurch den ordnungsgemäßen Betrieb Ihres Geräts verhindern. Falls Sie auf die
+Farbe oder Metallteile dieses Produkts allergisch reagieren, kann dies bei Ihnen
+eventuell Juckreiz, Ausschläge oder Hautschwellungen verursachen. Nutzen
+Sie das Produkt in diesem Fall keinesfalls weiter und suchen Sie umgehend
+einen Arzt auf.
+
+Reinigung des Geräts:
+
+•	 Reinigen Sie das Gerät und das Ladegerät mit einem Tuch oder einem
+
+Radiergummi.
+•	 Reinigen Sie die Kontakte des Akkus mit einem Wattebausch oder einem
+Tuch.
+•	 Verwenden Sie keine Chemikalien oder Lösungsmittel.
+
+122 Sicherheitshinweise
+
+Verwenden Sie das Gerät nicht für andere als die vorgesehenen
+Zwecke.
+Stören Sie nicht andere, wenn Sie das Gerät in der Öffentlichkeit
+verwenden.
+Lassen Sie das Gerät nicht von Kindern verwenden.
+Das Gerät ist kein Spielzeug. Lassen Sie Kinder nicht damit spielen, denn sie
+könnten sich selbst oder andere verletzen, das Gerät beschädigen oder Anrufe
+tätigen, die Kosten verursachen.
+
+Installieren Sie Mobilgeräte und Ausrüstung mit Sorgfalt
+
+•	 Stellen Sie sicher, dass alle Mobilgeräte oder zugehörige Ausrüstung, die in
+Ihrem Fahrzeug eingebaut ist, sicher befestigt sind.
+
+•	 Legen Sie das Gerät und Zubehör nicht in der Nähe oder im Aktionsbereich
+
+eines Airbags ab. Bei unsachgemäß eingebauten Mobilgeräten können
+durch sich schnell aufblasende Airbags schwere Verletzungen herbeigeführt
+werden.
+
+Mobilgeräte dürfen nur von ausgebildetem Fachpersonal
+gewartet und repariert werden.
+Kundendienst durch nicht entsprechend ausgebildetes Personal kann das Gerät
+beschädigen und zum Erlöschen der Herstellergarantie führen.
+
+Behandeln Sie SIM-Karten und Speicherkarten mit Sorgfalt.
+
+•	 Entfernen Sie niemals eine Speicherkarte aus dem Gerät, während Daten
+
+auf der Karte gelesen oder gespeichert werden. Anderenfalls kann es zu
+Datenverlusten und/oder Schäden an der Karte oder am Gerät kommen.
+•	 Schützen Sie die Karten vor starken Erschütterungen, statischer Entladung
+und elektrischer Störung durch andere Geräte.
+•	 Berühren Sie die goldfarbenen Kontakte von Speicherkarten nicht mit
+Ihren Fingern oder mit metallischen Gegenständen. Wenn die Kontakte
+verschmutzt sind, reinigen Sie sie mit einem weichen Tuch.
+
+Stellen Sie Zugriff auf Notdienste sicher.
+Notrufe über Ihr Gerät können in manchen Bereichen oder unter bestimmten
+Bedingungen nicht möglich sein. Planen Sie vor dem Reisen in abgelegene oder
+unerschlossene Gegenden eine alternative Methode zur Kontaktaufnahme zu
+Notdiensten und Ambulanzen.
+
+Sichern Sie alle wichtigen Daten.
+Samsung übernimmt keinerlei Haftung oder Verantwortung für Datenverluste.
+
+Verbreiten Sie keine urheberrechtlich geschützten Materialien
+Verbreiten Sie keine urheberrechtlich geschützten Materialien, die Sie ohne
+Erlaubnis der Eigentümer des Inhalts für andere aufgenommen haben. Dies
+stellt einen Verstoß gegen die Urheberrechtsgesetze dar. Der Hersteller haftet
+nicht für rechtliche Probleme, die durch die illegale Nutzung urheblicher
+Materialien durch den Benutzer verursacht werden.
+
+Informationen zur SAR-Zertifizierung (Spezifische
+Absorptionsrate)
+Ihr Gerät entspricht den Normen der Europäischen Union (EU), die Grenzwerte
+für die Belastung durch elektromagnetische Funkwellen (HF) von Radio- und
+Telekommunikationsausrüstung vorgeben. Diese Standards verbieten den
+Verkauf von Mobilgeräten, die eine maximale Belastungsrate (auch Specific
+Absorption Rate oder SAR genannt) von 2,0 W/kg überschreiten.
+Bei Tests wurde eine maximale SAR von 0,961 W/kg für dieses Modell ermittelt.
+Bei normalem Gebrauch ist der tatsächliche SAR-Wert wahrscheinlich erheblich
+niedriger, da das Gerät so ausgelegt ist, dass nur die für die Übertragung
+zur nächsten Basisstation erforderliche HF-Energie abgestrahlt wird. Durch
+das automatische Senden bei möglichst niedrigen SAR-Werten wird Ihre
+Gesamtbelastung durch HF-Energie verringert.
+Die Konformitätserklärung auf der Rückseite dieses Handbuchs bestätigt die
+Konformität dieses Geräts mit der europäischen Richtlinie über Funkanlagen
+und Telekommunikationseinrichtungen (R&TTE - Radio & Terminal
+Telecommunications Equipment). Weitere Informationen zu SAR und ähnlichen
+EU-Normen finden Sie auf der Website von Samsung.
+
+Sicherheitshinweise
+
+123
+
+Korrekte Entsorgung von Altgeräten
+
+Korrekte Entsorgung des Akkus dieses Produkts
+
+(Elektroschrott)
+(In den Ländern der Europäischen Union und anderen europäischen
+Ländern mit einem separaten Sammelsystem)
+Die Kennzeichnung auf dem Produkt, Zubehörteilen bzw. auf der
+dazugehörigen Dokumentation gibt an, dass das Produkt und
+Zubehörteile (z.B. Ladegerät, Kopfhörer, USB-Kabel) nach ihrer
+Lebensdauer nicht zusammen mit dem normalen Haushaltsmüll
+entsorgt werden dürfen. Entsorgen Sie dieses Gerät und Zubehörteile bitte
+getrennt von anderen Abfällen, um der Umwelt bzw. der menschlichen
+Gesundheit nicht durch unkontrollierte Müllbeseitigung zu schaden.
+Helfen Sie mit, das Altgerät und Zubehörteile fachgerecht zu entsorgen, um die
+nachhaltige Wiederverwertung von stofflichen Ressourcen zu fördern.
+Private Nutzer wenden sich an den Händler, bei dem das Produkt gekauft wurde,
+oder kontaktieren die zuständigen Behörden, um in Erfahrung zu bringen, wo
+Sie das Altgerät bzw. Zubehörteile für eine umweltfreundliche Entsorgung
+abgeben können.
+Gewerbliche Nutzer wenden sich an ihren Lieferanten und gehen nach den
+Bedingungen des Verkaufsvertrags vor. Dieses Produkt und elektronische
+Zubehörteile dürfen nicht zusammen mit anderem Gewerbemüll entsorgt
+werden.
+
+(In den Ländern der Europäischen Union und anderen
+europäischen Ländern mit einem separaten AltbatterieRücknahmesystem)
+Die Kennzeichnung auf dem Akku bzw. auf der dazugehörigen
+Dokumentation oder Verpackung gibt an, dass der Akku zu
+diesem Produkt nach seiner Lebensdauer nicht zusammen mit dem normalen
+Haushaltsmüll entsorgt werden darf.
+Wenn der Akku mit den chemischen Symbolen Hg, Cd oder Pb gekennzeichnet
+ist, liegt der Quecksilber-, Cadmium- oder Blei-Gehalt der Akku über den in
+der EG-Richtlinie 2006/66 festgelegten Referenzwerten. Wenn Akkus nicht
+ordnungsgemäß entsorgt werden, können sie der menschlichen Gesundheit
+bzw. der Umwelt schaden.
+Bitte helfen Sie, die natürlichen Ressourcen zu schützen und die nachhaltige
+Wiederverwertung von stofflichen Ressourcen zu fördern, indem Sie die Akkus
+von anderen Abfällen getrennt über Ihr örtliches kostenloses AltbatterieRücknahmesystem entsorgen.
+
+124 Sicherheitshinweise
+
+Haftungsausschlussklausel
+Bestimmte Inhalte und Dienste, die durch dieses Gerät zugänglich sind, sind
+Eigentum von Dritten und durch Urheberrechts-, Patent-, Markenrechtsund/oder andere Gesetze zum Schutz von geistigem Eigentum geschützt.
+Derartige Inhalte und Dienste werden ausschließlich für Ihre persönliche,
+nichtkommerzielle Nutzung bereitgestellt. Sie dürfen keine Inhalte oder Dienste
+in einer Weise nutzen, die nicht durch den Eigentümer der Inhalte oder den
+Dienstanbieter genehmigt wurde. Ohne das Vorstehende einzuschränken,
+dürfen Sie keine Inhalte oder Dienste, die durch dieses Gerät angezeigt werden,
+modifizieren, kopieren, erneut veröffentlichen, hochladen, zur Verfügung stellen,
+übertragen, übersetzen, verkaufen, damit abgeleitete Werke schaffen oder in
+irgendeiner Weise oder auf irgendeinem Medium verteilen, außer wenn Sie dazu
+ausdrücklich durch den jeweiligen Eigentümer der Inhalte oder Dienstanbieter
+autorisiert wurden.
+“DIE INHALTE UND DIENSTE DRITTER WERDEN OHNE MÄNGELGEWÄHR
+BEREITGESTELLT. SAMSUNG ÜBERNIMMT KEINE HAFTUNG FÜR DERART
+BEREITGESTELLTE INHALTE ODER DIENSTE, WEDER AUSDRÜCKLICH NOCH
+IMPLIZIT, FÜR KEINE ZWECKE. SAMSUNG WEIST AUSDRÜCKLICH JEGLICHE
+IMPLIZITE GARANTIEN ZURÜCK, EINSCHLIESSLICH, ABER NICHT BESCHRÄNKT
+AUF, GARANTIEN DER MARKTFÄHIGKEIT ODER EIGNUNG FÜR EINEN
+BESTIMMTEN ZWECK. SAMSUNG ÜBERNIMMT KEINE GARANTIE FÜR DIE
+FEHLERFREIHEIT, GÜLTIGKEIT, RECHTZEITIGKEIT, RECHTMÄSSIGKEIT ODER
+VOLLSTÄNDIGKEIT VON IRGENDWELCHEN INHALTEN ODER DIENSTEN,
+
+DIE DURCH DIESES GERÄT VERFÜGBAR GEMACHT WERDEN, UND UNTER
+KEINEN UMSTÄNDEN, EINSCHLIESSLICH VON FAHRLÄSSIGKEIT, IST SAMSUNG
+HAFTBAR, WEDER AUS VERTRAG NOCH AUS UNERLAUBTER HANDLUNG,
+FÜR IRGENDWELCHE DIREKTE, INDIREKTE, NEBEN-, BESONDERE ODER
+FOLGESCHÄDEN, ANWALTSGEBÜHREN, KOSTEN ODER IRGENDWELCHE ANDERE
+SCHÄDEN, DIE AUS ODER IN VERBINDUNG MIT IRGENDWELCHEN DARIN
+ENTHALTENEN INFORMATIONEN ODER ALS EIN ERGEBNIS DER VERWENDUNG
+IRGENDWELCHER INHALTE ODER DIENSTE DURCH SIE ODER DRITTE ENTSTEHEN,
+SELBST WENN SAMSUNG AUF DIE MÖGLICHKEIT DERARTIGER SCHÄDEN
+HINGEWIESEN WURDE”.
+Dienste Dritter können jederzeit beendet oder unterbrochen werden, und
+Samsung gibt keine Erklärung ab und übernimmt keine Garantie, dass
+irgendwelche Inhalte oder Dienste für irgendeine Zeitdauer verfügbar bleiben
+werden. Inhalte und Dienste werden von Dritten mit der Hilfe von Netzen und
+Übertragungseinrichtungen übertragen, über die Samsung keine Kontrolle hat.
+Ohne die Allgemeingültigkeit dieser Haftungsausschlussklausel einzuschränken,
+weist Samsung ausdrücklich jegliche Verantwortung oder Haftung für
+irgendwelche Unterbrechungen oder Aussetzungen von irgendwelchen
+Inhalten oder Diensten, die durch dieses Gerät verfügbar gemacht werden,
+zurück.
+Samsung ist weder verantwortlich noch haftbar für Kundendienste, die
+zu den Inhalten und Diensten in Beziehung stehen. Jegliche Fragen oder
+Anforderungen nach Diensten, die zu den Inhalten oder Diensten in Beziehung
+stehen, sind direkt an die jeweiligen Inhalts- und Dienstanbieter zu richten.
+
+Sicherheitshinweise
+
+125
+
+Index
+Akku
+Einsetzen  10
+Laden  12
+Alarme
+Erstellen  93
+Stoppen  93
+Anklopfen  41
+Anrufe
+Abweisen  39
+Entgegennehmen  38
+Headset verwenden  39
+Internationale Nummern  39
+Optionen während eines Anrufs
+verwenden  39
+Tätigen  38
+
+126 Index
+
+Unbeantwortete Anrufe
+anzeigen  40
+Warten  41
+Weiterleitung  41
+
+Anrufliste  42
+Auspacken  10
+Bluetooth
+Aktivieren  85
+Daten empfangen  86
+Daten senden  86
+Geräte suchen und koppeln  86
+Downloads
+Anwendungen  35
+Dateien  36
+Eigene Dateien  94
+
+Einstellungen
+Anrufeinstellungen  99
+Anwendungen  103
+Datenschutz  104
+Datum und Uhrzeit  108
+Drahtlos & Netzwerk  97
+Eingabehilfe  108
+Konten und Synchronisierung  104
+SD-Karte & Telefonspeicher  104
+Sprache und Texteingabe  105
+Standort & Sicherheit  102
+Suche  104
+E-Mail
+Anzeigen  47
+Konten einrichten  46
+Senden  46
+
+FDN-Modus (feste Rufnummern)  41
+Fotos
+Anzeigen  58
+Aufnehmen  50
+Fotoserie aufnehmen  53
+Nach Szene aufnehmen  52
+Panoramafoto aufnehmen  53
+Smile-Aufnahme  52
+Galerie
+Dateiformate  58
+Fotos anzeigen  58
+Videos wiedergeben  59
+Gerät
+Anpassen  28
+Anzeigesymbole  20
+Aufbau  18
+Einstellungen  97
+Ein- und Ausschalten  18
+Schnellzugriffanzeige  24
+Tasten  19
+
+Google Mail  44
+Google Maps  77
+Google-Suche  81
+Google Talk  48
+Helligkeit, Display  29
+Internet
+siehe „Webbrowser“
+Kalender
+Ereignisse anzeigen  71
+Ereignisse erstellen  71
+Kamera
+Fotografieren  50
+Kamera anpassen  54
+Videokamera anpassen  57
+Videos aufnehmen  56
+
+Kontakte
+Erstellen  67
+Importieren  69
+Kopieren  69
+Kurzwahl festlegen  68
+Suchen  67
+Latitude  79
+Mailbox  44
+Memos
+Anzeigen  72
+Erstellen  72
+Menübildschirm
+Anwendungen anordnen  26
+Aufrufen  26
+MMS
+Anzeigen  43
+Senden  43
+
+Index
+
+127
+
+MP3-Player
+Dateien hinzufügen  60
+Musik wiedergeben  60
+Wiedergabelisten erstellen  62
+Nachrichten
+E-Mail-Konten einrichten  46
+E-Mail-Nachricht senden  46
+Mailbox aufrufen  44
+Multimedia-Nachricht (MMS)
+senden  43
+SMS senden  42
+Nachrichtenliste  42
+News & Weather  82
+Offline-Modus  18
+PC-Verbindungen
+Massenspeicher  90
+Samsung Kies  90
+
+128 Index
+
+PIN-Sperre  31
+Rechner  94
+Rufumleitung  41
+Samsung Apps  83
+Samsung Kies  90
+SIM-Karte
+Einsetzen  10
+Sperren  31
+SMS
+Anzeigen  43
+Senden  42
+Social Hub  49
+Speicherkarte
+Entnehmen  16
+Formatieren  16
+Sprache  105
+
+Sprachmemo
+Aufnehmen  72
+Wiedergeben  72
+Standby-Bildschirm
+Anzeigeflächen hinzufügen  25
+Elemente hinzufügen  23
+Stumm-Modus  28
+Synchronisierung
+Webkonten  36
+Task-Manager  96
+Telefonbuch
+Eigene Visitenkarte erstellen  68
+Gruppen erstellen  69
+Kontakte erstellen  67
+Kontakte suchen  67
+Texteingabe  31
+Textmemos  72
+
+Touchscreen
+Sperren  23
+Verwenden  22
+Uhrzeit und Datum, einstellen  28
+UKW-Radio
+Hören  63
+Sender speichern  64
+USIM-Karte
+Einsetzen  10
+Sperren  31
+Verbindungen
+Bluetooth  85
+PC  90
+WLAN  87
+Video-Player  59
+Videos
+Aufnehmen  56
+Wiedergeben  59
+
+VPN-Verbindungen
+Erstellen  91
+Verbindung herstellen  92
+Webbrowser
+Favoriten hinzufügen  76
+Webseiten durchsuchen  74
+WLAN
+Aktivieren  87
+Netzwerk suchen und Verbindung
+herstellen  88
+YouTube
+Videos hochladen  82
+Videos wiedergeben  81
+Zugriffscodes  110
+
+Index
+
+129
+
+Konformitätserklärung (Funkanlagen und
+Telekommunikationsendeinrichtungen)
+Wir,	
+
+Samsung Electronics
+
+erklären unter unserer alleinigen Verantwortung, dass dem Produkt
+
+GSM-WCDMA-Wi-Fi-Mobiltelefon : GT-S5570
+die Konformität mit den folgenden Normen und/oder anderen
+normgebenden Dokumenten bescheinigt wird:
+Sicherheit	 60950-1 : 2006 +A11:2009
+EN
+EN 50332-1 : 2000
+EN 50332-2 : 2003
+SAR	 50360 : 2001
+EN
+EN 62209-1 : 2006
+EMV	 301 489-01 V1.8.1 (04-2008)
+EN
+EN 301 489-07 V1.3.1 (11-2005)
+EN 301 489-17 V2.1.1 (05-2009)
+EN 301 489-19 V1.2.1 (11-2002)
+EN 301 489-24 V1.4.1 (09-2007)
+Funk	 301 511 V9.0.2 (03-2003)
+EN
+EN 300 328 V1.7.1 (10-2006)
+EN 301 908-1 V4.2.1 (03-2010)
+EN 301 908-2 V4.2.1 (03-2010)
+
+Hiermit erklären wir, dass [alle wesentlichen Funktestreihen ausgeführt
+wurden und dass] das oben genannte Produkt allen wesentlichen
+Anforderungen der Richtlinie 1999/5/EC entspricht.
+Das in Abschnitt 10 genannte Verfahren für die Feststellung der
+Konformität, das im Anhang [IV] der Richtlinie 1999/5/EC beschrieben
+wird, wurde unter Beteiligung der benannten Stelle(n) durchgeführt:
+BABT, Forsyth House,
+Churchfield Road,
+Walton-on-Thames,
+Surrey, KT12 2TD, UK*
+Kennzeichen: 0168
+Die technische Dokumentation wird unter folgender Anschrift geführt:
+Samsung Electronics QA Lab.
+und kann auf Anfrage eingesehen werden.
+(Vertreter in der EU)
+Samsung Electronics Euro QA Lab.
+Blackbushe Business Park, Saxony Way,
+Yateley, Hampshire, GU46 6GG, UK*
+2010.12.16		
+Joong-Hoon Choi / Lab Manager
+(Ort und Datum) (Name und Unterschrift der/des Bevollmächtigten)
+*  ies ist nicht die Adresse des Samsung-Kundendienstzentrums. Die Adresse
+D
+oder Telefonnummer des Samsung-Kundendienstzentrums finden Sie auf der
+Garantiekarte oder erfahren Sie von dem Geschäft, in dem Sie das Produkt
+erworben haben.
+
+Einige der Inhalte in diesem Handbuch können sich von Ihrem Telefon unterscheiden, dies ist abhängig von der Software oder
+dem Dienstanbieter.
+
+Installation von Kies (PC Sync)
+1.	 Laden Sie die neueste Version von Kies von der SamsungWebseite (www.samsungmobile.com) herunter und
+installieren Sie sie auf Ihrem PC.
+2.	 Verbinden Sie Ihr Gerät über ein PC-Datenkabel mit dem
+PC. Samsung Kies wird automatisch gestartet.
+Falls Samsung Kies nicht automatisch gestartet wird,
+doppelklicken Sie auf dem PC auf das Symbol Samsung
+Kies.
+In der Hilfe zu Kies finden Sie weitere Informationen.
+
+www.samsungmobile.com
+
+German. 03/2011. Rev. 1.0
+

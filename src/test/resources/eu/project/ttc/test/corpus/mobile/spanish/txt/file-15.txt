@@ -1,0 +1,1149 @@
+Nokia 30 Terminal de conectividad GSM Nokia 30
+Guía de usuario para su uso como módem9355423
+Edición 3 DECLARACIÓN DE CONFORMIDAD
+Nosotros, NOKIA CORPORATION, declaramos bajo nuestra única responsabilidad, que el producto TME-3 se adapta a las condiciones 
+dispuestas en la Normativa del consejo siguiente: 1999/5/EC.
+Existe una copia de la Declaración de conformidad disponible en la dirección 
+http://www.nokia.com/phones/declaration_of_conformity/.
+Copyright ? 2002-2003 Nokia. Reservados todos los derechos.
+Queda prohibida la reproducción, transferencia, distribución o almacenamiento de todo o parte del contenido de este documento 
+bajo cualquier forma sin el consentimiento previo y por escrito de Nokia.
+Nokia y Nokia Connecting People son marcas registradas de Nokia Corporation. El resto de los productos y nombres de compañías 
+aquí mencionados pueden ser marcas comerciales o registradas de sus respectivos propietarios.
+HyperTerminal es una marca registrada de Hilgraeve Inc.
+Nokia opera con una política de desarrollo continuo. y se reserva el derecho a realizar modificaciones y mejoras en cualquiera de los 
+productos descritos en este documento sin previo aviso.
+Nokia no se responsabilizará bajo ninguna circunstancia de la pérdida de datos o ingresos ni de ningún daño especial, incidental, 
+consecuente o indirecto, independientemente de cuál sea su causa.
+El contenido del presente documen
+garantía, expresa o implícita, inclui
+con respecto a la exactitud, fiabilid
+documento en cualquier momento 
+La disponibilidad de productos conto se suministra tal cual. Salvo que así lo exija la ley aplicable, no se ofrece ningún tipo de 
+da, pero sin limitarse a, la garantía implícita de comerciabilidad y adecuación a un fin particular 
+ad y contenido de este documento. Nokia se reserva el derecho de revisar o retirar este 
+sin previo aviso.
+cretos puede variar de una región a otra. Consulte con su distribuidor Nokia más cercano. Índice general
+PARA SU SEGURIDAD...................................... Montaje del terminal.....................................................  14 5
+Colocación del terminal................................................  14
+1. Introducción.................................................  6 Conectores del terminal................................................  15
+Existen tres formas de conectar el terminal Introducción del código PIN........................................  17
+Nokia 30 a un PC compatible o a cualquier Cambio del código PIN ..............................................  20
+otro dispositivo compatible: ..............................................  7
+Conectado a un PC como un módem 4. Instalación del módem para el terminal 
+inalámbrico..........................................................................  7 Nokia 30.......................................................... 22
+Conectado a un PC e introduciendo Modem setup for Nokia 30 terminal ............................  22
+los comandos AT en una aplicación de software Introducción.....................................................................  22
+de terminal ..........................................................................  7 Conceptos básicos ..........................................................  23
+Conectado a una aplicación electrónica.....................  7 Modem Setup ..................................................................  23
+Paquete de ventas.................................................................  8 Configure Nokia Modem Options ..................................  24
+Creación de una nueva conexión de acceso 
+2. Funciones del terminal Nokia 30 ...............  9 telefónico .............................................................................  25
+Conexiones de datos y mensajes ......................................  9 Conexión GPRS................................................................  28
+GPRS......................................................................................  9 Conexión HSCSD o CSD ................................................  29
+HSCSD...................................................
+CSD ........................................................
+SMS........................................................
+USSD......................................................
+Servicios suplementarios ....................
+AutoPIN....................................................
+3. Conceptos básicos.................
+Configuración del terminal ................
+Instalación de la tarjeta SIM..........
+Í n d i c e  g e n e r a l
+Í n d i c e  g e n e r a l.............................. 10 Introduzca el nombre de usuario y la 
+.............................. 10 contraseña ........................................................................  30
+.............................. 10 Asigne un nombre a la conexión................................  31
+.............................. 10 Configure la cuenta de correo de Internet..............  32
+.............................. 11 Ajustes adicionales ............................................................  32
+.............................. 11 Opciones para conexiones de acceso telefónico.......  33
+Definición de propiedades............................................  34
+..................... 12
+Conexión a Internet...........................................................  36
+.............................. 12
+Desinstalación de Modem setup for Nokia 30 
+.............................. 13
+Copyright 2002-2003 Nokia. All rights reserved 3. terminal.................................................................................. 37 8. Códigos de acceso......................................  48
+Modem setup para el controlador de módem Código PIN (de 4 a 8 dígitos)..........................................  48
+estándar ................................................................................. 38 Código PIN2 (de 4 a 8 dígitos) .......................................  48
+Software de comunicaciones........................................... 39 Código PUK (8 dígitos)......................................................  48
+Código PUK2 (8 dígitos) ...................................................  49
+5. Indicadores luminosos ............................... 40 Código de seguridad (10 dígitos máximo) ..................  49
+Indicadores luminosos del Nokia 30 al inicio: ............ 40 Contraseña de restricciones............................................  49
+Indicadores luminosos del Nokia 30 en el modo 
+de funcionamiento normal:.............................................. 42 9. El terminal Nokia 30 como dispositivo 
+Indicadores luminosos del Nokia 30 en el modo de comunicaciones M2M............................... 50
+de funcionamiento especial:............................................ 43 Modo de control del usuario...........................................  50
+6. Acceso Modo de comandos AT .....................................................  51rios................................................... 44 Modo de sistema M2M.....................................................  51
+7. Solución de problemas Colocación del terminal para comunicación .............................. 45
+Comprobaciones preliminares M2M ......................................................................................  52......................................... 45
+Recepción débil.................................................................... 45
+Código PIN bl CUIDADO Y MANTENIMIENTO .....................  53oqueado ....................................................... 46
+Sin conexión ......................................................................... 46 IMPORTANTE INFORMACIÓN 
+No hay conexión a Internet ............................................. 47 SOBRE SEGURIDAD........................................  54
+Controlador de módem...................................................... 47
+Í n d i c e  g e n e r a l
+Í n d i c e  g e n e r a lESPECIFICACIONES TÉCNICAS......................  57
+Copyright 2002-2003 Nokia. All rights reserved 4. PARA SU SEGURIDAD
+Lea estas sencillas instrucciones. No respetar las normas puede ser peligroso o ilegal. En este manual 
+encontrará información más detallada.
+INTERFERENCIAS
+Todos los dispositivos móviles pueden recibir interferencias que podrían afectar su rendimiento.
+NO UTILIZAR EN HOSPITALES
+Siga todas las normativas existentes. No lo utilice cuando se encuentre cerca de un aparato médico.
+UTILÍCELO RAZONABLEMENTE
+No toque la antena si no es necesario.
+SERVICIO TÉCNICO CUALIFICADO
+Únicamente debe instalar o reparar el equipo personal de servicio técnico cualificado.
+ACCESORIOS
+Utilice únicamente accesorios aprobados por el fabricante. No conecte productos que sean 
+incompatibles.
+COPIAS DE SEGURIDAD
+Recuerde hacer copias d
+CONEXIÓN CON OTROS DI
+Si desea conectarse con 
+detalle las instrucciones
+P A R A  S U  S E G U R I D A D
+P A R A  S U  S E G U R I D A De seguridad de todos los datos importantes.
+SPOSITIVOS
+otro dispositivo, antes lea la guía del usuario correspondiente para conocer con 
+ de seguridad. No conecte productos que sean incompatibles.
+Copyright ©2002-2003 Nokia. All rights reserved. 5 1. Introducción
+El Nokia 30 es un terminal de 
+conectividad GSM con numerosas 
+funciones avanzadas. 
+Si conecta el terminal de conectividad 
+GSM Nokia 30 a su PC o a cualquier otro 
+dispositivo compatible, podrá, por 
+ejemplo, realizar llamadas de datos, 
+enviar mensajes y conectarse a Internet.
+El terminal Nokia 30 ofrece conexiones 
+inalámbricas de alta velocidad y admite 
+varios tipos de conexión de datos, como 
+GPRS, datos de alta velocidad, USSD y 
+mensajes de texto en redes EGSM900/
+GSM1800.
+El terminal de conectividad GSM
+con la seguridad, como AutoPIN
+usuario final.
+El terminal Nokia 30 dispone de 
+insuficiente para obtener un resu
+I n t r o d u c c i ó n
+I n t r o d u c c i ó n Nokia 30 dispone también de funciones de gran utilidad relacionadas 
+, códigos de seguridad GSM y encriptación GSM para la privacidad del 
+una antena interna. No obstante, si la intensidad de la señal es 
+ltado óptimo, se puede acoplar una antena externa al terminal.
+Copyright ©2002-2003 Nokia. All rights reserved. 6 Si se acopla el adaptador de datos RS-232 al terminal Nokia 30, se puede utilizar como módem 
+autónomo cuando esté conectado a un PC o a un dispositivo compatible. En esta guía de usuario, se 
+describe el modo de utilizar el terminal de conectividad GSM Nokia 30 como un módem inalámbrico.
+  Existen tres formas de conectar el terminal Nokia 30 a un PC 
+compatible o a cualquier otro dispositivo compatible:
+Conectado a un PC como un módem inalámbrico
+El terminal Nokia 30 se conecta a su ordenador y se instala en él como un módem. Las aplicaciones de 
+comunicaciones se pueden utilizar posteriormente para enviar y recibir datos mediante la conexión 
+inalámbrica ofrecida por el terminal Nokia 30. Para obtener información más detallada, véase 
+Instalación del módem para el terminal Nokia 30 en la página 22. 
+Conectado a un PC e introduciendo los comandos AT en una aplicación de 
+software de terminal
+Los comandos AT se introducen directamente en una aplicación, por ejemplo, Hyper Terminal®. El 
+terminal Nokia 30, utilizado com
+como ejemplo de ello en la págin
+Conectado a una aplicació
+Cuando el terminal Nokia 30 se c
+dispositivo con una interfaz serie
+30 a través de la interfaz RS-232
+sobre el uso del terminal Nokia 3
+I n t r o d u c c i ó n
+I n t r o d u c c i ó no módem, admite estos comandos. Véase Introducción del código PIN 
+a 17.
+n electrónica
+onecta al adaptador de datos RS-232, se puede conectar a un 
+ para un módem. Este dispositivo se comunica con el terminal Nokia 
+ mediante comandos AT integrados. Para obtener más información 
+0 para comunicaciones M2M, véase la página 51.
+Copyright ©2002-2003 Nokia. All rights reserved. 7 Paquete de ventas
+El paquete de ventas completo del 
+terminal de conectividad GSM Nokia 30 
+incluye lo siguiente:
+1. Terminal de conectividad GSM 
+Nokia 30
+2. Fuente de alimentación ACW-5A
+3. Adaptador de datos RS-232
+4. Cable de datos RS-232
+5. Kit de instalación
+6. Nota sobre el producto
+7. CD-ROM del terminal Nokia 30
+I n t r o d u c c i ó n
+I n t r o d u c c i ó nCopyright ©2002-2003 Nokia. All rights reserved. 8 2. Funciones del terminal Nokia 30
+En este capítulo se ofrece una breve explicación de las principales funciones del terminal Nokia 30.
+Nota:No encienda el terminal donde el uso de dispositivos móviles esté prohibido o si puede causar 
+interferencias o comportar algún peligro.
+Algunas características incluidas en esta guía se denominan Servicios de red. Se trata de servicios 
+especiales que debe contratar con su operador de telefonía móvil. Para disponer de los servicios de red, 
+antes debe contratarlos con su operador y obtener las instrucciones necesarias para su uso. Por 
+ejemplo, las funciones como las conexiones de datos inalámbricas y los servicios adicionales dependen 
+de la red en el terminal de conectividad GSM Nokia 30.
+  Conexiones de datos y mensajes
+El terminal de conectividad GSM Nokia 30 admite cinco tecnologías para la transferencia inalámbrica 
+de datos que se pueden utilizar donde las redes GSM lo permitan. Se pueden utilizar distintos 
+comandos AT dependiendo del portador de datos activo.
+Nota: Para poder utilizar los servicios GPRS, HSCSD, CSD o USSD, deberá suscribirse previamente a 
+ellos. Además, deberá guardar la
+tecnologías. Véase Instalación d
+GPRS
+Con GPRS (General Packet Radio
+paquetes estandarizados. La tran
+F u n c i o n e s  d e l  t e r m i n a l  N o k i a  3 0
+F u n c i o n e s  d e l  t e r m i n a l  N o k i a  3 0s opciones de conexión para las aplicaciones utilizadas con estas 
+el módem para el terminal Nokia 30 en la página 22.
+ Service), los datos se transfieren a través de la red en pequeños 
+sferencia de datos en paquetes hace que ésta resulte más eficaz. Dado 
+Copyright ©2002-2003 Nokia. All rights reserved. 9 que el terminal Nokia 30 admite GPRS multi-ranura de clase 6, se pueden utilizar múltiples segmentos 
+de tiempo a la vez para la transferencia de datos.
+HSCSD
+Con HSCSD (High Speed Circuit Switched Data), el terminal Nokia 30 actúa como un terminal multi-
+ranura de clase 6 y ofrece velocidades de transferencia de datos de hasta 43,2 kbit/s.
+CSD
+CSD (Circuit Switched Data) ofrece una velocidad de transferencia de datos de hasta 14,4 kbit/s.
+SMS
+SMS (Short Message Service) se utiliza para enviar y recibir mensajes de 160 caracteres como máximo 
+a través del terminal Nokia 30. SMS es un método cómodo de transferir datos de forma rápida y 
+sencilla a los terminales Nokia 30 y desde ellos.
+USSD
+USSD (Unstructured Supplemen
+mensajes interactivos. USSD se u
+través del terminal Nokia 30. Co
+método SMS, con USSD se aume
+respuesta, ya que se conoce el re
+Nota: Los mensajes USSD sólo se
+F u n c i o n e s  d e l  t e r m i n a l  N o k i a  3 0
+F u n c i o n e s  d e l  t e r m i n a l  N o k i a  3 0tary Services Data) ofrece servicios fiables de envío y recepción de 
+tiliza para enviar y recibir mensajes de 182 caracteres como máximo a 
+n USSD, la sesión durará lo que dure la conexión. Si se compara con el 
+nta la fiabilidad de la transferencia y se reducen los tiempos de 
+tardo.
+ pueden enviar a la red y no directamente a otro terminal móvil.
+Copyright ©2002-2003 Nokia. All rights reserved. 10 Servicios suplementarios
+ El terminal Nokia 30 también admite servicios adicionales dependientes de la red como:
+? Desvío de llamadas para desviar sus llamadas a otro número especificado.
+? Restricción de llamadas para restringir las llamadas salientes y entrantes.
+? Transferencia de llamadas para conectar a dos personas llamantes entre sí y, después, 
+desconectarse sin molestarlas.
+? Llamada en espera: le avisa de otras llamadas entrantes durante una llamada telefónica.
+? Gestión de llamadas entrantes para alternar entre la llamada entrante y la que está activa.
+? Conferencia múltiple para conectar a varias personas llamantes a la misma conversación.
+? Opciones de seguridad como Restricción de llamadas.
+Para activar estos servicios suplementarios, cambie la configuración del terminal Nokia 30. Se puede 
+realizar utilizando, por ejemplo, Nokia 30 Configurator.
+  AutoPIN
+La seguridad de la tarjeta SIM en
+que impide el uso de la tarjeta S
+utiliza de forma predeterminada
+activar con el software Nokia 30
+terminal a donde se transmite en
+terminal.
+F u n c i o n e s  d e l  t e r m i n a l  N o k i a  3 0
+F u n c i o n e s  d e l  t e r m i n a l  N o k i a  3 0 el terminal Nokia 30 se puede lograr mediante la función AutoPIN 
+IM a personas no autorizadas. La petición del código PIN estándar se 
+ en el terminal Nokia 30; sin embargo, la función AutoPIN se puede 
+ Configurator. El código PIN se programa después en la memoria del 
+ situaciones poco habituales, por ejemplo, cuando se reinicia el 
+Copyright ©2002-2003 Nokia. All rights reserved. 11 3. Conceptos básicos
+  Configuración del terminal
+Cuando utilice el terminal de conectividad GSM Nokia 30 por primera vez, proceda del modo siguiente:
+1. Instale la tarjeta SIM tal como se describe en la página 13.
+2. Coloque el terminal en el adaptador de datos RS-232.
+3. Sitúe el terminal en un lugar apropiado teniendo en cuenta la funcionalidad de la antena y la 
+intensidad de campo.
+4. Conecte el cable de datos RS-232 al terminal y a un PC, o a cualquier otro dispositivo compatible. 
+Conecte la fuente de alimentación ACW-5A al terminal y a una toma mural de CA.
+5. Introduzca el código PIN si la tarjeta SIM lo requiere. 
+¡Aviso! Para evitar que se produzcan daños en la tarjeta SIM, no instale, mueva o retire la tarjeta SIM 
+mientras la fuente de alimentación se encuentre conectada a una toma mural de CA. Instale el terminal 
+en el adaptador de datos RS-232 antes de conectar la fuente de alimentación.
+C o n c e p t o s  b á s i c o s
+C o n c e p t o s  b á s i c o sCopyright ©2002-2003 Nokia. All rights reserved. 12 Instalación de la tarjeta SIM
+Mantenga las tarjetas pequeñas SIM fuera del 
+alcance de los niños.
+El lector de tarjeta SIM del terminal Nokia 30 
+admite tarjetas SIM pequeñas de 3 V.
+La tarjeta SIM queda encajada en su sitio con 
+la cubierta de plástico de la tarjeta SIM. Si 
+necesita extraer la tarjeta SIM del terminal, 
+hágalo con cuidado, por ejemplo, con una 
+herramienta de punta fina.
+Nota: No es posible extraer la tarjeta SIM 
+cuando el terminal Nokia 30 está conectado 
+al adaptador de datos RS-232.
+1. Extraiga del terminal la cubierta de la 
+tarjeta SIM levantando en primer lugar el 
+extremo más ancho.
+2. Inserte la tarjeta SIM en la ra
+asegúrese de que los contact
+quedan hacia arriba y la esqu
+3. Vuelva a colocar la cubierta d
+y, a continuación, presione ha
+C o n c e p t o s  b á s i c o s
+C o n c e p t o s  b á s i c o snura y 
+os dorados 
+ina biselada a la izquierda.
+e la tarjeta SIM presionando en primer lugar el extremo más estrecho 
+sta que la cubierta se cierre con un chasquido.
+Copyright ©2002-2003 Nokia. All rights reserved. 13 Nota: Si la tarjeta SIM está instalada pero el terminal Nokia 30 sigue solicitando la inserción de una 
+tarjeta SIM, significará que el terminal no admite su tarjeta SIM. El terminal Nokia 30 sólo admite 
+tarjetas SIM de 3 V.
+Montaje del terminal
+Coloque el terminal boca abajo en el 
+adaptador de datos RS-232 y utilice los 
+tornillos incluidos en el paquete de ventas 
+para sujetarlo en la posición correcta. 
+Nota: Si desea instalar el terminal en una 
+pared, fije en primer lugar el adaptador de 
+datos RS-232 a la pared antes de acoplarle el 
+terminal.
+Colocación del terminal
+Instale el terminal horizontal o v
+en la pared, o en una superficie h
+ayuda de la función Intensity of 
+terminal Nokia 30. Véase "Indica
+Si la antena interna no resulta a
+C o n c e p t o s  b á s i c o s
+C o n c e p t o s  b á s i c o serticalmente 
+orizontal. Puede encontrar la mejor ubicación para instalarlo con 
+Field strength (IoF) mediante los indicadores luminosos (LED) del 
+dores luminosos" en la página 40.
+decuada, se recomienda utilizar una antena externa adicional.
+Copyright ©2002-2003 Nokia. All rights reserved. 14 Para obtener información más detallada sobre la colocación del terminal, consulte la dirección 
+http:// www.forum.nokia.com.
+Precaución: Para cumplir con los requisitos de exposición a radiofrecuencia, instale el terminal de 
+modo que exista una distancia de 20 cm entre la antena y las personas. Si utiliza una antena externa, 
+instálela de modo que exista una distancia mínima de 20 cm entre la antena y las personas, sin que el 
+rendimiento de la antena exceda de 9 dBi.
+Nota: Todos los dispositivos de transmisión por radio emiten señales que pueden causar interferencias 
+en distintos dispositivos electrónicos (PC, televisión, etc.). Para evitar interferencias, coloque el 
+terminal a una distancia apropiada de otros dispositivos electrónicos.
+Conectores del terminal
+El terminal Nokia 30 dispone de cuatro interfaces para conectarlo: Sistema M2M, RS-232, interfaz de 
+potencia y conector de antena externa.
+? Conector de sistema M2M
+El conector de sistema M2M se encuentra en la base del terminal. Al 
+montar el terminal, el conector de sistema M2M se acopla al conector 
+correspondiente del adaptador d
+C o n c e p t o s  b á s i c o s
+C o n c e p t o s  b á s i c o se datos RS-232.
+Copyright ©2002-2003 Nokia. All rights reserved. 15 ? Conector RS-232
+1. Coloque en primer lugar el terminal Nokia 30 en el adaptador de datos 
+RS-232 para conectar el terminal a un PC o a otros dispositivos 
+compatibles.
+2. Conecte el cable de datos RS-232 al adaptador.
+3. Conecte el cable de datos del terminal a un PC o a cualquier otro 
+dispositivo compatible. Use únicamente el cable de datos RS-232 
+suministrado por Nokia.
+? Conector de alimentación
+El conector de alimentación del terminal Nokia 30 se encuentra situado 
+en la parte posterior del terminal, en el lado opuesto a los indicadores 
+luminosos. Una vez que el terminal Nokia 30 está colocado en el 
+adaptador RS-232, la interfaz de potencia se encuentra debajo del 
+extremo del adaptador.
+- Conecte el cable de alimentación de la fuente de alimentación al 
+terminal. 
+- Conecte la fuente de alimentación a una toma mural de CA.
+? Conector de antena externa
+El conector de antena externa se
+la página 40). La antena externa
+la intensidad de la señal resulta 
+- Para conectar el cable de anten
+tarjeta SIM para insertar el cable
+- Conecte una antena externa al
+externa.
+C o n c e p t o s  b á s i c o s
+C o n c e p t o s  b á s i c o s encuentra junto a la ranura de la tarjeta SIM (véase la ilustración de 
+ se puede utilizar con el cable de antena externa (XRM-1) accesorio si 
+insuficiente. 
+a externa al terminal Nokia 30, corte una pieza de la cubierta de la 
+.
+ conector FME mediante el otro extremo del cable de la antena 
+Copyright ©2002-2003 Nokia. All rights reserved. 16 Introducción del código PIN
+El PIN (Personal Identification Number o número de identificación personal) protege su tarjeta SIM del 
+uso no autorizado. Normalmente, este número se entrega con la tarjeta SIM. Si la tarjeta SIM requiere 
+un código PIN, deberá introducirlo para poder utilizar el terminal Nokia 30.
+Cuando se activa la función AutoPIN con el software Nokia 30 Configurator, el código PIN se guarda en 
+la memoria del terminal y no es necesario introducirlo.
+En un entorno MS Windows, se pueden utilizar varias aplicaciones para establecer la conexión. Una de 
+estas aplicaciones es HyperTerminal®. Puede introducir el código PIN con HyperTerminal del modo 
+siguiente (en Windows 2000):
+1. Inicie la aplicación HyperTerminal (Inicio ->Programas ->Accesorios ->Comunicaciones -> 
+HyperTerminal y, a continuación, haga doble clic en el icono HyperTrm.exe).
+2. En el cuadro de diálogo Descripción de la 
+conexión, introduzca un nombre para la 
+conexión en la casilla Nombre  (por ejemplo, 
+GSM1) y haga clic en Aceptar.
+C o n c e p t o s  b á s i c o s
+C o n c e p t o s  b á s i c o sCopyright ©2002-2003 Nokia. All rights reserved. 17 3. En el cuadro de diálogo Conectar a, aparece la lista 
+Conectar usando. Seleccione en la lista Com X,  
+donde COM X es el puerto de comunicaciones al que 
+se ha conectado el terminal Nokia 30. Haga clic en 
+Aceptar. 
+C o n c e p t o s  b á s i c o s
+C o n c e p t o s  b á s i c o sCopyright ©2002-2003 Nokia. All rights reserved. 18 4. En el cuadro de diálogo Propiedades de COM X, 
+seleccione la configuración del puerto mostrada 
+y haga clic en Aceptar. 
+5. En la ventana de conexión de HyperTerminal, 
+escriba "at" y pulse INTRO. El programa 
+responderá OK. 
+Si no aparece OK como respuesta, consulte la 
+sección Solución de problemas en la página 45.
+C o n c e p t o s  b á s i c o s
+C o n c e p t o s  b á s i c o sCopyright ©2002-2003 Nokia. All rights reserved. 19 6. Introduzca el comando AT at+cpin="PIN", donde PIN 
+es su código PIN.
+7. Pulse INTRO.
+Si, al introducir el código PIN, se equivoca tres veces 
+consecutivas, el código se bloquea. Consulte la sección 
+Solución de problemas en la página 45.
+Cambio del código PIN
+Con el fin de proteger la tarjeta SIM contra un uso no 
+autorizado, es aconsejable cambiar el código PIN predeterminado entregado por el proveedor de 
+servicios. Tenga en cuenta que la petición del código PIN debe activarse previamente para poder 
+cambiar el código PIN con un comando AT.
+C o n c e p t o s  b á s i c o s
+C o n c e p t o s  b á s i c o sCopyright ©2002-2003 Nokia. All rights reserved. 20 Por ejemplo, para cambiar el código PIN en la ventana 
+de conexión de HyperTerminal: 
+1. Introduzca el siguiente comando AT
+at+cpwd="sc","OLDPIN","NEWPIN"
+donde OLDPIN es el código PIN antiguo y NEWPIN el 
+nuevo.
+2. Pulse INTRO.
+Nota: El código PIN se puede cambiar también 
+utilizando el software Nokia 30 Configurator.
+C o n c e p t o s  b á s i c o s
+C o n c e p t o s  b á s i c o sCopyright ©2002-2003 Nokia. All rights reserved. 21 4. Instalación del módem para el terminal Nokia 30
+El CD-ROM del Nokia 30 contiene la aplicación Modem Setup que permite utilizar el terminal Nokia 30 
+como módem inalámbrico. El programa instala controladores de módem para fax y datos compatibles 
+con PC, así como la aplicación Nokia Modem Options que permite al usuario definir parámetros para 
+llamadas de datos. De modo alternativo, puede utilizar el controlador de módem estándar suministrado 
+con MS Windows. Cualquiera de estos controladores permiten el uso del terminal Nokia 30 como 
+módem con la mayoría de los exploradores de Internet y aplicaciones de correo electrónico disponibles 
+en el mercado.
+Nokia 30 Modem Options se ejecuta con Windows 98/Me/2000/XP o Windows NT 4.0 con Service Pack 
+5 o posterior.
+Para conectarse a Internet, enviar o recibir correo electrónico o faxes, o transmitir datos desde el PC, 
+deberá haber instalado previamente el software de comunicaciones de fax y datos apropiado.
+  Modem setup for Nokia 30 terminal
+Introducción
+Modem Setup for Nokia 30 term
+? Adaptadores de módem para d
+módem en llamadas de datos
+? Nokia Modem Options que per
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0inal instalará los siguientes componentes en el ordenador:
+atos y fax del Nokia 30 que permiten la utilización del teléfono como 
+ y fax
+mite definir las opcion es para las llamadas de datos que se realicen
+Copyright ©2002-2003 Nokia. All rights reserved. 22 Conceptos básicos
+Antes de instalar Modem Setup para el terminal Nokia 30:
+? cierre todos los programas que estén en ejecución en el PC.
+? asegúrese de que la función Aut oPIN se activa en el terminal. Puede activarla mediante el software 
+Configurator disponible en el CD-ROM del Nokia 30. Si la petición de código PIN está activada, el 
+código PIN se podrá introducir con una aplicación del tipo HyperTerminal.
+? si desea activar el servicio GPRS, és te debe estar activado en la tarjeta SIM utilizada con el terminal 
+Nokia 30 y el proveedor de servicios local de Internet debe admitir el servicio GPRS.
+Modem Setup
+El controlador de módem para el Nokia 30 se encuentra en el CD-ROM aunque también es posible 
+descargar la versión más reciente del software en www.forum.nokia.com.
+1. Haga clic en Instalar software en el menú principal del CD-ROM.
+2. Haga clic en Instalar Modem Setup for Nokia 30.
+3. A continuación, haga clic en Install y siga las instrucciones que aparecen en la pantalla.
+O
+1. Abra los archivos ejecutables
+ubicación que desee.
+2. Ejecute la instalación.
+Esté preparado para conectar el 
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0 descargados de Modem Setup for Nokia 30 y guárdelos en la 
+teléfono al ordenador cuando se le pida.
+Copyright ©2002-2003 Nokia. All rights reserved. 23 Configure Nokia Modem Options
+Para utilizar el terminal Nokia 30 como módem 
+inalámbrico, Nokia Modem Options debe configurarse 
+para el PC. Estas opciones definen el módem que se va a 
+utilizar, el tipo de conexión, la velocidad de conexión 
+GSM en kbits/s y el punto de acceso GPRS.
+Por ejemplo, para definir los módems Nokia instalados 
+con MS Windows 2000:
+1. En la barra de tareas de Windows, pulse Inicio, 
+seleccione Configuración y Panel de control.
+2. En el Panel de control, seleccione Nokia Modem 
+Options.
+3. Seleccione Nokia 30 (cable) en Installed Nokia 
+Modems.
+Si dispone de una conexión HSCSD del proveedor de 
+servicios, podrá utilizar una velocidad de conexión 
+máxima de 43,2 kbps.
+Si, por el contrario, dispone d
+velocidad de conexión de 9,6
+Si dispone de conexión GPRS
+acceso GPRS para el termina
+Internet que proporciona la t
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0e una conexión CSD del proveedor de servicios, estará limitado a una 
+ ó 14,4 kbps.
+ del proveedor de servicios de Internet, debe especificar un punto de 
+l. Este punto de acceso lo suministra el proveedor de servicios de 
+arjeta SIM utilizada en el terminal Nokia 30.
+Copyright ©2002-2003 Nokia. All rights reserved. 24 4. Una vez seleccionadas las opciones de Nokia Modem Options, seleccione Apply y, a continuación, 
+seleccione OK.
+  Creación de una nueva conexión de acceso telefónico
+Una vez instalado el controlador de módem que requiere el sistema, puede seleccionar el terminal 
+Nokia 30 como su módem y comenzar a utilizarlo mediante una aplicación de software de 
+comunicaciones. Por ejemplo, MS Windows 95/98/2000/XP/NT 4.0 incluyen aplicaciones de 
+comunicaciones, como Acceso telefónico a redes e HyperTerminal. Si desea obtener ayuda para la 
+configuración, consulte el manual del usuario correspondiente al software que esté utilizando.
+Cuando se utilice Acceso telefónico a redes con Windows 2000, se deberá especificar una nueva 
+conexión de acceso telefónico para cada tipo de conexión. Los siguientes pasos se aplican del mismo 
+modo a conexiones de marcación GPRS o HSCSD /CSD.
+1. En la barra de tareas de Windows, pulse Inicio, seleccione Configuración y Panel de control.
+2. En el Panel de control, seleccione Conexiones de red y de acceso telefónico.
+3. Seleccione Realizar conexión nueva.
+4. En la ventana Asistente para conexión de red, pulse Siguiente.
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0Copyright ©2002-2003 Nokia. All rights reserved. 25 5. Seleccione Acceso telefónico a Internet en 
+la ventana Asistente para conexión de red y 
+pulse Siguiente.
+6. En la ventana Asistente para la 
+conexión a Internet, seleccione Deseo 
+configurar manualmente mi 
+conexión a Internet o conectar por 
+medio de una red de área local 
+(LAN). Pulse Siguiente.
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0Copyright ©2002-2003 Nokia. All rights reserved. 26 7. Seleccione Tengo acceso a Internet 
+por medio de una línea telefónica y 
+un módem y pulse Siguiente.
+Si existen varios controladores de 
+módem instalados en el ordenador, 
+aparecerá la ventana para seleccionar 
+el módem. Seleccione Nokia 30 
+(cable) y pulse Siguiente.
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0Copyright ©2002-2003 Nokia. All rights reserved. 27 Conexión GPRS
+1. Escriba el número de teléfono para la 
+conexión GPRS (*99#). 
+No seleccione la casilla Usar código 
+de área y reglas de marcado.
+2. Pulse Siguiente.
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0Copyright ©2002-2003 Nokia. All rights reserved. 28 Conexión HSCSD o CSD
+1. Escriba el número de teléfono para la 
+conexión HSCSD/CSD. El proveedor 
+de servicios de Internet le facilitará el 
+número de teléfono1para la conexión 
+HSCSD/CSD. Para obtener más 
+información, póngase en contacto 
+con el proveedor de servicios de 
+Internet.
+2. Pulse Siguiente.
+1. Otro término que se emplea para re
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0ferirse al número de teléfono es grupo de llamada.
+Copyright ©2002-2003 Nokia. All rights reserved. 29 Introduzca el nombre de usuario 
+y la contraseña
+1. Escriba el nombre de usuario y la 
+contraseña para el acceso a Internet.
+Si su proveedor de servicios de 
+Internet no le ha facilitado un nombre 
+de usuario y una contraseña, es 
+posible que no pueda conectarse a 
+Internet.
+2. Pulse Siguiente.
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0Copyright ©2002-2003 Nokia. All rights reserved. 30 Asigne un nombre a la conexión
+1. Escriba el Nombre de la conexión 
+para la nueva conexión de acceso 
+telefónico, por ejemplo, Nokia 30.
+2. Pulse Siguiente.
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0Copyright ©2002-2003 Nokia. All rights reserved. 31 Configure la cuenta de correo de 
+Internet
+Ahora podrá configurar una cuenta de 
+correo de Internet. Para obtener más 
+información, póngase en contacto con el 
+proveedor de servicios de Internet.
+Si no desea configurar la cuenta de 
+correo de Internet en este momento, 
+seleccione No y pulse Siguiente.
+  Ajustes adicionales
+Antes de finalizar el proceso de conexión 
+de acceso telefónico, es necesario que 
+efectúe algunos ajustes adicionales en el 
+terminal Nokia 30. Por lo tanto, no 
+seleccione la casilla Seleccione este 
+cuadro para conectarse a Intern
+y después haga clic en Finalizar
+Finalizar.
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0et ahora 
+. Pulse 
+Copyright ©2002-2003 Nokia. All rights reserved. 32 Opciones para conexiones de acceso telefónico
+Para finalizar la configuración de la conexión de módem, se deben definir ciertos valores adicionales 
+para el terminal Nokia 30. Estos valores se aplican tanto a las conexiones GPRS, como a las conexiones 
+HSCSD/CSD.
+1. En la barra de tareas de Windows, pulse Inicio, seleccione Configuración y Panel de control. 
+Seleccione Conexiones de red y de acceso telefónico.
+2. Seleccione el acceso telefónico que acaba de crear (por ejemplo, Nokia 30) y haga clic con el botón 
+derecho del ratón en el icono para abrir el menú.
+3. Seleccione Propiedades en el 
+menú contextual.
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0Copyright ©2002-2003 Nokia. All rights reserved. 33 Definición de propiedades
+En la ventana Propiedades de la conexión de acceso 
+telefónico (por ejemplo, Propiedades de Nokia 30), 
+seleccione la ficha Funciones de red. Pulse Configuración.
+1. Asegúrese de que la opción Habilitar la 
+compresión por software de la ventana 
+Configuración PPP está desac
+2. Pulse Aceptar.
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0tivada.
+Copyright ©2002-2003 Nokia. All rights reserved. 34 3. Volviendo atrás, en la ficha Funciones de red, haga 
+clic en el botón Propiedades de Protocolo Internet 
+(TCP/IP).
+4. Rellene estos campos con la información 
+suministrada por el proveedor de servicios de 
+Internet.
+5. Haga clic en el botón Avanzada.
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0Copyright ©2002-2003 Nokia. All rights reserved. 35 6. En la ventana Configuración 
+avanzada de TCP/IP, asegúrese de que 
+la casilla Utilizar compresión de 
+encabezado IP no está activada.
+Nota: La configuración avanzada de 
+TCP/IP depende del proveedor de 
+servicios de Internet. Para obtener 
+más información, póngase en 
+contacto con el proveedor de servicios 
+de Internet.
+7. Pulse Aceptar.
+8. Pulse Aceptar también en la ventana 
+Funciones de redes de Propiedades de 
+conexión de acceso telefónico (por ejemplo, Propiedades de Nokia 30).
+  Conexión a Internet
+Si se ha configurado de forma ad
+realizar una conexión a Internet
+1. En la barra de tareas de Wind
+Seleccione Conexiones de re
+2. Haga doble clic en el icono de
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0ecuada, el terminal de conectividad GSM Nokia 30 estará listo para 
+.
+ows, pulse Inicio, seleccione Configuración y Panel de control. 
+d y de acceso telefónico.
+ la nueva conexión (es decir, Nokia 30).
+Copyright ©2002-2003 Nokia. All rights reserved. 36 3. Introduzca el nombre de usuario y la 
+contraseña de acceso a Internet. Para obtener 
+más información, póngase en contacto con el 
+proveedor de servicios de Internet.
+4. Una vez se haya conectado 
+satisfactoriamente a Internet, aparecerá 
+la ventana Conexión completada en la 
+pantalla del ordenador.
+  Desinstalación de M
+setup for Nokia 30 te
+1. En la barra de tareas de Wind
+Inicio, seleccione Configurac
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0odem 
+rminal
+ows, pulse 
+ión y Panel 
+Copyright ©2002-2003 Nokia. All rights reserved. 37 de control. Seleccione Conexiones de red y de acceso telefónico.
+2. Haga doble clic en Agregar o quitar programas.
+3. En la ficha Cambiar o quitar programas, seleccione Modem Setup for Nokia 30 de la lista de 
+programas instalados que se pueden eliminar.
+4. Haga clic en Cambiar/Quitar.
+5. Siga las instrucciones que aparecen en la pantalla hasta que los archivos del programa se hayan 
+eliminado.
+  Modem setup para el controlador de módem estándar
+De modo alternativo, puede utilizar el controlador de módem estándar suministrado, por ejemplo, con 
+MS Windows®. Se necesitan pocos comandos AT adicionales para configurar los datos GSM o la 
+configuración GPRS. Estos comandos se pueden utilizar también en otros entornos, como Linux, o con 
+aplicaciones incrustadas que admiten comandos AT. Puede configurar el módem del siguiente modo 
+(en Windows 2000):
+1. Seleccione Inicio-> Configuración-> Panel de control-> Opciones de teléfono y módem.
+2. Seleccione un módem estándar en la ficha Módems y pulse Propiedades.
+3. Seleccione la ficha Avanzada
+GPRS:
+AT+CBST=51,0,1;+CHSN=6,0
+Esta cadena de ejemplo especific
+se ha seleccionado el modo de ll
+y que el nombre del punto de acc
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0 e introduzca las opciones estándar del módem para CSD/HSCSD/
+,0,0;+CGDCONT=,,"INTERNET" 
+a que:
+amada de datos HSCSD RDSI (V120) de 43,2 kbit/s 
+eso de GPRS es "Internet".
+Copyright ©2002-2003 Nokia. All rights reserved. 38 Nota: El nombre del punto de acceso de GPRS y 
+los modos de llamada de datos GSM son 
+parámetros específicos del operador.
+Para obtener información sobre otras velocidades 
+de bits y modos de conexión (por ejemplo, el 
+módem PSTN analógico), consulte el capítulo 18 
+(Example procedures on some AT commands) en 
+el documento AT Command Guide for Nokia 30 
+GSM Connectivity Terminal suministrado en el 
+CD-ROM del Nokia 30. 
+Póngase en contacto con su proveedor de 
+servicios local para obtener instrucciones más 
+detalladas sobre cómo configurar el terminal 
+Nokia 30 como módem inalámbrico.
+  Software de comunicaciones
+Una vez instalado el controlador de módem 
+requerido, puede seleccionar el t
+como su módem y comenzar a ut
+una aplicación de software de co
+Por ejemplo, MS Windows 95/98
+desea obtener ayuda, consulte e
+Nota: Instale únicamen
+virus y otros programas 
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0
+I n s t a l a c i ó n  d e l  m ó d e m  p a r a  e l  t e r m i n a l  N o k i a  3 0erminal Nokia 30 
+ilizarlo mediante 
+municaciones.
+/2000/XP/NT 4.0 incluyen varias aplicaciones de comunicaciones. Si 
+l manual del usuario correspondiente al software que esté utilizando.
+te software procedente de fuentes que ofrezcan protección adecuada contra 
+dañinos.
+Copyright ©2002-2003 Nokia. All rights reserved. 39 5. Indicadores luminosos
+El terminal de conectividad GSM Nokia 30 dispone de tres indicadores luminosos (LED), que forman la 
+interfaz de usuario del terminal. La pantalla LED muestra la intensidad de campo y el estado del 
+terminal. Los LED aparecen en dos colores, rojo y verde, indicando el estado del terminal GSM Nokia 30 
+en tres condiciones distintas:
+? Inicio 
+? Funcionamiento normal
+? Funcionamiento especial
+Nota: Todos los LED se pueden configurar también utilizando la 
+aplicación de software Configurator del Nokia 30 para que no muestren 
+ningún estado y permanezcan desactivados durante su funcionamiento.
+  Indicadores luminosos del Nokia 30 al inicio:
+LED 1 LED 2
+Apagado Apagado
+Verde fijo Verde fijo
+Apagado Rojo 
+intermitente
+I n d i c a d o r e s  l u m i n o s o s
+I n d i c a d o r e s  l u m i n o s o sLED 3 de Descripción
+estado 
+Apagado Apagado
+Verde fijo Encendido, conectando a red
+Apagado Petición del PIN / petición de nuevo PIN
+Copyright ©2002-2003 Nokia. All rights reserved. 40 LED 1 LED 2 LED 3 de Descripción
+estado 
+Apagado Rojo Rojo Petición del PUK
+intermitente intermitente
+Nota: Los indicadores de intensidad de campo pueden verse durante el inicio durante 10 segundos 
+aproximadamente antes de que el terminal pase al modo de funcionamiento normal.
+Función de intensidad de campo (Intensity of Field, 
+IoF):
+Rojo Apagado Apagado <-105 dBm INSUFICIENTE
+intermitente
+Verde Apagado Apagado -105... -100 dBm INSUFICIENTE
+intermitente
+Verde Apagado Apagado -100... -95 dBm DÉBIL
+Verde Verde Apagado -95... -90 dBm DÉBIL
+intermitente
+Verde Verde
+Verde Verde
+Verde Verde
+I n d i c a d o r e s  l u m i n o s o s
+I n d i c a d o r e s  l u m i n o s o sApagado -90... -85 dBm MODERADA
+Verde -85... -80 dBm MODERADA
+intermitente
+Verde >-80 dBm ADECUADA
+Copyright ©2002-2003 Nokia. All rights reserved. 41 Nota: Las recomendaciones sobre intensidad de campo se aplican especialmente a la transmisión de 
+datos. En la transferencia de voz, la calidad también es adecuada en intensidades de campo inferiores.
+  Indicadores luminosos del Nokia 30 en el modo de funcionamiento 
+normal:
+LED 1 LED 2 LED 3 de Descripción
+estado
+* * Verde En servicio
+* * Verde Llamada en curso
+intermitente
+* * Verde Llamada entrante
+intermitente
+* * Verde/rojo Mensaje recibido / Mensaje en el buzón de voz
+intermitente
+* * Rojo 
+inter
+* Módulo de aplicación control
+Nota: Si los LED de su terminal i
+AT+CMGR para leerlos. Para obt
+incluida en el CD-ROM del Nokia
+I n d i c a d o r e s  l u m i n o s o s
+I n d i c a d o r e s  l u m i n o s o sMensaje entrante y memoria llena
+mitente
+able en el modo de sistema M2M.
+ndican que ha recibido mensajes, puede utilizar el comando AT 
+ener información más detallada, consulte la lista de comandos AT 
+ 30.
+Copyright ©2002-2003 Nokia. All rights reserved. 42 Indicadores luminosos del Nokia 30 en el modo de funcionamiento 
+especial:
+LED 1 LED 2 LED 3 de Descripción
+estado
+Verde/rojo Verde/rojo Verde/rojo Inserte la tarjeta SIM.
+intermitente intermitente intermitente
+Rojo Rojo Rojo Fallo, póngase en contacto con el servicio 
+intermitente intermitente intermitente técnico.
+Amarillo Amarillo Amarillo Inicializando.
+I n d i c a d o r e s  l u m i n o s o s
+I n d i c a d o r e s  l u m i n o s o sCopyright ©2002-2003 Nokia. All rights reserved. 43 6. Accesorios
+Existe una gama de accesorios disponible para el terminal de conectividad GSM Nokia 30. Para obtener 
+información detallada sobre los accesorios del terminal de conectividad GSM Nokia 30 y su 
+disponibilidad, póngase en contacto con su distribuidor local.
+? Fuente de alimentación (ACW-5A)
+? Vehicle Power Supply Kit (LCM-2): Se utiliza como fuente de alimentación en el coche. El 
+dispositivo se conecta directamente a la batería del vehículo.
+? Adaptador de datos RS-232 y cable de datos RS-232: Se necesita cuando el terminal Nokia 30 se 
+utiliza como un módem GSM normal introduciendo comandos AT. El cable de datos RS-232 conecta 
+el terminal con un PC u otros dispositivos compatibles.
+? Adaptador Nokia Smart (AD-4): Adaptador programable para la integración del terminal Nokia 30 
+en un dispositivo remoto con una interfaz serie.
+? Cable de antena externa (XRM-1): El terminal Nokia 30 dispone de un cable de antena externa 
+opcional (XRM-1), que permite conectar una antena externa al terminal con un conector FME 
+estándar en caso necesario.
+? Software Configurator: Perm
+de configuración se utiliza no
+activa por primera vez o si es
+ROM del Nokia 30 y también
+www.forum.nokia.com.
+? Modem options para el Nok
+encuentra disponible en el sit
+A c c e s o r i o s
+A c c e s o r i o site realizar una configuración más avanzada del terminal. El software 
+rmalmente cuando el terminal de conectividad GSM Nokia 30 se 
+ necesario cambiar los ajustes del terminal. Se suministra en el CD-
+ se encuentra disponible en el sitio Web de Nokia, 
+ia 30: Se suministra en el CD-ROM del Nokia 30 y también se 
+io Web de Nokia, www.forum.nokia.com.
+Copyright ©2002-2003 Nokia. All rights reserved. 44 7. Solución de problemas
+  Comprobaciones preliminares
+1. Compruebe que el terminal Nokia 30 está bien conectado al adaptador de datos RS-232.
+2. Compruebe que el cable de datos está bien conectado al terminal y al PC o a cualquier otro 
+dispositivo compatible.
+3. Compruebe que la fuente de alimentación está bien conectada al terminal y a una toma mural de 
+CA.
+4. Desconecte la fuente de alimentación de la toma mural de CA antes de comprobar si la tarjeta SIM 
+está instalada de forma adecuada.
+  Recepción débil
+Si existen problemas con la recepción, por ejemplo, interrupciones en el servicio, es posible que la señal 
+sea demasiado débil. Compruebe la intensidad de la señal introduciendo, por ejemplo, el siguiente 
+comando AT en la ventana de conexión de HyperTerminal: at+csq.
+La respuesta es +csq: <rssi>, 99. Los parámetros para <rssi> van de 0 a 31 en intervalos de 2 dBm:
+0 ... 6 -101 dBm o i
+7 ... 11 -100 dBm ... 
+12 ... 16 -90 dBm ... -
+17 ... 31 -80 dBm o su
+99 No se sabe o
+S o l u c i ó n  d e  p r o b l e m a s
+S o l u c i ó n  d e  p r o b l e m a snferior -> Cobertura insuficiente
+-91 dBm -> Cobertura débil
+81 dBm -> Cobertura moderada
+perior -> Cobertura adecuada
+ no se puede detectar
+Copyright ©2002-2003 Nokia. All rights reserved. 45 Por ejemplo, la respuesta +csq: 31, 99 significa que la intensidad de la señal es excelente.
+Si la intensidad de la señal es inferior a -91 dBm (el valor del parámetro <rssi> es 11 o inferior), 
+traslade el terminal a otro lugar. Si el terminal no recibe una señal más intensa, póngase en contacto 
+con su proveedor de servicios. La recepción puede mejorar con una antena externa.
+  Código PIN bloqueado
+Si, al introducir el código PIN, se equivoca tres veces consecutivas, el código se bloquea. Puede 
+desbloquearlo introduciendo el código PUK (Personal Unblocking Key o clave personal de desbloqueo). 
+Véase Códigos de acceso en la página 48.
+Cuando el código PIN está bloqueado, los indicadores luminosos 1 y 2 parpadean en rojo. Para 
+desbloquear el código, siga el procedimiento que se indica a continuación:
+? Por ejemplo, en la ventana de conexión de Hy perTerminal, introduzca el comando AT at+cpin? y 
+pulse INTRO. Si se requiere el código PUK, la respuesta es +cpin: SIM PUK.
+? Introduzca el código PUK mediante el comando at+cpin="PUK","PIN"
+donde PUK es su código PUK y PIN es su antiguo o nuevo código PIN. Pulse INTRO.
+  Sin conexión
+Si no se obtiene la respuesta OK 
+conexión de HyperTerminal, com
+Véase Introducción del código P
+Compruebe que ningún otro pro
+Nokia 30 está conectado. Reinic
+para liberar el puerto de comuni
+S o l u c i ó n  d e  p r o b l e m a s
+S o l u c i ó n  d e  p r o b l e m a sal introducir, por ejemplo, el comando at <enter> en la ventana de 
+pruebe en primer lugar que la configuración del puerto es correcta. 
+IN en la página 17.
+grama está utilizando el puerto de comunicaciones al que el terminal 
+ie el terminal Nokia 30 después de utilizar el software Configurator 
+caciones al que el terminal Nokia 30 está conectado.
+Copyright ©2002-2003 Nokia. All rights reserved. 46 Asimismo, compruebe que:
+? utiliza el adaptador RS-232 correcto (en la parte inferior del adaptador aparece DAU-12)
+? ha definido el tipo de conexión correctamente mediante el software Configurator:
+HW selection (predeterminada) o AT Commands
+? ha descargado la versión más reciente del programa Configurator del sitio Web de Nokia: 
+www.forum.nokia.com.
+  No hay conexión a Internet
+? Compruebe que la configuración de Nokia Modem Options es correcta.
+? Compruebe que la configuración del nu evo acceso telefónico es correcta.
+? Póngase en contacto con el prov eedor de servicios de Internet.
+  Controlador de módem
+Compruebe que ningún otro dispositivo utiliza el mismo puerto COM que el PC al que se encuentra 
+conectado el terminal Nokia 30.
+Compruebe que ningún otro programa está utilizando el puerto de comunicaciones al que el terminal 
+Nokia 30 está conectado. Reinic
+para liberar el puerto de comuni
+Si desea ver el archivo de registr
+comandos AT, busque el archivo 
+Windows. Si no encuentra el arc
+Opciones de teléfono y módem
+seleccione la opción  Agregar al
+S o l u c i ó n  d e  p r o b l e m a s
+S o l u c i ó n  d e  p r o b l e m a sie el terminal Nokia 30 después de utilizar el software Configurator 
+caciones al que el terminal Nokia 30 está conectado.
+o para comprobar que el terminal Nokia 30 ha respondido a los 
+con el nombre Modem_Nokia30.txt en su PC en la carpeta WINNT o 
+hivo de registro, seleccione (en Windows 2000) Panel de control-> 
+ -> Módems -> Nokia 30 -> Propiedades -> Diagnóstico y 
+ registro de la sección Inicio de sesión.
+Copyright ©2002-2003 Nokia. All rights reserved. 47 8. Códigos de acceso
+Puede utilizar los códigos de acceso descritos en esta sección para impedir el uso no autorizado del 
+terminal y de su tarjeta SIM. Los códigos de acceso se pueden cambiar mediante el software 
+Configurator del Nokia 30 o con comandos AT específicos mediante una aplicación apropiada.
+  Código PIN (de 4 a 8 dígitos)
+El PIN (Personal Identification Number o número de identificación personal) protege su tarjeta SIM del 
+uso no autorizado. El código PIN se entrega normalmente con la tarjeta SIM. Cuando está activada la 
+petición del código PIN, el código se solicitará cada vez que se encienda el terminal.
+  Código PIN2 (de 4 a 8 dígitos)
+El código PIN2, entregado con algunas tarjetas SIM, es necesario para acceder a determinadas 
+funciones, como los contadores de unidades de consumo. Estas funciones sólo están disponibles si las 
+admite la tarjeta SIM.
+  Código PUK (8 dígit
+La clave de desbloqueo personal
+PIN bloqueado. Es posible que el
+contacto con su proveedor de se
+proveedor de servicios.
+C ó d i g o s  d e  a c c e s o
+C ó d i g o s  d e  a c c e s oos)
+ o Personal Unblocking Key (PUK) es necesaria para cambiar un código 
+ código se entregue con la tarjeta SIM. Si no es así, póngase en 
+rvicios para obtenerlo. Si pierde el código, póngase en contacto con su 
+Copyright ©2002-2003 Nokia. All rights reserved. 48 Código PUK2 (8 dígitos)
+El código PUK2, suministrado con algunas tarjetas SIM, es necesario para cambiar un código PIN2 
+bloqueado. Si pierde el código, póngase en contacto con su proveedor de servicios.
+  Código de seguridad (10 dígitos máximo)
+El código de seguridad se puede utilizar para evitar un uso no autorizado de su terminal. El valor 
+predeterminado del código de seguridad es 12345. Para modificarlo, utilice el software Configurator 
+del Nokia 30. Mantenga el nuevo código en secreto en un lugar seguro.
+  Contraseña de restricciones
+La contraseña de restricciones es necesaria cuando se utiliza la función de restricción de llamadas. Esta 
+contraseña la facilita su proveedor de servicios.
+C ó d i g o s  d e  a c c e s o
+C ó d i g o s  d e  a c c e s oCopyright ©2002-2003 Nokia. All rights reserved. 49 9. El terminal Nokia 30 como dispositivo de 
+comunicaciones M2M
+M2M significa comunicación máquina-máquina, móvil-máquina y máquina-móvil. M2M es un modo 
+de utilizar la transmisión inalámbrica de datos como un vínculo entre sistemas, dispositivos remotos o 
+ubicaciones e individuos.
+Si conecta el terminal Nokia 30 a una máquina a través de una aplicación de control, puede controlar 
+de forma remota un grupo de dispositivos y recibir información sobre el estado, por ejemplo, los 
+estados de almacenamiento. El terminal Nokia 30 se puede integrar fácilmente en varias aplicaciones 
+como máquinas expendedoras, seguridad, control de ascensores, etc.
+Como dispositivo de comunicaciones M2M, el terminal Nokia 30 puede tener tres modos de 
+funcionamiento:
+? Modo de control del usuario
+? Modo de comandos AT
+? Modo de sistema M2M
+  Modo de control del
+Un usuario puede controlar disp
+ejemplo de control de un disposi
+Mediante el modo de control de
+este tipo de sistema de cierre de
+r m i n a l  N o k i a  3 0  c o m o  d i s p o s i t i v o  d e  c o m u n i c a c i o n e s  M 2 M
+E l  t e r m i n a l  N o k i a  3 0  c o m o  d i s p o s i t i v o  d e  c o m u n i c a c i o n e s  M 2 M usuario
+ositivos mediante un teléfono móvil utilizando mensajes de texto. Un 
+tivo sería el cierre de una puerta a distancia con un teléfono móvil.
+l usuario del terminal Nokia 30, resulta fácil y económico desarrollar 
+ puertas. Ello es posible gracias a los servicios integrados del terminal 
+Copyright ©2002-2003 Nokia. All rights reserved. 50
+E l  t e Nokia 30 y a las patillas de entrada/salida específicas situadas en el conector del M2M System, véase la 
+página 15. Para obtener más información, consulte el documento Guide for User Control Mode en la 
+dirección www.forum.nokia.com.
+  Modo de comandos AT
+En el modo de comandos AT el terminal Nokia 30 opera como un módem inalámbrico. La conexión 
+inalámbrica se establece y los datos se envían utilizando comandos AT integrados en el módulo de la 
+aplicación.
+El modo de comandos AT está disponible en el conector D9 del adaptador RS-232 o en el conector de 
+sistema M2M de 50 patillas situado en la base del terminal de conectividad GSM Nokia 30.
+Los comandos AT, utilizados para controlar el terminal, se encuentran en la guía de comandos AT para 
+el terminal de conectividad GSM Nokia 30 incluida en el CD-ROM del terminal del Nokia y también se 
+encuentra disponible en el sitio Web de Nokia, http://www.forum.nokia.com. El terminal de 
+conectividad GSM Nokia 30 admite la mayoría de los comandos ITU-T V.25ter, ETS GSM 07.05 y ETS 
+GSM 07.07.
+  Modo de sistema M2
+El modo de sistema M2M activa
+remotamente. Constituye una pl
+El terminal Nokia 30 incorpora u
+sistema M2M. Por ejemplo, el po
+puede seleccionar de forma rem
+La conexión entre el terminal No
+mediante pruebas en caliente y, 
+r m i n a l  N o k i a  3 0  c o m o  d i s p o s i t i v o  d e  c o m u n i c a c i o n e s  M 2 M
+E l  t e r m i n a l  N o k i a  3 0  c o m o  d i s p o s i t i v o  d e  c o m u n i c a c i o n e s  M 2 MM
+ el control del terminal Nokia 30 y del dispositivo conectado 
+ataforma de aplicación ya realizada junto con Nokia M2M Gateway. 
+na gran cantidad de funciones que se pueden utilizar en el modo de 
+rtador inalámbrico que se debe utilizar en las comunicaciones se 
+ota, asimismo podrá encontrar una fiabilidad y seguridad mejoradas. 
+kia 30 y el módulo de aplicación se comprueba periódicamente 
+si la conexión se ha interrumpido, se podrá restablecer 
+Copyright ©2002-2003 Nokia. All rights reserved. 51
+E l  t e automáticamente. La autentificación mutua se puede utilizar también para realizar una conexión más 
+segura entre el terminal Nokia 30 y Nokia M2M Gateway. En el modo de sistema M2M, la conexión 
+inalámbrica se establece y los datos se envían utilizando llamadas del método CORBA integradas en el 
+módulo de la aplicación.
+  Colocación del terminal para comunicación M2M
+Cuando se utiliza el terminal Nokia 30 para comunicación M2M, es muy importante que éste se sitúe 
+teniendo en cuenta el modo en que funciona la antena del terminal. La antena funciona mejor si se 
+sitúa sobre una superficie no metálica. Las superficies metálicas requieren ajustes más específicos para 
+conseguir que el terminal funcione del modo requerido.
+Para obtener más información sobre el uso del terminal de conectividad GSM Nokia 30 para 
+comunicación M2M, visite el sitio Web del Forum Nokia en la dirección http://www.forum.nokia.com
+r m i n a l  N o k i a  3 0  c o m o  d i s p o s i t i v o  d e  c o m u n i c a c i o n e s  M 2 M
+E l  t e r m i n a l  N o k i a  3 0  c o m o  d i s p o s i t i v o  d e  c o m u n i c a c i o n e s  M 2 MCopyright ©2002-2003 Nokia. All rights reserved. 52
+E l  t e CUIDADO Y MANTENIMIENTO
+El terminal de conectividad GSM Nokia 30 es un producto de diseño y fabricación excelentes y debe tratarse con 
+cuidado. Las sugerencias que se incluyen a continuación le ayudarán a cumplir las condiciones de garantía y a 
+disfrutar de este producto durante años.
+? Mantenga el terminal y todas sus piezas y accesorios fuera del alcance de los niños.
+? Manténgalo seco. La lluvia, la humedad y los líquidos contienen minerales que pueden oxidar los circuitos 
+electrónicos.
+? No utilice ni guarde el terminal en lugares sucios  o polvorientos. Las piezas móviles podrían dañarse.
+? No guarde el producto en lugares calientes. Las altas temperaturas pueden reducir la duración de los 
+dispositivos electrónicos, dañar las baterías y deformar o derretir algunos plásticos.
+? No guarde el producto en lugares fríos.  Cuando el termin al recupera su temperatura normal, puede formarse 
+humedad en su interior, lo cual puede dañar las placas de los circuitos electrónicos.
+? No intente abrir el producto. La mani pulación del terminal por personas no especializadas puede dañarlo.
+? No deje caer, golpee o mueva bruscamente el producto. Si lo manipula bruscamente, pueden romperse las 
+placas de circuitos internos.
+? No utilice productos químicos perj udiciales, disolventes ni detergentes fuertes para limpiar el terminal.
+? No pinte el terminal. La pintura puede obstruir la s piezas móviles e impedir un funcionamiento correcto.
+? Emplee únicamente la antena suminist rada o una antena de recambio aprobada.  Las antenas, las alteraciones y 
+los elementos anexionados sin a
+normativas sobre aparatos de rad
+? Cuando se disponga a desmontar 
+terminal.
+? No instale, mueva o retire la tarjet
+mural de CA.
+Todas estas recomendaciones se apli
+funciona correctamente, llévelo al d
+problema y, si es preciso, le ofrecerá 
+C U I D A D O  Y  M A N T E N I M I E N T O
+C U I D A D O  Y  M A N T E N I M I E N T Outorización podrían dañar el terminal y pueden constituir una violación de las 
+io.
+el terminal del soporte , desconecte antes la fuente de alimentación del 
+a SIM mientras la fu ente de alimentación se encuentre conectada a una toma 
+can de igual forma al terminal y a todos los accesorios. Si alguno de estos no 
+istribuidor autorizado más cercano. El personal le ayudará a resolver su 
+servicio técnico.
+Copyright ©2002-2003 Nokia. All rights reserved. 53 IMPORTANTE INFORMACIÓN SOBRE SEGURIDAD
+  Fuente de alimentación
+Las fuentes de alimentación ACW-5A o LCM-2 del terminal de conectividad GSM Nokia 30 convierten el voltaje de 
+la línea de CA a uno de CC.
+Nota: La toma de corriente debe ser de fácil acceso, y no debe cubrirse. La fuente de alimentación tiene un 
+aislamiento de clase 2 aprobado.
+¡Aviso! Voltaje peligroso. No intente abrir la carcasa.
+Nota: ¡Esta fuente de alimentación sólo debe utilizarse en interiores! No exponga la unidad al agua, lluvia o polvo.
+Desenchufe la fuente de alimentación cuando el terminal no esté en uso por un período de tiempo prolongado o 
+cuando la fuente de alimentación no esté conectada al terminal.
+Cuando desconecte el cable de alimentación de la fuente de alimentación, sujete el enchufe y tire del mismo, no del 
+cable.
+¡Importante! Utilice únicamente la fuente de alimentación aprobada por Nokia. El uso de cualquier otro tipo 
+anulará toda aprobación o garantía que se aplique al terminal, y puede resultar peligroso.
+  Entorno operativo
+Respete la normativa especial vigent
+prohibido su uso, cuando pueda cau
+El terminal de conectividad GSM No
+terminal y a una toma de CA. No con
+móviles o cuando pueda causar inter
+Cuando conecte el terminal o cualqu
+detalle las instrucciones de segurida
+I M P O R T A N T E  I N F O R M A C I Ó N  S O B R E  S E G U R I D A D
+I M P O R T A N T E  I N F O R M A C I Ó N  S O B R E  S E G U R I D A De de la zona donde se encuentre y apague el terminal siempre que esté 
+sar interferencias o resultar peligroso.
+kia se encuentra encendido cuando la fuente de alimentación está conectada al 
+ecte la fuente de alimentación cuando esté prohibido el uso de dispositivos 
+ferencias o resultar peligroso.
+ier accesorio a otro dispositivo, consulte la guía del usuario para conocer con 
+d. No conecte productos que sean incompatibles.
+Copyright ©2002-2003 Nokia. All rights reserved. 54 Dispositivos electrónicos
+La mayoría de los equipos electrónicos modernos están protegidos contra las señales de radiofrecuencia (RF).  Sin 
+embargo, existen determinados equipos electrónicos que pueden no estar protegidos contra las señales RF de su 
+terminal.
+Marcapasos
+Los fabricantes de marcapasos recomiendan mantener una distancia mínima de 20 cm entre un dispositivo móvil y 
+el marcapasos con el fin de evitar posibles interferencias con este último.  Estas recomendaciones provienen de 
+investigaciones independientes y de la Investigación tecnológica en telefonía móvil.  Personas con marcapasos:
+? Deben mantener siempre el terminal a más de 20 cm de distancia respecto al marcapasos cuando el terminal 
+está activado;
+? Si tiene la más mínima sospecha de que se está produciendo alguna interferencia, apague el terminal 
+inmediatamente.
+Aparatos de audición
+Algunos dispositivos móviles digitales pueden interferir con determinados audífonos.  Si se produce este tipo de 
+interferencias, póngase en contacto con su proveedor de servicio.
+Otros aparatos médicos
+Los equipos de radiotransmisión, inc
+médicos que no estén protegidos ad
+para determinar si están correctame
+duda. Apague el terminal en los luga
+los hospitales y centros sanitarios se
+Notas informativas
+No utilice el terminal donde se lo ind
+I M P O R T A N T E  I N F O R M A C I Ó N  S O B R E  S E G U R I D A D
+I M P O R T A N T E  I N F O R M A C I Ó N  S O B R E  S E G U R I D A Dluidos los teléfonos celulares, pueden interferir en la funcionalidad de aparatos 
+ecuadamente. Consulte con un médico o con el fabricante del aparato médico 
+nte protegidos contra las señales externas RF o para que le aclaren cualquier 
+res específicos de los centros sanitarios donde se le indique.  Es probable que en 
+ utilicen equipos sensibles a las señales externas RF.
+iquen las notas informativas.
+Copyright ©2002-2003 Nokia. All rights reserved. 55 Zonas potencialmente explosivas
+Nokia 30 no está diseñado para utilizarse en áreas donde puedan producirse explosiones. No instale ni utilice el 
+dispositivo en áreas donde puedan producirse explosiones. Las zonas donde pueden producirse explosiones están a 
+menudo, pero no siempre, claramente indicadas. Entre ellas, se incluyen gasolineras próximas a bombas de gas en 
+estaciones de servicio, en los lugares donde se realicen explosiones, cubiertas de barcos; instalaciones de 
+almacenamiento y transporte de productos químicos; vehículos que utilizan gas de petróleo licuado (como propano 
+o butano); áreas donde el aire contiene partículas o elementos químicos, como grano, polvo o partículas metálicas; 
+y otras áreas donde normalmente se le pide que apague el motor del vehículo. Las chispas en estas áreas pueden 
+originar explosiones o incendios que causen daños personales o incluso la muerte. Respete las señales, 
+instrucciones y restricciones de uso de los equipos de radio en dichas áreas.
+I M P O R T A N T E  I N F O R M A C I Ó N  S O B R E  S E G U R I D A D
+I M P O R T A N T E  I N F O R M A C I Ó N  S O B R E  S E G U R I D A DCopyright ©2002-2003 Nokia. All rights reserved. 56 ESPECIFICACIONES TÉCNICAS
+Medidas Compatibilidad electromagnética 
+? 84 x 53 x 26 mm Al terminal se le han realizado pruebas de 
+compatibilidad electromagnética (EMC) de 
+? Con el adaptador RS-232: 109 x 76 x 34 mm
+Pe acuerdo a los estándares EN 301 489-1/7/.so:
+Fuente de alimentación ACW-5A 
+65 g
+Tipo de cargador:
+? Con el adaptador RS-232: 130 g
+? Fuente de alimentación de modo conmutado
+Especific Tipo de enchufe de red de CA:aciones ambientales
+Condiciones de funci ? Europa, Reino Unido, EE.UU., Australia, Chinaonamiento:
+Voltaje de entrada:
+? -10 ºC...+55 ºC
+Condiciones de almacenamient ? 90-264 VCAo
+Conector de CC:
+? -40 ºC...+85 ºC
+Intervalo de humedad relativa p
+funcionamiento correcto 20...75
+condensación y para almacenam
+sin condensación. El terminal no
+contra la entrada de agua ni de n
+de líquido.
+E S P E C I F I C A C I O N E S  T É C N I C A S
+E S P E C I F I C A C I O N E S  T É C N I C A Sara un ? Enchufe de CC de 3,0 mm
+% sin Peso:
+iento 5...95% ? 70 g + cables
+ está protegido Volumen:
+ingún otro tipo 
+? <110 cm3
+Copyright 2002-2003 Nokia. All rights reserved 57.

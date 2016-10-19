@@ -1,0 +1,1012 @@
+
+A study of means and methods for a Cellular Selective Area (Emergency) Alerting System (CSAAC).
+
+
+Final Report
+
+
+
+Gyles Panther
+23rd July 2003
+
+Table of Contents
+Table of Contents	2
+Executive Summary	4
+Introduction	7
+Wireless Networks, A Short History and Current Status	9
+Data over cellular Networks	10
+Principle Canadian Wireless Networks	12
+Messaging Services	12
+SMS	12
+SMS-Cell Broadcast	13
+Cell Broadcast Forum Handset Requirements	15
+SMS-CB implementation	16
+GSM, Rogers AT&T Clearnet	16
+CDMA, Bell & Telus	16
+IDEN, Telus	17
+A Cellular Selective Area Alert Capable Service	17
+The Service	17
+Alert Presentation	18
+Integrated Displays	18
+Alert Classes	19
+Emergency Alerts	19
+Examples:	19
+Commercial Services	19
+Alert Message size and structure	20
+Limitations to service and possible Liabilities	21
+Probability of reception	21
+Service Liability	21
+Geographic Addressing Resolution	22
+Alternatives to SMS-CB	23
+A CSAAC Host Architecture	23
+Network Requirements	23
+Major Hardware Elements	24
+Major Software elements:	26
+Host Operational Software	26
+Alert Client Application	26
+Authorization and Authentication	26
+GIS	26
+Implementation Options	27
+CSAAC Operations	28
+A CSAAC Development Process Overview	28
+Intent Formation and Co-ordination	29
+CSAAC Capability Development	31
+Appendix A	33
+Existing Entities Active in the field	33
+CEASa	33
+ETSI  (Emtel.etsi.org/agenda.htm)	33
+FCC EAS	34
+CellAlert  (No Web Site found)	34
+Steleus (Previously CoherentNetworks) and Osmose	35
+OtelNet	35
+Assettrax	36
+LogicaCMG	36
+E-Alert	36
+Dialogic Communications Corporation	37
+Innovatia	37
+Bradshaw Consulting Services	38
+Classco	38
+Telcordia Technologies (Previously Bellcore)	38
+Appendix B'	40
+Patents	40
+Patent Review	40
+6,112,075,  Douglas Weiser.	40
+Appendix C'	48
+A Mobile Emergency Alert System.	48
+Introduction	48
+Selective Area Broadcast	48
+A Geographically Selectively Addressed Messaging system	49
+Alert Priorities	50
+
+
+
+
+Executive Summary
+Interest has been expressed in a Wireless (Cellular) selective area alerting system, by both government and industry activists.  This document explores the potential opportunities and difficulties associated with implementation and operation of a Cellular Selective Area Alert Capability (CSAAC).
+
+A selective area alerting system is intended to deliver warnings to cell phone users in a specific geographic regions of an serious impending threat.   The standard communications methods for cellular systems are point to point and presently do not include means to localize each phone  (the US E911 initiative will eventually provide for localization in use).   In the present cellular phone systems, congestion considerations make individual warning messages to all  in a specific region impractical.
+
+Broadcast of ubiquitously addressed messages in the target region is thus a basic system requirement.  This capability could be provided through localized broadcasts, or wider area broadcasts to cell phones which themselves determine alert eligibility through localization.  Undoubtedly, the best system would include a combination of both.
+
+The capability whereby a network is able to selectively broadcast to one or more cells has acquired a number of designations, the most commonly used being Selective Area Broadcast or Cell Broadcast.
+
+The European originated GSM (Groupe Speciale Mobile) wireless phone standard is a very well conceived, specified and implemented second generation cellular phone network that, outside of North America, has become the de facto world standard.   The GSM standard defines a selective area broadcast capability (SAB) for short messages in a specific format, known as SMS-CB (Short Message Service- Cellular Broadcast)  which could be used as the basis for a selective area emergency alert service.   The Cell Broadcast Forum (CBF) is an industry group dedicated to supporting this capability.
+
+The CBF has also developed guidelines for handset features that would be required for SMS-CB based services, and the first GSM phones with SMS-CB capabilities are now on the market.
+
+However, the standard defines SAB capability as optional, and while it has been standardized, it is not widely implemented.  It is not implemented in the Canadian networks, and estimates have been made that enabling upgrades to mobile switches might cost up to $1M per network.
+
+However LogicCMG, a major player in the existing SMSC market (short message service systems and services) already has third party SMS-CB technology, and could likely provide a fully operational CSAAC system in 12 -18 Months (my estimate).  Selective area alerts could potentially be provided by GSM carriers (Rogers-AT&T and Clearnet) in the relatively short term, given the required funding were available.
+
+In North America, the original home of cellular phones, a number of different carriers operate incompatible TDMA, CDMA, GSM and IDEN networks. Neither the TDMA or CDMA systems, both of which have substantial market shares, support selective area broadcast currently (SAB, equivalent to SMS-CB). The CDMA system is expected to acquire this capability within two years.
+
+SMS-CB CDMA handset may not be available for several years.  CDMA equipment is driven by US market requirements, and SAB has not generated much interest in the US industry.  SAB emergency alert service will probably become feasible with new generations in CDMA systems but the development cycle makes SAB emergency alerts on CDMA networks unlikely in the short term future.
+
+IDEN networks are Motorola proprietary, based on GSM, and presumably could import the SMS-CB capability, but the costs of so doing are unknown.  There are no available SMS-CB compatible IDEN handsets.
+
+It would seem that a long term approach is required which would aim to introduce this capability over all networks in 3-5 years.  The GSM based system could be used in the interim to develop the required infrastructure and for a test bed.   If a target is not set to provide this at some point as a standard capability, it will never happen, (cf E911 in the US).
+
+Active participation of Canadian Cellular Carriers would be required to develop the capability, ideally also involving regular contact with organizations with similar objectives.   Thereafter, on going operation of the service would require an administrative function by emergency management agencies for operation, system evolution and ongoing interaction with carriers and other agencies.
+
+In addition to the network SAB capability, the system would require development and operation of a highly a reliable host systems, each probably serving a number of client systems.      The host servers would be redundantly accessible, highly reliable hosting systems for alert generators, redundantly linked with carrier messaging gateways.   These would provide network access through the client systems sited with emergency services (police, fire etc), which would likely provide a layered GIS type interface. 
+
+The client applicaton  would have the capabilty to define the location, radius and perhaps path of a hazadous situation.  Use of fixed sites for clients is preferred becasuse authentication is facilitated. 
+
+Were Logica CMG to develop and perhaps operate the systems, a similar structure would be required, although it would likely differ in details.
+
+Serious safety concerns, and legal ramifications may arise from the use of displayed emergency alerts on cellular phones.  People tempted to view such warnings while driving may become involved in accidents.  The preferred way to deliver such messages would be by audio messages, likely transmitted as data files. Streaming audio is provided by some companies but on a point to point basis.    For a CSAAC it would be necessary to define a new message type, being a relatively large point to multipoint file that could be replayed as audio or provide audio through a text to voice function.
+
+Provision of such services through a standards based process may be an unnecessarily clumsy approach, involving many people and organizations, with concomitantly slow progress.  An alternative is handset programmed functionality using basic network capabilities such as SAB and/or GPS enabled handsets.
+
+GPS localization may be a better way to provide selective area addressing than existing selective area broadcasts (including SMS-CB) because cell site coverage variability can be eliminated.  This too would required definition of a new message type to provide for ubiquitous GPS network assist.
+
+The Patent Claims made by Douglas Weiser in US patent number 6,112,075 may encompass the concept of emergency alerts provided by means of cell broadcast.   This may be undermined by the late filling date (January 1998) relative to the standardization date (1993) which seems to have contemplated similar use.  More work (significantly more) would be required to establish the solidity of this patent application.  Alternate methods to SMS-CB approach, proposed herein, may escape this restriction.  The concepts described in the form of a patent disclosure herein are included to preclude patent claims by others.
+
+It is the conclusion of the author that it is not possible to provide a CSAAC system operating over all networks at this time.   The GSM networks now being operated by Clearnet and Rogers-AT&T has the fundamental capability but substantial upgrades to both systems would be required.  Other networks will acquire capability to support CSAAC in the next year or two.
+
+Commercial services are possible using the CSAAC service but these are not thought sufficiently compelling as to make private development likely. 
+
+At a basic level, this author prefers a handset based solution over a standards based approach, which might simplify the operational network requirements.  It is clear that the technology has the basic capabilities required for CSAAC but significant network extensions would be required.
+
+The author thinks it unlikely that this capability will be developed spontaneously by the networks, and realization would require a long term goal to be set by the Government, possibly with funding assistance.
+
+Introduction
+With ever widening use of cellular phones, there is growing interest in provision of timely public alerts to warn of imminent serious public hazards.  While this has intensified following the World Trade Centre attack, the most likely application is to warn of impending severe weather.   Meteorologists estimate that the tornado prediction window is typically less than 15 minutes, although the potential for severe weather may be known long in advance 
+
+Other situations also may arise with very little, if any, advance warning, such as spills of hazardous materials in train wrecks,  release of chemicals due to industrial accidents, and accidents at nuclear facilities etc., and possibly, terrorist actions.
+
+The US has long had organizations that provide warnings for severe weather (National Weather Radio) and for national emergencies, organized by the Federal Emergency Management Association (FEMA).  This provides for broadcast notification and information dissemination related to national emergencies.  http://www.fema.gov.  Virtually all states also have hierarchical emergency management organizations, with both oversight and management bodies plus local volunteer chapters.   Emergency management organizations also exist in Canadian provinces, e.g. see Manitoba  http://www.gov.mb.ca/gs/memo/links.html
+
+Various warning means have been deployed to deal with fixed hazards in Canada and the US.    At the most basic level, alert systems are comprised of Klaxon horns in the area immediately surrounding hazardous plants, activated by the facility in the event of a problem.  Wireline alerting systems have also been installed in homes, and work places in the vicinity of these facilities.  See http://www.dccusa.com/util%5Fnuclear.html
+
+Geographically addressable systems for delivery of  localized alerts over commercial TV and radio have been developed for the same application. These provide for localized alerts  for events that otherwise are unpredictable prior to manifestation.  See HTTP://www.cityalert.co.uk
+
+During a normal working day, a significant proportion of the population is mobile, around and about in vehicles, trains, buses, shops, restaurants etc. and frequently beyond reach of fixed systems and broadcast alerts over radio and TV. 
+
+With increasingly widespread use of cellular phones, it is natural to enquire into the feasibility of delivery of geographically addressed alerts over this medium.   This has long been of international interest, but no practical system has yet emerged.   The lack of realization to this point is a clue to the difficulties in implementation.
+
+The wireless phone system has undergone two evolutionary generations to this point in time as a special purpose system dedicated to provision of ubiquitous  wireless phone communications.   However, over the same period, the population at large has widely adopted the internet, with the concomitant growth in wireline digital communications,.    The wireless carriers are betting that this trend will continue, so that the emerging generations of cellular networks have greatly extended data facilities.  Wireless phone networks have, to a significant degree, become high speed digital networks, one application of which (albeit the largest) is voice communications. 
+
+This study  has briefly examined the technical means that might be available for deliver such of emergency alerts using existing data communications means, for each of the major network standards,  The capability of the carriers for each of the major network standards within Canada has been reviewed .  The limitations and difficulties that might arise from the alerting service have been reviewed, as has the possibility of generating commercial services using virtually the same infrastructure.   A system architecture has been proposed and a possible implementation process outlined.
+
+This study started with the intent to include paging and wireless email.  It quickly became apparent that all these capabilities are becoming entirely within the domain of the cellular system, and wireless systems solely dedicated to these narrow purposes are evolutionary dead ends.   The decision was then made to concentrate solely on cellular systems.
+
+Realization and on-going operation of a selectable area addressed alerting system requires the following:
+
+a) A standard interoperable means for emergency alert message dissemination that is capable of being broadcast to all users within a geographical area (Cellular SMS, maybe email; Paging Group Messaging; Wireless email; group email).
+
+b) Support by at least almost all of the wireless networks through provision of 
+
+o Ubiquitously addressed geographically selective message broadcast capability, 
+
+o access to network configuration data sufficient to provide for localization,
+
+o a gateway which provides for the geo-addressable transmission of alerts.
+
+c) A widely accessible, highly redundant, reliable hosting system (Server) for alert generation, linked with carrier messaging gateways.
+
+d) An agreed, widely adopted categorization of the meaning of an alert message and any subordinate alert classes.
+
+e) A web based alert generation client integrated with emergency services (police, fire etc)  and other emergency management systems such as emergency broadcast, capable of access limitation and authentication. 
+
+f) Provision of an administrative infra-structure that to provide controlled system access to authorized agencies (Government, Weather, Fire, Police etc.)
+
+g) Procedures to train and authorize principle and deputy persons responsible for alert generation
+
+h) On going awareness and training programs for existing and prospective system users.
+
+i) On-going Quality assurance and usage metrics for system usage evaluation
+
+j) Education of the user population as to the significance of alert messages through:
+
+o Government advertising
+
+o Network promotional materials.
+
+k) Preparation/provisioning  of the population of wireless receivers with compatible capabilities (addresses and accounts for email, SMS, etc)
+
+l) Integration with other emergency alert dissemination systems such as emergency Broadcast etc
+Wireless Networks, A Short History and Current Status
+First Generation (1G) cellular phone systems were analog, with the Advanced Mobile Phone System (AMPS) network standard dominant in North America.   AMPS was primarily designed by Motorola in a  North American context, and while some variants of the AMPS system were built out in Europe and Japan, population mobility combined with political issues motivated the development of a European standard, designated Groupe Speciale Mobile or GSM.  
+
+GSM is a 2nd generation digital Time Division Multiple Access system (TDMA) network specifically designed for voice communications with provision for a large number of carriers, high levels of roaming and intercarrier billing.  It has been enormously successful and, outside North America, has become the de-facto world standard. 
+
+Meanwhile, a variety of 2G networks were developed within North America.  These include  a North American TDMA (IS-136), and a revolutionary (at the time) Code Division Multiplex Access standard (CDMA).   Some North American carriers (e.g. AT&T) have also adopted  a re-banded version of the GSM system, and all of these network standards currently co-exist in North America.
+
+IDEN is a proprietary Motorola system that combines the features of trunked radio systems (wide area analog dispatch) with a full cellular phone capability.  The system is a hybrid with the cellular capabilities provided through an adaptation of the GSM network standard.
+
+The original 2G systems provided dial up data access, but did not provide built in data communications capability.
+
+The anticipated increase in data traffic has resulted in continued wireless communications evolution, with 2.5G and 3G systems providing increasingly higher data speeds.  For GSM systems General Packet Radio Service (GPRS) has been deployed, while CDMA systems have deployed 1xRTT (one times Radio transmission technology).     All 2.5G and higher systems provide for dial up or TCP/IP access with the objective of  always on wireless connectivity. 
+
+User devices (handsets and PDA's) are also available with small system browsers based on WAP. 
+
+Ultimately it is planned that that 3G networks will provide data rates of up to 2Mb/s  both for UMTS, the evolutionary path for GSM and CDMA2000 being the evolutionary path for CDMA networks.
+
+None of the 2G network technologies emerged as the clear winner in terms of capacity, bandwidth requirements or data rates.    In the subsequent search for a global 3G standard,  no agreement  was reached within the International Telecommunications Union (ITU).  This was undoubtedly compounded by the enormous commercial value of the intellectual property interwoven into each of the proposed standards.
+
+As a compromise, the ITU proposed a 3G standard referred to as IMT2000.   This contemplates several potentially compatible standards; UMTS, being the likely European 3G successor to GSM,  CDMA200 the North American (and Japanese) successor to CDMA, and TD-SCDMA being the Chinese 3G standard.   It is a somewhat hopeful plan to make compliant handsets interoperable by virtue of a digital radio design methodology.  Time will tell.  See http://andrew100.tropod.com/3g.html
+
+As in the past, the new (3G) networks, most particularly the spectrum, are hugely valued, resulting in very high stakes auctions of additional spectrum both in Europe and North America.    However, recent developments in wireless local area networks have generated serious competition for low cost, high speed data.
+
+IEEE 802.11a, b and g  wireless local area networks (54, 11, 54Mb/s respectively)  have very recently achieved enormous commercial success.  Equipment Prices are very low and adoption is widespread (routers priced at less than CAD$200, wireless NICs less than $100).  A number of companies are in the process of building distributed 802.11 networks to provide coverage of public spaces, such as coffee shops, airport lounges, etc.  However, these do not provide for any type of handover and data rates would almost certainly be compromised on  a moving platform.
+
+The need for high speed data in a moving vehicle, (most commonly solely occupied by the driver) is sometimes questioned.   Most commonly, users will be stationary when high speed data is required, and increasingly, users will be able to casually access the internet through low cost, static, public access 802.11b hotspots.
+
+The wireless phone systems have become a means for delivery of  high speed digital data, one application of which is to provide for voice communications.   However, it is likely that continued strong preference for appliance type (simple) products will result in success for the 3G networks, with ancillary, pragmatic data use.
+
+Phone handsets are themselves increasingly sophisticated devices, with extensively programmable functionality, commonly using JAVA (SUN Microsystems) or BREW (Qualcomm) virtual machines.   Provision of end user services (such as CSAAC), through network standardization becomes increasingly questionable, because of the need to maintain these services through standards evolution,  and future handset development.    There is much to be said for provision of such services through handset software.  However, software is then required for each handset type. 
+Data over cellular Networks
+All of the 2G and 2.5G networks (TDMA, GSM, CDMA, and IDEN) presently support voice, data and a  Short Message Service modes (SMS).
+
+On each 2.5G or later network, a user may access data services via circuit switched or packet switched modes:   In the circuit switched mode the phone (which could also be a computer accessory in a memory card format) behaves as a modem, with communication via a connected link (Typically at 9.6kb/s for GSM).  The user may then access arbitrary external data services such as an external Internet Service Provider (ISP) through what is, essentially, a phone connection.
+
+Various higher speed data services are now being offered (up to 115kb/s max GPRS to 115kb/s max for CDMA 1xRTT) through  packet data services using wireless internet protocols (useable data rates with mobile platforms are reported to be considerably less).    In this mode, the user accesses a wireless ISP service operated by the carrier, with the mobile phone interacting as client.   High speed data services provided by the carriers are over TCP/IP, i.e., data packets are uniquely addressed and individually acknowledged.
+
+A number of standards have been developed to provide for wireless internet access, most notably, the Wireless Access Protocol or WAP.   WAP includes a presentation control language, WML, that provides similar functionality to HTML for large surface displays, but also includes means for bandwidth minimization.
+
+WAP was developed to support minimal browsers designed to execute as clients on current generation handsets to provide remote data or internet access.  As above, intelligent content evaluation is used to strip web pages of excess (bandwidth consuming) presentation features.
+
+In the case of true handsets, displays areas are relatively small, monochrome (of the order of 80 to 100 characters), and the data presentation of the phones is limited to retrieval of pre-packaged data such as weather, sports or stock quotes, offered by the carriers as premium services.  Such handsets universally offer SMS capabilities, and some include means to interface a separate computer for circuit switched (modem) use, or to access the ISP services of the wireless carrier.
+
+The handsets and networks also provide for email, through the standard SMTP protocols.   Simple handsets offer minimal, short message email, being limited as a result of the presentation and manipulation capabilities.
+
+PDA style devices include miniaturized full keyboards and relatively large, high definition color displays.  These devices can make use of all the services offered by the wireless networks, email, internet access, data services, word processing etc, plus SMS and of course, can be used as a phone.   Although the technology is in place for near universal data access, data roaming is presently partially implemented on some networks, particularly relative to international data services.
+
+All of the mainstream data services supported by the available networks are point to point, be they connectionless TCP/IP, circuit switched connections, or embedded short messaging services.   These cannot be used to support emergency alerts because individual sessions are required to transmit messages to each of the target receivers.   Simultaneous individual access of all units within a dense urban area  may result in serious traffic congestion, at exactly the time when open capacity is most important.  In any event this configuration violates the general architectural rule of shared lines among a larger population of handsets.
+
+Geographically addressable emergency alerts requires either a facility for localized broadcasting with population of  compatible handsets or geographically selective handsets with a compatible network broadcast capability or perhaps a combination of both.
+
+Alone among the network standards, GSM includes a standard for localized broadcasting, designated SMS  Cell broadcast or SMS-CB   This provides for ubiquitous addressing within a local area through the use of one way non-acknowledged messages broadcast within a single cell.   
+
+Other issues that may present problems for SMS-CB style services include unsolicited messaging, used for advertising, in a similar manner to internet SPAM.  Time will tell.
+Principle Canadian Wireless Networks
+(excluding Resellers)
+
+
+
+Protocols/Networks		GSM, AMPS, TDMA
+2000 Market Share Approximately 21 %
+
+
+
+
+Protocols/Networks AMPS, CDMA
+2000 Market Share Approximately 35 %
+
+
+
+Protocols/Networks AMPS, CDMA,
+Telus Mobility/Clearnet
+Protocols/Networks	, IDEN
+2000 market Share Approximately 24%
+
+
+MicroCell
+Protocols:	Amps, GSM
+2000 Market Share  Approximately 19 %
+Messaging Services
+
+The Short Messaging Services has been the dominant means by which short messages are transmitted over the network.  It is an effective means to transmit short alpha numeric messages to handsets, and provides the same functionality that can be found in alphanumeric pagers.  Wider bandwidth in 2.5 and 3G systems now allows Enhanced messaging (EMS) and multimedia Messaging (MMS) which can carry relatively high resolution images.
+SMS
+All 2G networks currently provide for short messages  (SMS) of up to 160 Characters.   Reception is signified by a handset alert, with the received message indicated with an icon.   User intervention is required to retrieve the message.  SMS is widely used in Europe to send information such as responses to directory enquiries.
+
+In Europe where homogeneity of the network has long supported inter-carrier operability, SMS text messaging has become widely adopted by young adults and children.   Inter-operability between non-homogenous networks within the last 18 Months has resulted in similar rapid growth in North America.
+
+SMS services provide point to point short messages, positively delivered with reception acknowledgement.  The network knows where each handset is by virtue of the process of registration or IMSI attachment (GSM) with the serving cell site.  SMS messages may be input via a gateway, or generated with a phone keypad, often aided by predictive assist software (such as T9).  The messages are delivered on a store and forward  basis at a lower priority to voice and circuit switched traffic and are vulnerable to message latency in the event of heavy loading.
+
+SMS messaging, even if directed to a single cell,  is not suitable for delivery of emergency alerts because the messages to each user registered in the cell would be delivered individually.  This would generate a massive spike in traffic, with potential message capacity and latency problems.
+
+SMS-Cell Broadcast
+The only existing or planned means within the network standards for providing location based alerts for cellular systems is SMS-Cell Broadcast (SMS-CB) otherwise referred to as Selective Area Broadcast  (SAB) or Service Area Broadcast in the UMTS standard.  SMS-CB was first specified for GSM in 1993, but the first system did not become operational until 1998 (apparently in Lebanon).   The technology is an optional standard, and has not implemented in many (probably most) GSM networks, probably due to a lack of applications.
+
+SMS-CB provides for unacknowledged messagesto be broadcast (pushed) to one specific Cell Global Identity (CGI).  All handsets within the coverage of the cell broadcast will, to a high probability, receive SMS-CB messages.  One broadcast message will reach all receptive handsets within the cell broadcast region.
+
+The following is direct quote from the Cell Broadcast Forum website.  See http://www.cellbroadcastforum.org/
+
+Cell Broadcast (CB) is a mobile technology that allows messages (currently of up to 15 pages of up to 93 characters) to be broadcast to all mobile handsets and similar devices within a designated geographical area. The broadcast range can be varied, from a single cell to the entire network.
+
+This technology is used in deploying location-based subscriber services, such as regional auctions, local weather, traffic conditions and 'nearest' services (like requesting the nearest service station or restaurant).
+
+Cell Broadcast is designed for simultaneous delivery of messages to multiple users in a specified area. Whereas the Short Message Service (SMS) is a one-to-one and one-to-a-few service, Cell Broadcast is one-to-many geographically focused service.
+
+It enables messages to be communicated to multiple mobile phone customers who are located within a given part of its network coverage area at the time the message is broadcast. Cell Broadcast is more akin to other mass distribution media such as teletext or Radio Data System (RDS).
+
+Cell Broadcast is a technology that allows a text or binary message to be defined and distributed to all mobile terminals connected to a set of cells. Whereas SMS messages are sent point-to-point, Cell Broadcast (SMS-CB) messages are sent point-to-area. This means that one SMS-CB message can reach a huge number of terminals at once. In other words, SMS-CB messages are directed to radio cells, rather than to a specific terminal. SMS-CB is an unconfirmed push service, meaning that the originator of the message does not know who has received the message, allowing for services based on anonymity  [??!!].
+
+A Cell Broadcast Entity (CBE) is a multi-user front-end that allows the definition and control of SMS-CB messages. A CBE can be located at the site of a content provider. At the site of the operator a so-called Cell Broadcast Centre (CBC) is located. The CBC is the heart of the Cell Broadcast System and acts as a server for all CBE clients. It takes care of the administration of all SMS-CB messages it receives from the CBEs and does the communication towards the GSM network. The GSM network itself takes care of delivering the SMS-CB messages to the mobile terminals.
+
+However, cell coverage areas will vary over a network and between networks because of non-uniform cell sizes (due to population density) and differences in cell design.   For example, macrocells might be used in an rural area, sectored cells may be used in denser areas, and microcells (even Pico cells) may be used in dense urban areas.      In rural areas intersected by high speed highways, additional umbrella cells are also used to prevent excessive hand-offs in cells with small coverage.   Thus the Selective Area Broadcasting cannot provide great precision. 
+
+
+Fig 1 (a), Macrocell
+
+
+Fig 1 (b) Sectored Cells
+
+
+SMS-CB messages can also include triggers to launch a WAP browser for message presentation, or to pull other services from remote servers, via embedded URL's.   However, these transactions are then pulled on a client-server basis.  If every receptive handset in a cell site attempted simultaneous access, system capacity issues would again rise.  
+
+
+The standardization process for GSM handsets (see below) has lead to the development of handsets that even now are SMS-CB ready, so that given network support, it would now be feasible to offer commercial SMS-CB services in the short term.
+
+SMS-CB handsets provide for limited access to up to 64,000 CB channels that can be used to provide service on an user opt IN-OUT basis, or overriding, under control of the network provider.   This is controlled by set up data in the handset SIM, which may be updated without user intervention through over-the-air configuration messages delivered via SMS-CB.
+
+Although the SAB capability exists within GSM by standardization, SMS-CB has not been widely implemented.   By consensus, the reason is that the necessary software upgrades are (very) expensive (of the order of  $1M per network  has been estimated), and to this point in time, there has been no opportunity for exploitation.
+
+It is not clear what the  killer app might be for commercial development,  other than Traffic information.   Other services contemplated by others for this utility include theater  and restaurant reviews, concierge services (nearest hotel, restaurant, gas station etc) plus localized commerce (coupons and special offers).   
+
+The SMS-CB standard includes means to automatically pull additional data (with pull being a point to point transaction).  This is clearly amenable to provision of geographically based advertising that could be based on customer profiles (including the weather and time of day).   One could contemplate that this might provide for subscription subsidies (ie the phone is cheaper if you allow adds). 
+
+Traffic may be major application but other important applications are not presently clear.
+Cell Broadcast Forum Handset Requirements
+The Cell Broadcast Forum, an industry association for the promotion of SMS-CB has published a specification for CB handset requirements, being specific to the GSM and UMTS networks. See 
+http://www.cellbroadcastforum.org/downloads/Handset_Requirements_Specification.pdf
+
+This provides for display methods, alert tones, user control, automatic pull capabilities (URL/phone number access), and SIM update data.
+
+CMS-CB compliant handsets will be capable of selecting active (enabled) CB channels, together with customized alerts for each etc.  The handset specification also provides for a variety of display modes under control of an display code embedded in the message.  
+
+The CBF specification includes a comprehensive set of minimum handset functionality, including the following display options under control of the content provider:
+a) Messages can be stored as background messages or, displayed on user request following an indication of message reception 
+b) Messages may be coded for Immediate and overriding display (up to 93 Characters), only reset upon exit of the broadcast cell or by broadcast deactivation message.
+c) Alternatively, messages may be directly displayed with user options for deletion
+d) Messages are removed from the display on cell exit
+e) The messages shall be filtered by encoded geographical scope and message identifiers to positively indicate reception with alerting tones and to prevent display of duplicates
+f) Messages may be automatically updated by means of a update number code
+g) Messages shall be displayed according to user Message Identifier selection , as stored in the SIM.
+h) The handset should be capable of receiving not less than 12 message identifiers,
+i) The handset should be able to receive up to 5 message channels simultaneously
+j) Message Identifiers (sources) can be represented by Text
+k) Display alphabets should be user configurable
+SMS-CB implementation 
+SMS-CB has been standardized for GSM and is in process of standardization for CDMA.  The following describes the status of SMS-CB for each.
+GSM, Rogers AT&T Clearnet 
+The GSM portions of these networks could potentially provide a cellular selective area alert capability by subscription to the appropriate software upgrades or third party software (LogicaCMG), and SMS-CB ready handsets are presently on the market..  Subject to other reservations, including alert presentation, CSAAC could be provided over the GSM networks within eighteen months to two years.
+
+LogicaCMG, with their specialist SMS technology, may already have products that would be the basis of a SMS-CB solution compatible with the Canadian GSM networks (see attached LogicaCMG information).
+CDMA, Bell & Telus
+Both Bell and Telus, which operate CDMA networks, indicated that SAB is not currently standardized for CDMA networks but is expected to be so within two years.  With respect to provision of Emergency Alert Services, the following was provided by one commentator
+
+the appropriate way to deliver this capability would be via an SMS Cell Broadcast system.   In the case of CDMA, this would mean SMS broadcast mobile terminated over CDMA Paging channel:   Short Text messages (STMs) are sent to all SMS broadcast-capable Mobile Stations/terminals (MS) that monitor the paging channel in a specified area, according to the Zone ID parameter from the Message Centre (MC).   This feature is a mobile-termination only feature.
+
+Although GSM has had a cell broadcast feature for a few years now, there has been no requirement in the CDMA market.   At this time, the feature has recently become available from Lucent and will become available from Nortel in late 2004 / early 2005.
+
+In order to offer SAB based services, handsets with standardized SAB capabilities will required.  Unlike GSM, CDMA handset resources and capabilities for SAB services have not been standardized   It was also pointed out that CDMA handset development is strongly influenced by the requirements of Verizon, the dominant CDMA carrier in the US, and there is no particular interest in SAB from that quarter.
+
+The CDMA Networks could not provide SAB services for at least 2 years, and even then, handsets are not likely to be available.  The coming 3G networks will undoubtedly include SAB, and this may drive definition of handset functionality.  However, it is clearly not on the roadmap presently.
+IDEN, Telus
+IDEN is a proprietary Motorola system from the Wireless Switch to user handsets.   This system combines trunked radio with standard cellular phone service.  Unlike the traditional cell frequency blocks IDEN spectrum is scavenged from previously licensed networks.
+
+According to the available data, the IDEN GSM cellular system is basically the same as the GSM standard, with minor changes to accommodate the dual mode.
+
+To paraphrase an IDEN network commentator:  this capability (SMS-CB) is not available today from Motorola's (iDEN vendor).  Again, I can not comment on whether this would be  requested from Motorola in the future.
+
+Because this system is totally proprietary, it proved not possible to obtain any information on the future plans for the network.   It is presumed that since standardized 2G GSM has SMS-CB capability, the IDEN system could also.   However,  the handsets are only produced by Motorola and there is no indication that IDEN handsets would be available to support CSAAC.   It must be presumed they would not.
+A Cellular Selective Area Alert Capable Service
+The Service
+The overarching concept is that all cellular phones would have the capability to receive and enunciate geographically addressed emergency alerts that would warn of imminent life threatening hazards.  This might include severe weather such as tornadoes etc or dangerous releases of hazardous materials (train wrecks) or terrorist actions.    The displayed messages would succinctly describe the nature of the hazard, recommend actions,  and include references to sources of additional information, such as local radio and TV stations (thereby requiring coordination with emergency message broadcast services).
+
+The alerts would be generated by duly authorized public safety organizations through authenticated messages.    The extent of the geographical coverage would be determined by the originator,  granulated to the resolution of the delivery means.   This might be within a few meters for a GPS based system or to a cell area, for an SMS-Cell broadcast system.  In the case of SMS-CB alerts, cell coverage would very variable, place to place and network to network.
+
+It is envisaged that the system would provide for multiple classes of alert, with user selection of the enunciated alert class.   Subscription might be required for access to lower alert classes which might include commercial messages of value.  The intent would be that the highest alert class would be provided as a public service free of any charge, and possibly override user settings.  It is also envisaged that the alert would be provided in the language of choice of the user.
+
+The outbound messages would be broadcast, thus unacknowledged, and thus inherently unreliable. There is a low but finite probability that a user will not receive an alert.  This may in large part be overcome by repetition of the alerting message.  The SMS-CB protocol provides for received duplicated messages to be ignored.
+
+It is assumed here that CSAAC is implemented by means of SMS-CB messages.  Alternatives to the SMS-CB technology is discussed below, see the section entitled Alternatives to SMS-CB.
+
+It is assumed that the handset functionality would be compatible and consistent  with the handset requirement of the Cell Broadcast Forum, combined with a basic display, and alerts displayed as text messages.
+
+Alerts (and commercial messages) would be categorized and broadcast using different SMS-CB ID's for each class.   Display (and enunciation) of these would be selectable by the user.  There is of course the risk that users might inadvertently disable all alerts, including the highest class, or have so many other SMS-CB channels enabled that a true emergency alert would be lost in the noise.
+Alert Presentation
+Alerts could be presented according to the pre-set preferences of the user, and per the SMS-CB specification , could have distinctive alerts for each alert class.    It is envisaged that in a Canadian context, alerts would be transmitted in at least two languages; with display selection by the user.
+
+It is anticipated the emergency alert messages would be displayed as received without intervention of any mobile phone application, other than SMS-CB message selection.
+
+There may be significant safety issues with alerts which are simply enunciated by tone with simultaneous or user retrieved  text message displays.   Some jurisdictions have banned use of cellular phones while driving (e.g. Newfoundland) and others may follow.   The seriousness of the message conveyed by an emergency alert may cause drivers to put themselves at risk to attend to the message.  In the event of a mishap, distraction arising from an emergency alert may carry the day as a legal defense.  However, it may not be sufficient to protect against personal injury  claims arising from such an accident. It is clear the legal ramifications are not clear.
+
+An emergency alert presentation in the form of an unsolicited, overriding  voiced alert would be strongly preferred (very similar to the RDS control of FM radios).  The basic technology has this capability but buy in from a large number of players would be needed to make this a reality. 
+Integrated Displays
+1G' Mobile Phones had very small displays, mostly limited to showing phone facilities such as personal telephone directories and user options etc.   Newer 2G and 2.5G phones are available with widely varying display capabilities.  Newer high capability phones and PDA's  have  high resolution color displays (some with built in cameras), while the more basic still have small text displays (typically 100 characters).
+
+High end  handsets also include very sophisticated messaging capabilities, such as MMS  and EMS Capabilities, WAP browsers and are compatible with Cell Broadcast.   These already provide for distinctive alert tones to be set for each specific SMS CB message ID. 
+
+It will be important to maximize the legibility of displayed alert texts to facilitate rapid reading at short range by all age groups. For this reason, message presentation will be a major concern for the content provider (alert generator) so the alert generator GUI should include a representation of the minimum display expectation. 
+Alert Classes
+Emergency Alerts
+It is envisaged that the system might provide for at least two or more alert classes
+
+A Class 1 alert might be transmitted/presented on CB channel 1, to warn of threats to life or property in the target region.   The intent of a class 1 alert would be to mitigate the threat posed by an imminent hazard through behavioral modification of recipients.   A simplified test for issuance of a class 1 alert might be:  does the imminent hazard pose a significant threat of  injury that might be mitigated by notification?.
+
+A Class 2 alert might be transmitted/presented to recruit recipients to a critical common purpose.  For example, in the event of a child abduction or crime of equal magnitude.  A simplified test for a class 2 alert might be:  might widespread observation/cooperation prevent or solve a heinous crime or prevent a catastrophic event? 
+
+Other classes might be defined for circumstances where behavioral modification by recipients may work to the great good. For example a class 3 alert might be employed to solicit load shedding for critical Hydro loading, or serious anomalous traffic congestion.  
+
+The objective of all alerts would specifically be behavioral modification; transmission of  important news should be strongly resisted.
+
+Clearly, alert criteria would be vulnerable to criteria creep or devaluation in the face of the inevitable trend to greater inclusiveness; e.g., missing/abducted children, critical requests for blood donors etc.  .As this progressed, the device might be considered to be crying wolf, so unambiguous warnings for true emergencies is important.    The basis for the multiple class alerts is thus to provide for legitimate secondary alerts, and remove the temptation to dilute the meaning of the class 1 alert.   
+
+It is envisaged that  public service type alerts would be provided as a public service.  Commercial CB channels would then be provided on a subscription basis.
+Examples:
+A wide area local class 1 alert might be broadcast for an incident of Sept 11 proportions with a class 3 alerts to avoid the vicinity and possibly class 3 alerts in areas like Newfoundland to prepare the  local population for diverted traffic 
+
+A chemical spill, say from a railway derailment, might result in a class 1 alert for the affected region and a class 3 alert for the surrounding regions, warning to recipients to avoid the area.
+
+A severe strain on the power grid might result in a wide area class 3 alert asking recipients to minimize power use, without higher level alerts being issued.
+Commercial Services
+The existence of a system with multiple alert or delivery classes might be a basis for geographically specific commerce.  This would involve many constituents, including the network providers, and prospective service providers.  Agreement on a single purpose alerting system is unlikely unless these secondary issues are also addressed. 
+
+Regardless of the likely success of the service, commercial roll out of CB based commerce would be almost inevitable.  Encompassing the capability would ensure that SAB messaging would be available for public emergency alerting which otherwise it may not.
+
+SMS-CB brings the advantage of localization to the data broadcast services that already exist. The SMS-CB message also provide for data to be pushed' to the handset, based on location.  The nature of the additional services that can be provided are a function of the degree of localization that can be realized.  A handset localized to within 10 meters could provide information about a nearby enterprise.  For example it may be possible to obtain restaurant, or other performance reviews.  It may also be possible to provide promotional coupons to encourage use of services in the immediate vicinity.
+
+
+Outside of transportation information (bus, train, plane and traffic information), the benefits of localization to within a few kilometers, as might result with SMS-CB localization, is more difficult to imagine.  However, localization is likely to be variable, place to place, with tighter localization in more densely populated areas.  Localized advertising/promotional information might prove attractive, perhaps with subscription discounts in exchange for unavoidable presentation of geographically/contextual advertising during normal use.
+
+Evolving commercial services over cellular networks might result in provision of CSAAC as a collateral capability, but more likely, an emergency alert system might be the basis for a commercial system. This it might provide some possibility for underwriting ongoing operational costs, but . 
+
+It is not clear if the SMS-CB service would provide any direct significant improvement over the currently available packet data services, which already include stock quotations, weather, sport etc.   Advertising is annoying to most, and without predicting failure, the apparent business case is not compelling. 
+
+That having been said, the interest is real and there is no doubt that if the system is developed it should include the capability of carrying commercial content.
+Alert Message size and structure
+Rapid transmission of emergency messages to a large number of handsets will require short, concise text messages.  As described above, these may be directly presented for display on the handset LCD and would be scrollable.
+
+It is envisaged that the message display codes would cause direct message display of the first page of the message (93 characters).  Ideally this would present the primary information, with additional information available in message pages reached through scrolling.   The additional information might refer the user to another source for more details of the hazard, such as Radio and TV.
+
+It is challenging to compose a message within that size limit.  Common situations such as weather might be provided as examples to ease the composition task.   10 Examples might be included in training handbook, and a composition aid comprised of a size limited text display could be included in the CSAAC client application. 
+Limitations to service and possible Liabilities
+Probability of reception
+SMS-CB messages are not acknowledged, so that there is a low but finite probability a particular receiver will not receive a particular message and a virtual certainty the message will be missed by at least some receivers in the broadcast area.
+
+While not being used, it is common for the handset antenna to be even more compromised than it is in regular use (cellular handset antenna s are usually very poor).  Handsets are paged, with short messages (with signals at maximum power).  An emergency alert message will be probably be longer and thus more error prone, so that the inclusion of additional Forward Error Correction embedded within the message would be beneficial (perhaps as simple as message repetition) .
+
+There are a number of reasons why an alert would be missed:,
+a) Inadequate signal coverage at the user's position
+b) User inconvenience of response 
+c) The phone may be OFF or the batteries flat 
+d) The handset is in use at the moment of broadcast.
+e) The handset is poorly sited for reception.
+
+At best, cellular phone alerts can only be expected to reach a portion of the population, because of the penetration of cellular use, the probability of active use, plus, the probability of missed messages.
+
+Service Liability
+The primary intent of the CSAAC service is to be able to deliver dire warnings when required.  With the message import known, a user would be very drawn to read/review an alert message display, perhaps, regardless of the circumstances.  The circumstances would provide a defense against charges of cell phone use while driving, but probably not for personal injury claims against (the network, alert generator, provincial government?). This potential liability may be a major issue.
+
+It is also inevitable that an alert message will not be received because of  reception problems in a particular location within the coverage area.    In the event that failed reception is perceived to have lead to avoidable injury, it is again possible that the carrier could be sued.
+
+Wireless customers should be advised of the limitations of the service, and be asked to sign a disclaimer to protect the service providers (carrier and alerting source).  The disclaimer might include a statement something like 
+
+The carrier makes the mobile phone system available for the transmission of emergency alerts which are generated by authorized Agencies, other than the carrier, and the carrier assumes no responsibility for the accuracy, necessity, reception, or timeliness or reception of the alert, including circumstances where a failure to receive an emergency alert might lead to loss of life or injury, or property damage.
+
+Geographic Addressing Resolution
+A major design problem for a CSAAC host is reconciliation of geographical alert requirements with  network cell location data.   Carriers will likely not be able to accurately map a requested coverage area to specific cell broadcast coverage, since this is determined by antenna design, local terrain and cell EIRP.   In addition:
+a) Cell location data will be subject to continuous change with network evolution,
+b) Cell coverage is highly variable, depending upon population density in the target area.
+c) Cell Coverage is different carrier to carrier
+d) CDMA systems may have some serving site ambiguity.
+
+As illustrated below, in the simplistic case, if an alert contributor were to map a target region, it is likely that coverage compromises would be different for each network to obtain at least the defined coverage.  The included population would be different for each network., see fig 2    Interactive feedback to the contributor  would thus be essential to allow adjustment of the coverage requests for specific carriers to obtain a balance.
+
+
+Fig 2, Reconciliation of Cell Coverage for different networks
+
+An alternate is to make the coverage area sufficiently large that these issues become negligible, but this is at the cost of coverage resolution.
+
+Cell site location and coverage would likely be a carrier commercial secret, so that in the proposed architecture, the cell location data base would be located with the carrier, with a standardized API to provide for authorized external query.  
+
+The alert server would query each carrier data base for the locations of cell sites in a region set larger than the proposed alert, and present the expected coverage, per carrier, for display by the client application.    The alert contributor would make the appropriate adjustments per carrier, compose the alert and send.
+
+Alternatives to SMS-CB
+Cell phone technology is such that point to multipoint transmission is fundamentally feasible, but prevented by limitations in the protocols.    Digital wireless pagers have the capability to have multiple addresses (cap codes), any of which can be shared with an unlimited number of other pagers, thus providing for group alerts.  Messages sent to a group cap code are received by all pagers so addressed.
+
+Cellular protocols are very extensive, and involve many players, but, given the incentive, there is no doubt that similar or better capabilities could be included in cellular systems.    A number of ways to provide a geographically addressed alert can be conceived in addition to the SMS-CB method standardized in GSM and now being introduced to CDMA. 
+
+For example, a system can be conceived whereby  localization would be based on the self locating capabilities of handsets equipped with GPS (E911 capabilities).   All handsets in the target region would be addressed through a one or  two stage alert process.   A first alert outbound unacknowledged broadcast message would initiate a network assisted GPS fix by all handsets within the broadcast region, inclusive of the target area, through a broadcast message (perhaps SMS-CB) including the raw GPS observables, such as an approximate GPS epoch time offset, constellation almanac, PRN's and carrier frequency Doppler shift values for the satellites in view, or other parameters prescribed for an assisted GPS fix within the system.  The first broadcast message would additionally include a geographic address  (GA) defined by a box or a reference location and  radius.  The first broadcast message might also include the alert message.   Only those handsets located within the GA as determined by the GPS fix would respond to the alert message.  
+
+Alternatively, the alert message might be conveyed by a second alert message addressed to handsets within the target GA so that the second alert message would be selectively received by those handsets that have determined they lie within the GA.  The additional data might include  an unacknowledged UDP datagram comprised of data for audio presentation. the form of streaming audio, or spoken by a text to voice capability.
+
+This would require handset software development would be required in addition to definition of new network standards (to define the broadcast messages).  This is probably a better system, and yet more elegant methods might be developed by industry groups specifically established to develop implementation means.
+
+A CSAAC Host Architecture
+Other than the server function and data base location, the requirements for a CSAAC system are straightforward to define, and premature at this stage.  Implementation would involve well developed concepts and hardware.   Consequently it was not deemed necessary to greatly expand on this topic beyond identification of basic requirements.  
+Network Requirements
+The configuration for each CSAAC host would be two redundant host servers (per province?) operating simultaneously, each with reliable gateways to the carriers, each simultaneously supporting a population of access clients.  The requirements would be as follows:
+
+a) Secure, reliable gateways to each carrier (redundant frame relay/dedicated lines)
+b) A gateway data base query application to query cell locations 
+c) A secure, reliable carrier gateway with a database API for cell location queries
+d) A secure SMS-CB message transmission gateway to the carrier
+e) A CSAAC host application server supporting a population of clients
+f) Authentication means primarily to establish the bone fides of the clients
+g) A client application with a GUI interface that includes mapping and other GIS interfaces
+h) Authentication means to establish the bone fides of the client users.
+
+As above, each alert generation would likely be initiated through a process of cell location fitting.  In response to a requested coverage region, the host server would interactively determine the cell sites that should be activated, and convey these as estimated coverage regions to allow the alert composer to modify the requested coverage to cover the target region.
+Major Hardware Elements
+The major hardware elements are the plurality of clients networked with two reliable SMS-CB generator systems via reliable internet connections (redundant service providers).  The host servers would sited in secure, reliable environments and probably operate unmanned.   The clients would be sited on the premises of emergency management agencies, likely environment Canada (for weather), and regional police headquarters.
+
+The host servers would include the normal firewall-server interface for security and in addition include to-be-defined means to positively authenticate attached clients.   User (composer) authentication would be required; swipe cards and PIN's would probably be sufficient, given secure location of client systems. 
+
+Communications, host to carrier would be via redundant  frame relay or dedicated lines.  Host to client would be via reliable internet such as redundant ISP's, frame relay or dedicated lines.
+
+Given determination of operating software requirements, hardware specification will be relatively straightforward.  Software Diagnostic tools would be required to discover points of failure in a down system, and the hardware design would require shelf spares of all major hardware elements.
+
+Each host would be comprised of redundant systems, one providing active service, the other in hot standby shadowing the active system, with suppressed output.    Both hosts would operate simultaneously, one active, the other as system shadow.   The two hosts would be located in different cities, and communicate by highly reliable means (redundant frame relay?).
+
+A preliminary architecture is shown in fig 3.  Definition of detailed system requirements would likely result in significant changes, with the same end objective.
+
+Fig 3, Preliminary CSAAC Architecture
+
+
+
+
+
+Major Software elements:
+Host Operational Software
+As presently conceived, the carrier cell site location data bases would be sited on the carrier's premises in the carrier's computing systems.   Each carrier would be required to support a query application that would return the cell site location (and coverage, if available) within a given coverage region (as a centre and radius or n-sided polygon).  
+
+The CSAAC server application would provide means to estimate coverage based on cell site data, and to convey coverage with cell site location indicators to the client application.   This coverage might be provided data or interpolated data based on other cell sites in the regions surrounding the alert region.  Each client should see' every active SMS-CB session in a window.
+
+Each carrier would be required to provide a gateway for the transmission of SMS-CB messages.   A common interface would be desirable, otherwise a conversion interface would be required (in the host).
+
+All activities of the host, including maintenance activities, failures and transmitted alerts would be recorded in a permanent, time stamped log and stored offsite for a to-be-determined period.
+
+Operational health would be monitored by a continuous test process, which would be suspended during true alert generation.
+Alert Client Application
+The client would include entry authentication/authorization procedures, that might include a swipe card and PIN or similar, depending upon site security.
+
+The alert client would show the composed alert text on a simulated handset display, so that the author can assess intelligibility during composition.  The client could include a library of examples to be adapted for the current situation.
+
+The client software should show other active alerts in other windows.
+Authorization and Authentication
+It is envisaged that all alerts would be generated/composed on an  CSAAC client system.  Even in the event that an alert arises from a person in the field ( a police officer attending a wreck), the alert would be called in to the operating site of a CSAAC client.    A third level of authentication  may then also be required to establish the bone fides of the front line person.  This would be a departmental responsibility,  probably defined by CSAAC operating procedures.
+
+Authorization requirements would be provided through standard operating procedures of the contributing organizations.
+GIS 
+The client software would include mapping software with GIS overlays, one of which might show population density, for example.    The client application would provide for graphical entry of an alert region, and means to manipulate and change alert regions on a per carrier basis, with graphical display of consequent coverage, generated by the host.  This should include additional information, such as:
+
+a) The location of the emergency broadcast transmitters, foot prints and access methods for each,
+
+b) Population density,
+
+c) Sensitive sites such as hospitals/prisons
+
+If the alerted region includes a sensitive site, the host software might generate contact information for the facility for the generator to warn its administration, etc.
+Implementation Options
+The GSM networks have an SAB capability, as-yet unimplemented,  but widespread use of compatible handsets is several years into the future.    However, A GSM based system could be planned now and possibly  implemented 2 to 3 year hence.  The commercial case for SAB services is not strong at this time; substantial incentives may be required to induce carriers to build the system.
+
+A CSAAC on one network (GSM) may provide an incentive for other networks, but considerable evolution of those networks and subscriber equipment would be required to make that possible.   In the meantime, government support for development of a service only available to one carrier (by virtue of the network standard)  might be regarded as unfair competition to the others, pending introduction of equivalent services.
+
+However, with respect to the other networks, the inescapable conclusion is that immediate implementation  (within 1 to 2 years) is not possible:
+
+CDMA networks are only now implementing the basic SAB capability, and compatible handsets are not available, and may not be for several years. 
+
+The IDEN network is a Motorola proprietary system, and it is not clear that SMS-CB will be implemented as a network standard.
+
+Implementation 4-5 years hence would likely be possible for all networks. This time frame would also allow contemplation of additions/changes to network capabilities standards, and allow other entities to participate in the process (particularly those in the US). 
+
+This  would be a journey that would require active participation of the carriers, international standards bodies, and one or more industry expert entities (perhaps a university), plus selected special interest groups, to define the service and plan implementation in the light of planned network evolution, and customer response. 
+
+A solution so developed would likely be much superior to the service as contemplated in the GSM standard, and would likely be widely adopted in other territories and regions.
+
+In addition to the carrier network requirements, an operational host server  would be required for alert generation plus the ancillary supporting activities (as above).   Development of this capability would be a pre-requisite to provision of a CSAAC and, in any event, likely could not be achieved in less than 2 years.
+CSAAC Operations
+An operational entity would be required to support ongoing CSAAC operations to provide the following:
+
+a) Coordinate with carriers, other emergency alert entities and handset suppliers etc
+
+b) Authorize principle and deputy persons responsible for alert generation
+
+c) To provide on going awareness and training programs for system users.
+
+d) To provide and monitor Quality assurance and system usage metrics
+
+e) Provide for public education of mobile phone users as to the significance of alert messages
+
+f) support continuous system evolution
+
+Ideally this would be a joint Industry-Government responsibility, probably government funded, industry operated.
+
+Even when the system was fully operational, ongoing support would also be required from carriers for:
+
+g) Continuous input to the system evolutionary process, both operationally and technically
+
+h) Support of handset upgrades to support the added services
+
+i) Added customer service to educate mobile phone users
+
+j) Provision of customer service to respond to  calls resulting from an alert
+
+k) Legal responses to deal with any legal claims arising from the service
+A CSAAC Development Process Overview
+Any implementation process must necessarily take longer view, and target a point in the future when handsets and networks are evolved to include the basic capabilities. 
+
+A key issue is that development and operation of this service would be expensive, without any predictable way for the carriers to generate offsetting revenues.  This applies both to implementation and operational phases.  A mandated requirement might provide the incentive, but funding means would still be required.
+Intent Formation and Co-ordination
+The starting point would be an organizing group of all carriers and the Federal Government., see figure 4
+
+
+
+
+Figure 4, An implementation overview
+
+
+
+The purpose of this group would be to initially formulate intent, and then define goals and success criteria, manage generation of technical specifications, network interfaces, cost and schedule implementation.  It might also commission and promote a motif (CSAAC Ready or similar!), 
+
+From a basic description of the service to be provided, each participating network would plan an introduction time point in terms of their network evolution.  Each would then develop an implementation schedule, and provide cost estimates of the additional effort required for the program
+
+Given industry agreement, this process would :
+
+a) Define the interface requirements for an initial service roll out
+
+b) Define program goals and success criteria 
+
+c) Define operational metrics, emergency categories, and assessment criteria
+
+d) Coordinate with other industry/special interest groups (ETSI, PPW, etc),
+
+e) Define standard message formats for emergency alerts
+
+f) Provide scheduling and program management 
+CSAAC Capability Development
+Presuming an industry wide intent to implement the service, it is likely that each network would become service capable at different times.   While no commercial value would  likely result from the service, its absence might prove a competitive liability.  If the service is to be provided as a result of government funding in some form, it may be important to ensure common timing for the service roll out to avoid any unfair advantage.
+
+Given wireless carrier buy in, Individual wireless carriers would need to:
+
+a) Determine technical issues in network specific implementation
+
+b) Cost and schedule implementation.
+
+c) Generate Network specific system specifications
+
+d) provide implementation program management
+
+e) Configure their networks to support the service over an above other offerings
+
+f) Implement and maintain a network interface for the service (web based)
+
+g) Provision mobile phones as required
+
+h) Provide customer support to respond to activations and service enquiries
+
+
+
+Appendix A
+Existing Entities Active in the field
+CEASa
+To quote press releases re CEASa:
+
+The Cellular Emergency Alert Services association (CEASa), a not-for-profit organization, was founded in 1994 with the vision of prompting the cellular phone industry to link up with the nationwide web of warning sirens and radio and television broadcasts for disasters. Through the persistent efforts its founder, that goal was attained in 1998 when the Cellular Telecommunications Industry Association (CTIA) submitted a proposal for a program linking call phones to the Emergency Alert System. Today, CEASa focuses on persuading the wireless industry to upgrade the level of notification services available through the Emergency Alert System to the more than 115 million U.S. wireless subscribers.
+
+Douglas Weiser is the principal behind CEASa.  He has what a appears to be a key patent, has made himself very well known, but the potential for his future contribution is hard to judge.
+ETSI  (Emtel.etsi.org/agenda.htm)
+ETSI has a very well presented Web site (if you have time for the graphics) and appears to be taking a very professional, organized approach to development of a cellular emergency alert system.  ETSI sponsored a workshop in February 2002
+
+See comments re OtelNet below.
+
+PPW (http://www.partnershipforpublicwarning.org/ppw/about.html)
+The purpose and mission of the Partnership for Public Warning is, to quote from their web site:
+Our Purpose:
+Bring together representatives of all the many and diverse stakeholders to work toward a resolution of national standards, protocols and priorities that will assure the right information is delivered in a timely manner to people at risk from disaster, be it natural or people induced, so that they are enabled to act knowledgeably to save lives, reduce losses and speed recovery. 
+Our Mission: 
+Promote and enhance efficient, effective, and integrated dissemination of public warnings and related information so as to save lives, reduce disaster losses and speed recovery.
+FEMA  (http://www.fema.gov)
+The mandate of the U.S Federal Emergency Management Agency to quote from their web site:
+
+What We Do
+Advising on building codes and flood plain management...teaching people how to get through a disaster...helping equip local and state emergency preparedness...coordinating the federal response to a disaster...making disaster assistance available to states, communities, businesses and individuals...training emergency managers...supporting the nation's fire service...administering the national flood and crime insurance programs...the range of FEMA's activities is broad indeed. 
+FCC EAS
+To quote from the web site of the U.S. FCC Emergency Alert System: 
+The EAS is designed to provide the President with a means to address the American people in the event of a national emergency. Through the EAS, the President would have access to thousands of broadcast stations, cable systems and participating satellite programmers to transmit a message to the public. The EAS and its predecessors, CONELRAD and the Emergency Broadcast System (EBS), have never been activated for this purpose. But beginning in 1963, the President permitted state and local level emergency information to be transmitted using the EBS.
+Also, specially equipped consumer products, such as televisions, radios, pagers and other devices, can decode EAS messages. The consumer can program these products to "turn themselves on" for the messages they want to receive.
+Celloc (http://www.cell-loc.com/docs/hNR010717.html)
+Cell-Loc is a Calgary based cellular location services company with a key objective of participation in the e911 field.  Cell-Loc have also claimed some success with an emergency alerting system; to quote from a Cell-Loc press release:
+CALGARY AB, JULY 17, 2001 - Cell-Loc Inc. (TSE: CLQ), a leading developer of network-based wireless location technology and services, today confirmed the first-ever demonstration of location-based messaging in the U.S., delivering emergency alert messages to groups of cellular handsets in targeted geographical locations in Austin, Texas. Cell-Loc was invited to participate in this demonstration by the Cellular Emergency Alert Services association (CEASa). The private demonstration used Cell-Loc's Austin Cellocate network. 
+Emergency alert messages have the potential to warn geographically targeted cellular phone users of emergency situations in their immediate area such as terrorist threats, severe weather or missing children. 
+"Cell-Loc's Austin network performed admirably during this first-ever U.S. demonstration of location-based cellular emergency messaging," said Doug Weiser, director of PROJECT ALERT, CEASa. "The world will be a safer place thanks to this technology." 
+"Cell-Loc is pleased with this third party validation of its technology," said Dr. Michel Fattouche, president & CEO, Cell-Loc Inc. "Since inception, one of the company's motivating factors has been finding a way to use its technology to save lives." 
+CellAlert  (No Web Site found)
+Doug Weiser (CEASa, see above) is a principle with Cell alert and the inventor of record of US patent number 6,112,074 Method of communicating emergency warnings through an existing cellular communication network, and system for communicating such warnings.
+
+In a letter from the inventor to Wireless Review Magazine, dated June 2001, it is stated that this patent has been sold to PCA technologies, there is no comment on any royalties that might be payable on use of the means and methods of the patent.
+
+CellAlert claim a global system, that is massively scaleable and intended to cover a range of situations including 
+Severe Weather
+Missing persons
+Criminal Events
+Natural Disasters
+Infrastructure failures
+Hazardous Materials
+Terrorists
+Traffic
+
+CellAlert cites a number of very credible technology partners, but doesn't seem to exist.
+Steleus (Previously CoherentNetworks) and Osmose
+Steleus appear to primarily be in the business of network analysis tools.   They claim strong SS7 capabilities and SMS management tools including SMS bonvoyage, and SMS Welcome, plus a variety of network software.  Their strength with SMS makes them an interesting company.
+
+Osmose are a utility management software company, but they have also appear to have integrated GIS solutions with standardized gateways, and this too makes them an interesting company.
+OtelNet
+Otelnet is a featured in an ETSI Web slide show outlining a European Cell Broadcast System that includes Emergency alerting as a capability.   OtelNet have a system that cell broadcasts classes of information selected by the user,  via unconfirmed push, likely using WAP. 
+CellAlert has partnered with OtelNet and this has resulted in what appears to be the most advanced, perhaps only viable emergency alerting system.  To quote from the OtelNet web site:
+BERKELEY, Calif. and LAKE ST. LOUIS, Missouri March 18, 2002 - What will it take to make cellular delivery of Emergency Alerts a Reality? Cell Alert Services and OTELNET have partnered to bring a complete, end-to-end Emergency Cell Alerts solution to wireless carriers. The joint solution will supplement the traditional means of delivering emergency alerts through radio and television broadcasts, which has lacked the ability to target emergency information to a person's specific location, or to perform an alerting function. The combined solution includes Location-Directed Messaging infrastructure as well as local Emergency Alert Service (EAS) access. 
+
+OTELNET has designed a delivery solution based on their OtelCOREtm Urgent wireless software infrastructure. OTELCORE Urgent receives real-time emergency information from multiple sources and delivers targeted alerts to millions of subscribers based on their location, preferences and profile. The wireless network, with its capacity to identify subscriber location, has come to the forefront as a prime medium to notify and deliver critical information regarding an imminent threat to a subscriber's safety. For this reason, there is no longer any question that cellular technology will play a significant roll in the nation, and the world's new civilian security plans. 
+The CellAlert Services Emergency Alerting application is designed to provide subscribers and family members additional peace of mind. After the events of September 11, consumers are looking for new ways to protect their loved ones. CellAlert Services send short message alerts to subscribers, based on predefined or real-time location parameters, which notify them in emergency or other community safety situations. 
+Level-One Emergency alerts are those originated by the FCC Emergency Alert System and may include such events as Presidential messages, terrorist attack warnings and severe weather conditions. Level-Two Community Safety alerts are those originated by local emergency officials and are designed to assist programs like Neighborhood Watch, Child Find and local fire condition advisories. Other priority Level-Three alerts can advise residents of local utility outages and school closings. Regardless of the alert, all CellAlertsm Messaging is designed to bring added value to wireless service subscribers, by providing an extra level of security to the subscriber who primary motivation in purchasing cellular service was likely safety.
+The Cellular Emergency Alert Services association, has been promoting the potential benefits of cellular emergency notification service for nearly a decade. OTELNET and CellAlert Services Inc., are partnering with key content and location technology companies to address this pressing need. Cell Alert's CEO Douglas 'Bud' Weiser says, "Cellular EAS from CellAlert Services, powered by OTELNET, finally offers a program to the wireless carrier community that will provide a commercially viable product for an emergency messaging application that is deployable by all US networks regardless of their architecture or generation. It positions mobile devices as a leading medium for alerting the public to clear-and-present-danger situations. CellAlert Services embraces their technology and looks forward to a growing relationship with OTELNET." 
+"The importance of delivering targeted emergency alerts in a secure, high performance environment is unquestionable" offered Farokh Eskafi, OTELNET CTO. "OTELCORE Urgent has been specifically designed to process multiple content feed along with the location and preferences of millions of subscribers to get the right emergency alert to the right people. I am confidant our software infrastructure, coupled with CellAlert Services emergency management perspective will significantly enhance our nation's security and safety. 
+Assettrax
+Assettrax is claimed as a CellAlert partner but their web site is single under construction page. 
+LogicaCMG
+LogicaCMG is also claimed as a CellAlert partner.   CMG are very strong in SMS messaging, billing and internetworking across message domains.   They claim to support all standards.
+
+LogicaCMG is a global solutions company providing management and IT consultancy, systems integration and outsourcing services.  With additional expertise in wireless technology, the company supports clients across diverse markets including telecoms, financial services, energy and utilities, industry, distribution and transport and the public sector.  Formed in December 2002 through the merger of Logica and CMG the company has offices in 33 countries and over 30 years of experience in the IT services arena.   LogicaCMG is the number two European quoted IT services company and is listed on both the London and Amsterdam stock Exchanges.
+
+LogicaCMG is the world's leading supplier of messaging infrastructure for wireless networks. Our products support all network technologies, including GSM, CDMA, PDC and W-CDMA. Our Short Messaging systems handle two thirds of the world's SMS traffic and we are the third largest supplier of Multimedia Messaging systems globally. In addition to messaging, LogicaCMG offers wireless portals, unified communications, wireless Internet as well as mobile payment systems.
+LogicaCMG are in the process of integrating Logica Mobile Networks and CMG Wireless Data Solutions. We will continue to support the products that we have currently installed in our customers' networks across the globe.
+
+A self promotional white paper from LogicaCMG about their SMS-CB capabiltie is attached to this report as an appendix.
+E-Alert
+E-Alert is a commercial emergency alerting service.  To quote from their web site:
+
+E-Alert USA provides Emergency Notification messages via any email enabled device. Subscribers receive text notifications by personal computer email, and concise-text alert information by text pager or cellular phone. Severe Weather and Civil Emergency alerts are geographically specific, allowing subscribers to specify up to twelve counties in up to three U.S. states.  National Attack Warnings are sent to all subscribers regardless of the attack location.
+
+The E-ALERT service continuously monitors U.S. Government satellites that supply real-time data from the National Weather Service (NWS), NORAD (National Attack Warnings) and the Civil Emergency Message System for the entire United States.  Our satellite receivers continuously collect emergency related events and warning data from satellites and store it into a database, sorted geographically.  Our message engine then converts these events and warnings into user readable text and sends them according to subscriber profiles, all within seconds.
+
+The E-ALERT service is useful for individual subscribers who are concerned about local weather or civil emergencies where they live and work.  E-ALERT is a "must" for organizations involved with public safety and emergency preparedness.  Businesses that are affected by weather conditions can directly benefit from localized emergency weather notification.
+Dialogic Communications Corporation
+DCC are a 100 person software development company with an widely addressable high speed communication tool as below, quoted from their web site.
+
+From routine employee announcements to evacuation notices to family notifications, DCC's The Communicator! high-speed notification system ensures business continuity during unexpected events. Used by hundreds of mission-critical operations globally, The Communicator is the perfect solution for corporate contingencies, emergency management and disaster recovery. Fast and efficient, it automatically contacts persons by phone, pager, fax and email; delivers incident-specific information or potentially life-saving instruction: confirms message receipt; and prints, faxes and emails comprehensive reports detailing call-out results. The system's powerful GIS interface, GeoNotify enables easy geographical selection of targeted notification areas, and initiates first phone warnings within 60-90 seconds of incident identification.  DCC also offers back-up and hosting services, providing users secure access to hundreds of phone lines, and ensuring 24/7 readiness for any notification need.
+Innovatia
+Innovatia a member of the Aliant group, is a training and documentation company, and is quoted as a partner in the Allport Group web site.   To quote from Innovatia's  web site:
+
+We're in the solutions business. We take people and technology and combine them with new ideas to make successful eLearning, documentation, and pre-and post-sales technical support products and services for the global telecommunications industry. 
+We honour our customers, providing exceptional service that delivers real value. With our end-to-end service model, we're there throughout the entire process from product/service development to support and beyond. We work with our customers, bringing the synergies of our affiliated companies and partners to bear on every project.
+Innovatia's produces a variety of products and services. We are transforming knowledge services, rewriting the rules about customer centric service; and making synergistic partnerships a reality.
+Bradshaw Consulting Services
+BCS is quoted as a technology partner in the Allport Group Emergency Alert Solution.  BCS in turn quotes DCC as a partner for the following products (to quote from the BCS web site):
+
+GeoNotify
+GeoNotify is a GIS-based desktop mapping interface that allows you to geographically select the areas needing notification, then access and process contact information quickly using Dialogic Communications Corporation's (DCC) The Communicator!® for the evacuation of the public and notification of response personnel during an emergency. Using your E911 data, the system contacts each person via telephone, pager or fax, delivers accurate information and/or instruction and verifies message delivery via touch-tone response. Using ESRI MapObjects, this innovative combination of digital, street-level maps with automated notification technology enables you to navigate and notify your community or organization at the touch of a key. 
+GeoStorm
+GeoStorm is a state of the art, severe weather early warning system developed through an alliance with Dialogic Communications Corporation (DCC), BCS and Baron Services, Inc., who is one of the world's premier manufacturers of real-time, site-specific weather monitoring systems. 
+Using the data from the Baron's Doppler radar to determine the storms projected path, GeoStorm is able to quickly notify the public through DCC's world leading telephone notification system, The Communicator!® 
+Classco
+ClassCo's patented technology enables telephones, answering machines, and other end-point devices to receive caller identification data and convert the information into an audible format.  Applications for the technology include caller ID, call waiting ID, internet call waiting, voice/fax/email messaging, internet personal lists, information services, and personal information management. 
+ClassCo has developed the VoiceAnnounce® and InTouch series of products for the consumer telephony and personal computer markets.  VoiceAnnounce products allow subscribers to caller ID and call waiting ID services to receive an audible announcement of the identity of incoming calls.  InTouch Internet call waiting products allow identification and management of calls received while the user is on an active Internet connection.  By making the best products, we help our customers achieve a higher market penetration for Caller ID services.  End-users have described our VoiceAnnounce products as "better than the wheel."
+Products are sold under Company and private brands to telephone companies, wholesale distributors, catalogs and retailers. In addition, the Company actively licenses its patents and know-how to other telephone equipment manufacturers.
+Telcordia Technologies (Previously Bellcore)
+Telcordia is a large technology company also quoted as an Allport partner.  Telcordia are active in the emergency notification field as indicated by the following selectively quoted news release 
+
+In an effort to help improve how communities prepare for and respond to emergencies and natural disasters, Telcordia Technologies (formerly Bellcore) today announced a test of its Community Notification Solutions (patent pending), a new public and community notification system that provides early warning messages to homes, schools and businesses. The test is taking place in Deerfield Beach, Fla., Florida's Showcase Community for Emergency Preparedness and a Federal Emergency Management Agency (FEMA) Project Impact site. 
+
+Telcordia Technologies, an SAIC company, provides software, engineering, consulting and training services to optimize the performance of communication networks worldwide. Telcordia Technologies was created in 1984, employs 6,000 professionals, and has revenues of more than $1 billion. Telcordia (www.telcordia.com) is headquartered in Morristown, NJ, with offices throughout the United States, Europe, Central and South America and Asia Pacific.
+Telcordia Community Notification Solutions represents another innovation from a company whose roots encompass years of communications network experience. Capitalizing on the speed and reliability of the digital telecommunications network, the Community Notification Solution can be used to rapidly notify populations at risk in emergency situations as varied as severe weather, floods and chemical spills, potentially saving property and lives. The customized system is also capable of targeting highly specific call lists, making it suitable for a wide range of emergency and non-emergency applications, ranging from school and road closure announcements to notifying emergency support personnel during an event. 
+"One of FEMA's Project Impact goals is prevention through early detection, enabling rapid response," said John Copenhaver, Regional Director of the Federal Emergency Management Agency (FEMA). "We applaud the initiative of Telcordia to reduce the impact of disasters to people and property by providing emergency officials the means to rapidly alert people at risk." 
+
+
+
+Appendix B'
+Patents
+Patent Review 
+A preliminary US patent search has revealed relatively few patents in the field.  The search string was Cellular or phone and Emergency and Alert.
+
+For convenience, this patent search only addressed US patents, and thus is far from exhaustive.   It is likely that a US application would be applied for concurrently with a European or World patent applications.  This search is preliminary, a more detailed review is required for a definitive statement.
+
+The full list of patents resulting from a key word search is as follows:
+
+United States Patent 4,415,771
+United States Patent 5,278,539
+United States Patent 5,592,172
+United States Patent 5,636,245
+United States Patent 6,021,177
+United States Patent 6,112,075
+United States Patent 6,480,578
+
+The abstracts of  US patent numbers 5,278,539,  5,592,172 are attached below, being the more relevant,  together with the abstract and claims of patent number  6,112,075 issued to Douglas Weiser.
+6,112,075,  Douglas Weiser.
+The Douglas Weiser patent at first blush looks to be broad and cover the basic concept of provision of emergency alerts by means of a selective area broadcast technique:
+
+Claim 1. A method of communicating emergency warnings to persons within a selected geographic area within a geographic region served by an existing cellular communication system that comprises a plurality of signal transmission stations, the method comprising: 
+
+providing a plurality of warning devices within the geographic region; 
+
+identifying one or more, but less than all, of the plurality of transmission stations in the cellular communication system appropriate to activate warning devices in the geographic area; and 
+
+transmitting a predetermined signal from the identified transmission station or stations to activate all the active warning devices in the geographic area of the geographic region, which warning devices generate emergency warnings in response to the predetermined signal.
+
+Douglas Weiser made the comment to me that the patent is defensive only, but since Mr. Budweiser apparently no apparently longer controls the patent it may not possible to make such a statement with confidence.   
+
+However, the patent application is relatively recent, and more detailed analysis may find prior art or other undermining information.  
+
+
+United States Patent 
+6,112,075 
+Weiser 
+August 29, 2000 
+
+Method of communicating emergency warnings through an existing cellular communication network, and system for communicating such warnings 
+Abstract
+A method of communicating emergency warnings to persons within a selected in a region served by a cellular communication system that comprises a plurality of transmission stations, includes providing persons in the area with warning devices that generate an emergency warning in response to a predetermined signal; identifying at least one transmission station in the communication system to transmit the predetermined signal to warning devices in the selected area; and transmitting the predetermined signal from the identified transmission station to cause warning devices in the selected area to generate emergency warnings. The system for implementing this method includes a plurality of warning devices disbursed throughout the area, and a device for identifying one or more signal transmission stations in the cellular communication network appropriate to transmit the predetermined signal to warning devices in the selected area, and causing the transmission stations identified to transmit the predetermined signal to cause warning devices in the selected geographic area to generate emergency warnings. 
+
+Inventors: 
+Weiser; Douglas Diedrich (623 Lakeview Rd., Lake St. Louis, MO 63367) 
+Appl. No.: 
+002522
+Filed: 
+January 2, 1998
+
+Current U.S. Class:
+455/404; 340/539; 455/228; 455/521; 455/556; 455/557 
+Intern'l Class: 
+H04Q 007/20
+Field of Search: 
+455/404,466,521,38.1,38.2,31.2,556,557,525,227,228,344,567 340/825.44,825.54,539,709,601 379/37,39 
+
+References Cited [Referenced By]
+
+U.S. Patent Documents
+3701024
+Oct., 1972
+Knowles et al.
+455/526. 
+4415771
+Nov., 1983
+Martinez
+379/43. 
+4435843
+Mar., 1984
+Eilers et al.
+455/228. 
+5272465
+Dec., 1993
+Meares, Jr.
+340/539. 
+5278539
+Jan., 1994
+Lauterbach et al.
+340/539. 
+5444433
+Aug., 1995
+Gropper
+455/526. 
+5448618
+Sep., 1995
+Sandlerman
+455/404. 
+5533094
+Jul., 1996
+Sammugam
+425/426. 
+
+Primary Examiner: Tsang; Fan 
+Assistant Examiner: Sobutka; Philip J. 
+Attorney, Agent or Firm: Howell & Haferkamp, LC 
+
+Parent Case Text
+
+
+
+This application is a continuation of application Ser. No. 08/335,150, filed on Nov. 7, 1994, and now abandoned. 
+
+Claims
+
+
+
+What is claimed is: 
+
+1. A method of communicating emergency warnings to persons within a selected geographic area within a geographic region served by an existing cellular communication system that comprises a plurality of signal transmission stations, the method comprising: 
+
+providing a plurality of warning devices within the geographic region; 
+
+identifying one or more, but less than all, of the plurality of transmission stations in the cellular communication system appropriate to activate warning devices in the geographic area; and 
+
+transmitting a predetermined signal from the identified transmission station or stations to activate all the active warning devices in the geographic area of the geographic region, which warning devices generate emergency warnings in response to the predetermined signal. 
+
+2. The method of communicating emergency warnings according to claim 1, wherein the method comprises transmitting one of several predetermined signals, and wherein the warning devices generate different warnings depending upon what predetermined signal is transmitted. 
+
+3. The method of communicating emergency warnings according to claim 1 wherein the warning devices are coupled with a radio receiver, and automatically tune the radio receiver to a radio station in response to the predetermined signal. 
+
+4. A method of communicating emergency warnings to persons within a selected geographic area within a geographic region served by an existing cellular communication system that comprises a plurality of signal transmission stations, the method comprising: 
+
+providing a plurality of warning devices in the geographic region, which warning devices generate an emergency warning in response to a predetermined signal transmitted from one of the signal transmission stations; 
+
+identifying at least one signal transmission station in the cellular communication system, but less than all of the transmission stations of the plurality of signal transmission stations in the cellular communication system, appropriate to transmit the predetermined signal to the warning devices in the selected geographic area; 
+
+transmitting the predetermined signal only from the identified signal transmission station or stations to cause all the active warning devices in the selected geographic area to generate emergency warnings. 
+
+5. The method of communicating emergency warnings according to claim 4 wherein the warning devices generate different warning signals in response to different predetermined signal transmitted from one of the signal transmission stations; and wherein the step of transmitting the predetermined signal comprises selecting from several predetermined signals, a predetermined signal that will cause the warning devices to generate an appropriate warning signal. 
+
+6. The method of communicating emergency warnings according to claim 4 wherein the warning devices are coupled with a radio receiver, and automatically tune the radio receiver to a radio station in response to the predetermined signal. 
+
+7. A method of communicating emergency warnings to persons within a selected geographic area within a geographic region served by an existing cellular communication system that comprises a plurality of signal transmission stations, the method comprising: 
+
+providing a plurality of warning devices in the geographic region, which warning devices generate an emergency warning in response to a predetermined signal transmitted from one of the signal transmission stations; 
+
+identifying a selected geographic area where an emergency warning should be communicated to the persons in the area; 
+
+identifying at least one signal transmission station in the cellular communication system, but less than all of the transmission stations of the plurality of signal transmission stations in the communication system, appropriate to transmit the predetermined signal to the warning devices in the selected geographic area; 
+
+transmitting the predetermined signal only from the identified signal transmission station to cause all the active warning devices in the selected geographic area to generate emergency warnings. 
+
+8. The method of communicating emergency warnings according to claim 7 wherein the warning devices generate different warning signals in response to different predetermined signal transmitted from one of the signal transmission stations; and wherein the step of transmitting the predetermined signal comprises selecting from several predetermined signals, a predetermined signal that will cause the warning devices to generate an appropriate warning signal. 
+
+9. The method of communicating emergency warnings according to claim 7 wherein the warning devices are coupled with a radio receiver, and automatically tune the radio receiver to a radio station in response to the predetermined signal. 
+
+10. A system for communicating emergency warnings to persons within a selected geographic area within a geographic region served by an existing cellular communication system that comprises a plurality of signal transmission stations, the system comprising: 
+
+a plurality of warning devices in the possession of persons within the geographic region, the warning devices generating an emergency warning in response to a predetermined signal transmitted from a signal transmission station in a cellular communication network; 
+
+a device for identifying one or more signal transmission stations in the cellular communication system, but less than all of the plurality of signal transmissions stations in the cellular communication system, appropriate to transmit the predetermined signal to the warning devices located within the selected geographic area, and causing the transmission stations identified to transmit the predetermined signal to cause all the active warning devices in the selected geographic area to generate emergency warnings. 
+
+11. The system according to claim 10 wherein the warning devices are coupled with a radio receiver, and automatically tune the radio receiver to a radio station in response to the predetermined signal. 
+
+12. A system for automatically identifying emergency situations and communicating emergency warnings to persons within a selected geographic area within a geographic region served by an existing cellular communication system that comprises a plurality of signal transmission stations, the system comprising: 
+
+a device for automatically identifying a geographic area where an emergency situation exists; 
+
+a plurality of warning devices in the possession of persons within the geographic region, the warning devices generating an emergency warning in response to a predetermined signal transmitted from a signal transmission station in a cellular communication system; 
+
+a device for automatically identifying one or more signal transmission stations in the cellular communication system, but less than all of the plurality of signal transmission stations system in the cellular communication system, appropriate to transmit the predetermined signal to all the warning devices in the selected geographic area, and causing only the transmission stations identified to transmit the predetermined signal from the identified signal transmission station to cause the active warning devices in the selected geographic area to generate emergency warnings. 
+
+13. The system according to claim 12 wherein the warning devices are coupled with a radio receiver, and automatically tune the radio receiver to a radio station in response to the predetermined signal.
+
+
+
+
+United States Patent 
+5,278,539 
+Lauterbach ,   et al. 
+January 11, 1994 
+
+Alerting and warning system 
+Abstract
+An emergency alerting system for alerting or warning large numbers of people of the occurrence or threat of an emergency using available communications media. Multiple facilities are monitored for the occurrence of multiple alarm conditions. On the occurrence of such a condition radio or telephone contact is made with a Local Emergency Planning Committee (LEPC) and the LEPC is notified of the site and nature of the alarm condition. Using a predetermined listing or data bank the LEPC selects a number corresponding to the site and condition and transmits such number to an automated controller for a radio transmitter. The transmitter may be part of an existing radio paging system. The automated controller, on the basis of the number dialed in by the LEPC, transmits an appropriate Code Assignment Plan (Cap Code) signal. The Cap Code signal is the electronic signature of a preprogrammed Cap Code chip within individual radio receivers positioned at the sites of intended alarm recipients. The Cap Codes are assigned and utilized to effect the notification of predetermined groups related to specific alarm conditions. Upon a receiver being actuated by receipt of its Cap Code an alarm is actuated to produce a sensory alarm signal such as sound or light. A detector is provided at the alarm site and upon detecting the sensory alarm acknowledges to the monitored facility the occurrence of the alarm. 
+
+
+
+United States Patent 
+5,592,172 
+Bailey ,   et al. 
+January 7, 1997 
+
+Method of, and system for, describing a geographical area to a communications network 
+Abstract
+Traffic information is gathered by traffic centres (TC) and quite frequently it is desired to alert drivers to the presence of a hazard which can be avoided if an early warning can be given. However as most hazards are of local interest then in order to avoid transmitting the early warning nationally, a system is used to transmit the early warning to suitably equipped vehicles using the digital cellular radio network. In view of the fact that the location of the network's base stations (BS1 to 3, BS20 and BS21) and their contemporaneous coverage areas may be unknown to the traffic centres it is necessary for the traffic centres to relay a description of the geographical area over which an early warning should be given to the control computer (C) of the cellular network so that the control computer can decide which of the base stations provide a combined coverage area most closely matching the description of the geographical area and activate the transmitters of the selected base stations. 
+
+
+
+
+
+Appendix C'
+A Mobile Emergency Alert System.
+Introduction
+This disclosure is for an embedded mobile/cellular phone application that can provide for geographically addressed emergency alerts, without the requirement for a selectively addressed broadcast capability within the cellular phone network.   The alert can be displayed or voiced (spoken) for the user, without user intervention.   This system is amenable to exploitation for commercial purposes such as localized yellow pages for geographically selected services such as taxis.   The purpose of this disclosure is to reserve the rights with respect to any intellectual property in this regard for the Government of Canada. 
+
+There are many good reasons why it is desirable to be able to provide localized warnings of hazardous situations to the general public.    The most obvious relates to severe weather, most particularly in the summer when, for example, a tornado may present a real and imminent danger to a relatively small community, over a geographic track as the storm moves.
+
+There are however other situations, such as railway derailments accompanied by hazardous chemical spills or other severe pollution events.   The system might also warn of other disasters.
+
+Cellular phone systems provide for a short  messaging capability referred to as Short Messaging Service (SMS).   SMS might be suitable for delivery of such alert messages but because the messages are point to point, with each being positively delivered with acknowledgement, the traffic burden of a general alert to every phone registered in a single cell paging area would be prohibitive.  Further, SMS message latency may well be excessive because SMS delivery is relegated to a secondary priority.  
+Selective Area Broadcast
+The widespread use and continued growth in usage of cellular or Mobile telephones potentially provides a means to provide such warnings.   However, most existing mobile/cellular phone systems do not presently have a selective area broadcast  (SAB) capability, and until very recently, the  handsets did not provide for reception of such messages.
+
+The GSM systems have provided for SAB since the mid 90's, through the ETSI standards development process, but take up/carrier roll out has been slow to non-existent in North America.    CDMA systems do not presently provide for SAB.
+
+Both of the major North American 2G mobile phone systems (GSM, CDMA) are in a process of continuous upgrade through 2.5G then to 3G.  It is envisaged all systems will eventually include an SAB capability but it is not clear when this will be implemented.
+
+For the present, implementation costs are high for GSM ($1M quoted by one carrier), and may also be so for CDMA systems.   Since the emergency service would almost  certainly be provided as a public service in itself it is difficult to see how there could be a commercial justification for SAB based on Emergency alerts alone. 
+
+Originally, SAB was seen as a way to provide localized commercial services, and some if implemented would  be quite desirable from the user's perspective but may not justify the investment necessary.  For example, one might be offered taxi companies based on localization to the transmission tower.     Other services have been contemplated such as local traffic, and localized yellow page type directories of services available in the immediate vicinity.
+
+For some jurisdictions, display of a message might present a legal problem for the user, because handset use while driving may be illegal.  It may also present a dangerous distraction, since it would be a high priority message meriting the attention of the user.  An alternate is therefore proposed whereby the message is sent as message that can be voiced.  This could be an email with an embedded spoken message, or possibly as text in the event that the handset is capable of text to voice conversion.  By this means the message would be spoken and present less of a danger for the user.  There are also other opportunities such as repeating the message (under program control). 
+A Geographically Selectively Addressed Messaging system
+It may be possible to avoid network implementation difficulties by implementation of the alert system as an application in the handset.   This would require the ability to broadcast to a singular address over the network that includes the area to be addressed.
+
+Each handset would be registered on the network in the normal manner, and would store the transmitter (cell)  ID on which the handset is registered.  A wide area broadcast would have a particular protocol, which would include a header and a message.  The header would include the transmitter ID's to which the message would be addressed.    Each handset would receiver the message and compare the transmitted ID with the Local Transmitter ID obtained through regular traffic or the process of registration.  On detection of a match, the unit would then display the message, and optionally set of a special alert to the user of the geographical alert so received.
+
+The SMS-CB message might  include means for successfully addressed receivers to temporarily enable reception of additional data.   This might include one way,  unacknowledged UDP data grams that make up a file that could be presented in the form of audio to provide a voiced warning.
+
+An alternative and preferred way to provide selective area addressing is based on the self locating capabilities of handsets equipped with GPS receivers.    A universally addressed message would be broadcast to all wireless devices either in a region, or across the entire network.    The broadcast message  would include a geographic address specified by a box or a reference location and  radius, plus the GPS assist parameters, such as an approximate GPS epoch time offset, constellation almanac and the PRN numbers and Doppler shift values for the satellites in view, or other parameters prescribed for an assisted GPS fix within the specific network.    Handsets would determine if they are addressed by comparison of the GPS fix with the address region, and on a match, would generate a transient geographical address, determined by logical manipulation of the provided geographical address data. 
+
+A Broadcast messages to either the region or entire network would be addressed to the geographical address similarly computed by the host, so that all matching receivers within the geographically addressed region would receive the message.   The message content could be a one way, (unacknowledged) streaming audio file that could be directly voiced to provide a warning
+
+Most handsets and similar devices are programmable by means of standardized virtual machines such as that embedded in the JAVA system from SUN or C Sharp from Microsoft.
+Alert Priorities
+The system might be extensible by means of alert priority layers to provide for different classes of alert.  For example, life threatening emergencies might always override the settings of the phone.  An emergency would be indicated by a special alert tone, followed by a spoken (or displayed) alert message.
+
+A secondary priority message (for example, alerting of a missing person or seeking help with a fugitive) might be optionally enabled by the user. 
+
+Additional commercial service messages might also be enabled by the user.  For example, a restaurant in a specific cell paging area might broadcast a special to attract new customers.  IF the cell phone user has this capability enabled they might receive the message and be able to use the phone immediately make a reservation or to otherwise accept offers so extended.
+
+The priority levels would be individually settable so that one might accept messages from gas stations, but not from restaurants etc.
+
+Wi-Sys Communications
+Gyles Panther
+
+2 June 2003.
+	A Cellular Selective Area Alert Capable System	Page8 
+Contract Number 5007441	Confidential Information	12/6/2011
+

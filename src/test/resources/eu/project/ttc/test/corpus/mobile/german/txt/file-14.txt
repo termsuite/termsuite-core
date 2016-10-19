@@ -1,0 +1,2234 @@
+Mobilkommunikation - eine Erfolgsgeschichte
+Die elektronische Broschüre von Swisscom Mobile
+
+Inhalt
+
+> In eigener Sache
+
+> Geschichte der Mobilkommunikation in der Schweiz
+
+7
+
+> Die Anfänge der Mobilkommunikation
+> Das NATEL® als Synonym fürs Handy
+> Mobiltelefonie: ein neuer Trend in der Kommunikation
+> Beginn des digitalen Zeitalters
+> Von der Telecom PTT zur Swisscom
+> Die Boomjahre
+> Neue Technologien für schnellere Datenübermittlung
+> Swisscom Mobile wird eine AG
+> Eine weitere Übertragungstechnologie
+> Innovativ führend
+> Übertragungstechnologien im Vergleich
+> Mehr zu Swisscom Mobile und zur Mobilkommunikation
+> Weitere Informationen und Quellen
+
+7
+7
+8
+8
+9
+10
+10
+11
+11
+12
+14
+15
+15
+
+> Das Unternehmen Swisscom Mobile AG
+
+16
+
+> Hohe Netzabdeckung und beste Qualität
+> Erfreuliche Entwicklung
+> Kennzahlen Swisscom Mobile AG
+> Am Anfang stand ein Bundesbetrieb
+> Starke Aktionäre
+> Schlank gegliedert
+> Organigramm
+> Vision, Leitbild und Ziel
+> Überdurchschnittlich hohe Identifikation mit dem Unternehmen
+> In allen Sprachregionen der Schweiz zu Hause
+> Mehr zu Swisscom Mobile und zur Mobilkommunikation
+> Weitere Informationen und Quellen
+2
+Version 07. 2005
+© Swisscom Mobile
+
+5
+
+16
+17
+17
+19
+19
+20
+20
+21
+22
+22
+23
+23
+
+Inhalt
+
+> Netz und Technologien
+> Wie funktioniert Mobiltelefonie?
+> Die physikalischen Grundvoraussetzungen
+> Wie ist ein Netz aufgebaut?
+> Netzaufbau UMTS - neue Möglichkeiten dank neuer Technologie
+> Grenzenlos telefonieren dank internationalem Roaming
+> Die Zugriffstechnologien der mobilen Kommunikation
+> Überblick über die neuen Mobilfunktechnologien
+> Aktuelle Übertragungstechnologien im Vergleich
+> Wann kommt welche Technologie zum Einsatz?
+> Mehr zu Swisscom Mobile und zur Mobilkommunikation
+> Weitere Informationen und Quellen
+
+24
+25
+26
+27
+29
+30
+34
+34
+35
+36
+36
+
+> Produkte und Services
+
+37
+
+> Grundlagen
+> Voice: Grösster Umsatzanteil mit Telefonie + Mehrwertdiensten
+> Das Potenzial der mobilen Datendienste
+> Messaging
+> E-Mails bearbeiten
+> Vodafone live!
+> Mobile Comfort
+> Immer verbunden
+> Mobile Unlimited
+> Mobile Firmenlösungen
+> M-Payment: Bezahlen ohne Kleingeld
+> Roaming: Mobil im Ausland
+> Mehr zu Swisscom Mobile und zur Mobilkommunikation
+> Weitere Informationen und Quellen
+
+3
+Version 07. 2005
+© Swisscom Mobile
+
+24
+
+37
+37
+38
+38
+41
+41
+42
+42
+43
+44
+44
+44
+45
+45
+
+Inhalt
+
+> Mobilkommunikation in Wirtschaft und Gesellschaft
+> Ein wichtiger Faktor der schweizerischen Volkswirtschaft
+> Markt Schweiz
+> Entwicklung der Mobilkommunikationsbranche
+> Regulatorisches Umfeld Schweiz
+> Mobilkommunikation beeinflusst Verhalten
+> Mehr zu Swisscom Mobile und zur Mobilkommunikation
+> Weitere Informationen und Quellen
+
+46
+47
+48
+49
+50
+51
+51
+
+> Mobilkommunikation - Umwelt und Gesundheit
+
+52
+
+> Nutzen der Mobilkommunikation ist unbestritten
+> Grenzen gesetzt
+> Unter der Lupe der Wissenschaft
+> Grenzwert für Handy-Strahlungen
+> Aufwändige Planung
+> Systematische Prozesse für einen aktiven und
+nachhaltigen Umweltschutz
+> Transparenz und Offenheit
+> Forum Mobil
+> Mehr zu Swisscom Mobile und zur Mobilkommunikation
+> Weitere Informationen und Quellen
+
+4
+Version 07. 2005
+© Swisscom Mobile
+
+46
+
+52
+53
+54
+54
+55
+56
+56
+57
+58
+58
+
+In eigener Sache
+
+Beginnen wir mit Einleuchtendem.
+> Inhalt
+Eine Welt ohne Glühbirne ist unvorstellbar und dunkel, fremd
+ein Leben ohne Computer. Bestanden anfänglich Berührungsängste
+gegenüber solch technischer Innovationen, sind diese heute
+längst überwunden. Sowohl Glühbirne als auch Computer gelten
+als zivilisatorische Errungenschaften.
+Wir haben gelernt, damit zu leben -
+Verlernen geht nicht.
+Die Mobilkommunikation gehört in dieselbe Reihe fortschrittlicher
+Leistungen, ist sie doch innert weniger Jahre zu einer Lebensrealität
+und zu einem attraktiven Geschäftsfeld geworden. Private Nutzer
+wie Geschäftsleute profitieren gleichermassen von den Vorteilen
+der überall und jederzeit möglichen Kommunikation per Handy,
+Laptop und Pocket PC.
+Das Handy ist omnipräsent und wird breit genutzt -
+trotzdem tauchen Fragen auf.
+Wann wurde das Handy «erfunden»? Wie funktioniert das Telefonieren
+ins Ausland? Wie kann ich unterwegs meine E-Mails erledigen
+und aufs Firmennetzwerk zugreifen? Was ist eine MMS-Postkarte?
+Wie ist das Mobilfunknetz aufgebaut? Was bedeutet UMTS?
+Welches sind die Zusammenhänge zwischen Mobilkommunikation
+und Umwelt?
+Swisscom Mobile weiss Antworten.
+5
+Version 07. 2005
+© Swisscom Mobile
+
+> Inhalt
+
+Swisscom Mobile ist das führende Mobilkommunikationsunternehmen der Schweiz. Unseren 4 Millionen Kundinnen und Kunden
+bieten wir stets neueste Dienstleistungen, beste Innovationen
+und ein hervorragendes Netz an. Doch nicht nur dies. Wir wollen mehr.
+Unsere Kundinnen und Kunden und alle Interessierten sollen (fast)
+alles zum Thema Mobilkommunikation in der Schweiz erfahren.
+Aus diesem Grund haben wir diese elektronische Publikation geschaffen.
+«Mobilkommunikation - eine Erfolgsgeschichte.
+Die elektronische Broschüre von Swisscom Mobile.»
+Auf den folgenden Seiten finden Sie, was Sie schon immer wissen
+wollten. Sie erfahren Interessantes über die Geschichte
+der Mobilkommunikation in der Schweiz, über Swisscom Mobile
+als Unternehmen, über Mobilfunknetz und Technologien,
+über unsere Produkte und Dienstleistungen, über die Bedeutung
+von Mobilkommunikation in Wirtschaft und Gesellschaft
+sowie schliesslich das Wichtigste über die Zusammenhänge zwischen
+der Mobilkommunikation, unserer Umwelt und der Gesundheit.
+Erfahren - Wissen - Weitergeben: Ein Vergnügen!
+Wie gehen Sie vor? Einfach per Mausclick in unserer elektronischen
+Broschüre blättern, einzelne Kapitel studieren oder gar Fakten
+weitergeben. Packen Sie's an und schauen Sie rein - Viel Spass!
+
+6
+Version 07. 2005
+© Swisscom Mobile
+
+Impressum
+Herausgeber + ©: Swisscom Mobile AG, Public Relations, CH-3050 Bern
+Redaktion: Esther Kühne
+
+Geschichte der Mobilkommunikation
+in der Schweiz
+
+> Inhalt
+
+«Im Jahr 2010 besitzen zwei Millionen Einwohner der Schweiz
+ein Handy»; dies prognostiziert das Bundesamt für Kommunikation 1997. Ein gewaltiger Irrtum: Heute gibt es in der Schweiz
+über 6 Millionen Handys. Wie so viele andere hat auch das
+Bundesamt für Kommunikation die Verbreitungsgeschwindigkeit
+der Mobilkommunikation enorm unterschätzt.
+Die Anfänge der Mobilkommunikation
+1948 nimmt das erste Mobilfunknetz in den USA seinen Betrieb auf.
+In der Schweiz startet die damalige PTT 1958 mit dem drahtlosen
+Autoruf. Diese Funktechnologie kann Tonsignale auf Empfangsgeräte
+übertragen, die in einem Auto eingebaut sind. Obschon das Funkrufnetz nur eine Einwegkommunikation erlaubt, nutzen es 1960 bereits
+rund 1000 Kunden.
+Das NATEL® als Synonym fürs Handy
+1978 nimmt die PTT mit NATEL® A das erste mobile Telefonnetz in
+Betrieb, das zwei Jahre später mit 4000 Kunden bereits an die Kapazitätsgrenzen stösst. 40 ortsfeste Funkstationen ermöglichen das mobile
+Telefonieren in beschränktem Rahmen: Das Netz besteht aus fünf
+Teilnetzen, wobei die Kunden wahlweise eines oder alle fünf Teilnetze
+abonnieren können. NATEL® A wird bis Ende 1995 betrieben.
+NATEL® - Nationales Autotelefon - ist ein geschützter Name
+der heutigen Swisscom und wird nur in der Schweiz verwendet und
+verstanden. Obwohl mobiles Telefonieren heute selbst in den
+abgelegensten Bergtälern möglich ist und faktisch schon längst nicht
+mehr mit obigen fünf Teilnetzen auskommt, lebt der Name «Natel»
+im Schweizer Volksmund weiter - als Synonym für «Handy».
+In unseren deutschsprachigen Nachbarländern hingegen ist der
+Ausdruck «Natel» für Handy oder Mobiltelefon gänzlich unbekannt.
+
+7
+Version 07. 2005
+© Swisscom Mobile
+
+Geschichte der Mobilkommunikation in der Schweiz
+
+> Inhalt
+
+8
+Version 07. 2005
+© Swisscom Mobile
+
+Mobiltelefonie: ein neuer Trend in der Kommunikation
+1984 führt die PTT das zweite Mobiltelefonie-Netz NATEL® B ein,
+das auf 9000 Abonnenten angelegt ist. Doch bereits nach einem Jahr
+sind die Kapazitätsgrenzen wieder erreicht. Vorübergehend lässt
+sich die Situation mit je einem zusätzlichen regionalen Netz im Raum
+Zürich, Baden, Winterthur, Luzern und Zug entschärfen. 1997 wird
+das Netz, obwohl auch die Münztelefone der SBB-Züge mit NATEL® B
+betrieben sind, abgestellt.
+Ab 1987 ermöglicht das NATEL® C-Netz (Vorwahl 077) mobiles
+Telefonieren in neuer Qualität. In mehreren Phasen erfolgt der Ausbau
+dieses Netzes entlang der Autobahn-Hauptachsen West-Ost und
+Nord-Süd sowie entlang der Strecke Zürich-Zug-Luzern. Zudem ermöglicht das so genannte Roaming erstmals mobiles Kommunizieren
+auch ausserhalb der Schweiz. Weitere Zusatzleistungen wie Anrufumleitungen und Sperrfunktionen erfreuen sich schnell grosser
+Beliebtheit. 1992 erschliesst das Netz 95 % des besiedelten Gebietes
+der Schweiz, die Teilnehmerzahl beträgt jetzt 215 000.
+Beginn des digitalen Zeitalters
+Nachdem 1991 anlässlich der Telecom 91 in Genf ein GSM-Pilotnetz
+(GSM = Global System for Mobile Communication) mit 5000 Anschlüssen, das die Städte Genf und Lausanne sowie die Verkehrswege
+nach Frankreich versorgt, in Betrieb genommen wurde, beginnt 1993
+die digitale Handy-Gegenwart. GSM ist ein internationaler
+Standard für Mobilfunksysteme, der die Benutzung von GSM-Handys
+in vielen Ländern ermöglicht. Das GSM-Netz startet in der Schweiz
+als NATEL® D (Vorwahl 079).
+Als digitales Mobilfunksystem übermittelt GSM das Sprechsignal
+nicht analog, sondern wandelt es zuerst in digitale Zahlenwerte um.
+Schweizer Basisstationen und Handys verständigen sich untereinander in den Frequenzbändern von 900 und 1800 MHz (GSM).
+Dualband-Handys wählen dabei automatisch die Frequenz
+
+Geschichte der Mobilkommunikation in der Schweiz
+
+> Inhalt
+
+mit der höheren freien Kapazität. Vor allem in den USA wird
+ein noch höherer Frequenzbereich (1900 MHz) verwendet. Um auf
+dieser Frequenz telefonieren zu können, benötigt man dort ein
+Triband Handy.
+In der Schweiz bleibt jedoch das analoge NATEL® C lange Zeit
+die Nummer 1. Dies dank eines preisgünstigen Abos, das die Mobiltelefonie besonders für private Nutzer attraktiv macht. 1993 führt
+die damalige Telecom PTT die COMBOX®, den mobilen Anrufbeantworter, ein.
+Telecom PTT baut das NATEL® D-Netz zügig aus und versorgt ab
+1995 alle grösseren Städte der Schweiz. Im internationalen Roaming
+ist Telecom PTT weltweit führend: Die Kunden können in über
+45 Ländern mit ihrem Handy telefonieren. Weitere Dienstleistungen
+überzeugen immer mehr Kunden: Lanciert werden NATEL® data und
+SMS (Short Message Service) und im Jahr 1996 die aufladbare SIMKarte (Prepaid Card) unter dem Namen NATEL® easy.
+Von der Telecom PTT zur Swisscom
+Das Jahr 1997 markiert einen grossen Wendepunkt in der Telekommunikationsgeschichte der Schweiz: Im Oktober werden Post
+und Telecom getrennt. Telecom wird zu Swisscom.
+Swisscom Mobile schliesst am 12. November 1997 den millionsten
+NATEL®-Kunden ans Netz an. Ende 1997 ist mobiles Kommunizieren
+dank Vereinbarungen mit rund 120 Betreibern in etwas mehr
+als 70 Ländern möglich.
+1998 wird Swisscom eine Aktiengesellschaft. Gleichzeitig tritt
+das neue Fernmeldegesetz in Kraft, das die Mobiltelefonie liberalisiert:
+Diax, die im Januar 2001 mit Sunrise fusioniert, tritt zu Weihnachten
+1998 und Orange am 29. Juni 1999 in den Markt ein. Somit erhält
+Swisscom Mobile Konkurrenz.
+
+9
+Version 07. 2005
+© Swisscom Mobile
+
+Geschichte der Mobilkommunikation in der Schweiz
+
+> Inhalt
+
+10
+Version 07. 2005
+© Swisscom Mobile
+
+Die Boomjahre
+Swisscom Mobile gestaltet 1999 die Mobiltelefonie mit neuen
+Dienstleistungen noch kundenfreundlicher: Mit NATEL® InfoService
+können Informationen wie SBB-Fahrpläne, Telefonnummern,
+News, Wetterberichte, Sportresultate oder Börsenkurse von überall her
+schnell und einfach abgerufen werden. Für Geschäftskunden
+wird Corporate Mobile Network (CMN) auf den Markt gebracht.
+Die unternehmensinterne Mobilkommunikationslösung ermöglicht
+das kostengünstige Telefonieren mit einfachen Kurzwahlnummern
+innerhalb so genannter Office Zonen. Ebenfalls 1999 wird
+COMBOX® pro eingeführt. Sie enthält gegenüber der herkömmlichen
+COMBOX® basic Zusatzleistungen, insbesondere Internetfunktionen,
+und ist kostenpflichtig. Das Swisscom Mobile Netz ist weltweit
+als qualitativ herausragendes anerkannt.
+Die mobile Kommunikation boomt: Ende 1999 hat Swisscom Mobile
+zwei Millionen Kunden und Roamingverträge mit über 210 Betreibern,
+die das Telefonieren in mehr als 100 Ländern möglich machen.
+Damit steht das Unternehmen weltweit an erster Stelle. Das NATEL® CNetz wird am 31. Dezember 1999 abgeschaltet.
+Neue Technologien für schnellere Datenübermittlung
+Die Verbindung von Handy und Internet wird ab 2000 - wiederum
+von Swisscom Mobile als erstem Anbieter in der Schweiz - durch die
+NATEL® WAP-Services (Wireless Application Protocol) möglich.
+WAP ist ein Übertragungsprotokoll für die Interaktion von kabellosen
+Endgeräten mit externen Dienstleistungen und Anwendungen.
+Im Dezember 2000 erwirbt Swisscom Mobile für CHF 50 Mio.
+eine der vier UMTS-Lizenzen (Universal Mobile Telecommunication
+System) in der Schweiz. Die drei anderen Lizenzen gehen an Sunrise,
+Orange und 3G Telefonica, wobei letztere Firma ihre Lizenz im
+zweiten Halbjahr 2002 aus wirtschaftlichen Gründen wieder zurückgibt. UMTS steht für Mobilkommunikation der dritten Generation
+
+Geschichte der Mobilkommunikation in der Schweiz
+
+> Inhalt
+
+und ergänzt die bestehende GSM-Infrastruktur um erweiterte
+Datenübertragungsmöglichkeiten. Zusammen mit dem Netzlieferanten
+Ericsson erstellt Swisscom Mobile in Bern ab 2001 ein UMTSPilotnetz mit acht Basisstationen. Im Dezember 2001 wird der erste
+Anruf über das UMTS-Pilotnetz getätigt.
+Die Nutzung des GSM-Netzes boomt weiterhin: Ende der 90er Jahre
+schliesst Swisscom Mobile innerhalb von zwölf Monaten über
+900 000 neue Kunden dem NATEL®-Netz an.
+Swisscom Mobile wird eine AG
+Am 1. April 2001 wird Swisscom Mobile eine Aktiengesellschaft.
+Die einzelnen Aktionäre heissen Swisscom (75 % der Aktien)
+und Vodafone (25 %). Vodafone ist der weltweit führende Mobilfunkanbieter. Die strategische Partnerschaft mit Vodafone eröffnet
+Swisscom Mobile neue Möglichkeiten, beispielsweise den Zugang
+zu Produkten wie Vodafone live!.
+Das erfreuliche Kundenwachstum hält an: Im Herbst 2001
+kommunizieren bereits drei Millionen Kunden auf dem NATEL® D-Netz.
+Im gleichen Jahr führt Swisscom Mobile HSCSD (High Speed Circuit
+Switched Data) ein. Damit kann die mobile Übertragung von Daten
+um das Vierfache erhöht werden.
+Auch das Versenden von Kurznachrichten wird in der Schweiz
+immer beliebter: Swisscom Mobile registriert im Jahr 2000
+rund 652 Mio. verschickte SMS, im Jahr 2001 sind es mit 1317 Mio.
+mehr als doppelt so viele. Auch in den Jahren 2002, 2003 und
+2004 steigt der SMS-Versand nachhaltig: 2002 sind 1621 Mio.,
+2003 1847 Mio. und 2004 1986 Mio. verschickt worden.
+
+11
+Version 07. 2005
+© Swisscom Mobile
+
+Eine weitere Übertragungstechnologie
+Am 1. Februar 2002 führt Swisscom Mobile die neue Übermittlungstechnologie GPRS (General Packet Radio Services) ein. Bei dieser
+Erweiterung des bestehenden GSM-Netzes werden die Daten - wie bei
+
+Geschichte der Mobilkommunikation in der Schweiz
+
+> Inhalt
+
+12
+Version 07. 2005
+© Swisscom Mobile
+
+der Internet-Technologie - in mehrere kleine Pakete zerlegt,
+übermittelt und beim Empfänger wieder zusammengesetzt.
+Dabei wird eine Übertragungsrate von 50 bis 60 kbit/s angestrebt.
+Derzeit lassen sich Übertragungsgeschwindigkeiten von 30
+bis 40 kbit/s erreichen. Seit Juni 2002 steht der neue Dienst MMS
+(Multimedia Messaging Service) allen Swisscom Mobile Kunden
+zur Verfügung. Mit MMS lassen sich Bilder, Töne oder längere
+formatierte Texte per Handy an ein MMS-fähiges Endgerät
+oder eine E-Mail-Adresse versenden.
+Ende 2002 lanciert Swisscom Mobile Public Wireless LAN.
+Zu dieser Zeit ist Swisscom Mobile schweizweit führend im Ausbau
+öffentlicher WLAN-Netze. Mit einer Übertragungsgeschwindigkeit
+von bis zu max. 2 Mbit/s können Kunden von Swisscom Mobile
+an mehreren hundert so genannten Hotspots in der Schweiz via Laptop, Pocket PC oder PDA (Personal Data Assistant) drahtlos auf das
+Internet zugreifen. Die Zahl der Hotspots an viel frequentierten Orten,
+z. B. in Hotels, Kongresszentren, Flughäfen, Bahnhöfen, wird laufend
+ausgebaut. Dank Public Wireless LAN Roaming stehen Personen
+mit einem Swisscom Mobile NATEL®-Abo überdies in ganz Europa
+Public Wireless LAN Standorte von Swisscom Mobile Partnern
+zur Verfügung.
+Am 1. März 2003 feiert die GSM-Telefonie in der Schweiz einen
+runden Geburtstag: 10 Jahre sind vergangen seit Swisscom Mobile
+(damals noch Telecom PTT) das NATEL® D-Netz gestartet hat.
+Swisscom Mobile ist mit 65 % Marktanteil nach wie vor unbestrittene
+Leaderin.
+Innovativ führend
+Mitte November 2003 bringt Swisscom Mobile das neue HandyErlebnis Vodafone live! in der Schweiz auf den Markt. Vodafone live!
+ist die farbige, interaktive Multimediawelt fürs Mobiltelefon:
+Spielkonsole, Fotoapparat und -album, Unterhaltungs- und Infor-
+
+Geschichte der Mobilkommunikation in der Schweiz
+
+> Inhalt
+
+mationszentrale - und das in einem einzigen Gerät. Das Diensteangebot ist genau auf die Vodafone live! Handys abgestimmt -
+NATEL®-Kunden profitieren von einer sehr einfachen Bedienerführung.
+Vodafone live! steht allen NATEL®-Kunden von Swisscom Mobile zur
+Verfügung.
+Als Pionierleistung präsentiert Swisscom Mobile an der
+«Telecom World 2003» in Genf das so genannte Seamless Handover.
+Mit dem Seamless Handover, dem unterbruchslosen Wechsel
+zwischen PWLAN, UMTS und GPRS, kommt Swisscom Mobile ihrer
+Vision eines mobilen Breitbandzugangs mit bester Abdeckung,
+Geschwindigkeit und Sicherheit zu einem einheitlichen Preis sehr nahe.
+Ebenfalls an der «Telecom World 2003» haben Swisscom und
+Microsoft eine Partnerschaft zur Erarbeitung mobiler Datenlösungen
+für Geschäftskunden vereinbart. Erstes Ziel ist es, Benutzern mobiler,
+Windows-basierter Geräte einen vereinfachten Zugang zu den europaweiten Hotspots von Swisscom anbieten zu können.
+Mobile Unlimited wird als Weltneuheit am 3. Juni 2004 anlässlich
+einer Medienkonferenz vorgestellt. Der Produktlaunch findet im
+September 2004 statt.
+Das Produkt Mobile Unlimited setzt sich aus folgenden Komponenten
+zusammen:
+• 1 Unlimited PC Card (GPRS /UMTS /WLAN) für den Laptopeinsatz,
+• 1 Software Unlimited Data Manager (bereitgestellt als CD-ROM und
+als Download)
+• 1 Data SIM Card (Data Abonnement NATEL® data basic)
+• 1 Preis (Datenpaket) unabhängig von der Netztechnologie
+Am 16. November 2004 lanciert Swisscom Mobile mit Vodafone live!
+neue attraktive Dienste: Live-TV, Videotelefonie und Streaming-Videoclips. UMTS wird damit für Privatkunden zugänglich.
+
+13
+Version 07. 2005
+© Swisscom Mobile
+
+Geschichte der Mobilkommunikation in der Schweiz
+
+> Inhalt
+
+Ende März 2005 nimmt Swisscom Mobile mit EDGE das erste
+flächendeckend breitbandige Mobilfunknetz der Schweiz in Betrieb.
+Es ergänzt UMTS in den Randregionen und ermöglicht eine schnelle
+Datenübertragung überall dort, wo man mobil auf dem NATEL®-Netz
+telefonieren kann.
+Mit solchen Vorstössen an vorderster technischer wie auch
+wirtschaftlicher Front profiliert sich Swisscom Mobile nachhaltig
+als unbestrittene Marktleaderin in der Schweiz.
+Übertragungstechnologien im Vergleich
+Kürzel
+
+Bezeichnung
+
+Datenübertragungsrate
+
+GSM
+
+Global System
+for Mobile Communications
+
+9,6 kbit/s
+
+HSCSD
+
+High Speed Circuit Switched Data
+
+bis zu 57,6 kbit/s
+
+GPRS
+
+General Packet Radio Service
+
+bis 30-40 kbit/s
+
+EDGE
+
+Enhanced Data Rates for GSM Evolution
+
+100 -200 kbit/s
+
+UMTS
+
+Universal Mobile
+Telecommunications System
+
+200-350 kbit/s
+
+Wireless Local Area Network
+
+bis zu 2 Mbit/s
+
+WLAN
+
+14
+Version 07. 2005
+© Swisscom Mobile
+
+Geschichte der Mobilkommunikation in der Schweiz
+
+> Inhalt
+
+Mehr zu Swisscom Mobile und zur Mobilkommunikation
+Kapitel 2: Das Unternehmen Swisscom Mobile
+Kapitel 3: Netz und Technologien
+Kapitel 4: Produkte und Services
+Kapitel 5: Mobilkommunikation in Wirtschaft und Gesellschaft
+Kapitel 6: Mobilkommunikation - Umwelt und Gesundheit
+
+Weitere Informationen und Quellen
+• Homepage Swisscom Mobile: www.swisscom-mobile.ch
+> Wir über uns > Unser Unternehmen > Unsere Geschichte
+www.swisscom-mobile.ch/history
+• Homepage Swisscom: www.swisscom.ch > Über uns > Geschichte
+www.swisscom.ch/pr/content/history
+• Museum für Kommunikation: www.mfk.ch
+• GSM Association: www.gsmworld.com
+
+15
+Version 07. 2005
+© Swisscom Mobile
+
+Das Unternehmen Swisscom Mobile
+
+> Inhalt
+
+Swisscom Mobile bietet ihren 4 Millionen Kundinnen und
+Kunden ein erstklassiges Netz für die mobile Kommunikation,
+einen hohen Servicestandard sowie ausgezeichnete Produkte
+und Dienstleistungen. Die rund 2500 Mitarbeiterinnen und
+Mitarbeiter haben im Jahr 2004 einen Umsatz von CHF 4356 Mio.
+erwirtschaftet. Swisscom Mobile ist mit 65% Marktanteil klare
+Marktführerin in der schweizerischen Mobilkommunikationsbranche.
+Hohe Netzabdeckung und beste Qualität
+Swisscom Mobile stellt für die mobile Kommunikation ein Netz von
+hoher Qualität zur Verfügung. Mehr als 5000 Basisstationen empfangen
+und senden digitale Funksignale und stellen auf diese Weise sicher,
+dass alle Handy-Benutzer - wo immer sie sich befinden - erreicht werden
+können. Das NATEL®-Netz (GSM900 und GSM1800) unterstützt
+sämtliche neuen Technologien (HSCSD, GPRS) und wird laufend
+um Public Wireless LAN sowie UMTS erweitert. Mit einer Abdeckung
+von 99,8 % der Bevölkerung ist das NATEL®-Netz das hochwertigste
+Netz der Schweiz. Der Zugriff auf Public Wireless LAN ist an mehreren
+hundert stark frequentierten Orten in der Schweiz via Hotspot
+möglich. Zudem bietet Swisscom Mobile im Rahmen von RoamingAbkommen als einziges Schweizer Mobilfunkunternehmen Zugang zu
+rund 400 ausländischen Mobilfunknetzen in mehr als 170 Ländern.
+Zentrale Faktoren, welche die Verbreitung der Mobiltelefonie
+fördern und die Wahl des Netzanbieters beeinflussen, sind störungsfreier Empfang sowie eine ausgezeichnete Sprachwiedergabe.
+Zur langfristigen Garantie dieser beiden Faktoren setzt Swisscom Mobile
+auf die EFR-Technologie (Enhanced Full Rate), welche die Basis
+für eine gute Sprach- und Übertragungsqualität bildet.
+
+16
+Version 07. 2005
+© Swisscom Mobile
+
+Das Unternehmen Swisscom Mobile
+
+> Inhalt
+
+Erfreuliche Entwicklung
+Der Mobilkommunikationsmarkt in der Schweiz erreichte im Ende
+2004 eine Marktdurchdringung von 80 %. Die rasante Entwicklung in
+den 90er Jahren hat die Mobilfunknutzung auf ein Niveau nahe
+der (Markt-) Sättigungsgrenze gehoben. Mittlerweile ist das Wachstum
+in der ganzen Branche bescheidener geworden. Trotzdem steigerte
+Swisscom Mobile auch 2004 ihr Ergebnis: Der Umsatz erhöhte sich
+auf CHF 4356 Mio. (2003: CHF 4140 Mio.), die Anzahl Kunden stieg
+auf 4 Mio. (2003: 3,796 Mio.).
+Kennzahlen Swisscom Mobile
+Finanzzahlen Swisscom Mobile (in Mio.)
+Nettoumsatz
+
+EBITDA
+
+4500
+
+EBIT
+
+EBITDA: Betriebsgewinn vor Abschreibung, Zinsen und Steuern
+EBIT: Betriebsgewinn vor Zinsen und Steuern
+
+4000
+3500
+3000
+2500
+2000
+1500
+1000
+2002
+
+17
+Version 07. 2005
+© Swisscom Mobile
+
+2003
+
+2004
+
+2002
+
+2003
+
+2004
+
+2002
+
+2003
+
+2004
+
+Das Unternehmen Swisscom Mobile
+
+Anzahl Kunden (in Tausend)
+
+> Inhalt
+
+4000
++5%
+
+3000
+2000
+1000
+0
+1996
+
+1997
+
+1998
+
+1999
+
+2000
+
+2001
+
+2002
+
+2003
+
+SMS-Versand von Handy zu Handy (in Mio.)
+2000
+1500
+1000
+500
+0
+2001
+
+2002
+
+2003
+
+2004
+
+2002
+
+2003
+
+2004
+
+Anzahl Mitarbeitende
+2500
+2400
+2300
+2200
+2100
+2000
+1900
+1800
+1700
+1600
+
+18
+Version 07. 2005
+© Swisscom Mobile
+
+2001
+
+2004
+
+Das Unternehmen Swisscom Mobile
+
+> Inhalt
+
+Am Anfang stand ein Bundesbetrieb
+Das Unternehmen Swisscom geht im Oktober 1997 aus der Spaltung
+des bundeseigenen Betriebes Telecom PTT hervor. Aus dem ehemaligen
+Bereich Telecom entsteht Swisscom. Sie wird am 1. Januar 1998
+zu einer selbstständigen Aktiengesellschaft. Für Swisscom Mobile folgt
+dieser Schritt am 1. April 2001.
+Starke Aktionäre
+Zwei Gesellschaften treten bei Swisscom Mobile als Aktionäre auf:
+Swisscom AG hält 75 %, Vodafone 25 % der Aktien. Swisscom AG
+erzielt 2004 mit 15 664 Mitarbeitenden einen Umsatz von CHF 10 057
+Mio. Die britische Vodafone Group ist als das weltweit führende
+Mobilkommunikationsunternehmen in 26 Ländern an Mobilfunknetzen beteiligt. Die rund 60 000 Mitarbeitenden erwirtschaften im
+Zeitraum vom 31. März 2003 bis zum 31. März 2004 einen Umsatz
+von rund CHF 88 Milliarden (£ 39,5 Milliarden).
+Swisscom Mobile profitiert durch die strategische Partnerschaft mit
+Vodafone vom Zugang zu europäischen Netzwerken, von besseren
+Einkaufskonditionen und Brancheninformationen. Diese Vorteile
+sichern das langfristige Wachstum und die Wettbewerbsfähigkeit
+von Swisscom Mobile. Die Kunden ihrerseits können auf innovative
+Produkte und Dienste, z.B. Vodafone live!, und auf ein verbessertes
+Roaming-Angebot zugreifen.
+
+19
+Version 07. 2005
+© Swisscom Mobile
+
+Das Unternehmen Swisscom Mobile
+
+> Inhalt
+
+Schlank gegliedert
+Das Unternehmen Swisscom Mobile ist schlank gegliedert, die Organisationsstruktur konsequent auf die Kunden ausgerichtet. Carsten
+Schloter, dem CEO von Swisscom Mobile, sind die Organisationseinheiten Commercial Business, Product Marketing, Technical Operations,
+Business Steering sowie Human Resources unterstellt. Wichtige Querschnittfunktionen - Strategy & Business Development, Public Relations,
+Legal, Total Quality Management und Mobilecom & Environment -
+stehen beratend und unterstützend zur Seite.
+Organigramm
+Swisscom Mobile
+
+Swisscom
+Mobile
+Carsten
+Schloter
+CEO
+
+Commercial
+Business
+Urs Schaeppi
+
+20
+Version 07. 2005
+© Swisscom Mobile
+
+• Strategy & Business
+Development
+• Legal
+• Public Relations
+• Mobilecom & Environment
+• Total Quality Management
+
+Product
+Marketing
+
+Technical
+Operations
+
+Business
+Steering
+
+Human
+Resources
+
+Christian Petit
+
+Wolfgang
+Weber
+
+Dieter
+Bernauer
+
+Beatrice Brack
+
+Das Unternehmen Swisscom Mobile
+
+> Inhalt
+
+Vision, Leitbild und Ziel
+Die Vision ist einfach und klar: «Wir arbeiten jeden Tag mit Begeisterung
+und Freude daran, unseren Geschäfts- und Privatkunden die aktuellsten
+und besten Dienste anzubieten, welche uns durch die faszinierende
+Entwicklung der mobilen Kommunikation ermöglicht werden.
+Wir verbinden damit Menschen, bereichern und erleichtern ihr Leben
+und steigern ihre Effizienz.» Diese Grundsätze werden im Leitbild versinnbildlicht: Im Mittelpunkt steht der Kunde. Um zufriedene Kunden
+zu halten und neue zu gewinnen, wird die Qualität des Kundenservices, des Netzes und der Produkte laufend überprüft und optimiert.
+Dabei kommt auch der Kommunikation eine grosse Bedeutung zu.
+Shareholder
+
+Mitarbeitende
+
+21
+Version 07. 2005
+© Swisscom Mobile
+
+Kunde
+
+Kommunikationsqualität
+
+Netzqualität
+
+Produktequalität
+
+Kundenservicequalität
+
+Öffentlichkeit
+
+Ziel von Swisscom Mobile ist es, den Kundenbestand langfristig
+zu sichern und den durchschnittlichen Umsatz pro Kunde zu halten.
+Swisscom Mobile will nicht nur Marktleaderin sein, sondern vor allem
+als Qualitätsführerin wahrgenommen werden - als ein Unternehmen
+also, das sich durch spürbaren Mehrwert von den Mitbewerbern
+abhebt.
+
+Das Unternehmen Swisscom Mobile
+
+> Inhalt
+
+Überdurchschnittlich hohe Identifikation mit dem Unternehmen
+Nur motivierte Mitarbeiterinnen und Mitarbeiter können Spitzenleistungen erbringen. Wer für Swisscom Mobile arbeitet, identifiziert
+sich überdurchschnittlich mit dem Unternehmen und äussert sich
+positiv über die Arbeitssituation. Dies zeigt die Befragung der Mitarbeitenden 2003 deutlich. Das Durchschnittsalter der Swisscom Mobile
+Mitarbeitenden liegt bei 35 Jahren. Erfreulich hoch ist mit rund 40 %
+der Frauenanteil.
+In allen Sprachregionen der Schweiz zu Hause
+Kundennähe ist ein Erfolgsfaktor von Swisscom Mobile. Um den
+direkten Kundenkontakt optimal zu gewährleisten, liegen die verschiedenen Swisscom Mobile Standorte über die ganze Schweiz verstreut.
+Der Hauptsitz befindet sich in Bern. Etwa 50 % der Swisscom Mobile
+Mitarbeitenden arbeiten in Bern und Ostermundigen. Weitere grössere
+Standorte sind Luzern und Zürich. Mit eigenen Hotlines in Bellinzona,
+Chur, Lausanne und Olten sind die Unternehmensbereiche mit dem
+intensivsten Kundenkontakt in allen vier Sprachregionen der Schweiz
+vertreten. 600 Beraterinnen und Berater stehen unter der Nummer
+0800 55 64 64 während 24 Stunden an 365 Tagen den Kundenfragen
+Red' und Antwort. Täglich werden bis zu 15 000 Telefonanfragen -
+im Monat rund 400 000 - beantwortet. Kunden schätzen die hohe
+Beratungskompetenz und die geringe Wartezeit: 80 % aller Anrufe
+werden innert 20 Sekunden entgegen genommen.
+Die rund 1500 Verkaufspunkte des Fachhandels und die Swisscom
+eigenen Shops unterstreichen die Kundennähe zusätzlich. Vor allem
+die Shops mit Mobile Points sind beliebt: Hier werden Produkte
+verkauft und als besondere Dienstleistung Services für Handys,
+PDAs, Notebooks etc. gleich vor Ort konfiguriert.
+
+22
+Version 07. 2005
+© Swisscom Mobile
+
+Das Unternehmen Swisscom Mobile
+
+> Inhalt
+
+Mehr zu Swisscom Mobile und zur Mobilkommunikation
+Kapitel 1: Geschichte der Mobilkommunikation in der Schweiz
+Kapitel 3: Netz und Technologien
+Kapitel 4: Produkte und Services
+Kapitel 5: Mobilkommunikation in Wirtschaft und Gesellschaft
+Kapitel 6: Mobilkommunikation - Umwelt und Gesundheit
+
+Weitere Informationen und Quellen
+• Detaillierte Informationen zu Swisscom Mobile:
+www.swisscom-mobile.ch
+• Detaillierte Informationen zu Swisscom: www.swisscom.com
+• Geschäftsberichte Swisscom AG: www.swisscom.com
+> Investor Relations > Download Center
+www.swisscom.com/GHQ/content/Investor_Relations/
+Download_Center/?lang=de
+
+23
+Version 07. 2005
+© Swisscom Mobile
+
+Netz und Technologien
+
+> Inhalt
+
+24
+Version 07. 2005
+© Swisscom Mobile
+
+Überall und jederzeit erreichbar sein - dahinter steckt eine
+komplexe Netzinfrastruktur, welche die gesamte Fläche
+der Schweiz nahezu lückenlos umspannt und so praktisch
+uneingeschränktes, mobiles Telefonieren erlaubt. Zudem
+bedingen benutzerfreundliche Services technologische
+Verfeinerungen und Innovationen auf Seiten der Geräteentwicklung.
+Wie funktioniert Mobiltelefonie?
+Beim klassischen Funkverkehr (z.B. Polizei-, Taxi- oder CB-Funk
+[Citizen Band Radio], dem Funk für jedermann) kommunizieren die
+Gesprächspartner meistens ohne Netzinfrastruktur direkt miteinander.
+Im Gegensatz dazu ist in der Mobilkommunikation ein wabenartig
+aufgebautes Netz unabdingbar. Das abzudeckende Gebiet ist in so
+genannte Zellen aufgegliedert, wobei im Zentrum jeder einzelnen Zelle
+als Schaltstelle zwischen Handy und übergeordneter Zentrale eine
+Basisstation mit Funkantenne steht. Von der Basisstation wird das Signal
+über Kabelnetz oder Richtfunkantennen an eine andere Basisstation
+weitergeleitet bis es den Empfänger erreicht. Dieses Grundprinzip gilt
+selbst dann, wenn zwei Handybenutzer unmittelbar nebeneinander
+stehen und miteinander telefonieren. Bewegt sich die eine telefonierende Person während des Gesprächs von einer Zelle in eine andere,
+wird auch die Telefonverbindung von einer Basisstation zur nächsten
+übergeben, ohne dass der Handybenutzer dies wahrzunehmen
+vermag.
+Mobiles Telefonieren und klassischer Funkverkehr unterscheiden
+sich wesentlich hinsichtlich der Frequenz: Bei letzterem steht
+nur eine Frequenz für beide Übertragungsrichtungen zur Verfügung.
+Ein klassisches Funkgerät kann also nicht gleichzeitig Sender und
+Empfänger sein - lediglich eine Person spricht und das Gerät muss
+immer wieder von «Senden» auf «Empfangen» umgestellt werden.
+Man nennt dies ein Wechselsprechverfahren (Simplex-Verbindung).
+
+Netz und Technologien
+
+> Inhalt
+
+25
+Version 07. 2005
+© Swisscom Mobile
+
+Das Handy hingegen verwendet zwei verschiedene Frequenzen,
+weswegen es gleichzeitig senden und empfangen kann
+(Duplex- Verbindung). Dieser Vorteil erleichtert das Sprechen
+massgeblich.
+Die physikalischen Grundvoraussetzungen
+Das Prinzip der Mobiltelefonie basiert auf jenem der Funkübertragung.
+Gespräche, Bilder und Töne können mittels elektromagnetischer
+Wellen drahtlos übermittelt werden, wenn keine festen Leitungen
+zwischen einem Teilnehmer A und einem Teilnehmer B zur Verfügung
+stehen. Durch Modulation und Demodulation der Sendesignale,
+das heisst zum Beispiel durch die Veränderungen der Anzahl Schwingungen oder durch die Stärke des Signals, lassen sich Informationen
+übertragen. Die heutige Mobilkommunikation bedient sich mittlerweile einer sehr hoch entwickelten Modulations- / Demodulationstechnologie, welche eine effizientere Sprach- und höhere Datenübertragung erlaubt als noch vor Jahren.
+Damit sich Radio, Fernsehen und Handy nicht ins Gehege kommen,
+hat das BAKOM (Bundesamt für Kommunikation) jeder Anwendung
+und allen drahtlosen Systemen bestimmte Frequenzbereiche zugeteilt.
+Aus der Anzahl Schwingungen einer elektromagnetischen Welle
+innerhalb einer Sekunde ergibt sich die Frequenz. Sie wird in Hertz
+(Hz) oder Megahertz (MHz) ausgedrückt. Für die heutige Mobilfunkgeneration GSM (Global Standard for Mobile Communications)
+stehen in der Schweiz zwei Frequenzbänder zur Verfügung: 900 MHz
+und 1800 MHz. GSM ist ein rein digitaler Mobilfunkstandard.
+Die Informationen werden also nicht direkt analog moduliert und
+übertragen, sondern zuerst in eine Folge von Nullen und Einsen umgewandelt (Digitalisierung). Dadurch lässt sich das Signal komprimieren
+und entsprechend zusätzlich codieren, damit es weniger störungsanfällig wird.
+
+Netz und Technologien
+
+> Inhalt
+
+26
+Version 07. 2005
+© Swisscom Mobile
+
+Wie ist ein Netz aufgebaut?
+Ein Handy hat eine Reichweite von nur wenigen Kilometern.
+Damit die relativ schwachen Signale empfangen, entschlüsselt und
+weitergeleitet werden können, ist ein dichtes Netz von Basisstationen mit Sendeanlagen erforderlich. Jede einzelne Mobilfunkanlage deckt ein bestimmtes Gebiet, eine so genannte Funkzelle, ab.
+Bevor die Informationen schliesslich beim Empfänger eintreffen,
+gelangen sie von den Basisstationen über Kabel oder Richtfunkantennen
+zu zentralen Vermittlungsstellen. Normalerweise werden in einer
+Zelle mehrere Träger (Sender) pro Basisstation zugeteilt.
+
+Damit mobiles Telefonieren funktioniert, sind unter anderem
+zwei Datenbanken, HLR und VLR, erforderlich: Die Daten des HandyBenutzers werden zentral in einem Home Location Register (HLR)
+abgelegt. Das HLR enthält netzintern Informationen über die vom
+Netzteilnehmer abonnierten Dienste sowie über den aktuellen Betriebszustand des Handys. Anders als im HLR, wo die meisten Daten permanent gespeichert sind, wird im so genannten Visitor Location Register
+(VLR) die Situation am Ort des Geschehens dynamisch abgebildet
+(z. B. Aufenthaltsort). So kennt das System immer den aktuellen
+Zustand des Handys; wo es sich zuletzt aufgehalten hat, ob es ein-
+
+Netz und Technologien
+
+> Inhalt
+
+27
+Version 07. 2005
+© Swisscom Mobile
+
+geschaltet ist und auf welche Dienste zurzeit zugegriffen werden darf.
+Diese Funktionalitäten sind notwendig für den Betrieb eines Mobilfunknetzes, zum Beispiel bei der Durchstellung eines Anrufs auf
+das Mobiltelefon.
+Die Grösse der einzelnen Funkzellen ist abhängig von möglichen
+Hindernissen und von der Anzahl potenzieller Benutzer. Eine Basisstation kann gleichzeitig zwischen 8 und 96 Verbindungen verarbeiten -
+je nach eingesetztem Typ Basisstation, der Anzahl Träger und dem
+benötigtem Kapazitätsbedarf. Die Versorgungsbereiche der jeweiligen
+Funkzellen überschneiden sich im Normalfall. Auf diese Weise kann
+sich ein Handybenutzer während eines Gesprächs ohne Verbindungsunterbruch fortbewegen. Es findet beim Wechsel von einer Funkzelle
+in die nächste ein so genanntes Handover statt. Der «aktive» Mobilkommunikationsteilnehmer wird automatisch zwischen den Zellen
+weitergereicht.
+Das NATEL®-Netz von Swisscom Mobile deckt 99,8 % des besiedelten
+Gebietes ab. Dafür sorgen mehr als 10 000 Funkzellen an über
+4500 Standorten.
+Netzaufbau UMTS - neue Möglichkeiten dank neuer Technologie
+UMTS (Universal Mobile Telecommunications System) steht für die
+sehr leistungsfähige, so genannte dritte Mobilfunkgeneration in
+Europa. Im Vergleich zu GSM, der zweiten Generation im Mobilfunk,
+ermöglicht UMTS die schnelle Übertragung von grösseren Datenmengen (350 kbit/s) und dadurch neue Anwendungen wie z. B. Video
+Streaming und Video Telefonie. Die Frequenzbandbreite pro Sende- /
+Empfangseinheit von UTMS ist mit 5 MHz 25-mal breiter als diejenige
+von GSM mit nur 200 kHz.
+Die Struktur des UMTS-Netzes verfügt in Bezug auf seinen Aufbau
+über grosse Ähnlichkeit zum GSM-Netz. Swisscom Mobile hat deshalb
+das UMTS-Netz aus der bestehenden GSM-Infrastruktur heraus entwickelt. Sie hat die zahlreich vorhandenen Basisstationen-Standorte in
+
+Netz und Technologien
+
+> Inhalt
+
+28
+Version 07. 2005
+© Swisscom Mobile
+
+der Schweiz erweitert und damit einen grossen Teil der für UMTS
+nötigen Infrastruktur erhalten, ohne neue Basisstationen bauen zu
+müssen.
+Weil UMTS ein völlig neuer Technologie-Standard ist, der auf neuen
+Frequenzen im 2100 MHz-Band arbeitet, benötigen Benutzer auch
+spezielle, UMTS-fähige mobile Endgeräte, um die Signale zu empfangen. Der UMTS-Standard bedient sich eines neuartigen Modulationsverfahrens, das die Verbindung zwischen dem Handy und der Infrastruktur sicherstellt. Alle Verbindungen im Umkreis einer Basisstation
+werden mittels einer speziellen, verbindungsbezogenen Datencodierung (Wideband Code Division Mulitiple Access) voneinander unterschieden.
+UMTS ist vor allem geschaffen worden, um höhere Datenraten
+mobil übertragen zu können. Künftig wird die Sprache ebenfalls in
+Datenpakete verpackt und über das gleiche Medium übertragen.
+Bei dieser «paketorientierten» Übertragung sind die UMTS-Handys
+immer mit dem Netz verbunden - die Übermittlung erfolgt
+kontinuierlich. UMTS benötigt nur noch eine einzige Frequenz und
+überträgt die Daten zeitgleich. Ein Code identifiziert dabei die Gespräche. Eine weitere Besonderheit von UTMS ist, dass die einzelnen
+Funkzellen «atmen». Das heisst, sie variieren ihre Grösse bei Änderungen hinsichtlich der Belastung. Weil die mögliche Maximalleistung
+pro Zelle begrenzt ist, nimmt die Leistung pro Benutzer ab, wenn die
+Zahl der Benutzer ansteigt. Sobald die Leistung für einen einzelnen
+Benutzer zu stark abnimmt, wird er automatisch - und ohne dass er
+etwas davon merkt - von einer anderen Zelle versorgt. Die Sendeleistung von UMTS ist immer genau so hoch, wie sie für eine gute
+Verbindung mindestens sein muss.
+
+Netz und Technologien
+
+> Inhalt
+
+29
+Version 07. 2005
+© Swisscom Mobile
+
+Grenzenlos telefonieren dank internationalem Roaming
+Das Zauberwort für das mobile Telefonieren über alle Landesgrenzen
+hinweg heisst Roaming. «Roaming» leitet sich vom englischen Wort
+«to roam» (= wandern, umherstreifen) ab und steht für die Möglichkeit, mit dem eigenen Handy auch im Ausland zu telefonieren.
+Das Prinzip ist einfach: Ein Handy aus der Schweiz loggt sich im
+Ausland automatisch ins qualitativ beste Partnernetz ein. Sofort wird
+die Information, in welchem Land und in welcher Region sich das
+Handy im Moment befindet, an diejenige Zentrale in der Schweiz
+geschickt, bei der das Handy registriert ist. Geht nun ein Anrufsignal
+ein, sendet es die Zentrale in der Schweiz innert Sekundenbruchteilen
+in die richtige Region des entsprechenden Landes. Dort wird
+das Anrufsignal an jene Basisstation weitergeleitet, in deren Nähe
+sich das Handy gerade befindet. Schliesslich gibt die Basisstation
+das Signal ans Handy weiter und das Gespräch kann entgegengenommen werden.
+Der aktuelle Standort des in der Schweiz registrierten Handybenutzers kann nur dank dessen Eintrag im Home Location Register
+(HLR) festgestellt werden. Jeder Benutzer ist einem HLR zugeordnet.
+Verschiebt sich ein Handybenutzer mit seinem Gerät in einen anderen
+Zentralenbereich im eigenen oder fremden Netz, so werden die HLRDaten des Aufenthalts in das Visitor Location Register (VLR) der
+entsprechenden Zentrale übertragen und während des Aufenthaltes
+gespeichert. Jede Mobile-Zentrale (Mobile Switching Center / MSC)
+besitzt ein solches VLR, das die «Gäste» bedienen und verwalten kann.
+Das VLR kommt auch beim Roaming zum Einsatz. Ohne die im HLR
+und VLR verfügbare Information bezüglich des Kundenstandortes und
+ohne Roamingvertrag mit anderen Mobilfunkanbietern ist Roaming
+nicht möglich.
+Swisscom Mobile hat mit über 400 Partnern in über 170 Ländern
+Roaming-Verträge abgeschlossen. Laufend werden neue Abkommen
+mit weiteren ausländischen Netzbetreibern getätigt.
+
+Netz und Technologien
+
+> Inhalt
+
+Um Roaming gewährleisten zu können, bedarf es unter anderem
+auch noch der Nutzung von gleichen Frequenzbändern. In Europa
+arbeiten alle GSM-Netze in den gleichen Frequenzbändern. Dies ist in
+Amerika anders. Um dennoch das GSM in den USA nutzen zu können,
+entschied man sich vor Jahren, ein weiteres Frequenzband (1900 MHz)
+einzusetzen. Andere Länder, beispielsweise in Südamerika, setzen
+auf ein Frequenzband um 850 MHz. Daher spricht man heute
+auch häufig von Triband- und neuerdings auch von Quadband-Handys,
+welche in den USA zum Einsatz gelangen. Diese Handys können
+mit 850-, 900-, 1800- und 1900MHz-Netzen kommunizieren.
+Die Zugriffstechnologien der mobilen Kommunikation
+• GSM (Global System for Mobile Communications)
+GSM ist heute der gängige internationale Standard für den digitalen
+Mobilfunk. Das System ist weit verbreitet und auf die Übertragung
+von Sprache ausgelegt. Die Übertragungsrate von maximal 9,6
+kbit / s reicht für den mobilen Austausch grösserer Datenmengen
+nicht aus. Swisscom Mobile bietet ihren Kunden das GSM-Netz
+seit 1993 an. GSM wird durch immer neuere und leistungsfähigere
+Datenübertragungstechniken ergänzt. Die Netzbetreiber haben
+eine Lizenz, die es erlaubt, die GSM-Frequenzen bis ins Jahr 2007
+zu nutzen. Aufgrund des grossen Erfolgs und der stetigen Nachfrage
+des Marktes wird die GSM-Technologie aber auch nach 2007
+noch gebraucht werden.
+
+30
+Version 07. 2005
+© Swisscom Mobile
+
+• HSCSD (High Speed Circuit Switched Data)
+HSCSD ist ein Hochleistungs-Datenübertragungsstandard
+für GSM-Netze: Grosse Datenmengen können mit angemessener
+Geschwindigkeit übertragen werden und Downloads aus Internet
+sind bis zu vier Mal schneller als mit der GSM-Technologie.
+HSCSD bündelt bis zu vier Funkkanäle (Zeitschlitze mit 14,4 kbit / s)
+
+Netz und Technologien
+
+> Inhalt
+
+zu einem leistungsfähigen Datenkanal und erreicht so eine
+Datenübertragungsrate von bis zu 57,6 kbit / s. Swisscom Mobile
+hat HSCSD im Jahr 2001 eingeführt.
+• GPRS (General Packet Radio Service)
+GPRS ermöglicht eine schnellere Übertragung von Daten auf
+dem GSM-Netz: Dabei werden die Netzressourcen nur beansprucht,
+wenn Daten tatsächlich versandt oder empfangen werden.
+Davor und danach ist der Teilnehmer lediglich im Netz registriert,
+also permanent erreichbar. Verrechnet wird nur das effektiv
+übertragene Datenvolumen.
+Dank GPRS kann die Datenübertragungsrate auf dem gängigen
+GSM-Netz auf 30 bis 40 kbit / s erhöht werden (4 Zeitschlitze
+mit 40 kbit / s). Von dieser markanten Leistungsverbesserung dank
+GPRS können Swisscom Mobile Kunden seit 2002 profitieren.
+Die Nachfolge-Technologie von GPRS wird EDGE (Enhanced Data rates
+for GSM Evolution) sein, welche Anfang 2005 von Swisscom Mobile
+eingeführt wird.
+
+31
+Version 07. 2005
+© Swisscom Mobile
+
+• UMTS (Universal Mobile Telecommunications System)
+UMTS ist der neue Mobilfunkstandard, die so genannte
+dritte Generation der Mobilkommunikation. UMTS ermöglicht
+einen grossen technischen Sprung: Beispielsweise können
+damit höhere Datenraten bis zu 350 kbit / s übertragen werden,
+die Netzkapazität für mobile Datenübertragung wird grösser.
+Dies ermöglicht eine Fülle von neuen Breitband-Diensten wie Videotelefonie, Streaming (Audio / Video einmalig anschauen),
+Download (Audio / Video dauerhaft auf das mobile Endgerät
+herunterladen) und so weiter.
+Für UMTS braucht es ein neues, eigenes Mobilfunknetz. Vermittlungs- sowie Übertragungsteil des bestehenden GSM-Mobilnetzes
+können mitbenutzt werden. Für die Nutzung von UMTS sind
+
+Netz und Technologien
+
+> Inhalt
+
+32
+Version 07. 2005
+© Swisscom Mobile
+
+spezielle UMTS-fähige Endgeräte (Handys, Personal Digital Assistants,
+Laptops mit Spezialkarten etc.) erforderlich.
+Ende 2000 hat Swisscom Mobile eine von vier UMTS-Lizenzen
+ersteigert.
+Das UMTS-Netz kann von jedem NATEL®-Kunden in Verbindung
+mit einem entsprechenden Endgerät genutzt werden. Entsprechende
+PC-Karten (siehe «Mobile Unlimited» im Kapitel «Produkte und
+Services») und Handys werden im September 2004 eingeführt.
+• WLAN (Wireless Local Area Network)
+WLAN ermöglicht in der Praxis den drahtlosen Datenverkehr
+mit Übertragungsraten von bis zu max. 2 Mbit / s. Theoretisch lässt
+der Standard jedoch bis zu 11 Mbit / s zu. Zur Datenübertragung
+via WLAN müssen WLAN-Access Points errichtet werden, die -
+je nach Standort - einen Umkreis zwischen zehn und dreihundert
+Meter versorgen können. Der WLAN-Standard (802,11b) ist
+für alle zugänglich. Die Frequenzen in der Schweiz wurden vom
+BAKOM nicht reguliert, d.h. es wurden keine Lizenzen vergeben.
+Die WLAN-Netze arbeiten im Frequenzband von 2,4 GHz.
+Voraussetzung für die Nutzung der WLAN-Technologie ist ein Laptop
+oder Pocket PC mit WLAN-Karte.
+Swisscom Mobile bietet seit 2002 das Produkt PWLAN (Public
+Wireless LAN) an: An mehreren hundert stark frequentierten und
+öffentlich zugänglichen Orten (an so genannten Hotspots) wie
+Flughäfen, Bahnhöfen, Konferenzzentren und Hotels können Kunden
+von Swisscom Mobile (v. a. Geschäftsleute) via WLAN als offenes
+Netz aufs Internet und - sofern vom Unternehmen unterstützt -
+auch aufs Intranet sowie auf Office-Anwendungen zugreifen.
+Der Zugang steht jedem offen, der über ein WLAN-fähiges Endgerät
+verfügt. Bei Swisscom Mobile Kunden wird diese Dienstleistung
+über die monatliche NATEL®-Rechnung abgerechnet. Kunden anderer
+Anbieter oder Besucher aus dem Ausland können eine Guthaben-
+
+Netz und Technologien
+
+> Inhalt
+
+karte kaufen (Prepaid Lösung) oder die Nutzung über ihre Kreditkarte
+abrechnen. Erste Roamingverbindungen mit Partnernetzen sind
+bereits in Betrieb. Auch dieser Standard wurde weiterentwickelt.
+Der Nachfolgestandard erlaubt einen Datendurchsatz von max.
+57 Mbit / s.
+• EDGE (Enhanced Data Rates for GSM Evolution)
+Entscheidend für den Erfolg mobiler Datendienste ist ein flächendeckendes mobiles Breitbandnetz sowie hohe Geräteverfügbarkeit
+und Benutzerfreundlichkeit. Zur Erfüllung insbesondere der beiden
+ersten Faktoren setzt Swisscom Mobile neben UMTS und WLAN
+auch auf EDGE als Weiterentwicklung des bekannten GPRSStandards mit wesentlich höheren Übertragungsraten zwischen
+100 kbit / s bis zu 200 kbit/s. Die Integration von EDGE ins NATEL®Netz benötigt keine neuen Antennen und kann daher ohne
+grossen Aufwand implementiert werden. Erste Gebiete konnten
+bereits im Frühjahr 2004 frei geschaltet werden.
+Seit März 2005 stellt Swisscom Mobile ihren NATEL®-Kunden
+schweizweit, d.h. auch in Randgebieten, ein hochmodernes
+Breitbandnetz zur Verfügung. Mit EDGE können nun Dienste mit
+höheren Datenübertragungsraten, z.B. Videostreaming, auch in
+den Randregionen genutzt werden.
+
+33
+Version 07. 2005
+© Swisscom Mobile
+
+Netz und Technologien
+
+Überblick über die neueren Mobilfunktechnologien
+GPRS
+
+EDGE
+
+UMTS
+
+WLAN
+
+General Packet
+Radio Service
+
+Enhanced Data Rates
+for GSM Evolution
+
+Universal Mobile
+Telecommunications
+System
+
+Wireless Local
+Area Network
+
+Technologiebasis
+
+GSM-Standard
+(NATEL® D)
+
+GSM-Standard
+(NATEL® D)
+
+UMTS-Standard
+(W-CDMA Verfahren)
+
+IEEE 802.11b
+
+Versorgung
+
+flächendeckend
+(99,8 % der
+Bevölkerung)
+
+flächendeckend
+(99.8% der
+Bevölkerung)
+
+rund 90%
+der Bevölkerung
+
+800 Hotspots
+
+Netzverfügbarkeit
+
+seit Februar 2002
+
+seit November 2004
+
+seit Juli 2004
+
+seit Dezember 2002
+
+Geschwindigkeit
+
+20-40 kbit/s
+
+100-200 kbit/s
+
+200-350 kbit/s,
+
+bis zu 2 Mbit/s
+
+Typische
+Anwendungen
+
+Übertragung
+kleinerer Dateien
+Mobile E-Mail
+
+Video-Streaming, Interaktive Dienste, Gaming, File Transfer,
+Download, mobiles Internet (Surfen, E-Mails), mobiles Büro
+(Remote Access auf Firmendaten / Intranet / Outlook)
+
+Videotelefonie
+
+nein
+
+nein
+
+ja
+
+nein
+
+Verfügbarkeit
+PC-Karten
+
+verfügbar
+
+verfügbar
+
+verfügbar
+
+verfügbar
+
+Verfügbarkeit
+Endgeräte
+
+heute in fast allen
+Handys integriert
+
+verfügbar
+
+verfügbar
+
+verfügbar
+
+Aktuelle Übertragungstechnologien im Vergleich
+Outdoor
+im Fahrzeug
+
+100
+
+Wireless
+LAN
+
+34
+Version 07. 2005
+© Swisscom Mobile
+
+Indoor
+stationär
+
+UMTS
+
+Indoor
+in Bewegung
+
+EDGE
+
+Outdoor
+stationär
+
+GPRS HSCSD
+
+Outdoor
+in Bewegung
+
+1000
+
+10 000 kbit/s
+
+Netz und Technologien
+
+> Inhalt
+
+Wann kommt welche Technologie zum Einsatz?
+Der Einsatz der Technologie ist abhängig vom Ort und vom
+Anwendungsbereich:
+Indoor (Versorgung im Inneren von Gebäuden)
+Wegen der abschirmenden Wirkung von Mauern und Betonarmierungen ist eine Versorgung nicht immer einfach zu realisieren.
+Telekommunikation
+Ein Festnetz-Telefonanschluss eignet sich ausschliesslich für den
+stationären Betrieb. Mobile Bedürfnisse werden mit Funktelefonen
+oder Handys abgedeckt.
+Datenübertragung
+Für den mobilen Einsatz im Hause und als Alternative für alle,
+die keinen Kabelanschluss mit ADSL oder ISDN haben wollen,
+stehen alle Mobile-Technologien (WLAN, GPRS, HSCSD, UMTS und
+EDGE) zur Verfügung.
+Outdoor (Versorgung ausserhalb von Gebäuden)
+Telekommunikation
+Für alle Bereiche eignet sich das GSM-Netz.
+
+35
+Version 07. 2005
+© Swisscom Mobile
+
+Datenübertragung
+Müssen nur wenige Daten übertragen werden - bspw. Empfangen
+und Versenden von E-Mails - können GPRS (EDGE), HSCSD oder UMTS
+eingesetzt werden.
+Ausschliesslich für den Indoor-Bereich oder für den stationären
+Outdoor-Bereich können an ausgewählten Hotspots WLANDienstleistungen in Anspruch genommen werden. WLAN ermöglicht
+vor allem den Austausch von grossen Datenmengen.
+
+Netz und Technologien
+
+> Inhalt
+
+Mehr zu Swisscom Mobile und zur Mobilkommunikation
+Kapitel 1: Geschichte der Mobilkommunikation in der Schweiz
+Kapitel 2: Das Unternehmen Swisscom Mobile
+Kapitel 4: Produkte und Services
+Kapitel 5: Mobilkommunikation in Wirtschaft und Gesellschaft
+Kapitel 6: Mobilkommunikation - Umwelt und Gesundheit
+
+Weitere Informationen und Quellen
+• BAKOM (Bundesamt für Kommunikation): www.bakom.ch
+> Telecomdienste > Technologie
+www.bakom.ch/de/telekommunikation/forschung/index.html
+• SICTA (Branchenverband der im Telekom-Bereich tätigen Firmen
+und Organisationen): www.sicta.ch
+• Technik der mobilen Kommunikation: www.fmk.at
+• Zum NATEL®-Netz: www.swisscom-mobile.ch
+> Wir über uns > Unser NATEL®-Netz www.swisscom-mobile.ch/netz
+• Alles über UMTS und mehr: www.umtslink.at
+• GSM Association: www.gsmworld.com
+
+36
+Version 07. 2005
+© Swisscom Mobile
+
+Produkte und Services
+
+> Inhalt
+
+Moderne Technologien machen das Kommunizieren immer
+einfacher. Gleichzeitig werden die Möglichkeiten für spezielle
+Kommunikationsformen und -varianten immer vielfältiger.
+Für Swisscom Mobile sind Innovationen und Neuerungen in
+der Produktpalette, zusammen mit dem Kundenservice,
+zur herausragenden Stärke und zum Markenzeichen geworden.
+Grundlagen
+Die Kundinnen und Kunden von Swisscom Mobile erwarten vom
+Marktleader neben innovativen Produkten und Diensten eine hervorragende Netzqualität und einen einwandfreien Kundenservice.
+Diese Erwartungen werden bei Swisscom Mobile nicht enttäuscht.
+Seien es Viel- oder Langtelefonierende (mit Natel® swiss liberty),
+SMS-User oder Geschäftskunden: Für jede Zielgruppe steht ein
+passendes Angebot bereit.
+Voraussetzung für die Nutzung der Produkte und Dienstleistungen
+ist demnach nebst dem Besitz eines mobilen Endgeräts ein auf das
+individuelle Kommunikationsverhalten abgestimmtes Abonnement
+oder eine Prepaid-Karte.
+
+37
+Version 07. 2005
+© Swisscom Mobile
+
+Voice: Grösster Umsatzanteil mit Telefonie und Mehrwertdiensten
+Den grössten Umsatzanteil verzeichnet Swisscom Mobile nach wie vor
+im Voice-Bereich. Mit einem mobilen Endgerät lassen sich aber nicht
+nur Gespräche führen oder empfangen. Die Nutzung von Datendiensten gewinnt immer mehr an Gewicht. Zwei verbreitete Dienste im
+Voice-Bereich:
+• COMBOX® basic oder COMBOX® pro: Anrufende können eine
+Nachricht hinterlassen, es lassen sich Faxe empfangen und E-Mails
+bearbeiten
+• CONNECT 1144®: Dies ist der Swisscom Mobile-eigene Auskunftsdienst, welcher den Anrufenden überall und jederzeit in der Schweiz
+und im Fürstentum Liechtenstein direkt verbindet.
+
+Produkte und Services
+
+> Inhalt
+
+Der Voice-Bereich sowie die entsprechenden Zusatzdienste werden
+für Swisscom Mobile auch langfristig von grosser Bedeutung bleiben.
+Aus diesem Grund erfolgt laufend eine Erweiterung und Optimierung
+der Dienstleistungen.
+Das Potenzial der mobilen Datendienste
+Mit der Lancierung der GPRS-Technologie (General Packet Radio
+Service) im Jahr 2002, der technologischen Erweiterung des bestehenden GSM-Netzes, hat Swisscom Mobile eine wichtige Grundlage
+für den Erfolg mobiler Datendienste gelegt. Die Datendienste machen
+mittlerweile knapp 12 Prozent des gesamten Umsatzes aus.
+Messaging
+SMS
+SMS (Short Message Service) ermöglicht den mobilen Versand und
+Empfang von Kurzmitteilungen. SMS lässt sich einerseits von Handy
+zu Handy übermitteln. Anderseits besteht die Möglichkeit, SMS an
+eine Fax-Nummer oder an eine E-Mail-Adresse zu senden. Schliesslich
+können per SMS verschiedene Informationsdienste genutzt werden.
+Einige ausgewählte Beispiele sollen die Vielfalt der Informationsmöglichkeiten per SMS illustrieren:
+Fahrplanauskünfte der SBB
+Durch den Versand z. B. des SMS-Textes «Zürich Bern» an die Zielnummer 222 werden die drei nächstfolgenden Verbindungen zwischen
+Zürich und Bern angezeigt.
+
+38
+Version 07. 2005
+© Swisscom Mobile
+
+MeteoSchweiz
+Wetterprognosen, Strassenverhältnisse, Sturmwarnungen: Dies und
+noch viel mehr ist abrufbar durch Senden des passenden Schlüsselworts an die Zielnummer 162.
+
+Produkte und Services
+
+> Inhalt
+
+Find it
+Bargeldlos in einer fremden Gegend und nicht wissen, wo sich der
+nächste Bancomat befindet? Ein SMS mit dem Schlüsselwort «bama»
+an die Nummer 858 zeigt den nächsten Bancomat-Standort an.
+Mit den passenden Schlüsselwörtern können auch Ärzte, Restaurants,
+Hotels, Tankstellen, Warenhäuser u. a. m. aufgespürt werden.
+CityMap
+Der eigene aktuelle Aufenthaltsort in einer unbekannten Umgebung
+lässt sich dank Ortungsinformationen des Mobilfunknetzes in einer
+für das Handydisplay optimierten Karte darstellen. So weiss der Handybenutzer immer genau, wo er sich gerade befindet.
+Dies ist eine kleine Auswahl der zahlreichen SMS-Dienste von
+Swisscom Mobile. Auf der Internet-Seite von Swisscom Mobile
+(www.swisscom-mobile.ch) sind die jeweiligen Schlüsselwörter und
+Zielnummern sowie die notwendigen Informationen zu Nutzung
+und Kosten der vielen praktischen SMS-Dienste und Unterhaltungsangebote von Swisscom Mobile zu finden.
+
+39
+Version 07. 2005
+© Swisscom Mobile
+
+Produkte und Services
+
+SMS-Versand von Handy zu Handy (in Mio.)
+
+> Inhalt
+
+2000
+1500
+1000
+500
+0
+2001
+
+2002
+
+2003
+
+2004
+
+MMS
+SMS hat für die Entwicklung weiterer mobiler Datendienste wertvolle
+Impulse geliefert. So konnte Swisscom Mobile im Juni 2002 als
+erster Schweizer Anbieter MMS, den Multimedia Messaging Service,
+lancieren. Ein Foto schiessen, einen Text dazu schreiben, einen Ton
+einfügen und alles gleich per Handy versenden: Mit MMS ist die
+Datenübermittlung multimedial und attraktiv. Da mit MMS höhere
+Datenmengen übertragen werden, ist der Kunde sowohl auf die GPRSTechnologie als auch auf ein MMS-fähiges Endgerät angewiesen.
+Swisscom Mobile führt heute Handy-Kameras mit der sensationellen
+Auflösung von einem Megapixel samt Blitzlicht im Sortiment.
+Als besonders attraktiven Service auf der Grundlage von MMS bietet
+Swisscom Mobile ihren Kunden die MMS Postkarte. Ein Bild schiessen,
+Grusstext und Adresse in klar bestimmtem Modus eingeben und an
+eine dafür vorgesehene Nummer schicken: Mit der individuellen und
+personalisierten MMS Postkarte entdecken Kunden die neuen
+Möglichkeiten der innovativen Alltagskommunikation durch Bilder
+erst wirklich.
+
+40
+Version 07. 2005
+© Swisscom Mobile
+
+Produkte und Services
+
+> Inhalt
+
+41
+Version 07. 2005
+© Swisscom Mobile
+
+E-Mails bearbeiten
+Von unterwegs auf seine bestehenden E-Mail-Konten zugreifen,
+E-Mails lesen und beantworten - dies und vieles mehr ermöglichen
+die Data-Dienste von Swisscom Mobile. Dabei gelten folgende minimale
+Voraussetzungen: Der Provider des E-Mail-Kontos muss entweder einen
+POP3- oder einen IMAP4-Zugang anbieten, der Nutzer ein WAP-fähiges
+Handy besitzen. Alle Details zur Einrichtung des Dienstes sind im
+Swisscom Mobile Internet zu finden (www.swisscom-mobile.ch).
+Vodafone live!
+Mit dem Slogan «Mehr Bilder. Mehr Töne. Mehr Spiele. Mehr Spass!»
+ist Swisscom Mobile seit November 2003 mit Vodafone live! auf dem
+Markt und bietet den Privatkunden ein multimediales Handy-Erlebnis.
+Dienste, wie MMS Postkarte oder andere Messaging-Dienste und
+noch viele mehr, sind in Vodafone live! vereint und durch einfachste
+Bedienung zugänglich: Spielkonsole, Fotoapparat und -album,
+Unterhaltungs- und Informationszentrale - dies alles ist Vodafone live!
+in einem einzigen attraktiven Gerät. Auf der Grundlage von UMTS ist
+Vodafone live! im November 2004 um eine Dimension erweitert
+worden. Unter dem Stichwort «Bewegung» bietet Swisscom Mobile
+ihren Kunden Dienste wie Live-TV, Videoclips und Videotelefonie.
+Aufbauend auf der Vodafone-Technologie hat Swisscom Mobile
+Vodafone live! exklusiv für den Schweizer Markt entwickelt.
+Das Ergebnis ist ein eigenständiges Produkt - viersprachig und auf
+die Bedürfnisse der Schweizer NATEL®-Kunden abgestimmt.
+Hinter Vodafone live! steckt eine spezifische Technologie,
+die Anpassungen auf der Geräte- und Netzseite erforderlich machte.
+Dies ermöglicht, dass alle angebotenen Geräte eine einheitliche und
+verständliche Menuführung besitzen, die sich an die Portalstruktur
+anlehnt. Verbunden durch klar strukturierte Menus mit verständlichen
+grafischen Sinnbildern (Icons) gelangt der Benutzer kinderleicht zur
+gewünschten Funktion.
+
+Produkte und Services
+
+> Inhalt
+
+Als weltweit grösster Anbieter mobiler Telekommunikation hat
+Vodafone dieses mobile Multimediaportal im Oktober 2002 in acht
+Ländern Europas lanciert. Heute steht es in 22 Ländern zur Verfügung,
+und rund 30 Millionen Kunden nutzen es. Allein im deutschsprachigen
+Raum gibt es inzwischen 6,2 Millionen Anwender. Anerkennung
+erhielt Vodafone live! auch von offizieller Seite: Am GSM Association
+Award im Februar 2003 wurde das Sharp GX10 zum besten Handy
+und die Lösung zur besten Mobilfunk-Anwendung gekürt.
+Mobile Comfort
+Einfachheit ist bei 40 Prozent der Kundinnen und Kunden das
+wichtigste Anliegen in der Bedienung eines Geräts. Mobile Comfort,
+ein neues Produkt, das dem Nutzer bewusst nur die grundlegenden
+Funktionen des Handys bietet, ist seit 1. Juni 2005 auf dem Markt.
+Das Angebot richtet sich an über 35-jährige Kunden und beinhaltet
+fünf Versprechen: Zeit und Ruhe, Einfachheit, Betreuung,
+Kostentransparenz sowie ein Ersatzgerät ohne wenn und aber.
+Immer verbunden
+Geschäftskunden treffen mit Swisscom Mobile zweifelsohne die beste
+Wahl. Es existieren verschiedene Standards sowie spezifische mobile
+Lösungen für einzelne Geschäftskundenzweige.
+Mobilität, sprich ein mobiles Büro, gehört im modernen Arbeitsleben zu den grundlegenden Erfordernissen. Mit anderen Worten:
+Das Bedürfnis, auch auf dem Arbeitsweg, beim Kundenbesuch oder
+einfach unterwegs verbunden zu sein, wächst. Dank Mobilfunktechnik
+ist dies auf verschiedene Weise möglich:
+• Die einfachste Art der Verbindungsaufnahme ist natürlich
+ein Anruf per Handy. Allerdings sind die Möglichkeiten der Mobilkommunikation heutzutage viel grösser.
+
+42
+Version 07. 2005
+© Swisscom Mobile
+
+Produkte und Services
+
+> Inhalt
+
+43
+Version 07. 2005
+© Swisscom Mobile
+
+• Mit BlackBerry®, PDA (Personal Data Assistant) oder Notebook hat
+der Nutzer Zugriff auf sein E-Mail-Konto, aufs Internet oder auf
+das Firmennetzwerk. Er ist unterwegs via GPRS immer verbunden
+(«always connected»), wobei die Daten zwischen dem BlackBerry®Endgerät und dem Server verschlüsselt übertragen und damit
+höchste Sicherheitsanforderungen erfüllt werden.
+• Das Bedürfnis, von unterwegs das Internet oder Firmennetzwerke
+zu nutzen, deckt Swisscom Mobile durch Public Wireless LAN ab.
+Public Wireless LAN bietet an mehreren hundert stark frequentierten
+und öffentlich zugänglichen Orten in der Schweiz (so genannten
+Hotspots) neue Dimensionen des mobilen Arbeitens. Indem der
+Nutzer sein Notebook oder seinen Pocket PC mit einer WLAN-Karte
+ausrüstet, kann er an jedem beliebigen Hotspot aufs Internet
+zugreifen.
+• Nebst den Übertragungstechnologien GPRS und WLAN steht
+seit 1. Juli 2004 auch UMTS (Universal Mobile Telecommunications
+System) als dritte Generation der Mobilkommunikation zur
+Verfügung.
+Mobile Unlimited
+Mit Mobile Unlimited verbindet Swisscom Mobile als Weltneuheit
+erstmals alle Technologien für die drahtlose Datenübertragung von
+GPRS über UMTS bis zu WLAN. Mit einer einzigen PC-Karte können
+alle drei Technologien genutzt werden. Wie bei einem Auto mit Automatikgetriebe wird automatisch geschaltet, sobald eine schnellere
+Geschwindigkeit zur Verfügung steht. So sind NATEL®-Kunden an
+ihrem Standort automatisch und sicher mit der schnellsten verfügbaren
+Breitbandtechnologie verbunden. Mobile Unlimited ist weltweit das
+erste Produkt, das ein Seamless Handover ermöglicht - also den
+automatischen, nahtlosen und unterbruchsfreien Wechsel zwischen
+den verschiedenen Übertragungstechnologien.
+
+Produkte und Services
+
+> Inhalt
+
+Mobile Firmenlösungen
+Für Firmen, die ihre Mitarbeitenden mobil machen wollen, stellt
+Swisscom Mobile mobile Lösungen wie Corporate Office Access oder
+BlackBerry® zur Verfügung. Vorteile: jederzeitige Verfügbarkeit der
+gewünschten Daten, optimierte Arbeitsabläufe, Nutzung von Leer- und
+Wartezeiten, mobile Verfügbarkeit der kompletten Bürofunktionalität.
+Zu den Anwendungen mit wesentlichem Nutzen für Geschäftskunden gehören so genannte Personal-Information-Management(PIM)-Lösungen. Diese ermöglichen den Abgleich von E-Mails
+sowie Kalender- und Kontaktdaten über ein mobiles Endgerät.
+Corporate Office Access erlaubt den Zugriff auf sämtliche Daten
+eines Firmennetzwerks per WAP-Handy oder Pocket PC. Dies bedeutet
+einen beträchtlichen Produktivitätsgewinn für Geschäftskunden.
+M-Payment: Bezahlen ohne Kleingeld
+Seit August 2002 können NATEL®-Kunden bestimmte Waren vom
+Automaten per Handy bezahlen - sicher, einfach und bis zu CHF 20.-.
+Der Kunde wählt mit dem Handy die auf dem Automaten angegebene
+Nummer des gewünschten Produkts. Per SMS erhält er eine Quittung
+und kann das Produkt entnehmen. Die Abrechnung erfolgt über das
+Guthaben oder die Handyrechnung. Der grosse Anklang, auf den die
+Einführung des M-Payments z.B. im Parkhaus Luzern gestossen ist, zeigt:
+Bargeldloses Bezahlen mit Handy erfüllt ein Kundenbedürfnis.
+
+44
+Version 07. 2005
+© Swisscom Mobile
+
+Roaming: Mobil im Ausland
+Durch so genanntes «Roaming» («to roam» = wandern, herumstreifen)
+besteht die Möglichkeit, mit dem eigenen Handy auch im Ausland zu
+telefonieren und Anrufe zu empfangen. Swisscom Mobile hat mit über
+400 Partnern in über 170 Ländern Roaming-Verträge abgeschlossen und
+ist damit weltweit führend. Dies bedeutet für die Kunden in immer mehr
+Ländern mit bester Sprachqualität telefonieren zu können - und dies
+unabhängig vom jeweiligen Anbieter zu einem einheitlichen Zonenpreis.
+
+Produkte und Services
+
+> Inhalt
+
+Mehr zu Swisscom Mobile und zur Mobilkommunikation
+Kapitel 1: Geschichte der Mobilkommunikation in der Schweiz
+Kapitel 2: Das Unternehmen Swisscom Mobile
+Kapitel 3: Netz und Technologien
+Kapitel 5: Mobilkommunikation in Wirtschaft und Gesellschaft
+Kapitel 6: Mobilkommunikation - Umwelt und Gesundheit
+
+Weitere Informationen und Quellen
+• Services für Privatkunden:
+www.swisscom-mobile.ch > Privatkunden
+• Services für Geschäftskunden:
+www.swisscom-mobile.ch > Geschäftskunden
+
+45
+Version 07. 2005
+© Swisscom Mobile
+
+Mobilkommunikation
+in Wirtschaft und Gesellschaft
+
+> Inhalt
+
+46
+Version 07. 2005
+© Swisscom Mobile
+
+Die Mobilkommunikation beeinflusst einen Grossteil unserer
+Lebensbereiche. Kommunikation per Handy ist nahezu überall
+und jederzeit möglich: immer schneller, immer perfekter,
+immer umfassender. Arbeitsplätze sind nicht mehr an einen Ort
+gebunden, Einkäufe können, ohne einen Laden zu betreten,
+getätigt werden. Die Unabhängigkeit von einem festen Arbeitsplatz birgt für Geschäftsleute nur Vorteile. Per Laptop online
+oder am Handy lassen sich Geschäfte überall schnell und zuverlässig erledigen. Welche Auswirkungen diese Entwicklung
+dereinst auf das gesellschaftliche, wirtschaftliche und kulturelle
+Zusammenleben haben wird, lässt sich heute erst erahnen.
+Ein wichtiger Faktor der schweizerischen Volkswirtschaft
+Mit einem Marktvolumen von insgesamt CHF 12,45 Mia. hat sich
+die Telekommunikationsbranche zu einem wichtigen Faktor
+der schweizerischen Volkswirtschaft entwickelt. Ihr Anteil an der
+Wertschöpfung der Gesamtwirtschaft liegt mittlerweile bei 3,5 %.
+Laut einer Studie der BAK Konjunkturforschung Basel wird der Bereich
+Telekommunikation in den nächsten Jahren immer wichtiger.
+Die volkswirtschaftliche Bedeutung der Kommunikationsbranche
+beschränkt sich nicht allein auf direkte Effekte wie Umsatzzahlen,
+Arbeitsplätze oder Produktivität. Speziell die Mobilfunkbranche ist eine
+bedeutende Abnehmerin von Vorprodukten anderer Unternehmungen.
+Mit anderen Worten handelt es sich beim Mobilfunk nicht um eine
+Branche im traditionellen Verständnis, sondern um eine Technologie.
+Mobiltelefon und mobiler Datentransfer beeinflussen praktisch alle
+Wirtschaftsbereiche, tragen zur Produktivitätssteigerung bei und
+bilden die Basis zur Eröffnung neuer Geschäftsfelder und Produktionsmodelle.
+In erster Linie profitieren von der Mobiltelefonie diejenigen
+Branchen, welche auf ein hohes Mass an Mobilität angewiesen sind -
+z. B. Aussendienste von Versicherungen. Aber auch eine ganze Reihe
+
+Mobilkommunikation in Wirtschaft und Gesellschaft
+
+> Inhalt
+
+anderer Branchen aus dem Industrie- und Dienstleistungsbereich
+nutzt heutzutage die mobile Kommunikation intensiv. Insgesamt
+ist rund ein Viertel der Mitarbeitenden in Schweizer Betrieben bereits
+regelmässig unterwegs. Bei Kleinstunternehmen ist es sogar über
+die Hälfte. Die BAK Konjunkturforschung Basel geht davon aus,
+dass das Potenzial zur Produktivitätssteigerung durch den Einsatz
+von Mobilkommunikation noch längst nicht ausgeschöpft ist.
+Markt Schweiz
+Die Mobilkommunikation in der Schweiz hat in den vergangenen
+Jahren einen Boom erlebt. Über 6 Millionen Menschen telefonieren
+mobil, davon sind 4 Millionen Kunden von Swisscom Mobile.
+Swisscom Mobile ist klare Marktführerin
+
+Swisscom Mobile
+Orange
+Sunrise
+Tele2
+
+(Markterhebung per April 2005)
+
+Trotzdem nimmt die Schweiz im länderspezifischen Vergleich in punkto
+Marktdurchdringung im Bereich Mobiltelefonie eher einen der mittleren
+Ränge ein.
+
+47
+Version 07. 2005
+© Swisscom Mobile
+
+Mobilkommunikation in Wirtschaft und Gesellschaft
+
+Marktpenetration im europäischen Vergleich
+
+> Inhalt
+
+100
+80
+
+Irland
+
+Norwegen
+
+Finnland
+
+Dänemark
+
+Schweiz
+
+Österreich
+
+Belgien
+
+Schweden
+
+Portugal
+
+Griechenland
+
+Niederlande
+
+Spanien
+
+Frankreich
+
+0
+
+Grossbritannien
+
+20
+
+Italien
+
+40
+
+Deutschland
+
+60
+
+Gartner Dataquest (Ende 2004)
+Hinweis: Penetration = Anzahl Mobilfunkteilnehmer (= SIM-Karten) in Bezug auf die Gesamtbevölkerung; durch Mehrfachkartenbesitz ist eine Penetration von mehr als 100% möglich.
+
+48
+Version 07. 2005
+© Swisscom Mobile
+
+Entwicklung der Mobilkommunikationsbranche
+Die ersten Mobilfunk-Frequenzen werden 1978 der Telecom PTT
+aufgrund ihrer Monopolstellung zugeteilt. Im Zuge der Marktliberalisierung schreibt die zuständige Behörde 1997 weitere Frequenzen aus.
+An der Ausschreibung können alle interessierten Telekommunikationsunternehmen - ausser Swisscom - teilnehmen. 1998 erhalten Diax,
+die im Januar 2001 mit Sunrise fusioniert, und Orange den Zuschlag.
+So tritt an Weihnachten 1998 die damalige Diax (Fusion Diax und
+Sunrise Januar 2001) in den Markt ein und Orange zieht im Juni 1999
+nach. Im Oktober 2000 werden weitere Frequenzen im Zuteilungsverfahren unter den drei bestehenden Mobilfunkanbietern aufgeteilt.
+Ende der 90er Jahre hat die Mobilkommunikation den Höhepunkt
+des Booms scheinbar erreicht. Doch die Versteigerungen von UMTSLizenzen bringen europaweit eine neue Dynamik in den Markt:
+Die Mobilnetzbetreiber bezahlen in Deutschland für sechs Lizenzen
+fast CHF 80 Mia., in England für fünf Lizenzen rund CHF 60 Mia.
+Manches Unternehmen, das sich von der UMTS-Lizenz einen einzigartigen Marktvorteil versprach, kämpft heute - in wirtschaftlich schwierigeren Zeiten - ums nackte Überleben oder bekundet zumindest Mühe,
+
+Mobilkommunikation in Wirtschaft und Gesellschaft
+
+> Inhalt
+
+die von den Lizenzgebern geforderten Services innert nützlicher Frist
+und zu akzeptablen Preisen bereitzustellen.
+Swisscom Mobile ersteigert am 6. Dezember 2000 eine der vier
+UMTS-Lizenzen für CHF 50 Mio. Heute besteht ein UMTS-Netz,
+das über 90 % der Bevölkerung der Schweiz abdeckt. Das GSM-Netz
+bleibt weiterhin bestehen.
+Regulatorisches Umfeld Schweiz
+Das schweizerische Fernmeldegesetz (FMG) schreibt vor, dass der
+Bevölkerung und Wirtschaft vielfältige, preiswerte und qualitativ
+hochstehende Fernmeldedienste anzubieten sind. Die nationale und
+internationale Konkurrenzfähigkeit sowie der wirksame Wettbewerb
+sowohl bei den Dienstleistungen als auch bei den Netzen soll gewährleistet sein. Um diesen Anforderungen gerecht zu werden,
+sind die Mobilfunkanbieter verpflichtet, eigene Netze aufzubauen
+und zu unterhalten.
+Des weiteren haben sich Mobilfunkanbieter in der Schweiz an
+verschiedene Empfehlungen und gesetzliche Vorschriften zu halten:
+• Das Bundesamt für Kommunikation (BAKOM) hat im Auftrag
+des Departements für Umwelt, Verkehr, Energie und Kommunikation
+(UVEK) sowie der Schweizerischen Bau-, Planungs- und Umweltschutzdirektoren-Konferenz (BPUK) Empfehlungen für die Koordination von Baubewilligungsverfahren für Antennenanlagen erstellt.
+Diese Empfehlungen halten fest, dass die Funknetze dort erstellt
+werden, wo sich auch die Benutzer befinden. Der Bau der Antennenanlagen zwischen den verschiedenen Netzbetreibern muss koordiniert werden. Dafür ist die kantonale Raumplanungsbehörde zuständig.
+Ziel dieser Empfehlungen ist es, einheitliche Massstäbe für die
+ganze Schweiz zu schaffen.
+
+49
+Version 07. 2005
+© Swisscom Mobile
+
+Mobilkommunikation in Wirtschaft und Gesellschaft
+
+• Die Eidgenössische Kommunikationskommission (ComCom)
+
+> Inhalt
+
+erteilt alle Telekommunikationskonzessionen, somit auch diejenigen
+für den Mobilfunk. Ausserdem ist sie für die Genehmigung
+des nationalen Frequenzzuweisungs- und Nummerierungsplanes
+zuständig.
+• Das Bundesamt für Umwelt, Wald und Landschaft (BUWAL)
+
+stellt als Umweltfachstelle des Bundes die umweltgerechte Mobiltelefonie sicher. Der Bundesrat hat mit der Verordnung über den
+Schutz vor nichtionisierender Strahlung (NISV) gesetzliche Grenzwerte für die Strahlung von Mobilfunkanlagen festgelegt. Diese Verordnung soll die Menschen vor «schädlicher oder lästiger nichtionisierender Strahlung» (im Volksmund fälschlicherweise Elektrosmog
+genannt) schützen. Die Anlage- und Immissionsgrenzwerte in der
+Schweiz sind zehn Mal tiefer als diejenigen im Ausland.
+Mobilkommunikation beeinflusst Verhalten
+Das Handy ist aus dem Privatleben und dem Arbeitsalltag nicht mehr
+wegzudenken. Kaum ein Treffen unter Freunden, ohne dass sich alle
+vorher vergewissert haben, ob man auf dem Weg sei, im Stau stecke
+oder die Adresse noch richtig im Kopf habe. Kaum eine Geschäftsfrau,
+ein Service- oder Aussendienstmitarbeiter kann heute darauf verzichten,
+immer und überall mit der jeweiligen Zentralstelle, mit Geschäftspartnern und Kunden auf der ganzen Welt verbunden zu sein. «Jederzeit
+und überall erreichbar»: Dieses Motto gilt für die Telekommunikation
+des 21. Jahrhunderts. Ebendies wird bald auch für die mobile Datenkommunikation unabdingbar sein.
+
+50
+Version 07. 2005
+© Swisscom Mobile
+
+Mobilkommunikation in Wirtschaft und Gesellschaft
+
+> Inhalt
+
+Mehr zu Swisscom Mobile und zur Mobilkommunikation
+Kapitel 1: Geschichte der Mobilkommunikation in der Schweiz
+Kapitel 2: Das Unternehmen Swisscom Mobile
+Kapitel 3: Netz und Technologien
+Kapitel 4: Produkte und Services
+Kapitel 6: Mobilkommunikation - Umwelt und Gesundheit
+
+Weitere Informationen und Quellen
+• BAKOM (Bundesamt für Kommunikation):
+www.bakom.ch > Telecomdienste
+www.bakom.ch/de/telekommunikation/index.html
+• Mobile Telekommunikation und Gesellschaft:
+www.swisscom-mobile.ch > Wir über uns
+> Mobile Kommunikation und Umwelt
+www.swisscom-mobile.ch/mobilenature
+
+51
+Version 07. 2005
+© Swisscom Mobile
+
+Mobilkommunikation -
+Umwelt und Gesundheit
+
+> Inhalt
+
+52
+Version 07. 2005
+© Swisscom Mobile
+
+Kaum ein elektronisches Gerät hat sich in der Schweiz
+in den letzten Jahren so schnell verbreitet wie das Handy.
+Mobile Kommunikation ermöglicht Anwendungen, die heute
+kaum jemand mehr missen möchte. Mit der wachsenden
+Nachfrage ist auch der schnelle Aufbau der Infrastruktur verbunden. Physikalische Grundvoraussetzung für die drahtlose
+Übertragung von Signalen sind elektromagnetische Wellen.
+Übertragen werden sie durch Sende- und Empfangsantennen.
+Nutzen der Mobilkommunikation ist unbestritten
+Handys sind in der modernen Gesellschaft kaum mehr wegzudenken:
+Menschen jeglicher Altersgruppe und Gesellschaftsschicht schätzen
+die mobilen Begleiter, weil sie Erreichbarkeit und Unabhängigkeit vergrössern. Den meisten Handybenutzern erhöhen Handys Arbeitseffizienz
+im geschäftlichen Bereich und Lebensqualität als Privatpersonen.
+Heute nutzen sieben von zehn in der Schweiz lebende Menschen
+die Möglichkeiten der Mobilkommunikation.
+Für mobile Kommunikation ist das Bestehen einer entsprechenden
+Netzinfrastruktur notwendige Bedingung. Diese setzt sich zusammen
+aus Zentralen zur Steuerung der Gespräche sowie Basisstationen mit
+Antennen, Vermittlungs- und Übertragungsausrüstungen. Die Basisstationen senden und empfangen Signale mit Hilfe hochfrequenter elektromagnetischer Wellen, so genannter nichtionisierender Strahlung (NIS).
+An Infrastrukturen, wie sie für die Mobilität (Schienen, Strassen),
+die Massenkommunikation (Fernsehen, Radio) oder die Grundversorgung (Wasser, Strom, Gas) benötigt werden, haben wir uns längst
+gewöhnt. Sie prägen unsere Landschaft. Neue Technologien jedoch
+lösen in der Öffentlichkeit immer auch Fragen aus. Teilweise grosse
+Skepsis herrscht gegenüber den unsichtbaren, elektromagnetischen
+Feldern. Entsprechend häufig und emotional werden Fragen betreffend
+Mobilfunkantennen, Strahlungen sowie möglichen Auswirkungen
+auf die Gesundheit und Umwelt diskutiert.
+
+Mobilkommunikation - Umwelt und Gesundheit
+
+> Inhalt
+
+53
+Version 07. 2005
+© Swisscom Mobile
+
+Swisscom Mobile betreibt Mobilfunknetze in der Schweiz und ist sich
+der besonderen Verantwortung gegenüber Umwelt und Gesellschaft
+bewusst. Im Zeichen dieses Verantwortungsbewusstseins engagiert
+sich Swisscom Mobile unter anderem in der Forschung zu möglichen
+Risiken der Mobilkommunikation und setzt lediglich solche Technologien ein, die gemäss den aktuellen wissenschaftlichen Erkenntnissen
+als sicher gelten.
+Grenzen gesetzt
+Wissenschaftler aus aller Welt haben gemeinsam mit der Weltgesundheitsorganisation (WHO) und unter Berücksichtigung
+sehr deutlicher Sicherheitsmargen Grenzwertempfehlungen erarbeitet.
+Diese Empfehlungen wurden von den meisten Ländern in Europa
+übernommen und bieten Schutz und Sicherheit.
+Die Verordnung über den Schutz vor nichtionisierender Strahlung
+(NISV - in Kraft seit 1. Januar 2000) regelt in der Schweiz die Begrenzung der Emissionen von elektrischen und elektromagnetischen Feldern
+mit Frequenzen von 0 Hz (Hertz) bis 300 GHz (Gigahertz), die beim
+Betrieb ortsfester Anlagen erzeugt werden. Darunter fallen Mobilfunkanlagen, Hochspannungsleitungen, Transformatoren, elektrische
+Bahnen oder Rundfunksender. Ausdrücklich ausgenommen sind Mobiltelefone.
+Die in der Schweiz geltenden gesetzlichen Bestimmungen basieren
+zusätzlich noch auf dem Vorsorgeprinzip gemäss Umweltschutzgesetz
+(USG). Danach sind Einwirkungen, die schädlich oder lästig werden
+können, frühzeitig zu begrenzen.
+In der Schweiz gelten für Orte, an denen sich Menschen über
+längere Zeit aufhalten, zehnfach strengere Grenzwerte als die von der
+ICNIRP (Internationale Kommission zum Schutz vor nichtionisierender
+Strahlung) empfohlenen und in den meisten anderen Ländern gesetzlich
+festgelegten Immissionsgrenzwerte. Der Immissionsgrenzwert ist ein
+Schutzgrenzwert, der in sich schon eine Sicherheitsmarge beinhaltet.
+
+Mobilkommunikation - Umwelt und Gesundheit
+
+> Inhalt
+
+Rund um die Mobilfunkantennen gibt es aber noch eine ganze
+Reihe zusätzlicher Gesetze, Verordnungen und Vollzugsrichtlinien.
+Diese regeln beispielsweise Bau, Einsprachemöglichkeiten,
+Immissionsberechnungen und -messungen, aber auch Kontrollen.
+Insgesamt gehören die Regelungen für nichtionisierende Strahlungen
+in der Schweiz global gesehen zu den strengsten.
+Unter der Lupe der Wissenschaft
+Seit Mitte des 20. Jahrhunderts beschäftigen sich weltweit Wissenschaftler mit möglichen Auswirkungen elektromagnetischer Felder.
+In den letzten Jahren wurde die diesbezügliche Forschung aufgrund
+der verstärkten Nutzung von mobilen Funktelefonen und ähnlichen
+Telekommunikationsgeräten weiter vorangetrieben. Inzwischen
+gibt es mehrere tausend wissenschaftliche Studien auf dem komplexen
+Gebiet der elektromagnetischen Felder. Aufgrund all dieser Forschungsergebnisse ist die Wissenschaft heute der Ansicht, dass die Wahrscheinlichkeit einer Gefährdung durch elektromagnetische Felder
+innerhalb der geltenden Grenzwerte äusserst gering ist. Die aktuelle
+Forschung überpüft diese Einschätzung laufend.
+Grenzwert für Handy-Strahlungen
+Als Sende- und Empfangsgerät sendet auch das Handy seine Signale
+über elektromagnetische Wellen aus. Diese Handy-Strahlungen
+werden als SAR-Wert (Specific Absorption Rate = die vom Körper
+absorbierte Leistung pro Masseneinheit, Watt pro Kilogramm)
+angegeben. Der Grenzwert für Mobiltelefone legt die maximal
+zulässige Sendeleistung fest. Die Schweiz hält sich dabei an die
+international geltenden Richtlinien. Alle in der Schweiz vertriebenen
+Geräte unterschreiten den Grenzwert teilweise deutlich.
+
+54
+Version 07. 2005
+© Swisscom Mobile
+
+Mobilkommunikation - Umwelt und Gesundheit
+
+> Inhalt
+
+55
+Version 07. 2005
+© Swisscom Mobile
+
+Aufwändige Planung
+Die Planung, der Bau und Betrieb der Mobilfunknetze ist eine Kernkompetenz von Swisscom Mobile. Für die Kunden wird das NATEL®Netz unablässig optimiert. Swisscom Mobile vergrössert die Netzabdeckung, verbessert die Qualität und macht die jeweils neusten
+Technologien verfügbar. Um die gute Qualität zu halten und die stetige
+Zunahme des Gesprächsverkehrs in Spitzenzeiten frühzeitig abzufangen, strebt Swisscom Mobile den Ausbau der Infrastruktur an.
+Basisstationen werden allerdings nur dort gebaut, wo ein entsprechender Bedarf vorhanden und die Verträglichkeit nachgewiesen ist.
+Um auch hier die Verantwortung zu wahren und die Netze mit der
+geringst möglichen Leistung zu betreiben, geht dem Bau einer neuen
+Basisstation und jedem Schritt der ständigen Netzoptimierung eine
+aufwändige Planung voraus.
+Planungsspezialisten, die über fundierte Erfahrung und Kenntnis
+der lokalen Gegebenheiten verfügen, berechnen die Immissionen vor
+der Baueingabe sehr genau. Dabei können sie auf eine umfangreiche
+Datenbank mit allen relevanten Informationen (bspw. Frequenzen
+auf Verkehrswegen) zurückgreifen und immer die neueste Technologie
+zum Einsatz bringen. Mit dieser exakten und transparenten Planung
+kann Swisscom Mobile sicherstellen, dass das Netz nur für jene
+Kapazität ausgebaut wird, die tatsächlich nötig ist. Muss im Rahmen
+der Netzoptimierung eine bewilligte Leistung geändert werden,
+wird dies immer publiziert. Bei Swisscom Mobile verbinden meistens
+Kabelleitungen die Basisstationen untereinander sowie jede Basisstation mit der Zentrale. Richtfunkverbindungen und damit weitere
+Immissionen gibt es nur in geringem Ausmass.
+Swisscom Mobile unternimmt grosse Anstrengungen, um Netzinfrastrukturen möglichst harmonisch und unauffällig in die Landschaft
+oder das Ortsbild einzufügen. Beim Bau werden, wenn immer möglich,
+bestehende Infrastrukturen wie beispielsweise hohe Gebäude oder
+Strommasten berücksichtigt. Swisscom Mobile nutzt - wo immer dies
+
+Mobilkommunikation - Umwelt und Gesundheit
+
+> Inhalt
+
+möglich ist - die Infrastruktur mit anderen Netzbetreibern (Site Sharing).
+Zusätzlich zu den erforderlichen Genehmigungen werden an eigens
+organisierten Informationsveranstaltungen die Anwohner möglichst
+frühzeitig miteinbezogen.
+Systematische Prozesse für einen aktiven und nachhaltigen
+Umweltschutz
+Von der Marktführerin in der Schweizer Mobilkommunikation erwartet
+die Öffentlichkeit mit Recht, dass sie auch in Umweltfragen eine
+Leaderrolle übernimmt. Zusammen mit den anderen Gruppengesellschaften betreibt Swisscom Mobile deswegen schon seit Jahren
+ein systematisches Umweltmanagement.
+Der Umweltgedanke steht in den internen Prozessen an prominenter
+Stelle. Als erste Mobilnetzbetreiberin in der Schweiz - und als eine der
+ganz wenigen weltweit - hat Swisscom Mobile die Umweltzertifizierung
+nach ISO 14001 erhalten. Diese selbst auferlegte und von neutraler
+Stelle durchgeführte Qualitätsprüfung beinhaltet unter anderem auch
+die Verpflichtung zu einem kontinuierlichen Verbesserungsprozess und
+die Bejahung der Verantwortung gegenüber unserer Umwelt.
+
+56
+Version 07. 2005
+© Swisscom Mobile
+
+Transparenz und Offenheit
+Vertrauen entsteht durch Offenheit und Transparenz. Swisscom
+Mobile ist nicht nur offen für neue wissenschaftliche Erkenntnisse,
+sondern fördert seit Jahrzehnten auch Forschungsprojekte rund
+um das Thema «Mobilkommunikation - Umwelt und Gesundheit».
+Beispielsweise beteiligt sich Swisscom Mobile an der «Forschungsstiftung Mobilkommunikation» der ETH Zürich und ermöglicht
+auf diese Weise unabhängige Forschung. Darüber hinaus ist Swisscom
+Mobile Mitglied des Vereins «Forum Mobil». Der Verein unterstützt
+den Dialog zwischen Mobilfunkanbietern und der Öffentlichkeit
+und setzt sich für eine Versachlichung der Diskussion über die Auswirkungen von Mobilfunktechnologien ein.
+
+Mobilkommunikation - Umwelt und Gesundheit
+
+> Inhalt
+
+Eine informative Website zu diesem Thema mit umfangreicher Linksammlung fördert die Transparenz und trägt massgeblich zu einer
+offenen Kommunikation bei (siehe unter «Weitere Informationen und
+Quellen»).
+
+Forum Mobil
+Die Netzbetreiber Swisscom Mobile, Orange und Sunrise haben
+gemeinsam mit weiteren Unternehmen der Mobilkommunikationsbranche einen Verein gegründet, der sich als Dialogplattform
+versteht und über die komplexen Fragestellungen zu elektromagnetischen Feldern informiert.
+www.forummobil.ch
+
+57
+Version 07. 2005
+© Swisscom Mobile
+
+Mobilkommunikation - Umwelt und Gesundheit
+
+> Inhalt
+
+Mehr zu Swisscom Mobile und zur Mobilkommunikation
+Kapitel 1: Geschichte der Mobilkommunikation in der Schweiz
+Kapitel 2: Das Unternehmen Swisscom Mobile
+Kapitel 3: Netz und Technologien
+Kapitel 4: Produkte und Services
+Kapitel 5: Mobilkommunikation in Wirtschaft und Gesellschaft
+
+Weitere Informationen und Quellen
+• Mobilkommunikation - Umwelt und Gesundheit:
+www.swisscom-mobile.ch > Wir über uns
+> Mobile Kommunikation und Umwelt
+www.swisscom-mobile.ch/mobilenature
+• Informationszentrum Mobilfunk (Deutschland): www.izmf.de
+• Forum Mobilkommunikation (Österreich): www.fmk.at
+• Alles über UMTS und mehr: www.umtslink.at
+
+58
+Version 07. 2005
+© Swisscom Mobile
+

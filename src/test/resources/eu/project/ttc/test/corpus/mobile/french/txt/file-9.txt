@@ -1,0 +1,1011 @@
+Un PDAPhone GPS sous Microsoft
+Windows® Mobile™ 6.1 Professional
+
+Catalogue Mobilité - 2009
+PDA| GPS | Téléphone
+
+www.asus.fr
+
+© 2009 ASUSTek Computer Inc. Tous droits réservés.
+
+Page 1
+
+A propos d'ASUS :
+Créé en 1989, ASUS est un acteur majeur sur les marchés de l'informatique, des appareils de télécommunications et
+d'électronique grand public. Le constructeur compte parmi ses produits des ordinateurs portables, des cartes mères, des
+cartes graphiques, des lecteurs optiques, des PDA et agendas électroniques, des ordinateurs de bureau, des serveurs, des
+solutions sans fil, des téléphones mobiles et des produits de connectique réseau. Leader historique sur le marché des cartes
+mères et celui des cartes graphiques, la société figure en outre parmi les quatre premiers constructeurs d'ordinateurs portables. Grâce à ses  8000 collaborateurs et à une équipe de designers de niveau international, ASUS a réalisé un chiffre
+d'affaires de 6,9 milliards de dollars américains.
+La renommée d'ASUS repose également sur les 4 points suivants :
+La qualité ASUS
+La doctrine "ASUS Way of Total Quality Management" vise à offrir la meilleure qualité possible. Les produits ASUS sont soumis aux tests les plus durs afin de vérifier que chacun d'entre eux soit parfait. Une série de tests rigoureux dont les standards
+ont été volontairement élevés par rapport à ceux des concurrents pour s'assurer que les produits ASUS sont construits pour
+offrir d'excellentes performances et une stabilité durable.
+Un portefeuille complet
+ASUS offre plusieurs séries de téléphones portables et GPS intégrant les technologies les plus avancées. Des minuscules
+PDA aux GPS en passant par les moniteurs LCD et ordinateurs portables, ASUS dispose d'un éventail complet capable de
+répondre à divers besoins de mobilité, de loisirs ou professionnels.
+Garantie internationale de 2 ans
+Tous les PDA sont couvers par une garantie de 2 ans dans la plupart des territoires avec enlèvement sur site. Certains pays
+peuvent toutefois offrir une extension de la garantie. Contrairement aux autres constructeurs proposant plusieurs années de
+garantie, mais facturant les composants et le coût de réparation au delà de la première année, la garantie internationale
+de deux ans d'ASUS comprend la gratuité de la réparation ou de l'échange de composant.
+Des concepts de design incomparables
+Le style ASUS c'est la simplicité et le confort quotidien. Les produits ASUS ont une apparence nette et stylisée les rendant
+parfaits dans toutes les situations .
+Surface brossée - la surface des ordinateurs portables adopte une fintion brossée pour une apparence élégante et robuste.
+Matériaux innovants - du léger et solide alliage aluminium-magnésium à la fibre de carbone en passant par le cuir véritable, les portables, moniteurs et téléphones mobiles ASUS continuent à innover et à vous offrir l'émotion d'un design hors-norme.
+
+Garantie 2 ans* avec enlèvement
+et retour atelier.**
+				
+					
+
+* garantie internationale.
+(Retrouvez nos sites de réparation sur : http://support.asus.com/
+** enlèvement uniquement en France métropolitaine.
+*** uniquement dans le circuit de distribution des revendeurs spécialisés.
+
+Page 2
+
+www.asus.fr
+
+Mobilité
+A626, A639. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . P 4
+A686, A696. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . P 5
+M530W, M930 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . P 6
+P320, P527 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . P 7
+P535, P552W. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . P 8
+
+P735, P750. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . P 9
+
+R300, P600 . . . . . . . . . . . . . . . . . . . . . . . . . . . P 10
+
+R700 . . . . . . . . . . . . . . . . . . . . . . . . . P 11
+
+Page 3
+
+Un PDA avec bluetooth et wifi
+
+A626
+
+Un PDA ultra fin et élégant doté de
+technologies innovantes
+
+Asus lance un PDA polyvalent, fonctionnel et ultra-fin : MyPal
+A626. Avec sa taille de guêpe (1,57 cm) et son poids plume
+de 158 g (malgré une coque en acier inoxydable), l´A626 est
+unique.
+Couplé à l´écran tactile anti-reflet de 3.5 pouces, l´A626 est
+synonyme de solidité et de qualité.
+
+CPU :
+
+Marvell XScale®, 312 MHz
+
+Système :
+
+Microsoft Windows Mobile 6.0
+
+Affichage :
+
+Ecran transflectif TFT 3.5" avec 65k couleurs, affichage QVGA 16	
+bits, une résolution de 240x320 avec écran tactile
+
+Mémoire :
+
+256 Mo Flash ROM et 64 Mo SDRAM
+
+Extension :
+
+1 x slot SD (SDIO/SD/MMC ) jusqu'à 4 Go
+
+Audio :
+
+Microphone et haut-parleur intégrés, Lecture et enregistrement 	
+
+	
+
+en full duplex 1 x Sortie casque 3,5 mm et MP3 stéréo
+
+Comm. :
+
+Bluetooth v2.0(EDR), SIR 115.2kbps (max), USB 1.1, WiFi802.11b+g
+
+Alimentation : Batterie 1200mAh lithium ion amovible et rechargeable
+Dimension :
+
+11,7 cm x 7,08 cm x 1,57 cm - 158g
+
+PDA-GPS avec carte Europe fournie
+
+A639
+
+1Go pour vos cartes et la sauvegarde de vos données.
+
+L'ASUS MyPal A639 embarque un GPS, la technologie
+Bluetooth 2.0 et le 802.11g.
+Communiquez en toute liberté ! C'est un outil de navigation
+idéal pour vos trajets en voiture. Il vous permet également de
+vous connecter en WiFi et de transférer facilement des
+données sans contrainte de câble.
+Station d'accueil fournie.
+
+CPU :
+
+Intel Xscale® 416 MHz
+
+Système :
+
+Microsoft Windows Mobile 6.0
+
+Affichage :
+
+Ecran transflectif TFT 3.5" avec 65 000 couleurs, résolution 240 x 320 	
+
+	
+
+et écran tactile.
+
+Mémoire :
+
+1 Go Flash ROM
+
+Extension :
+
+Slot carte SD (SDIO/SD/MMC) jusqu'à 4 Go
+
+Audio :
+
+Microphone et haut-parleur intégrés ; lecture et enregistrement
+
+en full duplex : 1 x jack écouteur 3.5mm et haut-parleur stéréo MP3.
+Comm. :
+
+WLAN 802.11b+g / Bluetooth v2.0/USB 1.1
+
+Alimentation : 1300mAh, batterie Lithium-ion amovible / rechargeable
+Dimension :
+
+122 x 73.2 x 18.8 (19,45) mm (L x P x H) - 187 g avec batterie
+
+Page 4
+* Les caractéristisques sont sujettes à des modifications sans préavis. Photos non contractuelles.
+
+PDA-GPS Bluetooth avec ou sans carte de France
+
+A686
+
+PDA ultra-fin, concentré de technologies :
+un outil idéal pour vos voyages.
+
+Asus lance un PDA polyvalent, fonctionnel et ultra-fin : l´A686. Il
+embarque la fonctionnalité GPS sans antenne apparente et arbore
+une coque en acier inoxydable au lieu du traditionnel plastique.
+Couplé à l´écran tactile anti-reflet, l´A686 est synonyme de solidité
+et de qualité.
+
+CPU :
+
+Intel XSCALE 312MHz
+
+Système :
+
+Microsoft Windows Mobile 6.0
+
+Affichage :
+
+Ecran transflectif TFT 3.5'' 65 000 couleurs, 240 x 320 et écran tactile
+
+Résolution :
+
+240 x 320 écran tactile
+
+Mémoire :
+
+256 Mo Flash ROM, 64 Mo SDRAM
+
+GPS :
+
+Chipset SiRF Star III (GPS) Navigation Destinator 6
+
+Extension :
+
+1 slot SD (SDIO/SD/MMC)
+
+Audio :
+
+Microphone et haut-parleur intégrés, lecture et enregistrement	
+en full duplex,1 x jack écouteur 3,5 mm et haut-parleur stéréo MP3
+
+Comm. : 	
+
+Bluetooth v2.0 (EDR) /USB 1.1/ SIR (115.2 kbps Max.)
+
+Batterie :
+
+1200mAh lithiumion amovible rechargeable
+
+Dimension :
+
+11,7cm x 7,08cm x 1,57cm - 165g
+
+PDA-GPS Bluetooth WIFI avec ou sans carte de France
+
+A696
+
+Coque en acier inoxydable et dernières technologies :
+l´A696 marie parfaitement l´électronique grand public
+et le luxe.
+
+Asus lance un PDA polyvalent, fonctionnel et ultra-fin : l´A696.
+Il embarque la fonctionnalité GPS sans antenne apparente et
+arbore une coque en acier inoxydable au lieu du traditionnel
+plastique. Couplé à l´écran tactile anti-reflet, l´A696 est
+synonyme de solidité et de qualité.
+
+CPU :
+Système :
+Affichage :
+
+Intel XSCALE 416MHz
+Microsoft Windows Mobile 6.0
+Ecran transflectif TFT 3.5" avec 65 000 couleurs, résolution 240 x 	
+320 et écran tactile
+Mémoire :
+256Mo Flash Rom 64Mo SDRAM
+GPS :
+Chipset SiRF Star III (GPS)
+Navigation :
+Destinator 6
+Cartographie : France & Europe
+Extension :
+1 slot SD (SDIO/SD/MMC)
+Audio :
+Microphone et haut-parleur intégrés ; lecture et enregistrement 	
+	
+en full duplex ; 1 x jack écouteur 3.5mm et haut-parleur stéréo MP3
+Comm. : 	
+WiFi 802.11b+g/Bluetooth v2.0 (EDR) /USB 1.1/ SIR (115.2 kbps Max.)
+Batterie :
+1200mAh lithiumion amovible rechargeable
+Dimension :
+11,7cm x 7,08cm x 1,57cm - 165g (avec batterie)
+
+Page 5
+* Les caractéristisques sont sujettes à des modifications sans préavis. Photos non contractuelles.
+
+Smartphone 3G orienté messagerie avec clavier
+
+Le M530w s'adapte à toutes les situations comme
+si vous teniez le monde entre vos mains..
+
+M530W
+
+Compatible 3G et sous Windows Mobile 6, ce smartphone
+bien équipé est orienté messagerie, WiFi 802.11b/g, Bluetooth
+2.0, ainsi que d'un APN 2 megapixels.
+La suite ClearView pré-installée assurera la lecture de divers
+documents Microsoft Office.
+
+CPU :
+
+Intel PXA270 (416 MHz)
+
+Système :
+
+Microsoft Windows Mobile 6.0
+
+Affichage :
+
+2.4" TFT, 65 K couleurs, résolution de 320 x 240
+
+Mémoire :
+
+256 Mo Flash + 64 Mo SDRAM
+
+Caméra :
+
+2M Auto-Focus camera / VGA camera pour la visio-conférence
+
+Extension :
+
+Micro-SD (2G compatible)
+
+Audio Vidéo : MPEG4 / H.263, MP3, WMA, AAC, WAV, et Midi
+Comm. :
+
+WLAN 802.11 b+g, USB v1.1, Bluetooth v2.0
+
+Messagerie :
+
+SMS, MMS 1.2, et Email
+
+Navigateur :
+
+HTTP et WAP 2.0
+
+Alimentation : 1200 mAh Lithium-Ion
+Dimension :
+
+117 x 65 x 13.8 mm, (L x P x H) - 135 g avec batterie
+
+Smartphone 3G orienté messagerie avec clavier
+
+M930
+
+L'outil pour les professionnels. Le nouveau Smartphone
+Asus M930, un concentré de connectivité et d'élégance
+
+- Un design sophistiqué et chic
+- Ecran large interne améliore la qualité de le visioconférence
+- Clavier AZERTY complet pour une saisie intuitive
+- Connexion très haut débit avec la 3G+
+- Windows Mobile 6
+
+CPU :
+
+TI OMAP™ 2431 450MHz
+
+Système :
+
+Microsoft Windows Mobile 6.0
+
+Affichage :
+
+Externe : 2.0˝ ,65000-couleurs ,TFT LCD ,240 x 320 pixels QVGA, 	
+
+	
+
+Interne : 2.6˝ ,65000-couleurs ,TFT LCD ,400 x 240 pixels WQVGA
+
+Mémoire :
+
+256 Mo Flash+ 64 Mo SDRAM
+
+Caméra :
+
+2.0 Megapixels, 0.3 Megapixels pour la visioconférence
+
+Extension :
+
+Micro-SD, support SDHC
+
+Audio Vidéo : MPEG4,H.263 Lecture et enregistrement Audio / lecture vidéo, 	
+	
+
+Ecran large pour la visioconférence, MP3,WMA,AAC,AAC+,3GP
+
+Comm. :
+
+WLAN 802.11b/g,Bluetooth V2.0+EDR, USB v2.0
+
+Messagerie :
+
+SMS/MSN/MMS/Email/Push E-Mail
+
+Navigateur :
+
+HTTP etWAP 1.2.1/2.0
+
+Alimentation : Batterie 1100mAh Li-Ion / rechargeable
+Dimension :
+
+109 mm x 59 mm x 19 mm (L x P x H) - 143 g avec batterie
+
+Page 6
+* Les caractéristisques sont sujettes à des modifications sans préavis. Photos non contractuelles.
+
+PDA Phone GPS
+
+P320
+
+Le Galaxie Mini, un PDAPhone EDGE et GPS
+sous Windows Mobile 6.1
+
+- Design compact pour une mobilité accrue.
+- WLAN + Bluetooth + EDGE pour une connectivité optimale
+Interface Intuitive.
+- Interfa- quadribande GSM, GPRS et EDGE.
+- GPS Sirf III intégré
+- Logiciel de navigation iGO 6
+- Cartographie France et Europe
+
+CPU :
+
+TI OMAP 850 200 MHz
+
+Système :
+
+Microsoft(R) Windows(R) mobile 6.1
+
+Affichage :
+
+2.6", écran tactile 65K, TFT, 240x320
+
+Mémoire :
+
+128 Mo Flash + 64 Mo DDR
+
+Extension :
+
+Micro-SD
+
+EGPS : 	
+
+Class B, Muli-slot Class 10
+
+Autonomie
+
+4 Heures
+
+Caméra :
+
+2.0 Mégapixels avec auto focus
+
+Audio Vidéo : MP3, WMA, et AAC, MPEG4 / H.263 en lecture et enregistrement
+Comm. :
+
+WLAN 802.11b+g, USB v1.1 et Bluetooth V2.0+EDR
+
+Musique :
+
+MP3, WMA, AAC et AAC+
+
+Dimension :
+
+99 x 55 x 13.35mm, 105g
+
+PDA Phone GPS EDGE 2.75 + WIFI + Radio FM
+
+P527
+
+Illustrez votre carnet de
+bord et partagez vos
+souvenirs de voyage
+
+Smartphone PDA GPS : GSM, GPRS, EDGE, GPS, Bluetooth
+
+P526
+
+Toujours Connecté
+avec le Smartphone
+Quadribande
+
+- Partagez vos aventures avec Travelog
+- Impossible de se perdre avec le GPS intégré
+- Restez à la page avec la fonctionnalité Newstation
+- Fonctionnalités multimédia
+- Design résolument moderne avec une interface intuitive
+- Radio FM
+
+ASUS lance aujourd´hui son smartphone quadribande P526
+qui intègre les technologies Push E-mail, ainsi qu'un clavier
+numérique pour offrir une solution de mobilité complète aux
+professionnels.
+
+CPU :
+
+TI OMAPTM 850 (200 MHz)
+
+CPU :
+
+Système :
+
+Microsoft Windows® Mobile™ 6
+
+Système :
+
+Microsoft Windows Mobile 6.0
+
+Affichage :
+
+2.6˝ 65K, TFT 240 x 320
+
+Affichage :
+
+2.6" 65K TFT 240 x 320
+
+Mémoire :
+
+128 Mo Flash + 64 Mo SDRAM
+
+Mémoire :
+
+128 MB Flash + 64 MB SDRAM
+
+Caméra :
+
+2 mégapixels (Auto-Focus)
+
+Caméra :
+
+2 Mega-Pixel
+
+Extension :
+
+Micro-SD, support SDHC
+
+Extension :
+
+Micro-SD
+
+Audio Vidéo : MPEG4 / H.263, MP3, WMA et AAC
+
+GPS : 	
+
+Destinator v6 cartographie France + Axes principaux Europe
+
+Comm. :
+
+WLAN 802.11b+g, USB v1.1, et Bluetooth 2.0+EDR
+
+Audio Vidéo : MP3, WMA, et AAC, MPEG4 / H.263.
+
+Messagerie :
+
+SMS/MMS/Email/MSN
+
+Comm. :
+
+Navigateur :
+
+HTTP et WAP 1.2.1/2.0
+
+Messagerie : SMS/MMS/Email/MSN
+
+Il est désormais possible de rester connecté quel que soit
+l'endroit où l´on se trouve.
+
+TI OMAP 850 (200MHz)
+
+USB v1.1/ Bluetooth 1.2
+
+Alimentation : 1300 mAh Lithium-Ion
+
+Alimentation : 1300 mAh Lithium-Ion / rechargeable
+
+Dimension :
+
+Dimension :
+
+113 x 58 x 15,4 mm, 129 g (avec batterie)
+
+110 x 58 x 15.4 mm (L x P x H) - 115 g avec batterie
+
+Page 7
+* Les caractéristisques sont sujettes à des modifications sans préavis. Photos non contractuelles.
+
+Smartphone PDA-GPS : GSM, GPRS, GPS, Bluetooth, WIFI
+
+P535
+
+Le nouveau smartphone tri-bande !
+
+Le smartphone Windows Mobile 6.0 est doté d´un dispositif
+sans fil et d´un GPS. Voilà l´outil professionnel qu´il vous faut !
+Il embarque de multiples fonctionnalités sans fil, un appareilphoto haute qualité avec autofocus.
+
+CPU :
+
+520 MHz Intel® XScale™
+
+Système :
+
+Microsoft Windows Mobile 6.0
+
+Affichage :
+
+2.8", 240 x 320 pixels, 65 000 TFT
+
+Mémoire :
+
+256 Mo NAND Flash ROM et 64 Mo SDRAM
+
+Caméra :
+
+Appareil photo de 2 mégapixels avec autofocus et flash
+
+Extension :
+
+Mini-SD
+
+GPS : 	
+
+Chipset SiRF Star III cartographie France + Europe
+
+Audio Vidéo : Enregistrement vidéo MPEG4 à QVGA 15 fps,
+Jack audio 2,5 mm
+Comm. :
+
+WLAN 802.11b+g, Bluetooth 2.0 + EDR
+(Enhanced Data Rate), USB 1.1
+
+Alimentation : 1300 mAh Lithium-Ion / rechargeable
+Couleurs: 	
+
+Gris / Blanc
+
+Dimension :
+
+109 x 59 x 19 mm (L x P x H)
+
+PDA PHONE GPS
+
+P552W
+
+Un PDAPhone GPS sous Microsoft
+Windows® Mobile™ 6.1 Professional
+
+- Navigation intuitive d'un simple geste
+- Interface différente suivant vos humeurs
+- Design compact pour une mobilité accrue.
+- Applications pratiques: Youtube, Google Map,
+Google search, Flux RSS
+- GPS Sirf III intégré
+- Fonctionnalités multimédia complètes.
+
+CPU : Marvell Tavor 624MHz
+Système : Microsoft Windows® Mobile™ 6.1 Professional
+Affichage : 2.8", QVGA 240 x 320, 65K, TFT
+Mémoire : 256 Mo Flash + 128Mo SDRAM
+Caméra : Appareil photo de 2 mégapixels
+Extension : Micro-SD (support SDHC)
+GPS : Chipset SiRF Star III + carte France
+Image : JPEG, PNG, GIP, BMP,
+Audio : MP3, WMA, 3GP, AAC, AAC+
+Méssagerie : SMS / MMS / Email / MSN / Push E-mail
+Comm. : WLAN 802.11b+g , USB v1.1(FS), Bluetooth 2.0+EDR
+Alimentation : 1100mAh Lithium / rechargeable
+Couleurs: Blanc / Noir
+Dimension : 102 x 60.5 x 14.5 mm, 105g avec batterie
+
+Page 8
+* Les caractéristisques sont sujettes à des modifications sans préavis. Photos non contractuelles.
+
+Téléphone PDA avec fontion 3G
+
+P735
+
+Le smartphone 3G P735 : aussi bien
+pour travailler que pour s´amuser !
+
+Le P735 dispose de plusieurs fonctionnalités 3G, d´une
+connexion réseau, d´une solution de vidéo-conférence et
+autres fonctionnalités à usage professionnel.
+Vous avez accès à vos informations courantes où que vous
+soyez. Gardez en permance un contrôle sur votre travail sans
+être derrière votre bureau !
+
+CPU :
+
+Intel Xscale® 520 MHz
+
+Système :
+
+Microsoft Windows Mobile 6.0
+
+Affichage :
+
+2.8", 65K, TFT , 240 x 320.
+
+Mémoire :
+
+256 Mo Flash+ 64 Mo SDRAM
+
+Caméra :
+
+Double appareil-photo : 2 mégapixels (autofocus) + VGA
+
+Extension :
+
+Mini-SD
+
+Audio Vidéo : MPEG4 / H.263 Lecture et enregistrementAudio/lecture vidéo en 	
+	
+
+transit/ Appel vidéo, MP3, WMA, AAC et AAC+
+
+Comm. :
+
+WLAN 802.11 b+g, USB v1.1, Bluetooth v2.0
+
+Messagerie : SMS/MMS/Email/Pocket MSN
+Alimentation : Batterie 1300 mAh Lithium-Ion amovible / rechargeable
+Dimension :
+
+109 mm x 59 mm x 19 mm (L x P x H) - 143 g avec batterie
+
+PDA Phone GPS 3G+
+
+P750
+
+La solution professionnelle proposant
+toutes les fonctionnalités de pointe
+
+- Connectivité totale et gamme complète de fonctionnalités
+professionnelles
+- Travelog GPS, une fonctionnalité pour partager ses souvenirs
+de voyage
+- Ne vous perdez plus jamais avec la fonctionnalité Location
+Courier
+- Modalités de saisie des plus conviviales
+- Recherche intuitive des contacts à partir du carnet
+d´adresses
+
+CPU :
+
+Marvell PXA270M 520 MHz
+
+Système :
+
+Microsoft Windows® Mobile 6™ Professional
+
+Affichage :
+
+2.6" ,65 000 couleurs ,TFT ,240 x 320 pixels QVGA
+
+Mémoire :
+
+256 Mo de mémoire Flash, 64 Mo de SDRAM
+
+Extension :
+
+Micro-SD, support SDHC
+
+GPS : 	
+
+SiRF III avec antenne interne
+
+Autonomie
+
+6 heures
+
+Caméra :
+
+3 Mégapixels (Auto focus)+ appareil photo VGA
+
+Audio Vidéo : MP3,WMA,AAC,AAC+,3GP, MPEG4,MPEG4 / H.263, Streaming
+Comm. :
+
+WLAN 802.11b/g,Bluetooth V2.0+EDR,USB v1.1
+
+Musique :
+
+128 sonneries polyphoniques,MP3
+
+Messagerie :
+
+SMS/MSN/MMS/Email/Push E-Mail
+
+Dimension :
+
+113 x 58 x 17,4x mm, 130g avec batterie
+
+Page 9
+* Les caractéristisques sont sujettes à des modifications sans préavis. Photos non contractuelles.
+
+Solution GPS autonome - Tout en un
+
+Un nouveau système de navigation ultra léger
+
+R300
+
+- Interface intuitive pour une navigation rapide
+- Capteur automatique de lumière pour plus de sécurité au volant
+- Fonctionnalités multimédia complètes
+- Ultra Fin 13,8mm
+- Facile à transporter
+- Transmetteur FM pour le guidage
+- Navigation 3D ASUS GO
+- Lecteur multimédia
+- Cartographie France et routes principales Europe
+
+CPU :
+
+Samsung 2440 à 400MHz
+
+Système :
+
+Microsoft(R) Windows(R) CE .Net 5.0
+
+Affichage :
+
+3.5'' 65K couleurs 320 x 240 Pixels tactile (QVGA)
+
+Mémoire :
+
+64Mo SDRAM + 128Mo NAND Flash
+
+Avancé :
+
+Capteur de lumière / support SMS / Anti-Echo
+
+Extension :
+
+MicroSD
+
+Audio Vidéo : MP3, WMA, et AAC, MPEG4 / H.263 en lecture et enregistrement
+Comm. :
+
+USB v1.1/ Bluetooth 2.0/transmetteur FM émission et réception des 	
+
+	
+
+appels affichage de l'interlocuteur
+
+Messagerie :
+
+lecture des SMS
+
+Alimentation : 1300 mAh Lithium-Ion / rechargeable
+Dimension :
+
+142 x 82 x 18 mm (L x P x H) - 300 g avec batterie
+
+Solution GPS autonome - Tout en un
+
+R600
+
+Roulez l'esprit tranquille, capteur automatique de
+lumière et fonction Bluetooth 2.0 mains libres
+
+- Conduite sécurisée
+- Navigation simple et rapide
+- Fonctionnalités innovantes
+- Véritable plateforme de divertissements
+- Ecran large pour le confort de navigation
+- Facile à transporter
+- Autonomie accrue
+- Fonction main libre embarquée
+- Capteur de lumière
+- Lecteur multimédia
+- Cartographie France et routes principales Europe
+CPU :
+
+Samsung 2440 à 400MHz
+
+Système :
+
+Microsoft(R) Windows(R) CE .Net 5.0
+
+Affichage :
+
+4.3'' 65K couleurs 480 x 272 TFT.
+
+Mémoire :
+
+64Mo SDRAM + 128Mo NAND Flash
+
+Avancé :
+
+Capteur de lumière / support SMS / Anti-Echo
+
+Extension :
+
+SD
+
+GPS : 	
+
+Destinator v6 cartographie France + grands axes Europe
+
+Audio Vidéo : MP3, WMA, et AAC, MPEG4 / H.263 en lecture et enregistrement
+Comm. :
+
+USB v1.1/ Bluetooth 2.0 émission et réception des appels / affi	
+
+	
+
+chage de l'interlocuteur
+
+Messagerie :
+
+lecture des SMS
+
+Alimentation : 2200 mAh Lithium-Ion / rechargeable
+Dimension :
+
+142 x 82 x 18 mm (L x P x H) - 300 g avec batterie
+
+Page 10
+* Les caractéristisques sont sujettes à des modifications sans préavis. Photos non contractuelles.
+
+Solution GPS autonome - Tout en un
+
+R700
+
+Trouvez votre chemin à l'aide de points de
+repère en 3D facilement identifiables
+
+- Laissez-vous guider à l´aide de cartes 3D pour plus de
+réalisme et de convivialité
+- Des fonctionnalités Bluetooth pour vous garantir une
+conduite paisible
+- Capteur automatique de lumière : la sécurité avant tout
+- Finesse et design tout en élégance
+- Affichage sur écran large 4.3" pour un accès plus
+rapide aux informations
+- Plateforme de divertissements multi-fonctions
+- Monuments historiques et Grandes villes en 3D + relief
+
+CPU :
+
+Samsung 2440 à 400MHz
+
+Système :
+
+Microsoft(R) Windows(R) CE .Net 5.0
+
+Affichage :
+
+4.3'' 65K couleurs 480 x 272 TFT.
+
+Mémoire :
+
+64Mo SDRAM + 1Go NAND Flash
+
+Avancé :
+
+Capteur de lumière / support SMS / Anti-Echo
+
+Extension :
+
+SD
+
+GPS : 	
+
+ASUS GO, TMC intégré
+
+Audio Vidéo : MP3, WMA, et AAC, MPEG4 / H.263 en lecture et enregistrement
+Comm. :
+
+USB v1.1/ Bluetooth 2.0 émission et réception des appels
+/ affichage de l'interlocuteur
+
+Messagerie :
+
+lecture audio des SMS
+
+Alimentation : 1300 mAh Lithium-Ion / rechargeable
+Dimension :
+
+126 x 80 x 13.5 mm (L x P x H) - 260 g avec batterie
+
+Page 11
+
+Catalogue MOBILITE (PDA, GPS, Telephone)
+
+Garantie ASUS
+
+Que ce soit pendant vos voyages d'affaires, loisirs, ou même lors de vos études à l'étranger,
+vous serez toujours en mesure de recevoir le meilleur support clientèle de la part d'ASUS.
+	
+
+Profitez de la garantie et du support ASUS.
+
+Tous les PDA sont couverts par une garantie de 2 ans dans la plupart des territoires avec
+enlèvement sur site. Certains pays peuvent toutefois offrir une extension de la garantie
+- La période de garantie peut différer selon les régions, veuillez consulter votre point de vente
+pour plus d'informations.
+- La garantie n'est plus valide s'il y a un(e) détérioration/dysfonctionnement causé(e) par
+une
+ù acheter
+mauvaise utilisation/manipulation.
+- La garantie n'est plus valide si le système a été désassemblé par l'utilisateur ou par une
+personne autre qu'un technicien ASUS.
+
+O
+
+?
+
+Où acheter ?
+
+www.asus.fr
+
+Avertissement: les informations contenues dans cet imprimé ne concernent que le circuit de distribution des revendeurs spécialisés. Les grandes enseignes et la grande
+
+Page distribution disposent de configurations, d'accessoires fournis et de conditions de garantie qui peuvent être différentes. Pour tout renseignement à ce propos, n'hésitez pas
+12
+à contacter notre service commercial par téléphone au 08.21.23.27.87 (0,12€ TTC / MN) ou par email à l'adresse suivante: revendeur@asus.com
+

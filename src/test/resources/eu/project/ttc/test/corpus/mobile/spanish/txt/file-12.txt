@@ -1,0 +1,554 @@
+zer 19 _6_ galindo rubio, fernando.PDF El audiovisual en la telefonía móvil 3G. 
+Consideraciones formales para una comunicación eficaz 
+(Audiovisuals on the 3G mobile phone. 
+Formal considerations for efficient communication) 
+Fernando Galindo Rubio1 
+ 
+Recibido el 3 de mayo de 2005, aprobado el 27 de julio de 2005 
+ 
+ 
+Resumen 
+La tecnología 3G aporta un nuevo campo para la difusión de mensajes audiovisuales que 
+las principales operadoras de nuestro país han comenzado a desarrollar en convenios con 
+televisiones generalistas. Se ofrecen así contenidos como información, ficción, deportes 
+o música para ser visualizados en terminales móviles operativos con esta tecnología. 
+Sin embargo, y como suele suceder en los albores de cualquier medio de 
+comunicación, no se está produciendo nada más que un trasvase de los mismos formatos 
+y contenidos de la televisión al nuevo medio, algo que, por lógica (y decepción en el 
+consumo), necesita un replanteamiento hacia formatos propios y distintos, ya que las 
+propias peculiaridades técnicas y físicas del terminal móvil 3G se encargan de demostrar 
+que se pierde eficacia comunicativa en el intento. 
+Se propone desde este artículo una revisión del problema, y una enumeración de 
+consideraciones formales que, por imposición técnica en ocasiones, o por la propia 
+experimentación de la frustración que dichos contenidos generan en el consumidor, 
+deben orientar la producción de estos contenidos en busca de una mayor eficacia 
+comunicativa. 
+Palabras clave: Tecnología. Audiovisual. 3G. Móvil. MPEG. 
+ 
+                                                        
+1 Profesor de Tecnología Audiovisual en la Facultad de Comunicación de la Universidad 
+Pontificia de Salamanca. 
+Zer, 19, 2005, p. 127-143 Fernando Galindo Rubio 
+Abstract 
+3G technology contributes a new field for the diffusion of audio-visual messages that the 
+principal operators of Spain have begun to develop in agreement with television compa-
+nies. News, fiction, sports or music are offered for visualisation on mobile operative 
+terminals using this technology. 
+Nevertheless, as occurs in the early days of any form of communication, all that 
+is in fact taking place is a transfer of the same formats and contents from the television to 
+the new media. Logically (and to the disappointment of consumers) this is something 
+that requires rethinking towards different formats appropriate to the new media, since the 
+technical and physical peculiarities of the 3G mobile terminal are demonstrating that 
+communicative efficiency is being lost in the attempt. 
+This article offers a review of the problem, and an enumeration of the formal 
+considerations which - because of technical imposition on occasions, or because of the 
+experience of frustration generated in the consumer by the above mentioned contents - 
+must orientate the production of these contents in the search for greater communicative 
+efficiency. 
+Keywords: Technology. Broadcast. 3G. Mobile. MPEG. 
+ 
+Laburpena 
+3G teknologiak ikusentzuteko mezuen zabalkunderako esparru berria dakar. Espainiako 
+operatzaile nagusiak telebista generalistekin itunak egiten hasi dira. Teknologia horretan 
+eskuragarri dauden gailu mugikorretan ikusgai dauden edukiak eskaintzen dira, hala nola 
+informazioa, fikzioa, kirolak edo musika. 
+Hala eta guztiz ere, edozein komunikabideren hasieran gertatzen den bezala, tele-
+bistatik komunikabide berrira formatu berdinen aldaketa baino ez da ematen ari; logikaz 
+(eta kontsumorako dezepzioaz) beste planteamendu bat behar da, formatu berezko eta 
+ezberdinak, 3G gailu mugikorraren ezaugarri fisiko eta teknikoek komunikazioan eragin-
+kortasuna galtzen dutelako. 
+Artikulu honetan arazoaren beste ikuspegi bat proposatzen da, bai eta ezaugarri 
+formalen azalpena ere, zeinak, behar teknikoengatik batzuetan, edo eduki horiek kontsu-
+mitzaileengan sortzen dituzten frustrazioa esperimentatzeagatik, eduki horien produkzio-
+aren nondik norakoa ezarri behar dute komunikazio-eraginkortasunaren bila. 
+Giltz-hitzak: Teknologia. Ikusentzutekoa. 3G. Mugikorra. MPEG. 
+128  Zer, 19, 2005, p. 127-143 El audiovisual en la telefonía móvil 3G 
+0. Introducción 
+La tercera generación de telefonía móvil, la denominada 3G, ha aterriza-
+do en nuestro potencial comunicativo, y con ella emerge una nueva forma 
+de utilización asentada en la posibilidad de transmitir contenidos multi-
+media a través de una tecnología de transferencia de archivos basada en 
+el protocolo IP de Internet, el UMTS (Universal Mobile Telecomunica-
+tion System). 
+Si el desembarco inicial en España, bien es verdad, no ha sido todo 
+lo exitoso que tanto fabricantes, como desarrolladores de contenidos y 
+operadoras esperaban2, es de prever que esta tecnología novedosa termine 
+imponiendo sus criterios no sólo de especificaciones tecnológicas, sino 
+de hábitos de consumo y recepción de contenidos. 
+Además de los ya conocidos servicios de voz, mensajería de texto e 
+imagen fija, navegación por Internet para móviles y juegos interactivos, 
+el 3G aporta la posibilidad de enviar y recibir archivos de vídeo. 
+Esta oportunidad genera amplias expectativas para las productoras 
+en lo que a nuevo medio de consumo masivo -pero individualizable- de 
+contenidos audiovisuales se refiere. 
+Es una realidad en España que algunas operadoras (Vodafone, 
+Amena y Movistar) ofrecen como servicio añadido la posibilidad de reci-
+bir contenidos audiovisuales en colaboración con cadenas de televisión 
+generalistas3, y es de prever que la oferta siga aumentando, si bien, más 
+                                                        
+2 En este sentido se manifestó la reunión de expertos en 3G del Future Trends Forum en una 
+de sus conclusiones basada en que "el despegue de esta tecnología requiere que los 
+fabricantes y las operadoras se pongan de acuerdo en unos o varios estándares, no sólo de 
+sistemas operativos, sino también de formatos de hardware, de sistemas de seguridad y de 
+lenguajes de programación. Esto hace concluir a los expertos que sería deseable una 
+cooperación entre los diferentes agentes (operadoras, integradores, proveedores de conte-
+nidos, fabricantes de dispositivos móviles) para lanzar la tecnología 3G de manera efectiva. 
+Hasta ahora, el sector público se ha limitado a controlar el espectro radioeléctrico y a recaudar 
+el elevado peaje que las operadoras se han visto obligadas a pagar en las millonarias subastas 
+de las licencias, y cuyo retorno a la inversión ahora es un reto más a superar. En adelante, 
+deberían asumir un papel relevante en la homogeneización de las reglas de juego." En: 
+http://www.anetcom.es/informacion/fichagabinete.asp (disponible el 25 de noviembre de 2004). 
+3 Los tres operadores que ofertan servicio de transmisión de productos audiovisuales han 
+suscrito convenios con diferentes cadenas de televisión y productoras para ofrecer diferentes 
+servicios tanto en forma directa como en descarga diferida. Ver anexo. 
+Zer, 19, 2005, p. 127-143  129 Fernando Galindo Rubio 
+que como servicio en sí mismo, como estrategia de marketing para la 
+captación de nuevos contratos. 
+Sin embargo, y de aquí nace uno de los cuestionamientos de este 
+ensayo, no es fácil la recepción, en un monitor de apenas dos pulgadas, 
+de contenidos elaborados expresamente para televisores mucho más am-
+plios: los gráficos del mapa del tiempo de CNN+ apenas son perceptibles 
+y es complicado seguir con cierta atención los mejores momentos de Aquí 
+no hay quien viva u Homo Zapping. 
+Subyace, por tanto, a esta primera idea, la oportunidad de replan-
+tearse el modelo de producción de contenidos audiovisuales para ser di-
+fundidos a través de la telefonía móvil 3G desde varios puntos de vista: 
+1. Desde el cambio que se produce en la actitud del emisor que 
+debe configurar productos distintos, ajustados en espacio y tiempo al nue-
+vo medio. Es oportuno en este punto revisar los principios del lenguaje 
+audiovisual y las estructuras que lo conforman para poder concluir en un 
+modelo adaptado a un tamaño de pantalla mucho más reducida  de lo 
+habitual. A esto se le añade la relación que un exceso de detalle, movi-
+miento, etc., produce en los archivos resultantes de ejercer compresiones 
+tan fuertes como las necesarias para difundir este tipo de archivos. 
+2. Desde la consideración de mensajes más acordes en su densidad 
+y duración temporal a las características de uso y recepción de los 
+terminales de telefonía móvil 3G. 
+3. Desde las nuevas posibilidades de consideración del receptor que 
+se abren, ya que el consumidor pasa, de ser parte de un target, a ser 
+considerado de forma individual. "Las nuevas tecnologías quiebran el va-
+lor dado al target, fragmentando a los sujetos y volviendo a agregarlos a 
+categorías mucho más individualizadas (customized products)" 
+(Benavides, 1999: 340) 
+Se presenta así, una nueva forma de entender la relación emisor-
+receptor en la producción audiovisual. 
+ 
+130  Zer, 19, 2005, p. 127-143 El audiovisual en la telefonía móvil 3G 
+1. El audiovisual en la telefonía móvil 3G. Desarrollo 
+tecnológico 
+La evolución de la tecnología de servicios de telefonía móvil llega a una 
+nueva generación de terminales, los UMTS, en los que además de los 
+servicios que sus predecesores (GSM, WAP y GPRS) ofertaban: voz, 
+mensajes SMS (servicio de mensajes cortos de texto) y MMS (servicio de 
+mensajes multimedia), navegación por Internet, transmisión de datos y 
+juegos Java (además de todo el bombardeo de logos y melodías en forma 
+de tonos, politonos y real mediante SMS premium), se ofertan servicios 
+en complementariedad con los fabricantes de terminales: video-llamada y 
+vídeo-mensaje. Las cámaras de vídeo se introducen en los móviles con la 
+finalidad de poder desarrollar estos nuevos servicios de forma 
+concluyente. 
+El vídeo-mensaje no es más que una ampliación del MMS gracias a 
+la evolución de la tecnología de transmisión de datos que aumenta consi-
+derablemente el ancho de banda hasta, teóricamente, los 2 Mb/s de des-
+carga de datos frente a los irregulares 64 Kb/s de su predecesor inmediato 
+el GPRS (General Pack Radio Service). 
+Los productos audiovisuales se pueden generar, bien desde 
+dispositivos de captación de vídeo y audio de baja resolución (en torno a 
+1,3 megapíxels) instalados en los terminales móviles 3G, o bien 
+exportando productos terminados en ediciones no lineales a un formato 
+denominado 3Gp4, a través de mensajería MMS. 
+El tipo de compresión, MPEG-45, y la limitación del ancho de 
+banda establecidos por la conversión de archivos de vídeo a este nuevo 
+                                                        
+4 El 3Gp se basa en una compresión interframe ajustada al estándar MPEG-4 cuyos resultados 
+son archivos con una resolución de 176x144 pixels (QCIF) o 128x96 pixels (sub-QCIF) a 15 
+frames por segundo para un ancho de banda de 64Kb/s para la señal de vídeo; y compresión 
+MP3 (AMR) en un ancho de banda de 12,2Kb/s para la pista de audio. 
+5 MPEG-4 es una compresión que permite aislar fragmentos de audio y vídeo de su contexto, 
+de forma que pasan a ser objetos independientes. "Describe the composition of these objects 
+to create compound media objects that form audiovisual scenes" (Koenen, 2002). Es algo muy 
+parecido a lo que se denomina en ámbitos profesionales como el diseño gráfico, trabajo por 
+capas, "First, the object-based model allows that different object types may have different 
+suitable coded representations and objects may be re-used (...) Second, it allows harmonious 
+integration of different types data into one scene: an animated cartoon character in a real 
+Zer, 19, 2005, p. 127-143  131 Fernando Galindo Rubio 
+formato impondrán limitaciones tanto en la ejecución de tomas y planos 
+como en la duración de los contenidos si se espera que su recepción 
+alcance una calidad digna de ser considerada eficaz por el emisor. 
+De esta forma, se muestra la siguiente tabla comparativa elaborada 
+expresamente para este ensayo: 
+ 
+Archivo inicial AVI-PAL Broadcast Sorenson Vídeo 3 (Betacam SX) (Internet) 
+Resolución 720x576 pixels 320x240 pixels 
+Tamaño inicial 92.6 Mb 1.700 Kb 
+Duración 25" 30" 
+Codec de compresión QCIF de Quick Time QCIF de Quick Time 
+Ratio de compresión 458/1 6/1 
+Tamaño final 202 Kb 274 Kb 
+Resolución final 176x144 pixels 176x144 pixels 
+Resultados obtenidos a partir de conversiones realizadas con el programa Nokia 
+Multimedia Converter 2.0. 
+ 
+De lo que se desprende que los conversores asignan de antemano 
+un tamaño de archivo (aproximadamente 9 Kb) para cada segundo de ví-
+deo que se comprima, ajustando de esta forma el ratio de compresión al 
+tamaño original del archivo. 
+Este hecho se produce para optimizar la bajada de archivos a través 
+de esta nueva tecnología que aunque, en teoría, permite una descarga de 
+datos de 2 Mb/s, en realidad, y en el caso español, sólo permite compartir 
+384 Kb/s por cuadrante, un ancho de banda aún muy limitado para la 
+transmisión de contenidos audiovisuales a tiempo real y con calidad de 
+recepción aceptable. 
+ 
+2. Adaptación del lenguaje audiovisual a la tecnología 3G 
+De lo expuesto se puede concluir que el uso de la compresión interframe, 
+"eliminación de pixels redundantes en las diferentes imágenes fijas de 
+una secuencia animada" (Galindo Rubio, 2004: 189) y la escasa disposi-
+                                                                                                                                  
+world, or a real person in a virtual studio set. Third, interacting with the objects and 
+hyperlinking from them is now feasible". (Pereira, 2000:5) 
+132  Zer, 19, 2005, p. 127-143 El audiovisual en la telefonía móvil 3G 
+ción de ancho de banda, originan la necesidad de actualizar determinadas 
+categorías del lenguaje audiovisual a la tecnología 3G. 
+Esta necesidad surge, fundamentalmente, de la necesidad de 
+conseguir reducidos tamaños de fichero con la mejor calidad posible, de 
+forma que la compresión no afecte mucho a la calidad de la imagen y a la 
+vez resulten archivos lo suficientemente ligeros como para ser transmi-
+tidos con rapidez y seguridad. 
+Los epígrafes que a continuación se desarrollan se centran sólo en 
+los cambios que se consideran más relevantes y no en el total de los 
+sistemas y subsistemas que componen el amplio espectro del lenguaje 
+audiovisual. 
+ 
+2.1. Cambios en la articulación del plano 
+A la hora de capturar imágenes que posteriormente formen mensajes 
+destinados a ser recibidos por terminales móviles 3G, es interesante tener 
+en cuenta las siguientes recomendaciones: 
+1. Uso de los planos cortos frente a los planos generales: El nivel 
+de detalle que ofrece una compresión tan fuerte como la que se está 
+tratando no aconseja que sean muchos los objetos presentes a describir en 
+un mismo plano, ya que la baja calidad de la imagen y el pequeño tamaño 
+físico de ésta (en torno a 2"), apenas permitirá reconocer dichos objetos. 
+Por otra parte, los primeros planos son los más adecuados, ya que 
+la cantidad de frames redundantes es muy alta en comparación con los 
+nuevos frames completos (intraframes)6, que son los únicos 
+absolutamente nuevos de toda la cadena MPEG, máxime si se consigue 
+                                                        
+6 La composición de una cadena MPEG es la siguiente: "Se distinguen tres tipos de frames : 
+los "I" o intraframes, "P" o foto predicha y "B" o frames bidirecionales.. Los "I" son los 
+únicos fotogramas completos en una cadena MPEG. Contienen pues una información 
+completa, lo que los convierte en posibles puntos de acceso aleatorio. 
+Los "P" son frames basados en uno anterior pero conteniendo sólo las diferencias. Están muy 
+comprimidos. 
+Los "B" son referencias tanto a uno anterior como a uno futuro y son los que menos ocupan. 
+(Galindo Rubio, 2004:189) 
+Zer, 19, 2005, p. 127-143  133 Fernando Galindo Rubio 
+que el fondo sobre el que se representa el plano corto sea estable 
+(idealmente un color plano). 
+2. Del mismo modo es aconsejable evitar los movimientos de 
+cámara y los movimientos ópticos. Ambos entrañan un riesgo, ya que 
+cualquier cambio sustancial en la imagen genera nuevos frames comple-
+tos que aumentan considerablemente el peso del archivo. 
+3. Tendencia a los encuadres clásicos. El tamaño del monitor que 
+se encuentra en el dispositivo móvil 3G es muy reducido. Además, su 
+observación no siempre es fácil (hay que recordar que la esencia de los 
+terminales móviles radica en la posibilidad que ofrecen de ser usados en 
+cualquier estancia, pero hay que recordar así mismo que un monitor de 
+televisión, cualquiera que sea su tamaño, ofrece reflejos, destellos, 
+contraluces, etc., originados por la variabilidad de las condiciones lumíni-
+cas externas). Así, es aconsejable recurrir a pautas de composición y 
+encuadre clásicas, que planteen las menores posibles incógnitas a la 
+percepción visual inmediata del espectador. Este hecho se torna más 
+relevante aún, si pensamos que los mensajes audiovisuales difundidos por 
+UMTS van a ser lo suficientemente cortos de duración como para no 
+impacientar nuestro bolsillo, por lo tanto, la claridad de encuadre y 
+compositiva aumentará la eficacia comunicativa. 
+4. A la hora de seleccionar la profundidad de campo de la fotogra-
+fía de las imágenes seleccionadas, es preferible optar por una profundidad 
+de campo limitada mediante el uso, por ejemplo, de teleobjetivos al estilo 
+de la praxis en realización publicitaria en el momento de aislar el produc-
+to de su entorno: un fondo desenfocado apenas genera nuevos frames 
+completos, mientras que los planos con una gran profundidad de campo 
+aumentan el número de detalles y con ello, la exigencia de esfuerzo 
+solicitado al códec de compresión siendo, por ende, la calidad de la 
+imagen, inferior. 
+ 
+2.2. Cambios en la concepción de las estructuras temporales 
+Si la noción del espacio ha de adecuarse a las peculiaridades técnicas de 
+la tecnología en cuestión, también las estructuras en las que se articula el 
+134  Zer, 19, 2005, p. 127-143 El audiovisual en la telefonía móvil 3G 
+tiempo de la acción del mensaje audiovisual se van a ver sometidas a 
+puntualizaciones que optimicen su uso en pos de la eficacia 
+comunicativa: 
+1. La primera tendencia significativa que se debe apuntar es la 
+pertinencia de utilizar el menor número de unidades temporales (planos, 
+escenas, secuencias, etc.) posible. Una vez más, las limitaciones que ofre-
+ce la compresión utilizada por el formato establecido, aconsejan econo-
+mía en este aspecto. Se podría hablar, desde este punto de vista, de utili-
+zación de ritmos, tanto internos como externos, lo más lentos posibles. La 
+explicación es, de nuevo, la alta cantidad de nuevos frames completos 
+que un elevado ritmo de montaje generaría. 
+2. El uso de transiciones como encadenados, fundidos, cortinillas, 
+etc., no es lo más recomendable, como tampoco lo serán los cambios 
+bruscos de las tonalidades cromáticas ni de la iluminación de las imáge-
+nes ya que esto, nuevamente, generará un aumento exponencial de los 
+nuevos frames completos de la cadena comprimida de vídeo. 
+3. Sí es pertinente, por otra parte, adoptar una actitud de brevedad y 
+concisión por parte del emisor del mensaje audiovisual destinado a ser di-
+fundido a través de la tecnología UMTS, basada en una doble explicación. 
+En primer lugar, el limitado ancho de banda existente, que no 
+aconseja transferencias de archivos de gran tamaño para evitar un exce-
+sivo tiempo de descarga que devenga en aburrimiento, incremento del 
+coste económico de la transmisión7 y aumento de la inestabilidad en la 
+cobertura8. 
+En segundo término, el momento de la visualización en virtud de 
+las peculiaridades físicas del terminal aconsejan que el mensaje sea bre-
+ve, ya que no es fácil imaginar el mantenimiento de la atención hacia un 
+                                                        
+7 Castelló y Avia nos recuerdan que "no podemos olvidar que, a diferencia de la Internet 
+convencional, los servicios de valor añadido de la Internet móvil no son gratuitos. Por tanto, 
+el pago debe ser simple, seguro y fiable" (Castelló y Avia, 2004). 
+8 Según las especificaciones originales, "la velocidad de transferencia de datos que la UIT 
+requiere en su solución IMT-2000 (UMTS) va desde los 144 kbit/s sobre vehículos a gran 
+velocidad hasta los 2 Mbit/s sobre terminales en interiores de edificios, pasando por los 384 
+kbit/s para usuarios móviles en el extrarradio, o vehículos a baja velocidad." En: 
+http://www.webmovilgsm.com/umts.htm (Disponible 21/04/05). 
+Zer, 19, 2005, p. 127-143  135 Fernando Galindo Rubio 
+medio cuyas condiciones de uso implican movilidad y concentración de 
+la recepción en un espacio significativamente pequeño. No observar una 
+preocupación por éste hecho puede reeditar la misma decepción que 
+causaron tecnologías anteriores como el WAP. "Las limitaciones de los 
+terminales telefónicos (pantallas pequeñas, teclados incómodos, et.). El 
+resultado fue un fracaso, en contra de las previsiones de la industria de 
+las telecomunicaciones en general y, en concreto, de los operadores que 
+veían en esta tecnología un camino seguro para aumentar el ingreso 
+medio por usuario. La sentencia de los usuarios fue inexorable: rechazo 
+generalizado al WAP al constatar la nula usabilidad que ofrecían las 
+páginas de información, la exasperante lentitud del servicio y, para 
+colmo, la oferta escasa y poco útil de servicios y contenidos." (Castelló y 
+Avia, 2004) 
+ 
+2.3. Cambios en la utilización del diseño gráfico 
+Otro aspecto sujeto a revisión como elemento del lenguaje audiovisual es 
+la utilización de los recursos gráficos. Si la tendencia en la producción 
+audiovisual broadcast es la proliferación del diseño gráfico y los efectos 
+de postproducción digital como elementos vertebradores de la espectacu-
+laridad televisiva, una vez más la idea de contemplación de los mensajes 
+audiovisuales en un espacio reducido conduce a cuestionar la utilización 
+de estos elementos. "No vas a poder crear una experiencia inmersiva en 
+una pantalla de 2 pulgadas, sean como sean los gráficos. Gráficos atmos-
+féricos o caprichosos están fuera de las posibilidades. Gráficos divertidos 
+y a la moda es lo mejor que se puede hacer" (Carmack, 2005). 
+El hecho del exiguo tamaño de la pantalla del terminal móvil 3G, 
+obliga también a un replanteamiento del cómo deben ser los textos en el 
+grafismo: 
+1. Han de aumentar notablemente su tamaño para ser recibidos con 
+absoluta nitidez. Esto conlleva, además, un nuevo intento de concisión y 
+simpleza, superior incluso al de los titulares en prensa escrita, ya que es 
+probable que el monitor de un móvil 3G no soporte más que unas pocas 
+palabras simultáneamente para ser leídas con corrección. 
+136  Zer, 19, 2005, p. 127-143 El audiovisual en la telefonía móvil 3G 
+2. Serán preferibles las tipografías sin serifa, ya que son más 
+simples en su formación y, por tanto, en su lectura. 
+3. Son poco aconsejables los movimientos de roll y crawl9 en los 
+rótulos, ya que éstos, por muy simples que sean, generan nuevos frames 
+completos que aumentan el tamaño del archivo. 
+4. En cuanto a las dominantes cromáticas, no es tan importante 
+decidir si es preferible texto claro sobre fondo oscuro, o viceversa, como 
+concluir que lo que realmente facilita la lectura es un elevado contraste 
+entre las variantes cromáticas elegidas para fondo y texto. 
+5. Por último, es pertinente recurrir al simbolismo y a la 
+simplicidad en logotipos y anagramas de marcas comerciales o señas 
+corporativas, frente a un excesivo realismo de los mismos que puede en 
+ocasiones llegar a ser irreconocible. 
+ 
+2.4. Cambios en la recepción del audio 
+En cuanto al subsistema auditivo se adivinan dos cambios sustanciales en 
+la concepción que el emisor de productos audiovisuales debe plantearse 
+en el momento de crear sus mensajes, uno de fundamento tecnológico y 
+otro de tipo argumentativo. 
+1. Desde el punto de vista tecnológico, el altavoz del televisor se 
+sustituye por auriculares en la mayoría de las ocasiones, ya que los alta-
+voces que incorporan los dispositivos móviles 3G, por su limitado tama-
+ño, requieren de condiciones muy óptimas y específicas de aislamiento 
+para poder ser utilizados con garantía de conseguir eficacia comunicativa. 
+2. Este hecho lleva al planteamiento de considerar como pertinente 
+el hecho de entender que los mensajes que se van a recibir se harán de 
+forma individualizada. Esto implica que la comunicación audiovisual 
+deja (como ya lo hiciera en su tiempo el medio radio) de dirigirse a 
+                                                        
+9 Los movimientos de roll y crawl son desplazamientos verticales y horizontales de los 
+rótulos a lo largo y ancho de la pantalla, respectivamente. Aún considerando su posible 
+simpleza, para el cálculo de la imagen no dejan de ser nuevos frames completos que aumenta 
+el trabajo del procesador. 
+Zer, 19, 2005, p. 127-143  137 Fernando Galindo Rubio 
+núcleos familiares o colectivos reunidos en torno a un televisor para 
+centrarse en un solo individuo receptor. 
+Sin embargo, y a diferencia de lo que ocurre con la compresión de 
+las imágenes, la compresión del audio en MP3 no presenta limitaciones a 
+la riqueza expresiva del mensaje, ya que aunque se trata de una com-
+presión con pérdidas10, el bajo peso del archivo resultante, 12,2 Kb/s., no 
+parece demasiado importante como para escatimar en recursos. 
+ 
+3. Conclusiones 
+De todos los factores antes reseñados podría deducirse que no merece la 
+pena gastar esfuerzos, ni económicos ni creativos, en elaborar productos 
+audiovisuales para ser difundidos a través del nuevo tipo de receptor que 
+supone el terminal móvil 3G, dado el encorsetamiento al que somete la 
+todavía incipiente tecnología UMTS. 
+Sin embargo, nada más lejos de la realidad. Dicha afirmación se 
+agota si se entiende, desde un principio, que se debe buscar un nuevo mo-
+delo de producción dirigido a este medio específico. No será exitoso in-
+tentar difundir por este nuevo medio productos preparados para su emi-
+sión en el sistema televisivo, tradicionalmente entendido, como tampoco 
+lo fue en su día la transposición literal de los periódicos impresos a 
+Internet. 
+Así, del mismo modo que en su momento se generaron reflexiones 
+que han ido optimizando la apuesta por la prensa diaria de actualidad en 
+Internet, en conceptos de usabilidad y tratamiento de contenidos, se ori-
+ginan desde esta reflexión las siguientes características que debería obser-
+var un modelo de creación de productos audiovisuales para ser difundi-
+dos vía UMTS a terminales 3G, si desea obtener eficacia comunicativa, 
+entendida ésta como comprensión óptima del mensaje emitido: 
+                                                        
+10 El MP3 (o MPEG-1 "layer 3") es un sistema de compresión de audio 10:1 y se está 
+posicionando como un estándar de compresión de archivos de audio no sólo por su cantidad 
+sino por su calidad de compresión. Se trata de una compresión con pérdidas, pero son casi 
+inaudibles. 
+138  Zer, 19, 2005, p. 127-143 El audiovisual en la telefonía móvil 3G 
+1. Diferenciación: De los mensajes audiovisuales emitidos por los 
+canales generalistas como la televisión o el cine. El producto audiovisual 
+para 3G debe tener características propias, formales y de contenido dis-
+tintas que hagan atractivo su consumo y rentable su comercialización. 
+2. Exclusividad: El contenido recibido debe ajustarse a las 
+preferencias y gustos del consumidor, ya que, a diferencia de la televi-
+sión, es posible identificar uno a uno los posibles clientes mediante su nú-
+mero de teléfono único. 
+3. Nuevos contenidos: La originalidad de los contenidos es 
+fundamental para conseguir que los consumidores de estos productos 
+prefieran recibirlos a través del terminal móvil. En este aspecto, contén-
+dos como la publicidad personalizada y los servicios son un referente im-
+portante a tener en cuenta. 
+4. Interactividad: La posibilidad de interactuar que la tecnología 
+UMTS abre al ámbito audiovisual es una posibilidad a tener en cuenta 
+para lograr diferenciar los contenidos de los emitidos por los medios li-
+neales como la televisión o el cine tradicionales. Los espacios de ficción 
+con múltiples finales son un ejemplo claro de esta posibilidad. 
+5. Contenidos fasciculados: Ya que la duración de los contenidos 
+no debe ser muy extensa, recurrir a los contenidos en varias entregas au-
+menta la sensación de intriga y expectativa, sobre todo ante los productos 
+de ficción. 
+6. Bajo precio: El coste de descargar un producto audiovisual de 
+esta índole no debe ser mayor que el originado por la descarga de los 
+datos. Si no es así, la tecnología UMTS está expuesta a correr el mismo 
+derrotero que sus precedentes WAP y GPRS. 
+7. Brevedad: Por razones técnicas y de circunstancias de recepción, 
+el producto audiovisual para telefonía 3G no debería superar el medio 
+minuto de duración si pretende ser comprendido en su totalidad. 
+8. Simplicidad: Formal y de contenidos. Un mensaje breve recibido 
+en un monitor de apenas dos pulgadas debe ser simple en el tratamiento 
+compositivo para no dispersar la atención, y conciso en el contenido para 
+evitar pérdidas de eficacia comunicativa. 
+Zer, 19, 2005, p. 127-143  139 Fernando Galindo Rubio 
+9. Redundancia: Un elemento comunicativo a favor de estos 
+productos, a diferencia de la fugacidad de los mensajes audiovisuales en 
+televisión o cine, es la posibilidad de grabar en el terminal los mensajes y 
+reeditar los visionados obteniendo redundancia en los mensajes. Este 
+hecho es importante para los mensajes publicitarios en especial, que, en 
+el caso de ser customizados, otorgan al receptor una interesante sensación 
+de exclusividad al mostrarlo a otros individuos del entorno. 
+10. Medio complementario: A otros canales tradicionales. Iniciar 
+una trama en televisión y sólo poder desvelar su final a través de un vídeo 
+3G sería un ejemplo maquiavélico de lo que pueden llegar a generar 
+sinergias similares. Los productores de contenidos audiovisuales deben 
+ver en la telefonía 3G, un medio que complemente estrategias narrativas, 
+no que las sustituya. 
+ 
+4. Alternativa: un proyecto de producción audiovisual 
+customizado 
+Una vez expuestas las características concluyentes que debe seguir el 
+productor de contenidos audiovisuales para el 3G, emerge una alternativa 
+como planteamiento para nuevos desarrollos, que base su eficacia comu-
+nicativa en la posibilidad de customizar los mensajes audiovisuales. 
+Se trata de aprovechar la versatilidad que otorgan los sistemas de 
+edición de vídeo no lineales para realizar distintas versiones de un mismo 
+producto. 
+De esta forma, se conseguiría difundir a cada cliente potencial un 
+producto, si no personalizado, sí fuertemente segmentado, en función de 
+sus preferencias, ya sea en el ámbito publicitario, de ficción, de contén-
+dos deportivos, etc. Es algo similar a lo que Kevin Thomson pretende con 
+el público interno de las organizaciones al hablar del contrato emocional: 
+"contar a cada cliente (interno) exactamente aquello que quiere escuchar" 
+(Thomson, 2000: 88). 
+Este hecho aportaría una gran sensación de exclusividad que 
+rompería una de las barreras importantes: el coste económico, y por ende, 
+haría rentable la comercialización de este tipo de contenidos. 
+140  Zer, 19, 2005, p. 127-143 El audiovisual en la telefonía móvil 3G 
+Anexo a nota 2 
+Según la información publicada en sus páginas web, la oferta quedaría 
+configurada de la siguiente forma: 
+Movistar 
+Vodafone (a través del servicio Amena 
+e-moción) 
+CNN+ (directo y diferido), El Diario: Noticias de 
+El Mundo.es actualidad. (diferido) Bloomberg TV TV3: 
+(diferido), Europa Press Noticias económicas: actualidad, tiempo y bolsa 
+(diferido) Expansión TV (diferido) (diferido). 
+A3 TV: "Buenafuente", 
+"Aquí no hay quien viva", 
+"El inquilino", "Homo 
+Zapping", "Mis adorables 
+vecinos".   
+Canal+: "Guiñoles de 
+Canal+". 
+TVE: "TVE Recuerda" 
+(todos en diferido). 
+Descarga de trailers 
+procedentes de: Sogecable, 
+Disney Mobile, Sony Descarga de trailers Descarga de trailers 
+Pictures Mobile E., Universal 
+y Warner Bros Pictures. 
+Goles y resúmenes de Liga, 
+Copa y Champions Fútbol en vivo: resúmenes y Resúmenes y goles de la 
+(todos en diferido). goles de la jornada jornada de la liga 
+Descarga de vídeo clips 
+musicales procedentes de Descarga de vídeo clips Descarga de vídeo clips 
+MTV musicales musicales 
+Curso on line de bolsa y 
+  negocios. 
+Humor 
+Fuentes (disponibles junio de 2005): 
+http://www.vodafone.es/Vodafone/LaCompanya/NotaSalaPrensa/0,3203,9884,00.html 
+http://www.movistar.es/particulares/servicios/videoservicios/videodescargas.htm 
+http://www.amena.com/servicios_3G/particulares/videotelevision.html 
+Zer, 19, 2005, p. 127-143  141 
+ 
+Otros Música Deporte Cine Programas de televisión Noticias Operador Fernando Galindo Rubio 
+Los precios de las descargas también varían en función de cada 
+operadora. Indistintamente del tipo de contrato suscrito con cada una de 
+ellas, sólo Vodafone mantiene la esencia del UMTS, que es cobrar sólo 
+por tamaño de archivo descargado, siendo la navegación y el tiempo de 
+descarga gratuitos. Tanto Amena como Movistar cobran tanto el archivo 
+descargado como el tiempo de navegación y el tiempo empleado en su 
+descarga. 
+142  Zer, 19, 2005, p. 127-143 El audiovisual en la telefonía móvil 3G 
+Referencias 
+BENAVIDES, Juan (1999). "Tecnología, publicidad y marketing frente a los 
+nuevos valores del consumo. ¿Nuevos servicios para nuevas 
+necesidades?" En: FRANQUET, Rosa; LARRÈGOLA, Gemma (Ed.). 
+Comunicar a l´era digital. Barcelona: Societat Catalana de 
+Comunicació. 
+CASTELLÓ, Enric; AVIA, Marc (2004). "Periodismo vía MMS. El caso de El 
+día en cinco imágenes de La Vanguardia". En: Zer nº 16. 
+CARMACK, John (2005). "Aventuras con el teléfono móvil". En: Vida 
+Artificial. [http://vidaartificial.com/?q=node/91] (Disponible 21/04/2005). 
+GALINDO RUBIO, Fernando (2004). Comunicación audiovisual corporativa. 
+Salamanca: Universidad Pontificia de Salamanca. 
+KOENEN, Robert (2002). "Overview of the MPEG-4 standard". En: 
+[http://mpeg.telecomitalialab.com/standards/mpeg4/mpeg-4.htm] 
+(Disponible 16/03/2003). 
+PEREIRA, Fernando (2000). "MPEG-4: Why, What, How and When?". En: 
+Image Communication Journal, Tutorial issue on the MPEG-4 
+Standard, Vol.15, nº 4-5. 
+THOMSON, Kevin (2000). El capital emocional. Madrid: ESIC. 
+Zer, 19, 2005, p. 127-143  143

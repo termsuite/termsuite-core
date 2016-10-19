@@ -1,0 +1,5040 @@
+U8100-9
+Téléphone mobile alimenté par AndroidMD
+
+Guide de l'utilisateur
+
+Prodigieuse communication, vie mobile.
+Téléphone cellulaire HUAWEI U8100-9
+Guide de l'utilisateur
+
+À lire avant de commencer ....................................................1
+Mesures de sécurité.............................................................................. 1
+Avis et droits d'auteur............................................................................ 5
+
+Découvrir votre téléphone cellulaire...................................10
+Contenu de la boîte............................................................................. 10
+Aperçu du téléphone cellulaire............................................................ 11
+Commencer à utiliser votre téléphone cellulaire ................................. 14
+Allumer ou éteindre votre téléphone cellulaire .................................... 17
+Utiliser l'écran tactile ........................................................................... 20
+Verrouiller et déverrouiller l'écran ....................................................... 21
+Écran d'accueil.................................................................................... 23
+Canevas .............................................................................................. 29
+Dossiers .............................................................................................. 32
+Notifications et informations d'état ...................................................... 35
+Utiliser une carte microSD .................................................................. 39
+
+Appel......................................................................................42
+Faire un appel ..................................................................................... 42
+Répondre à un appel ou le refuser...................................................... 46
+Utiliser le Journal des appels .............................................................. 48
+Autres opérations pendant un appel ................................................... 49
+Utiliser le mode Avion ......................................................................... 51
+
+Contacts ................................................................................52
+Ouvrir et consulter les contacts........................................................... 52
+Table des matières
+
+i
+
+Ajouter et supprimer des contacts....................................................... 57
+Modifier un contact.............................................................................. 60
+Importer des contacts à partir d'une carte SIM ................................... 64
+Rechercher un contact ........................................................................ 64
+
+Utilisation du clavier virtuel.................................................67
+Afficher le panneau du clavier............................................................. 67
+Personnalisation des paramètres du clavier ....................................... 74
+
+Messagerie ............................................................................78
+SMS et MMS ....................................................................................... 78
+Courriel................................................................................................ 86
+
+Se connecter .........................................................................92
+GPRS/3G ............................................................................................ 92
+Wi-Fi .................................................................................................... 93
+Navigateur ........................................................................................... 95
+Bluetooth ............................................................................................. 99
+Relier le téléphone à un ordinateur par connexion USB ................... 103
+Comportement modem ..................................................................... 105
+
+Divertissement ....................................................................106
+Prendre des photos et enregistrer des vidéos .................................. 106
+Utiliser la galerie................................................................................ 112
+Écouter de la musique ...................................................................... 115
+Écouter la radio FM ........................................................................... 118
+Table des matières
+
+ii
+
+Services Google..................................................................122
+Créer un compte Google................................................................... 122
+Utiliser Gmail ..................................................................................... 124
+Utiliser Google Talk........................................................................... 128
+Utiliser Maps ..................................................................................... 131
+Utiliser YouTube................................................................................ 134
+
+Synchroniser les informations ..........................................139
+Gérer vos comptes ............................................................................ 139
+Personnaliser la synchronisation de compte..................................... 143
+Synchroniser les données à l'aide de PC Suite ................................ 145
+
+Utiliser d'autres applications.............................................147
+Utiliser l'agenda................................................................................. 147
+Utiliser l'alarme.................................................................................. 156
+Utiliser l'enregistreur audio................................................................ 160
+Utiliser le gestionnaire de fichiers ..................................................... 162
+Utiliser la calculatrice ........................................................................ 166
+Utiliser le bloc-notes .......................................................................... 167
+
+Gérer votre téléphone cellulaire ........................................168
+Régler la date et l'heure .................................................................... 168
+Régler l'affichage .............................................................................. 169
+Régler les sonneries ......................................................................... 171
+Régler les services du téléphone ...................................................... 174
+Régler la synthèse vocale à partir d'un texte .................................... 176
+Table des matières
+
+iii
+
+Protéger votre téléphone cellulaire ................................................... 177
+Gérer les applications ....................................................................... 179
+Réinitialiser votre téléphone cellulaire............................................... 180
+Mettre à niveau la version du logiciel ................................................ 182
+
+Annexe.................................................................................184
+Avertissements et consignes de sécurité.......................................... 184
+
+Table des matières
+
+iv
+
+À lire avant de commencer
+Mesures de sécurité
+Veuillez lire attentivement les mesures de sécurité afin de
+vous assurer d'utiliser correctement votre téléphone cellulaire.
+Ne frappez pas ni ne lancez ou perforez le
+téléphone cellulaire. Évitez de laisser tomber,
+d'écraser ou de plier le téléphone cellulaire.
+N'utilisez pas le téléphone cellulaire dans un
+endroit humide, tel qu'une salle de bain. Évitez
+de mouiller le téléphone cellulaire ou de le laver
+avec un liquide.
+N'allumez pas le téléphone cellulaire lorsque
+l'utilisation d'un téléphone est interdite ou si elle
+risque de provoquer des interférences ou de
+présenter un danger.
+N'utilisez pas le téléphone cellulaire pendant
+que vous conduisez.
+À lire avant de commencer
+
+1
+
+Respectez tous les règlements en vigueur dans
+les centres hospitaliers ou de soins de santé.
+Éteignez le téléphone cellulaire à proximité
+de tout équipement médical.
+Éteignez le téléphone cellulaire à bord d'un
+avion; il risquerait d'interférer avec les appareils
+de commande de l'aéronef.
+Éteignez le téléphone cellulaire à proximité
+d'appareils électroniques de haute précision; il
+risquerait d'interférer avec leur fonctionnement.
+N'essayez pas de désassembler le téléphone
+cellulaire ni ses accessoires. Seuls les
+techniciens qualifiés sont autorisés à effectuer
+l'entretien ou la réparation de votre téléphone.
+
+À lire avant de commencer
+
+2
+
+Ne mettez pas le téléphone cellulaire ni ses
+accessoires dans un contenant possédant
+un champ électromagnétique intense.
+Ne mettez pas de cartes de stockage
+magnétiques à proximité de votre téléphone
+cellulaire. Les radiations qu'il émet risqueraient
+d'effacer l'information qu'elles contiennent.
+Ne rangez pas le téléphone cellulaire dans un
+endroit où la température est élevée ou qui
+contient des gaz inflammables, comme une
+station-service.
+Maintenez le téléphone cellulaire ainsi que
+ses accessoires hors de la portée des enfants.
+Ne laissez pas un enfant se servir du téléphone
+cellulaire sans votre supervision.
+Pour éviter tout risque d'explosion, n'utilisez
+que des piles et des chargeurs approuvés.
+
+À lire avant de commencer
+
+3
+
+Respectez toutes les lois et les règlements
+ayant trait à l'utilisation d'appareils sans fil.
+Lorsque vous utilisez votre appareil sans fil,
+veillez à respecter la vie privée et les droits des
+autres personnes.
+Pendant l'utilisation du câble USB, veuillez
+suivre à la lettre les instructions du présent
+guide. Sinon, vous risqueriez d'endommager
+votre téléphone cellulaire ou votre ordinateur.
+
+À lire avant de commencer
+
+4
+
+Avis et droits d'auteur
+Copyright © Huawei Technologies Co., Ltd 2010. Tous droits
+réservés.
+Il est interdit de reproduire ou de transmettre une partie
+quelconque de ce document, sous quelque forme ou de
+quelque façon que ce soit, sans l'autorisation écrite préalable
+de Huawei Technologies Co., Ltd.
+Le produit décrit dans le présent guide peut comprendre un
+logiciel protégé par un droit d'auteur appartenant à Huawei
+Technologies Co., Ltd. et à de possibles concédants de
+licences. Il est interdit au client de reproduire, distribuer,
+modifier, décompiler, désassembler, décrypter, extraire,
+rétroconcevoir, louer, céder ou accorder une sous-licence
+dudit logiciel, de quelque manière que ce soit, à moins que
+ces restrictions soient interdites par la législation applicable ou
+que ces actions aient été approuvées par les détenteurs
+autorisés des droits d'auteur respectifs.
+
+Marques de commerce et permissions
+
+À lire avant de commencer
+
+5
+
+,
+et HUAWEI sont des marques de commerce ou des
+marques déposées de Huawei Technologies Co., Ltd.
+
+Les autres noms de marques de commerce, de produits, de
+services et d'entreprises mentionnés appartiennent à leurs
+propriétaires respectifs.
+
+Avis
+Certaines fonctions du produit et des accessoires décrits dans
+ce guide dépendent du logiciel installé, des capacités et des
+paramètres du réseau local, et il est possible qu'elles soient
+désactivées ou limitées par les exploitants de réseau local
+ou les fournisseurs de services de réseau. Par conséquent,
+les descriptions figurant dans ce guide peuvent ne pas
+correspondre exactement au produit ou aux accessoires dont
+vous avez fait l'achat.
+Huawei Technologies Co., Ltd. se réserve le droit de modifier
+sans préavis ni obligation les informations ou les spécifications
+figurant dans le présent guide.
+En aucun cas, Huawei Technologies Co., Ltd. ne pourra être
+tenue responsable de la légitimité ni de la qualité des produits
+téléversés ou téléchargés à partir de votre téléphone cellulaire,
+y compris, sans s'y limiter, les messages textes, les photos, les
+À lire avant de commencer
+
+6
+
+fichiers de musique, les vidéos et les logiciels de tiers protégés
+par des droits d'auteur. Les conséquences découlant de
+l'installation ou de l'utilisation des produits sus-mentionnés
+sur le téléphone cellulaire relèvent de votre responsabilité.
+
+À lire avant de commencer
+
+7
+
+AUCUNE GARANTIE
+LE CONTENU DU PRÉSENT GUIDE EST FOURNI
+« TEL QUEL ». SOUS RÉSERVE DES LOIS APPLICABLES,
+AUCUNE GARANTIE SOUS QUELQUE FORME QUE CE
+SOIT, EXPLICITE OU IMPLICITE, Y COMPRIS, MAIS SANS
+S'Y LIMITER, LES GARANTIES IMPLICITES DE QUALITÉ
+MARCHANDE ET D'ADÉQUATION À UN USAGE
+PARTICULIER, N'EST ACCORDÉE QUANT À
+L'EXACTITUDE, À LA FIABILITÉ OU AU CONTENU
+DU PRÉSENT GUIDE.
+DANS LA MESURE OÙ LE PERMETTENT LES LOIS
+APPLICABLES, HUAWEI TECHNOLOGIES CO., LTD. N'EST
+EN AUCUN CAS RESPONSABLE DE TOUT DOMMAGE
+PARTICULIER, ACCESSOIRE, INDIRECT OU
+CONSÉQUENT, NI DE TOUTE PERTE DE BÉNÉFICES,
+D'AFFAIRES, DE REVENUS, DE DONNÉES, DE FONDS DE
+COMMERCE OU D'ÉPARGNES PRÉVUES.
+
+À lire avant de commencer
+
+8
+
+Réglementation concernant l'importation et l'exportation
+Le client doit respecter toutes les lois applicables réglementant
+l'importation et l'exportation et se procurer auprès de son
+gouvernement tous les permis et licences nécessaires afin
+d'exporter, réexporter ou importer le produit décrit dans le
+présent guide, y compris le logiciel et les données techniques
+qu'il contient.
+
+À lire avant de commencer
+
+9
+
+Découvrir votre téléphone
+cellulaire
+Votre téléphone cellulaire peut être utilisé dans presque tous
+les pays. Vous pourrez donc communiquer à l'aide de votre
+téléphone où que vous soyez.
+
+Contenu de la boîte
+Vous trouverez dans la boîte de votre téléphone cellulaire bien
+plus que l'appareil lui-même. Elle contient aussi tous les
+accessoires pratiques suivants :
+• Téléphone cellulaire
+• Pile
+• Chargeur
+• Câble USB
+• Guide de démarrage rapide
+• Informations sur la sécurité
+Découvrir votre téléphone cellulaire
+
+10
+
+Aperçu du téléphone cellulaire
+Caractéristiques principales
+Écouteur
+
+Volume
+
+Ouverture de la dragonne
+Appareil
+Haut-parleur
+
+Touche
+Appareil photo
+Touche
+Navigation
+ok
+key
+
+Microphone
+Interface de recharge/données
+Casque d'écoute
+
+Découvrir votre téléphone cellulaire
+
+11
+
+Fonctions tactiles principales
+ Appuyez sur cette touche pour
+
+allumer votre téléphone cellulaire.
+ Maintenez enfoncée cette touche
+
+pour ouvrir le menu Options du
+téléphone.
+ Appuyez sur cette touche pour
+
+verrouiller l'écran de votre téléphone
+cellulaire lorsqu'il est allumé.
+ Appuyez sur cette touche pour
+
+accéder à l'onglet Jrnl appel.
+ Appuyez sur cette touche pour ouvrir
+
+le menu dans un écran actif.
+ Maintenez enfoncée cette touche pour
+
+afficher le clavier afin d'effectuer une
+recherche rapide.
+Touche de
+navigation
+
+ Appuyez sur cette touche pour naviguer
+
+parmi les options affichées à l'écran.
+
+Découvrir votre téléphone cellulaire
+
+12
+
+ Appuyez sur cette touche pour
+ok
+key
+
+sélectionner une option en
+surbrillance ou une action.
+ Appuyez sur cette touche pour revenir
+
+à l'écran d'accueil.
+ Appuyez sur cette touche pour revenir
+
+à l'écran précédent ou pour quitter
+l'application en cours d'exécution.
+ Appuyez sur cette touche pour
+
+raccrocher.
+ Appuyez sur cette touche pour revenir
+
+à l'écran d'accueil.
+Remarque :
+Pour personnaliser la fonction de la touche Raccrocher, appuyez sur
+Paramètres > Info et option générale > Action du bouton Fin.
+
+Découvrir votre téléphone cellulaire
+
+13
+
+Commencer à utiliser votre téléphone
+cellulaire
+Installation de la carte SIM
+
+1. Retirez le couvercle de la pile.
+2. Insérez la carte SIM tel qu'illustré sur le schéma.
+Remarque :
+Lorsque vous insérez la carte SIM, assurez-vous que la puce dorée est
+orientée vers le bas.
+
+Découvrir votre téléphone cellulaire
+
+14
+
+Installation de la pile
+1
+
+2
+
+a
+b
+
+1. Retirez le couvercle de la pile.
+2. Insérez la pile en angle vers le bas (a) et poussez-la
+légèrement vers l'avant jusqu'à ce qu'elle se bloque en
+place (b).
+3. Replacez le couvercle de la pile.
+Remarque :
+Assurez-vous que le côté de la pile avec un motif imprimé est orienté
+vers le haut.
+
+Découvrir votre téléphone cellulaire
+
+15
+
+Chargement de la pile
+
+a
+
+b
+
+Avant de charger la pile, assurez-vous que celle-ci est
+correctement insérée dans votre téléphone.
+1. Branchez le câble USB fourni avec votre téléphone cellulaire
+sur la prise du chargeur, tel qu'indiqué dans l'illustration a.
+2. Branchez le câble USB sur votre téléphone cellulaire, tel
+qu'indiqué dans l'illustration b. Branchez ensuite le
+connecteur du chargeur sur une prise de courant.
+
+Informations importantes concernant la pile
+• Si la pile n'a pas été utilisée pendant une période prolongée,
+votre téléphone cellulaire risque de ne pas s'allumer
+instantanément lorsque vous tenterez de la recharger.
+Laissez la pile se recharger suffisamment et vous serez alors
+en mesure d'allumer l'appareil pour vous en servir.
+Découvrir votre téléphone cellulaire
+
+16
+
+• Avec le temps, la pile ne maintiendra pas sa charge aussi
+longtemps que lorsqu'elle était neuve. Si, après avoir été
+chargée normalement, la pile dure moins longtemps que
+d'habitude, remplacez-la par une autre pile du même type.
+• L'utilisation des services de données réduit aussi
+considérablement la durée de charge en mode veille.
+• Le temps de recharge de la pile dépend de la température
+ambiante et de l'âge de la pile.
+• Dès que la charge de la pile commence à être faible, le
+téléphone émet un signal sonore et affiche un message
+d'avertissement. Lorsque la charge de la pile est très faible,
+le téléphone s'éteint automatiquement.
+
+Allumer ou éteindre votre téléphone
+cellulaire
+Allumer votre téléphone cellulaire
+Appuyez sur la touche
+. Lorsque vous appuyez une
+première fois sur cette touche, on vous demandera d'ouvrir
+
+Découvrir votre téléphone cellulaire
+
+17
+
+une session avec votre compte et de configurer votre
+téléphone cellulaire.
+Remarque :
+Lorsque la protection par numéro d'identification personnel (NIP) est
+activée sur votre téléphone cellulaire, vous devez saisir votre NIP avant
+d'utiliser l'appareil.
+
+Configuration de votre téléphone cellulaire
+La première fois que vous allumez votre téléphone cellulaire,
+un assistant de configuration s'affiche afin de vous aider à
+configurer l'appareil.
+L'assistant de configuration contient les éléments suivants :
+• Utilisation du clavier virtuel
+• Configuration de vos comptes
+• Paramètres importants
+1. Appuyez sur l'image Android afin d'apprendre quelques
+notions importantes pour tirer le meilleur parti de votre
+téléphone.
+2. Appuyez sur Commencer afin d'apprendre comment
+utiliser le clavier virtuel.
+Découvrir votre téléphone cellulaire
+
+18
+
+3. Appuyez sur Omettre pour continuer.
+4. Appuyez sur l'icône Compte Google, Compte de courriel
+pour accéder aux paramètres correspondants.
+5. Après la configuration d'un compte de courriel, l'icône de
+courriel correspondante sera cochée. Vous pouvez aussi
+appuyer sur Omettre afin de passer à la prochaine étape si
+vous souhaitez configurer le compte plus tard.
+6. Pour activer les services de données, cochez la case
+Activer le service de données, puis appuyez sur Suivant.
+7. On vous demandera si vous souhaitez activer le service de
+localisation Google. Ce service vous donne des
+informations de base concernant votre emplacement sans
+l'aide d'un système GPS. Appuyez sur Suivant pour passer
+à la prochaine étape.
+8. Définissez la date et l'heure. Si vous souhaitez définir
+l'heure manuellement plutôt qu'utiliser l'heure du système,
+décochez la case Automatique. Appuyez sur Terminer la
+configuration afin de mettre fin à la configuration et
+d'accéder à l'écran d'accueil.
+Découvrir votre téléphone cellulaire
+
+19
+
+Éteindre votre téléphone cellulaire
+1. Maintenez enfoncée la touche
+
+pour ouvrir le menu
+
+Options du téléphone.
+2. Appuyez sur Mise hors tension.
+3. Appuyez sur OK pour confirmer et éteindre le téléphone
+cellulaire.
+
+Utiliser l'écran tactile
+Actions sur l'écran tactile
+ Appuyer : Utilisez une pression du bout du doigt pour
+
+sélectionner une option.
+ Appuyer longuement : Utilisez une pression du bout du
+
+doigt pour sélectionner une option et maintenez cette
+pression jusqu'à ce que l'action correspondante soit
+effectuée par votre téléphone cellulaire. Par exemple, vous
+pouvez appuyer longuement sur l'écran afin d'ouvrir le menu
+des options de l'écran actif.
+
+Découvrir votre téléphone cellulaire
+
+20
+
+ Feuilleter : Déplacez votre doigt sur l'écran à la verticale ou
+
+à l'horizontale. Par exemple, vous pouvez feuilleter en
+déplaçant votre doigt vers la gauche ou vers la droite pour
+passer d'une photo à l'autre.
+ Glisser : Appuyez longuement sur l'option voulue, puis
+
+déplacez votre doigt sur l'écran pour glisser l'option à
+l'endroit voulu.
+
+Rotation de l'écran de votre téléphone cellulaire
+Sur la plupart des écrans, l'orientation de l'écran peut changer
+lorsque vous basculez votre téléphone de la position verticale
+à la position horizontale, ou l'inverse.
+
+Verrouiller et déverrouiller l'écran
+Verrouillage de l'écran
+ Lorsque votre téléphone cellulaire est allumé, appuyez sur
+
+pour verrouiller l'écran. Lorsque l'écran est verrouillé,
+vous pouvez quand même recevoir des messages et des
+appels.
+ Si vous laissez votre téléphone cellulaire inactif pendant un
+
+moment, l'écran se verrouillera automatiquement.
+Découvrir votre téléphone cellulaire
+
+21
+
+Déverrouillage de l'écran
+Appuyez sur
+,
+,
+ou
+pour réactiver l'écran. Glissez
+ensuite l'icône de verrouillage de la gauche vers la droite pour
+déverrouiller l'écran.
+
+Remarque :
+Si vous avez défini un motif de déverrouillage de l'écran, vous serez
+invité à dessiner ce motif à l'écran pour le déverrouiller.
+
+Découvrir votre téléphone cellulaire
+
+22
+
+Écran d'accueil
+
+1
+
+Barre de notification : affiche les notifications
+et les icônes d'état de votre téléphone cellulaire.
+Feuilletez vers le bas pour ouvrir le panneau de
+notification.
+
+Découvrir votre téléphone cellulaire
+
+23
+
+2
+
+Zone d'affichage : affiche les zones de
+fonctionnement et d'affichage de votre téléphone
+cellulaire.
+
+3
+
+Boutons de changement d'interface :
+comprend les boutons Menu principal,
+Composition, Contacts, Messages et Zoom.
+
+Parcourir l'écran d'accueil
+ Sur l'écran d'accueil, feuilletez l'écran avec votre doigt pour
+
+parcourir toute l'étendue de l'écran d'accueil.
+
+Découvrir votre téléphone cellulaire
+
+24
+
+Découvrir votre téléphone cellulaire
+
+25
+
+ Appuyez sur le bouton Zoom pour effectuer un zoom arrière
+
+sur l'écran d'accueil. Vous pouvez glisser l'écran et doublecliquer pour effectuer un zoom avant.
+
+Personnalisation de l'écran
+Ajout d'un nouvel élément d'écran
+1. Appuyez longuement sur la zone vierge de l'écran d'accueil
+jusqu'à ce que le menu Ajouter à l'écran d'accueil s'affiche.
+Découvrir votre téléphone cellulaire
+
+26
+
+2. Sélectionnez un élément pour l'ajouter à l'écran d'accueil.
+Déplacement d'un élément
+1. Appuyez longuement sur une icône à l'écran d'accueil
+jusqu'à ce que l'icône s'agrandisse et que le téléphone
+cellulaire vibre.
+
+2. Sans lever le doigt de l'écran, glissez l'icône à la position
+voulue sur l'écran, puis relâchez-la.
+Découvrir votre téléphone cellulaire
+
+27
+
+Suppression d'un élément
+1. Appuyez longuement sur une icône à l'écran d'accueil
+jusqu'à ce que l'icône s'agrandisse et que le téléphone
+cellulaire vibre.
+2. Sans lever le doigt de l'élément, glissez l'icône sélectionnée sur
+la poubelle. L'élément sélectionné et la poubelle deviendront
+rouges, ce qui signifie que l'élément est prêt à être retiré.
+
+Découvrir votre téléphone cellulaire
+
+28
+
+3. Relâchez l'élément pour le supprimer de l'écran d'accueil.
+
+Canevas
+Découvrir le Canevas
+Le Canevas est semblable à un bureau. Vous pouvez
+l'agrandir et le personnaliser. Vous pouvez :
+• agrandir l'écran dans n'importe quelle direction;
+• personnaliser l'écran d'accueil;
+• créer et réarranger les raccourcis;
+• créer et réarranger les gadgets logiciels;
+• créer et réarranger les dossiers;
+• définir et modifier les papiers peints.
+
+Agrandissement du Canevas
+Pour agrandir le Canevas, appuyez longuement sur une icône,
+glissez-la sur le bord du Canevas, puis relâchez-la.
+Lorsque vous déplacez une icône sur le bord de l'écran à
+agrandir, vous verrez les icônes suivantes s'afficher sur les
+côtés du Canevas.
+Découvrir votre téléphone cellulaire
+
+29
+
+Agrandir le bureau.
+Le bureau ne peut pas être agrandi pour le moment.
+
+Découvrir votre téléphone cellulaire
+
+30
+
+Gadgets logiciels
+Un gadget logiciel fonctionne comme un raccourci qui vous
+permet d'avoir un aperçu d'une application ou de l'utiliser.
+Vous pouvez coller des gadgets sur votre bureau sous forme
+d'icônes ou de fenêtres d'aperçu. En plus des gadgets logiciels
+déjà installés sur votre téléphone, vous pouvez en télécharger
+d'autres à partir de la boutique Android Market.
+Pour ajouter un gadget au Canevas :
+1. Appuyez sur une zone vierge à l'écran du Canevas.
+2. Dans le menu qui s'affiche, sélectionnez Gadgets Android
+ou Gadgets Emotion selon l'endroit où se trouve le gadget
+que vous voulez utiliser.
+3. Appuyez sur le gadget voulu.
+
+Découvrir votre téléphone cellulaire
+
+31
+
+Dossiers
+Créer un dossier
+1. Appuyez longuement sur l'écran pour ouvrir le menu
+Ajouter à l'écran d'accueil, puis sélectionnez Dossiers.
+
+2. Choisissez parmi les divers types de dossiers à créer.
+3. Pour créer un raccourci vers le dossier, appuyez
+longuement sur une application ou sur une icône de
+Découvrir votre téléphone cellulaire
+
+32
+
+raccourci pour activer le mode de déplacement. Glissez
+ensuite l'élément vers le haut du dossier.
+4. Appuyez sur le dossier pour l'ouvrir. Lorsque le dossier est
+ouvert, appuyez sur la barre de titre pour le refermer.
+Remarque :
+Dès que le mode de déplacement est activé, l'élément s'agrandit et le
+téléphone vibre.
+
+Renommer un dossier
+1. Appuyez sur le dossier pour l'ouvrir. Appuyez ensuite
+longuement sur la barre de titre pour ouvrir la boîte de
+dialogue Renommer le dossier.
+2. Entrez le nouveau nom du dossier, puis appuyez sur OK.
+
+Découvrir votre téléphone cellulaire
+
+33
+
+Modification du fond d'écran
+1. Sur l'écran d'accueil, appuyez sur
+décran.
+
+, puis sur Fond
+
+2. Effectuez l'une des actions suivantes :
+• Appuyez sur Images pour sélectionner une image et la
+définir comme fond d'écran.
+• Appuyez sur Galerie de fonds d'écran pour sélectionner
+une image et la définir comme fond d'écran.
+• Appuyez sur Fonds d'écran animés pour sélectionner
+une image et la définir comme fond d'écran.
+
+Modification d'un thème
+Votre téléphone possède quatre thèmes par défaut. Lorsqu'un
+thème ne vous plaît plus, remplacez-le par un autre.
+1. Sur l'écran d'accueil, appuyez sur
+
+, puis sur Thèmes.
+
+2. Appuyez sur le thème que vous souhaitez utiliser. Votre
+thème sera modifié automatiquement.
+
+Découvrir votre téléphone cellulaire
+
+34
+
+Notifications et informations d'état
+Icônes de notification et d'état
+Appel en cours
+
+Appel en cours à
+l'aide d'un appareil
+Bluetooth
+
+Transfert d'appel
+activé
+
+Appel en attente
+
+Appel manqué
+
+Connecté à un PC
+
+Erreur système
+
+Mémoire pleine
+
+Problème avec
+l'ouverture de session
+ou la synchronisation
+
+Préparation de la
+carte microSD
+
+Téléchargement des
+données
+
+Téléversement des
+données
+
+Itinérance
+
+Force du signal
+
+Aucun signal
+
+Mode Avion
+
+Découvrir votre téléphone cellulaire
+
+35
+
+Synchronisation des
+données
+
+Échec de la
+synchronisation
+
+Bluetooth activé
+
+Connecté à un autre
+appareil Bluetooth
+
+Wi-Fi activé
+
+Connecté à un
+réseau Wi-Fi
+
+GPS activé
+
+GPS connecté
+
+Autres notifications
+non affichées
+
+Aucune carte SIM
+
+Son désactivé
+
+Haut-parleur activé
+
+Mode vibration
+
+Microphone
+désactivé
+
+GPRS connecté
+
+GPRS actif
+
+EDGE connecté
+
+EDGE actif
+
+3G connecté
+
+3G actif
+
+Découvrir votre téléphone cellulaire
+
+36
+
+Pile chargée
+
+Pile très faible
+
+Chargement de la pile
+
+Alarme activée
+
+Musique en cours
+de lecture
+
+Nouveau rappel
+de calendrier
+
+Nouveau courriel
+
+Nouveau message
+
+Nouveau message
+vocal
+
+Nouveau message
+instantané
+
+Panneau de notification
+Votre téléphone cellulaire vous avertira lorsque vous recevrez
+un nouveau message ou lorsqu'un événement de votre
+calendrier approchera. Le panneau de notification vous
+informe également des alarmes et des paramètres activés,
+dont le Transfert d'appel par exemple. Ouvrez le panneau de
+notification pour connaître le nom de l'opérateur du réseau ou
+pour afficher un message, un rappel ou une notification
+d'événement.
+
+Découvrir votre téléphone cellulaire
+
+37
+
+Ouverture du panneau de notification
+1. Lorsqu'une nouvelle icône de notification apparaît dans la
+barre de notification, appuyez longuement sur la barre de
+notification, puis feuilletez vers le bas pour ouvrir le panneau
+de notification.
+2. Vous pouvez effectuer les actions suivantes dans le
+panneau de notification :
+• Appuyez sur une notification pour lancer l'application qui
+lui est associée.
+• Appuyez sur Effacer pour effacer toutes les notifications.
+Fermeture du panneau de notification
+Appuyez longuement sur la partie inférieure du panneau.
+Feuilletez ensuite vers le haut ou appuyez sur
+
+pour fermer le
+
+panneau de notification.
+
+Découvrir votre téléphone cellulaire
+
+38
+
+Utiliser une carte microSD
+Installation de la carte microSD
+
+1
+
+2
+
+1. Retirez le couvercle de la pile.
+2. Insérez la carte microSD tel qu'illustré sur le schéma.
+Remarque :
+Lorsque vous insérez la carte microSD, assurez-vous que le contact
+doré soit orienté vers le bas.
+
+Découvrir votre téléphone cellulaire
+
+39
+
+Utilisation de la carte microSD comme périphérique de
+stockage de masse USB
+Pour transférer toute votre musique préférée et vos photos à
+partir de votre PC vers la carte microSD de votre téléphone
+cellulaire, définissez la carte microSD comme périphérique
+de stockage de masse USB.
+1. Reliez votre téléphone cellulaire à votre PC au moyen du
+câble USB.
+2. Ouvrez la barre de notification, puis appuyez sur USB
+connecté.
+3. Appuyez sur Monter dans la boîte de dialogue qui s'affiche
+pour confirmer que vous souhaitez transférer des fichiers.
+Votre PC détectera la carte microSD en tant que disque
+amovible. Vous pouvez maintenant transférer des fichiers de
+votre PC vers la carte microSD de votre téléphone cellulaire.
+Conseil:
+> Paramètres > Info et
+Vous pouvez aussi appuyer sur la touche
+option générale, puis cochez la case Périphérique de Mémoire de
+masse USB afin d'utiliser la carte microSD comme périphérique
+de stockage de masse USB.
+Découvrir votre téléphone cellulaire
+
+40
+
+Remarque :
+Lorsque votre carte microSD sert de périphérique de stockage de masse
+USB, votre téléphone cellulaire n'utilisera pas cette plage de mémoire.
+Votre PC vous informera de la manière de déconnecter correctement
+le périphérique de stockage de masse USB (votre téléphone cellulaire)
+une fois le transfert de fichiers terminé.
+
+Retrait de la carte microSD
+1. Appuyez sur
+
+> Paramètres.
+
+2. Faites défiler l'écran vers le bas, puis appuyez sur Carte SD
+et stockage du téléphone > Démonter la carte SD.
+3. Retirez soigneusement la carte microSD.
+
+Découvrir votre téléphone cellulaire
+
+41
+
+Appel
+Pour effectuer un appel, vous pouvez composer un numéro ou le
+sélectionner dans votre liste de contacts, sur une page Web ou à
+partir du document contenant le numéro. Pendant un appel en
+cours, vous pouvez répondre aux autres appels entrants ou les
+envoyer vers votre boîte vocale. Vous pouvez aussi effectuer
+des conférences téléphoniques avec plusieurs participants.
+
+Faire un appel
+Pour faire un appel, vous pouvez utiliser l'application
+Composition ou sélectionner un numéro à partir des
+Contacts ou du Jrnl appel.
+Pendant un appel en cours, vous pouvez appuyer sur la
+touche p pour revenir à l'écran d'accueil et utiliser d'autres
+fonctions. Pour revenir à l'écran d'appel, feuilletez la barre
+de otification vers le bas, puis appuyez sur Appel actuel.
+Remarque :
+Assurez-vous de ne pas obstruer le microphone au bas de votre
+téléphone afin que votre voix puisse être entendue clairement.
+Appel
+
+42
+
+Faire un appel en utilisant la composition
+1. Appuyez sur
+numérique.
+
+> Composition pour afficher le clavier
+
+Si vous avez déjà accédé aux options de Contacts ou de
+Jrnl appel, appuyez sur l'onglet Composeur.
+2. Appuyez sur les touches numériques correspondantes pour
+saisir le numéro de téléphone.
+Conseil : Votre téléphone cellulaire est compatible avec la fonction de
+Composition intelligente, laquelle vous permet de rechercher
+automatiquement parmi vos contacts lorsque vous commencez à
+entrer les numéros sur le clavier numérique et d'obtenir une liste
+de numéros correspondants. Si aucun contact ne correspond aux
+informations saisies, le téléphone n'affichera aucun résultat.
+
+3. Appuyez sur
+
+, puis sur
+
+pour effectuer l'appel.
+
+Pendant un appel, feuilletez l'onglet du Clavier vers le haut
+pour saisir un autre numéro.
+
+Appel
+
+43
+
+Panneau de composition
+
+1
+
+2
+8
+
+3
+
+7
+6
+
+4
+
+5
+
+1
+2
+
+Affiche le numéro composé.
+
+3
+Appel
+
+Appuyez sur cette touche pour basculer entre les
+écrans Composeur, Jrnl appel, Contacts et
+Favoris.
+
+Appuyez sur cette touche pour composer un
+numéro.
+44
+
+4
+
+Appuyez sur cette touche pour créer un message
+vocal.
+
+5
+
+Appuyez sur cette touche pour composer.
+
+6
+
+Appuyez sur cette touche pour effacer chaque
+chiffre subséquent d'un numéro. Appuyez
+longuement sur cette touche pour effacer le
+numéro en entier.
+
+7
+
+Appuyez longuement sur cette touche pour
+saisir +.
+
+8
+
+Appuyez sur cette touche pour afficher les
+contacts correspondants.
+
+Faire un appel à partir des Contacts
+1. Appuyez sur
+contacts.
+
+> Contacts pour afficher la liste des
+
+Si vous avez déjà accédé aux options Composeur ou Jrnl
+appel, appuyez sur l'onglet Contacts.
+2. Dans la liste, appuyez sur le contact que vous souhaitez
+appeler.
+3. Appuyez sur
+Appel
+
+pour composer le numéro de téléphone.
+45
+
+Faire un appel à partir du Journal des appels
+1. Appuyez sur
+> Journal des appels pour afficher
+l'historique des appels.
+Si vous avez déjà accédé aux options Contacts ou Composition,
+appuyez sur l'onglet Journal des appels.
+
+2. Appuyez sur
+à la droite de l'entrée du journal pour
+composer le numéro correspondant.
+Conseil : Si vous appuyez longuement sur l'entrée du journal,
+le menu des options de communication avec ce contact
+s'affichera.
+
+Répondre à un appel ou le refuser
+Répondre à un appel entrant
+Lorsque vous recevez un appel, l'écran d'appel entrant s'affiche
+indiquant l'ID de l'appelant et les informations additionnelles
+saisies dans vos Contacts relatives à ce contact.
+• Appuyez sur
+
+pour répondre à l'appel.
+
+• Glissez la touche
+
+Appel
+
+vers la droite.
+
+46
+
+Mettre fin à un appel
+Pendant un appel, appuyez sur
+
+pour raccrocher.
+
+Refuser un appel entrant
+• Appuyez sur
+
+pour refuser un appel.
+
+• Glissez la touche
+
+Appel
+
+vers la gauche.
+
+47
+
+Utiliser le Journal des appels
+Le Jrnl appel contient la liste des derniers appels composés,
+reçus ou manqués. Vous pouvez utiliser le journal des appels
+pour repérer rapidement un numéro composé récemment ou
+ajouter le numéro d'un appel entrant à votre liste de contacts.
+
+Appel
+
+48
+
+Ajouter une entrée dans les Contacts
+1. Appuyez sur
+appels.
+
+> Jrnl appel pour afficher l'historique des
+
+2. Appuyez longuement sur l'entrée à ajouter.
+3. Appuyez sur Ajouter aux contacts dans le menu des options.
+4. Appuyez sur Créer un nouveau contact ou faites défiler
+la liste des contacts, puis appuyez sur un nom de contact
+existant.
+
+Autres opérations pendant un appel
+Effectuer une conférence téléphonique
+Si vous recevez un autre appel pendant un appel en cours, vous
+pouvez joindre le second appel à celui en cours. Cette fonction
+s'appelle une conférence téléphonique. Vous pouvez effectuer
+une conférence téléphonique avec plusieurs participants.
+Remarque :
+Renseignez-vous auprès de votre fournisseur de services pour savoir
+si l'option de conférence téléphonique vous est offerte et combien de
+participants il est possible d'ajouter.
+Appel
+
+49
+
+1. Pour effectuer une conférence téléphonique, composez
+le numéro de la première personne à appeler.
+Une fois la communication établie, appuyez sur
+Ajouter un appel.
+
+, puis sur
+
+2. Composez le numéro de téléphone de la personne que vous
+souhaitez ajouter à la conversation, puis appuyez sur
+ou sélectionnez la personne dans votre Jrnl appel ou vos
+Contacts. Le premier appel est automatiquement mis en
+attente.
+3. Une fois la communication établie avec la deuxième
+personne ajoutée, appuyez sur
+, puis sur Fusionner
+les appels pour commencer la conférence téléphonique.
+4. Pour ajouter des personnes additionnelles, appuyez sur
+Ajouter un appel et répétez les étapes 2 et 3.
+5. Pour retirer une personne de la conférence téléphonique
+ou our parler avec une personne en privé, appuyez sur
+,
+puis sur Gérer une conférence téléphonique.
+6. Pour mettre fin à la conférence téléphonique et couper
+.
+la connexion avec les participants, appuyez sur
+Appel
+
+50
+
+Basculer entre les appels
+Si vous recevez un autre appel pendant un appel en cours,
+vous pouvez basculer d'un appel à l'autre.
+1. Pendant un appel en cours, appuyez sur
+Permuter les appels.
+
+, puis sur
+
+2. L'appel en cours sera mis en attente et la communication
+sera établie avec l'autre appel.
+
+Utiliser le mode Avion
+Certains endroits peuvent nécessiter que vous désactiviez les
+connexions sans fil de votre téléphone. Si vous ne souhaitez
+pas éteindre complètement votre téléphone, vous pouvez
+utiliser le Mode Avion.
+1. Maintenez enfoncée la touche de mise sous tension ou
+hors tension.
+2. Appuyez sur Mode Avion dans le menu des options.
+
+Appel
+
+51
+
+Contacts
+L'application Contacts vous permet d'enregistrer et de gérer
+les informations personnelles de vos contacts telles que les
+numéros de téléphone et les adresses. Après avoir enregistré
+ces informations de contacts sur votre téléphone cellulaire,
+vous aurez un accès rapide aux personnes avec qui vous
+souhaitez communiquer.
+
+Ouvrir et consulter les contacts
+Ouverture de l'application Contacts
+S'il s'agit d'un nouveau téléphone cellulaire et que vous n'avez
+pas encore ajouté de contacts, l'application Contacts affiche
+un message vous donnant des conseils pour l'ajout de
+contacts sur votre téléphone cellulaire.
+• Appuyez sur
+• Appuyez sur
+
+Contacts
+
+> Contacts.
+, puis sur l'onglet Contacts.
+
+52
+
+Tous vos contacts s'affichent dans une liste déroulante en
+ordre alphabétique. Chaque contact est suivi du numéro de
+téléphone que vous avez précisé pour cette personne comme
+numéro par défaut.
+Contact rapide pour Android
+À mesure que vous remplissez votre liste de contacts sur votre
+téléphone, vous pourrez utiliser la fonction Contact rapide pour
+Android à l'intérieur de plusieurs autres applications afin de
+lancer une session de clavardage, d'envoyer un courriel ou
+un message texte, de faire un appel ou de repérer un contact
+rapidement. Contact rapide pour Android est une icône
+spéciale sur laquelle vous pouvez appuyer pour ouvrir une
+bulle d'options vous permettant d'initier rapidement une
+connexion avec ce contact.
+Les contacts auxquels vous avez accès au moyen de Contact
+rapide s'affichent différemment selon les applications, mais ils
+seront généralement entourés d'un cadre de photo.
+
+Contacts
+
+53
+
+2
+
+3
+
+1
+
+1
+
+Contacts
+
+Contact rapide avec un cadre de photo.
+Appuyez pour ouvrir une bulle contenant des
+icônes représentant toutes les manières
+disponibles de communiquer avec ce contact.
+
+54
+
+2
+
+Bulle contenant les icônes représentant toutes
+les manières disponibles de communiquer avec
+ce contact.
+Si vous savez qu'il existe d'autres icônes qui ne
+sont pas affichées immédiatement dans la bulle,
+vous pouvez glisser les icônes vers la droite ou
+vers la gauche pour les afficher toutes.
+
+3
+
+Appuyez sur une icône pour lancer l'application
+correspondante. Vous pourrez ainsi communiquer
+avec ce contact immédiatement.
+
+Ouverture d'une liste de vos contacts favoris
+L'onglet Favoris contient une liste raccourcie des contacts
+avec lesquels vous communiquez le plus souvent.
+Pour ouvrir la liste de vos contacts favoris, appuyez sur l'onglet
+Favoris dans la liste des contacts.
+
+Contacts
+
+55
+
+Affichage des coordonnées des contacts
+Pour afficher les coordonnées d'un contact, appuyez sur le
+contact correspondant. Les informations personnelles
+détaillées telles que le numéro de téléphone, l'adresse courriel
+et l'adresse physique s'affichent pour chaque contact.
+Coordonnées du contact
+
+1
+
+5
+
+4
+3
+
+2
+
+Contacts
+
+56
+
+1
+
+Appuyez sur une icône pour ouvrir Contact rapide.
+Consultez la section « Contact rapide pour
+Android ».
+
+2
+
+Appuyez sur une adresse pour l'afficher au moyen
+de l'application Maps.
+
+3
+
+Appuyez sur une icône pour faire un appel,
+envoyer un message, clavarder ou autre.
+
+4
+
+Appuyez sur l'onglet Historique pour afficher une
+liste de vos interactions avec ce contact.
+
+5
+
+Appuyez sur cette touche pour ajouter le contact
+à vos favoris.
+
+Ajouter et supprimer des contacts
+Vous pouvez ajouter ou supprimer des contacts sur votre
+téléphone cellulaire et les synchroniser avec les contacts qui
+se trouvent à l'intérieur de comptes compatibles avec la
+synchronisation de contacts.
+Contacts
+
+57
+
+Ajout d'un contact
+1. Dans la liste des contacts, appuyez sur
+Créer un contact.
+
+, puis sur
+
+Conseil : Dans la liste des contacts, vous pouvez appuyer sur la
+touche
+
+pour ajouter un nouveau contact.
+
+2. Si vous possédez plus d'un compte contenant des contacts,
+appuyez sur le compte pour lequel vous souhaitez ajouter
+le contact.
+3. Entrez le nom du contact, puis ses informations
+personnelles détaillées telles que le numéro de téléphone
+ou l'adresse.
+4. Lorsque vous avez terminé, appuyez sur Terminer pour
+enregistrer les informations du contact.
+
+Suppression d'un contact
+1. Dans la liste des contacts, appuyez longuement sur
+le contact à supprimer, puis appuyez sur Supprimer
+le contact dans le menu des options.
+
+Contacts
+
+58
+
+2. Appuyez sur OK pour confirmer que vous souhaitez
+supprimer le contact.
+
+Ajout d'un contact à vos favoris
+Pour ajouter un contact à vos favoris, vous pouvez effectuer
+l'une des actions suivantes à l'intérieur de la liste des contacts :
+• Appuyez longuement sur le contact à ajouter aux Favoris.
+Appuyez ensuite sur Ajouter aux favoris.
+• Accédez à la liste des favoris, appuyez sur
+, puis sur
+Ajouter des favoris pour sélectionner les contacts à ajouter
+aux Favoris.
+• Appuyez sur un contact, puis appuyez sur l'étoile à la droite
+du nom du contact. L'étoile deviendra dorée.
+
+Suppression d'un contact de vos favoris
+Pour retirer un contact de vos favoris, vous pouvez effectuer
+l'une des actions suivantes à l'intérieur de la liste des favoris :
+• Appuyez longuement sur le contact à supprimer des Favoris.
+Appuyez ensuite sur Retirer des favoris.
+• Appuyez sur
+, puis sur Enlever des favoris pour
+sélectionner les contacts à retirer des Favoris.
+Contacts
+
+59
+
+• Appuyez sur un contact, puis sur l'étoile à la droite du nom
+du contact. L'étoile deviendra grise.
+
+Modifier un contact
+Vous pouvez modifier les informations enregistrées pour un
+contact à n'importe quel moment.
+1. Dans la liste des contacts, appuyez longuement sur le
+contact à modifier, puis appuyez sur Modifier le contact
+dans le menu des options.
+Vous pouvez également appuyer sur la touche
+, puis
+sur Modifier le contact pendant que vous consultez les
+coordonnées du contact.
+2. Si vous possédez plus d'un compte contenant des contacts,
+appuyez sur le compte dans lequel vous souhaitez modifier
+le contact.
+3. Appuyez sur une catégorie d'informations, telles que le nom
+du contact, le numéro de téléphone ou l'adresse courriel,
+afin de modifier les informations associées à cette catégorie
+pour le contact.
+
+Contacts
+
+60
+
+4. Effectuez les modifications voulues aux informations du
+contact, puis appuyez sur Terminé. Pour annuler toutes les
+modifications apportées aux informations du contact,
+appuyez sur Annuler.
+
+Contacts
+
+61
+
+Écran de modification d'un contact
+
+1
+
+5
+4
+2
+
+1
+
+Contacts
+
+3
+
+Appuyez sur l'icône de cadre de photo pour
+sélectionner une image à afficher près du nom
+du contact dans la liste des contacts et dans les
+autres applications.
+
+62
+
+2
+
+3
+
+Appuyez sur cette touche pour retirer l'entrée de
+la catégorie.
+
+4
+
+Appuyez sur cette touche pour ajouter plus d'une
+entrée pour cette catégorie.
+
+5
+
+Contacts
+
+Appuyez sur cette touche pour ouvrir un menu
+contenant des étiquettes prédéfinies, telles que
+Téléphone mobile et Bureau pour le numéro de
+téléphone, ou appuyez sur Personnalisé dans le
+menu pour créer votre propre étiquette.
+
+Appuyez sur cette touche pour afficher plus de zones
+de saisies afin d'entrer des détails pour le nom,
+comme un second prénom et un nom de famille.
+
+63
+
+Importer des contacts à partir d'une
+carte SIM
+Lorsque vous lancez l'application Contacts pour la première fois,
+vous aurez la possibilité d'importer vos contacts à partir de la
+carte SIM de votre téléphone. Choisissez OK afin d'importer
+les contacts ou Annuler si vous préférez les importer plus tard.
+1. Dans la liste des contacts, appuyez sur
+Gérer les contacts.
+
+, puis sur
+
+2. Appuyez sur Copier à partir de la carte SIM. Patientez
+pendant le chargement du contenu de la carte SIM.
+3. Cochez la case du contact que vous souhaitez importer.
+4. Appuyez sur Copie.
+5. Si vous possédez plus d'un compte sur votre téléphone,
+appuyez sur le compte dans lequel vous souhaitez importer
+les contacts.
+
+Rechercher un contact
+1. Dans la liste des contacts, appuyez sur
+Rechercher.
+Contacts
+
+, puis sur
+64
+
+Conseil : Dans la liste des contacts, vous pouvez aussi appuyer sur
+la touche
+pour rechercher un contact.
+
+2. Entrez le nom du contact que vous recherchez. À mesure
+que vous entrez les informations, les contacts dont le nom
+correspond à celles-ci s'afficheront dans la zone de
+recherche au bas.
+
+Communiquer avec vos contacts
+À partir de l'onglet Contacts ou Favoris, vous pouvez
+rapidement faire un appel ou envoyer un message texte (SMS)
+ou multimédia (MMS) vers le numéro de téléphone par défaut
+d'un contact. Vous pouvez également ouvrir les détails pour
+afficher une liste représentant toutes les manières disponibles
+de communiquer avec ce contact. Cette section décrit les
+manières d'initier la communication alors que vous êtes dans
+la liste des contacts.
+
+Connexion au moyen de Contact rapide pour Android
+1. Appuyez sur la photo du contact ou le cadre de la photo
+(si vous n'avez associé aucune photo à ce contact) afin
+de lancer Contact rapide pour Android.
+Contacts
+
+65
+
+2. Appuyez sur l'icône correspondant à la manière dont vous
+souhaitez communiquer avec le contact.
+Remarque : Les icônes disponibles dépendent des informations
+que vous avez saisies pour ce contact, de même que
+des applications et des comptes sur votre téléphone
+cellulaire.
+
+Communication avec un contact
+1. Dans la liste des contacts, appuyez sur le contact avec
+lequel vous souhaitez communiquer.
+2. Dans l'écran des coordonnées du contact, appuyez sur
+l'icône verte à la droite du numéro pour faire un appel
+ou envoyer un message.
+
+Contacts
+
+66
+
+Utilisation du clavier virtuel
+Afficher le panneau du clavier
+Afin de saisir du texte, utilisez le clavier virtuel. Certaines
+applications ouvrent automatiquement le clavier virtuel.
+Dans les autres cas, appuyez sur une zone de saisie pour
+ouvrir le clavier. Pour afficher le clavier, vous pouvez effectuer
+l'une des actions suivantes :
+• Maintenez enfoncée la touche
+
+pour afficher le clavier.
+
+• Appuyez sur l'espace où vous souhaitez saisir du texte
+pour afficher le clavier.
+• Appuyez longuement sur l'espace où vous saisissez
+habituellement du texte pour afficher le menu des options.
+Appuyez sur
+
+pour masquer le clavier.
+
+Choix d'un mode de saisie
+1. Sur l'écran de texte, appuyez longuement sur l'espace où
+vous saisissez habituellement du texte jusqu'à ce que le
+menu Modifier le texte s'affiche.
+Utilisation du clavier virtuel
+
+67
+
+2. Appuyez sur Mode de saisie.
+3. Choisissez un mode de saisie.
+Le panneau du clavier s'affichera automatiquement.
+
+Utilisation du panneau du clavier virtuel TouchPal
+
+9
+
+1
+
+2
+
+8
+
+3
+
+7
+
+4
+
+Utilisation du clavier virtuel
+
+5
+
+6
+
+68
+
+1
+
+Affiche la liste des mots candidats. Appuyez sur un
+mot pour l'insérer dans le texte. Si la suggestion
+de mots est activée, le mot suggéré sera en
+surbrillance.
+
+2
+
+Passez des lettres majuscules aux lettres
+minuscules.
+
+3
+
+Activez la prédiction de mots.
+
+4
+
+Définissez la langue de votre téléphone cellulaire.
+Pour sélectionner une langue prise en charge
+par votre téléphone cellulaire, appuyez sur
+> Paramètres > Langue & clavier >
+TouchPal > Sélectionner langues.
+
+5
+
+Appuyez sur cette touche pour insérer une
+espace.
+
+6
+
+Passez au panneau du clavier numérique et des
+symboles.
+
+Utilisation du clavier virtuel
+
+69
+
+7
+
+Appuyez sur cette touche pour insérer un retour
+chariot.
+
+8
+
+Appuyez sur cette touche pour supprimer le
+caractère placé à la gauche du curseur. Appuyez
+longuement sur cette touche pour supprimer tous
+les caractères placés à la gauche du curseur.
+
+9
+
+Appuyez sur cette touche pour afficher d'autres
+mots candidats.
+
+Modification de la disposition du clavier
+Vous pouvez modifier la disposition du clavier uniquement
+lorsque vous avez sélectionné la fonction TouchPal.
+Il existe trois dispositions de clavier parmi lesquelles choisir :
+AZERTY, Clavier à 12 touches et CooTek T+.
+Pour modifier la disposition du clavier, appuyez longuement
+sur l'un des côtés du panneau du clavier, puis feuilletez le
+panneau vers le bord de l'écran.
+
+Utilisation du clavier virtuel
+
+70
+
+1
+
+2
+
+1
+
+QWERTY complet.
+
+2
+
+Clavier téléphonique à 12 touches.
+
+3
+
+3
+
+CooTek T+.
+
+Remarque :
+Lorsque vous modifiez la disposition du clavier, vous devez appuyer
+longuement sur n'importe quelle partie du panneau du clavier, puis
+feuilleter le panneau vers le bord de l'écran.
+
+Utilisation du clavier virtuel
+
+71
+
+Utilisation du clavier virtuel Android
+
+1
+
+5
+
+2
+
+4
+
+3
+
+1
+
+Passez des lettres majuscules aux lettres
+minuscules.
+
+2
+
+Passez du mode texte au mode symbole/numéro.
+Appuyez de nouveau sur cette touche pour revenir
+au mode précédent.
+
+Utilisation du clavier virtuel
+
+72
+
+3
+
+Appuyez sur cette touche pour insérer une espace.
+
+4
+
+Appuyez sur cette touche pour insérer une
+émoticône dans le texte.
+
+5
+
+Appuyez sur cette touche pour supprimer le
+caractère placé à la gauche du curseur. Appuyez
+longuement sur cette touche pour supprimer tous
+les caractères placés à la gauche du curseur.
+
+Utilisation du clavier virtuel en paysage
+Si vous trouvez le clavier virtuel peu pratique ou difficile à
+utiliser, tournez votre téléphone cellulaire en position
+horizontale pour afficher une disposition de clavier plus large.
+L'écran affichera le clavier selon l'orientation la plus large
+(en paysage).
+
+Utilisation du clavier virtuel
+
+73
+
+Personnalisation des paramètres
+du clavier
+Appuyez sur
+> Paramètres > Langue et clavier >
+TouchPal pour personnaliser les paramètres TouchPal.
+Prédiction
+de mot
+
+Sélectionnez cette option afin d'activer
+la prédiction de mots en cours de
+frappe.
+
+Son touche
+clavier
+
+Sélectionnez cette option afin que le
+téléphone émette un son bref à chaque
+pression de touche sur le clavier virtuel.
+
+Vibration
+touche clavier
+
+Sélectionnez cette option afin que le
+téléphone vibre légèrement à chaque
+pression d'une touche du virtuel.
+
+Aperçu en
+mode portrait
+
+Sélectionnez cette option pour obtenir
+une disposition en portrait.
+
+Aperçu en
+Sélectionnez cette option pour obtenir
+mode paysage une disposition en paysage.
+
+Utilisation du clavier virtuel
+
+74
+
+Glisser vers
+cadre
+basculer
+
+Cochez cette case afin de pouvoir
+effleurer horizontalement le haut du
+clavier pour changer la disposition.
+
+Cochez cette case pour permettre
+au téléphone cellulaire de détecter
+Entrée mixte automatiquement la langue si
+seulement trois langues ou moins
+ont été sélectionnées.
+Sélectionner Sélectionnez les langues que vous
+langues
+souhaitez utiliser.
+Cochez cette case afin d'activer la
+Imaginer
+prédiction du prochain mot en cours
+nouveau mot
+de frappe.
+Activer
+correction
+automatique
+
+Sélectionnez cette option pour activer
+la correction automatique des erreurs
+de frappe pendant la saisie.
+
+Cochez cette case pour activer
+Symboles de
+l'affichage des symboles lorsque vous
+déroulement
+faites défiler les touches vers le bas.
+Utilisation du clavier virtuel
+
+75
+
+Mots
+pertinents
+
+Cochez cette case pour activer
+l'affichage des synonymes ou des
+autres mots pertinents lorsque vous
+faites défiler un mot candidat vers
+le bas.
+
+Aide
+
+Accédez au guide de l'utilisateur en
+ligne pour TouchPal.
+
+TouchPal
+
+Affichez la version de TouchPal.
+
+Appuyez sur
+> Paramètres > Langue & clavier > Clavier
+Android pour personnaliser les paramètres du clavier Android.
+Vibration
+lors de
+l'appui sur
+les touches
+
+Sélectionnez cette option afin que le
+téléphone vibre légèrement à chaque
+pression de touche sur le clavier
+virtuel.
+
+Son lors de
+I'appui sur
+les touches
+
+Sélectionnez cette option afin que le
+téléphone émette un son bref à chaque
+pression de touche sur le clavier virtuel.
+
+Utilisation du clavier virtuel
+
+76
+
+Utilisation
+automatique
+des
+majuscules
+
+Sélectionnez cette option pour activer
+l'utilisation automatique des
+majuscules pour le premier mot après
+le point, au début d'une zone de
+saisie et dans les champs de noms
+propres.
+
+Afficher des
+suggestions
+
+Sélectionnez cette option pour
+afficher des mots en bande de
+suggestion au-dessus du clavier en
+cours de frappe.
+
+Saisir de
+manière
+semiautomatique
+
+Sélectionnez cette option pour activer
+l'insertion automatique des mots
+suggérés, mis en surbrillance de couleur
+orange dans une bande au-dessus du
+clavier, dès que vous entrez une espace
+ou un signe de ponctuation.
+
+Utilisation du clavier virtuel
+
+77
+
+Messagerie
+L'application Messagerie vous permet d'échanger des
+messages textes (SMS) et multimédias (MMS) avec vos amis
+sur leur téléphone cellulaire. L'application Mes Courriels vous
+permet de lire et d'envoyer des courriels.
+
+SMS et MMS
+Messages textes : Un seul message texte peut contenir
+jusqu'à 160 caractères. Vous pouvez envoyer des messages
+textes de n'importe quelle longueur, mais chaque portion
+contenant 160 caractères sera réputée compter pour un
+message texte lors de la facturation. Pour les destinataires
+cependant, le message complet ne comptera que comme
+un seul message texte.
+Messages multimédias : Les messages multimédias ajoutent
+un petit quelque chose de spécial aux messages textes
+ordinaires. Vous pouvez enregistrer un message et l'envoyer
+en tant que fichier audio ou créer un diaporama de photos.
+Vous pouvez, par exemple, souhaiter « Joyeux anniversaire »
+Messagerie
+
+78
+
+à quelqu'un ou lui envoyer un message vidéo ou encore des
+photos d'un événement spécial.
+
+Ouverture de l'application Messagerie
+• Appuyez sur
+
+à l'écran d'accueil.
+
+• Appuyez sur
+
+> Messagerie.
+
+Création et envoi d'un message texte
+1. Appuyez sur
+
+> Messagerie > Nouveau message.
+
+2. Entrez un numéro de téléphone dans le champ
+Destinataire ou appuyez sur + pour sélectionner un
+numéro parmi les Contacts.
+À mesure que vous entrez les chiffres du numéro de téléphone,
+les contacts correspondants s'affichent. Vous pouvez alors appuyer
+sur un destinataire suggéré ou poursuivre la saisie du numéro de
+téléphone.
+
+3. Appuyez sur la zone de saisie du texte pour composer votre
+message.
+Si vous appuyez sur
+en cours de composition, le message sera
+sauvegardé en brouillon dans votre liste des messages. Appuyez
+sur le message pour reprendre la composition.
+Messagerie
+
+79
+
+4. Lorsque vous avez terminé, appuyez sur Envoyer.
+
+La liste des messages s'ouvre et votre nom apparaît dans
+la liste, suivi du message que vous venez d'envoyer.
+Les réponses apparaîtront dans la même fenêtre. À mesure
+que vous affichez et envoyez des messages additionnels,
+un fil de discussion se crée.
+
+Messagerie
+
+80
+
+Écran de composition des messages textes
+
+1
+
+2
+
+3
+
+1
+
+Appuyez sur cette touche pour entrer un numéro
+de téléphone cellulaire ou le nom d'un contact
+possédant un téléphone cellulaire.
+
+2
+
+Appuyez sur cette touche pour composer votre
+message.
+
+3
+
+Appuyez sur cette touche pour envoyer le message.
+
+Messagerie
+
+81
+
+Création et envoi d'un message multimédia
+1. Appuyez sur
+
+> Messagerie > Nouveau message.
+
+2. Entrez un numéro de téléphone dans le champ Destinataire
+ou appuyez sur + pour sélectionner un numéro parmi les
+Contacts.
+Vous pouvez aussi appuyer sur la touche
+, puis sur Ajouter
+un destinataire afin d'ajouter d'autres destinataires.
+
+3. Appuyez sur la zone de saisie du texte pour composer
+votre message.
+Conseil : Pour insérer une émoticône,
+appuyez sur
+puis sur Insérer une émoticône.
+
+4. Appuyez sur
+
+,
+
+pour afficher le panneau d'options.
+
+5. Appuyez sur Ajouter un objet pour ajouter l'objet pour
+le message. Votre téléphone cellulaire est maintenant
+en mode de message multimédia.
+6. Appuyez sur Joindre pour y ajouter une image, une vidéo
+ou un fichier de musique. Appuyez ensuite sur l'une des
+options suivantes :
+Messagerie
+
+82
+
+ Diaporama : Un écran s'affiche où vous pouvez créer
+
+un assemblage de photos en diaporama à joindre au
+message. Consultez la section « Ajout d'un diaporama ».
+ Images : Vous êtes invité à appuyer sur une photo pour
+
+la joindre.
+ Capturer I'image : L'appareil photo est activé afin que
+
+vous puissiez prendre une photo et la joindre.
+ Vidéos : Vous êtes invité à sélectionner une vidéo pour
+
+la joindre.
+ Capturer la vidéo : Le caméscope est activé afin que
+
+vous puissiez enregistrer une vidéo et la joindre.
+ Audio : Vous êtes invité à sélectionner un fichier audio
+
+pour le joindre.
+ Enregistrer le fichier audio : Un écran s'affiche où vous
+
+pouvez enregistrer un message vocal à joindre au message.
+7. Lorsque le message est prêt à être expédié, appuyez sur
+Envoyer.
+Ajout d'un diaporama
+Messagerie
+
+83
+
+Si vous souhaitez joindre plus d'un fichier à votre message,
+utilisez l'option diaporama.
+1. Sur l'écran de composition du message, appuyez sur
+pour afficher le panneau d'options
+2. Appuyez sur Joindre > Diaporama, puis sélectionnez une
+diapositive à modifier.
+3. Appuyez sur
+, puis sur Ajouter une diapositive pour
+ajouter davantage de diapositives.
+Vous pouvez appuyer sur l'icône de la flèche verte afin de passer
+d'une diapositive à l'autre.
+
+4. Appuyez sur Terminer pour achever la composition de votre
+message et revenir à l'écran de message multimédia.
+5. Pour modifier votre message multimédia, appuyez sur
+Modifier sur l'écran du message multimédia. Lorsque le
+message est prêt à être expédié, appuyez sur Envoyer.
+
+Messagerie
+
+84
+
+Ouverture et affichage de messages multimédias
+1. Dans la liste des messages, appuyez sur le message à
+ouvrir.
+2. Appuyez sur le bouton Lire au haut du message multimédia
+pour afficher le message.
+3. Appuyez sur
+puis sur Diapositive suivante pour
+afficher la prochaine diapositive.
+
+Répondre à un message
+1. Dans la liste des messages, appuyez sur un message texte
+ou multimédia pour l'ouvrir.
+2. Appuyez sur la zone de saisie du texte pour composer votre
+message, puis appuyez sur Envoyer.
+
+Personnalisation des paramètres de message
+Dans la liste des messages, appuyez sur
+, puis sur
+Paramètres afin de personnaliser les paramètres de message.
+
+Messagerie
+
+85
+
+Courriel
+Votre téléphone cellulaire vous permet également d'accéder
+à vos courriels. À l'aide de l'application Courriel, vous pouvez
+ajouter des versions des services de courriel Yahoo!, AOL
+ou d'autres services de courriel populaires à votre téléphone.
+Ces comptes de courriel sont connus sous les noms de POP3,
+IMAP ou Exchange.
+
+Ajout d'un compte de courriel
+Lorsque vous utilisez l'application Mes Courriels pour la
+première fois, vous devez configurer un compte de courriel.
+L'assistant de configuration de courriel vous aidera à
+configurer votre compte avec de nombreux systèmes de
+courriel populaires, de sorte que vous pourrez lire et gérer vos
+courriels tout comme dans votre navigateur Web ou une autre
+application de courriel sur votre ordinateur.
+Vous pouvez également configurer un compte Microsoft
+Exchange ActiveSync pour pouvoir lire et gérer vos courriels
+tout comme dans Microsoft Outlook sur votre ordinateur.
+1. Appuyez sur
+Messagerie
+
+> Mes Courriels.
+86
+
+2. Pour configurer vos paramètres de courriel, répondez aux
+messages-guides qui apparaissent à l'écran, puis appuyez
+sur Suivant. Vous pouvez également appuyer sur
+Configuration manuelle si vous préférez configurer le
+serveur de courriel vous-même.
+Remarque : Si vous appuyez sur Configuration manuelle,
+renseignez-vous auprès de votre fournisseur de
+services de courriel pour connaître les valeurs requises
+pour votre compte si vous les ignorez.
+
+3. Entrez le nom de votre compte et le nom que vous
+souhaitez que les gens voient lorsqu'ils reçoivent un courriel
+de votre part.
+4. Appuyez sur Terminer.
+Votre téléphone cellulaire commencera à télécharger vos
+courriels et vous pourrez ensuite utiliser votre téléphone pour
+envoyer et recevoir des messages.
+Après la configuration initiale, votre application de courriel
+ouvrira le dernier écran affiché ou, si vous n'avez pas utilisé
+Mes Courriels récemment, le contenu de votre boîte de
+
+Messagerie
+
+87
+
+réception ou l'écran des comptes (si vous avez plus d'un
+compte).
+Ajout d'autres comptes de courriel
+Après la création de votre compte de courriel, appuyez
+sur
+à l'écran des comptes, puis sur Ajouter un compte
+pour créer un autre compte de courriel.
+Conseil :
+Lorsque vous ajoutez un compte de courriel supplémentaire, vous
+pouvez aussi sélectionner l'option permettant d'utiliser le nouveau
+compte pour l'envoi de tous les messages.
+
+Suppression d'un compte de courriel
+1. Sur l'écran des comptes, appuyez longuement sur le compte
+de courriel à supprimer.
+2. Appuyez sur Retirer le compte.
+3. Appuyez sur OK pour confirmer.
+
+Modification des paramètres du compte de courriel
+Vous pouvez modifier un certain nombre de paramètres pour
+un compte, notamment la fréquence de vérification des
+Messagerie
+
+88
+
+nouveaux courriels, la manière dont vous souhaitez être averti
+de leur arrivée et les détails à propos des serveurs utilisés par
+le compte pour l'envoi et la réception de courriels.
+Remarque :
+Les paramètres d'envoi et de réception de votre compte dépendent
+du type de service de courriel utilisé : Exchange ActiveSync, IMAP ou
+POP3. Vous pouvez entrer les détails nécessaires manuellement, bien
+qu'il soit possible que vous deviez vous renseigner auprès de votre
+fournisseur de services de courriel afin de connaître les paramètres
+appropriés pour le compte.
+
+1. Appuyez sur
+
+> Mes Courriels.
+
+2. Sur l'écran Mes Courriels, appuyez longuement sur le
+compte de courriel à modifier.
+3. Appuyez sur Paramètres du compte.
+4. Modifiez les Paramètres généraux, les Paramètres
+d'alerte de nouveaux messages ou les Paramètres du
+serveur.
+
+Affichage d'un courriel
+Messagerie
+
+89
+
+1. Sur l'écran des comptes, appuyez sur le compte de courriel
+à utiliser.
+2. Accédez au dossier, puis appuyez sur le message à afficher.
+
+Création et envoi d'un courriel
+1. Sur l'écran Mes Courriels, appuyez sur le compte de courriel
+à utiliser.
+2. Sur l'écran Boîte de réception, appuyez sur
+réer un message dans le panneau d'options.
+
+, puis sur C
+
+3. Dans le champ Destinataire, entrez le nom ou l'adresse
+courriel.
+4. Entrez l'objet du courriel.
+Pour envoyer une pièce jointe avec le message, appuyez sur
+puis sur Ajouter une pièce jointe.
+
+,
+
+5. Lorsque vous avez terminé, appuyez sur Envoyer.
+Si vous n'êtes pas prêt immédiatement, appuyez sur Enregistrer
+pour sauvegarder le
+comme brouillon ou sur la touche
+message en tant que brouillon.
+
+Messagerie
+
+90
+
+Répondre à un courriel
+1. Sur l'écran Mes Courriels, appuyez sur le compte de courriel
+à utiliser.
+2. Appuyez sur le courriel auquel vous souhaitez répondre
+pour l'afficher.
+3. Appuyez sur Répondre ou Répondre à tous pour rédiger
+une réponse au courriel.
+
+Messagerie
+
+91
+
+Se connecter
+GPRS/3G
+Votre téléphone cellulaire sera automatiquement configuré
+pour utiliser le réseau GPRS/3G/EDGE de votre fournisseur
+de services de téléphonie mobile (lorsque disponible) dès
+que vous allumerez votre téléphone pour la première fois
+(à condition que la carte SIM soit insérée).
+
+Vérification de la connexion au réseau
+1. Appuyez sur
+
+> Paramètres.
+
+2. Appuyez sur Sans fil & réseaux > Réseaux de téléphonie
+mobile.
+3. Appuyez sur Opérateur de réseau ou Noms de points
+d'accès afin de vérifier votre connexion au réseau.
+Remarque :
+De manière générale, votre téléphone cellulaire lira automatiquement le
+point d'accès de votre carte SIM. Pour cette raison, ne modifiez pas les
+paramètres du point d'accès, car vous risqueriez de ne plus avoir accès
+aux sources du réseau.
+Se connecter
+
+92
+
+Activation du service de données
+1. Appuyez sur
+
+> Paramètres.
+
+2. Appuyez sur Sans fil & réseaux > Réseaux de téléphonie
+mobile.
+3. Cochez la case Service de données pour activer la
+connexion au service de données.
+
+Wi-Fi
+La connexion Wi-Fi vous donne un accès sans fil à un réseau
+Internet à large bande. Pour utiliser la connexion Wi-Fi sur
+votre téléphone cellulaire, vous aurez besoin d'avoir accès à
+un « point d'accès sans fil ». La portée du signal Wi-Fi sera
+affectée par les obstacles qui peuvent se trouver entre vous et
+le point d'accès.
+Activation du Wi-Fi
+1. Appuyez sur
+
+> Paramètres.
+
+2. Appuyez sur Sans fil & réseaux, puis cochez la case WiFi(Sans fil) pour activer la connexion Wi-Fi.
+
+Se connecter
+
+93
+
+Connexion à un réseau sans fil
+1. Après avoir activé la connexion Wi-Fi, appuyez sur
+Paramètres.
+
+>
+
+2. Appuyez sur Paramètres du Wi-Fi(Sans fil). Vous verrez
+une liste de réseaux Wi-Fi détectés à portée sous la section
+Réseaux Wi-Fi.
+3. Appuyez sur un réseau Wi-Fi pour vous y connecter.
+• Si vous sélectionnez un réseau ouvert, vous serez
+connecté automatiquement au réseau.
+• Si vous sélectionnez un réseau sécurisé par clé (WEP),
+entrez le mot de passe, puis appuyez sur Connecter.
+Si vous vous connectez à un réseau sans fil sécurisé que
+vous avez déjà utilisé, vous n'aurez pas besoin d'entrer
+la clé WEP/WPA de nouveau à moins d'avoir réinitialisé
+les paramètres par défaut du téléphone cellulaire.
+Conseil :
+Sur l'écran Paramètres du Wi-Fi(Sans fil), appuyez sur Ajouter un
+réseau
+Wi-Fi pour ajouter un nouveau réseau Wi-Fi.
+Se connecter
+
+94
+
+Navigateur
+Un navigateur Web est fourni avec votre téléphone cellulaire.
+Vous pouvez accéder à Internet et naviguer au moyen du
+Navigateur.
+Ouverture du navigateur
+Appuyez sur
+> Navigateur pour ouvrir le navigateur à la
+page d'accueil de Google.
+
+3
+
+2
+
+1
+
+Se connecter
+
+95
+
+1
+
+Zone d'affichage de la page Web.
+
+2
+
+Appuyez sur cette touche pour ouvrir signets.
+
+3
+
+Appuyez sur cette touche pour entrer l'adresse du
+site voulu.
+
+Ouvrez le menu des options du navigateur et effectuez l'une
+des actions suivantes en appuyant sur la touche
+:
+
+
+Nouvelle fenêtre : Appuyez sur cette option pour ouvrir
+une nouvelle fenêtre.
+
+
+
+Signets : Appuyez sur cette option pour ouvrir un dossier
+de favoris.
+
+
+
+Fenêtres actives : Appuyez sur cette option pour accéder
+à l'écran d'aperçu Web. Vous pouvez basculer vers une
+autre page Web ou en ouvrir une nouvelle à l'écran.
+
+
+
+Actualiser : Appuyez sur cette option pour actualiser la
+page en cours.
+
+Se connecter
+
+96
+
+
+
+Suivant : Appuyez sur cette option pour passer à la page
+Web suivante.
+
+
+
+Plus : Appuyez sur cette option pour ouvrir d'autres
+menus et effectuer des opérations telles que rechercher,
+sélectionner le texte, télécharger et définir les options.
+
+Ouverture d'une page Web
+1. Dans une fenêtre de navigation, appuyez sur le champ
+de l'URL au haut de l'écran.
+2. Utilisez le clavier virtuel pour entrer l'adresse de la page
+Web ou appuyez sur l'icône de microphone pour effectuer
+une recherche vocale.
+3. À mesure que vous saisissez les informations de l'adresse,
+des adresses de pages Web correspondantes s'affichent à
+l'écran. Appuyez sur une adresse pour accéder directement
+à la page Web ou poursuivez la saisie de l'adresse de la
+page Web.
+4. Appuyez sur Atteindre.
+
+Se connecter
+
+97
+
+Définition d'une page d'accueil
+1. Dans une fenêtre de navigation, appuyez sur
+
+.
+
+2. Appuyez sur Plus > Paramètres > Définir la page
+d'accueil.
+3. Entrez l'adresse de la page d'accueil voulue, puis appuyez
+sur OK.
+
+Gestion des signets
+Vous pouvez sauvegarder autant de signets que vous le
+souhaitez sur votre téléphone cellulaire.
+Ajout d'un signet
+1. Dans une fenêtre de navigation, accédez à la page Web
+que vous souhaitez ajouter aux signets.
+2. Appuyez sur
+, puis sur signets > Ajouter. L'écran d'ajout
+aux signets s'affiche.
+3. Modifiez le nom du signet au besoin, puis appuyez sur OK.
+Ouverture d'un signet
+1. Dans une fenêtre de navigation, appuyez sur
+signets.
+Se connecter
+
+, puis sur
+
+98
+
+Dans l'écran Mes signets, appuyez sur l'onglet Historique pour
+afficher les pages que vous avez visitées. Vous pouvez également
+appuyer sur l'onglet Mes plus visités pour afficher les pages que
+vous avez visitées le plus fréquemment.
+
+2. Appuyez sur le signet que vous souhaitez ouvrir.
+
+Personnalisation des paramètres du navigateur
+Personnalisez le navigateur à votre guise. Dans le Navigateur,
+réglez les paramètres d'affichage, de confidentialité et de
+sécurité. Dans l'écran de navigation, appuyez sur
+, puis sur
+Plus > Paramètres.
+
+Bluetooth
+Comme votre téléphone cellulaire est doté de la technologie
+Bluetooth, vous pouvez le connecter sans fil à d'autres
+appareils Bluetooth. Ainsi, vous pouvez partager des fichiers
+avec vos amis, converser en mode mains libres au moyen d'un
+casque Bluetooth ou même transférer des photos de votre
+téléphone à votre ordinateur. Lorsque vous utilisez la
+technologie Bluetooth, évitez de vous éloigner de plus de
+10 mètres des autres appareils Bluetooth. Sachez que d'autres
+
+Se connecter
+
+99
+
+appareils électroniques ou des obstacles comme des murs
+peuvent provoquer des interférences.
+
+Activation de Bluetooth
+1. Appuyez sur
+
+> Paramètres.
+
+2. Appuyez sur Sans fil & réseaux, puis cochez la case
+Bluetooth pour activer Bluetooth. L'icône Bluetooth qui
+s'affiche dans la barre de notification indique que la fonction
+Bluetooth est activée.
+3. Appuyez sur Paramètres Bluetooth, puis cochez la case
+Visible pour permettre à d'autres appareils Bluetooth de
+détecter le téléphone.
+
+Apparier et connecter un appareil Bluetooth
+Votre appareil mobile Bluetooth vous offre les possibilités
+suivantes :
+• Profil mains libres (HFP) : vous permet d'utiliser un appareil
+mains libres Bluetooth.
+• Profil casque (HSP) : vous permet d'utiliser un casque mono
+Bluetooth.
+Se connecter
+
+100
+
+• Profil d'envoi d'objet (OPP) : vous permet de transférer des
+fichiers par connexion Bluetooth.
+• Profil de distribution audio avancée (A2DP) : vous permet
+d'utiliser un casque stéréo Bluetooth.
+• Profil de commande à distance audio-vidéo (AVRCP) : vous
+permet de commander à distance la sortie du casque
+Bluetooth.
+Avant de pouvoir utiliser Bluetooth, vous devez apparier votre
+téléphone cellulaire et un autre appareil Bluetooth de la
+manière suivante :
+1. Assurez-vous que la fonction Bluetooth de votre téléphone
+cellulaire est activée.
+2. Appuyez sur
+
+> Paramètres > Sans fil & réseaux >
+
+Paramètres Bluetooth. Votre téléphone cellulaire recherche
+
+alors les appareils Bluetooth à sa portée. (Vous pouvez
+également appuyer sur Rechercher des périphériques pour
+rechercher des appareils Bluetooth.)
+3. Appuyez sur l'appareil à apparier avec votre téléphone
+cellulaire.
+Se connecter
+
+101
+
+4. Entrez le mot de passe d'appariement pour établir la
+connexion.
+
+Envoyer des fichiers au moyen de Bluetooth
+Grâce à Bluetooth, vous pouvez partager des photos, des
+vidéos ou des fichiers musicaux avec votre famille et vos amis.
+Pour envoyer des fichiers au moyen de Bluetooth, procédez
+comme suit :
+1. Appuyez sur
+> Gestionnaire de fichiers pour ouvrir le
+gestionnaire de fichiers.
+2. Appuyez longuement sur le fichier à envoyer. Le menu
+des options actives s'affiche.
+3. Appuyez sur Partager, puis sur Bluetooth pour
+sélectionner un appareil apparié.
+
+Déconnecter ou désapparier un appareil Bluetooth
+1. Appuyez sur
+
+> Paramètres > Sans fil & réseaux >
+
+Paramètres Bluetooth.
+
+2. Accédez à la section Appareils Bluetooth, puis appuyez
+longuement sur l'appareil connecté.
+Vous pouvez également appuyer sur un appareil connecté pour le
+déconnecter.
+Se connecter
+
+102
+
+3. Appuyez sur Déconnecter ou Déparier pour déconnecter
+l'appareil.
+
+Relier le téléphone à un ordinateur par
+connexion USB
+Utilisation de la carte microSD comme périphérique de
+stockage de masse USB
+Pour transférer toute votre musique préférée et vos photos
+à partir de votre PC vers la carte microSD de votre téléphone
+cellulaire, définissez la carte microSD comme périphérique
+de stockage de masse USB de votre ordinateur.
+1. Reliez votre téléphone cellulaire à votre PC au moyen
+du câble USB.
+2. Ouvrez le volet de notification, puis appuyez sur USB
+connecté.
+3. Appuyez sur Monter dans la boîte de dialogue qui s'affiche
+pour confirmer que vous souhaitez transférer des fichiers.
+Votre PC détectera la carte microSD en tant que disque
+
+Se connecter
+
+103
+
+amovible. Vous pouvez maintenant transférer des fichiers de
+votre PC vers la carte microSD de votre téléphone cellulaire.
+Vous pouvez aussi appuyer sur
+> Info et option générale,
+puis cocher la case Mémoire de masse USB afin d'utiliser la
+carte microSD comme périphérique de stockage de masse
+USB.
+Remarque :
+Lorsque votre carte microSD sert de périphérique de stockage de
+masse USB, votre téléphone cellulaire n'utilisera pas cette plage de
+mémoire. Votre PC vous informera de la manière de déconnecter
+correctement le périphérique de stockage de masse USB (votre
+téléphone cellulaire) une fois le transfert de fichiers terminé.
+
+Retirer la carte microSD lorsque le téléphone cellulaire est
+allumé
+1. Appuyez sur
+
+> Paramètres.
+
+2. Faites défiler l'écran vers le bas, puis appuyez sur Carte SD
+et stockage du téléphone > Démonter la carte SD.
+3. Retirez soigneusement la carte microSD du téléphone
+cellulaire.
+
+Se connecter
+
+104
+
+Comportement modem
+Vous pouvez utiliser le logiciel d'accès commuté de votre
+téléphone cellulaire pour utiliser celui-ci comme modem.
+1. Reliez le téléphone cellulaire à un ordinateur au moyen
+du câble USB.
+2. Sélectionnez le bouton Installer DialUp et suivez les
+instructions pour installer le logiciel sur l'ordinateur.
+
+Faire fonctionner votre téléphone cellulaire comme un modem
+Pour faire fonctionner votre téléphone cellulaire comme un
+modem, procédez comme suit :
+1. Assurez-vous que la connexion de données du téléphone
+cellulaire est activée.
+2. Reliez le téléphone cellulaire à un ordinateur au moyen
+du câble USB.
+3. Exécutez le fichier Dialup For Android Handset sur
+l'ordinateur. Pour obtenir de plus amples renseignements,
+consultez l'aide de PC Suite.
+
+Se connecter
+
+105
+
+Divertissement
+En plus de servir d'appareil de communication et d'assistant
+personnel, votre téléphone cellulaire est muni de possibilités
+de divertissement illimitées. Vous pouvez prendre des photos,
+créer des vidéos et des clips audio, télécharger et écouter de
+la musique.
+
+Prendre des photos et enregistrer
+des vidéos
+L'appareil photo est doublé d'un caméscope, de sorte que vous
+pouvez l'utiliser pour prendre des photos et enregistrer des vidéos.
+
+Ouvrir l'appareil photo
+• Appuyez sur
+> Appareil photo pour ouvrir l'appareil photo,
+ou vous pouvez appuyer longuement sur la touche de saisie
+pour ouvrir l'appareil photo peu importe l'écran affiché.
+L'appareil photo s'ouvre en mode paysage, prêt à la prise
+de photo ou à l'enregistrement d'une vidéo.
+• Appuyez sur
+dans l'écran de saisie d'image pour fermer
+l'appareil photo.
+Divertissement
+
+106
+
+Écran de saisie
+
+3
+
+1
+
+4
+
+5
+
+2
+
+Dans l'écran de saisie, appuyez sur l'écran pour faire afficher
+les commandes de zoom avant et de zoom arrière.
+1
+
+Appuyez sur cette touche pour ouvrir le volet des
+paramètres.
+
+2
+
+Appuyez sur cette touche pour faire un zoom
+avant ou arrière.
+
+Divertissement
+
+107
+
+3
+
+I
+
+Miniature de la dernière photo. Appuyez sur cette
+touche pour afficher un aperçu des photos ou des
+vidéos.
+
+4
+
+Faites glisser vers le haut pour enregistrer des
+vidéos (mode caméscope), faites glisser vers le bas
+pour prendre des photos (mode appareil photo).
+
+5
+
+Appuyez sur cette touche pour prendre une photo
+ou enregistrer une vidéo.
+
+Dans l'écran de saisie, appuyez sur
+de saisie.
+
+pour afficher le volet
+
+Prendre une photo
+1. Ouvrez l'appareil photo, puis passez au mode appareil
+photo.
+2. Au besoin, ouvrez le volet des paramètres pour modifier
+les réglages de l'appareil photo. L'aspect de l'aperçu change
+en fonction des modifications apportées aux réglages.
+3. Dans l'écran de saisie d'image, cadrez l'image à l'intérieur
+de l'écran.
+Divertissement
+
+108
+
+4. Appuyez sur la touche de saisie.
+5. Relâchez la touche de saisie pour prendre la photo.
+La photo que vous venez de prendre s'affiche pendant
+quelques secondes. Vous pouvez prendre une autre photo ou
+faire afficher un aperçu de vos photos.
+
+Faire afficher un aperçu de vos photos
+1. Lorsque vous venez de prendre une photo, une miniature
+de la photo prise s'affiche dans le coin supérieur droit de
+l'écran de saisie. Appuyez sur la miniature pour faire afficher
+l'aperçu.
+2. Appuyez sur le bouton affiché à l'écran pour effectuer
+n'importe laquelle des actions suivantes :
+• Appuyez sur SUPPRIMER pour supprimer la photo.
+• Appuyez sur PARTAGER pour envoyer la photo dans un
+message ou l'afficher en ligne.
+• Appuyez sur DÉFINIR COMME pour définir la photo
+en tant que fond d'écran ou icône de contact.
+
+Divertissement
+
+109
+
+Appuyez sur
+, pour modifier la photo, afficher les détails
+de la photo ou afficher la photo sur Maps.
+
+3. Pour afficher plus de photos, appuyez sur l'écran, puis
+sur
+ou
+.
+
+Enregistrer une vidéo
+1. Ouvrez l'appareil photo, puis passez au mode caméscope.
+2. Au besoin, ouvrez le volet des paramètres pour modifier les
+réglages du caméscope.
+3. Cadrez la scène là où vous souhaitez commencer.
+4. Appuyez sur la touche de saisie ou appuyez sur
+pour
+démarrer l'enregistrement de la vidéo. Le caméscope lance
+l'enregistrement de la vidéo.
+5. Appuyez sur la touche de saisie ou appuyez sur la touche
+pour mettre fin à l'enregistrement de la vidéo. Vous
+pouvez enregistrer une autre vidéo ou faire afficher un
+aperçu de vos vidéos.
+
+Faire afficher un aperçu de vos vidéos
+
+Divertissement
+
+110
+
+1. Lorsque vous venez d'enregistrer une vidéo, une miniature
+de la vidéo enregistrée s'affiche dans le coin supérieur droit
+de l'écran de saisie. Appuyez sur la miniature pour faire
+afficher l'aperçu.
+2. Appuyez sur le bouton affiché à l'écran pour effectuer
+n'importe laquelle des actions suivantes :
+• Appuyez sur SUPPRIMER pour supprimer la vidéo.
+• Appuyez sur PARTAGER pour envoyer la vidéo dans un
+message ou l'afficher en ligne.
+• Appuyez sur LIRE pour lancer la lecture de la vidéo.
+Dans l'écran de lecture de la vidéo, appuyez sur les
+commandes pour faire un saut avant, faire un saut arrière,
+lancer la lecture ou interrompre la lecture.
+Appuyez sur
+
+pour afficher les détails de la vidéo.
+
+3. Pour afficher plus de vidéos, appuyez sur l'écran,
+puis sur
+ou
+.
+
+Divertissement
+
+111
+
+Utiliser la galerie
+L'application Galerie peut rechercher automatiquement des
+photos et des vidéos sur votre téléphone cellulaire et votre
+carte microSD. Elle permet également de trier les photos et les
+vidéos dans des dossiers, d'afficher et de modifier des photos,
+de regarder des vidéos et de définir une photo en tant que fond
+d'écran ou photo de contact.
+
+Ouvrir la galerie
+Appuyez sur
+
+> Galerie pour ouvrir la visionneuse.
+
+L'application Galerie classe vos photos et vos vidéos par
+catégorie en fonction de l'emplacement de stockage et stocke
+ces fichiers dans des dossiers. Pour afficher des photos ou
+des vidéos, appuyez sur l'un des dossiers.
+Appuyez sur
+pour afficher le volet Galerie. Dans ce volet,
+vous pouvez effectuer les actions suivantes :
+• Appuyez sur Prendre la photo pour ouvrir l'appareil photo et
+passer au mode photo.
+
+Divertissement
+
+112
+
+• Appuyez sur Capturer la vidéo pour ouvrir l'appareil photo
+et passer au mode vidéo.
+• Appuyez sur Paramètres pour accéder à l'écran des
+paramètres de la Galerie. À partir de cet écran, vous pouvez
+définir la taille d'une photo, organiser les photos, indiquer si
+une demande de confirmation doit s'afficher lorsque vous
+supprimez une photo et lancer un diaporama.
+
+Afficher une photo
+Dans la Galerie, appuyez sur l'album qui contient la photo à
+afficher.
+1. Appuyez sur le dossier qui contient les photos à afficher.
+2. Appuyez sur la photo pour l'afficher en mode plein écran.
+Lorsque vous affichez une photo en mode plein écran,
+feuilletez la photo vers la gauche ou vers la droite pour
+afficher la photo précédente ou suivante.
+3. Appuyez sur l'écran.
+Le volet de zoom s'affiche. Vous pouvez effectuer un zoom avant ou
+un zoom arrière sur la photo.
+
+Divertissement
+
+113
+
+Conseil : La visionneuse de photos prend en charge la fonction
+de rotation automatique. Lorsque vous faites pivoter
+le téléphone, la photo s'ajuste à la rotation.
+
+Faire pivoter une photo
+1. Pendant l'affichage d'une photo, appuyez sur
+afficher un volet contenant d'autres actions.
+
+pour
+
+2. Appuyez sur Faire pivoter.
+3. Sélectionnez Faire pivoter à gauche ou Faire pivoter à droite.
+La photo est enregistrée de manière à tenir compte de la
+nouvelle orientation.
+
+Recadrer une photo
+1. Pendant l'affichage d'une photo, appuyez sur
+pour
+afficher un volet contenant d'autres actions, puis appuyez
+sur Rogner.
+2. Utilisez l'outil de recadrage pour sélectionner la partie de
+la photo à recadrer.
+• Faites glisser l'outil de recadrage à partir de l'intérieur de
+celui-ci pour le déplacer.
+Divertissement
+
+114
+
+• Faites glisser l'un des côtés de l'outil de recadrage pour
+le redimensionner.
+• Faites glisser l'un des coins de l'outil de recadrage pour
+le redimensionner selon des proportions fixes.
+3. Appuyez sur Enregistrer pour enregistrer la photo recadrée.
+Ou appuyez sur Faire pivoter pour faire pivoter la photo
+affichée à l'écran. Ou appuyez sur Supprimer pour annuler
+les modifications.
+
+Écouter de la musique
+Vous pouvez télécharger des fichiers de musique sur votre
+ordinateur ou insérer un CD et copier les fichiers sur votre
+carte microSD afin d'écouter de la musique sur votre téléphone
+cellulaire.
+
+Copier de la musique sur la carte microSD
+1. Reliez le téléphone à l'ordinateur au moyen du câble USB et
+montez la carte microSD.
+2. Sur l'ordinateur, accédez au lecteur USB et ouvrez-le.
+
+Divertissement
+
+115
+
+3. Créez un dossier dans le dossier racine de la carte microSD
+(par exemple, Musique).
+4. Copiez la musique de l'ordinateur vers le dossier créé.
+5. Une fois la copie effectuée, démontez ou éjectez le lecteur
+conformément aux directives du système d'exploitation de
+l'ordinateur afin de retirer le téléphone cellulaire en toute
+sécurité.
+6. Déconnectez le téléphone cellulaire de l'ordinateur.
+
+Ouvrir la bibliothèque multimédia
+Appuyez sur
+multimédia.
+
+> Musique pour afficher la bibliothèque
+
+Écran de la bibliothèque
+
+L'application Musique organise les fichiers de musique en
+fonction de l'emplacement de stockage. Elle contient quatre
+onglets : Artistes, Albums, Chansons et Listes de lecture.
+
+Divertissement
+
+116
+
+Pour faire la lecture aléatoire de vos chansons, appuyez
+, puis sur Lecture aléatoire ou Lecture aléatoire de toutes
+sur
+les chansons.
+
+Ajouter de la musique à une liste de lecture
+1. Appuyez sur une catégorie dans l'écran de la bibliothèque
+de musique.
+2. Dans la liste qui s'affiche, utilisez la touche Navigation pour
+accéder à la chanson à ajouter à la liste de lecture.
+Divertissement
+
+117
+
+3. Appuyez longuement sur la chanson, puis appuyez sur
+Ajouter à la liste de lecture dans le menu des options.
+• Appuyez sur Liste de lecture en cours pour ajouter la
+chanson à une liste de lecture existante.
+• Appuyez sur Nouv. pour créer une liste de lecture et
+ajouter la chanson à celle-ci.
+
+Lancer une liste de lecture
+1. Appuyez sur l'onglet Listes de lecture dans l'écran de la
+bibliothèque de musique.
+2. Appuyez longuement sur la liste de lecture voulue.
+3. Appuyez sur Lire pour lancer la lecture de la liste de lecture.
+
+Écouter la radio FM
+La radio FM vous permet d'écouter des chaînes de radio FM
+sur votre téléphone cellulaire. Comme le casque stéréo avec fil
+fourni agit à titre d'antenne pour la radio FM, branchez d'abord
+le casque sur la prise audio de votre téléphone avant d'ouvrir
+l'application.
+
+Divertissement
+
+118
+
+Ouvrir la radio FM
+1. Appuyez sur
+
+> Radio FM pour ouvrir l'application.
+
+2. La première fois que vous ouvrez la radio FM, appuyez sur
+Syntonisation automatique; la fonction recherche
+automatiquement les chaînes FM disponibles, les enregistre
+comme stations préréglées et lance l'écoute de la première
+chaîne FM trouvée.
+Écran de la radio FM
+1
+
+8
+
+2
+
+3
+
+7
+
+4
+
+6
+
+5
+
+Divertissement
+
+119
+
+1
+
+Affiche le nom de la chaîne.
+
+2
+
+Appuyez sur cette touche pour rechercher la
+bande FM de la prochaine chaîne de fréquence
+FM inférieure.
+
+3
+
+Affiche la radiofréquence FM.
+
+4
+5
+6
+7
+
+8
+
+Appuyez sur cette touche pour passer du casque
+au haut-parleur et inversement.
+Appuyez sur cette touche pour afficher la liste de
+toutes les chaînes préréglées.
+Appuyez sur cette touche pour cesser d'écouter
+la radio FM.
+Feuilletez vers la gauche ou vers la droite pour
+rechercher la prochaine chaîne de fréquences FM
+inférieure ou supérieure.
+Appuyez sur cette touche pour rechercher la
+bande FM de la prochaine chaîne de fréquence
+FM supérieure.
+
+Appuyez sur
+pour afficher le volet des actions et définir
+d'autres options de la Radio FM.
+Divertissement
+
+120
+
+Syntoniser la radio FM
+Ouvrez l'application radio FM, puis appuyez sur
+exécuter les actions suivantes :
+
+pour
+
+• Appuyez sur Syntonisation par à-coups, puis appuyez sur le
+bouton de syntonisation pour syntoniser la fréquence par sauts
+de -0,05 MHz ou +0,05 MHz, puis appuyez sur OK.
+Une fois la syntonisation effectuée, appuyez sur
+Enregistrer la chaîne pour l'enregistrer.
+
+, puis sur
+
+• Appuyez sur Syntonisation automatique pour rechercher
+automatiquement des chaînes FM disponibles.
+
+Divertissement
+
+121
+
+Services Google
+Lorsque vous activez votre téléphone mobile pour la première
+fois, appuyez sur l'icône des services Google tels que Google
+Talk, Gmail et Market. Vous serez ensuite invité à ouvrir une
+session dans votre compte Google.
+Remarque :
+
+Assurez-vous que la connexion de données (3G/GPRS) de votre
+téléphone mobile est activée avant d'ouvrir une session dans votre
+compte Google.
+
+Si vous avez déjà un compte Google, appuyez sur Se
+connecter, puis entrez votre nom d'utilisateur et votre mot de
+passe.
+
+Créer un compte Google
+Si vous n'avez pas de compte Google, vous pouvez en créer
+un.
+1. Lisez les informations au sujet de la configuration, puis appuyez sur
+
+Suivant.
+
+Services Google
+
+122
+
+2. Appuyez sur Créer.
+3. Entrez votre prénom, nom de famille, nom d'utilisateur et un mot de
+passe pour votre compte Google, puis appuyez sur Suivant. Le
+téléphone mobile se connectera au serveur Google afin de vérifier si
+le nom d'utilisateur est disponible. Si le nom d'utilisateur que vous
+avez entré est déjà utilisé, vous devrez en choisir un autre ou en
+sélectionner un dans la liste.
+4. Entrez un mot de passe pour votre compte Google, puis confirmez-le.
+5. Choisissez une question de sécurité dans le menu déroulant, puis
+entrez la réponse.
+6. Appuyez sur Créer.
+7. Lorsque l'écran Conditions d'utilisation de Google, appuyez
+sur J'accepte et J'accepte. Suivant.
+8. Entrez les caractères qui s'affichent à l'écran, puis appuyez sur
+Suivant.
+Conseil :
+Pour utiliser un autre compte Google, rendez-vous à l'écran
+Paramètres de compte et de synchronisation, puis appuyez
+
+Services Google
+
+123
+
+sur Ajouter un compte afin de sélectionner le type de compte que
+vous désirez ajouter.
+
+Utiliser Gmail
+Gmail est le service de courriel sur le Web de Google. Lorsque
+vous avez configuré votre téléphone pour la première fois,
+vous l'avez peut-être fait de manière à pouvoir utiliser un
+compte Gmail existant, ou vous avez créé un nouveau compte.
+La première fois que vous ouvrirez l'application Gmail sur
+votre téléphone, votre boîte de réception contiendra les
+messages de votre compte Gmail sur le Web.
+
+Ouvrir Gmail
+Appuyez sur
+> Gmail. La liste des courriels contenus dans
+le dossier Boîte de réception s'affichera. Tous les courriels
+que vous conserverez dans votre téléphone mobile seront
+acheminés vers votre dossier Boîte de réception.
+
+Passer d'un compte à l'autre
+1. Dans la liste des courriels, appuyez sur
+Comptes.
+Services Google
+
+, puis sur
+
+124
+
+2. Appuyez sur le compte qui contient le courriel que vous
+souhaitez lire.
+
+Créer et envoyer un courriel
+1. Dans la liste des courriels, appuyez sur
+Nouveau message.
+
+, puis sur
+
+2. Dans le champ À, entrez l'adresse courriel de la personne à
+qui vous voulez écrire. Si vous envoyez le courriel à
+plusieurs destinataires, séparez les adresses courriel d'une
+virgule. Vous pouvez ajouter autant de destinataires que
+vous voulez.
+Conseil : Si vous voulez envoyer une copie conforme (Cc) ou une
+copie conforme invisible (Cci) du courriel à d'autres destinataires,
+, puis sur Ajouter Cc/Cci.
+appuyez sur
+
+3. Entrez l'objet du courriel, puis rédigez votre message.
+Conseil : Si vous voulez joindre une photo, appuyez sur
+Piéce jointe pour sélectionner la photo à joindre.
+
+, puis sur
+
+4. Après avoir composé votre courriel, appuyez sur Envoyer.
+
+Services Google
+
+125
+
+Répondre à un courriel ou le transférer
+1. Dans la liste des courriels, appuyez sur le courriel auquel
+vous voulez répondre ou que vous voulez transférer, puis
+faites défiler le courriel jusqu'au bas de celui-ci.
+2. Appuyez sur Répondre, Répondre à tous ou Transférer.
+3. Effectuez l'une des actions suivantes :
+• Si vous avez sélectionné Répondre ou Répondre à tous,
+rédigez votre réponse.
+• Si vous avez sélectionné Transférer, entrez les destinataires,
+puis ajoutez le texte que vous souhaitez ajouter au message.
+4. Appuyez sur Envoyer.
+
+Rechercher un courriel
+1. Dans la liste des courriels, appuyez sur
+Rechercher.
+
+, puis sur
+
+2. Entrez le mot-clé de recherche dans la fenêtre, puis
+.
+appuyez sur
+
+Personnaliser les paramètres Gmail
+Services Google
+
+126
+
+1. Dans la liste des courriels, appuyez sur
+Paramètres.
+
+, puis sur
+
+2. Configurez les options suivantes :
+• Signature : Appuyez sur cette touche pour entrer une
+signature qui sera annexée au bas de vos courriels.
+• Suppressions : Sélectionnez la case afin qu'une fenêtre de
+confirmation s'affiche lorsque vous supprimez un courriel.
+• Opérations par lots : Sélectionnez la case afin d'afficher la
+fonction d'opérations multiples. La fonction d'opérations
+multiples vous permet d'archiver ou de supprimer plusieurs
+courriels à la fois ou de leur appliquer une étiquette en une
+seule opération.
+• Effacer l'historique de recherches : Appuyez sur cette
+touche afin de supprimer l'historique des résultats obtenus
+lorsque vous avez effectué une recherche de messages.
+• Libellés : Appuyez sur cette touche pour sélectionner
+l'étiquette Gmail à synchroniser.
+
+Services Google
+
+127
+
+• Nouveaux e-mails : Sélectionnez la case afin d'afficher
+l'icône de notification sur la barre de notification lorsque vous
+recevez un nouveau courriel.
+• Sonnerie : Appuyez sur cette touche afin de choisir une
+sonnerie pour indiquer la réception d'un nouveau message.
+Sélectionnez la sonnerie pour en entendre un court extrait.
+Si vous ne voulez pas entendre de sonnerie lorsque vous
+recevez un nouveau message, appuyez sur Silencieuse.
+Ensuite, appuyez sur OK pour confirmer votre sélection.
+• Vibreur : Sélectionnez la case si vous souhaitez que votre
+téléphone mobile vibre lorsque vous recevez un nouveau
+courriel.
+
+Utiliser Google Talk
+Google Talk est le service de messagerie instantanée de
+Google. Vous pouvez l'utiliser pour communiquer en direct, au
+téléphone ou sur le Web avec d'autres personnes qui utilisent
+également Talk.
+
+Ouvrir Google Talk
+Appuyez sur
+Services Google
+
+> GoogleTalk pour ouvrir l'application.
+128
+
+Remarque :
+
+Votre compte Talk est lié au compte Google que vous avez configuré
+sur votre téléphone mobile.
+
+Ajouter un ami
+1. Dans la liste des amis, appuyez sur
+ami.
+
+, puis sur Ajouter un
+
+2. Entrez l'ID de messagerie instantanée Talk ou l'adresse
+courriel Google de l'ami que vous souhaitez ajouter.
+3. Appuyez sur Envoyer une invitation.
+
+Accepter une invitation
+1. Dans la liste des amis, appuyez sur
+, puis sur Invités. Si
+vous avez invité quelqu'un à clavarder ou si vous avez reçu
+une telle invitation de la part de quelqu'un d'autre, ces
+informations s'afficheront à l'écran des invitations en attente.
+2. Appuyez sur une invitation en attente, puis sur Accepter ou
+Annuler.
+
+Commencer un clavardage
+
+Services Google
+
+129
+
+1.Dans la liste des amis, effectuez l'une des actions suivantes :
+• Dans la liste des amis, appuyez sur le nom de l'ami.
+• Utilisez la touche Navigation pour localiser le nom de l'ami,
+puis appuyez sur
+.
+2. Utilisez le clavier virtuel pour entrer du texte et clavarder
+avec votre ami.
+3. Une fois votre message entré, appuyez sur Envoyer.
+
+Régler les notifications de nouveaux messages instantanés
+Lorsque vous recevez un message instantané, votre téléphone
+peut émettre un son, vibrer ou afficher une icône. Pour régler
+l'un de ces modes de notification pratiques, allez dans la liste
+des amis, puis appuyez sur
+. Appuyez ensuite sur Plus >
+Paramètres. Choisissez maintenant l'une des options
+suivantes :
+
+Notifications
+
+Sélectionnez la case afin de recevoir
+une notification dans la barre de
+notification lorsque vous recevez un
+nouveau message instantané.
+128
+
+Services Google
+
+130
+
+Appuyez afin de choisir la sonnerie utilisée
+pour indiquer la réception d'un nouveau
+
+Sonnerie
+
+message instantané. Vous entendez un
+court extrait de la sonnerie lorsque vous la
+sélectionnez. Pour désactiver la sonnerie,
+sélectionnez Silencieuse.
+
+Vibreur
+
+Sélectionnez la case pour que votre
+téléphone vibre lorsque vous recevez
+un nouveau message instantané.
+
+Se déconnecter de Talk
+Dans la liste des amis, appuyez sur
+déconnecter pour quitter Talk.
+
+, puis sur Plus > Se
+
+Utiliser Maps
+Maps vous permet de rechercher votre emplacement actuel,
+d'afficher des informations en temps réel sur la circulation
+(selon la disponibilité) et d'obtenir des itinéraires précis pour
+vous rendre à différentes destinations (sur divers types de
+
+Services Google
+
+131
+
+cartes, comme des cartes satellites, des cartes routières ou
+autres).
+
+Activer la source de localisation
+Avant d'ouvrir Maps et de rechercher votre emplacement
+ou des lieux d'intérêt, vous devez activer la « source de
+localisation ».
+1. Appuyez sur
+
+> Paramètres.
+
+2. Appuyez sur Localisation & sécurité.
+3. Dans la section Ma Localisation, cochez la case Utiliser
+les réseaux sans fil, Utiliser les satellites GPS, ou les
+deux.
+
+Ouvrir Maps
+Appuyez sur
+
+> Maps pour ouvrir l'application.
+
+Rechercher des lieux d'intérêt
+1. Sur la carte, appuyez sur
+
+, puis sur Rechercher.
+
+2. Entrez le lieu recherché dans le champ de recherche, puis
+appuyez sur l'icône Rechercher.
+Services Google
+
+132
+
+3. Les résultats de la recherche s'affichent. Appuyez sur un
+lieu qui vous intéresse afin que l'application affiche sa
+situation sur la carte.
+
+Obtenir des itinéraires
+1. Alors qu'une carte est affichée, appuyez sur
+Itinéraire.
+
+, puis sur
+
+2. Entrez votre point de départ dans le premier champ de
+saisie, puis votre destination dans le deuxième.
+3. Appuyez sur l'icône correspondante pour vous déplacer en
+voiture, en transport en commun ou à pied.
+4. Appuyez sur Itinéraire. Votre itinéraire apparaîtra sous la
+forme d'une liste.
+5. Appuyez sur une instruction dans la liste pour afficher la
+carte.
+6. Lorsque vous en avez terminé avec la carte ou avec
+l'itinéraire vocal, appuyez sur
+, puis sur Plus > Effacer la
+carte pour réinitialiser la carte.
+
+Services Google
+
+133
+
+Utiliser YouTube
+YouTube est le service en ligne gratuit de vidéo en continu de
+Google qui vous permet de visionner, de rechercher et de
+charger des vidéos.
+
+Ouvrir YouTube
+Appuyez sur
+> YouTube. L'écran YouTube s'affiche. Les
+vidéos sont groupées par catégories telles que Les plus
+regardées, Les plus commentées, Vidéos récentes, Les
+mieux notées et autres.
+
+Rechercher une vidéo
+1. À l'écran YouTube, appuyez sur
+
+, puis sur Rechercher.
+
+2. Entrez le mot-clé de recherche, puis appuyez sur l'icône
+Rechercher.
+3. Le nombre de correspondances s'affiche sous la barre de
+notification. Faites défiler la liste des résultats, puis appuyez
+sur une vidéo pour la visionner.
+
+Partager une vidéo
+Services Google
+
+134
+
+1. À l'écran YouTube, effectuez l'une des actions suivantes :
+• Dans une liste de vidéos, appuyez longuement sur une vidéo,
+puis appuyez sur Partager dans le menu des options.
+• Alors que vous regardez une vidéo, appuyez sur
+sur Partager.
+
+, puis
+
+2. Le lien vers la vidéo s'affiche automatiquement dans un
+nouveau courriel.
+3. Rédigez votre courriel, adressez-le, puis envoyez-le.
+
+Utiliser Market
+Android Market vous offre un accès direct à des applications et
+à des jeux téléchargeables que vous pouvez installer sur votre
+téléphone.
+
+Ouvrir Market
+1. Appuyez sur
+
+> Market.
+
+2. Lorsque vous ouvrez Market pour la première fois, la
+fenêtre Conditions d'utilisation du service Android
+Market. Appuyez sur Accepter pour continuer.
+Services Google
+
+135
+
+Rechercher des applications
+Il existe plusieurs façons de rechercher des applications à
+partir de la page d'accueil de Market, notamment :
+• Applications en vedette : Faites défiler horizontalement pour
+voir davantage de contenu.
+• Liste d'applications par catégories : Comprend des souscatégories dont vous pouvez trier le contenu par niveau de
+popularité (des moins populaires aux plus populaires) ou par
+date (des plus récentes aux plus anciennes).
+• Liste de jeux.
+• Fonctions de recherche.
+• Vos téléchargements.
+
+Installer une application
+Remarque :
+Pour installer une application qui ne provient pas de Market, appuyez
+sur
+> Paramètres > Applications, puis cochez la case
+Sources inconnues afin de permettre l'installation de l'application.
+
+1. Dans Market, appuyez sur Applications.
+Services Google
+
+136
+
+2. Appuyez sur une catégorie, puis sur l'application que vous
+désirez télécharger.
+3. L'écran des détails de l'article vous permettra alors d'en
+apprendre davantage sur l'application, comme son prix, son
+évaluation générale et les commentaires des utilisateurs. La
+section À propos du développeur vous permet de voir les
+autres applications créées par le même développeur, de
+visiter son site Web et de lui envoyer un courriel.
+4. Pour installer l'article, appuyez sur Installer (si l'article est
+gratuit) ou sur Acheter, selon l'option affichée.
+5. Pour voir la progression du téléchargement, ouvrez le
+panneau de notification. Il suffit de quelques secondes pour
+installer la plupart des applications. Pour interrompre le
+téléchargement d'un article, appuyez sur Annuler le
+téléchargement.
+6. Une fois l'application téléchargée et installée sur votre
+téléphone, l'icône de téléchargement de contenu s'affiche
+dans la barre de notification.
+
+Services Google
+
+137
+
+Désinstaller une application
+1. Dans l'écran Market, appuyez sur Téléchargements.
+2. Appuyez sur l'application que vous voulez désinstaller, puis
+sur Désinstaller.
+3. Lorsque le système vous le demande, appuyez sur OK pour
+supprimer l'application de votre téléphone.
+4. Sélectionnez la raison pour laquelle vous désinstallez
+l'application, puis appuyez sur OK.
+
+Services Google
+
+138
+
+Synchroniser les informations
+Certaines applications, sur votre téléphone cellulaire, vous
+permettent d'accéder aux mêmes informations personnelles
+que vous pouvez ajouter, afficher et modifier à l'ordinateur.
+Lorsque vous ajoutez, modifiez ou supprimez des informations
+dans l'une de ces applications sur le Web, les informations
+mises à jour s'affichent également sur votre téléphone cellulaire.
+Ces mises à jour sont possibles grâce à la synchronisation
+de données par liaison radio. Le processus se déroule en
+arrière-plan et ne gêne en aucune façon l'utilisation du
+téléphone cellulaire. Lorsque la synchronisation est en cours
+sur le téléphone, une icône de synchronisation de données
+s'affiche dans la barre de notification.
+
+Gérer vos comptes
+Vous pouvez synchroniser vos contacts, vos courriels
+et d'autres informations enregistrées sur votre téléphone
+cellulaire avec les données de multiples comptes Google,
+de comptes Microsoft Exchange ActiveSync ou d'autres
+9BSynchroniser les informations
+
+139
+
+types de compte, selon les applications installées sur votre
+téléphone cellulaire.
+Par exemple, vous pouvez commencer par ajouter votre compte
+Google personnel afin que votre compte de courriel, vos contacts
+et votre agenda personnels soient toujours accessibles. Vous
+pouvez ensuite ajouter un compte Exchange ActiveSync afin de
+pouvoir lire vos courriels professionnels et d'avoir vos contacts
+professionnels à portée de main. Vous pouvez même ajouter
+plusieurs comptes Google et d'autres comptes.
+
+Ajouter un compte
+Lorsque vous ajoutez un compte, l'application Contacts
+compare tout nouveau contact que vous synchronisez sur
+votre téléphone cellulaire avec vos contacts existants et tente
+de fusionner les entrées en double dans une seule entrée des
+Contacts. Cette opération n'a pas pour effet de fusionner les
+données des comptes eux-mêmes, mais permet seulement de
+les présenter dans un seul contact.
+1. Appuyez sur
+> Paramètres > Comptes & sync. L'écran
+affiche vos paramètres de synchronisation actuels et une
+liste de vos comptes actuels.
+9BSynchroniser les informations
+
+140
+
+Remarque : Pour ajouter certains comptes, vous devrez peut-être
+obtenir des renseignements d'un agent de soutien
+en TI au sujet du service auquel le compte est relié.
+Par exemple, vous devrez peut-être obtenir le nom
+de domaine ou l'adresse du serveur du compte.
+
+2. Appuyez sur Ajouter un compte.
+3. Appuyez sur le type de compte à ajouter.
+4. Suivez les étapes affichées à l'écran pour entrer les
+informations obligatoires et facultatives au sujet du compte.
+La plupart des comptes nécessitent un nom d'utilisateur et
+un mot de passe, mais les détails requis dépendent du type
+de compte et de la configuration du service auquel vous
+vous connectez.
+5. Configurez le compte. Selon le type de compte, vous devrez
+peut-être configurer le type de données à synchroniser avec
+le téléphone cellulaire, donner un nom au compte et fournir
+d'autres détails. Lorsque vous avez terminé, le compte est
+ajouté à la liste dans l'écran Paramètres de compte et de
+synchronisation.
+
+9BSynchroniser les informations
+
+141
+
+Selon la configuration que vous avez effectuée pour le compte,
+la synchronisation des courriels, des contacts et d'autres
+données démarre sur votre téléphone cellulaire.
+
+Retirer un compte
+Vous pouvez retirer un compte afin de supprimer ce dernier et
+toutes les informations qui lui sont associées de votre
+téléphone cellulaire, y compris les courriels, les contacts, les
+paramètres, etc. Vous ne pouvez retirer certains comptes, par
+exemple le premier compte dans lequel vous avez ouvert une
+session sur le téléphone cellulaire; si vous tentez de supprimer
+certains comptes, toutes les informations personnelles qui lui
+sont associées seront supprimées.
+1. Dans l'écran Paramètres de compte et de
+synchronisation, appuyez sur le compte à supprimer.
+2. Appuyez sur Retirer le compte.
+3. Confirmez la suppression du compte.
+
+9BSynchroniser les informations
+
+142
+
+Personnaliser la synchronisation
+de compte
+Vous pouvez configurer la transmission de données en arrièreplan et les options de synchronisation pour toutes les
+applications de votre téléphone. Vous pouvez également
+configurer le type de données à synchroniser pour chaque
+compte.
+Certaines applications, par exemple Contacts et Gmail, peuvent
+synchroniser des données provenant de plusieurs applications.
+D'autres applications, par exemple Agenda, ne synchronisent
+que les données du premier compte Google dans lequel vous
+avez ouvert une session sur votre téléphone ou d'un compte
+associé de manière spécifique à l'application.
+Pour certains comptes, la synchronisation est bidirectionnelle;
+les modifications apportées aux informations que contient votre
+téléphone cellulaire sont apportées à la copie de ces
+informations sur le Web. Certains comptes ne prennent en
+charge que la synchronisation unidirectionnelle; les
+informations stockées sur votre téléphone cellulaire ne sont
+accessibles qu'en lecture seule.
+9BSynchroniser les informations
+
+143
+
+Configurer les paramètres de synchronisation généraux
+Dans l'écran Paramètres de compte et de synchronisation,
+effectuez les actions suivantes :
+• Cochez ou décochez la case Transmission de données en
+arrière-plan pour déterminer si les applications et les services
+peuvent transmettre des données lorsque vous n'êtes pas en
+train de les utiliser directement (c'est-à-dire lorsqu'ils
+s'exécutent en arrière-plan).
+Si vous désélectionnez cette option, Gmail cesse de recevoir les
+nouveaux messages, Agenda cesse la synchronisation des
+événements, etc. jusqu'à ce que vous appuyiez sur l'élément de
+menu Actualiser ou envoyiez un courriel.
+
+• Cochez ou décochez la case Synchronisation automatique
+pour déterminer si les modifications apportées aux
+informations sur le téléphone ou sur le Web sont
+automatiquement synchronisées les unes avec les autres.
+Par exemple, lorsque cette option est activée, les modifications
+apportées dans les Contacts sur le téléphone sont
+automatiquement apportées dans Google Contacts sur le Web.
+
+9BSynchroniser les informations
+
+144
+
+Modifier les paramètres de synchronisation d'un compte
+1. Dans l'écran Paramètres de compte et de synchronisation,
+appuyez sur le compte dont vous souhaitez modifier les
+paramètres. L'écran de données et de synchronisation
+s'ouvre, affichant la liste des types d'informations que le
+compte permet de synchroniser.
+2. Les éléments sélectionnés sont configurés en fonction de
+la synchronisation sur votre téléphone cellulaire.
+3. Cochez ou décochez la case correspondant aux informations
+à synchroniser ou non sur le téléphone cellulaire.
+
+Synchroniser les données à l'aide
+de PC Suite
+Installez le logiciel PC Suite stocké sur le téléphone cellulaire.
+Suivez les directives qui s'affichent à l'ordinateur pour effectuer
+l'installation. Vous pouvez maintenant synchroniser vos
+contacts et les événements de votre agenda entre votre
+ordinateur et votre téléphone cellulaire. Pour obtenir de plus
+amples renseignements, consultez l'aide de PC Suite.
+Remarque :
+9BSynchroniser les informations
+
+145
+
+Le logiciel PC Suite est compatible avec Windows 2000 SP4, Windows
+XP SP2, Windows Vista et Windows 7. Nous vous recommandons
+d'utiliser l'un de ces systèmes.
+
+9BSynchroniser les informations
+
+146
+
+Utiliser d'autres applications
+Utiliser l'agenda
+Utilisez l'Agenda pour créer et gérer des événements, des
+réunions et des rendez-vous. Selon vos paramètres de
+synchronisation, l'agenda de votre téléphone demeure
+synchronisé avec votre agenda sur le Web ou votre agenda
+Exchange ActiveSync.
+
+Ouvrir l'agenda
+Appuyez sur
+
+> Agenda pour ouvrir l'application.
+
+Conseil :
+Pour accéder à Google Agenda, appuyez sur
+, puis sur Plus >
+Lancer Google Agenda. Le service Google Agenda peut être
+synchronisé avec le serveur Google, contrairement à l'agenda du
+téléphone cellulaire.
+
+Utiliser d'autres applications
+
+147
+
+Volet Agenda
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+1
+
+Appuyez sur cette touche pour passer au jour
+d'aujourd'hui ou à l'heure présente.
+
+2
+
+Passez à l'affichage Journée.
+
+3
+
+Passez à l'affichage Semaine.
+
+Utiliser d'autres applications
+
+148
+
+4
+
+Passez à l'affichage Mois.
+
+5
+
+Passez à l'affichage Agenda.
+
+6
+
+Appuyez sur cette touche pour créer un
+événement.
+
+Modifier l'affichage de l'agenda
+Dans l'écran Agenda, appuyez sur
+,
+modifier l'affichage de votre agenda.
+
+Utiliser d'autres applications
+
+,
+
+ou
+
+pour
+
+149
+
+Affichage de l'agenda
+
+1
+
+3
+
+2
+
+1
+
+Feuilletez vers le haut ou vers le bas pour afficher
+des événements antérieurs ou ultérieurs.
+
+2
+
+Appuyez sur un événement pour en afficher les
+détails.
+
+3
+
+Indique qu'il s'agit d'un événement périodique.
+
+Utiliser d'autres applications
+
+150
+
+Affichage Jour
+
+1
+
+2
+
+3
+
+1
+
+Feuilletez vers la gauche ou vers la droite pour
+afficher des jours antérieurs ou ultérieurs.
+
+2
+
+Appuyez sur un événement pour afficher les détails.
+
+3
+
+Appuyez longuement sur une tranche horaire ou
+un événement pour créer un événement à l'heure
+choisie.
+
+Utiliser d'autres applications
+
+151
+
+Affichage Semaine
+
+1
+2
+
+3
+
+1
+
+Feuilletez vers la gauche ou vers la droite pour
+afficher des jours antérieurs ou ultérieurs.
+
+2
+
+Appuyez sur un événement pour en afficher les
+détails.
+
+3
+
+Appuyez longuement sur une tranche horaire ou
+un événement pour créer un événement à l'heure
+choisie.
+
+Utiliser d'autres applications
+
+152
+
+Affichage Mois
+
+1
+
+2
+
+1
+
+Feuilletez vers le haut ou vers le bas pour afficher
+des jours antérieurs ou ultérieurs.
+
+2
+
+Appuyez sur un jour pour afficher les événements
+qu'il contient.
+
+Utiliser d'autres applications
+
+153
+
+Créer un événement
+1. Dans n'importe quel affichage de l'agenda, appuyez sur
+Appuyez ensuite sur Nouvel événement pour ouvrir l'écran
+Description de l'événement.
+
+.
+
+2. Entrez le nom de l'événement au clavier.
+• Si l'événement couvre un bloc de temps, appuyez sur
+De et À pour définir la durée de l'événement.
+• S'il s'agit d'une occasion spéciale, par exemple un
+anniversaire ou un événement durant toute la journée,
+définissez les dates De et À, puis cochez la case Toute la
+journée.
+3. Entrez l'emplacement et la description de l'événement.
+4. Si vous possédez plus d'un agenda, sélectionnez l'agenda
+dans lequel vous souhaitez enregistrer l'événement.
+5. Entrez les adresses de courriel pour inviter d'autres
+personnes à assister à l'événement.
+
+Utiliser d'autres applications
+
+154
+
+6. Réglez l'heure du rappel de l'événement dans les Rappels,
+puis indiquez la nature périodique ou non de l'événement et
+la périodicité, s'il y a lieu, dans Périodicité.
+7. Appuyez sur Enregistrer.
+Conseil :
+Pour créer rapidement un événement dans les affichages Journée,
+Semaine ou Mois, appuyez longuement sur une tranche horaire vide,
+puis appuyez sur Nouvel événement. Un écran des détails du nouvel
+événement s'affiche, avec la tranche horaire et la date sélectionnées
+indiquées dans les champs De et À.
+
+Personnaliser les paramètres de l'agenda
+Dans n'importe quel affichage de l'agenda, appuyez sur
+Appuyez ensuite sur Plus > Paramètres.
+
+.
+
+• Dissimuler les événements déclinés : Sélectionnez cette option
+pour masquer les événements associés aux invitations que
+vous avez refusées.
+• Configurer les alertes et les notifications : Appuyez sur cette
+option pour régler des rappels d'événement pour vous faire
+parvenir une alerte, vous envoyer une notification ou
+Utiliser d'autres applications
+
+155
+
+désactiver les notifications relatives aux événements sur
+votre téléphone cellulaire.
+• Sélectionner la sonnerie : Appuyez sur cette option pour
+sélectionner la sonnerie qui se fait entendre lorsque vous
+recevez un rappel d'événement.
+• Vibration : Sélectionnez cette option pour que le téléphone
+cellulaire vibre lorsque vous recevez une notification relative
+à un événement.
+• Configurer un rappel par défaut : Appuyez sur cette option pour
+définir la valeur par défaut du délai du rappel précédent
+l'événement.
+
+Utiliser l'alarme
+Vous pouvez régler une nouvelle alarme ou modifier une
+alarme existante.
+
+Ouvrir l'alarme
+Appuyez sur
+cellulaire.
+
+Utiliser d'autres applications
+
+> Alarme pour utiliser l'alarme du téléphone
+
+156
+
+Écran de la liste des alarmes
+
+1
+
+2
+
+3
+
+1
+
+Affiche l'heure actuelle.
+Appuyez sur cette touche pour sélectionner
+l'horloge à afficher.
+
+2
+
+Appuyez sur cette touche pour accéder à l'écran
+des paramètres de l'alarme. Vous pouvez régler
+
+Utiliser d'autres applications
+
+157
+
+l'heure, la sonnerie, la vibration et le mode de
+répétition de l'alarme.
+3
+
+Appuyez sur cette touche pour activer ou
+désactiver une alarme.
+
+Ajouter une alarme
+1. Dans l'écran de la liste des alarmes, appuyez sur
+puis sur Ajouter l'alarme.
+
+,
+
+2. Réglez l'alarme, puis appuyez sur Terminé.
+
+Régler une alarme
+1. Dans l'écran de la liste des alarmes, appuyez sur l'une des
+alarmes affichées.
+2. Appuyez sur Heure pour régler l'heure de l'alarme.
+3. Appuyez sur Sonnerie pour sélectionner la sonnerie de l'alarme.
+4. Cochez la case Vibration pour que le téléphone vibre en plus
+de faire entendre une sonnerie au moment de l'alarme.
+5. Appuyez sur Répéter pour définir les jours où l'alarme doit
+se produire.
+Utiliser d'autres applications
+
+158
+
+6. Appuyez sur Étiquette pour entrer le nom de l'alarme.
+7. Appuyez sur Terminer.
+
+Personnaliser les paramètres des alarmes
+Dans l'écran de la liste des alarmes, appuyez sur
+
+, puis sur
+
+Paramètres.
+
+• L'alarme est en mode silencieux : Sélectionnez cette option
+pour faire sonner l'alarme même lorsque le téléphone est en
+mode silencieux.
+• Volume de l'alarme : Appuyez sur cette option pour ouvrir une
+boîte de dialogue permettant de régler le volume de toutes
+les alarmes.
+• Répéter après : Appuyez sur cette option pour ouvrir une boîte
+de dialogue permettant de définir la période d'attente avant la
+répétition de l'alarme.
+• Action du bouton latéral : Appuyez sur cette option pour ouvrir
+une boîte de dialogue permettant de définir ce qui se produit
+lorsque vous appuyez sur les boutons latéraux au moment où
+une alarme résonne.
+Utiliser d'autres applications
+
+159
+
+Utiliser l'enregistreur audio
+L'enregistreur audio permet d'enregistrer des pensées
+rapidement. Vous pouvez également enregistrer votre propre
+voix et définir l'enregistrement en tant que sonnerie.
+
+Écran de l'enregistreur audio
+
+1
+
+1
+
+2
+
+5
+
+3
+
+4
+
+Utiliser d'autres applications
+
+160
+
+1
+
+Affiche la durée de l'enregistrement.
+
+2
+
+Affiche le volume de vos fichiers audio.
+
+3
+
+Appuyez sur cette touche pour lancer ou
+interrompre la lecture de l'enregistrement.
+
+4
+
+Appuyez sur cette touche pour commencer
+l'enregistrement.
+
+5
+
+Appuyez sur cette touche pour arrêter
+l'enregistrement.
+
+Commencer un enregistrement
+1. Appuyez sur
+
+> Enregistreur audio pour ouvrir l'application.
+
+2. Appuyez sur le bouton de démarrage pour commencer
+l'enregistrement.
+3. Enregistrez votre message.
+4. Appuyez sur le bouton d'arrêt pour arrêter l'enregistrement.
+
+Utiliser d'autres applications
+
+161
+
+5. Appuyez sur
+clip vocal.
+
+, puis sur Enregistrements pour afficher le
+
+Définir un clip vocal comme sonnerie
+1. Dans l'écran de l'enregistreur audio, appuyez sur
+sur Enregistrements.
+
+, puis
+
+2. Sélectionnez l'emplacement où sont sauvegardés les
+enregistrements.
+3. Sélectionnez un clip vocal, puis appuyez sur
+
+.
+
+4. Appuyez sur Configurer en tant que sonnerie.
+
+Utiliser le gestionnaire de fichiers
+Le Gestionnaire de fichiers est comme un assistant personnel
+permettant d'organiser, de modifier et de supprimer les fichiers
+et les dossiers.
+
+Ouvrir le gestionnaire de fichiers
+Appuyez sur
+l'application.
+
+Utiliser d'autres applications
+
+> Gestionnaire de fichiers pour ouvrir
+
+162
+
+3
+
+1
+
+1
+
+2
+
+1
+
+Appuyez sur cette touche pour afficher les fichiers
+et les dossiers que contient la mémoire de votre
+téléphone.
+
+2
+
+Appuyez sur cette touche pour afficher votre liste
+de fichiers et de dossiers.
+
+3
+
+Appuyez sur cette touche pour afficher les fichiers
+et les dossiers que contient la carte microSD.
+
+Utiliser d'autres applications
+
+163
+
+Le menu d'options du gestionnaire de fichiers ne s'affiche pas
+nécessairement en entier sur une seule page. Vous devrez peutêtre feuilleter le menu vers le haut ou vers le bas ou appuyer sur
+la touche Navigation pour parcourir toutes les options.
+
+Créer un dossier
+1. Dans l'écran du Gestionnaire de fichiers, accédez au
+répertoire du dossier à créer.
+2. Appuyez sur
+
+pour ouvrir le volet des options, puis sur
+
+Nouveau dossier.
+
+3. Entrez le nom du nouveau dossier dans la zone de texte.
+4. Appuyez sur Enregistrer.
+
+Déplacer ou copier un fichier
+1. Dans l'écran du Gestionnaire de fichiers, appuyez sur
+pour afficher le volet des options, puis sur Couper ou Copier.
+2. Appuyez sur le fichier ou le dossier à déplacer ou à copier.
+Lorsque l'élément est sélectionné, une coche s'affiche.
+Pour sélectionner tous les fichiers, appuyez sur
+pour ouvrir le
+volet des options. Appuyez ensuite sur Sélectionner tout pour
+Utiliser d'autres applications
+
+164
+
+sélectionner tous les fichiers d'un dossier (appuyez sur
+Désélectionner tout pour annuler la sélection).
+
+3. Appuyez sur
+pour ouvrir le volet des options, puis sur
+Terminer pour couper ou copier le fichier.
+4. Sélectionnez ensuite le chemin d'accès de l'emplacement
+vers lequel vous souhaitez déplacer ou copier le fichier.
+Appuyez sur
+pour ouvrir le volet des options, puis sur
+Coller pour déplacer ou copier le fichier à l'endroit
+sélectionné.
+
+Effectuer une recherche rapide pour trouver un fichier
+1. Dans l'écran du Gestionnaire de fichiers, appuyez sur un
+dossier pour accéder au répertoire dans lequel se trouve le
+fichier voulu.
+2. Appuyez sur
+
+pour ouvrir le volet des options, puis sur
+
+Recherche.
+
+3. Entrez un mot clé du nom du fichier ou du dossier dans la
+zone de recherche.
+4. Appuyez sur Recherche. Le téléphone cellulaire lance la
+recherche.
+Utiliser d'autres applications
+
+165
+
+5. La liste des résultats de la recherche s'affiche. Appuyez
+sur un fichier dans la liste pour l'ouvrir.
+6. Appuyez sur Nouvelle recherche pour lancer une nouvelle
+recherche ou appuyez sur la touche Précédente pour
+revenir à l'écran du gestionnaire de fichiers.
+
+Afficher l'état de la mémoire
+Dans l'écran du Gestionnaire de fichiers, appuyez sur
+pour
+ouvrir le volet des options, puis sur État de la mémoire. L'écran
+de gestion de la mémoire s'affiche. Cet écran vous permet
+d'afficher l'état de la mémoire et la mémoire disponible sur
+votre téléphone cellulaire et la carte microSD.
+
+Utiliser la calculatrice
+Utilisez la calculatrice pour résoudre des problèmes
+d'arithmétique simples ou utilisez ses opérateurs avancés
+pour résoudre des équations plus complexes.
+
+Ouvrir la calculatrice
+Appuyez sur
+
+Utiliser d'autres applications
+
+> Calculatrice pour ouvrir l'application.
+
+166
+
+Passer au volet Avancé
+Dans l'écran Calculatrice, feuilletez l'écran vers la droite ou
+vers la gauche pour passer du Fonctions avancées au
+Panneau de base et inversement.
+
+Utiliser le bloc-notes
+Le bloc-note comporte un traitement de texte simple et
+présente la liste de toutes les notes selon une structure linéaire.
+Vous pouvez ajouter, modifier et supprimer des notes.
+1. Appuyez sur
+2. Appuyez sur
+note.
+
+> Bloc-note pour ouvrir l'application.
+, puis sur Ajouter une note pour créer une
+
+3. Une fois la rédaction terminée, appuyez sur
+
+, puis sur
+
+Enregistrer.
+
+Utiliser d'autres applications
+
+167
+
+Gérer votre téléphone cellulaire
+Pour configurer votre téléphone cellulaire, appuyez sur
+
+>
+
+Paramètres.
+
+Régler la date et l'heure
+Par défaut, votre téléphone cellulaire utilise automatiquement
+la date, le fuseau horaire et l'heure fournis par le réseau.
+Remarque :
+Lorsque l'heure fournie par le réseau est utilisée automatiquement,
+vous ne pouvez pas modifier la date, l'heure ni le fuseau horaire.
+
+1. Dans l'écran Paramètres, appuyez sur Date & heure.
+2. Décochez la case Automatique.
+3. Appuyez sur Régler la date. Dans l'écran de réglage de la
+date, appuyez sur le bouton Haut ou sur le bouton Bas pour
+régler la date, le mois et l'année, puis appuyez sur Régler
+lorsque la configuration est terminée.
+
+Gérer votre téléphone cellulaire
+
+168
+
+4. Appuyez sur Sélectionner le fuseau horaire, puis sélectionnez
+le fuseau horaire voulu dans la liste. Faites défiler la liste
+vers le bas pour afficher d'autres fuseaux horaires.
+5. Appuyez sur Régler l'heure. Dans l'écran de réglage de
+l'heure, appuyez sur le bouton Haut ou sur le bouton Bas
+pour régler l'heure et les minutes. Appuyez sur Régler
+lorsque la configuration est terminée.
+6. Cochez ou décochez la case Utiliser le format 24 heures
+pour passer du format 12 heures au format 24 heures et
+inversement.
+7. Appuyez sur Sélectionner le format de la date pour définir le
+format d'affichage de la date sur votre téléphone cellulaire.
+
+Régler l'affichage
+Régler la luminosité de l'écran
+1. Dans l'écran Paramètres, appuyez sur Son & affichage >
+Luminosité.
+
+Gérer votre téléphone cellulaire
+
+169
+
+2. Faites glisser la case de défilement vers la gauche pour
+réduire la luminosité de l'écran ou vers la droite pour
+l'augmenter.
+3. Appuyez sur OK pour enregistrer le réglage.
+
+Définir le délai avant que l'écran ne s'éteigne
+Si votre téléphone cellulaire est inactif pendant plusieurs
+minutes, l'écran s'éteint automatiquement afin d'économiser
+la charge de la pile. Pour régler un délai d'inactivité plus ou
+moins long, procédez comme suit :
+1. Dans l'écran Paramètres, appuyez sur Son & affichage >
+Temporisation de l'écran.
+
+2. Sélectionnez la durée d'illumination de l'écran.
+
+Calibrage de l'écran
+Calibrez l'écran s'il ne répond pas correctement à votre toucher.
+1. Dans l'écran Paramètres, appuyez sur Son & affichage >
+Calibrage.
+
+2. Appuyez sur la cible à l'écran.
+3. Après le calibrage, appuyez sur
+Gérer votre téléphone cellulaire
+
+pour quitter.
+170
+
+Régler les sonneries
+Activer le mode silencieux
+1. Dans l'écran Paramètres, appuyez sur Son & affichage.
+2. Cochez la case Mode silencieux. Tous les sons, à l'exception
+des sons multimédias et des alarmes, sont désactivés.
+
+Régler le volume de la sonnerie
+Vous pouvez régler le volume de la sonnerie à partir de l'écran
+d'accueil ou de l'écran de n'importe quelle application (sauf
+pendant un appel ou la lecture de fichiers de musique ou de
+vidéos). Appuyez sur les touches de volume pour régler le
+volume de la sonnerie au niveau voulu.
+Vous pouvez également régler le volume de la sonnerie dans
+l'écran des paramètres.
+1. Dans l'écran Paramètres, appuyez sur Son & affichage >
+Volume de la sonnerie.
+
+2. Faites glisser la case de défilement vers la gauche pour
+réduire le volume ou vers la droite pour l'augmenter.
+3. Appuyez sur OK pour enregistrer le réglage.
+Gérer votre téléphone cellulaire
+
+171
+
+Dans l'écran Volume de la sonnerie, si vous ne sélectionnez pas
+l'option Définir le volume de la sonnerie pour les appels entrants
+et les alertes, vous pouvez définir Volume de la sonnerie des
+appels entrants et Volume des alertes séparément.
+
+Régler le volume du lecteur multimédia
+Lorsque vous écoutez de la musique ou regardez des vidéos,
+appuyez sur les touches de volume pour régler le volume
+sonore.
+Vous pouvez également régler le volume sonore dans l'écran
+des paramètres.
+1. Dans l'écran Paramètres, appuyez sur Son & affichage >
+Volume du lecteur multimédia.
+
+2. Faites glisser la case de défilement vers la gauche pour
+réduire le volume ou vers la droite pour l'augmenter.
+3. Appuyez sur OK pour enregistrer le réglage.
+
+Gérer votre téléphone cellulaire
+
+172
+
+Changer la sonnerie du téléphone
+1. Dans l'écran Paramètres, appuyez sur Son & affichage >
+Sonnerie du téléphone.
+
+2. Appuyez sur la sonnerie à utiliser, puis sur OK. La sonnerie
+se fait entendre lorsqu'elle est sélectionnée.
+Conseil :
+Vous pouvez définir une chanson en tant que sonnerie. Ouvrez
+l'application Musique, puis appuyez longuement sur le titre de la
+chanson et sélectionnez Utiliser en tant que sonnerie du
+téléphone.
+
+Régler le téléphone afin qu'il vibre pour signaler un appel
+entrant
+1. Dans l'écran Paramètres, appuyez sur Son & affichage.
+2. Cochez la case Vibration du téléphone. Le téléphone
+cellulaire vibre alors pour signaler un appel entrant.
+
+Gérer votre téléphone cellulaire
+
+173
+
+Régler les services du téléphone
+Personnaliser les paramètres d'appel
+Votre fournisseur de services cellulaires offre différents
+services, par exemple le renvoi d'appel, l'appel en attente, la
+composition de numéros autorisés et la messagerie vocale.
+Vous pouvez personnaliser plusieurs de ces services s'ils font
+partie de votre forfait téléphonique.
+Dans l'écran Paramètres, appuyez sur Paramètres d'appel
+pour personnaliser les fonctions d'appel.
+
+Activer le téléchargement itinérant de données
+1. Dans l'écran Paramètres, appuyez sur Sans fil & réseaux >
+Réseaux de téléphonie mobile.
+
+2. Cochez la case Téléchargement itinérant de données.
+Remarque :
+L'accès aux services de données en mode itinérance peut entraîner la
+facturation de frais additionnels. Informez-vous auprès de notre
+fournisseur de services sans fil au sujet des frais d'itinérance.
+
+Gérer votre téléphone cellulaire
+
+174
+
+Désactiver le service de données
+La synchronisation des mises à jour et la réception des
+messages multimédias repose sur le transfert de données, qui
+est assuré par le service de données.
+1. Dans l'écran Paramètres, appuyez sur Sans fil & réseaux >
+Réseaux de téléphonie mobile.
+
+2. Décochez la case Service de données.
+
+Activer de façon permanente les données mobiles
+Si vous n'avez pas sélectionné l'option Activer de façon
+permanente les données mobiles, lorsque l'écran est verrouillé
+
+pendant 30 minutes, le téléphone cellulaire désactive
+automatiquement tous les services de données (sauf le service
+MMS). Par exemple, le téléphone cesse de vérifier les courriels
+et de synchroniser les données en arrière-plan. Vous devez
+réactiver l'écran pour que le téléphone réactive
+automatiquement les services de données.
+Dans l'écran Paramètres, appuyez sur Sans fil & réseaux >
+Réseaux de téléphonie mobile. Sélectionnez Activer de façon
+permanente les données mobiles pour activer cette fonction.
+Par défaut, cette fonction est désactivée.
+Gérer votre téléphone cellulaire
+
+175
+
+Régler la synthèse vocale à partir
+d'un texte
+Utilisez les paramètres de la synthèse vocale à partir d'un
+texte pour configurer le synthétiseur de la parole à partir du
+texte Android pour les applications qui peuvent en tirer parti.
+
+Installer les données vocales
+1. Dans l'écran Paramètres, appuyez sur Synthèse vocale à
+partir d'un texte > Installer des données vocales.
+2. Si aucune données de synthétiseur de la parole à partir du
+texte ne sont installées sur votre téléphone, connectez-vous
+à la boutique Android Market et suivez les directives pour
+télécharger et installer les données.
+3. Suivez les directives pour installer les données vocales.
+
+Régler le débit de la parole
+1. Dans l'écran Paramètres, appuyez sur Synthèse vocale à
+partir d'un texte > Débit de la parole.
+2. Sélectionnez la vitesse à laquelle le texte doit être énoncé.
+
+Gérer votre téléphone cellulaire
+
+176
+
+Protéger votre téléphone cellulaire
+Activer le NIP de votre carte SIM
+1. Dans l'écran Paramètres, appuyez sur Localisation & sécurité
+> Configurer le verrouillage de la carte SIM.
+2. Cochez la case Verrouiller la carte SIM.
+3. Entrez le NIP de la carte SIM au clavier, puis appuyez sur OK.
+4. En tout temps, pour changer le NIP de la carte SIM,
+appuyez sur Modifier le NIP de la carte SIM.
+Remarque :
+Vous pouvez composer les numéros d'urgence en tout temps sur votre
+téléphone cellulaire.
+
+Protéger votre téléphone cellulaire à l'aide du verrouillage
+de l'écran
+Pour assurer une meilleure sécurité de vos données,
+verrouillez l'écran ou configurez l'appareil de telle sorte qu'un
+schéma de déverrouillage est nécessaire chaque fois que le
+téléphone cellulaire est mis sous tension ou est réactivé après
+avoir été mis en veille.
+Gérer votre téléphone cellulaire
+
+177
+
+1. Dans l'écran Paramètres, appuyez sur Localisation &
+sécurité > Configurer un modèle de déverrouillage.
+2. Reliez au moins quatre points en traçant une ligne verticale,
+horizontale ou diagonale, puis retirez votre doigt de l'écran
+lorsque vous avez terminé.
+Vous devez faire glisser votre doigt sur l'écran pour créer
+le schéma, et non appuyer sur des points séparés.
+3. Le téléphone cellulaire enregistre le schéma.
+Appuyez sur Continuer.
+4. Après le message-guide, dessinez le schéma de
+déverrouillage de l'écran de nouveau, puis appuyez sur
+Confirmer.
+
+Décochez la case Utiliser un modèle visible si vous ne voulez pas
+que le schéma s'affiche à l'écran pendant le déverrouillage.
+Pour modifier le schéma de déverrouillage, appuyez sur
+Localisation & sécurité > Modifier un modèle de déverrouillage
+
+dans l'écran Paramètres.
+
+Gérer votre téléphone cellulaire
+
+178
+
+Gérer les applications
+Afficher une application installée
+1. Dans l'écran Paramètres, appuyez sur Applications > Gérer
+des applications.
+
+2. Dans la liste des applications, effectuez n'importe laquelle
+des actions suivantes :
+, puis sur Trier par taille. Appuyez ensuite
+• Appuyez sur
+sur une application pour en afficher les détails.
+• Appuyez sur
+, puis sur Filtrer. Sélectionnez Tout,
+Exécution ou Téléchargé dans le menu des options.
+Appuyez ensuite sur une application pour en afficher les
+détails.
+• Appuyez sur une application pour en afficher les détails
+directement.
+
+Supprimer une application installée
+1. Dans l'écran Paramètres, appuyez sur Applications > Gérer
+des applications.
+
+2. Appuyez sur une application, puis sur Désinstaller pour
+supprimer l'application de votre téléphone cellulaire.
+Gérer votre téléphone cellulaire
+
+179
+
+Comment libérer de l'espace mémoire sur votre téléphone
+cellulaire
+• Déplacez les fichiers et les fichiers joints aux courriels vers
+la carte microSD.
+• Dans le Navigateur, effacez tous les fichiers Internet
+temporaires et les données de l'historique de navigation.
+• Désinstallez les programmes téléchargés que vous
+n'utilisez plus.
+• Réinitialisez votre téléphone cellulaire.
+
+Réinitialiser votre téléphone cellulaire
+Faire une copie de sauvegarde de mes paramètres
+Vous pouvez faire une copie de sauvegarde des paramètres
+de votre téléphone cellulaire sur les serveurs Google au moyen
+de votre compte Google. Si vous remplacez votre téléphone
+cellulaire, les paramètres sauvegardés sont stockés sur le
+nouveau téléphone cellulaire la première fois que vous vous
+connectez à votre compte Google.
+1. Dans l'écran Paramètres, appuyez sur Confidentialité.
+
+Gérer votre téléphone cellulaire
+
+180
+
+2. Cochez la case Faire une copie de sauvegarde de mes
+paramètres.
+
+Restauration des données du fabricant
+Si vous réinitialisez le téléphone afin de rétablir les réglages
+effectués en usine, toutes vos données personnelles stockées
+dans la mémoire interne du téléphone seront supprimées, y
+compris les renseignements relatifs à votre compte Google et
+à tout autre compte, les paramètres du système et des
+applications et toutes les applications téléchargées. La
+réinitialisation du téléphone ne supprime pas les mises à jour
+du système téléchargées ni les fichiers stockés sur la carte
+microSD, par exemple les fichiers de musique et les photos.
+1. Dans l'écran Paramètres, appuyez sur Confidentialité >
+Réinitialisation des données du fabricant.
+
+2. Après le message-guide, appuyez sur Réinitialiser le
+téléphone, puis sur Effacer tout. Le téléphone cellulaire
+réinitialise les paramètres selon les paramètres d'origine du
+fabricant, puis redémarre.
+
+Gérer votre téléphone cellulaire
+
+181
+
+Mettre à niveau la version du logiciel
+Avant de mettre à niveau le logiciel de votre téléphone
+cellulaire, assurez-vous que votre téléphone est complètement
+chargé et que la version de la mise à niveau est appropriée.
+Faites une copie de sauvegarde des renseignements
+importants que contient votre téléphone cellulaire, par exemple
+les contacts, les courriels, les fichiers et les autres messages.
+
+Mettre à niveau le logiciel au moyen de la carte microSD
+Après avoir copié les fichiers de mise à jour sur la carte
+microSD, procédez comme suit :
+1. Dans l'écran Paramètres, appuyez sur Carte SD et stockage
+du téléphone > Mise à niveau logicielle > Mise à niveau de la
+carte SD.
+
+2. Avant la mise à niveau, le système du téléphone cellulaire
+vérifie automatiquement le niveau de charge de la pile et la
+version de la mise à niveau. Si la version téléchargée ne
+répond pas aux exigences de la mise à niveau, la mise à
+niveau ne fonctionnera pas.
+3. Lorsque le message suivant s'affiche, appuyez sur Confirmer.
+Gérer votre téléphone cellulaire
+
+182
+
+4. Appuyez sur Mettre à niveau.
+5. Le téléphone cellulaire redémarre et l'écran de mise à
+niveau s'affiche.
+6. Une fois la mise à niveau terminée, le téléphone cellulaire
+redémarre automatiquement et s'active de nouveau.
+7. Appuyez sur À propos du téléphone > Numéro de version
+dans l'écran Paramètres pour afficher les informations sur la
+version.
+
+Gérer votre téléphone cellulaire
+
+183
+
+Annexe
+Avertissements et consignes de sécurité
+La présente section contient des informations importantes
+concernant les directives d'utilisation de votre appareil.
+Elle contient également des renseignements sur l'utilisation
+sécuritaire de l'appareil. Lisez attentivement ces
+renseignements avant d'utiliser votre appareil.
+
+Appareils électroniques
+Mettez votre téléphone hors tension là où son utilisation est
+interdite. Ne vous servez pas de l'appareil lorsque son
+utilisation risque de provoquer des interférences ou de
+présenter un danger.
+
+Appareils médicaux
+Respectez les consignes et les règlements mis en place par
+les hôpitaux et les établissements de santé. Ne vous servez
+pas de votre appareil lorsque cela est interdit.
+Les fabricants de stimulateurs cardiaques recommandent
+de garder une distance minimale de 15 cm entre ce type
+d'appareil et un stimulateur cardiaque pour éviter toute
+Index
+
+184
+
+possibilité d'interférence. Si vous utilisez un stimulateur
+cardiaque, utilisez l'appareil du côté opposé au côté où se
+trouve le stimulateur et ne transportez pas l'appareil dans une
+poche de poitrine.
+
+Atmosphères potentiellement explosives
+Éteignez votre appareil dans les endroits où il y a des risques
+d'explosion. Conformez-vous aux directives des panneaux
+d'avertissement et respectez toutes les consignes en vigueur.
+Les environnements comportant des risques d'explosion
+comprennent les zones où il vous serait normalement
+demandé d'éteindre le moteur de votre véhicule. Dans de tels
+endroits, une étincelle peut entraîner une explosion ou un
+incendie causant des blessures ou même la mort. N'allumez
+pas votre appareil dans les points de ravitaillement en
+carburant tels que les stations-services. Respectez les
+restrictions relatives à l'utilisation d'équipement radio dans les
+dépôts et les centres de stockage et de distribution de
+carburant et les usines de produits chimiques. Respectez
+également les restrictions en vigueur dans les zones de
+dynamitage. Avant d'utiliser l'appareil, assurez-vous de ne pas
+vous trouver dans une zone où il y a risque d'explosion; ces
+zones sont la plupart du temps clairement identifiées, mais pas
+Index
+
+185
+
+toujours. Ces zones comprennent notamment les cales de
+navire, les installations de transfert ou de stockage de produits
+chimiques et les zones où l'air contient des produits chimiques
+ou des particules telles que du grain, de la poussière ou des
+poudres métalliques. Communiquez avec le fabricant des
+véhicules qui utilisent des gaz de pétrole liquéfiés (par
+exemple du propane ou du butane) pour savoir si cet appareil
+peut être utilisé sans risque à proximité de ceux-ci.
+
+Sécurité routière
+Respectez les lois et les règlements de la région où vous vous
+trouvez lorsque vous utilisez l'appareil. De plus, si vous utilisez
+l'appareil lorsque vous conduisez un véhicule, respectez les
+consignes suivantes :
+• Concentrez-vous sur la conduite du véhicule. Votre première
+responsabilité est de conduire prudemment.
+• Ne communiquez pas à l'aide du téléphone pendant que
+vous conduisez. Utilisez des accessoires mains libres.
+• Lorsque vous devez appeler quelqu'un ou répondre à un
+appel, garez le véhicule en bordure de la route avant
+d'utiliser l'appareil.
+
+Index
+
+186
+
+• Les signaux radioélectriques peuvent nuire au
+fonctionnement des systèmes électroniques des véhicules
+automobiles. Pour obtenir de plus amples renseignements
+à ce sujet, consultez le fabricant du véhicule.
+• À l'intérieur d'un véhicule automobile, ne placez pas
+l'appareil sur un coussin gonflable ou dans la zone de
+déploiement de celui-ci. Si le coussin gonflable se déployait,
+le téléphone serait projeté avec une grande force et
+risquerait de vous blesser.
+• N'utilisez pas votre appareil dans un avion en vol. Éteignez
+votre appareil avant de monter à bord d'un avion. L'utilisation
+d'un appareil sans fil à bord d'un avion peut perturber de
+façon dangereuse le fonctionnement de l'avion et perturber
+le réseau de téléphonie sans fil. Une telle utilisation peut
+également être illégale.
+
+Environnement d'utilisation
+• N'utilisez pas et ne chargez pas l'appareil dans des endroits
+poussiéreux, humides ou sales, ni dans des endroits où des
+champs magnétiques sont présents. Le fonctionnement des
+circuits de l'appareil pourrait s'en trouver perturbé.
+
+Index
+
+187
+
+• L'appareil respecte les normes relatives aux radiofréquences
+lorsqu'il est utilisé près de l'oreille ou à une distance de
+1,5 cm du corps. Assurez-vous que les accessoires de
+l'appareil (comme l'étui) ne sont pas faits de métal.
+Maintenez l'appareil à une distance d'au moins 1,5 cm de
+votre corps afin d'assurer le respect des normes
+mentionnées ci-dessus.
+• En cas d'orage, n'utilisez pas l'appareil lorsqu'il est en cours
+de charge afin d'éviter les risques associés à la foudre.
+• Lorsque vous êtes en communication, ne touchez pas
+l'antenne. Le fait de toucher à l'antenne nuit à la qualité de
+la communication et se traduit par un accroissement de la
+consommation d'énergie. Le temps de conversation et le
+mode de veille sont alors plus courts.
+• Lorsque vous utilisez l'appareil, respectez les lois et les
+règlements locaux, la vie privée et les droits des autres
+personnes.
+• Veillez à ce que la température ambiante soit entre -10 °C et
+45 °C pendant la charge de l'appareil. Veillez à ce que la
+température ambiante soit entre -10 °C et 55 °C lorsque vous
+utilisez l'appareil alimenté par une pile.
+Index
+
+188
+
+Prévention des troubles auditifs
+L'utilisation d'un casque à un volume élevé peut endommager
+l'ouïe. Pour diminuer ce risque, réduisez le volume du casque
+à un niveau confortable et sécuritaire.
+
+Sécurité des enfants
+Respectez toutes les consignes relatives à la sécurité des
+enfants. Ne laissez aucun enfant jouer avec l'appareil ou ses
+accessoires, dont les petites pièces amovibles peuvent
+présenter un risque d'étouffement. Gardez l'appareil et ses
+accessoires hors de portée des jeunes enfants.
+
+Accessoires
+N'utilisez que les accessoires livrés par le fabricant.
+L'utilisation d'accessoires provenant d'autres fabricants ou
+fournisseurs avec ce modèle d'appareil pourrait annuler toute
+homologation et toute garantie s'appliquant à l'appareil,
+entraîner le non-fonctionnement de l'appareil et se révéler
+dangereuse.
+
+Pile et chargeur
+Débranchez le chargeur de la prise de courant et de l'appareil
+lorsqu'il n'est pas utilisé.
+Index
+
+189
+
+• La pile peut être chargée et déchargée des centaines de fois
+avant de perdre sa capacité de charge. Lorsque le temps de
+veille et le temps de conversation sont inférieurs à la normale,
+remplacez la pile.
+• Utilisez le bloc d'alimentation c.a. décrit dans les
+spécifications du chargeur. Une tension inadéquate pourrait
+provoquer un incendie ou perturber le fonctionnement du
+chargeur.
+• Ne branchez pas deux bornes de la pile sur des conducteurs,
+tels que des objets métalliques, des clés ou des bijoux. Sinon,
+un court-circuit pourrait se produire et entraîner des
+blessures et des brûlures.
+• Ne désassemblez pas la pile et ne soudez pas les bornes de
+la pile. Cela pourrait entraîner une fuite de l'électrolyte, une
+surchauffe, un incendie ou une explosion.
+• En cas de fuite, évitez tout contact de l'électrolyte avec la
+peau ou les yeux. Si l'électrolyte entre en contact avec la
+peau ou les yeux, rincez immédiatement la partie touchée à
+l'eau claire et consultez un médecin.
+• Si la pile est déformée, change de couleur ou dégage une
+chaleur anormale lorsque vous chargez ou rangez la pile,
+Index
+
+190
+
+retirez la pile immédiatement et cessez de l'utiliser. Sinon,
+une fuite de l'électrolyte, une surchauffe, un incendie ou une
+explosion pourraient se produire.
+• Si le cordon d'alimentation est endommagé (par exemple, si
+le fil est dénudé ou brisé) ou si la fiche devient lâche, cessez
+immédiatement l'utilisation du cordon. L'utilisation du cordon
+d'alimentation dans de telles conditions pourrait entraîner un
+choc électrique, un court-circuit du chargeur ou un incendie.
+• Ne jetez pas une pile au feu, car elle pourrait exploser. Les
+piles peuvent aussi exploser si elles sont endommagées.
+
+Nettoyage et entretien
+• L'appareil, la pile et le chargeur ne sont pas à l'épreuve de
+l'eau. Gardez-les au sec. Gardez l'appareil, la pile et le
+chargeur à l'abri de l'eau et de la vapeur. Ne touchez pas à
+l'appareil ou au chargeur si vos mains sont mouillées. Un tel
+contact pourrait entraîner un court-circuit, un mauvais
+fonctionnement de l'appareil ou un risque de choc électrique.
+• Ne placez pas l'appareil, la pile ou le chargeur dans un
+endroit où ils pourraient être endommagés lors d'une
+collision. Cela pourrait entraîner une fuite de l'électrolyte,
+
+Index
+
+191
+
+un mauvais fonctionnement de l'appareil, une surchauffe,
+un incendie ou une explosion.
+• Ne placez pas de supports de stockage magnétiques tels
+que des cartes magnétiques ou des disquettes à proximité
+de l'appareil. Les radiations qui émanent de l'appareil
+pourraient effacer les informations stockées sur les supports.
+• Ne laissez pas l'appareil, la pile ou le chargeur dans un
+endroit exposé à des températures extrêmes. Sinon, ils
+pourraient ne pas fonctionner correctement et provoquer un
+incendie ou une explosion. Lorsque la température est
+inférieure à 0 °C, le rendement de la pile est perturbé.
+• Ne placez pas d'objets métalliques pointus, par exemple des
+épingles, près de l'écouteur. L'écouteur pourrait attirer ces
+objets et vous pourriez vous blesser lorsque vous utilisez
+l'appareil.
+• Avant de nettoyer ou d'entretenir l'appareil, mettez-le hors
+tension et débranchez-le du chargeur.
+• N'utilisez pas de détergent chimique, de poudre ou d'autre
+agent chimique (par exemple, de l'alcool ou du benzène)
+pour nettoyer l'appareil et le chargeur. Vous risquez
+d'endommager les pièces de l'appareil ou de causer un
+Index
+
+192
+
+incendie. Nettoyez l'appareil et le chargeur au moyen d'un
+chiffon antistatique doux et légèrement humide.
+• Ne désassemblez pas l'appareil ou les accessoires.
+La garantie de l'appareil et des accessoires s'en trouverait
+annulée et le fabricant n'est pas tenu de payer pour les
+dommages.
+
+Appels d'urgence
+Vous pouvez utiliser l'appareil pour effectuer des appels
+d'urgence dans la zone de service. La connexion ne peut
+cependant pas être garantie en toutes circonstances. Ne vous
+fiez pas uniquement à l'appareil pour les communications
+essentielles.
+
+Renseignements sur la certification (DAS)
+Cet appareil respecte les normes relatives à l'exposition aux
+ondes radio.
+Votre appareil est un émetteur-récepteur radio de faible
+puissance. Il est conçu de manière à ne pas dépasser les
+limites d'exposition aux ondes radio recommandées par les
+normes internationales. Ces lignes directrices ont été
+élaborées par la Commission internationale de protection
+Index
+
+193
+
+contre les radiations non ionisantes (ICNIRP) et comprennent
+des marges de sécurité qui visent à assurer la protection de
+tout utilisateur, indépendamment de son âge ou de son état de
+santé.
+Le débit d'absorption spécifique (DAS) constitue l'unité de
+mesure de la quantité d'énergie de radiofréquence absorbée
+par le corps humain lors de l'utilisation d'un appareil. La valeur
+du DAS est déterminée en laboratoire au niveau de puissance
+conforme le plus élevé, mais le DAS réel de l'appareil en
+marche peut se situer très en-dessous de cette valeur. Cette
+différence s'explique par le fait que l'appareil a été conçu pour
+utiliser le minimum d'énergie requise pour se connecter au
+réseau.
+Pour les États-Unis et le Canada, la valeur limite du DAS a été
+fixée à 1,6 W/kg par gramme de tissu en moyenne. La valeur
+DAS la plus élevée mesurée au cours d'essais d'utilisation
+contre l'oreille et déclarée à la FCC et à l'IC a été de
+1,00 W/kg et la valeur DAS la plus élevée mesurée lors
+d'essais au niveau du corps est de 0,941 W/kg.
+
+Énoncé de la FCC
+Index
+
+194
+
+Cet appareil a été vérifié et s'est révélé conforme aux limites
+établies pour un appareil numérique de classe B,
+conformément à la partie 15 du règlement de la FCC. Ces
+limites sont conçues pour offrir une protection raisonnable
+contre les interférences nuisibles dans un logement résidentiel.
+Cet appareil produit et utilise de l'énergie de radiofréquence et,
+s'il n'est pas installé et utilisé conformément aux directives,
+peut causer de l'interférence nuisible aux communications
+radio. Il n'existe toutefois aucune garantie que l'interférence ne
+se produira pas dans un contexte donné. Si cet appareil cause
+de l'interférence nuisible à la réception radio ou télévision, ce
+qui peut être déterminé en éteignant et en allumant l'appareil,
+essayez de corriger l'interférence en prenant les mesures
+suivantes :
+--Réorientez ou déplacez l'antenne de réception.
+--Augmentez la distance entre l'appareil et le récepteur.
+--Connectez l'appareil dans une prise d'un circuit différent de
+celui où est connecté le récepteur.
+--Consultez le fournisseur ou un technicien en radio/télévision
+expérimenté pour obtenir de l'aide.
+Index
+
+195
+
+Cet appareil est conforme aux dispositions de la partie 15 du
+règlement de la FCC. Son utilisation est assujettie aux deux
+conditions suivantes : (1) l'appareil ne doit pas causer
+d'interférence nuisible et (2) l'appareil doit accepter toute
+interférence reçue, y compris toute interférence susceptible
+de gêner son fonctionnement.
+Mise en garde :
+Toute modification apportée à cet appareil sans l'approbation
+expresse de Huawei Technologies Co., Ltd., pourrait annuler
+l'autorisation accordée par la FCC relativement à l'utilisation
+de cet appareil.
+
+Index
+
+196
+
+for Android™
+
+Android est une marque déposée de Google Inc.
+L'utilisation de cette marque déposée est soumise aux autorisations de Google.
+

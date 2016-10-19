@@ -1,0 +1,183 @@
+Chu_BOOK.qxp  4/7/06  4:00 pm  Page 23
+Wireless Technology
+Mobi le Te lemed ic ine Sys tems Us ing 3G Wire le s s Networks
+a report by 
+Yu e c h un  C h u  and Au r a  G a n z
+Multimedia Networks Laboratory, Department of Electrical and Computer Engineering, 
+University of Massachusetts
+Mo t i v a t i o n Overall, mobile telemedicine systems using 3G Yuechun Chu is pursuing a PhD
+degree in the Department of
+networks offer numerous advantages: Electrical and Computer Engineering
+A mobile telemedicine system provides a platform for (ECE) at the University of
+data acquisition from numerous instruments and its • facilitate immediate exchange of information with Massachusetts, Amherst. Her
+harmonious transmission and delivery to healthcare research interests include wirelessremote mobile sites such as ambulances; telemedicine systems, wireless
+providers through 3G-based wireless networks. • enable better utilization of limited healthcare multimedia applications,
+Because this system can be used in any geographical resources (e.g. physician specialists); architectures, and protocols for
+wireless networks with quality of
+area in which 3G networks provide coverage, it • allow patients to remain in their communities and service (QoS) guarantees and ultra
+offers significant hope in reducing mortality and maintain a normal lifestyle; wideband (UWB) networks. She
+received her MSc degree in
+morbidity as well as presenting monetary savings. • reduce the hardships (physical and economic)
+electrical engineering from the
+Below are a number of scenarios that benefit from associated with travel (for patients or physicians); University of Science and
+the use of 3G-based wireless networks. Technology of China in 1999. • enable early diagnosis, intervention, and treatment
+in certain events (trauma); and 
+Aura Ganz is an Associate Professor
+A teletrauma system can provide continuous realtime • avoid unnecessary transportation to tertiary care and Director of the Multimedia
+voice, video, and medical data input between an facilities. Networks Laboratory at the ECE
+Department, University of
+ambulance and a level I trauma center. This system Massachusetts, Amherst. She has
+benefits pre-hospital trauma care, especially in Ch a l l e n g e s published a book, Multimedia
+situations where long transport time or multiple Wireless Networks: Technologies,
+Standards and QoS, and authored
+transfers are involved. Such a solution can improve the This section introduces the challenges that face the over 150 peer-reviewed
+quality of trauma care, expediting the evaluation and development of such mobile telemedicine systems publications. Dr Ganz is a senior
+member of Institute of Electrical
+management of injured victims, thereby increasing the using 3G wireless networks. The general design chal-
+and Electronics Engineers, Inc.
+chances of timely and appropriate actions. lenges faced by all telemedicine systems such as billing, (IEEE) and a member of the IEEE
+usability, and regulations, etc., are not dealt with. Engineering in Medicine and Biology
+Society (EMBS).
+A mobile remote patient telemonitoring system
+allows a healthcare provider to continuously monitor L i m i t e d  a n d  F l u c t u a n t  3 G  L i n k
+a patient's physiological data regardless of the patient's
+location. The only constraint imposed on the Current commercially available 3G links, such as the
+patient's location is that it needs to be covered by a Verizon code division multiple access (CDMA)
+3G wireless network. Therefore, the telemonitoring wireless data service, provide data rates of up to
+system allows the patient to sustain near normal 153Kbps. However, the actual throughput of such
+lifestyle, positively impacting the patient's recovery, as cellular wireless links is fluctuant, with an average
+well as improving the patient's quality of life. throughput of around 70Kbps. Therefore, the
+implementation of mobile telemedicine systems over
+Such a system includes a small portable hand-held such a link requires special considerations.
+device, such as a mobile phone or personal digital
+assistant (PDA), which relays the information T r a n s m i s s i o n  o f  B a n d w i d t h - h u n g r y
+collected from sensors to the healthcare provider M e d i c a l  I n f o r m a t i o n  
+using a 3G-based wireless network. 
+System developers should keep in mind the rich
+A wireless telemetry system used in disaster or mass- nature of the medical information that needs to be
+casualty scenarios can support, control, and monitor transferred from the patient to the healthcare provider.
+patients in relatively large areas by delivering patients' Such data, as well as the operating environment, can
+vital signs and medical information to remote medical be different for various medical scenarios. Many
+facilities. Such a system supports the trauma team to applications may require bandwidth-hungry data such
+effectively treat mass casualty events with limited as images or realtime video. The telemedicine systems
+resources, reducing mortality and morbidity. must manage this data and perform necessary
+E - H E A L T H  &  M E D I C A L  I T  S O L U T I O N S  2 0 0 6 23 Chu_BOOK.qxp  4/7/06  4:01 pm  Page 24
+Wireless Technology
+transformations to ensure the smooth transmission sensors/instruments along with bandwidth-hungry
+through the low-speed and fluctuant 3G link. interactive video applications, causing errors and loss
+of potentially critical information. 
+S i m u l t a n e o u s  T r a n s f e r  o f  D i f f e r e n t
+M e d i a  S t r e a m s Mob i l e  T e l emed i c i n e  S y s t em s  
+D e v e l o p e d  a t  Mu l t im ed i a  
+Telemedicine systems often transmit different types of Ne two r k s  L a b o r a t o r y
+streams simultaneously, such as realtime video,
+images, vital signs, or other readings from medical In this section, two mobile telemedicine systems are
+sensors. Depending on the medical demands, the described that were designed and prototyped in the
+transmission requirements for different media types author's laboratory. In addition to providing solutions
+are quite varied. It is critical to establish policies to to all the challenges posed by 3G wireless networks
+coordinate, prioritize, and compress the diverse media described above, the development of these systems
+streams to eliminate distortion of multimedia content was guided by the following design guidelines:
+or choking of some applications. Such policies are
+especially important in situations involving the • easy-to-use interface - the system should provide
+limited and fluctuant bandwidth of 3G links. simple interfaces for the health provider;
+Mob i l e  T e l emed i c i n e  P r o j e c t s • controllability - the system should support remote
+control functions. The healthcare provider should
+With the emergence of cellular networks, a number be empowered with the ability to control the
+of systems used cellular phones to transfer vital signs media content according to medical specialties or
+(e.g. electrocardiogram (ECG) and heart rate). Some his/her personal preference. For example, the
+telemedicine systems used PDAs to monitor patients' health provider is allowed to control ECG sample
+status. Several projects transmitted critical care rate, video frame rate, and image quality, etc.;
+medical information, such as multimedia data, over
+cellular networks. • device adaptability - the system should meet the
+capabilities of the computing device (e.g. laptop,
+A wireless telemedicine project was developed for PDA or mobile phone) on which it runs;
+ischemic stroke. The system was based on proprietary
+hardware that can aggregate and manage simultaneous • media adaptability - the system should provide
+transmissions of data over multiple cellular lines (2~8 support for different medical data, such as vital bio-
+GSM cellular lines), allowing a video transmission signals, images, video, and patient information; and
+rate of around eight frames per minute. The British
+Lancashire Ambulance project transmitted vital signals • modular design - the system should have a modular
+over one cell phone line and slow-scan images over design so that it allows for the development of a
+another line at frame rates of 15 pictures per minute. roadmap for growth that can accommodate future
+The EU's study, AMBULANCE, based on the generations of functionality.
+experience of Telemedicine projects, and its
+successive projects were able to transmit patients' Next, two mobile telemedicine systems are described
+biosignals or image sequences using available Global that were developed in the authors' laboratory - a
+System for Mobile communications™ (GSM) phone teletrauma and a telepatient system. 
+lines. The results show that their image transmission
+rate is one image (size 2.5-3KB) every three to five T e l e t r a u m a  S y s t e m
+seconds and the percentage of ECG transmission
+interruption reaches 27%. The teletrauma system, which effectively delivers
+trauma-patient information to a remote hospital,
+The mobile telemedicine projects described above comprises two units - trauma-patient unit and hospital
+focused on exploiting the possibility of transmitting unit. The trauma-patient unit, which may reside in an
+patient information through commercial wireless ambulance, is implemented on a laptop or tablet PC.
+links, rather than improving the transmission Through connected devices such as vital signs
+efficiency. Their usefulness is often limited due to monitoring, portable ultrasound, and video camera,
+their poor performance in terms of very low frame the trauma patient unit collects patient's information,
+rates and high interruption rates. Those systems did processes it (e.g. compresses the information), and
+not tackle the critical issues of limited and constantly transmits it over 3G wireless link. The information
+changing bandwidth of a 3G wireless network. Such traverses the wireless link as well as the Internet and is
+issues severely limit the possibility of transmitting delivered to the hospital unit, which is implemented
+simultaneous transmissions from multiple medical on a PC connected to the Internet. Thus, the
+24 E - H E A L T H  &  M E D I C A L  I T  S O L U T I O N S  2 0 0 6 Chu_BOOK.qxp  4/7/06  4:01 pm  Page 25
+Mobi le Te lemed ic ine Sys tems Us ing 3G Wire le s s Networks
+physician has access to visual information such as ECG MDA, along with the acquisition modules, form a
+waveform, medical images, and realtime video. portable patient area network that can be carried
+anywhere. The MDA obtains medical data from the
+The hospital unit is implemented on a desktop medical data acquisition unit and multiplexes,
+computer located in the trauma center. After receiving transforms, and transmits the data to the healthcare
+the data from the trauma-patient unit through the provider. The MDA is dual-homed, i.e. it has two
+Internet, the hospital unit properly presents the vital communication interfaces for the two independent
+signals (ECG), medical images, and video to the networks. The main challenge facing the MDA
+physician. When receiving the information, the design and development is the fact that the CDMA
+hospital unit decompresses the information according wireless link offers limited and variable bandwidth.
+to the media types. Also, it must act on the data to suit the healthcare
+provider's preferences. However, the PDA platform
+The trauma-patient unit collects the patient has constrained resources and this makes the task
+information and then multiplexes, transforms, and more difficult. The following modules have been
+transmits it to the hospital unit. The system developed at the MDA: 
+performance bottleneck is determined by the limited
+data rate of the wireless link. Because the trauma- • User Profile - this allows the healthcare provider
+patient unit transmits multiple multimedia streams over to tailor TelePatient to particular scenarios. 
+the wireless link, this unit reduces the amount of • Parameter Control - these are healthcare provider
+information by compressing the media before controlled parameters, such as changing the ECG
+transmission such that the amount of data can fit into measurement frequency. 
+the limited wireless link. Because the three media • ECG/Pulse/SpO2 Module - handles
+streams are transmitted in parallel, it is inadmissible for communication with the ECG/Pulse/SpO2
+one medium to occupy the link and impede the acquisition unit and the healthcare provider. 
+transmission of others. For example, ECG requires a • Image Module - obtains the image, and suitably
+relatively small portion of the bandwidth compared transforms the image based on doctor preferences
+with video and images. However, when ECG is and underlying link, and then sends the resulting
+transmitted in parallel with the image and video, these transcoded image to the healthcare provider. 
+two bandwidth-hungry streams will dominate the link
+and even cause congestion. To minimize the effect of At the healthcare provider side, a health provider
+congestion, different transmission methods are applied unit provides an easy interface for doctors to view
+to different streams. Reliable transmission control the medical data, send text messages, and control
+protocol (TCP) is used for ECG and images to parameters to acquire medical data. 
+guarantee their transmission integrity. Based on video's
+realtime requirements as well as its tolerance to frame S umma r y
+loss (i.e. a few frame losses are usually acceptable to
+viewers), user datagram protocol (UDP) is considered 3G wireless networks are of great importance for
+a suitable transmission protocol. However, because telemedicine due to their broad geographical coverage
+UDP uses simple datagram with no congestion control, and widely deployed infrastructure, which significantly
+a frame rate adjustment policy has been developed. expand the telemedicine system's reach. This article has
+analyzed the challenges faced by the mobile
+T e l e P a t i e n t  S y s t e m telemedicine systems and provided a number of design
+guidelines that should be followed by the system
+The TelePatient system enables healthcare providers designers. Using commercially available 3G wireless
+to monitor patient's information 24/7. The system data services, two mobile telemedicine systems have
+uses a PDA as a gateway to the healthcare provider been demonstrated that follow the proposed design
+to transmit vital bio-signals as well as medical image guidelines. These systems can simultaneously transmit
+files. Additionally, the system allows controllability multiple types of medical information using 3G
+by the healthcare provider. wireless networks. To overcome the most challenging
+factor of the limited and fluctuant bandwidth of the
+The TelePatient system involves two networks - a wireless link, for each system a software architecture
+wireless personal area network that contains the that differentiates, prioritizes and transforms the
+medical data acquisition units and a wireless network medical data was implemented, such that critical data is
+for transmission to a healthcare provider. The PDA, delivered reliably, efficiently, and with high quality.  
+henceforth medical digital assistant (MDA), serves as
+a gateway between these networks. All the medical A version of this article containing references can be found
+data collected by the medical acquisition units passes in the Reference Section on the website supporting this
+through the MDA to the healthcare provider. The briefing (www.touchbriefings.com).
+E - H E A L T H  &  M E D I C A L  I T  S O L U T I O N S  2 0 0 6 25

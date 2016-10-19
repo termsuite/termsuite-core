@@ -1,0 +1,1328 @@
+Telefonía Celular TELEFONIA 
+CELULAR 
+ 
+ 
+ 
+ 
+ 
+ 
+Autores: 
+ Martín Inzaurralde  
+martininza@gmail.com
+ Jorge Isi  
+jorgeisi@hotmail.com
+ Javier Garderes  
+jgarderes@adinet.com.uy
+ 
+ 
+Facultad de Ingeniería - Universidad de la República 
+Montevideo - Uruguay 
+Telefonía celular 1 Telefonía celular 2 INDICE 
+1 INTRODUCCIÓN .............................................................................................................. 5 
+2 HISTORIA ........................................................................................................................ 6 
+2.1 Reseña histórica ...................................................................................................... 6 
+2.2 Generaciones de la Telefonía Celular ................................................................ 10 
+2.2.1 Generación Cero (0G)............................................................................................................ 10 
+2.2.2 Primera generación (1G) ....................................................................................................... 10 
+2.2.3 Segunda generación (2G)...................................................................................................... 11 
+2.2.4 Generación 2.5 G.................................................................................................................... 12 
+2.2.5 Tercera generación (3G). ....................................................................................................... 13 
+3 FUNCIONAMIENTO DE LA TELEFONÍA CELULAR ......................................................... 15 
+4 COMPOSICIÓN TECNOLÓGICA DEL TELÉFONO CELULAR........................................... 22 
+4.1 Interior de un teléfono celular ............................................................................ 22 
+4.2 Tecnologías utilizadas en los teléfonos celulares ............................................ 24 
+4.2.1 Tecnologías de acceso celular............................................................................................... 24 
+4.2.2 GSM ......................................................................................................................................... 25 
+4.2.2.1 GPRS (General Packet Radio Service) ................................................................................. 26 
+4.2.2.2 EDGE (Enhanced Data Rates for Global Evolution) ........................................................... 26 
+4.2.2.3 UMTS (Universal Mobile Telecommunications System) .................................................... 26 
+4.2.3 Acceso a Internet y demás Aplicaciones por Teléfono Celular ....................................... 27 
+4.2.3.1 WAP (Wireless Application Protocol).................................................................................. 27 
+4.2.3.2 I-mode................................................................................................................................... 28 
+4.2.4 Estándares de comunicación inalámbrica .......................................................................... 29 
+4.2.4.1 Bluetooth............................................................................................................................... 29 
+4.2.4.2 IrDA (InfraRed Data Association)....................................................................................... 29 
+5 INFLUENCIA EN LA SOCIEDAD ..................................................................................... 30 
+5.1 ¿Por qué es importante utilizar celular? ........................................................... 30 
+5.2 Adicción a los celulares ....................................................................................... 32 
+5.2.1 Daños físicos y psíquicos ...................................................................................................... 32 
+5.2.2 Personalidad y móvil ............................................................................................................ 33 
+5.2.3 Tecnología y personalidad ................................................................................................... 33 
+5.3 Marketing .............................................................................................................. 34 
+5.3.1 Propuesta publicitaria de Walkfone.................................................................................... 35 
+6 IMPACTO EN LA SALUD ................................................................................................ 36 
+6.1 Efectos de las radiaciones emitidas por los teléfonos celulares..................... 37 
+6.1.1 ¿Los teléfonos celulares causan cáncer? ............................................................................. 38 
+6.1.2 Las radiaciones pueden afectar la fertilidad masculina. .................................................. 38 
+6.1.3 Los efectos son peores en lugares cerrados........................................................................ 38 
+6.2 Los teléfonos móviles pueden provocar accidentes de tránsito .................... 40 
+6.3 Consejos para reducir el riesgo sanitario.......................................................... 41 
+7 CONCLUSIÓN ................................................................................................................ 43 
+8 BIBLIOGRAFÍA............................................................................................................... 45 
+ 
+ 
+Telefonía celular 3 Telefonía celular 4 1 Introducción 
+Los teléfonos celulares han revolucionado el área de las comunicaciones, 
+redefiniendo cómo percibimos las comunicaciones de voz. Tradicionalmente, los 
+teléfonos celulares se mantuvieron fuera del alcance de la mayoría de los 
+consumidores debido a los altos costos involucrados. Como resultado, las 
+compañías proveedoras de servicios invirtieron tiempo y recursos en encontrar 
+nuevos sistemas de mayor capacidad, y por ende, menor costo. Los sistemas 
+celulares se están beneficiando de estas investigaciones y han comenzado a 
+desarrollarse como productos de consumo masivo.   
+La telefonía celular es un sistema de comunicación telefónica totalmente 
+inalámbrica.  Durante el desarrollo de este trabajo, se verá, como los sonidos se 
+convierten en señales electromagnéticas, que viajan a través del aire, siendo 
+recibidas y transformadas nuevamente en mensajes. A su vez, se especificarán y se 
+compararán las diferentes tecnologías que se utilizan en dicho proceso. ¿Cuáles 
+son las tecnologías que se utilizan actualmente en las comunicaciones 
+inalámbricas? ¿Qué tendencias se pueden observar en cuanto al desarrollo de las 
+mismas? 
+Inicialmente los celulares eran analógicos. Se evaluarán las razones por la cual 
+hubo una necesaria migración de estos sistemas a sistema digital. 
+La nueva revolución que implementa el uso social de celulares genera ventajas y 
+al mismo tiempo desventajas. La accesibilidad al nuevo medio de comunicación, 
+en un fuerte aumento en los últimos años, propone un contacto constante entre los 
+ciudadanos. En este punto surge el dilema o las distintas interpretaciones sobre si 
+el nuevo método comunicativo es positivo o negativo.  
+El aumento masivo del uso de celulares en la sociedad, nos ha llevado a reflexionar 
+acerca de los nuevos comportamientos que existen en las personas: nos interesa 
+realmente saber cuál es el impacto de los celulares en las personas. De esta manera 
+generamos diversas hipótesis, interrogantes que iremos desarrollando y 
+respondiendo a lo largo del trabajo. Se apuntará a la interacción del usuario con el 
+celular y a través del mismo con la sociedad. Si tomamos en cuenta sólo el aspecto 
+utilitario del celular ¿La gente lo usa solamente para realizar llamados o por las 
+funciones adicionales que posee? ¿Tener celular es una cuestión de costumbre, de 
+necesidad, o simplemente de estar más a la moda? ¿Se ha generado una adicción a 
+los celulares? 
+También se verán los efectos que las radiaciones pueden provocar en la salud. 
+Veremos que tipo de enfermedades pueden causar. ¿Es verdad que los celulares 
+pueden provocar cáncer? ¿Qué precauciones deberíamos tener si poseemos un 
+celular? 
+Telefonía celular 5 2 Historia 
+2.1 Reseña histórica 
+A los efectos de mostrar la evolución de la telefonía móvil en la historia se 
+procederá a describir una breve reseña que muestra el avance de la misma: 
+1843 - Un talentoso químico de nombre Michael Faraday comenzó un profundo 
+estudio sobre la posible conducción de electricidad del espacio. Faraday expuso 
+sus grandes avances respecto a la tecnología del siglo anterior, lo que ayudó en 
+forma incalculable en el desarrollo de la telefonía celular. 
+ 
+Faraday 
+ 
+1876 -   El teléfono es inventado por 
+ Alexander Graham Bell. 
+ 
+ 
+1894 - Si bien la comunicación inalámbrica 
+ tiene sus raíces en la invención del 
+radio por Nikolai Tesla en la década 
+ de 1880, formalmente fue 
+presentado en 1894 por un joven 
+ italiano llamado Guglielmo 
+ Marconi. 
+ 
+1947 -  Fue un gran año para lo que sería la industria de la telefonía celular. En ese 
+año los científicos desarrollaron las ideas que permitían el uso de teléfonos móviles 
+usando "células" que identificaran un usuario en cualquier punto desde donde se 
+efectuara la llamada. Sin embargo, la limitada tecnología del momento obligó a 
+desarrollos posteriores. 
+1949 - En la época predecesora a los teléfonos celulares, la gente que realmente 
+necesitaba comunicación móvil tenía que confiar en el uso de radio-teléfonos en 
+Telefonía celular 6 sus autos. En el sistema radio-telefónico, existía sólo una antena central por cada 
+ciudad, y unos pocos canales disponibles en la torre. 
+Esta antena central significaba que el teléfono en el vehículo requeriría una antena 
+poderosa, lo suficientemente poderosa para transmitir a 50 ó 60 kms de distancia. 
+Estos también significaba que no muchas personas podrí aún usar los radio-
+teléfonos-- simplemente no existían suficientes canales para conectar. 
+En este año se autorizaron en EEUU seis canales móviles adicionales a las 
+portadoras de radio comunes, las cuales definieron como compañías que no 
+proporcionan un servicio telefónico de línea alámbrica pública, pero si se 
+interconectan a la red telefónica pública y proporcionan un servicio de teléfono 
+inalámbrico equivalente. Luego se incrementó el número de canales de 6 a 11, 
+reduciendo el ancho e banda a 30 Khz. y espaciando los nuevos canales entre los 
+viejos.  
+1964 - Hasta la fecha, los sistemas de telefonía móvil operaban sólo en el modo 
+manual; un operador del teléfono móvil especial manejaba cada llamada, desde y 
+hacia cada unidad móvil. En 1964, los sistemas selectores de canales automáticos 
+fueron colocados en servicio para los sistemas de telefonía móvil. Esto eliminó la 
+necesidad de la operación oprimir-para-hablar (push-to-talk) y les permitía a los 
+clientes marcar directamente sus llamadas, sin la ayuda de una operadora. El MTS 
+(Sistema de Telefonía Móvil) usa los canales de radio de FM para establecer enlaces 
+de comunicación, entre los teléfonos móviles y los transceptores de estación de 
+base centrales, los cuales se enlazan al intercambio de teléfono local por medio de 
+las líneas telefónicas metálicas normales. Los sistemas MTS sirven a un área de 
+aproximadamente 60 Km. a la redonda y cada canal opera similarmente a una línea 
+compartida. Cada canal puede asignarse a varios suscriptores, pero sólo un 
+suscriptor puede utilizarlo a la vez. Si el canal preasignado está ocupado, el 
+suscriptor debe esperar hasta que se desocupe, antes de hacer o recibir una 
+llamada. 
+1971 - La demanda creciente en el espectro de frecuencia de telefonía móvil 
+saturado impulsó a buscar un modo de proporcionar una eficiencia del espectro de 
+frecuencia mayor. En este año, AT&T hizo una propuesta sobre la posibilidad 
+técnica de proporcionar respuesta a lo anterior. Se comenzaba a delinear el 
+principio de la radio celular. 
+-En este mismo año en Finlandia se lanza la primera red pública exitosa de 
+telefonía móvil, llamada la red ARP. Dicha red es vista como la Generación 0 (0G), 
+estando apenas por encima de redes propietarias y redes de cobertura local. 
+Detalles de la tecnología usada en el momento se detallan en la siguiente sección. 
+1973 - El Dr. Martin Cooper es considerado el inventor del primer teléfono portátil. 
+Considerado como "el padre de la telefonía celular"; siendo gerente general de 
+Telefonía celular 7 sistemas de Motorola realizó una llamada a sus competidores de AT&T desde su 
+teléfono celular, transformándose en la primera persona en hacerlo.  
+ 
+Martin Cooper con su Motorola DynaTAC 
+1977 - Los teléfonos celulares se hacen públicos, dando comienzo las pruebas en el 
+mercado. La ciudad de Chicago fue la primera en comenzar con 2000 clientes. 
+Eventualmente otras líneas de prueba aparecieron en Washington D.C. y 
+Baltimore.  
+1979 - Si bien los Americanos eran los pioneros en la tecnología, los primeros 
+sistemas comerciales aparecieron en Tokio, Japón por la compañía NTT, en 1979. 
+1983 - Chicago, Washington D.C. y Baltimore son los escenarios de los primeros 
+lanzamientos de sistemas comerciales de telefonía celular en Estados Unidos. 
+1983 - La AMPS (Sistema Avanzado de Telefonía Móvil) es lanzada usando 
+frecuencias de banda desde 800 MHz. hasta 900 MHz y de 30 Khz. de ancho de 
+banda para cada canal como un sistema totalmente automatizado de servicio 
+telefónico. Es el primer estándar en telefonía celular en el mundo.  
+1986 - Con ese punto de partida, en varios países se diseminó la telefonía celular 
+como una alternativa a la telefonía convencional inalámbrica. Para 1986 los 
+usuarios de telefonía celular llegan a los 2 millones sólo en Estados Unidos. 
+Debido a esta gran aceptación, el servicio comenzó a saturarse rápidamente, 
+creándose así la necesidad de desarrollar e implantar otras formas de acceso 
+múltiple al canal y transformar los sistemas analógicos a digitales, con el objeto de 
+darle cabida a más usuarios 
+1987 - La Industria llega a los 1000 millones de dólares en ganancias.  
+1988 - Este año cambió muchas de las tecnologías típicas del pasado. Se crea un 
+nuevo estándar, el TDMA Interim Standard 54, el cual es oficializado en 1991.  
+- Motorola introduce el teléfono móvil DynaTAC, el primer 
+radioteléfono puramente "móvil". El teléfono, apodado "el ladrillo", 
+tenía una hora de tiempo de conversación y ocho horas de tiempo en 
+modo en espera. 
+1996 - Bell Atlantic Mobile lanza la primera red comercial CDMA en los Estados 
+Unidos. 
+1997 - Los usuarios de la industria inalámbrica -celular, PCS y ESMR- superan 
+los 50 millones. 
+Telefonía celular 8 - Entra en uso la red digital e inalámbrica de voz y datos (2G) 
+13 de Octubre de 2003 - 20° Aniversario de las Comunicaciones Inalámbricas 
+Comerciales.  
+Presente en Estados Unidos, América Latina y Asia: 
+¾ Más de 182 millones de Americanos son usuarios de telefonía móvil. 
+¾ 200,000 es el número de veces por día en las que alguien llama por ayuda 
+desde un teléfono móvil. 
+¾ En América Latina 37 de cada cien habitantes son abonados de la telefonía 
+móvil. Esto determina unos 190 millones de usuarios de la telefonía móvil, 
+contra 88 millones de la telefonía fija. 
+¾ El crecimiento experimentado por la telefonía móvil en el Caribe entre 1997 
+y 2003 fue del 25%, dos veces y media más que el crecimiento de la telefonía 
+fija. 
+¾ En cuanto a tecnología, en la región 73.3 millones de abonados emplean la 
+segunda generación (GSM), 2.2 millones mantienen la analógica, la primera 
+del mercado, y dos millones siguen empleando el sistema de busca personas 
+como medio de comunicación. 
+¾ La situación en Asia es bastante distinta. Si bien la penetración en el 
+mercado de la telefonía celular se mantiene por debajo del 25%, la mayoría 
+de los mercados asiáticos se saturarían mucho antes que los mercados de 
+Japón o Europa Occidental debido a los relativos bajos ingresos. Esto es 
+particularmente cierto para China, India e Indonesia, los cuales 
+colectivamente conforman más del 70% de los habitantes de la región. Sin 
+embargo, el promedio de penetración del mercado en estos países se acerca 
+sólo a 17%, y se mantendrá por debajo del 35% durante los siguientes 5 
+años. 
+ 
+Telefonía celular 9 2.2 Generaciones de la Telefonía Celular 
+En la sección anterior se presentó una muestra de la evolución de la telefonía 
+celular a lo largo de los años. Las distintas necesidades y avances dieron lugar a 
+generaciones tecnológicas bien diferenciadas que se comentan a continuación.  
+En dicha evolución se aprecia como se van cumpliendo las necesidades del 
+mercado para tener acceso múltiple al canal de comunicación, así como la 
+necesaria migración de los sistemas analógicos a sistema digital con el fin de 
+permitir mayor volumen de usuarios y ofrecer los niveles de seguridad que se 
+demandaban.  
+2.2.1 Generación Cero (0G) 
+0G representa a la telefonía móvil previa a la era celular. Estos teléfonos móviles 
+eran usualmente colocados en autos o camiones, aunque modelos en portafolios 
+también eran realizados. Por lo general, el transmisor (Transmisor-Receptor) era 
+montado en la parte trasera del vehículo y unido al resto del equipo (el dial y el 
+tubo) colocado cerca del asiento del conductor. 
+Eran vendidos a través de WCCs (Empresas Telefónicas alámbricas), RCCs 
+(Empresas Radio Telefónicas), y proveedores de servicios de radio doble vía. El 
+mercado estaba compuesto principalmente por constructores, celebridades, etc. 
+Esta tecnología, conocida como Autoradiopuhelin (ARP), fue lanzada en 1971 en 
+Finlandia; conocido ahora como el país con la primera red comercial de telefonía 
+móvil. 
+2.2.2 Primera generación (1G) 
+La 1G de la telefonía móvil hizo su aparición en 1979, si bien proliferó durante los 
+años 80. Introdujo los teléfonos "celulares", basados en las redes celulares con 
+múltiples estaciones de base relativamente cercanas unas de otras, y protocolos 
+para el "traspaso" entre las celdas cuando el teléfono se movía de una celda a otra. 
+La transferencia analógica y estrictamente para voz son características 
+identificatorias de la generación. Con calidad de enlaces muy reducida, la 
+velocidad de conexión no era mayor a (2400 bauds). En cuanto a la transferencia 
+entre celdas, era muy imprecisa ya que contaban con una baja capacidad (Basadas 
+en FDMA, Frequency Division Multiple Access), lo que limitaba en forma notable 
+la cantidad de usuarios que el servicio podía ofrecer en forma simultánea ya que 
+los protocolos de asignación de canal estáticos padecen de ésta limitación.  
+Con respecto a la seguridad, las medidas preventivas no formaban parte de esta 
+primitiva telefonía celular. La tecnología predominante de esta generación es 
+AMPS (Advanced Mobile Phone System), desarrollada principalmente por Bell. Si 
+Telefonía celular 10 bien fue introducida inicialmente en los Estados Unidos, fue usada en otros países 
+en forma extensiva. Otro sistema conocido como Sistema de Comunicación de 
+Acceso Total (TACS) fue introducido en el Reino Unido y muchos otros países. 
+Si bien había diferencias en la especificación de los sistemas, eran conceptualmente 
+muy similares. La información con la voz era transmitida en forma de frecuencia 
+modulada al proveedor del servicio. Un canal de control era usado en forma 
+simultánea para habilitar el traspaso a otro canal de comunicación de serlo 
+necesario. La frecuencia de los canales era distinta para cada sistema. MNT usaba 
+canales de 12.5KHz, AMPS de 30KHz y TACS de 25KHz. 
+A su vez, el tamaño de los aparatos era mayor al de hoy en día; fueron 
+originalmente diseñados para el uso en los automóviles. Motorola fue la primera 
+compañía en introducir un teléfono realmente portátil.  
+ 
+ 
+Motorola DynaTAC 
+Estos sistemas (NMT, AMPS, TACS, RTMI, C-Netz, y Radiocom 2000) fueron 
+conocidos luego como la Primera Generación (G1) de Teléfonos Celulares. 
+En Setiembre de 1981 la primera red de telefonía celular con roaming automático 
+comenzó en Arabia Saudita; siendo un sistema de la compañía NMT. Un mes más 
+tarde los países Nórdicos comenzaron una red NMT con roaming automático entre 
+países. 
+2.2.3 Segunda generación (2G) 
+Si bien el éxito de la 1G fue indiscutible, el uso masivo de la propia tecnología 
+mostró en forma clara las deficiencias que poseía. El espectro de frecuencia 
+utilizado era insuficiente para soportar la calidad de servicio que se requería. Al 
+convertirse a un sistema digital, ahorros significativos pudieron realizarse. Un 
+número de sistemas surgieron en la década del 90' debido a estos hechos, y su 
+historia es tan exitosa como la de la generación anterior. La Segunda Generación 
+(2G) de telefonía celular, como ser GSM, IS-136 (TDMA), iDEN and IS-95 (CDMA) 
+comenzó a introducirse en el mercado. 
+La primera llamada digital entre teléfonos celulares fue realizada en Estados 
+Unidos en 1990. En 1991 la primera red GSM fue instalada en Europa.  
+Telefonía celular 11 La generación se caracterizó por circuitos digitales de datos conmutados por 
+circuito y la introducción de la telefonía rápida y avanzada a las redes. Usó a su 
+vez acceso múltiple de tiempo dividido (TDMA) para permitir que hasta ocho 
+usuarios utilizaran los canales separados por 200MHz. Los sistemas básicos usaron 
+frecuencias de banda de 900MHz, mientras otros de 1800 y 1900MHz. Nuevas 
+bandas de 850MHz fueron agregadas en forma posterior. El rango de frecuencia 
+utilizado por los sistemas 2G coincidió con algunas de las bandas utilizadas por los 
+sistemas 1G (como a 900Hz en Europa), desplazándolos rápidamente.  
+La introducción de esta generación trajo la desaparición de los "ladrillos" que se 
+conocían como teléfonos celulares, dando paso a pequeñísimos aparatos que 
+entran en la palma de la mano y oscilan entre los 80-200gr. Mejoras en la duración 
+de la batería, tecnologías de bajo consumo energético. 
+ 
+Teléfono GSM de diseño regular 
+EL sistema 2G utiliza protocolos de codificación más sofisticados y se emplea en 
+los sistemas de telefonía celular actuales. Las tecnologías predominantes son: GSM 
+(Global System por Mobile Communications); IS-136 (conocido también como 
+TIA/EIA136 o ANSI-136) y CDMA (Code Division Multiple Access) y PDC 
+(Personal Digital Communications), éste último utilizado en Japón. Se encontrará 
+información detallada de los protocolos en la sección correspondiente más 
+adelante. 
+Los protocolos empleados en los sistemas 2G soportan velocidades de información 
+por voz más altas, pero limitados en comunicación de datos. Se pueden ofrecer 
+servicios auxiliares, como datos, fax y SMS (Short Message Service). La mayoría de 
+los protocolos de 2G ofrecen diferentes niveles de encripción. En Estados Unidos y 
+otros países se le conoce a 2G como PCS (Personal Communication Services). 
+2.2.4 Generación 2.5 G 
+Una vez que la segunda generación se estableció, las limitantes de algunos 
+sistemas en lo referente al envío de información se hicieron evidentes. Muchas 
+aplicaciones para transferencia de información eran vistas a medida que el uso de 
+laptops y del propio Internet se fueron popularizando. Si bien la tercera generación 
+estaba en el horizonte, algunos servicios se hicieron necesarios previa a su llegada. 
+El General Packet Radio Service (GPRS) desarrollado para el sistema GSM fue de 
+los primeros en ser visto. Hasta este momento, todos los circuitos eran dedicados 
+en forma exclusiva a cada usuario. Este enfoque es conocido como "Circuit 
+Switched", donde por ejemplo un circuito es establecido para cada usuario del 
+Telefonía celular 12 sistema. Esto era ineficiente cuando un canal transfería información sólo en un 
+pequeño porcentaje. El nuevo sistema permitía a los usuarios compartir un mismo 
+canal, dirigiendo los paquetes de información desde el emisor al receptor. Esto 
+permite el uso más eficiente de los canales de comunicación, lo que habilita a las 
+compañías proveedoras de servicios a cobrar menos por ellos. 
+Aún más cantidad de mejoras fueron realizadas a la taza de transferencia de 
+información al introducirse el sistema conocido como EDGE (Enhanced Data rates 
+aplicado a GSM Evolution). Éste básicamente es el sistema GPRS con un nuevo 
+esquema de modulación de frecuencia. 
+Mientras GPRS y EDGE se aplicaron a GSM, otras mejoras fueron orientadas al 
+sistema CDMA, siendo el primer paso de CDMA a CDMA2000 1x. 
+2.5G provee algunos de los beneficios de 3G (por ejemplo conmutación de datos en 
+paquetes) y puede usar algo de la infraestructura utilizada por 2G en las redes 
+GSM and CDMA. La tecnología más comunmente conocida de 2.5G es GPRS 
+(nombrada anteriormente), que provee transferencia de datos a velocidad 
+moderada usando canales TDMA no utilizados en la red GSM. Algunos 
+protocolos, como ser EDGE para GSM y CDMA2000 1x-RTT para CDMA, califican 
+oficialmente como servicios "3G" (debido a que su taza de transferencia de datos 
+supera los 144 kbit/s), pero son considerados por la mayoría como servicios 2.5G 
+(o 2.75G, que luce aún mas sofisticado) porque son en realidad varias veces más 
+lentos que los servicios implementados en una red 3G. 
+Mientras los términos "2G" y "3G" están definidos oficialmente, no lo está "2.5G". 
+Fue inventado con fines únicamente publicitarios. 
+Muchos de los proveedores de servicios de telecomunicaciones se moverán a las 
+redes 2.5G antes de entrar masivamente a la 3. La tecnología 2.5G es más rápida, y 
+más económica para actualizar a 3G. 
+2.2.5 Tercera generación (3G). 
+No mucho luego de haberse introducido las redes 2G se comenzó a desarrollar los 
+sistemas 3G. Como suele ser inevitable, hay variados estándares con distintos 
+competidores que intentan que su tecnología sea la predominante. Sin embargo, en 
+forma muy diferencial a los sistemas 2G, el significado de 3G fue estandarizado 
+por el proceso IMT-2000. Este proceso no estandarizó una tecnología sino una serie 
+de requerimientos (2 Mbit/s de máxima taza de transferencia en ambientes 
+cerrados, y 384 kbit/s en ambientes abiertos, por ejemplo). Hoy en día, la idea de 
+un único estándar internacional se ha visto dividida en múltiples estándares bien 
+diferenciados entre sí. 
+Existen principalmente tres tecnologías 3G. Para Europa existe UMTS (Universal 
+Mobile Telecommunication System) usando CDMA de banda ancha (W-CDMA). 
+Este sistema provee transferencia de información de hasta 2Mbps. 
+Telefonía celular 13 Están a su vez las evoluciones de CDMA2000. La primera en ser lanzada fue 
+CDMA2000 1xEV-DO, donde EV-DO viene de Evolution Data Only. La idea atrás 
+de este sistema era que muchas de las aplicaciones sólo requirieran conexión de 
+datos, como sería el caso si se usara el celular para conectar una PC a Internet en 
+forma inalámbrica. En caso de requerir además comunicación por voz, un canal 1X 
+estándar es requerido. Además de usar tecnología CDMA, EV-DO usa tecnología 
+TDMA para proveer de la velocidad de transferencia necesaria y mantener la 
+compatibilidad con CDMA y CDMA2000 1X. 
+La siguiente evolución de CDMA2000 fue CDMA2000 1xEV-DV. Esto fue una 
+evolución del sistema 1X totalmente distinto a CDMA2000 1xEV-DO, ofreciendo 
+servicios totales de voz y datos. Este sistema también es compatible con CDMA y 
+CDMA2000 1X y es capaz de ofrecer tasas de transferencia de 3.1Mbps. 
+Estos dos protocolos usaron lo que se conoce como FDD (Frequency Division 
+Duplex), donde los links de ida y vuelta usan distintas frecuencias. Dentro de 
+UMTS existe una especificación conocida como TDD (Time Division Duplex), 
+donde los links poseen la misma frecuencia pero usan distintos segmentos de 
+tiempo. Sin embargo, TDD no se implementará en los mercados por un tiempo. 
+Un tercer sistema 3G fue desarrollado en China que usa TDD. Conocido como TD-
+SCDMA (Time Division Synchronous CDMA), usa un canal de 1.6MHz y fue 
+pensado para que abarque el mercado Chino y de los países vecinos. 
+Algunos de los sistemas 2.5G, como ser CDMA2000 1x y GPRS, proveen de 
+algunas de las funcionalidades de 3G sin llegar a los niveles de transferencia de 
+datos o usos multimedia de la nueva generación. Por ejemplo, CDMA2000-1X 
+puede, en teoría, transferir información hasta a 307 kbit/s. Justo por encima de esto 
+se encuentra el sistema EDGE, el cual puede en teoría superar los requerimientos 
+de los sistemas 3G; aunque esto es por tan poco que cualquier implementación 
+práctica quedaría probablemente por debajo del límite deseado. 
+Al comienzo del siglo 21, sistemas 3G como UMTS y CDMA2000 1xEV-DO han 
+comenzado a estar al alcance del público en los países del primer mundo. Sin 
+embargo, el éxito de estos sistemas aún está por probarse. 
+Telefonía celular 14 3 Funcionamiento de la telefonía celular 
+Los teléfonos celulares, por sofisticados que sean y luzcan, no dejan de ser radio 
+transmisores personales.  
+Siendo un sistema de comunicación telefónica totalmente inalámbrica, los sonidos 
+se convierten en señales electromagnéticas, que viajan a través del aire, siendo 
+recibidas y transformadas nuevamente en mensaje a través de antenas repetidoras 
+o vía satélite.  
+Para entender mejor cómo funcionan estos sofisticados aparatos puede ayudar 
+compararlos con una radio de onda corta (OC) o con un walkie-talkie. Un radio OC 
+es un aparato simple. Este permite que dos personas se comunique utilizando la 
+misma frecuencia, así que sólo una persona puede hablar al tiempo. Un teléfono 
+celular es un dispositivo dual, esto quiere decir que utiliza una frecuencia para 
+hablar, y una segunda frecuencia aparte para escuchar. Una radio OC tiene 40 
+canales. Un teléfono celular puede utilizar 1664 canales. Estos teléfonos también 
+operan con "células" (o "celdas") y pueden alternar la célula usada a medida que 
+el teléfono es desplazado. Las células le dan a los teléfonos un rango mucho mayor 
+a los dispositivos que lo comparamos. Un walkie-talkie puede transmitir hasta 
+quizás una milla. Una radio OC, debido a que tiene un poder mucho más alto, 
+puede transmitir hasta 5 millas. Alguien que utiliza un teléfono celular, puede 
+manejar a través de toda la ciudad y mantener la conversación todo el tiempo. Las 
+células son las que dan a los teléfonos celulares un gran rango. 
+ 
+ 
+En un radio simple, ambos transmisores utilizan la misma frecuencia. Sólo uno puede hablar al tiempo 
+ 
+Telefonía celular 15 En un radio dual, los dos 
+transmisores utilizan 
+diferentes frecuencias, así que 
+dos personas pueden hablar al 
+mismo tiempo.  
+Los teléfonos celulares son 
+duales. 
+ 
+ 
+El teléfono celular estándar de la primera generación estableció un rango de 
+frecuencias entre los 824 Megahertz y los 894 para las comunicaciones analógicas. 
+Para enfrentar la competencia y mantener los precios bajos, este estándar estableció 
+el concepto de dos portadores en cada mercado, conocidos como portadores A y B. 
+A cada portador se le da 832 frecuencias de voz, cada una con una amplitud de 30 
+Kilohertz. Un par de frecuencias (una para enviar y otra para recibir) son usadas 
+para proveer un canal dual por teléfono. Las frecuencias de transmisión y 
+recepción de cada canal de voz están separadas por 45 Megahertz. Cada portador 
+también tiene 21 canales de datos para usar en otras actividades. 
+La genialidad del teléfono celular reside en que una ciudad puede ser dividida en 
+pequeñas "células" (o celdas), que permiten extender la frecuencia por toda una 
+ciudad. Esto es lo que permite que millones de usuarios utilicen el servicio en un 
+territorio amplio sin tener problemas. He aquí como funciona. Se puede dividir un 
+área (como una ciudad) en células. Cada célula es típicamente de un tamaño de 10 
+millas cuadradas (unos 26Km2). Las células se imaginan como unos hexágonos en 
+un campo hexagonal grande, como este: 
+ 
+Telefonía celular 16 Sin embargo, el tamaño de las células puede variar mucho dependiendo del lugar 
+en que se encuentre. Las estaciones de base se separan entre 1 a 3 Km. en zonas 
+urbanas, aunque pueden llegar a separarse por más de 35Km en zonas rurales. En 
+zonas muy densamente pobladas o áreas con muchos obstáculos (como ser 
+edificios altos), las células pueden concentrarse en distancias cada vez menores. 
+Algunas tecnologías, como los PCS (Personal Communication Services), requieren 
+células muy cercanas unas de otras debido a su alta frecuencia y bajo poder en el 
+que operan. Los edificios pueden, a su vez, interferir con el envío de las señales 
+entre las células que se encuentren más lejanas, por lo que algunos edificios tienen 
+su propia "microcélula." Los subterráneos son típicos escenarios donde una 
+microcélula se hace necesaria. Microcélulas pueden ser usadas para incrementar la 
+capacidad general de la red en zonas densamente pobladas como ser los centros 
+capitalinos. 
+Debido a que los teléfonos celulares y las estaciones de base utilizan transmisores 
+de bajo poder, las mismas frecuencias pueden ser reutilizadas en células no 
+adyacentes. 
+Cada celda en un sistema análogo utiliza un séptimo de los canales de voz 
+disponibles. Eso es, una celda, más las seis celdas que la rodean en un arreglo 
+hexagonal, cada una utilizando un séptimo de los canales disponibles para que 
+cada celda tenga un grupo único de frecuencias y no haya colisiones entre células 
+adyacentes. 
+Esta configuración puede verse en forma gráfica en la siguiente figura: 
+ 
+Puede observarse un grupo de células numerado en la parte superior. 
+De esta forma, en un sistema analógico, en cualquier celda pueden hablar 59 
+personas en sus teléfonos celulares al mismo tiempo. Con la transmisión digital, el 
+número de canales disponibles aumenta. Por ejemplo el sistema digital TDMA 
+puede acarrear el triple de llamadas en cada celda, alrededor de 168 canales 
+disponibles simultáneamente. 
+Telefonía celular 17 Cada célula tiene una estación base que consta de una torre y un pequeño edificio 
+en donde se tiene el equipo de radio. Cada célula utiliza un séptimo de los 416 
+canales duales de voz. Dejando entonces a cada célula aproximadamente los 59 
+canales disponibles nombrados anteriormente.  
+Si bien los números pueden variar dependiendo de la tecnología usada en el lugar, 
+las cantidades sirven para mostrar cómo funciona esta tecnología; que en caso de 
+tratarse de una generación más moderna, puede de todas formas extrapolarse 
+directamente. 
+Los teléfonos celulares poseen unos transmisores de bajo poder dentro de ellos. 
+Muchos teléfonos celulares tienen 2 fuerzas de señal: 0.6 Watts y 3 Watts (como 
+comparación, la mayoría de los radios de onda corta transmiten a 5 Watts). La 
+estación base también transmite a bajo poder. Los transmisores de bajo poder 
+tienen 2 ventajas: 
+El consumo de energía del teléfono, que normalmente opera con baterías, es 
+relativamente bajo. Esto significa que bajo poder requiere baterías pequeñas, y esto 
+hace posible que existan teléfonos que caben en la mano. A su vez aumenta en 
+forma considerable el tiempo en que se puede usar el teléfono entre carga y carga 
+de la batería. 
+Las transmisiones de las estaciones base y de los teléfonos no alcanzan una 
+distancia más allá de la célula. Es por esto que en la figura de arriba en cada celda 
+se pueden utilizar las mismas frecuencias sin interferir unas con otras.  
+Las transmisiones de la base central y de los teléfonos en la misma celda no salen 
+de ésta. Por lo tanto, cada celda puede reutilizar las mismas 59 frecuencias a través 
+de la ciudad.  
+La tecnología celular requiere un gran número de estaciones base para ciudades de 
+cualquier tamaño. Una ciudad típica grande puede tener cientos de torres 
+emisoras. Pero debido a que hay tanta gente utilizando teléfonos celulares, los 
+costos se mantienen bajos para el usuario. Cada portador en cada ciudad tiene una 
+oficina central llamada MTSO (PSTN en el diagrama siguiente). Esta oficina maneja 
+todas las conexiones telefónicas y estaciones base de la región. 
+ 
+ 
+Telefonía celular 18 Típica torre de transmisión de telefonía celular 
+Cuando el usuario desea realizar una llamada, el teléfono celular envía un mensaje 
+a la torre solicitando una conexión a un número de teléfono específico. Si la torre 
+dispone de los suficientes recursos para permitir la comunicación, un dispositivo 
+llamado "switch" conecta la señal del teléfono celular a un canal el la red de 
+telefonía pública. La llamada en este momento toma un canal inalámbrico así como 
+un canal en la red de telefonía pública que se mantendrán abiertos hasta que la 
+llamada se concluya.  
+Telefonía celular 19 El diagrama que se muestra a continuación gráfica lo descrito anteriormente.  
+ 
+ 
+Digamos que usted tiene un celular, lo enciende, y alguien trata de llamarle. La 
+MTSO recibe la llamada, y trata de encontrarlo. Desde los primeros sistemas la 
+MTSO lo encontraba activando su teléfono (utilizando uno de los canales de 
+control, ya que su teléfono se encuentra siempre escuchando) en cada célula de la 
+región hasta que su teléfono respondiera. Entonces la estación base y el teléfono 
+decidirán cuál de los 59 canales en su teléfono celular usará. Ahora estará 
+conectado a la estación base y puede empezar a hablar y escuchar. 
+A medida que usted se mueva en la célula, la estación base notará que la fuerza de 
+su señal disminuye. Entretanto, la estación base de la célula hacia la que se está 
+moviendo (que está escuchando la señal) será capaz de notar que la señal se hace 
+más fuerte. Las dos estaciones base se coordinan a sí mismas a través del MTSO, y 
+en algún punto su teléfono obtiene una señal que le indica que cambie de 
+frecuencia. Este cambio hace que su teléfono mude su señal a otra célula. 
+Telefonía celular 20 En sistemas modernos los teléfonos esperan una señal de identificación del sistema 
+(IDS) del canal de control cuando se encienden. El teléfono también transmite una 
+propuesta de registro y la red mantiene unos datos acerca de su ubicación en una 
+base de datos (de esta forma es que la MTSO sabe en que célula se encuentra si 
+quiere timbrar su teléfono). A medida que se mueve entre células, el teléfono 
+detecta los cambios en la señal, los registra y compara para con los de la nueva 
+célula cuando cambia de canal. Si el teléfono no puede hallar canales para escuchar 
+se sabe que está fuera de rango y muestra un mensaje de "sin servicio". 
+Éste es, en forma bastante simplificada, el funcionamiento de la telefonía celular; 
+abarcando desde el aspecto teórico en la división de las zonas geográficas en 
+células, hasta el intercambio de ondas electro magnéticas necesario para establecer 
+una sencilla comunicación entre dos teléfonos celulares. Si bien puede enfocarse el 
+tema de manera mucho más técnica, deteniéndose más en aspectos de frecuencia y 
+amplitud de las ondas por ejemplo, preferimos darle un enfoque más general, 
+dando sí algunos datos técnicos específicos que nos parecieron de mayor 
+relevancia para el entendimiento general del tema. 
+ 
+ 
+Telefonía celular 21 4 Composición tecnológica del teléfono celular 
+En esta sección, hablaremos de las diferentes tecnologías que se utilizan en el 
+mundo de las comunicaciones inalámbricas, desde la composición física de un 
+teléfono celular, culminando en los diferentes protocolos que siguen el 
+funcionamiento de los distintos usos que se le dan a los celulares. 
+4.1 Interior de un teléfono celular 
+Dado que el sistema analógico de comunicaciones tiene tendencias al 
+congestionamiento, los teléfonos digitales han adquirido una mayor trascendencia 
+en las tecnologías de punta. Los teléfonos celulares digitales convierten la voz en 
+códigos digitales binarios, y luego la comprimen. De esta forma, cada llamada 
+telefónica ocupa de 3 a 10 veces menos espacio que una llamada analógica, además 
+de permitir una mejor y mayor manipulación de la misma, y así procesarlos, 
+transportarlos y almacenarlos en espacios adecuados. Esto produce un aumento 
+drástico en la capacidad de los sistemas en comparación con los sistemas 
+analógicos de llamadas. Para lograr esta compresión y la descompresión de los 
+datos, los teléfonos celulares procesan millones de cálculos por segundo.  
+ 
+El aparato consta de: 
+¾ Un microprocesador llamado DSP, o Digital Signal Processor. Realiza todas 
+las operaciones del dispositivo, análogamente a lo que hace un 
+microprocesador en un computador personal. Las velocidades de estos 
+microprocesadores ronda en el orden de 40 MIPS (Millones de Instrucciones 
+Por Segundo). Es el cerebro del sistema de circuitos, realizando todas las 
+tareas de compresión, descompresión, procesa todas las tareas del teclado, 
+gestiona los comandos, controla las señales, envía la información a la 
+pantalla para ser mostrada, además de coordinar las demás funciones. 
+¾ Una placa de circuitos similar a una placa madre de una computadora. 
+Telefonía celular 22 ¾ Un altavoz por el cual el aparato emite el sonido luego de su descompresión 
+y decodificación en el microprocesador. 
+¾ Una pantalla de cristal líquido (LCD) que muestra toda la información 
+visualmente, similar al visor de una calculadora. En los últimos años se ha 
+desarrollado la tecnología de este tipo de pantallas, permitiendo el uso de 
+pantallas a color. 
+¾ Un teclado a través del cual el usuario ingresa sus comandos, 
+¾ Una antena receptora de las señales emitidas por las estaciones y antenas. 
+¾ Una batería que almacena la energía eléctrica necesaria para el 
+funcionamiento del teléfono. Existen tres tipos de batería: NiCd (Níquel / 
+Cadmio), NiMH (Hidrato Metálico de Níquel) y Li-Ion (Iones de Litio). Las 
+diferencias entre estos tipos de batería radican en la capacidad, y tiempo de 
+vida. Las baterías NiMH tienen una gran capacidad, pero su rendimiento 
+decae después de unos 300 ciclos (carga - descarga) causado por la 
+decreciente capacidad y la creciente resistencia interna. Las baterías NiCd 
+ofrecen aproximadamente un 30% menos de capacidad que las anteriores, 
+pero su vida útil se extiende hasta los 1000 ciclos aproximadamente, con un 
+rendimiento más constante debido a que la resistencia interna permanece 
+baja. En cambio, las baterías Li-Ion, que ofrece una alta energía, su bajo peso 
+y que no requiere de descargas periódicas, pierde su capacidad con el 
+tiempo, aún si es usada o no. Si su uso es constante, podría llegar a usarse 
+unos 1000 ciclos (en 2 años, normalmente, la vida útil de este tipo de 
+baterías). 
+ 
+ 
+Telefonía celular 23 4.2 Tecnologías utilizadas en los teléfonos celulares 
+4.2.1 Tecnologías de acceso celular 
+Las tecnologías utilizadas actualmente para la transmisión de información en las 
+redes son denominadas de acceso múltiple, debido a que más de un usuario puede 
+utilizar cada una de las celdas de información. Actualmente existen tres diferentes, 
+que difieren en los métodos de acceso a las celdas: 
+¾ FDMA (Acceso múltiple por división de frecuencia): accesa las celdas 
+dependiendo de las frecuencias. Básicamente, separa el espectro en distintos 
+canales de voz, al dividir el ancho de banda en varios canales 
+uniformemente según las frecuencias de transmisión. Los usuarios 
+comparten el canal de comunicación, pero cada uno utiliza uno de los 
+diferentes subcanales particionados por la frecuencia. Mayormente es 
+utilizada para las transmisiones analógicas, aún cuando es capaz de 
+transmitir información digital (no recomendada). 
+¾ TDMA (Acceso múltiple por división de tiempo): Divide el canal de transmisión 
+en particiones de tiempo. Comprime las conversaciones digitales y luego las 
+envía utilizando la señal de radio por un período de tiempo. En este caso, 
+distintos usuarios comparten el mismo canal de frecuencia, pero lo utilizan 
+en diferentes intervalos de tiempo. Debido a la compresión de la 
+información digital, esta tecnología permite tres veces la capacidad de un 
+sistema analógico utilizando la misma cantidad de canales. 
+¾ CDMA (Acceso múltiple por división de códigos): Esta tecnología, luego de 
+digitalizar la información la transmite a través de todo el ancho de banda 
+del que se dispone, a diferencia de TDMA y FDMA. Las llamadas se 
+sobreponen en el canal de transmisión, diferenciadas por un código de 
+secuencia único. Esto permite que los usuarios compartan el canal y la 
+frecuencia. Como es un método adecuado para la transmisión de 
+información encriptada, se comenzó a utilizar en el área militar. Esta 
+tecnología permite comprimir de 8 a 10 llamadas digitales para que ocupen 
+lo mismo que ocupa una llamada analógica. 
+Telefonía celular 24 En la siguiente figura se muestra un gráfico comparativo del funcionamiento de las 
+mencionadas tecnologías. 
+ 
+Gráfica que muestra las diferentes formas de dividir la frecuencia según los diferentes estándares. 
+4.2.2 GSM 
+Es un estándar mundial para teléfonos celulares. Llamado Global System for Mobile 
+communications (Sistema Global para las comunicaciones móviles), formalmente 
+conocida como Group Special Mobile (GSM, Grupo Especial Móvil). Fue creado por 
+CEPT (organismo internacional que agrupa a las entidades responsables en la 
+Administración Pública de cada país europeo de las políticas y la regulación de las 
+comunicaciones, tanto postales como de telecomunicaciones), y posteriormente 
+desarrollado por ETSI (European Telecommunications Standars Institute - 
+organización de estandarización de la industria de las telecomunicaciones de 
+Europa con proyección mundial) para estandarizar la telefonía celular en Europa, 
+luego adoptado por el resto del mundo. En el año 2001, el 70% de los usuarios de 
+telefonía móvil en el mundo usaban GSM. Es un estándar abierto, no propietario y 
+que se encuentra en desarrollo constante. 
+GSM emplea una combinación de TDMA y FDMA entre estaciones en un par de 
+canales de radio de frecuencia duplex, con baja lupulización de frecuencia entre 
+canales. Como se explicó anteriormente, TDMA se utiliza para información digital 
+codificada, por lo que GSM es un sistema diseñado para utilizar señales digitales, 
+así como también, canales de voz digitales, lo que permite un moderado nivel de 
+seguridad. 
+Existen cuatro versiones principales, basadas en la banda: GSM-850, GSM-900, 
+GSM-1800 y GSM-1900, diferenciándose cada una en la frecuencia de las bandas. 
+En GSM, las conexiones se pueden utilizar tanto a la voz, como a datos, lo que 
+permitió el avance del envío y consumo de datos a través de los celulares. Los 
+casos más comunes son las imágenes que se pueden enviar y recibir, y el uso de 
+aplicaciones a través de los teléfonos móviles, tal es el caso de Internet. 
+Telefonía celular 25 Las implementaciones más veloces de GSM se denominan GPRS y EDGE, también 
+denominadas generaciones intermedias, o 2.5G, que conducen a la tercera 
+generación (3G), o UMTS. 
+4.2.2.1 GPRS (General Packet Radio Service) 
+Básicamente es una comunicación basada en paquetes de datos. En GSM, los 
+intervalos de tiempo son asignados mediante una conexión conmutada, en tanto 
+que en GPRS son asignados mediante un sistema basado en la necesidad a la 
+conexión de paquetes. Es decir, que si no se envía ningún dato por el usuario, las 
+frecuencias quedan libres para ser utilizadas por otros usuarios. Los teléfonos 
+GPRS por lo general utilizan un puerto bluetooth para la transferencia de datos. 
+4.2.2.2 EDGE (Enhanced Data Rates for Global Evolution) 
+Es una actualización de GPRS, el cual embala hasta 69.2Kbps en ocho timeslots, 
+considerada una tecnología de 2.75G, un poco más evolucionada que GPRS. 
+GERAN (GPS/EDGE Radio Access Network) es el nombre que se le da a los 
+estándares para el acceso GPS/EDGE. 
+4.2.2.3 UMTS (Universal Mobile Telecommunications System) 
+Es el sistema de telecomunicaciones móviles de tercera generación, que se espera 
+que alcance unos 2000 millones de usuarios para el año 2010. 
+El principal avance radica en la tecnología WCDMA (Wide Code Division Multiple 
+Access), heredada de la tecnología militar, a diferencia de GSM y GPRS que utilizan 
+una mezcla de FDMA y TDMA. La principal ventaja de WCDMA es que la señal se 
+expande en frecuencia  gracias a un código de ensanchado que únicamente es 
+conocido por el emisor y el receptor. La técnica del espectro ensanchado permite 
+que una señal se ensanche a lo largo de una banda muy ancha de frecuencias, 
+mucho más amplia que el mínimo requerido para transmitir la información a 
+enviar. Este aspecto trae muchas mejoras a los anteriores sistemas (FDMA, TDMA 
+y el propio CDMA): 
+¾ Altas velocidades de transmisión (hasta 2 Mbps) 
+¾ Un grado de seguridad mayor. 
+¾ Gran eficacia en cuanto al acceso múltiple al canal. 
+¾ Alta resistencia a las interferencias. 
+Telefonía celular 26 4.2.3 Acceso a Internet y demás Aplicaciones por Teléfono Celular 
+El desarrollo de los protocolos de acceso a Internet a partir de los celulares se ha 
+visto incrementado en los últimos años, y ha obligado a buscar protocolos y 
+tecnología que permitan universalizar la transferencia y visualización de datos y 
+aplicaciones a través de cualquier dispositivo, ya sea a partir de celulares como de 
+PCs. 
+4.2.3.1 WAP (Wireless Application Protocol) 
+Es una especificación de protocolos estándar para aplicaciones que utilizan los 
+dispositivos de comunicación inalámbricos, aplicaciones como por ejemplo el 
+acceso a Internet desde un celular, el acceso a correo electrónico, u otros. 
+El lenguaje primario del protocolo WAP es el WML (Wireless Markup Language), 
+lenguaje interpretado por los navegadores WAP, de similares características al 
+HTML. 
+Las nuevas versiones de WAP, utilizan XML que a futuro permitirá el verdadero 
+acceso web para los dispositivos portátiles, utilizando un subconjunto de XHTML 
+(eXtensible Hyper Text Markup Language, lenguaje pensado para sustituir a HTML 
+como estándar para las páginas web) llamado XHTML Basics. 
+Durante la conferencia NetMedia2000 realizada en Londres, especialistas en 
+Internet y la telefonía móvil han recalcado que WAP no es más que un estándar 
+temporal, ya que las limitaciones que posee no permiten la extensibilidad del 
+sistema WAP hacia las diferentes tecnologías utilizadas en el desarrollo de 
+aplicaciones web. Asimismo, Jakob Nielsen, señalado como el "gurú de la 
+usabilidad de las páginas Web" por New York Times, describe este sistema como 
+un "abordaje equivocado a la portabilidad". De hecho, una de las limitaciones del 
+sistema WAP es justamente el hecho de ser un micro-browser que únicamente 
+puede interpretar el lenguaje WML, lo que significaría para las compañías tener 
+que desarrollar contenidos propios en dicho lenguaje o adaptar los existentes. 
+Otras limitaciones que se encontraron en este estándar son las velocidades lentas 
+de ejecución y la necesidad de realizar una nueva llamada cada vez que el usuario 
+desea conectarse. 
+ 
+Jakob Nielsen 
+Telefonía celular 27 En Uruguay, WAP es utilizado por ANCEL en ciertas aplicaciones específicas. Por 
+ejemplo, Uragua utiliza el sistema WAP de ANCEL para realizar los cortes y 
+reapertura de servicios y el intercambio de mensajes entre su helpdesk y sus 
+técnicos que realizan los distintos trabajos de campo. Dicha aplicación de Uragua 
+fue desarrollada por San Diego SoftWorks. Otros organismos que utilizan el WAP 
+de ANCEL en sus aplicaciones son: 
+¾ ANC (Administración Nacional de Correos) 
+¾ Gaseba Uruguay 
+¾ Ministerio del Interior 
+ANCEL también ha desarrollado un portal móvil utilizando su WAP, llamado 
+Dale. 
+4.2.3.2 I-mode 
+Es un sistema de acceso a Internet utilizados en los dispositivos móviles, al igual 
+que WAP, creado por DoCoMo en 1999 pero que ha tenido un desarrollo muy 
+importante en Japón. Cerca de un 30% de la población de Japón utiliza i-mode en 
+sus aplicaciones vía Internet, ya sea, navegación de páginas, reservas de boletos de 
+tren, chequeo del estado del tiempo y otros diferentes usos en sus rutinas diarias, 
+como envío de correos electrónicos. En los últimos años, esta tecnología ha logrado 
+entrar en el mercado europeo a través de terminales en España principalmente. 
+El avance de esta tecnología en el mercado ha forzado a sus competidoras a 
+desarrollar sistema de telefonía móvil similares, por ejemplo, J-Phone que 
+desarrolló Jsky, luego comprado por Vodafone y renombrado a lo que hoy es 
+Vodafone Live!. 
+Consta de un conjunto de protocolos que le permiten a un usuario navegar a través 
+de mini páginas diseñadas especialmente. Estas páginas, son escritas en un 
+lenguaje muy similar a lo que es HTML, con leves modificaciones para su uso en 
+teléfonos celulares: el Compact HTML o cHTML. Este estándar también incluye 
+una tecnología, llamada Doja, para realizar y consumir aplicaciones hechas en Java, 
+pero no todos los terminales i-mode soportan dicha tecnología. 
+Si bien i-mode también obliga a los operadores de las aplicaciones web a migrar 
+sus contenidos a ciertos lenguajes, y teniendo en cuenta que i-mode logra 
+interpretar el Compact HTML, este pasaje de información a Internet Móvil sería 
+mucho más rápido debido a la semejanza existente entre HTML y cHTML. El 
+propio Nielsen destaca que el sistema i-mode tendrá mayor éxito que WAP, debido 
+a que es mucho más simple y barato, ofrece conexión permanente y una buena 
+política de apertura del sistema. 
+Telefonía celular 28 4.2.4 Estándares de comunicación inalámbrica 
+4.2.4.1 Bluetooth 
+Es la norma que posibilita la transmisión de voz y datos entre diferentes 
+dispositivos mediante un enlace de radiofrecuencia. Esta norma consigue facilitar 
+las comunicaciones entre equipos móviles y fijos, eliminando cables y conectores. 
+El estudio de este tipo de tecnologías fue iniciado por Ericsson en 1994 para la 
+interconexión de teléfonos móviles y otros accesorios.  
+Todos aquellos equipos conectados con Bluetooth deberán tener instalado el chip 
+Bluetooth, un software que interprete la conexión establecida y la conexión deberá 
+cumplir ciertos requerimientos de interoperabilidad. 
+La distancia entre los dispositivos puede alcanzar los 10 metros, dentro de la cual 
+se ofrece una conexión segura de radio. 
+Uno de los principales obstáculos a los cuales se enfrenta este tipo de conexiones es 
+que el emisor deberá consumir poca energía, debido a que deberá integrarse con 
+dispositivos que por lo general funcionan en base a una batería. 
+4.2.4.2 IrDA (InfraRed Data Association) 
+Es un estándar que define una manera de implementar el uso de la tecnología 
+infrarroja por los fabricantes, para la transmisión y recepción de información. Fue 
+creada en 1993 entre HP, IBM, SHARP, entre otros. La FIR (First InfraRed), soporta 
+tasas de frecuencia hasta 4 Mbps, aunque aún se estudia la posibilidad de ampliar 
+dichas tasas a 16 Mbps. 
+Telefonía celular 29 5 Influencia en la sociedad 
+En esta sección analizaremos las principales razones por la cual las personas 
+deciden utilizar un celular.  Si la gente los posee solamente para realizar llamadas 
+o simplemente por estar a la moda. Sobre este punto presentaremos un análisis de 
+una entrevista realizada por la Cátedra de Procesamiento de Datos de la 
+Universidad de Buenos Aires. 
+También hablaremos sobre hasta que punto los celulares pueden provocar adicción 
+y como influye la personalidad de las personas en el uso de los mismos. 
+Por último veremos las distintas formas de campañas publicitarias y formas de 
+persuadir a la sociedad para la compra de teléfonos celulares. Incluimos un 
+ejemplo de publicidad de la empresa publicitaria Walkfone. 
+5.1 ¿Por qué es importante utilizar celular? 
+Lo que sigue es un análisis de una entrevista hecha por la Cátedra de 
+Procesamiento de Datos de la Universidad de Buenos Aires. El método de trabajo 
+de campo fue a través de entrevistas abiertas, y para circunscribir y localizar el 
+trabajo, se les realizó a personas entre 18 y 25 años que viven en la Ciudad de 
+Buenos Aires y el conurbano bonaerense. Las entrevistas no se limitaron a ningún 
+tipo de clase social, pero el requisito fundamental, era que posean teléfono celular. 
+A través de las entrevistas se puede notar que está fuertemente presente y valorada 
+la cuestión de estar comunicado todo el tiempo, con quien se quiera y en cualquier 
+lugar, ya sea a través de mensajes de texto, o llamadas. Existe así la posibilidad de 
+ubicar en todo momento a una persona independientemente de que se encuentren, 
+tanto el que realiza el llamado como el que lo recibe, en su domicilio, una especie 
+de comunicación más eficaz. Respecto de esto, se encuentran testimonios del tipo: 
+"Priorizó más el hecho de estar comunicada, tanto con familiares como por una cuestión de 
+contactos, y al no estar en mi casa no me queda otra que tener celular." Otro usuario 
+respondió acerca de este tema que: "Tener celular es una ventaja, el beneficio es que 
+cualquier persona que se quiere comunicar conmigo, cuando no estoy en mi domicilio, me 
+puede llamar al celular; y si yo estoy en cualquier lado, y necesito comunicarme con 
+alguien, también lo puedo hacer. El beneficio es por una cuestión de comunicación." Pero 
+también notamos una existencia, según los entrevistados, de otras vías de 
+comunicación (fundamentalmente telefónicas, pero en su formato fijo, hogareño, 
+laboral, público o semipúblico) que siempre están presentes. 
+"Para mis viejos es cuestión de seguridad, con el celular me siento controlado más 
+que antes, porque llaman a cada rato, preguntan a qué hora venís." Tener celular 
+está también vinculado a una cuestión de control, como un beneficio (encontrar a 
+quien se quiera en cualquier momento) aunque detrás de él se esconde una 
+desventaja, pues muchas veces el sentirse controlado puede ser molesto e 
+Telefonía celular 30 incómodo. De esta manera se ve que el beneficio planteado en un primer momento 
+corre el riesgo de transformarse en un control de las actividades de las personas. Si 
+bien, esto último, es un reproche de los usuarios, ninguno contempla la opción de 
+apagar el celular como una solución al problema, por el hecho irónico de "estar 
+siempre comunicado". 
+"Uso los mensajes porque es más práctico, económico, y me permite una 
+conversación más larga sin que corran los minutos. Por ejemplo, yo mando un 
+mensaje y sigo la conversación por una hora y el gasto es inferior a si usara una 
+llamada." Hay un predominio de la utilización de los mensajes de texto, por una 
+cuestión de practicidad, sin desconocer en esto los motivos económicos, pues los 
+SMS son mucho más baratos que las llamadas de voz, y allí aparece más que nada, 
+una cuestión de costos. Aunque también tenemos en cuenta que mandar mensajes 
+de texto en todo momento hace que, en definitiva, el gasto sea el mismo respecto 
+de las llamadas. Cierta filtración del chat se ve cuando los entrevistados aseguran 
+comunicarse con sus amigos y mandar mensajes con liviandad, sin restricciones 
+del orden de lo económico, que finalmente, en su extensión genera un gasto 
+similar, o mayor, al minuto de comunicación neta, lo cual indica una 
+representación errónea que sirve para, de manera inconsciente, justificar la 
+práctica.  
+En general las personas obtienen el celular por las funciones adicionales que 
+pueden obtener de él, pero la mayoría de los usuarios no las conocen en su 
+totalidad (en su existencia, y fundamentalmente, en su utilización) y las que 
+utilizan más frecuentemente son métodos de distracción o entretenimiento, como 
+son los juegos. A la hora de elegir un teléfono móvil, lo que más valoran es el envío 
+de los mensajes de texto, el diseño, todo aquello que tiene que ver con "estar a la 
+moda" y por último la posibilidad de tener en su propia mano la última tecnología. 
+Junto con el deseo de tener la última tecnología, está el aspecto estético del aparato 
+y de la imagen o status que aparenta portar determinados celulares. Al respecto 
+surgió en una de las respuestas: "Tuve como prioridad las cuestiones que tienen que ver 
+con la practicidad, pantalla grande, buena definición, y obvio, una compañía que me 
+brindara un buen servicio. Y otro factor muy importante para mí es que el celular tiene que 
+ser llamativo, vistoso, por el hecho de que en mi trabajo me manejo con cierto target de 
+personas, y necesito tener un buen equipo." 
+Es importante resaltar que en los casos que se evaluaron las personas tienden a 
+considerar que el celular surgió en la década de los ´90, época en la que en realidad 
+esa tecnología no fue creada sino el momento en el que se hace conocida y se 
+incorpora en la sociedad. La imbricación histórica junto al despegue comercial se 
+puede hacer visible en el desconocimiento del surgimiento, o en "otro" 
+surgimiento, el del estallido comercial que, en contrapartida, todos ubicaron hacia 
+las mismas fechas. Los entrevistados coincidieron en que en los '90 se masificó el 
+celular, pero asocian esa masificación al mismo momento de su surgimiento. 
+Telefonía celular 31 Cuando se consultó sobre la posibilidad de la desaparición del celular, las 
+respuestas todas coincidieron, y este es un ejemplo de ellas: "Uhhh, si dejara de 
+existir me moriría. Creo que si desapareciera, algo saldría a reemplazarlo, no sé qué sería, 
+pero seguro que estaría mucho mejor." Como se vio en las entrevistas la relativización 
+de la existencia del celular no concuerda con lo explicitado en las prácticas y 
+apreciamos una llamativa conciencia de la necesidad de la comunicación 
+momentánea en cualquier lugar. La ubicación, no en primer lugar, en algunas 
+entrevistas, no le están relegando un segundo plano sino que revelan un 
+asentamiento o emplazamiento que, de manera casi fugaz, teniendo en cuenta la 
+explosión en pocos meses, ya ha dejado de reservarle la novedad por lo 
+"necesariamente necesitado". Otro entrevistado dijo: "Habrá un tiempo de 
+desacostumbramiento. Pero seguramente, surgiría algo para reemplazarlo o cubrir ese vacío 
+y seguir sacándonos plata. En realidad el celular lo que hizo fue extender el porcentaje del 
+día que estás comunicado ( ... ) Tal vez eso es lo que se resentiría" 
+Por eso, la impronta que el celular dejó, en un corto tiempo, en el cuerpo social es 
+más profunda que un imaginario de lo posible. La aparición del celular instaló una 
+nueva necesidad que va más allá de su existencia, dejándonos la inquietud acerca 
+de qué nuevas necesidades tendremos en el futuro, y si esas necesidades serán 
+producto de la incorporación, a la vida cotidiana, de otras nuevas tecnologías. 
+5.2 Adicción a los celulares 
+Un estudio realizado por la universidad australiana de Monash, en Melbourne, ha 
+puesto de relieve los efectos de la personalidad a la hora de utilizar el móvil. Los 
+malos hábitos pueden estar acentuados por una baja autoestima o por el exceso de 
+extroversión. El estudio ha sido realizado con la intención de que las autoridades 
+tengan en cuenta el efecto de estos aparatos en los usuarios, de manera que puedan 
+controlar los mensajes publicitarios destinados a ellos.  
+Las personas más dependientes de los móviles -aquellos que mandan mensajes 
+hasta en el cine o que pagan facturas astronómicas de teléfono- suelen tener 
+características de personalidad similares, acaba de descubrir un equipo de 
+investigadores australianos. 
+Según el psicólogo James Phillips, de la universidad de Monash en Melbourne, se 
+trata de un tipo de personas tendente a crearse cierta adicción con estos aparatos, e 
+incluso a actitudes destructivas y peligrosas. En su mayor parte, afirma Phillips, 
+son personas jóvenes, extrovertidas o con un nivel de autoestima bajo.  
+5.2.1 Daños físicos y psíquicos 
+El estudio, publicado en la revista CyberPsychology & Behavior, ha examinado 
+los hábitos de uso de teléfonos móviles de 195 personas de más de 18 años. La 
+universidad de Monash también se ha hecho eco de los resultados del estudio. 
+Telefonía celular 32 Entre las preguntas que los investigadores hicieron a este grupo estaban las 
+referentes a la cantidad de dinero que pagaban por el uso de su móvil, las razones 
+por las que llamaban a otras personas, así como sus achaques y dolores 
+relacionados con el uso excesivo del teléfono inalámbrico (como los dolores en los 
+pulgares por escribir demasiados mensajes de texto).  
+Los investigadores también preguntaron a los participantes en el estudio si sus 
+familiares y amigos se quejaban de la utilización que hacían del móvil, si solían ser 
+impuntuales por encontrarse hablando por teléfono, o si se enfadaban cuando 
+alguien les pedía que apagaran los aparatos. 
+5.2.2 Personalidad y móvil 
+Los participantes pasaron además una serie de tests psicológicos cuyos resultados 
+mostraron una clara relación entre la forma de usar el teléfono y las características 
+de la personalidad de cada uno.  
+Cada personalidad produce una forma diferente de usar el móvil, según estos 
+resultados: las personas con baja autoestima tienden a buscar cierta reafirmación 
+en el uso de los teléfonos o se sienten infelices y utilizan los móviles para entrar en 
+contacto con otras personas.  
+Por el contrario, las personas extrovertidas tienden a usar el móvil para quedar o 
+ponerse de acuerdo con gente del trabajo o con múltiples amigos.  
+La finalidad del estudio es la de ayudar a las autoridades australianas a desarrollar 
+campañas publicitarias enfocadas a señalar a los usuarios los riesgos que entraña el 
+uso del teléfono móvil cuando se conduce, en hospitales o en otros sitios públicos.  
+5.2.3 Tecnología y personalidad 
+El estudio de la universidad de Monash viene a abundar en las investigaciones 
+sobre la influencia de la tecnología en la sociedad. Se sabe por ejemplo que para los 
+adolescentes hablar por el móvil es una forma de sentirse integrados. También se 
+ha detectado en determinados colectivos una cierta adicción al uso de los teléfonos 
+móviles, si bien se desconoce por qué determinadas tecnologías despiertan 
+adicción. 
+Por ejemplo, Internet es una tecnología potencialmente adictiva, ya que el uso del 
+ordenador y de la red tienen un potencial adictivo mucho mayor que otras 
+tecnologías parecidas. Otra variable que aumenta el potencial adictivo de estas 
+herramientas es la aceptación social. Un ejemplo es el del teléfono móvil. La fácil 
+disponibilidad determina otro aspecto a tener en cuenta, como es el caso de 
+ordenadores, teléfonos, etc.  
+Pero no todas las personas que utilizan estas herramientas se "enganchan" a los 
+móviles o a Internet. La persona que puede llegar a ser adicta es porque, 
+Telefonía celular 33 probablemente, ya tiene unos elementos de su personalidad que son los que le 
+conducen a un uso inadecuado de esta tecnología.  
+5.3 Marketing 
+Las comunicaciones móviles contribuyen a la eficiencia de las compañías, tanto en 
+logística, marketing como en las comunicaciones internas mas allá de eso el 
+teléfono móvil ha probado ser un instrumento valioso para la pequeña empresa y 
+sus dueños. Nuevos conceptos de servicios en el sector público han crecido 
+alrededor de la telefonía móvil, por ejemplo, aquellos basados en SMS. 
+Todo lo que nos rodea, incluyendo el celular, dice mucho sobre como somos. Las 
+publicidades gráficas muestran varias características para ayudar al consumidor a 
+poner su propio toque personal. El objetivo será ver los diferentes usos que 
+contienen los celulares y como son capaces de persuadirnos a través de ellos. 
+El celular es un elemento para comunicarse, pero con el avance de la tecnología nos 
+da una comunicación que va más allá de esto. En las publicidades se hace hincapié 
+en los diferentes usos que brinda el celular, más que en su objetivo principal: "el de 
+comunicarse mediante un llamado telefónico". También apuntan a lo simbólico, en 
+donde todo lo que el sujeto es, lo hace gracias a poseer un celular, "su" celular.  Las 
+posibilidades que brindan los teléfonos celulares son infinitas, y ya se puede 
+considerarlo como un objeto de uso personal, ya que el sujeto se identifica con el 
+celular. 
+Las publicidades consideran al celular como un objeto de uso personal 
+permitiendo al usuario identificarse con él. Los destinatarios a los que apuntan, en 
+su gran mayoría, pertenecen a un público joven, que quiere divertirse, disfrutar y 
+pasarla bien, pero en determinados casos, atraen a hombres de negocios 
+brindándole la posibilidad de comunicarse lo más rápido posible con sus clientes 
+y/o demás actividades laborales. 
+ 
+ 
+Un ejemplo de publicidad que nos muestra a un usuario disfrutando y pasándola bien junto a su celular. 
+La mayor atracción que tienen las publicidades es que incluyen promociones; con 
+la compra de un celular se adquieren diversos accesorios que nada tienen que ver 
+con el aparato telefónico, por ejemplo: mochilas, un CD, cuadernos (útiles 
+escolares), otro celular, etc. 
+Telefonía celular 34 El gran avance tecnológico en la telefonía celular, ha permitido un crecimiento, 
+tanto en el diseño de los celulares (su peso, grosor, pantalla color, cantidad de 
+líneas, etc.), como en la innovación de accesorios disponibles para cada celular en 
+particular. Por ejemplo: manos libres con radio que permite sintonizar el dial que 
+desee el consumidor y a su vez la posibilidad de hablar por teléfono sin tener que 
+interrumpir sus actividades normales. 
+Las empresas a través de usos y características de los teléfonos crean una nueva 
+necesidad para el usuario. Algunas de ellas son: 
+¾ cámara de video fotográfica 
+¾ juegos 
+¾ mayor velocidad de conexión a Internet y descargas de la web; la persona 
+puede enviar imágenes, mensajes o e-mails y también bajar rings tons, mp3, 
+chat. 
+¾ resolución de pantalla 
+¾ GSM 
+¾ sonido polifónico 
+¾ memoria 
+¾ agenda 
+¾ alarma 
+5.3.1 Propuesta publicitaria de Walkfone 
+Walkfone es una empresa de publicidad. Diseñará una campaña para una empresa 
+de telefonía móvil, teniendo en cuanta los usos y características de los celulares y 
+analizando las distintas campañas de empresas, como, CTI, UNIFON, PERSONAL. 
+La propuesta para la publicidad grafica consiste en la personificación del teléfono 
+celular. Realizar una historieta, en donde dos celulares se peleen entre ellos, 
+compitiendo por quien de los dos presenta más tecnología, usos y características. 
+Como si se tratase de dos personas. 
+Los destinatarios: 
+La publicidad grafica será destinada a jóvenes entre 16 y 25 años. Es una brecha de 
+edad donde es más fácil de persuadir con publicidades que apuntan a usos y 
+características de los celulares. 
+Puntos a tener en cuenta en la publicidad: 
+¾ Incluir en la gráfica promociones, premios que seduzcan al consumidor. 
+Telefonía celular 35 ¾ Apuntar en el diseño del celular, lo último en tecnología. 
+¾ Convencer el consumidor aparte del celular, obtendrá un objeto de uso 
+personal,   juguete, algo con que construir su propia identidad. 
+¾ Resaltar los objetivos principales del celular, como: 
+o Beneficios increíbles 
+o Comunicación y entretenimiento de última tecnología 
+o Tecnología útil y avanzada 
+o Velocidad y flexibilidad 
+o Garantía de estar siempre comunicado 
+o Mejor servicio 
+Propuesta y concepto para los avisos: 
+Tiene que predominar la imagen sobre el texto para captar la atención del 
+consumidor y hacer que adquiera el producto (celular). Que logre persuadirlo de 
+tal forma que sienta necesidad de comprarlo. Que describa con imágenes las 
+diferentes características del celular. Que el mensaje sea transmitido claramente. 
+La tipografía utilizada debe ser importante, tiene que llamar la atención, atrapar a 
+quién hojea la página. 
+Resaltar en la publicidad que el usuario pueda manipular el celular, manejar sus 
+usos (como sacar diferentes fotografías, personalizar diversos tonos del sonido, 
+etc.). El usuario va interactuar con el celular de una forma fácil que le va a parecer 
+natural, ese debe ser el objetivo principal. El teléfono tiene que ser usable para que 
+el usuario pueda disfrutar de la tecnología y relajarse.  
+La interfaz tiene que tender a ser transparente, el consumidor ya esta informado en 
+temas de tecnología, tiene conocimientos y más los jóvenes que crecieron con el 
+avance de la tecnología y la mayor parte de sus prácticas cotidianas se vinculan 
+con ella. 
+La interacción con el celular tiene que ser eficiente y segura. Los usuarios no tienen 
+que cambiar radicalmente su manera de ser, si no que el aparato tiene que ser 
+diseñado para satisfacer los requisitos del usuario. 
+6 Impacto en la salud 
+En los últimos años del uso de teléfonos celulares dentro de la población general, 
+es un tema de debate mundial, por sus posibles efectos sobre la salud. La 
+influencia de las radiaciones electromagnéticas en el organismo, a mediano y largo 
+plazo todavía esta siendo estudiado por la OMS, pero se han reportado casos 
+Telefonía celular 36 aislados de lesiones en algunas personas que utilizan con frecuencia este medio de 
+comunicación móvil.  
+6.1 Efectos de las radiaciones emitidas por los teléfonos 
+celulares 
+Varios estudios han demostrado que las radiaciones provenientes de los teléfonos 
+móviles producen cambios en la temperatura del organismo; en el cuerpo hay 
+áreas que son más sensibles al calor como son los ojos (formación de cataratas) y 
+los testículos (disminución en la producción de espermatozoides).   
+En exposición continuada, a largo plazo, con el uso del móvil o expuestos a las 
+antenas repetidoras, muchos científicos encuentran daños en la membrana celular 
+(flujo de iones Ca, K, Na), efectos sobre el sistema inmunitario con pérdida de 
+defensas, e incluso alteración del ADN, con destrucción de cromosomas, y rotura 
+de enlaces simples y dobles. 
+Recientemente han sido realizados algunos estudios en humanos, que parecen 
+mostrar una tendencia a aumentar el riesgo de tumores cerebrales en usuarios 
+activos del celular, pero es necesario realizar investigaciones con mayor número de 
+personas y períodos prolongados, que descarten o comprueben la relación tumor-
+radiación. 
+La radiación más peligrosa proviene de la antena del móvil, situada muy cerca de 
+la cabeza y se atenúa al alejar el aparato del oído. La potencia de emisión aumenta, 
+automáticamente, según los obstáculos materiales (paredes, vehículos, etc.) 
+encontrados entre el móvil y la antena repetidora.  Los efectos biológicos dependen 
+del tiempo de exposición a las microondas, aumentan linealmente con la potencia 
+de la fuente de emisión (móvil o antena), y decrecen exponencialmente (d2) al 
+aumentar la distancia entre el móvil o antena repetidora y la persona expuesta.   
+Todos somos sensibles a las microondas, pero el peligro potencial frente a los 
+campos electromagnéticos es mayor para la "población de alto riesgo", como 
+embarazadas, bebés y niños que presentan un peligro estadístico mucho mayor 
+(hasta en centenares de veces).  
+El riesgo también se incrementa en enfermos, ancianos y, más aún, en las personas 
+ultrasensibles, el colectivo de "alérgicos a la electricidad" que puede presentar 
+respuestas biológicas con dosis de radiación hasta mil veces menores.  
+Estas radiaciones, llamadas microondas, afectan también elementos técnicos de 
+alta sensibilidad, razón por la cual es prohibido su uso en aviones, lugares con 
+amplias medidas de seguridad, hospitales o en personas con marcapasos cardíacos.  
+Telefonía celular 37 6.1.1 ¿Los teléfonos celulares causan cáncer? 
+No existe una respuesta definitiva con respecto a si los teléfonos celulares causan 
+cáncer o no, puesto que la información disponible se basa en estudios a corto 
+plazo. Sin embargo, en el presente varios estudios importantes no muestran 
+evidencia que relacione los teléfonos celulares con el cáncer. 
+La cantidad de tiempo que las personas usan los teléfonos celulares se ha 
+incrementado y se ponderará en estudios actuales y futuros. Esta investigación en 
+curso continuará durante muchos años para comprobar si puede existir una 
+relación entre los tumores cerebrales o de otras áreas de lento crecimiento en 
+periodos de tiempo más prolongados 
+6.1.2 Las radiaciones pueden afectar la fertilidad masculina. 
+La radiación emitida por los teléfonos celulares puede afectar significativamente la 
+fertilidad masculina, afirmó un equipo de científicos de la Universidad de Szeged, 
+en Hungría.  
+Según los investigadores -que presentaron los resultados de su estudio en una 
+reunión de la Sociedad Europea de Reproducción Humana y Embriología (ESHRE 
+por sus siglas en inglés) en Berlín- dicha radiación reduce el número de 
+espermatozoides en un más de un 30%.  
+El estudio húngaro es el primero en analizar la influencia de las radiaciones 
+electromagnéticas sobre el esperma.  
+Incluso aquellos hombres que tenían su teléfono encendido (aunque no lo hubiesen 
+usado) fueron afectados.  
+Los espermatozoides restantes, según explicaron, se movían de una manera 
+anormal, reduciendo las posibilidades de reproducción, afirmó el equipo.  
+6.1.3 Los efectos son peores en lugares cerrados 
+Los efectos de las radiaciones son peores en lugares cerrados. Por ejemplo en un 
+ómnibus metálico donde están hablando más de diez personas el efecto que tiene 
+esta emisión de antenas emitiendo es tremendo. 
+Una investigación realizada por científicos japoneses sugiere que el uso de 
+aparatos celulares dentro de los vagones de los trenes puede poner en peligro la 
+salud de los pasajeros.  
+El estudio precisa que los niveles de radiación electromagnética en los trenes 
+puede exceder los límites internacionales de seguridad, incluso si pocas personas 
+hablan a la vez por teléfono.  
+Esto se debe a que las microondas emitidas por los aparatos celulares no tienen por 
+dónde salir y simplemente rebotan dentro de los habitáculos.  
+Telefonía celular 38 Tsuyoshi Hondou, de la Universidad de Tohuku, empleó los planos de un vagón 
+típico para calcular el impacto de la radiación.  
+Descubrió que muy pocas señales logran escapar por las ventanas y, en cambio, se 
+quedan dentro, yendo de un lado a otro.  
+Calculó que si apenas 30 pasajeros de un total de 151 hablan por teléfono, el nivel 
+de microondas sobrepasa el límite recomendado por el Comité Internacional sobre 
+Radiación No Ionizante.  
+También estimó que, debido a que las señales suelen potenciarse, el riesgo persiste 
+incluso si hay pocas personas en los vagones.  
+"Es posible que haya peligro aun si el tren está semivacío", insistió el científico 
+japonés en un artículo publicado por la revista New Scientist.  
+"Preocupante"  
+Hondou consideró que este hallazgo es "preocupante" en vista de la creciente 
+utilización del sistema WAP (el protocolo para navegar por Internet a través de los 
+teléfonos) y de otros dispositivos móviles.  
+Asimismo, recomendó a los operadores de ferrocarriles introducir nuevos 
+reglamentos sobre el empleo de aparatos celulares en los vagones.  
+Finalmente, advirtió que los efectos observados en los trenes también podrían 
+verificarse en autobuses y elevadores.  
+Sin embargo, el profesor Les Barclay, miembro de comité de investigación sobre 
+teléfonos móviles del Departamento de Salud del Reino Unido, dijo que los riesgos 
+para la salud son mínimos.  
+"Las señales pierden potencia rápidamente a medida que uno se aleja del aparato. 
+Y cuando rebotan en una pared, ya son muy débiles", explicó.  
+Telefonía celular 39 6.2 Los teléfonos móviles pueden provocar accidentes de 
+tránsito 
+Los teléfonos móviles pueden provocar más accidentes de tránsito que el alcohol, 
+según un estudio británico.  
+Una serie de pruebas realizadas por científicos del Laboratorio de Investigación 
+sobre el Transporte arrojaron que cuando se conversa por teléfono mientras se 
+conduce, las reacciones son más lentas que bajo la influencia del alcohol.  
+La investigación indica que el peligro es prácticamente el mismo si se utilizan 
+teléfonos celulares o aparatos que no se tienen que sostener en la mano.  
+El uso de teléfonos móviles mientras se maneja es ilegal en más de 30 países, pero 
+en otros, como el Reino Unido, no ocurre lo mismo.  
+Roger Vincent, de la Sociedad Real para la Prevención de Accidentes, pidió que se 
+prohibiera también en este país.  
+"El problema es que uno se sumerge en la conversación telefónica y ésta comienza 
+a tomar precedencia sobre la tarea de conducir", le dijo a la BBC.  
+ 
+ 
+Las reacciones pueden ser 50% más lentas. 
+Guardar las distancias  
+La investigación mostró que, como promedio, la reacción de los choferes es 30% 
+más lenta mientras conversan por teléfono que cuando conducen por encima del 
+límite de alcohol y 50% más lentas que cuando se maneja normalmente.  
+Los conductores también tuvieron dificultades para mantener una velocidad 
+constante y a la hora de guardar la debida distancia de otros automóviles.  
+En el estudio participaron 20 voluntarios y fue realizado con un simulador 
+automovilístico.  
+Telefonía celular 40 6.3 Consejos para reducir el riesgo sanitario 
+Dado el riesgo evidente, debemos usar el móvil lo menos posible, limitando el 
+número de llamadas y su duración. Si no hay más remedio que usar un móvil, los 
+analógicos son más aconsejables que los digitales (GSM). Debemos elegir un 
+modelo de baja radiación -las potencias de emisión suelen oscilar entre 0,6 y 2 W- 
+y considerarlo un teléfono de emergencia. Es aconsejable extender la antena y 
+alejarlo todo lo posible de la cabeza al hablar (accesorio manos libres), así como el 
+uso de mensajes escritos, por su breve emisión radioeléctrica y por la distancia de 
+lectura. 
+En el mismo sentido, debemos evitar permanecer cerca de las antenas repetidoras, 
+por la gran potencia y la larga duración de la exposición. Si residimos cerca de una 
+antena repetidora, es preciso medir con precisión la radiación efectiva recibida por 
+las personas (densidad de potencia), con aparatos homologados de alta 
+sensibilidad a cargo de un experto, que puede medir in situ la radiación de 
+microondas y sugerir las medidas necesarias. Ante la amenaza omnipresente de las 
+antenas, podemos instalar pantallas de protección para las microondas, dado que 
+la mayor parte de la radiación de la red de telefonía móvil penetra por las 
+ventanas. 
+Los niños de menos de 16 años no deberían usar teléfonos móviles.  
+Las mujeres embarazadas no deberían usar teléfonos móviles.  
+Los que padecen las determinadas enfermedades y desordenes que se indican no 
+deberían usar teléfonos móviles: enfermedades neurológicas como neurastenia, 
+psicopatía, psychosteny y todas las neurosis con asthenic, desordenes obsesivos, 
+histéricos y reducción de la actividad mental, física, pérdida de memoria, 
+alteraciones del sueño, epilepsia y síndrome epiléptico, predisposición epiléptica.  
+La duración de las llamadas debería estar limitada al máximo de tres minutos, y 
+después de hacer una llamada el usuario debería esperar como mínimo 15 minutos 
+antes de realizar otra llamada. Se recomienda el uso de auriculares y manos libres. 
+Los fabricantes y detallistas de teléfonos móviles deberían incluir las siguientes 
+informaciones junto con las especificaciones de uso:  
+No lleve nunca el celular encendido contra el cuerpo. Es decir, no lo lleve en un 
+cinturón o un bolsillo. Llévelo siempre en una cartera o portafolios que no esté 
+apoyado contra el cuerpo.  
+Los teléfonos celulares interfieren con los equipos médicos, tales como monitores 
+de actividad cardiaca y ventiladores. Por esta razón en muchos hospitales esta 
+prohibido su uso, también pueden afectar marcapasos y audífonos. Evite 
+guardarlo en el bolsillo cercano a su pecho, debería ser aclarado en forma 
+destacada en los manuales de teléfonos celulares.   
+Telefonía celular 41 En el momento de comprar el celular, elija el modelo con menor potencia, pregunte 
+a su vendedor, como usuarios lo debemos saber y el fabricante lo debe informar.  
+Cuando entre a una reunión apague su teléfono celular, cada vez resulta mas 
+molesto para los demás seguir la línea de comunicación con constantes 
+interrupciones. No espere que se lo soliciten adopte la acción como un modo de 
+convivencia.   
+Apague siempre su celular en todo espectáculo o teatro.  
+En el momento de elegir vivienda nueva, es importante que escoja un lugar donde 
+no haya cerca torres repetidoras, las cuales emiten de manera permanente 
+microondas.   
+Si va a entablar conversación por celular cuando está manejando, es mejor que 
+estacione el auto en un lugar seguro, y de esta manera concentrarse sólo en la 
+charla.   
+Uno de los efectos adversos más importantes observados con el uso de los 
+teléfonos móviles, es el incremento en el número de accidentes vehiculares. Datos 
+estadísticos reportan que el riesgo de accidentalidad en la personas que hablan por 
+celular mientras conducen, aumenta hasta cuatro veces con respecto a personas 
+que no utilizan este medio de comunicación o las que deciden parar el auto en el 
+momento de iniciar una conversación. Tampoco se ha observado algún beneficio 
+con el uso del celular en la posibilidad de "manos libres", porque de todos modos 
+la concentración durante la comunicación es menor.  
+Evite hacer o tomar llamadas cuando la señal es débil o haya interferencia pues 
+esta emitiendo mayor radiación cuando intenta comunicarse con una señal débil.  
+Telefonía celular 42 7 Conclusión 
+La telefonía celular ha recorrido un camino muy extenso desde su no tan lejano 
+comienzo, haciendo lucir los dispositivos de comunicación de la primera 
+generación -vendidos en el mercado local hasta no hace más de 5 años- como 
+piezas de antigüedad comparados con los teléfonos móviles modernos. Esta 
+tecnología ha dejado de estar orientada únicamente a la comunicación de voz para 
+pasar a involucrar todo tipo de aplicaciones multimedia, transformándose de ésta 
+manera en una herramienta de uso diario, muchas veces imprescindible, para 
+millones de personas en el mundo. 
+Habiéndose mostrado una importante cantidad de sistemas y protocolos de 
+comunicación que intentan imponerse como dominantes en el mercado, se 
+concluye en forma directa que la evolución de esta tecnología no se detendrá en los 
+años venideros, y continuará sorprendiéndonos continuamente. 
+Si bien la penetración del mercado latinoamericano no ha cobrado la relevancia 
+que posee en el primer mundo, su lugar en las telecomunicaciones es en extremo 
+importante, teniendo en muchos países perspectivas de desarrollo bastante 
+mayores que la telefonía alámbrica. 
+Hoy por hoy la gente no piensa en el celular como una prioridad pero a la vez es 
+incapaz de imaginar una sociedad sin él. A lo largo de la historia existió la 
+necesidad de estar comunicados siempre. Ahora con las nuevas tecnologías, como 
+la telefonía celular, sentimos que esta necesidad aumentó considerablemente, al  
+punto que para muchos sería impensable la vida sin celular. 
+En general las personas obtienen el celular por las funciones adicionales que 
+pueden obtener de él, pero la mayoría de los usuarios no las conocen en su 
+totalidad. A la hora de elegir un teléfono móvil, lo que más valoran las personas es 
+todo aquello que tiene que ver con "estar a la moda", como por ejemplo los 
+mensajes de texto, y por último la posibilidad de tener en su propia mano la última 
+tecnología y el aspecto estético del aparato. 
+Los teléfonos celulares son emisores de microondas. Las radiaciones que emiten 
+pueden provocar problemas como formación de cataratas y disminución de la 
+producción de espermatozoides en los hombres. También pueden afectar algunas 
+funciones del cerebro, produciendo dolores de cabeza y problemas de sueño. A su 
+vez se está estudiando la posibilidad de que puedan causar cáncer, aunque todavía 
+no hay pruebas contundentes de esto. Las personas al utilizar un celular deberían 
+tomar un mínimo de precauciones elementales. La sociedad está desinformada. 
+Creemos que una combinación de desinformación generalizada y de intereses 
+creados hace que casi no se hablen de estos riesgos. Sabemos que en estos tiempos 
+la tecnología es inevitable, pero cuando se trata de daños humanos probables hay 
+que actuar con cierta conciencia y precaución. 
+Telefonía celular 43 La revolución celular lleva a que la gente sea muy dependiente de los mismos. 
+Como dice el pensador y analista de nuevas tecnologías de comunicación, el 
+estadounidense Howard Rheingold, el celular será "el control remoto de nuestras 
+vidas".  
+Telefonía celular 44 8 Bibliografía 
+ 
+¾ Introducción a las Redes de Computadoras. Cuarta Edición. 
+          Autor: Andrew. S. Tanenbaun 
+¾ Cell Phone World. 
+http://www.eden.rutgers.edu
+¾ Cellular Telecommunications & Internet Association 
+http://www.ctia.org/
+¾ Cell Phone Carriers Info 
+http://www.cellphonecarriers.com
+¾ General Cell Phone History 
+http://en.wikipedia.org
+¾ 3G NewsRoom.com 
+http://www.3gnewsroom.co.uk
+¾ Radio Electronics.com 
+http://www.radio-electronics.com/
+¾ University of Washington - Collage of Enge 
+http://www.ee.washington.edu
+¾ Teléfonos-móviles.com - todo sobre telecomunicaciones - Artículos: 
+http://www.telefonos-moviles.com/articles/default.asp
+¾ Teléfonos-móviles.com - todo sobre telecomunicaciones - Artículos: 
+http://www.telefonos-moviles.com/articles/default.asp
+¾ Teléfonos-móviles.com - todo sobre telecomunicaciones - Artículos: 
+http://www.telefonos-moviles.com/articles/default.asp
+¾ Telefonía celular: 
+http://www.yucatan.com.mx/especiales/celular/celularespcs.asp
+¾ Access technologies: 
+http://homepages.uel.ac.uk/u0227598/acess.htm
+ 
+¾ The Technology F.A.Q.: 
+Telefonía celular 45 http://www.tech-faq.com/mobile-telephone-systems.shtml
+http://www.tech-faq.com/wireless-networks.shtml
+¾ ANCEL - Empresas de casos de éxito: 
+http://www.antel.com.uy/portal/hgxpp001.aspx?2,359,665,O,S,0,, 
+¾ ANCEL - Dale - Portal móvil de Ancel: 
+http://www.ancel.com.uy/dale/
+¾ i-mode - Building wireless internet business for you: 
+http://www.eurotechnology.com/imode
+¾ Teléfonos celulares "dañan" de rebote 
+http://news.bbc.co.uk/hi/spanish/science/newsid_1967000/1967156.stm
+¾ Teléfonos móviles y salud pública: Numerosas evidencias científicas y 
+jurídicas cuestionan su pretendida inocuidad. 
+http://www.buenasiembra.com.ar/salud/articulos/telefonos_celulares.htm
+¾ El uso de celulares mientras se conduce cuadruplica el riesgo de accidentes 
+http://eltiempo.terra.com.co/salu/notisalud/ARTICULO-WEB-
+_NOTA_INTERIOR-2148753.html
+¾ Celulares reducen fertilidad masculina 
+http://news.bbc.co.uk/hi/spanish/science/newsid_3846000/3846857.stm
+¾ Teléfonos celulares: ¿Causan cáncer? 
+http://www.nlm.nih.gov/medlineplus/spanish/ency/article/007151.htm
+¾ Controversia acerca del uso de teléfonos celulares. 
+http://saludhoy.colserver.com/htm/noticias/2000/dic13b00.html
+¾ ¿Análisis de lo qué? 
+http://www.ilhn.com/datos/practicos/datosivan/archives/003274.php
+¾ La tribu del pulgar 
+http://dialogica.com.ar/unr/postitulo/tecnologias/archives/002982.php
+¾ La personalidad determina nuestra forma de usar los móviles 
+http://www.sitiosargentina.com.ar/notas/marzo-2005/celulares-2.htm
+ 
+Telefonía celular 46

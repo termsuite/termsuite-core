@@ -1,0 +1,6008 @@
+guide
+d'utilisation pour votre SPV M2000
+
+bienvenue
+
+Ce guide vous permettra de vous familiariser
+rapidement avec votre SPV M2000. La section
+Avant de commencer vous expliquera les fonctions
+principales.
+Pour en savoir plus sur les fonctions et les
+services spécifiques, il suffit de vous référer au
+Sommaire qui vous conduira aux informations
+dont vous avez besoin.
+
+the future's bright, the future's Orange
+
+sommaire
+
+avant de commencer
+
+sommaire
+
+1
+
+utiliser votre SPV M2000
+
+4
+
+garder à jour les informations mémorisées
+
+gérer vos contacts
+
+insérer votre carte SIM et la batterie..........................10
+
+effectuer un appel...............................................38
+
+enregistrer les coordonnées de vos collègues,
+
+grâce à ActiveSync® ...........................................68
+
+insérer votre mini-carte mémoire ...............................11
+
+recevoir un appel................................................38
+
+parents et amis sur votre carte SIM.....................54
+
+synchroniser votre Boîte de réception................69
+
+pour vous familiariser avec votre téléphone mobile...12
+
+répondre automatiquement aux
+
+enregistrer les détails de vos contacts dans
+
+synchroniser votre Calendrier .............................70
+
+description de votre SPV M2000 ..............................13
+
+appels entrants...................................................39
+
+la mémoire de votre SPV M2000 ........................55
+
+synchroniser vos Contacts .................................70
+
+l'écran d'accueil.........................................................15
+
+utiliser le haut-parleur .........................................39
+
+utiliser l'identification de l'appelant pour
+
+synchroniser les Tâches .....................................70
+
+explorer les menus ....................................................16
+
+recomposer un numéro......................................39
+
+gérer vos contacts ...............................................56
+
+synchroniser votre SPV M2000 par infrarouge...70
+
+rechercher dans votre liste de contacts...............56
+
+priorité des appareils ..........................................70
+
+utiliser les programmes Microsoft®
+
+éditer ou effacer votre liste de contacts...............57
+
+créer un programme de synchronisation
+
+effectuer votre premier appel.....................................21
+
+Pocket Word® .....................................................42
+
+copier des contacts d'une mémoire à l'autre ......58
+
+à distance...........................................................71
+
+envoyer votre premier SMS .......................................22
+
+saisir des informations dans Pocket Word® .......42
+
+organiser vos contacts en utilisant les filtres ........59
+
+synchroniser à distance......................................71
+
+créer votre premier contact .......................................23
+
+Pocket Excel® .....................................................43
+
+changer les paramètres de votre liste
+
+synchroniser avec votre serveur ........................71
+
+conserver vos données en sécurité...........................24
+
+Windows Media Player® pour Pocket PC ..........44
+
+de contacts..........................................................59
+
+erreurs ActiveSync® ............................................72
+
+consulter votre premier site web ...............................25
+
+Photos................................................................44
+
+transférer les contacts de votre
+
+découvrir la fonction e-mail........................................26
+
+Pocket Internet Explorer® ...................................46
+
+SPV M2000 vers d'autres appareils ....................60
+
+envoyer votre premier e-mail .....................................27
+
+rester en contact avec vos collègues et vos
+
+recevoir votre premier e-mail .....................................28
+
+amis avec MSN Messenger® ..............................47
+
+le menu Programmes ................................................17
+le menu Paramètres ..................................................20
+
+2
+
+6
+
+SMS et e-mail
+paramétrer vos comptes e-mail .........................74
+
+se connecter et synchroniser
+
+envoyer des e-mails et des SMS .......................74
+
+pourquoi se connecter? .....................................62
+
+insérer un enregistrement vocal..........................76
+
+gérer vos appels
+
+Terminal Services Client......................................62
+
+ajouter un fichier enregistré à votre e-mail..........76
+
+enregistrer votre premier clip vidéo............................31
+
+que se passe-t-il lorsque vous recevez un
+
+vous pouvez vous connecter où que vous
+
+envoyer une photo ou une vidéo en
+
+écouter votre première musique................................32
+
+message vocal? .................................................50
+
+soyez avec Wireless LAN Manager....................62
+
+pièce jointe .........................................................76
+
+saisir des informations sur votre SPV M2000............33
+
+écouter les messages de votre Orange Box......50
+
+utiliser Bluetooth® pour les communications
+
+composer un message à envoyer plus tard.......77
+
+organiser vos informations.........................................34
+
+personnaliser le message d'accueil de votre
+
+à courte portée sans fil.......................................66
+
+recevoir des SMS...............................................77
+
+réinitialiser votre téléphone mobile .............................35
+
+messagerie .........................................................50
+
+utiliser l'infrarouge pour transférer des
+
+utiliser ActiveSync® ou un serveur e-mail
+
+personnaliser votre téléphone mobile ........................36
+
+attribuer un mot de passe à votre
+
+fichiers entre deux appareils...............................67
+
+pour contrôler vos e-mails..................................78
+
+Orange Box .......................................................50
+
+utiliser votre SPV M2000 pour établir une
+
+utiliser votre liste de messages pour
+
+écouter les messages de votre Orange Box
+
+connexion modem avec votre PC .....................67
+
+rester organisé....................................................79
+
+de n'importe quel autre téléphone ou
+
+connecter à Internet en utilisant
+
+recevoir des convocations à des réunions .........79
+
+de l'étranger .......................................................51
+
+Pocket Internet Explorer.....................................68
+
+utiliser votre Boîte de réception ..........................79
+
+connecter votre téléphone mobile à votre PC ...........29
+prendre votre première photo....................................30
+
+3
+
+5
+
+recevoir des pièces jointes aux messages .........80
+Pour plus d'informations sur les produits et les services Orange, veuillez appeler le Service Clientèle au
+0800 700 700 ou consulter www.orange.ch. Pour les questions techniques, appelez notre hotline au
+0900 787 000 (CHF 3.50/min).
+
+sommaire
+
+sommaire
+
+10 roaming international
+
+afficher vos dossiers de messages ....................80
+
+utiliser votre SPV M2000 comme modem .........99
+
+vous pouvez personnaliser votre Boîte
+
+utiliser Calendrier, Tâches et Notes pour
+
+services internationaux Orange .......................110
+
+de réception ......................................................81
+
+rester organisé ...................................................99
+
+check-list avant de voyager..............................110
+
+avertissement de message ................................81
+
+Calendrier ...........................................................99
+
+lorsque vous allez à l'étranger, vous devez
+
+effacer des e-mails de votre SPV M2000...........82
+
+envoyer des demandes de réunions................100
+
+sélectionner le réseau partenaire à utiliser........111
+
+sauvegarder vos e-mails envoyés ......................83
+
+Tâches ............................................................100
+
+utiliser Orange Box à l'étranger ........................112
+
+envoyer des e-mails manuellement....................83
+
+Notes................................................................100
+
+utiliser le GPRS à l'étranger..............................112
+
+AvantGo ..........................................................101
+
+7
+
+MMS
+
+gérer votre mémoire .........................................101
+
+lancer MMS Composer .....................................86
+
+11 sécuriser votre SPV M2000 et son contenu
+faire une copie sécurisée de vos données
+
+personnaliser votre SPV M2000
+
+avec Back Up .................................................114
+
+l'écran d'accueil .................................................86
+
+définir vos touches de raccourci en fonction
+
+que se passe-t-il si j'entre le mauvais
+
+boîtes de messages ...........................................86
+
+de vos besoins .................................................104
+
+code PIN? ........................................................115
+
+afficher et modifier les paramètres
+
+adapter votre menu Démarrer..........................104
+
+du programme ...................................................87
+
+changer votre écran d'accueil ..........................105
+
+comment créer un message ..............................89
+
+changer les tonalités de sonnerie
+
+comment ajouter une photo ou une vidéo.........90
+
+disponibles .......................................................105
+
+ajouter un texte ..................................................91
+
+changer les paramètres de votre
+
+ajouter une séquence audio...............................92
+
+SPV M2000......................................................106
+
+commandes du menu........................................93
+
+choisir comment votre liste de tâches et
+
+comment afficher un message...........................94
+
+votre calendrier sont affichés dans le menu ....106
+
+index
+
+comment envoyer un message..........................94
+
+les paramètres d'horloge..................................107
+
+index.................................................................124
+
+sortir de MMS Composer...................................86
+
+9
+
+choisir la façon dont les informations
+
+8
+
+caractéristiques supplémentaires
+
+sont affichées ..................................................107
+
+jouer sur votre SPV M2000 ................................96
+
+changer vos paramètres de gestion
+
+afficher des fichiers Microsoft® PowerPoint® et
+
+d'alimentation ...................................................108
+
+Adobe® Acrobat® ................................................97
+
+supprimer des programmes pour libérer
+
+utiliser toujours le logiciel le plus récent
+
+de la mémoire ..................................................108
+
+grâce au programme Downloads ......................98
+gérer votre carte SIM..........................................98
+
+12 références
+références.........................................................118
+
+13 contacter Orange
+contacter Orange .............................................122
+
+avant de
+commencer
+
+insérer votre carte SIM et la batterie
+
+Pour insérer votre carte SIM:
+
+1
+
+Retirez le couvercle de la batterie en enfonçant le taquet au dos
+de votre M2000 puis en le soulevant.
+
+2
+
+Insérez votre carte SIM en vous assurant que le coin biseauté se
+trouve en haut à droite et que les connecteurs dorés soient
+orientés vers le bas.
+
+3
+
+Insérez la batterie et le couvercle ensemble en commençant par
+le haut, comme indiqué dans le graphique ci-contre.
+
+4
+
+Pour optimiser les performances de la batterie, la première
+charge doit durer au moins 8 heures. Par la suite, il est conseillé
+de charger brièvement la batterie tous les jours pour assurer un
+chargement maximal. Vous pouvez effectuer des appels pendant
+que votre téléphone est en charge.
+
+insérer votre mini-carte mémoire
+
+Les cartes mémoire normales peuvent être utilisées dans votre
+SPV M2000. Elles sont utilisées avant tout pour stocker les
+fichiers médias comme la musique et les clips vidéo, mais aussi
+pour sauvegarder ou transférer vos fichiers et vos données.
+Insérez votre nouvelle carte mémoire dans votre téléphone
+mobile et vous pouvez aussitôt découvrir les fonctionnalités de
+votre appareil.
+Orange développe d'autres cartes mémoire offrant des
+contenus et des applications pour que votre SPV M2000 offre
+encore plus de polyvalence et de divertissements. Vous
+trouverez toutes les informations dans votre point de vente
+Orange ou sur www.orange.ch.
+Pour utiliser votre carte mémoire, il suffit de l'insérer dans votre
+SPV M2000 comme expliqué ci-contre.
+
+sécuriser vos données
+Attention: A aucun moment, la batterie de votre M2000 ne doit
+être déchargée. Si votre batterie est déchargée, vous risquez de
+perdre toutes les données que vous avez sauvegardées sur
+votre téléphone depuis la première utilisation.
+Normalement, si votre batterie se décharge, vos données sont
+sécurisées pendant 72 heures maximum - vous disposez donc de
+ce délai pour recharger votre téléphone.
+Si vous deviez, pour une raison quelconque, retirer la batterie
+principale du téléphone, une batterie de secours interne sécurise vos
+données pendant 20 minutes. Cependant, veillez à ce que le niveau
+de charge de celle-ci soit de 50% au moins. Pour vérifier son niveau
+de charge, tapez Démarrer, Paramètres puis l'onglet Système. Enfin,
+tapez Alimentation.
+
+10
+
+11
+
+description de votre SPV M2000
+
+pour vous familiariser avec votre téléphone mobile
+allumer
+Maintenez appuyée la touche
+sur le bord supérieur de
+votre téléphone mobile.
+
+aligner l'écran
+
+mode avion
+
+Chaque fois que vous
+allumez votre téléphone
+mobile, vous devez aligner
+l'écran. Suivez simplement
+les instructions sur l'écran.
+
+Vous pouvez également
+travailler en mode avion.
+Cela signifie que votre
+téléphone mobile ne pourra
+pas se connecter au réseau
+Orange et que vous ne
+pourrez ni effectuer ni
+recevoir des appels.
+
+Pour réaligner l'écran à
+n'importe quel moment,
+vous pouvez le réinitialiser:
+1 Pointez sur
+et
+sélectionnez Paramètres.
+2 Pointez sur l'onglet gris
+Système, puis sélectionnez
+Ecran.
+3 Pointez sur Configurer
+l'écran et suivez les
+instructions sur l'écran.
+
+Vous pouvez utiliser toutes
+les fonctions de votre
+M2000 à l'exception des
+communications mobiles.
+Pour commuter en mode
+avion, appuyez sur
+et
+sélectionnez Activer mode
+avion.
+
+témoin lumineux
+La lumière rouge
+clignotante indique que la
+batterie est presque
+épuisée. La lumière rouge
+que la batterie est en train
+de se charger et la lumière
+verte clignotante que le
+téléphone mobile est en
+mode d'appel ou de veille.
+
+touche activer
+
+touche pour terminer
+un appel
+Appuyez sur cette touche
+pour terminer un appel
+ou, lorsque votre
+téléphone mobile sonne,
+pour refuser un appel et le
+transférer sur votre
+Orange Box. Maintenez la
+touche enfoncée pour
+verrouiller le clavier.
+
+joypad de navigation
+
+connecteur universel
+
+Utilisez cette touche pour
+vous déplacer verticalement
+et latéralement dans les
+menus. Enfoncez-la pour
+confirmer que vous désirez
+utiliser la fonction indiquée
+sur l'écran.
+
+12
+
+Appuyez sur cette touche
+pour ouvrir l'écran
+Téléphone pour effectuer
+un appel.
+
+Branchez votre câble sur
+ce connecteur pour
+synchroniser votre
+téléphone mobile avec
+votre PC. Et branchez
+votre câble de batterie
+pour charger votre
+téléphone mobile.
+
+13
+
+l'écran d'accueil
+
+description de votre SPV M2000
+
+raccourcis
+Ces symboles vous
+permettent d'accéder aux
+fonctions du SPV M2000 les
+plus couramment utilisées.
+
+touche notes
+touche volume
+Appuyez sur cette touche vers
+le haut ou le bas pour modifier
+le réglage du volume de votre
+SPV M2000.
+
+Appuyez sur cette touche
+pour écrire une nouvelle note.
+
+touche appareil photo
+Appuyez sur cette touche
+pour ouvrir l'appareil photo.
+
+Il s'agit de:
+■
+Menu Démarrer
+■
+Horloge et alarmes
+■
+Définir les infos du
+propriétaire
+■
+Boîte de réception
+■
+Tâches
+■
+Calendrier
+
+nouveau
+Pointez ici pour créer
+un nouveau
+■
+Classeur Exce
+■
+Contact
+■
+Document Word
+■
+Message
+■
+Note
+■
+Rendez-vous
+■
+Tâche
+
+14
+
+volume
+Pour modifier le niveau du
+volume ou commuter en
+mode silencieux ou vibreur.
+
+heure
+Contrôlez l'heure et la date
+et affichez votre prochain
+rendez-vous.
+
+connectivité
+Affichez le statut actuel du
+réseau, commutez votre
+SPV M2000 en mode avion,
+connectez-vous au GPRS et
+établissez une nouvelle
+connexion.
+
+paramètres
+Modifiez vos paramètres
+Wireless LAN.
+
+Bluetooth®
+Pointez ici pour activer ou
+désactiver Bluetooth® et pour
+modifier vos paramètres
+Bluetooth® actuels.
+
+15
+
+explorer les menus
+
+le menu Programmes
+
+Voici les fonctions principales du menu Démarrer. Pour accéder à ce menu, pointez sur Démarrer dans
+l'écran d'accueil. Pour accéder à un élément, défilez jusqu'à celui que vous désirez et appuyez sur la
+touche Action. Ce menu étant dynamique, il sera modifié lorsque vous ajouterez ou supprimerez des
+applications.
+
+Jeux
+
+Enroleur
+
+Amusez-vous avec les jeux installés
+sur votre téléphone mobile et
+téléchargez de nouveaux jeux au
+fur et à mesure de leur parution.
+
+Si vous souhaitez utiliser des
+certificats pour connecter votre
+réseau Wifi®, utilisez Enroleur
+pour les installer sur votre SPV
+M2000.
+
+Aujourd'hui
+
+Internet Explorer
+
+Gestionnaire Bluetooth®
+
+Revenir à l'écran d'accueil pour que
+vous puissiez afficher les rendezvous du jour, la date et l'heure.
+
+Naviguez sur les sites Internet et
+WAP depuis votre téléphone mobile,
+également lorsque vous êtes en
+déplacement.
+
+Configurez vos paramètres
+Bluetooth®, activez et désactivez
+Bluetooth®.
+
+Calendrier
+Enregistrez les échéances importantes
+et configurez des rappels pour ne pas
+oublier vos rendez-vous.
+
+Contacts
+Ouvre votre liste de contacts
+classés par ordre alphabétique.
+
+Downloads
+Cette fonction vous permet
+d'actualiser les logiciels sur votre SPV
+M2000.
+
+16
+
+Gestionnaire SIM
+
+Prenez des photos au moyen de
+l'objectif au dos de votre téléphone
+mobile.
+
+Tous les contacts enregistrés
+sur votre carte SIM sont
+stockés ici.
+
+ClearVue PDF
+
+Downloads
+
+Affichez des fichiers au format PDF
+sur votre téléphone mobile.
+
+Cette fonction vous permet
+d'actualiser les logiciels sur
+votre SPV M2000.
+
+Calculatrice
+Messagerie
+Affichez votre Boîte de réception et
+composez de nouveaux messages.
+
+Aide
+Des conseils pour vous aider à
+obtenir le maximum de votre
+SPV M2000.
+
+Effectuez des opérations facilement
+et rapidement.
+
+Toutes vos données sont
+stockées dans une série de
+fichiers sur votre SPV M2000.
+Parcourez l'arborescence de
+menu pour accéder aux
+dossiers et sous-dossiers.
+
+Cam Tra
+
+ActiveSync
+Synchronisez vos contacts, e-mails
+et rendez-vous.
+
+Explorateur de fichiers
+
+Sauvegarde
+Cette application Orange vous permet
+de faire une copie de sauvegarde de vos
+contacts. Si vous égarez votre SPV
+M2000, les données sécurisées sont
+stockées à distance.
+
+Téléphone
+Un autre accès à la fonction téléphone
+mobile de votre M2000.
+
+Programmes
+Voir le menu Programmes.
+
+ClearVue PPT
+Affichez des fichiers PowerPoint sur
+votre téléphone mobile.
+
+Client Terminal
+
+MSN Messenger
+Abonnez-vous et envoyez des
+messages instantanés à vos
+amis.
+
+Pour se connecter en console à un
+serveur.
+
+Paramètres
+Voir le menu Paramètres.
+
+17
+
+le menu Programmes
+
+le menu Programmes
+
+Notes
+
+pvPlayer
+
+Gestionnaire Wireless
+
+Prenez des notes à l'aide du clavier.
+
+Regardez des clips vidéo sur votre
+M2000 avec l'application Packet
+Video.
+
+Choisissez vos connexions wireless
+préférées.
+
+Photos Contacts
+
+Modem
+
+Ajoutez des photos à vos contacts
+pour qu'une image s'affiche
+lorsqu'ils appellent.
+
+Rechercher
+
+Images
+
+Sauvegarde
+
+Affichez toutes les images stockées
+dans votre SPV M2000.
+
+Cette application Orange vous permet
+de faire une copie de sauvegarde de
+vos contacts. Si vous égarez votre
+SPV M2000, les données sécurisées
+sont stockées à distance.
+
+Rechercher un fichier ou un dossier
+dans votre SPV M2000.
+
+Configurez les paramètres de
+votre modem.
+
+xBackup
+
+Pocket Excel
+Créez et éditez des tableurs Excel.
+
+Une autre façon de sauvegarder
+vos données.
+
+Tâches
+Pocket MSN
+Accédez aux services MSN.
+
+Pocket Word
+
+Windows MediaTM
+
+Créez des documents Word en
+écrivant sur l'écran au moyen
+du stylet.
+
+18
+
+Créez des tâches et configurez
+des rappels pour ne pas oublier
+vos événements.
+
+Ecoutez de la musique et regardez
+des clips vidéo soit de votre SPV
+M2000 ou depuis Internet.
+
+19
+
+effectuer votre premier appel
+
+le menu Paramètres
+
+Pour effectuer un appel en utilisant le stylet:
+
+Aujourd'hui
+
+Mot de passe
+
+Modifiez les paramètres de l'écran
+d'accueil.
+
+Modifiez le mot de passe de votre M2000.
+
+Boutons
+
+Saisie
+
+Modifiez les icônes pour l'accès en
+un seul clic sur l'écran d'accueil
+ainsi que les boutons pour accéder
+aux applications de votre choix.
+
+Sélectionnez votre méthode de saisie
+de texte.
+
+Info. du propriétaire
+Stockez ici vos données
+personnelles.
+
+Menus
+
+1 Depuis l'écran d'accueil, pointez sur Démarrer puis sur Téléphone. L'écran de
+numérotation va s'afficher.
+
+Sons et notifications
+Modifiez et personnalisez les sons et les
+notifications sur votre M2000.
+
+2 Saisissez le numéro en pointant sur les touches chiffrées ou pointez sur l'icône des
+contacts située en bas de l'écran pour choisir un numéro dans votre répertoire.
+
+3 Lorsque vous avez entré le numéro ou trouvé le contact désiré, pointez sur Parler
+pour effectuer l'appel.
+
+4 Pour terminer votre appel, pointez sur la touche Désactiver.
+
+Téléphone
+Un autre accès à la fonction téléphone
+mobile de votre M2000.
+
+Ajoutez des fonctions à votre
+menu Démarrer
+
+20
+
+21
+
+créer votre premier contact
+
+envoyer votre premier SMS
+
+1
+
+Pointez sur Démarrer, puis sélectionnez Téléphone.
+
+1
+
+Pointez sur Nouveau dans l'écran d'accueil pour créer un nouveau contact.
+
+2
+
+Pointez sur Outils, puis sélectionnez Envoyer SMS.
+
+2
+
+3
+
+Votre Boîte de réception va s'ouvrir. Entrez manuellement les numéros de
+téléphone mobile dans le champ À: ou pointez sur l'icône des contacts pour
+ouvrir la liste des contacts comprenant un numéro de téléphone mobile.
+Pointez sur un contact pour l'ajouter dans la liste À:.
+
+Entrez les données concernant le contact dans les différents champs. Il est
+conseillé de saisir les numéros en incluant le préfixe international, p. ex. +41, puis
+le numéro sans le 0 initial, afin de pouvoir les utiliser à l'étranger. Pointez sur la
+flèche gauche pour effacer un caractère. N'utilisez pas d'espaces ou de
+parenthèses, p. ex. +41781234567. En entrant les données du contact, pointez
+sur la flèche correspondante pour un espace et sur CAP pour commuter entre
+majuscules et minuscules. Pour saisir un symbole, pointez sur Ctl.
+
+4
+
+Pointez sur le corps du message et entrez votre texte. Pour entrer facilement
+du texte dans un modèle ou un message que vous utilisez souvent, pointez
+sur Mon texte, puis entrez le texte que vous désirez ajouter.
+
+3
+
+Appuyez sur OK lorsque vous avez terminé d'entrer les données et votre
+nouveau contact s'affichera automatiquement dans votre liste de contacts.
+
+5
+
+22
+
+Pointez sur Envoyer pour envoyer votre message.
+
+23
+
+consulter votre premier site web
+
+conserver vos données en sécurité
+
+Back Up conserve une copie de vos données telles que les contacts et le calendrier sur un serveur distant.
+Si un problème survient sur votre téléphone mobile, toutes vos données sont aussitôt disponibles pour être
+restaurées sur votre nouveau téléphone mobile du même type. Vous pouvez également configurer votre
+téléphone mobile pour sauvegarder les données à intervalles fixes ainsi que sélectionner les données qui
+doivent être copiées.
+
+Depuis l'écran d'accueil, appuyez sur Démarrer et sélectionnez Back Up avec
+le stylet. Vous devez d'abord vous inscrire avant de pouvoir utiliser Back Up.
+
+2
+
+Sur l'Ecran d'accueil, appuyez sur Démarrer et sélectionnez
+Internet Explorer.
+Choisissez le lien que vous désirez consulter et appuyez sur la touche Action.
+Internet Explorer va s'ouvrir et votre SPV M2000 va établir la connexion.
+Quelques instants plus tard, le lien que vous avez choisi s'affiche sur votre
+écran.
+
+Pointez sur l'icône Back Up dans le coin inférieur gauche de l'écran. Défilez et
+sélectionnez Créer nouveau compte. Vous devrez indiquer un nom d'utilisateur
+et un mot de passe (entre 6 et 32 caractères). Vous pouvez choisir ce que
+vous désirez. Ils ne doivent pas être nécessairement identiques aux nom et
+mot de passe que vous utilisez sur vos autres comptes Orange. Appuyez sur
+OK lorsque vous avez entré toutes vos données et votre SPV M2000 va créer
+votre compte.
+
+3
+
+1
+2
+
+1
+
+24
+
+L'une des façons les plus rapides d'accéder à Internet est au moyen de la page d'accueil Orange World.
+
+Lorsque vous avez créé un compte, suivez les instructions à l'écran.
+
+25
+
+envoyer votre premier e-mail
+
+découvrir la fonction e-mail
+
+Si vous avez un compte e-mail Orange Internet, votre compte e-mail est déjà configuré sur votre M2000. Vous
+devrez simplement indiquer vos données personnelles selon le tableau ci-dessous.
+Votre nom
+
+_____________
+________*@orangemail.ch
+
+Serveur de
+
+Adresse e-mail
+
+courrier sortant
+
+smtp.orangemail.ch
+
+Type de serveur
+
+POP3
+
+Réseau
+
+The Internet
+
+Nom d'utilisateur
+Mot de passe
+
+______________ *
+______________ *
+
+Domaine
+
+______________ *
+
+Lorsque vous avez configuré vos comptes e-mails, il est très simple d'envoyer des messages:
+
+Serveur de
+courrier entrant
+
+pop.orangemail.ch
+
+* Si vous avez un compte Orange e-mail, vous aurez déjà reçu ces paramètres lorsque vous vous êtes inscrit à
+
+l'Internet Orange.
+Pour envoyer un e-mail depuis un compte différent, vous devrez configurer ce
+compte sur votre SPV M2000. Pour utiliser un compte d'entreprise, demandez à
+votre responsable IT de vous indiquer les paramètres nécessaires.
+
+1 Pointez sur Démarrer sur l'écran d'accueil, défilez et sélectionnez Messagerie.
+Sélectionnez Comptes, puis Nouveau compte.
+
+2 E-mail Wizard est une application développée par Orange pour vous aider à
+configurer vos comptes e-mail. Vous devrez entrer votre adresse e-mail.
+Ensuite, E-mail Wizard essayera de compléter vos paramètres principaux.
+
+1 Sur l'écran d'accueil, pointez sur Messagerie.
+2 Pointez sur Comptes et sélectionnez votre compte e-mail, puis pointez sur
+Nouveau.
+
+3 Un nouveau message va s'ouvrir, avec le curseur placé dans le champ À:.
+Entrez l'adresse e-mail du destinataire dans ce champ. Alternativement, pointez
+sur À: pour ouvrir la liste de vos contacts comportant une adresse e-mail.
+Pointez sur un contact pour l'ajouter dans la liste À:. Pointez sur les flèches
+doubles pour ouvrir tous les champs de l'en-tête.
+
+4 Pointez dans le corps principal du message et entrez votre texte. Pour entrer
+facilement du texte dans un modèle ou un message fréquemment utilisé,
+pointez sur Mon texte, puis le texte que vous souhaitez inclure.
+
+5 Pointez sur Envoyer pour envoyer votre message. Si vous êtes hors ligne, le
+message sera transféré dans votre Boîte d'envoi, d'où il sera expédié lors de
+votre prochaine connexion.
+
+Si votre fournisseur d'accès Internet n'est pas reconnu par E-mail Wizard, vous
+devrez indiquer manuellement les paramètres. Vous devrez également saisir votre
+mot de passe et contrôler votre nom d'utilisateur. Tous ces paramètres sont
+disponibles auprès de votre fournisseur d'accès Internet (Internet Service Provider
+ou ISP - la société que vous utilisez pour accéder à Internet). Si vous avez un
+compte e-mail Orange Internet, tous les paramètres dont vous avez besoin se
+trouvent dans le tableau ci-dessus.
+
+26
+
+27
+
+recevoir votre premier e-mail
+
+Vous pouvez envoyer ou recevoir des e-mails sur votre SPV M2000 over-the-air depuis votre serveur e-mail.
+
+1 Lorsque vous avez configuré votre e-mail, pointez sur Démarrer, puis sur
+Messagerie. Pointez sur Comptes et sélectionnez votre compte e-mail.
+Pointez sur l'icône Envoyer/recevoir messages en bas de l'écran.
+
+connecter votre téléphone mobile à votre PC
+
+En synchronisant votre SPV M2000 et votre PC, vous avez la garantie que toutes vos données importantes
+comme les e-mails et les contacts sont toujours à jour. Vous pouvez également utiliser la synchronisation
+pour ajouter de nouveaux programmes sur votre téléphone mobile ou transférer des images.
+Vous devrez tout d'abord installer Outlook 2002 (si ce n'est pas déjà fait) et la nouvelle version de
+Microsoft® ActiveSync 3.7 à partir du CD livré avec votre SPV M2000. Les versions antérieures ne
+fonctionneront pas avec votre SPV M2000.
+
+2 Votre téléphone mobile va se connecter à votre serveur e-mail et télécharger les
+messages en attente. Défilez jusqu'au message que vous désirez lire et pointez
+dessus pour le sélectionner. Vous pouvez recevoir des e-mails via
+synchronisation. Ces e-mails, bien que reçus de façon différente, s'afficheront
+également dans votre Boîte de réception et vous pouvez les lire comme tous
+les autres e-mails.
+
+Ne reliez pas encore votre téléphone mobile à votre PC.
+
+1 Insérez le CD accompagnant le SPV M2000 dans le lecteur de votre ordinateur de bureau. Ne reliez pas
+encore votre SPV M2000 à votre ordinateur. Le CD va démarrer automatiquement. Suivez les instructions
+sur l'écran pour l'installation de Microsoft® Outlook 2002 et Microsoft® ActiveSync 3.7.
+
+2 Redémarrez votre ordinateur, puis connectez votre SPV M2000 à l'aide de la station d'accueil ou du
+câble USB. ActiveSync va démarrer automatiquement dès que le programme détecte votre téléphone
+mobile et l'assistant de connexion va s'ouvrir. Passez par tous les écrans de l'assistant, en complétant les
+données lorsque c'est nécessaire.
+
+3 A ce stade, vous pouvez décider si vous désirez créer un partenariat standard exclusif avec le PC sur lequel
+vous travaillez ou un partenariat temporaire (par exemple si vous utilisez un ordinateur portable que l'on vous a
+prêté ou si vous êtes sur le PC d'un ami). Lorsque vous avez fini, vos PC et SPV M2000 se synchronisent.
+
+28
+
+29
+
+prendre votre première photo
+
+1 Pointez sur Démarrer sur l'écran d'accueil, défilez
+jusqu'à Programmes, puis sélectionnez Appareil
+photo, et le viseur va s'ouvrir automatiquement pour
+la prise de vue. Vous pouvez également appuyer sur
+le bouton sur le côté de votre téléphone mobile et le
+viseur va s'ouvrir automatiquement.
+
+2 Pointez sur Outils, puis sur Ambiance pour régler les
+paramètres de la photo. Ce réglage va altérer le
+contraste. En appuyant sur Outils, puis sur Options,
+vous pourrez modifier les paramètres Général et
+Image.
+
+3 Appuyez sur la touche Action ou sur le bouton sur le
+côté de votre téléphone mobile pour prendre la photo.
+Lorsque vous avez pris la photo, l'image finale
+s'affiche. Vous pouvez la supprimer si elle ne vous plaît
+pas en appuyant sur Menu et en sélectionnant
+Supprimer. Si vous ne la supprimez pas, la photo est
+enregistrée automatiquement dans votre Album sous
+Mes images.
+
+30
+
+enregistrer votre premier clip vidéo
+
+1 Pointez sur Démarrer sur l'écran d'accueil, défilez
+jusqu'à Programmes, puis sélectionnez Appareil
+photo et le viseur va s'ouvrir automatiquement. Vous
+pouvez également appuyer sur le bouton sur le côté
+de votre téléphone mobile et le viseur va s'ouvrir
+automatiquement.
+
+2 Pointez sur l'icône Vidéo située en bas à droite de
+l'écran pour ouvrir le viseur Vidéo.
+
+3 Appuyez sur la touche Action ou sur le bouton de la
+caméra sur le côté du téléphone pour commencer à
+enregistrer votre vidéo. Un point rouge clignotant
+apparaîtra, indiquant que l'enregistrement est en
+cours. Pour arrêter, appuyez sur la touche Action ou
+sur le bouton de la caméra sur le côté du téléphone
+mobile.
+
+4 L'écran Lecture va s'afficher. Pointez sur Outils, puis
+sélectionnez Lire dans l'album. Appuyez sur Lire pour
+revoir votre clip. S'il ne vous plaît pas, pointez sur
+Editer, puis sur Supprimer. Si vous ne le supprimez
+pas, il sera sauvegardé automatiquement dans votre
+Album.
+
+31
+
+écouter votre première musique
+
+Avec Windows Media™ Player, vous pouvez lire des fichiers
+audio Windows Media™ et MP3 sur votre SPV M2000.
+Vous pouvez accéder à votre Windows Media™ Player
+depuis le menu principal en pointant sur Démarrer, puis sur
+Programmes à partir de l'écran d'accueil.
+
+saisir des informations sur votre SPV M2000
+
+Votre SPV M2000 vous permet de saisir de grandes
+quantités de texte en utilisant la méthode que vous trouverez
+la plus rapide, de façon à maintenir votre productivité en
+dehors du bureau. Choisissez parmi les quatre méthodes de
+saisie de texte suivantes:
+■
+
+Sélection
+
+■
+
+Pour accéder à d'autres fichiers médias.
+
+■
+■
+
+Reconnaissance des blocs
+Clavier
+Reconnaissance des lettres
+Transcriber
+
+Outils
+Accédez au menu Média, où vous trouverez de nouvelles
+options pour votre fichier.
+
+Touches de contrôle
+
+Pour choisir une méthode de saisie, pointez sur
+ou
+en bas à droite de votre écran et faites votre
+sélection. Pour fermer le panneau de saisie de texte,
+pointez à nouveau sur
+.
+
+Pointez sur:
+pour regarder le clip
+vers le haut ou le bas pour augmenter ou
+diminuer le
+une fois à gauche pour revenir au début du
+clip; deux fois pour revenir au clip précédent
+une fois à droite pour aller à la fin du clip; deux
+fois pour aller au clip suivant
+une fois pour couper le son et à nouveau pour
+le réactiver.
+
+32
+
+Lorsque vous saisissez du texte, votre SPV M2000 va
+anticiper ce que vous tapez. Si le mot apparaît au-dessus de
+votre clavier, pointez dessus et il s'affichera sans que vous
+deviez le saisir en entier. A mesure que vous utilisez votre
+appareil, un nombre croissant de mots va être rajouté à
+votre dictionnaire.
+Vous pouvez également utiliser le clavier rétractable pour
+saisir un texte plutôt que le clavier virtuel sur l'écran.
+
+33
+
+réinitialiser votre téléphone mobile
+
+organiser vos informations
+
+Deux applications vous aident à gérer les informations
+que vous enregistrez dans votre SPV M2000.
+Lorsque vous recherchez une information en particulier,
+utilisez la fonction Rechercher dans le menu
+Programmes.
+
+Votre SPV M2000 inclut également File Explorer qui
+fonctionne de la même façon que sur votre PC.
+Pointez sur Démarrer, sélectionnez Programmes et
+ouvrez File Explorer.
+Pointez et maintenez votre stylet sur un fichier avant
+de l'ouvrir pour faire apparaître un menu contextuel
+d'options. Vous pouvez alors choisir entre:
+
+Effectuez une réinitialisation partielle si votre SPV M2000 réagit lentement, ne réagit plus ou se fige. Votre
+SPV M2000 va redémarrer, mais vous risquez de perdre certaines données dans les applications qui
+étaient ouvertes. Pour effectuer une réinitialisation partielle, pointez votre stylet dans le bouton Réinitialiser
+comme expliqué ci-dessous:
+
+1 Pointez sur Démarrer dans l'écran d'accueil, puis sur
+Programmes et sélectionnez Rechercher.
+
+■
+
+2 Entrez le nom du fichier, mot ou autre information que
+vous recherchez. Si vous avez déjà cherché cette
+information, pointez sur la flèche Rechercher et
+sélectionnez l'élément dans la liste.
+3 Dans Type, vous pouvez ajouter un critère pour
+préciser votre recherche.
+4 Pointer sur Aller. Votre SPV M2000 effectuera la
+recherche dans le dossier Mes documents et dans
+tout sous-dossier que vous avez créé.
+5 Dans la liste Résultats, pointez sur l'élément que
+vous désirez ouvrir.
+
+■
+
+■
+
+■
+
+■
+
+■
+
+Pour libérer de la mémoire sur votre téléphone mobile,
+vous pouvez utiliser Rechercher pour localiser puis
+supprimer de grands fichiers.
+
+1 Pointez sur Démarrer, puis Programmes, et
+sélectionnez Rechercher.
+
+2 Pointez sur Type et sélectionnez Plus grand que
+64 KB.
+
+■
+
+Couper
+Couper le fichier, par exemple si vous voulez le
+déplacer dans un autre dossier.
+Copier
+Pour copier le fichier.
+Renommer
+Pour donner un autre nom à votre fichier.
+Supprimer
+Pour effacer le fichier de votre SPV M2000.
+Envoyer par e-mail...
+Pour ouvrir un nouveau message e-mail avec le
+document sélectionné déjà en pièce jointe.
+Transmettre fichier...
+Envoyer le fichier via infrarouge vers un autre appareil.
+Configurer comme fond d'écran pour aujourd'hui
+Si le fichier que vous avez sélectionné contient un
+fichier de musique ou un enregistrement que vous
+avez effectué, vous pouvez choisir de l'utiliser
+comme mélodie. S'il s'agit d'un fichier image, vous
+pouvez l'utiliser comme fond d'écran sur votre
+écran d'accueil.
+
+Une réinitialisation totale efface la mémoire, supprime toutes vos données et ramène votre SPV M2000 à ses
+paramètres d'origine. Tous les programmes que vous avez ajoutés à votre téléphone mobile seront supprimés et
+toutes les données que vous avez créées seront effacées.
+Pour effectuer une réinitialisation totale, appuyez sur le bouton marche/arrêt et appuyez en même temps votre
+stylet dans le bouton de réinitialisation partielle.
+
+3 Pointer sur Aller. Vous pouvez parcourir la liste et
+supprimer tous les fichiers dont vous n'avez
+plus besoin.
+
+34
+
+35
+
+personnaliser votre téléphone mobile
+
+paramétrez vos touches de raccourci en
+fonction de vos besoins
+Utilisez les huit touches de raccourci de votre SPV
+M2000 de la manière la plus efficace en
+personnalisant leurs fonctions.
+
+1 Pointez sur l'onglet gris Contrôle haut/bas.
+2 Réglez la temporisation avant la première répétition
+et l'intervalle de répétition.
+
+1 Pointez et sélectionnez
+Paramètres.
+2 Pointez sur Boutons.
+3 Les boutons sont illustrés ci-dessous:
+
+adaptez votre menu en fonction de
+vos besoins
+
+1
+
+Vous pouvez également adapter les touches de
+défilement vers le haut et le bas.
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+Utilisez les menus de votre SPV M2000 de la
+manière la plus efficace en changeant leur ordre
+ou leur contenu.
+1 Pointez et sélectionnez
+Paramètres.
+2 Pointez sur Menus.
+3 Vous voyez une liste de fonctions pouvant figurer
+dans votre menu Démarrer. Il s'agit du menu qui
+s'affiche lorsque vous pointez sur l'écran
+d'accueil.
+4 Utilisez votre stylet pour cocher ou décocher les
+cases pour personnaliser votre menu Démarrer.
+Vous pouvez également modifier les options
+disponibles dans le menu Nouveau. Il s'agit du menu
+déroulant qui s'affiche lorsque vous pointez sur
+Nouveau sur l'écran d'accueil.
+
+4 Pointez sur le bouton que vous désirez changer.
+5 Pointez sur Attribution bouton et choisissez la
+fonction de raccourci dans le menu déroulant.
+6 Pointez sur OK lorsque vous êtes satisfait des
+fonctions de vos touches de raccourci.
+
+36
+
+1
+2
+3
+4
+
+Pointez et sélectionnez
+Paramètres.
+Pointez sur Menus.
+Pointez sur l'onglet gris Nouveau menu.
+Utilisez votre stylet pour cocher ou décocher les
+cases pour personnaliser votre menu Nouveau.
+
+utiliser votre
+SPV M2000
+
+utiliser votre SPV M2000
+
+utiliser votre SPV M2000
+effectuer un appel
+Il existe deux façons distinctes d'effectuer un
+appel: en utilisant le stylet ou en utilisant les
+touches.
+
+Pour ouvrir rapidement l'écran Téléphone, vous
+pouvez appuyer sur la touche
+située en bas à
+gauche, sur l'avant de votre SPV M2000.
+
+Vous pouvez régler votre téléphone mobile pour
+qu'il prenne automatiquement les appels, ce qui
+peut être utile lorsque vous utilisez votre kit mains
+libres.
+
+Effectuer un appel en utilisant le stylet:
+1 Pointez sur
+et sélectionnez Programmes.
+2 Pointez sur Téléphone.
+3 Pointez sur les touches chiffrées pour
+composer le numéro que vous souhaitez
+appeler. Vous pouvez également pointer sur
+Historique des appels pour effectuer un appel
+en utilisant un numéro mémorisé dans votre
+journal des appels; pointez sur Numérotation
+rapide pour appeler un numéro listé dans
+Numérotation rapide ou sur
+pour ouvrir
+votre liste de contacts.
+4 Pointez sur Appeler pour effectuer votre appel.
+5 Pour terminer l'appel, appuyez sur Fin
+.
+Effectuer un appel en utilisant les touches:
+1 Ouvrez votre téléphone mobile pour
+découvrir le clavier rétractable.
+2 Appuyez sur Verrouiller, puis le premier
+numéro que vous désirez composer.
+3 L'écran de numérotation va apparaître et le
+clavier commute automatiquement en mode
+numérique.
+4 Entrez le numéro, puis appuyez sur la
+touche verte Appeler.
+5 Pour terminer l'appel, appuyez sur la touche
+Désactiver.
+
+38
+
+répondre automatiquement aux
+appels entrants
+
+1
+2
+3
+4
+
+Pointez sur
+et sélectionnez Paramètres.
+Pointez sur Téléphone.
+Pointez sur l'onglet gris Plus.
+Cochez la case Répondre aux appels
+d'entrée sans presser parler après 3
+sonneries.
+5 Pointez sur la zone numérique (3) pour ouvrir le
+menu déroulant et sélectionnez au bout de
+combien de sonneries votre SPV M2000 va
+répondre aux appels.
+6 Pointez sur OK pour valider les changements.
+
+recevoir un appel
+
+Pour recomposer le dernier numéro de téléphone
+appelé, appuyez deux fois sur la touche
+.
+Pour recomposer d'autres numéros qui ont été
+appelés antérieurement:
+1 Appuyez une fois sur la touche
+ou pointez
+sur
+puis sur Téléphone.
+2 Pointez sur Appels.
+3 Faites défiler la liste puis pointez et maintenez
+votre stylet sur le numéro que vous souhaitez
+rappeler.
+4 Pointez sur Appel pour composer le numéro.
+
+Vous pouvez activer la fonction mains libres, si
+vous souhaitez par exemple rédiger une note,
+pendant un appel téléphonique.
+
+Pour transférer un appel à votre Orange Box:
+■ appuyez sur la touche Fin
+■ pointez sur Ignorer
+
+Si vous appelez une personne et si la
+communication est coupée ou si vous avez oublié
+de lui dire quelque chose, vous pouvez la rappeler
+immédiatement en recomposant le dernier
+numéro appelé.
+
+utiliser le haut-parleur
+
+Vous pouvez répondre à un appel de deux façons:
+■ appuyez sur la touche d'appel verte
+■ pointez sur Répondre
+
+recomposer un numéro
+
+1 En cours d'appel, appuyez et maintenez la
+touche
+.
+2 Lorsqu'une icône mains libres apparaît dans la
+barre d'état, la fonction mains libres est
+activée.
+3 Pour couper cette fonction, appuyez et
+maintenez à nouveau la touche
+.
+
+En cours d'appel, vous pouvez régler le volume
+en utilisant le bouton de volume situé sur le côté
+gauche de votre SPV M2000.
+
+39
+
+2
+utiliser les
+programmes
+®
+Microsoft
+
+40
+
+utiliser les programmes Microsoft®
+
+utiliser les programmes Microsoft®
+Pour ouvrir vos programmes compagnons
+Microsoft pointez sur
+puis sélectionnez
+Programmes. Il vous suffit alors de pointer sur le
+programme que vous souhaitez utiliser.
+
+Ouvrir un document existant:
+
+®
+
+®
+
+Pocket Word
+
+Pocket Word fonctionne avec Microsoft Word sur
+votre PC. Vous pouvez créer de nouveaux
+documents, éditer des documents existants et
+copier des documents de votre PC ou de votre
+SPV M2000. Vous pouvez également synchroniser
+des documents entre votre SPV M2000 et votre
+PC afin d'avoir les informations les plus à jour sur
+vos deux appareils.
+
+■
+
+1 Ouvrez Pocket Word. Dans le coin supérieur
+gauche de votre écran, vous voyez Tous les
+dossiers. Pointez sur cette case.
+2 Une liste déroulante de tous les dossiers
+apparaît. Localisez avec votre stylet le
+document que vous voulez ouvrir.
+3 Pointez et maintenez votre stylet sur un
+document pour ouvrir un menu contextuel
+d'actions.
+
+■
+
+Note: Vous ne pouvez ouvrir qu'un fichier à la
+fois. Si vous essayez d'ouvrir un second
+document, vous êtes invité à enregistrer le
+premier.
+■
+
+Pour créer un nouveau document:
+1 Pointez sur
+et sélectionnez Programmes.
+2 Pointez sur Pocket Word puis sur Nouveau.
+3 Vous pouvez définir un modèle qui s'ouvre
+automatiquement comme nouveau document.
+Pointez sur Outils. Pointez sur Options puis
+Modèle et créez votre modèle.
+4 Vous pouvez enregistrer n'importe quel
+document créé en Word (.doc), Pocket Word
+(.psw), Texte mis en forme (.rtf) et Texte
+seulement (.txt).
+Conseil: Changez l'affichage en tapant sur
+Affichage puis sur Zoom. Choisissez le
+pourcentage: une valeur supérieure est meilleure
+pour la saisie de texte et une valeur inférieure
+convient mieux à l'affichage du document.
+
+42
+
+Conseil: Si vous ouvrez un document Word®
+créé sur votre PC, appuyez sur Vue et
+sélectionnez Ajuster à la largeur de la fenêtre
+pour l'afficher sur votre SPV M2000.
+
+le texte dans le document.
+Ecriture
+Ecrivez avec votre stylet directement sur l'écran.
+Des lignes apparentes vous guident et la valeur
+de zoom est plus élevée pour vous aider à
+écrire. Si vous traversez trois lignes tirées, vous
+passez automatiquement en mode Dessin. Les
+mots écrits sont convertis en graphiques
+(métafichiers) lorsque le document Pocket Word
+est converti en document Word sur votre PC.
+Dessin
+Une grille apparaît sur votre écran pour vous
+aider. Utilisez votre stylet pour dessiner. Dès que
+vous levez votre stylet de l'écran après le
+premier coup, vous voyez apparaître une boîte
+délimitant le dessin.
+Enregistrement
+Insérez un enregistrement vocal dans votre
+document. Les enregistrements sont des fichiers
+.wav.
+
+®
+
+saisir des informations dans
+Pocket Word®
+
+Pocket Excel
+
+Vous pouvez continuer à travailler sur des feuilles
+de calcul existantes ou en créer de nouvelles.
+Vous pouvez également utiliser ActiveSync pour
+maintenir vos fichiers à jour sur votre SPV M2000
+et votre PC.
+®
+
+Il existe quatre méthodes de saisie d'information
+en Pocket Word. Pointez sur Affichage et
+choisissez celle que vous voulez utiliser.
+■
+
+Frappe
+Utilisez le panneau de saisie de texte qui
+apparaît au bas de votre écran. Pour formater
+un texte existant, mettez-le en surbrillance à
+l'aide de votre stylet comme vous le feriez avec
+une souris. Vous pouvez également rechercher
+
+Pocket Excel vous permet d'utiliser toutes les
+caractéristiques fondamentales d'Excel, y compris
+les formules, les fonctions, le tri et les filtres. Les
+feuilles de calcul peuvent être enregistrées en
+Pocket Excel (.pxl) ou Excel (.xls). De même qu'avec
+
+Pocket Word, vous ne pouvez ouvrir qu'un fichier à
+la fois.
+Conseil: Si votre classeur contient des
+informations confidentielles, vous pouvez le
+protéger par un mot de passe. Ouvrez le classeur
+et pointez sur Modifier puis sur Mot de passe. Ce
+mot de passe doit être entré à chaque fois que le
+classeur est ouvert.
+®
+
+Conseils pour travailler sur Pocket Excel :
+■ Affichez votre feuille de calcul en mode plein
+écran. Pointez sur Affichage puis sur Plein
+écran . Pointez sur Plein écran Restaurer pour
+quitter le mode plein écran.
+■ Affichez ou masquez les fenêtres. Pointez sur
+Affichage puis sélectionnez avec votre stylet
+quelles fenêtres sont affichées ou masquées.
+■ Figez les volets. Sélectionnez la cellule que vous
+souhaitez utiliser pour figer les volets. Pointez
+sur Affichage puis sur Figez les volets.
+■ Fractionnez les volets pour voir différentes zones
+d'une grande feuille de calcul. Pointez sur
+Affichage puis sur Fractionner. Glissez la barre
+de fractionnement à la position correcte. Pointez
+sur Affichage puis sur Supprimer le
+fractionnement pour supprimer le
+fractionnement.
+■ Affichez et masquez les colonnes et rangées.
+Sélectionnez les colonnes que vous voulez
+masquer et pointez sur Affichage, puis sur
+Colonne puis sur Masquer. Pour afficher les
+cellules masquées, pointez sur Outils puis sur
+Aller à. Entrez une référence dans les cellules
+masquées et pointez sur Format puis sur
+Colonne et Démasquer .
+
+43
+
+utiliser les programmes Microsoft®
+Windows Media Player pour
+Pocket PC
+®
+
+Lisez des fichiers audio numériques sur votre
+SPV M2000 en utilisant Microsoft Windows Media
+Player.
+Pour transférer des fichiers sur votre SPV M2000,
+utilisez Microsoft Windows Media Player sur
+votre PC avec votre SPV M2000 connecté en
+utilisant ActiveSync.
+®
+
+®
+
+Pour plus d'informations sur l'utilisation de
+Windows Media Player pour Pocket PC, pointez
+sur
+puis sur Aide lorsque vous êtes dans
+Media Player .
+®
+
+Photos
+
+Changer le délai entre les diapositives:
+
+L'application Album de votre SPV M2000 regroupe,
+organise et trie les photos et autres fichiers .jpg qui
+se trouvent dans votre SPV M2000.
+
+1 Dans Album, pointez sur Outils.
+2 Pointez sur Options puis sur l'onglet gris
+General.
+3 Sélectionnez le nombre de secondes
+d'affichage de chaque image puis pointez sur
+OK.
+
+Des photos peuvent être mémorisées sur votre
+SPV M2000 et être transférées à partir d'une
+carte MMC, d'une carte SD, d'une carte
+d'appareil photo numérique ou en utilisant
+ActiveSync sur votre PC.
+Pour synchroniser l'application Album, vous
+devez la sélectionner dans ActiveSync sur votre
+PC.
+
+®
+
+synchroniser vos fichiers, cliquez sur Options
+puis sur Options Sync. Cochez Fichiers puis
+cliquez sur OK. Vous avez ainsi créé un dossier
+dans lequel vous pouvez placer les fichiers que
+vous voulez synchroniser.
+
+utiliser les programmes Microsoft®
+
+Vous pouvez gérer facilement vos photos et vos
+images grâce à l'option de diaporama qu'offre
+l'application Images pour les afficher.
+
+Utilisez Album pour faire pivoter, couper, zoomer
+et régler la luminosité et le contraste des couleurs
+de vos photos. Ouvrez l'image que vous voulez
+éditer.
+Pointez sur:
+
+Les images mémorisées dans Album peuvent
+être utilisées comme arrière-plan, pour apparaître
+sur votre écran d'accueil.
+1 Dans Album, sélectionnez l'image que vous
+voulez utiliser et pointez sur Outils.
+2 Sélectionnez Définir comme Papier- peint.
+3 Appuyez sur OK.
+
+Editer
+
+- pour tourner l'image de 90° en sens
+contraire d'une montre
+- pour couper l'image. Pointez en
+dehors de la case pour cesser de
+couper.
+- pour afficher le panneau de zoom et
+faire un zoom avant ou un zoom
+arrière.
+- pour Annuler/Rétablir ou
+sélectionner Luminosité et
+Contraste et varier le degré de
+couleur de votre image.
+
+Appuyez sur:
+pour afficher vos images sous forme de
+diaporama.
+pour afficher les images mémorisées dans
+le dossier My Pictures.
+pour afficher les images mémorisées dans
+une carte mémoire.
+
+Pour annuler une édition, pointez sur Editer et
+sélectionnez Supprimer.
+Pour effacer une image, pointez et maintenez
+votre stylet sur le nom de fichier et sélectionnez
+Supprimer dans le menu contextuel.
+
+Lorsque le diaporama est actif, pointez n'importe
+où sur l'écran pour afficher la barre d'outils afin
+d'arrêter momentanément le diaporama ou de
+faire tourner les images.
+
+44
+
+45
+
+utiliser les programmes Microsoft®
+
+utiliser les programmes Microsoft®
+Pocket Internet Explorer®
+®
+
+Utilisez Microsoft Pocket Internet Explorer pour
+afficher des pages web. Vous pouvez afficher des
+pages HTLM, cHTLM, xHTLM et WAP.
+Pour ouvrir Pocket Internet Explorer, pointez sur
+et sélectionnez Internet Explorer.
+Aller à l'adresse web entrée
+Précédente
+Arrêt
+Actualiser
+Accueil
+Favoris
+Utiliser votre dossier de sites favoris
+Lorsque vous avez installé ActiveSync sur votre
+PC, un nouveau dossier Mobile Favorites a été
+créé dans votre menu Internet Explorer Favoris.
+Lors de la synchronisation, cette liste de favoris
+est synchronisée avec votre SPV M2000 de façon
+à ce que les deux listes soient identiques.
+
+Ajouter un favori sur votre SPV M2000:
+1 Ouvrez le site web que vous voulez mémoriser.
+2 Pointez sur
+puis sur l'onglet gris
+Ajouter/Supprimer au bas de votre écran.
+3 Pointez sur Add.
+4 Vérifiez les coordonnées du site et
+éventuellement modifiez son nom.
+5 Pointez sur Ajouter.
+Les Favoris utilisent la mémoire de votre
+SPV M2000, par conséquent, vous souhaiterez
+peut-être contrôler comment ils sont téléchargés.
+
+rester en contact avec vos
+collègues et vos amis avec
+MSN Messenger
+
+®
+
+®
+
+1 Pointez sur
+et sélectionnez Programmes.
+2 Pointez sur MSN Messenger .
+3 Pointez sur l'écran et suivez les instructions
+pour configurer ou commencer à utiliser votre
+compte MSN Messenger .
+4 Pour déconnecter, pointez sur Outils et
+sélectionnez Sortir.
+®
+
+Vous pouvez utiliser MSN Messenger pour
+envoyer des messages instantanés. Ce
+programme utilise le même type d'environnement
+de chat que MSN Messenger sur votre PC.
+
+®
+
+Par exemple, vous pouvez:
+■
+■
+
+1 Cliquez sur Options dans ActiveSync sur votre
+PC.
+2 Sélectionnez Favoris et cliquez sur
+Paramètres.
+3 Cliquez sur Personnaliser.
+4 Désélectionnez Synchroniser images,
+Synchroniser les sons et/ou Synchroniser
+les pages de contenu hors ligne pour arrêter
+les images et les sons ou empêcher certains
+sites favoris d'être téléchargés dans votre
+SPV M2000.
+
+Pour se connecter et se déconnecter de
+MSN Messenger :
+
+■
+
+■
+
+Envoyer et recevoir des messages instantanés.
+Voir la situation d'autres contacts de votre liste
+Messenger ou changer votre propre situation,
+par exemple:disponible, occupé, pause
+déjeuner.
+Inviter d'autres personnes à participer à une
+conversation.
+Empêcher des contacts de voir votre
+disponibilité ou de vous envoyer des messages.
+
+Pour utiliser MSN Messenger, il vous suffit d'avoir
+un compte Microsoft .NET Passport, à moins
+que vous ne possédiez déjà un compte Hotmail.
+
+Note: Si vous ne déconnectez pas de
+MSN Messenger, vous restez en connexion de
+données, ce qui peut augmenter votre facture.
+Pour commencer un nouveau "chat", pointez
+sur le nom du contact avec lequel vous souhaitez
+bavarder.
+Pour ajouter rapidement des messages courants,
+appuyez sur Menu, sélectionnez Modifier mon
+texte puis sélectionnez le texte que vous voulez
+utiliser dans le message.
+
+®
+
+Pour ouvrir un compte Microsoft .NET Passport,
+allez à http://www.passport.com.
+Dès que vous avez un compte, vous devez vous
+inscrire à MSN Messenger en utilisant Microsoft
+.NET Passport.
+
+Pour inviter un contact dans un "chat" en
+cours, pointez sur Outils, sélectionnez Inviter
+puis sélectionnez un contact.
+Pour voir qui est déjà connecté, pointez sur
+Outils et sélectionnez Chats.
+Pour accepter ou permuter entre les chats,
+pointez sur Outils, sélectionnez Chats puis
+sélectionnez le contact pour commencer à
+bavarder.
+
+46
+
+47
+
+utiliser les programmes Microsoft®
+Pour ajouter un contact à un "chat", pointez sur
+Outils dans la liste des contacts Messenger,
+sélectionnez Ajouter un contact puis suivez les
+instructions à l'écran.
+Pour effacer un contact, pointez et maintenez
+votre stylet sur son nom puis sélectionnez
+Supprimer contact.
+Pour interdire ou permettre à un contact de voir
+votre disponibilité et de vous envoyer des
+messages, pointez et maintenez votre stylet sur
+son nom puis sélectionnez Bloquer ou
+Débloquer.
+Pour changer votre situation, pointez sur votre
+nom dans la liste des contacts puis pointez sur
+votre état actuelle.
+Note: Vous devez être inscrit à MSN Messenger
+pour changer votre nom affiché.
+
+48
+
+3
+gérer vos appels
+
+gérer vos appels
+
+gérer vos appels
+que se passe-t-il lorsque vous
+recevez un message vocal?
+
+personnaliser le message
+d'accueil de votre messagerie
+
+Lorsque quelqu'un laisse un message dans votre
+Orange Box, le symbole
+apparaît sur l'écran de
+votre SPV M2000 avec le message Nouveau
+Message Vocale. Ce symbole
+reste affiché
+jusqu'à ce que le message ait été enregistré ou
+effacé. Les messages dans votre Orange Box qui
+n'ont pas été écoutés sont conservés pendant 5
+jours.
+
+Votre Orange Box est fournie avec un message
+d'accueil standard. Vous pouvez enregistrer votre
+propre message.
+
+écouter les messages de votre
+Orange Box
+Vous avez trois options pour écouter vos
+messages dans Orange Box:
+■
+
+■
+
+■
+
+50
+
+Pointez sur Orange Box lorsque le message
+arrive.
+Pointez sur
+. Vous voyez deux icônes:
+pour appeler votre Orange Box,
+pour
+voir les détails de l'appel manqué.
+Pointez sur
+, sur Téléphone puis pointez
+et maintenez votre stylet sur 1.
+
+1 Accédez au menu principal de votre Orange
+Box.
+2 Appuyez sur 9 pour sélectionner options
+personnelles.
+3 Appuyez sur 1 pour sélectionner message
+d'accueil.
+4 Appuyez de nouveau sur 1 pour modifier votre
+message d'accueil personnel.
+
+attribuer un mot de passe à
+votre Orange Box
+Pour plus de sécurité, vous pouvez paramétrer
+votre Orange Box pour qu'elle vous demande un
+mot de passe à chaque fois que vous souhaitez
+écouter vos messages.
+
+écouter les messages de votre
+Orange Box de n'importe quel
+autre téléphone ou de l'étranger
+Si vous n'avez pas accès à votre SPV M2000,
+vous pouvez écouter les messages de votre
+Orange Box de n'importe quel téléphone, même à
+l'étranger.
+Pour utiliser ce service, vous devez posséder un
+mot de passe pour votre Orange Box.
+Pour accéder à votre Orange Box de n'importe
+quel autre téléphone ou à l'étranger:
+1 Appelez le +41 86 07xxxxxxxx, (les "x"
+représentent les chiffres suivant votre numéro
+Orange) .
+2 Appuyez sur dès que vous entendez le
+message d'accueil.
+3 Saisissez votre mot de passe et appuyez sur #.
+4 Laissez-vous guider pour écouter vos
+messages.
+
+*
+
+Note: Le coût d'appel à votre Orange Box
+dépend de votre plan tarifaire.
+
+Pour créer votre mot de passe:
+1 Accédez au menu principal de votre Orange
+Box
+2 Appuyez sur 9 pour sélectionner options
+personnelles.
+3 Appuyez sur 4 pour sélectionner un mot de
+passe.
+4 Saisissez votre nouveau mot de passe
+(4 chiffres), puis appuyez sur #.
+
+51
+
+4
+gérer vos
+contacts
+
+52
+
+gérer vos contacts
+
+gérer vos contacts
+enregistrer les coordonnées de
+vos collègues, parents et amis
+sur votre carte SIM
+Vous pouvez enregistrer de nouveaux contacts
+dans votre SPV M2000 en utilisant différentes
+méthodes.
+Vous pouvez enregistrer jusqu'à 200 contacts sur
+les nouvelles cartes SIM Orange. Pour toute
+information ou demande de renouvellement de
+votre ancienne carte SIM, veuillez contacter votre
+Service Clientèle.
+Pour ajouter un nouveau contact dans votre
+carte SIM:
+1 Pointez sur
+et ouvrez Programmes.
+2 Pointez sur Gestionnaire SIM puis sur
+Nouveau.
+3 Entrez le nom et numéro de téléphone. Pointez
+sur Ajouter.
+Tous les appels que vous avez manqués, reçus ou
+composés sont enregistrés dans votre journal des
+appels. Vous pouvez également enregistrer des
+informations de votre journal des appels dans votre
+liste de contacts.
+1 Appuyez sur la touche
+. Pointez sur Appels.
+2 Trouvez les coordonnées du contact que vous
+voulez ajouter.
+3 Appuyez et maintenez le stylet sur le contact.
+Sélectionnez Enregistrer dans les contacts
+dans le menu contextuel qui apparaît.
+
+54
+
+Lorsque j'enregistre un contact dans mon
+répertoire, où sont mémorisées les coordonnées?
+Vous pouvez mémoriser jusqu'à 200 noms et numéros
+de téléphone dans la mémoire de votre carte SIM. Le
+nombre de contacts que vous pouvez enregistrer dans
+la mémoire de votre SPV M2000 dépend de la quantité
+de mémoire partagée avec d'autres fonctions.
+L'avantage de mémoriser des contacts sur votre carte
+SIM est que si vous changez d'appareil, tous les
+contacts de votre carte SIM sont transférés à votre
+nouveau SPV M2000.
+L'avantage de mémoriser des contacts dans la mémoire
+de votre SPV M2000 est que vous pouvez enregistrer
+plus d'un numéro par contact et que vous pouvez
+établir une numérotation rapide et des groupes
+d'appelants et synchroniser vos numéros avec votre
+PC.
+
+4 Inscrivez les données supplémentaires que
+vous souhaitez enregistrer pour ce contact,
+pointez sur OK pour enregistrer votre nouveau
+contact.
+Vous pouvez également prendre note de vos
+numéros personnels de façon à les envoyer
+comme cartes de visite.
+1 Pointez sur
+et ouvrez Programmes puis
+Gestionnaire SIM.
+2 Pointez sur Options puis sélectionnez Liste
+des Numéros Perso.
+3 Ajoutez votre numéro à la liste et pointez sur
+OK.
+
+enregistrer les détails de vos
+contacts dans la mémoire de
+votre SPV M2000
+Mémorisez les détails de vos contacts dans votre
+SPV M2000 si vous voulez ajouter plus
+d'informations ou plus de détails à leur sujet.
+1 Pointez sur Nouveau à l'écran d'accueil.
+2 Pointez sur Contact.
+3 Entrez les informations que vous désirez
+enregistrer pour votre contact, en entrant
+éventuellement l'indicatif international. Ajoutez
+simplement +41 et retirez le premier 0 du
+numéro.
+4 N'oubliez pas de défiler vers le bas pour voir
+des champs d'information supplémentaires.
+5 Pointez sur l'onglet gris Notes au bas de
+l'écran pour ajouter les remarques que vous
+souhaitez enregistrer pour ce contact.
+6 Pointez sur le symbole bande magnétique au
+bas de l'écran pour enregistrer une note
+vocale.
+7 Pointez sur le symbole stylo pour ajouter un
+message écrit.
+8 Appuyez sur OK dans le coin supérieur droit
+pour enregistrer votre nouveau contact.
+
+Changer le numéro que votre SPV M2000
+utilise par défaut pour appeler un contact:
+Si vous avez plusieurs numéros de téléphone
+pour un seul contact, vous pouvez en choisir un
+par défaut.
+1 Appuyez sur la touche Contact
+située sur
+le haut à gauche de votre SPV M2000.
+2 Trouvez le contact dont le numéro par défaut
+va être changé et pointez une fois sur les
+détails.
+3 Pointez sur le w à droite de votre barre de
+contact pour ouvrir un menu contextuel.
+4 Pointez sur le numéro ou l'adresse e-mail que
+vous vous voulez utiliser par défaut lorsque
+vous sélectionnez ce contact.
+Si vous pointez et maintenez votre stylet sur la
+lettre, vous ouvrez un menu contextuel offrant des
+options supplémentaires.
+
+Votre nouveau contact va apparaître dans votre
+liste de contacts. La lettre en gras à sa droite
+indique le numéro par défaut. Il s'agit du numéro
+que vous appelez lorsque vous sélectionnez ce
+contact dans la liste et appuyez sur
+.
+
+55
+
+gérer vos contacts
+
+gérer vos contacts
+utiliser l'identification de
+l'appelant pour gérer
+vos contacts
+Amusez-vous à attribuer un modèle de photo à
+chacun de vos contacts.
+
+rechercher dans votre liste
+de contacts
+Votre SPV M2000 vous permet d'accéder à vos
+contacts avec un seul appui de façon à ce que
+vous puissiez appeler rapidement, quand vous
+êtes pressé.
+
+Pour changer le numéro de téléphone que
+vous allez appeler pour votre contact, vous
+pouvez:
+■
+
+■
+
+1 Pointez sur
+puis sur Programmes.
+2 Pointez sur Photo Contacts.
+3 Une liste de tous vos contacts apparaît,
+figurant dans la mémoire de votre SPV M2000
+et votre carte SIM. Les contacts mémorisés
+dans votre carte SIM ont cette icône
+et
+ceux mémorisés dans votre SPV M2000 ont
+cette icône
+.
+4 Pointez pour sélectionner le contact pour
+lequel vous voulez mémoriser une photo.
+5 Pointez sur
+et sélectionnez la photo que
+vous voulez utiliser. Pointez sur OK.
+6 Réglez les Paramètres de l'écran et n'oubliez
+pas de pointer sur la case Préaffichage pour
+voir le résultat.
+7 Pointez sur le bouton Options pour régler la
+police de caractères, la couleur, le style et la
+taille.
+8 Pointez sur OK pour valider vos changements.
+
+Pour ouvrir rapidement la liste de contacts de votre
+SPV M2000, appuyez sur la touche de contact
+argentée située sur le haut à gauche de votre
+SPV M2000. Vous pouvez alors défiler jusqu'au
+contact que vous voulez appeler et pointer deux
+fois sur l'écran pour appeler son numéro par
+défaut.
+Vous pouvez également rechercher dans la liste
+de contacts de votre SPV M2000 en appuyant
+sur la touche de Contact
+et en:
+■
+
+■
+
+■
+
+Note: Vous pouvez uniquement ajouter des
+photos qui sont déjà mémorisées dans votre
+SPV M2000.
+
+56
+
+pointant sur l'un des groupes de lettres en
+haut de l'écran pour voir tous vos contacts
+dont le nom commence par ces lettres.
+pointant sur Tous les contacts pour ouvrir
+une liste déroulante des groupes que vous
+pouvez utiliser.
+pointant sur Chercher un nom et en entrant
+les premières lettres du nom que vous
+cherchez.
+
+Faire défiler vers la gauche ou la droite au
+moyen de la touche de défilement sur l'avant
+de votre SPV M2000.
+Pointer sur la lettre à droite du contact qui
+dénote le numéro par défaut et sélectionner
+un numéro d'appel différent.
+
+Rechercher dans votre carte SIM:
+1 Pointez sur
+et sélectionnez Programmes.
+2 Pointez sur Gestionnaire SIM. Votre liste de
+contacts dans votre carte SIM apparaît.
+3 Faites défiler jusqu'au contact que vous voulez
+appeler au moyen de la touche de défilement
+et appuyez sur la touche
+.
+
+éditer ou effacer votre liste
+de contacts
+Il est possible d'éditer les deux listes de contacts
+de façon à ce que les informations soient à jour
+en permanence.
+Pour éditer ou effacer la liste de contacts de
+votre SPV M2000:
+1 Appuyez sur la touche Contact
+située en
+haut à gauche de votre SPV M2000.
+2 Pointez sur le contact que vous voulez modifier.
+3 Pointez sur Modifier pour effectuer les
+changements.
+4 Pointez sur OK pour valider ces changements.
+5 Pour effacer un contact, pointez et maintenez
+votre stylet sur son nom. Sélectionnez
+Supprimer un contact. Pointez sur Oui.
+Pour éditer ou effacer les contacts de votre
+carte SIM:
+1
+2
+3
+4
+
+Pointez sur
+et sélectionnez Programmes.
+Pointez sur Gestionnaire SIM.
+Pointez sur le contact que vous voulez éditer.
+Entrez les changements et pointez sur
+Modifier ou appuyez sur Annuler et vos
+changements ne seront pas validés.
+5 Pour effacer un contact, pointez et maintenez
+votre stylet sur son nom.
+Sélectionnez Effacer dans le menu contextuel.
+Confirmez votre choix en pointant sur Oui.
+
+57
+
+gérer vos contacts
+
+gérer vos contacts
+copier des contacts d'une
+mémoire à l'autre
+Vous trouverez peut-être pratique de copier les
+contacts de votre carte SIM dans votre
+SPV M2000 pour pouvoir enregistrer des
+informations supplémentaires et plus d'un numéro
+de téléphone.
+Ensuite, pour transférer vos contacts à d'autres
+appareils, vous pouvez copier à nouveau leur
+nom et le numéro que vous utilisez le plus dans
+votre carte SIM.
+Pour copier des contacts de votre carte SIM
+dans votre SPV M2000:
+1 Pointez sur
+et sélectionnez Programmes.
+2 Pointez sur Gestionnaire SIM.
+3 Utilisez la touche de défilement pour
+sélectionner le contact que vous voulez
+déplacer.
+4 Pointez sur Outils.
+5 Sélectionnez Sauvegarder vers contacts.
+Le contact va alors apparaître dans les deux
+listes.
+
+58
+
+Pour copier des contacts de votre carte SIM
+dans votre SPV M2000:
+
+organiser vos contacts en
+utilisant les filtres
+
+changer les paramètres de
+votre liste de contacts
+
+1
+2
+3
+4
+
+A mesure que la liste de contacts de votre
+SPV M2000 augmente, il peut s'avérer utile de les
+mettre dans différents groupes.
+
+Modifiez les paramètres de votre liste de contacts
+en fonction de votre usage pour faciliter son
+utilisation.
+
+Vous pouvez créer vos propres groupes. Nous
+avons déjà ajouté pour vous les groupes
+Vacances et Personnel.
+
+1 Appuyez sur la touche Contact
+.
+2 Pointez sur Outils puis Options.
+3 Parcourez les options disponibles:
+■ Afficher les onglets ABC
+Active ou désactive ces onglets de
+recherche
+■ Afficher uniquement les noms des
+contacts
+Les numéros de contacts n'apparaissent
+pas, seulement les noms
+■ Indicatif international
+Entrez l'indicatif de vos contacts. Par
+exemple, 41 pour les contacts de la Suisse.
+■ Pays/Région
+Utilisez la liste déroulante pour sélectionner
+un pays pour vos contacts
+
+Pointez sur
+et sélectionnez Programmes.
+Pointez sur Gestionnaire SIM.
+Pointez sur Outils puis Tout sélectionner.
+Pointez encore une fois sur Outils et
+sélectionnez Sauvegarder vers contacts.
+Tous vos contacts seront copiés de votre carte
+SIM vers votre SPV M2000.
+
+Pour copier des contacts de votre SPV M2000
+dans votre carte SIM:
+1 Appuyez sur la touche Contact
+située sur
+le haut à gauche de votre SPV M2000.
+2 Utilisez la touche de défilement (pas le stylet)
+pour sélectionner le contact que vous voulez
+copier.
+3 Pointez sur Outils et sélectionnez Sauvegarder
+vers SIM.
+4 Utilisez les cases à cocher pour choisir quels
+numéros copier, si plus d'un numéro a été
+enregistré.
+5 Pointez sur Sauvegarder vers SIM.
+
+1 Appuyez sur la touche Contact
+.
+2 Pointez sur un contact puis appuyez sur
+Edition.
+3 Défilez vers le bas et pointez sur Catégories.
+4 Pointez sur l'onglet Ajouter/Effacer.
+5 Entrez un nom pour votre nouveau groupe et
+pointez sur Ajouter.
+6 Cochez ou décochez la case pour enregistrer
+ce contact dans votre nouveau groupe.
+7 Utilisez cette méthode pour organiser tous vos
+contacts en groupes.
+Les contacts peuvent être enregistrés dans plus
+d'un groupe.
+
+59
+
+5
+
+transférer les contacts de votre
+SPV M2000 vers d'autres
+appareils
+Grâce au port infrarouge, vous pouvez transférer
+vos contacts sous forme de carte de visite à
+d'autres appareils.
+1 Appuyez sur la touche argentée Contact.
+2 Pointez sur le contact que vous voulez
+transférer.
+3 Pointez sur Outils et sélectionnez Envoyer
+contacts.
+4 Aligner les ports infrarouges des deux
+appareils. Vous devrez peut-être activer
+l'appareil receveur Le port infrarouge se trouve
+sur le bord supérieur de votre SPV M2000.
+5 Votre SPV M2000 cherchera des appareils
+receveurs et enverra des informations une fois
+la connexion établie.
+Lorsque vous recevez un contact, vous verrez le
+message: Réception de données. Voulez-vous
+sauvegarder « nom » dans votre liste de
+contacts? Pointez sur Oui pour ajouter le
+nouveau contact à votre liste de contacts.
+
+60
+
+se connecter et
+synchroniser
+
+se connecter et synchroniser
+
+se connecter et synchroniser
+pourquoi se connecter?
+Votre SPV M2000 offre plusieurs méthodes de
+connexion à différents appareils, vous permettant
+ainsi d'accéder à l'Intranet de votre société, de
+vous connecter à Internet, de synchroniser des
+informations à l'aide d'ActiveSync® et d'envoyer
+et de recevoir des données sans fil en utilisant
+Bluetooth® ou l'infrarouge.
+
+Terminal Services Client
+Ouvrez Client Terminal du PC, et utilisez les
+logiciels complets Microsoft® sur votre SPV
+M2000. Par exemple, au lieu d'utiliser Microsoft®
+Pocket Word vous pouvez faire fonctionner Word
+à partir de votre PC et avoir accès à tous vos
+documents Word.
+Se connecter au Client Terminal:
+1 Pointez sur
+et sélectionnez Programmes.
+Pointez sur Client Terminal.
+2 Dans le champ Serveur, entrez le nom du
+serveur que vous utilisez.
+3 Alternativement, si vous vous êtes connecté
+ultérieurement, pointez sur le nom du serveur
+que vous voulez utiliser.
+4 Pointez sur Connecter.
+
+vous pouvez vous connecter
+où que vous soyez avec
+Wireless LAN Manager
+Wireless LAN Manager vous permet d'établir
+une connexion Internet WiFi sur votre SPV
+M2000. Il est conçu pour fonctionner avec les
+éléments existants au standard 802.11b,
+comme les points d'accès ou les routeurs. Pour
+utiliser Wireless LAN Manager avec votre SPV
+M2000, vous devez disposer d'un accès à une
+connexion Internet à haut débit, ainsi que du
+point d'accès nécessaire ou d'un routeur
+émettant des signaux WLAN. Si vous n'avez
+pas accès à l'Internet à haut débit, référez-vous
+à votre fournisseur de services Internet avant
+d'utiliser cette application.
+Pour localiser un signal Wireless WLAN
+avant d'ouvrir Wireless LAN Manager:
+■
+
+■
+
+Note: La méthode d'entrée de texte Transcriber
+ne fonctionnera pas avec Client Terminal. Utilisez
+le clavier, la reconnaissance de blocs ou de
+lettres.
+■
+
+62
+
+Ouvrez l'écran Aujourd'hui. Si votre SPV
+M2000 a détecté une connexion à un réseau
+WLAN, l'icône W s'affichera en haut de
+l'écran, ainsi qu'une icône WLAN dans le
+coin inférieur droit.
+Wireless Manager: pointez sur Wireless
+Manager dans le menu Programmes. Si
+votre SPV M2000 reçoit des signaux WLAN,
+le deuxième bouton affichera WiFi actif.
+WLAN, ou WiFi, est le canal wireless
+paramétré par défaut pour votre appareil. Si
+aucun signal WiFi n'est détecté, GPRS sera
+alors lancé.
+Application WLAN: ouvrez le menu Outils
+pour lancer cette application à partir de
+
+Wireless Manager, en pointant sur WiFi
+Manager. Un autre accès est également
+possible à partir de l'onglet Connexions
+dans le menu Paramètres.
+Note: la disponibilité et la portée des signaux
+WLAN de votre SPV M2000 peuvent dépendre
+du nombre, de l'épaisseur et de la disposition
+des murs, plafonds ou autres objets à travers
+lesquels le signal doit passer.
+Pour commuter sur WLAN:
+Pour utiliser le WLAN sur votre téléphone
+Pocket PC, vous devez activer l'antenne WLAN
+interne de votre appareil:
+1 Pointez sur Démarrer, Paramètres, puis
+Connexions et WLAN.
+2 Sur l'onglet Principal, pointez sur la case
+Wireless LAN actif pour activer le WLAN.
+Le témoin Wireless LAN dans le coin
+supérieur gauche de l'écran clignotera en
+vert toutes les 6 secondes pour indiquer que
+le WLAN est activé. Il clignote
+alternativement en vert et en bleu toutes les
+6 secondes si Bluetooth® est également
+activé.
+3 Une icône W apparaît lorsque votre SPV
+M2000 a détecté une connexion WLAN.
+Pour régler le mode Economie d'énergie:
+Pour prolonger l'autonomie de la batterie,
+désactivez le WLAN lorsque vous ne l'utilisez
+pas. Vous pouvez activer le Mode économie
+
+d'énergie en pointant et en faisant glisser la
+barre de contrôle sur l'onglet Paramètres.
+1 Pointez sur Démarrer, Paramètres, puis sur
+l'onglet Connexions et WLAN.
+2 Pointez sur l'onglet Paramètres, pointez et
+faites glisser la barre Mode économie
+d'énergie sur le réglage d'économie
+d'énergie que vous désirez. Vous pouvez
+également utiliser les boutons gauche et
+droit du joypad de navigation pour faire
+glisser le curseur sur la barre.
+■
+
+■
+
+Performance optimale:
+Pas d'économie d'énergie WLAN. A utiliser
+uniquement si le débit maximal WLAN est
+absolument nécessaire ou si votre réseau
+n'est pas configuré pour supporter ces
+modes.
+Batterie optimale: utilise le minimum
+d'énergie pendant les connexions WLAN. Ce
+mode réduit significativement le débit des
+données par WLAN. Il est déconseillé pour le
+transfert de grands fichiers ou lorsque
+Bluetooth est activé.
+
+Pour désactiver l'antenne:
+Vous pouvez désactiver automatiquement
+l'antenne WLAN de votre SPV M2000 si aucun
+signal n'est détecté, afin d'économiser la
+batterie. Choisissez une temporisation de 2, 3,
+4 ou 5 minutes lorsque cette case est
+sélectionnée.
+
+63
+
+se connecter et synchroniser
+
+se connecter et synchroniser
+1 Pointez sur Démarrer, Paramètres, puis sur
+l'onglet Connexions et WLAN.
+2 Pointez sur l'onglet Paramètres,
+sélectionnez la case Désactivation WLAN
+automatique si pas de connexion,
+choisissez entre des intervalles de 2, 3, 4 ou
+5 minutes.
+
+Pour ajouter manuellement un nouveau
+réseau sans fil:
+Un réseau sans fil peut être ajouté, soit lorsque
+le réseau est automatiquement détecté (comme
+expliqué ci-dessus) ou en entrant manuellement
+les paramètres nécessaires sur les Cartes
+réseau.
+
+Pour activer LEAP:
+La section LEAP (Lightweight Extensible
+Authentication Protocol) de cette application
+vous permet d'accroître la sécurité de votre SPV
+M2000 en configurant le SSID, le nom
+d'utilisateur, le mot de passe et le domaine pour
+vous assurer que personne ne peut accéder à
+votre réseau sans votre autorisation. La plupart
+des points d'accès 802.11 offrent
+automatiquement une forme d'authentification
+appelée authentification pour systèmes ouverts
+(open systems authentication), qui est le
+paramètre par défaut sur le SPV M2000. Avec
+ce mode, le point d'accès demande une
+autorisation pour toute demande
+d'authentification.
+Le client envoie simplement une demande
+d'authentification type et le point d'accès
+répond avec une autorisation d'authentification.
+Cela permet à toute personne disposant du
+SSID exact de s'associer au point d'accès.
+Pour que le protocole LEAP fonctionne
+correctement, tant le point d'accès que
+l'appareil récepteur (votre SPV M2000) doivent
+être configurés avec un nom d'utilisateur, mot
+de passe et SSID identiques.
+
+1 Lorsque le WLAN est activé, pointez sur
+Démarrer, Paramètres, puis sur l'onglet
+Connexions, l'icône Cartes réseau, l'onglet
+Wireless et sur Ajouter nouveau.
+2 Sur l'onglet Général:
+Entrez le nom d'un réseau (SSID).
+Si un réseau a été détecté, le SSID est
+enregistré automatiquement et ne peut pas
+être modifié.
+Sélectionnez l'endroit où votre réseau se
+connecte (Internet ou Travail) dans la case
+Connecter à:.
+Pointez dans la case Connexion ad hoc
+entre deux appareils si vous désirez vous
+relier à une connexion ad hoc.
+3 Si des données d'authentification sont
+requises, sélectionnez l'authentification du
+type de réseau que vous désirez utiliser sur
+l'onglet Clé réseau.
+Pour configurer l'authentification, choisissez
+le type désiré dans la liste déroulante
+Authentification/Authentication.
+Pour utiliser le cryptage de données,
+choisissez le type désiré dans la liste
+déroulante Cryptage de données. (WEP est
+configuré par défaut.)
+
+Entrez la clé dans la case Clé réseau. Si une
+clé est fournie automatiquement par votre
+réseau, pointez sur la case La clé est fournie
+automatiquement.
+4 Pointez sur Utiliser le contrôle d'accès au
+réseau IEEE 802.1x pour une sécurité accrue
+/Use IEEE 802.1x network access control for
+increased security, sur l'onglet 802.1x tab
+Pour rechercher un réseau:
+Les réseaux que vous avez déjà configurés sont
+listés dans Wireless Networks. Vous pouvez
+choisir de vous connecter uniquement à vos
+réseaux préférés ou laisser votre SPV M2000
+rechercher n'importe quel réseau disponible et
+s'y connecter.
+1 Lorsque WLAN est activé, pointez sur
+Démarrer, puis Paramètres, puis sur l'onglet
+Connexions, l'icône Cartes réseaux et sur
+l'onglet Wireless.
+2 Dans la case Accès réseaux: pointez sur le
+type de réseau auquel vous désirez vous
+connecter. Choisissez entre Tous réseaux
+disponibles, Points d'accès uniquement,
+Ordinateur à ordinateur uniquement.
+3 Pour vous connecter uniquement aux
+réseaux qui ont déjà été configurés,
+décochez l'option Connexion automatique
+aux réseaux non préférés.
+Si vous cochez la case Connexion automatique
+aux réseaux non préférés, votre SPV M2000
+détectera chaque nouveau réseau et vous
+demandera de le configurer.
+
+Pour rechercher une adresse IP et trouver
+l'adresse IP utilisée par le réseau sans fil:
+1 Lorsque WLAN est activé et connecté au
+réseau approprié, pointez sur Démarrer, puis
+Paramètres, puis sur l'onglet Connexions,
+l'icône Cartes réseaux, et l'onglet
+Adaptateurs réseau.
+2 Dans le menu contextuel Ma carte réseau se
+connecte à: pointez soit sur Internet ou sur
+Travail/Work. Si vous vous connectez à un
+réseau privé comme un réseau d'entreprise,
+pointez sur Travail.
+3 Pointez sur l'adaptateur pour modifier les
+paramètres: la case et l'adresse IP
+s'afficheront dans la case Adresse IP dans
+l'onglet Adresse IP.
+4 Pour modifier les paramètres TCP/IP si votre
+fournisseur d'accès ISP ou votre réseau privé
+n'utilise pas les adresses IP attribuées de
+façon dynamique, pointez sur Utiliser adresse
+IP spécifique
+Utilisez l'adresse spécifique du IP et entrez les
+données demandées. Contactez votre ISP ou
+votre administrateur réseau pour obtenir
+l'adresse IP, le masque de sous-réseau et/ou la
+passerelle d'accès si nécessaire.
+5 Pour modifier les paramètres DNS et WINS si
+votre ISP ou votre réseau privé n'utilise pas
+les adresses IP attribuées de façon
+dynamique, pointez sur l'onglet Nom
+serveurs et entrez les données demandées.
+Les serveurs devant avoir une adresse IP
+fixe, doivent quelquefois également pouvoir
+relier les noms des ordinateurs à une adresse
+
+64
+65
+
+se connecter et synchroniser
+IP. DNS et WINS sont les options de
+résolution compatibles avec le Pocket
+PC Phone.
+
+utiliser Bluetooth® pour les
+communications à courte
+portée sans fil
+Bluetooth® permet à votre SPV M2000
+d'échanger des informations avec d'autres
+appareils et d'établir une connexion d'appel
+téléphonique par modem avec votre PC.
+Bluetooth fonctionne de 3 façons différentes:
+®
+
+■
+
+■
+
+■
+
+Activé
+Votre radio Bluetooth® est active et vous
+pouvez utiliser toutes les fonctions Bluetooth®.
+Désactivé
+Bluetooth® n'est pas en service. Vous devez
+couper Bluetooth® partout où l'utilisation
+d'ondes radio est interdite, par exemple dans
+les avions ou les hôpitaux. Couper Bluetooth®
+aide également à économiser la batterie.
+Identification du périphérique
+La radio Bluetooth® de votre SPV M2000 est
+en service et tous les appareils Bluetooth®
+dans un rayon de 10 mètres sont en mesure
+de vous contacter.
+
+Pour changer votre mode Bluetooth®, pointez
+sur
+puis sur Paramètres. Pointez sur l'onglet
+gris Connexions. Pointez sur le mode que vous
+voulez utiliser, et pointez sur OK.
+
+66
+
+Pour échanger des informations avec d'autres
+appareils et établir une connexion, vous devez
+appairer les appareils.
+Pour appairer deux appareils Bluetooth®:
+1 Assurez-vous qu'ils sont dans un rayon de dix
+mètres et que Bluetooth® est activé sur les
+deux.
+2 Appuyez sur Paramètres. Appuyez sur l'onglet
+gris Connexions.
+3 Appuyez sur Bluetooth®, puis sur
+Gestionnaire Bluetooth et enfin sur Nouveau.
+4 Faites défiler la liste vers le bas et sélectionnez
+Participer à un réseau local.
+5 Votre SPV M2000 commencera à rechercher
+d'autres appareils. Au bout de quelques
+secondes, une liste des dispositifs détectés
+s'affichera.
+6 Appuyez sur le nom de l'appareil auquel vous
+souhaitez vous connecter.
+7 Sélectionnez un service dans Sélection du
+service et cochez la case Sécurité si vous
+souhaitez utiliser une connexion sécurisée.
+8 Appuyez sur Suivant et un raccourci sera créé.
+9 Appuyez sur Terminé. Vous pouvez maintenant
+vous connecter aisément à cet appareil en le
+sélectionnant dans la liste Mes raccourcis.
+Si un autre appareil demande à être apparié
+avec votre appareil:
+1 Un message contextuel apparaît sur votre
+écran, vous demandant si vous souhaitez
+ajouter le nouvel appareil à votre liste
+d'appareils liés.
+
+se connecter et synchroniser
+2 Pointez sur OK.
+3 Dans la case PIN, entrez le même code PIN
+que celui de l'appareil qui fait la demande.
+Cliquez sur Suivant.
+4 Editez le nom de l'appareil si vous le souhaitez
+dans le champ Nom.
+5 Pointez sur Terminé. Les deux appareils sont à
+présent appariés.
+Note: Bluetooth® doit être activé ou détectable
+pour pouvoir recevoir les demandes
+d'appariement.
+Pour effacer un appareil apparié, pointez et
+maintenez votre stylet sur leur nom dans la liste
+Dispositifs Bluetooth® couplés. Sélectionnez
+Supprimer dans le menu contextuel.
+Pour recevoir les informations qui vous sont
+envoyées en utilisant Bluetooth®, il vous suffit de
+pointer sur Oui lorsque le message
+Voulez-vous... s'affiche.
+Pour envoyer des informations en utilisant
+Bluetooth®:
+1 Activez Bluetooth® si ce n'est pas déjà fait.
+2 Trouvez les informations ou données que vous
+voulez envoyer.
+3 Pointez et maintenez votre stylet sur
+l'information et sélectionnez Envoyer par
+radio. Sélectionnez l'appareil Bluetooth appairé
+auquel vous voulez transmettre les données.
+4 Pointez sur l'appareil auquel vous voulez
+envoyer l'information. Une fois les données
+envoyées, cliquez sur Terminé.
+
+utiliser l'infrarouge pour
+transférer des fichiers entre
+deux appareils
+Au lieu d'utiliser Bluetooth® vous pouvez également
+envoyer des informations et des données par
+infrarouge. Les ports infrarouge des deux appareils
+doivent être activés pour transférer les fichiers.
+Pour mettre l'infrarouge en service, pointez
+sur
+puis sur Paramètres. Pointez sur l'onglet
+gris Connexions. Pointez sur Envoyer. Assurezvous que la case Recevoir tous les envois
+entrants est cochée et appuyez sur OK.
+Lorsque le port infrarouge est actif, vous pouvez
+recevoir des informations. Il vous suffit de pointer
+sur Oui lorsque le message Voulez-vous...
+s'affiche.
+
+utiliser votre SPV M2000 pour
+établir une connexion modem
+avec votre PC
+Votre SPV M2000 peut facilement servir de
+modem pour votre PC, vous permettant ainsi
+d'accéder à Internet ou Intranet lorsque vous
+n'êtes pas à votre bureau.
+Pour connecter en utilisant l'infrarouge, activez
+et alignez les deux ports infrarouge. Les ports
+infrarouge doivent être à un mètre maximum l'un
+de l'autre pour pouvoir connecter.
+
+67
+
+se connecter et synchroniser
+
+se connecter et synchroniser
+Pour connecter en utilisant Bluetooth®:
+1 Activez Bluetooth sur votre SPV M2000 et
+votre PC et vérifiez qu'ils se trouvent à 10
+mètres maximum l'un de l'autre.
+2 Appariez votre SPV M2000 et votre PC.
+3 Pointez sur
+et sélectionnez Paramètres.
+Pointez sur l'onglet gris Connexions.
+4 Pointez sur Connexions et sélectionnez
+Ajouter une nouvelle connexion modem.
+5 Entrez un nom pour cette connexion.
+6 Dans la boîte Sélectionner un modem,
+choisissez Bluetooth.
+7 Si votre PC apparaît dans la liste, pointez sur
+son nom puis sur Suivant. Entrez votre
+numéro de connexion et pointez sur Suivant.
+Entrez vos informations de connexion et
+pointez sur Terminé.
+8 Si votre PC ne figure pas dans la liste, pointez
+sur Suivant.
+9 Pointez sur le PC puis sur Suivant.
+10 Entrez un code PIN comprenant de 1 à 16
+chiffres.
+11 Entrez le même code PIN que sur votre
+SPV M2000.
+12 Changez le nom de votre PC si vous le désirez
+et pointez sur Terminé.
+13 Pointez sur Suivant. Entrez votre numéro de
+connexion et pointez sur Suivant. Entrez vos
+informations de connexion et pointez sur
+Terminé.
+Dès que votre modem est établi, vous pouvez
+commencer à utiliser l'application, par exemple,
+vous pouvez lancer Internet Explorer pour surfer
+sur le net ou envoyer et recevoir des e-mails.
+
+68
+
+connecter à Internet en utilisant
+Pocket Internet Explorer
+Utilisez le GPRS pour connecter à votre prestataire
+de Services Internet Mobiles (ISP). Vous pouvez
+ensuite utiliser cette connexion pour envoyer et
+recevoir des e-mails et consulter des sites web et
+WAP.
+1 Demandez à votre prestataire de services son
+numéro de téléphone serveur, votre nom
+d'utilisateur et votre mot de passe.
+2 Pointez sur
+et sélectionnez Paramètres.
+Pointez sur l'onglet gris Connexions.
+3 Pointez sur Connexions.
+4 Pointez sur le lien bleu Ajouter une nouvelle
+connexion modem.
+5 Suivez les invites à l'écran pour saisir les
+informations. Vous n'avez pas besoin de remplir
+l'option Avancé, pointez sur Terminé.
+
+garder à jour les informations
+mémorisées grâce à
+ActiveSync®
+
+Vous pouvez utiliser ActiveSync® pour garder vos
+contacts à jour avec Microsoft® Outlook® sur
+votre PC, synchroniser votre Boîte de réception,
+Calendrier et Contacts, échanger des
+informations avec Microsoft® Mobile Information
+Server 2002 ou plus récent et copier des fichiers
+entre votre SPV M2000 et votre PC de bureau.
+Avant d'utiliser Microsoft® ActiveSync®, vous
+devez installer ActiveSync® sur votre PC.
+1 Insérez le CD d'installation Pocket PC
+Téléphone 2003 fourni dans le coffret de votre
+SPV M2000. Ne raccordez pas encore votre
+SPV M2000 et votre PC.
+2 Le CD démarre automatiquement. Laissezvous guider pour installer ActiveSync®.
+Une fois ActiveSync® installé, un Assistant
+démarre automatiquement pour permettre à votre
+SPV M2000 et à votre PC de devenir partenaires.
+Vous pouvez sélectionner les informations qui
+sont synchronisées entre votre SPV M2000 et
+votre PC à chaque synchronisation et vous devez
+choisir vos paramètres de serveur parmi:
+■
+
+En utilisant Microsoft® ActiveSync®, vous pouvez
+synchroniser les informations de votre SPV
+M2000 avec les informations mémorisées dans
+votre PC. Vous pouvez synchroniser votre SPV
+M2000 en utilisant la console fournie dans le
+coffret et la prise de console ou en utilisant
+l'infrarouge.
+
+■
+
+Synchroniser avec ce bureau
+Si vous utilisez votre SPV M2000 avec votre
+propre PC, utilisez cette option.
+Synchroniser avec Microsoft® Mobile
+Information Server et/ou ce bureau
+Choisissez cette option uniquement si vous
+vous connectez à un serveur. Vous devez vous
+assurer que le serveur exécute Microsoft®
+Mobile Information Server 2002 ou plus récent.
+Vous devez connaître également le nom du
+
+serveur. Contactez votre administrateur de
+réseau ou votre prestataire de services pour
+plus d'informations.
+Votre première synchronisation commence
+automatiquement dès que l'Assistant a terminé.
+Vous remarquerez que vos informations
+Microsoft® Outlook apparaissent désormais sur
+votre SPV M2000.
+
+synchroniser votre
+Boîte de réception
+Si vous choisissez de synchroniser votre Boîte de
+réception lorsque vous utilisez ActiveSync:
+■
+
+■
+
+■
+
+■
+
+Les messages sont copiés de votre Boîte de
+réception Outlook ou de Microsoft® Exchange
+Server dans la Boîte de réception de votre
+SPV M2000.
+Vous recevez les premiers 500 octets de tous
+les nouveaux messages reçus au cours des
+trois derniers jours.
+Lorsque vous effacez un message sur votre
+SPV M2000, il est effacé de votre PC et vice
+versa.
+Les messages qui se trouvent dans des
+dossiers autres que Inbox ne sont
+synchronisés que s'ils sont sélectionnés.
+
+69
+
+se connecter et synchroniser
+synchroniser votre Calendrier
+Ne manquez aucun anniversaire, réunion ou
+événement important en synchronisant
+régulièrement votre calendrier.
+Par défaut, toutes les entrées dans le calendrier
+des deux dernières semaines seront
+synchronisées. Les articles effacés seront
+synchronisés également.
+
+synchroniser vos Contacts
+Votre SPV M2000 est réglé pour synchroniser
+automatiquement les détails de vos contacts de
+façon à ce que toutes les informations présentes
+dans votre PC et dans votre SPV M2000 soient à
+jour.
+Les contacts nouveaux et effacés sont
+synchronisés.
+
+synchroniser les Tâches
+Votre SPV M2000 synchronise automatiquement
+vos informations concernant les Tâches, à moins
+que vous ne choisissiez de les désactiver. Les
+Tâches ne peuvent être synchronisées qu'avec
+votre ordinateur de bureau, elles ne peuvent pas
+être synchronisées avec un serveur.
+
+70
+
+se connecter et synchroniser
+
+synchroniser votre SPV M2000
+par infrarouge
+
+créer un programme de
+synchronisation à distance
+
+La synchronisation par infrarouge vous permet de
+connecter et de synchroniser votre SPV M2000 à
+un autre appareil ou à votre PC (votre PC doit
+posséder un port infrarouge) sans utiliser de fils.
+Ceci peut vous être utile si vous permutez entre
+divers appareils car il ne vous faut aucun câble ni
+adaptateur.
+
+Vous pouvez créer un programme de
+synchronisation à distance de façon à ce que vos
+informations soient automatiquement
+synchronisées par wirefree™ avec le serveur ou
+votre PC à des intervalles que vous spécifiez.
+
+priorité des appareils
+Vous pouvez choisir quel appareil a la priorité si
+un conflit d'information existe entre votre SPV
+M2000 et votre PC.
+1 Cliquez sur Options dans ActiveSync® sur votre
+PC.
+2 Cliquez sur l'onglet Règles.
+3 Remplissez la section Résolution de conflit en
+définissant vos règles.
+4 Cliquez sur OK pour valider vos changements.
+
+1 Pointez sur
+et sélectionnez ActiveSync.
+2 Pointez sur Outils puis sur Options.
+3 Pointez sur l'onglet gris Calendrier du mobile.
+Entrez les détails de synchronisation wirefree™
+avec votre stylet. Ceci vous permet de décider
+de la fréquence à laquelle votre SPV M2000 va
+synchroniser avec votre PC ou le serveur.
+4 Pointez sur le bouton Heures de pointe pour
+définir vos heures de pointe. Vérifiez que vous
+êtes bien à la date et heure correctes.
+5 Pointez sur OK pour revenir à l'écran.
+6 Pointez sur OK pour valider votre programme à
+distance.
+
+synchroniser à distance
+Dès que vous avez décidé d'un programme à
+distance, vous pouvez synchroniser à distance
+avec votre PC.
+1 Pointez sur
+et sélectionnez ActiveSync.
+2 Pointez sur Outils puis sur Options.
+3 Avec votre stylet, choisissez votre PC et cochez
+la case Utiliser calendrier du mobile pour sync.
+avec PC.
+
+4 Votre SPV M2000 va désormais se connecter
+selon les paramètres que vous avez entrés
+l'écran Calendrier du mobile.
+5 Pointez sur le bouton Options pour entrer des
+informations supplémentaires pour votre
+synchronisation.
+6 Pour lancer la synchronisation, raccordez votre
+SPV M2000 et votre PC et pointez sur Sync.
+Note: Pour synchroniser à distance avec un PC,
+celui-ci doit être allumé.
+Pour synchroniser à distance avec un serveur, vous
+devez avoir rempli les paramètres du serveur. Si
+c'est le cas, votre SPV M2000 va synchroniser
+automatiquement avec votre serveur, en fonction
+de votre programme mobile.
+
+synchroniser avec votre serveur
+Si vous préférez synchroniser avec un serveur
+plutôt qu'un PC individuel, vous pouvez établir
+une synchronisation de serveur.
+1
+2
+3
+4
+
+Pointez sur
+et ouvrez ActiveSync.
+Pointez sur Outils puis sur Options.
+Pointez sur l'onglet gris Serveur.
+Pointez sur Options pour entrer vos
+coordonnées de connexion et pointez sur
+l'onglet gris Règles pour entrer toutes les
+règles que vous voulez créer.
+5 Pointez sur OK pour valider les changements
+
+71
+
+se connecter et synchroniser
+
+6
+
+erreurs ActiveSync®
+Dans le cas peu probable où ActiveSync® ne
+puisse pas synchroniser entièrement vos
+informations, un message d'erreur ActiveSync®
+apparaît sur votre SPV M2000.
+Pour afficher plus d'informations au sujet de l'erreur
+ActiveSync®, pointez sur le lien qui apparaît sur
+votre écran afin d'obtenir des informations
+supplémentaires concernant l'erreur.
+Note: Certains types d'erreurs peuvent modifier
+votre programme de synchronisation automatique.
+Si vous soupçonnez que votre programme
+automatique a été modifié, effectuez une
+synchronisation manuelle. Celle-ci réinitialise le
+programme de synchronisation automatique.
+
+72
+
+SMS et e-mail
+
+SMS et e-mail
+
+SMS et e-mail
+paramétrer vos comptes e-mail
+Configurez plusieurs comptes e-mail sur votre
+SPV M2000 de façon à rester en contact, à
+chaque fois que vous avez votre SPV M2000 sur
+vous. N'oubliez pas de définir et de nommer
+chaque messagerie séparément, même si elles
+utilisent le même service.
+
+7 Pointez sur Type de compte pour ouvrir une
+liste déroulante et choisir votre type de compte.
+8 Entrez un nom pour le compte e-mail. Pointez
+sur Suivant.
+9 Entrez les détails concernant votre courrier
+entrant et sortant. Pointez sur Terminé et ce
+compte est prêt à fonctionner.
+
+5 Pointez sur Envoyer
+pour envoyer votre
+message. Si vous travaillez hors ligne, le
+message est mis dans votre Boîte d'envoi
+d'où il sera envoyé à votre prochaine
+connexion.
+
+envoyer des e-mails et
+des SMS
+
+Si vous souhaitez transmettre uniquement un
+message simple et bref, vous préférez peut-être
+envoyer un SMS.
+
+Pour vérifier vos e-mails manuellement, pointez
+sur Comptes, puis sur E-mail Outlook.
+
+6 Vous pouvez voir le nombre de caractères
+utilisés au bas de votre message. Pour écrire
+plus de 160 caractères, continuez à écrire et
+votre message entier sera envoyé sous forme
+d'une série de messages liés.
+7 Pointez sur Envoyer
+pour envoyer votre
+SMS.
+Envoyer un SMS depuis l'écran Téléphone:
+
+Avant de pouvoir envoyer des e-mails, vous devez
+établir votre connexion de données puis entrer les
+détails de votre compte e-mail. Pour créer votre
+compte e-mail:
+1 Pointez sur
+à l'écran d'accueil ou pointez
+sur
+et sélectionnez Messagerie.
+2 Pointez sur Comptes pour ouvrir le menu
+contextuel. Pointez sur Nouveau compte.
+3 Un assistant de nouveau compte apparaît.
+Entrez votre adresse e-mail et pointez sur
+Suivant.
+4 L'auto-configuration commence. Cela signifie
+que votre SPV M2000 se connecte
+automatiquement à votre serveur e-mail pour
+télécharger directement les paramètres dont
+vous avez besoin. Si la procédure réussit, vous
+pouvez commencer à envoyer et à recevoir des
+e-mails immédiatement.
+5 Si l'auto-configuration n'a pas réussi, vous
+devez entrer les informations manuellement.
+Vous devrez éventuellement contacter votre
+service informatique pour obtenir certains
+paramètres.
+6 Entrez votre nom, nom d'utilisateur et mot de
+passe pour votre compte e-mail. Pointez sur
+Suivant.
+
+74
+
+Bénéficiez de tous les avantages offerts par
+l'e-mail mobile en restant en contact avec vos
+collègues, vos amis et vos parents.
+Envoyer un e-mail:
+1 Pointez sur
+à l'écran d'accueil . Vous
+pouvez également pointer sur
+et
+sélectionner Messagerie.
+2 Pointez sur Nouveau. Entrez l'adresse du
+destinataire dans le champ À:. Vous pouvez
+également pointer sur
+pour ouvrir une liste
+de vos contacts possédant une adresse e-mail.
+Pointez sur un contact pour l'ajouter à la liste
+À: Pointez sur les doubles flèches pour ouvrir
+tous les champs d'en-tête.
+3 Vous pouvez également ajouter des numéros
+pour envoyer ce message en SMS en même
+temps.
+4 Pointez dans la zone de texte principale et
+tapez votre message. Pour saisir facilement un
+message préprogrammé ou utilisé
+fréquemment, pointez sur Mon texte puis sur
+le texte que vous voulez inclure.
+
+Vous pouvez envoyer un SMS de deux manières:
+soit depuis la Boîte de réception, soit depuis l'écran
+Téléphone.
+Envoyer un SMS depuis votre Boîte de
+réception:
+1 Pointez sur
+à l'écran d'accueil.
+Vous pouvez également pointer sur
+et
+sélectionner Messagerie.
+2 Pointez sur Comptes puis sur SMS.
+3 Pointez sur Nouveau pour commencer un
+nouveau message.
+4 Entrez manuellement le numéro dans le champ
+À: ou pointez sur
+pour ouvrir une liste de
+vos contacts possédant un numéro de
+téléphone mobile. Pointez sur un contact pour
+l'ajouter à la liste À:.
+5 Pointez dans la zone de texte principale et
+tapez votre message. Pour saisir facilement un
+message préprogrammé ou utilisé
+fréquemment, pointez sur Mon texte et puis
+sur le texte que vous voulez inclure.
+
+1 Pointez sur
+et sélectionnez Téléphone.
+2 Pointez sur Outils puis sur Envoyer SMS.
+3 Votre écran Boîte de réception s'ouvre. Entrez
+manuellement le numéro dans le champ À: ou
+pointez sur
+pour ouvrir une liste de vos
+contacts possédant un numéro. Pointez sur un
+contact pour l'ajouter à la liste À:.
+4 Pointez dans la zone de texte principale et
+tapez votre message. Pour saisir facilement un
+message préprogrammé ou utilisé
+fréquemment, pointez sur Mon texte puis sur
+le texte que vous voulez inclure.
+5 Pointez sur Envoyer
+pour envoyer votre
+SMS.
+
+75
+
+SMS et e-mail
+
+SMS et e-mail
+insérer un enregistrement vocal
+Vous pouvez envoyer ou partager rapidement une
+idée avec un correspondant, en insérant une note
+vocale dans un e-mail.
+1 A l'écran du nouvel e-mail, pointez sur
+.
+2 Pointez sur
+pour lancer un nouvel
+enregistrement.
+3 Vous pouvez ajouter plus d'une note vocale. Il
+vous suffit de pointer à nouveau sur
+pour
+enregistrer.
+4 Ecrivez et envoyez votre message.
+
+ajouter un fichier enregistré à
+votre e-mail
+Tous les fichiers enregistrés sur votre SPV M2000
+peuvent être envoyés en pièces jointes avec un
+e-mail.
+
+envoyer une photo ou une
+vidéo en pièce jointe
+Votre SPV M2000 possède un appareil
+photo/vidéo incorporé qui vous permet de
+prendre des photos et des clips vidéos.
+Pour ouvrir votre appareil photo et prendre une
+photo, appuyez sur
+sur le côté gauche de
+votre SPV M2000.
+Pour basculer entre les modes appareil photo
+et vidéo, pointez sur
+ou sur
+.
+Votre écran sert de Viseur, par lequel vous
+pouvez cadrer votre photo ou vidéo. Pour prendre
+un autoportrait, utilisez le miroir situé sous
+l'objectif de l'appareil à l'arrière de votre
+SPV M2000 pour vous positionnez.
+
+objectif
+1 A l'écran du nouveau message, pointez sur
+Outils et sélectionnez Ajouter pièce jointe.
+2 Utilisez les cases Dossier et/ou Type pour
+rechercher plus facilement le fichier que vous
+voulez joindre.
+3 Pointez sur le fichier dès que vous l'avez trouvé
+pour l'ajouter à votre message.
+4 Vous pouvez écrire et envoyer votre message.
+
+76
+
+miroir d'autoportrait
+
+Lorsque l'appareil photo ou la caméra est activé,
+appuyez sur la touche Action pour prendre une
+photo.
+
+Dès que vous avez pris une photo ou une vidéo,
+les icônes suivantes apparaissent sur votre écran:
+Pointez sur cette icône pour prendre une
+autre photo ou vidéo.
+Pointez sur cette icône pour envoyer votre
+message en pièce jointe à un e-mail.
+Pointez sur cette icône pour effacer la photo
+ou vidéo que vous venez de prendre.
+Pointez sur cette icône pour afficher la photo
+ou vidéo que vous venez de prendre.
+Vous pouvez également changer les paramètres
+de votre appareil photo ou caméra.
+1 Ouvrez l'appareil photo en appuyant sur
+.
+2 Pointez sur
+puis sur Options dans le
+Viseur.
+3 L'écran Paramètres de l'appareil photo
+s'affiche.
+4 Choisissez avec votre stylet les paramètres que
+vous voulez changer dans Général, Image,
+Vidéo et Modes.
+5 Paramétrez Ambience de votre image. Si vous
+choisissez Effects, un autre menu déroulant
+apparaît, vous permettant de choisir parmi:
+■ Auto
+■ Lumière du jour
+■ Fluorescent
+■ Incandescent
+■ Nuit
+■ Sépia
+■ Niveaux de gris
+■ Cool
+■ Négatif
+6 Si vous choisissez Composition à l'étape 4, un
+menu déroulant Thème image apparaît, puis
+
+faites défiler les thèmes au moyen de la touche
+Action.
+
+composer un message à
+envoyer plus tard
+Il vous arrive de composer un message mais de
+vouloir l'envoyer plus tard. Dans ce cas, le message
+peut être enregistré dans votre dossier Brouillons ,
+jusqu'à ce que vous soyez prêt à l'envoyer.
+1 Composez votre message de la façon normale.
+2 Au lieu de pointer sur Envoyer, pointez sur OK.
+3 Le message est enregistré dans le dossier
+Brouillons de votre compte SMS ou e-mail.
+Envoyer le message lorsque vous êtes prêt:
+1 Pointez sur
+et sélectionnez Messagerie.
+2 Pointez sur Comptes et choisissez soit e-mail
+soit SMS.
+3 Pointez sur la liste de dossiers et sélectionnez
+Brouillons dans le menu déroulant.
+4 Pointez sur le message que vous voulez
+envoyer pour l'ouvrir.
+5 Editez le message au besoin ou pointez sur
+Envoyer
+pour l'envoyer sur le champ.
+
+recevoir des SMS
+Lorsque vous recevez un SMS, il apparaît sur
+l'écran dans une fenêtre contextuelle. Lisez le
+message puis pointez sur Répondre, Appeler,
+Supprimer ou Fermer.
+Si la fenêtre contextuelle se ferme avant que vous
+n'ayez réagi, pointez sur
+pour la réouvrir.
+
+77
+
+SMS et e-mail
+
+SMS et e-mail
+utiliser ActiveSync® ou un
+serveur e-mail pour contrôler
+vos e-mails
+
+Lorsque vous vous connectez directement à
+un serveur e-mail:
+■
+
+Vous pouvez envoyer et recevoir des e-mails en
+utilisant ActiveSync® ou en vous connectant à
+distance à votre serveur e-mail.
+Pour recevoir des e-mails en utilisant ActiveSync®,
+lisez attentivement le chapitre sur la synchronisation
+et assurez-vous que votre SPV M2000 et votre PC
+sont réglés en conséquence.
+Dès que votre synchronisation e-mail est établie, il
+vous suffit de connecter votre SPV M2000 à votre
+PC et ActiveSync® démarre automatiquement sur
+votre PC et synchronise vos e-mails.
+
+■
+
+■
+
+Durant la synchronisation:
+■
+■
+
+■
+
+■
+
+78
+
+Les messages sont copiés des dossiers de
+courrier de votre Microsoft® Exchange® ou
+Microsoft® Outlook® de votre PC au dossier
+ActiveSync Boîte de réception de votre
+SPV M2000. Par défaut, vous ne recevrez
+que les messages des cinq derniers jours et
+les 100 premières lignes de chaque message.
+Les e-mails du dossier Outlook de votre
+SPV M2000 sont transférés à Exchange® ou
+Outlook® puis envoyés à partir de ces
+programmes.
+Les e-mails des dossiers doivent être
+sélectionnés dans ActiveSync® sur votre PC
+pour être transférés.
+
+Dès que vous avez fini de configurer votre
+compte et que vous vous connectez à votre
+serveur e-mail, les nouveaux messages sont
+téléchargés dans votre dossier Boîte de
+réception. Les messages dans votre boîte
+d'envoi de votre SPV M2000 sont envoyés.
+Les messages que vous recevez de votre
+serveur e-mail sont liés au serveur e-mail et
+non pas à votre PC. Lorsque vous effacez un
+message sur votre SPV M2000, il est effacé
+également du serveur e-mail à la connexion
+suivante.
+Vous pouvez travailler en ligne ou hors ligne. Si
+vous êtes en ligne, vous lisez vos messages et
+répondez tout en étant connecté au serveur
+e-mail. Les messages sont envoyés dès que
+vous activez la commande d'envoi.
+Si vous êtes hors ligne, lorsque vous avez
+téléchargé les en-têtes de nouveaux messages
+ou des messages partiels, vous pouvez vous
+déconnecter du serveur e-mail puis
+sélectionner les messages à télécharger
+complètement. Lors de votre connexion
+suivante, la Boîte de réception télécharge les
+messages entiers que vous avez choisis de
+récupérer et envoie les messages que vous
+avez composés à partir de la boîte d'envoi.
+
+utiliser votre liste de messages
+pour rester organisé
+
+recevoir des convocations à
+des réunions
+
+Les messages que vous recevez sont mémorisés
+dans votre Boîte de réception. Par défaut, les
+messages les plus récents figurent en haut et sont
+en caractères gras.
+
+Lorsque vous acceptez une convocation à une
+réunion qui arrive dans votre Boîte de réception, la
+réunion apparaît immédiatement dans le
+Calendrier de votre SPV M2000 et un message
+est renvoyé à l'organisateur de la réunion à la
+prochaine synchronisation de votre Boîte de
+réception.
+
+Pour lire un message, pointez sur ce message.
+Pour ouvrir une liste d'options, pointez et
+maintenez votre stylet sur le message et
+choisissez parmi:
+■
+■
+■
+■
+■
+■
+■
+■
+■
+
+Nouveau
+Supprimer
+Déplacer...
+Répondre
+Répondre à tous
+Transférer
+Envoyer/recevoir
+Marquer comme non lu
+Sélectionner pour Download
+
+Pointez ici pour ouvrir
+votre liste de dossiers.
+Choisissez parmi:
+■ Boîte de réception
+■ Boîte d'envoi
+■ Brouillons
+■ Éléments supprimés
+■ Éléments envoyés
+
+1 Pointez sur
+et sélectionnez Boîte de
+réception.
+2 Pointez sur la convocation de réunion puis sur
+Accepter.
+
+utiliser votre Boîte de réception
+Lorsque vous pointez sur
+et ouvrez votre Boîte
+de réception, les icônes suivantes signifient que
+vous pouvez:
+vous connecter à votre messagerie
+envoyer et recevoir des e-mails
+Lorsque vous ouvrez un message, les icônes
+suivantes signifient que vous pouvez:
+effacer ce message
+transmettre, répondre à tous
+revenir au message précédent
+aller au message suivant qui n'a pas été lu
+
+79
+
+SMS et e-mail
+
+SMS et e-mail
+recevoir des pièces jointes aux
+messages
+
+afficher vos dossiers de
+messages
+
+Vous pouvez télécharger des pièces jointes aux
+messages sur votre SPV M2000. Lorsque les
+messages ont des pièces jointes, vous verrez un
+message similaire à celui-ci:
+
+Votre SPV M2000 mémorise les messages dans
+les dossiers suivants:
+■
+
+■
+
+■
+
+■
+
+■
+
+Suivez les instructions à l'écran.
+Note: La taille des pièces jointes n'apparaît pas
+sur les messages POP3.
+Pointez sur la pièce jointe pour la visionner.
+IIl existe trois icônes différentes pour les pièces
+jointes:
+Non téléchargé
+Sélectionné pour Download
+Téléchargé
+Note: Vous ne pouvez voir que les pièces jointes
+qui sont compatibles avec votre SPV M2000.
+
+80
+
+Éléments supprimés
+Les messages que vous effacez restent en
+mémoire jusqu'à ce que vous vidiez le dossier.
+Brouillons
+Mémorise les messages que vous enregistrez
+avant de les envoyer.
+Boîte de réception
+Tous les messages reçus arrivent ici.
+Boîte d'envoi
+Les e-mails à envoyer sont stockés ici jusqu'à
+la synchronisation ou la connexion à votre
+serveur e-mail.
+Éléments envoyés
+Mémorise les copies des e-mails que vous
+envoyez.
+
+Note: Si votre compte e-mail prend en charge les
+dossiers, vous pouvez afficher de multiples
+dossiers pour refléter la structure de dossiers que
+vous avez créé sur votre serveur e-mail. Les
+messages que vous téléchargez du serveur sont
+alors placés automatiquement dans les dossiers
+appropriés dans votre SPV M2000.
+
+vous pouvez personnaliser
+votre Boîte de réception
+
+avertissement de message
+Votre SPV M2000 émet un son ou vibre pour
+vous avertir qu'un nouveau message arrive.
+Le nombre de messages non-ouverts est affiché
+sur l'écran d'accueil, si les paramètres de votre
+écran d'accueil le spécifient, et un symbole
+d'enveloppe
+apparaît en haut de l'écran.
+Vous êtes averti de différentes façons des types
+de messages que vous recevez.
+■
+
+1 Pointez sur
+et sélectionnez Boîte de
+réception.
+2 Pointez sur Outils puis sélectionnez Options.
+3 Vous verrez l'écran suivant:
+
+■
+
+Pour afficher les dossiers de messages:
+1 Pointez sur
+et sélectionnez Boîte de
+réception.
+2 Pointez sur Boîte de réception dans le coin
+supérieur gauche de votre écran. Une liste
+déroulante de vos dossiers apparaît. Pointez
+sur l'un d'eux pour l'ouvrir.
+
+■
+
+4 Modifiez les paramètres puis pointez sur OK.
+
+SMS
+Si votre SPV M2000 est éteint lorsqu'un SMS
+arrive, vous êtes averti lorsque vous l'allumez.
+Un symbole d'enveloppe fermée
+indiquant
+un SMS non ouvert, apparaît en haut de l'écran,
+accompagné d'un avertissement sonore de
+SMS. Vous pouvez voir les nouveaux SMS dans
+Boîte de réception.
+messages e-mails
+Lorsque vous vous connectez à votre serveur
+e-mail, vous êtes averti des nouveaux e-mails
+par le symbole d'enveloppe fermée
+en
+haut de l'écran, accompagné par un
+avertissement sonore d'e-mail. Vous pouvez
+voir les nouveaux e-mails dans Boîte de
+réception.
+Orange Box
+Le symbole
+affiché en haut de l'écran
+vous avertit de l'arrivée de nouveaux messages
+sur votre Orange Box. Vous pouvez écouter
+vos nouveaux messages vocaux en appuyant
+et en maintenant la touche 1.
+
+81
+
+SMS et e-mail
+
+SMS et e-mail
+Pour choisir un avertissement sonore:
+1 Pointez sur Paramètres puis Sons et
+notifications.
+2 Sélectionnez l'onglet Notifications pour faire
+votre choix, puis appuyez sur OK.
+
+4
+5
+
+effacer des e-mails de votre
+SPV M2000
+Lorsque vous synchronisez les données entre
+votre SPV M2000 et votre PC, ActiveSync® assure
+que les mêmes informations apparaissent sur les
+deux appareils.
+Dans un souci de cohérence, si vous effacez un
+e-mail de votre SPV M2000, il est effacé
+également de votre Boîte de réception Outlook , à
+votre prochaine synchronisation.
+
+6
+7
+
+SPV M2000. Pour ce faire, pointez sur Boîte
+de réception en haut à gauche de votre écran.
+Dans la liste déroulante, sélectionnez Éléments
+supprimés.
+Une liste de tous les e-mails et SMS effacés
+apparaît. A ce stade, pointez et maintenez votre
+stylet sur le message que vous voulez effacer
+de façon permanente et sélectionnez
+Supprimer. Vous pouvez également pointer sur
+Outils de n'importe où si vous souhaitez effacer
+tous les messages.
+Sélectionnez Jeter les éléments supprimés et
+appuyez sur la touche Entrée.
+A présent que l'e-mail a été retiré de la
+mémoire, il ne sera pas effacé de votre PC à la
+prochaine synchronisation.
+
+sauvegarder vos e-mails
+envoyés
+
+envoyer des e-mails
+manuellement
+
+Il peut s'avérer utile de garder une copie de vos
+e-mails à titre de référence. Une fois cette fonction
+paramétrée, tous les e-mails que vous envoyez
+seront mis dans votre dossier Éléments envoyés.
+
+Si vous envoyez peu d'e-mails, vous préférerez
+peut-être les envoyer manuellement après les avoir
+écrits.
+
+1 Pointez sur
+et sélectionnez Boîte de
+réception. Pointez sur Outils.
+2 Pointez sur Options.
+3 Copier e-mail envoyé dans le dossier Éléments
+envoyés.
+4 Vous pouvez également choisir d'inclure une
+copie du message d'origine en répondant à un
+e-mail. Faites simplement défiler jusqu'à cette
+option et cochez la case avec votre stylet.
+5 Dès que vous avez fini, pointez sur OK pour
+valider votre sélection.
+Pour voir vos e-mails envoyés:
+
+Si vous ne voulez pas que des e-mails soient
+effacés de votre Boîte de réception, vous devez
+faire en sorte qu'ils ne se trouvent pas dans le
+dossier Éléments supprimés de votre SPV
+M2000 avant de le synchroniser.
+1 Pointez sur
+et ouvrez Boîte de réception.
+2 Pointez et maintenez votre stylet sur le
+message que vous voulez effacer et
+sélectionnez Supprimer. L'e-mail est effacé de
+votre Boîte de réception.
+3 Pour empêcher qu'un e-mail ne soit également
+effacé de votre PC, vous devez le retirer
+complètement de la mémoire de votre
+
+82
+
+1 Pointez sur
+et sélectionnez Boîte de
+réception. Pointez sur Boîte de réception en
+haut à gauche de votre écran.
+2 Sélectionnez Éléments envoyés dans la liste
+déroulante pour ouvrir une liste de tous les
+messages que vous avez envoyés.
+
+1 Ecrivez votre e-mail de façon normale et pointez
+sur Envoyer
+pour mettre votre e-mail dans
+votre Boîte d'envoi.
+2 Vous êtes ramené à Boîte de réception.
+Pointez sur Boîte de réception en haut à
+gauche de votre écran et sélectionnez Boîte
+d'envoi dans la liste déroulante.
+3 Vos e-mails apparaissent en ordre consécutif.
+Pointez sur .
+4 Dialling... apparaît en haut de votre écran.
+A mesure que vos e-mails sont envoyés, vous
+voyez:
+■ Connexion...
+■ Connexion en cours...
+■ Envoi et réception
+■ Envoi courrier
+■ 1 sur 1 réception/envoi
+Ceci vous permet de voir la progression de
+l'envoi et de la réception.
+5 A mesure que vos messages sont envoyés, ils
+disparaissent dans votre Boîte d'envoi.
+Note: Au point 1, si vous êtes connecté, les
+messages sont envoyés immédiatement.
+
+83
+
+7
+MMS
+
+84
+
+MMS
+
+MMS
+Vous allez très vite être capable de créer et
+d'échanger vos propres messages MMS,
+accompagnés de photos, de vidéos, de textes et
+de séquences audio.
+
+lancer MMS Composer
+
+boîtes de messages
+
+Boîte de réception
+
+Lorsque le programme démarre, il vous permet
+d'accéder à vos boîtes de messages. Utilisez le
+menu déroulant pour sélectionner celle que vous
+voulez afficher. Les diverses boîtes de messages
+sont les suivantes:
+
+Pour accéder à votre Boîte de réception, tapez
+sur Messagerie dans le menu Démarrer. Tapez
+avec le stylet en haut à gauche du menu, et
+sélectionnez un dossier.
+
+■
+
+■
+
+Répondre tous
+Répond à toutes les personnes inclues dans le
+message initial.
+Transférer
+Faire suivre le message à quelqu'un d'autre.
+
+■
+
+Pour lancer le programme, appuyez sur
+Démarrer, puis sur Messagerie. Appuyez sur
+Nouveau et un nouveau MMS s'ouvre
+automatiquement.
+
+■
+
+■
+
+■
+
+sortir de MMS Composer
+
+■
+
+l'écran d'accuei
+L'écran d'accueil offre une autre façon d'accéder
+à MMS Composer. Cette page vous indique
+automatiquement si vous avez reçu de nouveaux
+messages. Il vous suffit d'appuyez sur la ligne
+MMS et le programme démarre.
+
+Marquer à télécharger
+
+Les messages dans le dossier Brouillons
+n'affichent que les options Nouveau, Supprimer,
+Marquer comme lu et Marquer à télécharger.
+Les messages dans les dossiers Boîte de
+réception et Éléments envoyés affichent les
+options suivantes:
+■
+
+Nouveau
+Crée un nouveau message.
+
+■
+
+Supprimer
+Supprime le message.
+
+■
+
+■
+
+86
+
+Marquer comme non lu
+Fait apparaître le message comme un message
+nouvellement reçu.
+
+■
+
+Pour quitter le programme, pointez sur le X en
+haut à droite de l'écran lorsque n'importe quelle
+boîte de messages est affichée, ou tapez
+Modifier at puis Annuler.
+
+Envoyer/recevoir
+Por envoyer et recevoir vos messages.
+
+■
+
+Custom:
+Pour créer votre propre mesage MMS.
+Boing!:
+Pour créer une carte d'anniversaire.
+Love Card:
+Pour la personne spéciale dans votre vie
+Smile:
+Pour f`éliciter quelqu'un.
+
+Déplacer
+Vous permet de déplacer le message à un
+autre compte
+Répondre
+Vous permet de répondre au message en
+envoyant le vôtre.
+
+87
+
+MMS
+
+MMS
+comment créer un message
+le menu
+Le menu en bas de l'écran contient deux options,
+Nouveau et Outils.
+■
+
+Modifier
+Choisissez cette option pour modifier un
+message (consultez la section suivante pour
+avoir plus de détails).
+
+■
+
+Vous créez des messages en combinant diverses diapositives. Chaque diapositive comprend une
+photo ou une vidéo, une séquence audio et un texte. Suivez les étapes suivantes pour créer un
+message.
+
+Outils
+Lorsque vous sélectionnez cette option, vous
+aurez deux choix: Texte et Option Envoyer
+Cette deuxième option affiche simplement les
+informations sur la propriété intellectuelle et le
+programme.
+
+Choisissez Outils puis Options Envoyer pour
+afficher et modifier les divers paramètres du
+programme:
+■
+
+Activez le champ Envoyer le message
+maintenant pour envoyer le message
+immédiatement.
+
+■
+
+Choisissez l'expiration du message.
+
+■
+
+Vous pouvez définir la priorité des messages
+
+Appuyez sur OK lorsque vous êtes satisfait(e)
+avec les paramètres.
+
+88
+
+Pointez ici pour choisir
+une photo ou une
+vidéo.
+
+Pointez ici pour entrer un
+message texte.
+
+Pointez ici pour inclure
+une séquence audio.
+Merci de vous référer à la
+page 87 pour plus
+d'informations sur la
+modification de votre
+message MMS
+
+Le menu Options vous permet
+de changer la position du texte
+et de parametrer les options
+Envoyer.
+
+89
+
+MMS
+
+MMS
+comment ajouter une photo ou une vidéo
+
+ajouter un texte
+
+Vous pouvez ajouter à chaque diapositive individuelle soit une image fixe, soit une séquence vidéo.
+Après avoir pointé sur la zone pour ajouter une photo ou une vidéo, vous pourrez choisir exactement ce
+que vous voulez inclure.
+
+Vous pouvez ajouter un texte à n'importe quelle
+diapositive. Vous pouvez soit entrer un nouveau
+texte avec le clavier, soit utiliser un texte préenregistré. Les textes préenregistrés sont des
+mots ou des phrases enregistrés antérieurement.
+
+Ce menu déroulant
+vous permet de
+sélectionner un
+emplacement
+spécifique qui contient
+des photos ou des
+vidéos.
+
+Choisissez soit Album soit
+Vidéos sur ce menu
+déroulant. Vous pouvez
+ajouter soit une seule photo,
+soit une séquence vidéo à
+chaque diapositive
+individuelle.
+
+Ajoute la photo ou la vidéo sélectionnée à la
+diapositive.
+
+Vous ramène à l'écran précédent.
+
+1 Pointez sur la case de texte et le clavier
+s'affiche à l'écran.
+2 Saisissez votre MMS en tapant sur les lettres
+au moyen du stylet et puis appuyez sur
+.
+
+Affiche des photos ou des vidéos comme une
+liste de fichiers.
+Tapez dans l'écran du texte entré et maintenez le
+
+Pointez sur la photo ou sur la
+séquence vidéo spécifique
+que vous voulez ajouter.
+
+Affiche des photos ou des vidéos comme une
+liste de fichiers.
+
+stylet sur le champ pour ajouter encore d'options.
+■
+
+■
+
+Affiche des photos individuelles.
+Pointez et maintenez le stylet sur un fichier pour afficher les options Info fichier et Supprimer.
+
+■
+
+■
+
+Info fichier
+Affiche le nom du fichier, la résolution, la date et la taille d'une photo. Lorsque vous affichez les
+informations sur un fichier vidéo, la durée de la vidéo est également indiquée.
+Supprimer
+Supprime le fichier.
+
+90
+
+■
+
+Nouveau
+Vous pouvez écrire un nouveau SMS
+Editer
+Vous pouvez modifier un SMS existant.
+Supprimer
+Pour supprimer le texte déjà sélectionné.
+
+Vous permet de capturer une nouvelle photo ou
+une nouvelle vidéo. Lorsque vous voulez prendre
+une photo, appuyez sur la touche Entrée de votre
+téléphone. Lorsque vous voulez filmer une vidéo,
+appuyez sur la touche Entrée pour commencer
+l'enregistrement. Appuyez de nouveau dessus
+pour arrêter. Cette fonction n'est pas toujours
+disponible avec toutes les versions du
+programme.
+
+91
+
+MMS
+
+MMS
+ajouter une séquence audio
+Vous pouvez ajouter des séquences audio
+individuelles à chaque diapositive. Vous pouvez
+soit inclure un fichier audio existant, soit en
+enregistrer un nouveau.
+
+1 Sur le menu déroulant, sélectionnez un
+emplacement qui contient des fichiers audio.
+2 Pointez sur le fichier que vous aimeriez utiliser.
+Vous pouvez afficher les informations sur ce
+fichier en procédant d'une façon semblable à
+celle décrite pour les photos et les vidéos.
+Pointez et maintenez le stylet sur un fichier, puis
+choisissez Info fichier. Vous pouvez également
+supprimer le fichier.
+
+choisir si vous voulez la déplacer en avant
+ou en arrière. Vous pouvez également choisir
+de la supprimer complètement du message.
+
+Pointez sur ce bouton pour commencer à
+enregistrer.
+
+Pointez sur ce bouton pour arrêter d'enregistrer.
+
+commandes du menu
+Le nom, la durée, la date et la taille du fichier sont
+affichés.
+Vous pouvez utiliser les commandes de lecture
+pour écouter la séquence audio.
+
+Les commandes suivantes sont disponibles en
+bas de l'écran.
+■
+■
+■
+■
+■
+
+Les commandes 'Lecture/Pause' et 'Arrêt' sont
+disponibles.
+
+Pointez sur ce bouton pour afficher les
+commandes qui vous permettent d'enregistrer
+une nouvelle séquence audio.
+
+92
+
+Modifier
+■ Insérer diapositive
+Ajoute une nouvelle diapositive vide à votre
+message.
+■ Nouveau à partir d'un modèle...
+■ Sauvegarder comme modèle
+■ Supprimer la diapositive
+Supprime la diapositive courante de votre
+message.
+■ Organiser diapositives
+Vous permet d'organiser l'ordre des
+diapositives et affiche le temps pour chaque
+diapositive. Pointez sur une diapositive et
+glissez-la pour changer sa position. Ou bien,
+vous pouvez pointer et maintenir le stylet sur
+la diapositive que vous voulez déplacer, puis
+
+■
+
+■
+
+Vous pouvez également modifier le temps
+d'affichage d'une diapositive. Pointez sur la
+flèche pertinente pour augmenter/diminuer le
+temps. Si une séquence audio est incluse,
+vous ne pouvez pas modifier le temps (la
+diapositive sera affichée pendant la durée de
+la séquence audio incluse).
+Ajouter vCard...
+Ajouter vCalendar...
+Capturer image
+Acquérir élément vidéo
+Annuler
+Annule votre message tout entier (on vous
+invitera à l'enregistrer).
+
+Options
+■ Texte
+Choisissez Haut ou Bas
+■ Option Envoyer
+
+93
+
+MMS
+
+8
+Donne un aperçu de votre message.
+
+Pointez ici lorsque vous êtes prêt à envoyer votre
+message.
+
+Ces boutons vous permettent de naviguer parmi
+les diverses diapositives dans votre message.
+
+comment afficher un message
+Vous avez plusieurs options pour afficher un
+message reçu, ou pour visualiser un message
+que vous créez.
+Utilisez les commandes de lecture
+(Lecture/Pause, Arrêt) pour visualiser le message.
+Vous pouvez mettre sur Pause n'importe quand
+pendant la lecture.
+Pointez sur Objets pour afficher une liste de
+chaque fichier.
+Si vous souhaitez enregistrer un fichier particulier,
+pointez sur Outils puis choisissez Sauvegarder.
+
+Vous pouvez également visualiser les diapositives
+manuellement. Utilisez les boutons de navigation
+pour faire défiler le message.
+
+94
+
+comment envoyer un message
+Maintenant que vous avez fini de créer votre
+message et que vous avez pointé sur le champ A:
+et il vous suffit d'entrer quelques informations.
+1 Entrez le numéro de téléphone du destinataire.
+Pointez sur À: puis sur Téléphone. Vous
+pouvez afficher les contacts mémorisés dans le
+téléphone.
+2 Entrez l'adresse e-mail du destinataire. Tapez
+sur E-mail pour afficher votre répertoire.
+3 tapez sur OK le sujet de votre message.
+Lorsque vous êtes prêt, pointez sur Envoyer.
+Sinon, pointez sur Annuler.
+
+caractéristiques
+supplémentaires
+
+caractéristiques supplémentaires
+
+caractéristiques supplémentaires
+jouer sur votre SPV M2000
+Quand vous avez un moment de libre, amusezvous avec les jeux que nous avons déjà installés
+sur votre SPV M2000.
+1 Pointez sur
+et sélectionnez Programmes.
+2 Ouvrez jeux.
+3 Choisissez entre Jawbreaker et Solitaire.
+Jawbreaker
+
+Solitaire
+Le but du Solitaire est d'utiliser toutes les cartes
+du jeu pour créer quatre piles en ordre ascendant,
+en commençant par les as.
+Vous gagnez dès que toutes les cartes sont
+empilées.
+Utilisez votre stylet pour glisser-déplacer d'un
+endroit à un autre et pointez sur le jeu de cartes
+pour retourner le groupe suivant.
+
+Le but de Jawbreaker est de vider l'écran en
+sélectionnant des groupes de billes de la même
+couleur et en les détruisant. Vous gagnez dès que
+toutes les billes ont disparu ou qu'il ne vous reste
+aucun coup.
+Utilisez simplement votre stylet pour pointer sur
+les groupes de billes de la même couleur. Plus il y
+a de billes dans un groupe, plus vous marquez de
+points.
+
+Déplacez les as des sept piles vers les espaces
+en haut de l'écran et jouez à partir de là.
+Note: La carte qui est tournée vers le haut peut
+toujours être jouée.
+
+Pointez sur Jeu pour ouvrir les options du jeu et
+sur Info pour voir vos statistiques.
+
+96
+
+afficher des fichiers Microsoft®
+PowerPoint® et Adobe®
+Acrobat®
+En utilisant la suite de bureau ClearVue vous
+pouvez afficher des fichiers pdf Adobe® Acrobat®
+et afficher et éditer des présentations en
+PowerPoint® sur votre SPV M2000.
+Afficher un fichier pdf:
+1 Pointez sur
+et sélectionnez Programmes.
+2 Pointez sur ClearVue PDF.
+3 Pointez sur Fichier puis sur Ouvrir. Localisez
+avec votre stylet le fichier que vous voulez
+ouvrir. Vous pouvez mettre des fichiers pdf sur
+votre SPV M2000 en utilisant ActiveSync® ou
+des pièces jointes aux e-mails.
+4 Le fichier pdf s'ouvre. Utilisez les barres de
+défilement pour le visualiser ou pointez sur
+Affichage puis sur Zoom et choisissez un
+pourcentage. Vous pouvez également pointer
+et maintenir votre stylet sur l'écran pour vous
+déplacer sur le document.
+Orange vous recommande de changer vos
+paramètres de conversion de fichier par défaut de
+sorte que les fichiers transférés de votre PC à
+votre SPV M2000 ne soient pas changés.
+1 Ouvrez ActiveSync® sur votre PC et cliquez sur
+Outils puis sur Options.
+2 Cliquez sur l'onglet Règles et sélectionnez
+Paramètres de conversion.
+3 Choisissez l'onglet Ordinateur à Dispositif.
+
+4 Sélectionnez Présentation Microsoft
+PowerPoint dans la liste et cliquez sur
+Modifier.
+5 Choisissez Ne pas convertir (*.ppt) dans la
+liste déroulante puis cliquez trois fois sur OK
+pour revenir à l'écran ActiveSync®.
+Ouvrir une présentation en PowerPoint®:
+1 Pointez sur
+et sélectionnez Programmes.
+2 Pointez sur ClearVue PPT.
+3 Pointez sur Fichier puis sur Ouvrir. Localisez
+avec votre stylet le fichier que vous voulez
+ouvrir. Vous pouvez transférer des fichiers
+PowerPoint® sur votre SPV M2000 en utilisant
+ActiveSync® ou télécharger des pièces jointes
+aux e-mails.
+4 Le fichier s'ouvre.
+Note: Les présentations s'ouvrent si elles sont
+créées en PowerPoint® 97, PowerPoint® 2000 et
+PowerPoint® 2002 (XP).
+En vue normale, vous pouvez:
+■ choisir l'image affichée dans la fenêtre en
+sélectionnant la diapositive dans la liste.
+■ sélectionner quelles diapositives vont être
+utilisées dans votre diaporama en cochant et
+décochant les cases avec votre stylet.
+■ monter ou descendre une diapositive dans
+l'ordre de la présentation.
+En vue trieuse de diapositives, vous pouvez:
+■ trier vos diapositives en utilisant votre stylet
+pour les glisser-déplacer ou en pointant sur
+les icônes de déplacement des diapositives
+
+97
+
+caractéristiques supplémentaires
+
+caractéristiques supplémentaires
+
+■
+
+■
+
+vers le haut et vers le bas.
+choisir quelles diapositives vont être incluses
+dans votre diaporama.
+faire un zoom avant en cliquant deux fois sur
+une diapositive pour la voir de plus près.
+
+Créer un diaporama de la façon suivante:
+1 Pointez sur Configuration et sélectionnez
+Configurer le diaporama.
+2 Dans Diaporamas, vous pouvez choisir quelles
+diapositives sont utilisées pour la présentation.
+3 Dans Défilement diapositives, vous pouvez
+choisir comment vos diapositives avancent:
+■ Manuel (vous pointez sur l'écran pour
+passer à la diapositive suivante).
+■ Use minutage existant (utilisez les
+temporisations déjà enregistrées pour cette
+présentation).
+Naviguer dans une présentation:
+■
+
+■
+
+Pointez sur l'écran pour avancer une
+diapositive.
+Utilisez le bouton de navigation pour avancer
+ou reculer d'une diapositive.
+
+utiliser toujours le logiciel le plus
+récent grâce au programme
+Downloads
+Downloads permet à Orange de mettre à
+disposition sur un serveur de nouveaux
+programmes et mises à jour que vous pourrez
+télécharger directement depuis votre SPV M2000.
+
+gérer votre carte SIM
+Pour que vous puissiez gérer vous-même votre
+carte SIM, le Gestionnaire SIM vous permet de
+déplacer, éditer, copier et effacer les contacts
+qu'elle contient.
+1 Pointez sur
+et sélectionnez Programmes.
+2 Sélectionnez Gestionnaire SIM .
+3 Vous voyez tous les contacts de votre carte
+SIM apparaître sur l'écran.
+4 Glissez votre stylet sur quelques contacts pour
+faire des sélections multiples puis pointez sur
+un contact sélectionné ou pointez et maintenez
+votre stylet sur un contact.
+5 Un menu contextuel apparaît avec les options
+ci-dessous. Il vous suffit de pointer sur votre
+choix:
+■ Appeler
+■ Modifier
+■ Eff`acer
+■ Sauvegarder vers Contacts
+A partir du Gestionnaire SIM , vous pouvez
+également ajouter de nouveaux contacts en
+
+98
+
+tapant sur Nouveau ou utiliser Outils pour:
+■ enregistrer les contacts sélectionnés dans la
+mémoire de votre SPV M2000
+■ sélectionner tous les contacts de votre SIM
+■ voir une liste complète de vos propres
+numéros
+
+utiliser votre SPV M2000
+comme modem
+Votre SPV M2000 peut facilement servir de
+modem pour votre PC ou un autre appareil.
+1
+2
+3
+4
+
+Vérifiez qu'ActiveSync est bien désactivé.
+Pointez sur
+et sélectionnez Programmes.
+Pointez sur Modem radio.
+Choisissez votre type de connexion et, au
+besoin, branchez les câbles.
+5 Pointez sur Démarrer.
+
+utiliser Calendrier, Tâches et
+Notes pour rester organisé
+Un avantage clé de l'utilisation de ces fonctions
+supplémentaires est qu'elles peuvent toutes être
+synchronisées avec votre PC afin que vous
+disposiez toujours d'informations à jour.
+
+calendrier
+Utiliser votre calendrier:
+1 Pointez sur
+et sélectionnez Calendrier.
+2 Choisissez votre affichage parmi:
+liste des rendez-vous
+jour
+semaine
+mois
+année
+3 Pour ajouter un nouveau rendez-vous, pointez
+sur Nouveau. Entrez les informations
+appropriées dans les différents champs.
+4 Pointez sur l'onglet gris Notes en bas de
+l'écran pour ajouter une note à votre rendezvous. Pour ajouter une note vocale, pointez
+simplement sur
+et enregistrez vos réflexions
+de la façon normale. Pour ajouter un dessin,
+pointez sur
+et dessinez votre illustration.
+Quand vous êtes dans le calendrier, utilisez la
+barre supérieure pour naviguer entre les dates.
+
+Vous pouvez également personnaliser votre
+Calendrier en fonction de votre propre gestion.
+Pointez sur Outils et sélectionnez Options dans
+Calendrier pour paramétrer:
+■ 1er jour de la semaine
+■ vue de la semaine
+■ afficher des intervalles de 30 min
+■ afficher les numéros des semaines
+
+99
+
+caractéristiques supplémentaires
+
+caractéristiques supplémentaires
+■
+
+■
+■
+
+activer les rappels pour des nouveaux
+éléments
+afficher les icônes
+envoyer dles demandes de réunion via
+ActiveSync® ou SMS.
+
+tâches
+Gérez vos activités et vos pense-bêtes en utilisant
+les tâches.
+Créer une nouvelle tâche:
+
+envoyer des demandes de
+réunions
+Utilisez Calendrier pour organiser des réunions
+avec d'autres utilisateurs d'Outlook® ou Pocket
+Outlook® et envoyer des convocations de
+réunions.
+1 Créez un rendez-vous de la façon normale.
+2 Masquez le panneau de saisie et pointez sur
+Participants.
+3 A partir de la liste d'adresses e-mail qui figure
+dans votre liste de contacts, sélectionnez les
+participants à la réunion.
+4 Un avis de réunion est créé automatiquement
+et placé dans votre dossier de votre Boîte
+d'envoi..
+Pour plus d'informations, veuillez utiliser la
+fonction Aide de votre SPV M2000.
+
+1 Pointez sur Tâches sur votre écran d'accueil.
+2 Pointez sur Nouveau.
+3 Entrez les informations que vous voulez inclure
+dans cette tâche.
+Masquez le panneau de saisie pour révéler plus
+de champs d'information.
+4 Pointez sur l'onglet gris Notes au bas de
+l'écran pour ajouter des notes écrites, des
+notes vocales ou des dessins à votre tâche.
+5 Pointez sur OK pour valider votre nouvelle
+tâche.
+Pour créer rapidement une nouvelle tâche, vous
+pouvez simplement pointer sur la case et entrer
+un objet.
+Pour changer la façon dont vos tâches sont
+affichées, pointez sur Outils puis sur Options.
+
+notes
+Créez des notes pour capturer vos réflexions,
+mémoriser des rappels, exprimer des idées,
+dessiner et même prendre des coordonnées de
+contacts.
+Pour créer une note, pointez sur Nouveau à partir
+de l'écran d'accueil et sélectionnez Notes.
+
+100
+
+AvantGo
+
+gérer votre mémoire
+
+Vous pouvez utiliser AvantGo pour accéder au
+contenu personnalisé et à des milliers de sites
+web renommés.
+
+La mémoire de votre SPV M2000 se partage
+entre Sauvegardes et Programmes. L'affectation
+de mémoire est faite automatiquement par votre
+SPV M2000, toutefois vous pouvez voir la
+capacité disponible.
+
+Vous pouvez vous inscrire aux canaux AvantGo à
+partir de votre SPV M2000 puis, lorsque vous
+synchronisez ou connectez à Internet, vous
+pouvez télécharger le contenu.
+Vous inscrire à AvantGo:
+1 Activez AvantGo dans ActiveSync sur votre PC.
+2 Ouvrez Fichier Explorer sur votre
+SPV M2000 et pointez sur l'icône
+Favoris.
+3 Pointez sur AvantGo Canaux.
+4 Laissez-vous guider par l'écran. Vous êtes
+invité à synchroniser votre SPV M2000 avec
+votre PC.
+Pour plus d'assistance, veuillez consulter
+http://avantgo.com/aide
+
+1
+2
+3
+4
+
+Pointez sur
+et sélectionnez Paramètres.
+Pointez sur l'onglet gris Système.
+Pointez sur Mémoire.
+lUtilisez les onglets Principal, Carte mémoire et
+Programmes exécutés pour afficher la mémoire
+actuellement utilisée.
+
+Vous pouvez créer de l'espace mémoire
+supplémentaire en transférant des fichiers sur une
+carte SD. Utilisez l'Explorateur de fichiers dans
+le menu Programmes pour déplacer vos fichiers.
+Vous pouvez également régler votre SPV M2000
+pour qu'il enregistre automatiquement vos
+nouvelles notes, documents en Pocket Word et
+feuilles de calcul en Pocket Excel dans votre carte
+mémoire. Pointez sur Outils puis sur Options
+dans le programme concerné.
+Vous pouvez également envisager de déplacer
+vos pièces jointes aux e-mails.
+1 Dans Boîte de réception, pointez sur Outils
+puis sur Options.
+2 Pointez sur l'onglet gris Stockage.
+3 Cochez avec votre stylet la case Stockage
+documents joints dans carte mémoire.
+4 Toutes les nouvelles pièces jointes seront
+
+101
+
+caractéristiques supplémentaires
+stockées dans votre carte SD.
+Vous pouvez en outre effacer votre historique
+Internet pour libérer de la mémoire.
+1 Dans Internet Explorer, pointez sur Outils puis
+sur Options.
+2 Pointez sur Supprimer Fichiers et sur
+Supprimer historique.
+Pour libérer de la mémoire, vous pouvez aussi
+effacer de grands fichiers.
+1 Pointez sur
+puis sur Rechercher.
+2 Pointez sur Type et sélectionnez Plus de 64
+KB.
+3 Pointez sur OK.
+4 Vous pouvez alors effacer de la liste les fichiers
+dont vous n'avez plus besoin.
+
+102
+
+9
+personnaliser
+votre SPV M2000
+
+personnaliser votre SPV M2000
+
+personnaliser votre SPV M2000
+définir vos touches de
+raccourci en fonction de
+vos besoins
+Utilisez les huit touches de raccourci de votre
+SPV M2000 de la manière la plus efficace en
+personnalisant leurs fonctions.
+1 Pointez sur
+et sélectionnez Paramètres.
+2 Pointez sur Boutons.
+3 Les boutons sont illustrés ci-dessous:
+1
+2
+3
+4
+5
+6
+7
+8
+
+Vous pouvez également adapter les touches de
+défilement vers le haut et vers le bas.
+
+changer votre écran d'accueil
+
+1 Pointez sur l'onglet gris Contrôle Haut/Bas.
+2 Réglez la temporisation avant la première
+répétition et le délai de répétition.
+
+Orange fournit deux images pouvant être utilisées
+dans votre écran d'accueil. Vous pouvez
+également utiliser n'importe quelle photo
+mémorisée dans votre SPV M2000.
+
+adapter votre menu Démarrer
+Utilisez les menus de votre SPV M2000 de la
+manière la plus efficace en changeant leur ordre
+ou leur contenu.
+1 Pointez sur
+et sélectionnez Paramètres.
+2 Pointez sur Menus.
+3 Vous voyez une liste de fonctions pouvant
+figurer dans votre menu Démarrer qui est le
+menu qui apparaît lorsque vous pointez sur
+à l'écran d'accueil.
+4 Cochez ou décochez les cases avec votre
+stylet pour personnaliser votre menu Démarrer.
+Vous pouvez également changer les options
+disponibles dans le menu Nouveau qui est le
+menu contextuel qui apparaît lorsque vous
+pointez sur Nouveau à l'écran d'accueil.
+
+4 Pointez sur le bouton que vous souhaitez
+changer.
+5 Pointez sur Affecter un programme et
+choisissez la fonction de raccourci dans le
+menu déroulant.
+6 Pointez sur OK lorsque vous êtes satisfait des
+fonctions de vos touches de raccourci.
+
+104
+
+1
+2
+3
+4
+
+Pointez sur
+et sélectionnez Paramètres.
+Pointez sur Menus.
+Pointez sur l'onglet gris Nouveau.
+Cochez ou décochez les cases avec votre
+stylet pour personnaliser votre menu Nouveau.
+
+1 Pointez sur
+et sélectionnez Paramètres.
+2 Pointez sur Aujourd'hui.
+3 Pointez sur Colline verdoyante, Spirale ou
+Windows par défault pour utiliser une image
+préprogrammée ou cochez la case Utiliser
+cette image comme papier peint, puis
+pointez sur Parcourir.
+4 Parcourez vos dossiers d'images et pointez sur
+la photo que vous voulez utiliser comme fond
+d'écran.
+5 Pointez sur OK.
+Vous pouvez également changer l'ordre dans
+lequel vos principales fonctions apparaissent sur
+votre écran d'accueil.
+1
+2
+3
+4
+
+Pointez sur
+et sélectionnez Paramètres.
+Pointez sur Aujourd'hui.
+Pointez sur l'onglet gris Éléments.
+Cochez ou décochez avec votre stylet les
+rubriques que vous voulez voir apparaître sur
+votre écran d'accueil.
+5 Pour changer l'ordre, pointez sur la rubrique
+que vous voulez déplacer. Pointez sur Monter
+ou Descendre et le nouvel ordre apparaît.
+6 Pointez sur OK pour valider vos changements.
+
+changer les tonalités de
+sonnerie disponibles
+Votre SPV M2000 dispose d'une longue liste de
+tonalités de sonnerie. Vous pouvez sélectionner
+les sonneries qui seront proposées dans les
+autres programmes de votre SPV M2000.
+Pour ajouter ou supprimer des tonalités de
+sonnerie de la liste abrégée, plus vite disponible:
+1 Pointez sur
+et sélectionnez Paramètres.
+2 Pointez sur l'onglet gris Système.
+3 Pointez sur Ajouter Ton de Sonnerie. Votre
+SPV M2000 ouvre une longue liste de tonalités
+de sonnerie.
+4 Faites défiler la liste et cochez ou décochez les
+tonalités de sonnerie.
+5 Pour écouter une tonalité de sonnerie, pointez
+sur la tonalité et appuyez sur l'icône de lecture.
+6 Dès que toutes les tonalités de sonnerie
+voulues ont été sélectionnées, pointez sur OK.
+7 Pour choisir votre tonalité de sonnerie, référezvous à la page suivante.
+
+105
+
+personnaliser votre SPV M2000
+changer les paramètres de
+votre SPV M2000
+Modifiez le type de sonnerie, le son du clavier, les
+alertes sonores ainsi que le volume, en utilisant
+les paramètres du mobile.
+1 Pointez sur
+et sélectionnez Paramètres.
+2 Pointez sur Téléphone.
+3 Choisissez le type de sonnerie dans les zones
+déroulantes.
+4 Choisissez votre tonalité de sonnerie. Pour
+l'écouter, appuyez sur lecture.
+5 Pointez sur Autres Paramètres pour régler le
+volume de la tonalité de sonnerie et choisir
+quels avertissements vous voulez recevoir en
+tapant sur l'onglet gris approprié.
+6 Pointez sur OK pour valider vos changements.
+Vous pouvez également régler votre SPV M2000
+pour prendre les appels automatiquement.
+1
+2
+3
+4
+
+Pointez sur
+et sélectionnez Paramètres.
+Pointez sur Téléphone.
+Pointez sur l'onglet gris Plus.
+Cochez la case Répondre aux appels entrants
+d'entrée sans presser Parler après 3
+sonneries.
+5 Pointez sur la zone numérique pour ouvrir le
+menu déroulant et sélectionnez à quel moment
+votre SPV M2000 va répondre aux appels
+automatiquement.
+
+106
+
+choisir comment votre liste de
+tâches et votre calendrier sont
+affichés dans le menu
+Contrôlez les informations qui figurent dans votre
+liste
+de façon à afficher celles dont vous avez
+besoin rapidement.
+
+personnaliser votre SPV M2000
+les paramètres d'horloge
+Si vous vous déplacez régulièrement et changez de
+fuseau horaire, vous pouvez basculer rapidement
+d'un fuseau à l'autre. Votre SPV M2000 peut
+également vous réveiller ou vous rappeler des
+événements en utilisant la fonction Alarmes.
+Définir un fuseau horaire de passage:
+
+Pour changer les informations que vous voyez
+pour votre liste de tâches:
+1
+2
+3
+4
+5
+
+Pointez sur
+et sélectionnez Paramètres.
+Pointez sur Aujourd'hui.
+Pointez sur l'onglet gris Éléments.
+Pointez sur le mot Tâches puis sur Options.
+Sélectionnez avec votre stylet ce qui est
+affiché, parmi:
+■ Tâches prioritaires
+■ Tâches Tasks avec échéance aujourd'hui
+■ Tâches échues
+■ Catégorie
+6 Pointez sur OK pour valider vos changements.
+Pour changer les informations que vous voyez
+pour votre calendrier à l'étape 4 ci-dessus,
+choisissez Calendrier au lieu de Tâches.
+Vous pouvez alors choisir de voir:
+■ Prochain rendez-vous
+■ Rendez-vous à venir
+■ Afficher sur une journée entière
+
+1 Pointez sur
+et sélectionnez Paramètres.
+2 Pointez sur l'onglet gris Système.
+3 Pointez sur Horloge et alarmes. En cas de
+besoin, tapez alors sur l'onglet gris Heure.
+4 Cochez la case Ville visitée avec votre stylet.
+5 Entrez les informations concernant le fuseau
+horaire.
+6 Pointez sur OK.
+7 Pointez sur Oui pour définir le fuseau horaire.
+Tous vos rendez-vous seront également
+transférés au nouveau fuseau horaire.
+Pour revenir à votre fuseau horaire local, cochez
+Home à l'étape 4 ci-dessus.
+
+choisir la façon dont les
+informations sont affichées
+Personnalisez l'affichage des informations sur votre
+SPV M2000 en configurant les paramètres
+régionaux à utiliser (format des nombres, dates,
+devices, système métrique...).
+Changer l'affichage de vos informations:
+1 Pointez sur
+et ouvrez Paramètres.
+2 Pointez sur l'onglet gris Système puis sur
+Paramètres régionaux.
+3 Utilisez les onglets gris pour choisir parmi:
+■ Région
+Moyen rapide de changer tous les paramètres
+en une seule fois.
+■ Nombres
+Des choix plus détaillés pour l'affichage des
+nombres.
+■ Symbole monétaire
+Des choix plus détaillés pour l'affichage de
+devises.
+■ Heure
+Des choix plus détaillés pour l'affichage de
+l'heure.
+■ Date
+Des choix plus détaillés pour l'affichage de la
+date.
+4 Pointez sur OK pour valider vos changements.
+
+107
+
+personnaliser votre SPV M2000
+changer vos paramètres de
+gestion d'alimentation
+Utilisez le paramètre alimentation pour contrôler la
+capacité de votre batterie et régler votre
+SPV M2000 pour qu'il économise cette énergie.
+
+Tous les programmes que vous avez ajoutés à
+votre SPV M2000 peuvent être supprimés si vous
+n'en avez plus besoin afin de libérer de la mémoire
+pour de nouveaux programmes.
+
+10
+
+supprimer des programmes
+pour libérer de la mémoire
+
+Contrôler le niveau de votre batterie:
+1 Pointez sur
+et sélectionnez Paramètres.
+2 Pointez sur l'onglet gris Système.
+3 Pointez sur Alimentation. L'énergie restant dans
+votre batterie principale et votre batterie de
+secours apparaît sur l'écran.
+4 Pointez sur l'onglet gris Avancé. Choisissez à
+quel moment vous voulez que votre SPV M2000
+s'éteigne de lui-même après la dernière frappe,
+à la fois sur la batterie et une alimentation
+électrique externe.
+
+108
+
+1 Pointez sur
+et sélectionnez Paramètres.
+2 Pointez sur l'onglet gris Système au bas de
+votre écran puis pointez sur Suppression de
+programmes.
+3 Une liste des programmes que vous avez
+ajoutés à votre SPV M2000 apparaît.
+4 Pointez sur le programme dont vous n'avez plus
+besoin puis sur Supprimer.
+5 Validez votre choix en tapant sur Oui.
+
+roaming
+international
+
+roaming international
+
+roaming international
+services internationaux Orange
+
+check-list avant de voyager
+
+Vous pouvez appeler ou envoyer des SMS de
+l'étranger en ajoutant simplement l'indicatif
+international avant le numéro que vous désirez
+contacter.
+
+1 Appelez le Service clientèle au 0800 700 700 de
+n'importe quel autre téléphone pour activer votre
+SPV M2000 afin de pouvoir appeler et recevoir
+des appels à l'étranger.
+2 N'oubliez pas d'emporter votre chargeur et un
+adaptateur à trois fiches pour pouvoir charger
+votre SPV M2000 à l'étranger.
+3 Assurez-vous que les numéros de contacts que
+vous utilisez souvent sont enregistrés dans votre
+liste avec l'indicatif international dont vous avez
+besoin, par exemple +41 moins le zéro de
+l'indicatif régional pour appeler la Suisse.
+
+Note: La disponibilité des services SMS, MMS et
+autres services et produits Orange dépend du
+réseau partenaire.
+Lorsque vous voyagez à l'étranger, ayez toujours la
+sécurité à l'esprit.
+Pour des raisons de sécurité, mettez toujours votre
+SPV M2000 dans votre bagage à main et éteignezle avant de monter dans un avion.
+
+Quels sont les indicatifs internationaux à ajouter
+aux numéros pour appeler de la Suisse et vers
+la Suisse?
+pays
+
+code
+
+Autriche
+
++43
+
+Belgique
+
++32
+
+Chypre
+
++357
+
+Danemark
+
++45
+
+France
+
++33
+
+Allemagne
+
++49
+
+Grèce
+
++39
+
+Luxembourg
+
++352
+
+Pays-Bas
+
++905
+
+Portugal
+
++351
+
+Rép. d'Irlande
+
++353
+
+Espagne et îles*
+
++34
+
+Suède
+
++46
+
+Suisse
+
++41
+
+Royaume-Uni
+
+1 Appuyez sur
+et sélectionnez Paramètres
+puis Téléphone. Pointez sur l'onglet gris
+Réseaux.
+2 Sélectionnez Automatique pour que votre
+SPV M2000 choisisse automatiquement un
+réseau local.
+3 Sélectionnez Manuelle pour choisir parmi une
+sélection de réseaux locaux.
+
++44
+
+*y compris les Canaries et les Baléares.
+
+110
+
+Lorsque vous allez à l'étranger, vous devez
+éventuellement demander manuellement à votre
+SPV M2000 de sélectionner un réseau.
+
++31
+
+Chypre du nord
+
+Prévenez vos proches que vous êtes à l'étranger
+pour qu'ils s'attendent à une tonalité de sonnerie
+différente lorsqu'ils vous appellent ou à un
+message enregistré dans une langue étrangère si
+vous êtes en dehors d'une zone de couverture.
+
+Note: Le mode itinérant doit être activé au moins
+24 heures avant de partir à l'étranger.
+
+Orange est en partenariat avec de multiples
+réseaux dans 126 pays du monde. Votre SPV
+M2000 est configuré pour rechercher
+automatiquement un réseau local lorsqu'il est
+allumé. Dans certains pays, vous devez
+éventuellement changer de bande avant que votre
+SPV M2000 ne trouve un réseau.
+
++30
+
+Italie
+
+lorsque vous allez à l'étranger,
+vous devez sélectionner le
+réseau partenaire à utiliser
+
+Pour plus d'informations sur les services
+internationaux, appelez le Service clientèle au
+0800 700 700 de n'importe quel autre téléphone.
+Vous pouvez également consulter notre site web à
+www.orange.ch.
+
+111
+
+roaming international
+
+11
+
+utiliser Orange Box à l'étranger
+Lorsque vous êtes à l'étranger, vous pouvez utiliser
+votre Orange Box aussi facilement que si vous
+vous trouviez en Suisse.
+1 Appelez le +41 8607 xxxxxxxx.
+2 Appuyez sur * après le message d'accueil.
+3 Entrez votre mot de passe et appuyez sur #.
+
+utiliser le GPRS à l'étranger
+Vous pouvez connecter aux services GPRS aussi
+facilement que si vous étiez en Suisse. Appelez le
+Service clientèle au 0800 700 700 de n'importe
+quel autre téléphone pour obtenir une liste à jour
+des exploitants étrangers qui prennent en charge
+roaming GPRS ainsi que les taux applicables à
+votre plan tarifaire.
+
+112
+
+sécuriser votre
+SPV M2000 et
+son contenu
+
+sécuriser votre SPV M2000 et son contenu
+faire une copie sécurisée de
+vos données avec Back Up
+Back Up met vos données en sécurité dans un
+serveur à distance. Par conséquent, s'il arrivait
+quelque chose à votre SPV M2000, vous pourriez
+immédiatement les charger sur votre nouvel
+appareil.
+Back Up constitue une solution wirefree® pour la
+sauvegarde des informations mémorisées dans
+votre SPV M2000. Quelques appuis de touches
+suffisent pour sauvegarder vos Contacts,
+Calendrier, Mes documents et toutes vos données
+SIM tels que les détails concernant vos contacts.
+Vous pouvez également régler votre SPV M2000
+pour qu'il sauvegarde automatiquement vos
+informations à intervalles réguliers et sélectionner
+quelles informations sont copiées.
+Avant de pouvoir sauvegarder vos informations
+dans le serveur à distance, vous devez ouvrir un
+compte.
+1 Pointez sur
+et sélectionnez Programmes.
+2 Pointez sur Back Up.
+3 Pointez sur
+au bas de votre écran et
+sélectionnez Créer un compte. L'écran
+d'ouverture de session apparaît.
+4 Vous êtes invité à entrer un Nom d'utilisateur et
+un Mot de passe et à remplir votre adresse
+e-mail. Le mot de passe doit comporter de 6 à
+32 caractères et doit être facile à se rappeler.
+Sélectionnez si vous souhaitez que votre
+
+114
+
+SPV M2000 se souvienne de votre mot de passe
+ou si vous préférez l'entrer à chaque fois. Dès
+que vous avez terminé, appuyez sur OK.
+5 Votre SPV M2000 appelle automatiquement le
+serveur à distance et crée un nouveau compte
+pour vous.
+Sauvegarder vos données manuellement:
+1
+2
+3
+4
+
+Pointez sur
+et sélectionnez Programmes.
+Pointez sur Back Up.
+Pointez sur
+.
+Sélectionnez quels articles vous souhaitez
+mémoriser et appuyez sur la touche Entrée pour
+les sélectionner ou les désélectionner. Les
+articles cochés seront sauvegardés.
+5 Pointez sur
+pour commencer à sauvegarder
+vos données dans le serveur à distance.
+Régler votre SPV M2000 pour une sauvegarde
+automatique de vos données:
+
+1
+2
+3
+4
+5
+
+Pointez sur
+et sélectionnez Programmes.
+Pointez sur Back Up.
+Pointez sur
+.
+Cochez la case Afficher l'historique.
+Pour une sauvegarde partielle, cochez les cases
+ci-dessous.
+
+Note: Chaque appel que vous vous connectez à
+Back Up vous sera facturé selon votre tarif
+standard.
+Restaurer les informations à votre SPV M2000:
+
+sécuriser votre SPV M2000 et son contenu
+1
+2
+3
+4
+
+Pointez sur
+et sélectionnez Programmes.
+Pointez sur Back Up.
+Pointez sur
+.
+Ouvrez la session en utilisant les coordonnées
+de votre compte.
+5 Sélectionnez avec votre stylet quel articles vous
+voulez restaurer dans votre SPV M2000. Les
+articles cochés seront restaurés.
+6 Pointez sur Restaurer et votre SPV M2000
+appelle automatiquement le serveur à distance
+et restaure dans votre SPV M2000 les dernières
+informations que vous avez sauvegardées.
+
+demandé de saisir le PIN. Si vous avez complété
+votre téléphone, ce code PIN est le même que
+celui utilisé pour verrouiller la carte SIM.
+5 Saisissez votre code PIN et appuyez sur Entrer.
+Vous devrez désormais saisir le code PIN chaque
+fois que vous souhaitez effectuer un appel.
+
+que se passe-t-il si j'entre le mauvais code PIN?
+Si vous entrez un code PIN de carte SIM incorrect
+trois fois de suite, votre carte SIM se verrouille. Il vous
+faut un code de déblocage personnel (PUK) pour
+débloquer votre carte SIM.
+
+assurez-vous que seules les
+personnes autorisées peuvent
+utiliser votre SPV M2000
+
+Appelez le Service clientèle au 0800 700 700 pour de
+plus amples informations sur le déblocage de votre
+SPV M2000.
+N'essayez pas de deviner le code PUK. Si vous entrez
+
+Si le mot de passe de votre SPV M2000 est
+activé, l'un de deux mots de passe vous est
+demandé à chaque fois que vous allumez votre
+SPV M2000 ou au bout d'un certain temps
+suivant votre dernier pointage sur l'écran. Ce mot
+de passe est préprogrammé sur 1111. Pour
+augmenter la sécurité de votre SPV M2000, vous
+pouvez remplacer ce mot de passe par un
+numéro que vous êtes le seul à connaître.
+
+un code PUK incorrect dix fois de suite, vous allez
+verrouiller votre carte SIM de façon permanente et
+risquez d'avoir à renvoyer votre SPV M2000 à Orange.
+
+Activer votre mot de passe:
+1
+2
+3
+4
+
+Pointez sur
+et sélectionnez Téléphone.
+Appuyez sur Outils, puis sur Options.
+Cochez ou décochez la case Exiger code PIN.
+L'écran Téléphone s'affichera et il vous sera
+
+115
+
+12
+références
+
+116
+
+références
+
+références
+références techniques
+
+licences
+
+Windows Media Player
+
+Certains contenus numériques sur Internet, CD et
+vidéo ont des licences associées qui les
+protègent contre la distribution et le partage
+illicite.
+
+Media Player supporte les fichiers du format
+suivant.
+Format
+Windows Media
+
+Nom d'extension fichier
+.asf .asx .wax .wm
+.wma .wmv .wmx .wvx
+MPEG .mp3
+
+Media Player peut jouer des fichiers qui ont été
+compressés utilisant les codecs audio et vidéo
+suivants.
+Codecs audio
+■
+Microsoft Windows Media Audio
+codec version 2.0, 7.0, and 8.0
+■
+MPEG-1 Audio Layer-3 codec
+Codecs video
+■
+Microsoft Windows Media Video
+codec version 7.0 et 8.0
+■
+Microsoft MPEG-4 video codec
+version 3.0
+■
+ISO MPEG-4 video codec version 1.0
+
+Ces licences sont gérées et créées utilisant DRM
+(digital rights management), qui est la technologie
+qui sécurise les contenus et gère les droits
+d'accès. Certaines licences bloquent la lecture
+du contenu copié sur votre SPV.
+Note: Pour assurer que la licence est copiée avec
+son contenu, utilisez la fonction Dispositif Portable
+(ou Copier sur CD ou Dispositif) dans Windows
+Media Player 7.0 sur votre PC pour copier le
+contenu sur votre SPV. Pour plus d'informations
+sur comment copier des contenus sur votre SPV
+ou autres dispositifs portables, référez-vous à
+Windows Media Player Aide sur votre PC.
+
+déclaration de conformité
+No de registration:
+M351937P-EO
+Certificat constructeur: High Tech. Computer
+Corp
+1F, 6-3, Bau-Chian Rd
+Hsin Tien
+Taipei
+Taiwan
+Désignation produit:
+type PH10A
+Modèle client:
+SPV M2000
+Description produit:
+Wireless PDA,
+incorporation du E-GSM
+900 / GSM 1800 / GSM
+1900 / GPRS terminal et
+Bluetooth® (2.4 GHz
+Appareil à Courte Portée)
+Marque de conformité EC:
+
+0682
+
+.
+
+Mémoire
+■
+
+■
+
+118
+
+64 MB Flash ROM - inclut 8Mo avec
+Intel iPSM
+128 MB SDRAM
+
+119
+
+13
+contacter Orange
+
+120
+
+contacter Orange
+Le Service Clientèle est disponible 24 heures sur 24, 7 jours sur 7, 365 jours par an.
+Alternativement, visitez Orange sur www.orange.ch pour plus de détails.
+
+Service Clientèle
+
+Tous clients Orange
+
+Si vous avez des questions à propos de votre
+SPV M2000 ou n'importe quel service de
+Orange, contactez gratuitement le Service
+Clientèle au 0800 700 700.
+Si vous êtes un client professionnel, contactez
+nous gratuitement au 0800 700 600.
+
+Services d'urgence
+
+www.orange.ch
+Visitez le site Orange pour en savoir plus sur nos
+produits et services.
+
+122
+
+117 ou 118
+
+index
+
+index
+
+index
+a
+
+d
+
+i
+
+Adobe® Acrobat®
+
+97
+
+Date
+
+Allumer votre SPV M2000
+
+12
+
+Démarrer
+
+Appareil photo
+
+changer votre menu
+
+envoyer comme e-mail
+
+30
+
+16
+
+répondre
+
+39
+
+70
+
+Internet Explorer
+
+46
+
+j
+
+e
+108
+
+96
+
+Journal des appels
+
+39
+
+AvantGo
+Avertissements sonores
+
+38
+
+Attachments photo et vidéo
+
+76
+
+Créer votre compte
+
+74
+
+m
+
+Personnaliser votre Boîte de réception
+
+81
+
+Mains libres
+
+39
+
+Supprimer des e-mails
+
+82
+
+Media Player
+
+44
+
+79
+
+Mémo vocal
+
+76
+
+Mémoire
+
+81, 82, 106
+
+b
+
+écran
+
+Bluetooth®
+Boîte de réception
+
+Convocations à des réunions
+
+79
+
+16, 114
+
+Recevoir des pièces jointes
+
+83
+
+répertoire
+
+66
+
+Sauvegarder des messages
+
+74
+
+libérer de la mémoire
+
+Envoi
+
+83
+
+Menu Démarrer
+
+ActiveSync® pour envoyer un e-mail
+
+Back Up
+
+78
+
+CD d'installation
+Changer votre écran d'accueil
+ClearVue
+Code personnel SIM
+Copier contacts
+
+Excel®
+
+43
+
+105
+
+son
+
+Filtrer vos contacts
+
+59
+
+105
+
+34, 101
+
+Personnaliser
+
+104
+
+55
+
+Pièces jointes
+
+80
+
+108
+
+Pocket Excel®
+
+43
+
+Pocket Internet Explorer®
+
+46
+
+Pocket Word®
+
+42
+
+15, 104
+50
+50
+
+r
+Recomposition automatique
+
+Message d'accueil personnel
+
+50
+
+Répertoire
+
+97
+
+raccourcis
+Messages d'alert
+
+h
+Haut parleur
+
+39
+
+ajouter un numéro
+
+Microsoft®
+
+54
+
+éditer
+
+38
+81,82
+
+57
+
+effacer
+
+39
+
+Pocket Word®
+
+16, 107
+
+Pocket Excel®
+
+43
+44
+
+Album
+
+47
+
+56
+
+mémoriser un nom et un numéro
+r roaming international
+
+54
+109
+
+45
+
+Compte .NET Passport
+
+57
+
+rechercher
+
+42
+
+Windows Media Player®
+
+Heure et date
+
+105
+
+Paramètres sonores
+
+51
+
+115
+58
+
+74
+104
+
+Vérifier d'un autre téléphone
+
+f
+
+16, 105
+
+touche
+
+Code PIN de votre Orange Box
+
+99,100,106
+69
+
+Renvoi d'Orange Box
+
+87
+107
+
+e-mail
+
+Messagerie
+
+79,80,81
+
+c
+Calendrier
+
+appareil photo
+horloge
+
+38
+101
+
+39
+
+Paramètres
+
+E-mail
+
+Boîte de réception
+
+effectuer
+Appels reçus
+
+Numéros composés
+
+p
+
+Jeux
+
+Effacer des programmes
+
+Appels
+
+n
+
+Infrarouge
+
+104
+
+76
+
+prendre une photo
+
+16, 99
+
+Downloads
+
+16, 98
+
+Mode avion
+
+12
+
+Modem
+MSN Messenger®
+
+67, 99
+47
+
+s
+Sauvegarder contacts
+
+55
+
+Sauvegarde de carte SIM
+
+58
+
+Saisir du texte
+Sécurite
+
+23
+114,115
+
+Services Internationaux
+Orange Box à l'étranger
+
+124
+
+112
+
+125
+
+index
+GPRS à l'étranger
+
+112
+
+Sélection de réseaux
+
+111
+
+SMS
+envoyer
+joindre une photo
+Sonneries
+Supprimer des programmes
+Synchronisation
+
+22
+76
+105
+108
+69, 70, 71
+
+t
+Tonalités
+
+105
+
+Touches
+
+104
+
+v
+Vibreur
+
+15
+
+Volume
+
+15, 32, 38, 106
+
+Voyager à l'étranger
+
+110
+
+w
+Windows Media Player®
+
+44
+
+Word®
+
+42
+
+126
+
+127
+
+Les informations contenues dans ce guide d'utilisation sont
+exactes au moment de leur impression. Orange se réserve
+toutefois le droit d'y apporter des modifications ultérieures et
+les services peuvent être modifiés, complétés ou supprimés.
+Mai 2004.
+Orange et tous les autres noms de produits et de services
+cités dans ce guide d'utilisation sont des marques déposées
+de Orange Personal Communications Services Limited (UK).
+
+Orange Communications SA
+World Trade Center
+Av. Gratta-Paille 2
+Case postale 455
+CH-1000 Lausanne 30 Grey
+Service Clientèle: 0800 700 700
+www.orange.ch
+
+Produit par Clear® the explanation agency 10046819 FR 09/04
+
+Pour toute information complémentaire sur les produits et les
+services Orange, veuillez consulter notre site Internet à
+l'adresse ci-dessous.
+

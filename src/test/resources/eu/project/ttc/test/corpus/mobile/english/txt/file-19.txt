@@ -1,0 +1,444 @@
+1
+ 
+Towards High Quality VoIP in 3G Networks 
+An Empirical Study 
+Andres Arjona ¹, Cedric Westphal ², Antti Ylä-Jääski ³, Martin Kristensson ¹ 
+¹ Nokia Siemens Networks, ² DoCoMo Labs USA, ³ Helsinki University of Technology 
+andres.arjona@nsn.com, cwestphal@docomolabs-usa.com 
+antti.yla-jaaski@hut.fi, martin.kristensson@nsn.com  
+  and client are the same, performance differs depending on the 
+Abstract-Third generation (3G) packet switched WCDMA wireless access in use. 
+networks with high-speed downlink packet access (HSPDA) are This paper studies the quality of VoIP in wireless networks 
+currently being deployed worldwide to provide wireless with multi-radio mobile devices both in lab and live network 
+broadband connectivity. When introducing HSDPA in 3G 
+networks the end user experience and system capacity with voice environment setups by conducting a methodic performance 
+over IP applications improve considerably. When later on adding analysis based on the E-Model [10][4] (we will describe the E-
+also high-speed packet uplink access (HSUPA), the system Model in more details in Section 2). Likewise, our study will 
+capacity and end user experience will improve even further. This encompass the signaling performance required for VoIP 
+paper analyzes with measurements the VoIP quality over current applications.  
+Release 5 HSDPA networks. The results show that even though The key contributions of the paper are a thorough empirical 
+the introduction of HSDPA significantly reduces the user-to-user 
+voice delay, the performance is satisfactory only for selected evaluation of VoIP quality and signaling performance with 
+devices, the overall end user experience is still significantly worse HSDPA and WCDMA. From our evaluation, we will observe 
+than with circuit switched solutions and not acceptable. The that VoIP performance is acceptable in HSDPA networks only 
+current limitations with VoIP in HSDPA networks with a too for VoIP clients on devices with enough processing power, 
+large delay can be improved by using the RLC UNACK mode, such as laptops, and is rarely acceptable in WCDMA even for 
+potentially decreasing the jitter buffer size and reducing the those clients. Our study takes into consideration both the 
+terminal processing delay. In the longer term, HSUPA and 
+several features in 3GPP Release 7 standards will bring further performance of the network and also the performance of real 
+performance improvements in both user plane latency and embedded VoIP clients. In addition, we validate the results of 
+system capacity. our study by comparing them to the actual performance in a 
+ densely deployed HSDPA network in Finland. Based on the 
+Index Terms- HSDPA, VoIP, WCDMA, voice quality, MOS results, we analyze the primary differences in performance 
+between simulations found in the literature, our lab 
+I. INTRODUCTION experiences and a live network case study. Finally, we discuss 
+V OICE over IP (VoIP) is becoming a widely deployed possible features that can improve the performance enough in service in data networks, and it will penetrate from the current and future releases to support VoIP in all handheld 
+fixed network domain into wireless network domain. The devices. 
+characteristics of fixed networks and wireless networks are The remainder of the paper is organized as follows. Section 
+fundamentally different, which will impact the performance of 2 describes our research approach, Section 3, studies 
+services. In this article we analyze the VoIP service performance in a laboratory environment, and Section 4 
+performance in wireless HSDPA and WCDMA networks. studies performance in a live network. In Section 5 we show 
+High Speed Download Packet Access (HSDPA) [7] improvements in standardization, in Section 6 we discuss the 
+networks are intensively being deployed to provide broadband previous work on the topic and compare it to our research, and 
+connectivity to mobile devices, such as handheld terminals in Section 7 we draw conclusions. 
+and laptops. This broadband wireless access is able to support 
+voice applications over a packet data connection instead of II. METHODOLOGY AND TEST ENVIRONMENTS 
+traditional circuit switched calls. With the introduction of In this section we present the experimentation setups. Our 
+multi-radio devices with HSDPA, WCDMA, and WiFi experiments are composed of measurements in a HSDPA and 
+capabilities as well as integrated VoIP clients, ubiquitous WCDMA testbed and a production HSDPA network of a 
+connectivity across any of these networks is possible using the Finnish operator. We are interested in measuring both the 
+same mobile terminal. However, while the mobile terminal VoIP service audio quality in both laboratory and live setups.  
+ A. VoIP Quality Methodology 
+Andres Arjona's research was partially supported by the 
+Telecommunications Software and Multimedia lab at HUT. The evaluation methodology consisted of multiple VoIP 2
+ 
+tests carried out in a radio interference free environment. The 1 shows an overview of the environment and the E-Model 
+tests included different wireless accesses technologies and based tools. 
+variable combinations of codecs, signal conditions, number of 
+clients and fading profiles among others.  
+The main evaluation was carried out with two similar tools 
+based on the E-Model, defined below. Firstly, with a NSN 
+proprietary tool, which is an implementation similar to the one 
+described in [10][4], and secondly, with IxChariot, which is a 
+widely used voice evaluation tool [12]. Finally, a third tool  
+based on the PESQ model was used to determine the average Figure 1. VoIP Quality Test Environment 
+end-to-end delay with real embedded VoIP clients. With such In this paper we emphasize the performance of the G.729 
+setup, we can evaluate the performance of the different codec, which is the only codec supported by all the measuring 
+wireless access technologies based on the following test tools used in this research. G.729 is also similar to AMR-NB. 
+objectives:  AMR codec is the main building block for a future codec for 
+• VoIP quality performance with the E-Model 3GPP based networks. ITU-T has set out standards for 
+• Voice quality characterization for different wireless maximum voice quality for several codecs, including G.729 
+accesses, signal conditions, configurations and fading and G.711. However, there is not yet agreement on a standard 
+profiles AMR codec maximum quality definition in relation to the E-
+• Benchmark of two voice quality evaluation tools based Model. Therefore, we can make the assumption that the 
+on the E-Model performance values measured with G.729 codec are 
+• Estimation of the average end-to-end delay when a real representative and are a useful basis for our analysis. In 
+embedded VoIP client is used addition, G.711 is not an appropriate codec for wireless 
+networks such as HSDPA due to its high bitrate. However, 
+• Effect of simultaneous background traffic during a 
+VoIP call  G.711 is one of the most largely supported codecs, and it is 
+widely used in the Internet. Also, due to legacy equipment it is 
+• Characterization of delay sources and possible 
+optimizations used in many cases, even though AMR and other lower bitrate 
+The E-Model is a voice quality evaluation model that is codecs (e.g. iLBC) are encouraged. For this reason we study 
+based on network performance metrics. It is based on a both G.729 and G.711. 
+mathematical algorithm and provides an "R" performance B. Live Network Case Study Methodology 
+value based on the sum of four "impairment factors" The final stage of our study consisted of evaluating voice 
+considered to be cumulative. The algorithm is depicted in quality in a live HSDPA network. The network evaluation 
+equation (1) where, "Is" is Signal to Noise Ratio, "Id" is delay took place in the Helsinki metropolitan area, and the live 
+(ms), "Ief" is packet loss (%), and "A" is expectation factor. network in use was provided by Elisa, Finland's largest 3G 
+R = 100 − Is − Id − Ief + A        (1) operator. The HSDPA coverage in the Helsinki metropolitan 
+In practice, ITU-T proposes to use a simplified version of area is densely deployed and assumed to be based on Nokia 
+this algorithm. The simplified algorithm considers that noise equipment similar to the one used in our lab measurements 
+cancellation is encountered in the network and also dismisses (RAS5.1) (See Figure 3). Therefore, its performance is 
+the expectation factor. The expectation variable is supposed to directly comparable to our previous results. The test objectives 
+be used to provide a balance for some environments in which for this phase are as follows: 
+the user expects a degraded quality, such as satellite • Characterize the base performance of the network 
+connections. However, since this variable is merely subjective (throughput and round trip time) under different signal 
+it is recommended to be ignored. The simplified algorithm is conditions  
+depicted in equation (2).  • Evaluate the VoIP quality in different signal conditions 
+R = 93.2 (excellent, medium and poor)  − Id − Ief          (2) 
+The R value can be associated with the Mean Opinion Score • Evaluate the average VoIP quality in a mobile scenario 
+(MOS) values, which is a subjective grade for voice quality and determine the signal quality distribution for the test 
+based on studies carried out by ITU-T. However, even though route 
+the R-value can match a MOS value, it cannot predict the Our approach to the live network measurements was 
+absolute opinion of an individual user.  modeled in the following way. First, we made a basic network 
+In this paper we calculate the MOS scores with two tools performance evaluation in different radio environments based 
+based on the E-Model: a Nokia proprietary tool and IxChariot, on signal-to-noise ratio Ec/N0 levels.  
+which is a widely used tool. These tools send dummy packets Ec/N0 values are an objective figure for quality conditions 
+that resemble VoIP packets. The packet size and transmission because they take into account both signal strength and the 
+intervals are tied to the codec modeled. Based on the received current interference level encountered in the cell. Based on 
+packets, network performance values are calculated and the E- these basic network performance figures, we can evaluate the 
+Model algorithm is applied to determine a MOS score. Figure average performance in terms of maximum downlink and 3
+ 
+uplink throughput, as well as average round trip time for a used. WCDMA 128/128 provided low quality and WCDMA 
+particular Ec/N0 range.  As a result, we are able to define 64/64 gave a low/poor quality level. The results also show a 
+three signal conditions ranges: (a) Good signal (b) Medium difference between the measurement tools. Our proprietary 
+signal, and (c) Poor signal. Second, we evaluate the VoIP tool was able to differentiate more clearly the quality levels 
+quality with the same NSN Proprietary tool used in previous between WCDMA 128/128 and 64/64. However, IxChariot 
+tests under the three different signal conditions. This allows us does not recognize much difference between these two 
+to get a good metric of what is the quality in a static scenario bitrates. In any case, both tools show that quality in WCDMA 
+under specific signal conditions. Third, we evaluate the is not optimal and is around MOS 3.0 at its best. WCDMA 
+average VoIP quality under a mobile scenario. The test route 64/64 MOS varied between 2.25 and 2.7. ITU states that MOS 
+chosen crossed a major part of the Helsinki metropolitan area below 2.5 is not recommended for voice services and that 
+from West to East. The tests were carried out along the route nearly all users will be dissatisfied with such a service. 
+in both directions twice. In addition, we measured the signal Therefore, we can expect that the end user experience with 
+levels (Ec/N0) along the whole driving route and carry out VoIP WCDMA is not stable and will vary. 
+statistical distributions for the values. 
+An obvious limitation of our study is the fact that due to the 
+nature of a live network, we are not able to know or control 
+the other user traffic that could be taking place at the same 
+time. Therefore, we are not able to pinpoint the sources of e.g. 
+a sudden quality drop or reduced bitrate. However, since we 
+carried out multiple tests, our study provides a realistic view 
+of what is the actual performance that could potentially be 
+achieved in the field. The measurements for the live network 
+study took place during July and August 2007. 
+ 
+III. VOIP QUALITY ANALYSIS AND RESULTS Figure 2. VoIP Performance Evaluation with Proprietary Tool 
+A. HSDPA/WCDMA VoIP Performance 
+The tests to evaluate VoIP quality involved the following 
+variables: signal conditions, wireless access, and fading 
+profiles. Signal conditions were modeled to provide different 
+Ec/N0 levels by using attenuators. However, the results in this 
+paper show that this variable does not make any sustainable 
+difference and therefore, average result values are given 
+instead. The wireless access technologies used were restricted 
+to HSDPA/128, WCDMA 128/128 and WCDMA 64/64. 
+There was no reason to use higher bitrates in this study since  Figure 3. VoIP Performance Evaluation with IxChariot 
+VoIP packets require a low bandwidth. Therefore, we  
+emphasize the limits in which VoIP can actually be used with Table 1. Average VoIP End-to-End Delays (including Jitter 
+an adequate quality level. The bitrates were fixed and Buffer) 
+therefore, features that adapt bitrate (by increasing or Proprietary Tool IxChariot 
+decreasing) during packet switched connections were not used Access PedA VehA PedA VehA 
+during the tests. Fading was applied with Propsim C8 fading 3km 30km 3km 30km 
+simulator using Pedestrian-A 3km and Vehicular-A 30km HSDPA/128 215ms 217ms 223ms 225ms 
+fading profiles. The jitter buffer had a depth of 200ms and first WCDMA 128/128 295ms 300ms 368ms 381ms WCDMA 64/64 315ms 355ms 370ms 365ms 
+packet play delay of 120ms. That is, all packets are delayed at  
+least 120ms to provide a cushion for possible jitter. These are Table 1 presents the average end-to-end delays in the 
+common settings in VoIP clients for wireless cellular systems. experiments (including jitter buffer playout delay). The results 
+According to Wang et al. [24], a conservative jitter buffer also show very similar performance regardless of the signal 
+playout delay is about 150ms. conditions modeled or the fading profile applied. The reason 
+Our results are consistent and show that the achieved probably relates to fast power control mechanisms which are 
+quality in the HSDPA system is competitive. Based on ITU-T able to handle such changes in signal conditions in HSDPA 
+G.107 [10] quality was in average medium for HSDPA with and WCDMA. We recommend that further studies would be 
+both measurement tools (NSN Proprietary Tool and performed using noise or traffic generators instead of only 
+IxChariot). The average MOS was roughly 3.7 (see Figure 4 modeling signal scenarios with attenuators.  
+and Figure 5). This is a good figure especially considering that Finally, we point out that both measurement tools yield 
+typical PSTN systems provide MOS values around 3.5. In the quite similar results, with exception of WCDMA 64/64. 
+case of WCDMA, quality differed depending on the bitrate 4
+ 
+However, in this case we can observe that our proprietary tool 
+is actually more accurate than IxChariot, especially since 
+IxChariot does not seem to recognize any performance 
+difference between WCDMA 128/128 and 64/64 accesses. 
+B. VoIP Performance with Simultaneous FTP Background 
+Traffic 
+We also conducted some experiments where we added 
+background traffic. The tests included a small number of 
+simultaneous users running FTP downloads in order to 
+evaluate if they had any effect on the VoIP performance.  Figure 6. Packet Loss Percentage 
+The results show an increased jitter and packet loss for 
+WCDMA 128/128 and 64/64. Further delay analysis shows 
+that this increase is most likely caused by constant RLC 
+retransmissions. RLC retransmissions have an effect on both 
+jitter and packet loss. Every time a RLC retransmission takes 
+place, it will cause a ~200ms delay peak. This peak can 
+potentially fill the jitter buffer causing an overflow, which 
+results in packet loss. Packet loss also affects voice quality. 
+The frequency of RLC retransmissions is dependent of the 
+ access in use. Figure 9 shows an example of the RLC 
+Figure 4. Effect of Background Traffic retransmissions (200ms delay peaks) for different wireless 
+ access technologies. 
+As we expected, a limited number of users cannot affect 
+VoIP quality (see Figure 6). The reason is tied to the Round 
+Robin Scheduling used in the system, which divides 
+bandwidth equally among users. With only 4 simultaneous 
+users, each user will be given enough bandwidth on a timely 
+basis (every few milliseconds). In order to measure the effect 
+of background traffic we encourage tests with a much larger 
+number of users, e.g. 15-20 would be required. This is out of 
+the scope of this document. Likewise, testing different 
+scheduling techniques such as Weighted Proportional Fair is 
+of interest. However, there are several simulation based 
+studies [15][2] that study VoIP capacity gains for different  Figure 7. RLC Retransmissions 
+scheduling schemes including mixed traffic scenarios. The performance of these wireless accesses would improve 
+However, note that [13] analytically showed that QoS if RLC retransmissions are whenever possible. One possibility 
+constraints on VoIP reduce the benefit from the Proportional is to use the unacknowledged mode (UNACK) feature in the 
+Fair algorithm over Round Robin scheduling. RNC. The principle of operation in HSDPA [7] is such, that 
+C. Effect of Jitter and Packet Loss the BTS estimates the channel quality of each user based on 
+The next test included experiments with jitter and packet the physical layer feedback on the uplink. Subsequently, link 
+loss. Jitter and packet loss are presented in Figure 7 and Figure adaptation and scheduling takes place at a fast pace. When the 
+8. From the results we can see the average jitter and packet packets are first received at the BTS, they are buffered. Then, 
+loss measures for different access networks. the BTS transmits the packet; however, it will still keep it in the buffer. The reason being that in case of a failure in the 
+transmission (e.g. decoding failure), a retransmission will take 
+place directly from the BTS without requiring any action from 
+the RNC. This is a powerful advantage since the 
+retransmissions are combined at the terminal. However, if 
+there is a physical layer failure, such as a signaling error, then 
+an RLC retransmission is required, and packets are 
+retransmitted from the RNC (see Figure 10). This obviously 
+results in an increase in delay, which is not beneficial for 
+services like VoIP. While RLC retransmissions are not a very 
+ frequent event in HSDPA in static scenarios, they are more 
+Figure 5. Jitter Average likely in mobility scenarios. In contrast, in WCDMA, all 
+ retransmissions are RLC retransmission requiring RNC 5
+ 
+involvement. In the RLC unacknowledged mode, packets are in talker overlaps. Therefore, a voice service with very high 
+not retransmitted even if some are lost, for example due to cell delays results in a situation in which most, if not all users are 
+change operation. [7] dissatisfied. As a comparison, current circuit switched voice 
+services have a delay of roughly 230-250ms. 
+ 
+Figure 8. BTS Retransmissions Handling 
+D. Codec Performance Evaluation 
+Even though our study focus was on low bit rate codecs  
+(e.g. AMR or G.729), we also evaluated the performance of Figure 10. Offset Delay Measurement Environment 
+the G.711 codec. Using G.711 codec in wireless environments With the results we can estimate the client processing delay 
+is not encouraged due to its higher bit rate. However, since it by subtracting the average end-to-end delay from our tests 
+is one of the most widely supported codecs, there are cases in based on the E-Model, 215ms, 295ms, and 350ms 
+which it will be used due to other codec incompatibilities. The respectively. The result is roughly 210ms additional 
+performance was measured with a proprietary tool. Tests with processing delay when using a real embedded VoIP client. 
+WCDMA 64/64 using G.711 failed most of the time or This value differs considerably from the more optimistic 
+resulted in very long delays of several seconds and are processing delay estimations of 50-75ms available in research 
+therefore excluded. Figure 11 shows the VoIP quality from [14][6]. 
+comparison for both G.729 and G.711 codecs. Table 2 F. HSDPA/WCDMA Overall Effect on VoIP Performance 
+summarizes the jitter average and packet loss encountered 
+when using the G.711 codec. End-to-End delay is the main reason for low voice quality. 
+With the total end-to-end total delay average values we can 
+extend the analysis by dividing the sources of delay (see Table 
+3). 
+Table 3. Sources of Delay (G.729 Codec)  
+ HSDPA WCDMA WCDMA /128 128/128 64/64 
+RTT Delay 85ms 170ms 225ms 
+Jitter Buffer 
+(100-200ms) 130ms 125ms 125ms 
+Total E2E Delay 215ms 295ms 350ms 
+Total E2E Delay, 
+ including embedded 425ms 505ms 560ms 
+Figure 9. Codec Performance Evaluation (G.729 and G.711) client delay 
+  
+Table 2. G.711 Codec Jitter and Packet Loss (PedA 3km) With this estimation it is quite clear to understand why 
+Access Jitter Average Packet Loss % VoIP does not perform well in current systems with handheld 
+HSDPA/128 13ms 0.34 
+WCDMA 128/128 19ms 2.78 terminals, and particularly live networks, even when the round trip time (RTT) is low. The final end-to-end delay is just too 
+E. Embedded VoIP Client Evaluation high. We finalize our VoIP quality analysis by modeling the 
+These tests aimed at determining the additional delay resulting VoIP quality MOS with the additional embedded 
+resulting from real embedded VoIP clients, such as the one VoIP client processing delay. Figure 13 shows this estimation. 
+included with the N95. The test setup consisted of establishing The results represent a case of a laptop client versus using an 
+a VoIP call using an IMS system with the G.729 codec. embedded client in a handheld device such as the N95 VoIP 
+Subsequently, we measured the offset delay, that is, the delay client. The figure considers both delay and packet loss 
+between the moment when the original audio sample occurs to impairment factors. It must be noted though, that in a laptop 
+the moment the audio sample is reproduced in the other client there will also be an additional processing delay. 
+calling end. The tool used for offset measurements was However, such delay is considerably lower, ~50ms in a worst 
+Malden DSLA [16]. Figure 12 shows the measurement case scenario [3]. Thus, still ~160ms lower than with the 
+environment. The results show that the total offset delay mobile device tested. 
+including the VoIP client processing delay is rather high (see 
+Table 3). ITU-T recommends 400ms as the maximum delay 
+for voice services with a reasonable quality. With delay above 
+this limit, conversations are not interactive anymore and result 6
+ 
+ 
+ 
+Figure 11. Overall VoIP Quality with Laptop and Embedded 
+Handheld Clients  
+Future features such as HSUPA in further 3GPP releases Figure 13. Average Round Trip Time in Elisa HSDPA Network 
+will slightly improve performance. For example, the expected B. VoIP Quality 
+average RTT for HSUPA networks is roughly 65ms (a The VoIP quality in the Elisa HSDPA network is likewise 
+reduction of 20ms compared with HSDPA). This reduction slightly lower than our lab measurements (see Table 4). The 
+however does not improve the VoIP quality when using a mean opinion score was 3.5, 3.5 and 3.3 for good, medium 
+laptop. That is, the average MOS with a laptop will still be the and poor signal conditions. However, we have to consider that 
+same. Contrastingly, the expected quality improvement for an once again, the VoIP quality was measured for laptop based 
+embedded client is about 0.2 points in the MOS score. The VoIP communication. That is, it does not account for the 
+main reason for the limited quality improvement is that the additional processing delay for the terminal VoIP client 
+major sources of delay, and therefore, main impairment implementation described in Section 3.5. The results in the 
+factors reducing VoIP quality are not directly related only to live case still indicate that VoIP support for a handheld 
+the wireless access, but to the VoIP client implementation. embedded client will be poor. However, these values do take 
+However, as we described previously, if some HSUPA into account the jitter buffer play out delay. The most 
+features like UNACK mode are enabled in the wireless noticeable difference between the three scenarios is the packet 
+network, it will be possible to reduce the size of the jitter loss ratio, which increases as the signal quality decreases. 
+buffer implementation without compromising the VoIP 
+quality. Furthermore, a reduction in the client processing delay C. VoIP Quality in Mobility Scenarios 
+is extremely important in order to seriously improve the VoIP The mobile environment tests were measured from a van 
+quality in the mobile environment. driving through a test route at average speeds of 60-80 km/h 
+without stopping. The selected test route crosses the Helsinki 
+IV. LIVE NETWORK CASE STUDY metropolitan area from East to West and it is entirely covered 
+by Elisa HSDPA network according to their publicly available 
+A. Generic HSDPA Performance coverage map. The test route was about 18.5km and it took 
+The generic evaluation of the live network performance is approximately 15min to travel. The test route was driven 
+depicted in Figure 16 and Figure 17. The measurement results several times to validate the results.  
+show an increase in round trip time delay when compared to The results show that the average performance is lower than 
+the average values measured in the lab environment (85ms). in static scenarios. A mobile scenario obviously brings several 
+This means that the VoIP quality (MOS) will be worse than additional challenges due to the different cell changes along 
+our results in Section 3, and therefore VoIP support will be the test route. The number of cell changes along the route was 
+even more difficult. Throughput was measured via multiple 28 and were characterized via the changes in scrambling codes 
+file downloads and uploads from a local server in Finland; used. Table 4 summarizes the VoIP quality results. 
+while RTT was measured with 32Byte ICMP Echo Request Table 4. VoIP Quality in Elisa HSDPA Network (Including Jitter 
+and Reply (ping) packets to the same server. Buffer) 
+Scenario Delay Jitter Packet Avg. Avg. Loss % MOS 
+Good Signal 
+(Ec/N0 -3 to -5) 288ms 19ms 0.4 3.5 
+Medium Signal 
+(Ec/N0 -7 to -9) 283ms 19ms 1.0 3.5 
+Poor Signal 
+(Ec/N0 -11 to -13) 266ms 14ms 2.6 3.3 
+Mobile Environment
+ 331ms 22ms 1.9 3.2 
+ 
+ Furthermore, in mobility scenarios the amount of RLC 
+Figure 12. Average Throughput in Elisa HSDPA Network retransmissions required is very noticeable. To characterize 7
+ 
+the retransmissions, we conducted an additional test along the improves capacity without the necessity to switch to VoIP. 
+test route in which we sent continuous ping packets of 32B Moreover, with CS over HSPA, previous network elements 
+(see Figure 18). The results show a large amount of delay can be still utilized. Hence, since VoIP does not provide any 
+peaks resulting from these retransmissions. Therefore, it significantly better capacity figures over CS over HSPA, its 
+further supports our lab measurements and emphasizes the deployment can be delayed until adequately performing 
+importance of the unacknowledged mode feature. We expect terminals and networks are available. These improvements 
+that this mode would potentially take the majority of large occurred while this manuscript was under review. CS over 
+delay peaks, and thus, improve VoIP quality. However, if this HSPA is expected to be included in 3GPP Rel 7. [17]  
+mode is used, there is a possibility that the packet loss ratio 
+will increase, and for that reason, it is very important to VI. RELATED WORK 
+validate future results as well even if the feature is enabled. Although, there is prior work investigating the VoIP 
+performance in WCDMA and HSDPA systems, it is not very 
+extensive and mostly based on simulations. For instance, some 
+papers [18][19][5] study VoIP performance in WCDMA and 
+provide some baseline results. In addition, other works 
+[11][22] provide some estimated values for processing delays. 
+In these studies, the assumption for the estimations is based on 
+whether the call is towards a landline or a mobile end. Some 
+performance simulations are also available 
+[24][2][14][20][1][9][6]. However, the simulations only 
+ provide a delay budget rather than a description of the end 
+Figure 14. Round Trip Time during Mobility Tests user experience. Contrastingly, our study focuses on end user 
+In addition, during the mobile tests, we recorded the signal experience and VoIP quality rather than delay budgets alone. 
+conditions to characterize the signal quality distribution along The delay budget values used in simulations vary from 80-
+the test route. The measurements show that in general, it is 150ms for studies ignoring encoding/processing delays and 
+highly probable to get a good signal level and that the jitter buffer implementations [15][21][8][20][1], to 250-300ms 
+coverage is well deployed (see Figure 19 and Figure 20). for studies that assume such delays to some extent 
+[24][9][2][14][6]. In addition, the estimations used in 
+simulations are in general overly optimistic in regards to, e.g. 
+client processing delay. Kim [14] considers the 
+processing/encoding delay to be 50ms, while Ericson [6] 
+assumes around 75ms. These delay values include the jitter 
+buffer playout delay as well. Therefore, it is noticeable they 
+are too optimistic, especially when compared to our 
+experiment results with actual handsets and VoIP jitter buffer 
+client implementations.  
+Even though, it is understandable that the exact 
+ encoding/processing delays and jitter buffer playout delays are 
+Figure 15. Signal Quality Distribution client specific, unless they are modeled accordingly, or at 
+least, to some extent, the differences in performance between 
+simulations and actual deployments will remain very visible. 
+Therefore, simulations results are only comparable to laptop 
+based performance at its best and not to actual handheld 
+performance, which in the end is the primary use case for 
+VoIP services. Other simulation study [1], notices the 
+importance of reducing RLC retransmissions to improve 
+performance in FTP and HTTP browsing. However, the study 
+does not address its importance for VoIP services. Finally, 
+Wager and Sandlund [23] conduct simulations to determine 
+ the amount of possible lost frames of VoIP speech in HSDPA 
+Figure 16. Detailed Signal Quality Distribution mobility scenarios. The importance of evaluating a mobile 
+V. F terminal relies in the fact that the eventual substitution of UTURE DIRECTIONS circuit switched calls in 3GPP networks (HSDPA and 
+Whilst the current performance of VoIP is 3G networks is WCDMA) for VoIP calls will take place with a handheld 
+not optimal, the problem has lost some of its importance. In mobile device and not with a PC or laptop. Likewise, multi-
+particular, in late 2007, advances such as CS over HSPA have radio devices can provide ubiquitous access via different 
+appeared and been pushed into standardization. This feature wireless access technologies with distinct performance 8
+ 
+characteristics. [6] M. Ericson, and S. Wänstedt, "Mixed Traffic HSDPA Scheduling - 
+The lack of actual measurement performance values in Impact on VoIP Capacity", In Proc. IEEE VTC'07 Spring, Apr. 21-24, 2007. 
+literature could be mainly due to the unavailability of [7] H. Holma, and A. Toskala, "HSDPA/HSUPA for UMTS", John Wiley 
+integrated VoIP clients in the terminals and available HSDPA 2006. 
+networks. However, with the introduction of some Nokia [8] P. Hosein, "Capacity of Packetized Voice Services over Time-Shared Wireless Packet Data Channels" In Proc. IEEE INFOCOM'05, Mar. 13-
+multi-radio devices with VoIP capabilities (e.g. N95, 6110), it 17, 2005. 
+is possible to use VoIP applications without a PC.  [9] P. Hosein, "Scheduling of VoIP Traffic over a Time-Shared Wireless 
+Packet Data Channel", In Proc. IEEE ICPWC'05, Jan. 23-25, 2005. 
+VII. C [10] ITU-T, Recommendation G.107 "The E-Model, a Computational Model ONCLUSION for Use in Transmission Planning" 2003. 
+Multiple measurements were carried out to evaluate and [11] ITU-T Recommendation G.114, "One-Way Transmission Time", 2003. 
+characterize the VoIP quality in HSDPA and WCMDA [12] IxChariot, http://www.ixiacom.com [13] H. Kim, "Loosing Opportunism: Evaluating Service Integration in an 
+wireless accesses. The results show that HSDPA access is Opportunistic Wireless System", IEEE INFOCOM'07, May, 2007. 
+capable of providing a competitive VoIP quality compared to [14] Y. Kim, "VoIP Service on HSDPA in Mixed Traffic Scenarios", In Proc. 
+circuit switched voice. However, WCDMA in 128/128 and IEEE CIT'06, Sept. 2006. [15] P. Lundén, and M. Kuusela, "Enhancing Performnce of VoIP over 
+64/64 bitrate configurations can only provide low and poor HSDPA", In Proc. IEEE VTC'07 Spring, Apr. 21-24, 2007. 
+qualities, the main issues are long delays and packet losses, [16] Malden DSLA, http://www.malden.co.uk/dsla 
+which occur often due to RLC retransmissions that overflow [17] Nokia Siemens Networks and Nokia, "Supporting CS over HSPA" 3GPP R2-073487, Aug. 2007. 
+the jitter buffer capacity. However, the main issue with [18] F. Poppe, D. Vleeschauwer, and G. Petit, "Guaranteeing Quality of 
+HSDPA is not only tied directly to the wireless access Service to Packetized Voice over the UMTS Air Interface", 8th Intl. 
+performance, but to the mobile device capabilities. Our results Workshop on Quality of Service, pp. 85-91, Jun. 2000. [19] F. Poppe, D. Vleeschauwer, and G. Petit, "Choosing the UMTS Air 
+show that embedded mobile VoIP clients can introduce an Interface Parameters, the Voice Packet Size and the De-Jittering Delay 
+increased delay due to processing when compared to laptop for a Voice-over-IP Call Between a UMTS and a PSTN Party", IEEE 
+performance. This processing includes e.g. INFOCOM, vol. 2, pp. 805-814, Apr. 2001. [20] G. Rittenhouse, and H. Zheng, "Providing VoIP Service in UMTS-
+encoding/decoding, and other operating system tasks. The HSDPA with Frame Aggregation", In Proc. IEEE ICASSP'05, Mar. 18-
+additional delay has a considerable voice quality reduction 23, 2005. 
+effect. Further, the results from the test cases experimented in [21] Y. Seo, and D. Sung, "Performance of VoIP in HSDPA Based on an 
+a live network resulted in lower performance when compared Adaptive Power Allocation Scheme", In Proc. IEEE WCNC'06. [22] TIATR-41.1.2, "VoIP End to End Delay Budget Planning for Private 
+with similar laboratory measurements. Also, the effect of Networks", Cisco 2000. 
+mobility in regards to VoIP quality degradation is quite [23] S. Wager, and K. Sandlund, "Performance Evaluation of HSDPA 
+noticeable. The degradation is due to handovers during the test Mobility for Voice over IP", In Proc. IEEE Vehicular Technology Conference VTC'07 Spring, Apr. 22-25, 2007. 
+route that increase the ratio of RLC retransmissions. [24] B. Wang, K. Pedersen, T. Kolding, and P. Morgensen, "Performance of 
+Therefore, the main aspects that can potentially improve VoIP on HSDPA", IEEE Vehicular Technology Conference VTC'05 
+VoIP quality performance with the current systems are mainly Spring, vol. 4, pp. 2335-2339, May 30 - Jun. 1 2005.  
+to reduce the number of RLC retransmissions by using 
+unacknowledged mode, potentially use smaller jitter buffer 
+sizes, and reduce the embedded VoIP client processing delays. 
+High quality VoIP in 3G networks will be possible. However, 
+it is tied to improvements in several areas such as wireless 
+network delay, client implementation, and client processing 
+delay. 
+Finally, a main improvement developed while this 
+manuscript was in process is CS over HSPA, which improves 
+capacity and thus, can allow operators to delay VoIP 
+deployment projects until networks and terminals have better 
+performance. 
+REFERENCES 
+[1] L. Bajzik, L. Korössy, K. Veijalainen, and C. Vulkán, "Cross-Layer 
+Backpressure to Improve HSDPA Performance", In Proc. IEEE 
+PIMRC'06, Helsinki Finland, Jun. 2006. 
+[2] A. Braga, E. Rodriguez, and F. Cavalcanti, "Packet Scheduling for VoIP 
+over HSDPA in Mixed Traffic Scenarios", In Proc. 17th IEEE 
+PIMRC'06, Sept. 2006. 
+[3] Cisco, "Understanding Delay in Packet Networks" Document ID: 5125, 
+Mar. 2007.. 
+[4] R. Cole, and J. Rosenbluth, "Voice over IP Performance Monitoring" 
+ACM SIGCOMM'01. 
+[5] R. Cuny, and A. Lakaniemi, "VoIP in 3G Networks: An End-to-End 
+Quality of Service Analysis", In Proc. IEEE VTC'03 Spring Apr. 2003.

@@ -1,0 +1,1536 @@
+Teléfono para coche 
+Nokia 810
+Guía de usuario
+Guía de instalación 9356672
+Edición 3 DECLARACIÓN DE CONFORMIDAD Nokia opera con una política de desarrollo continuo y se reserva el 
+Por medio de la presente, NOKIA CORPORATION, declara que el derecho a realizar modificaciones y mejoras en cualquiera de los 
+producto TFE-4R cumple con los requisitos esenciales y cualesquiera productos descritos en este documento sin previo aviso.
+otras disposiciones aplicables o exigibles de la Directiva 1999/5/CE. 
+Este prod Nokia no se responsabilizará bajo ninguna circunstancia de la pérdida ucto se adapta a los límites definidos en la Directiva de datos o ingresos ni de ningún daño especial, incidental, consecuente 
+2004/104/EC (que modifica la Directiva 72/245/EEC), Anexo 1, párrafos o indirecto, independientemente de cuál sea su causa.
+6.5, 6.6, 6.8 y 6.9.
+Exist El contenido del presente documento se suministra tal cual. Salvo que e una copia de la Declaración de conformidad disponible así lo exija la ley aplicable, no se ofrece ningún tipo de garantía, 
+en la dirección http: expresa o implícita, incluida, pero sin limitarse a, la garantía implícita 
+http://www.nokia.com/phones/declaration_of_conformity/ de comerciabilidad y adecuación a un fin particular con respecto a la 
+exactitud, fiabilidad y contenido de este documento. Nokia se reserva 
+0434 el derecho de revisar o retirar este documento en cualquier momento sin previo aviso.
+La disponibilidad de productos concretos puede variar de una región a 
+ 2005-2006 Nokia. Reserva dos todos los derechos. otra. Consulte con su distribuidor Nokia más cercano.
+Queda prohibida la reproducción, transferencia, distribución 
+o almacenamiento de todo o parte del contenido de este documento Controles de exportación
+bajo cualquier forma sin el consentimiento previo y por escrito de 
+Noki Este producto puede contener componentes, tecnología o software a. sujetos a las normativas y a la legislación sobre exportación de EE.UU. 
+Nokia, Nokia Connecting People y la rueda NaviTM  son marcas y de otros países. Se prohíben las desviaciones de las leyes.
+comerciales o marcas comerciales registradas de Nokia Corporation. 
+El 9356672 / Edición 3resto de productos y nombres de compañías aquí mencionados 
+pueden ser marcas comerciales o registradas de sus respectivos 
+propietarios.
+Bluetooth is a registered trademark of Bluetooth SIG, Inc.2 ÍndiceÍndice
+Para su seguridad. . . . . . . . . . . . . . . . . . . . . . .5 Realización de llamadas mediante el teclado .21
+Servicios de red . . . . . . . . . . . . . . . . . . . . . . . . . . 6 Utilización de la rueda NaviTM para llamar. . . .21
+Accesorios . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6 Lista de favoritos . . . . . . . . . . . . . . . . . . . . . . . .21
+1. Información general . . . . . . . . . . . . . . . . . . . . .7 Servicio de llamada en espera. . . . . . . . . . . . . .22
+Visión general del teléfono y el equipo Opciones durante una llamada . . . . . . . . . . . . .22
+para coche . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7 Aceptación o rechazo de una llamada 
+Antes de empezar a utilizar el teléfono  . . . . . 11 entrante  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .23
+Etiquetas adhesivas incluidas 5. Utilización de los menús . . . . . . . . . . . . . . . . 24
+en el paquete de ventas . . . . . . . . . . . . . . . . . . 12 Acceso a una función de menú. . . . . . . . . . . . .24
+Códigos de acceso necesarios para Lista de funciones de menú  . . . . . . . . . . . . . . .24
+la tarjeta SIM  . . . . . . . . . . . . . . . . . . . . . . . . . . 12 6. Funciones de menú . . . . . . . . . . . . . . . . . . . . 27
+2. Su teléfono . . . . . . . . . . . . . . . . . . . . . . . . . .13 Mensajes. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .27
+Pantalla . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13 Registro de llamadas . . . . . . . . . . . . . . . . . . . . .30
+Indicadores de pantalla  . . . . . . . . . . . . . . . . . . 13 Guía. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .31
+Componentes básicos del microteléfono  . . . . 15 Opciones de tonos . . . . . . . . . . . . . . . . . . . . . . .34
+3. Conceptos básicos  . . . . . . . . . . . . . . . . . . . . .18 Ajustes  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .34
+Instalación de la tarjeta SIM . . . . . . . . . . . . . . 18 Grabadora . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .44
+Encendido, apagado y modo desactivado . . . . 19 Tecnología inalámbrica Bluetooth . . . . . . . . . .45
+4. Funciones de llamada. . . . . . . . . . . . . . . . . . .20 Datos del usuario . . . . . . . . . . . . . . . . . . . . . . . .48
+Marcación mediante voz  . . . . . . . . . . . . . . . . . 20 7. Comunicación de datos . . . . . . . . . . . . . . . . . 50
+Marcación desde la guía Tecnología inalámbrica Bluetooth . . . . . . . . . .50
+(búsqueda de nombres)  . . . . . . . . . . . . . . . . . . 20 Envío y recepción de tarjetas de presentación 50
+Rellamada . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21 GPRS (General Packet Radio Service) . . . . . . . .503 Índice
+High Speed Circuit Switched Data (HSCSD) . . 51
+Información de referencia . . . . . . . . . . . . . . . . 51
+8. Instalación . . . . . . . . . . . . . . . . . . . . . . . . . . .53
+Su teléfono para coche Nokia 810  . . . . . . . . . 53
+La precaución es lo principal . . . . . . . . . . . . . . 53
+Montaje . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 54
+Ajustes de audio . . . . . . . . . . . . . . . . . . . . . . . . 56
+Prueba de funcionamiento . . . . . . . . . . . . . . . . 57
+Paquete de ventas. . . . . . . . . . . . . . . . . . . . . . . 57
+9. Cuidado y mantenimiento  . . . . . . . . . . . . . . .58
+10. Importante información sobre seguridad. . . . .59
+Seguridad en carretera . . . . . . . . . . . . . . . . . . . 59
+Entorno operativo . . . . . . . . . . . . . . . . . . . . . . . 59
+Dispositivos electrónicos  . . . . . . . . . . . . . . . . . 59
+Marcapasos . . . . . . . . . . . . . . . . . . . . . . . . . . . . 59
+Zonas potencialmente explosivas . . . . . . . . . . 59
+Vehículos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 60
+Llamadas de emergencia  . . . . . . . . . . . . . . . . . 60
+Para hacer una llamada de emergencia: . . . . . 60
+11. Datos técnicos . . . . . . . . . . . . . . . . . . . . . . . .61
+12. Glosario . . . . . . . . . . . . . . . . . . . . . . . . . . . . .624 Para su seguridadPara su seguridad MODO DESACTIVADO CERCA DE MATERIALES EXPLOSIVOS
+Lea Ponga el teléfono en modo desactivado en lugares estas sencillas instrucciones. No respetar las normas puede donde se realicen explosiones. Observe las 
+ser peligroso o ilegal. En este manual encontrará información 
+restricciones y siga todas las normativas existentes.
+más detallada.
+MODO DESACTIVADO INSTALACIÓN Y SERVICIO TÉCNICO CUALIFICADOS
+En Únicamente debe instalar o reparar el equipo un  los casos en que esté prohibido el uso de teléfonos profesional del servicio técnico cualificado.
+móviles o donde pueda causar interferencias o 
+comportar algún CONEXIÓN CON OTROS DISPOSITIVOS peligro, apague el teléfono para 
+coche (modo desactivado). Para hacerlo, con Si desea conectarse con otro dispositivo por cable o  el 
+contacto encendido, mantenga pulsada mediante la tecnología inalámbrica Bluetooth, antes  .
+LA PRECAUCI lea la guía de usuario correspondiente para conocer ÓN EN CARRETERA ES LO PRINCIPAL
+Recuerde que la seguridad en la conducción con detalle las instrucciones de seguridad. No conecte  de un 
+vehículo requiere la m productos que sean incompatibles.áxima atención por parte de 
+todos los conductores. Utilice su teléfono para coche LLAMADAS DE EMERGENCIA
+Asegúrese de que el teléfono está encendido y en 
+únicamente si las condiciones de tráfico permiten 
+hacerlo con seguridad y compruebe si servicio. existe alguna 
+restricción por parte de la legislación local respecto al X Mantenga pulsada la tecla  hasta que ¿Hacer 
+uso de teléfonos móviles mientras se conduce. llamada de emergencia? aparezca en pantalla. 
+INTERFERENCIAS Confirme la acción pulsando . 
+Todos los teléfonos móviles pueden recibir X Confirme la petición de seguridad Sí pulsando  
+interferencias que podrían afectar su rendimiento. o cancele escogiendo No con  y pulsando . 
+MODO DESACTIVADO AL REPOSTAR Indique su ubicación. No interrumpa la llamada hasta 
+Coloque el teléfono para coche en modo desactivado que se le indique.
+en las áreas de servicio. No lo utilice cerca de 
+combustible o de productos químicos.Copyright  2006 Nokia. 5 All rights reserved. Servicios de redLLAMADAS Accesorios
+Asegúrese de que el contacto del coche esté 
+encendido. Seleccione el número de teléfono que 
+busca o m    ¡Aviso!árquelo, incluido el prefijo, y a continuación 
+pulse  Utilice únicamente accesorios aprobados por el fabricante del . Para finalizar una llamada, pulse . Para 
+responder a una llamada teléfono para este modelo determinado de teléfono. El uso de , pulse .
+cualquier otro tipo anulará toda aprobación o garantía del 
+ANTENA teléfono, y puede resultar peligroso.
+Para cumplir con las normas que rigen la exposición a 
+la radiofrecuencia para los dispositivos de transmisión Para conocer la disponibilidad de los accesorios aprobados,  
+m póngase en contacto con su distribuidor.óvil, se debe mantener una distancia mínima de 20 
+cm entre la antena y las personas.
+CAMBIO DE FUSIBLES
+Si se funde un fusible, cámbielo por uno del mismo tipo 
+y tamaño. ¡No utilice nunca un fusible con un voltaje 
+mayor!
+Servicios de red
+El teléfono móvil descrito en esta guía está aprobado para su 
+uso en la red (E)GSM 900 y GSM 1800.
+Algunas funciones incluidas en esta guía se denominan 
+Servicios de red. Se trata de servicios especiales que debe 
+contratar con su operador de telefonía móvil. Para disponer de 
+los servicios de red, antes debe contratarlos con su operador y 
+obtener las instrucciones necesarias para su uso.
+! Es posible que algunas redes no admitan todos los 
+caracteres o servicios que dependan del idioma.6 Copyright  2006 Nokia. All rights reserved. Información general1. Información general compatibles mediante tecnología Bluetooth o mediante un 
+cable adaptador RS232.
+Visión general del teléfono y el equipo para 2. Pantalla XDW-1R
+coche La pantalla independiente presenta unos tipos de letra grandes y fáciles de leer, se puede colocar al gusto del 
+El teléfono para coche está formado por varios componentes, usuario e incorpora una iluminación automática que se 
+descritos a continuación: puede configurar para usarse de día o de noche.
+3. Microteléfono HSU-4
+El microteléfono está formado por una serie de 
+componentes con funciones (teclas y rueda NaviTM), un 
+teclado alfanumérico, un micrófono y un auricular.
+El microteléfono está especialmente diseñado para que sea 
+más sencillo acceder a las funciones básicas, lo que permite 
+un manejo intuitivo.
+4. Altavoz SP-2
+El altavoz independiente permite transmitir con calidad 
+superior las señales acústicas desde el teléfono para coche y 
+transmitir la voz al realizar llamadas. Si, por otro lado, 
+prefiere utilizar los altavoces de la radio del coche, pregunte 
+al técnico que le va a instalar el teléfono para coche, ya que 
+podría ocurrir que no fuera compatible con su sistema.
+5. Micrófono MP-2
+Equipo del teléfono para coche El micrófono manos libres suministrado se ha concebido 
+1. Unidad de radio TFE-4R para un funcionamiento óptimo dentro de vehículos. Las 
+tecnologías más avanzadas en materia de supresión de eco y 
+La unidad de radio es un teléfono para coche GSM 900 / ruido en sistemas de automoción ofrecen unos resultados de 
+1800 con tecnología Bluetooth que permite conectar una calidad en las peores condiciones. El hecho de montar el 
+antena GSM compatible externa y dispositivos externos equipo en una ubicación adecuada también puede mejorar Copyright  2006 Nokia. 7 All rights reserved. Visión general del teléfono y el equipo para cocheel rendimiento del dispositivo. Véase Instalación en la 
+página 53.
+6. Cables del sistema PCU-4
+Se incluye un juego de cables para conectar la fuente de 
+alimentación y el sistema de encendido, así como para 
+silenciar la radio.
+7. Antena GSM (no se incluye en el paquete suministrado)
+La conexión de la unidad de radio a una antena GSM 
+externa compatible proporciona un rendimiento 
+inalámbrico óptimo del teléfono para coche.
+8. Cable RS232 AD-3
+El cable adaptador RS232 es una forma cómoda de conectar 
+el teléfono para coche al puerto serie de un ordenador 
+portátil compatible.
+Equipo y conexiones por cable del teléfono para coche8 Copyright  2006 Nokia. All rights reserved. Visión general del teléfono y el equipo para cocheCaracterísticas especiales blanco, pulse la tecla  del microteléfono y pronuncie el 
+Para una mayor seguridad y comodidad en el comando de voz para la función deseada. manejo de la 
+comunicación inalámbrica en el vehículo, este teléfono para 
+coche viene equipado con ! Antes de poder usar esta función, deberá registrar los  un surtido de características comandos de voz para las funciones deseadas en el teléfono 
+especiales diseñadas para aplicaciones automovilísticas. A para coche. Para obtener más información, véase Comandos 
+continuación se presentan algunos de estos extras: de voz en la página 42.
+Marcación mediante voz Grabadora
+La marcación mediante voz es una forma La grabadora funciona como un 
+cómoda de elegir números determinados dictáfono, lo que le permite grabar 
+de la guía, que se marcan memorándums de voz personales. Puede 
+automáticamente. Puede elegir hasta 15 realizar un máximo de 10 grabaciones en 
+entradas de la guía y asignarles grabaciones para iniciar la un tiempo de grabación total de 3 minutos. Para empezar a 
+llamada telefónica. Para efectuar una llamada de voz desde la grabar con la pantalla en blanco, mantenga pulsada la tecla  
+pantalla en blanco, sólo debe pulsar la tecla  del del microteléfono. Para reproducir un memorándum de voz 
+microteléfono y pronunciar la grabación. grabado, seleccione la opción Reproducir del menú Grabar.
+! Antes de poder usar esta función, deberá almacenar las Copia de entradas de la guía del teléfono móvilgrabaciones de los números guardados en la guía del Si dispone de un teléfono móvil 
+teléfono para coche. Para más información, véase compatible con la tecnología Bluetooth, 
+Marcación mediante voz en la página 20 y Marcación esta función le permite copiar entradas 
+mediante voz en la página 41. de la guía del móvil al teléfono para 
+Co coche.mandos de voz
+Exi Para descargar la guía del teléfono móvil compatible, puede ste una lista de funciones del teléfono 
+qu utilizar un comando de voz personal (p. ej. ¡Copiar la guía!) o e pueden activarse pronunciando una 
+grabació seleccionar la opción ¿Descargar contactos? del menú Usuarios. n. Se pueden añadir hasta tres 
+grabacio Para obtener más información, véase Datos del usuario en la nes para cada comando de voz. 
+Los coma página 48.ndos de voz se activan del mismo modo que se realiza 
+una llamada mediante una grabación. Con la pantalla en Copyright  2006 Nokia. 9 All rights reserved. Visión general del teléfono y el equipo para coche! Para poder utilizar esta función, primero deberá vincular el teléfo ! Para poder utilizar esta función, primero deberá vincular el no móvil y el teléfono para coche mediante la kit manos libres inalámbrico y el teléfono para coche 
+tecnología inalámbrica Bluetooth. Para obtener más mediante la tecnología inalámbrica Bluetooth. Para obtener 
+información, véase Tecnología inalámbrica Bluetooth en la más información, véase Tecnología inalámbrica Bluetooth 
+página 45. en la página 45.
+Función multiusuario Acceso rápido a la guía
+Esta función le permite guardar entradas El método abreviado para entrar en la 
+personales en dos perfiles diferentes de guía le permite encontrar más 
+datos de usuario. Por ejemplo, ahora las fácilmente un determinado número de 
+entradas de la guía, las grabaciones para teléfono y hacer la llamada.
+marcar mediante voz, los comandos de voz y las señales de X Para encontrar una entrada de la guía en particular, en la 
+llamada pueden guardarse para dos usuarios y luego pantalla en blanco desplácese con  a la primera letra 
+consultarse desde el teléfono para coche utilizando la misma del nombre, tal como lo introdujo en la guía, y pulse . 
+tarjeta SIM. Sólo tendrá que activar su perfil personal de X Utilice  para desplazarse hasta el nombre buscado y 
+usuario para acceder a los datos. pulse  para marcar el número.
+Cambio a kit manos libres inalámbrico
+Esta función permite emplear kits manos ! Antes de poder usar esta función, deberá registrar algunas entradas en la guía de teléfonos. Para obtener más 
+libres compatibles con la tecnología información, véase Descargar contactos en la página 48.
+Bluetooth. Puede pasar las llamadas del 
+modo manos libres en que se utiliza el ! Puede asignar un máximo de 5 números de teléfono a 
+sistema de micrófono y altavoz a un kit manos libres cualquier nombre registrado en la guía. Para obtener más 
+inalámbrico que permite un manejo cómodo y sencillo. Pulse la información, véase Guía en la página 31.
+tecla  del microteléfono del teléfono para coche para pasar 
+las llamadas entrantes o salientes al kit manos libres 
+inalámbrico.10 Copyright  2006 Nokia. All rights reserved. Antes de empezar a utilizar el teléfonoComunicación móvil de datos mediante la tecnología Antes de empezar a utilizar el teléfono
+inalámbrica Bluetooth o mediante un cable RS232 Lea la información que aparece a continuación antes de 
+El teléfono para coche presenta una función muy cómoda que comenzar a usar el teléfono para coche:
+posibilita la conexión de dispositivos externos compatibles, 
+como ordenadores portátiles o sistemas compatibles de 
+navegación, al ! El teléfono se enciende automáticamente al encender el  teléfono para coche de forma inalámbrica con la contacto del coche.
+tecnología Bluetooth o a través de un cable RS232. Al apagar el contacto del coche, el teléfono no se apagará 
+Es decir, ahora puede utilizar servicios de datos GSM como automáticamente: permanece encendido durante el período 
+GPRS o HSCSD para las transmisiones móviles de fax, el acceso de tiempo definido con la función Temporizador de 
+a Internet o servicios de flota. apagado. Para obtener más información, véase 
+Temporizador de apagado en la página 38.
+Tarjeta SIM
+Para manejar el teléfono para coche, deberá insertar una tarjeta 
+SIM en la !
+Compruebe de vez en cuando el estado del equipo del 
+unidad teléfono para coche para asegurarse de que está montado  de radio. Para obtener más información, véase 
+Instalación correctamente y que funciona bien. de la tarjeta SIM en la página 18.
+Es necesario emplear una tarjeta SIM válida para que el 
+Control cómodo del volumen con la rueda NaviTM teléfono para coche funcione. Para obtener más información, 
+Regule el volumen de la señal de llamada véase Instalación de la tarjeta SIM en la página 18.
+que le avisa que recibe una llamada 
+desplazándose simplemente con  
+según sea necesario. 
+También puede ajustar el volumen del altavoz durante una 
+llamada saliente con .Copyright  2006 Nokia. 11 All rights reserved. Etiquetas adhesivas incluidas en el paquete de ventasEtiquetas adhesivas incluidas en el paquete 
+de ventas
+Las etiquetas adhesivas del teléfono para coche contienen 
+información importante para el mantenimiento y tareas 
+relacionadas.
+X Pegue la etiqueta adhesiva  en la tarjeta de garantía.
+Códigos de acceso necesarios para la tarjeta 
+SIM
+y Código PIN (de 4 a 8 dígitos): 
+El Número de identificación personal o Personal 
+Identification Number (PIN) protege su tarjeta SIM del uso 
+no autorizado. El código PIN suele facilitarse con la tarjeta 
+SIM.
+Puede que algunos proveedores de servicios le permitan 
+desactivar el mensaje que le solicita que introduzca el PIN al 
+encender el teléfono.
+y Código PIN2 (de 4 a 8 dígitos): 
+El código PIN2, incluido en algunas tarjetas SIM, es 
+necesario para acceder a determinadas funciones.
+y Códigos PUK y PUK2 (8 dígitos):
+El código PUK (clave de desbloqueo personal) es necesario 
+para cambiar un código PIN bloqueado. Para cambiar un 
+código PIN2 bloqueado, es necesario el código PUK2. 
+! Si no ha recibido estos códigos junto a la tarjeta SIM, póngase en contacto con el proveedor de servicios.12 Copyright  2006 Nokia. All rights reserved. Su teléfono2. Su teléfono Indicadores de pantalla
+Los indicadores que se muestran a continuación pueden 
+Pantalla aparecer en la pantalla.
+Cuando el teléfono para coche está 
+listo para funcionar y no se ha 
+introducido ningún carácter, 
+aparece la pantalla en blanco, 
+como ilustra la figura. También se 
+ve el logotipo del operador de red.
+Si desea activar una función 
+mediante una Indica la intensidad de la señal de la red celular en su  grabación, primero 
+deberá acceder a la pantalla ubicación actual. Cuanto más alta es la barra, más  de 
+voz intensa es la señal.. Para hacerlo desde la pantalla 
+en blanco, pulse . Señala que hay una llamada saliente.
+Pu Indica que ha recibido uno o varios mensajes de texto.ede ajustar la iluminación de la pantalla para el 
+funcion Marca los mensajes de texto no leídos.amiento durante el día o la noche a fin de optimizar el 
+rendimiento. Para La función de desvío de llamadas está activa (servicio de  obtener más información, véase Ajustes de 
+iluminación de red).  la pantalla en la página 37.
+Consulte Desvío de llamadas en la página 35.
+El servicio de zona propia está activo (servicio de red). 
+Puede escribir números. 
+Gire la rueda NaviTM a la izquierda. 
+Ya puede hablar.
+Gire la rueda NaviTM a la derecha. 
+Puede escribir letras.Copyright  2006 Nokia. 13 All rights reserved. Indicadores de pantallaIndica que la itinerancia está activa. Marca los mensajes de texto no leídos. Si este indicador 
+La red está parpadeando, la memoria está llena. ha desactivado la función de encriptación.
+La señal de llamada está desactivada. Indica que se ha reenviado una tarjeta de presentación.
+La tecnología inalámbrica El ajuste está activo. Bluetooth está activada, véase 
+Tecnología inalámbrica Bluetooth en la página 45. Puede ajustarse el volumen del kit manos libres.
+El perfil de usuario 1 está en uso.
+Consulte Cambio de usuario en Puede ajustarse el volumen de la señal de llamada. la página 49. 
+El perfil de usuario 2 está en uso. Puede ajustarse el volumen del altavoz.
+Consulte Cambio de usuario en la página 49.
+La pantalla de luz diurna está activa.
+Indicadores de llamada La pantalla de luz nocturna está activa.
+Indica una llamada de voz activa.
+Indi Indicadores de las funciones de la grabadoraca que se ha desconectado la llamada de voz. 
+La grabadora está encendida.
+Las llamadas de voz se han transferido al kit manos 
+libres. Se está reproduciendo la grabación.
+La comunicación de datos está activa.
+La comunicación de fax está activa. Indicadores de las funciones Bluetooth
+Se ha El dispositivo con tecnología Bluetooth se ha vinculado  establecido una conexión de GPRS.
+con el teléfono para coche.
+La llamada está en espera. La tecnología inalámbrica Bluetooth está activa.
+Indicadores generales Indicadores de notificación
+Indica una búsqueda manual de red. Indica que se ha borrado un elemento.14 Copyright  2006 Nokia. All rights reserved. Componentes básicos del microteléfonoLa entrada es incorrecta o no está permitida. Componentes básicos del microteléfono
+Correcto (confirma un ajuste o selección). El microteléfono está formado por los 
+selectores de funciones, el teclado 
+Indica información adicional. alfanumérico, el micrófono y el auricular.
+Indica un aviso o una llamada de atención. Selectores de funciones
+El mensaje se está enviando (no significa que el mensaje Se trata de cuatro teclas y una rueda 
+se haya recibido por el destinatario). NaviTM. En función del ajuste elegido, 
+puede escoger estas opciones:
+Mantener pulsada
+- la función de llamada de 
+emergencia está activa.
+Pulsar
+- para aceptar una llamada entrante.
+- para ver la lista de los últimos 10 
+números de teléfono a los que ha 
+llamado o intentado llamar.
+- para empezar a marcar un número.
+Mantener pulsada
+- para eliminar texto, número u otras 
+entradas.
+- para regresar a la pantalla en 
+blanco.Copyright  2006 Nokia. 15 All rights reserved. Componentes básicos del microteléfonoPulsar Pulse la rueda Navi
+TM
+para acceder a una función en un contexto determinado:
+- para terminar una llamada.
+- para iniciar el menú y elegir un elemento.
+- para eliminar un carácter o número 
+int - para seleccionar un elemento de una lista.roducido.
+- para iniciar las opciones y elegir un elemento.
+- para volver al menú o la pantalla 
+anterior. Esta tecla activa las funciones siguientes desde la 
+pantalla en blanco:
+Rueda NaviTM
+Gire la ru X Púlsela para apagar el altavoz.eda NaviTM para ajustar el volumen de la señal de 
+llamada de una llamada entrante o el volumen del altavoz Las llamadas entrantes se indican con una imagen 
+durante una llamada saliente. También puede utilizar la parpadeante.
+rueda NaviTM para moverse dentro de un menú. X Manténgala pulsada para poner el teléfono en modo 
+desactivado. Púlsela para regresar a la pantalla en blanco. 
+Con la pantalla en blanco, gire la rueda NaviTM a la 
+izquierda X Púlsela para pasar las llamadas entrantes o salientes del  
+para teléfono para coche a un kit manos libres compatible y  introducir un número de teléfono. Si se encuentra en 
+la pantalla de voz, al girar la rueda NaviTM vinculado, o viceversa. a la izquierda, 
+podrá desplazarse por los comandos de Esta tecla activa las funciones de voz siguientes desde la  voz y, por ejemplo, 
+seleccionar uno para que se reproduzca. pantalla en blanco:
+Con la pantalla en blanco, gire la rueda NaviTM X Púlsela para activar la marcación mediante voz y los  
+a la derecha comandos de voz. 
+para buscar una entrada de la guía, empezando X Manténgala pulsada para activar la grabación (también 
+por A, B, C.. . durante las llamadas salientes).
+Si se encuentra en la pantalla de voz, al girar la rueda 
+NaviTM a la derecha, podrá desplazarse por las grabaciones 
+que ha almacenado para marcar un número mediante voz 
+y, por ejemplo, seleccionar una para que se reproduzca.16 Copyright  2006 Nokia. All rights reserved. Componentes básicos del microteléfonoTeclado alfanumérico
+Utilice estas teclas para introducir números (0-9), letras y otros 
+caracteres. Se han asignado varios caracteres a cada tecla. Para 
+introducir un carácter, pulse varias veces la misma tecla hasta 
+que llegue al carácter que busca. 
+Introducción de números y caracteres:
+X Para escribir un número, mantenga pulsada la tecla 
+numérica durante aproximadamente un segundo.
+X Para activar los caracteres, pulse  varias veces.
+X Para insertar un espacio en blanco, pulse .
+X Para cambiar entre mayúsculas y minúsculas, pulse . 
+X Utilice la rueda NaviTM  para mover el cursor por el 
+texto. 
+Por ejemplo, si quiere escribir la letra "C", pulse  tres veces. 
+Cuando aparezca el cursor parpadeante a la derecha de la letra 
+introducida, ya puede seleccionar otro carácter. Repita estos 
+pasos hasta terminar el texto.
+! Este procedimiento sólo sirve para introducir texto.
+   ¡Precaución!
+Cuando haya terminado de utilizar el microteléfono, asegúrese 
+de dejarlo bien colocado en el soporte. Si el microteléfono se 
+queda suelto, podría causar daños personales si tuviera que 
+frenar bruscamente o tuviera un accidente.Copyright  2006 Nokia. 17 All rights reserved. Conceptos básicos3. Conceptos básicos X Abra el compartimento de la tarjeta SIM levantándolo de un 
+Instalación de la tarjeta SIM lado, como se ilustra en la figura (4).
+   ¡Precaución!
+Mantenga las tarjetas pequeñas SIM fuera del alcance de los 
+niños.
+! La tarjeta SIM X Inserte la tarjeta SIM con cuidado  y sus contactos pueden dañarse fácilmente 
+con arañazos o dobleces, de modo que debe tener cuidado en el compartimento (5). 
+al Asegúrese de que la tarjeta SIM  manipularla, insertarla o extraerla del teléfono.
+X Apague el contacto se ha insertado correctamente  del coche antes de insertar la tarjeta 
+SIM y de que la zona de los contactos .
+X dorados se encuentra encarada Presione suavemente la pestaña hacia usted.
+de la carcasa de la unidad de radio 
+(1) para abrir y levantar la 
+cubierta (2).
+X Presione el compartimento de la 
+tarjeta SIM hasta que se fije en su 
+posición original y bloquéelo 
+X Deslice el compartimento de la deslizándolo en la dirección 
+tarjeta SIM (3) como se muestra indicada por la flecha. Cierre la 
+para desbloquearlo. cubierta de la unidad de radio y 
+compruebe que encaja.18 Copyright  2006 Nokia. All rights reserved. Encendido, apagado y modo desactivadoEncendido, apagado y modo desactivado ! Las entradas del teléfono para coche son las que hay en la 
+memoria interna de la guía, no las de la tarjeta SIM que se 
+está usando.
+   ¡Precaución!
+En los casos en que esté prohibido el uso de teléfonos móviles o Apagado del teléfono
+donde pueda causar interferencias o comportar algún peligro, Al apagar el contacto del coche, el teléfono no se apagará 
+apague el teléfono para coche (modo desactivado). El teléfono 
+automáticamente: permanece encendido durante el período de 
+se apagará, incluso si el contacto del coche está encendido. tiempo definido con la función Temporizador de apagado. 
+Cuando dicho período finaliza, entonces el teléfono se apaga 
+Encendido del teléfono automáticamente.
+Para encender el teléfono para coche, sólo deberá girar la llave 
+de contacto del coche. El teléfono para coche está conectado al ! El valor inicial del Temporizador de apagado es cinco 
+sistema minutos. de encendido, de manera que al encender el contacto 
+automáticamente se enciende el teléfono para coche. Modo desactivado
+Si le aparece el mensaje SIM rechaz. en la pantalla y ha Para cambiar al modo desactivado 
+comprobado que la tarjeta SIM está bien insertada, póngase en 
+cuando está encendido el contacto del 
+contacto con el operador de red o el proveedor de servicios.
+coche:
+Si se le solicita que introduzca el código PIN, teclee el código 
+PIN que aparece como X Mantenga pulsada la tecla .  ****. 
+Pulse X Luego mantenga pulsada la tecla .  para confirmar el PIN.
+Después de introducir el Cuando el coche está en modo desactivado, la pantalla  PIN correcto, el teléfono para coche 
+activa autom presenta el aspecto de la figura de arriba.áticamente el perfil de datos del usuario que se 
+estaba utilizando la última vez que el teléfono se encendió. Si X Para volver a poner el teléfono en modo activo, pulse .
+no se ha creado ninguna entrada en la memoria de la guía en X Siga las instrucciones que aparecen en la pantalla. 
+este determinado perfil de usuario, el teléfono para coche le 
+preguntará si desea copiar las entradas de la guía de la memoria 
+de la tarjeta SIM a la memoria del teléfono en este perfil de 
+usuario.Copyright  2006 Nokia. 19 All rights reserved. Funciones de llamada4. Funciones de llamada ! Antes de poder usar esta función, deberá almacenar las grabaciones de los números guardados en la guía del 
+Marcación mediante voz teléfono para coche. Para hacerlo, deberá pronunciar una grabación y asignarla al número en cuestión de la guía. Para 
+Es posible obtener más información, véase Grabaciones en la  realizar una llamada 
+telefónica pronunciando página 41. una grabación 
+asociada a un número de la guía de X Para marcar un número mediante la voz, pulse  para 
+teléfonos. Puede asociar grabaciones a acceder a la pantalla de voz. Sonará una señal y aparecerá 
+un máximo de 15 números guardados en la guía. Sirve cualquier en pantalla el mensaje Hable ahora.
+palabra o palabras, como el nombre de la persona, para utilizar X Pronuncie la grabación correspondiente al número deseado 
+como grabación y marcar mediante voz.
+en voz alta y clara.
+Antes de utilizar la marcación mediante voz, tenga en cuenta lo Para mostrar que ha reconocido la grabación, el teléfono 
+siguiente: para coche reproducirá la grabación tal como la ha grabado 
+y Los identificadores de voz son independientes del idioma. Sí y, 1,5 segundos más tarde, marcará automáticamente el 
+distinguen, en cambio, la voz de la persona que habla. número asignado.
+y Los identificadores de voz son sensibles al ruido de fondo. 
+Grábelos y realice llamadas en entornos silenciosos. Marcación desde la guía (búsqueda de 
+y Al grabar un identificador de voz o realizar una llamada nombres)
+mediante un identificador, sujete el teléfono en la posición Puede llamar a un número seleccionando 
+habitual, junto al oído. un nombre de la guía de teléfonos:
+y No se aceptan nombres muy cortos. Utilice nombres largos y 
+evite nombres parecidos para números diferentes. X En la pantalla en blanco, desplácese con  a la letra 
+! Debe pronunciar el nombre exactamente como lo pronunció deseada de la guía y pulse  para abrir la lista de 
+cuando lo grabó. Esto puede resultar difícil, por ejemplo, en nombres que empiezan por dicha letra. 
+entornos ruidosos o durante una situación de urgencia, por X Utilice  para desplazarse hasta el nombre buscado y 
+lo que no debería confiar únicamente en la marcación pulse  para marcar el número correspondiente.
+mediante voz en todos los casos.20 Copyright  2006 Nokia. All rights reserved. Rellamada! Puede añadir hasta cinco números de teléfono a una X Si se equivoca, pulse  para borrar.
+entrada de la guía con distintos símbolos para diferenciar X Para llamar al número que se muestra en la pantalla, 
+las entradas. El primer número guardado para un nombre se pulse .
+establece automáticamente como predefinido y aparece 
+marcado con el icono  (Normal). Otros tipos de números Utilización de la rueda NaviTM para llamar
+son  (Móvil),  (Casa),  (Oficina) y  (Fax).
+La rueda NaviTM también sirve para introducir un número de 
+Para llamar a cualquiera de los otros teléfono y llamar.
+números guardados para un mismo 
+nombre: X Con la pantalla en blanco, desplácese con  al primer 
+X dígito del número de teléfono y pulse  para Pulse  y utilice  para desplazarse hasta el símbolo seleccionarlo.
+o número de teléfono que busca.
+X X Repita este paso con el resto de dígitos que forman el Pulse  para marcar al número. número al que quiere llamar hasta que éste se vea 
+Rellamada íntegramente en la pantalla.X Pulse  para llamar al número.
+Para volver a marcar un número recién marcado, puede 
+consultar una lista con los 10 últimos números a los que ha Lista de favoritos
+llamado o intentado llamar.
+X C En esta lista puede colocar un máximo de 15 nombres on la pantalla en blanco, pulse . asignados a números de teléfono de la guía. Es una manera 
+X Desplácese con  hasta el número o nombre que busca. cómoda de acceder rápidamente a los números a los que llama 
+X Pulse con mayor frecuencia. para marcar el número.
+Para ver la lista desde la pantalla en blanco:
+Realización de llamadas mediante el teclado X Pulse .
+También puede realizar una llamada tecleando el número de X Utilice  para desplazarse hasta la entrada que busca y 
+teléfono. pulse  para seleccionarla.
+X Con la pantalla en blanco, teclee el número de teléfono X Siga las instrucciones que aparecen en la pantalla. 
+deseado pulsando las teclas numéricas de la  a la . X Pulse  para marcar al número.Copyright  2006 Nokia. 21 All rights reserved. Servicio de llamada en esperaServicio de llamada en espera Opciones durante una llamada
+Si la función Llamada en espera está Éstas son las opciones disponibles durante una llamada activa:
+activada, se le notificará de todas las y Enviar DTMF
+llamadas entrantes mientras esté 
+h y Silenciarablando por teléfono. Esta función le 
+permite aceptar las llamadas entrantes (servicio de red). y Guía
+X Pulse  durante una llamada para ver la lista de 
+Éstos son los ajustes disponibles para esta función:
+y Acti opciones.var 
+Esta opción X Utilice  para desplazarse hasta la opción que busca y  pone en marcha el servicio de llamada en 
+espera. pulse  para seleccionarla.
+y Cancelar 
+E Enviar DTMFsta opción desactiva la función de llamada en espera.
+y V Las cadenas de tonos DTMF pueden emplearse para enviar erific. estado 
+M contraseñas o para acceder al contestador, por ejemplo. arque esta opción para saber si este servicio está o no Use el microteléfono para introducir el número deseado. 
+activo actualmente para su teléfono para coche (consulta 
+de Inmediatamente después de que haya pulsado una tecla, el  red).
+X número relacionado se enviará como un tono DTMF.Pulse  para aceptar una llamada entrante mientras se X Pulse  para salir de esta opción y regresar a la pantalla 
+encuentra en mitad de otra llamada. La primera llamada 
+q anterior.ueda en espera.
+X Pulse  para alternar entre la llamada activa y la que se ! Pulse  para volver a la pantalla de llamadas.
+encuentra en espera. Si hay alguna llamada en curso, seguirá activa.
+X Pulse  para terminar la llamada activa y volver a la 
+llamada en espera.
+Para obtener más información, véase Llam. espera en la 
+página 36.22 Copyright  2006 Nokia. All rights reserved. Aceptación o rechazo de una llamada entranteSilenciar llamadas Aceptación o rechazo de una llamada 
+Si quiere, puede silenciar una llamada en entrante
+curso seleccionando la opción Silenciar, 
+qu Usted puede aceptar o rechazar las llamadas entrantes.e desactiva el micrófono. Tras 
+seleccionarla, aparece el X Pulse  para aceptar la llamada entrante y, al terminar,  mensaje 
+Silenciada pulse  para finalizarla. en la pantalla.
+X Pulse X Pulse  para rechazar la llamada entrante. para activar el micrófono.
+Si la función Desvío si ocupado ha sido activada (servicio de red) 
+Abrir la guía y las llamadas entrantes se desvían a otro número, como su 
+Durante una llamada, puede que desee abrir número de buzón de voz, todas las llamadas que rechace  la guía para 
+consultar un número de teléfono, por ejemplo, o para dar un también se desviarán a ese número. Para obtener más  
+número a la persona que llama. información, véase Desvío de llamadas en la página 35. 
+X Utilice la tecla  para buscar números en la guía 
+durante una llamada.
+X Pulse  para salir de la guía y regresar a la pantalla 
+anterior.Copyright  2006 Nokia. 23 All rights reserved. Utilización de los menús5. Utilización de los menús Lista de funciones de menú
+El teléfono para coche 810   Mensajes ofrece una amplia gama de 
+funciones que se agrupan en menús y submenús.  Crear mensaje 
+ Enviar
+Acceso a una función de menú  Borrar texto
+Para entrar en el menú desde la pantalla en blanco, pulse la  Usar plantilla
+rueda NaviTM . Entonces, puede explorar el menú con las  Guardar como plantilla
+teclas siguientes:  Buzón entrada
+Gire la rueda NaviTM a la izquierda para moverse hacia  Llamar
+arriba por una lista de funciones.  Respuesta
+Gire la rueda  Reenviar NaviTM a la derecha para moverse hacia 
+abajo por una lista de funciones.  Guardar como plantilla
+Pulse la rueda NaviTM  Borrar para seleccionar una opción.
+ Mens. enviados
+Pulse esta tecla para eliminar la entrada. O pulse esta  Abrir
+tecla para volver al nivel de menú anterior (véase la lista  Detalles
+de funciones de menú). Mantenga pulsada esta tecla para  Borrar
+borrar la pantalla.  Ajustes de mensajes
+ Nº del centro de mensajes
+ Responder vía mismo centro
+ Ver plantillas                                   
+ Enviar
+ Borrar
+  Llamadas
+ Llamadas perdidas
+ Llamadas recibidas
+ Llamadas enviadas24 Copyright  2006 Nokia. All rights reserved. Lista de funciones de menú   Respuesta automática Guía
+ Buscar  Respuesta auto desact.
+ Añadir contacto  Respuesta auto activada
+ Editar contacto  Llamada en espera
+ Borrar  Llam. espera activada 
+ Añadir n  Llam. espera desactivadaúmero
+ Estado de la memoria  Verific. estado
+ Marcaciones rápidas  Marcación rápida
+ Marc. rápida activada
+  Tonos  Marc. rápida desactivada
+ Volumen señal de llamada  Ajustes del teléfono
+ Señal de llamada  Idioma
+ Tonos de aviso  Ajustes de iluminación
+   Presentación info de célula Ajustes  Pres. info de célula activ.
+ Ajustes de la hora  Pres. info de célula desact.
+ Ajustes de llamadas  Selección de red
+ Envío de ID de lllamante  Automático
+ Fijado por la red  Manual
+ Activar  Temporizador de apagado
+ Desactivar  Buzón de voz
+ Desvío de llamadas  Escuchar mensajes de voz
+ Desvío de todas llamadas voz  Número de buzón de voz
+ Desvío si ocupado  Módem GPRS
+ Desvío si no responde  Ajustes de seguridad
+ Desvío si fuera de cobertura  Petición del código PIN
+ Desvío si no disponible  Cambio del código PIN
+ Cancelar todos los desvíos  Grupo cerrado de usuariosCopyright  2006 Nokia. 25 All rights reserved. Lista de funciones de menú Predetermin.   Grabadora
+ Activar  Grabar
+ Desactivar  Reproducir
+ Marcación fija  Borrar
+ Desactivar
+ Lista números   Bluetooth
+ Activar  Buscar dispos. Bluetooth
+ Ajustes del ecualizador  Ver dispositivos activos
+ Altavoz  Ver disposit. vinculados
+ Altavoz radio  Crear conexión
+ Restaurar valores iniciales  Borrar vínculo
+   Solicitar autorización Voz  Editar nombre de Bluetooth
+ Grabaciones  Nombre de Bluetooth
+ Grabación nueva
+ Lista de grabaciones   Usuarios
+ Reproducir  Descargar contactos
+ Cambiar  Cambiar de usuario
+ Borrar  Usuario 1
+ Comandos de voz  Usuario 2
+ Comando de voz nuevo  Memoria del teléfono
+ Lista de comandos de voz  Memoria de SIM y teléf.
+ Reproducir  Memoria de tarjeta SIM
+ Cambiar  Memoria del teléfono
+ Borrar26 Copyright  2006 Nokia. All rights reserved. Funciones de menú6. Funciones de menú X Desplácese hasta Crear mensaje y pulse  para 
+seleccionar esta opción. 
+Mensajes X Use el teclado alfanumérico del microteléfono de coche para escribir el mensaje de texto. Para obtener más 
+Puede recibir y leer mensajes cortos de información, véase Teclado alfanumérico en la página 17.
+texto en el teléfono para coche, así como X Cuando haya terminado de escribir el mensaje, pulse .
+escribir, enviar y guardar mensajes de 
+texto. Esta función ofrece cuatro opciones para elegir:
+No obstante, antes de poder enviar sus propios mensajes cortos, Enviar
+deberá realizar algunos AJUSTES MENSAJES necesarios. Permite enviar mensajes de texto.
+! Recuerde que lo primero es la seguridad en la carretera. No X Desplácese hasta Enviar y pulse  para seleccionar la 
+utilice el teléfono móvil mientras conduce; sólo cuando el opción.
+tráfico lo permita, use las funciones que le ofrece el teléfono X Seleccione el número de teléfono del destinatario en los 
+para coche. contactos o marque el número deseado. 
+! Cuando envíe mensajes a través del servicio de red X Para enviar el mensaje, pulse . SMS, puede que el teléfono muestre el texto Mensaje enviado. 
+Esto indica simplemente que el teléfono para coche ha Borrar texto
+enviado el mensaje al Elija esta opción para eliminar el texto introducido. número del centro de mensajes 
+programado en el teléfono. No significa que el mensaje se X Desplácese hasta Borrar y pulse  para seleccionar la 
+haya recibido en el destinatario deseado. opción.
+Crear mensaje Usar plantilla
+El microteléfono le Puede responder a un mensaje corto utilizando una plantilla  permite escribir y enviar mensajes de texto.
+X Desde la pantalla en preparada por usted. Elija Responder con plantilla para ver la  blanco, pulse  para acceder a este 
+menú. lista de plantillas almacenadas en el teléfono para coche.
+X Desplácese hasta el Para ver la lista de plantillas de mensajes de texto: menú Mensajes y pulse  para 
+abrirlo X Desde la pantalla en blanco, pulse  para acceder a este .
+menú.Copyright  2006 Nokia. 27 All rights reserved. MensajesX Desplácese hasta el menú Mensajes y pulse  para ver Si recibe más de un mensaje de texto:
+las opciones. X Seleccione el menú mensajes y pulse  para abrirlo.
+X Desplácese hasta la opción Ver plantillas y pulse   para X Seleccione la opción Buzón entrada y pulse  para ver la 
+consultar la lista. lista de mensajes.
+X Recorra la lista de plantillas y pulse  para seleccionar la X Utilice  para desplazarse hasta el mensaje que busca y 
+que quiera emplear. pulse  para leerlo.
+X Pulse  para confirmar la selección. X Desplácese con  para moverse por el mensaje o para 
+Gua ver el propio mensaje, el remitente o el número de teléfono rdar como plantilla del remitente, y la fecha y la hora en las que se ha recibido 
+Esta función tan útil sirve para guardar como plantilla un el mensaje. 
+mensaje de texto recibido. Si desea utilizar la plantilla, El teléfono para coche incorpora una serie de opciones para 
+seleccione Responder con plantilla para ver la lista y enviar el 
+manejar el mensaje seleccionado:
+mensaje.
+D X Pulse .esplácese hasta Guardar como plantilla y pulse  para 
+seleccionar X Utilice  para desplazarse hasta la opción que busca y  esta opción.
+pulse  para seleccionarla.
+Buzón entrada
+Cuand Llamaro reciba un SMS, el indicador  
+y el Elija esta opción para llamar al número de teléfono del  número de mensajes nuevos 
+aparecerán en la pantalla junto con la remitente.
+notificación mens. nuevos recibidos. Respuesta
+Todos los mensajes enviados al teléfono para coche se muestran Seleccione esta opción para escribir la respuesta a un mensaje 
+en el orden de recepción. Los mensajes de texto sin leer están de texto que haya recibido.
+marcados con el símbolo , y los mensajes de texto leídos se 
+indican con el símbolo . Reenviar
+El indicador de SMS parpadeante  significa que la memoria Seleccione esta opción para reenviar un mensaje de texto a otro 
+de mensajes está llena. Para poder enviar o recibir mensajes número.
+nuevos, primero deberá borrar algunos de los antiguos.28 Copyright  2006 Nokia. All rights reserved. MensajesGuardar como plantilla Ajustes de mensajes
+Esta función tan útil sirve para guardar como plantilla un SMS Para poder enviar mensajes de texto, deberá configurar algunos 
+recibido. Si desea utilizar la plantilla al escribir un mensaje ajustes del teléfono para coche.
+corto, seleccione la opción Responder con plantilla para ver la 
+lista y enviar el mensaje. Nº del centro de mensajes
+Este número lo facilita su proveedor de servicios. 
+Borrar
+Elija esta opción para eliminar el mensaje corto. ! Esta opción guarda el número de teléfono del centro de 
+mensajes, que necesita para enviar mensajes de texto.
+Mensajes enviados
+El teléfono pa Responder usando el mismo centro (servicio de red)ra coche guarda los mensajes de texto enviados. 
+Puede abrir El centro de mensajes al que el remitente se abona suele  un mensaje, ver los detalles o borrar un mensaje de 
+texto. encargarse de gestionar las respuestas a mensajes cortos. 
+X Desplácese hasta Responder vía mismo centro permite que el destinatario de su el menú Mensajes y pulse  para ver 
+la mensaje pueda enviarle una respuesta usando su centro de s opciones.
+X mensajes.Desplácese hasta la opción Mens. enviados y pulse  
+p Para efectuar estos ajustes:ara ver la lista de mensajes. X Desde la pantalla en blanco, pulse  para acceder a este 
+Abrir menú.  
+Esta opción abre el mensaje de texto seleccionado. X Desplácese hasta Ajustes de mensajes y pulse  para 
+seleccionar esta opción.
+Detalles X Desplácese hasta la opción deseada y pulse  para 
+Seleccione esta opción para ver el nombre y número de teléfono seleccionarla.
+del destinatario, además de la hora y la fecha a la que se ha X Siga las instrucciones que aparecen en la pantalla.
+enviado el mensaje de texto.
+Borrar Ver plantillas
+Esta El teléfono para coche es capaz de guardar un máximo de  opción borrar un mensaje corto.
+10 plantillas que pueden enviarse como mensajes cortos. 
+Incorpora cinco plantillas estándares de fábrica, pero puede Copyright  2006 Nokia. 29 All rights reserved. Registro de llamadasguardar 5 plantillas más a partir de mensajes cortos que le Registro de llamadas 
+hayan enviado. Éstas son las opciones disponibles:
+X El teléfono registra los números de Pulse . teléfono de las llamadas perdidas, 
+X Desplácese con  al menú Mensajes y pulse  para recibidas y enviadas, así como la fecha y 
+ver las opciones. la hora de sus llamadas.
+X Desplácese con a la opción Ver plantillas y pulse  
+para consultar la lista. ! El teléfono sólo registra las llamadas perdidas y recibidas si 
+X la red admite estas funciones, siempre y cuando el teléfono Utilice  para recorrer la lista de plantillas y pulse  se encuentre conectado y dentro del área de servicio de la 
+para seleccionar la que quiera emplear. red.
+X Vuelva a pulsar  para confirmar la selección de la 
+plantilla. ! En estas listas puede ver un máximo de 10 de las últimas 
+X llamadas recibidas y un máximo de 10 de los últimos Utilice  para desplazarse hasta la opción que busca y 
+p números marcados. Estos datos le servirán como referencia. ulse  para seleccionarla. El elemento más reciente aparecerá el primero de lista.
+X Siga las instrucciones que aparecen en la pantalla. Hay tres opciones disponibles para cada uno de los elementos 
+En del registro de llamadas: Llamar, Hora de la llamada o Borrar.viar
+Se enviará X Elija una entrada de una de las listas y pulse . la plantilla seleccionada.
+X Utilice  para desplazarse hasta la opción que busca y 
+Borrar pulse  para seleccionarla.
+Esta función le permite borrar las plantillas que ha guardado. X Siga las instrucciones que aparecen en la pantalla.
+X Desplácese hasta Borrar y pulse  para seleccionar la X Pulse  para regresar al menú anterior o mantenga pulsada 
+plantilla en cuestión. esta tecla para volver a la pantalla en blanco.
+! Las plantillas guardadas a partir de mensajes que le hayan Llamadas perdidas 
+enviado pueden borrarse; en cambio,
+las 5 Para consultar una lista con hasta 10 de las últimas llamadas  plantillas estándares almacenadas en la memoria del 
+teléfono para coche no pueden eliminarse. registradas (servicio de red) desde la pantalla en blanco:
+X Pulse .30 Copyright  2006 Nokia. All rights reserved. GuíaX Desplácese con  al menú Llamadas y pulse  para X Desplácese con  a la opción Llamadas enviadas y pulse 
+entrar.  para consultar la lista.
+X Desplácese con a la opción Llamadas perdidas y pulse X Utilice  para recorrer la lista.
+ para consultar la lista.
+X Utilice Guía para recorrer la lista.
+X Pulse Todas las entradas que realice en la guía  para regresar a la pantalla en blanco.
+se almacenan en la memoria interna del 
+Llamadas recibidas teléfono para coche. También puede 
+Para consultar una copiar entradas desde una tarjeta o un  lista con hasta 10 de las últimas llamadas 
+recibidas registradas (servicio de red) desde la pantalla teléfono móvil compatible con la tecnología inalámbrica  en 
+blanco: Bluetooth al teléfono para coche. Para obtener más 
+X información, véase Descargar contactos en la página 48. Pulse . 
+X Para cada perfil de usuario, la guía interna del teléfono para Desplácese con  al menú Llamadas y pulse  para coche puede guardar hasta 1000 nombres con su respectivo 
+entrar. número de teléfono. Para obtener más información, véase 
+X Desplácese con a la opción Llamadas recibidas y pulse Consulta del estado de la memoria en la página 33.
+ para consultar la lista. Puede asignar hasta cinco números de teléfono a cada nombre.
+X Utilice  para recorrer la lista. El primer número guardado para un nombre se establece 
+Llamad automáticamente como predefinido y aparece marcado con el as enviadas icono . Cuando se selecciona un nombre de la guía, por 
+Puede utilizar un método abreviado para ver la lista de los 10 ejemplo, para hacer una llamada, se utiliza el número 
+últimos números marcados con la pantalla en blanco: pulse . predefinido, a no ser que se seleccione otro.
+Para ver la lista de los últimos números marcados desde la 
+pantalla en blanco: Búsqueda de nombres y números
+X Pulse . Puede consultar rápidamente la lista de nombres y números de 
+X Desplácese con teléfono desde la pantalla en blanco.  al menú Llamadas y pulse  para 
+entrar. X Utilice  para desplazarse hasta la primera letra del 
+nombre que busca y pulse  para seleccionarla.Copyright  2006 Nokia. 31 All rights reserved. GuíaX Ahora puede ver todos los mensajes guardados en la guía X Utilice  para desplazarse a la opción Editar contacto y 
+que empiecen con la letra seleccionada. Están ordenados pulse  para seleccionarla.
+alfabéticamente. X Desplácese con  a la primera letra del nombre que 
+X Desplácese con  hasta el nombre de la lista que busca. busca y pulse  para ver la lista de entradas que 
+X Para llamar a la empiezan por esta letra. persona, pulse .
+X Para finalizar la X Con la tecla , desplácese al nombre que busca de la  llamada, pulse .
+X P guía y pulse  para seleccionarlo.ara regresar a la pantalla en blanco, pulse .
+Para obtener más información X Ya puede modificar la entrada. Utilice  para , véase Marcación desde la guía 
+(búsqueda de desplazarse a la letra o número que quiere modificar y nombres) en la página 20.
+realice los cambios.
+Adición de nombres X Para guardar los cambios, pulse .
+Los nombres y números de teléfono se almacenan en la guía. 
+Pu Borrado de entradas de la guíaede añadir nombres y su correspondiente número de teléfono 
+a la guía Puede eliminar nombres y sus respectivos números de teléfono  desde la pantalla en blanco:
+X S de la guía; desde la pantalla en blanco:eleccione el menú Guía y pulse  para entrar.
+X Utilice X Seleccione el menú Guía y pulse  para entrar. para desplazarse a la opción Añadir contacto y 
+pulse  para seleccionarla X Utilice  para desplazarse a la opción Borrar y pulse .
+X I  para seleccionarla.ntroduzca el nombre con las teclas alfanuméricas y pulse X Utilice  para desplazarse hasta la opción que busca y 
+ para guardarlo.
+X I pulse  para seleccionarla.ntroduzca el número correspondiente y pulse  para 
+guardarlo X Siga las instrucciones que aparecen en la pantalla..
+X Para borrar un carácter incorrecto, pulse . Adición de números de teléfono
+Edición de nombres y números de teléfono Puede agregar hasta cuatro números de teléfono más a una 
+Pu entrada de la guía. El primer número guardado para un nombre ede modificar nombres y números de teléfono de la guía 
+desde la pantalla en se establece automáticamente como predefinido y aparece  blanco:
+X marcado con el icono  (Normal). Otros tipos de números son Seleccione el menú Guía y pulse  para entrar.
+ (Móvil),  (Casa),  (Oficina) y  (Fax).32 Copyright  2006 Nokia. All rights reserved. GuíaDesde la pantalla en blanco: Asignación de un número de teléfono a una tecla de 
+X Seleccione el menú Gu marcación rápidaía y pulse  para entrar.
+X Utilice Puede asignar cualquier número de teléfono de la guía a una  para desplazarse a la opción Añadir número y 
+pulse  para seleccionarla tecla de marcación rápida (de  a ). Tenga en cuenta que .
+X C la tecla  está reservada para la marcación de rápida del on la tecla , desplácese al nombre que busca de la buzón de voz. 
+guía y pulse  para seleccionarlo.
+Éstas son las opciones disponibles para cada una de las teclas 
+X Desplácese con  hasta el símbolo que desea asignar al de marcación: Ver número, Borrar o Cambiar.
+número que añade y pulse  para seleccionarlo. Desde la pantalla en blanco:
+X Introduzca el número y pulse  para guardarlo. X Seleccione el menú Guía y pulse  para abrirlo.
+Consulta del estado de la memoria X Utilice  para desplazarse a la opción Marcación rápida 
+Esta y pulse  para seleccionarla. Ahora puede ver la lista de  opción le permite ver el espacio de almacenamiento libre 
+de l teclas de marcación rápida y los números de teléfono a memoria del teléfono para coche (en %).
+asignados a ellas.
+Desde la pantalla en blanco:
+X X Desplácese mediante  a la entrada que busca de la Seleccione la Guía y pulse . guía y pulse  para seleccionarla. Aparecerán las 
+X Utilice opciones Ver número, Cambiar y Borrar. para desplazarse a la opción Estado de la 
+memoria y pulse  para seleccionarla. X Utilice  para desplazarse hasta la opción que busca y 
+X Ahora puede ver en pulse  para seleccionarla.  pantalla el estado de la memoria.
+X Siga las instrucciones que aparecen en la pantalla.
+Marcación rápida
+La opci Marcación rápida de un númeroón de marcación rápida es una cómoda función de 
+método abreviado que le permite marcar un número de teléfono X Mantenga pulsada la tecla de marcación rápida asignada al 
+asignado a una tecla numérica de forma rápida y sencilla. número hasta que dé comienzo la llamada.
+La opción de marcación rápida puede estar activada (Activar) o 
+desactivada (Desactivar) según prefiera. Desplácese hasta ! Para las opciones de los ajustes, véase Marcación rápida en 
+Ajustes la página 36. - Ajustes de llamadas - Marcación rápida.Copyright  2006 Nokia. 33 All rights reserved. Opciones de tonosOpciones de tonos Ajustes 
+Puede elegir la señal de llamada para las Puede personalizar varios ajustes del 
+llamadas entrantes, regular el volumen y teléfono para coche.
+activar o desactivar los tonos de aviso 
+según prefiera. X Para definir alguno de los ajustes siguientes, entre en el 
+! Use la rueda Na menú Ajustes desde la pantalla en blanco y pulse  para viTM  para regular el volumen de la abrirlo.
+señal de llamada cuando el teléfono para coche está 
+sonando para avisarle que tiene una llamada entrante o 
+p Configuración de la hora y la fechaara cambiar el volumen del altavoz durante una llamada.
+X S X Utilice  para desplazarse a la opción Ajustes de la hora eleccione el menú Tonos y pulse  para acceder a los y pulse  para seleccionarla.
+elementos del menú.
+X Utilice X Utilice  para desplazarse a la opción Ajustar la hora y  para desplazarse hasta la opción que busca y 
+p pulse  para seleccionarla. ulse  para seleccionarla.
+X Siga las in X Utilice  para establecer la hora. Pulse  para fijar el strucciones que aparecen en la pantalla.
+ajuste y continúe con los minutos.
+Volumen señal de llamada X Repita este paso para definir los minutos.
+Esta X Repita este procedimiento para entrar en las opciones  opción sirve para establecer el volumen del altavoz para las 
+llamadas entrantes. Formato de hora, Ajustar la fecha y Formato de fecha y 
+configurar los ajustes que desee.
+Señal de llamada
+Esta Ajustes de llamadas opción le ofrece un conjunto de señales de llamada para 
+elegir Esta opción le permite definir varias funciones de llamada. Para . Elija la que prefiera para avisarle que tiene una llamada 
+entrante. efectuar ajustes de llamada, desde la pantalla en blanco:
+X Seleccione el menú Ajustes y pulse  para abrirlo.
+Tonos de aviso X Utilice  para desplazarse a la opción Ajustes de 
+Con esta opción puede activar o desactivar los tonos de llamadas y pulse  para seleccionarla.
+notificación especial.34 Copyright  2006 Nokia. All rights reserved. AjustesEnvío del número propio y Desvío si no responde 
+y Fijado por la red Esta opción sirve para desviar todas las llamadas de voz que  
+Esta opción no pueda responder. activará el ajuste que haya acordado con el 
+operador de red. y Desvío si fuera de cobertura 
+y Activar Elija esta opción para desviar las llamadas de voz cuando se  
+Al seleccionar encuentre fuera del alcance de la red. esta opción, se activará su ID de llamante: la 
+persona a la que llama podrá ver el número del teléfono y Desvío si no disponible 
+para coche (servicio de red). Con esta opción se desvían todas las llamadas de voz que 
+y Desactivar reciba cuando no esté disponible. 
+Si prefiere que su número no se envíe al destinatario de la y Cancelar todos los desvíos 
+llamada, utilice esta opción para desactivar su ID de Use esta opción para anular todas las opciones activas de 
+llamante. desvío.
+X Utilice  para desplazarse hasta la opción que busca y 
+pulse  para seleccionarla Para configurar el desvío de llamadas, desde la pantalla en .
+blanco:
+Desvío de llamadas X Seleccione el menú Ajustes y pulse  para abrirlo.
+Con la función Desvío de llamadas, puede dirigir las llamadas X Utilice  para desplazarse a la opción Ajustes de 
+entrantes a otro número, por ejemplo, al número del buzón de llamadas y pulse  para seleccionarla.
+voz. Para obtener más información al respecto, póngase en X Utilice  para desplazarse a la opción Desvío de 
+contacto con su proveedor de servicios (servicio de red). llamadas y pulse  para seleccionarla.
+El teléfono para coche pone a su disposición una gran variedad 
+de opciones: X Utilice  para desplazarse hasta la función que busca y pulse  para seleccionarla. 
+y Desvío de todas llamadas voz 
+E Puede seleccionar cualquiera de las cuatro opciones para cada sta opción desviará todas las llamadas de voz entrantes.
+una de las funciones de desvío:
+y Desvío si ocupado 
+S y Activar eleccione esta opción para desviar todas las llamadas de Sirve para seleccionar el número al que desea enviar las 
+voz cuando su número esté ocupado o cuando rechace una 
+llamada entrante. llamadas de voz desviadas: el buzón de voz o cualquier otro 
+número.Copyright  2006 Nokia. 35 All rights reserved. Ajustesy Cancelar X Utilice  para desplazarse a la opción Ajustes de 
+Sirve para anular las funciones de desvío de llamadas. llamadas y pulse  para seleccionarla.
+y Verific. estado X Utilice  para desplazarse a la opción Respuesta 
+Esta opción le permite consultar el estado de las funciones automática y pulse  para seleccionarla.
+de desvío de llamadas. X Desplácese con  a las opciones Activar o Desactivar y 
+y Retardo pulse  para efectuar la selección.
+Con esta opción puede definir el período de tiempo después 
+del cual se desviará la llamada Llam. espera entrante.
+Esta función tiene tres opciones para elegir (servicio de red):
+! El valor inicial del tiempo de retardo es de 5 segundos. Los d y Activar esvíos de llamadas activos se muestran mediante un 
+i Esta opción pone en marcha el servicio de llamada en ndicador en la pantalla. Para obtener más información, 
+espera.
+véase Indicadores de pantalla en la página 13. 
+y Cancelar 
+Respuesta automática Esta opción desactiva la función de llamada en espera.
+Esta función sirve para contestar automáticamente las y Verific. estado 
+llamadas entrantes después de la primera señal de llamada, Marque esta opción para saber si este servicio está o no 
+siempre y cuando el teléfono esté encendido y no se encuentre activo actualmente para su teléfono para coche (consulta 
+en modo desactivado. de red).
+Marcación rápida
+   ¡Precaución!
+En La opción de marcación rápida puede estar activada (Activar) o  caso de activar esta función, asegúrese de que el volumen de 
+la señal de llamada sea lo desactivada (Desactivar) según prefiera. suficientemente alto para poder 
+advertir las llamadas entrantes. De lo contrario, corre el riesgo 
+de que las personas que hacen Ajustes del teléfono las llamadas escuchen las 
+conversaciones que tienen lugar en el Elija esta opción para personalizar la configuración del teléfono  interior del coche.
+para coche.
+Para activar la función de respuesta automática, desde la 
+pantalla en blanco:
+X Seleccione el menú Ajustes y pulse  para abrirlo.36 Copyright  2006 Nokia. All rights reserved. AjustesIdioma del texto de la pantalla Brillo nocturno
+Esta opción sirve para elegir el idioma para los textos que X Utilice  para desplazarse hasta el ajuste de 
+aparecen en pantalla. Si selecciona automático, el teléfono iluminación que desee y pulse  para seleccionarlo.
+elegirá el idioma según la información almacenada en la tarjeta 
+SIM. Presentación info de célula
+Para ajustar el idioma Al activar esta función, se mostrará en la pantalla información  del texto de la pantalla, desde la pantalla 
+en blanco: sobre la red inalámbrica que se está usando en ese momento. 
+X S No obstante, sólo podrá utilizar este servicio de red si el eleccione el menú Ajustes y pulse  para abrirlo.
+X teléfono está registrado en una red inalámbrica basada en la Utilice  para desplazarse a la opción Ajustes del tecnología Micro Cellular Network (MCN) o tecnología de red 
+teléfono y pulse  para seleccionarla. microcelular.
+X Utilice  para ir a la opción Idioma y pulse  para 
+seleccionarla. Selección de red
+X Utilice La red celular a la que se conectará el teléfono puede  para desplazarse hasta el idioma que busca y 
+pulse  para seleccionarlo seleccionarse de forma manual o automática..
+y Automático 
+Ajustes de iluminación de la pantalla El teléfono para coche seleccionará automáticamente una 
+Puede ajustar el brillo de la iluminación de la pantalla para verla red inalámbrica adecuada y disponible en la zona.
+mejor. Se ofrecen dos configuraciones personalizables: un y Manual 
+sensor regula la iluminación para que se adapte a las Puede consultar una lista de redes inalámbricas disponibles 
+condiciones de luz del entorno de funcionamiento para mayor entre las que podrá seleccionar una, siempre y cuando ésta 
+comodidad. tenga un acuerdo de itinerancia con su operador de red 
+Brillo de luz diurna local. El teléfono permanecerá en modo manual hasta que 
+X Utilice se seleccione el modo automático o se inserte otra tarjeta  para desplazarse a la opción Brillo de luz 
+diurna SIM en él. y pulse  para seleccionarla.
+X Utilice Para ajustar la selección de red desde la pantalla en blanco: para desplazarse hasta el ajuste de 
+iluminación que desee y pulse  para seleccionarlo. X Seleccione el menú Ajustes y pulse  para abrirlo.
+X Utilice  para desplazarse a la opción Ajustes del 
+teléfono y pulse  para seleccionarla.Copyright  2006 Nokia. 37 All rights reserved. AjustesX Utilice  para ir a la opción Selección de red y pulse X Utilice  para desplazarse a la opción Temporizador de 
+ para seleccionarla. apagado y pulse  para seleccionarla.
+X Utilice  para desplazarse hasta la red que busca y pulse X Gire la rueda NaviTM  para seleccionar el tiempo. 
+ para seleccionarla. X Pulse  para activar el temporizador.
+X Siga las instrucciones que aparecen en la pantalla. Aparecerá un mensaje en pantalla para informarle de que ya se 
+Temporizador de ha configurado el temporizador.apagado
+El teléfono para coche incorpora un temporizador de apagado Buzón de voz 
+que mantiene el teléfono en funcionamiento durante el tiempo 
+definido Puede que la red le ofrezca un servicio de buzón de voz, en cuyo , incluso después de apagar el contacto del coche. Tras 
+caso deberá instalar antes de poder recibir mensajes de voz. 
+apagar el contacto, el teléfono para coche permanece Para entrar en este buzón de voz, puede que necesite guardar el 
+encendido durante el período definido en el Temporizador de 
+número en el teléfono para coche. El proveedor de servicios le 
+apagado. El temporizador se restablece automáticamente 
+después de toda ll dará más información sobre este servicio y le facilitará el amada realizada.
+número del buzón de voz.
+! El valor inicial del temporizador de apagado es de 5 Para configurar el buzón de voz desde la pantalla en blanco:
+minutos. El temporizador de apagado está limitado a un X Seleccione el menú Ajustes y pulse  para abrirlo.
+máximo de 24 horas. Recuerde que el teléfono para coche X Utilice  para desplazarse a la opción Buzón de voz y 
+consume la batería del coche. Cuando configure el 
+tempo pulse  para seleccionarla.rizador de apagado, procure no gastar la batería del 
+coche. X Utilice  para desplazarse hasta la opción que busca y 
+Recuerde que el teléfono para coche consume la batería del pulse  para seleccionarla.
+coche. Cuando configure el temporizador de apagado, 
+procure no gastar la batería Escucha de los mensajes de voz del coche.
+Para aju X Vaya a la opción Escuchar mensajes de voz y pulse  star el temporizador de apagado desde la pantalla en 
+bla para seleccionarla.nco:
+X S X Pulse  para marcar el número del buzón de voz y luego eleccione el menú Ajustes y pulse  para abrirlo.
+X Utilice  para desplazarse a la opción Ajustes del siga las instrucciones que reciba. 
+teléfono y pulse  para seleccionarla. ! Mantenga pulsadas las teclas  o  para marcar directamente el número del buzón de voz.
+38 Copyright  2006 Nokia. All rights reserved. AjustesNúmero del buzón de voz X Pulse  para entrar en la opción ¿Editar el punto de 
+Usted recibirá el número del buzón de voz de parte del acceso? e introduzca el nombre del punto de acceso GPRS 
+proveedor de servicios después de abonarse a este servicio. con las teclas alfanuméricas.
+X Vaya a la opción X Guarde el ajuste pulsando . Número de buzón de voz y pulse  para 
+seleccionarla. X Si se equivoca al seleccionar un carácter, pulse  para 
+X Escriba el n borrarlo. Mantenga pulsada dicha tecla si desea borrar toda úmero del buzón de voz con las teclas numéricas 
+de la entrada. la  a la . Si se equivoca, pulse  para borrar.
+X Pulse Para obtener más información, véase Información de referencia  para guardar el número.
+en la página 51.
+Ajustes del módem de GPRS
+Es posible Coste del GPRS y de aplicaciones relacionadasconectar el teléfono para coche mediante Bluetooth 
+o por cable a un Es posible que los enlaces GPRS y las aplicaciones que utilizan  PC compatible y utilizar el teléfono como 
+m el GPRS, p. ej., al enviar o recibir datos y mensajes cortos, ódem para permitir la conectividad GPRS desde el PC. Sin 
+embargo tengan un coste adicional. Si desea saber más detalles sobre , tenga en cuenta que primero necesitará un punto de 
+acceso GPRS este coste, póngase en contacto con su operador de red o . Póngase en contacto con el operador de red o el 
+proveedor de servicios y solicite información proveedor de servicios..
+Para poder utilizar el GPRS: Ajustes de seguridad
+y Necesitará abonarse al servicio GPRS de su operador de red 
+o proveedor de servicios.
+   ¡Precaución!
+y Póngase en contacto con el operador de red o proveedor de En el caso de algunos ajustes de seguridad (por ejemplo, cuando 
+servicios para obtener la información necesaria sobre la se han restringido las llamadas a un grupo cerrado de usuarios 
+disponibilidad y la configuración del GPRS. o a números fijos), puede que, en algunas redes, las llamadas de 
+y Los ajustes necesarios para utilizar aplicaciones de GPRS emergencia a algunos números (p. ej. 112 u otros números de 
+deben almacenarse en emergencia oficiales) estén bloqueadas. En ese caso tendría que  el teléfono para coche.
+X Utilice desactivar dichas funciones antes de poder efectuar una  para ir a la opción Módem GPRS y pulse  
+para seleccionarla. llamada de emergencia.
+X Para configurar un nuevo punto de acceso GPRS o para 
+cambiar uno existente, pulse  de nuevo.Copyright  2006 Nokia. 39 All rights reserved. AjustesPetición del código PIN Esta función tiene tres opciones para elegir:
+Con esta opción puede configurar el teléfono para coche para y Desactivar 
+que solicite el código PIN de su tarjeta SIM siempre que Se desactiva la función de números de marcación fija.
+enciende el teléfono. Recuerde que algunos proveedores no y Lista números 
+permiten desactivar la función de petición del código PIN. Sirve para ver los números de teléfono que pueden usarse 
+C para las llamadas salientes.ambio del código PIN
+Esta y Activar  opción le permite modificar el código PIN de la tarjeta SIM 
+activa. Recuerde que estos códigos sólo pueden estar formados Se activa la función de números de marcación fija.
+por los dígitos del 0 al 9 X Con la pantalla en blanco, seleccione el menú Ajustes. .
+Gru X Utilice  para desplazarse hasta la opción que busca y po cerrado de usuarios pulse  para seleccionarla.
+Se trata de un servicio de red que especifica el grupo de 
+perso X Siga las instrucciones que aparecen en la pantalla.nas al que puede llamar o que puede llamarle. Para 
+obtener más información, póngase en contacto con su Para obtener más información, véase Códigos de acceso  operador 
+de red o proveedor de servicios. necesarios para la tarjeta SIM en la página 12. 
+Esta función tiene tres opciones para elegir: Ajustes de audio
+y Desactivar 
+S El teléfono para coche dispone de varias opciones para la salida e desactiva el servicio de grupo cerrado de usuarios. del audio a través del altavoz:
+y Predetermin. 
+S y Conexión directa con el altavoz SP-2 que viene en el e activan los ajustes realizados por el proveedor de paquete de venta.
+servicios.
+y y Conexión con un altavoz de radio de coche compatible a Activar
+S través de un relé adicional que conmuta la salida de audio e activa el servicio de grupo cerrado de usuarios. hacia el altavoz (no se incluye en el paquete de ventas). 
+Números de marcación fija Consulte con el técnico encargado de instalar el teléfono 
+Pu para coche.ede restringir las llamadas salientes a determinados números 
+de teléfono, siempre y cuando está función sea compatible con X Para hacerlo, seleccione la opción Altavoz.
+la tarjeta SIM. Para guardar y modificar los números de esta y Conexión con los altavoces de radio de coche compatibles a 
+lista, necesitará el código PIN2. través de la entrada de audio de la radio del coche. Deberá 40 Copyright  2006 Nokia. All rights reserved. Ajustesajustar el volumen de audio de manera adecuada si y No se aceptan nombres muy cortos. Utilice nombres largos y 
+selecciona esta opción. evite nombres parecidos para números diferentes.
+X Para hacerlo, seleccione la opción Altavoz radio. ! Debe pronunciar el nombre exactamente como lo pronunció 
+Valores iniciales cuando lo grabó. Esto puede resultar difícil, por ejemplo, en 
+entornos ruidosos o durante una situación de urgencia, por 
+Puede restablecer todos los ajustes de los menús a los valores lo que no debería confiar únicamente en la marcación 
+iniciales desde la pantalla en blanco: mediante voz en todos los casos.
+X Utilice  para ir al menú Ajustes y pulse  para 
+entrar. Marcación mediante voz
+X Desplácese con Puede asignar Grabaciones a los números de teléfono y el  hasta la opción ¿Restaurar valores 
+iniciales? teléfono para coche intentará marcar automáticamente el  y pulse  para seleccionarla.
+X Siga las in número cuando reconozca la grabación.strucciones que aparecen en la pantalla.
+Registro de grabaciones nuevas 
+   ¡Precaución! Con esta opción, podrá registrar una Grabación nueva, asignarla 
+Si borra un a un número de teléfono y guardarla en la memoria del teléfono  ajuste, no podrá deshacer esa acción. Los datos se 
+habrán para coche. Es posible memorizar un máximo de 12 grabaciones  perdido de forma irremediable.
+con los respectivos números por cada perfil de usuario en el 
+Grabaciones teléfono para coche. Sirve cualquier palabra o palabras, como el 
+nombre de la persona.
+Antes de efectuar las grabaciones o 
+utili X Para registrar una Grabación nueva, entre en el menú Voz de zar la marcación mediante voz, debe 
+tener presente una serie de aspectos: la pantalla en blanco y desplácese con  a la opción 
+y Grabaciones. Pulse  para seleccionar esta opción.Los identificadores de voz son independientes del idioma. Sí 
+distinguen, en cambio, la voz de la persona que habla. X Desplácese con  a la opción Grabación nueva y pulse 
+y .Los identificadores de voz son sensibles al ruido de fondo. 
+Grábelos y realice llamadas en entornos silenciosos. X Con la tecla , desplácese al nombre que busca de la 
+y guía y pulse  para seleccionarlo.Al grabar un identificador de voz o realizar una llamada X Utilice  para desplazarse hasta el número de teléfono 
+mediante un identificador, sujete el teléfono en la posición 
+habitual, junto que busca y pulse  para seleccionarlo. al oído.Copyright  2006 Nokia. 41 All rights reserved. AjustesX Siga las instrucciones que aparecen en la pantalla. Marcación de números mediante la voz
+Lista de grabaciones Para llamar a un número usando la voz:
+Esta opción le permitir consultar todas las grabaciones 
+guardadas en la memoria del teléfono para coche y editar la 
+lista con las opciones mencionadas. X Pulse . Sonará una señal y aparecerá en pantalla el 
+y mensaje Hable ahora.Reproducir
+Esta opción X Pronuncie la grabación correspondiente al número deseado  reproducirá la grabación tal como la ha 
+registrado. en voz alta y clara.
+y Cambiar El teléfono para coche reproducirá la grabación y, 
+Puede sustituir una grabación por otra nueva. Elija esta transcurridos 1,5 segundos, marcará automáticamente el 
+opción y pronuncie la número que tenga asignado. nueva grabación.
+y ¿Borrar la grabación? X Para cancelar la marcación mediante voz, pulse .
+Con esta opción suprimirá la grabación y dejará espacio 
+libre en ! Cuando una aplicación que utiliza la conexión GPRS se  la memoria para una grabación nueva. encuentra en proceso de envío o recepción de datos, no es 
+Desde la pantalla en blanco: posible realizar una llamada utilizando la marcación 
+X Entre en el menú Voz mediante voz. Para realizar una llamada mediante una  y desplácese con  a la opción 
+Grabaciones grabación, cierre primero la aplicación que está utilizando la . Pulse  para seleccionarla.
+X Desplácese con conexión GPRS. a la opción Lista de grabaciones y 
+pulse  para seleccionarla.
+X Comandos de vozCon la tecla , desplácese al nombre que busca de la 
+g Existe una lista de funciones del teléfono que pueden activarse uía y pulse  para seleccionarlo.
+X pronunciando una grabación. Puede asignar una grabación Utilice  para desplazarse hasta la opción que busca y nueva a una cantidad de hasta tres comandos de la Lista de 
+pulse  para seleccionarla. comandos de voz. Los comandos de voz se activan del mismo 
+X Siga las instrucciones que aparecen en modo que se realiza una llamada mediante una grabación. Las  la pantalla.
+funciones disponibles son las siguientes:
+y Reproducir grabaciones
+y Descargar contactos42 Copyright  2006 Nokia. All rights reserved. Ajustesy Conec. ML portátil Bluetooth y ¿Borrar el comando de voz?
+Con esta opción suprimirá el comando de voz y dejará 
+Registro de comandos de voz espacio libre en la memoria para un nuevo comando de voz.
+Esta opción le permite grabar Comandos de voz (una o varias Desde la pantalla en blanco:
+palabras que actúan como un comando pronunciado) y X Entre en el menú Voz y desplácese con  a la opción 
+asignarlos a funciones de la Lista de comandos de voz.
+X Comandos de voz. Pulse  para seleccionarla.Para grabar nuevos Comandos de voz, en la pantalla en 
+bl X Utilice  para desplazarse a la opción Lista de anco seleccione el menú Voz. Utilice  para 
+d comandos de voz y pulse  para seleccionarla.esplazarse a la opción Comandos de voz y pulse  para 
+seleccionarla. X Desplácese con  a la opción deseada de la Lista de 
+X Utilice comandos de voz y pulse  para seleccionarla. para ir a la opción Comandos de voz y pulse X Puede elegir cualquiera de las opciones descritas para la 
+ para seleccionarla.
+X Desplácese con entrada seleccionada. a la función deseada de la Lista de 
+comandos X Siga las instrucciones que aparecen en la pantalla. de voz y pulse  para seleccionarla.
+X Siga las instrucciones que aparecen en Antes de utilizar los comandos de voz, tenga en cuenta lo  la pantalla.
+siguiente:
+Lista de comandos de voz y Los comandos de voz no dependen del idioma. Dependen de 
+Esta lista está formada por las funciones del teléfono que la voz del interlocutor.
+pueden activarse con comandos de voz. Todas las funciones de y Los comandos de voz son sensibles a los ruidos de fondo. 
+la lista pueden consultarse y modificarse mediante las opciones Grábelos y realice llamadas en entornos silenciosos.
+siguientes:
+y y Al grabar un comando de voz, pronuncie con claridad y Reproducir comandos voz cerca del micrófono.
+Esta opción reproducirá el comando de voz tal como lo ha 
+registrado. y No utilice comandos demasiado cortos. Utilice comandos 
+y C largos y evite el uso de comandos similares para funciones ambiar diferentes.
+Es posible registrar un nuevo comando de voz de una 
+entrada determinada para que sustituya el comando 
+existente.Copyright  2006 Nokia. 43 All rights reserved. GrabadoraEjecución de los comandos de voz ! Siga todas las normativas locales sobre grabación de llamadas. No utilice esta función de manera ilegal.
+! Cuando una aplicación que utiliza la conexión GPRS se Puede realizar hasta 10 grabaciones siempre y cuando no 
+encuentra en proceso de envío o recepción de datos, no es sobrepase un período de grabación total de 8 minutos. Cada 
+posible ejecutar un comando de voz. Para hacerlo, primero 
+d grabación se guarda con un número de serie, la duración y la eberá terminar con la aplicación que utiliza la conexión 
+GPRS. hora de la llamada y el estado de la memoria.
+Las grabaciones nuevas se guardan automáticamente en la 
+memoria. Cuando la memoria se llena, aparece en pantalla el 
+Para ejecutar un comando de voz: mensaje No memoria guardar gr.. Para poder realizar nuevas 
+grabaciones, primero deberá borrar algunas antiguas.
+X Pulse . Sonará una señal y aparecerá en pantalla el X Mantenga pulsada la tecla  para empezar a grabar 
+mensaje Hable ahora. durante una llamada.
+X Pronuncie el comando de voz en voz alta y clara.
+El teléfono para coche reproducirá el comando de voz y, ! Puede reproducir las grabaciones fácilmente mediante los 
+tran comandos de voz. Pronuncie el comando de voz y el teléfono scurridos 1,5 segundos, realizará la función que tenga para coche empezará por la última grabación realizada. Con 
+asignada.
+ puede pasar a la siguiente grabación. 
+! Debe pronunciar el comando de voz exactamente del mismo 
+modo que lo hizo al grabarlo. Esto puede resultar difícil, por ! Antes de poder usar este método abreviado, deberá asignar 
+un comando de voz a la respectiva función del teléfono para 
+ejemplo en un entorno ruidoso o durante una situación de 
+coche. Para obtener más información, véase Comandos de 
+emergencia, de modo que no debería confiar únicamente en 
+l voz en la página 42.os comandos de voz en todas las circunstancias.
+Grabadora Grabar 
+Esta opción permite registrar partes de un discurso y guardarlas 
+La grabadora le permite registrar partes automáticamente. 
+de un discurso, sonidos o una llamada de 
+teléfono activa. Es una Para realizar una grabación: función que 
+resulta muy X Seleccione el menú Grabadora y pulse  para abrirlo.útil si necesita anotar 
+información mientras habla por teléfono: por ejemplo, puede 
+grabar un nombre o un número para poder anotarlo después.44 Copyright  2006 Nokia. All rights reserved. Tecnología inalámbrica BluetoothX Utilice  para ir a la opción Grabar y pulse  para Tecnología inalámbrica Bluetooth
+seleccionarla.
+X La tecnología Bluetooth es una Siga las instrucciones que aparecen en la pantalla. normativa internacional de 
+Si, durante una llamada activa, desea realizar una grabación: comunicaciones inalámbricas de corto 
+X Para empezar a alcance que permite establecer una  grabar, mantenga pulsada la tecla . 
+X P conexión inalámbrica entre el teléfono para coche y un ara finalizar la grabación, pulse . dispositivo compatible con Bluetooth. Algunos ejemplos de 
+Todos los registros se guardan y se numeran (p. ej. grabación 1). dispositivos compatibles pueden ser teléfonos móviles, 
+Para consultar la lista de grabaciones: ordenadores portátiles y kits manos libres inalámbricos.
+X Desde la pantalla en blanco, seleccione la opción Grabadora Debido a que los dispositivos con tecnología Bluetooth se  
+y pulse comunican mediante ondas de radio, no es necesario que el  para abrirla y ver la lista de grabaciones.
+X Utilice teléfono y el dispositivo estén en línea directa. El único requisito  para desplazarse a la grabación que busca y 
+pulse  para seleccionarla es que la distancia máxima entre los dos dispositivos sea de 10 .
+metros, aunque se pueden producir interferencias en la 
+También están disponibles las opciones Reproducir y Borrar. conexión debido a obstrucciones como la carrocería del coche u 
+Reproducir otros dispositivos electrónicos.
+Sirve para reproducir la grabación seleccionada. ! Si desea utilizar esta función, asegúrese de que tanto el teléfono para coche como el dispositivo compatible con 
+Borrar Bluetooth estén encendidos. Existen restricciones en el uso 
+Sirve para eliminar una de tales dispositivos en ciertos países. Consulte con las  grabación y así dejar espacio para una 
+grabación autoridades locales. nueva.
+Activación y desactivación de Bluetooth
+La función de Bluetooth siempre está activada en el teléfono 
+para coche. Sin embargo, en otros dispositivos con tecnología 
+Bluetooth, p. ej. teléfonos móviles, puede que haya que 
+activarla o desactivarla. Asegúrese de que Bluetooth esté activo 
+en todos los dispositivos compatibles con la tecnología Copyright  2006 Nokia. 45 All rights reserved. Tecnología inalámbrica Bluetoothinalámbrica Bluetooth que desea utilizar con el teléfono para Al establecer una conexión inalámbrica con dispositivos como 
+coche. un teléfono móvil que usa tecnología Bluetooth, es posible que 
+Para m pueda usar una clave de acceso temporal creada por usted. Esta ás información, consulte la guía del usuario del 
+dispositivo con tecnología Bluetooth que esté usando. clave de acceso se utiliza sólo una vez y no es preciso 
+memorizarla. Introduzca esta clave de acceso en los dos 
+Búsqueda de dispositivos compatibles con la dispositivos que comparten la conexión por Bluetooth. A 
+tecnología inalámbrica Bluetooth continuación siga las instrucciones de las pantallas de los dos dispositivos.
+Para vincular el teléfono para coche con un determinado 
+dispositivo compatible con Bluetooth Para iniciar la vinculación, elija un dispositivo de la lista:, primero deberá buscarlo 
+dentro del alcance de Bluetooth: X Utilice  para desplazarse hasta el dispositivo que 
+X Con la pantalla en blanco, seleccione Bluetooth busca y pulse  para seleccionarlo. y pulse  
+para abrir este menú.
+X Ver dispositivos activosDesplácese con  a la opción Buscar dispos. Bluetooth y 
+p Para consultar los dispositivos con tecnología Bluetooth activos ulse  para seleccionarla.
+en ese momento que comparten una conexión con el teléfono 
+El teléfono para coche empezará a buscar teléfonos y accesorios para coche:
+móviles compatibles con Bluetooth dentro de su alcance. Los 
+dispositivos detectados se d X En el menú Bluetooth, seleccione Ver dispositivos activos y etallarán en una lista en orden pulse  para verlos.
+cronológico.
+X Utilice Si lo prefiere, puede finalizar la conexión por Bluetooth en este  para recorrer la lista.
+menú.
+Vinculación con dispositivos con tecnología 
+Bluetooth Ver disposit. vinculadosPuede consultar una lista con los dispositivos vinculados 
+Para crear una conexión, es posible que necesite intercambiar seleccionando la opción Ver disposit. vinculados. Algunas de las 
+las claves de acceso de Bluetooth con el dispositivo con el que opciones que aparecen a continuación pueden estar disponibles 
+está estableciendo conexión por primera vez. Esta operación se según el estado del dispositivo o de la conexión:
+denomina "vinculación". La clave de acceso de Bluetooth es un 
+código numérico con X Para ver la lista de dispositivos vinculados, desplácese con  una longitud de entre 1 y 16 caracteres. Si 
+se le  a la opción Bluetooth y pulse  para seleccionarla. pide que facilite una clave de acceso, necesitará introducir 
+la que viene con el dispositivo.46 Copyright  2006 Nokia. All rights reserved. Tecnología inalámbrica BluetoothX Utilice  para desplazarse hasta el dispositivo Visibilidad del teléfono
+compatible que busca y pulse  para seleccionarlo. Si se ha establecido una conexión por Bluetooth entre el 
+X Utilice  para desplazarse hasta la opción que busca y teléfono para coche y otro dispositivo compatible con la 
+pulse  para seleccionarla. tecnología inalámbrica Bluetooth, el resto de dispositivos no 
+X Siga las instrucciones que aparecen en puede ver el teléfono para coche. Esto significa que otros  la pantalla.
+dispositivos con tecnología Bluetooth no pueden encontrar el 
+! Tenga en cuenta que la última vinculación aparecerá al teléfono para coche cuando realizan búsquedas de dispositivos.principio de la lista. Para configurar una conexión por Bluetooth con un ordenador 
+C portátil compatible o para enviar una tarjeta de presentación al rear conexión teléfono para coche, puede emplear esta función y hacer que el 
+Esta función establece una conexión con un dispositivo teléfono para coche esté visible durante un minuto. Durante 
+vinculado compatible con Bluetooth. este intervalo, todas las conexiones por Bluetooth activas 
+Bo terminan. Transcurrido el intervalo, el teléfono para coche rrar vínculo
+restablece todas las conexiones.
+Elija esta opción para eliminar dispositivos de la lista.
+Solicitar autorización ! Si desea utilizar la función de Bluetooth con su teléfono móvil compatible, compruebe que esté activada en el móvil. 
+Puede definir si la conexión del dispositivo vinculado debe Recuerde que debe activar la función Permitir se-gunda 
+establecerse automáticamente (No) o si el teléfono debe pedir conexión del teléfono para coche, si no, no podrá ser 
+autorización antes de realizar la vinculación (Sí). localizado durante las búsquedas de dispositivos activos con 
+tecnología Bluetooth.
+Nombre de Bluetooth del teléfono
+Puede cambiar el nombre del dispositivo Bluetooth de su ! Si usa las funciones de Bluetooth con regularidad, p. ej., 
+teléfono para coche con para copiar contactos en la memoria del teléfono para  el que se mostrará a los demás 
+dispositivos. El valor inicial es Nokia 810. Puede buscar el coche desde un teléfono móvil compatible, puede desactivar 
+nombre utilizado para un la opción "Solicitar autorización" en el teléfono móvil  determinado dispositivo que esté 
+vinculado al tel compatible. Ahora, las conexiones entre dispositivos por éfono para coche en el menú Ver disposit. 
+vinculados tecnología inalámbrica Bluetooth pueden realizarse .
+X cómodamente de manera automática, sin necesidad de Utilice  para desplazarse a la opción Nombre de aprobación ni autorización adicional. 
+Bluetooth y pulse  para seleccionarla.Copyright  2006 Nokia. 47 All rights reserved. Datos del usuarioActivación de la visibilidad Para elegir una opción de descarga desde la pantalla en 
+Esta blanco: acción es necesaria si el teléfono para coche requiere estar 
+visible para otros dispositivos compatibles con X Pulse  para acceder a estos ajustes. tecnología 
+Bluetooth a fin de establecer la conexión por Bluetooth. X Utilice  para desplazarse a la opción USUARIOS y pulse 
+ para seleccionarla.
+! Cuando seleccione esta opción, permanecerá activa (es decir, visible en X Desplácese con a la opción ¿Descargar contactos? y  la pantalla) durante un minuto.
+pulse  para consultar la lista.
+Datos del usuario X Desplácese con  a la opción SIM de vehículo para 
+Esta función le poder seleccionar un teléfono vinculado con tecnología  permite guardar entradas 
+personales en dos perfiles diferentes de Bluetooth o para empezar a buscar dispositivos compatibles 
+datos de usuario. Por ejemplo, ahora las con Bluetooth. Pulse  para confirmar la selección.
+entradas de la guía, las grabaciones y los SIM de vehículo
+comandos de voz, las señales de llamada y los mensajes cortos 
+pueden guardarse para dos usuarios y luego consultarse desde X Empiece a copiar la guía pulsando . Las entradas de la  
+el teléfono para coche utilizando la misma guía se copiarán desde la tarjeta SIM insertada en el  tarjeta SIM. Sólo 
+tendrá que activar su teléfono para coche hasta la memoria del teléfono para  perfil personal de usuario para acceder a 
+los datos. coche.
+Descargar contactos Dispositivos vinculados con tecnología Bluetooth
+Puede utilizar esta función para copiar entradas de la guía 
+desde un ! Puede dar la autorización al teléfono móvil compatible para a tarjeta SIM insertada en el teléfono para coche o que no sean necesarias ninguna aprobación ni autorización 
+desde un teléfono móvil compatible con la tecnología adicionales al conectar con el teléfono para coche mediante 
+inalámbrica Bluetooth a la memoria del teléfono para coche. tecnología inalámbrica Bluetooth. Para hacerlo, en el menú 
+"Ver disposit. vinculados", anule la opción "Solicitar 
+! Se trata de una función importante porque usted no tiene autorización" seleccionando "Desactivar". Si necesita más 
+acceso directo a las entradas de la guía almacenadas en información, consulte la guía de usuario del teléfono móvil. 
+cualquier tarjeta SIM insertada en el teléfono para coche. 
+P X Pulse  para desplazarse hasta el dispositivo vinculado ara acceder a estos números, primero deberá copiarlos en 
+la memoria del teléfon compatible con Bluetooth (el nombre se muestra en la lista) o para coche.48 Copyright  2006 Nokia. All rights reserved. Datos del usuariocuyas entradas de la guía desee copiar en la memoria del Opciones de descarga 
+teléfono para coche. Puede copiar los datos de la guía de cualquier teléfono móvil 
+X Empiece a copiar la guía pulsando . compatible con Bluetooth en su teléfono para coche. Éste le 
+ofrece tres opciones adecuadas:
+Búsqueda de dispositivos compatibles con la tecnología 
+Bl y Memoria de SIM y teléf. uetooth
+X Éste es el valor predeterminado que le permite copiar, en la Pulse  para desplazarse hasta el dispositivo vinculado memoria del teléfono para coche, los datos de la guía tanto 
+compatible con Bluetooth (el nombre se muestra en la lista) desde la tarjeta SIM del móvil como desde la memoria de la 
+cuyas entradas de la guía desee copiar en la memoria del guía.
+teléfono para coche. y Memoria de tarjeta SIM 
+Para obtener más información, véase Búsqueda de dispositivos Elija esta opción si desea descargar sólo los datos de la guía 
+compatibles con la tecnología inalámbrica Bluetooth en la 
+pág desde la tarjeta SIM del móvil en el teléfono para coche.ina 46. y Memoria del teléfono 
+Cambio de usuario Esta opción sirve para copiar las entradas almacenadas en la 
+Pu memoria de la guía del móvil en la memoria del teléfono ede guardar dos perfiles de usuario en el teléfono para coche 
+y utili para coche.zarlos según prefiera. Los ajustes de cada perfil pueden 
+personalizarse para adecuarse a las necesidades específicas del Para efectuar estos ajustes, desde la pantalla en blanco:
+usuario. Los perfiles se muestran en la pantalla en todo X Seleccione el menú Usuarios y pulse  para abrirlo.
+momento mediante dos indicadores: X Desplácese con a la opción Ajustes de descargas y 
+  Usuario 1 pulse  para consultar la lista.
+  Usuario 2 X Utilice  para desplazarse hasta la opción que busca y 
+X Para configurar un pulse  para seleccionarla. perfil desde la pantalla en blanco, 
+seleccione el menú Usuarios y pulse  para seleccionarlo.
+X Utilice  para desplazarse a la opción Cambiar de 
+usuario y pulse  para seleccionarla.
+X Utilice  para desplazarse al perfil de usuario que busca 
+y pulse  para seleccionarlo.Copyright  2006 Nokia. 49 All rights reserved. Comunicación de datos7. Comunicación de datos Cuando reciba una tarjeta de presentación por Bluetooth o 
+como mensaje corto, pulse la rueda NaviTM  y seleccione la 
+Tecnología inalámbrica Bluetooth opción Guardar para memorizar la tarjeta de presentación en la memoria del teléfono. Si prefiere no guardarla, pulse Descartar.
+Bluetooth es un sistema que permite conexiones inalámbricas 
+entre dispositivos electrónicos compatibles entre los que existe Envío de una tarjeta de presentación
+una distancia máxima de 10 metros. El teléfono se utiliza como Es posible reenviar una tarjeta de presentación recibida a un 
+módem para la comunicación de fax y datos, o bien para teléfono compatible mediante la tecnología inalámbrica 
+conectarse de forma inalámbrica a accesorios compatibles con Bluetooth o a cualquier dispositivo portátil compatible con el 
+la tecnología Bluetooth. estándar vCard a través del servicio de mensajes cortos.
+! En Seleccione la opción Reenviar para la tarjeta de presentación  algunos países, pueden existir restricciones en cuanto al 
+uso de dispositivos recibida, o si también quiere guardar la tarjeta de presentación  con tecnología inalámbrica Bluetooth. 
+Consulte a su distribuidor y a las autoridades locales. para su uso personal, elija Guardar y reenviar.
+Para enviar tarjetas de presentación mediante la tecnología 
+Envío y recepción de tarjetas de inalámbrica Bluetooth, elija la opción Vía Bluetooth. Para enviar 
+presentación la tarjeta de presentación como un mensaje corto, seleccione Vía mensaje de texto.
+Es posible enviar y recibir información de contacto de una 
+persona como si se tratara de una tarjeta de presentación GPRS (General Packet Radio Service)
+mediante Bluetooth o como un mensaje corto. La tecnología GPRS permite utilizar los teléfonos móviles para 
+Recepción de una tarjeta de presentación enviar y recibir datos a través de la red móvil (servicio de red). La 
+tecnología GPRS consiste en un portador de datos que permite 
+Asegúrese de que el teléfono está preparado para recibir datos el acceso inalámbrico a redes de datos como Internet. Las 
+mediante Bluetooth. Para ello, el teléfono para coche debe estar aplicaciones que pueden usar GPRS son WAP, el servicio de 
+visible para los dispositivos compatibles con la tecnología mensajería SMS y la marcación de GPRS.
+Bluetooth. Para obtener más información, véase Activación de 
+la visibilidad en la p Antes de poder emplear la tecnología GPRS, deberá abonarse al ágina 48.
+servicio GPRS. Si desea obtener información sobre la 
+El usuario del otro teléfono compatible ya puede enviar su disponibilidad del servicio GPRS o suscribirse a él, póngase en 
+tarjeta de presentación y número de teléfono por el medio que 
+prefiera. contacto con su operador de red o proveedor de servicios.50 Copyright  2006 Nokia. All rights reserved. High Speed Circuit Switched Data (HSCSD)Para obtener más información, véase Ajustes del módem de intensidad posible. Cuanto más intensa sea la señal, mejor se 
+GPRS en la página 39. realizará la transmisión.
+High Speed Circ Las comunicaciones inalámbricas de datos están sujetas a uit Switched Data (HSCSD) diversos factores que pueden causar interferencias: 
+El teléfono para coche permite utilizar servicios de datos de alta Ruido
+velocidad GSM (servicio de red). 
+Pu La interferencia radioeléctrica proveniente de equipos y ede utilizar la funcionalidad de alta velocidad cuando el 
+teléfon dispositivos electrónicos o del tráfico circundante puede afectar o se encuentre conectado a un ordenador compatible 
+a la calidad de transmisión.
+mediante un cable RS232 o la tecnología inalámbrica 
+Bluetooth, y cuando los controladores de módem compatibles Traspasos
+con software de datos de alta velocidad estén instalados en el A medida que el usuario del teléfono para coche se desplaza de 
+ordenador y seleccionados como módem activo. una célula de red a otra, la intensidad de la señal del canal 
+Si desea obtener información sobre la disponibilidad de disminuye y puede que la central de telefonía móvil traspase al 
+servicios de datos de alta velocidad o suscribirse a ellos, usuario a una celda y una frecuencia diferentes en las que la 
+póngase en contacto con su operador de red o proveedor de señal sea más intensa. Aunque el usuario esté inmóvil, los 
+servicios. traspasos de célula también pueden tener lugar debido a la 
+variación de las cargas del tráfico inalámbrico. Este tipo de 
+Información de referencia traspasos puede causar retrasos.
+Transmisión inalámbrica Puntos muertos y pérdidas de información
+El teléfono para Los puntos muertos son zonas en las que no pueden recibirse las coche utiliza las prestaciones de transmisión de 
+datos de la red GSM para enviar fa señales de radio. Las pérdidas de información ocurren cuando el x, mensajes cortos y teléfono para coche atraviesa una zona en la que la señal de 
+mensajes de correo electrónico, y para establecer conexiones 
+radio se bloquea o se reduce debido a obstáculos geográficos o 
+con ordenadores remotos (servicios de red). 
+artificiales, como colinas o edificios altos.
+Prestaciones de datos GSM del teléfono para coche Intensidad baja de la señal
+Le recomendamos que desplace el coche a una ubicación en la Debido a la distancia desde la antena de telefonía móvil o a la 
+que pueda recibirse la señal inalámbrica con la máxima presencia de obstáculos entre el teléfono para coche y la antena 
+de telefonía móvil, puede que la intensidad de la señal de radio Copyright  2006 Nokia. 51 All rights reserved. Información de referenciaproveniente del emplazamiento de la célula no sea Para poner el módem en funcionamiento, deberá seleccionar el 
+suficientemente intensa o estable para poder proporcionar una Standard 19200 bps como velocidad de transmisión de datos en 
+conexión inalámbrica fiable para conseguir una recepción o el ordenador portátil. Para más información, visite el sitio web 
+transmisión fluidas. Por lo tanto, para asegurar la mejor de NOKIA: http://www.nokia.com.
+comunicación posible, recuerde estos puntos a la hora de 
+utilizar el teléfono para coche: 
+La transmisión de datos y fax funciona mejor cuando el coche 
+está parado. No se recomienda intentar una comunicación 
+inalámbrica en un vehículo móvil. Es más fácil que se dañe la 
+transmisión de fax que la de datos o mensajes cortos. 
+Compruebe la intensidad de la señal en la pantalla del teléfono 
+para coche. Si las señales inalámbricas no son suficientemente 
+intensas para permitir una llamada de voz, no se debería 
+intentar la conexión de los datos hasta que se encuentre en una 
+ubicación que reciba mejor las señales. 
+Transferencia de datos mediante la interfaz RS232
+Conecte el ordenador portátil compatible al sistema de teléfono 
+para coche mediante el cable adaptador (conector D-SUB9 al 
+conector western de 10 patillas) que se suministra con el 
+teléfono. 
+Si desea transferir datos entre el teléfono para coche y un 
+ordenador compatible, enchufe el conector western de 10 
+patillas al puerto de la unidad de radio. El conector D-SUB9 se 
+enchufa al ordenador portátil. También se puede conectar un 
+dispositivo móvil de fax compatible. Para obtener más 
+información, véase Visión general del teléfono y el equipo para 
+coche en la página 7.52 Copyright  2006 Nokia. All rights reserved. Instalación8. Instalación ! El teléfono para coche Nokia 810 sólo puede ser instalado por un técnico cualificado de servicio técnico que utilice 
+Su teléfono para coche Nokia 810 componentes originales Nokia aprobados como los incluidos en el paquete de venta. Tenga en cuenta que el 
+El teléfono para coche Nokia 810 está diseñado para instalarse incumplimiento de este requisito comportará la pérdida de  
+en vehículos motorizados. El paquete la garantía. Los usuarios deben tener presente que el kit de  de ventas consta de una 
+función teléfono para coche está formado por un equipo técnico  de manos libres que permite realizar llamadas 
+cómodamente sin tener que sostener complejo que requiere instalarse de manera profesional y  el teléfono, un 
+microteléfono independiente y muy fácil de usar y una pantalla mediante herramientas especiales y conocimientos  
+clara. especializados. 
+! Obsérvese que las instrucciones de esta guía de instalación 
+son directrices generales sobre la instalación del teléfono 
+para coche en un automóvil. Sin embargo, a causa de la 
+inmensa variedad de tipos y modelos de coches que existen 
+en el mercado, esta guía no puede abarcar los requisitos 
+técnicos individuales de todos los vehículos. Póngase en 
+contacto con el fabricante del vehículo para obtener 
+información más detallada al respecto. 
+La información relevante en materia de seguridad y las 
+instrucciones de funcionamiento, cuidado y mantenimiento del 
+teléfono para coche se describe en el apartado Importante 
+información sobre seguridad de la página 59 y en el apartado 
+Cuidado y mantenimiento de la página 58.
+La precaución es lo principal
+! Lea las directrices de seguridad básica que aparecen a 
+continuación antes de empezar a instalar el equipo.
+Equipo del teléfono para coche y Asegúrese de que el contacto del coche está apagado y desconecte la batería del coche antes de iniciar la Copyright  2006 Nokia. 53 All rights reserved. Montajeinstalación, y asegúrese también de que la batería no pueda y Para cumplir con las normas que rigen la exposición a la 
+volver a conectarse sin que se dé cuenta. radiofrecuencia para los dispositivos de transmisión móvil, 
+y No fume se debe mantener una distancia mínima de separación de 20  mientras trabaja en el coche. Compruebe que no 
+haya ninguna fuente de cm entre la antena y las personas. fuego o llama cerca de usted.
+y Procure no dañar los cables eléctricos, las líneas de freno ni 
+d Montajee combustible, ni el equipo de seguridad mientras realice la 
+instalación.
+y Asegúrese de no dañar los sistemas de dirección y freno ni 
+otros sistemas esenciales para que el coche funcione bien 
+durante la instalación del equipo de teléfono. Compruebe 
+que el despliegue del airbag no esté bloqueado ni dañado de 
+ninguna forma.
+y Las señales de radiofrecuencia pueden afectar a los sistemas 
+electrónicos mal instalados o no protegidos de forma 
+adecuada en vehículos motorizados (p. ej. sistemas 
+electrónicos de inyección de combustible, sistemas 
+electrónicos de frenado antiderrapante, sistemas 
+electrónicos de control de velocidad y sistemas de airbag). Si 
+nota algún fallo o alteración del funcionamiento de un 
+sistema de este tipo, póngase en contacto con el 
+distribuidor del coche.
+y El kit de teléfono para coche sólo puede utilizarse a un 
+voltaje de funcionamiento de 12 V con el polo negativo Equipo y conexiones por cable del teléfono para coche
+conectado a tierra. El incumplimiento de este requisito 
+puede ocasionar daños al sistema electrónico del coche. Unidad de radio TFE-4R (Pos. 1)
+y No utilice el teléfono para coche durante mucho tiempo a Se recomienda montar la unidad de radio TFE-4R en una 
+partir de la batería del coche, es decir, con el motor posición menos visible del interior del coche. No obstante, 
+apagado, ya que podría quedarse sin batería. asegúrese de que la unidad se instala de manera que sea fácil 
+acceder a la tarjeta SIM para que pueda cambiarse si es 54 Copyright  2006 Nokia. All rights reserved. Montajenecesario, y asegúrese de que los cables del micrófono y el su vehículo. Algunos sistemas de montaje no requieren hacer 
+altavoz llegan hasta donde pretende montar estos agujeros. 
+componentes. Recuerde que todo el equipo debe montarse de forma que no 
+! Al in interfiera en el manejo del vehículo.stalar la unidad de radio, asegúrese de montar el 
+soporte de manera que la unidad se deslice a su sitio hacia 
+l Microteléfono HSU-4 (Pos. 3)a parte delantera del coche o, si no, móntela de lado. Si lo 
+hace de otra forma, la El microteléfono viene con un montura que debe fijarse en un  unidad podría soltarse en caso de 
+accidente y provocar lugar adecuado que sea fácilmente accesible para el usuario.  daños personales o materiales.
+Pero procure que microteléfono no interfiera en el manejo del 
+vehículo por parte del conductor. Asegúrese de que el cable 
+llega a la unidad de radio para realizar la conexión. La mejor 
+ubicación para el microteléfono es horizontalmente en la 
+consola, entre los asientos del conductor y del copiloto.
+Altavoz SP-2 (Pos. 4)
+Para que haya una buena acústica, monte el altavoz orientado 
+hacia el usuario. Se recomienda montar el altavoz a una 
+distancia mínima de 1 metro del micrófono para evitar el 
+acoplamiento.
+Instalación de la unidad de radio en el coche Micrófono MP-2 (Pos. 5)
+Pantalla XDW-1R (Pos. 2) Monte el micrófono manos libres aprox. a 30 cm de la cabeza del usuario, y colóquelo orientado a su boca. La experiencia 
+La montura de la unidad de pantalla debe fijarse en el indica que las mejores ubicaciones son cerca del retrovisor 
+salpicadero o en cualquier otro sitio del área del conductor en la interior o a la izquierda del parasol. Compruebe que el 
+que la pantalla esté muy visible para el usuario, pero que no le micrófono no molesta a la hora de controlar y conducir el 
+moleste a la hora de controlar y conducir el vehículo. vehículo. Se recomienda montar el micrófono a una distancia 
+Si tiene alguna duda acerca de la instalación del teléfono para mínima de 1 metro del altavoz del teléfono para coche para 
+coche, consulte con el técnico del servicio, quien le aconsejará evitar el acoplamiento.
+sobre la montura más apropiada para la unidad de pantalla en Copyright  2006 Nokia. 55 All rights reserved. Ajustes de audioProcure montar el micrófono de manera que no esté expuesto a con una antena GSM / de radio compatible con un filtro 
+corrientes de aire procedentes de las rejillas de ventilación. No separador de frecuencias, puede usarla en lugar de la antena 
+coloque el cable del micrófono en la calefacción, ventilación o externa.
+sistema de aire acondicionado. Utilice la cinta adhesiva de Si el coche no incorpora antena GSM, pregunte al distribuidor 
+doble cara suministrada para fijar el micrófono, ya que así se por la mejor ubicación de montaje y las instrucciones de 
+evitará que el ruido de la carrocería del coche se transmita al instalación.
+interior.
+Al aceptar una llamada Cable adaptador RS232 AD-3 (Pos. 8)  interna o establecerse la conexión de 
+una llamada saliente, el sistema silenciará automáticamente la El cable adaptador RS232 es una forma cómoda de conectar el 
+radio del coche y la llamada se transferirá al altavoz del teléfono para coche al puerto serie de un ordenador portátil 
+teléfono para coche. compatible.
+Cable del sistema PCU-4 (Pos. 6) Para obtener más información, véase la sección Códigos de 
+acceso necesarios para la tarjeta SIM en la página 12.
+El cable del sistema conecta el teléfono para coche con el 
+sistema electrónico del coche. Véase el diagrama de la Ajustes de audio
+instalación eléctrica para obtener las instrucciones exactas.
+El teléfono para coche dispone de varias opciones para la salida 
+! Al colocar los cables, procure hacerlo de manera que estén del audio a través del altavoz:dispuestos lo más lejos posible de los sistemas electrónicos y Conexión directa con el altavoz SP-2 que viene en el 
+instalados en el coche a fin de evitar las interferencias paquete de venta.
+electromagnéticas. y Conexión con un altavoz de radio de coche compatible a 
+Asegúrese de que los cables estén colocados de forma que través de un relé adicional que conmuta la salida de audio 
+no queden sujetos al desgaste mecánico (p. ej. no los deje hacia el altavoz (no se incluye en el paquete de ventas).
+debajo de los asientos del coche o sobre esquinas 
+p y Conexión con los altavoces de radio de coche compatibles a ronunciadas). través de la entrada de audio de la radio del coche. Deberá 
+Antena GSM (Pos. 7) ajustar el volumen de audio de manera adecuada si 
+(no selecciona esta opción. se incluye en el paquete de ventas) Para realizar los ajustes de audio, seleccione el Asistente de 
+El teléfono para coche está diseñado para conectarse a una inicio o el menú Ajustes: 
+antena GSM externa. No obstante, si el coche está equipado 56 Copyright  2006 Nokia. All rights reserved. Prueba de funcionamientoX Utilice  para desplazarse a la opción Ajustes del Paquete de ventas
+ecualizador y pulse  para seleccionarla.
+X y Unidad de radio TFE-4RUtilice  para desplazarse hasta la opción que busca y 
+p y Pantalla XDW-1Rulse  para seleccionarla.
+y Microteléfono HSU-4
+Prueba de funcionamiento y Altavoz SP-2
+Tras instalar el teléfono para coche, es necesario comprobar que y Micrófono MP-2
+funciona correctamente. Al probar el funcionamiento del y Cable del sistema PCU-4
+equipo, compruebe también que se haya montado de manera 
+qu y Cable adaptador RS232 AD-3e no moleste de ningún modo al conductor mientras maneja 
+el vehículo.
+! Para establecer una conexión inalámbrica entre el teléfono para coche y un accesorio compatible con la tecnología 
+Bluetooth, asegúrese de que los dispositivos se encuentren 
+dentro del alcance necesario para la transmisión por 
+Bluetooth. Recuerde que los dispositivos externos necesitan 
+recibir alimentación suficiente para esta función (consulte 
+el paquete de la batería). Copyright  2006 Nokia. 57 All rights reserved. Cuidado y mantenimiento9. Cuidado y mantenimiento y No pinte el teléfono para coche. La pintura puede obstruir las piezas móviles e impedir un funcionamiento correcto.
+Este teléfono es un y Emplee únicamente una antena aprobada. Las antenas, las  producto de diseño y fabricación excelentes 
+y debe alteraciones y los elementos anexionados sin autorización  tratarse con cuidado. Las sugerencias que se incluyen a 
+continuación le ayudarán podrían dañar el teléfono y pueden constituir una violación  a cumplir las condiciones de garantía 
+y a disfrutar de este producto durante años de las normativas sobre aparatos de radio..
+y Mantenga el teléfono para coche y todas sus piezas Todas estas recomendaciones se aplican de igual forma al  y 
+accesorios fuera del alcance de los niños. teléfono para coche, la batería, el cargador y todos los 
+y Mantenga seco el teléfono pa accesorios. Si alguno de estos no funciona correctamente, ra coche. La lluvia, la humedad 
+y los líquid llévelo al distribuidor autorizado más cercano. El personal le os contienen minerales que pueden oxidar los 
+ayudará a resolver su problema y, si es preciso, le ofrecerá 
+circuitos electrónicos.
+y servicio técnico.No utilice ni guarde el teléfono para coche en lugares sucios 
+o polvorientos. Las piezas móviles podrían dañarse.
+y No guarde el teléfono para coche en lugares calientes. Las 
+altas temperaturas pueden reducir la duración de los 
+dispositivos electrónicos, dañar las baterías y deformar o 
+derretir algunos plásticos.
+y No guarde el teléfono para coche en lugares fríos. Cuando el 
+teléfono recupera su temperatura normal, puede formarse 
+humedad en su interior, lo cual puede dañar las placas de los 
+circuitos electrónicos.
+y No intente abrir el teléfono para coche. La manipulación del 
+teléfono por personas no especializadas puede dañarlo.
+y No deje caer, golpee ni mueva bruscamente el teléfono para 
+coche. Si lo manipula bruscamente, pueden romperse las 
+placas de circuitos internos.
+y No utilice productos químicos perjudiciales, disolventes ni 
+detergentes fuertes para limpiar el teléfono para coche.58 Copyright  2006 Nokia. All rights reserved. Importante información sobre seguridad10. Importante información sobre Marcapasos
+seguridad Los fabricantes de marcapasos recomiendan mantener una distancia mínima de 20 cm entre un teléfono móvil y el 
+marcapasos con el fin de evitar posibles interferencias con este 
+Seguridad en carretera
+último. Estas recomendaciones provienen de investigaciones 
+No utilice el independientes y de la Investigación tecnológica en telefonía  teléfono móvil mientras conduce. Coloque siempre 
+el teléfono en su soporte, no lo deje en el asiento del móvil. copiloto o 
+en un lugar donde pueda soltarse en caso de colisión o parada Si tiene la más mínima sospecha de que se está produciendo 
+repentina. alguna interferencia, apague el teléfono inmediatamente.
+Recuerde: ¡La precaución en carretera es lo principal! Zonas potencialmente explosivas
+Entorno operativo Ponga el teléfono para coche en modo desactivado, véase Modo 
+Respete la normativa especial desactivado en la página 19, en áreas donde puedan producirse  vigente de la zona donde se 
+encuentre y apague el teléfono siempre que esté prohibido su explosiones, y obedezca todas las señales e instrucciones. Las 
+uso, cuando pueda causar interferencias o resultar peligroso. chispas en estas áreas pueden originar explosiones o incendios 
+que causen daños personales o incluso la muerte.
+Dispositivos electrónicos Se informa a los usuarios que deben apagar el teléfono en las 
+La mayoría de los equipos electrónicos modernos gasolineras (áreas de servicio) y respetar las restricciones de uso  están 
+protegidos contra las señales de radiofrecuencia (RF). Sin de los equipos de radio en los depósitos de combustible (áreas 
+embargo de almacenamiento y distribución de combustible), en las , existen determinados equipos electrónicos que 
+pueden no estar protegidos contra las señales RF plantas químicas y en los lugares donde se realicen explosiones. de su teléfono 
+para coche Las zonas donde pueden producirse explosiones están a .
+menudo, pero no siempre, claramente indicadas. Entre ellas se 
+incluyen cubiertas de barcos; instalaciones de almacenamiento 
+y transporte de productos químicos; vehículos que utilizan gas 
+de petróleo licuado (como propano o butano); áreas donde el 
+aire contiene partículas o elementos químicos, como grano, 
+polvo o partículas metálicas; y otras áreas donde normalmente 
+se le pide que apague el motor del vehículo.Copyright  2006 Nokia. 59 All rights reserved. VehículosVehículos
+   ¡Precaución!
+Sólo el personal cualificado debe reparar el teléfono, o Este teléfono para coche, como cualquier teléfono móvil, 
+instalarlo en un vehículo. Si la instalación o la reparación no funciona con señales de radio, redes inalámbricas y terrestres, y 
+son correctas, pueden resultar peligrosas y anular la garantía funciones programadas por el usuario. Por eso, no se puede 
+que se aplica a la unidad. garantizar que las conexiones funcionen en todas las 
+Compruebe con condiciones. Por tanto, no debe depender nunca únicamente de  regularidad que el equipo completo del 
+teléfono móvil de su vehículo esté correctamente montado y un teléfono móvil para comunicaciones importantes (por 
+funcione ejemplo, urgencias médicas). debidamente.
+No almacene ni transporte líquidos inflamables, gases ni 
+materiales explosivos en el mismo compartimento destinado al Para hacer una llamada de emergencia:
+teléfono, a sus piezas o accesorios. Si el teléfono o el contacto del coche no 
+Si tiene un vehículo equipado con airbag, recuerde que éste se están encendidos, enciéndalos. 
+infla con mucha fuerza. No coloque sobre el airbag ni sobre la Compruebe que la intensidad de señal 
+zona de despliegue de éste ningún objeto, incluido el equipo sea la adecuada. 
+instalado y las piezas portátiles del teléfono móvil. Si el equipo Algunas redes pueden precisar que se coloque una tarjeta SIM 
+de telefonía móvil no está bien instalado en el interior del válida en el teléfono.
+vehículo y el airbag se despliega, se pueden ocasionar heridas 
+graves. X Mantenga pulsada la tecla  hasta que ¿Hacer llamada de 
+emergencia? aparezca en pantalla. Confirme la acción 
+El incumplimiento de estas instrucciones puede ocasionar la pulsando . 
+suspensión o la negativa del servicio telefónico celular para el 
+tran X Confirme la petición de seguridad Sí pulsando  o sgresor, el inicio de una acción legal o ambas cosas.
+cancele escogiendo No con  y pulsando .
+Llamadas de emergencia Al realizar una llamada de emergencia, no olvide especificar 
+Quizá n toda la información necesaria con la mayor precisión posible. o se puedan efectuar llamadas de emergencia en todas 
+las redes de teléfonos m Recuerde que el teléfono móvil puede ser el único medio de óviles o cuando se utilizan 
+determinados servici comunicación en el lugar de un accidente: no interrumpa la os de red o funciones del teléfono. 
+C comunicación hasta que se lo indiquen.onsúltelo con los proveedores de servicios locales.60 Copyright  2006 Nokia. All rights reserved. Datos técnicos11. Datos técnicos Instalación eléctrica del cable del sistema
+1. Rojo, +12 V (BATTERY)
+Voltaje de la batería 2. Negro, tierra (GND)
+12,6 V CC (10,8 - 16,0 V) 3. Amarillo, silencio de radio (MUTE)
+Negativo a tierra (GND). Cuando se establece una llamada, se conmuta de +12 V 
+a 0 V.
+Intensidad de corriente admisible 4. Azul, contacto (ACC / IGN)
+1,5 A (modo desactivado: 1 mA) 5. Fusible de 2 A
+6. Fusible de 1 A
+Potencia de transmisión
+EGSM 900: 3,2 mW - 2 W
+DCS 1800: 1,0 mW - 1 W
+Cable del sistema PCU-4Copyright  2006 Nokia. 61 All rights reserved. Glosario12. Glosario PUK
+El PUK (clave de desbloqueo personal) es un código de 8 dígitos 
+GPRS necesario para cambiar un código PIN inhabilitado.
+El GPRS (general El código PUK se suministra con la tarjeta SIM. Si pierde este  packet radio service) permite la transmisión 
+inalámbrica de código o no lo recibe con la tarjeta SIM, póngase con contacto  datos. Para acceder de forma inalámbrica a 
+redes de con el operador de red. datos, necesitará un punto de acceso GPRS del 
+operador de red o el proveedor de servicios. Para obtener más 
+informació SIMn, véase GPRS (General Packet Radio Service) en la 
+página 50 La tarjeta SIM (módulo de identidad del abonado) contiene toda .
+la información que necesita la red inalámbrica para identificar 
+GSM al usuario de la red. La tarjeta SIM también tiene datos 
+El GSM (sistema global para comunicaciones móviles) es el relacionados con la seguridad.
+estándar técnico para redes de radiocomunicación móvil. SMS
+HSCSD El SMS (servicio de mensajes cortos) es un servicio de red que le 
+El sistema HSCSD (high speed circuit switched data) permite permite enviar mensajes cortos de texto (de máx. 160 
+unas conexiones de datos más rápidas de los servicios de datos caracteres) a teléfonos móviles y recibir mensajes cortos de 
+GSM. Para obtener más información, véase High Speed Circuit texto de otros usuarios de teléfonos móviles si este servicio está 
+Switched Data (HSCSD) en la página 51. activado.
+IMEI SMSC
+El IMEI (identificador de equipos móviles internacionales) es el El número del SMSC (centro del servicio de mensajes cortos) es 
+número de serie del dispositivo y se suministra con el kit de necesario para enviar mensajes cortos.
+teléfono para coche.
+Tonos DTMF
+PIN Los tonos DTMF (transmisión de señal de multifrecuencia 
+El PIN (número de identificación personal) es un código de 4 a 8 bitonal) son los tonos que se oyen al pulsar las teclas numéricas 
+dígitos que impide el uso desautorizado de la tarjeta SIM. El del teclado del teléfono. Le permiten comunicarse con buzones 
+código PIN se suministra con la tarjeta SIM. Para más de voz, sistemas de telefonía informatizada, etc.
+información, véase Códigos de acceso necesarios para la tarjeta 
+SIM en la página 12.62 Copyright  2006 Nokia. All rights reserved.

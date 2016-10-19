@@ -1,0 +1,1205 @@
+VidoSMS Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+12èmes journées des Gestionnaires ATHOS    
+                                               
+ 
+                                                
+ 
+ 
+ 
+ 
+Intégration des technologies 
+mobiles dans les systèmes 
+d'informations hospitaliers 
+ 
+• Gestion des secours (SAMU) et de l'alerte 
+• Gestion du personnel 
+• Applications médicales mobiles 
+• Outils et technologies disponibles 
+ 
+ 
+ 
+Version: 1.0 
+Date: 23 et 24 novembre 2004 
+  
+ 
+ 
+Dr Daniel Mavrakis 
+ 
+MONACO TELEMATIQUE MC-TEL   SAMU 06 
+25, bd d'Italie, BP 225, 98004 MONACO CHU de Nice 
+Tél: (+377) 9216 8860 - Fax: (+377) 9216 8865 5, rue Pierre Devoluy, BP 319 
+e-mail: mavrakis.daniel@mctel.fr   06006 NICE Cedex 1 
+Web: www.mctel.fr et www.smsfax.fr email: mavrakis.d@chu-nice.fr
+ 
+Monaco Télématique MCTEL 1 Novembre 2004 Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+Table des matières 
+ 
+ 
+Table des matières ..................................................................................................................... 2 
+Introduction ............................................................................................................................... 4 
+Généralités ............................................................................................................................ 4 
+Glossaire................................................................................................................................ 4 
+Les types d'applications mobiles ............................................................................................... 5 
+Réseaux mobiles et transmission de données..................................................................... 5 
+Avantages et inconvénients des différentes technologies .................................................. 6 
+Envoi automatisé de SMS personnalisés (push-SMS)....................................................... 7 
+Fonction de traitement transactionnel : réponse aux requêtes de l'utilisateur .............. 8 
+Télésurveillance .................................................................................................................... 9 
+Traitements automatisés inter-applicatifs: applications Machine to Machine .............. 9 
+Géolocalisation.................................................................................................................... 10 
+Les aspects ergonomiques.................................................................................................. 10 
+Exemple d'applications ........................................................................................................... 12 
+Gestion de l'alerte plan blanc............................................................................................ 12 
+Intégration de l'envoi de SMS dans les applications hospitalières ................................ 14 
+Intégration à la messagerie hospitalière........................................................................... 14 
+Réalisation d'applications transactionnelles.................................................................... 15 
+Applications multimédia mobiles UMTS ......................................................................... 16 
+Accès aux applications du réseau hospitalier VPN (Virtual Private Networking) ...... 17 
+Aspects techniques des accès aux réseaux mobiles................................................................ 18 
+Raccordement au réseau SMS .......................................................................................... 18 
+Raccordement TCP/IP....................................................................................................... 19 
+Numéros de ports ............................................................................................................. 19 
+Installation du serveur Wap.............................................................................................. 19 
+Envoi de données en Push vers un mobile ....................................................................... 20 
+L'atelier de développement VidéoSMS................................................................................... 21 
+Présentation ........................................................................................................................ 21 
+Comment développer en pratique une application mobile ?.......................................... 22 
+Une mise en service immédiate à partir de vos sites Web, Minitel, VT ou 3270 .......... 24 
+Une solution intégrée à l'offre logicielle de Monaco Télématique ................................. 27 
+L'offre de services mobile de Monaco Télématique MCTEL................................................ 28 
+Assistance à la conception du service ............................................................................... 28 
+Monaco Télématique MCTEL 2 Novembre 2004 Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+Réalisation de votre application clé en main ................................................................... 28 
+Hébergement complet de votre application sur le site MCTEL .................................... 29 
+Utilisation du service de facilitation MCTEL à partir de vos systèmes informatiques 
+ou de vos serveurs Web ou Minitel ................................................................................... 29 
+Modification de votre application informatique pour gérer la mobilité........................... 29 
+Accès mobile aux données de vos sites Web, FTP, SQL ou Minitel ............................... 30 
+Migration de votre application SMS+ sur vos systèmes informatiques ........................ 30 
+Pour plus d'informations................................................................................................... 30 
+Annexe 1 : les solutions SMS et mobiles pour les hôpitaux et services de secours de Monaco 
+Télématique MCTEL............................................................................................................... 31 
+Logiciels réseaux et connectivité mobile........................................................................... 33 
+Interfaces réseaux complémentaires................................................................................. 33 
+Monaco Télématique MCTEL 3 Novembre 2004 Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+Introduction 
+ 
+ 
+ 
+Généralités 
+ 
+A l'heure de l'explosion de la téléphonie mobile, tous les utilisateurs professionnels et 
+grand public sont désormais familiarisés avec la technologie des messages courts 
+SMS, qui leur permet de recevoir sur leurs portables toutes sortes d'informations, 
+mais aussi de pouvoir envoyer eux-même des SMS pour effectuer des opérations, 
+demander des informations, participer à des jeux, etc ...  
+ 
+Outre les SMS, les réseaux mobiles permettent d'échanger toutes sortes de données 
+en TCP/IP, ce qui permet de réaliser toutes sortes d'applications mobiles 
+embarquées. 
+ 
+Ce document explique comment utiliser ces nouvelles technologies pour réaliser des 
+applications mobiles hospitalières, permettant d'améliorer la qualité et l'efficacité des 
+soins, de diminuer les coûts de communication. 
+ 
+Glossaire 
+ 
+Terme ou acronyme Définition 
+CSD Circuit Switched Data 
+GPRS General Packet Radio Service 
+GSM Global System for Mobile communications 
+HTML HyperText Markup Language 
+HTTP HyperText Transfer Protocol 
+IP Internet Protocol 
+J2ME Java 2 Micro Edition 
+kbps kilobits per second 
+MMS Multimedia Message Service 
+PC Portable Computer 
+PDA Personal Digital Assistant 
+SIM Subscriber Identity Module 
+SMS Short Message Service 
+SMS-MO SMS-Mobile Originated (provenant du mobile) 
+SMS-MT SMS-Mobile Terminated (destiné au mobile) 
+TCP Transmission Control Protocol 
+UMTS Universal Mobile Telecommunications System 
+URL Uniform Resource Locator 
+VPN Virtual Private Network 
+WAP Wireless Application Protocol 
+ 
+ 
+Monaco Télématique MCTEL 4 Novembre 2004 Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+Les types d'applications mobiles 
+ 
+ 
+ 
+Réseaux mobiles et transmission de données 
+ 
+En France, les réseaux mobiles disponibles utilisent la technologie GSM et depuis 
+peu UMTS (en cours de déploiement). Ces normes internationales permettent aux 
+équipements mobiles de bien sûr téléphoner, mais aussi d'effectuer des 
+transmissions de données. 
+ 
+Les techniques disponibles pour la transmission de données sont: 
+• l'échange de données par SMS : bien adapté à la transmission de données 
+textuelles de petite taille. 
+• l'établissement d'une liaison TCP/IP qui selon la technologie (GSM, UMTS) 
+et les options d'abonnement peut être à différentes vitesses: 
+o CSD (circuit switched data), proche d'un protocole modem traditionnel: 
+permet l'échange de données mais interdit les appels téléphoniques 
+durant la connexion en mode data. 
+o GPRS (General Packet Radio Service): permet l'échange de données à 
+64 kbps (dans la pratique plutôt 40 kbps) tout en restant disponible pour 
+recevoir un appel: néanmoins, l'échange simultané de données et la 
+téléphonie n'est pas possible. 
+o UMTS: échange de données à haute vitesse (de l'ordre de 300 kbps). 
+Sur la liaison TCP/IP ainsi établie, les données peuvent être échangées selon 
+tous types de protocoles: 
+o le WAP, version simplifiée et plus légère du Web, dont le navigateur 
+Wap est embarqué dans la plupart des portables commercialisés 
+actuellement. 
+o le Web, embarqué dans les portables haut de gamme. 
+o Email (SMTP), également disponible sur les portables haut de gamme. 
+o échange de messages multimédia MMS permettant la transmission de 
+messages composites intégrant texte, photo, sons, vidéo, etc. 
+o toute application spécifique, qui peut être soit embarquée sur le 
+portable (par exemple sous forme d'application Java J2ME téléchargée 
+si le portable le supporte) ou sur un autre équipement (PC, Palm, etc.) 
+utilisant le portable pour accéder au réseau. 
+ 
+Ces différentes techniques permettent de réaliser de nombreuses applications 
+mobiles professionnelles dans le domaine hospitalier et de la santé, qui peuvent offrir 
+les fonctionnalités suivantes: 
+• Authentification de l'utilisateur, par exemple grâce à son numéro de mobile. 
+• Services professionnels à forte valeur ajoutée. 
+• Intégration au système d'information hospitalier : Messagerie, bases de 
+données, dossier médical, etc. 
+• Services destinés aux opérateurs télécoms mobiles. 
+Monaco Télématique MCTEL 5 Novembre 2004 Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+• Applications Machine-to-Machine permettant la communication automatisée 
+entre systèmes, par exemple transmission automatisée d'un ECG (provenant 
+d'un scope/défibrillateur du SAMU, mais aussi d'un Holter ) au SAMU ou au 
+service de cardiologie. 
+• Géolocalisation, permettant de localiser instantanément la position soit d'un 
+moyen de secours, soit d'un requérant en détresse incapable de préciser sa 
+position. 
+ 
+Figure 1: Présentation générale des types d'applications mobiles que le réseau permet de réaliser: envoi de 
+SMS automatisés à des effecteurs, applications professionnelles à forte valeur ajoutée, messagerie, 
+authentification de l'usager, géolocalisation, applications Machine to Machine. 
+ 
+Avantages et inconvénients des différentes technologies 
+ 
+On peut séparer les technologies basées sur la transmission de messages courts 
+SMS et celles sur l'échange de données en TCP/IP. 
+ 
+Monaco Télématique MCTEL 6 Novembre 2004 Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+Type Caractéristiques Avantages Inconvénients 
+SMS • textes de petite • utilisable tout de • taille des données 
+taille (< 400 car) suite sur tous les limitée 
+• transmission mobiles • coût au Ko 
+immédiate, mode • réception pendant transmis plus 
+'alerte' les élevé 
+• facturé au SMS communications 
+transmis • consultable offline 
+• peut déclencher 
+une session Wap 
+TCP/IP • échange de • nécessite mobile • pas d'usage offline
+sur données à des compatible + 
+GPRS vitesses de  abonnement 
+ou • facturé au Mo • développement 
+UMTS transmis applicatif parfois 
+nécessaire 
+ 
+ 
+Envoi automatisé de SMS personnalisés (push-SMS) 
+ 
+L'envoi de SMS est un bon moyen pour transmettre rapidement de courts messages 
+personnalisés à un ou plusieurs utilisateurs, de façon très efficace puisque: 
+• l'envoi est effectué instantanément, le message sera reçu et le destinataire 
+alerté si le mobile est allumé et en couverture, même si le destinataire est en 
+train de téléphoner. 
+• les SMS peuvent être envoyés en mode "accusé de réception": l'émetteur 
+recevra un acquittement dès la réception du message par le destinataire ou en 
+cas d'erreur. 
+ 
+ 
+Figure 2: Push-SMS: envoi de SMS personnalisés (ex: à partir de la messagerie ou d'une application 
+informatique hospitalière) à des destinataires mobiles 
+ 
+On peut donc les utiliser pour : 
+• Intégrer l'envoi de messages courts vers des portables dans la 
+messagerie, le système d'information hospitalier, et les systèmes de 
+gestion d'alerte  : 
+Monaco Télématique MCTEL 7 Novembre 2004 Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+o Envoi direct de messages vers des destinataires mobiles à partir de la 
+messagerie de l'hôpital: moyen plus rapide, plus efficace et plus 
+économique qu'un appel téléphonique, pour par exemple: 
+ trouver rapidement et au pied levé le remplacement d'un 
+personnel malade ou absent. 
+ informer rapidement les membres d'une équipe d'une réunion de 
+service impromptue. 
+o Intégration au système d'information et aux applications hospitalières, 
+avec de nombreuses applications: 
+ rappel de rendez-vous aux patients le jour précédent, permettant 
+de diminuer les "no-show". 
+ envoi de messages de rappel aux patients nécessitant un suivi 
+rapproché (contrôle de glycémie, de peak flow, etc), avec 
+possibilité de permettre le renvoi d'une valeur en réponse (voir c-
+dessous). 
+o Déclenchement des effecteurs par les systèmes de gestion d'alerte: 
+ envoi des demandes d'intervention aux effecteurs du SAMU: 
+médecins, ambulanciers, etc, avec possibilité d'acquittement de 
+l'intervention par réponse du destinataire. 
+ déclenchement de l'alerte des personnels dans le cadre d'un 
+plan blanc hospitalier, d'un plan rouge ou Orsec. 
+• Faire des mailings automatisés, personnalisés ou non, envoyés par 
+exemple à des groupes de destinataires. Parmi les exemples possibles : 
+o information sur une réunion de travail. 
+o recherche d'un personnel de remplacement en cas de maladie ou 
+d'absence. 
+o etc. 
+• Effectuer automatiquement des envois personnalisés sur des 
+événements spécifiques : 
+o Alerte vers des asthmatiques et BPCO en cas de conditions 
+météorologiques défavorables (taux d'ozone élevé, etc.). 
+o Alerte vers des professionnels de santé, gestionnaires de maisons de 
+retraite, etc. en cas de dépassement d'un pic de température (plan 
+canicule). 
+ 
+Fonction de traitement transactionnel : réponse aux requêtes de 
+l'utilisateur 
+ 
+Ces applications offrent une forte valeur ajoutée, puisqu'elles permettent aux 
+utilisateurs nomades, munis simplement d'un téléphone mobile, d'effectuer des 
+requêtes qui peuvent être complexes. 
+ 
+A partir d'une requête effectuée par un utilisateur, le serveur va pouvoir effectuer 
+n'importe quel type de traitement informatique, et notamment l'interrogation de bases 
+de données ou la récupération de données déjà accessible par d'autres mécanismes 
+(terminaux, Web Internet ou Intranet, Minitel, etc.). 
+ 
+Monaco Télématique MCTEL 8 Novembre 2004 Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+ 
+Figure 3: Exemple de service transactionnel: l'utilisateur envoie un SMS de requête, qui sera transmis par 
+le réseau de son opérateur mobile au serveur hospitalier, qui lui renvoie un (ou plusieurs) SMS en réponse 
+après avoir effectué le traitement demandé, pouvant déclencher l'affichage d'une page Wap. 
+ 
+Parmi les exemples possibles : 
+• Interrogation par des équipes SMUR du résumé essentiel du dossier patient: 
+antécédents, traitement en cours, allergies... Le contrôle d'accès est effectué 
+par l'authentification sur le numéro de mobile. 
+• Interrogation de bases de données spécialisées: matières dangereuses, 
+médicaments, substances toxiques, etc. 
+• Traitement de la valeur renvoyée par un patient chronique en réponse au 
+rappel par SMS de contrôle d'un paramètre: ex: glycémie, peak flow, etc. 
+• Traitement automatisé de l'état d'un professionnel de santé ou d'une équipe: 
+disponible (début de garde), indisponible (fin de garde), etc., utile pour la 
+réalisation d'un portail départemental ou régional d'accès aux soins. 
+• Traitement automatisé des acquittements de réception de missions par les 
+effecteurs. 
+ 
+Télésurveillance 
+ 
+La surveillance de systèmes informatiques ou biomédicaux peut être automatisée par 
+l'intermédiaire de robots vérifiant à intervalles réguliers leur bon fonctionnement, 
+déclenchant une alarme motivée à des superviseurs en cas d'incident. Très utilisé 
+pour la surveillance de serveurs Web, le système peut être étendu pour surveiller 
+tous types de systèmes et d'applications, par exemple dans le domaine de la santé. 
+ 
+Traitements automatisés inter-applicatifs: applications Machine to 
+Machine 
+ 
+Qu'il s'agisse de SMS (bien adapté aux données de petites taille) ou de GPRS/UMTS 
+(pour des données de grande taille ou une communication permanente en temps 
+réel), les technologies mobiles permettent à des applications informatiques de 
+dialoguer automatiquement. 
+ 
+Ceci permet d'échanger des données entre un système informatique fixe et un 
+terminal mobile, ou même entre deux terminaux mobiles. 
+ 
+Parmi les applications envisageables: 
+Monaco Télématique MCTEL 9 Novembre 2004 Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+• télétransmission de données biomédicales (par exemple ECG) d'un dispositif 
+biomédical embarqué (Holter, scope/défibrillateur du SAMU, etc) et un 
+système de réception (par exemple situé au SAMU ou dans le service de 
+cardiologie). 
+• télésurveillance de systèmes biomédicaux, avec déclenchement automatique 
+d'une alerte en cas d'incident. 
+ 
+Géolocalisation 
+ 
+Les opérateurs ouvrent actuellement leurs services à la fonction de géolocalisation, 
+permettant de localiser assez précisément le positionnement d'un possesseur de 
+mobile. Déjà disponible depuis quelques temps pour les services de renseignements 
+de l'Etat, ces services vont permettrent de réaliser de nombreuses applications 
+professionnelles liées aux secours: 
+• géolocalisation d'un requérant mobile en détresse appelant le SAMU et 
+incapable d'indiquer sa localisation précise, cas relativement fréquent. 
+• géolocalisation des équipes et moyens de secours, permettant: 
+o d'effectuer si besoin un radioguidage précis. 
+o de déclencher le moyen de secours le plus proche du lieu de 
+l'intervention. 
+ 
+Les aspects ergonomiques 
+ 
+Les principes ergonomiques essentiels d'une application mobile réussie sont les 
+suivants : 
+• Créer une application mobile à bon escient, tenant compte des 
+caractéristiques du réseau, et offrant un véritable service à valeur ajoutée à 
+l'usager : 
+o Cibler des utilisateurs nomades souhaitant un accès immédiat à 
+l'information et ne disposant souvent que d'un téléphone portable : 
+il n'est pas très logique d'offrir par exemple une recherche par SMS sur 
+une base de données professionnelle accessible gratuitement sur 
+Internet à des usagers l'interrogeant de leur bureau : il leur sera plus 
+simple et plus économique d'utiliser le navigateur Web de leur 
+ordinateur. 
+o Les données saisies par l'utilisateur ne peuvent avoir qu'une taille 
+limitée, car l'usager est réticent à saisir des messages de grande taille, 
+ce qui est souvent peu commode sur un téléphone portable. 
+o Temps de réaction rapide : l'application doit répondre immédiatement 
+ou dans un délai très court à la requête de l'utilisateur. 
+• Les traitements effectués peuvent par contre être très complexes : 
+interrogation de bases de données, traitements informatiques, etc ...  Ils 
+doivent dans la mesure du possible être réalisés dans un délai court, 
+inférieur à la minute, afin que l'utilisateur reçoive une réponse rapidement (il 
+est recommandé de cibler un temps de réponse de l'ordre d'une dizaine de 
+seconde). 
+Monaco Télématique MCTEL 10 Novembre 2004 Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+• La taille des données transmises pour affichage sur le mobile doit être 
+raisonnable compte tenu de la taille limitée des affichages des portables. 
+ 
+Pour des raisons tenant à l'évolution rapide de la technologie, il est toujours 
+préférable d'éviter de réaliser des applications spécifiques à un type d'équipement 
+mobile propriétaire (ex: Windows, Symbian, Palm/OS): préférer le développement 
+d'une application Java J2ME téléchargée qui pourra s'exécuter sur tous les mobiles 
+compatibles présents et à venir. 
+ 
+ 
+ 
+Monaco Télématique MCTEL 11 Novembre 2004 Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+Exemple d'applications 
+ 
+ 
+ 
+Ce chapitre présente quelques exemples d'applications pratiques hospitalières. Leur 
+délai de mise en place est variable: 
+• L'envoi automatisé de SMS personnalisés à partir d'applications informatiques 
+hospitalières, de la messagerie, ou d'outils d'alerte peut être mis en place en 
+quelques heures, parfois immédiatement. 
+• la mise en place d'accès mobiles à des applications transactionnelles 
+existantes peut être plus ou moins rapide selon les méthodes d'accès, si les 
+données sont par exemple déjà accessibe par le Web, la mise en place d'un 
+accès mobile est souvent très simple et rapide. 
+• le développement d'applications Java J2ME embarqué est nettement plus 
+lourd, d'autant plus que des tests de validation sont à prévoir sur différents 
+mobiles. 
+ 
+Gestion de l'alerte plan blanc 
+ 
+Le logiciel VidéoSMS/Alert de Monaco Télématique MCTEL permet à partir de 
+n'importe quel poste PC autorisé sur lequel le logiciel aura été installé d'envoyer un 
+message d'alerte vers un destinataire unique ou une liste de diffusion prédéfinie 
+regroupant des destinataires pouvant être joints par différents moyens de 
+communication: 
+• par SMS : vers tout abonné mobile. 
+• par message vocal : vers tout abonné fixe ou mobile. En ce qui concerne les 
+téléphones mobiles, le SMS est recommandé car mieux adapté. 
+• par fax (télécopie), par exemple à destination de services du Centre 
+Hospitalier ou d'autres structures de soins ou participant à l'Aide Médicale 
+Urgente. 
+• par télex, moyen fiable et à valeur légale, mais peu utilisé. 
+• par email, moyen peu adapté à l'alerte et à l'Aide Médicale Urgente, cité 
+uniquement pour mémoire. 
+ 
+Une même liste de diffusion peut bien sûr comprendre des destinataires joignables 
+de façons différentes: mobiles par SMS, appels vocaux (fixes ou mobiles) et 
+télécopie. 
+ 
+Dans certains cas, un même destinataire peut être joint de plusieurs façons. Afin de 
+faciliter le choix du moyen de communication le plus adapté, le tableau ci-dessous 
+récapitule les avantages et inconvénients de ces différents moyens de 
+communication.  
+ 
+ 
+ 
+ 
+ 
+Monaco Télématique MCTEL 12 Novembre 2004 Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+ 
+ 
+ 
+ 
+Moyen de Avantages Inconvénients 
+communication 
+SMS • réception immédiate où que soit • le téléphone mobile doit 
+l'utilisateur mobile (si allumé et être allumé et en 
+en couverture). couverture. 
+• réception directe par le • le destinataire doit savoir 
+destinataire souhaité. comment faire pour 
+• coût faible. consulter un SMS reçu 
+• stockage du message avec (sauf si le mode flash est 
+relecture possible. utilisé). 
+• suivi précis avec horodatage de  
+la réception sur le mobile 
+destinataire 
+• les SMS continuent d'être 
+transmis même en cas de 
+saturation des appels vocaux. 
+• possibilité de répondre par 
+SMS 
+message vocal • permet de joindre tous types de • pas de conservation du 
+téléphones, aussi bien les message. 
+postes fixes que mobiles • réécoute et acquittement 
+• horodatage précis de l'heure de du message coûteux et 
+réception et de vocalisation du complexes à expliquer. 
+message. • pas d'assurance que le 
+message a été délivré 
+au destinataire souhaité.
+• confidentialité non 
+garantie 
+• coût plus élevé 
+Fax • message papier consultable et • peu de destinataires 
+archivable. équipés. 
+• horodatage précis de l'heure de • peut traîner dans le 
+réception et de l'identifiant du panier de réception 
+terminal récepteur. 
+Télex • message papier consultable et • très peu de destinataires 
+archivable. équipés. 
+• horodatage précis de l'heure de  
+réception et de l'identifiant du 
+terminal récepteur. 
+• valeur légale 
+email • gratuit ou très peu coûteux • peu fiable 
+selon le moyen utilisé pour • pas d'accusé de 
+l'émission réception précis 
+• consulté tardivement 
+• aucune confidentialité 
+ 
+ 
+Monaco Télématique MCTEL 13 Novembre 2004 Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+Intégration de l'envoi de SMS dans les applications hospitalières 
+ 
+A partir de n'importe quel application informatique ou Web, il est très aisé d'envoyer 
+des SMS vers les destinataires désirés : 
+• Aucun équipement particulier n'est nécessaire, le centre serveur 
+facilitateur de Monaco Télématique se charge de la liaison avec les opérateurs 
+télécoms mobiles européens. 
+• Les outils d'envoi de SMS sur le site client sont fournis gratuitement. 
+ 
+Du point de vue informatique, l'intégration de l'envoi des SMS dans les applications 
+métiers de l'entreprise ou dans son site Web est extrêmement rapide, Monaco 
+Télématique fournit gratuitement les outils à ses clients. L'envoi peut se faire : 
+• Grâce à un programme PC, VIDEOSMS/PC, intégré à Outlook, qui permet 
+d'envoyer immédiatement des SMS individuels ou à des groupes de 
+destinataires. Les messages peuvent être personnalisés. Le logiciel permet de 
+faire des envois groupés personnalisés à partir de fichiers extraits de bases de 
+données Access, Excel, etc. 
+• Par appel d'un script Web sur le serveur MCTEL. 
+• Par l'envoi par http ou par ftp d'un fichier XML texte décrivant les données 
+SMS à transmettre. 
+• Par l'intégration des routines d'envoi de VIDEOSMS/Client dans les 
+applications informatiques : l'appel de la fonction sms_send permet par 
+exemple d'envoyer un SMS, la fonction sms_read_status permet de vérifier sa 
+bonne transmission, etc. 
+ 
+Les applications réalisables sont très variées: 
+• rappels de rendez-vous aux patients. 
+• transmission des demandes d'intervention aux effectueurs du SAMU. 
+• envoi d'un message d'alerte sur résultat biologique très anormal nécessitant 
+une action rapide. 
+• etc. 
+ 
+Intégration à la messagerie hospitalière 
+ 
+Les solutions Monaco Télématique MCTEL sont intégrables immédiatement à la 
+messagerie et au système d'information de l'entreprise, permettant ainsi d'envoyer 
+des messages SMS vers des portables comme vers tout autre destinataire. 
+ 
+Monaco Télématique fournit gratuitement à ses clients les outils PC ou Unix 
+nécessaires pour pouvoir effectuer immédiatement des emailings personnalisés par 
+SMS, téléchargeables sur www.smsfax.com  : 
+• Logiciel PC Windows VidéoSMS Desktop Sender, intégré à Outlook et offrant 
+une ergonomie très agréable pour l'envoi rapide de nombreux messages. 
+• Accès par Web aux fonctions d'envoi, de suivi et de surveillance de 
+l'expédition. 
+• Compte-rendus détaillés avec tarification et numéros invalides, disponibles sur 
+le Web. 
+Monaco Télématique MCTEL 14 Novembre 2004 Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+• Possibilités d'envoyer des messages binaires (sonneries, logos), au format 
+étendu (EMS) et multimédia (MMS). 
+ 
+ 
+Figure 4: Le logiciel PC/Windows VidéoSMS Destop PC permet d'envoyer rapidement des SMS 
+individuels ou en nombre personnalisés. Les fonctions d'envoi différé, d'accusé de réception, d'alarme par 
+email sur erreur ou envoi correct sont offerts, ainsi que l'envoi flash pour un affichage immédiat sur 
+l'écran du mobile. Le logiciel gère un répertoire des destinataires, la liste des messages expédiés et est 
+intégré à Outlook. Il permet aussi l'envoi automatisé vers des exports de bases de données au format cvs 
+(Access, Excel, etc.). Une version spécialisée VidéoSMS/Alert permet l'envoi de messages multimodaux 
+vers des SMS, des fax, des fixes avec vocalisation. 
+ 
+Réalisation d'applications transactionnelles 
+ 
+A la différence d'un service simple d'envoi de SMS (push-SMS), les applications 
+mobiles transactionnelles sont plus complexes à mettre en oeuvre puisqu'il faut traiter 
+la requête de l'utilisateur pour lui renvoyer une réponse. 
+ 
+Il reste néanmoins assez facile et rapide de permettre à des applications 
+transactionnelles existantes d'être accédées à partir d'utilisateurs mobiles. 
+ 
+Dans le cadre de ces développements, il faut: 
+• étudier l'ergonomie de la requête, qui doit être aussi simple et rapide que 
+possible. Les moyens utilisables sont: 
+o le SMS: envoi d'un texte simple de requête (souvent précédent par un 
+mot-clé) à un numéro court: 
+Monaco Télématique MCTEL 15 Novembre 2004 Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+ DOSSIER nom_patient (ou DOSSIER n°_secu): demande du 
+résumé du dossier médical. 
+ DANGER n°_Otan: demande du résumé de la fiche "produit 
+dangereux" à partir de son numéro de code (affiché sur les 
+camions transportant des matières dangereuses). 
+ POISON médicament (ou DCI): demande des informations 
+toxicologiques concernant un médicament ou un produit toxique. 
+ etc. 
+o le Wap: l'utilisateur ouvre une page Wap et effectue la saisie de 
+données dans les champs de la page. La saisie est plus assistée, par 
+contre il faut établir la connexion Wap. 
+o le développement d'une application Java J2ME spécifique qui 
+prendra en compte entièrement la saisie des données (avec si besoin 
+contrôle de cohérence, sa transmission au serveur par requêtes sur 
+TCP/IP et la mise en forme et l'affichage des résultats. 
+• définir l'interconnexion de l'application transactionnelle existante pour 
+traiter les données provenant des mobiles, en gérant: 
+o le "connecteur" éventuel permettant le déclenchement de la requête 
+transactionnelle lors de la réception de la requête du mobile, variant 
+selon les technologies. 
+o les aspects liés à la sécurité et au contrôle d'accès: les réseaux 
+mobiles (GSM, GPRS, UMTS) sont naturellement sécurisés car 
+encryptés et donc protégés du risque d'écoute et d'interception, par 
+contre il est nécessaire d'authentifier l'émetteur de la requête, ce qui 
+peut se faire notamment par la reconnaissance du numéro de mobile 
+émetteur. 
+• décider de la méthode utilisée pour renvoyer le contenu de la requête à 
+l'utilisateur, qui peut être selon le type de données et leur taille: 
+o un SMS pour des données de petite taille (< 400 caractères): réception 
+immédiate quoi que fasse l'utilisateur et données consultables même 
+hors réseau. 
+o une page Wap affichée en réponse à la requête, ou renvoyées à 
+postériori même en-dehors de la session Wap par un SMS Push-Wap 
+qui déclenche automatiquement l'accès à la page Wap de résultat, à 
+tout moment, et permet également de la reconsulter plus tard. 
+o la gestion et l'affichage direct par l'application Java J2ME. 
+ 
+ 
+Applications multimédia mobiles UMTS 
+ 
+Les hauts débits offerts par les réseaux UMTS en cours d'installation permettent 
+d'envisager des applications nécessitant une large bande passante, jusqu'à présent 
+impossible à réaliser sur les réseaux GSM/GPRS de deuxième génération1. 
+ 
+                                                 
+1 Les débits pratiques atteints sur les réseaux UMTS sont de l'ordre de 200 à 300 kbps avec des pics pouvant 
+atteindre 384 kbps. Les réseaux GSM/GPRS ont des débits maximum de 64 kbps, en pratique plus proches de 30 
+à 40 kbps. Le temps de latence du réseau UMTS est par ailleurs plus faible qu'en GSM/GPRS, ce qui accroît 
+encore les performances des applications temps réel. 
+Monaco Télématique MCTEL 16 Novembre 2004 Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+Parmi les exemples d'applications, on peut par exemple citer un lien vidéophonique 
+temps réel entre une équipe du SAMU présente sur les lieux d'un accident ou d'une 
+catastrophe et le médecin régulateur, afin de déclencher plus rapidement les moyens 
+adéquats. Ce système pourrait d'ailleurs présenter encore plus d'intérêt dans le cas 
+où les intervenants sur place ne sont pas des médecins et donc pas en mesure de 
+passer un bilan médical précis et étayé (sapeurs-pompiers, ambulanciers, police ou 
+gendarmerie, etc.). 
+ 
+Accès aux applications du réseau hospitalier VPN (Virtual Private 
+Networking) 
+ 
+Les débits offerts par l'UMTS permettent de réaliser en toute sécurité un accès 
+distant aux applications informatiques hospitalières. Les pré-requis sont les suivants: 
+• mettre en place sur le réseau hospitalier ainsi que sur les postes clients (PC, 
+terminaux mobiles) un Virtual Private Network encrypté qui permet de 
+considérer les postes clients comme raccordés directement au réseau 
+hospitalier. 
+• avoir installé soit sur les PC mobiles, soit sur les téléphones mobiles, les 
+logiciels clients nécessaires pour accéder aux applications hospitalières, par 
+exemple: 
+o Lotus si les solutions de messagerie et de travail collaboratif sont sur 
+Lotus. 
+o un émulateur Minitel si les résultats de laboratoires sont consultables 
+en mode Minitel2. 
+o un émulateur 3270 si les dossiers patients auxquels ont désire accéder 
+sont gérés en mode terminal 3270. 
+o etc. 
+ 
+La mise en place de ce type de solution est possible rapidement: l'essentiel du travail 
+consiste en l'audit sécurité indispensable, la mise en place du VPN, la sélection des 
+applicatifs qui seront utilisés sur les postes clients. 
+ 
+                                                 
+2 Par exemple, Monaco Télématique MCTEL a réalisé des émulateurs Minitel mobiles, utilisables soit en mode 
+Java de terminaux compatibles, soit en mode Palm (sur Tréo et Palm OS), soit en mode PocketPC. 
+Monaco Télématique MCTEL 17 Novembre 2004 Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+Aspects techniques des accès aux réseaux mobiles 
+ 
+ 
+ 
+Raccordement au réseau SMS 
+ 
+Le lien avec les opérateurs de téléphonie mobile sera effectué par un centre serveur 
+SMS, sur lesquel tournera vos applications spécifiques. 
+ 
+La solution la plus utilisée, facile et rapide à mettre en place, est d'effectuer sur vos 
+propres systèmes informatiques le traitement des requêtes des utilisateurs 
+(avec les accès aux bases de données et vos traitements spécifiques) mais 
+d'utiliser le centre serveur de Monaco Télématique pour la communication 
+avec le réseau SMS. Vos applications spécifiques communiqueront alors avec le 
+serveur de Monaco Télématique de façon simple, par exemple au moyen de 
+requêtes Web HTTP/HTML ou en faisant appel à des fonctions de l'API client/serveur 
+VIDEOSMS installées sur votre système. Dans ce cas, vous disposez des mêmes 
+possibilités de traitement que si vous étiez directement raccordés aux trois 
+opérateurs sans pour autant devoir mettre en place l'infrastructure de raccordement 
+assez lourde techniquement et financièrement. 
+ 
+Une solution analogue et encore plus rapide est d'utiliser la passerelle 
+VIDEOSMS/Web pour accéder de façon automatique aux données de votre site 
+Web. La requête SMS effectuée par l'utilisateur est alors traitée automatiquement par 
+VIDEOSMS qui effectue la recherche correspondante sur le site Web, extrait les 
+données et renvoie le SMS de réponse. La migration d'un service SMS sur le Web 
+peut alors être immédiate.  
+ 
+ 
+ 
+Monaco Télématique MCTEL 18 Novembre 2004 Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+Raccordement TCP/IP 
+ 
+Aucun raccordement spécifique n'est nécessaire pour permettre à vos systèmes 
+informatiques d'être accédés en TCP/IP à partir de terminaux mobiles en 
+GPRS/UMTS. Il est par contre nécessaire de tenir compte de certaines contraintes 
+ 
+Numéros de ports 
+ 
+Afin de limiter et de mieux contrôler le trafic transitant sur leur réseau mobile, les 
+opérateurs mobiles ont mis en place des filtres et proxy ne laissant passer que 
+certains types de protocoles, parmi lesquels: 
+• email SMTP (ports 23, ). 
+• Web HTTP/HTML (port 80). 
+• Telnet (port 23). 
+• etc. (la liste précise dépend des opérateurs est n'est en général pas publiée). 
+ 
+En conséquence, seuls les applications et protocoles utilisant ces numéros de ports 
+pourront communiquer avec un serveur distant. 
+ 
+Si l'on désire ainsi réaliser une application spécifique J2ME communiquant en 
+client/serveur avec un système informatique sur un port non géré, la communication 
+ne pourra être établie. La solution de contournement est alors d'utiliser un port géré 
+dont l'application n'est pas utilisée: le port 23 (Telnet) est un bon choix, d'autant plus 
+que sur ce port il n'existe pas de proxy contrôlant le contenu des données échangées 
+(à la différence du Web HTTP/HTML). 
+ 
+Installation du serveur Wap 
+ 
+La plupart des mobiles ne permettent pas d'effectuer des requêtes HTTP/HTML Web 
+traditionnelles et ne sont pas équipés pour traiter et visualiser des pages Web 
+habituelles, incluant images de grande taille, scripts Javascript, etc. 
+ 
+Ils gèrent par contre en général le protocole Wap, qui est un genre de Web simplifié 
+adapté aux mobiles, avec: 
+• un encodage compressé, géré par des serveurs Wap. 
+• des pages au format adapté aux mobiles. 
+• des contenus graphiques appropriés. 
+ 
+Afin de pouvoir gérer ces mobiles Wap, il est nécessaire de disposer d'un serveur 
+Wap installé sur votre système d'information, additionnellement à votre serveur Web. 
+Vous pouvez utiliser des serveurs OpenSource, par exemple Kannel, disponible en 
+OpenSource sur http://www.kannel.org.  
+ 
+Le Wap n'a pas jusqu'à présent connu le succès commercial escompté, car la plupart 
+des utilisateurs ne savent pas déclencher une session Wap à partir de leur mobile: 
+les opérateurs font de gros efforts de promotion pour développer l'utilisation de cet 
+outils. La fonction de Push Wap par SMS, décrite ci-dessous, permet de contourner 
+Monaco Télématique MCTEL 19 Novembre 2004 Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+cet obstacle ergonomique puisque l'utilisateur n'a alors plus aucune manipulation à 
+effectuer pour se connecter à un service Wap. 
+ 
+Envoi de données en Push vers un mobile 
+ 
+En dehors d'une session TCP/IP établie où l'équipement mobile échange des 
+données avec le serveur distant, il n'est pas possible pour le serveur informatique 
+distant d'envoyer des données non sollicitées au terminal en mode TCP/IP, puisque 
+le terminal peut être offline ou au moins hors établissement session GRPS. 
+ 
+La solution est alors pour le système informatique d'envoyer une commande Wap 
+Push au mobile par SMS: transmise par SMS cette requête sera toujours reçue 
+immédiatement par le mobile s'il est en couverture (même pendant que l'utilisateur 
+téléphone) et pourra alors déclencher automatiquement la connexion GPRS et la 
+demande de la page Wap dont l'URL a été transmise. Cette page peut bien sûr 
+contenir tous types d'éléments: texte, photos, vidéo, application J2ME à télécharger, 
+etc. 
+ 
+ 
+ 
+ 
+ 
+Monaco Télématique MCTEL 20 Novembre 2004 Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+L'atelier de développement VidéoSMS 
+ 
+ 
+Ce chapitre présente briévement à titre d'exemple les outils de développement 
+mobiles réalisés par Monaco Télématique MCTEL, leader dans le domaine de la 
+télématique mobile. Des informations plus détaillées sont disponibles sur 
+http://www.smsfax.fr et http://www.mctel.fr
+ 
+Présentation 
+ 
+VidéoSMS vous offre toutes les fonctionnalités nécessaires au développement des 
+applications mobiles et surtout leur intégration dans votre environnement 
+informatique et vos bases de données, permettant ainsi de réaliser facilement et 
+rapidement des applications à forte valeur ajoutée : 
+• Bien sûr les fonctions de communication : envoi automatisé de SMS 
+personnalisés à partir des applications et de la messagerie. 
+• Mais aussi et surtout des fonctions de traitement avancées en fonction 
+des requêtes effectuées : réception d'une requête envoyé par l'utilisateur, et 
+après traitement spécifique renvoi de la réponse. Ceci permet de réaliser 
+toutes sortes d'applications complexes : accès à des bases de données, etc. 
+• Intégration bidirectionnelle à d'autres moyens de communication : email, 
+fax, télex, serveurs vocaux, Web, Minitel, etc. C'est ainsi que des options 
+permettent par exemple de construire très rapidement des applications 
+mobiles qui accéderont à des données déjà accessibles par d'autres moyens 
+(terminaux VT ou 3270, services Web, services Minitel, etc.) pour récupérer 
+les données souhaitées et les renvoyer après mise en forme. 
+ 
+Monaco Télématique MCTEL 21 Novembre 2004 Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+ 
+L'atelier de développement VidéoSMS intègre toutes les fonctions nécessaires à la 
+réalisation facile et rapide de vos applications : 
+• Serveur de communication multisessions gérant les requêtes provenant du 
+réseau mobile, mais également d'autres média : email, serveur vocal, Web, 
+Minitel. 
+• Déclenchement automatisé des programmes de traitement spécifiques en 
+fonction de l'application invoquée et du numéro appelé. 
+• Récupération des informations de session : identification du numéro de 
+portable (ou adresse email) de l'appelant, récupération optionnelle d'une 
+information géographique de localisation précise retournée par le réseau, 
+régime de tarification de l'appel, données spécifiées par l'utilisateur et 
+contexte général de la session. 
+• Génération du message renvoyé à l'utilisateur : message SMS personnalisé 
+bien sûr, mais également envoi d'une page Wap, d'un email, d'un fax ou d'un 
+télex, déclenchement possible de tout type de traitement et de requêtes. 
+ 
+La communication avec les différentes passerelles des opérateurs télécom, qui 
+utilisent des protocoles différents, est gérée de façon transparente. Le logiciel 
+VIDEOSMS de Monaco Télématique est capable de s'interconnecter avec les 
+réseaux de la quasi-totalité des opérateurs de téléphonie mobile dans le monde. 
+ 
+Les applications développées peuvent être multilingues, facilitant ainsi la réalisation 
+d'applications au niveau européen. 
+ 
+Comment développer en pratique une application mobile ? 
+ 
+Le développement de vos applications mobiles peut s'effectuer directement sur vos 
+systèmes informatiques serveurs existants (Unix, Windows NT, OpenVMS) et à partir 
+de vos applications déjà existantes. 
+ 
+Voici par exemple comment intégrer rapidement la gestion de requêtes mobiles 
+SMS dans une application informatique déjà existante, accédant à vos bases de 
+données : 
+• Faire une copie de votre application en conservant tous les aspects de 
+traitement (interrogation des bases de données, traitement) pour ne changer 
+que les fonctions d'entrées/sorties de l'interface utilisateur. Utiliser en 
+remplacement des anciennes fonctions d'entrée/sortie les fonctions 
+d'entrées/sorties SMS fournies par Monaco Télématique (ex : fonction 
+SMS_Read retournant un message SMS reçu d'un utilisateur, avec son 
+contenu et les informations de session, fonction SMS_Reply permettant de 
+renvoyer un SMS de réponse à l'utilisateur, après traitement de la requête en 
+fonction du contenu du SMS envoyé). 
+• Ou encore, sans effectuer aucun développement, paramétrer le robot 
+VIDEOSMS/Web qui, sur réception de la requête SMS provenant d'un 
+utilisateur, l'analysera et effectuera la requête correspondante sur le Web 
+existant, pour extraire les données souhaitées de la page reçue, les mettre en 
+forme et renvoyer le SMS de réponse.  
+ 
+Monaco Télématique MCTEL 22 Novembre 2004 Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+ 
+ 
+Il suffit que votre système soit raccordé à Internet ou au réseau X.25 Transpac pour 
+pouvoir intégrer ces routines client/serveur, qui sont disponibles gratuitement 
+(freeware) pour la plupart des plates-formes du marché : 
+• Windows 2000/NT 
+Monaco Télématique MCTEL 23 Novembre 2004 Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+• Compaq/Digital Unix. 
+• PC Unix-SCO. 
+• PC Linux. 
+• IBM Aix. 
+• HP-UX. 
+• Sun Solaris 
+• Compaq/Digital OpenVMS (VAX et Alpha). 
+• Le portage sur d'autres plates-formes est possible, nous consulter. 
+ 
+La simplicité d'utilisation de ces routines et le fait qu'elles puissent être rapidement 
+intégrées dans des applications déjà existantes permet le plus souvent de réaliser 
+des applications SMS complètes en quelques jours. 
+ 
+Il est également possible de communiquer avec le serveur Monaco Télématique 
+MCTEL en mode email (SMPT) ou Web (HTTP/HTML). 
+ 
+ 
+Une mise en service immédiate à partir de vos sites Web, Minitel, 
+VT ou 3270 
+ 
+Grâce à la solution WEBSMS, la récupération des données de vos sites Web ou 
+Minitel ou de  vos applications en mode terminal (VT, 3270) ou fichier (FTP) est 
+possible automatiquement, vous permettant ainsi d'offrir à vos utilisateurs un accès 
+mobile par SMS ou Wap à vos données sans aucun développement de votre part. 
+ 
+Ce mode permet souvent de réaliser des applications mobile encore plus 
+rapidement, puisque le développement de certains services peut se chiffrer en 
+heures et non plus en jours. 
+ 
+Si par exemple, vous avez développé une application transactionnelle permettant 
+d'accéder par le Web à vos bases de données, vos utilisateurs pourront effectuer 
+des requêtes SMS ou Wap auxquelles il sera répondu automatiquement en 
+interrogeant de façon transparente et en temps réel votre site Web. La même 
+technologie est disponible pour vos services Minitel, ainsi que vos données 
+informatiques accessibles en mode terminal (IBM 3270, VT 100, etc.). 
+ 
+Monaco Télématique MCTEL 24 Novembre 2004 Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+Migration immédiate Web→ SMS
+• Rendez les données de votre Web immédiatement accessibles par SMS
+• Commercialisez par SMS les données de votre site Web
+De façon automatique, VIDEOSMS 
+récupère la requête de l'usager, 
+interroge immédiatement le site Web 
+pour récupérer la réponse et extraire 
+le résultat, le met en forme et renvoie 
+la réponse par SMS
+Requête SMS+ vue par l'usager: il envoie sa 
+requête et reçoit immédiatement le résultat
+Aucun développement n'est nécessaire: la mise en service est immédiate
+Monaco Télématique MC-TEL
+B.P. 225, MC 98004 Monaco Fax:  (+377) 92168865
+mctel@mctel.fr Web: http://www.mctel.fr Tél:   (+377) 92168888
+ 
+ 
+Le principe est d'aller interroger automatiquement lors de la réception d'un SMS ou 
+d'une requête Wap d'un utilisateur une application déjà existante, qui effectue déjà le 
+traitement souhaité. Cette application peut être : 
+• Un service Web, dont le script (cgi, etc.) retourne une page Web contenant les 
+données souhaitées. 
+• Un fichier accessible par FTP. 
+• Une application Minitel, qui déroulera automatiquement un script de traitement 
+pour récupérer une page Minitel de résultat. 
+• Un flux de données (VT 100, VT 220, LU 6.2, données au format 
+téléinformatique, etc). 
+• Un écran 3270 
+• Etc. 
+ 
+Dans tous les cas, les données reçues (page Web, fichier FTP, page Minitel, flux 
+Telnet VT, écran 3270, etc.) sont décodées automatiquement pour en extraire les 
+données utiles, qui sont mises en forme et renvoyées par SMS à l'utilisateur. 
+ 
+Monaco Télématique MCTEL 25 Novembre 2004 Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+ 
+ 
+ 
+ 
+Monaco Télématique MCTEL 26 Novembre 2004 Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+Une solution intégrée à l'offre logicielle de Monaco Télématique 
+ 
+La solution VidéoSMS est pleinement intégrée à tous les autres produits réseau de 
+Monaco Télématique : 
+• Serveur Web EuroWeb. 
+• Serveur Minitel Vidéonet. 
+• Logiciels fax et télex Vidéotéléfax et Vidéotélex 
+• Prise de commande sur Internet WebVPC. 
+• Solution de banque à domicile Vidéobanque 
+• Réservation en ligne (places de spectacles, hôtels, moyens de transport, etc.). 
+• Pour les applications grand public, une bibliothèque de jeux peut être mise à 
+disposition : jeux, horoscope, rencontres, etc. 
+ 
+Par ailleurs, les applications développées peuvent être interfacées avec d'autres 
+applications et logiciels, a priori toute application disposant d'une interfaçe 
+programmatique appelable à partir d'un L3G: 
+• Gestion de bases de données relationnelles. 
+• Logiciels back-office. 
+• Applications métiers disposant d'une interface programmatique. 
+ 
+ 
+ 
+Monaco Télématique MCTEL 27 Novembre 2004 Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+L'offre de services mobile de Monaco Télématique MCTEL 
+ 
+ 
+Si vous ne souhaitez pas vous charger vous-même du développement et de 
+l'exploitation de votre service, Monaco Télématique MCTEL vous offre des 
+prestations complètes d'assistance et de service autour de son offre : 
+• Assistance à la conception de votre service, conseils relatifs à son ergonomie. 
+• Réalisation complète de votre application clé en main. 
+• Hébergement de votre application sur le centre de services SMS de Monaco 
+Télématique MCTEL. 
+• Installation de votre application opérationnelle sur votre site informatique. 
+ 
+De plus, sans que vous ayez à effectuer aucun développement SMS, Monaco 
+Télématique MCTEL vous offre également une interface d'utilisation complète vous 
+permettant d'intégrer automatiquement et de façon transparente l'utilisation des SMS 
+dans vos applications : il suffit par exemple que vos applications envoient des 
+messages emails au serveur d'applications SMS+ de Monaco Télématique MCTEL 
+pour que ceux-ci soient transmis aux mobiles SMS de vos correspondants. 
+ 
+Assistance à la conception du service 
+ 
+Les experts de Monaco Télématique MCTEL pourront vous fournir une aide 
+précieuse lors de l'étude et de la conception de votre service : 
+• Conception générale du service. 
+• Définition et ergonomie des échanges. 
+• Conseils au choix d'un régime de tarification. 
+• Aspects légaux et déontologiques. 
+• Prise en charge des aspects administratifs (réservation du numéro court, 
+relations avec les opérateurs, formalités CNIL). 
+ 
+Réalisation de votre application clé en main 
+ 
+Monaco Télématique MCTEL peut prendre en charge l'intégralité des 
+développements de votre service SMS et vous le livrer clé en main. 
+ 
+Les développements sont effectués en utilisant l'atelier de développement 
+VidéoSMS de Monaco Télématique MCTEL, la plate-forme ainsi que le langage de 
+développement souhaités par le client, et les logiciels applicatifs nécessaires (ex : 
+bases de données relationnelle). 
+ 
+Ce service pourra être hébergé sur le site facilitateur MCTEL ou être installé sur 
+votre site informatique, qui devra alors être raccordé aux opérateurs télécom. 
+ 
+ 
+Monaco Télématique MCTEL 28 Novembre 2004 Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+Hébergement complet de votre application sur le site MCTEL 
+ 
+En utilisant cette solution, aucune ressource informatique n'est nécessaire pour le 
+fournisseur du service, c'est le centre serveur facilitateur SMS+ de Monaco 
+Télématique MC-TEL qui fournira les ressources nécessaires. 
+ 
+Le centre serveur SMS+ de Monaco Télématique MCTEL offre toutes les facilités 
+nécessaires : 
+• Nombreux systèmes en réseau : HP OpenVMS, True64 Unix, HP-UX, Sun 
+Solaris, IBM Aix, HP, PC sous UNIX-SCO, Linux, Windows 2000. 
+• Raccordement via X.25 et VPN aux réseaux des différents opérateurs 
+télécom : Orange, SFR, Bouygues Télécom, de nombreux opérateurs 
+étrangers. 
+• Fonctions d'interconnexion aux autres réseaux : télécopie, télex, Minitel, Web 
+Internet. 
+ 
+Utilisation du service de facilitation MCTEL à partir de vos 
+systèmes informatiques ou de vos serveurs Web ou Minitel 
+ 
+Grâce à cette solution intermédiaire, vous pourrez exécuter sur vos propres 
+systèmes informatiques les requêtes et transactions à valeur ajoutée de votre 
+application mobile, sans pour autant que vos systèmes informatiques aient besoin 
+d'être raccordés aux opérateurs télécom. 
+ 
+En utilisant cette solution, vous n'aurez aucun développement réseau à effectuer. 
+Deux possibilités : 
+ 
+Modification de votre application informatique pour gérer la mobilité 
+ 
+Il vous suffira d'utiliser les interfaces d'utilisation client/serveur fournies par Monaco 
+Télématique pour intégrer automatiquement et de façon transparente l'utilisation des 
+accès mobiles dans vos applications. 
+ 
+Il vous suffit : 
+• Un système informatique supporté, par exemple : 
+o Windows 2000 ou NT 
+o Unix : IBM AIX, Compaq Digital Unix, HP HP-UX, PC Linux, PC Unix-
+SCO, Sun Solaris). 
+o OpenVMS (VAX, Alpha, Itanium). 
+• Un accès au réseau Internet (même à travers un firewall), ou au réseau X.25 
+Transpac. 
+ 
+D'autres outils sont fournis : il suffit par exemple que vos applications envoient des 
+requêtes HTTP GET ou POST, des messages emails par SMTP ou un fichier texte 
+XML par FTP au serveur d'applications SMS/Wap de Monaco Télématique MCTEL 
+pour que les messages souhaités soient transmis aux mobiles SMS de vos 
+correspondants. 
+Monaco Télématique MCTEL 29 Novembre 2004 Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+ 
+Accès mobile aux données de vos sites Web, FTP, SQL ou Minitel 
+ 
+Cette solution est encore plus simple et rapide puisque vous n'avez aucun 
+développement à effectuer. Un script automatisé, réalisé souvent en une heure par 
+Monaco Télématique définit les traitements à effectuer lors de la réception d'une 
+requête par SMS ou Wap, la ou les requêtes Web, SQL ou FTP à effectuer, et 
+quelles sont les données reçues à extraire et à remettre en forme pour les renvoyer 
+à l'utilisateur. 
+ 
+Migration de votre application SMS+ sur vos systèmes 
+informatiques 
+ 
+Dans ce cas, votre propre site informatique fait office de centre serveur SMS+. Les 
+prérequis sont les suivants : 
+• Le logiciel VidéoSMS de Monaco Télématique MC-TEL. 
+• L'application SMS réalisée par votre service informatique ou Monaco 
+Télématique MCTEL. 
+• Une plate-forme supportée Unix (PC, Compaq, Sun, IBM, HP) ou OpenVMS. 
+• Les équipements de communication réseau avec les plates-formes 
+d'interconnexion des opérateurs télécom. 
+ 
+Pour plus d'informations 
+ 
+• Contactez dès aujourd'hui nos services techniques et commerciaux au +377 
+9216 8888 ou en nous écrivant à sms@mctel.fr  
+• Consulter notre site Web. 
+• Accédez à nos services SMS+ de démonstration, dont la liste complète se 
+trouve sur notre site Web http://www.smsfax.fr. 
+Monaco Télématique MCTEL 30 Novembre 2004 Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+Annexe 1 : les solutions SMS et mobiles pour les hôpitaux 
+et services de secours de Monaco Télématique MCTEL 
+ 
+ LES SOLUTIONS MOBILES DE MONACO TELEMATIQUE 
+ SOLUTIONS MOBILES "HOPITAUX, SERVICES DE SECOURS & SERVICES DE SANTE"
+ 
+• INTEGRATION SMS ET FAX DANS L'ENVIRONNEMENT BUREAUTIQUE 
+• ENVOI DE SMS OU DE FAX DES POSTES DE TRAVAIL ET APPLICATIONS INFORMATIQUES 
+ 
+ 
+APPLICATIONS DE GESTION D'ALERTES PAR ENVOI DE SMS  
+À des  groupes de destinataires prédéfinis: médecins, infirmières, équipes d'un 
+service donné, etc. L'alerte peut être déclenchée:  
+ 
+• A PARTIR D'UN PC 
+Grâce au logiciel VIDEOSMS/PC qui gère facilement des groupes 
+de destinataires et des envois en nombre très rapidement.  
+• A PARTIR DU MOBILE D'UN UTILISATEUR HABILITE 
+Reconnu par son numéro de mobile, il peut alors immédiatement 
+indiquer par SMS le message à transmettre ainsi que le nom de la 
+liste prédéfinie des destinataires qui devront recevoir le message.  
+• A PARTIR D'UNE APPLICATION DE GESTION DE L'ALERTE  
+Ayant intégré les fonctions d'envoi de SMS (ex: Centaure, ...) 
+ 
+APPLICATIONS DE PUSH-SMS / ENVOI AUTOMATISE DE MESSAGES
+• Rappels des rendez-vous des patients 
+• Rappel sur la prise de médicaments 
+• Rappel ou encouragements dans le cadre de certaines maladies 
+ou prévention  
+ (vaccination, diabète, arrêt de la cigarette,  ... ) 
+• Rappels de gardes, gestion du parc d'ambulances et des flux de 
+trafic 
+ (efficacité, rapidité, réduction des coûts, ... ) 
+• Envoi automatisé de résultats d'analyses biologiques au médecin 
+demandeur 
+ (ex: anomalies) 
+• Gestion de base de données de donneurs (sang, organe, ... ) permettant 
+d'optimiser la recherche 
+ 
+APPLICATIONS INTERACTIVES (REQUETES/REPONSES) A FORTE VALEUR AJOUTEE 
+• GRATUITES OU FACTUREES selon le modèle SMS+ choisi, 
+• Concernant les données PROTEGEES, le demandeur peut être 
+authentifié par son numéro de mobile personnel, éventuellement 
+associé à un mot de passe, 
+• TYPE DE SERVICES POSSIBLES : 
+- interrogation de bases de données administratives ou médicales  
+- recherche annuaire électronique (pharmacie,  ... ) 
+- Conseils santé (diététique, régime, nouveau né,  ... ) 
+- Questions/réponses : Pendant une période définie, des médecins 
+répondent sur le SIDA, la prévention, la grossesse et toutes les 
+questions embarrassantes que les jeunes pourraient se poser mais 
+n'osent pas exprimer de vive voix. 
+- Services à visée caritative: dons, soutien financier à des associations de patients,... 
+Monaco Télématique MCTEL 31 Novembre 2004 Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+ 
+ LES SOLUTIONS MOBILES DE MONACO TELEMATIQUE 
+ SOLUTIONS MOBILES "HOPITAUX ET SERVICES DE SECOURS"
+ 
+ 
+GEOLOCALISATION D'UN POSSESSEUR DE MOBILE
+ 
+• DETECTION de la position d'un requérant incapable d'indiquer sa 
+localisation précise.  
+• OPTIMISATION des moyens et réduction des délais et des coûts en 
+dirigeant le moyen le plus proche sur les lieux d'une intervention. 
+ 
+APPLICATIONS MACHINE-TO-MACHINE
+Un équipement mobile embarqué dans un équipement permet de 
+transmettre des données par SMS ou GRPS à un système central et vice-
+versa 
+ 
+• Télétransmission d'ECG et de paramètres vitaux.  
+• Autres applications de télémédecine, par exemple:  
+- Surveillance du patient à domicile.  
+- Alerte automatique des secours (couplé à Holter ou ECG) 
+en cas de trouble du rythme. 
+• Alerte automatique d'un technicien ou responsable lors d'un 
+incident sur un équipement automatisé. 
+ 
+AVANTAGES DES SOLUTIONS SMS 
+ 
+• MOYEN DE CONTACT INSTANTANE D'EQUIPES OU DE PERSONNES MOBILES  
+«  ANYWHERE - ANYTIME  » 
+• ENVOI SUIVI AVEC ACCUSE DE RECEPTION permettant de connaître L'HEURE PRECISE DE LA 
+RECEPTION DU MESSAGE sur le mobile destinataire et en cas d'erreur la cause de l'erreur, 
+• FAIBLE COUT D'ENVOI 
+le coût d'envoi d'un SMS est de l'ordre de 8 centimes d'euro, dégressif en grandes 
+quantités, et il devrait encore baisser à l'avenir 
+• SERVICES INTERACTIFS  A FORTE VALEUR AJOUTEE 
+Les services interactifs ainsi créés permettent à la plus grande majorité des gens équipés 
+de téléphones portables de pouvoir accéder à des informations ou des services de santé 
+à tous moments. 
+Les rétrocessions des opérateurs peuvent dans le cadre de services payants de dégager 
+très rapidement de très importants volumes financiers. 
+• RESEAU DE TRANSPORT FIABILISE 
+les SMS utilisant un canal de signalisation, ils sont toujours transmis même lorsque le réseau 
+mobile est saturé par de nombreux appels. 
+(exceptions: panne ou destruction du réseau mobile ou en fin d'année lorsque de très 
+nombreux SMS sont transmis simultanément) 
+MCTEL - UNE EXPERTISE PROFESSIONNELLE ET HOSPITALIERE RECONNUE
+Monaco Télématique MCTEL, qui compte des médecins parmi ses équipes, est un 
+fournisseur de solutions télématiques pour les hôpitaux 
+ depuis de nombreuses années et compte de nombreuses références: 
+APHP - Assistance Publique Hôpitaux de Paris, 
+CHPG - Centre Hospitalier Princesse Grâce, 
+INSERM - réseau de surveillance épidémiologique Sentinelles, 
+SDIS - Service Départemental d'Incendie et de Secours, ...  
+Monaco Télématique MCTEL 32 Novembre 2004 Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+Annexe 2 : les logiciels SMS et les applications SMS 
+standards de Monaco Télématique MCTEL 
+ 
+ 
+Logiciels réseaux et connectivité mobile 
+ 
+Nom Usage 
+VIDEOSMS Gateway Solution complète d'interconnexion entre le serveur mobile 
+du fournisseur de service et les SMS-Centers des 
+opérateurs télécoms mobiles 
+VIDEOSMS API et environnement de développement destiné à la 
+Development création d'applications sur le serveur VIDEOSMS Gateway 
+Toolbox 
+VIDEOSMS Client API client/serveur gratuite permettant le développement aisé 
+Development d'applications sur n'importe quel système qui utilisera une 
+Toolbox passerelle VIDEOSMS Gateway distante pour accéder au 
+réseau GSM/UMTS (par exemple le centre serveur SMS de 
+facilitation de Monaco Télématique MCTEL). 
+VIDEOSMS Outil de revamping permettant de réaliser immédiatement 
+Application Gateway des services SMS+ allant extraire automatiquement 
+Interface l'information de services et de données déjà existants. Des 
+modules spécialisés gérent: 
+• Des accès et recherches sur le Web et le Wap. 
+• Des recherches sur FTP. 
+• Des requêtes FTP SQL. 
+• Des données accessibles par des terminaux 
+informatiques selon différents formats (VT, 3270, 
+Minitel). 
+VIDEOSMS Desktop Outil PC permettant d'envoyer et de recevoir des SMS d'un 
+SMS PC, avec intégration Outlook. 
+VIDEOSMS-Center SMS-Center pour opérateurs télécoms. 
+VIDEOSMS-Alert Solution intégrée d'alerte multiréseaux: SMS, vocalisation 
+vers fixes, fax, télex, email 
+ 
+Interfaces réseaux complémentaires 
+ 
+Name Usage 
+VIDEOTELEFAX Passerelle Fax bidirectionnelle 
+VIDEOTELEX Passerelle Télex bidirectionnelle 
+Email gateway Passerelle Email SMTP 
+VTX/Gate, VTX/Web Passerelle Minitel 
+ 
+ 
+Monaco Télématique MCTEL 33 Novembre 2004 Intégration de la mobilité dans l'informatique hospitalière (www.smsfax.fr) v. 1.0 
+  
+Monaco Télématique MCTEL 34 Novembre 2004

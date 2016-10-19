@@ -1,0 +1,428 @@
+Módem GSM/GPRS - Manual de usuario 1 Manual del usuario  
+Módem GSM-GPRS inalámbrico para PC 
+ 
+(Antes de poner en funcionamiento el módem deberá leer 
+este manual para el uso eficiente y seguro del mismo) 
+ 
+Introducción 
+ 
+Felicidades y gracias por adquirir el módem GSM-GPRS 
+inalámbrico para PC. 
+ 
+Los módems GSM-GPRS inalámbricos para PC permiten a 
+los usuarios acceder, mediante el móvil, a internet o a la red 
+de trabajo de la empresa con una mayor flexibilidad y 
+velocidad obteniendo las características de un GPRS. El 
+módem GSM-GPRS para PC es muy simple de instalar y 
+usar; el software suministrado le permite seleccionar el 
+mejor servicio de datos disponible de esta forma el módem 
+GSM-GPRS para PC está siempre disponible para la 
+transferencia de datos. 
+ 
+Aviso autorización 
+ 
+Este manual es publicado por nuestra compañía sin ningún 
+tipo de garantía. Pueden darse mejoras y cambios debido a 
+errores tipográficos, inexactitudes en la información o 
+mejoras en el hardware/software en cualquier momento y 
+sin previo aviso. Dichos cambios serán actualizados en 
+posteriores ediciones de este manual. 
+ 
+Este manual está protegido intelectualmente por nuestra 
+compañía. El programa al que nos referimos aquí está 
+protegido y registrado por nuestra empresa. La reproducción 
+entera o parcial sin consentimiento escrito de los 
+propietarios del copyright está totalmente prohibida. La 
+ingeniería del producto también queda protegida.  
+2 El resto de nombres de productos o servicios mencionados 
+en este manual son marcas registradas de sus respectivas 
+compañías. Todos los derechos quedan reservados. 
+ 
+Guía de uso para el uso seguro y eficiente 
+ 
+Por favor lea la información antes de usar el módem 
+inalámbrico en su PC. 
+ 
+Recomendaciones 
+ 
+- Trate siempre con cuidado el producto, manténgalo en 
+lugares limpios y sin polvo. 
+- No exponer el producto a líquidos o humedades.  
+- No poner en contacto con fuego o cigarrillos encendidos. 
+- Evitar caídas o forzar el producto. 
+- No pintar el mecanismo. 
+- No usar cerca de equipos médicos sin permiso del 
+personal cualificado. 
+- No usar el producto en aviones o zonas en la que queda 
+prohibido el uso de radiofrecuencias. 
+- No usar el producto en áreas con atmósfera 
+potencialmente explosiva. 
+- No deje el producto o instale el equipo inalámbrico en el 
+área por encima del airbag del coche. 
+- No intente desmontar el producto. Únicamente los 
+técnicos capacitados por nuestra compañía prestarán el 
+servicio necesario para reparaciones. 
+3 Aparatos médicos personales 
+ 
+Los módems GSM-GPRS para PC pueden afectar al uso de 
+marcapasos y otro tipo de equipos implantados. 
+ 
+Si existe una distancia mayor de 15cm entre el módem 
+GSM-GPRS para PC y el marcapasos el riesgo de 
+interferencias es limitado. Si tiene alguna razón para 
+sospechar que existe algún tipo de interferencia apague 
+inmediatamente el módem GSM-GPRS para PC. Póngase 
+en contacto con su cardiólogo para más información. Para 
+otro tipo de aparatos médicos por favor consulte con el 
+fabricante de dicho mecanismo. 
+ 
+Niños 
+ 
+No deje que los niños jueguen con el módem GSM-GPRS 
+para PC. Podrían herirse ellos mismos o a otros, o podría 
+dañarse la antena del módem GSM-GPRS. Tanto el 
+mecanismo como la antena del mismo contienen piezas 
+muy pequeñas que pueden suponer un peligro por 
+atragantarse. 
+ 
+Nota 
+ 
+Si el ordenador se bloquea por favor reinícielo. 
+ 
+Declaración 
+ 
+Por favor mantenga el dispositivo paralelo al zócalo USB al 
+conectarlo al PC. El suministrador no se hará responsable 
+del daño por el uso incorrecto. 
+4 Contenido 
+ 
+Requisitos del sistema ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ... .6 
+Tarjetas SIM ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ... ..8 
+Instalación ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ... ..8 
+Desinstalación del software ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ... ..11 
+Marcación ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ... 13 
+Registro de llamadas ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ... .14 
+Agenda telefónica ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ... ...15 
+Preguntas frecuentes ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ... .16 
+ 
+Características tecnológicas del hardware 
+ 
+Máxima velocidad de transmisión: 171.2Kbps 
+Zócalo admitido:  IS-95A/B, IS-98A, IS-126, IS637A, 
+IS707A, IS-2000 
+Voltaje de trabajo: +5V DC 
+Permite: Voz, SMS, transmisión de datos 
+Sistema operativo: Windows 2000 (SP2)/XP/2003 
+Temperatura de trabajo: -30ºC +60ºC 
+Temperatura de almacenaje: -40ºC  +80ºC 
+ 
+Otras características 
+ 
+Frecuencia de transmisión: GSM 
+900MHz/1800MHz/1900MHz 
+ 
+Función audio dual (DTMF) 
+AT 
+5 Características 
+ 
+1. Función como móvil GSM-GPRS suministrado con 
+software para llamar, aceptar llamadas, enviar y 
+recibir mensajes de texto así como ordenar la agenda 
+de contactos. 
+2. Zócalo USB estándar, fácil de conectar en cualquier 
+PC. 
+3. Máxima velocidad de transmisión a 53.6Kbit/s para 
+GPRS. 
+4. Uso eficiente de la energía, alta disipación del calor, 
+entrada y salida automática y ajustable para 
+garantizar la calidad y estabilidad de las conexiones 
+al desplazarse. 
+5. Alta velocidad de conexión mediante GPRS 
+cubriendo todos los océanos. 
+6. Conexión rápida, menos de 10 segundos desde el 
+marcado hasta  la llamada. 
+7. Itinerancia (rastreo) automática, funcionamiento 
+independiente de otros dispositivos. 
+8. Basado en un servicio de agrupación GPRS. 
+ 
+Comenzando a usar el módem GSM GPRS 
+ 
+Lista de componentes 
+Asegúrese que los siguientes componentes se encuentran 
+en el embalaje entregado: 
+Módem GSM-GPRS para PC ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ... ....1 
+Manos libres (auriculares)  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ... .1 
+CD-ROM  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ... ...1 
+Manual del usuario  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ... ..1 
+Garantía  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ...  ... 1 
+ 
+Requisitos del sistema 
+En esta sección se nombran las posibilidades de suscripción 
+en la red así como los requisitos del hardware y software 
+para el funcionamiento del módem GSM-GPRS. 
+6 Contrato de telefonía 
+ 
+La suscripción de telefonía que se usa en conjunto con el 
+módem GSM-GPRS para PC depende de las funciones y 
+características que su operador de telefonía móvil es capaz 
+de suministrar. Contacte con su operador o con quien le 
+proporcione dicho servicio para asegurarse que el servicio 
+se adapta a sus necesidades. Asegúrese que el servicio 
+incluye las opciones de datos, que normalmente aparecen 
+como un servicio opcional. 
+ 
+Hardware 
+ 
+Necesitará: 
+- Un PC con los requisitos mínimos recomendados por 
+Microsoft para el funcionamiento de la versión de 
+Windows instalada (64Mb de RAM o superior). 
+- Zócalo USB de 16 bits tipo II para PC. 
+- Módem GSM-GPRS inalámbrico para PC. 
+- Tarjeta SIM 
+ 
+Software 
+ 
+Necesitará: 
+- Windows 2000 (SP2), XP ó 2003. 
+- CD-ROM. 
+ 
+Ayuda disponible por internet 
+ 
+En nuestra página web (www.servi-tec.com) dispone de 
+soporte técnico para facilitar la instalación y el uso del 
+módem. Podrá descargar el software, manuales y todo tipo 
+de información necesaria. 
+7 Tarjeta SIM 
+ 
+Por favor contacte con su operador de telefonía móvil para 
+que le proporcione el servicio de la tarjeta SIM. Si la tarjeta 
+SIM tiene activado el código PIN antes de nada desactive el 
+código PIN. 
+ 
+Instalación 
+ 
+El CD-ROM contiene el software necesario para operar con 
+el módem GSM-GPRS para PC. El software es de fácil 
+instalación y sencillo de usar, pero antes de empezar deberá 
+cerciorarse que el servicio que requiere está disponible en el 
+contrato de su tarjeta SIM. Contacte con la empresa que le 
+suministre la tarjeta SIM y solicite que añadan a su contrato 
+el servicio específico GPRS. 
+ 
+Configuración del hardware  
+ 
+Asegúrese que el módem GSM-GPPR para PC tiene la 
+antena incorporada e inserte la tarjeta SIM en su zócalo 
+trasero. 
+ 
+Nota 
+ 
+La tarjeta SIM tiene una única posición, comprobar la 
+inserción teniendo en cuenta el canto de una de sus 
+esquinas.  
+Para desconectar el módem GSM-GPRS para PC hágalo 
+usando "extracción segura del dispositivo". 
+Mientras no se esté usando el módem GSM-GPRS para PC 
+es recomendable se guarde en la caja suministrada para 
+proteger la unidad de daños. Estando siempre conectado al 
+PC el dispositivo podría sufrir daños especialmente la 
+antena. 
+8 Importante 
+ 
+No conectar el módem GSM-GPRS en el PC sin antes 
+haber instalado el software del CD-ROM. 
+ 
+Si por accidente hemos conectado el módem antes de 
+instalar el software simplemente deberemos cancelar la 
+instalación automática del nuevo dispositivo.  
+ 
+Haga clic en el icono "setup.exe" y verá: 
+ 
+El sistema auto-comprobará y comenzará la instalación del 
+software y le pedirá que escoja un idioma disponible. 
+ 
+ 
+Después de seleccionar el idioma, espere unos segundos. 
+ 
+Luego haga clic en "Next". 
+ 
+Haga clic en "Browse" para cambiar la ruta, sino "Next". 
+9 Nota: Si el sistema no aprueba el test de Windows continúe 
+la instalación, haga clic en "Continue Anyway". 
+ 
+ 
+ 
+Después haga clic en "Finish" para finalizar la instalación 
+del software. Cuando se haya completado la instalación se 
+añadirá un icono en el escritorio GPRS609 2.0. 
+ 
+Configuración Hardware 
+ 
+Después de completar la instalación del software inserte el 
+módem GSM-GPRS en el PC. 
+ 
+ 
+Nota: Si el sistema no aprueba de nuevo el test de Windows 
+continúe la instalación, haga clic en "Continue Anyway". 
+ 
+10 Desinstalación del software 
+ 
+Haga clic en "inicio" - "programas" - "Data Card" 
+"uninstall GPRS609 USB MODEM" 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Haga clic en "Ok" para empezar la desinstalación. 
+ 
+ 
+ 
+ 
+ 
+ 
+Haga clic en "Ok". 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Haga clic en "Finish" para finalizar. 
+ 
+Funciones generales. 
+El software del módem GSM-GPRS contiene las siguientes 
+funciones: Marcación, Voz, SMS, Agenda telefónica y 
+Registro de llamadas. 
+11 Comenzando a usar el módem GSM GPRS 
+ 
+Busque el icono "GPRS609 2.0" bien en el escritorio o en el 
+menú "inicio" para abrir el programa. 
+ 
+Después de unos minutos el sistema estará listo 
+apareciendo "Ready" en la interfaz. 
+ 
+Haga clic en el icono                    para marcar. 
+ 
+Nota: Existe otra forma de conectarse a la red telefónica 
+(haga clic en "Begin" - "Dialup"), haga clic en "Connect". 
+ 
+ 
+Después de conectarse a la red la interfaz se minimizará en 
+el lado derecho de la barra de tareas como se muestra: 
+ 
+ 
+ 
+ 
+ 
+ 
+Doble clic en el icono           : 
+ 
+ 
+12 Si clica en "Disconnect" se desconectará de la red. Si clica 
+en el botón           la interfaz se cerrará. 
+ 
+Marcación 
+ 
+Haga clic en "Begin" - "Dialup" 
+ 
+Voz 
+ 
+Haga clic en "Begin" - "Call" 
+ 
+ 
+ 
+ 
+ 
+13 Esta interfaz le ayudará a marcar.  
+Dos maneras diferentes de hacerlo: 
+- (DTMF) marcación desde la interfaz 
+- Marcación manual desde el teclado 
+ 
+Después de marcar el número completo ya puede empezar: 
+el botón azul es para aceptar una llamada y el rojo para 
+rechazarla. 
+ 
+SMS 
+ 
+Haga clic en el botón "Begin" - "SMS" 
+1.  Envío SMS: 
+Haga clic en el botón "New", introduzca el contenido del 
+mensaje en el espacio en blanco de "content" y el número 
+del receptor en la columna "recipient", haga clic en "Ok". 
+ 
+2. Recepción SMS: 
+Después de recibir un SMS puede verlo o borrarlo tal y 
+como desee. 
+ 
+Registro de llamadas 
+ 
+Haga clic en "Begin" - "Call history" aparecerá el registro. 
+14 Agenda telefónica  
+ 
+Haga clic "Begin" - "Phonebook" 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Soporte técnico en la web 
+ 
+En la página web de nuestra compañía puede encontrar 
+ayuda y soporte técnico teniendo acceso a: 
+ 
+- las ultimas actualizaciones de software 
+- Recomendaciones de uso eficiente de módem 
+GSM-GPRS para PC 
+- Manuales para el usuario 
+- Ayuda adicional 
+ 
+ 
+15 Preguntas frecuentes 
+ 
+1. Si el led indicador no está iluminado por favor vuelva 
+a reinsertar correctamente el módem. 
+ 
+ 
+2. Por favor, compruebe donde instaló el software. Si la 
+instalación fue correcta podría ver "GPRS609 USB 
+MODEM" en el "administrador de dispositivos" 
+ 
+ 
+ 
+3. Fallo producido cuando el sistema comprueba el 
+usuario y contraseña.  
+ 
+En estas condiciones lo más probable es que su 
+cuenta esté sin saldo. Después de recargar su cuenta 
+podrá continuar. 
+ 
+ 
+ 
+ 
+16

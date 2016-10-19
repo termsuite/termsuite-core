@@ -1,0 +1,3939 @@
+RECHTSFRAGEN DES ANGEBOTS VON
+ONLINESPIELEN IN DER MOBILEN
+TELEFONIE
+von
+Sabine Hammerl
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+INHALTSVERZEICHNIS
+1Mobilfunknetze.................................................................................................................... 5
+1.1Entstehung..................................................................................................................... 5
+1.1.1A-Netz.................................................................................................................... 5
+1.1.2B-Netz.....................................................................................................................5
+1.1.3C-Netz.................................................................................................................... 6
+1.2GSM - Mobilfunksystem der zweiten Generation........................................................ 7
+1.2.1Allgemeines............................................................................................................7
+1.2.2Technisches ........................................................................................................... 7
+1.2.2.1Aufbau eines GSM-Netzes.............................................................................. 7
+1.2.2.2Funktionsweise des GSM-Standards .............................................................. 8
+1.3GSM - HSCSD, GPRS und EDGE - Mobilfunksystem der zweieinhalbten
+Generation.......................................................................................................................... 9
+1.3.1HSCSD................................................................................................................... 9
+1.3.2GPRS.................................................................................................................... 10
+1.3.3EDGE................................................................................................................... 10
+1.4UMTS - Mobilfunksystem der dritten Generation..................................................... 11
+1.4.1Technisches.......................................................................................................... 11
+1.4.2Einführung des UMTS-Standards im kommerziellen Bereich............................ 14
+2Glücksspiele....................................................................................................................... 16
+2.1Einleitung.................................................................................................................... 16
+2.2Rechtliche Rahmenbedingungen im Glücksspielbereich............................................16
+2.2.1ABGB................................................................................................................... 17
+2.2.2Glücksspielgesetz................................................................................................. 17
+2.2.2.1Begriff des Glücksspiels................................................................................17
+2.2.2.2Begriff der Ausspielung................................................................................ 19
+2.2.2.3Glücksspielmonopol......................................................................................20
+2.2.2.4Ausnahmen vom Glücksspielmonopol..........................................................21
+2.2.3Europarechtliche Bezüge des österreichischen Glücksspielrechts.......................22
+2.2.4Strafrechtliche Bezüge des österreichischen Glücksspielmonopols.................... 25
+2.2.5Unzulässiges Glücksspiel und UWG....................................................................27
+Quelle: http://rechtsprobleme.at
+
+2
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+2.2.5.1Grenzüberschreitende Tätigkeit durch Internet-Spiele................................. 27
+3Mobiles Gaming................................................................................................................. 33
+3.1Einleitung.................................................................................................................... 33
+3.2Zur Anwendbarkeit des ECG...................................................................................... 33
+3.2.1Zulassung von Diensten der Informationsgesellschaft.........................................36
+3.2.2Informationspflichten des Diensteanbieters ........................................................37
+3.2.3Abschluss von Verträgen......................................................................................40
+3.2.4Verantwortlichkeit von Diensteanbietern............................................................ 53
+3.2.5Herkunftslandprinzip und Ausnahmen vom Herkunftslandprinzip..................... 54
+3.3Zur Anwendbarkeit des Fernabsatz-Gesetzes..............................................................54
+4Relevante datenschutzrechtliche Bestimmungen für Glücksspielveranstalter...................58
+4.1Datenschutzgesetz 2000.............................................................................................. 59
+4.2§ 51 GSpG - Das Spielgeheimnis............................................................................... 61
+5Zusammenfassung.............................................................................................................. 65
+
+Quelle: http://rechtsprobleme.at
+
+3
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+VORWORT
+
+Aufgrund der großen Nachfrage von Internet-Spielen war es nur mehr eine Frage der Zeit
+bis Glücksspielveranstalter bzw. Mobilfunkbetreiber sich neue Märkte eröffneten um
+Glücksspiele auch über mobile Endgeräte anzubieten. Glücksspielveranstalter wie zB die
+Österreichischen Lotterien GmbH, die mit ihrer Online-Plattform win2day.at bereits große
+Erfolge erzielen, hoffen im Bereich des mobilen gamings auf einen ähnlich
+durchschlagenden Erfolg. Dank der Möglichkeiten der neuen Kommunikationsmedien
+haben sich diesen traditionellen Betrieben neue Dimensionen eröffnet, da auf relativ
+einfache Weise ein breites Publikum erreicht werden kann und die Akzeptanz dieser
+Medien, besonders bei der jungen Generation, zweifelsohne gegeben ist. Für
+Mobilfunkbetreiber kam es bereits 2001 zu einer Marktsättigung im traditionellen Bereich
+der Mobiltelefonie, was dazu führte, dass an neuen Angeboten kostenpflichtiger Dienste
+(mServices) gearbeitet wurde, um zusätzliche Gewinne erwirtschaften zu können. Zu
+denken sei hier zB an Location Based Services, Dienste mit denen der Nutzer abhängig
+von seinem Standort mit verschiedensten Informationen versorgt werden kann, an den
+traditionellen M-Commerce und an das weitreichende Angebot von Unterhaltungsdiensten.
+Besonders durch die Einführung der dritten Mobilfunkgeneration UMTS erfreuen sich
+diese Dienste großer Beliebtheit, und werden durch die immer schneller werdenden
+Übertragungsraten und leistungsstärkeren Endgeräte weiter zunehmend an Bedeutung
+gewinnen.
+
+Quelle: http://rechtsprobleme.at
+
+4
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+1 Mobilfunknetze
+1.1 Entstehung
+Der Start der zivilen Ära der mobilen Funkkommunikation war in Österreich in den 60er
+Jahren. Verglichen zu anderen europäischen Ländern, wie zB Deutschland, Holland und
+Frankreich, in denen der Betrieb der öffentlichen Mobiltelefonnetze schon in den 50er
+Jahren begann, also relativ spät. Die österreichischen Netzbetreiber konnten aber somit
+von den
+
+bereits
+
+vorhandenen
+
+Erfahrungen anderer
+
+europäischer
+
+Netzbetreiber,
+
+insbesondere von jenen in Deutschland, profitieren, da Deutschland im Vergleich zu
+Österreich seit jeher in einer Spitzenposition lag1.
+
+1.1.1 A-Netz
+Das erste richtige Mobilfunknetz war das 1958 in Deutschland eingeführte A-Netz, das
+rein handvermittelt arbeitete, und abgebrochen werden musste, sobald man den
+Funkbereich einer Landfunkstelle verließ. Im benachbarten Funkbereich konnte das
+Gespräch dann wieder aufgenommen werden. Durch die Erforderlichkeit eines „Fräuleins
+vom Amt“, das die Gesprächsverbindung händisch herstellte, fielen naturgemäß sehr hohe
+Kosten an, und wurde das Mobiltelefon daher vorwiegend berufsbedingt von Personen in
+höheren Positionen oder Wohlbetuchten mit großem Interesse an technischen Neuerungen,
+genützt2.
+Trotzdem erreichte das A1-Netz bis 1970 95 % der Bevölkerung der Bundesrepublik und
+deckte zumindest 80 % der Fläche ab, was bedeutet, dass es zumindest in seinen Anfängen
+das größte flächendeckende Mobilfunknetz der Welt war. Das A-Netz war bis zum Jahre
+1977 in Betrieb3.
+
+1
+
+Bohländer/Gora, Mobilkommunikation: Technologien und Einsatzmöglichkeiten (1992) 55.
+
+2
+
+http://www.3sat.de/neues/dial/29039/ (07.05.2003).
+http://www.i-m.de/home/datennetze/dn_mobil1.htm (30.01.2003).
+
+3
+
+Quelle: http://rechtsprobleme.at
+
+5
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+1.1.2 B-Netz
+Im Jahre 1972 wurde das schon wesentlich fortschrittlichere B-Netz in Betrieb genommen,
+das den Benützern bereits ermöglichte selbst zu wählen, jedoch mit der Problematik, dass
+dieser wissen musste, in welchem Funkbereich sich der Mobilteilnehmer aufhielt, da die
+ganze Bundesrepublik in Vorwahlbereiche eingeteilt war4.
+Immerhin war nunmehr das „Fräulein vom Amt“ entbehrlich, was eine enorme
+Kostensenkung bedeutete, da beim vormaligen A-Netz für 18 Teilnehmer 1 Mitarbeiter
+erforderlich war, und sich dadurch die Preise auf sehr hohem Niveau befanden. Das B2Netz hatte 1986 mit 27.000 Teilnehmern seine Kapazität ausgeschöpft, ging aber erst Ende
+1994 außer Betrieb5.
+
+1.1.3 C-Netz
+1986 kam schließlich das C-Netz auf den Markt, welches gegenüber seinen Vorgängern
+gewaltige Verbesserungen aufweisen konnte. Es war nun nicht mehr erforderlich den
+Aufenthaltsort seines Gesprächspartners zu kennen, da das ganze Bundesgebiet unter einer
+Rufnummer erreichbar war6.
+Der Hauptunterschied bestand aber darin, dass es sich beim C-Netz um ein zellulares
+System handelte 7. Auch waren durch die große Anzahl von Basisstationen geringere
+Sendeleistungen erforderlich, was wiederum einen geringeren Stromverbrauch und
+weniger Akkukapazität bedeutete und der erste Schritt zu tragbaren Endgeräten war. Die
+Frequenz des C-Netzes betrug 450 - 465 MHz.
+Weiters wurde der Benutzer durch eine SIM-Karte vor unberechtigter Nutzung seines
+Mobiltelefons durch Dritte geschützt. Das C-Netz wurde zum Jahresende 2000
+abgeschaltet8.
+
+4
+
+Bohländer/Gora, Mobilkommunikation 59.
+
+5
+
+http://www.3sat.de/neues/dial/29039/ (07.05.2003).
+
+6
+
+http://www.i-m.de/home/datennetze/dn_mobil1.htm (30.01.2003).
+
+7
+
+Bohländer/Gora, Mobilkommunikation 62.
+
+8
+
+http://www.i-m.de/home/datennetze/dn_mobil1.htm (30.01.2003).
+
+Quelle: http://rechtsprobleme.at
+
+6
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+In Österreich fand in groben Schritten dieselbe Entwicklung statt, dies jedoch, wie oben
+schon erwähnt, rund 10 Jahre später9.
+
+1.2 GSM - Mobilfunksystem der zweiten Generation
+1.2.1 Allgemeines
+Bereits
+
+1982
+
+kam
+
+es
+
+zu
+
+einem
+
+Treffen
+
+von
+
+Vertretern
+
+verschiedener
+
+Telekommunikationsunternehmen aus 26 europäischen Ländern, die die Arbeitsgruppe
+„Groupe Spécial Mobile“ (GSM) mit dem Ziel gründeten, einen einheitlichen Standard für
+ein europaweites Mobilkommunikationsnetz festzulegen.
+Die Abkürzung GSM blieb dann auch für die hervorgegangenen Standards erhalten, wurde
+jedoch umgedeutet in „Global System for Mobilcommunications“10.
+Als Technik wurde ein digitales Netz aufgebaut, welches bessere Sprachqualität und
+weitere Features versprach.
+1990 wurden erste Testnetze aufgebaut, und 1992 wurde schließlich GSM offiziell
+eingeführt, wobei auch hier Deutschland mit den Netzen D1 und D2 eine Vorreiterrolle
+einnahm.
+Das D-Netz arbeitete in einem Frequenzbereich von 890 - 960 MHz. 1994 wurde in
+Deutschland die Lizenz für ein weiteres Netz, das E-Netz, erteilt, dessen Technik ebenfalls
+auf dem GSM-Standard basiert, allerdings in einem Frequenzbereich von 1800 MHz11.
+1.2.2 Technisches
+1.2.2.1 Aufbau eines GSM-Netzes
+GSM-Netze sind hierarchisch aufgebaut, wobei das zentrale Netz aus miteinander
+verbundenen Vermittlungsstellen, SSS (Switching Subsystem) gebildet wird. Einige dieser
+9
+
+Bohländer/Gora, Mobilkommunikation 56.
+
+10
+
+Bohländer/Gora, Mobilkommunikation 67.
+
+11
+
+http://www.3sat.de/neues/dial/29039/ (07.05.2003).
+
+Quelle: http://rechtsprobleme.at
+
+7
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+Vermittlungsstellen übernehmen dabei auch die Verknüpfung zu anderen GSM-Netzen
+und zum stationären Telefonnetz12.
+Jede Vermittlungsstelle (SSS) ist für die Benutzerdaten eines Teils der Mobilteilnehmer
+zuständig, und übernimmt diese auch die Authentifizierung der Teilnehmer.
+Die wichtigste Aufgabe ist jedoch die eigentliche Vermittlungssteuerung, die als „Mobile
+Switching Center (MSC) bezeichnet wird.
+An jeder solchen Vermittlungsstelle sind mehrere Basisstationssteuerungen (Base Stations
+Controller, BSC) angeschlossen. Diese wiederum steuern jeweils mehrere Basisstationen
+(Base Transceiver Station, BTS), die die eigentliche Funkübertragung zu den Mobilgeräten
+übernehmen13.
+
+1.2.2.2 Funktionsweise des GSM-Standards
+Jeder Kunde, der im GSM-Netz agiert enthält eine Codekarte, die SIM (Subscriber Identity
+Module), die eine international eindeutige Kennung enthält, mit der das Handy identifiziert
+werden kann.
+Auf dieser SIM-Karte ist eine Codenummer, die PIN, gespeichert, die die unberechtigte
+Benutzung des Mobilgerätes durch einen nicht authorisierten Teilnehmer verhindert14.
+Durch das Einschalten des Handys und die Eingabe des PIN-Codes versucht dieses sich
+einzubuchen, und hört zu diesem Zweck alle GSM-Frequenzen ab bzw. sucht nach
+Signalen des eigenen Netzbetreibers.
+Der stärksten Basisstation schickt es sohin eine Einbuchungsaufforderung, die wiederum
+an jene Vermittlungsstelle, die die Benutzerdaten dieses Teilnehmers gespeichert hat,
+weitergeleitet wird.
+Das Mobilgerät erhält außerdem eine temporäre Teilnehmerkennung als Adresse für den
+weiteren Datenaustausch mit der Basisstation. Diese Teilnehmerkennung wird mit jedem
+Gespräch neu bestimmt, wodurch das Mithören eines Gespräches unterbunden wird.
+Erst nach diesem Ablauf ist das Mobilgerät erfolgreich eingebucht.
+
+12
+
+Bohländer/Gora, Mobilkommunikation 75.
+
+13
+
+http://www.i-m.de/home/datennetze/dn_mobil2.htm (30.01.2003).
+
+14
+
+http://www.i-m.de/home/datennetze/dn_mobil2.htm (30.01.2003).
+
+Quelle: http://rechtsprobleme.at
+
+8
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+Können keine Signale des eigenen Netzbetreibers empfangen werden, wird nach einem
+Anbieter gesucht, mit dem ein sogenanntes Roamingabkommen besteht. Ein solches
+ermöglicht es dem Teilnehmer die Infrastruktur eines anderen Netzanbieters zu nutzen.
+Diese Möglichkeit besteht sowohl national als auch international15.
+Der Verbindungsaufbau zu einem Mobiltelefon hin bzw. von einem Mobiltelefon weg
+funktioniert dergestalt, dass zunächst aus der Vorwahl ermittelt wird, welchem Netz das
+Gerät angehört. Ist das erfolgreich geschehen wird umgehend eine Verbindung zur
+nächstgelegenen Vermittlungsstelle hergestellt, und dieser die restliche Rufnummer
+übersandt. Diese ermittelt dann die Benutzerdaten, insbesondere den Standort, des
+Angerufenen, und verbindet den Anrufer mit der zugehörigen Vermittlungsstelle16.
+
+1.3 GSM - HSCSD, GPRS und EDGE - Mobilfunksystem der
+zweieinhalbten Generation
+
+1.3.1 HSCSD
+HSCSD bedeutet High Speed Circuit Switched Data und ermöglicht es die
+Übertragungsbandbreite
+
+dadurch
+
+zu
+
+erhöhen,
+
+dass
+
+mehrere
+
+GSM-Kanäle
+
+zusammengeschaltet werden17. Es wird bei diesem System die Datenrate pro Kanal von
+9600 Bit/s auf 14400 Bit/s erhöht, wobei jedoch das Risiko von Übertragungsfehlern bei
+schlechter Verbindung wesentlich ansteigt, und es vorkommen kann, dass in einem
+solchen Fall wieder auf 9600 Bit/s zurückgeschaltet werden muss.
+Um zu verhindern, dass ein Teilnehmer eine gesamte Trägerfrequenz beansprucht, und
+dadurch andere Teilnehmer beeinträchtigt, hat der Netzbetreiber die Anzahl der
+gleichzeitig belegbaren Kanäle auf 3 oder 4 festgelegt.
+15
+16
+17
+
+http://www.i-m.de/home/datennetze/dn_mobil4.htm (30.01.2003).
+http://www.i-m.de/home/datennetze/dn_mobil4.htm (30.01.2003).
+Mielke, Übertragungsstandards und -bandbreiten in der Mobilkommunikation, in Silberer/Wohlfahrt/
+
+Wilhelm (Hrsg), Mobile Commerce: Grundlagen, Geschäftsmodelle, Erfolgsfaktoren (2002) 185 (194).
+
+Quelle: http://rechtsprobleme.at
+
+9
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+Auch werden HSCSD-Kanäle nur dann zur Verfügung gestellt, wenn diese nicht für eine
+Sprachverbindung benötigt werden.
+Der Aufbau von direkten Datenverbindungen erfolgt gegenüber den vorhergehenden
+Technologien mit wesentlich höherer Geschwindigkeit, was jedoch auch hohe
+Übertragungskosten nach sich zieht, da sich diese nach den belegten Kanälen richten18.
+HSCSD eignet sich insbesondere für Bildtelefonie, Videokonferenzen, Multimedia und
+mobiles Web-Surfen19.
+
+1.3.2 GPRS
+GPRS (General Packet Radio Services) ermöglicht einen permanenten Internet-Zugang für
+Mobilgeräte. Die Datenübertragung erfolgt paketweise, wobei der Netzbetreiber, der
+zugleich Internetprovider ist, jeweils entscheidet, wie viele Datenkanäle er gerade zur
+Verfügung stellen kann. Im Idealfall sind dies acht Kanäle.
+Die Kosten richten sich bei GPRS nach der Datenmenge, vollkommen unabhängig von der
+Übertragungsgeschwindigkeit, was jedoch in naher Zukunft dadurch geändert werden soll,
+dass die Möglichkeit besteht eine Leistungsklasse auszuwählen, und damit auch die
+Geschwindigkeit der Übertragung festzulegen20.
+
+1.3.3 EDGE
+EDGE (Enhanced Data Rates for GSM Evolution) ist eine Weiterentwicklung des GSMStandards, würde jedoch einen kostspieligen Austausch der Vermittlungstechnik bei den
+Netzbetreibern erfordern, der angesichts der Entwicklung des UMTS und der damit
+verbundenen Investitionen wohl kaum erfolgen wird21.
+
+18
+19
+
+http://www.i-m.de/home/datennetze/dn_mobil6.htm (30.01.2003).
+Böcker/Quabeck, Neue Dienstleistungen im Mobile Commerce, in Silberer/Wohlfahrt/Wilhelm (Hrsg),
+
+Mobile Commerce: Grundlagen Geschäftsmodelle, Erfolgsfaktoren (2002) 205 (210).
+20
+
+Mielke in Silberer/Wohlfahrt/Wilhelm, Mobile Commerce 194.
+
+21
+
+http://www.i-m.de/home/datennetze/dn_mobil6.htm (30.01.2003).
+
+Quelle: http://rechtsprobleme.at
+
+10
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+Ein weiterer Nachteil besteht darin, dass durch das dichtere Beladen des EDGEFunksignals mit Informationen schon bei gleicher Reichweite die Anfälligkeit gegenüber
+Funkstörungen steigt.
+Da mit EDGE die Entwicklungsmöglichkeiten des GSM-Systems bereits ausgereizt sind,
+können nur auf Grund einer völlig neu konzipierten Technik höhere Geschwindigkeiten
+geboten werden. Schon allein deshalb sind UMTS und GSM nicht kompatibel. Weiters
+funkt UMTS nicht nur in einem anderen Bereich, da das GSM-Netz ja weiter funktionieren
+soll, sondern verwendet es auch eine höherwertige Modulation, die sich darin äußert, dass
+bei GSM Geräten nur 1 Bit pro Sendeschritt übertragen wird, und bei UMTS Geräten 2 Bit
+pro Schritt22.
+
+1.4 UMTS - Mobilfunksystem der dritten Generation
+Mit Universal Mobile Telecommunications System (UMTS) wird das bestehende digitale
+Mobilfunknetz der zweiten Generation zunächst ergänzt, und später abgelöst werden.
+Vereinfacht gesagt ist dadurch die Verbindung zwischen den beiden erfolgreichsten
+technischen Neuerungen der letzten zehn Jahre gelungen, nämlich die Konvergenz
+zwischen Mobilfunk und Internet23.
+1.4.1 Technisches
+Die Entwicklung zu einem weltweit einheitlichen Mobilnetz startete bereits 1992 im
+Rahmen der World Administrative Radio Conference (WARC-92) in Málaga. Schon
+damals erhielt diese Entwicklung großen Zuspruch, da das zwar weltweit stark verbreitete
+GSM-Handy gegenüber der ersten Generation einen erheblichen Fortschritt darstellte, doch
+mit Mobilnetzen in Japan oder den USA nicht kompatibel ist.
+Zu diesem Zeitpunkt reservierte die World Radio Conference zwecks Konzeption der
+dritten Mobilfunkgeneration ein 230 MHz breites Band im 2-GHz-Bereich für
+22
+
+Steuer/Meincke/Tondl, Hightech-Mobilfunk, c't 2002, H 8, 222 (223).
+
+23
+
+Heilbock, UMTS-Die dritte Mobilfunkgeneration aus rechtlicher Sicht, MMR 1999, 23.
+
+Quelle: http://rechtsprobleme.at
+
+11
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+International Mobile Telecommunications at 2000 MHz (IMT-2000). IMT-2000 ist
+sozusagen der Dachbegriff für eine Familie von 3G-Mobilfunksystemen24.
+1999 hat sich im Zuge der Weiterentwicklung dieser technischen Spezifikation des
+Mobilfunknetzes die Projektgruppe „3GPP“ zusammengefunden, die aus ETSI (European
+Telecommunications Standards Institute), ARIB (Japan) und T1P1 (Nordamerika) bestand.
+Trotz großem Interesse an der Vereinheitlichung, konnte ein gänzlich einheitlicher
+Standard nicht erreicht werden, da jeder der Teilnehmer doch das vordergründige Ziel
+hatte, die technische Entwicklung des UMTS an den in der Heimatregion verwendeten
+Mobilfunkstandard der zweiten Generation anzupassen. Aus diesem Grund wird ein
+weltweites Roaming voraussichtlich auch nur mit speziellen und teuren Endgeräten
+möglich sein25.
+In den USA beispielsweise hat GSM trotz beachtlicher Zuwächse längst keine so weite
+Verbreitung wie in Europa, dort dominiert derzeit das System IS-95. Nachfolger des IS-95
+soll daher nicht UMTS, sondern eine CDMA2000 genannte Netztechnik werden, die zwar
+ebenfalls zur Familie IMT-2000 gehört, aber nicht mit UMTS kompatibel ist.
+Dazu gibt es noch weitere 3 Systeme, die mit UMTS und auch mit CDMA2000
+inkompatibel sind, was höchstwahrscheinlich durch die widerstreitenden politischen und
+wirtschaftlichen Interessen entstand. Zusammenfassend kann daher festgestellt werden,
+dass das ursprüngliche Konzept eines weltweit einheitlichen Mobilfunksystems stark
+verwässert wurde. Allenfalls kann noch durch den Markterfolg eines der Techniken ein
+einheitliches System erreicht werden, wofür bis dato jedoch nichts spricht, sondern eher
+laufend noch weitere Hürden auftauchen.
+Dabei hätte besonders der Netzbetreiber durch UMTS einen erheblichen Vorteil dadurch,
+dass dieses gegenüber der zweiten Mobilfunkgeneration wesentlich ökonomischer mit der
+knappen Resource Funkbandbreite umgeht26.
+Bei den Vergabeverfahren für die UMTS-Lizenzen wurden auch die vorgesehenen
+Frequenzbereiche verteilt, und wurden dafür von der Internationalen Fernmeldeunion
+(ITU) für UMTS die Frequenzen 1900 - 2025 MHz und 2110 - 2200 MHz vorgesehen.
+
+24
+
+Steuer/Meincke/Tondl, Hightech-Mobilfunk, c't 2002, H 8, 222.
+
+25
+
+http://www.i-m.de/home/datennetze/dn_mobil7.htm (30.01.2003).
+
+26
+
+Steuer/Meincke/Tondl, Hightech-Mobilfunk, c't 2002, H 8, 222.
+
+Quelle: http://rechtsprobleme.at
+
+12
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+In der Netzstruktur ähnelt das UMTS-Netz sehr stark dem GSM-Netz. Die Besonderheit ist
+aber, dass es sich beim UMTS-Netz um ein paketvermittelndes Kernnetz handelt.
+Die Übertragungstechnik des UMTS basiert auf einer Frequenzbandspreizung namens
+WCDMA (Wideband Code Division Multiple Access)27. Statt einen Frequenzbereich in
+mehrere Trägerfrequenzen gemäß dem Bedarf aufzuteilen, wie dies bei GSM Netzen der
+Fall ist, nutzt CDMA einen wesentlich größeren Frequenzbereich 28. Die zu übertragenden
+Daten werden mit einer höherfrequenten, pseudozufälligen Bitfolge überlagert. Dadurch
+können benachbarte Zellen die gleichen Frequenzen verwenden, und kann durch die
+Bandspreizung ein Endgerät aus den Empfangsdaten, durch Demodulation mit der
+richtigen Bitfolge, die Ausgangsdaten wieder herstellen29.
+Bei UMTS-Handys beträgt die maximale Übertragungsrate 2 Mbit/s, das entspricht der
+32fachen Geschwindigkeit eines ISDN-Kanals (64 kBit/s). Dies allerdings nur, solange ein
+Teilnehmer sich nicht schneller als 6 km/h bewegt, er den Kanal für sich alleine hat, und
+nicht weiter als 500 m von der nächsten Basisstation entfernt ist. Wenn diese
+Optimalbedingungen nicht gegeben sind, sinkt die Übertragungsrate auf 384 kBit/s. In der
+Praxis wird man daher wohl nur selten über 384 kBit/s kommen, das ist aber immerhin die
+sechsfache Geschwindigkeit eines ISDN-Kanals Eine Übertragungsgeschwindigkeit von
+144 kBit/s wird aber vom Netzbetreiber garantiert30.
+Zur Veranschaulichung dieser Übertragungsgeschwindigkeit kann folgendes Beispiel
+dargestellt werden:
+Die Übertragung von 10 maschinbeschriebenen Din A4 Seiten, die ca. 2000 Zeichen (= 2
+kByte) umfassen, dauert bei ISDN 2,5 Sekunden. Der UMTS-Standard ermöglicht eine
+solche Übertragung, wenn man von in der Praxis realistischen 384 Kbit/s ausgeht, in 0,4
+Sekunden.
+Die Übertragungskapazität teilt man sich mit den übrigen Teilnehmern, die sich in
+derselben Zelle aufhalten. Dabei wird es möglich sein, durch einen höheren Tarif
+Prioritäten zu erwerben.
+
+27
+
+http://www.i-m.de/home/datennetze/dn_mobil7.htm (30.01.2003).
+Steuer/Meincke/Tondl, Hightech-Mobilfunk, c't 2002, H 8, 222 (223).
+29
+http://www.i-m.de/home/datennetze/dn_mobil7.htm (30.01.2003).
+28
+
+30
+
+Mielke in Silberer/Wohlfahrt/Wilhelm, Mobile Commerce 195f.
+
+Quelle: http://rechtsprobleme.at
+
+13
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+Da alle Zellen mit den gleichen Frequenzen arbeiten, ist es möglich die Netzkapazität
+dadurch zu erhöhen, dass weitere Basisstationen hinzugefügt werden. Dabei verkleinern
+die umliegenden Zellen dann automatisch ihren Reichweitenbereich. Man spricht daher
+von „atmenden“ Zellen. Dies wird vor allem in Ballungszentren genutzt, in denen dann
+sukzessive nach Erforderlichkeit weitere Basisstationen hinzugefügt werden. So kann der
+steigenden Zahl von Nutzern Rechnung getragen, und möglichst alle Teilnehmer mit der
+höchsten Übertragungsrate versorgt werden31.
+Die anfänglichen UMTS-Handys sind Dual-Mode Geräte, die dynamisch auf den GSMBetrieb umschalten können, wenn keine UMTS-Ressourcen gegeben sind.
+Der gravierendste Unterschied des UMTS-Standards gegenüber herkömmlichen GSMGeräten ist die höhere Versorgungskapazität, die dadurch möglich ist, dass ein im
+Augenblick nicht aktiver Teilnehmer viel weniger Funkressourcen beansprucht, und sich
+daher die Versorgungskapazität des gerade funkenden Teilnehmers wesentlich erhöht. Bei
+GSM Systemen steht ein Kanal immer exklusiv einem Nutzer zur Verfügung. Das
+Datenfunksystem GPRS kommt dem UMTS-Standard bereits sehr nahe, da „stille“ GPRSNutzer ebenfalls kaum Bandbreite belegen.
+Weiters fällt bei UMTS-Handys ein Störfaktor weg, der sich bei GSM-Handys dadurch
+äußert, dass sie sich für Ortungszwecke immer wieder beim Netz melden müssen, und dies
+stets als störendes Summgeräusch hörbar ist, sobald sich Handys in der Nähe von
+Lautsprechern befinden32.
+UMTS-Handys können sich ebenso wie GPRS-Handys dauerhaft ins Internet einbuchen,
+ohne dass dabei zeitabhängige Kosten anfallen. So können zB Emails jederzeit empfangen
+und abgerufen werden.
+Von Fachleuten wird auch eine stärkere Verbreitung der ortsbezogenen Dienste, Location
+Based Services (LBS) erwartet, da die UMTS-Ortung gegenüber der GSM-Ortung
+wesentlich genauer ist, und in Kombination mit den schnelleren Datendiensten sich
+verfeinerte und neue ortsbezogene Dienste entwickeln. Dazu zählt zB die Übermittlung
+von Orientierungshilfen wie Umgebungsansichten oder Kartenausschnitte, die für den
+Nutzer eine erhebliche Vereinfachung bedeuten. Audio- und Videoübertragungen, die
+
+31
+32
+
+http://www.i-m.de/home/datennetze/dn_mobil7.htm (30.01.2003).
+Steuer/Meincke/Tondl, Hightech-Mobilfunk, c't 2002, H 8, 222 (226).
+
+Quelle: http://rechtsprobleme.at
+
+14
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+mittels UMTS ebenfalls möglich sind, werden trotz hoher Display-Auflösungen und
+Übertragungsgeschwindigkeiten aber noch nicht die Qualität des TV-Mediums erreichen33.
+Aufgrund
+
+der
+
+verschiedenen
+
+Dienste
+
+ist
+
+es
+
+erforderlich
+
+unterschiedliche
+
+Abrechnungssysteme zu entwickeln. Schon bei GPRS erfolgt die Abrechnung nach
+übertragenem Datenvolumen und nicht nach dem Zeitfaktor, was durchaus auf
+Zustimmung stößt, da bei zeitabhängigen Tarifen die Kosten schon bei schlechter und
+damit langsamer Verbindung ansteigen34.
+
+1.4.2 Einführung des UMTS-Standards im kommerziellen Bereich
+In Japan sind im vorigen Jahr die ersten Netze der dritten Handygeneration in Betrieb
+gegangen, die jedoch den erhofften Ansturm mangels attraktiver Dienste ausblieben
+ließen. Der Hauptgrund für die zögerliche Entwicklung liegt laut Fachleuten darin, dass es
+praktisch keine neuen Services und Dienste gibt, sondern nur technische Fortschritte, und
+kein Kunde bereit ist, nur in Technologie und Geschwindigkeit zu investieren.
+Wann der kommerzielle Durchbruch für 3G zumindest im Elektronik- und MultimediaMekka Japan kommt, blieb auch beim diesjährigen 3G-Mobile World Forum in Tokio
+unbeantwortet. Spekuliert wird nun mit 2005, wenn sowohl Technik als auch MultimediaServices so funktionieren sollen, dass der „normale“ User ins 3G-Netz gehen kann35.
+Die neueste Entwicklung der UMTS Dienste heißt Video Live Streaming, und wird vom
+japanischen UMTS-Dienst FOMA angeboten. Diese Fernüberwachung per UMTS-Handy
+ermöglicht Nutzern mit videofähigen Handys beispielsweise die Möglichkeit, Kinder oder
+Pflegebedürftige per Video Streaming zu beobachten. Im geschäftlichen Bereich kann
+diese Technik vor allem zur Sicherheitsüberwachung eingesetzt werden36.
+A1 öffnete im April dJ als erster Mobilfunkbetreiber Österreichs das Netz der dritten
+Generation, und bietet nun Kunden die Möglichkeit die hohe Sprachqualität, die hohen
+Datenraten und die hohe Kapazität des Netzes auszunutzen und 3G Pionier zu werden37.
+33
+
+Steuer/Meincke/Tondl, Hightech-Mobilfunk, c't 2002, H 8, 222 (226).
+
+34
+
+Steuer/Meincke/Tondl, Hightech-Mobilfunk, c't 2002, H 8, 222 (226).
+
+35
+
+Ungerboek, Japans UMTS ohne Kunden, Der Standard v 16.01.2003, 24.
+
+36
+
+http://umts-webpage.de/News_zu_UMTS/news_zu_umts.html (13.05.03).
+
+37
+
+http://www.a1.net/CDA/navigation/nav_frame/0,2756,38-811-html-de,00.html (13.05.03).
+
+Quelle: http://rechtsprobleme.at
+
+15
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+Als Handy der dritten Generation bietet A1 seinen Kunden das Siemens U10 an, mit dem
+alle wichtigen Features der 3.Generation zur Verfügung stehen, und von Videoclips bis
+Live-Aufnahmen direkt auf das Handy-Display alles möglich ist.
+Als Kaufanreiz bietet die Mobilkom Austria seinen Kunden ein klares und transparentes
+Tarifmodell, bei dem für UMTS keine zusätzliche Grundgebühr verrechnet wird, die
+Preise für Sprachtelefonie jenen von GSM entsprechen, die Preise für SMS und MMS
+gleich bleiben und bei der Übertragung von Daten die gleiche Tarifstruktur wie bei GPRS
+zum Tragen kommt.
+So kann jeder Teilnehmer problemlos zwischen den 3 Netzen (GSM/GPRS/UMTS)
+wechseln, was zumindest am Anfang noch relativ häufig vorkommen wird, da automatisch
+in jenen Gebieten ins GSM-Netz umgeschaltet wird, wo UMTS noch nicht verfügbar ist,
+und unterliegt dabei keinem verwirrenden Preismodell38.
+Auch T-Mobile Austria hat auf Basis der t-zones, dem mobilen Online-Portal von TMobile, Multimedia das Tor zum Massenmarkt in Österreich geöffnet, und bietet Kunden
+mit der Weiterentwicklung des t-zones Portals um neue Content-Partner wie MTV und
+Universal Pictures, durch attraktive Endgeräte und dem einheitlichen GPRS Tarif ein
+integriertes Multimedia-Angebot39.
+Wann die anderen Netzbetreiber folgen werden bleibt unbeantwortet, doch zeigt die
+Tatsache, dass tele.ring erst Anfang März 2003 den Datendienst GPRS für alle Kunden
+freigeschaltet hat, dass bis zum gänzlichen Durchbruch der dritten Mobilfunkgeneration
+durchaus noch einige Zeit vergehen wird.
+
+2 Glücksspiele
+
+38
+
+http://www.a1.net/CDA/article/art_display/0,2564,618-1281-69656-html-de,00.html (14.05.03).
+
+39
+
+http://www.t-mobile.at/unternehmen/presse/pressemitteilungen/pressemitteilun.../index.htm (14.05.03).
+
+Quelle: http://rechtsprobleme.at
+
+16
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+2.1 Einleitung
+Soziologisch betrachtet liegen die Wurzeln allen Spielens in einem „dem Menschen
+immanenten Spieltrieb“, der vor allem in der Nachahmung bestimmter Lebenssituationen
+bestand. Später wurden den Spielern im Fall ihres Obsiegens zusätzlich Vermögensvorteile
+in Aussicht gestellt, was naturgemäß den Reiz des Spieles erhöhte, und den ursprünglichen
+Spielzweck in den Hintergrund drängte. Gerade aber dieser Nervenkitzel, der zum einen
+aus dem Bangen um den eigenen Einsatz und dem Hoffen auf den zu erzielenden Gewinn,
+zum anderen aber aus der Unbeeinflussbarkeit der Spielentscheidung entsteht, birgt die
+potentiellen Suchtgefahren des Glücksspiels40.
+
+2.2 Rechtliche Rahmenbedingungen im Glücksspielbereich
+Das österreichische Glücksspielrecht ist eine eigenartige Gemengelage, die dadurch
+entstand,
+
+dass
+
+die
+
+Glücksspielgesetzgebers
+
+ordnungsstets
+
+im
+
+und
+
+fiskalpolitischen
+
+Widerstreit
+
+zueinander
+
+Zielsetzungen
+lagen.
+
+Der
+
+des
+
+einfache
+
+Bundesgesetzgeber hat schließlich von seiner verfassungsrechtlichen Ermächtigung des
+Art 10 Abs 1 Z 4 B-VG „Monopolwesen“ Gebrauch gemacht, und dadurch das bestehende
+staatliche Glücksspielmonopol geschaffen41, auf welches noch näher einzugehen sein wird.
+
+2.2.1 ABGB
+§ 1267 ABGB definiert den Glücksvertrag, zu dem die Wette, das Spiel und das Los
+gehören: „Ein Vertrag, wodurch die Hoffnung eines noch ungewissen Vorteiles
+versprochen und angenommen wird, ist ein Glücksvertrag42.
+
+40
+41
+42
+
+Schwartz, Strukturfragen und ausgewählte Probleme des österreichischen Glücksspielrechts (1998) 5.
+Schwartz, Strukturfragen 1.
+Allgemeines bürgerliches Gesetzbuch JGS 1811/946 idF BGBl I 2002/71.
+
+Quelle: http://rechtsprobleme.at
+
+17
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+Eine Wette entsteht, wenn über ein beiden Teilen noch unbekanntes Ereignis ein
+bestimmter Preis zwischen ihnen für denjenigen, dessen Behauptung der Erfolg entspricht,
+verabredet wird43. Wesentlich für eine Wette ist, dass die Wetteilnehmer sich gegenseitig
+für den Fall des „Rechthabens“ einen Preis versprechen und nicht sicher sind, ob die
+eigene Behauptung zutrifft44.
+Darauf aufbauend definiert § 1272 ABGB das Spiel als eine Art von Wette, und läßt die
+für Wetten festgesetzten Rechte auch für Spiele gelten. In diesem Sinne müssen daher
+auch bei einem Spiel die Spielteilnehmer unterschiedliche Behauptungen bezüglich eines
+ihnen noch nicht bekannten Ereignisses aufstellen und einen bestimmten Preis für
+denjenigen vereinbaren, der Recht behält. Der Unterschied zwischen Wette und Spiel liegt
+aber wohl darin, dass die Teilnehmer bei einem Spiel durch ihr spielendes Verhalten
+versuchen das Spielergebnis zu beeinflussen, und dagegen die Wettteilnehmer ohne
+weitere Einflussmöglichkeit auf den Ausgang der Wette warten45.
+
+2.2.2 Glücksspielgesetz
+2.2.2.1 Begriff des Glücksspiels
+Der Glücksspielbegriff ist das entscheidende Kriterium zur Abgrenzung des staatlichen
+Monopolbereichs und spielt daher in Praxis und Theorie eine ganz entscheidende Rolle46.
+Glücksspiele sind Spiele, bei denen Gewinn und Verlust ausschließlich oder vorwiegend
+vom Zufall abhängen47. Unter Zufall ist zu verstehen, dass der Spielteilnehmer weder
+durch sein zielbewußtes Handeln noch durch seine Geschicklichkeit allein den Erfolg
+beeinflussen kann, sondern, dass weitere Bedingungen die außerhalb des Willens der
+beteiligten Person liegen, hinzutreten. Entscheiden jedoch Faktoren wie Geschicklichkeit,
+43
+
+§ 1270 ABGB.
+
+44
+
+Schwartz/Wohlfahrt, Glücksverträge im Internet, MR 2001, 323.
+
+45
+
+Binder in Schwimann (Hrsg), Praxiskommentar zum Allgemeinen bürgerlichen Gesetzbuch VI2 (1997) §
+
+1270 Rz 1.
+46
+
+Schwartz, Strukturfragen 85.
+
+47
+
+Bundesgesetz zur Regelung des Glücksspielwesens (Glücksspielgesetz - GSpG) BGBl 1989/620 idF BGBl I
+
+156/2002.
+
+Quelle: http://rechtsprobleme.at
+
+18
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+Schnelligkeit, Können oder Wissen über den Erfolg des Spiels, spricht man von einem
+Geschicklichkeitsspiel48.
+Wesentlich für das Vorliegen eines Glücksspiels ist weiters, dass um Gewinn und Verlust
+gespielt wird, dh, dass es bei den Spielteilnehmern zu einer Vermögensvermehrung bzw.
+-verminderung kommt, und sich jeder Spieler aufgrund des in Aussicht gestellten
+Gewinnes, und nicht allein der Unterhaltung wegen, beteiligt49.
+Mit der in der Begriffsdefinition verwendeten Formulierung „Spiele, bei denen Gewinn
+und Verlust ausschließlich oder vorwiegend vom Zufall abhängen, faßt der Gesetzgeber in
+den Anwendungsbereich des GSpG zwei Arten von Spielen: Jene, bei denen Gewinn und
+Verlust ausschließlich und jene, bei denen Gewinn und Verlust vorwiegend vom Zufall
+abhängen. „Reine“ Glücksspiele kommen in der Realität aber äußerst selten vor, und ist
+daher für Spiele die vorwiegend vom Zufall abhängen nur zu klären, wie hoch die
+Beeinflussungsmöglichkeit des Spielteilnehmers sein darf, damit es sich noch um ein
+Glücksspiel handelt50. Der VwGH hat sich bereits mehrmals mit dieser Frage beschäftigt
+und ausgesprochen, dass ein Glücksspiel trotz der Möglichkeiten der Einflussnahme des
+Spielteilnehmers auf das Ergebnis dann vorliegt, wenn dieses „hauptsächlich, in erster
+Linie, ganz besonders, zum größten Teil vom Zufall abhängt51.
+
+2.2.2.2 Begriff der Ausspielung
+Der Begriff der Ausspielung ist ein zentraler Terminus des österreichischen
+Glücksspielrechts, da der konkrete Monopolbereich des Bundes wesentlich durch diesen
+Begriff abgegrenzt wird52.
+
+48
+
+Schwartz, Strukturfragen 85.
+
+49
+
+Schwartz/Wohlfahrt, Glücksspielgesetz mit wichtigen Spielbedingungen, Kurzkommentar (1998) Tz II.3. zu
+
+§ 1.
+50
+
+Schwartz, Strukturfragen 86.
+
+51
+
+VwGH 11.2.1994, 93/17/0091.
+
+52
+
+Schwartz, Strukturfragen 97.
+
+Quelle: http://rechtsprobleme.at
+
+19
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+Ausspielungen sind Glücksspiele, bei denen der Unternehmer (Veranstalter) den Spielern
+für eine vermögensrechtliche Leistung eine vermögensrechtliche Gegenleistung in
+Aussicht stellt53.
+Wesentliche Bestandteile einer Ausspielung sind damit zum einen das Inaussichtstellen
+einer vermögensrechtlichen Gegenleistung durch einen Unternehmer (Veranstalter) sowie
+zum anderen das synallagmatische Verhältnis zwischen vermögensrechtlicher Leistung des
+Spielers und in Aussicht gestellter vermögensrechtlicher Gegenleistung54.
+Stehen sich bei einem Spiel nicht Veranstalter und Spieler gegenüber, sondern nur Spieler,
+wie dies sehr oft bei Kartenspielen der Fall ist, so liegt keine Ausspielung iSd GSpG vor55.
+Eine Ausspielung liegt aber dann vor, wenn die Möglichkeit zur Erlangung der
+Gegenleistung zwar nicht vom Unternehmer (Veranstalter) erbracht wird, aber von diesem
+oder einem Dritten entsprechend organisiert, veranstaltet oder angeboten wird56. Ein
+Unternehmer der nicht selbst spielt, sondern den anderen nur Gelegenheit zum Glücksspiel
+gibt, ist auch hier erforderlich, jedoch mit der Einschränkung, dass die Gegenleistung nicht
+von ihm erbracht wird, sondern er lediglich als Veranstalter bzw. Organisator auftritt57.
+Erbringt ein Spielteilnehmer keine vermögensrechtliche Leistung, wie dies oft bei
+Werbeveranstaltungen der Fall ist, liegt keine Ausspielung iSd GSpG vor. Auch die bloße
+Möglichkeit
+
+des
+
+unentgeltlichen
+
+Weiterspielens
+
+allein
+
+stellt
+
+keine
+
+solche
+
+vermögensrechtliche Leistung dar58.
+Somit unterliegen folgende Lebendspiel-Fallgruppen (dh Glücksspiele, bei denen sich
+Menschen - und nicht etwa Mensch und Glücksspielapparat - gegenüberstehen) dem
+Ausspielungsbegriff des § 2 GSpG:
+1. Glücksspiele, bei denen ein Unternehmer (Veranstalter) den Spielern eine
+vermögensrechtliche Gegenleistung in Aussicht stellt;
+2. Glücksspiele, bei denen Spieler gegeneinander spielen und dem Gewinner vom
+Unternehmer (Veranstalter) eine vermögensrechtliche Gegenleistung in Aussicht
+gestellt und erbracht wird;
+
+53
+
+§ 2 Abs 1 GSpG.
+VwGH 25.7.1990, 86/17/0062.
+55
+Mayer, Staatsmonopole (1976) 266.
+56
+§ 2 Abs 4 GSpG.
+57
+Schwartz/Wohlfahrt, Glücksspielgesetz, Tz I.2. zu § 2.
+58
+VwGH 10.11.1980, 571/80.
+54
+
+Quelle: http://rechtsprobleme.at
+
+20
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+3. Glücksspiele, bei denen Spieler gegeneinander spielen und dem Gewinner vom
+Unternehmer (Veranstalter) eine vermögensrechtliche Gegenleistung in Aussicht
+gestellt wird, die aber von einem Dritten zu erbringen ist, wenn der Unternehmer
+(Veranstalter) diese Gegenleistung entsprechend organisiert, veranstaltet oder
+angeboten hat;
+4. Glücksspiele, bei denen Spieler gegeneinander spielen und dem Gewinner vom
+Unternehmer (Veranstalter) eine vermögensrechtliche Gegenleistung in Aussicht
+gestellt wird, die aber von einem Dritten zu erbringen ist, wenn der Dritte diese
+vermögensrechtliche Gegenleistung entsprechend organisiert, veranstaltet oder
+angeboten hat59;
+
+2.2.2.3 Glücksspielmonopol
+Art 10 Abs 1 Z 4 ermächtigt den Bund zur Gesetzgebung und Vollziehung in den
+Angelegenheiten des „Monopolwesens“. Wesensmerkmal eines staatlichen Monopols ist
+der Ausschluss Privater von der Gewinnung, Herstellung, Bearbeitung oder Verkauf
+bestimmter Gegenstände, um dem Staat den alleinigen Nutzen aus dem Wirtschaften mit
+den Monopolgegenständen zu sichern60.
+Durch die Errichtung eines Glücksspielmonopols in § 3 GSpG hat der einfache
+Bundesgesetzgeber von seiner verfassungsrechtlichen Ermächtigung Gebrauch gemacht.
+§ 3 GSpG besagt: „Das Recht zur Durchführung von Glücksspielen ist, soweit in diesem
+Bundesgesetz
+
+nichts
+
+anderes
+
+bestimmt
+
+wird,
+
+dem
+
+Bund
+
+vorbehalten
+
+(Glücksspielmonopol)“. Das Glücksspielmonopol stellt insofern eine Besonderheit dar, da
+es nicht die Produktion oder den Handel, sondern die Durchführung von Glücksspielen,
+also
+
+Dienstleistungen
+
+monopolisiert61.
+
+Der
+
+nicht
+
+vom
+
+Monopol
+
+umfasste
+
+Glücksspielbereich, der durch die §§ 1 und 2 sowie die Ausnahmen des § 4 GspG
+abgegrenzt wird, fällt gemäß Art 15 Abs 1 iVm Abs 3 B-VG (Veranstaltungswesen) in die
+Regelungskompetenz der Länder (sog „kleines Glücksspiel“) 62.
+59
+
+Schwartz/Wohlfahrt, Glücksspielgesetz, Tz II.3. zu § 2.
+
+60
+
+Antoniolli/Koja, Allgemeines Verwaltungsrecht2 (1986) 651.
+Schwartz/Wohlfahrt, Glücksspielgesetz, Tz II.1. zu § 3.
+
+61
+62
+
+OGH 26.11.1996, 10 Ob 504/95.
+
+Quelle: http://rechtsprobleme.at
+
+21
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+Jene Glücksspiele, die unter das GSpG fallen, können vom Bund nur insoweit an Dritte
+übertragen werden, als dies im GSpG vorgesehen ist. Besteht keine solche
+Übertragungsmöglichkeit, kann der Bund diese Glücksspiele nur selbst durchführen.
+Zu
+
+beachten
+
+ist
+
+Bundesgesetzgeber
+
+allerdings,
+
+dass
+
+dahingehend
+
+das
+
+GSpG
+
+novelliert
+
+aber
+
+werden
+
+jederzeit
+könnte,
+
+vom
+dass
+
+einfachen
+zusätzliche
+
+Übertragungstatbestände geschaffen, bzw. derzeit vom Monopol ausgenommene
+Glücksspiele wieder in das Monopol aufgenommen werden63.
+Wirtschaftlich gesehen nehmen die vom Staat betriebenen Glücksspiele aufgrund der in
+stetigem Wachstum begriffenen Umsätze, und daher auch Steuereinnahmen, einen nicht
+unbeachtlichen Teil ein.
+In Österreich kann der Glücksspielsektor grundsätzlich in zwei Bereiche eingeteilt werden:
+Zum einen in den Monopolbereich, der sich wiederum in den Lotterien- und
+Spielbankenbereich einteilen läßt, und den vom Monopol ausgenommenen Bereich, der
+nach hL und Jud in die Regelungs- und Vollziehungskompetenz der Länder fällt. Der
+Lotteriebereich wird von der Österreichischen Lotterien GmbH als alleinigem
+Konzessionär, der Bereich des sog „großen Glücksspiels“ von der Casinos Austria AG, als
+Inhaber der Konzessionen zum Betrieb von 12 Spielbanken, bewirtschaftet 64.
+Casinos stärken die qualitative und strukturelle Wettbewerbsfähigkeit einer Destination,
+erhöhen den Freizeitnutzen der in der Region wohnenden Menschen, fungieren für viele
+Gäste als Tourismusmagnet, und sind somit als Unterhaltungs-, Kommunikations- und
+auch gastronomische Zentren aus Urlaubsorten nicht mehr wegzudenken65.
+
+2.2.2.4 Ausnahmen vom Glücksspielmonopol
+Glücksspiele, die nicht in Form einer Ausspielung durchgeführt werden, unterliegen nicht
+dem Glücksspielmonopol, wenn kein Bankhalter mitwirkt oder der Einsatz € 0,50 nicht
+übersteigt66.
+Erlacher, Glücksspielgesetz2 (1997) § 3, 14.
+Schwartz, Strukturfragen 17f.
+65
+Semeral, Ökonomische Aspekte des Glücksspiels, WIFO Studie 1996.
+66
+§ 4 GSpG.
+63
+64
+
+Quelle: http://rechtsprobleme.at
+
+22
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+Der Gesetzgeber wollte mit dieser Ausnahme jene Glücksspiele entkriminalisieren, die im
+Privatbereich stattfinden und aufgrund des geringen Einsatzes einer minderen
+Gefährlichkeit unterliegen. Auf gewerbliche organisierte Glücksspiele ist die Ausnahme
+jedoch nicht anwendbar, da es sich hierbei fast immer um Ausspielungen handelt67.
+Damit ein Glücksspiel nicht dem Bundesmonopol gemäß § 3 GSpG unterliegt sind 2
+Voraussetzungen, die kumulativ vorliegen müssen, erforderlich. Erstens darf das
+Glücksspiel nicht in Form einer Ausspielung durchgeführt werden, und zweitens darf an
+der Durchführung des Glücksspiels kein Bankhalter mitwirken, bzw. wenn ein Bankhalter
+mitwirkt, dann darf der Einsatz € 0,50 nicht übersteigen. Der normative Gehalt des
+Begriffes „Bankhalter“ wird vom Glücksspielgesetzgeber nicht näher definiert.
+Fachspezifisch wird man unter Bankhalter aber denjenigen verstehen, der die „Bank“
+verwaltet und somit gegen die übrigen Teilnehmer spielt. In Spielcasinos übernimmt diese
+Tätigkeit meist ein Angestellter des Unternehmens68.
+Jene Glücksspiele, die vom Glücksspielmonopol ausgenommen sind, unterliegen gem Art
+15 Abs 1 iVm Abs 3 B-VG der Regelungszuständigkeit der Länder (sog „kleines
+Glücksspiel)69. In den Bundesländern Wien, Steiermark und Kärnten hat der
+Landesgesetzgeber von seiner Kompetenz zur Regelung des Veranstaltungswesens
+Gebrauch gemacht und Ausspielungen mittels Glücksspielautomaten, die nicht in den
+Regelungsbereich des GSpG fallen, unter gewissen Bedingungen gestattet. In den übrigen
+Bundesländern sind jene „Bagatellglücksspiele“ gänzlich verboten70.
+
+2.2.3 Europarechtliche Bezüge des österreichischen Glücksspielrechts
+Die Grundfrage ist, ob das Glücksspielmonopol, insbesondere im Hinblick auf die
+Dienstleistungs- und Niederlassungsfreiheit gemeinschaftsrechtlich zulässig ist. Ein
+Eingriff in die Dienstleistungsfreiheit könnte wegen der starken Restriktionen beim
+Zugang
+
+zur
+
+Veranstaltung
+
+von
+
+Glücksspielen
+
+bestehen,
+
+ein
+
+Eingriff
+
+in
+
+die
+
+Erlacher, Glücksspielgesetz2 § 4, 14.
+Schwartz, Strukturfragen 101f.
+69
+VwGH 21.10.1987, 87/01/0138.
+67
+68
+
+70
+
+Schwartz/Wohlfahrt, Glücksspielgesetz, Tz III.1. zu § 4.
+
+Quelle: http://rechtsprobleme.at
+
+23
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+Niederlassungsfreiheit durch das Gebot eines Sitzes im Inland, bzw. auch durch die stark
+begrenzte Anzahl der Konzessionen. Die kritischen Stimmen kamen insbesondere von
+Griller/Reindl71 und Schwartz72, sind jedoch seit den letzten EuGH Urteilen verstummt73.
+Der Gemeinschaftsgesetzgeber hat es bisher unterlassen den in den Mitgliedstaaten
+national geregelten Glücksspielbereich zu harmonisieren, was entweder daran liegt, dass
+die Kompetenz der Gemeinschaft nach dem Prinzip der Einzelermächtigung hiezu nicht
+besteht und/oder dass der Rat kein Regelungsbedürfnis sieht74. Ein Rechtsakt zur Regelung
+des Glücksspielbereiches ist auch in absehbarer Zukunft nicht vorgesehen75.
+Die grundlegende Weichenstellung im Glücksspielbereich wurde vom EuGH im Urteil
+Schindler76 vorgenommen. In dieser Entscheidung qualifizierte der EuGH das
+Lotteriewesen als „Dienstleistung“, die in den Anwendungsbereich des EGV fällt, bejahte
+aber gleichzeitig die Zulässigkeit von Beschränkungen bis hin zum gänzlichen Verbot.
+Argumentiert wurde diese Feststellung damit, dass Spieler vor schädlichen, persönlichen
+und sozialen Folgen zu schützen sind. Der EuGH ließ es aber im Ermessen des nationalen
+Gesetzgebers, die verfolgten Ziele des allgemeinen Wohls mit Hilfe von Beschränkungen
+oder mit einem völligen Verbot zu verwirklichen. Angesichts der erwähnten Feststellungen
+sprach er aber nicht klar aus, ob diese Erwägungen sich nur auf die besondere Natur der
+Lotterien beziehen, oder auch auf andere Glücksspiele anzuwenden sind77.
+Im Urteil Läärä78 vom 21. September 1999 hat der EuGH seine schon im Urteil Schindler
+getroffene Feststellung, nämlich, dass die Bestimmungen des EG-Vertrages über den freien
+71
+
+Griller/Reindl, Die Unvereinbarkeit des österreichischen Glücksspielgesetzes mit dem Europäischen
+
+Gemeinschaftsrecht, ZfV 1998, 234.
+72
+73
+
+Schwartz, Glücksspielmonopol mit Ablaufdatum? ecolex 1999, 582.
+.Mayer, Das Glücksspiel im Spannungsfeld zwischen staatlicher Ordnungspolitik und Marktfreiheit, in
+
+Strejcek/Hoscher/Eder (Hrsg), Glücksspiel in der EU und in Österreich: Recht - Internet - soziale Aspekte
+(2001) 23 (26).
+74
+
+Sura, Die grenzüberschreitende Veranstaltung von Glücksspielen im Europäischen Binnenmarkt (1995) 51ff.
+
+75
+
+Strejcek/Kühteubl, Verfassungs- und gemeinschaftsrechtliche Fragen des österreichischen Glücksspielrechts,
+
+in Strejcek/Hoscher/Eder (Hrsg), Glücksspiel in der EU und in Österreich: Recht - Internet - soziale Aspekte
+(2001) 33 (35).
+76
+77
+78
+
+EuGH 24.3.1994, RS C-275/92 Schindler, Slg 1994 I-1039.
+Mayer in Strejcek/Hoscher/Eder, Glücksspiel in der EU und in Österreich 27.
+EuGH 21.09.1999, Rs C-124/97 Läärä, EuZW 2000, 148.
+
+Quelle: http://rechtsprobleme.at
+
+24
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+Dienstleistungsverkehr einer nationalen Regelung die das Recht zum Betrieb von
+Geldspielautomaten
+
+nur
+
+einer
+
+öffentlich-rechtlichen
+
+Vereinigung gewährt,
+
+nicht
+
+entgegensteht, erneut bestätigt. Zudem hat er festgehalten, dass seine im Urteil Schindler
+bzgl. Lotterien getroffenen Aussagen auch „für andere Glücksspiele mit vergleichbaren
+Merkmalen“ anwendbar sind. Der nationale Gesetzgeber darf daher das Glücksspiel aus
+folgenden Gründen einschränken:
+-
+
+sittliche, religiöse oder kulturelle Erwägungen
+
+-
+
+Gefahr von Betrug und anderen Straftaten
+
+-
+
+schädliche persönliche und soziale Folgen
+
+-
+
+Schutz der Spieler
+
+-
+
+Schutz der Sozialordnung
+
+-
+
+Schutz vor der Ausnutzung der Spielleidenschaft
+
+Aus solchen Erwägungen getroffene Einschränkungen können bis hin zu einem gänzlichen
+Verbot gehen. Es obliegt allein den Mitgliedstaaten die nach ihrem Ermessen
+erforderlichen Schutzsysteme zu wählen. Ob die Gewinne aus dem Glücksspiel für
+gemeinnützige Zwecke verwendet werden, spielt für die Zulässigkeit der nationalen
+Beschränkungen keine Rolle79.
+Im Urteil Zenatti80 stellte der EuGH fest, dass die vom nationalen Gesetzgeber
+geschaffenen Beschränkungen nicht allein der Verfolgung fiskalischer Interessen dienen
+dürfen. Abgabenerträge können „nur eine erfreuliche Nebenfolge, nicht aber der
+eigentliche Grund der betriebenen restriktiven Politik“ sein, stellen daher keinen
+sachlichen Rechtfertigungsgrund dar. Weiters ist es Sache des nationalen Gesetzgebers zu
+überprüfen, ob die nationalen Rechtsvorschriften ihre Ziele erreichen, und nicht außer
+Verhältnis zu diesen stehen. Es wird somit ganz deutlich, dass der EuGH sich im
+Glücksspielbereich auf eine bloße Exzesskontrolle beschränken will. In den beiden letzten
+Urteilen des EuGH sieht man ganz klar, dass der Glücksspielbereich kein Markt ist wie
+jeder andere, sondern, dass den Mitgliedstaaten zum Schutz der Spieler und zur
+Unterbindung krimineller Erscheinungen im Umfeld des Glücksspiels ein fast schon
+„pauschales
+79
+
+Ermessen“
+
+zur
+
+Regelung
+
+eingeräumt
+
+wird.
+
+Somit
+
+wurde
+
+den
+
+Eder/Hoscher, Rahmenbedingungen des Glücksspiels in Österreich, in Strejcek/Hoscher/Eder (Hrsg),
+
+Glücksspiel in der EU und in Österreich: Recht - Internet - soziale Aspekte (2001) 11 (18f).
+80
+
+EuGH 21.10.1999, Rs C-67/98 Zenatti, Slg 1999 I-7289.
+
+Quelle: http://rechtsprobleme.at
+
+25
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+gemeinschaftsrechtlichen Bedenken gegen das österreichische Glücksspielmonopol
+endgültig der Boden entzogen. Weder verstößt das Gebot eines inländischen Sitzes gegen
+die Niederlassungsfreiheit, noch die Restriktionen beim Zugang zur Veranstaltung von
+Glücksspielen gegen die Dienstleistungsfreiheit81.
+
+2.2.4 Strafrechtliche Bezüge des österreichischen Glücksspielmonopols
+Aufgrund des, schon eingangs erwähnten, österreichischen Glücksspielmonopols sind
+bestimmte Eingriffe ins staatliche Monopol nicht nur verwaltungsstrafrechtlich verfolgbar,
+sondern zudem auch noch mit gerichtlicher Strafe bedroht. Die Zweigleisigkeit zwischen
+Verwaltungsbehörden und Gerichten stellt im österreichischen Recht keine Besonderheit
+dar, da sich auch in Rechtsbereichen wie zB dem Mietrecht Verwaltungsbehörden und
+Gerichte die Zuständigkeit im Rahmen der sog „sukzessiven Kompetenz“ teilen. Eine
+Besonderheit ist jedoch die vom Gesetzgeber für das Glücksspielstrafrecht vorgenommene
+Regelung, die für diesen Bereich nicht eine sukzessive Kompetenzverteilung vorsieht,
+sondern
+
+ein
+
+tatsächliches
+
+Nebeneinander
+
+von
+
+Strafzuständigkeiten
+
+zwischen
+
+Verwaltungsbehörden und Gerichten, was naturgemäß schwierige Abgrenzungsprobleme
+zum einen und die Frage der verfassungsrechtlichen Zulässigkeit zum anderen aufwirft82.
+Der Glücksspielbegriff in Österreich ist einheitlich, sowohl das GSpG als auch das StGB
+definieren das Glücksspiel als Spiel, bei dem Gewinn und Verlust ausschließlich oder
+vorwiegend vom Zufall abhängt. Aufgrund dieser Identität stellt sich nun die Frage, ob und
+inwieweit sich die Geltungsbereiche dieser Straftatbestände überschneiden.
+Dem Anwendungsbereich des § 168 Abs 1 StGB unterfallen zum einen Glücksspiele, bei
+denen Gewinn und Verlust ausschließlich oder vorwiegend vom Zufall abhängen, und zum
+anderen jene Spiele, die ausdrücklich verboten sind. Strafbar sind somit 3 Tathandlungen:
+-
+
+das Veranstalten von Glücksspielen
+
+-
+
+die Förderung einer solchen Veranstaltung und
+
+-
+
+die gewerbsmäßige Beteiligung am Spiel.
+
+81
+
+Mayer in Strejcek/Hoscher/Eder, Glücksspiel in der EU und in Österreich 28f.
+
+82
+
+Schwartz, Strukturfragen 39.
+
+Quelle: http://rechtsprobleme.at
+
+26
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+Sofern diese Handlungen bloß zu gemeinnützigen Zwecken durchgeführt werden oder bloß
+zum Zeitvertreib, und um geringe Beträge gespielt wird, besteht Straflosigkeit83.
+Gemäß § 52 Abs 1 GSpG84 begeht eine Verwaltungsübertretung:
+Z 1: wer Glücksspiele entgegen den Vorschriften dieses Bundesgesetzes veranstaltet;
+Z 2: wer gewerbsmäßig ohne Berechtigung Spielanteile eines von diesem Bundesgesetz
+erfaßten Glücksspiels oder Urkunden, durch welche solche Spielanteile zum
+Eigentum oder zum Gewinnbezug übertragen werden, veräußert oder an andere
+überläßt;
+Z 3: wer die Bewilligungsbedingungen eines genehmigten Glücksspiels nicht einhält;
+Z 4: wer ein Glücksspiel trotz Untersagung oder nach Zurücknahme der Spielbewilligung
+durchführt85;
+Gemäß § 56 Abs 1 GSpG ist verboten:
+Z 1: das Entgegennehmen von Einsätzen für ausländische Glücksspiele im Inland;
+Z 2: die Zurverfügungstellung oder die Ermöglichung der Zurverfügungstellung von
+Möglichkeiten zur Teilnahme an ausländischen Glücksspielen aus dem Inland;
+§ 56 Abs 3 GSpG verbietet auch die Teilnahme an ausländischen Glücksspielen, wenn die
+erforderlichen Einsätze vom Inland aus geleistet werden86.
+Aufgrund der oben angeführten teilweise überschneidenden Tatbestände des GSpG und
+des StGB stellt sich das Problem der Doppelbestrafung, da es mithin möglich wäre für ein
+und dieselbe Handlung sowohl verwaltungsbehördlich als auch gerichtlich bestraft zu
+werden.
+
+Die
+
+wesentliche
+
+Frage
+
+bei
+
+der
+
+Beurteilung
+
+der
+
+Zulässigkeit
+
+der
+
+verwaltungsbehördlichen und zugleich gerichtlichen Strafverfolgung ist, ob es sich um ein
+und dieselbe Handlung dreht. Im Glücksspielbereich wird diese Identität sogar von der
+strengen österreichischen Lehre bejaht. Im Falle einer Bestrafung nach GSpG und StGB
+läge somit eine Verletzung des verfassungsrechtlich verbürgten „ne bis in idem“- Gebotes
+vor, und wäre diese Doppelbestrafung somit verfassungswidrig. Unbestritten ist jedoch,
+83
+
+Schwartz, Strukturfragen 41.
+
+84
+
+Kein Anspruch auf Vollständigkeit; Z 5 - 7 des § 52 Abs 1 GSpG wurden aufgrund fehlender Relevanz
+
+nicht angeführt.
+85
+
+§ 52 GSpG.
+
+86
+
+§ 56 GSpG.
+
+Quelle: http://rechtsprobleme.at
+
+27
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+dass ein aufgrund einer, gemäß GSpG ausgestellten, Konzession durchgeführtes
+Glücksspiel niemals den Tatbestand des § 168 StGB erfüllen kann87.
+
+2.2.5 Unzulässiges Glücksspiel und UWG
+An sich werden Verstöße gegen das GSpG und auch gegen § 168 StGB, wie schon oben
+näher dargestellt, verwaltungsstrafrechtlich bzw. gerichtlich sanktioniert. Darüber hinaus
+kann aber gegen Verstöße der Konzessionspflicht auch mit den Mitteln des UWG
+vorgegangen werden, die es ermöglichen, gesetzwidrig handelnde Konkurrenten mittels
+Unterlassungsklage bzw. einstweiliger Verfügung in ihre Schranken zu weisen. Aufgrund
+der Tatsache, dass eine einstweilige Verfügung wesentlich schneller erreicht werden kann,
+als die Entscheidung einer Verwaltungsbehörde, wird diese Variante von den meisten
+Einschreitern als vorzugswürdig betrachtet88.
+In wettbewerbsrechtlicher Hinsicht verwirklicht die Durchführung von Glücksspielen ohne
+die erforderliche Genehmigung den Tatbestand des Rechtsbruches, einer Fallgruppe der
+Generalklausel des § 1 UWG. Ein in dieser Weise verursachter Verstoß eignet sich, sich
+einen Wettbewerbsvorsprung gegenüber gesetzestreuen Mitbewerbern zu schaffen89.
+In seiner ständigen Rechtssprechung fordert der OGH jedoch, dass die Normverletzung,
+um einen UWG-Verstoß zu bilden, auch subjektiv vorwerfbar sein muss90. Erst dann bildet
+die übertretene Verwaltungsvorschrift zugleich eine unlautere Wettbewerbshandlung nach
+§ 1 UWG. Subjektiv vorwerfbar ist ein Rechtsbruch aber bereits dann, wenn die
+gegenteilige Rechtsauffassung aufgrund des Gesetzeswortlauts unvertretbar ist91, was beim
+GSpG wohl ohne weiteres zu bejahen sein wird.
+
+87
+88
+
+Schwartz, Strukturfragen 42ff.
+Zib, Internet-Glücksspiel und UWG, in Strejcek/Hoscher/Eder (Hrsg), Glücksspiel in der EU und in
+
+Österreich: Recht - Internet - soziale Aspekte (2001) 71 (74).
+89
+90
+
+Vgl OGH 9.7.1991 WBl 1991, 364.
+OGH 19.9.1995 ÖBl 1996, 88 (Knoblauch-Kapseln); OGH 11.2.1997 WBl 1997, 260 (Ungarischer
+
+Zahnarzt).
+91
+OGH 11.2.1997 WBl 1997, 260.
+
+Quelle: http://rechtsprobleme.at
+
+28
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+2.2.5.1 Grenzüberschreitende Tätigkeit durch Internet-Spiele
+Aufgrund der neuen Kommunikationsformen haben sich die Möglichkeiten der
+massenhaften Verbreitung von Glücksspielangeboten derart erweitert, dass eine
+Neubeurteilung genehmigungsloser Glücksspiele, besonders im Lichte des UWG,
+vorgenommen werden musste. Dadurch, dass es für ausländische Anbieter nicht mehr
+erforderlich ist, im Inland eine Annahmestelle zu schaffen, um Einsätze von
+Spielteilnehmern
+
+entgegenzunehmen,
+
+besteht
+
+die
+
+Gefahr
+
+einer
+
+erheblichen
+
+Sozialschädlichkeit und einer noch stärkeren Berührung des Allgemeinwohls, als dies bei
+herkömmlichen Glücksspielen der Fall ist. Ganz eindeutig unterwirft das GSpG die
+Durchführung von Glücksspielen via Internet, bei denen der Spielvertrag über
+elektronische Medien abgeschlossen wird, denselben Restriktionen. Fazit: was sonst nicht
+erlaubt ist, ist auch im Internet verboten92.
+Die Österreichischen Lotterien GmbH haben zur Vermeidung solch grenzüberschreitender
+Fälle die Teilnahme an ihrer Spieleplattform erstens an das Vorhandensein eines
+österreichischen Bankkontos gebunden, und zweitens in den Teilnahmevoraussetzungen
+den Passus aufgenommen, dass eine „Spielteilnahme von außerhalb Österreichs unzulässig
+ist“93.
+Dies ist jedoch nicht in allen Ländern so. In Österreich nicht genehmigte InternetGlücksspiele, bei denen der Veranstalter im Ausland sitzt, sind nicht selten. Meist befindet
+sich dieser in Rechtsoasen, wie zB in Costa Rica und unterliegt der Spielvertrag nach den
+AGB dem Recht dieses Landes. Die Vereinbarung des Gerichtsstandes ins Ausland macht
+naturgemäß die Rechtsverfolgung quasi unmöglich. Daher stellt sich die Frage, welches
+Recht bei grenzüberschreitender Veranstaltung von Glücksspielen anzuwenden ist94.
+
+Drittstaaten außerhalb der Gemeinschaft
+
+92
+
+Zib in Strejcek/Hoscher/Eder, Glücksspiel in der EU und in Österreich 73.
+
+93
+
+www.win2day.at (10.06.03)
+Zib in Strejcek/Hoscher/Eder, Glücksspiel in der EU und in Österreich 76.
+
+94
+
+Quelle: http://rechtsprobleme.at
+
+29
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+Nach § 48 Abs 2 IPRG richtet sich die Zulässigkeit einer Wettbewerbshandlung nach dem
+Recht jenes Staates, auf dessen Markt sich die Wettbewerbshandlung auswirkt.
+Nach diesem Prinzip ist die Veranstaltung von Glücksspielen, die sich (auch) auf den
+österreichischen
+
+Markt
+
+auswirkt,
+
+nach
+
+österreichischem
+
+Recht
+
+zu
+
+bewerten
+
+(Auswirkungsprinzip). Das Auswirkungsprinzip bezieht sich freilich nur auf die
+Anwendbarkeit des Rechts gegen den unlauteren Wettbewerb. Da die Einräumung einer
+Beteiligungsmöglichkeit via Internet eindeutig den Tatbestand des § 56 GSpG erfüllt, ist
+somit auch der Rechtsbruch gemäß § 1 UWG verwirklicht, und führt daher die
+grenzüberschreitende Tätigkeit via Internet bei fehlender österreichischer Bewilligung zu
+einem Verstoß gegen das UWG95.
+Mitgliedstaaten der EU
+Auch zwischen Mitgliedsländer der EU gilt das Auswirkungsprinzip. Dass die in einem
+Mitgliedsstaat erteilte Genehmigung nicht die von einem anderen Mitgliedsstaat geforderte
+Erlaubnis ersetzen kann, hat auch das OLG in Köln bezüglich einer in Salzburg
+zugelassenen Sportwetten-GmbH, die in Nordrhein-Westfalen Sportwetten angeboten
+hatte, entschieden. Ohne deutsche Genehmigung handelt es sich um einen Rechtsbruch
+gemäß § 1 dUWG96.
+Auch durch das am 01.01.2002, in Umsetzung der E-Commerce-RL97, in Kraft getretene ECommerce-Gesetz (ECG)98, welches im Internetbereich an Stelle des Auswirkungsprinzips
+das Herkunftslandprinzip treten ließ, führt für den Glücksspielbereich zu keinen
+Änderungen, da dieser ausdrücklich vom Herkunftslandprinzip ausgenommen ist. Auf die
+grundsätzliche Anwendbarkeit des ECG wird im nächsten Kapitel näher einzugehen sein.
+
+95
+
+Zib in Strejcek/Hoscher/Eder, Glücksspiel in der EU und in Österreich 76f.
+
+96
+
+OLG Köln 22.10.1999 GRUR 2000, 538.
+RL 2000/31/EG des Europäischen Parlaments und des Rates v 8.6.2000 über bestimmte rechtliche Aspekte
+
+97
+
+der Dienste der Informationsgesellschaft, insbesondere des elektronischen Geschäftsverkehrs, im Binnenmarkt
+(Richtlinie über den elektronischen Geschäftsverkehr), ABl L 178 v 17.7.2000.
+98
+
+Bundesgesetz, mit dem bestimmte rechtliche Aspekte des elektronischen Geschäfts- und Rechtsverkehrs
+
+geregelt (E-Commerce-Gesetz - ECG) und das Signaturgesetz sowie die Zivilprozessordnung geändert
+werden, BGBl I 2001/152.
+
+Quelle: http://rechtsprobleme.at
+
+30
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+Haftung eingeschalteter Dienstleister von Glücksspielveranstaltern
+Bei Online-Spielen ist der eigentliche Veranstalter sehr oft nicht greifbar, oder befindet
+sich in einem Staat wo eine Exekutionsführung praktisch unmöglich ist. Damit muss aber
+keineswegs die Rechtsdurchsetzung scheitern, da unter gewissen Voraussetzungen auch
+gegen eingeschaltete IT-Dienstleister vorgegangen werden kann. Ein Betreiber der seinen
+Sitz in einem Drittstaat hat, braucht für Domainregistrierungs-Dienstleistungen einen im
+Inland ansässigen Dienstleister, der für ihn als technische Kontaktperson und als
+Abrechnungspartner („technical contact“ und „billing contact“) fungiert. Da dieser
+Dienstleister keine eigenen wettbewerblichen Interessen verfolgt, sondern als Gehilfe
+fremden Wettbewerb fördert, stellt sich die Frage nach einem wettbewerbsrechtlichen
+Unterlassungsanspruch gegen diesen. Zur Klärung dieser Frage muss zunächst zwischen
+zwei Gruppen von Dienstleistungstätigkeiten unterschieden werden99:
+
+1. Inhaltbezogene Dienstleistungen:
+Erfüllt der Dienstleister eine Tätigkeit, die typischerweise auf Förderung fremden
+Wettbewerbs
+
+gerichtet
+
+ist,
+
+wie
+
+zB
+
+die
+
+Gestaltung
+
+der
+
+Website
+
+des
+
+Glücksspielveranstalters, dann nimmt die Rechtssprechung an, dass dem Gehilfen die
+Wettbewerbswidrigkeit bewusst sein musste, und ist dieser aufgrund des inhaltlichen
+Naheverhältnisses ohne weiteres einem Unterlassungsanspruch ausgesetzt100.
+2. Abwicklungsbezogene Hilfsleistungen:
+
+99
+
+Zib in Strejcek/Hoscher/Eder, Glücksspiel in der EU und in Österreich 79f.
+
+100
+
+OGH 8.11.1994 MR 1995, 31.
+
+Quelle: http://rechtsprobleme.at
+
+31
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+Bei solchen Hilfsleistungen wird der Dienstleister nicht sofort erkennen, dass er mit
+seiner Tätigkeit fremden Wettbewerb fördert, und ist daher eine Haftung wie bei
+inhaltsbezogenen Dienstleistungen nicht ohne weiteres zu bejahen. Meist verfolgt
+dieser nur seine eigenen wirtschaftlichen Interessen, und entsteht die Förderung
+fremden Wettbewerbs nur als unbeabsichtigte Nebenwirkung101.
+Wettbewerbsrechtlich relevant wird sein Handeln nur dann, wenn er von den
+betreffenden Tatumständen Kenntnis erlangt und seine Tätigkeit nicht sofort einstellt.
+Ab diesem Zeitpunkt geht man von bewusster Förderung des Haupttäters aus, die
+unmittelbar einen Unterlassungsanspruch gegen den Dienstleister nach sich zieht.
+Darüber hinaus verlangt die Rechtssprechung, dass der Dienstleister dem Gericht
+seinen Auftraggeber bekannt gibt, um so eine gerichtliche Inanspruchnahme des
+Hauptstörers zu ermöglichen102.
+Einen ähnlichen Fall, wenn auch nicht in Bezug auf die Zurverfügungstellung von
+Speicherplatz, hat der OGH im Fall „Ungarischer Zahnarzt“103 beurteilt. Der
+Zweitbeklagte
+
+hatte
+
+einem
+
+ungarischen
+
+Zahnarzt
+
+zur
+
+Durchführung
+
+seiner
+
+Behandlungen in Österreich eine Wohnung zur Verfügung gestellt, und somit fremden
+Wettbewerb gefördert, da er den Wettbewerbsverstoß des Erstbeklagten unterstützte.
+Der Verstoß gegen das ÄrzteG verwirklichte den Rechtsbruch im Sinne des § 1 UWG.
+Die Entscheidung ist hier deshalb von Relevanz, da zwischen der Zurverfügungstellung
+von Wohnraum und der Zurverfügungstellung von Speicherplatz im Sinne der
+wettbewerbsrechtlichen Gehilfenhaftung kein wesentlicher Unterschied besteht. Hier
+hat der OGH im Gegensatz zu den sonstigen abwicklungsbezogenen Hilfsleistungen
+aufgrund des persönlichen Naheverhältnisses die Wettbewerbsförderungsabsicht
+vermutet104.
+Für den Bereich der IT-Dienstleistungen wird man von rein abwicklungsbezogenen
+Hilfsleistungen dann sprechen, wenn der Dienstleister für den Glücksspielveranstalter bloß
+eine Domain registriert, oder den erforderlichen Domain Name Server unterhält (DNSService). Da es sich hierbei meist um standardisiert abgewickelte Leistungen handelt, kann
+101
+
+OGH 26.1.1999 ÖBl 1999, 229.
+
+102
+
+OGH 26.1.1999 ÖBl 1999, 229.
+
+103
+
+OGH 11.2.1997 WBl 1997, 260.
+
+104
+
+Siehe FN 100.
+
+Quelle: http://rechtsprobleme.at
+
+32
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+dem Dienstleister kaum ein inhaltlicher Nahebezug und somit die Kenntnis der Förderung
+fremden Wettbewerbs vorgeworfen werden. Nicht so eindeutig ist die Frage des WebHosting zu beantworten. Für eine inhaltsnahe Tätigkeit könnte sprechen, dass sich
+zumindest der Inhalt der Website auf dem Speicherplatz des Dienstleisters befindet. Doch
+kann dem Dienstleister wohl kaum zugemutet werden, dass er in Kenntnis aller Inhalte
+seiner Hosting-Kunden ist. Daher wird man auch in diesem Fall von einer
+abwicklungsbezogenen Hilfsleistung sprechen. Dieser Überlegung wurde auch in § 16
+ECG, die den Ausschluß der Verantwortlichkeit bei Speicherung fremder Inhalte vorsieht,
+Rechnung getragen. Zu einer Verantwortlichkeit der Dienstleister kann es nur dadurch
+kommen, dass auch nach Bekanntwerden des Verstoßes sie ihre Tätigkeiten nicht
+einstellen bzw. keine Maßnahmen zur Verhinderung künftiger gleichartiger Vorfälle
+ergreifen. Lediglich beim Access-Provider ist die Einstellung der Hilfstätigkeit nicht ohne
+weiters zumutbar, weshalb diese in § 13 ECG ausdrücklich verantwortungsfrei gestellt
+werden105.
+Die Verantwortlichkeit des Haupttäters und jene des Gehilfen ist rechtlich gesehen
+vollkommen getrennt zu betrachten, was in der Praxis nicht unbedeutend ist, da im Falle
+der Undurchsetzbarkeit des Urteils gegen den Kläger noch immer der Dienstleister in
+Anspruch genommen werden kann.
+Die wettbewerbsrechtliche Bedeutung des § 56 GSpG
+§ 56 GSpG verbietet die Zurverfügungstellung und auch die Ermöglichung der
+Zurverfügungstellung von Möglichkeiten zur Teilnahme an ausländischen Glücksspielen
+aus dem Inland. Da diese Bestimmung auch neue Technologien erfasst und gleichzeitig ein
+eigenständiges Verbot von Gehilfenverhalten enthält, stellt sich die Frage, ob sich daraus
+eine weitergehende wettbewerbsrechtliche Unterlassungshaftung von Dienstleistern ergibt.
+Der Dienstleister würde somit als Haupttäter schon einen Rechtsbruch iSd § 1 UWG durch
+den Verstoß gegen § 56 GSpG begehen. In diesem Fall würden ihm nicht die
+Einschränkungen der wettbewerbsrechtlichen Gehilfenhaftung zugute kommen, da der
+Verstoß
+105
+
+zur
+
+Förderung
+
+des
+
+eigenen
+
+Wettbewerbs
+
+begangen,
+
+und
+
+somit
+
+die
+
+Zib in Strejcek/Hoscher/Eder, Glücksspiel in der EU und in Österreich 80f.
+
+Quelle: http://rechtsprobleme.at
+
+33
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+Wettbewerbsabsicht vermutet werden würde. Internet-Vermittlungsdienstleister würden
+somit
+
+relativ
+
+leicht
+
+einen
+
+Wettbewerbsverstoß
+
+verwirklichen,
+
+und
+
+könnten
+
+Unterlassungsansprüche nur dadurch abwenden, dass sie das schädigende Verhalten sofort
+nach Kenntniserlangung einstellen. Begründet wird dies damit, dass die subjektive
+Vorwerfbarkeit des Rechtsbruches erst bei Kenntnis der Normverletzung anzunehmen ist.
+Ein aktuellerer Begründungsansatz läßt sich aus den §§ 13 ff ECG über den Ausschluss der
+Verantwortlichkeit von Diensteanbietern entnehmen. Durch diese Bestimmungen kann
+weder eine verwaltungsstrafrechtliche noch eine sonstige Verantwortlichkeit entstehen, die
+naturgemäß auch eine Haftung für wettbewerbsschädigendes Verhalten ausschließt.
+Anders ist das Verhalten ab Kenntnis der rechtswidrigen Tätigkeit zu beurteilen. Für den
+Bereich des Hosting entfällt dann der Schutz des ECG und auch bei der reinen
+Durchleitung könnte man dann schon von „absichtlicher Zusammenarbeit“ sprechen, die
+den Dienstleister explizit aus dem Haftungsprivileg ausnimmt106.
+
+106
+
+Zib in Strejcek/Hoscher/Eder, Glücksspiel in der EU und in Österreich 85ff.
+
+Quelle: http://rechtsprobleme.at
+
+34
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+3 Mobiles Gaming
+3.1 Einleitung
+Schon durch die Möglichkeiten des Internets haben Glücksspiele, Lotterien und
+Sportwetten eine neue Dimension erhalten. Die österreichischen Lotterien GmbH, die mit
+ihrer Spieleplattform (win2day.at) im Jahr 2002 einen Umsatzanstieg von 119 %
+verbuchen konnten, erwarten auch 2003 ein Umsatzwachstum und planen daher den
+weiteren Ausbau der Plattform bzw. den Zugang via Handy und PDA107.
+Aufgrund der hohen Mobilfunkpenetration in Österreich von über 80 %108 und der
+Einführung des UMTS liegt es für Glücksspielveranstalter nahe, Bestrebungen an den Tag
+zu legen um neue Glücksspielmärkte zu erschließen. Das rasante Wachstum des Internets
+und die hohe Akzeptanz von Spieleplattformen im WWW sind für Veranstalter gute
+Ausgangsbedingungen
+
+und
+
+lässt
+
+sie
+
+auf
+
+ähnlich
+
+durchschlagende
+
+Erfolge
+
+im
+
+Mobilfunkbereich hoffen. Ob das sonst vorhandene mangelnde Vertrauen der potentiellen
+Kunden, wie es derzeit noch im M-Commerce vorhanden ist, auch auf den Spielerkunden
+zutrifft bleibt abzuwarten. Vielleicht kommt dem Glücksspielveranstalter ja die
+naturgemäß höhere Risikobereitschaft eines Spielers, im Vergleich zu einem nicht
+spielenden Kunden, zugute.
+
+3.2 Zur Anwendbarkeit des ECG
+Das ECG behandelt rechtliche Aspekte im Zusammenhang mit kommerziellen OnlineAngeboten und -Diensten, und soll somit zur Rechtssicherheit im Internet und in anderen
+elektronischen Kommunikationsmedien beitragen. Geregelt werden darin vor allem
+Probleme, die sich nur in der virtuellen Welt stellen, da aufgrund der besonderen
+
+107
+
+http://futurzone.orf.at/ (06.06.2003).
+
+108
+
+Quelle: Rundfunk- und Telekomregulierungs GmbH.
+
+Quelle: http://rechtsprobleme.at
+
+35
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+Eigenheiten der modernen Kommunikationsmittel die bisherigen Regelungen zur Klärung
+verschiedener Situationen nicht mehr ausreichen würden109.
+Zur Klärung des sachlichen Anwendungsbereiches des ECG sind vor allem die Begriffe
+„elektronischer Geschäftsverkehr“, „elektronischer Rechtsverkehr“ und „Dienst der
+Informationsgesellschaft“ von Bedeutung. Eine Definition des Begriffes „elektronischer
+Geschäftsverkehr“ findet sich weder in der EC-RL noch im ECG, daher sind darunter wohl
+alle wirtschaftlichen Tätigkeiten in Bezug auf „Dienste der Informationsgesellschaft“ zu
+verstehen. Dass sowohl Geschäfte zwischen Unternehmern (B2B - Bereich) als auch
+zwischen Unternehmern und Konsumenten (B2C - Bereich) erfasst sind, ist unstrittig.
+Beim
+
+elektronischen
+
+Geschäftsverkehr,
+
+Rechtsverkehr
+
+nicht
+
+unbedingt
+
+ist,
+ein
+
+im
+
+Gegensatz
+
+Bezug
+
+zu
+
+zum
+einem
+
+elektronischen
+„Dienst
+
+der
+
+Informationsgesellschaft“ erforderlich, daher fällt darunter auch der Rechtsverkehr
+zwischen Privaten. Die Normadressaten des ECG sind die Diensteanbieter, wobei jedoch
+anzumerken ist, dass der persönliche Anwendungsbereich des ECG weiter ist als jener der
+EC-RL. In der EC-RL sind in Art. 1 Abs 5 lit d die öffentlich-rechtliche Tätigkeit von
+Notaren und ähnlichen Personen, die Tätigkeit von Personen die die Rechtsvertretung vor
+einem Gericht übernehmen, die Tätigkeit von Personen die das Betreiben von Glücksbzw. Gewinnspielen mit geldwertem Einsatz ermöglichen aus dem Anwendungsbereich
+ausgenommen. Diese Tätigkeitsausnahmen gelten für das ECG nicht110.
+Nun stellt sich die Frage, ob das ECG auch auf Aktivitäten des M-Gaming anwendbar ist.
+Hierbei ist zunächst zu prüfen, inwieweit das M-Gaming einen Dienst der
+Informationsgesellschaft darstellt, und inwieweit M-Gaming Anbieter Diensteanbieter iSd
+§ 1 ECG sind. Die Legaldefinitionen der Begriffe „Dienst der Informationsgesellschaft“
+und „Diensteanbieter“ wurden unter vielen anderen im § 3 ECG geregelt. Ein
+Diensteanbieter ist nach § 3 Z 2 ECG eine natürliche oder juristische Person, welche einen
+Dienst der Informationsgesellschaft bereitstellt. Dienst der Informationsgesellschaft
+bedeutet: Ein in der Regel gegen Entgelt elektronisch im Fernabsatz auf individuellen
+Abruf des Empfängers bereitgestellter Dienst. § 3 Z 1 ECG verweist darüber hinaus auf § 1
+
+109
+
+Vgl EB RV 817 BlGNr 21. GP 2f.
+
+110
+
+Blume/Hammerl, ECG (2002) 32ff.
+
+Quelle: http://rechtsprobleme.at
+
+36
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+Abs 1 Z 2 NotifG111, welches die Notifikations-RL112 in nationales Recht transformiert.
+Danach sind grundsätzlich vier Voraussetzungen erforderlich, um von einem Dienst der
+Informationsgesellschaft sprechen zu können:
+-
+
+Erstens muss der Dienst in der Regel gegen Entgelt erfolgen113. Dieses Kriterium ist
+dann erfüllt, wenn die Leistung einen wirtschaftlichen Charakter hat, also zu
+Erwerbszwecken erfolgt. Entscheidend ist der angestrebte wirtschaftliche Erfolg, der
+im weitesten Sinne mit einer Ertragsabsicht verbunden sein muss. Vergleicht man
+diese Anforderungen mit den Beispielen in § 3 Z 1 ECG widersprechen sie scheinbar
+der Definition, da die Inanspruchnahme einer elektronischen Suchmaschine idR eben
+nicht gegen Entgelt erfolgt. In diesem Sinne ist der Begriff des „Dienstes der
+Informationsgesellschaft“ sehr eng gestaltet114.
+
+-
+
+Als zweites Kriterium wird verlangt, dass es sich um einen elektronischen Dienst
+handelt. Nach § 1 Abs 1 Z 2 lit b NotifG wird eine Dienstleistung dann elektronisch
+erbracht, wenn sie mittels Geräten für die elektronische Verarbeitung einschließlich
+digitaler Kompression und Speicherung von Daten, am Ausgangspunkt gesendet und
+am Endpunkt empfangen und vollständig über Draht, Funk, auf optischem oder
+anderem elektromagnetischem Weg gesendet, weitergeleitet und empfangen wird115.
+
+-
+
+Ein Dienst im Fernabsatz liegt vor, wenn dieser ohne gleichzeitige physische
+Anwesenheit der Parteien (Transaktionspartner) erbracht wird116.
+
+111
+
+Bundesgesetz zur Durchführung eines Informationsverfahrens auf dem Gebiet der technischen Vorschriften,
+
+der Vorschriften für die Dienste der Informationsgesellschaft und der Normen (Notifikationsgesetz 1999 -
+NotifG 1999), BGBl I 1999/183.
+112
+
+RL 1998/34/EG des Europäischen Parlaments und des Rates v 22.6.1998 über Informationsverfahren auf
+
+dem Gebiet der Normen und technischen Vorschriften und der Vorschriften für die Dienste der
+Informationsgesellschaft, Abl L 217 v 5.8.1998.
+113
+
+Haberler, Rechtssicherheit im Mobile-Commerce? Wbl 2003, 297 (299).
+
+114
+
+Laga/Sehrschön, E-Commerce-Gesetz - Praxiskommentar (2002) 21.
+
+115
+
+§ 1 Abs 1 Z 2 lit a NotifG.
+
+116
+
+§ 1 Abs 1 Z 2 lit a NotifG.
+
+Quelle: http://rechtsprobleme.at
+
+37
+
+Onlinespiele in der mobilen Telefonie
+-
+
+Sabine Hammerl
+
+Als letztes Kriterium wird verlangt, dass der Dienst auf individuellen Abruf des
+Empfängers erbracht wird. Dies ist dann der Fall, wenn die Übertragung von Daten auf
+individueller Anforderung stattfindet117. Daher unterliegen Punkt-zu-Multipunkt
+Kommunikationen,
+
+wie
+
+zB
+
+Radio-
+
+und
+
+Fernsehsendungen
+
+nicht
+
+dem
+
+Anwendungsbereich des ECG118.
+Zur weiteren Abgrenzung, ob es sich bei einem Dienst um einen Dienst der
+Informationsgesellschaft handelt, befindet sich in der Anlage 1 zum NotifG eine
+beispielhafte Aufzählung jener Dienste, die nicht als Dienste der Informationsgesellschaft
+anzusehen sind (Negativliste) 119.
+In dieser Liste findet sich zwar unter Z 4 die Bereitstellung elektronischer Spiele in einer
+Spielhalle in Anwesenheit des Benutzers als Ausnahme, das Anbieten von Glücksspielen
+über Mobilfunk findet dort jedoch keine Erwähnung, wodurch die Anwendbarkeit des
+ECG auf M-Gaming - Aktivitäten ohne weiteres bejaht werden kann, da wie schon oben
+näher ausgeführt, auch alle Voraussetzungen des § 3 Z 1 ECG erfüllt sind.
+Auch in den Erläuternden Bemerkungen zur Regierungsvorlage sind WAP- und UMTSDienste, die über Mobilfunktelefon bereitgestellt und abgerufen werden können, vom
+Geltungsbereich des Gesetzes grundsätzlich erfasst120.
+
+3.2.1 Zulassung von Diensten der Informationsgesellschaft
+§ 4 Abs 1 ECG regelt die Zulassungsfreiheit, womit sichergestellt wird, dass der
+Aufnahme und Ausführung von Diensten der Informationsgesellschaft keine gesonderte
+staatlichen Zulassungsverfahren entgegen stehen. Darunter versteht man jede materielle
+und verfahrensrechtliche Vorschrift des öffentlich-rechtlichen Wirtschaftsaufsichtsrechts,
+117
+
+§ 1 Abs 1 Z 2 lit c NofifG.
+
+118
+
+Burgstaller/Minichmayr, E-Commerce-Gesetz - Praxiskommentar (2002) 41.
+
+119
+
+Haberler, Wbl 2003, 299.
+
+120
+
+EB RV 817 BlGNr 21. GP 18; ebenfalls bejahend Zankl, E-Commerce-Gesetz (2002) 88 und Laga/
+
+Sehrschön, E-Commerce-Gesetz 16; ebenso Blume/Hammerl, ECG 42f; aA Brenn, 194f, der solche Dienste
+nicht vom Geltungsbereich des ECG erfasst sieht.
+
+Quelle: http://rechtsprobleme.at
+
+38
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+die für Diensteanbieter eine Zugangskontrolle darstellen würde. Abs 2 des § 4 ECG besagt,
+dass Rechtsvorschriften, die die Zulässigkeit der Aufnahme oder Ausübung einer
+geschäftlichen, gewerblichen oder beruflichen Tätigkeit regeln, und nicht besonders und
+ausschließlich für Dienste der Informationsgesellschaft oder deren Anbieter gelten,
+unberührt bleiben121.
+Dh, dass Glücksspielveranstalter die allgemeinen Anforderungen, die sich aus dem GSpG
+und anderen relevanten Normen ergeben, auch dann zu erfüllen haben, wenn sie ihre
+Dienste elektronisch anbieten.
+
+3.2.2 Informationspflichten des Diensteanbieters
+Mit § 5 ECG werden Diensteanbieter, hier Glücksspielveranstalter angehalten den Nutzern
+auf leichtem und unkompliziertem Wege relevante Informationen über ihre Firma bekannt
+zu geben, damit diese rasch und unmittelbar Kontakt mit ihm aufnehmen können. Den
+Nutzern sollen hier bestimmte Mindestinformationen bereitgestellt werden, die Klarheit
+über die Person bzw. Firma des Diensteanbieters bringen. Diese Transparenz ist vor allem
+ein wesentlicher Faktor zur Vertrauensbildung, da besonders bei den modernen
+Kommunikationsmedien ein erhöhtes Informationsbedürfnis besteht. Die allgemeinen
+Informationspflichten gelten nicht nur für Verbrauchergeschäfte sondern auch für den
+geschäftlichen Verkehr zwischen Unternehmern. Der Diensteanbieter hat seinen Nutzern
+ständig, sowie leicht und unmittelbar zugänglich folgende Informationen zur Verfügung
+zu stellen:
+Z 1: seinen Namen oder seine Firma
+Z 2: die geografische Anschrift, unter der er niedergelassen ist;
+Z 3: Angaben, auf Grund deren die Nutzer mit ihm rasch und unmittelbar in Verbindung
+treten können, einschließlich seiner elektronischen Postadresse;
+Z 4: sofern vorhanden, die Firmenbuchnummer und das Firmenbuchgericht;
+Z 5: soweit die Tätigkeit einer behördlichen Aufsicht unterliegt, die für ihn zuständige
+Aufsichtsbehörde;
+
+121
+
+Blume/Hammerl, ECG 65.
+
+Quelle: http://rechtsprobleme.at
+
+39
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+Z 6: bei einem Diensteanbieter, der gewerbe- oder berufsrechtlichen Vorschriften
+unterliegt, die Kammer, den Berufsverband oder eine ähnliche Einrichtung, der er
+angehört, die Berufsbezeichnung und den Mitgliedsstaat, in dem diese verliehen worden
+ist, sowie einen Hinweis auf die anwendbaren gewerbe- oder berufsrechtlichen
+Vorschriften und den Zugang zu diesen;
+Z 7: sofern vorhanden, die Umsatzsteuer-Identifikationsnummer.
+Für die leichte Zugänglichkeit der Informationen reicht es aus, wenn der Nutzer ohne
+besondere Kenntnisse und ohne besondern Aufwand zu den Daten des Diensteanbieters
+gelangen
+
+kann.
+
+Nicht
+
+sehr
+
+problematisch
+
+ist
+
+dies
+
+bei
+
+Diensten
+
+der
+
+Informationsgesellschaft, die über das Internet angeboten werden, da man über einen Link
+auf der Website des Diensteanbieters leicht zu den gewünschten Informationen gelangen
+kann. Bei Diensten der Informationsgesellschaft, die über ein Mobiltelefon bereitgestellt
+werden, gestaltet sich das, aufgrund der Tatsache, dass für die Informationen sehr wenig
+Platz zur Verfügung steht, schon wesentlich schwieriger. Hier wird es deshalb ausreichen,
+wenn auf dem Display ein leicht ersichtlicher Hinweis vorhanden ist, der auf eine über das
+Internet zugängliche Homepage verweist. Weitere Möglichkeiten wären zB die Angabe
+einer Hotline-Nummer, oder die Zurverfügungstellung der Informationen in einem
+speziellen „Menü“122.
+Unmittelbar
+
+zugänglich
+
+ist
+
+hier
+
+zwar
+
+nicht
+
+der
+
+Zugang
+
+selbst,
+
+aber
+
+die
+
+Zugangsinformation wird „unmittelbar“ zur Verfügung gestellt, was für die Erfüllung
+dieses Kriteriums als ausreichend angesehen wird. Das Kriterium „ständig“, welches in §
+5 ECG ausdrücklich gefordert wird, ist dann erfüllt, wenn der Nutzer die genannten
+Informationen wirklich zu jedem Zeitpunkt, in dem er diese abrufen will, erhalten kann.
+Ob die Informationen mittels Text, Bild oder Video transportiert werden, spielt für das
+Erfordernis der leichten und unmittelbaren Zugänglichkeit keine Rolle123.
+Nach Z 1 haben Diensteanbieter ihren Namen oder ihre Firma anzugeben. Handelt es sich
+bei dem Diensteanbieter um einen Gewerbetreibenden, der eine natürliche Person ist, dann
+hat er zumindest seinen Familiennamen anzuführen. Juristische Personen haben sich ihres
+122
+
+Laga/Sehrschön, E-Commerce-Gesetz, 28ff.
+
+123
+
+Blume/Hammerl, ECG 69.
+
+Quelle: http://rechtsprobleme.at
+
+40
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+gesetzlichen, oder in den Statuten festgelegten, Namens zu bedienen. Diese in § 63 Abs 1
+GewO 1994 erfassten Regelungen lassen auch Abkürzungen des Namens oder andere
+Bezeichnungen zu, solange diese nicht geeignet sind Verwechslungen oder Irreführungen
+herbeizuführen. Für das Erfordernis der Angabe der geografischen Anschrift des
+Diensteanbieters genügt keinesfalls die Angabe eines Postfaches, vielmehr muss es sich
+um die ladungsfähige Offline-Anschrift handeln, wobei jedoch zu beachten ist, dass gemäß
+§ 26 a ZustellG nunmehr auch schon elektronische Zustellvorgänge möglich sind, die dem
+Anspruch der geografischen Anschrift in Z 2 wiederum nicht gerecht werden. Unter Daten,
+mit denen der Nutzer mit dem Diensteanbieter rasch und unmittelbar in Verbindung treten
+kann, werden vor allem Telefonnummern, Faxnummern und auch die Email-Adresse
+verstanden, wobei letztere, wie aus dem Wortlaut des Gesetzes ersichtlich, jedenfalls
+anzugeben ist.
+Die
+
+Angabe
+
+von
+
+Firmenbuchnummer
+
+und
+
+Firmenbuchgericht
+
+ergibt
+
+sich
+
+bei
+
+Kapitalgesellschaften schon aus § 14 Abs 1 HGB, der die Angabe dieser Daten auch auf
+Geschäftsbriefen und Bestellscheinen vorsieht. Wenn Diensteanbieter einer behördlichen
+Aufsicht unterliegen, haben sie die zuständige Aufsichtsbehörde anzugeben. Bei
+freiberuflich tätigen Diensteanbietern ist das die Disziplinarbehörde. Des weiteren haben
+Diensteanbieter, die gewerbe- oder berufsrechtlichen Vorschriften unterliegen, die
+Kammer, den Berufsverband, die Berufsbezeichnung und den Mitgliedsstaat, in dem diese
+verliehen worden ist, anzugeben124.
+Sonstige Informationspflichten, wie zB jene der §§ 5 c und 5 d KSchG125, bleiben
+unberührt126.
+Ein Verstoß gegen die Informationspflichten des Abs 1 stellt eine Verwaltungsübertretung
+dar, die mit einer Verwaltungsstrafe bis zu € 3.000,-- zu ahnden ist127.
+Die Österreichischen Lotterien GmbH sind der geforderten Informationspflicht auf ihrer
+Spieleplattform win2day.at mittels dem Link „Impressum“ auf der Startseite ausreichend
+
+124
+125
+
+Blume/Hammerl, ECG 70.
+Bundesgesetz,
+
+mit
+
+dem
+
+Bestimmungen
+
+zum
+
+Schutz
+
+der
+
+Verbraucher
+
+getroffen
+
+werden
+
+(Konsumentenschutzgesetz - KSchG), BGBl 1979/140 idF BGBl I 2002/111.
+126
+
+§ 5 Abs 3 ECG.
+
+127
+
+Burgstaller/Minichmayr, E-Commerce-Gesetz 57.
+
+Quelle: http://rechtsprobleme.at
+
+41
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+nachgekommen. Wie sie diese Anforderungen im mobilen Glücksspielbereich lösen, bleibt
+abzuwarten, doch wird wohl eine der oben dargestellten Varianten zur Auswahl gelangen.
+Impressum
+
+Informationen nach E-Commerce Gesetz:
+
+Firma: Österreichische Lotterien Gesellschaft m.b.H
+Anschrift: Rennweg 44, 1038 Wien
+Telefon: + 43/1/790 70-0
+Fax: + 43/1/799 39 39
+E-Mail: help@lotterien.at
+Websites: www.win2day.at, www.lotterien.at, wap.win2day.at
+Firmenbuchnummer: 54472G
+Firmenbuchgericht: Handelsgericht Wien
+Kammermitgliedschaft: Wirtschaftskammer Österreich Fachverband Lotterien
+Aufsichtsbehörde: Bundesministerium für Finanzen
+UID: ATU 15666508
+© 2003 Österreichische Lotterien GmbH
+
+3.2.3 Abschluss von Verträgen
+Nach dem Prinzip der Medienneutralität des Rechts sind für den Vertragsabschluß im ECommerce sowie auch im M-Commerce dieselben rechtlichen Voraussetzungen wie bei
+einem
+
+herkömmlichen
+
+Vertragsabschluss
+
+erforderlich.
+
+Es
+
+ist
+
+daher
+
+für
+
+das
+
+Zustandekommen eines Vertrages die Geschäftsfähigkeit der Vertragspartner, die
+Möglichkeit bzw. Erlaubtheit des Vertragsinhalts, die Freiheit von Zwang, List oder
+Drohung, die Einhaltung allfälliger Formvorschriften und natürlich eine übereinstimmende
+Willenserklärung notwendig. Diese Vorschriften finden sich alle in den §§ 861 ff ABGB,
+und sind diese grundsätzlich auch auf Verträge anzuwenden, die elektronisch geschlossen
+werden. Man kann daher sagen, dass Online-Verträge keine neuen Vertragstypen sind,
+
+Quelle: http://rechtsprobleme.at
+
+42
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+sondern die jeweiligen gesetzlichen Bestimmungen - unter Berücksichtigung der
+Besonderheiten des FernabsatzG, des SigG und des ECG - zur Anwendung gelangen128.
+Aufgrund der Eigenheiten der modernen Kommunikationsmittel wird nun auf die
+Sondervorschriften der §§ 9 ff ECG näher eingegangen:
+§ 9 Abs 1 ECG verpflichtet den Diensteanbieter, dass er den Nutzer vor Abgabe seiner
+Vertragserklärung über folgende Belange klar, verständlich und eindeutig informiert:
+Z 1: die einzelnen technischen Schritte, die zu seiner Vertragserklärung und zum
+Vertragsabschluss führen;
+Z 2: den Umstand, ob der Vertragstext nach Vertragsabschluss vom Diensteanbieter
+gespeichert wird sowie gegebenenfalls den Zugang zu einem solchen Vertragstext;
+Z 3: die technischen Mittel zur Erkennung und Berichtigung von Eingabefehlern vor
+Abgabe der Vertragserklärung sowie
+Z 4: die Sprachen, in denen der Vertrag abgeschlossen werden kann.
+Der Diensteanbieter, als Adressat dieser Bestimmung, erfüllt seine Pflicht dann rechtzeitig,
+wenn er dem Nutzer diese Informationen vor Abgabe einer vertragsrechtlichen Erklärung
+mit Bindungswirkung zukommen lässt. Unter einer solchen vertragsrechtlichen Erklärung
+versteht man sowohl das Angebot (Offerte) als auch die Annahmeerklärung eines
+Angebots des Anbieters. Das Anbieten von Waren oder Dienstleistungen auf einer Website
+wird in der Regel als invitatio ad offerendum, d.h. als Aufforderung, ein Angebot zu
+stellen, zu qualifizieren sein. Auf diese Einladung hin, gibt der Nutzer sein Angebot ab,
+das zwar noch nicht zu einem wirksamen Vertragsabschluss ausreicht, da noch die
+Annahmeerklärung des Diensteanbieters erforderlich ist, aber doch für diesen die
+Informationsverpflichtung gemäß § 9 ECG auslöst. Dies deshalb, da das Anbot des Nutzers
+bereits eine Bindungswirkung für diesen auslöst. Diese Informationen müssen für den
+Anwender derart klar und verständlich dargestellt sein, dass sie auch von absoluten Laien
+nachvollzogen werden können129.
+Verstößt der Diensteanbieter gegen diese in § 9 ECG normierten Informationspflichten,
+bietet sich für den Anwender die Möglichkeit gegen den Diensteanbieter mit
+128
+
+Mottl, Zur Praxis des Vertragsabschlusses im Internet, in Gruber/Mader (Hrsg), Privatrechtsfragen des e-
+
+commerce (2003) 1 (5).
+129
+
+Blume/Hammerl, ECG 89f.
+
+Quelle: http://rechtsprobleme.at
+
+43
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+zivilrechtlichen Ansprüchen, vor allem Schadenersatzansprüchen iSd §§ 1295 ff ABGB,
+aber auch durch eine irrtumsrechtliche Anfechtung des Vertrages nach § 871 Abs 2 ABGB
+vorzugehen. Besteht ein derartiger Irrtum, ist der Vertrag zwar nicht von vornherein
+unwirksam, er ist aber nach den allgemeinen Irrtumsregeln anfechtbar130.
+Mit § 9 Abs. 1 Z 1, mit dem der Diensteanbieter verpflichtet wird, dem Anwender die
+einzelnen technischen Schritte, die zum Vertragsabschluss führen, darzustellen, soll vor
+allem
+
+verhindert
+
+werden,
+
+dass
+
+der
+
+Anwender
+
+ungewollte
+
+und/oder
+
+voreilige
+
+Vertragserklärungen abgibt. Bei den modernen Kommunikationsmitteln kann sich ein
+solcher Fall zB durch Mausklick leicht ereignen, und soll daher im Sinne des
+Transparenzgebotes ein solcher Vorgang für den Anwender vorhersehbar sein. Z 1 umfasst
+auch die weiteren Vertragsabschlussmodalitäten. Sohin muss für den Anwender klar
+ersichtlich sein, ob sein Angebot beispielsweise durch Email angenommen wird, oder ob
+direkt
+
+durch
+
+Leistung
+
+entsprochen
+
+wird.
+
+Die
+
+nähere
+
+Ausgestaltung
+
+dieser
+
+Informationspflicht bleibt dem Anbieter überlassen, keinesfalls muss er jedoch rechtliche
+Informationen, wie zB die Möglichkeiten unter denen der Anwender die Vertragserklärung
+widerrufen kann, darstellen131.
+Hinter Abs. 1 Z 2 des § 9 ECG, in denen der Diensteanbieter verpflichtet wird, darüber zu
+informieren, ob der Vertragstext von ihm gespeichert wird, und wenn ja, wie der Nutzer
+Zugang zu diesem Text erhält, steht die Intention des Gesetzgebers, dass der Nutzer
+angehalten werden soll, sich selbst Gedanken darüber zu machen den Text zu
+dokumentieren, wenn er dies für sinnvoll erachtet. Der Anbieter ist aber keinesfalls
+verpflichtet, die Vertragstexte zu speichern132.
+Abs. 1 Z 3 soll dem Anwender ermöglichen, seine Eingabefehler rechtzeitig zu erkennen
+und zu korrigieren. Selbst einem aufmerksamen Nutzer können solche Fehler aufgrund der
+technischen Einsatzmöglichkeiten wie zB Maus oder Tastatur jederzeit unterlaufen, und
+würden diese, wenn sie nicht rechtzeitig aufgeklärt würden fatale Folgen nach sich ziehen.
+
+130
+
+Oberkofler, Vertragsabschluss im Internet, in Barbist/Gruber/Oberkofler/Stomper (Hrsg), Praxishandbuch
+
+Internet Recht (2002) 121 (127).
+131
+
+Blume/Hammerl, ECG 91.
+
+132
+
+Burgstaller/Minichmayr, E-Commerce-Gesetz 82.
+
+Quelle: http://rechtsprobleme.at
+
+44
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+Die Bestimmung soll dem Nutzer dazu verhelfen nur jene Verträge zu schließen, die
+tatsächlich seinem Vertragsabschlusswillen entsprechen133.
+Z 4 regelt die Verpflichtung des Diensteanbieters über die möglichen Sprachen, in denen
+der
+
+Vertrag
+
+abgeschlossen
+
+werden
+
+kann,
+
+zu
+
+informieren.
+
+Besonders
+
+bei
+
+grenzüberschreitenden Transaktionen ist diese Bestimmung für den Nutzer wichtig, da er
+jene Sprache auswählen kann, in der er sich am besten verständigen kann, und die
+naturgemäß die geringsten Verständigungsfehler in sich birgt134.
+Nach § 9 Abs. 3 sind diese Informationspflichten im Verbrauchergeschäft zwingend, und
+können zu Lasten des Verbrauchers nicht beschränkt oder ausgeschlossen werden. Nach §
+3 Z 5 ECG ist ein Verbraucher eine natürliche Person, die zu Zwecken handelt, die nicht
+zu ihren gewerblichen, geschäftlichen oder beruflichen Tätigkeiten gehören. Unter
+Geschäftspartnern können abweichende Vereinbarungen getroffen werden, oder der
+gänzliche Ausschluss der Informationspflichten vereinbart werden. Hierbei wird es
+genügen, wenn sich in den allgemeinen Geschäftsbedingungen des Anbieters eine Klausel
+befindet, die die Informationspflicht regelt135.
+Da es sich bei Glücksspielgeschäften wohl ausschließlich um Konsumenten handelt, wird
+eine Beschränkung oder der gänzliche Ausschluss der Informationspflichten nicht zulässig
+sein.
+Wird ein Vertrag mittels individueller Kommunikation, wie zB SMS oder Email
+geschlossen, findet der Abs. 1 des § 9 ECG keine Anwendung, da sich dies nicht
+wesentlich von der Abgabe einer herkömmlichen Willenserklärung unterscheidet. Hier
+verwendet der Nutzer nämlich kein vom Anbieter zur Verfügung gestelltes Formular,
+sondern sein eigenes vertrautes Programm, für welches er keine Anleitung benötigt. Da
+hier die Schutzbedürftigkeit des Nutzers nicht gegeben ist, wird diese Ausnahme von den
+Informationspflichten durchaus als gerechtfertigt angesehen. Erfolgt der Vertragsabschluss
+per Email, und verwendet der Nutzer ein Formular des Anbieters, wird es sich nicht um
+eine Ausnahme handeln, da hier der Nutzer dadurch, dass es sich nicht um sein eigenes
+Programm handelt, durchaus schutzbedürftig ist.
+133
+
+Laga/Sehrschön, E-Commerce-Gesetz, 46.
+
+134
+
+Blume/Hammerl, ECG 91.
+
+135
+
+Burgstaller/Minichmayr, E-Commerce-Gesetz 83.
+
+Quelle: http://rechtsprobleme.at
+
+45
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+Nach § 9 Abs. 4 ECG bleiben sonstige Informationspflichten des Diensteanbieters
+unberührt. Der Sinn dieser Bestimmung, der schon in ErwG 11 der EC-RL zum Ausdruck
+kommt, ist, dass jene Schutzbestimmungen, die insbesondere der öffentlichen Gesundheit
+oder dem Verbraucherschutz dienen, unberührt bleiben sollen. An dieser Stelle zu
+erwähnen werden die Informationsvorschriften bei Vertragsabschlüssen im Fernabsatz
+sein, da es sich bei Glücksspielgeschäften naturgemäß um Verbrauchergeschäfte handelt.
+Auf die Bestimmungen des § 5c und 5d KSchG wird später noch näher eingegangen136.
+§ 10 Abs. 1 ECG verpflichtet den Diensteanbieter, dem Nutzer angemessene, wirksame
+und zugängliche technische Mittel zur Verfügung zu stellen, mit denen der Nutzer
+Eingabefehler rechtzeitig - also vor der Abgabe seiner Vertragserklärung - erkennen und
+berichtigen kann. Diese Bestimmung ist somit als sinnvolle Ergänzung zu § 9 ECG zu
+sehen, und soll den Nutzer ebenfalls vor Eingabefehlern schützen. Praktisch gesehen
+kommt der Diensteanbieter dieser Verpflichtung dadurch nach, dass er zB nach dem OKButton dem Nutzer nochmals seine Eingabe vor Augen führt, und ihm nochmals die
+Möglichkeit einräumt diese zu bestätigen bzw. zu korrigieren. Das Gesetz spricht zwar nur
+von Eingabefehlern, doch sind darunter auch jene Fälle zu subsumieren, bei denen der
+Nutzer überhaupt keine Erklärung abgeben wollte, da der tatsächliche Ursprung des
+Eingabefehlers wohl schwer zu eruieren sein wird137.
+Gemäß § 10 Abs. 2 ECG hat der Diensteanbieter dem Nutzer den Zugang einer
+elektronischen Vertragserklärung unverzüglich elektronisch zu bestätigen. Diese
+Bestätigung kann auch automatisch erfolgen. Grundsätzlich ist dies keine rechtlich
+relevante Erklärung für den Vertragsabschluss, sondern dient lediglich zur Information für
+den Nutzer, ob seine Erklärung beim Anbieter angekommen ist oder nicht. Für die Frage,
+wann eine Vertragserklärung als zugegangen gilt, ist die Empfangstheorie des allgemeinen
+Zivilrechts (§ 862 a ABGB) anzuwenden. Eine Erklärung gilt demnach als zugegangen,
+wenn sie derart in den Machtbereich des Empfängers gelangt ist, dass dieser nach
+normalen Umständen von ihr Kenntnis erlangt. Die Verpflichtung zur Absendung einer
+Empfangsbestätigung entsteht daher dann, wenn die Erklärung in der Mailbox des
+Empfängers einlangt. Wie lange eine einmal abgesendete Erklärung widerrufen werden
+136
+
+Blume/Hammerl, ECG 94.
+
+137
+
+Burgstaller/Minichmayr, E-Commerce-Gesetz 83.
+
+Quelle: http://rechtsprobleme.at
+
+46
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+kann, ist ebenfalls nach dem allgemeinen Zivilrecht zu beantworten. Solange die
+Erklärung dem Empfänger nicht zugegangen ist, kann sie jedenfalls widerrufen werden
+(862a ABGB). Kann der Empfänger die Erklärung und den Widerruf der Erklärung zur
+gleichen Zeit abrufen, zB wenn sie außerhalb der Geschäftszeit abgesendet wurden, und zu
+Beginn des nächsten Werktages gelesen werden, wird der Widerruf als rechtzeitig
+angesehen. Dem Erfordernis der unverzüglichen Bestätigung kommt der Anbieter dadurch
+nach, dass er diese ohne schuldhafte Verzögerung absendet. Von der Absendung einer
+Bestätigung kann nur dann abgesehen werden, wenn der Anbieter die Leistung sofort
+online erbringt. Sanktioniert wird ein Verstoß des Anbieters gegen § 10 Abs. 2 nicht, doch
+stehen dem Nutzer auch hier die Möglichkeiten der Irrtumsanfechtung bzw. der Forderung
+von Schadenersatz zu. Wie schon bei § 9 ECG dargestellt, sind auch diese Bestimmungen
+nicht zum Nachteil des Verbrauchers abzubedingen138.
+§
+
+11
+
+ECG
+
+regelt
+
+die
+
+Verpflichtung
+
+des
+
+Diensteanbieters
+
+dem
+
+Nutzer
+
+die
+
+Vertragsbestimmungen und die allgemeinen Geschäftsbedingungen so zur Verfügung zu
+stellen, dass er sie speichern und wiedergeben kann. Diese Verpflichtung kann nicht zum
+Nachteil des Nutzers abbedungen werden, d.h. sowohl im geschäftlichen Verkehr
+zwischen Unternehmern als auch bei Rechtsgeschäften zwischen privaten Vertragspartnern
+ist diese Regelung zwingend139.
+Unter Vertragsbestimmungen und allgemeinen Geschäftsbedingungen werden jene
+verstanden, die für jeden einzelnen Geschäftsfall individuell ausgearbeitet werden und jene
+die in den Vertragsformblättern enthalten sind, und ohne die der Vertragspartner nicht
+kontrahiert. Keine Rolle für die Qualifikation als AGB spielt die Gestaltung, auch auf
+Datenträger gespeicherte Bedingungen kommt AGB-Charakter zu140. Nicht geregelt in § 11
+ECG ist, wie diese Bestimmungen überhaupt Vertragsinhalt werden. Hier kommen, wie
+dies auch in den EB-RV141 ersichtlich ist, die herkömmlichen Regelungen zur Anwendung.
+AGB werden grundsätzlich nur dann Vertragsinhalt, wenn diese ausdrücklich oder
+schlüssig zwischen den Vertragspartnern vereinbart wurden, der Verwender der Klauseln
+deutlich darauf hinweist, und dem Nutzer die Möglichkeit zur Einsichtnahme gewährt. Im
+138
+
+Blume/Hammerl, ECG 95ff.
+
+139
+
+Laga/Sehrschön, E-Commerce-Gesetz, 53f.
+
+140
+
+Blume/Hammerl, ECG 99ff.
+
+141
+
+Vgl. Pkt. 2 der EB zu § 11.
+
+Quelle: http://rechtsprobleme.at
+
+47
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+elektronischen Geschäftsverkehr wird es ausreichen, wenn der Anbieter mit einem deutlich
+hervorgehobenen Button mit der Aufschrift ABG auf das Vorhandensein dieser
+aufmerksam macht, und der Nutzer diesen Hinweis vor Abgabe seiner Willenserklärung
+erhält. Die ABG müssen ferner dem Anspruch der Lesbarkeit und der Verständlichkeit
+standhalten, da sonst nicht, wie in § 11 ECG gefordert, von einer zumutbaren
+Kenntnisnahme gesprochen werden kann. Handelt es sich um ein umfangreiches
+Klauselwerk, wie dies bei komplexeren Geschäftsinhalten durchaus der Fall sein kann,
+müssen sie dem Nutzer zumindest in einer überschaubaren Gliederung und in
+angemessener Schriftgröße nahe gebracht werden, um dem Erfordernis in § 11 ECG
+gerecht zu werden. Generell sollte das Klauselwerk aber eher kurz gefasst sein142.
+Bei Verbrauchergeschäften wird jedoch die Ansicht vertreten, dass umfangreiche
+Regelwerke, auch wenn sie der Nutzer ohne Mühe und Kosten speichern oder ausdrucken
+kann, keinesfalls Vertragsbestandteil werden143.
+Eine Streitfrage ist, inwieweit fremdsprachige AGB wirksamer Vertragsbestandteil
+werden. Dabei wird davon auszugehen sein, dass im Geschäftsverkehr zwischen
+Unternehmern AGB, die in englischer Sprache abgefasst werden, ohne weiteres einer
+wirksamen Einbeziehung unterliegen144. Im Verbrauchergeschäft wird man davon nicht
+ausgehen können. Wenn AGB und Bestellformular in derselben Sprache abgefasst sind,
+und der Nutzer trotz nicht vorhandener Übersetzungsmöglichkeit der AGB seine
+Willenserklärung abgibt, signalisiert er damit zwar, dass er die betreffende Fremdsprache
+versteht, ob sie aber wirksamer Vertragsbestandteil werden bleibt unklar, da nicht
+zweifelsfrei festgestellt werden kann, ob der Nutzer auch den juristischen Klauseltext
+ausreichend verstanden hat. Der Anbieter ist nicht verpflichtet mehrere Sprachen
+anzubieten, doch wenn er dies tut, muss er jene Sprachen, die zur Auswahl stehen auch
+angeben. Nicht geregelt in § 11 ECG ist, zu welchem Zeitpunkt die Speicher- und
+Reproduzierbarkeit gegeben sein muss. Sollen sie aber wirksamer Vertragsbestandteil
+werden, muss dies jedenfalls vor Vertragsabschluss sein. Abgesehen von den
+Erfordernissen des § 11 ECG sind die AGB auch hinsichtlich ihrer Geltung und ihrer
+142
+
+Blume/Hammerl, ECG 99ff.
+
+143
+
+Fallenböck/Haberler, Rechtsfragen bei Verbrauchergeschäften im Internet (Online-Retailing), RdW 1999,
+
+505 (507).
+144
+
+Mottl in Gruber/Mader, Privatrechtsfragen des e-commerce 28.
+
+Quelle: http://rechtsprobleme.at
+
+48
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+inhaltlichen Zulässigkeit zu prüfen. Hierbei regelt § 864a ABGB, dass Klauseln, die schon
+wirksam vereinbart wurden, dann nicht Vertragsbestandteil werden, wenn sie
+überraschend, ungewöhnlich und nachteilig sind. Der Vertrag gilt dann ohne diese
+Klauseln als zustande gekommen. § 879 Abs. 3 ABGB erklärt Regelungen, die nicht eine
+der beiderseitigen Hauptleistungen betreffen, dann als nichtig, wenn sie einen Teil
+gröblich benachteiligen. Bezüglich der Frage, mit welchen technischen Möglichkeiten der
+Anbieter dem Nutzer die Speicher- und Reproduzierbarkeit zur Verfügung stellen muss,
+wird in der Lehre keine einheitliche Meinung vertreten. Einerseits wird die Meinung
+vertreten, dass es vollkommen ausreicht, wenn der Klauseltext während des
+Bestellvorgangs zum Download zur Verfügung steht145, andererseits hätte der
+Diensteanbieter dem Nutzer eine Speicherung und Reproduktion zu ermöglichen, wie etwa
+durch Versand per Email oder durch eine eigene Download-Funktion146. Keinesfalls kann
+vom Nutzer verlangt werden, dass er den Online-Inhalt kopiert und dann selbständig in ein
+Textformat einfügt. Problematisch für den Diensteanbieter, um dem Erfordernis der
+Speicher- und Reproduzierbarkeit nachzukommen, sind jene Geräte, bei denen der Abruf
+und die Speicherung von großen Textmengen fast unmöglich sind. Praktisches Beispiel ist
+hier das Mobiltelefon, wo nicht nur aufgrund der Größe des Displays die Abrufbarkeit
+beschränkt ist, sondern auch kaum Speicherkapazität besteht. Hier wird es aber ausreichen,
+wie eingangs schon erwähnt, wenn der Anbieter einen Verweis auf seine Homepage setzt.
+Verstößt der Diensteanbieter gegen die Vorschriften des § 11 ECG, ändert dies zwar nichts
+am Zustandekommen des Vertrages inklusive der vereinbarten AGB, er begeht jedoch eine
+Verwaltungsübertretung gemäß § 26 Abs. 1 Z 5 ECG, die mit Geldstrafe bis zu € 3.000,-zu bestrafen ist147.
+Die Österreichischen Lotterien GmbH weisen auf ihrer Spieleplattform win2day.at, bei
+Aufruf eines dort angebotenen Spiels, deutlich auf die Spielbedingungen hin. Eine eigene
+Speicher- oder Druckmöglichkeit wird zwar nicht angeboten, doch wird es ausreichen,
+dass der Text über die Funktionalität des Browsers ausgedruckt werden kann an. Der
+Umfang und die Gestaltung der Spielbedingungen, wie nachstehend ersichtlich, befinden
+145
+
+Glatt, Vertragsabschluss im Internet - Die Artikel 9 bis 11 der E-Commerce-Richtlinie und ihre Umsetzung
+
+im deutschen Recht, ZUM 2001, 390 (391).
+146
+147
+
+Fallenböck, Internet und IPR - Zu den internationalen Dimensionen des Electronic Commerce (2001) 92.
+Blume/Hammerl, ECG 104.
+
+Quelle: http://rechtsprobleme.at
+
+49
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+sich an der Grenze des Zumutbaren, da das Klauselwerk generell eher knapp abgefasst sein
+sollte. Bei Glücksspielangeboten über Mobiltelefone wird wohl auch die Variante des
+Verweises auf die Homepage zur Anwendung gelangen.
+
+SPIELBEDINGUNGEN ELEKTRONISCHE LOTTERIEN148
+1.
+
+Gesetzliche Grundlage
+
+Durch die Teilnahme an den Elektronischen Lotterien anerkennt der Spielteilnehmer die nachstehenden
+Bedingungen und verpflichtet sich, diese einzuhalten.
+1.1 Gesetzliche Grundlage für die Durchführung der Elektronischen Lotterien ist das Glücksspielgesetz 1989,
+BGBl. Nr. 620/1989 in der geltenden Fassung.
+1.2 Die Elektronischen Lotterien im Sinne des Gesetzes sind Ausspielungen, bei denen der Spielvertrag über
+elektronische Medien abgeschlossen, die Entscheidung über Gewinn oder Verlust zentralseitig herbeigeführt
+oder zur Verfügung gestellt wird und der Spielteilnehmer unmittelbar vom Ergebnis dieser Entscheidung
+Kenntnis erlangen kann.
+1.3 Der Betrieb der Elektronischen Lotterien ist ein ausschließliches Recht des Bundes. Die Österreichische
+Lotterien Gesellschaft m.b.H. (mit Sitz in Wien, eingetragen im Firmenbuch des Handelsgerichtes Wien zu FN
+54472 g, im Folgenden kurz „Gesellschaft“ genannt) ist gemäß der ihr vom Bund erteilten Konzession zur
+Durchführung der Elektronischen Lotterien berechtigt.
+1.4 Für die Durchführung der Elektronischen Lotterien hat die Gesellschaft Spielbedingungen aufzustellen, die
+in der jeweils letzten veröffentlichten Fassung gültig sind. Die Gültigkeit der Spielbedingungen tritt mit dem
+Tag ein, der ihrer Veröffentlichung im Amtsblatt zur Wiener Zeitung folgt.
+2. Gegenstand der Elektronischen Lotterien
+2.1 Die Elektronischen Lotterien sind Ausspielungen, die auf elektronischem Weg in verschiedenen
+Spielformen gemäß den jeweiligen Ergänzungsspielbedingungen durchgeführt werden.
+Gegenstand der Elektronischen Lotterien ist der Abschluss eines Spielvertrages aufgrund des Anbotes des
+Spielteilnehmers auf dem dafür vorgesehenen elektronischen Weg zum Zweck der Erzielung eines allfälligen
+Gewinnes. Jeder Spielteilnehmer an den Elektronischen Lotterien kann einen allfälligen Gewinn und dessen
+Höhe unmittelbar nach Spielteilnahme feststellen.
+2.2 Die jeweiligen Gewinnchancen werden in den zur Spieldurchführung verwendeten elektronischen Medien
+ersichtlich gemacht.
+
+148
+
+http://www.win2day.at/gaming/index.html (06.07.03).
+
+Quelle: http://rechtsprobleme.at
+
+50
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+3. Teilnahmevoraussetzungen
+3.1 Der Spielteilnehmer hat vor Spielteilnahme eine Anmeldung dergestalt durchzuführen, dass er die zur
+Registrierung erforderlichen persönlichen Daten sowie die Daten seiner österreichischen Bankverbindung der
+Gesellschaft auf dem dafür vorgesehenen elektronischen Weg bekannt gibt. Die allfällig erforderliche SpielSoftware ist durch den Spielteilnehmer auf den zur Teilnahme erforderlichen technischen Geräten zu
+installieren. Die Gesellschaft hat das Recht, aus wichtigen Gründen die Registrierung zu verweigern.
+3.2 Personen unter 16 Jahren sowie Personen, die über kein österreichisches Bankkonto verfügen, sind von
+der Spielteilnahme ausgeschlossen. Eine Spielteilnahme von außerhalb Österreichs ist unzulässig.
+3.3 Nach Übermittlung der vorgenannten Daten erfolgt eine Registrierung des Spielteilnehmers auf
+elektronischem Weg.
+3.4 Nach erfolgter Registrierung hat der Spielteilnehmer eine Dotierung seines elektronischen Spielguthabens
+vorzunehmen, über das der Spielteilnehmer seine Einsätze leistet und dem allfällig erzielte Gewinne
+gutgeschrieben werden.
+3.5 Es werden folgende Formen der Dotierung angeboten:
+3.5.1 Dotierung mittels Prepaid Card:
+Die Gesellschaft legt Prepaid Cards mit verschiedenen Nominalwerten auf, mit welchen das elektronische
+Spielguthaben dotiert werden kann. Die Dotierung mittels Prepaid Card erfolgt dergestalt, dass der
+Spielteilnehmer nach Erwerb den abgedeckten Zahlencode freilegt und die mehrstellige Zahlenkombination der
+Gesellschaft auf dem dafür vorgesehenen elektronischen Weg bekannt gibt. Nach entsprechender Prüfung
+durch die Gesellschaft erfolgt die Dotierung des elektronischen Spielguthabens. Durch die erfolgte Dotierung
+verliert die Prepaid Card ihren Wert.
+3.5.2 Dotierung mittels Kreditkarte:
+Der Spielteilnehmer kann das elektronische Spielguthaben auch mittels Kreditkarten jener Unternehmen, zu
+denen die Gesellschaft in vertraglichen Beziehungen steht, auf dem dafür vorgesehenen elektronischen Weg
+dotieren.
+3.5.3 Dotierung mittels sonstigen Zahlungsprovider:
+Der Spielteilnehmer kann das elektronische Spielguthaben auch mittels jenen Zahlungsformen der jeweiligen
+Zahlungsprovider, zu denen die Gesellschaft in vertraglichen Beziehungen steht auf dem dafür vorgesehen
+elektronischen Weg dotieren.
+3.6 Die Gesellschaft ist berechtigt, bestehende Dotierungsmöglichkeiten außer Kraft zu setzen bzw. andere
+Möglichkeiten zur Dotierung des elektronischen Spielguthabens in Kraft zu setzen.
+3.7 Nach erfolgter Dotierung können Einsätze zur Spielteilnahme vom elektronischen Spielguthaben geleistet
+werden. Dotierungen des elektronischen Spielguthabens sind bis zu einem Gesamtwert von EUR 1.000,möglich, wobei der Spielteilnehmer je Woche eine maximale Dotierung in Höhe von EUR 500,- vornehmen
+kann.
+
+Quelle: http://rechtsprobleme.at
+
+51
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+4. Teilnahmeberechtigung und Spielvertrag
+4.1 Der Preis je Spiel wird von der Gesellschaft in den jeweiligen zur Spieldurchführung verwendeten
+elektronischen Medien ersichtlich gemacht. Die Gesellschaft hat das Recht, Maximaleinsätze festzulegen.
+4.2 Wer entsprechend den Spielbedingungen die Teilnahmevoraussetzungen erfüllt, den von der Gesellschaft
+festgesetzten Preis je Spiel entrichtet (außer in den Fällen, in denen Spielteilnehmern von der Gesellschaft
+Gratisspiele zur Verfügung gestellt werden) und den jeweils erforderlichen Spielakt auf dem dafür
+vorgesehenen elektronischen Weg setzt, ist zur Teilnahme an den Elektronischen Lotterien berechtigt. Stellt
+die Gesellschaft Spielteilnehmern aus besonderem Anlass Gratisspiele zur Verfügung, so dotiert die
+Gesellschaft lediglich die auf diese Gratisspiele entfallende Gewinnsumme.
+4.3 Der Spielvertrag zwischen der Gesellschaft und dem Spielteilnehmer wird abgeschlossen, wenn das Anbot
+des Spielteilnehmers durch Setzung des jeweiligen Spielaktes auf dem dafür vorgesehenen elektronischen Weg
+bei der Gesellschaft einlangt, durch Abbuchung des Spieleinsatzes vom elektronischen Spielguthaben des
+Spielteilnehmers angenommen wird, entsprechend gesichert und auswertbar ist. Bei Fehlen einer dieser
+Voraussetzungen kommt der Spielvertrag nicht zustande. Über die Spielteilnahme wird von der Gesellschaft
+für jeden Spielteilnehmer ein Transaktionsprotokoll geführt.
+4.4 Wird die Datenübertragung oder Anzeige von übermittelten Daten nach Abschluss des Spielvertrages, aus
+welchem Grunde immer, unterbrochen, ist nach Wiederherstellung der elektronischen Verbindung das Spiel
+fortzusetzen bzw. ist das Spielergebnis dem Spielreport auf dem dafür vorgesehenen elektronischen Weg zu
+entnehmen. Für den Fall, dass der Spielteilnehmer ein begonnenes Spiel nicht spätestens innerhalb von 6
+Monaten nach Spielbeginn fortsetzt, wird das Spiel ohne Gewinnermittlung beendet. Der Einsatz wird nicht
+rückerstattet.
+4.5 Der Spielteilnehmer hat die Möglichkeit, auf dem dafür vorgesehenen elektronischen Weg seine
+Geschäftsverbindung zur Gesellschaft zu beenden (Selbstsperre). Diesfalls werden dem Spielteilnehmer die auf
+seinem elektronischen Spielguthaben erliegenden Beträge auf das bekannt gegebene österreichische
+Bankkonto zur Anweisung gebracht.
+4.6 Die Gesellschaft hat ihrerseits das Recht, die Geschäftsverbindung zu Spielteilnehmern jederzeit unter
+Anweisung der auf dem elektronischen Spielguthaben erliegenden Beträge auf das bekannt gegebene
+österreichische Bankkonto zu beenden bzw. die Annahme einzelner Spielakte aus wichtigen Gründen zu
+verweigern.
+5. Gewinnausschüttung
+5.1 Die Gesellschaft wird den jeweiligen Gewinnplan je Spiel in den zur Spieldurchführung verwendeten
+elektronischen Medien ersichtlich machen und als Bestandteil der Spielbedingungen im Amtsblatt zur Wiener
+Zeitung veröffentlichen.
+
+Quelle: http://rechtsprobleme.at
+
+52
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+5.2 Die Gewinne entfallen auf die dem Gewinnplan entsprechenden Ergebnisse.
+5.3 Die jeweiligen Ausschüttungsprozentsätze der Elektronischen Lotterien werden in den diesbezüglichen
+Ergänzungsspielbedingungen festgelegt. Die Gesellschaft hat die Möglichkeit, alle oder einzelne
+Gewinnklassen mit Sach- und/oder Geldwerten höher zu dotieren.
+6. Auszahlungen
+6.1 Die erzielten Gewinne werden dem elektronischen Spielguthaben des Spielteilnehmers gutgeschrieben.
+Dem Spielteilnehmer steht eine Frist von 4 Wochen offen, um einen nicht gutgeschriebenen Gewinn zu
+reklamieren.
+6.2 Auszahlungen aus dem elektronischen Spielguthaben erfolgen durch Überweisung auf das bekannt
+gegebene österreichische Bankkonto des Spielteilnehmers. Auszahlungen erfolgen nach Anforderung des
+Spielteilnehmers oder auf Veranlassung der Gesellschaft auf dem dafür vorgesehenen elektronischen Weg mit
+jeweils schuldbefreiender Wirkung für die Gesellschaft. Dabei anfallende Auszahlungsgebühren trägt der
+Spielteilnehmer.
+6.3 Im elektronischen Spielguthaben erliegende Gewinne, die dem Berechtigten über Anforderung nicht auf
+das bekannt gegebene österreichische Bankkonto überwiesen werden können, können binnen sechs Monaten
+nachweislich bei der Gesellschaft reklamiert werden. Im Falle verspäteter Geltendmachung ist der Anspruch
+erloschen.
+6.4 Im elektronischen Spielguthaben erliegende Gewinne, worunter auch Gewinne aus Spielbeteiligungen im
+Inland sowie im in eine Poolung einbezogenen Ausland zu verstehen sind sowie geleistete Dotierungen des
+Spieldepots, die ohne Setzung weiterer Spielakte durch den Spielteilnehmer nach Ablauf einer Frist von 6
+Monaten (Gewinne) bzw. 3 Jahren (Akontierungen) nach fruchtlosem Anweisungsversuch und darauf
+folgendem erfolglosem Kontaktierungsversuch nicht überwiesen werden konnten bzw. nicht reklamiert
+wurden, werden von der Gesellschaft bzw. den in die Poolung einbezogenen Gesellschaften zur Gänze für die
+Spielteilnehmer an den Ausspielungen verwendet. Der Modus hinsichtlich der Frist der Erbringung der
+Leistung der Spielteilnehmer sowie die Höhe der Zuteilung der Zuwendungen ist im Einzelfall festzustellen;
+die widmungsgemäße Verwendung wird jährlich durch einen Wirtschaftsprüfer überprüft.
+7. Haftung
+7.1 Die Gesellschaft haftet den Spielteilnehmern für alle Schäden, die von ihr nach Abschluss des
+Spielvertrages grob fahrlässig oder vorsätzlich verursacht werden.
+7.2 Die Gesellschaft haftet nicht für Verschulden aller sonstiger mit der Übermittlung der Daten Beauftragter.
+Ebenso haftet sie auch nicht für Schäden, die durch strafbare Handlungen dritter Personen, durch höhere
+Gewalt oder sonstige Gründe verursacht werden, die die Gesellschaft nicht zu vertreten hat.
+7.3 Die Auswahl der Spiele obliegt dem Spielteilnehmer. Die Gesellschaft ist nicht haftbar für eine
+Spielteilnahme, die nicht in der Absicht des Spielteilnehmers liegt.
+
+Quelle: http://rechtsprobleme.at
+
+53
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+7.4 Die Gefahr für das Einlangen der auf dem vorgesehenen elektronischen Weg übermittelten Daten bei der
+Gesellschaft trägt ausschließlich der Spielteilnehmer. Die Haftung für nicht übermittelte oder aus anderen
+Verstößen gegen die Spielbedingungen nicht ordnungsgemäß bei der Gesellschaft einlangenden Daten liegt
+daher nicht bei der Gesellschaft.
+
+8. Spielgeheimnis
+8.1 Die Gesellschaft ist zur Wahrung des Spielgeheimnisses verpflichtet. Insbesondere darf der Name des
+Gewinners nur mit dessen ausdrücklicher Zustimmung bekannt gegeben werden.
+9. Schlussbestimmungen
+9.1 Diese Spielbedingungen werden nach Bewilligung durch den Bundesminister für Finanzen im Amtsblatt
+zur Wiener Zeitung verlautbart.
+9.2 Erfüllungsort und Gerichtsstand bei Rechtsstreitigkeiten ist Wien. Es ist nach österreichischem Recht zu
+entscheiden.
+
+Wird nun vom Nutzer eine Willenserklärung abgegeben, muss diese, um rechtliche
+Wirkungen entfalten zu können, dem Empfänger zugehen. Für den herkömmlichen
+Geschäftsverkehr regelt dies § 862a ABGB. Der Zugang tritt dann ein, wenn der
+Empfänger von der Erklärung Kenntnis erlangt, bzw. wenn unter normalen Umständen mit
+der Kenntnisnahme gerechnet werden kann, wenn sie also in den „Machtbereich“ des
+Empfängers gelangt149.
+Für elektronische Vertragserklärungen, andere rechtlich erhebliche elektronische
+Erklärungen und elektronische Empfangsbestätigungen regelt § 12 ECG, dass sie dann als
+zugegangen gelten, wenn sie die Partei, für die sie bestimmt sind, unter gewöhnlichen
+Umständen abrufen kann. § 12 ECG ergänzt daher nur das nationale Recht, da es auch hier
+um das Einlangen der Erklärung in den „Machtbereich“ des Empfängers geht. Dies ist
+dann der Fall, wenn der Empfänger die Vertrags- oder sonstige Erklärung abrufen kann. §
+12 ECG ist unabhängig davon anzuwenden, ob an der elektronischen Kommunikation ein
+Diensteanbieter beteiligt ist oder nicht. D.h., dass es sich um keinen Dienst der
+Informationsgesellschaft im Sinn des § 3 Z 1 ECG handeln muss. Sowohl auf den bloßen
+149
+
+Zankl, Rechtsqualität und Zugang von Erklärungen im Internet, ecolex 2001, 344.
+
+Quelle: http://rechtsprobleme.at
+
+54
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+Austausch von Email-Erklärungen zwischen Unternehmern, als auch in einem
+Verbrauchergeschäft oder zwischen Privaten untereinander sind diese Zugangsregeln
+anzuwenden. Der Absender kann dann mit der Kenntnisnahme durch den Empfänger
+rechnen, wenn Störungen nur mehr in seiner Sphäre, nicht aber beim Absender oder bei
+der „Übermittlungsanstalt“ möglich sind. Auch hier hat man, wie im herkömmlichen
+Recht, die Abgrenzung der Verantwortung durch die Sphärentheorie vorgenommen. Daher
+können technische Störungen die auf Seiten des Empfängers auftreten keinesfalls mehr
+dem Absender zur Last fallen. Bei kommerziellen Empfängern kann weiters nicht davon
+ausgegangen werden, dass eine Erklärung die während der Nachtzeiten oder am
+Wochenende einlangt, als zugegangen gilt. Der Zugang wird hier erst mit Beginn der
+Geschäftszeiten rechtlich wirksam, außer es ist für den Absender erkennbar, dass der
+Empfänger auch außerhalb der Geschäftszeiten erhaltene Erklärungen abruft und
+bearbeitet150.
+§ 12 ECG ist grundsätzlich dispositives Recht, daher kann die rechtliche Wirksamkeit der
+Erklärung auch erst mit der Empfangsbestätigung oder der Absendung eintreten. Zum
+Nachteil von Verbrauchern kann diese Bestimmung nicht abbedungen werden, und stellt
+daher neben § 6 Abs. 1 Z 3 und Z 4 KSchG eine weitere zwingende Zugangsregelung
+dar151.
+
+3.2.4 Verantwortlichkeit von Diensteanbietern
+In den §§ 13 ff ECG wird insbesondere der Ausschluss der Verantwortlichkeit bei
+Durchleitung, bei Zwischenspeicherungen (Caching) und bei Speicherung fremder Inhalte
+(Hosting) geregelt. Grundtenor dieser Bestimmung ist, dass Zugangsvermittlungs- und
+Übermittlungsdienste haftungsfrei gestellt werden152. Auf die Haftung von eingeschalteten
+Dienstleistern von Glücksspielveranstaltern wurde jedoch schon in Kapitel 2.2.5.1
+„Grenzüberschreitende Tätigkeit durch Internet-Spiele“ näher eingegangen, und sei an
+dieser Stelle darauf verwiesen.
+150
+
+Burgstaller/Minichmayr, E-Commerce-Gesetz 97ff.
+
+151
+
+Blume/Hammerl, ECG 110.
+
+152
+
+Laga/Sehrschön, E-Commerce-Gesetz, 58ff.
+
+Quelle: http://rechtsprobleme.at
+
+55
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+3.2.5 Herkunftslandprinzip und Ausnahmen vom Herkunftslandprinzip
+Das Herkunftslandprinzip, welches in § 20 ECG geregelt ist, besagt, dass sich im
+koordinierten Bereich die rechtlichen Anforderungen an einen in einem Mitgliedsstaat
+niedergelassenen Diensteanbieter nach dem Recht dieses Staates richten. In § 21 ECG sind
+jene Bereiche angeführt, in welchen das Herkunftslandprinzip nicht anzuwenden ist.
+Darunter befinden sich auch die Gewinn- und Glücksspiele, bei denen ein Einsatz, der
+einen Geldwert darstellt, zu leisten ist, einschließlich der Lotterien und Wetten. Zur
+Definition von Glücksspielen kann auf § 1 Abs. 1 GSpG verwiesen werden. Gewinn- und
+Glücksspiele, bei denen die Teilnahme kostenlos ist, fallen nicht unter die Ausnahme,
+daher ist für das Vorliegen des Ausnahmetatbestandes wesentlich, dass die Teilnehmer
+einen geldwerten Einsatz zu leisten haben. Die Einschränkung der Dienstleistungsfreiheit
+wird, wie schon oben dargestellt, und in einheitlicher Rechtssprechung vom EuGH
+entschieden153, mit dem Ausmaß der sozialpolitischen Dimension gerechtfertigt154.
+
+3.3 Zur Anwendbarkeit des Fernabsatz-Gesetzes
+Die Fernabsatz-RL155 wurde durch das Fernabsatz-Gesetz156 im Rahmen einer Novelle des
+Konsumentenschutzgesetzes (KSchG) in österreichisches Recht umgesetzt. Neu geschaffen
+wurden insbesondere die §§ 5a ff KSchG (Info-Pflichten). Das Fernabsatz-Gesetz zielt vor
+allem darauf ab, den Verbraucher157 bei „Distanzgeschäften“, also jenen Verträgen, bei
+153
+
+EuGH 21.9.1999, Rs. C-124/97 (Läärä), Slg. 1999 I-6067; EuGH 21.10.1999, Rs. C-67/98 (Zenatti), Slg.
+
+1999 I-7289; EuGH 24.3.1994, Rs. C-275/92 (Schindler), Slg. 1994 I-1039.
+154
+
+Blume/Hammerl, ECG 206f.
+
+155
+
+RL 1997/7/EG des Europäischen Parlaments und des Rates v 20.5.1997 über den Verbraucherschutz bei
+
+Vertragsabschlüssen im Fernabsatz, ABl L 144 v 4.6.1997.
+156
+
+Bundesgesetz,
+
+mit dem Bestimmungen über
+
+den
+
+Vertragsabschluß
+
+im Fernabsatz
+
+in das
+
+Konsumentenschutzgesetz eingefügt und das Bundesgesetz gegen den unlauteren Wettbewerb sowie das
+Produkthaftungsgesetz geändert werden (Fernabsatz-Gesetz), BGBl I 1999/185.
+157
+
+Ausschließliche Anwendbarkeit des KSchG auf Transaktionen zwischen Unternehmern und Verbrauchern
+
+(§ 1 Abs 1 KSchG).
+
+Quelle: http://rechtsprobleme.at
+
+56
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+denen die Vertragspartner nicht physisch anwesend sind, durch Sondervorschriften zu
+schützen158.
+Im Gegensatz zum ECG, in welchem neben den Vertragsabschlüssen insbesondere auch
+Haftungs- und Zulassungsfragen der Diensteanbieter geregelt werden, regelt das
+FernabsatzG
+
+ausschließlich
+
+den
+
+Vertragsabschluss
+
+zwischen
+
+Unternehmer
+
+und
+
+Verbraucher. Der Bereich Vertragsabschluss umfasst aber nicht nur die vorvertraglichen
+Pflichten und die Vertragsabwicklung sondern auch mögliche Ansprüche bei
+Leistungsstörungen.
+§ 5a Abs 1 KSchG regelt, dass die §§ 5c bis 5i nur für Verträge gelten, die unter
+ausschließlicher Verwendung eines oder mehrerer Fernkommunikationsmittel geschlossen
+werden, sofern sich der Unternehmer eines für den Fernabsatz organisierten Vertriebsoder
+
+Dienstleistungssystems
+
+bedient.
+
+Abs
+
+2
+
+des
+
+§
+
+5a
+
+KSchG
+
+zählt
+
+jene
+
+Kommunikationsmittel auf, welche als Fernkommunikationsmittel im Sinne des Abs 1 zu
+verstehen sind. Hier relevant, und als letzter Punkt in Abs 2 aufgezählt, sind die öffentlich
+zugänglichen elektronischen Medien, die eine individuelle Kommunikation ermöglichen,
+wie zB die elektronische Post oder die Website auf der der Unternehmer zur
+Anbotsstellung auffordert. Grundsätzlich gelten die Regelungen für jede Vertragsleistung,
+da die in Art. 2 Z 1 der Richtlinie verwendete Formulierung „eine Ware oder eine
+Dienstleistung betreffenden Vertrag“ nicht übernommen wurde. Welche Bereiche explizit
+vom Anwendungsbereich des FernabsatzG ausgenommen sind regelt § 5b KSchG. Die
+zweite Voraussetzung, nämlich, wie schon oben angeführt, dass sich der Unternehmer
+eines für den Fernabsatz organisierten Vertriebs- oder Dienstleistungssystems bedient, ist
+bei
+
+Glücksspielveranstaltern,
+
+die
+
+das
+
+Glücksspiel
+
+über
+
+elektronische
+
+Kommunikationsmittel ermöglichen, aber auch ihre Werbung und das sonstige
+Vertriebssystem über diese Medien anbieten, jedenfalls gegeben. Ausgeschlossen sollen
+nur solche Geschäfte werden, bei denen die typische Situation eines Distanzgeschäftes, mit
+all ihren Risken, nicht gegeben ist.
+§ 5b besagt, dass die in den §§ 5c bis 5i geregelten Informations- und
+Bestätigungspflichten, sowie das Rücktrittsrecht und die Erfüllungspflicht nicht
+anzuwenden ist auf:
+
+158
+
+Haberler, Wbl 2003, 300.
+
+Quelle: http://rechtsprobleme.at
+
+57
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+Z 1: Verträge über Finanzdienstleistungen, wie zB Wertpapierdienstleistungen,
+Versicherungen, Bankdienstleistungen etc,
+Z 2: Verträge über den Bau und den Verkauf von Immobilien oder über sonstige Rechte an
+Immobilien mit Ausnahme der Vermietung,
+Z 3: Verträge, die unter Verwendung von Warenautomaten oder automatisierten
+Geschäftsräumen geschlossen werden, und
+Z 4: Versteigerungen159.
+Da
+
+Glücksspiele
+
+von
+
+diesem
+
+Ausnahmetatbestand
+
+nicht
+
+erfasst
+
+sind,
+
+haben
+
+Glücksspielveranstalter die in den §§ 5c bis 5i geforderten Pflichten ihren
+Vertragspartnern gegenüber jedenfalls zu erfüllen.
+Nach § 5c KSchG müssen dem Verbraucher vor Abgabe seiner Vertragserklärung
+nachstehende Informationen zur Verfügung gestellt werden:
+-
+
+Name oder Firma
+
+-
+
+Anschrift, unter der das Unternehmen niedergelassen ist
+
+-
+
+Wesentliche Eigenschaften der Ware oder Dienstleistung
+
+-
+
+Eindeutige Preisauszeichnung samt Versandkosten
+
+-
+
+Zahlungs- und Liefermodalitäten
+
+-
+
+Hinweis auf ein allenfalls bestehendes Rücktrittsrecht nach § 5e KSchG
+
+-
+
+Kosten für den Einsatz des Fernkommunikationsmittels, sofern diese nicht nach dem
+Grundtarif berechnet werden
+
+-
+
+Gültigkeitsdauer des Angebots und des Preises
+
+-
+
+Mindestlaufzeit des Vertrages bei Dauerschuldverhältnissen oder Bezugs- oder
+Sukzessivlieferungen
+
+Der Verbraucher hat Anspruch darauf, dass ihm diese Informationen nicht nur vor dem
+Vertragsabschluss zur Verfügung gestellt werden, sondern ihm auch schriftlich mitgeteilt
+werden, wobei eine Speicherung auf einem für den Verbraucher dauerhaft verfügbaren
+Datenträger genügt160.
+Nicht anzuwenden ist § 5c KSchG auf:
+-
+
+Hauslieferungen sowie
+
+-
+
+Freizeit-Dienstleistungen
+
+159
+
+Burgstaller/Minichmayr, E-Commerce-Gesetz 189ff.
+
+160
+
+Oberkofler in Barbist/Gruber/Oberkofler/Stomper, Praxishandbuch 121 (129).
+
+Quelle: http://rechtsprobleme.at
+
+58
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+Die unter dem Begriff „Freizeit-Dienstleistungen“ zusammengefassten Leistungen
+beziehen sich vor allem auf touristische Dienstleistungen, wie etwa die Reservierung eines
+Hotelzimmers, aber auch auf Verträge über die Freizeitgestaltung, wie etwa die Bestellung
+von Karten für kulturelle und sportliche Veranstaltungen161.
+Da Glücksspielverträge weder unter den Begriff Hauslieferungen noch unter den Begriff
+Freizeit-Dienstleistungen zu subsumieren sind, wird auf den Ausnahmetatbestand des Abs
+4 hier nicht näher eingegangen. Der Glückspielveranstalter hat somit dem Spieler
+(Verbraucher) die oben genannten Informationen zur Verfügung zu stellen.
+Gemäß § 5d Abs 1 KSchG muss der Verbraucher rechtzeitig während der Erfüllung des
+Vertrages eine schriftliche Bestätigung der in § 5c Abs 1 genannten Informationen
+erhalten, wobei wiederum die dauerhafte Zurverfügungstellung auf einem für den
+Verbraucher zugänglichen Datenträger ausreicht. Weiters sind dem Verbraucher folgende
+Informationen schriftlich oder auf einem Datenträger zu übermitteln:
+-
+
+Informationen über die Bedingungen des Rücktrittsrechts nach § 5e KSchG
+
+-
+
+die geographische Anschrift der Niederlassung des Unternehmers, bei der der
+Verbraucher allfällige Beanstandungen vorbringen kann162.
+
+Die Bestätigungspflicht ist dann ordnungsgemäß erfüllt, wenn die Informationen dem
+Verbraucher dauerhaft zur Verfügung stehen, eine einmalige Information reicht nicht aus.
+Zu den verfügbaren dauerhaften Datenträgern zählen Disketten, CD-Roms aber vor allem
+die Möglichkeit der Übersendung mittels Email163.
+§ 5e Abs 1 KSchG regelt das Rücktrittsrecht von einem im Fernabsatz geschlossenen
+Vertrag bzw. von einer im Fernabsatz abgegebenen Vertragserklärung. Der Verbraucher
+kann ohne Angabe von Gründen und ohne Bezahlung einer Vertragsstrafe zurücktreten.
+Die Rücktrittsfrist für den Verbraucher beträgt 7 Werktage, wobei der Samstag nicht als
+Werktag zählt. Bei Verträgen über die Erbringung von Dienstleistungen beginnt sie mit
+dem Tag des Vertragsabschlusses. Es genügt, wenn die Rücktrittserklärung innerhalb
+dieser Frist abgesendet wird. In Abs 3 kommt es zu einer Verlängerung der
+161
+
+Burgstaller/Minichmayr, E-Commerce-Gesetz 203.
+
+162
+
+Die in Z 3 und Z 4 geforderten Informationen wurden, da sie für Glückspielverträge irrelevant sind, nicht
+
+angeführt.
+163
+
+Mottl in Gruber/Mader, Privatrechtsfragen des e-commerce 36.
+
+Quelle: http://rechtsprobleme.at
+
+59
+
+Onlinespiele in der mobilen Telefonie
+Rücktrittsfristen,
+
+wenn
+
+der
+
+Sabine Hammerl
+
+Unternehmer
+
+seinen
+
+Informationspflichten
+
+nicht
+
+nachgekommen ist. In einem solchen Fall beträgt die Rücktrittsfrist 3 Monate ab dem Tag
+des Vertragsabschlusses. Kommt der Unternehmer seinen Informationspflichten innerhalb
+dieser Frist nach, so beginnt mit dem Zeitpunkt der Übermittlung der Informationen die 7tägige Frist zur Ausübung des Rücktrittsrechts zu laufen. Auch diese Bestimmung soll die
+besonderen Risiken des Fernabsatzgeschäftes entschärfen und eine Rücktrittsmöglichkeit
+bei unüberlegten Vertragsabschlüssen bieten, die dem Verbraucher auch dann zusteht,
+wenn er das Geschäft selbst angebahnt hat164.
+§ 5f KSchG führt in Z 1 - 7 jene Verträge an, bei denen dem Verbraucher nicht die vorhin
+angeführte Rücktrittsmöglichkeit zusteht. Hier sind vor allem jene Leistungen angeführt,
+die im Regelfall vom Verbraucher sofort konsumiert wurden, aber auch jene, bei denen die
+Rückabwicklung wegen kundenspezifischer Anfertigung äußerst schwierig wäre. Eine
+abweichende Vereinbarung, die sich zugunsten des Verbrauchers auswirkt, ist aber gemäß
+§ 2 Abs 2 KSchG jedenfalls
+
+zulässig. In Z 6 sind explizit
+
+Wett- und
+
+Lotteriedienstleistungen angeführt165, doch wird es auch bei Glücksspielverträgen im
+allgemeinen zu einem Ausschluss des Rücktrittsrechtes kommen, da auch hier die Leistung
+vom Verbraucher sofort in Anspruch genommen wird, und sohin die Rückabwicklung
+sinnwidrig wäre166.
+
+4 Relevante
+
+datenschutzrechtliche
+
+Bestimmungen
+
+für
+
+Glücksspielveranstalter
+Glücksspielveranstalter nehmen, als staatlich konzessionierte Veranstalter, den Schutz der
+ihr anvertrauten Daten sehr ernst, und haben über die gesetzlichen Bestimmungen hinaus
+strenge Richtlinien ausgearbeitet, die den Schutz kundenbezogener Daten garantieren
+sollen. Abgesehen von ordnungspolitischen Zielen steht insbesondere der Schutz der
+Privatsphäre im Vordergrund. Kundenbezogene Daten werden bei Übertragung durch eine
+164
+
+Oberkofler in Barbist/Gruber/Oberkofler/Stomper, Praxishandbuch 121 (130).
+
+165
+
+Burgstaller/Minichmayr, E-Commerce-Gesetz 209f.
+
+166
+
+Auf die restlichen Ausnahmetatbestände wird wegen fehlendem Bezug zur Thematik nicht näher
+
+eingegangen.
+
+Quelle: http://rechtsprobleme.at
+
+60
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+Sicherheitsserver-Software verschlüsselt, sodass es unbefugten Dritten unmöglich ist, diese
+während der Datenübertragung zu lesen, ändern oder zu kopieren. Neben den allgemeinen
+Schutzbestimmungen des Datenschutzgesetzes, auf welches wegen des Umfanges nur auf
+die relevanten Bestimmungen eingegangen wird, unterliegen Glücksspielveranstalter den
+Regelungen des § 51 GSpG, der das Spielgeheimnis zum Gegenstand hat167.
+
+4.1 Datenschutzgesetz 2000
+Das DSG 2000168 beinhaltet das Grundrecht auf Datenschutz und regelt im allgemeinen die
+Verwendung personenbezogener Daten. Der Betroffene soll vor Ermittlung seiner Daten
+und auch vor der Weitergabe der über ihn ermittelten Daten geschützt werden. Aufgrund
+der Fülle von Daten, die im Geschäfts- und Rechtsverkehr ausgetauscht werden, kann dies
+natürlich nur unter gewissen Einschränkungen geschehen. § 1 Abs 1 DSG 2000 schützt als
+Verfassungsbestimmung personenbezogene Daten, soweit ein schutzwürdiges Interesse
+daran besteht. Besteht ein schutzwürdiges Geheimhaltungsinteresse, kann dieses
+naturgemäß nur dann geschützt werden, wenn die Geheimhaltung der Daten grundsätzlich
+möglich ist. Nicht möglich wird sie sein, wenn Daten ohnehin öffentlich zugänglich sind.
+Ist die Geheimhaltung möglich, kann der Betroffene auf die Schutzwürdigkeit seiner Daten
+bestehen, wobei jedoch, wie bei jedem anderen Grundrecht zu beachten ist, dass es nicht
+absolut gilt, sondern durch bestimmte, zulässige Eingriffe beschränkt wird. Der einfachste
+Ausnahmetatbestand ist natürlich die Zustimmung des Betroffenen, der über die
+Weitergabe bzw. Veröffentlichung seiner Daten selbst entscheiden kann. Weitere zulässige
+Eingriffe können sich durch Interessen Dritter, die in gewissen Fällen schutzwürdiger sind
+als der Betroffene selbst, ergeben169.
+Gemäß § 6 DSG 2000 müssen die Daten des Betroffenen „nach Treu und Glauben“
+verwendet werden, dh dass der Betroffene über die Umstände des Datengebrauchs und das
+Bestehen und die Durchsetzbarkeit seiner Rechte nicht irregeführt werden darf (Z1). Z2
+des § 6 DSG 2000 statuiert das Zweckbeschränkungsprinzip, nach welchem Daten nur für
+167
+
+http://www.win2day.at (28.07.03).
+
+168
+
+Bundesgesetz über den Schutz der personenbezogenen Daten (Datenschutzgesetz 2000) BGBl 1999/165
+
+idF BGBl 2001/136.
+169
+
+Drobesch/Grosinger, Das neue österreichische Datenschutzgesetz (2000) 93ff.
+
+Quelle: http://rechtsprobleme.at
+
+61
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+festgelegte, eindeutige und rechtmäßige Zwecke ermittelt und nicht in einer mit diesen
+Zwecken unvereinbaren Weise weiterverwendet werden dürfen170.
+§ 7 DSG 2000 enthält die generelle Regel, unter welchen Voraussetzungen die konkrete
+Datenverwendung zulässig ist. Dies ist erstens die Berechtigung des Auftraggebers und
+zweitens die Berücksichtigung der schutzwürdigen Interessen des Betroffenen. Die
+Berechtigung des Auftraggebers wird nach den gesetzlichen Zuständigkeiten oder
+rechtlichen Befugnissen zu prüfen sein. Kann diese Voraussetzung bejaht werden, ist zu
+prüfen, ob schutzwürdige Geheimhaltungsinteressen des Betroffenen entgegenstehen.
+Diese Prüfung erfolgt für nicht-sensiblen Daten nach § 8, und für sensible Daten nach § 9
+DSG 2000171.
+Gemäß § 4 Z 2 DSG 2000 sind sensible Daten Daten natürlicher Personen über ihre
+rassische und ethnische Herkunft, politische Meinung, Gewerkschaftszugehörigkeit,
+religiöse oder philosophische Überzeugung, Gesundheit oder ihr Sexualleben. Alle übrigen
+Daten
+
+können
+
+unter
+
+nicht-sensible
+
+Daten
+
+subsumiert
+
+werden.
+
+Schutzwürdige
+
+Geheimhaltungsinteressen sind bei nicht-sensiblen Daten dann nicht verletzt, wenn:
+-
+
+eine ausdrückliche gesetzliche Ermächtigung oder Verpflichtung zur Verwendung der
+Daten besteht oder
+
+-
+
+der Betroffene der Verwendung seiner Daten zugestimmt hat, wobei ein Widerruf
+jederzeit möglich ist und die Unzulässigkeit der weiteren Verwendung bewirkt, oder
+
+-
+
+lebenswichtige Interessen des Betroffenen die Verwendung erfordern oder
+
+-
+
+überwiegende berechtigte Interessen des Auftraggebers oder eines Dritten die
+Verwendung erfordern172.
+
+Die zulässige Verwendung von nicht-sensiblen Daten wurde in Form einer Generalklausel
+geregelt, die von sensiblen Daten in Form eines taxativen Katalogs in § 9 DSG, auf welche
+hier nicht näher eingegangen wird, da es sich bei kundenbezogenen Daten die
+Glücksspielveranstalter zur Verfügung stehen nicht um sensible Daten handelt.
+Die in § 8 Abs 1 Z 2 DSG 2000 erwähnte Zustimmung des Betroffenen zur Verwendung
+seiner Daten muss gemäß der Definition in § 4 Z 14 DSG 2000 unter folgenden
+Voraussetzungen erfolgen: Sie muss abgegeben werden ohne Zwang, in Kenntnis der
+170
+
+Dohr/Pollirer/Weiss, Datenschutzrecht2 (2002) 63ff.
+
+171
+
+Drobesch/Grosinger, Datenschutzgesetz 133f.
+
+172
+
+§ 8 Abs 1 DSG 2000.
+
+Quelle: http://rechtsprobleme.at
+
+62
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+Sachlage und auf den konkreten Fall bezogen. Der Betroffene muss, bei sonstiger
+Unwirksamkeit der Einwilligung, ausreichend informiert werden173.Weiters muss für ihn
+ersichtlich sein, welche seiner Daten von wem und zu welchem Zweck verwendet
+werden174. Abstrakte Ermächtigungen ohne Bezug zu einem konkreten Sachverhalt sind
+jedenfalls unzulässig. Die Zustimmung kann aber in Zusammenhang mit anderen
+Rechtsgeschäften erteilt bzw auch mit anderen vertraglichen Vereinbarungen abgegeben
+werden175.
+Für Glücksspielveranstalter besonders relevant ist § 15 DSG 2000, der das Datengeheimnis
+regelt. Auftraggeber, Dienstleister, hier Glücksspielveranstalter, und ihre Mitarbeiter
+haben Daten aus Datenanwendungen, die ihnen ausschließlich aufgrund ihrer
+berufsmäßigen Beschäftigung anvertraut wurden oder zugänglich geworden sind,
+unbeschadet sonstiger gesetzlicher Verschwiegenheitspflichten, hier § 51 GSpG, auf
+welchen noch näher einzugehen sein wird, geheim zu halten, soweit kein rechtlich
+zulässiger Grund für eine Übermittlung der anvertrauten oder zugänglich gewordenen
+Daten besteht176.
+Diese Verpflichtung zur Geheimhaltung von Daten, die aufgrund der berufsmäßigen
+Beschäftigung bekannt geworden sind, ist im Verhältnis zu § 51 GSpG, welches ganz
+explizit das Spielgeheimnis regelt, eine allgemeine Schutzbestimmung.
+
+4.2 § 51 GSpG - Das Spielgeheimnis
+§ 51 GSpG besagt, dass Veranstalter von dem Glücksspielmonopol unterliegenden
+Glücksspielen, ihre Organmitglieder, Beschäftigte, Vertragspartner sowie sonst für die
+Veranstalter tätige Personen über die Spieler und deren Teilnahme am Spiel (Gewinn oder
+Verlust) Verschwiegenheit zu bewahren haben. Diese Verpflichtung besteht nicht:
+-
+
+in Verfahren vor Zivil- und Strafgerichten;
+
+-
+
+gegenüber Verlassenschaftsabhandlung- und Pflegschaftsgerichten;
+
+173
+
+Drobesch/Grosinger, Datenschutzgesetz 126f.
+
+174
+
+OGH 6 Ob 16/01 y, JBl 2002, 178 (180).
+
+175
+
+Drobesch/Grosinger, Datenschutzgesetz 125.
+
+176
+
+Dohr/Pollirer/Weiss, Datenschutzrecht2 127ff.
+
+Quelle: http://rechtsprobleme.at
+
+63
+
+Onlinespiele in der mobilen Telefonie
+-
+
+Sabine Hammerl
+
+gegenüber Abgaben- und Finanzstrafbehörden für Zwecke von Abgabenverfahren und
+verwaltungsbehördlichen Finanzstrafverfahren;
+
+-
+
+wenn der Spielteilnehmer der Offenbarung des Geheimnisses ausdrücklich zustimmt.
+
+Die Verschwiegenheit umfasst hier alle Umstände, die Rückschlüsse auf die Spieler, deren
+Teilnahme am Spiel oder darüber ermöglichen, ob bei einer solchen Teilnahme Gewinne
+oder Verluste erzielt worden sind. Zur Verschwiegenheit sind weiters Organe von
+Behörden verpflichtet, denen bei ihrer dienstlichen Tätigkeit Tatsachen bekannt werden,
+die dem Spielgeheimnis unterliegen. Sie haben dieses Spielgeheimnis als Amtsgeheimnis
+zu wahren, und dürfen ebenfalls nur unter den oben genannten Tatbeständen davon
+entbunden werden177.
+Das Einholen von datenschutzrechtlichen Einwilligungen erfolgt in der Praxis oft durch
+einen Link auf der Homepage des Veranstalters, der „Privacy Policy“ genannt wird. Auch
+die Österreichischen Lotterien GmbH haben auf ihrer Homepage win2day.at einen
+solchen, und führen dort unter anderem an, dass mit der Teilnahme bei win2day.at der
+Nutzer die Verwendung der Kundendaten für Zwecke des Unternehmens anerkennt.
+Wobei ausdrücklich angeführt wird, dass die Daten der Spielteilnehmer ausschließlich zu
+Marketingzwecken verwendet, und nicht an Dritte weitergegeben werden.
+Ob eine solche Zustimmung rechtlich korrekt ist, ist sehr fraglich, besser wäre es die
+Zustimmung durch Anklicken einer Checkbox zu realisieren. Dies ist aber wie bei vielen
+anderen Veranstaltern bei den Österreichischen Lotterien GmbH auf ihrer Spieleplattform
+win2day.at nicht der Fall. Aber auch bei diesen Unternehmen wird sich hier sobald nichts
+ändern, da Verstöße gegen das DSG derzeit so gut wie nie geahndet werden.
+
+Privacy Policy der Österreichischen Lotterien G.m.b.H.
+Unser Unternehmen, die Österreichische Lotterien Gesellschaft m.b.H. betreibt aufgrund der Konzession
+gemäß § 12 a Glücksspielgesetz unter anderem elektronische Lotterien, die über die modernen
+Kommunikationstechniken, wie etwa das Internet oder Mobiltelefone vertrieben werden. Als staatlich
+konzessionierter Veranstalter von Glücksspielen nimmt unsere Gesellschaft den Schutz der ihr anvertrauten
+Daten sehr ernst und betreibt seit ihrer Gründung im Jahr 1986 Glücksspiel mit Verantwortung. Unser
+Unternehmen hat für die Handhabung der von Ihnen übermittelten Daten strenge Richtlinien ausgearbeitet, die
+177
+
+Schwartz/Wohlfahrt, Glücksspielgesetz, Tz I. zu § 51.
+
+Quelle: http://rechtsprobleme.at
+
+64
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+die Behandlung kundengenerierter und kundenbezogener Daten zum Gegenstand haben und deren Schutz
+erste Priorität genießt. Hierbei spielen Überlegungen ordnungspolitischer Art eine ebenso große Rolle wie der
+Schutz der Privatsphäre jedes einzelnen Kunden. Diese Vorgehensweise steht sowohl im Einklang mit der
+einschlägigen österreichischen Judikatur, als auch der diesbezüglichen Judikatur des Europäischen
+Gerichtshof. Kundenbetreuung und Erhöhung des Servicegrades stehen daher bei Umsetzung der
+gegenständlichen Privacy Policy im Vordergrund.
+Kundenbezogene Daten
+Zu Ihrer Sicherheit werden alle Daten zwischen Ihrem Browser und unserem zentralseitigen Server mittels
+SSL (Secure Socket Layer) übertragen. Diese Sicherheitsserver-Software verschlüsselt Ihre Daten wie Name,
+Adresse, Telefonnummer, E-Mail Adresse, Kontoinformationen oder Kreditkartennummer. Dadurch wird
+ausgeschlossen, dass Unbefugte diese Informationen während der Datenübertragung lesen, ändern,
+interpretieren oder kopieren und später wiederholt senden können.
+
+Datenschutz
+In Österreich ist der Datenschutz bereits seit mehr als 2 Jahrzehnten gesetzlich verankert. Die Bestimmungen
+des Datenschutzgesetzes 2000 erlaubt den Kunden, die Verwendung ihrer Daten mitzubestimmen und zu
+gestalten. Zu diesem Zweck legt sie Unternehmen, die kundenbezogene Daten nutzen zahlreiche
+Verpflichtungen auf. So stehen Ihnen das Recht auf Auskunft über die über Sie gespeicherten Daten, auf
+Richtigstellung falscher Daten oder Löschung Ihrer Daten, soweit wir diese nicht für Dokumentationszwecke
+z.B. gegenüber unserer Konzessionsbehörde benötigen, zu. Mit Ihrer Teilnahme bei win2day.at erkennen Sie
+daher die Verwendung Ihrer Kundendaten für Zwecke unseres Unternehmens an, werden aber gleichzeitig
+dahingehend informiert, dass wir Ihre Daten im gesetzlichen Ausmaß des Datenschutzgesetzes wie des
+Glücksspielgesetzes geheim halten und unseren Informations- und Auskunftspflichten auf Wunsch im
+gesetzlichen Umfang nachkommen werden. Wir gehen jedoch davon aus, dass die verantwortungsvolle und
+datenschutzgesetzkonforme Verwendung der von Ihnen übermittelten Daten infolge der Serviceausrichtung
+unseres Unternehmens zu einer Erhöhung Ihrer Kundenzufriedenheit beitragen wird.
+Verschwiegenheit und Weitergabe an Dritte
+Die Österreichischen Lotterien achten und schützen in einem ordnungspolitisch abgesteckten und
+datenschutzrechtlich einwandfreien Umfeld Ihre Privatsphäre. Die Daten unserer Spielteilnehmer werden
+ausschließlich von unserer Gesellschaft zu Marketingzwecken verwendet und nicht an Dritte weitergegeben,
+außer in besonderen im Einzelfall gekennzeichneten Aktionen, zu deren Durchführung wir selbstverständlich
+das
+
+Einvernehmen
+
+unserer
+
+Spielteilnehmer
+
+vorab
+
+einholen
+
+werden.
+
+Neben
+
+den
+
+allgemeinen
+
+Schutzbestimmungen des Datenschutzgesetzes (§ 15 DSchG 2000) unterliegen die Österreichischen Lotterien
+insbesondere den Regelungen des § 51 GSpG, der das Spielgeheimnis zum Gegenstand hat. Dieser normiert,
+dass mit Ausnahme gesetzlich geregelter Auskunftspflichten gegenüber Behörden und Gerichten die
+
+Quelle: http://rechtsprobleme.at
+
+65
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+Veranstalter von dem Glücksspielmonopol unterliegenden Glücksspielen, ihre Organmitglieder, Beschäftigte,
+Vertragspartner sowie sonst für die Veranstalter tätige Personen, über die Spieler und deren Teilnahme am
+Spiel (Gewinn oder Verlust) Verschwiegenheit zu bewahren haben (Spielgeheimnis). Da die Wahrung dieses
+Spielgeheimnisses Voraussetzung für die Aufrechterhaltung der unserem Unternehmen erteilten Konzession
+ist, wird auch bei unseren Aktivitäten bei win2day.at unter Verwendung Ihrer Daten strengstes Stillschweigen
+über Ihre Teilnahme am Spiel bzw. die erzielten Gewinne oder Verluste bewahrt.
+Sicherheit
+Unser Unternehmen, die Österreichische Lotterien Gesellschaft m.b.H. wendet bei der Verarbeitung von
+Daten die höchsten Sorgfaltsmaßstäbe an, um auch von technischer Seite den höchstmöglichen und dem
+letzten Stand der Technik entsprechenden Sicherheitsstandard zu wahren. Die Gesellschaft trifft daher alle
+Vorkehrungen um die Sicherheit Ihrer Daten zu gewährleisten. Insbesondere werden Ihre Daten gewissenhaft
+vor Zerstörung, Verfälschung, Manipulation, unberechtigtem Zugriff oder unberechtigter Offenlegung
+geschützt.
+-------------------------------------------------------------------------------© 2003 Österreichische Lotterien GmbH
+
+Quelle: http://rechtsprobleme.at
+
+66
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+5 Zusammenfassung
+Die Ausdehnung des heiklen Glücksspielbereichs auf die neuen Kommunikationsmedien
+bringt, solange diese nur von Glücksspielmonopol innehabenden Glücksspielveranstaltern
+im Inland angeboten werden rechtlich kaum Probleme mit sich. Die rechtlichen
+Rahmenbedingungen, die im Glücksspielbereich maßgebend sind, sind aufgrund der
+Medienneutralität des Rechts auch beim Angebot von Glücksspielen über Internet oder
+mobile Endgeräte zu beachten, und werden von Glücksspielveranstaltern, denen schon aus
+ordnungspolitischen Gesichtspunkten umfangreiche Auflagen erteilt werden, grundsätzlich
+erfüllt.
+Das zuerst europarechtlich bedenkliche Glücksspielmonopol, welches einen Eingriff in die
+Dienstleistungs- und Niederlassungsfreiheit darstellen könnte, wurde vom EuGH als
+zulässig erklärt, da eine Beschränkung dieser Dienstleistung zum Schutz des Spielers vor
+schädlichen, persönlichen und sozialen Folgen durchaus gerechtfertigt ist.
+Zweifellos ein Problem stellt jedoch die grenzüberschreitende Tätigkeit von InternetSpielen dar. Durch das Internet aber auch über mobile Endgeräte kommt es zu einer
+massenhaften Verbreitung von Glücksspielangeboten, die die Gefahr einer erheblichen
+Sozialschädlichkeit mit sich bringen, da es dem nationalen Gesetzgeber nicht mehr
+möglich ist, ordnungspolitische Maßnahmen zu setzen. Ein Vorgehen gegen solche
+Glücksspielveranstalter, die sich meist in Rechtsoasen befinden, in denen eine
+Beschränkung des
+
+Glücksspielbereichs
+
+wie
+
+zB das in
+
+Österreich
+
+vorhandene
+
+Glücksspielmonopol nicht gegeben ist, ist rechtlich kaum möglich. Jedenfalls liegt ein
+Verstoß gegen § 1 UWG vor, da aufgrund des Auswirkungsprinzips die Sachlage nach
+österreichischem Recht zu beurteilen ist, wodurch aber nicht das Problem gelöst wird, dass
+der Glücksspielveranstalter nicht greifbar und somit eine Exekutionsführung unmöglich
+ist. Unter gewissen Umständen kann in solchen Fällen der vom Glücksspielveranstalter
+eingeschaltete Dienstleister zur Haftung herangezogen werden, was jedoch auch nur bei
+inhaltsbezogenen Dienstleistungen und nicht bei abwicklungsbezogenen Hilfsleistungen
+
+Quelle: http://rechtsprobleme.at
+
+67
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+möglich sein wird, da diese auch ausdrücklich in den §§ 13 ff ECG haftungsfrei gestellt
+werden.
+Um das Problem der grenzüberschreitenden Teilnahme an Glücksspielen einzudämmen,
+wurde in § 56 GSpG die Zurverfügungstellung von Möglichkeiten zur Teilnahme an
+ausländischen Glücksspielen aus dem Inland verboten. Ob das jedoch ausreicht das
+Problem der rechtswidrigen Teilnahme zu lösen ist fraglich, da ausländische
+Glücksspielveranstalter meist auch eine vollständig deutschsprachige Spielversion zur
+Verfügung stellen, und dadurch jemand im Inland, der eine Teilnahme an ausländischen
+Glücksspielen ermöglicht, nicht erforderlich ist.
+Die Anwendbarkeit des ECG auf M-Gaming Aktivitäten ist unstrittig, da M-Gaming
+Anbieter Diensteanbieter iSd § 1 ECG sind, und es sich bei diesen Dienstleistungen, die in
+der Regel gegen Entgelt elektronisch im Fernabsatz auf individuellen Abruf des
+Empfängers bereitgestellt werden, um Dienste der Informationsgesellschaft handelt. Da
+diese Voraussetzungen beim Angebot von Glücksspielen über Internet bzw. mobile
+Endgeräte erfüllt werden, unterliegen Glücksspielveranstalter als Diensteanbieter den
+Erfordernissen des ECG und haben diese beim Abschluss von Verträgen mit ihren Nutzern
+zu beachten.
+Wie sich der Bereich des mobilen gamings in Zukunft entwickeln wird, bleibt mit
+Spannung abzuwarten, da sich vor allem für das Unterbinden der grenzüberschreitenden
+Teilnahme an Glücksspielen bis dato kein rechtlich durchsetzbarer Lösungsansatz
+gefunden hat.
+
+Quelle: http://rechtsprobleme.at
+
+68
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+LITERATURVERZEICHNIS
+
+Selbständige Werke und Kommentare
+Antoniolli/Koja, Allgemeines Verwaltungsrecht3 (1996)
+Binder in Schwimann (Hrsg), Praxiskommentar zum Allgemeinen bürgerlichen
+Gesetzbuch VI2 (1997)
+Blume/Hammerl, ECG (2002)
+Böcker/Quabeck, Neue Dienstleistungen im Mobile Commerce, in Silberer/Wohlfahrt/
+Wilhelm (Hrsg), Mobile Commerce: Grundlagen Geschäftsmodelle, Erfolgsfaktoren (2002)
+Bohländer/Gora, Mobilkommunikation: Technologien und Einsatzmöglichkeiten (1992)
+Burgstaller/Minichmayr, E-Commerce-Gesetz - Praxiskommentar (2002)
+Dohr/Pollirer/Weiss, Datenschutzrecht2 (2002)
+Drobesch/Grosinger, Das neue österreichische Datenschutzgesetz (2000)
+Eder/Hoscher, Rahmenbedingungen des Glücksspiels in Österreich, in Strejcek/Hoscher/
+Eder (Hrsg), Glücksspiel in der EU und in Österreich: Recht - Internet - soziale Aspekte
+(2001)
+Erlacher, Glücksspielgesetz2 (1997)
+Fallenböck, Internet und IPR - Zu den internationalen Dimensionen des Electronic
+Commerce (2001)
+Laga/Sehrschön, E-Commerce-Gesetz - Praxiskommentar (2002)
+
+Quelle: http://rechtsprobleme.at
+
+69
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+Mayer, Das Glücksspiel im Spannungsfeld zwischen staatlicher Ordnungspolitik und
+Marktfreiheit, in Strejcek/Hoscher/Eder (Hrsg), Glücksspiel in der EU und in Österreich:
+Recht - Internet - soziale Aspekte (2001)
+Mayer, Staatsmonopole (1976)
+Mielke, Übertragungsstandards und -bandbreiten in der Mobilkommunikation, in Silberer/
+Wohlfahrt/Wilhelm
+
+(Hrsg),
+
+Mobile
+
+Commerce:
+
+Grundlagen,
+
+Geschäftsmodelle,
+
+Erfolgsfaktoren (2002)
+Mottl, Zur Praxis des Vertragsabschlusses im Internet, in Gruber/Mader (Hrsg),
+Privatrechtsfragen des e-commerce (2003)
+Oberkofler, Vertragsabschluss im Internet, in Barbist/Gruber/Oberkofler/Stomper (Hrsg),
+Praxishandbuch Internet Recht (2002)
+Schwartz,
+
+Strukturfragen
+
+und
+
+ausgewählte
+
+Probleme
+
+des
+
+österreichischen
+
+Glücksspielrechts (1998)
+Schwartz/Wohlfahrt, Glücksspielgesetz mit wichtigen Spielbedingungen, Kurzkommentar
+(1998)
+Strejcek/Kühteubl, Verfassungs- und gemeinschaftsrechtliche Fragen des österreichischen
+Glücksspielrechts, in Strejcek/Hoscher/Eder (Hrsg), Glücksspiel in der EU und in
+Österreich: Recht - Internet - soziale Aspekte (2001)
+Sura, Die grenzüberschreitende Veranstaltung von Glücksspielen im Europäischen
+Binnenmarkt (1995)
+Zib, Internet-Glücksspiel und UWG, in Strejcek/Hoscher/Eder (Hrsg), Glücksspiel in der
+EU und in Österreich: Recht - Internet - soziale Aspekte (2001)
+
+Quelle: http://rechtsprobleme.at
+
+70
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+Beiträge in Zeitschriften
+Fallenböck/Haberler, Rechtsfragen bei Verbrauchergeschäften im Internet (OnlineRetailing), RdW 1999, 505
+Glatt, Vertragsabschluss im Internet - Die Artikel 9 bis 11 der E-Commerce-Richtlinie
+und ihre Umsetzung im deutschen Recht, ZUM 2001, 390
+Griller/Reindl, Die Unvereinbarkeit des österreichischen Glücksspielgesetzes mit dem
+Europäischen Gemeinschaftsrecht, ZfV 1998, 234
+Haberler, Rechtssicherheit im Mobile-Commerce? Wbl 2003, 297
+Heilbock, UMTS-Die dritte Mobilfunkgeneration aus rechtlicher Sicht, MMR 1999, 23
+Schwartz, Glücksspielmonopol mit Ablaufdatum? ecolex 1999, 582
+Schwartz/Wohlfahrt, Glücksverträge im Internet, MR 2001, 323
+Steuer/Meincke/Tondl, Hightech-Mobilfunk, c't 2002, H 8, 222
+Zankl, Rechtsqualität und Zugang von Erklärungen im Internet, ecolex 2001, 344
+
+Online - Veröffentlichungen
+
+http://www.3sat.de/neues/dial/29039/ (07.05.2003)
+http://www.i-m.de/home/datennetze/dn_mobil1.htm (07.05.2003)
+http://www.i-m.de/home/datennetze/dn_mobil2.htm (07.05.2003)
+http://www.i-m.de/home/datennetze/dn_mobil4.htm (07.05.2003)
+http://www.i-m.de/home/datennetze/dn_mobil6.htm (07.05.2003)
+http://www.i-m.de/home/datennetze/dn_mobil7.htm (07.05.2003)
+
+Quelle: http://rechtsprobleme.at
+
+71
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+http://umts-webpage.de/News_zu_UMTS/news_zu_umts.html (13.05.03)
+http://www.a1.net/CDA/navigation/nav_frame/0,2756,38-811-html-de,00.html (13.05.03)
+http://www.a1.net/CDA/article/art_display/0,2564,618-1281-69656-html-de,00.html
+(14.05.03).
+http://www.t-mobile.at/unternehmen/presse/pressemitteilungen/pressemitteilun./index.htm
+(14.05.03)
+http://futurzone.orf.at/ (06.06.2003)
+http://www.win2day.at/gaming/index.html (06.07.03)
+
+Berichte in Tageszeitungen
+Der Standard v 16.01.2003, 24, Japans UMTS ohne Kunden
+Marktforschungsstudien
+Semeral, Ökonomische Aspekte des Glücksspiels, WIFO Studie 1996.
+Entscheidungen
+
+EuGH 24.3.1994, Rs C-275/92
+EuGH 21.09.1999, Rs C-124/97
+EuGH 21.10.1999, Rs C-67/98
+OGH 26.11.1996, 10 Ob 504/95
+OGH 9.7.1991 WBl 1991, 364
+OGH 19.9.1995 ÖBl 1996, 88
+OGH 11.2.1997 WBl 1997, 260
+OGH 8.11.1994 MR 1995, 31
+
+Quelle: http://rechtsprobleme.at
+
+72
+
+Onlinespiele in der mobilen Telefonie
+
+Sabine Hammerl
+
+OGH 26.1.1999 ÖBl 1999, 229
+OGH 6 Ob 16/01 y, JBl 2002,178
+VwGH 11.2.1994, 93/17/0091
+VwGH 25.7.1990, 86/17/0062
+VwGH 10.11.1980, 571/80
+VwGH 21.10.1987, 87/01/0138
+OLG Köln 22.10.1999 GRUR 2000, 538
+
+Quelle: http://rechtsprobleme.at
+
+73
+

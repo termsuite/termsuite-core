@@ -1,0 +1,379 @@
+
+
+
+
+Carrier Ethernet Access
+for
+Mobile Backhaul Networks
+
+February 2008
+
+
+Contents
+1	Abstract	2
+2	The Explosion of Growth in Mobile Telephony	2
+3	The Impact of New Services in the Radio Access Network	2
+4	Internet Speeds Come to Mobile Handsets	2
+5	Too much datatoo little backhaul capacity	2
+6	Ethernet: the Future of Mobile Backhaul	2
+7	The Challenge to Ethernet Adoption for Mobile Backhaul	2
+8	Pseudowires as Solution to the Interworking Challenge	2
+9	Ethernet Pseudowire	2
+10	Accurate Timing and Clock for Carrier Ethernet	2
+11	Synchronization over Packet Networks	2
+12	Synchronization and Clock Recovery for Reliable Mobile Backhaul	2
+13	MEF Carrier Ethernet for Mobile Backhaul Initiatives	2
+14	Carrier Ethernet Access Technologies	2
+15	Carrier Ethernet Over Fiber	2
+16	Carrier Ethernet Access over PDH	2
+17	Carrier Ethernet Access over Copper	2
+18	Carrier Ethernet Access over Microwave	2
+19	Carrier Access over GPON (Gigabit Passive Optical Network)	2
+20	Appendix A  Summary of Access Benefits	2
+
+
+
+
+1 Abstract
+
+Mobile backhaul networks that connect remote mobile wireless base stations to the core telephone network are not keeping pace with the bandwidth capacity and reliability requirements of new voice, data and video broadband applications that are becoming increasingly popular for mobile telephones.  While the demand for bandwidth is growing exponentially, consumers want to pay less for mobile services.  As a result, Mobile Operators are compelled to seek innovative solutions to scale the mobile backhaul networks while significantly reducing their cost per Mbps. 
+
+Network simplification, significantly reducing cost and dramatically scaling bandwidth have been the hallmark key attributes of Ethernet in Local Area Networks (LANs) as well as in Wide Area Networking for Metro applications.  As a result, Mobile Operators are now looking to Ethernet solutions to scale their mobile backhaul networks.  Ethernet is the logical choice for Mobile Operators.  The economic advantage of upgrading these networks with Ethernet technology is quite compelling vs. continuing to invest in legacy technology.  Ethernet provides 10 times more bandwidth than legacy technologies, simplifies network complexity, significantly reduces operational expenses, provides greater reliability and is the most optimal technology for the next generation of broadband IP-based mobile services.  
+
+While Ethernet solutions are being deployed today for mobile backhaul, the Metro Ethernet Forum (MEF) has identified and is addressing specific requirements for mobile backhaul applications.   As an example, leading global service providers and equipment suppliers are working together in the MEF to develop a Mobile Backhaul Implementation Agreement (IA), among other focused initiatives. 
+
+Developing a strategy to add the backhaul capacity required in the network to support new mobile applications, as well as accommodate the equipment already deployed can be a delicate balancing act.  Migrating from the existing backhaul network infrastructure during this important evolution can significantly reduce the cost and risk of the project.  The most effective solution to this complex and many faceted problem is Carrier Ethernet access for mobile backhaul, which is capable of meeting the bandwidth capacity requirement over many types of infrastructure.  Ethernet access options include fiber, copper and wireless media.
+
+       						
+Ethernet Access Technologies offer the Freedom of Choice to Mobile Operators
+Ethernet access provides a significant increase in bandwidth over the existing T1/E1 circuits and legacy microwave solutions that provide most of the transport capacity for mobile backhaul networks today.  Upgrading the backhaul network to cost effective, high performance Carrier Ethernet solutions is possible over the existing copper facilities, microwave and fiber facilities, resulting in significantly lower costs and dramatically increasing bandwidth capacity, scalability and performance.  
+
+This paper discusses a number of Carrier Ethernet access options that service providers can use to optimize cost, speed of deployment, increase scalability, significantly increase bandwidth and to simplify their network.  Carrier Ethernet for mobile backhaul ensures ample backhaul capacity, scalability and performance to support next generation mobile applications.  Any and all of the comprehensive Carrier Ethernet access solutions presented in this paper can and will address the current and future needs of the mobile operators and service provider that provide backhaul transport solutions.
+
+
+2 The Explosion of Growth in Mobile Telephony 
+
+There are almost 3 billion mobile phone users world-wide, and expected to nearly double to nearly 5 billion by then end 2010.  As mobile phones increasingly are becoming the primary telephone for many people, young and old alike, mobile telephone services have become the major source of revenue for telecommunications providers around the globe, accounting for more than 50% of revenue globally and can be as high at 75% of revenue in certain countries.
+
+In order to compete for more market share in the profitable segment of the telecom industry, mobile operators are rapidly developing new application and service platforms to attract and maintain customers.  As the competition for subscribers heats up, it's become more than just a matter of the hot new handset and more a matter of support for multi-media applications and broadband services.  Increasingly mobile users are going broadband, relying on portable handset devices for email, text messaging, and web access in addition to mobile voice service.  As subscribers gain exposure to broadband applications, they expect portable broadband.  
+
+Digital video to the handset represents one of the more popular applications with many providers looking to broadcast content ranging from sporting events, like the Football World Cup and Olympic Games, to music videos and access to YouTube and other streaming video sharing sites on the World Wide Web.
+
+The mobile backhaul network is the critical link between the broadband subscriber and the network.  Mobile backhaul networks link the remote base stations and cell towers to the mobile operator's core networks and provide access to both the voice network and the Internet.  These networks are either owned or operated by the mobile operators themselves, as is predominantly the case in Europe and Asia, or are maintained by wire line carriers who provide wholesale bandwidth services to the mobile operators, which is typically the model in North America.
+
+As application usage shifts from simple voice to broadband digital media the impact of these new applications on the backhaul network is significant.  Each new mobile application platform, the basis for delivering the broadband services significantly increases peak rate, or capacity of its predecessor.  
+
+To keep up with the demand and to enable revenue growth, mobile operators and service providers continue to expand their coverage and upgrade their services from 2G to 2.5G and 3G, with early deployments of HSDPA (High Speed Downlink Packet Access) already under way and HSUPA (High Speed Uplink Packet Access) on the horizon.
+
+HSDPA and HSUPA are especially important because they offer the high quality and capacity needed to handle the emerging data-intensive applications discussed above, and are already becoming important considerations when designing mobile network architectures.
+
+Mobile operators have already begun the process of deploying HSDPA data services across their UMTS networks. The lure of high-value and compelling services such as mobile-TV and truly mobile broadband Internet access is rapidly driving investment in this new technology.  HSDPA represents a significant improvement in data rates over the initial 3G specifications and for the mobile operators it also represents a significant challenge in engineering their networks.  With downstream data rates capable of delivering a theoretical 14.4 Mbit/s of user throughput, the demand for bandwidth in the radio access network (RAN) is increasing by an order of magnitude from where it is today. Ever growing user uptake and expected bandwidth increases beyond this 14.4 Mbit/s in the future are all putting increased pressure on the RAN backhaul infrastructure.
+As the bandwidths in the RAN increase, revenue per bit falls. For the fixed line operators offering broadband technologies, such as DSL and cable modems, this situation is nothing new.
+
+The growing demand for new services and the continued evolution of network architectures are providing mobile wireless operators with additional opportunities for revenue growth, but are also posing significant new challenges.
+
+
+3 The Impact of New Services in the Radio Access Network
+
+Each new generation of services provides new capabilities, but also requires more bandwidth  both for the air interface and in the radio access network (RAN), sometimes referred to as the backhaul network. Figure 1 shows bandwidth requirements increasing as GSM technology and services evolve. T1/E1 TDM circuits currently used within RAN backhaul networks are ideal for carrying the high- value voice services but are clearly not optimized in terms of cost or capacity for transport of high bandwidth data services. 
+
+Therefore the mobile operators face a significant challenge; how to grow the data service revenues without having an associated cost per bit that makes the economics of the solution unacceptable. One possible and compelling solution to this problem is the hybrid approach. With the hybrid approach, the data traffic associated with mobile devices is separated from mobile voice services directly at the cell site. Voice traffic can be carried reliably and cost effectively over existing T1/E1 infrastructure whilst HSDPA traffic can be backhauled using lower cost broadband technologies such as xDSL, cable modem, and where economically viable, carrier Ethernet. The traffic characteristics of mobile data are closely aligned with the asymmetrical nature of existing broadband solutions and as such a new synergy is developing between mobile and fixed broadband providers. 
+
+The opportunity exists for advanced fixed line operators to step forward with a full end-to-end managed service that offers HSDPA offload capability to the mobile operator. This should be a complete technical solution that delivers to the Mobile Network Operator (MNO) the interfaces needed to directly interface to the radio subsystems at both cell site and core aggregation locations. It should offer guaranteed SLAs in-line with broadband data availability, monitoring, pro-active fault isolation and recovery. A mixture of transport technologies may be employed to deliver the service and perhaps even multiple operators, but these underlying complexities should be transparent to the MNO. Combine these elements with rapid and flexible bandwidth upgrades and the need for a NGN packet-switched infrastructure is evident. Many fixed line operators have invested heavily already in such infrastructure, exploiting these investments to offer a tailor-made managed service solution which would allow the MNO to concentrate on deployment and optimization of the air interface, service creation and subscriber uptake.
+The bandwidth requirements increase as technologies and services evolve.
+Source: Mobile Evolution: Shaping the Future, UMTS Forum.
+
+
+4  Internet Speeds Come to Mobile Handsets
+
+The explosive growth in mobile telephony is creating the same demand for bandwidth capacity that the wire line voice network experienced over the last decade with the growth in Internet based applications.  Mobile broadband applications like e-mail and Internet access are becoming more widely used as mobile applications and appliances become more user-friendly with more efficient interfaces and accessibility options that make sending and receiving email and browsing the Internet easy and effective.  
+
+The push for more mobile bandwidth has been further accelerated by new handsets like the iPhone and clones that combine digital media entertainment like YouTube and iTunes with web based utility applications like GPS maps and live weather updates.  The availability of these applications with the touch of a button makes it far more convenient for mobile subscribers to access them than ever before.  
+
+Looking at the net result on the network of these applications, a typically mobile phone call generates 16k of bandwidth, but access to broadband Internet based applications perform sluggishly with 16 times that much bandwidth  Looking at a sampling of mobile applications text messaging requires 9.6-240 kbps, web browsing requires 128-384 kbps (at a minimum!), media streaming for voice and video requires 2-15 Mbps and real-time multi-media applications can consume over 100 Mbps. At these rates it will take a significant infusion of bandwidth to support all the applications planned for the growing mobile community.  
+
+In fact the 2.5G EDGE network that supported the initial iPhone applications was widely criticized as inadequate prompting Apple to add WiFi roaming functionality to the iPhone.   A WiFi bypass of the mobile network was necessary to provide adequate network capacity and performance to enable a positive end-user experience of early broadband Internet based mobile applications. 
+
+De-coupling of traffic volume and revenue
+
+In the voice world, traffic volume and revenue were correlated.  Today, bandwidth demands continue to grow exponentially, but revenue flattens out or even decline.  The end result is that mobile users want more bandwidth and want to pay less for services, creating a challenge for the mobile operators who need to increase capacity, without incurring additional cost.
+
+To further complicate the mobile convergence landscape there is a shift in the revenue model with a de-coupling of revenue from the traffic volumes.  In a voice dominant world, revenues increase without significant rise in traffic volume.  But based on the application profiles for the mobile applications discussed earlier, users will generate significantly more traffic volume, but will not expect to pay significantly more for these applications delivered to mobile appliances than they would expect to pay for the same applications on fixed appliances 
+
+5 Too much datatoo little backhaul capacity
+
+The graph shown below depicts the aggregate growth in mobile telephone traffic volume at Radio Controller Node (RNC) from September 2006 to August of 2007.  The black line at the top of the graph is combined voice and data and is increasing steadily month over month.  But even more interesting is an inspection of the mix of voice and data.  The red line shows the slow and steady increasing volume of voice traffic.  The green line shows the precipitous rise in data, actually increasing 4 fold over the year and surpassing voice for the first time in June.
+
+The early mobile backhaul networks supporting 1st and 2nd generation mobile base station equipment were deployed with typical voice network transport protocols.  TDM networks comprised of T1/E1 and DS3 leased line circuits delivered via wire-line or microwave infrastructure.  Later 2.5G and early 3G networks required more bandwidth and these relatively light-weight and more expensive TDM transport architectures slowly migrated to higher capacity ATM based core networks but were still delivering TDM connectivity and T1/E1 interfaces at the remote base stations and radio controller nodes in the CO.
+
+As TDM and ATM networks are de-commissioned in the core, delivering the legacy (T1/E1) interfaces required by legacy equipment becomes quite expensive.  TDM and ATM upgrade costs scale linearly requiring ten times the investment to upgrade the network to ten times the bandwidth.
+
+
+
+       Increasing data traffic in the mobile network (Ericsson, 2007)
+
+The rise in data traffic on the mobile network will continue as new applications emerge, just as it happened on the wire line network.   Mobile users will demand faster and faster access to the Internet and web-based applications.  And just as voice and data convergence was supported most effectively with Ethernet and IP on wire-line networks, Ethernet and IP are poised to contribute significantly to a boost in network capacity.
+
+6 Ethernet: the Future of Mobile Backhaul
+
+The economic advantages of Ethernet both in terms of Capital and Operational cost reductions lead to its ubiquitous use in private and public wire-line networks over the past decade.  Unlike its predecessors Ethernet/IP networks scale more gently and require as little as twice the investment for ten times the capacity.  The economic and functional benefit of deploying Ethernet in mobile backhaul networks is compelling.  However the specific requirements of delivering Ethernet to remote locations in the outside plant and inter-working with the legacy T1/E1 interfaces comprising the majority of deployed mobile telephony switching equipment represent a challenge.  Ethernet, with its statistical multiplexing capability has proven more effective for transporting bursty data applications is a natural solution for the data applications that are creating the bulk of the traffic load on the mobile network, shown earlier.  
+
+With the planned migration to all Ethernet and IP transport protocols and the introduction of Ethernet and IP interfaces in mobile base station and radio controller equipment, Ethernet is poised to become the dominant player in mobile telephony that it has already become in the wire-line voice and Internet data networks.  However, the migration may be a long one.
+
+Industry Forums and standards bodies like the Metro Ethernet Forum, IEEE, ITU and IETF have all contributed necessary extensions to the Ethernet protocol.  Initially planned for use in private LANs, Ethernet needed enhancing in order to increase the scale, capacity and improve the quality of service, and management capabilities.  The MEF has published over 19 individual technical specifications for Carrier Ethernet addressing five attributes necessary for the successful deployment of Carrier Ethernet within service provider networks around the world.
+
+While on the surface support for both legacy as well as leading edge equipment would appear complex.  There are a number of alternatives that can provide this dual functionality inefficiently and cost effectively.  
+
+One possible solution is new base station equipment capable of separating voice and data traffic at the cell site base station, handing voice off to the T1/E1 transport network and directing data onto the Ethernet / IP transport network.  Unfortunately most of the deployed equipment is blissfully ignorant of the type of traffic and bound to legacy T1/E1 interfaces tied to the inefficient and capacity constrained TDM backhaul network.  Replacing all the equipment at the base stations or installing smart cellular gateways to sort the traffic would be an expensive undertaking.
+
+The primary objective for mobile backhaul transport providers is increasing capacity to support the rising tide of mobile broadband applications.  Specifically the backhaul network needs added capacity to support Ethernet / IP data that is generated by the flood of web-based applications.  This must occur quickly as the flood of data applications are rapidly clogging the network arteries of the mobile backhaul network and threaten to not only impede the adoption of mobile broadband applications but could impact the voice quality of regular voice calls.
+
+
+7 The Challenge to Ethernet Adoption for Mobile Backhaul
+
+While Ethernet is a promising technology for the future of mobile backhaul, the fact remains that today there is virtually no Ethernet-enabled mobile base station equipment.  This means that Ethernet must be able to provide seamless transport for the existing TDM services being used to connect remote base stations to mobile aggregation and radio controller equipment located in the Central Office.
+
+
+Using circuit emulation and pseudo-wire technology Ethernet switching equipment can deliver a hybrid mix of circuit emulated T1/E1 interfaces as well as native Ethernet (both optical and electrical ).  This approach promises to be a comprehensive solution encompassing the legacy mobile switching equipment as well as providing the much needed Ethernet capacity for the mobile broadband application platforms of the future.  Attaching 2.5G and early 3G base stations via their native Packet Digital Hierarchy (PDH) interfaces will enable off-loading the IP application traffic from the voice network and provide a much more cost effective solution for upgrading the bandwidth of the mobile backhaul transport network.
+
+Leveraging the MEF-8, Circuit Emulation over Ethernet standard and forthcoming MEF mobile Backhaul Implementation Agreement (IA) to deliver emulated T1/E1 circuits over Carrier Ethernet networks will be an important first step for providing an interoperable solution for connecting legacy mobile telephony switching equipment over higher performing and less costly Ethernet transport networks.
+
+
+8 Pseudowires as Solution to the Interworking Challenge
+
+T1/E1 TDM circuits currently used within RAN backhaul networks are ideal for carrying the high- value voice services but are clearly not optimized in terms of cost or capacity for transport of high bandwidth data services. Therefore the mobile operators face a significant challenge; how to grow the data service revenues without having an associated cost per bit that makes the economics of the solution unacceptable.
+
+One possible and compelling solution to this problem is the hybrid approach. With the hybrid approach, the data traffic associated with mobile devices is separated from mobile voice services directly at the cell site. Voice traffic can be carried reliably and cost effectively over existing T1/E1 infrastructure whilst HSDPA traffic can be backhauled using lower cost broadband technologies such as xDSL, cable modem, and where economically viable, carrier Ethernet. 
+
+The traffic characteristics of mobile data are closely aligned with the asymmetrical nature of existing broadband solutions and as such a new synergy is developing between mobile and fixed broadband providers.  The opportunity exists for advanced fixed line operators to step forward with a full end-to-end managed service that offers HSDPA offload capability to the mobile operator. This should be a complete technical solution that delivers to the Mobile Network Operator (MNO) the interfaces needed to directly interface to the radio subsystems at both cell site and core aggregation locations. It should offer guaranteed SLAs in-line with broadband data availability, monitoring, pro-active fault isolation and recovery. 
+
+9 Ethernet Pseudowire
+The challenge has been how to support the continuing migration to 2.5 and 3G architectures and beyond by transporting both voice and data traffic over packet-access networks. PseudoWires (PW) are the powerful enabling technology that meets this challenge. PseudoWire solutions not only enable mobile wireless operators to use new packet access networks, it also gives operators a wide choice among the multiple packet network technologies that are available. Additionally, the PW solution uniquely combines circuit emulation and service emulation (TDM plus HDLC, Frame Relay, and the ATM needed for 3G UMTS)to enable backhaul of any combination of 2G, 2.5G, and 3G voice and data traffic, all over a single packet RAN. PW based solution should meet the demanding quality, latency, and clocking/synchronization requirements needed for reliable backhaul of mobile services.
+
+A PseudoWire solution will offer a network operator all the features needed to build a complete HSPDA backhaul managed service. PseudoWires platforms deliver a solution allowing the transport of TDM, HDLC, and ATM based services over frame-based technologies such as MPLS, IP and Ethernet networks. Whether the underlying transport is xDSL, bonded SHDSL/EFM, native Ethernet on fiber or even point-to-point microwave, the PseudoWire should be designed to make efficient use of the offered bandwidth to ensure MNOs can effortlessly grow their mobile broadband business and the managed service provider can profit from the new and growing revenues associated with mobile data services and its millions of subscribers.
+
+Leveraging the MEF-8 standard and forthcoming MEF Mobile Backhaul IA to deliver emulated T1/E1 circuits over Carrier Ethernet networks will be an important first step for providing an interoperable solution for connecting legacy mobile telephony switching equipment over higher performing and less costly Ethernet transport networks.
+
+
+10 Accurate Timing and Clock for Carrier Ethernet
+
+
+
+Accurate synchronization and timing at the cell site requires a very accurate reference clock.  While some mobile telephony platforms like CDMA have solved this by including a GPS clock integrated into the base station equipment, most of the installed equipment relies on an accurate (stratum-1) reference clock to be delivered by the transport network.  As previously stated, while relatively straightforward to do over synchronous Packet Digital Hierarchy (i.e TDM and ATM) transport networks, it is much harder for Ethernet networks.
+
+There are a seemingly endless number of standards efforts looking to solve the problem of carrying accurate clock over Ethernet packet networks at the moment.  The ITU, IEEE and IETF all have multiple projects underway and there is a new approach proposed nearly every other month.  Quoting one telecommunications pioneer, The wonderful thing about standards is that there are so many to choose from, and if you don't like any of the existing standards, you can always propose a new one! Daniel Bernstein.
+
+
+11 Synchronization over Packet Networks 
+
+Some of the early approaches to providing accurate clock over packet based Ethernet networks have included adaptive and differential clock recovery, initially proved incapable of meeting the rigorous mobile telephony clock requirements described earlier in this article.  Adaptive clock recovery requires only one reference clock, typically located on the CO side of the connection but suffered from performance problems and can be unreliable in congested high latency networking conditions.  Differential clock recovery is much more reliable, but requires a reference clock on both ends of the connection (i.e at the CO and at the mobile base station), which can be costly to implement.
+
+Two other potential solutions that have recently come to light include IEEE 1588v2 and Synchronous Ethernet. 1588v2 is essentially a more accurate version of Network Time Protocol (NTP) which is a method of distributed the time of day over Ethernet networks.  While Synchronous Ethernet is a new approach that borrows the SONET/SDH approach of embedding clock at the physical transmission.  Synchronous Ethernet holds much promise, but would require new equipment to be installed throughout the network that contained a Synchronous Ethernet PHY (Physical Layer chip) in order to forward the clock signal over each network hop or link.
+
+There are similar approaches to the Synchronous Ethernet proposal which also distribute clock using physical layer using encoding like NTR.
+
+
+
+12 Synchronization and Clock Recovery for Reliable Mobile Backhaul
+
+One of the key stringent requirements for reliable backhaul of mobile services is synchronization or clocking. Cell sites must utilize a clock source that is synchronized with the overall network clock.
+
+While some CDMA deployments use GPS receivers at the cell site to furnish this clock, most implementations rely on clocking to be distributed by the Radio Access Network together with the voice and data traffic. This implementation introduces certain technological challenges, it would be the ideal one as long as the synchronization requirements are met.
+
+This clock must not only be very accurate, but must meet strenuous jitter and wander requirements. The delay variations inherent to packet networks induce jitter  which must be filtered out of clocks derived from PseudoWire services. Any clock recovery over packet mechanism should be designed primarily to meet the clock synchronization requirements for GSM and UMTS Radio Access Networks (RANs) as specified in ETSI EN 300 912 and TS 125 402 "Synchronization in UTRAN stage 2." 
+PseudoWire solutions should provide an advanced and highly robust clock recovery mechanism that supplies a clean, accurate clock at the cell site, derived from a Pseudo-Wire bit stream transported over the packet network, meeting G.823 and G.824 specifications for traffic interfaces, and enables frequency accuracy of ±15 parts-per-billion (ppb) Fractional Frequency Offset (FFoFF) from the Primary Reference Source (PRS) clock. 
+
+Even more stringent specifications are required in GSM/UMTS applications.
+PseudoWire should also provide an advanced clock recovery mechanism for higher accuracy and greater temperature stability. A robust clock recovery mechanism should also maintain its outstanding performance even under the most demanding network conditions, such as high Packet Delay Variation (jitter) and packet loss ratio
+
+Highly advanced and robust clocking recovery technology will enable mobile wireless operators to take advantage of the cost-effectiveness of Ethernet transport for BTS/NodeB backhaul while ensuring network performance and also positioning the RAN for 3G All-IP.
+
+
+13 MEF Carrier Ethernet for Mobile Backhaul Initiatives
+
+In response to growing interest in using Carrier Ethernet for mobile backhaul applications, the MEF created a Work Group to focus on Carrier Ethernet for mobile backhaul networks.  In this Work Group, equipment manufacturers and service providers are working together to understand the requirements and define specifications and implementation agreements for providing a standard set of Carrier Ethernet services, based upon existing MEF technical specifications.  The goal of the Carrier Ethernet for Mobile Backhaul Work Group is to promote the use of Carrier Ethernet to deliver universally standard networking services to effectively support the requirements of next generation backhaul networks.
+Working in cooperation with the MEF Technical Committee, the Mobile Work Group has drafted an Implementation Agreement (IA) that specifies a standard set of service parameters that will be the basis for standard application of Carrier Ethernet for mobile backhaul. 
+
+The Metro Ethernet Forum has developed three technical specifications MEF 3- Circuit Emulation over Ethernet Framework and Requirements, MEF 8  Circuit Emulation over Ethernet and MEF 18- Abstract Test Suite for Emulated Circuits.  These important technical specifications are the foundation for providing standard Circuit Emulation services to support the legacy T1/E1 interfaces.  The MEF Carrier Ethernet for Mobile Backhaul technical project will develop an Implementation Agreement specifically for Mobile Backhaul drawing from these three technical specifications. 
+
+
+Early aspects of this technical work include the definition of use cases for legacy transmission support, to accommodate the legacy T1/E1 based equipment and a second set of use cases for using a native Ethernet User Network Interface (UNI) for connecting mobile telephony switching equipment using Carrier Ethernet.
+
+Specifically the MEF Mobile Backhaul Interoperability Agreement will specify a set of service parameters to be implemented in a standard manner in order to comply with the MEF IA.  Parameters to be specified include: Class of Service (CoS), Synchronization, Ethernet Operations, Administration and Maintenance functionality, protection requirements and fault tolerances, specific UNI type definitions, capabilities and settings, and finally performance goals.   In 2007, the MEF's Carrier Ethernet for Mobile Backhaul Interoperability Agreement approved draft was put forth as a Straw Ballot and is well on the way to becoming approved by the membership. 
+
+14 Carrier Ethernet Access Technologies
+
+There are a variety of access technologies that can be applied to the application for mobile backhaul.  These include both wire line access solutions over fiber and copper cabling, and wireless solutions using microwave or other radio frequencies to deliver the Ethernet service.  Ethernet access has been widely adopted to extend the reach of Ethernet wire-line services beyond the reach of the optical metro networks where Metro Ethernet was initially deployed.  The MEF's Ethernet Access work group is made up of many MEF member companies who together provide a wide ranging set of technologies that can be used over virtually any sort of access media.   The remainder of this paper will examine the various choices and explore the strengths and limitations of each.
+
+
+15 Carrier Ethernet Over Fiber 
+
+Cell sites are served by three major means:
+* Copper cables
+* Microwave radios
+* Fiber cables
+
+While the majority of the cell sites are currently served by copper cables, the use of microwave radios and fiber cables start to gain popularity.  The need to reduce backhaul cost, the rapid growth of bandwidth requirements, and the tight performance requirements are the main drivers for the transition to fiber.  With the advent of technology, the use of Ethernet over active fiber provides a very attractive solution for mobile backhaul application.
+
+Add-Drop Multiplexer (ADM) /Multi-Service Provisioning Platform (MSPP) are popular transport means with the use of fiber cables.  However, with the advances in Wave Division Multiplexers (WDM), carriers have discovered that they can use the fibers to transport Ethernet without the burden of overhead of either SONET/SDH or PON.  The direct transport of carrier Ethernet over fiber provides more attractive costs and better performance for mobile backhaul applications.
+
+The cost saving comes from the following advances:
+
+1. WDM systems are bit rate and protocol agnostic.  With the WDM systems, carrier can merge the layer 2 Ethernet OAM features and transport the data directly over fiber.  The simplicity of this process reduces capital and operational costs.
+2. The reduction of Optical-Electrical-Optical (O-E-O) conversion, such as in the case of direct Ethernet over fiber also help to reduce cost and improve reliability.  Reliability and low transport latency are some of the most important attributes required for backhaul network.  
+3. The recent advances in other associated optical systems, such as Reconfigurable Optical Add-Drop Multiplexers (ROADMs) also help to reduce cost for backhaul networks
+4. The use of Ethernet over fiber eliminates the use of other expansive network elements such as Digital Cross Connects (DCS).  The collapsing of network architecture presents both capital and operations cost saving for carriers.
+
+15.1 Summary
+Increased demand on bandwidth, lower cost and higher performance is driving Ethernet into the mobile backhaul network.  Ethernet access on has become one of the many flavors of delivery mechanisms for Ethernet in mobile backhaul networks.
+
+
+16 Carrier Ethernet Access over PDH 
+
+Traditional PDH circuits, including T1, E1 and DS3 represent the predominant wireless backhaul access technology in use today.  PDH circuits are well understood, supported by existing provisioning systems, widely available from a number of sources and can be delivered using wireline and microwave technologies.   
+
+As operators transition to an Ethernet network for delivery of next generation mobile data services, the simple fact is that fiber-based access remains out of reach for nearly all mobile backhaul applications.  Consequently, these applications will continue to be carried over the PDH infrastructure for the foreseeable future.  The good news is that the operator has a number of options to accelerate the deployment of carrier Ethernet over the existing lines.  
+ 
+As with other Ethernet backhaul options, the requirements include low latency, low packet jitter, low cost, network resiliency, flexible bandwidth options, efficient bandwidth utilization, manageability and environmentally hardened platforms for deployment at the base station.  All of these requirements can be met with Ethernet over bonded T1/E1 and DS3 access. 
+
+16.1 Bonded T1/E1
+Ethernet delivered over bonded T1/E1 can be used to deliver Ethernet at bandwidths from 1.5 Mbps to 20 Mbps.   Bonding allows for flexible bandwidth options and pay-as-you-grow hitless addition of bandwidth.   In addition, because multiple links are used for the service, the bonding protocols have resiliency built-in.   The technology choices include MLPPP and GFP-VCAT for Ethernet encapsulation and bonding.
+
+16.2 DS3 and Bonded DS3
+Ethernet over a single DS3 or bonded DS3s can deliver bandwidth between 45Mbps and nearly 100Mbps.  DS3s may be delivered over microwave radio or SONET/SDH.  And as with bonded T1/E1, DS3 bonding offers the flexible bandwidth and resiliency.  Ethernet encapsulation options for a single DS3 include X.86 and GFP with bonding performed using VCAT.  
+
+16.3 Summary
+Ethernet over PDH is a widely deployed technology that continues to provide an effective and widely available option for wireless backhaul where fiber facilities are not available or are cost-prohibitive.  EoPDH allows operators to leverage available infrastructure to deliver the capacity needed to support the explosive growth in mobile data applications.
+
+
+17 Carrier Ethernet Access over Copper 
+
+Carrier Ethernet Access over copper is an extremely attractive alternative as the majority of base stations have copper access today.  In North America, where microwave and other wireless access techniques are not widely deployed, Ethernet over Copper is a cost effective way to deploy the increased capacity without the significant investment in deploying fiber.  
+
+Ethernet over Copper access equipment based upon the 2BASE-TL Ethernet standard (IEEE 802.3ah) G.SHDSL transmission technology, also know as Mid-Band Ethernet, is able to deliver up to 5.7 Mbps symmetric bandwidth per copper pair.  The 2BASE-TL standard allows multiple copper pairs to be bonded together to deliver a high bandwidth symmetric native Ethernet pipe.  For example, 8 copper pairs can be bonded together to deliver up to 45 Mbps of native Ethernet service.  
+
+Similarly, Ethernet over Copper equipment based on ITU G993.2 based VDSL2 MIMO Ethernet over Copper allows multiple pairs to be bonded together to provide more than 6 Mbps per pair either symmetrically or asymmetrically with performance advantages on longer loops. 
+
+Compared to the 1.5 Mbps per pair delivered by legacy T1 circuits or even the 2Mbps of E1 circuits, Ethernet over Copper delivers over 7x more bandwidth, greater reliability and significantly lower cost. 
+
+
+7x More Bandwidth than T1/E1
+
+Ethernet over Copper not only delivers up to 7x more bandwidth than T1/E1 solutions, but in many cases greater reliability. 2BASE-TL Ethernet over Copper solutions can add or drop copper pairs from the bonding group without any service interruption.  This key resiliency attribute of 2BASE-TL/Mid-Band Ethernet solutions is particularly critical for Mobile Backhaul as any momentary loss of service can send a cell tower into resynchronization.
+
+ITU G993.2 VDSL2 MIMO Ethernet over Copper solutions also have key capabilities that provide the resilience and reliability that providers are looking for. Specifically, VDSL2 MIMO leverages MIMO (Multiple In Multiple Out) technology to prevent service interruption if pairs become impaired by proactively detecting and reallocating bandwidth. Additionally, MIMO ensures that high bandwidth performance and resilience are maintained even when large numbers of pairs are bonded together.   All these VDSL2 MIMO attributes combined result in Ethernet over Copper solutions that nearly eliminate unavailable seconds (UAS) in mobile backhaul applications where they traditionally can be notoriously high for legacy T1/E1 circuits.  
+
+In addition to higher bandwidth and greater reliability, Ethernet over Copper solutions are also significantly lower in cost than T1/E1 backhaul.  For example, the cost of a T1/E1 facility is often over 30 times more expensive than dry copper loops.  
+
+Ethernet over Copper solutions meet the primary objectives of significantly upgrading network bandwidth capacity, with greater reliability and significantly lower cost over the existing copper infrastructure.  Since no new fiber is required this upgrade can be performed quickly and inexpensively.  Carrier Ethernet circuits can be deployed immediately over existing un-used copper widely available in most base station locations for a fraction of the cost of a new fiber build.  
+
+Later legacy T1/E1 circuits can be transitioned to the Ethernet mobile backhaul network by deploying Circuit Emulated T1/E1 services with interfaces that are integrated into the Carrier Ethernet over Copper gateways located at the mobile base stations.  This enables a smooth migration to an all Ethernet transport network with all the cost savings and operational efficiencies that result from such a migration.  Finally, by distributing clock signal, a reliable clock source for the rigorous mobile synchronization requirement can also be achieved over existing copper.
+
+
+18 Carrier Ethernet Access over Microwave 
+
+18.1 Introduction
+Point-to-point (PTP) microwave radio has been a key backhaul technology choice for mobile operators worldwide since mobile networks emerged in the late 1980's. Now the microwave radio industry is embracing the evolution of mobile networks by developing new solutions that support the smooth migration of existing TDM network infrastructure to support next generation broadband services. 
+
+As a result, wireless will continue to be a key technology of choice for operators looking for cost effective and flexible options to support new all-IP technologies.
+
+18.2 What is microwave radio? 
+Microwave radio systems used for backhaul typically operates in licensed frequency bands from 2 to 40 GHz. Other wireless technologies, such as point-to-multipoint (PMP, eg: LMDS), unlicensed (using 2.4/5.8 GHz UNII bands), wireless mesh, free space optical (FSO) systems and very high frequency systems (60 to 90 GHz) also play a niche role in wireless backhaul, where each technology supports very specific but limited benefits.
+
+However, microwave radio is the predominant wireless backhaul technology, connecting between 50 and 60% of the world's mobile base stations. This proportion is expected to remain about constant, but with the penetration of microwave into markets such as the US expected to grow, where it is relatively under-utilized due to the dominance of leased T1 lines.
+
+18.3 Microwave Radio for Wireless Backhaul
+
+Wireless provides a number of benefits that make it ideally suited for next-generation backhaul applications. It can be utilized where no other access medium is available, or as a cost-effective replacement for access alternatives that cannot economically scale in capacity, or as the solution of choice for the entire access network, depending upon the Operator's priorities. 
+
+The following are the key features of backhaul using microwave radio:
+
+* Low CAPEX. 45 years of industry development and high volume manufacturing have resulted in a low cost of acquisition and deployment.
+* Long reach. Microwave links can extend anywhere from one to over 50 kilometers, making it ideal for metro, urban or rural applications.
+* High Capacity. Links can be dimensioned to deliver over 1 Gbit/s of guaranteed full duplex throughput.
+* Reliability. Can easily deliver 99.999% availability, even in regions with high rainfall, and support a range of link, path and network protection options.
+* Rapid Deployment. Simple plug-and-play architecture now means a wireless link can be deployed in hours, not days.
+* Resilience. All-but impervious to environmental affects and can operate without failure for 10 years or more. 
+* Multi-protocol support. New microwave systems support transport of TDM and Ethernet traffic natively, with low latency and high throughput efficiency.
+* Layer 2 Intelligence. Microwave supports Layer 2 traffic management, prioritization and QoS controls to enable operators to manage traffic flows across their backhaul network.
+* Low OPEX. Once installed, microwave backhaul requires minimal maintenance, reducing annual operating expenses to almost zero.
+* Compatibility with Mobile Infrastructure. Requires no additional investment in facilities, as microwave can share the same tower, shelters and cabinets used by the mobile base stations.
+* Full Ownership. Does not require reliance on third-parties for leased line or fiber-based services, putting full control of the network in the hands of the operator.
+
+18.4 Ready for the next wave
+
+Microwave radio is ready to support the next generation of all-IP mobile backhaul network evolution, and continues to provide a viable choice for operators seeking reliable and cost effective access alternative to copper or fiber-based infrastructure.
+
+19 Carrier Access over GPON (Gigabit Passive Optical Network)
+
+GPON is one of the dominant point-to-multipoint (P2MP) fiber technologies being deployed today and is standardized in the ITU-T's G.984 series of recommendations.    
+
+Like all PON technologies, GPON uses a centralized OLT (Optical Line Termination) to control and communicate with numerous customer-premises ONUs (Optical Network Units).  In the case of GPON, a single OLT port serves up to 64 ONTs.  This provides a small form factor in the central office where an OLT system commonly serves ~2000 subscribers from a 3 RU (~ 9 in.) chassis.
+
+The downstream bit rate of GPON is 2.488 Gbps and the upstream rate is 1.244 Gbps.  This bandwidth can be allocated to the ONUs in any arbitrary manner.  In residential applications, carriers typically offer 10 to 50 Mbps, while in business applications, carriers offer 100 Mbps to 1 Gbps service.
+
+The logical reach of the GPON protocol is 60 km but, with the current price point for laser transceivers, most GPON vendors limit the physical reach of their GPON products to 20 km.  GPON has a highly efficient ranging and bandwidth granting procedure.  As a result over 99% of the 2.4 Gbps/1.2 Gbps bandwidth is available for subscriber services regardless of the physical reach or distribution of the 64 ONUs from the central office.
+
+GPON and EPON (802.3ah) are similar in that they both transport native Ethernet Frames.  In a sense, Ethernet can be thought of as a layer above the GPON/EPON access protocol.  As such GPON transparently supports 802.1d and all of its clauses.  Consequently, GPON is well suited as a MEF technology.
+
+GPON differs from EPON in several important aspects.  First, the GPON protocol imposes an overall framing structure based on a precise 8 kHz clock.  This means that Ethernet frames can easily be sent with a Frame Delay Variation (FDV) of less than one bit time (< 1 µsec).  Secondly, the data clock itself is precisely based on integer multiples of 8 kHz.  This means that accurate TDM timing can be obtained directly from the received signal.  It is not uncommon for the timing accuracy of an ONU to be at the level of Stratum 3E (1x10-6), depending on the traceability of the clock source at the OLT.  This makes GPON ideally suited to Mobile Backhaul applications for carriers who have not yet transitioned to MEF8 PDH Circuit Emulation.
+
+19.1 Summary
+
+GPON is a PON protocol that transports native Ethernet Frames.  As such it is readily adapted to providing MEF services in the access network.  It is especially well suited to providing Ethernet services for mobile backhaul.  The precise 8 kHz framing of GPON allows for sub µsec FDV and accurate network timing is available from the data clock for a carrier who has not yet rolled out MEF8 PDH circuit emulation.
+
+20 
+Appendix A  Summary of Access Benefits
+
+Ethernet Backhaul Solution
+When To Use
+Key Attribute(s)
+Ethernet over Copper / Mid-Band Ethernet
+Copper Pairs Available. No fiber or radio.
+7x more bandwidth per pair than traditional T1/E1 services.  Greater reliability, lowest cost per bit to deploy
+Ethernet over PDH
+No dark fiber available. Long distances.
+Off net access 
+Straightforward provisioning.  Available on net and off net.  Works over existing T1, E1, DS3, E3 circuits
+Ethernet over Microwave
+Bypass or no available Terrestrial Facilities
+No wireline or fiber facility required
+Rapid deployment
+Low OPEX
+Full ownership and control
+Ethernet over Fiber
+Fiber Available
+Optimal performance. Unlimited' (up to 10GbE) bandwidth
+
+
+
+
+
+Acknowledgements
+
+The MEF thanks the following member companies for their contribution to this document
+
+Actelis Networks
+Aktino
+Axerra Networks
+Calix
+Ceregon Networks
+Ceterus
+Harris Stratex
+Hatteras Networks
+Overture Networks
+
+
+More information and updates on 
+Carrier Ethernet for Mobile Backhaul Networks 
+can be found at
+www.metroethernetforum.org
+
+
+
+
+
+Carrier Ethernet Access for Mobile Backhaul Networks
+
+MEF February 2008	Page 1 of 3 
+

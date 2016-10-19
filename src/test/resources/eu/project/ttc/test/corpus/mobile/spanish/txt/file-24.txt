@@ -1,0 +1,517 @@
+Zeppelin 
+Guía de Conectividad
+1 Indice Tema  Página
+Introducción 3
+Reproducción de una fuente de 4
+audio con toma de auriculares 
+ reproductor de CD portátil
+ iPod® sin conector Apple de  
+    30 patillas
+ reproductor de MP3 diferente  
+    de iPod
+ teléfono móvil
+ radio de sobremesa
+ ordenador portátil
+ tarjeta de sonido de un  
+    ordenador de sobremesa
+ 
+Reproducción de audio a partir de un 5 
+componente audiovisual separado
+ reproductor de CD
+ reproductor de DVD
+ reproductor de Blu-ray Disc™
+ Squeezebox™ 
+Reproducción de audio a partir de un 6
+preamplificador estereofónico 
+Reproducción de audio a través de un 7
+procesador de A/V
+Reproducción de audio a través de 8
+un televisor
+Reproducción de audio inalámbrica 12
+a través de Apple AirPort Express®
+Reproducción de audio a través de 13
+un Apple TV®
+Reproducción de audio a través de 14
+una consola de videojuegos
+Envío de señales de vídeo desde el 17
+Zeppelin a un televisor o monitor de  
+ordenador Introducción El Zeppelin es mucho más que un simple sistema de En aquellos casos en que usted quiera conectar 
+altavoces con un puerto de carga para estacionar una fuente de audio alternativa, deberá utilizar la 
+iPod. De hecho, usted puede conectar al mismo una entrada AUX situada en la parte posterior del Zeppelin. 
+extensa gama de productos para expandir y mejorar En el caso de que desee reproducir música desde 
+su experiencia de escucha. un iPhone, necesitará conmutar a esta entrada 
+Tanto si usted desea compartir señales de audio bien pulsando el botón  del mando a distancia 
+procedentes de un dispositivo que habitualmente del Zeppelin bien pulsando y manteniendo pulsado 
+escuche con auriculares como mejorar la calidad durante 3 segundos el botón  del propio Zeppelin. 
+sonora de su televisor o visionar sus vídeos La entrada AUX sólo se seleccionará cuando se haya 
+favoritos en una pantalla más grande, el Zeppelin conectado un cable a la misma. Si no hay ningún 
+le proporcionará una solución efectiva, compacta y cable conectado al Zeppelin, el indicador luminoso 
+elegante. de este último se activará en color rojo. Cuando se 
+En esta guía le mostraremos algunas de las haya seleccionado la entrada AUX del Zeppelin, el 
+opciones que usted posiblemente elija, a la vez que citado indicador luminoso se activará en color verde 
+cómo conectar los componentes y cómo controlarlos. en oposición al color azul que indica la reproducción 
+desde un iPod/iPhone.
+La toma AUX del Zeppelin puede aceptar tanto 
+miniclavijas analógicas como digitales. 
+En el caso de que desee reproducir en un televisor 
+o monitor de ordenador señales de vídeo almacenadas 
+en un iPod, necesitará conectar uno u otro aparato a 
+una de las salidas de vídeo del Zeppelin.
+El Zeppelin no incluye ninguna entrada digital 
+coaxial, por lo que no es posible utilizar cables 
+digitales coaxiales terminados en conectores RCA con 
+el aparato. 
+El Zeppelin no puede reproducir audio digital 
+codificado en Dolby Digital o DTS. Cuando 
+realice conexiones al Zeppelin utilizando 
+cualquiera de las opciones digitales descritas 
+en las páginas que siguen, debería asegurarse 
+de que el material en cuestión es "mezclado" 
+("downmixed") al formato PCM estereofónico. 
+Si esto no es posible, utilice una conexión 
+analógica. Para más información, consulte el 
+manual de instrucciones de la fuente utilizada. 
+ 3 SEG
+  
+Cuando se selecciona AUX, el indicador luminoso del 
+Zeppelin se activa en color verde. 3 Reproducción de una Esta categoría incluye cualquier dispositivo que usted Necesitará un cable con una miniclavija estereofónica 
+escuche a través de auriculares y donde la toma de en cada uno de sus extremos. Bastará con que 
+fuente de audio con conexión de los mismos constituye la única manera de conecte un extremo a la toma de auriculares del  
+obtener señales de audio. dispositivo fuente y el otro en la toma AUX del panel 
+toma de auriculares posterior del Zeppelin. Por regla general, las tomas de Ejemplos: auriculares de los ordenadores están coloreadas en 
+La mayoría de reproductores de CD portátiles verde a la vez que incluyen el icono de los auriculares. 
+Todos los reproductores de MP3 que no sean iPod El dispositivo fuente tendrá su propio control de 
+iPod que no incluyan un conector Apple de 30 patillas volumen. Para minimizar el ruido, el nivel de volumen 
+Teléfonos móviles debería situarse ligeramente por debajo del que 
+Radios de sobremesa saturaría la entrada del Zeppelin. Empiece situándolo 
+Ordenadores portátiles a tres cuartos de su recorrido y a continuación 
+Tarjetas de sonido de ordenadores de sobremesa reproduzca las canciones más intensas (en términos 
+(diferentes de las de alta gama, con las que usted de presión sonora) que tenga. Intente percibir algún 
+debería seguir las instrucciones del componente de recorte debido a posibles saturaciones -un ruido 
+A/V utilizado) muy áspero durante la reproducción de párrafos muy 
+intensos incluso cuando el nivel de volumen del propio 
+Zeppelin no es muy elevado- y reduzca el nivel de 
+volumen hasta que deje de oírlas. 
+Deje el nivel de volumen de la fuente en esa 
+posición y a partir de ahí ajústelo con los controles del 
+Zeppelin. 
+Algunas miniclavijas tienen cuerpos que impiden 
+su completa inserción en la toma pertinente 
+-tanto del panel posterior del Zeppelin como 
+del dispositivo fuente- por lo que debería 
+verificarlo antes de adquirir el cable de conexión 
+correspondiente. En cualquier caso, usted 
+necesitará oír el suave "clic" que confirmará 
+la correcta inserción de la clavija en la toma 
+utilizada.
+4 Reproducción de audio a Si usted tiene en su poder fuentes como un lector Usted también tiene la opción de utilizar una 
+de CD, DVD o Blu-ray Disc™ o un Squeezebox™, salida digital óptica (Opción B). Esto puede ser 
+partir de un componente lo más normal es que las conexiones se efectúan a designado por OPTICAL, TOSLINK™ o S/PDIF, y 
+través de un par de salidas analógicas equipadas su empleo es preferido al de las salidas analógicas. 
+audiovisual separado con conectores RCA. Para utilizar dichas tomas, Aún así, el Zeppelin no puede reproducir señales 
+usted necesitará un cable equipado con un par de codificadas en Dolby Digital o DTS. En el caso de que 
+conectores RCA en uno de sus extremos y una única las mismas no puedan ser "mezcladas" y enviadas 
+La distribución del panel de miniclavija estereofónica (igual que la de la toma de por el componente audiovisual en el formato digital  
+conexiones puede variar auriculares de su iPod) en el otro (Opción A) que se PCM estereofónico, debería utilizarse una conexión 
+conectará en la toma AUX del Zeppelin. Las tomas analógica al Zeppelin. Es posible que el conector 
+RCA deben estar debidamente codificadas para TOSLINK™ incluya una clavija protectora de plástico, 
+identificar los canales derecho e izquierdo. Dicha en cuyo caso deberá ser retirada antes de conectar 
+codificación puede ser mediante letras (L para el canal el cable. No obstante, debería guardar dicha clavija 
+izquierdo y R para el canal derecho) o por colores, para proteger el pertinente conector cuando usted 
+siendo en este último caso la codificación habitual desconecte el cable. Necesitará un cable con un 
+asignar el rojo al canal derecho. conector TOSLINK™ en uno de sus extremos y con 
+B A una miniclavija óptica en el otro para su inserción en la 
+toma AUX del Zeppelin.
+Las miniclavijas ópticas tienen la misma forma 
+que su versión analógica, aunque con un orificio en 
+su punta para permitir que la luz pase a su través, a 
+Repr la vez que no incorporan los dos anillos negros de oductor de CD goma. También es posible utilizar un cable con una 
+Reproductor de DVD clavija TOSLINK™ en sus dos extremos junto con un 
+Reproductor de  adaptador TOSLINK™/minitoma óptica. Sin embargo, 
+   Blu-ray Disc™ en este caso las prestaciones ofrecidas pueden ser 
+Sintonizador variables, por lo que le recomendamos que en la 
+Squeezebox™ medida de lo posible evite el uso del adaptador en 
+cuestión. 
+Normalmente, estos tipos de fuentes no incorporan 
+su propio control de volumen, pero en el caso de que 
+lo incluyan le recomendamos que ajuste el nivel a 
+aproximadamente el 90% de su valor máximo y utilice 
+los controles del volumen para variar el nivel de presión 
+sonora.
+5 Reproducción de audio a Si usted tiene varias fuentes de audio estereofónicas 
+en su equipo -lector de CD, sintonizador, etc.- 
+través de un preamplificador es posible que desee utilizar un preamplificador 
+estereofónico para controlar la selección de fuentes y 
+estereofónico conectar una salida del mismo a la entrada AUX del Zeppelin. 
+Por regla general, los preamplificadores suelen 
+incluir solamente salidas analógicas con conectores 
+RCA, por lo que el cable que usted necesitará 
+deberá incorporar tomas RCA codificadas en color 
+o indicadas como derecha/izquierda en un extremo 
+y una minitoma (similar a la de los auriculares de su 
+iPod) en el otro para su conexión a la toma AUX del 
+Zeppelin. 
+También es recomendable, cuando esté utilizando el 
+OUTPUTS preamplificador para controlar la selección de fuentes, 
+LEFT emplear el control de volumen del aparato en cuestión. 
+Ajuste el nivel de volumen del Zeppelin en el valor que 
+RIGHT utilice normalmente para escuchar música con su iPod 
+1 2 y déjelo en ese punto. De este modo evitará que el 
+nivel de volumen sea demasiado alto cuando usted 
+vuelva a utilizar su iPod.
+La distribución del panel de  
+conexiones puede variar
+6 Reproducción de Si usted tiene varias fuentes de audio estereofónicas Usted también tiene la opción de utilizar una salida  
+en su equipo -lector de DVD, lector de Blu-ray Disc™, digital óptica. Esto puede ser designado por OPTICAL, 
+audio a través de un etc.- es posible que desee utilizar un procesador de TOSLINK™ o S/PDIF, y su empleo es preferido al de 
+A/V para controlar la selección de fuentes y conectar las salidas analógicas.
+procesador de A/V una salida del mismo a la entrada AUX del Zeppelin. El Zeppelin no puede reproducir señales Por regla general, los preamplificadores suelen codificadas en Dolby Digital o DTS. En el caso 
+incluir solamente salidas analógicas con conectores de que las mismas no puedan ser "mezcladas" 
+RCA, por lo que el cable que usted necesitará deberá y enviadas por el componente audiovisual en 
+incorporar conectores RCA codificados en color o el formato digital PCM estereofónico, debería 
+indicados como derecha/izquierda en un extremo y utilizarse una conexión analógica al Zeppelin.
+La distribución del panel  
+de conexiones puede una miniclavija (similar a la de los auriculares de su Es posible que el conector TOSLINK incorpore  
+variar iPod) en el otro para su conexión a la toma AUX del una clavija protectora de plástico, en cuyo caso 
+Zeppelin (Opción A). deberá ser retirada antes de conectar el cable. No 
+Conecte el Zeppelin a las salidas correspondientes obstante, debería guardar dicha clavija para proteger 
+a los canales frontal izquierdo y frontal derecho y el pertinente conector cuando usted desconecte 
+ajuste el procesador en la opción "sin caja acústica el cable. Necesitará un cable con un conector 
+para el canal central". Si usted lo desea, añada cajas TOSLINK™ en uno de sus extremos y con una 
+acústicas de efectos y/o un subwoofer para obtener miniclavija óptica en el otro para su inserción en la 
+unos efectos realzados. toma AUX del Zeppelin (Opción B).
+Las miniclavijas ópticas tienen la misma forma 
+que su versión analógica, aunque con un orificio en 
+su punta para permitir que la luz pase a su través, a 
+la vez que no incorporan los dos anillos negros de 
+goma. También es posible utilizar un cable con una 
+clavija TOSLINK™ en sus dos extremos junto con un 
+B A adaptador TOSLINK™/minitoma óptica. Sin embargo, 
+en este caso las prestaciones ofrecidas pueden ser 
+variables, por lo que le recomendamos que en la 
+medida de lo posible evite el uso del adaptador en 
+cuestión. 
+También es recomendable, cuando esté utilizando 
+el procesador de A/V para controlar la selección de 
+fuentes, emplear el control de volumen del aparato en 
+cuestión. Ajuste el nivel de volumen del Zeppelin en el 
+valor que utilice normalmente para escuchar música 
+con su iPod y déjelo en ese punto. De este modo 
+evitará que el nivel de volumen sea demasiado alto 
+cuando usted vuelva a utilizar su iPod.
+7 Reproducción de audio En teoría, son varias las opciones potencialmente 
+disponibles a la hora de conectar la salida de audio 
+a través de un televisor de un televisor a la entrada AUX del Zeppelin. El 
+número de dichas opciones aumenta gracias a le 
+extensa variedad de salidas de audio que suelen 
+incorporar los televisores de última generación: digital 
+óptica (TOSLINK™), analógica con conectores RCA 
+y analógica con minitoma de auriculares. Utilice 
+la opción que mejor se ajuste a su aplicación y 
+exigencias. 
+El Zeppelin no incluye entrada digital coaxial, por lo 
+que no podrá utilizarse con el mismo ningún cable con 
+conector RCA procedente de una salida digital coaxial. 
+Los pros y los contras de cada método de conexión 
+se comentan a continuación: 
+  Digital TOSLINK™ 
+ Pros:  La mejor calidad sonora.
+ Contras:   Se necesitan dos mandos a distancia 
+(Zeppelin y TV)*.
+   Se necesita un cable poco corriente.  
+  Analógico RCA 
+ Pros: Buena calidad sonora.
+  El cable necesario es muy común.
+ Contras:  Se necesitan dos mandos a distancia 
+(Zeppelin y TV)*.
+  Minitoma de auriculares
+ Pros:  Se necesita un solo mando a distancia 
+(TV).
+  El cable necesario es muy común.
+ Contras: Calidad sonora mediocre. 
+*Es posible reducir el número de mandos a distancia 
+requeridos para las dos primeras opciones utilizando 
+un mando a distancia universal. 
+8 Reproducción de audio Si su televisor incorpora una salida digital óptica,  
+por regla general la misma estará designada como 
+a través de un televisor OPTICAL, S/PDIF o TOSLINK™. Es posible que el  
+(salida digital óptica) conector TOSLINK™ tenga conectada una clavija protectora de plástico, en cuyo caso deberá ser 
+retirada antes de conectar el cable. No obstante, 
+debería guardar dicha clavija para proteger el 
+pertinente conector cuando usted desconecte 
+el cable. Necesitará un cable con un conector 
+TOSLINK™ en uno de sus extremos y con una 
+miniclavija óptica en el otro para su inserción en la 
+toma AUX del Zeppelin.
+El Zeppelin no puede reproducir señales 
+codificadas en Dolby Digital o DTS. En el caso 
+de que las mismas no puedan ser "mezcladas" 
+y enviadas por el componente audiovisual en 
+el formato digital PCM estereofónico, debería 
+utilizarse una conexión analógica al Zeppelin.
+Cuando el Zeppelin esté siendo utilizado, los 
+altavoces del televisor deberían ser silenciados 
+ANALOG DIGITAL
+seleccionando "mute" en el mando a distancia del 
+aparato. La señal de audio enviada desde la salida 
+del televisor al Zeppelin tendrá un nivel fijo y no 
+será controlada por los botones de ajuste del nivel 
+de volumen del mando a distancia del televisor. En 
+consecuencia, el nivel de volumen será controlado por 
+los controles de volumen del Zeppelin.
+9 Reproducción de audio a través Si desea utilizar la opción "analógica con conectores 
+RCA", necesitará un cable equipado con un par 
+de un televisor (salida analógica de conectores RCA codificados en color o como 
+izquierda/derecha en uno de sus extremos y una única 
+con conectores RCA) miniclavija estereofónica (igual que la de la toma de 
+auriculares de su iPod) en el otro que se conectará en 
+la toma AUX del Zeppelin.
+Cuando el Zeppelin esté siendo utilizado, los 
+altavoces del televisor deberían ser silenciados 
+seleccionando "mute" en el mando a distancia del 
+aparato. La señal de audio enviada desde la salida del 
+televisor al Zeppelin tendrá un nivel de volumen fijo y 
+no será controlada por los botones de ajuste del nivel 
+de volumen del mando a distancia del televisor. En 
+consecuencia, el nivel de volumen será controlado por 
+los controles de volumen del propio Zeppelin. 
+ANALOG DIGITAL
+10 Reproducción de audio a Si su televisor está equipado con una salida de 
+auriculares y usted desea utilizar esta opción, 
+través de un televisor (salida necesitará un cable terminado con una miniclavija 
+estereofónica en cada uno de sus extremos para 
+analógica para auriculares) conectarlo a la entrada AUX del Zeppelin. Aunque es posible que la calidad de audio absoluta no sea tan 
+buena como la proporcionada por las demás salidas 
+de audio del televisor, el uso de la salida de auriculares 
+implicará que usted no necesita utilizar el mando 
+a distancia para controlar el volumen del televisor. 
+Asimismo, los altavoces del televisor también se 
+desactivarán automáticamente cuando se inserte una 
+clavija de auriculares. 
+Basta con que conecte un extremo en la toma de 
+auriculares del televisor y el otro en la entrada AUX 
+del Zeppelin. Ajuste el volumen del Zeppelin a su nivel 
+de escucha habitual con el iPod y utilice los controles 
+del televisor o el mando a distancia para realizar 
+ajustes. Si a medida que aumenta el nivel de volumen 
+el sonido distorsiona, en la mayoría de casos ello es 
+ANALOG DIGITAL debido a que la relativamente alta salida de la toma 
+de auriculares está saturando la entrada del Zeppelin. 
+El incremento del nivel de volumen del Zeppelin y la 
+reducción del correspondiente al televisor debería 
+permitir la escucha a un nivel de volumen global 
+superior sin distorsión.
+11 Reproducción de audio La estación base inalámbrica Apple AirPort Express® 
+puede ser utilizada para recibir por vía inalámbrica 
+inalámbrica a través de un audio descargado directamente desde Internet y 
+reproducirlo a través de un sistema audio conectado 
+Apple AirPort Express® localmente. Incorpora una minitoma combinada 
+analógica/digital óptica que puede conectarse a la 
+entrada AUX del Zeppelin. Le recomendamos que 
+utilice la opción digital óptica. 
+El Apple AirPort Express no se sirve de serie con 
+cables de audio de ningún tipo, por lo que para 
+conectarlo al Zeppelin usted necesitará o bien un 
+cable con una miniclavija digital óptica en cada uno 
+de sus extremos o bien un cable con una miniclavija 
+analógica (idéntica a la de los auriculares de su iPod) 
+en cada uno de sus extremos. Conecte un extremo 
+de cualquiera de los cables citados a la entrada de 
+audio del AirPort Express y el otro a la entrada AUX del 
+Zeppelin. 
+El Zeppelin no puede reproducir señales 
+codificadas en Dolby Digital o DTS. En el caso 
+de que las mismas no puedan ser "mezcladas" 
+y enviadas por el componente audiovisual en 
+el formato digital PCM estereofónico, debería 
+utilizarse una conexión analógica al Zeppelin.
+En función de cual sea la fuente de audio 
+reproducida por el AirPort Express, es posible que 
+haya o no un control de volumen previo. En caso 
+afirmativo, ajuste el nivel de volumen al 90% de su 
+recorrido máximo y utilice los controles del Zeppelin 
+para modificar el nivel de presión sonora. En caso de 
+que no haya un control de volumen previo y el audio 
+descargado de Internet tenga un nivel fijo, el volumen 
+puede ser ajustado únicamente por los controles del 
+Zeppelin.
+12 Reproducción de audio El Apple TV es un dispositivo audiovisual dedicado El Zeppelin no puede reproducir señales  
+que se conecta de modo inalámbrico a Internet codificadas en Dolby Digital o DTS. En el caso 
+a través de un Apple TV® para descargar contenidos audiovisuales para su de que las mismas no puedan ser "mezcladas" 
+almacenamiento y posterior reproducción en su y enviadas por el componente audiovisual en 
+televisor. Incorpora salidas de audio digitales y el formato digital PCM estereofónico, debería 
+analógicas que pueden ser conectadas a la entrada utilizarse una conexión analógica al Zeppelin.
+AUX del Zeppelin. Si decide utilizar la salida de audio analógica 
+El Apple TV no se sirve de serie con cables de del Apple TV, necesitará un cable con un par de 
+audio de ningún tipo, por lo que para conectarlo al conectores RCA en uno de sus extremos y una 
+Zeppelín usted necesitará o bien un cable con un miniclavija estereofónica (igual que la de los auriculares 
+conector TOSLINK™ en uno de sus extremos y una de su iPod) en el otro. Los conectores RCA deberían 
+minitoma óptica en el otro (Opción A), o bien un cable estar codificados de tal modo que se identifiquen 
+terminado con un par de conectores RCA en uno de perfectamente los canales izquierdo y derecho. Esto 
+sus extremos y una minitoma estereofónica (idéntica puede indicarse mediante las letras L ("Izquierdo") y 
+a la de los auriculares de su iPod) en el otro (Opción R ("Derecho") o con una codificación de color donde 
+B). Le recomendamos que utilice la salida digital la convención existente es que rojo identifica el canal 
+del Apple TV para su conexión a la entrada AUX del derecho. Conecte los conectores RCA a las salidas 
+Zeppelin. Es posible que el conector TOSLINK™ de analógicas de audio izquierda y derecha del Apple 
+la salida digital óptica del Apple TV esté protegido TV y la miniclavija estereofónica a la entrada AUX del 
+por una clavija protectora de plástico, en cuyo caso Zeppelin. 
+deberá ser retirada antes de conectar el cable. No Si el Apple TV también está conectado a su 
+obstante, debería guardar dicha clavija para proteger televisor a través de un cable HDMI, usted necesitará A el pertinente conector cuando usted desconecte el desactivar los altavoces de dicho televisor cuando el 
+cable. Conecte el extremo TOSLINK™ del cable a la Zeppelin esté en funcionamiento, para lo que deberá 
+salida digital óptica del Apple TV y la miniclavija óptica seleccionar "mute" en el mando a distancia de aquél 
+a la entrada AUX del Zeppelin. (es decir del televisor). La señal de audio enviada 
+B desde el Apple TV al Zeppelin tendrá un nivel de 
+volumen fijo y no será controlada por los botones de 
+ajuste del nivel de volumen del mando a distancia del 
+televisor. En consecuencia, el nivel de volumen será 
+controlado por los controles de volumen del propio 
+Zeppelin.
+13 Reproducción de audio a La PS3 puede suministrar señales de audio tanto 
+a través de una toma digital óptica TOSLINK™ 
+través de una consola de como desde toma y cable analógico combinado de 
+audio/vídeo. Se recomienda la opción digital por su 
+videojuegos PlayStation® potencialmente superior calidad sonora y su mayor  3
+simplicidad de conexión. 
+El Zeppelin no puede reproducir señales 
+codificadas en Dolby Digital o DTS, por lo que la 
+PS3 deberá configurarse en sus menús de ajuste 
+para que suministre una señal de audio en el 
+formato digital PCM estereofónico.
+Para la conexión a la toma digital óptica de la 
+PS3, usted necesitará un cable terminado con una 
+clavija TOSLINK™ en uno de sus extremos y con una 
+minitoma digital óptica en el otro. Los dos conectores 
+RCA de audio del cable de A/V de la PS3 (sea del tipo 
+que sea) deberían dejarse sin utilizar.
+Es posible que el conector TOSLINK™ de la PS3 
+incluya una clavija protectora de plástico, en cuyo caso 
+deberá ser retirada antes de conectar el cable. No 
+obstante, debería guardar dicha clavija para proteger 
+el pertinente conector cuando usted desconecte el 
+cable. Conecte el extremo TOSLINK™ del cable a la 
+salida digital óptica de la PS3 y la miniclavija óptica a la 
+entrada AUX del Zeppelin.
+La salida de la PS3 tendrá un nivel fijo, por lo que el 
+volumen será gestionado por los controles del propio 
+Zeppelin. 
+Si la PS3 también está conectada a su televisor 
+a través de un cable HDMI, usted necesitará 
+desactivar los altavoces de dicho televisor cuando el 
+Zeppelin esté en funcionamiento, para lo que deberá 
+seleccionar "mute" en el mando a distancia de aquél 
+(es decir del televisor).
+14 Reproducción de audio a La Xbox 360™ puede suministrar señales de audio 
+analógico o digital sólo a través de su puerto de A/V y 
+través de una consola de una de las opciones de cable de A/V. Se recomienda 
+la opción digital por su potencialmente superior 
+videojuegos Xbox 360™ calidad sonora y su mayor simplicidad de conexión. La exclusiva clavija de la consola utilizada en todas 
+las opciones de cable de A/V incorpora una toma de 
+salida digital óptica (TOSLINK™). Las dos clavijas 
+RCA del otro extremo del cable de A/V (de color rojo 
+y blanco y agrupadas aparte) deberían dejarse sin 
+utilizar.
+El Zeppelin no puede reproducir señales 
+codificadas en Dolby Digital o DTS, por lo que 
+la Xbox 360™ deberá configurarse en la zona 
+System de su salpicadero para que suministre 
+una señal de audio en el formato digital PCM 
+estereofónico.
+Para conectar a la toma digital óptica Component 
+AV HD Cable de la Xbox 360™, usted necesitará un 
+cable equipado con una clavija TOSLINK™ en un 
+extremo y con una miniclavija óptica en el otro. 
+Es posible que el conector AV Cable TOSLINK™ 
+de la Xbox 360™ esté protegido por una clavija de 
+plástico, en cuyo caso deberá ser retirada antes de 
+conectar el cable. No obstante, debería guardar dicha 
+clavija para proteger el pertinente conector cuando 
+usted desconecte el cable. Conecte el extremo 
+TOSLINK™ del cable a la toma Component AV HD 
+Cable y la miniclavija óptica a la entrada AUX del 
+Zeppelin.
+La salida de la Xbox 360™ tendrá un nivel fijo, por 
+lo que el volumen será gestionado por los controles 
+del propio Zeppelin. 
+Si la Xbox 360™ también está conectada a su 
+televisor a través de un cable HDMI, usted necesitará 
+desactivar los altavoces de dicho televisor cuando el 
+Zeppelin esté en funcionamiento, para lo que deberá 
+seleccionar "mute" en el mando a distancia de aquél 
+(es decir del televisor).
+15 Reproducción de audio Las consolas de videojuegos incorporan una extensa Si decide utilizar la salida de audio analógica de la 
+variedad de conexiones de salida de audio, algunas consola de videojuegos, necesitará o bien un cable con 
+a través de consolas de de las cuales requieren cables no convencionales, por un par de conectores RCA en uno de sus extremos 
+lo que es posible que usted necesite contactar con y una miniclavija estereofónica (idéntica a la de los 
+videojuegos alternativas el fabricante o vendedor de su consola para recibir auriculares de su iPod) en el otro o bien un cable con 
+consejo sobre cual es el más adecuado. Sea quien miniclavijas estereofónicas en cada extremo. Los 
+sea quien le aconseje, necesitará saber que el Zeppelin conectores RCA deberían estar codificados de tal modo 
+puede conectarse tanto con una minitoma analógica que se identifiquen perfectamente los canales izquierdo 
+como con una minitoma digital óptica. y derecho. Esto puede indicarse mediante las letras 
+Si su consola de videojuegos incorpora tanto una L ("Izquierdo") y R ("Derecho") o con una codificación 
+minitoma analógica (posiblemente una salida de de color donde la convención existente es que rojo 
+auriculares) como tomas analógicas con conectores identifica el canal derecho. Conecte los conectores RCA 
+RCA o una toma digital óptica TOSLINK™, usted podrá a las salidas analógicas de audio izquierda y derecha de 
+conectarla a la entrada AUX del Zeppelin utilizando la consola de videojuegos y la miniclavija estereofónica a 
+un cable estándar. En caso de que se disponga de la entrada AUX del Zeppelin. Alternativamente, conecte 
+una salida digital óptica, es posible que la misma sea una miniclavija a la salida de la consola de videojuegos y 
+designada por OPTICAL, S/PDIF o TOSLINK™. la otra a la entrada AUX del Zeppelin.
+Usted necesitará o bien un cable con una clavija A menos que esté utilizando la salida de auriculares 
+TOSLINK™ en uno de sus extremos y una miniclavija de la consola de videojuegos para la conexión al 
+digital óptica en el otro o bien un cable con un par Zeppelin, la salida de audio de la misma tendrá por 
+de conectores RCA en uno de sus extremos y una regla general un nivel de volumen fijo. En este caso, 
+miniclavija analógica (idéntica a la de los auriculares de el volumen es controlado por los controles del propio 
+su iPod) en el otro. Zeppelin. De modo alternativo, si se utiliza la salida 
+La opción digital TOSLINK™ es la más de auriculares de la consola de videojuegos para la 
+adecuada en términos de calidad absoluta, conexión al Zeppelin, comience ajustando el nivel de 
+aunque el Zeppelin no puede reproducir señales volumen de este último a unos tres cuartos de su 
+codificadas en Dolby Digital o DTS. En el caso recorrido máximo y a continuación reproduzca los 
+de que un programa de este tipo no pueda ser videojuegos que contengan niveles de presión sonora 
+mezclado y enviado por la consola de videojuegos más intensos. Escuche atentamente hasta que perciba 
+en el formato digital PCM estereofónico, deberá el recorte de la señal provocado por una posible 
+utilizarse una conexión analógica al Zeppelin. sobrecarga -un ruido áspero durante los párrafos más 
+Es posible que la toma digital óptica TOSLINK™ intensos que se puede producir incluso cuando el nivel 
+de la consola de videojuegos esté protegida por una del propio Zeppelin no es muy alto- y reduzca el nivel 
+clavija protectora de plástico, en cuyo caso deberá de volumen de la consola de videojuegos hasta que 
+ser retirada antes de conectar el cable. No obstante, desaparezca.
+debería guardar dicha clavija para proteger el pertinente Si la consola de videojuegos también está conectada 
+conector cuando usted desconecte el cable. Conecte a su televisor a través de un cable HDMI, es posible 
+el extremo TOSLINK™ del cable de la consola de que usted necesite desactivar los altavoces de dicho 
+videojuegos a la salida digital óptica y la miniclavija televisor cuando el Zeppelin esté en funcionamiento, 
+óptica a la entrada AUX del Zeppelin. para lo que deberá seleccionar "mute" en el mando a 
+distancia de aquél (es decir del televisor).
+16 Envío de señales de Además de almacenar y reproducir señales de Los formatos S-Vídeo (Opción A) y Vídeo   
+audio, algunos iPod pueden hacer lo mismo con Compuesto (Opción B) son los más habituales en 
+vídeo a un televisor señales de vídeo a través de su propia pantalla las conexiones de vídeo, pudiéndose encontrar las 
+o, mediante el conector de estacionamiento de correspondientes tomas de entrada en la mayoría 
+30 patillas, a una pantalla de vídeo externa. Cuando de televisores y muchos monitores de ordenador 
+un iPod con funciones de vídeo es estacionado en disponibles en el mercado. El formato de S-Vídeo 
+el Zeppelin, cualquier señal de vídeo procedente del proporciona una calidad superior, por lo que le 
+mismo es enrutada simultáneamente a las salidas recomendamos que lo utilice frente al de Vídeo 
+de Vídeo Compuesto y S-Vídeo del panel posterior Compuesto por poco que le sea posible. 
+del aparato. La señal de vídeo es enviada a la salida Para conectar el Zeppelin a la toma de S-Vídeo 
+independientemente de la configuración de entrada de un televisor o monitor de ordenador necesitará un 
+del Zeppelin. No obstante, si usted desea oír a través cable de S-Vídeo estándar. Los conectores de S-Vídeo 
+del Zeppelin la pista de audio que acompaña a la utilizan pequeñas clavijas multipatilla. En el caso de 
+grabación de vídeo debería seleccionar la entrada que se deba utilizar la salida de Vídeo Compuesto 
+iPod del mismo. Cuando se seleccione la entrada del Zeppelin, necesitará un cable coaxial apantallado 
+iPod, el indicador luminoso del Zeppelin se activará en terminado con un conector RCA en cada uno de sus 
+color azul. extremos. Un cable perecido a los de audio servirá, 
+aunque le recomendamos que utilice uno diseñado 
+específicamente para aplicaciones de vídeo. 
+Una vez que la salida de vídeo haya sido conectada 
+a la entrada de un televisor o monitor de ordenador, 
+será necesario seleccionar dicha entrada mediante 
+los controles de uno u otro aparato. Puesto que 
+las conexiones de S-Vídeo y Vídeo Compuesto no 
+transportan señales de audio, no será necesario 
+desactivar los altavoces internos del televisor.
+A B
+17 B&W Group Ltd T +44 (0) 1903 221800 B&W Group España, S.A. Apple, iPod, AirPort Express, Apple TV y Made for iPod son marcas 
+Dale Road F +44 (0) 1903 221801 Camí Can Calders, 22 registradas de Apple Inc. registradas en EE.UU. y otros países .
+Worthing West Sussex info@bwgroup.com  08173-Sant Cugat del Vallès iPhone es una marca registrada de Apple Inc. 
+BN11 2BH England www.bowers-wilkins.com (Barcelona) TOSLINK es una marca registrada de Toshiba Corporation. 
+Tel. +34 93 589 47 22 Squeezebox es una marca registrada de Logitech Inc.
+Fax +34 93 589 24 70 PlayStation es una marca registrada de Sony Computer Entertainment Inc.
+E-mail: bwrotel@bwspain.com Xbox 360 es una marca registrada de Microsoft Corporation.
+Blu-ray Disc es una marca registrada de la Blu-ray Disc Association.
+Zeppelin es una marca registrada de B&W Group Ltd.

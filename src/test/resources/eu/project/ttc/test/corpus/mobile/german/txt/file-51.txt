@@ -1,0 +1,2258 @@
+Universität Konstanz
+FB Informatik und Informationswissenschaft
+Bachelor-Studiengang Information Engineering
+
+Bachelorarbeit
+zur Erlangung des akademischen Grades eines
+Bachelor of Science (B.Sc.)
+
+Unterstützung des Automobilhandels durch mobile Endgeräte am Beispiel
+von Mercedes Benz
+Supporting Automotive Retailers with mobile Devices exemplified by Mercedes-Benz
+
+Studienfach: Information Engineering
+Schwerpunkt: Human Computer Interaction
+Themengebiet: Angewandte Informatik
+
+von
+
+Pascal von Büren
+(Matr. Nr. 53 13 93)
+
+Erstgutachter: Prof. Dr. Harald Reiterer
+Zweitgutachter: Prof. Dr. Reiner Kuhlen
+Betreuer: M. Sc. Thomas Memmel
+Einreichung: 27.03.2006
+
+Zusammenfassung
+Die Entwicklung eines Werkzeuges zur Unterstützung des Händlers im Automobilgewerbe hat sich nach Befragung der Zielgruppe als sinnvoll erwiesen
+und ein wenig beachtetes Nutzungsszenario eröffnet. Die Fülle an multimedialen Features, die dem Kunden das Produkt Auto näher bringen sollen und
+ihm dabei helfen, die abstrakten Informationen greif- und erfühlbar zu machen, haben den Sprung von den Webauftritten der Automobilhersteller zum
+Ort des eigentlichen Verkaufes noch nicht geschafft. Mit einer mobilen Lösung
+zur Unterstützung des Automobilhandels, wie sie reTailor darstellt, kann das
+vorhandene Wissen direkt am Ort des Interesses ins Verkaufsgespräch integriert werden. Selbst exotische Konfigurationsmöglichkeiten sind in kürzester
+Zeit gefunden und können dem Kunden anschaulich mit der Unterstützung
+von Bildern oder Interaktionsmöglichkeiten präsentiert werden. Durch die Adaption von flexiblen Visualisierungsmethoden wie Rapid Serial Visual Presentation wird eine Integration in eingespielte Abläufe des Nutzers gewährleistet.
+Für den Hersteller ist ein einheitliches Verkaufsinstrument von Vorteil. Neben
+besser informiertem Verkaufspersonal können auch gewisse Absatz-Segmente
+bewusst priorisiert werden.
+
+INHALTSVERZEICHNIS
+
+Inhaltsverzeichnis
+1 Einleitung
+1.1 Motivation . . . . . . . . . . . . . . . . . . . .
+1.2 Erkenntnisse aus bisherigen Arbeiten . . . .
+1.2.1 Informationsbeschaffung im Vorfeld
+1.2.2 Unterstützung der Beratung . . . . .
+1.2.3 Mobile Lösung . . . . . . . . . . . . .
+1.3 Zielsetzung . . . . . . . . . . . . . . . . . . . .
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+2 Anforderungsanalyse
+2.1 Benutzeranalyse . . . . . . . . . . . . . . . . . . . . . . .
+2.1.1 Automobilhändler . . . . . . . . . . . . . . . . .
+2.1.2 Kunde . . . . . . . . . . . . . . . . . . . . . . . . .
+2.2 Aufgabenanalyse . . . . . . . . . . . . . . . . . . . . . .
+2.3 Styleguides . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.3.1 Usability Guidelines . . . . . . . . . . . . . . . .
+2.3.2 Grösse des Geräts . . . . . . . . . . . . . . . . . .
+2.3.3 Schnell und Einfach . . . . . . . . . . . . . . . .
+2.3.4 Usability Checkliste . . . . . . . . . . . . . . . .
+2.3.5 Zusätzliche Erkenntnisse . . . . . . . . . . . . .
+2.4 Usability Ziele . . . . . . . . . . . . . . . . . . . . . . . .
+2.4.1 User Experience Goals . . . . . . . . . . . . . . .
+2.4.2 Usability Goals . . . . . . . . . . . . . . . . . . .
+2.5 Constraints . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.5.1 Macromedia Flash . . . . . . . . . . . . . . . . .
+2.5.2 Macromedia Flash Player 6 for Pocket PC 2003 .
+2.5.3 Typografie . . . . . . . . . . . . . . . . . . . . . .
+2.5.4 Pixelfonts . . . . . . . . . . . . . . . . . . . . . .
+2.5.5 Rechenleistung . . . . . . . . . . . . . . . . . . .
+3 State of the Art Analyse
+3.1 Design Patterns . . . . . . . . . . . . . . . . .
+3.1.1 One-Window Drilldown . . . . . . . .
+3.1.2 Color-Coded Divisions . . . . . . . . .
+3.1.3 Progressive Disclosure . . . . . . . . .
+3.2 Rapid Serial Visual Presentation . . . . . . .
+3.3 Expertensysteme . . . . . . . . . . . . . . . .
+3.3.1 Aufbau von Expertensystemen . . . .
+3.3.2 Einsatzgebiet von Expertensystemen
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+4
+4
+5
+5
+6
+8
+8
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+10
+10
+10
+13
+15
+18
+18
+19
+19
+20
+21
+21
+22
+22
+23
+23
+23
+24
+24
+25
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+26
+26
+27
+29
+30
+32
+33
+34
+36
+2
+
+INHALTSVERZEICHNIS
+
+4 Navigationskonzept für Small Screen Devices
+4.1 Neues Navigationskonzept . . . . . . . . . . . . . .
+4.1.1 Interessenraum . . . . . . . . . . . . . . . . .
+4.1.2 Kriterien . . . . . . . . . . . . . . . . . . . . .
+4.1.3 Lösungsansätze . . . . . . . . . . . . . . . . .
+4.2 Prototyp . . . . . . . . . . . . . . . . . . . . . . . . .
+4.2.1 Erste Entwicklungsschritte . . . . . . . . . .
+4.2.2 Screen Design Standards . . . . . . . . . . .
+4.2.3 Übersicht über die Funktionen von reTailor
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+37
+37
+37
+38
+39
+42
+42
+45
+47
+
+5 Zusammenfassung
+
+55
+
+6 Ausblick
+
+56
+
+A Benutzerbefragung
+
+62
+
+3
+
+1 Einleitung
+1.1 Motivation
+Im Rahmen einer Kooperation der Universität Konstanz mit Mercedes Benz
+wird in die Auswirkung von aktuellen Methoden des Usability Engineering und
+der Informationsvisualisierung auf die digitalen Informations- und Vertriebskanäle des Automobilherstellers untersucht. Dabei steht die direkte Kommunikation mit dem Endkunden im Vordergrund, das Zielpublikum wird durch die
+Automobilkäufer repräsentiert.
+Diese Arbeit versucht, diesen Ansatz umzukehren und stellt den Automobilhändler ins Zentrum der Entwicklung. Um dem Arbeitsumfeld eines Verkäufers gerecht zu werden, soll dabei ein Personal Digital Assistant (PDA) verwendet werden. Die Beratung kann so unabhängig von Umfeld des Verkaufsgespräches erfolgen, im besten Fall sogar direkt beim zu verkaufenden Objekt. Im Zusammenspiel mit Methoden des Usability Engineering soll ein mobiles Werkzeug entwickelt werden, das den Händler während eines abgeschlossenen Verkaufszyklus von Gebraucht- und Neuwagen unterstützt. Es darf aber weder die
+Gewohnheiten des Verkäufers noch die Vorstellungen des Kunden behindern.
+Dies erfordert eine grösstmögliche Flexibilität der Navigation, um den grundsätzlich sequentiell verlaufenden Prozess eines Autokaufs an das mentale Modell aller beteiligten Parteien anpassen zu können. Für eine umfassende Unterstützung des Händlers soll das ganze Tätigkeitsprofil eines Automobilverkäufers auf ein mobiles Werkzeug abgebildet werden. Neben der angesprochenen
+Unterstützung im Verkaufsprozess muss auch die Verwaltung des Automobilbestands, die Pflege von Neuzugängen sowohl von Neu- als auch Gebrauchtfahrzeugen Teil des Funktionsumfangs sein. Aufgrund seines Anspruches, für
+jeden Kunden ein massgeschneidertes Fahrzeug zu finden, wird der entstan4
+
+1.2 Erkenntnisse aus bisherigen Arbeiten
+
+dene Prototyp reTailor genannt.
+
+1.2 Erkenntnisse aus bisherigen Arbeiten
+Im Vorfeld dieser Arbeit wurde auf Händler zugeschnittene Software untersucht.
+Die untersuchten Angebote zeigen, dass zeitgemässe Software auf dem Markt
+vorhanden ist. Zum Teil unterscheiden sich die Schwerpunkte der einzelnen
+Lösungen, zum Teil ist die technische Umsetzung veraltet. Dennoch lässt sich
+feststellen, dass die technischen Möglichkeiten auch im Bereich der Fahrzeugvermarktung im Internet je länger je mehr angewandt werden und die Internetauftritte zum jetzigen Zeitpunkt eine nicht zu unterschätzende Kundenquelle darstellen. Das Hauptaugenmerk der Lösungen liegt sicher in der Konnektivität zu Automobilbörsen, der Hauptanlaufstelle für Autosuchende im Internet. Weiter ist den Händlern eine ansprechende Präsentation der vorhandenen
+Fahrzeuge mit Hilfe von grossen Bildern bis zu dreidimensionalen Modellen
+wichtig. Mängel erscheinen hier je nach Software häufig bei der Aktualität der
+Angebote. Müssen Bestände erst mühsam aktualisiert und auf einen Webserver
+übertragen werden, ist die Schwelle des Händlers, den Bestand an Fahrzeugen
+stets aktuell zu halten, bedeutend grösser, als wenn dies automatisch nach einer Transaktion erfolgt.
+
+1.2.1 Informationsbeschaffung im Vorfeld
+Untersucht wurden zwei unterschiedliche Arten von Software, die auf den Autohandel ausgerichtet sind. Ein grosser Teil der auf dem deutschsprachigen
+Raum verfügbaren Lösungen bietet eine komfortable Möglichkeit, den Bestand
+an Gebrauchtwagen während eines Lebenszyklus eines Wagens vom Eingang
+bis zur Übergabe an den Kunden zu verwalten. Das Erfassen von Neuzugängen
+erfolgt über eine Eingabemaske, die sämtliche Attribute eines Fahrzeuges auf5
+
+1.2 Erkenntnisse aus bisherigen Arbeiten
+
+nehmen kann. Dabei liegt der Schwerpunkt bereits auf der späteren Verknüpfung der Daten mit externen Tools. Dazu zählen bestimmt die grossen Automobilbörsen autoscout241 und mobile.de2 , die im deutschsprachigen Raum die
+Marktführerschaft im Gebrauchtwagenhandel über das Internet einnehmen.
+Da sich die Attributräume beider Anbieter in einigen Belangen unterscheiden,
+wird bei der Datenerfassung auf Kompatibilität mit beiden Standards geachtet,
+allfällige Inkompatibilitäten werden dem Benutzer gemeldet.
+
+1.2.2 Unterstützung der Beratung
+Eine eigens dazu durchgeführte Befragung von Händlern hat ein grosses Interesse an neuen Lösungen gezeigt, die gestellten Fragen sind in Anhang A aufgelistet. Im Beratungsgespräch für Neuwagen werden häufig die Produktkataloge
+der Fahrzeughersteller verwendet. Die aufwändig gedruckten Broschüren mögen durch ihre Aufmachung und grossen Illustrationen einen guten Eindruck
+des Äusseren eines Produktes vermitteln, vertiefte Informationen sind aber nur
+schwer zu erhalten. Preisauskünfte gestalten sich der Situation entsprechend
+schwierig. Der Aufpreis eines Ausstattungsmerkmals muss zuerst aus einer separaten Preisliste ermittelt werden und anschliessend mit anderen Änderungen verrechnet werden. Bei kombinierten Angeboten ein nahezu unmögliches
+Unterfangen.
+Im Gebrauchtwagenverkauf wird von allen Händlern die Schwacke- respektive Eurotaxliste3 zur Preisberechnung verwendet. Die vorhandenen informatikgestützten Systeme zur Kundeninformation sind entweder nicht auf die Bedürfnisse der Händler während einer Beratung zugeschnitten oder technisch
+veraltet. So kann es vorkommen, dass der Verkäufer den Konfigurator des Herstelller1
+
+http://autoscout24.com
+http:mobile.de
+3
+http://www.schwacke.de
+2
+
+6
+
+1.2 Erkenntnisse aus bisherigen Arbeiten
+
+Abbildung 1: Dealers Impact: Fahrzeugverwaltung mit dem PDA
+
+Internetauftrittes verwenden muss, um dem Kunden einen Überblick über die
+Ausstattungsmerkmale bieten zu können. Mercedes-Benz stellt seinen Händlern zumindest eine Produktdatenbank zur Verfügung. Das von Mercedes-Benz
+eingesetzte Programm bietet einen besseren Funktionsumfang und ermöglicht
+Zugriff auf aktuelle, hochauflösende Produktbilder, erschwert aber die Navigation in der Fülle der Ausstattungsmerkmale. Alle verfügbaren Merkmale sind
+in einer Tabelle dargestellt, die Suche nach einem spezifischen Attribut dauert
+länger, als dem Kunden zugemutet werden kann. Einer Alternative wird auch
+hier gerne entgegen gesehen.
+7
+
+1.3 Zielsetzung
+
+1.2.3 Mobile Lösung
+Spezielle Aufmerksamkeit hat das Produkt Dealers Impact4 verdient. Der amerikanische Hersteller bietet eine Gebrauchtwagenverwaltung mit PDA-Unterstützung
+an, wie in Abbildung 1 zu erkennen. Mit Hilfe des PDA werden neu ins Sortiment aufgenommene Gebrauchtwagen inventiert und erhalten über eine zentrale Basisstation einen Strichcode für die spätere Verwaltung. Einmal erfasste
+Fahrzeuge können über diesen Strichcode identifiziert werden, die Attribute
+des Wagens können vor Ort geändert werden, es können mit der in den PDA
+integrierten Kamera Fotos zugeordnet werden und Stellschilder für das Fahrzeug gedruckt werden. Für die ansprechende Präsentation der Fahrzeuge stehen diverse Plugins zur Verfügung. Die Spanne reicht hier von Konfigurationstool über drehende 3D- Ansichten bis zu Preis-Handel-Angeboten. Hierbei kann
+der Kunde ein Fahrzeug konfigurieren und einen Preis angeben, den er zu zahlen bereit wäre. Nun kann der Händler entscheiden, ob er auf dieses Kaufangebot eingeht oder nicht, analog eines realen Marktes. Im Verkauf wird der PDA
+nicht eingesetzt. Ein Umstand, der zur Idee von reTailor mit beigetragen hat.
+
+1.3 Zielsetzung
+reTailor soll ein mobiles Werkzeug zur Unterstützung wiederkehrender Aufgaben eines Automobilverkäufers sein. Einerseits soll der Lebenszyklus eines Gebrauchtwagen von Aufkauf über Lagerung bis zu seinem Verkauf mit reTailor
+verwaltet werden können. Andererseits soll reTailor als Wissensstütze im Verkaufsprozess eingesetzt werden können. Der Autohändler braucht bei der Beratung des Kunden nicht auf unterschiedliche Informationsquellen zurück zu
+greifen, alle Abfragen können direkt während des Gesprächs getätigt werden.
+4
+
+http://dealerimpact.com
+
+8
+
+1.3 Zielsetzung
+
+Preisauskünfte, technische Details, mögliche Alternativen und kundenspezifische Angebote können ohne Unterbruch in die Beratung einfliessen.
+Um eine nahtlose Integration ins Verkaufsgespräch zu ermöglichen, muss der
+Ablauf der Informationsbeschaffung frei wählbar sein. Anders als bei sequentiell ablaufenden Konfiguratoren darf der folgende Schritt nicht exklusiv vorgegeben sein, sondern muss auf die Bedürfnisse des Verkäufers und die Vorstellungen des Kunden Rücksicht nehmen.
+Kapitel 2 befasst sich mit den Grundlagen des Automobilhandels. Die Bedürfnisse von Händler und Kunden, denen reTailor zu Grunde liegt, sowie eine Analyse des Verhaltens beider Parteien während eines Verkaufsgesprächs stehen
+hier im Vordergrund.
+Durch die Wahl einer mobilen Plattform und der damit verbundenen Möglichkeiten und Einschränkungen müssen einige Besonderheiten von PDAs bei der
+Entwicklung in Betracht gezogen werden. Der im Vergleich zu stationären Einrichtungen kleinere Bildschirmplatz und die Bedienung mit einem Stylus oder
+Touchscreen ziehen Einschränkungen, aber auch bisher ungenutzte Möglichkeiten nach sich. Die Hersteller von PDAs sowie deren Betriebssysteme bieten
+ein Fülle von Styleguides und Design Principles für diverse Anwendungsszenarien an, welche selbstverständlich in die Entwicklung von reTailor einfliessen.
+Eine State of the Art Analyse von Navigationskonzepten ist in Kapitel 3 zu finden. Dabei werden sowohl allgemein gültige wie auch spezifisch für PDAs entwickelte Navigations- und Designmethoden analysiert und Vor- und Nachteile
+im Bezug auf reTailor gewichtet. Das daraus entstandene Navigationskonzept
+sowie der darauf basierende Prototyp von reTailor werden in Kapitel 4 ausführlich beschrieben und vorgestellt. In Kapitel 6 werden Ansatzweise weitere Anwendungsszenarien für Navigation und reTailor untersucht.
+
+9
+
+2 Anforderungsanalyse
+2.1 Benutzeranalyse
+2.1.1 Automobilhändler
+Die Aufgaben eines Automobilhändlers sowie dessen Arbeitsumfeld stellen die
+wichtigsten Anforderungen für reTailor dar. Der gewohnte Ablauf eines Verkaufsgesprächs darf durch eine unterstützende Software nicht gestört werden.
+Die Software hat sich dem Benutzer und dessen Gewohnheiten anzupassen,
+was gerade bei über Jahre eingespielten Abläufen wie der Verkaufsberatung
+im Automobilhandel bei jedem Nutzer unterschiedliche Anforderungen ergibt.
+Um diese Faktoren besser in die Entwicklung einfliessen lassen zu können, wurden im Vorfeld der Arbeit Gespräche mit Automobilhändlern in der Schweiz
+und in Deutschland gesucht. Die gewonnenen Erkenntnisse über Vorstellungen und Erwartungen der Nutzergruppe sowie die Analyse herkömmlicher Beratungsmethoden sind im Folgenden aufgeführt und fliessen direkt in die Usability Goals in Kapitel 2.4 ein. Das Tätigkeitsfeld des Händlers lässt sich in zwei
+Kategorien teilen. Einerseits die im Gespräch mit dem Kunden verwendeten
+Techniken und Hilfsmittel und den administrativen Aufgaben, die für gewöhnlich mit einem Warenwirtschaftssystem erledigt werden. Dazu gehören die Erfassung und Verwaltung von Gebrauchtwagen, deren Inventur, Erfassung von
+Neuzugängen und die Ausbuchung verkaufter Fahrzeuge aus dem Fahrzeugpark. Im Verkauf sind diejenigen Funktionen von Interesse, welche im Gespräch
+mit dem Kunden thematisiert werden. Abbildung 2 zeigt einen möglichen Ablauf eines Verkaufsgesprächs, der in seiner Gliederung an den Konfigurator von
+Mercedes Benz angelehnt ist. Entscheidend ist hier die Auswahl des konkreten
+Fahrzeuges, eventuelle Alternativ-Vorschläge und Berechnung der anfallenden
+Kosten. Der Car Configurator ermöglicht es, mit dem Kunden zusammen das
+10
+
+2.1 Benutzeranalyse
+
+A
+
+Wizard
+
+C
+E
+
+Neuwagen
+
+Modell
+
+S
+
+Zustand
+
+Gebraucht
+
+M
+
+Unfallauto
+
+B
+
+Limousine
+Coupé
+Kombi
+
+Steuerrechner
+
+Aufbau
+
+Kabrio
+
+sonst.
+Kosten
+
+Versicherung
+
+Schwacke
+
+Übersicht
+
+Art
+
+Motor
+
+Hubraum
+
+Barkauf
+
+Leistung
+
+Leasing
+
+Finanzierung
+Preisrahmen
+
+Classic
+Elegance
+
+Miete
+Kreditkauf
+
+Designlinie
+
+Avantgarde
+
+Innenausstattung
+
+Aussenausstattung
+
+Lack
+
+Räder
+
+Technik
+
+Radio
+
+Metallic
+
+Sicherheit
+
+Uni
+
+Technik
+
+Lenkung
+
+Interieur
+
+Polster
+
+Radio
+
+Komfort
+
+Leder
+
+Kommuni.
+
+Interieur
+
+Stoff
+
+Anbauten
+
+Sitze
+Klima
+
+Abbildung 2: Ablauf eines Verkaufsgespräches
+
+11
+
+2.1 Benutzeranalyse
+
+Wunschfahrzeug mit Hilfe eines Wizards Schritt für Schritt zu konfigurieren
+und dabei die anlaufenden Kosten zu jedem Zeitpunkt im Blick zu haben. Während des Konfigurierens schlägt der Wizard laufend aktualisiert Fahrzeuge mit
+ähnlicher Ausstattung oder einer ähnlichen Kategorie vor. Dabei kann der Kunde angeben, ob er nur Neuwagen vorgeschlagen bekommt, oder ob Gebrauchtwagen ebenfalls angezeigt werden sollen. Ist das gewünschte Auto einmal zusammen gestellt, kann es mit anderen, ebenfalls in Frage kommenden Fahrzeugen verglichen werden. Da dieser Bereich bereits in [Kli06] behandelt wird,
+gehe ich nicht näher darauf ein. Eine Einbindung der erzielten Resultate ist
+aber denkbar. Für das endgültige Fahrzeug stehen im letzten Schritt diverse Berechnungen zur Auswahl. Die Finanzierung des Fahrzeuges kann somit direkt
+berechnet und angepasst werden, ebenso ist ein erster Blick in Versicherungsund Steuerkosten möglich.
+
+Neue Fahrzeuge, respektive neu im Sortiment befindliche Gebrauchtfahrzeuge können direkt mit dem PDA aufgenommen werden. Dazu steht analog
+des Car Configurators ein Wizard zur Verfügung, welcher Schritt für Schritt durch
+die Aufnahme führt. Mit derselben Anwendung lassen sich auch bereits vorhandene Fahrzeuge verwalten, Daten abändern und neue Fotografien zuordnen. Als nützliches Detail ist jedem Fahrzeug auch ein Standort zuzuordnen,
+der in der Fahrzeugansicht angezeigt wird. Dies ist nicht nur bei grösseren Standplätzen von Vorteil sondern erlaubt auch Handel über Kommission mit anderen Händlern. Die angebotenen Schnittstellen erlauben eine direkte Anbindung an das bereits vorhandene Warenwirtschaftssystem, die eigene Website
+sowie Onlinebörsen in einem einzigen Schritt.
+12
+
+2.1 Benutzeranalyse
+
+2.1.2 Kunde
+Sekundärer Stakeholder ist der Kunde. Neben den Gewohnheiten und Anforderungen der Händler fliesst die Erwartungshaltung des Kunden ebenfalls in
+die Entwicklung mit ein. Um die Vorstellungen des Kunden besser betrachten
+zu können, wurden drei unterschiedliche Voraussetzungen für ein Beratungsgespräch ausgewählt und davon ausgehend die folgenden Szenarien gebildet.
+
+2.1.2.1 Gewöhnliches Verkaufsgespräch Herr Meier träumt schon seit langem von einem neuen Auto. Es soll auf seine Bedürfnisse zugeschnitten sein.
+Er sucht den Mercedeshändler in seiner Stadt auf, und lässt sich von dem Verkäufer das Angebot vorstellen. Da ihm die neue A-Klasse zusagt, bittet er den
+Händler, ihm mögliche Varianten vorzuschlagen. Der Händler nimmt seinen
+PDA aus der Dockingstation und wählt die A-Klasse als Basis. Nun stellt der
+Händler die vorhandenen Motortypen vor. Herr Meier entscheidet sich für einen
+Diesel. Da er umweltbewusst fahren möchte, wählt er den kleinsten zur Verfügung stehenden Hubraum. Auf eine Farbe möchte er sich noch nicht festlegen.
+Der Händler wählt also die angegebenen Daten aus und geht direkt zur Innenausstattung. Er kann dem Kunden nun bereits vorhandene Gebrauchtwagen
+vorschlagen, aber Herr Meier möchte einen Neuwagen. Er wünscht eine Automatikschaltung mit Tempomat, ein Navigationssystem sowie Ledersitze. Der
+Händler kann ihm nun direkt die Kosten für die Zusatzausstattung nennen und
+ihm das Navigationssystem direkt vorführen. Herr Meier ist begeistert, aber
+noch unsicher, ob er mit der Finanzierung klar kommt. Der Händler rechnet
+ihm also kurz vor, was dieses Auto an Steuern, Leasingrate und Versicherung
+kosten würde und schlägt ihm gleichzeitig ein gebrauchtes Fahrzeug mit denselben Ausstattungsmerkmalen vor. Herr Meier ist begeistert und beschliesst,
+trotz seiner Anfänglichen Bedenken, den Gebrauchtwagen zu kaufen.
+13
+
+2.1 Benutzeranalyse
+
+2.1.2.2 Geführtes Verkaufsgespräch Herr Müller hat von seiner Tante 65.000
+geerbt und möchte sich davon ein Auto kaufen. Er besucht den örtlichen MercedesBenz Händler und teilt diesem seine Kaufabsicht mit. Der Händler legt zu Beginn des Verkaufsgesprächs das Preislimit auf 65.000 fest und erkundet sich
+nach den Wünschen des Kunden. Da dieser bisher kein Auto hatte und sich
+auch gar nicht mit der Materie auskennt, zeigt ihm der Händler die Fahrzeugflotte von Mercedes-Benz im Verkaufsraum. Herr Müller ist fasziniert von der
+G-Klasse und entscheidet sich ein solches Auto näher zu betrachten. Der Händler geht zusammen mit Herrn Müller nun die möglichen Merkmale durch. Als
+Motorisierung wird der G 320 ins Auge gefasst, als Aussenfarbe ein schwarzer
+Uni-Lack. Das Interieur möchte Herr Müller gerne in Wurzelnussholz, ebenso
+das Lenkrad. Beim Bedien- und Anzeigesystem ist Herr Müller überfragt, der
+Händler stellt ihm also das System Command auf seinem PDA vor. Ein tolles
+System, das Herrn Müller sofort zusagt. Da Herr Müller gerne Campingurlaub
+macht, entscheidet er sich, eine Anhängerkupplung zu ordern. Der Händler
+macht ihn darauf aufmerksam, dass er nun sein gesetztes Budget um 150 überschreitet, bietet ihm aber einen entsprechenden Nachlass an. Nachdem das
+Fahrzeug nach den Wünschen von Herrn Müller zusammen gestellt ist, kann
+der Händler ihm den geschätzten Lieferzeitpunkt nennen, nimmt die Kundendaten auf und sendet ein Bild des Fahrzeuges an Herrn Müllers Handy. Herr
+Müller bedankt sich und geht nach Hause, um das Bild seinen Kumpels zu zeigen.
+
+2.1.2.3 Verkaufsgespräch mit Vorkonfiguration Frau Klar möchte für die
+Sommersaison ein neues Cabrio von Mercedes-Benz, da sie beruflich viel Zeit
+im Internet verbringt, stellt sie sich auf der Internetseite von Mercedes-Benz
+ihr Traumfahrzeug zusammen. Die Ergebnisseite druckt sie sich aus und be14
+
+2.2 Aufgabenanalyse
+
+Konzept Verkauf / Beratung
+Dynamischer Car Configurator
+
+•Mit dem Kunden zusammen kann
+das Wunschfahrzeug mit Hilfe eines
+Wizards konfiguriert werden. Die
+aktuellen Kosten sind dabei zu jedem
+Zeitpunkt einsehbar
+
+Vergleich
+
+Ähnliche Fahrzeuge vorschlagen
+
+•Fahrzeuge mit ähnlicher
+Ausstattung/Kategorie werden
+vorgeschlagen (Neu- und
+Gebrauchtwagen.
+
+Berechnungen
+
+•Das konfigurierte Fahrzeug kann mit
+
+•Diverse Kosten können on-the-fly
+
+ähnlichen Modellen verglichen
+werden.
+
+berechnet werden.
+
+Konzept Bewirtschaftung
+Erfassen von Neuzugängen
+
+Änderung von Fahrzeugdaten
+
+•Neue Fahrzeuge können mit Hilfe
+
+•Sämtliche Daten eines Fahrzeuges
+
+eines Wizards erfasst werden. Direkte
+Aufnahme von Fotos, …
+
+können direkt auf dem PDA
+eingesehen, ergänzt, geändert
+werden.
+
+Standorthilfe
+
+•Standortfestlegung mit
+Navigationshilfe (Übersichtskarte)
+
+Schnittstellen
+
+•Warenwirtschaftssystem
+•Eigene Website
+•Automobilplattformen
+
+Abbildung 3: Aufteilung der Tätigkeitsbereiche
+gibt sich zum Händler ihres Vertrauens. Dieser gibt die Konfigurator-Nummer
+in seinen PDA ein und kann so die Daten des selbst konfigurierten Fahrzeuges übernehmen. Er sieht, dass Frau Klar ein veraltetes Autoradio ausgewählt
+hat und macht sie darauf aufmerksam. Anhand einer interaktiven Präsentation
+zeigt er ihr die Vorzüge des neuen Modells, worauf sich Frau Klar mit einer Änderung zufrieden gibt. Sie klärt mit dem Händler noch die Finanzierung und
+lässt sich die gesammelten Informationen ausdrucken, um mit ihrem Mann
+noch darüber diskutieren zu können.
+
+2.2 Aufgabenanalyse
+Ausgehend von den Bedürfnissen von Händlern und Kunden kann nun ein Aufgabenprofil erstellt werden. Das Tätigkeitsfeld des Verkäufers kann in die beiden in Abbilung 3 ersichtlichen Bereiche Verkauf/Beratung und Bewirtschaftung eingeteilt werden. Unter Verkauf werden alle Themen, die direkten Kundenkontakt benötigen oder rechtfertigen zusammengefasst, unter Bewirtschaftung werden Prozesse zur Daten- und Fahrzeugpflege organisiert. Herzstück
+von reTailor bildet der dynamische Car Configurator, der es dem Verkäufer ermöglicht, mit dem Kunden zusammen ein Fahrzeug parallel zum Verkaufsge15
+
+2.2 Aufgabenanalyse
+
+spräch zusammen zu stellen, ohne dass das Gespräch eingeschränkt wird. Diese Komponente liesse sich durch intelligente Funktionen (Experensystem) zu
+einem wirkungsvollen Verkaufsinstrument erweitern. Besteht ein direkter Zugriff auf den lokalen Fahrzeugbestand, kann der Configurator während des Verkaufsgesprächs auch als Suchanfrage aufgefasst werden, um die vor Ort vorhandenen Gebrauchtwagen nach den gewünschte Kriterien zu durchsuchen.
+Das System kann so je nach Stand der Konfiguration mögliche Alternativen und
+passende Gebrauchtwagen vorschlagen. Weitere Funktionen, die reTailor dem
+Händler abnehmen kann betreffen die Gegenüberstellung von unterschiedlichen Fahrzeugen und diverse Berechnungsfunktionen, die auf der aktuell getätigten Auswahl basieren. Der Fahrzeugvergleich wird in [Kli06] behandelt, eine Integration der Ergebnisse in reTailor ist sicher wünschenswert und würde
+dem Händler gute Argumente für eine umfassende Beratung bieten.
+
+Ebenfalls zum Tätigkeitsfeld gehören diverse Aufgaben, die nicht im direkten Kundenkontakt stehen, aber dennoch zur täglichen Arbeit eines Automobilhändlers gehören und mit reTailor erleichtert werden könnten. Im Rahmen
+dieser Arbeit wurde auf eine Implementierung verzichtet, aber das System wird
+flexibel genug ausgelegt, um zukünftige Erweiterungen problemlos zuzulassen. Mögliche Ideen umfassen eine komplette Verwaltung von Neu- und Gebrauchtwagen, von der Erfassung über die Lagerung bis zum Verkauf. Der Händler kann die Kenndaten neuer Fahrzeuge mit dem PDA durch Verwendung des
+Car Configurators erfassen, direkt fotografieren und in sein Warenwirtschaftssystem einpflegen. Von dieser Datenbasis können weitere Systeme, beispielsweise Internetseiten oder Online-Börsen gepflegt werden, was den ganzen Verwaltungsaufwand enorm reduzieren würde, wie in Abbildung 4 ersichtlich.
+Für Automobilhändler mit einer grossen Anzahl an Gebrauchtwagen wäre
+16
+
+2.2 Aufgabenanalyse
+
+Abbildung 4: Vorteile bei der Verwendung einer gemeinsamen Datenbasis
+
+17
+
+2.3 Styleguides
+
+eine Navigationshilfe zur einfachen Auffindung eines bestimmten Fahrzeuges
+hilfreich. Das System könnte anhand des gespeicherten Standortes eine Übersicht generieren, die durch den Wagenpark führen würde.
+
+2.3 Styleguides
+Für die prototypische Entwicklung von reTailor bietet sich Macromedia Flash
+5
+
+auf Grund seiner einfachen Bedienbarkeit und Plattformunabhängigkeit an.
+
+Der Prototyp kann somit je nach Umgebung auf Handhelds oder stationären
+Rechnern getestet werden. Die dabei auftretenden Einschränkungen und Möglichkeiten sind im Folgenden beschrieben.
+
+2.3.1 Usability Guidelines
+Gestaltungsrichtlinien für Anwendungen mit Macromedia Flash kursieren im
+Internet zuhauf. Macromedia veröffentlicht als Hersteller von Flash auf ihrer
+Website eine Top Ten Liste mit Gestaltungshinweisen, die von bekannten FlashDesignern, Entwicklern und Usability Experten zusammengetragen wurden.
+Darüber hinaus beschäftigt sich eine aktuelle Seminararbeit mit diesem Thema. Generell decken sich diese Ratschläge mit aus anderen Bereichen bereits
+bekannten Usability Guidelines. Spezifischer, aber auch weniger verbreitet sind
+Guidelines im Zusammenhang mit PDA. Palm Source als Entwickler von Palm
+OS stellt ein Dokument mit Design Principles zur Verfügung, welches auf die
+Eigenheiten des PDA eingeht.6 Daraus lassen sich einige wichtige Punkte extrahieren.
+5
+6
+
+http://www.macromedia.com/de/devnet/flash/
+http://www.palmsource.com/index.html
+
+18
+
+2.3 Styleguides
+
+2.3.2 Grösse des Geräts
+Die fehlende Tastatur und kleine Bildschirme von PDAs haben einen grossen
+Einfluss auf das Design der Benutzeroberfläche.
+• Die Anwendung muss das manuelle Eingeben von Daten minimieren.
+Das Eingeben ist lange nicht so angenehm wie an einem Desktop Computer mit Tastatur und Maus.
+• Menüs sind standardmässig versteckt, um mehr Platz für die Daten bieten zu können. Einzig die wichtigsten Funktionen stehen immer zur Verfügung.
+• Keine Button-Toolbars, eine Unterscheidung der Icons ist kaum möglich.
+• Weniger ist mehr. Auf nicht notwendige Funktionen kann verzichtet werden.
+
+2.3.3 Schnell und Einfach
+Im Unterschied zu Desktop Rechner muss es dem Benutzer möglich sein, Grundfunktionen des PDA ohne Anleitung und Einweisung innert 5 Minuten bedienen zu können.
+• Wartezeiten sind möglichst kurz zu halten. Bei Desktop Rechner sind Benutzer es gewohnt, einige Sekunden auf das Laden einer Anwendung zu
+warten, da sie gewöhnlich einige Zeit daran arbeiten werden. Auf einem
+PDA gilt es, nur kurz etwas nachzusehen, dafür aber mehrmals täglich.
+• Generell lässt sich sagen, dass ein Benutzer während des Festlegens eines Termins per Telefon mit dem PDA die besprochenen Sachen erfassen
+können muss.
+19
+
+2.3 Styleguides
+
+• Wichtige Informationen sollten mit wenigen Navigationsschritten erreichbar sein und wenig Aktion vom Benutzer (durch Klicks) erfordern.
+• Konsistenz in den einzelnen Bedienungsschritten mit den eingebauten
+Anwendungen erleichtert den Einstieg enorm.
+• Häufige Anwendungen können speziell optimiert werden.
+
+2.3.4 Usability Checkliste
+Microsoft bietet als Hersteller von Windows Mobile7 ebenfalls umfangreiche Literatur und Styleguides an. Da sich viele Bereiche mit den Richtlinien von Palm
+überschneiden, werden hier nur die wichtigsten Erkenntnisse wiedergegeben.
+Interessant bei Microsofts Styleguide ist vor Allem die Usability Checkliste, die
+eine Überprüfung der eigenen Applikation auf Übereinstimmung mit grundlegenden Gestaltungsprinzipen ermöglicht.
+
+• Dialogboxen enthalten keine irrelevante Information, da diese von relevanten Informationen ablenken.
+• Informationen erscheinen in einer logischen Reihenfolge. Die Informationen werden mittels Worten kommuniziert, die dem Benutzer vertraut
+sind.
+• Anleitungen wie die Applikation zu Benutzen ist sind sichtbar oder leicht
+zugänglich. Komplexe Instruktionen sind zu vermeiden.
+• Wenn möglich, ist dieselbe Interaktion für eine Aktion, konsistent über
+die gesamte Applikation zu verwenden.
+7
+
+http://www.microsoft.com/windowsmobile/
+
+20
+
+2.4 Usability Ziele
+
+• Konsistenz bezüglich der visuellen Präsentation von Informationen, der
+Platzierung von UI-Elementen, dem Format, der Schriftart und der Interpunktion ist zu wahren.
+• Angemessenes Feedback muss in einer angemessenen Zeit gegeben werden.
+• Shortcuts sind für erfahrene Benutzer anzubieten.
+• Fehlermeldungen erklären warum ein Fehler aufgetreten ist und geben
+Hilfestellungen das Problem zu lösen.
+• Nach Möglichkeit vermeidet das Design der Applikation das Eintreten
+von Fehlern.
+
+2.3.5 Zusätzliche Erkenntnisse
+Zu den herstellerspezifischen Guidelines wurden auch Erfahrungen anderer
+PDA-Entwickler betrachtet. Ein wichtiger Hinweis scheint mir die Anordnung
+der Bedienelemente am unteren Bildschirmrand, direkt über dem Texteingabefeld, da sich der Stift meistens in dieser Region des Gerätes befindet. Beim
+Anzeigen von vielen Daten sollte man nach Möglichkeit auf Scrollbalken verzichten, da diese mit dem Stift nur mühsam bedient werden können.
+
+2.4 Usability Ziele
+Die Festlegung von Usability Zielen im Vorfeld hilft dabei, die Produkteentwicklung mit Rücksicht auf den Benutzer durchführen zu können. In [PRS02] werden Usability Ziele in zwei Kategorien aufgeteilt: Die qualitativen Ziele werden
+User Experience Goals genannt, die quantitativen Usability Goals. Für das Aufgabengebiet von reTailor wurden folgende Goals priorisiert:
+21
+
+2.4 Usability Ziele
+
+2.4.1 User Experience Goals
+Hier wurde das Ziel Helpful als sehr wichtig eingestuft. Da reTailor für Automobilhändler entwickelt wird, also für eine konkrete Zielgruppe, der ein gewisser
+Lernaufwand zugemutet werden kann, werden motivierende und unterhaltende Elemente geringer gewichtet als die effektive Unterstützung bei der Arbeitsaufgabe. Weitere User Experience Goals können in folgender Priorisierung angewendet werden.
+• Satisfying: Die Bedürfnisse des Nutzers müssen getroffen werden.
+
+2.4.2 Usability Goals
+Die Usability Goals sind weit konkreter und müssen bei der Entwicklung unbedingt beachtet werden.
+• Effective to use: Wie gut erfüllt das System die Aufgabe, die es erfüllen
+sollte? Können alle Funktionen und Informationen erreicht werden?
+• Efficient to use: Wie unterstützt das System den Nutzer bei der Erledigung seiner Aufgaben?
+• Safe to use: Bewahrt das System den Nutzer vor kritischen Situationen?
+Ist eine Fehlerbehebung einfach möglich, sollten Fehler auftreten?
+• Have Good utility: Hat das System die Funktionalität, um den Nutzer bei
+seinen Aufgaben zu unterstützen?
+• Easy to learn: Wie einfach ist es, den Gebrauch des Systems zu erlernen?
+• Easy to remember how to use: Wie einfach ist es, sich nach erlernen der
+Funktionalitätdaran zu erinnern?
+22
+
+2.5 Constraints
+
+2.5 Constraints
+Für die Implementierung des Prototypen bietet sich die Verwendung von Macromedia Flash an. Macromedia Flash verkörpert den Industriestandard bei der
+Erstellung und Bereitstellung wirkungsvoller Rich-Media-Inhalte und -Anwendungen
+für Desktopcomputer und zahlreiche andere Geräte , unter anderem auch PDA
+auf Basis von Windows Mobile 2003.
+
+2.5.1 Macromedia Flash
+Mit Macromedia Flash können Designer und Entwickler Video-, Text-, Audiound Grafikelemente zu überzeugenden Rich-Media-Erlebnissen verbinden, die
+bei interaktiven Marketingunterlagen und Präsentationen, E-Learning-Tools und
+Benutzeroberflächen für Anwendungen zu herausragenden Ergebnissen führen. Mit mehr als einer Million professionellen Anwendern und einer Installationsbasis von über 97 % aller internetfähigen Desktopcomputer weltweit, sowie zahlreichen anderen Geräten, verkörpert Flash die am weitesten verbreitete Softwareplattform der Welt. Der Vorteil daran ist die Möglichkeit, schnell und
+mit vergleichsweise geringem Aufwand datengesteuerte Multimedia-Anwendungen
+erstellen zu können. Mit einer formularbasierten Entwicklungsumgebung, den
+leistungsstarken Datenbindungsmöglichkeiten und der Unterstützung von XML
+ist es für Entwickler ein Leichtes, wirkungsvolle Multimedia-Anwendungen für
+den E-Commerce, Intranets und andere Zwecke zu erstellen. Für die Verwendung von Macromedia Flash auf der Pocket PC-Plattform stehen diverse Player
+zur Verfügung.
+
+2.5.2 Macromedia Flash Player 6 for Pocket PC 2003
+Der eigenständige Macromedia Flash Player 6 für Pocket PC ermöglicht die rasche und einfache Bereitstellung von Macromedia Flash Inhalten für Pocket PC
+23
+
+2.5 Constraints
+
+Abbildung 5: Unterschied zwischen Text mit Anti-Aliasing und ohne
+Geräte. Der Entwickler hat die Möglichkeit eigenständige Anwendungen bereit zu stellen, was für die laufende Entwicklung ein grosser Vorteil ist. Einzige
+Einschränkung ist die Unterstützung von Action Script, die objektorientierte
+Scriptsprache von Flash. Da dieser Player seit 2003 nicht mehr weiter entwickelt und ein Nachfolger nicht veröffentlicht wurde, werden viele der nützlichen Funktionen von Action Script 2.0 nicht unterstützt. Für die Entwicklung
+des Prototyps muss daher auf Action Script 1 zurück gegriffen werden, was zur
+folge hat, das viele Komponenten statisch erzeugt werden müssen.
+
+2.5.3 Typografie
+Bedingt durch die kleine Bildschirmfläche und somit der geringen optischen
+Auflösung ist auf eine gut lesbare und klare Schrift Wert zu legen. Grundsätzlich können gerätinterne Schriftarten verwendet, oder externe eingebunden
+werden. Externe Schriftarten wirken sich aber immer auch auf die Dateigrösse
+aus. Hervorhebungen von wichtigen Textpassagen sollte vor allem durch eine
+unterschiedliche Farbgestaltung oder Wahl eines anderen Schriftsatzes erzielt
+werden.
+
+2.5.4 Pixelfonts
+Pixelfonts sind Schriftarten, die speziell für die Verwendung in Macromedia
+Flash erstellt wurden. Dabei wird bewusst auf Kantenglättung der Zeichenränder verzichtet. Dies verbessert die Lesbarkeit durch vergrösserten Kontrast ge24
+
+2.5 Constraints
+
+rade bei kleinen Schriftgrössen. Für ein optimales Resultat ist jedoch die Beachtung von gewissen Grundregeln von Nöten. Ein Pixelfont hat immer eine
+native Schriftgrösse, in welcher er verwendet werden sollte. Eine Schriftart für
+Grösse 8 darf somit nur mit Grösse 8 (oder einer Vielfachen davon, 16, 32, etc)
+verwendet werden. Bei der Veröffentlichung ist darauf Wert zu legen, dass der
+Flash-Movie nicht mehr skaliert wird und die Textblöcke pixelgenau ausgerichtet werden, da sonst ungewünschte Anti-Aliasing-Effekte wie in Abbildung 5
+auftreten können.
+
+2.5.5 Rechenleistung
+
+Obwohl heutige PDA bereits über eine hohe CPU-Leistung sowie eine beachtliche Menge an Speicher verfügen, sind sie nicht mit Desktoprechnern zu vergleichen. Ein aktueller PDA (zum Beispiel Dell Axim 51) verfügt über einen Prozessor mit 624 Mhz und 64 MB Hauptspeicher. Speziell rechenintensive Objekte wie Animationen, Alphatransparenzen und Grafiken mit vielen Vektoren
+zwingen die Anzeigegeschwindigkeit in Windeseile in die Knie. Logischerweise
+wäre die naheliegenste Lösung das Weglassen des betreffenden Objekts, oder
+zumindest eine Verminderung der Vektorenanzahl. Das lässt sich durch Verzicht auf Border von Vektorobjekten effizient erreichen. Eventuell lassen sich
+gewisse Vektorgrafiken durch Bitmaps ersetzen, was zwar einen höheren Speicherbedarf, aber dafür einen kleineren Rechenaufwand zur Folge hätte. Die effektive Geschwindigkeit der Applikation hängt darüber hinaus auch noch von anderen offenen Programmen, dem verfügbaren Arbeitsspeicher sowie der gewählten Auflösung des Displays ab.
+25
+
+3 State of the Art Analyse
+3.1 Design Patterns
+Patterns sind strukturelle und funktionielle Bestandteile, die die Grundstruktur
+einer Programmoberfläche, einer Website, eines objektorientierten Programms
+oder sogar eines Gebäudeplans verbessern. Patterns ermöglichen es, die einzelen Elemente einer Domände einfacher zu Nutzen. Sie erhöhen das Verständnis, den mehrfachen Einsatz oder einfach die Anmutung. Patterns beschreiben die Best Practices innerhalb eines Anwendungsgebiets, bieten bewährte
+Lösungen für bekannte Probleme (sogenannte Forces) und sind somit naturgemäss keine Neuerungen. Patterns bieten aber keine Allerweltslösung an sondern müssen von Fall zu Fall an die Gegebenheiten angepasst werden.
+
+3.1.0.1 Verwenden von Design Patterns Wie vorgängig erwähnt, stellen Patterns keine Schritt-für-Schritt Anleitung für ein ausgefeiltes User Interface Design dar. [Tid05] bietet eine Übersicht über mögliche Lösungsansätze, geglieder nach Grösse der Entscheidung: Wichtige Designentscheidungen mit Einfluss auf den gesammten Design-Prozess werden vor Detailarbeiten beschrieben. Wichtige Vorteile von Design Patterns umfassen:
+• Pattern können für Designer mit geringer Erfahrung eine hilfreiche Lehrform bilden. Pattern stellen Ideen oder Alternativen für wichtige Designelemente dar.
+• Jedes Pattern hat ein Anwendungsbeispiel. Die Grundidee des Patterns
+lässt sich so anschaulich Verdeutlichen.
+• Bei der interdisziplinären Kommunikation zum Projekt oder beim Definieren von Spezifikationen können über die Namen der Patterns Desi26
+
+3.1 Design Patterns
+
+Abbildung 6: One-Window Drilldown beim iPod
+gnentscheidungen eindeutig identifiziert werden.
+• Jedes Pattern hat eine fundierte Begründung für seine Funktionsweise
+und die Grundidee dahinter. Eine Anpassung des Patterns kann so mit
+Rücksicht auf die Grundidee vorgenommen werden, ohne die elementaren Bestandteile zu veletzen.
+Ein Pattern-Katalog darf aber nicht als Checkliste aufgefasst werden. Jedes
+Projekt hat einen eigenen Kontext und muss in diesem betrachtet werden. Selbstverständlich kann keine Referenz und keine Patternsammlung Designentscheidungen oder Rücksichtnahme auf Requirements ersetzen.
+Folgende Design Patterns erschienen bei der Entwicklung von reTailor für
+sinnvoll und konnten entsprechend angepasst eingesetzt werden: One-Window
+Drilldown, Color Coded Divisions und Progressive Disclosure, welche im Folgenden erläutert werden.
+
+3.1.1 One-Window Drilldown
+3.1.1.1 Einsatz Das One-Window-Drilldown Pattern wird sinvoll eingesetzt,
+wenn die Anwendung aus diversen Seiten oder Unterelementen besteht, durch
+27
+
+3.1 Design Patterns
+
+welche der Nutzer navigieren kann. Die Unterelemente können linear, in einem
+Hyperlink-Netzwerk oder hierachisch angeordnet sein. Beispielanwendungen
+sind Adressbücher, Kalender, Emailprogramme und andere häufig genutze Software. Wie in Abbildung 6 ersichtlich, verwendet auch der iPod einen One-Window
+Drilldown. Beim Design für Small Screen Devices ist dieses Pattern von grossem Vorteil, da für eine Übersicht häufig kein Platz vorhanden ist. Aber auch
+bei Anwendungsszenarien mit grösseren Bildschirmflächen kann ein Komplexitätslimit auftreten, das mit dem One-Window-Drilldown beschränkt werden
+kann.
+
+3.1.1.2 Begründung Keep it simple. Bei der Darstellung aller Inhalte in einem Fenster sind die Interaktionsmöglichkeiten in jedem Zustand klar ersichtlich und der Nutzer kann seinen Aufmerksamkeitsfokus auf ein Element beschränken. Darüber hinaus ist jeder Nutzer an Webbrowser mit einem Fenster
+gewöhnt. Es entspricht der Erwartungshaltung des Nutzers, dass bei einer Interaktion der aktuelle Bildschirminhalt ausgetauscht wird. Das One-WindowDrilldown Pattern ist eine Alternative zu vielen komplexeren Pattern, da entweder der Bildschirmplatz knapp bemessen oder die Komplexität dem Nutzer
+nicht mehr zuzumuten ist.
+
+3.1.1.3 Lösungsansatz Mit einem Fenster kann die ganze Applikation als Miniaturansicht, im Vollbildmodus oder auf dem Desktop zwischen diversen anderen Fenstern abgebildet werden. Die Herausforderung dabei ist es, den Inhalt
+so zu strukturieren, dass er in das gegebene Fenster passt und den zur Verfügung stehenden Bildschirmplatz möglichst effizient nutzt. Ein wichtiges Element eines solchen Fensters stellen die Navigationselemente dar, die Übergänge in andere Bereiche der Applikation bieten. Übergänge können durch Hyperlinks, Buttons oder andere Interaktionselemente realisiert werden. Ein Über28
+
+3.1 Design Patterns
+
+Abbildung 7: Color-Coding auf der Internetseite von Apple
+gang tauscht das aktuelle Fenster mit dem Ziel aus, wodurch sich der Nutzer
+tiefer in den Inhalt der Applikation begibt (drill down). Dem Nutzer muss zu
+jedem Zeitpunkt klar sein, wo er sich momentan befindet und wie er zurück
+findet. Ohne graphische Struktur der Applikation muss sich der Nutzer selber
+ein mentales Modell der Hierarchie aufbauen, was nur bei einfachen linearen
+oder flach hierarchischen Strukturen funktionieren kann, ohne den Nutzer zu
+überfordern.
+
+3.1.2 Color-Coded Divisions
+3.1.2.1 Einsatz Bei umfangreichen User Interfaces mit diversen Seiten oder
+Fenstern kann eine Gliederung in Sektionen helfen, bestimmte Teilbereiche der
+Applikation als zusammen gehörend zu markieren. Eine farbliche Unterschei29
+
+3.1 Design Patterns
+
+dung im Rahmen eines visuellen Gesammtkonzepts hilft dabei, die Sektionen
+von einander unterscheiden zu können.
+
+3.1.2.2 Begründung Farben können als Wegweiser aufgefasst werden. Der
+Nutzer erhält einen leicht sichtbaren Hinweis, der ihm helfen kann, seinen aktuellen Standort zu identifizieren. Die Farbgebung kann dabei auch dezent im
+Hintergrund eingesetzt werden, da sie visuell auf sich aufmerksam macht. Der
+Nutzer muss die Unterscheidung nicht einmal aktiv aufnehmen, hat er aber
+das Farbschema einmal erfasst, hilft es ihm bei der Navigation. Auch ohne aktive Wahrnehmung ist ein Wechsel der Sektion auf den ersten Blick zu erkennen,
+da sich einfach die Hintergrundfarbe geändert hat. Die Gliederung in Sektionen verringert auch den Aufwand des Nutzers, sich ein Modell der Applikationsstruktur vorzustellen. Einzelne Sektionen sind übersichtlicher als der ganze
+Informationsraum der Applikation.
+
+3.1.2.3 Lösungsansatz Zur eindeutigen Identifizierung einer Sektion wählt
+man eine Farbe des User Interfaces und tauscht diese je nach Sektion aus. Meistens ist ein Ändern der Farbe des Hintergrunds zu aufdringlich, es bietet sich
+an, subtilere Wechsel im Farbspiel vorzunehmen, siehe beispielsweise Abbildung 7. Rahmen oder Hintergründe von Textfeldern bieten meist genüged Farbinformationen um Änderung wahrnehmen zu können.
+
+3.1.3 Progressive Disclosure
+3.1.3.1 Einsatz Wenn der Nutzer Schritt für Schritt durch ein Interface geführt werden soll, kann das Progressive Disclosure Pattern angewandt werden.
+Dieses Pattern ist aber nicht einschränkend wie ein Wizard, sondern bietet dem
+Nutzer eine vom Kontext abhängige Wahlfreiheit. Progressive Enabling und Disclosure wird in [CL02] als selbsterklärend beschrieben und vermag Eingabefehler
+30
+
+3.1 Design Patterns
+
+Abbildung 8: Progressive Disclosure
+des Nutzers zu verhindern, da unmögliche Interaktionen gar nicht erst zur Verfügung stehen.
+
+3.1.3.2 Begründung Dem Nutzer eröffnet sich die Aufgabe direkt über eine
+dynamisch wachsende Ansicht und den damit verbundenen Interaktionsmöglichkeiten. Er kann so ein korrektes mentales Model der Aufgabe aufbauen und
+sie so einfacher und schneller lösen. Im Gegensatz zu Wizards, die über unterschiedliche Fenster und die damit verbundenen Kontextwechsel versuchen,
+einen geregelten Workflow zu generieren, bieten dynamische Oberflächen das
+selbe Ergebnis im konstanten Kontext. Da das Interface wie in Abbildung 8
+gleich bleibt, erleichtert es dem Nutzer, Entscheidungen zu revidieren und an
+bereits besuchte Punkte zurück zu kehren. Durch das direkte Feedback sind die
+Auswirkungen einer Entscheidung sofort ersichtlich.
+
+3.1.3.3 Lösungsansatz Anfänglich sind nur die Interaktionsmöglichkeiten für
+den ersten Schritt sichtbar. Nachdem der Nutzer seine Auswahl getroffen hat,
+wird der nächste Schritt aktiv, die vorherigen Möglichkeiten bleiben aber sichtbar. Die ganze Programmoberfläche wird so Schritt für Schritt enthüllt, ange31
+
+3.2 Rapid Serial Visual Presentation
+
+Abbildung 9: Transformation einer Website in Vorschau-Karten für den RSVP
+Browser
+passt an die Bedürfnisse des Nutzers. Häufig sind solche Schritt für Schritt Anwendungen nicht linear, eine Auswahl kann unterschiedliche Auswirkungen
+auf die nächsten Schritte haben.
+
+3.2 Rapid Serial Visual Presentation
+Rapid Serial Visual Presentation (RSVP) ist eine bewährte Präsentationstechnik, die auf eine Space-Time Tradeoff basiert. Prinzipiell gleicht RSVP dem durchblättern eines Buches, um innert wenigen Sekunde einen Überblick über dessen Inhalt zu erlangen, einen Eindruck über die Gesammtstruktur zu erhalten
+und bekannte Bilder zu erkennen [dBS00]. Bei RSVP werden Bilder oder Texte
+in schneller Abfolge angezeigt, so dass jedes Element nur kurz erscheint und
+viele Elemente in einer relativ kurzen Zeitspanne am selben Ort angezeigt werden können. Gerade für Navigation und Suche bietet RSVP grosses Potential,
+da die Frage What's there? in vergleichsweise kurzer Zeit beantwortet werden
+kann. Schwieriger wird die Beantwortung weiterer Frage, die unter anderem
+in [dBST01] bei der Entwicklung des RSVP Browser [dBSC02] auftraten: Where am I?, Where can I usefully go? und Where have I been?. Die Lösung dieser
+32
+
+3.3 Expertensysteme
+
+Fragen wurde beim RSVP Browser durch entsprechende Navigationselemente
+statisch gelöst.
+RSVP wurde auch zur Präsentaton und Selektion von bewegten Bildern und
+Videos eingesetzt [WFL+ 03]. Eine andere Anwendungsdomäne ist die Darstellung von Text mittels RSVP [Öqu01] beschreibt die Anwendung von RSVP zur
+.
+Verbesserung der Lesbarkeit von Texten und attestiert RSVP eine bis zu 33%
+höhere Lesegeschwindigkeit.
+
+3.3 Expertensysteme
+Ein Expertensystem ist ein Programmsystem, das Wissen über ein spezielles
+Gebiet speichert und ansammelt, aus dem Wissen Schlussfolgerungen zieht
+und zu konkreten Problemen des Gebietes Lösungen anbietet. [dud93]
+Expertensysteme repräsentieren somit grosse Mengen an Wissen und können in einem gewissen Rahmen Schlussfolgerungen daraus ziehen und somit
+neues Wissen gewinnen. Da Expertensysteme von ihrer Wissensbasis anhängig
+sind, ist eine Kontrolle durch menschliche Experten gerade in kritischen Anwendungen im medizinischen Umfeld unerlässlich. Es ist daher notwendig, die
+Schlussfolgerungen des Systems nachvollziehen zu können und den Lösungsweg zu beurteilen. In [Whi90] werden Expertensysteme zur Verbesserung von
+Softwaresystemen vorgeschlagen. Dabei soll die Software folgende Fragen beantwoten können:
+• Kann ich diese Software zur Lösung meines Problems einsetzen?
+• Wie kann ich diese Software zur Lösung meines Problems einsetzen?
+• Wenn die Software mein Problem nicht direkt lösen kann, kann ich es
+eventuell einsetzen, um das Problem von einer anderen Perspektive zu
+betrachten?
+33
+
+3.3 Expertensysteme
+
+• Was kann ich machen, wenn mir die Software zur Lösung des Problems
+nicht hilft?
+Jede dieser Fragen benötigt Expertenwissen, das von einem Expertensystem
+generiert werden kann.
+3.3.1 Aufbau von Expertensystemen
+Um oben genannte Aufgaben erfüllen zu können, müssen Expertensysteme gemäss [ZH00] aus den in Abbildung 10 ersichtlichen Teilen aufgebaut sein:
+
+• Die Wissensbasis enthält alle Fakten und Regeln und bildet somit die
+Grundlage des Systems.
+• Die Erklärungskomponente erklärt das Zustandekommen des Ergebnisses und bietet so die Möglichkeit einer Kontrolle durch Experten.
+• Die Problemlösungskomponente sucht und verküpft Fakten und Regeln
+und produziert somit die Ergebnisse.
+• Die Dialogkomponente steuert die Kommunikation zwischen Mensch
+und Computer.
+• Die Wissensveränderungskomponente ermöglicht eine Manipulation der
+Wissensbasis.
+Expertensysteme unterscheiden sich von herkömmlichen relationalen Datenbanken durch den Ansatz, aus den vorhandenen Informationen durch zusätzliche Regeln zum Teil heuristisch weiteres Wissen zu generieren, Wissen anzureichern und ihre Lösungswege zu erläutern. Der Nutzer kann somit die vorgeschlagene Lösung leicht nachvollziehen und bei Bedarf auch auf Richtigkeit
+überprüfen.
+34
+
+3.3 Expertensysteme
+
+Benutzer
+
+Dialog-Komponente
+
+ErklärungsKomponente
+
+WissensveränderungsKomponente
+
+ProblemlösungsKomponente
+
+Wissensbasis
+
+Abbildung 10: Struktur eines Expertensystems
+
+35
+
+4.1 Neues Navigationskonzept
+
+Abbildung 11: Expertensystem für Fahrzeugwartung und Unterhalt
+
+3.3.2 Einsatzgebiet von Expertensystemen
+
+Wurden Expertensysteme in der Anfangszeit der künstlichen Intelligenz vor Allem in der Medizin [Kul87], aber auch in der Mathematik [MF71] und in der
+Informatik eingesetzt, gibt es mittlerweilen kaum eine Domäne, für die nicht
+ein entsprechendes System existiert.
+Im Umfeld der Automobilindustrie gibt es bereits Expertensysteme, die aber
+vor Allem in der Wartung und Reperatur von Fahrzeugen eingesetzt werden
+[Zai05]. Ein Screenshot eines Expertensystem für Kraftfahzeugwartung und Fehlerdiagnose ist in Abbildung 11 zu sehen.
+36
+
+Exterieur
+
+Ausstattung
+Lack
+
+A
+
+E
+
+Aussenausstattung
+
+Räder
+
+C
+
+Modell
+
+Finanzen
+Barkauf
+Leasing
+
+Finanzierung
+
+S
+
+Technik
+
+Miete
+
+M
+
+Sicherheit
+
+Kreditkauf
+
+B
+
+Technik
+Anbauten
+
+Limousine
+Coupé
+
+Radio
+
+Neuwagen
+
+Aufbau
+
+Kombi
+
+Radio
+
+Gebraucht
+
+Kabrio
+
+Kommuni.
+
+Zustand
+
+Unfallauto
+
+Innenausstattung
+Lenkung
+Interieur
+
+Art
+Hubraum
+
+Motor
+
+Komfort
+
+Steuerrechner
+
+Interieur
+
+Leistung
+
+Versicherung
+
+Sitze
+Klima
+
+Classic
+Elegance
+
+sonst. Kosten
+
+Schwacke
+
+Designlinie
+
+Avantgarde
+
+Polster
+Leder
+Stoff
+
+Abbildung 12: Themengebiete während des Verkaufsgespräches
+
+4 Navigationskonzept für Small Screen Devices
+
+4.1 Neues Navigationskonzept
+
+4.1.1 Interessenraum
+
+In Abbildung 12 ist der abzubildende Interessenraum dargestellt. Die aufgeführten Punkte sind für den Abschluss eines Verkaufsgespräches verbindlich
+und müssen zwangsläufig besprochen werden. Die Aufteilung lehnt sich thematisch an den Car Configurator der Mercedes-Benz-Website an, jedoch können im Gegensatz dazu die einzelnen Punkte im Ablauf frei abgehandelt werden.
+37
+
+4.1 Neues Navigationskonzept
+
+4.1.1.1 Exterieur Unter Exterieur wird die Grunkonfiguration des Fahrzeuges festgelegt. Modell, Aufbau, Motorisierung und Designlinie werden hier festgelegt. Die interne Abfolge ist frei, jedoch haben naturgemäss gewisse Auswahlmöglichkeiten Auswirkungen auf andere Punkte. Ein A-Klasse-Modell mit 3 Liter Motor ist nun mal nicht vorgesehen. In einem solchen Fall muss das System
+den Nutzer auf die Auswirkungen seiner Auswahl hinweisen.
+
+4.1.1.2 Ausstattung Unter dem Begriff Ausstattung werden alle Serien- und
+Sonderausstattungsmerkmale zusammengefasst. Die grosse Auswahl an Ausstattungsoptionen wird hier mit Beschreibungen, Bildern und wenn möglich
+mit interativen Erklärungen oder Bedienungsanleitungen charakterisiert.
+
+4.1.1.3 Finanzen Unter Finanzen werden Informationen über das momentane Fahrzeug abgelegt, die je nach Auswahl des Kunden angepasst werden und
+somit stets auf dem aktuellen Stand des Verkaufsgespräches sind. Je nach Konfiguration des Fahrzeugs können hier direkte Auswirkungen auf Steuerbelastung, Leasingrate oder Versicherungskosten eingesehen werden.
+
+4.1.2 Kriterien
+4.1.2.1 Wahlfreiheit im Ablauf Die Natur eines Beratungsgespräches zieht
+einige wichtige Faktoren mit sich: Jeder Händler hat eigene Gewohnheiten, ein
+solches Gespräch zu führen, den Ablauf nach seinen Erfahrungen zu gestalten
+und dem Kunden auf seine Art ein Fahrzeug zu verkaufen. Diesem Verhaltensmuster gerecht zu werden, erfordert eine grosse Flexibilität. Auf der anderen
+Seite hat auch jeder Kunde eigene Vorstellungen von seinem Traumwagen und
+priorisiert die einzelnen Wahlmöglichkeiten entsprechend seiner Vorlieben. Er
+erwartet vom Verkäufer, dass dieser auf die Bedürfnisse eingeht und Schritt für
+Schritt durchspricht.
+38
+
+4.1 Neues Navigationskonzept
+
+Die Wahlfreiheit beider Seiten darf also nicht eingeschränkt werden. Der Ablauf
+eines Gespräches muss sich nach dem metalen Modell beider Parteien richten.
+
+4.1.2.2 Sprungmöglichkeiten Während des Verkaufsgesprächs können die
+Priorisierungen bestimmter Merkmale bei beiden Parteien plötzlich ändern,
+weil beispielsweise im Gespräch ein wichtiges Thema aufgegriffen wird. Das
+System muss es ermöglichen, den aktuellen Zustand zu verlassen, ein neues
+Thema zu bearbeiten und anschliessen wieder in den ursprünglichen Zustand
+zurück zu kehren, um am entsprechenden Ort fortfahren zu können.
+
+4.1.2.3 Navigation Trail Es muss auf den ersten Blick erkennbar sein, welche Punkte im Gespräch bereits behandelt wurden und welche noch offen sind.
+Nach Abschluss der Beratung soll es möglich sein, die gewählten Eigenschaften
+noch einmal durchzugehen und allfällige Diskussionspunkte noch einmal aufzugreifen und zu klären. Der Verkäufer muss dazu die entsprechenden Punkte
+als offen kennzeichnen und bei nochmaliger Durchsicht auf Anhieb erkennen
+können.
+
+4.1.2.4 Erweiterbarkeit Das zu entwerfende Navigationskonzept muss ohne grundsätzliche Änderungen erweiterbar sein. Eine Erweiterung des Konzepts um weiter Funktionen oder das Hinzufügen von weitern Verästelungen
+ist jederzeit denkbar und darf nicht durch technische Unzulänglichkeiten verhindert oder erschwehrt werden.
+
+4.1.3 Lösungsansätze
+Anhand der oben identifizierten Bedingungen und Einschränkungen musste
+ein auf mobile Endgeräte zugeschnittenes Navigationskonzept entwickelt werden. Ein erster Versuch ist in Abbildung 13 dargestellt. Die abgebildete Rondell39
+
+4.1 Neues Navigationskonzept
+
+Abbildung 13: Entwurf einer Navigationsvariante
+
+Abbildung 14: Rondellnavigation mit Navigation Trail
+navigation bietet eine statische Übersicht aller möglichen Navigationspunkte,
+wobei der aktuell Aktive im oberen Bereich der Navigation angezeigt wird. Bereits besuchte Navigationspunkte sind markiert und somit leicht zu erkennen.
+Die bei Abschnitt 3.2 aufgetretenen Fragen können bei dieser Struktur für den
+aktuellen Teilbaum beantwortet werden. Where am I? wird durch den obersten
+Navigationspunkt bestimmt, Where can I usefully go? ergibt sich aus der Auflistung der unteren Navigationselemente und Where have I been? wird über die
+Markierung besuchter Elemente beantwortet. Mit dem Hinzufügen eines Navigation Trails in Abbildung 14 wird die Navigationsmöglichkeit vom aktuellen
+Teilbaum auf den gesammten Interessenraum erweitert. Der eingeschränkte
+Bildschirmplatz limitiert jedoch die Anzahl möglicher Unterpunkte. Bei Bäumen mit mehr als 6 Unterknoten ist der zur Verfügung stehende Platz pro Navigationselement bei einer Auflösung von 320x240 bei weniger als 40 Pixel und
+somit nicht mehr vernünftig lesbar.
+Da der Informationsraum aber weit mehr als 6 Unterknoten enthalten kann,
+musste eine angepasste Variante der Navigation entwickelt werden, die mit beliebig vielen Unterpunkten auf einem Small Screen Device darstellbar blieb.
+40
+
+4.1 Neues Navigationskonzept
+
+Abbildung 15: RSVP basierte Navigation
+
+In [SWF+ 04] wird die Domäne Zeit als Alternative zu Raum beschrieben und
+eindeutige Vorteile der Verwendung von RSVP bei limitierter Bildschrimfläche
+identifiziert. Die Ausnutzung der Dimension Zeit ermöglicht eine zumindest
+theoretisch unbeschränkte Anzahl von Unterknoten, die Navigation lässt sich
+also wie in 4.1.2.4 gefordert skalieren. Abbildung 15 zeigt die Grundidee einer
+auf RSVP basierenden Navigation, die für reTailor mit dem Navigation Trail aus
+Abbildung 14 verknüpft wurde.
+41
+
+4.2 Prototyp
+
+Abbildung 16: Handskizze aus der Enwurfsphase
+
+4.2 Prototyp
+Mit dem identifizierten Informationsraum und der Möglichkeit, durch RSVP in
+beliebigen Teilbäumen effizient zu navigieren konnte mit der prototypischen
+Implementierung von reTailor begonnen werden. Dieses Kapitel stellt den Prototypen vor und erläutert Designentscheidungen sowie bei der Entwicklung
+aufgetretene Schwierigkeiten und die daraus gezogenen Schlüsse. Der Prototyp
+beschränkt sich auf den in Abbildung 12 definierten Informationsraum, eine
+Erweiterung auf weitere Funktionen, die in der Anforderungsanalyse erkannt
+wurden, ist aber durchaus denkbar und auch im Konzept vorgesehen.
+
+4.2.1 Erste Entwicklungsschritte
+Bei der ersten Version des Prototypen in Abbildung 16 wurde in Skizzenform
+eine mögliche Gliederung des Informationsraumes in einzelne Panels und der
+ungefähre Funkionsumfang diskutiert. Darauf aufbauend wurde eine erste visuelle Version entwickelt, die, ausgedruckt auf Karton, bei der Bedürfnisabklä42
+
+4.2 Prototyp
+
+Abbildung 17: Erster visueller Versuch aus der Enwurfsphase
+rung im Automobilhandel den Verkäufern vorgelegt wurde.
+Bei dem Screendesign in Abbildung 17 stand nicht die Navigation sondern
+mehr der mögliche Funktionsumfang und dessen Nützlichkeit im Verlauf eines Verkaufsgespräches im Vordergrund. Es bot einen ersten Einblick in die
+Möglichkeiten und Einschränkungen, die das kleine Bildschirmformat mit sich
+brachte. Es konnten erste Erfahrungen mit Vektorgrafik und Typographie gesammelt werden und ein erster Eindruck des visuellen Frameworks vermitteln
+werden. Mit dem Papierprototypen konnte ein generisches Verkaufsgespräch
+durchgespielt und Schwachstellen des Konzepts identifiziert werden. Da der
+Funktionsumfang und die Unterteilung der Aufgaben in Sektionen positiv aufgefasst wurde, konnte auf der entstandenen Basis weiter gearbeitet werden.
+Wichtige Resultate aus dem Review umfassen:
+• Die Aufteilung des Problemraumes in die Sektionen Exterieur, Auststattung und Finanzen wurde als eingängig und richtig empfunden.
+• Eine gewisse Führung durch die unterschiedlichen Aufgaben wird begrüsst, jedoch müssen Änderungen im Ablauf jederzeit möglich sein.
+43
+
+4.2 Prototyp
+
+• Bereits abgehandelte Punkte müssen schnell zu identifizieren sein, um
+mehrfaches Aufrufen eines Diskussionspunktes zu verindern.
+• Ein Überblick über den aktuellen Zustand des konfigurierten Fahrzeuges
+muss zu jedem Zeitpunkt verfügbar sein.
+• Die Auflistung aller verfügbaren Ausstattungen muss möglichst detailliert
+sein. Dabei müssen aussagekräftige Bilder, Beschreibungen der Funktion
+und wenn möglich interaktive Bedienungsanleitungen eingesetzt werden.
+Der Händler kennt meistens nur einen Teilbereich aller zur Auswahl stehenden Erweiterungen.
+• Auswirkungen einer Auswahl auf Preis oder Abhängigkeiten zwischen Auswahlen müssen direkt sichtbar werden und Alternativen müssen erkennbar sein.
+• Jegliche Interaktionselemente müssen als solche erkennbar sein und sollten in einem einheitlichen Format vorliegen.
+Im Gegensatz zu diesen Anforderungen standen zu jeder Zeit auch die Einschränkungen durch den Einsatz eines Small Screen Device, denen es galt, Rechnung zu tragen. Schnell war als grösstes Problem der Einsatz einer linearen Navigation identifiziert. Die Navigation nimmt im ersten Prototyp bis zu 60 % der
+zur Verfügung stehenden Bildschirmfläche ein, eine Reduzierung zu Gunsten
+des Inhalts war dringend angesagt. Eine mögliche Lösung wäre die Verwendung von transparenten Widgets für die Navigationselemente, wie in [KEH+ 96]
+beschrieben. In dem geschilderten Ansatz würden die Navigationselemente vom
+Inhalt überlagert, und nur auf Verlangen angezeigt. Das hätte den Platzbedarf
+der Navigation theoretisch auf Null beschränken können, die Navigation selber
+wäre aber auf eine bestimmte Anzahl von Elementen beschränkt gewesen, eine
+Erweiterung wäre mit grossem Aufwand verbunden gewesen.
+44
+
+4.2 Prototyp
+
+200 Pixel
+
+40 Pixel
+
+80 Pixel
+
+320 Pixel
+
+240 Pixel
+
+50 Pixel
+
+Farbschema
+
+Abbildung 18: Abmessungen des Hauptfensters
+Mit der Integration der RSVP Navigation aus Kapitel 4.2 konnten obige Probleme gelöst werden, ohne die positiven Aspekte dieses Ansatzes zu schmälern.
+
+4.2.2 Screen Design Standards
+Um ein einheitliches und leicht verständliches User Interface für reTailor entwickeln zu können, wurde ein kurzer Designguide zusammengestellt, der die
+Vereinheitlichung der Erscheinung und Bedienbarkeit sicherstellen soll.
+
+4.2.2.1 Abmessungen Der zur Verfügung stehende Bildschirmplatz auf einem Standard-PDA beträgt 240x320 Pixel. Abbildung 18 zeigt die Grössenangaben für alle Interaktionselemente sowie ein Farbschema, das für Color Coding
+der einzelnen Bereiche eingesetzt werden kann. Die RSVP Navigation nimmt
+45
+
+4.2 Prototyp
+
+Abbildung 19: Zustände der Buttons
+
+mit einer Höhe von 50 Pixel nicht ganz 16% des zur Verfügung stehenden Platzes ein, für die Inhalte steht somit eine effektive Fläche von 240x270 Pixel zur
+Verfügung. Die thematisch unterschiedlichen Sektionen sollen über die Hauptfarben des Farbschemas leicht zu identifizieren sein.
+
+4.2.2.2 Interaktionselemente Alle klickbaren Interaktionselemente sollen sich
+an den Buttons der Navigationsleiste orientieren, die eine Grösse von 80x23 Pixel haben. Die Färbung der Buttons wird je nach Funktion festgelegt und hilft
+bei der Unterscheidung und Zuordnung der Schaltflächen. Die einzelnen Zustände sind in Abbildung 19 ersichtlich. Aktive Schaltflächen sind in Weiss gehalten, selektierte Elemente werden bläulich markiert. Diejenigen Elemente,
+die nicht aktiv ausgewählt wurden, da eine konkurrierende Auswahl getroffen
+wurde, erscheinen ausgegraut, sind aber immer noch klickbar.
+
+4.2.2.3 Typografie Schriftart aller Texte ist die Pixelschriftart miniml uni05_53
+in der Schrifgrösse 8 Punkte. Für Hervorhebungen und Titel wird die Schriftart
+miniml uni05_64 in der Schriftgrösse 16 Punkte verwendet. Beide Schriftarten
+sind unter [min06] verfügbar, wo auch ein Styleguide zur Anwendung von Pixelfonts zur Verfügung steht. Bei der Verwendung dieser Schriftart ist es wichtig, auf Anti-Aliasing zu verzichten. Es ist darauf zu achten, dass eine pixelgenaue Ausrichtung der Textfelder nötig ist, um die in 2.5.3 beschriebenen Effekte
+zu verhindern.
+46
+
+4.2 Prototyp
+
+Hintergrundfarbe zur Identifikation
+
+Einsprung im Themengebiet
+Exterieur
+
+Einsprung direkte Untergruppen
+
+Einsprung im Themengebiet
+Ausstattung
+
+Einsprung im Themengebiet
+Finanzen
+
+Abbildung 20: Übersicht der möglichen Einstiegspunkte
+
+4.2.3 Übersicht über die Funktionen von reTailor
+Im Folgenden soll reTailor anhand des entwickelten Prototypen vorgestellt werden.
+
+4.2.3.1 Überblick über die Sektionen Der Startbildschirm in Abbildung 20
+präsentiert einen ersten Überblick über alle zur Verfügung stehenden Navigationspunkte innerhalb einer Tiefe von 2. Alle identifizierten Einstiegspunkte
+sind somit ohne Umweg erreichbar. Die einzelnen Sektionen sind über Color
+Coding (Kapitel 3.1.2) leicht zu erkennen und zu unterscheiden. Ein Klick auf
+einen der grossen Einstiegspunkte führt zu dem entsprechenden Themengebiet.
+47
+
+4.2 Prototyp
+
+Hintergrundfarbe zur Identifikation
+
+Einsprung im Themengebiet
+Aufbau
+
+Bereits ausgewähltes Element
+
+Einsprung im Themengebiet
+Motor
+
+Einsprung im Themengebiet
+Aufbau
+
+Einsprung im Themengebiet
+Designlinie
+
+Einsprung direkte Untergruppen
+
+Rückkehr zur Übersicht
+
+Anzeige des aktuellen Fahrzeuges
+
+Abbildung 21: Übersicht der Kategorie Exterieur
+
+48
+
+4.2 Prototyp
+
+Abbildung 22: mitwachsende Navigation Trails
+4.2.3.2 Ansicht des Themengebiets Die Ansicht innerhalb eines Themengebiets wird wie in Abbildung 21 ersichtlich die RSVP Navigation merfach eingesetzt. Für jeden Unterabschnitt ist eine eigene RSVP-Leiste vorhanden, die
+die möglichen Navigationspunkte nacheinander anzeigt. Die Verwendung mehrerer RSV-Präsentationen war bis anhin nicht Teil von wissenschaftlichen Untersuchungen, deshalb sind hier die gemachten Erfahrungen aufgeführt:
+• Parallele Visualisierung funktioniert nur, wenn sich der Nutzer auf eine
+Konkrete konzenrieren kann.
+• Die Visualisierungen müssen daher klar voneinander abgetrennt sein.
+• Bei gleichzeitiger Darstellung kann es helfen, die Geschwindigkeit der
+Anzeige nicht zu synchronisieren, sondern in gleicher Zeit alle verfügbaren Informationen anzuzeigen, so dass sich die Zeilen mit unterschiedlichen Geschwindigkeiten bewegen.
+• Eine Unterscheidung ist durch die resultierenden Unterschiede in der Bewegung einfacher zu bewerkstelligen
+• Die Visualisierung benötigt einen statischen Ruhepunkt [SWF+ 04]. Daher bleiben die Elemente auf der linken Seite so lange sichtbar, bis sie
+vom Folgenden verdeckt werden. Der Beobachter kann seinen Fokus so
+auf einen klar definierten Ort beschränken.
+Bereits ausgewählte Elemente werden mit einem einheitlichen Farbcode versehen und sind so in jeder Ansicht leicht zu identifizieren. Die Navigations49
+
+4.2 Prototyp
+
+Auswahl
+
+Kommentar
+(zur späteren Besprechung
+kennzeichnen)
+
+Inhalt
+
+Rückkehr zur Übersicht
+
+Anzeige des aktuellen Fahrzeuges
+
+Abbildung 23: Ansicht eines Blatt-Elements
+
+leiste am unteren Bildschirmrand hilft dem Nutzer, Schritt für Schritt in den
+gewünschten Teilbaum zu navigieren. Sie hilft über den mitwachsenden Navigation Trail (Abbildung 22) den zurückgelegten Weg zu identifizieren.
+
+4.2.3.3 Blattelemente Als Blattelement (vergleiche Abbildung 23) werden die
+Endpunkte eines Navigationspfades bezeichnet. Hier werden die Auswahlmöglichkeiten präsentiert und der Nutzer kann die gewünschten Optionen wählen.
+Punkte, die nicht vollständig abgehandelt wurden, oder weiterer Diskussion
+50
+
+4.2 Prototyp
+
+Abbildung 24: Detailansicht eines Ausstattungsmerkmales
+
+benötigen, können mit Kommentaren versehen werden, die bei einem späteren Review als Grundlage für eine intensivere Beratung dienen können. Aus
+Sicht des Händlers ist es wichtig, zusätzlich zu den Hard Facts auch Tips zur
+Beratung und Argumente für einen allfälligen Aufpreis bereit zu halten. Wird
+ein Element ausgewählt, können die Auswirkungen auf das Fahrzeug und somit auf den Kaufpreis bequem in der Fahrzeugübersicht angezeigt werden.
+
+4.2.3.4 Ausstattungsmerkmale Beim Verkauf von Ausstattungsmerkmalen
+ist die visuelle Präsentation, der Versuch, den Gegenstand greifbar zu machen,
+von höchster Priorität. Die grosse Auswahl an unterschiedlichen Ausstattungen
+und der damit verbundene Mehrwert aber auch Aufpreis benötigen eine intensive Beratung. Der Kunde muss den ihm empfohlenen Gegenstand als sinnvoll
+empfinden und dem Verkäufer müssen Argumente für das betreffende Objekt
+nahe gelegt werden. Dabei spielen visuelle Reize eine wichtige Rolle, weswegen
+zu jedem Produkt möglichst aussagekräftige Bilder präsentiert werden sollen.
+Zur besseren Erklärung von komplizierten Vorgängen wie dem Umbauen der
+Sitze, der Bedienung des Navigationssystems oder die Funktion der Lenkrad51
+
+4.2 Prototyp
+
+tasten, kann auf die interaktiven Bedienungsanleitungen von Mercedes Benz
+zurück gegriffen werden, die den Kunden multimedial und interaktiv in die
+Funktionsweise einführen und die Vorteile des Produkts hervorheben. Wie in
+Abbildung 24 sichtbar, kann es für gewisse Anwendunge sinnvoll sein, den PDA
+um 90 Grad zu drehen und die Ansicht über die ganze Bildschirmfläche zu verteilen. Dabei kann der PDA dem Kunden gut übergeben werden, und ein Erleben der Funktionalität wird möglich.
+
+4.2.3.5 Finanzierung Auf die aktuelle Auswahl angepasst können unter Finanzierung sämtliche Finanzdaten aktuell bestimmt werden. Ausgehend vom
+effektiven Fahrzeugpreis sowie der Motorisierung können hier Leasingraten berechnet, Steuerbelastungen angezeigt oder der Wiederverkaufswert gemäss SchwackeListe abgeschätzt werden. Da die Finanzierung in den meisten Fällen gegen
+Ende eines Verkaufsgespräches angesiedelt ist, werden hier auch weitere Funktionen platziert, die helfen, das besprochene zu ratifizieren und offene Punkte
+noch einmal durch zu sprechen.
+
+4.2.3.6 Review Gegen Ende des Verkaufsgespräches hilft es, die besprochenen Punkte noch einmal durch zu sehen, offene Fragen zu klären und anhand
+einer Checkliste zu prüfen, ob wirklich alle essentiellen Punkte behandelt wurden. Bei reTailor sind vom Kunden ausgewählte Elemente farblich gekennzeichnet und somit leicht zu erkennen. Das Review bietet nun die Möglichkeit, den
+gesammten Informationsraum mittels RSVP wie in Abbildung 26 noch einmal
+durch zu sehen. In der schnellen Ansicht, jedes Element wird nur 0.5 Sekunden
+angezeigt, ist es möglich, bereits ausgewählte und somit besprochene Punkte
+zu identifizieren und die Markierungen für offene Diskussionspunke zu erkennen. Mit einem einfachen Klick kann das Review gestoppt und die Diskussion
+über entsprechendes Element aufgenommen werden. Eine Beratungssitzung
+52
+
+4.2 Prototyp
+
+Abbildung 25: Detailansicht des konfigurierten Fahrzeuges
+
+53
+
+4.2 Prototyp
+
+Abbildung 26: RSVP im Einsatz für nachträgliche Durchsicht
+
+54
+
+kann auch unerbrochen werden, dabei werden die offenen Punkte gespeichert
+und für ein weiteres Gespräch vorgesehen. Der Verkäufer hat so die Möglichkeit, sich tiefer mit der entsprechenden Materie zu befassen und dem Kunden
+eine optimale Lösung für sein Problem vor zu bereiten.
+
+5 Zusammenfassung
+Die Entwicklung eines Werkzeuges zur Unterstützung des Händlers im Automobilgewerbe hat sich nach Befragung der Zielgruppe als sinnvoll erwiesen
+und ein wenig beachtetes Nutzungsszenario eröffnet. Die Fülle an multimedialen Features, die dem Kunden das Produkt Auto näher bringen sollen und
+ihm dabei helfen, die abstrakten Informationen greif- und erfühlbar zu machen, haben den Sprung von den Webauftritten der Automobilhersteller zum
+Ort des eigentlichen Verkaufes noch nicht geschafft. Die Händler beziehen ihre Informationen noch aus dicken Wälzern, aufwändig gedruckten Broschüren
+und setzen Werkzeuge, die eigentlich für den Kunden entworfen wurden zur
+Beratung ein. Erste Ansätze, computergestützte Auswahlen zu treffen sind bei
+Mercedes-Benz schon vorhanden, aber wurde weder eine vernünftige Nutzbarkeit noch eine Integration ins Verkaufsgespräch angedacht. Mit einer mobilen
+Lösung, wie sie reTailor darstellt, kann das vorhandene Wissen direkt am Ort
+des Interesses, im Ausstellungsraum, ins Verkaufsgespräch integriert werden.
+Selbst exotische Konfigurationsmöglichkeiten sind in kürzester Zeit gefunden
+und können dem Kunden anschaulich mit der Unterstützung von Bildern oder
+Interaktionsmöglichkeiten präsentiert werden.
+Durch die Adaption von flexiblen Visualisierungsmethoden wird eine Integration in eingespielte Abläufe des Nutzers gewährleistet, was die Akzeptanz der
+Zielgruppe erhöhen dürfte. Jede Verkaufsperson kann seinen über Jahre ge55
+
+wonnenen Erfahrungsschatz in Sachen Ablauf eines Verkaufsgespräches und
+Priorisierung einzelner Schritte beibehalten, hat aber dennoch eine wertvolle
+Wissensbasis zur Seite, von der er gewisse Detailinformationen beziehen kann.
+Für den Hersteller ist ein einheitliches Verkaufsinstrument auch von Vorteil.
+Neben besser informiertem Verkaufspersonal können auch gewisse Segmente
+bewusst priorisiert werden. Es ist beispielsweise denkbar, dass eine bestimmte Modellreihe in grosser Anzahl vorhanden ist und bevorzugt verkauft werden
+soll. Über eine zentrale Beratungsverwaltung können entsprechende Informationen direkt in die einzelnen Beratungsgespräche einfliessen und so den Kommunikationsaufwand bedeutend verringern.
+
+6 Ausblick
+Der Funktionsumfang von reTailor bietet zum jetztigen Zeitpunkt Unterstützung für direkte Verkaufsgespräche. Andere Punkte, die bei der Bedarfsanalyse
+identifiziert wurden, fehlen im aktuellen Prototypen, eine Implementierung ist
+jedoch im Konzept vorgesehen und eine Anpassung ohne weiteres Möglich. Eine Verknüpfung der Datenbasis mit einem zentralen Warenwirtschaftssystem
+sowie die Erweiterung auf Verwaltungsaufgaben würde die täglich anfallenden
+Arbeiten im Automobilhandel wesentlich vereinfachen und die Prozesse vereinheitlichen. Aber auch der Einsatz während des Verkaufsgespräches könnte noch weiter verbessert werden. Mit der Integration eines Expertensystems
+zur Kundenberatung könnte der Verkaufprozess analytisch unterstützt und somit verbessert werden. Die kleine Bildschirmfläche eines PDA hat sich in der
+Entwicklung dahingehend negativ bemerkbar gemacht, dass wichtige Ausstattungsmerkmale nicht in einer ausreichend detaillierten Ansicht darstellbar sind.
+Hier wäre es zu Überlegen, ob eine Weiterentwicklung von reTailor auf einem
+56
+
+Abbildung 27: Fahrzeugverwendung mit Virtual Reality
+
+Tablet PC Sinn machen würde, oder ob das grössere Format (und damit auch
+das grössere Gewicht) während eines Verkaufsgesprächs nicht als störend empfunden würde. Eine Alternative, die auch zu erweitertem Bildschirmplatz führen würde, wäre die Einbindung einer grossen Präsentationsfläche, die über
+einen Videobeamer oder Ähnliches angesteuert würde. Der PDA könnte in diesem Fall als Fernbedienung für ein zentrales System dienen, das die Präsentation der Inhalte übernehmen könnte. Die Ausstattungsmerkmale könnten so
+in Originalgrösse im Verkaufsraum präsentiert werden, die Ansicht wäre nicht
+mehr auf 240x320 Pixel beschränkt. Darüber hinaus wäre auch eine Einbindung
+weiterer multimedialer Komponenten denkbar. Wie in [Mem04] beschrieben,
+wäre eine Fahrzeugverwendung mit Virtual Reality, um das Fahrzeug vom Produkt Auto zum Erlebnis Auto zu transformieren durchaus machbar.
+Der Einsatz der RSVP Navigation muss natürlich auch nicht auf die Domäne Automobilhandel beschränkt bleiben sondern kann in vielen Fällen auf dem
+PDA eingesetzt werden. Gerade, wenn es darum geht, in hierarchischen Datenräumen zu navigieren, stossen herkömmliche Navigationen schnell an ihre (Platz-) Grenzen. Durch die Erweiterung des zur Verfügung stehenden Plat57
+
+zes mit der Dimension Zeit werden auch komplexe Navigationsstrukturen auf
+Small Screen Devices darstellbar.
+
+58
+
+LITERATUR
+
+Literatur
+[CL02]
+
+Larry Constantine and Lucy Lockwood. Instructive interaction. User
+Experience 1 (3), page 10, 2002.
+
+[dBS00]
+
+Oscar de Bruijn and Robert Spence. Rapid serial visual presentation: a space-time trade-off in information presentation. In AVI '00:
+Proceedings of the working conference on Advanced visual interfaces,
+pages 189-192, New York, NY, USA, 2000. ACM Press.
+
+[dBSC02] O. de Bruijn, R. Spence, and M. Y. Chong. Rsvp browser: Web
+browsing on small screen devices. Personal Ubiquitous Comput.,
+6(4):245-252, 2002.
+[dBST01] Oscar de Bruijn, Robert Spence, and Chieh Hao Tong. Movement in
+the web. In CHI '01: CHI '01 extended abstracts on Human factors in
+computing systems, pages 209-210, New York, NY, USA, 2001. ACM
+Press.
+[dud93]
+
+Duden: Informatik. Bibliographisches Institut und F.A. Brockhaus
+AG, 1993.
+
+[EL02]
+
+Inger Ekman and Petri Lankoski. What should it do?: key isssues
+in navigation interface design for small screen devices. In CHI '02:
+CHI '02 extended abstracts on Human factors in computing systems,
+pages 622-623, New York, NY, USA, 2002. ACM Press.
+
+[HLA05]
+
+Tero Hakala, Juha Lehikoinen, and Antti Aaltonen. Spatial interactive visualization on small screen. In MobileHCI '05: Proceedings of the
+7th international conference on Human computer interaction with
+mobile devices & services, pages 137-144, New York, NY, USA, 2005.
+ACM Press.
+
+[KEH+ 96] Tomonari Kamba, Shawn A. Elson, Terry Harpold, Tim Stamper, and
+Piyawadee Sukaviriya. Using small screen space more efficiently. In
+CHI '96: Proceedings of the SIGCHI conference on Human factors in
+computing systems, pages 383-390, New York, NY, USA, 1996. ACM
+Press.
+[KL02]
+
+59
+
+Lari Karkkainen and Jari Laarni. Designing for small display screens.
+In NordiCHI '02: Proceedings of the second Nordic conference on
+Human-computer interaction, pages 227-230, New York, NY, USA,
+2002. ACM Press.
+
+LITERATUR
+
+[Kli06]
+
+Daniel Klinkhammer. Interaction concepts and visualizations to
+compare different automobiles. Master's thesis, University of Konstanz, 2006.
+
+[Kul87]
+
+C. A. Kulikowski. Artificial intelligence in medicine: a personal retrospective on its emergence and early function. In Proceedings of
+ACM conference on History of medical informatics, page 199, New
+York, NY, USA, 1987. ACM Press.
+
+[MC02]
+
+Aaron Marcus and Eugene Chen. Designing the pda of the future.
+interactions, 9(1):34-44, 2002.
+
+[Mem04] Thomas Memmel. Ui metaphern - neue ui metaphern zur darstellung der produktwelt von automobilherstellern. Technical report,
+University of Konstanz, 2004.
+[MF71]
+
+W. A. Martin and R. J. Fateman. The macsyma system. In SYMSAC
+'71: Proceedings of the second ACM symposium on Symbolic and algebraic manipulation, pages 59-75, New York, NY, USA, 1971. ACM
+Press.
+
+[min06]
+
+miniml. Pixelfonts. http://miniml.com, 2006.
+
+[Öqu01]
+
+Gustav Öquist. Adaptive rapid serial visual presentation. Master's
+thesis, Uppsala University, 2001.
+
+[PRS02]
+
+Jennifer Preece, Yvonne Rogers, and Helen Sharp. Beyond HumanComputer Interaction. Wiley and Sons, 2002.
+
+[RSV00]
+
+Applications of Rapid Serial Visual Presentation for Visual Information Browsing, 2000.
+
+[SWF+ 04] Bob Spence, Mark Witkowski, Catherine Fawcett, Brock Craft, and
+Oscar de Bruijn. Image presentation in space and time: errors, preferences and eye-gaze activity. In AVI '04: Proceedings of the working
+conference on Advanced visual interfaces, pages 141-149, New York,
+NY, USA, 2004. ACM Press.
+[Tid05]
+
+Jenifer Tidwell. Designing Interfaces. O'Reilly, 2005.
+
+[TOTK04] Sakari Tamminen, Antti Oulasvirta, Kalle Toiskallio, and Anu Kankainen. Understanding mobile contexts. Personal Ubiquitous Comput., 8(2):135-143, 2004.
+60
+
+LITERATUR
+
+[WFL+ 03] Kent Wittenburg, Clifton Forlines, Tom Lanning, Alan Esenther, Shigeo Harada, and Taizo Miyachi. Rapid serial visual presentation
+techniques for consumer digital video devices. In UIST '03: Proceedings of the 16th annual ACM symposium on User interface software and technology, pages 115-124, New York, NY, USA, 2003. ACM
+Press.
+[Whi90]
+
+Edgar A. Whitley. Expert systems: true support for the process of decision making. In SIGBDP '90: Proceedings of the 1990 ACM SIGBDP
+conference on Trends and directions in expert systems, pages 123-
+140, New York, NY, USA, 1990. ACM Press.
+
+[WSC04]
+
+Andrew Wallace, Joshua Savage, and Andy Cockburn. Rapid visual
+flow: how fast is too fast? In CRPIT '04: Proceedings of the fifth conference on Australasian user interface, pages 117-122, Darlinghurst,
+Australia, Australia, 2004. Australian Computer Society, Inc.
+
+[Zai05]
+
+Mohd Fairuz Bin Zaiyadi. Expert system for car maintenance and
+troubleshooting. Technical report, Generation5, 2005.
+
+[ZH00]
+
+Frank Zabel and Tino Hempel. Expertensysteme. Technical report,
+Kultusministerium des Landes Mecklenburg-Vorpommern, 2000.
+
+61
+
+ABBILDUNGSVERZEICHNIS
+
+Abbildungsverzeichnis
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+
+Dealers Impact . . . . . . . . . . . . . . . . . . . . . . . . .
+Ablauf eines Verkaufsgespräches . . . . . . . . . . . . . . .
+Aufteilung Tätigkeitsbereiche . . . . . . . . . . . . . . . . .
+Vertiebswege (2Simple Car Management) . . . . . . . . . .
+Anti-Aliased Text . . . . . . . . . . . . . . . . . . . . . . . .
+iPod mit One-Window-Drilldown . . . . . . . . . . . . . .
+Color-Coding bei apple.com . . . . . . . . . . . . . . . . .
+Progressive Disclosure in den Aqua Guidelines von Apple
+RSVP Browser . . . . . . . . . . . . . . . . . . . . . . . . . .
+Schema Expertensystem . . . . . . . . . . . . . . . . . . . .
+Car Maintenance (Generation5) . . . . . . . . . . . . . . .
+Themengebiete Verkaufsgespräch . . . . . . . . . . . . . .
+Rondellnavigation . . . . . . . . . . . . . . . . . . . . . . .
+Rondellnavigation mit NaviTrail . . . . . . . . . . . . . . .
+RSVP basierte Navigation . . . . . . . . . . . . . . . . . . .
+Handskizze aus der Enwurfsphase . . . . . . . . . . . . . .
+Erster visueller Versuch aus der Enwurfsphase . . . . . . .
+Abmessungen des Hauptfensters . . . . . . . . . . . . . . .
+Zustände der Buttons . . . . . . . . . . . . . . . . . . . . .
+Übersicht der Einstiegspunkte . . . . . . . . . . . . . . . .
+Übersicht einer Kategorie . . . . . . . . . . . . . . . . . . .
+Navigation Trails . . . . . . . . . . . . . . . . . . . . . . . .
+Blattansicht . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Ausstattung . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Detailansicht des konfigurierten Fahrzeuges . . . . . . . .
+RSVP für Review . . . . . . . . . . . . . . . . . . . . . . . . .
+Fahrzeugverwendung mit Virtual Reality (aus [Mem04]) .
+Fragebogen aus der Benutzerbefragung . . . . . . . . . . .
+Fragebogen aus der Benutzerbefragung . . . . . . . . . . .
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+7
+11
+15
+17
+24
+27
+29
+31
+32
+35
+36
+37
+40
+40
+41
+42
+43
+45
+46
+47
+48
+49
+50
+51
+53
+54
+57
+63
+64
+
+A Benutzerbefragung
+
+62
+
+Abbildung 28: Fragebogen aus der Benutzerbefragung
+
+63
+
+64
+Abbildung 29: Fragebogen aus der Benutzerbefragung
+

@@ -1,0 +1,69 @@
+Funktechnik
+
+Es gibt kaum einen Bereich, wo wir auf die Übertragung von Sprache und Daten über die Luft verzichten können. Egal ob Fernsehen, Radio, Telefon oder sogar Netzwerk, überall ist die Funktechnik Bestandteil unsers Lebens.
+Was uns so alltäglich erscheint ist mit verschiedenen physikalischen Effekten und hochkomplizierter und empfindlicher Technik verbunden. Die physikalischen Hintergründe werden im folgenden beleuchten und verständlich erklärt.
+Was ist Funktechnik?
+
+Heinrich Hertz ist deshalb bekannt, weil sein Name als Einheit Hertz, kurz Hz, der Frequenz f gewidmet ist.
+Doch viel wichtiger ist, Heinrich Hertz hat als erster demonstriert, wie elektrische und magnetische Felder zur Übertragung von Nachrichten genutzt werden können. Damals, 1886, gab es noch keine Elektronenröhren oder Transistoren. Deshalb wurde mittels einer Funkenstrecke das Sendesignal erzeugt. Hieraus ergibt sich auch die Bezeichnung Funk. Erst später fand man heraus, dass mit langen Drähten die Reichweite der Signale, den Funkwellen, gesteigert werden kann. Die Funkenstrecke starb aus, die Antenne war geboren, der Name Funk blieb.
+Wie entstehen die Funkwellen?
+
+Funkwellen entstehen nicht von selbst. Zur Erzeugung von Funkwellen ist ein Schwingungserzeuger notwendig. Das kann ein Oszillator sein, der die sogenannte Grund- oder Trägerwelle erzeugt. Es handelt sich dabei um einen physikalischen Effekt.
+In der Elektronik spricht man in der Regel nicht von Wellen. Denn Funkwellen sind Frequenzen. Der Oszillator erzeugt ein Wechselspannungssignal mit einer bestimmten Frequenz. Erst ab 16.000 Schwingungen in der Sekunde (Frequenz) neigen Signale dazu in den freien Raum abzustrahlen. Der Wellenwiderstand Z des freien Raumes (377 Ohm) ist dann geringer als der Wellenwiderstand der Antenne bzw. der Leitung. Dem elektromagnetischen Feld ist es dabei nicht mehr möglich in den Leiter zurück zu kehren (Weg des geringsten Widerstandes). Dadurch strahlt das elektromagnetische Feld von der Antenne ab.
+Dämpfung der Funkwellen
+
+Leider haben Funkwellen den Nachteil, dass sie mit der Zeit schwächer werden, dass heißt, keine unendliche Reichweite haben. Funkwellen werden dann noch zusätzlich durch Gegenstände gedämpft.
+
+Hinweis: Je nach Materialbeschaffenheit und -zusammensetzung der Hindernisse ergeben sich unterschiedliche Dämpfungseigenschaften.
+Material 	Dämpfung 	Beispiele
+Holz 	gering 	Möbel, Decken, Zwischenwände
+Gips 	gering 	Zwischenwände ohne Metallgitter
+Glas 	gering 	Fensterscheiben
+Wasser 	mittel 	Mensch, feuchte Materialien, Aquarium
+Mauersteine 	mittel 	Wände, Decken
+Beton 	hoch 	massive Wände, stahlarmierte Betonwände
+Gips 	hoch 	Zwischenwände mit Metallgitter
+Metall 	sehr hoch 	Aufzugsschacht, Brandschutztüren, Stahlbetonkonstruktionen
+Was hat es mit der Trägerfrequenz auf sich?
+
+Die Trägerfrequenz, die vom Oszillator erzeugt wird, ist eine elektromagnetische Welle, die nicht hörbar ist. Die Trägerfrequenz fT alleine ist noch keine Information. Diese muss in Form einer anderen Frequenz auf die Trägerfrequenz im Huckepackverfahren aufgesetzt werden. Erst dann können Informationen, in der Regel unterschiedliche Zustände in codierter Form, übertragen werden. Dieses Verfahren nennt sich Modulation. Die bekanntesten Modulationsverfahren sind die Amplitudenmodulation (AM), die Phasenmodulation (PM) und die Frequenzmodulation (FM), die bei der Übertragung unserer Radiosender (UKW) verwendet wird.
+Wie war das noch mal mit Schwingung und Frequenz?
+
+Die Anzahl der Schwingungen, also Funkwellen pro Sekunde, werden als Frequenz (f) mit der Einheit Hertz (Hz) angegeben.
+Formel zur Berechnung der Frequenz 	in Hz	Formel zur Berechnung der Periodendauer 	in Sek.
+Beispiel: 16.000 Schwingungen in der Sekunde sind 16.000 Hz bzw. 16 kHz.
+Wie weit reicht ein gesendetes Signal?
+
+Die Reichweite eines Signals ist abhängig von der Wellenlänge einer Frequenz und von der Signalstärke. Und, um genau zu sein, auch von der Dämpfung. Die Signalstärke wird durch die Sendeleistung bestimmt. Die Wellenlänge l wird in Meter angegeben. Dafür gilt folgende Formel:
+Formel zur Berechnung der Wellenlänge l
+Die Lichtgeschwindigkeit ist ein Konstante. Der Wert beträgt 300.000.000 m/s (Meter pro Sekunde) oder 300.000 km/s (Kilometer pro Sekunde).
+Beispiel: Beispiel der Formel zur Berechnung der Wellenlänge l
+Man spricht dann auch vom 70-cm-Band.
+  	c 	  	m/s 	 
+l = 		= 		= m
+  	f 	  	Hz 	 
+
+Durch die oben genannte Formel ergeben sich unterschiedliche Wellenlängen aus den Frequenzen. Geht man davon aus, das die Sendeleistung konstant ist, so bestimmt die Wellenlänge die Reichweite. D. h., bei konstanter Sendeleistung nimmt die Reichweite des Senders proportional zur Wellenlänge ab. Halbiert man die Wellenlänge nimmt die Reichweite drastisch ab. Je höher eine Frequenz, desto geringer die Reichweite.
+Kann ein Signal einfach so auf einer Frequenz gesendet werden?
+
+Nein, das geht nicht. Damit kein Frequenz-Chaos entsteht, sind Frequenzen bzw. Frequenzbereiche einer Anwendung zugeteilt. Z. B. für Radio, Fernsehen, Amateurfunk, CB-Funk, Flugfunk, Schiffsfunk, Taxi, Polizei, Feuerwehr, Mobilfunk, etc. Die Funktechnik ist sehr weit fortgeschritten. So weit, dass sogar für lokale Netzwerke der freie Raum als Übertragungsmedium genutzt wird. Und weil das Übertragungsmedium praktisch kostenfrei zu Verfügung steht, wird es auch gerne und viel genutzt. Die Dichte der Funksysteme ist so hoch, dass der störungsfreie Betrieb nur durch gesetzlich vorgeschriebene Abstände zwischen den Frequenzbereichen möglich ist. Die Bundesnetzagentur (BNETZA) überwacht die Frequenzen und geht Störungen nach und deckt Störer auf.
+Grundlagen der Funktechnik
+
+    * Elektrisches Feld
+    * Elektrische und magnetische Felder
+    * Wellenwiderstand
+    * Funktechnik - Grundbegriffe
+    * Modulation / Modulationsverfahren
+    * Antennen
+    * Terahertz-Funk
+    * Zukunft der Funktechnik
+
+Übersicht: Funktechniken und Funksysteme
+
+    * Mobilfunk
+    * IEEE 802.16 / WiMAX
+    * Schnurlose Telefonie
+    * Bluetooth / IEEE 802.15
+    * Satelliten-Systeme
+    * Amateurfunk
+    * CB-Funk

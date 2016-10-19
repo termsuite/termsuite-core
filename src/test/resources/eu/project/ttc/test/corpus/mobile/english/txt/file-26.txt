@@ -1,0 +1,408 @@
+Networked Mobile Gaming for 3G-Networks 
+Amjad Akkawi1, Sibylle Schaller2, Oliver Wellnit 1z , Lars Wolf1 
+1IBR; Technical University Braunschweig; Mühlenpfordtstraße 23; 38106 Braunschweig, 
+Germany 
+{a.akkawi,wellnitz,wolf}@tu-bs.de 
+ 
+2NEC Europe Ltd.; Kurfürstenanlage 36; 69115 Heidelberg, Germany 
+Sibylle.Schaller@netlab.nec.de 
+Abstract. Mobile devices offer the opportunity to play games nearly 
+everywhere. Moreover, networked games allow individual players to interact 
+with other people and to participate in a larger gaming world, which also 
+provides for new business opportunities. Hence, we currently see an increased 
+interest from game developers, providers and players in mobile games. 
+However, due to the inherent nature of wireless networks, many challenges 
+have to be addressed. 3G technology combines two of the world's most 
+powerful innovations, wireless communications and the Internet. This paper 
+proposes an architecture for multiplayer games in 3G networks. It uses the 
+capabilities and functionality provided by the IP Multimedia Subsystem (IMS). 
+A prototype implementation demonstrates the feasibility of our approach. 
+Introduction 
+Until recently, most games where stand-alone applications designed for a single 
+player only. This has changed lately, where many games are directed towards a multi-
+player scenario where people can interact and compete. Today, most of these 
+networked multiplayer games are developed for PCs connected to fixed networks. 
+Especially in the early days games had to cope with severe bandwidth limitations, e.g. 
+due to narrowband modem links. Nowadays, many computers have access to 
+broadband services (e.g. via ADSL). 
+Currently, game developers, providers and players get more and more interested in 
+games that can be played everywhere. Thus, games must be available on mobile 
+devices. Yet, in order to support games on mobile devices some challenges, which are 
+due to the nature of wireless networks, have to be overcome. One issue is that in such 
+a situation only limited bandwidth will be available. Additionally, because of the 
+mobility of devices, locations can change frequently and introduce several according 
+problems. 
+Various technologies for mobile networking and applications on mobile networks 
+have been developed. There is no single mobile network technology that can serve all 
+possible needs. Each of these solutions has its optimal place and purpose. 
+Communication range, speed, latency, coverage as well as cost determine which 
+technical solution should be used. To support games in public and wide-spread areas, a wide-area mobile 
+communication system such as a 2G or 3G system provides advantages. Furthermore, 
+considering the huge base of end-systems, using such networks is interesting for 
+providers and for users as well. Worldwide, the 2G GSM standard is used most often. 
+GPRS is an evolution of GSM networks towards packet-switched data services. The 
+GPRS speed is about ten times faster than current circuit-switched data services on 
+GSM networks. GPRS fully enables mobile Internet functionality by allowing inter-
+working with the existing Internet. 
+Standards organizations and other related bodies have agreed to co-operate for the 
+production of a complete set of globally applicable technical specifications for a 3rd 
+Generation Mobile System based on the evolved GSM core networks and the radio 
+access technologies supported by 3GPP (Generation Partnership Project [1]) partners. 
+The technical specifications will be developed in view of global roaming and 
+circulation of terminals. The first release of the 3GPP 3G standard has stabilised, and 
+the first 3GPP compliant networks are going into operation. Work is currently 
+ongoing for 3GPP Release 6. [2] From 3GPP specifications, a complete solution for 
+the support of IP multimedia applications (including voice communications) shall be 
+available. The solution consists of terminals, GERAN (GSM EDGE Radio Access 
+Network) or UTRAN (UMTS Terrestrial Radio Access Network) radio access 
+networks and GPRS evolved core network. [3] UTRAN is a new radio network 
+architecture. It provides services with more bandwidth for data and better quality for 
+voice as compared to GSM and GPRS. The 3GPP IP Multimedia Subsystem (IMS) 
+enables a "platform" with capabilities like presence, multimedia conferencing, 
+messaging, support for QoS (Quality of Service) for data traffic, etc. 
+Wireless LAN (WLAN) is another type of access network supported by the 3GPP 
+IMS. WLAN according to the IEEE 802.11 standards family provides bandwidth 
+from 2 up to 54 Mbit/s. The actual bandwidth available per device decreases 
+proportional to the number of the connected, active devices. 
+By use of IMS service capabilities and standards protocols a new QoS for games as 
+well as better performance and scalability can be achieved. Complex services can be 
+created and integrated into a game; based on simple IMS services such as Instant 
+Messaging and/or special services such as a scoring service. The availability of 
+information like location, terminal capabilities and presence status can significantly 
+ease the development and enhance the features of games. 
+In this paper we propose an architecture that enables games both to run on 3G 
+networks and to use the capabilities and functionalities of the IMS. The focus is on 
+networked, multiplayer games. A prototype implementation shows the feasibility of 
+our approach. 
+In the next section "A General Game Service" we briefly introduce aspects of 
+multiplayer games, depict a general game service, and explain its components. In the 
+third section "Architecture for the Integration of Games over the IMS", we motivate 
+the choice of the IMS for game services and introduce our game service architecture. 
+After the description of our prototype implementation in section 4 "An Example 
+Implementation", we conclude the paper in section 5 "Conclusions". Related Work 
+It seems that there is no other work directly related with the topic of the paper: an 
+architecture for mobile, networked games over the IMS. This paper proposes an 
+architecture that enables games to run on 3G networks and at the same time to use the 
+capabilities and features of the IMS. Current related work focuses on providing 
+powerful mobile devices with different features for mobile games and wireless 
+connectivity. Mostly, wireless connectivity for multiplayer games is limited to local 
+area networks (e.g. Bluetoth). The architecture described in this paper is not tied to 
+any game specific hardware. Also we took the approach to base the architecture on 
+standardized components and interfaces. 
+The remainder of this section lists some commercial game platforms that allow for 
+wireless networked games. 
+Nokia 0[4] has entered the mobile game arena with its N-Gage in September 2003. 
+The Nokia N-Gage platform was designed for both games devices as well as mobile 
+phones. The Nokia N-Gage games deck allows users to play multiplayer games 
+connected locally via Bluetooth and/or remotely over mobile networks. The N-Gage 
+device is a tri-band GSM 900/1800/1900 mobile phone which has, in addition to the 
+large screen (176x208 pixels) supporting 3D-graphic, digital music player MP3, 
+stereo FM radio, as well as. 
+The Game Park Inc device (GP32) [5] is officially available in Asia and parts of 
+America. The device is equipped with USB and memory card slot and has a big 
+screen. The GP32 is also equipped with a Radio Frequency Module enabling up to 4 
+players playing locally wireless games. 
+B'ngo is a mobile phone [6] with handheld functionality providing wireless games 
+via Bluetooth. The B'ngo device provides up to 8 players in a single match. 
+Sony Computer Entertainment (SCE) described its Play Station Portable (PSP) as 
+the "21st-century Walkman," showing confidence in the company's upcoming 
+product, which utilizes a number of high-end components. In terms of 
+communication, the PSP will come equipped with 802.11-standard LAN, IrDA, and 
+USB 2.0. 802.11-standard. 7] SCE plans to release the PSP at the end of 2004 in 
+Japan. 
+Gaming-hardware maker Nintendo, which claims 98 percent of the handheld 
+console market with the Game Boy, has had a limited wireless-gaming offering. 
+Customers of some Japanese carriers, including NTT DoCoMo, can attach their Game 
+Boys to cell phones, which then act as a modem for Web-based play. The Nintendo 
+wireless adapter will be launched in Japan during the first half of 2004.  8] 
+A General Game Service 
+After a brief introduction to aspects of multiplayer games, we describe a general game 
+service and explain its components. Aspects of Multiplayer Games 
+Multiplayer games allow two or more people to play together or against each other in 
+the same game. Networked multiplayer games are playable over a network (e.g. the 
+Internet). Since the first video game for computer (Space war) in 1961 and the first 
+multiplayer game in 1969, the multiplayer game world has faced many challenges. 
+Despite both the network and hardware limitations, a variety of multiplayer games 
+were produced. The communication range, speed, network coverage, bandwidth and 
+latency, as well as parameters of the game client devices (processor, memory, 
+graphics, etc.) have an influence on what kinds of multiplayer games can be 
+developed. These technical issues can have a significant impact on the applicable 
+techniques for specific types of games. 
+Independent of the type of network that connects the players with the game, the 
+physical limitation of the network cannot be ignored. Important limitations are the 
+scarcity of resources, interferences, etc. on the radio link, leading to small bandwidth 
+and high latency. Several communication models and design technologies deal with 
+these limitations. 
+The communication model can be Peer-to-Peer, Client-Server based, or Hybrid. [9, 
+10, 11]  In the Peer-to-Peer model the game clients communicate directly with each 
+other. In the Client-Server based model a game server is involved in all game-related 
+communication. The game server also keeps the complete game state. In the Hybrid 
+model a part of the game is implemented with the Client-Server model, especially the 
+communication of the game clients with the server, and the remaining part with the 
+Peer-to-Peer model. Table 1 shows the possible usage for the different 
+communication models. 
+ 
+Table 1.  Possible Usage of Game Communication Models 
+Number of Players Communication Model 
+Small 1-16 Peer-to-Peer 
+Large 16-200 Client/Server & Hybrid 
+Super Large up 200 Hybrid 
+ 
+Components in a General Game Service 
+Figure 1 shows the components used generally for game services. The Game Service 
+is the sum of the contributions of all these components. Game
+G Applicationame Game
+Application
+G Applicationame Provider(s)
+Gaming 
+Service
+Community service Game Information Service
+ 
+ 
+Figure 1. Components in a General Game Service 
+The central component in the Game Service is the Gaming Service that is a server-
+side platform providing network connectivity and general support for gaming. A 
+Game Provider is a human, an organization, or a collection of humans and/or 
+organizations that own a game application, or have the right to use and publish a 
+game application (e.g. Tetris, Quake, Age Of Empires). The Game Provider publishes 
+and distributes games via the Gaming Service.  
+Potential game players must install the game client(s) in their terminals. For mobile 
+terminals, for example, this could be done with Over-the-Air provisioning. [12] An 
+authenticated and authorized player can either join a (running) game of his choice or 
+create a new game session. A game session is a single gathering of players to 
+participate in an instance of a game. A game session lasts for some period of time.  
+The Community Service consists of different services that enable the players to 
+communicate. Examples for Community Services are: Instant/Voice/Multimedia 
+Messaging, Chat or Conferencing. One or more of these services may be integrated in 
+a game and the player has the choice to use, join or leave them without having to 
+interrupt the game. 
+The Game Information Service contains functionalities for the management of 
+game related information. It may contain the information as listed in Table 2. 
+For the management, collection and distribution of game information the Gaming 
+Service may use a Presence Service. Game presence information is a set of attributes 
+characterizing the current status of a game such as score(s), player(s) and team(s), 
+competition information, etc. The Game Information Service manipulates game 
+presence information. Players and watchers of games can subscribe to all or parts of 
+this information and may also be notified of any changes. Game watchers are users 
+that do not (yet) actively participate in a game, but are interested in obtaining game 
+related information and/or using game community services. 
+Reports
+News
+Distribution
+Competition
+High Score 
+Player and Team
+States
+Chat
+Instant Message
+Conferencing
+MMS Table 2. Game Related Information 
+Type of Information Description 
+Scores and Past and current scores, and competition information about 
+Competition past, current and future games. Each game may have one or 
+more Score and Competition Information tables. 
+Players and Teams Contains information about the game players and their 
+teams. It may also contain information about a player's 
+profile. 
+Downloading and Information about new releases, new updates, 
+Distribution demonstrations and levels. This information may also 
+contain a download link. 
+News Headlines, messages-of-the day, previews, screenshots, 
+advertisement, etc. 
+Reports A report may contain different information collected about 
+games, e.g. during game launch. They give a game provider 
+the possibility to make development and marketing 
+decisions. Reports may contain statistical information about 
+the players' requests and interests. 
+ 
+Architecture for the Integration of Games over the IMS 
+In this section we will briefly motivate the choice of 3GPP IMS for game services and 
+introduce our game service architecture. 
+Why Games over 3GPP IMS 
+3G combines two of the world's most powerful innovations, the internet and wireless 
+communications. Having access to the Internet in mobile devices will be of great 
+value to many users. 
+The 3GPP IMS is a standardized infrastructure, able to run services of all 
+categories while allowing ease of inter-working between (mobile) operators. [13] It 
+will allow: 
+ 
+ Peer to peer, real-time and non-real-time services delivered over the packet 
+switched domain 
+ 
+ Seamlessly combined services with different QoS categories 
+ 
+ Only one infrastructure is required for the support all types of services, keeping 
+operators' CAPEX and OPEX low. 
+From a technical point of view, the IMS provides a horizontal approach to 
+integrated, real-time, multiparty services for mobile networks. The Session Initiation 
+Protocol (SIP) was chosen as the signalling protocol. It allows determining 
+capabilities of user terminals, to negotiate QoS parameters, and to use and switch 
+between media components as needed. The first release of 3GPP architecture, Release 99 (R'99), defines the basic 
+architecture of the network. R'99 was designed to be backward compatible with the 
+existing GSM circuit switched infrastructure. The IP Multimedia Subsystem (IMS) is 
+not part of this and the following release. The so-called Phase 1 IMS is specified in 
+3GPP Release 5 and contains the basic mechanisms for multimedia session 
+management. The 3GPP Release 6 adds many new capabilities to the system and the 
+IMS. Examples are: Presence, Conferencing, Messaging, WLAN-Interworking, and 
+Group Management. 
+The IP Multimedia Subsystem (IMS) is an extension of the 3GPP packet-switched 
+core network. It uses the Session Initiation Protocol (SIP) to setup, maintain and 
+terminate voice and multimedia sessions. The 3GPP packet-switched core network is 
+used to support the multimedia session bearer (data path) while hiding the terminal 
+moves. 
+IMS Game Service Architecture 
+The IMS game service architecture was designed specifically for games based on the 
+Client-Server communication model. Such games can be integrated with minimal 
+effort. Peer-to-Peer or Hybrid games can also profit from some functions of the 
+architecture.  
+Figure 2 illustrates the IMS game service architecture. The central component is 
+the Game Focus. It maintains a SIP signalling relationship with each player in the 
+game. Via IMS interfaces towards application servers the Focus can obtain the user 
+location and his terminal capabilities, as well as authentication information accessing 
+the 3GPP core networks HSS (Home Subscriber Server).  
+ 
+SIP Service Provision
+IMIMSS Service logic  & Policies Messaging Messaging
+Proxy Focus PUA S 
+Gaming Service
+IIMSS  
+Game  Game
+App UE
+Watcher
+li UE
+Watcher 
+cations Application Applications Application
+ 
+Figure 2. Game Service over the IMS and Using IMS Capabilities and 
+Functionalities The game platform API is used for the information exchange between the focus 
+and the respective Game Servers. This API is used to communicate the availability of 
+game servers, accepted players, game sessions, etc. The game platform API is based 
+on OMA Games Services version 1.0 (i.e. MGIF). [14] 
+The Focus serves the user's request, and forwards it to the "Service logic and 
+policies" component. The game policy can be thought of as a database that contains 
+policy information about how the focus should operate and may also contain player 
+authorization information. It is the responsibility of the focus to enforce those 
+policies. The focus also must both know about and eventually react to policy changes. 
+Such changes might result, for example, in the termination of a dialog with a player 
+by a sending SIP BYE message. Most policy changes will require a notification to 
+subscriber(s) via the game notification service. 
+The Proxy component is needed when, e.g., a player wants to join a game's chat 
+session. Thus the chat can be tightly integrated with the game, and the players need 
+not to know/learn extra information (e.g. SIP-URI) about the chat service. In that 
+case, the game service may also check the authorization. 
+The Presence User Agent (PUA) component is needed to inter-work with the IMS 
+Presence Service for game and player related presence information. The IETF 
+SIMPLE protocol is used to publish and obtain presence information. [15, 016] 
+The game client (devices) and the game focus manage game sessions with the help 
+of the SIP protocol. [017] SIP is also the signalling protocol in the IMS, thus the 
+exploitation of the full IMS capabilities is possible. The session signalling also 
+includes information needed for the provisioning of QoS for the game data traffic. 
+The IMS provides the game client with an authorization token that can be used to do 
+network reservations for the games data path. The games data path is set up directly 
+with the games server. All game servers in this architecture will accept only data 
+connections to game clients, which have been accepted previously via SIP signalling 
+with the focus. 
+An Example Implementation 
+We implemented a prototype of the architecture described in the previous section (see 
+also Figure 3). For our architecture two games were integrated: TetriNet and GNU 
+VolleyBall. TetriNet was tested over GPRS as well as WLAN networks. TetriNet was 
+playable over both types of networks. Because VolleyBall has most stringent 
+requirements in regards to delay, the game was playable over WLAN, but not over the 
+current GPRS network. In the GPRS network a delay is about one second was 
+experienced. For our implementation we used NIST SIP stack implementation, which 
+required Java Virtual Machine (JVM) 1.2.  Due to restrictions of the JVM on the 
+PDA, we had to modify the SIP stack to run on JVM 1.1. 
+ 
+The original TetriNet is a real-time multiplayer game and supports up to 6 players 
+in each game session. For the client device a PDA (HP Ipaq) was chosen. Due to the 
+small screen size of the PDA, we limited the number of possible players to 4. Sample 
+screenshots of the game client can be seen in Figure 5. TetriNet
+SIP Registrar Game Server
+ 
+Figure 3. A Prototype Implementation of the Gaming Service 
+The following entities were implemented: 
+1. A game client manager and the TetriNet game client on the PDA with the 
+Windows PocketPC 2002 operating system. 
+A graphical user interface (GUI) manages all games installed in the PDA. XML 
+files are used for the configuration. With this GUI the user (player) can register 
+himself at the SIP Registrar and join/leave game sessions. Our game client 
+manager on the PDA automatically starts the respective game client after the user 
+successfully joined a game session. See also Figure 4 and Figure 5Fehler! 
+Verweisquelle konnte nicht gefunden werden.. 
+2. The Focus of the Gaming Service on a PC running SUSE Linux 8.2. 
+This component implements the functionalities of the Focus in the games 
+architecture described above. The Focus manages the game sessions via SIP 
+signalling with the game clients and with the game servers via the game platform 
+API, enforcing the policies of the game provider. 
+3. The TetriNet game server on a PC running Windows XP. 
+A so-called game agent supports the game server to register at the game focus. 
+The game agent may serve all game servers on the host, and is able to trigger the 
+initialisation of game servers. 
+4. Additionally a SIP proxy and registrar were needed. 
+For this server we used the NIST SIP proxy/registrar on a PC running SUSE 
+Linux version 8.2. 
+In our testbed, the TetriNet game server registers itself in the gaming service. The 
+gaming service allocates resources, creates a SIP URI for the game and registers it at 
+the SIP Registrar. Several TetriNet game servers may publish game sessions at the 
+gaming service at the same time.   
+The client software on the IPAQ lists the published game session URIs, and then 
+the user selects and joins a game session. Afterwards, the TetriNet game client starts 
+automatically. It should be noted that the Focus is only involved with the game session management. The data path for the game is set up directly between the game 
+client and the game server. 
+ 
+ 
+ 
+Figure 4. Screenshot of the Game Client Manager GUI 
+ 
+ 
+Figure 5. Screenshots from the TetriNet Game Client 
+ 
+Conclusions 
+In this paper we presented a brief introduction to aspects of mobile multiplayer 
+games. We also presented a view of a general game service and explained its 
+components. Then we introduced our architecture for games over the 3GPP IMS and 
+provided information about our prototype implementation. The prototype implementation of our architecture for Games over the IMS shows 
+that games can be integrated relatively easily onto the 3GPP and IMS platform. The 
+minimal changes that existing games will have to undergo are to enable them for SIP 
+signalling to set up the game session before the data path for the actual game traffic is 
+established.  
+Besides the porting and deployment of existing games, the presented architecture is 
+suitable especially for the development of new games, since different (multimedia) 
+services can be integrated and used easily. Overall, the IMS capable to support 
+mobile, networked games. Of course, mobile devices may have restricted capabilities 
+for running game applications. Such limitations cannot be solved completely by the 
+IMS but it can help to overcome critical issues 
+The current prototype was evaluated on a SIP based network. The next step is to 
+integrate the prototype with a real IMS system and to extend the prototype for using 
+all available IMS functionalities (e.g. Presence Service, Conferencing). Security and 
+charging issues are other topics that need more investigation. 
+References 
+1. 3rd Generation Partnership Project; www.3gpp.org 
+2. 3GPP TR 21.902; "3rd Generation Partnership Project; Technical Specification 
+Group Services and System Aspects; Evolution of 3GPP System" 
+3. 3GPP TS 22.228; "3rd Generation Partnership Project; Technical Specification 
+Group Services and System Aspects; Service requirements for the Internet Protocol 
+(IP) multimedia core network subsystem; Stage 1" 
+4. http://www.heise.de/newsticker/data/daa-11.07.01-003 
+5. http://www.gampark.com 
+6. http://www.ttpcom.com/ttpcom/news/pr_03_bingo.htm 
+7. http://www.gamespot.com/all/news/news_6072659.html 
+8. http://www.nlgaming.com/nl/asp/id_1453/nl/newsDisp.htm 
+9. Yu-Chen "Internet Game Design" www.gamasutra.com 
+10. Joseph D. Pellegrino, Constantinos Dovrolis "Bandwidth requirements and state 
+consistency in three multiplayer game architectures"; NetGames 2003 
+11. Jouni Smed, Timo Kaukoranta, Harri Hakonne, "Aspects of Networking in 
+Multiplayer Computer Games";  
+http://staff.cs.utu.fi/~jounsmed/papers/AspectsOfMCGs.pdf 
+12. "Generic Content Download Over The Air Specification", OMA-Download-OTA-
+v1_0-20030221-C; www.openmobilealliance.org/tech/release.html 
+13. "Mobile Evolution Shaping the Future"; a White Paper from the UMTS Forum; 
+August 2003; www.umts-forum.org 
+14. OMA Games Services version 1.0, Candidate Enabler Releases; 
+www.openmobilealliance.org/tech/release.html 
+15. 3GPP TS 23.141; "3rd Generation Partnership Project; Technical Specification 
+Group Services and System Aspects; Presence Service; Architecture and functional 
+description (Release 6)" 
+16. "SIP for Instant Messaging and Presence Leveraging Extensions (SIMPLE)"; 
+www.ietf.org/html.charters/simple-charter.html 
+17. "SIP: Session Initiation Protocol"; IETF RFC 3261

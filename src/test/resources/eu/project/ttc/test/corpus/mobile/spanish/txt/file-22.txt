@@ -1,0 +1,66 @@
+DKU-5_es2.fm La guía electrónica del usuario comercializada está sujeta a los "Términos y condiciones de
+las guías de usuario de Nokia, del 7 de junio de 1998" ("Nokia User's Guides Terms and
+Conditions, 7th June, 1998".)
+Guía rápida de instalación del Cable 
+adaptador de conectividad (DKU-5) 
+9354902
+2ª edición
+Nokia, Nokia Connecting People y Pop-Port son marcas registradas de Nokia Corporation. 1. Introducción
+Con el Cable adaptador de conectividad (DKU-5) podrá conectar el teléfono Nokia 
+a un PC compatible con USB para la transferencia de datos. Puede sincronizar 
+datos (por ejemplo, la agenda, la libreta de teléfonos o la lista de tareas) entre el 
+teléfono y un software organizador compatible mediante el software de PC Suite 
+que se suministra con el teléfono. 
+El Cable adaptador de conectividad (DKU-5) es compatible con teléfonos que 
+dispongan de un conector de interface Pop-Port™, por ejemplo, el teléfono móvil 
+Nokia 7210. Compruebe la compatibilidad en la guía de accesorios del teléfono. El 
+software del Cable adaptador de conectividad es compatible con los sistemas 
+operativos Microsoft Windows 98 Segunda edición, Windows ME, Windows 2000 
+y Windows XP.
+Consulte la guía del usuario del teléfono para todo lo que se refiera a las 
+instrucciones de funcionamiento del teléfono, cuidado y mantenimiento, así como 
+información importante sobre seguridad.Copyright © 2003 Nokia. All rights reserved. 2 2. Instalación
+En primer lugar, instale el software del Cable adaptador de conectividad en el 
+equipo mediante el CD-ROM que se suministra en el paquete de ventas antes de la 
+instalación de Nokia PC Suite. Puede descargar la versión más reciente del 
+software del Cable adaptador de conectividad en http://www.nokia.com/
+enhancements.
+Nota: el Cable adaptador de conectividad no debe estar conectado al equipo 
+cuando instale el software. Si lo conecta, el software no se instalará 
+correctamente. 
+  Carga del CD-ROM en el equipo
+1. Cierre todos los programas de Windows e inserte el Cable adaptador de 
+conectividad (DKU-5) CD de software en la unidad de CD-ROM del equipo.
+2. Si la instalación no se inicia automáticamente, seleccione Ejecutar... desde el 
+menú Inicio y escriba: D:\start.exe (D:\ hace referencia a la unidad de CD-ROM 
+del equipo) y pulse Intro.
+I n s t a l a c i ó nCopyright © 2003 Nokia. All rights 3 reserved. Instalación del software 
+1. Siga las instrucciones en pantalla para iniciar el asistente de instalación que le 
+orientará a lo largo de todo el proceso de instalación del software.
+2. El asistente de instalación le indicará primero que el software de DKU-5 se 
+instalará en el equipo. Haga clic en Next> (siguiente) para continuar.
+3. Una vez finalizada la instalación, en algunos sistemas el asistente le pide que 
+reinicie el equipo. Haga clic en Yes (sí). Tenga en cuenta que deberá reiniciar el 
+equipo para poder utilizar el programa.
+4. Extraiga los discos de las unidades y, a continuación, haga clic en Finish  
+(finalizar) para completar la instalación.
+Notas para los usuarios de Windows 2000
+La primera vez que se conecta el cable, Windows 2000 ubicará automáticamente 
+el software que instaló previamente. Si el mensaje Digital signature not found 
+(firma digital no encontrada) aparece durante el proceso de instalación, haga clic 
+en Yes (sí) para completar la instalación.
+Notas para los usuarios de Windows XP
+La primera vez que se conecta el cable, Windows XP activará Found New 
+Hardware Wizard (asistente para hardware nuevo encontrado) para ayudarle en 
+la instalación del cable adaptador y del puerto COM virtual. Si durante el proceso 
+de instalación se mu
+haga clic en Continu
+instalación de los doestran los mensajes de error con el logotipo de Windows, 
+e anyway (continuar de todos modos) para completar la 
+s dispositivos.
+Copyright © 2003 Nokia. All rights reserved. 4 Conexión del cable
+Después de haber reiniciado el equipo, conecte el cable DKU-5 al puerto USB del 
+equipo y al conector Pop-Port del teléfono compatible Nokia. 
+Consulte las guías de usuario del teléfono Nokia y PC Suite de Nokia para obtener 
+más información acerca del uso del cable de datos.
+I n s t a l a c i ó nCopyright © 2003 Nokia. All rights 5 reserved.

@@ -1,0 +1,2264 @@
+Georg-August-Universität Göttingen
+
+Institut für Wirtschaftsinformatik
+Professor Dr. Matthias Schumann
+
+Platz der Göttinger Sieben 5
+37073 Göttingen
+Telefon:
++ 49 551 39 - 44 33
++ 49 551 39 - 44 42
+Telefax:
++ 49 551 39 - 97 35
+www.wi2.wiso.uni-goettingen.de
+
+Arbeitsbericht Nr. 15/2003
+Hrsg.: Matthias Schumann
+
+Christian Kaspar / Svenja Hagenhoff
+
+Geschäftsmodelle im Mobile Business aus
+Sicht der Medienbranche
+
+Inhaltsverzeichnis
+
+II
+
+Inhaltsverzeichnis
+
+Abbildungsverzeichnis .........................................................................................................................III
+Abkürzungsverzeichnis ....................................................................................................................... IV
+1 Einleitung ...........................................................................................................................................1
+2 Grundlagen der Mobiltechnologien.................................................................................................2
+2.1 Allgemeine Grundlagen der Mobilfunktechnik.............................................................................2
+2.1.1 Multiplex- und Mehrfachzugriffsverfahren ..........................................................................2
+2.1.2 Signalausbreitung und Bandspreizverfahren......................................................................3
+2.2 Funknetzstandards für lokale Netzinfrastrukturen.......................................................................3
+2.2.1 Drahtlose lokale Netze (802.11) .........................................................................................4
+2.2.2 Nahbereichsnetze (Bluetooth) ............................................................................................5
+2.3 Netzstandards für kommerzielle Mobilfunknetze.........................................................................6
+3 Mobile Business im Rahmen multimedialer Konvergenz .............................................................8
+3.1 Anwendungsfelder mobiler Technologien ...................................................................................9
+3.2 Wertschöpfungsbereiche im Mobile Business...........................................................................13
+4 Inhaltsorientierte Geschäftsmodelle im Mobile Business ..........................................................15
+4.1 Unternehmenszweck und Kundennutzen im Mobile Business .................................................16
+4.2 Erlösmechanik ...........................................................................................................................18
+4.3 Architektur der Leistungserstellung ...........................................................................................20
+5 Zusammenfassung und Fazit.........................................................................................................23
+Literaturverzeichnis .............................................................................................................................24
+
+Abbildungsverzeichnis
+
+III
+
+Abbildungsverzeichnis
+Abbildung 1: WLAN ................................................................................................................................. 5
+Abbildung 2: GSM-Architektur................................................................................................................. 6
+Abbildung 3: Mobile Business Definitionen ............................................................................................. 8
+Abbildung 4: Anwendercluster im Mobile Business ................................................................................ 9
+Abbildung 5: Teilnehmerlokalisierung im GSM-Netz............................................................................. 10
+Abbildung 6: Mobile Applikationsmatrix................................................................................................. 10
+Abbildung 7: Mobile Anwendungen entlang der betrieblichen Wertschöpfungskette ........................... 11
+Abbildung 8: Relevanz mobiler Anwendungen ..................................................................................... 13
+Abbildung 9: Konvergenz und Wertschöpfung im Mobile Business...................................................... 14
+Abbildung 10: Weitverkehrskommunikation auf der Grundlage von Ad-hoc Netzen ............................ 18
+Abbildung 11: Erlösformen für Medienprodukte im Mobile Business.................................................... 19
+Abbildung 12: Preis-Mix bei i-mode....................................................................................................... 20
+Abbildung 13: Aufbau eines Individualisierungs-Regel-Systems .......................................................... 20
+Abbildung 14: Ressourcenmodellierung................................................................................................ 21
+
+Abkürzungsverzeichnis
+
+IV
+
+Abkürzungsverzeichnis
+BSC
+
+Base Station Controller
+
+Zellnetz-Basisstation
+
+BSS
+
+Basic Service Set
+
+Stationen am selben Access Point
+
+BTS
+
+Base Transceiver Station
+
+Basistransferstation
+
+CDMA
+
+Code Division Multiple Access
+
+Codemultiplex
+
+CEPT
+
+European Conference of Postal and Telecom-
+
+Europ. Konferenz der Post- und Fernmeldeverwaltun-
+
+munications Administrations
+
+gen
+
+CN
+
+Core Network
+
+Kernnetz UMTS
+
+CSMA/CA
+
+Carrier Sense with Collision Avoidance
+
+Analog 802.3 (back-off-Verf.)
+
+DFWMAC
+
+Distributed Foundation Wireless MAC
+
+MAC Medienzugriffsmethode
+
+DFWMAC-DCF
+
+Distributed Coordination Function
+
+MAC mit CSMA/CA
+
+DFWMAC-PCF
+
+Point Coordination Function
+
+Zeitbegrenzt, Polling
+
+DSSS
+
+Direct Sequence Spread Spectrum
+
+Codewechsel-Spreizverfahren
+
+ESS
+
+Extended Service Set
+
+Kopplung von BSSs durch DS
+
+FDMA
+
+Frequency Division Multiple Access
+
+Frequenzmultiplex
+
+FHSS
+
+Frequency Hopping Spread Spectrum
+
+Frequenzwechsel-Spreizverfahren
+
+GPRS
+
+General Paket Radio Service
+
+Paketorientierte Datenübertragung
+
+GSM
+
+Global System for Mobile Communications
+
+-
+
+HLR
+
+Home Location Register
+
+Heimatregister
+
+HSCSD
+
+High Speed Circuit Switched Data
+
+Zeitschlitzkombination
+
+IFS
+
+Inter Frame Spacing
+
+MAC Wartezeiten
+
+ITU
+
+International Telecommunication Union
+
+-
+
+IuK
+
+-
+
+Information und Kommunikation
+
+MAC
+
+Medium Access Control
+
+802.11 - Medienzugriffsschicht
+
+MSC
+
+Mobile Switching Center
+
+Mobilvermittlungseinheit
+
+OFDM
+
+Orthognal Frequency Division Multiplexing
+
+Orthogonales Frequenzmodulationsverfahren
+
+OMC
+
+Operation and Maintenance Center
+
+Überwachungs- und Steuerungszentrum
+
+PHY
+
+Physical Layer
+
+Physikalische Übertragungsschicht
+
+PLCP
+
+Physical Layer Convergence Control
+
+802.11 - Kanalkontrollschicht
+
+PMD
+
+Physical Medium Dependent
+
+802.11 - Datencodierung
+
+RNS
+
+Radio Network Subsystem
+
+Funknetz Subsystem
+
+RSS
+
+Radio Subsystem
+
+Funksubsystem (GSM)
+
+SIM
+
+Subscriber Identification Module
+
+Mobiltelefon Identifikationschip
+
+STA
+
+Station
+
+Mobilfunkempfangsgerät
+
+TDMA
+
+Time Division Multiple Access
+
+Zeitmultiplex
+
+UMTS
+
+Universal Mobile Telecommunications System
+
+-
+
+UTRA
+
+UMTS Terrestrial Radio Access
+
+UMTS Zugangsnetz
+
+VLR
+
+Visitor Location Register
+
+Aufenthaltsregister
+
+WAP
+
+Wireless Application Protocol
+
+-
+
+WLAN
+
+Wireless Local Area Network
+
+Lokales Mobilfunknetz
+
+WPAN
+
+Wireless Personal Area Network
+
+Mobilfunknetz im Personenbereich
+
+1 Einleitung
+
+1
+
+1
+
+Einleitung
+
+Die Leistungsfähigkeit der digitalen Informations- und Kommunikationstechnik beeinflusst Medienunternehmen nicht nur hinsichtlich Organisation und Management, sondern auch nachhaltig in Produktion, Redaktion, Distribution der erzeugten Medienprodukte.1 Digitale Kommunikationsnetze wie das
+Internet oder der digitale Mobilfunk entwickeln sich zu Trägermedien publizistischer Massenkommunikation.2 Aus Sicht eines Medienunternehmens mit traditionellem Kerngeschäft in der Inhaltsproduktion
+und -Bündelung bietet die strategische Diversifikation in netzbasierte, digitale Inhaltsmärkte neue
+Wettbewerbsherausforderungen. Insbesondere im Falle des Mobile Business sind Medienunternehmen dabei mit einer Reihe bislang ungeklärter Fragen konfrontiert.
+Mobile Anwendungen und Geschäftsbereiche waren in den vergangenen Jahren häufig Gegenstand
+von Fehlspekulationen. Nach einer Phase anfänglicher Euphorie in Bezug auf die Möglichkeiten und
+Wachstumspotenziale in den Märkten für Dienste und Anwendungen für mobile Anwender und Geräte
+machte sich im Zuge der weltweiten Konjunkturflaute seit 2001 in Europa eine Ernüchterung in diesen
+Märkten breit. Geblieben ist, in Ermangelung von erfolgreichen Geschäfts- und Produktkonzepten,
+eine weitgehende Unsicherheit in Bezug auf die Chancen im Mobile Business. Eine Hauptursache
+dieser Unsicherheit ist die anhaltend hohe Komplexität und Dynamik im Bereich mobiler Technologien. Drei Determinanten sind dafür wesensgebend:3 erstens, die Unsicherheit in Bezug auf die Entwicklung und Etablierung dominierender Technologie- und Branchenstandards; zweitens, die
+Komplexität im Rahmen der Realisierung mobiler Anwendungen; drittens, die Vielfalt im Rahmen der
+Bereitstellung mobiler Dienste für Endnutzer involvierter Akteure.
+Im Folgenden sollen zentrale Aspekte Erfolg versprechender Geschäftskonzepte im Mobile Business
+aus Sicht von Inhaltsanbietern identifiziert werden. Um dabei die Unsicherheit im Rahmen mobiler
+Technologien und Anwendungen zu reduzieren, werden zunächst im zweiten Abschnitt die Merkmale
+mobiler Technologien zusammengefasst und im dritten Abschnitt die Rolle von Medienunternehmen
+im Zusammenspiel der verschiedenen Akteure im Rahmen der mobilen Wertschöpfung erörtert. Im
+vierten Abschnitt erfolgt eine Analyse Erfolg derzeit existierender Geschäftskonzepte vor dem Hintergrund der Identifikation eines weiterführenden Handlungsbedarfs. Als analytischer Rahmen wird dabei
+das Konzept des Geschäftsmodells verwendet. Als Identifikationsgrundlage dienen Aspekte des im
+Rahmen von mobilen Diensten zu erzielenden Kundennutzens entsprechend aktueller Analysen und
+Konzepte zur Herleitung von Kundenbedürfnissen.
+
+1
+
+Vgl. Hass (2002), S. 1
+
+2
+
+Vgl. Sennewald (1998), S. 1
+
+3
+
+Vgl. Lehmann/Lehner (2003), S. 8
+
+2 Grundlagen der Mobiltechnologien
+
+2
+
+2
+
+Grundlagen der Mobiltechnologien
+
+Eine Untersuchung von mobilen Netztechnologien und Anwendungen beschränkte sich in der Vergangenheit häufig auf die etablierten Technologiestandards bzw. deren Fortentwicklungen im Rahmen
+kommerzieller Mobilfunkkommunikationsnetze. Mittlerweile zeichnet sich jedoch ab, dass auch Technologien, die für den Netzwerkaufbau drahtloser lokal begrenzter Infrastrukturen entwickelt wurden,
+echte und im Vergleich deutlich kostengünstigere Alternativen für Daten-, mittelfristig auch für Kommunikationsnetze darstellen.4 Daher sollen im Folgenden beide Architektur- und Technologievarianten
+vorgestellt werden.
+
+2.1
+
+Allgemeine Grundlagen der Mobilfunktechnik
+
+Generell können in mobilen Funknetzen Kommunikationsverbindungen zwischen beweglichen und
+ortsfesten Stationen (Infrastrukturnetzwerke) oder ausschließlich zwischen beweglichen Stationen
+(Ad-hoc Netzwerke) aufgebaut werden.5 Damit unterscheiden sich Mobilfunknetze von Festnetzen,
+indem sie neben der auch von Festnetzen unterstützten Nutzermobilität, wie beispielsweise auch im
+Internet der Fall, zusätzlich die Mobilität von Endgeräten gewährleisten. An die Stelle einer festen
+Übertragungsleitung tritt im Mobilfunk ein ungerichteter Funkkanal. Anders als in analogen Funknetzen, in denen das Kommunikationssignal unmittelbar als kontinuierliche Signalwelle übertragen wird,
+wird beim digitalen Mobilfunk das ursprüngliche Signal vom Endgeräte in Folgen von Bits und Bytes
+kodiert, als diskretes Signal übertragen und vom Empfängergerät dekodiert. Dabei kommen im Rahmen der Signalübertragung eine Reihe von Prinzipien und Verfahren zur Anwendung, die im Folgenden kurz vorgestellt werden.
+
+2.1.1
+
+Multiplex- und Mehrfachzugriffsverfahren
+
+Das ökonomisch nutzbare Frequenzspektrum ist durch die Art der Nutzung und den Stand der Technik eine nur begrenzt verfügbare Ressource und stellt einen Engpass bei der mobilen Funkübertragung dar.6 Beispielsweise umfasst das Frequenzband der deutschen D-Netze zusammen eine Bandbreite von lediglich rund 25 MHz im Frequenzbereich von 900 MHz und ist in 124 Kanäle unterteilt.
+Um einen gleichzeitigen Zugriff auf das Funkübertragungsmedium von mehr als 124 gleichzeitigen
+Kommunikationsvorgängen zu ermöglichen, bedarf es also Verfahren zur Gewährleistung von kollisionsfreien Mehrfachzugriffen auf dieselben Übertragungskanäle.
+Durch sog. "Multiplexen" kann ein Medium durch Unterteilung nach Zugriffsraum, Zeit, Frequenz oder
+Code verschiedenen Nutzern störungsfrei zur Verfügung gestellt werden. Im digitalen Mobilfunk kommen dabei drei unterschiedliche Verfahren z. T. gemeinsam zur Anwendung:7 Beim Time Division
+4
+
+Vgl. bspw. Sikora (2001)
+
+5
+
+Vgl. Müller/Eymann/Kreutzer (2003), S. 150
+
+6
+
+Vgl. Heutmann/Ewers (2003)
+
+7
+
+Vgl. Schiller (2002), S. 347 f. und Müller/Eymann/Kreutzer (2003), S. 53 f.
+
+2 Grundlagen der Mobiltechnologien
+
+3
+
+Multiple Access (TDMA) werden die verschiedenen Kommunikationsvorgänge zeitlich gestaffelt auf
+die Übertragungskanäle exklusiv verteilt. Beim Frequency Division Multiple Access wird jedem Kommunikationsteilnehmer eine exklusive Frequenz zugewiesen. Beim aufwändigeren Code Division Multiple Access (CDMA) senden zwar alle Kommunikationsteilnehmer gleichzeitig auf derselben Frequenz, die einzelnen Kommunikationsvorgänge werden jedoch mit einem eindeutigen Code verschlüsselt und können dadurch unabhängig identifiziert werden.
+
+2.1.2
+
+Signalausbreitung und Bandspreizverfahren
+
+Anders als bei leitungsgebundenen Netzen erfolgt die Signalausbreitung in Funknetzen stets geradlinig, vergleichbar mit Lichtwellen. Objekte im Verlaufsweg der Senderichtung können die Signalausbreitung behindern. Dabei sind Phänomene zu beobachten wie Signalabschattungen durch Hindernisse, Signalreflexionen, bspw. durch große Flächen, Signalstreuungen durch kleine Objekte oder
+Signalbeugungen an scharfen Kanten.8 Weitere, z. T. aus den erstgenannten resultierende Phänomene der Funksignalausbreitung sind: Freiraumdämpfung, d.h. die Abnahme der Empfangsleistung
+eines Signals und zwar proportional zum Quadrat der Entfernung; Mehrwegeausbreitungen von Signalen in Form zeitlich versetzter Empfangsimpulse bspw. aufgrund von reflektierten Signalen; Signalfading, d. h. Schwankungen in der Signalleistung bspw. im Zuge von Bewegungen der Kommunikationsteilnehmer.
+Aufgrund dieser Störphänomene im Rahmen der Signalübertragung besteht die Gefahr einer Signalauslöschung während des Kommunikationsvorgangs. Um die Auswirkungen solcher Signalstörungen
+zu reduzieren, wird im Rahmen sog. Bandspreizverfahren die ursprüngliche Übertragungsbandbreite
+eines Signals auf eine größere Bandbreite verteilt.9 Die daraus wiederum resultierende Einschränkung
+an verfügbarem Frequenzraum kann durch die Kombination von Bandspreizverfahren in Verbindung
+mit Verfahren des Mehrfachzugriffs minimiert werden. Beispiele solcher Kombinationsformen bilden
+das Frequency Hopping Spread Spectrum (FHSS), bei dem jeder Sender in einer festgelegten Abfolge die Frequenz wechselt und Direct Sequence Spread Spectrum (DSSS), bei dem das gespreizte
+Originalsignal mit einer vorgegebenen Pseudozufallszahl codiert wird.
+
+2.2
+
+Funknetzstandards für lokale Netzinfrastrukturen
+
+Im Mittelpunkt der derzeitigen Aufmerksamkeit stehen die Vernetzungsstandards des amerikanischen
+Ingenieursverbands IEEE für drahtlose lokale Netze (WLANs) 802.11 und für Personen- bzw. Nahbereichsnetze (WPANs) 802.15. Diese werden im Folgenden kurz vorgestellt.
+
+8
+
+Vgl. Schiller (2002), S. 350 f.
+
+9
+
+Vgl. Schiller (2002), S. 352 f.
+
+2 Grundlagen der Mobiltechnologien
+
+2.2.1
+
+4
+
+Drahtlose lokale Netze (802.11)
+
+Die wesentlichen Entwurfsziele des 802.11-Standards bilden Anwendungs- und Protokolltransparenz,
+nahtlose Festnetzintegration und die weltweite Betriebsmöglichkeit im lizenzfreien Funkfrequenzband.10 Der ursprüngliche 802.11-Standard von 1997 beschreibt drei Sendevarianten: eine Infrarotvariante im Lichtwellenbereich von 850-950nm und - ökonomisch von größerer Bedeutung - zwei
+funkbasierte Varianten im Frequenzband von 2,4 GHz.11 Bei einem vorgesehenen Spektrum der
+Sendeleistung zwischen mindestens 1mW und in Europa maximal 100mW kann in den Funkvarianten
+eine Kanalkapazität von 1-2 Mbit/s erreicht werden. In Anknüpfung an die Standards 802.3 (Ethernet)
+und 802.5 (Token Ring) für leitungsgebundene Rechnervernetzung spezifiziert der 802.11-Standard
+zwei Dienstschichten: 12
+Die Medienzugriffsschicht (MAC-Layer) steuert den Zugriff auf das Funkmedium, die Verschlüsselung
+der gesendeten Daten und die Fragmentierung des Signals in Sendepakete. Der Medienzugriff insbesondere unter Vermeidung des funktypischen Problems der Signalkollisionen erfolgt über eine Variante des aus den leitungsgebundenen Netzstandards bekannten Algorithmus Carrier Sense Multiple
+Access/Collision Avoidance (CSMA/CA).13 Vorgesehen sind zwei Dienstklassen zur Datenübertragung: ein asynchroner Datendienst als Standardfall analog zum 802.3-Standard, und ein optionaler
+zeitbegrenzt synchroner Datendienst.
+Die physikalische Bitübertragungsschicht (PHY-Layer) dient zur Überprüfung des Kanalzustands, zur
+Datencodierung und -modulation sowie natürlich als medienunabhängige Schnittstelle der Signalübertragung. Zur Reduktion der Kanalknappheit wird das FHSS-Verfahren mit 2,5 Frequenzwechseln
+pro Minute eingesetzt. Weiterentwicklungen des ursprünglichen Standards setzen vorwiegend im Bereich der Übertragungsschicht an:14 Beim 802.11a-Standard wird anstelle des ursprünglichen 2,4GHzBandes auf das 5 GHz-Band ausgewichen. Kombiniert mit einem neuen Modulationsverfahren, dem
+sog. Orthognal Frequency Division Multiplexing (OFDM) soll dadurch eine Kapazität von bis zu 54
+Mbit/s erreicht werden. Demgegenüber weiterhin im 2.4 GHz-Band operierend, allerdings u. a. erweitert um das kodierte Bandspreizverfahren DSSS und einem verbesserten Signal-Rausch-Abstand,
+erreicht der derzeit am weitesten verbreitete Standard 802.11b eine Kapazität von bis zu 11 Mbit/s.
+Typischerweise werden WLANs aufgrund einer größeren Sendereichweite von ca. 300m im Infrastruktur Modus betrieben, bei dem die gesamte Kommunikation eines Clients (STA) über einen Zugangspunkt (Access Point) erfolgt. Der Zugangspunkt dient dabei zur Versorgung sämtlicher Clients in
+seinem Empfangsbereich oder als Funkbrücke zu benachbarten Zugangspunkten. Abbildung 1 zeigt
+eine beispielhafte Netztopologie eines infrastrukturbasierten WLANs.
+
+10
+
+Vgl. Schiller (2002), S. 356
+
+11
+
+Vgl. Sikora (2001), S. 2
+
+12
+
+Vgl. IEEE (2001)
+
+13
+
+Vgl. Schiller (2002), S. 357 und Müller/Eymann/Kreutzer (2003), S. 166
+
+14
+
+Vgl. Schiller (2002), S. 365
+
+5
+
+2 Grundlagen der Mobiltechnologien
+
+Festnetz 802.x
+
+Endsystem
+
+STA3
+Access
+Point 2
+
+Portal
+
+Distribution System
+(Access Point 3 )
+
+Access
+Point 1
+STA1
+
+STA2
+
+Abbildung 1: WLAN15
+
+2.2.2
+
+Nahbereichsnetze (Bluetooth)
+
+Unter dem Namen des Wickingerkönigs "Blauzahn" aus dem 10. Jahrhundert gründeten die Firmen
+Ericsson, Nokia, IBM, Toshiba und Intel 1998 eine "Special Interest Group" für Funknetzwerke für den
+Nahbereich.16 Ebenso wie WLAN-Netze senden Bluetooth-Geräte im lizenzfreien 2,4 GHz-Band, weshalb es zwischen beiden Netztechnologien zu Interferenzen kommen kann. In Bluetooth-Netzen stehen in der Regel 79 Kanäle zur Verfügung, als Bandspreizverfahren wird FHSS mit 100 Sprüngen pro
+Sekunde eingesetzt. Alle Geräte mit derselben Sprungsequenz bilden ein gemeinsames sog. "Piconetz".17 Darin sind zwei Dienstklassen spezifiziert, ein synchron-verbindungsorientiertes und ein asynchron-verbindungsloses Verfahren. Bei einer maximalen Sendeleistung von 10mW erreichen
+Bluetooth-Geräte dabei einen Senderadius von 10m bis (theoretisch) maximalen 100m und eine Datenkapazität bis zu 723Kbit/s.
+Als zentrale Einsatzgebiete für Bluetooth-Technologien sind die Verbindung von Peripheriegeräten
+wie Maus, Kopfhörer, Kfz-Elektronik oder Küchengeräte oder die Brückenfunktion zwischen verschiedenen Netztypen, wie die Vernetzung zwischen leitungsgebundenen Computernetzwerken und mobilen Funknetzzugangsgeräten.18 Bluetooth-Netze werden dazu in der Regel als ad-hoc Netze
+zusammengeschlossen. Ad-hoc Netze benötigen keine dezidierten Zugangspunkte, die mobilen Endgeräte kommunizieren gleichberechtigt und direkt mit anderen Endgeräten in Empfangsreichweite.19
+
+15
+
+in Anlehnung an Schiller (2002), S. 359
+
+16
+
+Vgl. Müller/Eymann/Kreutzer (2003), S. 168
+
+17
+
+Vgl. Müller/Eymann/Kreutzer (2003), S. 169 f.
+
+18
+
+Vgl. Diederich/Lerner/Lindemann/Vehlen (2001), S. 103
+
+19
+
+Bei Bluetooth-Geräten tritt die Ausnahme auf, dass immer genau ein Gerät in einem Netz aus maximal acht
+Geräten als Leitstation zur Vorgabe und Synchronisation der Sprungfrequenz dient.
+
+6
+
+2 Grundlagen der Mobiltechnologien
+
+2.3
+
+Netzstandards für kommerzielle Mobilfunknetze
+
+Unter dem Namen "Group Spécial Mobile" (GSM) gründete die Europäische Konferenz der Post- und
+Fernmeldeverwaltungen (CEPT) ein Konsortium zur Koordinierung und Standardisierung eines künftigen paneuropäischen Mobiltelefonnetzes, später unter demselben Akronym umbenannt in "Global
+System for Mobile Communications".20 GSM-basierte Mobilfunknetze existieren derzeit in drei Varianten weltweit mit 900, 1.800 und 1.900 MHz und vernetzen derzeit rund 800 Mio. Teilnehmer in 190
+Ländern.21 Der Medienzugriff mobiler Geräte auf das Funknetz erfolgt in Europa per Zeit- und Frequenzmultiplexverfahren über eine Luftschnittstelle, genannt UM, mit 124 Sendekanälen mit je 200
+kHz im Frequenzband zwischen 890-915 MHz (uplink) bzw. 935-960 MHz (downlink).22 Im GSM sind
+drei Dienstklassen vorgesehen: 23
+•
+
+Trägerdienste zur Datenübertragung zwischen Netzzugangspunkten; Dabei sind sowohl leitungsvermittelnde Verfahren als auch paketvermittelnde Verfahren mit 2.400, 4.800 und 9.600
+Bit/s synchron oder 300-1.200 Bit/s asynchron spezifiziert.
+
+•
+
+Teledienste zur Sprachübertragung bei ursprünglich 3,1 KHz und für weitere nichtsprachliche
+Anwendungen wie Fax-, Sprachspeicher- und Mitteilungsdienste (SMS);
+
+•
+
+Zusatzdienste wie Rufnummernweiterleitung, -unterdrückung, Anklopfen, etc.
+
+Die Architektur eines flächendeckenden GSM-Netzes ist im Vergleich zu lokalen Funknetzvarianten
+deutlich komplexer (vgl. dazu Abbildung 2). Die Netzarchitektur besteht aus drei Subsystemen: dem
+Funksubsystem, dem Vermittlungssubsystem und dem Betriebs- und Wartungssubsystem.24
+
+Funkzelle
+MS
+
+MS
+
+Um
+MS
+
+BTS
+RSS
+
+BTS
+
+BSC
+
+BSC
+
+AUC
+
+MSC
+
+VLR
+HLR
+
+SS7
+
+EIR
+
+MSC
+
+NSS/
+OMS
+
+OMC
+
+GMSC
+IWF
+Festnetze
+
+Sprachnetze
+
+Datennetze
+
+Signalisierung
+
+Abbildung 2: GSM-Architektur25
+20
+
+Vgl. Schiller (2002), S. 374
+
+21
+
+Vgl. GSM Association (2003)
+
+22
+
+Vgl. Schiller (2002), S. 380
+
+23
+
+Vgl. Schiller (2002), S. 375 f.
+
+24
+
+Vgl. Müller/Eymann/Kreutzer (2003), S. 157 f. und Schiller (2002), S. 376
+
+25
+
+In Anlehnung an Schiller (2002), S. 377
+
+2 Grundlagen der Mobiltechnologien
+
+7
+
+1. Das Funksubsystem (Radio Subsystem, RSS), ein flächendeckendes zellulares Funknetz, besteht aus mehreren Basisstation-Subsystemen (Base Station Subsystems, BSS). Ein BSS
+besitzt mindestens einen Base Station Controller (BSC) der wiederum mehrere Base Transciever Stations (BTS), vergleichbar mit den Zugangspunkten in WLAN-Netzen, steuert. Ein
+BTS versorgt in der Regel eine Funkzelle mit einem Zellradius von 100m bis maximal 35km.
+2. Den Hauptbestandteil eines GSM-Netzes bildet das Vermittlungs-Subsystem (Network Subsystem, NSS), dem sämtliche verwaltungstechnischen Aufgaben obliegen. Kernelemente sind
+Schaltzentralen (Mobile Switching Center, MSC), die ein Signal im Netz einem authentifizierten Teilnehmer zuordnen. Die Authentifizierung erfolgt auf der Grundlage zweier Datenbanken: im Heimatregister (Home Location Register, HLR) sind alle vertragsspezifischen
+Daten eines Nutzers sowie sein Aufenthaltsort gespeichert; im Aufenthaltsregister (Visitor Location Register, VLR), üblicherweise einem MSC zugeordnet, sind alle aktuell im Zuständigkeitsbereich des MSC befindlichen Teilnehmer gespeichert.
+3. Die Überwachung und Steuerung von Netzwerk- und Funksubsystem erfolgt durch ein Betriebs- und Wartungssubsystem (Operation and Maintenance System, OMC). Das OMC führt
+die Registrierung von Mobilstationen und Nutzerberechtigungen durch und erzeugt teilnehmerspezifische Berechtigungsparameter.
+Wesentlicher Kritikpunkt am GSM-Netz bildet die geringe Kanalkapazität bei der Signalübertragung.
+Mit einer Reihe von Weiterentwicklungen wird versucht, diese Einschränkung zu verringern:26
+•
+
+Beim High-Speed Circuit Switched Data (HSCSD) -Verfahren werden mehrere Zeitschlitze im
+Rahmen des Zeitmultiplex für ein leitungsvermittelndes Signal zusammengefasst.
+
+•
+
+Der General Paket Radio Service (GPRS) ist ein paketvermittelndes Verfahren, das ebenso
+wie das HSCSD-Verfahren mehrere Zeitschlitze zusammenfasst, Kanalkapazitäten jedoch nur
+im Falle tatsächlicher Datenübertragung belegt. GPRS erfordert zusätzliche Systemkomponenten im Rahmen des Vermittlungssubsystems und erlaubt eine theoretische Übertragungskapazität von 171,2 kBit/s.
+
+•
+
+Der europäische Vorschlag Universal Mobile Telecommunication Service (UMTS) im Rahmen
+eines offiziellen Aufrufs zur Einreichung von Vorschlägen für weltweit arbeitende Kommunikationssysteme der nächsten Generation der International Telecommunication Union (ITU) repräsentiert im Grunde auch eine lediglich evolutionäre Weiterentwicklung von GSM.
+Entwicklungsziel ist eine höhere Übertragungskapazität für Datendienste mit einer minimalen
+Datenrate von 144 kBit/s in ländlichen Regionen und eine maximalen Datenrate von bis zu 2
+Mbit/s in Ballungszentren. Kern der Fortentwicklung bildet eine erweiterte Luftschnittstelle Universal Terrestrial Radio Access (UTRA) zwischen den Funksubsystemen (Radio Network
+Subsystem, RNS) und dem UMTS-Kernnetz (Core Network, CN). Diese nutzt eine Trägerfrequenz der Bandbreite im Bereich von 1,9 - 2,1 GHz und setzt eine Breitband-CDMA-Technik
+mit DSSS als Bandspreizverfahren ein.
+
+26
+
+Vgl. Schiller (2002), S. 381 ff.
+
+3 Mobile Business im Rahmen multimedialer Konvergenz
+
+3
+
+8
+
+Mobile Business im Rahmen multimedialer Konvergenz
+
+Hinter dem Begriff des "Mobile Business" verbirgt sich derzeit keine einheitlich verwendete Definition.
+Im Gegenteil ist eine breite Vielfalt an Definitionen entstanden, augenmerklich um das Jahr 2001 in
+der Hochzeit der Mobilfunkeuphorie in der Folge der Lizenzversteigerungen für die geplanten UMTSNetze in Europa. Abbildung 3 fasst einen Ausschnitt ohne Anspruch auf Vollständigkeit der veröffentlichten Begriffsdefinitionen zusammen.
+Hartmann/Dirksen (2001)
+
+Unter Mobile Business versteht man Geschäftsmodelle, bei denen Geschäftsprozesse wie z.B. Datenund Informationsaustausch durch die Integration von mobilen Endgeräten wie Handy's oder PDA's
+unabhängig von Ort und Zeit abgefragt, beeinflusst oder sogar gesteuert werden können. (S. 16)
+
+Reichwald/Meier/Fremuth
+
+Mobile Business die Gesamtheit der über ortsflexible datenbasierte und interaktive Informations- und
+Kommunikationstechnologien (z.B. Mobiltelefone, PDA´s) abgewickelten Geschäftsprozesse. (S. 8)
+
+(2002)
+
+Scheer/Feld/Göbl (2001)
+
+Unter Mobile Business wird (…) die kommerzielle Nutzung von nicht drahtgebundenen Diensten zur
+Unterstützung von Geschäftsprozessen in Unternehmen, zwischen Unternehmen und deren
+Lieferanten sowie an der Schnittstelle zwischen Unternehmen und Kunden verstanden. (S. 30)
+
+Steimer (2001)
+
+Mobile Business umfasst die ortsgebundene (mobile) Beschaffung, Verarbeitung und Bereitstellung
+von Informationen aller Art, zur Abwicklung von Geschäfts- und Kommunikationsvorgängen unter
+Einsatz mobiler Endgeräte und Nutzung geeigneter Dienste und Infrastrukturen. (S. 137)
+
+Wirtz (2001)
+
+Unter dem Begriff Mobile Business wird die Anbahnung sowie die teilweise respektive vollständige
+Unterstützung, Abwicklung und Aufrechterhaltung von Leistungsaustauschprozessen mittels
+elektronischer Netze und mobiler Zugangsgeräte verstanden. (S. 45)
+
+Zobel (2001)
+
+Unter Mobile Business verstehe ich alle auf mobilen Geräten ("Devices") ausgetauschten
+Dienstleistungen, Waren sowie Transaktionen. (S. 3)
+
+Abbildung 3: Mobile Business Definitionen
+Wie Wirtz feststellt, liegt die Übereinstimmung in den existierenden Definitionen darin, dass die Benutzung mobiler Endgeräte im Zusammenhang mit wirtschaftlichen Akteuren als zentrales Definitionskriterium genannt wird.27 Der Unterschied zwischen den jeweiligen Definitionen liegt in der
+Hervorhebung unterschiedlicher Aspekte des Einsatzes mobiler Endgeräte im wirtschaftlichen Handeln: der Informationsaustausch zwischen Akteuren (bspw. Steimer; Hartmann/Dirksen), betriebliche
+oder absatzbezogene Geschäftsprozesse (Scheer/Feld/Göbl; Reichwald/Meier/Frehmut) oder der
+Austausch von Dienstleistungen und Gütern (Zobel; Wirtz). In Anlehnung an die Begriffseinteilungen
+im Rahmen der (Fest-)Netz- und speziell internetbasierten Unterstützung betrieblicher Prozesse in ecommerce und E-Business wird im Rahmen mobiler Anwendungen häufig eine Abgrenzung zwischen
+Mobile Business und Mobile Commerce vorgenommen. Mobile Commerce umfasst dabei diejenige
+Teilmenge des Mobile Business, "welche die reine Durchführung von mit monetären Werten verbundenen Transaktionen beschreibt.“28
+
+3.1
+
+Anwendungsfelder mobiler Technologien
+
+Eine Differenzierung der Einsatz- und Anwendungsfelder mobiler Technologien im Rahmen betrieblicher Prozesse wird häufig aus drei Perspektiven vorgenommen:
+27
+
+Vgl. Wirtz (2001), S. 44 f.
+
+28
+
+Buse (2002), S. 92
+
+9
+
+3 Mobile Business im Rahmen multimedialer Konvergenz
+
+1. Aus produktorientierter Sicht kann zwischen 4 Anwendungsklassen unterschieden werden: informationsorientierte Dienste wie Fahrpläne, Börseninformationen oder Sportnachrichten; applikationsorientierte Dienste wie Computerspiele, Übersetzungsdienste oder Terminplaner;
+transaktionsorientierte Dienste wie Reservierungssysteme, Auktionen oder Tauschbörsen;
+kommunikationsorientierte Dienste wie Email, Diskussionsforen oder Chats;29
+2. Aus Sicht einer Anwendertypologie kann bspw. zwischen Geschäftsinteressen (Business), privaten Endkunden (Consumer), Betriebsmitarbeitern (Employee) und der Unternehmensleitung
+(Administration) unterschieden werden.30 Durch wechselseitige Kombination von Kommunikationsarrangements zwischen den verschiedenen Anwendertypen lassen sich grundsätzlich 16
+Anwendungscluster abgrenzen:
+Empfänger
+
+Business
+
+Consumer
+
+Employee
+
+Administration
+
+Business
+
+B2B
+
+B2C
+
+B2E
+
+B2A
+
+Consumer
+
+C2B
+
+C2C
+
+C2E
+
+C2A
+
+Employee
+
+E2B
+
+E2C
+
+E2E
+
+E2A
+
+Administration
+Management
+
+A2B
+
+A2C
+
+A2E
+
+A2A
+
+Sender
+
+Abbildung 4: Anwendercluster im Mobile Business
+3. Aus der Sicht technologischer Spezifika des Mobilfunks selbst werden häufig eine Reihe von
+Anwendungsfeldern, so genannte Technologiewertbeiträge,31 abgeleitet. Im Mittelpunkt dieser
+Spezifika stehen in der Regel zwei Aspekte: die allgegenwärtige und vor allem ortsunabhängige Verfügbarkeit mobiler Endgeräte und der damit abrufbaren Dienste und die eindeutige
+Identifizierbarkeit mobiler Anwender. Während die Ortsunabhängigkeit ein definitionsgemäßes
+Kriterium von Anwendungen und Diensten jeglicher Form auf der Grundlage von Mobilfunknetzen darstellt, bildet die Identifizierbarkeit ein spezielles Kriterium für Anwendungen in flächendeckenden Kommunikationsnetzen des kommerziellen Mobilfunks wie GSM oder UMTS.
+Ein Endgerät wird sowohl im GSM als auch UMTS Standard über eine spezielle Chipkarte, die
+so genannte SIM (Subscriber Identification Module) - Karte, identifiziert. Anhand dieser eindeutigen Identifikation eines Teilnehmers nimmt das Mobilfunknetz im Vermittlungs-Subsystem eine Lokalisierung des Teilnehmers und dann eine Signalvermittlung vor. Abbildung 5
+stellt den Vorgang der Teilnehmeridentifikation und Lokalisierung schematisch am Beispiel
+des GSM-Netzes dar:32
+
+29
+
+Vgl. Schumann (2002) S. 7 und Hess/Rawolle (2001)
+
+30
+
+Vgl. Diederich/Lerner/Lindemann/Vehlen (2001), S. 232
+
+31
+
+Vgl. Zobel (2001), S. 63
+
+32
+
+Vgl. Schiller (2002), S. 380
+
+10
+
+3 Mobile Business im Rahmen multimedialer Konvergenz
+
+HLR
+
+MSC
+BSS
+
+Anrufer
+
+Festnetz
+
+GMSC
+
+VLR
+
+HLR:
+VLR:
+MSC:
+GMSC:
+BSS:
+MS:
+
+MS
+
+BSS
+BSS
+
+MSC
+
+Home Location Register
+Visitor Location Register
+Mobile Switching Center
+Gateway MSC
+Base Station Subsystem
+Mobile Station
+
+Abbildung 5: Teilnehmerlokalisierung im GSM-Netz
+Anhand der Netzvorwahl wird im Festnetz erkannt, dass das Signal an ein GMSC im Mobilfunknetz geleitet werden muss ( ). Durch die Rufnummernkennzahl wird das Teilnehmerspezifische HLR ( / ) identifiziert und von diesem das aktuelle VLR ( ) ausgelesen. Durch so
+genanntes "Paging", einem Suchsignal, das die BSS im Zuständigkeitsbereich des VLR zur
+Lokalisierung des Teilnehmers aussendet ( ), wird die aktuell zuständige BTS erkannt. Zu
+dieser wird vom MSC das Signal durchgestellt und mit der MS verbunden ( ).
+Durch die Verknüpfung dieser verschiedenen Differenzierungskriterien mobiler Anwendungen ergibt
+sich eine vielfältige Kombinatorik aus möglichen Einsatzszenarien. Die Ansätze zur Ermittlung und
+Bewertung solcher Szenarien für mobile Technologien und Anwendungen lassen sich dabei in zwei
+Lager aufspalten:
+Vorwiegend "ältere" Ansätze aus dem Zeitraum etwa zwischen 1997 und 2001 identifizieren plausible
+Anwendungen auf deduktivem Wege, beispielsweise auf der Grundlage von Effizienzpotenzialen entlang betrieblicher Wertschöpfungsprozesse oder existierender Angebotslücken gegenüber Endkunden
+im Bereich festnetzbasierter Dienstleistungen. Petersmann und Nicolai identifizieren beispielsweise im
+B2C-Bereich aus den ubiquitären bzw. lokalisierbaren Eigenschaften mobiler Technologien für den
+Mobile Commerce jeweils 2 Anwendungsfelder - ortsbezogene und zeitkritische Dienste - im Spektrum der vier Produktklassen Information, Kommunikation, Selektion und Transaktion des Mobile Business (vgl. Abbildung 6).33 Innerhalb der einzelnen Matrixfelder kann wiederum zwischen klassischen
+Pull-, also Selbstbedienungsangeboten des Nutzers und aufgrund der Identifizierbarkeit eines Nutzers
+und der Lokalisierbarkeit seines Endgeräts ermöglichten automatischen Push-Angeboten unterschieden werden. In der entstehenden 2x8 Feldertafel bestimmen die Autoren dann derzeit bereits verfügbare ( - ) und Erfolg versprechende, jedoch noch nicht realisierte Anwendungsformen ( - ).
+
+Ort als
+dominante
+Entscheidun
+gs-variable
+
+Information
+PUSH
+
+Kommunikation
+PUSH
+
+Zeit als
+dominante
+Entscheidun
+gs-variable
+
+PULL
+PUSH
+
+www.ftd.com/wireless
+www.wapaparty.de
+www.jamba.de
+
+Transaktion
+PUSH
+
+PULL
+
+PULL
+PUSH
+
+PULL
+
+Selektion
+PUSH
+
+PUSH
+
+PULL
+
+EC-Automatensuche
+Mobiles Finanzportal
+Zahlungsmittelfunktion
+
+PULL
+PUSH
+
+PULL
+
+PULL
+
+Aktienkauf-Aufruf
+Wertpapier-Order
+
+Abbildung 6: Mobile Applikationsmatrix
+
+11
+
+3 Mobile Business im Rahmen multimedialer Konvergenz
+
+Autoren wie Simonovich/Malinkovich untersuchen Einsatzfelder mobiler Anwendungen ergänzend auf
+der Basis betrieblicher Wertschöpfungsprozesse als Medium für Informations- und Kommunikationsprozesse zwischen Mitarbeitern, dem Management und Geschäftskunden (vgl. Abbildung 7).34 Dabei
+wird zwischen produktionsnahen, -unterstützenden und kundenbezogenen Prozessen unterschieden.
+Eine besondere Relevanz wird mobilen Anwendungen dabei als mobile Informationsportale im Rahmen betrieblicher Informationsinfrastrukturen sowie im Rahmen der Prozesse zur Zahlungsabwicklung, zur Marketingkommunikation und zur Steuerung des Vertriebsaußendienstes beschieden.
+Produktionsnahe Aktivitäten (insb. SCM):
+Eingangslogistik
+Lagerung
+Transport
+Beispiele
+
+• Lagereingangsregistrierung
+• Tracking
+• Lagerkoordination
+
+Szenario
+
+WLAN
+
+•WWAN
+•Offline
+
+Planung
+
+Produktion
+Steuerung
+
+Ausgangslogistik
+Lagerung
+Transport
+
+• Standortweite Produktionsüberwachung
+• Qualitätskontrollen
+
+• Kommunikation und Koordnination
+mit Transportdienstleister
+• Lagerausgangsregistrierung
+
+•WLAN
+•Offline
+
+WLAN
+
+WWAN
+
+•WWAN
+•Offline
+
+Eignung
+
+Unterstützende Aktivitäten (ERP ohne SCM/CRM):
+Finanzmanagement
+ReWe
+Zahlungsabw.
+Beispiele
+
+• mobiler Zugriff auf Controlling-Infos
+• Mobile Payement
+
+Szenario
+
+Offline
+
+WWAN
+
+Personalwesen
+Personalentw.
+Personalverw.
+
+F&E
+
+Unternehmensinfrastruktur
+
+• Reiseziel- und -kostenmanagement
+• Zeit- und Projektmanagement
+
+• Mobile
+Groupware
+
+• Mobile Infoportale
+• MKM*
+
+•WLAN
+•Offline
+
+WLAN
+
+WWAN, WLAN,
+Offline
+
+WWAN
+
+Eignung
+
+Kundennahe Aktivitäten (CRM):
+Marketing
+Marktforschung
+Kommunikation
+Beispiele
+
+Szenario
+
+Service
+Servicesteuerung
+Außendienst
+
+• Komplexe Außendienstangebote
+• Vertriebskoordination und überwachung
+
+• "Mobile Marketing"
+• 1-2-1 Marketing
+•WWAN
+•Offline
+
+Vertrieb
+Vertr'steuerung
+Außendienst
+
+•WWAN
+•Offline
+
+• Unterstützung d. technischen
+Außendiensts
+• Austausch von Bearbeitungsdaten
+
+•WLAN
+•Offline
+
+•WLAN
+•Offline
+
+WWAN, WLAN,
+Offline
+
+•WLAN
+•Offline
+
+Eignung
+
+Abbildung 7: Mobile Anwendungen entlang der betrieblichen Wertschöpfungskette
+Die bereits angesprochene Euphorie in den vergangenen Jahren in Bezug auf die Marktpotenziale
+mobiler Anwendungen begründete sich im Wesentlichen auf den Wachstumserwartungen des Mobile
+Commerce durch nicht-sprachkommunikationsorientierte Dienste.35 Zwei Faktoren führten zu dieser
+Erwartung:
+1. die hohe Verbreitung von mobilen Endgeräten; Während noch 1990 weltweit lediglich 11 Mio.
+Mobilfunknutzer registriert waren36, überstieg im vergangenen Jahr die Zahl der Mobiltelefone
+mit knapp 1,2 Mrd. Stück erstmal die Zahl der Festnetzanschlüsse.37 Jedoch zeichnet sich
+durch die allmähliche Marktsättigung mittlerweile ein Rückgang der Wachstumsraten ab.38
+2. ein im Vergleich zur Zunahme der Gerätezahl überproportionales Umsatzwachstum pro Nutzer aufgrund der steigenden Leistungsfähigkeit mobiler Netze und Endgeräte.39 Optimistische
+Analysen der Marktentwicklung prognostizierten ein durchschnittliches Jahreswachstum von
+33
+
+Vgl. Nicolai/Petersmann (2001), S. 17
+
+34
+
+Vgl. Simonovich/Malinkovich (2003)
+
+35
+
+Vgl. Buse (2002)
+
+36
+
+Vgl. Rötzer (1999)
+
+37
+
+Vgl. International Telecommunication Union (ITU, 2003)
+
+38
+
+Nach Zuwachsraten von jährlich über 30% in den 90ern sank das jährliche Wachstum auf derzeit 17% (ITU)
+
+39
+
+Vgl. Buse (2002), S. 97
+
+3 Mobile Business im Rahmen multimedialer Konvergenz
+
+12
+
+100 bis über 200% mit einem erwarteten Gesamtvolumen des europäischen Umsatzes allein
+im Mobile Commerce von über 23 Mrd. EUR bereits für das Jahr 2003, davon 636 Mio. EUR
+in Deutschland.40 Diese Erwartungen scheinen sich bei weitem nicht zu erfüllen. Der sechste
+Faktenbericht 2003 des Bundesministeriums für Wirtschaft und Arbeit weist für Europa aktuell
+lediglich ein Umsatzvolumen von 71 Mio. US-$ aus und prognostiziert auf dieser Basis ein
+Wachstum bis 2007 auf insgesamt 119 Mio. US-$.41 Deutschland übernimmt dabei mit einem
+aktuellen Jahresumsatz von 6 Mio. EUR die Spitzenposition in Europa.
+Diese Fehleinschätzung des Erfolgs mobiler Anwendungen im Mobile Commerce hat verschiedene
+Ursachen:
+•
+
+Die geringe Bedienfreundlichkeit von WAP-basierten Anwendungen auf der Grundlage der
+Mobilfunknetze der zweiten Generation.
+
+•
+
+Eine Fehleinschätzung hinsichtlich der Kaufkraft der primären Zielgruppe unterhaltungsorientierter junger Freizeitnutzer42
+
+•
+
+Uneinheitliche, z.T. unausgereifte Endkundenanwendungen43
+
+Neuere Szenarioanalysen rücken vor dem Hintergrund der ernüchternden Marktrealität von der reinen
+Kombinatorik möglicher Anwendungen ab und fokussieren tatsächliche Nutzerbedürfnisse in Bezug
+auf mobile Anwendungen. Ziel dieser Analysen ist die Identifikation von Anwendungsfeldern, durch die
+ein erlöswirksam abschöpfbarer Kundennutzen generiert wird. Trotz der derzeitigen Zunahme empirischer Untersuchungen von Kundenbedürfnissen im Rahmen mobiler Anwendungen ist die analytische
+Erklärungsfähigkeit derzeit noch bruchstückhaft. Es lassen sich jedoch einige gemeinsame Tendenzen erkennen.
+Eine Untersuchung der grundsätzlichen Vorstellbarkeit mobiler Anwendungen durch Analysten der
+Unternehmen TIMElabs und Diebold aus dem Jahr 2000 liefert in Bezug auf inhaltsorientierte Dienste
+ein dreigeteiltes Bild (Vgl. Abbildung 8):44 Die höchste Relevanz wurden Nachrichtenmeldungen beschieden, mit einigem Abstand gefolgt von Musik, lokalen und Zeitungsangeboten. Mit geringer Relevanz hingegen wurde freizeit- und unterhaltungsorientierte Angebote bewertet.
+
+40
+
+Vgl. Müller-Verse (1999)
+
+41
+
+Vgl. Graumann/Köhne (2003), S. 331 f.
+
+42
+
+Vgl. Lehmann/Lehner (2003)
+
+43
+
+Vgl. Deitel/Deitel/Nieto/Steinbuhler (2002), S. 357 f.: Das Wireless Application Protocol (WAP) wurde 1997
+unter der Führung von Nokia, Ericsson und Motorola als standardisiertes Kommunikationsinstrument zwischen
+verschiedenen Formen mobiler Endgeräte und dem Internet. Als wesentliche Kritikpunkte WAP-basierter Anwendungen gelten Sicherheitsmängel, die Beschränkung der Übertragungsbandbreiten derzeitiger Infrastrukturtechnologien sowie die Unzuverlässigkeit der Dienste.
+44
+
+Vgl. Diederich/Lerner/Lindemann/Vehlen (2001), S. 39
+
+13
+
+3 Mobile Business im Rahmen multimedialer Konvergenz
+
+90%
+80%
+70%
+60%
+50%
+40%
+30%
+20%
+10%
+0%
+Ne
+
+w
+
+s
+
+ck
+Ti
+
+S
+et
+
+er
+
+c
+vi
+
+es
+v
+Na
+
+a
+ig
+
+ti o
+
+n
+
+Üb
+
+t
+se
+er
+
+n
+zu
+
+g
+Ba
+
+nk
+
+in
+
+g
+M
+Lo
+
+us
+k
+
+ik
+
+e
+al
+
+g
+An
+
+eb
+
+ot
+
+e
+i
+Ze
+
+n
+tu
+
+ge
+
+n
+
+nk
+Ei
+
+au
+
+f
+Sp
+
+ie
+
+le
+
+Ch
+
+at
+d
+Vi
+
+eo
+
+te
+
+n
+fo
+le
+
+Inhaltsorientiere Angebote
+Sonstige Angebote (Kommunikation, Transaktion, Telematik)
+
+Abbildung 8: Relevanz mobiler Anwendungen
+Vor dem Hintergrund u.a. dieser Erhebungsergebnisse differenziert Zobel zwischen den Muss-Kriterien und Soll-Kriterien im Rahmen der Kundenanforderungen.45 Als Muss-Kriterien bestimmt er die
+Einfachheit des Dienstes sowie die Schaffung eines für den Kunden bemerkbaren Zusatznutzens und
+zwar bereits in den ersten drei Minuten der Angebotsnutzung. Soll-Kriterien sind laut Zobel soziale
+Anerkennung, Macht, das Prinzip des einfacheren, schnelleren und besseren Dienstzugriffs bspw. zur
+Zeitersparnis, Unterhaltung und Sicherheit. In ähnlicher Weise unterscheidet Roetger-Gerigk zwischen
+Mehrwertfaktoren und Hygienefaktoren mobiler Anwendungen.46 Als Mehrwertfaktoren werden hier
+Lokalisierung und Personalisierung bezeichnet. Lediglich Hygienefaktoren bilden Bequemlichkeit,
+Verfügbarkeit, Ortsunabhängigkeit, Kostengünstigkeit und Sicherheit der Angebotsnutzung (Thema
+Killerapplikationen).
+Zusammenfassend lässt sich derzeit auch ohne exakte Ergebnisse zu den konkreten Ausprägungen
+der Kundenbedürfnisse eine gewisse Deckungsgleichheit der unterschiedlichen Aussagen über Nutzen generierende mobile Anwendungen im Bereich aktueller, einfacher, schnell und ggf. unter Berücksichtigung lokaler Kontexte abrufbarer Dienste feststellen.
+
+3.2
+
+Wertschöpfungsbereiche im Mobile Business
+
+Eine der zentralen Probleme in der Literatur zum Mobile Business liegt in der Fragestellung, ob die
+Handlungsfelder mobiler Anwendungen lediglich einen zusätzlichen Absatzkanal für Produkte und
+Dienstleistungen im Electronic Business mit ggf. spezifischen Vorteilen im Rahmen der Kundenbedürfnisbefriedigung, oder ob die Technologien des Mobile Business eine solche Neuartigkeit im Rahmen von Leistungserstellung und -distribution mit sich bringen, dass die bestehenden Regeln ganzer
+Industrien gebrochen und, ähnlich vielleicht wie im Internet, ein vollkommen neuer Wirtschaftszweig
+entsteht.47 Um einen Anhaltspunkt zur Bestimmung des Veränderungspotenzials neuer Technologien
+auf die Wertschöpfung in betroffenen Branchen zu schaffen, entstand in der Internetökonomie die
+45
+
+Vgl. Zobel (2001), S. 117 f.
+
+46
+
+Vgl. Röttger-Gerigk (2002), S. 22
+
+47
+
+Vgl. Zobel (2001), S. 32 f.
+
+14
+
+3 Mobile Business im Rahmen multimedialer Konvergenz
+
+Hypothese der "digitalen Wertschöpfungskonvergenz". Diese beschreibt einen "Prozess der Interaktion zwischen der Unternehmensumwelt bzw. der Wettbewerbsstruktur und der Unternehmensstrategie, der zur strukturellen Verbindung bislang getrennter Märkte führt". Im Mittelpunkt der
+Konvergenztheorie steht die Annahme, dass Unternehmen aus den Branchen Telekommunikation,
+Informationsverarbeitungstechnik und Medien bei der Erschließung neuer Geschäftsbereiche, resultierend aus neuen Marktmöglichkeiten durch die Verschmelzung von Netz-, Informations- und Datenträgertechnik, zunächst ihre traditionellen Stärken und Ressourcen in das neue Geschäftsfeld einbringen
+und diese mit den branchentypischen Stärken anderer Unternehmen kombinieren. Aus diesen branchenspezifischen Geschäftsfelderweiterungen entstehen dadurch neue Wertschöpfungsformen, die
+formals getrennten Brachen "konvergieren" also in Richtung einer neuen Wertschöpfungskette.
+Mobile
+Business
+Medien
+• Beschaffung
+• Kreatives
+Personal
+• Rechte
+• Ideenentw.
+
+Netzbetrieb
+Inhalte /
+Programmproduktion
+
+• Konfektionierung
+• Packaging
+
+Distribution
+
+IT- oder
+UEEndgeräte
+
+Netzzugang
+Navigation/
+Aggregation
+
+Telekommunikation
+NetzBereitstellung
+
+Übertragungsdienstleistungen
+
+BasisDienste
+(netzabhängig)
+
+MehrwertDienste
+(netzunAbhängig)
+
+Vertrieb
+SMS
+Inkasso
+
+Zusatzleistungen
+
+Herstellung
+Produkte
+Hardware
+
+BetriebsAnwenSystem
+(Plattform) dungs
+software
+Peripherie-Geräte +
+
+Inhalte
+
+Mehrwertdienste
+
+Informationstechnologie
+Beschaffung
+Bauelemente
+SWElemente
+
+Konvergenz
+
+Vertrieb
+Bundling
+
+Service
+
+Endgeräte
+
+Software
+
+Abbildung 9: Konvergenz und Wertschöpfung im Mobile Business48
+Abbildung 9 gibt ein denkbares Konvergenzergebnis für das Mobile Business wieder. Durch ihre in der
+Regel mittelfristig strategisch geschützten Ressourcenvorteile - bspw. die bestehende Kundenbeziehungen, die Kenntnisse und der Besitz von Netzwerk- und Endgerätetechnologie oder eine renommierte Inhaltsmarke - besetzen absehbar Unternehmen aus Medien-, Telekommunikationsbranche
+und Informationstechnologie die strategischen Eckpunkte im Mobile Business als Anbieter von Netzbetrieb, mobilitätsgerechten Inhalten und Endgeräten. Deutlich unschärfer sind demgegenüber die
+denkbaren Rollen zwischen diesen Positionen, bspw. von Anbietern von Netzzugangskontingenten,
+Navigations-, Aggregations- oder Mehrwertdiensten, für die sich bislang kein eindeutiges strategisches Rollenverständnis durchsetzen konnte. Eine Verfeinerung erfährt die Konvergenzthese in diesem Bereich, zieht man zusätzlich aktuelle Marktdeterminanten mit in das Kalkül. Dabei sind vier
+Aspekte von Relevanz:
+•
+
+die sich derzeit abzeichnende Überschuldung von Telekommunikationsanbietern aufgrund einer Wettbewerbsintensivierung nach dem Abbau nationalstaatlicher Wettbewerbsschranken
+und aufgrund der Belastung durch die Lizenzkosten im Rahmen der UMTS Netzlizenzen;49
+
+48
+
+In Anlehnung an Zerdick et al. (2001), S. 144
+
+49
+
+Vgl. bspw. Neudorfer/Simonitsch (2003), S. 64; Müller/Preissner/Schwarzer (2002), S. 170
+
+4 Inhaltsorientierte Geschäftsmodelle im Mobile Business
+
+•
+
+15
+
+die Notwendigkeit zur Schaffung differenzierungsrelevanter Dienstmerkmale von MobilfunkNetzbetreibern bspw. durch das Angebot inhaltsorientierter Datendienste;50
+
+•
+
+die strategische Diversifikationsnotwendigkeit von Medienunternehmen zur Reduzierung der
+Erlösabhängigkeiten von den stagnierenden, traditionellen Mediensegmenten wie Print oder
+Rundfunk;51
+
+•
+
+die allgemeine Risikoaversion gegenüber großvolumigen Investitionsvorhaben aufgrund der
+fortbestehenden Unsicherheit bzgl. Technologiestandardisierung und Nachfrageentwicklung.52
+
+Derzeit lässt sich aus diesen Gründen eine Outsourcingtendenz etablierter Unternehmen in den drei
+genannten Branchen in Form einer Entwicklung in Richtung von gemeinsamen Kooperationen oder
+gemeinsamen Firmenausgründung in Form so genannter Wireless Application Service Provider
+(WASP) erkennen.53 WASP erweitern einerseits die Funktionalitäten von sowohl informations-, transaktions- oder kommunikationsorientierten Anwendungen mittels Mobilfunknetzen auf mobilen Endgeräten. Sie bilden andererseits eine Pufferzone zwischen mobilen Endkunden und allen Unternehmen,
+die entweder nicht in der Lage sind mobile Anwendungen zu entwickeln oder nicht bereit sind das
+finanzielle Risiko der Entwicklung zu tragen.
+Wie allerdings Hamel anmerkt, erlaubt die Konvergenzthematik nicht automatisch die Identifikation
+neuer und erfolgreicher Geschäftsmodelle.54 Tatsächlich, so stellte eine Erhebung unter Geschäftsmodellen im Mobile Business der Uni Regensburg fest, konnten 66 der insgesamt 98 untersuchten Geschäftsmodelle nicht oder nur unter Zuhilfenahme weiterer Betrachtungskriterien in die bekannten
+Schemata der o.g. Szenarioanalysen eingeordnet werden.55 Grund dafür ist laut Hamel, dass Konvergenz lediglich Ausdruck von Marktimitationen bereits existierender Erfolgsmodelle darstellt und dieser
+Imitationsdruck ein wettbewerbsreduzierendes "Vorauseilen" innovativer Geschäftskonzepte vor ihrer
+analytischen Bewertbarkeit bedeutet. Im Folgenden soll nun versucht werden, innerhalb dieser
+zwangsläufigen Vielfalt an Geschäftsansätzen einen strukturierten Identifikationsrahmen für einen
+weiteren Innovationsbedarf im Rahmen speziell inhaltorientierter Geschäftsmodelle im Mobile Business zu entwickeln.
+
+4
+
+Inhaltsorientierte Geschäftsmodelle im Mobile Business
+
+Das Konzept des Geschäftsmodells ist weder ein fachlich fundiertes Analyseinstrument, noch ist es
+begrifflich klar abgegrenzt. Dennoch hat es sich in der Praxis bewährt, insbesondere in technologieaffinen innovativen Marktbereichen der Internetökonomie, die betriebswirtschaftlichen Ziele eines Ge-
+
+50
+
+Vgl. Feldmann (2002), S. 353
+
+51
+
+Vgl. Sjurts (2002), S. 3
+
+52
+
+Vgl. Feldmann (2002), S. 356;
+
+53
+
+Vgl. Neudorfer/Simonitsch (2003), S. 64
+
+54
+
+Vgl. Hamel (2000), S. 48
+
+55
+
+Vgl. Lehmann/Lehner (2003), S. 6
+
+4 Inhaltsorientierte Geschäftsmodelle im Mobile Business
+
+16
+
+schäftsvorhabens aus mehr als nur einer einzigen bspw. finanziellen Perspektive zu charakterisieren.
+Knyphausen definiert ein Geschäftsmodell allgemein als "eine Beschreibung der Strategie eines Unternehmens, um potenziellen Investoren die Sinnhaftigkeit ihres Engagements zu verdeutlichen".56 Es
+existiert derzeit in der betriebswirtschaftlichen Literatur eine gewisse Vielfalt an Vorschlägen für sinnvolle Beschreibungsaspekte eines Geschäftsmodells.57 Als kleinste gemeinsame Schnittmenge lassen
+sich aus dieser Vielfalt in Anlehnung an Stähler und Hamel drei zentrale Aspekte hervorheben, auf die
+im Weiteren vertiefend eingegangen wird:58
+1. der allgemeine Geschäftszweck mit dem zu generierenden Kundennutzen
+2. die betriebliche Erlösmechanik
+3. die Architektur zur Leistungserstellung notwendiger Prozesse unter Berücksichtigung etwaiger
+unternehmensexterner Kooperationsbeziehungen und Leistungsabhängigkeiten.
+
+4.1
+
+Unternehmenszweck und Kundennutzen im Mobile Business
+
+Im dritten Abschnitt wurde bereits eine Tendenz hinsichtlich der Merkmale sinnvoller mobiler Anwendungen in Form von aktuellen, bequem bedienbaren und ortsabhängigen Dienstformen identifiziert.
+Neuere Untersuchungen zum Mediennutzungsverhalten bestätigen die Tendenz, dass mobile Nutzer
+genau solche Dienste verwenden, die für sie hinsichtlich ihres Informationsstands bzw. der Bequemlichkeit der Informationsselektion und -rezeption gegenüber alternativen Informations- und Kommunikationskanälen ein Zusatznutzen verbunden ist.59 Der Erfolg einer erlöswirksamen Inhaltsvermarktung
+speziell unter dem Aspekt der Bedienfreundlichkeit ist aus Sicht von Medienunternehmen demnach
+ein Problem der nutzerindividuellen Differenzierung ihres Dienstangebots. In diesem Zusammenhang
+beschreiben Amberg/Wehrmann als Erfolgsbereich für mobile Anwendungen die neue Kategorie "situationsabhängiger" Dienste, die die wesentlichen Erfolgsfaktoren für mobile Anwendungen kombiniert. Die Situation, bestimmt durch die Zeit, den Ort, die Person und das vorangegangene Verhalten
+eines Nutzers im Rahmen einer Dienstverwendung bildet dabei die Grundlage zur Anpassung von
+mobilen Anwendungen.
+Noch vor zwei Jahren beschieden Zerdick et al. den Möglichkeiten der Personalisierung mehr Versprechen denn Realität der Internetökonomie zu sein.60 Diese Einschätzung trifft in dieser Form heute
+nicht mehr zu. Zwar steht die Umsetzung solcher Art personalisierter und situationsabhängiger Dienste zum gegenwärtigen Zeitpunkt noch in der Anfangsphase. Dennoch lassen sich derzeit speziell in
+den Kategorien informations-, und applikationsorientierter Dienste Personalisierungsvarianten beobachten. Dies sei anhand zweier Beispiele kurz erläutert:
+56
+
+Vgl. Knyphausen (2002)
+
+57
+
+Eine ausführliche Übersicht über verschiedene Konzepte zum Thema Geschäftsmodelle finden sich bei Bieger
+et al. (2002) und Stähler (2001)
+
+58
+
+Vgl. Stähler (2002), S. 41 f. und Hamel (2000), S. 70 ff.
+
+59
+
+Vgl. u.a. Hass (2002), S. 137, ECIN (2002) und ECIN (2003)
+
+60
+
+Vgl. Zerdick et al. (2001), S. 113
+
+4 Inhaltsorientierte Geschäftsmodelle im Mobile Business
+
+17
+
+1. der Channel-Konfigurator bei i-mode von e-plus;61 i-mode ist eine Plattform für mobile Datendienste, die permanent mit dem Internet verbunden ist. Entwickelt und erstmals eingesetzt
+wurde sie durch das Unternehmen NTTDocomo in Japan. i-mode ist mit über 30 Mio. Nutzern
+der derzeit weltweit erfolgreichste mobile Datendienst. Seit 2001 betreibt e-plus als Lizenznehmer i-mode auch in Deutschland. Grundlage für i-mode bildet ein GRPS-fähiges GSMNetz und speziell für i-mode entwickelte Mobilfunkgeräte mit hochauflösenden Farbdisplays. Imode bietet drei Dienstvarianten: Kommunikationsdienste, Inhaltsdienste und JAVA-basierte
+Anwendungen. Im Rahmen der Inhaltsdienste bietet i-mode offizielle Webseiten, deren Inhalte
+von Kooperationspartnern bereitgestellt und auf zentralen i-mode-Servern überprüft, verwaltet
+und distribuiert werden. Die Seitenbeschreibung erfolgt durch eine kompakte HTML-Variante.
+Der Inhaltsanbieter entscheidet jeweils über Umfang und Ausmaß der Kostenpflichtigkeit seines Angebots, aus dem ein Kunde für ihn interessante Themenbereiche abonnieren und über
+einen personalisierten Menübereich verwalten kann.
+2. dynamische Routenplanung mit dem Dienst T-Mobile "NaviGate";62 Im Juli 2003 kündigte TMobile einen kombinierten Funkapplikationsdienst zur dynamischen Routenplanung an. Anders als im Rahmen der beschriebenen Teilnehmerlokalisierung beim Verbindungsaufbau in
+Mobilfunknetzen erfolgt die Lokalisierung hier durch ein separates, im Auto anzubringendes
+satellitengestütztes Positionsbestimmungsgerät (GPS). Über ein notwendigerweise sowohl
+Bluetooth- als auch JAVA-fähiges Endgerät wird ein Zielort eingegeben, die Position über
+Bluetooth-Funk vom GPS-Empfänger empfangen und an einen zentralen Telematik-Dienstserver bei T-Mobile übermittelt. Unter Berücksichtigung der aktuellen Verkehrslage, bestimmt
+durch ein über Deutschland verteiltes Sensorennetz, errechnet der Server die optimale Fahrtroute und liefert diese an das Endgerät zurück.
+Die bisher vorgestellten Konzepte und Beispiele beziehen sich primär auf Dienstangebote für kommerzielle Mobilfunknetze auf der Grundlage von GSM oder UMTS. Demgegenüber sind derzeit im
+Bereich lokaler WLAN Architekturen Netzbetreibermodelle vorherrschend. Der Dienstleister betreibt
+dabei die im Netz zentralen Zugangspunkte für eine lokale WLAN Netzinfrastruktur sowie ein Verteilungssystem als Schnittstelle zu Weitverkehrsfestnetzen. Beispiele solcher WLAN-Betreiberkonzepte
+bilden in Deutschland bilden das "e-Garten" Projekt eines Public Hot-Spots im Münchner englischen
+Garten des Vereins Förderkreis Informations- und Medien-Wirtschaft München (FIWM) oder der HotSpot "mobileLounge" in der Regensburger Altstadt.63 Die Konzepte variieren zwischen der rein technischen Bereitstellung eines mobilen Gerätezugangs zum Internet bis hin zu kombinierten Konzepten
+aus Infrastrukturzugang und inhaltlichen aggregierten Zugangsportalseiten.
+Neben den auf einen lokalen Radius beschränkten Infrastrukturkonzepten fokussieren neuere Überlegungen zur kommerziellen Verwertung der WLAN-Technik die Möglichkeiten des WLAN-Funks zum
+Aufbau dynamischer Weitverkehrs-Kommunikationsinfrastrukturen auf der Grundlage von Ad-hoc
+
+61
+
+Vgl. eplus (2003); Vielgut/Dietmar (2002)
+
+62
+
+Vgl. T-Mobile (2003)
+
+63
+
+Vgl. mobilelounge (2003) und eGarten (2003)
+
+18
+
+4 Inhaltsorientierte Geschäftsmodelle im Mobile Business
+
+Netzen. Eine beispielhafte Kommunikationsstruktur ist dargestellt in Abbildung 10.64 Darin wird eine
+zweistufige verteilte Netzarchitektur vorgeschlagen: Innerhalb der erreichbaren Sendezone (R) eines
+Endgeräts (C) - das hier gleichermaßen als Sende wie auch als Empfangsgerät fungiert - erfolgt die
+Signalübermittlung in bekannter Weise zonenbasiert. Außerhalb seines Sendeempfangsbereichs wird
+das Signal über Endgeräte am Sendebereichsrand (2, 4, 7) empfangen und innerhalb ihres Sendebereichs weitergeleitet, das sog. "Routing". Solche Randbereichsgeräte fungieren dabei als Koordinationsknoten, die im Routingprozess dynamisch neue Übertragungsknoten identifizieren und das Signal
+bis zum Empfänger (1, 3 oder 6) bzw. zum nächsten Koordinationsknoten weiterleiten.
+
+1
+
+2
+
+3
+4
+
+7
+
+C
+R
+6
+
+5
+
+Abbildung 10: Weitverkehrskommunikation auf der Grundlage von Ad-hoc Netzen
+Netzstrukturen dieser Art, einsetzbar sowohl für Daten- als auch Kommunikationssignale, verlangen
+einerseits neuartige Endgeräte, bieten jedoch auch neue Möglichkeiten für Dienst- und Rollenkonzepte innerhalb des Netzes - bspw. Peer-to-Peer Anwendungen für gegenseitigen Dokumenten- und
+Datenaustausch oder stabile Verteilungsknoten zur Gewährleistung von lokal begrenzten Qualitätsstandards im Routingprozess. Konzepte dieser Art stehen allerdings noch im frühen Entwicklungsstadium und besitzen derzeit keine praktische Anwendung.
+
+4.2
+
+Erlösmechanik
+
+Medienprodukte aller Art stellen in der Regel Verbundprodukte aus einem Informationsgut und zusätzlichem Werberaum, durch die Vermittlung von Kundenkontakten an die Adresse von Werbetreibenden
+auf der Basis der inhaltlichen Attraktivität des Informationsguts, dar.65 Bekannte Beispiele bilden der
+privatrechtliche Rundfunk oder Publikumszeitschriften. Neben diesen traditionellen Erlösquellen hat
+sich in digitalen Vertriebsmedien, aufgrund ihrer höheren Interaktivität und dadurch ihre in der Regel
+besseren Dokumentierbarkeit und Identifizierbarkeit von Kunden, eine dritte Erlösquelle in Form von
+Kundeninformationen etabliert. Dabei bieten kommerzielle Mobilfunknetze wie bereits angesprochen
+gegenüber anderen digitalen Vertriebsmedien wie dem Internet weitere Identifizierungsvorteile, einerseits durch die Lokalisierungsmöglichkeit des Endgeräts eines Kunden im Netz, andererseits durch
+die immer gewährleistete eindeutige Personenidentifikation auf der Grundlage der SIM-Karte. Eine
+
+64
+
+Vgl. Helmy (2002)
+
+65
+
+Vgl. Heinrich (1999), S. 236 ff.
+
+19
+
+4 Inhaltsorientierte Geschäftsmodelle im Mobile Business
+
+Synopsis aus den verschiedenen möglichen Erlösquellen und -formen ist dargestellt in Abbildung
+11.66
+Erlösquelle
+Informationsprodukte
+
+Pay-per-Use
+
+Abonnement
+
+GEMA
+Applikationslizenz
+
+Kundenkontakte
+
+Kommission
+
+Werbebanner
+
+(Tausch)
+
+Nutzerprofil
+(+ Ort, Verhalten)
+
+Kundeninformationen
+direkt,
+variabel
+
+direkt,
+fix
+
+indirekt
+
+Erlösform
+
+Abbildung 11: Erlösformen für Medienprodukte im Mobile Business
+Gegenüber Vertriebsformen von Medienprodukten im Internet sind Mobilfunknutzer daran gewöhnt,
+für in Anspruch genommene Dienste zu bezahlen. Eine gewachsene Gratismentalität, wie häufig im
+Rahmen der Erlösmöglichkeiten im Internet problematisiert, stellt also keine Vertriebsbarriere für Bezahlinhalte und -dienste im Mobile Business dar.67 Ein wesentliches Problem solcher Erlösformen
+liegt allerdings in der Preisbemessung für mobile Dienste:
+Medienprodukte werden häufig als so genannte Güterbündel angeboten, bspw. eine Zeitung als ein
+Bündel von Sparten und Artikeln, ein Artikel wiederum als Bündel von Texten, Bild, Überschrift usw.
+Das Angebot von Güterbündeln ist gegenüber der Einzelvermarktung seiner Komponenten immer
+dann sinnvoll, wenn durch eine Vermarktung in gebündelter Form eine Einsparung von ProduktionsTransaktions- und Informationskosten, die Förderung von Güterkomplementaritäten sowie eine Segmentierung der Nachfrage ermöglicht wird.68 Das Problem der Preisbemessung entsteht dann, wenn
+vor dem Hintergrund der eingangs genannten Erfolgsfaktoren wie Personalisierung und individuelle
+Aggregation von Angeboten in mobilen Vertriebskanälen eine Entbündelung der Güterkomponenten
+vorgenommen wird und dadurch erlöswirksame Effekte der Bündelung zerstört werden. Ein aktuelles
+Beispiel findet sich im digitalen Musikvertrieb: Im April 2003 startete Apple den iTunes Music Store,
+einen Online Musikdienst, in dem auf der Basis von Einzelabrechnungen Musiktitel aus einem Startsortiment von über 200.000 Titeln verschiedener Musikunternehmen herunter geladen werden können.69 Als Preis pro Titel wurden 99 US-Cent veranschlagt. Eine aktuelle repräsentative Marktstudie
+zur Zahlungsbereitschaft von Onlinenutzern für einzelne Musiktitel der Universität Göttingen zeigt jedoch, dass der maximal zu zahlende Preis für einen einzelnen Musiktitel weit unter einem Euro angesiedelt ist und damit auch deutlich unter dem Anteilspreis eins Musiktitels am Gesamtpreis einer Musik
+CD.70
+In der Praxis wird aufgrund der Ungewissheit des Erfolgs der verschiedenen Preisstrategien ein PreisMix verfolgt. Abbildung 12 zeigt das Beispiel der Preisstrategie bei i-mode.71
+66
+
+Vgl. Hass (2002), S. 111
+
+67
+
+Vgl. Mings/White (2000), S.64 f.
+
+68
+
+Vgl. Adams/Yellen (1976), Schmalensee (1984) und Olderog/Skiera (1998)
+
+69
+
+Vgl. Apple (2003)
+
+70
+
+Vgl. Gehrke (2003)
+
+71
+
+Vgl. E-Plus (2003), S. 22
+
+20
+
+4 Inhaltsorientierte Geschäftsmodelle im Mobile Business
+
+Point of Sales
+
+Welcome Promotion
+
+freie i-mode
+Nutzung
+
+Try-Mode
+• keine monatliche
+Gebühr
+• kein i-mode Vertrag
+
+Datenpaket M
+mit monatl. Gebühr
+Datenpaket L
+mit monatl. Gebühr
+Datenpaket XL
+mit monatl. Gebühr
+
+Try-Mode
+
+keine
+monatliche
+Gebühr und
+GPRS-Verbindungskosten gratis
+bis 5 MB
+
+Datenpaket S
+mit monatl. Gebühr
+Buy-Mode
+
+Buy-Mode
+• i-mode Vertrag von 24
+Monaten
+• Monatliche Gebühr für
+Datenpakete
+
+Preismodell nach den
+ersten 2-3 Monaten
+
+Datenpaket by Call
+mit monatl. Gebühr
+
+Abbildung 12: Preis-Mix bei i-mode
+
+4.3
+
+Architektur der Leistungserstellung
+
+Grundsätzlich können Mobilfunknetze als mobile Zugangstechnologien für sämtliche, im Internet angebotenen Inhalte interpretiert werden. In diesem Abschnitt sollen lediglich solche Dienste betrachtet
+werden, die auf der Grundlage der speziellen Eigenschaften mobiler Technologien wie Identifizierbarkeit und Lokalisierbarkeit einen zusätzlichen Nutzen für Endkunden gegenüber etablierten inhaltsorientierten Diensten im bereitstellen.
+Ortsabhängige ebenso wie personalisierte inhaltsorientierte Dienste basieren auf Filtermechanismen,
+die die Darstellung der Inhalte des Dienstes auf solche reduzieren, die mit dem aktuellen Aufenthaltsort bzw. den individuellen Präferenzen eines Nutzers übereinstimmen. Wie dargestellt in Abbildung 13
+bestehen solche allgemein als Individualisierung-Regel-Systeme bezeichneten Filtermechanismen im
+Allgemeinen aus drei Bestandteilen: einem Nutzermodell ( ), einem Ressourcenmodell ( ) und einem Filteralgorithmus ( ).72
+Ressourcenmodell
+
+Nutzermodell
+Anwenderinformationen
+• Personalangaben
+(Name; Alter;
+Adresse;
+Berufsstand)
+
+Abgeleitetes
+Anwenderwissen
+• Einstellung
+
+Metainformationen
+über die
+Ressource
+
+Ressourceneigenschaften
+
+• Interessen
+
+• Thematik
+
+• Autor
+
+• Vorlieben
+
+• Themenrelevanz
+
+• Erstellung
+
+• Etc.
+
+• Verhalten
+• Produktbewertungen
+
+• Innovationsgrad
+Inferenz
+
+• Größe
+• Titel
+
+• Etc.
+
+• Geografische
+Aufenthaltskoordinaten
+
+Individualisierung
+
+Abbildung 13: Aufbau eines Individualisierungs-Regel-Systems73
+1. Im Rahmen der Nutzermodellierung müssen für personalisierte Dienste bspw. aus den demographischen Angaben des Nutzers, seinem Verhalten und ggf. individuellen Produktbewertungen Rückschlüsse auf seine allgemeinen Präferenzen gezogen werden. Im Falle
+72
+
+Vgl. Grimm/Jüstel/Klotz (2002), S. 181
+
+73
+
+In Anlehnung an Schackmann/Link (2001)
+
+21
+
+4 Inhaltsorientierte Geschäftsmodelle im Mobile Business
+
+ortsabhängiger Dienste müssen aus der grundsätzlich unendlichen Vielfalt möglicher geografischer Koordinatenbestimmungen relevante Aufenthaltsmerkmale eines Nutzers abgeleitet
+werden, wie bspw. "zuhause", "im Büro", "auf Geschäftsreise", "in bestimmten Ballungszentren" oder "im Museum". Dabei besteht die Frage, auf welche Weise die Aufenthaltsinformationen über den Kunden ermittelt werden. Die Weitergabe von Zellnetzinformationen durch den
+Netzbetreiber an Drittdienstanbieter erscheint aus Gründen des Datenschutzes derzeit rechtlich problematisch. Alternativ schlagen Diekmann/Gehrke ein Dienstkonzept vor, in dem ortsbezogene Aufenthaltsinformationen über ein GPS-Modul im Endgerät des Nutzers bezogen
+werden.74 Dabei entscheidet der Nutzer für jeden Dienst über die Preisgabe seines
+Aufenthaltsorts.
+2. Im Rahmen der Dienstmodellierung müssen Ressourcen in Bezug auf die vorgesehene Skalierung der Nutzerpräferenzen bzw. in Abhängigkeit verschiedener Aufenthaltsorte modelliert
+werden, damit eine individuell gefilterte Auswahl an Informationen angeboten werden kann.
+Müller/Ashmoneit (2003) geben ein Beispiel für ein modulares Dienstangebot für ortsbezogenes Dienstleistungen rund um die Auswahl eines Restaurants zur Mittagszeit in N.Y.C.
+(siehe Abbildung 14). Um beispielsweise die Auswahlentscheidung zwischen Restaurants
+nach Kriterien wie Nähe, Kundenbewertungen oder Küche zu unterstützen, müssen Ressourcen eines Stadtplandienstes (1), eines Branchenkatalogs (2) sowie eines Restaurantführers
+(3) zu einem individuell konfigurierten Angebot kombiniert werden. Zusätzlich können alternative Erholungsangebote für die Mittagspause in der unmittelbaren Nähe des Aufenthaltsortes
+(4) angeboten werden.
+Kundenprozess: Mittagessen in N.Y.C.
+
+Restaurant
+Führer
+
+n
+io
+at
+n
+uk
+
+t io
+
+Dienstbewertung
+
+M
+
+as
+
+3
+Profil
+Dienst
+
+ur
+nf
+Ko
+le
+el
+du
+vi
+di
+
+Abrechnungsdienst
+
+od
+
+2
+
+Transportdienst
+
+ro
+
+Branchen
+Dienst
+
+geograph.
+Dienst
+1
+
+DienstBuchung
+
+np
+
+Orts4 angebot
+
+Auswahl d.
+Restaurants
+
+Dienstauswahl
+
+se
+
+Dienstleistungen
+(Essen, Transport, etc.).
+
+Taxi nehmen
+& Essen gehen
+
+In
+
+Dienstauswahl
+
+Dienstauswahl
+
+ig
+
+Stadtkarte
+
+Mittagszeit
+in N.Y.C.
+
+Reservierungsdienst
+
+Abbildung 14: Ressourcenmodellierung75
+3. Der Algorithmus im Mittelpunkt des Filtersystems muss anhand der modellierten Nutzermerkmale eine Empfehlung hinsichtlich des Ressourcenangebots ableiten. Derzeit werden in die-
+
+74
+
+Diekmann/Gehrke (2003)
+
+75
+
+In Anlehnung an Müller/Ashmoneit (2003), S. 7
+
+4 Inhaltsorientierte Geschäftsmodelle im Mobile Business
+
+22
+
+sem Zusammenhang zwei Gruppen von Filteralgorithmen diskutiert: eigenschaftsbasierte Filterverfahren ("feature-" oder "content-based filtering") und kollaborative Filterverfahren ("collaborative filtering").76 Grundlage solcher Filterverfahren bilden entweder über explizite Angaben des Nutzers angelegte Profile, bspw. auf der Basis von Präferenzbewertungen bereits
+gekaufter bzw. beurteilter Produkte, oder implizite Profile auf der Basis systematischer Beobachtungen der Nutzeraktivitäten auf einem Webserver. Ziel des eigenschaftsbasierten Filterns bildet die Ableitung einer Klassifikationsregel für vom Nutzer ungesehene Objekte
+hinsichtlich ihrer Passgenauigkeit zu seinen Präferenzen anhand von signifikanten Korrelationen zwischen Produktinhalt und Präferenzprofil. Ein Beispiel für eine Empfehlungsmetrik für
+Empfehlungen von Produkten gegenüber Präferenzen mit symmetrischen Merkmalsdimensionen bildet das sog. Cosinus-Maß, das die Passgenauigkeit eines Produkts für das Profil eines Nutzers anhand der Ähnlichkeit ihrer Merkmalsvektoren abbildet.77 Demgegenüber
+werden beim collaborative filtering strukturelle Ähnlichkeiten zwischen den Präferenzprofilen
+verschiedener Nutzer als indirekte Grundlage einer individuellen Produktempfehlung verwendet. Eine der gebräuchlichsten Maßzahlen, um für - wie in diesem Fall - metrische Daten die
+Stärke des Zusammenhanges zu ermitteln ist der Korrelationskoeffizient nach Bravais-Pearson.78
+Wie bereits in Kapitel 3 angesprochen, bilden Bequemlichkeit und Schnelligkeit der Dienstnutzung für
+den Kunden wesentliche Erfolgsfaktoren im Mobile Business. Insofern liegt die Herausforderung für
+die Erstellung personalisierter bzw. ortsbezogener Dienste darin, die individuelle Filterung des Informationsangebots automatisch und möglichst ohne umfangreichen Selektionsaufwand des Nutzers
+bereitzustellen. Neben der Frage der datentechnischen Integration von individuellen Profilmerkmalen
+oder Lokalisierungsdaten, bspw. aus einem technischen Ortungsgerät bzw. der SIM-Karte des
+Netzwerkzugangsdienstleisters, liegt die zentrale Herausforderung in der entsprechenden Modellierung des Ressourcenbestands für eine sinnvoll im Rahmen des Dienstes kombinierten Inhaltsfilterung.
+Betrachtet man vor diesem Hintergrund die beiden dargestellten Praxisbeispiele, die manuelle Inhaltsselektion im Falle von i-mode und der Navigationsdienst im Beispiel von T-Mobile wird deutlich, dass
+in der Praxis derzeit weder eine automatische Inhaltskonfiguration, noch eine Kombination ortsbezogener Lokalisierung mit ortsrelevanten Informationen zum Einsatz kommt.
+Zusammenfassend besteht ein Bedarf an der Entwicklung neuer Konzepte in drei Bereichen: erstens,
+eine nach Möglichkeit standardisierte Erfassung und verwertbare Modellierung von individuellen Kundenpräferenzen und Aufenthaltsorten; zweitens, eine Entwicklung sinnvoller Anwendungsszenarien
+für die Kombination verschiedener Inhaltsquellen und Ressourcenformen; drittens, die Entwicklung
+eines kombinierten Filterverfahrens für unterschiedliche Ressourcenquellen und Identifikationsdaten
+im Rahmen eines modularen Dienstkonzepts.
+
+76
+
+Vgl. Runte (2000), S. 9
+
+77
+
+Vgl. Van Meteren/Van Someren (2000)
+
+78
+
+Vgl. Melville/Mooney/Nagarajan (2001)
+
+5 Zusammenfassung und Fazit
+
+5
+
+23
+
+Zusammenfassung und Fazit
+
+Im zweiten Kapitel wurde ein Überblick über den Grundlagen der Mobiltechnologien gegeben. Im dritten Kapitel wurden die Merkmale von Mobiltechnologien vor dem Hintergrund plausibler Endkundenanwendungen diskutiert. Als wesentliche Erfolgsfaktoren wurden dabei solche Dienste identifiziert, die
+durch die Integration von Lokalisierungsinformationen oder individuellen Präferenzprofilen im Rahmen
+der Informationsnachfrage einen Zusatznutzen gegenüber anderen Medienformaten bereitstellen. Wie
+anhand der Diskussion der Konvergenzthese deutlich wurde, existieren für das Mobile Business derzeit noch keine klar umrissenen Rollenschemata für die involvierten Akteure aus Telekommunikations, Informationstechnologie- und Medienbranche. Vielmehr findet der Schwerpunkt der Innovationstätigkeit im Bereich von Kooperationen zwischen den verschiedenen Akteuren der traditionellen Branchen
+statt. Erfolgsversprechende Innovationsmöglichkeiten bestehen, wie im vierten Kapitel gezeigt, speziell im Bereich der Entwicklung automatisch hinsichtlich der individuellen und situativen Merkmale
+eines Nutzers konfigurierender Dienste. Vor dem Hintergrund des dargestellten Modellierungsaufwands eines modularen Dienstkonzepts besteht dabei insbesondere noch weiterer Klärungsbedarf
+hinsichtlich plausibler Nutzungsszenarien für solche Dienste.
+Eine häufig geäußerte These im Hinblick auf die anhaltende Unsicherheit im Bereich der technologischen Entwicklung von digitalen Netzinfrastrukturen und dadurch potenziellen Distributionskanälen für
+mediale Inhalte bildet die Forderung, dass Medienunternehmen verstärkt eine strategische Rückbesinnung auf die traditionellen Kernkompetenzen der Inhaltserzeugung und -bündelung betreiben müssen. Vor dem Hintergrund der derzeitigen Veränderungsprozesse speziell im Bereich des
+Musikmarktes, in dem die traditionellen Anbieter lange Zeit die Entwicklung neuer Medienformate und
+-distributionsformen verschlafen hatten und dadurch aktuell erhebliche Umsatzrückgänge verzeichnen
+müssen, scheint eine vollständiger Rückzug aus dem Bereich der Mediendistribution jedoch sehr riskant. Vielmehr müssen gerade in Phasen der Unsicherheit auch Medienunternehmen zukünftige Entwicklungen der Distributionstechnologien antizipieren und aktiv mitgestalten können, um nicht
+langfristig schwer wettzumachende strategische Nachteile, wie bspw. eine hohe Nachfragemacht in
+Bezug auf ihrer Inhalte gegenüber Infrastrukturbetreibern aufgrund von Distributionsabhängigkeiten
+hinnehmen zu müssen.
+
+Literaturverzeichnis
+
+24
+
+Literaturverzeichnis
+Apple (2003): Webseite des iTunes Music Store; URL: http://www.apple.com/music/store/ [2003-07-31]
+Buse, S. (2002): Der mobile Erfolg-Ergebnisse einer empirischen Untersuchung in ausgewählten Branchen. In: Keuper, Frank (2002, Hrsg.): Electronic Business und Mobile Business, 1. Aufl., Wiesbaden, S. 89-117
+Deitel, Harvey; Deitel, Paul; Nieto, Tem; Steinbuhler, Kate (2002): Wireless Internet & Mobile Business
+- How to Program; Prentice Hall; New Jersey 2002
+Diekmann, Thomas, Gehrke, Nick (2003): Ein Framework zur Nutzung situationsabhängiger Dienste;
+In: Gesellschaft für Informatik (Hrsg.): Lecture Notes in Informatics, Bonn, 2003.
+Diederich, Bern; Lerner, Thomas; Lindemann, Roland D.; Vehlen, Ralf (2001): Mobile Business. Märkte,
+Techniken, Geschäftsmodelle; Gabler, Wiesbaden 2001
+Ecin
+
+(2002):
+
+Gute
+
+Perspektive
+
+für
+
+Paid
+
+Content;
+
+elektronisch
+
+veröffentlicht:
+
+http://www.ecin.de/news/2002/12/16/05190/ [2003-03-31]
+Ecin
+
+(2003):
+
+Steigende
+
+Akzeptanz
+
+für
+
+kostenpflichtige
+
+Inhalte;
+
+elektronisch
+
+veröffentlicht:
+
+http://www.ecin.de/news/2003/02/04/05336/ [2003-03-31]
+eGarten (2003): Webseite des Projekts eGarten.Net; URL: http://www.e-garten.net/ [2003-07-31]
+E-Plus (2003): Mobiles Multimedia mit i-mode: Ein Rück- und Ausblick; elektronisch veröffentlicht:
+http://www.ifkom.de/download/cebit_2003/EPlus-Biala.pdf
+Feldmann, Valerie (2002): Competitive strategy for media companies in the mobile internet; In:
+Schmalenbach Business Review, Vol. 54, October 2002; S. 351-371
+Gehrke, Nick (2003): Empirisches Preismodell für den Onlinkauf von Musiktiteln; Arbeitspapiere der
+Abt. Wirtschaftsinformatik II, Universität Göttingen, Nr. 21, Göttingen, 2003
+Graumann, Sabine; Köhne, Bärbel (2003): Monitoring Informationswirtschaft. 6 Faktenbericht 2003, im
+Auftrag des Bundesministeriums für Wirtschaft und Arbeit; elektronisch veröffentlicht:
+http://www.bmwi.de/Redaktion/Inhalte/Downloads/6-faktenberichtvollversion,templateId=download.pdf [2003-07-31]
+Grimm, Rudi; Jüstel, Matthias; Klotz, Michael (2002): Methoden zur Personalisierung im M-Commerce;
+In: Gora, Walter; Röttger-Gerigk, Stefanie (Hrsg.): Handbuch Mobile-Commerce; Springer, Berlin
+2002; S. 177-190
+GSM Association (2003): Membership an Market Statistics, 28th March 2003; elektronisch veröffentlicht: http://www.gsmworld.com/news/statistics/feb03_stats.pdf [2003-07-31]
+Hamel, Gary (2000): Leading the Revolution; Harvard Business School Press, Boston 2000
+Hartmann, S.; Dirksen, V. (2001): Effizienzsteigerung von unternehmensinternen Prozessen durch die
+Integration von Komponenten des M-Business. In: Information Management & Consulting, 16.Jg,
+Nr. 2, 2001, Saarbrücken, S. 16-27
+
+Literaturverzeichnis
+
+25
+
+Hass, Berthold H. (2002): Geschäftsmodelle von Medienunternehmen - Ökonomische Grundlagen und
+Veränderungen durch neue Informations- und Kommunikationstechnik; Gabler, Wiesbaden 2002
+Heinrich, Jürgen (1999): Medienökonomie - Bd.1, Mediensystem, Zeitung, Zeitschrift, Anzeigenblatt;
+Westdeutscher Verlag, Wiesbaden 1999
+Helmy, Ahmed (2002): Architectural Framework for Large-Scale Multicast in Mobile Ad Hoc Networks;
+elektronisch veröffentlicht: http://ceng.usc.edu/~helmy/mcast-ad-hoc-1.pdf
+Hess, Thomas; Rawolle, Joachim (2001): Mobile Commerce in der Medienindustrie - eine erste Bestandsaufnahme; In: Eggers, B.; Hoppen, G. (Hrsg.): Strategisches E-Commerce-Management;
+Gabler, Wiesbaden 2001, S. 643-670
+Heutmann, Thomas; Ewers, Thomas (2003): Aktuelle Aspekte der Frequenzregulierung durch die Regulierungsbehörde für Telekommunikation und Post (Reg TP); elektronisch veröffentlicht:
+http://www.et.fh-osnabrueck.de/lhf/Mobilfunktagung/Heutmann.pdf [2003-07-31]
+IEEE
+
+(2001):
+
+Functional
+
+Requirements
+
+-
+
+IEEE
+
+Project
+
+802;
+
+elektronisch
+
+veröffentlicht:
+
+http://grouper.ieee.org/groups/802/802_archive/fureq6-8.html [2003-07-31]
+International Telecommunication Union (2003): Key Global Telecom Indicators for the World Telecommunication
+
+Service
+
+Sector;
+
+elektronisch
+
+veröffentlicht:
+
+http://www.itu.int/ITU-
+
+D/ict/statistics/at_glance/KeyTelecom99.html [2003-07-31]
+Krüger, Gerhard; Reschke, Dietrich (2002): Telematik. Netze-Dienste-Protokolle; Fachbuchverlag Leipzig; München, 2002
+Lehmann, Hans; Lehner, Franz (2003): Is there a 'Killer Application' in Mobile Technology? FORWINBericht-Nr.: FWN-2003- 004; FORWIN - Bayerischer Forschungsverbund Wirtschaftsinformatik,
+Bamberg, Bayreuth, Erlangen-Nürnberg, Regensburg, Würzburg 2003
+mobilelounge
+
+(2003):
+
+Webseite
+
+des
+
+Referenzprojekts
+
+mobileRegensburg;
+
+URL:
+
+http://regensburg.mobilelounge.net [2003-07-31]
+Mueller, Christian, Aschmoneit, Peter(2001): Opportunities of Customer Relationship Management and
+Mass Customisation in the Mobile Environment, in: Proccedings of the World Congress of Mass
+Cuctomisation;
+
+Hongkong.,
+
+http://www.businessmedia.org/modules/pub/view.php/businessmedia-25, [09/23/2003]
+Müller, Günter; Eymann, Torsten; Kreutzer, Michael (2003): Telematik- und Kommunikationssysteme in
+der vernetzten Wirtschaft; Lehrbücher Wirtschaftsinformatik; Oldenbourg Verlag, München 2003
+Müller, Eva; Preissner, Anne; Schwarzer, Ursula (2002): Überleben in dünner Luft - Branchenanalyse
+Telekommunikation; In: Manager-Magazin 10/2002, S. 168-179
+Müller-Verse, Falk (1999): Mobile Commerce Report; Durlacher Research Report; elektronisch veröffentlicht: http://www.durlacher.com/downloads/mcomreport.pdf [2003-07-31]
+Neudorfer, Reinhard; Simonitsch, Karoline (2003): Erfolgskritische Faktoren für Mobilfunk-Geschäftsmodelle: Kooperationen und Vertrauen; In: IM - Fachzeitschrift für Information Management &
+Consulting; 02/2003; S. 63-68
+
+Literaturverzeichnis
+
+26
+
+Nicolai, Alexander; Petersmann, Thomas (2001): Die Möglichkeiten des Mobile Business - eine qualitative Betrachtung; In: Nicolai, A.; Petersmann, T. (Hrsg.): Strategien im M-Commerce; SchäfferPoeschel Verlag, Stuttgart 2001
+Reichwald, Ralf; Meier, R; Fremuth, Natalie (2002): Die mobile Ökonomie - Definition und Spezifika. In:
+Reichwald, R. (2002, Hrsg.): Mobile Kommunikation- Wertschöpfung, Technologien, neue Dienste, 1. Aufl., Wiesbaden S.5-13
+Röttger-Gerigk, Stefanie (2002): Mobile Dienste - Aber welche? In: Gora, Walter; Röttger-Gerigk, Stefanie (2002): Handbuch Mobie-Commerce. Technische Grundlagen, Marktchancen und Einsatzmöglichkeiten; Springer Verlag, Berlin 2002
+Rötzer,
+
+Florian
+
+(1999): Die
+
+Zukunft
+
+gehört
+
+den
+
+Mobiltelefonen;
+
+elektronisch
+
+veröffentlicht:
+
+http://www.heise.de/tp/deutsch/inhalt/te/5363/1.html [2003-07-31]
+Runte, Matthias (2000): Personalisierung im Internet - Individualisierte Angebote mit Collaborative Filtering; Deutscher Universitäts-Verlag, Wiesbaden 2000
+Schackmann, Jürgen; Link, Hubert (2001): Mass Customization of Digital Products in Electronic Commerce; Diskussionspapier WI-97; Lehrstuhl für Betriebswirtschaftslehre, Wirtschaftsinformatik &
+Financial Engineering, Universität Augsburg
+Scheer, August-Wilhelm; Feld, Thomas; Göbl, Mark; Hoffmann, Michael (2001): Das Mobile Unternehmen; In: Information Management&Consulting, 16. Jg., Nr. 2, 2001, Saarbrücken, S.7-15
+Schumann, Matthias (2002): Betriebswirtschaftliche und technische Grundlagen von E-Commerce und
+M-Commerce; In: In: Keuper, Frank (2002, Hrsg.): Electronic Business und Mobile Business, 1.
+Aufl., Wiesbaden, S. 3-26
+Sennewald, Nicola (1998): Massenmedien und Internet - Zur Marktentwicklung der Pressebranche;
+Gabler, Wiesbaden 2002
+Sikora, Axel (2001): 802.11: Standard für drahtlose Netze; tecCHANNEL; elektronisch veröffentlicht:
+http://www.tecchannel.de/hardware/680/index.html [2003-07-31]
+Sjurts, Insa (2002): Cross-Media Strategien in der deutschen Medienbranche; In: Müller-Kalthoff, Björn
+(Hrsg.): Cross-Media Management; Springer, Berlin 2002; S. 3-18
+Simonovich, Daniel; Malinkovich, Vladimir (2003): Ubiquität entlang der betrieblichen Wertschöpfungskette; In: HMD, Heft 229, Februar 2003
+Stähler, Patrick (2002): Geschäftsmodelle in der digitalen Ökonomie : Merkmale, Strategien und Auswirkungen; Lohmar [u.a.] : Eul, 2002
+Steimer, F. (2001): Mobile Business- Top oder Flop?. In: Absatzwirtschaft, 44. Jg., Nr. 5, 2001, S. 134137
+T-Mobile
+
+(2003):
+
+T-Mobile
+
+NaviGate;
+
+elektronisch
+
+veröffentlicht:
+
+http://www.t-
+
+mobile.de/navigate/1,4338,5951-_,00.html [2003-07-31]
+Vielgut,
+
+Stefan;
+
+Gräbner,
+
+Diemar
+
+(2002):
+
+I-Mode
+
+vs.
+
+WAP;
+
+elektronisch
+
+veröffentlicht:
+
+http://www.itec.uni-klu.ac.at/~hellwagn/Seminare/AngewandteInformatik/wap-vs-i-modepaper.pdf [2003-07-31]
+Wirtz, Bernd W. (2001): Electronic Business; Gabler, Wiesbaden 2001
+
+Literaturverzeichnis
+
+27
+
+Zerdick, A.; Picot, A.; Schrape, K.; Artope, A.; Goldhammer, K.; Heger, D. K.; Lange, U. T.; Vierkant, E.;
+Lopez-Escobar, E.; Silverstone, R. (2001): Die Internet-Ökonomie - Strategien für die digitale
+Wirtschaft; Springer 2001
+Zobel, J. (2001): Mobile Business und M-Commerce; Carl Hanser Verlag, München
+
