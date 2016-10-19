@@ -17,6 +17,7 @@ import eu.project.ttc.api.TermIndexIO;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.test.func.FunctionalTests;
+import eu.project.ttc.tools.TermSuiteResourceManager;
 
 public class TermSuiteEvals {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermSuiteEvals.class);
@@ -88,6 +89,7 @@ public class TermSuiteEvals {
 		Path path = getTerminologyPath(lang, corpus, config);
 		if(!path.toFile().isFile()) {
 			LOGGER.info("Terminology {} not found in cache", getTerminologyFileName(lang, corpus, config));
+			TermSuiteResourceManager.getInstance().clear();
 			TermIndex termIndex = config.toExtractor(lang, corpus).execute();
 			try(FileWriter writer = new FileWriter(path.toFile())){
 				TermIndexIO.toJson(termIndex, writer, new JsonOptions().withOccurrences(false).withContexts(true));
@@ -120,15 +122,13 @@ public class TermSuiteEvals {
 	 * 
 	 * Loads a bilingual dictionary from the directory denoted by system property {@link #PROP_DICTIONARIES}
 	 * 
-	 * @param sourceLang 
-	 * 				The source language of the dictionary
-	 * @param target
-	 * 				The target language of the dictionary
+	 * @param langPair
+	 * 				lang pair
 	 * @return
 	 * 			The path to the existing bilingual dico.
 	 */
-	public static Path getDictionaryPath(Lang sourceLang, Lang target) {
-		return getDictionariesPath().resolve(String.format("%s-%s.txt", sourceLang.getCode(), target.getCode()));
+	public static Path getDictionaryPath(LangPair langPair) {
+		return getDictionariesPath().resolve(String.format("%s-%s.txt", langPair.getSource().getCode(), langPair.getTarget().getCode()));
 	}
 
 	
@@ -141,14 +141,6 @@ public class TermSuiteEvals {
 				Integer.toString((int)config.getFrequencyTh()),
 				config.getScope()
 			);
-	}
-
-	public static boolean hasAnyRefForPair(Lang source, Lang target) {
-		for(Corpus corpus:Corpus.values())
-			for(TermList list:TermList.values())
-				if(corpus.hasRef(list, source, target))
-					return true;
-		return false;
 	}
 
 }

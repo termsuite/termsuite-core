@@ -7,7 +7,7 @@ import eu.project.ttc.engines.desc.Lang;
 
 public enum Corpus{
 	WIND_ENERGY("we","wind-energy"),
-	MOBILE_TECHNOLOGY("mobile","mobile-technilogy");
+	MOBILE_TECHNOLOGY("mb","mobile-tech");
 	
 	private String shortName;
 	private String fullName;
@@ -23,40 +23,16 @@ public enum Corpus{
 	}
 
 
-	public Path getRef(TermList termType, Lang source, Lang target) {
-		String type = termType.toString().toLowerCase();
-		return Paths.get("src", "eval", "resources", "refs", 
-				this.fullName,
-				type,
-				String.format("%s-%s-%s-%s.tsv", this.shortName, type, source.getCode(), target.getCode())
-				);
-	}
-	
-	public Path getMWTRef(Lang source, Lang target) {
-		return getRef(TermList.MWT, source, target);
-	}
-	
-	public Path getSWTRef(Lang source, Lang target) {
-		return getRef(TermList.SWT, source, target);		
-	}
-
-	public boolean hasRef(TermList termType, Lang source, Lang target) {
-		return getRef(termType, source, target).toFile().exists();
-	}
-
-	public boolean hasSWTRef(Lang source, Lang target) {
-		return hasRef(TermList.SWT, source, target);
-	}
-
-	public boolean hasMWTRef(Lang source, Lang target) {
-		return hasRef(TermList.MWT, source, target);
-	}
-	
 	public Path getRootDir() {
 		return Paths.get("src", "test","resources","eu","project","ttc","test","corpus",shortName);
 	}
 	
 	public Path getTxtDir(Lang lang) {
 		return getRootDir().resolve(lang.getName()).resolve("txt");
+	}
+	
+	@Override
+	public String toString() {
+		return shortName;
 	}
 }

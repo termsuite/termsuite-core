@@ -70,4 +70,9 @@ public class TerminoConfig {
 		
 		return extractor;
 	}
+	
+	@Override
+	public String toString() {
+		return String.format("scope%d-th%d", scope, frequencyTh);
+	}
 }

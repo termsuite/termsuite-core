@@ -5,7 +5,7 @@ import java.util.Optional;
 import eu.project.ttc.engines.BilingualAligner.AlignmentMethod;
 import eu.project.ttc.models.Term;
 
-public class AlignmentTry {
+public class AlignmentRecord {
 	
 	private boolean valid;	
 	
@@ -25,11 +25,11 @@ public class AlignmentTry {
 	private Optional<String> sourceLemma = Optional.empty();	
 	private Optional<String> targetLemma = Optional.empty();	
 
-	public AlignmentTry() {
+	public AlignmentRecord() {
 		super();
 	}
 	
-	public AlignmentTry(Term sourceTerm, Term targetTerm) {
+	public AlignmentRecord(Term sourceTerm, Term targetTerm) {
 		super();
 		
 		this.sourceTerm = Optional.of(sourceTerm);
@@ -43,12 +43,12 @@ public class AlignmentTry {
 		return valid;
 	}
 
-	public AlignmentTry setValid(boolean validTest) {
+	public AlignmentRecord setValid(boolean validTest) {
 		this.valid = validTest;
 		return this;
 	}
 
-	public AlignmentTry setMethod(AlignmentMethod method) {
+	public AlignmentRecord setMethod(AlignmentMethod method) {
 		this.method = Optional.of(method);
 		return this;
 	}
@@ -61,7 +61,7 @@ public class AlignmentTry {
 		return success.get();
 	}
 
-	public AlignmentTry setSuccess(boolean targetTermFound) {
+	public AlignmentRecord setSuccess(boolean targetTermFound) {
 		this.success = Optional.of(targetTermFound);
 		return this;
 	}
@@ -70,7 +70,7 @@ public class AlignmentTry {
 		return targetTermCandidatePosition.get();
 	}
 
-	public AlignmentTry setTargetTermCandidatePosition(int targetTermCandidatePosition) {
+	public AlignmentRecord setTargetTermCandidatePosition(int targetTermCandidatePosition) {
 		this.targetTermCandidatePosition = Optional.of(targetTermCandidatePosition);
 		return this;
 	}
@@ -79,7 +79,7 @@ public class AlignmentTry {
 		return comment.get();
 	}
 
-	public AlignmentTry setComment(String comment) {
+	public AlignmentRecord setComment(String comment) {
 		this.comment = Optional.of(comment);
 		return this;
 	}
@@ -92,6 +92,9 @@ public class AlignmentTry {
 		return TermType.ofTerm(targetTerm.get());
 	}
 
+	public static String toOneLineHeaders() {
+		return "V\tR\tSt\tTt\tM\t" + String.format("%-25s %-25s %s", "source", "target", "Comment");
+	}
 	public String toOneLineString() {
 		return String.format("%s\t%s\t%s\t%s\t%s\t%-25s %-25s %s", 
 				toString(isValid()),
@@ -135,16 +138,13 @@ public class AlignmentTry {
 			return object.toString();		
 	}
 
-	public static String toOneLineHeaders() {
-		return "V\tR\tSt\tTt\tM\tComment";
-	}
 	
-	public AlignmentTry setTargetLemma(String targetLemma) {
+	public AlignmentRecord setTargetLemma(String targetLemma) {
 		this.targetLemma = Optional.of(targetLemma);
 		return this;
 	}
 	
-	public AlignmentTry setSourceLemma(String sourceLemma) {
+	public AlignmentRecord setSourceLemma(String sourceLemma) {
 		this.sourceLemma = Optional.of(sourceLemma);
 		return this;
 	}

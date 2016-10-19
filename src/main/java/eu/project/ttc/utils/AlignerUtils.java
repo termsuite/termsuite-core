@@ -22,10 +22,17 @@
 package eu.project.ttc.utils;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Set;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
+import eu.project.ttc.engines.BilingualAligner.RequiresSize2Exception;
+import eu.project.ttc.engines.morpho.CompoundUtils;
 import eu.project.ttc.models.ContextVector;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
@@ -35,6 +42,9 @@ import eu.project.ttc.models.index.TermMeasure;
 import eu.project.ttc.resources.BilingualDictionary;
 
 public class AlignerUtils {
+	private static final Logger LOGGER = LoggerFactory.getLogger(AlignerUtils.class);
+	
+	
 	public static final int TRANSLATION_STRATEGY_PRORATA = 1;
 	public static final int TRANSLATION_STRATEGY_MOST_FREQUENT = 2;
 	public static final int TRANSLATION_STRATEGY_MOST_SPECIFIC = 3;
@@ -234,5 +244,48 @@ public class AlignerUtils {
 			translatedVector.addEntry(mostFrequent, sourceTermEntry.getNbCooccs(), sourceTermEntry.getAssocRate());
 	}
 
+
+	/**
+	 * 
+	 * Gives the list of all possible single lemma terms decompositino for a complex term.
+	 * 
+	 * 
+	 * @param termIndex
+	 * @param term
+	 * @return
+	 */
+	public static List<List<Term>> getSingleLemmaTerms(TermIndex termIndex, Term term) {
+		List<Term> swtTerms = TermUtils.getSingleWordTerms(termIndex, term);
+		List<List<Term>> lemmaSets = Lists.newArrayList();
+		if(swtTerms.size() == 1) {
+			
+			if(term.getWords().size() > 1) {
+				LOGGER.warn("Could not apply single lemma term decomposition for term {}. Expected at least two inner swt terms, but got {}", term, swtTerms);
+				return Lists.newArrayList();
+			}
+			
+			// sourceTerm is swtTerms.get(0);
+			if(term.isCompound()) {
+				lemmaSets.add(Lists.newArrayList(term));
+				for(Pair<String> pair:CompoundUtils.asLemmaPairs(term.getWords().get(0).getWord())) {
+					for(Term swt1:termIndex.getCustomIndex(TermIndexes.LEMMA_LOWER_CASE).getTerms(pair.getElement1())) {
+						for(Term swt2:termIndex.getCustomIndex(TermIndexes.LEMMA_LOWER_CASE).getTerms(pair.getElement2())) {
+							lemmaSets.add(new Pair<Term>(swt1, swt2).toList());
+							
+						}
+					}
+				}
+			} else {
+				lemmaSets.add(Lists.newArrayList(term));
+			}
+		} else {
+			if(swtTerms.size() == 2) {
+				lemmaSets.add(swtTerms);			
+			} else 
+				throw new RequiresSize2Exception(term, swtTerms);
+			
+		}
+		return lemmaSets;
+	}
 
 }
