@@ -50,7 +50,7 @@ public class TermSuiteEvals {
 	}
 
 
-	private static Object getCheckedProperty(String propertyName) {
+	public static Object getCheckedProperty(String propertyName) {
 		Object configProperty = getConfigProperty(propertyName);
 		if(configProperty == null)
 			configProperty = System.getProperty(propertyName);

@@ -1,3 +1,4 @@
 treetagger.home.path=/path/to/TreeTagger/
 eval.output=/path/to/output-dir/
 eval.dicos=/path/to/dictionaries/
+corpus.breast-cancer=/path/to/brest/cancer/corpus/

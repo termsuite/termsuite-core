@@ -53,7 +53,7 @@ public class BilingualAlignementEvalRunner {
 		service.langPairs().forEach( langPair -> {
 			for(EvaluatedMethod evaluatedMethod:EvaluatedMethod.values()) {
 				try(Writer resultWriter = service.getResultWriter(langPair, evaluatedMethod)) {
-					for(TerminoConfig config:ConfigListBuilder.start().frequencies(1,5).scopes(1,3).list()) {
+					for(TerminoConfig config:ConfigListBuilder.start().frequencies(1,5).scopes(3).list()) {
 						for(Corpus corpus:Corpus.values()) {
 							try {
 								AlignmentEvalRun run = new AlignmentEvalRun(langPair, evaluatedMethod, corpus, config);
