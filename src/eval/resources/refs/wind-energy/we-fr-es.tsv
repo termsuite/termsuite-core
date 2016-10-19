@@ -1,0 +1,114 @@
+swt	rotor	rotor
+swt	éolienne              	aeromotor
+swt	éolien	eólico
+swt	pale                  	aspa
+swt	turbine               	turbina
+swt	moyeu                 	cubo
+swt	calage                	calaje
+swt	écoulement            	flujo
+swt	générateur	generador
+swt	nacelle               	barquilla
+swt	stockage              	almacenamiento
+swt	raccordement          	empalme
+swt	hélice                	hélice
+swt	vent	viento
+swt	capteur               	sensor
+swt	mât                   	palo
+swt	pylône                	poste
+swt	implantation          	implantación
+swt	girouette	veleta
+swt	arbre	eje
+swt	portance              	soporte
+swt	transformateur        	transformador
+swt	nuisance	molestia
+swt	tourbillon 	torbellino
+swt	tour	espira
+swt	sillage 	estela
+swt	inertiel	inercial
+swt	aérodynamique	aerodinámico
+swt	mégawatt	megavatio
+swt	photovoltaïque	fotovoltáica
+swt	aérogénérateur	aerogenerador
+swt	biomasse	biomasa
+swt	kilowatt	kilovatio
+swt	biogaz	biogas
+swt	hydroélectrique	hidroeléctrico
+swt	biodiversité	biodiversidad
+swt	géothermie            	geotérmica
+swt	électromagnétique	electromagnético
+swt	électromécanique	electromecánico
+swt	hydroélectricité	hidroelectricidad
+swt	radioactif	radioactivo
+swt	anémomètre	anemómetro
+swt	aéronautique	aeronáutico
+swt	hydraulique	hidráulico
+swt	météorologique	meteorológico
+swt	topographie           	topografía
+swt	cartographie          	cartografía
+swt	foisonnement          	expansión
+swt	cycloconvertisseur    	cicloconvertidor
+swt	synchrone	sincrónico
+swt	bipale	bipala
+swt	tripale	tripale
+swt	multipale	multipale
+mwt	énergie éolien	energía eólico
+mwt	énergie renouvelable	energía renovable
+mwt	étude de impact	estudio de impacto
+mwt	face au vent 	contra el viento
+mwt	énergie électrique	energía eléctrica
+mwt	source renouvelable	fuente energético renovable
+mwt	stockage de énergie	almacenamiento de energía
+mwt	éolienne offshore	aeromotor marino
+mwt	éolienne industriel	aeromotor industrial
+mwt	éolienne domestique	aeromotor doméstico
+mwt	éolienne terrestre	aeromotor terrestre
+mwt	production éolien	producción eólico
+mwt	éolienne à axe vertical	aeromotor de eje vertical
+mwt	éolienne à axe horizontal	aeromotor de eje horizontal
+mwt	vitesse de rotation	velocidad del aerogenerador
+mwt	turbine éolien	turbina eólico
+mwt	système éolien	sistema eólico
+mwt	potentiel éolien	potencial eólico
+mwt	gisement éolien	yacimiento eólico
+mwt	parc éolien	parque eólico
+mwt	vitesse du vent	velocidad del viento
+mwt	système de conversion	sistema de converción
+mwt	machine synchrone	máquina síncrona
+mwt	puissance de référence	potencia activapotencia de referencia
+mwt	puissance installer 	potencia instalada
+mwt	puissance nominal	potencia nominal
+mwt	puissance total	potencia total
+mwt	puissance maximal	potencia máxima
+mwt	puissance aérodynamique	potencia aerodinámica
+mwt	coefficient de puissance	coeficiente de potencia
+mwt	angle de calage	ángulo de paso
+mwt	angle de incidence	ángulo de incidencia
+mwt	angle de attaque	ángulo de ataque
+mwt	stockage à court terme	almacenamiento de corto plazo
+mwt	stockage à long terme	almacenamiento a largo plazo
+mwt	stockage de électricité	almacenamiento de electricidad
+mwt	stockage inertiel	almacenamiento inercial
+mwt	rotor de Savonius	sistema inercialaerogenerador Savonius
+mwt	rotor de Darrieus	aerogenerador Darrieus
+mwt	rotor bobiner	bombeo eólico
+mwt	vent faible	viento ligero
+mwt	vent fort	fuerte viento
+mwt	vent moyen	viento medio
+mwt	moulin à vent	molino de viento
+mwt	bout de pale	punta de pala
+mwt	angle de le pale	angulo de pala
+mwt	pertes par commutation 	pérdidas de conmutación
+mwt	pertes par conduction	pérdidas de conducción
+mwt	multiplicateur de vitesse	multiplicador de velocidad
+mwt	sillage hélicoïdal	estela helicoidal
+mwt	gaz à effet de serre	Gases de efecto invernadero
+mwt	réseau électrique	red eléctrica
+mwt	tourbillon marginal	torbellino de punta
+mwt	production décentraliser	generación distribuida
+mwt	centrale éolien	generación eólica
+mwt	centrale électrique	generador eléctrico
+mwt	arbre lent	eje de salida
+mwt	arbre rapide	eje de velocidad
+mwt	matériau composite	material compuesto
+mwt	comportement aérodynamique	comportamiento aerodinámico
+mwt	rose de le vent	rosa del viento

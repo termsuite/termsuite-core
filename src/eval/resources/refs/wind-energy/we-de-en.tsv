@@ -1,0 +1,132 @@
+swt	Aerodynamik	aerodynamic
+swt	Anergie	anergy
+swt	Anode	anode
+swt	Asynchronmaschine	asynchronous
+swt	Bahnstrom	traction power
+swt	Blindleistung	reactive power
+swt	Blindstrom	reactive current
+swt	Drehstrom	three-phase
+swt	Dreiphasenwechselstrom	Three-phase AC
+swt	Effektivwert	RMS
+swt	Exergie	exergy
+swt	Fallwind	downdraft
+swt	Impedanz	impedance
+swt	Influenz	induction
+swt	Isolator	insulator
+swt	Kommutator	commutator
+swt	Kathode	cathode
+swt	Konvektion	convection
+swt	Nennleistung	Power Rating
+swt	Neutralleiter	neutral
+swt	Nutzenergie	useful energy
+swt	Ökostrom	green power
+swt	Repowering	repowering
+swt	Rotor	rotor
+swt	Ständerstrom	stator current
+swt	Stromstärke	amperage
+swt	Supraleitung	superconductivity
+swt	Synchronmaschine	synchronous machine
+swt	Triebstrang	drive train
+swt	Umformer	converter
+swt	Umrichter	inverter
+swt	Wind	wind
+swt	energieeffizient	energy efficient
+swt	influenzierend	influence
+swt	leitfähig	conductive
+swt	netzgekoppelt	grid-connected
+swt	sinusförmig	sinusoidal
+swt	stall-gesteuert	stall-controlled
+swt	tangential	tangential
+swt	windbedingt	wind-caused
+swt	stromdurchflossen	current flows through
+swt	induktiv	inductive
+swt	elektrolytisch	electrolytic
+swt	Transformator	transformer
+swt	Induktivität	inductance
+swt	Anemometer	anemometer
+swt	Elektrodynamik	electrodynamics
+swt	Elektroenergiesystem	Electric power system
+swt	Elektrolyt	electrolyte
+swt	Elektrophil	electrophile
+swt	Dielektrikum	dielectric
+swt	Diode	diode
+swt	Dipol	dipole
+swt	regenerativ	renewable
+swt	Windturbine	windmill
+mwt	Bruttostromerzeugung	gross electricity generation
+mwt	Drehachse	axis of rotation
+mwt	Drehimpuls	angular momentum
+mwt	Energieeffizienz	energy efficiency
+mwt	Energiequelle	energy source
+mwt	Energiestatistik	energy Statistics
+mwt	Energieversorgung	energy supply
+mwt	Impulserhaltung	conservation of momentum
+mwt	Leistungsbeiwert	power coefficient
+mwt	Nabenhöhe	hub height
+mwt	Netzausbau	network expansion
+mwt	Primärenergie	primary energy
+mwt	Rotationsenergie	rotational energy
+mwt	Rotorblatt	blade
+mwt	Rotorfläche	rotor surface
+mwt	Rotorwelle	rotor shaft
+mwt	Stromeinspeisung	current injection
+mwt	Stromdichte	current density
+mwt	Stromerzeugung	power generation
+mwt	Stromnetz	power supply system
+mwt	Strömungsenergie	energy flow
+mwt	Synchrongenerator	synchronous generator
+mwt	Offshore-Umspannwerk	Offshore substation
+mwt	Sekundärenergie	secondary energy
+mwt	Verlustleistung	power dissipation
+mwt	Volllaststunde	Full load hour
+mwt	Windenergieanlage	windmill
+mwt	Windenergienutzung	Wind energy
+mwt	Windgenerator	Wind generator
+mwt	Windkraftleistung	Wind power
+mwt	Windpark	wind farm
+mwt	Windrad	windmill
+mwt	Wirkleistung	active power
+mwt	abgegeben Leistung	given power
+mwt	aufgewandt Energie	aufgewandt Energie
+mwt	elastisch Stoß	elastic shock
+mwt	elektrisch Ladung	electric charge
+mwt	energetisch Amortisation	energy payback
+mwt	energetisch Wirkungsgrad	energy efficiency
+mwt	erneuerbar Energie	renewable energy
+mwt	groß Drehzahlstufe	great speed level
+mwt	harmonisch Schwingung	harmonic oscillation
+mwt	induziert Spannung	induced voltage
+mwt	installiert Windkraftleistung	installed wind power capacity
+mwt	konstant Drehzahl	constant speed
+mwt	magnetische Feldstärke	magnetic field strength
+mwt	nachhaltig Energieversorgung	sustainable energy supply
+mwt	pulsierend Gleichstrom	pulsating DC
+mwt	polumschaltbar Asynchrongenerator	pole-changing Induction
+mwt	potentiell Energie	potential energy
+mwt	schwimmend Windkraftanlage	floating wind turbine
+mwt	starr Körper	rigid body
+mwt	symmetrisch Bepfeilung	symmetrical Bepfeilung
+mwt	thermisch Wirkungsgrad	thermal efficiency
+mwt	variabel Drehzahl	variable speed
+mwt	übertragen Leistung	transmit power
+mwt	zuverlässigkeitsorientiert Instandhaltung	reliability based maintenance
+mwt	Antrieb d Verdichter	D drive compressor
+mwt	Beeinträchtigung d Landschaftsbild	Impairment landscape
+mwt	Eingriffsstörung d Verzahnung	Meshing interference teeth
+mwt	Leistung d Windkraftanlage	power wind turbine
+mwt	Wirkungsgrad d Stromerzeugung	efficiency power generation
+mwt	Überschreitung d Immissionsrichtwert	exceeded immission
+mwt	Gewinnung elektrisch Energie	Obtaining electric energy
+mwt	Integration erneuerbar Energie	Integration of renewable energy
+mwt	Netzintegration von Windenergie	Grid Integration of Wind Energy
+mwt	Steigerung d Energieeffizienz	Increase energy efficiency
+mwt	Übertragung elektrisch Energie	Transfer electric energy
+mwt	Umformung elektrisch Energie	Forming electrical energy
+mwt	Anlage mit Stallregelung	System with stall control
+mwt	Betrieb durch Fernsteuerung	Operation by remote control
+mwt	Bindungsenergie pro Nukleon	Binding energy per nucleon
+mwt	Geräusch von Windenergieanlage	Sound of wind turbine
+mwt	Immission von Windenergieanlage	Susceptibility of wind turbine
+mwt	Strom aus Windenergie	Electricity from wind energy
+mwt	Windenergienutzung auf See	Wind energy use at sea
+mwt	Wirkungsgrad im Teillastbereich	Efficiency at part load

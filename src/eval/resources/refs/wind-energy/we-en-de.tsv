@@ -1,0 +1,128 @@
+swt	turbine	turbine
+swt	rotor	rotor
+swt	renewable	erneuerbar
+swt	blade	rotorblatt
+swt	transformer	Transformator
+swt	generator	generator
+swt	wind	wind
+swt	slipstream	Kielwasser
+swt	upwind	Aufwind
+swt	velocity	Geschwindigkeit
+swt	downwind	Windrichtung
+swt	windmill	Windrad
+swt	axis	Achse
+swt	shaft	rotorwelle
+swt	measurement
+swt	mast	mast
+swt	propeller	Propeller
+swt	hub	Sizingnabe
+swt	pylon	turm
+swt	nacelle	Gondel
+swt	vortex	wirbel
+swt	sustainability	Nachhaltigkeit
+swt	annoyance	Plage
+swt	voltage	stromspannung
+swt	tower	Umfang
+swt	hybrid	hybrid
+swt	turbulence	Turbulenz
+swt	drag	ziehen
+swt	aerodynamic
+swt	aeroelastic	aeroelastische
+swt	aeronautical	Luftfahrt
+swt	anemometer	Windmesser
+swt	biodiversity
+swt	biomass	biomasse
+swt	decibel	Dezibel
+swt	electromagnetic	elektromagnetisch
+swt	geothermal	Erdwärme
+swt	hydroelectric	Wasserkraft
+swt	hydrogen	Wasserstoff
+swt	kilowatt	kilowatt
+swt	megawatt	aerodynamischmegawatt
+swt	topography	topographie
+swt	airflow	luftstrom
+swt	airfoil	Tragfläche
+swt	synchronous	synchron
+swt	three-bladed	tri-Klingen
+swt	two-bladed	bi-Klingen
+swt	multi-bladed	Mehrblatt
+mwt	wind farm	Windpark
+mwt	wind power	Windenergie
+mwt	wind park	Windpark
+mwt	wind power plant	Windkraftanlage
+mwt	wind direction	Windrichtung
+mwt	wind turbine	Windrad
+mwt	wind energy	Windenergie
+mwt	wind speed	Windgeschwindigkeit
+mwt	renewable energy	erneuerbare energien
+mwt	offshore wind	Offshore-Wind
+mwt	energy development	Energieentwicklung
+mwt	sound level	Geräuschpegel
+mwt	turbine generator	Turbinen-Generator
+mwt	wind energy potential	Windpotenzial
+mwt	low frequency	Niederfrequenz
+mwt	blade failure	Schaufelversagen
+mwt	wind site	wind site
+mwt	angle of attack	Anstellwinkel
+mwt	impact assessment	Folgenabschätzung
+mwt	environmental impact	Auswirkungen auf die Umwelt
+mwt	wind project	Windprojekt
+mwt	pitch angle	Steigungswinkel
+mwt	rotor blade	Rotorblatt
+mwt	vertical axis	vertikale Achse
+mwt	speed ratio	Drehzahlverhältnis
+mwt	wind generator	Windgenerator
+mwt	power coefficient	Leistungskoeffizient
+mwt	blade element	Klingenelement
+mwt	wind resource	Windressourcen
+mwt	reactive power	Blindleistung
+mwt	control system	Steuerungssystem
+mwt	horizontal axis	horizontale Achse
+mwt	fossil fuel	fossilen Brennstoffen
+mwt	power capacity	Leistungskapazität
+mwt	greenhouse gas	Wendel GefolgeTreibhausgase
+mwt	wind velocity	Windgeschwindigkeit
+mwt	wind tunnel	Windkanal
+mwt	power station	Kraftpaket
+mwt	power system	Stromversorgungssystem
+mwt	average wind	mittlere Wind
+mwt	high wind	starker Wind
+mwt	large wind	große Wind
+mwt	small wind	Leichtwind
+mwt	scale wind	Maßstab Wind
+mwt	hub height	Nabenhöhe
+mwt	rotational speed	Drehzahl
+mwt	energy storage	Energiespeicher
+mwt	electric power	Elektroenergie
+mwt	trail edge	Hinterkante
+mwt	blade tip	Klingenspitze
+mwt	rotor speed	Rotorgeschwindigkeit
+mwt	air density	Luftdichte
+mwt	synchronous generator	Synchrongenerator
+mwt	maximum power	maximale Leistung
+mwt	onshore wind
+mwt	output power	Ausgangsleistung
+mwt	renewable source	erneuerbare Energiequelle
+mwt	rotor shaft	Rotorwelle
+mwt	wind vane	Wetterhahn
+mwt	transmission system	Übertragungssystem
+mwt	Darrieus rotor	Savonius RotorDarrieus Rotor
+mwt	Savonius rotor
+mwt	rotor assembly	Rotoranordnung
+mwt	lateral angle	Seitenwinkel
+mwt	wind angle	Windwinkel
+mwt	offshore wind turbine	Offshore-Wind
+mwt	onshore wind turbine
+mwt	domestic wind turbine	heimischen Wind
+mwt	wind system	Windsystem
+mwt	rate power	Rate Strom
+mwt	sustainable energy	nachhaltige Energie
+mwt	vertical axis wind turbine	Windturbine
+mwt	horizontal axis wind turbine	horizontale Achse Windkraftanlage
+mwt	wind industry	Windindustrie
+mwt	power curve	Leistungskennlinie
+mwt	noise sensitivity	Geräuschempfindlichkeit
+mwt	carbon dioxide	Kohlendioxid
+mwt	energy conversion efficiency	Energieumwandlung
+mwt	angular position	Winkelposition
+mwt	drag coefficient	Luftwiderstandsbeiwert

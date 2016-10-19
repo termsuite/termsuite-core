@@ -1,0 +1,132 @@
+swt	Aerodynamik	aerodinámico
+swt	Anergie	anergia
+swt	Anode	ánodo
+swt	Asynchronmaschine	asincrónico
+swt	Bahnstrom	potencia de tracción
+swt	Blindleistung	potencia reactiva
+swt	Blindstrom	corriente reactivo
+swt	Drehstrom	trifásico
+swt	Dreiphasenwechselstrom	Trifásica AC
+swt	Effektivwert	RMS
+swt	Exergie	exergía
+swt	Fallwind	corriente descendente
+swt	Impedanz	impedancia
+swt	Influenz	inducción
+swt	Isolator	aislante
+swt	Kommutator	conmutador
+swt	Kathode	cátodo
+swt	Konvektion	convección
+swt	Nennleistung	Potencia nominal
+swt	Neutralleiter	neutral
+swt	Nutzenergie	energía útil
+swt	Ökostrom	energía verde
+swt	Repowering	repotenciación
+swt	Rotor	rotor
+swt	Ständerstrom	corriente del estator
+swt	Stromstärke	amperaje
+swt	Supraleitung	superconductividad
+swt	Synchronmaschine	máquina síncrona
+swt	Triebstrang	tren de transmisión
+swt	Umformer	convertidor
+swt	Umrichter	inversor
+swt	Wind	viento
+swt	energieeffizient	eficiente de la energía
+swt	leitfähig	conductivo
+swt	netzgekoppelt	conectada a la red
+swt	polumschaltbar	polumschaltbar
+swt	sinusförmig	sinusoidal
+swt	stall-gesteuert	estancar controlado
+swt	tangential	tangencial
+swt	windbedingt	causada por el viento
+swt	stromdurchflossen	corriente fluye a través
+swt	induktiv	inductivo
+swt	elektrolytisch	electrolítico
+swt	Transformator	transformador
+swt	Induktivität	inductancia
+swt	Anemometer	anemómetro
+swt	Elektrodynamik	electrodinámica
+swt	Elektroenergiesystem	Sistema de energía eléctrica
+swt	Elektrolyt	electrólito
+swt	Elektrophil	electrófilo
+swt	Dielektrikum	dieléctrico
+swt	Diode	diodo
+swt	Dipol	Dipolo
+swt	regenerativ	renovable
+swt	Windturbine	aeromotor
+mwt	Bruttostromerzeugung	generación bruta de electricidad
+mwt	Drehachse	eje de rotación
+mwt	Drehimpuls	momento angular
+mwt	Energieeffizienz	eficiencia energética
+mwt	Energiequelle	fuente de energía
+mwt	Energiestatistik	Estadísticas Energéticas
+mwt	Energieversorgung	abastecimiento energético
+mwt	Impulserhaltung
+mwt	Leistungsbeiwert	coeficiente de potencia
+mwt	Nabenhöhe	altura del buje
+mwt	Netzausbau	expansión de la red
+mwt	Primärenergie	energía primaria
+mwt	Rotationsenergie	energía de rotación
+mwt	Rotorblatt	aspa
+mwt	Rotorfläche	superficie del rotor
+mwt	Rotorwelle	eje del rotor
+mwt	Stromeinspeisung	inyección de corriente
+mwt	Stromdichte	densidad de corriente
+mwt	Stromerzeugung	generación de energía
+mwt	Stromnetz	sistema de la alimentación
+mwt	Strömungsenergie	flujo de energía
+mwt	Synchrongenerator	generador síncrono
+mwt	Offshore-Umspannwerk	Subestación Marino
+mwt	Sekundärenergie	energía secundaria
+mwt	Verlustleistung	disipación de potencia
+mwt	Volllaststunde	Horas a plena carga
+mwt	Windenergieanlage	aeromotor
+mwt	Windenergienutzung	energía eólica
+mwt	Windgenerator	Generador de viento
+mwt	Windkraftleistung	energía eólica
+mwt	Windpark	parque eólico
+mwt	Windrad	aeromotor
+mwt	Wirkleistung	potencia activa
+mwt	abgegeben Leistung	poder dado
+mwt	aufgewandt Energie	energía gastada
+mwt	elastisch Stoß	choque elástico
+mwt	elektrisch Ladung	carga eléctrica
+mwt	energetisch Amortisation	retorno energético
+mwt	energetisch Wirkungsgrad	eficiencia energética
+mwt	erneuerbar Energie	energía renovable
+mwt	groß Drehzahlstufe	gran nivel de velocidad
+mwt	harmonisch Schwingung	oscilación armónica
+mwt	induziert Spannung	tensión inducida
+mwt	installiert Windkraftleistung	capacidad de energía eólica instalada
+mwt	konstant Drehzahl	velocidad constante
+mwt	magnetische Feldstärke	intensidad de campo magnético
+mwt	nachhaltig Energieversorgung	suministro de energía sostenible
+mwt	pulsierend Gleichstrom	pulsante DC
+mwt	polumschaltbar Asynchrongenerator	polos conmutables inducción
+mwt	potentiell Energie	energía potencial
+mwt	schwimmend Windkraftanlage	turbina eólica flotante
+mwt	starr Körper	cuerpo rígido
+mwt	symmetrisch Bepfeilung	simétrica Bepfeilung
+mwt	thermisch Wirkungsgrad	eficiencia térmica
+mwt	variabel Drehzahl	velocidad variable
+mwt	übertragen Leistung	potencia de transmisión
+mwt	zuverlässigkeitsorientiert Instandhaltung	mantenimiento basado en la fiabilidad
+mwt	Antrieb d Verdichter	compresor de la unidad
+mwt	Beeinträchtigung d Landschaftsbild	Deterioro del paisaje
+mwt	Eingriffsstörung d Verzahnung	Mallado dientes de interferencia
+mwt	Leistung d Windkraftanlage	Aerogenerador de energía
+mwt	Wirkungsgrad d Stromerzeugung	generación de energía Eficiencia
+mwt	Überschreitung d Immissionsrichtwert	inmisión Superó
+mwt	Gewinnung elektrisch Energie	obtención de energía eléctrica
+mwt	Integration erneuerbar Energie	Integración de las energías renovables
+mwt	Netzintegration von Windenergie	Integración en Red de Energía Eólica
+mwt	Steigerung d Energieeffizienz	Aumentar la eficiencia energética
+mwt	Übertragung elektrisch Energie	Transferencia de energía eléctrica
+mwt	Umformung elektrisch Energie	formación de la energía eléctrica
+mwt	Anlage mit Stallregelung	Sistema de control de la parada
+mwt	Betrieb durch Fernsteuerung	Operación por control remoto
+mwt	Bindungsenergie pro Nukleon	Energía de enlace por nucleón
+mwt	Geräusch von Windenergieanlage	Sonido de la turbina de viento
+mwt	Immission von Windenergieanlage	Susceptibilidad de turbina eólica
+mwt	Strom aus Windenergie	electricidad de la energía eólica
+mwt	Windenergienutzung auf See	Uso de la energía eólica en el mar
+mwt	Wirkungsgrad im Teillastbereich	Rendimiento a carga parcial

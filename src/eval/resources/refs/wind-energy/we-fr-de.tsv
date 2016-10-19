@@ -1,0 +1,124 @@
+swt	rotor	rotor
+swt	éolienne              	Windrad
+swt	éolien	Wind
+swt	pale                  	rotorblatt
+swt	turbine               	turbine
+swt	dimensionnement
+swt	moyeu                 	Sizingnabe
+swt	calage                	zurechtrücken
+swt	écoulement            	fließen
+swt	générateur	generator
+swt	nacelle               	Gondel
+swt	stockage              	Lagerung
+swt	raccordement          	Anschluss
+swt	hélice                	Propeller
+swt	vent	wind
+swt	capteur               	sensor
+swt	mât                   	mast
+swt	pylône                	turm
+swt	implantation          	implantation
+swt	girouette	Wetterhahn
+swt	arbre	rotorwelle
+swt	portance              	lager
+swt	transformateur        	Transformator
+swt	nuisance	Plage
+swt	tourbillon 	wirbel
+swt	tour	Umfang
+swt	sillage 	Kielwasser
+swt	inertiel	Trägheits
+swt	aérodynamique
+swt	mégawatt	aerodynamischmegawatt
+swt	photovoltaïque	Photovoltaik
+swt	aérogénérateur	Windenergieanlage
+swt	biomasse	biomasse
+swt	kilowatt	kilowatt
+swt	biogaz	biogas
+swt	hydroélectrique	Wasserkraft
+swt	biodiversité
+swt	géothermie            	Biodiversitätgeothermische
+swt	électromagnétique	elektromagnetisch
+swt	électromécanique	elektromecanisch
+swt	hydroélectricité	Wasserkraft
+swt	radioactif	radioaktiv
+swt	anémomètre	Windmesser
+swt	aéronautique	Luftfahrt
+swt	hydraulique	hydraulisch
+swt	météorologique	meteorologisch
+swt	kilowattheure	Kilowattstunde
+swt	topographie           	topographie
+swt	cartographie          	Kartographie
+swt	foisonnement          	Erweiterung
+swt	cycloconvertisseur    	Steuerumrichter
+swt	synchrone	synchron
+swt	bipale	bi-Klingen
+swt	tripale	tri-Klingen
+swt	multipale	Mehrblatt
+mwt	énergie éolien	Windenergie
+mwt	énergie renouvelable	erneuerbare energien
+mwt	étude de impact	Wirkungsstudie
+mwt	face au vent 	Aufwind
+mwt	énergie électrique	elektrische Energie
+mwt	source renouvelable	erneuerbare Energiequelle
+mwt	stockage de énergie	Energiespeicher
+mwt	stockage par pompage	Pumpspeicher
+mwt	éolienne offshore	Offshore-Wind
+mwt	éolienne industriel	Industrielle Wind
+mwt	éolienne domestique	heimischen Wind
+mwt	éolienne terrestre
+mwt	production éolien	Onshore-WindWindenergie
+mwt	vitesse de rotation	Drehzahl
+mwt	turbine éolien	Windenergieanlage
+mwt	système éolien	Windsystem
+mwt	potentiel éolien	Windpotenzial
+mwt	gisement éolien	Windressourcen
+mwt	parc éolien	Windpark
+mwt	vitesse du vent	Windgeschwindigkeit
+mwt	système de pompage	Pumpsystem
+mwt	système de conversion	Umwandlungssystem
+mwt	machine synchrone	Synchronmaschine
+mwt	puissance actif	Wirkleistung
+mwt	puissance de référence	Bezugsleistung
+mwt	puissance installer 	installierte Leistung
+mwt	puissance nominal	Nennleistung
+mwt	puissance total	Gesamtleistung
+mwt	puissance maximal	maximale Leistung
+mwt	puissance aérodynamique	aerodynamische Leistung
+mwt	coefficient de puissance	Leistungskoeffizient
+mwt	angle de calage	Winkel Verkeilen
+mwt	angle de incidence	Einfallswinkel
+mwt	angle de attaque	Anstellwinkel
+mwt	calage de le pale	Verkeilen des Messers
+mwt	champ de vitesse	Geschwindigkeitsfeld
+mwt	stockage à court terme	Kurzzeitspeicher
+mwt	stockage à long terme
+mwt	stockage de électricité	LangzeitlagerStromspeicher
+mwt	stockage inertiel	Trägheitsspeicher
+mwt	système inertiel	Inertialsystem
+mwt	rotor de Savonius
+mwt	rotor de Darrieus	Savonius RotorDarrieus Rotor
+mwt	rotor bobiner	Läuferwicklung
+mwt	vent faible	Leichtwind
+mwt	vent fort	starker Wind
+mwt	vent moyen	mittlere Wind
+mwt	moulin à vent	Windmühle
+mwt	réglage fréquence puissance	Frequenzleistungseinstellung
+mwt	profil de pale	Blattprofil
+mwt	bout de pale	Klingenspitze
+mwt	pied de pale	Blattwurzel
+mwt	angle de le pale	Blattwinkel
+mwt	pertes par commutation 	Schaltverluste
+mwt	pertes par conduction	Leitungsverluste
+mwt	multiplicateur de vitesse
+mwt	sillage par élément tourbillonnaire	Drehzahlmultiplikator
+mwt	sillage hélicoïdal	Wirbelschleppen Element
+mwt	gaz à effet de serre	Wendel GefolgeTreibhausgase
+mwt	réseau électrique	Netz
+mwt	tourbillon marginal	Spitzenwirbel
+mwt	production décentraliser	production décentraliser
+mwt	centrale éolien	Windkraftanlage
+mwt	centrale électrique	Kraftpaket
+mwt	arbre lent	Ausgangswelle
+mwt	arbre rapide
+mwt	matériau composite	GeschwindigkeitswelleVerbundwerkstoff
+mwt	comportement aérodynamique	aerodynamische Verhalten
+mwt	rose de le vent	Kompass

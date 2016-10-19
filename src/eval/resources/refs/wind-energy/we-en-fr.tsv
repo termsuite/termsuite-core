@@ -1,0 +1,128 @@
+swt	turbine               	turbine
+swt	rotor	rotor
+swt	renewable	renouvelable
+swt	blade	pale
+swt	transformer	transformeur
+swt	generator	générateur
+swt	wind	vent
+swt	slipstream            	sillage
+swt	upwind	vent de face
+swt	velocity	vitesse
+swt	downwind	sous le vent
+swt	windmill	éolienne
+swt	axis	axe
+swt	shaft	arbre
+swt	measurement	dimensionnement
+swt	mast	mât
+swt	propeller	hélice
+swt	hub	moyeu
+swt	pylon                 	pylône
+swt	nacelle	nacelle
+swt	vortex	tourbillon
+swt	sustainability        	durabilité
+swt	annoyance             	nuisance
+swt	voltage               	tension
+swt	tower	tour
+swt	hybrid                	hybride
+swt	turbulence	turbulence
+swt	drag	résistance
+swt	aerodynamic           	aérodynamique
+swt	aeroelastic           	aéroélastique
+swt	aeronautical          	aéronautique
+swt	anemometer            	anémomètre
+swt	biodiversity          	biodiversité
+swt	biomass               	biomasse
+swt	decibel               	décibel
+swt	electromagnetic       	électromagnétique
+swt	geothermal            	géothermal
+swt	hydroelectric         	hydroélectrique
+swt	hydrogen              	hydrogène
+swt	kilowatt              	kilowatt
+swt	megawatt              	mégawatt
+swt	topography            	topographie
+swt	airflow	flux d'air
+swt	airfoil	aile
+swt	synchronous           	synchrone
+swt	three-bladed	tripale
+swt	two-bladed	bipale
+swt	multi-bladed	multipale
+mwt	wind farm              	parc éolien
+mwt	wind power	énergie éolienne
+mwt	wind park	parc éolien
+mwt	wind power plant	usine éolienne
+mwt	wind direction	direction du vent
+mwt	wind turbine	éolienne
+mwt	wind energy	énergie éolienne
+mwt	wind speed	vitesse du vent
+mwt	renewable energy	énergie renouvelable
+mwt	offshore wind	éolienne offshore
+mwt	energy development	développement de l'énergie
+mwt	sound level	niveau sonore
+mwt	turbine generator	turbine éolienne
+mwt	wind energy potential	potentiel éolien
+mwt	low frequency	basse fréquence
+mwt	blade failure	panne de pale
+mwt	wind site	site éolien
+mwt	angle of attack	angle d'attaque
+mwt	impact assessment	évaluation de l'impact
+mwt	environmental impact	impact environnemental
+mwt	wind project	projet éolien
+mwt	pitch angle	angle d'inclinaison
+mwt	rotor blade	pale de rotor
+mwt	vertical axis	axe vertical
+mwt	speed ratio	rapport de vitesse
+mwt	wind generator	générateur éolien
+mwt	power coefficient	coefficient de puissance
+mwt	blade element	élément de pale
+mwt	wind resource	ressource éolienne
+mwt	reactive power	puissance réactive
+mwt	control system	système de contrôle
+mwt	horizontal axis	axe horizontal
+mwt	fossil fuel	énergie fossile
+mwt	power capacity	puissance nominale
+mwt	greenhouse gas	gaz à effet de serre
+mwt	wind velocity	vitesse du vent
+mwt	wind tunnel	tunnel aérodynamique
+mwt	power station 	centrale électrique
+mwt	power system	système d'alimentation
+mwt	average wind	vent moyen
+mwt	high wind	vent fort
+mwt	large wind	grand vent
+mwt	small wind	vent faible
+mwt	scale wind	éolienne à grande échelle
+mwt	hub height	hauteur de moyeu
+mwt	rotational speed	vitesse de rotation
+mwt	energy storage	stockage de énergie
+mwt	electric power	puissance électrique
+mwt	trail edge	bord arrière
+mwt	blade tip	pointe de pale
+mwt	rotor speed	vitesse du rotor
+mwt	air density	densité de l'air
+mwt	synchronous generator	générateur synchrone
+mwt	maximum power	puissance maximale
+mwt	onshore wind	éolienne terrestre
+mwt	output power	puissance de sortie
+mwt	renewable source	source renouvelable
+mwt	rotor shaft	arbre de rotor
+mwt	wind vane	girouette
+mwt	transmission system	système de transmission
+mwt	Darrieus rotor	rotor de Darrieus
+mwt	Savonius rotor	rotor de Savonius
+mwt	rotor assembly	ensemble de rotor
+mwt	lateral angle	angle latéral
+mwt	wind angle	angle du vent
+mwt	offshore wind turbine	éolienne offshore
+mwt	onshore wind turbine	éolienne terrestre
+mwt	domestic wind turbine	éolienne domestique
+mwt	wind system	système de vent
+mwt	rate power	pouvoir de tarification
+mwt	sustainable energy	énergie durable
+mwt	vertical axis wind turbine	éolienne à axe vertical
+mwt	horizontal axis wind turbine	éolienne à axe horizontal
+mwt	wind industry
+mwt	power curve	industrie éoliennecourbe de puissance
+mwt	noise sensitivity	sensibilité au bruit
+mwt	carbon dioxide	dioxyde de carbonne
+mwt	energy conversion efficiency	efficacité énergétique de conversion
+mwt	angular position	position angulaire
+mwt	drag coefficient	coefficient de traînée

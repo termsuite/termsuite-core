@@ -1,0 +1,135 @@
+swt	góndola	nacelle
+swt	rotor	rotor
+swt	alternador	alternator
+swt	álabe	hub
+swt	síncrono	synchronous
+swt	borne	terminal
+swt	estátor	stator
+swt	calaje	timing
+swt	buje	bushing
+swt	monitoreo	monitoring
+swt	barquilla	nacelle
+swt	torque	torque
+swt	panémona	panémona
+swt	toroidal	toroidal
+swt	sinóptica	synoptic
+swt	rotacional	rotational
+swt	bobinado	winding
+swt	fisionable	fissionable
+swt	huracanado	huracanado
+swt	espira	tower
+swt	arriostrado	braced
+swt	aspa	blade
+swt	pala	blade
+swt	turbina	turbine
+swt	molino	mill
+swt	balizamiento	beacon
+swt	reactancia	reactance
+swt	tiristor	thyristor
+swt	nacele	nacelle
+swt	aerodinámico	aerodynamic
+swt	anemómetro	anemometer
+swt	aeromotor	aeromotor
+swt	tripala	three-bladed
+swt	bipala	two-bladed
+swt	multipala	multi-bladed
+swt	monopala	bladed
+swt	aerogenerador	wind turbine
+swt	monopilote	monopile
+swt	trifásico	three-phase
+swt	monofásico	single-phase
+swt	hidráulico	hydraulic
+swt	geostrófico	geostrophic
+swt	autotimonante	self-steering
+swt	electromagnético	electromagnetic
+swt	mareomotriz	tidal
+swt	topografía	topography
+swt	aeroturbina	windmill
+swt	eólico	eolian
+swt	megavatio	megawatt
+swt	kilovatio	kilowatt
+swt	hélice	propeller
+swt	biodiésel	biodiesel
+swt	fotovoltáica	photovoltaic
+swt	ferrita	ferrite
+swt	electro-eólica	electro-wind
+mwt	energía renovable	renewable energy
+mwt	aerogenerador de eje vertical	vertical axis wind turbine
+mwt	energía generar	generate energy
+mwt	parque eólico marino	offshore wind farm
+mwt	parque eólico	wind farm
+mwt	diámetro de rotor	rotor diameter
+mwt	eje de rotación	axis of rotation
+mwt	área barrido	swept area
+mwt	generador de inducción	induction generator
+mwt	generador síncrono	synchronous generator
+mwt	torre de celosía	lattice tower
+mwt	freno aerodinámico	air brake
+mwt	eje del rotor	rotor shaft
+mwt	barrido del rotor	Rotor
+mwt	energía eléctrico generar	Electric power generation
+mwt	turbina de eje horizontal	horizontal axis wind turbine
+mwt	molino de eje vertical	vertical axis windmill
+mwt	velocidad del aerogenerador	speed wind turbine
+mwt	rotor tripala	three-bladed rotor
+mwt	viento incidente	incoming wind
+mwt	rotor de imán	magnet rotor
+mwt	caja multiplicadora de velocidad	speed gearbox
+mwt	fuente energético renovable	renewable energy source
+mwt	anemómetro de cazoleta	cup anemometer
+mwt	energía mareomotriz	tidal energy
+mwt	sistema de monitoreo	monitoring system
+mwt	flujo axial	axial flow
+mwt	álabe del rotor	rotor blade
+mwt	sistema híbrido eólico-fotovoltaico	wind-photovoltaic hybrid system
+mwt	viento geostrófico	geostrophic wind
+mwt	aeromotor de eje horizontal	horizontal axis windmill
+mwt	radio del rotor	rotor radius
+mwt	energía mecánico rotacional	rotational mechanical energy
+mwt	turbulencia generar	generate turbulence
+mwt	aerogenerador de velocidad variable	variable speed wind turbine
+mwt	rodamiento de pala	blade bearing
+mwt	aerogenerador monopala	bladed wind turbine
+mwt	dato anemométrico	anemometric data
+mwt	generador de turbina eólica	wind turbine generator
+mwt	viento dominante	prevailing wind
+mwt	eje del generador	generator shaft
+mwt	planta de energía eólico	wind power plant
+mwt	aerogenerador marino	offshore wind
+mwt	ruido aerodinámico	aerodynamic noise
+mwt	túnel de viento	wind tunnel
+mwt	granja de viento	wind farm
+mwt	turbina eólico maglev	maglev wind turbine
+mwt	turbina flotante	floating turbine
+mwt	molino multipala	multiblade mill
+mwt	rotor eólico	wind rotor
+mwt	rotor del generador	generator rotor
+mwt	cizallamiento del viento	Wind Shear
+mwt	bombeo eólico	wind pumping
+mwt	aerogenerador Darrieus	Darrieus rotor
+mwt	aerogenerador Savonius	Savonius rotor
+mwt	límite de Betz	Betz limit
+mwt	rosa de el viento	compass
+mwt	distribución de Weibull	Weibull distribution
+mwt	rotor bobinar	rotor winding
+mwt	megavatio eólico	megawatt wind
+mwt	energía del viento	Wind energy
+mwt	energía marino	marine energy
+mwt	energía eólico	wind energy
+mwt	ángulo de paso	pitch
+mwt	motor de inducción	induction motor
+mwt	caja de engranaje	gearbox
+mwt	energía cinética	kinetic energy
+mwt	combustible fósil	fossil fuel
+mwt	curva de potencia	power curve
+mwt	potencial eólico	wind potential
+mwt	pala del rotor	rotorblade
+mwt	subestación eléctrica	electrical substation
+mwt	potencia nominal	rated power
+mwt	generación eólica	wind generation
+mwt	industria eólica	wind Industry
+mwt	generador electro-eólico	electro-wind generator
+mwt	curva de eﬁciencia de Betz	curve of efficiency of Betz
+mwt	puente rectificador	bridge rectifier
+mwt	veleta de orientación	wind vane
+mwt	rotor a barlovento	Upwind

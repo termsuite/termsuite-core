@@ -1,0 +1,138 @@
+swt	wireless	sans fil
+swt	application	application
+swt	repeater	répéteur
+swt	frequency	fréquence
+swt	channel	canal
+swt	signal	signal
+swt	cellular	cellulaire
+swt	cell	cellule
+swt	server	serveur
+swt	packet	paquet
+swt	traffic	trafic
+swt	switch	commutateur
+swt	coverage	couverture
+swt	protocol	protocole
+swt	node	nœud
+swt	subscriber	souscripteur
+swt	spectrum	spèctre
+swt	antenna	antenne
+swt	architecture	architecture
+swt	sensor	capteur
+swt	connection	connexion
+swt	connectivity	connectivité
+swt	deployment	déploiement
+swt	satellite	satellite
+swt	digital	numérique
+swt	speed	vitesse
+swt	receiver	récepteur
+swt	provider	fournisseur
+swt	carrier	transporteur
+swt	router	routeur
+swt	modem	modem
+swt	proxy	proxy
+swt	buffer	tampon
+swt	jitter	jitter
+swt	authentication	authentification
+swt	security	sécurité
+swt	key	clé
+swt	encryption	encryptage
+swt	datum	donnée
+swt	bandwidth	bande passante
+swt	broadband	haut débit
+swt	broadcast	diffuser
+swt	bluetooth	bluetooth
+swt	handset	combiné
+swt	ethernet	ethernet
+swt	software	logiciel
+swt	multicast	multicast
+swt	telecommunication	télécommunication
+swt	multimedia	multimédia
+swt	multi-carrier	multiporteuse
+swt	smartphone	smartphone
+swt	telephony	téléphonie
+swt	transmission	transmission
+swt	electromagnetic	électromagnétique
+swt	interference	interférence
+swt	microcontroller	micro-contrôleur
+swt	microwave	micro onde
+swt	infrastructure	infrastructure
+swt	internet	internet
+swt	interface	interface
+mwt	mobile phone	téléphone mobile
+mwt	mobile network	réseau mobile
+mwt	handheld device	appareil de poche
+mwt	mobile operator	opérateur mobile
+mwt	mobile communication	communication mobile
+mwt	wireless internet	internet sans-fil
+mwt	wireless access	accès sans-fil
+mwt	wireless network	réseau sans-fil
+mwt	wireless connection	connexion sans-fil
+mwt	wireless technology	technologie sans-fil
+mwt	wireless link	liaison sans-fil
+mwt	wireless advertising	publicité sans fil
+mwt	wireless device	appareil sans fil
+mwt	wireless phone	téléphone sans fil
+mwt	user interface	interface utilisateur
+mwt	service center	centre de services
+mwt	internet access	accès internet
+mwt	end user	utilisateur final
+mwt	third generation	troisième génération
+mwt	second generation	seconde génération
+mwt	mobile commerce	commerce mobile
+mwt	gateway node	noeud passerelle
+mwt	handheld node	noeud de poche
+mwt	core network	cœur de réseau
+mwt	sensor network	Réseau de capteurs
+mwt	area network	réseau
+mwt	transport network	réseau de transport
+mwt	sensor node	noeud de capteur
+mwt	spectrum allocation	attribution de fréquence
+mwt	mobile terminal	terminal mobile
+mwt	base station	station de base
+mwt	mobile user	utilisateur mobile
+mwt	signal conditions	conditions de signal
+mwt	fraud detection	détection de fraude
+mwt	signal strength	force du signal
+mwt	satellite communication	communication satellite
+mwt	mobile service	service mobile
+mwt	voice communication	communication voix
+mwt	peer-to-peer networking	réseau peer to peer
+mwt	incoming call	appel entrant
+mwt	coaxial cable	câble coaxial
+mwt	short message service	sms
+mwt	ip address	adresse ip
+mwt	ip network	réseau ip
+mwt	ip telephony	téléphonie ip
+mwt	gprs network	réseau gprs
+mwt	gsm network	réseau gsm
+mwt	gsm/gprs modem	modem gsm/gprs
+mwt	cdma system	système cdma
+mwt	wlan system	système wlan
+mwt	frequency allocation	allocation de fréquence
+mwt	network architecture	architecture réseau
+mwt	network coverage	couverture réseau
+mwt	coverage area	aire de couverture
+mwt	real time	temps réel
+mwt	white paper	papier blanc
+mwt	packet loss	perte de paquet
+mwt	web service	web service
+mwt	quality of service	qualité de service
+mwt	access point	point d'accès
+mwt	fiber optic	fibre optique
+mwt	level of service	niveau de service
+mwt	frequency band	bande de fréquence
+mwt	encryption key	clé d'encryptage
+mwt	controller device	dispositif de commande
+mwt	upstream supplier	fournisseur en amont
+mwt	voice recognition	reconnaissance vocale
+mwt	text message	message texte
+mwt	network capacity	capacité de réseau
+mwt	ip	ip
+mwt	gprs	gprs
+mwt	gsm	gsm
+mwt	cdma	cdma
+mwt	wlan	wlan
+mwt	wap	wap
+mwt	umts	umts
+mwt	edge	edge
+mwt	usb	usb

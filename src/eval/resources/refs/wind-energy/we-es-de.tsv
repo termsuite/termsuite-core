@@ -1,0 +1,135 @@
+swt	góndola	Gondel
+swt	rotor	rotor
+swt	alternador	Generator
+swt	álabe	Sizingnabe
+swt	síncrono	synchron
+swt	borne	terminal
+swt	estátor	Stator
+swt	calaje	zurechtrücken
+swt	buje	Buchse
+swt	monitoreo	Überwachung
+swt	barquilla	Gondel
+swt	torque	Drehmoment
+swt	toroidal	Ring
+swt	sinóptica	synoptischen
+swt	rotacional	Dreh
+swt	bobinado	Wickeln
+swt	fisionable	spaltbares
+swt	huracanado	orkanartig
+swt	espira	Umfang
+swt	arriostrado	verspannt
+swt	aspa	rotorblatt
+swt	pala	rotorblatt
+swt	roción	roción
+swt	turbina	turbine
+swt	molino	Mühle
+swt	balizamiento	Leuchtfeuer
+swt	reactancia	Reaktanz
+swt	tiristor	Thyristor
+swt	nacele	Gondel
+swt	aerodinámico
+swt	anemómetro	Windmesser
+swt	aeromotor	Luftmotor
+swt	tripala	tri-Klingen
+swt	bipala	bi-Klingen
+swt	multipala	Mehrblatt
+swt	monopala
+swt	aerogenerador	Windenergieanlage
+swt	monopilote	Monopile
+swt	trifásico	dreiphasig
+swt	monofásico
+swt	hidráulico	hydraulisch
+swt	geostrófico	geostrophischen
+swt	autotimonante	Selbstlenk
+swt	electromagnético	elektromagnetisch
+swt	mareomotriz	tide
+swt	topografía	topographie
+swt	aeroturbina	Windrad
+swt	eólico	Wind
+swt	megavatio	aerodynamischmegawatt
+swt	kilovatio	kilowatt
+swt	hélice	Propeller
+swt	biodiésel	Biodiesel
+swt	fotovoltáica	Photovoltaik
+swt	ferrita	Ferrit
+swt	electro-eólica	elektro-Wind
+mwt	energía renovable	erneuerbare energien
+mwt	aerogenerador de eje vertical	Windturbine
+mwt	energía generar	Energie erzeugen
+mwt	parque eólico marino	Offshore-Windpark
+mwt	parque eólico	Windpark
+mwt	diámetro de rotor	Rotordurchmesser
+mwt	eje de rotación	Drehachse
+mwt	área barrido	strichene Fläche
+mwt	generador de inducción	Induktionsgenerator
+mwt	generador síncrono	Synchrongenerator
+mwt	torre de celosía	Fachwerkturm
+mwt	freno aerodinámico	Druckluftbremse
+mwt	eje del rotor	Rotorwelle
+mwt	barrido del rotor	Rotor
+mwt	energía eléctrico generar	Stromerzeugung
+mwt	turbina de eje horizontal	horizontale Achse Turbinen
+mwt	molino de eje vertical	vertikale Achse Windmühle
+mwt	velocidad del aerogenerador	Speed-Windkraftanlage
+mwt	rotor tripala	Blattrotor
+mwt	viento incidente	eingehenden Wind
+mwt	rotor de imán	Magnetrotor
+mwt	caja multiplicadora de velocidad	Gang-Getriebe
+mwt	fuente energético renovable	erneuerbare Energiequelle
+mwt	anemómetro de cazoleta	Schalenstern
+mwt	energía mareomotriz	Gezeitenenergie
+mwt	sistema de monitoreo	Überwachungssystem
+mwt	flujo axial	axialen Strom
+mwt	álabe del rotor	Rotorblatt
+mwt	sistema híbrido eólico-fotovoltaico	Wind-Photovoltaik-Hybrid-System
+mwt	viento geostrófico	geostrophische Wind
+mwt	aeromotor de eje horizontal	horizontale Achse Windmühle
+mwt	radio del rotor	Rotorradius
+mwt	energía mecánico rotacional	mechanische Rotationsenergie
+mwt	turbulencia generar	erzeugen Turbulenzen
+mwt	aerogenerador de velocidad variable	variabler Geschwindigkeit Windkraftanlage
+mwt	rodamiento de pala	Blattlager
+mwt	aerogenerador monopala	Blatt Windkraftanlage
+mwt	dato anemométrico	anemometrischen Daten
+mwt	generador de turbina eólica	Windenergieanlage
+mwt	viento dominante	Hauptwind
+mwt	eje del generador	Generatorwelle
+mwt	planta de energía eólico	Windkraftanlage
+mwt	aerogenerador marino	Offshore-Wind
+mwt	ruido aerodinámico	aerodynamische Geräusche
+mwt	túnel de viento	Windkanal
+mwt	granja de viento	Windpark
+mwt	turbina eólico maglev	Magnetschwebebahn Windkraftanlage
+mwt	turbina flotante	Schwimmturbinen
+mwt	molino multipala	Mehrblattwerk
+mwt	rotor eólico	Windrotor
+mwt	rotor del generador	Generator-Rotor
+mwt	cizallamiento del viento	Windscherung
+mwt	bombeo eólico	Windpump
+mwt	aerogenerador Darrieus	Savonius Rotor
+mwt	aerogenerador Savonius	Darrieus Rotor
+mwt	límite de Betz	Betz Grenze
+mwt	rosa de el viento	Kompass
+mwt	distribución de Weibull	Weibull-Verteilung
+mwt	rotor bobinar	Läuferwicklung
+mwt	megavatio eólico	Megawatt-Wind
+mwt	energía del viento	Windenergie
+mwt	energía marino	Meeresenergie
+mwt	energía eólico	Windenergie
+mwt	ángulo de paso	Pech
+mwt	motor de inducción	Induktionsmotor
+mwt	caja de engranaje	Getriebegehäuse
+mwt	energía cinética	kinetische Energie
+mwt	combustible fósil	fossilen Brennstoffen
+mwt	curva de potencia	Leistungskennlinie
+mwt	potencial eólico	Windpotenzial
+mwt	pala del rotor	Rotorblatt
+mwt	subestación eléctrica	Umspannwerk
+mwt	potencia nominal	Nennleistung
+mwt	generación eólica	Windenergie
+mwt	industria eólica	Windindustrie
+mwt	generador electro-eólico	elektro-Windgenerator
+mwt	curva de eﬁciencia de Betz	Kurve Effizienz Betz
+mwt	puente rectificador	Brückengleichrichter
+mwt	veleta de orientación	Wetterhahn
+mwt	rotor a barlovento	Aufwind

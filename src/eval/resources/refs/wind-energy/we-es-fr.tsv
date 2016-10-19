@@ -1,0 +1,135 @@
+swt	góndola	gondole
+swt	rotor	rotor
+swt	alternador	alternateur
+swt	álabe	moyeu
+swt	síncrono	synchrone
+swt	borne	borne
+swt	estátor	stator
+swt	calaje	calage
+swt	buje	bague
+swt	monitoreo	moniteur
+swt	barquilla	nacelle
+swt	torque	couple
+swt	panémona	panémone
+swt	toroidal	toroïdal
+swt	sinóptica
+swt	rotacional	synoptiquerotationnel
+swt	bobinado	enroulement
+swt	fisionable	fissionnable
+swt	huracanado	vent violent
+swt	espira	tour
+swt	arriostrado	à contre vent
+swt	aspa	pale
+swt	pala	pale
+swt	roción	rotation
+swt	turbina	turbine
+swt	molino	moulin
+swt	balizamiento	balisage
+swt	reactancia	réactance
+swt	tiristor	thyristor
+swt	nacele	nacelle
+swt	aerodinámico	aérodynamique
+swt	anemómetro	anémomètre
+swt	aeromotor	aéromoteur
+swt	tripala	tripale
+swt	bipala	bipale
+swt	multipala	multipale
+swt	monopala	monopale
+swt	aerogenerador	aérogénérateur
+swt	monopilote	monopilote
+swt	trifásico	triphasé
+swt	monofásico	monophasé
+swt	hidráulico	hydraulique
+swt	geostrófico	géostrophique
+swt	autotimonante	autoguidage
+swt	electromagnético	électomagnétique
+swt	mareomotriz	marémotrice
+swt	topografía	topographie
+swt	aeroturbina	éolienne
+swt	eólico	éolien
+swt	megavatio	mégawatt
+swt	kilovatio	kilowatt
+swt	hélice	hélice
+swt	biodiésel	biodiésel
+swt	fotovoltáica	photovoltaïque
+swt	ferrita	ferrite
+swt	electro-eólica	électro-vent
+mwt	energía renovable	énergie renouvelable
+mwt	aerogenerador de eje vertical	éolienne à axe vertical
+mwt	energía generar	énergie générer
+mwt	parque eólico marino	parc éolien offshore
+mwt	parque eólico	parc éolien
+mwt	diámetro de rotor	diamètre du rotor
+mwt	eje de rotación	axe de rotation
+mwt	área barrido	surface balayée
+mwt	generador de inducción	générateur à induction
+mwt	generador síncrono	générateur synchrone
+mwt	torre de celosía	tour en treillis
+mwt	freno aerodinámico	frein pneumatique
+mwt	eje del rotor
+mwt	barrido del rotor	arbre de rotorrotor
+mwt	energía eléctrico generar	production d'électricité
+mwt	turbina de eje horizontal	éolienne à axe horizontal
+mwt	molino de eje vertical	moulin à axe vertical
+mwt	velocidad del aerogenerador	vitesse de l'éolienne
+mwt	rotor tripala	éolienne tripale
+mwt	viento incidente	vent entrant
+mwt	rotor de imán	magnet rotor
+mwt	caja multiplicadora de velocidad	Boîte de vitesses
+mwt	fuente energético renovable	source d'énergie renouvelable
+mwt	anemómetro de cazoleta	tasse anémomètre
+mwt	energía mareomotriz	énergie marémotrice
+mwt	sistema de monitoreo	Système de surveillance
+mwt	flujo axial	flux axial
+mwt	álabe del rotor	pale du rotor
+mwt	sistema híbrido eólico-fotovoltaico	système hybride éolien-photovoltaïque
+mwt	viento geostrófico	vent géostrophique
+mwt	aeromotor de eje horizontal	éolienne d'arbre horizontal
+mwt	radio del rotor	rayon du rotor
+mwt	energía mecánico rotacional	énergie mécanique de rotation
+mwt	turbulencia generar	générer des turbulences
+mwt	aerogenerador de velocidad variable	éolienne à vitesse variable
+mwt	rodamiento de pala	roulement de pale
+mwt	aerogenerador monopala	éolienne monopale
+mwt	dato anemométrico	données anémométrique
+mwt	generador de turbina eólica
+mwt	viento dominante	vent générateur à turbinevent dominant
+mwt	eje del generador	arbre du générateur
+mwt	planta de energía eólico	usine éolienne
+mwt	aerogenerador marino	éolienne offshore
+mwt	ruido aerodinámico	bruit aérodynamique
+mwt	túnel de viento	tunnel aérodynamique
+mwt	granja de viento	parc éolien
+mwt	turbina eólico maglev	éolienne maglev
+mwt	turbina flotante	turbine flottante
+mwt	molino multipala	moulin multipale
+mwt	rotor eólico	rotor éolien
+mwt	rotor del generador	rotor du générateur
+mwt	cizallamiento del viento	cisaillement du vent
+mwt	bombeo eólico	pompage éolien
+mwt	aerogenerador Darrieus	rotor de Darrieus
+mwt	aerogenerador Savonius	rotor de Savonius
+mwt	límite de Betz	limite de Betz
+mwt	rosa de el viento	rose de le vent
+mwt	distribución de Weibull	distribution de Weibull
+mwt	rotor bobinar	rotor de remontage
+mwt	megavatio eólico	mégawatt éolien
+mwt	energía del viento	énergie éolienne
+mwt	energía marino	énergie marémotrice
+mwt	energía eólico	énergie éolienne
+mwt	ángulo de paso	angle de terrain
+mwt	motor de inducción	moteur à induction
+mwt	caja de engranaje
+mwt	energía cinética	boîte de vitesseénergie cinétique
+mwt	combustible fósil	combustible fossile
+mwt	curva de potencia	courbe de puissance
+mwt	potencial eólico	potentiel éolien
+mwt	pala del rotor	pale du rotor
+mwt	subestación eléctrica	sous-station électrique
+mwt	potencia nominal	puissance nominale
+mwt	generación eólica	génération éolienne
+mwt	industria eólica	industrie éolienne
+mwt	generador electro-eólico	générateur électrico-éolien
+mwt	curva de eﬁciencia de Betz	courbe d'efficacité de Betz
+mwt	puente rectificador	pont rectificateur
+mwt	veleta de orientación	girouette

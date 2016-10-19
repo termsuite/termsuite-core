@@ -1,0 +1,128 @@
+swt	turbine	turbina
+swt	rotor	rotor
+swt	renewable	renovable
+swt	blade	aspa
+swt	transformer	transformador
+swt	generator	generador
+swt	wind	viento
+swt	slipstream	estela
+swt	upwind	contra el viento
+swt	velocity	velocidad
+swt	downwind	dirección del viento
+swt	windmill	aeromotor
+swt	axis	eje
+swt	shaft	eje
+swt	measurement	medición
+swt	mast	palo
+swt	propeller	hélice
+swt	hub	cubo
+swt	pylon	poste
+swt	nacelle	barquilla
+swt	vortex	torbellino
+swt	sustainability	sostenibilidad
+swt	annoyance	molestia
+swt	voltage	voltaje
+swt	tower	espira
+swt	hybrid	híbrido
+swt	turbulence	turbulencia
+swt	drag	arrastrar
+swt	aerodynamic	aerodinámico
+swt	aeroelastic	aeroelástico
+swt	aeronautical	aeronáutico
+swt	anemometer	anemómetro
+swt	biodiversity	biodiversidad
+swt	biomass	biomasa
+swt	decibel	decibel
+swt	electromagnetic	electromagnético
+swt	geothermal	geotérmico
+swt	hydroelectric	hidroeléctrico
+swt	hydrogen	hidrógeno
+swt	kilowatt	kilovatio
+swt	megawatt	megavatio
+swt	topography	topografía
+swt	airflow	flujo de aire
+swt	airfoil	superficie sustentadora
+swt	synchronous	sincrónico
+swt	three-bladed	tripale
+swt	two-bladed	bipala
+swt	multi-bladed	multipale
+mwt	wind farm	parque eólico
+mwt	wind power	energía eólica
+mwt	wind park	parque eólico
+mwt	wind power plant	planta de energía eólica
+mwt	wind direction	dirección del viento
+mwt	wind turbine	aeromotor
+mwt	wind energy	energía eólica
+mwt	wind speed	velocidad del viento
+mwt	renewable energy	energía renovable
+mwt	offshore wind	aeromotor marino
+mwt	energy development	desarrollo de la energía
+mwt	sound level	nivel de sonido
+mwt	turbine generator	generador de turbina
+mwt	wind energy potential	potencial eólico
+mwt	low frequency	baja frecuencia
+mwt	blade failure	rotura de la misma
+mwt	wind site	sitio de viento
+mwt	angle of attack	ángulo de ataque
+mwt	impact assessment	evaluación de impacto
+mwt	environmental impact	impacto ambiental
+mwt	wind project	proyecto eólico
+mwt	pitch angle	ángulo de paso
+mwt	rotor blade	pala de rotor
+mwt	vertical axis	eje vertical
+mwt	speed ratio	relación de velocidad
+mwt	wind generator	generador de viento
+mwt	power coefficient	coeficiente de potencia
+mwt	blade element	elemento de pala
+mwt	wind resource	recurso eólico
+mwt	reactive power	potencia reactiva
+mwt	control system	sistema de control
+mwt	horizontal axis	eje horizontal
+mwt	fossil fuel	combustibles fósiles
+mwt	power capacity	capacidad de potencia
+mwt	greenhouse gas	Gases de efecto invernadero
+mwt	wind velocity	velocidad del viento
+mwt	wind tunnel	túnel de viento
+mwt	power station	generador eléctrico
+mwt	power system	sistema de potencia
+mwt	average wind	viento medio
+mwt	high wind	fuerte viento
+mwt	large wind	gran viento
+mwt	small wind	viento ligero
+mwt	scale wind	viento escala
+mwt	hub height	altura de buje
+mwt	rotational speed	velocidad del aerogenerador
+mwt	energy storage	almacenamiento de energía
+mwt	electric power	energía eléctrica
+mwt	trail edge	borde de fuga
+mwt	blade tip	punta de la cuchilla
+mwt	rotor speed	velocidad del rotor
+mwt	air density	densidad del aire
+mwt	synchronous generator	generador síncrono
+mwt	maximum power	potencia máxima
+mwt	onshore wind	aeromotor terrestre
+mwt	output power	potencia de salida
+mwt	renewable source	fuente energético renovable
+mwt	rotor shaft	eje del rotor
+mwt	wind vane	veleta
+mwt	transmission system	sistema de transmisión
+mwt	Darrieus rotor	aerogenerador Darrieus
+mwt	Savonius rotor	sistema inercialaerogenerador Savonius
+mwt	rotor assembly	conjunto de rotor
+mwt	lateral angle	ángulo lateral
+mwt	wind angle	ángulo de viento
+mwt	offshore wind turbine	aeromotor marino
+mwt	onshore wind turbine	aeromotor terrestre
+mwt	domestic wind turbine	aeromotor doméstico
+mwt	wind system	sistema de viento
+mwt	rate power	potencia y de velocidad
+mwt	sustainable energy	energía sostenible
+mwt	vertical axis wind turbine	aeromotor de eje vertical
+mwt	horizontal axis wind turbine	aeromotor de eje horizontal
+mwt	wind industry	industria eólica
+mwt	power curve	curva de potencia
+mwt	noise sensitivity	sensibilidad al ruido
+mwt	carbon dioxide	dióxido de carbono
+mwt	energy conversion efficiency	eficiencia de conversión de energía
+mwt	angular position	posición angular
+mwt	drag coefficient	coeficiente de arrastre

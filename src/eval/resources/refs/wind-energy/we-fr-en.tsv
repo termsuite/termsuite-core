@@ -1,0 +1,126 @@
+swt	rotor	rotor
+swt	éolienne              	windmill
+swt	éolienne              	wind turbine
+swt	éolien	eolian
+swt	pale                  	blade
+swt	turbine               	turbine
+swt	dimensionnement       	sizing
+swt	moyeu                 	hub
+swt	calage                	timing
+swt	écoulement            	flow
+swt	générateur	generator
+swt	nacelle               	nacelle
+swt	stockage              	storage
+swt	raccordement          	connection
+swt	hélice                	propeller
+swt	vent	wind
+swt	capteur               	sensor
+swt	mât                   	mast
+swt	pylône                	pylon
+swt	implantation          	implantation
+swt	girouette	wind vane
+swt	arbre	shaft
+swt	portance              	bearing
+swt	transformateur        	transformer
+swt	nuisance	annoyance
+swt	tourbillon 	vortex
+swt	tour	tower
+swt	sillage 	slipstream
+swt	inertiel	inertial
+swt	aérodynamique	aerodynamic
+swt	mégawatt	megawatt
+swt	photovoltaïque	photovoltaic
+swt	aérogénérateur	wind turbine
+swt	biomasse	biomass
+swt	kilowatt	kilowatt
+swt	biogaz	biogas
+swt	hydroélectrique	hydroelectric
+swt	biodiversité	biodiversity
+swt	géothermie            	geothermal
+swt	électromagnétique	electromagnetic
+swt	électromécanique	electromechanical
+swt	hydroélectricité	hydropower
+swt	radioactif	radioactive
+swt	anémomètre	anemometer
+swt	aéronautique	aeronautical
+swt	hydraulique	hydraulic
+swt	météorologique	meteorological
+swt	kilowattheure	kilowatt hour
+swt	topographie           	topography
+swt	cartographie          	cartography
+swt	foisonnement          	expansion
+swt	cycloconvertisseur    	cycloconverter
+swt	synchrone	synchronous
+swt	bipale	two-bladed
+swt	tripale	three-bladed
+swt	multipale	multi-bladed
+mwt	énergie éolien	wind energy
+mwt	énergie renouvelable	renewable energy
+mwt	étude de impact	impact assessment
+mwt	face au vent 	upwind
+mwt	énergie électrique	electrical energy
+mwt	source renouvelable	renewable source
+mwt	stockage de énergie	energy storage
+mwt	stockage par pompage	pumped storage
+mwt	éolienne offshore	offshore wind
+mwt	éolienne industriel	industrial wind
+mwt	éolienne domestique	domestic wind
+mwt	éolienne terrestre	onshore wind
+mwt	production éolien	wind power generation
+mwt	éolienne à axe vertical	vertical axis wind turbine
+mwt	éolienne à axe horizontal	horizontal axis wind turbine
+mwt	vitesse de rotation	rotational speed
+mwt	turbine éolien	wind turbine
+mwt	système éolien	wind system
+mwt	potentiel éolien	wind potential
+mwt	gisement éolien	wind resource
+mwt	parc éolien	wind farm
+mwt	vitesse du vent	wind speed
+mwt	système de pompage	pumping system
+mwt	système de conversion	conversion system
+mwt	machine synchrone	synchronous machine
+mwt	puissance actif	active power
+mwt	puissance de référence	reference power
+mwt	puissance installer 	installed capacity
+mwt	puissance nominal	rated power
+mwt	puissance total	total power
+mwt	puissance maximal	maximum power
+mwt	puissance aérodynamique	aerodynamical power
+mwt	coefficient de puissance	power coefficient
+mwt	angle de calage	angle of wedging
+mwt	angle de incidence	angle of incidence
+mwt	angle de attaque	angle of attack
+mwt	calage de le pale	blade wedging
+mwt	champ de vitesse	velocity field
+mwt	stockage à court terme	short-term storage
+mwt	stockage à long terme	long-term storage
+mwt	stockage de électricité	electricity storage
+mwt	stockage inertiel	inertial storage
+mwt	système inertiel	inertial system
+mwt	rotor de Savonius	Savonius rotor
+mwt	rotor de Darrieus	Darrieus rotor
+mwt	rotor bobiner	winding rotor
+mwt	vent faible	light wind
+mwt	vent fort	strong wind
+mwt	vent moyen	mean wind
+mwt	moulin à vent	windmill
+mwt	réglage fréquence puissance	frequency power setting
+mwt	profil de pale	blade profile
+mwt	bout de pale	blade tip
+mwt	pied de pale	blade root
+mwt	angle de le pale	blade angle
+mwt	pertes par commutation 	switching losses
+mwt	pertes par conduction	conduction losses
+mwt	multiplicateur de vitesse	speed multiplier
+mwt	sillage hélicoïdal	helical wake
+mwt	gaz à effet de serre	greenhouse gas
+mwt	réseau électrique	mains
+mwt	tourbillon marginal	tip vortex
+mwt	production décentraliser	distributed generation
+mwt	centrale éolien	wind power plant
+mwt	centrale électrique	powerhouse
+mwt	arbre lent	output shaft
+mwt	arbre rapide	speed shaft
+mwt	matériau composite	composite material
+mwt	comportement aérodynamique	aerodynamic behaviour
+mwt	rose de le vent	compass

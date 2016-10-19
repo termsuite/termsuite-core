@@ -1,0 +1,140 @@
+swt	wireless	inalámbrico
+swt	application	aplicación
+swt	repeater	repetidor
+swt	frequency	frecuencia
+swt	channel	canal
+swt	signal	señal
+swt	cellular	celular
+swt	cell	célula
+swt	server	servidor
+swt	packet	paquete
+swt	traffic	tráfico
+swt	switch	conmutator
+swt	coverage	covertura
+swt	protocol	protocolo
+swt	node	nodo
+swt	subscriber	suscriptor
+swt	spectrum	espectro
+swt	antenna	antena
+swt	architecture	arquitectura
+swt	sensor	sensor
+swt	connection	conexión
+swt	connectivity	conectividad
+swt	deployment	despliegue
+swt	satellite	satélite
+swt	digital	numérico
+swt	speed	velocidad
+swt	receiver	receptor
+swt	provider	proveedor
+swt	carrier	aerolínea
+swt	router	router
+swt	modem	módem
+swt	proxy	proxy
+swt	buffer	buffer
+swt	jitter	jitter
+swt	authentication	autenticación
+swt	security	seguridad
+swt	key	clave
+swt	encryption	cifrado
+swt	datum	dato
+swt	bandwidth	ancho de banda
+swt	broadband	banda ancha
+swt	broadcast	emisión
+swt	bluetooth	bluetooth
+swt	handset	auricular
+swt	ethernet	ethernet
+swt	software	software
+swt	multicast	multicast
+swt	telecommunication	telecomunicación
+swt	multimedia	multimedia
+swt	multi-carrier	multi-portadora
+swt	smartphone	smartphone
+swt	telephony	telefonía
+swt	transmission	transmisión
+swt	electromagnetic	electromagnético
+swt	interference	interferencia
+swt	microcontroller	microcontrolador
+swt	microwave	microonda
+swt	infrastructure	infraestructura
+swt	internet	internet
+swt	interface	interfaz
+mwt	mobile phone	teléfono móvil
+mwt	mobile network	red móvil
+mwt	handheld device	dispositivo portátil
+mwt	mobile operator	operador de telefonía móvil
+mwt	mobile communication	comunicación móvil
+mwt	wireless internet	Internet inalámbrica
+mwt	wireless access	acceso inalámbrico
+mwt	wireless network	red inalámbrica
+mwt	wireless connection	conexión inalámbrica
+mwt	wireless technology	tecnología inalámbrica
+mwt	wireless link	enlace inalámbrico
+mwt	wireless advertising	publicidad inalámbrica
+mwt	wireless device	dispositivo inalámbrico
+mwt	wireless phone	teléfono inalámbrico
+mwt	user interface	interfaz usuario
+mwt	service center	centro de servicio
+mwt	internet access	acceso a Internet
+mwt	end user	usuario final
+mwt	third generation	tercera generación
+mwt	second generation	segunda generación
+mwt	mobile commerce	comercio móvil
+mwt	gateway node	nodo de pasarela
+mwt	handheld node	nodo de mano
+mwt	core network	red de núcleo
+mwt	sensor network	red de sensores
+mwt	area network	red de área
+mwt	transport network	red de transportes
+mwt	sensor node	nodo sensor
+mwt	spectrum allocation	asignación de espectro
+mwt	mobile terminal	terminal móvil
+mwt	base station	estación base
+mwt	mobile user	usuario móvil
+mwt	signal conditions	condiciones de la señal
+mwt	fraud detection	detección de fraude
+mwt	signal strength	intensidad de la señal
+mwt	satellite communication	comunicación por satélite
+mwt	mobile service	servicio móvil
+mwt	voice communication	comunicación de voz
+mwt	peer-to-peer networking	peer-to-peer
+mwt	incoming call	llamada entrante
+mwt	coaxial cable	cable coaxial
+mwt	short message service	sms
+mwt	ip address	dirección ip
+mwt	ip network	red ip
+mwt	ip telephony	telefonía ip
+mwt	gprs network	red gprs
+mwt	gsm network	red gsm
+mwt	gsm/gprs modem	módem gsm/gprs
+mwt	cdma system	sistema CDMA
+mwt	wlan system	sistema WLAN
+mwt	frequency allocation	asignación de frecuencias
+mwt	network architecture	arquitectura de red
+mwt	network coverage	cobertura de la red
+mwt	coverage area	área de cobertura
+mwt	real time	tiempo real
+mwt	white paper	papel blanco
+mwt	packet loss	paquete perdido
+mwt	web service	web servicio
+mwt	quality of service	Calidad de Servicio
+mwt	access point	punto de acceso
+mwt	fiber optic	fibra óptica
+mwt	end-to-end delay	de extremo a extremo de retardo
+mwt	level of service	nivel de servicio
+mwt	frequency band	banda de frecuencia
+mwt	encryption key	clave de cifrado
+mwt	key seed	semilla clave
+mwt	controller device	dispositivo controlador
+mwt	upstream supplier	proveedor de materias primas
+mwt	voice recognition	reconocimiento de voz
+mwt	text message	mensaje de texto
+mwt	network capacity	capacidad de la red
+mwt	ip	ip
+mwt	gprs	gprs
+mwt	gsm	gsm
+mwt	cdma	cdma
+mwt	wlan	wlan
+mwt	wap	wap
+mwt	umts	umts
+mwt	edge	edge
+mwt	usb	usb

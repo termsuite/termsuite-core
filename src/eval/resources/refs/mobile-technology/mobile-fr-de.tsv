@@ -1,0 +1,130 @@
+swt	serveur	server
+swt	paramètre	Parameter
+swt	congestion	Stau
+swt	codage	Verschlüsselung
+swt	synchronisation	Synchronisation
+swt	utilisateur	Benutzer
+swt	destinataire	Empfänger
+swt	protocole	Protokoll
+swt	plateforme	Plattform
+swt	dimensionnement	Sizing
+swt	acquittement	Freispruch
+swt	numérique	digital
+swt	paquet	Paket
+swt	spécification	Spezifikation
+swt	messagerie	Messaging
+swt	débit	Soll
+swt	noeud	Knoten
+swt	configuration	Konfiguration
+swt	architecture	Architektur
+swt	standard	Standard
+swt	émetteur	Sender
+swt	authentification	Beglaubigung
+swt	simulateur	Simulator
+swt	initialisation	Initialisierung
+swt	compatible	kompatibel
+swt	données	Daten
+swt	mémorisation	Auswendiglernen
+swt	verrouillage	Sperrung
+swt	raccordement	Anschluss
+swt	en-tête	Kopfzeile
+swt	déploiement	Einsatz
+swt	cryptage	Verschlüsselung
+swt	vibreur	Vibrator
+swt	roaming	wandernd
+swt	stockage	Lagerung
+swt	connectivité	Konnektivität
+swt	streaming	Streaming
+swt	routeur	Router
+swt	flux	fließen
+swt	trame	Schuss
+swt	antenne	Antenne
+swt	bluetooth	bluetooth
+swt	multistreaming	multistreaming
+swt	multimédia	multimedia
+swt	téléphonie	Telefonie
+swt	radiocommunication	Funk
+swt	télécommunication	Telekommunikations
+swt	géolocalisation	Geolocation
+swt	smartphone	Smartphone
+swt	datagramme	Datagramm
+swt	transmission	Übertragung
+swt	topologie	Topologie
+swt	transactionnel	Transaktions
+swt	internet	Internet
+swt	interface	Schnittstelle
+swt	infrarouge	infrarot
+swt	multiplexage 	Multiplexing
+mwt	communication mobile	Mobilkommunikation
+mwt	téléphone portable	handy
+mwt	schéma de codage	Kodierungsschema
+mwt	transmission de données	Übertragung von Daten
+mwt	niveau transactionnel	Transaktionsebene
+mwt	réseau sans fil	Wireless Network
+mwt	connexion sans fil	Wireless LAN
+mwt	appareil sans fil	Wireless-Gerät
+mwt	réseau mobile	Mobilfunknetz
+mwt	terminal mobile	mobiles Endgerät
+mwt	système embarquer	Embedded-System
+mwt	client mobile	Mobile Client
+mwt	clavier virtuel	Virtual Keyboard
+mwt	main libre	freie Hand
+mwt	message vocal	Sprachnachricht
+mwt	interface utilisateur	user interface
+mwt	centre de service	Servicezentrum
+mwt	station de base	Basisstation
+mwt	appel entrant	eingehenden Anruf
+mwt	perte de données	Data Loss
+mwt	qualité de service	Quality of Service
+mwt	point de accès	Zugangspunkt
+mwt	bande de fréquence	Band
+mwt	capacité du réseau	Netzwerkkapazität
+mwt	écran tactile	touch-screen
+mwt	carte sim	sIM-Karte
+mwt	message texte	SMS
+mwt	adresse ip	IP-Adresse
+mwt	accès à internet	Internetzugang
+mwt	diagramme de rayonnement	Abstrahlcharakteristik
+mwt	carte mémoire	Speicherkarte
+mwt	utilisateur final	Endverbraucher
+mwt	protocole de signalisation	Signalisierungsprotokoll
+mwt	clé privé	privaten Schlüssel
+mwt	clé publique	Public-Key
+mwt	temps réel	echtzeit
+mwt	bande passant	Bandbreite
+mwt	téléphonie mobile	Handy
+mwt	infrastructure du réseau	Netzwerk-Infrastruktur
+mwt	zone de couverture	Versorgungsgebiet
+mwt	charge du réseau	Netzwerklast
+mwt	dimensionnement de le ressource	Dimensionierung der Ressourcen
+mwt	onde radio	Radiowelle
+mwt	continuité de service	Kontinuität des Dienstes
+mwt	classe de services	Class-Service
+mwt	établissement de connexion	Verbindungsaufbau
+mwt	système de exploitation	betriebssystem
+mwt	taux de transfert	Übertragungsrate
+mwt	liaison radio	OTA
+mwt	transmission radio	Sendefunk
+mwt	opérateur téléphonique	Telefonistin
+mwt	service de messagerie	Kurier
+mwt	liaison synchrone	synchrone Verbindung
+mwt	erreur de transmission	Übertragungsfehler
+mwt	ressource radio	Funkressourcen
+mwt	débit utile	Durchsatz
+mwt	temps de réponse	Ansprechzeit
+mwt	application mobile	Handy
+mwt	gestion de mobilité	Mobilitätsmanagement
+mwt	code pin	PIN-Code
+mwt	e-mail	e-mail
+mwt	sms	sms
+mwt	mms	mms
+mwt	gprs	gprs
+mwt	gps	gps
+mwt	gsm	gsm
+mwt	umts	umts
+mwt	web	web
+mwt	edge	edge
+mwt	wap	wap
+mwt	mbit/s	mbit/s
+mwt	3g	3g
+mwt	usb	usb

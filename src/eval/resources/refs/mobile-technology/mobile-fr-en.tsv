@@ -1,0 +1,130 @@
+swt	serveur	server
+swt	paramètre	parameter
+swt	congestion	congestion
+swt	codage	coding
+swt	synchronisation	synchronization
+swt	utilisateur	user
+swt	destinataire	receiver
+swt	protocole	protocol
+swt	plateforme	platform
+swt	dimensionnement	sizing
+swt	acquittement	clearance
+swt	numérique	digital
+swt	paquet	packet
+swt	spécification	specification
+swt	messagerie	messaging
+swt	débit	debit
+swt	noeud	node
+swt	configuration	configuration
+swt	architecture	architecture
+swt	standard	standard
+swt	émetteur	transmitter
+swt	authentification	authentication
+swt	simulateur	simulator
+swt	initialisation	initialization
+swt	compatible	compatible
+swt	données	data
+swt	mémorisation	memorizing
+swt	verrouillage	locking
+swt	raccordement	connection
+swt	en-tête	header
+swt	déploiement	deployment
+swt	cryptage	encryption
+swt	vibreur	vibrator
+swt	roaming	roaming
+swt	stockage	storage
+swt	connectivité	connectivity
+swt	streaming	streaming
+swt	routeur	router
+swt	flux	stream
+swt	trame	weft
+swt	antenne	antenna
+swt	bluetooth	bluetooth
+swt	multistreaming	multistreaming
+swt	multimédia	multimedia
+swt	téléphonie	telephony
+swt	radiocommunication	radiocommunication
+swt	télécommunication	telecommunication
+swt	géolocalisation	geolocation
+swt	smartphone	smartphone
+swt	datagramme	datagram
+swt	transmission	trasmission
+swt	topologie	topology
+swt	transactionnel	transactional
+swt	internet	internet
+swt	interface	interface
+swt	infrarouge	infrared
+swt	multiplexage 	multiplexing
+mwt	communication mobile	mobile communication
+mwt	téléphone portable	mobile phone
+mwt	schéma de codage	coding scheme
+mwt	transmission de données	data transmission
+mwt	niveau transactionnel	transactional level
+mwt	réseau sans fil	wireless network
+mwt	connexion sans fil	wireless access
+mwt	appareil sans fil	wireless device
+mwt	réseau mobile	mobile network
+mwt	terminal mobile	handheld device
+mwt	système embarquer	embedded system
+mwt	client mobile	mobile client
+mwt	clavier virtuel	virtual keyboard
+mwt	main libre	handheld
+mwt	message vocal	voice message
+mwt	interface utilisateur	user interface
+mwt	centre de service	service center
+mwt	station de base	base station
+mwt	appel entrant	incoming call
+mwt	perte de données	data loss
+mwt	qualité de service	quality of service
+mwt	point de accès	access point
+mwt	bande de fréquence	frequency band
+mwt	capacité du réseau	network capacity
+mwt	écran tactile	touch screen
+mwt	carte sim	sim card
+mwt	message texte	short message service
+mwt	adresse ip	ip address
+mwt	accès à internet	internet access
+mwt	diagramme de rayonnement	radiation pattern
+mwt	carte mémoire	memory card
+mwt	utilisateur final	final user
+mwt	protocole de signalisation	signaling protocol
+mwt	clé privé	private key
+mwt	clé publique	public key
+mwt	temps réel	real time
+mwt	bande passant	bandwidth
+mwt	téléphonie mobile	mobile communication
+mwt	infrastructure du réseau	network structure
+mwt	zone de couverture	network area
+mwt	charge du réseau	network load
+mwt	dimensionnement de le ressource	resource dimensioning
+mwt	onde radio	radio wave
+mwt	continuité de service	continuity of service
+mwt	classe de services	service class
+mwt	établissement de connexion	connection establishing
+mwt	système de exploitation	operating system
+mwt	taux de transfert	transfer rate
+mwt	liaison radio	OTA
+mwt	transmission radio	radio transmission
+mwt	opérateur téléphonique	telephone operator
+mwt	service de messagerie	courier
+mwt	liaison synchrone	synchronous link
+mwt	erreur de transmission	transmission error
+mwt	ressource radio	radio resource
+mwt	débit utile	throughput
+mwt	temps de réponse	response time
+mwt	application mobile	mobile application
+mwt	gestion de mobilité	mobility management
+mwt	code pin	pin code
+mwt	e-mail	e-mail
+mwt	sms	sms
+mwt	mms	mms
+mwt	gprs	gprs
+mwt	gps	gps
+mwt	gsm	gsm
+mwt	umts	umts
+mwt	web	web
+mwt	edge	edge
+mwt	wap	wap
+mwt	mbit/s	mbit/s
+mwt	3g	3g
+mwt	usb	usb

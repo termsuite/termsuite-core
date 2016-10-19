@@ -1,0 +1,131 @@
+swt	Aerodynamik	aérodynamique
+swt	Anergie	Anergy
+swt	Anode	anode
+swt	Asynchronmaschine	asynchrone
+swt	Bahnstrom	puissance de traction
+swt	Blindleistung	puissance réactive
+swt	Blindstrom	courant réactif
+swt	Drehstrom	triphasé
+swt	Dreiphasenwechselstrom	triphasé
+swt	Effektivwert	rms
+swt	Exergie	Exergy
+swt	Fallwind	Downdraft
+swt	Impedanz	impédance
+swt	Influenz	induction
+swt	Isolator	isolant
+swt	Kommutator
+swt	Kathode	cathode
+swt	Konvektion	convection
+swt	Nennleistung	Puissance
+swt	Neutralleiter	neutre
+swt	Nutzenergie	énergie utile
+swt	Ökostrom	L'énergie verte
+swt	Repowering	remotorisation
+swt	Rotor	rotor
+swt	Ständerstrom	courant stator
+swt	Stromstärke	intensité de courant
+swt	Supraleitung	supraconductivité
+swt	Synchronmaschine	Machine synchrone
+swt	Triebstrang	Entrainement
+swt	Umformer	convertisseur
+swt	Umrichter	onduleur
+swt	Wind	vent
+swt	energieeffizient	économe en énergie
+swt	leitfähig	conducteur
+swt	netzgekoppelt	raccordé au réseau
+swt	sinusförmig	sinusoïdale
+swt	stall-gesteuert	caler contrôlée
+swt	tangential	tangentiel
+swt	windbedingt	vent causé
+swt	stromdurchflossen	courant circule à travers
+swt	induktiv	inductif
+swt	elektrolytisch	électrolytique
+swt	Transformator	transformateur
+swt	Induktivität	inductance
+swt	Anemometer	anémomètre
+swt	Elektrodynamik	électrodynamique
+swt	Elektroenergiesystem	Système d'alimentation électrique
+swt	Elektrolyt	électrolyte
+swt	Elektrophil	electrophile
+swt	Dielektrikum	diélectrique
+swt	Diode	diode
+swt	Dipol	dipôle
+swt	regenerativ	renouvelable
+mwt	Windturbine	éolienne
+mwt	Bruttostromerzeugung	production brute d'électricité
+mwt	Drehachse	axe de rotation
+mwt	Drehimpuls	moment angulaire
+mwt	Energieeffizienz	Consommation d'énergie
+mwt	Energiequelle	Source d'énergie
+mwt	Energiestatistik	Statistiques de l'énergie
+mwt	Energieversorgung 	L'approvisionnement en énergie
+mwt	Impulserhaltung	conservation du moment
+mwt	Leistungsbeiwert	coefficient de puissance
+mwt	Nabenhöhe	hauteur du moyeu
+mwt	Netzausbau	L'expansion du réseau
+mwt	Primärenergie	énergie primaire
+mwt	Rotationsenergie	énergie de rotation
+mwt	Rotorblatt	pale
+mwt	Rotorfläche	surface du rotor
+mwt	Rotorwelle	arbre rotor
+mwt	Stromeinspeisung	injection de courant
+mwt	Stromdichte	densité de courant
+mwt	Stromerzeugung	la production d'électricité
+mwt	Stromnetz	système d'alimentation
+mwt	Strömungsenergie	flux d'énergie
+mwt	Synchrongenerator	générateur synchrone
+mwt	Offshore-Umspannwerk	Station offshore
+mwt	Sekundärenergie	énergie secondaire
+mwt	Verlustleistung	Puissance dissipée
+mwt	Volllaststunde	Pleine heure de charge
+mwt	Windenergieanlage	éolienne
+mwt	Windenergienutzung	L'énergie éolienne
+mwt	Windgenerator	générateur éolien
+mwt	Windkraftleistung	L'énergie éolienne
+mwt	Windpark	parc éolien
+mwt	Windrad	éolienne
+mwt	Wirkleistung	puissance active
+mwt	abgegeben Leistung	puissance donnée
+mwt	aufgewandt Energie	énergie dépensée
+mwt	elastisch Stoß	choc élastique
+mwt	elektrisch Ladung	charge électrique
+mwt	energetisch Amortisation	récupération d'énergie
+mwt	energetisch Wirkungsgrad	l'efficacité énergétique
+mwt	erneuerbar Energie	énergies renouvelables
+mwt	groß Drehzahlstufe	grand niveau de vitesse
+mwt	harmonisch Schwingung	oscillation harmonique
+mwt	induziert Spannung	tension induite
+mwt	installiert Windkraftleistung	capacité d'énergie éolienne installée
+mwt	konstant Drehzahl	vitesse constante
+mwt	magnetische Feldstärke	l'intensité de champ magnétique
+mwt	nachhaltig Energieversorgung	approvisionnement énergétique durable
+mwt	pulsierend Gleichstrom	pulsation DC
+mwt	polumschaltbar Asynchrongenerator	pôles commutables induction
+mwt	potentiell Energie	énergie potentielle
+mwt	schwimmend Windkraftanlage	éolienne flottante
+mwt	starr Körper	corps rigide
+mwt	symmetrisch Bepfeilung	symétrique Bepfeilung
+mwt	thermisch Wirkungsgrad	rendement thermique
+mwt	variabel Drehzahl	vitesse variable
+mwt	übertragen Leistung	transmettre de la puissance
+mwt	zuverlässigkeitsorientiert Instandhaltung	maintenance basée sur la fiabilité
+mwt	Antrieb d Verdichter	Compresseur lecteur D
+mwt	Beeinträchtigung d Landschaftsbild	Dépréciation de payasage
+mwt	Eingriffsstörung d Verzahnung	Maillage dents d'interférence
+mwt	Leistung d Windkraftanlage	Turbine éolienne
+mwt	Wirkungsgrad d Stromerzeugung	la production d'énergie sur l'efficacité
+mwt	Überschreitung d Immissionsrichtwert	immission dépassé
+mwt	Gewinnung elektrisch Energie	Obtention d'énergie électrique
+mwt	Integration erneuerbar Energie	Intégration des énergies renouvelables
+mwt	Netzintegration von Windenergie	Grille Intégration de l'énergie éolienne
+mwt	Steigerung d Energieeffizienz	accroître l'efficacité énergétique
+mwt	Übertragung elektrisch Energie	Transférer de l'énergie électrique
+mwt	Umformung elektrisch Energie	Formant l'énergie électrique
+mwt	Anlage mit Stallregelung	Système avec commande de décrochage
+mwt	Betrieb durch Fernsteuerung	Opération avec la télécommande
+mwt	Bindungsenergie pro Nukleon	Énergie de liaison par nucléon
+mwt	Geräusch von Windenergieanlage	son de éolienne
+mwt	Immission von Windenergieanlage	La sensibilité de l'éolienne
+mwt	Strom aus Windenergie	Électricité à partir de l'énergie éolienne
+mwt	Windenergienutzung auf See	Vent consommation d'énergie à la mer
+mwt	Wirkungsgrad im Teillastbereich	Rendement à charge partielle

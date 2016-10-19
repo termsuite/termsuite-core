@@ -1,0 +1,130 @@
+swt	serveur	servidor
+swt	paramètre	parámetro
+swt	congestion	congestión
+swt	codage	codificación
+swt	synchronisation	sincronización
+swt	utilisateur	usuario
+swt	destinataire	destinatario
+swt	protocole	protocolo
+swt	plateforme	plataforma
+swt	dimensionnement	dimensionamiento
+swt	acquittement	absolución
+swt	numérique	numérico
+swt	paquet	paquete
+swt	spécification	especificación
+swt	messagerie	mensajería
+swt	débit	débito
+swt	noeud	nodo
+swt	configuration	configuración
+swt	architecture	arquitectura
+swt	standard	estándar
+swt	émetteur	transmisor
+swt	authentification	autenticación
+swt	simulateur	simulador
+swt	initialisation	inicialización
+swt	compatible	compatible
+swt	données	datos
+swt	mémorisation	memorización
+swt	verrouillage	cierre
+swt	raccordement	conexión
+swt	en-tête	encabezado
+swt	déploiement	despliegue
+swt	cryptage	codificación
+swt	vibreur	vibrador
+swt	roaming	roaming
+swt	stockage	almacenamiento
+swt	connectivité	conectividad
+swt	streaming	streaming
+swt	routeur	router
+swt	flux	flujo
+swt	trame	trama
+swt	antenne	antena
+swt	bluetooth	bluetooth
+swt	multistreaming	multistreaming
+swt	multimédia	multimedia
+swt	téléphonie	telefonía
+swt	radiocommunication	Radiocomunicacion
+swt	télécommunication	telecomunicación
+swt	géolocalisation	geolocalización
+swt	smartphone	smartphone
+swt	datagramme	datagrama
+swt	transmission	transmisión
+swt	topologie	Topología
+swt	transactionnel	transaccional
+swt	internet	internet
+swt	interface	interfaz
+swt	infrarouge	infrarrojo
+swt	multiplexage 	multiplexación
+mwt	communication mobile	comunicación móvil
+mwt	téléphone portable	terminal móvil
+mwt	schéma de codage	esquema de codificación
+mwt	transmission de données	transmisión de datos
+mwt	niveau transactionnel	nivel transaccional
+mwt	réseau sans fil	Red inalámbrica
+mwt	connexion sans fil	LAN inalámbrico
+mwt	appareil sans fil	dispositivo inalámbrico
+mwt	réseau mobile	red móvil
+mwt	terminal mobile	terminal móvil
+mwt	système embarquer	sistema embebido
+mwt	client mobile	cliente móvil
+mwt	clavier virtuel	teclado Virtual
+mwt	main libre	mano libre
+mwt	message vocal	mensaje de voz
+mwt	interface utilisateur	interfaz usuario
+mwt	centre de service	centro de servicio
+mwt	station de base	estación base
+mwt	appel entrant	llamada entrante
+mwt	perte de données	Pérdida de Datos
+mwt	qualité de service	Calidad de Servicio
+mwt	point de accès	punto de acceso
+mwt	bande de fréquence	banda de frecuencia
+mwt	capacité du réseau	capacidad de la red
+mwt	écran tactile	pantalla táctil
+mwt	carte sim	tarjeta sim
+mwt	message texte	mensaje de texto
+mwt	adresse ip	dirección ip
+mwt	accès à internet	acceso a Internet
+mwt	diagramme de rayonnement	patrón de radiación
+mwt	carte mémoire	tarjeta de memoria
+mwt	utilisateur final	usuario final
+mwt	protocole de signalisation	protocolo de señalización
+mwt	clé privé	clave privada
+mwt	clé publique	clave pública
+mwt	temps réel	tiempo real
+mwt	bande passant	ancho de banda
+mwt	téléphonie mobile	telefonía móvil
+mwt	infrastructure du réseau	infraestructura de red
+mwt	zone de couverture	área de cobertura
+mwt	charge du réseau	carga de la red
+mwt	dimensionnement de le ressource	dimensionamiento de los recursos
+mwt	onde radio	ondas de radio
+mwt	continuité de service	continuidad del servicio
+mwt	classe de services	servicios de clase
+mwt	établissement de connexion	establecimiento de conexión
+mwt	système de exploitation	sistema operativo
+mwt	taux de transfert	velocidad de transferencia
+mwt	liaison radio	OTA
+mwt	transmission radio	transmisión radio
+mwt	opérateur téléphonique	operador telefónico
+mwt	service de messagerie	mensajero
+mwt	liaison synchrone	enlace síncrono
+mwt	erreur de transmission	error de transmisión
+mwt	ressource radio	recursos radio
+mwt	débit utile	rendimiento
+mwt	temps de réponse	Tiempo de respuesta
+mwt	application mobile	aplicación móvil
+mwt	gestion de mobilité	gestión de movilidad
+mwt	code pin	código pin
+mwt	e-mail	e-mail
+mwt	sms	sms
+mwt	mms	mms
+mwt	gprs	gprs
+mwt	gps	gps
+mwt	gsm	gsm
+mwt	umts	umts
+mwt	web	web
+mwt	edge	edge
+mwt	wap	wap
+mwt	mbit/s	mbit/s
+mwt	3g	3g
+mwt	usb	usb
