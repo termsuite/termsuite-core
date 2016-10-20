@@ -37,6 +37,7 @@ import com.google.common.collect.Multimap;
 import eu.project.ttc.history.TermHistory;
 import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.models.Term;
+import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.VariationType;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.resources.PrefixTree;
@@ -68,18 +69,19 @@ public class PrefixSplitter extends JCasAnnotator_ImplBase {
 	
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
-		LOGGER.info("Starting {} for TermIndex {}", TASK_NAME, termIndexResource.getTermIndex().getName());
+		TermIndex termIndex = termIndexResource.getTermIndex();
+		LOGGER.info("Starting {} for TermIndex {}", TASK_NAME, termIndex.getName());
 		Multimap<String, Term> lemmaIndex = HashMultimap.create();
 		int nb = 0;
 		String prefixExtension, lemma, pref;
-		for(Term swt:termIndexResource.getTermIndex().getTerms()) {
+		for(Term swt:termIndex.getTerms()) {
 			if(!swt.isSingleWord())
 				continue;
 			else {
 				lemmaIndex.put(swt.getLemma(), swt);
 			}
 		}
-		for(Term swt:termIndexResource.getTermIndex().getTerms()) {
+		for(Term swt:termIndex.getTerms()) {
 			if(!swt.isSingleWord())
 				continue;
 
@@ -98,7 +100,7 @@ public class PrefixSplitter extends JCasAnnotator_ImplBase {
 					} else {
 						for(Term target:lemmaIndex.get(prefixExtension)) {
 							watch(swt, target);
-							swt.addTermVariation(target, VariationType.IS_PREFIX_OF, TermSuiteConstants.EMPTY_STRING);
+							termIndex.addTermVariation(swt, target, VariationType.IS_PREFIX_OF, TermSuiteConstants.EMPTY_STRING);
 						}
 					}
 				}
@@ -107,7 +109,7 @@ public class PrefixSplitter extends JCasAnnotator_ImplBase {
 		}
 		LOGGER.debug("Number of words with prefix composition: {} out of {}", 
 				nb, 
-				termIndexResource.getTermIndex().getWords().size());
+				termIndex.getWords().size());
 	}
 
 	private void watch(Term swt, Term target) {

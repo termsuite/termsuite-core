@@ -121,23 +121,23 @@ public class GraphicalVariantGathererSpec {
 	@Test
 	public void testCaseInsensitive() throws  Exception {
 		makeAE(Lang.FR, 1.0f).collectionProcessComplete();
-		assertThat(this.abcdefghijkl.getBases()).hasSize(1)
+		assertThat(termIndex.getInboundTermVariations(this.abcdefghijkl)).hasSize(1)
 		.extracting("base")
 		.contains(this.abcdefghijklCapped);
-		assertThat(this.abcdefghijkl.getVariations()).hasSize(0);
+		assertThat(termIndex.getOutboundTermVariations(this.abcdefghijkl)).hasSize(1);
 		
-		assertThat(this.abcdefghijklCapped.getVariations())
+		assertThat(termIndex.getOutboundTermVariations(this.abcdefghijklCapped))
 			.hasSize(1)
 			.extracting("variant")
 			.contains(this.abcdefghijkl);
-		assertThat(this.abcdefghijklCapped.getBases()).hasSize(0);
+		assertThat(termIndex.getInboundTermVariations(this.abcdefghijklCapped)).hasSize(1);
 	}
 
 
 	@Test
 	public void testWithDiacritics() throws AnalysisEngineProcessException, Exception {
 		makeAE(Lang.FR, 1.0f).collectionProcessComplete();
-		assertThat(this.tetetete.getVariations())
+		assertThat(termIndex.getOutboundTermVariations(this.tetetete))
 			.hasSize(1)
 			.extracting("variationType", "variant")
 			.contains(tuple(VariationType.GRAPHICAL, this.teteteteAccent));
@@ -146,12 +146,12 @@ public class GraphicalVariantGathererSpec {
 	@Test
 	public void testWith0_9() throws AnalysisEngineProcessException, Exception {
 		makeAE(Lang.FR, 0.9f).collectionProcessComplete();
-		assertThat(this.abcdefghijklCapped.getVariations())
+		assertThat(termIndex.getOutboundTermVariations(this.abcdefghijklCapped))
 			.hasSize(2)
 			.extracting("variant")
 			.contains(this.abcdefghijkl, this.abcdefghijkx);
 		
-		assertThat(this.tetetete.getVariations())
+		assertThat(termIndex.getOutboundTermVariations(this.tetetete))
 			.hasSize(1)
 			.extracting("variationType", "variant")
 			.contains(
@@ -163,12 +163,12 @@ public class GraphicalVariantGathererSpec {
 	@Test
 	public void testWith0_8() throws AnalysisEngineProcessException, Exception {
 		makeAE(Lang.FR, 0.8f).collectionProcessComplete();
-		assertThat(this.abcdefghijklCapped.getVariations())
+		assertThat(termIndex.getOutboundTermVariations(this.abcdefghijklCapped))
 			.hasSize(2)
 			.extracting("variant")
 			.contains(this.abcdefghijkl, this.abcdefghijkx);
 		
-		assertThat(this.tetetete.getVariations())
+		assertThat(termIndex.getOutboundTermVariations(this.tetetete))
 			.hasSize(2)
 			.extracting("variationType", "variant")
 			.contains(

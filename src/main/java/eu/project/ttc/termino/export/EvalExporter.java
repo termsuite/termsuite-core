@@ -28,7 +28,7 @@ public class EvalExporter {
 		try {
 			for(Term t: termIndex.getTerms()) {
 				if(this.withVariants) {
-					for (TermVariation v : t.getVariations())
+					for (TermVariation v : termIndex.getOutboundTermVariations(t))
 							writer.write(v.getVariant().getGroupingKey() + "#");
 				}
 				writer.write(t.getGroupingKey());

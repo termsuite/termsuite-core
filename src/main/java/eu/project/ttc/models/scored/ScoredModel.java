@@ -47,9 +47,9 @@ public class ScoredModel {
 	public void importTermIndex(TermIndex termIndex) {
 		this.terms = Lists.newLinkedList();
 		for(Term t:termIndex.getTerms()) {
-			List<ScoredVariation> scoredVariations  = Lists.newArrayListWithExpectedSize(t.getVariations().size());
+			List<ScoredVariation> scoredVariations  = Lists.newArrayListWithExpectedSize(termIndex.getOutboundTermVariations(t).size());
 			ScoredTerm st = getAdapter(t);
-			for(TermVariation tv:t.getVariations()) {
+			for(TermVariation tv:termIndex.getOutboundTermVariations(t)) {
 				ScoredVariation stv = new ScoredVariation(this, tv);
 				scoredVariations.add(stv);
 			}

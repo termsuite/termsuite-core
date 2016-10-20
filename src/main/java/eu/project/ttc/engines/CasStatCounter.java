@@ -175,11 +175,12 @@ public class CasStatCounter extends JCasAnnotator_ImplBase {
 		int nbGraphicalVariants = 0;
 		int nbOccurrences = 0;
 		int nbPrimaryOccOccurrences = 0;
-		TermIndex tIndex = termIndexResource.getTermIndex();
+		TermIndex termIndex = termIndexResource.getTermIndex();
+		TermIndex tIndex = termIndex;
 		for(Term t:tIndex.getTerms()) {
-			nbMorphologicalVariants+=Iterables.size(t.getVariations(VariationType.MORPHOLOGICAL));
-			nbSyntacticVariants+=Iterables.size(t.getVariations(VariationType.SYNTACTICAL));
-			nbGraphicalVariants+=Iterables.size(t.getVariations(VariationType.GRAPHICAL));
+			nbMorphologicalVariants+=Iterables.size(termIndex.getOutboundTermVariations(t,VariationType.MORPHOLOGICAL));
+			nbSyntacticVariants+=Iterables.size(termIndex.getOutboundTermVariations(t,VariationType.SYNTACTICAL));
+			nbGraphicalVariants+=Iterables.size(termIndex.getOutboundTermVariations(t,VariationType.GRAPHICAL));
 			nbOccurrences+=t.getOccurrences().size();
 			for(TermOccurrence o:t.getOccurrences()) {
 				if(o.isPrimaryOccurrence())

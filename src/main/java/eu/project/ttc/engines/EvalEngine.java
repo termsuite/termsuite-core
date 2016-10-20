@@ -51,7 +51,7 @@ import com.google.common.collect.Sets;
 
 import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.models.Term;
-import eu.project.ttc.models.VariationPath;
+import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.resources.EvalTrace;
 import eu.project.ttc.resources.EvalTrace.RecPoint;
 import eu.project.ttc.resources.ReferenceTermList;
@@ -155,7 +155,7 @@ public class EvalEngine  extends JCasAnnotator_ImplBase {
 			try {
 				int numVariationPaths = 0;
 				for(Term lcTerm:termIndexResource.getTermIndex().getTerms())
-					numVariationPaths += lcTerm.getVariationPaths(10).size();
+					numVariationPaths += termIndexResource.getTermIndex().getOutboundTermVariations(lcTerm).size();
 				PrintStream stream = new PrintStream(outputLogFile);
 				stream.println(HORIZONTAL_RULE);
 				if(!customLogHeaderString.isEmpty())
@@ -331,9 +331,8 @@ public class EvalEngine  extends JCasAnnotator_ImplBase {
 			
 		Set<Term> lc = Sets.newHashSet();
 		lc.add(lcTerm);
-		for(VariationPath path:lcTerm.getVariationPaths(10))
-			if(!path.isCycle())
-					lc.add(path.getVariant());
+		for(TermVariation tv:termIndexResource.getTermIndex().getOutboundTermVariations(lcTerm))
+				lc.add(tv.getVariant());
 		
 		
 		if(LOGGER.isTraceEnabled()) {

@@ -48,7 +48,7 @@ public class VariationExporter {
 		try {
 			Multimap<Term,TermVariation> acceptedVariations = HashMultimap.create();
 			for(Term t:termIndex.getTerms()) {
-				for(TermVariation v:t.getVariations()) {
+				for(TermVariation v:termIndex.getOutboundTermVariations(t)) {
 					if(this.variationTypes.isEmpty()
 							|| this.variationTypes.contains(v.getVariationType()))
 						acceptedVariations.put(t, v);

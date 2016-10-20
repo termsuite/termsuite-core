@@ -31,7 +31,6 @@ import org.apache.commons.lang3.mutable.MutableInt;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Objects;
-import com.google.common.base.Preconditions;
 import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.Iterables;
 import com.google.common.collect.Lists;
@@ -52,31 +51,12 @@ public class ContextVector {
 	private List<Entry> _sortedEntries = null;
 	private int totalCooccurrences = 0;
 
-	private boolean useTermClasses = false;
-	
 	private Term term;
 	
 	/**
 	 * Default constructor for {@link ContextVector}. Must be used if no normalization is required.
 	 */
 	public ContextVector() {
-	}
-	
-	/**
-	 * 
-	 * Construct a context vector with a back reference to its owner term.
-	 * The parent term is useful for normalization.
-	 * 
-	 * @see ContextVector#toAssocRateVector(CrossTable, AssociationRate, boolean)
-	 * @param term
-	 * 			the owner term
-	 * @param useTermClasses
-	 * 			if <code>true</code>, builds this context vector with term 
-	 * 			classes instead of terms 
-	 */
-	public ContextVector(Term term, boolean useTermClasses) {
-		this(term);
-		this.useTermClasses = useTermClasses;
 	}
 
 	
@@ -100,7 +80,7 @@ public class ContextVector {
 	}
 
 	public void addCooccurrence(TermOccurrence occ) {
-		Term term2 = getTermToAdd(occ.getTerm());
+		Term term2 = occ.getTerm();
 		if(!entries.containsKey(term2))
 			entries.put(term2, new Entry(term2));
 		entries.get(term2).increment();
@@ -108,18 +88,8 @@ public class ContextVector {
 		setDirty();
 	}
 
-	private Term getTermToAdd(Term t) {
-		Term termToAdd = t;
-		if(this.useTermClasses) {
-			Preconditions.checkState(termToAdd.getTermClass() != null, MSG_TERM_CLASS_NULL);
-			termToAdd = termToAdd.getTermClass().getHead();
-		}
-		return termToAdd;
-	}
-	
-
 	public void addEntry(Term coTerm, int nbCooccs, double assocRate) {
-		Term termToAdd = getTermToAdd(coTerm);
+		Term termToAdd = coTerm;
 		
 		if(entries.containsKey(termToAdd))
 			this.totalCooccurrences -= entries.get(termToAdd).getNbCooccs();
@@ -129,7 +99,7 @@ public class ContextVector {
 	}
 	
 	public void removeCoTerm(Term term) {
-		Term termToAdd = getTermToAdd(term);
+		Term termToAdd = term;
 		if(this.entries.containsKey(termToAdd)) {
 			Entry e = this.entries.remove(termToAdd);
 			this.totalCooccurrences -= e.getNbCooccs();

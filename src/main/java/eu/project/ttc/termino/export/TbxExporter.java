@@ -84,7 +84,7 @@ public class TbxExporter {
 			try {
 				for(Term t: traverser.toList(termIndex)) {
 					addTermEntry(t, false);
-					for(TermVariation v:t.getVariations())
+					for(TermVariation v:termIndex.getOutboundTermVariations(t))
 						addTermEntry(v.getVariant(), true);
 				}
 				exportTBXDocument();
@@ -221,10 +221,10 @@ public class TbxExporter {
 		langSet.setAttribute("xml:lang", this.termIndex.getLang().getCode());
 		termEntry.appendChild(langSet);
 
-		for (TermVariation variation : term.getBases()) 
+		for (TermVariation variation : termIndex.getInboundTermVariations(term)) 
 			this.addTermBase(langSet, variation.getBase().getGroupingKey(), null);
 
-		for (TermVariation variation : term.getVariations()) {
+		for (TermVariation variation : termIndex.getOutboundTermVariations(term)) {
 			this.addTermVariant(langSet, String.format("langset-%d", variation.getVariant().getId()),
 					variation.getVariant().getGroupingKey());
 		}

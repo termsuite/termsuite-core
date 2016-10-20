@@ -73,7 +73,7 @@ public class ScoredTerm extends ScoredTermOrVariant {
 	public double getTermIndependanceScore() {
 		if(independance == -1) {
 			Collection<TermOccurrence> occs = Lists.newLinkedList(getTerm().getOccurrences());
-			for(TermVariation tv:getTerm().getVariations()) {
+			for(TermVariation tv:scoredModel.getTermIndex().getOutboundTermVariations(getTerm())) {
 				TermOccurrenceUtils.removeOverlaps(tv.getVariant().getOccurrences(), occs);
 			}
 			for(Term ext:getTerm().getExtensions()) {

@@ -115,8 +115,8 @@ public class JsonTermIndexIOSpec {
 				.addOccurrence(14, 20, doc2, "coveredText 2")
 				.setSpecificity(2.2)
 				.createAndAddToIndex();
-		term1.addTermVariation(term2, VariationType.SYNTACTICAL, "variationRule1");
-		term1.addTermVariation(term2, VariationType.GRAPHICAL, 0.956d);
+		termIndex.addTermVariation(term1, term2, VariationType.SYNTACTICAL, "variationRule1");
+		termIndex.addTermVariation(term1, term2, VariationType.GRAPHICAL, 0.956d);
 		
 		// generate context vectors
 		ContextVector v = new ContextVector(term1);
@@ -131,7 +131,7 @@ public class JsonTermIndexIOSpec {
 	
 	@Test
 	public void testSaveLoadReturnWithNoVariant() throws IOException {
-		term1.removeTermVariation(term1.getVariations(VariationType.SYNTACTICAL).iterator().next());
+		termIndex.removeTermVariation(termIndex.getOutboundTermVariations(term1, VariationType.SYNTACTICAL).iterator().next());
 		StringWriter writer = new StringWriter();
 		JsonTermIndexIO.save(writer, termIndex, new JsonOptions().withContexts(true).withOccurrences(true));
 		String string = writer.toString();
@@ -154,8 +154,8 @@ public class JsonTermIndexIOSpec {
 		for(Term t:termIndex.getTerms()) {
 			Term t2 = termIndex2.getTermByGroupingKey(t.getGroupingKey());
 			assertThat(t2.getOccurrences()).hasSameElementsAs(t.getOccurrences());
-			assertThat(t2.getVariations()).hasSameElementsAs(t.getVariations());
-			assertThat(t2.getBases()).hasSameElementsAs(t.getBases());
+			assertThat(termIndex2.getOutboundTermVariations(t2)).hasSameElementsAs(termIndex.getOutboundTermVariations(t));
+			assertThat(termIndex2.getInboundTermVariations(t2)).hasSameElementsAs(termIndex.getInboundTermVariations(t));
 			assertThat(t2.getForms()).hasSameElementsAs(t.getForms());
 			assertThat(t2.getFrequency()).isEqualTo(t.getFrequency());
 			assertThat(t2.getSpecificity()).isEqualTo(t.getSpecificity());
@@ -230,9 +230,9 @@ public class JsonTermIndexIOSpec {
 		assertThat(t1.getFrequencyNorm()).isCloseTo(0.123d, offset(0.000001d));
 		assertThat(t1.getGeneralFrequencyNorm()).isCloseTo(0.025d, offset(0.000001d));
 		assertThat(t1.getFrequency()).isEqualTo(6);
-		assertThat(t1.getVariations(VariationType.GRAPHICAL)).extracting("variant").containsOnly(t2);
-		assertThat(t1.getVariations(VariationType.SYNTACTICAL)).hasSize(0);
-		assertThat(t1.getBases())
+		assertThat(termIndex.getOutboundTermVariations(t1, VariationType.GRAPHICAL)).extracting("variant").containsOnly(t2);
+		assertThat(termIndex.getOutboundTermVariations(t1, VariationType.SYNTACTICAL)).hasSize(0);
+		assertThat(termIndex.getInboundTermVariations(t1))
 			.hasSize(2)
 			.extracting("base")
 			.containsOnly(t2, t3);	
