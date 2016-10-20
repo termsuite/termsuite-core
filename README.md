@@ -26,7 +26,7 @@ The jar will then be found under ./build/libs.
 <dependency>
   <groupId>fr.univ-nantes.termsuite</groupId>
   <artifactId>termsuite-core</artifactId>
-  <version>2.3</version>
+  <version>2.3.3</version>
 </dependency>
 
 ~~~
