@@ -255,18 +255,8 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 		checkFrequency(source);
 		checkFrequency(target);
 		
-//		/*
-//		 * Reverse the variation when target frequency is
-//		 * bigger than source frequency
-//		 */
-//		if(baseTargetComparator.compare(source, target) > 0) {
-//			// swaps terms, sets the most frequent  and shortest as the source
-//			Term aux = source;
-//			source = target;
-//			target = aux;
-//		}
-		
-		TermVariation tv = source.addTermVariation(
+		TermVariation tv = termIndexResource.getTermIndex().addTermVariation(
+				source,
 				target, 
 				matchingRule.getName().startsWith(M_PREFIX) ? VariationType.MORPHOLOGICAL : VariationType.SYNTACTICAL,
 				matchingRule.getName());
@@ -297,15 +287,5 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 	public void process(JCas cas) throws AnalysisEngineProcessException {
 		// nothing to do at cas level
 	}
-	
-	
-//	private static Comparator<Term> baseTargetComparator = new Comparator<Term>() {
-//		public int compare(Term a, Term b) {
-//		     return ComparisonChain.start()
-//		         .compare(b.getFrequency(), a.getFrequency())
-//		         .compare(a.getWords().size(), b.getWords().size())
-//		         .result();
-//		   }
-//	};
 	
 }

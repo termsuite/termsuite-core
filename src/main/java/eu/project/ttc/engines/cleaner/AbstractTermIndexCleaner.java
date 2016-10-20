@@ -133,7 +133,7 @@ public abstract class AbstractTermIndexCleaner extends JCasAnnotator_ImplBase {
 				current = it.next();
 				// checks that this is no variant of a kept term
 				currentBases = Sets.newHashSet();
-				for(TermVariation v:current.getBases()) 
+				for(TermVariation v:termIndexResource.getTermIndex().getInboundTermVariations(current)) 
 					currentBases.add(v.getBase());
 
 				for(Term v:currentBases) {	

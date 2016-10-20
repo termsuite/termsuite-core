@@ -35,6 +35,7 @@ import org.junit.Test;
 
 import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
+import eu.project.ttc.models.Term;
 import eu.project.ttc.models.VariationType;
 
 public class EnglishWindEnergySpec extends WindEnergySpec {
@@ -134,12 +135,16 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testTermHighSpeed() {
-		assertThat(termIndex.getTermByGroupingKey("a: high-speed"))
-			.hasFrequency(6)
-			.hasNBases(0)
-			.hasNVariationsOfType(4, VariationType.MORPHOLOGICAL)
-			.hasNVariationsOfType(0, VariationType.SYNTACTICAL)
-			.getVariations()
+		Term term = termIndex.getTermByGroupingKey("a: high-speed");
+		assertThat(term)
+			.hasFrequency(6);
+		
+		assertThat(termIndex)
+			.hasNBases(term, 1) // a: highspeed
+			.hasAtLeastNBasesOfType(term, 1, VariationType.GRAPHICAL)
+			.hasNVariationsOfType(term, 4, VariationType.MORPHOLOGICAL)
+			.hasNVariationsOfType(term, 0, VariationType.SYNTACTICAL)
+			.getVariations(term)
 			.extracting("variant.groupingKey", "info", "variant.frequency")
 			.contains(
 					tuple("aan: high revolving speed", "M-I-AN-N|A|R", 1),

@@ -36,18 +36,6 @@ import eu.project.ttc.models.VariationType;
 
 public class TermIndexUtils {
 
-	public static Set<TermVariation> getVariations(TermIndex termIndex) {
-		Set<TermVariation> variations = Sets.newHashSet();
-		for(Term t:termIndex.getTerms()) {
-			for(TermVariation tv:t.getVariations())
-				variations.add(tv);
-			for(TermVariation tv:t.getBases())
-				variations.add(tv);
-		}
-		return variations;
-	}
-
-
 	public static  Set<TermVariation> selectTermVariations(TermIndex termIndex, VariationType type, String ruleName) {
 		Set<TermVariation> selected = Sets.newHashSet();
 		for(TermVariation tv:selectTermVariations(termIndex, type))
@@ -58,7 +46,7 @@ public class TermIndexUtils {
 	
 	public static  Set<TermVariation> selectTermVariations(TermIndex termIndex, VariationType... types) {
 		Set<TermVariation> selected = Sets.newHashSet();
-		for(TermVariation tv:getVariations(termIndex))
+		for(TermVariation tv:termIndex.getTermVariations())
 			for(VariationType type:types)
 				if(tv.getVariationType() == type)
 					selected.add(tv);
@@ -77,7 +65,7 @@ public class TermIndexUtils {
 
 	public static Collection<TermVariation> selectTermVariationsByInfo(TermIndex termIndex, String ruleName) {
 		Set<TermVariation> selected = Sets.newHashSet();
-		for(TermVariation tv:getVariations(termIndex))
+		for(TermVariation tv:termIndex.getTermVariations())
 			if(Objects.equal(ruleName, tv.getInfo()))
 				selected.add(tv);
 		return selected;

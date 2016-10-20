@@ -64,14 +64,14 @@ public class SuffixDerivationExceptionSetter extends JCasAnnotator_ImplBase {
 				continue;
 			List<TermVariation> toRem = Lists.newArrayList();
 			for(String regularFormException:exceptionsByDerivateExceptionForms.getValues(derivateForm.getWords().get(0).getWord().getLemma())) {
-				for(TermVariation tv:derivateForm.getBases(VariationType.DERIVES_INTO)) {
+				for(TermVariation tv:termIndexResource.getTermIndex().getInboundTermVariations(derivateForm, VariationType.DERIVES_INTO)) {
 					regularForm = tv.getBase();
 					if(regularForm.getWords().get(0).getWord().getLemma().equals(regularFormException)) 
 						toRem.add(tv);
 				}
 			}
 			for(TermVariation rem:toRem) {
-				rem.getBase().removeTermVariation(rem);
+				termIndexResource.getTermIndex().removeTermVariation(rem);
 				TermHistory history = historyResource.getHistory();
 				watch(rem, history);
 

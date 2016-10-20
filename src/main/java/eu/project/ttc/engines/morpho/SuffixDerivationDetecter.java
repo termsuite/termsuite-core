@@ -90,7 +90,7 @@ public class SuffixDerivationDetecter extends JCasAnnotator_ImplBase {
 							nbDerivations++;
 							if(LOGGER.isTraceEnabled())
 								LOGGER.trace("Found derivation base: {} for derivate word {}", baseTerm, swt);
-							baseTerm.addTermVariation(swt, VariationType.DERIVES_INTO, suffixDerivation.getType());
+							termIndex.addTermVariation(baseTerm, swt, VariationType.DERIVES_INTO, suffixDerivation.getType());
 							
 							watch(swt, baseTerm);
 

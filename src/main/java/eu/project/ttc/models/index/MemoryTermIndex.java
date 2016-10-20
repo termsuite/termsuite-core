@@ -28,6 +28,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.apache.uima.cas.FSIterator;
 import org.apache.uima.jcas.JCas;
@@ -38,9 +39,10 @@ import org.slf4j.LoggerFactory;
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.AbstractIterator;
-import com.google.common.collect.Iterables;
+import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
+import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
 
 import eu.project.ttc.engines.desc.Lang;
@@ -48,11 +50,11 @@ import eu.project.ttc.models.Document;
 import eu.project.ttc.models.OccurrenceStore;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermBuilder;
-import eu.project.ttc.models.TermClass;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermOccurrence;
 import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.models.TermWord;
+import eu.project.ttc.models.VariationType;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.models.index.selectors.TermSelector;
 import eu.project.ttc.types.SourceDocumentInformation;
@@ -70,7 +72,6 @@ import eu.project.ttc.utils.TermSuiteUtils;
 public class MemoryTermIndex implements TermIndex {
 	private static final Logger LOGGER = LoggerFactory.getLogger(MemoryTermIndex.class);
 	private static final String MSG_NO_SUCH_PROVIDER = "No such value provider: %s";
-	public static final String MSG_NO_SUCH_TERM = "No such term in term index: %s";
 
 	private static final String MEASURE_WR = "wr";
 	private static final String MEASURE_WRLOG = "wrLog";
@@ -87,13 +88,13 @@ public class MemoryTermIndex implements TermIndex {
 	 * instead. 
 	 */
 	private Map<Integer, Term> termsById = Maps.newHashMap();
-	private List<Term> rankedTerms = Lists.newArrayList();
 	private Map<String, Term> termsByGroupingKey = Maps.newHashMap();
 	private Map<String, CustomTermIndex> customIndexes = Maps.newHashMap();
 	private Map<String, TermMeasure> termMeasures = Maps.newHashMap();
 	private Map<String, Word> wordIndex = Maps.newHashMap();
 	private Map<String, Document> documents = Maps.newHashMap();
-	private Set<TermClass> termClasses = Sets.newHashSet();
+	private Multimap<Term, TermVariation> outboundVariations = HashMultimap.create();
+	private Multimap<Term, TermVariation> inboundVariations = HashMultimap.create();
 
 	private String name;
 	private Lang lang;
@@ -151,7 +152,7 @@ public class MemoryTermIndex implements TermIndex {
 		return this.wordIndex.get(wordId);
 	}
 
-	public Word addWord(WordAnnotation anno) {
+	private Word addWord(WordAnnotation anno) {
 		String swKey = anno.getLemma();
 		Word word = this.wordIndex.get(swKey);
 		if(word == null) {
@@ -259,10 +260,6 @@ public class MemoryTermIndex implements TermIndex {
 		return this.currentId;
 	}
 	
-//	@Override
-//	public TermBuilder newTerm(String termId) {
-//		return new TermBuilder(this).setGroupingKey(termId);
-//	}
 
 	@Override
 	public CustomTermIndex getCustomIndex(String indexName) {
@@ -276,9 +273,6 @@ public class MemoryTermIndex implements TermIndex {
 	@Override
 	public CustomTermIndex createCustomIndex(String indexName,
 			TermValueProvider valueProvider) {
-//		Preconditions.checkArgument(
-//				!this.customIndexes.containsKey(indexName),
-//				String.format("Custom term index %s already exists.", indexName));
 		Preconditions.checkArgument(valueProvider != null, 
 				MSG_NO_SUCH_PROVIDER,
 				indexName);
@@ -303,7 +297,6 @@ public class MemoryTermIndex implements TermIndex {
 
 	@Override
 	public Term getTermByGroupingKey(String groupingKey) {
-//		Preconditions.checkArgument(this.termsByGroupingKey.containsKey(groupingKey),MSG_NO_SUCH_TERM, groupingKey);
 		return this.termsByGroupingKey.get(groupingKey);
 	}
 	
@@ -345,18 +338,8 @@ public class MemoryTermIndex implements TermIndex {
 			customIndex.removeTerm(this, t);
 		
 		// remove from variants
-		Set<TermVariation> toRem = Sets.newHashSet();
-		for(TermVariation v:t.getVariations()) 
-			toRem.add(v);
-		for(TermVariation v:toRem)
-			t.removeTermVariation(v);
-		
-		// remove from variants
-		toRem = Sets.newHashSet();
-		for(TermVariation v:t.getBases()) 
-			toRem.add(v);
-		for(TermVariation v:toRem)
-			v.getBase().removeTermVariation(v);
+		this.outboundVariations.removeAll(t);
+		this.inboundVariations.removeAll(t);
 		
 		/*
 		 * Removes from context vectors.
@@ -445,20 +428,6 @@ public class MemoryTermIndex implements TermIndex {
 	}
 
 	@Override
-	public Collection<TermClass> getTermClasses() {
-		return Collections.unmodifiableSet(termClasses);
-	}
-
-	@Override
-	public void classifyTerms(Term classHead, Iterable<Term> classTerms) {
-		Preconditions.checkArgument(Iterables.contains(classTerms, classHead), "head must be contained in class terms");
-		TermClass termClass = new TermClass(classHead, classTerms);
-		this.termClasses.add(termClass);
-		for(Term t2:termClass)
-			t2.setTermClass(termClass);
-	}
-
-	@Override
 	public void setWordAnnotationsNum(int nbWordAnnotations) {
 		this.nbWordAnnotations = nbWordAnnotations;
 	}
@@ -529,5 +498,63 @@ public class MemoryTermIndex implements TermIndex {
 				addTermOccurrence((TermOccAnnotation)anno, sdi.getUri(), keepOccurrence);
 			} 
 		}
+	}
+
+	@Override
+	public Collection<TermVariation> getTermVariations(VariationType... types) {
+		if(types.length == 0)
+			return this.inboundVariations.values();
+		else {
+			Set<VariationType> typeSet = Sets.newHashSet(types);
+			return this.inboundVariations.values().stream()
+					.filter(tv -> typeSet.contains(tv.getVariationType()))
+					.collect(Collectors.toSet());
+		}
+	}
+
+	@Override
+	public Collection<TermVariation> getOutboundTermVariations(Term base, VariationType... types) {
+		if(types.length == 0)
+			return this.outboundVariations.get(base);
+		else {
+			Set<VariationType> typeSet = Sets.newHashSet(types);
+			return this.outboundVariations.get(base).stream()
+					.filter(tv -> typeSet.contains(tv.getVariationType()))
+					.collect(Collectors.toSet());
+		}
+	}
+
+	@Override
+	public Collection<TermVariation> getInboundTermVariations(Term variant, VariationType... types) {
+		if(types.length == 0)
+			return this.inboundVariations.get(variant);
+		else {
+			Set<VariationType> typeSet = Sets.newHashSet(types);
+			List<TermVariation> list = this.inboundVariations.get(variant).stream()
+					.filter(tv -> typeSet.contains(tv.getVariationType()))
+					.collect(Collectors.toList());
+			Collections.sort(list);
+			return list;
+		}
+	}
+	
+	@Override
+	public TermVariation addTermVariation(Term base, Term variant, VariationType type, Object info) {
+		TermVariation tv = new TermVariation(type, base, variant, info);
+		this.addTermVariation(tv);
+		return tv;
+	}
+	
+	@Override
+	public void addTermVariation(TermVariation termVariation) {
+		this.outboundVariations.put(termVariation.getBase(), termVariation);
+		this.inboundVariations.put(termVariation.getVariant(), termVariation);
+		
+	}
+
+	@Override
+	public void removeTermVariation(TermVariation variation) {
+		this.outboundVariations.remove(variation.getBase(), variation);
+		this.inboundVariations.remove(variation.getVariant(), variation);
 	}
 }

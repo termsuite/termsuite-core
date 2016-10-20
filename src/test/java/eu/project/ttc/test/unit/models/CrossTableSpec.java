@@ -54,9 +54,9 @@ public class CrossTableSpec {
 		t3 = this.termIndex.getTermByGroupingKey("n: accès");
 		
 		// T1 T2 T3 T1 T3 T3 T1
-		t1.computeContextVector(OccurrenceType.SINGLE_WORD, 1, 1, false);
-		t2.computeContextVector(OccurrenceType.SINGLE_WORD, 1, 1, false);
-		t3.computeContextVector(OccurrenceType.SINGLE_WORD, 1, 1, false);
+		t1.computeContextVector(OccurrenceType.SINGLE_WORD, 1, 1);
+		t2.computeContextVector(OccurrenceType.SINGLE_WORD, 1, 1);
+		t3.computeContextVector(OccurrenceType.SINGLE_WORD, 1, 1);
 		
 		this.crossTable = new CrossTable(this.termIndex);
 	}

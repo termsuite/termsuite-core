@@ -23,8 +23,8 @@
 
 package eu.project.ttc.engines;
 
+import java.util.List;
 import java.util.Set;
-import java.util.TreeSet;
 
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
@@ -36,6 +36,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Optional;
+import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
 import eu.project.ttc.history.TermHistoryResource;
@@ -125,7 +126,6 @@ public class ScorerAE extends JCasAnnotator_ImplBase {
 		 */
 		logger.debug("Resetting scored variations and unique bases");
 		for(ScoredTerm st:scoredModel.getTerms()) {
-			TreeSet<TermVariation> sortedVariations = Sets.newTreeSet();
 			for(ScoredVariation sv:st.getVariations()) {
 				TermVariation termVariation = sv.getTermVariation();
 				
@@ -133,19 +133,13 @@ public class ScorerAE extends JCasAnnotator_ImplBase {
 				 * Add this term variation to the variants
 				 */
 				termVariation.setScore(sv.getVariationScore());
-				sortedVariations.add(termVariation);
-				
-				/*
-				 * Set this term variation as the unique base for the variant
-				 */
-				TreeSet<TermVariation> base = Sets.newTreeSet();
-				base.add(termVariation);
-				termVariation.getVariant().setBases(base);
+
+				List<TermVariation> toRem = Lists.newArrayList(termIndex.getInboundTermVariations(termVariation.getVariant()));
+				for(TermVariation tv:toRem)
+					termIndex.removeTermVariation(tv);
+
+				termIndex.addTermVariation(termVariation);
 			}
-			/*
-			 * Set the sorted set as the variants
-			 */
-			st.getTerm().setVariations(sortedVariations);
 		}
 	}
 }

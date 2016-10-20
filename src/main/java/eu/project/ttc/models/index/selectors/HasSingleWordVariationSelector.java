@@ -56,8 +56,8 @@ public class HasSingleWordVariationSelector extends AbstractTermSelector {
 		for (TermWord termWord : term.getWords()) {
 			swt = termIndex.getTermByGroupingKey(TermUtils.toGroupingKey(termWord));
 			if (swt != null) {
-				if(swt.getBases(this.variationType).iterator().hasNext()
-					|| swt.getVariations(this.variationType).iterator().hasNext())
+				if(termIndex.getInboundTermVariations(swt,this.variationType).iterator().hasNext()
+					|| termIndex.getOutboundTermVariations(swt,this.variationType).iterator().hasNext())
 					return true;
 			}
 		}

@@ -132,10 +132,10 @@ public class SuffixDerivationExceptionSetterSpec {
 
 	@Test
 	public void testProcessCollectionComplete() {
-		assertThat(this.pays.getVariations())
+		assertThat(termIndex.getOutboundTermVariations(this.pays))
 			.hasSize(1)
 			.extracting("variationType", "variant")
 			.contains(tuple(VariationType.DERIVES_INTO, paysVraiDerive));
-		assertThat(this.ferme_a.getVariations()).hasSize(0);
+		assertThat(termIndex.getOutboundTermVariations(ferme_a)).hasSize(0);
 	}
 }

@@ -57,7 +57,7 @@ public class TsvExporter {
 				tsv.startTerm(termIndex, t, "");
 				
 				if(options.isShowVariants())
-					for(TermVariation tv:t.getVariations()) {
+					for(TermVariation tv:termIndex.getOutboundTermVariations(t)) {
 						tsv.addVariant(
 								termIndex, 
 								tv.getVariant(), 

@@ -55,8 +55,6 @@ public enum TermProperty {
 	GROUPING_KEY("groupingKey", "gkey", false, String.class),
 	PATTERN("pattern", "p", false, String.class),
 	SPOTTING_RULE("spottingRule", "rule", false, String.class),
-	TERM_CLASS_HEAD("termClassHead", "cls", false, Term.class),
-	TERM_CLASS_FREQUENCY("termClassFrequency", "clsfreq", false, Integer.class)
 	;
 	
 	private static Map<String, TermProperty> byNames = Maps.newHashMap();
@@ -168,8 +166,6 @@ public enum TermProperty {
 			return t.getGeneralFrequencyNorm();
 		case FREQUENCY_NORM:
 			return t.getFrequencyNorm();
-		case TERM_CLASS_FREQUENCY:
-			return t.getTermClass().getFrequency();
 		default:
 			if(measure)
 				throw new IllegalStateException("No double value for property: " + this);
@@ -223,10 +219,6 @@ public enum TermProperty {
 			return t.getPattern();
 		case SPOTTING_RULE:
 			return t.getSpottingRule();
-		case TERM_CLASS_HEAD:
-			return t.getTermClass().getHead();
-		case TERM_CLASS_FREQUENCY:
-			return t.getTermClass().getFrequency();
 		}
 		throw new IllegalStateException("Unexpected property: " + this);
 	}

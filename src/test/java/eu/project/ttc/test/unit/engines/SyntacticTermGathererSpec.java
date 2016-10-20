@@ -141,34 +141,34 @@ public class SyntacticTermGathererSpec {
 	
 	@Test
 	public void testProcessDefault() throws AnalysisEngineProcessException{
-		assertThat(this.geothermie_hydraulique.getVariations())
+		assertThat(termIndex.getOutboundTermVariations(this.geothermie_hydraulique))
 			.hasSize(1)
 			.extracting("variationType", "variant")
 			.contains(tuple(VariationType.SYNTACTICAL, this.geothermie_hydraulique_solaire));
 		
-		assertThat(this.geothermie_hydraulique_solaire.getVariations())
+		assertThat(termIndex.getOutboundTermVariations(this.geothermie_hydraulique_solaire))
 			.hasSize(0);
 	}
 
 	
 	@Test
 	public void testProcessPrefix() throws AnalysisEngineProcessException{
-		assertThat(this.machine_synchrone.getVariations())
+		assertThat(termIndex.getOutboundTermVariations(this.machine_synchrone))
 			.hasSize(1)
 			.extracting("variationType", "info", "variant")
 			.contains(tuple(VariationType.SYNTACTICAL, "NA-NprefA", this.machine_asynchrone));
 		
-		assertThat(this.machine_asynchrone.getVariations())
+		assertThat(termIndex.getOutboundTermVariations(this.machine_asynchrone))
 			.hasSize(0);
 	}
 
 	@Test
 	public void testProcessDerivation() throws AnalysisEngineProcessException{
-		assertThat(this.phase_du_stator.getVariations())
+		assertThat(termIndex.getOutboundTermVariations(this.phase_du_stator))
 			.hasSize(1)
 			.extracting("variationType", "info", "variant")
 			.contains(tuple(VariationType.SYNTACTICAL, "S-R2D-NPN", this.phase_statorique));
-		assertThat(this.phase_statorique.getVariations())
+		assertThat(termIndex.getOutboundTermVariations(this.phase_statorique))
 			.hasSize(0);
 		
 	}

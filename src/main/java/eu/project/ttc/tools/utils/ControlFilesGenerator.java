@@ -73,8 +73,7 @@ public class ControlFilesGenerator {
 			directory.mkdirs();
 		
 		Set<String> distinctRuleNames = Sets.newHashSet();
-		Set<TermVariation> variations = TermIndexUtils.getVariations(termIndex);
-		for(TermVariation tv:variations)
+		for(TermVariation tv:termIndex.getTermVariations())
 			if(tv.getVariationType() == VariationType.SYNTACTICAL || tv.getVariationType() == VariationType.MORPHOLOGICAL)
 				distinctRuleNames.add((String)tv.getInfo());
 

@@ -81,10 +81,6 @@ public class Contextualizer extends JCasAnnotator_ImplBase {
 	private String coTermsTypeString;
 	private OccurrenceType coTermType;
 
-	public static final String USE_TERM_CLASSES = "UseTermClasses";
-	@ConfigurationParameter(name=USE_TERM_CLASSES, mandatory=false, defaultValue="false")
-	private boolean useTermClasses;
-
 	public static final String COMPUTE_CONTEXTS_FOR_ALL_TERMS = "ComputeContextForAllTerms";
 	@ConfigurationParameter(name=COMPUTE_CONTEXTS_FOR_ALL_TERMS, mandatory=false, defaultValue="true")
 	private boolean allTerms;
@@ -140,7 +136,7 @@ public class Contextualizer extends JCasAnnotator_ImplBase {
 				total);
 		Iterator<Term> iterator = getTermIterator();
 		for(Term t:IteratorUtils.toIterable(iterator)) 
-			t.computeContextVector(coTermType, scope, this.minimumCooccFrequencyThreshold, useTermClasses);
+			t.computeContextVector(coTermType, scope, this.minimumCooccFrequencyThreshold);
 		
 		
 		// 3- Normalize context vectors

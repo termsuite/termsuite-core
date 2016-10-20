@@ -35,6 +35,7 @@ import org.junit.Test;
 
 import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
+import eu.project.ttc.models.Term;
 import eu.project.ttc.models.VariationType;
 
 public class FrenchWindEnergySpec extends WindEnergySpec {
@@ -139,11 +140,14 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testTermVitesseDeRotation() {
-		assertThat(termIndex.getTermByGroupingKey("npn: vitesse de rotation"))
-			.hasFrequency(308)
-			.hasNBases(0)
-			.hasNVariationsOfType(24, VariationType.SYNTACTICAL)
-			.getVariations()
+		Term term = termIndex.getTermByGroupingKey("npn: vitesse de rotation");
+		assertThat(term)
+			.hasFrequency(308);
+		
+		assertThat(termIndex)
+			.hasNBases(term, 0)
+			.hasNVariationsOfType(term, 24, VariationType.SYNTACTICAL)
+			.getVariations(term)
 			.extracting("variant.groupingKey", "info", "variant.frequency")
 			.contains(
 					tuple("napn: vitesse angulaire de rotation", "S-I1-NPN-A", 2),

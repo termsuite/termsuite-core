@@ -71,7 +71,6 @@ import eu.project.ttc.engines.RegexSpotter;
 import eu.project.ttc.engines.ScorerAE;
 import eu.project.ttc.engines.StringRegexFilter;
 import eu.project.ttc.engines.SyntacticTermGatherer;
-import eu.project.ttc.engines.TermClassifier;
 import eu.project.ttc.engines.TermIndexBlacklistWordFilterAE;
 import eu.project.ttc.engines.TermOccAnnotationImporter;
 import eu.project.ttc.engines.TermSpecificityComputer;
@@ -220,7 +219,6 @@ public class TermSuitePipeline {
 	 * Contextualizer options
 	 */
 	private OccurrenceType contextualizeCoTermsType = OccurrenceType.SINGLE_WORD;
-	private boolean contextualizeWithTermClasses = false;
 	private int contextualizeWithCoOccurrenceFrequencyThreshhold = 1;
 	private String contextAssocRateMeasure = LogLikelihood.class.getName();
 
@@ -1729,12 +1727,6 @@ public class TermSuitePipeline {
 		return this;
 	}
 	
-	public TermSuitePipeline setContextualizeWithTermClasses(
-			boolean contextualizeWithTermClasses) {
-		this.contextualizeWithTermClasses = contextualizeWithTermClasses;
-		return this;
-	}
-	
 	public TermSuitePipeline setContextualizeWithCoOccurrenceFrequencyThreshhold(
 			int contextualizeWithCoOccurrenceFrequencyThreshhold) {
 		this.contextualizeWithCoOccurrenceFrequencyThreshhold = contextualizeWithCoOccurrenceFrequencyThreshhold;
@@ -1761,7 +1753,6 @@ public class TermSuitePipeline {
 					Contextualizer.CO_TERMS_TYPE, contextualizeCoTermsType,
 					Contextualizer.COMPUTE_CONTEXTS_FOR_ALL_TERMS, allTerms,
 					Contextualizer.ASSOCIATION_RATE, contextAssocRateMeasure,
-					Contextualizer.USE_TERM_CLASSES, contextualizeWithTermClasses,
 					Contextualizer.MINIMUM_COOCC_FREQUENCY_THRESHOLD, contextualizeWithCoOccurrenceFrequencyThreshhold
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
@@ -2225,32 +2216,6 @@ public class TermSuitePipeline {
 	}
 
 
-	/**
-	 * 
-	 * @see TermClassifier
-	 * @param sortingProperty
-	 * 			the term property used to order terms before they are classified. 
-	 * 			The first term of a class appearing given this order will be considered 
-	 * 			as the head of the class.
-	 * @return
-	 * 		This chaining {@link TermSuitePipeline} builder object
-	 */
-	public TermSuitePipeline aeTermClassifier(TermProperty sortingProperty)  {
-		try {
-			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					TermClassifier.class,
-					TermClassifier.CLASSIFYING_PROPERTY, sortingProperty
-					
-				);
-			ExternalResourceFactory.bindResource(ae, resTermIndex());
-
-			return aggregateAndReturn(ae, "Classifying ters on property " + sortingProperty.toString().toLowerCase(), 0);
-		} catch(Exception e) {
-			throw new TermSuitePipelineException(e);
-		}
-	}
-	
-	
 	/**
 	 * 
 	 * @param refFileURI

@@ -26,7 +26,6 @@ import java.io.Reader;
 import java.io.Writer;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
@@ -40,7 +39,6 @@ import com.fasterxml.jackson.core.JsonToken;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import com.google.common.collect.Sets;
 
 import eu.project.ttc.api.JsonOptions;
 import eu.project.ttc.engines.desc.Lang;
@@ -430,7 +428,7 @@ public class JsonTermIndexIO {
 								v, 
 								vType == VariationType.GRAPHICAL ? Double.parseDouble(infoToken) : infoToken);
 						tv.setScore(variantScore);
-						b.addTermVariation(tv);
+						termIndex.addTermVariation(tv);
 					} else {
 						if(b==null)
 							LOGGER.warn("Could not build variant because term \"{}\" was not found.", base);
@@ -550,13 +548,10 @@ public class JsonTermIndexIO {
 		}
 		jg.writeEndArray();
 		
-		Set<TermVariation> termVariations = Sets.newHashSet();
 		
 		jg.writeFieldName(TERMS);
 		jg.writeStartArray();
 		for(Term t:termIndex.getTerms()) {
-			termVariations.addAll(t.getVariations());
-			
 			jg.writeStartObject();
 			jg.writeFieldName(ID);
 			jg.writeNumber(t.getId());
@@ -636,7 +631,7 @@ public class JsonTermIndexIO {
 		/* Variants */
 		jg.writeFieldName(TERM_VARIATIONS);
 		jg.writeStartArray();
-		for(TermVariation v:termVariations) {
+		for(TermVariation v:termIndex.getTermVariations()) {
 			jg.writeStartObject();
 			jg.writeFieldName(BASE);
 			jg.writeString(v.getBase().getGroupingKey());
