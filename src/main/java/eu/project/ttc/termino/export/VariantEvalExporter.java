@@ -46,11 +46,11 @@ public class VariantEvalExporter {
 			int rank = 0;
 			int variantCnt = 0;
 			for(Term t:termIndex.getTerms()) {
-				if(t.isVariant())
+				if(!termIndex.getOutboundTermVariations(t).isEmpty())
 					continue;
 				printBase(++rank, t);
 				int variantRank = 0;
-				for(TermVariation variation:t.getVariations(VariationType.MORPHOLOGICAL, VariationType.SYNTACTICAL)) {
+				for(TermVariation variation:termIndex.getOutboundTermVariations(t, VariationType.MORPHOLOGICAL, VariationType.SYNTACTICAL)) {
 					if(variantRank >= nbVariantsPerTerm)
 						break;
 					variantCnt++;

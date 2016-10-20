@@ -37,6 +37,7 @@ import eu.project.ttc.types.TermOccAnnotation;
 public interface TermIndex {
 
 	
+	
 	/*
 	 * Attributes
 	 */
@@ -70,8 +71,6 @@ public interface TermIndex {
 	public void removeTerm(Term t);
 	public void addTerm(Term term);
 	public Collection<Term> getTerms();
-	public Collection<TermClass> getTermClasses();
-	public void classifyTerms(Term classHead, Iterable<Term> classTerms);
 
 	/*
 	 * Words
@@ -97,24 +96,35 @@ public interface TermIndex {
 	public Collection<Document> getDocuments();
 	
 	
-//	/**
-//	 * Get all single word terms that have the given lemma.
-//	 * 
-//	 * There is generally at most one SW term by lemma, except in a few case where
-//	 * lemma are the same but syntactic labels are diffrente 
-//	 * (e.g. "v: couvent" & "a: couvent")
-//	 * 
-//	 * 
-//	 * @param lemma
-//	 * @return
-//	 */
-//	public Collection<Term> getSingleWordTermByLemma(String lemma);
-
-	/*
-	 * Term classes
+	/**
+	 * Retrieves all variations of a given type, or all variations
+	 * if no parameter are given.
+	 * 
+	 * @param types
+	 * @return
 	 */
+	public Collection<TermVariation> getTermVariations(VariationType... types);
 	
+	/**
+	 * Retrieves all term variation variations of a given term base.
+	 * 
+	 * @param base
+	 * @param types
+	 * @return
+	 */
+	public Collection<TermVariation> getOutboundTermVariations(Term base, VariationType... types);
 	
+	/**
+	 * Retrieves all term base variation of a given term variation.
+	 * 
+	 * @param variant
+	 * @param types
+	 * @return
+	 */
+	public Collection<TermVariation> getInboundTermVariations(Term variant, VariationType... types);
+	public TermVariation addTermVariation(Term base, Term variant, VariationType type, Object info);
+	public void addTermVariation(TermVariation termVariation);
+	public void removeTermVariation(TermVariation variation);
 
 	
 	public Iterator<Term> singleWordTermIterator();
@@ -172,5 +182,4 @@ public interface TermIndex {
 	public int getSpottedTermsNum();
 	public void setSpottedTermsNum(int nbSpottedTerms);
 
-	
 }

@@ -67,12 +67,12 @@ public class TermFactory {
 
 	public void addPrefix(Term term1, Term term2) {
 		termsExist(term1, term2);
-		term1.addTermVariation(term2, VariationType.IS_PREFIX_OF, "");
+		termIndex.addTermVariation(term1, term2, VariationType.IS_PREFIX_OF, "");
 	}
 
 	public void addDerivesInto(String type, Term term1, Term term2) {
 		termsExist(term1, term2);
-		term1.addTermVariation(term2, VariationType.DERIVES_INTO, type);
+		termIndex.addTermVariation(term1, term2, VariationType.DERIVES_INTO, type);
 	}
 
 	private void termsExist(Term... terms) {

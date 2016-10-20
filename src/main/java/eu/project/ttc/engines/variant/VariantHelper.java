@@ -56,7 +56,7 @@ public class VariantHelper {
 			return false;
 		
 		TermVariation tv;
-		for(Iterator<TermVariation> it = sourceTerm.getVariations(VariationType.DERIVES_INTO).iterator()
+		for(Iterator<TermVariation> it = termIndex.getOutboundTermVariations(sourceTerm, VariationType.DERIVES_INTO).iterator()
 				; it.hasNext() 
 				; ) {
 			tv = it.next();
@@ -78,7 +78,7 @@ public class VariantHelper {
 			return false;
 		
 		TermVariation tv;
-		for(Iterator<TermVariation> it = sourceTerm.getVariations(VariationType.IS_PREFIX_OF).iterator()
+		for(Iterator<TermVariation> it = termIndex.getOutboundTermVariations(sourceTerm, VariationType.IS_PREFIX_OF).iterator()
 				; it.hasNext() 
 				; ) {
 			tv = it.next();

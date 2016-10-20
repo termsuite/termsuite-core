@@ -38,7 +38,7 @@ public class TsvExporterSpec {
 		
 		TermVariation tv = Mockito.mock(TermVariation.class);
 		Mockito.when(tv.getVariant()).thenReturn(term1);
-		Mockito.when(term3.getVariations()).thenReturn(Sets.newHashSet(tv));
+		Mockito.when(termIndex.getOutboundTermVariations(term3)).thenReturn(Sets.newHashSet(tv));
 		
 		terms = Lists.newArrayList(
 				term1,

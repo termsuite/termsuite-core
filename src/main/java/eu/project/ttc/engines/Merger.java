@@ -82,7 +82,7 @@ public class Merger extends JCasAnnotator_ImplBase {
 		
 		List<Term> rem = Lists.newArrayList();
 		for(Term t:termIndex.getTerms()) {
-			List<TermVariation> variations = Lists.newArrayList(t.getVariations());
+			List<TermVariation> variations = Lists.newArrayList(termIndex.getOutboundTermVariations(t));
 			TermVariation v1, v2;
 			Term t1, t2;
 			for(int i=0; i<variations.size(); i++) {
@@ -106,7 +106,7 @@ public class Merger extends JCasAnnotator_ImplBase {
 						t1.setFrequency(t1.getFrequency() + t2.getFrequency());
 						t1.setFrequencyNorm(t1.getFrequencyNorm() + t2.getFrequencyNorm());
 						t1.setGeneralFrequencyNorm(t1.getGeneralFrequencyNorm() + t2.getGeneralFrequencyNorm());
-						t1.removeTermVariation(v2);
+						termIndex.removeTermVariation(v2);
 						
 						rem.add(t2);
 						

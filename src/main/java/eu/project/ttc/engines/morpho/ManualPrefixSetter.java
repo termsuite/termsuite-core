@@ -69,8 +69,8 @@ public class ManualPrefixSetter extends JCasAnnotator_ImplBase {
 			segmentation = prefixExceptions.getSegmentation(word.getLemma());
 			if(segmentation != null) 
 				if(segmentation.size() <= 1) {
-					for(TermVariation tv:Lists.newArrayList(swt.getVariations(VariationType.IS_PREFIX_OF))) {
-						swt.removeTermVariation(tv);
+					for(TermVariation tv:Lists.newArrayList(termIndexResource.getTermIndex().getOutboundTermVariations(swt, VariationType.IS_PREFIX_OF))) {
+						termIndexResource.getTermIndex().removeTermVariation(tv);
 						watch(swt, tv);
 					}
 				} else {

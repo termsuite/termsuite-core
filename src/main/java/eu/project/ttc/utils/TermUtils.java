@@ -85,7 +85,7 @@ public class TermUtils {
 				stream.println(term);
 //				for(Term t:term.getGraphicalVariants()) 
 //					stream.format("\tgraphical: %s\n" , t.getGroupingKey());
-				for(TermVariation variation:term.getVariations()) 
+				for(TermVariation variation:index.getOutboundTermVariations(term)) 
 					stream.format("\tsyntactic: %s\n" , variation.getVariant().getGroupingKey());
 			}
 		}

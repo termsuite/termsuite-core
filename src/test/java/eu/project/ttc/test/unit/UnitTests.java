@@ -30,7 +30,6 @@ import eu.project.ttc.test.unit.engines.FixedExpressionSpotterSpec;
 import eu.project.ttc.test.unit.engines.GraphicalVariantGathererSpec;
 import eu.project.ttc.test.unit.engines.SuffixDerivationExceptionSetterSpec;
 import eu.project.ttc.test.unit.engines.SyntacticTermGathererSpec;
-import eu.project.ttc.test.unit.engines.TermClassifierSpec;
 import eu.project.ttc.test.unit.engines.morpho.SegmentationSpec;
 import eu.project.ttc.test.unit.io.JsonTermIndexIOSpec;
 import eu.project.ttc.test.unit.io.SegmentationParserSpec;
@@ -39,7 +38,6 @@ import eu.project.ttc.test.unit.metrics.SimilarityDistanceSpec;
 import eu.project.ttc.test.unit.models.ContextVectorSpec;
 import eu.project.ttc.test.unit.models.CrossTableSpec;
 import eu.project.ttc.test.unit.models.DocumentSpec;
-import eu.project.ttc.test.unit.models.TermClassSpec;
 import eu.project.ttc.test.unit.models.TermSpec;
 import eu.project.ttc.test.unit.readers.TermsuiteJsonCasSerializerDeserializerSpec;
 import eu.project.ttc.test.unit.resources.PrefixTreeSpec;
@@ -67,7 +65,6 @@ import eu.project.ttc.utils.test.CompoundUtilsSpec;
 	DocumentSpec.class, 
 	TermUtilsSpec.class,
 	FixedExpressionSpotterSpec.class,
-	TermClassifierSpec.class,
 	OccurrenceBufferSpec.class,
 	SimilarityDistanceSpec.class,
 	JsonTermIndexIOSpec.class,
@@ -75,7 +72,6 @@ import eu.project.ttc.utils.test.CompoundUtilsSpec;
 	TermOccurrenceUtilsSpec.class,
 	CollectionUtilsSpec.class,
 	CompoundUtilsSpec.class,
-	TermClassSpec.class,
 	StringUtilsSpec.class,
 	PrefixTreeSpec.class,
 	SegmentationParserSpec.class,

@@ -21,14 +21,12 @@
  *******************************************************************************/
 package eu.project.ttc.models;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Set;
-import java.util.SortedSet;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
@@ -38,7 +36,6 @@ import com.google.common.collect.Iterators;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
-import eu.project.ttc.utils.IteratorUtils;
 import eu.project.ttc.utils.TermSuiteConstants;
 import eu.project.ttc.utils.TermSuiteUtils;
 import eu.project.ttc.utils.TermUtils;
@@ -47,12 +44,9 @@ import eu.project.ttc.utils.TermUtils;
 public class Term implements Comparable<Term> {
 	
 	private static final String NO_OCCURRENCE = "[No occurrence]";
-//	private List<TermOccurrence> occurrences = Lists.newArrayList();
 	private OccurrenceStore occurrenceStore;
+	
 	private Set<Document> documents = Sets.newHashSet();
-
-	private Set<TermVariation> variations = Sets.newTreeSet();
-	private Set<TermVariation> bases = Sets.newTreeSet();
 	
 	private Set<Term> extensions = Sets.newHashSet();
 	private Set<Term> extensionBases = Sets.newHashSet();
@@ -122,16 +116,11 @@ public class Term implements Comparable<Term> {
 	 */
 	private Optional<ContextVector> contextVector = Optional.absent();
 	
-	/**
-	 * The term class
-	 * @see TermClass
-	 */
-	private TermClass termClass;
-	
 	Term(OccurrenceStore occurrenceStore, int id) {
 		this.occurrenceStore = occurrenceStore;
 		this.id = id;
 	}
+	
 	Term(OccurrenceStore occurrenceStore, int id, String termId, List<TermWord> termWords, String spottingRule) {
 		this(occurrenceStore, id);
 		this.groupingKey = termId;
@@ -234,39 +223,20 @@ public class Term implements Comparable<Term> {
 		return termWords.size() > 1;
 	}
 
-	/**
-	 * Builds a {@link TermVariation} object and add it to {@link #variations} and
-	 * variant{@link #bases}.
-	 * 
-	 * @param variant
-	 * @param type
-	 * @param info
-	 */
-	public TermVariation addTermVariation(Term variant, VariationType type, Object info) {
-		TermVariation tv = new TermVariation(type, this, variant, info);
-		addTermVariation(tv);
-		return tv;
-	}
+//	/**
+//	 * Builds a {@link TermVariation} object and add it to {@link #variations} and
+//	 * variant{@link #bases}.
+//	 * 
+//	 * @param variant
+//	 * @param type
+//	 * @param info
+//	 */
+//	public TermVariation addTermVariation(Term variant, VariationType type, Object info) {
+//		TermVariation tv = new TermVariation(type, this, variant, info);
+//		this.termIndex.addTermVariation(tv);
+//		return tv;
+//	}
 
-	/**
-	 *
-	 * Adds the {@link TermVariation} object to {@link #variations} and variant{@link #bases}.
-	 * @param termVariation
-	 */
-	public void addTermVariation(TermVariation termVariation) {
-		this.variations.add(termVariation);
-		termVariation.getVariant().bases.add(termVariation);
-	}
-
-	/**
-	 * Removes the param variation from this{@link #variations} and
-	 * from variant's {@link #bases}.
-	 * @param variation
-	 */
-	public void removeTermVariation(TermVariation variation) {
-		this.variations.remove(variation);
-		variation.getVariant().bases.remove(variation);
-	}
 	
 	/**
 	 * 
@@ -334,19 +304,6 @@ public class Term implements Comparable<Term> {
 		return frequency;
 	}
 	
-//	public void removeOccurrence(String file, int begin, int end) {
-//		// TODO Operation requires a linked list and is still too long. HashMap ?
-//		Iterator<TermOccurrence> it = this.occurrenceStore.occurrenceIterator(this);
-//		while(it.hasNext()) {
-//			TermOccurrence occ = it.next();
-//			if(occ.getBegin() == begin && occ.getEnd() == end && file.equals(occ.getSourceDocument().getUrl())) {
-//				it.remove();
-//				break;
-//			}
-//		}
-//		this.frequency --;
-//	}
-	
 	public TermWord firstWord() {
 		return this.termWords.get(0);
 	}
@@ -361,10 +318,6 @@ public class Term implements Comparable<Term> {
 	
 	public String getSpottingRule() {
 		return spottingRule;
-	}
-	
-	public boolean isVariant() {
-		return !bases.isEmpty();
 	}
 	
 	/**
@@ -410,30 +363,6 @@ public class Term implements Comparable<Term> {
 		return builder.toString();
 	}
 	
-	public List<VariationPath> getVariationPaths(int depth) {
-		ArrayList<VariationPath> accu = Lists.newArrayList();
-		accumulateVariations(
-				this,
-				new ArrayList<TermVariation>(),
-				depth,
-				accu
-				);
-		return accu;
-	}
-
-	private void accumulateVariations(Term baseTerm, List<TermVariation> currentPath, int depth, List<VariationPath> accu) {
-		if(depth == 0 
-				|| (!currentPath.isEmpty() && this.equals(baseTerm)) // cycle prevention
-			)
-			return;
-			
-		for(TermVariation tv:this.variations) {
-			currentPath.add(tv);
-			accu.add(new VariationPath(currentPath));
-			tv.getVariant().accumulateVariations(baseTerm, currentPath, depth-1, accu);
-		}
-	}
-	
 	/**
 	 * 
 	 * Returns the context vector of this term.
@@ -473,14 +402,13 @@ public class Term implements Comparable<Term> {
 	 * @param coTermsType
 	 * @param contextSize
 	 * @param cooccFrequencyThreshhold
-	 * @param useTermClasses
 	 * @return
 	 * 		The computed {@link ContextVector} object
 	 */
 	public ContextVector computeContextVector(OccurrenceType coTermsType, int contextSize, 
-			int cooccFrequencyThreshhold, boolean useTermClasses) {
+			int cooccFrequencyThreshhold) {
 		// 1- compute context vector
-		ContextVector vector = new ContextVector(this, useTermClasses);
+		ContextVector vector = new ContextVector(this);
 		vector.addAllCooccurrences(Iterators.concat(contextIterator(coTermsType, contextSize)));
 		vector.removeCoTerm(this);
 		this.contextVector = Optional.of(vector);
@@ -531,64 +459,53 @@ public class Term implements Comparable<Term> {
 		this.contextVector = Optional.absent();
 	}
 	
-	public void setTermClass(TermClass termClass) {
-		this.termClass = termClass;
-	}
-	
-	public TermClass getTermClass() {
-		return termClass;
-	}
-//	public double getWRLog() {
-//		return Math.log10(1 + getWR());
+//	public Collection<TermVariation> getVariations() {
+//		return this.termIndex.getOutboundTermVariations(this);
+//	}
+//
+//	public Collection<TermVariation> getBases() {
+//		return this.termIndex.getInboundTermVariations(this);
+//	}
+//
+//
+//	private Iterator<TermVariation> getTermVariationsIterator(final Iterable<TermVariation> iterable, final VariationType... variantTypes) {
+//		return new AbstractIterator<TermVariation>() {
+//			private Iterator<TermVariation> it = iterable.iterator();
+//			private TermVariation current = null;
+//			private Set<VariationType> types = Sets.newHashSet(variantTypes);
+//
+//			
+//			@Override
+//			protected TermVariation computeNext() {
+//				while(it.hasNext()) {
+//					this.current = it.next();
+//					if(this.types.contains(this.current.getVariationType()))
+//						return this.current;
+//				}
+//				return endOfData();
+//			}
+//		};
 //	}
 	
-	public Set<TermVariation> getVariations() {
-		return Collections.unmodifiableSet(variations);
-	}
-
-	public Set<TermVariation> getBases() {
-		return Collections.unmodifiableSet(bases);
-	}
-
-
-	private Iterator<TermVariation> getTermVariationsIterator(final Iterable<TermVariation> iterable, final VariationType... variantTypes) {
-		return new AbstractIterator<TermVariation>() {
-			private Iterator<TermVariation> it = iterable.iterator();
-			private TermVariation current = null;
-			private Set<VariationType> types = Sets.newHashSet(variantTypes);
-
-			
-			@Override
-			protected TermVariation computeNext() {
-				while(it.hasNext()) {
-					this.current = it.next();
-					if(this.types.contains(this.current.getVariationType()))
-						return this.current;
-				}
-				return endOfData();
-			}
-		};
-	}
-	
-	/**
-	 * Get all variations of given {@link VariationType}s
-	 * 
-	 * @param variantTypes
-	 * @return
-	 */
-	public Iterable<TermVariation> getVariations(final VariationType... variantTypes) {
-		return IteratorUtils.toIterable(getTermVariationsIterator(this.variations, variantTypes));
-	}
-	
-	/**
-	 * Get all bases of given {@link VariationType}s
-	 * 
-	 * @param variantTypes
-	 * @return
-	 */
-	public Iterable<TermVariation> getBases(final VariationType... variantTypes) {
-		return IteratorUtils.toIterable(getTermVariationsIterator(this.bases, variantTypes));
-	}
+//	/**
+//	 * Get all variations of given {@link VariationType}s
+//	 * 
+//	 * @param variantTypes
+//	 * @return
+//	 */
+//	public Iterable<TermVariation> getVariations(final VariationType... variantTypes) {
+//		return IteratorUtils.toIterable(getTermVariationsIterator(this.getVariations(), variantTypes));
+//	}
+//	
+//	/**
+//	 * Get all bases of given {@link VariationType}s
+//	 * 
+//	 * @param variantTypes
+//	 * @return
+//	 */
+//	public Iterable<TermVariation> getBases(final VariationType... variantTypes) {
+//		return IteratorUtils.toIterable(getTermVariationsIterator(this.getBases(), variantTypes));
+//	}
 	
 	public void setFrequencyNorm(double normalizedTermFrequency) {
 		this.normalizedTermFrequency = normalizedTermFrequency;
@@ -629,24 +546,6 @@ public class Term implements Comparable<Term> {
 
 	public Set<Term> getExtensionBases() {
 		return Collections.unmodifiableSet(this.extensionBases);
-	}
-	
-	/**
-	 * Do not use this, this will disappear on version 3.0.
-	 * @param variations
-	 */
-	@Deprecated
-	public void setVariations(SortedSet<TermVariation> variations) {
-		this.variations = Sets.newTreeSet(variations);
-	}
-	
-	/**
-	 * Do not use this, this will disappear on version 3.0.
-	 * @param variations
-	 */
-	@Deprecated
-	public void setBases(SortedSet<TermVariation> bases) {
-		this.bases = Sets.newTreeSet(bases);
 	}
 	
 	public int getRank() {

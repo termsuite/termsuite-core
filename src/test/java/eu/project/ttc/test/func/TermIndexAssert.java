@@ -26,17 +26,14 @@ package eu.project.ttc.test.func;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Collection;
-import java.util.List;
 import java.util.Set;
 
 import org.assertj.core.api.AbstractAssert;
 import org.assertj.core.api.AbstractIterableAssert;
-import org.assertj.core.util.Lists;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Objects;
 import com.google.common.collect.Sets;
-import com.google.common.primitives.Ints;
 
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
@@ -86,29 +83,16 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 		if(failToFindTerms(baseGroupingKey, variantGroupingKey))
 			return this;
 		
-		
-		List<TermVariation> potentialVariations = Lists.newArrayList();
-		Set<TermVariation> sameType = Sets.newHashSet();
-		
-		for(TermVariation tv:getVariations()) {
-			if(tv.getBase().getGroupingKey().equals(baseGroupingKey)
-					&& tv.getVariant().getGroupingKey().equals(variantGroupingKey)) {
-				potentialVariations.add(tv);
-				if(tv.getVariationType() == type)
-					return this;
-			}
-			if(type == tv.getVariationType())
-				sameType.add(tv);
+		Term baseTerm = actual.getTermByGroupingKey(baseGroupingKey);
+		for(TermVariation tv:actual.getOutboundTermVariations(baseTerm, type)) {
+			if(tv.getVariant().getGroupingKey().equals(variantGroupingKey))
+				return this;
 		}
-		potentialVariations.addAll(Sets.newHashSet(actual.getTermByGroupingKey(baseGroupingKey).getVariations(type)));
-		potentialVariations.addAll(Sets.newHashSet(actual.getTermByGroupingKey(variantGroupingKey).getBases(type)));
-		potentialVariations.addAll(Sets.newHashSet(actual.getTermByGroupingKey(baseGroupingKey).getVariations()));
-		potentialVariations.addAll(Sets.newHashSet(actual.getTermByGroupingKey(variantGroupingKey).getBases()));
-		potentialVariations.addAll(sameType);
 		
-		failWithMessage("No such variation <%s--%s--%s> found in term index. Closed variations: <%s>", 
-				baseGroupingKey, type, variantGroupingKey,
-				Joiner.on(", ").join(potentialVariations.subList(0, Ints.min(10, potentialVariations.size())))
+		failWithMessage("No such variation <%s--%s[%s]--%s> found in term index", 
+				baseGroupingKey, type, 
+				info,
+				variantGroupingKey
 				);
 		return this;
 	}
@@ -128,44 +112,24 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 		if(failToFindTerms(baseGroupingKey, variantGroupingKey))
 			return this;
 
-		
-		List<TermVariation> potentialVariations = Lists.newArrayList();
-		Set<TermVariation> sameType = Sets.newHashSet();
-		for(TermVariation tv:getVariations()) {
-			if(tv.getBase().getGroupingKey().equals(baseGroupingKey)
-					&& tv.getVariant().getGroupingKey().equals(variantGroupingKey)) {
-				potentialVariations.add(tv);
-				if(tv.getVariationType() == type && Objects.equal(info, tv.getInfo()))
-					return this;
-			}
-			if(type == tv.getVariationType())
-				sameType.add(tv);
+		Term baseTerm = actual.getTermByGroupingKey(baseGroupingKey);
+		for(TermVariation tv:actual.getOutboundTermVariations(baseTerm, type)) {
+			if(java.util.Objects.equals(tv.getInfo(), info) 
+					&& tv.getVariant().getGroupingKey().equals(variantGroupingKey))
+				return this;
 		}
 		
-		potentialVariations.addAll(Sets.newHashSet(actual.getTermByGroupingKey(baseGroupingKey).getVariations(type)));
-		potentialVariations.addAll(Sets.newHashSet(actual.getTermByGroupingKey(variantGroupingKey).getBases(type)));
-		potentialVariations.addAll(Sets.newHashSet(actual.getTermByGroupingKey(baseGroupingKey).getVariations()));
-		potentialVariations.addAll(Sets.newHashSet(actual.getTermByGroupingKey(variantGroupingKey).getBases()));
-		potentialVariations.addAll(sameType);
-		
-		failWithMessage("No such variation <%s--%s[%s]--%s> found in term index. Closed variations: <%s>", 
+		failWithMessage("No such variation <%s--%s[%s]--%s> found in term index", 
 				baseGroupingKey, type, 
 				info,
-				variantGroupingKey,
-				Joiner.on(", ").join(potentialVariations)
+				variantGroupingKey
 				);
 		return this;
 	}
 
 
 	private Collection<TermVariation> getVariations() {
-		Set<TermVariation> termVariations = Sets.newHashSet();
-		for(Term t:actual.getTerms()) {
-			for(TermVariation v:t.getVariations())
-				termVariations.add(v);
-		}
-		return termVariations;
-		
+		return actual.getTermVariations();
 	}
 
 	public TermIndexAssert hasNVariationsOfType(int expected, VariationType type) {
@@ -206,5 +170,70 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 		return assertThat(matchingRuleNames);
 	}
 
+	
+	public TermIndexAssert hasAtLeastNVariationsOfType(Term base, int atLeastN, VariationType... vType) {
+		isNotNull();
+		int actualSize = actual.getOutboundTermVariations(base, vType).size();
+		if (actualSize < atLeastN)
+			failWithMessage(
+					"Expected to find at least <%s> variations of type <%s> for term <%s>, but actually found <%s>",
+					atLeastN, vType, base, actualSize);
+		return this;
+	}
 
+	public TermIndexAssert hasNVariationsOfType(Term base, int n, VariationType... vType) {
+		isNotNull();
+		int actualSize = actual.getOutboundTermVariations(base, vType).size();
+		if (actualSize != n)
+			failWithMessage("Expected to find <%s> variations of type <%s> for term <%s>, but actually found <%s>", n,
+					vType, base, actualSize);
+		return this;
+	}
+
+	public TermIndexAssert hasAtLeastNBasesOfType(Term variant, int atLeastN, VariationType... vTypes) {
+		isNotNull();
+		int actualSize = actual.getInboundTermVariations(variant, vTypes).size();
+		if (actualSize < atLeastN)
+			failWithMessage("Expected to find at least <%s> bases <%s> for term <%s>, but actually found <%s>",
+					atLeastN,
+					(vTypes.length == 1 ? "of type " : "of any of these types ") + Joiner.on(" ").join(vTypes),
+					variant, actualSize);
+		return this;
+	}
+	
+	public AbstractIterableAssert<?, ? extends Iterable<? extends TermVariation>, TermVariation> getVariations(Term base) {
+		return assertThat(actual.getOutboundTermVariations(base));
+	}
+	
+	public AbstractIterableAssert<?, ? extends Iterable<? extends TermVariation>, TermVariation> getVariationsOfType(Term base, VariationType... types) {
+		return assertThat(actual.getOutboundTermVariations(base, types));
+	}
+
+	public AbstractIterableAssert<?, ? extends Iterable<? extends TermVariation>, TermVariation> getBases(Term variant) {
+		return assertThat(actual.getInboundTermVariations(variant));
+	}
+	
+	public AbstractIterableAssert<?, ? extends Iterable<? extends TermVariation>, TermVariation> getBasesOfType(Term variant, VariationType... types) {
+		return assertThat(actual.getInboundTermVariations(variant, types));
+	}
+
+	public TermIndexAssert hasNBases(Term variant, int expectedNumberOfBases) {
+		Collection<TermVariation> bases = actual.getInboundTermVariations(variant);
+		if(bases.size() != expectedNumberOfBases)
+			failWithMessage("Expected <%s> bases but got <%s> (<%s>)", 
+					expectedNumberOfBases,
+					bases.size(),
+					bases);
+		return this;
+	}
+	
+	public TermIndexAssert hasNVariations(Term base, int expectedNumberOfVariations) {
+		Collection<TermVariation> variants = actual.getOutboundTermVariations(base);
+		if(variants.size() != expectedNumberOfVariations)
+			failWithMessage("Expected <%s> variations but got <%s> (<%s>)", 
+					expectedNumberOfVariations,
+					variants.size(),
+					variants);
+		return this;
+	}
 }
