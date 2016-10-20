@@ -65,7 +65,6 @@ import eu.project.ttc.engines.MateLemmaFixer;
 import eu.project.ttc.engines.MateLemmatizerTagger;
 import eu.project.ttc.engines.Merger;
 import eu.project.ttc.engines.PipelineObserver;
-import eu.project.ttc.engines.PrimaryOccurrenceDetector;
 import eu.project.ttc.engines.Ranker;
 import eu.project.ttc.engines.RegexSpotter;
 import eu.project.ttc.engines.ScorerAE;
@@ -1800,22 +1799,6 @@ public class TermSuitePipeline {
 		}
 	}
 	
-	public TermSuitePipeline aePrimaryOccurrenceDetector(int detectionStrategy) {
-		try {
-			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					PrimaryOccurrenceDetector.class
-			);
-			
-			ExternalResourceFactory.bindResource(ae, resTermIndex());
-
-			
-			return aggregateAndReturn(ae, "Detecting primary occurrences", 0);
-		} catch(Exception e) {
-			throw new TermSuitePipelineException(e);
-		}
-	}
-
-
 	private void setPeriodic(boolean isPeriodic, int cleaningPeriod,
 			AnalysisEngineDescription ae) {
 		if(isPeriodic)
