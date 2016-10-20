@@ -251,7 +251,7 @@ public class TbxExporter {
 		this.addNote(langSet, tig, "termComplexity",
 				this.getComplexity(term));
 		this.addDescrip(langSet, tig, "termSpecificity",
-				NUMBER_FORMATTER.format(termIndex.getWRMeasure().getValue(term)));
+				NUMBER_FORMATTER.format(term.getSpecificity()));
 		this.addDescrip(langSet, tig, "nbOccurrences",
 				term.getFrequency());
 		this.addDescrip(langSet, tig, "relativeFrequency",
@@ -259,7 +259,7 @@ public class TbxExporter {
 		addDescrip(langSet, tig, "formList",
 					buildFormListJSON(term, formCounters.size()));
 		 this.addDescrip(langSet, tig, "domainSpecificity",
-				 termIndex.getWRMeasure().getValue(term));
+				 term.getSpecificity());
 	}
 	
 	private void addDescrip(Element lang, Element element,

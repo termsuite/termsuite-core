@@ -312,7 +312,7 @@ a: self-reported	nat	self:self|reported:reported
 n: dissemination	nat	dis:dis|semi:semi|nation:nation
 n: prohibition	nat	prohibit:prohibit|ion:ion
 n: pipeline	nat	pipe:pipe|line:line
-n: closed-toe	nat	closed:closed|toe:toe
+n: closed-toe	nat	closed:close|toe:toe
 a: sub-threshold	nat	sub:sub|threshold:threshold
 a: aerothermal	nat	aero:aero|thermal:thermal
 n: person	nat	per:per|son:son
@@ -665,11 +665,11 @@ a: northern	nat	north:north|ern:ern
 n: movement	nat	move:move|ment:ment
 n: lighting	nat	light:light|ing:e
 n: startup	nat	star:star|tup:tup
-n: stakeholder	nat	stake:stake|holder:hold
+n: stakeholder	nat	stake:stake|holder:holder
 a: deep-stalled	nat	deep:deep|stal:st|led:le
 n: t-pods	nat	t:t|pods:pod
 a: planned	nat	plan:plan|ned:n
-n: soft-starter	nat	soft:soft|starter:start
+n: soft-starter	nat	soft:soft|starter:starter
 a: 5-acre	nat	5:5|acre:acre
 a: starting	nat	star:star|ting:te
 a: skilled	nat	ski:ski|lled:ll
@@ -887,7 +887,7 @@ n: tionship	nat	tion:tion|ship:ship
 n: streambeds	nat	stream:stream|beds:bed
 n: basic-modelling	nat	basic:basic|model:model|ling:le
 n: misinterpretation	nat	mis:mi|interpretation:interpretation
-n: self-starter	nat	self:self|starter:start
+n: self-starter	nat	self:self|starter:starter
 n: tip-speed	nat	tip:tip|speed:speed
 n: two-stator	nat	two:two|stator:stator
 a: geospatial	nat	geo:geo|spa:spa|tial:ti
@@ -1833,7 +1833,7 @@ a: pitch-regulated	nat	pitch:pitch|regulated:regulated
 n: injection	nat	inject:inject|ion:ion
 n: demographic	nat	demo:demo|graphic:graphic
 n: washington	nat	washing:washing|ton:ton
-n: shareholder	nat	share:share|holder:hold
+n: shareholder	nat	share:share|holder:holder
 a: ecological	nat	eco:eco|logical:logical
 r: technologically	nat	techno:techno|logically:logically
 n: train-gear	nat	train:train|gear:gear

@@ -26,6 +26,7 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -47,6 +48,7 @@ import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
+import com.google.common.primitives.Doubles;
 
 import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.history.TermHistoryResource;
@@ -55,11 +57,11 @@ import eu.project.ttc.metrics.Levenshtein;
 import eu.project.ttc.models.Component;
 import eu.project.ttc.models.CompoundType;
 import eu.project.ttc.models.Term;
+import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.models.WordBuilder;
 import eu.project.ttc.models.index.CustomTermIndex;
 import eu.project.ttc.models.index.TermIndexes;
-import eu.project.ttc.models.index.TermMeasure;
 import eu.project.ttc.resources.CompostIndex;
 import eu.project.ttc.resources.CompostInflectionRules;
 import eu.project.ttc.resources.ObserverResource;
@@ -149,8 +151,6 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 	
 	private CustomTermIndex swtLemmaIndex;
 
-	private TermMeasure wrMeasure;
-
 	private LoadingCache<String, SegmentScoreEntry> segmentScoreEntries = CacheBuilder.newBuilder()
 				.maximumSize(100000)
 				.recordStats()
@@ -189,7 +189,6 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 		observer.setTotalTaskWork(termIndexResource.getTermIndex().getWords().size());
 		LOGGER.info("Starting morphologyical compound detection for TermIndex {}", this.termIndexResource.getTermIndex().getName());
 		LOGGER.debug(this.toString());
-		wrMeasure = termIndexResource.getTermIndex().getWRMeasure();
 		swtLemmaIndex = termIndexResource.getTermIndex().getCustomIndex(TermIndexes.SINGLE_WORD_LEMMA);
 		buildCompostIndex();
 
@@ -399,14 +398,14 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 		int inDico = closestEntry.isInDico() || closestEntry.isInNeoClassicalPrefix() ? 1 : 0;
 
 		// retrieves all sw terms that have the same lemma
-		Collection<Term> corpusTerm = swtLemmaIndex.getTerms(segment);
+		Collection<Term> corpusTerms = swtLemmaIndex.getTerms(segment);
 		float wr = 0f;
-		for(Iterator<Term> it = corpusTerm.iterator(); it.hasNext();)
-			wr+=wrMeasure.getValue(it.next());
+		for(Iterator<Term> it = corpusTerms.iterator(); it.hasNext();)
+			wr+=Math.pow(10, it.next().getSpecificity());
 		
 		float dataCorpus;
-		if(closestEntry.isInCorpus() && !corpusTerm.isEmpty()) {
-			dataCorpus = wr / (float)wrMeasure.getMax();
+		if(closestEntry.isInCorpus() && !corpusTerms.isEmpty()) {
+			dataCorpus = wr / getMaxSpec();
 			inCorpus = 1;
 		} else {
 			dataCorpus = 0;
@@ -424,6 +423,17 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 		}
 		return new SegmentScoreEntry(segment, findSegmentLemma(segment), score, closestEntry);
 	}
+
+	private Optional<Float> maxSpec = Optional.empty();
+	public float getMaxSpec() {
+		if(!maxSpec.isPresent()) {
+			TermIndex termIndex = termIndexResource.getTermIndex();
+			Comparator<Term> specComparator = TermProperty.SPECIFICITY.getComparator(false);
+			double wrLog = termIndex.getTerms().stream().max(specComparator).get().getSpecificity();
+			maxSpec = Optional.of((float)Math.pow(10, wrLog));
+		}
+		return maxSpec.get();
+	}
 	
 	/*
 	 * Finds the best lemma for a segment
@@ -433,14 +443,12 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 		if(candidates.isEmpty())
 			return segment;
 		else {
-			TermMeasure wrLog = termIndexResource.getTermIndex().getWRLogMeasure();
-			TermProperty property = wrLog.isComputed() ? TermProperty.WR_LOG : TermProperty.FREQUENCY;
 			String bestLemma = segment;
 			double bestValue = 0d;
 			for(String candidateLemma:candidates) {
 				for(Term t:swtLemmaIndex.getTerms(candidateLemma)) {
-					if(property.getDoubleValue(termIndexResource.getTermIndex(), t) > bestValue) {
-						bestValue = property.getDoubleValue(termIndexResource.getTermIndex(), t);
+					if(t.getSpecificity() > bestValue) {
+						bestValue = t.getSpecificity();
 						bestLemma = t.getLemma();
 					}
 				}

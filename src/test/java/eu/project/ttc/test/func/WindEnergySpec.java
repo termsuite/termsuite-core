@@ -26,6 +26,11 @@ package eu.project.ttc.test.func;
 import static eu.project.ttc.test.TermSuiteAssertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;
 
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.PrintStream;
 import java.util.List;
 
 import org.assertj.core.api.iterable.Extractor;
@@ -47,6 +52,7 @@ import eu.project.ttc.models.VariationType;
 import eu.project.ttc.tools.TermSuitePipeline;
 import eu.project.ttc.tools.TermSuiteResourceManager;
 import eu.project.ttc.tools.utils.ControlFilesGenerator;
+import eu.project.ttc.utils.TermIndexUtils;
 
 public abstract class WindEnergySpec {
 
@@ -113,7 +119,7 @@ public abstract class WindEnergySpec {
 			.aeSyntacticVariantGatherer()
 			.aeGraphicalVariantGatherer()
 			.aeExtensionDetector()
-			.aeRanker(TermProperty.WR, true)
+			.aeRanker(TermProperty.SPECIFICITY, true)
 			.run();
 			
 		return pipeline.getTermIndex();
@@ -149,7 +155,7 @@ public abstract class WindEnergySpec {
 	}
 
 	@Test
-	public void weCompounds() {
+	public void weCompounds() throws FileNotFoundException {
 		assertThat(termIndex)
 			.asCompoundList()
 			.extracting(new Extractor<Term, Tuple>() {

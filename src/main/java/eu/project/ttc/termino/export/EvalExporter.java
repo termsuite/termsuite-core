@@ -33,7 +33,7 @@ public class EvalExporter {
 				}
 				writer.write(t.getGroupingKey());
 				writer.write("\t");
-				writer.write(Double.toString(termIndex.getWRMeasure().getValue(t)));
+				writer.write(Double.toString(t.getSpecificity()));
 				writer.write("\n");
 			}
 			writer.flush();

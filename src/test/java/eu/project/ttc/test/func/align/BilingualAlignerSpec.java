@@ -96,7 +96,7 @@ public class BilingualAlignerSpec {
 			.containsExactly(
 					tuple("n: energy", AlignmentMethod.DICTIONARY),
 					tuple("n: power", AlignmentMethod.DICTIONARY),
-					tuple("n: plane", AlignmentMethod.DISTRIBUTIONAL)
+					tuple("n: turbine", AlignmentMethod.DISTRIBUTIONAL)
 					);
 		
 		

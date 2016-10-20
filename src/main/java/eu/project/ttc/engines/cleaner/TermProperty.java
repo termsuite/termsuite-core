@@ -46,9 +46,6 @@ public enum TermProperty {
 	FREQUENCY_NORM("frequencyNorm", "fnorm", false, Double.class),
 	GENERAL_FREQUENCY_NORM("generalFrequencyNorm", "generalFnorm", false, Double.class),
 	SPECIFICITY("specificity", "sp", true, Double.class),
-	WR("wr", "wr", true, Double.class),
-	WR_LOG("wrLog", "wrlog", true, Double.class),
-	WR_LOG_Z_SCORE("wrLogZScore", "zscore", true, Double.class),
 	FREQUENCY("frequency", "f", false, Integer.class),
 	PILOT("pilot", "pilot", false, String.class),
 	LEMMA("lemma", "lm", false, String.class),
@@ -141,27 +138,14 @@ public enum TermProperty {
 	}
 		
 
-	public double getDoubleValue(TermIndex termIndex, Term t) {
-		switch(this) {
-		case WR:
-			return (double)termIndex.getWRMeasure().getValue(t);
-		case SPECIFICITY:
-		case WR_LOG:
-			return (double)termIndex.getWRLogMeasure().getValue(t);
-		case WR_LOG_Z_SCORE:
-			return (double)termIndex.getWRLogMeasure().getZScore(t);
-		default:
-			return getDoubleValue(t);
-		}
-
-	}
-	
 	public double getDoubleValue(Term t) {
 		switch(this) {
 		case DOCUMENT_FREQUENCY:
 			return t.getDocumentFrequency();
 		case FREQUENCY:
 			return t.getFrequency();
+		case SPECIFICITY:
+			return t.getSpecificity();
 		case GENERAL_FREQUENCY_NORM:
 			return t.getGeneralFrequencyNorm();
 		case FREQUENCY_NORM:
@@ -176,12 +160,6 @@ public enum TermProperty {
 	
 	public Comparable<?> getValue(TermIndex termIndex, Term t) {
 		switch(this) {
-		case WR:
-			return termIndex.getWRMeasure().getValue(t);
-		case WR_LOG:
-			return termIndex.getWRLogMeasure().getValue(t);
-		case WR_LOG_Z_SCORE:
-			return termIndex.getWRLogMeasure().getZScore(t);
 		case PILOT:
 			/*
 			 * Not optimal at all. Use TermFormGetter
@@ -194,9 +172,6 @@ public enum TermProperty {
 
 	public Comparable<?> getValue(Term t) {
 		switch(this) {
-		case WR:
-		case WR_LOG:
-		case WR_LOG_Z_SCORE:
 		case PILOT:
 			throw new IllegalStateException("Should use #getValue(TermIndex termIndex, Term t) instead.");
 		case DOCUMENT_FREQUENCY:

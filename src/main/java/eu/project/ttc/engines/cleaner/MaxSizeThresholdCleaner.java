@@ -56,7 +56,7 @@ public class MaxSizeThresholdCleaner extends JCasAnnotator_ImplBase {
 	private int currentFrequencyThreshhold = 2;
 	
 	protected boolean acceptTerm(Term term) {
-		return property.getDoubleValue(termIndexResource.getTermIndex(), term) >= this.currentFrequencyThreshhold;
+		return property.getDoubleValue(term) >= this.currentFrequencyThreshhold;
 	}
 
 	@Override

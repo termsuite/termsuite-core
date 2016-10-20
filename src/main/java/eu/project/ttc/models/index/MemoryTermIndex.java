@@ -90,7 +90,6 @@ public class MemoryTermIndex implements TermIndex {
 	private Map<Integer, Term> termsById = Maps.newHashMap();
 	private Map<String, Term> termsByGroupingKey = Maps.newHashMap();
 	private Map<String, CustomTermIndex> customIndexes = Maps.newHashMap();
-	private Map<String, TermMeasure> termMeasures = Maps.newHashMap();
 	private Map<String, Word> wordIndex = Maps.newHashMap();
 	private Map<String, Document> documents = Maps.newHashMap();
 	private Multimap<Term, TermVariation> outboundVariations = HashMultimap.create();
@@ -109,9 +108,6 @@ public class MemoryTermIndex implements TermIndex {
 		this.lang = lang;
 		this.name = name;
 		this.occurrenceStore = occurrenceStore;
-		this.termMeasures.put(MEASURE_WR, new WRMeasure(this));
-		this.termMeasures.put(MEASURE_WRLOG, new WRLogMeasure(this));
-		this.termMeasures.put(MEASURE_FREQUENCY, new FrequencyMeasure(this));
 	}
 	
 	@Override
@@ -436,27 +432,6 @@ public class MemoryTermIndex implements TermIndex {
 	public int getWordAnnotationsNum() {
 		return this.nbWordAnnotations;
 	}
-
-	@Override
-	public TermMeasure getWRMeasure() {
-		return this.termMeasures.get(MEASURE_WR);
-	}
-
-	@Override
-	public TermMeasure getWRLogMeasure() {
-		return this.termMeasures.get(MEASURE_WRLOG);
-	}
-
-	@Override
-	public TermMeasure getFrequencyMeasure() {
-		return this.termMeasures.get(MEASURE_FREQUENCY);
-	}
-
-	@Override
-	public Iterable<TermMeasure> getMeasures() {
-		return this.termMeasures.values();
-	}
-	
 	@Override
 	public int getSpottedTermsNum() {
 		return nbSpottedTerms;

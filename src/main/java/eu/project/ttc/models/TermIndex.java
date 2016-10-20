@@ -29,7 +29,6 @@ import org.apache.uima.jcas.JCas;
 
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.index.CustomTermIndex;
-import eu.project.ttc.models.index.TermMeasure;
 import eu.project.ttc.models.index.TermValueProvider;
 import eu.project.ttc.models.index.selectors.TermSelector;
 import eu.project.ttc.types.TermOccAnnotation;
@@ -138,15 +137,6 @@ public interface TermIndex {
 	public CustomTermIndex createCustomIndex(String indexName, TermValueProvider termClassProvider);
 	public void dropCustomIndex(String indexName);
 
-	/*
-	 * Term measures
-	 */
-	public TermMeasure getWRMeasure();
-	public TermMeasure getWRLogMeasure();
-	public TermMeasure getFrequencyMeasure();
-	public Iterable<TermMeasure> getMeasures();
-
-	
 	public void deleteMany(TermSelector selector);
 
 	

@@ -122,7 +122,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 	
 	@Test
 	public void testTop10ByWR() {
-		assertThat(termsByProperty(termIndex, TermProperty.WR, true).subList(0, 10))
+		assertThat(termsByProperty(termIndex, TermProperty.SPECIFICITY, true).subList(0, 10))
 			.hasSize(10)
 			.extracting("groupingKey")
 			.containsExactly(

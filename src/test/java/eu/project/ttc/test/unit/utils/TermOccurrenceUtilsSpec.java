@@ -35,7 +35,6 @@ import com.google.common.collect.Lists;
 import eu.project.ttc.models.Document;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermOccurrence;
-import eu.project.ttc.models.index.TermMeasure;
 import eu.project.ttc.test.unit.Fixtures;
 import eu.project.ttc.utils.TermOccurrenceUtils;
 
@@ -141,35 +140,5 @@ public class TermOccurrenceUtilsSpec {
 		.containsExactly(o6,o7);
 	}
 	
-
-	@Test
-	public void testMarkPrimaryOccurrenceMostSpecificFirst1() {
-		List<TermOccurrence> newArrayList = Lists.newArrayList(o1, o2, o3, o4, o5);
-		TermOccurrenceUtils.markPrimaryOccurrence(newArrayList, new TermMeasure(null) {
-			@Override
-			public double getValue(Term term) {
-				return term.getFrequencyNorm();
-			}
-		});
-		assertTrue(o1.isPrimaryOccurrence());
-		assertTrue(o2.isPrimaryOccurrence());
-		assertFalse(o3.isPrimaryOccurrence());
-		assertTrue(o4.isPrimaryOccurrence());
-		assertFalse(o5.isPrimaryOccurrence());
-	}
-	@Test
-	public void testMarkPrimaryOccurrenceMostSpecificFirst2() {
-		List<TermOccurrence> newArrayList = Lists.newArrayList(o1, o2, o3, o5);
-		TermOccurrenceUtils.markPrimaryOccurrence(newArrayList, new TermMeasure(null) {
-			@Override
-			public double getValue(Term term) {
-				return term.getFrequencyNorm();
-			}
-		});
-		assertTrue(o1.isPrimaryOccurrence());
-		assertTrue(o2.isPrimaryOccurrence());
-		assertFalse(o3.isPrimaryOccurrence());
-		assertTrue(o5.isPrimaryOccurrence());
-	}
 	
 }
