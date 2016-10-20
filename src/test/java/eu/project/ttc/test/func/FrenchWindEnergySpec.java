@@ -113,7 +113,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	
 	@Test
 	public void testTop10ByWR() {
-		assertThat(termsByProperty(termIndex, TermProperty.WR, true).subList(0, 10))
+		assertThat(termsByProperty(termIndex, TermProperty.SPECIFICITY, true).subList(0, 10))
 			.hasSize(10)
 			.extracting("groupingKey")
 			.containsExactly(
@@ -180,6 +180,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testMSNNVariations() {
+		termIndex.getTermVariations(VariationType.MORPHOLOGICAL).stream().forEach(System.out::println);
 		assertThat(termIndex)
 			.hasNVariationsOfType(28, VariationType.MORPHOLOGICAL)
 			.asTermVariationsHavingObject("M-S-NN")

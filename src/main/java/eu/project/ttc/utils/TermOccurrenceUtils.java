@@ -26,16 +26,12 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
 
 import com.google.common.collect.AbstractIterator;
 import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.Lists;
-import com.google.common.collect.Sets;
 
-import eu.project.ttc.models.Document;
 import eu.project.ttc.models.TermOccurrence;
-import eu.project.ttc.models.index.TermMeasure;
 
 /**
  * A utililty class for {@link TermOccurrence} objects and collections.
@@ -56,47 +52,6 @@ public class TermOccurrenceUtils {
 					.result();
 		}
 	};
-
-	
-	/**
-	 * Given a strategy, detects all primary occurrences in a collection 
-	 * of {@link TermOccurrence}.
-	 * 
-	 * What defines an occurrence's primary/secondary status is the fact
-	 * that in a {@link Document}, two primary occurrences cannot overlap.
-	 * 
-	 * E.g. in text "offshore wind energy", the sequence or term occurrences "offshore"
-	 * and "wind energy" is a set of primary sequence, but the set of term occurrences 
-	 * "offshore wind" and "wind energy" is not a primary sequence, because occurrences 
-	 * overlap.
-	 * 
-	 * 
-	 * @see TermOccurrenceUtils#markPrimaryOccurrence(Collection, TermMeasure)
-	 * @see TermOccurrence#isPrimaryOccurrence()
-	 * @param occs
-	 * 			the occurrence collection
-	 * @param measure
-	 * 			the measure for detecting primary occurrences 
-	 * 			
-	 */
-	public static void markPrimaryOccurrence(
-			Collection<TermOccurrence> occs, TermMeasure measure) {
-		
-		
-		for(Iterator<List<TermOccurrence>> it = occurrenceChunkIterator(occs);it.hasNext();) {
-			List<TermOccurrence> chunk = it.next();
-			Set<TermOccurrence> primaryOccs = Sets.newHashSet();
-			
-			Collections.sort(chunk, measure.getOccurrenceComparator(true));
-			for(TermOccurrence o:chunk) {
-				o.setPrimaryOccurrence(!hasOverlappingOffsets(o, primaryOccs));
-				if(o.isPrimaryOccurrence())
-					primaryOccs.add(o);
-			}
-			
-		}
-		
-	}
 
 	/**
 	 * Returns a virtual iterator on chunks of an occurrence collection.

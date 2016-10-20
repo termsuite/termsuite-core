@@ -32,13 +32,13 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
 import eu.project.ttc.engines.BilingualAligner.RequiresSize2Exception;
+import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.morpho.CompoundUtils;
 import eu.project.ttc.models.ContextVector;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.index.CustomTermIndex;
 import eu.project.ttc.models.index.TermIndexes;
-import eu.project.ttc.models.index.TermMeasure;
 import eu.project.ttc.resources.BilingualDictionary;
 
 public class AlignerUtils {
@@ -92,10 +92,10 @@ public class AlignerUtils {
 				fillTargetVectorSProrata(targetVector, entry, translations);
 				break;
 			case TRANSLATION_STRATEGY_MOST_FREQUENT:
-				fillTargetVectorSMost(targetVector, entry, translations, targetTermino.getFrequencyMeasure());
+				fillTargetVectorSMost(targetVector, entry, translations, TermProperty.FREQUENCY);
 				break;
 			case TRANSLATION_STRATEGY_MOST_SPECIFIC:
-				fillTargetVectorSMost(targetVector, entry, translations, targetTermino.getWRMeasure());
+				fillTargetVectorSMost(targetVector, entry, translations, TermProperty.SPECIFICITY);
 				break;
 			case TRANSLATION_STRATEGY_EQUI_REPARTITION:
 				fillTargetVectorSEquiRepartition(targetVector, entry, translations);
@@ -187,9 +187,9 @@ public class AlignerUtils {
 	 * 
 	 */
 	private static void fillTargetVectorSMost(ContextVector translatedVector,
-			ContextVector.Entry sourceTermEntry, Set<Term> candidateTranslations, TermMeasure termMeasure) {
+			ContextVector.Entry sourceTermEntry, Set<Term> candidateTranslations, TermProperty termProperty) {
 		fillTargetVectorWithMostProperty(translatedVector, sourceTermEntry,
-				candidateTranslations, termMeasure);
+				candidateTranslations, termProperty);
 	}
 	
 	
@@ -226,12 +226,12 @@ public class AlignerUtils {
 	private static void fillTargetVectorWithMostProperty(
 			ContextVector translatedVector,
 			ContextVector.Entry sourceTermEntry,
-			Set<Term> candidateTranslations, final TermMeasure measure) {
+			Set<Term> candidateTranslations, final TermProperty termProperty) {
 		Term mostFrequent = null;
 		double maxValue = -1d;
 		
 		for(Term t:candidateTranslations) {
-			if(measure.getValue(t)>maxValue) {
+			if(((Double)termProperty.getValue(t))>maxValue) {
 				maxValue = t.getFrequency();
 				mostFrequent = t;
 			}

@@ -54,7 +54,6 @@ import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.index.CustomTermIndex;
 import eu.project.ttc.models.index.TermIndexes;
-import eu.project.ttc.models.index.TermMeasure;
 import eu.project.ttc.models.index.TermValueProviders;
 import eu.project.ttc.resources.BilingualDictionary;
 import eu.project.ttc.utils.AlignerUtils;
@@ -264,22 +263,13 @@ public class BilingualAligner {
 		TranslationCandidate c;
 		while (it.hasNext()) {
 			c = (TranslationCandidate) it.next();
-			double wr = termIndex.getWRMeasure().getValue(c.getTerm());
+			double wr = c.getTerm().getSpecificity();
 			c.setScore(c.getScore()*getSpecificityBonusFactor(wr));
 		}
 	}
 
-	private double getSpecificityBonusFactor(double wr) {
-		if(wr <= 1)
-			return 0.5;
-		else if(wr <= 2)
-			return 1;
-		else if(wr <= 10)
-			return 1.5;
-		else if(wr <= 100)
-			return 2;
-		else
-			return 5;
+	private double getSpecificityBonusFactor(double specificity) {
+		return specificity;
 	}
 
 	public List<TranslationCandidate> alignDico(Term sourceTerm, int nbCandidates) {
@@ -401,8 +391,6 @@ public class BilingualAligner {
 	private Collection<TranslationCandidate> combineCandidates(Collection<TranslationCandidate> candidates1,
 			Collection<TranslationCandidate> candidates2, AlignmentMethod method) {
 		Collection<TranslationCandidate> combination = Sets.newHashSet();
-		TermMeasure wrLog = targetTermino.getWRLogMeasure();
-		wrLog.compute();
 		for(TranslationCandidate candidate1:candidates1) {
 			for(TranslationCandidate candidate2:candidates2) {
 				/*
@@ -443,8 +431,8 @@ public class BilingualAligner {
 					combination.add(new TranslationCandidate(
 							t, 
 							method,
-							wrLog.getValue(t), 
-							new TextExplanation(String.format("Spécificité: %.1f", wrLog.getValue(t)))));
+							t.getSpecificity(), 
+							new TextExplanation(String.format("Spécificité: %.1f", t.getSpecificity()))));
 				}
 			}
 		}

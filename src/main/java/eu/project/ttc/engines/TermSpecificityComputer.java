@@ -34,7 +34,6 @@ import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.index.TermMeasure;
 import eu.project.ttc.resources.GeneralLanguage;
 import eu.project.ttc.resources.TermIndexResource;
 
@@ -75,8 +74,8 @@ public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 	}
 
 	private void computeMeasures() {
-		for(TermMeasure measure:termIndexResource.getTermIndex().getMeasures())
-			measure.compute();
+		for(Term term:termIndexResource.getTermIndex().getTerms())
+			term.setSpecificity(Math.log10(1 + term.getFrequencyNorm() / term.getGeneralFrequencyNorm()));
 	}
 
 	private void computeSpecifities() {

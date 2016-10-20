@@ -51,7 +51,6 @@ import java.util.TreeSet;
 import com.google.common.collect.ComparisonChain;
 
 import eu.project.ttc.models.Term;
-import eu.project.ttc.models.index.TermMeasure;
 
 /**
  * Consists exclusively of terms that operate or create {@link TermPredicate}s.
@@ -90,26 +89,6 @@ public class TermPredicates {
 			}
 		};
 	}
-
-	/**
-	 * Returns a {@link TermPredicate} the accepts terms whose measure is
-	 * bigger than the specified <code>threshold</code>.
-	 * 
-	 * @param threshold
-	 *            The measure threshold
-	 * @return The term predicate
-	 */
-	public static TermPredicate createMeasurePredicate(
-			final double threshold, final TermMeasure termMeasure) {
-		return new TermPredicate() {
-
-			@Override
-			public boolean accept(Term term) {
-				return termMeasure.getValue(term) >= threshold;
-			}
-		};
-	}
-
 
 	/**
 	 * Returns a {@link TermPredicate} that accepts terms whose grammatical
@@ -193,18 +172,6 @@ public class TermPredicates {
 	public static TermPredicate createTopNByOccurrencesPredicate(int cutoffRank) {
 		return createSortedTermPredicate(cutoffRank,
 				DESCENDING_OCCURRENCE_ORDER);
-	}
-
-	/**
-	 * Returns a {@link TermPredicate} that accepts terms in sorted measure
-	 * order up to the specified <code>cutoffRank</code>.
-	 * 
-	 * @param cutoffRank
-	 *            The rank cutoff
-	 * @return The term predicate object
-	 */
-	public static TermPredicate createTopNByTermMeasurePredicate(int cutoffRank, TermMeasure termMeasure) {
-		return createSortedTermPredicate(cutoffRank, termMeasure.getTermComparator(true));
 	}
 
 	/**

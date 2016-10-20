@@ -245,7 +245,7 @@ public class TermSuiteTerminoCLI {
 	 */
 	private Optional<Float> cleaningThreshold = Optional.of(2f);
 	private Optional<Integer> cleaningTopN = Optional.absent();
-	private Optional<TermProperty> cleaningProperty = Optional.of(TermProperty.WR_LOG);
+	private Optional<TermProperty> cleaningProperty = Optional.of(TermProperty.SPECIFICITY);
 	private boolean keepVariantsWhileCleaning = true;
 	
 	/*

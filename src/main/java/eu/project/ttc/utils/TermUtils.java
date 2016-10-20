@@ -46,7 +46,6 @@ import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.models.TermWord;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.models.index.TermIndexes;
-import eu.project.ttc.models.index.TermMeasure;
 import eu.project.ttc.resources.GeneralLanguageResource;
 import eu.project.ttc.tools.TermSuiteResource;
 
@@ -88,17 +87,6 @@ public class TermUtils {
 				for(TermVariation variation:index.getOutboundTermVariations(term)) 
 					stream.format("\tsyntactic: %s\n" , variation.getVariant().getGroupingKey());
 			}
-		}
-	}
-
-	public static void showTopNTermsBy(TermIndex index, TermMeasure measure, PrintStream out, int n) {
-		List<Term> terms = Lists.newArrayList(index.getTerms());
-		Collections.sort(terms, measure.getTermComparator(true));
-		int i = 0;
-		for(Term t:terms) {
-			out.println(t);
-			if(i++ > n)
-				break;
 		}
 	}
 
