@@ -77,6 +77,11 @@ public class Term implements Comparable<Term> {
 	private double specificity;
 	
 	/*
+	 * 
+	 */
+	private double tfIdf;
+
+	/*
 	 * The logarithm of weirdness ratio of this term
 	 */
 //	private double wrLog;
@@ -572,4 +577,11 @@ public class Term implements Comparable<Term> {
 		return this.fixedExpression;
 	}
 
+	public double getTfIdf() {
+		return tfIdf;
+	}
+
+	public void setTfIdf(double tfIdf) {
+		this.tfIdf = tfIdf;
+	}
 }

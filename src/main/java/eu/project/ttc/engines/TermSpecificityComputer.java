@@ -107,7 +107,7 @@ public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 				term.setFrequencyNorm(normalizedTermFrequency);
 				term.setGeneralFrequencyNorm( normalizedGeneralTermFrequency);
 				term.setSpecificity(Math.log10(1 + normalizedTermFrequency/normalizedGeneralTermFrequency));
-				
+				term.setTfIdf((double)term.getFrequency()/term.getDocumentFrequency());
 				watch(term);
 			}
 		}
