@@ -41,17 +41,18 @@ import eu.project.ttc.utils.TermUtils;
  *
  */
 public enum TermProperty {
-	RANK("rank", "#", false, Integer.class),
-	DOCUMENT_FREQUENCY("documentFrequency", "dfreq", false, Integer.class),
-	FREQUENCY_NORM("frequencyNorm", "fnorm", false, Double.class),
-	GENERAL_FREQUENCY_NORM("generalFrequencyNorm", "generalFnorm", false, Double.class),
-	SPECIFICITY("specificity", "sp", true, Double.class),
-	FREQUENCY("frequency", "f", false, Integer.class),
-	PILOT("pilot", "pilot", false, String.class),
-	LEMMA("lemma", "lm", false, String.class),
-	GROUPING_KEY("groupingKey", "gkey", false, String.class),
-	PATTERN("pattern", "p", false, String.class),
-	SPOTTING_RULE("spottingRule", "rule", false, String.class),
+	RANK("rank", "#", Integer.class),
+	DOCUMENT_FREQUENCY("documentFrequency", "dfreq", Integer.class),
+	FREQUENCY_NORM("frequencyNorm", "fnorm", Double.class),
+	GENERAL_FREQUENCY_NORM("generalFrequencyNorm", "generalFnorm", Double.class),
+	SPECIFICITY("specificity", "sp", Double.class),
+	FREQUENCY("frequency", "f", Integer.class),
+	PILOT("pilot", "pilot", String.class),
+	LEMMA("lemma", "lm", String.class),
+	TF_IDF("tf-idf", "tfidf", Double.class),
+	GROUPING_KEY("groupingKey", "gkey", String.class),
+	PATTERN("pattern", "p", String.class),
+	SPOTTING_RULE("spottingRule", "rule", String.class),
 	;
 	
 	private static Map<String, TermProperty> byNames = Maps.newHashMap();
@@ -72,12 +73,10 @@ public enum TermProperty {
 	private String propertyName;
 	private String propertyShortName;
 	private Class<?> range;
-	private boolean measure;
 
-	private TermProperty(String propertyName, String propertyShortName, boolean isMeasure, Class<?> range) {
+	private TermProperty(String propertyName, String propertyShortName, Class<?> range) {
 		this.propertyName = propertyName;
 		this.propertyShortName = propertyShortName;
-		this.measure = isMeasure;
 		this.range = range;
 	}
 	
@@ -91,11 +90,6 @@ public enum TermProperty {
 	
 	public boolean isNumber() {
 		return Number.class.isAssignableFrom(getRange());
-	}
-
-	
-	public boolean isMeasure() {
-		return this.measure;
 	}
 
 	public String getPropertyName() {
@@ -144,6 +138,8 @@ public enum TermProperty {
 			return t.getDocumentFrequency();
 		case FREQUENCY:
 			return t.getFrequency();
+		case TF_IDF:
+			return t.getTfIdf();
 		case SPECIFICITY:
 			return t.getSpecificity();
 		case GENERAL_FREQUENCY_NORM:
@@ -151,9 +147,6 @@ public enum TermProperty {
 		case FREQUENCY_NORM:
 			return t.getFrequencyNorm();
 		default:
-			if(measure)
-				throw new IllegalStateException("No double value for property: " + this);
-				
 			throw new UnsupportedOperationException("No double value for property: " + this);
 		}
 	}
@@ -182,6 +175,8 @@ public enum TermProperty {
 			return t.getSpecificity();
 		case FREQUENCY:
 			return t.getFrequency();
+		case TF_IDF:
+			return t.getTfIdf();
 		case LEMMA:
 			return t.getLemma();
 		case GENERAL_FREQUENCY_NORM:
