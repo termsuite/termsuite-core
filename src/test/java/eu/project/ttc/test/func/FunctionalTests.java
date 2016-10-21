@@ -23,6 +23,7 @@
 
 package eu.project.ttc.test.func;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Path;
@@ -47,8 +48,6 @@ import eu.project.ttc.test.func.tools.builders.TerminoExtractorSpec;
 import eu.project.ttc.test.func.tools.builders.TerminoFiltererSpec;
 import eu.project.ttc.test.func.tools.cmd.TermSuiteAlignerCLISpec;
 import eu.project.ttc.test.func.tools.cmd.TermSuiteTerminoCLISpec;
-import eu.project.ttc.tools.cli.TermSuiteAlignerCLI;
-import eu.project.ttc.tools.cli.TermSuiteTerminoCLI;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
@@ -116,6 +115,19 @@ public class FunctionalTests {
 		List<Term> terms = Lists.newArrayList(termIndex.getTerms());
 		Collections.sort(terms, termProperty.getComparator(termIndex, desc));
 		return terms;
+	}
+
+
+	public static Path getTestsOutputFile(String relativePath) {
+		return getFunctionalTestsOutputDir().resolve(relativePath);
+	}
+	
+	public static Path getFunctionalTestsOutputDir() {
+		return Paths.get(getConfigProperty("tests.output").toString());
+	}
+
+	public static Path getFunctionalTestsControlDir() {
+		return getFunctionalTestsOutputDir().resolve("control");
 	}
 
 }

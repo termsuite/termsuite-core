@@ -5,9 +5,9 @@ import java.io.Writer;
 
 import com.google.common.collect.Lists;
 
-import eu.project.ttc.api.TsvOptions;
 import eu.project.ttc.api.TermSuiteException;
 import eu.project.ttc.api.Traverser;
+import eu.project.ttc.api.TsvOptions;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermVariation;

@@ -29,14 +29,17 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.assertj.core.util.Lists;
 import org.junit.Test;
 
 import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
+import eu.project.ttc.models.CompoundType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.Word;
 
 public class FrenchWindEnergySpec extends WindEnergySpec {
 	
@@ -84,6 +87,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 				"M-S-NN",
 				"M-PI-EN-P",
 				"M-R1-NA",
+				"M-I-NA-CE",
 				"M-I-NA-EC");
 	}
 	
@@ -97,9 +101,24 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 				"S-I2-NPN-PN,PNC",
 				"S-PID-NA-P",
 				"S-PID-NAA-P",
-				"M-I-NA-CE",
 				"M-I2-NA");
 	}
+	
+	@Test
+	public void weNeoclassicalCompounds() {
+		List<Word> neoclassicals = termIndex.getWords().stream()
+			.filter(Word::isCompound)
+			.filter(w -> w.getCompoundType() == CompoundType.NEOCLASSICAL).collect(Collectors.toList());
+		
+		assertThat(neoclassicals)
+			.isNotEmpty()
+			.extracting("lemma", "neoclassicalAffix.lemma")
+			.contains(tuple("hydroélectrique", "eau"))
+			.contains(tuple("antinucléaire", "anti"))
+			.contains(tuple("aéroélastique", "air"))
+			.hasSize(363);
+	}
+
 	
 	@Test
 	public void testTop10ByFreq() {
@@ -179,10 +198,22 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	}
 
 	@Test
-	public void testMSNNVariations() {
-		termIndex.getTermVariations(VariationType.MORPHOLOGICAL).stream().forEach(System.out::println);
+	public void testMINACEVariations() {
 		assertThat(termIndex)
-			.hasNVariationsOfType(28, VariationType.MORPHOLOGICAL)
+			.asTermVariationsHavingObject("M-I-NA-CE")
+			.extracting("base.groupingKey", "variant.groupingKey")
+			.contains(
+				   tuple("na: fonctionnement hypersynchrone", "naca: fonctionnement hyper et hyposynchrone")
+			)
+			.hasSize(1)
+			;
+
+	}
+
+	@Test
+	public void testMSNNVariations() {
+		assertThat(termIndex)
+			.hasNVariationsOfType(43, VariationType.MORPHOLOGICAL)
 			.asTermVariationsHavingObject("M-S-NN")
 			.hasSize(9)
 			.extracting("base.groupingKey", "variant.groupingKey")

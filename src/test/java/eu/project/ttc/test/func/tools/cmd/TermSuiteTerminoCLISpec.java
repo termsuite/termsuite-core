@@ -19,7 +19,6 @@ import org.junit.runners.MethodSorters;
 import com.google.common.base.Splitter;
 
 import eu.project.ttc.api.TermIndexIO;
-import eu.project.ttc.api.Traverser;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.VariationType;
@@ -62,7 +61,7 @@ public class TermSuiteTerminoCLISpec {
 		assertThat(tbxPath.toFile()).exists();
 		
 		TermIndex termindex = TermIndexIO.fromJson(jsonPath);
-		assertThat(termindex).containsTerm("nn: wind energy").hasSize(976);
+		assertThat(termindex).containsTerm("nn: wind energy").hasSize(955);
 		assertFalse(termindex.getTermByGroupingKey("nn: wind energy").isContextVectorComputed());
 	}
 
@@ -111,7 +110,7 @@ public class TermSuiteTerminoCLISpec {
 		assertThat(termindex)
 			.containsTerm("nn: wind energy")
 			.containsVariation("nn: wind energy", VariationType.SYNTACTICAL, "ann: offshore wind energy")
-			.hasSize(146);
+			.hasSize(140);
 	}
 	
 

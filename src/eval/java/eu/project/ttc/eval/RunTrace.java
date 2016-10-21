@@ -5,8 +5,6 @@ import java.util.stream.Stream;
 
 import org.assertj.core.util.Lists;
 
-import com.google.common.base.MoreObjects;
-
 public class RunTrace {
 
 	private List<AlignmentRecord> records = Lists.newArrayList();

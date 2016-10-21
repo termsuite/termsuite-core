@@ -48,7 +48,6 @@ import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import com.google.common.primitives.Doubles;
 
 import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.history.TermHistoryResource;
@@ -259,6 +258,7 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 				// build the word component from segmentation
 				WordBuilder builder = new WordBuilder(word);
 				
+				boolean isNeoclassical = false;
 				for(Segment seg:bestSegmentation.getSegments()) {
 					String lemma = segmentLemmaCache.getUnchecked(seg.getLemma());
 					builder.addComponent(
@@ -266,11 +266,14 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 						seg.getEnd(), 
 						lemma
 					);
-					if(seg.isNeoclassical())
-						builder.setCompoundType(CompoundType.NEOCLASSICAL);
-					else
-						builder.setCompoundType(CompoundType.NATIVE);
+					
+					
+					if(compostIndex.isNeoclassical(seg.getSubstring())) {
+						isNeoclassical = true;
+						builder.setNeoclassicalAffix(seg.getBegin(), seg.getEnd());
+					} 
 				}
+				builder.setCompoundType(isNeoclassical ? CompoundType.NEOCLASSICAL : CompoundType.NATIVE);
 				builder.create();
 				
 				// log the word composition

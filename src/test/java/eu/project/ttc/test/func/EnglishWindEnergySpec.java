@@ -29,14 +29,17 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.assertj.core.util.Lists;
 import org.junit.Test;
 
 import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
+import eu.project.ttc.models.CompoundType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.Word;
 
 public class EnglishWindEnergySpec extends WindEnergySpec {
 	
@@ -134,6 +137,20 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 
 
 	@Test
+	public void weNeoclassicalCompounds() {
+		List<Word> neoclassicals = termIndex.getWords().stream()
+			.filter(Word::isCompound)
+			.filter(w -> w.getCompoundType() == CompoundType.NEOCLASSICAL).collect(Collectors.toList());
+		
+		assertThat(neoclassicals)
+			.isNotEmpty()
+			.extracting("lemma", "neoclassicalAffix.lemma")
+			.contains(tuple("hydroelectric", "water"))
+			.hasSize(769);
+	}
+
+	
+	@Test
 	public void testTermHighSpeed() {
 		Term term = termIndex.getTermByGroupingKey("a: high-speed");
 		assertThat(term)
@@ -178,7 +195,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 		assertThat(termIndex)
 //			.hasNVariationsOfType(1266, VariationType.MORPHOLOGICAL)
 			.asTermVariationsHavingObject("M-S-NN")
-			.hasSize(130)
+			.hasSize(128)
 			.extracting("base.groupingKey", "variant.groupingKey")
 			.contains(
 				   tuple("n: baseline", "nn: base line"), 

@@ -24,12 +24,20 @@
 package eu.project.ttc.test.func;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.tuple;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.file.Path;
 import java.util.Collection;
+import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.assertj.core.api.AbstractAssert;
 import org.assertj.core.api.AbstractIterableAssert;
+import org.assertj.core.api.iterable.Extractor;
+import org.assertj.core.groups.Tuple;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Objects;
@@ -39,6 +47,7 @@ import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.models.VariationType;
+import eu.project.ttc.tools.utils.ControlFilesGenerator;
 import eu.project.ttc.utils.TermIndexUtils;
 
 public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> {
@@ -235,5 +244,88 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 					variants.size(),
 					variants);
 		return this;
+	}
+
+	public TermIndexAssert hasExpectedCompounds(Path diffFileIfFail, Tuple... expectedTuples) {
+		CompoundTupleExtractor compoundTupleExtractor = new CompoundTupleExtractor();
+		Set<Tuple> actualTuples = actual.getTerms().stream()
+			.filter(Term::isCompound)
+			.map(compoundTupleExtractor::extract)
+			.collect(Collectors.toSet());
+		return tupleDiff(diffFileIfFail, Sets.newHashSet(expectedTuples), actualTuples);
+	}
+	
+	public TermIndexAssert tupleDiff(Path diffFileIfFail, Set<Tuple> expectedTuples, Set<Tuple> actualTuples) {
+		Set<Tuple> notFound = Sets.newHashSet(expectedTuples);
+		notFound.removeAll(actualTuples);
+		
+		Set<Tuple> notExpected = Sets.newHashSet(actualTuples);
+		notExpected.removeAll(expectedTuples);
+
+		Set<Tuple> foundAndExpected = Sets.newHashSet(expectedTuples);
+		foundAndExpected.retainAll(actualTuples);
+		
+		if(!(notFound.isEmpty() && notExpected.isEmpty())) {
+			
+			diffFileIfFail.resolve("..").toFile().mkdirs();
+			try(FileWriter writer = new FileWriter(diffFileIfFail.toFile())) {
+				writer.write(String.format("Expected %d tuples, got %d.%nNum of tuples not found: %d%nNum of tuples not expected: %d%nNum of tuples found and expected: %d%n", 
+					expectedTuples.size(),
+					actualTuples.size(),
+					notFound.size(),
+					expectedTuples.size(),
+					foundAndExpected.size()));
+				
+				writer.write(String.format("%n---------------------------------------------------------------%n"));
+				writer.write(String.format("Tuples not found%n"));
+				for(Tuple t:notFound) {
+					writer.write(t.toString());
+					writer.write("\n");
+				};
+				
+				writer.write(String.format("%n---------------------------------------------------------------%n"));
+				writer.write(String.format("Tuples not Expected%n"));
+				for(Tuple t:notExpected) {
+					writer.write(t.toString());
+					writer.write("\n");
+				};
+				
+				writer.write(String.format("%n---------------------------------------------------------------%n"));
+				writer.write(String.format("Tuples found and expected%n"));
+				for(Tuple t:foundAndExpected) {
+					writer.write(t.toString());
+					writer.write("\n");
+				};
+
+				writer.flush();
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+			
+			
+			failWithMessage("See diff file <%s>. Expected exact match of tuple sets. Expected num of tuples: <%s>, actual <%s>. Num of tuples not found: <%s>. Num of tuples not expected: <%s>", 
+					diffFileIfFail.toString(),
+					expectedTuples.size(),
+					actualTuples.size(),
+					notFound.size(),
+					expectedTuples.size());
+		} else 
+			if(diffFileIfFail.toFile().exists())
+				diffFileIfFail.toFile().delete();
+			
+		
+		return this;
+	}
+
+	
+	public static class CompoundTupleExtractor implements Extractor<Term, Tuple> {
+		@Override
+		public Tuple extract(Term compoundTerm) {
+			return tuple(
+					compoundTerm.getWords().get(0).getWord().getCompoundType().getShortName(),
+					compoundTerm.getGroupingKey(),
+					ControlFilesGenerator.toCompoundString(compoundTerm)
+					);
+		}
 	}
 }

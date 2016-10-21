@@ -58,7 +58,7 @@ public class CompostIndex {
 	}
 
 	public void addNeoclassicalPrefix(String word) {
-		getCompostDicoEntry(word).setInDico(true);
+		getCompostDicoEntry(word).setInNeoClassicalPrefix(true);
 	}
 
 	public void addInCorpus(String lemma) {
@@ -76,5 +76,10 @@ public class CompostIndex {
 	public Iterator<CompostIndexEntry> closedEntryCandidateIterator(String segment) {
 		String indexKey = indexingKey.getIndexKey(segment);
 		return indexedDico.get(indexKey).iterator();
+	}
+
+	public boolean isNeoclassical(String segment) {
+		CompostIndexEntry e = getEntry(segment);
+		return e != null && e.isInNeoClassicalPrefix();
 	}
 }

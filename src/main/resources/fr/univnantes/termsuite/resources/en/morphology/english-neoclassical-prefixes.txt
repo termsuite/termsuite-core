@@ -4,8 +4,8 @@ adeno
 adreno
 adria
 aemia
-aero
-afro
+aero	air
+afro	africa
 agri
 agro
 algia
@@ -28,7 +28,7 @@ areolo
 aroma
 arthr
 astro
-audio
+audio	auditive
 auto
 axillo
 bi
@@ -171,7 +171,7 @@ hippo
 histio
 histo
 homo
-hydro
+hydro	water
 hygieno
 hyper
 hypno

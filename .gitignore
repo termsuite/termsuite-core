@@ -5,6 +5,10 @@
 *.class
 bin/
 
+# functional tests ouputs
+tests/
+
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
