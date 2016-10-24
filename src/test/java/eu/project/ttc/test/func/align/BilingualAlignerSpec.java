@@ -10,11 +10,11 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
+import eu.project.ttc.align.AlignmentMethod;
+import eu.project.ttc.align.BilingualAligner;
+import eu.project.ttc.align.RequiresSize2Exception;
+import eu.project.ttc.align.TranslationCandidate;
 import eu.project.ttc.api.TermIndexIO;
-import eu.project.ttc.engines.BilingualAligner;
-import eu.project.ttc.engines.BilingualAligner.AlignmentMethod;
-import eu.project.ttc.engines.BilingualAligner.RequiresSize2Exception;
-import eu.project.ttc.engines.BilingualAligner.TranslationCandidate;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
@@ -70,7 +70,19 @@ public class BilingualAlignerSpec {
 					);
 	}
 	
-	
+
+	@Test
+	public void testAlignerNeoclassical() {
+		Term t1 = frTermino.getTermByGroupingKey("a: aérodynamique");
+		List<TranslationCandidate> results = aligner.alignNeoclassical(t1, 3, 1);
+		assertThat(results)
+			.hasSize(1)
+			.extracting("term.groupingKey", "method")
+			.containsExactly(
+					tuple("n: aerodynamics", AlignmentMethod.NEOCLASSICAL)
+					);
+	}
+
 	@Test
 	public void testAlignerMWTSemiDist() {
 		Term t1 = frTermino.getTermByGroupingKey("na: parc éolien");

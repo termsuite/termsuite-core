@@ -64,9 +64,9 @@ import com.google.common.base.Splitter;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.Lists;
 
+import eu.project.ttc.align.BilingualAligner;
+import eu.project.ttc.align.TranslationCandidate;
 import eu.project.ttc.api.JsonOptions;
-import eu.project.ttc.engines.BilingualAligner;
-import eu.project.ttc.engines.BilingualAligner.TranslationCandidate;
 import eu.project.ttc.metrics.Cosine;
 import eu.project.ttc.metrics.Jaccard;
 import eu.project.ttc.metrics.SimilarityDistance;

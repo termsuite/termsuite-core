@@ -29,6 +29,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.apache.uima.cas.FSIterator;
 import org.apache.uima.jcas.JCas;
@@ -329,13 +330,16 @@ public class MemoryTermIndex implements TermIndex {
 		termsById.remove(t.getId());
 		
 		
+		
 		// remove from custom indexes
 		for(CustomTermIndex customIndex:customIndexes.values())
 			customIndex.removeTerm(this, t);
 		
 		// remove from variants
-		this.outboundVariations.removeAll(t);
-		this.inboundVariations.removeAll(t);
+		List<TermVariation> toRem = Lists.newLinkedList();
+		toRem.addAll(this.outboundVariations.removeAll(t));
+		toRem.addAll(this.inboundVariations.removeAll(t));
+		toRem.forEach(this::removeTermVariation);
 		
 		/*
 		 * Removes from context vectors.
@@ -351,6 +355,7 @@ public class MemoryTermIndex implements TermIndex {
 					o.getContextVector().removeCoTerm(t);
 			}
 		}
+		
 	}
 
 	@Override
@@ -476,14 +481,13 @@ public class MemoryTermIndex implements TermIndex {
 	}
 
 	@Override
-	public Collection<TermVariation> getTermVariations(VariationType... types) {
+	public Stream<TermVariation> getTermVariations(VariationType... types) {
 		if(types.length == 0)
-			return this.inboundVariations.values();
+			return this.inboundVariations.entries().stream().map(e -> (TermVariation)e.getValue());
 		else {
 			Set<VariationType> typeSet = Sets.newHashSet(types);
-			return this.inboundVariations.values().stream()
-					.filter(tv -> typeSet.contains(tv.getVariationType()))
-					.collect(Collectors.toSet());
+			return this.inboundVariations.entries().stream().map(e -> (TermVariation)e.getValue())
+					.filter(tv -> typeSet.contains(tv.getVariationType()));
 		}
 	}
 

@@ -31,7 +31,7 @@ import org.slf4j.LoggerFactory;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
-import eu.project.ttc.engines.BilingualAligner.RequiresSize2Exception;
+import eu.project.ttc.align.RequiresSize2Exception;
 import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.morpho.CompoundUtils;
 import eu.project.ttc.models.ContextVector;

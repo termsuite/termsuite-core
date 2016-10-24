@@ -2,7 +2,7 @@ package eu.project.ttc.eval;
 
 import java.util.Optional;
 
-import eu.project.ttc.engines.BilingualAligner.AlignmentMethod;
+import eu.project.ttc.align.AlignmentMethod;
 import eu.project.ttc.models.Term;
 
 public class AlignmentRecord {

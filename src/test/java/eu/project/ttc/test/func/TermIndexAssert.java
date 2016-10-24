@@ -30,7 +30,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Collection;
-import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -138,7 +137,7 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 
 
 	private Collection<TermVariation> getVariations() {
-		return actual.getTermVariations();
+		return actual.getTermVariations().collect(Collectors.toSet());
 	}
 
 	public TermIndexAssert hasNVariationsOfType(int expected, VariationType type) {

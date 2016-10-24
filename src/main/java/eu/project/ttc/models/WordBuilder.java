@@ -74,9 +74,16 @@ public class WordBuilder {
 	}
 
 	public WordBuilder addComponent(int begin, int end, String lemma) {
-		components.add(new Component(lemma, begin, end));
+		return addComponent(begin, end, lemma, false);
+	}
+	public WordBuilder addComponent(int begin, int end, String compLemma, boolean neoclassicalAffix) {
+		Component component = new Component(compLemma, begin, end);
+		if(neoclassicalAffix)
+			component.setNeoclassical();
+		components.add(component);
 		return this;
 	}
+
 
 	public static WordBuilder start() {
 		return new WordBuilder();
@@ -97,4 +104,5 @@ public class WordBuilder {
 		throw new IllegalArgumentException(String.format("Not a component: [%d,%d]",begin, end));
 		
 	}
+
 }
