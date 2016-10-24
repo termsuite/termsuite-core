@@ -30,7 +30,6 @@ public  class Segment implements Comparable<Segment> {
 	/* cached substring of the parent compound */
 	private String _substring;
 	private String lemma;
-	private boolean neoclassical;
 	
 	@Override
 	public int compareTo(Segment o) {
@@ -57,14 +56,6 @@ public  class Segment implements Comparable<Segment> {
 	
 	public void setSubstring(String substring) {
 		this._substring = substring;
-	}
-
-	public boolean isNeoclassical() {
-		return neoclassical;
-	}
-
-	public void setNeoclassical(boolean neoclassical) {
-		this.neoclassical = neoclassical;
 	}
 
 	@Override

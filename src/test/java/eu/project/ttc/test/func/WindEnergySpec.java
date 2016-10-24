@@ -24,17 +24,11 @@
 package eu.project.ttc.test.func;
 
 import static eu.project.ttc.test.TermSuiteAssertions.assertThat;
-import static org.assertj.core.api.Assertions.tuple;
 
-import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
-import java.io.PrintStream;
 import java.util.List;
 
-import org.assertj.core.api.iterable.Extractor;
-import org.assertj.core.groups.Tuple;
 import org.assertj.core.util.Lists;
 import org.junit.Before;
 import org.junit.Test;
@@ -46,13 +40,11 @@ import com.google.common.cache.LoadingCache;
 import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.engines.desc.TermSuiteCollection;
-import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.VariationType;
 import eu.project.ttc.tools.TermSuitePipeline;
 import eu.project.ttc.tools.TermSuiteResourceManager;
 import eu.project.ttc.tools.utils.ControlFilesGenerator;
-import eu.project.ttc.utils.TermIndexUtils;
 
 public abstract class WindEnergySpec {
 
@@ -61,7 +53,6 @@ public abstract class WindEnergySpec {
 	protected List<String> syntacticMatchingRules = Lists.newArrayList();
 	protected List<String> syntacticNotMatchingRules = Lists.newArrayList();
 
-	
 	public WindEnergySpec() {
 		super();
 		this.lang = getLang();
@@ -90,9 +81,14 @@ public abstract class WindEnergySpec {
 				.build(new CacheLoader<Lang, TermIndex>() {
 					@Override
 					public TermIndex load(Lang lang) throws Exception {
-						return runPipeline(lang);
+						TermIndex termIndex = runPipeline(lang);
+						File controlDir = FunctionalTests.getFunctionalTestsControlDir().resolve("we-" + lang.getCode()).toFile();
+						controlDir.mkdirs();
+						new ControlFilesGenerator(termIndex).generate(controlDir);
+						return termIndex;
 					}
 				});
+	
 	
 	@Before
 	public void setup() {
@@ -157,20 +153,8 @@ public abstract class WindEnergySpec {
 	@Test
 	public void weCompounds() throws FileNotFoundException {
 		assertThat(termIndex)
-			.asCompoundList()
-			.extracting(new Extractor<Term, Tuple>() {
-				@Override
-				public Tuple extract(Term compoundTerm) {
-					return tuple(
-							compoundTerm.getWords().get(0).getWord().getCompoundType().getShortName(),
-							compoundTerm.getGroupingKey(),
-							ControlFilesGenerator.toCompoundString(compoundTerm)
-							);
-				}
-			})
-			.containsOnly(
-					ControlFiles.compoundTuples(lang, "we")
-			);
-
+			.hasExpectedCompounds(
+					FunctionalTests.getTestsOutputFile(String.format("compounds-we-%s.txt", lang.getCode())),
+					ControlFiles.compoundTuples(lang, "we"));
 	}
 }

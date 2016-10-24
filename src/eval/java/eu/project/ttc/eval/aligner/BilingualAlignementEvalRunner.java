@@ -12,9 +12,9 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Stopwatch;
 
-import eu.project.ttc.engines.BilingualAligner;
-import eu.project.ttc.engines.BilingualAligner.RequiresSize2Exception;
-import eu.project.ttc.engines.BilingualAligner.TranslationCandidate;
+import eu.project.ttc.align.BilingualAligner;
+import eu.project.ttc.align.RequiresSize2Exception;
+import eu.project.ttc.align.TranslationCandidate;
 import eu.project.ttc.eval.AlignmentEvalRun;
 import eu.project.ttc.eval.AlignmentEvalService;
 import eu.project.ttc.eval.AlignmentRecord;

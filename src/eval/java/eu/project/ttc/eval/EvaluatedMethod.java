@@ -5,9 +5,9 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import eu.project.ttc.engines.BilingualAligner;
-import eu.project.ttc.engines.BilingualAligner.RequiresSize2Exception;
-import eu.project.ttc.engines.BilingualAligner.TranslationCandidate;
+import eu.project.ttc.align.BilingualAligner;
+import eu.project.ttc.align.RequiresSize2Exception;
+import eu.project.ttc.align.TranslationCandidate;
 import eu.project.ttc.models.Term;
 
 public enum EvaluatedMethod {

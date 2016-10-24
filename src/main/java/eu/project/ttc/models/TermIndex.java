@@ -24,6 +24,7 @@ package eu.project.ttc.models;
 import java.io.File;
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.stream.Stream;
 
 import org.apache.uima.jcas.JCas;
 
@@ -102,7 +103,7 @@ public interface TermIndex {
 	 * @param types
 	 * @return
 	 */
-	public Collection<TermVariation> getTermVariations(VariationType... types);
+	public Stream<TermVariation> getTermVariations(VariationType... types);
 	
 	/**
 	 * Retrieves all term variation variations of a given term base.

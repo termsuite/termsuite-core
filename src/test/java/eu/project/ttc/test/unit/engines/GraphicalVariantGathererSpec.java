@@ -58,7 +58,6 @@ public class GraphicalVariantGathererSpec {
 	private Term abcdefghijkx;
 	private Term abcdefghijklCapped;
 	
-	
 	@Before
 	public void setup() {
 		this.termIndex = termIndex();

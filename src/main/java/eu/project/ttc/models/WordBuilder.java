@@ -23,19 +23,20 @@ package eu.project.ttc.models;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
-import com.google.common.base.Optional;
 import com.google.common.collect.Lists;
 
 public class WordBuilder {
 	
-	private Optional<Word> word = Optional.absent();
+	private Optional<Word> word = Optional.empty();
 	private String stem;
 	private String lemma;
-	private Optional<CompoundType> type = Optional.absent();
+	private Optional<CompoundType> type = Optional.empty();
 
 	private List<Component> components = Lists.newArrayList();
-	
+	private Optional<Component> neoclassicalAffix = Optional.empty();
+
 	
 	private WordBuilder() {
 		super();
@@ -73,9 +74,16 @@ public class WordBuilder {
 	}
 
 	public WordBuilder addComponent(int begin, int end, String lemma) {
-		components.add(new Component(lemma, begin, end));
+		return addComponent(begin, end, lemma, false);
+	}
+	public WordBuilder addComponent(int begin, int end, String compLemma, boolean neoclassicalAffix) {
+		Component component = new Component(compLemma, begin, end);
+		if(neoclassicalAffix)
+			component.setNeoclassical();
+		components.add(component);
 		return this;
 	}
+
 
 	public static WordBuilder start() {
 		return new WordBuilder();
@@ -84,4 +92,17 @@ public class WordBuilder {
 	public String getLemma() {
 		return this.lemma;
 	}
+
+	public WordBuilder setNeoclassicalAffix(int begin, int end) {
+		for(Component component:components) {
+			if(component.getBegin() == begin && component.getEnd() == end) {
+				neoclassicalAffix = Optional.of(component);
+				component.setNeoclassical();
+				return this;
+			}
+		}
+		throw new IllegalArgumentException(String.format("Not a component: [%d,%d]",begin, end));
+		
+	}
+
 }

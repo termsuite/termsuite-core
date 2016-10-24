@@ -1,1 +1,2 @@
 treetagger.home.path=/path/to/TreeTagger/
+tests.output="tests/"

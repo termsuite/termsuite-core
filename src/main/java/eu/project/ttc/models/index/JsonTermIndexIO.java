@@ -26,6 +26,7 @@ import java.io.Reader;
 import java.io.Writer;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
@@ -87,6 +88,7 @@ public class JsonTermIndexIO {
 	private static final String LEMMA = "lemma";
 	private static final String STEM = "stem";
 	private static final String COMPOUND_TYPE = "compound_type";
+	private static final String COMPOUND_NEOCLASSICAL_AFFIX = "neoAffix";
 	private static final String COMPONENTS = "components";
 	private static final String BEGIN = "begin";
 	private static final String END = "end";
@@ -146,6 +148,7 @@ public class JsonTermIndexIO {
 		int fileSource = -1;
 		String wordLemma = null;
 		String syntacticLabel = null;
+		boolean neoclassicalAffix = false;
 		int begin = -1;
 		int end = -1;
 		int nbWordAnnos = -1;
@@ -240,10 +243,12 @@ public class JsonTermIndexIO {
 										compLemma = jp.nextTextValue();
 									else if (BEGIN.equals(fieldname)) 
 										begin = jp.nextIntValue(-2);
+									else if (COMPOUND_NEOCLASSICAL_AFFIX.equals(fieldname)) 
+										neoclassicalAffix = jp.nextBooleanValue();
 									else if (END.equals(fieldname)) 
 										end = jp.nextIntValue(-2);
 								}
-								wordBuilder.addComponent(begin, end, compLemma);
+								wordBuilder.addComponent(begin, end, compLemma, neoclassicalAffix);
 							}
 						}
 					}
@@ -539,6 +544,8 @@ public class JsonTermIndexIO {
 					jg.writeNumber(c.getBegin());
 					jg.writeFieldName(END);
 					jg.writeNumber(c.getEnd());
+					jg.writeFieldName(COMPOUND_NEOCLASSICAL_AFFIX);
+					jg.writeBoolean(c.isNeoclassicalAffix());
 					jg.writeEndObject();
 				}
 				jg.writeEndArray();
@@ -631,7 +638,7 @@ public class JsonTermIndexIO {
 		/* Variants */
 		jg.writeFieldName(TERM_VARIATIONS);
 		jg.writeStartArray();
-		for(TermVariation v:termIndex.getTermVariations()) {
+		for(TermVariation v:termIndex.getTermVariations().collect(Collectors.toList())) {
 			jg.writeStartObject();
 			jg.writeFieldName(BASE);
 			jg.writeString(v.getBase().getGroupingKey());

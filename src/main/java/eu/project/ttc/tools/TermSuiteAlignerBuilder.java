@@ -30,7 +30,7 @@ import org.slf4j.LoggerFactory;
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 
-import eu.project.ttc.engines.BilingualAligner;
+import eu.project.ttc.align.BilingualAligner;
 import eu.project.ttc.metrics.Cosine;
 import eu.project.ttc.metrics.Jaccard;
 import eu.project.ttc.metrics.SimilarityDistance;

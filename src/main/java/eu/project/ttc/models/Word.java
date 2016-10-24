@@ -24,6 +24,7 @@ package eu.project.ttc.models;
 import java.util.List;
 
 import com.google.common.base.MoreObjects;
+import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableList;
 
 import eu.project.ttc.utils.StringUtils;
@@ -35,6 +36,10 @@ public class Word extends LemmaStemHolder {
 	private String stem;
 
 	private List<Component> components;
+
+	private static final String MSG_NOT_COMPOUND = "Word <%s> is not a compound";
+	private static final String MSG_NOT_NEOCLASSICAL = "Word <%s> is not a neoclassical compound.";
+	private static final String MSG_NO_NEOCLASSICAL_COMPOUND = "No neoclassical compound found for word <%s>";
 	
 	public Word(String lemma, String stem) {
 		super(lemma);
@@ -113,4 +118,20 @@ public class Word extends LemmaStemHolder {
 		return this.normalizedLemma;
 	}
 
+	/**
+	 * Returns the {@link Component} object if
+	 * 
+	 * @return
+	 * 		The neoclassical component affix
+	 * 
+	 * @throws IllegalStateException when this word is not a neoclassical compound
+	 */
+	public Component getNeoclassicalAffix() {
+		Preconditions.checkState(isCompound(), MSG_NOT_COMPOUND, this);
+		Preconditions.checkState(getCompoundType() == CompoundType.NEOCLASSICAL, MSG_NOT_NEOCLASSICAL, this);
+		for(Component c:components)
+			if(c.isNeoclassicalAffix())
+				return c;
+		throw new IllegalArgumentException(String.format(MSG_NO_NEOCLASSICAL_COMPOUND, this));
+	}
 }

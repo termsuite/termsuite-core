@@ -51,6 +51,8 @@ public class Component extends LemmaStemHolder implements Comparable<Component> 
 	private int begin;
 	private int end;
 	
+	public boolean neoclassicalAffix = false;
+	
 	public Component(String lemma, int begin, int end) {
 		super(lemma);
 		this.begin = begin;
@@ -94,5 +96,11 @@ public class Component extends LemmaStemHolder implements Comparable<Component> 
 		return this.lemma;
 	}
 
+	public void setNeoclassical() {
+		this.neoclassicalAffix = true;
+	}
 
+	public boolean isNeoclassicalAffix() {
+		return neoclassicalAffix;
+	}
 }

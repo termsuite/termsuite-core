@@ -6,7 +6,6 @@ import java.io.StringReader;
 import java.util.List;
 
 import org.assertj.core.api.AbstractAssert;
-import org.hamcrest.BaseDescription;
 import org.hamcrest.Matcher;
 
 import com.google.common.base.Joiner;

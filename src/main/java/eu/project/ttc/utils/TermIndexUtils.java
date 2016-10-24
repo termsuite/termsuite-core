@@ -24,15 +24,24 @@
 package eu.project.ttc.utils;
 
 import java.util.Collection;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import com.google.common.base.Objects;
+import com.google.common.base.Preconditions;
+import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
+import eu.project.ttc.models.Component;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.Word;
+import eu.project.ttc.models.index.CustomTermIndex;
+import eu.project.ttc.models.index.TermIndexes;
 
 public class TermIndexUtils {
 
@@ -45,12 +54,10 @@ public class TermIndexUtils {
 	}
 	
 	public static  Set<TermVariation> selectTermVariations(TermIndex termIndex, VariationType... types) {
-		Set<TermVariation> selected = Sets.newHashSet();
-		for(TermVariation tv:termIndex.getTermVariations())
-			for(VariationType type:types)
-				if(tv.getVariationType() == type)
-					selected.add(tv);
-		return selected;
+		Set<VariationType> typeSet = Sets.newHashSet(types);
+		return termIndex.getTermVariations().filter(tv -> 
+				typeSet.contains(tv.getVariationType())
+			).collect(Collectors.toSet());
 	}
 
 
@@ -64,10 +71,56 @@ public class TermIndexUtils {
 
 
 	public static Collection<TermVariation> selectTermVariationsByInfo(TermIndex termIndex, String ruleName) {
-		Set<TermVariation> selected = Sets.newHashSet();
-		for(TermVariation tv:termIndex.getTermVariations())
-			if(Objects.equal(ruleName, tv.getInfo()))
-				selected.add(tv);
-		return selected;
+		return termIndex.getTermVariations().filter(tv -> 
+				Objects.equal(ruleName, tv.getInfo())
+			).collect(Collectors.toSet());
 	}
+	
+
+	/**
+	 * E.g. Given the compound [hydro|électricité] and the component [hydro], the method should return the 
+	 * term [électricité]
+	 * 
+	 * 
+	 * @param termIndex
+	 * @param compound
+	 * @param component
+	 * @return
+	 */
+	public static Collection<Term> getMorphologicalExtensionsAsTerms(TermIndex termIndex, Term compound, Component component) {
+		Preconditions.checkArgument(compound.isSingleWord());
+		Preconditions.checkArgument(compound.isCompound());
+		Preconditions.checkArgument(compound.getWords().get(0).getWord().getComponents().contains(component));
+		
+		Word compoundWord = compound.getWords().get(0).getWord();
+		LinkedList<Component> extensionComponents = Lists.newLinkedList(compoundWord.getComponents());
+		extensionComponents.remove(component);
+		
+		if(!(component.getBegin() == 0 || component.getEnd() == compound.getLemma().length()))
+			return Lists.newArrayList();
+
+		
+		Set<String> possibleExtensionLemmas = Sets.newHashSet();
+		possibleExtensionLemmas.add(compound.getLemma().substring(
+				extensionComponents.getFirst().getBegin(), 
+				extensionComponents.getLast().getEnd()));
+			
+		if(extensionComponents.size() > 1) {
+			LinkedList<Component> allButLast = Lists.newLinkedList(extensionComponents);
+			Component last = allButLast.removeLast();
+			String lemma = compound.getLemma().substring(allButLast.getFirst().getBegin(), last.getBegin())
+						+ last.getLemma();
+			possibleExtensionLemmas.add(lemma);
+		}
+		
+		
+		List<Term> extensionTerms = Lists.newArrayList();
+		CustomTermIndex lemmaIndex = termIndex.getCustomIndex(TermIndexes.LEMMA_LOWER_CASE);
+		for(String s:possibleExtensionLemmas)
+			extensionTerms.addAll(lemmaIndex.getTerms(s.toLowerCase()));
+
+		
+		return extensionTerms;
+	}
+
 }
