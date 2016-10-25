@@ -5,7 +5,7 @@ public enum AlignmentMethod {
 	DISTRIBUTIONAL("dist", "distributional"),
 	COMPOSITIONAL("comp", "compositional"),
 	SEMI_DISTRIBUTIONAL("s-dist", "semi-distributional"),
-	NEOCLASSICAL("neodico", "neoclassical-dico"), 
+	NEOCLASSICAL("neo", "neoclassical"), 
 	GRAPHICAL("graph", "graphical"),
 	;
 	

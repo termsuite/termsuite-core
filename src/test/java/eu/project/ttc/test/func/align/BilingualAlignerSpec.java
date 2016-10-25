@@ -72,14 +72,30 @@ public class BilingualAlignerSpec {
 	
 
 	@Test
-	public void testAlignerNeoclassical() {
+	public void testAlignerNeoclassicalDico() {
 		Term t1 = frTermino.getTermByGroupingKey("a: aérodynamique");
 		List<TranslationCandidate> results = aligner.alignNeoclassical(t1, 3, 1);
 		assertThat(results)
-			.hasSize(1)
+			.hasSize(3)
 			.extracting("term.groupingKey", "method")
 			.containsExactly(
+					tuple("a: aerodynamic", AlignmentMethod.NEOCLASSICAL),
+					tuple("r: aerodynamically", AlignmentMethod.NEOCLASSICAL),
 					tuple("n: aerodynamics", AlignmentMethod.NEOCLASSICAL)
+					);
+	}
+
+	@Test
+	public void testAlignerNeoclassicalGraph() {
+		Term t1 = frTermino.getTermByGroupingKey("n: géothermie");
+		List<TranslationCandidate> results = aligner.alignNeoclassical(t1, 3, 1);
+		assertThat(results)
+			.hasSize(3)
+			.extracting("term.groupingKey", "method")
+			.containsExactly(
+					tuple("a: geothermal", AlignmentMethod.NEOCLASSICAL),
+					tuple("n: geometry", AlignmentMethod.NEOCLASSICAL),
+					tuple("a: geometrical", AlignmentMethod.NEOCLASSICAL)
 					);
 	}
 

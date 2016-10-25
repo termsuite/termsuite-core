@@ -130,6 +130,28 @@ public class TermUtils {
 		return terms;
 	}
 
+	private static final String STEMMED_INSENSITIVE_GKEY_FORMAT = "%s: %s";
+	/**
+	 * e.g. a: Hydroélectrique -> a: hydroelectric
+	 */
+	public static String stemmedInsensitiveGroupingKey(TermWord termWord) {
+		return StringUtils.replaceAccents(String.format(
+				STEMMED_INSENSITIVE_GKEY_FORMAT, 
+				termWord.getSyntacticLabel(), 
+				termWord.getWord().getStem()).toLowerCase());
+	}
+	
+	/**
+	 * e.g. a: Hydroélectrique -> a: hydroelectrique
+	 */
+	public static String lemmatizedInsensitiveGroupingKey(TermWord termWord) {
+		return StringUtils.replaceAccents(String.format(
+				STEMMED_INSENSITIVE_GKEY_FORMAT, 
+				termWord.getSyntacticLabel(), 
+				termWord.getWord().getLemma()).toLowerCase());		
+	}
+
+
 
 	public static String collapseText(String coveredText) {
 		char[] charArray = coveredText.toCharArray();
