@@ -23,11 +23,19 @@
 
 package eu.project.ttc.test.func;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.assertj.core.api.AbstractAssert;
+import org.assertj.core.util.Lists;
 import org.assertj.core.util.Objects;
 
 import eu.project.ttc.engines.cleaner.TermProperty;
+import eu.project.ttc.models.Component;
+import eu.project.ttc.models.CompoundType;
 import eu.project.ttc.models.Term;
+import eu.project.ttc.models.Word;
+import eu.project.ttc.utils.WordUtils;
 
 public class TermAssert extends AbstractAssert<TermAssert, Term> {
 
@@ -56,4 +64,72 @@ public class TermAssert extends AbstractAssert<TermAssert, Term> {
 			failWithMessage("Expected term's frequency key to be <%s> but was <%s>", f, actual.getFrequency());
 		return this;
 	}
+
+	public TermAssert isCompound() {
+		isNotNull();
+		if(!actual.isCompound())
+			failWithMessage("Expected term <%s> to be a compound but it is not.", actual);
+		return this;
+	}
+	
+	public TermAssert hasCompoundType(CompoundType type) {
+		isNotNull();
+		isCompound();
+		Word word = actual.getWords().get(0).getWord();
+		if(word.getCompoundType() != type)
+			failWithMessage("Expected compound type <%s> for term %s, but got compound type <%s>",
+					type,
+					actual,
+					word.getCompoundType());
+		return this;
+	}
+
+	public TermAssert hasCompositionSubstrings(String... substrings) {
+		isNotNull();
+		isCompound();
+		Word word = actual.getWords().get(0).getWord();
+		if(word.getComponents().size() != substrings.length) {
+			failWithMessage("Expected <%s> components for term %s, but got <%s> components", 
+					substrings.length,
+					actual,
+					word.getComponents().size());
+		} else {
+			List<String> expectedComps = Lists.newArrayList(substrings);
+			List<String> actualComps = word.getComponents().stream()
+				.map(c-> WordUtils.getComponentSubstring(word, c))
+				.collect(Collectors.toList());
+			if(!expectedComps.equals(actualComps))
+				failWithMessage("Expected composition <%s> for term %s, but got composition <%s>", 
+						expectedComps,
+						actual,
+						actualComps);
+		}
+		return this;
+	}
+
+	public TermAssert hasCompositionLemmas(String... lemmas) {
+		isNotNull();
+		isCompound();
+		Word word = actual.getWords().get(0).getWord();
+		if(word.getComponents().size() != lemmas.length) {
+			failWithMessage("Expected <%s> components for term %s, but got <%s> components", 
+					lemmas.length,
+					actual,
+					word.getComponents().size());
+		} else {
+			List<String> expectedComps = Lists.newArrayList(lemmas);
+			List<String> actualComps = word.getComponents().stream()
+				.map(Component::getLemma)
+				.collect(Collectors.toList());
+			if(!expectedComps.equals(actualComps))
+				failWithMessage("Expected composition <%s> for term %s, but got composition <%s>", 
+						expectedComps,
+						actual,
+						actualComps);
+		}
+		return this;
+
+		
+	}
+
 }

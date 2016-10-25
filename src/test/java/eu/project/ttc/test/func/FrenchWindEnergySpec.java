@@ -155,7 +155,28 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 			;
 	}
 
+	@Test
+	public void testTermHydroelectrique() {
+		Term term = termIndex.getTermByGroupingKey("a: hydroélectrique");
+		
+		assertThat(term)
+			.isCompound()
+			.hasCompoundType(CompoundType.NEOCLASSICAL)
+			.hasCompositionSubstrings("hydro", "électrique")
+			.hasCompositionLemmas("eau", "électrique")
+			;
+	}
 
+
+	@Test
+	public void testTermElectromagnetique() {
+		Term term = termIndex.getTermByGroupingKey("a: électromagnétique");
+		
+		assertThat(term)
+			.isCompound()
+			.hasCompoundType(CompoundType.NEOCLASSICAL)
+			.hasCompositionSubstrings("électro", "magnétique");
+	}
 
 	@Test
 	public void testTermVitesseDeRotation() {

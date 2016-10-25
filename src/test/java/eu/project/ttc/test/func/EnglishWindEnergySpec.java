@@ -137,6 +137,28 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 
 
 	@Test
+	public void testTermElectromagnec() {
+		Term term = termIndex.getTermByGroupingKey("a: electromagnetic");
+		
+		assertThat(term)
+			.isCompound()
+			.hasCompoundType(CompoundType.NEOCLASSICAL)
+			.hasCompositionSubstrings("electro", "magnetic");
+	}
+
+	@Test
+	public void testTermHydroelectric() {
+		Term term = termIndex.getTermByGroupingKey("a: hydroelectric");
+		
+		assertThat(term)
+			.isCompound()
+			.hasCompoundType(CompoundType.NEOCLASSICAL)
+			.hasCompositionSubstrings("hydro", "electric")
+			.hasCompositionLemmas("water", "electric")
+			;
+	}
+
+	@Test
 	public void weNeoclassicalCompounds() {
 		List<Word> neoclassicals = termIndex.getWords().stream()
 			.filter(Word::isCompound)
