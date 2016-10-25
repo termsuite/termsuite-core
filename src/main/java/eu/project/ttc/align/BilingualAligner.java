@@ -43,8 +43,8 @@ import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
 import com.google.common.primitives.Ints;
 
-import eu.project.ttc.metrics.DiacriticInsensitiveLevenshtein;
 import eu.project.ttc.metrics.ExplainedValue;
+import eu.project.ttc.metrics.Levenshtein;
 import eu.project.ttc.metrics.SimilarityDistance;
 import eu.project.ttc.metrics.TextExplanation;
 import eu.project.ttc.models.Component;
@@ -61,6 +61,8 @@ import eu.project.ttc.utils.AlignerUtils;
 import eu.project.ttc.utils.IteratorUtils;
 import eu.project.ttc.utils.StringUtils;
 import eu.project.ttc.utils.TermIndexUtils;
+import eu.project.ttc.utils.TermUtils;
+import eu.project.ttc.utils.WordUtils;
  
  
 /** 
@@ -170,62 +172,107 @@ public class BilingualAligner {
 				&& sourceTerm.getWords().get(0).getWord().getCompoundType() == CompoundType.NEOCLASSICAL;
 	}
 
+	
+	/**
+	 * 
+	 * Align a term using the TermSuite's neoclassical alignment method.
+	 * 
+	 * This method behaves as follows: 
+	 * 	
+	 * 
+	 * @param sourceTerm
+	 * 			the source term to align
+	 * @param nbCandidates
+	 * 			the maximum number of {@link TranslationCandidate} returned 
+	 * @param minCandidateFrequency
+	 * 			the minimum frequency of returned translation candidates
+	 * @return
+	 * 		the sorted list {@link TranslationCandidate} produced by this method 
+	 * 		or an empty list if the term could not be aligned using the neoclassical method.
+	 * 
+	 * @see #canAlignNeoclassical(Term)
+	 * @see CompoundType#NEOCLASSICAL
+	 * 		
+	 */
 	public List<TranslationCandidate> alignNeoclassical(Term sourceTerm, int nbCandidates,
 			int minCandidateFrequency) {
 		
 		if(!canAlignNeoclassical(sourceTerm))
 			return Lists.newArrayList();
-		
-		Component neoclassicalAffix = sourceTerm.getWords().get(0).getWord().getNeoclassicalAffix();
 
+		Word sourceWord = sourceTerm.getWords().get(0).getWord();
+		Component sourceNeoclassicalAffix = sourceWord.getNeoclassicalAffix();
+		String sourceNeoclassicalAffixString = WordUtils.getComponentSubstring(sourceWord, sourceNeoclassicalAffix);
 		
 		/*
-		 * Index target candidates by morphological extensions. E.g. électricité -> hydroélectricité
+		 * 1. try to translate the neoclassical affix 
+		 * 
+		 * E.g. aéro (fr) -> aero (en)
 		 */
-		Map<Term, Term> targetCandidates = Maps.newHashMap();
+		Set<String> targetNeoclassicalAffixes = Sets.newHashSet();
+		// 1a. find translation in dico
+		targetNeoclassicalAffixes.addAll(dico.getTranslations(sourceNeoclassicalAffixString));
+		// some dicos also appends the hyphen to affixes
+		targetNeoclassicalAffixes.addAll(dico.getTranslations(sourceNeoclassicalAffixString+"-"));
+		// clean hyphens returned by dicos
+		targetNeoclassicalAffixes = targetNeoclassicalAffixes.stream()
+			.map(affix-> affix.replaceAll("^-", "").replaceAll("-$", ""))
+			.collect(Collectors.toSet());
+
+		
+		
+		/*
+		 * 2. Index target candidates by morphological extensions when the extension 
+		 * is a valid swt in the target termino.
+		 * 
+		 * E.g. électricité -> hydroélectricité
+		 */
+		Map<Term, Term> targetCandidatesBySWTExtension = Maps.newHashMap();
+		Set<Term> targetCandidatesHavingSameAffix = Sets.newHashSet();
 		for(Term targetCandidate:targetTermino.getTerms()) {
 			Word targetCompound = targetCandidate.getWords().get(0).getWord();
 			if(targetCandidate.isCompound() && targetCompound.getCompoundType() == CompoundType.NEOCLASSICAL) {
-				String targetLemma = targetCompound.getNeoclassicalAffix().getLemma();
-				String sourceLemma = neoclassicalAffix.getLemma();
-				if(StringUtils.replaceAccents(targetLemma).equals(StringUtils.replaceAccents(sourceLemma))) {
-					Collection<Term> targetExtensions = TermIndexUtils.getMorphologicalExtensionsAsTerms(
-							targetTermino, 
-							targetCandidate, 
-							targetCompound.getNeoclassicalAffix());
-					
-					for(Term morphologicalExtensin: targetExtensions) 
-						targetCandidates.put(morphologicalExtensin, targetCandidate);
-				}
+				String targetNeoclassicalAffixString = WordUtils.getComponentSubstring(targetCompound, targetCompound.getNeoclassicalAffix());
 				
-			} 
+				boolean isValidTargetCandidate = false;
+				// Case1: we have translations from dico for neoclassical affix
+				if(!targetNeoclassicalAffixes.isEmpty()) 
+					isValidTargetCandidate = targetNeoclassicalAffixes.contains(targetNeoclassicalAffixString);
+				// Case2: we don't, then we have to test validity on graphical pure graphical equality
+				else
+					isValidTargetCandidate = StringUtils
+						.replaceAccents(targetNeoclassicalAffixString).toLowerCase()
+						.equals(StringUtils.replaceAccents(sourceNeoclassicalAffixString).toLowerCase());
+					
+				if (isValidTargetCandidate) {
+					targetCandidatesHavingSameAffix.add(targetCandidate);
+
+					Collection<Term> targetExtensions = TermIndexUtils.getMorphologicalExtensionsAsTerms(targetTermino,
+							targetCandidate, targetCompound.getNeoclassicalAffix());
+
+					for (Term morphologicalExtensin : targetExtensions)
+						targetCandidatesBySWTExtension.put(morphologicalExtensin, targetCandidate);
+				}
+			}
 		}
-		if(targetCandidates.isEmpty())
-			return Lists.newArrayList();
 		
-		
+		/*
+		 * 3. try recursive alignment on neoclassical extensions
+		 */
 		Collection<Term> possibleSourceExtensions = TermIndexUtils.getMorphologicalExtensionsAsTerms(
 				sourceTermino, 
 				sourceTerm, 
-				neoclassicalAffix);
-		
-		/*
-		 * 6a- try to align by extension translation with dico
-		 */	
+				sourceNeoclassicalAffix);
 		List<TranslationCandidate> candidates = Lists.newArrayList();
 		for(Term sourceExtension:possibleSourceExtensions) {
-			
 			// recursive alignment on extension
 			List<TranslationCandidate> recursiveCandidates = align(sourceExtension, nbCandidates, minCandidateFrequency);
 			
-			// graphical alignment on extension
-			recursiveCandidates.addAll(alignGraphically(sourceTerm, nbCandidates, targetCandidates.keySet()));
-			
 			for(TranslationCandidate extensionTranslationCandidate:recursiveCandidates) {
-				if(targetCandidates.containsKey(extensionTranslationCandidate.getTerm()))
+				if(targetCandidatesBySWTExtension.containsKey(extensionTranslationCandidate.getTerm()))
 					candidates.add(new TranslationCandidate(
 						AlignmentMethod.NEOCLASSICAL, 
-						targetCandidates.get(extensionTranslationCandidate.getTerm()), 
+						targetCandidatesBySWTExtension.get(extensionTranslationCandidate.getTerm()), 
 						extensionTranslationCandidate.getScore(), 
 						sourceTerm, 
 						extensionTranslationCandidate));
@@ -233,23 +280,44 @@ public class BilingualAligner {
 			}
 		}
 		
+		// graphical alignment on extension if no candidate
+		if(candidates.isEmpty())
+			candidates.addAll(alignGraphically(AlignmentMethod.NEOCLASSICAL, sourceTerm, nbCandidates, targetCandidatesHavingSameAffix));
+
+		
 		return sortTruncateNormalizeAndMerge(targetTermino, nbCandidates, candidates);
 	}
 
-	public List<TranslationCandidate> alignGraphically(Term sourceTerm, int nbCandidates, Collection<Term> targetTerms) {
+	private static final Levenshtein LEVENSHTEIN = new Levenshtein();
+
+	public List<TranslationCandidate> alignGraphically(AlignmentMethod method, Term sourceTerm, int nbCandidates, Collection<Term> targetTerms) {
+		Preconditions.checkArgument(sourceTerm.isSingleWord());
+		for(Term targetTerm:targetTerms)
+			Preconditions.checkArgument(targetTerm.isSingleWord());
+		
+		Word sourceWord = sourceTerm.getWords().get(0).getWord();
 		return targetTerms.stream().map(targetTerm -> 
 			{
-				double dist = new DiacriticInsensitiveLevenshtein(sourceTermino.getLang().getLocale()).computeNormalized(sourceTerm.getLemma(), targetTerm.getLemma());
+				double dist;
+				Word targetWord = targetTerm.getWords().get(0).getWord();
+				if(sourceWord.getStem() != null 
+						&& targetWord.getStem() != null)
+					dist = LEVENSHTEIN.computeNormalized(
+							TermUtils.stemmedInsensitiveGroupingKey(sourceTerm.getWords().get(0)), 
+							TermUtils.stemmedInsensitiveGroupingKey(targetTerm.getWords().get(0)));
+				else
+					dist = LEVENSHTEIN.computeNormalized(
+							TermUtils.lemmatizedInsensitiveGroupingKey(sourceTerm.getWords().get(0)), 
+							TermUtils.lemmatizedInsensitiveGroupingKey(targetTerm.getWords().get(0)));
 				return new TranslationCandidate(
-						AlignmentMethod.GRAPHICAL, 
+						method, 
 						targetTerm, 
 						dist, 
 						sourceTerm,
-						new TextExplanation(String.format("Graphical distance(DiacriticInsensitiveLevenshtein) is %.3f", dist)));
+						new TextExplanation(String.format("Graphical distance(Levenshtein) is %.3f", dist)));
 			}
 				).collect(Collectors.toList());
 	}
-			
 
 	
 	public List<TranslationCandidate> alignDistributional(Term sourceTerm, int nbCandidates,

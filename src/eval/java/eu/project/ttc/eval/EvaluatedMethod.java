@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import eu.project.ttc.align.BilingualAligner;
 import eu.project.ttc.align.RequiresSize2Exception;
 import eu.project.ttc.align.TranslationCandidate;
+import eu.project.ttc.models.CompoundType;
 import eu.project.ttc.models.Term;
 
 public enum EvaluatedMethod {
@@ -15,6 +16,7 @@ public enum EvaluatedMethod {
 	COMPOSITIONAL("compo"),
 	SEMI_DISTRIBUTIONAL("semi-distrib"),
 	DICO("dico"),
+	NEOCLASSICAL("neo"),
 	HYBRID("hybrid");
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(EvaluatedMethod.class);
@@ -29,6 +31,7 @@ public enum EvaluatedMethod {
 		try {
 			switch(this) {
 			case DISTRIBUTIONAL: return source.isSingleWord() && target.isSingleWord();
+			case NEOCLASSICAL: return aligner.canAlignNeoclassical(source) && target.isCompound() && target.getWords().get(0).getWord().getCompoundType() == CompoundType.NEOCLASSICAL;
 			case COMPOSITIONAL: return aligner.canAlignCompositional(source) && target.isMultiWord();
 			case SEMI_DISTRIBUTIONAL: return aligner.canAlignSemiDistributional(source) && target.isMultiWord();
 			case DICO: return source.isSingleWord() && target.isSingleWord();
@@ -45,6 +48,7 @@ public enum EvaluatedMethod {
 	public List<TranslationCandidate> align(BilingualAligner aligner, Term sourceTerm, int nbCandidates, int minCandidateFrequency) {
 		switch(this) {
 		case DISTRIBUTIONAL: return aligner.alignDistributional(sourceTerm, nbCandidates, minCandidateFrequency);
+		case NEOCLASSICAL: return aligner.alignNeoclassical(sourceTerm, nbCandidates, minCandidateFrequency);
 		case COMPOSITIONAL: return aligner.alignCompositional(sourceTerm, nbCandidates, minCandidateFrequency);
 		case SEMI_DISTRIBUTIONAL: return aligner.alignSemiDistributional(sourceTerm, nbCandidates, minCandidateFrequency);
 		case DICO: return aligner.alignDico(sourceTerm, nbCandidates);
