@@ -91,11 +91,6 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 	private EditDistance distance;
 	private Lang language;
 
-	/*
-	 * the n first letter that serves as index
-	 */
-	private int n = 2;
-	
 	private int totalComparisons = 0;
 	private int nbComparisons = 0;
 	
@@ -120,13 +115,13 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 					builder.append(JOIN_CHAR);
 				}
 				normalizedStem = tw.getWord().getNormalizedStem();
-				if(normalizedStem.length() > n)
-					builder.append(normalizedStem.substring(0, n).toLowerCase(language.getLocale()));
+				if(normalizedStem.length() > language.getGraphicalVariantNbPreindexingLetters())
+					builder.append(normalizedStem.substring(0, language.getGraphicalVariantNbPreindexingLetters()).toLowerCase(language.getLocale()));
 				else
 					builder.append(normalizedStem.toLowerCase(language.getLocale()));
 				i++;
 			}
-			if(builder.length() >= n)
+			if(builder.length() >= language.getGraphicalVariantNbPreindexingLetters())
 				return ImmutableList.of(builder.toString());
 			else
 				return ImmutableList.of();
@@ -152,13 +147,17 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 	@Override
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
+		
+		if(language.getgVariantGatheringState().isDisabled())
+			return;
+		
 		logger.info("Starting graphical term gathering for TermIndex {}", this.termIndexResource.getTermIndex().getName());
 		
 		if(termIndexResource.getTermIndex().getTerms().isEmpty())
 			return;
 
 		// create the index
-		String indexName = String.format("_%d_first_letters_", n);
+		String indexName = String.format("_%d_first_letters_", language.getGraphicalVariantNbPreindexingLetters());
 		final TermIndex termIndex = this.termIndexResource.getTermIndex();
 		CustomTermIndex customIndex = termIndex.createCustomIndex(
 				indexName,
