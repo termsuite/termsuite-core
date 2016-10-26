@@ -107,7 +107,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 		return Lists.newArrayList(
 				"M-IPR2-NPN",
 				"S-I1-NPN-CN",
-				"S-PEg-NN-NP");
+				"S-PEg-NN-NP", "S-PID-AN-P", "S-R2D-NN");
 	}
 
 
