@@ -31,7 +31,7 @@ public enum Lang {
 	FR("french", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.1f, 0.1f, 0.3f, 0.7f, 3, 3, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED),
 	EN("english", Locale.ENGLISH, OccurrenceBuffer.NO_CLEANING, 0.7f, 0.1f, 0.1f, 0.1f, 0.85f, 3, 3, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED),
 	ES("spanish", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.1f, 0.1f, 0.3f, 1f, 3, 3, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED),
-	DE("german", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.3f, 0.1f, 0.1f, 0.85f, 3, 4, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25), 4, EngineState.DISABLED),
+	DE("german", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.3f, 0.1f, 0.1f, 0.75f, 3, 4, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25), 4, EngineState.ENABLED),
 	ZH("chinese", Locale.CHINESE, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.1f, 0.1f, 0.3f, 0.7f, 3, 2, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.DISABLED),
 	LV("latvian", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5f, 0.1f, 0.1f, 0.3f, 0.8f, 3, 3, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED),
 	RU("russian", Locale.JAPAN, OccurrenceBuffer.NO_CLEANING,0.3f, 0.1f, 0.4f, 0.2f, 0.7f, 3, 3,VariantScorerConfig.create(0.5, 0.1,0.1, 0.25), 3, EngineState.ENABLED),
