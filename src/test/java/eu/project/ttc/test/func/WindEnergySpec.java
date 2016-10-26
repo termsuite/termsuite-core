@@ -24,14 +24,20 @@
 package eu.project.ttc.test.func;
 
 import static eu.project.ttc.test.TermSuiteAssertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import org.assertj.core.util.Lists;
 import org.junit.Before;
 import org.junit.Test;
+import org.yaml.snakeyaml.Yaml;
 
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
@@ -43,6 +49,7 @@ import eu.project.ttc.engines.desc.TermSuiteCollection;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.VariationType;
 import eu.project.ttc.tools.TermSuitePipeline;
+import eu.project.ttc.tools.TermSuiteResource;
 import eu.project.ttc.tools.TermSuiteResourceManager;
 import eu.project.ttc.tools.utils.ControlFilesGenerator;
 
@@ -123,10 +130,37 @@ public abstract class WindEnergySpec {
 
 	@Test
 	public void weControlSyntacticMatchingRules() {
-		assertThat(termIndex)
-			.asMatchingRules()
-			.containsOnlyElementsOf(syntacticMatchingRules)
-			.doesNotContainAnyElementsOf(syntacticNotMatchingRules);
+		try(InputStream openStream = TermSuiteResource.VARIANTS.fromClasspath(lang).openStream()) {
+			@SuppressWarnings("unchecked")
+			Set<String> ruleNames = (Set<String>) ((Map<?, ?>)new Yaml().load(openStream)).keySet();
+			
+			assertThat(ruleNames)
+				.containsAll(syntacticMatchingRules);
+			
+			syntacticMatchingRules.stream().forEach(rule-> {
+				assertTrue(String.format("Bad rule name. Rule <%s> does not exist", rule),
+						ruleNames.contains(rule));
+			});
+	
+			syntacticNotMatchingRules.stream().forEach(rule-> {
+				assertTrue(String.format("Bad rule name. Rule <%s> does not exist", rule),
+						ruleNames.contains(rule));
+			});
+	
+			ruleNames.removeAll(syntacticMatchingRules);
+			ruleNames.removeAll(syntacticNotMatchingRules);
+			
+			assertTrue(String.format("Bad rule list. Some rule are not under test: <%s>", ruleNames),
+					ruleNames.isEmpty());
+		
+			assertThat(termIndex)
+				.asMatchingRules()
+				.containsAll(syntacticMatchingRules)
+				.doesNotContainAnyElementsOf(syntacticNotMatchingRules);
+		} catch(Exception e) {
+			throw new RuntimeException(e);
+		}
+		
 		
 	}
 

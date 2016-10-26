@@ -307,7 +307,7 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 					expectedTuples.size(),
 					actualTuples.size(),
 					notFound.size(),
-					expectedTuples.size());
+					notExpected.size());
 		} else 
 			if(diffFileIfFail.toFile().exists())
 				diffFileIfFail.toFile().delete();

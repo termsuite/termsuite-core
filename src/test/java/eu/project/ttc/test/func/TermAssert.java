@@ -88,16 +88,18 @@ public class TermAssert extends AbstractAssert<TermAssert, Term> {
 		isNotNull();
 		isCompound();
 		Word word = actual.getWords().get(0).getWord();
-		if(word.getComponents().size() != substrings.length) {
-			failWithMessage("Expected <%s> components for term %s, but got <%s> components", 
-					substrings.length,
-					actual,
-					word.getComponents().size());
-		} else {
-			List<String> expectedComps = Lists.newArrayList(substrings);
-			List<String> actualComps = word.getComponents().stream()
+		List<String> expectedComps = Lists.newArrayList(substrings);
+		List<String> actualComps = word.getComponents().stream()
 				.map(c-> WordUtils.getComponentSubstring(word, c))
 				.collect(Collectors.toList());
+		if(word.getComponents().size() != substrings.length) {
+			failWithMessage("Expected <%s> components for term %s, but got <%s> components: %s", 
+					substrings.length,
+					actual,
+					word.getComponents().size(),
+					actualComps
+					);
+		} else {
 			if(!expectedComps.equals(actualComps))
 				failWithMessage("Expected composition <%s> for term %s, but got composition <%s>", 
 						expectedComps,
@@ -111,16 +113,17 @@ public class TermAssert extends AbstractAssert<TermAssert, Term> {
 		isNotNull();
 		isCompound();
 		Word word = actual.getWords().get(0).getWord();
-		if(word.getComponents().size() != lemmas.length) {
-			failWithMessage("Expected <%s> components for term %s, but got <%s> components", 
-					lemmas.length,
-					actual,
-					word.getComponents().size());
-		} else {
-			List<String> expectedComps = Lists.newArrayList(lemmas);
-			List<String> actualComps = word.getComponents().stream()
+		List<String> expectedComps = Lists.newArrayList(lemmas);
+		List<String> actualComps = word.getComponents().stream()
 				.map(Component::getLemma)
 				.collect(Collectors.toList());
+		if(word.getComponents().size() != lemmas.length) {
+			failWithMessage("Expected <%s> components for term %s, but got <%s> components: %s", 
+					lemmas.length,
+					actual,
+					word.getComponents().size(),
+					actualComps);
+		} else {
 			if(!expectedComps.equals(actualComps))
 				failWithMessage("Expected composition <%s> for term %s, but got composition <%s>", 
 						expectedComps,

@@ -28,14 +28,14 @@ import eu.project.ttc.termino.engines.VariantScorerConfig;
 import eu.project.ttc.utils.OccurrenceBuffer;
 
 public enum Lang {
-	FR("french", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.1f, 0.1f, 0.3f, 0.7f, 3, 3, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25)),
-	EN("english", Locale.ENGLISH, OccurrenceBuffer.NO_CLEANING, 0.7f, 0.1f, 0.1f, 0.1f, 0.85f, 3, 3, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25)),
-	ES("spanish", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.1f, 0.1f, 0.3f, 1f, 3, 3, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25)),
-	DE("german", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.3f, 0.1f, 0.1f, 0.85f, 3, 4, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25)),
-	ZH("chinese", Locale.CHINESE, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.1f, 0.1f, 0.3f, 0.7f, 3, 2, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25)),
-	LV("latvian", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5f, 0.1f, 0.1f, 0.3f, 0.8f, 3, 3, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25)),
-	RU("russian", Locale.JAPAN, OccurrenceBuffer.NO_CLEANING,0.3f, 0.1f, 0.4f, 0.2f, 0.7f, 3, 3,VariantScorerConfig.create(0.5, 0.1,0.1, 0.25)),
-	DA("danish", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5f, 0.1f, 0.1f, 0.3f, 0.8f, 3, 3, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25));
+	FR("french", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.1f, 0.1f, 0.3f, 0.7f, 3, 3, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED),
+	EN("english", Locale.ENGLISH, OccurrenceBuffer.NO_CLEANING, 0.7f, 0.1f, 0.1f, 0.1f, 0.85f, 3, 3, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED),
+	ES("spanish", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.1f, 0.1f, 0.3f, 1f, 3, 3, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED),
+	DE("german", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.3f, 0.1f, 0.1f, 0.75f, 3, 4, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25), 4, EngineState.ENABLED),
+	ZH("chinese", Locale.CHINESE, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.1f, 0.1f, 0.3f, 0.7f, 3, 2, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.DISABLED),
+	LV("latvian", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5f, 0.1f, 0.1f, 0.3f, 0.8f, 3, 3, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED),
+	RU("russian", Locale.JAPAN, OccurrenceBuffer.NO_CLEANING,0.3f, 0.1f, 0.4f, 0.2f, 0.7f, 3, 3,VariantScorerConfig.create(0.5, 0.1,0.1, 0.25), 3, EngineState.ENABLED),
+	DA("danish", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5f, 0.1f, 0.1f, 0.3f, 0.8f, 3, 3, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED);
 	
 	private final float compostAlpha;
 	private final float compostBeta;
@@ -47,6 +47,8 @@ public enum Lang {
 	private final Locale locale;
 	private final String longLang;
 	private final String regexPostProcessingStrategy;
+	private final int gVariantNbPreindexingLetters;
+	private final EngineState gVariantGatheringState;
 
 	private VariantScorerConfig scorerConfig;
 
@@ -59,7 +61,9 @@ public enum Lang {
     		float compostCompostThreshold,
     		int compostMinComponentSize,
     		int compostMaxComponentNumber,
-    		VariantScorerConfig scorefierConfig
+    		VariantScorerConfig scorefierConfig,
+    		int gVariantNbPreindexingLetters,
+    		EngineState gVariantGatheringState
     		) {
     	this.locale = locale;
         this.longLang = longLang;
@@ -72,6 +76,8 @@ public enum Lang {
         this.compostMinComponentSize = compostMinComponentSize;
         this.compostMaxComponentNumber = compostMaxComponentNumber;
         this.scorerConfig = scorefierConfig;
+        this.gVariantNbPreindexingLetters = gVariantNbPreindexingLetters;
+        this.gVariantGatheringState = gVariantGatheringState;
     }
     
     public String getName() {
@@ -155,5 +161,13 @@ public enum Lang {
 	
 	public int getCompostMinComponentSize() {
 		return compostMinComponentSize;
+	}
+	
+	public int getGraphicalVariantNbPreindexingLetters() {
+		return gVariantNbPreindexingLetters;
+	}
+	
+	public EngineState getgVariantGatheringState() {
+		return gVariantGatheringState;
 	}
 }
