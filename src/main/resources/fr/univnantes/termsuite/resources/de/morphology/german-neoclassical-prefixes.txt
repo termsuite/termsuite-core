@@ -22,7 +22,6 @@ astro
 astron
 audi
 audio
-aus
 aut
 auto
 bi
@@ -63,7 +62,6 @@ com
 con
 contra
 cyto
-de
 dem
 demo
 densit
@@ -81,7 +79,6 @@ dosis
 dys
 eco
 ectasia
-ein
 ektomie
 electr
 electro
@@ -126,18 +123,15 @@ graphie
 graphisch
 gynäk
 gynäko
-halb
 hämat
 hämato
 hepat
 hepato
 hetero
-hinaus
 histo
-hoch
 homo
 hydr
-hydro
+hydro	wasser
 hyp
 hyper
 hypn
@@ -148,7 +142,6 @@ hysteri
 hysterio
 immun
 immuno
-in
 inter
 intra
 iso
@@ -216,11 +209,7 @@ my
 mycin
 myko
 myo
-nach
 neo
-nerven
-neur
-nicht
 nucleo
 oculär
 öko
@@ -244,7 +233,6 @@ osteo
 ovar
 ovarek
 ovariek
-par
 para
 path
 pathie
@@ -266,7 +254,6 @@ plasie
 plastisch
 poly
 post
-prä
 pre
 pro
 progest
@@ -292,7 +279,6 @@ ribo
 schein
 schiff
 scopol
-selbst
 semi
 skop
 skopol
@@ -327,16 +313,11 @@ thrombo
 trans
 tri
 tumor
-über
 ultra
-un
 uni
-unter
-ur
 vasculo
 vaskulo
 vaso
-vor
 xen
 xeno
 zentr
