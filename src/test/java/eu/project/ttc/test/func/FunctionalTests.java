@@ -52,6 +52,7 @@ import eu.project.ttc.test.func.tools.cmd.TermSuiteTerminoCLISpec;
 @Suite.SuiteClasses({
 	FrenchWindEnergySpec.class,
 	EnglishWindEnergySpec.class,
+	GermanWindEnergySpec.class,
 	TermSuitePreprocessorSpec.class,
 	TerminoFiltererSpec.class,
 	TermSuiteTerminoCLISpec.class,
