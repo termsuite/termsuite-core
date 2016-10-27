@@ -19,7 +19,7 @@ public class TranslationCandidate implements Comparable<TranslationCandidate> {
 	private double score;
 
 	private AlignmentMethod method;
-	private Term sourceTerm;
+	private Object sourceTerm;
 	private IExplanation explanation = Explanation.emptyExplanation();
 
 	void setScore(double score) {
@@ -34,7 +34,7 @@ public class TranslationCandidate implements Comparable<TranslationCandidate> {
 		return rank;
 	}
 
-	TranslationCandidate(AlignmentMethod method, Term targetTerm, double score, Term sourceTerm,
+	TranslationCandidate(AlignmentMethod method, Term targetTerm, double score, Object sourceTerm,
 			TranslationCandidate... subCandidates) {
 		super();
 		this.method = method;
@@ -87,7 +87,13 @@ public class TranslationCandidate implements Comparable<TranslationCandidate> {
 				.add("s", String.format("%.2f", this.score)).toString();
 	}
 
-	public Term getSourceTerm() {
+	/**
+	 * 
+	 * Not necessarily an instance of {@link Term}. Can also be a list of terms.
+	 * 
+	 * @return
+	 */
+	public Object getSourceTerm() {
 		return sourceTerm;
 	}
 

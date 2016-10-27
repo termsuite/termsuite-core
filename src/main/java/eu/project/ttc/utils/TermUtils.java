@@ -22,6 +22,7 @@
 package eu.project.ttc.utils;
 
 import java.io.PrintStream;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
@@ -46,6 +47,7 @@ import eu.project.ttc.models.TermVariation;
 import eu.project.ttc.models.TermWord;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.models.index.TermIndexes;
+import eu.project.ttc.models.index.TermValueProviders;
 import eu.project.ttc.resources.GeneralLanguageResource;
 import eu.project.ttc.tools.TermSuiteResource;
 
@@ -401,5 +403,26 @@ public class TermUtils {
 			}
 		}
 		return sets;
+	}
+	
+	
+	
+	/**
+	 * Return the term pair indexing key that is compliant with {@link TermValueProviders#WORD_LEMMA_LEMMA_PROVIDER}.
+	 * 
+	 * @see TermValueProviders#WORD_LEMMA_LEMMA_PROVIDER
+	 * @param term1
+	 * 				First term of the pair
+	 * @param term2
+	 * 				Second term of the pair
+	 * @return
+	 * 			The indexing key for the given pair
+	 */
+	public static String getLemmaLemmaKey(Term term1, Term term2) {
+		List<String> lemmas = new ArrayList<>(2);
+		lemmas.add(term1.getWords().get(0).getWord().getLemma());
+		lemmas.add(term2.getWords().get(0).getWord().getLemma());
+		Collections.sort(lemmas);
+		return String.format("%s+%s", lemmas.get(0), lemmas.get(1));
 	}
 }

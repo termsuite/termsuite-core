@@ -50,8 +50,8 @@ public class TermSuiteAlignerCLISpec {
 		
 		String string = baos.toString(Charset.defaultCharset().name());
 		TermSuiteAssertions.assertThat(string)
-			.atLine(1, startsWith("n: energy"))
-			.atLine(2, startsWith("n: power"))
+			.atLine(1, startsWith("n: power"))
+			.atLine(2, startsWith("n: energy"))
 			.hasLineCount(10);
 	}
 	
@@ -66,7 +66,7 @@ public class TermSuiteAlignerCLISpec {
 		
 		String string = baos.toString(Charset.defaultCharset().name());
 		TermSuiteAssertions.assertThat(string)
-			.atLine(1, startsWith("n: energy"))
+			.atLine(1, startsWith("n: power"))
 			.atLine(1, containsString("DICTIONARY"))
 			.atLine(1, endsWith("{}"))
 			.hasLineCount(10);
@@ -103,7 +103,7 @@ public class TermSuiteAlignerCLISpec {
 		
 		String string = baos.toString(Charset.defaultCharset().name());
 		TermSuiteAssertions.assertThat(string)
-			.atLine(1, startsWith("n: energy"))
+			.atLine(1, startsWith("n: power"))
 			.atLine(1, containsString("DICTIONARY"))
 			.atLine(1, endsWith("DICTIONARY"))
 			.hasLineCount(3);

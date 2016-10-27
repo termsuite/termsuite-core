@@ -115,7 +115,7 @@ public class FunctionalTests {
 	
 	public static List<Term> termsByProperty(TermIndex termIndex, TermProperty termProperty, boolean desc) {
 		List<Term> terms = Lists.newArrayList(termIndex.getTerms());
-		Collections.sort(terms, termProperty.getComparator(termIndex, desc));
+		Collections.sort(terms, termProperty.getComparator(desc));
 		return terms;
 	}
 
